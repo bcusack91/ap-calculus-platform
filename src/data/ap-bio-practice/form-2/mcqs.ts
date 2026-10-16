@@ -103,6 +103,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Adhesion (hydrogen bonding between water and the polar glass surface) pulls water up the walls, and cohesion (hydrogen bonding among water molecules) drags the rest of the column along. Glass is polar, not nonpolar, so water is attracted to it rather than repelled. Specific heat concerns temperature change, not capillary rise, and the tubes are open to the same air as the dish, so there is no pressure difference.',
+    optionExplanations: [
+      'Adhesion, hydrogen bonding between water and the polar glass, pulls water up the walls. Cohesion, hydrogen bonding among water molecules, drags the rest of the column along, so water rises in the tube.',
+      'Specific heat describes how much a substance\'s temperature changes when it gains or loses heat; it has nothing to do with capillary rise. Nothing in the setup heats the water so that it expands up the tube.',
+      'Glass is polar, not nonpolar, so water is attracted to it rather than repelled. Tube 5 shows the opposite of this claim: when the wall was made nonpolar with wax, the water did not rise at all.',
+      'Every tube is open to the same air as the dish, so there is no pressure difference to draw water up as in a straw. The rise comes from water\'s attraction to the glass and to itself.',
+    ],
   },
   {
     type: 'mcq',
@@ -118,6 +124,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Each time the diameter is halved, the rise doubles (15 → 30 → 60 mm), so the rise is inversely proportional to the diameter. A 0.05 mm tube is one-tenth the diameter of tube 3, so the rise should be about ten times 60 mm, or 600 mm. Six millimeters reverses the relationship, 60 mm ignores the change in diameter, and 6,000 mm treats a tenfold change as a hundredfold one.',
+    optionExplanations: [
+      'About 6 mm reverses the relationship. The data show that narrower tubes give higher rises, so a tube one-tenth as wide as tube 3 should raise water higher than 60 mm, not lower.',
+      'Halving the diameter doubles the rise (15, 30, 60 mm), so the rise is inversely proportional to the diameter. A 0.05 mm tube is one-tenth the width of tube 3, so the rise is about 10 × 60 = 600 mm.',
+      'About 60 mm is the rise already measured in the 0.5 mm tube. It ignores the tenfold decrease in diameter, which the trend says should raise the column about ten times higher.',
+      'About 6,000 mm treats a tenfold decrease in diameter as if it produced a hundredfold increase in rise. In tubes 1–3 the rise changes by the same factor as the diameter but inversely, so the factor is 10.',
+    ],
   },
   {
     type: 'mcq',
@@ -133,6 +145,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Hexane is a nonpolar hydrocarbon with no O–H or N–H bonds, so it cannot hydrogen-bond; its molecules are held together only by weak dispersion forces, so the cohesion that drags the column up is far weaker than in water and the rise is smaller. It forms no hydrogen bonds with glass at all, and it is nonpolar rather than polar. Water, not hexane, has the unusually high specific heat, and specific heat does not drive capillary rise.',
+    optionExplanations: [
+      'Hexane is a nonpolar hydrocarbon with no O–H or N–H bonds, so it forms no hydrogen bonds with glass at all. Strong attraction to the glass would make it rise higher, not hold it near the bottom.',
+      'The stimulus identifies hexane as a nonpolar liquid, so its molecules are not polar and carry no charges. Its weak rise comes from weak attractions, not from repulsion by the glass.',
+      'Without hydrogen bonds, hexane molecules are held together only by weak dispersion forces. The cohesion that drags the column upward is much weaker than in water, so hexane rises less in a tube of the same width.',
+      'Water, not hexane, has the unusually high specific heat. Specific heat also does not drive capillary rise, so it cannot explain the difference between tubes 2 and 4.',
+    ],
   },
   {
     type: 'mcq',
@@ -148,6 +166,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Coating the glass with nonpolar wax removed the polar surface that water adheres to, and the rise disappeared even though cohesion among water molecules was unchanged; adhesion to the wall is therefore required. If cohesion alone caused the rise, tube 5 would match tube 2. Wax is nonpolar, not polar, and it does not dissolve in water.',
+    optionExplanations: [
+      'Tube 5 shows the opposite. Cohesion among water molecules was unchanged by the wax, yet the water did not rise; if cohesion alone caused the rise, tube 5 would match tube 2.',
+      'Wax is nonpolar, not polar. Coating the glass removed the polar surface that water hydrogen-bonds to, which is why the water no longer climbed the wall.',
+      'Wax is a nonpolar lipid and does not dissolve in water, so it cannot break water\'s hydrogen bonds. Water\'s cohesion and surface tension were still present in tube 5.',
+      'The wax coating removed the polar glass surface that water adheres to, and the rise disappeared even though cohesion was unchanged. Attraction to the tube wall is therefore needed for water to rise.',
+    ],
   },
   {
     type: 'mcq',
@@ -162,6 +186,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Each separated polypeptide keeps its normal fold, so its primary, secondary and tertiary structures are intact, yet binding is lost; oxygen binding therefore depends on the way the four folded subunits fit together, which is quaternary structure. The amino acid sequence, the helices and sheets, and the fold of each single chain are all still present in the separated subunits, so none of them can be what is missing.',
+    optionExplanations: [
+      'Each separated polypeptide still folds normally, so its primary, secondary, and tertiary structure are intact, yet it cannot bind oxygen. Binding must depend on how the four subunits fit together, which is quaternary structure.',
+      'The stem says each separated polypeptide still folds into its normal shape, so tertiary structure is intact. Since binding is still lost, the missing feature must be the association of the subunits.',
+      'Helices and sheets are part of each polypeptide\'s normal fold, and the separated chains still fold normally. Secondary structure is therefore present even though oxygen binding is lost.',
+      'Separating the polypeptides does not change their amino acid sequences, so primary structure is unchanged. What is lost is the assembly of the four chains into one functional protein.',
+    ],
   },
   {
     type: 'mcq',
@@ -176,6 +206,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Every pair contains one double-ring base (A or G) and one single-ring base (T or C), so each rung of the ladder spans the same distance. A–T pairs have two hydrogen bonds and G–C pairs three, so the number differs. The paired bases are joined by hydrogen bonds, not covalent bonds, and two purines would be too wide while two pyrimidines would be too narrow.',
+    optionExplanations: [
+      'A–T pairs are held by two hydrogen bonds and G–C pairs by three, so the number is not the same in every pair. The constant width comes from the sizes of the paired bases, not from their bond counts.',
+      'Every pair contains one two-ring purine (A or G) and one one-ring pyrimidine (T or C). Each rung of the ladder therefore spans the same distance, keeping the backbones a constant width apart.',
+      'Paired bases are joined by hydrogen bonds, not covalent bonds, which is why the strands can be separated during replication. The type of bond also would not explain the constant width.',
+      'Two purines would be too wide to fit between the backbones, and two pyrimidines would be too narrow. Pairs actually join one purine and one pyrimidine, which gives a constant width.',
+    ],
   },
 
   /* ============================ UNIT 2 — CELL STRUCTURE & FUNCTION (7) ============================ */
@@ -193,6 +229,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'A rate that stops increasing when more substrate is available means every transporter is already in use, so the number of transport proteins limits the rate. A rate that rises with concentration fits simple diffusion as well. The drug effect and the accumulation against a gradient show that uptake uses energy, not that the number of transporters is limited.',
+    optionExplanations: [
+      'A rate that rises with outside concentration fits simple diffusion as well as transport by proteins. Only a rate that stops rising shows that a limited number of transporters are in use.',
+      'The lower rate in drug-treated cells shows that most uptake depends on ATP. That supports active transport, but it does not show that the number of transport proteins limits the rate.',
+      'When the rate stops increasing even though more amino acid is available, every transporter is already in use. A limited number of transport proteins therefore sets the maximum rate near 16 nmol/min.',
+      'Building up a concentration higher than the outside shows the cells use energy to move the amino acid against its gradient. It does not show that the number of transporters is limited.',
+    ],
   },
   {
     type: 'mcq',
@@ -208,6 +250,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'The inside concentration (25 mM) rose far above the outside concentration (2.0 mM), so the cells moved the amino acid from lower to higher concentration, which is active transport and needs an energy input. Diffusion would stop when the levels were equal, as happened in the drug-treated cells. A higher inside level shows net uptake, not loss, and the untreated cells were never given the drug.',
+    optionExplanations: [
+      'Simple diffusion stops when the inside and outside concentrations are equal, as happened in the drug-treated cells. The untreated cells reached 25 mM inside versus 2.0 mM outside, so this was not diffusion.',
+      'An inside level higher than the outside level shows net uptake, not loss. The cells gathered the amino acid from the medium until its concentration inside was more than ten times the outside level.',
+      'The untreated cells were never given the drug, and the drug stops ATP production rather than making membranes permeable. The claim describes neither the untreated cells nor the data.',
+      'The inside concentration rose to 25 mM while the outside was 2.0 mM, so the cells moved the amino acid from lower to higher concentration. Movement against a gradient is active transport and requires energy.',
+    ],
   },
   {
     type: 'mcq',
@@ -223,6 +271,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'With no ATP, the amino acid could still move passively down its concentration gradient by facilitated diffusion, which stops when inside and outside concentrations are equal (2.0 mM each); the drug-treated rate also levels off, which points to proteins. The inside level reached 2.0 mM, not zero. Amino acids are polar and charged, so they do not cross the hydrophobic core freely, and the label measured uptake from outside, not synthesis inside.',
+    optionExplanations: [
+      'Without ATP, the amino acid could still move passively down its gradient by facilitated diffusion through membrane proteins. Uptake stopped once the inside level matched the outside level of 2.0 mM.',
+      'Amino acids are polar and charged, so they do not cross the hydrophobic core freely the way oxygen does. The drug-treated rate also levels off, which points to transport proteins rather than free diffusion.',
+      'The inside concentration of the drug-treated cells reached 2.0 mM, not zero. The amino acid entered and stayed inside until the inside and outside concentrations were equal.',
+      'The amino acid was labeled radioactively and measured as it entered from the medium, so the data track uptake from outside, not synthesis inside. The level also stopped exactly at the outside concentration.',
+    ],
   },
   {
     type: 'mcq',
@@ -238,6 +292,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'At 16.0 mM the transporters are saturated, so the rate equals the number of transporters times the rate per transporter; halving the transporters halves the maximum rate, to about 8 nmol/min. ATP is still being made, so energy is not what changed. Saturated transporters cannot work faster when more amino acid is present, and the second drug does not block ATP production.',
+    optionExplanations: [
+      'ATP production is unaffected by the second drug, so energy is not what changes. At 16.0 mM the transporters are saturated, so their number, not ATP, limits the rate.',
+      'At 16.0 mM the transporters are saturated, so the maximum rate equals the number of transporters times the rate of each one. Halving the transporters halves the rate, to about 8 nmol/min.',
+      'Saturated transporters are already working as fast as they can, so giving each one more amino acid cannot speed them up. With half as many transporters, the rate falls rather than rises.',
+      'The second drug does not affect ATP production, so it does not remove the energy source as the first drug did. The rate would fall to about half of the untreated rate, not to the drug-treated rate.',
+    ],
   },
   {
     type: 'mcq',
@@ -252,6 +312,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Cis double bonds put bends in unsaturated tails, which keeps them from packing closely, so the membrane stays fluid at low temperature. Saturated tails are straight and pack tightly, which makes a membrane more rigid. Longer tails also increase hydrophobic interactions, which makes a bilayer less fluid, and the number of membrane proteins does not set the fluidity of the lipid layer.',
+    optionExplanations: [
+      'This reverses the effect of saturation. Saturated tails are straight and pack tightly together, which makes a membrane more rigid, especially at low temperature.',
+      'Longer tails form more hydrophobic interactions with their neighbors, which makes a bilayer less fluid, not more. Cold-adapted membranes generally use shorter or more unsaturated tails.',
+      'Cis double bonds put bends in unsaturated tails, which keeps them from packing closely. The membrane therefore stays fluid at low temperature.',
+      'The number of membrane proteins does not set the fluidity of the lipid layer. Fluidity depends on how tightly the fatty acid tails pack, which the bacteria adjust through the tails they build.',
+    ],
   },
   {
     type: 'mcq',
@@ -266,6 +332,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Without the sequence that targets its ribosome to the rough ER, the protein is finished on a free ribosome and stays in the cytosol. Secretion requires passage through the ER, then the Golgi, then vesicles to the plasma membrane, so a protein that never enters the ER cannot be secreted or reach the Golgi. Nuclear import requires its own specific signal; it is not a default destination.',
+    optionExplanations: [
+      'Secretion requires the protein to enter the ER and then pass through the Golgi and vesicles to the plasma membrane. Without the signal sequence, the protein never enters this pathway, so it cannot be secreted.',
+      'Proteins reach the Golgi only by traveling from the ER in vesicles. A protein made on a free ribosome never enters the ER, so it cannot reach the Golgi.',
+      'Nuclear import requires its own specific signal; it is not a default destination. A protein lacking any targeting signal stays in the cytosol.',
+      'Without the sequence that directs its ribosome to the rough ER, the protein is finished on a free ribosome and released into the cytosol, where it stays.',
+    ],
   },
   {
     type: 'mcq',
@@ -282,6 +354,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'In an open beaker the pressure potential is 0, so $\\Psi = \\Psi_{s} = -(2)(0.20)(0.0831)(298) \\approx -9.9$ bars. Water moves from higher to lower water potential, so it leaves the cells (−6.0 bars) for the solution (−9.9 bars). The −4.9 value forgets that NaCl gives two particles, −19.8 counts the factor of 2 twice, and water does not move toward the higher water potential.',
+    optionExplanations: [
+      'In an open beaker Ψp = 0, so Ψ = Ψs = −(2)(0.20)(0.0831)(298) ≈ −9.9 bars. Water moves from higher to lower water potential, so it leaves the cells at −6.0 bars for the solution at −9.9 bars.',
+      'The water potential is right, but the direction is reversed. Water moves toward lower water potential, and −9.9 bars is lower than the cells\' −6.0 bars, so water leaves the cells.',
+      'About −19.8 bars counts the factor of 2 twice. Using i = 2 once gives −(2)(0.20)(0.0831)(298) ≈ −9.9 bars.',
+      'About −4.9 bars forgets that NaCl dissociates into two particles, so it uses i = 1. It also sends water toward the higher water potential, the opposite of the direction water moves.',
+    ],
   },
 
   /* ============================ UNIT 3 — CELLULAR ENERGETICS (8) ============================ */
@@ -299,6 +377,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The rate is the total change divided by the time: 0.80 mL ÷ 40 min = 0.020 mL/min. The value 0.008 mL/min is the rate at 10°C (0.33 ÷ 40), 0.20 mL/min reads the 10-minute volume as a per-minute rate, and 0.80 mL/min is the total volume without dividing by the time.',
+    optionExplanations: [
+      '0.008 mL/min is the rate for germinating peas at 10°C (0.33 mL ÷ 40 min). The question asks about the germinating peas at 25°C.',
+      'The average rate is the total change divided by the elapsed time: 0.80 mL ÷ 40 min = 0.020 mL/min for the germinating peas at 25°C.',
+      '0.20 mL is the volume taken up in the first 10 minutes, not in 1 minute. Dividing it by 10 gives the same 0.020 mL/min as the full 40-minute calculation.',
+      '0.80 mL is the total volume of oxygen taken up over the whole 40 minutes. Reporting it as a rate per minute skips the step of dividing by the time.',
+    ],
   },
   {
     type: 'mcq',
@@ -314,6 +398,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'At 25°C the peas took up about 0.80 mL of $O_{2}$ in 40 minutes versus 0.33 mL at 10°C, so respiration was faster at the higher temperature, as expected when enzyme-catalyzed reactions speed up with temperature below the optimum. Uptake was higher, not lower, at 25°C. Each rate was steady, but the two rates differ, and $O_{2}$ was taken up at both temperatures, so neither group was fermenting.',
+    optionExplanations: [
+      'This reverses the data. The peas took up more oxygen at 25°C (0.80 mL) than at 10°C (0.33 mL), so the higher temperature increased respiration rather than denaturing the enzymes.',
+      'Each group took up oxygen at a steady rate, but the two rates differ by more than a factor of two. A steady rate within each group does not mean temperature had no effect.',
+      'At 25°C the peas took up about 0.80 mL of $O_{2}$ in 40 minutes versus 0.33 mL at 10°C. Respiration was faster at the higher temperature, as expected for enzyme-catalyzed reactions below their optimum.',
+      'The peas took up $O_{2}$ at both temperatures, so both groups were carrying out aerobic respiration. Nothing in the data indicates fermentation at 10°C.',
+    ],
   },
   {
     type: 'mcq',
@@ -329,6 +419,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'A dormant seed is alive but metabolically slow, so it oxidizes little of its stored food and uses little oxygen; once it germinates, growth demands ATP and respiration speeds up. Seeds have no functioning photosynthetic tissue in a dark vial, dormant seeds already contain mitochondria (they did take up a little oxygen), and the KOH absorbs any $CO_{2}$ released, so $CO_{2}$ cannot mask the reading.',
+    optionExplanations: [
+      'Seeds have no functioning photosynthetic tissue, and a sealed vial in a water bath gives them no reason to photosynthesize. Low uptake reflects low use of oxygen, not replacement of it.',
+      'The KOH absorbs any $CO_{2}$ the peas release, so $CO_{2}$ cannot offset the oxygen reading. The respirometer measures oxygen use alone.',
+      'Dormant seeds already contain mitochondria, and the data show they did take up a little oxygen. They respire slowly rather than not at all.',
+      'A dormant seed is alive but metabolically slow, so it breaks down little of its stored food and uses little oxygen. Germination demands ATP for growth, so respiration speeds up.',
+    ],
   },
   {
     type: 'mcq',
@@ -344,6 +440,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'A sealed vial\'s gas volume also changes when the bath temperature or the air pressure drifts, so a beads-only vial shows that change, and subtracting it leaves the change due to the peas. The beads only fill space so that each vial holds the same volume; they contain no cells and absorb no oxygen. The beads-only vial also contained KOH, so it cannot show respiration without KOH.',
+    optionExplanations: [
+      'A sealed vial\'s gas volume also changes when the bath temperature or the air pressure drifts. A beads-only vial records that change, and subtracting it leaves the change caused by the peas.',
+      'The beads contain no cells; they fill space so each vial holds the same volume of material. The control does not make the number of living cells equal.',
+      'Glass beads are not alive and absorb no oxygen, so there is nothing to add back. The control measures volume changes caused by temperature and pressure.',
+      'The beads-only vial also contained KOH, so it cannot show how the peas would respire without KOH. It contained no peas at all.',
+    ],
   },
   {
     type: 'mcq',
@@ -360,6 +462,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'ATP was made only when light ran the pump and ATP synthase was present (vesicle 4), and making the membrane leaky to $H^{+}$ abolished it (vesicle 5), so the $H^{+}$ gradient built by the pump is what drives ATP synthase; no electron carriers were present. ATP synthase alone in light made no ATP (vesicle 2), so it is not light-driven, and the pump alone made no ATP (vesicle 1).',
+    optionExplanations: [
+      'ATP synthase alone in the light made no ATP (vesicle 2), so it is not powered directly by light. It needs the $H^{+}$ gradient that the light-driven pump builds.',
+      'ATP was made only when light ran the pump and ATP synthase was present (vesicle 4), and a leaky membrane abolished it (vesicle 5). The $H^{+}$ gradient drives ATP synthase, and no electron carriers were present.',
+      'The pump alone made no ATP (vesicle 1), so it does not make ATP itself. It only builds the $H^{+}$ gradient that ATP synthase uses.',
+      'No electron carriers were present in any vesicle, yet vesicle 4 made ATP. An $H^{+}$ gradient is enough, so electron transport is not required by ATP synthase itself.',
+    ],
   },
   {
     type: 'mcq',
@@ -376,6 +484,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Adding substrate at 14 minutes restarted product formation at the original rate, so the enzyme was still present and active; the reaction stopped because the substrate ran out. Enzymes are not consumed by the reactions they catalyze, and a denatured enzyme would not recover when substrate was added. The mixture was held at 30°C, so cooling does not explain the plateau.',
+    optionExplanations: [
+      'Enzymes are not used up by the reactions they catalyze. Adding substrate at 14 minutes restarted product formation at the original rate, so the enzyme was still present.',
+      'A denatured enzyme would not recover when more substrate was added. Product formation resumed at the original rate, so the enzyme was still active.',
+      'Adding substrate at 14 minutes restarted product formation at about the original rate. The enzyme was therefore still active, and the reaction had stopped because the substrate ran out.',
+      'The mixture was held at 30°C, so cooling does not explain the plateau. Product formation also resumed at its original rate as soon as more substrate was added.',
+    ],
   },
   {
     type: 'mcq',
@@ -390,6 +504,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Electron transport in the thylakoid membrane pumps $H^{+}$ into the thylakoid space, and the splitting of water adds more, so the gradient runs from the thylakoid space to the stroma, where ATP synthase releases ATP. Pumping into the stroma reverses the gradient. The intermembrane space is where mitochondria build their gradient, and the cytosol is outside the chloroplast entirely.',
+    optionExplanations: [
+      'This reverses the gradient. Electron transport pumps $H^{+}$ from the stroma into the thylakoid space, so the stroma has the lower $H^{+}$ concentration.',
+      'The cytosol is outside the chloroplast, and the outer membrane does not hold the gradient that drives ATP synthase. The light reactions build their gradient across the thylakoid membrane.',
+      'The intermembrane space is where mitochondria build their $H^{+}$ gradient. In chloroplasts the gradient is built across the thylakoid membrane, into the thylakoid space.',
+      'Electron transport pumps $H^{+}$ into the thylakoid space, and splitting water adds more. $H^{+}$ then flows down its gradient through ATP synthase into the stroma, where ATP is released.',
+    ],
   },
   {
     type: 'mcq',
@@ -404,6 +524,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Cells drive endergonic reactions by coupling them to the exergonic hydrolysis of ATP; a phosphorylated intermediate makes the overall process release energy. Cells do not heat themselves enough to drive reactions, and an enzyme lowers activation energy without changing whether a reaction is exergonic or endergonic. Adding more product pushes a reaction backward, not forward.',
+    optionExplanations: [
+      'Cells drive endergonic reactions by coupling them to the exergonic hydrolysis of ATP. Transferring a phosphate to a reactant forms an intermediate, so the overall process releases free energy.',
+      'Cells do not heat themselves enough to drive reactions, and high heat would denature their enzymes. Collisions also do not change whether a reaction is endergonic.',
+      'An enzyme lowers activation energy but does not change ΔG. It cannot turn an endergonic reaction into one that releases free energy.',
+      'Glutamine is the product, and raising the concentration of a product pushes a reaction backward, not forward. Removing product, not adding it, would favor the forward direction.',
+    ],
   },
 
   /* ============================ UNIT 4 — CELL COMMUNICATION & CELL CYCLE (7) ============================ */
@@ -421,6 +547,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'With no H at all, a compound that mimics M inside the cell produced almost the full response (95 vs 100), so M is sufficient and acts after the receptor step. The stimulus says M* enters cells and acts like M, not that it binds the surface receptor, and the result shows H is not required once M is present. Treatment 2 shows M rising when H is added, and the stimulus describes M as activating glycogen breakdown, not as its product.',
+    optionExplanations: [
+      'The stimulus says M* enters cells and acts like M, not that it binds the surface receptor. Its effect inside the cell bypasses the receptor step.',
+      'With no H at all, a compound that mimics M inside the cell produced nearly the full response (95 versus 100). M is therefore sufficient and acts downstream of the receptor.',
+      'Treatment 4 had no H, yet glucose release reached 95, close to the 100 seen with H. Once M is present, H binding is not required.',
+      'Treatment 2 shows M rising when H is added, and the stimulus describes M as activating glycogen breakdown. M is part of the signal that causes glucose release, not a product of it.',
+    ],
   },
   {
     type: 'mcq',
@@ -436,6 +568,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Drug P blocks the enzyme that destroys M, and M rose from 20 to 45 units, so the extra glucose release follows from more M lasting longer; removing a signaling molecule is how cells normally switch a response off. Drug P acts on the M-degrading enzyme, not the receptor. Blocking glycogen breakdown would lower glucose release, and M was not the same in the two treatments, it was more than twice as high.',
+    optionExplanations: [
+      'Drug P acts on the enzyme that breaks down M, not on the receptor. Nothing in the data shows more H binding to the cells.',
+      'Blocking glycogen breakdown would lower glucose release, but treatment 5 released more glucose than treatment 2. Drug P blocks the breakdown of M, not of glycogen.',
+      'Drug P blocks the enzyme that destroys M, and M rose from 20 to 45 units. Breaking down a signaling molecule is how cells normally end a response, so blocking it prolonged and increased the response.',
+      'M was not the same in the two treatments; it was more than twice as high with drug P (45 versus 20). The larger response follows from more M, not from greater sensitivity to M.',
+    ],
   },
   {
     type: 'mcq',
@@ -451,6 +589,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'A receptor locked in its active shape relays the signal without the ligand, so M would rise and glucose would be released as if H were present. Low M with low release describes a pathway that is not activated. Treatment 4 shows that high M is enough for release, so high M with low release is not expected, and an active receptor raises M rather than bypassing it.',
+    optionExplanations: [
+      'Low M and low release, as in treatment 3, describe a pathway that is not activated. A receptor locked in its active shape relays the signal even without H.',
+      'An active receptor raises M, so M would not stay low. Treatment 4 reached high release by supplying an M mimic directly, which bypasses the receptor rather than describing an active receptor.',
+      'Treatment 4 shows that high M is enough to trigger glucose release without H. High M paired with low release contradicts the data.',
+      'A receptor locked in its active shape relays the signal without the ligand. M would rise and glucose would be released as if H were present, as in treatment 2.',
+    ],
   },
   {
     type: 'mcq',
@@ -466,6 +610,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Treatments 2 and 3 differ only in drug R, which blocks binding of H to its receptor; with binding blocked, M stayed at the baseline level of 1 instead of rising to 20. Treatments 1 and 4 test whether M alone is sufficient, treatments 2 and 5 test how the signal is turned off, and treatments 4 and 5 differ in more than one variable.',
+    optionExplanations: [
+      'Treatments 2 and 3 differ only in drug R, which blocks H from binding its receptor. With binding blocked, M stayed at the baseline of 1 instead of rising to 20.',
+      'Treatments 1 and 4 test whether M alone is sufficient for glucose release; neither involves H. They give no evidence about whether H must bind its receptor to raise M.',
+      'Treatments 2 and 5 both let H bind; they differ in drug P, which blocks the breakdown of M. This comparison tests how the signal is turned off.',
+      'Treatments 4 and 5 differ in more than one variable: H, drug P, and the M mimic. No single comparison between them isolates receptor binding.',
+    ],
   },
   {
     type: 'mcq',
@@ -480,6 +630,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The steps multiply: 1 receptor × 20 relay proteins × 1 enzyme each × 500 messengers per enzyme per second = 10,000 per second, which is how a few ligand molecules produce a large response. Adding the numbers (520) treats the steps as additive, 1,000 drops the factor of 20 relay proteins for a factor of 2, and 100,000 adds an extra factor of 10.',
+    optionExplanations: [
+      'Adding the numbers (20 + 500 = 520) treats the steps as additive. In a cascade each step multiplies the number of molecules activated at the step before it.',
+      'The steps multiply: 1 receptor × 20 relay proteins × 1 enzyme each × 500 messengers per second = 10,000 per second. Amplification of this kind lets a few ligand molecules produce a large response.',
+      '1,000 uses a factor of 2 relay proteins instead of 20. With 20 relay proteins each activating one enzyme, the total is 20 × 500 = 10,000.',
+      '100,000 adds an extra factor of 10 that is not in the pathway. Each relay protein activates only one enzyme, so the total is 20 × 500 = 10,000.',
+    ],
   },
   {
     type: 'mcq',
@@ -494,6 +650,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'A mutation that makes a growth-promoting protein overactive is dominant, because the overactive protein pushes the cell to divide whatever the normal copy does. A halting protein (tumor suppressor) still works if one normal copy remains, so its loss of function shows only when both copies fail. These genes are mostly on autosomes, mutation rates do not explain the pattern, and cells with damaged halting genes are not always removed, which is why such mutations contribute to cancer.',
+    optionExplanations: [
+      'Genes for growth-promoting proteins are mostly on autosomes, so cells carry two copies. Being on a sex chromosome is not what makes one mutation enough.',
+      'Mutation rates do not explain the pattern. The difference lies in what the mutations do: one overactive growth protein is dominant, while a halting protein still works if one normal copy remains.',
+      'An overactive growth-promoting protein pushes the cell to divide no matter what the normal copy does, so one mutant copy is enough. A halting protein still works with one normal copy, so both copies must fail.',
+      'One mutant copy of a halting gene usually does not change division, because the other copy still works. Cells with damaged halting genes are also not always removed, which is why such mutations contribute to cancer.',
+    ],
   },
   {
     type: 'mcq',
@@ -508,6 +670,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'A membrane-bound signal acts only through direct contact, so targets should respond when touching the producing cells but not to the medium, which contains no free signal. A response to medium alone or across a molecule-permeable filter would show a secreted signal. A response that grows with distance fits neither contact nor diffusion from a source.',
+    optionExplanations: [
+      'A response to medium alone would show that X is released into the medium. A membrane-bound signal stays on the producing cells, so medium without those cells should not trigger a response.',
+      'A response that grows stronger with distance fits neither contact signaling nor diffusion from a source. Signals from a source generally weaken as distance increases.',
+      'A filter that lets molecules pass but keeps the cells apart would block contact signaling. A response across it would show that X diffuses as a secreted molecule.',
+      'A membrane-bound signal acts only through direct contact. Targets should respond when touching the producing cells but not to medium, which contains no free signal.',
+    ],
   },
 
   /* ============================ UNIT 5 — HEREDITY (6) ============================ */
@@ -525,6 +693,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'This is a test cross: the dihybrid parent makes four gamete types in equal proportions if the genes assort independently, and the tthh parent contributes only t h, so the four phenotypes appear 1:1:1:1, about 250 each. A 9:3:3:1 ratio comes from crossing two dihybrids, only two classes would mean complete linkage, and a 3:1 tall-to-dwarf ratio would need both parents to carry T.',
+    optionExplanations: [
+      'In a test cross, the dihybrid parent makes four gamete types in equal numbers if the genes assort independently, and the tthh parent contributes only t h. The four phenotypes should appear 1:1:1:1, about 250 each.',
+      'A 9:3:3:1 ratio comes from crossing two dihybrids. Here one parent is homozygous recessive for both genes, so the ratio is 1:1:1:1.',
+      'Only two phenotype classes would mean the genes were completely linked with no crossing over. Independent assortment predicts all four classes in equal numbers.',
+      'A 3:1 tall-to-dwarf ratio would require both parents to carry T. The dwarf parent is tt, so the Tt × tt cross gives tall and dwarf plants in a 1:1 ratio.',
+    ],
   },
   {
     type: 'mcq',
@@ -540,6 +714,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'With 250 expected in each class, χ² = (162² + 148² + 158² + 152²) / 250 ≈ 385, and four phenotype classes give 3 degrees of freedom (critical value 7.81). Because 385 is far above 7.81, the hypothesis is rejected. The value 96 divides the summed squared deviations by the total of 1,000 instead of by each expected value, 2.5 adds the deviations divided by 250 without squaring them, and a four-class test has 3, not 1, degrees of freedom.',
+    optionExplanations: [
+      'About 96 comes from dividing the summed squared deviations by the total of 1,000 instead of by each expected value of 250. Dividing correctly gives about 385.',
+      'With 250 expected in each class, χ² = (162² + 148² + 158² + 152²)/250 ≈ 385. Four classes give 3 degrees of freedom and a critical value of 7.81, so independent assortment is rejected.',
+      'About 2.5 comes from adding the deviations divided by 250 without squaring them. The chi-square formula squares each deviation before dividing, giving about 385.',
+      'The value of 385 is right, but a test with four phenotype classes has 3 degrees of freedom, not 1. The conclusion is still rejection, but the stated test is reported incorrectly.',
+    ],
   },
   {
     type: 'mcq',
@@ -555,6 +735,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The rare classes are the recombinants: (92 + 98) / 1,000 = 0.19, or 19% recombination, which is 19 map units. Using only one recombinant class gives 9.2, 41 comes from one parental class (412 / 1,000), and 81 is the share of parental offspring, not of recombinants.',
+    optionExplanations: [
+      '41 comes from one parental class alone (412 out of 1,000). Map distance uses the recombinant offspring, which are the two rare classes.',
+      '9.2 uses only one of the two recombinant classes (92 out of 1,000). Both rare classes are recombinants, so both must be counted.',
+      'The rare classes are the recombinants: (92 + 98)/1,000 = 0.19, or 19% recombination. One percent recombination equals one map unit, so the genes are 19 map units apart.',
+      '81% is the share of parental offspring, (412 + 398)/1,000. Map distance is based on the share of recombinant offspring, which is 19%.',
+    ],
   },
   {
     type: 'mcq',
@@ -570,6 +756,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'The most common offspring (tall, smooth and dwarf, hairy) carry the parental combinations, so one homolog carried T with h and the other t with H. If T and H had been on the same homolog, tall, hairy and dwarf, smooth would be the common classes. Genes on different chromosomes would give a 1:1:1:1 ratio, and a parent with T and h on both homologs could not be heterozygous or produce dwarf offspring.',
+    optionExplanations: [
+      'If tall and hairy were on the same homolog, the tall, hairy and dwarf, smooth offspring would be the common classes. In fact they are the rare classes, so they are the recombinants.',
+      'A parent with tall and smooth alleles on both homologs would be TThh, not heterozygous for both genes. Crossed with tthh, it could produce no dwarf or hairy offspring at all.',
+      'Genes on different, nonhomologous chromosomes assort independently and would give about 250 of each phenotype. The data are strongly skewed toward two classes, so the genes are linked.',
+      'The most common offspring, tall, smooth and dwarf, hairy, carry the parental combinations. One homolog therefore carried T with h, and the other carried t with H.',
+    ],
   },
   {
     type: 'mcq',
@@ -584,6 +776,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Mitochondria are passed to offspring in the egg cytoplasm, not by sperm, so an affected mother passes the trait to all her children and an affected father to none. An X-linked recessive allele from a carrier mother would affect about half her sons and few daughters. An X-linked dominant allele from an affected father would affect all his daughters, and an autosomal dominant allele would pass from affected fathers as often as from mothers.',
+    optionExplanations: [
+      'Mitochondria are passed to offspring in the egg cytoplasm, not by sperm. An affected mother passes the trait to all her children, and an affected father passes it to none.',
+      'An X-linked dominant allele from an affected father would reach all his daughters. Here the children of affected fathers are never affected.',
+      'An X-linked recessive allele from a carrier mother would affect about half of her sons and few of her daughters. Here all sons and daughters of affected mothers are affected.',
+      'An autosomal dominant allele would pass from affected fathers as often as from affected mothers, to about half of the children. Here affected fathers never pass it on.',
+    ],
   },
   {
     type: 'mcq',
@@ -597,7 +795,13 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation:
-      'By the product rule, P(A_) from Aa × Aa = 3/4, P(bb) from Bb × bb = 1/2, and P(cc) from Cc × Cc = 1/4, so the fraction is 3/4 × 1/2 × 1/4 = 3/32. The value 3/64 treats the B cross as Bb × Bb, 1/16 drops the A term, and 9/64 treats the B cross as giving 3/4 instead of 1/2.',
+      'By the product rule, P(A_) from Aa × Aa = 3/4, P(bb) from Bb × bb = 1/2, and P(cc) from Cc × Cc = 1/4, so the fraction is 3/4 × 1/2 × 1/4 = 3/32. The value 3/64 treats the B cross as Bb × Bb, 1/16 drops the A term and also treats the B cross as Bb × Bb, and 9/64 treats the B cross as giving 3/4 instead of 1/2.',
+    optionExplanations: [
+      '3/64 treats the B cross as Bb × Bb, giving 1/4 for bb. The cross is Bb × bb, so the chance of bb is 1/2.',
+      'By the product rule, P(A_) from Aa × Aa = 3/4, P(bb) from Bb × bb = 1/2, and P(cc) from Cc × Cc = 1/4. The fraction is 3/4 × 1/2 × 1/4 = 3/32.',
+      '1/16 does not follow from the three gene probabilities. It equals 1/4 × 1/4, which leaves out the 3/4 for gene A and also treats Bb × bb as if it gave bb only a quarter of the time.',
+      '9/64 uses 3/4 for gene B, as if bb came from a cross that gives the recessive phenotype three-quarters of the time. Bb × bb gives bb half of the time.',
+    ],
   },
 
   /* ============================ UNIT 6 — GENE EXPRESSION & REGULATION (8) ============================ */
@@ -615,6 +819,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'RNA polymerase pairs each template base with its complement (A–U, T–A, G–C, C–G) and builds the mRNA 5′ to 3′, antiparallel to the template, giving 5′-AUG CCU GAA UGG UAA-3′. The UAC sequence copies the template itself, the ATG sequence is the DNA coding strand (RNA has U, not T), and AAU GGU... is the correct transcript written backward.',
+    optionExplanations: [
+      '5′-ATG CCT GAA TGG TAA-3′ is the DNA coding strand, which contains T. RNA contains U in place of T, so this cannot be the mRNA.',
+      '5′-UAC GGA CUU ACC AUU-3′ copies the template sequence itself with U for T. The mRNA must be complementary to the template, not the same as it.',
+      'RNA polymerase pairs each template base with its complement (A–U, T–A, G–C, C–G) and builds the mRNA 5′ to 3′, antiparallel to the template. This gives 5′-AUG CCU GAA UGG UAA-3′.',
+      '5′-AAU GGU AAG UCC GUA-3′ is the correct transcript written backward. It has the right bases, but labeling that order 5′ to 3′ reverses the strand\'s direction.',
+    ],
   },
   {
     type: 'mcq',
@@ -630,6 +840,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'The new mRNA is 5′-AUG CCC UGA AUG GUA A-3′; the insertion shifts the reading frame, and the third codon becomes UGA, a stop codon, so translation ends after Met-Pro. A single-base insertion changes every codon after it rather than adding one amino acid or altering only one codon, so the sequence does not stay the same or gain a whole residue.',
+    optionExplanations: [
+      'An inserted base shifts the reading frame and changes every codon after it, so the sequence cannot stay the same. Here the shift produces a stop codon after two amino acids.',
+      'A single-base insertion shifts the frame and changes every codon downstream, not just one. The third codon becomes UGA, a stop codon, rather than a different amino acid.',
+      'An insertion of one base does not add one amino acid; adding a whole codon would take three bases. One base shifts the frame for every codon that follows.',
+      'The new mRNA is 5′-AUG CCC UGA AUG GUA A-3′. The insertion shifts the reading frame and makes the third codon UGA, a stop codon, so translation ends after Met-Pro.',
+    ],
   },
   {
     type: 'mcq',
@@ -645,6 +861,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Template CTT is transcribed as GAA (Glu); changing it to CTC gives GAG, which also codes for Glu, so this is a silent mutation. GGA to GAA changes the codon CCU (Pro) to CUU (Leu), a missense mutation. ACC to ATC changes UGG (Trp) to UAG (stop), a nonsense mutation, and deleting a base shifts the reading frame.',
+    optionExplanations: [
+      'Template CTT is transcribed as GAA, which codes for Glu. Changing it to CTC gives the codon GAG, which also codes for Glu, so the polypeptide is unchanged.',
+      'Changing template ACC to ATC changes the codon UGG (Trp) to UAG, a stop codon. This nonsense mutation shortens the polypeptide.',
+      'Changing template GGA to GAA changes the codon CCU (Pro) to CUU (Leu). This missense mutation changes one amino acid in the polypeptide.',
+      'Deleting one base shifts the reading frame, so every codon after the deletion is read differently. The amino acid sequence changes from that point on.',
+    ],
   },
   {
     type: 'mcq',
@@ -660,6 +882,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The mRNA is complementary to the template strand, and so is the nontemplate strand, so the nontemplate (coding) strand has the same sequence and direction as the mRNA, with T in place of U. The template strand is complementary to the mRNA in either reading direction, and the anticodons are complementary to the codons, not identical to them.',
+    optionExplanations: [
+      'The template strand is complementary to the mRNA, whichever direction it is read. Reading it 3′ to 5′ still gives complementary bases, not matching ones.',
+      'The mRNA and the nontemplate strand are both complementary to the template strand, so they have the same sequence and direction. The nontemplate (coding) strand matches the mRNA, with T in place of U.',
+      'Reading the template from 5′ to 3′ only reverses its order; its bases are still complementary to the mRNA. It does not match the mRNA sequence.',
+      'Each anticodon is complementary to its codon, not identical to it. A list of anticodons would therefore resemble the template, not the mRNA.',
+    ],
   },
   {
     type: 'mcq',
@@ -674,6 +902,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Tryptophan acts as a corepressor: bound tryptophan activates the repressor, which binds the operator and blocks RNA polymerase, so the cell stops making enzymes for a product it already has. Releasing the repressor would raise enzyme production when it is least needed. Tryptophan works through the repressor rather than the promoter, and this regulation acts on transcription.',
+    optionExplanations: [
+      'Releasing the repressor would raise enzyme production when tryptophan is already plentiful, the opposite of what the cell needs. Bound tryptophan activates the repressor instead.',
+      'Tryptophan works through the repressor protein, not by binding the promoter. Its effect is to shut the operon off, not to recruit RNA polymerase.',
+      'Tryptophan acts as a corepressor. When bound to the repressor, it activates it, so the repressor binds the operator and blocks RNA polymerase, and the cell stops making enzymes for a product it already has.',
+      'In the trp operon, tryptophan controls transcription through the repressor and operator. Stopping translation while transcription continues does not describe how this operon is regulated.',
+    ],
   },
   {
     type: 'mcq',
@@ -690,6 +924,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Without the drug, gene H mRNA rose 40-fold within 10 minutes and protein H followed; when transcription was blocked, neither rose, so the response depends on making new mRNA, that is, on increased transcription. If heat only stabilized the protein, sped up translation of existing mRNA, or slowed mRNA breakdown, protein H or its mRNA would have risen even with transcription blocked.',
+    optionExplanations: [
+      'If heat only stabilized existing protein H, protein H would rise even with transcription blocked. In the drug-treated culture it stayed at 1, and the untreated mRNA rose 40-fold.',
+      'If heat sped translation of existing mRNA, protein H would rise even with transcription blocked. With the drug, protein H stayed at 1 throughout.',
+      'If heat blocked mRNA breakdown, gene H mRNA would build up even with transcription blocked. With the drug, it stayed at 1 and then fell to 0.5.',
+      'Without the drug, gene H mRNA rose 40-fold within 10 minutes and protein H followed. When transcription was blocked, neither rose, so heat acts mainly by increasing transcription of the gene.',
+    ],
   },
   {
     type: 'mcq',
@@ -712,6 +952,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Only suspect 2 has all three of the sample\'s fragment sizes. DNA is negatively charged and moves toward the positive electrode, and small fragments slip through the gel fastest, so the 900 bp fragment travels farthest. Suspect 1 shares two of the three bands, which excludes a match, and having the same number of bands is not a match when the sizes differ.',
+    optionExplanations: [
+      'Suspect 2 has all three of the crime-scene fragment sizes. DNA moves toward the positive electrode, and small fragments move through the gel fastest, so the 900 bp fragment travels farthest.',
+      'Suspect 2 does match, but the 4,000 bp fragment is the largest and moves the most slowly. The smallest fragment, 900 bp, travels farthest from the well.',
+      'Suspect 1 shares only two of the three bands and has an 1,800 bp fragment instead of 2,500 bp. A match requires every band to be the same size.',
+      'Having the same number of bands is not a match when the sizes differ. Suspect 3 has 3,200 bp and 600 bp fragments that are not in the crime-scene sample.',
+    ],
   },
   {
     type: 'mcq',
@@ -726,6 +972,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Ribosomes read mRNA 5′ to 3′, so they move toward the 3′ end, and each new amino acid is linked by its amino group to the carboxyl group at the end of the growing chain, so the polypeptide grows from its amino end toward its carboxyl end. Moving toward the 5′ end would read the codons backward, and the amino end is where the chain began, not where amino acids are added.',
+    optionExplanations: [
+      'Adding each amino acid to the carboxyl end is right, but the direction is reversed. Ribosomes read mRNA 5′ to 3′, so they move toward the 3′ end; moving toward the 5′ end would read the codons backward.',
+      'Ribosomes read mRNA 5′ to 3′, so they move toward the 3′ end. Each new amino acid is linked by its amino group to the carboxyl end of the growing chain, so the polypeptide grows toward its carboxyl end.',
+      'The direction along the mRNA is right, but the amino end is where the chain began. New amino acids are added to the carboxyl end of the growing polypeptide.',
+      'Both parts are reversed. Ribosomes move toward the mRNA\'s 3′ end, and new amino acids are added to the carboxyl end of the chain, not the amino end.',
+    ],
   },
 
   /* ============================ UNIT 7 — NATURAL SELECTION (10) ============================ */
@@ -743,6 +995,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Pale lizards (bb) are 4 of 100, so $q^{2} = 0.04$ and $q = 0.2$. The value 0.04 is the frequency of the bb genotype, not of the allele; 0.8 is the frequency of B; and 0.96 is the share of brown lizards.',
+    optionExplanations: [
+      '0.8 is the frequency of allele B, since p = 1 − q = 1 − 0.2. The question asks for the frequency of b.',
+      '0.04 is the frequency of the bb genotype, 4 pale lizards out of 100, which equals $q^{2}$. The allele frequency is its square root.',
+      'Pale lizards (bb) are 4 of 100 on dark soil, so $q^{2} = 0.04$ and $q = 0.2$. This is the frequency of allele b.',
+      '0.96 is the share of brown lizards, which includes both BB and Bb genotypes. It is a phenotype frequency, not the frequency of allele b.',
+    ],
   },
   {
     type: 'mcq',
@@ -758,6 +1016,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'At each site the model that contrasted with the ground was attacked about four to five times as often (pale models on dark soil, brown models on white dunes), so matching the background improves survival. Brown models were attacked less on dark soil, so predators do not favor one color everywhere. The models show predation, not how color develops, and the attack rates are far from random.',
+    optionExplanations: [
+      'Brown models were attacked less often on dark soil (12% versus 48%). Predators do not favor one color everywhere, so allele B is not selected against at every site.',
+      'Attack rates differed by about four to five times between the two colors at each site, so attacks were far from random. Color clearly affects the chance of being attacked.',
+      'The clay models measure predation, not how skin color develops. The stimulus also states that skin color is controlled by one gene.',
+      'At each site, the model that contrasted with the ground was attacked about four to five times as often. Matching the background lowers predation, so skin color affects survival.',
+    ],
   },
   {
     type: 'mcq',
@@ -773,6 +1037,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Drift changes allele frequencies at random with respect to traits, whereas selection makes the trait that improves survival common; the color that predators attack less is the common one at both sites. A difference in allele frequency between sites could arise by drift alone. Interbreeding and population size say nothing about whether the change was adaptive.',
+    optionExplanations: [
+      'Drift changes allele frequencies at random with respect to traits, but selection makes the trait that improves survival common. At both sites, the common color is the one predators attacked less, which points to selection.',
+      'A difference in allele frequency between sites could arise by drift alone. It shows that the populations differ but not why, so it does not distinguish selection from drift.',
+      'Interbreeding and fertile young show that the two color forms belong to one species. That says nothing about whether the color difference is adaptive.',
+      'Similar population sizes say nothing about whether the color difference improves survival. It does not show whether the difference arose by selection or by chance.',
+    ],
   },
   {
     type: 'mcq',
@@ -788,6 +1058,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Migrants from the dunes carry b alleles, so gene flow keeps adding them to the dark-soil population even though selection removes pale lizards there, which helps explain the 4 pale lizards. Gene flow makes populations more alike, which slows speciation. Moving does not change an individual\'s alleles, and selection on individuals does change allele frequencies.',
+    optionExplanations: [
+      'Gene flow mixes the alleles of the two sites and makes the populations more alike, which slows speciation rather than speeding it up.',
+      'Migrants from the dunes carry b alleles, so gene flow keeps adding them to the dark-soil population even though selection removes pale lizards there. This helps explain the few pale lizards seen.',
+      'Moving to a new site does not change an individual\'s alleles. Pale offspring arise when two parents each pass on a b allele, not when B alleles turn into b.',
+      'Selection acts on individuals, but it does change allele frequencies across generations. Migration adds alleles to the population, so it does have an effect.',
+    ],
   },
   {
     type: 'mcq',
@@ -803,6 +1079,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Mutations arise at random with respect to need; once B existed, brown lizards on dark soil were attacked less, survived and reproduced more, and B became common. The environment does not cause the mutations an organism needs, characteristics acquired during life are not inherited, and nothing requires the mutation to postdate the predators.',
+    optionExplanations: [
+      'The environment does not cause the mutations an organism needs. Mutations arise at random with respect to need; the dark soil only affected which lizards survived.',
+      'Characteristics acquired during an individual\'s life, such as a color change, are not inherited. Only heritable alleles like B are passed to offspring.',
+      'Mutations arise at random with respect to need. Once B existed, brown lizards on dark soil were attacked less, survived and reproduced more, and B became common.',
+      'Nothing requires the mutation to have arisen after predators began hunting there; it could have existed earlier. Predators only made B advantageous once it was present.',
+    ],
   },
   {
     type: 'mcq',
@@ -817,6 +1099,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Here $q^{2} = 0.09$, so $q = 0.3$ and $p = 0.7$. Heterozygotes are $2pq = 0.42$ of all plants and purple plants are $1 - 0.09 = 0.91$, so $0.42 \\div 0.91 \\approx 46\\%$ of purple plants are heterozygous. The value 42% is the share of all plants, 49% is $p^{2}$ as a share of all plants, and 54% is the share of purple plants that are homozygous.',
+    optionExplanations: [
+      '54% is the share of purple plants that are homozygous, $p^{2}$ divided by the purple fraction (0.49 ÷ 0.91). The question asks for the heterozygous share.',
+      '42% is $2pq$ as a share of all plants, including white ones. The question asks for the share of purple plants only, so 0.42 must be divided by 0.91.',
+      '49% is $p^{2}$, the homozygous dominant share of all plants. It describes neither heterozygotes nor a share of purple plants only.',
+      'Since $q^{2} = 0.09$, $q = 0.3$ and $p = 0.7$. Heterozygotes are $2pq = 0.42$ of all plants, and purple plants are 0.91, so $0.42 \\div 0.91 \\approx 46\\%$ of purple plants are heterozygous.',
+    ],
   },
   {
     type: 'mcq',
@@ -831,6 +1119,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'When a population crashes to a few individuals, the alleles that survive are a chance sample, and many are lost; regrowth from that small group cannot restore them, so the large modern population carries little variation. Gene flow from a highly variable species would add variation, not remove it. Selection is unlikely to have favored a single genotype at every gene studied, and mutation adds new alleles rather than merging existing ones.',
+    optionExplanations: [
+      'When a population crashes to a few individuals, the alleles that survive are a chance sample and many are lost. Regrowth from that small group cannot restore them, so the large modern population has little variation.',
+      'Gene flow from a highly variable species would add variation, not remove it. The southern species is highly variable, so mixing with it could not explain low variation.',
+      'Selection is unlikely to have favored a single genotype at every gene studied. Losing variation at all genes at once fits a chance loss of alleles during a crash.',
+      'Mutation adds new alleles rather than converting many alleles into one. It cannot explain a loss of genetic variation.',
+    ],
   },
   {
     type: 'mcq',
@@ -845,6 +1139,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The species share meadows and mate readily when brought together, but in nature their breeding seasons do not overlap, so mating never happens; this is temporal isolation, a prezygotic barrier. The healthy, fertile hybrids rule out a postzygotic barrier, the ready mating in the laboratory rules out a behavioral one, and living in the same meadows rules out geographic isolation.',
+    optionExplanations: [
+      'The hybrids produced in the laboratory are healthy and fertile, which rules out a postzygotic barrier. The species are kept apart before mating can occur.',
+      'The species share meadows and mate readily when brought together, but their breeding seasons do not overlap. Mating never happens in nature, which is temporal isolation, a prezygotic barrier.',
+      'Both species live in the same meadows, so they are not kept physically apart. A geographic barrier cannot explain their isolation.',
+      'Adults of the two species mate readily in the laboratory, so females do not ignore the other species\' males. The barrier is timing, not behavior.',
+    ],
   },
   {
     type: 'mcq',
@@ -859,6 +1159,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The low-armor allele already existed at low frequency in the marine ancestors, so colonists brought it to each lake, where selection raised its frequency; the same change in many independent lakes points to selection rather than chance. Acquired changes are not inherited. An identical new mutation arising separately in every lake is very unlikely when the allele was already available, and drift would not push many lakes in the same direction.',
+    optionExplanations: [
+      'Acquired changes are not inherited. A fish growing fewer plates in response to lake water would not pass that change to its offspring through its genes.',
+      'An identical new mutation arising separately in every lake is very unlikely. The low-armor allele was already present in the marine ancestors, so no new mutation was needed.',
+      'The low-armor allele already existed at about 1% in the marine ancestors, so colonists brought it to each lake, where selection raised its frequency. The same change in many lakes points to selection.',
+      'Genetic drift is random and would not push many independent lakes in the same direction. The repeated outcome across lakes points to selection, not chance.',
+    ],
   },
   {
     type: 'mcq',
@@ -873,6 +1179,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Laboratory-raised offspring keep their parents\' beak length whatever fruit they eat, so the difference is genetic, and it arose after the small-fruited tree became common, showing evolution on a short time scale. The rearing results rule out an effect of the fruit on development and of use or disuse, and the short-beaked bugs live on a tree that has been common for only about 50 years.',
+    optionExplanations: [
+      'Offspring raised in the laboratory on either kind of fruit have beaks like their parents\'. The fruit eaten during development does not set beak length.',
+      'The short-beaked bugs live on a tree that became common only about 50 years ago. Nothing suggests they are an older species that was already short-beaked.',
+      'Changes caused by use or disuse during life are not inherited, and the rearing results show beak length follows the parents rather than the fruit. The difference is genetic.',
+      'Laboratory-raised offspring keep their parents\' beak length whatever fruit they eat, so the difference is heritable. It arose after the small-fruited tree spread, showing evolution on a short time scale.',
+    ],
   },
 
   /* ============================ UNIT 8 — ECOLOGY (8) ============================ */
@@ -891,6 +1203,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'The population grows by $r_{max}N = 0.3 \\times 400 = 120$ mice per month. The value 133 divides 400 by 3 instead of multiplying by 0.3, 12 misplaces the decimal point (0.03 × 400), and 1,200 multiplies by 3 instead of 0.3.',
+    optionExplanations: [
+      'During exponential growth the population grows by $r_{max}N = 0.3 \\times 400 = 120$ mice per month, because each individual adds 0.3 offspring per month on average.',
+      '133 comes from dividing 400 by 3 instead of multiplying 400 by 0.3. The exponential growth equation multiplies the per capita rate by the population size.',
+      '12 misplaces the decimal point, using 0.03 instead of 0.3. The correct product is $0.3 \\times 400 = 120$ mice per month.',
+      '1,200 multiplies 400 by 3 instead of 0.3. The per capita growth rate is 0.3 per month, so the population grows by 120 mice per month.',
+    ],
   },
   {
     type: 'mcq',
@@ -907,6 +1225,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Bleaching (loss of the algae) rose sharply above +1.0°C and deaths followed months later, so the corals starved after losing the photosynthetic partners that supply most of their food. The algae left first, not after the corals died. Nothing indicates the algae became parasites, and warm water holds less dissolved oxygen, not more.',
+    optionExplanations: [
+      'The data show bleaching first and deaths months later, so the algae left before the corals died, not after. Deaths followed the loss of the algae.',
+      'Bleaching rose sharply above +1.0°C, and deaths followed months later. The corals starved after losing the photosynthetic algae that supply most of their food, so heat broke down the mutualism.',
+      'Nothing in the data indicates the algae became parasites. Bleaching means the algae left the corals\' tissues, not that they began to feed on them.',
+      'Warm water holds less dissolved oxygen, not more. The data link the deaths to the earlier loss of the algae, not to oxygen poisoning.',
+    ],
   },
   {
     type: 'mcq',
@@ -923,6 +1247,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Nitrate was plentiful before iron was added, yet phytoplankton stayed scarce; adding only iron produced a bloom, so iron was in shortest supply relative to need. Nitrate fell only because the growing phytoplankton used it after iron was supplied. The data give no evidence about predators, and phytoplankton get their energy from light, not from iron.',
+    optionExplanations: [
+      'Nitrate was plentiful before iron was added, yet phytoplankton stayed scarce, so nitrate was not limiting. It fell only after iron let the phytoplankton grow and use it.',
+      'The data give no evidence about predators or toxicity. The bloom followed from adding a nutrient that the phytoplankton were short of.',
+      'Nitrate and phosphate were plentiful but phytoplankton were scarce, and adding only iron produced a bloom. Iron was therefore the nutrient in shortest supply relative to need.',
+      'Phytoplankton are photosynthetic and get their energy from light, not from iron. Iron is a nutrient they need, not an energy source.',
+    ],
   },
   {
     type: 'mcq',
@@ -937,6 +1267,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Species that use the same resource in different ways (resource partitioning) compete less, which allows similar species to coexist instead of one excluding the others. Mutualism requires each species to benefit the other, which feeding in different places does not do. Nothing indicates a keystone role, and if food were unlimited there would be no pressure for the species to divide the trees.',
+    optionExplanations: [
+      'If food were unlimited, there would be no pressure for the species to divide the trees among themselves. The partitioning is best explained by competition that it reduces.',
+      'Mutualism requires each species to benefit the other. Feeding in separate parts of the trees does not help the other species; it only reduces overlap in what they eat.',
+      'Nothing in the stimulus indicates a keystone role or that any warbler controls the prey of the others. All five species eat insects in different parts of the trees.',
+      'Species that use the same resource in different ways compete less, which is resource partitioning. This lets similar species coexist instead of one excluding the others.',
+    ],
   },
   {
     type: 'mcq',
@@ -951,6 +1287,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'The egrets benefit by catching insects more easily, and the cattle gain nothing and lose nothing, which defines commensalism. Mutualism requires both species to benefit. The egrets eat insects, not the cattle\'s food or tissues, so this is not parasitism or competition for a shared resource.',
+    optionExplanations: [
+      'The egrets benefit by catching the insects the cattle stir up, and the cattle neither gain nor lose. One species benefiting while the other is unaffected defines commensalism.',
+      'Mutualism requires both species to benefit, but the stem states that the cattle are neither helped nor harmed. Sharing a grassland does not make the relationship mutualistic.',
+      'In parasitism one species feeds on another and harms it. The egrets eat insects, not the cattle\'s food or tissues, and the cattle are unharmed.',
+      'Competition requires both species to use the same limited resource. The egrets eat insects while the cattle eat grass, so they do not compete for food.',
+    ],
   },
   {
     type: 'mcq',
@@ -965,6 +1307,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The plant\'s signal recruits a predator of its herbivore, so signaling plants lose less leaf tissue and can put more energy into reproduction. The chemicals attract wasps rather than poisoning the caterpillars, the scenario says nothing about signaling to other plants or about growth rates, and corn is wind-pollinated, so the wasps are not pollinators.',
+    optionExplanations: [
+      'The chemicals attract wasps rather than poisoning the caterpillars. The stem describes the wasps, not the chemicals, as what kills the caterpillars.',
+      'The plant\'s signal recruits a predator of its herbivore. Wasps kill the caterpillars, so signaling plants lose less leaf tissue and can put more energy into making seeds.',
+      'The scenario says nothing about signaling to other plants or about growth rates. The described effect of the chemicals is to attract wasps that kill caterpillars.',
+      'Corn is wind-pollinated, and the stem describes the wasps only as parasites of the caterpillars. Nothing indicates the wasps pollinate the plants.',
+    ],
   },
   {
     type: 'mcq',
@@ -979,6 +1327,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The plant thrives where it has escaped its specialist herbivores, so restoring one of them could limit it, which is the basis of biological control. A population covering the lake has not exceeded its resources in a way that predicts collapse, and native fish are not reported to eat it. Extra nutrients usually favor fast-growing floating plants rather than the native plants.',
+    optionExplanations: [
+      'A plant covering the lake has not exceeded its resources in a way that predicts collapse. Nothing in the stem suggests its population is above carrying capacity.',
+      'Nothing in the stem reports native fish eating the plant. The plant has escaped the specialist herbivores that kept it uncommon in its native range.',
+      'The plant thrives where it has escaped its specialist herbivores. Releasing a host-tested enemy from its native range could restore that control, which is the basis of biological control.',
+      'Extra nutrients usually favor fast-growing floating plants rather than the native plants. Adding fertilizer is likely to make the infestation worse, not better.',
+    ],
   },
   {
     type: 'mcq',
@@ -1000,5 +1354,11 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'The 1-, 4- and 16-species plots kept 30%, about 56% and about 79% of their normal biomass in the drought, so more diverse plots were more resilient. The losses (280, 230 and 130 g/m²) were not equal. The 16-species plots grew the most biomass in both years, and the one-species plots grew the least in both.',
+    optionExplanations: [
+      'The losses were 280, 230, and 130 g/m², so they were not equal. Plots with more species lost less biomass in the drought.',
+      'The one-species plots grew the least biomass in both years: 400 g/m² in the normal year and 120 g/m² in the drought. They did not grow the most in the normal year.',
+      'The 16-species plots grew the most biomass in both years, including the normal year (610 g/m²). More species did not mean less biomass in a normal year.',
+      'The 1-, 4-, and 16-species plots kept 30%, about 56%, and about 79% of their normal biomass during the drought. More diverse plots kept a larger share, so they were more resilient.',
+    ],
   },
 ]

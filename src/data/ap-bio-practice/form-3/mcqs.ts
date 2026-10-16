@@ -51,6 +51,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Helices and β-sheets are secondary structure, formed by hydrogen bonds between the C=O and N–H groups of the polypeptide backbone. Peptide bonds define the primary sequence, R-group interactions create tertiary structure, and quaternary structure requires more than one polypeptide; each silk here is a single kind of protein folding along its own length.',
+    optionExplanations: [
+      'Helices and β-pleated sheets are secondary structure. They are held together by hydrogen bonds between the C=O and N–H groups of the polypeptide backbone.',
+      'Peptide bonds join neighboring amino acids and define the primary structure, the amino acid sequence. β-sheets are a folding pattern of that chain, held by hydrogen bonds rather than peptide bonds.',
+      'Tertiary structure is the overall fold produced by interactions among R groups. β-sheets form from hydrogen bonds between backbone atoms, not between R groups, so they are secondary structure.',
+      'Quaternary structure requires more than one polypeptide chain. β-sheets form within a single protein folding along its own length, so they are secondary structure.',
+    ],
   },
   {
     type: 'mcq',
@@ -66,6 +72,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Dragline silk has three times the alanine, far less proline, ten times the β-sheet content and ten times the breaking force of capture-spiral silk. The glycine content is about the same in both, so glycine cannot explain the difference, the charged-R-group content is low and similar in both, and the breaking forces differ tenfold.',
+    optionExplanations: [
+      'The two silks have nearly the same glycine content (42% and 44%), yet their breaking forces differ tenfold. Glycine therefore cannot explain the difference in strength.',
+      'Dragline silk has three times the alanine and far less proline than capture silk, along with ten times the β-sheet content and ten times the breaking force. The data link these features to strength.',
+      'Charged R groups are rare and similar in both silks (3% and 2%), but the breaking forces differ tenfold. Charged R groups cannot explain the difference in strength.',
+      'The breaking forces are 10 and 1, so the silks are not equally strong. Similar glycine content does not make them equal, because they differ in alanine, proline, and β-sheet content.',
+    ],
   },
   {
     type: 'mcq',
@@ -81,6 +93,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Proline\'s ring kinks the backbone and prevents the regular hydrogen bonding of β-sheets, so capture silk has almost no β-sheet (4%); its loosely folded chains can straighten when pulled. Charged R groups are rare in both silks, both have similar glycine content, and nothing in the data concerns water uptake.',
+    optionExplanations: [
+      'Charged R groups make up only 2% of capture silk, about the same as in dragline silk. They are too rare, and too similar between the silks, to explain the large difference in stretch.',
+      'Both silks have about the same glycine content, so glycine cannot explain why one stretches far more. Peptide bonds also do not stretch more than other covalent bonds.',
+      'Proline\'s ring kinks the backbone and prevents the regular hydrogen bonding of β-sheets, so capture silk has almost no β-sheet (4%). Its loosely folded chains can straighten when pulled.',
+      'Nothing in the data concerns water uptake or swelling. The table links stretchiness to high proline and few β-sheets, not to alanine absorbing water.',
+    ],
   },
   {
     type: 'mcq',
@@ -96,6 +114,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Small alanine R groups let neighboring chains pack closely into β-sheets; large, negatively charged R groups repel one another and attract water, so fewer sheets form and the fiber weakens. Like charges repel rather than attract, the backbone alone does not determine folding, and charged R groups make a protein more water-soluble, not less.',
+    optionExplanations: [
+      'Charged R groups attract water rather than repel it, so they make a protein more water-soluble, not less. The engineered silk would not become insoluble for this reason.',
+      'Like charges repel rather than attract. Many negatively charged R groups would push neighboring chains apart and prevent β-sheets from packing, so fewer sheets would form.',
+      'The backbone alone does not determine folding; the R groups strongly affect which structures form. Replacing alanine changes how tightly the chains can pack.',
+      'Small alanine R groups let neighboring chains pack closely into β-sheets. Large, negatively charged R groups repel one another and attract water, so fewer sheets form and the fiber breaks more easily.',
+    ],
   },
   {
     type: 'mcq',
@@ -110,6 +134,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'All four DNA nucleotides have the same deoxyribose sugar and phosphate group; they differ only in the base (A, T, G or C), which is why the sequence of bases carries information. The sugar differs between DNA and RNA, not among DNA nucleotides, and every nucleotide in a strand carries the same negatively charged phosphate, so their charge is the same.',
+    optionExplanations: [
+      'All four DNA nucleotides share the same deoxyribose sugar and phosphate group and differ only in their base (A, T, G, or C). The sequence of bases is what carries genetic information.',
+      'Every DNA nucleotide contains the same sugar, deoxyribose. The sugar differs between DNA and RNA, not among the four nucleotides of DNA.',
+      'Every DNA nucleotide has the same kind of phosphate group, which links it into the sugar-phosphate backbone. The phosphate is not what distinguishes the four nucleotides.',
+      'Each nucleotide in a strand carries the same negatively charged phosphate, so the four kinds have the same overall charge. They differ in their nitrogenous base.',
+    ],
   },
   {
     type: 'mcq',
@@ -124,6 +154,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Stretches of an RNA strand with complementary sequences hydrogen-bond to each other, forming double-stranded stems and loops that give the molecule a definite shape. Ribose has an extra hydroxyl group compared with deoxyribose, not one fewer. Uracil pairs with adenine by hydrogen bonds rather than bonding covalently to amino acids, and negatively charged phosphates repel one another.',
+    optionExplanations: [
+      'This reverses the chemistry. Ribose has an extra hydroxyl group compared with deoxyribose, not one fewer, and bending at every nucleotide would not produce one specific shape.',
+      'Stretches of a single RNA strand with complementary sequences hydrogen-bond to each other. They form double-stranded stems and loops that give a molecule such as tRNA a definite shape.',
+      'Uracil pairs with adenine by hydrogen bonds; it does not form covalent bonds with amino acids. A tRNA\'s amino acid attaches at one end of the molecule, not to bases throughout it.',
+      'Phosphate groups are negatively charged, so they repel one another rather than attract. Repulsion tends to extend a strand, not pull it into a compact ball.',
+    ],
   },
   {
     type: 'mcq',
@@ -139,6 +175,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'A channel protein that lets ions move down their electrochemical gradient carries out facilitated diffusion, a passive process. Needing a protein does not make transport active; active transport moves substances against a gradient using energy. Charged ions cannot cross the hydrophobic core on their own, and channels do not move ions in vesicles.',
+    optionExplanations: [
+      'Needing a membrane protein does not make transport active; facilitated diffusion uses proteins too. Active transport moves substances against their gradient using energy, but CFTR lets $Cl^{-}$ move only down its gradient.',
+      'Charged ions cannot dissolve in the hydrophobic fatty acid core of the bilayer, so they do not cross by simple diffusion. $Cl^{-}$ needs a channel such as CFTR.',
+      'A channel protein that lets ions move only down their electrochemical gradient carries out facilitated diffusion. The movement is passive but requires a membrane protein.',
+      'Exocytosis releases large molecules in vesicles that fuse with the membrane. Ions moving through a channel protein are not packaged in vesicles.',
+    ],
   },
   {
     type: 'mcq',
@@ -154,6 +196,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'With little $Cl^{-}$ leaving, the surface liquid has fewer solutes, so less water moves out of the cells by osmosis and the liquid layer thins (2.5 µm versus 7.0 µm). The data show $Cl^{-}$ movement fell, not rose. Water moves passively by osmosis rather than being pumped, and nothing in the data indicates that aquaporins are blocked.',
+    optionExplanations: [
+      'Nothing in the data indicates that aquaporins are blocked. The data show that $Cl^{-}$ movement fell, which by itself explains why less water follows it out.',
+      'The data show that $Cl^{-}$ movement out of mutant cells fell to 4, not that it rose. Less solute, not more, is leaving the cells.',
+      'Water moves passively by osmosis rather than being pumped with ATP. The liquid is shallower because less $Cl^{-}$ is moved out for water to follow.',
+      'With little $Cl^{-}$ leaving the mutant cells, the surface liquid gains fewer solutes. Less water follows by osmosis, so the liquid layer is thinner (2.5 µm versus 7.0 µm).',
+    ],
   },
   {
     type: 'mcq',
@@ -169,6 +217,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Membrane proteins are made on the rough ER and travel through the Golgi in vesicles to the plasma membrane; mutant CFTR is made but stays in the ER, and a drug that improves folding moves more of it to the plasma membrane, so misfolded protein is retained. The protein is present, so it is still made. In normal cells CFTR is in the plasma membrane, and the data say nothing about mRNA levels.',
+    optionExplanations: [
+      'Mutant CFTR is made but stays in the ER, and a drug that improves folding moves more of it to the plasma membrane. Misfolded CFTR is therefore held back in the ER instead of moving on.',
+      'The table states that most CFTR protein in the mutant cells is in the ER, so the protein is still made. The problem is where it goes, not whether it is made.',
+      'In normal cells most CFTR is in the plasma membrane, where it works as a $Cl^{-}$ channel. Being stuck in the ER is not its usual working location, which is why $Cl^{-}$ movement falls.',
+      'The data say nothing about mRNA levels, and a protein cannot be broken down before it is made. The mutant cells do contain CFTR protein, located in the ER.',
+    ],
   },
   {
     type: 'mcq',
@@ -184,6 +238,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'With the drug, CFTR appears in the plasma membrane and $Cl^{-}$ movement rises from 4 to 45, about half of normal, with deeper surface liquid; the drug helps the protein fold so it can be delivered where it works. $Cl^{-}$ movement stayed below normal, and the channel still allows only movement down the gradient. The drug acts on folding of the existing protein, not as a carrier or by adding genes.',
+    optionExplanations: [
+      '$Cl^{-}$ movement with the drug was 45, below the normal 100, and the stimulus says the channel allows only movement down the gradient. The drug did not make CFTR a pump.',
+      'With the drug, CFTR appears in the plasma membrane and $Cl^{-}$ movement rises from 4 to 45, about half of normal. Helping the protein fold lets more of it reach the membrane where it works.',
+      'The stimulus says the drug helps misfolded CFTR fold properly, so it acts on the existing protein. It does not replace CFTR as a carrier.',
+      'The drug acts on the folding of the existing protein, not on the number of genes. Nothing in the data indicates that extra CFTR protein was made.',
+    ],
   },
   {
     type: 'mcq',
@@ -199,6 +259,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The prediction concerns cells with the second mutation, so the direct test is to measure their $Cl^{-}$ movement and surface liquid; the model predicts both would be low, because a closed channel cannot pass $Cl^{-}$ even at the plasma membrane. The other measurements concern the original mutation, normal cells or mRNA, so they cannot test the prediction.',
+    optionExplanations: [
+      'Normal cells given the corrector drug do not carry the second mutation, so measuring them cannot test a prediction about cells with a closed channel.',
+      'Measuring CFTR in the ER of cells with the original mutation concerns a different mutation. It says nothing about cells whose CFTR reaches the membrane but stays closed.',
+      'The prediction concerns cells with the second mutation, so the direct test is to measure their $Cl^{-}$ movement and surface liquid. A closed channel would be expected to make both low.',
+      'CFTR mRNA levels in cells with the original mutation do not address the second mutation. The prediction is about surface liquid when the channel is present but closed.',
+    ],
   },
   {
     type: 'mcq',
@@ -213,6 +279,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Heat disrupts the bilayer and denatures membrane proteins, so the membrane of a boiled cell no longer blocks charged molecules and the dye diffuses in; an intact membrane keeps the dye out. Cell walls let small molecules through and do not trap them. Nothing indicates that living cells destroy the dye, and the dye cannot cross an intact bilayer to be pumped in at all.',
+    optionExplanations: [
+      'Plant and fungal cell walls are porous and let small molecules through; they do not trap dye. The difference between living and dead cells lies in the plasma membrane.',
+      'Nothing in the stem indicates that living cells destroy the dye. The stem says the charged dye cannot cross an intact bilayer, which explains why living cells stay colorless.',
+      'The charged dye cannot cross an intact bilayer at all, so living cells cannot be taking it in. Their color stays unchanged because the dye never enters.',
+      'Heat disrupts the bilayer and denatures membrane proteins, so a boiled cell\'s membrane no longer blocks charged molecules. The dye diffuses in, while an intact membrane keeps it out of living cells.',
+    ],
   },
   {
     type: 'mcq',
@@ -229,6 +301,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Mitochondria carry out the final stages of cellular respiration, so they consume $O_{2}$ and contain their own DNA; fraction 2 shows high $O_{2}$ use and some DNA. Fraction 1 holds most of the DNA but uses little $O_{2}$, which fits nuclei. Fraction 3 makes protein from amino acids, which fits ribosomes and rough ER, and fraction 4 shows little of any activity.',
+    optionExplanations: [
+      'Mitochondria carry out the final stages of cellular respiration, so they consume $O_{2}$ and contain a small amount of their own DNA. Fraction 2 shows high $O_{2}$ use and some DNA.',
+      'Fraction 1 holds 93% of the DNA but uses little $O_{2}$, which fits nuclei. Mitochondria would show high oxygen use.',
+      'Fraction 3 makes most of the protein from labeled amino acids, which fits ribosomes and rough ER. It uses little $O_{2}$, so it does not hold most of the mitochondria.',
+      'Fraction 4 shows little of any activity, with no DNA and almost no $O_{2}$ use. Mitochondria would show high oxygen use and some DNA.',
+    ],
   },
   {
     type: 'mcq',
@@ -244,6 +322,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Without added oxygen, yeast break glucose down by glycolysis and then alcohol fermentation, in which pyruvate loses $CO_{2}$ and is converted to ethanol, regenerating $NAD^{+}$. Yeast do not photosynthesize, aerobic respiration consumes $O_{2}$ rather than releasing it, and glycolysis itself releases no $CO_{2}$.',
+    optionExplanations: [
+      'Yeast are fungi and do not photosynthesize, and the flasks were not set up for photosynthesis. The gas came from the breakdown of sugar.',
+      'Without added oxygen, yeast break glucose down by glycolysis and then alcohol fermentation. Pyruvate loses $CO_{2}$ and is converted to ethanol, regenerating $NAD^{+}$, and the $CO_{2}$ inflates the balloon.',
+      'Aerobic respiration consumes $O_{2}$ rather than releasing it, and no oxygen was added to the flasks. Its gas product is $CO_{2}$, not $O_{2}$.',
+      'Glycolysis itself releases no $CO_{2}$; it splits glucose into two pyruvate molecules. The $CO_{2}$ is released in the later fermentation step.',
+    ],
   },
   {
     type: 'mcq',
@@ -259,6 +343,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Flask 1 had yeast and water but no added substance, so it shows how much gas the yeast make without a sugar supply (none: the balloon stayed at 9 cm). Flasks 2 and 5 received sugar or sugar plus enzyme, and flask 4 tests lactose, so none of them shows the no-food baseline.',
+    optionExplanations: [
+      'Flask 4 received lactose, so it tests whether yeast can use that sugar. It is not the baseline for yeast with no added food.',
+      'Flask 2 received glucose, so it shows gas production with a food source. It cannot serve as the no-food baseline.',
+      'Flask 1 had yeast and water but no added substance, so it shows how much gas the yeast make without a sugar supply. Its balloon stayed at 9 cm, the uninflated size.',
+      'Flask 5 received lactose plus an enzyme, which supplies usable sugar. It cannot show gas production without an added food source.',
+    ],
   },
   {
     type: 'mcq',
@@ -274,6 +364,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'When an enzyme that splits lactose was added (flask 5), the yeast produced nearly as much gas as with glucose, so the yeast can ferment the products but cannot break lactose\'s bond themselves; enzymes are specific to their substrates. Lactose dissolves readily, the yeast in flask 5 were not killed by its products, and the balloons trapped gas in every other flask.',
+    optionExplanations: [
+      'Lactose dissolves readily in water. Its failure to support gas production comes from the yeast\'s inability to break it down, as flask 5 shows.',
+      'Galactose is one of the products in flask 5, where the yeast produced plenty of gas, so the yeast were not killed by lactose or its products.',
+      'The balloons trapped gas in every other flask, and $CO_{2}$ from fermentation is the same gas whatever the sugar. The balloon stayed at 9 cm because no gas was made.',
+      'With an enzyme that splits lactose (flask 5), the yeast made nearly as much gas as with glucose. The yeast can ferment the products but lack the enzyme to break lactose down themselves.',
+    ],
   },
   {
     type: 'mcq',
@@ -289,6 +385,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Yeast first split sucrose into its two monosaccharides, an extra step that slightly delays fermentation. Sucrose is a disaccharide, larger than glucose and with more stored energy per molecule. Fermentation releases $CO_{2}$, not $O_{2}$, and the large balloon in flask 3 shows that glycolysis continued.',
+    optionExplanations: [
+      'Yeast must first split sucrose into glucose and fructose before fermenting it. This extra step slightly delays fermentation, giving a slightly smaller balloon after 60 minutes.',
+      'Sucrose is a disaccharide, larger than glucose, and it stores more energy per molecule, not less. Its smaller balloon is not explained by smaller sugar molecules.',
+      'Fermentation releases $CO_{2}$, not $O_{2}$, whichever sugar is used. Sucrose is broken into glucose and fructose, which enter the same pathway.',
+      'The balloon in flask 3 grew to 28 cm, close to the 31 cm with glucose, so glycolysis clearly continued. Blocking glycolysis would have left the balloon near 9 cm.',
+    ],
   },
   {
     type: 'mcq',
@@ -304,6 +406,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'To test whether yeast are needed, the flask must have glucose without yeast while everything else stays the same; if the balloon stays at 9 cm, the gas came from the yeast. Flask 1 already shows yeast without glucose, and changing the amounts or the temperature keeps the yeast in the flask, so neither can show whether glucose alone makes gas.',
+    optionExplanations: [
+      'Flask 1 already shows yeast and water without glucose. That flask tests whether yeast make gas without food, not whether glucose alone makes gas.',
+      'To test whether yeast are needed, the flask must contain glucose without yeast while everything else stays the same. If its balloon stays at 9 cm, the gas in flask 2 came from the yeast.',
+      'Doubling the yeast and glucose keeps yeast in the flask, so it cannot show whether glucose alone makes gas. It would only test the effect of amount.',
+      'Changing the temperature keeps yeast in the flask, so it cannot separate the yeast\'s role from glucose reacting with water. It tests the effect of temperature instead.',
+    ],
   },
   {
     type: 'mcq',
@@ -318,6 +426,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'When electron transport is not coupled to ATP synthesis, the energy released as electrons pass to oxygen is given off as heat instead of being captured in ATP, which warms the flower. Coupling to ATP synthase is what would store the energy as ATP. Making glucose from $CO_{2}$ requires energy input rather than releasing it, and the flowers are warm, not glowing.',
+    optionExplanations: [
+      'Storing energy in ATP requires electron flow to be coupled to ATP synthase. The stem says much of the electron flow is not coupled, so that energy is not captured as ATP.',
+      'Making glucose from $CO_{2}$ requires an input of energy, as in photosynthesis. It is not where the energy released by respiration goes.',
+      'When electron transport is not coupled to ATP synthesis, the energy released as electrons pass to oxygen is given off as heat. That heat keeps the flowers warmer than the air.',
+      'Nothing in the stem suggests the flowers glow; they are warm. The energy that is not captured in ATP is released as thermal energy, not light.',
+    ],
   },
   {
     type: 'mcq',
@@ -332,6 +446,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'ATP is not stockpiled; cellular respiration continually re-phosphorylates ADP, so each molecule is recycled about 240 times a day (60,000 g ÷ 250 g). Building 60 kg of new nucleotides daily would be impossible, food supplies fuel such as glucose rather than ATP, and ATP is not stored in fat.',
+    optionExplanations: [
+      'Building 60 kg of new adenine and ribose each day would be impossible and unnecessary. The same molecules are recycled between ATP and ADP instead of being rebuilt.',
+      'ATP is not stored in fat tissue; fat stores energy as triglycerides. The body keeps only about 250 g of ATP at any moment.',
+      'Food supplies fuels such as glucose and fats, not ATP. Cells make their own ATP by breaking down those fuels in cellular respiration.',
+      'ATP is not stockpiled; cellular respiration continually re-phosphorylates ADP. Each molecule is recycled about 240 times a day (60,000 g ÷ 250 g).',
+    ],
   },
   {
     type: 'mcq',
@@ -346,6 +466,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'In prokaryotes the electron transport chain and ATP synthase sit in the plasma membrane, which pumps $H^{+}$ out of the cytoplasm; $H^{+}$ flows back in through ATP synthase. Cell walls are porous and cannot hold a gradient, prokaryotes have no nuclear envelope, and ribosomes have no membranes.',
+    optionExplanations: [
+      'In prokaryotes the electron transport chain and ATP synthase sit in the plasma membrane, which pumps $H^{+}$ out of the cytoplasm. $H^{+}$ flows back in through ATP synthase, driving ATP synthesis.',
+      'Cell walls are porous and cannot hold an ion gradient, and the electron transport chain is a membrane protein complex. A capsule is outside the cell and plays no role in ATP synthesis.',
+      'Prokaryotes have no nuclear envelope; their DNA lies in the cytoplasm. The gradient must be built across a membrane that bacteria actually have, the plasma membrane.',
+      'Ribosomes have no membranes, so no gradient can be built across them. They make proteins rather than ATP.',
+    ],
   },
   {
     type: 'mcq',
@@ -361,6 +487,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Of the 1,090 cells produced, 131 die: 131 ÷ 1,090 ≈ 0.12, or about 12%. Dividing by the 959 surviving cells gives about 14%, 88% is the share that survive, and 1.3% misplaces the decimal point.',
+    optionExplanations: [
+      'About 14% comes from dividing 131 by the 959 surviving cells. The question asks what share of all 1,090 cells produced die, so the denominator is 1,090.',
+      'Of the 1,090 cells produced, 131 die: 131 ÷ 1,090 ≈ 0.12, or about 12%.',
+      'About 88% is the share of cells that survive (959 ÷ 1,090), not the share that die.',
+      'About 1.3% misplaces the decimal point. The fraction 131 ÷ 1,090 is about 0.12, which is 12%.',
+    ],
   },
   {
     type: 'mcq',
@@ -376,6 +508,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Worms without D protein make the same 1,090 cells, but none die, so D is required for apoptosis. Cell production is unchanged, so D is not needed for division and does not cause extra cells to form; the extra cells in the mutants are the 131 that normally die. Protecting cells from death describes S, not D.',
+    optionExplanations: [
+      'Worms without D protein still make all 1,090 cells, so D is not needed for cell division. The extra adult cells are the 131 that normally die.',
+      'This describes S, not D. Worms without D lose none of their cells; it is worms without S in which almost all cells die.',
+      'Worms without D protein make the same 1,090 cells, but none of them die. D is therefore required for the 131 programmed deaths, and without it those cells survive.',
+      'Cell production is unchanged without D: both normal and mutant worms make 1,090 cells. Mutant adults have more cells only because the 131 that normally die survive.',
+    ],
   },
   {
     type: 'mcq',
@@ -391,6 +529,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Without S protein almost every cell dies, so S normally keeps cells that should live from undergoing apoptosis. If S triggered the programmed deaths, losing it would save cells, as losing D does. The data show cells dying, not failing to form, and the deaths themselves, not leftover debris, are what kill the embryos.',
+    optionExplanations: [
+      'If S triggered the programmed deaths, losing it would save cells, as losing D does. Instead, without S almost all cells die.',
+      'The data show cells dying without S, not failing to form. Nothing indicates that S is needed to make the 1,090 cells.',
+      'The deaths themselves, not leftover debris, are what the data show. Without S almost every cell dies, which points to S preventing death rather than clearing it up.',
+      'Without S protein almost every cell dies, so S normally keeps cells that should live from undergoing apoptosis.',
+    ],
   },
   {
     type: 'mcq',
@@ -406,6 +550,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Losing S alone kills almost every cell, but losing D as well prevents all deaths, so the deaths caused by losing S require D; S must normally restrain cell death that is carried out through D. If D blocked S, or if both were removed and normal death resumed, the double mutant would show 131 deaths, not 0. Separate pathways would predict more deaths, and if S were needed to make D, worms without S would have no D and no deaths.',
+    optionExplanations: [
+      'Losing S alone kills almost every cell, but losing D as well prevents all deaths. The deaths caused by losing S require D, so S must normally restrain a death pathway that is carried out through D.',
+      'If D blocked S, removing both would let the death pathway run normally, giving 131 deaths. The double mutant shows 0 deaths, not 131.',
+      'Separate pathways would predict that removing both proteins kills even more cells. Instead the double mutant has no cell deaths at all.',
+      'If S were needed to make D, worms without S would have no D and therefore no deaths. In fact worms without S lose almost all of their cells.',
+    ],
   },
   {
     type: 'mcq',
@@ -420,6 +570,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Each activated platelet releases signals that activate more platelets, so the response reinforces itself until the plug forms, which is positive feedback. Negative feedback opposes a change and restores a set point, and the signal here increases rather than decreases. Reversing a stimulus is the opposite of what positive feedback does.',
+    optionExplanations: [
+      'Negative feedback opposes a change and restores a set point. Here each step increases the response further, which is the opposite of negative feedback.',
+      'Each activated platelet releases chemicals that activate more platelets, so the response reinforces itself until the plug forms. A self-amplifying response is positive feedback.',
+      'The chemical signal increases as more platelets are activated, not decreases. A response that reduces its own signal would be negative feedback, which is not what happens here.',
+      'The response is positive feedback, but it does not reverse the original stimulus. Positive feedback amplifies a change; reversing a stimulus is what negative feedback does.',
+    ],
   },
   {
     type: 'mcq',
@@ -434,6 +590,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Ligands bind receptors noncovalently and reversibly; when H is removed, the bound hormone dissociates, the receptors return to their inactive shape, and the downstream signal is switched off. The receptors are still present, so they were not destroyed or lost through reduced transcription, and the second messenger is made by the cell\'s own enzymes rather than from the hormone itself.',
+    optionExplanations: [
+      'The stem says the receptors are still present after the hormone is washed out, so they were not destroyed. The response stops for another reason.',
+      'The second messenger is made by the cell\'s own enzymes, not from the hormone itself. Hormone H acts at its receptor and is not converted into a messenger.',
+      'Ligands bind receptors noncovalently and reversibly. When H is removed, bound hormone dissociates, the receptors return to their inactive shape, and the downstream signal shuts off.',
+      'The receptors are still present when the response stops, so they were not lost by reduced transcription. Changing transcription would also take longer than a few minutes.',
+    ],
   },
   {
     type: 'mcq',
@@ -448,6 +610,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Normal cells respond to contact with their neighbors by halting the cell cycle; tumor cells ignore these signals, so they keep dividing and pile up. Cells that could not copy their DNA could not keep dividing, cells divide in response to growth factors rather than their absence, and extra checkpoints would slow division rather than speed it.',
+    optionExplanations: [
+      'Checkpoints stop the cell cycle when conditions are wrong, so extra checkpoints would slow division rather than speed it. Tumor cells usually have lost checkpoint control.',
+      'Cells that could not copy their DNA could not keep dividing successfully. DNA replication is required before each division.',
+      'Cells divide in response to growth factors, not their absence. A cell that divided only without growth factors would not explain the piling-up seen in tumor cells.',
+      'Normal cells halt the cell cycle when they contact their neighbors, so they stop at a single layer. Tumor cells ignore these signals, so they keep dividing and pile up.',
+    ],
   },
   {
     type: 'mcq',
@@ -462,6 +630,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'All the rabbit\'s cells have the same genotype, but the pigment enzyme it encodes is active only in cooler skin, so temperature determines where the genotype produces black fur. The cold does not cause mutations, all body cells share one genotype, and shaved patches kept at normal temperature regrow white fur.',
+    optionExplanations: [
+      'All of the rabbit\'s cells share the same genotype, but the pigment enzyme it encodes is active only in cooler skin. Temperature therefore determines where the genotype produces black fur.',
+      'All of a rabbit\'s body cells have the same genotype. The difference between ear and body fur comes from temperature, as the ice-pack experiment shows.',
+      'Cold does not cause mutations. The black fur appears because cooling lets the existing pigment enzyme work, not because the skin cells\' DNA changed.',
+      'Shaving alone does not make fur grow back black; the ice pack is the key condition. Shaved patches kept at normal body temperature regrow white fur.',
+    ],
   },
   {
     type: 'mcq',
@@ -476,6 +650,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'A Yy × Yy cross gives 1 YY : 2 Yy : 1 yy; if YY embryos die, the surviving offspring are 2 yellow (Yy) : 1 gray (yy), and the dead embryos are the missing quarter. Gray heterozygotes or yellow YY mice could not produce this ratio from yellow × yellow crosses, and an X-linked allele would give different ratios in males and females.',
+    optionExplanations: [
+      'If heterozygotes were gray, a cross of two yellow mice could not produce a 2:1 ratio with gray offspring in this way. The stem also says Y is dominant to y, not incompletely dominant.',
+      'A Yy × Yy cross gives 1 YY : 2 Yy : 1 yy. If YY embryos die, the survivors are 2 yellow (Yy) : 1 gray (yy), and the embryos that fail are the missing quarter.',
+      'An X-linked allele would give different ratios in males and females. The stem describes the same 2:1 ratio from every yellow × yellow cross, with no difference by sex.',
+      'The stem says Y is dominant, so a Yy mouse would be yellow, not gray. Two YY yellow parents could also never produce gray offspring.',
+    ],
   },
   {
     type: 'mcq',
@@ -492,6 +672,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Expected counts are 50 long, 100 oval and 50 round, so χ² = 2²/50 + 12²/100 + 10²/50 = 0.08 + 1.44 + 2.00 ≈ 3.5. Three classes give 3 − 1 = 2 degrees of freedom, and 3.5 is below 5.99, so the deviation is small enough to be due to chance and the hypothesis is not rejected. Using 1 degree of freedom is wrong for three classes, and 7.0 doubles the correct value.',
+    optionExplanations: [
+      'The χ² value is right, but three phenotype classes give 3 − 1 = 2 degrees of freedom, not 1. The correct critical value is 5.99.',
+      'The χ² value and degrees of freedom are right, but the conclusion is reversed. Because 3.5 is below 5.99, the deviation could be due to chance and the hypothesis is not rejected.',
+      'Expected counts are 50, 100, and 50, so χ² = 2²/50 + 12²/100 + 10²/50 ≈ 3.5. With 2 degrees of freedom the critical value is 5.99, and 3.5 is below it, so the 1:2:1 hypothesis is not rejected.',
+      'About 7.0 doubles the correct chi-square value. The three terms add to 0.08 + 1.44 + 2.00 ≈ 3.5, which is below the critical value of 5.99.',
+    ],
   },
   {
     type: 'mcq',
@@ -506,6 +692,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Two unaffected parents with an affected child must both carry a recessive allele, and an affected daughter of an unaffected father rules out X-linked recessive inheritance, because she would have to receive an affected X from him. A dominant allele would make at least one parent affected, and a Y-linked trait cannot appear in a daughter.',
+    optionExplanations: [
+      'A Y-linked trait passes only from fathers to sons and cannot appear in a daughter, who has no Y chromosome. The affected child here is a daughter.',
+      'An affected daughter would have to receive an X carrying the allele from her father, who would then be affected. Her father is unaffected, which rules out X-linked recessive inheritance.',
+      'A dominant allele would make at least one parent affected. Both parents here are unaffected, so the allele cannot be dominant.',
+      'Two unaffected parents with an affected child must both carry a recessive allele. An affected daughter with an unaffected father fits autosomal recessive inheritance.',
+    ],
   },
   {
     type: 'mcq',
@@ -520,6 +712,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Each child has a 3/4 chance of being unaffected, and births are independent events, so the probability that all three are unaffected is (3/4)³ = 27/64. The value 37/64 is the chance that at least one child is affected, 1/64 is the chance that all three are affected, and 9/16 is the result for only two children.',
+    optionExplanations: [
+      'Each child of two carriers has a 3/4 chance of being unaffected, and births are independent events. The probability that all three are unaffected is (3/4)³ = 27/64.',
+      '37/64 is the chance that at least one child is affected, 1 − 27/64. The question asks for the chance that all three are unaffected.',
+      '1/64 is the chance that all three children are affected, (1/4)³. The question asks for the chance that all three are unaffected.',
+      '9/16 is (3/4)², the chance that two children are both unaffected. The question asks about three children, so a third factor of 3/4 is needed.',
+    ],
   },
   {
     type: 'mcq',
@@ -534,6 +732,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The seedlings always match the branch that produced the egg, regardless of the pollen, which is the pattern of genes outside the nucleus; chloroplasts, with their own DNA, are passed on in the cytoplasm of the egg, not by pollen. Plants of this kind do not have X-linked genes passed only by pollen, a nuclear allele would be inherited from both parents, and the seedlings are grown under the same light.',
+    optionExplanations: [
+      'In this cross, seedlings match the branch that produced the egg, whichever branch supplied the pollen. A gene reaching seeds only from pollen would make the seedlings match the pollen source instead.',
+      'Seedlings always match the branch that produced the egg, regardless of the pollen. This is the pattern of genes outside the nucleus; chloroplasts and their DNA pass to offspring in the egg cytoplasm.',
+      'A nuclear allele would be inherited from both parents, so pollen from another branch would affect the seedlings. The pattern follows only the egg-producing branch.',
+      'The seedlings are grown under the same light, yet they still match the branch that produced the egg. The trait is inherited, not set by the light the parent branch received.',
+    ],
   },
   {
     type: 'mcq',
@@ -549,6 +753,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'An mRNA made only of U contains only one possible codon, UUU, and it produced only Phe, so UUU codes for Phe. AAA must code for Lys, the only product of the all-A mRNA. UUA and UCU never occur in an all-U mRNA, so the results cannot assign Phe to either.',
+    optionExplanations: [
+      'UUA never occurs in an all-U mRNA, which contains only the codon UUU. The results cannot assign Phe to UUA.',
+      'AAA is the only codon in the all-A mRNA, which produced only Lys. AAA therefore codes for Lys, not Phe.',
+      'An mRNA made only of U contains only one possible codon, UUU, and it produced only Phe. UUU therefore codes for Phe.',
+      'UCU does not occur in an all-U mRNA. It appears in the alternating UCUC… mRNA, which produced Ser and Leu, not Phe.',
+    ],
   },
   {
     type: 'mcq',
@@ -564,6 +774,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Read in triplets, UCUCUC… gives UCU, CUC, UCU, CUC…, two different codons in alternation, matching Ser–Leu–Ser–Leu. A two-base or four-base code would read the same codon (UC… or UCUC…) over and over and give a single repeated amino acid. A one-base code would make U code for Ser, but the all-U mRNA gave only Phe.',
+    optionExplanations: [
+      'A two-base code would read UC, UC, UC… over and over, giving a single repeated amino acid. The polypeptide had two alternating amino acids.',
+      'A one-base code would make U code for Ser, but the all-U mRNA gave only Phe. Each base cannot be a codon on its own.',
+      'A four-base code would read UCUC, UCUC… over and over, giving a single repeated amino acid. The polypeptide had two alternating amino acids.',
+      'Read in triplets, UCUCUC… gives UCU, CUC, UCU, CUC… in alternation. Two different codons alternating matches the Ser–Leu–Ser–Leu polypeptide.',
+    ],
   },
   {
     type: 'mcq',
@@ -579,6 +795,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Each tRNA carries a particular amino acid and has an anticodon that base-pairs with a matching codon, which is how the codon sequence is translated into an amino acid sequence. The mRNA, not tRNA, carries the sequence information, peptide bonds form within the ribosome, and the synthetic mRNA was made by the researchers rather than copied from DNA in the mixture.',
+    optionExplanations: [
+      'Each tRNA carries a particular amino acid and has an anticodon that base-pairs with a matching codon. This is how the codon sequence is translated into an amino acid sequence.',
+      'The mRNA, not tRNA, carries the sequence instructions from DNA to the ribosome. In this experiment the synthetic mRNA supplied that information.',
+      'Peptide bonds form within the ribosome while the tRNAs are bound there, not after the tRNAs leave. tRNAs deliver the amino acids.',
+      'The synthetic mRNA was made by the researchers, not copied from DNA in the mixture. tRNAs do not synthesize mRNA; that is done by RNA polymerase.',
+    ],
   },
   {
     type: 'mcq',
@@ -594,6 +816,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The same codons specify the same amino acids in both systems, so the code is shared by very distantly related organisms, which is evidence that it was inherited from a common ancestor. Bacterial and mammalian ribosomes differ in size and structure, organisms make very different proteins from different genes, and nothing suggests the code changed to match bacteria.',
+    optionExplanations: [
+      'Bacterial and mammalian ribosomes differ in size and structure. The shared result shows that both read codons the same way, not that the ribosomes are identical.',
+      'The same codons specify the same amino acids in both systems, so the code is shared by very distantly related organisms. This supports inheritance of the code from a common ancestor.',
+      'Organisms make very different proteins from different genes. The experiment shows they read the same codons in the same way, not that their genes are identical.',
+      'Nothing suggests the code changed in mammals to match bacteria. A shared code is best explained by inheritance from a common ancestor.',
+    ],
   },
   {
     type: 'mcq',
@@ -608,6 +836,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Putting a nonpolar R group on the water-facing surface creates a sticky hydrophobic patch that interacts with hydrophobic regions of neighboring hemoglobin molecules, so the molecules stack into fibers. A codon for valine is not a stop codon, a substitution does not shift the reading frame, and molecules are held together by hydrophobic interactions, not new peptide bonds.',
+    optionExplanations: [
+      'A codon for valine is not a stop codon. The protein is full length, with valine in place of glutamic acid at one position.',
+      'A single base substitution replaces one base, so it does not shift the reading frame. Only that one amino acid is changed.',
+      'Putting a nonpolar valine on the water-facing surface creates a hydrophobic patch. It interacts with nonpolar regions of neighboring hemoglobin molecules, so they stack into long fibers.',
+      'Separate hemoglobin molecules are held together by hydrophobic interactions, not new peptide bonds. Peptide bonds form only within a chain, on the ribosome.',
+    ],
   },
   {
     type: 'mcq',
@@ -622,6 +856,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'When two strains infect one cell, their genome segments can be packaged together, combining genetic material from both and producing a new strain in a single step. Mixing whole RNA segments from two strains is called reassortment, a form of recombination. A point mutation changes one base rather than mixing genomes, influenza does not reverse-transcribe its RNA into host DNA, and plasmid transfer occurs between bacteria, not viruses.',
+    optionExplanations: [
+      'A point mutation changes one base in the RNA rather than mixing genetic material from two strains. Here new particles carry whole RNA segments from both strains.',
+      'Plasmid transfer occurs between bacteria, not between viruses. The virus particles here combine RNA segments from two influenza strains inside one host cell.',
+      'Influenza does not reverse-transcribe its RNA into host DNA. The new particles carry RNA segments, mixed from two strains.',
+      'When two strains infect one cell, their genome segments can be packaged together. Mixing whole RNA segments in this way is reassortment, a form of recombination that can produce a new strain in one step.',
+    ],
   },
   {
     type: 'mcq',
@@ -636,6 +876,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Loosely packed chromatin lets transcription factors and RNA polymerase reach the DNA, while tightly packed DNA is rarely transcribed, so gene M is more likely expressed in muscle cells. Tight packing reduces transcription rather than increasing it. Having the same DNA sequence does not mean the same expression, and packed DNA is still present, not deleted.',
+    optionExplanations: [
+      'Loosely packed chromatin lets transcription factors and RNA polymerase reach the DNA, while tightly packed DNA is rarely transcribed. Gene M is therefore more likely to be expressed in muscle cells.',
+      'Having the same DNA sequence does not mean the same expression. Differences in chromatin packing control which genes each cell type transcribes.',
+      'Tightly packed DNA is still present in liver cells, not deleted. Packing makes the gene hard to reach, which lowers transcription without removing the gene.',
+      'This reverses the effect of packing. Tight packing reduces access by RNA polymerase, so it lowers transcription rather than increasing it.',
+    ],
   },
   {
     type: 'mcq',
@@ -650,6 +896,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'With no stop codon at the usual place, the ribosome adds glutamine and keeps reading the mRNA until it meets a stop codon further along, so the protein gains extra amino acids. CAA is a sense codon, so the ribosome does not stop there. Stop codons signal the end of translation, not transcription, and they are part of the mRNA.',
+    optionExplanations: [
+      'CAA is a sense codon for glutamine, so the ribosome does not stop there. The protein is not shortened.',
+      'With no stop codon at the usual place, the ribosome adds glutamine and keeps reading the mRNA until it reaches a stop codon further along. The protein gains extra amino acids.',
+      'Stop codons signal the end of translation, not transcription. The gene is still transcribed, and translation simply continues past the usual end.',
+      'Stop codons are part of the mRNA; they are how ribosomes know where to end translation. Changing one does affect the protein.',
+    ],
   },
   {
     type: 'mcq',
@@ -665,6 +917,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Crocodiles share every derived character that birds have except feathers, including the gizzard, which no other group has, so they share the most recent common ancestor with birds. Lizards lack the gizzard, mammals also lack the skull openings, and sharks lack all four characters.',
+    optionExplanations: [
+      'Mammals lack both the skull openings and the gizzard that birds have. They share only the amniotic egg with birds, so they are more distantly related than crocodiles.',
+      'Lizards share the amniotic egg and skull openings with birds but lack the gizzard. Crocodiles share all three of these characters with birds, so they are closer relatives.',
+      'Crocodiles share every derived character that birds have except feathers, including the gizzard, which no other group has. They share the most recent common ancestor with birds.',
+      'Sharks are the outgroup and lack all four characters. They are the most distantly related of the groups to birds.',
+    ],
   },
   {
     type: 'mcq',
@@ -680,6 +938,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'The characters are nested: the amniotic egg joins all four land groups, the skull openings join lizards, crocodiles and birds, and the gizzard joins crocodiles and birds, so the tree is (Sharks, (Mammals, (Lizards, (Crocodiles, Birds)))). Pairing mammals with lizards ignores the skull openings, pairing lizards with crocodiles ignores the gizzard, and pairing sharks with mammals ignores the amniotic egg.',
+    optionExplanations: [
+      'Pairing sharks with mammals ignores the amniotic egg, which mammals share with lizards, crocodiles, and birds but not with sharks.',
+      'Pairing mammals with lizards ignores the skull openings, which lizards share with crocodiles and birds but not with mammals.',
+      'Pairing lizards with crocodiles ignores the gizzard, which crocodiles share with birds but not with lizards.',
+      'The characters are nested: the amniotic egg joins all four land groups, the skull openings join lizards, crocodiles, and birds, and the gizzard joins crocodiles and birds. This gives (Sharks, (Mammals, (Lizards, (Crocodiles, Birds)))).',
+    ],
   },
   {
     type: 'mcq',
@@ -695,6 +959,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'A clade includes an ancestor and all of its descendants; because crocodiles share the gizzard with birds, the ancestor of lizards and crocodiles is also an ancestor of birds, so any clade containing both lizards and crocodiles must include birds. Lacking feathers is an ancestral absence, not a shared derived character. The amniotic egg is shared by all four land groups, and the table shows that birds do have the skull openings.',
+    optionExplanations: [
+      'Crocodiles share the gizzard with birds, so the common ancestor of lizards and crocodiles is also an ancestor of birds. A clade must include all descendants of its ancestor, so it must include birds.',
+      'Lacking feathers is an ancestral absence, not a shared derived character, so it cannot define a clade. Sharks and mammals also lack feathers.',
+      'The amniotic egg is shared by all four land groups, including birds and mammals. It cannot set lizards and crocodiles apart from birds.',
+      'The table shows that birds do have the skull openings behind each eye. That character groups birds with lizards and crocodiles rather than excluding them.',
+    ],
   },
   {
     type: 'mcq',
@@ -710,6 +980,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The tree places crocodiles closer to birds than lizards are, so bird DNA should be most similar to crocodile DNA; finding lizards closer to birds would conflict with it. Crocodiles resembling birds, sharks being the most different, and mammals being about equally distant from lizards, crocodiles and birds are all predicted by the tree.',
+    optionExplanations: [
+      'The tree places crocodiles and birds as closest relatives, so it predicts that crocodile DNA is most similar to bird DNA. This result agrees with the tree.',
+      'The tree places crocodiles closer to birds than lizards are, so bird DNA should be most similar to crocodile DNA. Finding lizard DNA more similar would conflict with the tree.',
+      'Sharks are the outgroup, the most distant relatives of birds, so the tree predicts their DNA differs the most. This result agrees with the tree.',
+      'Mammals branch off before lizards, crocodiles, and birds split, so they are about equally related to those three groups. This result agrees with the tree.',
+    ],
   },
   {
     type: 'mcq',
@@ -725,6 +1001,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'A derived character groups organisms only when two or more of them share it; feathers occur only in birds, so they distinguish birds but say nothing about which other group is closest to them. Feathers are inherited, they are found only in birds rather than all five groups, and the table places them as the most recent character, not the oldest.',
+    optionExplanations: [
+      'The table places feathers as the most recent character, found only in birds, not the oldest. The amniotic egg is shared far more widely, so feathers could not mark the base.',
+      'Feathers are inherited, like the other characters in the table. They are not useful here because only one group has them.',
+      'A derived character groups organisms only when two or more of them share it. Feathers occur only in birds, so they distinguish birds but say nothing about which group is closest to them.',
+      'Feathers are found only in birds, not in all five groups. The table shows feathers absent in sharks, mammals, lizards, and crocodiles.',
+    ],
   },
   {
     type: 'mcq',
@@ -739,6 +1021,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'The species share a region but use different habitats, so they seldom encounter one another; this is habitat isolation, a prezygotic barrier. Fertile hybrids in captivity rule out a postzygotic barrier and a mechanical one, and living in the same region rules out separation on different continents.',
+    optionExplanations: [
+      'The two species produce fertile offspring in captivity, which rules out a postzygotic barrier. They are kept apart before mating.',
+      'The snakes mate successfully in captivity, so their reproductive parts are compatible. A mechanical barrier would prevent that.',
+      'The two species live in the same region, not on different continents. They are separated by habitat, not geography.',
+      'The species share a region but use different habitats, water and land, so they seldom meet. This is habitat isolation, a prezygotic barrier.',
+    ],
   },
   {
     type: 'mcq',
@@ -753,6 +1041,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'After Australia became isolated, the marsupials there diversified into many ways of life with little competition from placental mammals, an adaptive radiation; similar roles on different continents are filled by unrelated lineages. The environment does not transform one group into another, marsupials share a mammalian ancestor with placentals, and the fossils indicate that few placentals reached Australia to be outcompeted.',
+    optionExplanations: [
+      'After Australia became isolated, marsupials there diversified into many ways of life with little competition from placental mammals. This adaptive radiation produced many marsupial species filling diverse roles.',
+      'Marsupials share a mammalian ancestor with placental mammals; they did not evolve separately from a reptile ancestor. Similar roles are filled by different mammal lineages on different continents.',
+      'The stem says few placental mammals reached Australia until recently. There were few placentals there for marsupials to outcompete and eliminate.',
+      'The environment does not transform one group of organisms into another. Placental mammals did not change into marsupials; few placentals were present in Australia at all.',
+    ],
   },
   {
     type: 'mcq',
@@ -769,6 +1063,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'With no selection, mutation or migration, only chance (genetic drift) changed allele frequencies; it lost or fixed the allele in 9 of 10 small populations but moved the large ones only slightly (0.43–0.57). Selection was absent by design, the large populations changed less, not more, and the frequencies changed without any mutation.',
+    optionExplanations: [
+      'The simulation included no selection, so selection cannot explain the loss of alleles. Chance alone changed the allele frequencies.',
+      'With no selection, mutation, or migration, only chance changed allele frequencies. Genetic drift lost or fixed the allele in 9 of 10 small populations but moved the large ones only slightly.',
+      'The large populations changed less, not more: their allele frequencies stayed between 0.43 and 0.57. The small populations changed far more.',
+      'No mutations occurred in the simulation, yet allele frequencies still changed, especially in the small populations. Genetic drift can change frequencies without new mutations.',
+    ],
   },
   {
     type: 'mcq',
@@ -783,6 +1083,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Because fatty acid vesicles assemble, grow and divide without any enzymes, simple membranes could have formed on the early Earth and enclosed self-replicating molecules such as RNA, a step toward the first cells. No enzymes were needed, cells today arise only from existing cells, and fatty acids lack the varied sequence needed to store information.',
+    optionExplanations: [
+      'The vesicles formed, grew, and divided without any enzymes. The observations show that membranes did not require complex enzymes to form.',
+      'Cells today arise only from existing cells. The experiment addresses how the first membranes could form, not how modern cells originate.',
+      'Fatty acid vesicles assemble, grow, and divide without enzymes, so simple membranes could have formed on the early Earth. They could have enclosed self-replicating molecules such as RNA, a step toward the first cells.',
+      'Fatty acids lack the varied sequence needed to store hereditary information. The observations concern membrane formation, not information storage.',
+    ],
   },
   {
     type: 'mcq',
@@ -797,6 +1103,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'An identical disabling mutation at the same position in several species is best explained by one event in a shared ancestor whose descendants all inherited it, which is evidence of common ancestry. The same mutation arising independently in each species is very unlikely, genes are not lost because individuals stop needing them, and nothing suggests viral transfer.',
+    optionExplanations: [
+      'The same mutation arising independently at the same position in each species is very unlikely. Eating fruit rich in vitamin C does not cause a specific mutation to occur.',
+      'Genes are not lost because individuals stop needing them during their lives; acquired changes are not inherited. The mutation must have been inherited.',
+      'Nothing in the stem suggests viral transfer of the broken gene. The pattern is explained more simply by inheritance from a shared ancestor.',
+      'An identical disabling mutation at the same position in several species is best explained by one event in a common ancestor. All of its descendants then inherited the broken gene.',
+    ],
   },
   {
     type: 'mcq',
@@ -812,6 +1124,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Species A, B, C and E moved both their lower and upper limits to higher elevations, tracking cooler conditions as the climate warmed. None moved downslope, four of the five ranges changed, and only species D extended its range in one direction while keeping its lower limit.',
+    optionExplanations: [
+      'Species A, B, C, and E all moved their lower limits to higher elevations, and A, B, and E moved their upper limits higher too. Most species shifted upslope as the mountain warmed.',
+      'No species moved downslope. Every lower limit either rose or stayed the same, as for species D.',
+      'Every species changed its range at least slightly; even species D\'s upper limit rose from 1,100 to 1,150 m. The ranges did not stay the same.',
+      'Most lower limits rose, so the ranges did not expand downslope. The pattern is a shift upward, not an expansion in both directions.',
+    ],
   },
   {
     type: 'mcq',
@@ -827,6 +1145,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The upper limit rose from 2,100 m to 2,400 m, or 300 m, over 50 years (5 decades): 300 ÷ 5 = 60 m per decade. The value 300 m is the total change, 6 m per decade divides by 50 years per decade, and 30 m per decade divides by 10 decades.',
+    optionExplanations: [
+      '300 m is the total change in species B\'s upper limit over the 50 years. Dividing by the 5 decades gives the average rate per decade.',
+      'The upper limit rose from 2,100 m to 2,400 m, a change of 300 m, over 50 years, which is 5 decades. 300 ÷ 5 = 60 m per decade.',
+      '6 m comes from dividing 300 m by 50, which is the rate per year, not per decade. Over 5 decades, the rate is 60 m per decade.',
+      '30 m per decade divides the 300 m change by 10 decades. The surveys were 50 years apart, which is 5 decades.',
+    ],
   },
   {
     type: 'mcq',
@@ -842,6 +1166,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Species C already reaches the summit; as its lower limit rises with warming, its habitat shrinks with nowhere higher to go, so its population may decline. The lower slopes are getting warmer, the direction it is retreating from. Rapid evolution of heat tolerance is not supported by the data, and reaching the summit is what traps the species rather than stabilizing it.',
+    optionExplanations: [
+      'The lower slopes are getting warmer, and that is the direction species C is retreating from. Moving downslope would take it into conditions it is already leaving.',
+      'The data give no evidence that species C can rapidly evolve heat tolerance. Its lower limit is rising, which shows it is losing warm habitat rather than adapting to it.',
+      'Species C already reaches the 3,000 m summit. As its lower limit rises with warming, its habitat shrinks with nowhere higher to go, so its population may decline toward local extinction.',
+      'Reaching the summit is what traps species C rather than stabilizing it. Its lower limit can keep rising with warming, so its range would keep shrinking.',
+    ],
   },
   {
     type: 'mcq',
@@ -857,6 +1187,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'A species whose range barely shifted despite 1°C of warming is likely tolerant of the change, or limited by something other than temperature at its lower limit. Producers are affected by their environment, the 2020 data show D still at 500–1,150 m rather than at the summit, and the stimulus says every elevation warmed.',
+    optionExplanations: [
+      'The stimulus says the average temperature at each elevation rose about 1°C, including below 1,100 m. Warming did reach species D\'s range.',
+      'Producers are affected by their environment, and species A, B, C, and E, which are also plants, clearly shifted. Being a producer does not make species D immune.',
+      'The 2020 survey shows species D still growing at 500–1,150 m, not at the summit. Its range was recorded in both surveys.',
+      'A species whose range barely shifted despite about 1°C of warming is likely tolerant of a wide range of temperatures. Warming therefore has not restricted where it can grow.',
+    ],
   },
   {
     type: 'mcq',
@@ -871,6 +1207,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Removing phytoplankton made the water less turbid, so more light penetrated to the bottom, where rooted plants could photosynthesize and grow; this is an indirect effect of the invader. Plants cannot use nitrogen gas, the mussels filter plankton rather than eating plant-eating animals, and water clarity does not determine how much $CO_{2}$ dissolves.',
+    optionExplanations: [
+      'Removing phytoplankton made the water clearer, so more light reached the lake bottom. Rooted plants there could photosynthesize more and grow, an indirect effect of the invading mussels.',
+      'Plants cannot use nitrogen gas directly; they absorb nitrogen as nitrate or ammonium. Nothing in the stem suggests the mussels fertilized the plants.',
+      'The stem says the mussels filter phytoplankton from the water. Nothing indicates they ate the herbivores that feed on bottom plants.',
+      'Water clarity does not determine how much $CO_{2}$ dissolves in water. The plants grew more because more light reached them.',
+    ],
   },
   {
     type: 'mcq',
@@ -885,6 +1227,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'A single heavy rain wets the soil deeply enough to supply water for the whole short life cycle, so seedlings that sprout then are likely to reproduce, while seedlings that sprout after a light shower would die before setting seed. Nothing indicates that small rains damage seeds, other plants also germinate after heavy rain, and the seeds respond to a single rain rather than a yearly total.',
+    optionExplanations: [
+      'Nothing in the stem indicates that small rains damage seed coats. The seeds respond to how much rain falls at once, which relates to soil moisture.',
+      'A single heavy rain wets the soil deeply enough to supply water for the whole short life cycle. Seedlings that sprout then are likely to reproduce before the soil dries.',
+      'Other plants also germinate after heavy rain, so the seedlings do not avoid all competition. The benefit is enough water to complete the life cycle.',
+      'The seeds respond to a single large rain, not to the year\'s total. Several small rains adding up to the same total do not trigger germination.',
+    ],
   },
   {
     type: 'mcq',
@@ -901,6 +1249,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Shell growth fell steadily as pH fell, to 30% of normal at pH 7.6, so the more $CO_{2}$ that dissolves in seawater and lowers its pH, the harder it is for oysters to build calcium carbonate shells. Growth clearly changed with pH, it fell rather than rose, and temperature was held constant.',
+    optionExplanations: [
+      'Shell growth fell steadily as pH fell, to 30% of normal at pH 7.6. Lower pH clearly affects oysters.',
+      'This reverses the data. Shell growth fell, not rose, as more $CO_{2}$ was added and pH dropped.',
+      'Shell growth fell as dissolved $CO_{2}$ lowered the pH, to 30% of normal at pH 7.6. Rising $CO_{2}$ in seawater could therefore make it harder for oysters to build calcium carbonate shells.',
+      'Temperature was held constant in this experiment, yet shell growth changed with pH. Growth clearly depends on pH, not only on temperature.',
+    ],
   },
   {
     type: 'mcq',
@@ -915,5 +1269,11 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'The cleaners get food and the larger fish lose parasites, as shown by the rise in parasites when cleaners were removed, so both benefit: mutualism. The larger fish clearly benefit, so it is not commensalism, the cleaners eat parasites rather than the host\'s tissue, and the larger fish do not eat the cleaners.',
+    optionExplanations: [
+      'The larger fish also benefit, as shown by the increase in parasites when the cleaners were removed. Both species benefit, so this is not commensalism.',
+      'The stem says the larger fish do not eat the cleaners. A possible but unrealized threat does not make the relationship predation.',
+      'The cleaners eat parasites, not the larger fish\'s tissue. The host benefits from losing parasites, so this is not parasitism.',
+      'The cleaners get food and the larger fish lose parasites, as shown by the rise in parasites when cleaners were removed. Both species benefit, which is mutualism.',
+    ],
   },
 ]
