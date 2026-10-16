@@ -99,14 +99,6 @@ export const humanitiesFlashcards: FlashcardsByTopic = {
     { front: 'How can setting carry social commentary?', back: 'Depicting a place\'s hierarchies, exclusions, and constraints embeds critique in the world of the work.' },
     { front: 'Why analyze what a text omits?', back: 'Silences and absent voices often reveal the assumptions and blind spots of a work or its era.' },
   ],
-  'englit-literary-criticism': [
-    { front: 'What is formalist (New Critical) reading?', back: 'Analyzing the text as a self-contained artifact, focusing on form, structure, and internal tensions.' },
-    { front: 'What does a feminist critical lens examine?', back: 'How gender roles, power, and representation shape and are shaped by the text.' },
-    { front: 'What does a Marxist reading emphasize?', back: 'Class conflict, economic structures, and how material conditions shape characters and ideology.' },
-    { front: 'What is reader-response criticism?', back: 'Meaning emerges through the interaction between text and reader rather than residing solely in the text.' },
-    { front: 'What is historicist criticism?', back: 'Interpreting a work within its historical and cultural moment, including the conditions of its production.' },
-    { front: 'How should a critical lens be used in an essay?', back: 'As a tool generating specific textual insight — the argument must still rest on evidence from the text.' },
-  ],
   'englit-essay-writing': [
     { front: 'What makes a defensible AP Lit thesis?', back: 'An arguable interpretive claim about meaning that the essay can support with textual evidence.' },
     { front: 'How should evidence be integrated?', back: 'Embed brief quotations into your own sentences, then explain how the language creates the effect you claim.' },

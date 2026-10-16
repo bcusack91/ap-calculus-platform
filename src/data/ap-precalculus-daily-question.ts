@@ -15,7 +15,6 @@ const TOPIC_SLUGS = [
   'ap-precalculus-trig-unit-circle',
   'ap-precalculus-trig-identities',
   'ap-precalculus-inverse-trig',
-  'ap-precalculus-law-of-sines-cosines',
   'ap-precalculus-sequences-series',
   'ap-precalculus-polar-vectors',
 ]

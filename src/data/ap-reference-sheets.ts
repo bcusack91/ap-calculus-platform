@@ -44,17 +44,13 @@ export const AP_REFERENCE_SHEETS: Record<string, APReferenceSheet> = {
           'If A, B independent: $P(A \\cap B) = P(A)\\cdot P(B)$',
           '$E(X) = \\mu_x = \\Sigma x_i \\cdot P(x_i)$',
           '$\\mathrm{Var}(X) = \\sigma_x^2 = \\Sigma(x_i - \\mu_x)^2 \\cdot P(x_i)$',
-          'If X, Y independent: $\\mathrm{Var}(X \\pm Y) = \\mathrm{Var}(X) + \\mathrm{Var}(Y)$',
-          '$E(aX + b) = aE(X) + b$  ;  $\\mathrm{Var}(aX + b) = a^2\\mathrm{Var}(X)$',
         ],
       },
       {
-        title: 'Binomial & Geometric Distributions',
+        title: 'Binomial Distribution',
         items: [
           'Binomial: $P(X = k) = \\binom{n}{k} p^k(1-p)^{n-k}$',
           '$\\mu = np$  ;  $\\sigma = \\sqrt{np(1-p)}$',
-          'Geometric: $P(X = k) = (1-p)^{k-1} p$',
-          '$\\mu = 1/p$',
         ],
       },
       {
@@ -85,8 +81,7 @@ export const AP_REFERENCE_SHEETS: Record<string, APReferenceSheet> = {
           'Two-sample t test: $t = (\\bar{x}_1-\\bar{x}_2)/\\sqrt{s_1^2/n_1 + s_2^2/n_2}$',
           'Paired t test: $t = \\bar{d}/(s_d/\\sqrt{n})$  ;  $df = n - 1$',
           'Chi-square test: $\\chi^2 = \\Sigma(O - E)^2/E$',
-          'Chi-square df: $(r-1)(c-1)$ for two-way tables; $k-1$ for GOF',
-          'Linear regression t test: $t = b_1/SE_{b_1}$  ;  $df = n - 2$',
+          'Chi-square df: $(r-1)(c-1)$ for two-way tables',
         ],
       },
       {

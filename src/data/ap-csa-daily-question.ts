@@ -21,8 +21,7 @@ const TOPIC_SLUGS = [
   'csa-arraylist-usage',
   'csa-2d-array',
   'csa-2d-arrays',
-  'csa-inheritance',
-  'csa-inheritance-polymorphism',
+  'csa-recursive-methods',
 ]
 
 function dayOfYear(): number {

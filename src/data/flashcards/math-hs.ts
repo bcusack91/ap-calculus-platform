@@ -165,30 +165,6 @@ export const mathHsFlashcards: FlashcardsByTopic = {
     { front: 'Give the half angle identity for cosine.', back: '$\\cos\\frac{\\theta}{2} = \\pm\\sqrt{\\frac{1 + \\cos\\theta}{2}}$.' },
     { front: 'Why are power-reducing identities useful?', back: '$\\sin^{2}\\theta = \\frac{1 - \\cos 2\\theta}{2}$ converts squared terms into first-power terms, essential for integration.' },
   ],
-  'conic-sections-precalc': [
-    { front: 'Give the standard equation of a circle.', back: '$(x - h)^{2} + (y - k)^{2} = r^{2}$ with center $(h, k)$.' },
-    { front: 'Give the standard equation of an ellipse centered at $(h,k)$.', back: '$\\frac{(x-h)^{2}}{a^{2}} + \\frac{(y-k)^{2}}{b^{2}} = 1$; the larger denominator is under the major axis.' },
-    { front: 'Give the standard equation of a hyperbola.', back: '$\\frac{(x-h)^{2}}{a^{2}} - \\frac{(y-k)^{2}}{b^{2}} = 1$ — the MINUS sign distinguishes it from an ellipse.' },
-    { front: 'What is the defining property of a parabola?', back: 'The set of points equidistant from a fixed point (focus) and a fixed line (directrix).' },
-    { front: 'How do you identify a conic from its general equation?', back: 'Compare $x^{2}$ and $y^{2}$ terms: same coefficient = circle, same sign different coefficients = ellipse, opposite signs = hyperbola, only one squared = parabola.' },
-    { front: 'What are the asymptotes of a hyperbola centered at the origin?', back: '$y = \\pm\\frac{b}{a}x$ for a horizontal transverse axis.' },
-  ],
-  'systems-of-equations-precalc': [
-    { front: 'Name the three methods for solving linear systems.', back: 'Substitution, elimination, and matrices (row reduction or inverse matrices).' },
-    { front: 'How many solutions can a linear system have?', back: 'Exactly one (independent), none (parallel/inconsistent), or infinitely many (dependent/same line).' },
-    { front: 'What does it mean graphically when a system has no solution?', back: 'The lines (or planes) are parallel and never intersect.' },
-    { front: 'How do you solve a nonlinear system?', back: 'Usually substitution; expect multiple intersection points, and always check for extraneous solutions.' },
-    { front: 'What is a matrix representation of a system?', back: 'The augmented matrix $[A|b]$, solved by Gaussian elimination to row echelon form.' },
-    { front: 'What does an inconsistent row like $[0\\ 0\\ 0\\ |\\ 5]$ indicate?', back: 'No solution — it asserts $0 = 5$.' },
-  ],
-  'matrices-precalc': [
-    { front: 'When can two matrices be multiplied?', back: 'When the number of columns in the first equals the number of rows in the second; result is (rows of first) × (columns of second).' },
-    { front: 'Is matrix multiplication commutative?', back: 'No — $AB \\neq BA$ in general, unlike ordinary number multiplication.' },
-    { front: 'Give the determinant of a $2\\times2$ matrix.', back: 'For $\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$, $\\det = ad - bc$.' },
-    { front: 'What does a determinant of zero mean?', back: 'The matrix is singular — no inverse exists, and the corresponding system has no unique solution.' },
-    { front: 'Give the inverse of a $2\\times2$ matrix.', back: '$A^{-1} = \\frac{1}{ad - bc}\\begin{bmatrix} d & -b \\\\ -c & a \\end{bmatrix}$.' },
-    { front: 'What is the identity matrix?', back: 'A square matrix with 1s on the diagonal and 0s elsewhere; $AI = IA = A$.' },
-  ],
   'rates-of-change-precalc': [
     { front: 'Give the average rate of change formula.', back: '$\\frac{f(b) - f(a)}{b - a}$ — the slope of the secant line between the two points.' },
     { front: 'How does average rate of change differ from instantaneous?', back: 'Average uses a secant over an interval; instantaneous is the limit as the interval shrinks to zero (the tangent slope).' },
@@ -196,22 +172,6 @@ export const mathHsFlashcards: FlashcardsByTopic = {
     { front: 'What does the difference quotient represent?', back: '$\\frac{f(x + h) - f(x)}{h}$ — the average rate of change over an interval of width $h$.' },
     { front: 'How do rates of change behave for linear vs. exponential functions?', back: 'Linear has constant rate of change; exponential has a rate proportional to its current value.' },
     { front: 'What does concavity tell you about rate of change?', back: 'Concave up means the rate of change is increasing; concave down means it is decreasing.' },
-  ],
-  'limits-introduction-precalc': [
-    { front: 'What does $\\lim_{x \\to a} f(x) = L$ mean?', back: 'As $x$ approaches $a$ from either side, $f(x)$ approaches $L$ — regardless of the value (or existence) of $f(a)$.' },
-    { front: 'When does a limit fail to exist?', back: 'When one-sided limits differ, the function oscillates without settling, or it grows without bound.' },
-    { front: 'How do you evaluate $\\lim_{x\\to 2}\\frac{x^{2}-4}{x-2}$?', back: 'Factor: $\\frac{(x-2)(x+2)}{x-2} = x + 2$, so the limit is 4 (a removable discontinuity).' },
-    { front: 'Can a limit exist where the function is undefined?', back: 'Yes — a hole in the graph has a limit even though $f(a)$ does not exist.' },
-    { front: 'What are one-sided limits?', back: '$\\lim_{x\\to a^{-}}$ approaches from the left; $\\lim_{x\\to a^{+}}$ from the right. Both must agree for the two-sided limit to exist.' },
-    { front: 'What does an infinite limit indicate graphically?', back: 'A vertical asymptote at that $x$-value.' },
-  ],
-  'continuity-precalc': [
-    { front: 'What three conditions define continuity at $x = a$?', back: '$f(a)$ exists, $\\lim_{x\\to a}f(x)$ exists, and they are equal.' },
-    { front: 'Name the three types of discontinuity.', back: 'Removable (hole), jump (one-sided limits differ), and infinite (vertical asymptote).' },
-    { front: 'What is a removable discontinuity?', back: 'A hole where the limit exists but $f(a)$ is undefined or unequal — fixable by redefining that one point.' },
-    { front: 'Which function families are continuous everywhere on their domain?', back: 'Polynomials, exponentials, sine and cosine; rational functions are continuous except where the denominator is zero.' },
-    { front: 'State the Intermediate Value Theorem.', back: 'If $f$ is continuous on $[a,b]$ and $k$ is between $f(a)$ and $f(b)$, then $f(c) = k$ for some $c$ in $(a,b)$.' },
-    { front: 'How is the IVT used to show a root exists?', back: 'If $f$ is continuous and changes sign across an interval, a root must lie inside it.' },
   ],
 
   // ================= ALGEBRA 1 =================
@@ -346,13 +306,5 @@ export const mathHsFlashcards: FlashcardsByTopic = {
     { front: 'What is the difference between energy and power?', back: 'Energy is the total capacity to do work (joules); power is how fast it is delivered (watts).' },
     { front: 'What is a kilowatt-hour a unit of?', back: 'Energy, not power — it is power (kW) multiplied by time (hours).' },
     { front: 'How does machine efficiency relate to power?', back: 'Efficiency $= \\frac{P_{out}}{P_{in}} \\times 100\\%$; the shortfall is lost to friction and heat.' },
-  ],
-  'fluid-dynamics': [
-    { front: 'Give the continuity equation and its meaning.', back: '$A_1v_1 = A_2v_2$ — for incompressible flow, narrowing the pipe increases speed.' },
-    { front: "State Bernoulli's equation.", back: '$P + \\frac{1}{2}\\rho v^{2} + \\rho gh = \\text{constant}$ — energy conservation for flowing fluid.' },
-    { front: 'What is the Bernoulli effect?', back: 'Faster-moving fluid exerts LOWER pressure, explaining airfoil lift and the Venturi effect.' },
-    { front: 'Give hydrostatic pressure with depth.', back: '$P = P_0 + \\rho gh$ — depends on depth and density, not container shape.' },
-    { front: "State Pascal's principle.", back: 'Pressure applied to an enclosed fluid transmits undiminished throughout — the basis of hydraulic lifts.' },
-    { front: 'What distinguishes laminar from turbulent flow?', back: 'Laminar is smooth and layered (low Reynolds number); turbulent is chaotic with eddies (high Reynolds number).' },
   ],
 }

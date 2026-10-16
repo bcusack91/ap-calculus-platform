@@ -145,7 +145,7 @@ const units = [
   { title: 'Unit 1: Exploring One-Variable Data', topics: ['Representing Data', 'Describing Distributions', 'Mean, Median & Standard Dev', 'Comparing Distributions'], color: 'indigo' },
   { title: 'Unit 2: Exploring Two-Variable Data', topics: ['Scatterplots & Correlation', 'Least-Squares Regression', 'Residuals', 'Categorical Data & Two-Way Tables'], color: 'blue' },
   { title: 'Unit 3–4: Collecting Data & Probability', topics: ['Sampling Methods', 'Experimental Design', 'Probability Rules', 'Random Variables & Distributions'], color: 'purple' },
-  { title: 'Unit 5–6: Sampling Distributions & Inference', topics: ['Central Limit Theorem', 'Confidence Intervals', 'Significance Tests', 'Chi-Square Tests', 'Slopes in Regression'], color: 'green' },
+  { title: 'Unit 5–6: Sampling Distributions & Inference', topics: ['Central Limit Theorem', 'Confidence Intervals', 'Significance Tests', 'Chi-Square Tests'], color: 'green' },
 ]
 
 const unitColors: Record<string, string> = {

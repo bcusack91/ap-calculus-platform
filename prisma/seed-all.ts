@@ -426,6 +426,9 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
       'split-parametric-vectors-polar.ts', 'split-unit-circle-topic.ts',
       // Must stay last: older SAT seeds recreate these off-exam topics.
       'retire-sat-topics.ts',
+      // Also last: older AP seeds (and split-parametric-vectors-polar.ts above)
+      // recreate the AP topics and units the May 2027 exams do not test.
+      'retire-ap-topics.ts',
     ],
   },
 ]

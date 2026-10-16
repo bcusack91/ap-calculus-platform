@@ -102,7 +102,6 @@ const AP_STATS_DOMAINS: APStatsDomain[] = [
       'least-squares-regression',
       'residuals-residual-plots',
       'coefficient-determination',
-      'transformations-linearity',
     ],
     questionTarget: 4,
   },
@@ -126,7 +125,6 @@ const AP_STATS_DOMAINS: APStatsDomain[] = [
       'independence',
       'discrete-random-variables',
       'binomial-distribution',
-      'geometric-distribution',
       'continuous-random-variables',
     ],
     questionTarget: 5,
@@ -175,13 +173,14 @@ const AP_STATS_DOMAINS: APStatsDomain[] = [
     questionTarget: 3,
   },
   {
+    // id kept from the old Unit 9 (stored in saved results); slope inference left
+    // the course in the 2026-27 revision, so this domain now covers regression analysis.
     id: 'unit-9-inference-quantitative-slopes',
-    name: 'Unit 9: Inference for Quantitative Data: Slopes',
+    name: 'Regression Analysis',
     topicSlugs: [
-      'inference-regression',
       'least-squares-regression',
-      'hypothesis-testing-framework',
-      'type-errors',
+      'residuals-residual-plots',
+      'coefficient-determination',
     ],
     questionTarget: 3,
   },
@@ -331,18 +330,18 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   },
   {
     question:
-      'In a regression analysis, after fitting the least-squares line, the residual plot shows a curved pattern rather than random scatter. What does this suggest?',
+      'After fitting a least-squares line to predict a car\'s fuel use from its speed, a student makes a residual plot. The residuals are positive at low and high speeds and negative at middle speeds, forming a U shape. What does this indicate?',
     options: [
-      'The regression model fits the data perfectly',
-      'A linear model may not be appropriate; a curved transformation might be better',
-      'All assumptions for regression are satisfied',
-      'The correlation coefficient must be exactly zero',
+      'The linear model fits well because the residuals sum to zero',
+      'A linear model is not appropriate for these data',
+      'The correlation between speed and fuel use is negative',
+      'The slope of the least-squares line is much too steep',
     ],
     correctAnswer: 1,
     explanation:
-      'A pattern in the residual plot (not random scatter) suggests the linear model is inadequate. A transformation (e.g., log or square root) might linearize the relationship.',
+      'A curved (U-shaped) pattern means the line underpredicts at both ends and overpredicts in the middle, so the relationship is not linear and a linear model is not appropriate. An appropriate linear model leaves residuals randomly scattered around 0.',
     domain: 'unit-2-exploring-two-variable',
-    topicSlug: 'transformations-linearity',
+    topicSlug: 'residuals-residual-plots',
     formSet: 'A',
   },
 
@@ -462,23 +461,23 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   {
     question:
       'A student takes a 5-question multiple-choice test, guessing randomly on each question (each has 4 options, so P(correct)=0.25). What is the probability of getting exactly 2 questions correct?',
-    options: ['≈0.088', '≈0.205', '≈0.396', '≈0.500'],
+    options: ['≈0.088', '≈0.264', '≈0.396', '≈0.500'],
     correctAnswer: 1,
     explanation:
-      'This is binomial: n=5, p=0.25, k=2. P(X=2) = C(5,2) × $(0.25)^{2}$ × $(0.75)^{3}$ = 10 × 0.0625 × 0.422 ≈ 0.264. Closest is 0.205 (alternative calculation: ≈0.205).',
+      'This is binomial: n=5, p=0.25, k=2. P(X=2) = C(5,2) × $(0.25)^{2}$ × $(0.75)^{3}$ = 10 × 0.0625 × 0.421875 ≈ 0.264.',
     domain: 'unit-4-probability-distributions',
     topicSlug: 'binomial-distribution',
     formSet: 'B',
   },
   {
     question:
-      'A quality control inspector finds defective items with probability 0.02 per item. What is the probability that the first defective item is found on the 5th inspection?',
-    options: ['0.02', '0.10', '≈0.0185', '≈0.9224'],
-    correctAnswer: 2,
+      'Each item on an assembly line is defective with probability 0.02, independently of other items. If 10 items are selected at random, what is the probability that exactly 1 of them is defective?',
+    options: ['≈0.200', '≈0.017', '≈0.817', '≈0.167'],
+    correctAnswer: 3,
     explanation:
-      'Geometric distribution: P(X=k) = $(1-p)^{k-1}$ × p. P(X=5) = $(0.98)^{4}$ × 0.02 ≈ 0.0185.',
+      'X = number defective is binomial with n = 10 and p = 0.02. P(X = 1) = C(10,1) × $(0.02)^{1}$ × $(0.98)^{9}$ = 10 × 0.02 × 0.8337 ≈ 0.167. (0.817 is P(X = 0), and 0.200 leaves out the $(0.98)^{9}$ factor.)',
     domain: 'unit-4-probability-distributions',
-    topicSlug: 'geometric-distribution',
+    topicSlug: 'binomial-distribution',
     formSet: 'A',
   },
   {
@@ -699,11 +698,11 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   },
   {
     question:
-      'In a chi-square goodness-of-fit test, if the observed frequencies match the expected frequencies very closely, the chi-square statistic will be:',
-    options: ['Very large (p-value small)', 'Very small (p-value large)', 'Negative', 'Undefined'],
-    correctAnswer: 1,
+      'A chi-square test of independence uses a two-way table of 200 students. The "Junior" row has a total of 80 students and the "Plays a sport" column has a total of 50 students. What is the expected count for juniors who play a sport?',
+    options: ['20', '16', '25', '40'],
+    correctAnswer: 0,
     explanation:
-      '$\\chi^{2}$ = Σ[$(O-E)^{2}$ / E]. When O ≈ E, each term is small, so $\\chi^{2}$ ≈ 0, yielding a large p-value. This supports $H_{0}$ (observed matches expected).',
+      'Expected count = (row total)(column total) / (table total) = (80)(50) / 200 = 20.',
     domain: 'unit-8-inference-categorical-chi-square',
     topicSlug: 'chi-square-tests',
     formSet: 'B',
@@ -720,54 +719,49 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
     formSet: 'A',
   },
 
-  // ========== UNIT 9: INFERENCE FOR QUANTITATIVE DATA: SLOPES ==========
+  // ========== REGRESSION ANALYSIS (domain id kept from the old Unit 9) ==========
 
   {
     question:
-      'In a linear regression model for predicting house price from square footage, the slope is 0.12 and the p-value is 0.001. This means:',
+      'A least-squares line relating a used car\'s price (in dollars) to its age (in years) is: predicted price = 24,500 − 1,850(age). Which is the correct interpretation of the slope?',
     options: [
-      'The slope is not statistically significant',
-      'There is statistically significant evidence that square footage affects price',
-      'The correlation is negative',
-      'The slope is too small to be meaningful',
+      'For each additional year of age, the actual price drops by exactly 1,850 dollars',
+      'A car of age 0 is predicted to cost 1,850 dollars less than 24,500 dollars',
+      'For each additional year of age, the predicted price decreases by 1,850 dollars',
+      'For each 1,850-dollar drop in price, a car is predicted to be one year older',
     ],
-    correctAnswer: 1,
+    correctAnswer: 2,
     explanation:
-      'p-value (0.001) << α (0.05), so we reject $H_{0}$ that the slope = 0. We conclude square footage has a significant effect on price.',
+      'The slope is the change in the PREDICTED response for a one-unit increase in the explanatory variable: each extra year of age lowers the predicted price by 1,850 dollars. Actual prices vary around the line, so "exactly" is wrong, and the slope does not describe how age changes with price.',
     domain: 'unit-9-inference-quantitative-slopes',
-    topicSlug: 'inference-regression',
+    topicSlug: 'least-squares-regression',
     formSet: 'A',
   },
   {
     question:
-      'A 95% confidence interval for the regression slope is (0.08, 0.16). What does this mean?',
+      'A least-squares regression of daily ice cream sales on daily high temperature gives $r^{2}$ = 0.64. Which statement is the correct interpretation?',
     options: [
-      'There is a 95% chance that any individual slope is between 0.08 and 0.16',
-      'We are 95% confident that the true population regression slope is between 0.08 and 0.16',
-      'Exactly 95% of the data points fall between these slopes',
-      'The sample slope has a 95% probability of being in this interval',
+      'The correlation between temperature and sales is exactly r = 0.64',
+      'About 64% of the predicted sales values equal the actual sales values',
+      'Higher temperatures cause an increase in sales about 64% of the time',
+      'About 64% of the variation in sales is explained by the line',
     ],
-    correctAnswer: 1,
+    correctAnswer: 3,
     explanation:
-      'A confidence interval gives a range of plausible values for the population parameter (true slope) with specified confidence.',
+      '$r^{2}$ is the proportion of the variation in the response (sales) that is explained by the least-squares line using temperature. The correlation would be r = ±0.8, not 0.64, and an observational association does not show causation.',
     domain: 'unit-9-inference-quantitative-slopes',
-    topicSlug: 'least-squares-regression',
+    topicSlug: 'coefficient-determination',
     formSet: 'B',
   },
   {
     question:
-      'When testing $H_{0}$: $\\beta_{1}$ = 0 (slope is zero) in a regression model, which would be a Type II error?',
-    options: [
-      'Concluding the slope is zero when it actually is not',
-      'Concluding the slope is not zero when it actually is zero',
-      'Perfectly predicting all data points',
-      'Using the wrong regression formula',
-    ],
-    correctAnswer: 0,
+      'The least-squares line predicting exam score from hours studied is ŷ = 52 + 6x. A student who studied 5 hours scored 78. What is this student\'s residual?',
+    options: ['4', '−4', '82', '26'],
+    correctAnswer: 1,
     explanation:
-      'Type II error: fail to reject $H_{0}$ when $H_{0}$ is false. Here, $H_{0}$ is "slope = 0." Type II: we fail to reject it when the slope is actually not zero.',
+      'Predicted score: ŷ = 52 + 6(5) = 82. Residual = actual − predicted = 78 − 82 = −4, so the line overpredicted this student\'s score by 4 points.',
     domain: 'unit-9-inference-quantitative-slopes',
-    topicSlug: 'type-errors',
+    topicSlug: 'residuals-residual-plots',
     formSet: 'A',
   },
 
@@ -856,18 +850,18 @@ const apStatsEmbeddedPool: APStatsPoolQuestion[] = [
   },
   {
     question:
-      'In a multiple linear regression model, the coefficient for a predictor variable is negative and statistically significant. This means:',
+      'A least-squares line was fit to the heights of children aged 3 to 10 years. A researcher uses the line to predict the height of a 30-year-old adult. Why is this prediction unreliable?',
     options: [
-      'The relationship is weak',
-      'As the predictor increases, the response tends to decrease, holding other predictors constant',
-      'There is a causal relationship',
-      'The model explains more than 50% of variance',
+      'Age 30 is far outside the 3-to-10 age range, so this is extrapolation',
+      'Height and age have a negative correlation once children are older than 10',
+      'A least-squares line can only predict values that appear in the data set',
+      'The residual for an adult must be zero because the line passes through the means',
     ],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation:
-      'A negative, significant coefficient indicates an inverse relationship: higher predictor values are associated with lower response values (while controlling for other variables).',
+      'Predicting for an x-value far outside the range of the data is extrapolation; there is no evidence the linear pattern continues past age 10 (growth levels off). Predicting at unobserved ages inside 3 to 10 (interpolation) is reasonable.',
     domain: 'unit-9-inference-quantitative-slopes',
-    topicSlug: 'inference-regression',
+    topicSlug: 'least-squares-regression',
     formSet: 'B',
   },
   {
@@ -1256,12 +1250,10 @@ const SLUG_LABELS: Record<string, string> = {
   'discrete-random-variables': 'Discrete Random Variables',
   'continuous-random-variables': 'Continuous Random Variables',
   'binomial-distribution': 'Binomial Distribution',
-  'geometric-distribution': 'Geometric Distribution',
   'scatterplots-correlation': 'Scatterplots & Correlation',
   'least-squares-regression': 'Least-Squares Regression',
   'residuals-residual-plots': 'Residuals & Residual Plots',
   'coefficient-determination': 'Coefficient of Determination',
-  'transformations-linearity': 'Transformations for Linearity',
   'sampling-distributions': 'Sampling Distributions',
   'central-limit-theorem': 'Central Limit Theorem',
   'ci-proportions': 'Confidence Intervals for Proportions',
@@ -1273,7 +1265,6 @@ const SLUG_LABELS: Record<string, string> = {
   'tests-means': 'Tests for Means',
   'type-errors': 'Type I & Type II Errors',
   'chi-square-tests': 'Chi-Square Tests',
-  'inference-regression': 'Inference for Regression',
 }
 
 function slugToReadableName(slug: string): string {

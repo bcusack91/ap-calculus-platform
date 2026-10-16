@@ -92,7 +92,8 @@ export const AP_PHYSICS1_UNITS: UnitDef[] = [
     name: 'Unit 8: Fluids',
     shortName: 'Fluids',
     description: 'Fluid pressure, Pascal\u2019s principle, buoyancy, Archimedes, continuity, and Bernoulli.',
-    topicSlugs: ['fluid-pressure', 'buoyancy', 'fluid-dynamics'],
+    // Physics 1 Unit 8 topics (these were Physics 2 slugs, whose pools serve gas-pressure items).
+    topicSlugs: ['fluids-density-and-pressure', 'fluids-buoyancy', 'fluids-continuity', 'fluids-bernoulli'],
     exam_weight: '10–15%',
     color: 'from-cyan-500 to-blue-500',
     icon: '💧',

@@ -398,10 +398,6 @@ const quizLoaders: Record<string, QuizLoader> = {
   // AP Physics 2 Exit Quizzes
   // ═══════════════════════════════════════════════════
   'ap-physics-2': () => import('./ap-physics-2'),
-  // Fluids
-  'fluid-pressure': () => import('./ap-physics-2'),
-  'buoyancy': () => import('./ap-physics-2'),
-  'fluid-dynamics': () => import('./ap-physics-2'),
   // Thermodynamics
   'temperature-and-heat': () => import('./ap-physics-2'),
   'kinetic-theory': () => import('./ap-physics-2'),
@@ -721,7 +717,6 @@ const quizLoaders: Record<string, QuizLoader> = {
   'trigonometric-functions-precalc': () => import('./ap-precalculus'),
   'trigonometric-identities-precalc': () => import('./ap-precalculus'),
   'inverse-trig-functions-precalc': () => import('./ap-precalculus'),
-  'law-of-sines-cosines-precalc': () => import('./pre-calculus'),
   'polar-coordinates-precalc': () => import('./ap-precalculus'),
   'function-transformations': () => import('./ap-precalculus'),
   'piecewise-functions': () => import('./ap-precalculus'),
@@ -741,7 +736,6 @@ const quizLoaders: Record<string, QuizLoader> = {
   'solving-trig-equations': () => import('./ap-precalculus'),
   'sequences-series-precalc': () => import('./ap-precalculus'),
   'rates-of-change-precalc': () => import('./ap-precalculus'),
-  'vectors-two-dimensions-precalc': () => import('./pre-calculus'),
 
   // ═══════════════════════════════════════════════════
   // Grade 8 Math Exit Quizzes
@@ -812,7 +806,6 @@ const quizLoaders: Record<string, QuizLoader> = {
   'independence': () => import('./ap-statistics'),
   'discrete-random-variables': () => import('./ap-statistics'),
   'binomial-distribution': () => import('./ap-statistics'),
-  'geometric-distribution': () => import('./ap-statistics'),
   'continuous-random-variables': () => import('./ap-statistics'),
   'sampling-distributions': () => import('./ap-statistics'),
   'central-limit-theorem': () => import('./ap-statistics'),
@@ -829,11 +822,8 @@ const quizLoaders: Record<string, QuizLoader> = {
   'least-squares-regression': () => import('./ap-statistics'),
   'residuals-residual-plots': () => import('./ap-statistics'),
   'coefficient-determination': () => import('./ap-statistics'),
-  'transformations-linearity': () => import('./ap-statistics'),
-  'inference-regression': () => import('./ap-statistics'),
   // CED-aligned topics added in Phase 3
   'mean-sd-random-variables': () => import('./ap-statistics'),
-  'combining-random-variables': () => import('./ap-statistics'),
   'sampling-distribution-sample-mean': () => import('./ap-statistics'),
   'sampling-distribution-sample-proportion': () => import('./ap-statistics'),
   'two-sample-proportions': () => import('./ap-statistics'),
@@ -1120,8 +1110,6 @@ const quizLoaders: Record<string, QuizLoader> = {
   'csa-arraylist-usage': () => import('./ap-computer-science-a'),
   'csa-2d-array': () => import('./ap-computer-science-a'),
   'csa-2d-arrays': () => import('./ap-computer-science-a'),
-  'csa-inheritance': () => import('./ap-computer-science-a'),
-  'csa-inheritance-polymorphism': () => import('./ap-computer-science-a'),
   'csa-recursive-methods': () => import('./ap-computer-science-a'),
 
   // ═══════════════════════════════════════════════════

@@ -1,9 +1,10 @@
 // Mini-Boss Questions for Trigonometry
-// Topics: unit circle, identities, equations, inverse trig, law of sines/cosines
+// Topics: unit circle, identities, equations, inverse trig, graphs
+// (Law of Sines/Cosines items replaced Oct 2026: not in the AP Precalculus CED.)
 
 export interface MiniBossQuestion {
   id: string
-  type: 'unit-circle' | 'identities' | 'equations' | 'inverse-trig' | 'law-of-sines-cosines' | 'graphs'
+  type: 'unit-circle' | 'identities' | 'equations' | 'inverse-trig' | 'graphs'
   question: string
   correctAnswer: string
   options: {
@@ -89,14 +90,14 @@ export const trigonometryBossQuestions: MiniBossQuestion[] = [
   },
   {
     id: 'trig-7',
-    type: 'law-of-sines-cosines',
-    question: 'In triangle ABC, a = 8, B = 30°, C = 45°. Find side b using the Law of Sines. (A = 105°)',
-    correctAnswer: 'b = 8sin30°/sin105° ≈ 4.14',
+    type: 'graphs',
+    question: 'What are the amplitude and period of y = 3sin(2x)?',
+    correctAnswer: 'Amplitude 3, period π',
     options: [
-      { label: 'A', value: 'b = 8sin30°/sin105° ≈ 4.14', isCorrect: true },
-      { label: 'B', value: 'b = 8sin105°/sin30° ≈ 15.45', isCorrect: false, explanation: 'a/sinA = b/sinB → b = a·sinB/sinA = 8·sin30°/sin105°' },
-      { label: 'C', value: 'b = 8sin45°/sin30° ≈ 11.31', isCorrect: false, explanation: 'b corresponds to angle B (30°), not angle C' },
-      { label: 'D', value: 'b = 4', isCorrect: false, explanation: 'b = 8 × (sin30°/sin105°) = 8 × (0.5/0.966) ≈ 4.14' },
+      { label: 'A', value: 'Amplitude 3, period π', isCorrect: true },
+      { label: 'B', value: 'Amplitude 3, period 4π', isCorrect: false, explanation: 'Period = 2π/b = 2π/2 = π, not 2π·2' },
+      { label: 'C', value: 'Amplitude 2, period 3π', isCorrect: false, explanation: 'The amplitude is |a| = 3 and the period is 2π/b = π' },
+      { label: 'D', value: 'Amplitude 6, period 2π', isCorrect: false, explanation: 'Amplitude is |a| = 3; b = 2 halves the period to π' },
     ],
   },
   {
@@ -125,14 +126,14 @@ export const trigonometryBossQuestions: MiniBossQuestion[] = [
   },
   {
     id: 'trig-10',
-    type: 'law-of-sines-cosines',
-    question: 'In triangle with sides a=5, b=7, included angle C=60°. Find c using Law of Cosines.',
-    correctAnswer: 'c = $\\sqrt{39}$ ≈ 6.24',
+    type: 'unit-circle',
+    question: 'What is the exact value of sin(5π/6)?',
+    correctAnswer: '1/2',
     options: [
-      { label: 'A', value: 'c = $\\sqrt{39}$ ≈ 6.24', isCorrect: true },
-      { label: 'B', value: 'c = $\\sqrt{74}$ ≈ 8.60', isCorrect: false, explanation: '$c^{2}$ = 25 + 49 - 2(5)(7)cos60° = 74 - 70(0.5) = 74 - 35 = 39' },
-      { label: 'C', value: 'c = $\\sqrt{109}$ ≈ 10.44', isCorrect: false, explanation: 'Don\'t forget to subtract: $c^{2}$ = $a^{2}+b^{2}$ - 2ab·cosC' },
-      { label: 'D', value: 'c = 6', isCorrect: false, explanation: '$c^{2}$ = 25+49-70cos60° = 74-35 = 39, c = $\\sqrt{39}$ ≈ 6.24' },
+      { label: 'A', value: '1/2', isCorrect: true },
+      { label: 'B', value: '−1/2', isCorrect: false, explanation: '5π/6 is in Quadrant II, where sine is positive' },
+      { label: 'C', value: '$\\sqrt{3}/2$', isCorrect: false, explanation: 'The reference angle is π/6, and sin(π/6) = 1/2' },
+      { label: 'D', value: '$-\\sqrt{3}/2$', isCorrect: false, explanation: 'That is cos(5π/6); sin(5π/6) = sin(π/6) = 1/2' },
     ],
   },
 ]

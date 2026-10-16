@@ -5,14 +5,14 @@ import type { StudyPlanSelectorConfig } from '@/components/StudyPlanSelector'
 const sprint: StudyPlanTemplate = {
   id: '4-week-physics2-sprint',
   title: '4-Week AP Physics 2 Sprint',
-  description: 'Rapid review of all AP Physics 2 topics — fluids, thermodynamics, electricity, magnetism, optics, and modern physics — for students needing a final exam push.',
+  description: 'Rapid review of all AP Physics 2 topics — thermodynamics, electricity, magnetism, optics, and modern physics — for students needing a final exam push.',
   durationWeeks: 4, targetImprovement: '1 AP score point', weeklyHours: '5–7 hours', difficulty: 'Beginner',
   tasks: [
     ...weekTasks(0, [
       { title: 'Take AP Physics 2 Diagnostic', type: 'QUIZ', dayOfWeek: 0 },
-      { title: 'Fluid Pressure & Buoyancy', type: 'LESSON', topicSlug: 'density-and-pressure', dayOfWeek: 1 },
-      { title: 'Fluid Dynamics & Continuity', type: 'LESSON', topicSlug: 'fluid-dynamics', dayOfWeek: 3 },
-      { title: 'Fluids Flashcards', type: 'FLASHCARD', dayOfWeek: 5 },
+      { title: 'Ideal Gases & Kinetic Theory', type: 'LESSON', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 1 },
+      { title: 'Heat, Specific Heat & Calorimetry', type: 'LESSON', topicSlug: 'heat-specific-heat', dayOfWeek: 3 },
+      { title: 'Thermodynamics Flashcards', type: 'FLASHCARD', dayOfWeek: 5 },
     ]),
     ...weekTasks(1, [
       { title: 'Thermodynamics & Kinetic Theory', type: 'LESSON', topicSlug: 'laws-of-thermodynamics', dayOfWeek: 0 },
@@ -39,20 +39,20 @@ const sprint: StudyPlanTemplate = {
 const standard: StudyPlanTemplate = {
   id: '10-week-physics2-standard',
   title: '10-Week AP Physics 2 Plan',
-  description: 'Balanced study schedule covering all AP Physics 2 units systematically — fluids, thermodynamics, electricity, magnetism, optics, and modern physics — with conceptual lessons, problem solving, and quizzes.',
+  description: 'Balanced study schedule covering all AP Physics 2 units systematically — thermodynamics, electricity, magnetism, optics, and modern physics — with conceptual lessons, problem solving, and quizzes.',
   durationWeeks: 10, targetImprovement: '1–2 AP score points', weeklyHours: '6–8 hours', difficulty: 'Intermediate',
   tasks: [
     ...weekTasks(0, [
       { title: 'Take AP Physics 2 Diagnostic', type: 'QUIZ', dayOfWeek: 0 },
-      { title: 'Fluid Pressure & Pascal\'s Principle', type: 'LESSON', topicSlug: 'density-and-pressure', dayOfWeek: 1 },
-      { title: 'Buoyancy & Archimedes\' Principle', type: 'LESSON', topicSlug: 'buoyancy-archimedes-principle', dayOfWeek: 3 },
-      { title: 'Fluids Quiz', type: 'QUIZ', topicSlug: 'density-and-pressure', dayOfWeek: 5 },
+      { title: 'Temperature & Thermal Equilibrium', type: 'LESSON', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 1 },
+      { title: 'Gas Pressure & the Ideal Gas Law', type: 'PRACTICE', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 3 },
+      { title: 'Ideal Gas Quiz', type: 'QUIZ', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 5 },
     ]),
     ...weekTasks(1, [
-      { title: 'Fluid Dynamics & Continuity Equation', type: 'LESSON', topicSlug: 'fluid-dynamics', dayOfWeek: 0 },
-      { title: 'Bernoulli\'s Equation & Applications', type: 'LESSON', topicSlug: 'fluid-dynamics', dayOfWeek: 2 },
-      { title: 'Fluids Flashcards', type: 'FLASHCARD', dayOfWeek: 4 },
-      { title: 'Fluid Dynamics Practice', type: 'PRACTICE', topicSlug: 'fluid-dynamics', dayOfWeek: 5 },
+      { title: 'Heat Transfer & Thermal Conductivity', type: 'LESSON', topicSlug: 'heat-specific-heat', dayOfWeek: 0 },
+      { title: 'Specific Heat & Calorimetry', type: 'PRACTICE', topicSlug: 'heat-specific-heat', dayOfWeek: 2 },
+      { title: 'Thermodynamics Flashcards', type: 'FLASHCARD', dayOfWeek: 4 },
+      { title: 'Heat & Temperature Practice', type: 'PRACTICE', topicSlug: 'heat-specific-heat', dayOfWeek: 5 },
     ]),
     ...weekTasks(2, [
       { title: 'Temperature, Heat & Thermal Expansion', type: 'LESSON', topicSlug: 'heat-specific-heat', dayOfWeek: 0 },
@@ -119,22 +119,22 @@ const comprehensive: StudyPlanTemplate = {
       { title: 'Goal Setting & Study Plan Orientation', type: 'CUSTOM', dayOfWeek: 5 },
     ]),
     ...weekTasks(1, [
-      { title: 'Fluid Statics: Pressure & Depth', type: 'LESSON', topicSlug: 'density-and-pressure', dayOfWeek: 0 },
-      { title: 'Pascal\'s Principle & Hydraulics', type: 'LESSON', topicSlug: 'density-and-pressure', dayOfWeek: 2 },
-      { title: 'Fluid Pressure Practice', type: 'PRACTICE', topicSlug: 'density-and-pressure', dayOfWeek: 4 },
-      { title: 'Fluid Pressure Quiz', type: 'QUIZ', topicSlug: 'density-and-pressure', dayOfWeek: 5 },
+      { title: 'Temperature & Thermal Equilibrium', type: 'LESSON', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 0 },
+      { title: 'Gas Pressure from Molecular Collisions', type: 'LESSON', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 2 },
+      { title: 'Ideal Gas Law Practice', type: 'PRACTICE', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 4 },
+      { title: 'Ideal Gases Quiz', type: 'QUIZ', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 5 },
     ]),
     ...weekTasks(2, [
-      { title: 'Buoyancy & Archimedes\' Principle', type: 'LESSON', topicSlug: 'buoyancy-archimedes-principle', dayOfWeek: 0 },
-      { title: 'Buoyancy Problems: Floating & Submerged', type: 'PRACTICE', topicSlug: 'buoyancy-archimedes-principle', dayOfWeek: 2 },
-      { title: 'Fluid Dynamics: Continuity Equation', type: 'LESSON', topicSlug: 'fluid-dynamics', dayOfWeek: 4 },
-      { title: 'Buoyancy Quiz', type: 'QUIZ', topicSlug: 'buoyancy-archimedes-principle', dayOfWeek: 5 },
+      { title: 'Kinetic Theory of Gases', type: 'LESSON', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 0 },
+      { title: 'Gas Graphs & Absolute Zero', type: 'PRACTICE', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 2 },
+      { title: 'Heat & Specific Heat', type: 'LESSON', topicSlug: 'heat-specific-heat', dayOfWeek: 4 },
+      { title: 'Kinetic Theory Quiz', type: 'QUIZ', topicSlug: 'temperature-thermal-expansion', dayOfWeek: 5 },
     ]),
     ...weekTasks(3, [
-      { title: 'Bernoulli\'s Equation & Applications', type: 'LESSON', topicSlug: 'fluid-dynamics', dayOfWeek: 0 },
-      { title: 'Fluid Dynamics Practice', type: 'PRACTICE', topicSlug: 'fluid-dynamics', dayOfWeek: 2 },
-      { title: 'Fluids Comprehensive Quiz', type: 'QUIZ', topicSlug: 'fluid-dynamics', dayOfWeek: 4 },
-      { title: 'Fluids Flashcards', type: 'FLASHCARD', dayOfWeek: 5 },
+      { title: 'Calorimetry & Heat Transfer', type: 'LESSON', topicSlug: 'heat-specific-heat', dayOfWeek: 0 },
+      { title: 'Thermal Conductivity Practice', type: 'PRACTICE', topicSlug: 'heat-specific-heat', dayOfWeek: 2 },
+      { title: 'Heat & Temperature Quiz', type: 'QUIZ', topicSlug: 'heat-specific-heat', dayOfWeek: 4 },
+      { title: 'Thermal Physics Flashcards', type: 'FLASHCARD', dayOfWeek: 5 },
     ]),
     ...weekTasks(4, [
       { title: 'Temperature, Thermal Expansion & Heat Transfer', type: 'LESSON', topicSlug: 'heat-specific-heat', dayOfWeek: 0 },
@@ -203,7 +203,7 @@ const comprehensive: StudyPlanTemplate = {
       { title: 'Review Practice Exam #2', type: 'CUSTOM', dayOfWeek: 5 },
     ]),
     ...weekTasks(15, [
-      { title: 'FRQ Practice: Fluids & Thermodynamics', type: 'PRACTICE', topicSlug: 'fluid-dynamics', dayOfWeek: 0 },
+      { title: 'FRQ Practice: Thermodynamics', type: 'PRACTICE', topicSlug: 'laws-of-thermodynamics', dayOfWeek: 0 },
       { title: 'FRQ Practice: E&M & Circuits', type: 'PRACTICE', topicSlug: 'current-resistance-ohms-law', dayOfWeek: 2 },
       { title: 'Full Practice Exam #3', type: 'PRACTICE', dayOfWeek: 4 },
       { title: 'Final Flashcard Marathon & Exam Tips', type: 'FLASHCARD', dayOfWeek: 5 },
@@ -215,7 +215,7 @@ export const AP_PHYSICS2_PLANS: StudyPlanTemplate[] = [sprint, standard, compreh
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP Physics 2',
-  description: 'Choose a pre-built study schedule covering fluids, thermodynamics, electricity and magnetism, optics, and modern physics — automatically scheduled for you.',
+  description: 'Choose a pre-built study schedule covering thermodynamics, electricity and magnetism, optics, and modern physics — automatically scheduled for you.',
   backLink: { href: '/ap-physics-2', label: 'AP Physics 2' },
   apiEndpoint: '/api/ap-physics2-study-plans',
   diagnosticPrefix: 'ap-physics2-diagnostic',

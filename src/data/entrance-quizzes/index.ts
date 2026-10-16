@@ -88,9 +88,6 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'fluids-bernoulli': () => import('./fluids-bernoulli'),
 
   // AP Physics 2
-  'fluid-pressure': () => import('./fluid-pressure'),
-  'buoyancy': () => import('./buoyancy'),
-  'fluid-dynamics': () => import('./fluid-dynamics'),
   'temperature-and-heat': () => import('./temperature-and-heat'),
   'kinetic-theory': () => import('./kinetic-theory'),
   'thermodynamic-laws': () => import('./thermodynamic-laws'),
@@ -244,7 +241,6 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'independence': () => import('./independence'),
   'discrete-random-variables': () => import('./discrete-random-variables'),
   'binomial-distribution': () => import('./binomial-distribution'),
-  'geometric-distribution': () => import('./geometric-distribution'),
   'continuous-random-variables': () => import('./continuous-random-variables'),
   'sampling-distributions': () => import('./sampling-distributions'),
   'central-limit-theorem': () => import('./central-limit-theorem'),
@@ -261,8 +257,6 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'least-squares-regression': () => import('./least-squares-regression'),
   'residuals-residual-plots': () => import('./residuals-residual-plots'),
   'coefficient-determination': () => import('./coefficient-determination'),
-  'transformations-linearity': () => import('./transformations-linearity'),
-  'inference-regression': () => import('./inference-regression'),
 
   // ACT — Math
   'act-pre-algebra-basics-act': () => import('./act-pre-algebra-basics-act'),
@@ -428,7 +422,6 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'function-composition-inverses-precalc': () => import('./precalc-unit-1-polynomial-rational'),
   'transformations-precalc': () => import('./precalc-unit-1-polynomial-rational'),
   'sequences-series-precalc': () => import('./precalc-unit-1-polynomial-rational'),
-  'systems-of-equations-precalc': () => import('./precalc-unit-1-polynomial-rational'),
   // Unit 2: Exponential & Logarithmic Functions
   'exponential-functions-precalc': () => import('./precalc-unit-2-exponential-logarithmic'),
   'logarithmic-functions-precalc': () => import('./precalc-unit-2-exponential-logarithmic'),
@@ -436,15 +429,9 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'trigonometric-functions-precalc': () => import('./precalc-unit-3-trig-polar'),
   'trigonometric-identities-precalc': () => import('./precalc-unit-3-trig-polar'),
   'inverse-trig-functions-precalc': () => import('./precalc-unit-3-trig-polar'),
-  'law-of-sines-cosines-precalc': () => import('./precalc-unit-3-trig-polar'),
   'polar-coordinates-precalc': () => import('./precalc-unit-3-trig-polar'),
-  'conic-sections-precalc': () => import('./precalc-unit-3-trig-polar'),
-  // Unit 4: Parametric, Vectors, Matrices & Calculus On-Ramp
-  'parametric-equations-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
-  'vectors-two-dimensions-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
-  'matrices-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
-  'limits-introduction-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
-  'continuity-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
+  // Rates of change are CED Topics 1.1-1.4; this shared file is replaced in the
+  // entrance-quiz rebuild (its other Unit 4 slugs retired, Oct 2026).
   'rates-of-change-precalc': () => import('./precalc-unit-4-params-vectors-matrices'),
   'hg-intro-geography': () => import('./hg-intro-geography'),
   'hg-spatial-concepts': () => import('./hg-spatial-concepts'),
@@ -621,8 +608,6 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'csa-arraylist-usage': () => import('./csa-arraylist-usage'),
   'csa-2d-array': () => import('./csa-2d-array'),
   'csa-2d-arrays': () => import('./csa-2d-arrays'),
-  'csa-inheritance': () => import('./csa-inheritance'),
-  'csa-inheritance-polymorphism': () => import('./csa-inheritance-polymorphism'),
   'csp-creative-development': () => import('./csp-creative-development'),
   'csp-collaboration-development': () => import('./csp-collaboration-development'),
   'csp-binary-data': () => import('./csp-binary-data'),

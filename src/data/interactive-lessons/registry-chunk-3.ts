@@ -10,7 +10,7 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Z-Scores', loader: () => import('./apstats-normal-distribution-part2').then(m => m.apStatsNormalDistPart2Data) },
       { title: 'Normal Calculations', loader: () => import('./apstats-normal-distribution-part3').then(m => m.apStatsNormalDistPart3Data) },
       { title: 'Assessing Normality', loader: () => import('./apstats-normal-distribution-part4').then(m => m.apStatsNormalDistPart4Data) },
-      { title: 'Combining Normal RVs', loader: () => import('./apstats-normal-distribution-part5').then(m => m.apStatsNormalDistPart5Data) },
+      { title: 'Intervals, Percentiles and Comparing Relative Position', loader: () => import('./apstats-normal-distribution-part5').then(m => m.apStatsNormalDistPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apstats-normal-distribution-part6').then(m => m.apStatsNormalDistPart6Data) },
       { title: 'Review & Applications', loader: () => import('./apstats-normal-distribution-part7').then(m => m.apStatsNormalDistPart7Data) },
     ]
@@ -42,7 +42,7 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
   'chi-square-tests-apstats': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Chi-Square Goodness-of-Fit', loader: () => import('./apstats-chi-square-tests-part1').then(m => m.apStatsChiSquarePart1Data) },
+      { title: 'The Chi-Square Statistic and Its Distribution', loader: () => import('./apstats-chi-square-tests-part1').then(m => m.apStatsChiSquarePart1Data) },
       { title: 'Chi-Square Test for Independence', loader: () => import('./apstats-chi-square-tests-part2').then(m => m.apStatsChiSquarePart2Data) },
       { title: 'Chi-Square Test for Homogeneity', loader: () => import('./apstats-chi-square-tests-part3').then(m => m.apStatsChiSquarePart3Data) },
       { title: 'Conditions and Degrees of Freedom', loader: () => import('./apstats-chi-square-tests-part4').then(m => m.apStatsChiSquarePart4Data) },
@@ -58,21 +58,9 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Least-Squares Regression Line', loader: () => import('./apstats-linear-regression-part2').then(m => m.apStatsLinRegPart2Data) },
       { title: 'Residuals and Residual Plots', loader: () => import('./apstats-linear-regression-part3').then(m => m.apStatsLinRegPart3Data) },
       { title: 'Coefficient of Determination', loader: () => import('./apstats-linear-regression-part4').then(m => m.apStatsLinRegPart4Data) },
-      { title: 'Influential Points and Outliers', loader: () => import('./apstats-linear-regression-part5').then(m => m.apStatsLinRegPart5Data) },
+      { title: 'Unusual Points, Extrapolation and Interpreting the Line', loader: () => import('./apstats-linear-regression-part5').then(m => m.apStatsLinRegPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apstats-linear-regression-part6').then(m => m.apStatsLinRegPart6Data) },
       { title: 'Review & Applications', loader: () => import('./apstats-linear-regression-part7').then(m => m.apStatsLinRegPart7Data) },
-    ]
-  },
-  'inference-regression-apstats': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Regression Model Assumptions', loader: () => import('./apstats-inference-regression-part1').then(m => m.apStatsInfRegPart1Data) },
-      { title: 'T-Test for Slope', loader: () => import('./apstats-inference-regression-part2').then(m => m.apStatsInfRegPart2Data) },
-      { title: 'Confidence Interval for Slope', loader: () => import('./apstats-inference-regression-part3').then(m => m.apStatsInfRegPart3Data) },
-      { title: 'Computer Output Interpretation', loader: () => import('./apstats-inference-regression-part4').then(m => m.apStatsInfRegPart4Data) },
-      { title: 'Prediction Intervals', loader: () => import('./apstats-inference-regression-part5').then(m => m.apStatsInfRegPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apstats-inference-regression-part6').then(m => m.apStatsInfRegPart6Data) },
-      { title: 'Review & Applications', loader: () => import('./apstats-inference-regression-part7').then(m => m.apStatsInfRegPart7Data) },
     ]
   },
   'comparing-populations-apstats': {
@@ -90,11 +78,11 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
   'discrete-random-variables-apstats': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Random Variables', loader: () => import('./apstats-discrete-random-variables-part1').then(m => m.apStatsDiscreteRVPart1Data) },
-      { title: 'Probability Distributions', loader: () => import('./apstats-discrete-random-variables-part2').then(m => m.apStatsDiscreteRVPart2Data) },
-      { title: 'Mean of a Discrete RV', loader: () => import('./apstats-discrete-random-variables-part3').then(m => m.apStatsDiscreteRVPart3Data) },
-      { title: 'Variance & Standard Deviation', loader: () => import('./apstats-discrete-random-variables-part4').then(m => m.apStatsDiscreteRVPart4Data) },
-      { title: 'Combining Random Variables', loader: () => import('./apstats-discrete-random-variables-part5').then(m => m.apStatsDiscreteRVPart5Data) },
+      { title: 'Discrete Random Variables', loader: () => import('./apstats-discrete-random-variables-part1').then(m => m.apStatsDiscreteRVPart1Data) },
+      { title: 'Expected Value', loader: () => import('./apstats-discrete-random-variables-part2').then(m => m.apStatsDiscreteRVPart2Data) },
+      { title: 'Variance & Standard Deviation', loader: () => import('./apstats-discrete-random-variables-part3').then(m => m.apStatsDiscreteRVPart3Data) },
+      { title: 'Cumulative Distributions and Simulation', loader: () => import('./apstats-discrete-random-variables-part4').then(m => m.apStatsDiscreteRVPart4Data) },
+      { title: 'Interpreting Expected Value and Standard Deviation', loader: () => import('./apstats-discrete-random-variables-part5').then(m => m.apStatsDiscreteRVPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apstats-discrete-random-variables-part6').then(m => m.apStatsDiscreteRVPart6Data) },
       { title: 'Mixed Review', loader: () => import('./apstats-discrete-random-variables-part7').then(m => m.apStatsDiscreteRVPart7Data) },
     ],
@@ -104,9 +92,9 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Binomial Setting', loader: () => import('./apstats-binomial-geometric-part1').then(m => m.apStatsBinomGeomPart1Data) },
       { title: 'Binomial Probabilities', loader: () => import('./apstats-binomial-geometric-part2').then(m => m.apStatsBinomGeomPart2Data) },
-      { title: 'Binomial Mean & Std Dev', loader: () => import('./apstats-binomial-geometric-part3').then(m => m.apStatsBinomGeomPart3Data) },
-      { title: 'Geometric Setting', loader: () => import('./apstats-binomial-geometric-part4').then(m => m.apStatsBinomGeomPart4Data) },
-      { title: 'Geometric Probabilities', loader: () => import('./apstats-binomial-geometric-part5').then(m => m.apStatsBinomGeomPart5Data) },
+      { title: 'Binomial Mean and Standard Deviation in Context', loader: () => import('./apstats-binomial-geometric-part3').then(m => m.apStatsBinomGeomPart3Data) },
+      { title: 'Simulation and Cumulative Binomial Probabilities', loader: () => import('./apstats-binomial-geometric-part4').then(m => m.apStatsBinomGeomPart4Data) },
+      { title: 'Is It Binomial? Checking the Conditions', loader: () => import('./apstats-binomial-geometric-part5').then(m => m.apStatsBinomGeomPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./apstats-binomial-geometric-part6').then(m => m.apStatsBinomGeomPart6Data) },
       { title: 'Mixed Review', loader: () => import('./apstats-binomial-geometric-part7').then(m => m.apStatsBinomGeomPart7Data) },
     ],
@@ -273,8 +261,8 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Simple Harmonic Motion', loader: () => import('./physicsc-oscillations-part1').then(m => m.physCOscillationsPart1Data) },
       { title: 'Kinematics of SHM', loader: () => import('./physicsc-oscillations-part2').then(m => m.physCOscillationsPart2Data) },
       { title: 'Pendulums', loader: () => import('./physicsc-oscillations-part3').then(m => m.physCOscillationsPart3Data) },
-      { title: 'Damped Oscillations', loader: () => import('./physicsc-oscillations-part4').then(m => m.physCOscillationsPart4Data) },
-      { title: 'Driven Oscillations & Resonance', loader: () => import('./physicsc-oscillations-part5').then(m => m.physCOscillationsPart5Data) },
+      { title: 'Restoring Forces, Spring Combinations, and Vertical Springs', loader: () => import('./physicsc-oscillations-part4').then(m => m.physCOscillationsPart4Data) },
+      { title: 'Natural Frequency, Resonance, and SHM Graphs', loader: () => import('./physicsc-oscillations-part5').then(m => m.physCOscillationsPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-oscillations-part6').then(m => m.physCOscillationsPart6Data) },
       { title: 'Review & Applications', loader: () => import('./physicsc-oscillations-part7').then(m => m.physCOscillationsPart7Data) },
     ]
@@ -284,8 +272,8 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Universal Gravitation', loader: () => import('./physicsc-gravitation-part1').then(m => m.physCGravitationPart1Data) },
       { title: 'Gravitational PE & Orbits', loader: () => import('./physicsc-gravitation-part2').then(m => m.physCGravitationPart2Data) },
-      { title: "Kepler's Laws", loader: () => import('./physicsc-gravitation-part3').then(m => m.physCGravitationPart3Data) },
-      { title: 'Gravitational Potential', loader: () => import('./physicsc-gravitation-part4').then(m => m.physCGravitationPart4Data) },
+      { title: "Kepler's Third Law and Elliptical Orbits", loader: () => import('./physicsc-gravitation-part3').then(m => m.physCGravitationPart3Data) },
+      { title: 'The Shell Theorem and Gravity Inside a Sphere', loader: () => import('./physicsc-gravitation-part4').then(m => m.physCGravitationPart4Data) },
       { title: 'Satellite Energy', loader: () => import('./physicsc-gravitation-part5').then(m => m.physCGravitationPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-gravitation-part6').then(m => m.physCGravitationPart6Data) },
       { title: 'Review & Applications', loader: () => import('./physicsc-gravitation-part7').then(m => m.physCGravitationPart7Data) },
@@ -332,7 +320,7 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: "Faraday's Law", loader: () => import('./physicsc-em-induction-em-part1').then(m => m.physCEMInductionPart1Data) },
       { title: 'Motional EMF', loader: () => import('./physicsc-em-induction-em-part2').then(m => m.physCEMInductionPart2Data) },
-      { title: 'Inductance', loader: () => import('./physicsc-em-induction-em-part3').then(m => m.physCEMInductionPart3Data) },
+      { title: 'Self-Inductance', loader: () => import('./physicsc-em-induction-em-part3').then(m => m.physCEMInductionPart3Data) },
       { title: 'RL Circuits', loader: () => import('./physicsc-em-induction-em-part4').then(m => m.physCEMInductionPart4Data) },
       { title: 'LC Circuits & EM Oscillations', loader: () => import('./physicsc-em-induction-em-part5').then(m => m.physCEMInductionPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-em-induction-em-part6').then(m => m.physCEMInductionPart6Data) },
@@ -343,10 +331,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'competitive',
     parts: [
       { title: "Maxwell's Equations Overview", loader: () => import('./physicsc-maxwell-equations-em-part1').then(m => m.physCEMMaxwellPart1Data) },
-      { title: 'Displacement Current', loader: () => import('./physicsc-maxwell-equations-em-part2').then(m => m.physCEMMaxwellPart2Data) },
-      { title: 'Electromagnetic Waves', loader: () => import('./physicsc-maxwell-equations-em-part3').then(m => m.physCEMMaxwellPart3Data) },
-      { title: 'EM Spectrum', loader: () => import('./physicsc-maxwell-equations-em-part4').then(m => m.physCEMMaxwellPart4Data) },
-      { title: 'Energy & Momentum of EM Waves', loader: () => import('./physicsc-maxwell-equations-em-part5').then(m => m.physCEMMaxwellPart5Data) },
+      { title: 'Gauss\'s Law for Magnetism and Closed Field Lines', loader: () => import('./physicsc-maxwell-equations-em-part2').then(m => m.physCEMMaxwellPart2Data) },
+      { title: 'Faraday\'s Law as an Induced Electric Field', loader: () => import('./physicsc-maxwell-equations-em-part3').then(m => m.physCEMMaxwellPart3Data) },
+      { title: 'Ampère\'s Law for Symmetric Currents and Maxwell\'s Addition', loader: () => import('./physicsc-maxwell-equations-em-part4').then(m => m.physCEMMaxwellPart4Data) },
+      { title: 'Choosing Gaussian Surfaces and Amperian Loops', loader: () => import('./physicsc-maxwell-equations-em-part5').then(m => m.physCEMMaxwellPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-maxwell-equations-em-part6').then(m => m.physCEMMaxwellPart6Data) },
       { title: 'Review & Applications', loader: () => import('./physicsc-maxwell-equations-em-part7').then(m => m.physCEMMaxwellPart7Data) },
     ]
@@ -455,7 +443,7 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Angular Momentum of Rigid Bodies', loader: () => import('./physicsc-angular-momentum-part2').then(m => m.physCAngMomPart2Data) },
       { title: 'Torque & dL/dt', loader: () => import('./physicsc-angular-momentum-part3').then(m => m.physCAngMomPart3Data) },
       { title: 'Conservation of Angular Momentum', loader: () => import('./physicsc-angular-momentum-part4').then(m => m.physCAngMomPart4Data) },
-      { title: 'Precession & Gyroscopes', loader: () => import('./physicsc-angular-momentum-part5').then(m => m.physCAngMomPart5Data) },
+      { title: 'Angular Impulse from Graphs and Angular Momentum Exchange', loader: () => import('./physicsc-angular-momentum-part5').then(m => m.physCAngMomPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-angular-momentum-part6').then(m => m.physCAngMomPart6Data) },
       { title: 'Review & Applications', loader: () => import('./physicsc-angular-momentum-part7').then(m => m.physCAngMomPart7Data) },
     ],
@@ -552,7 +540,7 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Circular Motion in B Fields', loader: () => import('./physicsc-em-magnetic-forces-part2').then(m => m.physCEMMagForcePart2Data) },
       { title: 'Mass Spectrometer', loader: () => import('./physicsc-em-magnetic-forces-part3').then(m => m.physCEMMagForcePart3Data) },
       { title: 'Force on Current-Carrying Wire', loader: () => import('./physicsc-em-magnetic-forces-part4').then(m => m.physCEMMagForcePart4Data) },
-      { title: 'Torque on Current Loop', loader: () => import('./physicsc-em-magnetic-forces-part5').then(m => m.physCEMMagForcePart5Data) },
+      { title: 'Moving Charges as Field Sources; Combined Fields', loader: () => import('./physicsc-em-magnetic-forces-part5').then(m => m.physCEMMagForcePart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./physicsc-em-magnetic-forces-part6').then(m => m.physCEMMagForcePart6Data) },
       { title: 'Review & Applications', loader: () => import('./physicsc-em-magnetic-forces-part7').then(m => m.physCEMMagForcePart7Data) },
     ],
@@ -935,10 +923,10 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Core Concepts', loader: () => import('./hg-political-power-part1').then(m => m.hgPoliticalPowerPart1Data) },
       { title: 'How States Divide Power: Four Cases on the Spectrum', loader: () => import('./hg-political-power-part2').then(m => m.hgPoliticalPowerPart2Data) },
       { title: 'Centripetal and Centrifugal Forces: Weighing the Balance', loader: () => import('./hg-political-power-part3').then(m => m.hgPoliticalPowerPart3Data) },
-      { title: 'State Shape and Access: Reading the Data and the Limits', loader: () => import('./hg-political-power-part4').then(m => m.hgPoliticalPowerPart4Data) },
+      { title: 'Devolutionary Factors: Reading the Cases and the Limits', loader: () => import('./hg-political-power-part4').then(m => m.hgPoliticalPowerPart4Data) },
       { title: 'Challenges to Sovereignty in a Connected World', loader: () => import('./hg-political-power-part5').then(m => m.hgPoliticalPowerPart5Data) },
       { title: 'AP Exam Practice: Nigeria\'s Federal Map', loader: () => import('./hg-political-power-part6').then(m => m.hgPoliticalPowerPart6Data) },
-      { title: 'Synthesis Review: Power, Shape and Balance', loader: () => import('./hg-political-power-part7').then(m => m.hgPoliticalPowerPart7Data) }
+      { title: 'Synthesis Review: Power, Devolution and Balance', loader: () => import('./hg-political-power-part7').then(m => m.hgPoliticalPowerPart7Data) }
     ],
   },
   'hg-agricultural-origins': {

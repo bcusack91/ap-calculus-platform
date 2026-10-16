@@ -18,7 +18,6 @@ const TOPIC_SLUGS = [
   'least-squares-regression',
   'residuals-residual-plots',
   'coefficient-determination',
-  'transformations-linearity',
   'sampling-methods',
   'bias-sampling-surveys',
   'observational-vs-experiments',
@@ -29,7 +28,6 @@ const TOPIC_SLUGS = [
   'discrete-random-variables',
   'continuous-random-variables',
   'binomial-distribution',
-  'geometric-distribution',
   'sampling-distributions',
   'central-limit-theorem',
   'ci-proportions',
@@ -41,7 +39,6 @@ const TOPIC_SLUGS = [
   'type-errors',
   'paired-data',
   'chi-square-tests',
-  'inference-regression',
 ]
 
 function dayOfYear(): number {

@@ -229,8 +229,7 @@ const SLUG_LABELS: Record<string, string> = {
   'csa-arraylist-usage': 'Arraylist Usage',
   'csa-2d-array': '2d Array',
   'csa-2d-arrays': '2d Arrays',
-  'csa-inheritance': 'Inheritance',
-  'csa-inheritance-polymorphism': 'Inheritance Polymorphism',
+  'csa-recursive-methods': 'Recursion',
 }
 
 function slugToReadableName(slug: string): string {

@@ -215,14 +215,6 @@ export const chemCsFlashcards: FlashcardsByTopic = {
     { front: 'What does add(index, element) do?', back: 'Inserts at that index and shifts all subsequent elements right.' },
     { front: 'What does remove(int) do for an ArrayList of Integers?', back: 'It removes by INDEX, not by value — a common source of confusion.' },
   ],
-  'csa-inheritance-polymorphism': [
-    { front: 'What does `extends` establish?', back: 'An is-a relationship, where the subclass inherits accessible fields and methods from the superclass.' },
-    { front: 'What is method overriding vs. overloading?', back: 'Overriding redefines an inherited method with the same signature; overloading defines multiple methods with the same name but different parameters.' },
-    { front: 'What does `super` do?', back: 'Calls the superclass constructor (super(...)) or a superclass method (super.method()).' },
-    { front: 'What is polymorphism?', back: 'A superclass reference can hold a subclass object, and the SUBCLASS version of an overridden method runs at runtime.' },
-    { front: 'What is an abstract class?', back: 'A class that cannot be instantiated and may declare abstract methods subclasses must implement.' },
-    { front: 'What is the difference between compile-time and run-time type?', back: 'The declared type determines which methods can be called; the actual object type determines which implementation runs.' },
-  ],
   'csa-recursive-methods': [
     { front: 'What two parts must every recursive method have?', back: 'A base case that stops recursion, and a recursive case that moves toward the base case.' },
     { front: 'What happens without a proper base case?', back: 'Infinite recursion, exhausting the call stack and throwing StackOverflowError.' },

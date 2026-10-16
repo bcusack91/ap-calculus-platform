@@ -26,7 +26,7 @@ const sprint: StudyPlanTemplate = {
       { title: 'Trig Flashcards', type: 'FLASHCARD', dayOfWeek: 5 },
     ]),
     ...weekTasks(3, [
-      { title: 'Polar & Parametric Equations', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 0 },
+      { title: 'Polar Coordinates & Functions', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 0 },
       { title: 'Full AP Practice Exam', type: 'PRACTICE', dayOfWeek: 2 },
       { title: 'Review Weak Areas', type: 'CUSTOM', dayOfWeek: 4 },
       { title: 'Final Flashcard Review', type: 'FLASHCARD', dayOfWeek: 5 },
@@ -37,7 +37,7 @@ const sprint: StudyPlanTemplate = {
 const standard: StudyPlanTemplate = {
   id: '8-week-precalc-standard',
   title: '8-Week AP Precalculus Plan',
-  description: 'Balanced study covering all four AP Precalculus units — polynomials, exponentials/logs, trigonometry, and polar/parametric — with regular quizzes and FRQ practice.',
+  description: 'Balanced study covering all three AP Precalculus exam units — polynomial and rational, exponential and logarithmic, and trigonometric and polar functions — with regular quizzes and FRQ practice.',
   durationWeeks: 8, targetImprovement: '1–2 AP score points', weeklyHours: '5–7 hours', difficulty: 'Intermediate',
   tasks: [
     ...weekTasks(0, [
@@ -73,14 +73,14 @@ const standard: StudyPlanTemplate = {
     ...weekTasks(5, [
       { title: 'Trig Identities', type: 'LESSON', topicSlug: 'trigonometric-identities-precalc', dayOfWeek: 0 },
       { title: 'Inverse Trig Functions', type: 'LESSON', topicSlug: 'inverse-trig-functions-precalc', dayOfWeek: 2 },
-      { title: 'Law of Sines & Cosines', type: 'LESSON', topicSlug: 'law-of-sines-cosines-precalc', dayOfWeek: 4 },
+      { title: 'Sinusoidal Modeling', type: 'LESSON', topicSlug: 'trigonometric-functions-precalc', dayOfWeek: 4 },
       { title: 'Unit 3 Quiz', type: 'QUIZ', topicSlug: 'the-unit-circle', dayOfWeek: 5 },
     ]),
     ...weekTasks(6, [
       { title: 'Polar Coordinates', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 0 },
       { title: 'Polar Curves & Roses', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 2 },
-      { title: 'Parametric Equations', type: 'LESSON', topicSlug: 'parametric-equations-precalc', dayOfWeek: 4 },
-      { title: 'Polar/Parametric Flashcards', type: 'FLASHCARD', dayOfWeek: 5 },
+      { title: 'Rates of Change in Polar Functions', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 4 },
+      { title: 'Polar Flashcards', type: 'FLASHCARD', dayOfWeek: 5 },
     ]),
     ...weekTasks(7, [
       { title: 'Full AP Practice Exam', type: 'PRACTICE', dayOfWeek: 0 },
@@ -146,21 +146,21 @@ const comprehensive: StudyPlanTemplate = {
     ]),
     ...weekTasks(8, [
       { title: 'Inverse Trig Functions', type: 'LESSON', topicSlug: 'inverse-trig-functions-precalc', dayOfWeek: 0 },
-      { title: 'Law of Sines', type: 'LESSON', topicSlug: 'law-of-sines-cosines-precalc', dayOfWeek: 2 },
-      { title: 'Law of Cosines & Area', type: 'LESSON', topicSlug: 'law-of-sines-cosines-precalc', dayOfWeek: 4 },
+      { title: 'Trig Equations & Inequalities', type: 'LESSON', topicSlug: 'trigonometric-identities-precalc', dayOfWeek: 2 },
+      { title: 'Sinusoidal Modeling', type: 'LESSON', topicSlug: 'trigonometric-functions-precalc', dayOfWeek: 4 },
       { title: 'Trig Applications Quiz', type: 'QUIZ', topicSlug: 'inverse-trig-functions-precalc', dayOfWeek: 5 },
     ]),
     ...weekTasks(9, [
       { title: 'Polar Coordinates & Conversion', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 0 },
       { title: 'Polar Curves: Roses & Cardioids', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 2 },
-      { title: 'Parametric Equations', type: 'LESSON', topicSlug: 'parametric-equations-precalc', dayOfWeek: 4 },
+      { title: 'Rates of Change in Polar Functions', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 4 },
       { title: 'Polar Flashcards', type: 'FLASHCARD', dayOfWeek: 5 },
     ]),
     ...weekTasks(10, [
       { title: 'Sequences & Series Review', type: 'LESSON', topicSlug: 'sequences-series-precalc', dayOfWeek: 0 },
-      { title: 'Vectors Intro', type: 'LESSON', topicSlug: 'vectors-two-dimensions-precalc', dayOfWeek: 2 },
-      { title: 'Unit 4 FRQ Practice', type: 'PRACTICE', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 4 },
-      { title: 'Unit 4 Quiz', type: 'QUIZ', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 5 },
+      { title: 'Polar Functions Review', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 2 },
+      { title: 'Unit 3 FRQ Practice', type: 'PRACTICE', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 4 },
+      { title: 'Polar Functions Quiz', type: 'QUIZ', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 5 },
     ]),
     ...weekTasks(11, [
       { title: 'Full Practice Exam #2', type: 'PRACTICE', dayOfWeek: 0 },
@@ -175,7 +175,7 @@ export const AP_PRECALC_PLANS: StudyPlanTemplate[] = [sprint, standard, comprehe
 
 export const config: StudyPlanSelectorConfig = {
   subject: 'AP Precalculus',
-  description: 'Choose a pre-built study schedule for AP Precalculus covering polynomials, exponentials, trigonometry, and polar/parametric functions.',
+  description: 'Choose a pre-built study schedule for AP Precalculus covering polynomials, exponentials, trigonometry, and polar functions.',
   backLink: { href: '/ap-precalculus', label: 'AP Precalculus' },
   apiEndpoint: '/api/ap-precalc-study-plans',
   accent: 'emerald',

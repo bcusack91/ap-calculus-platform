@@ -90,7 +90,7 @@ const standard: StudyPlanTemplate = {
     ]),
     ...weekTasks(8, [
       { title: 'Maxwell\'s Equations Overview', type: 'LESSON', topicSlug: 'physics-c-maxwell-equations', dayOfWeek: 0 },
-      { title: 'Electromagnetic Waves', type: 'LESSON', topicSlug: 'physics-c-electromagnetic-waves', dayOfWeek: 2 },
+      { title: 'Maxwell\'s Equations Practice', type: 'PRACTICE', topicSlug: 'physics-c-maxwell-equations', dayOfWeek: 2 },
       { title: 'Maxwell Flashcards', type: 'FLASHCARD', dayOfWeek: 4 },
       { title: 'FRQ Practice Set', type: 'PRACTICE', dayOfWeek: 5 },
     ]),
@@ -184,7 +184,7 @@ const comprehensive: StudyPlanTemplate = {
     ...weekTasks(12, [
       { title: 'Maxwell\'s Equations', type: 'LESSON', topicSlug: 'physics-c-maxwell-equations', dayOfWeek: 0 },
       { title: 'Displacement Current', type: 'PRACTICE', topicSlug: 'physics-c-maxwell-equations', dayOfWeek: 2 },
-      { title: 'EM Waves', type: 'LESSON', topicSlug: 'physics-c-electromagnetic-waves', dayOfWeek: 4 },
+      { title: 'Induction & Maxwell Review', type: 'PRACTICE', topicSlug: 'physics-c-faraday-lenz', dayOfWeek: 4 },
       { title: 'Maxwell Quiz', type: 'QUIZ', topicSlug: 'physics-c-maxwell-equations', dayOfWeek: 5 },
     ]),
     ...weekTasks(13, [

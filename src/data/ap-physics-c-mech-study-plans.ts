@@ -84,7 +84,7 @@ const standard: StudyPlanTemplate = {
     ]),
     ...weekTasks(7, [
       { title: 'Simple Harmonic Motion', type: 'LESSON', topicSlug: 'physics-c-simple-harmonic-motion', dayOfWeek: 0 },
-      { title: 'Damped & Driven Oscillations', type: 'LESSON', topicSlug: 'physics-c-damped-driven-oscillations', dayOfWeek: 2 },
+      { title: 'Energy in SHM & Resonance', type: 'LESSON', topicSlug: 'physics-c-simple-harmonic-motion', dayOfWeek: 2 },
       { title: 'SHM Practice', type: 'PRACTICE', topicSlug: 'physics-c-simple-harmonic-motion', dayOfWeek: 4 },
       { title: 'Oscillations Quiz', type: 'QUIZ', topicSlug: 'physics-c-simple-harmonic-motion', dayOfWeek: 5 },
     ]),
@@ -176,10 +176,10 @@ const comprehensive: StudyPlanTemplate = {
       { title: 'SHM Quiz', type: 'QUIZ', topicSlug: 'physics-c-simple-harmonic-motion', dayOfWeek: 5 },
     ]),
     ...weekTasks(11, [
-      { title: 'Damped & Driven Oscillations', type: 'LESSON', topicSlug: 'physics-c-damped-driven-oscillations', dayOfWeek: 0 },
-      { title: 'Resonance & Quality Factor', type: 'PRACTICE', topicSlug: 'physics-c-damped-driven-oscillations', dayOfWeek: 2 },
+      { title: 'Oscillations Review', type: 'LESSON', topicSlug: 'physics-c-simple-harmonic-motion', dayOfWeek: 0 },
+      { title: 'Physical Pendulums & Energy in SHM', type: 'PRACTICE', topicSlug: 'physics-c-simple-harmonic-motion', dayOfWeek: 2 },
       { title: 'Oscillations Flashcards', type: 'FLASHCARD', dayOfWeek: 4 },
-      { title: 'Oscillations Quiz', type: 'QUIZ', topicSlug: 'physics-c-damped-driven-oscillations', dayOfWeek: 5 },
+      { title: 'Oscillations Quiz', type: 'QUIZ', topicSlug: 'physics-c-simple-harmonic-motion', dayOfWeek: 5 },
     ]),
     ...weekTasks(12, [
       { title: 'Universal Gravitation', type: 'LESSON', topicSlug: 'physics-c-universal-gravitation', dayOfWeek: 0 },

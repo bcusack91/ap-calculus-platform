@@ -15,8 +15,8 @@ export const BEYOND_EXAM_SLUGS = new Set<string>([
   // AP Physics C — 2024-25 CED scope review (2026-08-19):
   // closed-form Tsiolkovsky rocket equation is not tested (thrust via dp/dt is)
   'physics-c-variable-mass',
-  // quantitative damped/driven oscillations are excluded from the CED
-  'physics-c-damped-driven-oscillations',
+  // (physics-c-damped-driven-oscillations was retired outright in Oct 2026;
+  // see src/data/retired-ap-topics.ts.)
 ])
 
 export function isBeyondExam(topicSlug: string): boolean {

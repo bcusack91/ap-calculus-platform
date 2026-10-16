@@ -499,12 +499,12 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-contemporary-issues-part1').then(m => m.aasContemporaryIssuesPart1Data) },
-      { title: 'Key Processes: How Mass Incarceration Was Built', loader: () => import('./aas-contemporary-issues-part2').then(m => m.aasContemporaryIssuesPart2Data) },
-      { title: 'Comparing Cases: Political Power and Voting Rights since 1980', loader: () => import('./aas-contemporary-issues-part3').then(m => m.aasContemporaryIssuesPart3Data) },
-      { title: 'Connections: Reading the Data on Wealth, Housing and Health', loader: () => import('./aas-contemporary-issues-part4').then(m => m.aasContemporaryIssuesPart4Data) },
+      { title: 'Key Processes: Breaking Barriers in Sports, Science and Medicine', loader: () => import('./aas-contemporary-issues-part2').then(m => m.aasContemporaryIssuesPart2Data) },
+      { title: 'Comparing Cases: Black Political Representation after the Voting Rights Act', loader: () => import('./aas-contemporary-issues-part3').then(m => m.aasContemporaryIssuesPart3Data) },
+      { title: 'Connections: Reading the Data on Wealth, Housing and Education', loader: () => import('./aas-contemporary-issues-part4').then(m => m.aasContemporaryIssuesPart4Data) },
       { title: 'Continuity & Change: A Changing Black America', loader: () => import('./aas-contemporary-issues-part5').then(m => m.aasContemporaryIssuesPart5Data) },
-      { title: 'Source Workshop: Protest, Policing and Redress since 2013', loader: () => import('./aas-contemporary-issues-part6').then(m => m.aasContemporaryIssuesPart6Data) },
-      { title: 'AP Review: Contemporary Issues in Synthesis', loader: () => import('./aas-contemporary-issues-part7').then(m => m.aasContemporaryIssuesPart7Data) }
+      { title: 'Source Workshop: Portraits, Data and Protest', loader: () => import('./aas-contemporary-issues-part6').then(m => m.aasContemporaryIssuesPart6Data) },
+      { title: 'AP Review: Topics 4.15–4.21 in Synthesis', loader: () => import('./aas-contemporary-issues-part7').then(m => m.aasContemporaryIssuesPart7Data) }
     ],
   },
   'aas-movements-debates': {
@@ -514,7 +514,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Stay or Go? Emigration, Nationalism and Garvey (1850–1927)', loader: () => import('./aas-movements-debates-part2').then(m => m.aasMovementsDebatesPart2Data) },
       { title: 'Comparing Cases: Accommodation vs. Agitation (1892–1915) and the Self-Help Lineage', loader: () => import('./aas-movements-debates-part3').then(m => m.aasMovementsDebatesPart3Data) },
       { title: 'Connections: Pan-Africanism, Black Internationalism and the Art-and-Politics Debate (1900–1957)', loader: () => import('./aas-movements-debates-part4').then(m => m.aasMovementsDebatesPart4Data) },
-      { title: 'Continuity & Change: Self-Defense, Separatism and Redress (1850–1989)', loader: () => import('./aas-movements-debates-part5').then(m => m.aasMovementsDebatesPart5Data) },
+      { title: 'Continuity & Change: Self-Defense and Separatism (1850–1966)', loader: () => import('./aas-movements-debates-part5').then(m => m.aasMovementsDebatesPart5Data) },
       { title: 'Source Workshop: Black Women\'s Thought from Cooper to Crenshaw (1892–1989)', loader: () => import('./aas-movements-debates-part6').then(m => m.aasMovementsDebatesPart6Data) },
       { title: 'AP Review: The Debates Side by Side', loader: () => import('./aas-movements-debates-part7').then(m => m.aasMovementsDebatesPart7Data) }
     ],
@@ -583,10 +583,10 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./englit-poetic-structure-form-part1').then(m => m.englitPoeticStructureFormPart1Data) },
-      { title: 'Meter: Feet, Line Length and Scansion', loader: () => import('./englit-poetic-structure-form-part2').then(m => m.englitPoeticStructureFormPart2Data) },
+      { title: 'Rhythm and the Line: Pattern, Line Breaks and Emphasis', loader: () => import('./englit-poetic-structure-form-part2').then(m => m.englitPoeticStructureFormPart2Data) },
       { title: 'Rhyme and Stanza Patterns', loader: () => import('./englit-poetic-structure-form-part3').then(m => m.englitPoeticStructureFormPart3Data) },
-      { title: 'Fixed Forms: Two Sonnets and the Villanelle', loader: () => import('./englit-poetic-structure-form-part4').then(m => m.englitPoeticStructureFormPart4Data) },
-      { title: 'Blank Verse, Free Verse and Broken Patterns', loader: () => import('./englit-poetic-structure-form-part5').then(m => m.englitPoeticStructureFormPart5Data) },
+      { title: 'Closed Forms at Work: Turns and Refrains', loader: () => import('./englit-poetic-structure-form-part4').then(m => m.englitPoeticStructureFormPart4Data) },
+      { title: 'Closed and Open Forms: Line Breaks and Broken Patterns', loader: () => import('./englit-poetic-structure-form-part5').then(m => m.englitPoeticStructureFormPart5Data) },
       { title: 'Writing About Form on the Exam', loader: () => import('./englit-poetic-structure-form-part6').then(m => m.englitPoeticStructureFormPart6Data) },
       { title: 'Structure Synthesis: Rossetti\'s "Remember"', loader: () => import('./englit-poetic-structure-form-part7').then(m => m.englitPoeticStructureFormPart7Data) }
     ],
@@ -1347,50 +1347,26 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Synthesis Review', loader: () => import('./csa-2d-arrays-part7').then(m => m.csa2dArraysPart7Data) }
     ],
   },
-  'csa-inheritance': {
-    completionDestination: 'complete',
-    parts: [
-      { title: 'Core Concepts', loader: () => import('./csa-inheritance-part1').then(m => m.csaInheritancePart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-inheritance-part2').then(m => m.csaInheritancePart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csa-inheritance-part3').then(m => m.csaInheritancePart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csa-inheritance-part4').then(m => m.csaInheritancePart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csa-inheritance-part5').then(m => m.csaInheritancePart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csa-inheritance-part6').then(m => m.csaInheritancePart6Data) },
-      { title: 'AP Review', loader: () => import('./csa-inheritance-part7').then(m => m.csaInheritancePart7Data) }
-    ],
-  },
-  'csa-inheritance-polymorphism': {
-    completionDestination: 'complete',
-    parts: [
-      { title: 'Core Concepts', loader: () => import('./csa-inheritance-polymorphism-part1').then(m => m.csaInheritancePolymorphismPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csa-inheritance-polymorphism-part2').then(m => m.csaInheritancePolymorphismPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csa-inheritance-polymorphism-part3').then(m => m.csaInheritancePolymorphismPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csa-inheritance-polymorphism-part4').then(m => m.csaInheritancePolymorphismPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csa-inheritance-polymorphism-part5').then(m => m.csaInheritancePolymorphismPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csa-inheritance-polymorphism-part6').then(m => m.csaInheritancePolymorphismPart6Data) },
-      { title: 'AP Review', loader: () => import('./csa-inheritance-polymorphism-part7').then(m => m.csaInheritancePolymorphismPart7Data) }
-    ],
-  },
   'csp-creative-development': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-creative-development-part1').then(m => m.cspCreativeDevelopmentPart1Data) },
+      { title: 'Program Design, Collaboration, and Development Process', loader: () => import('./csp-creative-development-part1').then(m => m.cspCreativeDevelopmentPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-creative-development-part2').then(m => m.cspCreativeDevelopmentPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csp-creative-development-part3').then(m => m.cspCreativeDevelopmentPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./csp-creative-development-part4').then(m => m.cspCreativeDevelopmentPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-creative-development-part5').then(m => m.cspCreativeDevelopmentPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csp-creative-development-part6').then(m => m.cspCreativeDevelopmentPart6Data) },
+      { title: 'Documentation and Acknowledging Code', loader: () => import('./csp-creative-development-part5').then(m => m.cspCreativeDevelopmentPart5Data) },
+      { title: 'Problem-Solving Workshop: Finding and Fixing Errors', loader: () => import('./csp-creative-development-part6').then(m => m.cspCreativeDevelopmentPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-creative-development-part7').then(m => m.cspCreativeDevelopmentPart7Data) }
     ],
   },
   'csp-collaboration-development': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-collaboration-development-part1').then(m => m.cspCollaborationDevelopmentPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csp-collaboration-development-part2').then(m => m.cspCollaborationDevelopmentPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csp-collaboration-development-part3').then(m => m.cspCollaborationDevelopmentPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csp-collaboration-development-part4').then(m => m.cspCollaborationDevelopmentPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-collaboration-development-part5').then(m => m.cspCollaborationDevelopmentPart5Data) },
+      { title: 'Collaboration Tools, Testing Strategies, and Program Correctness', loader: () => import('./csp-collaboration-development-part1').then(m => m.cspCollaborationDevelopmentPart1Data) },
+      { title: 'Diverse Perspectives and Interpersonal Skills', loader: () => import('./csp-collaboration-development-part2').then(m => m.cspCollaborationDevelopmentPart2Data) },
+      { title: 'Pair Programming, Online Tools, and Crowdsourcing', loader: () => import('./csp-collaboration-development-part3').then(m => m.cspCollaborationDevelopmentPart3Data) },
+      { title: 'Gathering Input From Users', loader: () => import('./csp-collaboration-development-part4').then(m => m.cspCollaborationDevelopmentPart4Data) },
+      { title: 'Computing Innovations and Their Purpose', loader: () => import('./csp-collaboration-development-part5').then(m => m.cspCollaborationDevelopmentPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-collaboration-development-part6').then(m => m.cspCollaborationDevelopmentPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-collaboration-development-part7').then(m => m.cspCollaborationDevelopmentPart7Data) }
     ],
@@ -1398,11 +1374,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-binary-data': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-binary-data-part1').then(m => m.cspBinaryDataPart1Data) },
+      { title: 'Binary Numbers, Conversions, and Digital Information', loader: () => import('./csp-binary-data-part1').then(m => m.cspBinaryDataPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-binary-data-part2').then(m => m.cspBinaryDataPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csp-binary-data-part3').then(m => m.cspBinaryDataPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./csp-binary-data-part4').then(m => m.cspBinaryDataPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-binary-data-part5').then(m => m.cspBinaryDataPart5Data) },
+      { title: 'Limits of Fixed Bits: Overflow and Round-off', loader: () => import('./csp-binary-data-part5').then(m => m.cspBinaryDataPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-binary-data-part6').then(m => m.cspBinaryDataPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-binary-data-part7').then(m => m.cspBinaryDataPart7Data) }
     ],
@@ -1410,23 +1386,23 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-data-compression-analysis': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-data-compression-analysis-part1').then(m => m.cspDataCompressionAnalysisPart1Data) },
+      { title: 'Lossless vs Lossy, Compression Techniques, and Data Analysis', loader: () => import('./csp-data-compression-analysis-part1').then(m => m.cspDataCompressionAnalysisPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-data-compression-analysis-part2').then(m => m.cspDataCompressionAnalysisPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csp-data-compression-analysis-part3').then(m => m.cspDataCompressionAnalysisPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csp-data-compression-analysis-part4').then(m => m.cspDataCompressionAnalysisPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-data-compression-analysis-part5').then(m => m.cspDataCompressionAnalysisPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./csp-data-compression-analysis-part6').then(m => m.cspDataCompressionAnalysisPart6Data) },
+      { title: 'Extracting Information and Metadata', loader: () => import('./csp-data-compression-analysis-part4').then(m => m.cspDataCompressionAnalysisPart4Data) },
+      { title: 'Challenges of Processing Data', loader: () => import('./csp-data-compression-analysis-part5').then(m => m.cspDataCompressionAnalysisPart5Data) },
+      { title: 'Problem-Solving Workshop: Using Programs With Data', loader: () => import('./csp-data-compression-analysis-part6').then(m => m.cspDataCompressionAnalysisPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-data-compression-analysis-part7').then(m => m.cspDataCompressionAnalysisPart7Data) }
     ],
   },
   'csp-data': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-data-part1').then(m => m.cspDataPart1Data) },
+      { title: 'Collection, Processing, and Extracting Information', loader: () => import('./csp-data-part1').then(m => m.cspDataPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-data-part2').then(m => m.cspDataPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csp-data-part3').then(m => m.cspDataPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./csp-data-part4').then(m => m.cspDataPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-data-part5').then(m => m.cspDataPart5Data) },
+      { title: 'Large Data Sets, Scalability, and Bias', loader: () => import('./csp-data-part5').then(m => m.cspDataPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-data-part6').then(m => m.cspDataPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-data-part7').then(m => m.cspDataPart7Data) }
     ],
@@ -1434,7 +1410,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-algorithms': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-algorithms-part1').then(m => m.cspAlgorithmsPart1Data) },
+      { title: 'Sequencing, Selection, Iteration, and Algorithm Analysis', loader: () => import('./csp-algorithms-part1').then(m => m.cspAlgorithmsPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-algorithms-part2').then(m => m.cspAlgorithmsPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csp-algorithms-part3').then(m => m.cspAlgorithmsPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./csp-algorithms-part4').then(m => m.cspAlgorithmsPart4Data) },
@@ -1446,11 +1422,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-algorithms-programming': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-algorithms-programming-part1').then(m => m.cspAlgorithmsProgrammingPart1Data) },
+      { title: 'Abstraction, Procedures, and Modularity', loader: () => import('./csp-algorithms-programming-part1').then(m => m.cspAlgorithmsProgrammingPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-algorithms-programming-part2').then(m => m.cspAlgorithmsProgrammingPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csp-algorithms-programming-part3').then(m => m.cspAlgorithmsProgrammingPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./csp-algorithms-programming-part4').then(m => m.cspAlgorithmsProgrammingPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-algorithms-programming-part5').then(m => m.cspAlgorithmsProgrammingPart5Data) },
+      { title: 'Libraries, APIs, and Random Values', loader: () => import('./csp-algorithms-programming-part5').then(m => m.cspAlgorithmsProgrammingPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-algorithms-programming-part6').then(m => m.cspAlgorithmsProgrammingPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-algorithms-programming-part7').then(m => m.cspAlgorithmsProgrammingPart7Data) }
     ],
@@ -1458,11 +1434,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-variables-control': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-variables-control-part1').then(m => m.cspVariablesControlPart1Data) },
+      { title: 'Variables, Assignments, Conditionals, and Loops', loader: () => import('./csp-variables-control-part1').then(m => m.cspVariablesControlPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-variables-control-part2').then(m => m.cspVariablesControlPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csp-variables-control-part3').then(m => m.cspVariablesControlPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csp-variables-control-part4').then(m => m.cspVariablesControlPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-variables-control-part5').then(m => m.cspVariablesControlPart5Data) },
+      { title: 'Nested Conditionals and Equivalent Conditions', loader: () => import('./csp-variables-control-part4').then(m => m.cspVariablesControlPart4Data) },
+      { title: 'Expressions, MOD, and Strings', loader: () => import('./csp-variables-control-part5').then(m => m.cspVariablesControlPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-variables-control-part6').then(m => m.cspVariablesControlPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-variables-control-part7').then(m => m.cspVariablesControlPart7Data) }
     ],
@@ -1470,11 +1446,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-procedures-lists': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-procedures-lists-part1').then(m => m.cspProceduresListsPart1Data) },
+      { title: 'List Operations, Traversals, and Procedure Design', loader: () => import('./csp-procedures-lists-part1').then(m => m.cspProceduresListsPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-procedures-lists-part2').then(m => m.cspProceduresListsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csp-procedures-lists-part3').then(m => m.cspProceduresListsPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csp-procedures-lists-part4').then(m => m.cspProceduresListsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-procedures-lists-part5').then(m => m.cspProceduresListsPart5Data) },
+      { title: 'List Traversal Algorithms', loader: () => import('./csp-procedures-lists-part3').then(m => m.cspProceduresListsPart3Data) },
+      { title: 'Data Abstraction and Procedural Abstraction', loader: () => import('./csp-procedures-lists-part4').then(m => m.cspProceduresListsPart4Data) },
+      { title: 'Inserting, Removing, and Updating Elements', loader: () => import('./csp-procedures-lists-part5').then(m => m.cspProceduresListsPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-procedures-lists-part6').then(m => m.cspProceduresListsPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-procedures-lists-part7').then(m => m.cspProceduresListsPart7Data) }
     ],
@@ -1482,11 +1458,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-computing-systems-networks': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-computing-systems-networks-part1').then(m => m.cspComputingSystemsNetworksPart1Data) },
-      { title: 'Key Processes', loader: () => import('./csp-computing-systems-networks-part2').then(m => m.cspComputingSystemsNetworksPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csp-computing-systems-networks-part3').then(m => m.cspComputingSystemsNetworksPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csp-computing-systems-networks-part4').then(m => m.cspComputingSystemsNetworksPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-computing-systems-networks-part5').then(m => m.cspComputingSystemsNetworksPart5Data) },
+      { title: 'Devices, Networks, and the Internet', loader: () => import('./csp-computing-systems-networks-part1').then(m => m.cspComputingSystemsNetworksPart1Data) },
+      { title: 'Key Processes: Paths and Routing', loader: () => import('./csp-computing-systems-networks-part2').then(m => m.cspComputingSystemsNetworksPart2Data) },
+      { title: 'Patterns & Examples: Packets and Protocols', loader: () => import('./csp-computing-systems-networks-part3').then(m => m.cspComputingSystemsNetworksPart3Data) },
+      { title: 'Connections & Interactions: Fault Tolerance and Access', loader: () => import('./csp-computing-systems-networks-part4').then(m => m.cspComputingSystemsNetworksPart4Data) },
+      { title: 'Parallel and Distributed Computing', loader: () => import('./csp-computing-systems-networks-part5').then(m => m.cspComputingSystemsNetworksPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-computing-systems-networks-part6').then(m => m.cspComputingSystemsNetworksPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-computing-systems-networks-part7').then(m => m.cspComputingSystemsNetworksPart7Data) }
     ],
@@ -1494,11 +1470,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-internet-protocols': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-internet-protocols-part1').then(m => m.cspInternetProtocolsPart1Data) },
+      { title: 'TCP/IP, HTTP, and How the Internet Works', loader: () => import('./csp-internet-protocols-part1').then(m => m.cspInternetProtocolsPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-internet-protocols-part2').then(m => m.cspInternetProtocolsPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csp-internet-protocols-part3').then(m => m.cspInternetProtocolsPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./csp-internet-protocols-part4').then(m => m.cspInternetProtocolsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-internet-protocols-part5').then(m => m.cspInternetProtocolsPart5Data) },
+      { title: 'Scalability and Growth', loader: () => import('./csp-internet-protocols-part5').then(m => m.cspInternetProtocolsPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-internet-protocols-part6').then(m => m.cspInternetProtocolsPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-internet-protocols-part7').then(m => m.cspInternetProtocolsPart7Data) }
     ],
@@ -1506,11 +1482,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-fault-tolerance-security': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-fault-tolerance-security-part1').then(m => m.cspFaultToleranceSecurityPart1Data) },
+      { title: 'Redundancy, Encryption, and Network Security', loader: () => import('./csp-fault-tolerance-security-part1').then(m => m.cspFaultToleranceSecurityPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-fault-tolerance-security-part2').then(m => m.cspFaultToleranceSecurityPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csp-fault-tolerance-security-part3').then(m => m.cspFaultToleranceSecurityPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csp-fault-tolerance-security-part4').then(m => m.cspFaultToleranceSecurityPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-fault-tolerance-security-part5').then(m => m.cspFaultToleranceSecurityPart5Data) },
+      { title: 'Patterns & Examples: Authentication and Encryption', loader: () => import('./csp-fault-tolerance-security-part3').then(m => m.cspFaultToleranceSecurityPart3Data) },
+      { title: 'Connections: Parallel and Distributed Computing', loader: () => import('./csp-fault-tolerance-security-part4').then(m => m.cspFaultToleranceSecurityPart4Data) },
+      { title: 'Speedup and the Limits of Parallelism', loader: () => import('./csp-fault-tolerance-security-part5').then(m => m.cspFaultToleranceSecurityPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-fault-tolerance-security-part6').then(m => m.cspFaultToleranceSecurityPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-fault-tolerance-security-part7').then(m => m.cspFaultToleranceSecurityPart7Data) }
     ],
@@ -1518,7 +1494,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-impact-of-computing': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-impact-of-computing-part1').then(m => m.cspImpactOfComputingPart1Data) },
+      { title: 'Digital Divide, Bias, and Beneficial/Harmful Effects', loader: () => import('./csp-impact-of-computing-part1').then(m => m.cspImpactOfComputingPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-impact-of-computing-part2').then(m => m.cspImpactOfComputingPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csp-impact-of-computing-part3').then(m => m.cspImpactOfComputingPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./csp-impact-of-computing-part4').then(m => m.cspImpactOfComputingPart4Data) },
@@ -1530,11 +1506,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-safe-computing': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-safe-computing-part1').then(m => m.cspSafeComputingPart1Data) },
+      { title: 'Privacy, Authentication, and Online Safety', loader: () => import('./csp-safe-computing-part1').then(m => m.cspSafeComputingPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-safe-computing-part2').then(m => m.cspSafeComputingPart2Data) },
       { title: 'Patterns & Examples', loader: () => import('./csp-safe-computing-part3').then(m => m.cspSafeComputingPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./csp-safe-computing-part4').then(m => m.cspSafeComputingPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-safe-computing-part5').then(m => m.cspSafeComputingPart5Data) },
+      { title: 'Connections & Interactions: Viruses, Malware, and Keyloggers', loader: () => import('./csp-safe-computing-part4').then(m => m.cspSafeComputingPart4Data) },
+      { title: 'Encryption, Certificates, and Data Collection', loader: () => import('./csp-safe-computing-part5').then(m => m.cspSafeComputingPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-safe-computing-part6').then(m => m.cspSafeComputingPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-safe-computing-part7').then(m => m.cspSafeComputingPart7Data) }
     ],
@@ -1542,11 +1518,11 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   'csp-social-ethical-impacts': {
     completionDestination: 'complete',
     parts: [
-      { title: 'Core Concepts', loader: () => import('./csp-social-ethical-impacts-part1').then(m => m.cspSocialEthicalImpactsPart1Data) },
+      { title: 'Privacy, Surveillance, Intellectual Property, and Responsibility', loader: () => import('./csp-social-ethical-impacts-part1').then(m => m.cspSocialEthicalImpactsPart1Data) },
       { title: 'Key Processes', loader: () => import('./csp-social-ethical-impacts-part2').then(m => m.cspSocialEthicalImpactsPart2Data) },
-      { title: 'Patterns & Examples', loader: () => import('./csp-social-ethical-impacts-part3').then(m => m.cspSocialEthicalImpactsPart3Data) },
+      { title: 'Patterns & Examples: Crowdsourcing and Unintended Uses', loader: () => import('./csp-social-ethical-impacts-part3').then(m => m.cspSocialEthicalImpactsPart3Data) },
       { title: 'Connections & Interactions', loader: () => import('./csp-social-ethical-impacts-part4').then(m => m.cspSocialEthicalImpactsPart4Data) },
-      { title: 'Change Over Time', loader: () => import('./csp-social-ethical-impacts-part5').then(m => m.cspSocialEthicalImpactsPart5Data) },
+      { title: 'Legal and Ethical Concerns', loader: () => import('./csp-social-ethical-impacts-part5').then(m => m.cspSocialEthicalImpactsPart5Data) },
       { title: 'Problem-Solving Workshop', loader: () => import('./csp-social-ethical-impacts-part6').then(m => m.cspSocialEthicalImpactsPart6Data) },
       { title: 'AP Review', loader: () => import('./csp-social-ethical-impacts-part7').then(m => m.cspSocialEthicalImpactsPart7Data) }
     ],

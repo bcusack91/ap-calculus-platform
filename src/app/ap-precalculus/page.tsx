@@ -130,11 +130,6 @@ const units: HubUnit[] = [
     topics: ['Unit Circle & Identities', 'Graphs of Sin, Cos, Tan', 'Inverse Trig & Equations', 'Polar Functions & Coordinates'],
     color: 'purple',
   },
-  {
-    title: 'Unit 4: Functions Involving Parameters, Vectors & Matrices',
-    topics: ['Parametric Equations', 'Vectors in the Plane', 'Matrix Operations', 'Linear Transformations'],
-    color: 'green',
-  },
 ]
 
 export default function APPrecalculusHub() {

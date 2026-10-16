@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { LEGACY_TOPIC_REDIRECTS } from "./src/lib/legacy-topic-redirects";
+import { RETIRED_AP_UNITS } from "./src/data/retired-ap-topics";
 import { withSentryConfig } from "@sentry/nextjs";
 import withBundleAnalyzer from "@next/bundle-analyzer";
 import createMDX from "@next/mdx";
@@ -219,6 +220,10 @@ const nextConfig: NextConfig = {
       { source: '/categories/probability-stats', destination: '/categories/intro-statistics', permanent: true },
       { source: '/categories/linear-equations', destination: '/categories/algebra1-quadratics', permanent: true },
     )
+    // AP units retired because the May 2027 exam does not test them (topics: LEGACY_TOPIC_REDIRECTS).
+    for (const [from, { redirect }] of Object.entries(RETIRED_AP_UNITS)) {
+      redirects.push({ source: `/categories/${from}`, destination: `/categories/${redirect}`, permanent: true })
+    }
 
     // Deleted course slug (legacy combined AB/BC landing).
     redirects.push(

@@ -513,13 +513,12 @@ const STATISTICS_LESSON_SLUGS = [
   'measures-of-spread', 'measures-of-center', 'normal-distributions', 'sampling-methods',
   'observational-vs-experiments', 'experimental-design', 'bias-sampling-surveys',
   'basic-probability-rules', 'conditional-probability', 'independence',
-  'discrete-random-variables', 'binomial-distribution', 'geometric-distribution',
+  'discrete-random-variables', 'binomial-distribution',
   'continuous-random-variables', 'sampling-distributions', 'central-limit-theorem',
   'interpreting-ci', 'ci-proportions', 'ci-means', 'hypothesis-testing-framework',
   'type-errors', 'tests-proportions', 'tests-means', 'paired-data', 'chi-square-tests',
   'scatterplots-correlation', 'least-squares-regression', 'residuals-residual-plots',
-  'coefficient-determination', 'transformations-linearity', 'inference-regression',
-  'mean-sd-random-variables', 'combining-random-variables',
+  'coefficient-determination', 'mean-sd-random-variables',
   'sampling-distribution-sample-mean', 'sampling-distribution-sample-proportion',
   'two-sample-proportions', 'two-sample-means', 'chi-square-independence-homogeneity',
 ]
@@ -1171,6 +1170,8 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     'negative-numbers-grade6': getNegativeNumbersQuestions,
     'sat-punctuation-commas-semicolons': getSatPunctuationQuestions,
     'sat-punctuation': getSatPunctuationGeneralQuestions,
+    // Competitive CATEGORY id (AP Calculus BC Unit 9 parametric content), not the
+    // retired AP Precalculus topic of the same name.
     'parametric-equations': getParametricQuestions,
     'vectors': getVectorQuestions,
     'polar-coordinates': getPolarQuestions,

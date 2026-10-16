@@ -69,7 +69,6 @@ const slugAliases: Record<string, string> = {
   'least-squares-regression': 'linear-regression-apstats',
   'residuals-residual-plots': 'linear-regression-apstats',
   'coefficient-determination': 'linear-regression-apstats',
-  'transformations-linearity': 'linear-regression-apstats',
   // Unit 3: Collecting Data
   'sampling-methods': 'collecting-data-apstats',
   'observational-vs-experiments': 'experimental-design-apstats',
@@ -81,9 +80,7 @@ const slugAliases: Record<string, string> = {
   'independence': 'probability-rules-apstats',
   'discrete-random-variables': 'discrete-random-variables-apstats',
   'mean-sd-random-variables': 'discrete-random-variables-apstats',
-  'combining-random-variables': 'discrete-random-variables-apstats',
   'binomial-distribution': 'binomial-geometric-apstats',
-  'geometric-distribution': 'binomial-geometric-apstats',
   'continuous-random-variables': 'probability-distributions-apstats',
   // Unit 5: Sampling Distributions
   'sampling-distributions': 'sampling-distributions-apstats',
@@ -105,8 +102,8 @@ const slugAliases: Record<string, string> = {
   // Unit 8: Inference for Categorical Data — Chi-Square
   'chi-square-tests': 'chi-square-tests-apstats',
   'chi-square-independence-homogeneity': 'chi-square-tests-apstats',
-  // Unit 9: Inference for Quantitative Data — Slopes
-  'inference-regression': 'inference-regression-apstats',
+  // (Old Unit 9, inference for slopes, left the course in the 2026-27 revision;
+  // see src/data/retired-ap-topics.ts.)
   // AP Biology
   'cell-organelles': 'cell-structure-organelles',
   'cell-membrane-transport': 'membrane-transport',
@@ -201,7 +198,6 @@ const slugAliases: Record<string, string> = {
   'physics-c-moment-of-inertia': 'rotational-dynamics-physics-c',
   'physics-c-angular-momentum': 'angular-momentum-physics-c',
   'physics-c-simple-harmonic-motion': 'oscillations-physics-c',
-  'physics-c-damped-driven-oscillations': 'oscillations-physics-c',
   'physics-c-universal-gravitation': 'gravitation-physics-c',
   // AP Physics C: E&M
   'physics-c-electric-field-coulomb': 'coulombs-law-physics-c-em',
@@ -215,9 +211,6 @@ const slugAliases: Record<string, string> = {
   'physics-c-faraday-lenz': 'em-induction-physics-c-em',
   'physics-c-inductance-rl-circuits': 'inductance-rl-physics-c-em',
   'physics-c-maxwell-equations': 'maxwell-equations-physics-c-em',
-  'physics-c-electromagnetic-waves': 'maxwell-equations-physics-c-em',
-  // AP Physics 2 — fluids topic whose registry key differs
-  'fluid-dynamics': 'fluid-dynamics-continuity',
   // AP Precalculus — generic + course topic slugs → precalc lesson suites
   'polynomial-functions-end-behavior': 'polynomial-end-behavior-apprecalc',
   'solving-polynomial-inequalities': 'polynomial-functions-precalc',
@@ -231,7 +224,6 @@ const slugAliases: Record<string, string> = {
   'transformations-functions-precalc': 'transformations-precalc',
   'unit-circle-radian-measure': 'the-unit-circle',
   'inverse-trig-functions': 'inverse-trig-functions-precalc',
-  'law-of-sines-cosines': 'law-of-sines-cosines-precalc',
   // Calculus — generic topic slugs → AB/BC suites (connects orphaned suites)
   'implicit-differentiation': 'implicit-differentiation-calcab',
   'related-rates': 'related-rates-calcab',

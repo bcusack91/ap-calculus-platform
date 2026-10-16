@@ -173,11 +173,13 @@ export async function GET() {
       'sat-punctuation': grantAllCategories || grantedCategories.has('sat-punctuation') || uniqueDiagnosticSlugs.includes('sat-punctuation') || satUnlockedViaProgress('sat-punctuation') || allProgressSlugs.some(s =>
         s.includes('sat-punctuation')
       ),
+      // Parametric and vector categories now unlock from the AP Calculus BC Unit 9
+      // topics (the AP Precalculus Unit 4 topics retired in Oct 2026).
       'parametric-equations': grantAllCategories || grantedCategories.has('parametric-equations') || allProgressSlugs.some(s =>
-        s.includes('parametric-equations') || s.includes('parametric-equations-precalc')
+        s.includes('parametric')
       ),
       'vectors': grantAllCategories || grantedCategories.has('vectors') || allProgressSlugs.some(s =>
-        s.includes('vectors-two-dimensions') || s.includes('vectors-in-plane') || s.includes('vector')
+        s.includes('vector')
       ),
       'polar-coordinates': grantAllCategories || grantedCategories.has('polar-coordinates') || allProgressSlugs.some(s =>
         s.includes('polar-coordinates') || s.includes('polar-coord')
