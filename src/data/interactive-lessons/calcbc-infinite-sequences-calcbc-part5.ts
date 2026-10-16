@@ -14,6 +14,8 @@ A **telescoping** series has partial sums where most terms cancel:
 
 $$\\sum_{n=1}^\\infty \\left(\\frac{1}{n} - \\frac{1}{n+1}\\right) = \\lim_{N\\to\\infty}\\left(1 - \\frac{1}{N+1}\\right) = 1$$
 
+This is the definition of a series' sum at work (CED Topic 10.1, LIM-7.A.2): a series converges to $S$ exactly when its partial sums $S_N$ approach $S$. A telescoping series is one where you can write $S_N$ in closed form and take $\\lim_{N\\to\\infty} S_N$ directly; no convergence test is needed.
+
 **How to recognize:** Partial fractions often reveal telescoping structure.
 
 ### $p$-Series

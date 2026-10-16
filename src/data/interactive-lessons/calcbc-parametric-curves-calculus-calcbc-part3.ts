@@ -127,7 +127,7 @@ $$L = \\int_a^b \\sqrt{(x')^2 + (y')^2}\\,dt = \\int_a^b \\text{speed}\\,dt$$
 - Always $\\ge$ displacement
 - For circles: confirms $C = 2\\pi r$
 
-> **Coming Up:** Part 4 covers **area** enclosed by parametric curves.`
+> **Coming Up:** Part 4 covers **second derivatives and concavity** of parametric curves.`
     }
   ]
 };

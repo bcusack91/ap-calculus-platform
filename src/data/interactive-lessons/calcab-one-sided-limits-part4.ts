@@ -46,7 +46,7 @@ The expression $\\sqrt{x - 3}$ requires $x \\ge 3$.
 - $\\lim_{x \\to 3^+} \\sqrt{x - 3} = \\sqrt{0} = 0$. ✅ Defined.
 - $\\lim_{x \\to 3^-} \\sqrt{x - 3}$: for $x < 3$, the radicand is negative, so $\\sqrt{x - 3}$ isn't a real number. Left-hand limit doesn't exist.
 
-> 💡 In AP-style problems, the answer here is *"the right-hand limit equals 0; the left-hand limit does not exist."*
+> 💡 In AP-style problems, the answer here is *"the right-hand limit equals 0; there is no left-hand limit, because no inputs to the left of 3 are in the domain."*
       `
     },
     {
@@ -57,9 +57,19 @@ The expression $\\sqrt{x - 3}$ requires $x \\ge 3$.
 
 What is $\\lim_{x \\to 3} \\sqrt{x - 3}$?
 
-By the strict existence theorem, the two-sided limit DNE because the left-hand limit doesn't exist.
+**AP convention:** a limit is taken over the inputs in the function's domain. At $x = 3$ the only available inputs are $x > 3$, so
 
-> ⚠️ **AP convention exception:** for the purposes of *continuity from the right at an endpoint*, AP textbooks often define $\\lim_{x \\to 3} \\sqrt{x - 3} = 0$ by treating the right-hand limit as the relevant one. Read the problem context: most AP problems will ask explicitly for $\\lim_{x \\to 3^+}$, sidestepping the technicality.
+$$\\lim_{x \\to 3} \\sqrt{x - 3} = \\lim_{x \\to 3^+} \\sqrt{x - 3} = 0.$$
+
+This is the convention the CED relies on: power functions such as $\\sqrt{x - 3}$ are continuous at every point in their domain (LIM-2.B.2), including the endpoint $x = 3$, and continuity at $x = 3$ requires $\\lim_{x \\to 3} \\sqrt{x - 3}$ to exist and equal $\\sqrt{0} = 0$ (LIM-2.A.2).
+
+| Statement about $\\sqrt{x - 3}$ at $x = 3$ | Value |
+|----------|-------|
+| $\\lim_{x \\to 3^+} \\sqrt{x - 3}$ | $0$ |
+| $\\lim_{x \\to 3^-} \\sqrt{x - 3}$ | Does not exist (no inputs in the domain to the left) |
+| $\\lim_{x \\to 3} \\sqrt{x - 3}$ | $0$ (only the right side is in the domain) |
+
+> ⚠️ **Contrast:** the "both one-sided limits must agree" test is for a point with domain inputs on **both** sides, like a jump in a piecewise function. It does not make the limit at a domain endpoint fail. AP questions usually write $\\lim_{x \\to 3^+}$ at an endpoint anyway, so the notation itself tells you which side to use.
       `
     },
     {
@@ -96,15 +106,15 @@ By the strict existence theorem, the two-sided limit DNE because the left-hand l
       exercise: {
         questions: [
           {
-            question: 'Which statement is TRUE about $\\lim_{x \\to 0} \\sqrt{x}$ under the strict existence theorem?',
+            question: 'Under the AP convention, which statement about $\\lim_{x \\to 0} \\sqrt{x}$ is TRUE?',
             options: [
-              'It equals 0, because $\\sqrt{0} = 0$',
+              'It equals 0, because the value $\\sqrt{0}$ is 0',
               'It DNE, since the left-hand limit does not exist',
-              'It equals 0, since the right-hand limit is 0',
+              'It equals 0, since domain inputs near 0 give outputs near 0',
               'It DNE, due to an asymptote at 0'
             ],
-            correctAnswer: 1,
-            explanation: 'Strict existence requires both one-sided limits. The left-hand side doesn\'t exist because $\\sqrt{x}$ isn\'t defined for $x < 0$ (domain issue), so the right-hand limit of 0 alone is not enough. There is no asymptote: $\\sqrt{x}$ approaches 0 from the right. AP often uses one-sided notation here to avoid the ambiguity.'
+            correctAnswer: 2,
+            explanation: 'A limit is taken over inputs in the domain. Near $x = 0$ those inputs are $x > 0$, and $\\sqrt{x} \\to 0$ as $x \\to 0^+$, so the limit is 0; this is why $\\sqrt{x}$ counts as continuous at 0. The missing left side does not make the limit fail at a domain endpoint. The value $\\sqrt{0} = 0$ alone never decides a limit, since a limit is about nearby inputs, and there is no asymptote at 0.'
           },
           {
             question: 'Two-sided existence theorem in plain English:',

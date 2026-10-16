@@ -58,10 +58,10 @@ $$\\boxed{\\frac{1}{1-x},\\quad e^x,\\quad \\sin x,\\quad \\cos x,\\quad \\ln(1+
       exercise: {
         questions: [
           {
-            question: 'The binomial series $(1+x)^{1/2}$ converges for:',
+            question: 'The Maclaurin series $\\arctan x = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots$ converges for:',
             options: ['$[-1, 1]$', '$(-1, 1)$', '$[-1, 1)$', '$(-1, 1]$'],
             correctAnswer: 0,
-            explanation: 'The binomial series $(1+x)^p$ for $p = 1/2 > 0$ converges on $[-1, 1]$, both endpoints included. At $x=1$: converges to $\\sqrt{2}$; at $x=-1$: $(1+(-1))^{1/2} = 0$, and the series converges to $0$.'
+            explanation: 'The series comes from integrating the geometric series for $\\frac{1}{1+x^2}$, so $R = 1$. At $x = 1$ it is $1 - \\frac{1}{3} + \\frac{1}{5} - \\cdots$, which converges by the alternating series test; at $x = -1$ it is the negative of that series, which also converges. Both endpoints are included: $[-1, 1]$.'
           },
           {
             question: '$f(x)$ has Maclaurin series with only odd powers of $x$. This means $f$ is:',

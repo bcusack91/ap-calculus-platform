@@ -82,7 +82,7 @@ const questions: EntranceQuizQuestion[] = [
     partNumber: 4,
     partTitle: 'Related Rates Intro',
   },
-  // Part 5 — Logarithmic Differentiation & Inverse Trig
+  // Part 5 — Exponential & Inverse Trig Chain Rule
   {
     id: 'chr-ent-5a',
     question: 'Let $f(x) = \\arcsin\\left(\\dfrac{x}{2}\\right)$. Find $f\'(1)$.',
@@ -90,7 +90,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: '$f\'(x) = \\frac{1/2}{\\sqrt{1 - x^2/4}}$. At $x = 1$: $\\frac{1/2}{\\sqrt{3}/2} = \\frac{1}{\\sqrt{3}}$. Omitting the inner factor $\\frac{1}{2}$ gives $\\frac{2}{\\sqrt{3}}$, and using the arctangent formula gives $\\frac{2}{5}$.',
     partNumber: 5,
-    partTitle: 'Logarithmic Differentiation & Inverse Trig',
+    partTitle: 'Exponential & Inverse Trig Chain Rule',
   },
   {
     id: 'chr-ent-5b',
@@ -99,7 +99,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'For a constant base, $\\frac{d}{dx}a^u = a^u \\ln a \\cdot u\'$. Here $u = x^2$, so the derivative is $3^{x^2} \\ln 3 \\cdot 2x$. Treating $3^{x^2}$ like a power function gives $x^2 \\cdot 3^{x^2 - 1}$, which is wrong.',
     partNumber: 5,
-    partTitle: 'Logarithmic Differentiation & Inverse Trig',
+    partTitle: 'Exponential & Inverse Trig Chain Rule',
   },
   // Part 6 — Mixed Chain Rule Problems
   {
@@ -151,7 +151,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 2, partTitle: 'Nested Functions & Double Chain Rule' },
     { partNumber: 3, partTitle: 'Implicit Differentiation' },
     { partNumber: 4, partTitle: 'Related Rates Intro' },
-    { partNumber: 5, partTitle: 'Logarithmic Differentiation & Inverse Trig' },
+    { partNumber: 5, partTitle: 'Exponential & Inverse Trig Chain Rule' },
     { partNumber: 6, partTitle: 'Mixed Chain Rule Problems' },
     { partNumber: 7, partTitle: 'Chain Rule Review' },
   ]

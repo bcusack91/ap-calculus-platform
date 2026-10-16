@@ -14,7 +14,7 @@ export const calcabDerivExpLogPart7Data = {
     {
       "id": "del7-ap-problems",
       "type": "text" as const,
-      "content": "## AP-Style Free Response\n\n### Problem: $f(x) = x^2 e^{-x}$ for $x \\geq 0$\n\n**(a)** Find critical points:\n$f'(x) = xe^{-x}(2 - x) = 0$\n$x = 0$ (min) and $x = 2$ (max, $f(2) = 4/e^2$)\n\n**(b)** Inflection points:\n$f''(x) = e^{-x}(x^2 - 4x + 2) = 0$\n$x = 2 \\pm \\sqrt{2}$\n\n**(c)** End behavior:\n$\\lim_{x \\to \\infty} x^2 e^{-x} = 0$ (exp dominates)\n\n**(d)** Area interpretation (preview):\n$\\int_0^\\infty x^2 e^{-x} dx = 2$ (Gamma function result)"
+      "content": "## AP-Style Free Response\n\n### Problem: $f(x) = x^2 e^{-x}$ for $x \\geq 0$\n\n**(a)** Find critical points:\n$f'(x) = xe^{-x}(2 - x) = 0$\n$x = 0$ (min) and $x = 2$ (max, $f(2) = 4/e^2$)\n\n**(b)** Inflection points:\n$f''(x) = e^{-x}(x^2 - 4x + 2) = 0$\n$x = 2 \\pm \\sqrt{2}$\n\n**(c)** End behavior:\n$\\lim_{x \\to \\infty} x^2 e^{-x} = 0$ (exp dominates)\n\n**(d)** Tangent line at $x = 1$:\n$f(1) = e^{-1}$ and $f'(1) = 1 \\cdot e^{-1}(2 - 1) = e^{-1}$, so $y = \\frac{1}{e} + \\frac{1}{e}(x - 1) = \\frac{x}{e}$"
     },
     {
       "id": "del7-quiz",
@@ -45,15 +45,15 @@ export const calcabDerivExpLogPart7Data = {
             "explanation": "$a^{g(x)} \\cdot g'(x) \\cdot \\ln a$ with $a = 2$, $g(x) = \\sin x$. The factor $\\ln 2$ multiplies; it does not divide, and it cannot be dropped."
           },
           {
-            "question": "$\\frac{d}{dx}[x^x] = $",
+            "question": "If $f(x) = e^{2x}\\cos x$, then $f'(0) = $",
             "options": [
-              "$x^x(\\ln x + 1)$",
-              "$x^x$",
-              "$x^x \\ln x$",
-              "$x^x / x$"
+              "$2$",
+              "$1$",
+              "$-2$",
+              "$0$"
             ],
             "correctAnswer": 0,
-            "explanation": "Log diff: $\\ln y = x\\ln x$, $y'/y = \\ln x + 1$, $y' = x^x(\\ln x + 1)$. The power rule ($x \\cdot x^{x-1} = x^x$) and the exponential rule ($x^x \\ln x$) each capture only half, because both the base and the exponent vary."
+            "explanation": "Product rule with the chain rule: $f'(x) = 2e^{2x}\\cos x - e^{2x}\\sin x$, so $f'(0) = 2(1)(1) - (1)(0) = 2$. Forgetting the chain-rule factor 2 gives $1$, a sign slip on the $\\cos x$ term gives $-2$, and differentiating only the cosine factor, $-e^{2x}\\sin x$, gives $0$."
           }
         ]
       }

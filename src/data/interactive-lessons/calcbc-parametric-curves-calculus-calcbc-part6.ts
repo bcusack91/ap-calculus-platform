@@ -8,7 +8,7 @@ export const calcbcParametricPart6Data = {
 
 **Part 6 of 7 \u2014 Problem-Solving Workshop**
 
-Mixed practice covering all parametric curve concepts: graphing, derivatives, arc length, area, and applications.`
+Mixed practice covering all parametric curve concepts: graphing, derivatives, concavity, arc length, and applications.`
     },
     {
       id: 'par6-mc1',
@@ -109,7 +109,7 @@ $$\\frac{dy}{dx} = \\frac{6(2)}{3(4)-3} = \\frac{12}{9} = \\frac{4}{3}$$`
 **FRQ Strategy for Parametric Problems:**
 1. Find derivatives: $dx/dt$, $dy/dt$, $dy/dx$
 2. Identify special points: horizontal/vertical tangents
-3. Set up and evaluate integrals: arc length, area
+3. Find $d^2y/dx^2$ when concavity is asked for, then set up and evaluate integrals: arc length, position, distance
 4. Interpret results in context of motion
 
 > **Coming Up:** Part 7 is the **Comprehensive Review** of parametric curves.`

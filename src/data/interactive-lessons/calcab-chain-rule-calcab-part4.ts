@@ -217,7 +217,7 @@ $$\\boxed{\\text{Related Rates = Implicit Differentiation with respect to } t}$$
 
 **Remember:** Differentiate FIRST, substitute AFTER!
 
-> **Up Next:** Part 5 — Advanced Chain Rule Applications (Logarithmic Differentiation & Inverse Trig).`
+> **Up Next:** Part 5 — Advanced Chain Rule Applications (Exponential & Inverse Trig Chain Rule).`
     }
   ]
 };

@@ -84,10 +84,10 @@ export const calcabUSubPart7Data = {
             explanation: '$u = e^x+1$: $x=0 \\to u=2$, $x=\\ln 3 \\to u=4$. $\\int_2^4 \\frac{du}{u} = \\ln 4 - \\ln 2 = \\ln 2$.'
           },
           {
-            question: '$\\int \\sec x\\,dx =$',
-            options: ['$\\ln|\\sec x| + C$', '$\\ln|\\sec x + \\tan x| + C$', '$\\sec x \\tan x + C$', '$\\tan x + C$'],
+            question: '$\\int \\frac{\\cos x}{1 + \\sin^2 x}\\,dx =$',
+            options: ['$\\ln(1 + \\sin^2 x) + C$', '$\\arctan(\\sin x) + C$', '$-\\arctan(\\cos x) + C$', '$\\sin x \\cdot \\arctan x + C$'],
             correctAnswer: 1,
-            explanation: 'Classic result: multiply by $\\frac{\\sec x + \\tan x}{\\sec x + \\tan x}$. Numerator becomes $du$ where $u = \\sec x + \\tan x$, giving $\\ln|\\sec x + \\tan x| + C$. $\\ln|\\sec x|$ is the antiderivative of $\\tan x$, $\\sec x \\tan x$ is the derivative of $\\sec x$, and $\\tan x$ is the antiderivative of $\\sec^2 x$.'
+            explanation: 'Let $u = \\sin x$, so $du = \\cos x\\,dx$ and the integral becomes $\\int \\frac{du}{1 + u^2} = \\arctan u + C = \\arctan(\\sin x) + C$. The $\\ln$ form would need the numerator to be the derivative of $1 + \\sin^2 x$, which is $2\\sin x\\cos x$; $-\\arctan(\\cos x)$ substitutes the wrong function; and an integral of a quotient is not a product of separate antiderivatives.'
           }
         ]
       }

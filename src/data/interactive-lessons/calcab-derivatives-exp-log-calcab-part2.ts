@@ -54,9 +54,9 @@ export const calcabDerivExpLogPart2Data = {
       }
     },
     {
-      "id": "del2-log-diff",
+      "id": "del2-log-props",
       "type": "text" as const,
-      "content": "## 📌 Logarithmic Differentiation\n\nFor products, quotients, or variable exponents, take $\\ln$ first:\n\n### Example: $y = \\frac{x^2\\sqrt{x+1}}{(2x-1)^3}$\n\n$$\\ln y = 2\\ln x + \\frac{1}{2}\\ln(x+1) - 3\\ln(2x-1)$$\n\n$$\\frac{y'}{y} = \\frac{2}{x} + \\frac{1}{2(x+1)} - \\frac{6}{2x-1}$$\n\n$$y' = y\\left(\\frac{2}{x} + \\frac{1}{2(x+1)} - \\frac{6}{2x-1}\\right)$$\n\n### Example: $y = x^{\\sin x}$\n\n$$\\ln y = \\sin x \\cdot \\ln x$$\n\n$$\\frac{y'}{y} = \\cos x \\cdot \\ln x + \\sin x \\cdot \\frac{1}{x}$$\n\n$$y' = x^{\\sin x}\\left(\\cos x \\ln x + \\frac{\\sin x}{x}\\right)$$"
+      "content": "## 📌 Simplify with Log Properties First\n\nWhen the inside of a logarithm is a product, quotient, or power, use log properties to split it **before** differentiating. Each piece then needs only the basic $\\frac{g'}{g}$ rule.\n\n| Property | Rewrite |\n|----------|---------|\n| Product | $\\ln(AB) = \\ln A + \\ln B$ |\n| Quotient | $\\ln\\frac{A}{B} = \\ln A - \\ln B$ |\n| Power | $\\ln(A^k) = k\\ln A$ |\n\n### Example: $f(x) = \\ln\\left(\\frac{x^2\\sqrt{x+1}}{(2x-1)^3}\\right)$\n\n**Step 1. Split:** $f(x) = 2\\ln x + \\frac{1}{2}\\ln(x+1) - 3\\ln(2x-1)$\n\n**Step 2. Differentiate each term:**\n\n$$f'(x) = \\frac{2}{x} + \\frac{1}{2(x+1)} - \\frac{6}{2x-1}$$\n\nThe last term needs the chain rule: $\\frac{d}{dx}\\ln(2x-1) = \\frac{2}{2x-1}$, and $3 \\cdot 2 = 6$.\n\n### Example: $f(x) = \\ln(x\\,e^{3x})$\n\n$$f(x) = \\ln x + 3x \\quad \\Longrightarrow \\quad f'(x) = \\frac{1}{x} + 3$$\n\n> **AP Tip:** Without the split, the first example needs the quotient rule inside the chain rule. Splitting first is faster and avoids algebra mistakes."
     },
     {
       "id": "del2-input",
@@ -100,23 +100,23 @@ export const calcabDerivExpLogPart2Data = {
             ]
           },
           {
-            "label": "Logarithmic differentiation is most useful for:",
+            "label": "Before differentiating, $\\ln\\left(\\frac{x^2}{x+1}\\right)$ can be rewritten as:",
             "options": [
-              "Many factors or variable exponents",
-              "Simple polynomials like $x^2 + 1$",
-              "Constants multiplied by a function",
-              "Linear functions such as $3x - 2$"
+              "$2\\ln x - \\ln(x+1)$",
+              "$\\frac{2\\ln x}{\\ln(x+1)}$",
+              "$2\\ln x + \\ln(x+1)$",
+              "$\\ln(x^2) \\cdot \\ln(x+1)$"
             ]
           }
         ],
         "correctAnswers": [
           "$1$",
           "$1$",
-          "Many factors or variable exponents"
+          "$2\\ln x - \\ln(x+1)$"
         ],
         "hint1": "$\\ln(e^x) = x$, derivative is $1$.",
         "hint2": "$e^{\\ln x} = x$, derivative is $1$.",
-        "hint3": "Log diff converts products to sums and powers to coefficients.",
+        "hint3": "The log of a quotient is a difference of logs, and the exponent 2 moves to the front.",
         "explanation": "$\\ln$ and $e^x$ are inverses: $\\ln(e^x) = x$ and $e^{\\ln x} = x$."
       }
     },

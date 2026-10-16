@@ -30,10 +30,10 @@ This workshop covers the full range of Taylor series tasks:
             explanation: '$f=\\tan x$: $f(0)=0$, $f\'(0)=\\sec^2(0)=1$, $f\'\'(0)=2\\sec^2(0)\\tan(0)=0$, $f\'\'\'(0)=2\\sec^4(0)+4\\sec^2(0)\\tan^2(0)=2$. $T_3 = x + (2/6)x^3 = x + x^3/3$.'
           },
           {
-            question: 'The Maclaurin series for $\\frac{1}{\\sqrt{1+x}}$ through the $x^2$ term is:',
-            options: ['$1 - x/2 + 3x^2/8$', '$1 + x/2 - x^2/8$', '$1 - x/2 - 3x^2/8$', '$1 - x + x^2$'],
+            question: 'The Maclaurin series for $x e^{-x}$ through the $x^3$ term is:',
+            options: ['$x - x^2 + x^3/2$', '$x + x^2 + x^3/2$', '$1 - x + x^2/2$', '$x - x^2 + x^3/6$'],
             correctAnswer: 0,
-            explanation: '$(1+x)^{-1/2} = 1 + (-1/2)x + \\frac{(-1/2)(-3/2)}{2!}x^2 + \\cdots = 1 - x/2 + 3x^2/8$. The product $(-1/2)(-3/2)$ is positive (a sign slip gives $-3x^2/8$); $1 + x/2 - x^2/8$ is the series for $\\sqrt{1+x}$, and $1 - x + x^2$ is $1/(1+x)$.'
+            explanation: 'Substitute $-x$ into $e^u = 1 + u + u^2/2 + \\cdots$ to get $e^{-x} = 1 - x + x^2/2 - \\cdots$, then multiply every term by $x$: $x - x^2 + x^3/2$. Substituting $+x$ gives $x + x^2 + x^3/2$, $1 - x + x^2/2$ forgets to multiply by $x$, and $x^3/6$ uses the $u^3$ coefficient where the $u^2$ coefficient belongs.'
           },
           {
             question: '$\\int_0^{0.5} e^{-t^2}\\,dt$ approximated by the first 3 terms of the series equals:',
@@ -85,7 +85,7 @@ This workshop covers the full range of Taylor series tasks:
       content: `### Workshop Takeaways
 
 - Derivative table method for unfamiliar functions (like $\\tan x$)
-- Binomial series for $(1+x)^p$ when $p$ is not a positive integer
+- Substituting into and multiplying known series (like $x e^{-x}$)
 - Series evaluation by identifying the function
 - Integration of series for functions with no elementary antiderivative
 

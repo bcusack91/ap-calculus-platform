@@ -18,23 +18,28 @@ export const calcabLinearizationPart4Data = {
 | Relative error | $\\frac{|\\Delta y - dy|}{|\\Delta y|}$ | Fraction of the actual change |
 | Percent error | $\\frac{|\\Delta y - dy|}{|\\Delta y|} \\times 100\\%$ | Relative error as percent |
 
-### Over/Under with Error Bounds
+### Over or Under? Let Concavity Decide
 
-$$\\boxed{\\text{Error} \\approx \\frac{1}{2}f''(a)(x-a)^2}$$
+The tangent line hugs the graph near $x = a$, but the graph bends away from it. The sign of $f''$ near $a$ tells you which way:
 
-This is the next term in the Taylor expansion. For small $(x-a)$, the error is approximately **quadratic** in the displacement.
+| Near $x = a$ | Graph vs. tangent line | Tangent-line value $L(x)$ is an |
+|:---:|:---:|:---:|
+| $f'' > 0$ (concave up) | Graph lies **above** the line | **Underestimate** |
+| $f'' < 0$ (concave down) | Graph lies **below** the line | **Overestimate** |
+
+The farther $x$ is from $a$, the more the graph can bend away from the line, so estimates are most reliable close to the point of tangency.
 
 ### Worked Example
 
-> Approximate $\\sqrt{26}$ using $a = 25$. Estimate the error.
+> Approximate $\\sqrt{26}$ using $a = 25$. Is the estimate too high or too low?
 
-$L(26) = 5 + \\frac{1}{10}(1) = 5.1$
+$f(x) = \\sqrt{x}$, $f'(x) = \\frac{1}{2\\sqrt{x}}$, so $L(x) = 5 + \\frac{1}{10}(x - 25)$ and $L(26) = 5.1$.
 
-Error $\\approx \\frac{1}{2}f''(25)(1)^2 = \\frac{1}{2}\\left(-\\frac{1}{4 \\cdot 125}\\right) = -\\frac{1}{1000} = -0.001$
+$f''(x) = -\\frac{1}{4}x^{-3/2} < 0$ for $x > 0$, so the graph is concave down and lies below its tangent line: $5.1$ is an **overestimate**.
 
-So $\\sqrt{26} \\approx 5.1 - 0.001 = 5.099$. Actual: $5.0990\\ldots$ \u2014 extremely close!
+Check: $\\sqrt{26} = 5.0990\\ldots$, so the absolute error is $|5.0990 - 5.1| \\approx 0.001$.
 
-> **AP Tip:** The sign of $f''(a)$ tells you whether $L$ overestimates ($f'' < 0$) or underestimates ($f'' > 0$). The magnitude tells you how large the error is.`
+> **AP Tip:** A justification needs the reason, not just the word: "$L(26)$ is an overestimate because $f''(x) < 0$ near $x = 25$, so the graph of $f$ is concave down and lies below its tangent line." Whether $f$ is increasing does not decide over or under.`
     },
     {
       id: 'lin4-quiz1',
@@ -55,10 +60,10 @@ So $\\sqrt{26} \\approx 5.1 - 0.001 = 5.099$. Actual: $5.0990\\ldots$ \u2014 ext
             explanation: '$dy \\approx \\Delta y$ for small $dx$, so $\\Delta y/dy \\to 1$. Both quantities shrink to $0$, but their ratio does not; $f\'(x)$ is the limit of $\\Delta y/dx$, a different ratio.'
           },
           {
-            question: 'The error in linear approximation is proportional to:',
-            options: ['$(x-a)^2$', '$x - a$', '$(x-a)^3$', '$1/(x-a)$'],
+            question: 'The line tangent to $f(x) = x^3$ at $x = 1$ is used to estimate $f(1.2)$. What is the absolute error of the estimate?',
+            options: ['$0.128$', '$0.600$', '$0.728$', '$1.600$'],
             correctAnswer: 0,
-            explanation: 'Error $\\approx \\frac{1}{2}f\'\'(a)(x-a)^2$, so it is proportional to $(x-a)^2$.'
+            explanation: '$L(x) = 1 + 3(x - 1)$, so $L(1.2) = 1.6$, while $f(1.2) = 1.728$. The absolute error is $|1.728 - 1.6| = 0.128$, an underestimate because $f\'\'(x) = 6x > 0$ near $x = 1$. The value $0.600$ is the estimated change $dy$, $0.728$ is the actual change $\\Delta y$, and $1.600$ is the estimate itself.'
           }
         ]
       }
@@ -88,7 +93,7 @@ So $\\sqrt{26} \\approx 5.1 - 0.001 = 5.099$. Actual: $5.0990\\ldots$ \u2014 ext
             options: ['Much larger', 'About the same', 'Slightly smaller', 'Slightly larger'],
             correctAnswers: ['Much larger'],
             hints: ['$x - a = 6$, much larger than $0.5$.'],
-            explanation: 'Error $\\propto (x-a)^2$. With $(x-a) = 6$ instead of $0.5$, the error is about $(6/0.5)^2 = 144$ times larger, because $10$ is far from $a = 4$.'
+            explanation: 'The tangent line only hugs the graph near $a = 4$. At $x = 10$, $L(10) = 2 + \\frac{6}{4} = 3.5$ while $\\sqrt{10} \\approx 3.162$, an error of about $0.34$, roughly 80 times the $0.004$ error at $x = 4.5$, because $10$ is far from $a = 4$.'
           }
         ]
       }
@@ -114,10 +119,10 @@ So $\\sqrt{26} \\approx 5.1 - 0.001 = 5.099$. Actual: $5.0990\\ldots$ \u2014 ext
       type: 'text' as const,
       content: `### Key Takeaways \u2014 Part 4
 
-- Error in linearization $\\propto (x-a)^2$ (quadratic)
+- The closer $x$ is to $a$, the smaller the error
 - Concave up $\\Rightarrow$ underestimate; concave down $\\Rightarrow$ overestimate
 - Absolute error $= |\\Delta y - dy|$; relative error $= |\\Delta y - dy|/|\\Delta y|$
-- Stay close to $a$ for smaller errors`
+- Justify over/under with the sign of $f''$ near $a$, not with whether $f$ is increasing`
     }
   ]
 };

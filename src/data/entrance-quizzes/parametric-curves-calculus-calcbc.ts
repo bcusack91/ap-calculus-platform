@@ -76,29 +76,29 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Arc Length (Parametric)',
   },
 
-  // Part 4 — Area Under Parametric Curves
+  // Part 4 — Second Derivatives & Concavity
   {
     id: 'pc-ent-4a',
-    question: 'The curve $x = t^2$, $y = t^3$ for $0 \\le t \\le 1$ is traced left to right. What is the area between this curve and the $x$-axis?',
-    options: ['$\\frac{3}{5}$', '$\\frac{2}{5}$', '$\\frac{1}{4}$', '$\\frac{1}{6}$'],
-    correctIndex: 1,
-    explanation: 'Area $= \\int y\\,dx = \\int_0^1 y(t)\\,x\'(t)\\,dt = \\int_0^1 t^3 \\cdot 2t\\,dt = \\frac{2}{5}$. Using $x\\,y\'$ gives $\\frac{3}{5}$, and leaving out $x\'(t)$ gives $\\frac{1}{4}$.',
+    question: 'For the curve $x = t^2$, $y = t^3 - 12t$ with $t > 0$, for which values of $t$ is the curve concave up?',
+    options: ['For every $t > 0$', 'Only for $t > 2$', 'Only for $t < 2$', 'For no $t > 0$'],
+    correctIndex: 0,
+    explanation: '$\\frac{dy}{dx} = \\frac{3t^2 - 12}{2t} = \\frac{3}{2}t - \\frac{6}{t}$, whose $t$-derivative is $\\frac{3}{2} + \\frac{6}{t^2} > 0$. Dividing by $\\frac{dx}{dt} = 2t > 0$ gives $\\frac{d^2y}{dx^2} = \\frac{3t^2 + 12}{4t^3} > 0$ for every $t > 0$. The condition $t > 2$ is where the slope $\\frac{dy}{dx}$ is positive, which describes direction, not concavity.',
     partNumber: 4,
-    partTitle: 'Area Under Parametric Curves',
+    partTitle: 'Second Derivatives & Concavity',
   },
   {
     id: 'pc-ent-4b',
-    question: 'The curve $x = 4 - t^2$, $y = t$ for $0 \\le t \\le 2$ runs from $(4, 0)$ to $(0, 2)$. Which integral gives the area between the curve and the $x$-axis?',
+    question: 'At $t = 2$, a parametric curve has $\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right) = 6$ and $\\frac{dx}{dt} = -3$. Which is true at $t = 2$?',
     options: [
-      '$\\int_0^2 -2t^2\\,dt$',
-      '$\\int_0^2 (4-t^2)\\,dt$',
-      '$\\int_0^4 t\\,dt$',
-      '$\\int_0^2 2t^2\\,dt$',
+      '$\\frac{d^2y}{dx^2} = -2$, so the curve is concave down',
+      '$\\frac{d^2y}{dx^2} = 2$, so the curve is concave up',
+      '$\\frac{d^2y}{dx^2} = -18$, so the curve is concave down',
+      '$\\frac{d^2y}{dx^2} = 6$, so the curve is concave up',
     ],
-    correctIndex: 3,
-    explanation: 'Here $y\\,x\'(t) = t(-2t) = -2t^2$, and because $x$ decreases as $t$ increases, the area is $-\\int_0^2 y\\,x\'(t)\\,dt = \\int_0^2 2t^2\\,dt = \\frac{16}{3}$. Keeping the minus sign gives a negative area.',
+    correctIndex: 0,
+    explanation: '$\\frac{d^2y}{dx^2} = \\frac{d}{dt}\\left(\\frac{dy}{dx}\\right) \\div \\frac{dx}{dt} = \\frac{6}{-3} = -2 < 0$, so the curve is concave down. Ignoring the negative $\\frac{dx}{dt}$ gives $2$, multiplying instead of dividing gives $-18$, and reading concavity from the $t$-derivative alone gives $6$.',
     partNumber: 4,
-    partTitle: 'Area Under Parametric Curves',
+    partTitle: 'Second Derivatives & Concavity',
   },
 
   // Part 5 — Planar Motion
@@ -186,7 +186,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 1, partTitle: 'Parametric Equations' },
     { partNumber: 2, partTitle: 'Derivatives of Parametric Curves' },
     { partNumber: 3, partTitle: 'Arc Length (Parametric)' },
-    { partNumber: 4, partTitle: 'Area Under Parametric Curves' },
+    { partNumber: 4, partTitle: 'Second Derivatives & Concavity' },
     { partNumber: 5, partTitle: 'Planar Motion' },
     { partNumber: 6, partTitle: 'Practice Workshop' },
     { partNumber: 7, partTitle: 'Final Assessment' },

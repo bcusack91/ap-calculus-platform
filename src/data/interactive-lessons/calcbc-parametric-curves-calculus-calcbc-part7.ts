@@ -8,14 +8,13 @@ export const calcbcParametricPart7Data = {
 
 **Part 7 of 7 \u2014 Comprehensive Review**
 
-Master all parametric curve concepts: equations, derivatives, arc length, area, and planar motion.
+Master all parametric curve concepts: equations, derivatives, concavity, arc length, and planar motion.
 
 | Concept | Key Formula |
 |---------|------------|
 | Slope | $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$ |
 | Second Derivative | $\\frac{d^2y}{dx^2} = \\frac{\\frac{d}{dt}(dy/dx)}{dx/dt}$ |
 | Arc Length | $L = \\int_a^b \\sqrt{(dx/dt)^2+(dy/dt)^2}\\,dt$ |
-| Area | $A = \\int_a^b y(t)\\,x'(t)\\,dt$ (or $-\\int y\\,x'\\,dt$) |
 | Speed | $v = \\sqrt{(dx/dt)^2+(dy/dt)^2}$ |`
     },
     {
@@ -65,7 +64,6 @@ Master all parametric curve concepts: equations, derivatives, arc length, area, 
 | Vertical tangent | Solve $dx/dt = 0$, verify $dy/dt \\ne 0$ |
 | Concavity | Compute $d^2y/dx^2$ |
 | Distance traveled | $\\int_a^b \\sqrt{(x')^2+(y')^2}\\,dt$ |
-| Area enclosed | $-\\oint y\\,dx = -\\int_a^b y(t)\\,x'(t)\\,dt$ |
 | Position at $t = b$ | $x(a) + \\int_a^b x'(t)\\,dt$ and $y(a) + \\int_a^b y'(t)\\,dt$ |
 
 > **AP Key Fact:** On the AP exam, distinguish between *distance traveled* (always positive, involves speed integral) and *displacement* ($\\Delta x, \\Delta y$ separately). They ask both!`
@@ -121,7 +119,7 @@ You have mastered:
 - Parametric equations, elimination, and graphing
 - First and second derivatives via the chain rule
 - Arc length and speed computations
-- Area under and enclosed by parametric curves
+- Concavity from $\\frac{d^2y}{dx^2}$, including the sign flip when $dx/dt < 0$
 - Planar motion: tangents, velocity, speed, and position
 
 > **AP Exam Note:** Parametric and vector motion is a regular BC free-response context, on both calculator-active and no-calculator questions. Practice computing derivatives and integrals quickly in both settings.`
