@@ -63,6 +63,31 @@ describe('loadClassUnitTests', () => {
     expect(a[0].attempts[0]).toMatchObject({ percentage: 84, passed: true })
   })
 
+  it('covers all four AP flagships, v1 forms and v2 alike, on the Engagement tab', async () => {
+    mockUnitTests.mockResolvedValue([
+      { id: 'q1', userId: 'a', diagnosticId: 'chemV2', topicSlugs: ['t1'], correct: 20, total: 25, percentage: 80, passed: true, completedAt: at('08') },
+      { id: 'q2', userId: 'a', diagnosticId: 'bioV2', topicSlugs: ['t2', 't3'], correct: 15, total: 25, percentage: 60, passed: false, completedAt: at('09') },
+      { id: 'q3', userId: 'a', diagnosticId: 'phys2', topicSlugs: ['t4'], correct: 19, total: 25, percentage: 76, passed: true, completedAt: at('10') },
+      { id: 'q4', userId: 'a', diagnosticId: 'calcV2', topicSlugs: ['t5'], correct: 25, total: 25, percentage: 100, passed: true, completedAt: at('11') },
+    ])
+    mockDiagnostics.mockResolvedValue([
+      { id: 'chem1', userId: 'a', category: 'ap-chem-diagnostic-1' },
+      { id: 'chemV2', userId: 'a', category: 'ap-chem-diagnostic-v2' },
+      { id: 'bioV2', userId: 'a', category: 'ap-bio-diagnostic-v2' },
+      { id: 'phys1', userId: 'a', category: 'ap-physics1-diagnostic-1' },
+      { id: 'phys2', userId: 'a', category: 'ap-physics1-diagnostic-2' },
+      { id: 'calcV2', userId: 'a', category: 'calcab-diagnostic-v2' },
+    ])
+    const a = (await loadClassUnitTests(['a'])).get('a')!
+    expect(a.map((c) => [c.course, c.cycle])).toEqual([
+      ['AP Calculus AB', 1], ['AP Physics 1', 2], ['AP Biology', 1], ['AP Chemistry', 2],
+    ])
+    const where = mockDiagnostics.mock.calls[0][0].where as { OR: { category: { startsWith: string } }[] }
+    expect(where.OR.map((o) => o.category.startsWith)).toEqual(
+      expect.arrayContaining(['ap-chem-diagnostic', 'ap-bio-diagnostic', 'ap-physics1-diagnostic', 'calcab-diagnostic']),
+    )
+  })
+
   it('skips the diagnostic lookup when nobody has a unit test', async () => {
     mockUnitTests.mockResolvedValue([])
     expect((await loadClassUnitTests(['a'])).size).toBe(0)

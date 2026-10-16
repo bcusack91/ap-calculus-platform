@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { AlertTriangle, ArrowLeft, Check, ChevronRight, ClipboardList, Clock, FileSearch, Layers, ListChecks, Printer, Stethoscope, Target } from 'lucide-react'
 import type { MetricsRange, StudentMetrics } from '@/lib/student-metrics'
 import type { ReviewableAttempt } from '@/lib/teacher-review-attempts'
+import type { ApCourseGrowth } from '@/lib/ap-diagnostic-growth'
+import { formatApGrowth } from '@/lib/ap-score-band'
 import {
   NoData,
   RANGE_OPTIONS,
@@ -119,8 +121,54 @@ function Stat({ label, value, hint, children }: { label: string; value: string; 
  * opening the question-by-question review (teacher view, read-only). Loads on
  * its own: the range/scope filters don't apply to individual tests.
  */
+/**
+ * AP diagnostic growth per course: first sitting → latest, as a band on the
+ * 1–5 scale. Gray unless the change clears the error of both sittings.
+ */
+function ApGrowthList({ courses }: { courses: ApCourseGrowth[] }) {
+  return (
+    <div className="mb-4 rounded-xl bg-gray-50 p-3 dark:bg-gray-700/30">
+      <h3 className="text-sm font-semibold text-gray-900 dark:text-white">AP diagnostic growth</h3>
+      <ul className="mt-2 space-y-1.5">
+        {courses.map((c) => (
+          <li key={c.courseKey} className="print-row text-sm text-gray-700 dark:text-gray-300">
+            <span className="font-medium text-gray-900 dark:text-white">{c.course}</span>
+            {c.sittings < 2 ? (
+              <> · one diagnostic so far: {c.first.label} ({fmtDate(c.first.takenAt)})</>
+            ) : (
+              <>
+                {' '}· first {c.first.label} ({fmtDate(c.first.takenAt)}) → latest {c.latest.label} ({fmtDate(c.latest.takenAt)})
+                {c.growth && (
+                  <span
+                    className={`ml-1 font-medium ${
+                      !c.growth.meaningful
+                        ? 'text-gray-500 dark:text-gray-400'
+                        : c.growth.delta > 0
+                        ? 'text-green-700 dark:text-green-400'
+                        : 'text-red-700 dark:text-red-400'
+                    }`}
+                  >
+                    : {formatApGrowth(c.growth)}
+                    {c.growth.meaningful ? '' : ' (within noise)'}
+                  </span>
+                )}
+                <span className="text-gray-500 dark:text-gray-400"> · {c.sittings} sittings</span>
+              </>
+            )}
+          </li>
+        ))}
+      </ul>
+      <p className="mt-2 text-[11px] text-gray-500 dark:text-gray-400">
+        Each diagnostic pins percent correct to about ±8 points, so scores read as ranges and small moves are often noise.
+        AP scores are estimates, not yet calibrated to real AP results.
+      </p>
+    </div>
+  )
+}
+
 function TestsSection({ classroomId, studentId, name }: { classroomId: string; studentId: string; name: string }) {
   const [attempts, setAttempts] = useState<ReviewableAttempt[] | null>(null)
+  const [apGrowth, setApGrowth] = useState<ApCourseGrowth[]>([])
   const [error, setError] = useState(false)
   const [showAll, setShowAll] = useState(false)
 
@@ -130,7 +178,10 @@ function TestsSection({ classroomId, studentId, name }: { classroomId: string; s
       .then(async (r) => {
         if (!r.ok) throw new Error()
         const d = await r.json()
-        if (!cancelled) setAttempts(d.attempts ?? [])
+        if (!cancelled) {
+          setAttempts(d.attempts ?? [])
+          setApGrowth(Array.isArray(d.apGrowth) ? d.apGrowth : [])
+        }
       })
       .catch(() => !cancelled && setError(true))
     return () => {
@@ -150,10 +201,11 @@ function TestsSection({ classroomId, studentId, name }: { classroomId: string; s
         <p className="text-sm text-red-600 dark:text-red-400">Could not load this student’s tests. Refresh to try again.</p>
       ) : !attempts ? (
         <div className="h-24 animate-pulse rounded-xl bg-gray-200 dark:bg-gray-700" aria-busy="true" />
-      ) : attempts.length === 0 ? (
+      ) : attempts.length === 0 && apGrowth.length === 0 ? (
         <p className="text-sm text-gray-500 dark:text-gray-400">No diagnostics, full-lengths, practice tests or unit tests to review yet.</p>
       ) : (
         <>
+          {apGrowth.length > 0 && <ApGrowthList courses={apGrowth} />}
           <ul className="divide-y divide-gray-100 dark:divide-gray-700/60">
             {shown!.map((a) => (
               <li key={`${a.kind}:${a.id}`}>
@@ -163,7 +215,10 @@ function TestsSection({ classroomId, studentId, name }: { classroomId: string; s
                 >
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-sm font-medium text-gray-900 dark:text-white">{a.title}</span>
-                    <span className="block text-xs text-gray-500 dark:text-gray-400">{fmtDate(a.takenAt)}</span>
+                    <span className="block text-xs text-gray-500 dark:text-gray-400">
+                      {fmtDate(a.takenAt)}
+                      {a.detail ? ` · ${a.detail}` : ''}
+                    </span>
                   </span>
                   {a.score && <span className="shrink-0 text-sm tabular-nums text-gray-700 dark:text-gray-300">{a.score}</span>}
                   <span className="inline-flex shrink-0 items-center gap-0.5 text-sm font-medium text-accent print:hidden">

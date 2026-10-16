@@ -13,6 +13,8 @@
  * courses homework completion is shown as information, not a lock.
  */
 
+import { apBandLabel, apSittingOf } from '@/lib/ap-score-band'
+
 export interface ClassPlanCourse {
   key: string
   label: string
@@ -103,7 +105,12 @@ export function courseForCategory(category: string): ClassPlanCourse | null {
 export function scoreLabelFromResults(results: unknown): string | null {
   if (!results || typeof results !== 'object') return null
   const r = results as { estimatedAPScore?: unknown; estimatedScore?: unknown; percentage?: unknown; total?: unknown; sections?: unknown }
-  if (typeof r.estimatedAPScore === 'number') return `${r.estimatedAPScore}/5`
+  if (typeof r.estimatedAPScore === 'number') {
+    // AP: the ± band ("3–4/5"), never a bare point, when the sitting kept its
+    // question counts (src/lib/ap-score-band.ts).
+    const sitting = apSittingOf(results)
+    return sitting ? apBandLabel(sitting) : `${r.estimatedAPScore}/5`
+  }
   if (typeof r.estimatedScore === 'number') return `${r.estimatedScore}`
   if (typeof r.percentage === 'number') return `${r.percentage}%`
   // MCAT full-length (category 'mcat-full-length'): scaled total + per-section

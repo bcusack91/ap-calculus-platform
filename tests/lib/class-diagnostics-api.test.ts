@@ -303,6 +303,73 @@ describe('GET — AP open diagnostics show the 1-5 score and retake deltas', () 
   })
 })
 
+/**
+ * AP has no measured test–retest sd, so instead of a noise chip each student
+ * gets a band: first-ever sitting of the course diagnostic → latest sitting,
+ * e.g. "up about 1, range 0 to +2" (src/lib/ap-score-band.ts). Run for each
+ * flagship so the shared path is proven on all four.
+ */
+describe('GET — AP growth bands (first diagnostic → latest)', () => {
+  const ap = (correct: number, score: number) => ({ totalCorrect: correct, totalQuestions: 33, percentage: Math.round((correct / 33) * 100), estimatedAPScore: score })
+  const FLAGSHIPS = [
+    { key: 'ap-chem', prefix: 'ap-chem-diagnostic' },
+    { key: 'ap-bio', prefix: 'ap-bio-diagnostic' },
+    { key: 'ap-physics1', prefix: 'ap-physics1-diagnostic' },
+    { key: 'calcab', prefix: 'calcab-diagnostic' },
+  ]
+
+  it.each(FLAGSHIPS)('$key: banded score per sitting and a banded first → latest change', async ({ key, prefix }) => {
+    const { prisma } = await import('@/lib/prisma')
+    const assigned = new Date('2026-09-20T12:00:00.000Z')
+    mockFindMany.mockResolvedValueOnce([
+      { id: 'o1', courseKey: key, title: 'Diagnostic 1', dueDate: null, createdAt: assigned, testData: { mode: 'course-diagnostic' }, attempts: [] },
+    ])
+    vi.mocked(prisma.classroomMember.findMany).mockResolvedValueOnce([
+      { userId: 'u1', nickname: null, user: { name: 'Ava' } },
+      { userId: 'u2', nickname: null, user: { name: 'Ben' } },
+    ] as never)
+    const preClass = { id: 'a0', userId: 'u1', createdAt: new Date('2026-09-10T09:00:00.000Z'), results: ap(18, 3) }
+    const ben = { id: 'b1', userId: 'u2', createdAt: new Date('2026-09-22T09:00:00.000Z'), results: ap(18, 3) }
+    vi.mocked(prisma.diagnosticTest.findMany)
+      // Sittings on or after the assignment.
+      .mockResolvedValueOnce([
+        { id: 'a1', userId: 'u1', createdAt: new Date('2026-09-21T09:00:00.000Z'), results: ap(19, 3) },
+        { id: 'a2', userId: 'u1', createdAt: new Date('2026-09-28T09:00:00.000Z'), results: ap(20, 4) },
+        ben,
+      ] as never)
+      // Each member's first sitting ever.
+      .mockResolvedValueOnce([preClass, ben] as never)
+    const { GET } = await import(ROUTE)
+    const body = await (await GET(new Request('http://localhost/x') as never, ctx as never)).json()
+
+    const baselineQuery = vi.mocked(prisma.diagnosticTest.findMany).mock.calls[1][0] as { where: Record<string, unknown>; distinct: string[] }
+    expect(baselineQuery.where.category).toEqual({ startsWith: prefix })
+    expect(baselineQuery.where.createdAt).toBeUndefined()
+    expect(baselineQuery.distinct).toEqual(['userId'])
+
+    const d = body.diagnostics[0]
+    expect(d.growth).toBeNull() // the MCAT/SAT noise chip stays off: AP uses bands
+    const avaRow = d.students.find((s: { userId: string }) => s.userId === 'u1')
+    expect(avaRow.scoreLabel).toBe('3–4/5')
+    expect(avaRow.scoreRange).toEqual({ low: 3, high: 4 })
+    // 18/33 (3) before the class → 20/33 (4) latest.
+    expect(avaRow.apGrowth).toMatchObject({ delta: 1, low: 0, high: 2, meaningful: false, fromDate: '2026-09-10T09:00:00.000Z' })
+    // One sitting: nothing to compare, not a fake zero.
+    const benRow = d.students.find((s: { userId: string }) => s.userId === 'u2')
+    expect(benRow.apGrowth).toBeNull()
+    expect(d.apGrowth).toMatchObject({ pairedCount: 1, delta: 1, low: 0, high: 2, meaningful: false })
+  })
+
+  it('MCAT/SAT rows carry no AP fields', async () => {
+    mockFindMany.mockResolvedValueOnce([
+      { id: 'm1', courseKey: 'mcat', title: 'Diagnostic 1', dueDate: null, createdAt: new Date('2026-09-01T12:00:00.000Z'), testData: {}, attempts: [] },
+    ])
+    const { GET } = await import(ROUTE)
+    const body = await (await GET(new Request('http://localhost/x') as never, ctx as never)).json()
+    expect(body.diagnostics[0].apGrowth).toBeNull()
+  })
+})
+
 describe('GET — growth across successive diagnostics', () => {
   const D1 = new Date('2026-09-01T12:00:00.000Z')
   const D2 = new Date('2026-09-08T12:00:00.000Z')

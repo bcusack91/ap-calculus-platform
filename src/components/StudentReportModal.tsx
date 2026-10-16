@@ -4,6 +4,8 @@ import { useEffect, useState, useCallback } from 'react'
 import Link from 'next/link'
 import { BarChart3, Printer } from 'lucide-react'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
+import type { ApCourseGrowth } from '@/lib/ap-diagnostic-growth'
+import { formatApGrowth } from '@/lib/ap-score-band'
 
 /**
  * One student's full picture, for a teacher.
@@ -48,7 +50,9 @@ interface StudentReport {
     frqs: { courseSlug: string; mode: string; pointsEarned: number; pointsPossible: number; questionCount: number; percentage: number; completedAt: string }[]
     satPracticeTests: { exam?: 'psat'; testNumber: number; totalScore: number; rwScore: number; mathScore: number; completedAt: string }[]
     mcatPracticeTests: { section: string; score: number; percentage: number; completedAt: string }[]
-    diagnostics: { category: string; scoreLabel: string | null; takenAt: string }[]
+    diagnostics: { category: string; title?: string; scoreLabel: string | null; frqCount?: number; takenAt: string }[]
+    /** AP: first → latest diagnostic per course, with the change as a band. */
+    apGrowth?: ApCourseGrowth[]
     counts: { unitTests: number; frqs: number; satPracticeTests: number; mcatPracticeTests: number; diagnostics: number }
   }
   generatedAt: string
@@ -361,9 +365,18 @@ export default function StudentReportModal({
                   {report.selfDirected.diagnostics.slice(0, 5).map((d, i) => (
                     <WorkRow
                       key={`diag-${i}`}
-                      title={`Diagnostic — ${d.category}`}
-                      meta={new Date(d.takenAt).toLocaleDateString()}
+                      title={d.title ?? `Diagnostic — ${d.category}`}
+                      meta={`${new Date(d.takenAt).toLocaleDateString()}${d.frqCount ? ` · ${d.frqCount} free response${d.frqCount === 1 ? '' : 's'}` : ''}`}
                       right={d.scoreLabel ?? '—'}
+                    />
+                  ))}
+                  {(report.selfDirected.apGrowth ?? []).filter((g) => g.sittings >= 2).map((g) => (
+                    <WorkRow
+                      key={`apg-${g.courseKey}`}
+                      title={`${g.course} diagnostic growth`}
+                      meta={`First ${g.first.label} (${new Date(g.first.takenAt).toLocaleDateString()}) → latest ${g.latest.label} (${new Date(g.latest.takenAt).toLocaleDateString()}) · ${g.sittings} sittings${g.growth && !g.growth.meaningful ? ' · within noise' : ''}`}
+                      right={g.growth ? formatApGrowth(g.growth) : '—'}
+                      tone={!g.growth || !g.growth.meaningful ? 'default' : g.growth.delta > 0 ? 'good' : 'bad'}
                     />
                   ))}
                 </div>

@@ -111,6 +111,59 @@ describe('growth is reported with its noise band', () => {
   })
 })
 
+describe('AP rows show bands, never a bare point', () => {
+  const apPayload = () => ({
+    assignableCourses: [{ key: 'ap-chem', label: 'AP Chemistry' }],
+    diagnostics: [
+      {
+        id: 'c1', courseKey: 'ap-chem', courseLabel: 'AP Chemistry', open: true, title: 'Diagnostic 1',
+        dueDate: null, createdAt: '2026-09-20T00:00:00.000Z',
+        attemptCount: 3, takenCount: 1, totalStudents: 1, avgPercentage: 61,
+        scoreAverages: { overall: 3, math: null, rw: null, sections: null },
+        domainAverages: [],
+        growth: null,
+        apGrowth: { pairedCount: 1, delta: 1, low: 0, high: 2, meaningful: false },
+        students: [
+          student({
+            userId: 'u1', name: 'Ava', takenAt: '2026-09-21T00:00:00.000Z', scoreLabel: '3–4/5', estimatedScore: 3,
+            percentage: 58, attemptCount: 2, latestEstimatedScore: 4, scoreDelta: 1,
+            scoreRange: { low: 3, high: 4 },
+            apGrowth: { delta: 1, low: 0, high: 2, meaningful: false, fromDate: '2026-09-10T00:00:00.000Z' },
+          }),
+        ],
+      },
+    ],
+  })
+
+  it('shows the score range and the first → latest change as a gray band', async () => {
+    payload = apPayload() as unknown as Payload
+    render(<ClassDiagnosticsPanel classroomId="class-1" />)
+    await waitFor(() => expect(screen.getByText(/Diagnostic 1/)).toBeInTheDocument())
+    // Class chip on the collapsed row.
+    expect(screen.getByText(/class avg since first diagnostic: up about 1, range 0 to \+2/)).toBeInTheDocument()
+    fireEvent.click(screen.getByText(/AP Chemistry Diagnostic 1/))
+    await waitFor(() => expect(screen.getByText('Ava')).toBeInTheDocument())
+    expect(screen.getByText(/3–4\/5/)).toBeInTheDocument()
+    const chip = screen.getByText(/^since first diagnostic: up about 1, range 0 to \+2/)
+    expect(chip.textContent).toMatch(/noise/)
+    expect(chip.className).not.toMatch(/text-green/)
+    // The bare "+1 since last attempt" point delta is replaced by the band.
+    expect(screen.queryByText(/since last attempt/)).toBeNull()
+    expect(screen.getByText(/Change since each student/)).toBeInTheDocument()
+  })
+
+  it('colours a change that clears the noise', async () => {
+    const p = apPayload()
+    ;(p.diagnostics[0].students as Record<string, unknown>[])[0] = { ...p.diagnostics[0].students[0], apGrowth: { delta: 3, low: 2, high: 4, meaningful: true, fromDate: '2026-09-10T00:00:00.000Z' } }
+    payload = p as unknown as Payload
+    render(<ClassDiagnosticsPanel classroomId="class-1" />)
+    await waitFor(() => expect(screen.getByText(/Diagnostic 1/)).toBeInTheDocument())
+    fireEvent.click(screen.getByText(/AP Chemistry Diagnostic 1/))
+    const chip = await screen.findByText(/^since first diagnostic: up about 3, range \+2 to \+4$/)
+    expect(chip.className).toMatch(/text-green/)
+  })
+})
+
 describe('deleting an assignment', () => {
   it('confirms first, warns about attempts, and forces the delete', async () => {
     render(<ClassDiagnosticsPanel classroomId="class-1" />)

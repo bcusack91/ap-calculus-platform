@@ -16,6 +16,7 @@ import { ACT_FL_CATEGORY } from '@/lib/act-full-length-server'
 import { isPsatAttemptFormat } from '@/lib/sat-attempt-format'
 import type { ReviewKind } from '@/lib/question-resolver'
 import { AP_PRACTICE_CATEGORY_PREFIX, apPracticeAttemptTitle } from '@/lib/ap-practice-exams'
+import { apPracticeFrqItems } from '@/lib/question-sources/ap-practice'
 
 export interface ReviewableAttempt {
   kind: ReviewKind
@@ -23,6 +24,8 @@ export interface ReviewableAttempt {
   title: string
   takenAt: string
   score: string | null
+  /** Extra line under the title, e.g. how many free responses the attempt holds. */
+  detail?: string
   href: string
 }
 
@@ -50,14 +53,31 @@ export function hasStoredReview(results: unknown): boolean {
   return Array.isArray(questions) && questions.length > 0
 }
 
+/**
+ * An AP practice exam can be reviewed when it stored its multiple-choice copy
+ * or at least one free-response item (results.review.questions / .frq).
+ * Attempts saved before per-question capture hold only scores.
+ */
+export function hasApPracticeReview(results: unknown): boolean {
+  return hasStoredReview(results) || apPracticeFrqItems(results).length > 0
+}
+
 export function teacherReviewHref(kind: ReviewKind, id: string, classroomId: string, studentId: string): string {
   return `/review/${kind}/${id}?class=${encodeURIComponent(classroomId)}&student=${encodeURIComponent(studentId)}`
 }
 
 export async function listReviewableAttempts(studentId: string, classroomId: string): Promise<ReviewableAttempt[]> {
-  const [diagnostics, satTests, unitTests] = await Promise.all([
+  const [diagnostics, apPractice, satTests, unitTests] = await Promise.all([
     prisma.diagnosticTest.findMany({
-      where: { userId: studentId },
+      where: { userId: studentId, NOT: { category: { startsWith: AP_PRACTICE_CATEGORY_PREFIX } } },
+      orderBy: { createdAt: 'desc' },
+      take: PER_SOURCE,
+      select: { id: true, category: true, results: true, createdAt: true },
+    }),
+    // AP practice exams (every form) get their own window, so a student with
+    // many diagnostics never pushes their full-lengths off the list.
+    prisma.diagnosticTest.findMany({
+      where: { userId: studentId, category: { startsWith: AP_PRACTICE_CATEGORY_PREFIX } },
       orderBy: { createdAt: 'desc' },
       take: PER_SOURCE,
       select: { id: true, category: true, results: true, createdAt: true },
@@ -79,7 +99,7 @@ export async function listReviewableAttempts(studentId: string, classroomId: str
   const out: ReviewableAttempt[] = []
   const href = (kind: ReviewKind, id: string) => teacherReviewHref(kind, id, classroomId, studentId)
 
-  for (const d of diagnostics) {
+  for (const d of [...diagnostics, ...(apPractice ?? [])]) {
     const r = asRecord(d.results) ?? {}
     if (d.category === MCAT_FL_CATEGORY) {
       if (!asRecord(r.answers)) continue
@@ -91,10 +111,13 @@ export async function listReviewableAttempts(studentId: string, classroomId: str
         href: href('mcat-fl', d.id),
       })
     } else if (d.category.startsWith(AP_PRACTICE_CATEGORY_PREFIX)) {
+      if (!hasApPracticeReview(d.results)) continue
+      const frq = apPracticeFrqItems(d.results)
       out.push({
         kind: 'ap-practice', id: d.id, takenAt: d.createdAt.toISOString(),
         title: apPracticeAttemptTitle(d.category, d.results),
         score: typeof r.estimatedAPScore === 'number' ? `${r.estimatedAPScore}/5 · ${r.percentage}%` : null,
+        ...(frq.length ? { detail: `${frq.length} free response${frq.length === 1 ? '' : 's'} to read` } : {}),
         href: href('ap-practice', d.id),
       })
     } else if (d.category === ACT_FL_CATEGORY) {

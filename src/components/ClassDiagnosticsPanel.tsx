@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { ClipboardCheck, FileSearch, Minus, Plus, Trash2, TrendingDown, TrendingUp, Unlock } from 'lucide-react'
 import ConfirmDialog, { ConfirmRequest } from '@/components/teacher/ConfirmDialog'
 import { formatDueDate } from '@/components/ClassDiagnosticBanner'
+import { formatApGrowth } from '@/lib/ap-score-band'
 
 /**
  * Assigned class diagnostics — shown in Work › Assignments (where teachers
@@ -44,6 +45,19 @@ interface DiagStudent {
   growthFromTitle: string | null
   growthFromScore: number | null
   growthDelta: number | null
+  /** AP only: ± band on the counted sitting's 1–5 estimate (scoreLabel already reads "3–4/5"). */
+  scoreRange?: { low: number; high: number } | null
+  /** AP only: first-ever → latest sitting, as a band on the 1–5 scale. */
+  apGrowth?: ApGrowth | null
+}
+/** A change on the AP 1–5 scale with its ±1 SE band; `meaningful` = clears the 2 SE noise rule. */
+interface ApGrowth {
+  delta: number
+  low: number
+  high: number
+  meaningful: boolean
+  fromDate?: string
+  pairedCount?: number
 }
 interface Diag {
   id: string
@@ -67,6 +81,8 @@ interface Diag {
     noiseBand: number
     avgNoiseBand: number
   } | null
+  /** AP only: the class's mean first → latest change, as a band. */
+  apGrowth?: ApGrowth | null
   takenCount: number
   totalStudents: number
   avgPercentage: number | null
@@ -107,6 +123,33 @@ function ChangeChip({ delta, band, label }: { delta: number; band: number; label
     >
       <Icon className="h-3.5 w-3.5" aria-hidden="true" />
       {signed} {label}{meaningful ? '' : ' (noise)'}
+    </span>
+  )
+}
+
+/**
+ * AP growth as a band ("up about 1, range 0 to +2"), never a bare point. AP
+ * has no measured test–retest sd yet, so the band comes from each sitting's
+ * binomial error (src/lib/ap-score-band.ts). Gray unless the change clears
+ * 2 SE, the same bar the MCAT/SAT noise chips use.
+ */
+function ApGrowthChip({ growth, label }: { growth: ApGrowth; label: string }) {
+  const Icon = !growth.meaningful ? Minus : growth.delta > 0 ? TrendingUp : TrendingDown
+  const tone = !growth.meaningful
+    ? 'text-gray-500 dark:text-gray-400'
+    : growth.delta > 0
+    ? 'text-green-600 dark:text-green-400'
+    : 'text-red-600 dark:text-red-400'
+  const text = formatApGrowth(growth)
+  return (
+    <span
+      className={`inline-flex items-center gap-1 text-xs font-medium ${tone}`}
+      title={growth.meaningful
+        ? `${label}: ${text}. Bigger than the error of two diagnostic sittings, so a real change (estimate, not yet calibrated to real AP results).`
+        : `${label}: ${text}. Within the error of two diagnostic sittings — treat it as noise, not progress.`}
+    >
+      <Icon className="h-3.5 w-3.5" aria-hidden="true" />
+      {label}: {text}{growth.meaningful ? '' : ' (noise)'}
     </span>
   )
 }
@@ -373,6 +416,7 @@ export default function ClassDiagnosticsPanel({
                       <span className="text-gray-500 dark:text-gray-400">class avg {d.avgPercentage}%</span>
                     ) : null}
                     {d.growth && <ChangeChip delta={d.growth.avgDelta} band={d.growth.avgNoiseBand} label={`class avg vs ${d.growth.fromTitle}`} />}
+                    {d.apGrowth && <ApGrowthChip growth={d.apGrowth} label="class avg since first diagnostic" />}
                   </span>
                 </button>
                 <button
@@ -412,6 +456,20 @@ export default function ClassDiagnosticsPanel({
                       </p>
                     </div>
                   )}
+                  {d.apGrowth && (
+                    <div className="mb-3 rounded-lg bg-gray-50 px-3 py-2 text-xs text-gray-600 dark:bg-gray-700/50 dark:text-gray-300">
+                      <p className="mb-0.5 font-medium uppercase tracking-wide text-gray-400">Change since each student&apos;s first diagnostic</p>
+                      <p>
+                        Class average {formatApGrowth(d.apGrowth)} on the 1–5 scale, across {d.apGrowth.pairedCount ?? 0}{' '}
+                        student{d.apGrowth.pairedCount === 1 ? '' : 's'} with two or more sittings (first sitting to latest).
+                      </p>
+                      <p className="mt-0.5 text-gray-500 dark:text-gray-400">
+                        One diagnostic pins a student&apos;s percent correct to about ±8 points, so a single sitting usually
+                        reads as a two-score range and a one-point move is often noise. Changes are gray unless they clear
+                        the error of both sittings. AP scores here are estimates, not yet calibrated to real AP results.
+                      </p>
+                    </div>
+                  )}
                   {(() => {
                     // Anyone the retake gate can still be holding back on THIS
                     // diagnostic: MCAT, has a diagnostic on file, no active
@@ -446,7 +504,7 @@ export default function ClassDiagnosticsPanel({
                         <span className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-gray-600 dark:text-gray-400">
                           {s.takenAt ? (
                             <>
-                              <span>
+                              <span title={s.scoreRange && s.estimatedScore !== null && s.scoreRange.low !== s.scoreRange.high ? `Most likely ${s.estimatedScore}; estimate, not yet calibrated to real AP results` : undefined}>
                                 {s.scoreLabel ?? '—'}
                                 {s.sections && s.sections.length > 0
                                   ? ` (${s.sections.map(sec => `${sec.short} ${sec.scaled}`).join(' · ')})`
@@ -457,7 +515,9 @@ export default function ClassDiagnosticsPanel({
                               {s.growthDelta !== null && s.growthFromTitle && d.growth && (
                                 <ChangeChip delta={s.growthDelta} band={d.growth.noiseBand} label={`vs ${s.growthFromTitle}`} />
                               )}
-                              {s.attemptCount >= 2 && s.scoreDelta !== null && (
+                              {s.apGrowth && <ApGrowthChip growth={s.apGrowth} label="since first diagnostic" />}
+                              {/* AP shows the banded growth above instead of a bare point delta. */}
+                              {s.attemptCount >= 2 && s.scoreDelta !== null && !s.apGrowth && (
                                 <span
                                   className={`inline-flex items-center gap-1 text-xs font-medium ${
                                     s.scoreDelta > 0

@@ -6,6 +6,7 @@ import { CLASS_PLAN_COURSES, classPlanCourse, scoreLabelFromResults } from '@/li
 import { isOpenClassDiagnostic, OPEN_DIAGNOSTIC_TEST_DATA, defaultDiagnosticCourseKey, estimatedScoreOf } from '@/lib/class-diagnostic-open'
 import { SAT_DIAGNOSTIC_SCORE_SD } from '@/lib/sat-scoring'
 import { hasStoredReview, teacherReviewHref } from '@/lib/teacher-review-attempts'
+import { apClassGrowthBand, apGrowthBand, apSittingOf, type ApGrowthBand } from '@/lib/ap-score-band'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -39,6 +40,9 @@ const GENERATABLE: Record<string, { label: string; page: string }> = {
  * assignment was made counts. Same banner, due date and results panel.
  */
 const labelFor = (courseKey: string) => GENERATABLE[courseKey]?.label ?? classPlanCourse(courseKey)?.label ?? courseKey
+
+/** AP courses score 1–5 (estimatedAPScore) and get bands instead of a measured noise sd. */
+const isApCourse = (courseKey: string) => classPlanCourse(courseKey)?.courseSlug?.startsWith('ap-') ?? false
 
 /* ------------------------------------------------------------------ */
 /*  Growth across successive diagnostics                               */
@@ -187,6 +191,25 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       openAttempts.set(courseKey, rows)
     }))
   }
+
+  // AP growth baseline: each member's FIRST sitting of the course diagnostic
+  // ever (it may predate every class assignment). Growth is shown from there
+  // to their latest sitting, as a band (src/lib/ap-score-band.ts).
+  const firstEver = new Map<string, Map<string, { id: string; createdAt: Date; results: unknown }>>()
+  const apOpenCourses = openCourses.filter(isApCourse)
+  if (apOpenCourses.length > 0 && memberIds.length > 0) {
+    await Promise.all(apOpenCourses.map(async courseKey => {
+      const course = classPlanCourse(courseKey)
+      if (!course) return
+      const rows = await prisma.diagnosticTest.findMany({
+        where: { userId: { in: memberIds }, category: { startsWith: course.categoryPrefix } },
+        orderBy: { createdAt: 'asc' },
+        distinct: ['userId'],
+        select: { id: true, userId: true, createdAt: true, results: true },
+      })
+      firstEver.set(courseKey, new Map((rows ?? []).map(r => [r.userId, r])))
+    }))
+  }
   const diagnostics = rawDiagnostics.map(d => {
     const open = isOpenClassDiagnostic(d.testData)
     return {
@@ -254,7 +277,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       // but possible — the assigned score is the first sitting). All attempts
       // are kept per student, oldest-first, so retake deltas can be computed.
       const firstByUser = new Map<string, { id: string; createdAt: Date; results: unknown }>()
-      const attemptsByUser = new Map<string, { createdAt: Date; results: unknown }[]>()
+      const attemptsByUser = new Map<string, { id: string; createdAt: Date; results: unknown }[]>()
       for (const a of [...d.attempts].sort((x, y) => x.createdAt.getTime() - y.createdAt.getTime())) {
         if (!firstByUser.has(a.userId)) firstByUser.set(a.userId, a)
         const list = attemptsByUser.get(a.userId) ?? []
@@ -262,6 +285,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
         attemptsByUser.set(a.userId, list)
       }
       const priorDiagnostics = earlierSameCourse.get(d.id) ?? []
+      const isAp = isApCourse(d.courseKey)
       const students = members.map(m => {
         const attempt = firstByUser.get(m.userId)
         const results = attempt?.results as { percentage?: unknown; mathScore?: unknown; rwScore?: unknown } | undefined
@@ -291,6 +315,20 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
           }
         }
         const growthDelta = thisScore !== null && growthFromScore !== null ? thisScore - growthFromScore : null
+        // AP: the counted sitting's 1-5 band, and growth from the student's
+        // first-ever sitting to their latest one as a band, never a bare point.
+        const counted = isAp && attempt ? apSittingOf(attempt.results) : null
+        let apGrowth: (ApGrowthBand & { fromDate: string }) | null = null
+        if (isAp && all.length > 0) {
+          const baseline = firstEver.get(d.courseKey)?.get(m.userId)
+          const latest = all[all.length - 1]
+          if (baseline && baseline.id !== latest.id && baseline.createdAt.getTime() < latest.createdAt.getTime()) {
+            const from = apSittingOf(baseline.results)
+            const to = apSittingOf(latest.results)
+            const band = from && to ? apGrowthBand(from, to) : null
+            if (band) apGrowth = { ...band, fromDate: baseline.createdAt.toISOString() }
+          }
+        }
         return {
           userId: m.userId,
           name: nameOf.get(m.userId) ?? 'Student',
@@ -317,6 +355,9 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
           growthFromTitle,
           growthFromScore,
           growthDelta,
+          // AP only: ± band on the counted sitting, and first-ever → latest growth band.
+          scoreRange: counted ? { low: counted.low, high: counted.high } : null,
+          apGrowth,
         }
       }).sort((a, b) => a.name.localeCompare(b.name))
 
@@ -347,7 +388,6 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       }
       // AP scores run 1-5, where a whole-number class average (3.4 -> 3) hides
       // most of the spread, so AP averages keep one decimal.
-      const isAp = classPlanCourse(d.courseKey)?.courseSlug?.startsWith('ap-') ?? false
       // MCAT: per-section (118-132) class averages, in C/P·CARS·B/B·P/S order,
       // over attempts that carry all four section scores.
       const sectionAverages = d.courseKey === 'mcat'
@@ -379,6 +419,11 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
             avgNoiseBand: noiseBandFor(d.courseKey, deltas.length),
           }
         : null
+      // AP: no measured sd, so the class change is the mean of each student's
+      // first → latest band (src/lib/ap-score-band.ts).
+      const apGrowth = isAp
+        ? apClassGrowthBand(students.flatMap(s => (s.apGrowth ? [s.apGrowth] : [])))
+        : null
 
       return {
         id: d.id,
@@ -391,6 +436,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
         createdAt: d.createdAt,
         attemptCount: d.attempts.length,
         growth,
+        apGrowth,
         takenCount: taken.length,
         totalStudents: members.length,
         avgPercentage,

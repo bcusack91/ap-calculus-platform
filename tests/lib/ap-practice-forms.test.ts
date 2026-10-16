@@ -61,7 +61,15 @@ vi.mock('@/lib/prisma', () => ({
       findFirst: vi.fn(async ({ where }: { where: { id?: string } }) =>
         where.id ? { category: stored.category, results: stored.results, createdAt: new Date('2026-10-16T12:00:00Z') } : null,
       ),
-      findMany: vi.fn(async () => historyRows),
+      // Tests to review queries diagnostics (NOT practice exams) and practice exams separately.
+      findMany: vi.fn(async ({ where }: { where?: { NOT?: { category?: unknown }; category?: unknown } } = {}) => {
+        const startsWith = (c: unknown) =>
+          c && typeof c === 'object' && typeof (c as { startsWith?: unknown }).startsWith === 'string' ? (c as { startsWith: string }).startsWith : undefined
+        const notPrefix = startsWith(where?.NOT?.category)
+        const prefix = startsWith(where?.category)
+        return historyRows.filter((r) =>
+          (!notPrefix || !String(r.category).startsWith(notPrefix)) && (!prefix || String(r.category).startsWith(prefix)))
+      }),
       create: vi.fn(async ({ data }: { data: { category: string; results: Record<string, unknown> } }) => {
         created.push(data)
         return { id: `att${created.length}` }
@@ -160,8 +168,10 @@ describe('reviewing and listing a form-2 attempt', () => {
 
   it("the teacher's Tests to review lists both forms", async () => {
     historyRows.push(
-      { id: 'f2', category: 'ap-practice-exam:ap-chem', results: { subject: 'AP Chemistry', form: 2, estimatedAPScore: 4, percentage: 70 }, createdAt: new Date('2026-10-16') },
-      { id: 'f1', category: 'ap-practice-exam:ap-chem', results: { subject: 'AP Chemistry', estimatedAPScore: 3, percentage: 55 }, createdAt: new Date('2026-10-10') },
+      { id: 'f2', category: 'ap-practice-exam:ap-chem', results: { subject: 'AP Chemistry', form: 2, estimatedAPScore: 4, percentage: 70, review: { questions: [{ question: 'q' }], answers: [0] } }, createdAt: new Date('2026-10-16') },
+      { id: 'f1', category: 'ap-practice-exam:ap-chem', results: { subject: 'AP Chemistry', estimatedAPScore: 3, percentage: 55, review: { questions: [{ question: 'q' }], answers: [1] } }, createdAt: new Date('2026-10-10') },
+      // Saved before per-question capture: nothing to rebuild, so not listed.
+      { id: 'f0', category: 'ap-practice-exam:ap-chem', results: { subject: 'AP Chemistry', estimatedAPScore: 2, percentage: 40 }, createdAt: new Date('2026-10-01') },
     )
     const list = await listReviewableAttempts('stu', 'cls')
     expect(list.map((x) => [x.kind, x.id, x.title, x.score])).toEqual([

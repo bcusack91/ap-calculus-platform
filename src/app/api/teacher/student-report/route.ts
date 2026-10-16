@@ -2,7 +2,10 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { isPsatAttemptFormat } from '@/lib/sat-attempt-format'
 import { requireTeacher } from '@/lib/auth-guard'
-import { scoreLabelFromResults } from '@/lib/class-plan-config'
+import { courseForCategory, scoreLabelFromResults } from '@/lib/class-plan-config'
+import { loadApDiagnosticGrowth } from '@/lib/ap-diagnostic-growth'
+import { AP_PRACTICE_CATEGORY_PREFIX, apPracticeAttemptTitle } from '@/lib/ap-practice-exams'
+import { apPracticeFrqItems } from '@/lib/question-sources/ap-practice'
 
 // GET /api/teacher/student-report?studentId=xxx&classroomId=xxx
 export async function GET(req: NextRequest) {
@@ -50,6 +53,7 @@ export async function GET(req: NextRequest) {
     satTests,
     mcatTests,
     diagnostics,
+    apGrowth,
   ] = await Promise.all([
     // Lesson progress
     prisma.topicProgress.findMany({
@@ -114,6 +118,8 @@ export async function GET(req: NextRequest) {
       orderBy: { createdAt: 'desc' },
       take: 15,
     }),
+    // AP: first → latest diagnostic per course, as a band.
+    loadApDiagnosticGrowth(studentId),
   ])
 
   // Resolve exit-quiz topic slugs to human-readable titles for the trend chart.
@@ -245,11 +251,21 @@ export async function GET(req: NextRequest) {
         percentage: t.percentage,
         completedAt: t.completedAt.toISOString(),
       })),
-      diagnostics: diagnostics.map((d) => ({
-        category: d.category,
-        scoreLabel: scoreLabelFromResults(d.results),
-        takenAt: d.createdAt.toISOString(),
-      })),
+      diagnostics: diagnostics.map((d) => {
+        const practice = d.category.startsWith(AP_PRACTICE_CATEGORY_PREFIX)
+        const frqCount = practice ? apPracticeFrqItems(d.results).length : 0
+        return {
+          category: d.category,
+          // "AP Chemistry diagnostic" / "AP Chemistry practice exam · Form 2" instead of the raw category.
+          title: practice
+            ? apPracticeAttemptTitle(d.category, d.results)
+            : `${courseForCategory(d.category)?.label ?? d.category} diagnostic`,
+          scoreLabel: scoreLabelFromResults(d.results),
+          ...(frqCount ? { frqCount } : {}),
+          takenAt: d.createdAt.toISOString(),
+        }
+      }),
+      apGrowth,
       counts: {
         unitTests: unitTests.length,
         frqs: frqs.length,
