@@ -170,27 +170,6 @@ Answer: Proven ✓`,
         hint: '2tan/(1 - tan²)',
         isPremium: false
       },
-      {
-        topicId: doubleHalfAngle.id,
-        front: 'What is the half angle formula for sine?',
-        back: 'sin(θ/2) = ±√[(1 - cos(θ))/2]. Sign depends on the quadrant of θ/2.',
-        hint: '±√[(1 - cos)/2]',
-        isPremium: false
-      },
-      {
-        topicId: doubleHalfAngle.id,
-        front: 'What is the half angle formula for cosine?',
-        back: 'cos(θ/2) = ±√[(1 + cos(θ))/2]. Sign depends on the quadrant of θ/2.',
-        hint: '±√[(1 + cos)/2]',
-        isPremium: false
-      },
-      {
-        topicId: doubleHalfAngle.id,
-        front: 'What is the half angle formula for tangent?',
-        back: 'tan(θ/2) = (1 - cos(θ))/sin(θ) = sin(θ)/(1 + cos(θ))',
-        hint: 'Two equivalent forms',
-        isPremium: false
-      }
     ]
   });
 

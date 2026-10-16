@@ -128,11 +128,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "n + sum(n-1)",
       },
       {
-        front: "Why are recursive binary search and merge sort efficient?",
-        back: "They repeatedly split the problem in half. Binary search is $O(\\\\log n)$; merge sort is $O(n \\\\log n)$. Each recursion level handles a smaller subproblem, reducing total work versus linear scanning.",
-        hint: "Divide and conquer",
-      },
-      {
         front: "On the AP exam, what must you do when 'tracing' a recursive method?",
         back: "Carefully follow each call, note parameter values, find where the base case stops the recursion, then resolve returns from the deepest call back up to the original. Track the order of any output.",
         hint: "Down then back up",
@@ -228,11 +223,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Redundant routing",
       },
       {
-        front: "What is a DDoS (Distributed Denial of Service) attack?",
-        back: "A DDoS attack floods a target server or network with so much traffic from many compromised devices that legitimate users cannot access it, overwhelming its resources.",
-        hint: "Flood from many machines",
-      },
-      {
         front: "What is a computer virus or malware in the security context?",
         back: "Malware is software intended to harm or take control of a device. A virus is malware that attaches to files/programs and spreads when those are executed, often without user awareness.",
         hint: "Harmful software",
@@ -256,16 +246,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What is multifactor authentication (MFA)?",
         back: "MFA requires two or more verification factors (something you know, have, or are) before granting access, so a stolen password alone cannot compromise the account.",
         hint: "Two+ independent factors",
-      },
-      {
-        front: "What is a 'man-in-the-middle' attack?",
-        back: "An attacker secretly intercepts and possibly alters communication between two parties who believe they are talking directly. Encryption (HTTPS) helps prevent it.",
-        hint: "Secret interceptor",
-      },
-      {
-        front: "Why is a firewall useful?",
-        back: "A firewall monitors and filters incoming and outgoing network traffic based on rules, blocking unauthorized access while allowing legitimate communication.",
-        hint: "Traffic filter/gatekeeper",
       },
       {
         front: "Trap: Does redundancy guarantee security against attacks?",
@@ -314,8 +294,8 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
       },
       {
         front: "How is text (like 'A') stored as binary?",
-        back: "Each character maps to a number via an encoding such as ASCII or Unicode; that number is stored in binary. For example, 'A' is 65 in ASCII = 01000001.",
-        hint: "Character codes (ASCII/Unicode)",
+        back: "Each character is assigned a number by an agreed encoding, and that number is stored as a bit pattern. The same bits can represent a number, a character or a color, depending on how a program interprets them.",
+        hint: "Characters are encoded as bit patterns.",
       },
       {
         front: "What is the difference between lossless and lossy compression?",

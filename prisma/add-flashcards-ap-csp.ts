@@ -34,8 +34,8 @@ async function main() {
     await prisma.flashcard.createMany({
       data: [
         { topicId: t2.id, front: 'What is an algorithm?', back: 'A **finite set of instructions** that accomplish a specific task.\n\nProperties:\n• **Sequencing**: steps in order\n• **Selection**: decisions (if/else)\n• **Iteration**: repetition (loops)\n\nMust be **clear, finite, and produce a result**.', hint: 'Sequence, selection, iteration.' },
-        { topicId: t2.id, front: 'Linear search vs. binary search?', back: '**Linear search**: check **every element** in order. Works on any list.\n• Time: O(n)\n\n**Binary search**: repeatedly **halve the search space**. Requires **sorted** list.\n• Time: O(log n)', hint: 'Linear = every item; Binary = halve sorted list.' },
-        { topicId: t2.id, front: 'What is algorithm efficiency?', back: 'How many steps an algorithm takes relative to input size:\n\n• **Reasonable**: polynomial time — O(n), O(n²), O(n³)\n• **Unreasonable**: exponential/factorial — O(2ⁿ), O(n!)\n\nUnreasonable algorithms become **impractical** for large inputs.', hint: 'Polynomial = reasonable; Exponential = unreasonable.' },
+        { topicId: t2.id, front: 'Linear search vs. binary search?', back: "**Linear search**: checks **every element** in order. Works on any list.\n\n**Binary search**: repeatedly **halves the search space**. Requires a **sorted** list, and on large lists it usually needs far fewer steps than linear search.", hint: 'Linear = every item; Binary = halve sorted list.' },
+        { topicId: t2.id, front: 'What is algorithm efficiency?', back: "How many steps an algorithm takes as the input size grows:\n\n• **Reasonable**: the steps grow at a polynomial rate or slower (constant, linear, square, cube)\n• **Unreasonable**: the steps grow exponentially or factorially\n\nUnreasonable algorithms become **impractical** for large inputs.", hint: 'Polynomial = reasonable; Exponential = unreasonable.' },
       ],
     });
     console.log('✅ Algorithms flashcards');

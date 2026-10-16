@@ -388,11 +388,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Hidden cause of both variables"
       },
       {
-        front: "How do outliers and influential points affect correlation?",
-        back: "An outlier far from the pattern can dramatically increase or decrease $r$. Influential points, especially those with extreme $x$-values, can pull the regression line and distort the correlation.",
-        hint: "Extreme points distort r"
-      },
-      {
         front: "Does adding a constant or rescaling units change $r$?",
         back: "No. The correlation $r$ is unitless and unchanged by adding constants or multiplying by positive constants (e.g., converting cm to inches). Swapping $x$ and $y$ also leaves $r$ unchanged.",
         hint: "r is unit-free"

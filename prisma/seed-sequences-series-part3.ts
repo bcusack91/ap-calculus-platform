@@ -1009,18 +1009,13 @@ Since $L = 0 < 1$:
             hint: 'Limit of ratio: <1 converges, >1 diverges, =1 inconclusive',
           },
           {
-            front: 'What is the Root Test and when should you use it?',
-            back: 'For $\\sum a_n$, compute $L = \\lim\\sqrt[n]{a_n} = \\lim(a_n)^{1/n}$. If $L < 1$: converges absolutely. If $L > 1$: diverges. If $L = 1$: inconclusive. BEST FOR: nth powers like $(stuff)^n$. Less common than Ratio Test.',
-            hint: 'Limit of nth root: <1 converges, >1 diverges',
-          },
-          {
             front: 'How do you simplify factorial ratios?',
             back: '$(n+1)! = (n+1) \\cdot n!$, so $\\frac{(n+1)!}{n!} = n+1$ and $\\frac{n!}{(n+1)!} = \\frac{1}{n+1}$. For double factorials: $(2n+2)! = (2n+2)(2n+1)(2n)!$. Cancel carefully! Common mistakes: $(n+1)! \\neq n! + 1$.',
             hint: '(n+1)! = (n+1)·n!, simplify by canceling',
           },
           {
-            front: 'Common mistakes with Ratio and Root Tests?',
-            back: '1) Wrong direction: use $\\frac{a_{n+1}}{a_n}$ not $\\frac{a_n}{a_{n+1}}$. 2) Factorial errors: $(n+1)! = (n+1)n!$. 3) When $L=1$: inconclusive, NOT diverges! 4) These test absolute convergence only. 5) Forgetting useful limits: $(1+\\frac{1}{n})^n \\to e$, $\\frac{n^k}{a^n} \\to 0$.',
+            front: "Common mistakes with the Ratio Test?",
+            back: "1) Wrong direction: use $\\frac{a_{n+1}}{a_n}$, not $\\frac{a_n}{a_{n+1}}$. 2) Factorial errors: $(n+1)! = (n+1)\\,n!$. 3) When $L = 1$ the test is inconclusive, NOT divergent. 4) $L < 1$ means the series converges absolutely; $L > 1$ means it diverges. 5) Useful limits: $(1+\\frac{1}{n})^n \\to e$ and $\\frac{n^k}{a^n} \\to 0$ for $a > 1$.",
             hint: 'Right direction, L=1 inconclusive, factorial careful',
           },
         ],

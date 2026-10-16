@@ -319,11 +319,6 @@ $$\\text{Cost} = (12 \\text{ kWh})(\\$0.12/\\text{kWh}) = \\$1.44$$
         front: 'What is drift velocity?',
         back: 'Average velocity of charge carriers in conductor. Very slow (~mm/s). Current: I = nAv_de. Signal travels fast (~c), but electrons drift slowly!',
       },
-      {
-        topicId: currentResistance.id,
-        front: 'Difference between AC and DC?',
-        back: 'DC: constant direction (batteries). AC: oscillates (wall outlets, 60 Hz US). For AC: V_rms = V₀/√2. Household 120 V is rms value.',
-      },
     ],
   })
 

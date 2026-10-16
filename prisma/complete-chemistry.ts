@@ -103,13 +103,6 @@ async function main() {
           hint: 'Named series based on final energy level',
           isPremium: true
         },
-        {
-          topicId: atomicSpectraTopic.id,
-          front: 'How does the Bohr model explain line spectra?',
-          back: 'Electrons exist only in specific energy levels (quantized). Transitions between these discrete levels produce photons of specific energies, creating line spectra rather than continuous spectra. ΔE = E_final - E_initial = hν',
-          hint: 'Quantized energy levels produce discrete lines',
-          isPremium: true
-        }
       ]
     });
 

@@ -13,21 +13,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Disorder / spreading out of energy."
       },
       {
-        front: "Give the Boltzmann formula for entropy and name each variable.",
-        back: "$S = k_B \\\\ln W$, where $S$ is entropy, $k_B$ is Boltzmann's constant ($1.38 \\\\times 10^{-23}$ J/K), and $W$ is the number of microstates accessible to the system. Use it to connect microscopic counting to thermodynamic entropy.",
-        hint: "S grows with the log of W."
-      },
-      {
-        front: "Formula for the entropy change of a reversible process. Name each term.",
-        back: "$\\\\Delta S = \\\\int \\\\frac{dQ_{rev}}{T}$, or for constant $T$: $\\\\Delta S = \\\\frac{Q_{rev}}{T}$. Here $Q_{rev}$ is heat added reversibly and $T$ is absolute temperature (kelvin). Use it to compute entropy changes during isothermal or phase-change processes.",
-        hint: "Heat divided by temperature."
-      },
-      {
-        front: "Why must temperature be in kelvin in entropy calculations?",
-        back: "Entropy is defined via $\\\\Delta S = Q_{rev}/T$, where $T$ must be the absolute (thermodynamic) temperature so the ratio is physically meaningful. Using Celsius gives wrong (even negative-denominator) results.",
-        hint: "Absolute scale only."
-      },
-      {
         front: "How does entropy generally change for: melting, boiling, and a gas expanding into vacuum?",
         back: "All three increase entropy. Melting and boiling spread particles into more disordered phases ($\\\\Delta S > 0$); free expansion of a gas increases the volume accessible, raising the number of microstates so $\\\\Delta S > 0$.",
         hint: "Solid < liquid < gas; bigger volume = more entropy."
@@ -38,11 +23,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "System vs. universe."
       },
       {
-        front: "Define a reversible vs. an irreversible process in terms of entropy.",
-        back: "A reversible process proceeds through equilibrium states and produces zero net entropy in the universe ($\\\\Delta S_{universe}=0$). A real, irreversible process (friction, mixing, heat across a finite temperature gap) generates entropy ($\\\\Delta S_{universe}>0$).",
-        hint: "Real processes always generate some entropy."
-      },
-      {
         front: "How does the second law set the direction of heat flow?",
         back: "Heat spontaneously flows from hot to cold because that transfer increases total entropy. The cold object's entropy gain ($Q/T_{cold}$) exceeds the hot object's loss ($Q/T_{hot}$) since $T_{cold} < T_{hot}$.",
         hint: "Smaller T denominator = bigger entropy change."
@@ -51,16 +31,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "State the third law of thermodynamics and its connection to entropy.",
         back: "As temperature approaches absolute zero, the entropy of a perfect crystalline substance approaches zero ($S \\\\to 0$ as $T \\\\to 0$). This gives an absolute reference point so entropies can be tabulated as absolute values.",
         hint: "Perfect crystal at 0 K has one microstate."
-      },
-      {
-        front: "Worked example: 0.50 mol of ice melts at $0\\\\,^{\\\\circ}$C ($273$ K). Heat of fusion supplied = 9000 J. Find $\\\\Delta S$ of the ice.",
-        back: "$\\\\Delta S = \\\\frac{Q}{T} = \\\\frac{9000\\\\text{ J}}{273\\\\text{ K}} \\\\approx +33\\\\text{ J/K}$. Positive because the solid becomes a more disordered liquid.",
-        hint: "Phase change at constant T uses Q/T."
-      },
-      {
-        front: "How does entropy relate to the maximum efficiency of a heat engine?",
-        back: "Because some heat must be dumped to a cold reservoir to keep $\\\\Delta S_{universe} \\\\geq 0$, no engine can be 100% efficient. The Carnot (reversible) limit is $\\\\eta_{max} = 1 - \\\\frac{T_{cold}}{T_{hot}}$ with temperatures in kelvin.",
-        hint: "Second law forbids perfect heat-to-work conversion."
       },
       {
         front: "Predict the sign of $\\\\Delta S$ for the reaction $2 H_2(g) + O_2(g) \\\\to 2 H_2O(l)$.",
@@ -233,11 +203,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "O-A-E-B-C-R, surface down."
       },
       {
-        front: "What are the three rock types in the rock cycle and how each forms?",
-        back: "Igneous rock forms from cooled magma/lava; sedimentary rock forms from compacted and cemented sediments; metamorphic rock forms when existing rock is altered by heat and pressure without melting.",
-        hint: "Cool, compact, change."
-      },
-      {
         front: "What is soil texture, and which three particle sizes define it?",
         back: "Soil texture is the relative proportion of sand, silt, and clay particles. Sand is largest, silt intermediate, clay smallest. Texture affects water-holding capacity, drainage, and aeration.",
         hint: "Sand > silt > clay by size."
@@ -292,11 +257,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         back: "It is a sandy soil: highly permeable with good aeration and drainage, but low water- and nutrient-holding capacity, prone to leaching and drying out. Adding organic matter would improve fertility.",
         hint: "High sand = drains fast, holds little."
       },
-      {
-        front: "What is the difference between magma and lava?",
-        back: "Magma is molten rock beneath Earth's surface; lava is molten rock that has erupted onto the surface. Magma cooling underground forms intrusive (coarse-grained) igneous rock; lava forms extrusive (fine-grained) igneous rock.",
-        hint: "Underground vs. erupted."
-      }
     ]
   },
   {

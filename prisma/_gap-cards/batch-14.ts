@@ -48,11 +48,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Fewest evolutionary changes",
       },
       {
-        front: "List Linnaeus's taxonomic hierarchy from broadest to most specific.",
-        back: "Domain, Kingdom, Phylum, Class, Order, Family, Genus, Species. A common mnemonic is 'Dear King Philip Came Over For Good Soup.'",
-        hint: "DKPCOFGS",
-      },
-      {
         front: "What are the three domains of life?",
         back: "Bacteria, Archaea, and Eukarya. Archaea and Eukarya are more closely related to each other than either is to Bacteria.",
         hint: "Two prokaryotic, one eukaryotic",

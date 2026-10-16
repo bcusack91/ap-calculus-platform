@@ -1096,11 +1096,6 @@ $$= \\frac{\\pi}{8} + \\frac{1}{4}$$
             hint: 'One-half integral of r-squared',
           },
           {
-            front: 'What is the arc length formula in polar coordinates?',
-            back: '$L = \\int_{\\alpha}^{\\beta} \\sqrt{r^2 + (\\frac{dr}{d\\theta})^2}\\,d\\theta$. Comes from parametric arc length with $x=r\\cos\\theta, y=r\\sin\\theta$. Can simplify: $(dx/d\\theta)^2 + (dy/d\\theta)^2 = r^2 + (dr/d\\theta)^2$.',
-            hint: 'Square root of r-squared plus r-prime-squared',
-          },
-          {
             front: 'Common mistakes with polar calculus?',
             back: '1) Forgetting $\\frac{1}{2}$ in area formula. 2) Wrong limits (check what $\\theta$ traces region). 3) For area between: use $r_1^2 - r_2^2$ NOT $(r_1-r_2)^2$. 4) Missing intersections at origin (different $\\theta$ values). 5) Not checking which curve is outer.',
             hint: 'Half in area, squared individually for between',

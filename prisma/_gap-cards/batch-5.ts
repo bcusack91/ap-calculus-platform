@@ -88,11 +88,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Remainder",
       },
       {
-        front: "What is the result of 7 % 3 and -7 % 3 in Java?",
-        back: "$7 \\% 3$ is 1. In Java, the result of $\\%$ takes the sign of the left operand, so $-7 \\% 3$ is $-1$.",
-        hint: "Sign follows the dividend",
-      },
-      {
         front: "Explain integer overflow in Java.",
         back: "An int is 32 bits with a maximum of 2147483647. Exceeding it wraps around to negative values rather than throwing an error. AP exam: be alert when summing or multiplying large ints.",
         hint: "Wraps to negative",
@@ -111,11 +106,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What does the compound assignment x += 3 mean?",
         back: "It is shorthand for x = x + 3. Similar operators include $-=$, $*=$, $/=$, and $\\%=$. They modify the variable in place.",
         hint: "Shorthand update",
-      },
-      {
-        front: "What is the difference between x++ and ++x?",
-        back: "Both increment x by 1. As a standalone statement they are identical. In a larger expression, x++ (postfix) uses the old value first, then increments; ++x (prefix) increments first, then uses the new value.",
-        hint: "Postfix vs. prefix",
       },
       {
         front: "How is string concatenation handled with the + operator?",
@@ -137,9 +127,9 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         back: "The cast applies after the int division finishes, so 7 / 2 = 3 first, then casts to 3.0. To get 3.5, cast an operand first: (double) 7 / 2.",
       },
       {
-        front: "What happens with division by zero in Java?",
-        back: "Integer division by zero (e.g., 5 / 0) throws an ArithmeticException at runtime. Floating-point division (e.g., 5.0 / 0) yields Infinity or NaN instead of an exception.",
-        hint: "int vs. double behave differently",
+        front: "What happens with integer division by zero in Java?",
+        back: "Integer division by zero (e.g., 5 / 0) throws an ArithmeticException at runtime.",
+        hint: "It throws an exception at runtime.",
       },
     ],
   },

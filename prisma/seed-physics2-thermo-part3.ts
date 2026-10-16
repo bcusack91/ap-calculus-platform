@@ -341,28 +341,28 @@ Even the perfect Carnot engine can't achieve 100% efficiency!`,
     data: [
       {
         topicId: thermoLaws.id,
-        front: 'State the First Law of Thermodynamics and define each term.',
-        back: 'ΔU = Q - W. ΔU = change in internal energy, Q = heat added to system, W = work done BY system. Energy conservation for thermodynamic systems.',
+        front: "State the First Law of Thermodynamics (AP form) and define each term.",
+        back: "ΔU = Q + W. ΔU = change in the system's internal energy, Q = energy transferred to the system by heating, W = work done ON the system. Energy conservation for thermodynamic systems.",
       },
       {
         topicId: thermoLaws.id,
         front: 'What are the sign conventions for Q, W, and ΔU?',
-        back: 'Q: +absorbed/-released. W: +expansion (system does work)/-compression (work on system). ΔU: +energy increases/-energy decreases.',
+        back: "Q: + when energy flows into the system by heating, − when it flows out. W (work done ON the gas): + for compression, − for expansion (the gas does work on its surroundings). ΔU: + when internal energy increases, − when it decreases.",
       },
       {
         topicId: thermoLaws.id,
         front: 'Describe an isothermal process.',
-        back: 'Constant temperature (ΔT = 0). For ideal gas: ΔU = 0, so Q = W. All heat absorbed becomes work. PV = constant.',
+        back: "Constant temperature (ΔT = 0). For an ideal gas ΔU = 0, so Q = −W: all the energy added by heating leaves as work done by the gas. PV = constant.",
       },
       {
         topicId: thermoLaws.id,
         front: 'Describe an adiabatic process.',
-        back: 'No heat transfer (Q = 0). First Law: ΔU = -W. Work comes from/goes to internal energy. Temperature changes. Example: rapid compression.',
+        back: "No energy transfer by heating (Q = 0). First Law: ΔU = W. Work done on the gas raises its internal energy and temperature; work done by the gas (W < 0) lowers them. Example: rapid compression heats the gas.",
       },
       {
         topicId: thermoLaws.id,
-        front: 'Describe isobaric and isochoric processes.',
-        back: 'Isobaric: constant pressure, W = PΔV. Isochoric: constant volume, ΔV = 0 so W = 0, all heat changes internal energy (Q = ΔU).',
+        front: "Describe isobaric and isovolumetric (isochoric) processes.",
+        back: "Isobaric: constant pressure, work done on the gas W = −PΔV. Isovolumetric: constant volume, ΔV = 0 so W = 0, and all energy added by heating changes the internal energy (ΔU = Q).",
       },
       {
         topicId: thermoLaws.id,
@@ -371,13 +371,8 @@ Even the perfect Carnot engine can't achieve 100% efficiency!`,
       },
       {
         topicId: thermoLaws.id,
-        front: 'What is the efficiency of a heat engine?',
-        back: 'e = W/Q_H = (Q_H - Q_C)/Q_H = 1 - Q_C/Q_H. Maximum (Carnot): e_max = 1 - T_C/T_H (temperatures in Kelvin!). Always <100%.',
-      },
-      {
-        topicId: thermoLaws.id,
         front: 'How is work calculated on a PV diagram?',
-        back: 'Work = area under curve. Expansion (ΔV > 0): W > 0 (system does work). Compression (ΔV < 0): W < 0 (work on system). Clockwise cycle: net positive work.',
+        back: "The magnitude of the work equals the area under the curve. With W = work done ON the gas: expansion (ΔV > 0) gives W < 0; compression (ΔV < 0) gives W > 0. Clockwise cycle: net work done on the gas is negative (the gas does net work on its surroundings).",
       },
     ],
   })

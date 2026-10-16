@@ -177,8 +177,8 @@ Small molecules that relay signals inside cell:
       },
       {
         topicId: signalingTopic.id,
-        front: 'What are second messengers? Give examples.',
-        back: 'Small molecules that relay signals inside cell. Examples: cAMP (from ATP), Ca²⁺ (from ER), IP₃ and DAG (from membrane lipids).',
+        front: "What is a second messenger? Give an example.",
+        back: "A small molecule that relays a signal inside the cell after a receptor is activated, amplifying the response. Example: cAMP, made from ATP, activates protein kinase A.",
       },
       {
         topicId: signalingTopic.id,

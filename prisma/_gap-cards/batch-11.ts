@@ -55,10 +55,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         back: "Use explicit comparative language (greater than, less than, similar) for center and spread, and reference specific values in context. Comparing boxplots side by side is a common task.",
         hint: "Use comparison words explicitly.",
       },
-      {
-        front: "What does a cumulative relative frequency graph (ogive) show?",
-        back: "The accumulated proportion of data at or below each value, rising from 0 to 1. Read it to estimate percentiles: the y-value at a given x tells you the percentile of that x.",
-      },
     ],
   },
   {
@@ -386,11 +382,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Addressing and routing.",
       },
       {
-        front: "Why was IPv6 created, and how does it differ from IPv4?",
-        back: "IPv4 uses 32-bit addresses (about 4.3 billion), which are running out. IPv6 uses 128-bit addresses, providing a vastly larger address space to support the growing number of connected devices.",
-        hint: "32-bit vs 128-bit.",
-      },
-      {
         front: "What does TCP (Transmission Control Protocol) do?",
         back: "TCP breaks data into packets, ensures reliable delivery, reorders packets correctly at the destination, and requests retransmission of lost packets. It is often paired as TCP/IP.",
         hint: "Reliable, ordered delivery.",
@@ -403,11 +394,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
       {
         front: "What information does a packet contain?",
         back: "A header with metadata (source and destination addresses, ordering/sequence info) and the payload (the actual chunk of data). Headers let routers forward packets and let the receiver reassemble them.",
-      },
-      {
-        front: "What does the DNS (Domain Name System) do?",
-        back: "It translates human-readable domain names (like example.com) into the numeric IP addresses computers use. It works like a phonebook for the Internet.",
-        hint: "Names to numbers.",
       },
       {
         front: "What is HTTP/HTTPS used for?",

@@ -414,11 +414,6 @@ $$\\Delta H°_{\\text{rxn}} = -890.3 \\text{ kJ}$$
       },
       {
         topicId: enthalpyTopic.id,
-        front: 'What is the difference between coffee cup and bomb calorimeters?',
-        back: 'Coffee cup: constant pressure, measures ΔH, simple, for solution reactions. Bomb: constant volume, measures ΔE, precise, sealed, for combustion. q = C_cal × ΔT for bomb.'
-      },
-      {
-        topicId: enthalpyTopic.id,
         front: 'How do you estimate ΔH_{rxn} using bond enthalpies?',
         back: 'ΔH_{rxn} = Σ(bonds broken) - Σ(bonds formed). Breaking bonds: positive (requires energy). Forming bonds: negative (releases energy). Less accurate than ΔH°_f (uses averages).'
       }

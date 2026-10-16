@@ -354,7 +354,7 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
     cards: [
       {
         front: "What are the primitive types you must know for AP CSA?",
-        back: "int (integers), double (decimal numbers), and boolean (true/false). char appears but the AP subset focuses mainly on int, double, and boolean.",
+        back: "int (integers), double (decimal numbers), and boolean (true/false) are the primitive types on the AP CSA exam.",
         hint: "int, double, boolean."
       },
       {
@@ -396,11 +396,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What does the compound operator x += 3 do?",
         back: "It is shorthand for x = x + 3. Java also has -=, *=, /=, and %= that combine an operation with assignment.",
         hint: "Combine an operation with assignment."
-      },
-      {
-        front: "What is the difference between i++ and ++i?",
-        back: "Both increase i by 1. i++ (post-increment) returns the old value before incrementing; ++i (pre-increment) returns the new value after incrementing. The difference matters only when used inside a larger expression.",
-        hint: "Post returns old, pre returns new."
       },
       {
         front: "Why are doubles sometimes imprecise (e.g., 0.1 + 0.2)?",

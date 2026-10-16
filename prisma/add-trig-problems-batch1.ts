@@ -249,20 +249,6 @@ Answer: Proven ✓`,
         hint: 'cos·cos + sin·sin',
         isPremium: false
       },
-      {
-        topicId: sumDifference.id,
-        front: 'What is the tangent sum formula?',
-        back: 'tan(A + B) = (tan(A) + tan(B))/(1 - tan(A)tan(B))',
-        hint: '(tan + tan)/(1 - tan·tan)',
-        isPremium: false
-      },
-      {
-        topicId: sumDifference.id,
-        front: 'What is the tangent difference formula?',
-        back: 'tan(A - B) = (tan(A) - tan(B))/(1 + tan(A)tan(B))',
-        hint: '(tan - tan)/(1 + tan·tan)',
-        isPremium: false
-      }
     ]
   });
 

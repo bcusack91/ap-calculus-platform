@@ -899,11 +899,6 @@ $$P_{H_2}V = n_{H_2}RT$$
       },
       {
         topicId: gasLawTopic.id,
-        front: 'What is Graham\'s Law of Effusion?',
-        back: 'rate₁/rate₂ = √(M₂/M₁). Lighter gases effuse (escape through tiny hole) faster. Rate is inversely proportional to square root of molar mass.'
-      },
-      {
-        topicId: gasLawTopic.id,
         front: 'When do real gases deviate most from ideal behavior?',
         back: 'HIGH PRESSURE (particles close, volume matters) and LOW TEMPERATURE (slow particles, IMFs matter). Behave most ideally at low P and high T.'
       },

@@ -488,7 +488,7 @@ Cu²⁺(aq) + H₂(g) → Cu(s) + 2H⁺(aq)
       {
         topicId: galvanicTopic.id,
         front: 'What does the position in the reduction potential table tell you?',
-        back: 'Top (large positive E°): strong oxidizing agents (F₂, Au³⁺), easily reduced. Bottom (large negative E°): strong reducing agents (Li, Zn), easily oxidized. Higher E° species reduced, lower E° species oxidized in spontaneous reaction.'
+        back: "Top (large positive E°): species such as F₂ and Au³⁺ are the most easily reduced. Bottom (large negative E°): metals such as Li and Zn are the most easily oxidized. In a spontaneous reaction, the half-reaction with the higher E° runs as the reduction and the one with the lower E° runs as the oxidation."
       },
       {
         topicId: galvanicTopic.id,

@@ -24,10 +24,6 @@ async function main() {
   if (t1) {
     await prisma.flashcard.createMany({
       data: [
-        { topicId: t1.id, front: 'What is a synthesis (combination) reaction?', back: 'Two or more reactants combine to form one product.\n\n$A + B \\to AB$\n\nExample: $2\\text{Mg} + \\text{O}_2 \\to 2\\text{MgO}$', hint: 'Many things become one.' },
-        { topicId: t1.id, front: 'What is a decomposition reaction?', back: 'One compound breaks down into two or more simpler substances.\n\n$AB \\to A + B$\n\nExample: $2\\text{H}_2\\text{O} \\to 2\\text{H}_2 + \\text{O}_2$', hint: 'One thing becomes many.' },
-        { topicId: t1.id, front: 'What is a single replacement reaction?', back: 'One element replaces another in a compound.\n\n$A + BC \\to AC + B$\n\nExample: $\\text{Zn} + \\text{CuSO}_4 \\to \\text{ZnSO}_4 + \\text{Cu}$', hint: 'Check the activity series to predict if it occurs.' },
-        { topicId: t1.id, front: 'What is a double replacement (metathesis) reaction?', back: 'Cations and anions of two compounds exchange partners.\n\n$AB + CD \\to AD + CB$\n\nExample: $\\text{AgNO}_3 + \\text{NaCl} \\to \\text{AgCl}\\downarrow + \\text{NaNO}_3$', hint: 'Often produces a precipitate, gas, or water.' },
         { topicId: t1.id, front: 'What is a combustion reaction?', back: 'A substance reacts with $\\text{O}_2$, releasing energy.\n\nHydrocarbon combustion: $\\text{C}_x\\text{H}_y + \\text{O}_2 \\to \\text{CO}_2 + \\text{H}_2\\text{O}$', hint: 'Burning = reaction with oxygen.' },
       ],
     });
@@ -40,7 +36,6 @@ async function main() {
       data: [
         { topicId: t2.id, front: 'What is oxidation?', back: 'Loss of electrons (increase in oxidation number).\n\nMnemonic: **OIL** — Oxidation Is Loss.', hint: 'Think about what happens to the electrons.' },
         { topicId: t2.id, front: 'What is reduction?', back: 'Gain of electrons (decrease in oxidation number).\n\nMnemonic: **RIG** — Reduction Is Gain.', hint: 'OIL RIG helps remember both.' },
-        { topicId: t2.id, front: 'What is an oxidizing agent?', back: 'The substance that gets reduced (gains electrons) and causes another substance to be oxidized.', hint: 'It oxidizes others but is itself reduced.' },
         { topicId: t2.id, front: 'How do you assign oxidation numbers to elements in their standard state?', back: 'Elements in their standard state have oxidation number **0**.\n\nExamples: $\\text{O}_2$, $\\text{Fe}$, $\\text{N}_2$ all have oxidation number 0.', hint: 'Free elements = zero.' },
       ],
     });

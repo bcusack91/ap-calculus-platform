@@ -473,16 +473,6 @@ async function main() {
         front: 'Density-dependent vs. density-independent factors?',
         back: 'Density-dependent: effect increases with population density (competition, predation, disease). Density-independent: effect regardless of density (weather, disasters).',
       },
-      {
-        topicId: popEcologyTopic.id,
-        front: 'Compare r-selected and K-selected species.',
-        back: 'r-selected: many offspring, small, short life, little care, opportunistic (insects, weeds). K-selected: few offspring, large, long life, much care, competitive (elephants, humans).',
-      },
-      {
-        topicId: popEcologyTopic.id,
-        front: 'Describe the three types of survivorship curves.',
-        back: 'Type I: high survival early, death in old age (humans). Type II: constant death rate (birds). Type III: high early death, survivors live long (fish, plants).',
-      },
     ],
   })
 
@@ -666,11 +656,6 @@ async function main() {
         topicId: communityTopic.id,
         front: 'What is a keystone species?',
         back: 'Species with disproportionately large effect relative to its abundance. Removal drastically changes community structure. Examples: sea otters, wolves.',
-      },
-      {
-        topicId: communityTopic.id,
-        front: 'Primary vs. secondary succession?',
-        back: 'Primary: starts with no soil (bare rock), very slow, pioneer species are lichens/mosses. Secondary: starts with soil (after disturbance), faster, seeds/roots present.',
       },
     ],
   })

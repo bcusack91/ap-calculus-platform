@@ -43,7 +43,6 @@ async function main() {
     await prisma.flashcard.createMany({
       data: [
         { topicId: t1.id, front: 'How do you convert between Celsius and Kelvin?', back: '$T_K = T_C + 273.15$. Kelvin is the SI unit for temperature. Zero Kelvin (absolute zero) is the lowest possible temperature — all molecular motion effectively stops.', hint: 'Just add 273.' },
-        { topicId: t1.id, front: 'What is the linear thermal expansion formula?', back: '$\\Delta L = \\alpha L_0 \\Delta T$, where $\\alpha$ is the coefficient of linear expansion, $L_0$ is original length, and $\\Delta T$ is the temperature change.', hint: 'Materials expand when heated.' },
       ],
     });
     console.log('✅ Temperature & Thermal Expansion flashcards');
@@ -78,7 +77,7 @@ async function main() {
   if (t4) {
     await prisma.flashcard.createMany({
       data: [
-        { topicId: t4.id, front: 'State the First Law of Thermodynamics.', back: '$\\Delta U = Q - W$ (or $\\Delta U = Q + W$ depending on sign convention). The change in internal energy equals heat added to the system minus work done by the system. Energy is conserved.', hint: 'Conservation of energy for thermal systems.' },
+        { topicId: t4.id, front: 'State the First Law of Thermodynamics.', back: "$\\Delta U = Q + W$, where $Q$ is the energy transferred to the system by heating and $W$ is the work done ON the system. The change in internal energy equals heat added plus work done on the system. Energy is conserved.", hint: 'Conservation of energy for thermal systems.' },
         { topicId: t4.id, front: 'State the Second Law of Thermodynamics.', back: 'In any natural process, the total entropy of an isolated system always increases (or stays the same): $\\Delta S_{\\text{total}} \\ge 0$. Heat flows spontaneously from hot to cold, never the reverse.', hint: 'Entropy always increases. Heat flows hot → cold.' },
         { topicId: t4.id, front: 'What is the ideal gas law?', back: '$PV = nRT$ or $PV = Nk_BT$, where $P$ = pressure, $V$ = volume, $n$ = moles, $R = 8.314$ J/(mol·K), $N$ = number of molecules, $k_B = 1.38 \\times 10^{-23}$ J/K.', hint: 'PV = nRT — relates pressure, volume, temperature.' },
       ],

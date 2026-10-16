@@ -632,28 +632,8 @@ This is why soap bubbles appear colored!`,
       },
       {
         topicId: lenses.id,
-        front: 'What is the power of a lens?',
-        back: 'P = 1/f (unit: Diopter, D = m⁻¹). Higher power → shorter f → more bending. Eyeglass "+2.00 D" means f = 0.50 m (converging).',
-      },
-      {
-        topicId: lenses.id,
         front: 'How does a magnifying glass work?',
-        back: 'Converging lens with object inside focal length (d_o < f). Produces virtual, upright, enlarged image on same side as object. Angular magnification M = 25cm/f.',
-      },
-      {
-        topicId: lenses.id,
-        front: 'How does a compound microscope work?',
-        back: 'Objective (short f): real enlarged image. Eyepiece: magnifies that image like magnifying glass. Total M = m_o × M_e = -(L/f_o)(25/f_e). Very high magnification (~100-1000×).',
-      },
-      {
-        topicId: lenses.id,
-        front: 'What type of lens corrects nearsightedness? Farsightedness?',
-        back: 'Nearsighted (myopia, eyeball too long): diverging lens. Farsighted (hyperopia, eyeball too short): converging lens. Lenses move focal point to retina.',
-      },
-      {
-        topicId: lenses.id,
-        front: 'What causes chromatic aberration?',
-        back: 'Different colors (wavelengths) have different n → different f → focus at different points. Violet bends more (shorter f), red less. Solution: achromatic doublet (two lenses).',
+        back: "A converging lens with the object inside the focal length (d_o < f). It produces a virtual, upright, enlarged image on the same side of the lens as the object.",
       },
       {
         topicId: lenses.id,
@@ -673,22 +653,12 @@ This is why soap bubbles appear colored!`,
       {
         topicId: interferenceDiffraction.id,
         front: 'How does a diffraction grating work?',
-        back: 'Many equally-spaced slits. Bright: d sinθ = mλ. Very sharp lines, good for spectroscopy. Red: longer λ, larger θ. Resolving power R = mN.',
+        back: "Many equally spaced slits. Bright fringes: d sinθ = mλ. The many slits make the bright lines very sharp, which is why gratings are used in spectroscopy. Red light (longer λ) is spread to larger angles than violet.",
       },
       {
         topicId: interferenceDiffraction.id,
         front: 'When does phase change occur in thin film interference?',
         back: 'Reflection from fast→slow medium (n_low→n_high): 180° = λ/2 shift. Slow→fast: no shift. Count shifts from BOTH surfaces. Use λ_n = λ/n in film. Path diff = 2t.',
-      },
-      {
-        topicId: interferenceDiffraction.id,
-        front: "State Malus's Law for polarization.",
-        back: 'I = I₀cos²θ, where θ = angle between polarizers. Crossed polarizers (θ=90°): I=0, no light. Aligned (θ=0°): I=I₀, maximum.',
-      },
-      {
-        topicId: interferenceDiffraction.id,
-        front: 'What is the Rayleigh criterion for resolution?',
-        back: 'θ_min = 1.22λ/D, where D = aperture diameter. Better resolution: larger aperture (bigger telescope) or shorter wavelength. Two sources barely resolved at this angle.',
       },
       {
         topicId: interferenceDiffraction.id,
@@ -698,7 +668,7 @@ This is why soap bubbles appear colored!`,
       {
         topicId: interferenceDiffraction.id,
         front: 'What are three ways to polarize light?',
-        back: '1) Polarizing filter (absorbs one component) 2) Reflection at Brewster\'s angle 3) Scattering (why sky is blue and polarized). Unpolarized has E oscillating in all directions.',
+        back: "Transverse waves such as light can be polarized when they 1) reflect from a surface, 2) refract through a medium, or 3) pass through specific openings, such as a polarizing filter. Polarizing light can reduce its intensity. Longitudinal waves cannot be polarized.",
       },
     ],
   })

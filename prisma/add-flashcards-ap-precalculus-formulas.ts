@@ -95,7 +95,6 @@ const cardsByTopic: Record<string, Card[]> = {
   'degrees-and-radians': [
     { front: 'What is the nth term of an arithmetic sequence?', back: 'aₙ = a₁ + (n − 1)d, where d = common difference.', hint: 'Add the same number each time' },
     { front: 'What is the nth term of a geometric sequence?', back: 'aₙ = a₁ · rⁿ⁻¹, where r = common ratio.', hint: 'Multiply by the same number each time' },
-    { front: 'When does an infinite geometric series converge?', back: 'When |r| < 1. Sum = a₁/(1 − r).', hint: '|ratio| must be less than 1' },
   ],
 }
 

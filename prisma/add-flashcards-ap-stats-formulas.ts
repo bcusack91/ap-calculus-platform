@@ -110,7 +110,7 @@ async function main() {
       data: [
         { topicId: t6.id, front: 'State the 68-95-99.7 (Empirical) Rule.', back: 'For a normal distribution: ~68% of data falls within 1 SD of the mean, ~95% within 2 SDs, ~99.7% within 3 SDs.', hint: 'Also called the Empirical Rule.' },
         { topicId: t6.id, front: 'What is a z-score and how is it calculated?', back: '$z = \\frac{x - \\mu}{\\sigma}$. It tells how many standard deviations an observation is above or below the mean. Negative z → below; positive z → above.', hint: 'Standardize: subtract mean, divide by SD.' },
-        { topicId: t6.id, front: 'How do you assess normality?', back: 'Use a Normal Probability Plot (Q-Q plot): if points roughly follow a straight line, the data is approximately normal. Also check for symmetric, bell-shaped histogram and Empirical Rule fit.', hint: 'Straight line on Q-Q plot = normal.' },
+        { topicId: t6.id, front: 'How do you assess normality?', back: "Graph the data: a histogram or dotplot should be roughly symmetric, single-peaked and bell-shaped, with no strong skew or outliers. You can also check the empirical rule: about 68%, 95% and 99.7% of values within 1, 2 and 3 SD of the mean.", hint: "Symmetric, single-peaked, bell-shaped." },
       ],
     });
     console.log('✅ Normal Distributions flashcards');
@@ -162,7 +162,6 @@ async function main() {
     await prisma.flashcard.createMany({
       data: [
         { topicId: t12.id, front: 'What is the formula for conditional probability?', back: '$P(A|B) = \\frac{P(A \\cap B)}{P(B)}$, where $P(B) > 0$. Read as "the probability of A given B."', hint: 'Restrict the sample space to B.' },
-        { topicId: t12.id, front: "State Bayes' Theorem (simple form).", back: "$P(A|B) = \\frac{P(B|A) \\cdot P(A)}{P(B)}$. It lets you reverse the conditioning — find $P(A|B)$ from $P(B|A)$.", hint: 'Flip the conditional using prior probabilities.' },
       ],
     });
     console.log('✅ Conditional Probability flashcards');
@@ -298,7 +297,6 @@ async function main() {
     await prisma.flashcard.createMany({
       data: [
         { topicId: t28.id, front: 'What is the chi-square test statistic formula?', back: '$\\chi^2 = \\sum \\frac{(O - E)^2}{E}$, where $O$ = observed count and $E$ = expected count.', hint: 'Sum of (observed − expected)² / expected.' },
-        { topicId: t28.id, front: 'What are the three types of chi-square tests?', back: '1. Goodness of Fit: one variable, comparing observed distribution to a claimed distribution ($df = k-1$). 2. Homogeneity: same variable across different populations ($df = (r-1)(c-1)$). 3. Independence: two variables in one population ($df = (r-1)(c-1)$).', hint: 'GoF, Homogeneity, Independence — same formula, different setups.' },
         { topicId: t28.id, front: 'What conditions must be checked for a chi-square test?', back: '1. Random sample or random assignment. 2. All expected counts $E \\ge 5$. 3. Independent observations (10% condition for sampling).', hint: 'Expected counts ≥ 5 is the key condition.' },
       ],
     });
@@ -322,7 +320,7 @@ async function main() {
   if (t30) {
     await prisma.flashcard.createMany({
       data: [
-        { topicId: t30.id, front: 'What is the least-squares regression line (LSRL)?', back: '$\\hat{y} = a + bx$, where $b = r \\cdot \\frac{s_y}{s_x}$ and $a = \\bar{y} - b\\bar{x}$. It minimizes the sum of squared residuals.', hint: 'The line passes through $(\\bar{x}, \\bar{y})$.' },
+        { topicId: t30.id, front: 'What is the least-squares regression line (LSRL)?', back: "$\\hat{y} = a + bx$, the line that minimizes the sum of squared residuals. The slope $b$ and intercept $a$ come from technology, and the line always passes through $(\\bar{x}, \\bar{y})$.", hint: 'The line passes through $(\\bar{x}, \\bar{y})$.' },
         { topicId: t30.id, front: 'How do you interpret the slope $b$ of a regression line?', back: 'For each 1-unit increase in $x$, the predicted value of $y$ changes by $b$ units, on average. Always include context (variable names, units).', hint: 'Predicted change in y per unit change in x.' },
         { topicId: t30.id, front: 'What is extrapolation and why is it dangerous?', back: 'Making predictions for $x$-values outside the range of the data. The LSRL may not apply beyond the observed range. Always note the limitations.', hint: 'Predicting beyond your data is risky.' },
       ],

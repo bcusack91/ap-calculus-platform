@@ -492,21 +492,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Internal joy vs. external reward",
       },
       {
-        front: "What is the overjustification effect?",
-        back: "When an external reward is given for an activity a person already enjoyed, intrinsic motivation can decrease because the behavior gets reattributed to the reward.",
-        hint: "Rewarding fun can kill the fun",
-      },
-      {
-        front: "What is Maslow's hierarchy of needs, in order?",
-        back: "From bottom to top: physiological needs, safety needs, love/belonging needs, esteem needs, and self-actualization (some add self-transcendence). Lower needs are generally met before higher ones.",
-        hint: "Physiological up to self-actualization",
-      },
-      {
-        front: "According to Maslow, what is self-actualization?",
-        back: "The need to realize one's full potential and become everything one is capable of being. It sits at the top of the hierarchy after more basic needs are satisfied.",
-        hint: "Reaching your full potential (top of pyramid)",
-      },
-      {
         front: "What is self-determination theory's three core needs?",
         back: "It holds that intrinsic motivation thrives when three psychological needs are met: autonomy (control over one's actions), competence (feeling effective), and relatedness (connection to others).",
         hint: "Autonomy, competence, relatedness",

@@ -575,18 +575,13 @@ $$\\lim_{x \\to 0^+} y = e^0 = 1$$
         create: [
           {
             front: 'What are the two indeterminate forms where L\'Hôpital\'s Rule applies directly?',
-            back: '$\\frac{0}{0}$ and $\\frac{\\infty}{\\infty}$. For other indeterminate forms like $0 \\cdot \\infty$, $\\infty - \\infty$, $0^0$, $1^\\infty$, $\\infty^0$, you must first convert them to one of these two forms.',
+            back: "$\\frac{0}{0}$ and $\\frac{\\infty}{\\infty}$. Confirm the limit has one of these two forms before differentiating the numerator and denominator separately.",
             hint: 'Both are fraction forms',
           },
           {
             front: 'State L\'Hôpital\'s Rule.',
             back: 'If $\\lim_{x \\to a} \\frac{f(x)}{g(x)}$ gives $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$, then $\\lim_{x \\to a} \\frac{f(x)}{g(x)} = \\lim_{x \\to a} \\frac{f\'(x)}{g\'(x)}$ (if the right side exists). Take derivatives of top and bottom SEPARATELY!',
             hint: 'Derivatives of numerator and denominator separately',
-          },
-          {
-            front: 'How do you handle the indeterminate form $0^0$ or $1^\\infty$ with L\'Hôpital\'s Rule?',
-            back: 'Let $y$ equal the expression, take ln of both sides, find $\\lim \\ln y$ using L\'Hôpital\'s (converting to $0 \\cdot \\infty$ then to a fraction), then exponentiate: $\\lim y = e^{\\lim \\ln y}$.',
-            hint: 'Use logarithms first',
           },
           {
             front: 'What common mistake do students make when applying L\'Hôpital\'s Rule?',

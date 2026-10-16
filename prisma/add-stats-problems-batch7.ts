@@ -186,7 +186,7 @@ Answer: NO - This is inappropriate extrapolation resulting in an impossible pred
       {
         topicId: leastSquares.id,
         front: 'What does the slope b₁ represent?',
-        back: 'The predicted change in y for each one-unit increase in x. Formula: b₁ = r(sᵧ/sₓ)',
+        back: "The predicted change in y for each one-unit increase in x. Get its value from technology or computer regression output, then interpret it in context.",
         hint: 'Predicted change per unit',
         isPremium: false
       },

@@ -770,7 +770,7 @@ Same analysis as C₁:
       {
         topicId: hybridizationTopic.id,
         front: 'How do you determine hybridization from steric number?',
-        back: 'SN 2: sp, SN 3: sp², SN 4: sp³, SN 5: sp³d, SN 6: sp³d². Steric number (bonds + lone pairs) directly determines hybridization type.'
+        back: "SN 2: sp, SN 3: sp², SN 4: sp³. Steric number = atoms bonded to the central atom + its lone pairs. For steric numbers 5 and 6, AP Chemistry asks only for the electron-domain geometry and molecular shape, not a hybridization label."
       },
       {
         topicId: hybridizationTopic.id,
@@ -797,11 +797,6 @@ Same analysis as C₁:
         front: 'Why does a double bond restrict rotation?',
         back: 'The pi (π) bond requires parallel p orbitals with side-by-side overlap. Rotation would break this overlap, destroying the π bond. Only σ bonds allow free rotation.'
       },
-      {
-        topicId: hybridizationTopic.id,
-        front: 'Which elements can have sp³d or sp³d² hybridization?',
-        back: 'Only Period 3+ elements (P, S, Cl, Br, I, Xe, etc.) because they have accessible d orbitals. Period 2 elements (C, N, O, F) cannot expand octets - maximum is sp³.'
-      }
     ]
   });
 

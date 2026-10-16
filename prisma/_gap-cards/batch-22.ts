@@ -258,11 +258,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "$n \\\\leq 0.10 N$ for sampling without replacement",
       },
       {
-        front: "How does a binomial distribution differ from a geometric distribution?",
-        back: "Binomial counts the number of successes in a fixed number $n$ of trials. Geometric counts the number of trials until the first success (number of trials is not fixed).",
-        hint: "Fixed trials vs. wait for first success",
-      },
-      {
         front: "Common trap: computing $P(X \\\\geq 3)$ on a calculator. What is the correct setup?",
         back: "Use $1 - P(X \\\\leq 2)$, i.e., $1 - \\\\text{binomcdf}(n, p, 2)$. Be careful that binomcdf is cumulative ($\\\\leq$), so adjust the boundary correctly.",
         hint: "Convert 'at least' using the complement of a cdf",

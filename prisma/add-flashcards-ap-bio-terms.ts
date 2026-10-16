@@ -101,7 +101,6 @@ async function main() {
     await prisma.flashcard.createMany({
       data: [
         { topicId: t7.id, front: 'What is the 10% rule in ecology?', back: 'Only about 10% of energy is transferred from one trophic level to the next. The rest is lost as heat through cellular respiration.', hint: 'Explains why food chains are short.' },
-        { topicId: t7.id, front: 'What is the difference between primary and secondary succession?', back: '**Primary**: Colonization of bare rock/land with no soil (e.g., after lava flow).\n**Secondary**: Recovery in an area where soil remains (e.g., after forest fire).', hint: 'Primary starts from scratch; secondary has a head start.' },
       ],
     });
     console.log('✅ Ecology flashcards');

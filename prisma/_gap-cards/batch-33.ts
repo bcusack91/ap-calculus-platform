@@ -538,11 +538,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Remainder on dividing by (x - c) is P(c).",
       },
       {
-        front: "What is the Rational Root Theorem?",
-        back: "Any rational root of $P(x)$ with integer coefficients has the form $\\frac{p}{q}$, where $p$ divides the constant term $a_0$ and $q$ divides the leading coefficient $a_n$. It lists candidate roots to test.",
-        hint: "p divides constant; q divides leading coefficient.",
-      },
-      {
         front: "What is the maximum number of turning points of a degree-$n$ polynomial?",
         back: "At most $n-1$ turning points (local maxima/minima). A degree-4 polynomial has at most 3 turning points.",
         hint: "One fewer than the degree.",

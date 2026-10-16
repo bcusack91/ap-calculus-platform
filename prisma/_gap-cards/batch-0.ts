@@ -2,66 +2,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
   {
     slug: "enzyme-kinetics",
     cards: [
-      {
-        front: "What is the Michaelis-Menten equation, and what does each variable mean?",
-        back: "$v_0 = \\frac{V_{max}[S]}{K_m + [S]}$, where $v_0$ is the initial reaction velocity, $V_{max}$ is the maximum velocity at saturating substrate, $[S]$ is substrate concentration, and $K_m$ is the Michaelis constant (the $[S]$ at which $v_0 = V_{max}/2$). Use it to model single-substrate enzyme rates.",
-        hint: "Hyperbolic curve of v0 vs [S].",
-      },
-      {
-        front: "What does $K_m$ physically represent, and how does it relate to enzyme affinity?",
-        back: "$K_m$ is the substrate concentration at which the reaction proceeds at half of $V_{max}$. A low $K_m$ means high affinity (less substrate needed to reach half-max), while a high $K_m$ means low affinity.",
-        hint: "Half-max [S].",
-      },
-      {
-        front: "How is $V_{max}$ related to $k_{cat}$ and total enzyme concentration?",
-        back: "$V_{max} = k_{cat}[E]_T$, where $k_{cat}$ (the turnover number) is the number of substrate molecules converted to product per enzyme per second at saturation, and $[E]_T$ is total enzyme concentration. Doubling enzyme doubles $V_{max}$ but does not change $K_m$.",
-        hint: "Turnover number times enzyme.",
-      },
-      {
-        front: "What is the catalytic efficiency of an enzyme, and what value indicates diffusion limitation?",
-        back: "Catalytic efficiency is $k_{cat}/K_m$. It measures how well an enzyme converts substrate at low $[S]$. Values approaching $10^8$ to $10^9\\,\\mathrm{M^{-1}s^{-1}}$ indicate the enzyme is diffusion-limited (catalytically perfect).",
-        hint: "Ratio of two constants.",
-      },
-      {
-        front: "What is the Lineweaver-Burk plot, and what do its intercepts give?",
-        back: "It is the double-reciprocal plot of $\\frac{1}{v_0}$ vs $\\frac{1}{[S]}$, giving a straight line. The y-intercept equals $\\frac{1}{V_{max}}$, the x-intercept equals $-\\frac{1}{K_m}$, and the slope equals $\\frac{K_m}{V_{max}}$.",
-        hint: "Double reciprocal linearization.",
-      },
-      {
-        front: "How does a competitive inhibitor affect $K_m$ and $V_{max}$?",
-        back: "A competitive inhibitor binds the active site, raising the apparent $K_m$ (lower apparent affinity) but leaving $V_{max}$ unchanged, because high substrate can outcompete the inhibitor. On a Lineweaver-Burk plot, lines share the same y-intercept.",
-        hint: "Same y-intercept, can be overcome by [S].",
-      },
-      {
-        front: "How does a pure noncompetitive inhibitor affect $K_m$ and $V_{max}$?",
-        back: "A noncompetitive inhibitor binds an allosteric site equally well to E and ES, lowering $V_{max}$ but leaving $K_m$ unchanged. Lineweaver-Burk lines share the same x-intercept.",
-        hint: "Cannot be overcome by adding substrate.",
-      },
-      {
-        front: "How does an uncompetitive inhibitor affect $K_m$ and $V_{max}$?",
-        back: "An uncompetitive inhibitor binds only the ES complex, decreasing both $K_m$ and $V_{max}$ by the same factor, so the ratio $V_{max}/K_m$ stays constant. Lineweaver-Burk lines appear parallel.",
-        hint: "Binds ES only; parallel lines.",
-      },
-      {
-        front: "What is the steady-state assumption underlying Michaelis-Menten kinetics?",
-        back: "It assumes the concentration of the enzyme-substrate complex [ES] stays roughly constant because its rate of formation equals its rate of breakdown. This holds during the early, linear phase of the reaction.",
-        hint: "d[ES]/dt is approximately 0.",
-      },
-      {
-        front: "Distinguish allosteric (sigmoidal) enzymes from Michaelis-Menten enzymes.",
-        back: "Allosteric enzymes have multiple subunits and show cooperative binding, producing a sigmoidal (S-shaped) $v_0$ vs $[S]$ curve rather than a hyperbola. They do not obey simple Michaelis-Menten kinetics and are regulated by effectors that shift the curve.",
-        hint: "Hemoglobin-like sigmoid.",
-      },
-      {
-        front: "Worked example: If $V_{max} = 100\\,\\mu\\mathrm{M/min}$ and $K_m = 5\\,\\mu\\mathrm{M}$, what is $v_0$ at $[S] = 5\\,\\mu\\mathrm{M}$?",
-        back: "At $[S] = K_m$, the equation gives $v_0 = \\frac{100 \\times 5}{5 + 5} = 50\\,\\mu\\mathrm{M/min}$, exactly half of $V_{max}$, which is the definition of $K_m$.",
-        hint: "Plug [S] = Km.",
-      },
-      {
-        front: "Common trap: Does increasing substrate concentration ever exceed $V_{max}$?",
-        back: "No. As $[S] \\to \\infty$, $v_0$ asymptotically approaches but never exceeds $V_{max}$ because all active sites become saturated. $V_{max}$ can only be raised by adding more enzyme.",
-        hint: "Asymptote, not crossable.",
-      },
     ],
   },
   {

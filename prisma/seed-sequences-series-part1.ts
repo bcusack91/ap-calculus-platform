@@ -562,11 +562,6 @@ $$\\lim_{n \\to \\infty} \\frac{(-1)^n}{n} = 0$$
             hint: 'Divide by highest power of n',
           },
           {
-            front: 'What is the Monotone Convergence Theorem?',
-            back: 'If a sequence is monotonic (always increasing or always decreasing) AND bounded, then it converges. Don\'t need to find exact limit! Just prove monotonic + bounded → guaranteed to converge.',
-            hint: 'Monotonic + Bounded → Converges',
-          },
-          {
             front: 'Common sequence limits to memorize?',
             back: '$\\frac{1}{n^p} \\to 0$ (p>0), $r^n \\to 0$ (|r|<1), $\\frac{\\ln n}{n} \\to 0$, $n^{1/n} \\to 1$, $(1+\\frac{1}{n})^n \\to e$. Key: exponentials beat polynomials ($\\frac{n^k}{e^n} \\to 0$). If $|r|>1$: $r^n \\to \\infty$.',
             hint: '1/n^p → 0, exponentials dominate',

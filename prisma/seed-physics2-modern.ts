@@ -431,11 +431,6 @@ This is the famous H-alpha line in hydrogen spectrum.`,
       },
       {
         topicId: modernPhysics.id,
-        front: 'State the Heisenberg Uncertainty Principle.',
-        back: 'Δx·Δp ≥ ℏ/2. Cannot know position and momentum simultaneously with perfect precision. Also ΔE·Δt ≥ ℏ/2. Not measurement limitation, but fundamental reality! More certain about x → less about p.',
-      },
-      {
-        topicId: modernPhysics.id,
         front: 'What is mass-energy equivalence? Give the formula.',
         back: 'E = mc². Mass and energy are interchangeable! Atomic mass: 1 u = 931.5 MeV/c². Binding energy: BE = Δm·c². More BE → more stable nucleus.',
       },

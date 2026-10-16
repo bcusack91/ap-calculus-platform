@@ -89,9 +89,6 @@ async function main() {
   if (t6) {
     await prisma.flashcard.createMany({
       data: [
-        { topicId: t6.id, front: 'James-Lange theory of emotion?', back: 'We experience a physiological response first, then interpret it as an emotion.\n\n"I\'m trembling, therefore I\'m afraid."', hint: 'Body first, then emotion.' },
-        { topicId: t6.id, front: 'Cannon-Bard theory of emotion?', back: 'Physiological arousal and emotional experience occur simultaneously and independently.\n\n"I tremble AND feel afraid at the same time."', hint: 'Everything happens at once.' },
-        { topicId: t6.id, front: 'Schachter-Singer Two-Factor theory?', back: 'Emotion = physiological arousal + cognitive label. We experience arousal, then label it based on context.\n\n"I\'m aroused and there\'s a bear, so I must be scared."', hint: 'Arousal + label = emotion.' },
       ],
     });
     console.log('✅ Emotion & Stress flashcards');

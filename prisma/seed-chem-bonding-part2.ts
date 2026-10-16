@@ -708,7 +708,7 @@ Lewis structure has S bonded to 6 F atoms, each F with 3 lone pairs.
       {
         topicId: lewisTopic.id,
         front: 'Which elements can have expanded octets and why?',
-        back: 'Period 3+ elements (P, S, Cl, Br, I, Xe) can have >8 electrons using d orbitals. Examples: PCl₅ (10e⁻), SF₆ (12e⁻). Period 2 elements cannot expand octets.'
+        back: "Only central atoms in period 3 and beyond (P, S, Cl, Br, I, Xe), which are large enough to bond to more atoms and hold more than 8 electrons. Examples: PCl₅ (10 e⁻), SF₆ (12 e⁻). Period 2 atoms never exceed an octet."
       },
       {
         topicId: lewisTopic.id,

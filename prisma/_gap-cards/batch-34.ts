@@ -294,8 +294,8 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
       },
       {
         front: "What distinguishes the average rate of change from the instantaneous rate of change?",
-        back: "Average rate uses two points (secant slope) over an interval; instantaneous rate is the slope at a single point (tangent line), approximated by shrinking the interval toward one point.",
-        hint: "Secant over interval vs. tangent at a point.",
+        back: "The average rate of change uses two points over an interval (the slope of a secant line). The rate of change at a point can be approximated by average rates of change over smaller and smaller intervals containing that point.",
+        hint: "Secant slope over an interval; shrink the interval to approximate a point.",
       },
       {
         front: "How do you estimate an instantaneous rate of change at $x = a$ without calculus?",
@@ -321,11 +321,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "Why is the average rate of change of an exponential function not constant?",
         back: "Exponential functions change by a constant factor (ratio), so the absolute change grows with the output. The rate of change increases (for growth) or decreases (for decay), never staying fixed.",
         hint: "Constant ratio, not constant difference.",
-      },
-      {
-        front: "What is the difference quotient and how does it relate to rate of change?",
-        back: "$\\\\frac{f(x + h) - f(x)}{h}$. It is the average rate of change over $[x, x+h]$; as $h \\\\to 0$ it approaches the instantaneous rate (slope of the tangent line).",
-        hint: "Average rate with interval width $h$.",
       },
       {
         front: "How does concavity relate to how the rate of change behaves?",
@@ -481,11 +476,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What real-world quantities are modeled exponentially, and what feature signals it?",
         back: "Population growth, radioactive decay, compound interest, drug concentration, and cooling. The signal is a constant percentage change per unit time (constant ratio between successive equally spaced outputs).",
         hint: "Constant percent change per period.",
-      },
-      {
-        front: "How does the logistic model differ from a pure exponential model?",
-        back: "A logistic model $P(t) = \\\\frac{L}{1 + Ce^{-kt}}$ grows nearly exponentially at first but levels off at a carrying capacity $L$ (a horizontal asymptote). Pure exponential growth increases without bound.",
-        hint: "Has a ceiling (carrying capacity).",
       },
     ],
   },

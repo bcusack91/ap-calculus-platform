@@ -18,21 +18,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Built from the sin and cos versions."
       },
       {
-        front: "State the half-angle identity for $\\\\sin\\\\dfrac{\\\\theta}{2}$.",
-        back: "$\\\\sin\\\\dfrac{\\\\theta}{2} = \\\\pm\\\\sqrt{\\\\dfrac{1 - \\\\cos\\\\theta}{2}}$. The sign is chosen by the quadrant in which $\\\\dfrac{\\\\theta}{2}$ lies, not the quadrant of $\\\\theta$.",
-        hint: "Uses $1-\\\\cos\\\\theta$."
-      },
-      {
-        front: "State the half-angle identity for $\\\\cos\\\\dfrac{\\\\theta}{2}$.",
-        back: "$\\\\cos\\\\dfrac{\\\\theta}{2} = \\\\pm\\\\sqrt{\\\\dfrac{1 + \\\\cos\\\\theta}{2}}$. Pick the sign from the quadrant of $\\\\dfrac{\\\\theta}{2}$.",
-        hint: "Uses $1+\\\\cos\\\\theta$."
-      },
-      {
-        front: "Give two sign-free forms of the half-angle identity for $\\\\tan\\\\dfrac{\\\\theta}{2}$.",
-        back: "$\\\\tan\\\\dfrac{\\\\theta}{2} = \\\\dfrac{1 - \\\\cos\\\\theta}{\\\\sin\\\\theta} = \\\\dfrac{\\\\sin\\\\theta}{1 + \\\\cos\\\\theta}$. These avoid the $\\\\pm$ because the sign comes out automatically.",
-        hint: "No radical needed."
-      },
-      {
         front: "Power-reduction: express $\\\\sin^2\\\\theta$ and $\\\\cos^2\\\\theta$ using $\\\\cos(2\\\\theta)$.",
         back: "$\\\\sin^2\\\\theta = \\\\dfrac{1 - \\\\cos(2\\\\theta)}{2}$ and $\\\\cos^2\\\\theta = \\\\dfrac{1 + \\\\cos(2\\\\theta)}{2}$. These come straight from the $\\\\cos(2\\\\theta)$ forms and are essential for integrating even powers.",
         hint: "Solve the cos double-angle for the squared term."
@@ -43,19 +28,9 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Don't pull the 2 inside."
       },
       {
-        front: "How do you decide the sign in a half-angle evaluation?",
-        back: "Determine the quadrant of the half-angle $\\\\dfrac{\\\\theta}{2}$, then use the sign of that trig function in that quadrant. Never use the quadrant of $\\\\theta$ itself.",
-        hint: "Quadrant of the half-angle."
-      },
-      {
         front: "Worked example: given $\\\\sin\\\\theta = \\\\dfrac{3}{5}$ with $\\\\theta$ in QI, find $\\\\sin(2\\\\theta)$.",
         back: "$\\\\cos\\\\theta = \\\\dfrac{4}{5}$, so $\\\\sin(2\\\\theta) = 2\\\\cdot\\\\dfrac{3}{5}\\\\cdot\\\\dfrac{4}{5} = \\\\dfrac{24}{25}$.",
         hint: "Find cos first."
-      },
-      {
-        front: "Worked example: use a half-angle identity to find $\\\\cos 15^\\\\circ$.",
-        back: "Let $\\\\theta = 30^\\\\circ$. Then $\\\\cos 15^\\\\circ = \\\\sqrt{\\\\dfrac{1 + \\\\cos 30^\\\\circ}{2}} = \\\\sqrt{\\\\dfrac{1 + \\\\frac{\\\\sqrt3}{2}}{2}} = \\\\dfrac{\\\\sqrt{2 + \\\\sqrt3}}{2}$. Positive sign because $15^\\\\circ$ is in QI.",
-        hint: "Half of $30^\\\\circ$."
       },
       {
         front: "Which identity rewrites $\\\\cos(2\\\\theta)$ purely in terms of $\\\\sin\\\\theta$, and when is that useful?",
@@ -464,14 +439,9 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
       },
       {
         front: "How can you assess whether data is approximately Normal?",
-        back: "Make a histogram or dotplot (should look roughly symmetric and bell-shaped) or a Normal probability plot (should be roughly linear). Heavy skew or outliers suggest non-Normality.",
+        back: "Make a histogram or dotplot: it should look roughly symmetric, single-peaked and bell-shaped. Heavy skew or outliers suggest a Normal model is not reasonable.",
         hint: "Graph it."
       },
-      {
-        front: "If $X$ is Normal, what is the distribution of $aX + b$?",
-        back: "Also Normal, with mean $a\\\\mu + b$ and standard deviation $|a|\\\\sigma$. Linear transformations of a Normal variable stay Normal.",
-        hint: "Linear transforms preserve Normality."
-      }
     ]
   },
   {

@@ -98,19 +98,9 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Nouns + verbs, no 'the' or 'is.'",
       },
       {
-        front: "Contrast Chomsky's and Skinner's views of language acquisition.",
-        back: "Chomsky argued language is largely inborn, citing a universal grammar and a language acquisition device. Skinner argued language is learned through operant conditioning (reinforcement, imitation, association).",
-        hint: "Nature (Chomsky) vs. nurture (Skinner).",
-      },
-      {
         front: "What is the critical period hypothesis for language?",
         back: "It proposes there is a window in early childhood during which the brain most readily acquires language. After this period (roughly puberty), mastering a first language or accent-free fluency becomes much harder.",
         hint: "Childhood window for easy learning.",
-      },
-      {
-        front: "What is the linguistic relativity (Whorf) hypothesis?",
-        back: "Benjamin Whorf's hypothesis that language shapes or influences the way we think and perceive the world. The strong form (language determines thought) is largely rejected; a weaker influence is supported.",
-        hint: "Language influences thought.",
       },
       {
         front: "What brain areas are central to language, and what does damage cause?",
@@ -136,11 +126,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "Differentiate validity and reliability of a test.",
         back: "Reliability is the consistency of results across time, forms, or items (it gives the same score repeatedly). Validity is whether the test measures what it claims to measure. A test can be reliable yet not valid.",
         hint: "Consistent vs. measures the right thing.",
-      },
-      {
-        front: "What is Gardner's theory of multiple intelligences?",
-        back: "Howard Gardner proposed several relatively independent intelligences (e.g., linguistic, logical-mathematical, spatial, musical, bodily-kinesthetic, interpersonal, intrapersonal, naturalist) rather than a single g factor.",
-        hint: "Many distinct intelligences, not one.",
       },
     ],
   },
@@ -181,11 +166,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What is the arc length formula using radians?",
         back: "$s = r\\\\theta$, where $s$ is arc length, $r$ is the radius, and $\\\\theta$ is the central angle in radians. The angle MUST be in radians for this to work.",
         hint: "Arc = radius times angle (radians).",
-      },
-      {
-        front: "What is the area of a circular sector using radians?",
-        back: "$A = \\\\frac{1}{2}r^2\\\\theta$, where $r$ is the radius and $\\\\theta$ is the central angle in radians. Use radians, not degrees.",
-        hint: "Half r-squared times the angle.",
       },
       {
         front: "What is a coterminal angle and how do you find one?",
@@ -241,11 +221,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "How do you calculate the economic growth rate?",
         back: "$\\\\text{growth rate} = \\\\frac{\\\\text{real GDP}_{2} - \\\\text{real GDP}_{1}}{\\\\text{real GDP}_{1}} \\\\times 100$. Always use REAL GDP so that inflation does not inflate the figure.",
         hint: "Percent change in real GDP.",
-      },
-      {
-        front: "What does the rule of 70 estimate?",
-        back: "It estimates the years for a quantity to double: $\\\\text{years to double} \\\\approx \\\\frac{70}{\\\\text{annual growth rate (\\\\%)}}$. At 2% growth, output doubles in about 35 years.",
-        hint: "70 divided by the growth percent.",
       },
       {
         front: "What are the main sources of long-run economic growth?",
@@ -406,11 +381,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "How does a higher MPC affect the size of the multiplier?",
         back: "A higher MPC means more of each dollar is re-spent in each round, so the multiplier is larger. A lower MPC (higher saving) shrinks the multiplier.",
         hint: "More spending, bigger multiplier.",
-      },
-      {
-        front: "Name 'leakages' that reduce the real-world multiplier.",
-        back: "Saving, taxes, and imports are leakages: income that is not re-spent on domestic output. They make the actual multiplier smaller than the simple formula predicts.",
-        hint: "Saving, taxes, imports.",
       },
       {
         front: "Trap: Does the money multiplier equal the spending multiplier?",

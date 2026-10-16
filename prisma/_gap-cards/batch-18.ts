@@ -78,11 +78,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
     slug: "wh-islamic-empires",
     cards: [
       {
-        front: "Who was Muhammad and when did Islam begin?",
-        back: "Muhammad (c. 570-632 CE) was the Prophet of Islam who, beginning around 610 CE, received revelations recorded in the Qur'an. His hijra (migration) from Mecca to Medina in 622 CE marks year 1 of the Islamic calendar.",
-        hint: "Hijra in 622.",
-      },
-      {
         front: "What are the Five Pillars of Islam?",
         back: "Shahada (declaration of faith), Salat (five daily prayers), Zakat (almsgiving), Sawm (fasting during Ramadan), and Hajj (pilgrimage to Mecca). They are the core religious duties of Muslims.",
         hint: "Faith, prayer, charity, fasting, pilgrimage.",
@@ -91,21 +86,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What caused the Sunni-Shia split in early Islam?",
         back: "It arose over succession after Muhammad. Sunnis accepted the elected caliphs (and the broader community's consensus), while Shia held that leadership belonged to Ali and Muhammad's bloodline. The split deepened after Ali's assassination and the killing of Husayn at Karbala (680 CE).",
         hint: "Disagreement over who should be caliph.",
-      },
-      {
-        front: "What was the Rashidun Caliphate?",
-        back: "The 'Rightly Guided' first four caliphs (632-661 CE): Abu Bakr, Umar, Uthman, and Ali. Under them Islam expanded rapidly out of Arabia into the Byzantine and Sasanian empires.",
-        hint: "First four caliphs after Muhammad.",
-      },
-      {
-        front: "How did the Umayyad Caliphate differ from the Abbasid Caliphate?",
-        back: "The Umayyads (661-750, capital Damascus) were Arab-centric and expansion-focused, reaching Spain and India. The Abbasids (750-1258, capital Baghdad) were more cosmopolitan, incorporating Persian administration and sponsoring a golden age of scholarship.",
-        hint: "Damascus vs Baghdad.",
-      },
-      {
-        front: "What was the significance of the Battle of Tours (732 CE)?",
-        back: "Frankish forces under Charles Martel halted the northward Umayyad advance into Western Europe, marking a limit to Muslim expansion in the west.",
-        hint: "Charles Martel stops the advance into Gaul.",
       },
       {
         front: "What was the House of Wisdom and why does it matter?",
@@ -323,16 +303,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Crowding-related vs not.",
       },
       {
-        front: "Compare r-selected and K-selected species.",
-        back: "r-selected species have high reproductive rates, small offspring, little parental care, and thrive in unstable environments (e.g., insects). K-selected species reproduce slowly, invest heavily in few offspring, and live in stable environments near $K$ (e.g., elephants).",
-        hint: "Many cheap offspring vs few costly ones.",
-      },
-      {
-        front: "What are the three types of survivorship curves?",
-        back: "Type I (high survival until old age; large mammals/humans), Type II (constant death rate across ages; many birds/rodents), and Type III (high early mortality, few survive to adulthood; fish/insects).",
-        hint: "I = late deaths, III = early deaths.",
-      },
-      {
         front: "How do you compute population growth rate from birth and death rates?",
         back: "$r = b - d$ (per capita), where $b$ is the per-capita birth rate and $d$ the per-capita death rate. Including migration: change $= (\\\\text{births} + \\\\text{immigration}) - (\\\\text{deaths} + \\\\text{emigration})$.",
         hint: "Births minus deaths.",
@@ -369,7 +339,7 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
       },
       {
         front: "How do predator and prey populations typically interact over time?",
-        back: "They cycle in linked oscillations: rising prey supports more predators, which then reduce prey, causing predators to decline, allowing prey to recover (Lotka-Volterra predator-prey cycles).",
+        back: "They often cycle in linked oscillations: more prey supports more predators, the predators then reduce the prey population, predators decline from lack of food, and the prey recover.",
         hint: "Linked rise-and-fall cycles.",
       },
     ],

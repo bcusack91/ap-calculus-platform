@@ -836,11 +836,6 @@ This problem uses the two-point form, which is more common for single calculatio
       },
       {
         topicId: statesTopic.id,
-        front: 'What is the Clausius-Clapeyron equation used for?',
-        back: 'Relates vapor pressure to temperature: ln(P₂/P₁) = -(ΔHvap/R)(1/T₂ - 1/T₁). Can calculate ΔHvap from VP at two temperatures, or predict VP at different temperatures.'
-      },
-      {
-        topicId: statesTopic.id,
         front: 'How do IMFs affect viscosity and surface tension?',
         back: 'Stronger IMFs → Higher viscosity (more resistance to flow) and Higher surface tension (stronger cohesive forces at surface). Water has high values due to H-bonding.'
       }

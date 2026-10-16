@@ -30,7 +30,6 @@ async function main() {
       data: [
         { topicId: t1.id, front: 'Ideal Gas Law formula?', back: '$PV = nRT$\n\nP = pressure (atm), V = volume (L), n = moles, R = 0.0821 L·atm/(mol·K), T = temperature (K)', hint: 'PV = nRT is the most-used gas equation.' },
         { topicId: t1.id, front: "What is Dalton's Law of Partial Pressures?", back: '$P_{\\text{total}} = P_1 + P_2 + P_3 + \\cdots$\n\nThe total pressure is the sum of individual gas partial pressures.', hint: 'Each gas contributes independently.' },
-        { topicId: t1.id, front: "What is Graham's Law of Effusion?", back: '$\\frac{\\text{rate}_1}{\\text{rate}_2} = \\sqrt{\\frac{M_2}{M_1}}$\n\nLighter gases effuse faster.', hint: 'Rate is inversely proportional to square root of molar mass.' },
       ],
     });
     console.log('✅ Ideal Gas Law flashcards');
@@ -109,7 +108,7 @@ async function main() {
     await prisma.flashcard.createMany({
       data: [
         { topicId: t8.id, front: 'Standard cell potential formula?', back: '$E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}}$\n\nPositive $E^\\circ_{\\text{cell}}$ means the reaction is spontaneous.', hint: 'Cathode minus anode.' },
-        { topicId: t8.id, front: 'Nernst equation?', back: '$E = E^\\circ - \\frac{RT}{nF}\\ln Q$\n\nAt 25°C: $E = E^\\circ - \\frac{0.0592}{n}\\log Q$', hint: 'Adjusts cell potential for non-standard conditions.' },
+        { topicId: t8.id, front: 'Nernst equation?', back: "$E = E^\\circ - \\frac{RT}{nF}\\ln Q$\n\nUse it qualitatively: when $Q < 1$, $E > E^\\circ$; when $Q > 1$, $E < E^\\circ$; at equilibrium $E = 0$.", hint: 'Adjusts cell potential for non-standard conditions.' },
         { topicId: t8.id, front: 'Relationship between $\\Delta G^\\circ$ and $E^\\circ$?', back: '$\\Delta G^\\circ = -nFE^\\circ$\n\nn = moles of electrons, F = 96485 C/mol (Faraday constant)', hint: 'Positive E° gives negative ΔG° (spontaneous).' },
       ],
     });

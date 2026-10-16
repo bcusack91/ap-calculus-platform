@@ -398,11 +398,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Mean np; sd sqrt of np(1-p).",
       },
       {
-        front: "How does a geometric random variable differ from a binomial?",
-        back: "A geometric variable counts the number of trials until the first success (no fixed $n$), while a binomial counts successes in a fixed number $n$ of trials. Geometric: $P(X = k) = (1-p)^{k-1} p$.",
-        hint: "Trials until first success.",
-      },
-      {
         front: "How do mean and standard deviation change when you add a constant a to X?",
         back: "Adding $a$ shifts the mean: $\\\\mu_{X+a} = \\\\mu_X + a$, but leaves standard deviation unchanged: $\\\\sigma_{X+a} = \\\\sigma_X$. Spread is unaffected by shifting.",
         hint: "Shift moves center, not spread.",
@@ -411,11 +406,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "How do mean and standard deviation change when you multiply X by a constant b?",
         back: "$\\\\mu_{bX} = b\\\\,\\\\mu_X$ and $\\\\sigma_{bX} = |b|\\\\,\\\\sigma_X$. Variance scales by $b^2$.",
         hint: "Scaling changes both; sd by |b|.",
-      },
-      {
-        front: "For independent X and Y, how do you combine means and variances?",
-        back: "Means add or subtract: $\\\\mu_{X \\\\pm Y} = \\\\mu_X \\\\pm \\\\mu_Y$. Variances always ADD (even for differences) when independent: $\\\\sigma^2_{X \\\\pm Y} = \\\\sigma^2_X + \\\\sigma^2_Y$.",
-        hint: "Variances add even for X - Y.",
       },
       {
         front: "Common trap: can you add standard deviations directly?",

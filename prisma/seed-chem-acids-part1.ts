@@ -412,11 +412,6 @@ Ba(OH)₂ produces **2 moles OH⁻** per mole compound.`,
     data: [
       {
         topicId: phTopic.id,
-        front: 'Compare Arrhenius, Brønsted-Lowry, and Lewis acid-base theories.',
-        back: 'Arrhenius: acid produces H⁺, base produces OH⁻ (aqueous only). Brønsted-Lowry: acid donates H⁺, base accepts H⁺ (more general). Lewis: acid accepts e⁻ pair, base donates e⁻ pair (most general). Each includes previous.'
-      },
-      {
-        topicId: phTopic.id,
         front: 'What is a conjugate acid-base pair?',
         back: 'Two species that differ by one H⁺. Example: HF/F⁻ or NH₃/NH₄⁺. When acid loses H⁺, forms conjugate base. When base gains H⁺, forms conjugate acid. Always differ by exactly one proton.'
       },

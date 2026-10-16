@@ -3,21 +3,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
     slug: "aas-contemporary-issues",
     cards: [
       {
-        front: "What is mass incarceration, and how does it disproportionately affect African Americans?",
-        back: "Mass incarceration is the dramatic rise in U.S. imprisonment since the 1970s, driven by tough-on-crime and War on Drugs policies. Black Americans are imprisoned at roughly 5 times the rate of white Americans, reflecting disparities in policing, sentencing, and the criminal-legal system.",
-        hint: "War on Drugs, sentencing disparities",
-      },
-      {
-        front: "What does Michelle Alexander argue in 'The New Jim Crow' (2010)?",
-        back: "Alexander argues that mass incarceration functions as a modern racial caste system, stripping Black men of rights (voting, employment, housing) much as Jim Crow laws did, effectively re-establishing legalized discrimination through the criminal-legal system.",
-        hint: "Caste system through the prison system",
-      },
-      {
-        front: "What is the Black Lives Matter (BLM) movement, and when did it begin?",
-        back: "BLM is a decentralized social and political movement founded in 2013 by Alicia Garza, Patrisse Cullors, and Opal Tometi after the acquittal of George Zimmerman in the killing of Trayvon Martin. It protests police violence and systemic racism against Black people.",
-        hint: "2013, founded by three Black women",
-      },
-      {
         front: "Define the racial wealth gap and one major historical cause.",
         back: "The racial wealth gap is the large disparity in accumulated assets between Black and white households (white families hold roughly 6-10 times the median wealth of Black families). A major cause is redlining, which denied Black families mortgages and home equity for generations.",
         hint: "Home equity, redlining, inheritance",
@@ -36,41 +21,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What is the Afrofuturism movement?",
         back: "Afrofuturism is a cultural and artistic movement that blends science fiction, technology, and African diasporic culture to imagine liberated Black futures. Examples include the music of Sun Ra and George Clinton, the writing of Octavia Butler, and the film 'Black Panther.'",
         hint: "Sci-fi meets the Black diaspora",
-      },
-      {
-        front: "What is the significance of the 'Black Twitter' and digital activism in contemporary Black movements?",
-        back: "Black Twitter and social media let activists rapidly mobilize, share evidence (such as cellphone videos of police violence), and shape national conversations. Hashtags like #BlackLivesMatter and #SayHerName amplified issues that traditional media often overlooked.",
-        hint: "Hashtags, viral video, rapid mobilization",
-      },
-      {
-        front: "What does the #SayHerName campaign highlight?",
-        back: "#SayHerName, launched by the African American Policy Forum in 2014, draws attention to Black women and girls killed by police, such as Breonna Taylor and Sandra Bland, whose cases often receive less coverage than those of Black men.",
-        hint: "Black women victims of police violence",
-      },
-      {
-        front: "What is reparations, and what is one example of a recent reparations effort?",
-        back: "Reparations are compensation (financial or otherwise) for the harms of slavery and systemic racism. Recent efforts include California's 2020 reparations task force and Evanston, Illinois, which in 2021 became the first U.S. city to offer housing reparations to Black residents.",
-        hint: "Compensation for slavery's legacy; Evanston, IL",
-      },
-      {
-        front: "How do health disparities illustrate contemporary structural racism?",
-        back: "Black Americans face higher rates of maternal mortality (about 3 times that of white women), chronic illness, and shorter life expectancy. These gaps stem from unequal healthcare access, environmental racism, and implicit bias in medical treatment rather than biology.",
-        hint: "Maternal mortality, life expectancy gaps",
-      },
-      {
-        front: "What is environmental racism? Give an example.",
-        back: "Environmental racism is the disproportionate placement of pollution sources and environmental hazards in communities of color. The Flint, Michigan water crisis (2014), where a majority-Black city was exposed to lead-contaminated water, is a prominent example.",
-        hint: "Flint water crisis",
-      },
-      {
-        front: "Common trap: Is BLM a single centralized organization with one leader?",
-        back: "No. BLM is a decentralized network of chapters and a broader movement, not a single top-down organization. Conflating the movement with one organization or leader is a common misconception in exam responses.",
-        hint: "Decentralized, not top-down",
-      },
-      {
-        front: "How does the concept of 'colorblindness' function in contemporary racial debates?",
-        back: "Colorblindness is the idea that ignoring race promotes equality. Critics argue it is counterproductive because it denies the reality of structural racism, making it harder to address persistent disparities in wealth, housing, and criminal justice.",
-        hint: "'I don't see race' critique",
       },
     ],
   },

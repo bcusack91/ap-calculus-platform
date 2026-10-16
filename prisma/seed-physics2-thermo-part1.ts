@@ -337,31 +337,6 @@ $$\\Delta V = V_f - V_0 = 2.4 \\times 10^{-5} \\text{ m}^3$$ ✓
         front: 'State the Zeroth Law of Thermodynamics.',
         back: 'If objects A and B are each in thermal equilibrium with object C, then A and B are in thermal equilibrium with each other. Allows thermometer use.',
       },
-      {
-        topicId: temperature.id,
-        front: 'Give the formula for linear thermal expansion.',
-        back: 'ΔL = αL₀ΔT, where α is coefficient of linear expansion, L₀ is original length, ΔT is temperature change. Final length: L = L₀(1 + αΔT).',
-      },
-      {
-        topicId: temperature.id,
-        front: 'How does area expansion relate to linear expansion?',
-        back: 'ΔA = 2αA₀ΔT (or ΔA = βA₀ΔT where β = 2α). Area expansion coefficient is twice the linear expansion coefficient.',
-      },
-      {
-        topicId: temperature.id,
-        front: 'How does volume expansion relate to linear expansion?',
-        back: 'ΔV = 3αV₀ΔT (or ΔV = γV₀ΔT where γ = 3α). Volume expansion coefficient is three times the linear expansion coefficient.',
-      },
-      {
-        topicId: temperature.id,
-        front: 'Why is water unusual regarding thermal expansion?',
-        back: 'Water has maximum density at 4°C. Below 4°C it expands as it cools. Ice is less dense than water (floats). This property is crucial for aquatic life.',
-      },
-      {
-        topicId: temperature.id,
-        front: 'What is a bimetallic strip and how does it work?',
-        back: 'Two metals with different α bonded together. When heated, one expands more than the other, causing bending. Used in thermostats and circuit breakers.',
-      },
     ],
   })
 

@@ -163,34 +163,9 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "One fewer power than the term index.",
       },
       {
-        front: "What is the sum formula for a finite arithmetic series?",
-        back: "$S_n = \\frac{n}{2}(a_1 + a_n)$, the number of terms times the average of the first and last term. Equivalently $S_n = \\frac{n}{2}\\big(2a_1 + (n-1)d\\big)$ when $a_n$ is unknown.",
-        hint: "n times the average of ends.",
-      },
-      {
-        front: "What is the sum formula for a finite geometric series?",
-        back: "$S_n = a_1 \\cdot \\frac{1 - r^n}{1 - r}$ for $r \\neq 1$, where $a_1$ is the first term, $r$ the ratio, and $n$ the number of terms.",
-        hint: "1 minus r to the n, over 1 minus r.",
-      },
-      {
-        front: "When does an infinite geometric series converge, and to what sum?",
-        back: "It converges only when $|r| < 1$, to $S = \\frac{a_1}{1 - r}$. If $|r| \\geq 1$ the series diverges (has no finite sum).",
-        hint: "Ratio must be a proper fraction.",
-      },
-      {
-        front: "What is sigma (summation) notation and how do you read its parts?",
-        back: "$\\sum_{k=1}^{n} a_k$ means add $a_k$ for $k$ from the lower index $1$ to the upper index $n$. The index variable $k$ is plugged into the formula $a_k$ for each integer in range.",
-        hint: "Bottom and top give the range.",
-      },
-      {
         front: "What is a recursive formula, and give an example.",
         back: "A recursive formula defines each term using previous term(s) plus a starting value. Example (arithmetic): $a_1 = 3$, $a_n = a_{n-1} + 5$. You must know prior terms to compute the next.",
         hint: "Needs a seed term.",
-      },
-      {
-        front: "Evaluate $\\sum_{k=1}^{4} (2k + 1)$.",
-        back: "Plug in $k = 1,2,3,4$: $3 + 5 + 7 + 9 = 24$. Listing terms is safest for short finite sums.",
-        hint: "Add the four outputs.",
       },
       {
         front: "Worked example: find the 10th term of $2, 6, 18, 54, \\dots$",
@@ -201,16 +176,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "Common trap: in $a_n = a_1 r^{n-1}$, why is the exponent $n - 1$ not $n$?",
         back: "Because the first term $a_1$ uses zero multiplications by $r$ (exponent $0$). The exponent counts steps taken from the first term, which is one less than the term number.",
         hint: "First term has no multiplications yet.",
-      },
-      {
-        front: "What is a partial sum, and how does it relate to an infinite series?",
-        back: "A partial sum $S_n$ adds the first $n$ terms only. An infinite series equals the limit of the partial sums as $n \\to \\infty$; if that limit exists and is finite, the series converges to it.",
-        hint: "Limit of finite sums.",
-      },
-      {
-        front: "Express the repeating decimal $0.\\overline{4}$ as a fraction using an infinite series.",
-        back: "$0.\\overline{4} = 0.4 + 0.04 + \\dots$, geometric with $a_1 = 0.4$, $r = 0.1$. Sum $= \\frac{0.4}{1 - 0.1} = \\frac{0.4}{0.9} = \\frac{4}{9}$.",
-        hint: "Ratio 0.1, use the convergence formula.",
       },
     ],
   },
@@ -316,16 +281,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What is the difference between perfect (full) rhyme and slant (near) rhyme?",
         back: "Perfect rhyme matches stressed vowel and following sounds exactly (\"cat / hat\"). Slant rhyme has only approximate sound similarity (\"shape / keep\"), creating subtle dissonance or unease.",
         hint: "Exact versus approximate.",
-      },
-      {
-        front: "What is meter, and what is a metrical foot?",
-        back: "Meter is the regular pattern of stressed and unstressed syllables in a line. A foot is the basic repeating unit of that pattern, such as an iamb (unstressed-stressed) or trochee (stressed-unstressed).",
-        hint: "Rhythmic measuring unit.",
-      },
-      {
-        front: "Define iambic pentameter.",
-        back: "A line of five iambs (ten syllables total), each iamb being an unstressed then stressed syllable: da-DUM da-DUM da-DUM da-DUM da-DUM. It is the dominant meter of Shakespeare and much English verse.",
-        hint: "Five iambs, ten syllables.",
       },
       {
         front: "What is the difference between rhythm and meter?",

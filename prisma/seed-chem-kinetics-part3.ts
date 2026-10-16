@@ -349,11 +349,6 @@ $$E_{a,\\text{forward}} - E_{a,\\text{reverse}} = \\Delta H$$
       },
       {
         topicId: arrheniusTopic.id,
-        front: 'What is the two-point Arrhenius equation and when is it used?',
-        back: 'ln(k₂/k₁) = (Ea/R)(1/T₁ - 1/T₂). Used to: 1) Find Ea from k at two temperatures, 2) Predict k at new temperature. Very useful for calculations.'
-      },
-      {
-        topicId: arrheniusTopic.id,
         front: 'How do you determine Ea graphically using the Arrhenius equation?',
         back: 'Linear form: ln(k) = ln(A) - Ea/R × (1/T). Plot ln(k) vs 1/T gives straight line with slope = -Ea/R. From slope, Ea = -slope × R.'
       },

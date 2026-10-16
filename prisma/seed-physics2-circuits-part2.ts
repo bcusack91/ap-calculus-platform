@@ -663,12 +663,7 @@ $$I(2.0) = 120(0.135) = 16 \\text{ μA}$$
       {
         topicId: kirchhoff.id,
         front: 'What is the time constant for an RC circuit?',
-        back: 'τ = RC. After τ: 63% charged (37% remaining). After 5τ: 99% charged. Charging: q = Q_max(1-e^(-t/τ)). Discharging: q = Q₀e^(-t/τ).',
-      },
-      {
-        topicId: kirchhoff.id,
-        front: 'Why is high voltage used for power transmission?',
-        back: 'Power loss in wires: P_loss = I²R_wire. For same power (P=IV), higher V → lower I → much less I² loss! Step-up transformers at plant, step-down at homes.',
+        back: "τ = RC. It measures how quickly a capacitor charges or discharges: after one time constant a charging capacitor has about 63% of its final charge, and a discharging capacitor keeps about 37% of its initial charge. A larger R or C means slower charging.",
       },
       {
         topicId: kirchhoff.id,

@@ -216,8 +216,6 @@ So the best answer is not that states have disappeared, but that sovereignty is 
       { front: 'Federal state', back: 'Power divided constitutionally between national and regional governments. Examples: United States, Canada, Germany, India, Brazil, Nigeria.', lessonPart: 2 },
       { front: 'Devolution', back: 'Transfer of power from central government to regional governments. Can reduce separatism or strengthen regional identity. Examples: Scotland, Wales, Catalonia.', lessonPart: 2 },
       { front: 'Gerrymandering', back: 'Drawing electoral districts to advantage a party or group. Packing concentrates opponents; cracking splits them across districts.', lessonPart: 3 },
-      { front: 'Heartland Theory', back: 'Mackinder: control Eastern Europe and the Eurasian Heartland to control the World-Island. Emphasized land power.', lessonPart: 4 },
-      { front: 'Rimland Theory', back: 'Spykman: control the coastal fringes of Eurasia to contain the Heartland. Influenced Cold War containment alliances.', lessonPart: 4 },
       { front: 'Hard vs soft power', back: 'Hard power uses coercion: military force, sanctions, threats. Soft power uses attraction: culture, values, diplomacy, education, aid, legitimacy.', lessonPart: 5 },
     ],
   },

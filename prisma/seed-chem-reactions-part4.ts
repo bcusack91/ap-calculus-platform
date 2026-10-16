@@ -1404,11 +1404,6 @@ $$\\boxed{\\ce{2MnO4-(aq) + 16H+(aq) + 5C2O4^{2-}(aq) -> 2Mn^{2+}(aq) + 8H2O(l) 
       },
       {
         topicId: redoxTopic.id,
-        front: 'What are oxidizing and reducing agents, and what happens to them?',
-        back: 'Oxidizing agent: causes oxidation, gets reduced itself (gains electrons). Reducing agent: causes reduction, gets oxidized itself (loses electrons). They do opposite of their name!'
-      },
-      {
-        topicId: redoxTopic.id,
         front: 'What are the steps in the half-reaction method for balancing redox equations?',
         back: '1) Assign oxidation states, 2) Write half-reactions, 3) Balance atoms (except H,O), 4) Balance O with H₂O, 5) Balance H with H⁺ (acidic), 6) Balance charge with e⁻, 7) Equalize electrons, 8) Add and cancel.'
       },
@@ -1422,16 +1417,6 @@ $$\\boxed{\\ce{2MnO4-(aq) + 16H+(aq) + 5C2O4^{2-}(aq) -> 2Mn^{2+}(aq) + 8H2O(l) 
         front: 'How do you convert a balanced redox equation from acidic to basic solution?',
         back: 'Balance in acidic first (using H⁺). Add OH⁻ to both sides to neutralize all H⁺. Combine H⁺ + OH⁻ → H₂O. Cancel water molecules that appear on both sides.'
       },
-      {
-        topicId: redoxTopic.id,
-        front: 'What are common strong oxidizing agents and strong reducing agents?',
-        back: 'Strong oxidizing: MnO₄⁻, Cr₂O₇²⁻, H₂O₂, O₂, halogens (F₂ > Cl₂ > Br₂ > I₂). Strong reducing: active metals (Li, K, Na, Ca, Mg), H₂, C, Sn²⁺, Fe²⁺.'
-      },
-      {
-        topicId: redoxTopic.id,
-        front: 'How does the activity series predict spontaneous redox reactions?',
-        back: 'More active metals displace less active metals from compounds. Metal can reduce ions of any metal below it. Li > K > Ca > Na > Mg > Al > Zn > Fe > Ni > Sn > Pb > H > Cu > Ag > Au.'
-      }
     ]
   });
 

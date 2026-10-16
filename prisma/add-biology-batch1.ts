@@ -68,41 +68,6 @@ async function main() {
       data: [
         {
           topicId: enzymeKineticsTopic.id,
-          front: 'What is Vmax in enzyme kinetics?',
-          back: 'The maximum reaction velocity when all enzyme active sites are saturated with substrate. It represents the upper limit of the reaction rate for a given enzyme concentration.',
-          hint: 'Maximum velocity at substrate saturation',
-          isPremium: false
-        },
-        {
-          topicId: enzymeKineticsTopic.id,
-          front: 'What is Km and what does it indicate?',
-          back: 'Km (Michaelis constant) is the substrate concentration at which reaction velocity is half of Vmax. Lower Km = higher substrate affinity; Higher Km = lower substrate affinity.',
-          hint: 'Substrate concentration at half Vmax',
-          isPremium: false
-        },
-        {
-          topicId: enzymeKineticsTopic.id,
-          front: 'What is the Michaelis-Menten equation?',
-          back: 'V = (Vmax × [S]) / (Km + [S])\n\nDescribes how reaction velocity depends on substrate concentration. At low [S], V is proportional to [S]; at high [S], V approaches Vmax.',
-          hint: 'Relates velocity to substrate concentration',
-          isPremium: false
-        },
-        {
-          topicId: enzymeKineticsTopic.id,
-          front: 'How does competitive inhibition affect Km and Vmax?',
-          back: 'Km increases (appears to have lower affinity)\nVmax unchanged (can still be overcome with high [S])\n\nInhibitor competes with substrate for active site.',
-          hint: 'Km up, Vmax same',
-          isPremium: false
-        },
-        {
-          topicId: enzymeKineticsTopic.id,
-          front: 'How does noncompetitive inhibition affect Km and Vmax?',
-          back: 'Km unchanged (affinity not affected)\nVmax decreases (reduces number of functional enzymes)\n\nInhibitor binds to allosteric site, cannot be overcome by adding substrate.',
-          hint: 'Km same, Vmax down',
-          isPremium: true
-        },
-        {
-          topicId: enzymeKineticsTopic.id,
           front: 'What is allosteric regulation?',
           back: 'Regulation where molecules bind to a site other than the active site, causing a conformational change that affects enzyme activity. Can be positive (activator) or negative (inhibitor).',
           hint: 'Regulation at a site different from active site',

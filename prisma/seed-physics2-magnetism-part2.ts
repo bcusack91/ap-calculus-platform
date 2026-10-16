@@ -377,28 +377,8 @@ Note: Lower voltage → higher current for same power.`,
       },
       {
         topicId: emInduction.id,
-        front: 'How does an AC generator work?',
-        back: 'Rotate coil in B field → flux changes → induced EMF by Faraday. EMF(t) = NBAω sin(ωt). Max EMF = NBAω. Produces sinusoidal AC voltage.',
-      },
-      {
-        topicId: emInduction.id,
-        front: 'What is a transformer? Give the voltage and current relationships.',
-        back: 'Device using induction to change voltage. V_s/V_p = N_s/N_p (voltage ratio = turns ratio). Power conserved: I_s/I_p = N_p/N_s (inverse!). Only works with AC.',
-      },
-      {
-        topicId: emInduction.id,
         front: 'What are eddy currents?',
         back: 'Swirling induced currents in solid conductors when flux changes. Dissipate energy as heat. Create magnetic braking. Used in brakes, metal detectors, induction cooking. Reduce with laminated cores.',
-      },
-      {
-        topicId: emInduction.id,
-        front: 'What is self-inductance?',
-        back: 'ε = -L(ΔI/Δt). Changing current in coil induces EMF in same coil! L = inductance (Henry, H). Opposes current change (like inertia). For solenoid: L = μ₀n²Aℓ.',
-      },
-      {
-        topicId: emInduction.id,
-        front: 'What is the time constant for an RL circuit?',
-        back: 'τ = L/R. Current growth: I = I_max(1 - e^(-t/τ)). Decay: I = I₀e^(-t/τ). After τ: 63% of max (or 37% remaining). Energy stored: U = ½LI².',
       },
       {
         topicId: emInduction.id,

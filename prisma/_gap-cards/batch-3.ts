@@ -209,7 +209,7 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
       },
       {
         front: "How do you copy an array so changes to the copy do not affect the original?",
-        back: "Create a new array and copy each element in a loop, or use `Arrays.copyOf(arr, arr.length)`. Trap: `int[] b = a;` only copies the reference, so both names point to the same array.",
+        back: "Create a new array of the same length and copy each element in a loop. Trap: `int[] b = a;` only copies the reference, so both names point to the same array.",
         hint: "Assignment copies the reference, not the data."
       }
     ]

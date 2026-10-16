@@ -243,11 +243,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Crystallized stays, fluid declines.",
       },
       {
-        front: "What is the highest level of Kohlberg's moral reasoning, and when may it emerge?",
-        back: "The postconventional level, where morality is based on abstract principles and universal ethics rather than laws or social approval. It may emerge in adolescence or adulthood, if at all.",
-        hint: "Principle-based morality.",
-      },
-      {
         front: "What physical event marks the onset of adolescence, and what triggers it?",
         back: "Puberty, the period of rapid physical and sexual maturation, triggered by a surge in sex hormones. Menarche (first menstruation) and spermarche (first ejaculation) are key markers.",
         hint: "Hormone-driven sexual maturation.",
@@ -261,11 +256,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What does the social clock refer to?",
         back: "The culturally defined 'right time' for major life events such as marriage, parenthood, retirement, or career milestones. It varies across cultures and historical periods.",
         hint: "Cultural timing of life events.",
-      },
-      {
-        front: "What is the difference between the menopause and a midlife crisis as developmental concepts?",
-        back: "Menopause is the biological cessation of menstruation and fertility in midlife. A midlife crisis is a popularized but empirically weak idea of emotional turmoil at midlife; most research finds no universal crisis.",
-        hint: "Biological vs. (overstated) emotional event.",
       },
       {
         front: "According to research, how does life satisfaction typically change across adulthood?",
@@ -321,11 +311,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "State the Law of Total Probability for two cases.",
         back: "$P(A) = P(A \\mid B)P(B) + P(A \\mid B^c)P(B^c)$. It computes the overall probability of $A$ by weighting its conditional probabilities across all branches of $B$.",
         hint: "Weighted sum over a partition.",
-      },
-      {
-        front: "State Bayes' Theorem for two events.",
-        back: "$P(B \\mid A) = \\dfrac{P(A \\mid B)\\,P(B)}{P(A)}$, where $P(A)$ may be found by the Law of Total Probability. It reverses the direction of conditioning.",
-        hint: "Flip the conditional.",
       },
       {
         front: "Worked example: 1% of people have a disease. A test is 90% sensitive and has a 5% false positive rate. If positive, what is P(disease | positive)?",

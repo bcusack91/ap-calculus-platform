@@ -40,9 +40,8 @@ async function main() {
   if (t2) {
     await prisma.flashcard.createMany({
       data: [
-        { topicId: t2.id, front: 'What are the two stages of photosynthesis?', back: '1. **Light reactions** (thylakoid membrane): H₂O → O₂, produce ATP & NADPH\n2. **Calvin cycle** (stroma): CO₂ → G3P → glucose, uses ATP & NADPH', hint: 'Light reactions capture energy; Calvin cycle builds sugar.' },
+        { topicId: t2.id, front: 'What are the two stages of photosynthesis?', back: "1. **Light reactions** (thylakoid membranes): water is split, O₂ is released, and ATP and NADPH are made\n2. **Calvin cycle** (stroma): ATP and NADPH are used to fix CO₂ into sugars", hint: 'Light reactions capture energy; Calvin cycle builds sugar.' },
         { topicId: t2.id, front: 'What is the role of chlorophyll?', back: 'Chlorophyll absorbs red and blue light (reflects green). It excites electrons using light energy, initiating the electron transport chain in the thylakoid membrane.', hint: 'The primary photosynthetic pigment.' },
-        { topicId: t2.id, front: 'What is the Calvin Cycle (C3 fixation)?', back: '3 phases:\n1. **Carbon fixation**: CO₂ + RuBP → 2 G3P (RuBisCO enzyme)\n2. **Reduction**: G3P is reduced using ATP & NADPH\n3. **Regeneration**: RuBP is regenerated\n\n3 turns → 1 G3P (net)', hint: 'RuBisCO is the most abundant enzyme on Earth.' },
       ],
     });
     console.log('✅ Photosynthesis flashcards');
@@ -75,7 +74,7 @@ async function main() {
   if (t5) {
     await prisma.flashcard.createMany({
       data: [
-        { topicId: t5.id, front: 'What are the steps of translation?', back: '1. **Initiation**: Small ribosomal subunit binds mRNA at AUG (start codon), tRNA with methionine enters\n2. **Elongation**: tRNAs bring amino acids; peptide bonds form; ribosome translocates\n3. **Termination**: Stop codon (UAA, UAG, UGA) reached; release factor frees polypeptide', hint: 'AUG starts it; stop codons end it.' },
+        { topicId: t5.id, front: 'What are the steps of translation?', back: "1. **Initiation**: the ribosome assembles on the mRNA at the start codon (AUG), and the first tRNA (methionine) binds\n2. **Elongation**: tRNAs bring amino acids matched to each codon; peptide bonds form; the ribosome moves along the mRNA\n3. **Termination**: a stop codon (UAA, UAG, UGA) is reached and the polypeptide is released", hint: 'AUG starts it; stop codons end it.' },
         { topicId: t5.id, front: 'What is the role of tRNA?', back: 'Transfer RNA carries specific amino acids to the ribosome. Its anticodon base-pairs with the mRNA codon, ensuring correct amino acid placement.', hint: 'The adapter molecule between mRNA and protein.' },
       ],
     });

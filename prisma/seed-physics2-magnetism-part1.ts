@@ -381,18 +381,8 @@ $$\\tau = 0.052 \\text{ N·m}$$
       },
       {
         topicId: magneticForces.id,
-        front: 'What is the torque on a current loop in a B field?',
-        back: 'τ = NIAB sinθ = μB sinθ, where μ = NIA is magnetic dipole moment. θ angle between loop normal and B. Max when loop ⊥ B. Zero when loop ∥ B (equilibrium).',
-      },
-      {
-        topicId: magneticForces.id,
         front: 'What is the magnetic field of a long straight wire?',
         back: 'B = μ₀I/(2πr), where r is distance from wire. μ₀ = 4π×10⁻⁷ T·m/A. Field circles wire. Direction: right-hand grip rule (thumb = current, fingers = B).',
-      },
-      {
-        topicId: magneticForces.id,
-        front: 'What is the magnetic field inside a solenoid?',
-        back: 'B = μ₀nI = μ₀(N/L)I, where n = turns per length. UNIFORM field inside, nearly zero outside. Solenoid acts like bar magnet with N and S poles.',
       },
       {
         topicId: magneticForces.id,

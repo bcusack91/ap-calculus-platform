@@ -513,11 +513,6 @@ $$\\text{mol Cl}_2 = \\frac{0.892}{2} = 0.446 \\text{ mol}$$
       },
       {
         topicId: electrolyticTopic.id,
-        front: 'What are the electrode assignments in electrolytic cells?',
-        back: 'Anode: connected to POSITIVE terminal, oxidation, electrons leave (opposite of galvanic!). Cathode: connected to NEGATIVE terminal, reduction, electrons enter. Mnemonic still works: AN OX, RED CAT. Voltage source reverses polarity.'
-      },
-      {
-        topicId: electrolyticTopic.id,
         front: 'What happens during electrolysis of aqueous solutions?',
         back: 'Competition! Water can oxidize or reduce. Cathode: most easily reduced wins (higher E°) - active metals (Na⁺,K⁺)→H₂O reduced to H₂, less active (Cu²⁺,Ag⁺)→metal. Anode: most easily oxidized wins - active anions (Cl⁻,Br⁻)→X₂, oxyanions→O₂.'
       },
@@ -541,11 +536,6 @@ $$\\text{mol Cl}_2 = \\frac{0.892}{2} = 0.446 \\text{ mol}$$
         front: 'How do you calculate gas volumes from electrolysis?',
         back: 'mol gas = (mol e⁻)/n where n=electrons per molecule. H₂: 2e⁻→1H₂ (n=2). O₂: 4e⁻→1O₂ (n=4). Cl₂: 2e⁻→1Cl₂ (n=2). Volume at STP: V=mol×22.4 L/mol. Electrolysis of NaCl(aq): equal volumes H₂ and Cl₂!'
       },
-      {
-        topicId: electrolyticTopic.id,
-        front: 'What is battery charging and what is overpotential?',
-        back: 'Charging IS electrolysis - apply reverse voltage to restore reactants. Discharge: spontaneous, chemical→electrical. Charge: electrical→chemical. Overpotential: extra voltage needed beyond E° for activation energy, resistance, polarization. Example: water E°=-1.23V but need ~2V.'
-      }
     ]
   });
 

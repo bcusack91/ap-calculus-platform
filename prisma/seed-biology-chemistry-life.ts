@@ -225,7 +225,7 @@ Broken by **hydrolysis** (adds H₂O)
       {
         topicId: carbsTopic.id,
         front: 'Why can\'t humans digest cellulose?',
-        back: 'Cellulose has β-1,4-glycosidic bonds. Humans lack cellulase enzyme to break these bonds. Only organisms with cellulase-producing bacteria can digest it.',
+        back: "Cellulose is built from β-glucose, so its glycosidic linkages differ from the α linkages in starch. Humans lack the enzyme (cellulase) that breaks them; animals such as cows and termites rely on gut microbes that make it.",
       },
     ],
   })

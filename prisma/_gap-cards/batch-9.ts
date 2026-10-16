@@ -3,11 +3,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
     slug: "chi-square-tests",
     cards: [
       {
-        front: "What are the three chi-square test types on the AP Statistics exam?",
-        back: "Goodness-of-fit (one categorical variable vs. a claimed distribution), test of independence (one sample, two categorical variables), and test of homogeneity (multiple samples/populations compared on one categorical variable).",
-        hint: "GOF, independence, homogeneity.",
-      },
-      {
         front: "What is the chi-square test statistic formula and what does each symbol mean?",
         back: "$\\\\chi^2 = \\\\sum \\\\frac{(O - E)^2}{E}$, where $O$ is each observed count and $E$ is each expected count. Sum over all cells. Larger $\\\\chi^2$ means observed and expected differ more.",
         hint: "Sum of (observed minus expected) squared over expected.",
@@ -18,14 +13,9 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Row total times column total divided by n.",
       },
       {
-        front: "What is the expected count for a goodness-of-fit test?",
-        back: "$E_i = n \\\\cdot p_i$, where $n$ is the sample size and $p_i$ is the hypothesized proportion for category $i$. The expected counts must sum to $n$.",
-        hint: "Sample size times the claimed proportion.",
-      },
-      {
-        front: "What are the degrees of freedom for each chi-square test?",
-        back: "Goodness-of-fit: $df = k - 1$ (k = number of categories). Independence and homogeneity: $df = (\\\\text{rows} - 1)(\\\\text{columns} - 1)$.",
-        hint: "GOF uses categories minus 1; two-way uses (r-1)(c-1).",
+        front: "What are the degrees of freedom for a chi-square test for homogeneity or independence?",
+        back: "$df = (\\text{rows} - 1)(\\text{columns} - 1)$ for both tests.",
+        hint: "(r − 1)(c − 1) for both two-way tests.",
       },
       {
         front: "What conditions must be checked before any chi-square test?",
@@ -33,14 +23,9 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Random, Independent, Large expected counts.",
       },
       {
-        front: "Why must you check that all EXPECTED counts (not observed) are at least 5?",
-        back: "The chi-square statistic only approximately follows the chi-square distribution; that approximation requires sufficiently large expected counts. Observed counts can be small, but every expected count must be at least 5.",
+        front: "Why must you check that all EXPECTED counts (not observed) are greater than 5?",
+        back: "The chi-square statistic only approximately follows a chi-square distribution, and that approximation needs large expected counts. Observed counts can be small, but every expected count must be greater than 5.",
         hint: "It is about the approximation, and uses E, not O.",
-      },
-      {
-        front: "What does the hypotheses pair look like for a goodness-of-fit test?",
-        back: "H0: the categorical variable follows the stated distribution (state each $p_i$). Ha: at least one proportion differs from the stated value. Never write Ha with specific alternative values.",
-        hint: "Null states the full distribution; alternative says 'at least one differs.'",
       },
       {
         front: "How are the hypotheses written for a test of independence?",

@@ -92,10 +92,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         back: "Sensory adaptation is the diminished sensitivity to a constant, unchanging stimulus over time, so you stop noticing it (e.g., no longer feeling your clothes). It lets us focus on changes in the environment.",
       },
       {
-        front: "What is signal detection theory?",
-        back: "A model predicting how and when we detect a faint stimulus ('signal') amid background 'noise.' Detection depends on the stimulus intensity and the observer's psychological state (motivation, expectations, fatigue), not just the stimulus alone.",
-      },
-      {
         front: "Define selective attention and give a classic demonstration.",
         back: "Selective attention is focusing conscious awareness on one stimulus while filtering others. The cocktail party effect (tuning into one conversation in a noisy room) demonstrates it, as does inattentional blindness in the 'invisible gorilla' study.",
       },
@@ -106,7 +102,7 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
       },
       {
         front: "List several Gestalt principles of perceptual organization.",
-        back: "Proximity (nearby items group), similarity (alike items group), continuity (smooth paths preferred), closure (filling gaps to see whole forms), and figure-ground (separating object from background). The whole is perceived as more than the sum of its parts.",
+        back: "Proximity (nearby items group), similarity (alike items group), closure (filling gaps to see whole forms), and figure-ground (separating an object from its background). The whole is perceived as more than the sum of its parts.",
       },
       {
         front: "What are binocular cues for depth perception?",
@@ -115,7 +111,7 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
       },
       {
         front: "Name several monocular depth cues.",
-        back: "Cues available to one eye: relative size, interposition (overlap), linear perspective, texture gradient, relative height, light/shadow, and relative motion (motion parallax).",
+        back: "Cues available to one eye: relative clarity, relative size, texture gradient, linear perspective, and interposition (overlap).",
       },
       {
         front: "What is a perceptual set?",
@@ -199,15 +195,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
       {
         front: "Contrast exponential and logistic population growth.",
         back: "Exponential growth (J-curve) occurs with unlimited resources and produces ever-faster increase. Logistic growth (S-curve) slows as the population approaches carrying capacity K because of resource limits.",
-      },
-      {
-        front: "What is the exponential growth equation, and what does each variable mean?",
-        back: "$\\\\frac{dN}{dt} = rN$, where $N$ is population size, $t$ is time, and $r$ is the per-capita growth rate (intrinsic rate of increase). Use it when resources are unlimited.",
-      },
-      {
-        front: "What is the logistic growth equation, and what does each term mean?",
-        back: "$\\\\frac{dN}{dt} = rN\\\\frac{(K-N)}{K}$, where $N$ is population size, $r$ is the growth rate, and $K$ is carrying capacity. The factor $(K-N)/K$ slows growth as $N$ nears $K$. Use it when resources are limited.",
-        hint: "Adds the K term to exponential.",
       },
       {
         front: "Compare r-selected and K-selected species.",

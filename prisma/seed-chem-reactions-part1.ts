@@ -1196,44 +1196,14 @@ $$5.40 \\text{ g Al} \\xrightarrow{÷27.0} 0.200 \\text{ mol Al} \\xrightarrow{�
     data: [
       {
         topicId: reactionTypesTopic.id,
-        front: 'What are the 5 main types of chemical reactions and their general patterns?',
-        back: '1) Synthesis: A + B → AB (combine), 2) Decomposition: AB → A + B (break apart), 3) Single Replacement: A + BC → AC + B (one swap), 4) Double Replacement: AB + CD → AD + CB (two swap), 5) Combustion: Fuel + O₂ → CO₂ + H₂O (burns).'
-      },
-      {
-        topicId: reactionTypesTopic.id,
-        front: 'What is the metal activity series and how is it used?',
-        back: 'Li > K > Ba > Ca > Na > Mg > Al > Zn > Fe > Ni > Sn > Pb > H > Cu > Ag > Au. Higher metals displace lower metals from compounds. Use to predict if single replacement reactions occur.'
-      },
-      {
-        topicId: reactionTypesTopic.id,
-        front: 'What are the key solubility rules for predicting precipitates?',
-        back: 'SOLUBLE: Group 1, NH₄⁺, NO₃⁻, most Cl⁻/Br⁻/I⁻ (except Ag⁺, Pb²⁺), most SO₄²⁻ (except Ba²⁺, Pb²⁺). INSOLUBLE: Most CO₃²⁻, PO₄³⁻, OH⁻, S²⁻ (except Group 1, NH₄⁺).'
-      },
-      {
-        topicId: reactionTypesTopic.id,
         front: 'What are the driving forces that make reactions "go"?',
         back: '1) Formation of precipitate (insoluble solid), 2) Formation of water (neutralization), 3) Formation of gas (escapes), 4) Transfer of electrons (redox), 5) Energy release (exothermic).'
-      },
-      {
-        topicId: reactionTypesTopic.id,
-        front: 'How do you predict products of a double replacement reaction?',
-        back: 'Switch cations and anions (AB + CD → AD + CB), then check solubility rules. Reaction occurs if precipitate, water, or gas forms. Use solubility rules to determine states (s) or (aq).'
       },
       {
         topicId: reactionTypesTopic.id,
         front: 'What are the products of complete combustion of hydrocarbons?',
         back: 'CO₂ (carbon dioxide) + H₂O (water) + energy. Pattern: CₓHᵧ + O₂ → CO₂ + H₂O. Incomplete combustion (insufficient O₂) produces CO or C (soot).'
       },
-      {
-        topicId: reactionTypesTopic.id,
-        front: 'How do you determine if a single replacement reaction will occur?',
-        back: 'Use activity series. For metals: Higher metal displaces lower metal. For halogens (F₂ > Cl₂ > Br₂ > I₂): Higher halogen displaces lower halogen. If reactant metal/halogen is below the one in compound, NO REACTION.'
-      },
-      {
-        topicId: reactionTypesTopic.id,
-        front: 'What is the difference between synthesis and decomposition reactions?',
-        back: 'Synthesis: Multiple reactants combine to form ONE product (A + B → AB). Often exothermic. Decomposition: ONE reactant breaks into multiple products (AB → A + B). Often endothermic, requires energy input (heat, electricity, light).'
-      }
     ]
   });
 

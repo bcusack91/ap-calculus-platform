@@ -501,23 +501,13 @@ $$E = 0.0592 \\times \\log(100) = 0.0592 \\times 2 = 0.12 \\text{ V}$$ ✓
     data: [
       {
         topicId: nernstTopic.id,
-        front: 'What is the Nernst equation and when do you use it?',
-        back: 'E = E° - (0.0592/n)log Q at 25°C. Use for NON-standard conditions (concentrations ≠ 1M, pressure ≠ 1atm). E=cell potential, E°=standard, n=electrons, Q=reaction quotient. General: E = E° - (RT/nF)ln Q.'
-      },
-      {
-        topicId: nernstTopic.id,
         front: 'How do concentration changes affect cell potential?',
         back: 'Increase [products]: Q↑, E decreases (less favorable). Increase [reactants]: Q↓, E increases (more favorable). Le Chatelier applies! Q<1 (excess reactants): E>E°. Q>1 (excess products): E<E°.'
       },
       {
         topicId: nernstTopic.id,
         front: 'What is a concentration cell?',
-        back: 'Same species at both electrodes, different concentrations. E°=0 but E≠0! Dilute side: anode (oxidation increases conc). Concentrated side: cathode (reduction decreases conc). Tries to equalize concentrations. E=(0.0592/n)log([conc]/[dilute]).'
-      },
-      {
-        topicId: nernstTopic.id,
-        front: 'How do you calculate equilibrium constant K from E°?',
-        back: 'At equilibrium: E=0, Q=K. From Nernst: E° = (0.0592/n)log K. Rearrange: log K = nE°/0.0592. Large positive E° → large K (products favored). Negative E° → small K (reactants favored).'
+        back: "Same species at both electrodes, different concentrations. E° = 0 but E ≠ 0! The dilute side is the anode (oxidation raises its concentration); the concentrated side is the cathode (reduction lowers its concentration). The cell runs until the concentrations are equal, when E = 0."
       },
       {
         topicId: nernstTopic.id,
@@ -534,11 +524,6 @@ $$E = 0.0592 \\times \\log(100) = 0.0592 \\times 2 = 0.12 \\text{ V}$$ ✓
         front: 'What is the relationship between E, ΔG, and spontaneity?',
         back: 'ΔG = -nFE (any conditions). E>0: ΔG<0 (spontaneous). E=0: ΔG=0 (equilibrium). E<0: ΔG>0 (non-spontaneous). At standard: ΔG° = -nFE°. E and ΔG always opposite signs.'
       },
-      {
-        topicId: nernstTopic.id,
-        front: 'How do you use the Nernst equation step-by-step?',
-        back: '1) Calculate E° from standard potentials, 2) Write balanced equation, 3) Find n (electrons), 4) Write Q (products/reactants, omit solids/liquids), 5) Calculate Q from concentrations, 6) E = E° - (0.0592/n)log Q, 7) Solve for E.'
-      }
     ]
   });
 

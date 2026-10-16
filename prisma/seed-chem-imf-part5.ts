@@ -1218,16 +1218,6 @@ $$\\boxed{\\text{Naphthalene (sublimation) → Sand (filtration + drying) → Sa
     data: [
       {
         topicId: mixturesTopic.id,
-        front: 'What are the three types of mixtures and how do they differ?',
-        back: 'Solutions (< 1 nm, uniform, don\'t settle), Colloids (1-1000 nm, show Tyndall effect, don\'t settle), Suspensions (> 1000 nm, settle, can filter). Differ by particle size and properties.'
-      },
-      {
-        topicId: mixturesTopic.id,
-        front: 'What is the Tyndall effect and how is it used?',
-        back: 'Scattering of light by colloidal particles. Light beam visible through colloid, invisible through solution. Test: shine light through mixture - visible path = colloid.'
-      },
-      {
-        topicId: mixturesTopic.id,
         front: 'How does paper chromatography separate components and what does Rf mean?',
         back: 'Separates by polarity. Polar compounds stick to polar paper (low Rf), nonpolar travel with solvent (high Rf). Rf = distance(compound)/distance(solvent). Range: 0-1.'
       },

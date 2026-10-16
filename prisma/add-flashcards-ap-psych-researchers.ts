@@ -71,9 +71,8 @@ async function main() {
   if (t5) {
     await prisma.flashcard.createMany({
       data: [
-        { topicId: t5.id, front: 'Sigmund Freud — what is he known for?', back: '**Psychoanalysis**. Unconscious mind drives behavior. Personality structure: **id** (pleasure), **ego** (reality), **superego** (morality). **Defense mechanisms** (repression, projection, etc.). **Psychosexual stages**.', hint: 'The father of psychoanalysis.' },
+        { topicId: t5.id, front: 'Sigmund Freud — what is he known for?', back: "**Psychoanalysis**. Unconscious mind drives behavior. Personality structure: **id** (pleasure), **ego** (reality), **superego** (morality). **Defense mechanisms** (repression, projection, etc.).", hint: 'The father of psychoanalysis.' },
         { topicId: t5.id, front: 'Carl Rogers — what is he known for?', back: '**Humanistic psychology** and **client-centered therapy**. Key concepts: unconditional positive regard, self-concept, empathy. Believed people are inherently good and strive for self-actualization.', hint: 'Accept people as they are.' },
-        { topicId: t5.id, front: 'Abraham Maslow — what is he known for?', back: "**Hierarchy of Needs**: physiological → safety → belonging → esteem → self-actualization. People must meet lower needs before pursuing higher ones.", hint: 'The pyramid of needs.' },
       ],
     });
     console.log('✅ Personality Theory researchers');

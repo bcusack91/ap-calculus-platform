@@ -160,7 +160,7 @@ export const chemCsFlashcards: FlashcardsByTopic = {
 
   // ================= AP COMPUTER SCIENCE A =================
   'csa-variables-types': [
-    { front: 'Name the primitive types tested on AP CSA.', back: '$int$, $double$, and $boolean$ (plus $char$ conceptually). $String$ is a reference type, not primitive.' },
+    { front: 'Name the primitive types tested on AP CSA.', back: "int, double, and boolean are the primitive types tested on AP CSA. String is a reference type (an object), not a primitive." },
     { front: 'What happens in integer division in Java?', back: 'The decimal is truncated: $7 / 2$ equals $3$, not 3.5.' },
     { front: 'What does the modulus operator do?', back: 'Returns the remainder: $7 \\% 2$ equals $1$. Useful for even/odd tests and digit extraction.' },
     { front: 'What is casting and when is it needed?', back: 'Converting between types: $(double) 7 / 2$ gives 3.5 by forcing floating-point division.' },
@@ -172,7 +172,6 @@ export const chemCsFlashcards: FlashcardsByTopic = {
     { front: 'What is short-circuit evaluation?', back: 'With $\\&\\&$, if the left side is false Java skips the right side; with $||$, a true left side skips the right.' },
     { front: 'Why must you use .equals() instead of == for Strings?', back: '$==$ compares references (memory addresses); .equals() compares the actual character content.' },
     { front: 'What does the compound operator $x += 3$ do?', back: 'Equivalent to $x = x + 3$.' },
-    { front: 'What is the difference between $x++$ and $++x$?', back: 'Post-increment uses the old value then increments; pre-increment increments first then uses the new value.' },
     { front: 'What is the result of $10 \\% 3$ and $3 \\% 10$?', back: '$1$ and $3$ — when the dividend is smaller, the remainder is the dividend itself.' },
   ],
   'csa-loops': [
@@ -189,7 +188,7 @@ export const chemCsFlashcards: FlashcardsByTopic = {
     { front: 'What does indexOf return when the target is absent?', back: '$-1$.' },
     { front: 'What does compareTo return for Strings?', back: 'Negative if this comes first alphabetically, 0 if equal, positive if it comes later.' },
     { front: 'What is a null reference and what error does using it cause?', back: 'A reference pointing to no object; calling a method on it throws a NullPointerException.' },
-    { front: 'How do you get one character from a String?', back: 'charAt(index), which returns a char; indexing is zero-based.' },
+    { front: 'How do you get one character from a String?', back: "Use substring(i, i + 1), which returns a one-character String starting at index i; indexing is zero-based." },
   ],
   'csa-class-design': [
     { front: 'What is encapsulation?', back: 'Keeping instance variables private and exposing controlled access through public methods.' },
@@ -220,7 +219,7 @@ export const chemCsFlashcards: FlashcardsByTopic = {
     { front: 'What happens without a proper base case?', back: 'Infinite recursion, exhausting the call stack and throwing StackOverflowError.' },
     { front: 'Write the recursive definition of factorial.', back: '$n! = n \\times (n-1)!$ with base case $0! = 1$.' },
     { front: 'What is the recursive definition of Fibonacci?', back: '$F(n) = F(n-1) + F(n-2)$, with $F(0) = 0$ and $F(1) = 1$.' },
-    { front: 'How does binary search use recursion?', back: 'Compare the middle element, then recurse on the half that could contain the target — $O(\\log n)$.' },
+    { front: 'How does binary search use recursion?', back: "Compare the target with the middle element, then recurse on the half that could still contain it. Each call halves the search range, and the data must be sorted." },
     { front: 'What is the trade-off of recursion vs. iteration?', back: 'Recursion is clearer for self-similar problems but uses stack memory per call; iteration is usually more efficient.' },
   ],
 
@@ -243,7 +242,7 @@ export const chemCsFlashcards: FlashcardsByTopic = {
   ],
   'csp-algorithms': [
     { front: 'What is an algorithm?', back: 'A finite, precise sequence of steps that solves a problem or accomplishes a task.' },
-    { front: 'Compare linear and binary search.', back: 'Linear checks each element ($O(n)$, works on any list); binary halves the range each step ($O(\\log n)$, requires a sorted list).' },
+    { front: 'Compare linear and binary search.', back: "Linear search checks each element in order and works on any list; binary search needs a sorted list and eliminates half of the remaining elements each step, so it usually takes far fewer steps on large lists." },
     { front: 'What is the difference between a reasonable and unreasonable algorithm?', back: 'Reasonable runs in polynomial time; unreasonable grows exponentially and becomes impractical at scale.' },
     { front: 'What is a heuristic?', back: 'An approach giving a good-enough solution quickly when an exact solution is impractical.' },
     { front: 'What is an undecidable problem?', back: 'One for which no algorithm can produce a correct yes/no answer for every possible input.' },
@@ -261,7 +260,6 @@ export const chemCsFlashcards: FlashcardsByTopic = {
     { front: 'What is a protocol?', back: 'An agreed set of rules governing how devices format and exchange data.' },
     { front: 'What does TCP do vs. IP?', back: 'IP routes packets by address; TCP ensures reliable, ordered, complete delivery with acknowledgments and retransmission.' },
     { front: 'What is packet switching?', back: 'Splitting data into packets routed independently and reassembled at the destination — resilient and efficient.' },
-    { front: 'What does DNS do?', back: 'Translates human-readable domain names into IP addresses.' },
     { front: 'What does it mean that the Internet is fault-tolerant?', back: 'Redundant paths mean data can reroute around failures without the network going down.' },
     { front: 'What is bandwidth vs. latency?', back: 'Bandwidth is data transferred per unit time; latency is delay before transfer begins.' },
   ],
@@ -270,7 +268,6 @@ export const chemCsFlashcards: FlashcardsByTopic = {
     { front: 'What is symmetric vs. asymmetric encryption?', back: 'Symmetric uses one shared key; asymmetric uses a public key to encrypt and a private key to decrypt.' },
     { front: 'What is a phishing attack?', back: 'Tricking someone into revealing credentials by impersonating a trusted party.' },
     { front: 'What is multifactor authentication?', back: 'Requiring two or more of: something you know, something you have, something you are.' },
-    { front: 'What is a DDoS attack?', back: 'Overwhelming a server with traffic from many machines so legitimate users cannot access it.' },
     { front: 'What is a certificate authority?', back: 'A trusted third party issuing digital certificates that verify a site owns its public key.' },
   ],
   'csp-safe-computing': [

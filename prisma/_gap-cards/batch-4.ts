@@ -22,18 +22,13 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         back: "\"puter\". The one-argument substring(from) returns all characters from index from to the end of the string.",
       },
       {
-        front: "Explain the two overloaded forms of indexOf for String.",
-        back: "indexOf(String str) returns the index of the first occurrence of str, or -1 if not found. indexOf(String str, int from) starts searching at index from. Use -1 as the not-found sentinel in conditionals.",
-        hint: "What does it return when missing?",
-      },
-      {
-        front: "Why are String objects called immutable, and what does a method like toUpperCase() actually do?",
-        back: "A String's contents can never be changed after creation. Methods like toUpperCase(), substring(), and replace() do not modify the original; they return a brand-new String. You must assign the result, e.g. s = s.toUpperCase().",
+        front: "Why are String objects called immutable, and what does a method like substring() actually do?",
+        back: "A String's contents can never be changed after creation. Methods like substring() do not modify the original; they return a brand-new String. You must assign the result, e.g. s = s.substring(1).",
         hint: "Returns new, never mutates.",
       },
       {
-        front: "What is the difference between String concatenation with + when the right operand is an int versus a char?",
-        back: "With + and at least one String operand, an int is converted to its digit characters (\"x\" + 5 gives \"x5\"). A char is appended as its character ('A' gives \"xA\"). But char + int with no String performs integer arithmetic on Unicode values.",
+        front: "What happens when you use + with a String and an int?",
+        back: "If at least one operand is a String, + concatenates: the int is converted to its digits, so \"x\" + 5 gives \"x5\". Evaluation is left to right, so 1 + 2 + \"x\" gives \"3x\" but \"x\" + 1 + 2 gives \"x12\".",
         hint: "Watch operand types.",
       },
       {
@@ -54,15 +49,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "How do you safely loop through every character of a String s by index?",
         back: "Use for (int i = 0; i < s.length(); i++) and access s.substring(i, i + 1). Valid indices run 0 to s.length() - 1; using <= or s.length() as a bound causes an out-of-bounds error.",
         hint: "Bound is strictly less than length().",
-      },
-      {
-        front: "When is a new object actually created, and what is the role of the keyword new versus a String literal?",
-        back: "new ClassName(args) always allocates a new object and runs its constructor. String literals like \"cat\" may be reused from a string pool, which is exactly why == comparisons on literals are unreliable and .equals() is required.",
-        hint: "Why == is risky.",
-      },
-      {
-        front: "Worked example: what does \"banana\".indexOf(\"a\", 3) return?",
-        back: "3. The search starts at index 3, and \"banana\" has an 'a' at index 3 (b-a-n-a-n-a is indices 0-5), so it returns 3.",
       },
     ],
   },
@@ -213,8 +199,8 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "A named box for a value.",
       },
       {
-        front: "What does the assignment operator do, and how is x = 5 different from a math equation?",
-        back: "Assignment stores the value on the right into the variable on the left. x = 5 sets x's value to 5; it is a command, not a statement of equality. So x = x + 1 increases x by one.",
+        front: "What does the assignment operator (←) do, and how is x ← 5 different from a math equation?",
+        back: "Assignment stores the value on the right in the variable on the left. x ← 5 sets x's value to 5; it is a command, not a statement of equality. So x ← x + 1 increases x by one.",
         hint: "Right-to-left, not equality.",
       },
       {
@@ -262,7 +248,7 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Test vs. store.",
       },
       {
-        front: "Worked example: what value is in total after total = 0; REPEAT 4 TIMES { total = total + 3 }?",
+        front: "Worked example: what value is in total after total ← 0; REPEAT 4 TIMES { total ← total + 3 }?",
         back: "12. The loop runs 4 times, adding 3 each pass: 3, 6, 9, 12.",
       },
     ],
@@ -376,11 +362,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Same name, different parameters.",
       },
       {
-        front: "Why should toString() be overridden, and what does it enable?",
-        back: "Overriding public String toString() lets an object provide a readable text representation. Once defined, printing the object (System.out.println(obj)) automatically uses it instead of the default memory-address-like output.",
-        hint: "Used automatically when printing.",
-      },
-      {
         front: "What is the difference between a local variable, a parameter, and an instance variable in scope?",
         back: "A parameter is a variable declared in a method header that receives an argument. A local variable is declared inside a method and exists only during that call. An instance variable is declared in the class and persists for the object's lifetime.",
         hint: "Where it is declared and how long it lives.",
@@ -483,11 +464,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "State the cosine sum and difference identities.",
         back: "$\\\\cos(A + B) = \\\\cos A \\\\cos B - \\\\sin A \\\\sin B$ and $\\\\cos(A - B) = \\\\cos A \\\\cos B + \\\\sin A \\\\sin B$. The sign on the right is OPPOSITE the sign in the argument.",
         hint: "Cosine flips the sign.",
-      },
-      {
-        front: "State the tangent sum and difference identities.",
-        back: "$\\\\tan(A + B) = \\\\frac{\\\\tan A + \\\\tan B}{1 - \\\\tan A \\\\tan B}$ and $\\\\tan(A - B) = \\\\frac{\\\\tan A - \\\\tan B}{1 + \\\\tan A \\\\tan B}$. The numerator matches the sign; the denominator is opposite.",
-        hint: "Numerator same, denominator opposite.",
       },
       {
         front: "Common trap: why is cos(A + B) NOT equal to cos A + cos B?",

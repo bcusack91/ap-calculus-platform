@@ -58,10 +58,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What was the Great Recession of 2008?",
         back: "A severe financial crisis triggered by the collapse of the housing/subprime-mortgage bubble, leading to bank failures, the TARP bailout, and high unemployment; the worst downturn since the Great Depression.",
       },
-      {
-        front: "What was a major legislative achievement of President Obama in 2010?",
-        back: "The Affordable Care Act ('Obamacare'), which expanded health-insurance coverage through mandates, subsidies, and Medicaid expansion, and barred denial for pre-existing conditions.",
-      },
     ],
   },
   {

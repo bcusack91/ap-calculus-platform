@@ -533,19 +533,9 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Biological vs. adoptive comparison",
       },
       {
-        front: "What is the difference between genotype and phenotype?",
-        back: "Genotype is an organism's genetic makeup (its alleles). Phenotype is the observable trait or behavior, resulting from the interaction of genotype with the environment.",
-        hint: "Genes vs. observable traits",
-      },
-      {
         front: "What is gene-environment interaction?",
         back: "When the effect of genes depends on the environment (and vice versa). For example, a genetic predisposition to depression may emerge only under significant stress (a diathesis-stress model).",
         hint: "Genes' effect depends on environment",
-      },
-      {
-        front: "What is epigenetics?",
-        back: "The study of how environmental factors can switch genes on or off without changing the DNA sequence (e.g., via methylation). It explains how experience can leave lasting, sometimes heritable, molecular marks.",
-        hint: "Environment turns genes on/off",
       },
       {
         front: "What is the nature vs. nurture debate, and where does modern science stand?",

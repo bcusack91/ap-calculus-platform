@@ -201,11 +201,6 @@ With $a = -1$:
     },
     {
       topicId: topic3.id,
-      front: 'When is a piecewise function continuous at $x = c$?',
-      back: 'When the left limit equals the right limit equals $f(c)$ — i.e., the pieces connect with no jump or gap'
-    },
-    {
-      topicId: topic3.id,
       front: 'How can you write $|x|$ as a piecewise function?',
       back: '$|x| = \\begin{cases} x & \\text{if } x \\geq 0 \\\\ -x & \\text{if } x < 0 \\end{cases}$'
     },
@@ -411,16 +406,6 @@ The estimate with $h = 0.01$ gives approximately $-0.2488$, which is very close!
     },
     {
       topicId: topic4.id,
-      front: 'What is the formula for instantaneous rate of change at $x = a$?',
-      back: '$\\lim_{h \\to 0} \\frac{f(a + h) - f(a)}{h}$ — this is the derivative $f\'(a)$'
-    },
-    {
-      topicId: topic4.id,
-      front: 'What does the instantaneous rate of change represent geometrically?',
-      back: 'The slope of the tangent line to the graph at the point $(a, f(a))$'
-    },
-    {
-      topicId: topic4.id,
       front: 'What is the difference quotient?',
       back: '$\\frac{f(a + h) - f(a)}{h}$ — represents average rate of change over tiny interval $[a, a+h]$'
     },
@@ -429,16 +414,6 @@ The estimate with $h = 0.01$ gives approximately $-0.2488$, which is very close!
       front: 'If $s(t)$ represents position, what is average velocity from $t = a$ to $t = b$?',
       back: '$\\frac{s(b) - s(a)}{b - a}$ — average rate of change of position'
     },
-    {
-      topicId: topic4.id,
-      front: 'What happens to the secant line as $h \\to 0$ in the difference quotient?',
-      back: 'The secant line approaches the tangent line at the point'
-    },
-    {
-      topicId: topic4.id,
-      front: 'Alternative form of instantaneous rate of change at $x = a$?',
-      back: '$\\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a}$ (using $x$ instead of $a + h$)'
-    }
   ]
 
   for (const flashcard of flashcards4) {

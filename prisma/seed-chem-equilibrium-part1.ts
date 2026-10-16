@@ -382,11 +382,6 @@ $$K_{c,\\text{reverse}} = 0.0156$$
       },
       {
         topicId: equilibriumTopic.id,
-        front: 'What is the relationship between K_c and K_p?',
-        back: 'K_p = K_c(RT)^Δn. R = 0.08206 L·atm/(mol·K), T in Kelvin. Δn = moles gas products - moles gas reactants. If Δn = 0, then K_p = K_c.'
-      },
-      {
-        topicId: equilibriumTopic.id,
         front: 'How do you interpret the magnitude of K?',
         back: 'K >> 1 (>10³): products favored, equilibrium right. K ≈ 1 (10⁻³ to 10³): significant amounts of both. K << 1 (<10⁻³): reactants favored, equilibrium left. K is temperature dependent.'
       },

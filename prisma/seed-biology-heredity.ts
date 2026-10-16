@@ -558,7 +558,7 @@ If three genes:
       {
         topicId: chromTopic.id,
         front: 'Define aneuploidy and give examples.',
-        back: 'Abnormal number of individual chromosomes. Monosomy (2n-1): Turner syndrome (45,X). Trisomy (2n+1): Down syndrome (Trisomy 21), Klinefelter (47,XXY).',
+        back: "An abnormal number of individual chromosomes, usually caused by nondisjunction during meiosis. Monosomy (2n − 1): one chromosome of a pair is missing. Trisomy (2n + 1): one chromosome has an extra copy.",
       },
       {
         topicId: chromTopic.id,

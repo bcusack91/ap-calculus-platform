@@ -78,26 +78,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Stanzas are patterned line groups.",
       },
       {
-        front: "Define meter, foot, and iambic pentameter.",
-        back: "Meter is the regular pattern of stressed and unstressed syllables in a line. A foot is the basic unit of meter (e.g., an iamb = unstressed-stressed). Iambic pentameter is a line of five iambs (ten syllables, da-DUM x5), the dominant meter of English verse and of Shakespeare's plays and sonnets.",
-        hint: "Five iambs = pentameter.",
-      },
-      {
-        front: "Name and define the common metrical feet.",
-        back: "Iamb (unstressed-STRESSED, \"a-BOUT\"), trochee (STRESSED-unstressed, \"GAR-den\"), anapest (un-un-STRESSED, \"in-ter-RUPT\"), dactyl (STRESSED-un-un, \"PO-e-try\"), and spondee (STRESSED-STRESSED, \"DEAD SET\"). Recognizing feet lets you scan a line and discuss rhythm.",
-        hint: "Iamb, trochee, anapest, dactyl, spondee.",
-      },
-      {
-        front: "What is a Shakespearean (English) sonnet's form?",
-        back: "Fourteen lines of iambic pentameter, rhyme scheme ABAB CDCD EFEF GG: three quatrains and a concluding couplet. The quatrains develop an idea or argument; the couplet often delivers a turn, resolution, or epigrammatic punch.",
-        hint: "3 quatrains + a couplet, ABAB CDCD EFEF GG.",
-      },
-      {
-        front: "What is a Petrarchan (Italian) sonnet's form?",
-        back: "Fourteen lines split into an octave (8 lines, rhyme ABBAABBA) and a sestet (6 lines, often CDECDE or CDCDCD). The octave poses a problem or question; the volta (turn) at line 9 introduces the resolution or shift in the sestet.",
-        hint: "Octave + sestet; turn at line 9.",
-      },
-      {
         front: "What is a volta, and why does it matter?",
         back: "A volta is the \"turn\" in a poem (especially a sonnet) where the argument, mood, or perspective shifts. In Petrarchan sonnets it falls at line 9; in Shakespearean sonnets often at the couplet. Identifying the volta reveals the poem's structural logic and central tension.",
         hint: "The turn in thought or feeling.",
@@ -108,24 +88,9 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Line breaks but grammar runs on.",
       },
       {
-        front: "Define blank verse and free verse, and distinguish them.",
-        back: "Blank verse is unrhymed iambic pentameter (metered but no rhyme; Milton, Shakespeare's dialogue). Free verse has no regular meter or rhyme scheme, relying on natural speech rhythms, line breaks, and imagery for structure (Whitman, much modern poetry).",
-        hint: "Blank = metered/no rhyme; free = neither.",
-      },
-      {
-        front: "What is a villanelle?",
-        back: "A 19-line fixed form of five tercets and a final quatrain, built on two refrains and two rhymes (ABA pattern). Lines 1 and 3 repeat alternately as refrains and join as a couplet at the end. Example: Dylan Thomas's \"Do Not Go Gentle into That Good Night.\"",
-        hint: "19 lines, two recurring refrains.",
-      },
-      {
         front: "What is the difference between rhyme scheme and rhythm?",
         back: "Rhyme scheme is the pattern of end rhymes, labeled with letters (ABAB). Rhythm/meter is the pattern of stressed and unstressed syllables within lines. A poem can be metrically regular yet unrhymed (blank verse) or rhymed yet metrically loose.",
         hint: "End sounds vs. beat.",
-      },
-      {
-        front: "How do you scan a line of poetry?",
-        back: "Read it aloud, mark stressed (/) and unstressed (u) syllables, group them into feet, then count the feet per line. The dominant foot names the meter (e.g., mostly iambs) and the count names the length (five feet = pentameter). Note deviations as meaningful.",
-        hint: "Mark stresses, group into feet, count.",
       },
       {
         front: "Common AP trap: assuming form is decorative. How should you treat form on the exam?",

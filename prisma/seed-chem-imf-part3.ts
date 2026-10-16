@@ -924,24 +924,9 @@ For ionic compounds:
       },
       {
         topicId: solutionsTopic.id,
-        front: 'What are the four colligative properties?',
-        back: '1) Vapor pressure lowering (Raoult\'s Law), 2) Boiling point elevation (ΔTb = Kb·m·i), 3) Freezing point depression (ΔTf = Kf·m·i), 4) Osmotic pressure (Π = MRT).'
-      },
-      {
-        topicId: solutionsTopic.id,
         front: 'What is the van\'t Hoff factor (i) and how do you determine it?',
         back: 'Number of particles produced per formula unit. Molecular compounds: i = 1. Ionic: i = number of ions (NaCl: 2, CaCl₂: 3). Actual i < ideal due to ion pairing in real solutions.'
       },
-      {
-        topicId: solutionsTopic.id,
-        front: 'What is the difference between molarity and molality?',
-        back: 'Molarity (M): mol/L of solution (temperature dependent, volume changes). Molality (m): mol/kg of solvent (temperature independent, mass constant). Use molality for colligative properties.'
-      },
-      {
-        topicId: solutionsTopic.id,
-        front: 'Why is actual van\'t Hoff factor less than ideal for ionic compounds?',
-        back: 'Ion pairing: Some cations and anions remain associated in solution due to electrostatic attraction, especially with higher charges and concentrations. Fewer actual particles → smaller i → smaller colligative effects.'
-      }
     ]
   });
 

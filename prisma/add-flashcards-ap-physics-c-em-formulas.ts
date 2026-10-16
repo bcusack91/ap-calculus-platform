@@ -84,9 +84,8 @@ const cardsByTopic: Record<string, Card[]> = {
     { front: 'Current in an LR circuit (closing switch)?', back: 'I(t) = (ε/R)(1 − e^(−Rt/L)). Time constant τ = L/R.', hint: 'Exponential growth to ε/R' },
   ],
   'physics-c-maxwell-equations': [
-    { front: 'List all 4 Maxwell\'s equations (integral form).', back: '1) ∮E·dA = Q/ε₀ (Gauss), 2) ∮B·dA = 0 (no monopoles), 3) ∮E·dL = −dΦ_B/dt (Faraday), 4) ∮B·dL = μ₀I + μ₀ε₀(dΦ_E/dt) (Ampère-Maxwell).', hint: 'Gauss E, Gauss B, Faraday, Ampère-Maxwell' },
-    { front: 'What did Maxwell add to Ampère\'s law?', back: 'The displacement current term: μ₀ε₀(dΦ_E/dt). This accounts for changing electric fields producing magnetic fields, completing the symmetry.', hint: 'Displacement current' },
-    { front: 'What is the speed of electromagnetic waves from Maxwell\'s equations?', back: 'c = 1/√(μ₀ε₀) ≈ 3 × 10⁸ m/s. EM waves are self-propagating oscillating E and B fields.', hint: 'From the wave equation' },
+    { front: 'List all 4 Maxwell\'s equations (integral form).', back: "1) ∮E·dA = Q_enc/ε₀ (Gauss), 2) ∮B·dA = 0 (no monopoles), 3) ∮E·dℓ = −dΦ_B/dt (Faraday), 4) ∮B·dℓ = μ₀I_enc (Ampère), plus Maxwell's addition: a changing electric field also produces a magnetic field. The AP exam treats that addition qualitatively.", hint: 'Gauss E, Gauss B, Faraday, Ampère-Maxwell' },
+    { front: 'What did Maxwell add to Ampère\'s law?', back: "The idea that a changing electric field produces a magnetic field, just as a current does. This completes the symmetry with Faraday's law. AP Physics C expects this idea qualitatively; you will not calculate with the changing-E term.", hint: "A changing E field makes a B field." },
   ],
 }
 

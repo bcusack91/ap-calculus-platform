@@ -8,59 +8,9 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         hint: "Flawed reasoning, not necessarily a false conclusion."
       },
       {
-        front: "Define the ad hominem fallacy.",
-        back: "Ad hominem attacks the person making an argument rather than addressing the argument itself. Example: dismissing a senator's policy because of his personal wealth instead of engaging the policy's merits.",
-        hint: "Attack the arguer, not the argument."
-      },
-      {
-        front: "Define the straw man fallacy.",
-        back: "A straw man misrepresents or oversimplifies an opponent's position so it is easier to attack, then refutes the distorted version instead of the real argument.",
-        hint: "Refuting a position no one actually holds."
-      },
-      {
-        front: "What is a slippery slope fallacy?",
-        back: "A slippery slope claims that one small action will inevitably lead to a chain of negative consequences, without evidence that each step actually follows from the previous one.",
-        hint: "If A happens, then Z will surely follow."
-      },
-      {
-        front: "Define the false dilemma (either/or) fallacy.",
-        back: "A false dilemma presents only two options as if they are the only possibilities, when in fact other alternatives exist. Example: 'Either we cut education funding or the economy collapses.'",
-        hint: "Only two choices when there are more."
-      },
-      {
-        front: "What is a hasty generalization?",
-        back: "A hasty generalization draws a broad conclusion from insufficient or unrepresentative evidence, such as a small sample size or a single anecdote.",
-        hint: "Too few examples, too big a claim."
-      },
-      {
-        front: "Define the appeal to authority (when it becomes a fallacy).",
-        back: "An appeal to authority becomes fallacious when it cites someone who is not a genuine expert on the topic, or treats an expert's opinion as proof rather than supporting evidence.",
-        hint: "Wrong expert or expert opinion as conclusive proof."
-      },
-      {
-        front: "What is the bandwagon (appeal to popularity) fallacy?",
-        back: "The bandwagon fallacy argues that a claim is true or an action is right simply because many people believe or do it. Popularity is treated as evidence of correctness.",
-        hint: "Everyone is doing it, so it must be right."
-      },
-      {
         front: "Define circular reasoning (begging the question).",
         back: "Circular reasoning occurs when an argument's conclusion is assumed in its premises, so the reasoning goes in a circle and proves nothing. Example: 'This book is the best because no other book is as good.'",
         hint: "Restating the claim as its own proof."
-      },
-      {
-        front: "What is the post hoc ergo propter hoc fallacy?",
-        back: "Post hoc (false cause) assumes that because one event followed another, the first event caused the second. Correlation or sequence is mistaken for causation.",
-        hint: "After this, therefore because of this."
-      },
-      {
-        front: "Define the red herring fallacy.",
-        back: "A red herring introduces an irrelevant topic to divert attention from the actual issue, distracting the audience rather than addressing the argument.",
-        hint: "Changing the subject to dodge the point."
-      },
-      {
-        front: "What is the appeal to emotion fallacy?",
-        back: "An appeal to emotion manipulates feelings such as fear, pity, or pride in place of logical evidence. Emotion can support an argument, but it is fallacious when it replaces sound reasoning.",
-        hint: "Tugging heartstrings instead of giving reasons."
       },
       {
         front: "How should you discuss fallacies in an AP Language argument essay?",
@@ -283,11 +233,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
     slug: "englang-rhetorical-devices",
     cards: [
       {
-        front: "What is anaphora?",
-        back: "Anaphora is the repetition of a word or phrase at the beginning of successive clauses or sentences. It builds rhythm and emphasis, as in 'We shall fight on the beaches, we shall fight on the landing grounds.'",
-        hint: "Repetition at the start of clauses."
-      },
-      {
         front: "What is juxtaposition?",
         back: "Juxtaposition places two contrasting ideas, images, or words close together to highlight their differences and create meaning or emphasis through comparison.",
         hint: "Placing contrasts side by side."
@@ -321,16 +266,6 @@ export const batchCards: { slug: string; cards: { front: string; back: string; h
         front: "What is hyperbole?",
         back: "Hyperbole is deliberate exaggeration for emphasis or effect, not meant to be taken literally, as in 'I've told you a million times.' It can heighten emotion or create humor or irony.",
         hint: "Exaggeration for effect."
-      },
-      {
-        front: "Define understatement (and litotes).",
-        back: "Understatement deliberately presents something as less significant than it is, often for irony or modesty. Litotes is a form expressing an idea by negating its opposite, as in 'not bad' for 'good.'",
-        hint: "Saying less than you mean."
-      },
-      {
-        front: "What is asyndeton, and what is polysyndeton?",
-        back: "Asyndeton omits conjunctions between items ('I came, I saw, I conquered') for speed and force. Polysyndeton adds extra conjunctions ('and...and...and') to slow pace and emphasize each item.",
-        hint: "Dropping vs. piling up conjunctions."
       },
       {
         front: "Define imagery.",

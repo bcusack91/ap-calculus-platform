@@ -506,27 +506,7 @@ C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + ~32 ATP
       {
         topicId: photoTopic.id,
         front: 'Where does the Calvin cycle occur and what does it produce?',
-        back: 'Stroma of chloroplasts. Uses ATP and NADPH from light reactions to fix CO₂ into glucose (G3P → glucose).',
-      },
-      {
-        topicId: photoTopic.id,
-        front: 'What are the three phases of the Calvin cycle?',
-        back: '1) Carbon fixation: CO₂ + RuBP → 3-PGA. 2) Reduction: 3-PGA → G3P using ATP/NADPH. 3) Regeneration: G3P → RuBP using ATP.',
-      },
-      {
-        topicId: photoTopic.id,
-        front: 'What is RuBisCO and what does it do?',
-        back: 'Enzyme that catalyzes carbon fixation in Calvin cycle. Combines CO₂ with RuBP. Most abundant protein on Earth.',
-      },
-      {
-        topicId: photoTopic.id,
-        front: 'How do C4 plants differ from C3 plants?',
-        back: 'C4 plants spatially separate CO₂ fixation (mesophyll cells) from Calvin cycle (bundle sheath cells). Concentrates CO₂ to reduce photorespiration in hot/dry conditions.',
-      },
-      {
-        topicId: photoTopic.id,
-        front: 'How do CAM plants adapt to dry conditions?',
-        back: 'Temporal separation: fix CO₂ at night (stomata open) → store as 4C compound. Use stored CO₂ for Calvin cycle during day (stomata closed). Conserves water.',
+        back: "In the stroma of the chloroplast. It uses ATP and NADPH from the light reactions to fix CO₂ into sugars.",
       },
     ],
   })

@@ -44,16 +44,12 @@ export const humanitiesFlashcards: FlashcardsByTopic = {
     { front: 'How should you analyze figurative language?', back: 'Identify the comparison, then explain what it reveals about tone, character, or theme — never just name the device.' },
   ],
   'englit-poetic-structure-form': [
-    { front: 'What is a Shakespearean sonnet\'s structure?', back: '14 lines of iambic pentameter, rhyming ABAB CDCD EFEF GG, with a turn often at the couplet.' },
-    { front: 'What is a Petrarchan sonnet\'s structure?', back: 'An octave (ABBAABBA) posing a problem and a sestet resolving it, with the volta at line 9.' },
     { front: 'What is a volta?', back: 'The turn — a shift in argument, tone, or perspective within a poem.' },
     { front: 'What is enjambment and its effect?', back: 'A sentence running past the line break, creating momentum, surprise, or double meaning.' },
-    { front: 'What is blank verse vs. free verse?', back: 'Blank verse is unrhymed iambic pentameter; free verse has no regular meter or rhyme.' },
     { front: 'What is a stanza and why does form matter?', back: 'A grouped set of lines; form shapes pacing, emphasis, and meaning, so structure is itself an argument.' },
   ],
   'englit-sound-devices': [
     { front: 'Define alliteration, assonance, and consonance.', back: 'Alliteration repeats initial consonants; assonance repeats vowel sounds; consonance repeats consonants anywhere.' },
-    { front: 'What is iambic pentameter?', back: 'Five iambs per line — an unstressed then stressed syllable, ten syllables total.' },
     { front: 'What is caesura?', back: 'A strong pause within a line, often marked by punctuation, creating emphasis or hesitation.' },
     { front: 'What is onomatopoeia?', back: 'A word imitating the sound it denotes, adding sensory immediacy.' },
     { front: 'How does syntax contribute to meaning?', back: 'Sentence length, inversion, fragments, and parallelism control pace and stress key ideas.' },
@@ -111,11 +107,9 @@ export const humanitiesFlashcards: FlashcardsByTopic = {
   // ================= AP ENGLISH LANGUAGE =================
   'englang-rhetorical-devices': [
     { front: 'Define ethos, pathos, and logos.', back: 'Ethos appeals to credibility, pathos to emotion, logos to logic and evidence.' },
-    { front: 'What is anaphora?', back: 'Repetition of the same words at the beginning of successive clauses, building rhythm and emphasis.' },
     { front: 'What is antithesis?', back: 'Placing contrasting ideas in parallel structure ("not that I loved Caesar less, but that I loved Rome more").' },
     { front: 'What is a rhetorical question\'s function?', back: 'To emphasize a point or provoke reflection rather than to solicit an answer.' },
     { front: 'What is parallelism?', back: 'Repeating grammatical structure across phrases, creating balance and memorability.' },
-    { front: 'What is understatement/litotes?', back: 'Deliberately minimizing for ironic effect, often making a point more forcefully than direct statement.' },
   ],
   'englang-rhetorical-analysis-essay': [
     { front: 'What does a rhetorical analysis essay actually argue?', back: 'HOW a writer achieves their purpose for a specific audience — not whether you agree.' },
@@ -146,7 +140,6 @@ export const humanitiesFlashcards: FlashcardsByTopic = {
     { front: 'What is the difference between denotation and connotation?', back: 'Denotation is the literal definition; connotation is the emotional and cultural association.' },
     { front: 'How does syntax create emphasis?', back: 'Word order, sentence length, inversion, and fragments direct attention to particular ideas.' },
     { front: 'What is a periodic sentence?', back: 'One withholding the main clause until the end, building anticipation.' },
-    { front: 'What is asyndeton and polysyndeton?', back: 'Asyndeton omits conjunctions for speed; polysyndeton repeats them for weight and accumulation.' },
     { front: 'How do you connect diction to purpose?', back: 'Explain what the word choice reveals about attitude and how it moves the intended audience.' },
   ],
   'englang-tone-voice-analysis': [

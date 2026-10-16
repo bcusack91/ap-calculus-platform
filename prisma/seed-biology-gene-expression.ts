@@ -216,16 +216,6 @@ async function main() {
         front: 'How does DNA polymerase proofread?',
         back: '3\'→5\' exonuclease activity allows it to remove incorrectly paired nucleotides immediately. Reduces error rate to ~1 in 10 billion nucleotides.',
       },
-      {
-        topicId: dnaTopic.id,
-        front: 'What are telomeres and why do they shorten?',
-        back: 'Repetitive sequences (TTAGGG) at chromosome ends. DNA polymerase can\'t replicate the very ends of linear chromosomes, so telomeres shorten with each division. Protects genes from being lost.',
-      },
-      {
-        topicId: dnaTopic.id,
-        front: 'What is the role of telomerase?',
-        back: 'Enzyme that extends telomeres by adding repetitive sequences. Active in germ cells and stem cells. Inactive in most somatic cells. Overactive in cancer cells (contributes to immortality).',
-      },
     ],
   })
 
