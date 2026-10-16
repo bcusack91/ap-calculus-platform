@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import type { AttemptKind } from '@/lib/study-tracking'
-import type { ReviewItem } from '@/lib/question-sources/types'
+import type { ReviewFrqItem, ReviewItem } from '@/lib/question-sources/types'
+import { apPracticeFrqItems } from '@/lib/question-sources/ap-practice'
 import { exitReviewItems } from '@/lib/question-sources/exit'
 import { carsSkillForKey, fullLengthReviewItems, mcatPracticeReviewItems } from '@/lib/question-sources/mcat'
 import { satDiagnosticReviewItems, satPracticeReviewItems } from '@/lib/question-sources/sat'
@@ -12,6 +13,8 @@ import { actFlReviewItems } from '@/lib/question-sources/act'
 import { ACT_FL_CATEGORY } from '@/lib/act-full-length-server'
 import { AP_PRACTICE_CATEGORY_PREFIX, AP_PRACTICE_EXAMS, apPracticeKeyOfCategory } from '@/lib/ap-practice-exams'
 import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanations'
+import { courseForCategory, diagnosticRouteForKey } from '@/lib/class-plan-config'
+import { canonicalizeDiagnosticResults } from '@/lib/ap-topic-canonical'
 
 /**
  * Rebuilds any stored attempt into review items — the permanent review page
@@ -48,10 +51,24 @@ export interface ResolvedAttempt {
   /** Where the student took it (course hub / test page). */
   backHref: string
   items: (ResolvedItem | null)[]
+  /** Free-response items with the student's responses and rubric (AP practice exams). */
+  frq?: ReviewFrqItem[]
 }
 
 const iso = (d: Date) => d.toISOString()
 const courseOfCategory = (category: string) => (category.startsWith('mcat') ? 'mcat' : category.startsWith('sat') ? 'sat' : category.startsWith('act') ? 'act' : category.split('-')[0])
+
+/**
+ * An AP diagnostic's real course. Splitting the category on '-' turned
+ * 'ap-chem-diagnostic-3' into course 'ap' (title "AP diagnostic", back link
+ * /ap-diagnostic, a 404). AP diagnostics take the course slug and name from
+ * the class-plan registry and link back to that course's diagnostic page.
+ */
+export function apDiagnosticCourse(category: string): { courseSlug: string; label: string; backHref: string } | null {
+  const c = courseForCategory(category)
+  if (!c?.courseSlug?.startsWith('ap-')) return null
+  return { courseSlug: c.courseSlug, label: c.label, backHref: diagnosticRouteForKey(c.key) }
+}
 const courseOfSlug = (slug: string) => (slug.startsWith('mcat') ? 'mcat' : slug.startsWith('sat') ? 'sat' : slug.startsWith('act') ? 'act' : 'other')
 
 async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit<ResolvedAttempt, 'items'> & { items: (ReviewItem | null)[] } | null> {
@@ -77,14 +94,21 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
       // ACT full-lengths review under their own kind ('act-fl').
       if (d.category === ACT_FL_CATEGORY) return null
       const r = (d.results ?? {}) as Record<string, unknown>
-      const course = courseOfCategory(d.category)
-      const items = isFl ? fullLengthReviewItems(d.results) ?? [] : course === 'sat' ? satDiagnosticReviewItems(d.results) : diagnosticReviewItems(d.results)
+      const ap = isFl ? null : apDiagnosticCourse(d.category)
+      const course = ap?.courseSlug ?? courseOfCategory(d.category)
+      // Older AP attempts carry legacy topic slugs; review them under the production topic.
+      const results = ap ? canonicalizeDiagnosticResults(d.category, d.results) : d.results
+      const items = isFl ? fullLengthReviewItems(results) ?? [] : course === 'sat' ? satDiagnosticReviewItems(results) : diagnosticReviewItems(results)
       const correct = items.filter((i) => i && i.chosenIndex === i.correctIndex).length
       return {
         kind, id, course, takenAt: iso(d.createdAt),
-        title: isFl ? `MCAT full-length${typeof r.form === 'number' ? ` · Form ${r.form}` : ''}` : `${course.toUpperCase()} diagnostic`,
-        score: { correct, total: items.length, label: typeof r.total === 'number' ? `${r.total}` : typeof r.estimatedScore === 'number' ? `${r.estimatedScore}` : undefined },
-        backHref: isFl ? '/mcat-full-length' : `/${course}-diagnostic`,
+        title: isFl ? `MCAT full-length${typeof r.form === 'number' ? ` · Form ${r.form}` : ''}` : ap ? `${ap.label} diagnostic` : `${course.toUpperCase()} diagnostic`,
+        score: {
+          correct,
+          total: items.length,
+          label: typeof r.total === 'number' ? `${r.total}` : typeof r.estimatedScore === 'number' ? `${r.estimatedScore}` : typeof r.estimatedAPScore === 'number' ? `${r.estimatedAPScore}/5` : undefined,
+        },
+        backHref: isFl ? '/mcat-full-length' : ap ? ap.backHref : `/${course}-diagnostic`,
         items,
       }
     }
@@ -142,7 +166,8 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
     }
     case 'ap-practice': {
       // AP full-length practice exam (src/app/api/ap-practice/submit): a stored
-      // review copy of every multiple-choice question as shown.
+      // review copy of every multiple-choice question as shown, plus each
+      // free-response item with what the student wrote and the rubric ticks.
       const d = await prisma.diagnosticTest.findFirst({
         where: { id, userId, category: { startsWith: AP_PRACTICE_CATEGORY_PREFIX } },
         select: { category: true, results: true, createdAt: true },
@@ -151,6 +176,7 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
       const r = (d.results ?? {}) as Record<string, unknown>
       const exam = AP_PRACTICE_EXAMS[apPracticeKeyOfCategory(d.category) ?? '']
       const items = diagnosticReviewItems(d.results)
+      const frq = apPracticeFrqItems(d.results)
       const correct = items.filter((i) => i && i.chosenIndex === i.correctIndex).length
       return {
         kind, id, course: exam?.courseSlug ?? 'ap', takenAt: iso(d.createdAt),
@@ -158,6 +184,7 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
         score: { correct, total: items.length, label: typeof r.estimatedAPScore === 'number' ? `${r.estimatedAPScore}/5` : undefined },
         backHref: exam?.path ?? '/',
         items,
+        ...(frq.length ? { frq } : {}),
       }
     }
     case 'qbank': {

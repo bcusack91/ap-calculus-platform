@@ -11,11 +11,13 @@ import { optionKey, questionKey } from '@/lib/question-key'
 /**
  * POST /api/ap-practice/submit — save a finished AP full-length practice exam.
  *
- * Body: { examKey, clientAttemptId?, mcq: [{ s, i, chosen }], frq: [{ s, i, earned }] }
- * (s = section index, i = item index, chosen = the option text picked).
+ * Body: { examKey, clientAttemptId?, mcq: [{ s, i, chosen }], frq: [{ s, i, earned, responses?, ticked?, submitted?, chosenPromptIndex? }] }
+ * (s = section index, i = item index, chosen = the option text picked,
+ * responses = what the student wrote, ticked = the rubric boxes checked).
  * The exam is rebuilt server-side and multiple choice regraded; the attempt is
  * stored as a DiagnosticTest (category 'ap-practice-exam:<key>') with a review
- * copy, and each multiple-choice answer goes to the answer log (attemptKind
+ * copy (multiple choice as shown, free response with the student's responses
+ * and rubric ticks in review.frq), and each multiple-choice answer goes to the answer log (attemptKind
  * 'ap-practice') so teachers can review it and see it in the study report.
  */
 export async function POST(req: Request) {
@@ -42,7 +44,8 @@ export async function POST(req: Request) {
 
     const graded = gradeApExam(config, body.mcq, body.frq)
     const answeredMcq = graded.review.answers.filter((a) => a !== null).length
-    if (answeredMcq === 0 && graded.earned === 0) {
+    const wroteFrq = graded.review.frq.some((f) => f.parts.some((p) => p.response.trim().length > 0))
+    if (answeredMcq === 0 && graded.earned === 0 && !wroteFrq) {
       return NextResponse.json({ error: 'Answer at least one question before saving.' }, { status: 400 })
     }
 

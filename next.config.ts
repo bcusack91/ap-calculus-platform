@@ -170,6 +170,10 @@ const nextConfig: NextConfig = {
       // course listing is /topics. Google reported /courses as a 404 and two
       // internal pages linked to it.
       { source: '/courses', destination: '/topics', permanent: true },
+      // The old AP Chemistry full exam (assembled from exit-quiz items, with
+      // keyword-matched FRQs and no saving) was retired for the shared AP
+      // practice exam, which is saved, reviewable and teacher-visible.
+      { source: '/ap-chem-full-exam', destination: '/ap-chem-practice', permanent: true },
       // Canonical-host redirect as a permanent 308. The live apex currently
       // answers with a 307 (temporary), which tells Google both hosts are real
       // and splits ranking signals. If Vercel's dashboard-level domain redirect

@@ -1,11 +1,23 @@
 'use client'
 
+/**
+ * Full-length practice exam runner: every AP course (and a few non-AP math
+ * courses, PSAT and ACT practice) share it. Exam-screen tools follow the MCAT
+ * and SAT runners: a question navigator and review screen per section, flags,
+ * strike-through on options, a highlighter on stimuli, Alt-key shortcuts, the
+ * reference sheet and calculator the real exam provides, and separately timed
+ * no-calculator / calculator parts where the real exam has them (AP Calculus,
+ * Precalculus). The sitting autosaves to localStorage, so a refresh or coming
+ * back resumes it; each stage's clock is an absolute deadline that keeps
+ * running while the student is away. Pure logic: src/lib/ap-practice-runner.ts.
+ */
 
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { ToolBreadcrumb } from '@/components/ToolBreadcrumb'
 import { toolLearningResourceJsonLd } from '@/lib/jsonld'
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import Link from 'next/link'
+import { Ban, BookOpen, ClipboardCheck, Flag, LayoutGrid, LogOut } from 'lucide-react'
 import type { AccentColor } from './PracticeExam'
 import { renderRichText } from '@/lib/render-rich-text'
 import { shuffleOptions } from '@/lib/shuffle-options'
@@ -15,6 +27,34 @@ import { preloadKatex } from '@/lib/katex-lazy'
 import { apCompositePercent, estimateApScore } from '@/lib/ap-scoring'
 import { InArticleAd } from '@/components/ad-banner'
 import ShareScoreCard from '@/components/ShareScoreCard'
+import FocusTrapDialog from '@/components/FocusTrapDialog'
+import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
+import ReferenceSheetModal from '@/components/ReferenceSheetModal'
+import PassageHighlighter from '@/components/exam/PassageHighlighter'
+import QuestionNavigator, { type NavigatorItem } from '@/components/exam/QuestionNavigator'
+import ExamReviewScreen from '@/components/exam/ExamReviewScreen'
+import { ExamShortcutsHelp, examShortcutFor } from '@/components/exam/exam-shortcuts'
+import type { HighlightRange } from '@/lib/passage-highlights'
+import {
+  apExamTools,
+  apProgressKey,
+  blankAnswer,
+  buildStages,
+  examSignature,
+  frqSubmission,
+  hashText,
+  highlightKey,
+  isAnswered,
+  parseApExamProgress,
+  partHeading,
+  restoreSitting,
+  rubricKeys,
+  stageName,
+  type ApExamPhase,
+  type ApExamProgress,
+  type ApFrqSubmission,
+  type ItemAnswer,
+} from '@/lib/ap-practice-runner'
 import 'katex/dist/katex.min.css'
 
 /**
@@ -173,28 +213,21 @@ const TOKENS: Record<AccentColor, { pageBg: string; gradient: string; text: stri
   sky:     { pageBg: 'from-sky-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900', gradient: 'from-sky-600 to-blue-600', text: 'text-sky-600 dark:text-sky-400', sel: 'border-sky-500 bg-sky-50 text-sky-800 dark:bg-sky-900/30 dark:text-sky-300', hover: 'hover:border-sky-300 hover:bg-sky-50/50 dark:hover:border-sky-500', badge: 'bg-sky-100 text-sky-700 dark:bg-sky-900/30 dark:text-sky-400' },
 }
 
+
 function fmt(s: number) { const m = Math.floor(s / 60); const sec = s % 60; return `${m}:${sec.toString().padStart(2, '0')}` }
 
-/* ------------------------------------------------------------------ */
-/*  State shape                                                        */
-/* ------------------------------------------------------------------ */
+const NO_HIGHLIGHTS: HighlightRange[] = []
 
-interface MCQAnswer { type: 'mcq'; selected: number | null }
-interface SAQAnswer { type: 'saq'; responses: string[]; checked: Record<string, boolean>; submitted: boolean }
-interface DBQAnswer { type: 'dbq'; chosenPromptIndex: number; response: string; checked: Record<string, boolean>; submitted: boolean }
-interface LEQAnswer { type: 'leq'; chosenPromptIndex: number; response: string; checked: Record<string, boolean>; submitted: boolean }
-type ItemAnswer = MCQAnswer | SAQAnswer | DBQAnswer | LEQAnswer
-
-function blankAnswer(item: ExamItem): ItemAnswer {
-  if (item.type === 'mcq') return { type: 'mcq', selected: null }
-  if (item.type === 'saq') return { type: 'saq', responses: item.parts.map(() => ''), checked: {}, submitted: false }
-  if (item.type === 'dbq') return { type: 'dbq', chosenPromptIndex: 0, response: '', checked: {}, submitted: false }
-  return { type: 'leq', chosenPromptIndex: 0, response: '', checked: {}, submitted: false }
-}
+const TOOL_BTN =
+  'inline-flex items-center gap-1.5 rounded-lg border border-gray-300 px-2.5 py-1.5 text-xs font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700'
+const TEXTAREA =
+  'w-full rounded-lg border border-gray-300 bg-white p-3 text-sm text-gray-800 focus:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring disabled:bg-gray-50 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200 dark:disabled:bg-gray-900/60'
 
 /* ------------------------------------------------------------------ */
 /*  Component                                                          */
 /* ------------------------------------------------------------------ */
+
+type Phase = 'overview' | ApExamPhase
 
 function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   const { subject, description, backLink, ctaLinks, accent, sections: rawSections, totalTimeMinutes, aboutInfo, scaledExam, examKey } = config
@@ -219,58 +252,168 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
     [rawSections, subject],
   )
 
-  type Phase = 'overview' | 'section' | 'section-complete' | 'final-results'
+  // What the real exam gives students (reference sheet, calculator), and its
+  // separately timed parts. Indices stay (section, item), so parts never
+  // change grading.
+  const tools = useMemo(() => apExamTools(examKey), [examKey])
+  const stages = useMemo(() => buildStages(sections, tools), [sections, tools])
+  const sig = useMemo(() => examSignature(subject, sections, stages), [subject, sections, stages])
+  const storageKey = useMemo(() => apProgressKey(examKey ?? `subject-${hashText(subject)}`), [examKey, subject])
+  const examHasCalculator = stages.some((s) => s.calculator)
+
   const [phase, setPhase] = useState<Phase>('overview')
-  const [sectionIdx, setSectionIdx] = useState(0)
+  const [stageIdx, setStageIdx] = useState(0)
   const [itemIdx, setItemIdx] = useState(0)
   const [answers, setAnswers] = useState<ItemAnswer[][]>([])
-  const [time, setTime] = useState(0)
+  const [flags, setFlags] = useState<string[]>([])
+  const [struck, setStruck] = useState<Record<string, number[]>>({})
+  const [highlights, setHighlights] = useState<Record<string, HighlightRange[]>>({})
+  const [deadline, setDeadline] = useState<number | null>(null)
+  const [now, setNow] = useState(() => Date.now())
   // Saving a finished AP exam: one attempt id per sitting (a retry can't double-save).
   const [attemptId, setAttemptId] = useState('')
   const [save, setSave] = useState<{ state: 'idle' | 'saving' | 'saved' | 'signin' | 'error'; id?: string }>({ state: 'idle' })
+  const [restored, setRestored] = useState(false)
+  const [resumed, setResumed] = useState(false)
+  const [reviewOpen, setReviewOpen] = useState(false)
+  const [confirmEnd, setConfirmEnd] = useState(false)
+  const [navOpen, setNavOpen] = useState(false)
+  const [exitOpen, setExitOpen] = useState(false)
+  const [refOpen, setRefOpen] = useState(false)
 
-  const currentSection = sections[sectionIdx]
+  const stage = stages[Math.min(stageIdx, Math.max(0, stages.length - 1))]
+  const currentSection = stage ? sections[stage.sectionIdx] : undefined
+  const isLastStage = stageIdx >= stages.length - 1
 
-  // Per-section timer
+
+  /* -------------------- Resume -------------------- */
+  // Restore a sitting saved on this device (same exam only). A part whose
+  // clock ran out while the student was away is over.
+  useEffect(() => {
+    let p: ApExamProgress | null = null
+    try {
+      p = parseApExamProgress(localStorage.getItem(storageKey), sig, sections, stages.length, Date.now())
+    } catch {
+      p = null
+    }
+    if (p) {
+      const r = restoreSitting(p, stages, Date.now())
+      setAttemptId(r.clientAttemptId)
+      setAnswers(r.answers)
+      setFlags(r.flags)
+      setStruck(r.struck)
+      setHighlights(r.highlights)
+      setStageIdx(r.stageIdx)
+      setItemIdx(r.itemIdx)
+      setDeadline(r.deadline)
+      setNow(Date.now())
+      setPhase(r.phase)
+      setResumed(true)
+    }
+    setRestored(true)
+    // Runs once per exam; sections/stages are derived from the same props as sig.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [storageKey, sig])
+
+  // Persist every meaningful change; clear once the exam is finished and saved
+  // (or there is nothing to save to), or discarded.
+  useEffect(() => {
+    if (!restored) return
+    try {
+      if (phase === 'overview' || (phase === 'final-results' && (!examKey || save.state === 'saved'))) {
+        localStorage.removeItem(storageKey)
+        return
+      }
+      const payload: ApExamProgress = {
+        v: 1, sig, clientAttemptId: attemptId, phase, stageIdx, itemIdx, answers, flags, struck, highlights, deadline, savedAt: Date.now(),
+      }
+      localStorage.setItem(storageKey, JSON.stringify(payload))
+    } catch { /* storage full or blocked: the exam still runs, just without resume */ }
+  }, [restored, storageKey, sig, examKey, save.state, attemptId, phase, stageIdx, itemIdx, answers, flags, struck, highlights, deadline])
+
+  // A new screen (phase, part, question or the review screen) starts at the
+  // top, after it renders: scrolling from the click handler raced the
+  // re-render and a smooth scroll, leaving phones deep in the page.
+  useEffect(() => {
+    if (!restored) return
+    window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior })
+  }, [restored, phase, stageIdx, itemIdx, reviewOpen])
+
+  /* -------------------- Clock -------------------- */
   useEffect(() => {
     if (phase !== 'section') return
-    const id = setInterval(() => setTime(prev => (prev <= 0 ? 0 : prev - 1)), 1000)
+    const id = setInterval(() => setNow(Date.now()), 1000)
     return () => clearInterval(id)
   }, [phase])
+  const left = phase === 'section' && deadline !== null ? Math.max(0, Math.ceil((deadline - now) / 1000)) : stage?.seconds ?? 0
 
-  // Auto-advance when timer hits zero
+  const endStage = useCallback(() => {
+    setPhase('section-complete')
+    setDeadline(null)
+    setReviewOpen(false)
+    setConfirmEnd(false)
+    setNavOpen(false)
+  }, [])
+
+  // The stage's clock ran out (also while the student was on another tab).
   useEffect(() => {
-    if (phase === 'section' && time === 0 && currentSection) {
-      const id = setTimeout(() => setPhase('section-complete'), 0)
-      return () => clearTimeout(id)
-    }
-  }, [time, phase, currentSection])
+    if (phase === 'section' && deadline !== null && now >= deadline) endStage()
+  }, [phase, deadline, now, endStage])
+
+  const beginStage = useCallback((idx: number) => {
+    const st = stages[idx]
+    if (!st) return
+    const ts = Date.now()
+    setStageIdx(idx)
+    setItemIdx(st.start)
+    setDeadline(ts + st.seconds * 1000)
+    setNow(ts)
+    setReviewOpen(false)
+    setConfirmEnd(false)
+    setResumed(false)
+    setPhase('section')
+  }, [stages])
 
   const startExam = useCallback(() => {
     setAttemptId(`ap-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`)
     setSave({ state: 'idle' })
     setAnswers(sections.map(sec => sec.items.map(blankAnswer)))
-    setSectionIdx(0)
-    setItemIdx(0)
-    setTime(sections[0].timeLimitMinutes * 60)
-    setPhase('section')
-  }, [sections])
+    setFlags([])
+    setStruck({})
+    setHighlights({})
+    beginStage(0)
+  }, [sections, beginStage])
 
-  const finishSection = useCallback(() => setPhase('section-complete'), [])
+  const discardAttempt = useCallback(() => {
+    setExitOpen(false)
+    setAnswers([])
+    setDeadline(null)
+    setResumed(false)
+    setPhase('overview')
+  }, [])
 
+  const goToNextStage = useCallback(() => {
+    if (stageIdx + 1 >= stages.length) {
+      setResumed(false)
+      setPhase('final-results')
+      } else {
+      beginStage(stageIdx + 1)
+    }
+  }, [stageIdx, stages.length, beginStage])
+
+  /* -------------------- Saving -------------------- */
   /** Send the finished exam to be graded and stored (AP exams, signed-in students). */
   const saveAttempt = useCallback(() => {
     if (!examKey) return
     const mcq: { s: number; i: number; chosen: string | null }[] = []
-    const frq: { s: number; i: number; earned: number }[] = []
+    const frq: ApFrqSubmission[] = []
     sections.forEach((sec, s) => sec.items.forEach((item, i) => {
       const a = answers[s]?.[i]
       if (item.type === 'mcq') {
         mcq.push({ s, i, chosen: a?.type === 'mcq' && a.selected !== null ? item.options[a.selected] ?? null : null })
-      } else if (a && a.type !== 'mcq') {
-        // Rubric boxes ticked for this item (keys are prefixed with its index).
-        const earned = Object.entries(a.checked).filter(([k, v]) => v && k.startsWith(`${i}-`)).length
-        frq.push({ s, i, earned })
+      } else {
+        const sub = frqSubmission(item, a, s, i)
+        if (sub) frq.push(sub)
       }
     }))
     setSave({ state: 'saving' })
@@ -288,26 +431,72 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
       .catch(() => setSave({ state: 'error' }))
   }, [examKey, sections, answers, attemptId])
 
-  const goToNextSection = useCallback(() => {
-    if (sectionIdx + 1 >= sections.length) {
-      setPhase('final-results')
-      saveAttempt()
-    } else {
-      const next = sectionIdx + 1
-      setSectionIdx(next)
-      setItemIdx(0)
-      setTime(sections[next].timeLimitMinutes * 60)
-      setPhase('section')
-    }
-  }, [sectionIdx, sections, saveAttempt])
+  // Save on reaching the results (including a results screen restored after a
+  // refresh: the attempt id makes a repeat POST a no-op on the server).
+  useEffect(() => {
+    if (phase === 'final-results' && examKey && save.state === 'idle' && answers.length > 0) saveAttempt()
+  }, [phase, examKey, save.state, answers.length, saveAttempt])
 
+  /* -------------------- Answering & navigation -------------------- */
   const updateAnswer = useCallback((updater: (a: ItemAnswer) => ItemAnswer) => {
+    if (!stage) return
+    const s = stage.sectionIdx
     setAnswers(prev => {
+      if (!prev[s]?.[itemIdx]) return prev
       const copy = prev.map(arr => [...arr])
-      copy[sectionIdx][itemIdx] = updater(copy[sectionIdx][itemIdx])
+      copy[s][itemIdx] = updater(copy[s][itemIdx])
       return copy
     })
-  }, [sectionIdx, itemIdx])
+  }, [stage, itemIdx])
+
+  const go = useCallback((i: number) => {
+    if (!stage) return
+    setItemIdx(Math.max(stage.start, Math.min(stage.end - 1, i)))
+    setReviewOpen(false)
+    setConfirmEnd(false)
+    setNavOpen(false)
+  }, [stage])
+
+  const toggleFlag = useCallback((k: string) => {
+    setFlags(prev => (prev.includes(k) ? prev.filter(f => f !== k) : [...prev, k]))
+  }, [])
+
+  const toggleStrike = useCallback((k: string, oi: number) => {
+    setStruck(prev => {
+      const had = prev[k] ?? []
+      return { ...prev, [k]: had.includes(oi) ? had.filter(x => x !== oi) : [...had, oi] }
+    })
+  }, [])
+
+  const openReview = useCallback(() => {
+    setNavOpen(false)
+    setConfirmEnd(false)
+    setReviewOpen(true)
+  }, [])
+
+  // Real-exam shortcuts (Alt+N / Alt+P / Alt+F / Alt+V), live only on the
+  // question screen. The listener reads the latest handler through a ref.
+  const shortcutRef = useRef<(e: KeyboardEvent) => void>(() => {})
+  useEffect(() => {
+    shortcutRef.current = (e: KeyboardEvent) => {
+      const action = examShortcutFor(e)
+      if (!action || !stage) return
+      const inDialog = e.target instanceof Element && !!e.target.closest('[role="dialog"]')
+      if (inDialog && !(action === 'navigator' && navOpen)) return
+      if (exitOpen || refOpen) return
+      e.preventDefault()
+      if (action === 'navigator') setNavOpen(v => !v)
+      else if (action === 'next') go(itemIdx + 1)
+      else if (action === 'prev') go(itemIdx - 1)
+      else if (action === 'flag' && !reviewOpen) toggleFlag(`${stage.sectionIdx}:${itemIdx}`)
+    }
+  })
+  useEffect(() => {
+    if (phase !== 'section') return
+    const onKey = (e: KeyboardEvent) => shortcutRef.current(e)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [phase])
 
   /* -------------------- Scoring -------------------- */
   const scoring = useMemo(() => {
@@ -321,29 +510,11 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
         if (item.type === 'mcq') {
           possible += 1
           if (a.type === 'mcq' && a.selected === item.correctAnswer) earned += 1
-        } else if (item.type === 'saq' && a.type === 'saq') {
-          item.parts.forEach((p, pi) => {
-            const letter = partLetter(p, pi)
-            if (Array.isArray(p.rubric)) {
-              p.rubric.forEach(rp => {
-                possible += 1
-                if (a.checked[`${iIdx}-${letter}-${rp.id}`]) earned += 1
-              })
-            } else {
-              possible += 1
-              if (a.checked[`${iIdx}-${letter}-self`]) earned += 1
-            }
-          })
-        } else if (item.type === 'dbq' && a.type === 'dbq') {
-          item.rubric.forEach(rp => {
-            possible += 1
-            if (a.checked[`${iIdx}-${rp.id}`]) earned += 1
-          })
-        } else if (item.type === 'leq' && a.type === 'leq') {
-          item.rubric.forEach(rp => {
-            possible += 1
-            if (a.checked[`${iIdx}-${rp.id}`]) earned += 1
-          })
+        } else if (a.type !== 'mcq') {
+          // One point per rubric box (same count as the server grader).
+          const keys = rubricKeys(item)
+          possible += keys.length
+          earned += keys.filter(k => a.checked[k]).length
         }
       })
       return { name: sec.shortName, earned, possible, pct: possible ? Math.round((earned / possible) * 100) : 0, weight: sec.weight }
@@ -361,31 +532,53 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
     return (
       <div className={`min-h-screen bg-gradient-to-br ${t.pageBg}`}>
         <div className="container py-8 sm:py-12"><div className="mx-auto max-w-4xl">
-          <Link href={backLink.href} className={`mb-4 inline-flex items-center gap-1 text-sm ${t.text} hover:underline`}>
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
+          <Link href={backLink.href} className={`mb-4 inline-flex items-center gap-1 rounded text-sm ${t.text} hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring`}>
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
             {backLink.label}
           </Link>
           <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">{subject} Full Practice Exam</h1>
           <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">{description}</p>
 
-          <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+          <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6 dark:border-gray-700 dark:bg-gray-800">
             <h2 className="mb-4 text-xl font-semibold text-gray-800 dark:text-gray-200">Exam Structure</h2>
             <div className="space-y-3">
-              {sections.map((sec, i) => (
-                <div key={sec.id} className="flex items-start gap-4 rounded-xl bg-gray-50 p-4 dark:bg-gray-900/40">
-                  <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} text-sm font-bold text-white`}>{i + 1}</div>
-                  <div className="flex-1">
-                    <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{sec.name} — {sec.shortName}</p>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">{sec.items.length} {sec.items[0]?.type === 'mcq' ? 'questions' : 'item' + (sec.items.length > 1 ? 's' : '')} · {sec.timeLimitMinutes} minutes</p>
-                    <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">{sec.description}</p>
+              {sections.map((sec, i) => {
+                const parts = stages.filter(st => st.sectionIdx === i)
+                return (
+                  <div key={sec.id} className="flex items-start gap-4 rounded-xl bg-gray-50 p-4 dark:bg-gray-900/40">
+                    <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} text-sm font-bold text-white`}>{i + 1}</div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{sec.name} — {sec.shortName}</p>
+                      <p className="text-xs text-gray-600 dark:text-gray-400">{sec.items.length} {sec.items[0]?.type === 'mcq' ? 'questions' : 'item' + (sec.items.length > 1 ? 's' : '')} · {sec.timeLimitMinutes} minutes</p>
+                      <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">{sec.description}</p>
+                      {parts.length > 1 && (
+                        <ul className="mt-2 space-y-1 text-xs text-gray-700 dark:text-gray-300">
+                          {parts.map(st => (
+                            <li key={st.partIdx} className="flex flex-wrap items-center gap-x-2">
+                              <span className="font-semibold">{st.partLabel}</span>
+                              <span>Q{st.start + 1}–Q{st.end} · {Math.round(st.seconds / 60)} min, timed separately</span>
+                              <span className="inline-flex items-center gap-1 font-medium">
+                                {st.calculator ? 'Calculator allowed' : 'No calculator'}
+                              </span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
             <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-              <strong>Total time:</strong> {Math.floor(totalTimeMinutes / 60)}h {totalTimeMinutes % 60}m. Each section has its own timer; sections are completed back-to-back. Free-response sections use a self-grading rubric checklist after you write your response.
+              <strong>Total time:</strong> {Math.floor(totalTimeMinutes / 60)}h {totalTimeMinutes % 60}m. Each section{stages.length > sections.length ? ' and part' : ''} has its own timer and is completed back-to-back. Free-response sections use a self-grading rubric checklist after you write your response.
             </p>
-            <button onClick={startExam} className={`mt-6 w-full cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} px-6 py-3 text-base font-semibold text-white shadow transition hover:scale-[1.01] hover:shadow-lg active:scale-[0.99]`}>
+            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+              <strong>Exam tools:</strong> a question navigator and review screen, flags, answer strike-through, a highlighter for stimuli
+              {tools.referenceSheet ? ', the exam’s reference sheet' : ''}
+              {examHasCalculator ? (stages.every(s => s.calculator) ? ', and a Desmos calculator' : ', and a Desmos calculator on the calculator parts') : ''}.
+              Your progress saves on this device, so you can refresh or come back later; the clock keeps running while you are away, as on test day.
+            </p>
+            <button onClick={startExam} className={`mt-6 w-full cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} px-6 py-3 text-base font-semibold text-white shadow transition hover:scale-[1.01] hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring focus-visible:ring-offset-2 active:scale-[0.99] motion-reduce:transition-none motion-reduce:hover:scale-100 dark:focus-visible:ring-offset-gray-800`}>
               Begin Full Exam
             </button>
           </div>
@@ -395,7 +588,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
               <p className="mb-3 text-sm text-gray-500 dark:text-gray-400">More resources</p>
               <div className="flex flex-wrap justify-center gap-3">
                 {ctaLinks.map(l => (
-                  <Link key={l.href} href={l.href} className={`rounded-lg px-4 py-2 text-sm font-medium transition ${t.badge} hover:opacity-80`}>{l.label}</Link>
+                  <Link key={l.href} href={l.href} className={`rounded-lg px-4 py-2 text-sm font-medium transition ${t.badge} hover:opacity-80 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring`}>{l.label}</Link>
                 ))}
               </div>
             </div>
@@ -420,20 +613,28 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   }
 
   /* =================================================================== */
-  /*  SECTION COMPLETE (between sections)                                */
+  /*  STAGE COMPLETE (between sections / parts)                          */
   /* =================================================================== */
-  if (phase === 'section-complete') {
-    const isLast = sectionIdx + 1 >= sections.length
+  if (phase === 'section-complete' && stage && currentSection) {
+    const next = stages[stageIdx + 1]
+    const nextSection = next ? sections[next.sectionIdx] : undefined
     return (
       <div className={`min-h-screen bg-gradient-to-br ${t.pageBg} py-8`}>
         <div className="container"><div className="mx-auto max-w-2xl text-center">
-          <div className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} text-2xl text-white`}>✓</div>
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{currentSection.name} complete</h2>
+          <div className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br ${t.gradient} text-2xl text-white`} aria-hidden="true">✓</div>
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{stageName(currentSection.name, stage)} complete</h2>
+          {resumed && (
+            <p className="mt-2 text-sm text-amber-800 dark:text-amber-300" role="status">Welcome back. Time ran out on this part while you were away, so it has ended.</p>
+          )}
           <p className="mt-2 text-gray-600 dark:text-gray-400">
-            {isLast ? 'You\'ve finished the final section. View your full exam results next.' : `Up next: ${sections[sectionIdx + 1].name} — ${sections[sectionIdx + 1].shortName} (${sections[sectionIdx + 1].timeLimitMinutes} min). Take a short break, then continue when ready.`}
+            {!next || !nextSection
+              ? 'You\'ve finished the final section. View your full exam results next.'
+              : next.sectionIdx === stage.sectionIdx
+                ? `Up next: ${stageName(nextSection.name, next)} (${Math.round(next.seconds / 60)} min, ${next.calculator ? 'calculator allowed' : 'no calculator'}). You cannot return to the questions in ${stage.partLabel ?? 'this part'}.`
+                : `Up next: ${stageName(nextSection.name, next)} — ${nextSection.shortName} (${Math.round(next.seconds / 60)} min${examHasCalculator ? `, ${next.calculator ? 'calculator allowed' : 'no calculator'}` : ''}). Take a short break, then continue when ready.`}
           </p>
-          <button onClick={goToNextSection} className={`mt-6 cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} px-8 py-3 font-semibold text-white shadow transition hover:scale-[1.02] hover:shadow-lg`}>
-            {isLast ? 'See Final Results' : 'Begin Next Section'}
+          <button onClick={goToNextStage} className={`mt-6 cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} px-8 py-3 font-semibold text-white shadow transition hover:scale-[1.02] hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring focus-visible:ring-offset-2 motion-reduce:transition-none motion-reduce:hover:scale-100 dark:focus-visible:ring-offset-gray-900`}>
+            {!next ? 'See Final Results' : next.sectionIdx === stage.sectionIdx ? `Begin ${next.partLabel ?? 'Next Part'}` : 'Begin Next Section'}
           </button>
         </div></div>
       </div>
@@ -510,19 +711,26 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
                 <>
                   Saved to your history.{' '}
                   {save.id && (
-                    <Link href={`/review/ap-practice/${save.id}`} className={`font-semibold ${t.text} hover:underline`}>
-                      Review every multiple-choice question →
+                    <Link href={`/review/ap-practice/${save.id}`} className={`rounded font-semibold ${t.text} hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring`}>
+                      Review every question and your free responses →
                     </Link>
                   )}
                 </>
               )}
               {save.state === 'signin' && (
                 <>
-                  <Link href={`/auth/signin?callbackUrl=${encodeURIComponent(typeof window !== 'undefined' ? window.location.pathname : '/')}`} className={`font-semibold ${t.text} hover:underline`}>Sign in</Link>{' '}
-                  to save your results and review them later.
+                  <Link href={`/auth/signin?callbackUrl=${encodeURIComponent(typeof window !== 'undefined' ? window.location.pathname : '/')}`} className={`rounded font-semibold ${t.text} hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring`}>Sign in</Link>{' '}
+                  to save your results and review them later. They stay on this device until you do.
                 </>
               )}
-              {save.state === 'error' && 'Your results couldn’t be saved. They are still shown here.'}
+              {save.state === 'error' && (
+                <>
+                  Your results couldn’t be saved. They are still shown here.{' '}
+                  <button type="button" onClick={() => setSave({ state: 'idle' })} className={`rounded font-semibold ${t.text} hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring`}>
+                    Try again
+                  </button>
+                </>
+              )}
             </p>
           )}
 
@@ -547,9 +755,9 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
             <h3 className="mb-3 text-lg font-semibold text-gray-800 dark:text-gray-200">Section Breakdown</h3>
             <div className="space-y-2">
               {scoring.perSection.map(s => (
-                <div key={s.name} className="flex items-center justify-between rounded-lg bg-gray-50 px-4 py-2 dark:bg-gray-700/50">
+                <div key={s.name} className="flex items-center justify-between gap-3 rounded-lg bg-gray-50 px-4 py-2 dark:bg-gray-700/50">
                   <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{s.name}{s.weight ? ` · ${Number(s.weight.toFixed(1))}% of score` : ''}</span>
-                  <span className={`text-sm font-bold ${s.pct >= 70 ? 'text-green-600' : s.pct >= 50 ? 'text-amber-600' : 'text-red-500'}`}>{s.earned}/{s.possible} ({s.pct}%)</span>
+                  <span className={`text-sm font-bold ${s.pct >= 70 ? 'text-green-600 dark:text-green-400' : s.pct >= 50 ? 'text-amber-600 dark:text-amber-400' : 'text-red-500 dark:text-red-400'}`}>{s.earned}/{s.possible} ({s.pct}%)</span>
                 </div>
               ))}
             </div>
@@ -557,9 +765,9 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
 
           <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">Free-response scores reflect your self-graded rubric checks. Be honest with yourself &mdash; that&apos;s where the learning happens.</p>
 
-          <div className="flex gap-3">
-            <Link href={backLink.href} className={`flex-1 rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-center font-semibold text-white shadow transition hover:shadow-lg`}>Back to {backLink.label}</Link>
-            <button onClick={startExam} className="flex-1 rounded-xl border-2 border-gray-300 py-3 font-semibold text-gray-600 transition hover:bg-gray-50 dark:border-gray-600 dark:text-gray-400 dark:hover:bg-gray-700">Retake Exam</button>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Link href={backLink.href} className={`flex-1 rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-center font-semibold text-white shadow transition hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900`}>Back to {backLink.label}</Link>
+            <button onClick={startExam} className="flex-1 rounded-xl border-2 border-gray-300 py-3 font-semibold text-gray-600 transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:text-gray-400 dark:hover:bg-gray-700">Retake Exam</button>
           </div>
         </div></div>
       </div>
@@ -567,126 +775,203 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   }
 
   /* =================================================================== */
-  /*  ACTIVE SECTION                                                     */
+  /*  ACTIVE STAGE                                                       */
   /* =================================================================== */
-  if (phase !== 'section' || !currentSection) return null
+  if (phase !== 'section' || !stage || !currentSection) return null
 
+  const s = stage.sectionIdx
   const item = currentSection.items[itemIdx]
-  const ans = answers[sectionIdx]?.[itemIdx]
-  const totalItems = currentSection.items.length
-  const isLastItem = itemIdx === totalItems - 1
+  const ans = answers[s]?.[itemIdx]
+  if (!item || !ans) return null
+  const k = `${s}:${itemIdx}`
+  const flagged = flags.includes(k)
+  const stageTitle = stageName(currentSection.name, stage)
+  const stageCount = stage.end - stage.start
+  const lowTime = left <= 5 * 60
+  const criticalTime = left <= 60
+  const isLastItem = itemIdx >= stage.end - 1
+  const unitWord = stage.partLabel ? 'part' : 'section'
 
-  // Header (shared across all item types)
-  const header = (
-    <div className="mb-6 flex items-center justify-between">
-      <div className="flex items-center gap-3">
-        <span className={`rounded-full px-3 py-1 text-xs font-semibold ${t.badge}`}>{currentSection.name}</span>
-        <span className="text-sm font-medium text-gray-600 dark:text-gray-400">{itemIdx + 1}/{totalItems}</span>
-        <div className="h-2 w-32 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
-          <div className={`h-full rounded-full bg-gradient-to-r ${t.gradient} transition-all`} style={{ width: `${((itemIdx + 1) / totalItems) * 100}%` }} />
-        </div>
-      </div>
-      <div className="flex items-center gap-4">
-        <span className={`text-sm font-mono font-bold ${time < 300 ? 'text-red-500' : 'text-gray-600 dark:text-gray-400'}`}>⏱ {fmt(time)}</span>
-        <button onClick={() => { if (confirm('Exit the exam? Your progress will be lost.')) setPhase('overview') }} className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400">Exit</button>
-      </div>
+  const navItems: NavigatorItem[] = []
+  for (let i = stage.start; i < stage.end; i++) {
+    navItems.push({
+      key: `${s}:${i}`,
+      label: String(i + 1),
+      answered: isAnswered(answers[s]?.[i]),
+      flagged: flags.includes(`${s}:${i}`),
+      current: i === itemIdx && !reviewOpen,
+    })
+  }
+  const answeredInStage = navItems.filter(n => n.answered).length
+  const jumpInStage = (idx: number) => go(stage.start + idx)
+
+  const highlighter = (hk: string, text: string, label: string, className: string) => (
+    <PassageHighlighter
+      key={`${k}:${hk}`}
+      text={text}
+      highlights={highlights[hk] ?? NO_HIGHLIGHTS}
+      onChange={(next) => setHighlights(h => ({ ...h, [hk]: next }))}
+      label={label}
+      className={className}
+    />
+  )
+
+  const flagButton = (
+    <button
+      type="button"
+      onClick={() => toggleFlag(k)}
+      aria-pressed={flagged}
+      aria-keyshortcuts="Alt+F"
+      className={`inline-flex shrink-0 items-center gap-1 rounded-md border px-2 py-1 text-xs font-semibold focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring ${flagged ? 'border-amber-400 bg-amber-50 text-amber-800 dark:border-amber-500 dark:bg-amber-900/30 dark:text-amber-200' : 'border-gray-300 text-gray-600 hover:border-amber-300 dark:border-gray-600 dark:text-gray-300'}`}
+    >
+      <Flag className="h-3.5 w-3.5" fill={flagged ? 'currentColor' : 'none'} aria-hidden="true" />
+      {flagged ? 'Flagged' : 'Flag for review'}
+    </button>
+  )
+
+  const itemHeader = (heading: string) => (
+    <div className="mb-3 flex items-start justify-between gap-3">
+      <h2 className="text-sm font-semibold text-gray-500 dark:text-gray-400">
+        {heading} <span className="font-normal">· {itemIdx - stage.start + 1} of {stageCount}{stage.partLabel ? ` in ${stage.partLabel}` : ''}</span>
+      </h2>
+      {flagButton}
     </div>
   )
 
-  const navFooter = (onSubmit?: () => void, submitLabel?: string) => (
-    <div className="mt-6 flex items-center justify-between">
-      <button onClick={() => setItemIdx(i => Math.max(0, i - 1))} disabled={itemIdx === 0}
-        className="cursor-pointer rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40 dark:border-gray-600 dark:text-gray-400 dark:hover:bg-gray-700">
+  const navFooter = (
+    <div className="mt-6 flex items-center justify-between gap-2">
+      <button
+        type="button"
+        onClick={() => go(itemIdx - 1)}
+        disabled={itemIdx <= stage.start}
+        aria-keyshortcuts="Alt+P"
+        className="cursor-pointer rounded-xl border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-600 transition hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring disabled:cursor-not-allowed disabled:opacity-40 dark:border-gray-600 dark:text-gray-400 dark:hover:bg-gray-700"
+      >
         ← Previous
       </button>
       {!isLastItem ? (
-        <button onClick={() => setItemIdx(i => Math.min(totalItems - 1, i + 1))}
-          className={`cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:shadow-lg`}>
+        <button
+          type="button"
+          onClick={() => go(itemIdx + 1)}
+          aria-keyshortcuts="Alt+N"
+          className={`cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-950`}
+        >
           Next →
         </button>
       ) : (
-        <button onClick={onSubmit ?? finishSection}
-          className={`cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:shadow-lg`}>
-          {submitLabel ?? 'Finish Section'}
+        <button
+          type="button"
+          onClick={openReview}
+          className={`cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-950`}
+        >
+          Review {unitWord}
         </button>
       )}
     </div>
   )
 
-  /* ---------- MCQ rendering ---------- */
-  if (item.type === 'mcq' && ans?.type === 'mcq') {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-        <div className="container"><div className="mx-auto max-w-3xl">
-          {header}
-          <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            {item.stimulus && (
-              <RichText
-                text={item.stimulus}
-                className="mb-4 rounded-lg border-l-4 border-gray-300 bg-gray-50 p-4 text-sm italic leading-relaxed text-gray-800 dark:border-gray-600 dark:bg-gray-900/40 dark:text-gray-200"
-              />
-            )}
-            <RichText text={item.question} className="mb-6 text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
-            <div className="space-y-2">
-              {item.options.map((opt, i) => {
-                const isSel = ans.selected === i
-                return (
-                  <button key={i} onClick={() => updateAnswer(a => a.type === 'mcq' ? { ...a, selected: i } : a)}
-                    className={`w-full cursor-pointer rounded-xl border px-4 py-3 text-left text-sm transition ${isSel ? t.sel : `border-gray-200 text-gray-700 ${t.hover} dark:border-gray-600 dark:text-gray-300`}`}>
-                    <span className="mr-2 font-bold">{String.fromCharCode(65 + i)}.</span><RichText inline text={opt} />
-                  </button>
-                )
-              })}
-            </div>
+  const card = 'rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6 dark:border-gray-700 dark:bg-gray-800'
+  let content: React.ReactNode = null
+
+  /* ---------- MCQ ---------- */
+  if (item.type === 'mcq' && ans.type === 'mcq') {
+    const struckHere = struck[k] ?? []
+    content = (
+      <div className={card}>
+        {itemHeader(`Question ${itemIdx + 1}`)}
+        {item.stimulus && (
+          <div className="mb-4 rounded-lg border-l-4 border-gray-300 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-900/40">
+            {highlighter(highlightKey('stim', item.stimulus), item.stimulus, 'Stimulus', 'text-sm italic leading-relaxed text-gray-800 dark:text-gray-200')}
           </div>
-          {navFooter()}
-        </div></div>
+        )}
+        <RichText text={item.question} className="mb-5 text-sm leading-relaxed text-gray-800 sm:text-base dark:text-gray-200" />
+        <fieldset>
+          <legend className="sr-only">Answer choices for question {itemIdx + 1}</legend>
+          <div className="space-y-2">
+            {item.options.map((opt, i) => {
+              const isSel = ans.selected === i
+              const isStruck = struckHere.includes(i)
+              const letter = String.fromCharCode(65 + i)
+              return (
+                <div key={i} className={`flex items-center gap-2 rounded-xl border px-3 py-2.5 text-sm transition motion-reduce:transition-none ${isSel ? t.sel : `border-gray-200 text-gray-700 ${t.hover} dark:border-gray-600 dark:text-gray-300`}`}>
+                  <button
+                    type="button"
+                    onClick={() => updateAnswer(a => a.type === 'mcq' ? { ...a, selected: i } : a)}
+                    aria-pressed={isSel}
+                    className={`flex flex-1 cursor-pointer items-start gap-2 rounded text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring ${isStruck ? 'text-gray-400 line-through dark:text-gray-500' : ''}`}
+                  >
+                    <span className="font-bold" aria-hidden="true">{letter}.</span>
+                    <span className="sr-only">{letter}. {isStruck ? '(crossed out) ' : ''}</span>
+                    <RichText inline text={opt} />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => toggleStrike(k, i)}
+                    aria-pressed={isStruck}
+                    aria-label={`${isStruck ? 'Restore' : 'Cross out'} choice ${letter}`}
+                    className="shrink-0 rounded px-1.5 py-0.5 text-xs text-gray-400 hover:text-red-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-gray-500 dark:hover:text-red-400"
+                  >
+                    {isStruck ? 'undo' : <span className="line-through" aria-hidden="true">abc</span>}
+                  </button>
+                </div>
+              )
+            })}
+          </div>
+        </fieldset>
+        {navFooter}
       </div>
     )
   }
 
-  /* ---------- SAQ rendering ---------- */
-  if (item.type === 'saq' && ans?.type === 'saq') {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-        <div className="container"><div className="mx-auto max-w-3xl">
-          {header}
-          <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">Short-Answer Question {itemIdx + 1}</h3>
-            <RichText text={saqPrompt(item)} className="text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
-          </div>
-          {item.parts.map((part, pi) => {
-            const letter = partLetter(part, pi)
-            return (
+  /* ---------- SAQ ---------- */
+  if (item.type === 'saq' && ans.type === 'saq') {
+    const prompt = saqPrompt(item)
+    content = (
+      <>
+        <div className={`mb-4 ${card}`}>
+          {itemHeader(`Free-response question ${itemIdx + 1}`)}
+          {prompt && highlighter(highlightKey('prompt', prompt), prompt, 'Question stimulus', 'text-sm leading-relaxed text-gray-800 dark:text-gray-200')}
+        </div>
+        {item.parts.map((part, pi) => {
+          const letter = partLetter(part, pi)
+          const fieldId = `frq-${k}-${letter}`
+          return (
             <div key={letter} className="mb-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-              <div className="mb-3 text-sm font-semibold text-gray-900 dark:text-gray-100">({letter}) <RichText inline text={partQuestion(part)} /></div>
+              <label htmlFor={fieldId} className="mb-3 block text-sm font-semibold text-gray-900 dark:text-gray-100">
+                <RichText inline text={partHeading(letter, partQuestion(part))} />
+              </label>
               <textarea
-                value={ans.responses[pi]}
+                id={fieldId}
+                value={ans.responses[pi] ?? ''}
                 onChange={e => {
-                  const newResp = [...ans.responses]
-                  newResp[pi] = e.target.value
-                  updateAnswer(a => a.type === 'saq' ? { ...a, responses: newResp } : a)
+                  const v = e.target.value
+                  updateAnswer(a => {
+                    if (a.type !== 'saq') return a
+                    const responses = [...a.responses]
+                    responses[pi] = v
+                    return { ...a, responses }
+                  })
                 }}
                 disabled={ans.submitted}
-                placeholder="Write your response (1–3 sentences)…"
-                className="min-h-[80px] w-full rounded-lg border border-gray-300 bg-white p-3 text-sm text-gray-800 focus:border-amber-400 focus:outline-none disabled:bg-gray-50 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200"
+                placeholder="Write your response…"
+                className={`min-h-[80px] ${TEXTAREA}`}
               />
               {ans.submitted && (
                 <div className="mt-3 rounded-lg bg-amber-50 p-3 dark:bg-amber-900/20">
                   <p className="mb-2 text-xs font-semibold text-amber-900 dark:text-amber-200">Self-grade — check each rubric point your response earned:</p>
                   {Array.isArray(part.rubric) ? part.rubric.map(rp => {
-                    const key = `${itemIdx}-${letter}-${rp.id}`
+                    const key = `${letter}-${rp.id}`
                     return (
                       <label key={rp.id} className="mb-2 flex cursor-pointer items-start gap-2 text-xs text-gray-800 dark:text-gray-200">
-                        <input type="checkbox" checked={!!ans.checked[key]} onChange={e => updateAnswer(a => a.type === 'saq' ? { ...a, checked: { ...a.checked, [key]: e.target.checked } } : a)} className="mt-0.5 cursor-pointer" />
-                        <span><strong>{rp.label}:</strong> <RichText inline text={rp.description} /></span>
+                        <input type="checkbox" checked={!!ans.checked[key]} onChange={e => { const v = e.target.checked; updateAnswer(a => a.type === 'saq' ? { ...a, checked: { ...a.checked, [key]: v } } : a) }} className="mt-0.5 cursor-pointer" />
+                        <span><strong><RichText inline text={rp.label} />:</strong> <RichText inline text={rp.description} /></span>
                       </label>
                     )
                   }) : (
                     <>
                       <RichText text={part.rubric} className="mb-2 text-xs text-gray-800 dark:text-gray-200" />
                       <label className="flex cursor-pointer items-start gap-2 text-xs text-gray-800 dark:text-gray-200">
-                        <input type="checkbox" checked={!!ans.checked[`${itemIdx}-${letter}-self`]} onChange={e => updateAnswer(a => a.type === 'saq' ? { ...a, checked: { ...a.checked, [`${itemIdx}-${letter}-self`]: e.target.checked } } : a)} className="mt-0.5 cursor-pointer" />
+                        <input type="checkbox" checked={!!ans.checked[`${letter}-self`]} onChange={e => { const v = e.target.checked; updateAnswer(a => a.type === 'saq' ? { ...a, checked: { ...a.checked, [`${letter}-self`]: v } } : a) }} className="mt-0.5 cursor-pointer" />
                         <span>I earned credit for this part.</span>
                       </label>
                     </>
@@ -694,167 +979,279 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
                 </div>
               )}
             </div>
-            )
-          })}
-          {!ans.submitted && (
-            <button onClick={() => updateAnswer(a => a.type === 'saq' ? { ...a, submitted: true } : a)}
-              className={`mb-4 w-full cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-sm font-semibold text-white shadow transition hover:shadow-lg`}>
-              Submit Response & Reveal Rubric
-            </button>
-          )}
-          {ans.submitted && item.sampleResponse && (
-            <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-              <summary className="cursor-pointer text-sm font-semibold text-gray-800 dark:text-gray-200">View high-scoring sample response</summary>
-              <RichText text={item.sampleResponse} className="mt-3 text-sm text-gray-700 dark:text-gray-300" />
-            </details>
-          )}
-          {navFooter()}
-        </div></div>
-      </div>
+          )
+        })}
+        {!ans.submitted && (
+          <button type="button" onClick={() => updateAnswer(a => a.type === 'saq' ? { ...a, submitted: true } : a)}
+            className={`mb-4 w-full cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-sm font-semibold text-white shadow transition hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-950`}>
+            Submit Response & Reveal Rubric
+          </button>
+        )}
+        {ans.submitted && item.sampleResponse && (
+          <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+            <summary className="cursor-pointer rounded text-sm font-semibold text-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-gray-200">View high-scoring sample response</summary>
+            <RichText text={item.sampleResponse} className="mt-3 text-sm text-gray-700 dark:text-gray-300" />
+          </details>
+        )}
+        {navFooter}
+      </>
     )
   }
 
-  /* ---------- DBQ rendering ---------- */
-  if (item.type === 'dbq' && ans?.type === 'dbq') {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-        <div className="container"><div className="mx-auto max-w-3xl">
-          {header}
-          <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">Document-Based Question</h3>
-            <RichText text={item.prompt} className="text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
-          </div>
-          <div className="mb-4 space-y-3">
-            {item.documents.map(doc => (
-              <div key={doc.number} className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-                <p className="mb-1 text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-400">Document {doc.number}</p>
-                <p className="mb-2 text-xs italic text-gray-500 dark:text-gray-400">{doc.source}</p>
-                <RichText text={doc.content} className="text-sm text-gray-800 dark:text-gray-200" />
-              </div>
+  /* ---------- DBQ ---------- */
+  if (item.type === 'dbq' && ans.type === 'dbq') {
+    const fieldId = `frq-${k}-essay`
+    content = (
+      <>
+        <div className={`mb-4 ${card}`}>
+          {itemHeader('Document-Based Question')}
+          <RichText text={item.prompt} className="text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
+        </div>
+        <div className="mb-4 space-y-3">
+          {item.documents.map(doc => (
+            <div key={doc.number} className="rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+              <p className="mb-1 text-xs font-bold uppercase tracking-wide text-amber-700 dark:text-amber-400">Document {doc.number}</p>
+              <p className="mb-2 text-xs italic text-gray-500 dark:text-gray-400">{doc.source}</p>
+              {highlighter(highlightKey('doc', doc.content), doc.content, `Document ${doc.number}`, 'text-sm text-gray-800 dark:text-gray-200')}
+            </div>
+          ))}
+        </div>
+        <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+          <label htmlFor={fieldId} className="mb-2 block text-sm font-semibold text-gray-900 dark:text-gray-100">Your essay:</label>
+          <textarea
+            id={fieldId}
+            value={ans.response}
+            onChange={e => { const v = e.target.value; updateAnswer(a => a.type === 'dbq' ? { ...a, response: v } : a) }}
+            disabled={ans.submitted}
+            placeholder="Write your DBQ essay. Aim for a defensible thesis, contextualization, evidence from most of the documents, evidence beyond them, sourcing analysis, and well-developed reasoning."
+            className={`min-h-[300px] ${TEXTAREA}`}
+          />
+          <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{ans.response.split(/\s+/).filter(Boolean).length} words</p>
+        </div>
+        {!ans.submitted && (
+          <button type="button" onClick={() => updateAnswer(a => a.type === 'dbq' ? { ...a, submitted: true } : a)}
+            className={`mb-4 w-full cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-sm font-semibold text-white shadow transition hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-950`}>
+            Submit DBQ & Reveal Rubric
+          </button>
+        )}
+        {ans.submitted && (
+          <div className="mb-4 rounded-xl bg-amber-50 p-4 dark:bg-amber-900/20">
+            <p className="mb-3 text-sm font-semibold text-amber-900 dark:text-amber-200">Self-grade your DBQ ({item.rubric.length} points possible):</p>
+            {item.rubric.map(rp => (
+              <label key={rp.id} className="mb-3 flex cursor-pointer items-start gap-2 text-sm text-gray-800 dark:text-gray-200">
+                <input type="checkbox" checked={!!ans.checked[rp.id]} onChange={e => { const v = e.target.checked; updateAnswer(a => a.type === 'dbq' ? { ...a, checked: { ...a.checked, [rp.id]: v } } : a) }} className="mt-1 cursor-pointer" />
+                <span><strong><RichText inline text={rp.label} />:</strong> <RichText inline text={rp.description} /></span>
+              </label>
             ))}
           </div>
-          <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <p className="mb-2 text-sm font-semibold text-gray-900 dark:text-gray-100">Your essay:</p>
-            <textarea
-              value={ans.response}
-              onChange={e => updateAnswer(a => a.type === 'dbq' ? { ...a, response: e.target.value } : a)}
-              disabled={ans.submitted}
-              placeholder="Write your DBQ essay. Aim for a defensible thesis, contextualization, evidence from most of the documents, evidence beyond them, sourcing analysis, and well-developed reasoning."
-              className="min-h-[300px] w-full rounded-lg border border-gray-300 bg-white p-3 text-sm text-gray-800 focus:border-amber-400 focus:outline-none disabled:bg-gray-50 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200"
-            />
-            <p className="mt-1 text-xs text-gray-500">{ans.response.split(/\s+/).filter(Boolean).length} words</p>
-          </div>
-          {!ans.submitted && (
-            <button onClick={() => updateAnswer(a => a.type === 'dbq' ? { ...a, submitted: true } : a)}
-              className={`mb-4 w-full cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-sm font-semibold text-white shadow transition hover:shadow-lg`}>
-              Submit DBQ & Reveal Rubric
-            </button>
-          )}
-          {ans.submitted && (
-            <div className="mb-4 rounded-xl bg-amber-50 p-4 dark:bg-amber-900/20">
-              <p className="mb-3 text-sm font-semibold text-amber-900 dark:text-amber-200">Self-grade your DBQ (7 points possible):</p>
-              {item.rubric.map(rp => {
-                const key = `${itemIdx}-${rp.id}`
-                return (
-                  <label key={rp.id} className="mb-3 flex cursor-pointer items-start gap-2 text-sm text-gray-800 dark:text-gray-200">
-                    <input type="checkbox" checked={!!ans.checked[key]} onChange={e => updateAnswer(a => a.type === 'dbq' ? { ...a, checked: { ...a.checked, [key]: e.target.checked } } : a)} className="mt-1 cursor-pointer" />
-                    <span><strong>{rp.label}:</strong> {rp.description}</span>
-                  </label>
-                )
-              })}
-            </div>
-          )}
-          {ans.submitted && item.sampleResponse && (
-            <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-              <summary className="cursor-pointer text-sm font-semibold text-gray-800 dark:text-gray-200">View high-scoring sample response</summary>
-              <RichText text={item.sampleResponse} className="mt-3 text-sm text-gray-700 dark:text-gray-300" />
-            </details>
-          )}
-          {navFooter()}
-        </div></div>
-      </div>
+        )}
+        {ans.submitted && item.sampleResponse && (
+          <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+            <summary className="cursor-pointer rounded text-sm font-semibold text-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-gray-200">View high-scoring sample response</summary>
+            <RichText text={item.sampleResponse} className="mt-3 text-sm text-gray-700 dark:text-gray-300" />
+          </details>
+        )}
+        {navFooter}
+      </>
     )
   }
 
-  /* ---------- LEQ rendering ---------- */
-  if (item.type === 'leq' && ans?.type === 'leq') {
-    // Guard against an out-of-bounds chosenPromptIndex (e.g. restored/corrupted state) so accessing the prompt label never throws; degrade gracefully if no valid prompt exists
-    const chosenPrompt = item.promptOptions[ans.chosenPromptIndex]
+  /* ---------- LEQ ---------- */
+  if (item.type === 'leq' && ans.type === 'leq') {
+    // Guard against an out-of-bounds chosenPromptIndex so the prompt label never throws.
+    const chosenPrompt = item.promptOptions[ans.chosenPromptIndex] ?? item.promptOptions[0]
     if (!chosenPrompt) return null
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 py-6 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-        <div className="container"><div className="mx-auto max-w-3xl">
-          {header}
-          <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">{item.title ?? 'Long Essay Question'}</h3>
-            {item.promptOptions.length === 1 ? (
-              <div className="text-sm text-gray-700 dark:text-gray-300"><RichText text={item.promptOptions[0].prompt} /></div>
-            ) : (<>
+    const fieldId = `frq-${k}-essay`
+    const sample = ans.submitted ? item.sampleResponses?.find(x => x.promptLabel === chosenPrompt.label) : undefined
+    content = (
+      <>
+        <div className={`mb-4 ${card}`}>
+          {itemHeader(item.title ?? 'Long Essay Question')}
+          {item.promptOptions.length === 1 ? (
+            <div className="text-sm text-gray-700 dark:text-gray-300"><RichText text={item.promptOptions[0].prompt} /></div>
+          ) : (<>
             <p className="mb-3 text-sm text-gray-700 dark:text-gray-300">Choose <strong>one</strong> of the following prompts:</p>
             <div className="space-y-2">
               {item.promptOptions.map((opt, i) => (
-                <button key={i}
+                <button key={i} type="button"
                   onClick={() => !ans.submitted && updateAnswer(a => a.type === 'leq' ? { ...a, chosenPromptIndex: i } : a)}
                   disabled={ans.submitted}
-                  className={`block w-full cursor-pointer rounded-xl border px-4 py-3 text-left text-sm transition disabled:cursor-not-allowed ${ans.chosenPromptIndex === i ? t.sel : `border-gray-200 text-gray-700 ${t.hover} dark:border-gray-600 dark:text-gray-300`}`}>
+                  aria-pressed={ans.chosenPromptIndex === i}
+                  className={`block w-full cursor-pointer rounded-xl border px-4 py-3 text-left text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring disabled:cursor-not-allowed ${ans.chosenPromptIndex === i ? t.sel : `border-gray-200 text-gray-700 ${t.hover} dark:border-gray-600 dark:text-gray-300`}`}>
                   <span className="mr-2 font-bold">{opt.label}.</span><RichText inline text={opt.prompt} />
                 </button>
               ))}
             </div>
-            </>)}
+          </>)}
+        </div>
+        <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+          <label htmlFor={fieldId} className="mb-2 block text-sm font-semibold text-gray-900 dark:text-gray-100">{item.promptOptions.length === 1 ? 'Your essay:' : `Your essay (Option ${chosenPrompt.label}):`}</label>
+          <textarea
+            id={fieldId}
+            value={ans.response}
+            onChange={e => { const v = e.target.value; updateAnswer(a => a.type === 'leq' ? { ...a, response: v } : a) }}
+            disabled={ans.submitted}
+            placeholder={item.title ? 'Write your essay. Aim for a clear, defensible claim, specific evidence, and reasoning that ties them together.' : 'Write your LEQ essay. Aim for a clear defensible thesis, contextualization, specific historical evidence, complex reasoning, and a complex argument.'}
+            className={`min-h-[300px] ${TEXTAREA}`}
+          />
+          <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{ans.response.split(/\s+/).filter(Boolean).length} words</p>
+        </div>
+        {!ans.submitted && (
+          <button type="button" onClick={() => updateAnswer(a => a.type === 'leq' ? { ...a, submitted: true } : a)}
+            className={`mb-4 w-full cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-sm font-semibold text-white shadow transition hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-950`}>
+            Submit Essay & Reveal Rubric
+          </button>
+        )}
+        {ans.submitted && (
+          <div className="mb-4 rounded-xl bg-amber-50 p-4 dark:bg-amber-900/20">
+            <p className="mb-3 text-sm font-semibold text-amber-900 dark:text-amber-200">Self-grade your essay ({item.rubric.length} points possible):</p>
+            {item.rubric.map(rp => (
+              <label key={rp.id} className="mb-3 flex cursor-pointer items-start gap-2 text-sm text-gray-800 dark:text-gray-200">
+                <input type="checkbox" checked={!!ans.checked[rp.id]} onChange={e => { const v = e.target.checked; updateAnswer(a => a.type === 'leq' ? { ...a, checked: { ...a.checked, [rp.id]: v } } : a) }} className="mt-1 cursor-pointer" />
+                <span><strong><RichText inline text={rp.label} />:</strong> <RichText inline text={rp.description} /></span>
+              </label>
+            ))}
           </div>
-          <div className="mb-4 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-700 dark:bg-gray-800">
-            <p className="mb-2 text-sm font-semibold text-gray-900 dark:text-gray-100">{item.promptOptions.length === 1 ? 'Your essay:' : `Your essay (Option ${chosenPrompt.label}):`}</p>
-            <textarea
-              value={ans.response}
-              onChange={e => updateAnswer(a => a.type === 'leq' ? { ...a, response: e.target.value } : a)}
-              disabled={ans.submitted}
-              placeholder={item.title ? 'Write your essay. Aim for a clear, defensible claim, specific evidence, and reasoning that ties them together.' : 'Write your LEQ essay. Aim for a clear defensible thesis, contextualization, specific historical evidence, complex reasoning, and a complex argument.'}
-              className="min-h-[300px] w-full rounded-lg border border-gray-300 bg-white p-3 text-sm text-gray-800 focus:border-amber-400 focus:outline-none disabled:bg-gray-50 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200"
-            />
-            <p className="mt-1 text-xs text-gray-500">{ans.response.split(/\s+/).filter(Boolean).length} words</p>
-          </div>
-          {!ans.submitted && (
-            <button onClick={() => updateAnswer(a => a.type === 'leq' ? { ...a, submitted: true } : a)}
-              className={`mb-4 w-full cursor-pointer rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-sm font-semibold text-white shadow transition hover:shadow-lg`}>
-              Submit Essay & Reveal Rubric
-            </button>
-          )}
-          {ans.submitted && (
-            <div className="mb-4 rounded-xl bg-amber-50 p-4 dark:bg-amber-900/20">
-              <p className="mb-3 text-sm font-semibold text-amber-900 dark:text-amber-200">Self-grade your LEQ (6 points possible):</p>
-              {item.rubric.map(rp => {
-                const key = `${itemIdx}-${rp.id}`
-                return (
-                  <label key={rp.id} className="mb-3 flex cursor-pointer items-start gap-2 text-sm text-gray-800 dark:text-gray-200">
-                    <input type="checkbox" checked={!!ans.checked[key]} onChange={e => updateAnswer(a => a.type === 'leq' ? { ...a, checked: { ...a.checked, [key]: e.target.checked } } : a)} className="mt-1 cursor-pointer" />
-                    <span><strong>{rp.label}:</strong> {rp.description}</span>
-                  </label>
-                )
-              })}
-            </div>
-          )}
-          {ans.submitted && (() => {
-            // Look up the sample response once; the prior .find(...)! could mismatch and the ! assertion would crash — bind and existence-check instead
-            const sample = item.sampleResponses?.find(s => s.promptLabel === chosenPrompt.label)
-            if (!sample) return null
-            return (
-              <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
-                <summary className="cursor-pointer text-sm font-semibold text-gray-800 dark:text-gray-200">View high-scoring sample response for Option {chosenPrompt.label}</summary>
-                <RichText
-                  text={sample.response}
-                  className="mt-3 text-sm text-gray-700 dark:text-gray-300"
-                />
-              </details>
-            )
-          })()}
-          {navFooter()}
-        </div></div>
-      </div>
+        )}
+        {sample && (
+          <details className="mb-4 rounded-xl border border-gray-200 bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
+            <summary className="cursor-pointer rounded text-sm font-semibold text-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-gray-200">View high-scoring sample response for Option {chosenPrompt.label}</summary>
+            <RichText text={sample.response} className="mt-3 text-sm text-gray-700 dark:text-gray-300" />
+          </details>
+        )}
+        {navFooter}
+      </>
     )
   }
 
-  return null
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
+      <div className="sticky top-16 z-10 border-b border-gray-200 bg-white/95 backdrop-blur dark:border-gray-700 dark:bg-gray-900/95">
+        <div className="container flex flex-wrap items-center justify-between gap-2 px-4 py-2.5">
+          <div className="flex min-w-0 flex-wrap items-center gap-2">
+            <span className={`rounded-full px-3 py-1 text-xs font-semibold ${t.badge}`}>{stageTitle}</span>
+            <span className="hidden text-sm font-medium text-gray-600 sm:inline dark:text-gray-400">{currentSection.shortName}</span>
+          </div>
+          <div className="flex items-center gap-3">
+            <span
+              role="timer"
+              aria-label={`${stage.partLabel ? 'Part' : 'Section'} time remaining: ${fmt(left)}`}
+              className={`rounded-md px-2 py-0.5 font-mono text-sm font-bold ${criticalTime ? 'bg-red-100 text-red-700 dark:bg-red-900/40 dark:text-red-300' : lowTime ? 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300' : 'text-gray-800 dark:text-gray-100'}`}
+            >
+              {fmt(left)}
+            </span>
+            <button type="button" onClick={() => setExitOpen(true)} aria-haspopup="dialog" className={TOOL_BTN}>
+              <LogOut className="h-3.5 w-3.5" aria-hidden="true" /> Exit
+            </button>
+          </div>
+        </div>
+        <div className="container flex flex-wrap items-center gap-2 px-4 pb-2" role="toolbar" aria-label="Exam tools">
+          <button type="button" onClick={() => setNavOpen(true)} className={TOOL_BTN} aria-haspopup="dialog" aria-keyshortcuts="Alt+V">
+            <LayoutGrid className="h-3.5 w-3.5" aria-hidden="true" /> Navigator
+            <span className="font-normal text-gray-500 dark:text-gray-400">({answeredInStage}/{stageCount})</span>
+          </button>
+          {!reviewOpen && (
+            <button type="button" onClick={openReview} className={TOOL_BTN}>
+              <ClipboardCheck className="h-3.5 w-3.5" aria-hidden="true" /> Review screen
+            </button>
+          )}
+          {tools.referenceSheet && (
+            <button type="button" onClick={() => setRefOpen(true)} className={TOOL_BTN} aria-haspopup="dialog">
+              <BookOpen className="h-3.5 w-3.5" aria-hidden="true" /> Reference sheet
+            </button>
+          )}
+          {stage.calculator ? (
+            <DesmosCalculatorLink label="Calculator" />
+          ) : examHasCalculator ? (
+            <span className="inline-flex items-center gap-1.5 rounded-lg border border-dashed border-gray-300 px-2.5 py-1.5 text-xs font-semibold text-gray-600 dark:border-gray-600 dark:text-gray-300">
+              <Ban className="h-3.5 w-3.5" aria-hidden="true" /> No calculator in this part
+            </span>
+          ) : null}
+          <div className="ml-auto hidden sm:block">
+            <ExamShortcutsHelp />
+          </div>
+        </div>
+        {lowTime && (
+          <div className={`border-t px-4 py-1 text-center text-xs font-semibold ${criticalTime ? 'border-red-200 bg-red-50 text-red-700 dark:border-red-800 dark:bg-red-900/20 dark:text-red-300' : 'border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-800 dark:bg-amber-900/20 dark:text-amber-300'}`}>
+            {criticalTime ? `Under 1 minute: this ${unitWord} ends itself at 0:00.` : `Under 5 minutes left in this ${unitWord}.`}
+          </div>
+        )}
+      </div>
+
+      <FocusTrapDialog open={navOpen} onClose={() => setNavOpen(false)} title="Question navigator" className="mx-4 w-full max-w-2xl">
+        <div className="p-5 sm:p-6">
+          <h2 className="mb-3 pr-8 text-lg font-bold text-gray-900 dark:text-white">Navigator · {stageTitle}</h2>
+          <QuestionNavigator items={navItems} onJump={jumpInStage} />
+          <button
+            type="button"
+            onClick={openReview}
+            className="mt-5 inline-flex items-center gap-1.5 rounded-xl border-2 border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700"
+          >
+            <ClipboardCheck className="h-4 w-4" aria-hidden="true" /> Go to {unitWord} review
+          </button>
+        </div>
+      </FocusTrapDialog>
+
+      <FocusTrapDialog open={exitOpen} onClose={() => setExitOpen(false)} title="Leave the exam?" className="mx-4 w-full max-w-md">
+        <div className="p-5 sm:p-6">
+          <h2 className="mb-2 pr-8 text-lg font-bold text-gray-900 dark:text-white">Leave the exam?</h2>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            Your answers are saved on this device, so you can come back to this exam. The clock keeps running while you are away, as on test day.
+          </p>
+          <div className="mt-5 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+            <Link href={backLink.href} className="rounded-xl bg-accent px-4 py-2 text-center text-sm font-semibold text-accent-foreground hover:bg-accent-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-800">
+              Save and leave
+            </Link>
+            <button type="button" onClick={() => setExitOpen(false)} className="rounded-xl border-2 border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700">
+              Keep working
+            </button>
+            <button type="button" onClick={discardAttempt} className="rounded-xl px-4 py-2 text-sm font-semibold text-red-700 hover:bg-red-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 dark:text-red-300 dark:hover:bg-red-900/20 sm:ml-auto">
+              Discard this attempt
+            </button>
+          </div>
+        </div>
+      </FocusTrapDialog>
+
+      {tools.referenceSheet && <ReferenceSheetModal open={refOpen} onClose={() => setRefOpen(false)} courseSlug={tools.referenceSheet} />}
+
+      <div className="container px-4 py-5">
+        {resumed && (
+          <p className="mx-auto mb-4 flex max-w-3xl flex-wrap items-center justify-between gap-2 rounded-xl border border-accent-muted bg-accent-subtle px-4 py-2.5 text-sm text-gray-800 dark:text-gray-100" role="status">
+            <span>Welcome back. Your exam was restored where you left off; the clock kept running while you were away.</span>
+            <button type="button" onClick={() => setResumed(false)} className="rounded text-xs font-semibold text-accent hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted">Dismiss</button>
+          </p>
+        )}
+        {reviewOpen ? (
+          <ExamReviewScreen
+            title={stageTitle}
+            items={navItems}
+            onJump={jumpInStage}
+            onReturn={() => setReviewOpen(false)}
+            onEnd={() => setConfirmEnd(true)}
+            endLabel={isLastStage ? 'End section & finish exam' : `End ${unitWord}`}
+          >
+            {confirmEnd && (
+              <div className="mt-4 rounded-xl border border-red-200 bg-red-50 p-4 text-sm dark:border-red-800 dark:bg-red-900/20">
+                <p role="alert" className="font-semibold text-red-800 dark:text-red-200">
+                  End {stageTitle}? You cannot come back to it. {answeredInStage} of {stageCount} answered.
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <button type="button" onClick={endStage} className="rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400 focus-visible:ring-offset-2">
+                    {isLastStage ? 'Yes, end and finish' : `Yes, end this ${unitWord}`}
+                  </button>
+                  <button type="button" onClick={() => setConfirmEnd(false)} className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-semibold text-gray-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:text-gray-200">
+                    Keep working
+                  </button>
+                </div>
+              </div>
+            )}
+          </ExamReviewScreen>
+        ) : (
+          <div className="mx-auto max-w-3xl">{content}</div>
+        )}
+      </div>
+    </div>
+  )
 }
 
 export default function FullLengthPracticeExam(config: FullLengthExamConfig) {

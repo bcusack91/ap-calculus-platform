@@ -46,3 +46,32 @@ export interface ReviewItem {
    */
   optionExplanations?: string[];
 }
+
+/** One rubric point of a free-response item, with whether the student ticked it. */
+export interface ReviewFrqRubricLine {
+  id: string;
+  label: string;
+  description: string;
+  earned: boolean;
+}
+
+/**
+ * A free-response item in a review (AP practice exams): the prompt, what the
+ * student wrote per part, and the rubric they scored themselves against.
+ */
+export interface ReviewFrqItem {
+  /** Section and item index within the exam. */
+  s: number;
+  i: number;
+  section: string;
+  number: number;
+  type: 'saq' | 'dbq' | 'leq';
+  title: string;
+  prompt: string;
+  parts: { label: string; question: string; response: string; rubric: ReviewFrqRubricLine[] }[];
+  earned: number;
+  possible: number;
+  /** The student revealed the rubric and scored themselves (false = unscored). */
+  selfScored: boolean;
+  sampleResponse?: string;
+}

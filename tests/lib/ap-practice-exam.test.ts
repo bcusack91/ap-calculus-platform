@@ -135,4 +135,13 @@ describe('POST /api/ap-practice/submit', () => {
     expect(rows).toHaveLength(mcqs.length)
     expect(rows[0]).toMatchObject({ attemptKind: 'ap-practice', attemptId: 'att1', correct: 1 })
   })
+
+  it('saves an attempt that is only free-response writing, with the responses in review.frq', async () => {
+    const frqSection = chem.sections.findIndex((s) => s.items.some((i) => i.type !== 'mcq'))
+    const res = await post({ examKey: 'ap-chem', mcq: [], frq: [{ s: frqSection, i: 0, earned: 0, responses: ['Ka = x^2 / 0.1'], ticked: [], submitted: false }] })
+    expect(res.status).toBe(200)
+    const review = created[0].results.review as { frq: { parts: { response: string }[]; selfScored: boolean }[] }
+    expect(review.frq[0].parts[0].response).toBe('Ka = x^2 / 0.1')
+    expect(review.frq[0].selfScored).toBe(false)
+  })
 })

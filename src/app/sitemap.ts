@@ -162,12 +162,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/ap-chem-full-exam`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.85,
-    },
-    {
       url: `${baseUrl}/ap-chem-labs`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
