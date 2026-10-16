@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ArrowRight, Trophy } from 'lucide-react'
 import ExternalScoreForm from '@/components/ExternalScoreForm'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
-import { aOrAn, describeReadiness, levelThresholds, type FullLengthCourse, type FullLengthReadiness } from '@/lib/full-length-progress'
+import { aOrAn, describeReadiness, isApFullLengthCourse, levelThresholds, type FullLengthCourse, type FullLengthReadiness } from '@/lib/full-length-progress'
 
 const TICKS = levelThresholds().slice(1, -1)
 
@@ -119,7 +119,7 @@ export default function FullLengthProgress({
         !compact && (
           <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
             {last
-              ? `Last full-length: ${last.score != null ? `${last.score} ` : ''}${last.kind === 'external' ? `(${last.source ?? 'outside test'}) ` : ''}on ${formatDay(last.at)}. `
+              ? `Last full-length: ${last.score != null ? `${last.score}${isApFullLengthCourse(course) ? '/5' : ''} ` : ''}${last.kind === 'external' ? `(${last.source ?? 'outside test'}) ` : ''}on ${formatDay(last.at)}. `
               : ''}
             {last?.href && (
               <>
