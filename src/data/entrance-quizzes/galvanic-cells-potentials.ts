@@ -1,28 +1,240 @@
-/** Entrance Quiz — Galvanic Cells & Standard Potentials — 14 questions (2 per part) */
+/**
+ * Entrance Quiz — Galvanic Cells & Standard Potentials
+ *
+ * 14 questions covering all 7 lesson parts (2 per part).
+ * Each question is tagged with the part number it covers,
+ * so we can determine which parts a student already knows.
+ * Also serves the galvanic-cells-thermo-applications topic, which renders this lesson.
+ *
+ * Part mapping:
+ *  1 — Introduction to Galvanic Cells (half-reactions; anode = oxidation)
+ *  2 — Salt Bridges, Electron Flow & Ion Flow
+ *  3 — Standard Reduction Potentials (E°cell = E°cathode − E°anode; intensive)
+ *  4 — Reading Cell Diagrams & Observations (inert electrodes, gases, mass changes)
+ *  5 — Spontaneity & ΔG° (ΔG° = −nFE°; sign links to K)
+ *  6 — Problem-Solving Workshop (n, E°cell and ΔG° together)
+ *  7 — Synthesis & AP Review (K from E°; intensive E°)
+ */
+
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
+
 const questions: EntranceQuizQuestion[] = [
-  { id: 'gcp-ent-1a', question: 'A galvanic (voltaic) cell converts:', options: ['Electrical energy to chemical energy', 'Chemical energy to electrical energy', 'Heat to electrical energy', 'Nuclear energy to chemical energy'], correctIndex: 1, explanation: 'Galvanic cells use spontaneous redox reactions to convert chemical energy into electrical energy.', partNumber: 1, partTitle: 'Introduction to Galvanic Cells' },
-  { id: 'gcp-ent-1b', question: 'In a galvanic cell, electrons flow from the ___ to the ___ through the external circuit:', options: ['Cathode to anode', 'Anode to cathode', 'Salt bridge to anode', 'Cathode to salt bridge'], correctIndex: 1, explanation: 'Electrons flow from the anode (oxidation) to the cathode (reduction) through the external wire.', partNumber: 1, partTitle: 'Introduction to Galvanic Cells' },
-  { id: 'gcp-ent-2a', question: 'In standard cell notation, the anode is written on the ___ and the cathode on the ___:', options: ['Right; left', 'Left; right', 'Top; bottom', 'Inside; outside'], correctIndex: 1, explanation: 'Cell notation: Anode | Anode solution || Cathode solution | Cathode. Anode (oxidation) is on the left.', partNumber: 2, partTitle: 'Cell Notation' },
-  { id: 'gcp-ent-2b', question: 'The double line (||) in cell notation represents the:', options: ['Wire connecting electrodes', 'Salt bridge', 'Electrode surface', 'Phase boundary'], correctIndex: 1, explanation: 'The || represents the salt bridge that allows ion flow between the two half-cells to maintain electrical neutrality.', partNumber: 2, partTitle: 'Cell Notation' },
-  { id: 'gcp-ent-3a', question: 'Standard reduction potentials ($E°$) are measured relative to the:', options: ['Silver/silver chloride electrode', 'Standard hydrogen electrode (SHE)', 'Copper electrode', 'Platinum electrode'], correctIndex: 1, explanation: 'All standard reduction potentials are measured relative to the SHE, which is assigned $E° = 0.00$ V.', partNumber: 3, partTitle: 'Standard Reduction Potentials' },
-  { id: 'gcp-ent-3b', question: 'A more positive standard reduction potential means the species is a:', options: ['Better reducing agent', 'Better oxidizing agent', 'Better conductor', 'Poorer oxidizing agent'], correctIndex: 1, explanation: 'More positive $E°_{red}$ = greater tendency to be reduced = stronger oxidizing agent (it takes electrons more readily).', partNumber: 3, partTitle: 'Standard Reduction Potentials' },
-  { id: 'gcp-ent-4a', question: 'The standard cell potential ($E°_{cell}$) is calculated as:', options: ['$E°_{cathode} + E°_{anode}$', '$E°_{cathode} - E°_{anode}$', '$E°_{anode} - E°_{cathode}$', '$E°_{cathode} \\times E°_{anode}$'], correctIndex: 1, explanation: '$E°_{cell} = E°_{cathode} - E°_{anode}$ (both using reduction potentials).', partNumber: 4, partTitle: 'Calculating $E°_{cell}$' },
-  { id: 'gcp-ent-4b', question: 'Given $E°(Cu^{2+}/Cu) = +0.34$ V and $E°(Zn^{2+}/Zn) = -0.76$ V, for a Zn/Cu galvanic cell, $E°_{cell}$ =:', options: ['0.42 V', '1.10 V', '−1.10 V', '−0.42 V'], correctIndex: 1, explanation: 'Zn is the anode (oxidized), Cu is the cathode (reduced). $E°_{cell} = 0.34 - (-0.76) = 1.10$ V.', partNumber: 4, partTitle: 'Calculating $E°_{cell}$' },
-  { id: 'gcp-ent-5a', question: 'A positive $E°_{cell}$ indicates the reaction is:', options: ['Nonspontaneous', 'At equilibrium', 'Spontaneous under standard conditions', 'Endothermic'], correctIndex: 2, explanation: '$E°_{cell} > 0$ means $\\Delta G° < 0$ (since $\\Delta G° = -nFE°$), so the reaction is spontaneous.', partNumber: 5, partTitle: 'Spontaneity & $\\Delta G°$' },
-  { id: 'gcp-ent-5b', question: 'The relationship between $\\Delta G°$ and $E°_{cell}$ is:', options: ['$\\Delta G° = nFE°$', '$\\Delta G° = -nFE°$', '$\\Delta G° = -RT\\ln K$', '$\\Delta G° = E°/nF$'], correctIndex: 1, explanation: '$\\Delta G° = -nFE°_{cell}$, where n is moles of electrons transferred and F is Faraday\'s constant (96,485 C/mol).', partNumber: 5, partTitle: 'Spontaneity & $\\Delta G°$' },
-  { id: 'gcp-ent-6a', question: 'For $Fe^{3+} + e^- \\to Fe^{2+}$, $E° = +0.77$ V, and $Sn^{4+} + 2e^- \\to Sn^{2+}$, $E° = +0.15$ V. Which is the stronger oxidizing agent?', options: ['$Fe^{3+}$', '$Sn^{4+}$', '$Fe^{2+}$', '$Sn^{2+}$'], correctIndex: 0, explanation: '$Fe^{3+}$ has the more positive reduction potential (+0.77 V > +0.15 V), making it the stronger oxidizing agent.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'gcp-ent-6b', question: 'How many moles of electrons are transferred in: $Zn + Cu^{2+} \\to Zn^{2+} + Cu$?', options: ['1', '2', '3', '4'], correctIndex: 1, explanation: 'Zn → $Zn^{2+}$ + $2e^{-}$ and $Cu^{2+}$ + $2e^{-}$ → Cu. Two moles of electrons are transferred.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'gcp-ent-7a', question: 'The relationship between $E°_{cell}$ and K is: $E°_{cell} = \\frac{RT}{nF}\\ln K$. A large K corresponds to:', options: ['A negative $E°_{cell}$', 'A positive $E°_{cell}$', '$E°_{cell} = 0$', 'No relationship'], correctIndex: 1, explanation: 'Large K (products favored) → $\\ln K > 0$ → $E°_{cell} > 0$. Products-favored reactions have positive cell potentials.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
-  { id: 'gcp-ent-7b', question: 'When a galvanic cell reaches equilibrium:', options: ['$E_{cell} = E°_{cell}$', '$E_{cell} = 0$ and the battery is "dead"', '$E_{cell}$ becomes negative', 'Current doubles'], correctIndex: 1, explanation: 'At equilibrium, $\\Delta G = 0$ → $E_{cell} = 0$. No net electron flow occurs and the cell can do no more work.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
+  // Part 1: Introduction to Galvanic Cells
+  {
+    id: 'gcp-ent-1a',
+    question: 'A galvanic cell runs the reaction $\\text{Cl}_2(g) + 2\\text{Br}^-(aq) \\rightarrow 2\\text{Cl}^-(aq) + \\text{Br}_2(l)$. Which half-reaction occurs at the anode?',
+    options: [
+      '$\\text{Cl}_2 + 2e^- \\rightarrow 2\\text{Cl}^-$',
+      '$2\\text{Br}^- \\rightarrow \\text{Br}_2 + 2e^-$',
+      '$\\text{Br}_2 + 2e^- \\rightarrow 2\\text{Br}^-$',
+      '$2\\text{Cl}^- \\rightarrow \\text{Cl}_2 + 2e^-$',
+    ],
+    correctIndex: 1,
+    explanation: 'Bromide goes from −1 to 0, losing electrons, and oxidation always happens at the anode. Chlorine being reduced is the cathode half-reaction, and the other two run the reaction backward.',
+    partNumber: 1,
+    partTitle: 'Introduction to Galvanic Cells',
+  },
+  {
+    id: 'gcp-ent-1b',
+    question: 'How many electrons are transferred in the balanced cell reaction $\\text{Cr}(s) + 3\\text{Ag}^+(aq) \\rightarrow \\text{Cr}^{3+}(aq) + 3\\text{Ag}(s)$?',
+    options: ['1', '4', '3', '6'],
+    correctIndex: 2,
+    explanation: 'One chromium atom loses 3 electrons, and three silver ions gain 1 each, so 3 electrons move. One is the per-silver change, and 6 counts electrons lost and gained separately.',
+    partNumber: 1,
+    partTitle: 'Introduction to Galvanic Cells',
+  },
+
+  // Part 2: Salt Bridges, Electron Flow & Ion Flow
+  {
+    id: 'gcp-ent-2a',
+    question: 'A galvanic cell has a cadmium anode in $\\text{Cd(NO}_3)_2$ and a copper cathode in $\\text{Cu(NO}_3)_2$, joined by a $\\text{NaNO}_3$ salt bridge. How do ions move through the salt bridge?',
+    options: [
+      '$\\text{NO}_3^-$ moves to the cadmium side; $\\text{Na}^+$ moves to the copper side',
+      '$\\text{Na}^+$ moves to the cadmium side; $\\text{NO}_3^-$ moves to the copper side',
+      'Electrons move through the bridge from the cadmium side to the copper side',
+      '$\\text{Cd}^{2+}$ ions move through the bridge to plate onto the copper',
+    ],
+    correctIndex: 0,
+    explanation: 'Oxidation adds $\\text{Cd}^{2+}$ to the anode compartment, so anions flow there; reduction removes $\\text{Cu}^{2+}$ from the cathode compartment, so cations flow there. Electrons travel only through the wire, and the bridge carries its own ions.',
+    partNumber: 2,
+    partTitle: 'Salt Bridges, Electron Flow & Ion Flow',
+  },
+  {
+    id: 'gcp-ent-2b',
+    question: 'In the cadmium–copper cell described above, how do the electrode masses change as the cell operates?',
+    options: [
+      'Cadmium gains mass, and copper loses mass',
+      'Both electrodes keep the same mass',
+      'Cadmium loses mass, and copper gains mass',
+      'Both electrodes lose mass as they dissolve',
+    ],
+    correctIndex: 2,
+    explanation: 'Cadmium metal is oxidized to $\\text{Cd}^{2+}$ and dissolves, while $\\text{Cu}^{2+}$ is reduced and plates out as copper metal on the cathode. Only the anode dissolves.',
+    partNumber: 2,
+    partTitle: 'Salt Bridges, Electron Flow & Ion Flow',
+  },
+
+  // Part 3: Standard Reduction Potentials
+  {
+    id: 'gcp-ent-3a',
+    question: 'Using $E^\\circ(\\text{Cr}^{3+}/\\text{Cr}) = -0.74$ V and $E^\\circ(\\text{Pb}^{2+}/\\text{Pb}) = -0.13$ V, what is $E^\\circ_{\\text{cell}}$ for the galvanic cell $2\\text{Cr} + 3\\text{Pb}^{2+} \\rightarrow 2\\text{Cr}^{3+} + 3\\text{Pb}$?',
+    options: ['−0.61 V', '+0.87 V', '+1.09 V', '+0.61 V'],
+    correctIndex: 3,
+    explanation: 'Lead(II) has the higher potential and is reduced: $E^\\circ_{\\text{cell}} = -0.13 - (-0.74) = +0.61$ V. Potentials are intensive, so multiplying by the coefficients (giving 1.09 V) is wrong; 0.87 V adds the magnitudes, and $-0.61$ V subtracts in the wrong order.',
+    partNumber: 3,
+    partTitle: 'Standard Reduction Potentials',
+  },
+  {
+    id: 'gcp-ent-3b',
+    question: 'Which metal dissolves in 1 M $\\text{H}^+$ under standard conditions, releasing $\\text{H}_2$ gas? ($E^\\circ$ for $2\\text{H}^+/\\text{H}_2 = 0.00$ V)',
+    options: [
+      'Nickel ($E^\\circ = -0.26$ V)',
+      'Copper ($E^\\circ = +0.34$ V)',
+      'Silver ($E^\\circ = +0.80$ V)',
+      'Gold ($E^\\circ = +1.50$ V)',
+    ],
+    correctIndex: 0,
+    explanation: 'For the metal to be oxidized while $\\text{H}^+$ is reduced, $E^\\circ_{\\text{cell}} = 0.00 - E^\\circ_{\\text{metal}}$ must be positive, which happens only for a negative metal potential such as nickel\'s. Copper, silver, and gold give negative cell potentials.',
+    partNumber: 3,
+    partTitle: 'Standard Reduction Potentials',
+  },
+
+  // Part 4: Reading Cell Diagrams & Observations
+  {
+    id: 'gcp-ent-4a',
+    question: 'One half-cell has a platinum wire in a solution 1 M in both $\\text{Fe}^{3+}$ and $\\text{Fe}^{2+}$ ($E^\\circ = +0.77$ V); the other has a copper strip in 1 M $\\text{Cu}^{2+}$ ($E^\\circ = +0.34$ V). What is observed as the cell runs?',
+    options: [
+      'The copper strip gains mass; the platinum is unchanged',
+      'The platinum dissolves; the copper strip gains mass',
+      'The copper strip and platinum wire both keep their mass',
+      'The copper strip loses mass; the platinum is unchanged',
+    ],
+    correctIndex: 3,
+    explanation: '$\\text{Fe}^{3+}$ has the higher potential, so it is reduced to $\\text{Fe}^{2+}$ at the inert platinum, whose mass does not change. Copper is oxidized at the anode, so the strip dissolves and loses mass.',
+    partNumber: 4,
+    partTitle: 'Reading Cell Diagrams & Observations',
+  },
+  {
+    id: 'gcp-ent-4b',
+    question: 'A cell pairs a zinc strip in 1 M $\\text{Zn}^{2+}$ ($E^\\circ = -0.76$ V) with a platinum electrode in 1 M HCl ($E^\\circ$ for $2\\text{H}^+/\\text{H}_2 = 0.00$ V). Gas bubbles appear at the platinum. Which half-reaction occurs there?',
+    options: [
+      '$\\text{H}_2(g) \\rightarrow 2\\text{H}^+(aq) + 2e^-$',
+      '$\\text{Zn}^{2+}(aq) + 2e^- \\rightarrow \\text{Zn}(s)$',
+      '$2\\text{H}^+(aq) + 2e^- \\rightarrow \\text{H}_2(g)$',
+      '$\\text{Pt}(s) \\rightarrow \\text{Pt}^{2+}(aq) + 2e^-$',
+    ],
+    correctIndex: 2,
+    explanation: 'The hydrogen couple has the higher potential, so $\\text{H}^+$ is reduced at the platinum cathode and the bubbles are hydrogen. Platinum is inert, zinc ions are not reduced in this cell, and oxidizing $\\text{H}_2$ would consume gas rather than form it.',
+    partNumber: 4,
+    partTitle: 'Reading Cell Diagrams & Observations',
+  },
+
+  // Part 5: Spontaneity & ΔG°
+  {
+    id: 'gcp-ent-5a',
+    question: 'The cell $\\text{Ni}(s) + 2\\text{Ag}^+(aq) \\rightarrow \\text{Ni}^{2+}(aq) + 2\\text{Ag}(s)$ has $E^\\circ = +1.06$ V. What is $\\Delta G^\\circ$? ($F = 96{,}485$ C/mol)',
+    options: ['−102 kJ', '−205 kJ', '+205 kJ', '−409 kJ'],
+    correctIndex: 1,
+    explanation: 'Two electrons are transferred, so $\\Delta G^\\circ = -(2)(96{,}485)(1.06) = -2.05 \\times 10^5$ J $= -205$ kJ. Using $n = 1$ gives $-102$ kJ, dropping the minus sign gives +205 kJ, and doubling $n$ again gives $-409$ kJ.',
+    partNumber: 5,
+    partTitle: 'Spontaneity & ΔG°',
+  },
+  {
+    id: 'gcp-ent-5b',
+    question: 'A two-electron cell reaction has $\\Delta G^\\circ = +38.6$ kJ. What are $E^\\circ_{\\text{cell}}$ and the size of $K$? ($F = 96{,}485$ C/mol)',
+    options: [
+      '$E^\\circ = -0.200$ V, and $K < 1$',
+      '$E^\\circ = +0.200$ V, and $K > 1$',
+      '$E^\\circ = -0.400$ V, and $K < 1$',
+      '$E^\\circ = +0.200$ V, and $K < 1$',
+    ],
+    correctIndex: 0,
+    explanation: '$E^\\circ = -\\Delta G^\\circ/(nF) = -38{,}600/(2 \\times 96{,}485) = -0.200$ V, and a positive $\\Delta G^\\circ$ means $K < 1$. Using $n = 1$ gives $-0.400$ V, and a positive $E^\\circ$ always pairs with $K > 1$, never $K < 1$.',
+    partNumber: 5,
+    partTitle: 'Spontaneity & ΔG°',
+  },
+
+  // Part 6: Problem-Solving Workshop
+  {
+    id: 'gcp-ent-6a',
+    question: 'A galvanic cell is built from Al|$\\text{Al}^{3+}$ ($E^\\circ = -1.66$ V) and Cu|$\\text{Cu}^{2+}$ ($E^\\circ = +0.34$ V). For the balanced reaction, what are $n$ and $\\Delta G^\\circ$? ($F = 96{,}485$ C/mol)',
+    options: [
+      '$n = 3$ and $\\Delta G^\\circ = -579$ kJ',
+      '$n = 6$ and $\\Delta G^\\circ = -1158$ kJ',
+      '$n = 2$ and $\\Delta G^\\circ = -386$ kJ',
+      '$n = 6$ and $\\Delta G^\\circ = -2512$ kJ',
+    ],
+    correctIndex: 1,
+    explanation: '$2\\text{Al} + 3\\text{Cu}^{2+} \\rightarrow 2\\text{Al}^{3+} + 3\\text{Cu}$ transfers 6 electrons, and $E^\\circ = 0.34 - (-1.66) = 2.00$ V, so $\\Delta G^\\circ = -(6)(96{,}485)(2.00) = -1158$ kJ. Multiplying the potentials by the coefficients gives the $-2512$ kJ value, and $n = 3$ or $n = 2$ counts only one half-reaction.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  {
+    id: 'gcp-ent-6b',
+    question: 'Can $\\text{Fe}^{2+}$ ($E^\\circ = -0.44$ V) spontaneously oxidize zinc metal ($E^\\circ$ for $\\text{Zn}^{2+}/\\text{Zn} = -0.76$ V) under standard conditions?',
+    options: [
+      'No, because $E^\\circ_{\\text{cell}} = -0.32$ V',
+      'Yes, because $E^\\circ_{\\text{cell}} = +1.20$ V',
+      'No, because both potentials are negative',
+      'Yes, because $E^\\circ_{\\text{cell}} = +0.32$ V',
+    ],
+    correctIndex: 3,
+    explanation: 'With iron(II) reduced and zinc oxidized, $E^\\circ_{\\text{cell}} = -0.44 - (-0.76) = +0.32$ V, which is positive, so the reaction is favored. Only the difference matters, not whether each potential is negative, and 1.20 V adds the magnitudes.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+
+  // Part 7: Synthesis & AP Review
+  {
+    id: 'gcp-ent-7a',
+    question: 'A two-electron galvanic cell has $E^\\circ = +0.46$ V at 298 K. What is the approximate value of $K$? ($F = 96{,}485$ C/mol; $R = 8.314$ J/(mol·K))',
+    options: [
+      '$K \\approx 1.6$',
+      '$K \\approx 6 \\times 10^{7}$',
+      '$K \\approx 4 \\times 10^{15}$',
+      '$K \\approx 3 \\times 10^{-16}$',
+    ],
+    correctIndex: 2,
+    explanation: 'Combining $\\Delta G^\\circ = -nFE^\\circ$ with $\\Delta G^\\circ = -RT\\ln K$ gives $\\ln K = nFE^\\circ/RT = (2)(96{,}485)(0.46)/2478 = 35.8$, so $K \\approx 4 \\times 10^{15}$. Using $n = 1$ gives about $6 \\times 10^7$, a sign error gives a tiny $K$, and $e^{0.46}$ leaves out $nF/RT$ entirely.',
+    partNumber: 7,
+    partTitle: 'Synthesis & AP Review',
+  },
+  {
+    id: 'gcp-ent-7b',
+    question: 'A Zn–Cu cell at standard conditions is rebuilt with a zinc electrode twice as large and twice the volume of each solution. What happens to $E^\\circ_{\\text{cell}}$?',
+    options: [
+      'It doubles',
+      'It stays the same',
+      'It halves',
+      'It changes sign',
+    ],
+    correctIndex: 1,
+    explanation: 'Cell potential is an intensive property: it depends on which half-reactions occur and on concentrations, not on how much material is present. A larger cell can deliver more total charge, but its voltage is unchanged.',
+    partNumber: 7,
+    partTitle: 'Synthesis & AP Review',
+  },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
+
+/**
+ * Generate an entrance quiz for the galvanic-cells-potentials topic.
+ * Returns all 14 questions in shuffled order.
+ */
+export function generateEntranceQuiz(): EntranceQuizQuestion[] {
+  return shuffleArray(questions)
+}
+
+/**
+ * Get the list of part numbers and titles covered by this entrance quiz.
+ */
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Introduction to Galvanic Cells' }, { partNumber: 2, partTitle: 'Cell Notation' },
-    { partNumber: 3, partTitle: 'Standard Reduction Potentials' }, { partNumber: 4, partTitle: 'Calculating $E°_{cell}$' },
-    { partNumber: 5, partTitle: 'Spontaneity & $\\Delta G°$' }, { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 1, partTitle: 'Introduction to Galvanic Cells' },
+    { partNumber: 2, partTitle: 'Salt Bridges, Electron Flow & Ion Flow' },
+    { partNumber: 3, partTitle: 'Standard Reduction Potentials' },
+    { partNumber: 4, partTitle: 'Reading Cell Diagrams & Observations' },
+    { partNumber: 5, partTitle: 'Spontaneity & ΔG°' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }

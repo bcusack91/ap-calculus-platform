@@ -1,28 +1,199 @@
-/** Entrance Quiz — Stoichiometry & Limiting Reactants — 14 questions (2 per part) */
+/**
+ * Entrance Quiz — Stoichiometry & Limiting Reactants
+ *
+ * 14 questions covering all 7 lesson parts (2 per part).
+ * Each question is tagged with the part number it covers,
+ * so we can determine which parts a student already knows.
+ *
+ * Part mapping:
+ *  1 — Mole Ratios (mole-to-mole conversions from coefficients)
+ *  2 — Mass-to-Mass Stoichiometry (grams → moles → moles → grams)
+ *  3 — Limiting Reactant (product comparison; excess remaining)
+ *  4 — Theoretical, Actual, and Percent Yield
+ *  5 — Solution Stoichiometry (n = MV; titration and precipitate amounts)
+ *  6 — Problem-Solving Workshop (limiting reactant + yield chains)
+ *  7 — Synthesis & AP Review (mixed-solution limiting reactant; justifying claims)
+ */
+
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
+
 const questions: EntranceQuizQuestion[] = [
-  { id: 'slr-ent-1a', question: 'In the reaction $2H_2 + O_2 \\to 2H_2O$, the mole ratio of $H_2$ to $O_2$ is:', options: ['1:1', '1:2', '2:1', '2:2'], correctIndex: 2, explanation: 'The coefficients give the mole ratio: 2 mol $H_2$ : 1 mol $O_2$ = 2:1.', partNumber: 1, partTitle: 'Mole Ratios' },
-  { id: 'slr-ent-1b', question: 'If 3 mol of $O_2$ react completely, how many moles of $H_2O$ form? ($2H_2 + O_2 \\to 2H_2O$)', options: ['1.5 mol', '3 mol', '6 mol', '2 mol'], correctIndex: 2, explanation: 'Mole ratio of $O_2$ to $H_2O$ is 1:2. So $3 \\times 2 = 6$ mol $H_2O$.', partNumber: 1, partTitle: 'Mole Ratios' },
-  { id: 'slr-ent-2a', question: 'How many grams of $CO_2$ (M=44 g/mol) are produced from burning 12 g of carbon? ($C + O_2 \\to CO_2$)', options: ['22 g', '44 g', '12 g', '88 g'], correctIndex: 1, explanation: '12 g C = 1 mol C. 1:1 ratio gives 1 mol $CO_2$ = 44 g.', partNumber: 2, partTitle: 'Mass-to-Mass Calculations' },
-  { id: 'slr-ent-2b', question: 'In the reaction $N_2 + 3H_2 \\to 2NH_3$, what mass of $NH_3$ (M=17 g/mol) is produced from 28 g of $N_2$ (M=28 g/mol)?', options: ['17 g', '34 g', '51 g', '68 g'], correctIndex: 1, explanation: '28 g $N_2$ = 1 mol. 1 mol $N_2$ produces 2 mol $NH_3$ = $2 \\times 17 = 34$ g.', partNumber: 2, partTitle: 'Mass-to-Mass Calculations' },
-  { id: 'slr-ent-3a', question: 'The limiting reactant is the reactant that:', options: ['Is present in excess', 'Is completely consumed first and limits the product formed', 'Has the smallest molar mass', 'Is added last'], correctIndex: 1, explanation: 'The limiting reactant is fully used up first, determining the maximum amount of product that can form.', partNumber: 3, partTitle: 'Limiting Reactant' },
-  { id: 'slr-ent-3b', question: 'If 4 mol $H_2$ and 1 mol $O_2$ are available for $2H_2 + O_2 \\to 2H_2O$, which is limiting?', options: ['$H_2$', '$O_2$', 'Neither, they are stoichiometric', '$H_2O$'], correctIndex: 1, explanation: 'The ratio is 2 mol $H_2$ : 1 mol $O_2$. We have 4 mol $H_2$ which requires 2 mol $O_2$, but only 1 mol $O_2$ is available. $O_2$ is consumed first and limits product formation.', partNumber: 3, partTitle: 'Limiting Reactant' },
-  { id: 'slr-ent-4a', question: 'The excess reactant is the one that:', options: ['Is completely consumed', 'Remains after the limiting reactant is used up', 'Determines the amount of product', 'Has the highest molar mass'], correctIndex: 1, explanation: 'The excess reactant is present in more than the stoichiometric amount and is left over after the reaction is complete.', partNumber: 4, partTitle: 'Excess Reactant & Theoretical Yield' },
-  { id: 'slr-ent-4b', question: 'Theoretical yield is the:', options: ['Amount of product actually obtained', 'Maximum amount of product predicted by stoichiometry', 'Amount of excess reactant remaining', 'Minimum product possible'], correctIndex: 1, explanation: 'Theoretical yield is the maximum product calculated from stoichiometry assuming complete reaction of the limiting reactant with no losses.', partNumber: 4, partTitle: 'Excess Reactant & Theoretical Yield' },
-  { id: 'slr-ent-5a', question: 'Percent yield is calculated as:', options: ['(Theoretical yield / Actual yield) × 100%', '(Actual yield / Theoretical yield) × 100%', '(Actual yield − Theoretical yield) × 100%', '(Excess / Theoretical) × 100%'], correctIndex: 1, explanation: 'Percent yield = (actual yield / theoretical yield) × 100%. It measures how efficient the reaction was.', partNumber: 5, partTitle: 'Percent Yield' },
-  { id: 'slr-ent-5b', question: 'A reaction has a theoretical yield of 50.0 g and an actual yield of 42.5 g. The percent yield is:', options: ['85.0%', '117.6%', '42.5%', '92.5%'], correctIndex: 0, explanation: 'Percent yield = $(42.5/50.0) \\times 100\\% = 85.0\\%$.', partNumber: 5, partTitle: 'Percent Yield' },
-  { id: 'slr-ent-6a', question: '10.0 g of $Al$ (M=27 g/mol) reacts with excess $HCl$: $2Al + 6HCl \\to 2AlCl_3 + 3H_2$. What mass of $H_2$ (M=2 g/mol) is produced?', options: ['0.56 g', '1.11 g', '3.33 g', '6.67 g'], correctIndex: 1, explanation: '10.0 g Al = 0.370 mol. Ratio 2:3 gives $0.370 \\times 3/2 = 0.556$ mol $H_2$ = $0.556 \\times 2 = 1.11$ g.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'slr-ent-6b', question: 'Why is percent yield almost always less than 100%?', options: ['Reactions are never balanced', 'Side reactions, incomplete reactions, and losses during purification', 'Theoretical yield is always overestimated', 'Products decompose immediately'], correctIndex: 1, explanation: 'Real-world factors — side reactions, incomplete conversion, transfer losses, and purification steps — reduce the actual yield below the theoretical maximum.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'slr-ent-7a', question: 'In a multistep synthesis, the overall percent yield equals:', options: ['The sum of individual yields', 'The product of individual yields', 'The average of individual yields', 'The highest individual yield'], correctIndex: 1, explanation: 'Overall yield = $yield_{1}$ × $yield_{2}$ × $yield_{3}$ × ... For example, 3 steps each at 80% gives $(0.80)^3 = 0.512 = 51.2\\%$ overall.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
-  { id: 'slr-ent-7b', question: 'A student mixes 5.0 g Zn (M=65.4) with 5.0 g S (M=32.1) to form ZnS. Which is the limiting reactant?', options: ['Zn', 'S', 'Neither', 'Cannot determine'], correctIndex: 0, explanation: 'Mol Zn = 5.0/65.4 = 0.076. Mol S = 5.0/32.1 = 0.156. Ratio Zn:S = 1:1, so Zn (fewer moles) is limiting.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
+  // Part 1: Mole Ratios
+  {
+    id: 'slr-ent-1a',
+    question: 'For $4\\text{NH}_3 + 5\\text{O}_2 \\rightarrow 4\\text{NO} + 6\\text{H}_2\\text{O}$, how many moles of $\\text{O}_2$ are needed to react completely with 2.4 mol of $\\text{NH}_3$?',
+    options: ['1.9 mol', '2.4 mol', '3.0 mol', '3.6 mol'],
+    correctIndex: 2,
+    explanation: '$2.4 \\times \\frac{5}{4} = 3.0$ mol $\\text{O}_2$. Flipping the ratio gives 1.9 mol, a 1:1 ratio gives 2.4 mol, and using the water coefficient instead of oxygen\'s gives 3.6 mol.',
+    partNumber: 1,
+    partTitle: 'Mole Ratios',
+  },
+  {
+    id: 'slr-ent-1b',
+    question: 'For $\\text{C}_3\\text{H}_8 + 5\\text{O}_2 \\rightarrow 3\\text{CO}_2 + 4\\text{H}_2\\text{O}$, a sample produces 0.60 mol of $\\text{CO}_2$. How many moles of $\\text{O}_2$ were consumed?',
+    options: ['1.0 mol', '0.36 mol', '0.60 mol', '0.20 mol'],
+    correctIndex: 0,
+    explanation: '$0.60 \\times \\frac{5}{3} = 1.0$ mol $\\text{O}_2$. Inverting the ratio gives 0.36 mol, treating the two gases as 1:1 gives 0.60 mol, and 0.20 mol is the propane consumed, not the oxygen.',
+    partNumber: 1,
+    partTitle: 'Mole Ratios',
+  },
+
+  // Part 2: Mass-to-Mass Stoichiometry
+  {
+    id: 'slr-ent-2a',
+    question: 'For $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$, what mass of $\\text{NH}_3$ ($M = 17.03$ g/mol) forms from 6.05 g of $\\text{H}_2$ ($M = 2.016$ g/mol) with excess $\\text{N}_2$?',
+    options: ['6.05 g', '34.1 g', '51.1 g', '76.7 g'],
+    correctIndex: 1,
+    explanation: '$6.05 / 2.016 = 3.00$ mol $\\text{H}_2$, times $\\frac{2}{3}$ gives 2.00 mol $\\text{NH}_3$, which is 34.1 g. A 1:1 ratio gives 51.1 g, the inverted ratio gives 76.7 g, and 6.05 g wrongly assumes the hydrogen mass carries straight over.',
+    partNumber: 2,
+    partTitle: 'Mass-to-Mass Stoichiometry',
+  },
+  {
+    id: 'slr-ent-2b',
+    question: 'For $2\\text{C}_2\\text{H}_6 + 7\\text{O}_2 \\rightarrow 4\\text{CO}_2 + 6\\text{H}_2\\text{O}$, what mass of $\\text{O}_2$ ($M = 32.00$ g/mol) is needed to burn 15.0 g of $\\text{C}_2\\text{H}_6$ ($M = 30.07$ g/mol)?',
+    options: ['4.56 g', '16.0 g', '112 g', '55.9 g'],
+    correctIndex: 3,
+    explanation: '$15.0 / 30.07 = 0.499$ mol ethane, times $\\frac{7}{2}$ gives 1.75 mol $\\text{O}_2$, which is 55.9 g. A 1:1 ratio gives 16.0 g, the inverted ratio gives 4.56 g, and multiplying by 7 without dividing by 2 gives 112 g.',
+    partNumber: 2,
+    partTitle: 'Mass-to-Mass Stoichiometry',
+  },
+
+  // Part 3: Limiting Reactant
+  {
+    id: 'slr-ent-3a',
+    question: 'For $2\\text{Al} + 3\\text{Br}_2 \\rightarrow 2\\text{AlBr}_3$, a mixture contains 0.50 mol Al and 0.60 mol $\\text{Br}_2$. Which reactant is limiting, and how much $\\text{AlBr}_3$ can form?',
+    options: [
+      '$\\text{Br}_2$ is limiting; 0.40 mol forms',
+      'Al is limiting; 0.50 mol forms',
+      '$\\text{Br}_2$ is limiting; 0.60 mol forms',
+      'Al is limiting; 0.33 mol forms',
+    ],
+    correctIndex: 0,
+    explanation: 'Aluminum could make 0.50 mol of product, but bromine could make only $0.60 \\times \\frac{2}{3} = 0.40$ mol, so bromine runs out first. Having fewer moles does not make aluminum limiting, because bromine is consumed 1.5 times as fast.',
+    partNumber: 3,
+    partTitle: 'Limiting Reactant',
+  },
+  {
+    id: 'slr-ent-3b',
+    question: 'For $\\text{N}_2 + 3\\text{H}_2 \\rightarrow 2\\text{NH}_3$, 3.0 mol $\\text{N}_2$ and 6.0 mol $\\text{H}_2$ react until one runs out. What remains of the excess reactant?',
+    options: [
+      '2.0 mol of $\\text{N}_2$',
+      '3.0 mol of $\\text{H}_2$',
+      '1.0 mol of $\\text{N}_2$',
+      '1.0 mol of $\\text{H}_2$',
+    ],
+    correctIndex: 2,
+    explanation: 'Hydrogen is limiting (6.0 mol needs only 2.0 mol $\\text{N}_2$), so 2.0 mol of nitrogen is consumed and $3.0 - 2.0 = 1.0$ mol remains. The 2.0 mol is the amount used, not left, and subtracting the starting moles directly treats the ratio as 1:1.',
+    partNumber: 3,
+    partTitle: 'Limiting Reactant',
+  },
+
+  // Part 4: Theoretical, Actual, and Percent Yield
+  {
+    id: 'slr-ent-4a',
+    question: 'A student reacts 5.00 g of $\\text{CaCO}_3$ ($M = 100.09$ g/mol) with excess HCl: $\\text{CaCO}_3 + 2\\text{HCl} \\rightarrow \\text{CaCl}_2 + \\text{H}_2\\text{O} + \\text{CO}_2$. She collects 1.98 g of $\\text{CO}_2$ ($M = 44.01$ g/mol). What is the percent yield?',
+    options: ['39.6%', '45.0%', '90.1%', '111%'],
+    correctIndex: 2,
+    explanation: 'The theoretical yield is $0.04996 \\text{ mol} \\times 44.01 = 2.20$ g, so the yield is $1.98 / 2.20 \\times 100 = 90.1\\%$. Dividing by the reactant mass gives 39.6%, inverting gives 111%, and borrowing the 2 from HCl doubles the theoretical yield to give 45.0%.',
+    partNumber: 4,
+    partTitle: 'Theoretical, Actual, and Percent Yield',
+  },
+  {
+    id: 'slr-ent-4b',
+    question: 'A two-step synthesis has yields of 75% and 80%. To end with 12.0 g of final product, what theoretical yield must the starting materials be able to give?',
+    options: ['7.20 g', '15.0 g', '16.0 g', '20.0 g'],
+    correctIndex: 3,
+    explanation: 'The overall yield is $0.75 \\times 0.80 = 0.60$, so the target is $12.0 / 0.60 = 20.0$ g. Multiplying instead of dividing gives 7.20 g, and correcting for only one step gives 15.0 g or 16.0 g.',
+    partNumber: 4,
+    partTitle: 'Theoretical, Actual, and Percent Yield',
+  },
+
+  // Part 5: Solution Stoichiometry
+  {
+    id: 'slr-ent-5a',
+    question: 'What volume of 0.150 M $\\text{H}_2\\text{SO}_4$ exactly neutralizes 30.0 mL of 0.200 M NaOH? ($\\text{H}_2\\text{SO}_4 + 2\\text{NaOH} \\rightarrow \\text{Na}_2\\text{SO}_4 + 2\\text{H}_2\\text{O}$)',
+    options: ['20.0 mL', '40.0 mL', '22.5 mL', '10.0 mL'],
+    correctIndex: 0,
+    explanation: 'NaOH is $0.200 \\times 0.0300 = 0.00600$ mol, which needs 0.00300 mol of acid, and $0.00300 / 0.150 = 0.0200$ L $= 20.0$ mL. Ignoring the 1:2 ratio gives 40.0 mL, and $M_1V_1 = M_2V_2$ with the molarities swapped gives 22.5 mL.',
+    partNumber: 5,
+    partTitle: 'Solution Stoichiometry',
+  },
+  {
+    id: 'slr-ent-5b',
+    question: 'Excess NaCl solution is added to 40.0 mL of 0.250 M $\\text{AgNO}_3$. What mass of AgCl ($M = 143.32$ g/mol) precipitates?',
+    options: ['0.717 g', '1.43 g', '2.87 g', '14.3 g'],
+    correctIndex: 1,
+    explanation: '$0.250 \\times 0.0400 = 0.0100$ mol $\\text{Ag}^+$ gives 0.0100 mol AgCl, or 1.43 g. Writing 40.0 mL as 0.400 L gives 14.3 g, and halving or doubling the 1:1 ratio gives 0.717 g or 2.87 g.',
+    partNumber: 5,
+    partTitle: 'Solution Stoichiometry',
+  },
+
+  // Part 6: Problem-Solving Workshop
+  {
+    id: 'slr-ent-6a',
+    question: 'For $\\text{Zn} + 2\\text{HCl} \\rightarrow \\text{ZnCl}_2 + \\text{H}_2$, 6.54 g of Zn ($M = 65.38$ g/mol) is added to 100.0 mL of 1.50 M HCl. What is the theoretical yield of $\\text{ZnCl}_2$ ($M = 136.29$ g/mol)?',
+    options: ['6.81 g', '10.2 g', '13.6 g', '20.4 g'],
+    correctIndex: 1,
+    explanation: 'Zinc is 0.100 mol and could make 0.100 mol of product, but HCl is 0.150 mol and could make only 0.0750 mol, so HCl is limiting: $0.0750 \\times 136.29 = 10.2$ g. Zinc as the limiting reactant gives 13.6 g, a 1:1 ratio for HCl gives 20.4 g, and subtracting the two mole amounts gives 6.81 g.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  {
+    id: 'slr-ent-6b',
+    question: 'For $\\text{Fe}_2\\text{O}_3 + 3\\text{CO} \\rightarrow 2\\text{Fe} + 3\\text{CO}_2$, 32.0 g of $\\text{Fe}_2\\text{O}_3$ ($M = 159.7$ g/mol) reacts with 14.0 g of CO ($M = 28.01$ g/mol), and the percent yield is 85.0%. What mass of Fe ($M = 55.85$ g/mol) is collected?',
+    options: ['18.6 g', '19.0 g', '21.9 g', '15.8 g'],
+    correctIndex: 3,
+    explanation: 'CO (0.500 mol) can make only 0.333 mol Fe, less than the 0.401 mol from the oxide, so CO is limiting: 18.6 g theoretical, and $18.6 \\times 0.850 = 15.8$ g. The value 18.6 g skips the yield, 19.0 g uses the oxide as limiting, and 21.9 g divides by the yield.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+
+  // Part 7: Synthesis & AP Review
+  {
+    id: 'slr-ent-7a',
+    question: 'A student mixes 50.0 mL of 0.200 M $\\text{BaCl}_2$ with 30.0 mL of 0.250 M $\\text{Na}_2\\text{SO}_4$, and $\\text{BaSO}_4$ ($M = 233.4$ g/mol) precipitates. What is the maximum mass of precipitate?',
+    options: ['0.875 g', '2.33 g', '1.75 g', '4.08 g'],
+    correctIndex: 2,
+    explanation: 'Barium is 0.0100 mol and sulfate is 0.00750 mol; they combine 1:1, so sulfate is limiting and $0.00750 \\times 233.4 = 1.75$ g. Using barium gives 2.33 g, and adding the two mole amounts gives 4.08 g.',
+    partNumber: 7,
+    partTitle: 'Synthesis & AP Review',
+  },
+  {
+    id: 'slr-ent-7b',
+    question: 'For $2\\text{H}_2 + \\text{O}_2 \\rightarrow 2\\text{H}_2\\text{O}$, a student starts with 1.5 mol $\\text{H}_2$ and 1.0 mol $\\text{O}_2$ and claims that oxygen is limiting because there is less of it. Which evaluation is correct?',
+    options: [
+      'Correct; the reactant with fewer moles always runs out first',
+      'Correct; oxygen can form only half as much water as hydrogen',
+      'Incorrect; neither is limiting since both run out together',
+      'Incorrect; hydrogen is limiting because it can form less water',
+    ],
+    correctIndex: 3,
+    explanation: 'Hydrogen can form 1.5 mol of water, while oxygen can form 2.0 mol, so hydrogen runs out first and 0.25 mol of oxygen is left over. Comparing starting moles ignores the 2:1 ratio in the balanced equation.',
+    partNumber: 7,
+    partTitle: 'Synthesis & AP Review',
+  },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
+
+/**
+ * Generate an entrance quiz for the stoichiometry-limiting-reactants topic.
+ * Returns all 14 questions in shuffled order.
+ */
+export function generateEntranceQuiz(): EntranceQuizQuestion[] {
+  return shuffleArray(questions)
+}
+
+/**
+ * Get the list of part numbers and titles covered by this entrance quiz.
+ */
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Mole Ratios' }, { partNumber: 2, partTitle: 'Mass-to-Mass Calculations' },
-    { partNumber: 3, partTitle: 'Limiting Reactant' }, { partNumber: 4, partTitle: 'Excess Reactant & Theoretical Yield' },
-    { partNumber: 5, partTitle: 'Percent Yield' }, { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 1, partTitle: 'Mole Ratios' },
+    { partNumber: 2, partTitle: 'Mass-to-Mass Stoichiometry' },
+    { partNumber: 3, partTitle: 'Limiting Reactant' },
+    { partNumber: 4, partTitle: 'Theoretical, Actual, and Percent Yield' },
+    { partNumber: 5, partTitle: 'Solution Stoichiometry' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }

@@ -1,28 +1,250 @@
-/** Entrance Quiz — Nernst Equation & Concentration Cells — 14 questions (2 per part) */
+/**
+ * Entrance Quiz — Cell Potential Under Nonstandard Conditions
+ *
+ * 14 questions covering all 7 lesson parts (2 per part).
+ * Each question is tagged with the part number it covers,
+ * so we can determine which parts a student already knows.
+ * The Nernst equation is used qualitatively (CED 9.10.A.4).
+ *
+ * Part mapping:
+ *  1 — Non-Standard Conditions (Q vs. 1; potential as a driving force)
+ *  2 — How Concentration Changes Shift E (additions, dilutions, gases, exponents)
+ *  3 — Concentration Cells
+ *  4 — Cell Potential & Equilibrium (E°, ΔG° and K)
+ *  5 — A Galvanic Cell Over Its Lifetime (running down; recharging)
+ *  6 — Problem-Solving Workshop (full justifications; concentration-cell details)
+ *  7 — Synthesis & AP Review
+ */
+
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
+
 const questions: EntranceQuizQuestion[] = [
-  { id: 'necc-ent-1a', question: 'The Nernst equation is needed when cell conditions are:', options: ['Standard', 'Non-standard (concentrations ≠ 1 M, pressures ≠ 1 atm)', 'At equilibrium', 'At absolute zero'], correctIndex: 1, explanation: 'The Nernst equation adjusts $E°_{cell}$ for non-standard conditions: $E = E° - \\frac{RT}{nF}\\ln Q$.', partNumber: 1, partTitle: 'Non-Standard Conditions' },
-  { id: 'necc-ent-1b', question: 'At standard conditions (Q = 1), the Nernst equation gives $E_{cell}$ =:', options: ['0', '$E°_{cell}$', '$-E°_{cell}$', '$2E°_{cell}$'], correctIndex: 1, explanation: 'When Q = 1, $\\ln Q = 0$, so $E = E° - 0 = E°$.', partNumber: 1, partTitle: 'Non-Standard Conditions' },
-  { id: 'necc-ent-2a', question: 'The Nernst equation at 25°C is often written as $E = E° - \\frac{0.0592}{n}\\log Q$. The value 0.0592 comes from:', options: ['$RT/F$ converted to log base 10 at 298 K', 'The Boltzmann constant', 'Planck\'s constant', 'The speed of light'], correctIndex: 0, explanation: '$\\frac{RT}{F} \\times \\frac{2.303}{1} = \\frac{(8.314)(298)}{96485} \\times 2.303 = 0.0592$ V at 25°C.', partNumber: 2, partTitle: 'The Nernst Equation' },
-  { id: 'necc-ent-2b', question: 'In the Nernst equation, if Q increases (more products), $E_{cell}$:', options: ['Increases', 'Decreases', 'Stays the same', 'Becomes negative immediately'], correctIndex: 1, explanation: '$E = E° - \\frac{0.0592}{n}\\log Q$. As Q increases, the subtracted term increases, so $E$ decreases.', partNumber: 2, partTitle: 'The Nernst Equation' },
-  { id: 'necc-ent-3a', question: 'A concentration cell is a galvanic cell where both half-cells contain:', options: ['Different metals', 'The same electrode and electrolyte but at different concentrations', 'Only pure water', 'A salt bridge made of copper'], correctIndex: 1, explanation: 'Concentration cells use the same redox couple in both half-cells, but at different ion concentrations. The voltage arises from the concentration difference.', partNumber: 3, partTitle: 'Concentration Cells' },
-  { id: 'necc-ent-3b', question: 'In a concentration cell, $E°_{cell}$ equals:', options: ['A large positive value', 'A large negative value', '0 (because the half-reactions are identical)', 'Cannot be determined'], correctIndex: 2, explanation: 'Since both half-cells have the same reduction potential, $E° = E°_{cathode} - E°_{anode} = 0$. Voltage comes entirely from the $\\frac{RT}{nF}\\ln Q$ term.', partNumber: 3, partTitle: 'Concentration Cells' },
-  { id: 'necc-ent-4a', question: 'In a concentration cell, current flows so that the ion concentration in the dilute half-cell:', options: ['Decreases further', 'Increases', 'Stays the same', 'Oscillates'], correctIndex: 1, explanation: 'The cell drives the reaction to equalize concentrations — the dilute side gains ions (reduction deposits fewer ions, oxidation releases more).', partNumber: 4, partTitle: 'Cell Potential & Equilibrium' },
-  { id: 'necc-ent-4b', question: 'At equilibrium in any electrochemical cell, $E_{cell}$ =:', options: ['$E°_{cell}$', 'A positive value', '0', 'Infinity'], correctIndex: 2, explanation: 'At equilibrium, Q = K and $\\Delta G = 0$, so $E_{cell} = 0$. No more electrical work can be done.', partNumber: 4, partTitle: 'Cell Potential & Equilibrium' },
-  { id: 'necc-ent-5a', question: 'A lead-acid battery (car battery) is an example of a:', options: ['Primary cell (not rechargeable)', 'Secondary cell (rechargeable)', 'Fuel cell', 'Concentration cell'], correctIndex: 1, explanation: 'Lead-acid batteries are secondary (rechargeable) cells. Charging reverses the cell reaction using external electrical energy.', partNumber: 5, partTitle: 'Batteries & Applications' },
-  { id: 'necc-ent-5b', question: 'A fuel cell differs from a battery in that:', options: ['It stores reactants internally', 'Reactants are continuously supplied from an external source', 'It cannot produce electricity', 'It uses only solid reactants'], correctIndex: 1, explanation: 'Fuel cells generate electricity continuously as long as fuel (e.g., $H_2$) and oxidant (e.g., $O_2$) are supplied externally.', partNumber: 5, partTitle: 'Batteries & Applications' },
-  { id: 'necc-ent-6a', question: 'For a cell with $E° = 0.48$ V, n = 2, and Q = 100:  $E = 0.48 - \\frac{0.0592}{2}\\log(100)$. E =:', options: ['0.48 V', '0.42 V', '0.36 V', '0.54 V'], correctIndex: 1, explanation: '$\\log(100) = 2$, so $E = 0.48 - \\frac{0.0592}{2}(2) = 0.48 - 0.0592 = 0.42$ V.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'necc-ent-6b', question: 'A concentration cell has $[Cu^{2+}] = 1.0$ M in one half-cell and $0.010$ M in the other. Which half-cell is the cathode?', options: ['The 0.010 M side', 'The 1.0 M side', 'Neither — both are anodes', 'It depends on temperature'], correctIndex: 1, explanation: 'The more concentrated side is the cathode (reduction occurs there to decrease ion concentration and drive toward equilibrium).', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'necc-ent-7a', question: 'The Nernst equation shows that cell potential depends on:', options: ['Only temperature', 'Only the identity of the electrodes', 'Both the nature of the reaction and the concentrations of species', 'Only the volume of solution'], correctIndex: 2, explanation: '$E = E°$ (nature of reaction) $- \\frac{RT}{nF}\\ln Q$ (concentrations via Q). Both contribute to the cell potential.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
-  { id: 'necc-ent-7b', question: 'From $\\Delta G° = -nFE°$ and $\\Delta G° = -RT\\ln K$, we get $\\ln K =$:', options: ['$nFE°/RT$', '$-nFE°/RT$', '$RT/nFE°$', '$nF/RTE°$'], correctIndex: 0, explanation: '$-nFE° = -RT\\ln K → \\ln K = nFE°/RT$. This links the equilibrium constant directly to the standard cell potential.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
+  // Part 1: Non-Standard Conditions
+  {
+    id: 'necc-ent-1a',
+    question: 'The cell $\\text{Mg}(s) + \\text{Ni}^{2+}(aq) \\rightarrow \\text{Mg}^{2+}(aq) + \\text{Ni}(s)$ has $E^\\circ = +2.11$ V. It is built with $[\\text{Mg}^{2+}] = 1.0$ M and $[\\text{Ni}^{2+}] = 0.10$ M. How does the measured potential compare with $E^\\circ$?',
+    options: [
+      'It is greater than $E^\\circ$, because $Q < 1$',
+      'It is less than $E^\\circ$, because $Q > 1$',
+      'It equals $E^\\circ$, because both electrodes are pure metals',
+      'It is zero, because $[\\text{Ni}^{2+}]$ is below 1 M',
+    ],
+    correctIndex: 1,
+    explanation: '$Q = [\\text{Mg}^{2+}]/[\\text{Ni}^{2+}] = 1.0/0.10 = 10$, which is greater than 1, so $E$ is below $E^\\circ$. Pure-metal electrodes do not make a cell standard, and a lower reactant concentration moves the cell toward equilibrium without reaching it.',
+    partNumber: 1,
+    partTitle: 'Non-Standard Conditions',
+  },
+  {
+    id: 'necc-ent-1b',
+    question: 'A working galvanic cell has $Q = 2 \\times 10^{-4}$, while its $K = 5 \\times 10^{12}$. Which statement describes its potential?',
+    options: [
+      'It is zero, because Q has not yet reached 1',
+      'It is negative, because Q is less than K',
+      'It is large and positive, because the cell is far from equilibrium',
+      'It equals E° exactly, because Q is smaller than K',
+    ],
+    correctIndex: 2,
+    explanation: 'Cell potential is a driving force toward equilibrium: the farther $Q$ is from $K$, the larger the magnitude of $E$, and with $Q < K$ the forward reaction is favored, so $E$ is positive. $E = 0$ only when $Q = K$.',
+    partNumber: 1,
+    partTitle: 'Non-Standard Conditions',
+  },
+
+  // Part 2: How Concentration Changes Shift E
+  {
+    id: 'necc-ent-2a',
+    question: 'A cell runs $\\text{Zn}(s) + 2\\text{Fe}^{3+}(aq) \\rightarrow \\text{Zn}^{2+}(aq) + 2\\text{Fe}^{2+}(aq)$, starting with every ion at 1.0 M. Both half-cells are then diluted so every ion is 0.10 M. How does $E$ change?',
+    options: [
+      'It decreases, because Q rises to above 1',
+      'It stays the same, because every ion was diluted equally',
+      'It falls to zero, because the solutions are now dilute',
+      'It increases, because Q falls below 1',
+    ],
+    correctIndex: 3,
+    explanation: '$Q = [\\text{Zn}^{2+}][\\text{Fe}^{2+}]^2/[\\text{Fe}^{3+}]^2 = (0.10)(0.10)^2/(0.10)^2 = 0.10$. The products carry more total concentration factors than the reactants, so dilution lowers $Q$ below 1 and raises $E$. Equal dilution leaves $E$ unchanged only when the exponents balance.',
+    partNumber: 2,
+    partTitle: 'How Concentration Changes Shift E',
+  },
+  {
+    id: 'necc-ent-2b',
+    question: 'For the cell $\\text{Zn}(s) + 2\\text{H}^+(aq) \\rightarrow \\text{Zn}^{2+}(aq) + \\text{H}_2(g)$, which change raises the cell potential?',
+    options: [
+      'Lowering the pH of the hydrogen half-cell',
+      'Raising the pressure of the $\\text{H}_2$ gas',
+      'Dissolving more $\\text{Zn(NO}_3)_2$ in the zinc half-cell',
+      'Replacing the zinc strip with a larger one',
+    ],
+    correctIndex: 0,
+    explanation: 'A lower pH means more $\\text{H}^+$, which sits squared in the denominator of $Q = [\\text{Zn}^{2+}]P_{\\text{H}_2}/[\\text{H}^+]^2$, so $Q$ falls and $E$ rises. More hydrogen gas or more zinc ions raise $Q$, and solid zinc does not appear in $Q$.',
+    partNumber: 2,
+    partTitle: 'How Concentration Changes Shift E',
+  },
+
+  // Part 3: Concentration Cells
+  {
+    id: 'necc-ent-3a',
+    question: 'A concentration cell has a nickel electrode in 0.050 M $\\text{Ni}^{2+}$ (beaker A) and another in 2.0 M $\\text{Ni}^{2+}$ (beaker B). Which describes the operating cell?',
+    options: [
+      'B is the anode, and electrons flow from B to A',
+      'A is the anode, and electrons flow from A to B',
+      'A is the cathode, and electrons flow from B to A',
+      'No current flows, because $E^\\circ = 0$',
+    ],
+    correctIndex: 1,
+    explanation: 'Each side changes so the concentrations become more alike: nickel is oxidized in dilute A, raising its $[\\text{Ni}^{2+}]$, so A is the anode and electrons travel through the wire from A to B. $E^\\circ = 0$, but $Q \\neq 1$, so the cell still produces a voltage.',
+    partNumber: 3,
+    partTitle: 'Concentration Cells',
+  },
+  {
+    id: 'necc-ent-3b',
+    question: 'Which copper concentration cell has the smallest initial cell potential?',
+    options: [
+      '0.010 M $\\text{Cu}^{2+}$ paired with 1.0 M $\\text{Cu}^{2+}$',
+      '0.0010 M $\\text{Cu}^{2+}$ paired with 0.10 M $\\text{Cu}^{2+}$',
+      '0.10 M $\\text{Cu}^{2+}$ paired with 0.20 M $\\text{Cu}^{2+}$',
+      '0.050 M $\\text{Cu}^{2+}$ paired with 2.0 M $\\text{Cu}^{2+}$',
+    ],
+    correctIndex: 2,
+    explanation: 'The potential depends on how far apart the two concentrations are as a ratio. A 1 : 2 ratio is closest to equal, so that cell is nearest equilibrium and has the smallest potential; the others have ratios of 1 : 100 or 1 : 40.',
+    partNumber: 3,
+    partTitle: 'Concentration Cells',
+  },
+
+  // Part 4: Cell Potential & Equilibrium
+  {
+    id: 'necc-ent-4a',
+    question: 'A cell reaction transfers 3 mol of electrons and has $E^\\circ = +0.20$ V. What is $\\Delta G^\\circ$? ($F = 96{,}485$ C/mol)',
+    options: ['−19.3 kJ/mol', '−38.6 kJ/mol', '+57.9 kJ/mol', '−57.9 kJ/mol'],
+    correctIndex: 3,
+    explanation: '$\\Delta G^\\circ = -nFE^\\circ = -(3)(96{,}485)(0.20) = -57{,}900$ J $= -57.9$ kJ/mol. Using $n = 1$ or $n = 2$ gives $-19.3$ or $-38.6$ kJ/mol, and a positive value drops the minus sign.',
+    partNumber: 4,
+    partTitle: 'Cell Potential & Equilibrium',
+  },
+  {
+    id: 'necc-ent-4b',
+    question: 'A redox reaction has $E^\\circ = 0$. Which statement about it is correct?',
+    options: [
+      '$\\Delta G^\\circ = 0$ and $K = 1$',
+      '$\\Delta G^\\circ = 0$ and $K = 0$',
+      '$\\Delta G^\\circ > 0$ and $K < 1$',
+      '$\\Delta G^\\circ < 0$ and $K > 1$',
+    ],
+    correctIndex: 0,
+    explanation: 'From $\\Delta G^\\circ = -nFE^\\circ$, a zero $E^\\circ$ gives $\\Delta G^\\circ = 0$, and $\\Delta G^\\circ = -RT\\ln K$ then requires $\\ln K = 0$, so $K = 1$. A concentration cell is the classic example: $E^\\circ = 0$, yet it produces a voltage while its concentrations differ.',
+    partNumber: 4,
+    partTitle: 'Cell Potential & Equilibrium',
+  },
+
+  // Part 5: A Galvanic Cell Over Its Lifetime
+  {
+    id: 'necc-ent-5a',
+    question: 'A graph of potential versus time for a galvanic cell shows a long, nearly flat stretch and then a steep drop to zero. What causes the steep drop?',
+    options: [
+      'E° falls suddenly once the electrodes become thin',
+      'The salt bridge runs out of ions all at once',
+      'The limiting reactant ion runs low, so Q climbs quickly toward K',
+      'The product ions precipitate, so Q falls back toward 1',
+    ],
+    correctIndex: 2,
+    explanation: 'While the reactant ion is plentiful, $Q$ stays far below a large $K$ and $E$ barely changes; once that ion is nearly used up, $Q$ rises steeply toward $K$ and $E$ plunges to zero. $E^\\circ$ is a fixed property of the reaction.',
+    partNumber: 5,
+    partTitle: 'A Galvanic Cell Over Its Lifetime',
+  },
+  {
+    id: 'necc-ent-5b',
+    question: 'A dead Zn/$\\text{Cu}^{2+}$ cell is recharged by an external power supply that restores the original concentrations. What happens at the copper electrode during recharging?',
+    options: [
+      'Copper is oxidized, and the electrode loses mass',
+      'Copper(II) ions are reduced, and the electrode gains mass',
+      'Nothing happens, because only the zinc electrode reacts',
+      'Copper ions pass through the salt bridge to the zinc',
+    ],
+    correctIndex: 0,
+    explanation: 'Recharging runs the reaction in reverse, so copper metal is oxidized back to $\\text{Cu}^{2+}$ and the electrode dissolves; it is now the anode. The reverse reaction has $\\Delta G^\\circ > 0$, which is why an outside energy source is required.',
+    partNumber: 5,
+    partTitle: 'A Galvanic Cell Over Its Lifetime',
+  },
+
+  // Part 6: Problem-Solving Workshop
+  {
+    id: 'necc-ent-6a',
+    question: 'For $\\text{Cu}(s) + 2\\text{Ag}^+(aq) \\rightarrow \\text{Cu}^{2+}(aq) + 2\\text{Ag}(s)$, $E^\\circ = +0.46$ V. A student keeps $[\\text{Cu}^{2+}] = 1.0$ M but raises $[\\text{Ag}^+]$ to 3.0 M. Which is a complete, correct justification?',
+    options: [
+      'Q = 3, so the cell is closer to equilibrium and E < 0.46 V',
+      'Q = 9, so the cell is closer to equilibrium and E < 0.46 V',
+      'Adding Ag⁺ shifts the reaction right by Le Châtelier, so E > 0.46 V',
+      'Q = 1/9, so the cell is farther from equilibrium and E > 0.46 V',
+    ],
+    correctIndex: 3,
+    explanation: '$Q = [\\text{Cu}^{2+}]/[\\text{Ag}^+]^2 = 1.0/(3.0)^2 = 1/9$, less than 1, so the cell is farther from equilibrium and its potential exceeds $E^\\circ$. A working cell is not at equilibrium, so a Le Châtelier argument is not a valid justification even when the direction is right.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  {
+    id: 'necc-ent-6b',
+    question: 'A silver concentration cell has 0.010 M $\\text{Ag}^+$ in beaker A and 1.0 M $\\text{Ag}^+$ in beaker B, with a $\\text{KNO}_3$ salt bridge. Which ions flow into beaker A, and how does $[\\text{Ag}^+]$ in A change?',
+    options: [
+      '$\\text{K}^+$ flows in, and $[\\text{Ag}^+]$ in A decreases',
+      '$\\text{NO}_3^-$ flows in, and $[\\text{Ag}^+]$ in A increases',
+      '$\\text{NO}_3^-$ flows in, and $[\\text{Ag}^+]$ in A decreases',
+      '$\\text{K}^+$ flows in, and $[\\text{Ag}^+]$ in A increases',
+    ],
+    correctIndex: 1,
+    explanation: 'Dilute beaker A is the anode: silver is oxidized there, so $[\\text{Ag}^+]$ rises, and nitrate ions flow in to balance the new positive charge. Potassium ions flow toward beaker B, where $\\text{Ag}^+$ is removed.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+
+  // Part 7: Synthesis & AP Review
+  {
+    id: 'necc-ent-7a',
+    question: 'A Pb/$\\text{Cu}^{2+}$ cell ($E^\\circ = +0.47$ V) is built with $[\\text{Pb}^{2+}] = 0.0010$ M and $[\\text{Cu}^{2+}] = 1.0$ M and then run for a long time. Which describes its potential?',
+    options: [
+      'Below 0.47 V at first, then rising toward E° as it runs',
+      'Equal to 0.47 V at first, then unchanged as it runs',
+      'Above 0.47 V at first, then falling toward zero as it runs',
+      'Above 0.47 V at first, and still above it at the end',
+    ],
+    correctIndex: 2,
+    explanation: 'Initially $Q = 0.0010/1.0 = 0.0010 < 1$, so $E > E^\\circ$. As the cell runs, $\\text{Pb}^{2+}$ builds up and $\\text{Cu}^{2+}$ is consumed, so $Q$ rises toward $K$ and $E$ falls, reaching zero at equilibrium.',
+    partNumber: 7,
+    partTitle: 'Synthesis & AP Review',
+  },
+  {
+    id: 'necc-ent-7b',
+    question: 'A two-electron cell reaction has $E^\\circ = +0.30$ V at 298 K. What is the approximate value of $K$? ($F = 96{,}485$ C/mol; $R = 8.314$ J/(mol·K))',
+    options: [
+      '$K \\approx 1.4 \\times 10^{10}$',
+      '$K \\approx 1.2 \\times 10^{5}$',
+      '$K \\approx 7.1 \\times 10^{-11}$',
+      '$K \\approx 1.35$',
+    ],
+    correctIndex: 0,
+    explanation: 'Setting $-nFE^\\circ = -RT\\ln K$ gives $\\ln K = (2)(96{,}485)(0.30)/2478 = 23.4$, so $K \\approx 1.4 \\times 10^{10}$. Using $n = 1$ gives about $10^5$, a sign error gives a tiny $K$, and $e^{0.30}$ leaves out $nF/RT$.',
+    partNumber: 7,
+    partTitle: 'Synthesis & AP Review',
+  },
 ]
-export function generateEntranceQuiz(): EntranceQuizQuestion[] { return shuffleArray(questions) }
+
+/**
+ * Generate an entrance quiz for the nernst-equation-concentration topic.
+ * Returns all 14 questions in shuffled order.
+ */
+export function generateEntranceQuiz(): EntranceQuizQuestion[] {
+  return shuffleArray(questions)
+}
+
+/**
+ * Get the list of part numbers and titles covered by this entrance quiz.
+ */
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Non-Standard Conditions' }, { partNumber: 2, partTitle: 'The Nernst Equation' },
-    { partNumber: 3, partTitle: 'Concentration Cells' }, { partNumber: 4, partTitle: 'Cell Potential & Equilibrium' },
-    { partNumber: 5, partTitle: 'Batteries & Applications' }, { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 1, partTitle: 'Non-Standard Conditions' },
+    { partNumber: 2, partTitle: 'How Concentration Changes Shift E' },
+    { partNumber: 3, partTitle: 'Concentration Cells' },
+    { partNumber: 4, partTitle: 'Cell Potential & Equilibrium' },
+    { partNumber: 5, partTitle: 'A Galvanic Cell Over Its Lifetime' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }
