@@ -4,135 +4,124 @@ export const bioPhylogeneticsCladisticsPart6Data = {
     {
       id: 'phyl6-intro',
       type: 'text' as const,
-      content: `# Biogeography & Phylogeny
+      content: `# Speciation & Adaptive Radiation on Trees
 
 **Part 6 of 7 — Phylogenetics & Cladistics**
 
-**Biogeography** is the study of the geographic distribution of organisms. When combined with phylogenetics, it provides powerful evidence for evolution — showing how geological events, dispersal, and vicariance have shaped the tree of life.
+Phylogenetic trees and cladograms illustrate speciation that has occurred: every node marks a point where one lineage split into two. This part connects the shape of a tree to how, where, and how fast speciation happened.
 
-### Continental drift & evolution
+### What happens at a node
 
-The breakup of the supercontinent **Pangaea** (~200 million years ago) physically separated populations of organisms, leading to **vicariance** — speciation caused by geographic barriers.
+Speciation occurs when two populations become **reproductively isolated** from each other.
 
-> 🌍 **Example:** Ratites (large flightless birds) are found on separate continents:
-> - Ostriches (Africa)
-> - Emus (Australia)
-> - Rheas (South America)
-> - Kiwis (New Zealand)
->
-> Their phylogenetic tree matches the pattern of continental breakup — they diverged as landmasses separated, not because they flew between continents.
-
-### Vicariance vs. dispersal
-
-| Mechanism | Definition | Example |
+| Mode | Geography | Example |
 |---|---|---|
-| **Vicariance** | A population is split by a geographic barrier (mountain, ocean, river) | Isthmus of Panama rising and splitting marine populations |
-| **Dispersal** | Organisms move across a barrier to colonize a new area | Finches flying to the Galápagos Islands from South America |
+| **Allopatric speciation** | Populations are geographically isolated by a barrier | A river, mountain range, or land bridge divides a population |
+| **Sympatric speciation** | Populations overlap geographically | Apple maggot flies (*Rhagoletis*) that shifted from hawthorn to apple trees |
 
-Both mechanisms produce geographic patterns in phylogenies, but they make **different predictions** about the timing and branching order of speciation events.`
+### Using geography to date a node
+
+When a barrier forms at a known time, sister species on either side of it give a calibration point. The **Isthmus of Panama** closed about 3 million years ago and separated the Pacific from the Caribbean. Many snapping shrimp species come in sister pairs — one on each side — so the node joining each pair is dated by the closing of the isthmus.
+
+### A revised hypothesis: ratites
+
+Ratites are large flightless birds such as ostriches (Africa), rheas (South America), emus (Australia), and kiwis (New Zealand).
+
+- **Older hypothesis:** A flightless ancestor was split apart as the southern supercontinent broke up, so the tree should match the order in which the continents separated.
+- **Molecular evidence:** DNA, including ancient DNA from extinct moas and elephant birds, shows that tinamous — birds that can fly — fall *inside* the ratite group, and that kiwis are most closely related to the extinct elephant birds of Madagascar rather than to emus.
+- **Revised interpretation:** Flying ancestors dispersed between landmasses, and flightlessness evolved more than once — a case of convergent evolution that the older tree had mistaken for shared ancestry.
+
+### Tempo: gradualism vs. punctuated equilibrium
+
+| Pattern | Description | On a time-scaled tree or fossil record |
+|---|---|---|
+| **Gradualism** | Evolution occurs slowly over hundreds of thousands or millions of years | Lineages change steadily, so forms drift apart gradually |
+| **Punctuated equilibrium** | Evolution occurs rapidly after a long period of stasis | Long stretches of little change, with abrupt shifts near branching points |`
     },
     {
       id: 'phyl6-quiz1',
       type: 'multiple-choice' as const,
-      content: `**Concept Check — Biogeography Basics** 🎯`,
+      content: `**Concept Check — Speciation on Trees** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Related species of freshwater fish are found on opposite sides of a mountain range that formed 5 million years ago. What is the most likely explanation?',
+            question: 'Two sister species of snapping shrimp live on opposite sides of the Isthmus of Panama, which closed about 3 million years ago. What does the node joining them most likely represent?',
             options: [
-              'Vicariance — the mountain range split an ancestral population, leading to speciation',
-              'Convergent evolution — the fish evolved similar traits independently',
-              'The fish migrated across the mountain during winter months',
-              'The fish were placed there by human activity'
+              'An ancestral population split in two by the land bridge',
+              'A hybrid species formed when the two oceans reconnected',
+              'Two unrelated shrimp converging in similar habitats',
+              'Sympatric speciation within one ocean after the closure'
             ],
             correctAnswer: 0,
-            explanation: 'Vicariance occurs when a geographic barrier (like a mountain range) physically divides a population, preventing gene flow and allowing independent evolution. Freshwater fish cannot easily cross mountain barriers, making vicariance the most parsimonious explanation for related species on opposite sides.'
+            explanation: 'A node marks a speciation event. The rising land bridge geographically isolated one ancestral shrimp population into Pacific and Caribbean halves — allopatric speciation. The oceans were connected before the closure, not after; sister species are each other\'s closest relatives, not unrelated look-alikes; and they live in different oceans, not in overlapping ranges.'
           },
           {
-            question: 'The phylogenetic tree of ratite birds (ostrich, emu, rhea, kiwi) mirrors the order in which the continents of Gondwana separated. What does this suggest?',
+            question: 'DNA shows that flying tinamous fall inside the ratite group and that kiwis are most closely related to the extinct elephant birds of Madagascar. What does this suggest?',
             options: [
-              'Ratite speciation was driven by continental drift separating ancestral populations',
-              'Ratites independently evolved flightlessness on each continent through convergent evolution',
-              'Ratites originated in Antarctica and dispersed to all continents',
-              'The phylogenetic tree must be incorrect because flightless birds cannot disperse'
+              'Flightlessness evolved more than once after flighted ancestors dispersed',
+              'Ratites diverged only as continents split, with no dispersal at all',
+              'Kiwis and emus must be sister taxa because they live close together',
+              'Molecular data cannot be used to study birds that are now extinct'
             ],
             correctAnswer: 0,
-            explanation: 'When a phylogeny matches the geological history of continental breakup, it strongly supports vicariance as the mechanism of speciation. The ancestral ratite population was split as Gondwana fragmented, and each isolated lineage evolved independently on its respective continent.'
+            explanation: 'A flying lineage nested among flightless ones, and a kiwi–elephant bird pairing that does not match continental breakup, both point to flighted ancestors dispersing between landmasses and losing flight independently. Living near each other does not make two species sister taxa, and ancient DNA from extinct birds was part of the evidence.'
           }
         ]
       }
     },
     {
-      id: 'phyl6-island',
+      id: 'phyl6-radiation',
       type: 'text' as const,
-      content: `## Island Biogeography & Adaptive Radiation
+      content: `## Adaptive Radiation
 
-### Island biogeography
+**Divergent evolution** occurs when adaptation to new habitats results in phenotypic diversification. Speciation rates can be especially rapid during **adaptive radiation**, as new habitats become available — after colonizing an island, after a mass extinction removes competitors, or after a new trait opens a new way of life.
 
-Islands (both oceanic and habitat islands like mountaintops or lakes) are natural laboratories for studying evolution because:
+### What adaptive radiation looks like on a tree
 
-1. **Colonization** — a founder population arrives (dispersal event)
-2. **Isolation** — gene flow from the mainland is limited or absent
-3. **Open niches** — islands often have fewer competitors and predators
-4. **Adaptive radiation** — the founder population diversifies to fill available niches
+On a time-scaled tree, an adaptive radiation appears as **many nodes clustered within a short span of time**, all descending from a single ancestral lineage.
 
-### Adaptive radiation
-
-**Adaptive radiation** is the rapid diversification of a single ancestral lineage into many species, each adapted to a different ecological niche.
-
-> 🐦 **Classic example — Darwin's finches (Galápagos):**
-> - A single ancestral finch species colonized the Galápagos from South America
-> - Over ~2-3 million years, it diversified into **~18 species**
-> - Each species evolved a beak shape adapted to a specific food source:
+> 🐦 **Darwin's finches (Galápagos):**
+> - A single ancestral finch species colonized the Galápagos from the American mainland
+> - Within the last few million years, it diversified into **about 18 species**
+> - Each species evolved a beak shape suited to a specific food source:
 >   - Large ground finch → large, crushing beak (hard seeds)
 >   - Warbler finch → thin, probing beak (insects)
->   - Cactus finch → elongated beak (cactus flowers/fruit)
->   - Woodpecker finch → straight beak + tool use (insect larvae)
+>   - Cactus finch → elongated beak (cactus flowers and fruit)
+>   - Woodpecker finch → straight beak plus tool use (insect larvae)
 
-### Hawaiian honeycreepers — another example
+### More radiations
 
-Hawaiian honeycreepers radiated from a single ancestor into **~50 species** with dramatically different beak shapes, diets, and behaviors. Their phylogeny shows a classic pattern of rapid branching from a single colonization event.
-
-### Island biogeography theory (MacArthur & Wilson)
-
-The number of species on an island reaches an **equilibrium** determined by:
-
-| Factor | Effect on species richness |
-|---|---|
-| **Island size** | Larger islands → more species (more habitats, larger populations) |
-| **Distance from mainland** | Closer islands → more species (higher immigration rate) |
-| **Immigration rate** | Decreases as the island fills with species |
-| **Extinction rate** | Increases as the island fills (more competition) |
-
-The equilibrium number of species is reached when the immigration rate equals the extinction rate.`
+- **Hawaiian honeycreepers** — more than 50 species (many now extinct) from a single colonizing ancestor, with beaks for nectar, seeds, and insects
+- **Hawaiian *Drosophila*** — hundreds of fruit fly species on a young island chain
+- **Caribbean *Anolis* lizards** — on each large island, lizards evolved into similar forms for twigs, trunks, and treetops. Trees show that each lizard's closest relatives live on its own island, so the matching forms evolved separately on each island: convergent evolution layered on top of divergent radiations.`
     },
     {
       id: 'phyl6-quiz2',
       type: 'multiple-choice' as const,
-      content: `**Concept Check — Islands & Radiation** 🎯`,
+      content: `**Concept Check — Adaptive Radiation** 🎯`,
       exercise: {
         questions: [
           {
             question: 'Which conditions are most likely to trigger an adaptive radiation?',
             options: [
-              'A colonizing species arrives in a habitat with many open ecological niches and few competitors',
-              'A species experiences strong stabilizing selection in a constant environment',
-              'A large population remains connected to the mainland with constant gene flow',
-              'A mass extinction eliminates all species in an ecosystem with no survivors'
+              'A colonizing species reaches a habitat with many open niches',
+              'A species experiences strong stabilizing selection in a stable habitat',
+              'A large population receives constant gene flow from the mainland',
+              'A mass extinction leaves no surviving lineages to diversify'
             ],
             correctAnswer: 0,
-            explanation: 'Adaptive radiation is driven by ecological opportunity — when organisms encounter many unfilled niches (as on islands, after mass extinctions, or with the evolution of a key innovation). Few competitors and diverse available resources allow rapid diversification. Stabilizing selection and gene flow from the mainland would actually slow diversification.'
+            explanation: 'Adaptive radiation is driven by ecological opportunity — many unfilled niches and few competitors, as on newly colonized islands or after mass extinctions with survivors. Stabilizing selection and steady gene flow from the mainland work against diversification, and a lineage must survive in order to radiate.'
           },
           {
-            question: 'According to the island biogeography model, which island would be predicted to have the MOST species?',
+            question: 'On each of four Caribbean islands, Anolis lizards include a twig form, a trunk form, and a treetop form. A tree shows that each lizard\'s closest relatives live on its own island. What best explains the matching forms?',
             options: [
-              'A large island close to the mainland',
-              'A small island close to the mainland',
-              'A large island far from the mainland',
-              'A small island far from the mainland'
+              'Each form evolved separately on each island',
+              'A single lineage of each form spread to every island',
+              'Lizards of one form interbreed across islands and stay alike',
+              'Each island was colonized by three founders, one of each form'
             ],
             correctAnswer: 0,
-            explanation: 'Species richness increases with island size (more habitats, lower extinction rate) and proximity to the mainland (higher immigration rate). A large, close island maximizes both effects, predicting the highest species richness.'
+            explanation: 'If twig lizards on different islands were one lineage that spread, they would be each other\'s closest relatives. Instead, each lizard groups with the other forms on its own island, so the same forms arose independently on each island — convergent evolution under similar selective pressures.'
           }
         ]
       }
@@ -140,36 +129,36 @@ The equilibrium number of species is reached when the immigration rate equals th
     {
       id: 'phyl6-dropdown1',
       type: 'dropdown-select' as const,
-      content: `**Fill in the Blanks — Biogeography & Phylogeny** 🔍`,
+      content: `**Fill in the Blanks — Speciation & Trees** 🔍`,
       exercise: {
         dropdowns: [
-          { label: 'Speciation caused by a geographic barrier splitting a population is called', options: ['vicariance', 'dispersal', 'adaptive radiation', 'convergent evolution'] },
-          { label: 'When a single ancestor rapidly diversifies into many species filling different niches, this is', options: ['adaptive radiation', 'vicariance', 'genetic drift', 'stabilizing selection'] },
-          { label: 'Darwin\'s finches are an example of adaptive radiation on', options: ['the Galápagos Islands', 'the Hawaiian Islands', 'Madagascar', 'Australia'] },
-          { label: 'According to island biogeography theory, species richness is highest on islands that are', options: ['large and close to the mainland', 'small and far from the mainland', 'large and far from the mainland', 'small and close to the mainland'] }
+          { label: 'Each node on a phylogenetic tree represents a(n)', options: ['speciation event', 'extinction event', 'single mutation', 'migration event'] },
+          { label: 'Speciation in populations separated by a geographic barrier is called', options: ['allopatric speciation', 'sympatric speciation', 'adaptive radiation', 'convergent evolution'] },
+          { label: 'Rapid diversification of one lineage into many species occupying different niches is', options: ['adaptive radiation', 'stabilizing selection', 'genetic drift', 'convergent evolution'] },
+          { label: 'On a time-scaled tree, an adaptive radiation appears as', options: ['many nodes in a short span', 'one long unbranched lineage', 'evenly spaced nodes over time', 'branches that merge again'] }
         ],
-        correctAnswers: ['vicariance', 'adaptive radiation', 'the Galápagos Islands', 'large and close to the mainland'],
-        hint1: 'Vicariance involves a barrier splitting an existing population; dispersal involves movement to a new area.',
-        hint2: 'Adaptive radiation = one lineage → many species, each adapted to a different niche.',
-        hint3: 'Large islands have more habitat diversity and lower extinction; close islands have higher immigration rates.',
-        explanation: 'Vicariance occurs when geographic barriers split populations. Adaptive radiation is the rapid diversification of a single lineage into many niche-adapted species, as seen in Darwin\'s finches on the Galápagos. Island biogeography theory predicts maximum species richness on large, close islands due to high immigration and low extinction.'
+        correctAnswers: ['speciation event', 'allopatric speciation', 'adaptive radiation', 'many nodes in a short span'],
+        hint1: 'A node is where one lineage splits into two.',
+        hint2: 'Allo- means "other": the populations live in different places.',
+        hint3: 'A radiation produces a burst of branching soon after new habitats open up.',
+        explanation: 'Nodes represent speciation events. Allopatric speciation follows geographic isolation. Adaptive radiation is the rapid diversification of a single lineage into many niche-adapted species, which shows up on a time-scaled tree as a cluster of closely spaced nodes.'
       }
     },
     {
       id: 'phyl6-dropdown2',
       type: 'dropdown-select' as const,
-      content: `**Fill in the Blanks — Patterns in Biogeography** 🔍`,
+      content: `**Fill in the Blanks — Tempo of Evolution** 🔍`,
       exercise: {
         dropdowns: [
-          { label: 'The breakup of Pangaea led to speciation through geographic', options: ['isolation (vicariance)', 'dispersal', 'gene flow', 'convergence'] },
-          { label: 'On an island, species equilibrium is reached when immigration rate equals', options: ['extinction rate', 'mutation rate', 'speciation rate', 'birth rate'] },
-          { label: 'Hawaiian honeycreepers diversified from a single ancestor into ~50 species, illustrating', options: ['adaptive radiation', 'stabilizing selection', 'genetic drift', 'convergent evolution'] }
+          { label: 'Rapid evolution after a long period of stasis describes', options: ['punctuated equilibrium', 'gradualism', 'genetic drift', 'gene flow'] },
+          { label: 'Slow, steady change over hundreds of thousands or millions of years describes', options: ['gradualism', 'punctuated equilibrium', 'adaptive radiation', 'sympatric speciation'] },
+          { label: 'Speciation rates are especially rapid during adaptive radiation because', options: ['new habitats become available', 'mutation rates fall to zero', 'gene flow between groups rises', 'selection pressures disappear'] }
         ],
-        correctAnswers: ['isolation (vicariance)', 'extinction rate', 'adaptive radiation'],
-        hint1: 'Continental drift physically separated populations, preventing gene flow.',
-        hint2: 'MacArthur and Wilson\'s model balances immigration against extinction to predict equilibrium.',
-        hint3: 'One ancestor → many species with different adaptations = adaptive radiation.',
-        explanation: 'The breakup of Pangaea caused vicariance by physically isolating populations on separate continents. Island species equilibrium occurs when immigration rate = extinction rate (MacArthur-Wilson model). Hawaiian honeycreepers are a textbook example of adaptive radiation from a single colonizing ancestor.'
+        correctAnswers: ['punctuated equilibrium', 'gradualism', 'new habitats become available'],
+        hint1: 'Punctuated: long pauses broken by sudden bursts.',
+        hint2: 'Gradual: a little at a time.',
+        hint3: 'Open niches create new selective pressures for different traits.',
+        explanation: 'Punctuated equilibrium is rapid evolution after long stasis; gradualism is slow change over hundreds of thousands to millions of years. Adaptive radiations are fast because newly available habitats favor different adaptations in different populations.'
       }
     }
   ]

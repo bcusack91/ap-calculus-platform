@@ -4,15 +4,15 @@ export const bioPhylogeneticsCladisticsPart4Data = {
     {
       id: 'phyl4-intro',
       type: 'text' as const,
-      content: `# Types of Evolution — Convergent, Divergent & Parallel
+      content: `# Homology, Analogy & Convergent Evolution
 
 **Part 4 of 7 — Phylogenetics & Cladistics**
 
-Understanding how traits evolve across lineages is critical for correctly interpreting phylogenies and avoiding errors in classification. The AP exam frequently tests your ability to distinguish between different evolutionary patterns.
+A tree is only as good as the characters used to build it. To choose good characters, you need to tell apart similarities that were **inherited from a common ancestor** from similarities that **evolved independently**.
 
 ### Divergent evolution
 
-**Divergent evolution** occurs when two or more related species become increasingly different over time, typically due to different selective pressures in different environments.
+**Divergent evolution** occurs when related lineages become increasingly different as they adapt to different habitats, producing phenotypic diversification.
 
 > 🦴 **Classic example — vertebrate forelimbs:**
 > - Human arm (grasping)
@@ -22,18 +22,20 @@ Understanding how traits evolve across lineages is critical for correctly interp
 >
 > All share the same underlying bone structure (humerus → radius/ulna → carpals → digits) inherited from a common ancestor, but have diverged dramatically in form and function.
 
-The structures produced by divergent evolution are called **homologous structures** — same ancestral origin, different current function.
+The structures produced by divergent evolution are called **homologous structures** — same ancestral origin, often different current function.
 
 ### Convergent evolution
 
-**Convergent evolution** occurs when unrelated species independently evolve similar traits due to similar environmental pressures.
+**Convergent evolution** occurs when similar selective pressures produce similar phenotypic adaptations in different lineages.
 
 > 🦈 **Classic examples:**
 > - Shark (fish) and dolphin (mammal) — streamlined body shape
-> - Bird wing, bat wing, and insect wing — flight structures from completely different tissues
-> - Cactus (Americas) and euphorbia (Africa) — succulent desert plants
+> - Insect wings vs. bird and bat wings — insect wings are outgrowths of the exoskeleton, while bird and bat wings are modified forelimbs
+> - Cactus (Americas) and euphorbia (Africa) — succulent, spiny desert plants
 
-The structures produced by convergent evolution are called **analogous structures** — similar function, different ancestral origin.`
+The structures produced by convergent evolution are called **analogous structures** — similar function, different evolutionary origin.
+
+> ⚠️ **Watch the level of comparison:** Bird wings and bat wings are **homologous as forelimbs** (same bones inherited from a four-limbed ancestor) but **analogous as wings**, because flight evolved separately in each lineage.`
     },
     {
       id: 'phyl4-quiz1',
@@ -44,95 +46,89 @@ The structures produced by convergent evolution are called **analogous structure
           {
             question: 'The wings of a bat and the arms of a human are examples of:',
             options: [
-              'Homologous structures that arose through divergent evolution',
-              'Analogous structures that arose through convergent evolution',
-              'Vestigial structures with no current function',
-              'Identical structures that evolved at the same time'
+              'Homologous structures produced by divergent evolution',
+              'Analogous structures produced by convergent evolution',
+              'Analogous structures produced by divergent evolution',
+              'Vestigial structures that no longer have a function'
             ],
             correctAnswer: 0,
-            explanation: 'Bat wings and human arms share the same underlying skeletal pattern (humerus, radius, ulna, carpals, digits) inherited from a common mammalian ancestor. Natural selection shaped these structures for different functions (flight vs. manipulation), making them homologous structures produced by divergent evolution.'
+            explanation: 'Bat wings and human arms share the same underlying skeletal pattern (humerus, radius, ulna, carpals, digits) inherited from a common mammalian ancestor. Natural selection shaped these structures for different functions (flight vs. manipulation), making them homologous structures produced by divergent evolution. Both are fully functional, so neither is vestigial.'
           },
           {
             question: 'A researcher finds that sugar gliders (marsupials) and flying squirrels (placental mammals) both have a membrane stretched between their legs for gliding. This is an example of:',
             options: [
               'Convergent evolution producing analogous structures',
               'Divergent evolution producing homologous structures',
-              'Coevolution between two species',
-              'Parallel evolution in closely related species'
+              'Coevolution between two species that interact closely',
+              'A shared derived trait inherited from a gliding ancestor'
             ],
             correctAnswer: 0,
-            explanation: 'Sugar gliders and flying squirrels are not closely related — marsupials and placental mammals diverged over 100 million years ago. They independently evolved gliding membranes due to similar selective pressures in forested environments. These are analogous structures from convergent evolution.'
+            explanation: 'Sugar gliders and flying squirrels are not closely related — marsupials and placental mammals diverged well over 100 million years ago, and their common ancestor did not glide. Each lineage evolved a gliding membrane under similar selective pressures in forests. These are analogous structures from convergent evolution.'
           }
         ]
       }
     },
     {
-      id: 'phyl4-parallel',
+      id: 'phyl4-convergence',
       type: 'text' as const,
-      content: `## Parallel Evolution & Homology vs. Analogy
-
-### Parallel evolution
-
-**Parallel evolution** occurs when two closely related species independently evolve similar traits from a shared ancestral condition. It is similar to convergent evolution but involves **related** lineages rather than unrelated ones.
-
-> 🐟 **Example:** Multiple lineages of stickleback fish independently lost their pelvic spines when they colonized freshwater lakes. Because they share the same genetic toolkit, the same gene (*Pitx1*) was involved each time — an example of parallel evolution.
-
-### How to distinguish on the AP exam
-
-| Pattern | Starting relatedness | Outcome | Trait origin |
-|---|---|---|---|
-| **Divergent** | Related (same ancestor) | Become different | Homologous structures |
-| **Convergent** | Unrelated | Become similar | Analogous structures |
-| **Parallel** | Related | Stay similar or evolve similarly | Similar genetic basis |
+      content: `## Why Convergence Misleads — and How to Catch It
 
 ### Homologous vs. analogous structures — summary
 
 | Feature | Homologous | Analogous |
 |---|---|---|
-| Evolutionary origin | Same ancestor | Different ancestors |
-| Structure | Similar underlying anatomy | Different underlying anatomy |
+| Evolutionary origin | Inherited from a common ancestor | Evolved independently |
+| Structure | Similar underlying anatomy | Often different underlying anatomy |
 | Function | Often different | Often similar |
-| Evidence for | Common ancestry | Convergent evolution |
-| Useful for cladograms? | ✅ Yes (synapomorphies) | ❌ No (misleading) |
+| Evidence for | Common ancestry | Similar selective pressures |
+| Useful for cladograms? | ✅ Yes, when the trait is a shared derived character | ❌ No — it suggests relationships that do not exist |
+
+### How scientists detect convergence
+
+1. **Look beneath the surface.** Analogous structures often differ in their underlying anatomy or development.
+2. **Check other characters.** A convergent trait usually conflicts with most of the other characters in the analysis.
+3. **Compare molecules.** DNA and protein sequences rarely converge across many positions, so molecular data can expose a misleading look-alike.
+
+> 🦔 **Example:** Tenrecs of Madagascar look and live like hedgehogs — spiny coats, insect diets. DNA sequence comparisons place tenrecs closer to elephants than to hedgehogs, showing that their spines are analogous to hedgehog spines.
 
 ### Vestigial structures
 
-**Vestigial structures** are remnants of structures that had a function in an ancestor but are reduced or nonfunctional in the descendant.
+**Vestigial structures** are reduced remnants of structures that served a function in an ancestor. Like other homologies, they provide evidence of common ancestry.
 
 > 🐍 **Examples:**
-> - Pelvic bones in whales and snakes (ancestors walked on land)
-> - Human appendix (reduced from a larger cecum in herbivorous ancestors)
-> - Flightless bird wings (ostriches, emus)
+> - Tiny pelvic and leg-bone remnants in whales and in pythons and boas (their ancestors walked on four legs)
+> - The human tailbone (coccyx), a remnant of the tail of our ancestors
+> - The small, flightless wings of emus and kiwis
 >
-> Vestigial structures are powerful evidence of evolution because they make sense only in the context of descent with modification.`
+> Vestigial structures make sense only in the context of descent with modification.`
     },
     {
       id: 'phyl4-quiz2',
       type: 'multiple-choice' as const,
-      content: `**Concept Check — Evolutionary Patterns** 🎯`,
+      content: `**Concept Check — Choosing Characters** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Several populations of lizards on different islands independently evolved the same toe pad structure for climbing. Their common ancestor lacked these toe pads. This is best described as:',
+            question: 'Tenrecs of Madagascar have spiny coats like hedgehogs, but DNA places tenrecs closer to elephants than to hedgehogs. How should the spines be treated when building a tree?',
             options: [
-              'Parallel evolution — related species independently evolving similar traits',
-              'Divergent evolution — one ancestral form splitting into different species',
-              'Convergent evolution — completely unrelated organisms evolving similar traits',
-              'Coevolution — two species evolving in response to each other'
+              'As analogous traits that should not group the two',
+              'As a shared derived trait that unites tenrecs and hedgehogs',
+              'As evidence that the DNA data must contain an error',
+              'As an ancestral trait that all mammals have retained'
             ],
             correctAnswer: 0,
-            explanation: 'These are closely related lizard populations evolving the same trait independently. Because they share a recent common ancestor (and likely the same underlying genetic mechanisms), this is parallel evolution rather than convergent evolution (which involves distantly related organisms).'
+            explanation: 'When many DNA positions place tenrecs near elephants, the spines are best explained as convergent evolution under similar selective pressures. Analogous traits should not be used to group lineages. Spines are not present in most mammals, so they are not an ancestral mammalian trait.'
           },
           {
             question: 'Which of the following is a vestigial structure?',
             options: [
-              'Pelvic bones in whales, which serve no locomotion function',
-              'The human heart, which pumps blood throughout the body',
-              'Bird feathers used for flight',
-              'Shark fins used for swimming and stability'
+              'Pelvic bones in whales, which no longer support hind legs',
+              'The heart in humans, which pumps blood through the body',
+              'Feathers on a hawk, which provide lift during flight',
+              'Fins on a shark, which steer and stabilize its swimming'
             ],
             correctAnswer: 0,
-            explanation: 'Whale pelvic bones are vestigial — they are reduced remnants of the pelvic girdle that supported the legs of the whales\' terrestrial ancestors. They no longer serve a locomotion function. The other options describe structures with clear current functions.'
+            explanation: 'Whale pelvic bones are vestigial — they are reduced remnants of the pelvic girdle that supported the hind legs of whales\' four-legged ancestors. The other structures still perform the function they are built for.'
           }
         ]
       }
@@ -143,16 +139,16 @@ The structures produced by convergent evolution are called **analogous structure
       content: `**Fill in the Blanks — Types of Evolution** 🔍`,
       exercise: {
         dropdowns: [
-          { label: 'When related species become increasingly different, this is called', options: ['divergent evolution', 'convergent evolution', 'parallel evolution', 'coevolution'] },
+          { label: 'When related species become increasingly different, this is called', options: ['divergent evolution', 'convergent evolution', 'gene flow', 'coevolution'] },
           { label: 'Structures with the same ancestral origin but different functions are', options: ['homologous', 'analogous', 'vestigial', 'convergent'] },
-          { label: 'Unrelated species evolving similar traits due to similar environments is', options: ['convergent evolution', 'divergent evolution', 'parallel evolution', 'artificial selection'] },
-          { label: 'A structure that has lost its original function over evolutionary time is', options: ['vestigial', 'homologous', 'analogous', 'derived'] }
+          { label: 'Different lineages evolving similar traits under similar selective pressures is', options: ['convergent evolution', 'divergent evolution', 'artificial selection', 'genetic drift'] },
+          { label: 'A reduced structure that served a function in an ancestor is', options: ['vestigial', 'homologous', 'analogous', 'derived'] }
         ],
         correctAnswers: ['divergent evolution', 'homologous', 'convergent evolution', 'vestigial'],
         hint1: 'Divergent = moving apart. Convergent = coming together. Think about the direction of change.',
         hint2: 'Homologous structures share an ancestor; analogous structures share a function but not ancestry.',
         hint3: 'Vestigial structures are evolutionary leftovers that are reduced or nonfunctional.',
-        explanation: 'Divergent evolution produces homologous structures (same origin, different function). Convergent evolution produces analogous structures (different origin, similar function). Vestigial structures are remnants of once-functional ancestral features.'
+        explanation: 'Divergent evolution produces homologous structures (same origin, different function). Convergent evolution produces analogous structures (different origin, similar function). Vestigial structures are reduced remnants of once-functional ancestral features.'
       }
     },
     {
@@ -161,15 +157,15 @@ The structures produced by convergent evolution are called **analogous structure
       content: `**Fill in the Blanks — Identifying Evolutionary Patterns** 🔍`,
       exercise: {
         dropdowns: [
-          { label: 'The wing of a bat and the wing of a butterfly are', options: ['analogous structures', 'homologous structures', 'vestigial structures', 'synapomorphies'] },
+          { label: 'The wing of a bat and the wing of a butterfly are', options: ['analogous structures', 'homologous structures', 'vestigial structures', 'shared derived characters'] },
           { label: 'The arm of a human and the flipper of a whale are', options: ['homologous structures', 'analogous structures', 'vestigial structures', 'convergent traits'] },
-          { label: 'When building cladograms, researchers should use homologous structures and avoid using', options: ['analogous structures', 'derived characters', 'synapomorphies', 'molecular data'] }
+          { label: 'When building cladograms, researchers should use homologous structures and avoid using', options: ['analogous structures', 'shared derived characters', 'homologous genes', 'molecular data'] }
         ],
         correctAnswers: ['analogous structures', 'homologous structures', 'analogous structures'],
         hint1: 'Bat wings are modified mammalian forelimbs; butterfly wings are extensions of the exoskeleton — completely different tissues.',
         hint2: 'Human arms and whale flippers share the same bone pattern inherited from a common ancestor.',
         hint3: 'Analogous structures lead to incorrect groupings because they reflect convergent evolution, not shared ancestry.',
-        explanation: 'Bat wings and butterfly wings are analogous — both function for flight but have completely different structural origins. Human arms and whale flippers are homologous — same skeletal pattern, different function. Cladograms must be built using homologous (not analogous) characters to accurately reflect evolutionary relationships.'
+        explanation: 'Bat wings and butterfly wings are analogous — both function for flight but have completely different structural origins. Human arms and whale flippers are homologous — same skeletal pattern, different function. Cladograms must be built using homologous (not analogous) characters to reflect evolutionary relationships accurately.'
       }
     }
   ]

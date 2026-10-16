@@ -122,10 +122,12 @@ const slugAliases: Record<string, string> = {
   'enzyme-kinetics': 'enzyme-structure-function',
   'prokaryotic-eukaryotic-cells': 'cell-structure-organelles',
   'population-ecology': 'population-community-ecology',
-  'ecosystems-energy': 'population-community-ecology',
+  // Ecosystems & Energy Flow teaches trophic levels and cycles (energy-flow-nutrient-cycling),
+  // not populations; Phylogeny & Classification teaches cladistics, not speciation.
+  'ecosystems-energy': 'energy-flow-nutrient-cycling',
   'population-dynamics': 'population-community-ecology',
   'speciation': 'speciation-macroevolution',
-  'phylogeny-classification': 'speciation-macroevolution',
+  'phylogeny-classification': 'phylogenetics-cladistics',
   'chromosomal-inheritance': 'chromosomal-inheritance-patterns',
   // SAT Prep
   'sat-quadratic-equations': 'sat-quadratic-equations-sat',

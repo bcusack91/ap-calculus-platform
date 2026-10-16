@@ -4,132 +4,119 @@ export const bioPhylogeneticsCladisticsPart5Data = {
     {
       id: 'phyl5-intro',
       type: 'text' as const,
-      content: `# Classification Systems
+      content: `# Evidence for Common Ancestry
 
 **Part 5 of 7 — Phylogenetics & Cladistics**
 
-Taxonomy is the science of naming and classifying organisms. Modern classification aims to reflect **evolutionary relationships** (phylogeny), connecting the Linnaean hierarchy with cladistic principles.
+Phylogenetic trees and cladograms are hypotheses, and they are built and tested with evidence. Evolution is supported by data from many disciplines — geographical, geological, physical, biochemical, and mathematical — and evidence from both living (extant) and extinct organisms adds to the picture.
 
-### The three domains of life
+### Lines of evidence used to build trees
 
-The broadest classification organizes all life into **three domains**, proposed by Carl Woese based on ribosomal RNA (rRNA) sequence comparisons:
-
-| Domain | Cell type | Membrane lipids | Examples |
-|---|---|---|---|
-| **Bacteria** | Prokaryotic | Ester-linked | *E. coli*, *Streptococcus*, cyanobacteria |
-| **Archaea** | Prokaryotic | Ether-linked | Methanogens, halophiles, thermophiles |
-| **Eukarya** | Eukaryotic | Ester-linked | Animals, plants, fungi, protists |
-
-> 🧬 **Key AP point:** Archaea are more closely related to Eukarya than to Bacteria, despite both Archaea and Bacteria being prokaryotic. This was revealed by molecular (rRNA) data and overturned the earlier two-kingdom and five-kingdom classification systems.
-
-### Six kingdoms (within the three domains)
-
-| Kingdom | Domain | Key features |
+| Evidence | What it shows | Example |
 |---|---|---|
-| Bacteria | Bacteria | Peptidoglycan cell walls, diverse metabolism |
-| Archaea | Archaea | Unique cell membranes, extremophiles common |
-| Protista | Eukarya | Diverse; mostly unicellular eukaryotes (paraphyletic!) |
-| Fungi | Eukarya | Heterotrophs, chitin cell walls, absorptive nutrition |
-| Plantae | Eukarya | Autotrophs, cellulose cell walls, photosynthesis |
-| Animalia | Eukarya | Heterotrophs, no cell walls, motile |
+| **Fossils** | When lineages existed; transitional forms | Early whale relatives such as *Pakicetus* had four legs |
+| **Morphological homologies** | Shared anatomy inherited from a common ancestor | Vertebrate forelimb bones; the vestigial whale pelvis |
+| **DNA and protein sequences** | How many differences separate two lineages | Cytochrome c amino acid comparisons |
+| **Cellular features** | Shared structures that point to a single origin | Membrane-bound organelles in all eukaryotes |
 
-> ⚠️ **Note:** Kingdom Protista is **paraphyletic** — it is a "catch-all" group that does not represent a single clade. Modern classification splits protists into multiple monophyletic supergroups.`
+### Dating fossils
+
+Fossils can be dated by several methods:
+1. **The age of the rocks** where a fossil is found — deeper layers are generally older, and dated layers above and below a fossil bracket its age
+2. **The rate of decay of isotopes**, including carbon-14 — carbon-14 works for remains up to roughly 50,000 years old; older fossils are dated with longer-lived isotopes in the surrounding rock
+3. **Geographical data** — for example, where a fossil formation sits relative to others of known age
+
+Dated fossils are what calibrate a phylogenetic tree's time scale.
+
+### Common ancestry of all eukaryotes
+
+All eukaryotes share structural and functional features that point to a single common ancestor:
+- **Membrane-bound organelles** (nucleus, mitochondria, endoplasmic reticulum, Golgi)
+- **Linear chromosomes**
+- **Genes that contain introns**
+
+Prokaryotes, by contrast, have no membrane-bound organelles, usually carry a single circular chromosome, and rarely have introns in their genes. A shared package of complex features like this is very unlikely to have evolved independently more than once.`
     },
     {
       id: 'phyl5-quiz1',
       type: 'multiple-choice' as const,
-      content: `**Concept Check — Domains & Kingdoms** 🎯`,
+      content: `**Concept Check — Lines of Evidence** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Based on molecular evidence, which two domains are most closely related?',
+            question: 'Which feature is shared by all eukaryotes and supports their common ancestry?',
             options: [
-              'Archaea and Eukarya',
-              'Bacteria and Archaea',
-              'Bacteria and Eukarya',
-              'All three domains are equally related'
+              'Linear chromosomes inside a nucleus',
+              'A cell wall made of peptidoglycan',
+              'A single circular chromosome',
+              'Chloroplasts in every cell'
             ],
             correctAnswer: 0,
-            explanation: 'Ribosomal RNA comparisons and other molecular evidence show that Archaea and Eukarya share a more recent common ancestor than either does with Bacteria. This is surprising because Archaea and Bacteria are both prokaryotic in cell structure, but molecular data reveals the true evolutionary relationship.'
+            explanation: 'Linear chromosomes, membrane-bound organelles such as the nucleus, and genes containing introns are shared by all eukaryotes and indicate their common ancestry. Peptidoglycan walls and a single circular chromosome are features of bacteria, and only photosynthetic eukaryotes such as plants and algae have chloroplasts.'
           },
           {
-            question: 'Why is Kingdom Protista considered problematic in modern classification?',
+            question: 'A fossil is found in a rock layer that lies below a layer dated at 40 million years old and above a layer dated at 55 million years old. What is the best estimate of the fossil\'s age?',
             options: [
-              'It is paraphyletic — it does not include all descendants of a single common ancestor',
-              'It contains too few species to be a valid kingdom',
-              'Protists are all actually bacteria misidentified as eukaryotes',
-              'It is polyphyletic based on morphological evidence only'
+              'Between 40 and 55 million years',
+              'Younger than 40 million years',
+              'Older than 55 million years',
+              'Exactly 47.5 million years'
             ],
             correctAnswer: 0,
-            explanation: 'Protista is paraphyletic because it excludes plants, animals, and fungi, all of which descended from protist-like ancestors. A proper clade should include ALL descendants of a common ancestor — Protista leaves out major lineages, making it an artificial grouping.'
+            explanation: 'In undisturbed layers, deeper rock is older. The fossil lies beneath the 40-million-year layer, so it is older than that, and above the 55-million-year layer, so it is younger than that. The layers bracket its age; they do not pin it to the midpoint.'
           }
         ]
       }
     },
     {
-      id: 'phyl5-linnaean',
+      id: 'phyl5-revision',
       type: 'text' as const,
-      content: `## The Linnaean Hierarchy & Binomial Nomenclature
+      content: `## When New Evidence Revises a Tree
 
-### Carolus Linnaeus (1707–1778)
+Phylogenetic trees and cladograms are **constantly being revised** as new evidence appears. When morphological and molecular evidence disagree, the molecular evidence is usually given more weight, because it supplies many more characters and is less affected by convergent evolution.
 
-Linnaeus developed the hierarchical classification system still used today, along with **binomial nomenclature** — the two-part naming system for species.
+### Case 1 — Whales and hippos
 
-### Taxonomic hierarchy (most inclusive → least inclusive)
+- **Older view:** Based on anatomy, whales were placed in a group of their own, outside the even-toed hoofed mammals (pigs, camels, deer, hippos).
+- **Molecular evidence:** DNA comparisons placed whales *within* the even-toed hoofed mammals, with **hippos as their closest living relatives**.
+- **Test:** If the DNA tree is right, early fossil whales should share skeletal features with even-toed hoofed mammals. In 2001, fossil whale ancestors were described with the distinctive double-pulley ankle bone found only in that group — supporting the molecular tree.
 
-| Rank | Example (Human) | Example (Dog) | Mnemonic |
-|---|---|---|---|
-| **Domain** | Eukarya | Eukarya | **D**ear |
-| **Kingdom** | Animalia | Animalia | **K**ing |
-| **Phylum** | Chordata | Chordata | **P**hilip |
-| **Class** | Mammalia | Mammalia | **C**ame |
-| **Order** | Primates | Carnivora | **O**ver |
-| **Family** | Hominidae | Canidae | **F**or |
-| **Genus** | *Homo* | *Canis* | **G**ood |
-| **Species** | *H. sapiens* | *C. lupus familiaris* | **S**paghetti |
+### Case 2 — Two kinds of prokaryotes
 
-### Binomial nomenclature rules
+- **Older view:** All organisms without a nucleus were grouped together.
+- **Molecular evidence:** Comparisons of ribosomal RNA sequences showed that archaea share a more recent common ancestor with eukaryotes than with bacteria, even though archaea and bacteria look alike under the microscope.
 
-1. The scientific name consists of **Genus + specific epithet** (e.g., *Homo sapiens*)
-2. The genus name is **capitalized**; the specific epithet is **lowercase**
-3. The entire name is **italicized** (or underlined if handwritten)
-4. After first mention, the genus can be abbreviated: *H. sapiens*
+### Evolution is ongoing
 
-### Why standardize naming?
-
-- Common names vary by region and language
-- The same common name may refer to different organisms
-- Scientific names are **universal** and **precise**
-
-> 🐻 **Example:** "Black bear" could mean *Ursus americanus* (American black bear) or *Ursus thibetanus* (Asian black bear). The binomial name eliminates confusion.`
+All species have evolved and continue to evolve. Evidence includes genomic changes over time, continuous change in the fossil record, and the evolution of resistance to antibiotics, pesticides, herbicides, and chemotherapy drugs. Trees built today are a snapshot of lineages that are still changing.`
     },
     {
       id: 'phyl5-quiz2',
       type: 'multiple-choice' as const,
-      content: `**Concept Check — Taxonomy & Naming** 🎯`,
+      content: `**Concept Check — Revising Trees** 🎯`,
       exercise: {
         questions: [
           {
-            question: 'Two organisms are in the same order but different families. What can you conclude?',
+            question: 'Anatomy once placed whales outside the even-toed hoofed mammals, but DNA comparisons place whales closest to hippos. Which new finding would most strongly support the DNA-based tree?',
             options: [
-              'They share a common ancestor at the order level but diverged before the family level',
-              'They are members of the same species',
-              'They must live in the same geographic region',
-              'They cannot share any homologous structures'
+              'Fossil whale ancestors sharing a unique ankle bone with hippos and pigs',
+              'Living whales and sharks that both have streamlined bodies and fins',
+              'A hippo protein that differs from the whale version at many sites',
+              'Whales and hippos that both spend most of their lives in water'
             ],
             correctAnswer: 0,
-            explanation: 'The Linnaean hierarchy is nested — being in the same order means they share a relatively recent common ancestor (at the order level) but are in different families, meaning they diverged into separate family-level lineages. They definitely share homologous structures (at least those defining the order).'
+            explanation: 'A skeletal feature found only in even-toed hoofed mammals, present in early whale fossils, is an independent shared derived character that matches the DNA tree. Streamlined bodies in whales and sharks are convergent, a protein with many differences would argue against a close relationship, and a shared aquatic lifestyle could arise by convergence.'
           },
           {
-            question: 'Which of the following is a correctly written scientific name?',
+            question: 'Archaea were once grouped with bacteria because neither has a nucleus. Ribosomal RNA comparisons later showed that archaea share a more recent common ancestor with eukaryotes. What does this example best illustrate?',
             options: [
-              '*Canis lupus*',
-              '*canis Lupus*',
-              'Canis Lupus',
-              '*CANIS LUPUS*'
+              'Trees are hypotheses that are revised when new evidence appears',
+              'Cell structure is the most reliable evidence for grouping organisms',
+              'Ribosomal RNA changes too quickly to be useful for building trees',
+              'Organisms that lack a nucleus must share a most recent ancestor'
             ],
             correctAnswer: 0,
-            explanation: 'Binomial nomenclature requires: (1) the genus capitalized, (2) the specific epithet lowercase, and (3) the entire name italicized. *Canis lupus* follows all three rules correctly.'
+            explanation: 'The earlier grouping rested on a shared absence of a nucleus, which is an ancestral state rather than a shared derived character. Molecular data revised the tree, illustrating that phylogenies are hypotheses updated as evidence accumulates. Ribosomal RNA is used precisely because it changes slowly enough to compare very distant lineages.'
           }
         ]
       }
@@ -137,36 +124,36 @@ Linnaeus developed the hierarchical classification system still used today, alon
     {
       id: 'phyl5-dropdown1',
       type: 'dropdown-select' as const,
-      content: `**Fill in the Blanks — Classification Systems** 🔍`,
+      content: `**Fill in the Blanks — Evidence for Evolution** 🔍`,
       exercise: {
         dropdowns: [
-          { label: 'The three domains of life are Bacteria, Archaea, and', options: ['Eukarya', 'Protista', 'Plantae', 'Fungi'] },
-          { label: 'The domain system was established based primarily on', options: ['ribosomal RNA (rRNA) sequences', 'physical appearance', 'habitat type', 'cell size'] },
-          { label: 'In the Linnaean hierarchy, the most specific (least inclusive) rank is', options: ['species', 'kingdom', 'domain', 'phylum'] },
-          { label: 'In binomial nomenclature, a scientific name consists of', options: ['genus + specific epithet', 'kingdom + phylum', 'family + order', 'domain + kingdom'] }
+          { label: 'Besides the age of surrounding rock layers, fossils can be dated using the decay rate of isotopes such as', options: ['carbon-14', 'nitrogen-15', 'oxygen-16', 'sodium-23'] },
+          { label: 'Membrane-bound organelles, linear chromosomes, and genes with introns are evidence for the common ancestry of all', options: ['eukaryotes', 'bacteria', 'archaea', 'prokaryotes'] },
+          { label: 'Reduced remnants of structures that served a function in an ancestor, such as the whale pelvis, are', options: ['vestigial structures', 'analogous structures', 'derived characters', 'transitional fossils'] },
+          { label: 'When morphological and molecular trees conflict, the molecular tree is usually considered more', options: ['reliable', 'outdated', 'subjective', 'incomplete'] }
         ],
-        correctAnswers: ['Eukarya', 'ribosomal RNA (rRNA) sequences', 'species', 'genus + specific epithet'],
-        hint1: 'The three domains replaced the earlier five-kingdom system based on molecular evidence.',
-        hint2: 'Carl Woese compared rRNA sequences to propose the three-domain system.',
-        hint3: 'Domain is the most inclusive rank; species is the most specific. Scientific names use genus + specific epithet.',
-        explanation: 'The three domains (Bacteria, Archaea, Eukarya) were established by Carl Woese using rRNA comparisons. In the Linnaean hierarchy, species is the most specific rank. Binomial nomenclature combines the genus name and the specific epithet (e.g., *Homo sapiens*).'
+        correctAnswers: ['carbon-14', 'eukaryotes', 'vestigial structures', 'reliable'],
+        hint1: 'Radiometric dating relies on an unstable isotope decaying at a known rate.',
+        hint2: 'Prokaryotes lack membrane-bound organelles and usually have one circular chromosome.',
+        hint3: 'Molecular data supply many characters and are less affected by convergent evolution.',
+        explanation: 'Fossils can be dated by rock layers and by the decay of isotopes such as carbon-14. Membrane-bound organelles, linear chromosomes, and introns are shared by all eukaryotes. Vestigial structures are reduced ancestral remnants, and molecular trees are usually considered more reliable than morphological ones.'
       }
     },
     {
       id: 'phyl5-dropdown2',
       type: 'dropdown-select' as const,
-      content: `**Fill in the Blanks — Taxonomy in Practice** 🔍`,
+      content: `**Fill in the Blanks — Trees as Hypotheses** 🔍`,
       exercise: {
         dropdowns: [
-          { label: 'Two organisms in the same family must also be in the same', options: ['order', 'species', 'genus', 'subspecies'] },
-          { label: 'Archaea and Bacteria are both prokaryotic, but Archaea are more closely related to', options: ['Eukarya', 'Bacteria', 'Plantae', 'Fungi'] },
-          { label: 'Kingdom Protista is considered paraphyletic because it excludes some', options: ['descendants of its common ancestor (plants, animals, fungi)', 'prokaryotic organisms', 'single-celled organisms', 'extinct species'] }
+          { label: 'Comparing DNA nucleotide sequences or protein amino acid sequences provides', options: ['biochemical evidence', 'geological evidence', 'geographical evidence', 'behavioral evidence'] },
+          { label: 'Phylogenetic trees and cladograms are best described as', options: ['hypotheses revised with new evidence', 'permanent records of descent', 'classifications fixed by anatomy', 'lists of ancestors and descendants'] },
+          { label: 'The DNA result placing whales closest to hippos was later supported by fossil whales with a distinctive', options: ['ankle bone', 'skull shape', 'tooth enamel', 'tail fluke'] }
         ],
-        correctAnswers: ['order', 'Eukarya', 'descendants of its common ancestor (plants, animals, fungi)'],
-        hint1: 'The hierarchy is nested: species → genus → family → order → class → phylum → kingdom → domain.',
-        hint2: 'Molecular data shows Archaea share more recent ancestry with Eukarya despite morphological similarity to Bacteria.',
-        hint3: 'Paraphyletic means the group includes the ancestor but leaves out some descendants.',
-        explanation: 'Being in the same family means the organisms must also share all higher ranks (order, class, phylum, kingdom, domain). Despite prokaryotic cell structure, Archaea are molecularly closer to Eukarya. Protista is paraphyletic because plants, animals, and fungi all descended from protist-like ancestors but are excluded from the kingdom.'
+        correctAnswers: ['biochemical evidence', 'hypotheses revised with new evidence', 'ankle bone'],
+        hint1: 'Sequences of nucleotides and amino acids are molecules.',
+        hint2: 'Every tree is built from the evidence available when it is drawn.',
+        hint3: 'Even-toed hoofed mammals share a double-pulley bone in the hind foot.',
+        explanation: 'Sequence comparisons are biochemical evidence. Trees and cladograms are hypotheses that are revised as evidence accumulates, as when fossil whales with the double-pulley ankle bone of even-toed hoofed mammals supported the DNA-based placement of whales next to hippos.'
       }
     }
   ]
