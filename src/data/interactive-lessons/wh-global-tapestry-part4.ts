@@ -41,7 +41,7 @@ export const whGlobalTapestryPart4Data = {
             explanation: 'Neo-Confucianism was not just philosophy — it was administrative infrastructure. It justified the emperor\'s authority, the scholar-gentry\'s social dominance, and gender hierarchy (foot binding spread alongside Neo-Confucian norms of female subordination). AP prompts often ask students to explain how belief systems reinforced political and social structures.'
           },
           {
-            question: 'Islam\'s rapid spread across Afro-Eurasia between 600–1450 was primarily driven by:',
+            question: 'The continued spread of Islam across Afro-Eurasia c. 1200–1450 was primarily driven by:',
             options: [
               'Military expansion, merchant networks and Sufi teachers adapting to local cultures',
               'Arab conquest alone, with conversion demanded of every conquered population as policy',
@@ -49,7 +49,7 @@ export const whGlobalTapestryPart4Data = {
               'Persian merchants who spread it mainly by marrying into Chinese and Indian ruling families'
             ],
             correctAnswer: 0,
-            explanation: 'No single mechanism explains Islamic spread. Military conquest was important in the Middle East and North Africa; trade networks carried Islam to coastal East Africa and Southeast Asia; Sufi missionaries\' flexibility and emphasis on inner devotion made Islam appealing in diverse cultural contexts. AP essays should acknowledge this complexity.'
+            explanation: 'No single mechanism explains Islamic spread. Military expansion carried Muslim rule into northern India (the Delhi Sultanate) and Anatolia; trade networks carried Islam to coastal East Africa and Southeast Asia; Sufi missionaries\' flexibility and emphasis on inner devotion made Islam appealing in diverse cultural contexts. AP essays should acknowledge this complexity.'
           }
         ]
       }

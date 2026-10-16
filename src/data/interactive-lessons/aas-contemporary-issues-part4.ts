@@ -4,7 +4,7 @@ export const aasContemporaryIssuesPart4Data = {
     {
       id: "aasci4-intro",
       type: 'text' as const,
-      content: "# ⚡ Contemporary Issues & Debates\n\n**Part 4 of 7 — Connections: Reading the Data on Wealth, Housing and Health**\n\n---\n\nDebates about racial inequality today often turn on numbers. The AP exam includes data and visual sources (tables, charts, maps), and the SAQ on a visual source can ask you to describe a pattern, explain it with historical evidence, and identify a limitation of the source. This part practices those skills on three areas of present-day inequality and connects each to its history.\n\n### Three rules for reading a data source\n\n| Rule | Ask yourself |\n|---|---|\n| **Read the label** | What is measured, in what unit, for whom, in what year, and by whom? |\n| **Describe before you explain** | State the pattern in the numbers first; save causes for the next sentence. |\n| **Know what the data cannot show** | A gap in outcomes does not, on its own, prove a single cause. |"
+      content: "# ⚡ Contemporary Issues & Debates\n\n**Part 4 of 7 — Connections: Reading the Data on Wealth, Housing and Education**\n\n---\n\nDebates about racial inequality today often turn on numbers. The AP exam includes data and visual sources (tables, charts, maps), and the SAQ on a visual source can ask you to describe a pattern, explain it with historical evidence, and identify a limitation of the source. This part practices those skills on wealth, housing and education data from Topics 4.5, 4.15 and 4.16 and connects each to its history.\n\n### Three rules for reading a data source\n\n| Rule | Ask yourself |\n|---|---|\n| **Read the label** | What is measured, in what unit, for whom, in what year, and by whom? |\n| **Describe before you explain** | State the pattern in the numbers first; save causes for the next sentence. |\n| **Know what the data cannot show** | A gap in outcomes does not, on its own, prove a single cause. |"
     },
     {
       id: "aasci4-wealth",
@@ -92,35 +92,35 @@ export const aasContemporaryIssuesPart4Data = {
     {
       id: "aasci4-health",
       type: 'text' as const,
-      content: "## 🩺 Data set 3: maternal health\n\n**Maternal deaths per 100,000 live births, 2021** (CDC, National Center for Health Statistics, 2023)\n\n| Group | Rate |\n|---|---|\n| Black women | 69.9 |\n| Hispanic women | 28.0 |\n| White women | 26.6 |\n\n2021 was a peak year, partly because of COVID-19; rates for all groups fell in 2022, but the Black rate remained more than twice the white rate.\n\n### Explaining the gap: competing emphases\n\nResearchers agree the gap is large and persists across income and education levels. They emphasize different causes:\n\n| Emphasis | Argument |\n|---|---|\n| **Access to care** | Differences in insurance, hospital quality and distance to obstetric care. |\n| **Chronic stress** | Long-term exposure to discrimination wears on health (the \"weathering\" hypothesis of public-health scholar Arline Geronimus). |\n| **Treatment within care** | Patients' reports of symptoms being dismissed, and differences in how care is delivered. |\n\n> ⚠️ **AP Alert:** When a data source shows a gap, earn credit by describing it precisely (\"more than twice the rate\"), then explaining it with **specific historical or contemporary evidence**. Do not claim the table proves one cause."
+      content: "## 🎓 Data set 3: education and a growing population\n\n**What the framework reports** (Topics 4.15 and 4.16)\n\n| Measure | Finding |\n|---|---|\n| Black adults with a bachelor's degree or higher, 2019 | **23 percent** |\n| Number of Black college degree holders since 2000 | **More than doubled** |\n| Black-identifying population, 2000–2019 | **Grew 30 percent**, to about 47 million (nearly 14 percent of the U.S. population) |\n| Black immigrants since 2000 | **Nearly doubled**, mainly from Africa and the Caribbean |\n\n### Connecting the numbers to history\n\n- **Desegregation** in the 1950s and 1960s expanded educational opportunity, and the number of Black college graduates rose gradually (EK 4.15.A.2).\n- Education and urban employment helped the **Black middle class** grow, and Black entrepreneurs built businesses such as restaurants, banks and publishing houses to serve Black communities, some still operating today (EK 4.15.A.3).\n- Yet higher education and income did not erase the **wealth gap** in Data set 1, because wealth builds up across generations and earlier discrimination in housing and employment limited what families could pass down (EK 4.15.A.1).\n\n### Reading the table carefully\n\n| Careful reading | Careless reading |\n|---|---|\n| \"The **number** of Black degree holders more than doubled after 2000.\" | \"Twice as many Black adults went to college.\" (A count is not a share of adults.) |\n| \"In 2019, 23 percent of Black adults held at least a bachelor's degree.\" | \"Most Black adults held college degrees by 2019.\" |\n\n> ⚠️ **AP Alert:** When a data source shows a gap or a trend, earn credit by describing it precisely (\"about a tenth of the median white family's wealth,\" \"more than doubled\"), then explaining it with **specific historical evidence**. Do not claim the table proves a single cause."
     },
     {
       id: "aasci4-apply",
       type: 'multiple-choice' as const,
-      content: "**AP-Style Application: Health Data** 🎯",
+      content: "**AP-Style Application: Education Data** 🎯",
       exercise: {
         "questions": [
           {
-            "question": "Which is a limitation of the 2021 CDC maternal mortality table as a source on causes of the gap?",
+            "question": "Which statement accurately describes the education data in Data set 3?",
             "options": [
-              "It reports raw death counts, so populations of different sizes cannot be compared.",
-              "It compares rates across groups but cannot show what makes them differ.",
-              "It covers only women without health insurance, so it misses most patients.",
-              "It was produced by an advocacy group rather than by a federal agency."
+              "By 2019, 23 percent of Black adults held at least a bachelor's degree",
+              "By 2019, most Black adults held at least a bachelor's degree",
+              "The number of Black degree holders fell by half after the year 2000",
+              "Black college enrollment stopped growing once desegregation ended"
             ],
-            "correctAnswer": 1,
-            "explanation": "The table reports rates per 100,000 births by group, so groups can be compared, but it says nothing about causes. It does not use raw counts, is not limited to the uninsured, and comes from a federal agency."
+            "correctAnswer": 0,
+            "explanation": "The framework reports that 23 percent of African American adults held a bachelor's degree or higher in 2019, which is well short of a majority. The number of degree holders more than doubled after 2000 rather than falling, and desegregation expanded rather than ended educational opportunity."
           },
           {
-            "question": "The \"weathering\" hypothesis explains health gaps mainly through ___.",
+            "question": "Why did a rising number of Black college graduates after 2000 not close the racial wealth gap?",
             "options": [
-              "differences in hospital distance",
-              "lower rates of prenatal visits",
-              "long-term stress from discrimination",
-              "genetic differences between groups"
+              "Assets build up over generations, and earlier discrimination limited inheritance",
+              "College graduates earn less on average than adults without degrees",
+              "Federal law barred Black graduates from buying homes until 2008",
+              "The gap had already disappeared before the year 2000"
             ],
-            "correctAnswer": 2,
-            "explanation": "Geronimus's weathering hypothesis holds that sustained exposure to discrimination and its stresses wears down health over time. Distance to hospitals and prenatal visits are access explanations, and the hypothesis rejects a genetic account."
+            "correctAnswer": 0,
+            "explanation": "Wealth accumulates and passes down over generations, so discrimination in housing and employment earlier in the twentieth century still shapes what families hold today (EK 4.15.A.1). Degrees raise earnings, housing discrimination was outlawed in 1968, and the gap remained large in 2016 and 2022."
           }
         ]
       }

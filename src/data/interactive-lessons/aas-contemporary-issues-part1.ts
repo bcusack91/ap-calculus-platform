@@ -4,12 +4,12 @@ export const aasContemporaryIssuesPart1Data = {
     {
       id: "aasci1-intro",
       type: 'text' as const,
-      content: "# ⚡ Contemporary Issues & Debates (1980–present)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this unit matters\n\nFrom the War on Drugs and mass incarceration through Obama's election, Black Lives Matter, and the 1619 Project, contemporary African American history has been shaped by the persistence of structural inequality alongside unprecedented political and cultural visibility.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Mass incarceration** | The number of people held in U.S. prisons and jails grew from fewer than 350,000 in the early 1970s to about 2.3 million in 2008; Black men were imprisoned at more than six times the rate of white men. |\n| **Color-blind racism** | Sociologist Eduardo Bonilla-Silva's term for a post-civil-rights outlook that treats ignoring race as fairness and so leaves structural inequality in place. |\n| **Movement for Black Lives** | A coalition of groups that grew out of #BlackLivesMatter (2013) and the Ferguson protests (2014); its 2016 platform linked policing to wider economic and political demands. |\n\n> 🔑 **Key Concept:** Since 1980 two trends have run side by side. Structural inequality in prisons, wealth and housing persisted or deepened, while Black Americans reached the highest levels of national politics and culture. Strong answers explain how both could be true at once.\n"
+      content: "# ⚡ Contemporary Issues & Debates (1965–present)\n\n**Part 1 of 7 — Foundations & Key Concepts**\n\n---\n\n### Why this topic matters\n\nThe last topics of the course framework (Topics 4.15–4.21) follow Black communities from the late twentieth century into the twenty-first. Two trends run side by side. After the Voting Rights Act of 1965, Black voting power and political representation grew along with a **Black middle class**, and African Americans reached the highest offices in the nation. Yet large racial gaps in **wealth**, rooted in earlier discrimination in housing and employment, remained. At the same time Black America grew larger and more **diverse**, and Black music, film, sport, science and art shaped American and global culture.\n\n### Core concepts\n\n| Core concept | What it refers to |\n|---|---|\n| **Black middle class and the wealth gap** | Desegregation widened access to education and jobs, and the Black middle class grew; but discrimination in housing and employment earlier in the century limited the wealth families could build and pass down (CED 4.15.A). |\n| **Black political representation** | The Voting Rights Act of 1965 barred state and local voting laws that discriminated by race. Black elected officials grew from about 1,500 in 1970 to about 9,000 in 2006 (4.15.B). |\n| **The diversity of Black America** | Since 2000, the Black population has grown and diversified through immigration from Africa and the Caribbean and a rising number of people who identify as Black and Hispanic or multiracial (4.16.A). |\n| **Afrofuturism** | A movement that reimagines Black pasts and envisions Afrocentric futures through science and technology, in art, music, film, fashion, literature and architecture (4.21.B). |\n\n> 🔑 **Key Concept:** Strong answers about this period explain how **progress and persistent inequality existed at the same time**: historic political firsts and a growing middle class alongside a wealth gap that earlier discrimination helped create.\n"
     },
     {
       id: "aasci1-figures",
       type: 'text' as const,
-      content: "## 📖 Key Figures of Contemporary Issues\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Jesse Jackson** | b. 1941 | 1984 and 1988 Democratic presidential campaigns; Rainbow Coalition. |\n| **Toni Morrison** | 1931–2019 | Nobel Prize 1993; *Beloved* (1987) reframes American memory of slavery. |\n| **Cornel West** | b. 1953 | *Race Matters* (1993); philosopher in the Black prophetic Christian tradition. |\n| **Barack Obama** | b. 1961 | First Black U.S. president (2009–2017). |\n| **Alicia Garza, Patrisse Cullors, Opal Tometi** | began #BlackLivesMatter, 2013 | Responded to the acquittal of Trayvon Martin's killer. |\n\n> ⚠️ **AP Alert:** The course framework treats present-day movements such as Black Lives Matter and the reparations debate mainly as possible topics for the individual student project. Analyze them as historical evidence, with sources and dates, rather than as positions to endorse or reject."
+      content: "## 📖 Key Figures\n\n| Figure | Dates | Why they matter |\n|---|---|---|\n| **Shirley Chisholm** | 1924–2005 | First Black woman elected to Congress (1968); an advocate for women's rights who helped found the **Congressional Black Caucus** in 1971. |\n| **Colin Powell** | 1937–2021 | First Black U.S. secretary of state (2001), serving under President George W. Bush. |\n| **Condoleezza Rice** | b. 1954 | Succeeded Powell; the first Black woman to serve as secretary of state. |\n| **Barack Obama** | b. 1961 | Elected president in 2008, the first Black American to hold the office. |\n| **Kamala Harris** | b. 1964 | Elected vice president in 2020, the first Black American to hold the office. |\n\n> ⚠️ **AP Alert:** Present-day movements such as Black Lives Matter and the reparations debate appear in the course only as optional **Further Explorations**, which the CED states are not part of the AP Exam. This topic focuses on the required content of Topics 4.15–4.21."
     },
     {
       id: "aasci1-quiz1",
@@ -18,26 +18,26 @@ export const aasContemporaryIssuesPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which pattern BEST characterizes African American history since 1980?",
+            "question": "Which pattern BEST characterizes African American life from the late twentieth century to the present, according to the course framework?",
             "options": [
-              "Steady closing of racial gaps in wealth, health and incarceration under 1960s civil rights laws",
-              "Stalled political gains, with no Black candidate elected senator, governor or president",
-              "Persistent structural inequality alongside new Black political and cultural visibility",
-              "A shift of attention away from domestic policing and prisons toward events overseas"
+              "A growing Black middle class and new political firsts alongside a persistent racial wealth gap",
+              "A steady closing of the racial wealth gap once the civil rights laws of the 1960s took full effect",
+              "A shrinking and less diverse Black population as immigration from Africa nearly stopped",
+              "Stalled political gains, with no Black candidate elected to Congress or national office"
             ],
-            "correctAnswer": 2,
-            "explanation": "The War on Drugs and mass incarceration deepened inequality in the same decades that Jesse Jackson, Douglas Wilder and Barack Obama won votes and offices. Racial gaps in wealth and incarceration did not close, and policing and prisons remained central domestic issues."
+            "correctAnswer": 0,
+            "explanation": "The framework pairs gains, such as a larger Black middle class and the elections of Obama and Harris, with a wealth gap that remained large (in 2016 the median Black family held about a tenth of the wealth of the median white family). The Black population grew and diversified through immigration, and Black officeholding expanded sharply after 1965."
           },
           {
-            "question": "Which description fits Jesse Jackson's place in post-1980 politics?",
+            "question": "Shirley Chisholm is significant in the course framework because she",
             "options": [
-              "Won the presidency in 2008 after serving as a U.S. senator from Illinois",
-              "Ran for the Democratic nomination in 1984 and 1988 with the Rainbow Coalition",
-              "Won the 1993 Nobel Prize in Literature for novels such as *Beloved*",
-              "Wrote *The New Jim Crow* in 2010, calling mass incarceration a racial caste"
+              "became the first Black woman elected to Congress and helped found the Congressional Black Caucus",
+              "served as the first Black secretary of state under President George W. Bush",
+              "was elected vice president in 2020, the first Black American to hold that office",
+              "won the 1968 Olympic 200 meters and raised a fist on the medal stand in protest"
             ],
-            "correctAnswer": 1,
-            "explanation": "Jackson's two campaigns for the Democratic nomination built a multiracial Rainbow Coalition and won about 6.9 million primary votes in 1988. The presidency fits Barack Obama, the Nobel Prize fits Toni Morrison, and *The New Jim Crow* is Michelle Alexander's book."
+            "correctAnswer": 0,
+            "explanation": "Chisholm won a seat in Congress in 1968 and helped found the Congressional Black Caucus in 1971. Colin Powell was the first Black secretary of state, Kamala Harris the first Black vice president, and Tommie Smith won the 1968 Olympic 200 meters."
           }
         ]
       }
@@ -45,68 +45,68 @@ export const aasContemporaryIssuesPart1Data = {
     {
       id: "aasci1-context",
       type: 'text' as const,
-      content: "## Historical Context\n\n| Event | Significance |\n|---|---|\n| **1986 Anti-Drug Abuse Act** | Created the 100:1 crack/powder cocaine sentencing disparity. |\n| **1992 Los Angeles uprising** | Followed the acquittal of the officers who beat Rodney King; more than 60 people died. |\n| **1994 Crime Bill** | Federal 'three strikes' life sentences and grants to states that adopted truth-in-sentencing. |\n\n### Primary sources to know\n\n- **Alexander, *The New Jim Crow* (2010):** argues that mass incarceration functions as a racial caste system.\n- **Coates, 'The Case for Reparations' (2014):** traces housing discrimination, from redlining to contract selling, as grounds for redress.\n- **Garza, 'A Herstory of the #BlackLivesMatter Movement' (2014):** explains the hashtag's origins and centers Black women and queer people in the movement.\n"
+      content: "## Historical Context\n\n| Year | Event | Significance |\n|---|---|---|\n| **1965** | Voting Rights Act | Prohibited state and local voting laws and procedures that discriminated by race. |\n| **1968** | Shirley Chisholm elected to Congress | First Black woman in Congress. |\n| **1971** | Congressional Black Caucus founded | Supports Black candidates at every level and lobbies for reforms in health care, employment and social services. 1971 also saw the largest one-year increase in Black elected officials. |\n| **2001** | Colin Powell becomes secretary of state | First Black secretary of state; Condoleezza Rice succeeded him. |\n| **2008** | Barack Obama elected president | First Black president. |\n| **2020** | Kamala Harris elected vice president | First Black vice president. |\n\n### Numbers the framework uses\n\n- **Wealth:** in 2016 the median wealth of Black families was about \\$17,150, compared with about \\$171,000 for white families.\n- **Education:** by 2019, 23 percent of African American adults held a bachelor's degree or higher, and the number of Black college degree holders has more than doubled since 2000.\n- **Population:** from 2000 to 2019 the Black-identifying population grew by 30 percent to about 47 million, nearly 14 percent of the U.S. population.\n\n### Required sources for these topics (examples)\n\n- **Colin Powell, commencement address at Howard University (1994).**\n- **Kehinde Wiley's portrait of Barack Obama** and **Amy Sherald's portrait of Michelle Obama** (both 2018).\n- **Charts from \"The Black Middle Class Needs Political Attention, Too\"** (Brookings Institution, 2020).\n- **\"The Growing Diversity of Black America\"** (Pew Research Center, 2021).\n"
     },
     {
       id: "aasci1-input",
       type: 'input-boxes' as const,
-      content: "**Applied Recall** ✍️\n\nUse the exact historical term:\n\n1) The historic, racially unequal expansion of U.S. imprisonment since the 1970s\n\n2) Grading Black and mixed neighborhoods as too risky for mortgage lending, as on 1930s HOLC maps\n\n3) Compensation or other redress for slavery and later injustices, the subject of the H.R. 40 bill\n",
+      content: "**Applied Recall** ✍️\n\n1) In what year was Barack Obama elected president?\n\n2) By 2019, about what percent of African American adults had earned a bachelor's degree or higher? (number only)\n\n3) Name the movement that reimagines Black pasts and envisions Afrocentric futures through science and technology.\n",
       exercise: {
         "boxes": 3,
         "correctAnswers": [
-          "Mass incarceration",
-          "Redlining",
-          "Reparations"
+          "2008",
+          "23",
+          "Afrofuturism"
         ],
-        "hint1": "Michelle Alexander's *The New Jim Crow* is the best-known book on it; the first word describes its scale.",
-        "hint2": "On the HOLC maps, the D-grade 'hazardous' areas were outlined in one color.",
-        "hint3": "Ta-Nehisi Coates made 'The Case for' it in 2014.",
-        "explanation": "Mass incarceration names the rise from fewer than 350,000 people held in the early 1970s to about 2.3 million in 2008. Redlining denied credit to Black neighborhoods and shaped today's wealth gap. Reparations are the redress debated in H.R. 40 and by state and city commissions."
+        "hint1": "He took office the following January, in 2009.",
+        "hint2": "It is a little under one in four.",
+        "hint3": "The word joins \"Afro\" with a word about time to come.",
+        "explanation": "Obama won the 2008 election. In 2019, 23 percent of African American adults held at least a bachelor's degree. Afrofuturism imagines Black pasts and futures, from Sun Ra's music to the film Black Panther."
       }
     },
     {
       id: "aasci1-dropdown",
       type: 'dropdown-select' as const,
-      content: "**Match the Concepts** 🔍",
+      content: "**Match the Firsts** 🔍",
       exercise: {
         "dropdowns": [
           {
-            "label": "Mass incarceration is best described as ___",
+            "label": "Colin Powell is best described as ___",
             "options": [
-              "the federal takeover of state prisons that followed the 1994 crime bill",
-              "the roughly sevenfold rise in people held in U.S. prisons and jails, 1970s–2008",
-              "the shift from prison terms to probation that followed the 1986 drug law",
-              "the private ownership of most American prisons since the early 1980s"
+              "the first Black secretary of state (2001)",
+              "the first Black vice president (2020)",
+              "a founder of the Congressional Black Caucus (1971)",
+              "the first Black woman elected to Congress (1968)"
             ]
           },
           {
-            "label": "Color-blind racism is best described as ___",
+            "label": "Condoleezza Rice is best described as ___",
             "options": [
-              "the open defense of segregation by Southern officials in the 1950s and 1960s",
-              "the belief that race-conscious policy is the only fair way to remedy bias",
-              "the view that ignoring race ends racism, which leaves structural gaps intact",
-              "the claim that biological differences explain unequal outcomes between races"
+              "the first Black woman elected to Congress (1968)",
+              "the first Black woman to serve as secretary of state",
+              "the first Black president of the United States (2008)",
+              "the creator of the dance program Soul Train (1971)"
             ]
           },
           {
-            "label": "Movement for Black Lives is best described as ___",
+            "label": "Kamala Harris is best described as ___",
             "options": [
-              "a single national organization run by one elected chair since 2013",
-              "a 1980s voter drive that built the Rainbow Coalition behind Jackson",
-              "a federal commission created by Congress to study reparations proposals",
-              "a coalition that grew out of #BlackLivesMatter and issued a 2016 platform"
+              "the first Black secretary of state (2001)",
+              "a founder of the Congressional Black Caucus (1971)",
+              "the first Black American elected vice president (2020)",
+              "the first African American woman in space (1992)"
             ]
           }
         ],
         "correctAnswers": [
-          "the roughly sevenfold rise in people held in U.S. prisons and jails, 1970s–2008",
-          "the view that ignoring race ends racism, which leaves structural gaps intact",
-          "a coalition that grew out of #BlackLivesMatter and issued a 2016 platform"
+          "the first Black secretary of state (2001)",
+          "the first Black woman to serve as secretary of state",
+          "the first Black American elected vice president (2020)"
         ],
-        "hint1": "Mass incarceration is about scale: count the people held, not who owns the buildings.",
-        "hint2": "Color-blind racism sounds fair on the surface; it is not open bigotry.",
-        "hint3": "The Movement for Black Lives is decentralized, a network of many groups rather than one organization.",
-        "explanation": "Mass incarceration names a rise in the number of people held, mostly in state systems; color-blind racism treats ignoring race as fairness while structural gaps persist; and the Movement for Black Lives is a coalition that published 'A Vision for Black Lives' in 2016. Most prisons are publicly run, and the Rainbow Coalition belongs to the 1980s."
+        "hint1": "He served under President George W. Bush.",
+        "hint2": "She succeeded Powell in the same cabinet post.",
+        "hint3": "She was elected on the same ticket as President Joe Biden.",
+        "explanation": "Powell became the first Black secretary of state in 2001, and Condoleezza Rice succeeded him as the first Black woman in that office. Kamala Harris was elected vice president in 2020. Chisholm was the first Black woman in Congress, and Mae Jemison the first African American woman in space."
       }
     },
     {
@@ -116,26 +116,26 @@ export const aasContemporaryIssuesPart1Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which evidence BEST supports the claim that federal drug policy widened racial disparities in imprisonment?",
+            "question": "In 2016 the median wealth of Black families was about \\$17,150, while that of white families was about \\$171,000. Which explanation does the course framework emphasize?",
             "options": [
-              "The 1986 Anti-Drug Abuse Act punished crack far more harshly than powder cocaine.",
-              "The 1992 Los Angeles uprising followed the acquittal of officers who beat Rodney King.",
-              "Ta-Nehisi Coates's 2014 essay tied housing discrimination to the case for reparations.",
-              "The #BlackLivesMatter hashtag spread in 2013 after the verdict in Trayvon Martin's killing."
+              "Earlier discrimination in housing and jobs limited what families could pass down",
+              "Black families earned higher incomes on average but chose to save far less of what they earned",
+              "Most Black families lived in rural areas where land and homes held little market value",
+              "The gap opened only after 2000 because of new federal tax rules on inheritance"
             ],
             "correctAnswer": 0,
-            "explanation": "The 1986 act's 100:1 crack-to-powder ratio produced much longer federal sentences for crack, which was prosecuted mostly against Black defendants. The Los Angeles uprising, the reparations essay and the hashtag's spread concern policing and housing rather than drug sentencing."
+            "explanation": "The framework (EK 4.15.A.1) links the gap to discrimination in housing and employment in the early twentieth century, which limited the generational wealth Black families could accumulate. Black median income has been lower, not higher, most Black Americans live in cities, and the gap long predates 2000."
           },
           {
-            "question": "Which statement about the growth of U.S. incarceration is accurate?",
+            "question": "Between 1970 and 2006 the number of Black elected officials in the United States grew from about 1,500 to about 9,000. Which development does this trend most directly reflect?",
             "options": [
-              "It fell by about half between 1980 and 2008 as states shortened drug sentences.",
-              "It stayed near 300,000 from 1970 to 2008 despite tougher sentencing laws.",
-              "It peaked in 1972 and declined after the 1994 crime bill funded prevention.",
-              "It rose from under 350,000 in the early 1970s to about 2.3 million by 2008."
+              "The Voting Rights Act of 1965 expanded Black voting power",
+              "The Fifteenth Amendment was first ratified during the 1970s",
+              "Congress repealed most federal civil rights laws after 1970",
+              "Literacy tests became the main route to Black officeholding"
             ],
-            "correctAnswer": 3,
-            "explanation": "Bureau of Justice Statistics figures show the number of people in prisons and jails rising from fewer than 350,000 in the early 1970s to about 2.3 million in 2008. The growth was fastest in the 1980s and 1990s, when states and Congress lengthened sentences rather than shortening them."
+            "correctAnswer": 0,
+            "explanation": "By barring discriminatory voting laws, the Voting Rights Act expanded Black voting power, and Black representation grew about sixfold. The Fifteenth Amendment dates from 1870, the civil rights laws were not repealed, and literacy tests were a tool of disfranchisement that the act suspended."
           }
         ]
       }

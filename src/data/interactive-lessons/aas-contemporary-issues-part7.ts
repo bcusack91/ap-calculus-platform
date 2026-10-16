@@ -4,35 +4,35 @@ export const aasContemporaryIssuesPart7Data = {
     {
       id: "aasci7-intro",
       type: 'text' as const,
-      content: "# ⚡ Contemporary Issues & Debates\n\n**Part 7 of 7 — AP Review: Contemporary Issues in Synthesis**\n\n---\n\nThis review pulls Parts 2–6 together. It gives you one timeline, one map of how this topic connects to earlier units, and a model of the DBQ moves the exam rewards: contextualization, a defensible thesis, and evidence from documents plus your own knowledge.\n\n## 🗓️ Timeline, 1980–2023\n\n| Year | Event | Covered in |\n|---|---|---|\n| **1982** | VRA amendments add the Section 2 results test | Part 3 |\n| **1984, 1988** | Jesse Jackson's presidential campaigns | Part 3 |\n| **1986** | Anti-Drug Abuse Act sets the 100:1 crack–powder ratio | Part 2 |\n| **1987** | Toni Morrison's *Beloved* | Part 5 |\n| **1990** | Immigration Act creates the Diversity Visa | Part 5 |\n| **1994** | Violent Crime Control and Law Enforcement Act | Part 2 |\n| **2008** | Barack Obama elected president | Part 3 |\n| **2010** | Fair Sentencing Act cuts the ratio to 18:1 | Part 2 |\n| **2013** | *Shelby County v. Holder*; #BlackLivesMatter begins | Parts 3, 6 |\n| **2015** | Justice Department's Ferguson reports | Part 6 |\n| **2018** | First Step Act; *Black Panther* | Parts 2, 5 |\n| **2020** | George Floyd protests | Part 6 |\n| **2023** | *Allen v. Milligan*; California task force report | Parts 3, 6 |"
+      content: "# ⚡ Contemporary Issues & Debates\n\n**Part 7 of 7 — AP Review: Topics 4.15–4.21 in Synthesis**\n\n---\n\nThis review ties Parts 1–6 together and adds the culture topics from Part 5. Use the timeline to anchor dates and the connections table to link this topic to earlier units.\n\n## 🗓️ Timeline\n\n| Year | Event | Topic |\n|---|---|---|\n| 1875 | Oliver Lewis wins the first Kentucky Derby | 4.19 |\n| 1891 | Daniel Hale Williams founds Provident Hospital in Chicago | 4.20 |\n| 1936 | Jesse Owens wins four Olympic gold medals | 4.19 |\n| 1947 | Jackie Robinson joins Major League Baseball | 4.19 |\n| 1965 | Voting Rights Act | 4.15 |\n| 1967 | Muhammad Ali refuses induction into the Army | 4.19 |\n| 1968 | Shirley Chisholm elected to Congress; Smith and Carlos protest at the Olympics | 4.15, 4.19 |\n| 1970s | Hip-hop emerges in the Bronx | 4.17 |\n| 1971 | Congressional Black Caucus founded; *Soul Train* created by Don Cornelius | 4.15, 4.18 |\n| 1987 | August Wilson's *Fences* on Broadway | 4.18 |\n| 1990 | Americans with Disabilities Act | 4.20 |\n| 1992 | Mae Jemison becomes the first African American woman in space | 4.20 |\n| 2001 | Colin Powell becomes the first Black secretary of state | 4.15 |\n| 2008 | Barack Obama elected president | 4.15 |\n| 2016 | Colin Kaepernick and other NFL players kneel during the anthem | 4.19 |\n| 2018 | Wiley and Sherald portraits of the Obamas unveiled; *Black Panther* released | 4.15, 4.21 |\n| 2020 | Kamala Harris elected vice president | 4.15 |\n"
     },
     {
       id: "aasci7-sequence",
       type: 'multiple-choice' as const,
-      content: "**Quick Check: Chronology and Causation** 🎯",
+      content: "**Mixed Practice: Chronology and Causation** 🎯",
       exercise: {
         "questions": [
           {
-            "question": "Which law reduced the federal crack–powder ratio from 100:1 to 18:1?",
+            "question": "Which sequence of events is in the correct chronological order?",
             "options": [
-              "The Fair Sentencing Act",
-              "The Anti-Drug Abuse Act of 1988",
-              "The First Step Act",
-              "The Violent Crime Control Act"
+              "Jackie Robinson joins MLB; Voting Rights Act; Chisholm elected; Powell becomes secretary of state",
+              "Voting Rights Act; Jackie Robinson joins MLB; Powell becomes secretary of state; Chisholm elected",
+              "Chisholm elected; Jackie Robinson joins MLB; Voting Rights Act; Powell becomes secretary of state",
+              "Powell becomes secretary of state; Chisholm elected; Voting Rights Act; Jackie Robinson joins MLB"
             ],
             "correctAnswer": 0,
-            "explanation": "The Fair Sentencing Act (2010) cut the ratio to 18:1. The First Step Act (2018) made that cut retroactive, the 1994 crime law did not change the ratio, and the 1988 Anti-Drug Abuse Act added a crack possession minimum."
+            "explanation": "Robinson joined the major leagues in 1947, the Voting Rights Act passed in 1965, Chisholm was elected in 1968 and Powell became secretary of state in 2001."
           },
           {
-            "question": "Which development after 2013 is a direct consequence of the *Shelby County* decision?",
+            "question": "Which development most directly helped make possible the growth of Black elected officials from about 1,500 in 1970 to about 9,000 in 2006?",
             "options": [
-              "States regained the power to use literacy tests as a qualification for registering to vote in elections.",
-              "Section 2 of the Voting Rights Act was struck down, ending lawsuits against discriminatory district maps.",
-              "Jurisdictions once covered by the formula could change voting rules without first getting federal approval.",
-              "Congress passed a new coverage formula based on registration and turnout data from the 2012 election."
+              "The Voting Rights Act of 1965",
+              "The founding of the Negro leagues after the Civil War",
+              "The release of the film Black Panther in 2018",
+              "The Americans with Disabilities Act of 1990"
             ],
-            "correctAnswer": 2,
-            "explanation": "With no coverage formula, Section 5 preclearance applies to no one, so formerly covered places can change voting rules without federal approval. Congress has not passed a new formula, Section 2 survived and was applied in *Allen v. Milligan* (2023), and literacy tests remain banned."
+            "correctAnswer": 0,
+            "explanation": "The Voting Rights Act removed discriminatory barriers to voting and expanded Black voting power, which drove the rise in Black officeholders. The Negro leagues, Black Panther and the ADA belong to sports, Afrofuturism and disability rights."
           }
         ]
       }
@@ -40,146 +40,87 @@ export const aasContemporaryIssuesPart7Data = {
     {
       id: "aasci7-connections",
       type: 'text' as const,
-      content: "## 🔗 Connecting to earlier units\n\nThe DBQ and thematic SAQ reward students who link the present to the past with specific evidence. Each row pairs a present-day issue with an earlier precedent from the course.\n\n| Present-day issue | Earlier precedent | The link |\n|---|---|---|\n| Mass incarceration and felony disenfranchisement | Black Codes and convict leasing after 1865 | Criminal law used to control Black labor and limit Black citizenship. |\n| *Shelby County* and voting rules | Reconstruction-era voting gains rolled back by poll taxes and literacy tests | Voting rights won by law can be weakened when enforcement ends. |\n| The racial wealth gap | Redlining, FHA underwriting and the G.I. Bill's local administration | Exclusion from homeownership compounds across generations. |\n| Black immigration and Afro-Latino identity | Caribbean migrants in 1920s Harlem; the African diaspora as a whole | Black identity in the United States has always included the diaspora. |\n| BLM and reparations debates | The Black Power era's demands for community control and the long history of reparations claims | Continuing debates about reform within institutions versus deeper structural change. |\n\n> 🔑 **Key Concept:** A connection earns credit only when you say **how** the two are linked (a shared mechanism, a cause, a continuity), not just that both happened."
+      content: "## 🔗 Connecting to Earlier Units\n\n| Today's topic | Earlier link | The connection |\n|---|---|---|\n| **Wealth gap (4.15)** | Redlining and housing discrimination (4.5) | Discrimination in housing and jobs limited the generational wealth families could pass down. |\n| **Black political representation (4.15)** | Disenfranchisement and Jim Crow (3.5); the Reconstruction Amendments (3.1) | The Voting Rights Act enforced voting rights that the Fifteenth Amendment promised and Jim Crow laws had blocked. |\n| **Diversity of Black America (4.16)** | Afro-Caribbean migration (3.17); Global Africans (1.11) | Migration from the Caribbean shaped Harlem in the 1920s; immigration from Africa and the Caribbean grew again after 2000. |\n| **Hip-hop (4.17)** | The Black Arts movement and Black Power (4.9, 4.10) | Hip-hop blended Black Panther and Afrocentric fashion, Black nationalism, jazz and poetry. |\n| **Parallel institutions in sports and medicine (4.19, 4.20)** | Black organizations and institutions (3.9, 3.10) | Exclusion led Black communities to build their own leagues, schools, hospitals and associations. |\n| **Afrofuturism (4.21)** | Phillis Wheatley and Benjamin Banneker | The framework names Wheatley's visions of freedom and Banneker's almanac as early examples. |\n"
     },
     {
       id: "aasci7-match",
       type: 'dropdown-select' as const,
-      content: "**Match the Present to Its Precedent** 🔍",
+      content: "**Match the Topic** 🔍",
       exercise: {
         "dropdowns": [
           {
-            "label": "Felony disenfranchisement today most closely echoes ___",
+            "label": "Grandmaster Flash's turntable techniques belong to the history of ___",
             "options": [
-              "the Harlem Renaissance's debates over art",
-              "Black Codes that used criminal law to limit freedom",
-              "the Great Migration out of the rural South",
-              "the founding of Black colleges after 1865"
+              "hip-hop",
+              "rock and roll",
+              "the Negro leagues",
+              "Afrofuturist film"
             ]
           },
           {
-            "label": "The racial wealth gap today is most directly linked to ___",
+            "label": "Oscar Micheaux's nearly 50 films of the 1920s–1940s belong to the history of ___",
             "options": [
-              "exclusion from federally backed home loans",
-              "the end of the Atlantic slave trade in 1808",
-              "Jesse Jackson's presidential campaigns",
-              "the Black Arts Movement of the late 1960s"
+              "Black theater and film",
+              "hip-hop",
+              "the space program",
+              "Black sports leagues"
             ]
           },
           {
-            "label": "Present-day Black immigration from the Caribbean continues a pattern seen in ___",
+            "label": "Sun Ra's music and the film Black Panther are examples of ___",
             "options": [
-              "Reconstruction-era state legislatures",
-              "the sit-in movement of 1960 in Greensboro",
-              "the Freedmen's Bureau schools of the 1860s",
-              "1920s Harlem, home to Garvey and Schomburg"
+              "Afrofuturism",
+              "the Harlem Renaissance",
+              "the Black hospital movement",
+              "the Double V campaign"
             ]
           }
         ],
         "correctAnswers": [
-          "Black Codes that used criminal law to limit freedom",
-          "exclusion from federally backed home loans",
-          "1920s Harlem, home to Garvey and Schomburg"
+          "hip-hop",
+          "Black theater and film",
+          "Afrofuturism"
         ],
-        "hint1": "Look for a precedent that used criminal law.",
-        "hint2": "Wealth gaps begin with homeownership.",
-        "hint3": "Two famous Harlem figures were born in the Caribbean.",
-        "explanation": "Felony disenfranchisement echoes the Black Codes' use of criminal law, the wealth gap traces to exclusion from federally backed mortgages, and Caribbean immigration continues a pattern visible in 1920s Harlem."
+        "hint1": "Think of DJs, mixing and scratching in the 1970s Bronx.",
+        "hint2": "He gave all-Black casts a range of roles that challenged stereotypes.",
+        "hint3": "Both imagine Black futures through science and technology.",
+        "explanation": "Grandmaster Flash's mixing and scratching helped create rap music within hip-hop culture. Micheaux's films countered racist depictions in early cinema. Sun Ra and Black Panther are characteristic works of Afrofuturism."
       }
     },
     {
-      id: "aasci7-dbq",
+      id: "aasci7-writing",
       type: 'text' as const,
-      content: "## ✍️ Model DBQ moves\n\n**Prompt:** Evaluate the extent to which African Americans gained political and economic equality between 1980 and the present.\n\n### Contextualization (the broader situation before and during the period)\n\n> By 1980 the Civil Rights Act of 1964 and the Voting Rights Act of 1965 had ended legal segregation and opened the ballot, and Black elected officials had grown in number since the 1970s. Yet deindustrialization was eliminating many of the urban manufacturing jobs that had supported Black families since the Great Migration, and a national turn toward \"tough on crime\" politics was under way.\n\n### Thesis (defensible, with a line of reasoning)\n\n> Between 1980 and the present, African Americans gained substantial political power, shown by Jesse Jackson's campaigns and Barack Obama's election, but economic equality remained limited, because mass incarceration and an inherited wealth gap rooted in housing discrimination offset many of those political gains.\n\n### Using documents well\n\n| Weak use | Strong use |\n|---|---|\n| \"Document 3 talks about wealth.\" | \"The Federal Reserve's 2022 data (Doc. 3) shows the median white family held about six times the wealth of the median Black family, evidence that political gains did not close economic gaps.\" |\n| Quoting the document at length with no comment. | Explaining the source's purpose or point of view: \"As a federal agency investigating a pattern of misconduct, the Justice Department (Doc. 4) had access to records protesters lacked.\" |\n\n**Evidence beyond the documents:** add something no document mentions, such as the 2010 Fair Sentencing Act or *Allen v. Milligan* (2023)."
+      content: "## ✍️ Model Argument Moves\n\n### Contextualization\n> \"After the Voting Rights Act of 1965 removed racial barriers to voting, Black voting power and a growing Black middle class reshaped American politics, even as discrimination in housing and employment earlier in the century left a large racial wealth gap.\"\n\n### Thesis with a line of reasoning\n> \"From 1965 to 2020, Black Americans made historic gains in political representation, from Shirley Chisholm's election to Congress in 1968 to Kamala Harris's election as vice president, but those gains coexisted with persistent wealth inequality rooted in earlier discrimination.\"\n\n### Using sources well\n- Describe a **pattern** in data (the sixfold rise in Black elected officials from 1970 to 2006) before explaining it.\n- Tie a **visual source** to its context (the 1968 Olympic protest and the Black Freedom movement).\n- Name a **limit** (a count of officeholders does not measure their influence).\n"
     },
     {
       id: "aasci7-apply",
       type: 'multiple-choice' as const,
-      content: "**AP-Style Application: Mixed Review** 🎯",
+      content: "**Mixed Practice: Thematic** 🎯",
       exercise: {
         "questions": [
           {
-            "question": "Which sentence would best serve as contextualization for an essay on mass incarceration after 1980?",
+            "question": "Which claim about African American life since 1965 is best supported by the evidence in this topic?",
             "options": [
-              "Many people have different opinions about prisons, and historians continue to debate the topic today.",
-              "The Fair Sentencing Act of 2010 later reduced the crack–powder ratio from 100:1 to 18:1 for federal cases.",
-              "Mass incarceration was the most important development in all of African American history since the Civil War.",
-              "Deindustrialization cut urban jobs as \"tough on crime\" politics won support in each major party."
-            ],
-            "correctAnswer": 3,
-            "explanation": "Contextualization describes the broader situation that shaped the topic: job losses in cities and bipartisan support for harsher penalties. The superlative claim is an unsupported thesis, the vague sentence says nothing specific, and the 2010 law is evidence from late in the period, not context."
-          },
-          {
-            "question": "Which pair of scholars offers the clearest contrast in explaining how mass incarceration developed?",
-            "options": [
-              "Toni Morrison, who wrote about the memory of slavery, and Octavia Butler, who wrote science fiction about time travel",
-              "Michelle Alexander, who stresses the drug war's racial design, and John Pfaff, who stresses prosecutors and state systems",
-              "Arline Geronimus, who studied the effects of stress on health, and Mark Dery, who named Afrofuturism in an essay",
-              "Jesse Jackson, who led the Rainbow Coalition, and Barack Obama, who won the presidency in 2008 and again in 2012"
-            ],
-            "correctAnswer": 1,
-            "explanation": "Alexander and Pfaff disagree about the main driver of incarceration: federal drug policy designed with racial effects versus prosecutors and state sentencing. The other pairs are novelists, a health researcher and a critic, or politicians, none of whom offers competing explanations of incarceration."
-          },
-          {
-            "question": "On the AP exam, a source-based question about the 2015 Ferguson reports would most likely ask you to ___.",
-            "options": [
-              "state which report you personally find more persuasive",
-              "recall the exact number of pages in each of the two reports",
-              "name every officer employed by the Ferguson department",
-              "explain how the purpose of each report shaped its conclusion"
-            ],
-            "correctAnswer": 3,
-            "explanation": "Source-based questions reward sourcing: purpose, audience and point of view explain why the two reports reached different conclusions. Page counts and personnel lists are trivia, and personal preference is not historical analysis."
-          },
-          {
-            "question": "Which claim about Black political representation since 1980 is best supported by Parts 3 and 6?",
-            "options": [
-              "Electoral gains grew, but debates over turning office into policy continued.",
-              "Electoral gains ended debate within Black communities over strategy and goals.",
-              "Electoral gains came only from the presidential campaigns of the 1980s.",
-              "Electoral gains were reversed entirely by the decision in Shelby County."
+              "Political gains and a larger middle class coexisted with a wide wealth gap",
+              "The wealth gap closed once Black officials began to hold high national office",
+              "Black political representation fell steadily after the 1960s",
+              "Black cultural influence stayed within the United States"
             ],
             "correctAnswer": 0,
-            "explanation": "Jackson's campaigns, Obama's election and Black officeholders show real gains, while voting-rights litigation and debates over policing and reparations show that the meaning of those gains remained contested. Gains did not end debate, were not erased by one decision, and came from far more than two campaigns."
+            "explanation": "The framework pairs a sixfold rise in Black elected officials, the Obama and Harris elections and a growing middle class with a large racial wealth gap. The gap did not close, representation rose rather than fell, and hip-hop and other Black art forms became global."
+          },
+          {
+            "question": "According to the course framework, hip-hop emerged from",
+            "options": [
+              "collaboration among young Black and Latino New Yorkers in the Bronx in the 1970s",
+              "Southern church choirs that added electric guitars to gospel music in the 1950s",
+              "Hollywood studios seeking new music for films about Black life in the 1940s",
+              "a federal arts program that funded music schools in Chicago in the 1930s"
+            ],
+            "correctAnswer": 0,
+            "explanation": "EK 4.17.C.1 describes hip-hop as a culture born from the creativity of young Black and Latino community members in the Bronx in the 1970s. Gospel and electric guitars point to the roots of rock and roll, and hip-hop did not come from Hollywood studios or a federal program."
           }
         ]
-      }
-    },
-    {
-      id: "aasci7-recall",
-      type: 'input-boxes' as const,
-      content: "**Final Recall** ✍️",
-      exercise: {
-        "questions": [
-          {
-            "question": "1) In what year was the First Step Act signed into law?",
-            "answer": "2018",
-            "acceptableAnswers": [
-              "2018"
-            ]
-          },
-          {
-            "question": "2) What is the term for the Section 4(b) provision that *Shelby County* struck down? (two words)",
-            "answer": "coverage formula",
-            "acceptableAnswers": [
-              "coverage formula",
-              "the coverage formula"
-            ]
-          },
-          {
-            "question": "3) What term describes art and literature that use science fiction to imagine Black pasts and futures?",
-            "answer": "Afrofuturism",
-            "acceptableAnswers": [
-              "Afrofuturism",
-              "afro-futurism",
-              "Afro-futurism"
-            ]
-          }
-        ],
-        "hint1": "It came eight years after the Fair Sentencing Act.",
-        "hint2": "It decided which places Section 5 covered.",
-        "hint3": "The term joins a diaspora prefix with a word about time.",
-        "explanation": "The First Step Act became law in 2018; *Shelby County* struck down the coverage formula; and Afrofuturism links works from Sun Ra and Octavia Butler to *Black Panther*."
       }
     }
   ]

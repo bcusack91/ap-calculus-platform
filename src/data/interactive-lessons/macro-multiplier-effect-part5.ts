@@ -15,7 +15,7 @@ export const macroMultiplierEffectPart5Data = {
 |---------|
 | 📖 The Multiplier Sets the Size of the AD Shift |
 | Why Real GDP Rises by Less Than the Shift |
-| Leakages Beyond Saving |
+| Why the Real-World Effect Is Smaller |
 | Two Different Multipliers |
 | Common Misconceptions |
 
@@ -127,28 +127,23 @@ This is the same reason fiscal stimulus is most powerful in a deep recession and
       id: 'macromul5-leakages',
       type: 'text' as const,
       content: `
-## Leakages Beyond Saving
+## Why the Real-World Effect Is Smaller
 
-In the AP model, the only thing that stops the spending chain is **saving**. Real economies have two more **leakages**: income taxes that rise with income, and spending on imports. Each one removes part of every round before it can be spent on domestic output.
+In the AP model, the multipliers depend only on the **MPC** (CED MOD-2.B.4): the spending chain stops because part of each round is **saved**. The larger the MPS, the more leaks out each round and the smaller the multiplier.
 
-### Illustration (beyond the AP formulas)
-
-Suppose that out of each extra dollar of income, 20 cents goes to taxes, 10 cents is spent on imports and 10 cents is saved. Only **60 cents** is spent on domestic goods and services.
-
-| Model | Share of each round that leaks out | Multiplier |
+| MPC | MPS | Spending multiplier |
 |---|---|---|
-| Saving is the only leak (AP model, MPS = 0.1) | 0.1 | 1 ÷ 0.1 = **10** |
-| Taxes, imports and saving all leak | 0.2 + 0.1 + 0.1 = 0.4 | 1 ÷ 0.4 = **2.5** |
+| 0.9 | 0.1 | 1 ÷ 0.1 = **10** |
+| 0.8 | 0.2 | 1 ÷ 0.2 = **5** |
+| 0.5 | 0.5 | 1 ÷ 0.5 = **2** |
 
-The same logic as the rounds table applies: the multiplier is 1 divided by the share that leaks out each round. The more leaks, the smaller the multiplier.
-
-Other forces also shrink the real-world effect:
+Even with the multiplier fixed, the actual change in real GDP is usually smaller than the multiplier predicts:
 
 - **The price level rises** when SRAS slopes upward (the previous section).
 - **Interest rates can rise** when the government borrows to pay for new spending, which reduces private investment. This is **crowding out**, covered in the fiscal policy topic.
 - **Time lags:** the rounds take months or years to play out, and other shocks happen in the meantime.
 
-> 🔑 **AP Connection:** Unless a question says otherwise, use **1 ÷ MPS** and **MPC ÷ MPS**. If a question asks you to explain why the actual change in real GDP is smaller than calculated, a rising price level, imports and crowding out are all valid reasons, but name the one the question's scenario points to.
+> 🔑 **AP Connection:** Unless a question says otherwise, use **1 ÷ MPS** and **MPC ÷ MPS**. If a question asks you to explain why the actual change in real GDP is smaller than calculated, a rising price level and crowding out are both valid reasons, but name the one the question's scenario points to.
 `
     },
     {
@@ -170,7 +165,7 @@ Choose the term that completes each statement.
             options: ['smaller than', 'larger than', 'equal to', 'twice']
           },
           {
-            label: 'If households spend a larger share of each extra dollar on imports, the multiplier becomes ___.',
+            label: 'If households save a larger share of each extra dollar of income, the multiplier becomes ___.',
             options: ['smaller', 'larger', 'unchanged', 'negative']
           },
           {
@@ -181,8 +176,8 @@ Choose the term that completes each statement.
         correctAnswers: ['aggregate demand', 'smaller than', 'smaller', 'the reserve requirement'],
         hint1: 'Government purchases are one of the components of total spending.',
         hint2: 'Part of the shift is absorbed by a higher price level.',
-        hint3: 'Spending on imports does not create income for domestic producers.',
-        explanation: 'Government purchases are part of aggregate demand, so AD shifts right. A higher price level absorbs part of the shift, so real GDP rises by less than the shift. Import spending leaks out of the domestic spending chain, shrinking the multiplier. The money multiplier is 1 ÷ the reserve requirement, a different chain from the spending multiplier.'
+        hint3: 'Saving leaks out of the spending chain each round.',
+        explanation: 'Government purchases are part of aggregate demand, so AD shifts right. A higher price level absorbs part of the shift, so real GDP rises by less than the shift. A larger MPS means more leaks out of each round, shrinking the multiplier. The money multiplier is 1 ÷ the reserve requirement, a different chain from the spending multiplier.'
       }
     },
     {
@@ -240,13 +235,13 @@ The U.S. reserve requirement has been **0%** since March 2020, so the money mult
           {
             question: 'The MPC is 0.9, so a \\$10 billion increase in government purchases could raise real GDP by up to \\$100 billion. Which change would make the actual increase smaller?',
             options: [
-              'A larger share of new income spent on domestic goods',
+              'An increase in consumer confidence at the same time',
               'A flatter SRAS curve because many workers are idle',
-              'A larger share of new income spent on imports',
+              'A steeper SRAS curve as output nears full employment',
               'A higher MPC among the households receiving the income'
             ],
             correctAnswer: 2,
-            explanation: 'Spending on imports leaks out of the domestic spending chain, so each round is smaller. Spending more on domestic goods, a flatter SRAS curve and a higher MPC would all make the actual increase closer to, or larger than, the \\$100 billion figure.'
+            explanation: 'A steeper SRAS curve means more of the AD shift shows up as a higher price level and less as extra real output. Rising consumer confidence, a flatter SRAS curve and a higher MPC would all make the actual increase closer to, or larger than, the \\$100 billion figure.'
           },
           {
             question: 'Congress raises Social Security payments by \\$20 billion. Why is this change multiplied by MPC ÷ MPS instead of 1 ÷ MPS?',

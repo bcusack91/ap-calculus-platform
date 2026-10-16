@@ -4,45 +4,40 @@ export const aasContemporaryIssuesPart6Data = {
     {
       id: "aasci6-intro",
       type: 'text' as const,
-      content: "# ⚡ Contemporary Issues & Debates\n\n**Part 6 of 7 — Source Workshop: Protest, Policing and Redress since 2013**\n\n---\n\nThe course framework lists present-day movements, such as the Movement for Black Lives and the debate over reparations, mainly as possible subjects for the **individual student project** rather than as required exam content. They are also live political debates. This workshop treats them the way a historian treats any contested subject: identify who produced each source, for whom and why, and lay out the arguments on each side before reaching a conclusion of your own.\n\n### The sourcing checklist\n\n| Ask | Why it matters |\n|---|---|\n| **Author and point of view** | What position or role shapes what the author notices? |\n| **Purpose** | Is the source meant to inform, persuade, mobilize or decide? |\n| **Audience** | Who was meant to read or hear it? |\n| **Historical situation** | What was happening when it was produced? |"
-    },
-    {
-      id: "aasci6-context",
-      type: 'text' as const,
-      content: "## 📖 Context: from a hashtag to a movement\n\n| Date | Event |\n|---|---|\n| **July 2013** | After George Zimmerman was acquitted in the killing of Trayvon Martin, Alicia Garza, Patrisse Cullors and Opal Tometi began using **#BlackLivesMatter**. |\n| **August 2014** | Michael Brown was killed by a police officer in Ferguson, Missouri; weeks of protest followed. |\n| **March 2015** | The U.S. Department of Justice released two reports on Ferguson (Document 1 below). |\n| **2016** | A coalition of groups, the Movement for Black Lives, released a policy platform, \"A Vision for Black Lives.\" |\n| **May 2020** | George Floyd was murdered by a Minneapolis police officer; protests spread nationwide and abroad. |\n\nBlack Lives Matter is a decentralized network rather than a single organization, and supporters disagree among themselves about goals such as police reform versus \"defunding\" or abolishing police."
+      content: "# ⚡ Contemporary Issues & Debates\n\n**Part 6 of 7 — Source Workshop: Portraits, Data and Protest**\n\n---\n\nThe AP exam pairs most multiple-choice sets with one or two sources, and the SAQs include a text source and a visual source. This workshop practices sourcing on required sources from Topics 4.15, 4.16 and 4.19.\n\n### The sourcing checklist\n\n| Element | Ask yourself |\n|---|---|\n| **Creator and date** | Who made it, and when? |\n| **Audience** | Who was meant to see or read it? |\n| **Purpose** | What was it meant to do: record, persuade, honor, inform? |\n| **Context** | What was happening when it was made? |\n| **Limits** | What can this source not show on its own? |\n"
     },
     {
       id: "aasci6-doc1",
       type: 'text' as const,
-      content: "## 📜 Document 1: the Department of Justice Ferguson reports (March 4, 2015)\n\nThe Civil Rights Division issued **two** reports the same day. Both are U.S. government documents in the public domain.\n\n**Report A, on the Ferguson Police Department**, opens:\n\n> \"Ferguson's law enforcement practices are shaped by the City's focus on revenue rather than by public safety needs.\"\n\nIt documented a pattern of stops, citations and arrests that fell disproportionately on Black residents, and municipal fines and fees used to fund the city budget.\n\n**Report B, on the shooting of Michael Brown**, concluded that the evidence did not support federal civil rights charges against the officer, Darren Wilson, and that the evidence did not support witness accounts that Brown had his hands raised in surrender when he was shot.\n\n### Sourcing walkthrough\n\n| Step | Analysis |\n|---|---|\n| **Author** | Federal civil rights investigators with subpoena power and access to records, not a protest group or a police union. |\n| **Purpose** | Report A: decide whether the department engaged in a pattern of unconstitutional conduct. Report B: decide whether one officer could be prosecuted under a federal law that requires proof of willful intent. |\n| **Use in an argument** | A historian can cite Report A as evidence of systemic practices and Report B as evidence about the specific shooting. The two answer **different questions**, which is why they reached different conclusions. |"
+      content: "## 🖼️ Document 1: Two official portraits (2018)\n\nIn February 2018 the Smithsonian's **National Portrait Gallery** unveiled official portraits of former President **Barack Obama**, painted by **Kehinde Wiley**, and former First Lady **Michelle Obama**, painted by **Amy Sherald**. They were the first Black artists commissioned to paint official portraits of a president and first lady for the gallery.\n\n| | Wiley's *Barack Obama* | Sherald's *Michelle Obama* |\n|---|---|---|\n| **What it shows** | Obama seated, leaning forward with arms crossed, against a wall of green leaves and flowers | Michelle Obama seated in a flowing gown with a bold geometric pattern, against a plain pale-blue background |\n| **Symbols** | Chrysanthemums (Chicago), jasmine (Hawaii) and African blue lilies (Kenya, his father's homeland) trace his life story | Sherald paints skin in shades of gray, a signature that sets aside skin color as the subject's defining feature |\n| **Audience** | Museum visitors and the national public | The same |\n| **Purpose** | To honor a president in an official national collection | To honor a first lady in the same collection |\n\n### Sourcing walkthrough\n\n- **Context:** the portraits mark the first Black president and first lady in the national collection of presidential portraits (EK 4.15.C.3).\n- **Point of view:** both artists made their names painting Black subjects, and both brought their own styles into an old tradition of official portraiture.\n- **Limits:** a portrait shows how its subject was presented and honored, not what policies he or she pursued.\n"
     },
     {
       id: "aasci6-doc1q",
       type: 'multiple-choice' as const,
-      content: "**Source Check: Document 1** 🎯",
+      content: "**Source Check: The Portraits** 🎯",
       exercise: {
         "questions": [
           {
-            "question": "Which claim does Report A best support?",
+            "question": "Kehinde Wiley's 2018 portrait of Barack Obama places flowers linked to Chicago, Hawaii and Kenya in the background. The artist most likely included them to",
             "options": [
-              "City revenue goals shaped policing in Ferguson in ways that burdened Black residents.",
-              "Witness accounts of the shooting of Michael Brown were confirmed by physical evidence.",
-              "The officer who shot Michael Brown should have faced federal civil rights charges.",
-              "Ferguson's police department had fewer stops of Black residents than nearby towns."
+              "trace the personal history and homelands that shaped his life",
+              "record the official state flowers of every state that elected him",
+              "show the plants that the White House gardens grew during his terms",
+              "signal that the portrait was painted outdoors rather than in a studio"
             ],
             "correctAnswer": 0,
-            "explanation": "Report A found that revenue goals drove stops, citations and fines that fell disproportionately on Black residents. The charging decision and the witness accounts are the subject of Report B, which reached the opposite conclusion on both, and Report A did not compare Ferguson with nearby towns."
+            "explanation": "The chrysanthemums, jasmine and African blue lilies stand for Chicago, Hawaii and his father's Kenya, so the background tells the story of Obama's life. They are not a list of states he won, a record of White House gardens, or evidence of where the painting was made."
           },
           {
-            "question": "Why did the two Ferguson reports reach different conclusions?",
+            "question": "Which is the most important limitation of the two 2018 portraits as evidence about Black political leadership?",
             "options": [
-              "They studied different cities in Missouri.",
-              "They answered different legal questions.",
-              "They were written by rival federal agencies.",
-              "One was later withdrawn by the department."
+              "They show how the Obamas were honored, not what the administration did",
+              "They were painted decades after the Obamas had left the White House",
+              "They were kept private and have never been displayed to the public",
+              "They were made before Barack Obama was elected president in 2008"
             ],
-            "correctAnswer": 1,
-            "explanation": "Report A asked whether the department showed a pattern of unconstitutional conduct; Report B asked whether one officer could be charged under a statute requiring willful intent. Both came from the same Civil Rights Division on the same day, neither was withdrawn, and both concerned Ferguson."
+            "correctAnswer": 0,
+            "explanation": "Official portraits record how leaders were presented and commemorated, so they cannot show policies or results on their own. The portraits were unveiled in 2018, a year after the presidency ended, they hang in a public museum, and they were made after rather than before the 2008 election."
           }
         ]
       }
@@ -50,40 +45,40 @@ export const aasContemporaryIssuesPart6Data = {
     {
       id: "aasci6-doc2",
       type: 'text' as const,
-      content: "## 📊 Document 2: public opinion, 2020–2021\n\n| Survey | Finding |\n|---|---|\n| **Gallup, 2020** | 81% of Black Americans wanted police to spend the same amount of time or more time in their area; 19% wanted less. |\n| **Pew Research Center, 2020** | Support for Black Lives Matter among U.S. adults was about 67% in June 2020 and about 55% by September 2020. |\n| **Pew Research Center, 2021** | About 77% of Black adults and about 30% of all U.S. adults said descendants of enslaved people should be repaid in some way. |\n\n### What the data shows\n\nMost Black Americans in the Gallup poll wanted **better** policing rather than **less** policing, which complicates the claim that one slogan spoke for everyone. The Pew data shows that support for a movement can rise and fall quickly, and that reparations divide Americans sharply by race.\n\n> ⚠️ **AP Alert:** Polls measure opinion at one moment, with question wording that shapes answers. Name the pollster and year every time you cite one."
+      content: "## 📊 Document 2: \"The Growing Diversity of Black America\" (Pew Research Center, 2021)\n\nPew is a nonpartisan research organization; this report draws on U.S. Census Bureau data. Key findings the framework uses (Topic 4.16):\n\n| Finding | Detail |\n|---|---|\n| **Growth** | From 2000 to 2019 the Black-identifying population grew by 30 percent to about 47 million, nearly 14 percent of the U.S. population. |\n| **Immigration** | The number of Black immigrants nearly doubled after 2000, driven mainly by arrivals from Africa and the Caribbean. |\n| **Identity** | More people identify as Black and Hispanic, or as multiracial. |\n| **Education** | The number of Black college degree holders more than doubled after 2000. |\n\n### Reading the source\n\n- **Purpose:** to describe, with numbers, how the Black population is changing.\n- **Strength:** large, systematic data covering the whole country over two decades.\n- **Limit:** counts show **how many** people share a label, not what the label means to them. EK 4.16.A.4 notes that \"Black\" is a unifying term for people with diverse ancestries: descendants of people enslaved in the United States (who may call themselves African American), recent immigrants (who may identify by race and nationality, such as \"Afro-Colombian\") and multiracial people.\n"
     },
     {
-      id: "aasci6-reparations",
+      id: "aasci6-doc3",
       type: 'text' as const,
-      content: "## ⚖️ Document 3: the present-day reparations debate\n\n| Proposal | What it does |\n|---|---|\n| **H.R. 40** | First introduced by Rep. John Conyers in 1989 and later reintroduced by Rep. Sheila Jackson Lee; would create a federal commission to study slavery and its legacy and develop reparation proposals. A House committee approved it for the first time in 2021, but it has not passed Congress. |\n| **Evanston, Illinois (2021)** | A local program funded by cannabis tax revenue offers housing grants of up to \\$25,000 to Black residents, or their descendants, harmed by the city's housing discrimination between 1919 and 1969. |\n| **California Reparations Task Force (2020–2023)** | A state task force created by law in 2020 issued a final report in 2023 with recommendations to the legislature. |\n\n### Arguments on each side\n\n| Supporters argue | Opponents and skeptics argue |\n|---|---|\n| Slavery and later policies such as redlining were sanctioned by governments, so governments bear responsibility. | People alive today did not commit those wrongs, and identifying eligible recipients is difficult. |\n| The wealth gap (Part 4) is a measurable, inherited harm. | Broad programs based on income or need would help more people and draw wider support. |\n| The Civil Liberties Act of 1988 paid \\$20,000 to each surviving Japanese American incarcerated in World War II, a federal precedent. | That precedent paid living survivors; slavery ended more than 150 years ago. |"
+      content: "## 📷 Document 3: Two protests in sports (1968 and 2017)\n\n| | Tommie Smith and John Carlos, 1968 Olympics | NFL players, Seattle Seahawks vs. San Francisco 49ers, 2017 |\n|---|---|---|\n| **What it shows** | The two U.S. sprinters on the medal stand, each raising a fist | Players kneeling during the national anthem |\n| **Context** | The Black Freedom movement; the Mexico City Olympic Games | Protests against police brutality begun by Colin Kaepernick in 2016 |\n| **Message** | Solidarity with the Black Freedom movement through the Black power fist | Calling national attention to police brutality |\n| **Form** | Nonviolent protest on a global stage | Nonviolent protest at a televised game |\n\n**Continuity:** across nearly fifty years, Black athletes used a moment of national ceremony as a stage for peaceful protest against racial injustice (EK 4.19.B.1, B.3, B.4). **Change:** the 1968 gesture was a single act by two athletes; the 2016–2017 protests spread across teams and into other sports.\n"
     },
     {
       id: "aasci6-apply",
       type: 'multiple-choice' as const,
-      content: "**AP-Style Application: Using the Documents** 🎯",
+      content: "**AP-Style Application: Data and Photographs** 🎯",
       exercise: {
         "questions": [
           {
-            "question": "A student cites the 2020 Gallup poll to argue that Black Americans were divided over strategies for changing policing. Which statement best evaluates this use of the source?",
+            "question": "Which claim is best supported by the 2021 Pew report on the Black population?",
             "options": [
-              "It fails, since the poll asked only white respondents about the police in their area.",
-              "It fits, since the poll found that all respondents wanted police removed from their area.",
-              "It fits, since most respondents wanted the same or more police presence rather than less.",
-              "It fails, since a poll of opinion cannot be used as evidence in a historical argument."
-            ],
-            "correctAnswer": 2,
-            "explanation": "The poll found that 81% wanted the same or more police time in their area, which shows that many did not share the call to reduce policing. The poll surveyed Black Americans, polls can be historical evidence when sourced, and it did not find that everyone wanted police removed."
-          },
-          {
-            "question": "Which piece of evidence would a supporter of H.R. 40 most likely cite as a federal precedent?",
-            "options": [
-              "Payments to Japanese Americans in 1988",
-              "The Diversity Visa lottery of 1990",
-              "The Fair Housing Act ban of 1968",
-              "The First Step Act's 2018 credits"
+              "Black America became larger and more diverse in origin after 2000",
+              "The Black population of the United States shrank between 2000 and 2019",
+              "Immigration from Africa and the Caribbean declined after the year 2000",
+              "Nearly all Black Americans now identify only by national origin"
             ],
             "correctAnswer": 0,
-            "explanation": "The Civil Liberties Act of 1988 paid reparations to surviving Japanese Americans incarcerated in World War II, the precedent supporters cite. The Diversity Visa, First Step Act and Fair Housing Act addressed immigration, sentencing and discrimination but paid no reparations."
+            "explanation": "The report shows 30 percent population growth, a near doubling of Black immigrants mainly from Africa and the Caribbean, and more people identifying as Black and Hispanic or multiracial. The population grew rather than shrank, immigration rose, and most people still identify as Black or African American."
+          },
+          {
+            "question": "What do the 1968 Olympic protest and the 2017 kneeling protest have in common?",
+            "options": [
+              "Athletes used a national ceremony to protest racial injustice without violence",
+              "Both were organized by the U.S. Olympic Committee to promote a message of national unity",
+              "Both protested the military draft for the Vietnam War, as Ali had done",
+              "Both took place at Negro league games before integration of the majors"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Smith and Carlos raised fists on the medal stand, and NFL players knelt during the anthem: both were nonviolent protests against racial injustice staged at moments of national ceremony. Neither was organized by officials, neither concerned the draft, and both came long after the major leagues integrated."
           }
         ]
       }
@@ -91,43 +86,23 @@ export const aasContemporaryIssuesPart6Data = {
     {
       id: "aasci6-saq",
       type: 'text' as const,
-      content: "## ✍️ Model SAQ response\n\n**Prompt (visual-source style):** A photograph shows a 2020 protest march with signs reading \"Black Lives Matter.\" (a) Describe one historical context for the protest. (b) Explain one way the protest connects to an earlier movement for Black freedom. (c) Explain one limitation of a single photograph as evidence of public opinion.\n\n> **(a)** The protest took place after a Minneapolis police officer murdered George Floyd in May 2020, part of a wave of demonstrations against police violence that had grown since the Ferguson protests of 2014.\n>\n> **(b)** Like marchers in the 1960s, the protesters used mass public demonstration to pressure governments, and many echoed earlier demands for an end to police brutality, a grievance also listed in the Black Panther Party's 1966 Ten-Point Program.\n>\n> **(c)** A photograph captures one place and moment, so it cannot show how many Americans supported the protest or how opinion changed; polls showed support for BLM fell from about 67% to about 55% between June and September 2020 (Pew).\n\nEach part answers exactly what the verb asks (describe, explain, explain), and each uses specific, dated evidence."
+      content: "## ✍️ Model SAQ Response\n\n**Prompt:** Using the 2021 Pew report, (a) describe one way the Black population of the United States changed after 2000, (b) explain one factor that contributed to the change, and (c) identify one limitation of the source.\n\n> **(a)** Between 2000 and 2019 the Black-identifying population grew by 30 percent to about 47 million, and it became more diverse in origin.\n>\n> **(b)** Immigration from Africa and the Caribbean contributed: the number of Black immigrants nearly doubled after 2000, adding people who may identify both as Black and by nationality, such as Nigerian American or Afro-Colombian.\n>\n> **(c)** The data count people who share a label, so they cannot show how individuals understand that identity or whether newcomers and descendants of the enslaved see themselves as one community.\n\n**Why it works:** (a) gives a number and a date range, (b) names a specific cause tied to the data, and (c) states a real limit of statistical evidence rather than a vague claim of \"bias.\"\n"
     },
     {
       id: "aasci6-recall",
       type: 'input-boxes' as const,
-      content: "**Applied Recall** ✍️",
+      content: "**Applied Recall** ✍️\n\n1) What is the last name of the artist who painted Barack Obama's official 2018 portrait?\n\n2) In what year did Tommie Smith and John Carlos raise their fists on the Olympic medal stand?\n\n3) What is the last name of the NFL quarterback who began kneeling during the national anthem in 2016?\n",
       exercise: {
-        "questions": [
-          {
-            "question": "1) In what year did the Justice Department release its two Ferguson reports?",
-            "answer": "2015",
-            "acceptableAnswers": [
-              "2015"
-            ]
-          },
-          {
-            "question": "2) What Illinois city began a local reparations housing program in 2021?",
-            "answer": "Evanston",
-            "acceptableAnswers": [
-              "Evanston",
-              "Evanston, Illinois"
-            ]
-          },
-          {
-            "question": "3) How many dollars did the Civil Liberties Act of 1988 pay each surviving Japanese American who had been incarcerated? (number only)",
-            "answer": "20000",
-            "acceptableAnswers": [
-              "20000",
-              "20,000",
-              "20 000"
-            ]
-          }
+        "boxes": 3,
+        "correctAnswers": [
+          "Wiley",
+          "1968",
+          "Kaepernick"
         ],
-        "hint1": "It was the year after the Ferguson protests of 2014.",
-        "hint2": "The city is just north of Chicago.",
-        "hint3": "The amount appears in Document 3's table of arguments.",
-        "explanation": "The Ferguson reports came out on March 4, 2015; Evanston's program began in 2021; and the Civil Liberties Act of 1988 paid \\$20,000 to each surviving Japanese American incarcerated in World War II, the precedent reparations supporters cite."
+        "hint1": "His first name is Kehinde.",
+        "hint2": "The Games were held in Mexico City.",
+        "hint3": "He played for the San Francisco 49ers.",
+        "explanation": "Kehinde Wiley painted Barack Obama's portrait (and Amy Sherald painted Michelle Obama's). Smith and Carlos protested at the 1968 Olympics, and Colin Kaepernick began kneeling in 2016."
       }
     }
   ]

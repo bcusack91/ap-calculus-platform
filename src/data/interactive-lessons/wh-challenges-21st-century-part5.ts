@@ -16,7 +16,7 @@ export const whChallenges21stCenturyPart5Data = {
 | Three phases of the 21st century so far |
 | Phase 1 (2001–2008): War on Terror and U.S. unipolar moment |
 | Phase 2 (2008–2020): Crisis decade (GFC, Arab Spring, populism, migration) |
-| Phase 3 (2020–today): Pandemic, war, AI, climate acceleration |
+| Phase 3 (2020–today): Pandemic and climate acceleration |
 | What stayed the same; what changed |
 
 > Key idea: AP CCOT prompts on the 21st century are won by students who divide the post-2000 era into clear phases AND identify what stayed continuous across them.
@@ -47,21 +47,20 @@ export const whChallenges21stCenturyPart5Data = {
 | Climate | Paris Agreement 2015; rapid renewable energy deployment |
 | Mood | "End of History" thesis collapses; "polycrisis" enters vocabulary |
 
-## Phase 3 (2020–today) — Pandemic, War, AI
+## Phase 3 (2020–today) — Pandemic and Climate Acceleration
 
 | Feature | Description |
 |---|---|
-| Defining events | COVID-19 pandemic 2020; Russia\'s invasion of Ukraine 2022; ChatGPT 2022 |
-| Geopolitics | Renewed great-power competition; NATO enlargement; Western sanctions on Russia |
-| Economy | Inflation surge 2021–22; supply chain reshoring/friend-shoring; AI investment boom |
+| Defining event | COVID-19 pandemic 2020; mRNA vaccines authorized by December 2020 |
+| Economy | Pandemic supply-chain disruptions; inflation surge 2021–22; some firms move production closer to home |
 | Climate | Hottest years on record; renewable deployment accelerates but emissions still rise |
-| Mood | "Permacrisis" / "polycrisis" framing dominant in elite discourse |
+| Technology | Remote work and online services expand rapidly during lockdowns |
 
 ## Continuities Across All Three Phases
 
 | Continuity | Manifestation |
 |---|---|
-| U.S. dollar dominance | Survived 2008 GFC and 2022 sanctions episode |
+| U.S. dollar dominance | Survived the 2008 GFC and remained the main reserve currency |
 | Western-led international institutions | UN, IMF, WHO, NATO survived; G-20 added in 2008 |
 | Climate change | Worsened across all three phases despite Paris and renewable buildout |
 | Inequality within wealthy democracies | Continued to widen; Piketty\'s "Capital in the 21st Century" published 2013 |
@@ -71,13 +70,12 @@ export const whChallenges21stCenturyPart5Data = {
 
 | Change | From → To |
 |---|---|
-| Geopolitical structure | Unipolar U.S. (2001) → Multi-polar with U.S.-China primary axis (today) |
-| Dominant security threat | Stateless terrorism (Phase 1) → Great-power conventional war returns (Phase 3) |
+| Global manufacturing | Led by the U.S., Europe and Japan (2001) → China the largest manufacturer (2010s) |
 | Pandemic preparedness | Episodic concern (SARS 2003) → Central policy issue (COVID-19+) |
-| Information environment | Web 2.0 + social media → Algorithmic recommender systems + generative AI |
+| Information environment | Web 2.0 → social media and smartphones in most of the world |
 | Climate response | Voluntary frameworks (Phase 1–2) → Some binding commitments + carbon pricing (today) |
 
-- **Key takeaway:** Three-phase periodization is the AP-best CCOT framing for the 21st century. Each phase has a defining event, a defining geopolitical structure, and a defining technological/cultural feature — and continuities (dollar, climate, inequality, the Internet) connect them all.
+- **Key takeaway:** Three-phase periodization is the AP-best CCOT framing for the 21st century. Each phase has a defining event and a defining technological or economic feature — and continuities (dollar, climate, inequality, the Internet) connect them all.
       `
     },
     {
@@ -95,7 +93,7 @@ export const whChallenges21stCenturyPart5Data = {
               'The period had no dominant power, as the 193 UN member states shared military, economic, and technological influence in roughly equal measure across the decade'
             ],
             correctAnswer: 0,
-            explanation: '2001–08 = U.S. unipolar moment, when U.S. defense spending exceeded that of the next several countries combined. By the 2020s, the order is multi-polar with U.S.-China as the primary axis.'
+            explanation: '2001–08 = U.S. unipolar moment after the Cold War ended, when U.S. defense spending exceeded that of the next several countries combined.'
           },
           {
             question: 'Which response best identifies the dominant defining event of Phase 2 (2008–2020) of the 21st century?',
@@ -124,16 +122,16 @@ export const whChallenges21stCenturyPart5Data = {
             hint: 'Defining event of Phase 2 of the 21st century.'
           },
           {
-            prompt: 'The November 2022 OpenAI product release that brought generative AI into mainstream consciousness.',
-            answer: 'ChatGPT',
-            acceptableAnswers: ['ChatGPT', 'ChatGPT release'],
-            hint: 'Reached 100 million monthly users in two months.'
+            prompt: 'The international organization that China joined in 2001, deepening its integration into the global economy (initials: WTO).',
+            answer: 'World Trade Organization',
+            acceptableAnswers: ['World Trade Organization', 'WTO', 'the World Trade Organization'],
+            hint: 'Founded in 1995 to oversee the rules of world trade.'
           },
           {
-            prompt: 'The term that captures the sense of overlapping, simultaneous crises (climate + pandemic + war + AI) characteristic of Phase 3.',
-            answer: 'polycrisis',
-            acceptableAnswers: ['polycrisis', 'permacrisis', 'permacrisis or polycrisis'],
-            hint: 'Sometimes also called "permacrisis."'
+            prompt: 'The disease, first identified in Wuhan, China, in late 2019, whose pandemic defines Phase 3.',
+            answer: 'COVID-19',
+            acceptableAnswers: ['COVID-19', 'COVID', 'COVID 19', 'coronavirus'],
+            hint: 'Caused by the SARS-CoV-2 coronavirus.'
           }
         ]
       }
@@ -153,7 +151,7 @@ export const whChallenges21stCenturyPart5Data = {
             options: ['Phase 1 (2001–08)', 'Phase 2 (2008–20)', 'Phase 3 (2020–today)']
           },
           {
-            label: 'COVID-19 pandemic; Russia\'s invasion of Ukraine; ChatGPT release; renewed great-power rivalry: ___',
+            label: 'COVID-19 pandemic; first mRNA vaccines; pandemic supply-chain disruptions; record global temperatures: ___',
             options: ['Phase 1 (2001–08)', 'Phase 2 (2008–20)', 'Phase 3 (2020–today)']
           }
         ],
@@ -161,7 +159,7 @@ export const whChallenges21stCenturyPart5Data = {
         hint1: 'Phase 1 events all happened before 2008.',
         hint2: 'Phase 2 events all happened between 2008 and 2020.',
         hint3: 'Phase 3 events all happened in 2020 or later.',
-        explanation: 'Three phases: Phase 1 = unipolar moment + War on Terror; Phase 2 = crisis decade and populist surge; Phase 3 = pandemic + war + AI.'
+        explanation: 'Three phases: Phase 1 = unipolar moment + War on Terror; Phase 2 = crisis decade and populist surge; Phase 3 = pandemic + climate acceleration.'
       }
     },
     {
@@ -173,24 +171,24 @@ export const whChallenges21stCenturyPart5Data = {
           {
             question: 'Which response best demonstrates AP CCOT skill by naming both a continuity and a change across the three phases of the 21st century?',
             options: [
-              "The dollar stayed the leading reserve currency, but the order shifted from a U.S. unipolar moment to a multi-polar one centered on U.S.-China rivalry",
-              "Both the dollar's reserve-currency role and the U.S. unipolar moment persisted essentially unchanged across all three phases, from 2001 through the present day",
-              "Neither the dollar's reserve-currency role nor U.S. primacy survived the 2008 crisis, as the Chinese yuan became the main reserve currency by the mid-2010s",
-              "The international order looked much the same in 2024 as in 2001, with few shifts in geopolitics, economics, or the distribution of global power over the period"
+              "Both the dollar's reserve-currency role and the pattern of global manufacturing stayed essentially unchanged from 2001 through the present day",
+              "Neither the dollar's reserve-currency role nor the U.S. economy recovered from the 2008 crisis, as the Chinese yuan became the main reserve currency by the mid-2010s",
+              "The dollar stayed the leading reserve currency, but China became the world's largest manufacturer",
+              "The global economy looked much the same in 2024 as in 2001, with few shifts in trade, technology, or where the world's goods were made"
             ],
-            correctAnswer: 0,
-            explanation: 'AP CCOT requires explicitly naming BOTH a continuity AND a change. Dollar dominance, which survived the GFC and post-2022 sanctions, is the continuity; the shift in geopolitical structure is the change.'
+            correctAnswer: 2,
+            explanation: 'AP CCOT requires explicitly naming BOTH a continuity AND a change. Dollar dominance, which survived the 2008 crisis, is the continuity; China\'s rise to become the largest manufacturer is the change. The other answers deny either the continuity or the change.'
           },
           {
             question: 'Which best explains why the late 2010s and early 2020s constitute a meaningful phase break within the 21st century?',
             options: [
-              "COVID-19 (2020), Russia's invasion of Ukraine (2022), generative AI (ChatGPT, 2022), and faster climate impacts shifted the agenda from a \"crisis decade\" to a \"polycrisis\"",
+              "COVID-19 (2020), pandemic supply-chain disruption, and faster climate impacts shifted the global agenda from financial crisis and migration toward public health and climate",
               "Little changed in the late 2010s and early 2020s, as the 2008-era \"crisis decade\" framing continued with no major new defining events in any region of the world",
               "The late 2010s and early 2020s saw the founding of the WTO, the launch of the euro, and the 9/11 attacks, which marked the true start of the 21st century",
               "The late 2010s and early 2020s saw a return to the unipolar moment (as in 2001–08), with the U.S. again the sole superpower facing no Chinese or Russian challenge to its primacy"
             ],
             correctAnswer: 0,
-            explanation: 'The cluster of COVID + Ukraine + ChatGPT + climate acceleration is the canonical justification for the Phase 2 → Phase 3 break.'
+            explanation: 'The cluster of COVID-19, pandemic economic disruption and accelerating climate impacts is the canonical justification for the Phase 2 → Phase 3 break. The other answers deny any change, misdate events from the 1990s and 2001, or ignore China\'s rise.'
           }
         ]
       }

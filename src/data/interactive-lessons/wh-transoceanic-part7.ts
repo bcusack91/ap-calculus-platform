@@ -54,7 +54,6 @@ export const whTransoceanicPart7Data = {
 > **Must-Know Vocabulary**
 
 - **Commodity chain** — Sequence of production from raw material to consumer; AP context: global chains connecting colonial extraction to industrial processing
-- **Terms of trade** — Ratio of export to import prices; declined for commodity producers relative to manufactured goods over 19th century
 - **Mono-culture dependency** — Economic reliance on single commodity export; creates vulnerability to price volatility
 - **Guano** — Peruvian seabird fertilizer; drove agricultural intensification; depletion triggered synthetic fertilizer research
 - **Haber-Bosch process** — 1909 synthetic nitrogen fixation; enabled 20th-century population growth; also creates nitrogen pollution
@@ -111,15 +110,15 @@ export const whTransoceanicPart7Data = {
             explanation: 'Same infrastructure, different political meaning is AP\'s temporal analysis: the Suez Canal was built as an expression of European financial and engineering power over Egypt. By 1956, the post-WWII world had changed: Egypt was independent; Arab nationalism was asserting sovereignty over colonial-era arrangements; the USA had replaced Britain as the dominant Western power; and the Cold War was determining how the USA evaluated all regional conflicts (Nasser must not be driven into Soviet alignment). Nasser\'s nationalization used the canal to assert Egyptian sovereignty over what most Egyptians correctly saw as a colonial-era imposition. The British and French saw this as imperial humiliation; the USA saw it as a Cold War problem to be managed differently. Same canal, three completely different political readings.'
           },
           {
-            question: 'The Prebisch-Singer thesis (raw material prices decline relative to manufactured goods) as applied to 19th-century global commodity chains suggests:',
+            question: 'Which statement best describes how global commodity chains distributed their benefits in the late 1800s?',
             options: [
-              'Commodity chains moved wealth from periphery to core, so colonies could export more yet still lose buying power',
-              'Rising export volumes automatically brought development to regions that shipped more raw materials',
-              'The thesis applies only to trade after 1950 and offers no insight into the commodity chains of the nineteenth century',
-              'Industrial and raw-material exporters saw the same terms of trade trends across the nineteenth century',
+              'Producing regions exported raw materials, while most processing profits and factory production stayed in industrial countries',
+              'Colonies and other exporters built their own factories and kept most of the value of their exports',
+              'Profits were shared equally, because international treaties fixed world commodity prices',
+              'Industrial countries imported finished goods from colonies and sent raw materials to them in return',
             ],
             correctAnswer: 0,
-            explanation: 'Structural vs. cyclical analysis is AP\'s economic sophistication: the Prebisch-Singer thesis provides a structural (not cyclical) explanation of underdevelopment — it\'s not that commodity prices occasionally drop (cyclical) but that they systematically decline relative to manufactured goods over long periods (structural). This means that a colonial economy producing more cotton, more rubber, or more wheat might still become relatively poorer because the purchasing power of those commodities is declining. Growing export volumes do not produce development if the terms of exchange are structured against you. This is why development economists in the 1950s (Prebisch, Singer, Myrdal) argued that free trade in its actual historical operation produced divergence (rich countries getting richer; poor countries getting relatively poorer) rather than the convergence that free trade theory predicts.'
+            explanation: 'In the 19th-century global economy, colonies and other producing regions specialized in raw materials and cash crops, while the value added by processing, shipping and selling mostly went to industrialized countries. Producing regions rarely built their own industries, no treaty fixed commodity prices, and the flow of raw materials and finished goods ran the other way.'
           }
         ]
       }

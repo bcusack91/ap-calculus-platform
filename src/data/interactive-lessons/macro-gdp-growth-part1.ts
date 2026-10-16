@@ -39,10 +39,9 @@ export const macroGdpGrowthPart1Data = {
 | **Non-market activities** | Household work, volunteer work (not bought/sold on the market) |
 | **Underground economy** | Illegal activities, unreported cash transactions |
 
-### GDP vs. GNP
-- **GDP** = everything produced **within a country's borders** (regardless of who produces it)
-- **GNP** = everything produced **by a country's citizens** (regardless of where they produce it)
-- Example: A Japanese auto factory in Tennessee → counted in U.S. GDP but Japanese GNP
+### Where It Is Produced Is What Counts
+- **GDP** counts everything produced **within a country's borders**, no matter who owns the firm.
+- Example: cars built at a Japanese-owned auto factory in Tennessee count in **U.S.** GDP; cars built at a U.S.-owned factory in Mexico count in **Mexico's** GDP.
 
 > 🔑 **AP Connection:** The AP exam loves testing what is and isn't included in GDP. Key trap: **government transfer payments** (Social Security, Medicare, unemployment benefits) are NOT counted in GDP because they don't represent new production.
 `},

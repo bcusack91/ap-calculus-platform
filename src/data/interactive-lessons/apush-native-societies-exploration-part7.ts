@@ -29,7 +29,7 @@ export const apushNativeSocietiesExplorationPart7Data = {
 
 | Year | Event | One-Line Significance |
 |---|---|---|
-| pre-1492 | Mississippian Cahokia, Aztec Triple Alliance, Inca Empire | Indigenous societies built large agricultural empires before contact |
+| pre-1492 | Mississippian Cahokia, Ancestral Pueblo villages, Haudenosaunee confederacy | Maize farming spread north from Mexico and supported settled, diverse societies before contact |
 | 1492 | Columbus's first voyage | Initiated sustained European-Indigenous contact and the Columbian Exchange |
 | 1494 | Treaty of Tordesillas | Spain and Portugal divided the non-European world along a line that revised the 1493 papal division |
 | 1518–19 | First documented smallpox epidemic in Americas | Began the demographic catastrophe |

@@ -17,9 +17,8 @@ export const whChallenges21stCenturyPart3Data = {
 | The 2015 European migration crisis |
 | Brexit (2016) and the Trump election (2016) |
 | The COVID-19 pandemic (2020+) |
-| Russia\'s invasion of Ukraine (2022) |
 
-> Key idea: AP prompts on the 21st century reward concrete, well-dated examples. Memorize five: Arab Spring (regional protest wave), Syrian/Mediterranean migration crisis, Brexit + Trump (right-populist surge), COVID-19 (global pandemic), and Russia-Ukraine (great-power return of conventional war).
+> Key idea: AP prompts on the 21st century reward concrete, well-dated examples tied to the course's globalization themes. Memorize four: Arab Spring (protest against entrenched rulers), Syrian/Mediterranean migration crisis (migration), Brexit + Trump (a backlash against globalization), and COVID-19 (an emergent epidemic disease).
       `
     },
     {
@@ -65,6 +64,8 @@ export const whChallenges21stCenturyPart3Data = {
 | Disinformation and microtargeting | Cambridge Analytica scandal implicated both |
 | Older + non-college vote | Both candidates won majorities of older and non-college-educated voters |
 
+> **Course connection:** Read Brexit and the Trump election as **responses to economic and cultural globalization**: voters who felt left behind by free trade, migration and international institutions backed candidates who promised to restore national control.
+
 ## COVID-19 (2020+)
 
 | Year | Event |
@@ -77,18 +78,9 @@ export const whChallenges21stCenturyPart3Data = {
 | 2023 | WHO ends global health emergency declaration |
 | Total | ~7 million confirmed deaths globally; trillions in economic disruption |
 
-## Russia\'s Invasion of Ukraine (2022)
+> **Disease in a connected world:** Like the 1918 influenza pandemic and HIV/AIDS, COVID-19 shows a recurring pattern after 1900: new epidemic diseases spread quickly along global transport networks, disrupted societies and economies, and spurred medical advances such as new vaccines.
 
-| Year | Event |
-|---|---|
-| 2014 | Russia annexes Crimea; backs separatists in eastern Ukraine |
-| Feb 2022 | Russia launches full-scale invasion of Ukraine |
-| 2022+ | Largest European refugee flow since WWII (~6 million Ukrainians displaced) |
-| 2022+ | NATO expansion (Finland 2023, Sweden 2024); G7 sanctions; weapons aid to Ukraine |
-
-> **Significance:** Marked the return of large-scale conventional war between European states for the first time since 1945. Reshaped European energy policy as Russian gas was rapidly replaced.
-
-- **Key takeaway:** When an AP prompt asks about a 21st-century challenge, ground your answer in specific cases: Arab Spring 2011, Syrian war 2011+, European migration crisis 2015, Brexit + Trump 2016, COVID-19 2020+, Russia-Ukraine 2022. Each case illustrates multiple challenges simultaneously.
+- **Key takeaway:** When an AP prompt asks about a 21st-century challenge, ground your answer in specific cases: Arab Spring 2011, Syrian war 2011+, European migration crisis 2015, Brexit + Trump 2016, COVID-19 2020+. Each case illustrates multiple challenges simultaneously.
       `
     },
     {
@@ -109,15 +101,15 @@ export const whChallenges21stCenturyPart3Data = {
             explanation: 'The Arab Spring outcomes diverged sharply: Tunisia\'s qualified success vs. Egypt\'s coup vs. Libya/Syria/Yemen\'s civil wars.'
           },
           {
-            question: 'Which best characterizes the 2016 Brexit referendum result?',
+            question: 'The 2016 Brexit vote and the election of Donald Trump are most often analyzed as examples of which broader development?',
             options: [
-              "The UK voted 52% to 48% to leave the EU; departure was completed on January 31, 2020 after long talks over the Irish border, citizens' rights, and trade",
-              "The UK voted 52% to 48% to remain in the EU, but Parliament overruled the result and began a withdrawal process that was finalized in 2020",
-              "The UK voted 52% to 48% to leave the EU, and departure was completed within months as Britain kept full access to the EU single market",
-              "The UK voted 52% to 48% to leave the EU, but a second referendum in 2019 reversed the result, and the UK remains an EU member"
+              'Growing support among older voters for deeper European and global economic integration',
+              'A wave of anti-colonial nationalism in states that had recently won independence',
+              'A backlash against economic and cultural globalization',
+              'A revival of communist parties after the 2008 financial crisis in Western Europe'
             ],
-            correctAnswer: 0,
-            explanation: 'Brexit: 52–48 vote on June 23, 2016; formally completed January 31, 2020.'
+            correctAnswer: 2,
+            explanation: 'Both campaigns drew on voters who felt harmed by free trade, migration and international institutions, making them responses to globalization. They rejected deeper integration rather than supporting it, they arose in long-independent wealthy democracies, and communist parties did not gain from the 2008 crisis.'
           }
         ]
       }
@@ -141,10 +133,10 @@ export const whChallenges21stCenturyPart3Data = {
             hint: 'CDU leader; chancellor 2005–2021.'
           },
           {
-            prompt: 'The Russian president who launched the February 2022 full-scale invasion of Ukraine.',
-            answer: 'Vladimir Putin',
-            acceptableAnswers: ['Vladimir Putin', 'Putin'],
-            hint: 'KGB officer turned Russian president; in power since 1999/2000.'
+            prompt: 'The UN agency that declared COVID-19 a pandemic in March 2020 (initials: WHO).',
+            answer: 'World Health Organization',
+            acceptableAnswers: ['World Health Organization', 'WHO', 'the World Health Organization'],
+            hint: 'A UN specialized agency founded in 1948 and based in Geneva.'
           }
         ]
       }
@@ -193,15 +185,15 @@ export const whChallenges21stCenturyPart3Data = {
             explanation: 'The Syria → 2015 migration crisis → 2016 backlash chain is a canonical AP causal sequence linking 21st-century events. UNHCR counted about 4.6 million registered Syrian refugees by the end of 2015, and roughly 1 million asylum seekers of many nationalities, about half of them Syrian, crossed the Mediterranean to Europe that year; parties such as the AfD in Germany and the National Front in France gained ground.'
           },
           {
-            question: 'Which best explains why Russia\'s 2022 invasion of Ukraine is considered a turning point in post-1945 European security?',
+            question: 'The COVID-19 pandemic best illustrates which continuity in the history of disease since 1900?',
             options: [
-              "It returned large-scale interstate war to Europe for the first time in the postwar era, ended reliance on Russian gas, and prompted NATO enlargement (Finland 2023, Sweden 2024)",
-              "It had little effect on European security, as Europe kept buying Russian gas at prewar levels (via Nord Stream) and no new members joined NATO afterward",
-              "It ended in a quick Russian victory that conquered all of Ukraine within weeks, removing any challenge to Russian power in Eastern Europe after 2022",
-              "It continued a long pattern of routine interstate wars in post-1945 Europe, so NATO membership, energy policy, and Western sanctions all changed very little in the years afterward"
+              'Medical advances after 1900 had ended the threat of new epidemic diseases',
+              'Like the 1918 influenza, a new disease spread quickly along global transport networks and spurred medical advances',
+              'Epidemics struck only industrialized countries with heavy air traffic and spared poorer regions',
+              'Epidemic diseases since 1900 have spread mainly along overland caravan routes rather than by sea or air'
             ],
-            correctAnswer: 0,
-            explanation: 'The 2022 invasion is the canonical 21st-century European security turning point: conventional war returns, NATO enlarges, energy reorients away from Russian gas, and Western sanctions and weapons aid to a non-NATO state escalate.'
+            correctAnswer: 1,
+            explanation: 'Since 1900 new epidemics such as the 1918 influenza, HIV/AIDS and COVID-19 have spread quickly through a connected world, caused social disruption and prompted medical responses such as new vaccines. Medicine has not ended new epidemics, COVID-19 hit poorer regions hard, and modern epidemics travel by ship and aircraft rather than caravan.'
           }
         ]
       }

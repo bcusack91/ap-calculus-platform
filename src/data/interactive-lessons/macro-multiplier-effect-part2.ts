@@ -15,7 +15,7 @@ export const macroMultiplierEffectPart2Data = {
 |---------|
 | 📖 Disposable Income and Where It Goes |
 | Measuring the MPC and MPS from Data |
-| MPC vs. the Average Propensity to Consume |
+| Changes, Not Totals |
 | Shifts of the Consumption Schedule |
 
 > 🔑 **Key Concept:** Every multiplier in this topic is built from one number: the **marginal propensity to consume (MPC)**, the fraction of an **additional** dollar of disposable income that households spend. This part shows where that number comes from, how to calculate it from a table, and how it differs from the share of **total** income that households spend.
@@ -189,19 +189,13 @@ Enter numbers only (no \\$ sign). Use decimals for the propensities.
       id: 'macromul2-apc',
       type: 'text' as const,
       content: `
-## MPC vs. the Average Propensity to Consume
+## Changes, Not Totals
 
-A common mistake is to divide **total** consumption by **total** disposable income and call the result the MPC. That ratio is a different measure.
-
-| Measure | Formula | What it describes |
-|---|---|---|
-| **Marginal propensity to consume (MPC)** | ΔC ÷ ΔYd | Spending out of the **next** dollar of income |
-| **Average propensity to consume (APC)** | C ÷ Yd | Spending out of **all** income |
-| **Average propensity to save (APS)** | S ÷ Yd | Saving out of all income; APC + APS = 1 |
+A common mistake is to divide **total** consumption by **total** disposable income and call the result the MPC. The MPC is defined with **changes**: ΔC ÷ ΔYd, the share of the **next** dollar of income that is spent (CED MOD-2.B.5).
 
 Return to the schedule from the first section, where the MPC is 0.8 at every step:
 
-| Yd | C | APC = C ÷ Yd | MPC |
+| Yd | C | C ÷ Yd (not the MPC) | MPC |
 |---|---|---|---|
 | 100 | 120 | 1.20 | 0.8 |
 | 200 | 200 | 1.00 | 0.8 |
@@ -209,9 +203,9 @@ Return to the schedule from the first section, where the MPC is 0.8 at every ste
 | 400 | 360 | 0.90 | 0.8 |
 | 500 | 440 | 0.88 | 0.8 |
 
-The APC **falls** as income rises, because autonomous consumption (\\$40 billion) becomes a smaller share of a larger income. The MPC stays at 0.8. The Ortiz household shows the same gap: its APC in 2025 was 36,000 ÷ 40,000 = 0.90, but its MPC was 0.75.
+The ratio of totals **falls** as income rises, because autonomous consumption (\\$40 billion) becomes a smaller share of a larger income. The MPC stays at 0.8. The Ortiz household shows the same gap: 36,000 ÷ 40,000 = 0.90 in 2025, but its MPC was 0.75.
 
-> ⚠️ **Exam trap:** Multipliers use the **MPC**, never the APC. If a question gives you a single year of income and consumption, you do not have enough information to find the MPC. You need two observations, or the MPC stated directly.
+> ⚠️ **Exam trap:** Multipliers use the **MPC**, never a ratio of totals. If a question gives you a single year of income and consumption, you do not have enough information to find the MPC. You need two observations, or the MPC stated directly.
 
 ## Shifts of the Consumption Schedule
 
@@ -237,15 +231,15 @@ A change in disposable income causes a **movement along** the consumption schedu
       exercise: {
         questions: [
           {
-            question: 'At a disposable income of \\$500 billion, consumption is \\$450 billion. When disposable income rises to \\$600 billion, consumption rises to \\$520 billion. Which pair of values is correct?',
+            question: 'At a disposable income of \\$500 billion, consumption is \\$450 billion. When disposable income rises to \\$600 billion, consumption rises to \\$520 billion. What is the MPC?',
             options: [
-              'MPC = 0.90 and initial APC = 0.70',
-              'MPC = 0.87 and initial APC = 0.90',
-              'MPC = 0.70 and initial APC = 0.90',
-              'MPC = 0.70 and initial APC = 0.87'
+              '0.90',
+              '0.87',
+              '0.70',
+              '0.30'
             ],
             correctAnswer: 2,
-            explanation: 'The MPC is (520 − 450) ÷ (600 − 500) = 70 ÷ 100 = 0.70, and the initial APC is 450 ÷ 500 = 0.90. The value 0.87 is 520 ÷ 600, the APC after the change, and swapping the two measures mixes up marginal and average spending.'
+            explanation: 'The MPC is (520 − 450) ÷ (600 − 500) = 70 ÷ 100 = 0.70. The value 0.90 is 450 ÷ 500 and 0.87 is 520 ÷ 600, ratios of totals rather than changes, and 0.30 is the MPS.'
           },
           {
             question: 'A tax cut raises households\' disposable income by \\$20 billion. If the MPC is 0.75, by how much does consumption rise in the first round of spending?',

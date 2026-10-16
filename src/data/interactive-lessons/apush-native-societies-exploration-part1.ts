@@ -15,7 +15,7 @@ export const apushNativeSocietiesExplorationPart1Data = {
 
 | Section |
 |---------|
-| 📖 Major Pre-Columbian Civilizations |
+| 📖 Native Societies Before Contact |
 | Native American Diversity |
 | European Motives for Exploration |
 | 📌 The Columbian Exchange |
@@ -26,7 +26,7 @@ export const apushNativeSocietiesExplorationPart1Data = {
 ---
 
 ### What You'll Master in Part 1
-- The major civilizations of the pre-Columbian Americas
+- How the spread of maize shaped Native societies north of Mexico
 - How geography shaped Native American societies
 - European motives behind exploration (God, gold, glory)
 - The biological, economic, and cultural impacts of the Columbian Exchange
@@ -36,19 +36,19 @@ export const apushNativeSocietiesExplorationPart1Data = {
       id: 'apushnat1-civilizations',
       type: 'text' as const,
       content: `
-## 📖 Major Pre-Columbian Civilizations
+## 📖 Native Societies Before Contact
 
-Before Europeans arrived, the Americas were home to complex, diverse societies with millions of inhabitants.
+Before Europeans arrived, the Americas were home to complex, diverse societies with millions of inhabitants. The course focuses on North America, where the **spread of maize cultivation northward from present-day Mexico** supported settlement, irrigation and social diversification.
 
-### Key Civilizations
+### Key Societies North of Mexico
 
-| Civilization | Location | Key Features |
+| Society | Location | Key Features |
 |---|---|---|
-| **Aztec (Mexica)** | Central Mexico | Capital Tenochtitlán (pop. ~200,000); tributary empire; chinampas (raised fields built in the lake, often called "floating gardens"); human sacrifice |
-| **Maya** | Yucatán / Central America | Advanced writing system; astronomical calendar; city-states; the great Classic-era cities declined around 900 CE, but smaller Maya states survived into the Spanish era |
-| **Inca** | Andes (South America) | Largest pre-Columbian empire; quipu record-keeping; extensive road system; terrace farming |
-| **Mississippian** | Eastern North America | Cahokia (near modern St. Louis, pop. ~20,000); mound-building; maize agriculture |
-| **Pueblo (Ancestral)** | American Southwest | Multi-story adobe dwellings; irrigation systems; dry farming techniques |
+| **Ancestral Puebloans** | American Southwest | Maize, beans and squash grown with irrigation and dry farming; multi-story adobe and stone villages |
+| **Mississippian** | Mississippi River Valley | Cahokia (near modern St. Louis, pop. ~20,000); earthen mounds; maize agriculture; chiefdoms |
+| **Haudenosaunee (Iroquois)** | Northeast | Three Sisters farming plus hunting; permanent villages; a confederacy of five nations |
+
+> 📌 **Scope note:** The Mexica (Aztec) and Inca empires appear in this course through their conquest by Spain (Part 3); their internal features, and the Maya, belong to AP World History rather than this exam.
 
 ### Native American Diversity in North America
 
@@ -71,15 +71,15 @@ The AP exam emphasizes that indigenous peoples adapted to their **environments**
       exercise: {
         questions: [
           {
-            question: 'Which agricultural technique was used by the Aztecs to farm on the shallow lake beds surrounding Tenochtitlán?',
+            question: 'The spread of maize cultivation northward from present-day Mexico most directly supported which development in the American Southwest?',
             options: [
-              'Terraces cut into steep mountain slopes',
-              'Raised beds of piled mud and vegetation',
-              'Slash-and-burn clearing of dense forests',
-              'Irrigation canals drawn from the Rio Grande'
+              'Mobile bands that followed bison herds on foot',
+              'Irrigated farming villages with diverse social roles',
+              'Coastal villages living on salmon and cedar',
+              'Mounted raiding societies built on Spanish horses'
             ],
             correctAnswer: 1,
-            explanation: 'Chinampas were raised fields built by piling lake mud and vegetation inside staked enclosures in the shallow lakes around Tenochtitlán; they are often called "floating gardens" but were anchored in place. Terrace farming was an Inca technique in the Andes, and the Rio Grande lies far to the north.'
+            explanation: 'Maize, together with irrigation, let Ancestral Puebloans and the Hohokam live in permanent villages with specialized crafts and larger populations. Following bison describes the western Plains, salmon and cedar describe the Northwest coast, and horses reached the Southwest only after Spanish colonization.'
           },
           {
             question: 'The Iroquois Confederacy is historically significant because it:',
@@ -137,6 +137,8 @@ The **Columbian Exchange** refers to the massive transfer of plants, animals, di
 | Syphilis (debated) | Christianity, iron tools, firearms |
 
 > ⚠️ **Critical Impact:** European diseases (especially **smallpox**) devastated Native American populations — estimates range from **50% to 90% population decline** among indigenous peoples within the first century of contact. This demographic catastrophe is one of the most important facts on the AP exam.
+
+**Early consequences:** To profit from conquest, Spain created the **encomienda** system, which granted colonists the right to demand labor and tribute from groups of Native people. As disease and overwork shrank the Native labor force, Spanish colonists turned increasingly to enslaved Africans.
       `
     },
     {
@@ -145,7 +147,7 @@ The **Columbian Exchange** refers to the massive transfer of plants, animals, di
       content: `
 **Applied Recall** ✍️
 
-1) What was the name of the Aztec capital city, built on an island in Lake Texcoco?
+1) What Spanish labor system granted colonists the right to demand labor and tribute from groups of Native people?
 
 2) What term describes the massive transfer of plants, animals, diseases, and ideas between the Old and New Worlds after 1492?
 
@@ -155,11 +157,11 @@ Use the exact historical term.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['Tenochtitlan', 'Columbian Exchange', 'Three Sisters'],
-        hint1: 'Starts with: T — a city of ~200,000 people',
+        correctAnswers: ['encomienda', 'Columbian Exchange', 'Three Sisters'],
+        hint1: 'Starts with: E — from the Spanish word for "to entrust"',
         hint2: 'Named after Columbus — an "exchange" of biological and cultural elements',
         hint3: 'Three crops grown together symbiotically',
-        explanation: 'Tenochtitlán was the Aztec capital (modern-day Mexico City). The Columbian Exchange was the widespread transfer of plants, animals, diseases, and culture between the Americas and the Old World. The Three Sisters (maize, beans, squash) were companion-planted by Eastern Woodlands peoples.'
+        explanation: 'The encomienda entrusted Native laborers to Spanish colonists, who demanded their labor and tribute. The Columbian Exchange was the widespread transfer of plants, animals, diseases, and culture between the Americas and the Old World. The Three Sisters (maize, beans, squash) were companion-planted by Eastern Woodlands peoples.'
       }
     },
     {

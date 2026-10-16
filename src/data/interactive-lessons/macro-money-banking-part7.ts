@@ -31,7 +31,7 @@ export const macroMoneyBankingPart7Data = {
 |---|---|
 | 1 | Money's three functions; M1 and M2; the money multiplier |
 | 2 | Money, bonds and stocks trade off liquidity, return and risk; bond prices and interest rates move in opposite directions |
-| 3 | Fiat money; what is in M1, M2 or neither; how transfers between accounts affect each measure |
+| 3 | What counts as money; what is in M1, M2 or neither; how transfers between accounts affect each measure |
 | 4 | T-accounts; required and excess reserves; one bank lends only its excess reserves |
 | 5 | The banking system multiplies excess reserves; cash deposits vs. Fed bond purchases; limited vs. ample reserves |
 | 6 | Exam practice with T-accounts and Fed transactions |

@@ -71,9 +71,9 @@ Corvia, a hypothetical economy, has a natural rate of unemployment of **5%** and
 | B | SRPC1 | 3% | 5% | 2% |
 | C | SRPC2 and LRPC | 5% | 5% | 5% |
 
-### What if policy makers try again?
+### No long-run trade-off
 
-Suppose they push unemployment back to 3%. SRPC2 lies 3 points above SRPC1, so 3% unemployment now comes with **8%** inflation (point D). Expectations then rise to 8%, the SRPC shifts up again, and so on. Holding unemployment below the natural rate requires inflation that keeps **accelerating**, because each round people expect what they just saw.
+Compare A and C. Both sit on the LRPC at the natural rate of 5%; the only lasting result of the stimulus is **higher inflation**. In the long run, wages and prices fully adjust, so there is no trade-off between inflation and unemployment (CED MOD-2.E.1), which is why the LRPC is vertical at the natural rate (MOD-3.A.3).
 
 > 🔑 **AP Connection:** On the AD-AS graph, Case 1 is the self-adjustment story for an inflationary gap: AD shifts right, then SRAS shifts left until output returns to full employment at a higher price level. The Phillips curve version adds the rise in **expected inflation** that drives the SRAS shift.
 `
@@ -98,15 +98,15 @@ Suppose they push unemployment back to 3%. SRPC2 lies 3 points above SRPC1, so 3
             explanation: 'Inflation above what people expected raises expected inflation, which shifts the SRPC up until it crosses the LRPC at 5% unemployment. Expectations do not stay at 2% after a year of 5% inflation, the LRPC moves only if the natural rate changes, and expectations fall only when inflation comes in below them.'
           },
           {
-            question: 'Why does holding unemployment below the natural rate year after year lead to accelerating inflation?',
+            question: 'Corvia started at A (5%, 2%) and, after the stimulus and the adjustment of expectations, ended at C (5%, 5%). What did the expansionary policy achieve in the long run?',
             options: [
-              'The natural rate keeps falling, so the gap below it keeps widening',
-              'The LRPC keeps shifting right, so the short-run tradeoff gets steeper',
-              'Government debt keeps growing, so inflation must rise to repay it',
-              'Expected inflation keeps catching up, so a bigger surprise is needed'
+              'Permanently lower unemployment at the cost of inflation',
+              'A lower natural rate of unemployment and lower inflation',
+              'A leftward shift of the LRPC and a higher inflation rate',
+              'Higher inflation with no lasting change in unemployment'
             ],
             correctAnswer: 3,
-            explanation: 'Unemployment stays below the natural rate only while actual inflation beats expected inflation, and each year expectations rise to last year\'s rate. The natural rate and the LRPC do not move with policy, and government debt is not what drives the expectations process in this model.'
+            explanation: 'Unemployment is back at the 5% natural rate, so the only lasting change is inflation of 5% instead of 2%: in the long run there is no trade-off. Unemployment fell only in the short run, and expansionary demand policy changes neither the natural rate nor the position of the LRPC.'
           },
           {
             question: 'On the AD-AS graph, the step in which Corvia\'s expected inflation catches up to actual inflation is shown as',
@@ -128,7 +128,7 @@ Suppose they push unemployment back to 3%. SRPC2 lies 3 points above SRPC1, so 3
       content: `
 ## Case 2: Disinflation Through Contractionary Policy
 
-Now Corvia has lived with 8% inflation long enough that people expect 8%. It sits at **D′ (5%, 8%)** on SRPC3, which crosses the LRPC at 8%. The central bank decides to bring inflation down.
+Suppose instead that Corvia has lived with 8% inflation long enough that people expect 8%. It sits at **D′ (5%, 8%)** on SRPC3, which crosses the LRPC at 8%. The central bank decides to bring inflation down.
 
 ### The policy action
 
@@ -155,9 +155,7 @@ Higher interest rates reduce borrowing for investment and big purchases, so AD s
 
 **Disinflation** means the inflation rate falls while staying positive. Prices are still rising at F, just more slowly.
 
-### Credibility lowers the cost
-
-The temporary rise in unemployment is the cost of disinflation. If workers and firms believe the central bank will follow through, expected inflation falls sooner, the SRPC shifts down faster, and the recession is shorter and milder.
+The temporary rise in unemployment is the cost of disinflation in this model: inflation comes down only after a period of unemployment above the natural rate.
 
 The United States followed this general path in the early 1980s: the Federal Reserve tightened monetary policy sharply, inflation fell substantially, and unemployment rose steeply for a time before the economy recovered.
 `
@@ -245,15 +243,15 @@ In the 1970s, large oil price increases contributed to periods of high inflation
             explanation: 'Expansionary policy moves the economy up along the shifted SRPC, so unemployment falls but inflation climbs even higher, and higher inflation can raise expectations. AD policy does not change the natural rate, and it cannot undo the supply shift that raised inflation in the first place.'
           },
           {
-            question: 'Why does a credible central bank announcement that it will reduce inflation lower the unemployment cost of disinflation?',
+            question: 'Which event would shift the long-run Phillips curve to the left?',
             options: [
-              'The natural rate falls, so the LRPC moves left right away',
-              'Aggregate demand rises, so inflation falls with no job losses',
-              'Nominal wages rise faster, so firms are willing to hire more',
-              'Expected inflation falls sooner, so the SRPC shifts down faster'
+              'An increase in the expected inflation rate',
+              'A decrease in aggregate demand for goods',
+              'A sharp rise in the world price of oil',
+              'A fall in the natural rate of unemployment'
             ],
             correctAnswer: 3,
-            explanation: 'If people believe the announcement, they lower their expected inflation quickly, so the SRPC shifts down sooner and less unemployment is needed to reduce inflation. Credibility works through expectations, not through the natural rate, and disinflation requires lower demand, not higher demand or faster wage growth.'
+            explanation: 'The LRPC is vertical at the natural rate of unemployment, so only a change in the natural rate moves it, and a lower natural rate moves it left. Higher expected inflation and an oil price shock shift the SRPC, and a fall in aggregate demand moves the economy along the SRPC.'
           }
         ]
       }

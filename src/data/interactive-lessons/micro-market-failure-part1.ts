@@ -21,7 +21,7 @@ export const microMarketFailurePart1Data = {
 | **Public goods** | Non-rival + non-excludable → free riding | National defense |
 | **Common resources** | Non-excludable → overuse | Overfishing |
 | **Market power** | Monopolies restrict output | Single utility company |
-| **Asymmetric information** (enrichment, not on the AP exam) | One party knows more | Used car "lemons" |
+| **Asymmetric information** | One side of a trade knows more than the other, so the quantity traded differs from the efficient quantity | A seller who hides a car's defects |
 
 > 🔑 In each case, the market produces at a quantity ≠ the socially optimal quantity, creating **deadweight loss**.
 
@@ -79,33 +79,24 @@ Market failure occurs when **any of these conditions break down**.
       id: 'micromf1-content',
       type: 'text' as const,
       content: `
-## Beyond the AP Course: Asymmetric Information
+## Where the Deadweight Loss Comes From
 
-> ℹ️ **Enrichment:** Asymmetric information is not part of the AP Microeconomics Course and Exam Description, so the AP exam does not test it. The market failures the AP course does test are externalities, public goods and market power (Unit 6). This section shows another reason real markets can fail.
+Every market failure has the same signature: the quantity the market produces is **not** the quantity where marginal social benefit equals marginal social cost (CED POL-2.C.1). Producing any non-efficient quantity creates **deadweight loss** (POL-2.C.2).
 
-When one party in a transaction has more information than the other:
+| Situation | Market quantity vs. efficient quantity | Why |
+|-----------|----------------------------------------|-----|
+| Monopoly, oligopoly, monopolistic competition | **Too little** | Firms set MR = MC and charge P > MC, so units buyers value above their cost are never made |
+| Negative externality | **Too much** | Producers or consumers ignore the external cost, so private cost < social cost |
+| Positive externality | **Too little** | Buyers ignore the benefit to others, so private benefit < social benefit |
+| Public good | **Too little (often zero)** | Non-excludable, so free riders will not pay and private sellers cannot cover costs |
+| Common resource | **Too much use** | Non-excludable but rival, so each user ignores the cost imposed on others |
+| Asymmetric information | **Too much or too little** | Buyers or sellers misjudge the true benefit or cost of the good |
 
-### Adverse Selection
-Occurs **before** the transaction. The uninformed party selects disproportionately bad outcomes:
+### Reading the Deadweight Loss
+- **Underproduction:** the deadweight loss triangle sits to the **left** of the efficient quantity, between MSB and MSC, from the market quantity up to the efficient quantity.
+- **Overproduction:** the triangle sits to the **right** of the efficient quantity, where each extra unit costs society more than it is worth.
 
-| Market | Informed Party | Problem |
-|--------|---------------|---------|
-| Used cars | Seller knows car quality | Buyers assume low quality → good cars leave market ("lemons problem") |
-| Health insurance | Buyer knows health status | Sickest people buy most insurance → premiums rise → healthy people drop out |
-
-### Moral Hazard
-Occurs **after** the transaction. Having insurance or a safety net changes behavior:
-
-| Example | Changed Behavior |
-|---------|-----------------|
-| Car insurance | Drive more recklessly |
-| Bank bailouts | Take excessive risks ("too big to fail") |
-| Fire insurance | Less careful about fire prevention |
-
-### Solutions
-- **Signaling**: Informed party reveals info (warranties, college degrees)
-- **Screening**: Uninformed party gathers info (health questionnaires, inspections)
-- **Government regulation**: Mandatory disclosure, licensing requirements
+> ⚠️ **Common trap:** Deadweight loss does not mean someone lost money. It is surplus that **no one** receives because the efficient trades did not happen (or wasteful trades did).
       `
     },
     {
@@ -165,14 +156,13 @@ Occurs **after** the transaction. Having insurance or a safety net changes behav
 
 | Market Failure | Government Solution | Private Solution |
 |---------------|--------------------|-----------------| 
-| Negative externality | Pigouvian tax, regulation | Coase negotiation |
+| Negative externality | Per-unit (Pigouvian) tax, environmental regulation | Assign property rights and let the parties bargain |
 | Positive externality | Subsidy, provision | Private charity |
 | Public good | Government provision via taxes | Voluntary contribution (underprovides) |
-| Common resource | Regulation, quotas, property rights | Community norms (Ostrom) |
+| Common resource | Regulation, catch or use limits, property rights | Private ownership of the resource |
 | Monopoly | Antitrust, regulation, price caps | Potential entry, innovation |
-| Asymmetric info (enrichment) | Disclosure laws, licensing | Signaling, screening, reputation |
 
-> ⚠️ **AP Key Point:** Government intervention can also fail (**government failure**). Interventions may create their own deadweight loss, be captured by special interests, or have unintended consequences. The AP exam expects you to evaluate BOTH market failure AND potential government failure.
+> ⚠️ **AP Key Point:** Government intervention can also fail (**government failure**). Interventions may be the wrong size, may target the wrong market, or may have unintended consequences, and any of these can create a new deadweight loss. The AP exam expects you to evaluate BOTH market failure AND potential government failure.
       `
     },
     {

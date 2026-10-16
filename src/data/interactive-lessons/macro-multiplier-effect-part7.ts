@@ -43,7 +43,6 @@ Measure the **output gap** → choose expansionary or contractionary policy → 
 | Disposable income | Income − taxes + transfers | — |
 | MPC | ΔC ÷ ΔYd | 0.8 |
 | MPS | ΔS ÷ ΔYd = 1 − MPC | 0.2 |
-| Average propensity to consume | C ÷ Yd (not used in multipliers) | — |
 | Spending multiplier | 1 ÷ MPS = 1 ÷ (1 − MPC) | 5 |
 | Tax multiplier | −MPC ÷ MPS | −4 |
 | Transfer multiplier | +MPC ÷ MPS | +4 |
@@ -187,7 +186,7 @@ Choose the answer that completes each statement.
 
 | Error | Fix |
 |---|---|
-| Using the APC as the MPC | Use changes, not totals |
+| Dividing total C by total Yd to get the MPC | Use changes, not totals |
 | Applying 1 ÷ MPS to a tax cut | Use MPC ÷ MPS |
 | Answering "no change" for a balanced-budget increase | Real GDP rises by ΔG |
 | Multiplying a gap by the multiplier to get policy | Divide the gap by the multiplier |

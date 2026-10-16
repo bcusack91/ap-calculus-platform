@@ -89,9 +89,9 @@ Questions 1–3 decide whether deadweight loss shrinks or grows. Question 4 is a
 
 **(a)** Calculate the cumulative share of income received by the poorest 40% of households, and identify the share received by the richest 20%.
 
-**(b)** Describe a correctly labeled Lorenz curve for Country Q, including the line of perfect equality.
+**(b)** On a Lorenz diagram for Country Q, the curve passes through the point (40, 15). Explain what that point means.
 
-**(c)** On the diagram, the area between the line of equality and the Lorenz curve is 2,000, and the area under the Lorenz curve is 3,000. Calculate the Gini coefficient.
+**(c)** Country S's Lorenz curve lies everywhere between Country Q's curve and the line of perfect equality. Which country has the higher Gini coefficient? Explain.
 
 **(d)** Country Q adopts a new tax. A household earning \\$25,000 pays \\$2,500 and a household earning \\$100,000 pays \\$5,000. Is the tax progressive, proportional or regressive? Explain using average tax rates.
 
@@ -101,16 +101,17 @@ Questions 1–3 decide whether deadweight loss shrinks or grows. Question 4 is a
 
 **(a)** 5 + 10 = **15%**. The richest 20% receive **50%**.
 
-**(b)** Horizontal axis: cumulative percentage of households (poorest first). Vertical axis: cumulative percentage of income. Line of perfect equality from (0, 0) to (100, 100). Lorenz curve through (0, 0), (20, 5), (40, 15), (60, 30), (80, 50) and (100, 100), lying below the line of equality.
+**(b)** The poorest **40%** of households receive **15%** of total income. Both numbers are cumulative: the horizontal axis ranks households from poorest to richest.
 
-**(c)** Gini = 2,000 ÷ (2,000 + 3,000) = **0.40**.
+**(c)** **Country Q.** Its curve bows farther from the line of equality, so its income is less equally distributed and its Gini is higher.
 
 **(d)** **Regressive.** The average tax rate is \\$2,500 ÷ \\$25,000 = **10%** for the lower income and \\$5,000 ÷ \\$100,000 = **5%** for the higher income: the rate falls as income rises.
 
 **(e)** The Lorenz curve for after-tax income moves **away from** the line of equality, and the Gini coefficient **rises**.
 
 ### Scoring Notes
-- In (a), giving 10% (the second quintile alone) for the poorest 40% loses the point: the share is **cumulative**.
+- In (a) and (b), giving 10% (the second quintile alone) for the poorest 40% loses the point: the share is **cumulative**.
+- In (c), "Country S, because its curve is closer to equality" reverses the relationship: closer to the diagonal means a **lower** Gini.
 - In (d), "the richer household pays more, so it is progressive" earns nothing. The classification depends on the **percentage** of income, not on dollars.
 - In (e), the curve and the Gini must move **together**: away from equality means a higher Gini.
       `
@@ -123,17 +124,17 @@ Questions 1–3 decide whether deadweight loss shrinks or grows. Question 4 is a
 
 1) Using Country Q's shares (5%, 10%, 15%, 20%, 50%), what is the cumulative share of income, in percent, of the poorest 80% of households?
 
-2) On another country's Lorenz diagram (axes 0 to 100), area A is 1,600. What is its Gini coefficient? (decimal)
+2) A new transfer program moves Country Q's Lorenz curve toward the line of equality. Does its Gini coefficient rise or fall? (one word)
 
 3) Under a different tax, a household earning \\$40,000 pays \\$4,800. What is its average tax rate? (percent, number only)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['50', '0.32', '12'],
+        correctAnswers: ['50', 'fall', '12'],
         hint1: 'Add the shares of the four poorest quintiles, or subtract the richest quintile\'s share from 100.',
-        hint2: 'A + B = 5,000 when both axes run to 100.',
+        hint2: 'Closer to the diagonal means a more equal distribution.',
         hint3: 'Average tax rate = tax ÷ income.',
-        explanation: '1) 5 + 10 + 15 + 20 = 50%, which is also 100 − 50. 2) 1,600 ÷ 5,000 = 0.32. 3) \\$4,800 ÷ \\$40,000 = 12%. If a household earning \\$160,000 paid \\$12,800 (8%) under the same tax, the tax would be regressive.'
+        explanation: '1) 5 + 10 + 15 + 20 = 50%, which is also 100 − 50. 2) The Gini falls, because the curve now lies closer to the line of equality. 3) \\$4,800 ÷ \\$40,000 = 12%. If a household earning \\$160,000 paid \\$12,800 (8%) under the same tax, the tax would be regressive.'
       }
     },
     {

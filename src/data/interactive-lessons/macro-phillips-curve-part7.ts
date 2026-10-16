@@ -149,10 +149,11 @@ Choose the term that completes each statement.
 
 ### Expectations
 
-| Expectations | Effect of a temporary burst of inflation | Cost of disinflation |
+| Situation | What happens to expected inflation | Phillips curve result |
 |---|---|---|
-| Follow recent inflation | SRPC shifts up; inflation tends to persist | A period of unemployment above the natural rate |
-| Anchored at a credible goal (the Fed's goal is 2%) | SRPC stays put; inflation returns to the goal | Smaller, since expectations do not need to fall |
+| Actual inflation above expected | Rises | SRAS shifts left; SRPC shifts up until it crosses the LRPC at the new rate |
+| Actual inflation below expected | Falls | SRAS shifts right; SRPC shifts down |
+| Actual equals expected | No change | Long-run equilibrium on the LRPC |
 
 ### Policy
 

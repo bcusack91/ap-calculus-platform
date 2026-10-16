@@ -141,7 +141,7 @@ In a competitive market, demand (MSB) is **P = 100 − Q** and marginal private 
 | Lorenz point | Cumulative % of households (poorest first) vs cumulative % of income |
 | Share of a single quintile | Height at its right end minus height at its left end |
 | Share of the richest 20% | 100 minus the height at 80 |
-| Gini coefficient | A ÷ (A + B); with axes 0 to 100, A ÷ 5,000 |
+| Gini coefficient | 0 = perfect equality, 1 = perfect inequality; a curve farther from the diagonal has a higher Gini (you read it, you do not calculate it) |
 | Classify a tax | Compare **average** tax rates across incomes: rising = progressive, constant = proportional, falling = regressive |
 | Average vs marginal rate | Average = total tax ÷ income; marginal = rate on the next dollar |
 

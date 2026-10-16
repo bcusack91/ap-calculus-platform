@@ -15,7 +15,7 @@ export const macroPhillipsCurvePart5Data = {
 |---------|
 | 📖 Inflation Rate vs. Price Level |
 | What Shifts Which Curve |
-| Anchored Expectations |
+| Gaps on the Phillips Curve |
 | Long-Run Inflation and Money Growth |
 
 > 🔑 **Key Concept:** Most lost points on Phillips curve questions come from a handful of mix-ups: treating the inflation rate as the price level, calling disinflation "deflation," assuming full employment means zero unemployment, and shifting the wrong curve. This part sorts them out and connects the long-run Phillips curve to money growth.
@@ -126,19 +126,22 @@ The LRPC never sits at 0% unemployment. The natural rate includes frictional and
       id: 'macrophi5-anchored',
       type: 'text' as const,
       content: `
-## Anchored Expectations
+## Gaps on the Phillips Curve
 
-In Part 3, expectations followed **recent experience**: a year of 5% inflation made people expect 5%. Expectations can also be **anchored**: people expect inflation to return to a level the central bank has committed to and has hit reliably in the past. The Federal Reserve has a stated longer-run goal of **2% inflation**.
+An economy is **always** somewhere on its SRPC (CED MOD-3.A.2). Long-run equilibrium is where the SRPC crosses the LRPC (MOD-3.A.4). Every other point shows an output gap (MOD-3.A.5):
 
-| | Expectations follow recent inflation | Expectations anchored at the goal |
-|---|---|---|
-| Inflation jumps to 4% for one year because of strong demand | Expected inflation rises toward 4%; the SRPC shifts up | Expected inflation stays near 2%; the SRPC stays put |
-| What policy must do to restore 2% | Engineer a period of unemployment above the natural rate (Part 3, Case 2) | Less; the economy moves back down the same SRPC as demand cools |
-| A supply shock raises inflation for a time | Risk of a lasting upward SRPC shift | Inflation tends to return to the goal once the shock passes |
+| Point on the SRPC | Unemployment vs. natural rate | AD-AS picture | Gap |
+|---|---|---|---|
+| **Left** of the LRPC (above the crossing) | Below | Real GDP above full employment | **Inflationary (positive)** |
+| **On** the LRPC | Equal | Real GDP at full employment | **None** |
+| **Right** of the LRPC (below the crossing) | Above | Real GDP below full employment | **Recessionary (negative)** |
 
-### Why credibility is valuable
+### Example
+The natural rate is 5%, and the economy is on its SRPC at 7% unemployment and 1% inflation. The point lies right of the LRPC, so there is a **recessionary gap** with 2 percentage points of cyclical unemployment.
 
-Anchored expectations keep the SRPC from drifting up after every burst of inflation. That is why central banks explain their goals publicly and act to protect their credibility: a credible commitment makes disinflation less costly and makes a supply shock less likely to turn into lasting inflation.
+### Two traps
+1. **"High inflation means an inflationary gap."** Not by itself. The gap depends on where unemployment sits relative to the natural rate. After a negative supply shock, inflation can be high while the economy is in a recessionary gap.
+2. **"A point below the crossing is below the LRPC."** The LRPC is vertical, so compare left and right: below the crossing on a downward-sloping SRPC means **right** of the LRPC.
 `
     },
     {
@@ -164,15 +167,15 @@ Choose the term that completes each statement.
             options: ['SRPC up', 'LRPC right', 'LRPC left', 'SRPC down']
           },
           {
-            label: 'When expectations are anchored, a one-year burst of demand-driven inflation causes ___.',
-            options: ['a movement along the SRPC', 'an upward shift of the SRPC', 'a shift of the LRPC', 'a rise in the natural rate']
+            label: 'A point on the SRPC to the left of the LRPC shows ___.',
+            options: ['an inflationary gap', 'a recessionary gap', 'long-run equilibrium', 'a rise in the natural rate']
           }
         ],
-        correctAnswers: ['disinflation', 'zero', 'SRPC up', 'a movement along the SRPC'],
+        correctAnswers: ['disinflation', 'zero', 'SRPC up', 'an inflationary gap'],
         hint1: 'Is the price level still rising when the inflation rate is 3%?',
         hint2: 'The natural rate is frictional plus structural, so what is left over at full employment?',
-        hint3: 'Anchored expectations do not move with a temporary burst of inflation.',
-        explanation: 'A positive but lower inflation rate is disinflation. Full employment means the actual rate equals the natural rate, so cyclical unemployment is zero. Higher expected inflation shifts the SRPC up, and with anchored expectations a demand-driven burst is just a movement along the existing SRPC.'
+        hint3: 'Left of the LRPC means unemployment is below the natural rate.',
+        explanation: 'A positive but lower inflation rate is disinflation. Full employment means the actual rate equals the natural rate, so cyclical unemployment is zero. Higher expected inflation shifts the SRPC up, and a point left of the LRPC has unemployment below the natural rate, which is an inflationary gap.'
       }
     },
     {
@@ -229,15 +232,15 @@ In the long run, money is **neutral**: faster money growth raises the inflation 
             explanation: 'With constant velocity, inflation is about money growth minus real GDP growth: 9% − 3% = 6%. Answering 9% ignores real growth, 3% is the real growth rate itself, and 12% adds the two instead of subtracting.'
           },
           {
-            question: 'Expected inflation is anchored at the central bank\'s 2% goal. A one-year jump in inflation to 4% caused by strong demand will most likely',
+            question: 'The natural rate of unemployment is 5%. An economy is on its SRPC at 7% unemployment and 1% inflation. This point shows',
             options: [
-              'leave the SRPC where it was',
-              'shift the SRPC up so it crosses the LRPC at 4%',
-              'shift the LRPC left by 2 percentage points',
-              'shift the SRPC down as people expect less'
+              'a recessionary gap',
+              'an inflationary gap with low unemployment',
+              'long-run equilibrium at the natural rate',
+              'a leftward shift of the long-run curve'
             ],
             correctAnswer: 0,
-            explanation: 'With anchored expectations, people still expect 2%, so a demand-driven jump is a movement along the existing SRPC. The SRPC shifts up only if expected inflation rises, demand does not move the LRPC, and nothing here lowers expected inflation.'
+            explanation: 'Unemployment above the natural rate puts the point to the right of the LRPC, which is a recessionary gap with 2 points of cyclical unemployment. An inflationary gap needs unemployment below 5%, long-run equilibrium needs unemployment at 5%, and a single point says nothing about a shift of the LRPC.'
           },
           {
             question: 'In the long run, a permanently faster rate of money growth leads to',

@@ -35,7 +35,6 @@ export const whChallenges21stCenturyPart1Data = {
 | **Migration crises** | Mass refugee and economic-migrant flows (Syrian, Venezuelan, sub-Saharan African) |
 | **Right- and left-populism** | Anti-establishment political movements challenging the post-1945 liberal consensus |
 | **Algorithmic disruption** | AI, social media, automation reshaping labor markets and political discourse |
-| **Great power rivalry** | U.S.-China competition; Russian revanchism (2014 Crimea, 2022 Ukraine invasion) |
 
 ## 9/11 and the Global War on Terror
 
@@ -57,7 +56,7 @@ export const whChallenges21stCenturyPart1Data = {
 | Cold War (1945–1991) | 21st century |
 |---|---|
 | State-vs-state nuclear standoff | Non-state networked terrorism |
-| Bipolar superpower rivalry | Multi-polar with U.S.-China primary axis |
+| Superpower proxy wars | Interventions against non-state networks (Afghanistan, Iraq) |
 | Industrial pollution localized | Planetary climate change |
 | National epidemics | Global pandemics in weeks (COVID-19) |
 | Print, radio, TV gatekeepers | Algorithmic social media |
@@ -170,13 +169,13 @@ export const whChallenges21stCenturyPart1Data = {
           {
             question: 'Which response best demonstrates AP comparison skill in contrasting the dominant security threats of the Cold War era with those of the 21st century?',
             options: [
-              'Cold War threats centered on nuclear standoff between two state blocs, while 21st-century threats are more transnational, such as terrorism, climate change, pandemics, and great-power rivalry',
+              'Cold War threats centered on nuclear standoff between two state blocs, while 21st-century threats are more transnational, such as terrorism, climate change, and pandemics',
               'Cold War and 21st-century threats are essentially the same, since both periods have centered on a bipolar nuclear standoff between the United States and a single rival superpower bloc in Europe',
               'Cold War threats centered on stateless terrorist networks, while 21st-century threats center on a nuclear standoff between two blocs, the reverse of the earlier pattern',
               'Cold War and 21st-century threats both centered on environmental dangers, with military rivalry between great powers playing only a minor role in either period'
             ],
             correctAnswer: 0,
-            explanation: 'Cold War = bipolar state nuclear standoff; 21st century = multi-polar, transnational, networked threats. The shift is the canonical AP framing.'
+            explanation: 'Cold War = bipolar state nuclear standoff; 21st century = transnational, networked threats that no single state controls. The shift is the canonical AP framing.'
           },
           {
             question: 'Which response best explains why climate change is considered the defining "collective action problem" of the 21st century?',

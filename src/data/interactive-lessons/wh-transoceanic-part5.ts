@@ -79,7 +79,7 @@ A commodity chain traces a product from raw material extraction through producti
 
 - **Core regions (industrialized):** Process raw materials; add value through manufacturing; export finished goods; receive higher prices
 - **Peripheral regions (colonial/agricultural):** Export raw materials; receive lower prices; import more expensive finished goods; limited manufacturing
-- **Result:** Terms of trade consistently favored core (industrialized) over periphery (raw material producers)
+- **Result:** Most of the profit from processing, shipping and selling stayed in industrialized countries, while producing regions specialized in exporting raw materials
 
 > **Economic Dependency**
 
@@ -122,15 +122,15 @@ The global commodity system was not a free market of equals:
             explanation: 'Imperial commodity chain creation is AP\'s analysis: the East India Company\'s trade with China required purchasing Chinese tea (China set prices; refused most European goods). The only acceptable Chinese payment was silver or opium (producing the Opium Wars). Robert Fortune (botanist) disguised himself as a Chinese merchant (1848-1851) and illegally exported Chinese tea plants and manufacturing knowledge. British planters established Assam tea gardens using indentured Indian labor; within decades, Indian tea competed with Chinese tea on price and quality. By 1900, Indian tea exports exceeded Chinese. Britain had remade the global tea commodity chain to serve British imperial economic interests.'
           },
           {
-            question: 'The terms of trade consistently favoring industrial exporters over agricultural/raw material exporters demonstrates:',
+            question: 'Ceylon\'s tea, Cuba\'s sugar and Chile\'s nitrates in the late 1800s best illustrate which development?',
             options: [
-              'Exporters of raw materials had to ship ever larger quantities to buy the same amount of manufactured goods',
-              'Raw-material and manufactured goods prices rose and fell together, giving neither side an edge',
-              'Food exporters gained the advantage, since buyers paid a premium for essentials over factory goods',
-              'Terms of trade did not yet matter, because most nineteenth-century trade was settled in barter',
+              'Colonial regions industrialized quickly by processing their own raw materials at home',
+              'Producing regions set world prices, since industrial countries depended on their exports',
+              'Most colonial exports were factory goods sold to buyers in Asian markets',
+              'Export economies came to depend on one or two raw materials or cash crops',
             ],
-            correctAnswer: 0,
-            explanation: 'Terms of trade as mechanism of wealth transfer is AP\'s economics analysis: the Prebisch-Singer thesis (developed 1950) argued that raw material prices decline relative to manufactured goods prices over time, systematically transferring income from commodity-producing periphery to industrial core. Even if a developing country exports more copper each year, if copper prices are falling and manufactured import prices are rising, the country grows poorer in real purchasing power terms. 19th-century data generally supports this: British terms of trade improved significantly 1870-1914 (British manufactured exports could buy more imported food and raw materials over time). The Prebisch-Singer thesis became the economic foundation for 20th-century development economics and argues that the global trade system structurally disadvantages commodity producers.'
+            correctAnswer: 3,
+            explanation: 'In the age of economic imperialism, many colonial and semi-colonial economies specialized in exporting one or two raw materials or cash crops, which left them exposed to price swings set in distant markets. They did not industrialize by processing their own exports, prices were set in London, New York and Amsterdam rather than by producers, and their exports were raw materials, not factory goods.'
           },
           {
             question: 'The rubber commodity chain from the Congo Free State (Leopold II, 1885-1908) demonstrates an extreme case of which economic pattern?',
@@ -153,12 +153,12 @@ The global commodity system was not a free market of equals:
       exercise: {
         dropdowns: [
           {
-            label: 'The economic analysis showing that raw material prices decline relative to manufactured good prices over time, systematically transferring income from commodity-exporting periphery to industrial core, was the ___',
+            label: 'Industrial states and their businesses using economic power to control the trade and resources of other regions, as Britain did in India and Argentina, practiced ___',
             options: [
-            'Prebisch-Singer thesis',
-            'Comparative advantage theory',
-            'Mercantilism',
-            'Free trade theory',
+            'Economic imperialism',
+            'Import substitution',
+            'Self-strengthening',
+            'Isolationism',
             ]
           },
           {
@@ -181,14 +181,14 @@ The global commodity system was not a free market of equals:
           }
         ],
         correctAnswers: [
-          'Prebisch-Singer thesis',
+          'Economic imperialism',
           'Leopold II',
           'Mono-culture dependency',
         ],
-        hint1: 'Prebisch-Singer 1950 — raw material prices fall relative to manufactured goods — terms of trade deteriorate for commodity exporters — development economics foundation',
+        hint1: 'Control through trade, investment and loans rather than only through formal colonies',
         hint2: 'Leopold II Belgium — Congo Free State 1885-1908 — personal ownership — rubber quotas — hand cutting — 10 million deaths — Casement Morel reform campaign',
         hint3: 'Mono-culture — one crop economy — vulnerable to price collapse — no diversification — Amazon rubber Cuba sugar Ceylon tea Ghana cocoa — development economics problem',
-        explanation: 'The Prebisch-Singer thesis provides the economic analytical framework for understanding why commodity-exporting structures disadvantage peripheral economies; Leopold II demonstrates the extreme extractive end of colonial commodity chains; and mono-culture dependency explains the structural economic vulnerability that colonial commodity chains created — together they show the economic, political, and developmental dimensions of global commodity chain organization.'
+        explanation: 'Economic imperialism describes how industrial powers used trade, investment and loans to shape other economies, even where they did not rule formally; Leopold II demonstrates the extreme extractive end of colonial commodity chains; and mono-culture dependency explains the structural economic vulnerability that colonial commodity chains created — together they show the economic, political, and developmental dimensions of global commodity chain organization.'
       }
     },
     {

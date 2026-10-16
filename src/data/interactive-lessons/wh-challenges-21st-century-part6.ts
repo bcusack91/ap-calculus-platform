@@ -14,7 +14,7 @@ export const whChallenges21stCenturyPart6Data = {
 | Section |
 |---|
 | HIPP for 21st-century documents |
-| Document bank: Bush Doctrine speech, IPCC AR6, Putin\'s 2022 Ukraine speech, Greta Thunberg UN, Xi Jinping BRI |
+| Document bank: Bush Doctrine speech, IPCC AR6, Wangari Maathai\'s Nobel lecture, Greta Thunberg UN, Xi Jinping BRI |
 | AP SAQ structure for 21st-century prompts |
 | Common AP traps to avoid |
 
@@ -29,7 +29,7 @@ export const whChallenges21stCenturyPart6Data = {
 
 | Letter | Question | 21st-Century Application |
 |---|---|---|
-| **H**istorical context | What was happening when this was produced? | Pre/post 9/11? Pre/post 2008? Pre/post COVID? Pre/post Ukraine invasion? |
+| **H**istorical context | What was happening when this was produced? | Pre/post 9/11? Pre/post 2008? Pre/post COVID? |
 | **I**ntended audience | Who was this for? | Domestic public? International alliance partners? Adversaries? Future leaders? |
 | **P**urpose | What was the author trying to do? | Justify war? Mobilize climate action? Defend a worldview? Project power? |
 | **P**oint of view | What position is the author writing from? | Head of state? Scientific body? Activist? International organization? |
@@ -46,10 +46,10 @@ export const whChallenges21stCenturyPart6Data = {
 
 - **HIPP:** Multi-volume scientific assessment by hundreds of scientists across more than 60 countries; intended audience is policymakers and the global public; purpose is to synthesize the state of climate science and to inform the Paris Agreement implementation; POV is multilateral scientific consensus body operating under UN auspices.
 
-> **3. Vladimir Putin, Address Announcing Invasion of Ukraine (February 24, 2022)**
-> "I have made the decision of a special military operation."
+> **3. Wangari Maathai, Nobel Peace Prize Lecture (Oslo, December 10, 2004)**
+> "In 1977, when we started the Green Belt Movement, I was partly responding to needs identified by rural women, namely lack of firewood, clean drinking water, balanced diets, shelter and income."
 
-- **HIPP:** Speech delivered to the Russian people via state TV at the moment of launching the largest European war since 1945; intended audience is the Russian public, the Ukrainian leadership, and Western governments; purpose is to justify the invasion as defensive against NATO expansion and as a "denazification" of Ukraine; POV is Russian president pursuing revanchist great-power restoration.
+- **HIPP:** Lecture delivered after Maathai became the first African woman to win the Nobel Peace Prize; intended audience is the Nobel committee, world leaders and the global public; purpose is to link environmental conservation to democracy, peace and the empowerment of women; POV is a Kenyan biologist and activist whose grassroots movement of rural women planted tens of millions of trees and who had been jailed for opposing Kenya's one-party government.
 
 > **4. Greta Thunberg, UN Climate Action Summit Speech (September 23, 2019)**
 > "How dare you? You have stolen my dreams and my childhood with your empty words."
@@ -74,8 +74,8 @@ For a 21st-century SAQ:
 | Trap | Why It Costs Points |
 |---|---|
 | Calling 21st-century events "current events" rather than historical | AP grades them as history; analyze them with HIPP |
-| Treating the 9/11 era as the entire 21st century | The post-2008 "crisis decade" and post-2020 "polycrisis" are equally important phases |
-| Ignoring China | The post-1978 Chinese rise is the single largest 21st-century geopolitical shift |
+| Treating the 9/11 era as the entire 21st century | The post-2008 "crisis decade" and the post-2020 pandemic era are equally important phases |
+| Ignoring China | The post-1978 Chinese rise is the single largest shift in the 21st-century global economy |
 | Quoting documents without HIPP | The complexity point requires sourcing |
 | Treating "globalization" and "21st-century challenges" as opposites | Many 21st-century challenges (climate, pandemics, terrorism) are products of globalization |
 
@@ -100,15 +100,15 @@ For a 21st-century SAQ:
             explanation: 'January 2002, post-9/11, post-Afghanistan, pre-Iraq is the canonical sourcing for the Axis of Evil speech.'
           },
           {
-            question: "Which best identifies the intended audience and purpose of Putin's February 24, 2022 speech announcing the invasion of Ukraine?",
+            question: "Which best identifies the point of view that shapes Wangari Maathai's 2004 Nobel lecture on the Green Belt Movement?",
             options: [
-              "A state TV address launching the largest European war since 1945; its audience was Russians, Ukraine's leaders, and the West; its purpose was to cast the invasion as defense against NATO",
-              "A protest to the UN General Assembly; its audience was the community of states; its purpose was to accuse NATO of aggression while affirming Russia's respect for Ukraine's borders",
-              "A peace address to President Zelensky; its audience was the Ukrainian government; its purpose was to settle earlier disputes through talks and rule out any invasion",
-              "A policy address to the Russian Duma; its audience was Russian legislators; its purpose was to announce domestic economic reforms unrelated to Ukraine or to NATO's expansion eastward after 1991"
+              "A World Bank economist arguing that large export plantations offered rural Africa the best path to development",
+              "A British colonial forestry officer defending the forest reserves that the colonial state had created in Kenya",
+              "A Kenyan activist who organized rural women to plant trees and tied conservation to democracy",
+              "A Chinese diplomat promoting Belt and Road loans for new Kenyan railways, ports and highways"
             ],
-            correctAnswer: 0,
-            explanation: 'Putin\'s 2022 invasion speech: a state-TV address to the Russian public, Ukrainian leadership, and Western governments, meant to justify the invasion as defensive against NATO and to declare a "denazification" of Ukraine.'
+            correctAnswer: 2,
+            explanation: 'Maathai spoke as the founder of a grassroots environmental movement of rural Kenyan women, which shapes her claim that conservation, women\'s needs and democratic rights are linked. She was a critic of top-down development, not a World Bank planner, she spoke decades after colonial rule, and she was a Kenyan activist rather than a foreign diplomat.'
           }
         ]
       }

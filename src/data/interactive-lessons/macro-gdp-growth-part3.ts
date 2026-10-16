@@ -132,7 +132,7 @@ The money a firm raises by selling new stock may *finance* the purchase of a mac
 | A U.S. household buys a new Ford made in Michigan | Yes | **C**: new final good, domestic production |
 | A U.S. household buys a new car made in Germany | Net effect **zero** | Adds to **C** and adds the same amount to **M**, so GDP is unchanged |
 | A Japanese automaker's plant in Tennessee builds a car | Yes | **U.S. GDP**: produced inside U.S. borders, whoever owns the plant |
-| A U.S. firm's factory in Mexico produces a refrigerator | No (for the U.S.) | It is Mexican GDP. Production abroad by U.S. firms counts in U.S. **GNP**, not GDP |
+| A U.S. firm's factory in Mexico produces a refrigerator | No (for the U.S.) | It is Mexican GDP: GDP counts production inside a country's borders, whoever owns the factory |
 | A Boeing jet sold to an airline in France | Yes | **X**: domestic production bought by foreigners |
 | A used car sold by one person to another | No | It was counted in the year it was built |
 | A dealer buys a used car for \\$12,000 and resells it for \\$14,000 | **\\$2,000** only | The dealer's markup pays for a current service; the car itself is used |

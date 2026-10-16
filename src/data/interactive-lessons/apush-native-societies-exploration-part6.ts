@@ -73,7 +73,7 @@ From May 2027 all three SAQs are required and all three are sourced: SAQ 1 uses 
 
 | Trap | Why It Costs Points |
 |---|---|
-| Treating "Native Americans" as a single homogeneous group | The AP exam rewards naming specific societies (Aztec, Iroquois, Pueblo, etc.) |
+| Treating "Native Americans" as a single homogeneous group | The AP exam rewards naming specific societies (Pueblo, Mississippian, Iroquois, etc.) |
 | Crediting Columbus with "discovering" America | Indigenous societies had inhabited the Americas for at least 15,000 years |
 | Ignoring the Columbian Exchange's biological dimension | Disease killed up to 90% of Indigenous populations — central to all 1500s history |
 | Treating Spanish, French, and English colonization as identical | Each had distinct labor systems, settlement patterns, and Indigenous relationships |

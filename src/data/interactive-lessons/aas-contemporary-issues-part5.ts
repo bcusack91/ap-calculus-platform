@@ -9,7 +9,7 @@ export const aasContemporaryIssuesPart5Data = {
     {
       id: "aasci5-immigration",
       type: 'text' as const,
-      content: "## 🌍 New arrivals: Black immigration since 1965\n\n| Year | Law | Effect on Black immigration |\n|---|---|---|\n| **1965** | Immigration and Nationality Act (Hart-Celler) | Ended national-origins quotas that had favored Europe. |\n| **1980** | Refugee Act | Created a standard refugee system; later admissions included Ethiopians, Somalis, Sudanese and Liberians. |\n| **1990** | Immigration Act | Created the Diversity Visa lottery, which many African immigrants have used. |\n\n**What the numbers show** (Pew Research Center, 2022): the Black immigrant population grew from about 816,000 in 1980 to about 4.6 million in 2019, roughly one in ten Black people living in the United States. Jamaica and Haiti are the largest countries of origin, and Nigeria and Ethiopia lead among African countries.\n\n### Continuity with a longer history\n\nBlack immigration is not new. Caribbean migrants shaped Harlem in the 1920s: Arturo Schomburg was born in Puerto Rico, and Marcus Garvey arrived from Jamaica in 1916. What changed after 1965 is the **scale** and the **range of origins**, especially the rise of African-born immigrants.\n\n### Identity in a diverse community\n\n- **Afro-Latino identity:** in a Pew survey published in 2016, about a quarter of U.S. Latinos identified as Afro-Latino, Afro-Caribbean or of African descent.\n- **Ethnic and racial identity together:** many immigrants and their children identify both by national origin (Nigerian American, Haitian American) and as Black.\n- **Debate:** some writers and organizations argue for distinguishing descendants of people enslaved in the United States from recent immigrants in policy debates such as reparations; others argue that shared experiences of race in America make one Black political community. Both positions are argued within Black communities."
+      content: "## 🌍 New arrivals: Black immigration since 1965\n\n| Year | Law | Effect on Black immigration |\n|---|---|---|\n| **1965** | Immigration and Nationality Act (Hart-Celler) | Ended national-origins quotas that had favored Europe. |\n| **1980** | Refugee Act | Created a standard refugee system; later admissions included Ethiopians, Somalis, Sudanese and Liberians. |\n| **1990** | Immigration Act | Created the Diversity Visa lottery, which many African immigrants have used. |\n\n**What the numbers show** (Pew Research Center, 2022): the Black immigrant population grew from about 816,000 in 1980 to about 4.6 million in 2019, roughly one in ten Black people living in the United States. Jamaica and Haiti are the largest countries of origin, and Nigeria and Ethiopia lead among African countries.\n\n### Continuity with a longer history\n\nBlack immigration is not new. Caribbean migrants shaped Harlem in the 1920s: Arturo Schomburg was born in Puerto Rico, and Marcus Garvey arrived from Jamaica in 1916. What changed after 1965 is the **scale** and the **range of origins**, especially the rise of African-born immigrants.\n\n### Identity in a diverse community\n\n- **Afro-Latino identity:** in a Pew survey published in 2016, about a quarter of U.S. Latinos identified as Afro-Latino, Afro-Caribbean or of African descent.\n- **Ethnic and racial identity together:** many immigrants and their children identify both by national origin (Nigerian American, Haitian American) and as Black.\n- **One name, many histories:** the framework (EK 4.16.A.4) describes \"Black\" as a unifying term for shared African heritage and experience that includes descendants of people enslaved in the United States (who may call themselves African American), recent immigrants (who may identify by race and nationality, such as \"Afro-Colombian\") and multiracial people."
     },
     {
       id: "aasci5-check",
@@ -18,15 +18,15 @@ export const aasContemporaryIssuesPart5Data = {
       exercise: {
         "questions": [
           {
-            "question": "Which 1965 change in U.S. law did the most to make large-scale Caribbean and African immigration possible?",
+            "question": "According to the course framework, what has driven the near doubling of the Black immigrant population in the United States since 2000?",
             "options": [
-              "Granting citizenship to all residents of Haiti",
-              "Establishing a standard refugee system",
-              "Ending the national-origins quotas",
-              "Creating the Diversity Visa lottery"
+              "Arrivals mainly from Africa and the Caribbean",
+              "Newcomers mainly from Europe and from Canada",
+              "The return of the descendants of the enslaved",
+              "Large-scale migration out of the rural South"
             ],
-            "correctAnswer": 2,
-            "explanation": "The 1965 Immigration and Nationality Act ended the national-origins quotas that had favored European immigrants. The Diversity Visa came in 1990, the refugee system in 1980, and no law granted citizenship to Haitian residents."
+            "correctAnswer": 0,
+            "explanation": "EK 4.16.A.2 attributes the growth mainly to immigrants from Africa and the Caribbean. European and Canadian arrivals are not the source, descendants of the enslaved are not immigrants, and the Great Migration out of the South was internal migration in an earlier century."
           },
           {
             "question": "Which statement best expresses continuity in the history of Black immigration to the United States?",
@@ -45,7 +45,7 @@ export const aasContemporaryIssuesPart5Data = {
     {
       id: "aasci5-culture",
       type: 'text' as const,
-      content: "## 🎤 Culture as commentary: from hip hop to Afrofuturism\n\n| Year | Work | Why it matters |\n|---|---|---|\n| **1970s** | Hip hop emerges at block parties in the Bronx | DJs, MCs, breakdancers and graffiti writers built a culture in neighborhoods hit by deindustrialization and disinvestment. |\n| **1982** | Grandmaster Flash and the Furious Five, \"The Message\" | Described poverty, violence and pressure in the city; a turning point toward social commentary in rap. |\n| **1987** | Toni Morrison, *Beloved* | A novel about the afterlife of slavery, based on the case of Margaret Garner; won the Pulitzer Prize in 1988. |\n| **1989** | Public Enemy, \"Fight the Power\" | Written for Spike Lee's *Do the Right Thing*; confronted racism and policing. |\n| **2015** | Kendrick Lamar, \"Alright\" | Its chorus became a chant at protests against police violence. In 2018 Lamar won the Pulitzer Prize for Music for the album *DAMN.* |\n\n### Afrofuturism\n\n**Afrofuturism** imagines Black pasts and futures through science fiction, fantasy and technology. The cultural critic Mark Dery used the term in a 1993 essay, but the tradition is older.\n\n| Artist | Work | Afrofuturist idea |\n|---|---|---|\n| **Sun Ra** (1914–1993) | Jazz bandleader who presented himself as a visitor from Saturn | Space as an escape from American racism. |\n| **Octavia Butler** (1947–2006) | *Kindred* (1979); *Parable of the Sower* (1993) | Time travel to slavery; a future shaped by climate and social collapse. |\n| **Janelle Monáe** | Albums built around an android alter ego | The android as a figure for people treated as less than human. |\n| **Ryan Coogler** | *Black Panther* (2018) | Wakanda, an African nation never colonized, as an image of what Africa might have been. |\n\n> 🔑 **Key Concept:** Afrofuturism uses the future to comment on the past and present. *Kindred* sends a modern Black woman back to an antebellum plantation; *Black Panther* asks what African development might have looked like without colonialism."
+      content: "## 🎤 Culture as commentary: from hip hop to Afrofuturism\n\n| Year | Work | Why it matters |\n|---|---|---|\n| **1970s** | Hip hop emerges at block parties in the Bronx | DJs, MCs, breakdancers and graffiti writers built a culture in neighborhoods hit by deindustrialization and disinvestment. |\n| **1982** | Grandmaster Flash and the Furious Five, \"The Message\" | Described poverty, violence and pressure in the city; a turning point toward social commentary in rap. |\n| **1989** | Public Enemy, \"Fight the Power\" | Written for Spike Lee's *Do the Right Thing*; confronted racism and policing. |\n| **2015** | Kendrick Lamar, \"Alright\" | Its chorus became a chant at protests against police violence. In 2018 Lamar won the Pulitzer Prize for Music for the album *DAMN.* |\n\n### Afrofuturism\n\n**Afrofuturism** imagines Black pasts and futures through science fiction, fantasy and technology. The cultural critic Mark Dery used the term in a 1993 essay, but the tradition is older.\n\n| Artist | Work | Afrofuturist idea |\n|---|---|---|\n| **Sun Ra** (1914–1993) | Jazz bandleader who presented himself as a visitor from Saturn | Space as an escape from American racism. |\n| **Phillis Wheatley** and **Benjamin Banneker** (18th century) | Wheatley's poetry; Banneker's *Almanac and Ephemeris* | Early examples: visions of future freedom after abolition, and a Black astronomer's study of the stars. |\n| **Janelle Monáe** | Albums built around an android alter ego | The android as a figure for people treated as less than human. |\n| **Ryan Coogler** | *Black Panther* (2018) | Wakanda, an African nation never colonized, as an image of what Africa might have been. |\n\n> 🔑 **Key Concept:** Afrofuturism uses the future to comment on the past and present. Sun Ra's music imagined space as a refuge from American racism; *Black Panther* asks what African development might have looked like without colonialism."
     },
     {
       id: "aasci5-match",
@@ -54,42 +54,42 @@ export const aasContemporaryIssuesPart5Data = {
       exercise: {
         "dropdowns": [
           {
-            "label": "Octavia Butler's *Kindred* (1979) uses time travel to ___",
+            "label": "Hip-hop began in the 1970s as a culture created by ___",
             "options": [
-              "retell the Margaret Garner case as a ghost story",
-              "imagine an African nation that was never colonized",
-              "place a modern Black woman inside antebellum slavery",
-              "describe life in the Bronx during the 1970s"
+              "young Black and Latino New Yorkers in the Bronx",
+              "Hollywood studios making films about the city",
+              "church choirs in the rural South",
+              "a federal arts program in Chicago"
             ]
           },
           {
-            "label": "Toni Morrison's *Beloved* (1987) draws on ___",
+            "label": "Rock and roll was pioneered by African American performers such as ___",
             "options": [
-              "a jazz musician's claim to have come from Saturn",
-              "the protest chants heard in Ferguson in 2014",
-              "the 1992 Los Angeles uprising after the King verdict",
-              "the case of a woman who fled slavery in 1856"
+              "Sister Rosetta Tharpe, Bo Diddley and Little Richard",
+              "Grandmaster Flash and Queen Latifah",
+              "Sun Ra and Janelle Monáe",
+              "Oscar Micheaux and Don Cornelius"
             ]
           },
           {
-            "label": "Grandmaster Flash and the Furious Five's \"The Message\" (1982) is significant because it ___",
+            "label": "In hip-hop, \"the break\" refers to ___",
             "options": [
-              "became a chant at protests in the 2010s",
-              "turned rap toward commentary on urban poverty",
-              "was written for a Spike Lee film about policing",
-              "won a Pulitzer Prize for Music for its album"
+              "the part of a song DJs extended so dancers could show new moves",
+              "a pause in a broadcast for advertisements",
+              "the end of a recording contract",
+              "a graffiti style used on subway cars"
             ]
           }
         ],
         "correctAnswers": [
-          "place a modern Black woman inside antebellum slavery",
-          "the case of a woman who fled slavery in 1856",
-          "turned rap toward commentary on urban poverty"
+          "young Black and Latino New Yorkers in the Bronx",
+          "Sister Rosetta Tharpe, Bo Diddley and Little Richard",
+          "the part of a song DJs extended so dancers could show new moves"
         ],
-        "hint1": "Butler's narrator travels backward, not forward.",
-        "hint2": "Margaret Garner escaped from Kentucky to Ohio.",
-        "hint3": "This 1982 record is earlier than the other songs listed.",
-        "explanation": "*Kindred* sends its narrator to a Maryland plantation, *Beloved* draws on Margaret Garner's 1856 escape, and \"The Message\" pushed rap toward social commentary. \"Fight the Power\" was the Spike Lee song, \"Alright\" the protest chant, and Lamar's *DAMN.* the Pulitzer winner."
+        "hint1": "Think of block parties in one New York City borough.",
+        "hint2": "They modified gospel and blues with new rhythms and electric instruments.",
+        "hint3": "B-boys and b-girls danced during it.",
+        "explanation": "Hip-hop grew from the collaboration of young Black and Latino community members in the Bronx. Tharpe, Bo Diddley and Little Richard laid the foundation for rock and roll, and DJs extended the break to give breakdancers more time to perform."
       }
     },
     {
@@ -115,7 +115,7 @@ export const aasContemporaryIssuesPart5Data = {
             "explanation": "The strongest thesis names a continuity and a change and relates them. The other theses are vague, deny change altogether, or list factors without making a claim."
           },
           {
-            "question": "Afrofuturist works such as *Kindred* and *Black Panther* most often use imagined times and places to ___.",
+            "question": "Afrofuturist works such as Sun Ra's music and the film *Black Panther* most often use imagined times and places to ___.",
             "options": [
               "avoid any reference to Black history",
               "predict specific future technologies",
@@ -123,7 +123,7 @@ export const aasContemporaryIssuesPart5Data = {
               "comment on slavery and colonialism"
             ],
             "correctAnswer": 3,
-            "explanation": "Afrofuturism uses speculative settings to examine real history: *Kindred* revisits slavery, and *Black Panther* imagines an Africa without colonialism. The works are not technology forecasts, they engage Black history directly, and their focus is not space programs."
+            "explanation": "Afrofuturism uses speculative settings to reimagine Black pasts and futures: Sun Ra presented space as a place beyond American racism, and *Black Panther* imagines an African nation never colonized. The works are not technology forecasts, they engage Black history directly, and their focus is not space programs."
           }
         ]
       }

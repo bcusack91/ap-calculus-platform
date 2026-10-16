@@ -14,11 +14,11 @@ export const whSilkRoadsMongolsPart5Data = {
 | Section |
 |---------|
 | 📖 What Moved Along the Silk Roads |
-| Key Merchants and Intermediaries |
+| Trading Cities and Commercial Tools |
 | Caravanserais: Infrastructure of Trade |
 | 📌 Cultural Exchange Through Trade |
 
-> 🔑 **Key Concept:** The Silk Roads were not a single road but a network of routes connecting China to the Mediterranean through Central Asia and Persia. AP questions focus on WHAT moved (not just silk), WHO controlled trade (Central Asian intermediaries), and HOW trade routes changed under Mongol rule.
+> 🔑 **Key Concept:** The Silk Roads were not a single road but a network of routes connecting China to the Mediterranean through Central Asia and Persia. AP questions focus on WHAT moved (not just silk), HOW new commercial tools and trading cities increased the volume of trade after 1200, and how trade routes changed under Mongol rule.
       `
     },
     {
@@ -38,18 +38,18 @@ export const whSilkRoadsMongolsPart5Data = {
               'Grain and timber moved in bulk, while luxury goods were too costly to carry by camel caravan'
             ],
             correctAnswer: 0,
-            explanation: 'The Silk Roads moved goods, people, religions, diseases, and technologies in all directions simultaneously. Chinese silk and porcelain moved west; Central Asian horses (essential for Chinese military) moved east; Buddhism spread from India through Central Asia to China; Islam spread through Central Asian merchants; plague moved from Central Asian rodents westward. AP asks about this multi-directional exchange.'
+            explanation: 'The Silk Roads moved goods, people, religions, diseases, and technologies in all directions simultaneously. Chinese silk and porcelain moved west; Central Asian horses (essential for Chinese military) moved east; Islam spread among Central Asian peoples through merchants and Sufis; plague moved from Central Asian rodents westward. AP asks about this multi-directional exchange.'
           },
           {
-            question: 'Sogdian merchants\' historical significance for Silk Road trade was that they:',
+            question: 'Cities such as Kashgar and Samarkand grew wealthy in the period c. 1200–1450 mainly because they:',
             options: [
-              'Multilingual middlemen who ran trading colonies linking China to Persia and Byzantium for centuries',
-              'Arab Muslim traders who seized control of the Central Asian routes after the rise of Islam',
-              'Chinese court officials who ran the Tang state\'s monopoly on silk exports to the West',
-              'Nomadic herders who bred horses for China but avoided long-distance commerce entirely'
+              'Served as oasis relay points where caravans traded, rested and resupplied as Silk Road commerce expanded',
+              'Controlled the monsoon sea lanes between East Africa and India',
+              'Were capitals of the Ming dynasty, which taxed all goods leaving China by land',
+              'Mined most of the silver that Eurasian merchants used as currency'
             ],
             correctAnswer: 0,
-            explanation: 'The Sogdians (an Iranian-speaking people from modern Uzbekistan) were the quintessential Silk Road merchants c. 500–900 CE. Their letters, discovered in a 4th-century watchtower in western China, document commercial networks, prices, and goods. They were multilingual intermediaries who knew Chinese, Turkic, Persian, and Aramaic — ideal for trade across cultural zones.'
+            explanation: 'Improved commercial practices increased the volume of Silk Road trade and promoted the growth of trading cities at Central Asian oases such as Kashgar and Samarkand. Monsoon sea lanes belong to the Indian Ocean, the Ming capitals were Nanjing and Beijing, and these cities were trading hubs rather than major silver mines.'
           }
         ]
       }
@@ -66,28 +66,26 @@ The Silk Roads were a network of routes moving luxury and high-value goods:
 
 **Eastward to China:**
 - Horses (Central Asian breeds superior to Chinese; essential for military — Song China paid enormous tribute in silver for horses)
-- Glassware (Roman and later Islamic glass)
-- Silver (Roman and later Abbasid coins)
-- Buddhism (India → Central Asia → China, 1st century BCE onward)
-- Islam (Central Asian merchants brought Islam to China by 9th century)
+- Glassware, carpets and metalwork from Persia and the Islamic world
+- Religions carried by merchants and missionaries: Islam spread among Central Asian peoples, and Tibetan Buddhism gained Mongol patrons
 
 **Westward from China:**
 - Silk (the prestige fabric; Chinese silk production techniques guarded as state secret for centuries)
 - Porcelain (Chinese ceramics highly prized across Eurasia)
-- Paper (Chinese invention; spread to Islamic world by 8th century via Samarkand)
+- Paper money and printing (the Yuan issued paper currency, and Persia\'s Ilkhanate briefly copied it in 1294)
 - Gunpowder (gradually diffused westward through Mongol period)
 - Tea (Chinese tea culture spread to Central Asia and beyond)
 
-> **Key Merchants and Intermediaries**
+> **Trading Cities and Commercial Tools**
 
-No single group controlled the entire Silk Road — trade moved in relay:
+No single group controlled the entire Silk Road — trade moved in relay between oasis cities, and new commercial tools made long-distance exchange easier:
 
-| Merchant Group | Era | Role |
+| City or Tool | What It Was | Why It Mattered |
 |---------------|-----|------|
-| **Sogdians** | c. 200–900 CE | Primary Central Asian intermediaries; multilingual traders |
-| **Turks** | c. 500–1200 CE | Controlled key segments; both merchants and raiders |
-| **Arab Muslims** | c. 700–1450 CE | Dominated western portions; Arabic as commercial language |
-| **Mongols** | c. 1230–1350 CE | Created Pax Mongolica protecting entire routes; merchants used paiza |
+| **Kashgar and Samarkand** | Oasis trading cities on the Central Asian routes | Grew wealthy as trade volume rose; mixed Persian, Turkic, Chinese and Islamic cultures |
+| **Bills of exchange and banking houses** | Written promises to pay that could be cashed in another city | Merchants avoided carrying heavy coin across dangerous routes |
+| **Paper money** | State currency issued by Song and Yuan China | Encouraged a money economy and large-scale commerce |
+| **Paiza** | Mongol passport tablets carried by officials and licensed merchants | Guaranteed safe passage and supplies across the khanates (Pax Mongolica) |
 
 > **Caravanserais: Commercial Infrastructure**
 
@@ -101,7 +99,7 @@ Caravanserais (roadside inns for caravans) were the physical infrastructure of S
 > **AP Comparison Anchor**
 
 - **Silk Roads vs. Indian Ocean:** Both moved luxury goods; Indian Ocean was higher volume and eventually more commercially significant; Silk Roads moved more cultural and religious content per unit of commerce
-- **Central Asian intermediaries:** Silk Road success required intermediaries (Sogdians, Turks) who knew multiple languages and cultures — multilingualism was economic capital
+- **Relay trade:** Silk Road success depended on oasis cities and multilingual Persian, Turkic and Arab merchants who linked each leg of the route — credit and paper money let them trade without carrying heavy coin
       `,
     },
     {
@@ -124,15 +122,15 @@ Caravanserais (roadside inns for caravans) were the physical infrastructure of S
             explanation: 'China\'s horse trade is a model AP commodity example. Chinese-bred horses were poorly suited to cavalry; Central Asian (especially Ferghana) horses were essential for the military, and China paid for them with silk, tea and other goods. This shows how military needs drove commercial exchange, and how trade served strategic as well as luxury functions.'
           },
           {
-            question: 'Paper\'s spread from China to the Islamic world (via the Battle of Talas, 751 CE, where Chinese papermakers were captured) demonstrates:',
+            question: 'Bills of exchange and banking houses along the Silk Roads after 1200 mattered chiefly because they:',
             options: [
-              'War captives could carry a technology, and paper then made Islamic books cheaper than parchment',
-              'The Islamic world had already invented paper on its own before Chinese paper ever arrived',
-              'China freely taught papermaking to the Abbasids as part of a formal diplomatic and trade treaty',
-              'Paper had little value in the Islamic world until the printing press arrived from Europe'
+              'Let merchants trade across long distances without carrying large amounts of coin',
+              'Replaced camel caravans with faster horse-drawn wagons on the main routes',
+              'Allowed the Mongol khans to ban private merchants from the overland routes',
+              'Ended the use of paper money in China in favor of silver coins minted in Persia'
             ],
             correctAnswer: 0,
-            explanation: 'The Battle of Talas (where an Arab-Abbasid army defeated a Tang Chinese force) resulted in Chinese papermakers being taken to Samarkand, where paper production began in the Islamic world. Within a century, paper mills spread from Samarkand to Baghdad to Egypt. Paper enabled cheaper manuscript production — critical for Islamic scholarship\'s expansion of madrasas and libraries.'
+            explanation: 'New forms of credit, together with the development of money economies, encouraged the growth of interregional trade in luxury goods. They did not replace caravans with wagons, the Mongols protected rather than banned merchants, and Song and Yuan China relied heavily on paper money.'
           },
           {
             question: 'The caravanserai system\'s construction by Islamic rulers along trade routes demonstrates:',
@@ -159,23 +157,23 @@ Match each Silk Road trade concept to its correct description.
       exercise: {
         dropdowns: [
           {
-            label: 'The primary Central Asian merchant intermediaries of the Silk Roads c. 200-900 CE, known for multilingualism and trade colonies across Eurasia, were the ___',
-            options: ['Sogdians', 'Turks', 'Arabs', 'Mongols']
+            label: 'The Central Asian oasis city that grew rich as Silk Road trade expanded after 1200 was ___',
+            options: ['Samarkand', 'Calicut', 'Timbuktu', 'Venice']
           },
           {
             label: 'The roadside inn providing shelter, water, and security for merchant caravans along trade routes was called a ___',
             options: ['Caravanserai', 'Yam station', 'Madrasa', 'Funduq']
           },
           {
-            label: 'The Chinese technology that spread to the Islamic world via captured craftsmen after the Battle of Talas (751), enabling cheaper manuscript production, was ___',
-            options: ['Paper-making', 'Silk production', 'Gunpowder', 'Porcelain']
+            label: 'The form of currency that Song and Yuan China issued, encouraging a money economy, was ___',
+            options: ['Paper money', 'Cowrie shells', 'Silver dirhams', 'Salt bars']
           }
         ],
-        correctAnswers: ['Sogdians', 'Caravanserai', 'Paper-making'],
-        hint1: 'Iranian-speaking merchants from modern Uzbekistan — Silk Road specialists',
+        correctAnswers: ['Samarkand', 'Caravanserai', 'Paper money'],
+        hint1: 'A Central Asian city later made Timur\'s capital — not a port or a West African city',
         hint2: 'Rest stop for caravans — typically every 25-30 miles',
-        hint3: 'Chinese craftsmen captured at Battle of Talas brought technique westward',
-        explanation: 'Sogdians were the Silk Road\'s professional intermediaries for centuries. Caravanserais were the commercial infrastructure that made multi-day overland journeys feasible. Paper-making\'s spread from China to the Islamic world (and later to Europe) is one of the most consequential technology transfers in world history, enabling the written knowledge explosion of the Islamic golden age.'
+        hint3: 'The Yuan made it the main state currency',
+        explanation: 'Samarkand was a Central Asian oasis city that prospered from Silk Road trade (Calicut was an Indian Ocean port, Timbuktu a trans-Saharan city, and Venice a Mediterranean port). Caravanserais were the commercial infrastructure that made multi-day overland journeys feasible. Paper money issued by the Song and Yuan states encouraged a money economy across China and its trade partners.'
       }
     },
     {
@@ -187,15 +185,15 @@ Match each Silk Road trade concept to its correct description.
       exercise: {
         questions: [
           {
-            question: 'An AP prompt asks: "Evaluate the significance of trade intermediaries for Silk Road commerce c. 200–1400." Which answer demonstrates the strongest historical reasoning?',
+            question: 'An AP prompt asks: "Evaluate the significance of trade intermediaries for Silk Road commerce c. 1200–1450." Which answer demonstrates the strongest historical reasoning?',
             options: [
-              'Middlemen such as Sogdians and Arabs supplied the language skills and contacts each leg of the route needed',
+              'Persian, Turkic and Arab middlemen supplied the language skills and contacts each leg of the route needed',
               'Intermediaries blocked direct trade and inflated prices, so on balance they hindered Silk Road commerce',
-              'Most merchants traveled the whole route from Chang\'an to Rome themselves, so middlemen were rarely needed at all',
+              'Most merchants traveled the whole route from China to the Mediterranean themselves, so middlemen were rarely needed',
               'Intermediaries mattered only in the Mongol era, when the khans licensed a few trading families'
             ],
             correctAnswer: 0,
-            explanation: 'The relay trade system explains why no single merchant needed to travel from China to Rome: Sogdians in Central Asia, Arab merchants in Persia, and Byzantine merchants in Anatolia each covered their segment. This division of expertise was more efficient than attempting direct transit. AP prompts about intermediaries reward explanations of WHY they existed and what functions they served.'
+            explanation: 'The relay trade system explains why no single merchant needed to travel from China to the Mediterranean: Turkic and Persian merchants in Central Asia, Arab merchants in Persia and Mesopotamia, and Italian merchants on the Black Sea each covered their segment. This division of expertise was more efficient than attempting direct transit. AP prompts about intermediaries reward explanations of WHY they existed and what functions they served.'
           },
           {
             question: 'How did the Silk Roads differ from the Indian Ocean trade network in their primary form of cultural exchange?',

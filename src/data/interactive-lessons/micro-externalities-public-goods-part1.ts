@@ -185,15 +185,21 @@ Because of free riders, **private markets will underprovide public goods** — o
 | Negative consumption | **Excise tax** | Raises price to reflect social cost |
 | Positive consumption | **Subsidy to consumers** | Lowers price to encourage optimal consumption |
 
-### Beyond the AP Course: The Coase Theorem
+### Other Policy Tools in the AP Course
 
-> ℹ️ **Enrichment:** The Coase theorem is not part of the AP Microeconomics Course and Exam Description, so the AP exam does not test it. It is included because it explains how some externalities are settled without a tax or subsidy.
+Per-unit taxes and subsidies are not the only fixes. The CED (POL-3.B.1) lists four more:
 
-If **property rights are clearly defined** and **transaction costs are low**, private parties can negotiate to resolve externalities without government intervention.
+| Tool | How it works | Example |
+|------|-------------|---------|
+| **Environmental regulation** | Limits or standards cut the harmful activity directly | An emissions cap on power plants |
+| **Public provision** | Government supplies a good with a positive externality | Free public vaccination clinics |
+| **Assigning property rights** | Someone now owns the resource, so the harm has a price | Giving a town legal rights to clean river water |
+| **Reassigning rights through private deals** | The parties trade the right, so the one who values it most ends up with it | A factory pays downstream farms for the right to discharge |
 
-Example: If a factory has the right to pollute, fisheries downstream can pay the factory to reduce output. If fisheries have the right to clean water, the factory must compensate them.
+### Why Externalities Exist in the First Place
+Externalities arise when **property rights are not well defined** and/or **transaction costs are high** (POL-3.A.2). If nobody owns the river, the factory pays nothing for dumping in it. If thousands of people are each harmed a little, organizing them to negotiate costs more than any one of them would gain, so no private deal happens and a tax or regulation is usually needed.
 
-> ⚠️ **Note:** The Coase theorem requires LOW transaction costs and CLEAR property rights. If either condition fails, private negotiation will not work, which is why the AP course focuses on per-unit taxes and subsidies.
+> ⚠️ **Common trap:** A tax or subsidy fixes the externality only if it equals the **marginal external cost or benefit at the efficient quantity**. Set too high or too low, it leaves a deadweight loss.
       `
     },
     {

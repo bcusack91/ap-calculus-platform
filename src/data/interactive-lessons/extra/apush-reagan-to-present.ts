@@ -691,27 +691,27 @@ The post-9/11 decade hinges on three numbers: the year of the attacks, the year 
         type: 'text' as const,
         content: `# 🦅 Reagan to the Present
 
-**Part 6 of 7 — Obama, Recession & a Polarized 21st Century (2008–present)**
+**Part 6 of 7 — The Great Recession, a Changing Nation & Climate Debates (2000s)**
 
 ---
 
-> 🔑 **The Arc:** A historic financial crisis, the election of the first Black president, deepening partisan **polarization**, a populist backlash, and rapid demographic and technological change define the most recent stretch of U.S. history.`,
+> 🔑 **The Arc:** Moving into the 21st century, the nation experienced significant **technological, economic and demographic change**, a historic financial crisis, and growing debates over energy and the environment as conflicts in the Middle East continued.
+
+> 📌 **Scope note:** The Period 9 key concepts end with the War on Terror, the 2008 financial crisis and debates over energy and climate; specific presidencies and events of the 2010s are not tested.`,
       },
       {
         id: 'r2p6-recession',
         type: 'text' as const,
-        content: `## The Great Recession & the Election of 2008
+        content: `## The Great Recession (2007–2009)
 
-In **2008**, the U.S. plunged into the **Great Recession** — the worst economic downturn since the Great Depression. Triggers included a collapsing **housing/subprime-mortgage bubble** and a near-meltdown of the financial system (e.g., the failure of **Lehman Brothers**).
+In **2008**, the U.S. plunged into the **Great Recession** — the worst economic downturn since the Great Depression. Triggers included a collapsing **housing/subprime-mortgage bubble** and a near-meltdown of the financial system (e.g., the failure of **Lehman Brothers** in September 2008).
 
 The government responded with massive intervention:
 
-- **TARP (Troubled Asset Relief Program, 2008)** — a roughly \\$700 billion bank "bailout" signed under George W. Bush.
-- **The 2009 stimulus** (American Recovery and Reinvestment Act) — large federal spending to revive the economy under the new president.
+- **TARP (Troubled Asset Relief Program, 2008)** — a roughly \\$700 billion program, signed by George W. Bush, to stabilize banks and other financial firms.
+- **The Federal Reserve** cut interest rates to near zero and lent heavily to keep credit flowing.
 
-Amid this crisis, Democrat **Barack Obama** defeated Republican **John McCain** in **2008**, becoming the **first African American president** of the United States — a milestone in the nation's long struggle over race.
-
-> 💡 **Two-sided legacy:** The bailouts are credited with preventing a deeper collapse, but they also fueled **populist anger** on both ends — the conservative **Tea Party** movement (2009) and the progressive **Occupy Wall Street** protests (2011) both grew out of frustration with bailouts and inequality.`,
+> 💡 **Why it matters for Period 9:** The crisis renewed **calls to reform the U.S. financial system** after two decades of deregulation, and it sharpened the long argument over the government's role in the economy — the same argument that had powered the Reagan Revolution.`,
       },
       {
         id: 'r2p6-q-recession',
@@ -731,85 +731,86 @@ Amid this crisis, Democrat **Barack Obama** defeated Republican **John McCain** 
               explanation: 'The crisis grew out of a housing bubble built on risky subprime mortgages. When it burst, mortgage-backed securities collapsed, threatening major financial firms (e.g., Lehman Brothers) and freezing credit.',
             },
             {
-              question: 'Barack Obama\'s 2008 election was historically significant because he was the:',
+              question: 'The 2008 financial crisis most directly renewed which policy debate that ran through Period 9?',
               options: [
-                'First African American elected president of the United States',
-                'First president from California',
-                'Youngest person ever elected president',
-                'First president to lose the popular vote but win the electoral vote',
+                'Whether the nation should restore high tariffs to protect its domestic steel makers',
+                'Whether federal deregulation had left banks and investment firms too lightly supervised',
+                'Whether the federal government should end Social Security and Medicare outright',
+                'Whether the United States should withdraw from NATO now that the Cold War had ended',
               ],
-              correctAnswer: 0,
-              explanation: 'Obama, a Democrat, defeated John McCain in 2008 to become the first African American president — a landmark moment in U.S. racial history.',
+              correctAnswer: 1,
+              explanation: 'After decades of deregulation that began under Reagan, the crisis prompted calls to reform and more closely supervise banks and financial markets. Tariff protection, ending entitlement programs and leaving NATO were not the debates the crisis set off.',
             },
           ],
         },
       },
       {
-        id: 'r2p6-obama',
+        id: 'r2p6-economy',
         type: 'text' as const,
-        content: `## The Obama Presidency (2009–2017)
+        content: `## A Changing Economy and Population
 
-Obama's two terms brought major policy change amid intense partisanship:
+From the 1980s into the 2000s, new technology and global trade reshaped American work, while migration reshaped where and who Americans were.
 
-| Policy / Event | Significance |
-|----------------|-------------|
-| **Affordable Care Act (ACA / "Obamacare," 2010)** | Largest health-care expansion since the 1960s; required most people to have insurance |
-| **Killing of Osama bin Laden (2011)** | U.S. special-forces raid in Pakistan ended the long manhunt |
-| **Obergefell v. Hodges (2015)** | Supreme Court legalized **same-sex marriage** nationwide |
-| **Paris Climate Agreement (2015)** | International accord to limit greenhouse-gas emissions |
+| Change | What happened | Why it matters |
+|--------|---------------|----------------|
+| **Digital revolution** | Personal computers, the internet and cell phones spread from the 1980s into the 2000s | Raised productivity and drew Americans into worldwide economic opportunities |
+| **From factories to services** | Employment grew in service sectors and fell in manufacturing; union membership declined (about 20% of wage and salary workers in 1983, about 12% by 2008) | Weakened organized labor; older industrial regions (the "Rust Belt") lost jobs |
+| **Stagnant wages** | Real wages stagnated for working- and middle-class Americans | Economic inequality grew |
+| **Sun Belt shift** | Population moved to the South and West | Those regions gained political, economic and cultural influence, including more House seats and electoral votes |
+| **New immigration** | Migration from Latin America and Asia increased (the Hispanic share of the population rose from about 6% in 1980 to about 12.5% in 2000) | Changed the nation's culture and its politics |
 
-These years also saw deepening **political polarization** and gridlock, the rise of the conservative **Tea Party** in Congress, and growing movements for racial justice (e.g., **Black Lives Matter**, emerging mid-2010s).
-
-> ⚠️ **Don't overstate "post-racial":** Obama's election did **not** end racial tension. The 2010s saw renewed debate over policing and race, reminding students that landmark milestones coexist with ongoing struggle.`,
+> ⚠️ **Debates, not consensus:** These changes fed intense political and cultural debates over **immigration policy, diversity, gender roles and family structures**, such as arguments over bilingual education, undocumented immigration and same-sex marriage.`,
       },
       {
-        id: 'r2p6-dropdown-obama',
+        id: 'r2p6-dropdown-economy',
         type: 'dropdown-select' as const,
-        content: `**Landmarks of the 2010s** 🔽`,
+        content: `**A Changing Nation** 🔽`,
         exercise: {
           dropdowns: [
-            { label: 'The 2010 law expanding health-insurance coverage:', options: ['The Affordable Care Act', 'The Social Security Act', 'The PATRIOT Act', 'NAFTA'] },
-            { label: 'The 2015 Supreme Court case legalizing same-sex marriage nationwide:', options: ['Obergefell v. Hodges', 'Bush v. Gore', 'Plessy v. Ferguson', 'Korematsu v. United States'] },
-            { label: 'The 2008 bank "bailout" program enacted during the financial crisis:', options: ['Troubled Asset Relief Program', 'Dodd-Frank Wall Street Reform', 'CARES pandemic relief program', 'Glass-Steagall Banking Act'] },
+            { label: 'The region of the South and West that gained population and political influence after 1980:', options: ['The Rust Belt', 'The Sun Belt', 'The Corn Belt', 'The Great Plains'] },
+            { label: 'The sector where American employment grew while manufacturing jobs declined:', options: ['Heavy industry', 'Family farming', 'Service industries', 'Mining and logging'] },
+            { label: 'The trend in real wages for working- and middle-class Americans:', options: ['They rose steadily', 'They doubled', 'They fell by half', 'They stagnated'] },
           ],
-          correctAnswers: ['The Affordable Care Act', 'Obergefell v. Hodges', 'Troubled Asset Relief Program'],
-          hint1: 'Nicknamed "Obamacare," passed in 2010.',
-          hint2: 'The 2015 marriage case is named for plaintiff Jim Obergefell.',
-          hint3: 'Signed in October 2008 under George W. Bush, it is usually known by its four-letter acronym.',
-          explanation: 'The Affordable Care Act (2010) expanded coverage; Obergefell v. Hodges (2015) legalized same-sex marriage nationwide; and TARP (2008) was the roughly \\$700 billion financial-crisis bailout.',
+          correctAnswers: ['The Sun Belt', 'Service industries', 'They stagnated'],
+          hint1: 'The warm-weather region whose name contrasts with the declining industrial "Rust Belt."',
+          hint2: 'Jobs in health care, retail, finance and information grew as factory jobs disappeared.',
+          hint3: 'Productivity rose, but the typical worker\'s inflation-adjusted pay barely moved.',
+          explanation: 'Population and political weight shifted to the Sun Belt; employment grew in service industries as manufacturing declined; and real wages stagnated for working- and middle-class Americans, widening inequality.',
         },
       },
       {
         id: 'r2p6-present',
         type: 'text' as const,
-        content: `## The Populist Turn & a Changing Nation
+        content: `## Energy, Climate & America's Role in the World
 
-The later 2010s brought a **populist** backlash against globalization and the political establishment. In **2016**, Republican **Donald Trump** won the presidency — again **winning the Electoral College while losing the popular vote** — on an "America First," anti-immigration, anti-free-trade platform. His presidency intensified debates over immigration, trade, and the role of government.
+Conflicts in the Middle East — the Persian Gulf War and the wars in Afghanistan and Iraq — together with growing concern about **climate change** led to debates over U.S. **dependence on fossil fuels** and the impact of economic consumption on the environment:
 
-Broad trends shaping 21st-century America:
+- Supporters of expanded domestic drilling argued it would reduce reliance on imported Middle Eastern oil.
+- Environmentalists pressed for conservation, fuel-efficiency standards and renewable energy, and for international agreements such as the **Kyoto Protocol (1997)**, which the United States signed but never ratified.
+- Despite these economic and foreign-policy challenges, the United States remained the world's **leading superpower** in the early 21st century, with the largest economy and the strongest military.
 
-- **Demographic change** — Rising **Latino/Hispanic** and Asian American populations are reshaping the electorate; the U.S. is projected to become "majority-minority" around mid-century.
-- **The digital / information revolution** — Smartphones, social media, and the internet transformed the economy, culture, and politics (including the spread of misinformation).
-- **Globalization's winners and losers** — Free trade lowered consumer prices but contributed to **deindustrialization** of older manufacturing regions ("the Rust Belt").
-- **Renewed debates** over immigration, climate, health care, and the size of government continue the long American argument between **liberty and equality, individualism and community**.
+Broad trends shaping the period:
+
+- **Globalization's winners and losers** — Free trade lowered consumer prices but contributed to **deindustrialization** of older manufacturing regions.
+- **Renewed debates** over immigration, energy, health care, and the size of government continue the long American argument between **liberty and equality, individualism and community**.
 
 > 💡 **Synthesis for the essay:** Period 9 connects to deep themes that run through ALL of U.S. history — the proper size of government, who belongs in "We the People," America's role in the world, and the tension between economic freedom and economic fairness.`,
       },
       {
         id: 'r2p6-drill-present',
         type: 'input-boxes' as const,
-        content: `**Recent Milestones** 🧮
+        content: `**Reading the Numbers** 🧮
 
-**1)** In what year was Barack Obama first elected president?
-**2)** In what year did U.S. forces kill Osama bin Laden?
-**3)** In what year did the Supreme Court legalize same-sex marriage nationwide (Obergefell)?`,
+**1)** In what year did the financial crisis peak with the failure of Lehman Brothers?
+**2)** About what percent of wage and salary workers belonged to unions in 1983? *(nearest whole number)*
+**3)** About what percent belonged to unions by 2008? *(nearest whole number)*`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['2008', '2011', '2015'],
-          hint1: 'Obama won during the financial crisis that began that same year.',
-          hint2: 'The raid in Pakistan came in Obama\'s third year in office.',
-          hint3: 'Obergefell came near the end of Obama\'s second term, the same year as the Paris Climate Agreement.',
-          explanation: 'Obama was elected in 2008; bin Laden was killed in 2011; and Obergefell v. Hodges legalized same-sex marriage in 2015.',
+          correctAnswers: ['2008', '20', '12'],
+          hint1: 'Lehman Brothers collapsed in September of the year TARP was enacted.',
+          hint2: 'In 1983 roughly one worker in five belonged to a union.',
+          hint3: 'By 2008 the share had fallen to roughly one in eight.',
+          explanation: 'Lehman Brothers failed in September 2008, the peak of the financial crisis. Union membership fell from about 20% of wage and salary workers in 1983 to about 12% in 2008, reflecting the shift from manufacturing to service jobs.',
         },
       },
     ],
@@ -828,7 +829,7 @@ Broad trends shaping 21st-century America:
 
 ---
 
-You can now trace the arc of **Period 9 (c. 1980–present)**: the conservative resurgence under Reagan, the end of the Cold War, the post–Cold War 1990s, the War on Terror, the Great Recession and Obama era, and the populist, polarized present. Let's connect the threads and test mastery.`,
+You can now trace the arc of **Period 9 (c. 1980–present)**: the conservative resurgence under Reagan, the end of the Cold War, the post–Cold War 1990s, the War on Terror, the Great Recession, and the economic, demographic and environmental debates of the early 21st century. Let's connect the threads and test mastery.`,
       },
       {
         id: 'r2p7-summary',
@@ -847,11 +848,9 @@ You can now trace the arc of **Period 9 (c. 1980–present)**: the conservative 
 | **2000** | Bush v. Gore | Electoral-vote winner loses popular vote |
 | **2001** | 9/11 | War on Terror begins |
 | **2003** | Iraq War | WMD controversy |
-| **2008** | Great Recession / Obama elected | First Black president amid crisis |
-| **2010** | Affordable Care Act | Major health-care expansion |
-| **2015** | Obergefell v. Hodges | Same-sex marriage legalized |
+| **2008** | Financial crisis / TARP | Renewed calls to reform the financial system |
 
-> ⚠️ **Three precision traps to avoid:** (1) Reagan *raised* the national debt despite "small-government" rhetoric. (2) Clinton was **impeached but acquitted** — not removed. (3) In **2000 and 2016**, the winner **lost** the national popular vote but won the Electoral College.`,
+> ⚠️ **Three precision traps to avoid:** (1) Reagan *raised* the national debt despite "small-government" rhetoric. (2) Clinton was **impeached but acquitted** — not removed. (3) In **2000**, Bush **lost** the national popular vote but won the Electoral College.`,
       },
       {
         id: 'r2p7-themes',
@@ -860,7 +859,7 @@ You can now trace the arc of **Period 9 (c. 1980–present)**: the conservative 
 
 The College Board organizes APUSH around recurring themes. Period 9 speaks directly to several:
 
-- **American and National Identity (NAT)** — Debates over who counts as a full American: immigration policy, the marriage-equality movement, the first Black president.
+- **American and National Identity (NAT)** — Debates over who counts as a full American: immigration policy and debates over diversity, gender roles and family structures.
 - **Politics and Power (PCE)** — The conservative resurgence, polarization, divided government, and the expansion/contraction of federal power.
 - **America in the World (WOR)** — From Cold War victory to the War on Terror to debates over globalization and "endless wars."
 - **Work, Exchange, and Technology (WXT)** — Supply-side economics, globalization, deindustrialization, the dot-com boom, the Great Recession, and the digital revolution.
@@ -875,16 +874,16 @@ The College Board organizes APUSH around recurring themes. Period 9 speaks direc
 Connect each defining development to the president in office when it happened.`,
         exercise: {
           dropdowns: [
-            { label: 'Supply-side "Reaganomics" and the INF Treaty:', options: ['Ronald Reagan', 'Bill Clinton', 'Barack Obama', 'George W. Bush'] },
-            { label: 'NAFTA, welfare reform, and impeachment-then-acquittal:', options: ['Bill Clinton', 'George H. W. Bush', 'Ronald Reagan', 'Barack Obama'] },
-            { label: 'The 9/11 response and the 2003 Iraq War:', options: ['George W. Bush', 'Bill Clinton', 'Barack Obama', 'George H. W. Bush'] },
-            { label: 'The Affordable Care Act and the killing of bin Laden:', options: ['Barack Obama', 'George W. Bush', 'Donald Trump', 'Bill Clinton'] },
+            { label: 'Supply-side "Reaganomics" and the INF Treaty:', options: ['Ronald Reagan', 'Bill Clinton', 'George H. W. Bush', 'George W. Bush'] },
+            { label: 'NAFTA, welfare reform, and impeachment-then-acquittal:', options: ['Bill Clinton', 'George H. W. Bush', 'Ronald Reagan', 'George W. Bush'] },
+            { label: 'The 9/11 response and the 2003 Iraq War:', options: ['George W. Bush', 'Bill Clinton', 'Ronald Reagan', 'George H. W. Bush'] },
+            { label: 'The Persian Gulf War and the Americans with Disabilities Act:', options: ['George W. Bush', 'George H. W. Bush', 'Ronald Reagan', 'Bill Clinton'] },
           ],
-          correctAnswers: ['Ronald Reagan', 'Bill Clinton', 'George W. Bush', 'Barack Obama'],
+          correctAnswers: ['Ronald Reagan', 'Bill Clinton', 'George W. Bush', 'George H. W. Bush'],
           hint1: 'Reaganomics and the 1987 INF Treaty belong to the president they\'re named after.',
           hint2: 'NAFTA (1994) and the 1998–99 impeachment were under the centrist "New Democrat."',
-          hint3: '9/11 and the 2003 Iraq War were under "Bush 43"; the ACA (2010) and the 2011 bin Laden raid were under his successor.',
-          explanation: 'Reagan: supply-side economics + INF Treaty. Clinton: NAFTA, welfare reform, impeachment/acquittal. George W. Bush: 9/11 response + Iraq War. Obama: Affordable Care Act + killing of bin Laden.',
+          hint3: '9/11 and the 2003 Iraq War were under "Bush 43"; the 1991 Gulf War and the 1990 ADA were under his father, "Bush 41."',
+          explanation: 'Reagan: supply-side economics + INF Treaty. Clinton: NAFTA, welfare reform, impeachment/acquittal. George W. Bush: 9/11 response + Iraq War. George H. W. Bush: Persian Gulf War + Americans with Disabilities Act.',
         },
       },
       {
@@ -952,7 +951,7 @@ Answer all three to finish the lesson.`,
               explanation: 'Reaganomics cut taxes, deregulated, and boosted defense spending. Inflation fell, but tax cuts plus military spending (without matching cuts) caused deficits to soar and the debt to nearly triple.',
             },
             {
-              question: 'In BOTH the 2000 and 2016 presidential elections, the eventual winner:',
+              question: 'In the disputed 2000 presidential election, the eventual winner:',
               options: [
                 'Won the Electoral College while losing the national popular vote',
                 'Won both the popular and electoral votes by the widest margins in decades',
@@ -960,7 +959,7 @@ Answer all three to finish the lesson.`,
                 'Was declared the winner by the Supreme Court after a tie in the popular vote',
               ],
               correctAnswer: 0,
-              explanation: 'George W. Bush (2000) and Donald Trump (2016) each won the presidency through the Electoral College despite receiving fewer popular votes than their opponents — reviving debate over the Electoral College.',
+              explanation: 'George W. Bush won the presidency through the Electoral College (271–266) despite receiving fewer popular votes than Al Gore — reviving debate over the Electoral College.',
             },
             {
               question: 'The September 11, 2001 attacks led most directly to which set of U.S. responses?',

@@ -13,22 +13,22 @@ export const microMarketFailurePart4Data = {
 
 | Section |
 |---------|
-| 📖 From Quintile Shares to a Lorenz Curve |
+| 📖 What a Lorenz Curve Shows |
 | Reading the Curve |
 | The Gini Coefficient |
-| Computing a Gini Coefficient from Quintiles |
+| Comparing Across Countries, Groups and Time |
 | Comparing Distributions |
 
-> 🔑 **Key Concept:** A **Lorenz curve** plots the cumulative percentage of income received against the cumulative percentage of households, ranked from poorest to richest. The farther it bows below the 45-degree **line of perfect equality**, the more unequal the distribution. The **Gini coefficient** turns that bow into one number: area A (between the line of equality and the curve) divided by the whole triangle under the line, A + B. It runs from **0 (perfect equality)** to **1 (perfect inequality)**.
+> 🔑 **Key Concept:** A **Lorenz curve** plots the cumulative percentage of income received against the cumulative percentage of households, ranked from poorest to richest. The farther it bows below the 45-degree **line of perfect equality**, the more unequal the distribution. The **Gini coefficient** turns that bow into one number from **0 (perfect equality)** to **1 (perfect inequality)**. The AP exam asks you to read and compare these measures (CED POL-5.A.2); it does not ask you to draw a Lorenz curve or calculate a Gini coefficient.
       `
     },
     {
       id: 'micromar4-lorenz',
       type: 'text' as const,
       content: `
-## 📖 From Quintile Shares to a Lorenz Curve
+## 📖 What a Lorenz Curve Shows
 
-Rank every household from the lowest income to the highest and split them into five equal groups, called **quintiles**. Each quintile is 20% of households. Then record the share of total income each quintile receives.
+Rank every household from the lowest income to the highest and split them into five equal groups, called **quintiles**. Each quintile is 20% of households. A Lorenz diagram shows how much of total income each group receives.
 
 ### Northland's Income Distribution
 
@@ -40,11 +40,11 @@ Rank every household from the lowest income to the highest and split them into f
 | Fourth 20% | 23% | 80 | 28 + 23 = **51** |
 | Richest 20% | 49% | 100 | 51 + 49 = **100** |
 
-### Drawing It
-- **Horizontal axis:** cumulative percentage of households, 0 to 100.
+### The Parts of the Diagram
+- **Horizontal axis:** cumulative percentage of households, poorest first, 0 to 100.
 - **Vertical axis:** cumulative percentage of income, 0 to 100.
-- Plot (0, 0), (20, 4), (40, 13), (60, 28), (80, 51) and (100, 100), and connect them. That is the **Lorenz curve**.
-- Draw the **line of perfect equality**, the 45-degree diagonal from (0, 0) to (100, 100). On it, every 20% of households gets 20% of income.
+- **Line of perfect equality:** the 45-degree diagonal. On it, every 20% of households gets 20% of income.
+- **Lorenz curve:** the actual distribution. Northland's passes through (20, 4), (40, 13), (60, 28) and (80, 51).
 - **Perfect inequality** (one household has all the income) runs along the horizontal axis to 100 and then straight up.
 
 Every Lorenz curve starts at (0, 0), ends at (100, 100), and sags **below** the diagonal, because households are ranked from poorest to richest: each added group has at least as much income as the one before.
@@ -117,77 +117,70 @@ Every Lorenz curve starts at (0, 0), ends at (100, 100), and sags **below** the 
       content: `
 ## The Gini Coefficient
 
-Label two areas on the Lorenz diagram:
-- **A:** the area between the line of perfect equality and the Lorenz curve.
-- **B:** the area below the Lorenz curve.
+The **Gini coefficient** summarizes the whole Lorenz curve in one number: it measures how much of the area under the line of perfect equality lies **between** that line and the Lorenz curve.
 
-$$\\text{Gini} = \\frac{A}{A + B}$$
-
-| Distribution | Area A | Gini |
+| Distribution | Where the curve lies | Gini |
 |---|---|---|
-| Perfect equality (curve on the diagonal) | 0 | **0** |
-| Perfect inequality (curve along the axes) | All of the triangle (B = 0) | **1** |
+| Perfect equality | On the diagonal | **0** |
+| Perfect inequality | Along the axes | **1** |
 | Real economies | In between | Between 0 and 1 |
 
-### Using Areas
-A + B is the whole triangle under the diagonal. With both axes running 0 to 100, that triangle is ½ × 100 × 100 = **5,000**. (With axes from 0 to 1, it is 0.5, and the Gini equals 2A.)
-
-**Example:** A = 1,500 and B = 3,500. Gini = 1,500 ÷ 5,000 = **0.30**.
-
 ### What the Number Tells You
-- A **higher** Gini means a larger area A, a Lorenz curve that bows **farther** from the diagonal, and **more** inequality.
+- A **higher** Gini means a Lorenz curve that bows **farther** from the diagonal, and **more** inequality.
 - A **lower** Gini means the curve hugs the diagonal: **more** equality.
 - The Gini describes how income is **divided**, not how much there is. A poor country and a rich country can have the same Gini.
+
+> ℹ️ Drawing a Lorenz curve and calculating a Gini coefficient are outside the AP course; exam questions give you the curves or the Gini values and ask what they mean.
       `
     },
     {
-      id: 'micromar4-compute',
+      id: 'micromar4-groups',
       type: 'text' as const,
       content: `
-## Computing a Gini Coefficient from Quintiles
+## Comparing Across Countries, Groups and Time
 
-AP questions usually give you the areas or ask you to compare curves. To see where a Gini comes from, find area B as five trapezoids, one per quintile. Each is 20 wide, and its area is 20 × (height at its left edge + height at its right edge) ÷ 2.
+The CED uses these measures to **compare** distributions (POL-5.A.2), and it stresses that income levels and poverty rates vary greatly both across and **within** groups, such as age groups, and across countries (POL-5.A.1).
 
-### Northland (cumulative heights 0, 4, 13, 28, 51, 100)
+### Two Countries on One Diagram
+| Cumulative % of households | Westland income % | Southland income % |
+|---|---|---|
+| 20 | 6 | 8 |
+| 40 | 17 | 21 |
+| 60 | 33 | 39 |
+| 80 | 55 | 63 |
 
-| Quintile | Trapezoid area |
-|---|---|
-| 0–20 | 20 × (0 + 4) ÷ 2 = 40 |
-| 20–40 | 20 × (4 + 13) ÷ 2 = 170 |
-| 40–60 | 20 × (13 + 28) ÷ 2 = 410 |
-| 60–80 | 20 × (28 + 51) ÷ 2 = 790 |
-| 80–100 | 20 × (51 + 100) ÷ 2 = 1,510 |
-| **B** | **2,920** |
+Southland's curve lies **above** Westland's at every point, so it is closer to the line of equality everywhere: Southland's distribution is more equal and its Gini is **lower**.
 
-A = 5,000 − 2,920 = **2,080**, so Gini = 2,080 ÷ 5,000 = **0.416**.
+### Over Time
+If a country's Gini rises from 0.38 to 0.42 over a decade, its Lorenz curve has moved **away** from the line of equality: the distribution became **more unequal**, whether or not average income rose.
 
-### Southland (shares 8%, 13%, 18%, 24%, 37%)
-Cumulative heights: 0, 8, 21, 39, 63, 100. The trapezoids add to B = 80 + 290 + 600 + 1,020 + 1,630 = **3,620**, so A = 1,380 and Gini = 1,380 ÷ 5,000 = **0.276**.
+### Within Groups
+Inequality can be measured inside any group. Income usually rises with age through the working years, so a group of 25-year-olds and a group of 55-year-olds can have very different average incomes and different Lorenz curves even in the same country.
 
-Southland's curve lies closer to the diagonal at every point, and its Gini is lower: income there is **more equally** distributed.
+> ⚠️ **Common trap:** A curve that lies closer to the diagonal says nothing about which country is **richer**. Lorenz curves and Gini coefficients compare shares, not levels.
       `
     },
     {
       id: 'micromar4-input',
       type: 'input-boxes' as const,
       content: `
-**Build and Measure** ✍️
+**Read the Distribution** ✍️
 
 Eastland's income shares by quintile, poorest to richest, are **5%, 10%, 15%, 25% and 45%**. Its Lorenz diagram uses axes from 0 to 100.
 
 1) What is the cumulative share of income (in percent) of the poorest 60% of households? (number only)
 
-2) Area A is 1,900 and area B is 3,100. What is Eastland's Gini coefficient? (decimal)
+2) What share of income (in percent) do Eastland's richest 40% of households receive? (number only)
 
-3) After a reform, Eastland's Gini falls to 0.30. What is area A now?
+3) After a reform, Eastland's Lorenz curve moves toward the line of equality. Does its Gini coefficient rise or fall? (one word)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['30', '0.38', '1500'],
+        correctAnswers: ['30', '70', 'fall'],
         hint1: 'Add the shares of the three poorest quintiles.',
-        hint2: 'Gini = A ÷ (A + B), and A + B is 5,000 on these axes.',
-        hint3: 'Rearrange: A = Gini × 5,000.',
-        explanation: '1) 5 + 10 + 15 = 30%. 2) 1,900 ÷ (1,900 + 3,100) = 1,900 ÷ 5,000 = 0.38. 3) 0.30 × 5,000 = 1,500: the area between the curve and the diagonal shrinks as the curve moves toward equality.'
+        hint2: 'Add the two richest quintiles, or subtract the poorest 60% from 100.',
+        hint3: 'A curve closer to the diagonal means a smaller gap between them.',
+        explanation: '1) 5 + 10 + 15 = 30%. 2) 25 + 45 = 70%, which is also 100 − 30. 3) The Gini falls: a curve closer to the line of equality means a more equal distribution.'
       }
     },
     {
@@ -229,15 +222,15 @@ Taxes that take a larger share from high incomes, and transfers aimed at low inc
       exercise: {
         questions: [
           {
-            question: 'On a Lorenz diagram with axes from 0 to 100, area A between the line of equality and the curve is 1,750, and area B under the curve is 3,250. What is the Gini coefficient?',
+            question: 'Country P\'s poorest 20% of households receive 3% of income and its richest 20% receive 55%. Country R\'s figures are 8% and 38%. Which conclusion is best supported?',
             options: [
-              '0.35',
-              '0.54',
-              '0.65',
-              '0.175'
+              'R\'s Lorenz curve lies closer to the line of equality',
+              'P\'s Lorenz curve lies closer to the line of equality',
+              'Average household income is higher in R than in P',
+              'P and R must have equal Gini coefficients'
             ],
             correctAnswer: 0,
-            explanation: 'Gini = A ÷ (A + B) = 1,750 ÷ 5,000 = 0.35. Dividing A by B gives about 0.54, and 0.65 is B\'s share of the triangle, which measures equality rather than inequality.'
+            explanation: 'R\'s poor get a larger share and its rich a smaller share, so R\'s curve hugs the diagonal more closely and its income is more evenly divided. Shares say nothing about average income levels, and these very different shares give no reason to expect equal Gini coefficients.'
           },
           {
             question: 'Country X has a Gini coefficient of 0.28 and Country Y has a Gini coefficient of 0.46. Which conclusion is valid?',
@@ -259,7 +252,7 @@ Taxes that take a larger share from high incomes, and transfers aimed at low inc
               'Their households have the same average income per year'
             ],
             correctAnswer: 0,
-            explanation: 'The Gini is area A divided by a fixed triangle, so equal Ginis mean equal areas A. The curves themselves can cross, with one country more unequal at the bottom and the other at the top, and the Gini says nothing about the level of income.'
+            explanation: 'The Gini measures the area between the Lorenz curve and the line of equality as a share of the area under that line, so equal Ginis mean equal gaps. The curves themselves can cross, with one country more unequal at the bottom and the other at the top, and the Gini says nothing about the level of income.'
           }
         ]
       }

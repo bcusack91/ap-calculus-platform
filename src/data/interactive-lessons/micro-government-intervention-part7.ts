@@ -39,7 +39,7 @@ Arrows compare each policy with the free-market equilibrium in a competitive mar
 | Tariff (vs. free trade) | ↑ | ↑ | Consumption ↓, production ↑ | ↓ | ↑ | Revenue = $t \\times$ imports | Yes, two triangles |
 
 ### Where the Deadweight Loss Sits
-- **Quantity pushed below equilibrium** (ceiling, floor, tax, quota): the triangle is to the **left** of $Q^*$, between demand and supply.
+- **Quantity pushed below equilibrium** (ceiling, floor, tax): the triangle is to the **left** of $Q^*$, between demand and supply.
 - **Quantity pushed above equilibrium** (subsidy, floor with government purchases): the triangle is to the **right** of $Q^*$, where cost exceeds value.
 - **Tariff:** one triangle on the production side and one on the consumption side, on either side of the imports.
 
@@ -65,7 +65,7 @@ Efficiency is not the only goal. Price controls aim at **fairness** for renters 
             explanation: 'A subsidy lowers producers\' effective costs, shifting supply right so quantity rises past the efficient level. Taxes and binding price controls all reduce the quantity traded.'
           },
           {
-            question: 'Under which policy does the area that would otherwise be tax revenue go to private license holders?',
+            question: 'Which policy limits the quantity traded directly, rather than by changing a price?',
             options: [
               'A quota',
               'A per-unit subsidy',
@@ -73,7 +73,7 @@ Efficiency is not the only goal. Price controls aim at **fairness** for renters 
               'A binding price ceiling'
             ],
             correctAnswer: 0,
-            explanation: 'A quota creates the same price wedge as a tax, but the gap between what buyers pay and the supply price goes to whoever holds the right to sell. That rectangle is called quota rent.'
+            explanation: 'A quota caps the number of units that can be sold. A subsidy changes the price sellers receive, and floors and ceilings set a price; their effects on quantity follow from that price.'
           },
           {
             question: 'Which pair of policies always lowers producer surplus in the market where it is applied?',
@@ -101,16 +101,16 @@ Efficiency is not the only goal. Price controls aim at **fairness** for renters 
 | 2. Check binding | Does it actually change the market outcome? | Taxes always bind |
 | 3. Graph it | Which curve shifts, or where does the new line go? | Supply shifts up by \\$5 |
 | 4. Read prices and quantity | What do buyers pay, sellers keep, and how many units trade? | Buyers pay more, sellers keep less, quantity falls |
-| 5. Sort the areas | CS, PS, government revenue or cost, quota rent, DWL | Revenue rectangle, DWL triangle |
+| 5. Sort the areas | CS, PS, government revenue or cost, DWL | Revenue rectangle, DWL triangle |
 
 ### Worked Mini-Example
 $Q_d = 90 - 3P$ and $Q_s = 2P - 10$, so the market clears at $P = \\$20$, $Q = 30$.
 
 - **Ceiling of \\$18** (binding): $Q_s = 26$, $Q_d = 36$, shortage of 10; 26 units trade.
 - **Floor of \\$15**: not binding, because \\$15 is below \\$20. Nothing changes.
-- **Quota of 24 units**: buyers pay $(90 - 24)/3 = \\$22$; the supply price is $(24 + 10)/2 = \\$17$; quota rent = \\$5 × 24 = \\$120.
+- **Quota of 24 units** (binding, since 24 < 30): quantity falls to 24, buyers pay more than \\$20, and total surplus falls. You need these directions, not a quota graph.
 
-Notice that the quota of 24 creates a \\$5 wedge between the buyer price and the supply price. The input problem below shows that a \\$5 tax produces exactly the same prices and quantity.
+The input problem below works the same market under a \\$5 per-unit tax.
 `
     },
     {

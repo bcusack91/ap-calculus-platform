@@ -13,30 +13,28 @@ export const macroMoneyBankingPart3Data = {
 
 | Section |
 |---------|
-| 📖 Commodity Money and Fiat Money |
+| 📖 What Makes Something Money |
 | The Liquidity Spectrum |
 | Classifying Items: M1, M2 or Neither |
 | Moving Money Between Accounts |
 
-> 🔑 **Key Concept:** Money is any asset that people generally accept as payment. Modern money is **fiat money**, valuable because people accept it and the government declares it legal tender. The money supply counts only money held by the **public**, so classifying an item means asking two questions: is it a means of payment (or very close to one), and who holds it?
+> 🔑 **Key Concept:** Money is any asset that is accepted as a **means of payment**, and it serves as a medium of exchange, a unit of account and a store of value. The money supply counts only money held by the **public**, so classifying an item means asking two questions: is it a means of payment (or very close to one), and who holds it?
 `
     },
     {
       id: 'macromon3-fiat',
       type: 'text' as const,
       content: `
-## 📖 Commodity Money and Fiat Money
+## 📖 What Makes Something Money
 
-| Type | What gives it value | Examples |
+The CED defines **money** as any asset that is accepted as a **means of payment** (MEA-3.C.1). The test is not what an item is made of but whether sellers take it in exchange.
+
+| Item | Means of payment? | Money? |
 |---|---|---|
-| **Commodity money** | The item has value as a good in its own right | Gold and silver coins, salt, cigarettes in prisoner-of-war camps |
-| **Fiat money** | Government decree (legal tender) and general acceptance; it has almost no value as a good | U.S. dollar bills and coins today, euros, yen |
-
-U.S. currency is not backed by gold. A \\$20 bill is worth \\$20 because:
-
-1. The government declares it **legal tender** for paying debts and taxes.
-2. People **expect others to accept it**, so they accept it themselves.
-3. Its supply is **limited**, so it stays scarce relative to what people want to buy.
+| Currency in your wallet | Yes | Yes |
+| A checking deposit you can spend with a debit card | Yes | Yes |
+| A credit card | No: it arranges a loan you repay later | No |
+| A share of stock | No: it must be sold for money first | No |
 
 ### Why limited supply matters
 
@@ -62,15 +60,15 @@ If the quantity of money grows much faster than the output of goods and services
       exercise: {
         questions: [
           {
-            question: 'Which statement best explains why a U.S. dollar bill has value?',
+            question: 'Money is any asset accepted as a means of payment. Which of the following is money?',
             options: [
-              'The Treasury will exchange it for a fixed amount of gold',
-              'The paper and ink it is printed with are expensive',
-              'It is legal tender that people generally accept',
-              'Each bill is backed by an equal amount of bank reserves'
+              'A share of corporate stock',
+              'An unused credit card limit',
+              'Checking deposits',
+              'A ten-year government bond'
             ],
             correctAnswer: 2,
-            explanation: 'The dollar is fiat money: it has value because the government declares it legal tender and people accept it in trade. It is not convertible into gold, its material is nearly worthless, and it is not backed by reserves.'
+            explanation: 'Checking deposits can be spent directly, so they are a means of payment and count as money. Stocks and bonds must be sold for money before they can be spent, and a credit card limit is a line of borrowing, not an asset that pays for anything.'
           },
           {
             question: 'A store prices every item in dollars so that customers can compare costs. Which function of money does this illustrate?',
@@ -232,15 +230,15 @@ Choose the result that completes each statement.
             options: ['stay the same', 'decrease', 'increase', 'double']
           },
           {
-            label: 'Money that has value mainly because the government declares it legal tender is ___ money.',
-            options: ['fiat', 'commodity', 'near', 'reserve']
+            label: 'Moving \\$600 from a CD into a checking account makes M1 ___.',
+            options: ['increase', 'decrease', 'stay the same', 'double']
           }
         ],
-        correctAnswers: ['decrease', 'stay the same', 'stay the same', 'fiat'],
+        correctAnswers: ['decrease', 'stay the same', 'stay the same', 'increase'],
         hint1: 'Checking deposits are in M1; CDs are in M2 but not M1.',
         hint2: 'M2 already includes everything in M1.',
         hint3: 'Currency and checking deposits are both in M1.',
-        explanation: 'Moving checking deposits into a CD takes \\$600 out of M1 but keeps it in M2. Depositing cash only swaps one M1 item for another. Money valued because of government decree and acceptance is fiat money.'
+        explanation: 'Moving checking deposits into a CD takes \\$600 out of M1 but keeps it in M2. Depositing cash only swaps one M1 item for another. Moving money from a CD into checking adds it to M1, while M2 is unchanged.'
       }
     }
   ]

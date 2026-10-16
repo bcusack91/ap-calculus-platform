@@ -141,7 +141,7 @@ Start from free trade at $P_w = \\$25$ (imports of 40). The tariff raises the do
 **Revenue is a rectangle, not a triangle:** it sits between $P_w$ and $P_w + t$, from $Q_s$ to $Q_d$ (imports only). Tariff revenue is never collected on domestically produced units.
 
 ### Import Quotas
-A quota of **20 imported units** has the same effects on price (\\$30), domestic production (40), consumption (60) and deadweight loss (\\$50). The \\$100 rectangle becomes **quota rent** for whoever holds the import licenses, often foreign exporters, instead of tariff revenue.
+An **import quota** caps the number of units that may enter the country. A binding quota works in the same direction as a tariff (CED POL-1.B.3): imports fall, the domestic price rises above the world price, domestic producers sell more, domestic buyers buy less, consumer surplus falls and total surplus falls. The difference is that the government collects **no tariff revenue** unless it sells the import licenses; the higher price on imported units goes to whoever holds the licenses, often foreign exporters. The AP exam asks for these effects, not for a graph of the quota.
 
 ### A Prohibitive Tariff
 If $P_w + t \\ge P_a$ (here, a tariff of \\$10 or more), imports fall to zero and the market returns to autarky: price \\$35, quantity 50, and no tariff revenue at all.
@@ -184,7 +184,7 @@ Enter numbers only.
 | "Tariff revenue = tariff × quantity sold." | Only **imported** units are taxed: tariff × ($Q_d - Q_s$) at the new price. |
 | "Free trade hurts everyone in the importing country who makes the good." | Domestic producers lose, but buyers gain more, so **total surplus rises**. |
 | "A tariff lowers the world price." | For a **small** country, the world price is fixed; only the domestic price rises. |
-| "An import quota raises revenue for the government." | Not unless licenses are sold; otherwise the rectangle is **quota rent** for license holders. |
+| "An import quota raises revenue for the government." | Not unless licenses are sold; otherwise the higher price on imported units goes to **license holders**. |
 | "Exporting raises prices for domestic buyers, so it lowers total surplus." | Buyers lose, but producers gain more, so total surplus **rises**. |
 
 > 🔑 **AP Connection:** For a "who gains, who loses" tariff question, list four groups: domestic consumers (lose), domestic producers (gain), the government (gains revenue), and society as a whole (loses the deadweight loss).
@@ -219,15 +219,15 @@ Enter numbers only.
             explanation: 'The tariff is collected only on imports, so revenue is the tariff (the height from the world price to the higher domestic price) times the quantity imported. The two triangles beside it are the deadweight losses.'
           },
           {
-            question: 'A small country replaces a tariff with an import quota that allows exactly the same quantity of imports. What changes?',
+            question: 'A small country sets a binding import quota on sugar. Compared with free trade, which outcome is expected?',
             options: [
-              'The rectangle once collected as revenue goes to license holders',
-              'The domestic price falls back down to the world price level',
-              'The deadweight loss disappears since imports are now capped',
-              'Domestic producers now sell fewer units than with the tariff'
+              'Domestic sugar output rises and consumer surplus falls',
+              'Sugar output at home falls and consumer surplus rises',
+              'The domestic price falls back below the world price',
+              'Tariff revenue rises by the full value of all imports'
             ],
             correctAnswer: 0,
-            explanation: 'With the same import quantity, the domestic price, production, consumption and deadweight loss all match the tariff case. Only the rectangle between the world and domestic prices changes hands, from the government to whoever holds the import rights.'
+            explanation: 'Capping imports leaves less sugar on the domestic market, so the domestic price rises above the world price. Domestic firms produce more at the higher price, and buyers pay more for less, so consumer surplus falls. A quota is not a tax, so it collects no tariff revenue.'
           }
         ]
       }

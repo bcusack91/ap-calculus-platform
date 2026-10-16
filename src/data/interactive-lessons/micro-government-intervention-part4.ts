@@ -110,21 +110,18 @@ Enter numbers only.
 
 A **quota** caps the quantity that can be sold, often through a fixed number of licenses (taxi medallions, fishing permits) or a limit on imports.
 
-### Graphing a Quota in Words
-Draw a **vertical line at the quota quantity**. If it lies to the left of the equilibrium quantity, it binds. At the quota quantity:
-- Buyers pay the price on the **demand** curve.
-- The marginal cost of the last unit is the price on the **supply** curve.
-- The gap between the two is the **quota rent**: extra income per unit for whoever holds a license.
+### What a Binding Quota Does
+A quota binds when the cap is **smaller** than the quantity the market would trade on its own. Then (CED POL-1.B.3, POL-1.A.4):
+- **Quantity falls** to the quota amount.
+- **Price rises**, because buyers compete for fewer units: buyers who value the good most bid up the price of the limited supply.
+- **Consumer surplus falls**: buyers pay more and get less.
+- **Total surplus falls**: units that buyers value above their cost of production are no longer traded, so there is a **deadweight loss**, just as with a per-unit tax that cuts quantity by the same amount.
+- **License holders can gain**: they sell fewer units, but each one sells for more than the cost of producing it.
 
-### Worked Example: A Quota of 40 Units
-Same market: $Q_d = 120 - 2P$, $Q_s = 2P - 20$.
+### Quota or Tax?
+Both cut quantity and raise the price buyers pay. The difference is who receives the gap between that price and the cost of the last unit: under a **tax**, the government collects it as revenue; under a **quota**, it stays with whoever holds the right to sell, and the government collects nothing unless it sells the licenses.
 
-1. At Q = 40, buyers will pay $P = (120 - 40)/2 = $ **\\$40**.
-2. At Q = 40, the supply price is $P = (40 + 20)/2 = $ **\\$30**.
-3. Quota rent = (40 − 30) × 40 = **\\$400**, going to license holders.
-4. DWL = ½ × (50 − 40) × (40 − 30) = **\\$50**.
-
-Compare this with the \\$10 tax from Part 3: buyers pay \\$40, the supply price is \\$30, quantity is 40, and the deadweight loss is \\$50. **The outcomes match.** The only difference is who receives the \\$400 rectangle: the government under a tax, license holders under a quota.
+> ℹ️ The AP exam does not ask you to graph a quota (CED exclusion, Topic 2.9); it asks how a quota changes quantity, price and surplus.
 
 > 🔑 **AP Connection:** A quota raises price and lowers quantity, so it hurts buyers and creates deadweight loss. Sellers who hold licenses can gain, even though they sell fewer units.
 `
@@ -187,7 +184,6 @@ AP questions often label regions with letters. Here is the standard layout for a
 | Deadweight loss | — | C + E |
 
 ### The Same Letters for Other Policies
-- **Quota at $Q_2$:** CS = A, and B + D becomes **quota rent** for license holders; DWL is still C + E.
 - **Price ceiling at $P_s$:** quantity falls to $Q_2$ and buyers pay $P_s$, so CS = A + B + D and PS = F; DWL is still C + E.
 - **Price floor at $P_c$:** quantity falls to $Q_2$, so CS = A and PS = B + D + F; DWL is still C + E.
 `
@@ -211,15 +207,15 @@ Use the lettered tax graph above.
             options: ['F', 'D + F', 'D + E + F', 'B + D + F']
           },
           {
-            label: 'Under a quota at Q₂ instead of the tax, consumer surplus is ___',
-            options: ['A', 'A + B', 'A + B + C', 'A + C']
+            label: 'Under a price floor at Pc instead of the tax, producer surplus is ___',
+            options: ['B + D + F', 'F', 'D + E + F', 'D + F']
           }
         ],
-        correctAnswers: ['B + D', 'F', 'A'],
+        correctAnswers: ['B + D', 'F', 'B + D + F'],
         hint1: 'Revenue is the tax per unit times the new quantity: the rectangle between Pc and Ps.',
         hint2: 'Sellers keep Ps, so their surplus is the area above supply and below Ps.',
-        hint3: 'Buyers still pay Pc for Q₂ units under the quota.',
-        explanation: 'Revenue is the full rectangle between Pc and Ps, which is B + D. Producer surplus shrinks to F. A quota at Q₂ leaves buyers paying the same high price, so CS is still A; B + D goes to license holders instead of the government.'
+        hint3: 'Sellers now receive Pc on each of the Q₂ units they sell.',
+        explanation: 'Revenue is the full rectangle between Pc and Ps, which is B + D. Producer surplus shrinks to F. A price floor at Pc lets sellers keep the whole price on Q₂ units, so producer surplus is B + D + F, while C + E is still lost.'
       }
     },
     {

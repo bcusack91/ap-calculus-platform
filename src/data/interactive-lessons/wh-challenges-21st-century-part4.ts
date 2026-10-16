@@ -14,7 +14,7 @@ export const whChallenges21stCenturyPart4Data = {
 | Section |
 |---|
 | How 21st-century challenges interact (climate ↔ migration ↔ populism) |
-| Great-power rivalry: U.S.-China competition |
+| China's economic rise and global investment |
 | The role of international institutions: UN, WHO, WTO, G-20, IPCC |
 | Resistance and protest: Black Lives Matter, climate strikes, Hong Kong protests |
 
@@ -35,26 +35,27 @@ export const whChallenges21stCenturyPart4Data = {
 | Pandemics → Inequality | COVID-19 hit lower-income workers and developing countries harder |
 | AI/automation → Labor displacement | Routine clerical and manufacturing jobs at risk; possibly some skilled jobs too |
 
-## Great-Power Rivalry: U.S. vs. China
+## China's Economic Rise and Global Investment
 
-| Dimension | Pattern |
+| Stage | Development |
 |---|---|
-| Trade | 2018+ tariff escalation under Trump; 2022+ chip export controls under Biden |
-| Technology | Race over 5G (Huawei), semiconductors (TSMC, Intel, SMIC), AI capability |
-| Influence | Belt and Road Initiative (2013+) vs. Indo-Pacific partnerships (Quad: U.S.-Japan-India-Australia) |
-| Military | South China Sea island-building; Taiwan tensions; AUKUS pact (2021) |
-| Climate | World\'s top two emitters; intermittent cooperation despite political tensions |
+| 1978 onward | Deng Xiaoping's market reforms opened China to foreign investment and private enterprise |
+| 1980s–1990s | Special economic zones made coastal China a center of export manufacturing |
+| 2001 | China joined the World Trade Organization, deepening its integration into global trade |
+| 2010 | China passed Japan as the world's second-largest economy |
+| 2013 onward | The Belt and Road Initiative financed ports, railways and power plants across Asia, Africa and Europe |
+| Climate | China became the world's largest emitter of greenhouse gases, making it central to climate negotiations |
 
 ## The Role of International Institutions
 
 | Institution | 21st-century test |
 |---|---|
-| UN Security Council | Russian veto blocks Ukraine action; China vetoes Syria action |
+| UN Security Council | Russian and Chinese vetoes blocked action on the Syrian civil war |
 | WHO | Coordinated COVID response; criticized for early China deference |
 | WTO | Dispute resolution paralyzed; Trump blocked appellate appointments |
 | G-20 | Coordinated 2008 GFC response; less effective on subsequent crises |
 | IPCC | Authoritative climate science; informs Paris Agreement targets |
-| ICC | Issued arrest warrant for Putin (2023); limited enforcement reach |
+| ICC | Permanent court for genocide and war crimes (2002); limited enforcement reach |
 
 ## Resistance and Protest in the 21st Century
 
@@ -79,15 +80,15 @@ export const whChallenges21stCenturyPart4Data = {
       exercise: {
         questions: [
           {
-            question: 'Which response best characterizes the 21st-century U.S.-China rivalry as it has developed since roughly 2017?',
+            question: 'Which development best explains China\'s emergence as a leading manufacturing economy by the early 21st century?',
             options: [
-              'A rivalry combining tariffs, chip export controls, tech competition (5G, AI), military moves near Taiwan and the South China Sea, and China\'s Belt and Road lending',
-              'A mainly military rivalry confined to the South China Sea, with trade, technology, and investment ties between the two countries continuing much as they had before 2017',
-              'A mainly diplomatic rivalry over UN votes and human-rights resolutions, with little conflict over trade, technology, military power, or infrastructure investment',
-              'A trade-only rivalry that ended in 2018 after the first round of tariffs (on steel and aluminum), with no later escalation over technology or military power'
+              'A return to Maoist central planning that rejected foreign investment and private firms after 1989',
+              'Market reforms after 1978 and integration into global trade, including WTO entry in 2001',
+              'Oil export earnings that paid for state-owned heavy industry in the western provinces',
+              'A ban on exports that kept Chinese factories producing only for the domestic market'
             ],
-            correctAnswer: 0,
-            explanation: 'The post-2017 U.S.-China rivalry is multi-dimensional: trade + tech + military + influence projection.'
+            correctAnswer: 1,
+            explanation: 'Deng Xiaoping\'s market reforms, special economic zones and later WTO membership drew foreign investment and turned China into a center of export manufacturing, part of a wider late-20th-century turn toward economic liberalization. China did not return to Maoist planning, its growth was not built on oil exports, and its factories grew by exporting rather than serving only the home market.'
           },
           {
             question: "Which best characterizes the 2019–20 Hong Kong protests?",
@@ -176,13 +177,13 @@ export const whChallenges21stCenturyPart4Data = {
           {
             question: 'Which best demonstrates AP "complexity" by showing how 21st-century international institutions performed unevenly on different challenges?',
             options: [
-              'Results varied, as the WHO led vaccine sharing but was faulted over China, Russian vetoes stalled the Security Council, and Paris pledges fell short',
+              'Results varied, as the WHO led vaccine sharing but was faulted over China, Russian and Chinese vetoes stalled the Security Council on Syria, and Paris pledges fell short',
               'Institutions performed about equally well on every 21st-century challenge, since the same rules and voting procedures applied to pandemics, climate, security, and trade alike',
               'Institutions played almost no role in 21st-century challenges, since states handled pandemics, climate, security, and trade entirely through bilateral deals with one another',
               'Institutions fully solved each major 21st-century challenge, as the WHO, the UN Security Council, and the Paris Agreement all achieved their goals with broad cooperation'
             ],
             correctAnswer: 0,
-            explanation: 'AP "complexity" rewards naming the uneven performance of institutions across challenges: the WHO co-led the COVAX vaccine-sharing effort but was criticized for early deference to China; the Security Council was blocked by Russian vetoes after 2022; and the IPCC produced authoritative science while national Paris pledges remained insufficient.'
+            explanation: 'AP "complexity" rewards naming the uneven performance of institutions across challenges: the WHO co-led the COVAX vaccine-sharing effort but was criticized for early deference to China; the Security Council was blocked by Russian and Chinese vetoes on Syria; and the IPCC produced authoritative science while national Paris pledges remained insufficient.'
           }
         ]
       }
