@@ -172,16 +172,18 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-2-cell-structure',
-    question: 'Active transport differs from facilitated diffusion in that active transport',
+    stimulus:
+      'Lysosomes contain digestive enzymes that are most active at about pH 5, the pH inside the lysosome. At pH 7.2, the pH of the cytosol, these enzymes have less than 5% of their maximum activity.',
+    question: 'A small number of lysosomes break open inside an otherwise healthy cell. Which outcome is most likely, based on these data?',
     options: [
-      'moves a substance down its concentration gradient through a channel protein',
-      'uses an input of energy to move a substance from lower to higher concentration',
-      'moves only small nonpolar molecules directly across the phospholipid bilayer',
-      'requires a carrier protein, whereas facilitated diffusion uses no proteins at all',
+      'Rapid digestion of the cytosol, because the enzymes work faster once they leave the lysosome',
+      'Little damage, because the released enzymes are nearly inactive at the pH of the cytosol',
+      'Little damage, because the enzymes are too large to reach any proteins in the cytosol',
+      'Rapid digestion of the nucleus, because the enzymes are drawn into its acidic interior',
     ],
     correctAnswer: 1,
     explanation:
-      'Active transport uses energy, such as ATP hydrolysis by the sodium-potassium pump, to move substances against their concentration gradients. Facilitated diffusion also relies on membrane proteins, but it is passive and moves substances only down their gradients.',
+      'The enzymes are nearly inactive at pH 7.2, so a few that leak into the cytosol do little harm; keeping them in an acidic compartment both lets them work and protects the rest of the cell. Their activity falls, not rises, outside the lysosome. Enzymes free in the cytosol can reach its proteins, and the nucleus is not acidic.',
   },
   {
     type: 'mcq',
@@ -804,16 +806,16 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-7-natural-selection',
-    question: 'The biological species concept defines a species as a group whose members',
+    question: 'Horses and donkeys can mate and produce mules, which are healthy but almost always sterile. Which type of reproductive barrier keeps horses and donkeys separate species?',
     options: [
-      'live in the same geographic area at the same time',
-      'share an identical body form and coloration',
-      'occupy the same ecological niche in a community',
-      'can interbreed and produce viable, fertile offspring',
+      'A prezygotic barrier, because horses and donkeys cannot mate with each other',
+      'A geographic barrier, because horses and donkeys live on separate continents',
+      'A postzygotic barrier, because the hybrid offspring form but are infertile',
+      'A temporal barrier, because horses and donkeys breed in different seasons',
     ],
-    correctAnswer: 3,
+    correctAnswer: 2,
     explanation:
-      'Under the biological species concept, a species is a group of populations whose members can interbreed and produce viable, fertile offspring and are reproductively isolated from other groups. Members of one species can look very different, and different species can look alike, so body form is not the criterion.',
+      'Horses and donkeys do mate and produce living hybrids, so the barrier acts after the zygote forms: mules are sterile, so genes cannot flow between the two species. The successful matings rule out a prezygotic barrier, including geographic and temporal isolation, which would prevent mating altogether.',
   },
   {
     type: 'mcq',

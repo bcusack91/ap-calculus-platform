@@ -50,7 +50,7 @@ export interface ApPracticeForm {
 
 export const AP_PRACTICE_EXAMS: Record<string, ApPracticeExam> = {
   'ap-african-american-studies': { courseSlug: 'ap-african-american-studies', path: '/ap-african-american-studies-practice', load: () => import('@/data/ap-african-american-studies-practice/config').then((m) => m.config) },
-  'ap-bio': { courseSlug: 'ap-biology', path: '/ap-bio-practice', load: () => import('@/data/ap-bio-practice/config').then((m) => m.config) },
+  'ap-bio': { courseSlug: 'ap-biology', path: '/ap-bio-practice', load: () => import('@/data/ap-bio-practice/config').then((m) => m.config), moreForms: [() => import('@/data/ap-bio-practice/form-2/config').then((m) => m.config), () => import('@/data/ap-bio-practice/form-3/config').then((m) => m.config)] },
   'ap-calcab': { courseSlug: 'ap-calculus-ab', path: '/ap-calcab-practice', load: () => import('@/data/ap-calcab-practice/config').then((m) => m.config) },
   'ap-calcbc': { courseSlug: 'ap-calculus-bc', path: '/ap-calcbc-practice', load: () => import('@/data/ap-calcbc-practice/config').then((m) => m.config) },
   'ap-chem': { courseSlug: 'ap-chemistry', path: '/ap-chem-practice', load: () => import('@/data/ap-chem-practice/config').then((m) => m.config), moreForms: [() => import('@/data/ap-chem-practice/form-2/config').then((m) => m.config), () => import('@/data/ap-chem-practice/form-3/config').then((m) => m.config)] },

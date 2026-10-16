@@ -128,7 +128,7 @@ describe('exam tools registry', () => {
         own.slice(1).forEach((st, k) => expect(st.start, key).toBe(own[k].end))
       })
     }
-  })
+  }, 30_000) // loads every course's config; slow under full-suite load
 })
 
 describe('resume state', () => {

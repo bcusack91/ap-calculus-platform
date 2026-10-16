@@ -96,8 +96,8 @@ describe('form registry', () => {
     const forms = apPracticeForms('ap-chem')
     expect(forms.map((f) => [f.form, f.contentKey, f.label])).toEqual([[1, 'exam', 'Form 1'], [2, 'exam-2', 'Form 2']])
     expect(apPracticeFormList('ap-chem')).toEqual([{ form: 1, label: 'Form 1' }, { form: 2, label: 'Form 2' }])
-    expect(apPracticeForms('ap-bio')).toHaveLength(1)
-    expect(apPracticeForm('ap-bio', 2)).toBeUndefined()
+    expect(apPracticeForms('ap-csa')).toHaveLength(1)
+    expect(apPracticeForm('ap-csa', 2)).toBeUndefined()
     expect(apPracticeForm('ap-chem', 0)).toBeUndefined()
     expect(apPracticeForms('not-an-exam')).toEqual([])
   })
@@ -140,7 +140,7 @@ describe('POST /api/ap-practice/submit with forms', () => {
     expect(contentReads[0].key).toBe('exam')
     expect(created[0]).toMatchObject({ category: 'ap-practice-exam:ap-chem', results: { form: 1 } })
     expect((await post({ examKey: 'ap-chem', form: 3, mcq: [], frq: [] })).status).toBe(400)
-    expect((await post({ examKey: 'ap-bio', form: 2, mcq: [], frq: [] })).status).toBe(400)
+    expect((await post({ examKey: 'ap-csa', form: 2, mcq: [], frq: [] })).status).toBe(400)
   })
 })
 
@@ -171,8 +171,8 @@ describe('reviewing and listing a form-2 attempt', () => {
   })
 
   it('a course with one form keeps its old title', () => {
-    expect(apPracticeAttemptTitle('ap-practice-exam:ap-bio', { subject: 'AP Biology' })).toBe('AP Biology practice exam')
-    expect(apPracticeFormHref('/ap-bio-practice', 1)).toBe('/ap-bio-practice')
+    expect(apPracticeAttemptTitle('ap-practice-exam:ap-csa', { subject: 'AP Computer Science A' })).toBe('AP Computer Science A practice exam')
+    expect(apPracticeFormHref('/ap-csa-practice', 1)).toBe('/ap-csa-practice')
   })
 })
 
