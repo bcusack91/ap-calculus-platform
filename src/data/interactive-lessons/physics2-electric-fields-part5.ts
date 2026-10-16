@@ -187,7 +187,7 @@ This is about 120 km/s. The proton's electric potential energy has been converte
               '$1 \\times 10^{3}$ J',
               '$2.5 \\times 10^{2}$ J'
             ],
-            correctAnswer: 1,
+            correctAnswer: 0,
             explanation: 'Work by external force: $W_{\\text{ext}} = q\\Delta V = (2 \\times 10^{-6})(500) = 0.001$ J = 1 mJ. Moving a positive charge to higher potential requires positive work input, so the sign is positive. Forgetting the μ gives 1000 J, and dividing 500 by 2 instead of multiplying gives 250 J.'
           }
         ]
