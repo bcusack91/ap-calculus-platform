@@ -208,7 +208,9 @@ Garbage is dumped, compacted, and covered with soil **daily**. The whole pile si
 | **Final cap (clay + soil + vegetation)** | Seals the top when full; sheds rainwater |
 | **Monitoring wells** | Test surrounding groundwater for leaks |
 
-> 💡 **The two enemies:** **leachate** going *down* into groundwater, and **methane** coming *up* into the air. Every design feature targets one of these two escapes.`,
+> 💡 **The two enemies:** **leachate** going *down* into groundwater, and **methane** coming *up* into the air. Every design feature targets one of these two escapes.
+
+> ⚠️ **Not everything is accepted:** Sanitary landfills refuse some items, such as **used rubber tires**, and refused items are sometimes **dumped illegally**. Tires left in piles collect rainwater and become **breeding grounds for mosquitoes** that can spread disease.`,
       },
       {
         id: 'apesw2-leachate',
@@ -270,7 +272,11 @@ $$\\text{Organic waste} \\xrightarrow{\\text{anaerobic bacteria}} \\text{CH}_4 \
 Methane is a problem for two reasons:
 
 1. **Explosion / fire hazard** if it builds up.
-2. **Potent greenhouse gas** — methane traps far more heat per molecule than $CO_{2}$ (over a ~100-year window, roughly **25–30× stronger**).
+2. **Potent greenhouse gas** — per kilogram, methane traps about **30 times** as much heat as $CO_{2}$ over 100 years.
+
+### Why buried waste breaks down so slowly
+
+Microbes need **oxygen** and **moisture** to decompose waste quickly. Landfill waste is compacted, covered with soil every day and finally capped, so very little air or water reaches it. Decomposition depends on what the trash is made of and on these microbial conditions, and in a landfill the conditions are poor. That is why food and newspapers dug out of old landfills can still be recognizable decades later, and why the slow, oxygen-poor breakdown that does occur makes methane.
 
 The fix: **methane recovery wells** collect the gas. It can then be **flared** (burned off) or, better, **burned to generate electricity** — turning a pollutant into an energy source.
 
@@ -302,11 +308,11 @@ The fix: **methane recovery wells** collect the gas. It can then be **flared** (
 Engineers size methane-recovery systems using two facts:
 
 - Landfill gas is roughly **half methane, half $CO_{2}$** by volume, so the methane you can capture is about **50%** of the total gas collected.
-- Each ton of methane that **escapes** carries the warming punch of roughly **25 tons of $CO_{2}$** over a century.
+- Each ton of methane that **escapes** carries the warming punch of about **30 tons of $CO_{2}$** over a century.
 
 Multiplying those out shows why capture is worth the investment — even a modest gas-collection system prevents a large amount of $CO_{2}$-equivalent warming.
 
-> 💡 **Setup:** The math below uses the 50% rule and the 25× warming factor. Keep them straight — one is a *volume* split, the other a *warming-potency* multiplier.`,
+> 💡 **Setup:** The math below uses the 50% rule and the 30× warming factor. Keep them straight — one is a *volume* split, the other a *warming-potency* multiplier.`,
       },
       {
         id: 'apesw2-input-methane',
@@ -316,14 +322,14 @@ Multiplying those out shows why capture is worth the investment — even a modes
 Landfill gas is roughly **50% methane $(CH_{4})$** and **50% carbon dioxide $(CO_{2})$** by volume.
 
 **1)** A landfill captures 800,000 cubic meters of landfill gas in a year. About how many cubic meters of that are methane? (enter the number)
-**2)** Methane traps about 25 times as much heat per unit as $CO_{2}$. If 100 tons of methane escape uncaptured, that is equivalent to how many tons of $CO_{2}$ in warming potential? (enter the number)`,
+**2)** Per ton, methane traps about 30 times as much heat as $CO_{2}$ over 100 years. If 100 tons of methane escape uncaptured, that is equivalent to how many tons of $CO_{2}$ in warming potential? (enter the number)`,
         exercise: {
           boxes: 2,
-          correctAnswers: ['400000', '2500'],
+          correctAnswers: ['400000', '3000'],
           hint1: 'Half of the landfill gas is methane.',
           hint2: '$800{,}000 \\times 0.50 = 400{,}000$ cubic meters of $CH_{4}$.',
-          hint3: 'Multiply the methane mass by its warming factor: $100 \\times 25 = 2500$.',
-          explanation: '1) $800{,}000 \\times 0.50 = 400{,}000$ $m^{3}$ of methane. 2) $100 \\text{ tons} \\times 25 = 2500$ tons of $CO_{2}$-equivalent. This is why capturing landfill methane has such a large climate payoff.',
+          hint3: 'Multiply the methane mass by its warming factor: $100 \\times 30 = 3000$.',
+          explanation: '1) $800{,}000 \\times 0.50 = 400{,}000$ $m^{3}$ of methane. 2) $100 \\text{ tons} \\times 30 = 3000$ tons of $CO_{2}$-equivalent. This is why capturing landfill methane has such a large climate payoff.',
         },
       },
     ],
@@ -560,6 +566,8 @@ $$\\text{Organic waste} + \\text{O}_2 \\xrightarrow{\\text{aerobic microbes}} \\
 | Returns nutrients to soil | Reduces need for synthetic fertilizer |
 | Improves soil water retention | Healthier, more drought-resistant soil |
 
+**Drawbacks:** a compost pile can give off **odor** and attract **rodents** and other pests, especially when food scraps are added and the pile is not turned or covered.
+
 > ⚠️ **Aerobic vs. anaerobic — a key contrast:** Composting (with oxygen) produces mostly **$CO_{2}$**. The *same* organics buried in an oxygen-poor landfill decompose **anaerobically** and produce **methane $(CH_{4})$** — a far stronger greenhouse gas. Composting therefore has a real climate advantage over landfilling food and yard waste.`,
       },
       {
@@ -567,19 +575,20 @@ $$\\text{Organic waste} + \\text{O}_2 \\xrightarrow{\\text{aerobic microbes}} \\
         type: 'dropdown-select' as const,
         content: `**Classify Each Action** 🔽
 
-Match each action to the correct level of the waste hierarchy or recycling type.`,
+Match each action to the correct level of the waste hierarchy or recycling type, and identify the composting drawback.`,
         exercise: {
           dropdowns: [
             { label: 'Bringing a reusable bag to the store:', options: ['Source reduction', 'Recycling', 'Energy recovery', 'Landfilling'] },
             { label: 'Aluminum can melted to make a new aluminum can:', options: ['Closed-loop recycling', 'Open-loop recycling', 'Composting', 'Incineration'] },
             { label: 'Turning food scraps into humus with oxygen present:', options: ['Composting', 'Anaerobic landfilling', 'Open-loop recycling', 'Source reduction'] },
             { label: 'Plastic bottle reprocessed into carpet fiber:', options: ['Open-loop recycling', 'Closed-loop recycling', 'Reuse', 'Composting'] },
+            { label: 'A drawback neighbors often raise about compost piles:', options: ['Odor and rodents', 'Methane explosions', 'Toxic leachate', 'Toxic fly ash'] },
           ],
-          correctAnswers: ['Source reduction', 'Closed-loop recycling', 'Composting', 'Open-loop recycling'],
+          correctAnswers: ['Source reduction', 'Closed-loop recycling', 'Composting', 'Open-loop recycling', 'Odor and rodents'],
           hint1: 'Using less material in the first place is the top of the hierarchy.',
           hint2: 'Same product again = closed loop; a different, lower-grade product = open loop.',
           hint3: 'Composting needs oxygen and yields humus + $CO_{2}$.',
-          explanation: 'Reusable bag → source reduction (top of hierarchy). Can → can = closed-loop. Food → humus with $O_{2}$ = aerobic composting. Bottle → carpet = open-loop downcycling (a different, lower-grade product).',
+          explanation: 'Reusable bag → source reduction (top of hierarchy). Can → can = closed-loop. Food → humus with $O_{2}$ = aerobic composting. Bottle → carpet = open-loop downcycling (a different, lower-grade product). Compost piles can smell and attract rodents; methane and leachate are landfill problems, and toxic fly ash comes from incinerators.',
         },
       },
       {
@@ -895,7 +904,7 @@ Two equity problems recur:
             {
               question: 'How does an OPEN DUMP differ from a sanitary landfill?',
               options: [
-                'It is unlined and uncovered, so leachate and litter escape freely',
+                'It has no liner or cover, so leachate and litter escape freely',
                 'It has a thicker liner but lacks any system for methane capture',
                 'It accepts only inert materials such as rubble and recyclables',
                 'It is a landfill that has been capped and closed to new waste',

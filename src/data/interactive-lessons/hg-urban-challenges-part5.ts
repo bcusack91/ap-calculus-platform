@@ -18,7 +18,7 @@ export const hgUrbanChallengesPart5Data = {
 | Responses: Green Infrastructure, Brownfields and Regional Planning |
 | Trade-offs: When Sustainability Has a Price |
 
-> 🔑 **Key Concept:** Cities concentrate people, buildings and energy use, so they concentrate environmental problems. Yet density can also make cities **more efficient per person** than sprawl. This part covers the environmental challenges of urban areas and the responses the CED names: **regional planning, brownfield remediation, urban growth boundaries and farmland protection** (CED Topics 6.8 and 6.11). Each problem appears at a different scale, from a single parking lot to the whole planet.
+> 🔑 **Key Concept:** Cities concentrate people, buildings and energy use, so they concentrate environmental problems. Yet density can also make cities **more efficient per person** than sprawl. This part covers the environmental challenges of urban areas and the responses the CED names: **regional planning, brownfield remediation, urban growth boundaries and farmland protection** (CED Topics 6.8 and 6.11), along with environmental injustice (CED Topic 6.10). Each problem appears at a different scale, from a single parking lot to the whole planet.
 `
     },
     {
@@ -99,6 +99,9 @@ Many older cities, including hundreds in the United States, have **combined sewe
 | **Energy and emissions** | UN-Habitat estimates that cities use about **three-quarters** of the world's energy and produce **more than 60%** of greenhouse-gas emissions, on less than 2% of Earth's land | Per person, residents of dense cities often emit less from transport than suburban residents |
 | **Climate risk** | Many of the largest cities sit on coasts and deltas exposed to sea-level rise and stronger storms | Jakarta's northern districts are sinking as groundwater is pumped out; Indonesia announced in **2019** that it would move its capital to Borneo |
 
+### Environmental Injustice
+**Environmental injustice** is the pattern in which low-income and minority neighborhoods carry more of a city's environmental hazards, such as highways, factories, waste sites and polluted air or water, while receiving fewer environmental benefits such as parks and street trees (CED Topic 6.10). It often grows out of past housing discrimination and zoning (Part 4): land in these areas was cheap and residents had little political power, so hazards were placed there. **Example:** in **Flint, Michigan**, a majority-Black city, officials switched the water source in **2014** without proper corrosion control, and lead from old pipes leached into residents' tap water.
+
 ### The Ecological Footprint
 A city's **ecological footprint** is the land and water area needed to supply its food, water, energy and materials and to absorb its waste. A large city's footprint covers **many times** its own area, reaching into farms, forests and oceans worldwide.
 
@@ -178,6 +181,17 @@ A U.S. metro area may contain **dozens or even hundreds** of separate municipal 
             ],
             correctAnswer: 0,
             explanation: 'The problem is political fragmentation across a metropolitan area, so the response must also work at the metropolitan scale, like Portland\'s Metro or the Twin Cities Metropolitan Council. The other tools act on one town, neighborhood or housing market.'
+          },
+          {
+            question: 'In one metro area, the landfill, two highways and most chemical plants sit beside low-income, mostly minority neighborhoods, while wealthier districts have more parks and trees. Which concept best describes this pattern?',
+            options: [
+              'Green gentrification',
+              'Ecological footprint',
+              'Environmental injustice',
+              'Urban heat island'
+            ],
+            correctAnswer: 2,
+            explanation: 'Environmental injustice is the uneven placement of hazards in low-income and minority areas and of benefits such as parks in wealthier ones. Green gentrification is rising rents after a green project, the ecological footprint is the land and water area a city draws on, and the urban heat island is a temperature effect of pavement.'
           }
         ]
       }

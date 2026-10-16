@@ -156,7 +156,7 @@ Economists think of nature as **natural capital** — the planet's stock of reso
                 'Cultural ecosystem services',
               ],
               correctAnswer: 0,
-              explanation: 'Water purification and flood/storm buffering are regulating services — natural processes that stabilize conditions. Provisioning services are extracted goods (food, timber); these are processes, not goods. Supporting services (nutrient cycling, soil formation) underlie all others, and cultural services are recreational or spiritual. Supporting services (nutrient cycling, soil formation) underlie all others, and cultural services are recreational or spiritual. Supporting services (nutrient cycling, soil formation) underlie all others, and cultural services are recreational or spiritual. Supporting services (nutrient cycling, soil formation) underlie all others, and cultural services are recreational or spiritual.',
+              explanation: 'Water purification and flood/storm buffering are regulating services — natural processes that stabilize conditions. Provisioning services are extracted goods (food, timber); these are processes, not goods. Supporting services (nutrient cycling, soil formation) underlie all others, and cultural services are recreational or spiritual.',
             },
             {
               question: 'Treating natural capital like a savings account, the most sustainable strategy is to:',
@@ -798,7 +798,7 @@ Using energy more efficiently delivers the same comfort or output with less inpu
                 'Renewable power replaces fossil fuels faster than the grid can adapt',
               ],
               correctAnswer: 0,
-              explanation: 'When a device becomes cheaper to operate, people may use it more (driving an efficient car farther, lighting more rooms), eating into the expected savings. Efficiency works best paired with mindful consumption. Extra energy used to build a device is a separate, embodied-energy issue. Extra energy used to build a device is a separate, embodied-energy issue. Extra energy used to build a device is a separate, embodied-energy issue. Extra energy used to build a device is a separate, embodied-energy issue.',
+              explanation: 'When a device becomes cheaper to operate, people may use it more (driving an efficient car farther, lighting more rooms), eating into the expected savings. Efficiency works best paired with mindful consumption. Extra energy used to build a device is a separate, embodied-energy issue.',
             },
           ],
         },
@@ -1043,9 +1043,9 @@ The encouraging news is that solutions exist and are being deployed: renewable c
 | Efficiency | The cheapest "first fuel"; watch the rebound effect |
 | Tragedy of the commons | Shared resource → individual overuse → collapse |
 | Externalities | Internalize via carbon tax / cap-and-trade |
-| Treaties | Montreal = CFCs/ozone; Paris = $CO_{2}/climate$ |
+| Treaties | Montreal = CFCs/ozone; Kyoto = greenhouse gases/climate |
 
-> ⚠️ Top traps: renewable ≠ automatically sustainable; nuclear is low-carbon but **nonrenewable**; **Reduce** beats recycle; report the footprint as **demand vs. biocapacity**; Montreal (ozone) ≠ Paris (climate).`,
+> ⚠️ Top traps: renewable ≠ automatically sustainable; nuclear is low-carbon but **nonrenewable**; **Reduce** beats recycle; report the footprint as **demand vs. biocapacity**; Montreal (ozone) ≠ Kyoto (climate).`,
       },
       {
         id: 'apsus7-mixed',

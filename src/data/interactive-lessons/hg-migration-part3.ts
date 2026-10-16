@@ -146,6 +146,8 @@ Of the roughly **117 million** forcibly displaced people at the end of 2023:
 | **Guest workers** | Temporary, government-approved labor migration | The US **Bracero Program** (1942–1964), about 4.6 million contracts for Mexican farm workers; West Germany's **Gastarbeiter** agreements with Italy (1955), Turkey (1961) and others, ended in 1973 |
 | **Rural-to-urban migration** | Moving from farms and villages to cities | China's **floating population** of about 376 million people living away from their registered home (2020 census) |
 
+**Two kinds of internal migration.** **Interregional migration** is a move from one region of a country to another, such as the Great Migration from the South to Northern cities or the shift from the Rust Belt to the Sun Belt. **Intraregional migration** is a move within the same region, such as from a central city to its suburbs or from a village to a nearby city.
+
 ### Two Cases in More Depth
 
 **China's hukou system.** Since 1958 every Chinese citizen has had a **hukou**, a household registration tied to a birthplace and classified as rural or urban. Hundreds of millions of rural people moved to factory cities such as Shenzhen and Dongguan after economic reforms began in 1978, but without an urban hukou many could not easily get public schooling or health care for their families in the city. The result is **circular, split-household migration**: workers in the city, children and grandparents in the village.
@@ -183,13 +185,17 @@ Choose the type of migration each case best illustrates.
           {
             label: 'A worker from rural Sichuan takes a factory job in Shenzhen but keeps a rural hukou: ___',
             options: ['rural-to-urban migration', 'transhumance', 'international migration', 'counter-stream']
+          },
+          {
+            label: 'A family moves from a Chicago apartment to a house in a suburb in the same metropolitan area: ___',
+            options: ['intraregional migration', 'interregional migration', 'step migration', 'guest worker']
           }
         ],
-        correctAnswers: ['transhumance', 'transnational migration', 'guest worker', 'rural-to-urban migration'],
+        correctAnswers: ['transhumance', 'transnational migration', 'guest worker', 'rural-to-urban migration', 'intraregional migration'],
         hint1: 'Seasonal movement with livestock has its own name; so does keeping active ties to two countries at once.',
         hint2: 'The Bracero Program issued temporary, government-approved labor contracts.',
         hint3: 'Shenzhen is a Chinese city, and the worker came from a village in the same country.',
-        explanation: 'Seasonal herding is transhumance; keeping active ties to two countries is transnational migration; Bracero contracts made Mexican farm workers guest workers; and moving from a Sichuan village to Shenzhen is rural-to-urban internal migration.'
+        explanation: 'Seasonal herding is transhumance; keeping active ties to two countries is transnational migration; Bracero contracts made Mexican farm workers guest workers; moving from a Sichuan village to Shenzhen is rural-to-urban internal migration; and a move from the city to its own suburbs stays inside one region, so it is intraregional rather than interregional migration.'
       }
     },
     {

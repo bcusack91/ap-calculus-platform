@@ -126,11 +126,15 @@ Rural-to-urban migrants arrive faster than formal housing is built, and formal h
 
 **Disamenity zones**, the poorest areas of Latin American cities in the Griffin-Ford model, are covered in the Urbanization topic. They are the developing-world counterpart of zones of abandonment: places with little or no public service.
 
-### Redlining's Land-Use Legacy
-Redlining, the 1930s HOLC maps and related practices such as covenants and blockbusting are taught in the Ethnicity and Identity topic. What matters for urban challenges is the **lasting land-use effect**:
+### Housing Discrimination and Its Land-Use Legacy
+Two discriminatory practices shaped which U.S. neighborhoods declined (CED Topic 6.10):
+- **Redlining:** in the 1930s, the federal Home Owners' Loan Corporation (HOLC) graded neighborhoods for lending risk and outlined many Black and immigrant neighborhoods in red as "hazardous." Banks then refused or limited mortgage loans there, so residents could not buy or repair homes.
+- **Blockbusting:** in the 1950s and 1960s, real estate agents frightened white homeowners into selling cheaply by warning that Black families were moving onto the block, then resold the houses to Black buyers at inflated prices. The rapid turnover profited the agents and sped up white flight to the suburbs.
+
+The **Fair Housing Act of 1968** banned both practices, but their effects remain. Restrictive covenants, steering and how segregation is measured are taught in the Ethnicity and Identity topic. What matters for urban challenges is the **lasting land-use effect**:
 - **Investment:** about **three in four** neighborhoods graded "hazardous" in the 1930s were still low-to-moderate income in a 2018 study by the National Community Reinvestment Coalition.
 - **Heat:** across **108** U.S. urban areas, formerly redlined neighborhoods averaged about **2.6°C (about 5°F)** hotter in summer than the highest-graded areas, because they have more pavement and fewer trees (Hoffman, Shandas and Pendleton, **2020**).
-- **Infrastructure siting:** highways, rail yards and industry were more often placed in these areas, adding noise and pollution.
+- **Infrastructure siting:** highways, rail yards and industry were more often placed in these areas, adding noise and pollution. This uneven burden is an example of **environmental injustice** (Part 5).
 `
     },
     {
@@ -162,6 +166,17 @@ Redlining, the 1930s HOLC maps and related practices such as covenants and block
             ],
             correctAnswer: 0,
             explanation: 'Disinvestment, industrial land uses and highways left these areas with more heat-absorbing surfaces and less tree canopy, which intensifies the urban heat island. The pattern comes from land-use history, not from slope, shoreline or newer building materials.'
+          },
+          {
+            question: 'Which outcome did blockbusting most often produce in U.S. city neighborhoods in the 1950s and 1960s?',
+            options: [
+              'Lower home prices for the Black families who bought in',
+              'New federal mortgage loans for older inner-city blocks',
+              'Rapid racial turnover as white owners sold and moved away',
+              'Wealthier newcomers displacing long-time renters'
+            ],
+            correctAnswer: 2,
+            explanation: 'Agents played on racial fear so white owners sold quickly and moved away, and the block changed from white to Black within a few years. Black buyers paid inflated prices, not lower ones; redlining cut off loans to these areas rather than adding them; and wealthier newcomers displacing renters is gentrification.'
           }
         ]
       }

@@ -1122,12 +1122,15 @@ Benefits were estimated at roughly **30 times** the costs.`,
 | Option | What it cuts | Side effects and trade-offs |
 |---|---|---|
 | Wet limestone scrubber | 90% or more of $SO_{2}$ | Uses energy and water; makes tonnes of sludge or gypsum (some is sold for wallboard); the reaction releases $CO_{2}$: $CaCO_{3} + SO_{2} \\rightarrow CaSO_{3} + CO_{2}$ |
+| **Electrostatic precipitator** | Most particulates (fly ash and soot) | Charges the particles in the exhaust so they stick to oppositely charged plates; removes no $SO_{2}$ or other gases; uses electricity, and the collected ash must be disposed of |
 | Switching to **low-sulfur coal** | $SO_{2}$ | Coal hauled long distances; no cut in $CO_{2}$ |
 | Fluidized bed combustion | $SO_{2}$ and $NO_{x}$ | Needs a new or rebuilt boiler |
 | Switching coal to **natural gas** | Nearly all $SO_{2}$, most particulates and mercury, much of the $NO_{x}$, and about half the $CO_{2}$ per kWh | Methane leaks from wells and pipelines offset part of the climate gain |
 | Wind or solar power | All combustion pollutants | Intermittent; needs storage or backup |
 | Taller smokestacks | Local ground-level concentrations only | **Exports** pollution downwind, worsening regional acid deposition |
 | Conservation (efficiency, transit) | Everything tied to the avoided fuel | Depends on behavior and investment |
+
+Scrubbers and electrostatic precipitators do different jobs, so coal plants often use both: the scrubber removes sulfur dioxide gas, and the precipitator pulls out the fine particles.
 
 Many U.S. power plants met the first phase of the 1990 $SO_{2}$ cap by switching to low-sulfur coal rather than by building scrubbers, because it was cheaper. Later, retiring coal plants in favor of natural gas and renewables cut emissions further.`,
     },

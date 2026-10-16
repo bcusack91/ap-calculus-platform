@@ -784,9 +784,9 @@ Enter numbers only, without units or commas.
 | Worked Example: A PCB Food Web |
 | DDT, Eagles and a Global Treaty |
 | Global Distillation and Hormone Mimics |
-| Worked Example: How Much Fish Is Safe? |
+| Worked Example: Mercury in a Serving of Fish |
 
-> 🔑 **Key Concept:** The definitions of endocrine disruptors, POPs, bioaccumulation and biomagnification, and the mercury and DDT basics, are covered in Water Resources, Part 4. This part tests those ideas against **real cases**: what happened, how the cause was traced, what policy followed, and how fish advisories turn concentrations into safe meal limits (CED 8.3, 8.7, 8.8).`,
+> 🔑 **Key Concept:** The definitions of endocrine disruptors, POPs, bioaccumulation and biomagnification, and the mercury and DDT basics, are covered in Water Resources, Part 4. This part tests those ideas against **real cases**: what happened, how the cause was traced, what policy followed, and why fish advisories single out large predatory fish (CED 8.3, 8.7, 8.8).`,
     },
     {
       id: 'apewp4-minamata',
@@ -908,17 +908,17 @@ These cases show why endocrine disruptors are hard to regulate: effects can appe
     {
       id: 'apewp4-safe',
       type: 'text' as const,
-      content: `## Worked Example: How Much Fish Is Safe?
+      content: `## Worked Example: Mercury in a Serving of Fish
 
-Health agencies set a **reference dose**, the daily intake judged safe over a lifetime. For methylmercury, the U.S. EPA reference dose is **0.1 micrograms (µg) per kilogram of body mass per day**. In fish, 1 ppm is the same as 1 µg of mercury per gram of fish.
+Fish advisories rest on biomagnification: methylmercury builds up in large, long-lived predators near the top of aquatic food chains. In fish, 1 ppm is the same as 1 µg of mercury per gram of fish, so the mercury in a serving is the serving mass times the concentration.
 
-A **60 kg** adult chooses between two fish (illustrative mercury levels):
+Compare two fish (illustrative mercury levels):
 
-1. **Safe weekly intake:** $0.1\\ \\frac{\\mu\\text{g}}{\\text{kg} \\cdot \\text{day}} \\times 60\\ \\text{kg} \\times 7\\ \\text{days} = 42\\ \\mu\\text{g}$ per week
-2. **Mercury in one 120 g serving of tuna at 0.35 ppm:** $120\\ \\text{g} \\times 0.35\\ \\frac{\\mu\\text{g}}{g} = 42\\ \\mu\\text{g}$
-3. **Mercury in one 120 g serving of salmon at 0.02 ppm:** $120 \\times 0.02 = 2.4\\ \\mu\\text{g}$
+1. **One 120 g serving of tuna at 0.35 ppm:** $120\\ \\text{g} \\times 0.35\\ \\frac{\\mu\\text{g}}{\\text{g}} = 42\\ \\mu\\text{g}$
+2. **One 120 g serving of sardines at 0.02 ppm:** $120 \\times 0.02 = 2.4\\ \\mu\\text{g}$
+3. **Comparison:** $42 \\div 2.4 = 17.5$, so the tuna serving carries about 17.5 times as much mercury.
 
-**Interpretation:** one tuna serving uses the whole week's allowance, while the same person could eat salmon at every meal. That is why advisories favor small, short-lived fish low on the food chain over large predators.`,
+**Interpretation:** tuna is a large predator high on the food chain, so methylmercury has biomagnified in its tissue. That is why advisories favor small, short-lived fish low on the food chain over large predators, especially for pregnant women and young children.`,
     },
     {
       id: 'apewp4-calc',
@@ -929,16 +929,16 @@ Enter numbers only, without units or commas.
 
 **1)** Using the PCB food-web table, by what factor does the concentration increase from rainbow smelt to lake trout?
 
-**2)** Using the EPA reference dose of 0.1 µg per kg per day, what is the safe daily methylmercury intake, in µg, for a 50 kg teenager?
+**2)** King mackerel, a large predator, averages about 0.73 ppm mercury; tilapia, which feeds low on the food chain, about 0.01 ppm. For equal 100 g servings, how many times as much mercury is in the king mackerel?
 
 **3)** How many micrograms of mercury are in a 150 g serving of swordfish at 0.4 ppm?`,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.8', '5', '60'],
+        correctAnswers: ['4.8', '73', '60'],
         hint1: 'Divide the lake trout value by the smelt value.',
-        hint2: 'Multiply 0.1 by the body mass in kilograms.',
+        hint2: 'Find each serving\'s mercury (100 g × ppm), then divide; with equal servings you can just divide the ppm values.',
         hint3: '0.4 ppm means 0.4 µg of mercury per gram of fish.',
-        explanation: '1) 4.8 ÷ 1.0 = 4.8. 2) 0.1 × 50 = 5 µg per day. 3) 150 g × 0.4 µg/g = 60 µg, more than the teenager\'s safe intake for a whole week (35 µg).',
+        explanation: '1) 4.8 ÷ 1.0 = 4.8. 2) 100 × 0.73 = 73 µg and 100 × 0.01 = 1 µg, so 73 ÷ 1 = 73; the predator feeds high on the food chain, where methylmercury has biomagnified. 3) 150 g × 0.4 µg/g = 60 µg; swordfish is a large, long-lived predator, so methylmercury has biomagnified in its tissue.',
       },
     },
     {
@@ -998,7 +998,7 @@ Enter numbers only, without units or commas.
 | Stockholm Convention | 2001 POPs treaty; DDT allowed for malaria control |
 | Global distillation | POPs move poleward and concentrate in Arctic food webs |
 | Endocrine disruptors | Lake Apopka alligators; intersex fish below outfalls |
-| Safe servings | Reference dose × body mass = safe intake; fish ppm = µg per g |
+| Mercury per serving | Serving mass × ppm (1 ppm = 1 µg per g); large predators carry the most |
 
 **Next:** Part 5 asks how scientists decide how much of a toxin is too much: dose-response curves, safety margins and risk assessment.`,
     },

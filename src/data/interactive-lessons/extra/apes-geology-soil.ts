@@ -554,7 +554,7 @@ This explains a tropical paradox previewed in Part 2: tropical soils are **deepl
                 'The downhill transport of topsoil particles by surface runoff',
               ],
               correctAnswer: 0,
-              explanation: 'Leaching is water dissolving nutrients/minerals in the upper soil and carrying them downward (out of the topsoil). Excessive leaching leaves the surface nutrient-poor. Salts rising as water evaporates is salinization, and runoff carrying soil away is erosion. Salts rising as water evaporates is salinization, and runoff carrying soil away is erosion. Salts rising as water evaporates is salinization, and runoff carrying soil away is erosion. Salts rising as water evaporates is salinization, and runoff carrying soil away is erosion.',
+              explanation: 'Leaching is water dissolving nutrients/minerals in the upper soil and carrying them downward (out of the topsoil). Excessive leaching leaves the surface nutrient-poor. Salts rising as water evaporates is salinization, and runoff carrying soil away is erosion.',
             },
             {
               question: 'Why are many tropical rainforest soils surprisingly NUTRIENT-POOR despite lush vegetation above them?',
