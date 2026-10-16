@@ -47,8 +47,8 @@ export const whMassAtrocitiesPart5Data = {
 
 > **The Interwar Hinge**
 
-- 1915–1923: Armenian Genocide largely unpunished. The 1919 Treaty of Sèvres briefly proposed prosecution; the 1923 Treaty of Lausanne dropped it.
-- The interwar failure to prosecute foreshadowed the Holocaust. Hitler reportedly said in 1939, "Who, after all, speaks today of the annihilation of the Armenians?"
+- 1915–1923: Armenian Genocide largely unpunished. The 1920 Treaty of Sèvres briefly proposed prosecution; the 1923 Treaty of Lausanne dropped it.
+- The interwar failure to prosecute left a precedent of impunity that lasted until the Nuremberg trials after World War II.
 - This is the AP CCOT pivot: international law's near-absence in 1915 vs. its post-1945 institutionalization.
 
 > **The Post-Cold-War Hinge**
@@ -160,15 +160,15 @@ export const whMassAtrocitiesPart5Data = {
             explanation: 'CCOT requires naming continuity AND change in a single thesis. The strongest version names structure (continuity), method (change), and law/response (change) together.'
           },
           {
-            question: 'Hitler\'s alleged 1939 statement, "Who, after all, speaks today of the annihilation of the Armenians?", is most useful as evidence for which AP-style argument?',
+            question: 'The 1920 Treaty of Sèvres proposed trials for those responsible for the Armenian deportations and massacres, but the 1923 Treaty of Lausanne dropped them. This change best supports which argument?',
             options: [
-              'It demonstrates that the international failure to prosecute the Armenian Genocide created a permissive precedent that emboldened later perpetrators in the Nazi regime',
-              'It shows Hitler believed the Armenian Genocide had been punished severely, so he expected the world to resist Nazi plans',
-              'It establishes that the Armenian Genocide was meaningfully prosecuted by the Treaty of Sèvres and that all senior Ottoman officials served substantial prison sentences',
-              'It shows the Nazi regime planned the Holocaust together with surviving Ottoman officials who had organized the 1915 killings'
+              'International law in the 1920s lacked the means to punish the organizers of mass killing',
+              'The Ottoman officials who organized the deportations all received long prison sentences by 1923',
+              'The Armenian Genocide led directly to the founding of a permanent international criminal court',
+              'The Treaty of Lausanne created the first international tribunal for crimes against humanity'
             ],
             correctAnswer: 0,
-            explanation: 'The quotation is the canonical evidence for the "impunity emboldens future atrocity" argument and is heavily used in AP comparison and connection responses.'
+            explanation: 'Dropping the trials showed that, without an international court or the will to enforce one, the perpetrators went largely unpunished, a contrast with the Nuremberg trials after 1945. The organizers were not all imprisoned, no permanent court was created until the 1998 Rome Statute, and Lausanne set up no tribunal.'
           }
         ]
       }

@@ -32,7 +32,7 @@ export const whNewlyIndependentStatesPart7Data = {
 | 1947 | India and Pakistan independence; Partition | First major Asian decolonization; ~1 million dead |
 | 1948 | Israel founded; first Arab-Israeli War | Permanent Middle East flashpoint |
 | 1949 | PRC founded; Mao\'s communist victory | Largest country goes communist |
-| 1952 | Egyptian Free Officers coup | Birth of Arab nationalism |
+| 1952 | Egyptian Free Officers coup | Leads to Nasser's rise to power (1954); Egypt becomes the center of pan-Arab nationalism |
 | 1955 | Bandung Conference | Third World assertion |
 | 1956 | Suez Crisis | End of European great-power independence |
 | 1957 | Ghana independence | First sub-Saharan African colony to win independence |
@@ -40,8 +40,8 @@ export const whNewlyIndependentStatesPart7Data = {
 | 1960 | Year of Africa | 17 African states independent |
 | 1961 | NAM founded in Belgrade | Institutionalized non-alignment |
 | 1962 | Algerian independence after 8-year war | End of French Algeria |
-| 1965 | Sukarno overthrown in Indonesia | First major Asian post-independence regime change |
-| 1966 | Nkrumah overthrown in Ghana | First major African post-independence regime change |
+| 1965 | Sukarno pushed aside by the army in Indonesia (1965–67) | Military rule under Suharto replaces "Guided Democracy" |
+| 1966 | Nkrumah overthrown in Ghana | A military coup ends Ghana's one-party state |
 | 1967 | Six-Day War; Arusha Declaration | Israeli expansion; African socialism formalized |
 | 1967–70 | Nigerian civil war (Biafra) | Limits of postcolonial federalism |
 | 1971 | Bangladesh Liberation War | Pakistan loses East Pakistan |

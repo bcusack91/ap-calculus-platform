@@ -53,10 +53,10 @@ export const whColdWarDecolonizationPart6Data = {
 
 - **HIPP:** Soviet leader addressing Western diplomats during a tense moment after the Hungarian Revolution; intended audience is the Western diplomatic community AND the Soviet public; purpose is intimidation and ideological assertion; POV is Soviet confidence in 1950s industrial growth.
 
-> **4. Bandung Final Communiqué (April 1955)**
-> "All forms of colonialism are an evil which should speedily be brought to an end."
+> **4. Final Communiqué of the Asian-African Conference, Bandung (April 1955)**
+> The conference declared "that colonialism in all its manifestations is an evil which should speedily be brought to an end."
 
-- **HIPP:** Joint statement of 29 newly independent Asian and African states; intended audience is the international community AND both superpowers; purpose is to articulate a Third World political identity; POV is collective anti-colonial.
+- **HIPP:** Joint statement of 29 Asian and African countries, many of them recently freed from colonial rule; intended audience is the international community AND both superpowers; purpose is to articulate a Third World political identity; POV is collective anti-colonial.
 
 > **5. Reagan at the Berlin Wall (June 1987)**
 > "Mr. Gorbachev, tear down this wall!"
@@ -75,7 +75,7 @@ For a Cold War SAQ, structure each part as **Claim + Evidence + Connection**:
 
 | Trap | Why It Costs Points |
 |---|---|
-| Treating "Third World" as a single bloc | NAM members had real disagreements (Tito vs. Nasser; Nehru vs. China) |
+| Treating "Third World" as a single bloc | Bandung participants and non-aligned states had real conflicts (India and Pakistan; India's 1962 border war with China) |
 | Saying "the Cold War caused decolonization" | Decolonization had its own momentum (interwar nationalist organizing) — Cold War shaped it but did not cause it |
 | Treating 1991 as inevitable | Soviet collapse was contingent on Gorbachev's specific reform choices |
 | Quoting documents without HIPP | The "complexity" point requires sourcing, not just quoting |
@@ -153,7 +153,7 @@ For a Cold War SAQ, structure each part as **Claim + Evidence + Connection**:
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: 'Knowing that the Bandung Final Communiqué was a joint statement of 29 newly independent states is most useful for: ___',
+            label: 'Knowing that the Bandung Final Communiqué was a joint statement of 29 Asian and African countries, many recently freed from colonial rule, is most useful for: ___',
             options: ['historical context', 'intended audience', 'purpose', 'point of view']
           },
           {

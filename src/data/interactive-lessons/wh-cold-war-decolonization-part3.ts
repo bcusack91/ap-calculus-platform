@@ -49,7 +49,7 @@ export const whColdWarDecolonizationPart3Data = {
 | Case | Method | Outcome |
 |---|---|---|
 | **India (1947)** | Mass civil disobedience under Gandhi and Nehru's INC | Negotiated British withdrawal; partition into India and Pakistan; ~1 million dead in partition violence |
-| **Algeria (1954–62)** | FLN armed insurgency against French rule and a settler population | Independence after roughly 500,000 deaths; pied-noir exodus to France |
+| **Algeria (1954–62)** | FLN armed insurgency against French rule and a settler population | Independence after a war that killed hundreds of thousands (estimates range from about 300,000 to the Algerian government's figure of 1.5 million); pied-noir exodus to France |
 | **Ghana (1957)** | Nkrumah's Convention People's Party — strikes, boycotts, mass mobilization | First sub-Saharan African colony to gain independence; model for the 1960 wave |
 
 > **The 1960 "Year of Africa"**
@@ -60,8 +60,8 @@ Seventeen African countries became independent in a single year, including Niger
 
 > **Bandung Conference (April 1955)**
 
-- 29 newly independent Asian and African states met in Bandung, Indonesia
-- Hosted by Indonesia's Sukarno; led by Nehru, Nasser (Egypt), Zhou Enlai (China), and Tito (Yugoslavia)
+- Delegations from 29 Asian and African countries met in Bandung, Indonesia; many were newly independent, while others, such as Ethiopia, Japan and Thailand, were long-established states
+- Hosted by Indonesia's Sukarno; leading figures included Nehru (India), Nasser (Egypt), Zhou Enlai (China) and U Nu (Burma)
 - Declared anti-colonialism, racial equality, and refusal to align with either superpower bloc
 
 > **Non-Aligned Movement (NAM, founded Belgrade 1961)**
@@ -83,7 +83,7 @@ Seventeen African countries became independent in a single year, including Niger
             question: 'Which best explains the historical significance of the 1955 Bandung Conference?',
             options: [
               'It created a permanent United Nations agency to manage European decolonization and supervise the constitutional handover of power in African colonies during the 1960s',
-              'It was the first major postwar gathering of newly independent Asian and African states asserting a Third World political identity outside the U.S.-Soviet rivalry',
+              'It was the first major postwar gathering of Asian and African states, many newly independent, asserting a Third World political identity outside the U.S.-Soviet rivalry',
               'It founded a military alliance of Asian and African states, led by Indonesia, to defend members against both U.S. and Soviet intervention',
               'It produced a nuclear test ban signed by the superpowers at the urging of newly independent states, ending atmospheric testing worldwide'
             ],
@@ -150,7 +150,7 @@ Seventeen African countries became independent in a single year, including Niger
             options: ['settler-colonial revolutionary war', 'negotiated decolonization', 'superpower nuclear standoff', 'Third World non-alignment']
           },
           {
-            label: 'The 1955 Bandung Conference of 29 Asian and African states is an example of: ___',
+            label: 'The 1955 Bandung Conference of 29 Asian and African countries is an example of: ___',
             options: ['settler-colonial revolutionary war', 'negotiated decolonization', 'superpower nuclear standoff', 'Third World non-alignment']
           }
         ],

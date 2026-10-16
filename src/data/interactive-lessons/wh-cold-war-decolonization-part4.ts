@@ -55,7 +55,7 @@ The Cold War was framed as capitalism vs. communism — but post-1945 history wa
 
 | Domain | U.S. Move | Soviet Move |
 |---|---|---|
-| Sports | Munich 1972 Olympics; Miracle on Ice 1980 | Soviet medal dominance; 1980 boycott of Moscow Olympics |
+| Sports | 1980 "Miracle on Ice" hockey win; led a boycott of the 1980 Moscow Olympics after the Soviet invasion of Afghanistan | Soviet medal dominance; led a Soviet-bloc boycott of the 1984 Los Angeles Olympics |
 | Film and music | Hollywood, jazz tours sponsored by State Department | Bolshoi tours; socialist realism |
 | Space | Mercury and Apollo programs; 1969 Moon landing | Sputnik 1957; Yuri Gagarin 1961 first human in space |
 

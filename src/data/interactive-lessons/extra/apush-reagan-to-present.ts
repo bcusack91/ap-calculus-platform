@@ -8,7 +8,7 @@ import type { LessonData } from '../registry'
  * teach (text) → interactive check (multiple-choice / dropdown-select / input-boxes) →
  * worked DBQ/SAQ-style applications → Exit Quiz.
  * Concept-and-chronology topic, so checks favor multiple-choice + dropdown, with a few
- * quantitative input-boxes (years, election margins, economic figures, vote counts).
+ * quantitative input-boxes (years and economic figures).
  * Every fact, date, and figure has been verified. LaTeX uses DOUBLED backslashes
  * (template-literal strings); literal dollar amounts in prose are escaped as \\$.
  */
@@ -99,28 +99,9 @@ In **1980**, Republican **Ronald Reagan** — former actor and two-term governor
 - The ongoing **Iran Hostage Crisis** (52 Americans held in Tehran since November 1979)
 - A general sense of national "malaise"
 
-Reagan's optimistic message — "Are you better off than you were four years ago?" — and his promise to cut taxes and restore American strength produced a **landslide**. Reagan won **44 states** and **489 electoral votes** to Carter's **49**.
+Reagan's optimistic message — "Are you better off than you were four years ago?" — and his promise to cut taxes and restore American strength produced a **landslide**: Reagan carried 44 of the 50 states.
 
 > 🔑 **Why it matters:** 1980 was a **realigning election**. It brought "**Reagan Democrats**" — working-class whites who had traditionally voted Democratic — into the Republican fold, and it signaled the end of the New Deal liberal era's dominance.`,
-      },
-      {
-        id: 'r2p1-drill-1980',
-        type: 'input-boxes' as const,
-        content: `**The Numbers of 1980** 🧮
-
-Recall the figures from Reagan's 1980 landslide over Carter.
-
-**1)** In what year was Reagan first elected president?
-**2)** How many electoral votes did Reagan win? *(he won 489)*
-**3)** How many electoral votes did Carter receive? *(out of 538 total)*`,
-        exercise: {
-          boxes: 3,
-          correctAnswers: ['1980', '489', '49'],
-          hint1: 'The election that ended Carter\'s single term took place in 1980.',
-          hint2: 'Reagan carried 44 states; his electoral total was 489.',
-          hint3: 'There are 538 electoral votes in total. If Reagan got 489, Carter got the small remainder: $538 - 489 = 49$.',
-          explanation: 'In the 1980 landslide, Reagan won 489 electoral votes (44 states) to Carter\'s 49. The total is 538, and $489 + 49 = 538$. ✓',
-        },
       },
       {
         id: 'r2p1-reaganomics',
@@ -131,7 +112,7 @@ Reagan's economic program — nicknamed **"Reaganomics"** — was built on **sup
 
 The four pillars were:
 
-1. **Tax cuts** — The **Economic Recovery Tax Act of 1981** slashed income-tax rates roughly 25% across the board.
+1. **Tax cuts** — The **Economic Recovery Tax Act of 1981** cut individual income-tax rates by about 23% over three years and lowered the top rate from 70% to 50%.
 2. **Deregulation** — Reducing federal rules on business, banking, and industry.
 3. **Reduced domestic spending** — Cuts to social programs (the "social safety net").
 4. **Tight money** — Support for the Federal Reserve (under Paul Volcker) raising interest rates to crush inflation.
@@ -333,12 +314,9 @@ Bush won 1988 partly on Reagan's coattails and a famous campaign pledge:
 
 But soaring deficits forced his hand. In **1990**, Bush agreed to a budget deal that **raised taxes** — breaking the pledge and alienating conservatives. Combined with an early-1990s **recession**, this badly damaged him at home.
 
-Other domestic notes:
+Abroad, Bush spoke of a **"new world order"** in which nations, often working through the United Nations, would cooperate to stop aggression. The end of the Cold War brought new diplomatic relationships, but also new U.S. military and peacekeeping interventions and continuing debates over how to use American power.
 
-- **Americans with Disabilities Act (ADA, 1990)** — a landmark civil-rights law banning discrimination against people with disabilities. A major bipartisan achievement.
-- Two Supreme Court appointments, including the contentious **Clarence Thomas** confirmation (1991), marked by **Anita Hill's** sexual-harassment testimony.
-
-> ⚠️ **Exam trap:** Don't confuse the two Bushes. **George H. W. Bush** (the elder, "Bush 41") served 1989–1993 — Gulf War, ADA, "read my lips." His son **George W. Bush** ("Bush 43") served 2001–2009 — 9/11, Iraq War. Keep them straight.`,
+> ⚠️ **Exam trap:** Don't confuse the two Bushes. **George H. W. Bush** (the elder, "Bush 41") served 1989–1993 — end of the Cold War, Gulf War, "read my lips." His son **George W. Bush** ("Bush 43") served 2001–2009 — 9/11, Iraq War. Keep them straight.`,
       },
       {
         id: 'r2p3-q-bush',
@@ -349,24 +327,24 @@ Other domestic notes:
             {
               question: 'Which event most damaged George H. W. Bush with conservative voters before the 1992 election?',
               options: [
-                'Breaking his "read my lips: no new taxes" pledge by agreeing to a 1990 tax increase',
-                'Signing the Americans with Disabilities Act over the strong objections of business groups',
+                'Breaking his 1988 pledge of no new taxes by agreeing to a 1990 tax increase',
                 'Sending U.S. troops to drive Iraq\'s army out of Kuwait in the Persian Gulf War of 1991',
-                'Nominating Clarence Thomas, a conservative federal judge, to the Supreme Court in 1991',
+                'Ordering the 1989 invasion of Panama that removed the dictator Manuel Noriega from power',
+                'Meeting Gorbachev at Malta in 1989 as the communist governments of Eastern Europe fell',
               ],
               correctAnswer: 0,
               explanation: 'Facing huge deficits, Bush agreed to raise taxes in 1990, breaking his signature 1988 campaign promise. Many conservatives never forgave him, weakening him heading into 1992.',
             },
             {
-              question: 'The Americans with Disabilities Act (1990) is best categorized as:',
+              question: 'When George H. W. Bush spoke of a "new world order" after the Cold War, he was expressing the hope that:',
               options: [
-                'A civil rights law prohibiting discrimination against people with disabilities',
-                'A tax-cut measure giving credits to businesses that hired disabled veterans',
-                'A health-care law extending Medicare coverage to all Americans with disabilities',
-                'A spending bill funding new veterans\' hospitals after the Persian Gulf War',
+                'The United States would withdraw from world affairs now that the Soviet threat was gone',
+                'Nations would cooperate through the UN to resist aggression like Iraq\'s',
+                'The Soviet Union and the United States would divide Europe into two permanent blocs',
+                'NATO would be dissolved and replaced by a new alliance led by China and Japan',
               ],
-              correctAnswer: 0,
-              explanation: 'The ADA extended civil-rights protections — in employment, public accommodations, and access — to Americans with disabilities. It was one of Bush\'s most enduring domestic achievements.',
+              correctAnswer: 1,
+              explanation: 'Bush hoped the end of the Cold War would let the great powers cooperate, often through the UN, to stop aggression, as the coalition against Iraq did in 1990–91. The end of the Cold War brought new interventions and debates over the use of American power, not withdrawal, permanent blocs, or NATO\'s dissolution.',
             },
           ],
         },
@@ -443,14 +421,14 @@ The Persian Gulf War unfolded fast — barely seven months from invasion to libe
 
 ---
 
-> 🔑 **The Shift:** Democrat **Bill Clinton** won in **1992** as a centrist "**New Democrat**," but he governed alongside a resurgent conservative Congress after 1994. The decade became defined by **divided government**, a roaring economy, globalization, and bitter partisanship — culminating in impeachment.`,
+> 🔑 **The Shift:** Democrat **Bill Clinton** won in **1992** as a centrist "**New Democrat**," but he governed alongside a resurgent conservative Congress after 1994. The decade became defined by **divided government**, a roaring economy, globalization, and bitter partisanship.`,
       },
       {
         id: 'r2p4-clinton',
         type: 'text' as const,
         content: `## Clinton and the "New Democrats"
 
-In **1992**, Clinton defeated incumbent George H. W. Bush in a **three-way race** that also featured independent **H. Ross Perot**, who won an impressive **~19% of the popular vote** (the strongest third-party showing since 1912). Perot's focus on the deficit tapped frustration with both parties (analysts still debate whether he cost Bush the election).
+In **1992**, Clinton defeated incumbent George H. W. Bush in a **three-way race** that also featured independent **H. Ross Perot**, who won nearly a fifth of the popular vote, the strongest third-party showing since 1912. Perot's focus on the deficit tapped frustration with both parties (analysts still debate whether he cost Bush the election).
 
 Clinton positioned himself as a **centrist "New Democrat,"** moving the party toward the middle. Major developments:
 
@@ -497,58 +475,59 @@ Clinton positioned himself as a **centrist "New Democrat,"** moving the party to
       {
         id: 'r2p4-gingrich',
         type: 'text' as const,
-        content: `## The Republican Resurgence & Impeachment
+        content: `## The Republican Resurgence
 
 The 1990s also saw a sharp conservative counterattack:
 
 - **1994 midterms** — Led by **Newt Gingrich** and his **"Contract with America,"** Republicans won control of **both houses of Congress** for the first time in 40 years (the "Republican Revolution"). This produced years of **divided government** and budget showdowns, including **government shutdowns** in 1995–96.
-- **Impeachment (1998–99)** — The House impeached Clinton on charges of **perjury and obstruction of justice** arising from the Monica Lewinsky scandal. The **Senate acquitted** him in **1999**, so he **remained in office**.
+- Partisan conflict peaked when the House impeached Clinton in 1998 over the Monica Lewinsky scandal; the Senate acquitted him in 1999.
 
-Meanwhile, the late-1990s **economy boomed**, fueled by the **"dot-com"** technology and internet sector. The federal budget even reached a **surplus** by the end of Clinton's term.
-
-> ⚠️ **Precision matters:** Clinton was **impeached** (formally charged) by the House but **acquitted** by the Senate — so he was **not removed**. "Impeached" means charged, not convicted/removed. This is a classic distinction the exam loves to test.`,
+Meanwhile, the late-1990s **economy boomed**, fueled by the **"dot-com"** technology and internet sector. The federal budget even reached a **surplus** by the end of Clinton's term.`,
       },
       {
-        id: 'r2p4-drill-perot',
-        type: 'input-boxes' as const,
-        content: `**1990s Numbers** 🧮
-
-**1)** In what year was Bill Clinton first elected president?
-**2)** Approximately what percent of the 1992 popular vote did Ross Perot win? *(round to the nearest whole number; he got ~18.9%)*
-**3)** In what year did the Republican "Revolution" win control of Congress?`,
-        exercise: {
-          boxes: 3,
-          correctAnswers: ['1992', '19', '1994'],
-          hint1: 'Clinton beat the elder Bush in the same year as the three-way race with Perot.',
-          hint2: 'Perot won close to one-fifth of the vote; 18.9% rounds to 19.',
-          hint3: 'The "Contract with America" midterm wave came two years into Clinton\'s first term.',
-          explanation: 'Clinton was elected in 1992; Perot took ~19% (18.9%) of the popular vote, the best third-party showing since 1912; and Gingrich\'s Republicans captured Congress in the 1994 midterms.',
-        },
-      },
-      {
-        id: 'r2p4-impeach-note',
+        id: 'r2p4-debates',
         type: 'text' as const,
-        content: `## Impeachment: The Words Decide the Point
+        content: `## Debates Over the Safety Net and Free Trade
 
-Half of the points students lose on the Clinton impeachment come from sloppy vocabulary. **Impeachment** is the *charge*, not the *removal*. The Constitution splits the process between the two chambers of Congress — and Clinton's case is the textbook illustration of how it actually plays out.`,
+The CED singles out two policy fights that ran through the 1990s: "the scope of the government social safety net" and "free-trade agreements" (KC-9.1.I.C).
+
+| Debate | What happened | Why it matters |
+|--------|---------------|----------------|
+| **Welfare reform (1996)** | The Personal Responsibility and Work Opportunity Reconciliation Act replaced AFDC with time-limited, block-granted aid (TANF) tied to work requirements | Conservatives had long argued that welfare discouraged work; a Democratic president signing the law showed how far the debate had moved |
+| **Programs that survived** | Social Security and Medicare stayed popular and largely intact | Efforts to shrink government "met with inertia and liberal opposition, as many programs remained popular with voters" (KC-9.1.I.B) |
+| **NAFTA (1994)** | Business groups and most economists backed it; labor unions and many Democrats opposed it, fearing factory jobs would move to Mexico | Free trade split both parties and became a lasting fault line |
+
+> 💡 **The pattern:** Period 9 conservatives won some battles over the size of government, but popular entitlement programs proved very hard to cut.`,
       },
       {
-        id: 'r2p4-dropdown-impeach',
-        type: 'dropdown-select' as const,
-        content: `**Impeachment Vocabulary** 🔽
-
-Get the constitutional terms exactly right.`,
+        id: 'r2p4-q-debates',
+        type: 'multiple-choice' as const,
+        content: `**Concept Check** 🎯`,
         exercise: {
-          dropdowns: [
-            { label: 'The body that "impeaches" (formally charges) a president:', options: ['The House of Representatives', 'The Senate', 'The Senate Judiciary Committee', 'The Electoral College'] },
-            { label: 'The body that holds the trial and votes to convict or acquit:', options: ['The Senate', 'The House of Representatives', 'The Cabinet', 'The states'] },
-            { label: 'The outcome for Clinton in 1999 — he was:', options: ['Acquitted and stayed in office', 'Convicted and removed from office', 'Forced to resign before a trial', 'Censured by the House instead'] },
+          questions: [
+            {
+              question: 'The 1996 welfare reform law, which replaced AFDC with time-limited aid tied to work requirements, best reflects which Period 9 development?',
+              options: [
+                'A new federal guarantee of a minimum income for every adult citizen',
+                'The influence of conservative arguments that federal programs discouraged work',
+                'The nationalization of private charities under a new cabinet department',
+                'A return to the New Deal practice of hiring the unemployed for public works',
+              ],
+              correctAnswer: 1,
+              explanation: 'The law put into practice the conservative argument that open-ended welfare discouraged work, and a Democratic president signed it. It ended a guarantee rather than creating one, nationalized nothing, and did not revive New Deal work programs.',
+            },
+            {
+              question: 'Which statement best describes the debate over NAFTA in the early 1990s?',
+              options: [
+                'Labor unions and business groups united behind it, so it passed without opposition',
+                'Opponents objected because it would raise U.S. tariffs on goods from Canada',
+                'Business groups backed it, but unions feared factory jobs would move to Mexico',
+                'The debate centered on whether to admit the Soviet Union to the trade zone',
+              ],
+              correctAnswer: 2,
+              explanation: 'Supporters expected cheaper goods and larger markets; unions and many Democrats feared that manufacturing jobs would move to lower-wage Mexico. NAFTA was bitterly contested, it lowered rather than raised tariffs, and the Soviet Union had already dissolved.',
+            },
           ],
-          correctAnswers: ['The House of Representatives', 'The Senate', 'Acquitted and stayed in office'],
-          hint1: 'The lower chamber brings the charges (impeachment).',
-          hint2: 'The upper chamber conducts the trial; a two-thirds vote is needed to convict.',
-          hint3: 'The Senate fell short of the two-thirds needed, so Clinton finished his term.',
-          explanation: 'The House impeaches (charges); the Senate tries and needs a two-thirds vote to convict. In 1999 the Senate acquitted Clinton, so he served out his second term.',
         },
       },
     ],
@@ -574,49 +553,7 @@ Get the constitutional terms exactly right.`,
         type: 'text' as const,
         content: `## The Disputed Election of 2000
 
-The **2000** race between Republican **George W. Bush** and Democrat **Al Gore** (Clinton's vice president) was historically close. Everything came down to **Florida**, where the margin was a few hundred votes amid disputes over "**hanging chads**" and recounts.
-
-The recount reached the Supreme Court, which in **Bush v. Gore (2000)** halted the Florida recount, effectively awarding the state — and the presidency — to Bush.
-
-The result was extraordinary:
-
-| Candidate | Popular vote | Electoral vote |
-|-----------|-------------|----------------|
-| **Al Gore** | **Won** the national popular vote | 266 |
-| **George W. Bush** | Lost the popular vote | **271 — won the presidency** |
-
-> ⚠️ **Key point:** Bush won the **electoral** vote (and thus the presidency) while **losing the popular vote** — one of only a handful of times in U.S. history this has happened. It reignited debate over the Electoral College.`,
-      },
-      {
-        id: 'r2p5-q-2000',
-        type: 'multiple-choice' as const,
-        content: `**Concept Check** 🎯`,
-        exercise: {
-          questions: [
-            {
-              question: 'The 2000 presidential election was extraordinary because:',
-              options: [
-                'Bush won the Electoral College while losing the popular vote after the Florida recount was halted',
-                'No candidate won an Electoral College majority, so the House of Representatives chose the winner',
-                'A third-party candidate carried several states and forced recounts in every state that he lost',
-                'Al Gore won both the popular and electoral votes but conceded before Florida was fully counted',
-              ],
-              correctAnswer: 0,
-              explanation: 'Gore won the popular vote, but the Supreme Court\'s decision in Bush v. Gore ended the Florida recount, giving Bush Florida\'s electors and a 271–266 Electoral College win — president despite losing the popular vote.',
-            },
-            {
-              question: 'The 2000 Supreme Court case that effectively decided the presidency was:',
-              options: [
-                'Bush v. Gore',
-                'Marbury v. Madison',
-                'Baker v. Carr',
-                'Roe v. Wade',
-              ],
-              correctAnswer: 0,
-              explanation: 'Bush v. Gore (2000) halted Florida\'s recount, settling the disputed election in Bush\'s favor. Baker v. Carr (1962) dealt with legislative apportionment ("one person, one vote"), not a presidential election.',
-            },
-          ],
-        },
+The **2000** race between Republican **George W. Bush** and Democrat **Al Gore** came down to a contested recount in Florida, which the Supreme Court halted in *Bush v. Gore*. Bush won the Electoral College while losing the national popular vote.`,
       },
       {
         id: 'r2p5-911',
@@ -634,9 +571,47 @@ The response reshaped American government and foreign policy:
 | **Department of Homeland Security (2002)** | New cabinet department to coordinate domestic security |
 | **Iraq War (2003)** | Invaded Iraq; Saddam Hussein removed |
 
+> 💡 **The civil-liberties tension:** Like earlier wars, the War on Terror sparked a **liberty-vs.-security** debate. The PATRIOT Act, Guantánamo Bay detentions, and surveillance programs raised questions about how far the government may go to protect national security.`,
+      },
+      {
+        id: 'r2p5-q-911',
+        type: 'multiple-choice' as const,
+        content: `**Concept Check** 🎯`,
+        exercise: {
+          questions: [
+            {
+              question: 'Why did the United States direct its 2001 invasion of Afghanistan against the Taliban government?',
+              options: [
+                'It had invaded Kuwait and threatened Saudi Arabia\'s oil fields',
+                'It had sheltered al-Qaeda and its leader, Osama bin Laden',
+                'It had seized U.S. diplomats as hostages in its capital for over a year',
+                'It had allowed the Soviet Union to place nuclear missiles on its territory',
+              ],
+              correctAnswer: 1,
+              explanation: 'The Taliban had given al-Qaeda a base, and it refused to hand over bin Laden after 9/11. The other options describe Iraq in 1990, Iran in 1979–81, and Cuba in 1962.',
+            },
+            {
+              question: 'The USA PATRIOT Act (2001) and the detention of prisoners at Guantánamo Bay most directly raised which debate?',
+              options: [
+                'Whether to restore the military draft for all men aged 18 to 25',
+                'How to balance national security against civil liberties and human rights',
+                'Whether the United States should leave the United Nations',
+                'Whether to cut defense spending in order to balance the federal budget',
+              ],
+              correctAnswer: 1,
+              explanation: 'Expanded surveillance and indefinite detention prompted the debate the CED names: the war on terrorism "sought to improve security within the United States but also raised questions about the protection of civil liberties and human rights" (KC-9.3.II.B). The other debates were not what these measures provoked.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'r2p5-iraq',
+        type: 'text' as const,
+        content: `## The Iraq War and Its Controversy
+
 The **Iraq War (2003)** was justified by claims that Saddam possessed **"weapons of mass destruction" (WMDs)** — weapons that were **never found**, fueling lasting controversy.
 
-> 💡 **The civil-liberties tension:** Like earlier wars, the War on Terror sparked a **liberty-vs.-security** debate. The PATRIOT Act, Guantánamo Bay detentions, and surveillance programs raised questions about how far the government may go to protect national security.`,
+Both wars became **lengthy and controversial** conflicts, and their costs fed a continuing debate over the appropriate use of American power abroad.`,
       },
       {
         id: 'r2p5-dropdown-911',
@@ -845,12 +820,11 @@ You can now trace the arc of **Period 9 (c. 1980–present)**: the conservative 
 | **1990–91** | Persian Gulf War | Post–Cold War U.S. power |
 | **1991** | USSR dissolves | Cold War ends |
 | **1994** | NAFTA / GOP "Revolution" | Globalization + divided government |
-| **2000** | Bush v. Gore | Electoral-vote winner loses popular vote |
 | **2001** | 9/11 | War on Terror begins |
 | **2003** | Iraq War | WMD controversy |
 | **2008** | Financial crisis / TARP | Renewed calls to reform the financial system |
 
-> ⚠️ **Three precision traps to avoid:** (1) Reagan *raised* the national debt despite "small-government" rhetoric. (2) Clinton was **impeached but acquitted** — not removed. (3) In **2000**, Bush **lost** the national popular vote but won the Electoral College.`,
+> ⚠️ **Two precision traps to avoid:** (1) Reagan *raised* the national debt despite "small-government" rhetoric. (2) The Cold War did not end because of Reagan alone: U.S. military spending, Reagan's diplomacy, and political and economic problems in Eastern Europe and the Soviet Union all mattered (KC-9.3.I.B).`,
       },
       {
         id: 'r2p7-themes',
@@ -875,15 +849,15 @@ Connect each defining development to the president in office when it happened.`,
         exercise: {
           dropdowns: [
             { label: 'Supply-side "Reaganomics" and the INF Treaty:', options: ['Ronald Reagan', 'Bill Clinton', 'George H. W. Bush', 'George W. Bush'] },
-            { label: 'NAFTA, welfare reform, and impeachment-then-acquittal:', options: ['Bill Clinton', 'George H. W. Bush', 'Ronald Reagan', 'George W. Bush'] },
+            { label: 'NAFTA, welfare reform, and "triangulation":', options: ['Bill Clinton', 'George H. W. Bush', 'Ronald Reagan', 'George W. Bush'] },
             { label: 'The 9/11 response and the 2003 Iraq War:', options: ['George W. Bush', 'Bill Clinton', 'Ronald Reagan', 'George H. W. Bush'] },
-            { label: 'The Persian Gulf War and the Americans with Disabilities Act:', options: ['George W. Bush', 'George H. W. Bush', 'Ronald Reagan', 'Bill Clinton'] },
+            { label: 'The Persian Gulf War and the broken "no new taxes" pledge:', options: ['George W. Bush', 'George H. W. Bush', 'Ronald Reagan', 'Bill Clinton'] },
           ],
           correctAnswers: ['Ronald Reagan', 'Bill Clinton', 'George W. Bush', 'George H. W. Bush'],
           hint1: 'Reaganomics and the 1987 INF Treaty belong to the president they\'re named after.',
-          hint2: 'NAFTA (1994) and the 1998–99 impeachment were under the centrist "New Democrat."',
-          hint3: '9/11 and the 2003 Iraq War were under "Bush 43"; the 1991 Gulf War and the 1990 ADA were under his father, "Bush 41."',
-          explanation: 'Reagan: supply-side economics + INF Treaty. Clinton: NAFTA, welfare reform, impeachment/acquittal. George W. Bush: 9/11 response + Iraq War. George H. W. Bush: Persian Gulf War + Americans with Disabilities Act.',
+          hint2: 'NAFTA (1994) and the 1996 welfare overhaul were under the centrist "New Democrat."',
+          hint3: '9/11 and the 2003 Iraq War were under "Bush 43"; the 1991 Gulf War and the 1990 tax increase were under his father, "Bush 41."',
+          explanation: 'Reagan: supply-side economics + INF Treaty. Clinton: NAFTA, welfare reform, triangulation. George W. Bush: 9/11 response + Iraq War. George H. W. Bush: Persian Gulf War + the broken "read my lips" pledge.',
         },
       },
       {
@@ -929,7 +903,7 @@ The toughest exam questions don't just ask *what* happened — they ask you to *
         type: 'text' as const,
         content: `## One Last Check
 
-You've traced Period 9 from Reagan's 1980 realignment to the polarized, globalized present. Three final questions target the precision traps that separate top scores from the rest: the real fiscal record of Reaganomics, the popular-vote/Electoral-College split, and the direct consequences of 9/11.`,
+You've traced Period 9 from Reagan's 1980 realignment to the polarized, globalized present. Three final questions target the points that separate top scores from the rest: the real fiscal record of Reaganomics, the shift from factory to service work, and the direct consequences of 9/11.`,
       },
       {
         id: 'r2p7-exit-quiz',
@@ -951,15 +925,15 @@ Answer all three to finish the lesson.`,
               explanation: 'Reaganomics cut taxes, deregulated, and boosted defense spending. Inflation fell, but tax cuts plus military spending (without matching cuts) caused deficits to soar and the debt to nearly triple.',
             },
             {
-              question: 'In the disputed 2000 presidential election, the eventual winner:',
+              question: 'Which statement best describes a change in American work from the 1980s to the 2000s?',
               options: [
-                'Won the Electoral College while losing the national popular vote',
-                'Won both the popular and electoral votes by the widest margins in decades',
-                'Was chosen by the House of Representatives after an Electoral College tie',
-                'Was declared the winner by the Supreme Court after a tie in the popular vote',
+                'Manufacturing jobs and union membership grew steadily in the industrial Midwest',
+                'Most Americans returned to farming as factory and office jobs disappeared',
+                'Service jobs grew, but manufacturing employment and union membership fell',
+                'Farm employment rose until agriculture became the largest sector of the economy',
               ],
-              correctAnswer: 0,
-              explanation: 'George W. Bush won the presidency through the Electoral College (271–266) despite receiving fewer popular votes than Al Gore — reviving debate over the Electoral College.',
+              correctAnswer: 2,
+              explanation: 'New technology and global trade shifted employment toward services while manufacturing and union membership declined, part of KC-9.2.I. Manufacturing and unions shrank rather than grew, Americans did not return to farming, and farm employment kept falling.',
             },
             {
               question: 'The September 11, 2001 attacks led most directly to which set of U.S. responses?',

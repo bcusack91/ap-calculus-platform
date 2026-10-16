@@ -25,21 +25,9 @@ export const whMassAtrocitiesPart2Data = {
       id: 'whma2-content',
       type: 'text' as const,
       content: `
-## The Stages and the Cases
+## Three Cases, Step by Step
 
-> **Stages of Genocide (Stanton model, simplified)**
-
-| Stage | What it looks like | Holocaust example |
-|---|---|---|
-| Classification | "Us" vs. "them" categories | Aryan / Jew |
-| Symbolization | Identifiers, names, badges | Yellow star (1939–41) |
-| Discrimination | Loss of civil rights | Nuremberg Laws (1935) |
-| Dehumanization | Propaganda comparing target to vermin | Der Stürmer cartoons |
-| Organization | Special units and bureaucracies | SS, Einsatzgruppen, Reich Security Main Office |
-| Polarization | Banning intermarriage, contact | Nuremberg blood-protection law |
-| Preparation | Deportation logistics, lists | Wannsee Conference (Jan 1942) |
-| Extermination | Mass killing | Death camps, 1942–45 |
-| Denial | Postwar erasure of evidence | Holocaust denial movements |
+In each case below, a regime facing war or crisis moved from singling out a group, to deporting or confining it, to mass killing; in Nazi Germany a long phase of legal exclusion came first, and the Khmer Rouge turned on whole categories of its own population. Compare how quickly each case escalated.
 
 > **The Armenian Genocide (1915–23)**
 

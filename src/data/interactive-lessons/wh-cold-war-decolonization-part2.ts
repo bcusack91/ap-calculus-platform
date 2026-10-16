@@ -70,15 +70,15 @@ export const whColdWarDecolonizationPart2Data = {
       exercise: {
         questions: [
           {
-            question: 'Which event most directly demonstrated the limits of Soviet enforcement of bloc discipline in Eastern Europe before 1989?',
+            question: 'Which events most directly demonstrated how the Soviet Union enforced bloc discipline in Eastern Europe before 1989?',
             options: [
-              'The 1956 Hungarian Revolution and the 1968 Prague Spring, both crushed by Warsaw Pact military intervention to restore single-party rule',
-              'The 1955 Bandung Conference of newly independent African and Asian states meeting in Indonesia to discuss non-alignment between the superpowers',
+              'The 1956 Hungarian Revolution, crushed by Soviet troops, and the 1968 Prague Spring, ended by a Warsaw Pact invasion',
+              'The 1955 Bandung Conference of Asian and African countries, many newly independent, meeting in Indonesia to discuss non-alignment',
               'The 1962 Cuban Missile Crisis confrontation between the United States and the Soviet Union over nuclear missiles deployed in Cuba',
               'The 1963 signing of the Limited Nuclear Test Ban Treaty between the United States, the Soviet Union, and the United Kingdom'
             ],
             correctAnswer: 0,
-            explanation: 'Hungary 1956 and Prague 1968 are the canonical examples of Soviet enforcement: tanks crushed reform movements. The Brezhnev Doctrine codified this practice.'
+            explanation: 'Hungary 1956 and Prague 1968 are the canonical examples of Soviet enforcement: Soviet forces crushed the Hungarian uprising, and a Warsaw Pact invasion led by the Soviet Union ended the Prague Spring. The Brezhnev Doctrine, announced after the 1968 invasion, justified this practice.'
           },
           {
             question: 'Which decolonization case best illustrates the "revolutionary war" path rather than the "negotiated transfer" path?',
@@ -89,7 +89,7 @@ export const whColdWarDecolonizationPart2Data = {
               "Jamaica in 1962, where the British government oversaw a peaceful constitutional transition without any extended armed conflict between colonial forces and locals"
             ],
             correctAnswer: 1,
-            explanation: 'Algeria is the textbook revolutionary war: armed FLN insurgency, settler population, brutal counterinsurgency, eventual independence at high cost (estimates of Algerian deaths range from roughly 300,000 to the Algerian government\'s figure of 1.5 million). India and Ghana are the negotiated-transfer template.'
+            explanation: 'Algeria is the textbook revolutionary war: armed FLN insurgency, settler population, brutal counterinsurgency, eventual independence at high cost (estimates of deaths range from about 300,000 to the Algerian government\'s figure of 1.5 million). India and Ghana are the negotiated-transfer template.'
           }
         ]
       }

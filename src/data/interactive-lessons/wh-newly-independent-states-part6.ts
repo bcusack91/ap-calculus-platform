@@ -14,7 +14,7 @@ export const whNewlyIndependentStatesPart6Data = {
 | Section |
 |---|
 | HIPP sourcing for post-independence documents |
-| Document bank: Nehru\'s "Tryst with Destiny," Nasser\'s Suez speech, Nyerere\'s Arusha Declaration, Khomeini\'s 1979 returns speech, Mandela\'s Inaugural |
+| Document bank: Nehru\'s "Tryst with Destiny," Nasser\'s Suez speech, Nyerere\'s Arusha Declaration, Khomeini\'s 1979 return speech, Mandela\'s Inaugural |
 | AP SAQ structure for post-independence prompts |
 | Common AP traps to avoid |
 
@@ -41,8 +41,8 @@ export const whNewlyIndependentStatesPart6Data = {
 
 - **HIPP:** Speech delivered to the Constituent Assembly on the eve of Indian independence; intended audience is the Indian people AND the international community; purpose is to consecrate the founding moment; POV is the secular, modernist, English-educated Congress leadership.
 
-> **2. Nasser: Suez Nationalization Speech (July 26, 1956)**
-> "We shall build the High Dam as we want. We are determined."
+> **2. Nasser: Suez Canal Nationalization Speech (Alexandria, July 26, 1956)**
+> *Summary, not a quotation:* Nasser announced that Egypt was nationalizing the Suez Canal Company and would use the canal's revenues to help build the Aswan High Dam, after the United States and Britain had withdrawn their offer to finance it.
 
 - **HIPP:** Speech in Alexandria announcing nationalization of the Suez Canal Company; intended audience is the Egyptian and Arab public AND the British and French governments; purpose is to assert Egyptian sovereignty against European interests; POV is Arab nationalist, anti-imperialist, pan-Arab.
 
@@ -51,10 +51,10 @@ export const whNewlyIndependentStatesPart6Data = {
 
 - **HIPP:** Joint statement of Tanzania\'s ruling party (TANU); intended audience is the Tanzanian people AND African socialists across the continent; purpose is to commit Tanzania to Ujamaa village socialism and self-reliance; POV is African socialist, post-independence single-party.
 
-> **4. Khomeini: Returning to Iran Speech (February 1, 1979)**
-> "I beg God Almighty to cut off the hands of all evil foreigners and all their helpers."
+> **4. Khomeini: Speech at Behesht-e Zahra Cemetery, Tehran (February 1, 1979)**
+> *Summary, not a quotation:* On the day of his return, Khomeini denounced the Shah's regime and the government the Shah had left in place as illegitimate, and declared that he would appoint a new government with the backing of the people.
 
-- **HIPP:** Speech delivered shortly after Khomeini\'s return from 14 years of exile in France; intended audience is the Iranian people AND Western governments; purpose is to consolidate religious-political authority and to denounce U.S. influence; POV is Shia clerical, anti-imperial, anti-monarchical.
+- **HIPP:** Speech delivered on the day Khomeini returned from more than 14 years of exile (in Turkey, then Iraq, and from late 1978 near Paris); intended audience is the Iranian people AND Western governments; purpose is to consolidate religious-political authority and to denounce U.S. influence; POV is Shia clerical, anti-imperial, anti-monarchical.
 
 > **5. Mandela: Inaugural Address (May 10, 1994)**
 > "Never, never, and never again shall it be that this beautiful land will again experience the oppression of one by another."

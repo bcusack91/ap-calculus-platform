@@ -41,7 +41,7 @@ export const whMassAtrocitiesPart4Data = {
 
 - Most populations under occupation were neither perpetrators nor active resisters; the historian Raul Hilberg called them "bystanders."
 - Local collaboration was crucial in many cases (Vichy France's Vel' d'Hiv roundup, July 1942; Lithuanian and Ukrainian auxiliary units; Hutu civilians who took up machetes in Rwanda).
-- Historians ask why ordinary people participated. Christopher Browning's Ordinary Men (1992) argues that situational factors — peer pressure, deference to authority, the routinization of killing — explain participation more than ideology alone.
+- Killing on this scale required wide participation, not only orders from a few leaders: local police, auxiliary units, railway and municipal officials, and neighbors who denounced victims or took their property all played a part.
 
 > **Postwar Human Rights Architecture**
 
@@ -164,15 +164,15 @@ export const whMassAtrocitiesPart4Data = {
             explanation: 'The chain Holocaust → Nuremberg → UDHR → Genocide Convention → Refugee Convention → ICTR/ICTY → ICC is one of the clearest connection-and-causation arguments in 20th-century history. Use it on the AP.'
           },
           {
-            question: 'Christopher Browning\'s Ordinary Men argues that situational factors — peer pressure, deference to authority, routinization — explain why ordinary Germans participated in killing. Which counter-argument or refinement is the most historically supported?',
+            question: 'Which evidence best supports the claim that the Holocaust depended on participation beyond the Nazi leadership?',
             options: [
-              'Browning\'s argument applies only to Reserve Police Battalion 101, so it cannot be extended to German perpetrators in any other unit',
-              'Daniel Goldhagen\'s Hitler\'s Willing Executioners stresses long-standing eliminationist anti-Semitism in German culture as a motivating ideology',
-              'Raul Hilberg\'s research showed perpetrators acted under direct threat of execution, so refusing to kill was never a realistic option for any of them',
-              'Hannah Arendt\'s Eichmann in Jerusalem proved ideology played no role in the Holocaust, since every perpetrator was a mere careerist'
+              'Hitler personally issued every order for the deportation of Jews from each occupied country',
+              'French police carried out the July 1942 Vel\' d\'Hiv roundup of Jews in Paris',
+              'The death camps were staffed entirely by senior members of the Nazi Party leadership',
+              'No local populations in occupied Europe knew of the deportations until after 1945'
             ],
             correctAnswer: 1,
-            explanation: 'The Browning–Goldhagen debate is the standard AP-level historiographical debate on perpetrators. Knowing both sides — situational and ideological — earns the complexity point. Browning found that men who asked to be excused from killing were not executed, and Arendt\'s "banality of evil" argument did not claim ideology was irrelevant.'
+            explanation: 'Vichy French police arrested about 13,000 Jews in the Vel\' d\'Hiv roundup, showing that local officials and auxiliaries made mass deportation possible. Hitler did not personally issue every order, the camps relied on many lower-ranking guards and auxiliaries, and deportations took place in public view.'
           }
         ]
       }

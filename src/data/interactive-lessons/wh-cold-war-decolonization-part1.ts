@@ -132,7 +132,7 @@ The Cold War (1947–1991) was a global ideological competition between U.S.-led
           }
         ],
         correctAnswers: ['superpower confrontation without direct combat', 'Third World political assertion against bloc politics', 'institutionalization of bloc rivalry'],
-        hint1: 'Berlin involved blockade and airlift, not battles. Bandung was 29 Asian/African states refusing to choose sides.',
+        hint1: 'Berlin involved blockade and airlift, not battles. Bandung brought together 29 Asian and African countries, many recently independent, that refused to choose sides.',
         hint2: 'NATO and the Warsaw Pact created formal military alliances binding states to a bloc.',
         hint3: 'Each scenario maps to one of: confrontation, Third World assertion, or institutionalization of rivalry.',
         explanation: 'The Berlin crisis showed that the Cold War would be fought through pressure rather than direct war. Bandung showed that newly independent states would not simply align with one bloc. NATO and the Warsaw Pact froze the bipolar order into formal alliances.'

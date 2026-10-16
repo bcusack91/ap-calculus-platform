@@ -28,7 +28,7 @@ Use evidence the way an AP reader expects: identify the source claim, contextual
 - The "war guilt clause" (Article 231) and 132 billion gold marks in reparations created lasting German political grievance.
 - The Dawes Plan (1924) and Young Plan (1929) tied German recovery to U.S. credit, which collapsed in 1929.
 - The League of Nations failed to stop Japan in Manchuria (1931), Italy in Ethiopia (1935), and Germany's Rhineland remilitarization (1936).
-- The Great Depression created the political space for Hitler's election (1933) and Japanese militarist control.
+- The Great Depression created the political space for Hitler's rise (the Nazis became the largest party in the Reichstag in 1932, and he was appointed chancellor in January 1933) and for Japanese militarist control.
 
 > **Step 3: Refine the Argument**
 

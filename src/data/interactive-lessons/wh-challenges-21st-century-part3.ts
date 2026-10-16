@@ -13,187 +13,163 @@ export const whChallenges21stCenturyPart3Data = {
 
 | Section |
 |---|
-| The Arab Spring (2010–12) and its aftermath |
-| The 2015 European migration crisis |
-| Brexit (2016) and the Trump election (2016) |
-| The COVID-19 pandemic (2020+) |
+| The 1918 influenza pandemic |
+| HIV/AIDS from 1981 to 2001 |
+| Medical victories: vaccines, antibiotics and smallpox |
+| Old killers that persisted: malaria, tuberculosis, cholera |
 
-> Key idea: AP prompts on the 21st century reward concrete, well-dated examples tied to the course's globalization themes. Memorize four: Arab Spring (protest against entrenched rulers), Syrian/Mediterranean migration crisis (migration), Brexit + Trump (a backlash against globalization), and COVID-19 (an emergent epidemic disease).
+> Key idea: AP prompts on disease reward concrete, well-dated cases tied to the CED's pattern: "Diseases associated with poverty persisted while other diseases emerged as new epidemics and threats to human populations, in some cases leading to social disruption. These outbreaks spurred technological and medical advances" (KC-6.1.III.A). Learn one case for each half of that sentence.
       `
     },
     {
       id: 'whc3-content',
       type: 'text' as const,
       content: `
-## The Arab Spring (2010–12)
+## The 1918 Influenza Pandemic
 
-| Country | Outcome |
+| Feature | Detail |
 |---|---|
-| Tunisia | Ben Ali ousted Jan 2011; transitioned to a fragile democracy (later eroded under Kais Saied after 2021) |
-| Egypt | Mubarak ousted Feb 2011; Morsi elected 2012; Sisi military coup July 2013 |
-| Libya | Gaddafi killed Oct 2011 after NATO intervention; descended into civil war |
-| Syria | Assad refused to step down; protests became a civil war (~500,000 dead, millions displaced) |
-| Yemen | Saleh stepped down 2012; later civil war pulling in Saudi Arabia and Iran |
-| Bahrain | Saudi-backed crackdown crushed Shia-led protests |
+| When | 1918–1919, in several waves, at the end of World War I |
+| Spread | Troop movements, crowded camps and wartime shipping carried it to every inhabited continent |
+| Toll | Estimates commonly run from about 20 to 50 million deaths, more than the war itself; some estimates are higher |
+| Who died | Unusually, many healthy young adults as well as the very young and old |
+| Disruption | Closed schools, theaters and churches; overwhelmed hospitals; labor shortages |
+| Medical response | No vaccine or antiviral drugs existed; the shock pushed governments toward public-health agencies and virus research |
 
-> **Key takeaway from the Arab Spring:** Initial democratic openings were largely reversed (except Tunisia), and several countries collapsed into long civil wars. Social media coordination was insufficient against entrenched security states.
+## HIV/AIDS, 1981–2001
 
-## The 2015 European Migration Crisis
-
-> **Background:** Syrian civil war (2011+) plus Iraqi instability + Eritrean and sub-Saharan African flows produced the largest refugee movement to Europe since WWII.
-
-| 2015 metric | Number |
+| Year | Development |
 |---|---|
-| Migrant/refugee arrivals to Europe | ~1 million (mostly via Mediterranean and Balkan routes) |
-| Deaths in the Mediterranean | ~3,800 |
-| German welcome of Syrian refugees | ~1 million accepted ("Wir schaffen das" — Merkel) |
-| Political response | Rise of far-right parties; Brexit referendum the next year |
+| 1981 | Doctors in the United States describe the first cases of what became known as AIDS |
+| 1983–84 | Scientists identify the virus later named HIV |
+| 1980s–1990s | The epidemic spreads worldwide; sub-Saharan Africa is hit hardest, with millions of deaths and orphans |
+| 1987 | AZT becomes the first approved drug against HIV |
+| 1996 | Combination antiretroviral therapy sharply cuts deaths in wealthy countries; UNAIDS, set up by the UN in 1994, begins operating |
+| 2001 | A UN General Assembly special session commits states to fight the epidemic; treatment remains out of reach for most patients in poor countries |
 
-## Brexit and the Trump Election (2016)
-
-| Event | Date | Significance |
-|---|---|---|
-| Brexit referendum | June 23, 2016 | UK voted 52–48 to leave the EU |
-| Trump elected | November 8, 2016 | First U.S. president without prior political or military experience |
-| Brexit completed | January 31, 2020 | Formal UK exit from the EU |
-
-| Common features | Significance |
-|---|---|
-| Right-populist anti-establishment | Both campaigns ran against perceived elite consensus |
-| Immigration as central issue | Brexit + Trump both centered concerns about borders and migration |
-| Disinformation and microtargeting | Cambridge Analytica scandal implicated both |
-| Older + non-college vote | Both candidates won majorities of older and non-college-educated voters |
-
-> **Course connection:** Read Brexit and the Trump election as **responses to economic and cultural globalization**: voters who felt left behind by free trade, migration and international institutions backed candidates who promised to restore national control.
-
-## COVID-19 (2020+)
-
-| Year | Event |
-|---|---|
-| Late 2019 | First cases identified in Wuhan, China |
-| Jan 2020 | WHO declares Public Health Emergency |
-| March 2020 | WHO declares pandemic; global lockdowns begin |
-| Dec 2020 | First mRNA vaccines authorized (Pfizer, Moderna) |
-| 2021 | Delta and Omicron variants drive new waves |
-| 2023 | WHO ends global health emergency declaration |
-| Total | ~7 million confirmed deaths globally; trillions in economic disruption |
-
-> **Disease in a connected world:** Like the 1918 influenza pandemic and HIV/AIDS, COVID-19 shows a recurring pattern after 1900: new epidemic diseases spread quickly along global transport networks, disrupted societies and economies, and spurred medical advances such as new vaccines.
-
-- **Key takeaway:** When an AP prompt asks about a 21st-century challenge, ground your answer in specific cases: Arab Spring 2011, Syrian war 2011+, European migration crisis 2015, Brexit + Trump 2016, COVID-19 2020+. Each case illustrates multiple challenges simultaneously.
+> **Social disruption:** In the hardest-hit African countries, AIDS killed adults in their working and parenting years, lowered life expectancy, and left millions of orphans. Activist groups such as ACT UP in the United States and the Treatment Action Campaign in South Africa (1998) pressed governments and drug companies for faster research and cheaper treatment.
       `
     },
     {
       id: 'whc3-quiz',
       type: 'multiple-choice' as const,
-      content: `**Concept Check — Arab Spring and Brexit**`,
+      content: `**Concept Check — Two epidemics**`,
       exercise: {
         questions: [
           {
-            question: 'Which best characterizes the long-term outcomes of the 2010–12 Arab Spring across the affected countries?',
+            question: 'A historian compares the 1918 influenza pandemic with the HIV/AIDS epidemic. Which similarity best supports an argument about continuity?',
             options: [
-              'Tunisia made the only lasting democratic transition (later eroded under Kais Saied); Egypt returned to military rule under Sisi in 2013; Libya, Syria, and Yemen fell into civil war',
-              'Most Arab Spring countries made durable democratic transitions that were still functioning as multi-party democracies a decade later, with the Syrian civil war as the main exception to the pattern',
-              'Most Arab Spring countries returned to their old rulers within months (Ben Ali and Mubarak included); none saw lasting openings or civil wars',
-              'The Arab Spring produced few changes of government, since almost all of the leaders in power in 2010 stayed in office through the following decade'
-                ],
+              'Both traveled along the routes that connected regions and caused major social disruption',
+              'Both were stopped within months by vaccines that had already been developed and stockpiled',
+              'Both stayed confined to wealthy industrial nations and spared poorer regions of the world',
+              'Each moved mainly along overland caravan routes rather than by ship, rail or aircraft'
+            ],
             correctAnswer: 0,
-            explanation: 'The Arab Spring outcomes diverged sharply: Tunisia\'s qualified success vs. Egypt\'s coup vs. Libya/Syria/Yemen\'s civil wars.'
+            explanation: 'Each epidemic traveled along the connections of its time, troop ships in 1918 and air travel and migration in the 1980s, and each disrupted societies. Neither had a vaccine, both struck poor regions hard, and neither depended on caravan routes.'
           },
           {
-            question: 'The 2016 Brexit vote and the election of Donald Trump are most often analyzed as examples of which broader development?',
+            question: 'Which development of 1996 most changed the course of the HIV/AIDS epidemic in wealthy countries?',
             options: [
-              'Growing support among older voters for deeper European and global economic integration',
-              'A wave of anti-colonial nationalism in states that had recently won independence',
-              'A backlash against economic and cultural globalization',
-              'A revival of communist parties after the 2008 financial crisis in Western Europe'
+              'A vaccine that prevented infection',
+              'The eradication of the virus by the WHO',
+              'Combination antiretroviral drug therapy',
+              'A worldwide ban on international air travel'
             ],
             correctAnswer: 2,
-            explanation: 'Both campaigns drew on voters who felt harmed by free trade, migration and international institutions, making them responses to globalization. They rejected deeper integration rather than supporting it, they arose in long-independent wealthy democracies, and communist parties did not gain from the 2008 crisis.'
+            explanation: 'Combination antiretroviral therapy turned HIV infection from a near-certain death sentence into a manageable condition for patients who could afford it. No HIV vaccine existed, the virus was never eradicated, and air travel was never banned.'
           }
         ]
       }
+    },
+    {
+      id: 'whc3-medicine',
+      type: 'text' as const,
+      content: `
+## Medical Victories
+
+KC-6.1.I.C: "Medical innovations, including vaccines and antibiotics, increased the ability of humans to survive and live longer lives."
+
+| Advance | Date | Effect |
+|---|---|---|
+| Penicillin | Discovered 1928; mass-produced in the 1940s | The first widely used antibiotic; cut deaths from infected wounds and pneumonia |
+| Polio vaccine | 1955 (Jonas Salk) | Polio cases fell sharply wherever children were vaccinated |
+| Oral rehydration therapy | Widely adopted from the 1970s | A cheap salt-and-sugar solution that saved millions of children from cholera and diarrhea |
+| Smallpox eradication | WHO campaign from 1967; eradication declared 1980 | The first human disease wiped out worldwide |
+
+## Old Killers That Persisted
+
+| Disease | Why it persisted |
+|---|---|
+| **Malaria** | Mosquitoes developed resistance to DDT and parasites to drugs; the disease stayed concentrated in poor tropical regions, especially sub-Saharan Africa |
+| **Tuberculosis** | Curable with antibiotics, yet it returned in the 1980s–90s with poverty, drug resistance, and HIV, which weakens the immune system |
+| **Cholera** | Spreads through unsafe water; a pandemic that began in Indonesia in 1961 reached Latin America in 1991 |
+      `
     },
     {
       id: 'whc3-input',
       type: 'input-boxes' as const,
-      content: `**Term Sprint — 21st-century cases**`,
+      content: `**Term Sprint — Disease and medicine**`,
       exercise: {
         questions: [
           {
-            prompt: 'The Tunisian street vendor whose December 2010 self-immolation triggered the wave of protests known as the Arab Spring.',
-            answer: 'Mohamed Bouazizi',
-            acceptableAnswers: ['Mohamed Bouazizi', 'Bouazizi', 'Mohammed Bouazizi'],
-            hint: 'A 26-year-old fruit vendor in Sidi Bouzid.'
-          },
-          {
-            prompt: "The German chancellor whose 'Wir schaffen das' speech welcomed roughly a million Syrian refugees in 2015.",
-            answer: 'Angela Merkel',
-            acceptableAnswers: ['Angela Merkel', 'Merkel'],
-            hint: 'CDU leader; chancellor 2005–2021.'
-          },
-          {
-            prompt: 'The UN agency that declared COVID-19 a pandemic in March 2020 (initials: WHO).',
+            prompt: 'The UN agency that led the campaign declared to have eradicated smallpox in 1980 (initials: WHO).',
             answer: 'World Health Organization',
             acceptableAnswers: ['World Health Organization', 'WHO', 'the World Health Organization'],
             hint: 'A UN specialized agency founded in 1948 and based in Geneva.'
+          },
+          {
+            prompt: 'The first widely used antibiotic, discovered in 1928 and mass-produced during World War II.',
+            answer: 'penicillin',
+            acceptableAnswers: ['penicillin', 'Penicillin'],
+            hint: 'Alexander Fleming noticed it in a mold.'
+          },
+          {
+            prompt: 'The water-borne disease whose pandemic, beginning in 1961, reached Latin America in 1991.',
+            answer: 'cholera',
+            acceptableAnswers: ['cholera', 'Cholera'],
+            hint: 'One of the CED\'s diseases associated with poverty.'
           }
         ]
       }
     },
     {
-      id: 'whc3-dropdown',
-      type: 'dropdown-select' as const,
-      content: `**Match each event to the correct year.**`,
-      exercise: {
-        dropdowns: [
-          {
-            label: 'Arab Spring protests force out Ben Ali in Tunisia and Mubarak in Egypt: ___',
-            options: ['2008', '2011', '2016', '2022']
-          },
-          {
-            label: 'European migration crisis peaks; ~1 million arrivals; Merkel\'s "Wir schaffen das": ___',
-            options: ['2008', '2015', '2016', '2022']
-          },
-          {
-            label: 'Brexit referendum and Trump election; right-populist wave across Western democracies: ___',
-            options: ['2008', '2011', '2016', '2022']
-          }
-        ],
-        correctAnswers: ['2011', '2015', '2016'],
-        hint1: 'Ben Ali fled in January 2011; Mubarak fell in February 2011.',
-        hint2: 'The migration crisis peaked in summer/autumn 2015.',
-        hint3: 'Brexit was June 2016; Trump was November 2016.',
-        explanation: 'Three sequential dates: 2011 (Arab Spring), 2015 (migration crisis), 2016 (right-populist surge in Anglo-Saxon democracies).'
-      }
+      id: 'whc3-pattern',
+      type: 'text' as const,
+      content: `
+## The Pattern in One Paragraph
+
+Between 1900 and 2001, vaccines and antibiotics let far more people survive childhood and live longer, and one disease, smallpox, was eliminated. But medicine did not end the threat of disease. New epidemics such as the 1918 influenza and HIV/AIDS spread along the connections of a more integrated world, while malaria, tuberculosis and cholera persisted wherever poverty kept people from clean water and health care.
+
+- **Key takeaway:** For a continuity-and-change prompt, pair a change (vaccines, antibiotics, smallpox eradication) with a continuity (new epidemics keep emerging; diseases of poverty persist). That pairing is exactly how the CED frames Topic 9.2.
+      `
     },
     {
       id: 'whc3-applied',
       type: 'multiple-choice' as const,
-      content: `**Applied AP Practice — Linking 21st-century events**`,
+      content: `**Applied AP Practice — Using evidence**`,
       exercise: {
         questions: [
           {
-            question: 'Which response best explains the causal chain linking the 2011 Syrian civil war to the 2016 rise of right-populism in Europe?',
+            question: 'Which evidence would most weaken the claim that twentieth-century medicine had conquered epidemic disease?',
             options: [
-              'The war sent over 4 million refugees abroad by 2015; as about 1 million asylum seekers reached Europe, backlash boosted the far right and Brexit\'s border focus',
-              'The war had little effect on European politics, since nearly all Syrian refugees stayed in camps in Turkey, Lebanon, and Jordan and very few ever reached the European Union',
-              'The war pushed European politics to the left, as sympathy for refugees boosted Green and Social Democratic parties and weakened anti-immigration movements across the continent',
-              'The war mattered only through oil prices, since rising fuel costs after 2011 caused a European recession that fueled right-wing populism with no link to refugees'
+              'The WHO declared smallpox eradicated in 1980 after a worldwide vaccination campaign',
+              'Penicillin was mass-produced in the 1940s and cut deaths from infected wounds',
+              'HIV/AIDS emerged in the 1980s and killed millions despite vaccines and antibiotics',
+              'Polio cases fell sharply after Jonas Salk\'s vaccine was introduced in 1955'
             ],
-            correctAnswer: 0,
-            explanation: 'The Syria → 2015 migration crisis → 2016 backlash chain is a canonical AP causal sequence linking 21st-century events. UNHCR counted about 4.6 million registered Syrian refugees by the end of 2015, and roughly 1 million asylum seekers of many nationalities, about half of them Syrian, crossed the Mediterranean to Europe that year; parties such as the AfD in Germany and the National Front in France gained ground.'
+            correctAnswer: 2,
+            explanation: 'HIV/AIDS appeared after vaccines and antibiotics had transformed medicine, yet it spread worldwide and killed millions, so it undercuts the claim. Smallpox eradication, penicillin and the polio vaccine are evidence of medical success and would support the claim instead.'
           },
           {
-            question: 'The COVID-19 pandemic best illustrates which continuity in the history of disease since 1900?',
+            question: 'Tuberculosis was curable with antibiotics by the 1950s, yet it returned in many regions in the 1980s and 1990s. Which explanation is best supported by the evidence?',
             options: [
-              'Medical advances after 1900 had ended the threat of new epidemic diseases',
-              'Like the 1918 influenza, a new disease spread quickly along global transport networks and spurred medical advances',
-              'Epidemics struck only industrialized countries with heavy air traffic and spared poorer regions',
-              'Epidemic diseases since 1900 have spread mainly along overland caravan routes rather than by sea or air'
+              'Antibiotics were banned worldwide after 1980',
+              'Tuberculosis was a new disease first seen in 1981',
+              'Only wealthy countries were affected by its return',
+              'Poverty, drug resistance and HIV infection all helped it spread'
             ],
-            correctAnswer: 1,
-            explanation: 'Since 1900 new epidemics such as the 1918 influenza, HIV/AIDS and COVID-19 have spread quickly through a connected world, caused social disruption and prompted medical responses such as new vaccines. Medicine has not ended new epidemics, COVID-19 hit poorer regions hard, and modern epidemics travel by ship and aircraft rather than caravan.'
+            correctAnswer: 3,
+            explanation: 'Tuberculosis came back where poverty limited treatment, where incomplete treatment bred drug-resistant strains, and where HIV weakened immune systems. Antibiotics were never banned, tuberculosis is an ancient disease, and its return hit poor regions hardest.'
           }
         ]
       }

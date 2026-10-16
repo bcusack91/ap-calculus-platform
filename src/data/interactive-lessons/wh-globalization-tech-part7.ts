@@ -14,11 +14,11 @@ export const whGlobalizationTechPart7Data = {
 | Section |
 |---|
 | High-yield dates and one-line significance |
-| Comparison framework: Phase 1 vs. Phase 2 vs. Phase 3 |
-| CCOT framework for globalization 1945–today |
-| Sprint terms most likely to appear on the AP exam |
+| Comparing the three phases, 1945–2001 |
+| Defenders and critics |
+| Sprint terms |
 
-> Key idea: Use this part as your night-before-the-exam reference for post-1945 globalization. Drill the dates, the comparisons, and the AP skills.
+> Key idea: Use this part as your night-before-the-exam reference for globalization and technology through 2001. Drill the dates, the comparisons and the AP skills.
       `
     },
     {
@@ -27,194 +27,158 @@ export const whGlobalizationTechPart7Data = {
       content: `
 ## High-Yield Dates
 
-| Year | Event | One-Line Significance |
+| Year | Event | One-line significance |
 |---|---|---|
-| 1944 | Bretton Woods Conference | Designs postwar monetary order |
-| 1945 | IMF and World Bank founded | Bretton Woods institutions |
-| 1947 | GATT signed; transistor invented | Trade liberalization + electronics revolution begin |
+| 1944 | Bretton Woods Conference creates the IMF and World Bank | Designs the postwar economic order |
+| 1947 | GATT signed; transistor invented | Tariff reduction and the electronics revolution begin |
 | 1956 | First container ship voyage (Malcom McLean) | Containerization era begins |
-| 1957 | EEC (later EU) founded by Treaty of Rome | European integration begins |
-| 1962 | Telstar (first communications satellite) | Live transatlantic TV |
-| 1969 | ARPANET sends first message | Internet precursor |
-| 1971 | Nixon Shock ends dollar-gold convertibility | Bretton Woods exchange-rate system ends |
-| 1973 | OPEC oil embargo | Oil leverage; petrodollar system begins |
-| 1978 | Deng launches Reform and Opening | Modern Chinese growth begins |
-| 1979 | Thatcher elected; Volcker disinflation | Neoliberal turn begins |
-| 1989 | World Wide Web invented; Berlin Wall falls | Internet + end of Cold War |
-| 1992 | Maastricht Treaty | Creates Euro (introduced 1999/2002) |
-| 1994 | NAFTA enters force | Trilateral free trade in North America |
+| 1957 | Treaty of Rome creates the European Economic Community | European integration begins |
+| 1962 | Telstar communications satellite | Live television across the Atlantic |
+| 1965 | Mexico's Border Industrialization Program | The first maquiladoras |
+| 1969 | ARPANET sends its first message | Precursor to the internet |
+| 1971 | Nixon ends dollar-gold convertibility | Bretton Woods exchange-rate system ends |
+| 1973 | OPEC oil embargo | Oil shock; petrodollar recycling begins |
+| 1978 | Deng launches Reform and Opening | China's market reforms begin |
+| 1979 | Thatcher elected | The free-market turn begins in Britain |
+| 1982 | Latin American debt crisis | IMF structural adjustment spreads |
+| 1989 | Berlin Wall falls; World Wide Web proposed | End of the Cold War division; the web is born |
+| 1994 | NAFTA takes effect; Zapatista uprising | North American free trade and resistance to it |
 | 1995 | WTO founded | Successor to GATT with binding rules |
-| 2001 | China joins WTO; 9/11 attacks | China integrated into global trade |
-| 2007 | iPhone introduced | Mobile Internet for billions |
-| 2008 | Global Financial Crisis | Financial globalization\'s biggest test |
-| 2015 | Paris Agreement | Multilateral climate accord |
-| 2016 | Brexit vote; Trump elected | Anti-globalization populist wave |
-| 2020 | COVID-19 pandemic declared | Supply chain shock + zoom economy |
+| 1997 | Asian financial crisis | The risks of mobile capital |
+| 1999 | Battle of Seattle | Mass protest against the WTO |
+| 2001 | China joins the WTO | China completes its integration into world trade |
 
-## Comparison Frameworks
+## Comparing the Phases
 
-> **Phases of Globalization**
-
-| Question | Phase 1 (1945–71) | Phase 2 (1971–91) | Phase 3 (1991–today) |
+| Question | Phase 1 (1945–71) | Phase 2 (1971–91) | Phase 3 (1991–2001) |
 |---|---|---|---|
-| Exchange rates | Fixed, dollar-gold | Floating | Floating + Euro + RMB internationalization |
-| Capital flows | Tightly controlled | Liberalizing | Fully liberalized |
-| State role | Strong (welfare states) | Retrenching (neoliberal) | Reasserting after 2008 / pandemic |
-| Big winners | Western Europe, Japan recovery | OPEC, Asian Tigers | China, Internet platforms, India IT |
-| Crisis events | Suez, Vietnam, oil shock late | Latin debt, USSR collapse | 2008 GFC, COVID |
-
-> **Pro vs. Critic Frameworks**
-
-| Question | Pro-globalization (e.g., Friedman) | Critical (e.g., Stiglitz, anti-globalization movements) |
-|---|---|---|
-| Trade | Lifts all boats; ~800 million Chinese poverty reduction | Creates rust belts; hollows out manufacturing in deindustrializing regions |
-| Capital | Efficient allocation across borders | Generates contagion crises (1997 Asia, 2008 Global) |
-| Culture | Cosmopolitanism; spread of human rights norms | Homogenization; loss of local traditions |
-| Politics | Spreads democracy; constrains authoritarianism | Empowers technocrats over democratic publics |
-
-## CCOT Framework (1945–today)
-
-| Continuity | Change |
-|---|---|
-| U.S. dollar dominance | From gold-pegged to floating reserve currency to digital |
-| Western-led international institutions | Reformed (e.g., G-20 added 2008) but not replaced |
-| Rising trade share of global GDP | Climbed steadily through 2008; plateaued 2008–today |
-| Persistent global inequality | East Asian convergence; African divergence in many cases |
-
-| Continuity | Change |
-|---|---|
-| Cross-border migration | From decolonization-era flows to refugee crises and skilled migration |
-| Pandemic risk | From localized epidemics to truly global pandemics enabled by air travel |
-| Information technology | From print/radio/TV to Internet, mobile, AI |
-| Energy basis | Oil-dominated through 2010s; renewables share rising |
-
-## Sprint Terms (Last-Minute Drill)
-
-- **Bretton Woods** — 1944 conference designing the postwar monetary order
-- **GATT / WTO** — Tariff-reduction body (1947) and its 1995 successor
-- **Nixon Shock** — August 1971 end of dollar-gold convertibility
-- **Containerization** — 1956 onward standardized cargo box that cut shipping costs ~90%
-- **NAFTA** — 1994 trilateral free-trade agreement (U.S., Canada, Mexico)
-- **Euro** — Common currency introduced 1999/2002
-- **Reform and Opening** — Deng\'s 1978 program that launched modern Chinese growth
-- **Asian Tigers** — South Korea, Taiwan, Hong Kong, Singapore
-- **Maquiladora** — Mexican border-zone export factories under NAFTA
-- **Brain drain** — Outmigration of skilled workers from developing countries
-- **Remittances** — Money sent home by migrant workers
-- **Battle of Seattle** — 1999 anti-WTO protests
-- **2008 GFC** — Global Financial Crisis triggered by U.S. subprime collapse
-- **Paris Agreement** — 2015 multilateral climate accord
-- **Brexit** — 2016 UK referendum to leave the European Union
-
-- **Key takeaway:** If you only memorize ten dates, make them: 1944 (Bretton Woods), 1956 (containerization), 1971 (Nixon Shock), 1978 (Deng), 1989 (Berlin Wall + Web), 1994 (NAFTA), 1995 (WTO), 2001 (China WTO + 9/11), 2008 (GFC), 2015 (Paris).
+| Exchange rates | Fixed, dollar-gold | Floating | Floating; the euro launched in 1999 |
+| Capital flows | Tightly controlled | Liberalizing | Largely free |
+| State role | Strong welfare states | Retrenching (free-market turn) | Market reforms spread to former communist states |
+| Big winners | Western Europe and Japan rebuild | Oil exporters; the Asian Tigers | China; East Asian exporters; technology firms |
+| Crises | Suez (1956) | The 1982 debt crisis; the Soviet collapse | The 1994 peso crisis; the 1997 Asian crisis |
       `
     },
     {
       id: 'whgt7-quiz',
       type: 'multiple-choice' as const,
-      content: `**Concept Check — High-Yield Recall**`,
+      content: `**Concept Check — High-yield recall**`,
       exercise: {
         questions: [
           {
-            question: 'In which year did China formally join the World Trade Organization, integrating its economy into the rules-based global trading system?',
-            options: ['1995', '1999', '2001', '2008'],
-            correctAnswer: 2,
-            explanation: 'December 11, 2001 — China joined the WTO after 15 years of negotiations. Manufacturing share of global exports surged in the years that followed.'
+            question: 'In which year did China formally join the World Trade Organization?',
+            options: ['1978', '1995', '1997', '2001'],
+            correctAnswer: 3,
+            explanation: 'China joined the WTO in December 2001 after about fifteen years of negotiation. Deng\'s reforms began in 1978, the WTO was founded in 1995, and the Asian financial crisis struck in 1997.'
           },
           {
-            question: 'Which event most directly marks the end of the original Bretton Woods exchange-rate system?',
+            question: 'Which comparison best describes how the role of governments in Western economies changed between 1945–1971 and the 1980s?',
             options: [
-              "The 1971 'Nixon Shock,' in which the U.S. unilaterally ended dollar-gold convertibility, pushing the world toward floating exchange rates",
-              "The 1994 entry into force of NAFTA, which committed the United States, Canada, and Mexico to a trilateral free-trade agreement covering goods, services, and investment",
-              "The 1995 founding of the WTO, which replaced GATT as the binding rule-making body for the exchange of goods, services, and intellectual property",
-              "The 2008 Global Financial Crisis, which began with the collapse of subprime mortgage-backed securities held by U.S. and European banks during the crisis period"
+              'Strong welfare states and capital controls gave way to deregulation, privatization and freer capital',
+              'Free markets with little regulation gave way to central planning and the nationalization of industry',
+              'Low tariffs gave way to high tariffs as GATT was abandoned in favor of national protection',
+              'Floating exchange rates gave way to a new fixed system in which every currency was tied to gold'
             ],
             correctAnswer: 0,
-            explanation: 'August 15, 1971 — Nixon ended dollar-gold convertibility, ending the gold-anchored Bretton Woods system.'
+            explanation: 'Postwar welfare states with capital controls gave way to the free-market turn of the Thatcher and Reagan years. The other options reverse the change, invent a return to protection, or reverse the move from fixed to floating rates.'
           }
         ]
       }
+    },
+    {
+      id: 'whgt7-debate',
+      type: 'text' as const,
+      content: `
+## Defenders and Critics
+
+| Question | Defenders | Critics (Stiglitz, anti-globalization movements) |
+|---|---|---|
+| Trade | Mutual gains; growth lifted hundreds of millions out of poverty, especially in East Asia | Hollowed out manufacturing in older industrial regions |
+| Capital | Money flows to its most productive uses | Sudden outflows caused crises (Mexico 1994, East Asia 1997) |
+| Culture | Exchange spreads ideas and choices | Homogenization and loss of local traditions |
+| Institutions | The IMF, World Bank and WTO make cooperation possible | Their conditions overrode the choices of elected governments |
+
+## Sprint Terms
+
+- **Bretton Woods** — 1944 conference that created the IMF and World Bank
+- **GATT / WTO** — tariff-reduction agreement (1947) and its 1995 successor
+- **Nixon Shock** — 1971 end of dollar-gold convertibility
+- **Containerization** — standardized cargo boxes (from 1956) that cut shipping costs
+- **Multinational corporation** — a firm operating in many countries (Nestlé, Nissan, Mahindra and Mahindra)
+- **Maquiladora** — a Mexican export-assembly plant near the U.S. border, first created under the 1965 Border Industrialization Program and expanded after NAFTA
+- **Reform and Opening** — Deng Xiaoping's 1978 program of market reforms
+- **Asian Tigers** — South Korea, Taiwan, Hong Kong and Singapore
+- **Structural adjustment** — IMF and World Bank loan conditions requiring spending cuts and market reforms
+- **Remittances** — money sent home by migrant workers
+- **Battle of Seattle** — 1999 protests against the WTO
+- **Zapatistas** — indigenous rebels in Chiapas who rose up as NAFTA took effect in 1994
+      `
     },
     {
       id: 'whgt7-input',
       type: 'input-boxes' as const,
-      content: `**Final Term Sprint — high-yield recall**`,
+      content: `**Final Term Sprint — High-yield recall**`,
       exercise: {
         questions: [
           {
-            prompt: 'The 1944 conference that designed the postwar monetary order at a New Hampshire hotel.',
-            answer: 'Bretton Woods',
-            acceptableAnswers: ['Bretton Woods', 'Bretton Woods Conference'],
-            hint: 'IMF and World Bank were founded under its framework.'
+            prompt: 'A Mexican export-assembly plant near the U.S. border that imports parts duty-free and exports finished goods.',
+            answer: 'maquiladora',
+            acceptableAnswers: ['maquiladora', 'maquiladoras', 'maquila'],
+            hint: 'The first ones date from Mexico\'s 1965 Border Industrialization Program.'
           },
           {
-            prompt: 'The 2016 UK referendum to leave the European Union.',
-            answer: 'Brexit',
-            acceptableAnswers: ['Brexit', 'Brexit referendum'],
-            hint: 'Portmanteau of "British exit."'
+            prompt: 'The 1997 crisis in which short-term foreign money fled Thailand, Indonesia and South Korea.',
+            answer: 'Asian financial crisis',
+            acceptableAnswers: ['Asian financial crisis', 'the Asian financial crisis', '1997 Asian financial crisis', 'Asian crisis'],
+            hint: 'It began with the collapse of Thailand\'s currency, the baht.'
           },
           {
-            prompt: 'The 2008 financial crisis triggered by the collapse of U.S. subprime mortgage-backed securities.',
-            answer: 'Global Financial Crisis',
-            acceptableAnswers: ['Global Financial Crisis', 'GFC', '2008 financial crisis', '2008 Global Financial Crisis', 'subprime crisis'],
-            hint: 'Often abbreviated GFC.'
+            prompt: 'The indigenous rebel movement in Chiapas that rose up on January 1, 1994.',
+            answer: 'Zapatistas',
+            acceptableAnswers: ['Zapatistas', 'Zapatista', 'EZLN', 'Zapatista Army of National Liberation'],
+            hint: 'Named after a hero of the Mexican Revolution.'
           }
         ]
       }
     },
     {
-      id: 'whgt7-dropdown',
-      type: 'dropdown-select' as const,
-      content: `**Match each AP-style prompt to the historical thinking skill it most directly tests.**`,
-      exercise: {
-        dropdowns: [
-          {
-            label: "A prompt asking how globalization remained the same and how it changed between 1945 and 2020 tests: ___",
-            options: ['continuity and change over time', 'comparison', 'sourcing', 'contextualization']
-          },
-          {
-            label: "A prompt asking students to compare the post-1980 economic trajectories of South Korea and Mexico tests: ___",
-            options: ['continuity and change over time', 'comparison', 'sourcing', 'contextualization']
-          },
-          {
-            label: "A prompt asking students to analyze the audience and purpose of Stiglitz's 'Globalization and Its Discontents' tests: ___",
-            options: ['continuity and change over time', 'comparison', 'sourcing', 'contextualization']
-          }
-        ],
-        correctAnswers: ['continuity and change over time', 'comparison', 'sourcing'],
-        hint1: '"Remained the same and changed" is the CCOT signal.',
-        hint2: '"Compare" names the comparison skill directly.',
-        hint3: '"Audience and purpose" is the HIPP signal — that is sourcing.',
-        explanation: 'Each AP skill has signal verbs: CCOT = "continuity and change," comparison = "compare," sourcing = "audience/purpose/POV."'
-      }
+      id: 'whgt7-final',
+      type: 'text' as const,
+      content: `
+## Putting It Together
+
+Post-1945 globalization was built on deliberate institutional design (Bretton Woods, GATT, the WTO) and on technologies that made distance cheap (containers, jets, satellites, computing). It produced dramatic gains, above all in East Asia, and real losses in older industrial regions and in debt-burdened developing countries, and it provoked resistance from Chiapas to Seattle.
+
+- **Key takeaway:** For any evaluation prompt, name a cause from institutions, a cause from technology, a group that gained, and a group that lost.
+      `
     },
     {
       id: 'whgt7-applied',
       type: 'multiple-choice' as const,
-      content: `**Applied AP Practice — Final Drill**`,
+      content: `**Applied AP Practice — Final drill**`,
       exercise: {
         questions: [
           {
-            question: 'A historian writes: "Post-1945 globalization was both the product of long-term institutional design and a contingent product of specific technological breakthroughs." Which response best supports both halves with AP-quality reasoning?',
+            question: 'A historian writes: "Post-1945 globalization was the product both of long-term institutional design and of specific technological breakthroughs." Which response best supports both halves of this claim?',
             options: [
-              "A stable monetary order from Bretton Woods enabled trade, but technologies such as the 1956 container ship, the 1989 Web, and the 2007 iPhone shaped distinct forms of globalization",
-              "Bretton Woods design alone drove post-1945 globalization, so breakthroughs such as containers did little to shape the form globalization took",
-              "Technological breakthroughs alone drove post-1945 globalization, since Bretton Woods institutions did little to enable or constrain trade and investment",
-              "Post-1945 globalization was inevitable, taking the same form whichever institutions, technologies, or leaders emerged in any decade after the war"
+              'Bretton Woods design alone drove it, so breakthroughs such as containers did little to shape globalization',
+              'Breakthroughs alone drove it, since the Bretton Woods institutions did little to enable trade or investment',
+              'It was inevitable and would have taken the same form whatever institutions or technologies emerged',
+              'Postwar institutions gave trade stable rules, and containers and satellites cut the cost of distance'
             ],
-            correctAnswer: 0,
-            explanation: 'Both/and AP framing: institutional foundation (Bretton Woods) PLUS contingent breakthroughs (container, Web, iPhone). High-scoring complexity.'
+            correctAnswer: 3,
+            explanation: 'The answer pairs the institutional foundation (Bretton Woods, GATT) with the technologies that shaped how integration happened. The other options keep only one half of the claim or deny that either mattered.'
           },
           {
-            question: 'Which best summarizes the post-1945 transformation of the world economy in a way that an AP reader would credit as a "complexity" claim?',
+            question: 'Which summary of the post-1945 world economy would an AP reader credit as a complexity claim?',
             options: [
-              "U.S.-led institutions and new technologies drove globalization, but gains were uneven, with about 800 million Chinese leaving poverty and Rust Belts deindustrializing",
-              "Post-1945 globalization produced nearly identical gains in every region, giving all major economies similar rates of growth, wage increases, and poverty reduction since 1945",
-              "Post-1945 globalization was shaped entirely by the United States and the Soviet Union, leaving it without economic, technological, or institutional dynamics of its own",
-              "Post-1945 globalization produced no clear winners or losers, since its benefits were shared equally among workers, consumers, and capital owners in every region of the world"
+              'Globalization produced nearly identical gains in every region, with similar growth everywhere',
+              'U.S.-led institutions and new technologies drove integration, but gains concentrated in East Asia while older industrial regions lost jobs',
+              'Globalization was shaped entirely by the superpowers and had no economic dynamics of its own',
+              'Globalization produced no winners or losers, since its benefits were shared equally by all groups'
             ],
-            correctAnswer: 0,
-            explanation: 'AP "complexity" rewards naming both the shared causes (institutions + technology) and the divergent distributive effects (China up, Rust Belt down).'
+            correctAnswer: 1,
+            explanation: 'A complexity claim names shared causes (institutions and technology) and divergent effects (East Asian growth, deindustrialization elsewhere). The other options deny any unevenness or any economic dynamics.'
           }
         ]
       }

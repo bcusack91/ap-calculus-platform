@@ -75,7 +75,7 @@ The Free-Response section gives you **three** distinct essay prompts. You write 
         type: 'text' as const,
         content: `## The 6-Point Rubric
 
-Since 2019, every AP Lit essay is scored out of **6 points** across three rows:
+Under the current course framework, which introduced these analytic rubrics in the 2019–20 school year, every AP Lit essay is scored out of **6 points** across three rows:
 
 | Row | Name | Points | What earns it |
 |-----|------|--------|---------------|
@@ -757,7 +757,7 @@ For a fiction passage, analyze the tools of **narrative**:
         type: 'text' as const,
         content: `## The Literary Argument (Q3)
 
-Q3 gives a **thematic prompt** and asks you to choose a **work of fiction** (a novel or a play), either from your own reading or from the list printed with the prompt, and argue how one element of it contributes to an interpretation of the work as a whole. You write from memory.
+Q3 gives a **thematic prompt** and a list of about 40 works. Its stable wording reads: "Either from your own reading or from the list below, choose a **work of fiction** in which [some aspect of the lead] is addressed. Then, in a well-written essay, analyze how [that same aspect of the lead] contributes to an interpretation of the work as a whole. **Do not merely summarize the plot.**" You write from memory.
 
 To do Q3 well:
 - **Prepare 3–4 works** in advance. Know characters, key scenes, the arc, and central themes cold.
@@ -775,15 +775,15 @@ To do Q3 well:
 One word (or short phrase) per box.
 
 **1)** The biggest pitfall on Q3 is retelling events instead of arguing — this error is called plot ______.
-**2)** Q3 asks you to choose a work of literary ______.
+**2)** Q3's prompt tells you to "choose a work of ______" (one word).
 **3)** Before exam day, you should have how many works prepared in depth? (a single number is fine — give the lower end of the recommended 3–4)`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['summary', 'merit', '3'],
+          correctAnswers: ['summary', 'fiction', '3'],
           hint1: 'Retelling the story = plot ______.',
-          hint2: 'The prompt requires a work of literary ______ — its worth/quality.',
+          hint2: 'The prompt\'s exact phrase is "choose a work of ______" ; novels and plays both qualify.',
           hint3: 'The recommendation is 3–4 works; the lower bound is a single digit.',
-          explanation: '1) summary — the cardinal Q3 sin. 2) merit — complex, analyzable works. 3) 3 (prepare 3–4 works deeply).',
+          explanation: '1) summary — the prompt itself says "Do not merely summarize the plot." 2) fiction — the prompt says "choose a work of fiction." 3) 3 (prepare 3–4 works deeply).',
         },
       },
       {

@@ -46,11 +46,11 @@ export const whNewlyIndependentStatesPart1Data = {
 
 | Model | Examples | Features |
 |---|---|---|
-| Multi-party democracy | India (1947–) | Universal suffrage, periodic elections, contested press |
+| Multi-party democracy | India (1947–); Botswana (1966–) | Universal suffrage, periodic elections, contested press |
 | One-party state | Tanzania under Nyerere; Ghana under Nkrumah after 1964; many African states | Single ruling party, often justified as "African socialism" |
 | Military regime | Nigeria after 1966; many Latin American states; Egypt after 1952 | Direct rule by armed forces, often through coups |
 
-- **Key takeaway:** Most newly independent states experimented with multiple governance models within their first 30 years. Only India sustained continuous multi-party democracy from independence — and even India had a 1975–77 emergency suspending civil liberties.
+- **Key takeaway:** Most newly independent states experimented with multiple governance models within their first 30 years. Only a few, such as India, Botswana and Mauritius, sustained multi-party democracy from independence, and even India suspended civil liberties during the 1975–77 Emergency.
       `
     },
     {

@@ -13,12 +13,12 @@ export const whGlobalizationTechPart2Data = {
 
 | Section |
 |---|
-| Multinational corporations and the global supply chain |
-| Free trade agreements: NAFTA (1994), EU Single Market (1993), ASEAN |
-| Financialization and the dollar system after 1971 |
+| Multinational corporations and global supply chains |
+| Free trade agreements: the EU, ASEAN, NAFTA, the WTO |
+| Floating currencies and financial globalization after 1971 |
 | Foreign direct investment and offshoring |
 
-> Key idea: After 1971, the world economy reorganized around floating exchange rates, multinational corporations, and globally distributed supply chains. Production was unbundled — design in one country, components in many, assembly in another, sales everywhere.
+> Key idea: After 1971 the world economy reorganized around floating exchange rates, multinational corporations and globally distributed supply chains. Production was unbundled: design in one country, components in several others, assembly in another, and sales everywhere. KC-6.3.I.E describes the result: knowledge economies grew in some regions "while industrial production and manufacturing were increasingly situated in Asia and Latin America."
       `
     },
     {
@@ -29,152 +29,144 @@ export const whGlobalizationTechPart2Data = {
 
 | Period | MNC pattern |
 |---|---|
-| Pre-1945 | Vertically integrated — controlled raw material extraction (oil, rubber, bananas) |
-| 1945–1980 | Production mostly in home country; sales offices abroad (GM, Ford, Sony) |
-| 1980–2000 | Global supply chains — Apple designs in Cupertino, components from Korea/Taiwan/Japan, assembly in China, sold worldwide |
-| 2000–today | "Triangle trade" — components made in Asia, assembled in China, sold to U.S. and Europe; data and finance flow back |
+| Before 1945 | Firms controlled raw materials abroad: oil, rubber, bananas |
+| 1945–1980 | Firms either exported from home (Sony) or built separate factories in each major market to serve local customers (Ford, Nestlé); production was not yet split into cross-border supply chains |
+| 1980–2001 | Global supply chains: a computer designed in California could be assembled in China from parts made in South Korea, Taiwan and Japan, then sold worldwide |
+
+CED Topic 9.4 names Nestlé (Switzerland), Nissan (Japan) and Mahindra and Mahindra (India) as examples of multinationals; the list is a reminder that MNCs were not only American.
 
 ## Major Free Trade Agreements
 
 | Agreement | Year | Members | Significance |
 |---|---|---|---|
-| EEC / EU Single Market | 1957 / 1993 | Western European democracies | Customs union → single market with free movement of goods, capital, labor |
-| ASEAN | 1967 | Southeast Asian states | Originally anti-communist; later economic cooperation |
-| Maastricht Treaty | 1992 | EU members | Created the Euro currency (introduced 1999/2002) |
-| NAFTA | 1994 | U.S., Canada, Mexico | Trilateral free trade; later replaced by USMCA (2020) |
-| WTO | 1995 | 164 members today | Binding global trade rules |
-| China joins WTO | 2001 | — | China integrated into rules-based global trade |
-
-## Financialization and the Dollar System After 1971
-
-| Feature | Description |
-|---|---|
-| Floating exchange rates | After Nixon Shock 1971; major currencies float freely against the dollar |
-| Petrodollar recycling | After 1973 oil shock, OPEC oil priced in dollars; oil revenues parked in U.S./European banks |
-| Eurodollar markets | Dollars held outside the U.S.; lent globally without U.S. regulation |
-| Capital account liberalization | 1980s–90s: capital controls dismantled in most major economies |
-| Derivatives markets | Trillions in interest-rate swaps, currency forwards, credit default swaps |
-| 2008 Global Financial Crisis | Subprime mortgage collapse → cascading global crisis; G-20 emerges as crisis-management forum |
-
-## Foreign Direct Investment and Offshoring
-
-| Decade | Pattern |
-|---|---|
-| 1960s–70s | U.S. firms open European subsidiaries; Japanese auto firms open U.S. plants in 1980s |
-| 1980s–90s | Maquiladoras in Mexico; export processing zones in Asia |
-| 1990s–2000s | China becomes "factory of the world" after 2001 WTO accession |
-| 2000s–10s | Services offshored too — Indian IT outsourcing, Filipino call centers |
-| 2020s | Some "reshoring" and "friend-shoring" after COVID-19 supply chain disruptions |
-
-- **Key takeaway:** The MNC + global supply chain + dollar-based financial system together define post-1971 globalization. AP prompts often ask whether globalization "made workers worse off" — your answer should distinguish between consumers (gained from cheaper goods), workers in offshoring countries (gained jobs), workers in deindustrializing regions (lost jobs and wages), and shareholders (gained capital returns).
+| European Economic Community / EU single market | 1957 / 1993 | Western European states | Customs union, then a single market with free movement of goods, capital and labor |
+| ASEAN | 1967 | Southeast Asian states | Founded partly as an anti-communist grouping; later focused on economic cooperation |
+| Maastricht Treaty | 1992 | EU members | Created the European Union and planned the euro (introduced 1999, with notes and coins in 2002) |
+| NAFTA | 1994 | United States, Canada, Mexico | Trilateral free trade in North America |
+| WTO | 1995 | Founding agreement concluded by the 123 governments of the Uruguay Round in 1994 | Binding global trade rules; China joined in 2001 |
       `
     },
     {
       id: 'whgt2-quiz',
       type: 'multiple-choice' as const,
-      content: `**Concept Check — MNCs and supply chains**`,
+      content: `**Concept Check — MNCs and trade blocs**`,
       exercise: {
         questions: [
           {
-            question: 'Which best describes the post-1980 transformation of multinational corporations?',
+            question: 'Which best describes the transformation of multinational corporations between 1980 and 2001?',
             options: [
-              'A shift from vertically integrated firms producing at home toward global supply chains sourcing design, components, and assembly from different countries',
-              'A shift away from foreign production back to domestic manufacturing in home countries, as firms ended foreign component sourcing and closed overseas assembly plants after 1980',
-              'A shift toward state ownership of multinational firms, as home governments bought out the shareholders, boards, and founders of large cross-border companies',
-              'A shift away from manufacturing toward purely financial firms, as major multinationals sold off their factories and stopped producing physical goods'
+              'A move back to domestic manufacturing, as firms closed overseas plants and ended foreign sourcing',
+              'A move toward state ownership, as home governments bought out the shareholders of large firms',
+              'A shift from producing mainly at home toward supply chains that spread design, parts and assembly across countries',
+              'A move away from manufacturing, as major multinationals sold their factories and stopped making goods'
             ],
-            correctAnswer: 0,
-            explanation: 'Post-1980 MNCs are defined by globally unbundled production. Apple is the canonical example: U.S. design, Asian components, Chinese assembly, global sales.'
+            correctAnswer: 2,
+            explanation: 'After 1980 multinationals unbundled production across borders: design in one country, components in several, assembly in another. They did not bring production home, they were not nationalized, and they kept making goods.'
           },
           {
-            question: 'Which 1994 trilateral free trade agreement linked the United States, Canada, and Mexico?',
-            options: ['NAFTA', 'EU', 'ASEAN', 'WTO'],
-            correctAnswer: 0,
-            explanation: 'NAFTA: North American Free Trade Agreement, in force January 1, 1994. Replaced by USMCA in 2020.'
+            question: 'What did the EU single market, ASEAN and NAFTA have in common?',
+            options: [
+              'They were military alliances formed to contain the spread of communism',
+              'They were regional blocs that cut barriers among members',
+              'They were agencies that lent money to countries in a debt crisis',
+              'They were cartels that set world prices for their members\' oil exports'
+            ],
+            correctAnswer: 1,
+            explanation: 'The EU, ASEAN and NAFTA reduced barriers to trade among their members, part of the spread of free-market principles named in KC-6.3.II.B. They were not alliances, lenders like the IMF, or cartels like OPEC.'
           }
         ]
       }
     },
     {
-      id: 'whgt2-input',
-      type: 'input-boxes' as const,
-      content: `**Term Sprint — globalization vocabulary**`,
-      exercise: {
-        questions: [
-          {
-            prompt: 'A firm with operations and assets in multiple countries — abbreviation: MNC.',
-            answer: 'multinational corporation',
-            acceptableAnswers: ['multinational corporation', 'MNC', 'multinational corporations', 'MNCs'],
-            hint: 'Apple, Toyota, Samsung, and ExxonMobil are all examples.'
-          },
-          {
-            prompt: 'The 1992 EU treaty that created the Euro and deepened European political union.',
-            answer: 'Maastricht Treaty',
-            acceptableAnswers: ['Maastricht Treaty', 'Maastricht', 'Treaty of Maastricht'],
-            hint: 'Signed in a Dutch city.'
-          },
-          {
-            prompt: 'The U.S. president who ended dollar-gold convertibility in August 1971 (the "Nixon Shock").',
-            answer: 'Richard Nixon',
-            acceptableAnswers: ['Richard Nixon', 'Nixon'],
-            hint: 'Republican; resigned in 1974 after Watergate.'
-          }
-        ]
-      }
+      id: 'whgt2-finance',
+      type: 'text' as const,
+      content: `
+## Floating Currencies and Financial Globalization After 1971
+
+| Feature | Description |
+|---|---|
+| Floating exchange rates | After the Nixon Shock of 1971, major currencies floated against the dollar |
+| Petrodollar recycling | After the 1973 oil shock, oil exporters deposited their dollar earnings in Western banks, which lent them on, often to developing countries |
+| Latin American debt crisis | In 1982 Mexico could not repay its loans; the IMF lent money on condition of spending cuts and market reforms |
+| Capital account liberalization | In the 1980s and 1990s most major economies dismantled controls on moving money across borders |
+| Asian financial crisis | In 1997 short-term foreign capital fled Thailand, Indonesia and South Korea; currencies collapsed and the IMF imposed austerity conditions |
+
+## Foreign Direct Investment and Offshoring
+
+| Period | Pattern |
+|---|---|
+| 1960s–70s | U.S. firms opened European subsidiaries; Japanese automakers opened U.S. plants in the 1980s |
+| From 1965 | Mexico's Border Industrialization Program created **maquiladoras**, assembly plants near the U.S. border that imported parts duty-free and exported finished goods; they multiplied after the 1982 debt crisis and again after NAFTA (1994) |
+| 1980s–90s | Export processing zones spread across Asia; China's special economic zones drew foreign investment |
+| 1990s | Services began to move too: Indian software firms in Bangalore worked for clients in the United States and Europe |
+
+> **Who gained and who lost:** Consumers gained cheaper goods; workers in Mexico, China and Southeast Asia gained factory jobs, often at low wages; workers in older industrial regions of the United States and Europe lost jobs; shareholders gained higher returns. AP rewards answers that separate these groups.
+      `
     },
     {
       id: 'whgt2-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Match each event to the decade it most clearly belongs to.**`,
+      content: `**Match each development to the decade it belongs to.**`,
       exercise: {
         dropdowns: [
           {
             label: 'Nixon ends dollar-gold convertibility, dismantling fixed Bretton Woods exchange rates: ___',
-            options: ['1960s', '1970s', '1990s', '2000s']
+            options: ['1960s', '1970s', '1990s']
           },
           {
-            label: 'NAFTA enters into force; EU Single Market launches; WTO is founded the next year: ___',
-            options: ['1960s', '1970s', '1990s', '2000s']
+            label: 'NAFTA takes effect, the EU single market launches, and the WTO is founded: ___',
+            options: ['1960s', '1970s', '1990s']
           },
           {
-            label: 'China joins the WTO and becomes the global factory; outsourcing of services to India accelerates: ___',
-            options: ['1960s', '1970s', '1990s', '2000s']
+            label: 'Mexico launches its Border Industrialization Program, creating the first maquiladoras: ___',
+            options: ['1960s', '1970s', '1990s']
           }
         ],
-        correctAnswers: ['1970s', '1990s', '2000s'],
+        correctAnswers: ['1970s', '1990s', '1960s'],
         hint1: 'The Nixon Shock was August 1971.',
-        hint2: 'NAFTA was 1994; EU Single Market 1993; WTO 1995.',
-        hint3: 'China joined WTO in 2001.',
-        explanation: 'Three pivotal decades: 1970s ended the gold standard, 1990s built the modern free-trade architecture, 2000s integrated China into the system.'
+        hint2: 'NAFTA 1994, the single market 1993, the WTO 1995.',
+        hint3: 'The program began in 1965, long before NAFTA.',
+        explanation: 'The 1960s saw the first maquiladoras (1965); the 1970s ended fixed exchange rates; the 1990s built the modern free-trade architecture.'
       }
+    },
+    {
+      id: 'whgt2-takeaway',
+      type: 'text' as const,
+      content: `
+## Putting the Processes Together
+
+The three processes reinforced each other. Floating currencies and open capital markets let money move quickly to wherever production was cheapest; trade agreements lowered the tariffs on goods crossing borders; and multinationals used both to build supply chains that ran through Mexico, China and Southeast Asia. The same openness made economies vulnerable: when foreign lenders pulled money out of Mexico in 1994 or East Asia in 1997, crises spread from one country to its neighbors.
+
+- **Key takeaway:** Post-1971 globalization rested on three linked processes: multinational supply chains, regional and global trade rules, and a dollar-based financial system with mobile capital.
+      `
     },
     {
       id: 'whgt2-applied',
       type: 'multiple-choice' as const,
-      content: `**Applied AP Practice — Distributive effects of globalization**`,
+      content: `**Applied AP Practice — Effects of integration**`,
       exercise: {
         questions: [
           {
-            question: 'Which response best demonstrates AP "complexity" in addressing whether post-1980 globalization "helped" or "hurt" workers?',
+            question: 'Which response best demonstrates complexity in evaluating whether globalization after 1980 helped or hurt workers?',
             options: [
-              'Effects diverged, as consumers got cheaper goods, offshoring hubs gained factory jobs, deindustrialized regions lost stable work, and capital gained',
-              'Post-1980 globalization helped nearly all workers everywhere, since cheaper goods, new export jobs, and rising wages lifted rich and poor countries alike',
-              'Post-1980 globalization hurt nearly all workers everywhere, since offshoring drove down wages in rich countries while factory jobs abroad paid too little to help',
-              'Post-1980 globalization had little measurable effect on workers, since changes in wages and employment came almost entirely from domestic policy and automation'
+              'It helped nearly all workers everywhere, since cheaper goods and new export jobs raised wages in rich and poor countries alike',
+              'Effects diverged, as consumers and new factory regions gained while older industrial regions lost jobs',
+              'It hurt nearly all workers everywhere, since offshoring cut wages in rich countries and paid too little abroad to help anyone',
+              'It had little effect on workers, since changes in wages and jobs came almost entirely from domestic policy and automation'
             ],
-            correctAnswer: 0,
-            explanation: 'AP "complexity" rewards distinguishing among groups: consumers, offshoring-destination workers, deindustrializing workers, and capital owners had different experiences.'
+            correctAnswer: 1,
+            explanation: 'A complexity answer separates groups: consumers, workers in new manufacturing regions, workers in deindustrializing regions, and capital owners fared differently. The other options treat all workers alike or deny any effect.'
           },
           {
-            question: 'Which best explains why the 2008 Global Financial Crisis was global rather than confined to the United States, where the subprime mortgage market originated?',
+            question: 'Why did the 1997 financial crisis that began in Thailand spread quickly to Indonesia, South Korea and other economies?',
             options: [
-              'European, Asian, and Middle Eastern banks held trillions in U.S. mortgage-backed securities, so falling U.S. home prices impaired bank balance sheets worldwide',
-              'The crisis began in China, whose collapsing export sector cut demand for U.S. goods and then spread heavy losses to European and American banks',
-              'The crisis began in the eurozone, where Greek debt defaults in 2008 triggered bank failures that later spread to U.S. mortgage lenders',
-              'The crisis spread through trade alone, as U.S. consumers stopped buying cars, electronics, and clothing while foreign banks held few U.S. assets'
+              'Foreign investors who had poured short-term money into the region pulled it out of many countries at once',
+              'The crisis began in the United States and reached Asia only through a collapse in U.S. purchases of rice',
+              'The region\'s governments had banned foreign investment, so their banks could not borrow abroad',
+              'A war between Thailand and its neighbors closed the region\'s ports to international shipping'
             ],
             correctAnswer: 0,
-            explanation: '2008 was global because dollar-denominated U.S. mortgage assets were held throughout global banking. This is the canonical AP example of financial globalization\'s contagion risks. The Greek debt crisis came later, in 2009–2010.'
+            explanation: 'Open capital markets had drawn large short-term inflows into East Asia; when confidence broke in Thailand, investors withdrew from similar economies, and currencies collapsed. The crisis began in Asia, the region was open to foreign money rather than closed, and no regional war occurred.'
           }
         ]
       }

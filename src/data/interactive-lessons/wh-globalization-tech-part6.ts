@@ -13,12 +13,12 @@ export const whGlobalizationTechPart6Data = {
 
 | Section |
 |---|
-| HIPP for documents about globalization and technology |
-| Document bank: Friedman\'s "The World Is Flat," Stiglitz\'s "Globalization and Its Discontents," WTO founding documents, Paris Agreement |
+| HIPP for documents about globalization |
+| Document bank: the GATT preamble, the Marrakesh Agreement, the Zapatistas' declaration, Stiglitz's "Globalization and Its Discontents" |
 | AP SAQ structure for globalization prompts |
 | Common AP traps to avoid |
 
-> Key idea: Globalization documents have a clear authorial position — pro-globalization, critical, or technocratic. Sourcing the author\'s position is the highest-value AP move on these prompts.
+> Key idea: Globalization documents come from a clear position: technocratic designers of the system, people resisting it, or critics who once worked inside it. Sourcing the author's position is the highest-value AP move on these prompts.
       `
     },
     {
@@ -27,172 +27,154 @@ export const whGlobalizationTechPart6Data = {
       content: `
 ## HIPP for Globalization Documents
 
-| Letter | Question | Globalization Application |
+| Letter | Question | Globalization application |
 |---|---|---|
-| **H**istorical context | What was happening when this was produced? | Pre-2008 boom era? Post-2008 backlash? Pre/post China-WTO? |
-| **I**ntended audience | Who was this for? | Policy elites? Mass public? Specific national audience? |
-| **P**urpose | What was the author trying to do? | Defend globalization? Critique it? Reform it from within? |
-| **P**oint of view | What position is the author writing from? | Technocrat? Heterodox economist? Activist? Trade negotiator? |
+| **H**istorical situation | What was happening when this was produced? | Just after World War II? The debt crises of the 1980s? Just after NAFTA or the 1997 Asian crisis? |
+| **I**ntended audience | Who was this for? | Trade negotiators? A national public? The international press? |
+| **P**urpose | What was the author trying to do? | Build the system? Resist it? Reform it from within? |
+| **P**oint of view | What position is the author writing from? | Governments? An indigenous rebel movement? A former insider? |
 
 ## Document Bank
 
-> **1. Thomas Friedman, "The World Is Flat" (2005)**
-> "When the world is flat, you can innovate without having to emigrate."
+> **1. General Agreement on Tariffs and Trade, preamble (1947)**
+> "...entering into reciprocal and mutually advantageous arrangements directed to the substantial reduction of tariffs and other barriers to trade and to the elimination of discriminatory treatment in international commerce."
 
-- **HIPP:** Bestselling popular book by a New York Times columnist; intended audience is U.S. business and policy class; purpose is to celebrate the offshoring/Internet-enabled "flattening" of global competition; POV is American liberal-globalist optimism at the height of the 2000s globalization wave.
+- **HIPP:** Signed by 23 countries two years after World War II, when leaders blamed the high tariffs of the 1930s for deepening the Depression; intended audience is the signatory governments; purpose is to lower tariffs step by step through negotiation; point of view is that of mostly Western governments, led by the United States, rebuilding the world economy.
 
-> **2. Joseph Stiglitz, "Globalization and Its Discontents" (2002)**
-> "Decisions were made on the basis of what seemed a curious blend of ideology and bad economics."
+> **2. Marrakesh Agreement Establishing the World Trade Organization, preamble (1994)**
+> "Resolved, therefore, to develop an integrated, more viable and durable multilateral trading system..."
 
-- **HIPP:** Book by a Nobel-winning economist and former World Bank Chief Economist; intended audience is policy elites and informed public; purpose is to critique IMF Structural Adjustment Programs from inside the institution; POV is heterodox Keynesian economist who served at the highest levels of the institutions he critiques.
-
-> **3. WTO Marrakesh Agreement (1994)**
-> "The Members establish the World Trade Organization … to develop an integrated, more viable and durable multilateral trading system."
-
-- **HIPP:** Founding treaty of the WTO, signed by 123 governments; intended audience is the international trade-policy community; purpose is to formalize the most ambitious global trade rule-making body in history; POV is technocratic, multilateral, rules-based.
-
-> **4. Paris Agreement on Climate Change (2015)**
-> "Holding the increase in the global average temperature to well below 2°C above pre-industrial levels."
-
-- **HIPP:** Multilateral agreement under the UN Framework Convention on Climate Change, signed by ~196 parties; intended audience is signatory states and the global public; purpose is to commit signatories to nationally determined contributions to limit global warming; POV is multilateral environmental governance.
-
-> **5. Donald Trump, Inaugural Address (January 20, 2017)**
-> "Protection will lead to great prosperity and strength."
-
-- **HIPP:** Speech at the inauguration of the 45th U.S. president; intended audience is the American public, particularly working-class voters in deindustrialized regions; purpose is to repudiate the post-1945 free-trade consensus and signal a turn to "America First" trade policy; POV is right-populist nationalism in the wake of post-2008 disillusionment with globalization.
-
-## AP SAQ Structure (3 parts)
-
-For a globalization SAQ:
-
-- **A. Identify** one specific feature of post-1945 globalization
-- **B. Explain** how that feature contributed to a specific outcome (growth, inequality, integration, backlash)
-- **C. Compare** to a different phase OR explain a contrasting interpretation
-
-## Common AP Traps
-
-| Trap | Why It Costs Points |
-|---|---|
-| Calling globalization either "good" or "bad" | AP rewards distributive analysis (winners and losers) |
-| Treating globalization as a uniquely post-1945 phenomenon | The first globalization wave (~1870–1914) had high trade and migration too |
-| Treating the Internet as the cause of globalization | The Internet accelerated existing trends rooted in Bretton Woods + containers |
-| Quoting documents without HIPP | The complexity point requires sourcing |
-| Ignoring China | Post-1978 China is the single largest globalization story of the era |
-
-- **Key takeaway:** Treat every globalization document as evidence about the author\'s position in the globalization debate, not just about the world. Friedman\'s 2005 book tells you what optimistic American liberals believed in 2005, not just what the world was like.
+- **HIPP:** Concluded by the 123 governments of the Uruguay Round, about two years after the Soviet collapse; intended audience is the international trade-policy community; purpose is to replace GATT with a permanent organization that has binding dispute settlement; point of view is technocratic, multilateral and rules-based.
       `
     },
     {
       id: 'whgt6-quiz',
       type: 'multiple-choice' as const,
-      content: `**Concept Check — Document Sourcing**`,
+      content: `**Concept Check — Sourcing the founding documents**`,
       exercise: {
         questions: [
           {
-            question: "Which historical context is most essential for sourcing Stiglitz's 'Globalization and Its Discontents' (2002)?",
+            question: 'Which historical situation best explains why the GATT signatories of 1947 wanted to reduce tariffs?',
             options: [
-              "The 1997 Asian crisis had exposed IMF failures, Stiglitz had been World Bank chief economist (1997–2000), and the 1999 Seattle protests had launched a public anti-globalization movement",
-              "The 2008 Global Financial Crisis (after Lehman's collapse) had already unfolded, giving Stiglitz his case study for critiquing Fed, Treasury, and IMF decisions",
-              "The book appeared before any major crisis of the post-1990 era, so Stiglitz treated globalization as a future possibility rather than a process already under way",
-              "Stiglitz wrote as an outsider with no experience inside the World Bank or the IMF, relying on press reports and activist accounts of their lending programs"
+              'The 1971 Nixon Shock had just ended the fixed exchange rates set at Bretton Woods',
+              'Leaders blamed the trade barriers of the 1930s for deepening the Great Depression',
+              'The WTO had already failed to settle trade disputes among its members',
+              'The 1997 Asian financial crisis had shut down trade across East Asia'
             ],
-            correctAnswer: 0,
-            explanation: '1997 Asian Crisis + Stiglitz\'s World Bank tenure (1997–2000) + 1999 Seattle is the canonical context for Stiglitz 2002: a critique of the IMF from someone who had worked inside the Bretton Woods institutions. The book predates the 2008 crisis.'
+            correctAnswer: 1,
+            explanation: 'Postwar leaders believed the tariff wars of the 1930s had worsened the Depression and fed the conflicts that led to war, so they designed GATT to lower barriers gradually. The other options describe events that came decades later.'
           },
           {
-            question: "Which best identifies the intended audience and purpose of Trump's January 2017 Inaugural Address?",
+            question: 'How did the 1994 Marrakesh Agreement change the trading system that GATT had set up in 1947?',
             options: [
-              "A swearing-in speech; its audience was the American public, especially working-class voters in deindustrialized regions; its purpose was to reject the free-trade consensus for \"America First\"",
-              "A diplomatic address to a WTO ministerial meeting; its audience was foreign trade negotiators; its purpose was to launch a new multilateral round deepening free-trade commitments",
-              "An address to anti-globalization activists; its audience was the World Social Forum; its purpose was to commit the U.S. to replacing the IMF and World Bank with new South-led development banks",
-              "A message to the UN General Assembly; its audience was the international community of states; its purpose was to recommit the U.S. to multilateralism with no change in trade policy"
+              'It abolished every tariff in the world at once and closed the old GATT secretariat',
+              'It returned trade policy to individual governments acting without any shared rules',
+              'It replaced GATT with a permanent organization whose dispute rulings were binding',
+              'It limited the new body to trade in oil and other raw materials'
             ],
-            correctAnswer: 0,
-            explanation: 'Trump\'s 2017 inaugural is the canonical right-populist anti-globalization document. Naming the audience (deindustrialized voters) and purpose (repudiate free-trade consensus) is the AP move.'
+            correctAnswer: 2,
+            explanation: 'The WTO turned GATT\'s rounds of negotiation into a permanent organization with binding dispute settlement and a wider scope that included services and intellectual property. It did not abolish all tariffs, it strengthened rather than weakened multilateral rules, and it covered far more than raw materials.'
           }
         ]
       }
     },
     {
-      id: 'whgt6-input',
-      type: 'input-boxes' as const,
-      content: `**Term Sprint — match the document to its author**`,
-      exercise: {
-        questions: [
-          {
-            prompt: 'The New York Times columnist who wrote "The World Is Flat" in 2005.',
-            answer: 'Thomas Friedman',
-            acceptableAnswers: ['Thomas Friedman', 'Friedman', 'Tom Friedman'],
-            hint: 'Three-time Pulitzer Prize winner; long-time NYT foreign affairs columnist.'
-          },
-          {
-            prompt: 'The Nobel-winning economist and former World Bank Chief Economist who wrote "Globalization and Its Discontents" in 2002.',
-            answer: 'Joseph Stiglitz',
-            acceptableAnswers: ['Joseph Stiglitz', 'Stiglitz', 'Joe Stiglitz'],
-            hint: 'Won the 2001 Nobel Prize in Economics.'
-          },
-          {
-            prompt: 'The 2015 multilateral climate accord that committed signatories to limit warming to "well below 2°C."',
-            answer: 'Paris Agreement',
-            acceptableAnswers: ['Paris Agreement', 'Paris Climate Agreement', 'Paris Climate Accord', 'Paris Accord'],
-            hint: 'Negotiated under the UN Framework Convention on Climate Change.'
-          }
-        ]
-      }
+      id: 'whgt6-docs2',
+      type: 'text' as const,
+      content: `
+> **3. Zapatista Army of National Liberation (EZLN), First Declaration of the Lacandon Jungle (January 1, 1994)**
+> "Today we say enough is enough!"
+
+- **HIPP:** Issued as indigenous rebels seized towns in Chiapas, Mexico, on the day NAFTA took effect (the declaration itself focuses on land, poverty and the Mexican government rather than on NAFTA by name); intended audience is the Mexican public and, through the press, the world; purpose is to win support for indigenous rights and against the government's free-market policies; point of view is that of poor indigenous farmers in southern Mexico.
+
+> **4. Joseph Stiglitz, "Globalization and Its Discontents" (2002), a secondary source on the 1990s**
+> "Decisions were made on the basis of what seemed a curious blend of ideology and bad economics..."
+
+- **HIPP:** Written by a Nobel Prize–winning economist who had been the World Bank's chief economist (1997–2000) during the Asian financial crisis; intended audience is policymakers and the informed public; purpose is to criticize IMF conditions imposed on developing countries in the 1990s; point of view is that of an insider critic of the institutions he had served.
+
+## AP SAQ Structure (3 parts)
+
+- **A. Identify** one specific feature of post-1945 globalization
+- **B. Explain** how it contributed to an outcome (growth, inequality, integration, or backlash)
+- **C. Explain** a contrast with another phase, or a contrasting interpretation
+
+## Common AP Traps
+
+| Trap | Why it costs points |
+|---|---|
+| Calling globalization simply "good" or "bad" | AP rewards analysis of winners and losers |
+| Treating globalization as new after 1945 | The 1870–1914 wave also had high trade and migration |
+| Saying "the internet caused globalization" | The internet sped up trends that began with Bretton Woods, GATT and container shipping decades earlier |
+| Quoting documents without sourcing them | The sourcing point requires HIPP |
+| Ignoring China | China's post-1978 reforms are among the largest globalization stories of the period |
+      `
     },
     {
       id: 'whgt6-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Match each document to the HIPP element it most directly tests.**`,
+      content: `**Match each fact to the HIPP element it most directly supports.**`,
       exercise: {
         dropdowns: [
           {
-            label: "Knowing Stiglitz served as World Bank Chief Economist before publishing his 2002 critique is most useful for: ___",
-            options: ['historical context', 'intended audience', 'purpose', 'point of view']
+            label: 'Knowing Stiglitz had been the World Bank\'s chief economist before writing his critique is most useful for: ___',
+            options: ['historical situation', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: "Knowing the WTO Marrakesh Agreement was signed by 123 governments to formalize a binding multilateral trade body is most useful for: ___",
-            options: ['historical context', 'intended audience', 'purpose', 'point of view']
+            label: 'Knowing the Marrakesh Agreement was designed to replace GATT with a permanent trade body is most useful for: ___',
+            options: ['historical situation', 'intended audience', 'purpose', 'point of view']
           },
           {
-            label: "Knowing Trump's 2017 Inaugural Address was directed at working-class voters in deindustrialized regions is most useful for: ___",
-            options: ['historical context', 'intended audience', 'purpose', 'point of view']
+            label: 'Knowing the Zapatistas issued their declaration on the day NAFTA took effect is most useful for: ___',
+            options: ['historical situation', 'intended audience', 'purpose', 'point of view']
           }
         ],
-        correctAnswers: ['point of view', 'purpose', 'intended audience'],
-        hint1: 'A former insider critiquing the institutions he served reveals his position — that is point of view.',
-        hint2: 'Naming what a treaty was designed to do is purpose.',
-        hint3: 'Identifying the rhetorical target audience is, by definition, audience analysis.',
-        explanation: 'Each HIPP element does different work: prior position reveals POV; treaty design reveals purpose; rhetorical targeting reveals audience.'
+        correctAnswers: ['point of view', 'purpose', 'historical situation'],
+        hint1: 'A former insider criticizing his own institutions reveals his position.',
+        hint2: 'What the treaty was designed to do is its purpose.',
+        hint3: 'The timing places the document in its moment.',
+        explanation: 'Stiglitz\'s former post reveals his point of view; the treaty\'s design is its purpose; the NAFTA timing is the historical situation of the Zapatista declaration.'
       }
+    },
+    {
+      id: 'whgt6-model',
+      type: 'text' as const,
+      content: `
+## Model SAQ Response
+
+**Prompt:** Identify ONE feature of post-1945 globalization, and explain how it contributed to economic integration.
+
+> **Response:** Containerization, introduced in 1956, standardized cargo so that steel boxes moved straight from ships to trains and trucks. By cutting port handling costs and theft, it made it cheap to ship parts and finished goods across oceans, which allowed firms to build supply chains that ran through Asia and Latin America after 1980.
+
+- **Why it scores:** It names a specific feature with a date, explains the mechanism (lower handling costs), and ties it to the outcome the prompt asks about (integration through supply chains).
+      `
     },
     {
       id: 'whgt6-applied',
       type: 'multiple-choice' as const,
-      content: `**Applied AP Practice — SAQ format**`,
+      content: `**Applied AP Practice — Sourcing and argument**`,
       exercise: {
         questions: [
           {
-            question: 'An SAQ asks: "Identify ONE feature of post-1945 globalization, and explain how it contributed to economic integration." Which response would score highest?',
+            question: 'Which historical situation is most important for sourcing Stiglitz\'s "Globalization and Its Discontents" (2002)?',
             options: [
-              "Containerization from 1956 standardized cargo handling and cut port costs by roughly 90%, which made global supply chains viable and drove the offshoring of manufacturing after 1980",
-              "Containerization from 1956 was an important innovation in shipping, and it is widely recognized as one of the most significant developments in the history of global trade",
-              "Containerization from 1956 cut port costs by roughly 90%, which lowered consumer prices in the United States and helped the U.S. win the Cold War against the Soviet Union",
-              "The Internet from 1989 cut communication costs sharply, which made containerized cargo handling possible for the first time and led directly to the founding of the WTO in 1995 to regulate it"
+              'The 1997 Asian crisis he watched as World Bank chief economist and the 1999 Seattle protests',
+              'The founding of the IMF at Bretton Woods, which Stiglitz attended as a young delegate in 1944',
+              'The 1971 Nixon Shock, which Stiglitz helped to plan as an adviser in the U.S. Treasury',
+              'The 1957 Treaty of Rome, which Stiglitz criticized as a European threat to American trade'
             ],
             correctAnswer: 0,
-            explanation: 'AP SAQ scoring rewards specific feature + date + mechanism + outcome tied to the prompt. A response that names the feature but never explains integration, or that links it to the wrong outcome or a false causal chain, earns no "explain" credit.'
+            explanation: 'Stiglitz wrote after watching the IMF\'s handling of the 1997 Asian crisis from inside the World Bank, at a time when the Seattle protests had made criticism of global institutions public. He was not at Bretton Woods, did not plan the Nixon Shock, and was not writing about the Treaty of Rome.'
           },
           {
-            question: 'Which short answer best demonstrates AP "complexity" by complicating a single-cause narrative about globalization?',
+            question: 'Which statement best complicates a single-cause explanation of the 1997 Asian financial crisis?',
             options: [
-              "Although 2008 is often blamed on U.S. subprime loans, capital-account liberalization, European banks' U.S. mortgage holdings, and eurozone imbalances spread it globally",
-              "The 2008 crisis was caused entirely by U.S. subprime mortgages, and European banks, global capital markets, and the eurozone's imbalances played no role in any phase of its spread",
-              "The 2008 crisis had little real connection to U.S. subprime mortgages and was caused mainly by China's large trade surplus with the United States in the 2000s",
-              "The 2008 crisis was a myth, since no major economy in any region of the world fell into a measurable recession at any point between 2008 and 2010"
+              'The crisis was caused entirely by corruption in Thailand, and foreign investors played no part in its spread',
+              'Weak banking in the region mattered, but rapid inflows and outflows of short-term foreign money also drove it',
+              'The crisis had no connection to foreign investment and was caused only by a drought that ruined rice harvests',
+              'The crisis never spread beyond Thailand, so neighboring economies such as South Korea were unaffected'
             ],
-            correctAnswer: 0,
-            explanation: 'The "complexity" point requires complicating a dominant single-cause narrative. Naming subprime PLUS European bank exposures PLUS eurozone imbalances is the canonical AP move.'
+            correctAnswer: 1,
+            explanation: 'A complexity answer adds causes: weak regional banking and short-term foreign capital that poured in and then fled. The other options rely on a single cause, invent one, or deny the crisis spread.'
           }
         ]
       }

@@ -57,7 +57,7 @@ export const whColdWarDecolonizationPart5Data = {
 
 | Year | Event | Significance |
 |---|---|---|
-| 1980 | Solidarity movement in Poland | First major worker-led challenge to communist rule |
+| 1980 | Solidarity movement in Poland | An independent trade union with about 10 million members that became a mass challenge to communist rule |
 | 1983 | Reagan's "Evil Empire" speech; SDI announced | Renewed superpower confrontation |
 | 1985 | Gorbachev becomes General Secretary | Glasnost (openness), perestroika (restructuring) |
 | 1987 | INF Treaty | First superpower treaty to eliminate nuclear weapons class |

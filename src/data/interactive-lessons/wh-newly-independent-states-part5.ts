@@ -33,7 +33,7 @@ export const whNewlyIndependentStatesPart5Data = {
 |---|---|---|
 | 1947 | India and Pakistan independence | First major Asian decolonization |
 | 1949 | PRC founded | Communist victory in China |
-| 1952 | Egyptian Free Officers coup | Birth of Arab nationalism |
+| 1952 | Egyptian Free Officers coup | Ends the monarchy; leads to Nasser's rise to power (1954), and Egypt becomes the leading center of pan-Arab nationalism |
 | 1955 | Bandung Conference | Third World political assertion |
 | 1957 | Ghana independence | First sub-Saharan African colony to win independence |
 | 1960 | "Year of Africa" — 17 states independent | High point of African decolonization |
@@ -46,7 +46,7 @@ export const whNewlyIndependentStatesPart5Data = {
 
 | Year | Event | Significance |
 |---|---|---|
-| 1965 | Sukarno overthrown in Indonesia by military coup | End of "Guided Democracy" |
+| 1965 | Indonesian army sidelines Sukarno after a failed coup attempt (1965–67) | End of "Guided Democracy"; Suharto's military rule begins |
 | 1966 | Nkrumah overthrown in Ghana | End of pioneer African socialism |
 | 1967–70 | Nigerian civil war (Biafra) | Limits of postcolonial federalism |
 | 1971 | Bangladesh Liberation War | Pakistan loses East Pakistan |
@@ -54,7 +54,7 @@ export const whNewlyIndependentStatesPart5Data = {
 | 1975 | Vietnam War ends; Cambodian genocide begins | End of U.S. ground combat; revolutionary catastrophe |
 | 1979 | Iranian Revolution; Soviet invasion of Afghanistan | Religious revolution; Cold War proxy war |
 
-**Pattern in Phase 2:** state-led economies stagnate; military coups overthrow founding democratic leaders; civil wars test post-independence borders; oil shocks destabilize importing economies; religious movements emerge as alternative mobilizing force.
+**Pattern in Phase 2:** state-led economies stagnate; military coups overthrow founding leaders, many of whom (such as Nkrumah and Sukarno) had already replaced elected parliaments with one-party or "guided" rule; civil wars test post-independence borders; oil shocks destabilize importing economies; religious movements emerge as alternative mobilizing force.
 
 > **Phase 3: Structural Adjustment and Democratization (1980–2000)**
 

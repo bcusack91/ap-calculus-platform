@@ -624,7 +624,7 @@ The **counterculture** of the 1960s rejected mainstream values around materialis
 
 The hawk/dove split is the single most reusable pair of terms in this unit, so it pays to over-learn it. Both come from birds: a **hawk** is a predator (keep fighting), and a **dove** is the universal symbol of **peace** (stop the war).
 
-> 💡 The same period gave us a date worth memorizing — **1969** — which doubles as the year of both **Woodstock** and the **Apollo 11 Moon landing**, a striking snapshot of a nation chasing peace and the stars amid an unpopular war.`,
+> 💡 Keep the two splits separate: hawks and doves divided Americans over the **war**, while the counterculture and the "silent majority" divided them over **values and lifestyle**. Many doves were not hippies, and many working-class Americans who disliked the protesters also came to doubt the war.`,
       },
       {
         id: 'apvsc5-input-culture',
@@ -633,16 +633,16 @@ The hawk/dove split is the single most reusable pair of terms in this unit, so i
 
 Short answers.
 
-**1)** Year of the Woodstock music festival: $\\,?$
+**1)** One word for the 1960s youth movement that rejected mainstream values of materialism and conformity (lowercase): $\\,?$
 **2)** One word for war *supporters* in the hawk/dove debate (lowercase): $\\,?$
 **3)** One word for war *opponents* in that debate (lowercase): $\\,?$`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['1969', 'hawks', 'doves'],
-          hint1: 'Woodstock came the same year as the first Moon landing.',
+          correctAnswers: ['counterculture', 'hawks', 'doves'],
+          hint1: 'Its participants were often labeled "hippies"; the word means a culture set against the mainstream.',
           hint2: 'Birds of prey symbolized those who wanted to keep fighting.',
           hint3: 'A bird symbolizing peace stood for those who opposed the war.',
-          explanation: '1) 1969. 2) hawks (supporters). 3) doves (opponents).',
+          explanation: '1) counterculture. 2) hawks (supporters). 3) doves (opponents).',
         },
       },
     ],
@@ -766,7 +766,7 @@ Short answers about the era's legal landmarks.
           boxes: 3,
           correctAnswers: ['1973', '1969', 'NOW'],
           hint1: 'Roe came the same year as the Paris Peace Accords.',
-          hint2: 'Stonewall happened the same year as Woodstock and the Moon landing.',
+          hint2: 'Stonewall happened in June of the same year as the Woodstock festival.',
           hint3: 'National Organization for Women — its acronym is a common English word.',
           explanation: '1) 1973 (Roe v. Wade). 2) 1969 (Stonewall). 3) NOW — the National Organization for Women, co-founded 1966.',
         },
