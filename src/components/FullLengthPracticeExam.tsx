@@ -99,6 +99,8 @@ export interface MCQItem {
   options: string[]
   correctAnswer: number
   explanation: string
+  /** Why each option is right or wrong, aligned to the authored `options` order (shown on the review page). */
+  optionExplanations?: string[]
   topic: string
 }
 

@@ -1,7 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import type { AttemptKind } from '@/lib/study-tracking'
 import type { ReviewFrqItem, ReviewItem } from '@/lib/question-sources/types'
-import { apPracticeFrqItems } from '@/lib/question-sources/ap-practice'
+import { apPracticeFrqItems, withApPracticeExtras } from '@/lib/question-sources/ap-practice'
 import { exitReviewItems } from '@/lib/question-sources/exit'
 import { carsSkillForKey, fullLengthReviewItems, mcatPracticeReviewItems } from '@/lib/question-sources/mcat'
 import { satDiagnosticReviewItems, satPracticeReviewItems } from '@/lib/question-sources/sat'
@@ -11,7 +11,7 @@ import { diagnosticReviewItems } from '@/lib/question-sources/diagnostic'
 import { qbankReviewItems } from '@/lib/question-sources/qbank'
 import { actFlReviewItems } from '@/lib/question-sources/act'
 import { ACT_FL_CATEGORY } from '@/lib/act-full-length-server'
-import { AP_PRACTICE_CATEGORY_PREFIX, AP_PRACTICE_EXAMS, apPracticeAttemptTitle, apPracticeFormHref, apPracticeFormOf, apPracticeKeyOfCategory } from '@/lib/ap-practice-exams'
+import { AP_PRACTICE_CATEGORY_PREFIX, AP_PRACTICE_EXAMS, apPracticeAttemptTitle, apPracticeForm, apPracticeFormHref, apPracticeFormOf, apPracticeKeyOfCategory } from '@/lib/ap-practice-exams'
 import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanations'
 import { courseForCategory, diagnosticRouteForKey } from '@/lib/class-plan-config'
 import { canonicalizeDiagnosticResults } from '@/lib/ap-topic-canonical'
@@ -230,8 +230,11 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
       })
       if (!d) return null
       const r = (d.results ?? {}) as Record<string, unknown>
-      const exam = AP_PRACTICE_EXAMS[apPracticeKeyOfCategory(d.category) ?? '']
-      const items = diagnosticReviewItems(d.results)
+      const examKey = apPracticeKeyOfCategory(d.category) ?? ''
+      const exam = AP_PRACTICE_EXAMS[examKey]
+      // Unit labels and per-option explanations come from the form's file config.
+      const form = await apPracticeForm(examKey, apPracticeFormOf(d.results))?.load().catch(() => null)
+      const items = withApPracticeExtras(diagnosticReviewItems(d.results), form?.sections)
       const frq = apPracticeFrqItems(d.results)
       const correct = items.filter((i) => i && i.chosenIndex === i.correctIndex).length
       return {

@@ -291,7 +291,7 @@ export function Explanation({ text, ready, item }: { text: string; ready?: boole
 type Filter = 'missed' | 'flagged' | 'all' | 'report' | 'frq'
 
 /** Attempts long enough for a Report tab: full-lengths, practice tests, question-bank sets, SAT tests and diagnostics. */
-const REPORT_KINDS = new Set(['mcat-fl', 'mcat-practice', 'qbank', 'sat-practice', 'diagnostic', 'act-fl'])
+const REPORT_KINDS = new Set(['mcat-fl', 'mcat-practice', 'qbank', 'sat-practice', 'diagnostic', 'act-fl', 'ap-practice'])
 /** Kinds whose per-question times are averages (per passage / per attempt). */
 const APPROX_TIMING_KINDS = new Set(['mcat-fl', 'mcat-practice'])
 /**
