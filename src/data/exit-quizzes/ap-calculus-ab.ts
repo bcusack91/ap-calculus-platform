@@ -19,6 +19,8 @@ export interface CalcABQuestion {
   domain: string
   topicSlug: string
   formSet: 'A' | 'B' | 'both'
+  /** Lesson part (1-N, registry order) that teaches this item; a failed exit quiz sends the student back to it. */
+  part?: number
 }
 
 export const calcABQuestionPool: CalcABQuestion[] = [
@@ -35,6 +37,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'If $f(x) = \\dfrac{\\sin x}{x}$, what is $\\lim_{x \\to 0} f(x)$?',
@@ -45,6 +48,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'B',
+    part: 2,
   },
   {
     question: 'For what value of $k$ is the function $$f(x) = \\begin{cases} x^2 + 1 & x \\leq 2 \\\\ kx - 1 & x > 2 \\end{cases}$$ continuous at $x = 2$?',
@@ -55,6 +59,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'A',
+    part: 5,
   },
   {
     question: 'What is $\\lim_{x \\to \\infty} \\dfrac{3x^2 + 2x}{5x^2 - x}$?',
@@ -65,6 +70,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'B',
+    part: 2,
   },
   {
     question: 'If f(x) is continuous on [a, b] and f(a) < 0, f(b) > 0, which theorem guarantees a root in (a, b)?',
@@ -75,6 +81,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'What is $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2}$?',
@@ -85,6 +92,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'A',
+    part: 7,
   },
   {
     question: 'Which type of discontinuity does $f(x) = \\dfrac{x^2 - 4}{x - 2}$ have at $x = 2$?',
@@ -95,6 +103,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'B',
+    part: 5,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -109,6 +118,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'definition-of-derivative-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'What is the derivative of $f(x) = 5x^3 - 2x + 7$?',
@@ -119,6 +129,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'What is $\\dfrac{d}{dx}[\\sin(3x^2)]$?',
@@ -129,6 +140,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'If $f(x) = e^x \\cdot \\ln x$, what is $f\'(x)$?',
@@ -139,6 +151,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'B',
+    part: 2,
   },
   {
     question: 'What is $\\dfrac{d}{dx}[\\arctan x]$?',
@@ -149,6 +162,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'inverse-functions-derivatives-calcab',
     formSet: 'A',
+    part: 3,
   },
   {
     question: 'What is $\\dfrac{d}{dx}[\\ln(\\cos x)]$?',
@@ -159,6 +173,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'B',
+    part: 2,
   },
   {
     question: 'If $y = (x^3 + 1)^5$, what is $\\dfrac{dy}{dx}$?',
@@ -169,6 +184,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'The derivative of $f(x) = x \\cdot e^x$ at $x = 0$ is:',
@@ -179,6 +195,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'B',
+    part: 2,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -193,6 +210,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'A farmer has 200 m of fencing. What dimensions of a rectangular field maximize the area?',
@@ -203,6 +221,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'optimization-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'The linearization of $f(x) = \\sqrt{x}$ at $a = 25$ is used to approximate $\\sqrt{26}$. The approximation is:',
@@ -213,6 +232,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'linearization-differentials-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'If $f$ is continuous on $[0, 4]$, differentiable on $(0, 4)$, and $f(0) = 1$, $f(4) = 9$, the Mean Value Theorem guarantees there is a $c$ in $(0, 4)$ where $f\'(c) =$',
@@ -223,6 +243,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'theorem-applications-calcab',
     formSet: 'B',
+    part: 2,
   },
   {
     question: 'A particle moves along the x-axis with position $s(t) = t^3 - 6t^2 + 9t$. At what time(s) is the particle at rest?',
@@ -233,6 +254,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'particle-motion-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'A box with a square base and open top has volume $32\\text{ cm}^3$. What base side length minimizes the surface area?',
@@ -243,6 +265,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'optimization-calcab',
     formSet: 'B',
+    part: 4,
   },
   {
     question: 'If a particle\'s velocity is $v(t) = 2t - 6$, when does the particle change direction?',
@@ -253,6 +276,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'particle-motion-calcab',
     formSet: 'B',
+    part: 2,
   },
   {
     question: 'At points where $f\'\'(x)$ changes sign, the graph of $f$ has:',
@@ -263,6 +287,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'A',
+    part: 2,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -277,6 +302,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'antiderivatives-indefinite-integrals-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Evaluate $\\displaystyle\\int_0^2 (4x - x^2)\\,dx$.',
@@ -287,6 +313,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'A',
+    part: 5,
   },
   {
     question: 'Evaluate $\\displaystyle\\int_1^4 (2x + 1)\\,dx$.',
@@ -297,6 +324,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'B',
+    part: 5,
   },
   {
     question: 'What is $\\displaystyle\\int \\cos(2x)\\,dx$?',
@@ -307,6 +335,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'If $\\displaystyle\\int_0^3 f(x)\\,dx = 7$ and $\\displaystyle\\int_0^3 g(x)\\,dx = 4$, then $\\displaystyle\\int_0^3 [2f(x) - g(x)]\\,dx =$',
@@ -317,6 +346,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int x \\cdot e^{x^2}\\,dx = $?',
@@ -327,6 +357,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'B',
+    part: 1,
   },
   {
     question: 'If $F(x) = \\displaystyle\\int_0^x t^2\\,dt$, then $F\'(x) = $?',
@@ -337,6 +368,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'If $F(x) = \\displaystyle\\int_1^{x^2} \\cos(t)\\,dt$, then $F\'(x) = $?',
@@ -347,6 +379,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'B',
+    part: 3,
   },
 
   // ── Graph-Based FTC / Accumulation Analysis ──
@@ -359,6 +392,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'A',
+    part: 2,
   },
   {
     question: 'Let $g(x) = \\displaystyle\\int_0^x f(t)\\,dt$ where $f$ is continuous. If $f(3) = 0$, $f(x) > 0$ for $x < 3$, and $f(x) < 0$ for $x > 3$, which statement about $g$ is true?',
@@ -369,6 +403,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'B',
+    part: 1,
   },
   {
     question: 'The graph of $f$ is piecewise linear: $f(0) = 0$, $f(2) = 3$, $f(5) = 3$, $f(7) = 0$. Let $g(x) = \\displaystyle\\int_0^x f(t)\\,dt$. What is $g(5)$?',
@@ -379,6 +414,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'A',
+    part: 2,
   },
   {
     question: 'Let $g(x) = \\displaystyle\\int_0^x f(t)\\,dt$. If $f$ is increasing on $(1, 4)$, what is true about $g$ on $(1, 4)$?',
@@ -389,6 +425,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'B',
+    part: 6,
   },
   {
     question: 'The graph of $f$ consists of a semicircle of radius $2$ above the $x$-axis on $[0, 4]$. Let $g(x) = \\displaystyle\\int_0^x f(t)\\,dt$. What is $g(4)$?',
@@ -399,6 +436,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'A',
+    part: 2,
   },
   {
     question: 'Let $g(x) = \\displaystyle\\int_0^x f(t)\\,dt$. The graph of $f$ has values $f(0) = 2$, $f(1) = 0$, $f(2) = -1$, $f(3) = 0$, $f(4) = 3$. At how many points does $g$ have a local extremum on $(0, 4)$?',
@@ -409,6 +447,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'both',
+    part: 6,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -423,6 +462,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'The region between $y = \\sqrt{x}$ and the x-axis from $x = 0$ to $x = 4$ is revolved about the x-axis. Using the disk method, the volume is:',
@@ -433,6 +473,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'The area of the region enclosed by $y = x^2$ and $y = 4$ is:',
@@ -443,6 +484,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'B',
+    part: 1,
   },
   {
     question: 'The region between $y = x$ and $y = 0$ from $x = 0$ to $x = 2$ is revolved about the x-axis. The volume using the disk method is:',
@@ -453,6 +495,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'B',
+    part: 1,
   },
   {
     question: 'If the velocity of a particle is $v(t) = 3t^2 - 6t$ and $s(0) = 2$, the position function $s(t)$ is:',
@@ -463,6 +506,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'A',
+    part: 5,
   },
   {
     question: 'The total distance traveled by a particle with velocity $v(t) = t - 2$ on $[0, 4]$ is:',
@@ -473,6 +517,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'B',
+    part: 5,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -487,6 +532,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $\\dfrac{dy}{dx} = 2y$ and $y(0) = 3$, then $y(t) = $?',
@@ -497,6 +543,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'A',
+    part: 4,
   },
   {
     question: 'A population $P$ grows at a rate proportional to itself: $\\dfrac{dP}{dt} = kP$. If $P(0) = 100$ and $P(5) = 200$, which equation models $P(t)$?',
@@ -507,6 +554,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'If $\\dfrac{dy}{dx} = -3y$ and $y(0) = 5$, then $y(x) = $',
@@ -517,6 +565,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'B',
+    part: 4,
   },
   {
     question: 'A quantity decays according to $N(t) = N_0 e^{-0.1t}$. What is the half-life?',
@@ -527,6 +576,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'B',
+    part: 3,
   },
   {
     question: 'The slope field for $\\dfrac{dy}{dx} = x$ shows which pattern?',
@@ -537,6 +587,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'A',
+    part: 3,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -551,6 +602,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'A',
+    part: 2,
   },
   {
     question: 'The trapezoidal rule with $n = 2$ subintervals on $[0, 4]$ for $f(x) = x^2$ gives:',
@@ -561,6 +613,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'B',
+    part: 3,
   },
   {
     question: 'The table below shows values of $f(x)$:<br/><table style="border-collapse:collapse;margin:12px 0"><tr><th style="border:1px solid #888;padding:6px 14px">$x$</th><td style="border:1px solid #888;padding:6px 14px">$0$</td><td style="border:1px solid #888;padding:6px 14px">$1$</td><td style="border:1px solid #888;padding:6px 14px">$3$</td><td style="border:1px solid #888;padding:6px 14px">$6$</td></tr><tr><th style="border:1px solid #888;padding:6px 14px">$f(x)$</th><td style="border:1px solid #888;padding:6px 14px">$2$</td><td style="border:1px solid #888;padding:6px 14px">$4$</td><td style="border:1px solid #888;padding:6px 14px">$7$</td><td style="border:1px solid #888;padding:6px 14px">$11$</td></tr></table>Using a right Riemann sum, $\\displaystyle\\int_0^6 f(x)\\,dx \\approx$',
@@ -571,6 +624,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'A',
+    part: 2,
   },
   // ══════════════════════════════════════════════════════════════════
   //  EXPANDED POOL — Limits & Continuity (13 new)
@@ -584,6 +638,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\lim_{x \\to 2^+} \\dfrac{x + 1}{x - 2}$?',
@@ -594,6 +649,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $\\lim_{x \\to 4} f(x) = 7$ and $\\lim_{x \\to 4} g(x) = 3$, what is $\\lim_{x \\to 4} \\dfrac{f(x) - g(x)}{f(x) \\cdot g(x)}$?',
@@ -604,6 +660,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'What is $\\lim_{x \\to \\infty} \\dfrac{2x^3 + x}{5x^3 - 3x^2}$?',
@@ -614,6 +671,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\lim_{x \\to 0} \\dfrac{e^x - 1}{x}$?',
@@ -624,6 +682,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $f(x) = \\dfrac{x^2 - 5x + 6}{x - 2}$ for $x \\neq 2$, what value should $f(2)$ be defined as to make $f$ continuous at $x = 2$?',
@@ -634,6 +693,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'What is $\\lim_{h \\to 0} \\dfrac{(3+h)^2 - 9}{h}$?',
@@ -644,6 +704,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'Which statement about $f(x) = \\dfrac{|x|}{x}$ is true at $x = 0$?',
@@ -654,6 +715,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The function $f(x) = \\dfrac{x^2 + 3x + 2}{x + 1}$ has a vertical asymptote at:',
@@ -664,6 +726,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'What is $\\lim_{x \\to \\infty} \\dfrac{\\sin x}{x}$?',
@@ -674,6 +737,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'For what values of $a$ and $b$ is $f(x) = \\begin{cases} 2x + a & x < 1 \\\\ bx^2 & x \\geq 1 \\end{cases}$ both continuous and differentiable at $x = 1$?',
@@ -684,16 +748,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
-  },
-  {
-    question: 'What is $\\lim_{x \\to 0^+} x \\ln x$?',
-    options: ['$0$', '$-\\infty$', '$1$', 'Does not exist'],
-    correctAnswer: 0,
-    explanation: 'Rewrite as $\\frac{\\ln x}{1/x}$ ($\\frac{-\\infty}{\\infty}$). L\'H\\^opital: $\\frac{1/x}{-1/x^2} = -x \\to 0$.',
-    difficulty: 'hard',
-    domain: 'limits',
-    topicSlug: 'limits-continuity-calcab',
-    formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $f$ is continuous on $[0, 10]$, $f(0) = 2$, and $f(10) = -3$, which value must $f$ take on $[0, 10]$?',
@@ -704,6 +759,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 5,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -718,6 +774,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'What is $\\dfrac{d}{dx}[e^{3x} \\sin x]$?',
@@ -728,6 +785,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'If $y = \\ln(x^2 + 1)$, then $\\dfrac{dy}{dx} = $',
@@ -738,6 +796,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The second derivative of $f(x) = x^4 - 6x^2$ is:',
@@ -748,16 +807,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
-  },
-  {
-    question: 'If $x^2 + y^2 = 25$, then $\\dfrac{dy}{dx} = $',
-    options: ['$\\dfrac{-x}{y}$', '$\\dfrac{x}{y}$', '$\\dfrac{-y}{x}$', '$\\dfrac{-2x}{25}$'],
-    correctAnswer: 0,
-    explanation: 'Implicit differentiation: $2x + 2y\\frac{dy}{dx} = 0 \\Rightarrow \\frac{dy}{dx} = \\frac{-x}{y}$.',
-    difficulty: 'medium',
-    domain: 'differentiation',
-    topicSlug: 'basic-differentiation-rules-calcab',
-    formSet: 'both',
+    part: 5,
   },
   {
     question: 'What is $\\dfrac{d}{dx}[\\arcsin(2x)]$?',
@@ -768,6 +818,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'inverse-functions-derivatives-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $f(x) = \\sqrt{x}$ and $g(x) = x^2 + 1$, then $(f \\circ g)\'(2) = $',
@@ -778,6 +829,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'If $f(x) = x^3 \\cdot 2^x$, then $f\'(0) = $',
@@ -788,6 +840,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The tangent line to $y = e^x$ at $x = 0$ is:',
@@ -798,6 +851,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $y = \\sec^2(3x)$, then $\\dfrac{dy}{dx} = $',
@@ -808,6 +862,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $f$ and $g$ are differentiable and $f(2) = 3$, $f\'(2) = -1$, $g(2) = 5$, $g\'(2) = 4$, what is $(fg)\'(2)$?',
@@ -818,6 +873,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\dfrac{d}{dx}[x^x]$ for $x > 0$?',
@@ -828,6 +884,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 5,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -842,6 +899,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'On which interval is $f(x) = x^4 - 4x^3$ concave up?',
@@ -852,16 +910,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
-  },
-  {
-    question: 'A 10-ft ladder leans against a wall. If the base slides away at $2$ ft/s, how fast is the top sliding down when the base is $6$ ft from the wall?',
-    options: ['$\\dfrac{3}{2}$ ft/s', '$\\dfrac{-3}{2}$ ft/s', '$-2$ ft/s', '$\\dfrac{-8}{3}$ ft/s'],
-    correctAnswer: 1,
-    explanation: '$x^2 + y^2 = 100$. Differentiate: $2x\\frac{dx}{dt} + 2y\\frac{dy}{dt} = 0$. At $x = 6$: $y = 8$. $\\frac{dy}{dt} = \\frac{-x}{y}\\frac{dx}{dt} = \\frac{-6}{8}(2) = -\\frac{3}{2}$ ft/s.',
-    difficulty: 'hard',
-    domain: 'applications-derivatives',
-    topicSlug: 'applications-of-derivatives-calcab',
-    formSet: 'both',
+    part: 2,
   },
   {
     question: 'The absolute maximum of $f(x) = -x^2 + 4x + 1$ on $[0, 5]$ is:',
@@ -872,6 +921,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If a particle\'s position is $s(t) = t^3 - 9t^2 + 24t$, when is the particle moving to the left?',
@@ -882,6 +932,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'particle-motion-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The linearization of $f(x) = \\sqrt[3]{x}$ at $a = 8$ gives an approximation for $\\sqrt[3]{8.1}$ of:',
@@ -892,6 +943,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'linearization-differentials-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $f$ is continuous on $[1, 5]$ and differentiable on $(1, 5)$ with $f(1) = 2$ and $f(5) = 10$, then there exists $c$ in $(1, 5)$ with $f\'(c) = $',
@@ -902,6 +954,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'theorem-applications-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The function $f(x) = x + \\dfrac{4}{x}$ for $x > 0$ has a minimum value of:',
@@ -912,16 +965,18 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'optimization-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $f\'(x) > 0$ for all $x$ and $f\'\'(x) < 0$ for all $x$, the graph of $f$ is:',
-    options: ['Increasing and concave up', 'Increasing and concave down', 'Decreasing and concave up', 'Decreasing and concave down'],
+    options: ['Increasing and concave up', 'Increasing and concave down', 'Increasing and linear', 'Decreasing and concave down'],
     correctAnswer: 1,
-    explanation: '$f\' > 0$ means increasing. $f\'\' < 0$ means concave down.',
+    explanation: '$f\' > 0$ means increasing, and $f\'\' < 0$ means concave down. A linear graph would need $f\'\' = 0$, and a decreasing graph would need $f\' < 0$.',
     difficulty: 'easy',
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'A particle moves so that $s(t) = \\sin(2t)$ for $0 \\leq t \\leq \\pi$. The total distance traveled is:',
@@ -932,6 +987,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'particle-motion-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The graph of $f\'$ is given. $f\'(x) = 0$ at $x = 1$ and $x = 3$. $f\' > 0$ on $(-\\infty,1)$ and $(3,\\infty)$, $f\' < 0$ on $(1,3)$. Which is true?',
@@ -942,6 +998,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'Two cars start at the same point. Car A travels north at $40$ mph and Car B travels east at $30$ mph. After $2$ hours, how fast is the distance between them changing?',
@@ -950,8 +1007,9 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     explanation: '$d^2 = (40t)^2 + (30t)^2 = 2500t^2$, so $d = 50t$. $\\frac{dd}{dt} = 50$ mph.',
     difficulty: 'medium',
     domain: 'applications-derivatives',
-    topicSlug: 'applications-of-derivatives-calcab',
+    topicSlug: 'related-rates-calcab',
     formSet: 'both',
+    part: 6,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -966,6 +1024,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'What is $\\displaystyle\\int \\dfrac{x}{x^2 + 4}\\,dx$?',
@@ -976,6 +1035,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $\\displaystyle\\int_0^5 f(x)\\,dx = 7$ and $\\displaystyle\\int_0^2 f(x)\\,dx = 3$, then $\\displaystyle\\int_2^5 f(x)\\,dx = $',
@@ -986,6 +1046,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Evaluate $\\displaystyle\\int e^{3x}\\,dx$.',
@@ -996,6 +1057,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\displaystyle\\int_0^{\\pi} \\sin x\\,dx$?',
@@ -1006,6 +1068,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $F(x) = \\displaystyle\\int_2^{x^3} \\sqrt{t}\\,dt$, then $F\'(x) = $',
@@ -1016,21 +1079,12 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'both',
+    part: 3,
   },
 
   // ══════════════════════════════════════════════════════════════════
   //  EXPANDED POOL — Applications of Integration (9 new)
   // ══════════════════════════════════════════════════════════════════
-  {
-    question: 'The area between $y = x$ and $y = x^2$ from $x = 0$ to $x = 1$ is:',
-    options: ['$\\dfrac{1}{6}$', '$\\dfrac{1}{3}$', '$\\dfrac{1}{2}$', '$\\dfrac{2}{3}$'],
-    correctAnswer: 0,
-    explanation: '$\\int_0^1 (x - x^2)dx = [\\frac{x^2}{2} - \\frac{x^3}{3}]_0^1 = \\frac{1}{2} - \\frac{1}{3} = \\frac{1}{6}$.',
-    difficulty: 'easy',
-    domain: 'applications-integration',
-    topicSlug: 'area-between-curves-calcab',
-    formSet: 'both',
-  },
   {
     question: 'The volume generated by revolving $y = x^2$ from $x = 0$ to $x = 2$ about the $x$-axis is:',
     options: ['$\\dfrac{32\\pi}{5}$', '$\\dfrac{16\\pi}{5}$', '$8\\pi$', '$\\dfrac{4\\pi}{3}$'],
@@ -1040,6 +1094,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The average value of $f(x) = x^2$ on $[0, 3]$ is:',
@@ -1050,6 +1105,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The area of the region bounded by $y = \\sin x$ and $y = 0$ from $x = 0$ to $x = \\pi$ is:',
@@ -1060,6 +1116,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The volume of the solid formed by revolving the region between $y = \\sqrt{x}$ and $y = x$ about the $x$-axis is:',
@@ -1070,6 +1127,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The net displacement of a particle with velocity $v(t) = 3t^2 - 12$ on $[0, 3]$ is:',
@@ -1080,6 +1138,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The cross-sections of a solid perpendicular to the $x$-axis are squares with side length $\\sqrt{x}$ on $[0, 4]$. The volume is:',
@@ -1090,6 +1149,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The area enclosed by $y = 4 - x^2$ and $y = 0$ is:',
@@ -1100,6 +1160,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'If a particle has acceleration $a(t) = 6t$, initial velocity $v(0) = -2$, and initial position $s(0) = 1$, then $s(2) = $',
@@ -1110,6 +1171,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 6,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -1124,6 +1186,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The particular solution to $\\dfrac{dy}{dx} = 4x^3$ with $y(1) = 2$ is:',
@@ -1134,6 +1197,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The slope field for $\\dfrac{dy}{dx} = y - x$ shows horizontal segments (slope $= 0$) along the line:',
@@ -1144,6 +1208,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'A radioactive substance has a decay constant $k = 0.05$. How long until $75\\%$ has decayed?',
@@ -1154,6 +1219,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The general solution of $\\dfrac{dy}{dx} = ky$ is:',
@@ -1164,6 +1230,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'An investment grows continuously at $5\\%$ per year. If $P_0 = \\$1000$, what is the value after $10$ years?',
@@ -1174,6 +1241,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'both',
+    part: 1,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -1188,6 +1256,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'By the Mean Value Theorem, if $f$ is continuous on $[2, 6]$ and differentiable on $(2, 6)$ with $f(2) = 3$ and $f(6) = 11$, then there exists $c$ where $f\'(c) = $',
@@ -1198,6 +1267,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'A midpoint Riemann sum with $n = 2$ on $[0, 4]$ for $f(x) = x^2$ gives:',
@@ -1208,6 +1278,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The table shows velocity of a car (in ft/s):<br/><table style="border-collapse:collapse;margin:12px 0"><tr><th style="border:1px solid #888;padding:6px 14px">$t$ (s)</th><td style="border:1px solid #888;padding:6px 14px">$0$</td><td style="border:1px solid #888;padding:6px 14px">$3$</td><td style="border:1px solid #888;padding:6px 14px">$6$</td><td style="border:1px solid #888;padding:6px 14px">$9$</td></tr><tr><th style="border:1px solid #888;padding:6px 14px">$v(t)$</th><td style="border:1px solid #888;padding:6px 14px">$0$</td><td style="border:1px solid #888;padding:6px 14px">$20$</td><td style="border:1px solid #888;padding:6px 14px">$40$</td><td style="border:1px solid #888;padding:6px 14px">$30$</td></tr></table>Using a left Riemann sum, the approximate distance traveled from $t = 0$ to $t = 9$ is:',
@@ -1218,6 +1289,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'If $f$ is twice differentiable with $f(3) = 5$, $f\'(3) = 0$, and $f\'\'(3) = -2$, what can be concluded about $f$ at $x = 3$?',
@@ -1228,6 +1300,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'If $f\'$ changes from negative to positive at $x = c$, and $f$ is continuous at $x = c$, then at $x = c$ the function $f$ has:',
@@ -1238,6 +1311,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 4,
   },
 
   // ══════════════════════════════════════════════════════════════
@@ -1252,16 +1326,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
-  },
-  {
-    question: 'What is $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x^2}$?',
-    options: ['$0$', '$\\dfrac{1}{2}$', '$1$', 'Does not exist'],
-    correctAnswer: 1,
-    explanation: 'L\'Hôpital (twice) or known limit: $\\frac{1 - \\cos x}{x^2} \\to \\frac{1}{2}$.',
-    difficulty: 'hard',
-    domain: 'limits',
-    topicSlug: 'limits-continuity-calcab',
-    formSet: 'both',
+    part: 1,
   },
   {
     question: 'What is $\\lim_{x \\to 0} \\dfrac{e^{2x} - 1}{x}$?',
@@ -1272,6 +1337,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $f(x) = \\dfrac{\\sqrt{x+4} - 2}{x}$, what is $\\lim_{x \\to 0} f(x)$?',
@@ -1282,6 +1348,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'What is $\\lim_{x \\to -\\infty} \\dfrac{x}{\\sqrt{x^2 + 1}}$?',
@@ -1292,6 +1359,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'What is $\\lim_{x \\to 0} \\dfrac{\\sin(3x)}{\\sin(5x)}$?',
@@ -1302,6 +1370,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'What is $\\lim_{x \\to 1} \\dfrac{x^3 - 1}{x - 1}$?',
@@ -1312,6 +1381,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'What is $\\lim_{x \\to \\infty} \\dfrac{5x^2 - 2x}{3x^3 + x}$?',
@@ -1322,6 +1392,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\lim_{x \\to 0^+} \\dfrac{1}{x}$?',
@@ -1332,6 +1403,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $\\lim_{x \\to a^-} f(x) = 4$ and $\\lim_{x \\to a^+} f(x) = 4$ but $f(a) = 7$, then at $x = a$:',
@@ -1342,16 +1414,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
-  },
-  {
-    question: 'What is $\\lim_{x \\to 0} \\dfrac{e^{2x} - 1}{x}$?',
-    options: ['$\\dfrac{1}{2}$', '$2$', '$e^2$', '$2e^2$'],
-    correctAnswer: 1,
-    explanation: 'L\'Hospital\'s Rule gives $\\lim_{x \\to 0} \\frac{2e^{2x}}{1} = 2$; equivalently this is the derivative of $e^{2x}$ at $0$. Dividing by the chain factor instead of multiplying gives $\\frac{1}{2}$, and $e^2$ and $2e^2$ come from evaluating at $x = 1$ instead of $x = 0$.',
-    difficulty: 'medium',
-    domain: 'limits',
-    topicSlug: 'limits-continuity-calcab',
-    formSet: 'both',
+    part: 5,
   },
   {
     question: 'What is $\\lim_{x \\to \\pi} \\dfrac{\\sin x}{x - \\pi}$?',
@@ -1362,6 +1425,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The horizontal asymptote of $f(x) = \\dfrac{3e^x}{e^x + 2}$ as $x \\to \\infty$ is:',
@@ -1372,6 +1436,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The horizontal asymptote of $f(x) = \\dfrac{3e^x}{e^x + 2}$ as $x \\to -\\infty$ is:',
@@ -1382,6 +1447,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\lim_{h \\to 0} \\dfrac{\\sin\\left(\\frac{\\pi}{6} + h\\right) - \\frac{1}{2}}{h}$?',
@@ -1392,6 +1458,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'Which of the following functions is continuous everywhere?',
@@ -1402,6 +1469,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'What is $\\lim_{x \\to 4} \\dfrac{\\sqrt{x} - 2}{x - 4}$?',
@@ -1412,6 +1480,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'If $g$ is continuous on $[0, 8]$, $g(0) = -2$, and $g(8) = 5$, by the IVT there exists $c \\in (0,8)$ with $g(c) = $',
@@ -1422,6 +1491,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'What is $\\lim_{x \\to \\infty} \\dfrac{\\ln x}{x}$?',
@@ -1432,6 +1502,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'What is $\\lim_{x \\to 0} \\dfrac{x}{\\tan x}$?',
@@ -1442,6 +1513,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $f(x) = \\begin{cases} x^2 & x \\leq 2 \\\\ 3x - a & x > 2 \\end{cases}$ is continuous at $x = 2$, then $a = $',
@@ -1452,6 +1524,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'What is $\\lim_{x \\to 0^+} e^{-1/x}$?',
@@ -1462,6 +1535,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'What is $\\lim_{x \\to 2} \\dfrac{x^2 - 4}{|x - 2|}$?',
@@ -1472,6 +1546,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'At which value of $x$ does $f(x) = \\dfrac{x^2 - 1}{x^2 + 3x + 2}$ have a removable discontinuity?',
@@ -1482,16 +1557,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'limits-continuity-calcab',
     formSet: 'both',
-  },
-  {
-    question: 'What is $\\lim_{n \\to \\infty} \\left(1 + \\dfrac{1}{n}\\right)^{2n}$?',
-    options: ['$e$', '$e^2$', '$2e$', '$1$'],
-    correctAnswer: 1,
-    explanation: '$\\left[\\left(1 + \\frac{1}{n}\\right)^n\\right]^2 \\to e^2$.',
-    difficulty: 'hard',
-    domain: 'limits',
-    topicSlug: 'limits-continuity-calcab',
-    formSet: 'both',
+    part: 5,
   },
 
   // ══════════════════════════════════════════════════════════════
@@ -1506,16 +1572,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
-  },
-  {
-    question: 'What is $\\dfrac{d}{dx}[\\ln(\\cos x)]$?',
-    options: ['$\\dfrac{1}{\\cos x}$', '$-\\tan x$', '$\\tan x$', '$\\sec x$'],
-    correctAnswer: 1,
-    explanation: 'Chain rule: $\\frac{1}{\\cos x} \\cdot (-\\sin x) = -\\tan x$. Forgetting the inner derivative gives $\\frac{1}{\\cos x} = \\sec x$, and losing the minus sign from $\\frac{d}{dx}[\\cos x] = -\\sin x$ gives $\\tan x$.',
-    difficulty: 'medium',
-    domain: 'differentiation',
-    topicSlug: 'chain-rule-calcab',
-    formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $f(x) = \\dfrac{1}{\\sqrt{x}} = x^{-1/2}$, then $f\'(4) = $',
@@ -1526,6 +1583,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'What is $\\dfrac{d}{dx}[x \\cdot e^{-x}]$?',
@@ -1536,6 +1594,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'If $y = \\sin(x^2)$, then $\\dfrac{dy}{dx} = $',
@@ -1546,16 +1605,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
-  },
-  {
-    question: 'What is $\\dfrac{d}{dx}[\\arctan(x)]$?',
-    options: ['$\\dfrac{1}{\\sqrt{1-x^2}}$', '$\\dfrac{1}{1+x^2}$', '$\\dfrac{-1}{1+x^2}$', '$\\dfrac{1}{\\sec^2 x}$'],
-    correctAnswer: 1,
-    explanation: 'Standard inverse trig derivative: $\\frac{d}{dx}[\\arctan x] = \\frac{1}{1+x^2}$. $\\frac{1}{\\sqrt{1-x^2}}$ is the derivative of $\\arcsin x$, the negative version is the derivative of $\\text{arccot}\\, x$, and $\\frac{1}{\\sec^2 x}$ takes the reciprocal of the derivative of $\\tan x$ at $x$ instead of at $\\arctan x$.',
-    difficulty: 'easy',
-    domain: 'differentiation',
-    topicSlug: 'inverse-functions-derivatives-calcab',
-    formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $f(x) = \\cos(3x)$, then $f\'\'(x) = $',
@@ -1566,6 +1616,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The derivative of $f(x) = 5^x$ is:',
@@ -1576,6 +1627,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $xy + y^2 = 1$, then $\\dfrac{dy}{dx}$ at the point $(0, 1)$ is:',
@@ -1584,8 +1636,9 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     explanation: 'Differentiate: $y + x\\frac{dy}{dx} + 2y\\frac{dy}{dx} = 0$. At $(0,1)$: $1 + 0 + 2\\frac{dy}{dx} = 0$, so $\\frac{dy}{dx} = -\\frac{1}{2}$.',
     difficulty: 'hard',
     domain: 'differentiation',
-    topicSlug: 'basic-differentiation-rules-calcab',
+    topicSlug: 'implicit-differentiation-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $h(x) = f(g(x))$, $g(3) = 7$, $g\'(3) = 4$, and $f\'(7) = -2$, then $h\'(3) = $',
@@ -1596,6 +1649,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The derivative of $y = e^{\\sin x}$ is:',
@@ -1606,6 +1660,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $f(x) = \\dfrac{e^x}{x}$ for $x > 0$, then $f\'(1) = $',
@@ -1616,6 +1671,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'What is $\\dfrac{d}{dx}\\left[\\dfrac{\\sin x}{x}\\right]$ at $x = \\pi$?',
@@ -1626,6 +1682,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The equation of the normal line to $y = x^3$ at $x = 1$ is:',
@@ -1636,6 +1693,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $f(x) = \\ln(e^x + 1)$, then $f\'(0) = $',
@@ -1646,6 +1704,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'What is $\\dfrac{d}{dx}[|x|]$ at $x = 3$?',
@@ -1656,6 +1715,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'If $f(x) = (\\ln x)^2$, then $f\'(e) = $',
@@ -1666,6 +1726,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $g(x) = \\sqrt{1 + \\tan x}$, then $g\'(0) = $',
@@ -1676,6 +1737,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $y = x^2 \\sin(3x)$, then $y\'(0) = $',
@@ -1686,6 +1748,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The derivative of $f(x) = e^{x^2}$ at $x = 1$ is:',
@@ -1696,6 +1759,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $f(x) = \\cot x$, then $f\'(x) = $',
@@ -1706,6 +1770,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'If $f(x) = \\dfrac{x}{\\ln x}$ for $x > 1$, then $f\'(e) = $',
@@ -1716,6 +1781,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $f^{-1}(x)$ is the inverse of $f$ and $f(2) = 5$ with $f\'(2) = 3$, then $(f^{-1})\'(5) = $',
@@ -1726,6 +1792,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'inverse-functions-derivatives-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'What is $\\dfrac{d}{dx}[\\log_{10} x]$?',
@@ -1736,6 +1803,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $y = \\tan^{-1}(e^x)$, then $\\dfrac{dy}{dx} = $',
@@ -1746,6 +1814,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'inverse-functions-derivatives-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'If $f(x) = x e^x$, then $f\'\'(x) = $',
@@ -1756,6 +1825,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'If $f$ is differentiable and $f(3) = 2$, $f\'(3) = 5$, what is $\\dfrac{d}{dx}[xf(x)]$ at $x = 3$?',
@@ -1766,6 +1836,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $y = \\cos^3(2x)$, then $\\dfrac{dy}{dx} = $',
@@ -1776,6 +1847,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'chain-rule-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'At what point on $y = e^x$ is the tangent line parallel to $y = 2x$?',
@@ -1786,6 +1858,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'basic-differentiation-rules-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'What is $\\dfrac{d}{dx}[\\sin^{-1}(x)]$ at $x = 0$?',
@@ -1796,6 +1869,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'differentiation',
     topicSlug: 'inverse-functions-derivatives-calcab',
     formSet: 'both',
+    part: 3,
   },
 
   // ══════════════════════════════════════════════════════════════
@@ -1810,6 +1884,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If the velocity of a particle is $v(t) = t^2 - 4t + 3$, the particle changes direction at $t = $',
@@ -1820,6 +1895,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'particle-motion-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'A box with a square base and open top has surface area $48$. The maximum volume is:',
@@ -1830,6 +1906,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'optimization-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The inflection point of $f(x) = x^3 - 3x^2 + 2$ is at $x = $',
@@ -1840,6 +1917,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The acceleration of a particle with position $s(t) = \\sin(t)$ at $t = \\pi/2$ is:',
@@ -1850,16 +1928,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'particle-motion-calcab',
     formSet: 'both',
-  },
-  {
-    question: 'If $f\'(c) = 0$ and $f\'\'(c) > 0$, then $f$ has at $x = c$:',
-    options: ['A local maximum', 'A local minimum', 'An inflection point', 'Not enough information'],
-    correctAnswer: 1,
-    explanation: 'Second Derivative Test: $f\'(c) = 0$ and $f\'\'(c) > 0$ means concave up at a critical point, so local minimum.',
-    difficulty: 'easy',
-    domain: 'applications-derivatives',
-    topicSlug: 'applications-of-derivatives-calcab',
-    formSet: 'both',
+    part: 1,
   },
   {
     question: 'The absolute minimum value of $f(x) = x^3 - 3x$ on $[-2, 2]$ is:',
@@ -1870,6 +1939,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'A balloon is inflated so its radius increases at $2$ cm/s. How fast is the volume increasing when $r = 5$ cm?',
@@ -1878,18 +1948,9 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     explanation: '$V = \\frac{4}{3}\\pi r^3$. $\\frac{dV}{dt} = 4\\pi r^2 \\frac{dr}{dt} = 4\\pi(25)(2) = 200\\pi$.',
     difficulty: 'medium',
     domain: 'applications-derivatives',
-    topicSlug: 'applications-of-derivatives-calcab',
+    topicSlug: 'related-rates-calcab',
     formSet: 'both',
-  },
-  {
-    question: 'Using the linearization of $f(x) = \\sqrt{x}$ at $a = 25$, approximate $\\sqrt{26}$:',
-    options: ['$5.1$', '$5.05$', '$5.2$', '$5.01$'],
-    correctAnswer: 0,
-    explanation: '$L(x) = 5 + \\frac{1}{10}(x - 25)$. $L(26) = 5 + 0.1 = 5.1$.',
-    difficulty: 'easy',
-    domain: 'applications-derivatives',
-    topicSlug: 'linearization-differentials-calcab',
-    formSet: 'both',
+    part: 3,
   },
   {
     question: 'Rolle\'s Theorem guarantees a zero of $f\'$ on $(a,b)$ when:',
@@ -1900,6 +1961,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'theorem-applications-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The speed of a particle at time $t$ is $|v(t)|$ where $v(t) = t^2 - 4$. The speed is increasing at $t = 3$ because:',
@@ -1910,6 +1972,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'particle-motion-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $f(x) = xe^{-x}$, the absolute maximum on $[0, \\infty)$ occurs at:',
@@ -1920,6 +1983,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'A rectangle has its base on the $x$-axis and vertices on $y = 4 - x^2$. The maximum area is:',
@@ -1930,6 +1994,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'optimization-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $f\'(x) = (x-1)^2(x-3)$, then $f$ has:',
@@ -1940,6 +2005,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'A cone-shaped tank fills with water at $2$ $m^{3}/min$. If the tank has radius $3$ m and height $6$ m, how fast is the water level rising when $h = 2$ m?',
@@ -1948,8 +2014,9 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     explanation: 'Similar triangles: $r = h/2$. $V = \\frac{\\pi}{3}(h/2)^2 h = \\frac{\\pi h^3}{12}$. $\\frac{dV}{dt} = \\frac{\\pi h^2}{4}\\frac{dh}{dt}$. $2 = \\pi \\cdot \\frac{dh}{dt}$, $\\frac{dh}{dt} = \\frac{2}{\\pi}$.',
     difficulty: 'hard',
     domain: 'applications-derivatives',
-    topicSlug: 'applications-of-derivatives-calcab',
+    topicSlug: 'related-rates-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The graph of $f$ has inflection points where:',
@@ -1960,6 +2027,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $f(x) = \\ln x$ on $[1, e^2]$, the value $c$ guaranteed by the MVT is:',
@@ -1970,6 +2038,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'theorem-applications-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'A stone is thrown upward from $s_0 = 0$ with $v_0 = 64$ ft/s. If $a = -32$ $ft/s^{2}$, the maximum height is:',
@@ -1980,6 +2049,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'particle-motion-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The function $f(x) = x^4 - 8x^2$ has how many inflection points?',
@@ -1990,6 +2060,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If a differentiable function has exactly one critical point that is a local minimum, and $\\lim_{x \\to \\pm\\infty} f(x) = \\infty$, then the local minimum is also:',
@@ -2000,6 +2071,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The linear approximation of $f(x) = \\cos x$ near $x = 0$ is:',
@@ -2010,6 +2082,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'linearization-differentials-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'Oil spills in a circle. If the area increases at $6\\pi$ $m^{2}/min$, how fast is the radius increasing when $r = 3$ m?',
@@ -2018,8 +2091,9 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     explanation: '$A = \\pi r^2$. $\\frac{dA}{dt} = 2\\pi r \\frac{dr}{dt}$. $6\\pi = 2\\pi(3)\\frac{dr}{dt}$. $\\frac{dr}{dt} = 1$ m/min.',
     difficulty: 'medium',
     domain: 'applications-derivatives',
-    topicSlug: 'applications-of-derivatives-calcab',
+    topicSlug: 'related-rates-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'On which interval is the graph of $f(x) = \\dfrac{x}{x^2 + 1}$ concave down?',
@@ -2030,6 +2104,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'A farmer has 120 m of fencing. What is the maximum area of a rectangular pen built against a barn (fence on 3 sides)?',
@@ -2040,6 +2115,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'optimization-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The particle with position $s(t) = t^2 - 6t + 5$ is at rest at $t = $',
@@ -2050,6 +2126,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'particle-motion-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $f(x) = 2x^3 - 9x^2 + 12x + 1$, the local minimum value is:',
@@ -2060,6 +2137,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $f\'\'(x) > 0$ on an interval $[a,b]$ and a tangent line is drawn at any point in $(a,b)$, the tangent line lies:',
@@ -2070,6 +2148,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'applications-of-derivatives-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $f$ is continuous on $[a,b]$, $f(a) > 0$, and $f(b) > 0$, can we conclude there is no $c \\in (a,b)$ with $f(c) = 0$?',
@@ -2080,6 +2159,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'theorem-applications-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The total distance traveled by a particle with $v(t) = \\cos t$ on $[0, \\pi]$ is:',
@@ -2090,6 +2170,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-derivatives',
     topicSlug: 'particle-motion-calcab',
     formSet: 'both',
+    part: 3,
   },
 
   // ══════════════════════════════════════════════════════════════
@@ -2102,8 +2183,9 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     explanation: 'Let $u = \\ln x$, $du = \\frac{1}{x}\\,dx$. Then $\\int u^2\\,du = \\frac{u^3}{3} + C = \\frac{(\\ln x)^3}{3} + C$.',
     difficulty: 'hard',
     domain: 'integration',
-    topicSlug: 'antiderivatives-indefinite-integrals-calcab',
+    topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'What is $\\displaystyle\\int_0^4 |x - 2|\\,dx$?',
@@ -2114,6 +2196,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'Evaluate $\\displaystyle\\int \\dfrac{3}{x}\\,dx$.',
@@ -2124,6 +2207,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'antiderivatives-indefinite-integrals-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\displaystyle\\int_1^e \\dfrac{1}{x}\\,dx$?',
@@ -2134,6 +2218,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'Evaluate $\\displaystyle\\int \\cos(5x)\\,dx$.',
@@ -2144,6 +2229,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\displaystyle\\int_0^2 (3x^2 + 2x)\\,dx$?',
@@ -2154,6 +2240,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'Evaluate $\\displaystyle\\int \\dfrac{e^{\\sqrt{x}}}{\\sqrt{x}}\\,dx$.',
@@ -2164,6 +2251,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'If $\\displaystyle\\int_a^b f(x)\\,dx = 10$, then $\\displaystyle\\int_a^b 3f(x)\\,dx = $',
@@ -2174,6 +2262,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Evaluate $\\displaystyle\\int \\sec^2(x)\\,dx$.',
@@ -2184,6 +2273,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'antiderivatives-indefinite-integrals-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\displaystyle\\int_0^{\\pi/2} \\cos x\\,dx$?',
@@ -2194,6 +2284,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'Evaluate $\\displaystyle\\int x\\sqrt{x^2 + 1}\\,dx$.',
@@ -2204,6 +2295,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $F\'(x) = f(x)$ and $F(2) = 5$, $F(6) = 17$, then $\\displaystyle\\int_2^6 f(x)\\,dx = $',
@@ -2214,6 +2306,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'Evaluate $\\displaystyle\\int \\dfrac{\\sin x}{\\cos^2 x}\\,dx$.',
@@ -2224,6 +2317,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'antiderivatives-indefinite-integrals-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'What is $\\displaystyle\\int_{-1}^{1} x^3\\,dx$?',
@@ -2234,6 +2328,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'Evaluate $\\displaystyle\\int \\dfrac{x^2}{x^3 + 1}\\,dx$.',
@@ -2244,6 +2339,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If $g(x) = \\displaystyle\\int_1^x \\dfrac{1}{t^2 + 1}\\,dt$, then $g\'(x) = $',
@@ -2254,6 +2350,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Evaluate $\\displaystyle\\int_0^1 xe^{x^2}\\,dx$.',
@@ -2264,6 +2361,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'What is $\\displaystyle\\int (x + 1)^4\\,dx$?',
@@ -2274,6 +2372,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $\\displaystyle\\int_0^4 f(x)\\,dx = 8$ and $\\displaystyle\\int_0^4 g(x)\\,dx = 3$, then $\\displaystyle\\int_0^4 [2f(x) - g(x)]\\,dx = $',
@@ -2284,6 +2383,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'Evaluate $\\displaystyle\\int \\sin^3 x \\cos x\\,dx$.',
@@ -2294,6 +2394,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\displaystyle\\int_1^4 \\dfrac{1}{\\sqrt{x}}\\,dx$?',
@@ -2304,6 +2405,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'If $g(x) = \\displaystyle\\int_0^{x^2} \\sin t\\,dt$, then $g\'(x) = $',
@@ -2314,6 +2416,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Evaluate $\\displaystyle\\int \\dfrac{e^x}{e^x + 1}\\,dx$.',
@@ -2324,6 +2427,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'What is $\\displaystyle\\int_0^3 f(x)\\,dx$ if $f(x) = \\begin{cases} x & 0 \\leq x \\leq 1 \\\\ 1 & 1 < x \\leq 3 \\end{cases}$?',
@@ -2334,6 +2438,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'Evaluate $\\displaystyle\\int_0^{\\ln 3} e^x\\,dx$.',
@@ -2344,6 +2449,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'Which is an antiderivative of $f(x) = \\sec x \\tan x$?',
@@ -2354,6 +2460,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'antiderivatives-indefinite-integrals-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'What is $\\displaystyle\\int_{-2}^{2} (x^4 + 1)\\,dx$?',
@@ -2364,6 +2471,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'Evaluate $\\displaystyle\\int \\dfrac{2x + 1}{x^2 + x + 5}\\,dx$.',
@@ -2374,6 +2482,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'u-substitution-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'Which expression equals $\\displaystyle\\int_b^a f(x)\\,dx$?',
@@ -2384,6 +2493,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'definite-integrals-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $h(x) = \\displaystyle\\int_x^5 t^2\\,dt$, then $h\'(x) = $',
@@ -2394,6 +2504,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'integration',
     topicSlug: 'accumulation-functions-calcab',
     formSet: 'both',
+    part: 7,
   },
 
   // ══════════════════════════════════════════════════════════════
@@ -2408,6 +2519,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The volume generated by revolving $y = \\dfrac{1}{x}$ from $x = 1$ to $x = 4$ about the $x$-axis is:',
@@ -2418,6 +2530,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The average value of $\\sin x$ on $[0, \\pi]$ is:',
@@ -2428,6 +2541,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The area between $y = e^x$ and $y = 1$ from $x = 0$ to $x = 1$ is:',
@@ -2438,6 +2552,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The volume of the solid generated by revolving $y = e^x$ from $x = 0$ to $x = 1$ about the $x$-axis is:',
@@ -2448,6 +2563,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The total distance traveled by a particle with $v(t) = t - 3$ on $[0, 5]$ is:',
@@ -2458,6 +2574,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The area between $y = \\cos x$ and $y = \\sin x$ from $x = 0$ to $x = \\pi/4$ is:',
@@ -2468,6 +2585,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The cross-sections of a solid perpendicular to the $x$-axis are semicircles with diameter from $y = 0$ to $y = \\sqrt{x}$ on $[0, 4]$. The volume is:',
@@ -2478,6 +2596,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The average value of $e^x$ on $[0, 2]$ is:',
@@ -2488,6 +2607,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The net displacement of a particle with $v(t) = \\sin t$ on $[0, 2\\pi]$ is:',
@@ -2498,6 +2618,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The area enclosed by $y = x^2$ and $y = 2x$ is:',
@@ -2508,6 +2629,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The volume of the solid generated by revolving $y = x$ from $x = 0$ to $x = 3$ about the $x$-axis is:',
@@ -2518,6 +2640,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'A population grows at rate $P\'(t) = 100e^{0.02t}$ people/year. The population increase from $t = 0$ to $t = 10$ is:',
@@ -2528,6 +2651,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The area between $y = \\dfrac{1}{x}$ and the $x$-axis from $x = 1$ to $x = e^2$ is:',
@@ -2538,6 +2662,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If the velocity of a particle is always positive on $[a,b]$, then the total distance equals:',
@@ -2548,6 +2673,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The volume of the solid generated by revolving the region between $y = x^2$ and $y = x$ about the $x$-axis is:',
@@ -2558,6 +2684,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The average value of $f(x) = 3x^2 + 1$ on $[0, 2]$ is:',
@@ -2568,6 +2695,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The area of the region bounded by $y = \\sqrt{x}$, $y = 0$, and $x = 9$ is:',
@@ -2578,6 +2706,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'A tank drains at rate $r(t) = 50 - 2t$ gallons/min for $0 \\leq t \\leq 25$. Total gallons drained:',
@@ -2588,6 +2717,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The volume of a solid with cross-sections perpendicular to the $x$-axis that are equilateral triangles with side $s = 1 - x$ on $[0, 1]$ is:',
@@ -2598,6 +2728,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The area between $y = x^2 - 4$ and $y = 0$ from $x = -2$ to $x = 2$ is:',
@@ -2608,6 +2739,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'If the position of a particle is $s(t) = \\displaystyle\\int_0^t (3 - u)\\,du$, when does the particle return to $s = 0$?',
@@ -2618,6 +2750,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'integration-applications-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The volume when $y = 3$ (for $0 \\le x \\le 2$) is revolved about the $x$-axis is:',
@@ -2628,6 +2761,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'volumes-of-revolution-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The area between $y = x$ and $y = x^3$ on $[-1, 1]$ is:',
@@ -2638,21 +2772,12 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'applications-integration',
     topicSlug: 'area-between-curves-calcab',
     formSet: 'both',
+    part: 2,
   },
 
   // ══════════════════════════════════════════════════════════════
   //  BATCH 3 — Differential Equations & Modeling (23 new)
   // ══════════════════════════════════════════════════════════════
-  {
-    question: 'The solution to $\\dfrac{dy}{dx} = 2y$ with $y(0) = 3$ is:',
-    options: ['$y = 3e^{2x}$', '$y = 2e^{3x}$', '$y = 3 + 2x$', '$y = e^{2x} + 2$'],
-    correctAnswer: 0,
-    explanation: 'Separable: $\\int \\frac{dy}{y} = \\int 2\\,dx \\Rightarrow \\ln|y| = 2x + C$. $y(0) = 3$: $C = \\ln 3$. $y = 3e^{2x}$.',
-    difficulty: 'easy',
-    domain: 'diffeq',
-    topicSlug: 'differential-equations-calcab',
-    formSet: 'both',
-  },
   {
     question: 'In the slope field for $\\dfrac{dy}{dx} = x + y$, slopes are zero along the line:',
     options: ['$y = x$', '$y = -x$', '$x = 0$', '$y = 0$'],
@@ -2662,6 +2787,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The general solution of $\\dfrac{dy}{dx} = \\dfrac{1}{x}$ (for $x > 0$) is:',
@@ -2672,6 +2798,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The half-life of a substance is $5$ years. If $y_0 = 100$ g, how much remains after $15$ years?',
@@ -2682,6 +2809,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'Solve $\\dfrac{dy}{dx} = \\dfrac{x}{y}$ with $y(0) = 4$.',
@@ -2692,6 +2820,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'A population doubles every $10$ years. The continuous growth rate $k$ is:',
@@ -2702,6 +2831,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'In the slope field for $\\dfrac{dy}{dx} = y(2 - y)$, the equilibrium solutions are:',
@@ -2712,6 +2842,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The particular solution to $\\dfrac{dy}{dx} = 3y$ passing through $(0, 2)$ satisfies $y(1) = $',
@@ -2722,6 +2853,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The particular solution to $\\dfrac{dy}{dx} = e^{x-y}$ with $y(0) = 0$ is:',
@@ -2732,6 +2864,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'Newton\'s Law of Cooling: $\\dfrac{dT}{dt} = -k(T - 70)$. If $T(0) = 200$, then $T(t) = $',
@@ -2742,6 +2875,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The slope field for $\\dfrac{dy}{dx} = \\dfrac{y}{x}$ shows solution curves that are:',
@@ -2752,6 +2886,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Solve $\\dfrac{dy}{dx} = y^2$ with $y(0) = 1$. The solution blows up at $x = $',
@@ -2762,6 +2897,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'If a quantity decays according to $y = y_0 e^{-0.1t}$, how long until $10\\%$ remains?',
@@ -2772,6 +2908,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'In the slope field for $\\dfrac{dy}{dx} = x^2$, the segments along any vertical line $x = a$ are:',
@@ -2782,6 +2919,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Which ODE is separable?',
@@ -2792,6 +2930,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'Solve $\\dfrac{dy}{dx} = \\cos x$ with $y(\\pi) = 2$.',
@@ -2802,6 +2941,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'A bacteria culture triples every $4$ hours. Starting with $500$ bacteria, the population after $12$ hours is:',
@@ -2812,6 +2952,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The solution to $\\dfrac{dy}{dx} = \\dfrac{2x}{y}$ with $y(0) = 3$ is:',
@@ -2822,6 +2963,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'A quantity satisfies $\\dfrac{dP}{dt} = 0.1P$ with $P(0) = 1000$. Then $P(t) = $',
@@ -2832,6 +2974,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $\\dfrac{dy}{dx} = -2y$ and $y = Ae^{-2x}$, then $y$ is called:',
@@ -2842,6 +2985,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'A radioactive sample satisfies $\\dfrac{dN}{dt} = -0.02N$. Its half-life is:',
@@ -2852,6 +2996,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'exponential-models-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The solution to $\\dfrac{dy}{dx} = -y$ with $y(0) = 8$ approaches what value as $x \\to \\infty$?',
@@ -2862,6 +3007,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The solution to $\\dfrac{dy}{dx} = \\dfrac{1+y^2}{1+x^2}$ is a family of:',
@@ -2872,6 +3018,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'diffeq',
     topicSlug: 'differential-equations-calcab',
     formSet: 'both',
+    part: 5,
   },
 
   // ══════════════════════════════════════════════════════════════
@@ -2886,6 +3033,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'If $\\displaystyle\\int_0^6 f(x)\\,dx = 10$ and $\\displaystyle\\int_0^6 g(x)\\,dx = 4$, what is $\\displaystyle\\int_0^6 [f(x) + 3g(x)]\\,dx$?',
@@ -2896,6 +3044,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'A right Riemann sum with $n = 4$ for $\\int_0^8 f(x)\\,dx$ uses subintervals of width:',
@@ -2906,6 +3055,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The table shows selected values of $g(t)$:<br/><table style="border-collapse:collapse;margin:12px 0"><tr><th style="border:1px solid #888;padding:6px 14px">$t$</th><td style="border:1px solid #888;padding:6px 14px">$0$</td><td style="border:1px solid #888;padding:6px 14px">$2$</td><td style="border:1px solid #888;padding:6px 14px">$4$</td><td style="border:1px solid #888;padding:6px 14px">$6$</td></tr><tr><th style="border:1px solid #888;padding:6px 14px">$g(t)$</th><td style="border:1px solid #888;padding:6px 14px">$5$</td><td style="border:1px solid #888;padding:6px 14px">$8$</td><td style="border:1px solid #888;padding:6px 14px">$6$</td><td style="border:1px solid #888;padding:6px 14px">$10$</td></tr></table>The trapezoidal approximation of $\\int_0^6 g(t)\\,dt$ is:',
@@ -2916,6 +3066,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $f(x) = x^3 - 6x^2 + 9x + 2$, the values of $x$ at which $f$ has a critical point are:',
@@ -2926,6 +3077,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $g\'(x) = \\dfrac{x}{x^2 + 1}$ and $g(0) = 5$, then $g(x) = $',
@@ -2936,6 +3088,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'Which theorem guarantees a value $c$ in $(a,b)$ with $f\'(c) = \\dfrac{f(b) - f(a)}{b - a}$?',
@@ -2946,6 +3099,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The position of a particle is given by $s(t) = t^3 - 6t^2 + 9t$. At $t = 1$, the velocity and acceleration are:',
@@ -2956,6 +3110,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $f$ is continuous on $[0,4]$ and $\\int_0^4 f(x)\\,dx = 20$, the average value of $f$ on $[0,4]$ is:',
@@ -2966,6 +3121,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'A left Riemann sum with $n = 3$ for $\\int_1^7 f(x)\\,dx$ given $f(1) = 2$, $f(3) = 5$, $f(5) = 3$, $f(7) = 6$ is:',
@@ -2976,6 +3132,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The Extreme Value Theorem states that if $f$ is continuous on $[a,b]$, then $f$ attains:',
@@ -2986,6 +3143,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The table gives $h(t)$ (height in meters):<br/><table style="border-collapse:collapse;margin:12px 0"><tr><th style="border:1px solid #888;padding:6px 14px">$t$ (s)</th><td style="border:1px solid #888;padding:6px 14px">$0$</td><td style="border:1px solid #888;padding:6px 14px">$1$</td><td style="border:1px solid #888;padding:6px 14px">$3$</td><td style="border:1px solid #888;padding:6px 14px">$4$</td></tr><tr><th style="border:1px solid #888;padding:6px 14px">$h(t)$</th><td style="border:1px solid #888;padding:6px 14px">$10$</td><td style="border:1px solid #888;padding:6px 14px">$15$</td><td style="border:1px solid #888;padding:6px 14px">$12$</td><td style="border:1px solid #888;padding:6px 14px">$8$</td></tr></table>The average rate of change of $h$ on $[0, 4]$ is:',
@@ -2996,6 +3154,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'If the graph of $f\'$ crosses the $x$-axis from positive to negative at $x = c$, then $f$ has:',
@@ -3006,6 +3165,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'Given $f(2) = 3$ and $f\'(2) = -4$, the tangent-line approximation at $x = 2.1$ is:',
@@ -3016,6 +3176,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $\\dfrac{d}{dx}\\left[\\int_0^x f(t)\\,dt\\right] = \\sin(x^2)$, then $f(x) = $',
@@ -3026,6 +3187,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'A midpoint Riemann sum with $n = 3$ for $\\displaystyle\\int_0^6 f(x)\\,dx$ uses sample points at:',
@@ -3036,6 +3198,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'A particle has velocity $v(t) = 4 - 2t$ on $[0, 5]$. The displacement is:',
@@ -3046,6 +3209,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The error in a trapezoidal approximation is generally reduced by:',
@@ -3056,6 +3220,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $f\'(x) = 0$ at $x = 2$ and $f\'\'(2) = 0$, what can we conclude?',
@@ -3066,6 +3231,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'free-response-strategies-calcab',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'A right Riemann sum with $n = 3$ on $[0, 6]$ for an increasing function $f$ will:',
@@ -3076,6 +3242,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'exam-prep',
     topicSlug: 'tables-data-calcab',
     formSet: 'both',
+    part: 6,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -3097,6 +3264,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'what-is-a-limit',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'In the symbol $\\lim_{x \\to 5} f(x)$, the "$x \\to 5$" means:',
@@ -3112,6 +3280,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'what-is-a-limit',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'How is $\\lim_{x \\to 3^+} f(x) = 8$ read in English?',
@@ -3127,6 +3296,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'what-is-a-limit',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'Which symbol expresses "as $x$ runs to negative infinity, $h(x)$ approaches 7"?',
@@ -3142,6 +3312,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'what-is-a-limit',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\lim_{x \\to a} f(x)$ exists if and only if:',
@@ -3152,6 +3323,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'what-is-a-limit',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Suppose $\\lim_{x \\to 2^-} f(x) = 6$ and $\\lim_{x \\to 2^+} f(x) = 6$, but $f(2) = 100$. What is $\\lim_{x \\to 2} f(x)$?',
@@ -3162,6 +3334,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'what-is-a-limit',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Suppose $\\lim_{x \\to 0^-} g(x) = -1$ and $\\lim_{x \\to 0^+} g(x) = +1$. What is $\\lim_{x \\to 0} g(x)$?',
@@ -3172,6 +3345,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'what-is-a-limit',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Why does $\\lim_{x \\to 0} \\sin(1/x)$ fail to exist?',
@@ -3182,6 +3356,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'what-is-a-limit',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'A student says: "$f(2)$ is undefined, so $\\lim_{x \\to 2} f(x)$ must also be undefined." This statement is:',
@@ -3192,6 +3367,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'what-is-a-limit',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Which of these is the BEST description of "$\\lim_{x \\to 0} \\dfrac{1}{x}$ does not exist"?',
@@ -3202,6 +3378,7 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     domain: 'limits',
     topicSlug: 'what-is-a-limit',
     formSet: 'both',
+    part: 4,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -3212,70 +3389,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$\\{0, 1, 2, 3\\}$', '$\\{3.9, 3.99, 3.999, 4.001, 4.01, 4.1\\}$', '$\\{4, 4, 4, 4\\}$', '$\\{3, 5, 6, 8\\}$'],
     correctAnswer: 1,
     explanation: 'Approach 4 from both sides with values getting closer (powers of 10), and never include $x = 4$ itself.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 1,
   },
   {
     question: 'A numerical table is MOST useful for estimating a limit when:',
     options: ['Direct substitution gives a clean number', 'Direct substitution gives an indeterminate form like $0/0$', 'The function is a polynomial', 'The function is constant'],
     correctAnswer: 1,
     explanation: 'Tables shine on indeterminate forms, where substitution alone fails.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 1,
   },
   {
     question: 'A table shows $f(0.99)=2.99$, $f(0.999)=2.999$, $f(1.001)=3.001$, $f(1.01)=3.01$. Best estimate for $\\lim_{x\\to 1} f(x)$:',
     options: ['$1$', '$3$', '$2.999$', 'DNE'],
     correctAnswer: 1,
     explanation: 'Both sides converge cleanly on 3.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 2,
   },
   {
     question: 'A table shows outputs $0.7071, 0.70711, 0.707106, 0.7071068$. The limit is best read as:',
     options: ['$0.7$', '$\\sqrt{2}/2$', '$\\sqrt{3}/2$', '$\\pi/4$'],
     correctAnswer: 1,
     explanation: 'The outputs settle on $0.70710678\\ldots$, which is $\\sqrt{2}/2$. Rounding to $0.7$ throws away the evidence in the table, $\\sqrt{3}/2 \\approx 0.866$ and $\\pi/4 \\approx 0.785$ are familiar constants that do not match the digits.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 2,
   },
   {
     question: 'A table shows $f(-0.001) = -2$, $f(-0.0001) = -2$, $f(0.0001) = 5$, $f(0.001) = 5$. Conclusion?',
     options: ['It equals $1.5$, the average of the two sides', 'It does not exist, as the sides differ', 'It equals $-2$, the value from the left side', 'It is infinite, since the outputs jump by 7'],
     correctAnswer: 1,
     explanation: 'The left side settles at $-2$ and the right side at $5$: two finite one-sided limits that disagree, which is a jump, so the two-sided limit does not exist. Averaging the sides or using only the left side ignores that disagreement, and the outputs stay finite, so the limit is not infinite.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 3,
   },
   {
     question: 'A table shows $f(0.1)=100$, $f(0.01)=10000$, $f(-0.01)=10000$, $f(-0.1)=100$. The limit:',
     options: ['It equals $100$, the value at $x = \\pm 0.1$', 'It equals $10000$, the last value in the table', 'It grows without bound toward $+\\infty$', 'It oscillates between $100$ and $10000$'],
     correctAnswer: 2,
     explanation: 'As $|x|$ shrinks by a factor of 10, the outputs grow by a factor of 100 on both sides, so $f(x) \\to +\\infty$ and the limit does not exist as a finite number. No single table value is the limit, and the outputs increase steadily rather than oscillate.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 3,
   },
   {
     question: 'A table for $\\sin(\\pi/x)$ shows $f(0.1)=0.74$, $f(0.01)=-0.51$, $f(0.001)=0.83$, $f(0.0001)=-0.31$. Conclusion?',
     options: ['The outputs average out, so the limit is about 0', 'The two sides jump apart, so there is no limit', 'The outputs blow up, so the limit is infinite', 'The outputs oscillate, so there is no limit'],
     correctAnswer: 3,
     explanation: 'The signs keep flipping and the sizes do not shrink as $x \\to 0^+$, so $\\sin(\\pi/x)$ oscillates and never settles: the limit does not exist. An average of oscillating values is not a limit, every output stays between $-1$ and $1$, so nothing blows up, and only one side is shown, so there is no jump.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 3,
   },
   {
     question: 'A student computes $\\dfrac{1 - \\cos(10^{-10})}{(10^{-10})^2}$ and gets 0 on a calculator. The most likely explanation:',
     options: ['The true limit is 0, as the calculator shows', 'Round-off error hides the limit $1/2$', 'The expression blows up as $x$ approaches 0', 'The expression oscillates as $x$ approaches 0'],
     correctAnswer: 1,
     explanation: 'For tiny $x$, $\\cos x$ rounds to exactly $1$ in finite precision, so $1 - \\cos x$ becomes $0$ (catastrophic cancellation). The true limit is $1/2$: applying L\'Hospital\'s Rule twice to $\\frac{1 - \\cos x}{x^2}$ gives $\\frac{\\cos x}{2} \\to \\frac{1}{2}$. The expression neither blows up nor oscillates near 0.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 4,
   },
   {
     question: 'On the AP exam, a numerical table alone is generally sufficient to:',
     options: ['Prove that a limit equals an exact value', 'Estimate a limit and support it', 'Replace algebraic justification on FRQ "find" prompts', 'Show rigorously that a function is continuous'],
     correctAnswer: 1,
     explanation: 'A table gives an estimate and numerical evidence for it. Proving an exact value, replacing algebra on "find" prompts, or establishing continuity rigorously all need algebraic work or a theorem.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 4,
   },
   {
     question: 'A table shows the LEFT side approaching 4 cleanly, but the RIGHT side\'s outputs (4, 9, 6, 12) won\'t settle. The two-sided limit:',
     options: ['Equals 4, since the left side converges to 4', 'Equals the average of the right-side outputs', 'Does not exist, since one side diverges', 'Equals 12, the last right-side output shown'],
     correctAnswer: 2,
     explanation: 'A two-sided limit needs both one-sided limits to exist and agree. The right side never settles, so the two-sided limit does not exist, no matter how cleanly the left side converges. Averaging or picking a single right-side output does not produce a limit.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 3,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -3286,70 +3463,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['The filled dot drawn exactly at $x = a$', 'Where the curve heads from each side', 'The slope of the tangent line at $x = a$', 'The point where the curve crosses the $x$-axis'],
     correctAnswer: 1,
     explanation: 'The limit is the height the curve approaches from both sides as $x \\to a$. A dot at $x = a$ shows $f(a)$, which is independent of the limit, the slope concerns the derivative, and the $x$-intercept is unrelated.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 1,
   },
   {
     question: 'A graph shows both arms of $f$ approaching $y = 7$ as $x \\to 2$, and an OPEN circle at $(2, 7)$. What is $\\lim_{x \\to 2} f(x)$?',
     options: ['$7$', 'undefined', 'Does not exist', '$(2, 7)$'],
     correctAnswer: 0,
     explanation: 'Both arms approach the height $7$, so $\\lim_{x \\to 2} f(x) = 7$. The open circle only says $f(2)$ is undefined, which does not affect the limit; the limit is a number, not the point $(2, 7)$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 1,
   },
   {
     question: 'A graph shows the LEFT arm aiming at $y = 1$ and the RIGHT arm aiming at $y = 8$ as $x \\to 5$. What is $\\lim_{x \\to 5^+} f(x)$?',
     options: ['$1$', '$8$', '$4.5$', 'DNE'],
     correctAnswer: 1,
     explanation: '$\\lim_{x\\to 5^+}$ means trace from the right; the right arm aims at 8.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 2,
   },
   {
     question: 'A graph shows the LEFT arm aiming at $y = 1$ and the RIGHT arm aiming at $y = 8$ as $x \\to 5$. What is $\\lim_{x \\to 5} f(x)$?',
     options: ['$1$', '$8$', '$4.5$', 'Does not exist'],
     correctAnswer: 3,
     explanation: 'The left-hand limit is $1$ and the right-hand limit is $8$. They disagree, so the two-sided limit does not exist (a jump). Neither one-sided value alone is the limit, and averaging them to $4.5$ is not a rule.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 2,
   },
   {
     question: 'A graph shows the curve diving to $-\\infty$ on the left of $x = 3$ and shooting to $+\\infty$ on the right. The limit at 3 fails because of:',
     options: ['A jump between two finite values', 'A vertical asymptote', 'An oscillating discontinuity', 'A removable discontinuity'],
     correctAnswer: 1,
     explanation: 'The curve heading to $-\\infty$ on one side and $+\\infty$ on the other along $x = 3$ is the signature of a vertical asymptote. A jump has two finite one-sided values, oscillation never settles but stays bounded, and a removable hole has a finite two-sided limit.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 3,
   },
   {
     question: 'A graph shows a fuzzy band oscillating between $y = -1$ and $y = +1$ as $x \\to 0$. The limit:',
     options: ['It equals 0, the center of the band', 'It does not exist', 'It equals 1, the top of the band', 'It equals $-1$, the bottom of the band'],
     correctAnswer: 1,
     explanation: 'A band of values that keeps filling the space between $-1$ and $1$ as $x \\to 0$ never settles on one height, so the limit does not exist. The center, top or bottom of the band is not a value the function approaches.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 3,
   },
   {
     question: 'At $x = 1$ a graph has both arms aiming at $y = 5$, an open circle at $(1, 5)$, AND a closed dot at $(1, -3)$. What is $\\lim_{x \\to 1} f(x)$?',
     options: ['$5$', '$-3$', '$(1, 5)$', 'Does not exist'],
     correctAnswer: 0,
     explanation: 'The limit is the height the arms approach, which is $5$. The closed dot gives $f(1) = -3$, which does not affect the limit, the limit is a number rather than the point $(1, 5)$, and the arms agree, so the limit exists.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 4,
   },
   {
     question: 'A graph has both arms aiming at $y = 5$ as $x \\to 1$, an open circle at $(1, 5)$, and a closed dot at $(1, -3)$. What is $f(1)$?',
     options: ['$5$', '$-3$', 'undefined', '$1$'],
     correctAnswer: 1,
     explanation: 'Closed dot at $(1, -3)$ defines $f(1) = -3$. The open circle at $(1, 5)$ tells us the function is NOT 5 there.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 4,
   },
   {
     question: 'A graph shows a clean step at $x = 2$: left arm at $y = -1$, right arm at $y = 3$, closed dot at $(2, -1)$. What is $\\lim_{x \\to 2^-} f(x)$?',
     options: ['$-1$', '$3$', '$1$', 'DNE'],
     correctAnswer: 0,
     explanation: 'Trace from the left → $y$ aims at $-1$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 2,
   },
   {
     question: 'A graph shows both arms of $f$ meeting at $y = 4$ at $x = 3$, with a closed dot at $(3, 4)$. Which BEST describes the function at $x = 3$?',
     options: ['The limit does not exist there', '$f$ is continuous at $x = 3$', '$f$ has a removable hole there', '$f$ has a jump discontinuity there'],
     correctAnswer: 1,
     explanation: 'Both arms approach $4$ and the closed dot gives $f(3) = 4$, so the limit exists and equals the function value: $f$ is continuous at $3$. There is no hole because the point is filled, and no jump because the arms meet.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 4,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -3360,70 +3537,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$x$ takes negative values near 6', '$x$ approaches 6 from the left', '$f(x)$ takes negative values near 6', '$f(x)$ approaches 6 from below'],
     correctAnswer: 1,
     explanation: 'The "$-$" superscript means $x$ approaches 6 through values less than 6, that is, from the left. It says nothing about the sign of $x$ or of $f(x)$, and it describes the input, not the output.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 1,
   },
   {
     question: 'For $f(x) = \\dfrac{|x - 2|}{x - 2}$: $\\lim_{x \\to 2^+} f(x) = ?$',
     options: ['$-1$', '$0$', '$1$', 'DNE'],
     correctAnswer: 2,
     explanation: 'For $x > 2$, $|x - 2| = x - 2$, so the ratio is $+1$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 2,
   },
   {
     question: 'For $f(x) = \\dfrac{|x - 2|}{x - 2}$: $\\lim_{x \\to 2^-} f(x) = ?$',
     options: ['$-1$', '$0$', '$1$', 'DNE'],
     correctAnswer: 0,
     explanation: 'For $x < 2$, $|x - 2| = -(x - 2)$, so the ratio is $-1$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 2,
   },
   {
     question: 'For $f(x) = \\begin{cases} 3x - 1 & x < 2 \\\\ x^2 + 4 & x \\ge 2 \\end{cases}$, find $\\lim_{x \\to 2^-} f(x)$.',
     options: ['$5$', '$8$', '$0$', 'DNE'],
     correctAnswer: 0,
     explanation: 'Approach from the left → use $3x - 1$, plug in 2 → 5.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 2,
   },
   {
     question: 'For $f(x) = \\begin{cases} 3x - 1 & x < 2 \\\\ x^2 + 4 & x \\ge 2 \\end{cases}$, find $\\lim_{x \\to 2^+} f(x)$.',
     options: ['$5$', '$8$', '$3$', 'DNE'],
     correctAnswer: 1,
     explanation: 'Approach from the right → use $x^2 + 4$, plug in 2 → 8.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 2,
   },
   {
     question: 'For $f(x) = \\begin{cases} 3x - 1 & x < 2 \\\\ x^2 + 4 & x \\ge 2 \\end{cases}$, find $\\lim_{x \\to 2} f(x)$.',
     options: ['$5$', '$8$', '$6.5$', 'Does not exist'],
     correctAnswer: 3,
     explanation: 'The left-hand limit is $5$ and the right-hand limit is $8$. They disagree, so the two-sided limit does not exist. Neither one-sided value alone is the limit, and averaging them ($6.5$) is not a rule.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 3,
   },
   {
     question: 'Existence theorem: $\\lim_{x \\to a} f(x)$ exists if and only if:',
     options: ['$f(a)$ is defined at the point $x = a$', 'The left and right limits are equal', '$f$ is continuous on an interval around $a$', '$f$ has a derivative at the point $x = a$'],
     correctAnswer: 1,
     explanation: 'The existence theorem: $\\lim_{x \\to a} f(x)$ exists exactly when the left-hand and right-hand limits exist and are equal. The value $f(a)$ does not enter, and continuity or differentiability are stronger conditions that are not required.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 3,
   },
   {
     question: 'You compute $\\lim_{x \\to 4^-} f = 9$ and $\\lim_{x \\to 4^+} f = 9$, and $f(4) = 100$. What is $\\lim_{x \\to 4} f(x)$?',
     options: ['$9$', '$100$', '$54.5$', 'Does not exist'],
     correctAnswer: 0,
     explanation: 'Both one-sided limits equal $9$, so the two-sided limit is $9$. The value $f(4) = 100$ does not affect the limit, averaging $9$ and $100$ is not a rule, and the limit exists because the sides agree.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 3,
   },
   {
     question: 'For $f(x) = \\sqrt{x - 3}$: $\\lim_{x \\to 3^+} f(x) = ?$',
     options: ['$0$', '$3$', 'DNE', '$\\sqrt{3}$'],
     correctAnswer: 0,
     explanation: 'For $x > 3$, $\\sqrt{x - 3}$ is defined and approaches $\\sqrt{0} = 0$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 4,
   },
   {
     question: 'For $f(x) = \\sqrt{x - 3}$: why does $\\lim_{x \\to 3^-} f(x)$ fail to exist?',
     options: ['The left-side outputs blow up to $-\\infty$', 'It has no real outputs for $x < 3$', 'The left-side outputs oscillate near 3', 'The left and right outputs disagree'],
     correctAnswer: 1,
     explanation: '$\\sqrt{x - 3}$ requires $x \\ge 3$, so for $x < 3$ it is not a real number and there are no outputs to approach from the left. Nothing blows up or oscillates, and there are no left-side values to disagree with the right side.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 4,
   },
 
   // ─────────────── direct-substitution-method ───────────────
@@ -3432,70 +3609,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$10$', '$16$', '$18$', '$22$'],
     correctAnswer: 1,
     explanation: 'Polynomial → substitute: $2(9) - 3 + 1 = 16$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 1,
   },
   {
     question: 'Compute $\\lim_{x \\to 0} (\\cos x + e^x)$.',
     options: ['$0$', '$1$', '$2$', 'DNE'],
     correctAnswer: 2,
     explanation: 'Both continuous at 0; $\\cos 0 + e^0 = 1 + 1 = 2$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 2,
   },
   {
     question: 'Compute $\\lim_{x \\to 4} \\dfrac{x^2 + 2}{x - 1}$.',
     options: ['$\\dfrac{18}{5}$', '$\\dfrac{14}{3}$', '$6$', '$\\dfrac{9}{2}$'],
     correctAnswer: 2,
     explanation: 'The denominator is $3 \\ne 0$ at $x = 4$, so substitute: $\\frac{16 + 2}{4 - 1} = \\frac{18}{3} = 6$. A sign slip in the denominator gives $\\frac{18}{5}$, a sign slip in the numerator gives $\\frac{14}{3}$, and dropping the $-1$ gives $\\frac{18}{4} = \\frac{9}{2}$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 2,
   },
   {
     question: 'For which $a$ does direct substitution FAIL on $f(x) = \\dfrac{x + 2}{x - 7}$?',
     options: ['$a = 0$', '$a = -2$', '$a = 2$', '$a = 7$'],
     correctAnswer: 3,
     explanation: 'Denominator vanishes at $a = 7$. Numerator there is $9 \\ne 0$, so vertical asymptote.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 2,
   },
   {
     question: 'Compute $\\lim_{x \\to \\pi/4} \\tan x$.',
     options: ['$\\dfrac{\\sqrt{2}}{2}$', '$1$', '$\\sqrt{2}$', 'Does not exist'],
     correctAnswer: 1,
     explanation: '$\\tan x$ is continuous at $\\pi/4$ because $\\cos(\\pi/4) \\ne 0$, so substitute: $\\tan(\\pi/4) = 1$. $\\frac{\\sqrt{2}}{2}$ is $\\sin(\\pi/4)$ or $\\cos(\\pi/4)$ alone, $\\sqrt{2}$ is $\\sec(\\pi/4)$, and $\\tan x$ is undefined only at odd multiples of $\\pi/2$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 2,
   },
   {
     question: 'If $\\lim_{x \\to a} f = 6$ and $\\lim_{x \\to a} g = -2$, find $\\lim_{x \\to a} (3f + 2g)$.',
     options: ['$8$', '$14$', '$16$', '$20$'],
     correctAnswer: 1,
     explanation: 'Sum and constant-multiple laws: $3(6) + 2(-2) = 18 - 4 = 14$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 3,
   },
   {
     question: 'Compute $\\lim_{x \\to 2} \\sqrt{3x^2 - 2}$.',
     options: ['$\\sqrt{8}$', '$\\sqrt{10}$', '$\\sqrt{12}$', '$\\sqrt{14}$'],
     correctAnswer: 1,
     explanation: 'Inside $\\to 12 - 2 = 10$; $\\sqrt{}$ continuous; answer $\\sqrt{10}$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 3,
   },
   {
     question: 'You plug $x = 1$ into $\\dfrac{x^2 - 1}{x - 1}$ and get $0/0$. The correct conclusion is:',
     options: ['The limit is 0, since the top is 0', 'The limit does not exist, since $0/0$ is undefined', 'The form $0/0$ is indeterminate', 'The limit is infinite, since the bottom is 0'],
     correctAnswer: 2,
     explanation: '$0/0$ is an indeterminate form, a signal to simplify, not an answer. Factoring gives $\\frac{(x-1)(x+1)}{x-1} = x + 1 \\to 2$. A zero numerator or denominator alone does not fix the limit, and the limit does exist.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 4,
   },
   {
     question: 'Which is NOT an indeterminate form?',
     options: ['$0/0$', '$\\infty / \\infty$', '$0 \\cdot \\infty$', '$\\infty + \\infty$'],
     correctAnswer: 3,
     explanation: '$\\infty + \\infty = \\infty$ is determinate. The others are indeterminate.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 4,
   },
   {
     question: 'Compute $\\lim_{x \\to 0} \\sin(\\cos x)$.',
     options: ['$\\sin 1$', '$\\cos 1$', '$0$', '$1$'],
     correctAnswer: 0,
     explanation: 'Composition of continuous functions: $\\cos 0 = 1$, then $\\sin 1$.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 3,
   },
 
   // ─────────────── factoring-method-limits ───────────────
@@ -3504,70 +3681,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$x + 4$', '$\\infty$', '$8$', 'Does not exist'],
     correctAnswer: 2,
     explanation: 'Factor: $\\frac{(x-4)(x+4)}{x-4} = x + 4$ for $x \\neq 4$, so the limit is $4 + 4 = 8$. Stopping at $x + 4$ leaves the limit unevaluated, and the $\\frac{0}{0}$ form from direct substitution calls for simplifying, not for an infinite or nonexistent limit.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 1,
   },
   {
     question: 'Compute $\\lim_{x \\to 3} \\dfrac{x^2 - 9}{x - 3}$.',
     options: ['$0$', '$3$', '$6$', 'DNE'],
     correctAnswer: 2,
     explanation: '$\\dfrac{(x-3)(x+3)}{x-3} \\to x + 3 \\to 6$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 1,
   },
   {
     question: 'Factor $x^2 - 9x + 20$.',
     options: ['$(x - 4)(x - 5)$', '$(x + 4)(x + 5)$', '$(x - 2)(x - 10)$', '$(x - 1)(x - 20)$'],
     correctAnswer: 0,
     explanation: 'Numbers with product 20 and sum $-9$: $-4$ and $-5$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 2,
   },
   {
     question: 'Compute $\\lim_{x \\to 5} \\dfrac{x^2 - 9x + 20}{x - 5}$.',
     options: ['$x - 4$', '$1$', '$-1$', 'Does not exist'],
     correctAnswer: 1,
     explanation: 'Factor: $\\frac{(x-4)(x-5)}{x-5} = x - 4$ for $x \\ne 5$, so the limit is $5 - 4 = 1$. Stopping at $x - 4$ leaves the limit unevaluated, $-1$ comes from a sign slip in the factoring, and the $\\frac{0}{0}$ form does not mean the limit fails to exist.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 2,
   },
   {
     question: 'Compute $\\lim_{x \\to -3} \\dfrac{x^2 + 4x + 3}{x + 3}$.',
     options: ['$-2$', '$0$', '$1$', '$3$'],
     correctAnswer: 0,
     explanation: '$x^2 + 4x + 3 = (x+1)(x+3)$. Cancel $(x+3)$: $x + 1 \\to -2$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 3,
   },
   {
     question: 'Compute $\\lim_{x \\to 2} \\dfrac{x^2 - 4}{x^2 - 5x + 6}$.',
     options: ['$-4$', '$-2$', '$2$', '$4$'],
     correctAnswer: 0,
     explanation: 'Top: $(x-2)(x+2)$. Bottom: $(x-2)(x-3)$. Cancel: $\\dfrac{x+2}{x-3} \\to 4/(-1) = -4$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 3,
   },
   {
     question: 'Compute $\\lim_{x \\to 0} \\dfrac{x^3 - 2x^2}{x^2}$.',
     options: ['$-2$', '$0$', '$1$', 'DNE'],
     correctAnswer: 0,
     explanation: '$\\dfrac{x^2(x - 2)}{x^2} \\to x - 2 \\to -2$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 2,
   },
   {
     question: 'Compute $\\lim_{x \\to 1} \\dfrac{x^2 + 2x - 3}{x^2 - 1}$.',
     options: ['$\\dfrac{x+3}{x+1}$', '$2$', 'Does not exist', '$\\infty$'],
     correctAnswer: 1,
     explanation: 'Factor: $\\frac{(x-1)(x+3)}{(x-1)(x+1)} = \\frac{x+3}{x+1}$ for $x \\ne 1$, which equals $\\frac{4}{2} = 2$ at $x = 1$. Stopping at the simplified fraction leaves the limit unevaluated, and the $\\frac{0}{0}$ form means more algebra is needed, not that the limit is infinite or nonexistent.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 3,
   },
   {
     question: 'Compute $\\lim_{x \\to 2} \\dfrac{x^3 - 8}{x - 2}$.',
     options: ['$0$', '$8$', '$12$', '$24$'],
     correctAnswer: 2,
     explanation: 'Difference of cubes: $x^3 - 8 = (x-2)(x^2 + 2x + 4)$. Substitute: $4 + 4 + 4 = 12$.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 4,
   },
   {
     question: 'Compute $\\lim_{x \\to -2} \\dfrac{x^3 + 8}{x + 2}$.',
     options: ['$0$', '$4$', '$8$', '$12$'],
     correctAnswer: 3,
     explanation: 'Sum of cubes: $x^3 + 8 = (x+2)(x^2 - 2x + 4)$. Substitute $x = -2$: $4 + 4 + 4 = 12$.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 4,
   },
 
   // ─────────────── rationalizing-technique-limits ───────────────
@@ -3576,70 +3753,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$\\sqrt{x} + 5$', '$5 - \\sqrt{x}$', '$-\\sqrt{x} - 5$', '$\\sqrt{x + 5}$'],
     correctAnswer: 0,
     explanation: 'Flip the sign between the two terms.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 1,
   },
   {
     question: 'Compute $(\\sqrt{x + 2} - 3)(\\sqrt{x + 2} + 3)$.',
     options: ['$x - 7$', '$x + 7$', '$x - 1$', '$x - 11$'],
     correctAnswer: 0,
     explanation: 'Difference of squares: $(x + 2) - 9 = x - 7$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 1,
   },
   {
     question: 'Rationalizing is the right tool when $0/0$ involves:',
     options: ['Polynomials only', 'A square root', 'A trig function', 'An exponential function'],
     correctAnswer: 1,
     explanation: 'Multiplying by a conjugate clears a radical, so rationalizing is the tool when the $0/0$ comes from a square root. Polynomial forms are handled by factoring, and trig or exponential forms by special limits or L\'Hospital\'s Rule.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 4,
   },
   {
     question: 'Compute $\\lim_{x \\to 4} \\dfrac{\\sqrt{x} - 2}{x - 4}$.',
     options: ['$0$', '$1/4$', '$1/2$', 'DNE'],
     correctAnswer: 1,
     explanation: 'Conjugate gives $\\dfrac{1}{\\sqrt{x}+2} \\to \\dfrac{1}{4}$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 2,
   },
   {
     question: 'Compute $\\lim_{x \\to 9} \\dfrac{\\sqrt{x} - 3}{x - 9}$.',
     options: ['$1/9$', '$1/6$', '$1/3$', '$0$'],
     correctAnswer: 1,
     explanation: '$\\dfrac{1}{\\sqrt{9}+3} = \\dfrac{1}{6}$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 2,
   },
   {
     question: 'Compute $\\lim_{x \\to 0} \\dfrac{\\sqrt{x + 16} - 4}{x}$.',
     options: ['$1/16$', '$1/8$', '$1/4$', '$0$'],
     correctAnswer: 1,
     explanation: 'Conjugate: $\\dfrac{x}{x(\\sqrt{x+16}+4)} \\to \\dfrac{1}{4+4} = \\dfrac{1}{8}$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 3,
   },
   {
     question: 'Compute $\\lim_{x \\to 7} \\dfrac{\\sqrt{x + 2} - 3}{x - 7}$.',
     options: ['$1/3$', '$1/6$', '$1/9$', '$0$'],
     correctAnswer: 1,
     explanation: 'Conjugate: $\\dfrac{(x+2)-9}{(x-7)(\\sqrt{x+2}+3)} \\to \\dfrac{1}{6}$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 3,
   },
   {
     question: 'Compute $\\lim_{x \\to 0} \\dfrac{\\sqrt{1 + x} - 1}{x}$.',
     options: ['$0$', '$1/2$', '$1$', '$2$'],
     correctAnswer: 1,
     explanation: 'Conjugate gives $\\dfrac{1}{\\sqrt{1+x}+1} \\to \\dfrac{1}{2}$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 3,
   },
   {
     question: 'Compute $\\lim_{x \\to 0} \\dfrac{x}{\\sqrt{x + 4} - 2}$.',
     options: ['$0$', '$2$', '$4$', 'DNE'],
     correctAnswer: 2,
     explanation: 'Multiply by $\\dfrac{\\sqrt{x+4}+2}{\\sqrt{x+4}+2}$: numerator becomes $x(\\sqrt{x+4}+2)$, denominator $x$. Cancel: $\\sqrt{x+4}+2 \\to 4$.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 4,
   },
   {
     question: 'Why is multiplying by $\\dfrac{\\text{conjugate}}{\\text{conjugate}}$ a legal step inside a limit?',
     options: ['The factor equals 1 for $x$ near $a$', 'Limits ignore any products, so factors are allowed', 'The factor equals 0, which makes the limit 0', 'It removes the variable from the expression'],
     correctAnswer: 0,
     explanation: 'The conjugate over itself is a nonzero quantity divided by itself, so the factor equals 1 for $x$ near $a$ and does not change the value of the expression. Limits do respect products, the factor is not 0, and the variable is still present afterward.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 1,
   },
 
   // ─────────────── limits-at-infinity ───────────────
@@ -3648,70 +3825,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$0$', '$1$', '$\\infty$', 'DNE'],
     correctAnswer: 0,
     explanation: 'Constant over a power that grows without bound → 0.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 1,
   },
   {
     question: '$\\lim_{x \\to -\\infty} e^x$ equals:',
     options: ['$-\\infty$', '$0$', '$1$', '$+\\infty$'],
     correctAnswer: 1,
     explanation: '$e^x$ at very negative inputs is a tiny positive number $\\to 0$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 4,
   },
   {
     question: '$\\lim_{x \\to \\infty} \\arctan x$ equals:',
     options: ['$0$', '$1$', '$\\pi/2$', '$\\pi$'],
     correctAnswer: 2,
     explanation: '$\\arctan x$ is the inverse of $\\tan$ on $(-\\pi/2, \\pi/2)$, so as $x \\to \\infty$ it levels off at $\\pi/2$. It keeps increasing past $\\arctan 1 = \\pi/4$, so it does not stop at $1$ or $0$, and $\\pi$ is outside its range.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 1,
   },
   {
     question: '$\\lim_{x \\to \\infty} \\dfrac{5x^2 - 1}{2x^2 + 7}$ equals:',
     options: ['$0$', '$2/5$', '$5/2$', '$\\infty$'],
     correctAnswer: 2,
     explanation: 'Equal degrees → ratio of leading coefficients: $5/2$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 2,
   },
   {
     question: '$\\lim_{x \\to \\infty} \\dfrac{3x + 4}{x^3 - 1}$ equals:',
     options: ['$0$', '$3$', '$\\infty$', 'DNE'],
     correctAnswer: 0,
     explanation: 'Bottom-heavier (degree 3 > degree 1) → 0.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 2,
   },
   {
     question: '$\\lim_{x \\to \\infty} \\dfrac{x^4 + 1}{x^2 + 5}$ equals:',
     options: ['$0$', '$1/5$', '$1$', '$+\\infty$'],
     correctAnswer: 3,
     explanation: 'Top-heavier (degree 4 > degree 2) and leading coefficients positive → $+\\infty$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 2,
   },
   {
     question: '$\\lim_{x \\to \\infty} \\dfrac{\\sqrt{4x^2 + 1}}{x}$ equals:',
     options: ['$0$', '$1$', '$2$', '$4$'],
     correctAnswer: 2,
     explanation: 'For large positive $x$, $\\sqrt{4x^2 + 1} \\sim 2x$. Ratio $\\to 2$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 3,
   },
   {
     question: '$\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{4x^2 + 1}}{x}$ equals:',
     options: ['$2$', '$-2$', '$0$', '$4$'],
     correctAnswer: 1,
     explanation: 'For large NEGATIVE $x$, $\\sqrt{4x^2 + 1} \\sim -2x$ (positive output, negative $x$). Ratio $\\to -2$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 3,
   },
   {
     question: '$\\lim_{x \\to \\infty} \\dfrac{\\ln x}{x}$ equals:',
     options: ['$0$', '$1$', '$\\infty$', 'DNE'],
     correctAnswer: 0,
     explanation: 'Logs grow slower than any positive power of $x$, so the ratio $\\to 0$.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 4,
   },
   {
     question: '$\\lim_{x \\to \\infty} \\sin x$ equals:',
     options: ['$0$', '$1$', '$\\infty$', 'Does not exist'],
     correctAnswer: 3,
     explanation: '$\\sin x$ keeps oscillating between $-1$ and $1$ as $x \\to \\infty$ and never settles, so the limit does not exist. It does not approach $0$ or $1$, and it stays bounded, so it is not infinite.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 4,
   },
 
   // ─────────────── infinite-limits-vertical-asymptotes ───────────────
@@ -3720,70 +3897,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$f(a)$ is defined and equals $+\\infty$', '$f(x)$ increases without bound', '$f(x)$ stays bounded as $x \\to a$', '$f(x)$ approaches 0 as $x \\to a$'],
     correctAnswer: 1,
     explanation: 'The notation means that as $x \\to a$, $f(x)$ grows without bound in the positive direction. It does not assign a value to $f(a)$ ($\\infty$ is not a number), and it contradicts both staying bounded and approaching 0.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 1,
   },
   {
     question: '$\\lim_{x \\to 3^+} \\dfrac{1}{x - 3}$ equals:',
     options: ['$0$', '$+\\infty$', '$-\\infty$', '$1$'],
     correctAnswer: 1,
     explanation: 'For $x$ slightly $> 3$, $x - 3$ is small positive. $1/(\\text{small +}) = +\\infty$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 2,
   },
   {
     question: '$\\lim_{x \\to 3^-} \\dfrac{1}{x - 3}$ equals:',
     options: ['$0$', '$+\\infty$', '$-\\infty$', '$1$'],
     correctAnswer: 2,
     explanation: 'For $x$ slightly $< 3$, $x - 3$ is small negative. $1/(\\text{small -}) = -\\infty$.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 2,
   },
   {
     question: '$\\lim_{x \\to 0} \\dfrac{1}{x^2}$ equals:',
     options: ['$0$', '$+\\infty$', '$-\\infty$', 'DNE (sides disagree)'],
     correctAnswer: 1,
     explanation: 'Squared denom keeps both sides positive. Both go to $+\\infty$, so two-sided limit is $+\\infty$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 1,
   },
   {
     question: 'How many vertical asymptotes does $f(x) = \\dfrac{x + 1}{x^2 - 16}$ have?',
     options: ['$0$', '$1$', '$2$', '$4$'],
     correctAnswer: 2,
     explanation: '$x^2 - 16 = 0$ at $x = \\pm 4$. Numerator nonzero at both. Two asymptotes.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 3,
   },
   {
     question: 'For $f(x) = \\dfrac{x - 5}{x^2 - 25}$, $x = 5$ is a:',
     options: ['Vertical asymptote', 'Removable hole', 'Horizontal asymptote', 'Jump discontinuity'],
     correctAnswer: 1,
     explanation: '$\\frac{x-5}{(x-5)(x+5)} = \\frac{1}{x+5}$ for $x \\ne 5$, so the factor $x - 5$ cancels and $x = 5$ is a removable hole with limit $\\frac{1}{10}$. The asymptote is at $x = -5$, a horizontal asymptote is a line $y = c$, and the one-sided limits at $5$ agree, so there is no jump.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 3,
   },
   {
     question: '$\\lim_{x \\to 2^+} \\dfrac{x + 3}{x - 2}$ equals:',
     options: ['$0$', '$+\\infty$', '$-\\infty$', '$5$'],
     correctAnswer: 1,
     explanation: 'Numerator $\\to 5 > 0$, denom small positive. $+/+ = +\\infty$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 2,
   },
   {
     question: '$\\lim_{x \\to 0^+} \\ln x$ equals:',
     options: ['$0$', '$1$', '$+\\infty$', '$-\\infty$'],
     correctAnswer: 3,
     explanation: '$\\ln x \\to -\\infty$ as $x \\to 0^+$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 4,
   },
   {
     question: 'For $f(x) = \\dfrac{(x-1)}{(x-1)^3}$, $x = 1$ is a:',
     options: ['Hole', 'Vertical asymptote', 'Horizontal asymptote', 'No discontinuity'],
     correctAnswer: 1,
     explanation: 'Cancel one $(x-1)$: $\\dfrac{1}{(x-1)^2}$. Asymptote remains.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 3,
   },
   {
     question: 'Identify ALL vertical asymptotes of $f(x) = \\dfrac{x + 2}{(x-1)(x-3)(x+2)}$.',
     options: ['$x = 1, 3, -2$', '$x = 1, 3$ only', '$x = -2$ only', 'None'],
     correctAnswer: 1,
     explanation: 'The $(x+2)$ in numerator cancels with $(x+2)$ in denom → hole at $x = -2$. Asymptotes at $x = 1$ and $x = 3$.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 3,
   },
 
   // ─────────────── continuity-introduction ───────────────
@@ -3792,70 +3969,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$f(a)$ is defined', '$\\lim_{x \\to a} f(x)$ exists', '$\\lim_{x \\to a} f(x) = f(a)$', '$f\'(a)$ exists'],
     correctAnswer: 3,
     explanation: 'Continuity at $a$ requires $f(a)$ defined, $\\lim_{x \\to a} f(x)$ existing, and the two being equal. Differentiability is stronger than continuity and is not one of the three conditions.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 1,
   },
   {
     question: 'Where is $f(x) = x^4 - 7x + 2$ continuous?',
     options: ['All $x \\ne 0$', '$x > 0$ only', 'All real $x$', '$x \\ge 0$ only'],
     correctAnswer: 2,
     explanation: 'Polynomials are continuous everywhere, so $f$ is continuous for all real $x$. Nothing in $x^4 - 7x + 2$ is undefined at $0$ or for negative inputs.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 2,
   },
   {
     question: 'Where is $f(x) = \\sqrt{x - 3}$ continuous?',
     options: ['All $x$', '$x \\ge 3$', '$x > 3$', '$x \\ne 3$'],
     correctAnswer: 1,
     explanation: 'Defined for $x \\ge 3$, continuous on its domain (right-continuous at 3).',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 2,
   },
   {
     question: 'Is $f(x) = \\dfrac{x^2 - 9}{x - 3}$ continuous at $x = 3$?',
     options: ['Yes, because $f(x) \\to 6$ as $x \\to 3$', 'No, $f(3)$ is undefined', 'Yes, once the common factor cancels', 'Only from the right side of $x = 3$'],
     correctAnswer: 1,
     explanation: 'Substituting gives $f(3) = 0/0$, which is undefined, so the first condition for continuity fails. The limit does exist (it is 6), which makes the discontinuity removable, but $f$ as written is still not continuous at 3; cancelling the factor defines a different function.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 1,
   },
   {
     question: 'For $f(x) = \\begin{cases} 2x + 5, & x \\le 1 \\\\ x^2 + k, & x > 1 \\end{cases}$, find $k$ for continuity at $x = 1$.',
     options: ['$k = -1$', '$k = 6$', '$k = 7$', '$k = 8$'],
     correctAnswer: 1,
     explanation: 'Left at 1: $7$. Right limit: $1 + k$. Set $1 + k = 7 \\Rightarrow k = 6$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 3,
   },
   {
     question: 'Where is $f(x) = \\dfrac{1}{x^2 - 1}$ continuous?',
     options: ['All $x$', 'All $x \\ne 0$', 'All $x \\ne \\pm 1$', '$x > 0$'],
     correctAnswer: 2,
     explanation: 'Rational function, continuous wherever denom nonzero. $x^2 - 1 = 0$ at $x = \\pm 1$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 2,
   },
   {
     question: 'For $f(x) = \\begin{cases} ax + 3, & x < 2 \\\\ x^2 - 1, & x \\ge 2 \\end{cases}$, find $a$ for continuity at $x = 2$.',
     options: ['$0$', '$1/2$', '$1$', '$3/2$'],
     correctAnswer: 0,
     explanation: 'Left limit: $2a + 3$. Right value: $3$. $2a + 3 = 3 \\Rightarrow a = 0$.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 3,
   },
   {
     question: 'Is the composition $h(x) = \\sin(\\sqrt{x})$ continuous at $x = 0$?',
     options: ['Yes, from the right side', 'No, because $\\sqrt{x}$ is undefined at 0', 'No, because $\\sin$ has no value at 0', 'Only when approached from the left'],
     correctAnswer: 0,
     explanation: '$\\sqrt{x}$ is defined for $x \\ge 0$ with $\\sqrt{0} = 0$, and $\\sin$ is continuous at $0$, so $h$ is continuous from the right at $x = 0$, the left endpoint of its domain. Both functions are defined at $0$, and there are no inputs to the left of 0.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 2,
   },
   {
     question: 'IVT applied to $f(x) = x^3 + x - 4$ on $[1, 2]$ (where $f(1) = -2$, $f(2) = 6$) guarantees:',
     options: ['$f$ is increasing on $(1, 2)$', 'A root exists in $(1, 2)$', 'Exactly one root in $(1, 2)$', 'A root at the midpoint $x = 1.5$'],
     correctAnswer: 1,
     explanation: '$0$ lies between $f(1) = -2$ and $f(2) = 6$, so the IVT gives some $c \\in (1, 2)$ with $f(c) = 0$. The IVT says nothing about monotonicity or uniqueness, and it does not locate the root at the midpoint.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 4,
   },
   {
     question: 'For $f(x) = \\begin{cases} ax + b, & x < 1 \\\\ x^2, & 1 \\le x \\le 2 \\\\ 4x + a, & x > 2 \\end{cases}$ continuous everywhere, find $a + b$.',
     options: ['$0$', '$1$', '$5$', '$-4$'],
     correctAnswer: 1,
     explanation: 'At $x = 2$: $4 = 8 + a \\Rightarrow a = -4$. At $x = 1$: $a + b = 1 \\Rightarrow b = 5$. So $a + b = 1$.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 3,
   },
 
   // ─────────────── types-of-discontinuity ───────────────
@@ -3864,70 +4041,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['The limit of $f(x)$ is $+\\infty$ or $-\\infty$', 'The one-sided limits are finite but differ', 'The limit exists but is not $f(a)$', 'The function is undefined on an interval'],
     correctAnswer: 2,
     explanation: 'A discontinuity is removable when the two-sided limit exists as a finite number but $f(a)$ is undefined or different from it; redefining $f(a)$ fixes it. An infinite limit is an infinite discontinuity, finite but different one-sided limits make a jump, and a function undefined on an interval is not discontinuous at an isolated point.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 1,
   },
   {
     question: 'For $f(x) = \\dfrac{x^2 - 36}{x - 6}$, classify the discontinuity at $x = 6$.',
     options: ['Removable discontinuity', 'Jump discontinuity', 'Vertical asymptote at $x = 6$', 'No discontinuity'],
     correctAnswer: 0,
     explanation: '$\\frac{(x-6)(x+6)}{x-6} = x + 6$ for $x \\neq 6$, so the limit is 12 but $f(6)$ is undefined: a removable discontinuity. The zero in the denominator cancels, so there is no asymptote, the sides agree, so there is no jump, and $f(6)$ undefined means it is not continuous.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 1,
   },
   {
     question: 'A jump discontinuity has:',
     options: ['A two-sided limit that is infinite', 'Unequal finite one-sided limits', 'A hole where the function value is undefined', 'One-sided limits that are both infinite'],
     correctAnswer: 1,
     explanation: 'A jump discontinuity has finite left-hand and right-hand limits that are not equal. Infinite limits describe infinite discontinuities, and a hole with a finite two-sided limit is a removable discontinuity.',
-    difficulty: 'easy', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
+    difficulty: 'easy', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 2,
   },
   {
     question: 'For $f(x) = \\begin{cases} 3x, & x < 2 \\\\ x + 8, & x \\ge 2 \\end{cases}$, jump size at $x = 2$?',
     options: ['$10$', '$16$', '$4$', '$\\dfrac{5}{3}$'],
     correctAnswer: 2,
     explanation: 'The left-hand limit is $3(2) = 6$ and the right-hand limit is $2 + 8 = 10$, so the jump is $|10 - 6| = 4$. $10$ is only the right-hand value, $16$ adds the two values instead of subtracting, and $\\frac{5}{3}$ divides them.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 2,
   },
   {
     question: 'For $f(x) = \\dfrac{1}{(x - 4)^2}$, the discontinuity at $x = 4$ is:',
     options: ['Removable', 'Jump', 'Infinite', 'No discontinuity'],
     correctAnswer: 2,
     explanation: 'Nonzero / 0 → vertical asymptote → infinite discontinuity.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 3,
   },
   {
     question: 'For $f(x) = \\begin{cases} \\dfrac{x^2 - 4}{x - 2}, & x \\ne 2 \\\\ 7, & x = 2 \\end{cases}$, classify $x = 2$.',
     options: ['Removable', 'Jump', 'Infinite', 'None'],
     correctAnswer: 0,
     explanation: 'The limit is $\\lim_{x \\to 2} (x + 2) = 4$, which exists, but $f(2) = 7 \\ne 4$, so the discontinuity is removable. The one-sided limits agree (no jump), they are finite (not infinite), and the mismatch with $f(2)$ means $f$ is not continuous there.',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 1,
   },
   {
     question: 'For $\\tan x$ at $x = \\pi/2$, the discontinuity is:',
     options: ['Removable discontinuity', 'Jump discontinuity', 'Infinite discontinuity', 'No discontinuity'],
     correctAnswer: 2,
     explanation: '$\\tan x = \\frac{\\sin x}{\\cos x}$ has $\\cos x = 0$ and $\\sin x = 1$ at $x = \\pi/2$, so it has a vertical asymptote there: an infinite discontinuity. The one-sided limits are $+\\infty$ and $-\\infty$, so the limit is neither a finite value (removable) nor two finite values (jump).',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 3,
   },
   {
     question: 'Which discontinuity type can be "fixed" by redefining one point?',
     options: ['Jump discontinuity', 'Infinite discontinuity', 'Removable discontinuity', 'Oscillating discontinuity'],
     correctAnswer: 2,
     explanation: 'Only removable discontinuities can be patched (limit exists finitely).',
-    difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
+    difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 4,
   },
   {
     question: 'For $f(x) = \\dfrac{x^2 - 4}{x^2 - x - 2} = \\dfrac{(x-2)(x+2)}{(x-2)(x+1)}$, classify the discontinuities.',
     options: ['Holes at $x = 2$ and $x = -1$', 'Hole at $x = 2$, asymptote at $x = -1$', 'Asymptotes at both', 'No discontinuities'],
     correctAnswer: 1,
     explanation: '$(x-2)$ cancels → hole at $x=2$. $(x+1)$ remains in denom → asymptote at $x=-1$.',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 4,
   },
   {
     question: 'For $f(x) = \\begin{cases} x + 3, & x < 0 \\\\ \\dfrac{1}{x}, & x > 0 \\end{cases}$, the discontinuity at $x = 0$ is:',
     options: ['Removable', 'Jump', 'Infinite', 'No discontinuity'],
     correctAnswer: 2,
     explanation: 'Left limit: $3$ (finite). Right limit: $+\\infty$. At least one side is unbounded → infinite (essential).',
-    difficulty: 'hard', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both',
+    difficulty: 'hard', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 4,
   },
 
   // ─────────────── continuity-ivt-calcab ───────────────
@@ -4008,70 +4185,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$e^x$', '$x e^{x-1}$', '$e^x \\ln x$', '$1/e^x$'],
     correctAnswer: 0,
     explanation: '$e^x$ is its own derivative.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 1,
   },
   {
     question: '$\\dfrac{d}{dx}\\left[ \\ln x \\right] = $',
     options: ['$1/x$', '$\\ln x$', '$x \\ln x$', '$\\dfrac{1}{x \\ln 10}$'],
     correctAnswer: 0,
     explanation: '$\\frac{d}{dx}[\\ln x] = \\frac{1}{x}$ for $x > 0$. $\\ln x$ treats the function like $e^x$, $x \\ln x$ is not a derivative of $\\ln x$, and $\\frac{1}{x \\ln 10}$ is the derivative of $\\log_{10} x$, not the natural log.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 2,
   },
   {
     question: '$\\dfrac{d}{dx}\\left[ a^x \\right] = $ (for $a > 0$, $a \\ne 1$)',
     options: ['$a^x$', '$x a^{x-1}$', '$a^x \\ln a$', '$a^x / \\ln a$'],
     correctAnswer: 2,
     explanation: 'General exponential rule: $\\dfrac{d}{dx} a^x = a^x \\ln a$.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 1,
   },
   {
     question: '$\\dfrac{d}{dx}\\left[ e^{3x} \\right] = $',
     options: ['$e^{3x}$', '$3e^{3x}$', '$3x e^{3x-1}$', '$e^{3x} \\ln 3$'],
     correctAnswer: 1,
     explanation: 'Chain rule: $e^{3x} \\cdot 3$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 1,
   },
   {
     question: '$\\dfrac{d}{dx}\\left[ \\ln(x^2 + 1) \\right] = $',
     options: ['$\\dfrac{1}{x^2 + 1}$', '$\\dfrac{2x}{x^2 + 1}$', '$\\dfrac{1}{2x}$', '$2x \\ln(x^2 + 1)$'],
     correctAnswer: 1,
     explanation: 'Chain rule: $\\dfrac{1}{x^2 + 1} \\cdot 2x$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 2,
   },
   {
     question: '$\\dfrac{d}{dx}\\left[ x^2 e^x \\right] = $',
     options: ['$e^x(2x)$', '$x^2 e^x$', '$e^x(2x + x^2)$', '$2 e^x$'],
     correctAnswer: 2,
     explanation: 'Product rule: $2x \\cdot e^x + x^2 \\cdot e^x = e^x(2x + x^2)$. $e^x(2x)$ keeps only the first product-rule term, $x^2 e^x$ keeps only the second, and $2e^x$ multiplies the derivatives incorrectly.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 3,
   },
   {
     question: '$\\dfrac{d}{dx}\\left[ \\log_2 x \\right] = $',
     options: ['$\\dfrac{1}{x}$', '$\\dfrac{1}{x \\ln 2}$', '$\\dfrac{\\ln 2}{x}$', '$2/x$'],
     correctAnswer: 1,
     explanation: '$\\dfrac{d}{dx} \\log_a x = \\dfrac{1}{x \\ln a}$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 2,
   },
   {
     question: '$\\dfrac{d}{dx}\\left[ e^{\\sin x} \\right] = $',
     options: ['$e^{\\sin x}$', '$\\cos x \\cdot e^{\\sin x}$', '$\\sin x \\cdot e^{\\cos x}$', '$e^{\\cos x}$'],
     correctAnswer: 1,
     explanation: 'Chain rule: derivative of inner $\\sin x$ is $\\cos x$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 3,
   },
   {
     question: 'If $y = x^x$ (for $x > 0$), then $\\dfrac{dy}{dx} = $',
     options: ['$x \\cdot x^{x-1}$', '$x^x \\ln x$', '$x^x \\ln x + x^x$', '$\\ln x + 1$'],
     correctAnswer: 2,
     explanation: 'Logarithmic differentiation: $\\ln y = x \\ln x$, so $\\frac{y\'}{y} = \\ln x + 1$ and $y\' = x^x \\ln x + x^x$. The power rule treats the exponent as constant, $x^x \\ln x$ treats the base as constant, and $\\ln x + 1$ forgets to multiply back by $y$.',
-    difficulty: 'hard', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 7,
   },
   {
     question: '$\\dfrac{d}{dx}\\left[ \\ln|\\cos x| \\right] = $',
     options: ['$\\sec x$', '$-\\tan x$', '$\\tan x$', '$-\\cot x$'],
     correctAnswer: 1,
     explanation: '$\\dfrac{1}{\\cos x} \\cdot (-\\sin x) = -\\tan x$.',
-    difficulty: 'hard', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 2,
   },
 
   // ─────────────── implicit-differentiation-calcab ───────────────
@@ -4080,70 +4257,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$y$ is given explicitly as a polynomial in $x$', '$y$ is not solved for in terms of $x$', '$y$ is a linear function with a constant slope', '$y$ appears only on one side of the equation'],
     correctAnswer: 1,
     explanation: 'Implicit differentiation is used when $y$ is defined by an equation relating $x$ and $y$ rather than given as an explicit formula $y = \\ldots$. When $y$ is already an explicit polynomial or linear function, or is isolated on one side, ordinary differentiation works.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'When differentiating $y^2$ with respect to $x$ (using implicit differentiation), you get:',
     options: ['$2y$', '$2y \\dfrac{dy}{dx}$', '$y^2 \\dfrac{dy}{dx}$', '$2y + \\dfrac{dy}{dx}$'],
     correctAnswer: 1,
     explanation: 'Chain rule: $\\dfrac{d}{dx}[y^2] = 2y \\cdot y\'$.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'Differentiate $xy$ with respect to $x$ (implicitly):',
     options: ['$y + \\dfrac{dy}{dx}$', '$x \\dfrac{dy}{dx}$', '$y + x \\dfrac{dy}{dx}$', '$\\dfrac{dy}{dx}$'],
     correctAnswer: 2,
     explanation: 'Product rule: $\\frac{d}{dx}[xy] = 1 \\cdot y + x \\cdot \\frac{dy}{dx}$. Dropping the factor $x$ gives $y + \\frac{dy}{dx}$, and each of the other choices keeps only part of the product rule.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 2,
   },
   {
     question: 'Given $x^2 + y^2 = 25$, find $\\dfrac{dy}{dx}$.',
     options: ['$-x/y$', '$x/y$', '$-y/x$', '$y/x$'],
     correctAnswer: 0,
     explanation: '$2x + 2yy\' = 0 \\Rightarrow y\' = -x/y$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'Given $x^2 + y^2 = 25$, find the slope of the tangent at $(3, 4)$.',
     options: ['$3/4$', '$4/3$', '$-3/4$', '$-4/3$'],
     correctAnswer: 2,
     explanation: 'Slope $= -x/y = -3/4$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'Given $x^3 + y^3 = 9$, find $\\dfrac{dy}{dx}$.',
     options: ['$-x^2/y^2$', '$x^2/y^2$', '$-y^2/x^2$', '$-3x^2/y^2$'],
     correctAnswer: 0,
     explanation: '$3x^2 + 3y^2 y\' = 0 \\Rightarrow y\' = -x^2/y^2$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'Given $xy + y^2 = 6$, find $\\dfrac{dy}{dx}$.',
     options: ['$-y/(x + 2y)$', '$y/(x + 2y)$', '$(x + 2y)/(-y)$', '$-x/(2y)$'],
     correctAnswer: 0,
     explanation: '$y + xy\' + 2yy\' = 0 \\Rightarrow y\'(x + 2y) = -y \\Rightarrow y\' = -y/(x + 2y)$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 2,
   },
   {
     question: 'Given $\\sin(xy) = x$, find $\\dfrac{dy}{dx}$ at the point where this is meaningful.',
     options: ['$\\dfrac{1 - y\\cos(xy)}{x \\cos(xy)}$', '$\\dfrac{\\cos(xy) - y}{x}$', '$1/\\cos(xy)$', '$-y/x$'],
     correctAnswer: 0,
     explanation: '$\\cos(xy)(y + xy\') = 1 \\Rightarrow y\' = \\dfrac{1 - y\\cos(xy)}{x\\cos(xy)}$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 3,
   },
   {
     question: 'For $x^2 - xy + y^2 = 7$ at $(1, 3)$, $\\dfrac{dy}{dx} = $',
     options: ['$1/5$', '$-1/5$', '$5$', '$-5$'],
     correctAnswer: 0,
     explanation: '$2x - y - xy\' + 2yy\' = 0 \\Rightarrow y\'(2y - x) = y - 2x$. At $(1,3)$: $y\'(5) = 1 \\Rightarrow y\' = 1/5$.',
-    difficulty: 'hard', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 2,
   },
   {
     question: 'The tangent line to $x^2 + y^2 = 25$ at $(3, 4)$ has equation:',
     options: ['$y = -\\tfrac{3}{4}(x - 3) + 4$', '$y = \\tfrac{4}{3}(x - 3) + 4$', '$y = \\tfrac{3}{4} x$', '$y = 4$'],
     correctAnswer: 0,
     explanation: 'Implicit differentiation gives $\\frac{dy}{dx} = -\\frac{x}{y}$, so the slope at $(3, 4)$ is $-\\frac{3}{4}$. Point-slope form gives $y = -\\frac{3}{4}(x - 3) + 4$. The slope $\\frac{4}{3}$ is the slope of the radius (perpendicular to the tangent), $y = \\frac{3}{4}x$ misses the point $(3, 4)$, and $y = 4$ has slope $0$.',
-    difficulty: 'hard', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 7,
   },
 
   // ─────────────── concavity-inflection-points-calcab ───────────────
@@ -4152,70 +4329,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$f\' > 0$', '$f\' < 0$', '$f\'\' > 0$', '$f\'\' < 0$'],
     correctAnswer: 2,
     explanation: 'Positive second derivative ⇒ concave up.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'A function is concave DOWN where:',
     options: ['$f\' > 0$', '$f\' < 0$', '$f\'\' > 0$', '$f\'\' < 0$'],
     correctAnswer: 3,
     explanation: 'Negative second derivative ⇒ concave down.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'An inflection point of $f$ is where:',
     options: ['$f\'$ changes from positive to negative', '$f\'\'(x)$ equals zero at that point', 'The concavity changes', '$f$ has a local maximum or minimum'],
     correctAnswer: 2,
     explanation: 'An inflection point is where the concavity changes, that is, where $f\'\'$ changes sign. $f\'\'(x) = 0$ alone is not enough (for $x^4$, $f\'\'(0) = 0$ but the concavity does not change), and a sign change of $f\'$ or a local extremum describe relative maxima and minima.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'For $f(x) = x^3$, the second derivative is $f\'\'(x) = 6x$. The inflection point is at:',
     options: ['$x = -1$', '$x = 0$', '$x = 1$', 'No inflection point'],
     correctAnswer: 1,
     explanation: '$f\'\'$ changes sign at $x = 0$ (negative for $x<0$, positive for $x>0$).',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'For $f(x) = x^4$, $f\'\'(x) = 12x^2 \\ge 0$ everywhere. Does $f$ have an inflection point at $x = 0$?',
     options: ['Yes, because $f\'\'(0) = 0$ there', 'No, concavity never changes', 'Only on the right side of $x = 0$', 'Only if $f\'(0)$ is also equal to 0'],
     correctAnswer: 1,
     explanation: '$f\'\'(x) = 12x^2 \\ge 0$ on both sides of $0$, so $f$ is concave up on both sides and the concavity never changes: no inflection point. $f\'\'(0) = 0$ only makes $x = 0$ a candidate, an inflection point is not one-sided, and $f\'(0)$ is irrelevant to concavity.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 7,
   },
   {
     question: 'The Second Derivative Test: if $f\'(c) = 0$ and $f\'\'(c) > 0$, then $c$ is:',
     options: ['Local maximum', 'Local minimum', 'Inflection point', 'Cannot determine'],
     correctAnswer: 1,
     explanation: '$f\'\' > 0$ at a critical point ⇒ concave up there ⇒ local min.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 2,
   },
   {
     question: 'For $f(x) = x^3 - 3x^2$, $f\'\'(x) = 6x - 6$. Where is $f$ concave up?',
     options: ['$x < 1$', '$x > 1$', '$x < 0$', 'Everywhere'],
     correctAnswer: 1,
     explanation: '$6x - 6 > 0 \\Leftrightarrow x > 1$.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 3,
   },
   {
     question: 'For $f(x) = x^3 - 3x^2$, the inflection point is at:',
     options: ['$x = 0$', '$x = 1$', '$x = 2$', '$x = 3$'],
     correctAnswer: 1,
     explanation: '$f\'\'(x) = 6x - 6 = 0 \\Rightarrow x = 1$. Sign changes there.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 3,
   },
   {
     question: 'If the graph of $f\'$ is increasing on an interval $I$, then on $I$:',
     options: ['$f$ is increasing', '$f$ is concave up', '$f$ is concave down', '$f$ is constant'],
     correctAnswer: 1,
     explanation: '$f\'$ increasing ⇔ $f\'\' > 0$ ⇔ concave up.',
-    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 4,
   },
   {
     question: 'For $f(x) = \\sin x$ on the open interval $(0, 2\\pi)$, the inflection point(s) are at:',
     options: ['$x = \\pi/2, 3\\pi/2$', '$x = 0, \\pi, 2\\pi$', '$x = \\pi$ only', '$x = \\pi/2$ only'],
     correctAnswer: 2,
     explanation: '$f\'\'(x) = -\\sin x$, which changes sign only at $x = \\pi$ inside $(0, 2\\pi)$. At the endpoints $x = 0$ and $x = 2\\pi$, $f\'\' = 0$ but the graph does not exist on both sides, so concavity cannot change there. $x = \\pi/2$ and $3\\pi/2$ are where $f\' = \\cos x = 0$: the maximum and minimum of $\\sin x$.',
-    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 1,
   },
 
   // ─────────────── related-rates-calcab ───────────────
@@ -4224,70 +4401,70 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['Comparing the graphs of two different functions', 'Linking rates through one equation', 'Finding the inflection points of a function', 'Computing rates of change at one point'],
     correctAnswer: 1,
     explanation: 'In a related-rates problem you write an equation linking the quantities, differentiate it with respect to time, and solve for the unknown rate using the known ones. Comparing graphs and finding inflection points are different tasks, and computing rates at one point does not by itself link several changing quantities.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'When you differentiate $V = \\tfrac{4}{3}\\pi r^3$ with respect to $t$:',
     options: ['$\\dfrac{dV}{dt} = 4\\pi r^2$', '$\\dfrac{dV}{dt} = 4\\pi r^2 \\dfrac{dr}{dt}$', '$\\dfrac{dV}{dt} = 4\\pi r^3$', '$\\dfrac{dV}{dt} = \\tfrac{4}{3}\\pi r^3 \\dfrac{dr}{dt}$'],
     correctAnswer: 1,
     explanation: 'Chain rule: $\\dfrac{dV}{dt} = 4\\pi r^2 \\cdot \\dfrac{dr}{dt}$.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 3,
   },
   {
     question: 'For a square with side $s$, area $A = s^2$. If $\\dfrac{ds}{dt} = 2$, then $\\dfrac{dA}{dt}$ at $s = 5$ is:',
     options: ['$10$', '$20$', '$25$', '$50$'],
     correctAnswer: 1,
     explanation: '$\\dfrac{dA}{dt} = 2s \\cdot \\dfrac{ds}{dt} = 2(5)(2) = 20$.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'Air is pumped into a spherical balloon at $\\dfrac{dV}{dt} = 100$ $cm^{3}/s$. Find $\\dfrac{dr}{dt}$ when $r = 5$ cm.',
     options: ['$1/(5\\pi)$ cm/s', '$4/\\pi$ cm/s', '$1/\\pi$ cm/s', '$5/\\pi$ cm/s'],
     correctAnswer: 2,
     explanation: '$100 = 4\\pi(5)^2 \\dfrac{dr}{dt} = 100\\pi \\dfrac{dr}{dt} \\Rightarrow \\dfrac{dr}{dt} = 1/\\pi$ cm/s.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 3,
   },
   {
     question: 'A ladder 10 ft long leans against a wall. Bottom slides away at 2 ft/s. When the bottom is 6 ft from the wall, top slides DOWN at:',
     options: ['$1.5$ ft/s', '$2$ ft/s', '$3$ ft/s', '$4$ ft/s'],
     correctAnswer: 0,
     explanation: '$x^2 + y^2 = 100$. At $x = 6$: $y = 8$. $2x x\' + 2y y\' = 0 \\Rightarrow y\' = -x x\' / y = -(6)(2)/8 = -1.5$. Top moves down at $1.5$ ft/s.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 2,
   },
   {
     question: 'Water fills a conical tank (vertex down, $r = h/2$) at $5$ $m^{3}/min$. Find $\\dfrac{dh}{dt}$ when $h = 4$ m.',
     options: ['$\\dfrac{5}{4\\pi}$ m/min', '$\\dfrac{5}{\\pi}$ m/min', '$\\dfrac{5}{16\\pi}$ m/min', '$\\dfrac{5}{8\\pi}$ m/min'],
     correctAnswer: 0,
     explanation: '$V = \\tfrac{1}{3}\\pi r^2 h = \\tfrac{1}{3}\\pi (h/2)^2 h = \\tfrac{\\pi h^3}{12}$. $\\dfrac{dV}{dt} = \\tfrac{\\pi h^2}{4} \\dfrac{dh}{dt}$. At $h = 4$: $5 = 4\\pi \\dfrac{dh}{dt} \\Rightarrow \\dfrac{dh}{dt} = \\tfrac{5}{4\\pi}$.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 3,
   },
   {
     question: 'A car drives north at 60 mph; another drives east at 80 mph from the same intersection. After 1 hr, distance between them is changing at:',
     options: ['$100$ mph', '$140$ mph', '$120$ mph', '$80$ mph'],
     correctAnswer: 0,
     explanation: 'After 1 hr: $y = 60$, $x = 80$, $D = 100$. $D \\dfrac{dD}{dt} = x x\' + y y\' = 80(80) + 60(60) = 10000$. $\\dfrac{dD}{dt} = 100$ mph.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 2,
   },
   {
     question: 'For $A = \\pi r^2$ with $\\dfrac{dr}{dt} = 3$, $\\dfrac{dA}{dt}$ at $r = 4$ is:',
     options: ['$12\\pi$', '$24\\pi$', '$48\\pi$', '$96\\pi$'],
     correctAnswer: 1,
     explanation: '$\\dfrac{dA}{dt} = 2\\pi r \\dfrac{dr}{dt} = 2\\pi(4)(3) = 24\\pi$.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 5,
   },
   {
     question: 'A particle moves on $y = x^2$ with $\\dfrac{dx}{dt} = 2$. At $x = 3$, $\\dfrac{dy}{dt} = $',
     options: ['$6$', '$9$', '$12$', '$18$'],
     correctAnswer: 2,
     explanation: '$\\dfrac{dy}{dt} = 2x \\dfrac{dx}{dt} = 2(3)(2) = 12$.',
-    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 5,
   },
   {
     question: 'A streetlight is 15 ft tall. A 6-ft person walks away at 4 ft/s. The tip of the person\'s shadow moves at:',
     options: ['$4$ ft/s', '$\\dfrac{20}{3}$ ft/s', '$10$ ft/s', '$\\dfrac{8}{3}$ ft/s'],
     correctAnswer: 1,
     explanation: 'Similar triangles: $\\tfrac{15}{x + s} = \\tfrac{6}{s} \\Rightarrow s = \\tfrac{2x}{3}$. Tip position: $x + s = \\tfrac{5x}{3}$. Rate: $\\tfrac{5}{3}(4) = \\tfrac{20}{3}$ ft/s.',
-    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 2,
   },
 
   // ─────────────── definition-of-derivative-calcab (top-up) ───────────────
@@ -4296,63 +4473,63 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$\\lim_{h \\to 0} \\dfrac{f(a + h) - f(a)}{h}$', '$\\lim_{h \\to 0} \\dfrac{f(a) - f(a - h)}{h}$ only', '$\\dfrac{f(b) - f(a)}{b - a}$', '$\\lim_{x \\to a} f(x)$'],
     correctAnswer: 0,
     explanation: 'Standard form (forward difference quotient).',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'An equivalent limit definition of $f\'(a)$ is:',
     options: ['$\\lim_{x \\to a} \\dfrac{f(x) - f(a)}{x - a}$', '$\\dfrac{f(x) - f(a)}{x - a}$', '$\\lim_{x \\to a} f\'(x)$', '$\\int_a^x f\'(t)\\,dt$'],
     correctAnswer: 0,
     explanation: 'Letting $x = a + h$ turns the standard definition into $\\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a}$. Without the limit, the quotient is only the slope of a secant line, $\\lim_{x \\to a} f\'(x)$ assumes $f\'$ is continuous, and $\\int_a^x f\'(t)\\,dt$ equals $f(x) - f(a)$, not a derivative.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'Use the limit definition to find $f\'(x)$ for $f(x) = 3x + 1$.',
     options: ['$3$', '$1$', '$3x$', '$0$'],
     correctAnswer: 0,
     explanation: '$\\lim_{h\\to 0} \\dfrac{[3(x+h) + 1] - [3x + 1]}{h} = \\lim 3 = 3$.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 6,
   },
   {
     question: 'Use the limit definition to find $f\'(x)$ for $f(x) = x^2$.',
     options: ['$2x$', '$2x + h$', '$\\dfrac{(x+h)^2 - x^2}{h}$', '$x^2$'],
     correctAnswer: 0,
     explanation: '$\\frac{(x+h)^2 - x^2}{h} = \\frac{2xh + h^2}{h} = 2x + h \\to 2x$ as $h \\to 0$. Stopping at $2x + h$ or at the unsimplified difference quotient leaves out the limit, and $x^2$ is the original function.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 6,
   },
   {
     question: 'Use the limit definition to find $f\'(x)$ for $f(x) = x^2 - 4x$.',
     options: ['$2x - 4$', '$2x$', '$x - 4$', '$2x + 4$'],
     correctAnswer: 0,
     explanation: '$\\dfrac{(x+h)^2 - 4(x+h) - (x^2 - 4x)}{h} = 2x + h - 4 \\to 2x - 4$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 6,
   },
   {
     question: 'Use the limit definition to find $f\'(x)$ for $f(x) = 1/x$.',
     options: ['$1/x^2$', '$-1/x^2$', '$-1/x$', '$\\ln x$'],
     correctAnswer: 1,
     explanation: '$\\dfrac{1/(x+h) - 1/x}{h} = \\dfrac{-1}{x(x+h)} \\to -1/x^2$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 6,
   },
   {
     question: '$\\lim_{h \\to 0} \\dfrac{(2 + h)^3 - 8}{h} = $',
     options: ['$3$', '$8$', '$12$', '$24$'],
     correctAnswer: 2,
     explanation: 'Recognize as $f\'(2)$ for $f(x) = x^3$. $f\'(x) = 3x^2 \\Rightarrow f\'(2) = 12$.',
-    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 6,
   },
   {
     question: '$\\lim_{x \\to \\pi} \\dfrac{\\sin x - 0}{x - \\pi} = $',
     options: ['$0$', '$1$', '$-1$', 'DNE'],
     correctAnswer: 2,
     explanation: 'This is $f\'(\\pi)$ for $f(x) = \\sin x$. $\\cos \\pi = -1$.',
-    difficulty: 'hard', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'If $f$ is differentiable at $a$, which limit MUST equal $f\'(a)$?',
     options: ['$\\lim_{h \\to 0} \\dfrac{f(a + 2h) - f(a)}{h}$', '$\\lim_{h \\to 0} \\dfrac{f(a + h) - f(a - h)}{2h}$', '$\\lim_{h \\to 0} \\dfrac{f(a + h) - f(a)}{2h}$', '$\\lim_{h \\to 0} (f(a + h) - f(a))$'],
     correctAnswer: 1,
     explanation: 'Symmetric difference quotient equals $f\'(a)$ when $f\'(a)$ exists.',
-    difficulty: 'hard', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 3,
   },
 
   // ─────────────── linearization-differentials-calcab (top-up) ───────────────
@@ -4361,42 +4538,35 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$L(x) = f(a) + f\'(a)(x - a)$', '$L(x) = f\'(a) x$', '$L(x) = f(a)(x - a)$', '$L(x) = f(a) + f(x)$'],
     correctAnswer: 0,
     explanation: 'Tangent line at $a$.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'The differential $dy$ is given by:',
     options: ['$dy = y\'$', '$dy = f\'(x) \\, dx$', '$dy = \\Delta y$ exactly', '$dy = f(x) \\, dx$'],
     correctAnswer: 1,
     explanation: 'Definition of the differential.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 3,
   },
   {
     question: 'Linearize $f(x) = \\sqrt{x}$ at $a = 25$. $L(x) = $',
     options: ['$5 + \\tfrac{1}{10}(x - 25)$', '$5 + (x - 25)$', '$25 + \\tfrac{1}{2\\sqrt{x}}(x - 25)$', '$\\tfrac{1}{10}(x - 25)$'],
     correctAnswer: 0,
     explanation: '$f(25) = 5$, $f\'(25) = 1/(2\\sqrt{25}) = 1/10$.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
-  },
-  {
-    question: 'Use linearization at $a = 25$ to estimate $\\sqrt{26}$.',
-    options: ['$5.0$', '$5.1$', '$5.2$', '$5.5$'],
-    correctAnswer: 1,
-    explanation: '$L(26) = 5 + (1/10)(1) = 5.1$.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'A linear approximation overestimates $f$ when $f$ is:',
     options: ['Concave up', 'Concave down', 'Linear', 'Constant'],
     correctAnswer: 1,
     explanation: 'Tangent lies above a concave-down graph.',
-    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 4,
   },
   {
     question: 'For $y = x^3$, find $dy$ when $x = 2$ and $dx = 0.1$.',
     options: ['$0.6$', '$1.2$', '$1.8$', '$2.4$'],
     correctAnswer: 1,
     explanation: '$dy = 3x^2 \\, dx = 12(0.1) = 1.2$.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 3,
   },
 
   // ─────────────── theorem-applications-calcab (top-up) ───────────────
@@ -4405,35 +4575,35 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['Continuous on $[a,b]$ and differentiable on $(a,b)$', 'Differentiable on $[a,b]$ and continuous on $(a,b)$', 'Continuous on $(a,b)$ only', 'A polynomial on $[a,b]$'],
     correctAnswer: 0,
     explanation: 'The MVT needs continuity on the closed interval $[a,b]$ and differentiability on the open interval $(a,b)$. Swapping the intervals leaves the endpoints without continuity, continuity on $(a,b)$ alone is too weak, and the function need not be a polynomial.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 2,
   },
   {
     question: 'MVT conclusion: there exists $c \\in (a, b)$ such that:',
     options: ['$f(c) = \\dfrac{f(b) - f(a)}{b - a}$', '$f\'(c) = \\dfrac{f(b) - f(a)}{b - a}$', '$f\'(c) = 0$', '$f(c) = \\dfrac{f(a) + f(b)}{2}$'],
     correctAnswer: 1,
     explanation: 'The MVT says some tangent slope $f\'(c)$ equals the secant slope $\\frac{f(b) - f(a)}{b - a}$. Setting the function value equal to the secant slope confuses $f$ with $f\'$, $f\'(c) = 0$ is Rolle\'s special case, and the average of the endpoint values is not part of the theorem.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 2,
   },
   {
     question: 'Rolle\'s Theorem additionally requires:',
     options: ['$f(a) = f(b)$', '$f\'(a) = f\'(b)$', '$f(a) \\ne f(b)$', '$f\'$ continuous'],
     correctAnswer: 0,
     explanation: 'Rolle\'s Theorem adds the condition $f(a) = f(b)$ to the MVT hypotheses (continuous on $[a,b]$, differentiable on $(a,b)$). Equal derivatives at the endpoints are not required, unequal function values are the opposite of the condition, and $f\'$ need not be continuous.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 4,
   },
   {
     question: 'For $f(x) = x^2$ on $[0, 4]$, find the $c$ guaranteed by MVT.',
     options: ['$c = 1$', '$c = 2$', '$c = 3$', '$c = 4$'],
     correctAnswer: 1,
     explanation: 'Secant slope: $(16 - 0)/4 = 4$. Set $f\'(c) = 2c = 4 \\Rightarrow c = 2$.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 6,
   },
   {
     question: 'For $f(x) = x^3 - x$ on $[-1, 1]$, $f(-1) = f(1) = 0$. Rolle\'s gives $c$ with $f\'(c) = 0$. Solutions are:',
     options: ['$c = 0$ only', '$c = \\pm 1/\\sqrt{3}$', '$c = \\pm 1$', '$c = 1/2$'],
     correctAnswer: 1,
     explanation: '$f\'(x) = 3x^2 - 1 = 0 \\Rightarrow x = \\pm 1/\\sqrt{3}$ (both inside $(-1,1)$).',
-    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 4,
   },
 
   // ─────────────── optimization-calcab (top-up) ───────────────
@@ -4442,28 +4612,21 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['Find where its derivative is $0$', 'Integrate it over the allowed interval', 'Plug in the endpoints of the domain only', 'Set its second derivative equal to $0$'],
     correctAnswer: 0,
     explanation: 'After writing the objective function, find its critical points by setting the derivative equal to $0$ (or finding where it is undefined), then compare them with any endpoints. Integrating is not part of optimization, endpoints alone miss interior extrema, and $f\'\' = 0$ locates possible inflection points.',
-    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'A rectangle has perimeter $20$. Maximize area. The maximum occurs when the rectangle is:',
     options: ['A $1$ by $9$ rectangle', 'A $5$ by $5$ square', 'A $4$ by $6$ rectangle', 'A $2$ by $8$ rectangle'],
     correctAnswer: 1,
     explanation: 'With $2l + 2w = 20$, the area is $A = l(10 - l)$, and $A\' = 10 - 2l = 0$ gives $l = 5$, so the rectangle is a $5$ by $5$ square with area $25$. The other rectangles have the same perimeter but smaller areas: $9$, $24$ and $16$.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both', part: 6,
   },
   {
     question: 'Find two positive numbers whose sum is $20$ and whose product is maximum.',
     options: ['$10$ and $10$', '$1$ and $19$', '$5$ and $15$', '$8$ and $12$'],
     correctAnswer: 0,
     explanation: '$P(x) = x(20 - x)$. $P\'(x) = 20 - 2x = 0 \\Rightarrow x = 10$.',
-    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both',
-  },
-  {
-    question: 'A box with square base and open top has volume $32$ $ft^{3}$. Minimize surface area $S = x^2 + 4xh$. Optimal $x = $',
-    options: ['$2$', '$4$', '$\\sqrt[3]{32}$', '$8$'],
-    correctAnswer: 1,
-    explanation: '$h = 32/x^2$. $S(x) = x^2 + 128/x$. $S\'(x) = 2x - 128/x^2 = 0 \\Rightarrow x^3 = 64 \\Rightarrow x = 4$.',
-    difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both', part: 1,
   },
 
   // ─────────────── inverse-functions-derivatives-calcab (top-up) ───────────────
@@ -4472,28 +4635,14 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$g\'(x) = 1/f\'(x)$', '$g\'(x) = \\dfrac{1}{f\'(g(x))}$', '$g\'(x) = -f\'(x)$', '$g\'(x) = f\'(x)$'],
     correctAnswer: 1,
     explanation: 'Inverse function derivative formula.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 1,
   },
   {
     question: '$\\dfrac{d}{dx}[\\arcsin x] = $',
     options: ['$\\dfrac{1}{\\sqrt{1 - x^2}}$', '$\\dfrac{-1}{\\sqrt{1 - x^2}}$', '$\\dfrac{1}{1 + x^2}$', '$\\dfrac{1}{x}$'],
     correctAnswer: 0,
     explanation: 'Standard derivative of arcsine.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both',
-  },
-  {
-    question: '$\\dfrac{d}{dx}[\\arctan x] = $',
-    options: ['$\\dfrac{1}{1 + x^2}$', '$\\dfrac{1}{1 - x^2}$', '$\\sec^2 x$', '$\\dfrac{1}{\\sqrt{1 - x^2}}$'],
-    correctAnswer: 0,
-    explanation: 'Standard derivative of arctangent.',
-    difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both',
-  },
-  {
-    question: 'If $f(2) = 5$ and $f\'(2) = 3$, then $(f^{-1})\'(5) = $',
-    options: ['$3$', '$1/3$', '$-3$', '$5$'],
-    correctAnswer: 1,
-    explanation: '$(f^{-1})\'(b) = 1/f\'(a)$ where $f(a) = b$.',
-    difficulty: 'hard', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 3,
   },
 
   // ─────────────── limits-at-infinity-calcab ───────────────
@@ -4574,28 +4723,14 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['$2x^3 + C$', '$3x^3 + C$', '$6x^3 + C$', '$12x + C$'],
     correctAnswer: 0,
     explanation: 'Power rule: $\\int x^n \\, dx = x^{n+1}/(n+1) + C$.',
-    difficulty: 'easy', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 1,
   },
   {
     question: '$\\int (3x^2 - 4x + 1) \\, dx = $',
     options: ['$x^3 - 2x^2 + x + C$', '$x^3 - 4x^2 + x + C$', '$3x^3 - 4x^2 + x + C$', '$6x - 4 + C$'],
     correctAnswer: 0,
     explanation: 'Term-by-term integration.',
-    difficulty: 'easy', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both',
-  },
-  {
-    question: '$\\int \\sec^2 x \\, dx = $',
-    options: ['$\\tan x + C$', '$\\sec x + C$', '$-\\cot x + C$', '$\\sin x + C$'],
-    correctAnswer: 0,
-    explanation: 'Standard antiderivative.',
-    difficulty: 'medium', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both',
-  },
-  {
-    question: '$\\int e^{2x} \\, dx = $',
-    options: ['$e^{2x} + C$', '$\\dfrac{1}{2} e^{2x} + C$', '$2 e^{2x} + C$', '$\\dfrac{e^{2x}}{2x} + C$'],
-    correctAnswer: 1,
-    explanation: 'Reverse chain rule: divide by inner derivative ($2$).',
-    difficulty: 'medium', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 1,
   },
 
   // ─────────────── ap-exam-review-calcab ───────────────
@@ -4604,76 +4739,358 @@ export const calcABQuestionPool: CalcABQuestion[] = [
     options: ['A sheet of common derivative formulas', 'No formula sheet at all', 'A table of standard integrals only', 'A reference page of trig identities'],
     correctAnswer: 1,
     explanation: 'The AP Calculus exam provides no formula sheet, so derivative rules, integral rules and key identities must be memorized.',
-    difficulty: 'easy', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 7,
   },
   {
     question: 'For an FRQ asking "Justify your answer," you should:',
     options: ['State the final answer and box it', 'Name a theorem and verify its hypotheses', 'Show only the arithmetic you used', 'Sketch a graph that shows the answer'],
     correctAnswer: 1,
     explanation: 'AP rubrics award justification points for naming the relevant theorem or test (IVT, MVT, EVT, a derivative test) and showing that its conditions hold. A boxed answer, bare arithmetic or a sketch does not explain why the conclusion follows.',
-    difficulty: 'easy', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both',
+    difficulty: 'easy', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 7,
   },
   {
     question: 'When the AP exam allows a calculator, you may:',
     options: ['Report final answers without showing any setup', 'Find zeros and numerical integrals with it', 'Use it for arithmetic but never for graphing', 'Use it only after all of the algebra is done'],
     correctAnswer: 1,
     explanation: 'On calculator sections you may use the calculator to graph, find zeros, compute a derivative at a point numerically and evaluate definite integrals numerically. You must still show the setup, graphing is allowed, and there is no rule that algebra must come first.',
-    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 7,
   },
   {
     question: 'A common AP justification phrase for "the function is continuous" uses:',
     options: ['"By inspection of the graph"', '"Polynomials are continuous everywhere"', '"No justification is needed here"', '"It looks continuous on my calculator"'],
     correctAnswer: 1,
     explanation: 'Cite the standard fact for the function\'s class, such as polynomials being continuous everywhere or rational functions being continuous on their domains. Inspection of a graph or calculator screen is not accepted as justification, and continuity must be justified when a theorem depends on it.',
-    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 1,
   },
   {
     question: 'If $f\'(c) = 0$ and $f\'$ changes from $+$ to $-$ at $c$, then $c$ is a:',
     options: ['Local maximum', 'Local minimum', 'Inflection point', 'Discontinuity'],
     correctAnswer: 0,
     explanation: 'First Derivative Test: $+$ to $-$ ⇒ local max.',
-    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 3,
   },
   {
     question: 'The Fundamental Theorem of Calculus, Part 2, states:',
     options: ['$\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F\' = f$', '$\\dfrac{d}{dx} \\int_a^x f(t)\\,dt = f(x)$', '$\\int_a^b f(x)\\,dx = f(b) - f(a)$', '$\\sum f(x_i) \\Delta x = \\int f(x)\\,dx$'],
     correctAnswer: 0,
     explanation: 'FTC Part 2 evaluates a definite integral with any antiderivative: $\\int_a^b f(x)\\,dx = F(b) - F(a)$ where $F\' = f$. The derivative of an accumulation function is FTC Part 1, evaluating $f$ itself at the endpoints skips finding an antiderivative, and a Riemann sum only approximates the integral.',
-    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 4,
   },
   {
     question: 'For "use a Riemann sum to approximate $\\int_0^4 f(x) dx$ using values from a table at $x = 0, 1, 2, 4$" — the subintervals have widths:',
     options: ['All equal to 1', '$1, 1, 2$', '$1, 2, 1$', 'Cannot do without equal widths'],
     correctAnswer: 1,
     explanation: 'Subinterval widths are differences in given $x$-values: $1-0, 2-1, 4-2 = 1, 1, 2$.',
-    difficulty: 'hard', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 4,
   },
   {
     question: 'For an exponential growth model $\\dfrac{dP}{dt} = kP$, the solution is:',
     options: ['$P = P_0 + kt$', '$P = P_0 e^{kt}$', '$P = P_0 t^k$', '$P = e^k + t$'],
     correctAnswer: 1,
     explanation: 'Standard separable diffeq: $P(t) = P_0 e^{kt}$.',
-    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 6,
   },
   {
     question: 'The average value of $f$ on $[a,b]$ is:',
     options: ['$\\dfrac{f(a) + f(b)}{2}$', '$\\dfrac{1}{b - a} \\int_a^b f(x) dx$', '$\\int_a^b f(x) dx$', '$\\max f - \\min f$'],
     correctAnswer: 1,
     explanation: 'Mean Value Theorem for Integrals.',
-    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both',
+    difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 5,
   },
   {
     question: 'A particle\'s velocity is $v(t)$ on $[a, b]$. Total DISTANCE traveled is:',
     options: ['$\\int_a^b v(t) dt$', '$\\int_a^b |v(t)| dt$', '$v(b) - v(a)$', '$\\max v - \\min v$'],
     correctAnswer: 1,
     explanation: 'Distance integrates absolute value of velocity (speed). Displacement uses $v$ directly.',
-    difficulty: 'hard', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both',
+    difficulty: 'hard', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 5,
   },
+
+  // ══════════════════════════════════════════════════════════════════
+  //  EXIT-QUIZ DEPTH (Oct 2026): written from the CED-trimmed lessons; every
+  //  reachable topic has 15+ items and >= 2 per lesson part (`part` = registry order)
+  // ══════════════════════════════════════════════════════════════════
+  // -- what-is-a-limit --
+  { question: 'For $g(x) = \\dfrac{x^2 - 16}{x - 4}$, the value $g(4)$ is undefined. What is $\\lim_{x \\to 4} g(x)$?', options: ['$8$', '$0$', '$4$', 'Does not exist'], correctAnswer: 0, explanation: 'For $x \\ne 4$, $\\frac{x^2 - 16}{x - 4} = x + 4$, which approaches $8$. The limit ignores the missing value at $x = 4$, so it exists. Reading the numerator\'s value 0 or the input 4 as the answer confuses the limit with what happens exactly at the point.', difficulty: 'easy', domain: 'limits', topicSlug: 'what-is-a-limit', formSet: 'both', part: 1 },
+  { question: 'Which sentence is the correct translation of $\\lim_{x \\to 2^-} f(x) = -\\infty$?', options: ['As $x$ approaches 2 from the right, $f(x)$ decreases without bound', 'As $x$ approaches 2 from the left, $f(x)$ approaches the value $-2$', 'As $x$ approaches 2 from the left, $f(x)$ decreases without bound', 'As $x$ decreases without bound, $f(x)$ approaches 2 from the left'], correctAnswer: 2, explanation: 'The superscript minus means $x$ approaches 2 from values less than 2 (the left), and $= -\\infty$ describes outputs that become large and negative. The superscript is not a sign on the output, it does not mean the right side, and the arrow always shows where $x$ is going.', difficulty: 'easy', domain: 'limits', topicSlug: 'what-is-a-limit', formSet: 'both', part: 2 },
+  { question: 'Let $f(x) = \\begin{cases} x^2 + k & x < 3 \\\\ 4x - 1 & x \\ge 3 \\end{cases}$. For what value of $k$ does $\\lim_{x \\to 3} f(x)$ exist?', options: ['$11$', '$2$', '$-2$', '$20$'], correctAnswer: 1, explanation: 'The left limit is $9 + k$ and the right limit is $4(3) - 1 = 11$. The limit exists only when they agree: $9 + k = 11$, so $k = 2$. Setting $k$ itself equal to 11, or adding 9 and 11, skips the step of matching the two one-sided limits.', difficulty: 'medium', domain: 'limits', topicSlug: 'what-is-a-limit', formSet: 'both', part: 3 },
+  { question: 'Which limit fails to exist because the function jumps between two different finite values?', options: ['$\\lim_{x \\to 3} \\dfrac{1}{(x - 3)^2}$', '$\\lim_{x \\to 0} \\sin\\left(\\dfrac{1}{x}\\right)$', '$\\lim_{x \\to 3} \\dfrac{x^2 - 9}{x - 3}$', '$\\lim_{x \\to 3} \\dfrac{|x - 3|}{x - 3}$'], correctAnswer: 3, explanation: 'The ratio $\\frac{|x - 3|}{x - 3}$ equals $-1$ left of 3 and $+1$ right of 3: two finite, unequal one-sided limits, which is a jump. The squared denominator blows up to $+\\infty$ (unbounded), $\\sin(1/x)$ oscillates, and $\\frac{x^2 - 9}{x - 3}$ has limit 6.', difficulty: 'medium', domain: 'limits', topicSlug: 'what-is-a-limit', formSet: 'both', part: 4 },
+  { question: 'For $f(x) = \\dfrac{1}{(x + 2)^2}$, which description of $\\lim_{x \\to -2} f(x)$ is correct?', options: ['Unbounded: both sides grow to $+\\infty$', 'Jump: the two sides approach different values', 'Oscillation: the values never settle down', 'Removable: the graph has a hole at $x = -2$'], correctAnswer: 0, explanation: 'The denominator is a positive square that shrinks to 0, so $f(x)$ grows without bound on both sides: an unbounded failure mode (a vertical asymptote). The two sides agree in heading to $+\\infty$, so it is not a jump, the values do not oscillate, and a hole would require a finite limit.', difficulty: 'easy', domain: 'limits', topicSlug: 'what-is-a-limit', formSet: 'both', part: 4 },
+
+  // -- estimating-limits-tables --
+  { question: 'To estimate $\\lim_{x \\to -2} f(x)$ with a table, which set of inputs is best?', options: ['$-3, -1, 0, 1$, spread evenly around the graph', '$-2$ itself, evaluated on a calculator', '$-2.1, -2.01, -2.001$, all on the left side', '$-2.1, -2.01, -2.001$ and $-1.999, -1.99, -1.9$'], correctAnswer: 3, explanation: 'A good table closes in on $-2$ from both sides with inputs that get steadily closer. Inputs far from $-2$ say nothing about the limit, evaluating at $-2$ gives the value rather than the limit, and one side alone cannot show that both sides agree.', difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 1 },
+  { question: 'A table gives $f(1.9) = 5.41$, $f(1.99) = 5.9401$, $f(1.999) = 5.994$, $f(2.001) = 6.006$, $f(2.01) = 6.0601$, $f(2.1) = 6.61$. What is the best estimate of $\\lim_{x \\to 2} f(x)$?', options: ['$5.994$', '$6$', '$6.006$', 'Does not exist'], correctAnswer: 1, explanation: 'Both columns close in on the same number from opposite sides, so the estimate is 6. The values 5.994 and 6.006 are just the closest table entries, not the limit, and slightly different entries on the two sides do not mean the limit fails to exist.', difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 2 },
+  { question: 'A table for $\\lim_{x \\to 1} g(x)$ shows $g(0.9) = 2.71$, $g(0.99) = 2.97$, $g(0.999) = 2.997$ and $g(1.1) = 3.31$, $g(1.01) = 3.03$, $g(1.001) = 3.003$. What does the table suggest?', options: ['The limit is about 2.997, the closest left value', 'The limit is about 3, since both sides close in on 3', 'The limit does not exist, since no entries match', 'The limit is about 3.31, the largest value shown'], correctAnswer: 1, explanation: 'The left outputs rise toward 3 and the right outputs fall toward 3, so the two-sided limit appears to be 3. A single table entry is never the limit, and the entries need not match each other; what matters is the common value both sides approach.', difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 2 },
+  { question: 'A calculator gives $\\dfrac{e^{h} - 1 - h}{h^2} = 0$ at $h = 10^{-12}$, but the values at $h = 0.01$ and $h = 0.001$ are about $0.5017$ and $0.5002$. What is the best conclusion?', options: ['The limit is about 0.5, and the 0 comes from round-off', 'The limit is 0, as the smallest $h$ is most accurate', 'The limit does not exist, since the outputs change', 'The limit is about 0.5017, the first value computed'], correctAnswer: 0, explanation: 'The trustworthy entries settle toward 0.5; at $h = 10^{-12}$ the calculator subtracts nearly equal numbers and loses every significant digit, producing a false 0. Very tiny inputs are not more accurate on a calculator, and changing outputs that settle are exactly what a limit looks like.', difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 4 },
+  { question: 'For $f(x) = \\cos(\\pi/x)$, a student uses $x = 0.1, 0.01, 0.001, 0.0001$ and gets an output of exactly 1 every time. What is the correct conclusion about $\\lim_{x \\to 0^+} f(x)$?', options: ['The limit is 1, since every output in the table equals 1', 'The limit is 0, since the inputs are approaching 0', 'The inputs were poorly chosen, and the limit does not exist', 'The limit is 1 on the right side but $-1$ on the left'], correctAnswer: 2, explanation: 'Each chosen input makes $\\pi/x$ an even multiple of $\\pi$, so the cosine is 1, but between those inputs $\\cos(\\pi/x)$ swings through every value from $-1$ to 1. The function oscillates, so the limit does not exist; a table built on a special pattern of inputs can hide oscillation.', difficulty: 'hard', domain: 'limits', topicSlug: 'estimating-limits-tables', formSet: 'both', part: 4 },
+
+  // -- estimating-limits-graphs --
+  { question: 'A graph of $f$ shows the curve rising toward the point $(-1, 3)$ from the left and falling toward it from the right, with no dot drawn at $x = -1$. What is $\\lim_{x \\to -1} f(x)$?', options: ['$-1$', '$(-1, 3)$', '$3$', 'Does not exist'], correctAnswer: 2, explanation: 'Both arms head to the height $y = 3$ as $x$ approaches $-1$, so the limit is 3. The number $-1$ is the $x$-value, not the output, a limit is a single number rather than a point, and a missing dot at $x = -1$ affects only $f(-1)$, not the limit.', difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 1 },
+  { question: 'On a graph, as $x \\to 4$ the left arm heads toward $y = -2$ and the right arm heads toward $y = 6$, and a closed dot sits at $(4, 6)$. Which statement is true?', options: ['$\\lim_{x \\to 4^-} f(x) = f(4)$', '$\\lim_{x \\to 4^+} f(x) = f(4)$', '$\\lim_{x \\to 4} f(x) = 6$', '$\\lim_{x \\to 4} f(x) = 2$'], correctAnswer: 1, explanation: 'The right arm approaches 6 and the closed dot gives $f(4) = 6$, so the right-hand limit equals $f(4)$. The left-hand limit is $-2$, not 6, and because the one-sided limits differ the two-sided limit does not exist, so it is neither 6 nor the average 2.', difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 2 },
+  { question: 'Near $x = -3$ a graph has a dashed vertical line, and the curve rises toward $+\\infty$ on both sides of it. How is $\\lim_{x \\to -3} f(x)$ best described?', options: ['It equals $-3$, where the dashed line is', 'It equals 0, as the curve never touches', 'It is a jump, since there are two arms', 'It is $+\\infty$, so no finite limit exists'], correctAnswer: 3, explanation: 'Both sides grow without bound, so we write $\\lim_{x \\to -3} f(x) = +\\infty$ to describe a vertical asymptote; there is no finite limit. The line\'s location is an $x$-value, not an output, and a jump needs two finite one-sided limits.', difficulty: 'easy', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 3 },
+  { question: 'Which feature of a graph at $x = a$ shows that $\\lim_{x \\to a} f(x)$ does NOT exist?', options: ['An open circle on the curve at $x = a$', 'A closed dot off the curve at $x = a$', 'Arms ending at different heights at $x = a$', 'A sharp corner in the curve at $x = a$'], correctAnswer: 2, explanation: 'Arms that end at different heights mean the one-sided limits disagree, so the limit does not exist (a jump). An open circle or a misplaced dot changes only $f(a)$, and a sharp corner still has both arms meeting at one height, so the limit exists in those cases.', difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 3 },
+  { question: 'A graph has an open circle at $(2, 1)$, both arms of the curve heading to that circle, and no other point drawn at $x = 2$. Which statement is true?', options: ['$\\lim_{x \\to 2} f(x) = 1$ and $f(2) = 1$', '$\\lim_{x \\to 2} f(x) = 1$ and $f(2)$ is undefined', 'The limit does not exist and $f(2)$ is undefined', 'The limit is undefined and $f(2) = 1$'], correctAnswer: 1, explanation: 'The arms approach height 1, so the limit is 1. An open circle means the point is not on the graph, and with no closed dot anywhere at $x = 2$, $f(2)$ is undefined. Treating the open circle as a value, or the missing value as a missing limit, mixes up value and limit.', difficulty: 'medium', domain: 'limits', topicSlug: 'estimating-limits-graphs', formSet: 'both', part: 4 },
+
+  // -- one-sided-limits --
+  { question: 'Which notation means "as $x$ approaches $-1$ from the right, $h(x)$ approaches 4"?', options: ['$\\lim_{x \\to -1^-} h(x) = 4$', '$\\lim_{x \\to -1^+} h(x) = 4$', '$\\lim_{x \\to 4^+} h(x) = -1$', '$\\lim_{x \\to -1} h(x) = 4^+$'], correctAnswer: 1, explanation: 'Approach from the right is written with a superscript plus on the target of $x$: $x \\to -1^+$. A superscript minus means from the left, swapping $-1$ and 4 describes a limit at $x = 4$, and the side belongs on the input, not the output.', difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 1 },
+  { question: 'Which list of inputs shows $x \\to 5^-$?', options: ['$5.1, 5.01, 5.001, 5.0001$', '$-4.9, -4.99, -4.999, \\ldots$', '$4.9, 4.99, 4.999, \\ldots$', '$-5.1, -5.01, -5.001, \\ldots$'], correctAnswer: 2, explanation: 'From the left means inputs less than 5 that get closer to 5, such as 4.9, 4.99, 4.999. Inputs above 5 approach from the right, and the negative lists approach $-5$, not 5; the superscript does not make the inputs negative.', difficulty: 'easy', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 1 },
+  { question: 'Let $f(x) = \\dfrac{x^2 - 2x}{|x - 2|}$. Does $\\lim_{x \\to 2} f(x)$ exist?', options: ['No: the left limit is $-2$ and the right limit is $2$', 'Yes: both one-sided limits are equal to $2$', 'Yes: the limit is $0$ once the factor cancels', 'No: the left limit is $2$ and the right limit is $-2$'], correctAnswer: 0, explanation: 'Factor $x^2 - 2x = x(x - 2)$. For $x > 2$, $|x - 2| = x - 2$, so $f(x) = x \\to 2$; for $x < 2$, $|x - 2| = -(x - 2)$, so $f(x) = -x \\to -2$. The one-sided limits differ, so the limit does not exist; mixing up which side gets the negative sign reverses them.', difficulty: 'hard', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 3 },
+  { question: 'For $f(x) = \\sqrt{9 - x}$, which one-sided limit at $x = 9$ exists, and what is it?', options: ['$\\lim_{x \\to 9^+} f(x) = 0$', '$\\lim_{x \\to 9^-} f(x) = 3$', '$\\lim_{x \\to 9^-} f(x) = 0$', '$\\lim_{x \\to 9^+} f(x) = 3$'], correctAnswer: 2, explanation: 'The domain is $x \\le 9$, so only inputs from the left are available, and $\\sqrt{9 - x} \\to 0$ as $x \\to 9^-$. For $x > 9$ the radicand is negative, so the right-hand limit does not exist; 3 comes from evaluating $\\sqrt{9}$ instead of $\\sqrt{9 - 9}$.', difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 4 },
+  { question: 'For $f(x) = \\ln(x - 2)$, what is $\\lim_{x \\to 2^+} f(x)$?', options: ['$0$', '$\\ln 2$', '$\\infty$', '$-\\infty$'], correctAnswer: 3, explanation: 'As $x \\to 2^+$, the input $x - 2$ shrinks to $0^+$, and $\\ln u \\to -\\infty$ as $u \\to 0^+$. The value $\\ln 2$ comes from plugging 2 into $\\ln x$ instead of $\\ln(x - 2)$, and 0 confuses $\\ln 1$ with $\\ln 0^+$.', difficulty: 'medium', domain: 'limits', topicSlug: 'one-sided-limits', formSet: 'both', part: 4 },
+
+  // -- direct-substitution-method --
+  { question: 'Why can $\\lim_{x \\to 2} (x^3 - 3x)$ be found by simply plugging in $x = 2$?', options: ['Polynomials are continuous, so the limit is the value at 2', 'Every limit equals the function\'s value at the point', 'The result is a whole number, so no algebra is needed', 'Plugging in is allowed only when the result is positive'], correctAnswer: 0, explanation: 'Direct substitution works because a polynomial is continuous everywhere, and continuity at $a$ means the limit equals $f(a)$. Limits do not always equal function values (holes, jumps), and whether the result is whole or positive has nothing to do with it.', difficulty: 'easy', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 1 },
+  { question: 'Compute $\\lim_{x \\to -1} (x^3 + 4x^2 - 2)$.', options: ['$-7$', '$-5$', '$1$', '$-2$'], correctAnswer: 2, explanation: 'Substitute: $(-1)^3 + 4(-1)^2 - 2 = -1 + 4 - 2 = 1$. Treating $4(-1)^2$ as $-4$ gives $-7$ (and $-5$ if $(-1)^3$ is also taken as $+1$), and dropping the coefficient 4 gives $-2$.', difficulty: 'easy', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 1 },
+  { question: 'If $\\lim_{x \\to 2} f(x) = 4$ and $\\lim_{x \\to 2} g(x) = -3$, what is $\\lim_{x \\to 2} \\dfrac{[f(x)]^2}{g(x) + 5}$?', options: ['$2$', '$-2$', '$4$', '$8$'], correctAnswer: 3, explanation: 'By the power, sum and quotient laws the limit is $\\frac{4^2}{-3 + 5} = \\frac{16}{2} = 8$, allowed because the denominator\'s limit is not 0. Forgetting to square gives 2, using $g - 5$ gives $-2$, and doubling instead of squaring gives 4.', difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 3 },
+  { question: 'Substituting $x = 2$ into $\\dfrac{x^2 - 4}{x^2 + x - 6}$ gives what, and what is the correct next step?', options: ['$\\frac{0}{0}$; conclude that the limit is 0', '$\\frac{0}{0}$; conclude the limit does not exist', '$\\frac{0}{0}$; simplify the expression algebraically', '$\\frac{0}{0}$; conclude that the limit equals 1'], correctAnswer: 2, explanation: 'Both $2^2 - 4$ and $4 + 2 - 6$ are 0, and $\\frac{0}{0}$ is indeterminate: it signals that more algebra (factoring here) is needed, not any particular answer. Factoring gives $\\frac{x + 2}{x + 3} \\to \\frac{4}{5}$, so none of the quick conclusions is right.', difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 4 },
+  { question: 'Substituting $x = 1$ into $\\dfrac{x + 3}{x - 1}$ gives $\\frac{4}{0}$. What does this tell you about $\\lim_{x \\to 1} \\dfrac{x + 3}{x - 1}$?', options: ['The form is indeterminate, so factor and cancel', 'The limit equals 0, since the bottom is zero', 'The limit equals 4, the value of the numerator', 'The function is unbounded near 1, so check each side'], correctAnswer: 3, explanation: 'A nonzero number over 0 is not indeterminate: the function is unbounded near $x = 1$, and checking signs shows $-\\infty$ on the left and $+\\infty$ on the right, so the limit does not exist. Only $\\frac{0}{0}$ calls for factoring, and neither 0 nor 4 is the limit.', difficulty: 'medium', domain: 'limits', topicSlug: 'direct-substitution-method', formSet: 'both', part: 4 },
+
+  // -- factoring-method-limits --
+  { question: 'Direct substitution into $\\dfrac{x^2 + x - 12}{x^2 - 9}$ at $x = 3$ gives $\\frac{0}{0}$. Which factor must the numerator and denominator share?', options: ['$x + 3$', '$x - 3$', '$x + 4$', '$x - 4$'], correctAnswer: 1, explanation: 'A polynomial that equals 0 at $x = 3$ has $x - 3$ as a factor, so $\\frac{0}{0}$ at $x = 3$ guarantees both pieces share $x - 3$: $x^2 + x - 12 = (x - 3)(x + 4)$ and $x^2 - 9 = (x - 3)(x + 3)$. The factors $x + 3$ and $x + 4$ are each in only one piece, and $x - 4$ is in neither.', difficulty: 'easy', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 1 },
+  { question: 'Compute $\\lim_{x \\to 0} \\dfrac{4x^3 - 6x^2}{2x^2}$.', options: ['$0$', '$2$', '$-3$', '$-6$'], correctAnswer: 2, explanation: 'Pull out the common factor: $\\frac{2x^2(2x - 3)}{2x^2} = 2x - 3$ for $x \\ne 0$, which approaches $-3$. Forgetting to divide the $-6$ by 2 gives $-6$, using the leading coefficients gives 2, and 0 comes from the numerator alone.', difficulty: 'easy', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 2 },
+  { question: 'Compute $\\lim_{x \\to -2} \\dfrac{x^2 - x - 6}{x^2 + 5x + 6}$.', options: ['$5$', '$-\\frac{1}{5}$', '$-5$', '$\\frac{5}{3}$'], correctAnswer: 2, explanation: 'Factor both: $\\frac{(x - 3)(x + 2)}{(x + 3)(x + 2)} = \\frac{x - 3}{x + 3}$ for $x \\ne -2$, and $\\frac{-2 - 3}{-2 + 3} = -5$. Dropping the sign gives 5, and flipping the fraction gives $-\\frac{1}{5}$.', difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 3 },
+  { question: 'Compute $\\lim_{x \\to 1} \\dfrac{x^3 - 1}{x^2 - 1}$.', options: ['$1$', '$\\frac{1}{2}$', '$3$', '$\\frac{3}{2}$'], correctAnswer: 3, explanation: 'Use the difference of cubes: $\\frac{(x - 1)(x^2 + x + 1)}{(x - 1)(x + 1)} = \\frac{x^2 + x + 1}{x + 1} \\to \\frac{3}{2}$. Writing the cube factor as $x^2 - x + 1$ gives $\\frac{1}{2}$, and forgetting the denominator\'s $x + 1$ gives 3.', difficulty: 'medium', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 4 },
+  { question: 'Compute $\\lim_{x \\to 2} \\dfrac{x^3 - 2x^2 + 3x - 6}{x - 2}$.', options: ['$4$', '$7$', '$3$', '$11$'], correctAnswer: 1, explanation: 'Group: $x^2(x - 2) + 3(x - 2) = (x - 2)(x^2 + 3)$, so the expression is $x^2 + 3 \\to 7$. Keeping only $x^2$ gives 4, keeping only the 3 gives 3, and evaluating $x^3 + 3$ gives 11.', difficulty: 'hard', domain: 'limits', topicSlug: 'factoring-method-limits', formSet: 'both', part: 4 },
+
+  // -- rationalizing-technique-limits --
+  { question: 'Compute $\\lim_{x \\to 2} \\dfrac{\\sqrt{2x} - 2}{x - 2}$.', options: ['$\\frac{1}{4}$', '$\\frac{1}{2}$', '$2$', '$0$'], correctAnswer: 1, explanation: 'Multiply by $\\frac{\\sqrt{2x} + 2}{\\sqrt{2x} + 2}$: the numerator becomes $2x - 4 = 2(x - 2)$, so the expression is $\\frac{2}{\\sqrt{2x} + 2} \\to \\frac{2}{4} = \\frac{1}{2}$. Losing the factor 2 from $2x - 4$ gives $\\frac{1}{4}$, and 0 is the numerator\'s value, not the limit.', difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 2 },
+  { question: 'After multiplying $\\dfrac{\\sqrt{x + 1} - 2}{x - 3}$ by its conjugate over itself, what is the expression just before cancelling?', options: ['$\\dfrac{x + 5}{(x - 3)(\\sqrt{x + 1} + 2)}$', '$\\dfrac{x - 3}{(x - 3)(\\sqrt{x + 1} - 2)}$', '$\\dfrac{x - 1}{(x - 3)(\\sqrt{x + 1} + 2)}$', '$\\dfrac{x - 3}{(x - 3)(\\sqrt{x + 1} + 2)}$'], correctAnswer: 3, explanation: 'The numerator becomes $(\\sqrt{x + 1})^2 - 2^2 = x + 1 - 4 = x - 3$, and the denominator keeps the conjugate $\\sqrt{x + 1} + 2$; the $x - 3$ then cancels. Adding 4 gives $x + 5$, squaring 2 as 2 gives $x - 1$, and the denominator must hold the conjugate, not the original radical expression.', difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 2 },
+  { question: 'Compute $\\lim_{x \\to 0} \\dfrac{\\sqrt{x + 4} - \\sqrt{4 - x}}{x}$.', options: ['$\\frac{1}{2}$', '$\\frac{1}{4}$', '$0$', '$1$'], correctAnswer: 0, explanation: 'Multiply by the conjugate $\\sqrt{x + 4} + \\sqrt{4 - x}$: the numerator becomes $(x + 4) - (4 - x) = 2x$, so the expression is $\\frac{2}{\\sqrt{x + 4} + \\sqrt{4 - x}} \\to \\frac{2}{4} = \\frac{1}{2}$. Getting $x$ instead of $2x$ on top gives $\\frac{1}{4}$.', difficulty: 'hard', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 3 },
+  { question: 'Compute $\\lim_{x \\to 1} \\dfrac{x - 1}{\\sqrt{x} - 1}$.', options: ['$\\frac{1}{2}$', '$0$', '$2$', '$1$'], correctAnswer: 2, explanation: 'Multiply top and bottom by $\\sqrt{x} + 1$: the denominator becomes $x - 1$, which cancels, leaving $\\sqrt{x} + 1 \\to 2$. The value $\\frac{1}{2}$ comes from inverting the result, as if the radical were on top.', difficulty: 'easy', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 4 },
+  { question: 'Compute $\\lim_{x \\to 9} \\dfrac{3 - \\sqrt{x}}{x - 9}$.', options: ['$\\frac{1}{6}$', '$-\\frac{1}{6}$', '$-\\frac{1}{3}$', '$0$'], correctAnswer: 1, explanation: 'Multiply by $\\frac{3 + \\sqrt{x}}{3 + \\sqrt{x}}$: the numerator becomes $9 - x = -(x - 9)$, so the expression is $\\frac{-1}{3 + \\sqrt{x}} \\to -\\frac{1}{6}$. Losing the sign from $9 - x$ gives $\\frac{1}{6}$, and dropping the 3 from the conjugate gives $-\\frac{1}{3}$.', difficulty: 'medium', domain: 'limits', topicSlug: 'rationalizing-technique-limits', formSet: 'both', part: 4 },
+
+  // -- limits-at-infinity --
+  { question: 'The graph of $f$ has the horizontal asymptote $y = -4$ on the right. Which statement must be true?', options: ['$\\lim_{x \\to -4} f(x) = \\infty$', '$\\lim_{x \\to \\infty} f(x) = -4$', '$\\lim_{x \\to -\\infty} f(x) = -4$', '$f(x) \\ne -4$ for every $x$'], correctAnswer: 1, explanation: 'A horizontal asymptote on the right means the outputs approach $-4$ as $x \\to \\infty$. A limit at $x = -4$ describes a vertical asymptote, the left side can behave differently, and a graph may cross its horizontal asymptote.', difficulty: 'easy', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 1 },
+  { question: 'Compute $\\lim_{x \\to -\\infty} \\dfrac{6x^3 - x}{3 - 2x^3}$.', options: ['$3$', '$-3$', '$2$', '$-\\infty$'], correctAnswer: 1, explanation: 'Equal degrees, so the limit is the ratio of leading coefficients: $\\frac{6}{-2} = -3$, in either direction. Ignoring the sign of $-2x^3$ gives 3, and dividing the wrong way or by the constant term gives 2.', difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 2 },
+  { question: 'Compute $\\lim_{x \\to \\infty} \\dfrac{3x - 1}{\\sqrt{9x^2 + 5}}$.', options: ['$\\frac{1}{3}$', '$3$', '$1$', '$-1$'], correctAnswer: 2, explanation: 'The denominator behaves like $\\sqrt{9x^2} = 3|x| = 3x$ for large positive $x$, so the ratio approaches $\\frac{3x}{3x} = 1$. Forgetting to take the square root of 9 gives $\\frac{1}{3}$, and $-1$ is the limit as $x \\to -\\infty$.', difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 3 },
+  { question: 'Compute $\\lim_{x \\to -\\infty} \\dfrac{\\sqrt{x^2 + 3x}}{2x + 1}$.', options: ['$\\frac{1}{2}$', '$-2$', '$0$', '$-\\frac{1}{2}$'], correctAnswer: 3, explanation: 'For large negative $x$, $\\sqrt{x^2} = |x| = -x$, so the ratio behaves like $\\frac{-x}{2x} = -\\frac{1}{2}$. Treating $\\sqrt{x^2}$ as $x$ gives $\\frac{1}{2}$, and inverting the coefficients gives $-2$.', difficulty: 'hard', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 3 },
+  { question: 'Which limit equals $+\\infty$?', options: ['$\\lim_{x \\to \\infty} \\dfrac{\\ln x}{\\sqrt{x}}$', '$\\lim_{x \\to \\infty} \\dfrac{x^{10}}{e^{x}}$', '$\\lim_{x \\to \\infty} \\dfrac{e^{x}}{x^{10}}$', '$\\lim_{x \\to \\infty} \\dfrac{\\cos x}{x}$'], correctAnswer: 2, explanation: 'Exponentials eventually outgrow every power of $x$, so $\\frac{e^x}{x^{10}} \\to \\infty$ and $\\frac{x^{10}}{e^x} \\to 0$. Logs grow slower than any positive power, so $\\frac{\\ln x}{\\sqrt{x}} \\to 0$, and a bounded numerator over $x$ also goes to 0.', difficulty: 'medium', domain: 'limits', topicSlug: 'limits-at-infinity', formSet: 'both', part: 4 },
+
+  // -- infinite-limits-vertical-asymptotes --
+  { question: 'How do $\\lim_{x \\to 2} f(x) = \\infty$ and $\\lim_{x \\to \\infty} f(x) = 2$ differ?', options: ['The first gives a horizontal asymptote $y = 2$, the second a vertical asymptote at $x = 2$', 'The first gives a vertical asymptote at $x = 2$, the second a horizontal asymptote $y = 2$', 'Both give a vertical asymptote at $x = 2$, approached from different sides', 'Both give a horizontal asymptote $y = 2$, approached from different sides'], correctAnswer: 1, explanation: 'An infinite limit at a finite $x = 2$ means the outputs blow up there: a vertical asymptote. A limit at infinity equal to 2 describes end behavior: a horizontal asymptote $y = 2$. Swapping them, or treating them as the same asymptote, confuses where $x$ goes with where $f(x)$ goes.', difficulty: 'easy', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 1 },
+  { question: 'Compute $\\lim_{x \\to -1^-} \\dfrac{x - 2}{x + 1}$.', options: ['$-\\infty$', '$+\\infty$', '$-3$', '$0$'], correctAnswer: 1, explanation: 'The numerator approaches $-3$. For $x$ slightly less than $-1$, $x + 1$ is a small negative number, so the quotient is negative over negative: $+\\infty$. Missing the sign of the denominator gives $-\\infty$, and $-3$ is the numerator alone.', difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 2 },
+  { question: 'How many vertical asymptotes does $y = \\tan x$ have on the interval $[0, 3\\pi]$?', options: ['$2$', '$3$', '$4$', '$6$'], correctAnswer: 1, explanation: 'The asymptotes of $\\tan x = \\frac{\\sin x}{\\cos x}$ are where $\\cos x = 0$: $x = \\frac{\\pi}{2}, \\frac{3\\pi}{2}, \\frac{5\\pi}{2}$ in $[0, 3\\pi]$, which is 3. Counting zeros of $\\sin x$ instead (0, $\\pi$, $2\\pi$, $3\\pi$) gives 4.', difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 4 },
+  { question: 'Where is the vertical asymptote of $f(x) = \\ln(x + 4)$, and how does $f$ behave next to it?', options: ['At $x = -4$, with $f(x) \\to -\\infty$ as $x \\to -4^+$', 'At $x = -4$, with $f(x) \\to \\infty$ as $x \\to -4^+$', 'At $x = 4$, with $f(x) \\to -\\infty$ as $x \\to 4^+$', 'At $x = 0$, with $f(x) \\to -\\infty$ as $x \\to 0^+$'], correctAnswer: 0, explanation: 'The log\'s input $x + 4$ reaches $0^+$ as $x \\to -4^+$, and $\\ln u \\to -\\infty$ as $u \\to 0^+$. The shift moves the asymptote of $\\ln x$ from $x = 0$ to $x = -4$ (not $+4$), and the outputs fall, not rise.', difficulty: 'medium', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 4 },
+  { question: 'A graph of $g$ shows the curve falling toward $-\\infty$ as $x \\to 1^-$ and rising toward $+\\infty$ as $x \\to 1^+$. Which conclusion is correct?', options: ['$x = 1$ is a vertical asymptote, and $\\lim_{x \\to 1} g(x) = +\\infty$', '$x = 1$ is a vertical asymptote, and $\\lim_{x \\to 1} g(x)$ does not exist', '$y = 1$ is a horizontal asymptote, and $\\lim_{x \\to 1} g(x)$ does not exist', '$x = 1$ is a vertical asymptote, and $\\lim_{x \\to 1} g(x) = 0$'], correctAnswer: 1, explanation: 'Unbounded behavior at $x = 1$ makes it a vertical asymptote. The sides head in opposite directions, so the two-sided limit does not exist and cannot even be described as $+\\infty$. Averaging the sides to 0, or calling it a horizontal asymptote, misreads the graph.', difficulty: 'easy', domain: 'limits', topicSlug: 'infinite-limits-vertical-asymptotes', formSet: 'both', part: 4 },
+
+  // -- continuity-introduction --
+  { question: 'For $g(x) = \\begin{cases} \\dfrac{x^2 - 1}{x - 1} & x \\ne 1 \\\\ 3 & x = 1 \\end{cases}$, which continuity condition fails at $x = 1$?', options: ['$g(1)$ is defined', '$\\lim_{x \\to 1} g(x) = g(1)$', '$\\lim_{x \\to 1} g(x)$ exists', 'None of them fails'], correctAnswer: 1, explanation: 'Here $g(1) = 3$ is defined and $\\lim_{x \\to 1} g(x) = \\lim (x + 1) = 2$ exists, but $2 \\ne 3$, so the third condition fails and $g$ is not continuous at 1. Defining a value at the point does not make it match the limit.', difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 1 },
+  { question: 'For $f(x) = \\begin{cases} kx^2 & x \\le 2 \\\\ 3x + k & x > 2 \\end{cases}$, what value of $k$ makes $f$ continuous at $x = 2$?', options: ['$\\frac{3}{2}$', '$\\frac{6}{5}$', '$-2$', '$2$'], correctAnswer: 3, explanation: 'Match the pieces at $x = 2$: $4k = 6 + k$, so $3k = 6$ and $k = 2$. Ignoring the $k$ on the right gives $\\frac{3}{2}$, and a sign slip to $4k = 6 - k$ gives $\\frac{6}{5}$.', difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 3 },
+  { question: 'A function $f$ is continuous on $[0, 4]$ with $f(0) = 5$ and $f(4) = -1$. Which statement must be true?', options: ['$f(c) = 6$ for some $c$ in $(0, 4)$', '$f(2) = 2$, halfway between the two values', '$f(c) = 2$ for some $c$ in $(0, 4)$', '$f(c) = -3$ for some $c$ in $(0, 4)$'], correctAnswer: 2, explanation: 'By the Intermediate Value Theorem, a continuous $f$ takes every value between $-1$ and 5 somewhere in $(0, 4)$, and 2 is in that range. The theorem says nothing about where the value occurs, and 6 and $-3$ lie outside the range, so they are not guaranteed.', difficulty: 'easy', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 4 },
+  { question: 'Why does the Intermediate Value Theorem NOT guarantee a zero of $f(x) = \\dfrac{1}{x}$ on $[-1, 1]$, even though $f(-1) = -1$ and $f(1) = 1$?', options: ['$f$ is not continuous on $[-1, 1]$', 'The endpoint values have equal size', '$f$ is decreasing on each of its pieces', 'The theorem applies only to polynomials'], correctAnswer: 0, explanation: 'The theorem requires continuity on the whole closed interval, and $\\frac{1}{x}$ is undefined at $x = 0$, so it does not apply (and indeed $f$ is never 0). The theorem works for any continuous function, not just polynomials, and the size or monotonicity of the endpoint values is irrelevant.', difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 4 },
+  { question: 'A continuous function $h$ has $h(1) = 3$, $h(2) = -2$, $h(3) = 1$ and $h(4) = 6$. What is the least number of zeros $h$ must have on $[1, 4]$?', options: ['$1$', '$2$', '$3$', '$0$'], correctAnswer: 1, explanation: 'The sign changes from positive to negative on $[1, 2]$ and from negative to positive on $[2, 3]$, so the Intermediate Value Theorem guarantees a zero in each: at least 2. There is no sign change on $[3, 4]$, so no third zero is guaranteed.', difficulty: 'medium', domain: 'limits', topicSlug: 'continuity-introduction', formSet: 'both', part: 4 },
+
+  // -- types-of-discontinuity --
+  { question: 'The function $f(x) = \\dfrac{x^2 + 2x - 8}{x - 2}$ has a removable discontinuity at $x = 2$. What value should $f(2)$ be given to remove it?', options: ['$-2$', '$6$', '$8$', '$4$'], correctAnswer: 1, explanation: 'Factor: $\\frac{(x + 4)(x - 2)}{x - 2} = x + 4$ for $x \\ne 2$, so the hole is at height $2 + 4 = 6$. Misfactoring the numerator as $(x - 4)(x + 2)$ leads to $-2$ or 4, and 8 is $x^2 + 2x$ at 2 with the constant dropped.', difficulty: 'easy', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 1 },
+  { question: 'For $f(x) = \\begin{cases} x^2 + 1 & x < 1 \\\\ 4 - x & x \\ge 1 \\end{cases}$, what happens at $x = 1$?', options: ['A jump: the left limit is 2 and the right limit is 3', 'A hole: the limit is 3 but $f(1)$ is a different value', 'A jump: the left limit is 3 and the right limit is 2', 'No discontinuity: each piece is continuous there'], correctAnswer: 0, explanation: 'From the left, $1^2 + 1 = 2$; from the right, $4 - 1 = 3$. The one-sided limits are finite and unequal, so there is a jump of size 1. Each piece being continuous does not make the combined function continuous at the boundary.', difficulty: 'easy', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 2 },
+  { question: 'Why can a jump discontinuity NOT be removed by redefining $f(a)$?', options: ['The function grows without bound near $a$, so no value fits', 'The limit exists, but its value is not a real number', 'The one-sided limits differ, so no value matches', 'The value $f(a)$ can only be set by the original formula'], correctAnswer: 2, explanation: 'Removing a discontinuity means choosing $f(a)$ equal to the limit, but at a jump the left and right limits are different numbers, so the two-sided limit does not exist and no value works. Unbounded growth describes an infinite discontinuity, not a jump.', difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 2 },
+  { question: 'For $g(x) = \\dfrac{x + 1}{x^2 - 4x}$, which classification is correct?', options: ['Removable at $x = 0$, infinite at $x = 4$', 'Infinite at $x = 0$ only, removable at $x = 4$', 'Infinite discontinuities at $x = -1$ and $x = 4$', 'Infinite discontinuities at $x = 0$ and $x = 4$'], correctAnswer: 3, explanation: 'The denominator $x(x - 4)$ is 0 at $x = 0$ and $x = 4$, and the numerator $x + 1$ is nonzero at both, so each is a nonzero-over-zero point: an infinite discontinuity. Nothing cancels, so neither is removable, and $x = -1$ is a zero of $g$, not a discontinuity.', difficulty: 'medium', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 3 },
+  { question: 'Which function has an infinite discontinuity at $x = 3$?', options: ['$\\dfrac{x - 3}{x^2 - 9}$', '$\\dfrac{x^2 - 9}{x - 3}$', '$\\dfrac{|x - 3|}{x - 3}$', '$\\dfrac{x + 3}{x^2 - 9}$'], correctAnswer: 3, explanation: 'At $x = 3$, $\\frac{x + 3}{x^2 - 9}$ has numerator 6 over denominator 0, so it is unbounded there. In $\\frac{x - 3}{x^2 - 9}$ and $\\frac{x^2 - 9}{x - 3}$ the factor $x - 3$ cancels, leaving holes, and $\\frac{|x - 3|}{x - 3}$ jumps from $-1$ to 1.', difficulty: 'easy', domain: 'limits', topicSlug: 'types-of-discontinuity', formSet: 'both', part: 3 },
+
+  // -- limits-continuity-calcab (replacements for 2 off-exam items and 2 exact duplicates) --
+  { question: 'If $4x - 1 \\le f(x) \\le x^2 + 3$ for all $x$, what is $\\lim_{x \\to 2} f(x)$?', options: ['$3$', '$7$', '$-1$', 'Cannot be determined'], correctAnswer: 1, explanation: 'Both bounds equal 7 at $x = 2$: $4(2) - 1 = 7$ and $2^2 + 3 = 7$, and both are continuous, so by the Squeeze Theorem $\\lim_{x \\to 2} f(x) = 7$. The values 3 and $-1$ come from evaluating the bounds at $x = 0$ instead of at the target.', difficulty: 'medium', domain: 'limits', topicSlug: 'limits-continuity-calcab', formSet: 'both', part: 4 },
+  { question: 'Which inequality lets the Squeeze Theorem show that $\\lim_{x \\to 0} x^4 \\sin\\left(\\dfrac{2}{x}\\right) = 0$?', options: ['$-1 \\le x^4 \\sin\\left(\\frac{2}{x}\\right) \\le 1$', '$-x^4 \\le x^4 \\sin\\left(\\frac{2}{x}\\right) \\le x^4$', '$-2 \\le x^4 \\sin\\left(\\frac{2}{x}\\right) \\le 2$', '$0 \\le x^4 \\sin\\left(\\frac{2}{x}\\right) \\le x^4$'], correctAnswer: 1, explanation: 'Since $-1 \\le \\sin(2/x) \\le 1$ and $x^4 \\ge 0$, multiplying gives $-x^4 \\le x^4 \\sin(2/x) \\le x^4$, and both bounds approach 0. Constant bounds like $\\pm 1$ or $\\pm 2$ are true but do not squeeze to a single value, and the lower bound 0 is false where the sine is negative.', difficulty: 'medium', domain: 'limits', topicSlug: 'limits-continuity-calcab', formSet: 'both', part: 4 },
+  { question: 'Compute $\\lim_{x \\to 0} \\dfrac{\\sin(6x)}{\\tan(2x)}$.', options: ['$\\frac{1}{3}$', '$12$', '$3$', '$1$'], correctAnswer: 2, explanation: 'Write it as $\\frac{\\sin(6x)}{6x} \\cdot \\frac{2x}{\\tan(2x)} \\cdot \\frac{6x}{2x}$; the first two factors approach 1, leaving $\\frac{6}{2} = 3$. Inverting the ratio gives $\\frac{1}{3}$, and multiplying the coefficients gives 12.', difficulty: 'medium', domain: 'limits', topicSlug: 'limits-continuity-calcab', formSet: 'both', part: 6 },
+  { question: 'Compute $\\lim_{x \\to -2} \\dfrac{x^2 - 4}{x^2 + 2x}$.', options: ['$-2$', '$-4$', '$\\frac{1}{2}$', '$2$'], correctAnswer: 3, explanation: 'Factor: $\\frac{(x - 2)(x + 2)}{x(x + 2)} = \\frac{x - 2}{x}$ for $x \\ne -2$, which approaches $\\frac{-4}{-2} = 2$. Dropping the denominator gives $-4$, a sign slip gives $-2$, and flipping the fraction gives $\\frac{1}{2}$.', difficulty: 'easy', domain: 'limits', topicSlug: 'limits-continuity-calcab', formSet: 'both', part: 1 },
+
+  // -- definition-of-derivative-calcab --
+  { question: 'At which $x$-value is $f(x) = |x + 1| + 2$ continuous but NOT differentiable?', options: ['$x = 1$', '$x = -1$', '$x = 2$', 'Nowhere'], correctAnswer: 1, explanation: 'The graph of $|x + 1| + 2$ has a corner where $x + 1 = 0$, at $x = -1$: the slope jumps from $-1$ to $+1$, so the derivative does not exist there, although the function is continuous. Using $x = 1$ misreads the shift, and the $+2$ moves the graph up without creating a corner at $x = 2$.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 2 },
+  { question: 'For $g(x) = \\begin{cases} x^2 & x \\le 1 \\\\ 2x - 1 & x > 1 \\end{cases}$, which statement is true at $x = 1$?', options: ['$g$ is continuous but not differentiable', '$g$ is continuous and differentiable', '$g$ is differentiable but not continuous', '$g$ is neither continuous nor differentiable'], correctAnswer: 1, explanation: 'Both pieces give 1 at $x = 1$, so $g$ is continuous; the left slope is $2x = 2$ and the right slope is 2, so the derivative exists too. A function cannot be differentiable without being continuous, and matching values alone would not settle differentiability without checking the slopes.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 2 },
+  { question: 'A table gives $f(1.8) = 4.2$, $f(2) = 5.0$ and $f(2.2) = 6.4$. Using the values on both sides of $x = 2$, what is the best estimate of $f\'(2)$?', options: ['$7.0$', '$4.0$', '$5.5$', '$2.2$'], correctAnswer: 2, explanation: 'The symmetric difference quotient is $\\frac{f(2.2) - f(1.8)}{2.2 - 1.8} = \\frac{2.2}{0.4} = 5.5$. The one-sided quotients give 7.0 (right) and 4.0 (left), and 2.2 is the change in $f$ before dividing by the change in $x$.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 3 },
+  { question: 'The volume of water in a tank is $V(t)$ liters, with $t$ in minutes. What does $V\'\'(4) = -0.5$ mean?', options: ['The volume of water is decreasing at a rate of 0.5 liters per minute', 'The volume of water is 0.5 liters less than it was at $t = 3$', 'The rate of change of the volume is decreasing by 0.5 L/min per minute', 'The rate at which the volume changes is equal to $-0.5$ liters'], correctAnswer: 2, explanation: 'The second derivative is the rate of change of $V\'(t)$, so its units are liters per minute per minute: at $t = 4$ the rate of change of the volume is falling by 0.5 L/min each minute. A decreasing volume is a statement about $V\'$, and a difference of volumes is not a derivative at all.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 4 },
+  { question: 'Which notation does NOT represent the derivative of $y = f(x)$?', options: ['$\\dfrac{dy}{dx}$', '$f\'(x)$', '$\\dfrac{d}{dx}[f(x)]$', '$\\dfrac{\\Delta y}{\\Delta x}$'], correctAnswer: 3, explanation: 'The ratio $\\frac{\\Delta y}{\\Delta x}$ is an average rate of change over an interval; the derivative is its limit as $\\Delta x \\to 0$. Leibniz notation, prime notation and operator notation all name the derivative.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 4 },
+  { question: 'What is the equation of the line tangent to $f(x) = \\dfrac{4}{x}$ at $x = 2$?', options: ['$y = x$', '$y = -2x + 6$', '$y = -x + 4$', '$y = -x + 2$'], correctAnswer: 2, explanation: 'The point is $(2, f(2)) = (2, 2)$ and $f\'(x) = -\\frac{4}{x^2}$, so the slope is $-1$: $y - 2 = -(x - 2)$, or $y = -x + 4$. Dropping the $f(2)$ term gives $y = -x + 2$, a sign slip gives $y = x$, and $-2$ is $-\\frac{4}{x}$ rather than $-\\frac{4}{x^2}$ at 2.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 5 },
+  { question: 'The line tangent to the graph of $f$ at $x = 5$ is $y = 3x - 7$. What is the tangent-line approximation of $f(5.2)$?', options: ['$8.0$', '$8.6$', '$15.6$', '$0.6$'], correctAnswer: 1, explanation: 'Evaluate the tangent line at 5.2: $3(5.2) - 7 = 8.6$. The value 8.0 is $f(5)$, 15.6 forgets the $-7$, and 0.6 is only the change $3(0.2)$ without the starting value.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 5 },
+  { question: 'For $f(x) = x^2 - 3x$, which statement about $f\'(4)$ is correct?', options: ['$\\lim_{h \\to 0} \\dfrac{f(4 + h) - f(4)}{h} = 4$', '$\\lim_{h \\to 0} \\dfrac{f(4 + h) - f(h)}{h} = 5$', '$\\lim_{h \\to 0} \\dfrac{f(4 + h) - f(4)}{h} = 5$', '$\\lim_{h \\to 0} \\dfrac{f(4 + h) - f(4)}{4} = 5$'], correctAnswer: 2, explanation: 'The definition is $\\lim_{h \\to 0} \\frac{f(4 + h) - f(4)}{h}$, and since $f\'(x) = 2x - 3$ its value is 5. The value 4 is $f(4)$, not the slope, and the other two limits subtract $f(h)$ or divide by 4 instead of by $h$.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 7 },
+  { question: 'If $f(2) = 5$ and $f\'(2) = 4$, which is an equation of the line normal to the graph of $f$ at $x = 2$?', options: ['$y - 5 = -\\frac{1}{4}(x - 2)$', '$y - 5 = 4(x - 2)$', '$y - 5 = -4(x - 2)$', '$y - 5 = \\frac{1}{4}(x - 2)$'], correctAnswer: 0, explanation: 'The normal line is perpendicular to the tangent, so its slope is the negative reciprocal of 4, which is $-\\frac{1}{4}$, through $(2, 5)$. Slope 4 is the tangent line, $-4$ only changes the sign, and $\\frac{1}{4}$ only takes the reciprocal.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'definition-of-derivative-calcab', formSet: 'both', part: 7 },
+
+  // -- basic-differentiation-rules-calcab --
+  { question: 'For $f(x) = \\tan x - 2\\sin x$, what is $f\'\\left(\\frac{\\pi}{4}\\right)$?', options: ['$1 - \\sqrt{2}$', '$2 + \\sqrt{2}$', '$2 - \\sqrt{2}$', '$2 - 2\\sqrt{2}$'], correctAnswer: 2, explanation: '$f\'(x) = \\sec^2 x - 2\\cos x$, and at $\\frac{\\pi}{4}$, $\\sec^2 = 2$ and $2\\cos = \\sqrt{2}$, giving $2 - \\sqrt{2}$. Using $\\tan\\frac{\\pi}{4} = 1$ for $\\sec^2$ gives $1 - \\sqrt{2}$, and taking the derivative of $\\sin x$ as $-\\cos x$ gives $2 + \\sqrt{2}$.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'basic-differentiation-rules-calcab', formSet: 'both', part: 4 },
+
+  // -- chain-rule-calcab --
+  { question: 'For the curve $x^3 + 2y^2 = 11$, what is $\\dfrac{dy}{dx}$ at the point $(1, 2)$?', options: ['$-\\frac{3}{4}$', '$\\frac{3}{8}$', '$-\\frac{8}{3}$', '$-\\frac{3}{8}$'], correctAnswer: 3, explanation: 'Differentiate: $3x^2 + 4y\\frac{dy}{dx} = 0$, so $\\frac{dy}{dx} = -\\frac{3x^2}{4y} = -\\frac{3}{8}$ at $(1, 2)$. Writing the derivative of $2y^2$ as $2y\\frac{dy}{dx}$ gives $-\\frac{3}{4}$, and flipping the ratio gives $-\\frac{8}{3}$.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'chain-rule-calcab', formSet: 'both', part: 3 },
+  { question: 'For the curve $y + \\sin y = x^2$, what is $\\dfrac{dy}{dx}$?', options: ['$\\dfrac{2x}{\\cos y}$', '$\\dfrac{2x}{1 + \\cos y}$', '$2x - \\cos y$', '$\\dfrac{2x}{1 - \\cos y}$'], correctAnswer: 1, explanation: 'Differentiate both sides: $\\frac{dy}{dx} + \\cos y \\frac{dy}{dx} = 2x$, so $\\frac{dy}{dx}(1 + \\cos y) = 2x$. Forgetting the $\\frac{dy}{dx}$ from the $y$ term gives $\\frac{2x}{\\cos y}$, and the derivative of $\\sin y$ is $+\\cos y \\frac{dy}{dx}$, not $-\\cos y \\frac{dy}{dx}$.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'chain-rule-calcab', formSet: 'both', part: 3 },
+  { question: 'The edge of a cube grows at 3 cm/s. How fast is the volume increasing when the edge is 4 cm?', options: ['$48$ cm$^3$/s', '$144$ cm$^3$/s', '$64$ cm$^3$/s', '$192$ cm$^3$/s'], correctAnswer: 1, explanation: 'Differentiate $V = s^3$ with respect to $t$: $\\frac{dV}{dt} = 3s^2 \\frac{ds}{dt} = 3(16)(3) = 144$ cm$^3$/s. Leaving out $\\frac{ds}{dt}$ gives 48, 64 is the volume itself, and 192 multiplies the volume by the rate without differentiating.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'chain-rule-calcab', formSet: 'both', part: 4 },
+  { question: 'The radius of a spherical balloon grows at 0.5 cm/s. How fast is its surface area $S = 4\\pi r^2$ increasing when $r = 6$ cm?', options: ['$48\\pi$ cm$^2$/s', '$12\\pi$ cm$^2$/s', '$24\\pi$ cm$^2$/s', '$72\\pi$ cm$^2$/s'], correctAnswer: 2, explanation: '$\\frac{dS}{dt} = 8\\pi r \\frac{dr}{dt} = 8\\pi(6)(0.5) = 24\\pi$ cm$^2$/s. Leaving out $\\frac{dr}{dt}$ gives $48\\pi$, using $4\\pi r$ as the derivative gives $12\\pi$, and $72\\pi$ is half the surface area itself.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'chain-rule-calcab', formSet: 'both', part: 4 },
+  { question: 'What is $\\dfrac{d}{dx}\\arctan(3x)$?', options: ['$\\dfrac{1}{1 + 9x^2}$', '$\\dfrac{3}{1 + 3x^2}$', '$\\dfrac{3}{\\sqrt{1 - 9x^2}}$', '$\\dfrac{3}{1 + 9x^2}$'], correctAnswer: 3, explanation: 'With $\\frac{d}{du}\\arctan u = \\frac{1}{1 + u^2}$ and $u = 3x$, the chain rule gives $\\frac{3}{1 + 9x^2}$. Leaving out the factor 3 gives $\\frac{1}{1 + 9x^2}$, not squaring the whole $3x$ gives $1 + 3x^2$, and the square-root form belongs to arcsine.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'chain-rule-calcab', formSet: 'both', part: 5 },
+
+  // -- implicit-differentiation-calcab --
+  { question: 'For the curve $x e^{y} = 4$, what is $\\dfrac{dy}{dx}$?', options: ['$-\\dfrac{e^{y}}{x}$', '$-\\dfrac{1}{x}$', '$-\\dfrac{1}{x e^{y}}$', '$-\\dfrac{x}{e^{y}}$'], correctAnswer: 1, explanation: 'Product rule: $e^{y} + x e^{y}\\frac{dy}{dx} = 0$, so $\\frac{dy}{dx} = -\\frac{e^{y}}{x e^{y}} = -\\frac{1}{x}$. Stopping before cancelling $e^{y}$, or misplacing it, gives the other forms.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 3 },
+  { question: 'For the circle $x^2 + y^2 = 9$, which expression equals $\\dfrac{d^2y}{dx^2}$?', options: ['$-\\dfrac{1}{y}$', '$\\dfrac{9}{y^3}$', '$-\\dfrac{9}{y^3}$', '$-\\dfrac{x^2 + y^2}{y^2}$'], correctAnswer: 2, explanation: 'First $\\frac{dy}{dx} = -\\frac{x}{y}$. Then $\\frac{d^2y}{dx^2} = -\\frac{y - x\\frac{dy}{dx}}{y^2} = -\\frac{y^2 + x^2}{y^3} = -\\frac{9}{y^3}$ after substituting $\\frac{dy}{dx}$ and using the equation. A sign slip gives $\\frac{9}{y^3}$, and stopping at $y^2$ in the denominator loses a factor of $y$.', difficulty: 'hard', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 4 },
+  { question: 'At a point on an implicitly defined curve, $\\dfrac{dy}{dx} = 0$ and $\\dfrac{d^2y}{dx^2} = -2$. What does the curve have there?', options: ['A horizontal tangent, and the curve is concave up', 'A horizontal tangent at an inflection point', 'A horizontal tangent, and the curve is concave down', 'A vertical tangent, and the curve is concave down'], correctAnswer: 2, explanation: 'A zero first derivative means a horizontal tangent, and a negative second derivative means the curve is concave down there (a local maximum on that branch). A negative second derivative is not concave up, an inflection point needs concavity to change, and a vertical tangent has an undefined slope.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 4 },
+  { question: 'A curve has $\\dfrac{dy}{dx} = \\dfrac{3x - y}{x + 2y}$. Horizontal tangents can occur only where:', options: ['$x + 2y = 0$ and $3x - y \\ne 0$', '$3x - y = 0$ and $x + 2y \\ne 0$', '$3x - y = 0$ and $x + 2y = 0$', '$3x - y = x + 2y$'], correctAnswer: 1, explanation: 'A horizontal tangent needs slope 0: numerator zero with a nonzero denominator. A zero denominator with nonzero numerator gives a vertical tangent, both zero leaves the slope undetermined, and setting the parts equal gives slope 1.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 5 },
+  { question: 'Where does the ellipse $x^2 + 4y^2 = 16$ have vertical tangent lines?', options: ['$(0, 2)$ and $(0, -2)$', '$(4, 0)$ and $(-4, 0)$', '$(2, 0)$ and $(-2, 0)$', '$(0, 4)$ and $(0, -4)$'], correctAnswer: 1, explanation: 'Here $\\frac{dy}{dx} = -\\frac{x}{4y}$, which is undefined when $y = 0$; then $x^2 = 16$, so the points are $(\\pm 4, 0)$. The points $(0, \\pm 2)$ have horizontal tangents, and the others are not on the ellipse.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 5 },
+  { question: 'Implicitly differentiating $\\sin y = x$ gives $\\dfrac{dy}{dx} = \\dfrac{1}{\\cos y}$. Written in terms of $x$ (with $-\\frac{\\pi}{2} \\lt y \\lt \\frac{\\pi}{2}$), this is:', options: ['$\\dfrac{1}{1 + x^2}$', '$\\dfrac{1}{\\sqrt{1 - x^2}}$', '$\\dfrac{1}{\\sqrt{1 + x^2}}$', '$-\\dfrac{1}{\\sqrt{1 - x^2}}$'], correctAnswer: 1, explanation: 'On that interval $\\cos y = \\sqrt{1 - \\sin^2 y} = \\sqrt{1 - x^2}$, so $\\frac{dy}{dx} = \\frac{1}{\\sqrt{1 - x^2}}$, the derivative of $\\arcsin x$. The form $\\frac{1}{1 + x^2}$ comes from $\\tan y = x$, and the negative version comes from $\\cos y = x$.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 6 },
+  { question: 'What is the slope of the line normal to the curve $x^2 + xy = 12$ at the point $(3, 1)$?', options: ['$-\\frac{7}{3}$', '$\\frac{3}{7}$', '$-\\frac{3}{7}$', '$\\frac{7}{3}$'], correctAnswer: 1, explanation: 'Differentiate: $2x + y + x\\frac{dy}{dx} = 0$, so the tangent slope is $-\\frac{2x + y}{x} = -\\frac{7}{3}$ at $(3, 1)$. The normal slope is the negative reciprocal, $\\frac{3}{7}$; $-\\frac{7}{3}$ is the tangent slope itself.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 6 },
+  { question: 'A curve satisfies $\\dfrac{dy}{dx} = \\dfrac{x + 1}{2y}$ and passes through $(3, 2)$. What is the equation of its tangent line at that point?', options: ['$y = 2x - 4$', '$y - 3 = x - 2$', '$y = x - 1$', '$y = \\frac{1}{2}x + \\frac{1}{2}$'], correctAnswer: 2, explanation: 'At $(3, 2)$ the slope is $\\frac{3 + 1}{2(2)} = 1$, so $y - 2 = 1(x - 3)$, or $y = x - 1$. Using a slope of 2 forgets the $y$ in the denominator, and the line $y - 3 = x - 2$ swaps the coordinates of the point.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'implicit-differentiation-calcab', formSet: 'both', part: 7 },
+
+  // -- inverse-functions-derivatives-calcab --
+  { question: 'For a one-to-one differentiable function $f$, $f(2) = 6$, $f\'(2) = 4$, $f(6) = 11$ and $f\'(6) = 7$. What is $(f^{-1})\'(6)$?', options: ['$\\frac{1}{7}$', '$4$', '$\\frac{1}{4}$', '$\\frac{1}{6}$'], correctAnswer: 2, explanation: 'Since $f(2) = 6$, $f^{-1}(6) = 2$, and $(f^{-1})\'(6) = \\frac{1}{f\'(2)} = \\frac{1}{4}$. Using $f\'(6)$ evaluates the derivative at the wrong input, and forgetting the reciprocal gives 4.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 2 },
+  { question: 'To find $(f^{-1})\'(10)$ from a table of values of $f$ and $f\'$, what must you locate first?', options: ['The input $x$ where $f(x) = 10$', 'The value of $f\'(10)$ in the table', 'The value of $f(10)$ in the table', 'The reciprocal of the output $f(10)$'], correctAnswer: 0, explanation: 'The formula is $(f^{-1})\'(10) = \\frac{1}{f\'(f^{-1}(10))}$, so you first need the input $a$ with $f(a) = 10$, then use $f\'(a)$. Reading $f\'(10)$ or $f(10)$ treats 10 as an input of $f$ when it is an output.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 2 },
+  { question: 'What is $\\dfrac{d}{dx}\\left[\\ln\\sqrt{x}\\right]$ for $x > 0$?', options: ['$\\dfrac{1}{\\sqrt{x}}$', '$\\dfrac{1}{2\\sqrt{x}}$', '$\\dfrac{1}{2}\\ln x$', '$\\dfrac{1}{2x}$'], correctAnswer: 3, explanation: 'Rewrite $\\ln\\sqrt{x} = \\frac{1}{2}\\ln x$, whose derivative is $\\frac{1}{2x}$ (or use the chain rule: $\\frac{1}{\\sqrt{x}} \\cdot \\frac{1}{2\\sqrt{x}}$). $\\frac{1}{\\sqrt{x}}$ stops before the inner derivative, $\\frac{1}{2\\sqrt{x}}$ is the derivative of $\\sqrt{x}$ alone, and $\\frac{1}{2}\\ln x$ is the function itself.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 4 },
+  { question: 'What is $\\dfrac{d}{dx}\\left[\\log_3(x^2 + 1)\\right]$?', options: ['$\\dfrac{2x}{x^2 + 1}$', '$\\dfrac{2x \\ln 3}{x^2 + 1}$', '$\\dfrac{2x}{(x^2 + 1)\\ln 3}$', '$\\dfrac{1}{(x^2 + 1)\\ln 3}$'], correctAnswer: 2, explanation: 'Use $\\frac{d}{du}\\log_3 u = \\frac{1}{u \\ln 3}$ with the chain rule: $\\frac{2x}{(x^2 + 1)\\ln 3}$. Dropping the $\\ln 3$ treats the log as natural, putting $\\ln 3$ in the numerator inverts the conversion, and omitting $2x$ skips the chain rule.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 4 },
+  { question: 'What is $\\dfrac{d}{dx}\\left[x \\arctan x\\right]$?', options: ['$\\dfrac{x}{1 + x^2}$', '$\\arctan x + \\dfrac{x}{1 + x^2}$', '$\\arctan x + \\dfrac{1}{1 + x^2}$', '$\\dfrac{1}{1 + x^2}$'], correctAnswer: 1, explanation: 'Product rule: $(1)\\arctan x + x \\cdot \\frac{1}{1 + x^2}$. Keeping only the second term forgets to differentiate the factor $x$, and $\\frac{1}{1 + x^2}$ without the factor $x$ drops part of the product.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 5 },
+  { question: 'Let $g = f^{-1}$, with $f(1) = 4$ and $f\'(1) = -2$. Which is an equation of the line tangent to $y = g(x)$ at $x = 4$?', options: ['$y - 4 = -\\frac{1}{2}(x - 1)$', '$y - 1 = -\\frac{1}{2}(x - 4)$', '$y - 1 = -2(x - 4)$', '$y - 1 = \\frac{1}{2}(x - 4)$'], correctAnswer: 1, explanation: 'The point on $g$ is $(4, g(4)) = (4, 1)$ and the slope is $g\'(4) = \\frac{1}{f\'(1)} = -\\frac{1}{2}$. Swapping the point gives the first form, using $f\'(1)$ directly gives slope $-2$, and the reciprocal keeps the sign, so it is not $+\\frac{1}{2}$.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 6 },
+  { question: 'For $f(x) = x^5 + 2x + 1$, note that $f(1) = 4$. What is $(f^{-1})\'(4)$?', options: ['$\\frac{1}{1282}$', '$7$', '$\\frac{1}{4}$', '$\\frac{1}{7}$'], correctAnswer: 3, explanation: 'Since $f(1) = 4$, $(f^{-1})\'(4) = \\frac{1}{f\'(1)}$, and $f\'(x) = 5x^4 + 2$ gives $f\'(1) = 7$. Evaluating $f\'$ at 4 gives $\\frac{1}{1282}$, and forgetting the reciprocal gives 7.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 6 },
+  { question: 'If $f(x) = e^{3x}$ and $g = f^{-1}$, what is $g\'(e^{6})$?', options: ['$\\dfrac{1}{e^{6}}$', '$\\dfrac{1}{3e^{6}}$', '$3e^{6}$', '$\\dfrac{1}{3e^{2}}$'], correctAnswer: 1, explanation: 'Since $f(2) = e^{6}$, $g\'(e^{6}) = \\frac{1}{f\'(2)} = \\frac{1}{3e^{6}}$ (equivalently $g(x) = \\frac{\\ln x}{3}$, so $g\'(x) = \\frac{1}{3x}$). Dropping the chain factor 3 gives $\\frac{1}{e^{6}}$, and forgetting the reciprocal gives $3e^{6}$.', difficulty: 'hard', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 7 },
+  { question: 'For $f(x) = \\arcsin(3x)$, what is $f\'\\left(\\frac{1}{5}\\right)$?', options: ['$\\frac{15}{4}$', '$\\frac{5}{4}$', '$\\frac{75}{16}$', '$\\frac{75}{34}$'], correctAnswer: 0, explanation: '$f\'(x) = \\frac{3}{\\sqrt{1 - 9x^2}}$, and at $x = \\frac{1}{5}$, $\\sqrt{1 - \\frac{9}{25}} = \\frac{4}{5}$, so $f\' = \\frac{15}{4}$. Leaving out the chain factor gives $\\frac{5}{4}$, forgetting the square root gives $\\frac{75}{16}$, and the arctangent formula gives $\\frac{75}{34}$.', difficulty: 'hard', domain: 'differentiation', topicSlug: 'inverse-functions-derivatives-calcab', formSet: 'both', part: 7 },
+
+  // -- derivatives-exp-log-calcab --
+  { question: 'A quantity grows according to $y = Ce^{kt}$ and triples every 6 years. What is $k$?', options: ['$\\dfrac{6}{\\ln 3}$', '$\\dfrac{\\ln 6}{3}$', '$\\dfrac{\\ln 3}{6}$', '$\\dfrac{\\ln 2}{6}$'], correctAnswer: 2, explanation: 'Tripling means $3C = Ce^{6k}$, so $e^{6k} = 3$ and $k = \\frac{\\ln 3}{6}$. Inverting gives $\\frac{6}{\\ln 3}$, swapping 3 and 6 gives $\\frac{\\ln 6}{3}$, and $\\frac{\\ln 2}{6}$ is the doubling-time formula.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 4 },
+  { question: 'A substance decays according to $\\dfrac{dy}{dt} = -0.2y$ with $y(0) = 50$ grams. What is $y(5)$?', options: ['$50e^{-0.2}$', '$50e^{-1}$', '$50(0.8)^{5}$', '$50e^{-0.2t}$'], correctAnswer: 1, explanation: 'The solution of $\\frac{dy}{dt} = ky$ is $y = y_0 e^{kt}$, so $y(5) = 50e^{-0.2 \\cdot 5} = 50e^{-1}$. $50e^{-0.2}$ is the amount after 1 year, $50(0.8)^5$ treats the rate as a discrete 20% loss per year, and $50e^{-0.2t}$ is the general solution, not its value at $t = 5$.', difficulty: 'easy', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 4 },
+  { question: 'If $f(x) = x^3 + x + 1$ and $g = f^{-1}$, what is $g\'(3)$?', options: ['$\\frac{1}{28}$', '$4$', '$\\frac{1}{3}$', '$\\frac{1}{4}$'], correctAnswer: 3, explanation: 'Solve $f(x) = 3$: $x = 1$. Then $g\'(3) = \\frac{1}{f\'(1)} = \\frac{1}{3 + 1} = \\frac{1}{4}$. Evaluating $f\'$ at 3 gives $\\frac{1}{28}$, and $\\frac{1}{3}$ just inverts the input.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 5 },
+  { question: 'For $f(x) = \\ln x + x$, what is $(f^{-1})\'(1)$?', options: ['$2$', '$\\frac{1}{2}$', '$1$', '$\\frac{1}{1 + e}$'], correctAnswer: 1, explanation: 'Since $f(1) = 0 + 1 = 1$, $(f^{-1})\'(1) = \\frac{1}{f\'(1)} = \\frac{1}{1 + 1} = \\frac{1}{2}$. Forgetting the reciprocal gives 2, and $\\frac{1}{1 + e}$ comes from guessing that $f^{-1}(1) = e$.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 5 },
+  { question: 'Where does $f(x) = x e^{-x}$ have its absolute maximum?', options: ['$x = -1$', '$x = 1$', '$x = \\frac{1}{e}$', '$x = \\ln 2$'], correctAnswer: 1, explanation: '$f\'(x) = e^{-x} - xe^{-x} = e^{-x}(1 - x)$, which is positive for $x \\lt 1$ and negative for $x > 1$, so the maximum is at $x = 1$. A sign slip in the product rule gives $x = -1$, and $\\frac{1}{e}$ is the maximum value $f(1)$, not its location.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 6 },
+  { question: 'For $f(x) = x \\ln x$ with $x > 0$, what is the minimum value of $f$?', options: ['$\\frac{1}{e}$', '$-\\frac{1}{e}$', '$-1$', '$0$'], correctAnswer: 1, explanation: '$f\'(x) = \\ln x + 1 = 0$ at $x = \\frac{1}{e}$, where $f$ changes from decreasing to increasing; $f\\left(\\frac{1}{e}\\right) = \\frac{1}{e}\\ln\\frac{1}{e} = -\\frac{1}{e}$. The value $\\frac{1}{e}$ is the location, not the value, and $-1$ is $\\ln\\frac{1}{e}$ alone.', difficulty: 'hard', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 6 },
+  { question: 'What is $\\dfrac{d}{dx}\\left[3^{x^2}\\right]$?', options: ['$x^2 \\cdot 3^{x^2 - 1}$', '$2x \\cdot 3^{x^2}$', '$2x \\cdot 3^{x^2} \\ln 3$', '$3^{x^2} \\ln 3$'], correctAnswer: 2, explanation: 'Use $\\frac{d}{du}a^u = a^u \\ln a$ with the chain rule: $3^{x^2} \\ln 3 \\cdot 2x$. Treating the exponential like a power gives $x^2 \\cdot 3^{x^2 - 1}$, dropping $\\ln 3$ treats the base as $e$, and dropping $2x$ skips the chain rule.', difficulty: 'medium', domain: 'differentiation', topicSlug: 'derivatives-exp-log-calcab', formSet: 'both', part: 7 },
+
+  // -- applications-of-derivatives-calcab --
+  { question: 'For $f(x) = x^2 - 4x$ on $[0, 3]$, what value of $c$ satisfies the conclusion of the Mean Value Theorem?', options: ['$2$', '$\\frac{3}{2}$', '$\\frac{5}{2}$', '$1$'], correctAnswer: 1, explanation: 'The average rate of change is $\\frac{f(3) - f(0)}{3 - 0} = \\frac{-3 - 0}{3} = -1$. Setting $f\'(c) = 2c - 4 = -1$ gives $c = \\frac{3}{2}$, which lies in $(0, 3)$. The value 2 is where $f\'(c) = 0$, which is Rolle\'s conclusion, not this one.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'applications-of-derivatives-calcab', formSet: 'both', part: 5 },
+  { question: 'Which function satisfies the hypotheses of the Mean Value Theorem on $[-1, 2]$?', options: ['$f(x) = x^{2/3}$', '$f(x) = \\dfrac{1}{x}$', '$f(x) = |x|$', '$f(x) = x^3 + 2x$'], correctAnswer: 3, explanation: 'The theorem needs continuity on $[-1, 2]$ and differentiability on $(-1, 2)$; the polynomial $x^3 + 2x$ has both. $x^{2/3}$ has a cusp and $|x|$ a corner at 0, so neither is differentiable there, and $\\frac{1}{x}$ is not even continuous at 0.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'applications-of-derivatives-calcab', formSet: 'both', part: 5 },
+  { question: 'A rectangle has its base on the $x$-axis and its upper corners on the parabola $y = 12 - x^2$. What is the largest possible area?', options: ['$16$', '$24$', '$32$', '$48$'], correctAnswer: 2, explanation: 'With corners at $(\\pm x, 12 - x^2)$, $A = 2x(12 - x^2) = 24x - 2x^3$. Then $A\' = 24 - 6x^2 = 0$ gives $x = 2$, and $A = 4 \\cdot 8 = 32$ (a maximum, since $A\'\' = -12x \\lt 0$). Using a width of $x$ instead of $2x$ gives 16.', difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'applications-of-derivatives-calcab', formSet: 'both', part: 6 },
+  { question: 'An open-top box with a square base must hold 108 ft$^3$. What base side length minimizes the surface area?', options: ['$6\\sqrt{3}$ ft', '$6$ ft', '$3\\sqrt[3]{4}$ ft', '$36$ ft'], correctAnswer: 1, explanation: 'With base side $x$ and height $\\frac{108}{x^2}$, $S = x^2 + \\frac{432}{x}$, so $S\' = 2x - \\frac{432}{x^2} = 0$ gives $x^3 = 216$ and $x = 6$. A closed box (two square faces) leads to $x^3 = 108$, or $3\\sqrt[3]{4}$; $6\\sqrt{3}$ comes from setting the base area equal to 108; and 36 is the base area $x^2$, not the side length.', difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'applications-of-derivatives-calcab', formSet: 'both', part: 6 },
+  { question: 'What is the absolute maximum value of $f(x) = x^3 - 3x^2$ on $[-1, 4]$?', options: ['$0$', '$16$', '$-4$', '$4$'], correctAnswer: 1, explanation: 'Critical points: $f\'(x) = 3x^2 - 6x = 0$ at $x = 0$ and $x = 2$. Compare $f(-1) = -4$, $f(0) = 0$, $f(2) = -4$ and $f(4) = 16$; the largest is 16, at the endpoint. The local maximum value 0 is not the absolute maximum on this interval.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'applications-of-derivatives-calcab', formSet: 'both', part: 7 },
+  { question: 'For $f(x) = x^2 - 6x$ on $[0, 6]$, what does Rolle\'s Theorem guarantee?', options: ['$f(c) = 0$ for some $c$ in $(0, 6)$', '$f\'\'(c) = 0$ for some $c$ in $(0, 6)$', '$f\'(c) = 0$ for some $c$ in $(0, 6)$', '$f\'(c) = 8$ for some $c$ in $(0, 6)$'], correctAnswer: 2, explanation: '$f$ is a polynomial with $f(0) = f(6) = 0$, so Rolle\'s Theorem guarantees a point in $(0, 6)$ where $f\'(c) = 0$ (here $c = 3$). The zeros of $f$ are only at the endpoints, $f\'\'(x) = 2$ is never 0, and $f\'(c) = 2c - 6 = 8$ would need $c = 7$.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'applications-of-derivatives-calcab', formSet: 'both', part: 7 },
+
+  // -- concavity-inflection-points-calcab --
+  { question: 'For $f(x) = x^3 - 6x^2 + 9x$, what does the Second Derivative Test say about the critical point at $x = 3$?', options: ['It is a local maximum because $f\'\'(3) > 0$', 'It is a local minimum because $f\'\'(3) > 0$', 'It is a local minimum because $f\'\'(3) \\lt 0$', 'It is an inflection point because $f\'(3) = 0$'], correctAnswer: 1, explanation: '$f\'(x) = 3(x - 1)(x - 3)$, so $x = 3$ is a critical point, and $f\'\'(x) = 6x - 12$ gives $f\'\'(3) = 6 > 0$: concave up, so a local minimum. Positive second derivative never signals a maximum, and $f\'(3) = 0$ says nothing about concavity changing.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 2 },
+  { question: 'The graph of $f\'$ is decreasing on $(1, 4)$ and increasing on $(4, 7)$. What does the graph of $f$ have at $x = 4$?', options: ['A local minimum', 'A point of inflection', 'A local maximum', 'A vertical tangent'], correctAnswer: 1, explanation: 'Where $f\'$ changes from decreasing to increasing, $f\'\'$ changes from negative to positive, so $f$ changes from concave down to concave up: an inflection point. Extrema of $f$ come from sign changes of $f\'$, not from changes in its direction.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 4 },
+  { question: 'A particle has velocity $v(t) = t^2 - 4t$ for $0 \\lt t \\lt 6$. When is the particle speeding up?', options: ['$(2, 4)$ and $(4, 6)$', '$(0, 2)$ and $(4, 6)$', '$(2, 6)$ only', '$(0, 2)$ and $(2, 4)$'], correctAnswer: 1, explanation: 'Speed increases when velocity and acceleration have the same sign. Here $v \\lt 0$ on $(0, 4)$ and $v > 0$ on $(4, 6)$, while $a(t) = 2t - 4$ is negative on $(0, 2)$ and positive on $(2, 6)$, so the signs match on $(0, 2)$ and $(4, 6)$. Using positive acceleration alone gives $(2, 6)$.', difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 5 },
+  { question: 'The position $s(t)$ of a particle has an inflection point at $t = 3$. What must be true at $t = 3$?', options: ['The particle is at rest at that instant', 'The velocity has a local maximum or minimum', 'The particle changes its direction of motion', 'The position reaches its greatest value'], correctAnswer: 1, explanation: 'An inflection point of $s$ means $s\'\' = a$ changes sign, so the velocity $s\' = v$ switches between increasing and decreasing: a local extremum of velocity. Being at rest or turning around depends on $v$ itself being 0, and an extreme position needs $v$ to change sign.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 5 },
+  { question: 'A profit function has $P\'(50) = 0$ and $P\'\'(x) \\lt 0$ for all $x > 0$. What can be concluded?', options: ['$P$ has a local minimum at $x = 50$', '$P$ has its absolute maximum at $x = 50$', '$P$ has an inflection point at $x = 50$', '$P$ is increasing for all $x > 50$'], correctAnswer: 1, explanation: 'Because $P$ is concave down on its whole domain, its only critical point is a local maximum and the graph lies below that peak everywhere, so it is the absolute maximum. Concave down rules out a minimum and an inflection point, and $P$ decreases after $x = 50$.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 6 },
+  { question: 'A box\'s volume $V(x)$ has exactly one critical point on $(0, 5)$, at $x = 2$, and $V\'\'(2) \\lt 0$. Why is $V(2)$ the absolute maximum on $(0, 5)$?', options: ['Every critical point on an open interval is a maximum', 'It is the only critical point, and it is a local maximum', 'The second derivative is negative at every point', 'The endpoints 0 and 5 always give smaller values'], correctAnswer: 1, explanation: 'A single critical point that is a local maximum (by the Second Derivative Test) must be the absolute maximum on the interval, since the function cannot rise again without another critical point. Critical points can be minima, $V\'\'$ is known only at $x = 2$, and the open interval has no endpoints to test.', difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 6 },
+  { question: 'A student writes: "$f$ has an inflection point at $x = 2$ because $f\'\'(2) = 0$." Why does this justification lose credit?', options: ['$f\'(2)$ must also equal 0 at any inflection point', '$f\'\'$ must change sign at $x = 2$, and that was not shown', 'An inflection point needs $f\'\'(2)$ to be undefined', 'The student must also show that $f(2) = 0$'], correctAnswer: 1, explanation: 'An inflection point requires the concavity to change, so the justification must state that $f\'\'$ changes sign at $x = 2$; $f\'\'(2) = 0$ alone is not enough (for $x^4$ it is 0 with no inflection). Inflection points do not require $f\'(2) = 0$, an undefined $f\'\'$, or $f(2) = 0$.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'concavity-inflection-points-calcab', formSet: 'both', part: 7 },
+
+  // -- related-rates-calcab --
+  { question: 'A kite flies at a constant height of 60 ft and moves horizontally away from the person holding the string at 4 ft/s. How fast is the angle of elevation $\\theta$ changing when the horizontal distance is 80 ft?', options: ['$-\\frac{3}{80}$ rad/s', '$\\frac{3}{125}$ rad/s', '$-\\frac{1}{20}$ rad/s', '$-\\frac{3}{125}$ rad/s'], correctAnswer: 3, explanation: 'From $\\tan\\theta = \\frac{60}{x}$, $\\sec^2\\theta \\frac{d\\theta}{dt} = -\\frac{60}{x^2}\\frac{dx}{dt}$. At $x = 80$ the hypotenuse is 100, so $\\sec^2\\theta = \\frac{25}{16}$ and $\\frac{d\\theta}{dt} = -\\frac{240}{6400} \\cdot \\frac{16}{25} = -\\frac{3}{125}$ rad/s. Forgetting $\\sec^2\\theta$ gives $-\\frac{3}{80}$, and the angle shrinks as the kite moves away, so the rate is negative.', difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 4 },
+  { question: 'If $x = 10\\cos\\theta$ and $\\dfrac{d\\theta}{dt} = 0.2$ rad/s, what is $\\dfrac{dx}{dt}$ when $\\theta = \\dfrac{\\pi}{6}$?', options: ['$1$', '$-\\sqrt{3}$', '$-1$', '$-5$'], correctAnswer: 2, explanation: '$\\frac{dx}{dt} = -10\\sin\\theta \\frac{d\\theta}{dt} = -10\\left(\\frac{1}{2}\\right)(0.2) = -1$. Using $\\cos\\frac{\\pi}{6}$ instead of $\\sin\\frac{\\pi}{6}$ gives $-\\sqrt{3}$, leaving out $\\frac{d\\theta}{dt}$ gives $-5$, and the derivative of cosine is negative.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 4 },
+  { question: 'At one instant, $x = 5$, $y = 12$, $\\dfrac{dx}{dt} = 3$ and $\\dfrac{dy}{dt} = -1$. If $D = \\sqrt{x^2 + y^2}$, what is $\\dfrac{dD}{dt}$ at that instant?', options: ['$\\frac{27}{13}$', '$2$', '$\\frac{3}{13}$', '$\\frac{3}{26}$'], correctAnswer: 2, explanation: 'Here $D = 13$ and $\\frac{dD}{dt} = \\frac{x\\frac{dx}{dt} + y\\frac{dy}{dt}}{D} = \\frac{15 - 12}{13} = \\frac{3}{13}$. Ignoring the negative sign gives $\\frac{27}{13}$, adding the rates gives 2, and an extra factor of $\\frac{1}{2}$ gives $\\frac{3}{26}$.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 6 },
+  { question: 'Sand falls onto a conical pile whose height always equals its radius, at $9\\pi$ ft$^3$/min. How fast is the height rising when the pile is 3 ft high?', options: ['$\\frac{1}{3}$ ft/min', '$9$ ft/min', '$1$ ft/min', '$\\frac{1}{\\pi}$ ft/min'], correctAnswer: 2, explanation: 'With $r = h$, $V = \\frac{1}{3}\\pi h^3$, so $\\frac{dV}{dt} = \\pi h^2 \\frac{dh}{dt}$ and $9\\pi = 9\\pi \\frac{dh}{dt}$, giving 1 ft/min. Dropping the $\\frac{1}{3}$ in the cone formula gives $\\frac{1}{3}$, and losing the $\\pi$ on one side gives $\\frac{1}{\\pi}$.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'related-rates-calcab', formSet: 'both', part: 7 },
+
+  // -- optimization-calcab --
+  { question: 'A rectangle is inscribed in a semicircle of radius 4, with its base on the diameter. What is the largest possible area of the rectangle?', options: ['$4\\sqrt{2}$', '$2\\sqrt{2}$', '$16$', '$8\\sqrt{2}$'], correctAnswer: 2, explanation: 'With upper corners at $(\\pm x, \\sqrt{16 - x^2})$, $A = 2x\\sqrt{16 - x^2}$; setting $A\' = 0$ gives $16 - 2x^2 = 0$, so $x = 2\\sqrt{2}$ and $A = 2(2\\sqrt{2})(2\\sqrt{2}) = 16$. The value $2\\sqrt{2}$ is the optimal $x$ and $4\\sqrt{2}$ is the width, not the area.', difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both', part: 2 },
+  { question: 'A company sells $x$ items at price $p = 60 - 2x$ dollars each, and the cost of making them is $C(x) = 12x$ dollars. What value of $x$ maximizes profit?', options: ['$15$', '$12$', '$24$', '$30$'], correctAnswer: 1, explanation: 'Profit is $P(x) = x(60 - 2x) - 12x = 48x - 2x^2$, so $P\'(x) = 48 - 4x = 0$ at $x = 12$, and $P\'\' = -4 \\lt 0$ confirms a maximum. Maximizing revenue alone gives 15, and 24 and 30 come from dropping the factor 2 in the derivative.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both', part: 3 },
+  { question: 'In terms of rates, profit is maximized at a production level where:', options: ['total revenue is equal to total cost', 'marginal cost reaches its minimum value', 'marginal revenue equals marginal cost', 'average cost equals the selling price'], correctAnswer: 2, explanation: 'Profit $P = R - C$ has $P\' = R\' - C\'$, which is 0 when marginal revenue equals marginal cost (with $P$ changing from increasing to decreasing). Equal totals is the break-even point, where profit is 0, and the minimum of marginal cost is unrelated to maximum profit.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both', part: 3 },
+  { question: 'Which point on the line $y = 2x$ is closest to the point $(5, 0)$?', options: ['$(\\frac{5}{3}, \\frac{10}{3})$', '$(1, 2)$', '$(\\frac{1}{2}, 1)$', '$(5, 10)$'], correctAnswer: 1, explanation: 'Minimize $D^2 = (x - 5)^2 + (2x)^2$: the derivative $2(x - 5) + 8x = 0$ gives $x = 1$, so the point is $(1, 2)$. Differentiating $4x^2$ as $4x$ leads to $x = \\frac{5}{3}$, and the point directly above $(5, 0)$ is not the closest one.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both', part: 5 },
+  { question: 'To find the point on $y = \\sqrt{x}$ closest to $(4, 0)$, a student minimizes $D^2 = (x - 4)^2 + x$ instead of $D$. Why is this valid?', options: ['$D$ and $D^2$ have minimums at the same $x$', '$D^2$ is always smaller than $D$ for these points', 'The square root has no derivative at its minimum', 'Squaring the distance doubles each critical point'], correctAnswer: 0, explanation: 'Because $D \\ge 0$ and squaring is increasing for nonnegative numbers, $D$ and $D^2$ are smallest at the same $x$, and $D^2$ avoids the square root. $D^2$ is not always smaller than $D$ (not when $D > 1$), and squaring does not change where the critical points are.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both', part: 5 },
+  { question: 'An area function $A(x)$ on $(0, \\infty)$ has exactly one critical point, at $x = c$. Which statement justifies that $A(c)$ is the absolute maximum?', options: ['$A\'(c) = 0$, so $A(c)$ must be the greatest value', '$A\'$ changes from positive to negative at $x = c$', '$A\'\'(c) = 0$, so the graph levels off at $x = c$', '$A(c)$ is positive, so it is the greatest value'], correctAnswer: 1, explanation: 'With only one critical point, a sign change of $A\'$ from positive to negative makes $A$ increase up to $c$ and decrease after it, so $A(c)$ is the absolute maximum. $A\'(c) = 0$ alone could be a minimum or neither, $A\'\'(c) = 0$ gives no conclusion, and being positive says nothing about being largest.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both', part: 6 },
+  { question: 'Two positive numbers have a product of 64. What is the smallest possible value of their sum?', options: ['$8$', '$16$', '$32$', '$65$'], correctAnswer: 1, explanation: 'Minimize $S(x) = x + \\frac{64}{x}$: $S\'(x) = 1 - \\frac{64}{x^2} = 0$ at $x = 8$, a minimum since $S\'\' = \\frac{128}{x^3} > 0$, so $S = 8 + 8 = 16$. The value 8 is the optimal number, not the sum, and 65 is the sum $1 + 64$.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'optimization-calcab', formSet: 'both', part: 7 },
+
+  // -- linearization-differentials-calcab --
+  { question: 'The line tangent to $f(x) = \\ln x$ at $x = 1$ is used to estimate $\\ln(1.2)$. How does the estimate compare with the true value?', options: ['Underestimate: the graph lies above its tangent line', 'Overestimate: the graph lies below its tangent line', 'Exact: the graph and its tangent agree near $x = 1$', 'Underestimate: the function $\\ln x$ is increasing'], correctAnswer: 1, explanation: 'Since $f\'\'(x) = -\\frac{1}{x^2} \\lt 0$, the graph is concave down and lies below its tangent lines, so the tangent-line value $L(1.2) = 0.2$ is larger than $\\ln 1.2 \\approx 0.182$. Concavity, not whether $f$ is increasing, decides over or under.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 4 },
+  { question: 'The edge of a cube is measured as 5 cm with a possible error of 0.1 cm. Using differentials, what is the approximate error in the computed volume?', options: ['$2.5$ cm$^3$', '$7.5$ cm$^3$', '$15$ cm$^3$', '$0.3$ cm$^3$'], correctAnswer: 1, explanation: 'With $V = s^3$, $dV = 3s^2\\,ds = 3(25)(0.1) = 7.5$ cm$^3$. Leaving out the factor 3 gives 2.5, and 0.3 uses $3\\,ds$ without the $s^2$.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 5 },
+  { question: 'A table shows $f(5) = 8$ and $f\'(5) = -0.4$. What is the tangent-line approximation of $f(5.5)$?', options: ['$8.2$', '$7.8$', '$7.6$', '$-0.2$'], correctAnswer: 1, explanation: '$L(5.5) = f(5) + f\'(5)(0.5) = 8 - 0.2 = 7.8$. Adding the change gives 8.2, using a step of 1 gives 7.6, and $-0.2$ is the change alone without the starting value.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 5 },
+  { question: 'A function has $f(1) = 2$ and $f\'(x) = \\sqrt{x + 3}$. What is the tangent-line approximation of $f(1.2)$?', options: ['$2.2$', '$0.4$', '$4.4$', '$2.4$'], correctAnswer: 3, explanation: 'The slope at $x = 1$ is $f\'(1) = \\sqrt{4} = 2$, so $f(1.2) \\approx 2 + 2(0.2) = 2.4$. Using a slope of 1 gives 2.2, $0.4$ is only the change, and 4.4 adds the slope to the estimate instead of multiplying by the step.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 6 },
+  { question: 'If $f\'\'(x) > 0$ near $x = a$, how does the tangent line at $a$ estimate $f(a - 0.1)$?', options: ['As an overestimate', 'As an underestimate', 'As the exact value', 'It depends on the sign of $f\'(a)$'], correctAnswer: 1, explanation: 'A concave-up graph lies above its tangent line on both sides of the point of tangency, so the tangent line underestimates $f$ to the left as well as to the right. The sign of $f\'(a)$ does not change which side of the tangent the graph is on.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 6 },
+  { question: 'For $y = \\sin(2x)$, what is $dy$ when $x = 0$ and $dx = 0.05$?', options: ['$0.05$', '$0.1$', '$0.0998$', '$0.025$'], correctAnswer: 1, explanation: '$dy = 2\\cos(2x)\\,dx = 2(1)(0.05) = 0.1$. Dropping the chain factor 2 gives 0.05, and 0.0998 is the actual change $\\Delta y = \\sin(0.1)$, which the differential only approximates.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 7 },
+  { question: 'Use the line tangent to $y = \\sqrt[3]{x}$ at $x = 27$ to approximate $\\sqrt[3]{26}$.', options: ['$3 + \\frac{1}{27}$', '$3 - \\frac{1}{9}$', '$3 - \\frac{1}{27}$', '$3 - \\frac{1}{81}$'], correctAnswer: 2, explanation: 'The slope is $\\frac{1}{3}x^{-2/3} = \\frac{1}{3 \\cdot 9} = \\frac{1}{27}$ at $x = 27$, and the step is $-1$, so $\\sqrt[3]{26} \\approx 3 - \\frac{1}{27}$. Adding the change ignores the negative step, and $\\frac{1}{9}$ or $\\frac{1}{81}$ come from evaluating $x^{-2/3}$ incorrectly.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'linearization-differentials-calcab', formSet: 'both', part: 7 },
+
+  // -- theorem-applications-calcab --
+  { question: 'A function $f$ is continuous on $[2, 6]$ with $f(2) = 7$ and $f(6) = 1$. Which value must $f$ take somewhere in $(2, 6)$?', options: ['$-1$', '$10$', '$4$', '$-7$'], correctAnswer: 2, explanation: 'By the Intermediate Value Theorem, $f$ takes every value between 1 and 7 on $(2, 6)$, and 4 is in that range. Values outside $[1, 7]$, such as $-1$, 10 or $-7$, are not guaranteed.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 1 },
+  { question: 'For which function does the Extreme Value Theorem guarantee both an absolute maximum and an absolute minimum on the given interval?', options: ['$f(x) = \\dfrac{1}{x}$ on $(0, 2]$', '$f(x) = x^2$ on $[-1, 3]$', '$f(x) = \\tan x$ on $\\left[0, \\frac{\\pi}{2}\\right)$', '$f(x) = \\ln x$ on $(0, 1]$'], correctAnswer: 1, explanation: 'The theorem requires a continuous function on a closed interval; $x^2$ on $[-1, 3]$ qualifies. The other intervals are not closed, and each of those functions is unbounded near the open end, so one of the two absolute extremes fails to exist.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 3 },
+  { question: 'What is the absolute minimum value of $f(x) = x^3 - 3x$ on $[0, 3]$?', options: ['$0$', '$-2$', '$18$', '$2$'], correctAnswer: 1, explanation: 'The only critical point in the interval is $x = 1$ (from $3x^2 - 3 = 0$). Comparing $f(0) = 0$, $f(1) = -2$ and $f(3) = 18$, the minimum is $-2$. The endpoint value 0 is not the smallest, and 2 drops the sign.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 3 },
+  { question: 'A differentiable function has $f(1) = 2$ and $f(5) = 14$. Which theorem guarantees that $f\'(c) = 3$ for some $c$ in $(1, 5)$?', options: ['The Intermediate Value Theorem', 'The Mean Value Theorem', 'The Extreme Value Theorem', 'Rolle\'s Theorem'], correctAnswer: 1, explanation: 'The average rate of change is $\\frac{14 - 2}{5 - 1} = 3$, and the Mean Value Theorem guarantees an instantaneous rate equal to it. The Intermediate Value Theorem is about values of $f$, the Extreme Value Theorem about extrema, and Rolle\'s Theorem needs $f(1) = f(5)$.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 5 },
+  { question: 'If $G(x) = \\displaystyle\\int_{1}^{x^2} \\sqrt{t + 1}\\,dt$, what is $G\'(2)$?', options: ['$\\sqrt{5}$', '$2\\sqrt{5}$', '$4\\sqrt{5}$', '$\\sqrt{3}$'], correctAnswer: 2, explanation: 'By the Fundamental Theorem with the chain rule, $G\'(x) = \\sqrt{x^2 + 1} \\cdot 2x$, so $G\'(2) = \\sqrt{5} \\cdot 4$. Forgetting the factor $2x$ gives $\\sqrt{5}$, and substituting $x$ instead of $x^2$ gives $\\sqrt{3}$.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 5 },
+  { question: 'A twice-differentiable function has $f\'(1) = 4$ and $f\'(6) = -2$. Which statement must be true?', options: ['$f(c) = 0$ for some $c$ in $(1, 6)$', '$f\'\'(c) = 0$ for some $c$ in $(1, 6)$', '$f\'(c) = 0$ for some $c$ in $(1, 6)$', '$f$ has an inflection point in $(1, 6)$'], correctAnswer: 2, explanation: 'Since $f$ is twice differentiable, $f\'$ is continuous, and it goes from 4 to $-2$, so by the Intermediate Value Theorem $f\'(c) = 0$ somewhere in between. Nothing forces $f$ itself to be 0, and the Mean Value Theorem applied to $f\'$ gives $f\'\'(c) = -\\frac{6}{5}$, not 0.', difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'theorem-applications-calcab', formSet: 'both', part: 7 },
+
+  // -- particle-motion-calcab --
+  { question: 'A particle has velocity $v(t) = 3t^2 - 2$ and position $s(1) = 4$. What is $s(2)$?', options: ['$5$', '$9$', '$10$', '$14$'], correctAnswer: 1, explanation: '$s(2) = s(1) + \\int_1^2 (3t^2 - 2)\\,dt = 4 + [t^3 - 2t]_1^2 = 4 + (4 - (-1)) = 9$. The integral alone is 5 (the displacement), 10 is $v(2)$, and 14 adds $v(2)$ to the starting position.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'particle-motion-calcab', formSet: 'both', part: 4 },
+  { question: 'A particle has velocity $v(t) = \\sin t$ and position $s(0) = 3$. Which is its position function?', options: ['$s(t) = 3 - \\cos t$', '$s(t) = 3 + \\cos t$', '$s(t) = 4 - \\cos t$', '$s(t) = 2 + \\cos t$'], correctAnswer: 2, explanation: 'An antiderivative of $\\sin t$ is $-\\cos t$, so $s(t) = -\\cos t + C$, and $s(0) = -1 + C = 3$ gives $C = 4$. Taking $C = 3$ forgets that $\\cos 0 = 1$, and the forms with $+\\cos t$ use the wrong antiderivative.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'particle-motion-calcab', formSet: 'both', part: 4 },
+  { question: 'A particle has acceleration $a(t) = 6t - 4$ and initial velocity $v(0) = 1$. At what time $t > 0$ is the particle first at rest?', options: ['$t = 1$', '$t = \\frac{2}{3}$', '$t = \\frac{1}{3}$', '$t = 0$'], correctAnswer: 2, explanation: '$v(t) = 3t^2 - 4t + 1 = (3t - 1)(t - 1)$, which is first 0 at $t = \\frac{1}{3}$ (and again at $t = 1$). The time $\\frac{2}{3}$ is where the acceleration is 0, and $t = 0$ is not a time when the velocity is 0.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'particle-motion-calcab', formSet: 'both', part: 5 },
+  { question: 'A particle has velocity $v(t) = t^2 - 6t + 8$ for $0 \\le t \\le 5$. What total distance does it travel?', options: ['$\\frac{20}{3}$', '$\\frac{28}{3}$', '$\\frac{16}{3}$', '$8$'], correctAnswer: 1, explanation: 'The velocity is negative on $(2, 4)$. With $F(t) = \\frac{t^3}{3} - 3t^2 + 8t$, the pieces are $F(2) - F(0) = \\frac{20}{3}$, $|F(4) - F(2)| = \\frac{4}{3}$ and $F(5) - F(4) = \\frac{4}{3}$, for a total of $\\frac{28}{3}$. The net integral $\\frac{20}{3}$ is the displacement, and 8 counts only one of the two later pieces.', difficulty: 'hard', domain: 'applications-derivatives', topicSlug: 'particle-motion-calcab', formSet: 'both', part: 6 },
+  { question: 'At $t = 2$, a particle has $v(2) = -3$ and $a(2) = 4$. What is happening to its speed at that instant?', options: ['Increasing, since its acceleration is positive', 'Increasing, since its speed equals 3 at that time', 'Decreasing, since its velocity and acceleration differ in sign', 'Increasing, since its velocity is getting larger'], correctAnswer: 2, explanation: 'Speed increases when velocity and acceleration have the same sign and decreases when they differ. Here $v(2) \\lt 0$ and $a(2) > 0$, so the particle is slowing down. The velocity is indeed rising (from $-3$ toward 0), but that brings the speed down; positive acceleration alone does not decide it.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'particle-motion-calcab', formSet: 'both', part: 6 },
+  { question: 'On $[0, 6]$ a particle has displacement 4 and travels a total distance of 10. How far does it travel in the negative direction?', options: ['$7$', '$6$', '$3$', '$14$'], correctAnswer: 2, explanation: 'Let $P$ and $N$ be the distances moved in the positive and negative directions. Then $P - N = 4$ and $P + N = 10$, so $N = 3$ (and $P = 7$). The value 6 is the difference $10 - 4$ without halving, and 14 adds the two given numbers.', difficulty: 'medium', domain: 'applications-derivatives', topicSlug: 'particle-motion-calcab', formSet: 'both', part: 7 },
+  { question: 'A particle has $a(t) = 2$, $v(0) = -4$ and $s(0) = 1$. What is $s(3)$?', options: ['$-3$', '$2$', '$-2$', '$10$'], correctAnswer: 2, explanation: 'Integrate twice: $v(t) = 2t - 4$ and $s(t) = t^2 - 4t + 1$, so $s(3) = 9 - 12 + 1 = -2$. Leaving out $s(0)$ gives $-3$, and using $v(0) = +4$ gives 10.', difficulty: 'easy', domain: 'applications-derivatives', topicSlug: 'particle-motion-calcab', formSet: 'both', part: 7 },
+
+  // -- antiderivatives-indefinite-integrals-calcab --
+  { question: 'If $f\'(x) = 4x^3 - 2x$ and $f(1) = 5$, what is $f(x)$?', options: ['$x^4 - 2x^2 + 6$', '$4x^4 - 2x^2 + 3$', '$x^4 - x^2 + 5$', '$x^4 - x^2 + 5 + C$'], correctAnswer: 2, explanation: 'Antidifferentiate: $f(x) = x^4 - x^2 + C$, and $f(1) = 1 - 1 + C = 5$ gives $C = 5$. Writing the antiderivative of $2x$ as $2x^2$ gives $x^4 - 2x^2 + 6$, skipping the division by the new exponent gives $4x^4 - 2x^2 + 3$, and once the initial condition is used no $+C$ remains.', difficulty: 'easy', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 3 },
+  { question: 'If $f\'\'(x) = 12x$, $f\'(0) = 1$ and $f(0) = 2$, what is $f(1)$?', options: ['$4$', '$5$', '$3$', '$9$'], correctAnswer: 1, explanation: 'Integrate twice: $f\'(x) = 6x^2 + 1$ and $f(x) = 2x^3 + x + 2$, so $f(1) = 5$. Forgetting the constant 1 in $f\'$ gives 4, forgetting $f(0) = 2$ gives 3, and integrating only once ($6x^2 + x + 2$) gives 9.', difficulty: 'medium', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 3 },
+  { question: 'What is $\\displaystyle\\int (x^2 + 1)^2\\,dx$?', options: ['$\\frac{(x^2 + 1)^3}{3} + C$', '$\\frac{x^5}{5} + \\frac{2x^3}{3} + x + C$', '$\\frac{x^5}{5} + x + C$', '$\\frac{(x^2 + 1)^3}{6x} + C$'], correctAnswer: 1, explanation: 'Expand first: $(x^2 + 1)^2 = x^4 + 2x^2 + 1$, then integrate term by term to get $\\frac{x^5}{5} + \\frac{2x^3}{3} + x + C$. Applying the power rule to the whole binomial ignores the inner function (differentiating $\\frac{(x^2+1)^3}{3}$ gives an extra $2x$), and expanding as $x^4 + 1$ drops the middle term.', difficulty: 'medium', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 4 },
+  { question: 'What is $\\displaystyle\\int \\frac{1}{16 + x^2}\\,dx$?', options: ['$\\arctan\\frac{x}{4} + C$', '$\\frac{1}{4}\\arctan\\frac{x}{4} + C$', '$\\frac{1}{16}\\arctan\\frac{x}{4} + C$', '$\\frac{1}{4}\\arcsin\\frac{x}{4} + C$'], correctAnswer: 1, explanation: 'Using $\\int \\frac{dx}{a^2 + x^2} = \\frac{1}{a}\\arctan\\frac{x}{a} + C$ with $a = 4$ gives $\\frac{1}{4}\\arctan\\frac{x}{4} + C$. Dropping the $\\frac{1}{a}$ or using $\\frac{1}{a^2}$ gives the wrong constant, and arcsine goes with $\\frac{1}{\\sqrt{a^2 - x^2}}$.', difficulty: 'medium', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 5 },
+  { question: 'What is $\\displaystyle\\int_0^{1/2} \\frac{1}{\\sqrt{1 - x^2}}\\,dx$?', options: ['$\\frac{\\pi}{3}$', '$\\frac{1}{2}$', '$\\frac{\\pi}{6}$', '$\\frac{\\pi}{4}$'], correctAnswer: 2, explanation: 'The antiderivative is $\\arcsin x$, so the value is $\\arcsin\\frac{1}{2} - \\arcsin 0 = \\frac{\\pi}{6}$. $\\frac{\\pi}{3}$ is $\\arccos\\frac{1}{2}$, and $\\frac{1}{2}$ is just the upper limit.', difficulty: 'easy', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 5 },
+  { question: 'What is $\\displaystyle\\int \\left(\\frac{3}{x} - 2e^x\\right)dx$?', options: ['$-\\frac{3}{x^2} - 2e^x + C$', '$3\\ln|x| - 2xe^{x} + C$', '$3\\ln|x| - 2e^x + C$', '$3\\ln|x| - \\frac{2e^{x+1}}{x+1} + C$'], correctAnswer: 2, explanation: 'Integrate term by term: $\\int \\frac{3}{x}\\,dx = 3\\ln|x|$ and $\\int 2e^x\\,dx = 2e^x$. Differentiating $\\frac{3}{x}$ instead gives $-\\frac{3}{x^2}$, and the power rule does not apply to $e^x$.', difficulty: 'easy', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 6 },
+  { question: 'If $f\'(x) = \\sec^2 x + 1$ and $f(0) = 2$, what is $f\\left(\\frac{\\pi}{4}\\right)$?', options: ['$1 + \\frac{\\pi}{4}$', '$3 + \\frac{\\pi}{4}$', '$2 + \\frac{\\pi}{4}$', '$4 + \\frac{\\pi}{4}$'], correctAnswer: 1, explanation: '$f(x) = \\tan x + x + C$ and $f(0) = C = 2$, so $f\\left(\\frac{\\pi}{4}\\right) = 1 + \\frac{\\pi}{4} + 2$. Leaving out $C$ gives $1 + \\frac{\\pi}{4}$, and treating $\\tan\\frac{\\pi}{4}$ as 0 gives $2 + \\frac{\\pi}{4}$.', difficulty: 'medium', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 6 },
+  { question: 'What is $\\displaystyle\\int \\left(6x^2 - \\frac{4}{x^3}\\right)dx$?', options: ['$2x^3 - \\frac{2}{x^2} + C$', '$2x^3 + \\frac{2}{x^2} + C$', '$2x^3 + \\frac{1}{x^4} + C$', '$12x + \\frac{12}{x^4} + C$'], correctAnswer: 1, explanation: 'Write $\\frac{4}{x^3} = 4x^{-3}$; its antiderivative is $\\frac{4x^{-2}}{-2} = -2x^{-2}$, and subtracting it gives $+\\frac{2}{x^2}$. Losing the sign from the negative exponent gives $-\\frac{2}{x^2}$, and $12x + \\frac{12}{x^4}$ is the derivative, not the antiderivative.', difficulty: 'medium', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 7 },
+  { question: 'If $F\'(x) = 3\\sqrt{x}$ and $F(4) = 20$, what is $F(1)$?', options: ['$18$', '$22$', '$6$', '$34$'], correctAnswer: 2, explanation: '$F(x) = 2x^{3/2} + C$, and $F(4) = 16 + C = 20$ gives $C = 4$, so $F(1) = 2 + 4 = 6$. Equivalently $F(1) = 20 - \\int_1^4 3\\sqrt{x}\\,dx = 20 - 14$. Subtracting only $2x^{3/2}$ at 1 gives 18, and adding the integral gives 34.', difficulty: 'medium', domain: 'integration', topicSlug: 'antiderivatives-indefinite-integrals-calcab', formSet: 'both', part: 7 },
+
+  // -- definite-integrals-calcab --
+  { question: 'A table gives $f(0) = 3$, $f(2) = 5$, $f(4) = 6$, $f(6) = 4$ and $f(8) = 2$. What is the left Riemann sum for $\\int_0^8 f(x)\\,dx$ with four equal subintervals?', options: ['$34$', '$36$', '$18$', '$35$'], correctAnswer: 1, explanation: 'Each width is 2, and a left sum uses $f(0), f(2), f(4), f(6)$: $2(3 + 5 + 6 + 4) = 36$. The right sum is 34, the trapezoidal sum is 35, and 18 forgets to multiply by the width.', difficulty: 'easy', domain: 'integration', topicSlug: 'definite-integrals-calcab', formSet: 'both', part: 1 },
+  { question: 'If $f$ is positive and decreasing on $[a, b]$, which approximation of $\\int_a^b f(x)\\,dx$ must be an underestimate?', options: ['A left Riemann sum', 'A right Riemann sum', 'A trapezoidal sum', 'Any Riemann sum'], correctAnswer: 1, explanation: 'For a decreasing function the right endpoint is the lowest value on each subinterval, so right rectangles sit under the curve. Left sums overestimate, and whether a trapezoidal sum is over or under depends on concavity, not on decreasing.', difficulty: 'easy', domain: 'integration', topicSlug: 'definite-integrals-calcab', formSet: 'both', part: 1 },
+  { question: 'If $F(x) = \\displaystyle\\int_0^{x} \\cos(t^2)\\,dt$, what is $F\'(\\sqrt{\\pi})$?', options: ['$1$', '$-1$', '$-2\\sqrt{\\pi}$', '$0$'], correctAnswer: 1, explanation: 'By the Fundamental Theorem, $F\'(x) = \\cos(x^2)$, so $F\'(\\sqrt{\\pi}) = \\cos\\pi = -1$. No chain factor is needed because the upper limit is just $x$, and $\\cos \\pi$ is $-1$, not 1 or 0.', difficulty: 'easy', domain: 'integration', topicSlug: 'definite-integrals-calcab', formSet: 'both', part: 4 },
+  { question: 'What is $\\dfrac{d}{dx}\\displaystyle\\int_{x}^{3} \\sqrt{1 + t^2}\\,dt$?', options: ['$\\sqrt{1 + x^2}$', '$-\\sqrt{1 + x^2}$', '$\\sqrt{10} - \\sqrt{1 + x^2}$', '$-\\sqrt{10}$'], correctAnswer: 1, explanation: 'Reverse the limits: $\\int_x^3 = -\\int_3^x$, so the derivative is $-\\sqrt{1 + x^2}$. Forgetting the sign gives $\\sqrt{1 + x^2}$, and the constant upper limit contributes nothing to the derivative.', difficulty: 'medium', domain: 'integration', topicSlug: 'definite-integrals-calcab', formSet: 'both', part: 4 },
+
+  // -- u-substitution-calcab --
+  { question: 'With $u = 3x + 1$, which integral equals $\\displaystyle\\int_0^1 (3x + 1)^2\\,dx$?', options: ['$\\frac{1}{3}\\int_0^1 u^2\\,du$', '$\\frac{1}{3}\\int_1^4 u^2\\,du$', '$3\\int_1^4 u^2\\,du$', '$\\int_1^4 u^2\\,du$'], correctAnswer: 1, explanation: 'Since $du = 3\\,dx$, $dx = \\frac{1}{3}du$, and the limits change to $u(0) = 1$ and $u(1) = 4$. Keeping the old limits, multiplying by 3, or dropping the factor $\\frac{1}{3}$ each changes the value.', difficulty: 'easy', domain: 'integration', topicSlug: 'u-substitution-calcab', formSet: 'both', part: 3 },
+  { question: 'What is $\\displaystyle\\int \\frac{x^2 + 1}{x + 1}\\,dx$?', options: ['$\\frac{x^2}{2} + x + 2\\ln|x + 1| + C$', '$\\frac{x^2}{2} - x + 2\\ln|x + 1| + C$', '$\\frac{x^2}{2} - x - 2\\ln|x + 1| + C$', '$\\frac{x^2}{2} - x + \\ln|x + 1| + C$'], correctAnswer: 1, explanation: 'Long division gives $\\frac{x^2 + 1}{x + 1} = x - 1 + \\frac{2}{x + 1}$, whose antiderivative is $\\frac{x^2}{2} - x + 2\\ln|x + 1| + C$. The other forms come from a sign slip in the quotient or remainder, or from dropping the remainder\'s 2.', difficulty: 'medium', domain: 'integration', topicSlug: 'u-substitution-calcab', formSet: 'both', part: 5 },
+  { question: 'What is $\\displaystyle\\int \\frac{1}{x^2 + 2x + 5}\\,dx$?', options: ['$\\arctan\\frac{x + 1}{2} + C$', '$\\frac{1}{2}\\arctan\\frac{x + 1}{2} + C$', '$\\frac{1}{2}\\arctan\\frac{x + 2}{2} + C$', '$\\ln|x^2 + 2x + 5| + C$'], correctAnswer: 1, explanation: 'Complete the square: $x^2 + 2x + 5 = (x + 1)^2 + 4$, so the integral is $\\frac{1}{2}\\arctan\\frac{x + 1}{2} + C$. Dropping the $\\frac{1}{2}$ forgets the $\\frac{1}{a}$ factor, $x + 2$ comes from completing the square wrongly, and the log form needs the derivative of the denominator on top.', difficulty: 'hard', domain: 'integration', topicSlug: 'u-substitution-calcab', formSet: 'both', part: 5 },
+  { question: 'What is $\\displaystyle\\int \\frac{6}{(2x - 1)^4}\\,dx$?', options: ['$-\\frac{2}{(2x - 1)^3} + C$', '$-\\frac{1}{(2x - 1)^3} + C$', '$-\\frac{6}{5(2x - 1)^5} + C$', '$\\frac{1}{(2x - 1)^3} + C$'], correctAnswer: 1, explanation: 'With $u = 2x - 1$, $dx = \\frac{1}{2}du$, so the integral is $3\\int u^{-4}\\,du = -u^{-3} + C = -\\frac{1}{(2x - 1)^3} + C$. Forgetting the $\\frac{1}{2}$ gives $-\\frac{2}{(2x-1)^3}$, raising the exponent instead of lowering it gives the fifth power, and the sign comes from dividing by $-3$.', difficulty: 'medium', domain: 'integration', topicSlug: 'u-substitution-calcab', formSet: 'both', part: 6 },
+  { question: 'Which substitution turns $\\displaystyle\\int x^3\\sqrt{x^4 + 5}\\,dx$ into a basic integral?', options: ['$u = x^3$', '$u = x^4 + 5$', '$u = x^2$', '$u = 4x^3$'], correctAnswer: 1, explanation: 'With $u = x^4 + 5$, $du = 4x^3\\,dx$, so the integral becomes $\\frac{1}{4}\\int \\sqrt{u}\\,du$. Choosing $u = x^3$ or $u = x^2$ leaves leftover $x$ terms, and $4x^3$ is $\\frac{du}{dx}$, not the inner function.', difficulty: 'easy', domain: 'integration', topicSlug: 'u-substitution-calcab', formSet: 'both', part: 6 },
+  { question: 'If $\\displaystyle\\int_0^4 f(x)\\,dx = 10$, what is $\\displaystyle\\int_0^2 f(2x)\\,dx$?', options: ['$20$', '$5$', '$10$', '$\\frac{5}{2}$'], correctAnswer: 1, explanation: 'Let $u = 2x$, so $dx = \\frac{1}{2}du$ and the limits become 0 and 4: $\\frac{1}{2}\\int_0^4 f(u)\\,du = 5$. Multiplying by 2 instead of dividing gives 20, and ignoring the substitution gives 10.', difficulty: 'medium', domain: 'integration', topicSlug: 'u-substitution-calcab', formSet: 'both', part: 7 },
+
+  // -- accumulation-functions-calcab --
+  { question: 'Water flows into a tank at $R(t) = 6 + t$ gallons per minute and drains out at 4 gallons per minute. The tank holds 50 gallons at $t = 0$. How much water is in it at $t = 4$?', options: ['$82$ gal', '$66$ gal', '$16$ gal', '$34$ gal'], correctAnswer: 1, explanation: 'The amount is $50 + \\int_0^4 [(6 + t) - 4]\\,dt = 50 + [2t + \\tfrac{t^2}{2}]_0^4 = 50 + 16 = 66$ gallons. Ignoring the outflow gives 82, leaving out the starting 50 gives 16, and subtracting the net change gives 34.', difficulty: 'medium', domain: 'integration', topicSlug: 'accumulation-functions-calcab', formSet: 'both', part: 4 },
+  { question: 'What is the average value of $f(x) = \\dfrac{1}{x}$ on $[1, e^2]$?', options: ['$2$', '$\\frac{2}{e^2 - 1}$', '$\\frac{1}{e^2 - 1}$', '$\\frac{2}{e^2}$'], correctAnswer: 1, explanation: 'Average value $= \\frac{1}{e^2 - 1}\\int_1^{e^2} \\frac{dx}{x} = \\frac{\\ln e^2 - \\ln 1}{e^2 - 1} = \\frac{2}{e^2 - 1}$. The integral alone is 2, and dividing by $e^2$ uses the right endpoint instead of the interval length.', difficulty: 'medium', domain: 'integration', topicSlug: 'accumulation-functions-calcab', formSet: 'both', part: 5 },
+  { question: 'At what time $t$ in $[0, 2]$ does $v(t) = 3t^2$ equal its average value on that interval?', options: ['$1$', '$\\frac{4}{3}$', '$\\frac{2}{\\sqrt{3}}$', '$\\frac{2}{3}$'], correctAnswer: 2, explanation: 'The average value is $\\frac{1}{2}\\int_0^2 3t^2\\,dt = \\frac{8}{2} = 4$, and $3t^2 = 4$ gives $t = \\frac{2}{\\sqrt{3}}$. The midpoint 1 is not where the average is attained for a nonlinear function, and $\\frac{4}{3}$ is $t^2$, not $t$.', difficulty: 'hard', domain: 'integration', topicSlug: 'accumulation-functions-calcab', formSet: 'both', part: 5 },
+  { question: 'Let $g(x) = \\displaystyle\\int_0^x (t^2 - 4)\\,dt$. On which interval is $g$ decreasing?', options: ['$(2, \\infty)$', '$(-\\infty, 0)$', '$(-2, 2)$', '$(0, \\infty)$'], correctAnswer: 2, explanation: 'By the Fundamental Theorem, $g\'(x) = x^2 - 4$, which is negative for $-2 \\lt x \\lt 2$, so $g$ decreases there. On $(2, \\infty)$ $g$ increases, and $(-\\infty, 0)$ and $(0, \\infty)$ are where $g\'\'(x) = 2x$ is negative or positive, which describes concavity, not direction.', difficulty: 'medium', domain: 'integration', topicSlug: 'accumulation-functions-calcab', formSet: 'both', part: 7 },
+
+  // -- area-between-curves-calcab --
+  { question: 'What is the total area between $y = x^2 - 2x$ and the $x$-axis on $[0, 3]$?', options: ['$0$', '$\\frac{4}{3}$', '$\\frac{8}{3}$', '$\\frac{16}{3}$'], correctAnswer: 2, explanation: 'The curve is below the axis on $(0, 2)$ and above on $(2, 3)$. The pieces have areas $\\left|\\int_0^2 (x^2 - 2x)\\,dx\\right| = \\frac{4}{3}$ and $\\int_2^3 (x^2 - 2x)\\,dx = \\frac{4}{3}$, for a total of $\\frac{8}{3}$. The single integral over $[0, 3]$ is 0 because the pieces cancel.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'area-between-curves-calcab', formSet: 'both', part: 2 },
+  { question: 'What is the area of the region enclosed by $x = y^2$ and $x = y + 2$?', options: ['$\\frac{7}{6}$', '$\\frac{10}{3}$', '$\\frac{9}{2}$', '$\\frac{27}{2}$'], correctAnswer: 2, explanation: 'The curves meet where $y^2 = y + 2$, at $y = -1$ and $y = 2$, and the line is to the right: $\\int_{-1}^{2} (y + 2 - y^2)\\,dy = \\frac{10}{3} - \\left(-\\frac{7}{6}\\right) = \\frac{9}{2}$. The values $\\frac{10}{3}$ and $\\frac{7}{6}$ are the antiderivative at each limit, not their difference.', difficulty: 'hard', domain: 'applications-integration', topicSlug: 'area-between-curves-calcab', formSet: 'both', part: 3 },
+  { question: 'Which integral gives the area of the region between $x = y^2$ and $x = 4$?', options: ['$\\int_{0}^{4} (4 - y^2)\\,dy$', '$\\int_{-2}^{2} (4 - y^2)\\,dy$', '$\\int_{-2}^{2} (y^2 - 4)\\,dy$', '$\\int_{0}^{2} (4 - y^2)\\,dy$'], correctAnswer: 1, explanation: 'In horizontal slices, the right curve is $x = 4$ and the left is $x = y^2$, and they meet at $y = \\pm 2$, so the limits are $y$-values from $-2$ to 2. Limits 0 to 4 are $x$-values, reversing the order gives a negative result, and $[0, 2]$ covers only the upper half.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'area-between-curves-calcab', formSet: 'both', part: 3 },
+  { question: 'The region bounded by $y = \\sqrt{x}$, $y = x - 2$ and $y = 0$ is sketched. Which single integral gives its area?', options: ['$\\int_0^4 (\\sqrt{x} - x + 2)\\,dx$', '$\\int_{0}^{2} (y^2 - y - 2)\\,dy$', '$\\int_0^2 (y + 2 - y^2)\\,dy$', '$\\int_2^4 (\\sqrt{x} - x + 2)\\,dx$'], correctAnswer: 2, explanation: 'In $y$, the right boundary is the line $x = y + 2$ and the left is $x = y^2$, for $0 \\le y \\le 2$, so one integral suffices. In $x$ the lower boundary changes at $x = 2$ (from $y = 0$ to $y = x - 2$), so a single $dx$ integral is wrong, and reversing right minus left gives a negative value.', difficulty: 'hard', domain: 'applications-integration', topicSlug: 'area-between-curves-calcab', formSet: 'both', part: 4 },
+  { question: 'If $f(x) \\le 0$ on $[1, 4]$ and $\\int_1^4 f(x)\\,dx = -6$, what is the area between the graph of $f$ and the $x$-axis on $[1, 4]$?', options: ['$-6$', '$6$', '$12$', '$18$'], correctAnswer: 1, explanation: 'Area is never negative: when the graph is below the axis, the area is the absolute value of the integral, so it is 6. The integral itself is the signed value $-6$, and multiplying by the width 3 gives 18.', difficulty: 'easy', domain: 'applications-integration', topicSlug: 'area-between-curves-calcab', formSet: 'both', part: 5 },
+  { question: 'What is the area of the region enclosed by $y = x^2$ and $y = x + 6$?', options: ['$\\frac{27}{2}$', '$\\frac{125}{6}$', '$\\frac{22}{3}$', '$\\frac{125}{3}$'], correctAnswer: 1, explanation: 'The curves meet where $x^2 = x + 6$, at $x = -2$ and $x = 3$, with the line on top: $\\int_{-2}^{3} (x + 6 - x^2)\\,dx = \\frac{27}{2} - \\left(-\\frac{22}{3}\\right) = \\frac{125}{6}$. The values $\\frac{27}{2}$ and $\\frac{22}{3}$ come from evaluating at only one limit or dropping the sign.', difficulty: 'hard', domain: 'applications-integration', topicSlug: 'area-between-curves-calcab', formSet: 'both', part: 7 },
+
+  // -- volumes-of-revolution-calcab --
+  { question: 'The region between $y = x$ and $y = x^2$ on $[0, 1]$ is revolved about the line $y = 3$. Which integral gives the volume?', options: ['$\\pi\\int_0^1 [(3 - x)^2 - (3 - x^2)^2]\\,dx$', '$\\pi\\int_0^1 [(3 - x^2)^2 - (3 - x)^2]\\,dx$', '$\\pi\\int_0^1 [(x + 3)^2 - (x^2 + 3)^2]\\,dx$', '$\\pi\\int_0^1 [(3 - x^2) - (3 - x)]^2\\,dx$'], correctAnswer: 1, explanation: 'The axis $y = 3$ is above the region, so the outer radius reaches the lower curve: $R = 3 - x^2$, and the inner radius is $r = 3 - x$. Swapping them makes the integrand negative, adding 3 measures from $y = -3$, and squaring the difference is not the washer formula.', difficulty: 'hard', domain: 'applications-integration', topicSlug: 'volumes-of-revolution-calcab', formSet: 'both', part: 3 },
+  { question: 'The region under $y = \\sqrt{x}$ on $[0, 4]$ is revolved about the line $y = -1$. Which integral gives the volume?', options: ['$\\pi\\int_0^4 (\\sqrt{x} + 1)^2\\,dx$', '$\\pi\\int_0^4 [(\\sqrt{x} - 1)^2 - 1]\\,dx$', '$\\pi\\int_0^4 [(\\sqrt{x} + 1)^2 - 1]\\,dx$', '$\\pi\\int_0^4 (x - 1)\\,dx$'], correctAnswer: 2, explanation: 'Measured from $y = -1$, the outer radius is $\\sqrt{x} + 1$ and the inner radius (to the $x$-axis) is 1, so the washers give $\\pi\\int_0^4 [(\\sqrt{x} + 1)^2 - 1^2]\\,dx$. Leaving out the inner radius fills in the hole, and subtracting 1 measures from $y = 1$.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'volumes-of-revolution-calcab', formSet: 'both', part: 3 },
+  { question: 'The region between $x = 2y$ and the $y$-axis for $0 \\le y \\le 3$ is revolved about the $y$-axis. What is the volume?', options: ['$9\\pi$', '$36\\pi$', '$18\\pi$', '$108\\pi$'], correctAnswer: 1, explanation: 'Disks in $y$ have radius $x = 2y$, so $V = \\pi\\int_0^3 (2y)^2\\,dy = 4\\pi \\cdot 9 = 36\\pi$. Forgetting to square the radius gives $9\\pi$, and forgetting to divide by 3 when integrating $y^2$ gives $108\\pi$.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'volumes-of-revolution-calcab', formSet: 'both', part: 5 },
+  { question: 'The region in the first quadrant between $y = x^2$ and $y = 4$ is revolved about the $y$-axis. What is the volume?', options: ['$16\\pi$', '$\\frac{64\\pi}{3}$', '$\\frac{128\\pi}{5}$', '$8\\pi$'], correctAnswer: 3, explanation: 'Slice horizontally: each disk has radius $x = \\sqrt{y}$, so $V = \\pi\\int_0^4 y\\,dy = 8\\pi$. Forgetting the $\\frac{1}{2}$ gives $16\\pi$, squaring $y$ again gives $\\frac{64\\pi}{3}$, and $\\frac{128\\pi}{5}$ is the volume about the $x$-axis instead.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'volumes-of-revolution-calcab', formSet: 'both', part: 5 },
+  { question: 'A solid has as its base the triangle bounded by $y = 2 - x$ and the coordinate axes. Cross sections perpendicular to the $x$-axis are squares. What is the volume?', options: ['$\\frac{8\\pi}{3}$', '$\\frac{8}{3}$', '$\\frac{4}{3}$', '$2$'], correctAnswer: 1, explanation: 'Each square has side $2 - x$, so $V = \\int_0^2 (2 - x)^2\\,dx = \\frac{8}{3}$. Adding $\\pi$ treats the slices as disks, 2 is the area of the base, and $\\frac{4}{3}$ uses half the square area, as for a triangle.', difficulty: 'easy', domain: 'applications-integration', topicSlug: 'volumes-of-revolution-calcab', formSet: 'both', part: 6 },
+
+  // -- integration-applications-calcab --
+  { question: 'What is the area of the region bounded by $y = e^x$, $y = e$ and the $y$-axis?', options: ['$e - 1$', '$1$', '$e - 2$', '$2e - 1$'], correctAnswer: 1, explanation: 'The curves meet at $x = 1$, and $y = e$ is on top: $\\int_0^1 (e - e^x)\\,dx = e - (e - 1) = 1$. The value $e - 1$ is the area under $e^x$ alone, and $e - 2$ uses $y = 1$ as the other boundary.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'integration-applications-calcab', formSet: 'both', part: 1 },
+  { question: 'What is the area of the region enclosed by $y = \\sqrt{x}$ and $y = \\dfrac{x}{2}$?', options: ['$\\frac{16}{3}$', '$4$', '$\\frac{4}{3}$', '$\\frac{8}{3}$'], correctAnswer: 2, explanation: 'The curves meet at $x = 0$ and $x = 4$, with $\\sqrt{x}$ on top: $\\int_0^4 \\left(\\sqrt{x} - \\frac{x}{2}\\right)dx = \\frac{16}{3} - 4 = \\frac{4}{3}$. The values $\\frac{16}{3}$ and 4 are the two separate integrals, not their difference.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'integration-applications-calcab', formSet: 'both', part: 1 },
+  { question: 'A solid has as its base the region under $y = \\sqrt{x}$ on $[0, 4]$. Cross sections perpendicular to the $x$-axis are equilateral triangles. What is the volume?', options: ['$8$', '$4\\sqrt{3}$', '$2\\sqrt{3}$', '$\\sqrt{3}$'], correctAnswer: 2, explanation: 'An equilateral triangle with side $s = \\sqrt{x}$ has area $\\frac{\\sqrt{3}}{4}s^2 = \\frac{\\sqrt{3}}{4}x$, so $V = \\frac{\\sqrt{3}}{4}\\int_0^4 x\\,dx = \\frac{\\sqrt{3}}{4} \\cdot 8 = 2\\sqrt{3}$. Squares would give 8, and $4\\sqrt{3}$ uses $\\frac{\\sqrt{3}}{2}$ in the area formula.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'integration-applications-calcab', formSet: 'both', part: 2 },
+  { question: 'A solid has as its base the region between $y = x$ and $y = x^2$. Cross sections perpendicular to the $x$-axis are semicircles whose diameters lie in the base. Which integral gives the volume?', options: ['$\\frac{\\pi}{2}\\int_0^1 (x - x^2)^2\\,dx$', '$\\frac{\\pi}{8}\\int_0^1 (x - x^2)^2\\,dx$', '$\\pi\\int_0^1 (x - x^2)^2\\,dx$', '$\\frac{\\pi}{4}\\int_0^1 (x - x^2)^2\\,dx$'], correctAnswer: 1, explanation: 'The diameter is $d = x - x^2$, so the radius is $\\frac{d}{2}$ and a semicircle has area $\\frac{1}{2}\\pi\\left(\\frac{d}{2}\\right)^2 = \\frac{\\pi}{8}d^2$. Using the diameter as the radius gives $\\frac{\\pi}{2}$, and $\\pi$ alone is a full disk of radius $d$.', difficulty: 'hard', domain: 'applications-integration', topicSlug: 'integration-applications-calcab', formSet: 'both', part: 2 },
+  { question: 'The region between $y = 2x$ and $y = 2$ for $0 \\le x \\le 1$ is revolved about the line $y = 2$. Which integral gives the volume?', options: ['$\\pi\\int_0^1 [4 - (2x)^2]\\,dx$', '$\\pi\\int_0^1 (2 - 2x)^2\\,dx$', '$\\pi\\int_0^1 (2x)^2\\,dx$', '$\\pi\\int_0^1 (2 + 2x)^2\\,dx$'], correctAnswer: 1, explanation: 'The axis $y = 2$ is a boundary of the region, so each slice is a disk of radius $2 - 2x$, the distance from the line down to $y = 2x$. The washer form uses the $x$-axis as the axis, and $2 + 2x$ measures the distance from $y = -2$.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'integration-applications-calcab', formSet: 'both', part: 3 },
+  { question: 'The region between $y = \\sqrt{x}$ and $y = 1$ for $1 \\le x \\le 4$ is revolved about the $x$-axis. What is the volume?', options: ['$\\frac{15\\pi}{2}$', '$\\frac{7\\pi}{6}$', '$\\frac{9\\pi}{2}$', '$3\\pi$'], correctAnswer: 2, explanation: 'Washers have outer radius $\\sqrt{x}$ and inner radius 1: $V = \\pi\\int_1^4 (x - 1)\\,dx = \\pi\\left[\\frac{x^2}{2} - x\\right]_1^4 = \\frac{9\\pi}{2}$. Leaving out the hole gives $\\frac{15\\pi}{2}$, and squaring the difference of the radii gives $\\frac{7\\pi}{6}$.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'integration-applications-calcab', formSet: 'both', part: 3 },
+  { question: 'Given $f(0) = 4$, $f(1) = 6$, $f(3) = 7$ and $f(4) = 5$, what is the trapezoidal approximation of $\\int_0^4 f(x)\\,dx$ using these three subintervals?', options: ['$23$', '$25$', '$24$', '$17.5$'], correctAnswer: 2, explanation: 'Use each width: $1 \\cdot \\frac{4 + 6}{2} + 2 \\cdot \\frac{6 + 7}{2} + 1 \\cdot \\frac{7 + 5}{2} = 5 + 13 + 6 = 24$. The left and right sums are 23 and 25, and 17.5 ignores the unequal width of the middle subinterval.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'integration-applications-calcab', formSet: 'both', part: 4 },
+  { question: 'If $f$ is increasing and concave down on $[a, b]$, which approximation of $\\int_a^b f(x)\\,dx$ is an overestimate?', options: ['The left Riemann sum', 'The right Riemann sum', 'The trapezoidal sum', 'None of these sums'], correctAnswer: 1, explanation: 'For an increasing function, right endpoints are the highest values on each subinterval, so the right sum overestimates. The left sum underestimates, and for a concave-down graph the trapezoids lie below the curve, so the trapezoidal sum underestimates too.', difficulty: 'medium', domain: 'applications-integration', topicSlug: 'integration-applications-calcab', formSet: 'both', part: 4 },
+
+  // -- differential-equations-calcab --
+  { question: 'For $\\dfrac{dy}{dx} = (y - 1)(y - 4)$ with $y(0) = 5$, how does $y$ behave for $x > 0$?', options: ['$y$ increases without bound', '$y$ decreases toward 4', '$y$ decreases toward 1', '$y$ stays constant at 5'], correctAnswer: 0, explanation: 'At $y = 5$ both factors are positive, so $\\frac{dy}{dx} > 0$, and the slope only grows as $y$ grows, so $y$ increases without bound. Solutions move toward the constant solutions $y = 1$ or $y = 4$ only when they start between them, where the slope is negative.', difficulty: 'medium', domain: 'diffeq', topicSlug: 'differential-equations-calcab', formSet: 'both', part: 7 },
+
+  // -- exponential-models-calcab --
+  { question: 'A drink cools according to $\\dfrac{dT}{dt} = -0.2(T - 20)$, with $T$ in °C and $t$ in minutes. At $t = 0$ its temperature is 80°C. What is $\\dfrac{dT}{dt}$ at that moment?', options: ['$-16$ °C/min', '$-12$ °C/min', '$12$ °C/min', '$-4$ °C/min'], correctAnswer: 1, explanation: 'Substitute $T = 80$: $\\frac{dT}{dt} = -0.2(80 - 20) = -12$ °C per minute. Using $T$ instead of $T - 20$ gives $-16$, using the room temperature gives $-4$, and a cooling drink has a negative $\\frac{dT}{dt}$.', difficulty: 'easy', domain: 'diffeq', topicSlug: 'exponential-models-calcab', formSet: 'both', part: 2 },
+  { question: 'A town grows at a rate of $50e^{0.1t}$ people per year. By how many people does it grow during the first 10 years?', options: ['$50(e - 1)$', '$500(e - 1)$', '$5(e - 1)$', '$500e$'], correctAnswer: 1, explanation: 'Total change is $\\int_0^{10} 50e^{0.1t}\\,dt = 500e^{0.1t}\\Big|_0^{10} = 500(e - 1)$. Forgetting to divide by 0.1 gives $50(e - 1)$, multiplying by 0.1 gives $5(e - 1)$, and $500e$ forgets the lower limit.', difficulty: 'medium', domain: 'diffeq', topicSlug: 'exponential-models-calcab', formSet: 'both', part: 4 },
+  { question: 'A population is modeled by $P(t) = 1000e^{kt}$ with $k = \\frac{\\ln 2}{5}$. How fast is it growing at $t = 5$?', options: ['$200\\ln 2$', '$400\\ln 2$', '$400$', '$1000\\ln 2$'], correctAnswer: 1, explanation: '$P\'(t) = kP(t)$, and $P(5) = 1000e^{\\ln 2} = 2000$, so $P\'(5) = \\frac{\\ln 2}{5} \\cdot 2000 = 400\\ln 2$. Using $P(0) = 1000$ gives $200\\ln 2$, and dropping $\\ln 2$ gives 400.', difficulty: 'medium', domain: 'diffeq', topicSlug: 'exponential-models-calcab', formSet: 'both', part: 4 },
+  { question: 'A quantity $Q$ decreases at a rate proportional to the amount by which it exceeds 25. With $k > 0$, which equation models $Q$?', options: ['$\\dfrac{dQ}{dt} = -kQ - 25$', '$\\dfrac{dQ}{dt} = k(Q - 25)$', '$\\dfrac{dQ}{dt} = -k(Q - 25)$', '$\\dfrac{dQ}{dt} = -kQ(Q - 25)$'], correctAnswer: 2, explanation: 'The excess is $Q - 25$, the rate is proportional to it, and the minus sign with $k > 0$ makes $Q$ decrease while $Q > 25$. Without the minus sign $Q$ would grow away from 25, $-kQ - 25$ is not proportional to the excess, and the extra factor $Q$ makes the rate depend on more than the excess.', difficulty: 'medium', domain: 'diffeq', topicSlug: 'exponential-models-calcab', formSet: 'both', part: 5 },
+  { question: 'A substance\'s amount is cut in half every 8 hours. What fraction of it remains after 2 days?', options: ['$\\frac{1}{6}$', '$\\frac{1}{64}$', '$\\frac{1}{12}$', '$\\frac{1}{32}$'], correctAnswer: 1, explanation: 'Two days is 48 hours, which is $\\frac{48}{8} = 6$ half-lives, so $\\left(\\frac{1}{2}\\right)^6 = \\frac{1}{64}$ remains. $\\frac{1}{6}$ divides by the number of half-lives instead of halving repeatedly, and $\\frac{1}{32}$ counts only five half-lives.', difficulty: 'easy', domain: 'diffeq', topicSlug: 'exponential-models-calcab', formSet: 'both', part: 6 },
+
+  // -- tables-data-calcab --
+  { question: 'A table gives $f(2) = 7$, $f(5) = 13$ and $f(8) = 22$. What is the best estimate of $f\'(5)$ from these values?', options: ['$2.5$', '$2$', '$3$', '$15$'], correctAnswer: 0, explanation: 'With data on both sides, use the symmetric difference quotient: $\\frac{f(8) - f(2)}{8 - 2} = \\frac{15}{6} = 2.5$. The one-sided quotients are 2 (left) and 3 (right), and 15 is the change in $f$ before dividing.', difficulty: 'easy', domain: 'exam-prep', topicSlug: 'tables-data-calcab', formSet: 'both', part: 1 },
+  { question: 'A table gives $f(0) = 4$, $f(3) = 10$ and $f(5) = 16$. What is the best estimate of $f\'(0)$ from these values?', options: ['$\\frac{12}{5}$', '$2$', '$\\frac{10}{3}$', '$\\frac{4}{3}$'], correctAnswer: 1, explanation: 'At the left end of the data only a one-sided quotient using the nearest point is available: $\\frac{f(3) - f(0)}{3 - 0} = \\frac{6}{3} = 2$. Using $x = 5$ gives a less local estimate, $\\frac{12}{5}$, and $\\frac{10}{3}$ divides $f(3)$ by 3 without subtracting $f(0)$.', difficulty: 'easy', domain: 'exam-prep', topicSlug: 'tables-data-calcab', formSet: 'both', part: 1 },
+  { question: 'A differentiable function $g$ has $g(1) = 4$, $g(4) = -2$ and $g(6) = 3$. Which statement must be true?', options: ['$g\'(c) = 2$ for some $c$ in $(1, 4)$', '$g(c) = 5$ for some $c$ in $(1, 6)$', '$g\'(c) = -2$ for some $c$ in $(1, 4)$', '$g\'(c) = -2$ for some $c$ in $(4, 6)$'], correctAnswer: 2, explanation: 'By the Mean Value Theorem on $[1, 4]$, $g\'(c) = \\frac{-2 - 4}{4 - 1} = -2$ for some $c$ there. A slope of 2 has the wrong sign, the secant slope on $[4, 6]$ is $\\frac{5}{2}$, not $-2$, and 5 is larger than every given value, so the Intermediate Value Theorem does not guarantee it.', difficulty: 'medium', domain: 'exam-prep', topicSlug: 'tables-data-calcab', formSet: 'both', part: 4 },
+  { question: 'A table gives $f\'(1) = 5$, $f\'(3) = 3$, $f\'(5) = 2$ and $f\'(7) = 1.5$. If $f\'$ behaves as the table suggests, what is true of $f\'\'$ on $(1, 7)$?', options: ['$f\'\'$ is positive', '$f\'\'$ is negative', '$f\'\'$ is zero', '$f\'\'$ changes sign'], correctAnswer: 1, explanation: 'The values of $f\'$ decrease steadily, so $f\'\'$ (the rate of change of $f\'$) is negative and $f$ is concave down. Positive values of $f\'$ mean $f$ is increasing, which is a statement about $f\'$, not $f\'\'$.', difficulty: 'easy', domain: 'exam-prep', topicSlug: 'tables-data-calcab', formSet: 'both', part: 5 },
+
+  // -- free-response-strategies-calcab --
+  { question: 'A table gives a car\'s velocity $v(t)$ in m/s: $v(0) = 4$, $v(2) = 7$, $v(5) = 6$, $v(9) = 10$. What is the trapezoidal approximation of $\\int_0^9 v(t)\\,dt$?', options: ['$53$ m', '$62.5$ m', '$72$ m', '$60$ m'], correctAnswer: 1, explanation: 'The widths are 2, 3 and 4: $2 \\cdot \\frac{4 + 7}{2} + 3 \\cdot \\frac{7 + 6}{2} + 4 \\cdot \\frac{6 + 10}{2} = 11 + 19.5 + 32 = 62.5$ m. The left and right sums are 53 and 72, and 60 treats the widths as equal.', difficulty: 'medium', domain: 'exam-prep', topicSlug: 'free-response-strategies-calcab', formSet: 'both', part: 3 },
+  { question: 'An FRQ states that $f$ is decreasing on $[0, 6]$ and asks whether a left Riemann sum overestimates $\\int_0^6 f(x)\\,dx$. Which response earns the point?', options: ['Yes, since a left Riemann sum always overestimates an integral', 'Yes, since $f$ is decreasing, so each left endpoint gives the largest value on its subinterval', 'No, since $f$ is decreasing, so each left endpoint gives the smallest value on its subinterval', 'No, since only a right Riemann sum can overestimate an integral'], correctAnswer: 1, explanation: 'For a decreasing function the left endpoint is the highest point of each subinterval, so every left rectangle covers the curve: an overestimate, and the reason must cite that $f$ is decreasing. Left sums do not always overestimate, and the smallest value on each subinterval is at the right endpoint.', difficulty: 'easy', domain: 'exam-prep', topicSlug: 'free-response-strategies-calcab', formSet: 'both', part: 3 },
+  { question: 'An FRQ gives $\\dfrac{dy}{dx} = 2xy$ with $y(0) = 3$. Using separation of variables, what is $y(1)$?', options: ['$e^{3}$', '$3e$', '$3e^{2}$', '$3 + e$'], correctAnswer: 1, explanation: 'Separate: $\\frac{dy}{y} = 2x\\,dx$, so $\\ln|y| = x^2 + C$ and $y = Ae^{x^2}$; $y(0) = 3$ gives $A = 3$, so $y(1) = 3e$. Adding the constant outside the exponential gives $3 + e$, and integrating $2x$ as $2x^2$ gives $3e^2$.', difficulty: 'medium', domain: 'exam-prep', topicSlug: 'free-response-strategies-calcab', formSet: 'both', part: 5 },
+  { question: 'Region $R$ is bounded by $y = x^2$ and $y = 2x$. What is the volume of the solid formed when $R$ is revolved about the $x$-axis?', options: ['$\\frac{4\\pi}{3}$', '$\\frac{64\\pi}{15}$', '$\\frac{32\\pi}{3}$', '$\\frac{16\\pi}{15}$'], correctAnswer: 1, explanation: 'Washers with outer radius $2x$ and inner radius $x^2$ on $[0, 2]$: $\\pi\\int_0^2 (4x^2 - x^4)\\,dx = \\pi\\left(\\frac{32}{3} - \\frac{32}{5}\\right) = \\frac{64\\pi}{15}$. Squaring the difference $(2x - x^2)$ gives $\\frac{16\\pi}{15}$, ignoring the hole gives $\\frac{32\\pi}{3}$, and $\\frac{4\\pi}{3}$ is $\\pi$ times the area.', difficulty: 'hard', domain: 'exam-prep', topicSlug: 'free-response-strategies-calcab', formSet: 'both', part: 6 },
+  { question: 'For the region between $y = x^2$ and $y = 4$, which integral gives the area using horizontal slices?', options: ['$\\int_0^4 \\sqrt{y}\\,dy$', '$\\int_0^4 2\\sqrt{y}\\,dy$', '$\\int_{-2}^{2} (4 - x^2)\\,dy$', '$\\int_0^4 (4 - y^2)\\,dy$'], correctAnswer: 1, explanation: 'A horizontal slice at height $y$ runs from $x = -\\sqrt{y}$ to $x = \\sqrt{y}$, so its length is $2\\sqrt{y}$ for $0 \\le y \\le 4$. Using only $\\sqrt{y}$ covers half the region, and an integrand in $x$ cannot go with $dy$.', difficulty: 'medium', domain: 'exam-prep', topicSlug: 'free-response-strategies-calcab', formSet: 'both', part: 6 },
+
+  // -- ap-exam-review-calcab --
+  { question: 'What is $\\lim_{x \\to 0} \\dfrac{\\sin(4x)}{2x}$?', options: ['$\\frac{1}{2}$', '$2$', '$4$', '$0$'], correctAnswer: 1, explanation: 'Rewrite as $2 \\cdot \\frac{\\sin(4x)}{4x}$, and $\\frac{\\sin(4x)}{4x} \\to 1$, so the limit is 2. Using only the 4 gives 4, inverting the ratio gives $\\frac{1}{2}$, and the $\\frac{0}{0}$ form is not 0.', difficulty: 'easy', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 1 },
+  { question: 'What is $\\dfrac{d}{dx}\\left[x^2 e^{3x}\\right]$?', options: ['$2xe^{3x}$', '$xe^{3x}(2 + 3x)$', '$6xe^{3x}$', '$xe^{3x}(2 + x)$'], correctAnswer: 1, explanation: 'Product rule: $2xe^{3x} + x^2 \\cdot 3e^{3x} = xe^{3x}(2 + 3x)$. Differentiating only the first factor gives $2xe^{3x}$, multiplying the two derivatives gives $6xe^{3x}$, and dropping the chain factor 3 gives $2 + x$.', difficulty: 'easy', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 2 },
+  { question: 'For the curve $x^2 + xy + y^2 = 7$, what is $\\dfrac{dy}{dx}$ at the point $(1, 2)$?', options: ['$-\\frac{5}{4}$', '$\\frac{4}{5}$', '$-\\frac{4}{5}$', '$-\\frac{2}{5}$'], correctAnswer: 2, explanation: 'Differentiate: $2x + y + x\\frac{dy}{dx} + 2y\\frac{dy}{dx} = 0$, so $\\frac{dy}{dx} = -\\frac{2x + y}{x + 2y} = -\\frac{4}{5}$ at $(1, 2)$. Flipping the fraction gives $-\\frac{5}{4}$, and dropping the $y$ from the product rule gives $-\\frac{2}{5}$.', difficulty: 'medium', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 2 },
+  { question: 'What is the absolute minimum value of $f(x) = x^3 - 12x$ on $[0, 3]$?', options: ['$-9$', '$0$', '$-16$', '$2$'], correctAnswer: 2, explanation: 'The critical point in the interval is $x = 2$ (from $3x^2 - 12 = 0$). Comparing $f(0) = 0$, $f(2) = -16$ and $f(3) = -9$, the minimum is $-16$. The value 2 is where it occurs, not the minimum value, and $-9$ is only the right endpoint.', difficulty: 'easy', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 3 },
+  { question: 'If $\\dfrac{dy}{dt} = 0.3y$ and $y(0) = 20$, what is $y(10)$?', options: ['$20e^{0.3}$', '$20e^{3}$', '$20e^{30}$', '$20 + e^{3}$'], correctAnswer: 1, explanation: 'The solution is $y = 20e^{0.3t}$, so $y(10) = 20e^{3}$. $20e^{0.3}$ is $y(1)$, $20e^{30}$ multiplies 0.3 by 100 instead of 10, and the initial value multiplies the exponential rather than adding to it.', difficulty: 'easy', domain: 'exam-prep', topicSlug: 'ap-exam-review-calcab', formSet: 'both', part: 6 },
 
 ]
 
 /** Generate an exit quiz for a specific AB topic (used by exit quiz system) */
-export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug?: string }[] {
+export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug?: string; partNumber?: number }[] {
   let pool = calcABQuestionPool
   if (topicSlug) pool = relevantPool(pool, topicSlug)
   return shuffleArray(pool).slice(0, count).map((q, i) => ({
@@ -4684,5 +5101,6 @@ export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; 
     explanation: q.explanation,
     category: q.domain,
     topicSlug: q.topicSlug,
+    partNumber: q.part,
   }))
 }

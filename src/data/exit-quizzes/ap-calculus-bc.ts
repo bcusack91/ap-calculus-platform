@@ -25,6 +25,8 @@ export interface CalcBCQuestion {
   domain: string
   topicSlug: string
   formSet: 'A' | 'B' | 'both'
+  /** Lesson part (1-N, registry order) that teaches this item; a failed exit quiz sends the student back to it. */
+  part?: number
 }
 
 export const calcBCQuestionPool: CalcBCQuestion[] = [
@@ -41,6 +43,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'A',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int x \\cdot \\sin x\\,dx = $?',
@@ -51,6 +54,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'B',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int \\frac{1}{x^2 - 1}\\,dx$ can be evaluated using:',
@@ -61,6 +65,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int \\frac{3x + 1}{(x + 1)(x - 2)}\\,dx$ uses partial fractions. What is $A + B$ if $3x+1 = A(x-2) + B(x+1)$?',
@@ -71,6 +76,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'Does $\\displaystyle\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ converge or diverge? If it converges, what is its value?',
@@ -81,6 +87,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'A',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int_1^{\\infty} \\frac{1}{\\sqrt{x}}\\,dx$:',
@@ -91,6 +98,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'B',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int \\ln x\\,dx = $?',
@@ -101,6 +109,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'B',
+    part: 5,
   },
   {
     question: 'Which technique is best for $\\displaystyle\\int \\frac{1}{x^2 + 4}\\,dx$?',
@@ -111,6 +120,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'A',
+    part: 1,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -125,6 +135,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'A',
+    part: 2,
   },
   {
     question: 'The area enclosed by the polar curve $r = 2\\cos\\theta$ is:',
@@ -135,6 +146,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'A',
+    part: 7,
   },
   {
     question: 'If $\\mathbf{r}(t) = \\langle \\cos t, \\sin t \\rangle$, what is the speed $|\\mathbf{r}\'(t)|$?',
@@ -145,6 +157,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The arc length of the parametric curve $x = 3t$, $y = 4t$ for $0 \\leq t \\leq 2$ is:',
@@ -155,6 +168,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'arc-length-surface-area-calcbc',
     formSet: 'A',
+    part: 2,
   },
   {
     question: 'For the polar curve $r = 1 + \\cos\\theta$ (cardioid), the curve passes through the origin when:',
@@ -165,6 +179,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'B',
+    part: 2,
   },
   {
     question: 'If a particle has position $\\mathbf{r}(t) = \\langle t^2, t^3 \\rangle$, the acceleration vector at $t = 1$ is:',
@@ -175,6 +190,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'B',
+    part: 6,
   },
   {
     question: 'The area inside $r = 3\\sin\\theta$ and outside $r = 1 + \\sin\\theta$ requires:',
@@ -185,6 +201,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'A',
+    part: 6,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -199,6 +216,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Does the series $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ converge? If so, what type of series is it?',
@@ -209,6 +227,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'The sum of the geometric series $\\displaystyle\\sum_{n=0}^{\\infty} \\left(\\frac{1}{3}\\right)^n$ is:',
@@ -219,6 +238,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'B',
+    part: 7,
   },
   {
     question: 'Which convergence test is most appropriate for $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{n!}{n^n}$?',
@@ -229,6 +249,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'A',
+    part: 5,
   },
   {
     question: 'The alternating series $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$:',
@@ -239,6 +260,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'alternating-series-calcbc',
     formSet: 'A',
+    part: 3,
   },
   {
     question: 'If $\\{a_n\\}$ is a sequence with $a_n = \\dfrac{3n^2 + 1}{n^2 - 2}$, then $\\lim_{n \\to \\infty} a_n = $?',
@@ -249,6 +271,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-sequences-calcbc',
     formSet: 'B',
+    part: 1,
   },
   {
     question: 'By the Alternating Series Estimation Theorem, if $\\sum (-1)^{n+1} b_n$ has been computed through the 5th partial sum, the error is at most:',
@@ -259,6 +282,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'alternating-series-calcbc',
     formSet: 'B',
+    part: 2,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -278,6 +302,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The radius of convergence for $\\displaystyle\\sum_{n=0}^{\\infty} \\frac{x^n}{n!}$ is:',
@@ -288,6 +313,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'A',
+    part: 7,
   },
   {
     question: 'The third-degree Taylor polynomial for $\\sin x$ centered at $0$ is:',
@@ -298,6 +324,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'Using the Lagrange error bound, the error $|R_n(x)|$ for a Taylor polynomial of degree $n$ is at most:',
@@ -313,6 +340,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'lagrange-error-bound-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The Maclaurin series for $\\dfrac{1}{1 - x}$ is:',
@@ -323,6 +351,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'B',
+    part: 3,
   },
   {
     question: 'The interval of convergence for $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{x^n}{n}$ is:',
@@ -333,6 +362,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'B',
+    part: 2,
   },
   {
     question: 'If $f(x)$ has the Maclaurin series $\\sum a_n x^n$, then $f\'(0)$ equals:',
@@ -343,6 +373,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'The Taylor series for $\\cos x$ centered at $0$, up to the $x^4$ term, is:',
@@ -353,6 +384,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'B',
+    part: 1,
   },
 
   // ══════════════════════════════════════════════════════════════════
@@ -367,6 +399,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'A',
+    part: 2,
   },
   {
     question: 'The logistic differential equation is $\\dfrac{dP}{dt} = kP\\!\\left(1 - \\dfrac{P}{L}\\right)$. The carrying capacity is:',
@@ -377,6 +410,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'For the logistic equation $\\dfrac{dP}{dt} = 0.5P\\!\\left(1 - \\dfrac{P}{100}\\right)$, at what value of $P$ is the growth rate maximum?',
@@ -387,6 +421,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'A',
+    part: 1,
   },
   {
     question: 'In Euler\'s method, decreasing the step size $h$ will generally:',
@@ -397,6 +432,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'B',
+    part: 1,
   },
   {
     question: 'If a population follows the logistic model with $L = 500$, $k = 0.1$, and $P(0) = 50$, what does $P$ approach as $t \\to \\infty$?',
@@ -407,6 +443,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'B',
+    part: 6,
   },
   // ── BATCH 1 EXPANSION: advanced-integration (55 new) ──────────────
   {
@@ -418,6 +455,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\int e^x \\sin x\\,dx$ requires IBP applied twice and then:',
@@ -428,6 +466,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int \\frac{5x + 3}{(x+1)(x+2)}\\,dx$ — after partial-fraction decomposition $\\frac{5x+3}{(x+1)(x+2)} = \\frac{A}{x+1}+\\frac{B}{x+2}$, find $A$:',
@@ -438,6 +477,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\int \\frac{1}{x^2 - 1}\\,dx$ equals:',
@@ -453,6 +493,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: '$\\displaystyle\\int_0^{\\infty} e^{-2x}\\,dx =$',
@@ -463,6 +504,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int_0^1 \\frac{1}{\\sqrt{x}}\\,dx$:',
@@ -473,6 +515,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\int_0^{\\infty}\\frac{1}{(x+1)^2}\\,dx = $',
@@ -483,6 +526,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int x \\cos x\\,dx =$',
@@ -493,6 +537,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int \\frac{2x+1}{x^2+x}\\,dx =$',
@@ -503,6 +548,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: '$\\displaystyle\\int \\sec^2 x \\tan x\\,dx =$',
@@ -513,6 +559,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: '$\\displaystyle\\int \\frac{1}{x^2+2x+5}\\,dx$ is best evaluated by:',
@@ -523,6 +570,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int_0^{\\infty} x e^{-x}\\,dx =$',
@@ -533,6 +581,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The integral $\\displaystyle\\int \\frac{3x^2+2}{x^3+2x}\\,dx$ simplifies to:',
@@ -543,6 +592,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: '$\\displaystyle\\int \\frac{x}{(x-1)(x+3)}\\,dx$ — using partial fractions, $\\frac{x}{(x-1)(x+3)} = \\frac{A}{x-1}+\\frac{B}{x+3}$. Find $B$:',
@@ -553,6 +603,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\int \\frac{dx}{x^2+25} =$',
@@ -563,6 +614,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int \\frac{dx}{\\sqrt{1-x^2}} =$',
@@ -573,6 +625,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int \\frac{x^3}{x^2+1}\\,dx$ is best handled by:',
@@ -583,6 +636,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int_0^1 \\ln x\\,dx =$',
@@ -593,6 +647,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\int \\frac{7}{(x-2)(x+5)}\\,dx$ — the partial fraction decomposition of the integrand is:',
@@ -603,6 +658,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int_1^{\\infty}\\frac{\\ln x}{x^2}\\,dx$ converges to:',
@@ -613,26 +669,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
-  },
-  {
-    question: '$\\displaystyle\\int \\sin^2 x\\,dx =$',
-    options: ['$\\frac{x}{2}-\\frac{\\sin 2x}{4}+C$', '$\\frac{\\sin^3 x}{3}+C$', '$-\\sin x\\cos x+C$', '$\\frac{x}{2}+\\frac{\\sin 2x}{4}+C$'],
-    correctAnswer: 0,
-    explanation: 'Use the identity $\\sin^{2}x$ = (1−cos 2x)/2. ∫(1−cos 2x)/2 dx = x/2 − sin 2x/4 + C.',
-    difficulty: 'medium',
-    domain: 'advanced-integration',
-    topicSlug: 'advanced-integration-calcbc',
-    formSet: 'both',
-  },
-  {
-    question: '$\\displaystyle\\int \\cos^2 x\\,dx =$',
-    options: ['$\\frac{x}{2}+\\frac{\\sin 2x}{4}+C$', '$\\frac{\\cos^3 x}{3}+C$', '$\\sin x\\cos x+C$', '$\\frac{x}{2}-\\frac{\\sin 2x}{4}+C$'],
-    correctAnswer: 0,
-    explanation: 'Use the identity $\\cos^{2}x$ = (1+cos 2x)/2. ∫(1+cos 2x)/2 dx = x/2 + sin 2x/4 + C.',
-    difficulty: 'medium',
-    domain: 'advanced-integration',
-    topicSlug: 'advanced-integration-calcbc',
-    formSet: 'both',
+    part: 6,
   },
   {
     question: '$\\displaystyle\\int_0^1 \\frac{x}{(x+1)(x+2)}\\,dx =$',
@@ -643,6 +680,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: '$\\displaystyle\\int \\frac{e^x}{e^{2x}+1}\\,dx =$',
@@ -653,6 +691,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: '$\\displaystyle\\int x^2 \\ln x\\,dx =$',
@@ -668,6 +707,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: '$\\displaystyle\\int \\frac{dx}{x^2+6x+13}$ is evaluated by completing the square. The denominator becomes:',
@@ -678,6 +718,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int \\frac{2x+3}{x^2+3x+7}\\,dx =$',
@@ -688,16 +729,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
-  },
-  {
-    question: '$\\displaystyle\\int_0^{\\infty}\\frac{dx}{(1+x)^2} =$',
-    options: ['$1$', '$\\frac{1}{2}$', '$-1$', 'Diverges'],
-    correctAnswer: 0,
-    explanation: '$\\int_0^{\\infty}(1+x)^{-2}\\,dx = \\left[-\\frac{1}{1+x}\\right]_0^{\\infty} = 0 - (-1) = 1$. Keeping only the lower-limit term without its minus sign gives $-1$, $\\frac{1}{2}$ is the integrand at $x = 1$, and the integrand shrinks like $\\frac{1}{x^2}$, so the integral converges.',
-    difficulty: 'medium',
-    domain: 'advanced-integration',
-    topicSlug: 'improper-integrals-calcbc',
-    formSet: 'both',
+    part: 5,
   },
   {
     question: '$\\displaystyle\\int \\frac{1}{x^2-4x+4}\\,dx =$',
@@ -708,6 +740,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: '$\\displaystyle\\int e^x \\cos x\\,dx =$',
@@ -723,6 +756,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Which integral is an improper integral?',
@@ -738,6 +772,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\int \\frac{x+7}{(x-1)(x+3)}\\,dx$ — with $\\frac{x+7}{(x-1)(x+3)} = \\frac{A}{x-1}+\\frac{B}{x+3}$, find $A - B$:',
@@ -748,6 +783,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\int \\arctan x\\,dx =$',
@@ -758,6 +794,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: '$\\displaystyle\\int \\frac{x^3}{x^2+1}\\,dx =$',
@@ -768,6 +805,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int_0^{\\infty} \\frac{dx}{1+x^2} =$',
@@ -778,6 +816,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'A tabular method (repeated IBP) is most efficient for:',
@@ -788,6 +827,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\int \\frac{x+1}{x^2+2x+1}\\,dx =$',
@@ -798,6 +838,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The integral $\\displaystyle\\int_{-\\infty}^{\\infty} \\frac{dx}{1+x^2}$ equals:',
@@ -808,6 +849,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: '$\\displaystyle\\int \\frac{x^2+1}{x^2-1}\\,dx$ — after long division this becomes:',
@@ -823,6 +865,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int \\frac{1}{x\\ln x}\\,dx =$',
@@ -833,6 +876,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'Does $\\displaystyle\\int_2^{\\infty}\\frac{1}{x\\ln x}\\,dx$ converge or diverge?',
@@ -843,6 +887,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: '$\\displaystyle\\int \\frac{1}{\\sqrt{1-4x^2}}\\,dx =$',
@@ -858,6 +903,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int x\\arcsin x\\,dx$ is best evaluated using:',
@@ -868,6 +914,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: '$\\displaystyle\\int_0^{\\infty} \\frac{x}{(x^2+1)^2}\\,dx =$',
@@ -878,6 +925,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: '$\\displaystyle\\int \\frac{1}{x^2-9}\\,dx =$',
@@ -893,6 +941,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: '$\\displaystyle\\int \\frac{e^{2x}}{e^{2x}+1}\\,dx =$',
@@ -903,6 +952,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: '$\\displaystyle\\int \\sin(\\ln x)\\,dx$ is evaluated using:',
@@ -913,6 +963,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'When $\\displaystyle\\int_a^b f(x)\\,dx$ has an integrand with a vertical asymptote at $x = c$ where $a < c < b$, we must:',
@@ -923,6 +974,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\int_3^{\\infty} \\frac{dx}{(x-1)(x-2)} =$',
@@ -933,6 +985,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int_1^e \\ln x\\,dx =$',
@@ -943,6 +996,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: '$\\displaystyle\\int_1^{\\infty}\\frac{1}{x^p}\\,dx$ converges if and only if:',
@@ -953,6 +1007,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int \\frac{\\sin x}{\\cos^2 x}\\,dx =$',
@@ -963,6 +1018,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 5,
   },
 
   // ── BATCH 1 EXPANSION: parametric-polar-vector (53 new) ───────────
@@ -975,6 +1031,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'For the parametric curve $x = 2\\cos t$, $y = 3\\sin t$, the curve is:',
@@ -985,6 +1042,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The slope of the tangent line to $x = t^3 - t$, $y = t^2$ at $t = 1$ is:',
@@ -995,6 +1053,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The second derivative $\\dfrac{d^2y}{dx^2}$ for a parametric curve is:',
@@ -1005,6 +1064,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The arc length of $x = \\cos t$, $y = \\sin t$ for $0 \\leq t \\leq 2\\pi$ is:',
@@ -1015,6 +1075,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'arc-length-surface-area-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The area under the parametric curve $x = t$, $y = t^2$ from $t = 0$ to $t = 1$ is:',
@@ -1025,6 +1086,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'Convert the polar equation $r = 4$ to rectangular form:',
@@ -1035,6 +1097,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The polar curve $r = \\sin 2\\theta$ is a:',
@@ -1045,6 +1108,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The area of one petal of $r = \\cos 2\\theta$ is:',
@@ -1055,6 +1119,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'For the polar curve $r(\\theta)$, the slope of the tangent line is:',
@@ -1065,6 +1130,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The area enclosed by $r = 1 + \\cos\\theta$ (cardioid) is:',
@@ -1075,6 +1141,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'Convert the rectangular point $(0, 3)$ to polar coordinates:',
@@ -1085,6 +1152,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The area of the region swept out by the polar curve $r = f(\\theta)$ for $\\alpha \\le \\theta \\le \\beta$ is:',
@@ -1098,8 +1166,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     explanation: 'A thin sector of radius $r$ and angle $d\\theta$ has area $\\frac{1}{2}r^2\\,d\\theta$, so the area is $\\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$. Dropping the square on $r$ or squaring $dr/d\\theta$ uses the wrong sector size, and the factor $\\pi$ belongs to the disc volume formula, not to polar area.',
     difficulty: 'medium',
     domain: 'parametric-polar-vector',
-    topicSlug: 'arc-length-surface-area-calcbc',
+    topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $\\mathbf{r}(t) = \\langle 3t, 4t \\rangle$, the speed is:',
@@ -1110,6 +1179,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'For $\\mathbf{r}(t) = \\langle e^t, e^{-t} \\rangle$, the velocity at $t = 0$ is:',
@@ -1120,6 +1190,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The total distance traveled by a particle with velocity $\\mathbf{v}(t) = \\langle 3, 4 \\rangle$ from $t = 0$ to $t = 3$ is:',
@@ -1130,6 +1201,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The position of a particle is $\\mathbf{r}(t) = \\langle \\sin t, 1 - \\cos t \\rangle$. At $t = \\pi/2$:',
@@ -1145,6 +1217,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'For the parametric curve $x = t - \\sin t$, $y = 1 - \\cos t$ (cycloid), $\\dfrac{dy}{dx}$ at $t = \\pi$ is:',
@@ -1155,6 +1228,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The area enclosed by $r = 2\\sin\\theta$ is:',
@@ -1165,6 +1239,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Given $\\mathbf{r}(t) = \\langle t^2, t^3, t \\rangle$ (in 3D), the velocity vector is:',
@@ -1175,6 +1250,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The parametric curve $x = a\\cos t$, $y = b\\sin t$ has arc length given by:',
@@ -1190,6 +1266,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'arc-length-surface-area-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The polar curve $r = 1 + 2\\cos\\theta$ is a:',
@@ -1200,6 +1277,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\int_0^{2\\pi}\\sqrt{(-2\\sin t)^2 + (3\\cos t)^2}\\,dt$ represents the arc length of which curve?',
@@ -1215,6 +1293,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'arc-length-surface-area-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The polar curve $r = 3\\cos 3\\theta$ has how many petals?',
@@ -1225,9 +1304,10 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
-    question: 'At what point(s) does the cardioid $r = 1 + \\cos\\theta$ have a vertical tangent?',
+    question: 'For the cardioid $r = 1 + \\cos\\theta$, a vertical tangent occurs where:',
     options: [
       'Where $\\frac{dx}{d\\theta} = 0$ and $\\frac{dy}{d\\theta} \\neq 0$',
       'Where $r = 0$',
@@ -1240,6 +1320,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'If $\\mathbf{r}(t) = \\langle 2\\cos t, 2\\sin t \\rangle$, the acceleration at $t = \\pi/2$ is:',
@@ -1250,6 +1331,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The displacement of a particle from $t = 0$ to $t = 2$ with velocity $\\mathbf{v}(t) = \\langle 1, 2t \\rangle$ is:',
@@ -1260,16 +1342,18 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
-    question: 'The curve $x = t^2$, $y = t^3$ has a horizontal tangent where:',
-    options: ['$t = 0$', '$t = 1$', '$t = -1$', 'Nowhere'],
+    question: 'The curve $x = t^2 + 1$, $y = t^3 - 3t$ has a horizontal tangent where:',
+    options: ['$t = 1$ and $t = -1$', '$t = 0$ and $t = 1$', '$t = 0$ and $t = -1$', '$t = 0$, $1$ and $-1$'],
     correctAnswer: 0,
-    explanation: 'Horizontal tangent when dy/dt = 0 and dx/dt ≠ 0. dy/dt = $3t^{2}$ = 0 at t = 0. But dx/dt = 2t = 0 too, so we check the limit: dy/dx = 3t/2 → 0. Horizontal tangent at origin.',
+    explanation: 'A horizontal tangent needs $\\frac{dy}{dt} = 0$ with $\\frac{dx}{dt} \\neq 0$. Here $\\frac{dy}{dt} = 3t^2 - 3 = 0$ at $t = \\pm 1$, where $\\frac{dx}{dt} = 2t \\neq 0$. At $t = 0$, $\\frac{dx}{dt} = 0$ but $\\frac{dy}{dt} = -3$, which gives a vertical tangent, not a horizontal one.',
     difficulty: 'hard',
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The arc length of the parametric curve $x = t^2$, $y = \\frac{2}{3}t^3$ for $0 \\leq t \\leq \\sqrt{3}$ is:',
@@ -1280,6 +1364,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'arc-length-surface-area-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'For the polar curve $r = e^\\theta$, $\\dfrac{dr}{d\\theta} =$',
@@ -1290,6 +1375,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The area between $r_1 = 2$ and $r_2 = 2(1+\\cos\\theta)$ for the region outside the circle and inside the cardioid is found by:',
@@ -1300,6 +1386,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'If $\\mathbf{r}(t) = \\langle \\cos 2t, \\sin 2t \\rangle$, the period of the motion is:',
@@ -1310,6 +1397,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'For $x = \\sec t$, $y = \\tan t$, eliminating the parameter gives:',
@@ -1320,21 +1408,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
-  },
-  {
-    question: 'The arc length of $r = e^\\theta$ from $\\theta = 0$ to $\\theta = 1$ is:',
-    options: [
-      '$\\sqrt{2}(e - 1)$',
-      '$e - 1$',
-      '$\\sqrt{2}\\,e$',
-      '$2(e-1)$'
-    ],
-    correctAnswer: 0,
-    explanation: 'L = ∫₀¹√($r^{2}$+(r\')$ {}^{2}$)dθ = $\\int_{0}^{1}\\sqrt{e^{2\\theta}+e^{2\\theta}}d\\theta$ = $\\int_{0}^{1}$ $e^{\\theta}\\sqrt{2}$ dθ = $\\sqrt{2}(e-1)$.',
-    difficulty: 'hard',
-    domain: 'parametric-polar-vector',
-    topicSlug: 'arc-length-surface-area-calcbc',
-    formSet: 'both',
+    part: 1,
   },
   {
     question: 'A particle moves with position vector $\\mathbf{r}(t) = \\langle t, t^2 \\rangle$. What is its speed at $t = 1$?',
@@ -1345,6 +1419,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The area of the region inside the circle $r = 3\\cos\\theta$ is:',
@@ -1355,6 +1430,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'A particle has velocity $\\mathbf{v}(t) = \\langle \\cos t, \\sin t \\rangle$ and starts at $\\langle 0, 0 \\rangle$. Its position at $t = \\pi$ is:',
@@ -1365,6 +1441,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The curve $r = 2 - 2\\sin\\theta$ is a:',
@@ -1375,6 +1452,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If a particle moves along $\\mathbf{r}(t) = \\langle 3\\cos t, 3\\sin t \\rangle$, it moves:',
@@ -1385,6 +1463,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The tangent line to $r = 1 + \\sin\\theta$ at $\\theta = \\pi/2$ is:',
@@ -1395,6 +1474,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'For $\\mathbf{r}(t) = \\langle t^2 - 1, 2t + 1 \\rangle$, the curve passes through the origin when $t =$',
@@ -1405,6 +1485,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The speed of a particle with position $\\mathbf{r}(t) = \\langle e^t\\cos t, e^t\\sin t \\rangle$ is:',
@@ -1415,6 +1496,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The polar equation $r = \\theta$ for $\\theta \\geq 0$ describes:',
@@ -1425,6 +1507,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'For $x = t^3/3 - t$, $y = t^2$, a vertical tangent occurs when:',
@@ -1435,6 +1518,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The area swept by the polar curve $r = \\theta$ from $\\theta = 0$ to $\\theta = 2\\pi$ is:',
@@ -1445,6 +1529,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\int_0^{2\\pi} |\\mathbf{r}\'(t)|\\,dt$ (where $\\mathbf{r}(t)$ is a position vector) gives the:',
@@ -1455,6 +1540,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 7,
   },
 
   // ── BATCH 2 EXPANSION: sequences-series (55 new) ─────────────────
@@ -1467,6 +1553,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The geometric series $\\sum_{n=0}^{\\infty} ar^n$ converges when:',
@@ -1477,6 +1564,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: '$\\displaystyle\\sum_{n=0}^{\\infty}\\left(-\\frac{1}{2}\\right)^n =$',
@@ -1487,6 +1575,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The series $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^3}$ is:',
@@ -1497,6 +1586,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Which convergence test works best for $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{3^n}{n!}$?',
@@ -1507,6 +1597,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'For a series $\\sum a_n$ of positive terms, the Ratio Test gives $\\lim_{n\\to\\infty}\\frac{a_{n+1}}{a_n} = L$. The test is inconclusive when:',
@@ -1517,6 +1608,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n^2}$:',
@@ -1527,6 +1619,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'alternating-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'A telescoping series is one where:',
@@ -1537,6 +1630,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\left(\\frac{1}{n}-\\frac{1}{n+1}\\right) =$',
@@ -1547,6 +1641,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The integral test applies when $f(x)$ is:',
@@ -1557,6 +1652,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Using the Integral Test on $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^2+1}$, we evaluate $\\displaystyle\\int_1^{\\infty}\\frac{dx}{x^2+1} =$',
@@ -1567,6 +1663,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The Direct Comparison Test: if $0 \\leq a_n \\leq b_n$ and $\\sum b_n$ converges, then:',
@@ -1577,6 +1674,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The Limit Comparison Test with $b_n$: if $\\lim_{n\\to\\infty}\\frac{a_n}{b_n} = c$ where $0 < c < \\infty$, then:',
@@ -1592,6 +1690,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'Does $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n}{n^2+1}$ converge or diverge?',
@@ -1602,6 +1701,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{2^n}{3^n} =$',
@@ -1612,6 +1712,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The sequence $a_n = \\dfrac{\\ln n}{n}$:',
@@ -1622,6 +1723,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-sequences-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The sequence $a_n = \\left(1 + \\frac{1}{n}\\right)^n$ converges to:',
@@ -1632,6 +1734,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-sequences-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'For $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{\\sqrt{n}}$, which statement is true?',
@@ -1647,6 +1750,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'alternating-series-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'If $\\sum |a_n|$ converges, then $\\sum a_n$:',
@@ -1657,6 +1761,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: '$\\displaystyle\\sum_{n=2}^{\\infty}\\frac{1}{n\\ln n}$:',
@@ -1667,6 +1772,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The Ratio Test gives $L = 1$ for $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$. This means:',
@@ -1677,6 +1783,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n}{(2n)!} =$',
@@ -1685,8 +1792,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     explanation: 'cos x = $\\Sigma (-1)^{n}x^{2n}/(2n)$!. At x = 1: $\\Sigma (-1)^{n}/(2n)$! = cos 1.',
     difficulty: 'hard',
     domain: 'sequences-series',
-    topicSlug: 'infinite-series-calcbc',
+    topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'Which series is NOT a p-series?',
@@ -1697,6 +1805,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'For the alternating series test, $b_n$ must be:',
@@ -1712,6 +1821,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'alternating-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{5}{4^n} =$',
@@ -1722,6 +1832,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $\\sum a_n$ converges, then $\\lim_{n\\to\\infty} a_n =$',
@@ -1732,6 +1843,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n^2}{2^n}$ converges because:',
@@ -1742,6 +1854,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'Which series can be tested with the Alternating Series Test?',
@@ -1752,6 +1865,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'alternating-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n(n+1)} =$',
@@ -1762,6 +1876,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The sequence $a_n = \\frac{n!}{n^n}$:',
@@ -1772,6 +1887,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-sequences-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Does $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{\\sin n}{n^2}$ converge absolutely?',
@@ -1782,6 +1898,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n}{e^n}$:',
@@ -1792,6 +1909,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The error when approximating $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{n^3}$ with first 4 terms is at most:',
@@ -1802,6 +1920,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'alternating-series-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{2^n+3^n}{5^n} =$',
@@ -1812,6 +1931,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'A rearrangement of a conditionally convergent series:',
@@ -1827,6 +1947,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The series $\\displaystyle\\sum_{n=1}^{\\infty}(-1)^n$ diverges because:',
@@ -1842,6 +1963,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^{3/2}}$:',
@@ -1852,6 +1974,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'For $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n!}{(2n)!}$, the ratio test gives:',
@@ -1862,6 +1985,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'If $a_n = \\frac{(-3)^n}{n!}$, then $\\sum_{n=0}^{\\infty} a_n =$',
@@ -1870,8 +1994,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     explanation: 'Σ $x^{n}/n$! = $e^{x}$. With x = −3: $\\Sigma (-3)^{n}/n$! = $e^{-3}$.',
     difficulty: 'medium',
     domain: 'sequences-series',
-    topicSlug: 'infinite-series-calcbc',
+    topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The partial sum $S_n = \\frac{n}{n+1}$. The series converges to:',
@@ -1882,6 +2007,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Is the series $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n+1}{n^3}$ convergent?',
@@ -1897,6 +2023,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$a_n = \\frac{2^n}{n^2}$ — does the sequence converge?',
@@ -1907,6 +2034,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-sequences-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The series $\\displaystyle\\sum_{n=2}^{\\infty}\\frac{1}{n(\\ln n)^2}$:',
@@ -1917,6 +2045,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 3,
   },
 
   // ── BATCH 2 EXPANSION: taylor-series (55 new) ────────────────────
@@ -1934,6 +2063,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The Maclaurin series for $\\ln(1+x)$ is:',
@@ -1944,6 +2074,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Using the known series for $e^x$, the Maclaurin series for $e^{-x}$ is:',
@@ -1959,6 +2090,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The Maclaurin series for $e^{x^2}$ is:',
@@ -1974,6 +2106,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The series for $\\sin(x^2)$ can be obtained by:',
@@ -1989,6 +2122,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $f(x) = \\sum_{n=0}^{\\infty}a_n x^n$, then $\\int_0^x f(t)\\,dt =$',
@@ -2004,6 +2138,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $f(x) = \\sum_{n=0}^{\\infty}a_n x^n$, then $f\'(x) =$',
@@ -2019,6 +2154,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The radius of convergence for $\\displaystyle\\sum_{n=0}^{\\infty}n!x^n$ is:',
@@ -2029,6 +2165,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The radius of convergence for $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{x^n}{n^2}$ is:',
@@ -2039,6 +2176,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The Taylor polynomial $P_2(x)$ for $\\sqrt{x}$ centered at $a = 4$ is:',
@@ -2049,6 +2187,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The Maclaurin series for $\\frac{1}{1+x}$ is:',
@@ -2064,6 +2203,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The Maclaurin series for $\\arctan x$ is:',
@@ -2074,6 +2214,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $f(x) = \\sum a_n(x-c)^n$, the coefficient $a_n =$',
@@ -2089,6 +2230,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Find the coefficient of $x^3$ in the Maclaurin series for $e^x\\sin x$:',
@@ -2099,6 +2241,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The Maclaurin series for $\\frac{x}{1-x^2}$ (for $|x| < 1$) is:',
@@ -2114,6 +2257,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'If $R$ is the radius of convergence, the series $\\sum a_n(x-c)^n$ converges absolutely for:',
@@ -2124,6 +2268,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The interval of convergence for $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(x-2)^n}{3^n}$ is:',
@@ -2134,6 +2279,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The Maclaurin series for $\\tan^{-1}(x)$ evaluated at $x = 1$ gives:',
@@ -2144,6 +2290,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'To find the Maclaurin series for $\\int_0^x e^{-t^2}\\,dt$, you should:',
@@ -2154,6 +2301,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'If $f(x) = \\sum_{n=0}^{\\infty}\\frac{x^n}{n!}$ and $g(x) = \\sum_{n=0}^{\\infty}\\frac{(-1)^n x^n}{n!}$, then $f(x)\\cdot g(x) =$',
@@ -2164,21 +2312,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
-  },
-  {
-    question: 'The first three nonzero terms of the Maclaurin series for $\\sec x$ are:',
-    options: [
-      '$1 + \\frac{x^2}{2} + \\frac{5x^4}{24}$',
-      '$1 - \\frac{x^2}{2} + \\frac{x^4}{24}$',
-      '$x + \\frac{x^3}{6}$',
-      '$1 + x + x^2$'
-    ],
-    correctAnswer: 0,
-    explanation: 'sec x = 1/cos x. Using long division or multiplication inverse: 1 + $x^{2}/2$ + $5x^{4}/24$ + …',
-    difficulty: 'hard',
-    domain: 'taylor-series',
-    topicSlug: 'taylor-maclaurin-series-calcbc',
-    formSet: 'both',
+    part: 3,
   },
   {
     question: 'The power series $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(x-1)^n}{n+1}$ has center:',
@@ -2189,6 +2323,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Using Lagrange error, to guarantee $|e^{0.1} - P_3(0.1)| < 10^{-4}$, we need $\\frac{M|0.1|^4}{4!}$ where $M$ is:',
@@ -2199,6 +2334,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'lagrange-error-bound-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The value of $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n \\pi^{2n}}{(2n)!}$ is:',
@@ -2209,6 +2345,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The radius of convergence for $\\displaystyle\\sum_{n=0}^{\\infty}n x^n$ is:',
@@ -2219,6 +2356,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$f\'\'(0)$ for $f(x) = \\sum_{n=0}^{\\infty}\\frac{(3x)^n}{n!}$ is:',
@@ -2229,6 +2367,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'A function equals its Taylor series on an interval if:',
@@ -2239,6 +2378,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'lagrange-error-bound-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The series for $\\ln 2$ using $\\ln(1+x)$ at $x = 1$ is:',
@@ -2254,6 +2394,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The Maclaurin series for $x\\cos x$ is:',
@@ -2264,6 +2405,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The coefficient of $(x-\\pi)^2$ in the Taylor series for $\\cos x$ centered at $\\pi$ is:',
@@ -2274,6 +2416,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The binomial series $(1+x)^k$ for non-integer $k$ is:',
@@ -2284,6 +2427,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'From the geometric series, $\\displaystyle\\sum_{n=0}^{\\infty}(-1)^n x^{2n} =$',
@@ -2294,6 +2438,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'To find the Taylor series for $f(x) = x^2 e^x$ centered at $0$:',
@@ -2304,6 +2449,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The interval of convergence for $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}(x-3)^n}{n\\cdot 2^n}$ has center:',
@@ -2314,6 +2460,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The Maclaurin series for $\\frac{1}{(1-x)^2}$ can be found by:',
@@ -2324,6 +2471,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The Lagrange Error Bound for the $n$th degree Taylor polynomial uses the $(n+1)$th derivative because:',
@@ -2334,6 +2482,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'lagrange-error-bound-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'For $f(x) = \\sin x$, the Lagrange error bound for $P_5(x)$ on $|x| \\leq 1$ is at most:',
@@ -2344,6 +2493,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'lagrange-error-bound-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'A Taylor series centered at $a = 0$ is called a:',
@@ -2354,6 +2504,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The radius of convergence for $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{2^n x^n}{n!}$ is:',
@@ -2364,6 +2515,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The series representation of $\\ln(1-x)$ for $|x| < 1$ is:',
@@ -2379,6 +2531,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Using the known series, the first four nonzero terms of $xe^{-x}$ are:',
@@ -2394,6 +2547,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'A power series and its derivative have:',
@@ -2409,6 +2563,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
 
   // ── BATCH 2 EXPANSION: advanced-diffeq (56 new) ──────────────────
@@ -2421,6 +2576,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'Euler\'s method with $h = 0.5$, starting at $(0, 1)$, $dy/dx = 2x$. Find $y(1)$:',
@@ -2431,6 +2587,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The logistic equation $\\frac{dP}{dt} = 0.3P(1 - P/200)$ has inflection point at $P =$',
@@ -2441,6 +2598,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The solution to $\\frac{dP}{dt} = kP(1 - P/L)$ with $P(0) = P_0$ has the form:',
@@ -2451,6 +2609,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'Euler\'s method approximation is a sequence of:',
@@ -2461,6 +2620,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'For $dy/dx = x^2 + y^2$ with $(0, 1)$ using Euler\'s method with $h = 0.1$, $y(0.1) \\approx$',
@@ -2471,6 +2631,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'For the logistic model, when $P$ is very small (near $0$), the growth is approximately:',
@@ -2481,6 +2642,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'When $P = L$ in the logistic model, $dP/dt =$',
@@ -2491,6 +2653,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Euler\'s method with $h = 0.25$: $dy/dx = y$, $y(0) = 1$. Find $y(1)$:',
@@ -2501,6 +2664,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'If the Euler\'s method approximation of $y(1)$ for $dy/dx = y$, $y(0) = 1$ with $h = 1$ is $2$, the exact value is:',
@@ -2511,6 +2675,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'When $P > L$ in the logistic model $dP/dt = kP(1-P/L)$:',
@@ -2526,6 +2691,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Euler\'s method with $h = 0.5$: $dy/dx = -y$, $y(0) = 4$. Find $y(1)$:',
@@ -2536,6 +2702,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'A population of 50 follows $dP/dt = 0.2P(1 - P/500)$. The growth rate at $P = 50$ is:',
@@ -2546,21 +2713,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
-  },
-  {
-    question: 'Euler\'s method is:',
-    options: [
-      'A first-order numerical method',
-      'A second-order numerical method',
-      'An exact method',
-      'Only applicable to linear DE\'s'
-    ],
-    correctAnswer: 0,
-    explanation: 'Euler\'s method is a first-order method: the local truncation error is $O(h^{2})$ and the global error is O(h).',
-    difficulty: 'easy',
-    domain: 'advanced-diffeq',
-    topicSlug: 'euler-method-advanced-calcbc',
-    formSet: 'both',
+    part: 4,
   },
   {
     question: 'For $dy/dx = 1 - y$ with $y(0) = 0$, using Euler\'s method with $h = 1$: $y(1) =$',
@@ -2571,6 +2724,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'The logistic equation can model:',
@@ -2586,9 +2740,10 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
-    question: 'In Euler\'s method, if $dy/dx = f(x, y)$ is positive and $f$ is increasing, then Euler\'s method will:',
+    question: 'In Euler\'s method, if $dy/dx = f(x, y)$ is positive and the solution curve is concave up, then Euler\'s method will:',
     options: [
       'Underestimate the true solution',
       'Overestimate the true solution',
@@ -2601,6 +2756,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If the logistic model gives $P(t) = \\frac{1000}{1 + 9e^{-0.5t}}$, then $P(0) =$',
@@ -2611,6 +2767,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'For $P(t) = \\frac{1000}{1 + 9e^{-0.5t}}$, what is the carrying capacity?',
@@ -2621,6 +2778,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'Euler\'s method gives $y(2) = 3.5$ with $h = 0.5$. To improve accuracy, you should:',
@@ -2636,6 +2794,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'For $dy/dx = \\sin(x)$, $y(0) = 0$ with $h = \\pi/2$, Euler gives $y(\\pi/2) \\approx$',
@@ -2646,6 +2805,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The graph of $dP/dt$ vs $P$ for the logistic model is:',
@@ -2656,6 +2816,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Given $dy/dx = 2y$ with $y(0) = 3$ using Euler\'s method and $h = 0.1$, $y(0.1) =$',
@@ -2666,6 +2827,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\frac{dP}{dt} = 0.1P(1 - P/300)$. At what population is the growth half its maximum?',
@@ -2676,6 +2838,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'For $dy/dx = x - y$ with $y(0) = 2$, one step of Euler ($h = 0.5$) gives $y(0.5) =$',
@@ -2686,6 +2849,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'In the logistic model $P(t) = L/(1+Ce^{-kt})$, the constant $C$ is determined by:',
@@ -2696,6 +2860,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'Euler\'s method with $h = 0.1$: $dy/dx = x + y$, $(0, 0)$. What is $y(0.2)$?',
@@ -2706,16 +2871,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
-  },
-  {
-    question: 'A DE is separable if it can be written as:',
-    options: ['$g(y)dy = f(x)dx$', '$dy/dx = f(x) + g(y)$', '$d^2y/dx^2 = f(x)$', '$y\'\' + y = 0$'],
-    correctAnswer: 0,
-    explanation: 'A separable equation can be written with all $y$ terms and $dy$ on one side and all $x$ terms and $dx$ on the other: $g(y)\\,dy = f(x)\\,dx$. A sum $f(x) + g(y)$ cannot be split that way in general, and the other two are second-order equations.',
-    difficulty: 'easy',
-    domain: 'advanced-diffeq',
-    topicSlug: 'euler-method-advanced-calcbc',
-    formSet: 'both',
+    part: 2,
   },
   {
     question: 'The solution to $dy/dx = ky$ is:',
@@ -2726,6 +2882,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The equilibrium solutions of $dy/dx = y(3 - y)$ are:',
@@ -2736,6 +2893,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'For $dy/dx = y(3 - y)$ with $y(0) = 5$, what is $\\lim_{x \\to \\infty} y(x)$?',
@@ -2746,6 +2904,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'For $dy/dx = y(3 - y)$ with $y(0) = 1$, the solution is:',
@@ -2756,6 +2915,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Using Euler\'s method for $dy/dx = y^2$ with $y(0) = 1$ and $h = 0.5$: $y(0.5) =$',
@@ -2766,6 +2926,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'Then continuing: $y(1) =$ (from previous: $y(0.5) = 1.5$, $dy/dx = y^2$, $h = 0.5$)',
@@ -2776,6 +2937,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'For $P(t) = \\frac{500}{1 + 4e^{-0.3t}}$, at what time does $P = 250$?',
@@ -2791,6 +2953,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If Euler\'s method overestimates the solution, the true solution curve is:',
@@ -2806,6 +2969,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The logistic DE $dP/dt = rP(1-P/K)$ — the growth rate $r$ represents:',
@@ -2816,6 +2980,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'In three Euler steps with $h = 1/3$ for $dy/dx = 3y$, $y(0) = 1$, what is $y(1)$?',
@@ -2826,16 +2991,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
-  },
-  {
-    question: 'For $\\frac{dy}{dx} = \\frac{y}{x}$, this is a _____ DE:',
-    options: ['Separable', 'Logistic', 'Second-order', 'Non-separable'],
-    correctAnswer: 0,
-    explanation: '$\\frac{dy}{dx} = \\frac{y}{x}$ separates as $\\frac{dy}{y} = \\frac{dx}{x}$, so $\\ln|y| = \\ln|x| + C$ and $y = Ax$. It is first-order, it has no carrying-capacity factor, and it does separate.',
-    difficulty: 'easy',
-    domain: 'advanced-diffeq',
-    topicSlug: 'euler-method-advanced-calcbc',
-    formSet: 'both',
+    part: 7,
   },
   {
     question: 'Solve $dy/dx = 2xy$ with $y(0) = 1$:',
@@ -2846,6 +3002,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The slope field for $dy/dx = x$ has slopes that:',
@@ -2861,6 +3018,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The slope field for $dy/dx = y$ has slopes that:',
@@ -2871,6 +3029,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'For Euler\'s method, the formula is:',
@@ -2886,6 +3045,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $P(t) = 800/(1+7e^{-0.4t})$, when is $P$ growing fastest?',
@@ -2901,6 +3061,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'Euler\'s method with $h = 0.2$: $dy/dx = -2y$, $y(0) = 5$. Find $y(0.2)$:',
@@ -2911,6 +3072,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'Then $y(0.4) =$ (continuing from $y(0.2) = 3$, $dy/dx = -2y$, $h = 0.2$):',
@@ -2921,6 +3083,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The logistic function $P(t) = L/(1+Ce^{-kt})$ has a horizontal asymptote at:',
@@ -2931,16 +3094,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
-  },
-  {
-    question: 'For $dy/dx = e^{-y}\\cos x$, $y(0) = 0$, this is:',
-    options: ['Separable', 'Not separable', 'Linear but not separable', 'A logistic equation'],
-    correctAnswer: 0,
-    explanation: '$e^{y}$ dy = cos x dx. Separable. $\\int e^{y}$ dy = ∫cos x dx → $e^{y}$ = sin x + C.',
-    difficulty: 'easy',
-    domain: 'advanced-diffeq',
-    topicSlug: 'euler-method-advanced-calcbc',
-    formSet: 'both',
+    part: 3,
   },
   {
     question: 'Euler\'s method with $h = 0.1$, $dy/dx = y - x$, $(0, 1)$: $y(0.1) =$',
@@ -2951,6 +3105,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Continuing: $y(0.2) =$ ($y(0.1) = 1.1$, $dy/dx = y - x$, $h = 0.1$)',
@@ -2961,6 +3116,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 2,
   },
 
   // ── BATCH 3 EXPANSION: mixed domains to reach ~300 ───────────────
@@ -2973,6 +3129,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: '$\\displaystyle\\int \\tan x\\,dx =$',
@@ -2983,6 +3140,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: '$\\displaystyle\\int_0^{\\infty}\\frac{dx}{(x+1)(x+2)} =$',
@@ -2993,6 +3151,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'For the parametric curve $x = e^t$, $y = e^{-t}$, eliminating $t$ gives:',
@@ -3003,6 +3162,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'If $\\mathbf{r}(t) = \\langle t^3, 3t^2 \\rangle$, the velocity vector at $t = 1$ is:',
@@ -3013,6 +3173,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: 'The polar curve $r = 4\\sin 2\\theta$ has how many petals?',
@@ -3023,6 +3184,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{2n-1} = 1 - \\frac{1}{3} + \\frac{1}{5} - \\cdots$ converges to:',
@@ -3031,8 +3193,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     explanation: 'This is arctan(1) = π/4 via the arctan series at x = 1 (Leibniz formula).',
     difficulty: 'medium',
     domain: 'sequences-series',
-    topicSlug: 'infinite-series-calcbc',
+    topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The series $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(x-1)^n}{2^n}$ has radius of convergence:',
@@ -3043,6 +3206,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The first three terms of the Taylor series for $e^x$ centered at $a = 1$ are:',
@@ -3058,6 +3222,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n x^{2n+1}}{2n+1}$ represents:',
@@ -3068,6 +3233,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Euler\'s method with $h = 0.5$: $dy/dx = xy$, $(0, 2)$. Find $y(0.5)$:',
@@ -3078,6 +3244,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The logistic solution $P(t) = L/(1+Ce^{-kt})$ is:',
@@ -3088,6 +3255,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: '$\\displaystyle\\int \\frac{x}{\\sqrt{1-x^2}}\\,dx =$',
@@ -3098,6 +3266,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The series $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{3^n}{n!}$ equals:',
@@ -3108,6 +3277,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'If $\\mathbf{v}(t) = \\langle 2t, 3t^2 \\rangle$ and $\\mathbf{r}(0) = \\langle 1, 0 \\rangle$, then $\\mathbf{r}(1) =$',
@@ -3118,6 +3288,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
     formSet: 'both',
+    part: 5,
   },
   {
     question: 'The integral $\\displaystyle\\int \\sin x \\cos x\\,dx =$',
@@ -3128,6 +3299,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'For $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^n n}{n+1}$, the $n$th term test shows:',
@@ -3138,6 +3310,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'The interval of convergence for $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^{2n}}{n!}$ is:',
@@ -3148,6 +3321,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 6,
   },
   {
     question: 'For $x = 4\\cos t + 2$, $y = 3\\sin t - 1$, the center of the ellipse is:',
@@ -3158,6 +3332,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
     formSet: 'both',
+    part: 1,
   },
   {
     question: 'Using $A = \\frac{1}{2}\\int_0^{2\\pi} r^2\\,d\\theta$, the area enclosed by the polar circle $r = 5$ is:',
@@ -3168,6 +3343,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The Ratio Test for $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n^{10}}{10^n}$ gives $L =$',
@@ -3178,6 +3354,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The coefficient of $x^4$ in the Maclaurin series for $\\frac{1}{1+x^2}$ is:',
@@ -3188,6 +3365,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'For $dy/dx = y(2-y)$ with $y(0) = 1$, the carrying capacity is:',
@@ -3198,6 +3376,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
     formSet: 'both',
+    part: 2,
   },
   {
     question: '$\\displaystyle\\int \\frac{2x}{\\sqrt{x^2+1}}\\,dx =$',
@@ -3208,6 +3387,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'The series $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1} x^n}{n}$ represents:',
@@ -3218,6 +3398,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'Euler\'s method with $h = 0.1$: $dy/dx = 3x^2$, $y(0) = 0$. The exact solution at $x = 1$ is $1$. Euler gives $y(1) =$',
@@ -3228,6 +3409,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
     formSet: 'both',
+    part: 7,
   },
   {
     question: 'For a polar curve, the formula for area is $A = \\frac{1}{2}\\int_\\alpha^\\beta r^2\\,d\\theta$ because:',
@@ -3243,6 +3425,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'both',
+    part: 3,
   },
   {
     question: 'The power series $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{x^n}{n2^n}$ has radius of convergence $R = 2$. Its value at $x = 1$ is:',
@@ -3251,8 +3434,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     explanation: 'At $x = 1$ the series is $\\sum \\frac{(1/2)^n}{n}$, and $\\sum \\frac{u^n}{n} = -\\ln(1 - u)$ for $|u| < 1$, so the value is $-\\ln\\frac{1}{2} = \\ln 2$. Dropping the minus sign gives $\\ln\\frac{1}{2}$, $\\frac{1}{2}$ is only the first term, and $x = 1$ lies inside the radius $2$, so the series converges there.',
     difficulty: 'hard',
     domain: 'sequences-series',
-    topicSlug: 'infinite-series-calcbc',
+    topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: 'The Maclaurin series for $\\frac{x}{1+x}$ is:',
@@ -3263,6 +3447,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
     formSet: 'both',
+    part: 4,
   },
   {
     question: '$\\displaystyle\\int \\frac{x+3}{(x+1)(x+2)}\\,dx$ — find $A$ where $\\frac{x+3}{(x+1)(x+2)} = \\frac{A}{x+1}+\\frac{B}{x+2}$:',
@@ -3273,6 +3458,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
     formSet: 'both',
+    part: 1,
   },
 
   // ─────────────── infinite-sequences-calcbc (top-up) ───────────────
@@ -3281,35 +3467,28 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     options: ['$\\lim_{n \\to \\infty} a_n$ exists as a finite number', 'It is bounded above and below', 'It is monotonic from some point on', 'Its terms alternate in sign'],
     correctAnswer: 0,
     explanation: 'A sequence converges exactly when $\\lim_{n \\to \\infty} a_n$ exists and is finite. Boundedness alone allows oscillation (such as $(-1)^n$), monotonic alone allows growth to $\\infty$, and alternating signs alone allows $(-1)^n n$.',
-    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 1,
   },
   {
     question: '$\\lim_{n \\to \\infty} \\dfrac{n + 1}{2n + 3} = $',
     options: ['$0$', '$1/2$', '$1$', '$\\infty$'],
     correctAnswer: 1,
     explanation: 'Same degree → ratio of leading coeffs.',
-    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'For $a_n = \\dfrac{3n^2 - 1}{5n^2 + n}$, what are $\\lim_{n\\to\\infty} a_n$ and the behavior of $\\sum a_n$?',
     options: ['$\\frac{3}{5}$; the series diverges', '$\\frac{3}{5}$; the series converges', '$0$; the series converges', '$0$; the series diverges'],
     correctAnswer: 0,
     explanation: 'Dividing by $n^2$ gives $a_n \\to \\frac{3}{5}$, not $0$, because the degrees match. Since the terms do not approach $0$, the nth term test says $\\sum a_n$ diverges; a series whose terms have a nonzero limit can never converge.',
-    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both',
-  },
-  {
-    question: '$\\lim_{n \\to \\infty} \\left(1 + \\dfrac{1}{n}\\right)^n = $',
-    options: ['$0$', '$1$', '$e$', '$\\infty$'],
-    correctAnswer: 2,
-    explanation: 'Classic definition of $e$.',
-    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 4,
   },
   {
     question: '$\\lim_{n \\to \\infty} \\dfrac{(-1)^n}{n} = $',
     options: ['$0$', '$1$', '$-1$', 'DNE'],
     correctAnswer: 0,
     explanation: 'Squeeze: $|(-1)^n / n| = 1/n \\to 0$.',
-    difficulty: 'hard', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both',
+    difficulty: 'hard', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 6,
   },
 
   // ─────────────── lagrange-error-bound-calcbc (top-up) ───────────────
@@ -3318,35 +3497,35 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     options: ['$\\dfrac{M}{(n+1)!}|x - c|^{n+1}$', '$\\dfrac{M}{n!}|x - c|^{n}$', '$\\dfrac{M}{(n+1)!}|x - c|^{n}$', '$M|x - c|^{n+1}$'],
     correctAnswer: 0,
     explanation: 'Lagrange: $|R_n(x)| \\le \\frac{M}{(n+1)!}|x - c|^{n+1}$, where $M$ bounds $|f^{(n+1)}|$ between $c$ and $x$. Using $n$ instead of $n + 1$ in the factorial or the power describes the last included term, not the first omitted one, and the factorial cannot be dropped.',
-    difficulty: 'easy', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'For $f(x) = \\sin x$, $|f^{(n)}(x)| \\le $',
     options: ['$1$', '$n!$', '$|x|^n$', '$\\frac{1}{n!}$'],
     correctAnswer: 0,
     explanation: 'Every derivative of $\\sin x$ is $\\pm\\sin x$ or $\\pm\\cos x$, so $|f^{(n)}(x)| \\le 1$ for all $n$ and $x$. The factorials and powers of $x$ belong to the terms of the series, not to the size of the derivatives.',
-    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'Bound the error in approximating $\\sin(0.1)$ by the Taylor polynomial $T_3(x)$ centered at $0$.',
     options: ['$\\le \\dfrac{(0.1)^4}{4!}$', '$\\le 0.1$', '$\\le 1$', '$\\le \\dfrac{(0.1)^3}{3!}$'],
     correctAnswer: 0,
     explanation: '$|R_3(x)| \\le \\dfrac{M}{4!}|x|^4$ with $M = 1$.',
-    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 6,
   },
   {
     question: 'For $f(x) = e^x$ on $[0, 1]$, $M = \\max |f^{(n+1)}(x)|$ on the interval equals:',
     options: ['$1$', '$e$', '$n$', '$e^n$'],
     correctAnswer: 1,
     explanation: '$f^{(k)}(x) = e^x$ is increasing; max on $[0,1]$ is $e^1 = e$.',
-    difficulty: 'hard', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both',
+    difficulty: 'hard', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 3,
   },
   {
     question: 'If the Lagrange bound on $|R_n(x)|$ tends to $0$ as $n \\to \\infty$, then:',
     options: ['The Taylor series converges to $f(x)$ at $x$', 'The Taylor series diverges at that $x$', 'The series converges to a value other than $f(x)$', 'Nothing can be concluded about $f(x)$'],
     correctAnswer: 0,
     explanation: 'The Lagrange bound controls $|f(x) - P_n(x)|$, so if it tends to $0$ then $P_n(x) \\to f(x)$: the Taylor series converges, and to $f(x)$ itself. That rules out divergence and convergence to a different value.',
-    difficulty: 'hard', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both',
+    difficulty: 'hard', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 7,
   },
 
   // ─────────────── series-applications-calcbc ───────────────
@@ -3355,70 +3534,70 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     options: ['$\\sum_{n=0}^\\infty x^n$', '$\\sum_{n=0}^\\infty \\dfrac{x^n}{n!}$', '$\\sum_{n=1}^\\infty \\dfrac{x^n}{n}$', '$\\sum_{n=0}^\\infty (-1)^n x^n$'],
     correctAnswer: 1,
     explanation: 'Standard expansion. Converges for all $x$.',
-    difficulty: 'easy', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'The Maclaurin series for $\\sin x$ is:',
     options: ['$\\sum_{n=0}^\\infty \\dfrac{(-1)^n x^{2n+1}}{(2n+1)!}$', '$\\sum_{n=0}^\\infty \\dfrac{x^{2n}}{(2n)!}$', '$\\sum_{n=0}^\\infty \\dfrac{x^n}{n!}$', '$\\sum_{n=1}^\\infty \\dfrac{(-1)^n x^n}{n}$'],
     correctAnswer: 0,
     explanation: 'Odd-powered alternating series.',
-    difficulty: 'easy', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'The Maclaurin series for $\\cos x$ is:',
     options: ['$\\sum \\dfrac{(-1)^n x^{2n}}{(2n)!}$', '$\\sum \\dfrac{x^{2n+1}}{(2n+1)!}$', '$\\sum \\dfrac{x^n}{n!}$', '$\\sum (-1)^n x^n$'],
     correctAnswer: 0,
     explanation: 'Even-powered alternating series.',
-    difficulty: 'easy', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'Use the Maclaurin series for $e^x$ to write the series for $e^{-x^2}$.',
     options: ['$\\sum \\dfrac{(-1)^n x^{2n}}{n!}$', '$\\sum \\dfrac{x^{2n}}{n!}$', '$\\sum \\dfrac{(-1)^n x^{n}}{n!}$', '$\\sum \\dfrac{(-1)^n x^{2n}}{(2n)!}$'],
     correctAnswer: 0,
     explanation: 'Substitute $x \\mapsto -x^2$ in $\\sum x^n/n!$ to get $\\sum (-x^2)^n/n! = \\sum (-1)^n x^{2n}/n!$. The series with $(2n)!$ is $\\cos x$, and the one with $x^n$ is $e^{-x}$.',
-    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'To find $\\int_0^1 e^{-x^2} dx$ as a series, integrate $\\sum \\dfrac{(-1)^n x^{2n}}{n!}$ term-by-term to get:',
     options: ['$\\sum \\dfrac{(-1)^n}{n!(2n+1)}$', '$\\sum \\dfrac{(-1)^n}{n!}$', '$\\sum \\dfrac{1}{n!}$', '$\\sum \\dfrac{(-1)^n}{(2n)!}$'],
     correctAnswer: 0,
     explanation: 'Integrate $x^{2n}$ to get $x^{2n+1}/(2n+1)$, evaluate at $1$.',
-    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 2,
   },
   {
     question: 'The Maclaurin series for $\\dfrac{1}{1 - x}$ (geometric) is:',
     options: ['$\\sum_{n=0}^\\infty x^n$', '$\\sum (-1)^n x^n$', '$\\sum \\dfrac{x^n}{n!}$', '$\\sum nx^{n-1}$'],
     correctAnswer: 0,
     explanation: '$\\frac{1}{1 - x} = 1 + x + x^2 + \\cdots = \\sum x^n$ for $|x| < 1$, a geometric series with ratio $x$. The alternating version is $\\frac{1}{1+x}$, $\\sum \\frac{x^n}{n!}$ is $e^x$, and $\\sum nx^{n-1}$ is $\\frac{1}{(1-x)^2}$.',
-    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 7,
   },
   {
     question: 'Differentiate $\\sum_{n=0}^\\infty x^n = \\dfrac{1}{1-x}$ term-by-term:',
     options: ['$\\sum_{n=1}^\\infty n x^{n-1}$', '$\\sum_{n=0}^\\infty \\dfrac{x^{n+1}}{n+1}$', '$\\sum_{n=1}^\\infty x^{n-1}$', '$\\sum_{n=0}^\\infty n x^{n+1}$'],
     correctAnswer: 0,
     explanation: 'Differentiating $x^n$ gives $nx^{n-1}$, so the derivative series is $\\sum n x^{n-1} = \\frac{1}{(1-x)^2}$. $\\sum \\frac{x^{n+1}}{n+1}$ is the integral, dropping the factor $n$ loses the power rule\'s coefficient, and raising the exponent to $n + 1$ is the integration pattern, not differentiation.',
-    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 4,
   },
   {
     question: 'Integrate $\\sum_{n=0}^\\infty (-1)^n x^n = \\dfrac{1}{1+x}$ to get:',
     options: ['$\\ln(1 + x)$', '$\\arctan x$', '$\\dfrac{1}{(1+x)^2}$', '$-\\ln(1 - x)$'],
     correctAnswer: 0,
     explanation: '$\\int_0^x \\frac{dt}{1+t} = \\ln(1+x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}x^n}{n}$. $\\arctan x$ comes from $\\frac{1}{1+x^2}$, $\\frac{1}{(1+x)^2}$ is (up to sign) the derivative of $\\frac{1}{1+x}$, and $-\\ln(1-x)$ comes from the non-alternating $\\sum x^n$.',
-    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 4,
   },
   {
     question: 'Integrating $\\dfrac{1}{1+x^2} = \\sum (-1)^n x^{2n}$ term by term gives $\\arctan x$. Its series representation is:',
     options: ['$\\sum \\dfrac{(-1)^n x^{2n+1}}{2n+1}$', '$\\sum (-1)^n x^{2n}$', '$\\sum \\dfrac{(-1)^n x^{2n+1}}{(2n+1)!}$', '$\\sum \\dfrac{(-1)^n x^n}{n}$'],
     correctAnswer: 0,
     explanation: '$\\frac{1}{1+x^2}$ is geometric in $-x^2$, and integrating $x^{2n}$ gives $\\frac{x^{2n+1}}{2n+1}$, so $\\arctan x = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$. $\\sum (-1)^n x^{2n}$ is the series before integrating, the factorial version is $\\sin x$, and $\\sum \\frac{(-1)^n x^n}{n}$ is $-\\ln(1+x)$.',
-    difficulty: 'hard', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
+    difficulty: 'hard', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 4,
   },
   {
     question: 'Approximate $\\sin(0.5)$ using $T_3(x) = x - x^3/6$:',
     options: ['$0.5 - 0.125/6 \\approx 0.4792$', '$0.5 - 0.25/6 \\approx 0.4583$', '$0.5 + 0.125/6 \\approx 0.5208$', '$0.5 - 0.125/2 \\approx 0.4375$'],
     correctAnswer: 0,
     explanation: '$T_3(0.5) = 0.5 - (0.5)^3/6 = 0.5 - 0.125/6 \\approx 0.4792$, very close to the actual $\\sin(0.5) \\approx 0.4794$.',
-    difficulty: 'hard', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
+    difficulty: 'hard', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 1,
   },
 
   // ─────────────── bc-exam-strategies-calcbc ───────────────
@@ -3427,70 +3606,70 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     options: ['Series only, with every other unit shared', 'Series and parametric/polar curves', 'Linear algebra and systems of linear equations', 'Multivariable calculus and partial derivatives'],
     correctAnswer: 1,
     explanation: 'Beyond the AB topics, BC adds infinite series, parametric, polar and vector-valued functions, and extra integration and differential-equation topics such as integration by parts, improper integrals, Euler\'s method and logistic models. Linear algebra and multivariable calculus are not on the exam.',
-    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'The BC exam awards a separate "AB sub-score" reflecting:',
     options: ['Only the questions on AB topics', 'A random sample of all the questions', 'The multiple-choice section alone', 'The free-response questions alone'],
     correctAnswer: 0,
     explanation: 'The AB subscore is computed from the BC exam questions that cover AB content, across both sections. It is not a random sample and not limited to one section.',
-    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'For a parametric motion problem on the BC exam, speed equals:',
     options: ['$x\'(t) + y\'(t)$', '$\\sqrt{(x\'(t))^2 + (y\'(t))^2}$', '$x\'(t) \\cdot y\'(t)$', '$|x\'(t)|$'],
     correctAnswer: 1,
     explanation: 'Magnitude of velocity vector.',
-    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 5,
   },
   {
     question: 'For $r = f(\\theta)$, the area enclosed from $\\alpha$ to $\\beta$ is:',
     options: ['$\\int_\\alpha^\\beta r \\, d\\theta$', '$\\dfrac{1}{2}\\int_\\alpha^\\beta r^2 \\, d\\theta$', '$\\int_\\alpha^\\beta r^2 \\, d\\theta$', '$\\pi r^2$'],
     correctAnswer: 1,
     explanation: 'Polar area formula.',
-    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 4,
   },
   {
     question: 'On a series-convergence FRQ, you must:',
     options: ['State only whether the series converges', 'Name the test and check its conditions', 'Use the ratio test no matter the series', 'Estimate the sum on a graphing calculator'],
     correctAnswer: 1,
     explanation: 'Rubrics require naming the test, verifying its hypotheses, and stating the conclusion. A bare answer earns little, the ratio test fails for many series (it is inconclusive for $p$-series), and a calculator estimate is not a justification.',
-    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 3,
   },
   {
     question: 'The radius of convergence of $\\sum a_n x^n$ is found via:',
     options: ['Direct comparison only', 'Ratio test on $|a_{n+1} x^{n+1} / a_n x^n|$', 'Integral test', 'Term test'],
     correctAnswer: 1,
     explanation: 'Ratio test gives $|x| < R$.',
-    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 5,
   },
   {
     question: 'For Euler\'s method with step $h$, the update is:',
     options: ['$y_{n+1} = y_n + h \\cdot f(x_n, y_n)$', '$y_{n+1} = y_n \\cdot f(x_n, y_n)$', '$y_{n+1} = h \\cdot f(x_n, y_n)$', '$y_{n+1} = y_n + f(x_n, y_n)$'],
     correctAnswer: 0,
     explanation: 'Tangent-line step using slope $f(x,y) = dy/dx$.',
-    difficulty: 'medium', domain: 'advanced-diffeq', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'advanced-diffeq', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 7,
   },
   {
     question: 'For a logistic model $\\dfrac{dP}{dt} = kP(1 - P/M)$, the carrying capacity is:',
     options: ['$\\frac{M}{2}$', '$M$', '$P_0$', '$kM$'],
     correctAnswer: 1,
     explanation: '$\\frac{dP}{dt} = 0$ when $P = M$, and solutions level off there, so $M$ is the carrying capacity. $\\frac{M}{2}$ is where growth is fastest, $P_0$ is the starting population, and $kM$ is a rate.',
-    difficulty: 'medium', domain: 'advanced-diffeq', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'advanced-diffeq', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 7,
   },
   {
     question: 'For $\\int u \\, dv$, integration by parts gives:',
     options: ['$uv - \\int v \\, du$', '$uv + \\int v \\, du$', '$u \\, dv - v \\, du$', '$\\int v \\, du$'],
     correctAnswer: 0,
     explanation: 'Standard IBP formula.',
-    difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 6,
   },
   {
     question: 'An improper integral $\\int_1^\\infty \\dfrac{1}{x^p} dx$ converges iff:',
     options: ['$p > 1$', '$p < 1$', '$p = 1$', 'Always converges'],
     correctAnswer: 0,
     explanation: 'Standard $p$-integral result.',
-    difficulty: 'hard', domain: 'advanced-integration', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
+    difficulty: 'hard', domain: 'advanced-integration', topicSlug: 'improper-integrals-calcbc', formSet: 'both', part: 5,
   },
 
   // ─────────────── review-connections-calcbc ───────────────
@@ -3499,70 +3678,70 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     options: ['Limits at infinity', 'Power series', 'Related rates', 'Definite integrals'],
     correctAnswer: 1,
     explanation: 'Infinite series, including power and Taylor series, are BC-only content. Limits at infinity, related rates and definite integrals are all in AB as well.',
-    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 7,
   },
   {
     question: 'A polar curve $r = 2\\cos\\theta$ is equivalent in Cartesian form to:',
     options: ['$(x - 1)^2 + y^2 = 1$', '$x^2 + (y - 1)^2 = 1$', '$(x - 2)^2 + y^2 = 4$', '$x = 2$'],
     correctAnswer: 0,
     explanation: 'Multiply by $r$: $r^2 = 2r\\cos\\theta$, so $x^2 + y^2 = 2x$, which completes to $(x - 1)^2 + y^2 = 1$, a circle of radius 1 centered at $(1, 0)$. Centering on the $y$-axis describes $r = 2\\sin\\theta$, using $2$ as the radius doubles the circle, and $x = 2$ comes from treating $r\\cos\\theta$ as $2$.',
-    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'review-connections-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 2,
   },
   {
     question: 'A parametric curve has $x(t) = t^2$, $y(t) = t^3$. At $t = 1$, $\\dfrac{dy}{dx} = $',
     options: ['$1$', '$3/2$', '$2/3$', '$3$'],
     correctAnswer: 1,
     explanation: '$\\dfrac{dy}{dx} = \\dfrac{y\'(t)}{x\'(t)} = \\dfrac{3t^2}{2t} = \\dfrac{3t}{2}$, at $t=1$ gives $3/2$.',
-    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'review-connections-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 2,
   },
   {
     question: 'The arc length of $y = f(x)$ from $a$ to $b$ is:',
     options: ['$\\int_a^b f(x) dx$', '$\\int_a^b \\sqrt{1 + (f\'(x))^2} \\, dx$', '$\\int_a^b f\'(x) dx$', '$f(b) - f(a)$'],
     correctAnswer: 1,
     explanation: 'Standard arc length formula.',
-    difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'review-connections-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 2,
   },
   {
     question: 'Does $\\sum_{n=1}^\\infty \\dfrac{1}{n^2}$ converge?',
     options: ['Yes, as a $p$-series with $p = 2$', 'No, its terms shrink too slowly', 'Only conditionally convergent', 'It cannot be determined'],
     correctAnswer: 0,
     explanation: '$\\sum \\frac{1}{n^2}$ is a $p$-series with $p = 2 > 1$, so it converges. Its terms shrink fast enough, all terms are positive so convergence is absolute, and the $p$-series test settles it.',
-    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 4,
   },
   {
     question: 'Does $\\sum_{n=1}^\\infty \\dfrac{1}{n}$ converge?',
     options: ['Yes, since its terms approach $0$', 'No, it is the harmonic series', 'Yes, but only conditionally', 'It cannot be determined'],
     correctAnswer: 1,
     explanation: '$\\sum \\frac{1}{n}$ is the harmonic series, a $p$-series with $p = 1$, so it diverges. Terms approaching $0$ do not guarantee convergence, conditional convergence needs alternating signs, and the $p$-series test settles it.',
-    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 4,
   },
   {
     question: '$\\sum_{n=1}^\\infty \\dfrac{(-1)^n}{n}$ converges by:',
     options: ['The geometric series test', 'The alternating series test', 'The ratio test, since $L = 1$', 'The $p$-series test with $p = 1$'],
     correctAnswer: 1,
     explanation: 'The terms alternate in sign and $\\frac{1}{n}$ decreases to $0$, so the alternating series test gives convergence (conditional). The ratio is not constant (not geometric), $L = 1$ makes the ratio test inconclusive, and the $p$-series test with $p = 1$ shows that $\\sum \\frac{1}{n}$ diverges, not that this series converges.',
-    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 4,
   },
   {
     question: 'The radius of convergence of $\\sum_{n=0}^\\infty \\dfrac{x^n}{n!}$ is:',
     options: ['$0$', '$1$', '$\\infty$', '$e$'],
     correctAnswer: 2,
     explanation: 'Ratio test gives $\\lim |x/(n+1)| = 0 < 1$ for all $x$.',
-    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'For $\\int x e^x dx$ via integration by parts with $u = x$, $dv = e^x dx$, the result is:',
     options: ['$e^x - x e^x + C$', '$x e^x - e^x + C$', '$x e^x + e^x + C$', '$\\dfrac{x^2 e^x}{2} + C$'],
     correctAnswer: 1,
     explanation: '$uv - \\int v\\,du = xe^x - \\int e^x\\,dx = xe^x - e^x + C$. Reversing both signs gives $e^x - xe^x$, a plus sign forgets to subtract the second integral, and $\\frac{x^2 e^x}{2}$ integrates the factors separately.',
-    difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'review-connections-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 5,
   },
   {
     question: 'The solution to $\\dfrac{dy}{dx} = ky$ with $y(0) = y_0$ is:',
     options: ['$y = y_0 + kx$', '$y = y_0 e^{kx}$', '$y = y_0 x^k$', '$y = y_0 \\sin(kx)$'],
     correctAnswer: 1,
     explanation: 'Standard exponential growth/decay.',
-    difficulty: 'hard', domain: 'advanced-diffeq', topicSlug: 'review-connections-calcbc', formSet: 'both',
+    difficulty: 'hard', domain: 'advanced-diffeq', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 3,
   },
 
   // ─────────────── alternating-series-calcbc (top-up) ───────────────
@@ -3571,21 +3750,14 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     options: ['$b_n$ decreasing to a limit of $0$', '$b_n \\to \\infty$ as $n \\to \\infty$', '$b_n$ decreasing to any finite limit', '$\\sum b_n$ itself convergent'],
     correctAnswer: 0,
     explanation: 'The Alternating Series Test needs $b_n > 0$, eventually decreasing, with $b_n \\to 0$. If $b_n$ grows or has a nonzero limit, the terms do not go to $0$ and the series diverges, and requiring $\\sum b_n$ to converge would test absolute convergence, which is not needed.',
-    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'The Alternating Series Estimation Theorem says $|S - S_n| \\le$:',
     options: ['$|b_{n+1}|$', '$|b_n|$', '$\\sum_{k=n}^\\infty b_k$', '$|b_{n+1} - b_n|$'],
     correctAnswer: 0,
     explanation: 'The error after $n$ terms is at most the first omitted term, $|b_{n+1}|$. $|b_n|$ is the last included term, the tail sum is the error itself (not the bound), and the difference of consecutive terms is unrelated.',
-    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both',
-  },
-  {
-    question: '$\\sum_{n=1}^\\infty \\dfrac{(-1)^n}{n^2}$ is:',
-    options: ['Absolutely convergent', 'Conditionally convergent only', 'Divergent by the $n$th term test', 'Not decidable with these tests'],
-    correctAnswer: 0,
-    explanation: '$\\sum \\left|\\frac{(-1)^n}{n^2}\\right| = \\sum \\frac{1}{n^2}$ converges as a $p$-series with $p = 2$, so the series converges absolutely. Absolute convergence rules out "conditionally only", and the terms do go to $0$.',
-    difficulty: 'hard', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both', part: 2,
   },
 
   // ─────────────── arc-length-surface-area-calcbc (top-up) ───────────────
@@ -3594,27 +3766,150 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     options: ['$\\int_a^b \\sqrt{1 + (f\'(x))^2} dx$', '$\\int_a^b \\sqrt{1 + f(x)^2} dx$', '$\\int_a^b f\'(x) dx$', '$f(b) - f(a)$'],
     correctAnswer: 0,
     explanation: 'Standard arc length formula.',
-    difficulty: 'easy', domain: 'advanced-integration', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both',
+    difficulty: 'easy', domain: 'advanced-integration', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both', part: 1,
   },
   {
     question: 'For a parametric curve $(x(t), y(t))$ on $[\\alpha, \\beta]$, arc length is:',
     options: ['$\\int_\\alpha^\\beta \\sqrt{(x\'(t))^2 + (y\'(t))^2} dt$', '$\\int_\\alpha^\\beta (x\'(t) + y\'(t)) dt$', '$\\int_\\alpha^\\beta x\'(t) y\'(t) dt$', '$\\sqrt{(\\Delta x)^2 + (\\Delta y)^2}$'],
     correctAnswer: 0,
     explanation: 'Parametric arc length.',
-    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both',
+    difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both', part: 2,
   },
   {
     question: 'The curve $x = t^2$, $y = t^3$ for $0 \\le t \\le 1$ has length:',
     options: ['$\\int_0^1 \\sqrt{4t^2 + 9t^4}\\,dt$', '$\\int_0^1 \\sqrt{t^4 + t^6}\\,dt$', '$\\int_0^1 \\sqrt{1 + \\frac{9t^2}{4}}\\,dt$', '$\\int_0^1 (2t + 3t^2)\\,dt$'],
     correctAnswer: 0,
     explanation: 'Parametric arc length is $\\int \\sqrt{(dx/dt)^2 + (dy/dt)^2}\\,dt$ with $dx/dt = 2t$ and $dy/dt = 3t^2$. Squaring the position functions instead of their derivatives gives the $t^4 + t^6$ integrand, the $1 + (dy/dx)^2$ integrand must be paired with $dx$ rather than $dt$, and adding the rates skips the Pythagorean step.',
-    difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both',
+    difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both', part: 7,
   },
+
+  // ══════════════════════════════════════════════════════════════════
+  //  EXIT-QUIZ DEPTH (Oct 2026): written from the CED-trimmed lessons; every
+  //  reachable topic has 15+ items and >= 2 per lesson part (`part` = registry order)
+  // ══════════════════════════════════════════════════════════════════
+  // -- integration-by-parts-calcbc --
+  { question: 'Evaluate $\\displaystyle\\int_0^1 x e^{2x}\\,dx$.', options: ['$\\dfrac{e^2+1}{4}$', '$e^2 + 1$', '$\\dfrac{1}{2}$', '$\\dfrac{e^2}{2}$'], correctAnswer: 0, explanation: 'With $u = x$ and $dv = e^{2x}\\,dx$, $v = \\frac{e^{2x}}{2}$, so the integral is $\\left[\\frac{xe^{2x}}{2}\\right]_0^1 - \\int_0^1 \\frac{e^{2x}}{2}\\,dx = \\frac{e^2}{2} - \\frac{e^2 - 1}{4} = \\frac{e^2 + 1}{4}$. Forgetting to divide by 2 again when integrating $\\frac{e^{2x}}{2}$ gives $\\frac{1}{2}$, differentiating $e^{2x}$ instead of integrating it (taking $v = 2e^{2x}$) gives $e^2 + 1$, and $\\frac{e^2}{2}$ keeps only the $[uv]$ term.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'integration-by-parts-calcbc', formSet: 'both', part: 4 },
+  { question: 'Evaluate $\\displaystyle\\int_1^e \\frac{\\ln x}{x^2}\\,dx$.', options: ['$1 - \\dfrac{2}{e}$', '$\\dfrac{2}{e} - 1$', '$1 - \\dfrac{1}{e}$', '$1$'], correctAnswer: 0, explanation: 'Take $u = \\ln x$ and $dv = x^{-2}\\,dx$, so $v = -\\frac{1}{x}$ and the antiderivative is $-\\frac{\\ln x}{x} - \\frac{1}{x}$. From $1$ to $e$ this is $\\left(-\\frac{2}{e}\\right) - (-1) = 1 - \\frac{2}{e}$. Dropping the $[uv]_1^e$ term leaves $1 - \\frac{1}{e}$, a sign slip on that term makes the two $\\frac{1}{e}$ pieces cancel to give $1$, and $\\frac{2}{e} - 1$ subtracts the limits in the wrong order.', difficulty: 'hard', domain: 'advanced-integration', topicSlug: 'integration-by-parts-calcbc', formSet: 'both', part: 4 },
+  { question: 'Using the tabular method, evaluate $\\displaystyle\\int_0^1 x^2 e^{-x}\\,dx$.', options: ['$2 - \\dfrac{5}{e}$', '$\\dfrac{5}{e} - 2$', '$-\\dfrac{3}{e}$', '$2 - \\dfrac{1}{e}$'], correctAnswer: 0, explanation: 'The integrate column for $e^{-x}$ alternates $-e^{-x}, e^{-x}, -e^{-x}$, so the antiderivative is $-e^{-x}(x^2 + 2x + 2)$; from $0$ to $1$ that is $-\\frac{5}{e} - (-2) = 2 - \\frac{5}{e}$. Reusing the $e^{x}$ pattern $x^2 - 2x + 2$ gives $2 - \\frac{1}{e}$, losing the minus sign from integrating $e^{-x}$ gives $\\frac{5}{e} - 2$, and stopping before the constant row gives $-\\frac{3}{e}$.', difficulty: 'hard', domain: 'advanced-integration', topicSlug: 'integration-by-parts-calcbc', formSet: 'B', part: 7 },
+  { question: 'Which integral is evaluated with exactly one application of integration by parts followed by a $u$-substitution?', options: ['$\\displaystyle\\int \\arctan x\\,dx$', '$\\displaystyle\\int x^2 e^{3x}\\,dx$', '$\\displaystyle\\int e^{x}\\cos(2x)\\,dx$', '$\\displaystyle\\int (\\ln 2x)^2\\,dx$'], correctAnswer: 0, explanation: 'With $u = \\arctan x$ and $dv = dx$, one round leaves $\\int \\frac{x}{1 + x^2}\\,dx$, which the substitution $w = 1 + x^2$ finishes. $x^2 e^{3x}$ needs two rounds (a tabular problem), $e^{x}\\cos(2x)$ needs two rounds and then solving for the integral, and $(\\ln 2x)^2$ needs a second round of parts on $\\int \\ln 2x\\,dx$.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'integration-by-parts-calcbc', formSet: 'both', part: 7 },
+
+  // -- partial-fractions-calcbc --
+  { question: 'Evaluate $\\displaystyle\\int \\frac{x^2}{x^2-4}\\,dx$.', options: ['$x + \\ln|x-2| - \\ln|x+2| + C$', '$x + \\frac{1}{4}\\ln|x-2| - \\frac{1}{4}\\ln|x+2| + C$', '$x + \\ln|x-2| + \\ln|x+2| + C$', '$\\ln|x-2| - \\ln|x+2| + C$'], correctAnswer: 0, explanation: 'The degrees are equal, so divide first: $\\frac{x^2}{x^2 - 4} = 1 + \\frac{4}{(x-2)(x+2)}$, and cover-up gives $\\frac{1}{x-2} - \\frac{1}{x+2}$ for the remainder. Integrating gives $x + \\ln|x-2| - \\ln|x+2| + C$. Leaving out the quotient drops the $x$, using the decomposition of $\\frac{1}{x^2-4}$ loses the numerator 4 and gives the $\\frac{1}{4}$ factors, and a plus sign on the second log comes from a sign slip in $-2 - 2$.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'partial-fractions-calcbc', formSet: 'both', part: 5 },
+  { question: 'Polynomial long division rewrites $\\dfrac{x^3-2x}{x^2-1}$ as', options: ['$x - \\dfrac{x}{x^2-1}$', '$x + \\dfrac{x}{x^2-1}$', '$x - \\dfrac{2x}{x^2-1}$', '$x - \\dfrac{3x}{x^2-1}$'], correctAnswer: 0, explanation: 'The quotient is $x$, and $x(x^2 - 1) = x^3 - x$, so the remainder is $(x^3 - 2x) - (x^3 - x) = -x$, giving $x - \\frac{x}{x^2-1}$. Keeping the original $-2x$ forgets to subtract $x \\cdot (-1)$, writing $-3x$ adds the $-x$ instead of subtracting it, and $+\\frac{x}{x^2-1}$ flips the sign of the remainder.', difficulty: 'easy', domain: 'advanced-integration', topicSlug: 'partial-fractions-calcbc', formSet: 'A', part: 5 },
+  { question: 'Evaluate $\\displaystyle\\int_0^1 \\frac{4}{x^2-4}\\,dx$.', options: ['$-\\ln 3$', '$-\\dfrac{1}{4}\\ln 3$', '$-2\\ln 3$', '$\\ln\\dfrac{3}{4}$'], correctAnswer: 0, explanation: 'Cover-up gives $\\frac{4}{(x-2)(x+2)} = \\frac{1}{x-2} - \\frac{1}{x+2}$, so the antiderivative is $\\ln|x-2| - \\ln|x+2|$; at $1$ it is $0 - \\ln 3$ and at $0$ it is $\\ln 2 - \\ln 2 = 0$, giving $-\\ln 3$ (negative because the integrand is negative on $[0, 1]$). Taking $A = \\frac{4}{2} = 2$ (forgetting to evaluate the other factor at $x = 2$) gives $-2\\ln 3$, decomposing $\\frac{1}{x^2-4}$ instead loses the numerator 4, and a plus sign on the second log gives $\\ln 3 - \\ln 4$.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'partial-fractions-calcbc', formSet: 'both', part: 6 },
+  { question: 'Evaluate $\\displaystyle\\int \\frac{6}{x(x-1)(x+2)}\\,dx$.', options: ['$-3\\ln|x| + 2\\ln|x-1| + \\ln|x+2| + C$', '$3\\ln|x| + 2\\ln|x-1| + \\ln|x+2| + C$', '$-3\\ln|x| + 2\\ln|x-1| - \\ln|x+2| + C$', '$-3\\ln|x| + 6\\ln|x-1| + \\ln|x+2| + C$'], correctAnswer: 0, explanation: 'Cover-up: at $x = 0$, $A = \\frac{6}{(-1)(2)} = -3$; at $x = 1$, $B = \\frac{6}{(1)(3)} = 2$; at $x = -2$, $C = \\frac{6}{(-2)(-3)} = 1$ (check: $A + B + C = 0$, matching the missing $x^2$ term). A positive first constant or a negative last constant comes from a sign slip in the covered-up product, and $6\\ln|x-1|$ forgets to divide by the factor $x + 2 = 3$.', difficulty: 'hard', domain: 'advanced-integration', topicSlug: 'partial-fractions-calcbc', formSet: 'both', part: 6 },
+  { question: 'Evaluate $\\displaystyle\\int \\frac{2x+1}{x^2+x-6}\\,dx$.', options: ['$\\ln|x^2+x-6| + C$', '$\\dfrac{1}{5}\\ln\\left|\\dfrac{x-2}{x+3}\\right| + C$', '$\\ln|x+3| - \\ln|x-2| + C$', '$2\\ln|x^2+x-6| + C$'], correctAnswer: 0, explanation: 'The numerator $2x + 1$ is exactly the derivative of $x^2 + x - 6$, so the integral is $\\ln|x^2 + x - 6| + C$ (partial fractions agrees: both constants equal 1, giving $\\ln|x+3| + \\ln|x-2|$). A minus sign between the logs is a cover-up sign slip, $\\frac{1}{5}\\ln\\left|\\frac{x-2}{x+3}\\right|$ is the antiderivative of $\\frac{1}{x^2+x-6}$ with the numerator ignored, and the factor 2 double-counts the derivative already used.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'partial-fractions-calcbc', formSet: 'B', part: 7 },
+  { question: 'Evaluate $\\displaystyle\\int \\frac{x^2+x+2}{x^2-1}\\,dx$.', options: ['$x + 2\\ln|x-1| + \\ln|x+1| + C$', '$2\\ln|x-1| - \\ln|x+1| + C$', '$x + \\ln|x-1| - 2\\ln|x+1| + C$', '$x + 2\\ln|x-1| - \\ln|x+1| + C$'], correctAnswer: 3, explanation: 'Divide first: $\\frac{x^2+x+2}{x^2-1} = 1 + \\frac{x+3}{(x-1)(x+1)}$. Cover-up gives $A = \\frac{4}{2} = 2$ over $x - 1$ and $B = \\frac{2}{-2} = -1$ over $x + 1$, so the integral is $x + 2\\ln|x-1| - \\ln|x+1| + C$. Skipping the division loses the $x$, a plus sign on the last log is a sign slip in $-1 - 1$, and the swapped coefficients attach each constant to the wrong factor.', difficulty: 'hard', domain: 'advanced-integration', topicSlug: 'partial-fractions-calcbc', formSet: 'both', part: 7 },
+
+  // -- advanced-integration-calcbc --
+  { question: 'Evaluate $\\displaystyle\\int x\\sin(3x)\\,dx$.', options: ['$-\\dfrac{x}{3}\\cos 3x + \\dfrac{1}{3}\\sin 3x + C$', '$-\\dfrac{x}{3}\\cos 3x - \\dfrac{1}{9}\\sin 3x + C$', '$-\\dfrac{x}{3}\\cos 3x + \\dfrac{1}{9}\\sin 3x + C$', '$\\dfrac{x}{3}\\cos 3x + \\dfrac{1}{9}\\sin 3x + C$'], correctAnswer: 2, explanation: 'With $u = x$ and $dv = \\sin(3x)\\,dx$, $v = -\\frac{1}{3}\\cos 3x$, so the integral is $-\\frac{x}{3}\\cos 3x + \\frac{1}{3}\\int \\cos 3x\\,dx = -\\frac{x}{3}\\cos 3x + \\frac{1}{9}\\sin 3x + C$. Writing $\\frac{1}{3}\\sin 3x$ forgets the second factor $\\frac{1}{3}$ when integrating $\\cos 3x$, the minus on the sine term loses the double negative in $-\\int v\\,du$, and a positive first term takes $v = \\frac{1}{3}\\cos 3x$.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'advanced-integration-calcbc', formSet: 'both', part: 2 },
+  { question: 'Two rounds of integration by parts on $I = \\displaystyle\\int e^{2x}\\cos x\\,dx$ (with $u = \\cos x$, then $u = \\sin x$) give $I = \\frac{1}{2}e^{2x}\\cos x + \\frac{1}{4}e^{2x}\\sin x - \\frac{1}{4}I$. What is $I$?', options: ['$\\dfrac{e^{2x}(2\\cos x + \\sin x)}{5} + C$', '$\\dfrac{e^{2x}(2\\cos x + \\sin x)}{4} + C$', '$\\dfrac{e^{2x}(2\\cos x + \\sin x)}{3} + C$', '$\\dfrac{e^{2x}(\\cos x + 2\\sin x)}{5} + C$'], correctAnswer: 0, explanation: 'Adding $\\frac{1}{4}I$ to both sides gives $\\frac{5}{4}I = \\frac{e^{2x}(2\\cos x + \\sin x)}{4}$, so $I = \\frac{e^{2x}(2\\cos x + \\sin x)}{5} + C$. A denominator of 4 ignores the $-\\frac{1}{4}I$ term, a denominator of 3 moves it to the left side with the wrong sign, and swapping the coefficients of $\\cos x$ and $\\sin x$ gives the form of $\\int e^{2x}\\sin x\\,dx$ instead.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'advanced-integration-calcbc', formSet: 'A', part: 2 },
+  { question: 'If $F(x) = \\displaystyle\\int_2^{x^2} \\sqrt{1 + t^3}\\,dt$, then $F\'(x) =$', options: ['$\\sqrt{1 + x^6}$', '$2x\\sqrt{1 + x^3}$', '$2x\\sqrt{1 + x^6} - 3$', '$2x\\sqrt{1 + x^6}$'], correctAnswer: 3, explanation: 'By the Fundamental Theorem with the chain rule, $F\'(x) = \\sqrt{1 + (x^2)^3} \\cdot 2x = 2x\\sqrt{1 + x^6}$. Leaving out the factor $2x$ skips the chain rule, $\\sqrt{1 + x^3}$ substitutes $x$ instead of $x^2$ into the integrand, and subtracting $\\sqrt{1 + 2^3} = 3$ treats the constant lower limit as if it contributed to the derivative.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'advanced-integration-calcbc', formSet: 'both', part: 4 },
+  { question: 'Oil leaks from a tank at a rate of $R(t) = 6e^{-0.5t}$ gallons per hour, where $t$ is in hours. How many gallons leak out during the first 2 hours?', options: ['$12(1 - e^{-1})$', '$6(1 - e^{-1})$', '$3(1 - e^{-1})$', '$6e^{-1}$'], correctAnswer: 0, explanation: 'The amount is $\\int_0^2 6e^{-0.5t}\\,dt = 6\\left[-2e^{-0.5t}\\right]_0^2 = 12(1 - e^{-1})$, about 7.59 gallons. Leaving out the factor $\\frac{1}{-0.5} = -2$ gives $6(1 - e^{-1})$, multiplying by $0.5$ instead of dividing gives $3(1 - e^{-1})$, and $6e^{-1}$ is the rate $R(2)$, not an amount.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'advanced-integration-calcbc', formSet: 'both', part: 4 },
+
+  // -- parametric-curves-calculus-calcbc --
+  { question: 'Which integral gives the length of the path $x = t^2 + 1$, $y = 2t^3$ for $0 \\le t \\le 2$?', options: ['$\\displaystyle\\int_0^2 \\sqrt{1 + 9t^2}\\,dt$', '$\\displaystyle\\int_0^2 \\sqrt{2t + 6t^2}\\,dt$', '$\\displaystyle\\int_1^5 \\sqrt{4t^2 + 36t^4}\\,dt$', '$\\displaystyle\\int_0^2 \\sqrt{4t^2 + 36t^4}\\,dt$'], correctAnswer: 3, explanation: 'With $\\frac{dx}{dt} = 2t$ and $\\frac{dy}{dt} = 6t^2$, the length is $\\int_0^2 \\sqrt{(2t)^2 + (6t^2)^2}\\,dt = \\int_0^2 \\sqrt{4t^2 + 36t^4}\\,dt$. The integrand $\\sqrt{1 + 9t^2}$ uses $\\frac{dy}{dx} = 3t$ but integrates in $t$ without the factor $\\frac{dx}{dt}$, $\\sqrt{2t + 6t^2}$ forgets to square the derivatives, and the limits 1 to 5 are $x$-values, not $t$-values.', difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'parametric-curves-calculus-calcbc', formSet: 'both', part: 3 },
+  { question: 'Find the length of the curve $x = 2t^2$, $y = \\dfrac{4}{3}t^3$ for $0 \\le t \\le \\sqrt{3}$.', options: ['$\\dfrac{28}{3}$', '$\\dfrac{56}{3}$', '$\\dfrac{32}{3}$', '$\\dfrac{7}{3}$'], correctAnswer: 0, explanation: 'The speed is $\\sqrt{(4t)^2 + (4t^2)^2} = 4t\\sqrt{1 + t^2}$ for $t \\ge 0$, so $L = \\int_0^{\\sqrt{3}} 4t\\sqrt{1 + t^2}\\,dt = \\frac{4}{3}\\left[(1 + t^2)^{3/2}\\right]_0^{\\sqrt{3}} = \\frac{4}{3}(8 - 1) = \\frac{28}{3}$. Forgetting the $\\frac{1}{2}$ from $du = 2t\\,dt$ doubles the answer to $\\frac{56}{3}$, dropping the lower-limit value 1 gives $\\frac{32}{3}$, and losing the factor 4 from the speed gives $\\frac{7}{3}$.', difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'parametric-curves-calculus-calcbc', formSet: 'B', part: 3 },
+  { question: 'The curve $x = t^3$, $y = t^2 + 1$ for $0 \\le t \\le 1$ moves left to right above the $x$-axis. What is the area between this curve and the $x$-axis?', options: ['$\\dfrac{2}{5}$', '$\\dfrac{4}{3}$', '$\\dfrac{8}{5}$', '$\\dfrac{5}{12}$'], correctAnswer: 2, explanation: 'Substituting $dx = 3t^2\\,dt$ into $\\int y\\,dx$ gives $\\int_0^1 (t^2 + 1)(3t^2)\\,dt = \\frac{3}{5} + 1 = \\frac{8}{5}$. Using $\\int x(t)\\,y\'(t)\\,dt$ instead gives $\\frac{2}{5}$, leaving out the factor $x\'(t)$ gives $\\int_0^1 (t^2 + 1)\\,dt = \\frac{4}{3}$, and multiplying $y$ by $x(t)$ rather than $x\'(t)$ gives $\\frac{5}{12}$.', difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'parametric-curves-calculus-calcbc', formSet: 'both', part: 4 },
+  { question: 'A particle has $x\'(t) = 3t^2$ and $y\'(t) = 4t^3$, and it is at $(2, -1)$ when $t = 0$. Which gives its position and its speed at $t = 1$?', options: ['$(3, 0)$ and speed $5$', '$(2, -1)$ and speed $5$', '$(3, 0)$ and speed $\\sqrt{7}$', '$(3, 0)$ and speed $25$'], correctAnswer: 0, explanation: 'Position is start plus accumulated change: $x(1) = 2 + \\int_0^1 3t^2\\,dt = 3$ and $y(1) = -1 + \\int_0^1 4t^3\\,dt = 0$; the speed is $\\sqrt{3^2 + 4^2} = 5$. $(2, -1)$ never adds the accumulated change to the starting point, speed $\\sqrt{7}$ adds the components under the root without squaring them, and speed 25 forgets the square root.', difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'parametric-curves-calculus-calcbc', formSet: 'both', part: 7 },
+  { question: 'For $x = t^2 + t$, $y = t^3$, what is the value of $\\dfrac{d^2y}{dx^2}$ at $t = 1$?', options: ['$\\dfrac{4}{3}$', '$3$', '$4$', '$\\dfrac{4}{9}$'], correctAnswer: 3, explanation: 'Here $\\frac{dy}{dx} = \\frac{3t^2}{2t + 1}$, whose $t$-derivative is $\\frac{6t^2 + 6t}{(2t+1)^2} = \\frac{12}{9} = \\frac{4}{3}$ at $t = 1$; dividing by $\\frac{dx}{dt} = 3$ gives $\\frac{4}{9}$. Stopping at $\\frac{4}{3}$ forgets to divide by $\\frac{dx}{dt}$, multiplying by 3 instead gives 4, and $\\frac{y\'\'(t)}{x\'\'(t)} = \\frac{6}{2} = 3$ is the common invalid shortcut.', difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'parametric-curves-calculus-calcbc', formSet: 'both', part: 7 },
+  // -- polar-calculus-calcbc --
+  { question: 'For the polar curve $r = 4 - \\theta^2$, consider the point where $\\theta = 3$. As $\\theta$ increases, how is the point moving relative to the origin?', options: ['Moving away from the origin, since $r$ and $\\frac{dr}{d\\theta}$ are both negative', 'Moving toward the origin, since $\\frac{dr}{d\\theta}$ is negative there', 'Moving away from the origin, since $r$ is positive and increasing', 'Moving toward the origin, since $r$ and $\\frac{dr}{d\\theta}$ have the same sign'], correctAnswer: 0, explanation: 'At $\\theta = 3$, $r = 4 - 9 = -5$ and $\\frac{dr}{d\\theta} = -2\\theta = -6$. Because $r$ and $\\frac{dr}{d\\theta}$ have the same sign, $|r|$ is growing, so the point moves away from the origin. Reading the sign of $\\frac{dr}{d\\theta}$ alone ignores that $r \\lt 0$, $r$ is $-5$ (not positive) and decreasing, and matching signs mean away, not toward.', difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'polar-calculus-calcbc', formSet: 'both', part: 5 },
+  { question: 'For the polar curve $r = 1 + \\theta$, what is the value of $\\dfrac{dx}{d\\theta}$ at $\\theta = \\dfrac{\\pi}{2}$?', options: ['$\\dfrac{\\pi + 2}{2}$', '$1$', '$-\\dfrac{\\pi}{2}$', '$-\\dfrac{\\pi + 2}{2}$'], correctAnswer: 3, explanation: 'With $x = r\\cos\\theta$, $\\frac{dx}{d\\theta} = r\'\\cos\\theta - r\\sin\\theta = (1)(0) - \\left(1 + \\frac{\\pi}{2}\\right)(1) = -\\frac{\\pi + 2}{2}$, so the point is moving left. A positive value comes from a plus sign on $r\\sin\\theta$, the value 1 is $\\frac{dy}{d\\theta} = r\'\\sin\\theta + r\\cos\\theta$, and $-\\frac{\\pi}{2}$ uses $r = \\theta$ instead of $1 + \\theta$.', difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'polar-calculus-calcbc', formSet: 'B', part: 5 },
+  // -- arc-length-surface-area-calcbc --
+  { question: 'What is the length of the curve $y = 2x^{3/2}$ from $x = 0$ to $x = 1$?', options: ['$\\dfrac{2}{3}(10\\sqrt{10} - 1)$', '$\\dfrac{20\\sqrt{10}}{27}$', '$\\dfrac{14}{9}$', '$\\dfrac{2}{27}(10\\sqrt{10} - 1)$'], correctAnswer: 3, explanation: 'Here $y\' = 3x^{1/2}$, so $L = \\int_0^1 \\sqrt{1 + 9x}\\,dx = \\frac{1}{9} \\cdot \\frac{2}{3}\\left[(1 + 9x)^{3/2}\\right]_0^1 = \\frac{2}{27}(10\\sqrt{10} - 1)$. Leaving out the $\\frac{1}{9}$ from the substitution gives $\\frac{2}{3}(10\\sqrt{10} - 1)$, dropping the lower-limit value 1 gives $\\frac{20\\sqrt{10}}{27}$, and $\\frac{14}{9}$ comes from $\\sqrt{1 + 3x}$, which forgets to square the coefficient 3.', difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both', part: 1 },
+  { question: 'A particle moves in the plane with velocity vector $\\langle 5t, 12t \\rangle$. What total distance does it travel from $t = 0$ to $t = 2$?', options: ['$34$', '$52$', '$26$', '$13$'], correctAnswer: 2, explanation: 'The speed is $\\sqrt{(5t)^2 + (12t)^2} = 13t$ for $t \\ge 0$, so the distance is $\\int_0^2 13t\\,dt = 26$. Adding the components gives $\\int_0^2 17t\\,dt = 34$, multiplying the final speed $26$ by the elapsed time 2 treats the speed as constant, and 13 is the speed at $t = 1$, not a distance.', difficulty: 'easy', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both', part: 3 },
+  { question: 'A particle moves with $x(t) = 3\\cos(\\pi t)$ and $y(t) = 3\\sin(\\pi t)$ for $0 \\le t \\le 3$. What is the total distance it travels?', options: ['$9\\pi$', '$6\\pi$', '$6$', '$3\\pi$'], correctAnswer: 0, explanation: 'The speed is $\\sqrt{9\\pi^2\\sin^2(\\pi t) + 9\\pi^2\\cos^2(\\pi t)} = 3\\pi$, so the distance is $\\int_0^3 3\\pi\\,dt = 9\\pi$: one and a half laps of a circle of radius 3. $6\\pi$ is the length of the circle traced once, 6 is the straight-line distance from $(3, 0)$ to the final point $(-3, 0)$, and $3\\pi$ is the speed, not the distance.', difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'A', part: 3 },
+  { question: 'The curve $x = \\dfrac{1}{3}y^3$ runs from $(0, 0)$ to $(9, 3)$. Which integral gives its length?', options: ['$\\displaystyle\\int_0^3 \\sqrt{1 + y^4}\\,dy$', '$\\displaystyle\\int_0^9 \\sqrt{1 + y^4}\\,dy$', '$\\displaystyle\\int_0^3 \\sqrt{1 + \\tfrac{y^6}{9}}\\,dy$', '$\\displaystyle\\int_0^3 (1 + y^2)\\,dy$'], correctAnswer: 0, explanation: 'With $x = g(y)$, $\\frac{dx}{dy} = y^2$ and the limits are the $y$-values 0 and 3, so $L = \\int_0^3 \\sqrt{1 + y^4}\\,dy$. The limits 0 to 9 are $x$-values, $\\sqrt{1 + \\frac{y^6}{9}}$ squares $x$ instead of $\\frac{dx}{dy}$, and $1 + y^2$ leaves out both the square on the derivative and the square root.', difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both', part: 4 },
+  { question: 'The arc length of a curve $y = f(x)$ measured from $x = 1$ is $s(x) = \\displaystyle\\int_1^x \\sqrt{1 + 4t^6}\\,dt$. Which could be $f(x)$?', options: ['$\\dfrac{x^4}{2}$', '$2x^3$', '$\\dfrac{x^4}{4}$', '$\\dfrac{2x^7}{7}$'], correctAnswer: 0, explanation: 'Matching $1 + (f\'(t))^2 = 1 + 4t^6$ gives $f\'(t) = \\pm 2t^3$, so $f(x) = \\frac{x^4}{2}$ (up to sign and a constant). $2x^3$ treats $2t^3$ as $f$ rather than $f\'$, $\\frac{x^4}{4}$ has $f\' = x^3$ and gives $\\sqrt{1 + t^6}$, and $\\frac{2x^7}{7}$ integrates $2t^6$, forgetting to take the square root of $t^6$.', difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'B', part: 4 },
+  { question: 'Use a calculator. What is the length of the curve $y = x^3$ from $x = 0$ to $x = 1$?', options: ['$1.064$', '$2.800$', '$1.414$', '$1.548$'], correctAnswer: 3, explanation: 'With $y\' = 3x^2$, the length is $\\int_0^1 \\sqrt{1 + 9x^4}\\,dx \\approx 1.548$, which has no elementary antiderivative, so the setup is written and then evaluated numerically. Squaring $y$ instead of $y\'$ gives $\\int_0^1 \\sqrt{1 + x^6}\\,dx \\approx 1.064$, dropping the square root gives $\\int_0^1 (1 + 9x^4)\\,dx = 2.800$, and $1.414$ is the straight chord from $(0, 0)$ to $(1, 1)$, which is shorter than the curve.', difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both', part: 5 },
+  { question: 'A particle moves with $x(t) = \\sin t$ and $y(t) = \\sin t$ for $0 \\le t \\le \\pi$. What total distance does it travel?', options: ['$2\\sqrt{2}$', '$\\sqrt{2}$', '$0$', '$\\pi\\sqrt{2}$'], correctAnswer: 0, explanation: 'The speed is $\\sqrt{2\\cos^2 t} = \\sqrt{2}\\,|\\cos t|$, so the distance is $\\sqrt{2}\\int_0^{\\pi} |\\cos t|\\,dt = 2\\sqrt{2}$: the particle goes from $(0, 0)$ to $(1, 1)$ and back, covering the segment twice. $\\sqrt{2}$ is the length of the segment traced once, 0 comes from writing $\\sqrt{2}\\cos t$ without the absolute value (that is the net displacement), and $\\pi\\sqrt{2}$ treats the speed as the constant $\\sqrt{2}$.', difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both', part: 5 },
+  { question: 'Find the length of $y = \\dfrac{x^4}{8} + \\dfrac{1}{4x^2}$ from $x = 1$ to $x = 2$.', options: ['$\\dfrac{27}{16}$', '$\\dfrac{15}{8}$', '$\\dfrac{33}{16}$', '$\\dfrac{33}{8}$'], correctAnswer: 2, explanation: 'Since $y\' = \\frac{x^3}{2} - \\frac{1}{2x^3}$, $1 + (y\')^2 = \\left(\\frac{x^3}{2} + \\frac{1}{2x^3}\\right)^2$, so $L = \\int_1^2 \\left(\\frac{x^3}{2} + \\frac{1}{2x^3}\\right)dx = \\left[\\frac{x^4}{8} - \\frac{1}{4x^2}\\right]_1^2 = \\frac{31}{16} + \\frac{1}{8} = \\frac{33}{16}$. Integrating $y\'$ instead of the square root gives $y(2) - y(1) = \\frac{27}{16}$, dropping the $\\frac{1}{2x^3}$ term gives $\\frac{15}{8}$, and losing both factors of $\\frac{1}{2}$ doubles the answer.', difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'both', part: 6 },
+  { question: 'What is the length of the curve $x = t^2$, $y = \\dfrac{2}{3}t^3$ for $-1 \\le t \\le 1$?', options: ['$0$', '$\\dfrac{2}{3}(2\\sqrt{2} - 1)$', '$\\dfrac{4}{3}(2\\sqrt{2} - 1)$', '$\\dfrac{8\\sqrt{2}}{3}$'], correctAnswer: 2, explanation: 'The integrand is $\\sqrt{4t^2 + 4t^4} = 2|t|\\sqrt{1 + t^2}$, so $L = 2\\int_0^1 2t\\sqrt{1 + t^2}\\,dt = 2 \\cdot \\frac{2}{3}(2\\sqrt{2} - 1) = \\frac{4}{3}(2\\sqrt{2} - 1)$. Writing $2t$ instead of $2|t|$ makes the two halves cancel to 0, $\\frac{2}{3}(2\\sqrt{2} - 1)$ counts only $0 \\le t \\le 1$, and $\\frac{8\\sqrt{2}}{3}$ drops the lower-limit value.', difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'arc-length-surface-area-calcbc', formSet: 'B', part: 7 },
+
+  // -- infinite-sequences-calcbc --
+  { question: 'The terms $b_n = n^2 e^{-n}$ are decreasing for every $n \\ge N$. Using $f(x) = x^2 e^{-x}$, what is the smallest such integer $N$?', options: ['$1$', '$2$', '$3$', 'No such $N$ exists'], correctAnswer: 1, explanation: 'Here $f\'(x) = (2x - x^2)e^{-x} = x(2 - x)e^{-x}$, which is negative for $x \\gt 2$, so $b_2 \\gt b_3 \\gt b_4 \\gt \\cdots$; and $b_1 = e^{-1} \\approx 0.37$ is less than $b_2 = 4e^{-2} \\approx 0.54$, so $N = 1$ fails. Requiring $x \\gt 2$ strictly and taking $N = 3$ ignores that $b_2 \\gt b_3$, and a sign slip in the product rule, $(2x + x^2)e^{-x}$, wrongly suggests the terms never decrease.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 2 },
+  { question: 'Using L\'Hospital\'s Rule on the related function, find $\\displaystyle\\lim_{n \\to \\infty} \\frac{\\ln(3n + 1)}{\\ln n}$.', options: ['$3$', '$\\ln 3$', '$1$', '$0$'], correctAnswer: 2, explanation: 'The form is $\\frac{\\infty}{\\infty}$, and differentiating gives $\\frac{3/(3x + 1)}{1/x} = \\frac{3x}{3x + 1} \\to 1$. The value 3 comes from treating $\\ln(3n)$ as $3\\ln n$, $\\ln 3$ is the constant that $\\ln(3n) - \\ln n$ approaches (a difference, not a ratio), and 0 assumes the denominator grows faster.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'B', part: 2 },
+  { question: 'The $N$th partial sum of the series $\\sum_{n=1}^{\\infty} a_n$ is $S_N = \\dfrac{4N}{N + 1}$. What is $\\sum_{n=1}^{\\infty} a_n$?', options: ['$2$', '$0$', '$4$', 'The series diverges'], correctAnswer: 2, explanation: 'The sum of a series is the limit of its partial sums: $\\lim_{N \\to \\infty} \\frac{4N}{N+1} = 4$. The value 2 is only $S_1 = a_1$, 0 is the limit of the terms $a_n = S_n - S_{n-1}$ rather than of the sums, and the partial sums approach a finite number, so the series converges.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 4 },
+  { question: 'Find the sum $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{2}{(n+1)(n+3)}$.', options: ['$\\dfrac{5}{6}$', '$\\dfrac{5}{12}$', '$\\dfrac{13}{12}$', '$\\dfrac{7}{12}$'], correctAnswer: 0, explanation: 'Partial fractions give $\\frac{2}{(n+1)(n+3)} = \\frac{1}{n+1} - \\frac{1}{n+3}$, so the series telescopes and only $\\frac{1}{2} + \\frac{1}{3} = \\frac{5}{6}$ survives. A factor of $\\frac{1}{2}$ in the decomposition (correct for $\\frac{1}{(n+1)(n+3)}$, not for this numerator) gives $\\frac{5}{12}$, keeping an extra surviving term gives $\\frac{1}{2} + \\frac{1}{3} + \\frac{1}{4} = \\frac{13}{12}$, and starting the cancellation one index too late gives $\\frac{1}{3} + \\frac{1}{4} = \\frac{7}{12}$.', difficulty: 'hard', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 5 },
+  { question: 'Which series converges?', options: ['$\\displaystyle\\sum_{n=1}^{\\infty} \\frac{1}{\\sqrt{n}}$', '$\\displaystyle\\sum_{n=1}^{\\infty} \\frac{1}{n^{2/3}}$', '$\\displaystyle\\sum_{n=1}^{\\infty} \\frac{n}{n^2}$', '$\\displaystyle\\sum_{n=1}^{\\infty} \\frac{1}{n\\sqrt{n}}$'], correctAnswer: 3, explanation: 'Rewrite each as a $p$-series: $\\frac{1}{n\\sqrt{n}} = \\frac{1}{n^{3/2}}$ has $p = \\frac{3}{2} \\gt 1$, so it converges. The others have $p = \\frac{1}{2}$, $p = \\frac{2}{3}$, and $p = 1$ (the harmonic series after simplifying $\\frac{n}{n^2}$), and every $p \\le 1$ diverges.', difficulty: 'easy', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'A', part: 5 },
+  { question: 'Find the sum $\\displaystyle\\sum_{n=0}^{\\infty} \\frac{3^n + 2^n}{6^n}$.', options: ['$\\dfrac{3}{2}$', '$6$', '$\\dfrac{7}{2}$', '$\\dfrac{5}{2}$'], correctAnswer: 2, explanation: 'Split into two geometric series: $\\sum_{n=0}^{\\infty} \\left(\\frac{1}{2}\\right)^n + \\sum_{n=0}^{\\infty} \\left(\\frac{1}{3}\\right)^n = 2 + \\frac{3}{2} = \\frac{7}{2}$. Treating $3^n + 2^n$ as $5^n$ gives $\\frac{1}{1 - 5/6} = 6$, starting both sums at $n = 1$ gives $1 + \\frac{1}{2} = \\frac{3}{2}$, and using $\\frac{r}{1-r}$ for only the second sum gives $2 + \\frac{1}{2} = \\frac{5}{2}$.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 6 },
+  { question: 'Find the sum $\\displaystyle\\sum_{n=1}^{\\infty} 5\\left(\\frac{2}{3}\\right)^n$.', options: ['$15$', '$10$', '$\\dfrac{10}{3}$', '$3$'], correctAnswer: 1, explanation: 'The first term (at $n = 1$) is $\\frac{10}{3}$ and the ratio is $\\frac{2}{3}$, so the sum is $\\frac{10/3}{1 - 2/3} = 10$. Using $\\frac{5}{1 - 2/3} = 15$ treats the series as if it started at $n = 0$, $\\frac{10}{3}$ is only the first term, and 3 is $\\frac{1}{1 - 2/3}$ with the coefficient 5 dropped.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 7 },
+
+  // -- infinite-series-calcbc --
+  { question: 'To test $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{2n^2 + 5}{n^4 + 3n}$ with the Limit Comparison Test, which choice of $b_n$ and conclusion is correct?', options: ['$b_n = \\frac{1}{n^2}$; the series diverges', '$b_n = \\frac{1}{n^2}$; the series converges', '$b_n = \\frac{1}{n^2}$; no conclusion', '$b_n = \\frac{1}{n}$; the series diverges'], correctAnswer: 1, explanation: 'The dominant terms give $\\frac{2n^2}{n^4} = \\frac{2}{n^2}$, and $\\lim \\frac{a_n}{b_n} = \\lim \\frac{2n^4 + 5n^2}{n^4 + 3n} = 2$, which is finite and positive, so the series behaves like the convergent $p$-series $\\sum \\frac{1}{n^2}$. Any finite positive limit settles the test (it need not equal 1, so the limit 2 does not leave the test without a conclusion), and comparing with $\\frac{1}{n}$ gives a limit of 0 against a divergent series, which proves nothing.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-series-calcbc', formSet: 'both', part: 2 },
+  { question: 'Which argument is a correct use of the Direct Comparison Test?', options: ['$\\frac{1}{\\sqrt{n} + 1} \\lt \\frac{1}{\\sqrt{n}}$ and $\\sum \\frac{1}{\\sqrt{n}}$ diverges, so $\\sum \\frac{1}{\\sqrt{n} + 1}$ diverges', '$\\frac{1}{n^2 + n} \\lt \\frac{1}{n}$ for $n \\ge 1$ and $\\sum \\frac{1}{n}$ diverges, so $\\sum \\frac{1}{n^2 + n}$ diverges', '$\\frac{\\ln n}{n} \\gt \\frac{1}{n}$ for $n \\ge 3$ and $\\sum \\frac{1}{n}$ diverges, so $\\sum \\frac{\\ln n}{n}$ diverges', '$\\frac{n}{n^3 + 1} \\gt \\frac{1}{n^3}$ for $n \\ge 2$ and $\\sum \\frac{1}{n^3}$ converges, so $\\sum \\frac{n}{n^3 + 1}$ converges'], correctAnswer: 2, explanation: 'Direct comparison proves divergence only when the given terms are larger than the terms of a divergent series, and $\\frac{\\ln n}{n} \\gt \\frac{1}{n}$ once $\\ln n \\gt 1$. Being smaller than a divergent series proves nothing (the second argument even reaches a false conclusion, since $\\sum \\frac{1}{n^2+n}$ converges), and being larger than a convergent series proves nothing either.', difficulty: 'hard', domain: 'sequences-series', topicSlug: 'infinite-series-calcbc', formSet: 'both', part: 2 },
+  { question: 'Apply the Ratio Test to $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(n!)^2}{(2n)!}$. What is $L = \\lim\\limits_{n \\to \\infty} \\left|\\frac{a_{n+1}}{a_n}\\right|$, and what does it show?', options: ['$L = \\frac{1}{2}$, so it converges', '$L = 4$, so the series diverges', '$L = 1$, so the test is inconclusive', '$L = \\frac{1}{4}$, so the series converges'], correctAnswer: 3, explanation: 'The ratio is $\\frac{((n+1)!)^2}{(2n+2)!} \\cdot \\frac{(2n)!}{(n!)^2} = \\frac{(n+1)^2}{(2n+2)(2n+1)} \\to \\frac{1}{4} \\lt 1$, so the series converges. Squaring only one factor of $n + 1$ gives $\\frac{1}{2}$, inverting the ratio gives 4, and both numerator and denominator are degree 2 in $n$ but with leading coefficients 1 and 4, so the limit is not 1.', difficulty: 'hard', domain: 'sequences-series', topicSlug: 'infinite-series-calcbc', formSet: 'B', part: 3 },
+  { question: 'Which statement about $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{n^2 + 1}$ is true?', options: ['It converges, and $\\sum |a_n|$ converges too', 'It converges, but $\\sum |a_n|$ diverges', 'It converges to $0$, since $\\frac{n}{n^2+1} \\to 0$', 'It diverges by limit comparison with $\\sum \\frac{1}{n}$'], correctAnswer: 1, explanation: 'Here $b_n = \\frac{n}{n^2 + 1}$ decreases for $n \\ge 1$ and tends to 0, so the series converges by the Alternating Series Test; but $\\sum b_n$ diverges by limit comparison with $\\sum \\frac{1}{n}$, so the convergence is conditional. Limit comparison with $\\frac{1}{n}$ applies to $\\sum |a_n|$, not to the alternating series, and terms tending to 0 says nothing about the value of the sum.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-series-calcbc', formSet: 'both', part: 4 },
+  { question: 'A student applies the Ratio Test to $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{1}{n^2 + 1}$ and finds $L = 1$. What should the student do?', options: ['Conclude convergence, since $L$ is not greater than 1', 'Treat $L = 1$ as divergence, as with the harmonic series', 'Treat the test as inconclusive and compare with $\\sum \\frac{1}{n^2}$', 'Treat the test as inconclusive and use the $n$th term test'], correctAnswer: 2, explanation: 'A ratio limit of 1 decides nothing, so another test is needed; since $\\frac{1}{n^2 + 1} \\lt \\frac{1}{n^2}$ (or by limit comparison), the series converges. $L = 1$ occurs for both convergent and divergent series, so it cannot signal either result, and the $n$th term test can only ever show divergence (here it shows nothing, since the terms tend to 0).', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-series-calcbc', formSet: 'both', part: 5 },
+
+  // -- alternating-series-calcbc --
+  { question: 'The first two nonzero terms of the Maclaurin series for $\\sin x$ are used to approximate $\\sin(0.2)$. By the alternating series error bound, the error is at most', options: ['$\\dfrac{(0.2)^3}{6}$', '$\\dfrac{(0.2)^5}{120}$', '$\\dfrac{(0.2)^4}{24}$', '$\\dfrac{(0.2)^5}{5}$'], correctAnswer: 1, explanation: 'The approximation is $0.2 - \\frac{(0.2)^3}{3!}$, and the series alternates with decreasing terms, so the error is at most the first omitted term, $\\frac{(0.2)^5}{5!} = \\frac{(0.2)^5}{120}$. $\\frac{(0.2)^3}{6}$ is the last term used, $\\frac{(0.2)^4}{24}$ is a cosine-series term (the sine series has only odd powers), and $\\frac{(0.2)^5}{5}$ divides by 5 instead of $5!$.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both', part: 4 },
+  { question: 'For which approximation can the alternating series error bound be applied to the Maclaurin series named?', options: ['Approximating $\\frac{1}{0.6}$ with the series for $\\frac{1}{1 - x}$', 'Approximating $\\ln(0.5)$ with the series for $\\ln(1 + x)$', 'Approximating $e^{-0.5}$ with the series for $e^x$', 'Approximating $\\ln 3$ with the series for $\\ln(1 + x)$'], correctAnswer: 2, explanation: 'At $x = -0.5$ the terms $\\frac{(-0.5)^n}{n!}$ alternate in sign and decrease to 0, so the bound applies. $\\frac{1}{0.6}$ uses $x = 0.4$ in the geometric series $\\sum x^n$, whose terms are all positive; $\\ln(0.5)$ uses $x = -0.5$, where every term of the $\\ln(1+x)$ series is negative; and $\\ln 3$ needs $x = 2$, outside the interval of convergence $-1 \\lt x \\le 1$.', difficulty: 'hard', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both', part: 4 },
+  { question: 'Let $S = \\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^2}$, and let $S_7$ be the sum of its first seven terms. Which is the narrowest interval that the alternating series error bound, together with the sign of the last term in $S_7$, guarantees contains $S$?', options: ['$S_7 \\le S \\le S_7 + \\frac{1}{64}$', '$S_7 - \\frac{1}{49} \\le S \\le S_7$', '$S_7 - \\frac{1}{64} \\le S \\le S_7 + \\frac{1}{64}$', '$S_7 - \\frac{1}{64} \\le S \\le S_7$'], correctAnswer: 3, explanation: 'The first term is positive and $S_7$ ends by adding $\\frac{1}{49}$, so $S_7$ overshoots: $S \\le S_7$. The error is at most the first omitted term, $b_8 = \\frac{1}{64}$, so $S_7 - \\frac{1}{64} \\le S \\le S_7$. Placing $S$ above $S_7$ reverses the over/under pattern (that interval need not contain $S$), the interval with $\\frac{1}{49}$ uses the last term used rather than the first omitted and is wider, and the symmetric interval ignores which side the sign pattern gives, so it is twice as wide.', difficulty: 'hard', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'B', part: 5 },
+  { question: 'Which statement fully verifies the hypotheses of the Alternating Series Test for $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n+4}$?', options: ['The signs alternate, $b_n = \\frac{1}{n+4}$ is positive, and $b_n \\to 0$, so the series converges by the AST', '$b_n = \\frac{1}{n+4}$ is positive, decreasing, and tends to $0$, so the series converges by the AST', 'The signs alternate, $b_n$ decreases, and $\\sum \\frac{1}{n+4}$ diverges, so the series converges by the AST', 'The signs alternate, $a_n = \\frac{(-1)^n}{n+4}$ tends to $0$, and $|a_n| \\lt 1$, so the series converges by the AST'], correctAnswer: 1, explanation: 'Full credit needs all three conditions on $b_n = \\frac{1}{n+4}$: positive, decreasing (since $n + 4$ increases), and limit 0. The first statement never shows that $b_n$ decreases, the third replaces the limit condition with the divergence of $\\sum b_n$ (which only rules out absolute convergence), and the last checks $a_n$ and a bound instead of a decreasing $b_n$.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both', part: 5 },
+  { question: 'What is the smallest number of terms of $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n \\cdot 2^n}$ that guarantees, by the alternating series error bound, an error less than $0.001$?', options: ['$6$', '$8$', '$10$', '$7$'], correctAnswer: 3, explanation: 'Using $N$ terms leaves error at most $b_{N+1} = \\frac{1}{(N+1)2^{N+1}}$. Since $b_7 = \\frac{1}{896} \\approx 0.00112$ is too large and $b_8 = \\frac{1}{2048} \\approx 0.00049$ works, $N + 1 = 8$ and $N = 7$. Six terms leave $b_7 \\gt 0.001$, eight terms comes from requiring the last included term to be small, and 10 solves $2^n \\gt 1000$ while ignoring the factor $n$.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both', part: 6 },
+  { question: 'The power series $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{x^n}{n \\cdot 4^n}$ has radius of convergence 4. At which endpoints does it converge?', options: ['At $x = -4$ only, by the alternating series test', 'At $x = 4$ only, by the $p$-series test', 'At both endpoints, since the radius is 4', 'At neither endpoint, as each series diverges'], correctAnswer: 0, explanation: 'At $x = -4$ the series is $\\sum \\frac{(-1)^n}{n}$, which converges (conditionally) by the Alternating Series Test; at $x = 4$ it is the harmonic series $\\sum \\frac{1}{n}$, which diverges. Assuming both endpoints behave alike misses that only one of them alternates, and reversing them treats the positive series as the convergent one.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both', part: 7 },
+
+  // -- power-series-calcbc --
+  { question: 'If $f(x) = \\displaystyle\\sum_{n=0}^{\\infty} \\frac{(n+1)x^n}{3^n}$, what is $f\'\'\'(0)$?', options: ['$\\dfrac{4}{27}$', '$\\dfrac{8}{9}$', '$\\dfrac{2}{81}$', '$\\dfrac{16}{27}$'], correctAnswer: 1, explanation: 'The coefficient of $x^3$ is $a_3 = \\frac{4}{27}$, and $a_3 = \\frac{f\'\'\'(0)}{3!}$, so $f\'\'\'(0) = 6 \\cdot \\frac{4}{27} = \\frac{8}{9}$. $\\frac{4}{27}$ stops at the coefficient, $\\frac{2}{81}$ divides by $3!$ instead of multiplying, and $\\frac{16}{27}$ multiplies by 4 (the value of $n + 1$) instead of $3! = 6$.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'power-series-calcbc', formSet: 'both', part: 5 },
+  { question: 'A power series $y = a_0 + a_1 x + a_2 x^2 + \\cdots$ satisfies $y\' = x + 2y$ with $y(0) = 1$. What is $a_2$?', options: ['$2$', '$5$', '$\\dfrac{1}{2}$', '$\\dfrac{5}{2}$'], correctAnswer: 3, explanation: 'Here $a_0 = 1$, and matching coefficients in $a_1 + 2a_2 x + \\cdots = 2a_0 + (1 + 2a_1)x + \\cdots$ gives $a_1 = 2$ and $2a_2 = 1 + 2a_1 = 5$, so $a_2 = \\frac{5}{2}$. Leaving out the $x$ term gives $2a_2 = 4$ and $a_2 = 2$, forgetting to divide by 2 gives 5, and keeping only the $x$ term gives $\\frac{1}{2}$.', difficulty: 'hard', domain: 'taylor-series', topicSlug: 'power-series-calcbc', formSet: 'both', part: 5 },
+
+  // -- taylor-maclaurin-series-calcbc --
+  { question: 'The second-degree Maclaurin polynomial for $e^x$ is used to approximate $e^{0.3}$. Which expression is a valid Lagrange error bound?', options: ['$\\dfrac{e^{0.3}(0.3)^2}{2}$', '$\\dfrac{(0.3)^3}{6}$', '$\\dfrac{e^{0.3}(0.3)^3}{6}$', '$\\dfrac{e^{0.3}(0.3)^3}{24}$'], correctAnswer: 2, explanation: 'With $n = 2$, $|R_2(0.3)| \\le \\frac{M(0.3)^3}{3!}$, where $M$ bounds $|f\'\'\'(t)| = e^t$ on $[0, 0.3]$, so $M = e^{0.3}$. Using $(0.3)^2$ and $2!$ uses $n$ instead of $n + 1$, $M = 1$ works for sine and cosine but $e^t$ exceeds 1 on this interval, and dividing by $4!$ uses the factorial for the next degree up.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'taylor-maclaurin-series-calcbc', formSet: 'both', part: 4 },
+  { question: 'The second-degree Taylor polynomial for $f(x) = \\ln x$ about $x = 1$ is used to approximate $\\ln(1.2)$. Since $f\'\'\'(x) = \\dfrac{2}{x^3}$, which is a valid Lagrange error bound?', options: ['$\\dfrac{(0.2)^3}{3(1.2)^3}$', '$\\dfrac{(0.2)^2}{2!}$', '$\\dfrac{2(0.2)^3}{3}$', '$\\dfrac{(0.2)^3}{3}$'], correctAnswer: 3, explanation: 'On $[1, 1.2]$, $|f\'\'\'(t)| = \\frac{2}{t^3}$ is largest at $t = 1$, so $M = 2$ and $|R_2| \\le \\frac{2(0.2)^3}{3!} = \\frac{(0.2)^3}{3}$. Taking $M$ at $t = 1.2$ uses the smallest value instead of the largest, $\\frac{(0.2)^2}{2!}$ uses $n$ instead of $n + 1$, and $\\frac{2(0.2)^3}{3}$ divides by 3 instead of $3! = 6$.', difficulty: 'hard', domain: 'taylor-series', topicSlug: 'taylor-maclaurin-series-calcbc', formSet: 'both', part: 4 },
+  { question: 'Which is the general term of the Maclaurin series for $\\sin(3x)$?', options: ['$\\dfrac{(-1)^n 3x^{2n+1}}{(2n+1)!}$', '$\\dfrac{(-1)^n 3^{2n+1} x^{2n+1}}{(2n+1)!}$', '$\\dfrac{(-1)^n 3^{2n+1} x^{2n+1}}{2n+1}$', '$\\dfrac{(-1)^n 3^{2n} x^{2n}}{(2n)!}$'], correctAnswer: 1, explanation: 'Substituting $3x$ into $\\sin u = \\sum \\frac{(-1)^n u^{2n+1}}{(2n+1)!}$ gives $\\frac{(-1)^n (3x)^{2n+1}}{(2n+1)!} = \\frac{(-1)^n 3^{2n+1} x^{2n+1}}{(2n+1)!}$. Writing $3x^{2n+1}$ fails to raise the 3 to the power, dividing by $2n + 1$ instead of $(2n+1)!$ is the arctangent pattern, and even powers over $(2n)!$ give $\\cos(3x)$.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'taylor-maclaurin-series-calcbc', formSet: 'both', part: 5 },
+
+  // -- lagrange-error-bound-calcbc --
+  { question: 'A Maclaurin polynomial $T_n$ for $\\cos x$ approximates $\\cos(0.3)$. Using the Lagrange bound $\\dfrac{(0.3)^{n+1}}{(n+1)!}$ (with $M = 1$), what is the smallest $n$ that guarantees an error below $10^{-5}$?', options: ['$4$', '$6$', '$5$', '$8$'], correctAnswer: 2, explanation: 'For $n = 4$ the bound is $\\frac{(0.3)^5}{120} \\approx 2.0 \\times 10^{-5}$, which is too large; for $n = 5$ it is $\\frac{(0.3)^6}{720} \\approx 1.0 \\times 10^{-6}$, which works. Choosing 6 assumes $n$ must be even, 8 works but is not the smallest, and 4 misreads $2.0 \\times 10^{-5}$ as being below $10^{-5}$.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 2 },
+  { question: 'Maclaurin polynomials for $e^x$ are used to approximate $e^{0.2}$, with $M = 2$ as a bound on every derivative on $[0, 0.2]$. What is the smallest degree $n$ for which the Lagrange bound guarantees an error below $10^{-5}$?', options: ['$3$', '$4$', '$5$', '$6$'], correctAnswer: 1, explanation: 'The bound is $\\frac{2(0.2)^{n+1}}{(n+1)!}$: for $n = 3$ it is $\\frac{2(0.0016)}{24} \\approx 1.3 \\times 10^{-4}$, and for $n = 4$ it is $\\frac{2(0.00032)}{120} \\approx 5.3 \\times 10^{-6} \\lt 10^{-5}$. Writing $n!$ instead of $(n+1)!$ makes $n = 4$ look too large and pushes the answer to 5, and 3 stops one degree too early.', difficulty: 'hard', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'B', part: 2 },
+  { question: 'For which approximation does the alternating series error bound NOT apply, so that the Lagrange error bound must be used?', options: ['$\\ln(1.3)$ from the Maclaurin series for $\\ln(1 + x)$', '$\\sin(0.3)$ from the Maclaurin series for $\\sin x$', '$\\arctan(0.3)$ from the Maclaurin series for $\\arctan x$', '$e^{0.3}$ from the Maclaurin series for $e^x$'], correctAnswer: 3, explanation: 'At $x = 0.3$ every term of the $e^x$ series is positive, so the series does not alternate and only the Lagrange bound applies. The $\\ln(1 + x)$, $\\sin x$, and $\\arctan x$ series all alternate at $x = 0.3$ with terms decreasing to 0, so the alternating series bound is available for them.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 4 },
+  { question: 'The approximation $\\cos(0.2) \\approx 1 - \\dfrac{(0.2)^2}{2}$ uses $T_2$. Compare the alternating series error bound with the Lagrange bound using $n = 2$ and $M = 1$.', options: ['The alternating bound is $\\frac{(0.2)^3}{6}$ and the Lagrange bound is $\\frac{(0.2)^4}{24}$', 'Both bounds equal $\\frac{(0.2)^4}{24}$', 'The alternating bound is $\\frac{(0.2)^4}{24}$ and the Lagrange bound is $\\frac{(0.2)^3}{6}$', 'Both bounds equal $\\frac{(0.2)^3}{6}$'], correctAnswer: 2, explanation: 'The first omitted nonzero term of the cosine series is $\\frac{x^4}{24}$, so the alternating bound is $\\frac{(0.2)^4}{24}$; the Lagrange bound with $n = 2$ is $\\frac{M(0.2)^3}{3!} = \\frac{(0.2)^3}{6}$, which is larger because it ignores that the $x^3$ coefficient is 0. Swapping them reverses which bound skips the zero term, and the two are not equal here.', difficulty: 'hard', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 4 },
+  { question: 'It is known that $|f^{(4)}(t)| \\le 6$ for $1 \\le t \\le 1.4$. Which is the Lagrange error bound for the third-degree Taylor polynomial about $x = 1$ evaluated at $x = 1.4$?', options: ['$\\dfrac{6(1.4)^4}{4!} \\approx 0.960$', '$\\dfrac{6(0.4)^3}{3!} = 0.064$', '$\\dfrac{6(0.4)^4}{3!} = 0.0256$', '$\\dfrac{6(0.4)^4}{4!} = 0.0064$'], correctAnswer: 3, explanation: 'With $n = 3$, $|R_3(1.4)| \\le \\frac{M|x - c|^4}{4!} = \\frac{6(0.4)^4}{24} = 0.0064$. Using $x = 1.4$ instead of $x - c = 0.4$ gives about 0.960, using $n$ instead of $n + 1$ in both places gives 0.064, and keeping the right power with $3!$ gives 0.0256.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 5 },
+  { question: 'Given $|f\'\'\'(t)| \\le 1.2$ on $[1, 1.2]$, a student must show that the second-degree Taylor polynomial about $x = 1$ approximates $f(1.2)$ with error less than $0.002$. Which response is complete and correct?', options: ['$|R_2| = \\frac{1.2(0.2)^3}{3!} = 0.0016 \\lt 0.002$, so the error equals $0.0016$', '$|R_2| \\le \\frac{1.2(0.2)^3}{3!} = 0.0016 \\lt 0.002$, so the error is less than $0.002$', '$|R_2| \\le \\frac{1.2(0.2)^2}{2!} = 0.024$, so the error is about $0.002$', '$|R_2| \\le \\frac{(0.2)^3}{3!} \\approx 0.0013$, which is less than $0.002$'], correctAnswer: 1, explanation: 'The full-credit response states the bound with $M = 1.2$ and $(n+1)! = 3!$, computes $0.0016$, and explicitly compares it with $0.002$. The bound is an upper limit, not the exact error; using $(0.2)^2$ and $2!$ uses $n$ instead of $n + 1$; and $M = 1$ is smaller than the stated bound 1.2, so that inequality is not justified.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 5 },
+
+  // -- series-applications-calcbc --
+  { question: 'Use the first two nonzero terms of the Maclaurin series for $\\sin(x^2)$ to approximate $\\displaystyle\\int_0^1 \\sin(x^2)\\,dx$.', options: ['$\\dfrac{11}{36}$', '$\\dfrac{13}{42}$', '$\\dfrac{5}{6}$', '$\\dfrac{3}{10}$'], correctAnswer: 1, explanation: 'Since $\\sin(x^2) \\approx x^2 - \\frac{x^6}{6}$, the integral is about $\\left[\\frac{x^3}{3} - \\frac{x^7}{42}\\right]_0^1 = \\frac{1}{3} - \\frac{1}{42} = \\frac{13}{42}$. Dividing $x^6$ by 6 instead of the new exponent 7 gives $\\frac{11}{36}$, evaluating the polynomial at 1 without integrating gives $\\frac{5}{6}$, and writing $(x^2)^3$ as $x^4$ gives $\\frac{1}{3} - \\frac{1}{30} = \\frac{3}{10}$.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 2 },
+  { question: 'Use a Maclaurin series to find $\\displaystyle\\lim_{x \\to 0} \\frac{x - \\arctan x}{x^3}$.', options: ['$-\\dfrac{1}{3}$', '$\\dfrac{1}{6}$', '$0$', '$\\dfrac{1}{3}$'], correctAnswer: 3, explanation: 'Since $\\arctan x = x - \\frac{x^3}{3} + \\frac{x^5}{5} - \\cdots$, the numerator is $\\frac{x^3}{3} - \\frac{x^5}{5} + \\cdots$, and dividing by $x^3$ gives a limit of $\\frac{1}{3}$. Subtracting in the wrong order gives $-\\frac{1}{3}$, $\\frac{1}{6}$ uses the sine coefficient $\\frac{1}{3!}$, and 0 stops after the $x$ terms cancel.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 3 },
+  { question: 'Use a Maclaurin series to find $\\displaystyle\\lim_{x \\to 0} \\frac{e^{2x} - 1 - 2x}{x^2}$.', options: ['$\\dfrac{1}{2}$', '$4$', '$2$', '$1$'], correctAnswer: 2, explanation: 'Substituting $2x$ gives $e^{2x} = 1 + 2x + \\frac{(2x)^2}{2!} + \\cdots = 1 + 2x + 2x^2 + \\cdots$, so the numerator is $2x^2 + \\cdots$ and the limit is 2. Using the $e^x$ coefficient $\\frac{1}{2}$ forgets to square the 2, 4 forgets to divide by $2!$, and 1 drops one of the two factors.', difficulty: 'hard', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'B', part: 3 },
+  { question: 'The integral $\\displaystyle\\int_0^1 \\cos(x^2)\\,dx$ is approximated by integrating the first two nonzero terms of the series for $\\cos(x^2)$, giving $1 - \\frac{1}{10}$. By the alternating series error bound, the error is at most', options: ['$\\dfrac{1}{24}$', '$\\dfrac{1}{10}$', '$\\dfrac{1}{216}$', '$\\dfrac{1}{9}$'], correctAnswer: 2, explanation: 'The integrated series is $1 - \\frac{1}{10} + \\frac{1}{216} - \\cdots$ (the next term of $\\cos(x^2)$ is $\\frac{x^8}{24}$, which integrates to $\\frac{x^9}{216}$), so the error is at most $\\frac{1}{216}$. $\\frac{1}{24}$ is the first omitted term of the series before integrating, $\\frac{1}{10}$ is the last term used, and $\\frac{1}{9}$ forgets the $4!$.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 5 },
+  { question: 'What are the first three nonzero terms of the Maclaurin series for $x e^{x^2}$?', options: ['$x + x^2 + \\dfrac{x^3}{2!}$', '$x + x^3 + \\dfrac{x^5}{2}$', '$x^2 + x^4 + \\dfrac{x^6}{2}$', '$x + x^3 + \\dfrac{x^5}{3!}$'], correctAnswer: 1, explanation: 'Substituting $x^2$ into $e^u = 1 + u + \\frac{u^2}{2} + \\cdots$ gives $1 + x^2 + \\frac{x^4}{2}$, and multiplying by $x$ gives $x + x^3 + \\frac{x^5}{2}$. $x + x^2 + \\frac{x^3}{2!}$ is $xe^x$ (no substitution), multiplying by $x^2$ shifts every power too far, and $\\frac{x^5}{3!}$ uses $3!$ for the third term instead of $2!$.', difficulty: 'easy', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 5 },
+  { question: 'What is the coefficient of $x^5$ in the Maclaurin series for $x^3 e^{-x}$?', options: ['$-\\dfrac{1}{2}$', '$\\dfrac{1}{120}$', '$-\\dfrac{1}{6}$', '$\\dfrac{1}{2}$'], correctAnswer: 3, explanation: 'The $x^5$ term comes from $x^3$ times the $x^2$ term of $e^{-x} = 1 - x + \\frac{x^2}{2} - \\cdots$, so the coefficient is $\\frac{1}{2}$ (the square makes $(-x)^2$ positive). A negative sign here misreads $(-x)^2$, $\\frac{1}{120}$ is the $x^5$ coefficient of $e^x$ itself, and $-\\frac{1}{6}$ is the $x^3$ coefficient of $e^{-x}$.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 6 },
+  { question: 'Use the first two nonzero terms of the Maclaurin series for $\\dfrac{1}{1 + x^4}$ to approximate $\\displaystyle\\int_0^{0.5} \\frac{dx}{1 + x^4}$.', options: ['$0.46875$', '$0.484375$', '$0.50625$', '$0.49375$'], correctAnswer: 3, explanation: 'Since $\\frac{1}{1 + x^4} \\approx 1 - x^4$, the integral is about $\\left[x - \\frac{x^5}{5}\\right]_0^{0.5} = 0.5 - 0.00625 = 0.49375$. Forgetting to divide by 5 gives $0.46875$, integrating $x^4$ as $\\frac{x^4}{4}$ gives $0.484375$, and adding the second term instead of subtracting gives $0.50625$.', difficulty: 'hard', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'A', part: 6 },
+  { question: 'Use a Maclaurin series to find $\\displaystyle\\lim_{x \\to 0} \\frac{\\sin(3x) - 3x}{x^3}$.', options: ['$-\\dfrac{1}{6}$', '$-\\dfrac{9}{2}$', '$-\\dfrac{3}{2}$', '$-9$'], correctAnswer: 1, explanation: 'Substituting $3x$ gives $\\sin(3x) = 3x - \\frac{(3x)^3}{6} + \\cdots = 3x - \\frac{27x^3}{6} + \\cdots$, so the limit is $-\\frac{27}{6} = -\\frac{9}{2}$. $-\\frac{1}{6}$ ignores the substitution, $-\\frac{3}{2}$ cubes $x$ but not the 3, and $-9$ divides 27 by 3 instead of $3!$.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both', part: 7 },
+
+  // -- euler-method-advanced-calcbc --
+  { question: 'For $\\dfrac{dy}{dx} = x + y$, Euler\'s method starts at the point $(2, -2)$ with step size $0.5$. What is the approximation for $y(2.5)$?', options: ['$-1$', '$-2$', '$-3$', '$0$'], correctAnswer: 1, explanation: 'The point $(2, -2)$ lies on the isocline $y = -x$, where the slope $x + y$ is 0, so the first step is horizontal: $y(2.5) \\approx -2 + 0(0.5) = -2$. Using only the $x$-part of the slope (2) gives $-1$, using only the $y$-part ($-2$) gives $-3$, and computing $x - y = 4$ instead of $x + y$ gives 0.', difficulty: 'easy', domain: 'advanced-diffeq', topicSlug: 'euler-method-advanced-calcbc', formSet: 'both', part: 4 },
+
+  // -- logistic-models-calcbc --
+  { question: 'A population satisfies $P(t) = \\dfrac{600}{1 + 5e^{-0.2t}}$. At what time does the population reach 400?', options: ['$\\dfrac{\\ln 5}{0.2}$', '$\\dfrac{\\ln 2}{0.2}$', '$0.2\\ln 10$', '$\\dfrac{\\ln 10}{0.2}$'], correctAnswer: 3, explanation: 'Setting $\\frac{600}{1 + 5e^{-0.2t}} = 400$ gives $1 + 5e^{-0.2t} = 1.5$, so $e^{-0.2t} = 0.1$ and $t = \\frac{\\ln 10}{0.2}$. $\\frac{\\ln 5}{0.2}$ is when $P = 300 = \\frac{L}{2}$, $\\frac{\\ln 2}{0.2}$ forgets to divide $0.5$ by 5, and $0.2\\ln 10$ multiplies by $0.2$ instead of dividing when solving $-0.2t = \\ln 0.1$.', difficulty: 'hard', domain: 'advanced-diffeq', topicSlug: 'logistic-models-calcbc', formSet: 'both', part: 4 },
+  { question: 'A population satisfies $\\dfrac{dP}{dt} = 2P - 0.004P^2$. What is the maximum value of $\\dfrac{dP}{dt}$?', options: ['$500$', '$250$', '$125$', '$1000$'], correctAnswer: 1, explanation: 'Factoring gives $2P(1 - \\frac{P}{500})$, so $k = 2$ and $L = 500$, and the maximum rate occurs at $P = 250$: $\\frac{kL}{4} = \\frac{2(500)}{4} = 250$. 500 is the carrying capacity (a population, not a rate), 125 is $\\frac{L}{4}$, and 1000 is $kL$ without the factor $\\frac{1}{4}$.', difficulty: 'medium', domain: 'advanced-diffeq', topicSlug: 'logistic-models-calcbc', formSet: 'both', part: 5 },
+  { question: 'For $\\dfrac{dP}{dt} = 0.4P\\left(1 - \\dfrac{P}{200}\\right)$ with $P(0) = 50$, use Euler\'s method with two steps of size $\\Delta t = 1$ to approximate $P(2)$.', options: ['$80$', '$91$', '$82.55$', '$65$'], correctAnswer: 2, explanation: 'First step: slope $0.4(50)(0.75) = 15$, so $P(1) \\approx 65$. Second step: slope $0.4(65)(1 - 0.325) = 17.55$, so $P(2) \\approx 65 + 17.55 = 82.55$. Reusing the first slope for both steps gives 80, dropping the braking factor at $P = 65$ gives $65 + 26 = 91$, and 65 stops after one step.', difficulty: 'medium', domain: 'advanced-diffeq', topicSlug: 'logistic-models-calcbc', formSet: 'both', part: 6 },
+
+  // -- bc-exam-strategies-calcbc --
+  { question: 'On the 2027 AP Calculus BC exam, the no-calculator multiple-choice part has 29 questions in 62 minutes. About how much time is available per question?', options: ['About 2.9 minutes', 'About 1.5 minutes', 'About 2 minutes', 'About 3.5 minutes'], correctAnswer: 2, explanation: '62 minutes for 29 questions is $62 \\div 29 \\approx 2.1$, about 2 minutes each. About 2.9 minutes is the pace for the calculator part (38 minutes for 13 questions), and the other two values do not match either part.', difficulty: 'easy', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 2 },
+  { question: 'On a no-calculator multiple-choice question about $\\displaystyle\\int_1^4 \\sqrt{x}\\,dx$, a quick bound can eliminate options. Since $1 \\le \\sqrt{x} \\le 2$ on $[1, 4]$, the integral must lie', options: ['between 1 and 2', 'between 3 and 6', 'between 4 and 8', 'between 0 and 3'], correctAnswer: 1, explanation: 'The interval has width 3, so the integral lies between $1 \\cdot 3 = 3$ and $2 \\cdot 3 = 6$ (its value is $\\frac{14}{3}$), which rules out any option outside that range. 1 to 2 bounds the integrand but forgets the width, 4 to 8 uses the upper limit 4 as the width, and 0 to 3 is not supported by the bounds on $\\sqrt{x}$.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 2 },
+  { question: 'On a calculator-active free-response part, a student writes the correct definite integral but reports its value as $3.24$ when the value is $3.2417$. Under the scoring rules, the student', options: ['earns full credit, since $3.24$ is a correct rounding of the value', 'keeps the setup point but loses the answer point', 'loses every point in the part, since the final answer is wrong', 'earns full credit, as long as the units are also written'], correctAnswer: 1, explanation: 'Decimal answers must be accurate to three places after the decimal point, so $3.24$ loses the answer point, but the correct integral still earns its setup point. Two decimal places is not accurate enough, a correct setup is never erased by a later slip, and units do not replace the accuracy requirement.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 3 },
+  { question: 'A student\'s free-response answer reads "fnInt(x^2, x, 0, 3) = 9" with no other work. How does this notation affect scoring?', options: ['It is fine, since the calculator command shows the setup', 'It can lose the setup point, since readers do not accept calculator syntax', 'It is fine, as long as the final value 9 is correct', 'It loses the answer point only, since the setup is still clear'], correctAnswer: 1, explanation: 'Readers expect standard notation such as $\\int_0^3 x^2\\,dx$; calculator syntax like fnInt does not earn the setup point. A correct value alone cannot earn a setup point, and the problem is with the setup, not the value.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'B', part: 3 },
+  { question: 'A student finds that $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(x-1)^n}{n \\cdot 3^n}$ has radius of convergence 3 and writes the interval of convergence as $(-2, 4)$. What is wrong?', options: ['Nothing; a radius of 3 always gives $(-2, 4)$', 'The center is wrong; the interval is $(-3, 3)$', 'The endpoints were not tested; the interval is $[-2, 4)$', 'The radius is wrong; the interval is $(-2, 4]$'], correctAnswer: 2, explanation: 'Endpoints must be tested separately. At $x = 4$ the series is $\\sum \\frac{1}{n}$, which diverges; at $x = -2$ it is $\\sum \\frac{(-1)^n}{n}$, which converges by the alternating series test, so the interval is $[-2, 4)$. The radius alone never decides the endpoints, the center is $x = 1$ (not 0), and including $x = 4$ reverses which endpoint converges.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 4 },
+  { question: 'If $\\vec{r}(t) = \\langle 3t, t^3 \\rangle$, what is the speed of the particle at $t = 1$?', options: ['$6$', '$3\\sqrt{2}$', '$18$', '$\\sqrt{6}$'], correctAnswer: 1, explanation: 'The velocity is $\\langle 3, 3t^2 \\rangle = \\langle 3, 3 \\rangle$ at $t = 1$, so the speed is $\\sqrt{9 + 9} = 3\\sqrt{2}$. Adding the components gives 6, forgetting the square root gives 18, and $\\sqrt{6} = \\sqrt{3 + 3}$ forgets to square the components.', difficulty: 'easy', domain: 'parametric-polar-vector', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 6 },
+
+  // -- review-connections-calcbc --
+  { question: 'Let $g(x) = \\displaystyle\\int_0^x \\sin(t^2)\\,dt$. What is the coefficient of $x^7$ in the Maclaurin series for $g$?', options: ['$-\\dfrac{1}{6}$', '$-\\dfrac{1}{42}$', '$\\dfrac{1}{42}$', '$-\\dfrac{1}{36}$'], correctAnswer: 1, explanation: 'Since $\\sin(t^2) = t^2 - \\frac{t^6}{6} + \\cdots$, integrating term by term gives $g(x) = \\frac{x^3}{3} - \\frac{x^7}{42} + \\cdots$, so the coefficient is $-\\frac{1}{42}$. $-\\frac{1}{6}$ is the $t^6$ coefficient before integrating, a positive sign drops the alternating sign of the sine series, and $-\\frac{1}{36}$ divides by 6 instead of the new exponent 7.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 1 },
+  { question: 'The function $y$ satisfies $\\dfrac{dy}{dx} = \\cos(x^2)$ and $y(0) = 3$. Which expression equals $y(2)$?', options: ['$\\displaystyle\\int_0^2 \\cos(t^2)\\,dt$', '$3 + \\displaystyle\\int_0^2 \\cos(t^2)\\,dt$', '$3 + \\cos 4$', '$3 + \\displaystyle\\int_0^2 -2t\\sin(t^2)\\,dt$'], correctAnswer: 1, explanation: 'By the Fundamental Theorem, $y(2) = y(0) + \\int_0^2 y\'(t)\\,dt = 3 + \\int_0^2 \\cos(t^2)\\,dt$. Leaving out the 3 gives only the change in $y$, $3 + \\cos 4$ uses the value of the derivative instead of accumulating it, and integrating $-2t\\sin(t^2)$ accumulates the second derivative instead of the first.', difficulty: 'medium', domain: 'advanced-diffeq', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 3 },
+  { question: 'Evaluate $\\displaystyle\\int \\frac{x}{x^2 + 4}\\,dx$.', options: ['$\\dfrac{1}{2}\\arctan\\dfrac{x}{2} + C$', '$\\ln(x^2 + 4) + C$', '$\\dfrac{1}{4}\\ln\\left|\\dfrac{x-2}{x+2}\\right| + C$', '$\\dfrac{1}{2}\\ln(x^2 + 4) + C$'], correctAnswer: 3, explanation: 'The numerator is half the derivative of $x^2 + 4$, so $u = x^2 + 4$ gives $\\frac{1}{2}\\int \\frac{du}{u} = \\frac{1}{2}\\ln(x^2 + 4) + C$. The arctangent form needs a constant numerator, $\\ln(x^2 + 4)$ forgets the $\\frac{1}{2}$ from $du = 2x\\,dx$, and the logarithm of a quotient is the partial-fraction result for $\\frac{1}{x^2 - 4}$, a denominator that factors.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 5 },
+  { question: 'What is the value of $\\displaystyle\\sum_{n=0}^{\\infty} \\frac{(-1)^n (\\pi/2)^{2n+1}}{(2n+1)!}$?', options: ['$0$', '$-1$', '$1$', '$\\dfrac{\\pi}{2}$'], correctAnswer: 2, explanation: 'This is the Maclaurin series for $\\sin x$ evaluated at $x = \\frac{\\pi}{2}$, so the sum is $\\sin\\frac{\\pi}{2} = 1$. 0 is $\\cos\\frac{\\pi}{2}$ (the even-power series), $-1$ comes from a sign slip, and $\\frac{\\pi}{2}$ is only the first term.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 6 },
+  { question: 'A particle has velocity $\\vec{v}(t) = \\langle 1, 2t \\rangle$ and position $\\vec{r}(0) = \\langle 2, 0 \\rangle$. Which equation describes its path?', options: ['$y = x^2 - 2$', '$y = (x + 2)^2$', '$y = 2x$', '$y = (x - 2)^2$'], correctAnswer: 3, explanation: 'Integrating with the initial position gives $x = t + 2$ and $y = t^2$, so $t = x - 2$ and $y = (x - 2)^2$. $y = x^2 - 2$ shifts the wrong variable, $(x + 2)^2$ comes from solving $x = t + 2$ as $t = x + 2$, and $y = 2x$ treats the velocity component $2t$ as the path.', difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 6 },
+  { question: 'Which differential equations topic is tested on the AP Calculus BC exam but not on the AB exam?', options: ['Sketching slope fields for a given differential equation', 'Solving separable equations with an initial condition', 'Approximating solutions with Euler\'s method', 'Modeling exponential growth with $\\frac{dy}{dt} = ky$'], correctAnswer: 2, explanation: 'Euler\'s method (along with logistic models) is BC-only differential equations content. Slope fields, separation of variables with an initial condition, and exponential models $\\frac{dy}{dt} = ky$ are all part of the AB course as well.', difficulty: 'easy', domain: 'advanced-diffeq', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 7 },
+  // -- lead replacements for three duplicates (improper, sequences, alternating; part 7) --
+  { question: 'Evaluate $\\displaystyle\\int_1^{\\infty} x e^{-x^2}\\,dx$.', options: ['$\\frac{1}{e}$', '$\\frac{1}{2e}$', '$\\frac{e}{2}$', 'It diverges'], correctAnswer: 1, explanation: 'With $u = x^2$, the antiderivative is $-\\frac{1}{2}e^{-x^2}$, so $\\lim_{b \\to \\infty}\\left[-\\frac{1}{2}e^{-b^2} + \\frac{1}{2}e^{-1}\\right] = \\frac{1}{2e}$. Dropping the $\\frac{1}{2}$ from the substitution gives $\\frac{1}{e}$, and the integrand decays fast enough that the integral converges.', difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'improper-integrals-calcbc', formSet: 'both', part: 7 },
+  { question: 'Which sequence diverges?', options: ['$a_n = \\dfrac{3^n}{n!}$', '$a_n = \\dfrac{n!}{3^n}$', '$a_n = \\dfrac{\\ln n}{n}$', '$a_n = \\dfrac{n^5}{2^n}$'], correctAnswer: 1, explanation: 'Factorials eventually outgrow every exponential, so $\\frac{n!}{3^n} \\to \\infty$ and the sequence diverges, while its reciprocal $\\frac{3^n}{n!} \\to 0$. Exponentials outgrow powers, so $\\frac{n^5}{2^n} \\to 0$, and powers outgrow logarithms, so $\\frac{\\ln n}{n} \\to 0$.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 7 },
+  { question: 'The sum $S = \\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^3}$ is approximated by its first three terms. What is the alternating series error bound for this approximation?', options: ['$\\frac{1}{27}$', '$\\frac{1}{64}$', '$\\frac{1}{125}$', '$\\frac{1}{16}$'], correctAnswer: 1, explanation: 'For an alternating series with decreasing terms that approach 0, the error after $n$ terms is at most the first omitted term, here $a_4 = \\frac{1}{4^3} = \\frac{1}{64}$. The value $\\frac{1}{27}$ is the last term used, $\\frac{1}{125}$ skips a term, and $\\frac{1}{16}$ squares instead of cubing.', difficulty: 'easy', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both', part: 7 },
 
 ]
 
 /** Generate an exit quiz for a specific BC topic (used by exit quiz system) */
-export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug?: string }[] {
+export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug?: string; partNumber?: number }[] {
   let pool = calcBCQuestionPool
   if (topicSlug) pool = relevantPool(pool, topicSlug)
   return shuffleArray(pool).slice(0, count).map((q, i) => ({
@@ -3625,5 +3920,6 @@ export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; 
     explanation: q.explanation,
     category: q.domain,
     topicSlug: q.topicSlug,
+    partNumber: q.part,
   }))
 }
