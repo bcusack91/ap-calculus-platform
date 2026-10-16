@@ -18,7 +18,7 @@ export const govCongressPart3Data = {
 | Apportionment + redistricting + gerrymandering |
 | Incumbency advantage |
 
-> 🔑 Key idea: Congressional output reflects the political coalitions of each era — major legislation requires unified government + presidential leadership + supermajority coalitions OR the modern reconciliation workaround.
+> 🔑 Key idea: Congressional output reflects the political coalitions of each era — major legislation usually requires unified government + presidential leadership + broad coalitions able to get past the Senate filibuster.
       `
     },
     {
@@ -33,24 +33,24 @@ export const govCongressPart3Data = {
 | **Great Society (1964-66)** | Civil Rights Act 1964, Voting Rights Act 1965, Medicare + Medicaid 1965, Elementary + Secondary Education Act 1965, Immigration and Nationality Act 1965, Higher Education Act 1965 | Democratic supermajority + LBJ; post-JFK assassination momentum |
 | **Reagan revolution (1981-86)** | Economic Recovery Tax Act 1981 (largest tax cut), Tax Reform Act 1986, defense buildup, Social Security reform 1983 | Republican Senate + Democratic House (divided); bipartisan compromise |
 | **Newt Gingrich era (1995-99)** | Welfare Reform 1996 (PRWORA), Telecommunications Act 1996, Balanced Budget Act 1997, Defense of Marriage Act 1996 | Republican Congress + Clinton; Contract with America |
-| **Bush 43 era (2001-08)** | Bush tax cuts 2001/2003 (reconciliation), No Child Left Behind 2001, USA PATRIOT Act 2001, Medicare Modernization Act 2003 (Part D), Iraq AUMF 2002 | Mixed — Republican unified 2003-06 |
-| **Obama era (2009-10)** | American Recovery and Reinvestment Act 2009, Affordable Care Act 2010 (60 votes Senate then reconciliation reconciliation), Dodd-Frank 2010 | Democratic supermajority Jan 2009-Feb 2010 (briefly 60 senators) |
-| **Trump era (2017-19)** | Tax Cuts and Jobs Act 2017 (reconciliation), USMCA 2020, First Step Act 2018, CARES Act 2020 (bipartisan COVID) | Republican Congress 2017-19 + Trump |
-| **Biden era (2021-22)** | American Rescue Plan 2021 (reconciliation), Infrastructure Investment and Jobs Act 2021 (bipartisan), CHIPS and Science Act 2022, Inflation Reduction Act 2022 (reconciliation) | Democratic narrow majority (50-50 Senate + Harris VP tie-breaker) |
+| **Bush 43 era (2001-08)** | Bush tax cuts 2001/2003, No Child Left Behind 2001, USA PATRIOT Act 2001, Medicare Modernization Act 2003 (Part D), Iraq AUMF 2002 | Mixed — Republican unified 2003-06 |
+| **Obama era (2009-10)** | American Recovery and Reinvestment Act 2009, Affordable Care Act 2010 (passed the Senate with exactly 60 votes), Dodd-Frank 2010 | Democratic supermajority Jan 2009-Feb 2010 (briefly 60 senators) |
+| **Trump era (2017-19)** | Tax Cuts and Jobs Act 2017 (party-line), USMCA 2020, First Step Act 2018, CARES Act 2020 (bipartisan COVID) | Republican Congress 2017-19 + Trump |
+| **Biden era (2021-22)** | American Rescue Plan 2021 (party-line), Infrastructure Investment and Jobs Act 2021 (bipartisan), CHIPS and Science Act 2022, Inflation Reduction Act 2022 (party-line) | Democratic narrow majority (50-50 Senate + Harris VP tie-breaker) |
 
 ## Landmark Congressional Powers Cases
 
+*McCulloch*, *Lopez*, and *Shaw* are required cases; the others are context, and the exam supplies the facts if it uses them.
+
 | Case | Year | Holding | Significance |
 |---|---|---|---|
-| *McCulloch v. Maryland* | 1819 | Necessary and Proper Clause supports broad implied powers (Bank of US) | Foundation of expansive Article I authority |
+| *McCulloch v. Maryland* (REQUIRED) | 1819 | Necessary and Proper Clause supports broad implied powers (Bank of US) | Foundation of expansive Article I authority |
 | *Gibbons v. Ogden* | 1824 | Commerce Clause includes navigation; broad federal authority over interstate commerce | Foundation of modern commerce-clause federalism |
 | *NLRB v. Jones & Laughlin Steel* | 1937 | Commerce Clause authorizes regulation of labor relations affecting interstate commerce | Ended Lochner-era; foundation of modern labor law |
-| *United States v. Lopez* | 1995 | Gun-Free School Zones Act exceeded Commerce Clause; first such case in 60 years | Beginning of modern federalism revival |
+| *United States v. Lopez* (REQUIRED) | 1995 | Gun-Free School Zones Act exceeded Commerce Clause; first such case in 60 years | Beginning of modern federalism revival |
 | *NFIB v. Sebelius* | 2012 | ACA individual mandate exceeded Commerce Clause but valid as tax; Medicaid expansion coercive | Major modern test of federal regulatory + spending power |
-| *INS v. Chadha* | 1983 | One-house legislative veto unconstitutional (violates bicameralism + presentment) | Limits congressional control over agency action |
-| *Clinton v. New York* | 1998 | Line-item veto unconstitutional (violates presentment) | Reaffirms bicameralism + presentment |
 | *Wesberry v. Sanders* | 1964 | "One person, one vote" applies to congressional districts | Equal-population House districts |
-| *Shaw v. Reno* | 1993 | Race-based congressional redistricting violates Equal Protection if race is predominant factor | Limits racial gerrymandering |
+| *Shaw v. Reno* (REQUIRED) | 1993 | Race-based congressional redistricting violates Equal Protection if race is predominant factor | Limits racial gerrymandering |
 
 ## Apportionment + Redistricting + Gerrymandering
 
@@ -65,11 +65,13 @@ export const govCongressPart3Data = {
 
 ## Key Cases on Districting
 
+EK 2.3.A.2: gerrymandering and unequal representation have been partially addressed by Supreme Court cases that opened the door to equal protection challenges. *Baker* and *Shaw* are required; *Wesberry* and *Rucho* are context.
+
 | Case | Year | Holding |
 |---|---|---|
-| *Baker v. Carr* | 1962 | Apportionment is justiciable (one person, one vote) |
+| *Baker v. Carr* (REQUIRED) | 1962 | Apportionment is justiciable (one person, one vote) |
 | *Wesberry v. Sanders* | 1964 | Congressional districts must be roughly equal in population |
-| *Shaw v. Reno* | 1993 | Race-based redistricting subject to strict scrutiny |
+| *Shaw v. Reno* (REQUIRED) | 1993 | District lines drawn mainly by race face equal protection challenge |
 | *Rucho v. Common Cause* | 2019 | Partisan gerrymandering claims are non-justiciable political questions in federal court (state courts may decide) |
 
 ## Incumbency Advantage
@@ -136,10 +138,10 @@ export const govCongressPart3Data = {
             hint: 'Opposite of "packing" (which concentrates opposing voters into few districts).'
           },
           {
-            prompt: "The 1964 Supreme Court case requiring congressional districts to be roughly equal in population (\"one person, one vote\"). Two words.",
-            answer: 'Wesberry v Sanders',
-            acceptableAnswers: ['Wesberry v Sanders', 'Wesberry v. Sanders', 'Wesberry', 'wesberry v sanders', 'Wesberry vs Sanders'],
-            hint: 'Same year as the Civil Rights Act; 2 years after Baker v. Carr (which made apportionment justiciable).'
+            prompt: "The 1962 required case holding that federal courts may hear challenges to unequally populated legislative districts, opening the door to \"one person, one vote.\"",
+            answer: 'Baker v. Carr',
+            acceptableAnswers: ['Baker v. Carr', 'Baker v Carr', 'Baker', 'baker v carr', 'Baker vs Carr'],
+            hint: 'Tennessee had not redrawn its legislative districts since 1901.'
           }
         ]
       }
@@ -159,14 +161,14 @@ export const govCongressPart3Data = {
             options: ['McCulloch v. Maryland (1819)', 'NLRB v. Jones & Laughlin Steel (1937)', 'United States v. Lopez (1995)', 'NFIB v. Sebelius (2012)']
           },
           {
-            label: "ACA individual mandate exceeded Commerce Clause but valid as tax; Medicaid expansion coercive: ___",
-            options: ['McCulloch v. Maryland (1819)', 'NLRB v. Jones & Laughlin Steel (1937)', 'United States v. Lopez (1995)', 'NFIB v. Sebelius (2012)']
+            label: "District lines drawn mainly on the basis of race can violate the Equal Protection Clause: ___",
+            options: ['McCulloch v. Maryland (1819)', 'NLRB v. Jones & Laughlin Steel (1937)', 'United States v. Lopez (1995)', 'Shaw v. Reno (1993)']
           }
         ],
-        correctAnswers: ['McCulloch v. Maryland (1819)', 'United States v. Lopez (1995)', 'NFIB v. Sebelius (2012)'],
+        correctAnswers: ['McCulloch v. Maryland (1819)', 'United States v. Lopez (1995)', 'Shaw v. Reno (1993)'],
         hint1: 'Marshall: "Let the end be legitimate...all means which are appropriate...are constitutional."',
         hint2: 'Rehnquist 5-4: gun possession near schools is not economic activity.',
-        hint3: 'Roberts wrote both the Commerce Clause + tax power + Medicaid coercion analyses.'
+        hint3: 'North Carolina\'s oddly shaped majority-minority district (required case).'
       }
     },
     {
@@ -187,15 +189,15 @@ export const govCongressPart3Data = {
             explanation: 'Incumbency + gerrymandering reinforce: INCUMBENCY = name recognition + casework + pork + franking + ~10:1 fundraising. GERRYMANDERING uses cracking (split opposing) + packing (concentrate); modern computerized → precise gerrymanders → safe districts (primary = de facto election). Result: House ~95%, Senate ~85% reelection; only ~30-50/435 competitive. Insulates Congress from majority opinion (~20% approval) + contributes to polarization (primaries reward extreme partisans).'
           },
           {
-            question: "Which best explains the Supreme Court's holding in Rucho v. Common Cause (2019) on partisan gerrymandering?",
+            question: "In 2019 the Supreme Court ruled that federal courts cannot decide claims that a district map is an unfair PARTISAN gerrymander. Which response by reformers is most consistent with that ruling?",
             options: [
-              "Partisan gerrymandering claims are political questions that federal courts cannot decide, leaving the issue to states and Congress",
-              "Partisan gerrymandering violates the Equal Protection Clause, so federal courts must order new maps whenever one party gains a lasting advantage",
-              "Racial and partisan gerrymandering are both permitted under the Constitution, which overruled Shaw v. Reno",
-              "Partisan gerrymandering claims may be heard only by state courts, which must apply the federal one person, one vote standard"
+              "Reformers turn to state courts and to ballot measures that create independent redistricting commissions",
+              "Reformers ask federal courts to redraw every state's map under the Equal Protection Clause instead",
+              "Reformers stop challenging racial gerrymanders too, since the ruling also overruled Shaw v. Reno",
+              "Reformers ask the President to issue an executive order assigning district lines to the Census Bureau"
             ],
             correctAnswer: 0,
-            explanation: 'Rucho (2019, Roberts 5-4): partisan gerrymandering = POLITICAL QUESTIONS, NON-JUSTICIABLE federal court ("no judicially discoverable and manageable standards"). Closed federal courts to partisan-gerrymandering challenges → political processes (state legislatures, ballot initiatives → independent commissions, congressional action Art I § 4) + STATE COURTS (PA 2018, NC 2022, NY 2022, WI 2023). Did NOT address racial gerrymandering (still strict scrutiny per Shaw v. Reno + VRA § 2). Critics: effectively endorses partisan gerrymandering.'
+            explanation: 'The 2019 ruling (Rucho v. Common Cause, supplied here) closed federal courts to partisan-gerrymandering claims, so reformers moved to other access points: state courts applying state constitutions and ballot initiatives creating independent commissions. EK 2.3.A.2: racial gerrymandering challenges under Shaw v. Reno (a required case) remain available. Presidents have no power to draw congressional districts.'
           }
         ]
       }

@@ -18,7 +18,7 @@ export const govCongressPart7Data = {
 | Sprint terms |
 | AP free-response strategy |
 
-> 🔑 Key idea: Congress is the foundational institution for the AP Gov foundational unit. Mastery of bicameral structure + Article I powers + lawmaking process + foundational documents (Federalist 10, 51) + required cases (McCulloch, Baker v. Carr, Shaw v. Reno) is essential.
+> 🔑 Key idea: Congress is the foundational institution for the AP Gov foundational unit. Mastery of bicameral structure + Article I powers + lawmaking process + foundational documents (Federalist 10, 51) + required cases (McCulloch, Lopez, Baker v. Carr, Shaw v. Reno) is essential.
       `
     },
     {
@@ -50,23 +50,20 @@ export const govCongressPart7Data = {
 | 1964 | *Wesberry v. Sanders* + Civil Rights Act 1964 | Districts equal population; broke 75-day filibuster |
 | 1965 | Voting Rights Act + Medicare + Medicaid + ESEA + Immigration Act | Great Society peak |
 | 1973 | War Powers Resolution | Watergate-era reform of war powers |
-| 1974 | Budget Act | Creates CBO + reconciliation procedure |
+| 1974 | Budget and Impoundment Control Act | Creates CBO + budget committees; limits impoundment (CED illustrative) |
 | 1975 | Senate cloture lowered to 60 (3/5) | Replaces 67 (2/3) requirement |
-| 1983 | *INS v. Chadha* | One-house legislative veto unconstitutional |
 | 1986 | Tax Reform Act | Last major bipartisan economic legislation (passed 97-3 Senate) |
-| 1993 | *Shaw v. Reno* | Race-based redistricting subject to strict scrutiny |
+| 1993 | *Shaw v. Reno* | Race-based redistricting open to equal protection challenge (REQUIRED) |
 | 1994 | Republican Revolution | Gingrich Speaker; Contract with America |
 | 1995 | *United States v. Lopez* | First Commerce Clause limit since 1937 |
 | 1996 | Welfare Reform (PRWORA) + Telecommunications Act + DOMA | Gingrich-Clinton bipartisan compromise |
-| 2010 | Affordable Care Act | Reconciliation used after Senate Democrats lost 60th seat |
+| 2010 | Affordable Care Act | Passed the Senate with exactly 60 votes — enough for cloture |
 | 2012 | *NFIB v. Sebelius* | ACA Commerce Clause limit but valid as tax; Medicaid expansion coercive |
-| 2013 | Senate "nuclear option" 1.0 | Filibuster eliminated for executive + lower-court nominations |
-| 2017 | Senate "nuclear option" 2.0 | Filibuster eliminated for SCOTUS nominations (Gorsuch) |
 | 2018-19 | 35-day government shutdown | Longest in U.S. history (border wall fight) |
 | 2019, 2021 | Trump impeached twice | Senate acquits both times |
 | 2019 | *Rucho v. Common Cause* | Partisan gerrymandering non-justiciable in federal court |
-| 2021 | American Rescue Plan Act | Reconciliation; \\$1.9T COVID relief |
-| 2022 | Inflation Reduction Act | Reconciliation; climate + healthcare + minimum corporate tax |
+| 2021 | American Rescue Plan Act | Party-line; \\$1.9T COVID relief |
+| 2022 | Inflation Reduction Act | Party-line; climate + healthcare + minimum corporate tax |
 | 2023 | Speaker Kevin McCarthy ousted | First Speaker removed by motion to vacate; 22-day vacancy |
 
 ## Required AP Gov SCOTUS Cases on Congress
@@ -75,18 +72,18 @@ export const govCongressPart7Data = {
 |---|---|---|---|
 | ***McCulloch v. Maryland*** | 1819 | Necessary and Proper Clause supports implied powers; states cannot tax federal instruments | Foundation of expansive Article I authority |
 | ***Baker v. Carr*** | 1962 | Apportionment is justiciable; one person, one vote | Foundation for redistricting jurisprudence |
-| ***Shaw v. Reno*** | 1993 | Race-based redistricting subject to strict scrutiny | Limits racial gerrymandering |
+| ***Shaw v. Reno*** | 1993 | District lines drawn mainly by race can violate the Equal Protection Clause | Limits racial gerrymandering |
+| ***United States v. Lopez*** | 1995 | Gun-Free School Zones Act exceeded the Commerce Clause | First limit on the commerce power since 1937 |
 
-## Other High-Yield Cases on Congress
+## Other Cases on Congress (Context — Not Required)
+
+If the exam uses one of these, it supplies the facts and holding.
 
 | Case | Year | Holding |
 |---|---|---|
 | *Gibbons v. Ogden* | 1824 | Commerce Clause includes navigation; broad federal authority |
 | *NLRB v. Jones & Laughlin Steel* | 1937 | Commerce Clause supports labor regulation |
 | *Wesberry v. Sanders* | 1964 | Congressional districts equal population |
-| *INS v. Chadha* | 1983 | Legislative veto unconstitutional |
-| *United States v. Lopez* | 1995 | First Commerce Clause limit since 1937 |
-| *Clinton v. New York* | 1998 | Line-item veto unconstitutional |
 | *NFIB v. Sebelius* | 2012 | ACA mandate exceeded Commerce Clause but valid as tax |
 | *Rucho v. Common Cause* | 2019 | Partisan gerrymandering non-justiciable federal |
 
@@ -105,8 +102,13 @@ export const govCongressPart7Data = {
 | **Conference committee** | Temporary committee reconciling House + Senate versions |
 | **Filibuster** | Senator's right to unlimited debate; threats often used |
 | **Cloture** | Procedure ending debate; 60 votes since 1975 (Rule 22) |
-| **Reconciliation** | Fast-track Senate procedure for budget-related legislation; cannot be filibustered |
-| **Byrd Rule** | Limits reconciliation to budget-related provisions |
+| **Discharge petition** | House petition signed by a majority (218) to force a bill out of committee (EK 2.2.A.3.i) |
+| **Hold** | Senator's objection that keeps a bill off the floor (EK 2.2.A.3.ii) |
+| **Pork-barrel legislation** | Funding for a local project in a larger appropriations bill (EK 2.2.A.5) |
+| **Logrolling** | Trading votes or favors among legislators (EK 2.2.A.5) |
+| **Mandatory vs discretionary spending** | Entitlements required by law vs spending approved each year (EK 2.2.A.4) |
+| **Divided government** | One party holds the presidency, the other at least one chamber (EK 2.3.A.3) |
+| **Gridlock** | No action possible for lack of consensus (EK 2.3.A.1) |
 | **Continuing resolution** | Stopgap funding measure when annual appropriations stall |
 | **Omnibus bill** | Single bill combining many appropriations / authorizations |
 | **Reapportionment** | Redistribution of 435 House seats among states post-Census |
@@ -121,7 +123,6 @@ export const govCongressPart7Data = {
 | **Senate Majority Leader** | Senate floor leader of majority party |
 | **17th Amendment** | Direct popular election of senators (1913) |
 | **War Powers Resolution** | 1973 statute requiring presidential notification + withdrawal absent congressional authorization |
-| **Congressional Review Act** | 1996 statute allowing Congress to disapprove agency rules by joint resolution |
 | **Impeachment** | House majority charges + Senate 2/3 conviction |
 | **Federalist 10** | Madison on faction; large republic check |
 | **Federalist 51** | Madison on separation of powers + checks and balances |
@@ -131,15 +132,15 @@ export const govCongressPart7Data = {
 ## AP Free-Response Strategy
 
 > ⚡ Sample concept-application prompt:
-> *"In 2010, the Affordable Care Act (ACA) passed the Senate with 60 votes in December 2009 but Senate Democrats lost their 60th seat in February 2010 (Scott Brown's special election). House Democrats then passed the Senate version, and Congress used reconciliation to amend it. (A) Identify the Senate procedure that requires 60 votes to overcome. (B) Explain why House Democrats agreed to pass the Senate version unchanged. (C) Explain how reconciliation enabled the final ACA package."*
+> *"In October 2013 the Republican-controlled House refused to pass any spending bill that funded the Affordable Care Act, while the Democratic-controlled Senate and President Obama refused to defund it. Without appropriations, the federal government shut down for 16 days. (A) Describe the congressional power at the center of the dispute. (B) Explain how divided government contributed to the shutdown. (C) Explain how a member of Congress acting as a delegate would decide how to vote on a bill ending the shutdown."*
 
 | Part | Approach |
 |---|---|
-| **(A) Senate procedure** | The Senate FILIBUSTER, which can be ended only by CLOTURE under Rule 22 (60 votes since 1975, formerly 67 votes since 1917); the filibuster effectively raises the threshold for most legislation from a simple majority (51) to a supermajority (60) |
-| **(B) Why House passed Senate version unchanged** | After Scott Brown's election (filling Ted Kennedy's vacant Massachusetts seat), Senate Democrats had only 59 senators — insufficient to invoke cloture on a House-amended Senate bill or a conference report; if the House had amended the Senate bill, the resulting bill would have to return to the Senate where Republicans could filibuster; House Democrats therefore accepted the Senate bill as-is to allow Obama to sign it |
-| **(C) How reconciliation enabled the final ACA** | The Health Care and Education Reconciliation Act 2010 was passed via RECONCILIATION (Budget Act 1974), which is immune from filibuster and requires only 51 Senate votes; this allowed Congress to make budget-related amendments to the Senate-passed ACA without facing a filibuster; the reconciliation bill addressed budget-related provisions (e.g., Medicare reimbursement formulas, student-loan reforms) within the Byrd Rule's restrictions |
+| **(A) Describe the power** | The POWER OF THE PURSE — Congress must pass a federal budget and appropriate the money agencies spend (EK 2.1.A.4.i, 2.2.A.4); without appropriations, discretionary government operations stop |
+| **(B) Explain divided government** | With one party controlling the House and the other controlling the Senate and presidency, DIVIDED GOVERNMENT intensified partisanship (EK 2.3.A.3); polarization and partisan voting left no majority for a compromise, producing GRIDLOCK (EK 2.3.A.1) until public pressure forced a deal |
+| **(C) Explain the delegate model** | A DELEGATE votes according to the interests and preferences of the constituents who elected them (EK 2.3.A.4) — for example, a member from a district full of furloughed federal workers would vote to reopen the government, while one whose voters strongly opposed the ACA might hold out |
 
-> 🔑 Key takeaway: Mastery of the AP Gov Congress content (bicameralism + Article I powers + lawmaking process + filibuster/cloture/reconciliation + redistricting + foundational documents Federalist 10/51/70 + Brutus 1 + required cases McCulloch, Baker v. Carr, Shaw v. Reno) anchors strong unit-1 + unit-2 performance.
+> 🔑 Key takeaway: Mastery of the AP Gov Congress content (bicameralism + Article I powers + lawmaking process + filibuster/cloture/holds/discharge petitions + budget + redistricting + foundational documents Federalist 10/51/70 + Brutus 1 + required cases McCulloch, Lopez, Baker v. Carr, Shaw v. Reno) anchors strong unit-1 + unit-2 performance.
       `
     },
     {
@@ -162,13 +163,13 @@ export const govCongressPart7Data = {
           {
             question: "Which best describes the relationship between Baker v. Carr (1962) and Shaw v. Reno (1993) as required AP Gov Congress cases?",
             options: [
-              "Baker made districting disputes justiciable and led to equal-population districts, and Shaw applied strict scrutiny to racial districts",
+              "Baker made districting disputes justiciable and led to equal-population districts, and Shaw opened racial districts to equal protection challenge",
               "Baker held that districting is a political question for legislatures alone, and Shaw required states to draw majority-minority districts wherever possible",
               "Baker banned partisan gerrymandering in every state, and Shaw later extended that ban to any district drawn mainly to protect incumbent members",
               "Baker and Shaw both held that Senate seats must be apportioned by population, which the Seventeenth Amendment had left unsettled when ratified in 1913"
             ],
             correctAnswer: 0,
-            explanation: 'Baker + Shaw both address congressional districting limits: BAKER v. CARR (1962) = apportionment JUSTICIABLE under Equal Protection (rejecting political-question doctrine); "one person, one vote" applied to Congress via Wesberry v. Sanders (1964). SHAW v. RENO (1993) = race-based redistricting (race predominant factor) subject to STRICT SCRUTINY under 14th Equal Protection (NC 12th Congressional District). Federal courts review for POPULATION EQUALITY (Baker/Wesberry) + RACIAL FAIRNESS (Shaw). Partisan gerrymandering non-justiciable per Rucho v. Common Cause (2019).'
+            explanation: 'Baker + Shaw both address congressional districting limits: BAKER v. CARR (1962) = apportionment JUSTICIABLE under Equal Protection (rejecting political-question doctrine); "one person, one vote" applied to Congress via Wesberry v. Sanders (1964). SHAW v. RENO (1993) = when race is the predominant factor in drawing a district, the map can be challenged under the 14th Amendment Equal Protection Clause (NC 12th Congressional District) (EK 2.3.A.2). Federal courts review for POPULATION EQUALITY (Baker/Wesberry) + RACIAL FAIRNESS (Shaw). Partisan gerrymandering non-justiciable per Rucho v. Common Cause (2019).'
           }
         ]
       }
@@ -192,7 +193,7 @@ export const govCongressPart7Data = {
             hint: 'Warren Court; same year as Cuban Missile Crisis.'
           },
           {
-            prompt: "Year of *Shaw v. Reno* — Court holds race-based congressional redistricting subject to strict scrutiny.",
+            prompt: "Year of *Shaw v. Reno* — Court holds that race-based congressional districts can be challenged under the Equal Protection Clause.",
             answer: '1993',
             acceptableAnswers: ['1993'],
             hint: 'Rehnquist Court; same year as Family Medical Leave Act + NAFTA.'
@@ -240,7 +241,7 @@ export const govCongressPart7Data = {
               "The design remains effective because senators are still chosen by state legislatures, as the 1787 compromise intended"
             ],
             correctAnswer: 0,
-            explanation: 'Framers\' design REMAINS EFFECTIVE: (1) BICAMERALISM requires accommodation across population + state-based → broad geographic + demographic support; (2) ARTICLE I POWERS (esp. McCulloch interpretation of Necessary + Proper) flexible enough for modern federal action across regulatory/fiscal/social/civil-rights without amendment; (3) CHECKS — Congress retains oversight (impeachment, confirmations, appropriations, hearings) — Watergate, Iran-Contra, Trump impeachments, Jan 6; (4) FEDERALISM check (Lopez 1995, NFIB 2012); (5) ADAPTABILITY — reconciliation within Art I § 5 cl 2 rules-of-proceedings. System continues producing major legislation (ACA 2010, Trump 2017, IRA 2022) + crisis response (CARES 2020). Anti-tyranny design (slow process + multiple veto points) functioning as intended.'
+            explanation: 'Framers\' design REMAINS EFFECTIVE: (1) BICAMERALISM requires accommodation across population + state-based → broad geographic + demographic support; (2) ARTICLE I POWERS (esp. McCulloch interpretation of Necessary + Proper) flexible enough for modern federal action across regulatory/fiscal/social/civil-rights without amendment; (3) CHECKS — Congress retains oversight (impeachment, confirmations, appropriations, hearings) — Watergate, Iran-Contra, Trump impeachments, Jan 6; (4) FEDERALISM check (Lopez 1995, NFIB 2012); (5) ADAPTABILITY — each chamber sets its own rules (Art I § 5 cl 2). System continues producing major legislation (ACA 2010, Trump 2017, IRA 2022) + crisis response (CARES 2020). Anti-tyranny design (slow process + multiple veto points) functioning as intended.'
           },
           {
             question: "What is the strongest counter-argument that the framers' design DOES NOT remain effective?",
@@ -251,7 +252,7 @@ export const govCongressPart7Data = {
               "Congress now holds too much power, since the courts, the President, and the states can no longer check any of its laws, and the framers' balance has been lost entirely"
             ],
             correctAnswer: 0,
-            explanation: 'Counter (design NOT effective): overwhelmed by modern conditions framers didn\'t anticipate. (1) PARTY POLARIZATION — framers didn\'t anticipate parties (Washington\'s Farewell 1796 warned); modern party homogeneity + ideological distance → party-line voting bypasses framers\' assumption institutional self-interest dominates. (2) GERRYMANDERING + INCUMBENCY — computerized redistricting + ~95% reelection → Congress insulated from majority opinion (~20% approval). (3) MEDIA + FUNDRAISING distorts toward partisan + donor interests. (4) FILIBUSTER + RECONCILIATION pathology — gridlock OR partisan majoritarianism with no middle-ground. (5) DYSFUNCTION — shutdowns, debt-ceiling, Speaker vacancies, impeachments without conviction. Framers\' design assumed conditions (limited govt, deferential committees, bipartisan accommodation, less polarized media) that no longer exist.'
+            explanation: 'Counter (design NOT effective): overwhelmed by modern conditions framers didn\'t anticipate. (1) PARTY POLARIZATION — framers didn\'t anticipate parties (Washington\'s Farewell 1796 warned); modern party homogeneity + ideological distance → party-line voting bypasses framers\' assumption institutional self-interest dominates. (2) GERRYMANDERING + INCUMBENCY — computerized redistricting + ~95% reelection → Congress insulated from majority opinion (~20% approval). (3) MEDIA + FUNDRAISING distorts toward partisan + donor interests. (4) FILIBUSTER — 60-vote threshold produces gridlock on most contested bills. (5) DYSFUNCTION — shutdowns, debt-ceiling, Speaker vacancies, impeachments without conviction. Framers\' design assumed conditions (limited govt, deferential committees, bipartisan accommodation, less polarized media) that no longer exist.'
           }
         ]
       }

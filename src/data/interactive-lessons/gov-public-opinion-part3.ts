@@ -19,7 +19,7 @@ export const govPublicOpinionPart3Data = {
 | Partisan opinion gaps growing on previously consensus issues |
 | Race + ethnicity patterns evolving (Black + Hispanic + Asian + White realignments) |
 
-> 🔑 Key idea: PUBLIC OPINION VARIES SYSTEMATICALLY by DEMOGRAPHICS — gender gap (women +Dem since 1980), diploma divide (White college Dem + non-college Rep), generational divide (older Rep + younger Dem with manosphere reversal among young men 2024), racial/ethnic patterns (Black ~85% Dem most loyal + Hispanic eroding to Trump 46% 2024 + Asian still Dem majority but Trump gains + White college vs non-college divide). IDEOLOGICAL CLEAVAGES on abortion (Dem pro-choice + Rep pro-life since Reagan), guns (Dem control + Rep rights), immigration (Dem inclusive + Rep restrictive), climate (Dem urgent + Rep skeptical), taxes (Dem progressive + Rep regressive), healthcare (Dem expansion + Rep market). GENERATIONAL DIFFERENCES — Silent (consensus + WWII), Boomers (split — 1960s-shaped), Gen X (Reagan-era + GOP lean), Millennials (Obama-shaped + Dem lean), Gen Z (COVID + Trump-shaped + Dem majority but Trump gains young men). PARTISAN OPINION GAPS GROWING dramatically on previously consensus issues — climate change, COVID vaccines, election integrity (61% Reps still doubt 2020), immigration, race relations, NATO, Ukraine, even basic facts about economy + crime.
+> 🔑 Key idea: PUBLIC OPINION VARIES SYSTEMATICALLY by DEMOGRAPHICS — gender gap (women +Dem since 1980), diploma divide (White college Dem + non-college Rep), generational divide (older Rep + younger Dem with manosphere reversal among young men 2024), racial/ethnic patterns (Black ~85% Dem most loyal + Hispanic eroding to Trump 46% 2024 + Asian still Dem majority but Trump gains + White college vs non-college divide). IDEOLOGICAL CLEAVAGES on abortion (Dem pro-choice + Rep pro-life since Reagan), guns (Dem control + Rep rights), immigration (Dem inclusive + Rep restrictive), climate (Dem urgent + Rep skeptical), taxes (Dem progressive + Rep regressive), healthcare (Dem expansion + Rep market). GENERATIONAL DIFFERENCES — Silent (consensus + WWII), Boomers (split — 1960s-shaped), Gen X (Reagan-era + GOP lean), Millennials (Obama-shaped + Dem lean), Gen Z (COVID + Trump-shaped + Dem majority but Trump gains young men). PARTISAN OPINION GAPS GROWING dramatically on previously consensus issues — climate change, COVID vaccines, election integrity (~2/3 of Reps still doubt 2020), immigration, race relations, NATO, Ukraine, even basic facts about economy + crime.
       `
     },
     {
@@ -30,27 +30,27 @@ export const govPublicOpinionPart3Data = {
 
 ### Gender (Gender Gap since 1980)
 
-- WOMEN ~10-15 pts more Democratic than men since Reagan-Mondale 1980
+- WOMEN ~4-12 pts more Democratic than men since Reagan-Mondale 1980
 - 2024: Harris won women 53-45 (+8); Trump won men 55-43 (+12) — 20-pt gender gap
 - WIDENED post-Dobbs 2022 — abortion rights mobilized women, especially in midwest swing states
-- Young women dramatically more Dem than young men (Gen Z gender gap = ~30 pts in some surveys)
+- Young women dramatically more Dem than young men (Gen Z gender gap = ~24 pts (margins) in some surveys)
 - Manosphere podcasts (Joe Rogan, Theo Von, Andrew Tate) shifted young men Republican
 
 ### Race + Ethnicity
 
 | Group | Pattern |
 |---|---|
-| **BLACK** | ~85-90% Dem (most loyal Dem constituency since 1964 Civil Rights Act); Black Protestant churches + NAACP + Urban League + Divine Nine sororities/fraternities; Trump made GAINS with Black men 2024 (~22%); Black women 90%+ Dem |
-| **HISPANIC** | Dem majority but ERODING — 2012 Obama 71%; 2024 Harris 51% to Trump 46% (highest GOP since Bush 2004); GENERATIONAL + REGIONAL variation (Cuban + Venezuelan Rep, Mexican-American shifting Rep especially border + working class, Puerto Rican mixed); Trump cracked working-class Hispanic vote |
+| **BLACK** | ~85-90% Dem (most loyal Dem constituency since 1964 Civil Rights Act); Black Protestant churches + NAACP + Urban League + Divine Nine sororities/fraternities; Trump made GAINS with Black men 2024 (~21%); Black women 90%+ Dem |
+| **HISPANIC** | Dem majority but ERODING — 2012 Obama 71%; 2024 Harris 51% to Trump 46% (highest GOP share in modern exit polls); GENERATIONAL + REGIONAL variation (Cuban + Venezuelan Rep, Mexican-American shifting Rep especially border + working class, Puerto Rican mixed); Trump cracked working-class Hispanic vote |
 | **ASIAN** | Dem majority but TRUMP GAINS 2024 (~40% — up from 27% in 2016); national-origin variation (Indian-American Dem 70%+, Vietnamese Rep lean, Chinese mixed, Korean mixed) |
-| **WHITE** | DIPLOMA DIVIDE central to modern alignment — White college grads → Dem (Harris 56-42 2024); White non-college → Rep (Trump 67-32 2024); evangelical Whites 80% Trump; Catholic Whites split; non-religious Whites Dem |
+| **WHITE** | DIPLOMA DIVIDE central to modern alignment — White college grads → Dem (Harris 53-45 2024); White non-college → Rep (Trump 66-32 2024); evangelical Whites 80% Trump; Catholic Whites split; non-religious Whites Dem |
 
 ### Education (Diploma Divide)
 
 - WHITE COLLEGE GRADS: shifted Dem dramatically since 1990s
 - WHITE NON-COLLEGE: shifted Rep dramatically since Reagan, accelerated under Trump
-- 1992: White college Bush 41%, Clinton 39%, Perot 19% (essentially even); 2024: White college Harris 56-42
-- 1992: White non-college Clinton 39, Bush 41, Perot 21; 2024: White non-college Trump 67-32 (+35)
+- 1992: White college Bush 41%, Clinton 39%, Perot 19% (essentially even); 2024: White college Harris 53-45
+- 1992: White non-college Clinton 39, Bush 41, Perot 21; 2024: White non-college Trump 66-32 (+34)
 - DIPLOMA DIVIDE = central realignment of modern American politics
 - HISPANIC + ASIAN + BLACK NON-COLLEGE also shifting Rep (more slowly than White non-college but visible)
 
@@ -58,14 +58,14 @@ export const govPublicOpinionPart3Data = {
 
 | Group | Pattern |
 |---|---|
-| **WHITE EVANGELICALS** | 80%+ Trump (3 elections); core GOP base; ~25% of US population |
+| **WHITE EVANGELICALS** | ~76-82% Trump (3 elections, exit polls); core GOP base; ~13% of US adults (PRRI 2024) |
 | **BLACK PROTESTANTS** | 85%+ Dem; Civil Rights legacy; Black church central to Dem mobilization |
 | **CATHOLICS** | Split — Hispanic Catholics Dem majority (slipping), White Catholics Rep (especially observant); ~21% US |
 | **MAINLINE PROTESTANTS** | Slight Rep lean; declining share of population (~15%); United Methodists, Presbyterians, Episcopalians, Lutherans |
 | **JEWS** | 70%+ Dem (consistent since FDR); Orthodox + Israel-focused increasingly Rep |
 | **MUSLIMS** | Dem majority; supported Bush 2000 then shifted Dem after 9/11 + Iraq |
 | **MORMONS (LDS)** | Heavily Rep (Romney 2012 nominee); Trump-skeptical 2016 + 2020 + 2024 (Utah closest of red states) |
-| **NONES (no religious affiliation)** | ~25% of US (rising); 65%+ Dem; Gen Z 40% nones |
+| **NONES (no religious affiliation)** | ~28% of US (Pew 2024; rising); 65%+ Dem; Gen Z 40% nones |
 | **HINDUS + BUDDHISTS + SIKHS** | Generally Dem majority |
 
 ### Age + Generation
@@ -101,7 +101,7 @@ export const govPublicOpinionPart3Data = {
 
 - MARRIED: Rep lean (especially with children)
 - SINGLE: Dem lean (especially single women)
-- "MARRIAGE GAP" — single women +30 pts more Dem than married men
+- "MARRIAGE GAP" — single women Harris +23 vs married men Trump +22 (2024 exit poll)
 - Cohabiting + LGBTQ relationships also Dem lean
 
 ### Union Membership
@@ -128,7 +128,7 @@ export const govPublicOpinionPart3Data = {
 - REP = rights (Second Amendment originalism, NRA influence, concealed carry expansion)
 - Public opinion: 80%+ for background checks (failed legislatively), 60% assault weapons ban, but 70%+ Dems vs 30% Reps on intensity
 - INTENSITY beats numbers — NRA + Gun Owners of America small intense beat lukewarm majority
-- 2008 DC v. Heller individual right to bear arms; 2010 McDonald incorporation; 2022 Bruen public carry expanded
+- 2008 DC v. Heller individual right to bear arms; 2010 McDonald incorporation
 
 ### Immigration
 
@@ -183,15 +183,15 @@ Polarization has produced partisan gaps on issues that were CONSENSUS even a dec
 | **CLIMATE CHANGE** | Bipartisan acknowledgment of problem (Bush + McCain favored cap-and-trade 2008) | 78% Dem vs 23% Rep urgent action |
 | **COVID VACCINES** | Initial bipartisan support (Operation Warp Speed Trump) | 90% Dem vs 60% Rep vaccinated; 30+ pt gap |
 | **NATO + UKRAINE** | Bipartisan Cold War + post-9/11 consensus | Trump GOP skeptical NATO; 60% Dem vs 30% Rep continue Ukraine aid |
-| **ELECTION INTEGRITY** | Bipartisan acceptance of vote results | 61% Reps still doubt 2020; Trump-led "stop the steal"; 90% Dems trust |
+| **ELECTION INTEGRITY** | Bipartisan acceptance of vote results | ~2/3 of Reps still doubt 2020; Trump-led "stop the steal"; 90% Dems trust |
 | **TRUST IN MEDIA** | Higher across both parties | 70% Dem trust mainstream; 14% Rep trust mainstream (lowest ever) |
 | **TRUST IN FBI/CIA** | Republicans historically pro-FBI/CIA | Now Dem more pro-FBI/CIA; Trump GOP critical |
 | **FREE TRADE** | Both parties pro-free-trade post-Cold War | Both parties now skeptical (Trump tariffs + Biden CHIPS + IRA Buy America) |
 | **HIGHER EDUCATION** | Bipartisan support | 60% Reps now NEGATIVE view of universities; Dems still positive |
 
-ASYMMETRIC POLARIZATION research (Hacker + Pierson; Mann + Ornstein) — Republican Party has moved RIGHT faster than Democratic Party has moved LEFT since 1980s, especially on race + immigration + LGBTQ + climate + institutional trust + electoral integrity.
+Growing partisan gaps like these are a form of POLARIZATION — political attitudes moving toward ideological extremes — which can produce partisan voting and gridlock in Congress (EK 2.3.A.1).
 
-> 🔑 Key takeaway: PUBLIC OPINION VARIES SYSTEMATICALLY by DEMOGRAPHICS — gender gap (women +Dem since 1980, widened post-Dobbs), diploma divide (White college Dem + non-college Rep), generational (older Rep + younger Dem but Trump gains young men), racial/ethnic (Black ~85% Dem most loyal + Hispanic eroding Trump 46% 2024 + Asian still Dem majority but Trump gains + White diploma divide). IDEOLOGICAL CLEAVAGES on abortion (Dem pro-choice/Rep pro-life since Reagan; post-Dobbs mobilized pro-choice including in red states), guns (Dem control/Rep rights; intensity beats numbers — NRA wins despite 80% support for universal background checks), immigration, climate (78 vs 23 Dem-Rep gap), taxes, healthcare. GENERATIONAL — Silent consensus, Boomers split, Gen X slight Rep, Millennials Dem lean (Obama-shaped + remained Dem despite predictions), Gen Z Dem majority but Trump gains young men 2024. PARTISAN OPINION GAPS GROWING dramatically on previously consensus issues — climate, COVID vaccines, NATO/Ukraine, election integrity (61% Reps still doubt 2020), media trust, FBI/CIA, free trade, higher education. ASYMMETRIC POLARIZATION (Hacker + Pierson; Mann + Ornstein) — GOP moved right faster than Dems moved left.
+> 🔑 Key takeaway: PUBLIC OPINION VARIES SYSTEMATICALLY by DEMOGRAPHICS — gender gap (women +Dem since 1980, widened post-Dobbs), diploma divide (White college Dem + non-college Rep), generational (older Rep + younger Dem but Trump gains young men), racial/ethnic (Black ~85% Dem most loyal + Hispanic eroding Trump 46% 2024 + Asian still Dem majority but Trump gains + White diploma divide). IDEOLOGICAL CLEAVAGES on abortion (Dem pro-choice/Rep pro-life since Reagan; post-Dobbs mobilized pro-choice including in red states), guns (Dem control/Rep rights; intensity beats numbers — NRA wins despite 80% support for universal background checks), immigration, climate (78 vs 23 Dem-Rep gap), taxes, healthcare. GENERATIONAL — Silent consensus, Boomers split, Gen X slight Rep, Millennials Dem lean (Obama-shaped + remained Dem despite predictions), Gen Z Dem majority but Trump gains young men 2024. PARTISAN OPINION GAPS GROWING dramatically on previously consensus issues — climate, COVID vaccines, NATO/Ukraine, election integrity (~2/3 of Reps still doubt 2020), media trust, FBI/CIA, free trade, higher education. This POLARIZATION feeds partisan voting and gridlock in Congress (EK 2.3.A.1).
       `
     },
     {
@@ -209,7 +209,7 @@ ASYMMETRIC POLARIZATION research (Hacker + Pierson; Mann + Ornstein) — Republi
               "The diploma divide is a gap in campaign donations from universities, and it emerged after Citizens United allowed colleges to fund super PACs directly.",
             ],
             correctAnswer: 0,
-            explanation: 'DIPLOMA DIVIDE = sorting by 4-year college degree central to modern alignment; White college → Dem, White non-college → Rep. EVIDENCE: 1992 White college Bush 41/Clinton 39/Perot 19 even → 2024 Harris 56-42 (+14 Dem swing); 1992 White non-college Clinton 39/Bush 41/Perot 21 even → 2024 Trump 67-32 (+35 Rep swing). WHY: cultural/social issues (college liberal on abortion/LGBTQ/immigration/race/environment); globalization/trade (college benefited knowledge economy; non-college lost manufacturing to China/Mexico — Trump\'s message resonated); institutional trust (college trust expertise/science/journalism; non-college distrustful — 60% Reps negative view of universities); urban/rural (college concentrated cities/suburbs Dem geography; non-college small towns/rural Rep); partisan elite messaging (Reagan-era GOP anti-elite/populist + Dems professional/managerial); religious decline (non-college Whites remain religious/evangelical Rep; college secularizing Dem). RESHAPED COALITIONS: Dem 2024 = White college + Black + Hispanic college + Asian + LGBTQ + younger + urban + secular + professional; Rep 2024 = White non-college + Hispanic working class + some Asian + Mormon + religious + rural + small business + manual labor + veterans + traditional religious. CONSEQUENCES: geographic polarization intensified; suburban college women fled GOP under Trump (2018 + 2020); new multi-racial working-class GOP coalition Trump 2024; Dem elite problem (struggle with non-college); economic populism challenge (cross-cutting cultural); gerrymandering/EC implications (urban Dems popular vote, EC/Senate skewed rural). Diploma divide = central defining realignment of post-2008/Trump politics, comparable to New Deal class realignment + Civil Rights race realignment.'
+            explanation: 'DIPLOMA DIVIDE = sorting by 4-year college degree central to modern alignment; White college → Dem, White non-college → Rep. EVIDENCE: 1992 White college Bush 41/Clinton 39/Perot 19 even → 2024 Harris 53-45 (+8 Dem swing); 1992 White non-college Clinton 39/Bush 41/Perot 21 even → 2024 Trump 66-32 (+34 Rep swing). WHY: cultural/social issues (college liberal on abortion/LGBTQ/immigration/race/environment); globalization/trade (college benefited knowledge economy; non-college lost manufacturing to China/Mexico — Trump\'s message resonated); institutional trust (college trust expertise/science/journalism; non-college distrustful — 60% Reps negative view of universities); urban/rural (college concentrated cities/suburbs Dem geography; non-college small towns/rural Rep); partisan elite messaging (Reagan-era GOP anti-elite/populist + Dems professional/managerial); religious decline (non-college Whites remain religious/evangelical Rep; college secularizing Dem). RESHAPED COALITIONS: Dem 2024 = White college + Black + Hispanic college + Asian + LGBTQ + younger + urban + secular + professional; Rep 2024 = White non-college + Hispanic working class + some Asian + Mormon + religious + rural + small business + manual labor + veterans + traditional religious. CONSEQUENCES: geographic polarization intensified; suburban college women fled GOP under Trump (2018 + 2020); new multi-racial working-class GOP coalition Trump 2024; Dem elite problem (struggle with non-college); economic populism challenge (cross-cutting cultural); gerrymandering/EC implications (urban Dems popular vote, EC/Senate skewed rural). Diploma divide = central defining realignment of post-2008/Trump politics, comparable to New Deal class realignment + Civil Rights race realignment.'
           }
         ]
       }
@@ -224,19 +224,19 @@ ASYMMETRIC POLARIZATION research (Hacker + Pierson; Mann + Ornstein) — Republi
             prompt: "Demographic group that has been the MOST LOYAL Democratic constituency since the Civil Rights Act 1964, voting ~85-90% Democratic in presidential elections.",
             answer: 'Black Americans',
             acceptableAnswers: ['Black Americans', 'African Americans', 'Black voters', 'Black', 'African American voters', 'Blacks', 'Black men and women', 'Black community', 'African-American'],
-            hint: 'Civil Rights Act 1964 + Voting Rights Act 1965 (LBJ Dem) cemented Dem loyalty; Black Protestant churches central mobilization; Trump made gains with Black men 2024 (~22%) but Black women 90%+ Dem; central to Dem primary (SC firewall propelled Biden 2020).'
+            hint: 'Civil Rights Act 1964 + Voting Rights Act 1965 (LBJ Dem) cemented Dem loyalty; Black Protestant churches central mobilization; Trump made gains with Black men 2024 (~21%) but Black women 90%+ Dem; central to Dem primary (SC firewall propelled Biden 2020).'
           },
           {
-            prompt: "Phenomenon (gender + Dem + ~10-15 pts since 1980) where WOMEN vote more Democratic than MEN; widened post-Dobbs 2022.",
+            prompt: "Phenomenon (gender + Dem + ~4-12 pts since 1980) where WOMEN vote more Democratic than MEN; widened post-Dobbs 2022.",
             answer: 'gender gap',
             acceptableAnswers: ['gender gap', 'Gender gap', 'Gender Gap', 'gender voting gap', 'gendergap'],
-            hint: 'First emerged Reagan-Mondale 1980; women voted Dem ~10-15 pts more than men; widened post-Dobbs 2022 mobilizing women on abortion; 2024 Harris won women 53-45 + Trump won men 55-43 = ~20-pt gap; Gen Z gender gap = ~30 pts; manosphere podcasts (Joe Rogan, Theo Von) shifted young men Republican.'
+            hint: 'First emerged Reagan-Mondale 1980; women voted Dem ~4-12 pts more than men; widened post-Dobbs 2022 mobilizing women on abortion; 2024 Harris won women 53-45 + Trump won men 55-43 = ~20-pt gap; Gen Z gender gap = ~24 pts (margins); manosphere podcasts (Joe Rogan, Theo Von) shifted young men Republican.'
           },
           {
-            prompt: "Theory by Hacker + Pierson and Mann + Ornstein that the REPUBLICAN PARTY has moved right faster than the Democratic Party has moved left since the 1980s.",
-            answer: 'asymmetric polarization',
-            acceptableAnswers: ['asymmetric polarization', 'Asymmetric polarization', 'Asymmetric Polarization'],
-            hint: 'Documented in Hacker + Pierson Off Center (2005) + Winner-Take-All Politics (2010) + Mann + Ornstein It\'s Even Worse Than It Looks (2012) + One Nation After Trump (2017); challenges "both sides" polarization narrative; argues GOP has become more ideological + obstructionist + anti-institutional than Dems; especially on race, immigration, climate, electoral integrity, institutional trust.'
+            prompt: "Term for political attitudes moving toward ideological extremes, which can lead to partisan voting and gridlock in Congress (EK 2.3.A.1).",
+            answer: 'polarization',
+            acceptableAnswers: ['polarization', 'Polarization', 'political polarization', 'partisan polarization', 'ideological polarization'],
+            hint: 'Growing Democrat-Republican gaps on climate, media trust and free trade are examples.'
           }
         ]
       }
@@ -249,21 +249,21 @@ ASYMMETRIC POLARIZATION research (Hacker + Pierson; Mann + Ornstein) — Republi
         dropdowns: [
           {
             label: "WHITE COLLEGE GRADUATES — voted: ___",
-            options: ['Harris 56-42 (+14 Dem)', 'Trump 67-32 (+35 Rep)', 'Trump 80-20 (+60 Rep)', 'Trump 46-51 Hispanic shift', 'Roughly even split']
+            options: ['Harris 53-45 (+8 Dem)', 'Trump 66-32 (+34 Rep)', 'Trump 82-17 (+65 Rep)', 'Trump 46-51 Hispanic shift', 'Roughly even split']
           },
           {
             label: "WHITE NON-COLLEGE — voted: ___",
-            options: ['Harris 56-42 (+14 Dem)', 'Trump 67-32 (+35 Rep)', 'Trump 80-20 (+60 Rep)', 'Trump 46-51 Hispanic shift', 'Roughly even split']
+            options: ['Harris 53-45 (+8 Dem)', 'Trump 66-32 (+34 Rep)', 'Trump 82-17 (+65 Rep)', 'Trump 46-51 Hispanic shift', 'Roughly even split']
           },
           {
             label: "WHITE EVANGELICALS — voted: ___",
-            options: ['Harris 56-42 (+14 Dem)', 'Trump 67-32 (+35 Rep)', 'Trump 80-20 (+60 Rep)', 'Trump 46-51 Hispanic shift', 'Roughly even split']
+            options: ['Harris 53-45 (+8 Dem)', 'Trump 66-32 (+34 Rep)', 'Trump 82-17 (+65 Rep)', 'Trump 46-51 Hispanic shift', 'Roughly even split']
           }
         ],
-        correctAnswers: ['Harris 56-42 (+14 Dem)', 'Trump 67-32 (+35 Rep)', 'Trump 80-20 (+60 Rep)'],
-        hint1: 'WHITE COLLEGE — shifted Dem dramatically since 1990s; in 1992 essentially even (Bush 41/Clinton 39); now Dem +14; this is the suburban college-educated Dem coalition (especially women); fled GOP under Trump (2018 + 2020 + 2024 election losses among this group); central to Dem urban/suburban geography.',
-        hint2: 'WHITE NON-COLLEGE — shifted Rep dramatically since Reagan, accelerated under Trump; in 1992 essentially even (Clinton 39/Bush 41); now Rep +35; ~37 pt swing; central to Trump GOP coalition; manufacturing job loss to China + Mexico fueled anti-trade + anti-immigration appeal; geographically dispersed in small towns + rural areas.',
-        hint3: 'WHITE EVANGELICALS — 80%+ Trump in 3 elections (2016 + 2020 + 2024); core GOP base; ~25% of US population; mobilized by abortion + religious liberty + judicial appointments (Trump delivered Federalist Society judges + Dobbs); Faith and Freedom Coalition (Ralph Reed) + Family Research Council + Focus on the Family + American Family Association.'
+        correctAnswers: ['Harris 53-45 (+8 Dem)', 'Trump 66-32 (+34 Rep)', 'Trump 82-17 (+65 Rep)'],
+        hint1: 'WHITE COLLEGE — shifted Dem dramatically since 1990s; in 1992 essentially even (Bush 41/Clinton 39); now Dem +8; this is the suburban college-educated Dem coalition (especially women); fled GOP under Trump (2018 + 2020 + 2024 election losses among this group); central to Dem urban/suburban geography.',
+        hint2: 'WHITE NON-COLLEGE — shifted Rep dramatically since Reagan, accelerated under Trump; in 1992 essentially even (Clinton 39/Bush 41); now Rep +34; ~30+ pt swing; central to Trump GOP coalition; manufacturing job loss to China + Mexico fueled anti-trade + anti-immigration appeal; geographically dispersed in small towns + rural areas.',
+        hint3: 'WHITE EVANGELICALS — ~76-82% Trump in 3 elections (2016 + 2020 + 2024 exit polls); core GOP base; ~13% of US adults (PRRI 2024); mobilized by abortion + religious liberty + judicial appointments (Trump delivered Federalist Society judges + Dobbs); Faith and Freedom Coalition (Ralph Reed) + Family Research Council + Focus on the Family + American Family Association.'
       }
     },
     {
@@ -273,15 +273,15 @@ ASYMMETRIC POLARIZATION research (Hacker + Pierson; Mann + Ornstein) — Republi
       exercise: {
         questions: [
           {
-            question: "What is ASYMMETRIC POLARIZATION, and what evidence supports the claim that the REPUBLICAN PARTY has moved RIGHT faster than the DEMOCRATIC PARTY has moved LEFT since the 1980s?",
+            question: "Polls show the gap between Democrats and Republicans growing on issues that once drew bipartisan support, such as climate change, free trade and trust in the media. Which consequence for Congress does the CED associate with this kind of polarization?",
             options: [
-              "DW-NOMINATE scores show congressional Republicans moving further right than Democrats moved left, and the GOP has shifted more sharply on climate and immigration.",
-              "Voteview data show congressional Democrats moving further left than Republicans moved right, and the Democrats have shifted more sharply on trade and taxes.",
-              "Polls show both parties moving apart at exactly the same pace since the 1980s, so the asymmetric polarization claim rests only on campaign advertising.",
-              "Party platforms show Republicans moving toward the center since the 1980s, and asymmetric polarization refers to differences in party fundraising.",
+              "More partisan voting and gridlock, because members find fewer areas of agreement on which to build cross-party majorities for legislation.",
+              "More frequent cross-party coalitions, because polarized voters reward members who compromise with the other side.",
+              "Stronger committee independence, because polarization moves major decisions out of party leaders' hands.",
+              "Fewer divided governments, because polarized voters always give one party the presidency and both chambers.",
             ],
             correctAnswer: 0,
-            explanation: 'ASYMMETRIC POLARIZATION = empirical claim that GOP moved RIGHT faster/further than Dems moved LEFT since 1980s, challenging "both sides" narrative. THEORISTS: Hacker + Pierson (Off Center 2005, Winner-Take-All Politics 2010, American Amnesia 2016, Let Them Eat Tweets 2020); Mann + Ornstein (It\'s Even Worse Than It Looks 2012, One Nation After Trump 2017); Pew Research; Voteview DW-NOMINATE; ANES. EVIDENCE: (1) DW-NOMINATE — GOP medians moved rightward steadily since 1980; Dems modestly left; gap wider on GOP side. (2) ISSUE POSITIONS — climate (1988 GHW Bush promised action; 2008 McCain cap-and-trade; 2020s GOP uniform skepticism); immigration (Reagan + GHW Bush amnesty 1986; 2007 Bush + McCain comprehensive reform; 2016+ Trump restrictionism); LGBTQ (DOMA 1996 bipartisan; GOP shift to anti-trans 2020s); race (Reagan 1980 Southern Strategy; Trump 2016+ explicit racial appeals); free trade (both protectionist by 2024 but Trump faster). (3) INSTITUTIONAL NORMS — Senate filibuster + judicial confirmation breakdown (McConnell blocked Garland 2016, rammed Barrett 2020); January 6 + 2020 election denial; 61% Reps still doubt 2020; Trump impeachment 2 acquittal. (4) ELECTORAL INTEGRITY — refusal peaceful transfer; voting restrictions in GOP states; rejection of media + science + intelligence. (5) DEM SHIFTS — leftward on cultural issues but INCREMENTAL with moderate wing (Biden + Manchin + Sinema + Lieberman + Clinton DLC); economics modestly left (Bernie + Warren) but Biden + Pelosi + Schumer remain Clinton/Obama center; M4A failed 2020 primary. (6) COUNTER-ARGUMENTS — Dems further left on immigration + criminal justice + cultural; abolished filibuster carve-outs (2013, 2022 voting rights); court-packing + DC/PR statehood discussions; both extreme differently. (7) CONSEQUENCES — gridlock + shutdowns (1995-96, 2013, 2018-19); judicial confirmation breakdown; weakening guardrails; conspiracy theories + factual disagreements. (8) NEGATIVE PARTISANSHIP (Abramowitz) — fear/hatred of opposing party stronger predictor than support of own; combined with asymmetric extremism = spiraling polarization.'
+            explanation: 'EK 2.3.A.1: congressional behavior is influenced by ideological divisions between the parties; PARTISAN VOTING and POLARIZATION (political attitudes moving toward ideological extremes) can lead to GRIDLOCK, a situation in which no action can be taken for lack of consensus. Growing partisan opinion gaps reduce cross-party coalitions rather than increase them; committee leadership is set by the majority party (EK 2.2.A.2); and polarized electorates have often produced divided government (EK 2.3.A.3), which can intensify partisanship further.'
           }
         ]
       }

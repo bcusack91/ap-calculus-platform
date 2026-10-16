@@ -14,12 +14,12 @@ export const govPublicOpinionPart7Data = {
 | Section |
 |---|
 | High-yield concepts (polling fundamentals + political socialization + party ID + media effects + representation models + opinion-policy linkage) |
-| AP foundational documents table (Federalist 10, 49, 71, 78 + Madison letters) |
-| Required cases on public opinion + civil liberties + civil rights |
+| AP foundational documents table (the 13 required documents) |
+| Supreme Court cases and public opinion (required cases marked) |
 | AP FRQ strategy for opinion + polling questions (SCAR template) |
 | Sprint terms (50+ key vocabulary) |
 
-> 🔑 Key idea: AP Public Opinion exam tests POLLING METHODOLOGY (random sampling + MOE + sources of error + poll types), POLITICAL SOCIALIZATION (8 agents + lifecycle), PARTY IDENTIFICATION (perceptual screen + motivated reasoning + sorting + negative partisanship), MEDIA EFFECTS (agenda-setting + framing + priming + cultivation + minimal effects + new subtle effects), REPRESENTATION MODELS (delegate + trustee per Burke + politico), and OPINION-POLICY LINKAGE (responsiveness + intensity vs numbers + institutional filters: filibuster + EC + gerrymandering + judicial + federalism). FOUNDATIONAL DOCUMENTS connect to constitutional design — Federalist 10 (factions + extended republic), 49 (constitutional change requires deliberation), 71 (Senate insulation), 78 (judicial counter-majoritarian). Use SCAR template (Specifics + Concepts + Application + Reasoning) for FRQ. Master 50+ sprint terms for MCQ + FRQ.
+> 🔑 Key idea: AP Public Opinion exam tests POLLING METHODOLOGY (random sampling + MOE + sources of error + poll types), POLITICAL SOCIALIZATION (8 agents + lifecycle), PARTY IDENTIFICATION (perceptual screen + motivated reasoning + sorting + negative partisanship), MEDIA EFFECTS (agenda-setting + framing + priming + cultivation + minimal effects + new subtle effects), REPRESENTATION MODELS (delegate + trustee per Burke + politico), and OPINION-POLICY LINKAGE (responsiveness + intensity vs numbers + institutional filters: filibuster + EC + gerrymandering + judicial + federalism). FOUNDATIONAL DOCUMENTS connect to constitutional design — Federalist 10 (factions + extended republic), 51 (separation + checks), 78 (judicial counter-majoritarian), and Brutus No. 1 (small republic close to the people). Use SCAR template (Specifics + Concepts + Application + Reasoning) for FRQ. Master 50+ sprint terms for MCQ + FRQ.
       `
     },
     {
@@ -62,7 +62,6 @@ export const govPublicOpinionPart7Data = {
 | **MOTIVATED REASONING** | Tendency to PROCESS INFORMATION in ways confirming prior beliefs (Kunda 1990; Lodge + Taber 2000) |
 | **PARTISAN SORTING** | Ideological + demographic + cultural alignment with party (Levendusky 2009; Mason 2018 "mega-identity") |
 | **NEGATIVE PARTISANSHIP** | Voters motivated by FEAR/HATRED of opposing party more than support of own (Abramowitz) |
-| **ASYMMETRIC POLARIZATION** | GOP moved right faster than Dems left since 1980s (Hacker + Pierson; Mann + Ornstein) |
 
 ### Media Effects
 
@@ -94,24 +93,25 @@ export const govPublicOpinionPart7Data = {
 | **INTENSITY vs NUMBERS** | Small intense minorities (NRA + AIPAC + AARP + evangelicals + PhRMA + teachers unions + trial lawyers + oil/gas) often beat large lukewarm majorities |
 | **INSTITUTIONAL FILTERS** | Filibuster (60-vote Senate) + Electoral College + gerrymandering + judicial independence + federalism — all filter public preferences |
 
-## AP Foundational Documents
+## AP Foundational Documents (the 13 required)
 
 | Document | Year | Author | Key Idea |
 |---|---|---|---|
 | **Declaration of Independence** | 1776 | Jefferson + Continental Congress | Consent of governed; right to alter/abolish; popular sovereignty foundation |
+| **The Wealth of Nations** (core principles) | 1776 | Adam Smith | Free enterprise — self-interest, competition, limited regulation of the market (EK 4.1.A.1) |
 | **Articles of Confederation** | 1781-89 | Continental Congress | Weak central; states sovereign; Shays' Rebellion exposed weakness; replaced by Constitution |
-| **Constitution** | 1787 | Federal Convention | Madisonian design — separation + checks + federalism + representation; Article V supermajority change |
+| **Constitution** (including the Bill of Rights and later amendments) | 1787 | Federal Convention | Madisonian design — separation + checks + federalism + representation; Article V supermajority change; Bill of Rights (1791) enumerates civil liberties |
 | **Federalist 10** | 1787 | Madison | FACTIONS + EXTENDED REPUBLIC + REPRESENTATION + DIVERSITY check majority tyranny |
-| **Federalist 49** | 1788 | Madison | Constitutional CHANGE requires sustained DELIBERATION not popular passions |
+| **Brutus 1** | 1787 | Anti-Federalist (Robert Yates likely) | Anti-Federalist concerns about extended republic + national power; lost ratification but won Bill of Rights |
+| **Federalist 39** | 1788 | Madison | The Constitution is partly national and partly federal, limiting concentration of power while giving multiple access points (EK 1.7.A.1) |
 | **Federalist 51** | 1788 | Madison | Separation + checks: "ambition counteracting ambition"; "if men were angels..." |
 | **Federalist 70** | 1788 | Hamilton | Energetic single executive; unity + duration + adequate powers + accountability |
-| **Federalist 71** | 1788 | Hamilton | Senate insulates from immediate popular passions; people INTEND good but not always REASON RIGHT |
 | **Federalist 78** | 1788 | Hamilton | Judicial INDEPENDENCE + LIFETIME TENURE; counter-majoritarian role; "least dangerous branch" |
-| **Bill of Rights** | 1791 | Madison | Limits on government power; civil liberties enumerated |
-| **Brutus 1** | 1787 | Anti-Federalist (Robert Yates likely) | Anti-Federalist concerns about extended republic + national power; lost ratification but won Bill of Rights |
+| **Emancipation Proclamation** | 1863 | Lincoln | Freed enslaved people in the states in rebellion; step toward the 13th Amendment (EK 3.12.A.1) |
+| **Gettysburg Address** | 1863 | Lincoln | Reaffirmed equality and popular sovereignty — "government of the people, by the people, for the people" (EK 1.1.A.3) |
 | **Letter from Birmingham Jail** | 1963 | MLK Jr | Justice + just vs unjust laws; civil rights nonviolent direct action |
 
-## Required Cases (Public Opinion Connections)
+## Supreme Court Cases and Public Opinion (required cases unless marked)
 
 | Case | Year | Public Opinion Connection |
 |---|---|---|
@@ -121,14 +121,14 @@ export const govPublicOpinionPart7Data = {
 | **Engel v. Vitale** | 1962 | School prayer; opposed by 70%+ Americans + over 60 years; SCOTUS acted counter-majoritarian |
 | **Tinker v. Des Moines** | 1969 | Student speech rights; Vietnam War context shaped opinion |
 | **NY Times v. United States** | 1971 | Pentagon Papers; press freedom + government accountability + Vietnam War credibility gap |
-| **Roe v. Wade** | 1973 | Abortion right; ~60% public support for Roe sustained 50 years; reversed by Dobbs 2022 |
+| **Roe v. Wade** (named in EK 3.9.A.2; not a required case) | 1973 | Abortion right; ~60% public support for Roe sustained 50 years; reversed by Dobbs 2022 |
 | **Shaw v. Reno** | 1993 | Racial gerrymandering; affects public opinion translation through electoral geography |
 | **United States v. Lopez** | 1995 | Limited federal commerce clause; shifted federalism balance; opinion divided on federal vs state power |
-| **NY Times Co. v. Sullivan** | 1964 | Press freedom + actual malice standard; supports media's role in shaping opinion |
+| **NY Times Co. v. Sullivan** (not required) | 1964 | Press freedom + actual malice standard; supports media's role in shaping opinion |
 | **Citizens United v. FEC** | 2010 | Corporate political spending; affects media + advertising shaping opinion |
-| **DC v. Heller** | 2008 | Individual right to bear arms; shifted gun policy debate despite 80%+ background check support |
-| **Obergefell v. Hodges** | 2015 | Same-sex marriage; opinion transformed dramatically (12% 1988 → 71% 2024) |
-| **Dobbs v. Jackson Women's Health** | 2022 | Reversed Roe DESPITE ~60% public support; mobilized pro-choice vote; Court approval at historic lows post-Dobbs |
+| **DC v. Heller** (not required) | 2008 | Individual right to bear arms; shifted gun policy debate despite 80%+ background check support |
+| **Obergefell v. Hodges** (illustrative; not required) | 2015 | Same-sex marriage; opinion transformed dramatically (12% 1988 → 69% 2024; record 71% 2022-23) |
+| **Dobbs v. Jackson Women's Health** (named in EK 3.9.A.2; not a required case) | 2022 | Reversed Roe DESPITE ~60% public support; mobilized pro-choice vote; Court approval at historic lows post-Dobbs |
 
 ## AP FRQ Strategy: SCAR Template
 
@@ -206,7 +206,6 @@ For Public Opinion + Polling FRQs, use SCAR:
 - Hostile media perception
 - Partisan sorting
 - Negative partisanship
-- Asymmetric polarization
 
 ### Media + Communication
 - Mass media
@@ -250,16 +249,15 @@ For Public Opinion + Polling FRQs, use SCAR:
 
 ### Foundational
 - Federalist 10 (factions + extended republic)
-- Federalist 49 (constitutional change)
+- Federalist 39 (national + federal features)
 - Federalist 51 (separation + checks)
 - Federalist 70 (executive)
-- Federalist 71 (Senate insulation)
 - Federalist 78 (judicial)
 - Brutus 1 (Anti-Federalist)
-- Bowling Alone (Putnam 2000)
+- Letter from Birmingham Jail
 - Bill of Rights
 
-> 🔑 Key takeaway: AP Public Opinion exam tests POLLING METHODOLOGY (random sampling + MOE + sources of error + poll types — benchmark/tracking/exit/focus/push), POLITICAL SOCIALIZATION (8 agents in order: family ~70% → education → religion → peers → media → generational events → geography → race/gender + lifecycle childhood → adolescence → early adulthood → middle adulthood → later adulthood), PARTY IDENTIFICATION (perceptual screen + The American Voter 1960 + 90% party loyalty + ~10% true independents + motivated reasoning per Kunda 1990 + Lodge + Taber 2000 + partisan sorting per Levendusky 2009 + Mason 2018 + negative partisanship per Abramowitz + asymmetric polarization per Hacker + Pierson + Mann + Ornstein), MEDIA EFFECTS (agenda-setting per McCombs + Shaw 1972 + framing per Tversky + Kahneman 1981 + priming per Iyengar + Kinder NEWS THAT MATTERS 1987 + cultivation per Gerbner + minimal effects per Berelson + Lazarsfeld 1940s + hostile media per Vallone + Ross + Lepper 1985 + partisan ecosystem + Joe Rogan + manosphere podcasts), REPRESENTATION MODELS (delegate + trustee per Burke 1774 + politico most common), OPINION-POLICY LINKAGE (presidential + congressional + judicial responsiveness + intensity vs numbers + institutional filters: filibuster + EC + gerrymandering + judicial + federalism). FOUNDATIONAL DOCUMENTS — Federalist 10 (factions + extended republic + representation refines + enlarges) + 49 (constitutional change requires deliberation) + 51 (separation + checks) + 70 (executive) + 71 (Senate insulation + people intend good not always reason right) + 78 (judicial counter-majoritarian + lifetime tenure + least dangerous branch) + Brutus 1 (Anti-Federalist) + Bowling Alone (Putnam 2000 social capital decline). REQUIRED CASES connect — Brown (civil rights opinion shift); Engel (school prayer counter-majoritarian); Roe (abortion; overruled by non-required Dobbs); McDonald (gun opinion; builds on non-required Heller); Citizens United (campaign finance + media); useful non-required cases — Obergefell (gay marriage opinion revolution), Sullivan (press). SCAR template for FRQ — Specifics + Concepts + Application + Reasoning. Master 50+ sprint terms.
+> 🔑 Key takeaway: AP Public Opinion exam tests POLLING METHODOLOGY (random sampling + MOE + sources of error + poll types — benchmark/tracking/exit/focus/push), POLITICAL SOCIALIZATION (8 agents in order: family ~70% → education → religion → peers → media → generational events → geography → race/gender + lifecycle childhood → adolescence → early adulthood → middle adulthood → later adulthood), PARTY IDENTIFICATION (perceptual screen + The American Voter 1960 + 90% party loyalty + ~10% true independents + motivated reasoning per Kunda 1990 + Lodge + Taber 2000 + partisan sorting per Levendusky 2009 + Mason 2018 + negative partisanship per Abramowitz), MEDIA EFFECTS (agenda-setting per McCombs + Shaw 1972 + framing per Tversky + Kahneman 1981 + priming per Iyengar + Kinder NEWS THAT MATTERS 1987 + cultivation per Gerbner + minimal effects per Berelson + Lazarsfeld 1940s + hostile media per Vallone + Ross + Lepper 1985 + partisan ecosystem + Joe Rogan + manosphere podcasts), REPRESENTATION MODELS (delegate + trustee per Burke 1774 + politico most common), OPINION-POLICY LINKAGE (presidential + congressional + judicial responsiveness + intensity vs numbers + institutional filters: filibuster + EC + gerrymandering + judicial + federalism). FOUNDATIONAL DOCUMENTS — Federalist 10 (factions + extended republic + representation refines + enlarges) + 51 (separation + checks) + 70 (executive) + 78 (judicial counter-majoritarian + lifetime tenure + least dangerous branch) + Brutus 1 (Anti-Federalist), among the 13 required documents. REQUIRED CASES connect — Brown (civil rights opinion shift); Engel (school prayer counter-majoritarian); McDonald (gun opinion; builds on non-required Heller); Citizens United (campaign finance + media); CED-named but not required — Roe and Dobbs (abortion opinion); useful non-required cases — Obergefell (gay marriage opinion revolution), Sullivan (press). SCAR template for FRQ — Specifics + Concepts + Application + Reasoning. Master 50+ sprint terms.
       `
     },
     {
@@ -317,20 +315,20 @@ For Public Opinion + Polling FRQs, use SCAR:
         dropdowns: [
           {
             label: "FEDERALIST 10 — REJECTED eliminating factions; argued LARGE REPUBLIC + REPRESENTATION + DIVERSITY + multiple checking factions: ___",
-            options: ['Madison defended extended republic + representation refining + enlarging public views', 'Hamilton argued Senate insulates from popular passions; people intend good but not always reason right', 'Hamilton argued judiciary requires lifetime tenure + counter-majoritarian role + least dangerous branch', 'Madison argued constitutional change requires sustained deliberation not popular passions', 'Putnam documented declining civic engagement + social capital from TV + suburbanization']
+            options: ['Madison defended extended republic + representation refining + enlarging public views', 'Madison argued separation of powers + checks and balances control abuses by majorities', 'Hamilton argued judiciary requires lifetime tenure + counter-majoritarian role + least dangerous branch', 'Brutus warned a large republic would be far from the people and swallow the states', 'Putnam documented declining civic engagement + social capital from TV + suburbanization']
           },
           {
-            label: "FEDERALIST 71 — defended SENATE INSULATION via 6-year terms; people INTEND public good but DON'T ALWAYS REASON RIGHT: ___",
-            options: ['Madison defended extended republic + representation refining + enlarging public views', 'Hamilton argued Senate insulates from popular passions; people intend good but not always reason right', 'Hamilton argued judiciary requires lifetime tenure + counter-majoritarian role + least dangerous branch', 'Madison argued constitutional change requires sustained deliberation not popular passions', 'Putnam documented declining civic engagement + social capital from TV + suburbanization']
+            label: "FEDERALIST 51 — separation of powers + checks and balances; 'ambition must be made to counteract ambition': ___",
+            options: ['Madison defended extended republic + representation refining + enlarging public views', 'Madison argued separation of powers + checks and balances control abuses by majorities', 'Hamilton argued judiciary requires lifetime tenure + counter-majoritarian role + least dangerous branch', 'Brutus warned a large republic would be far from the people and swallow the states', 'Putnam documented declining civic engagement + social capital from TV + suburbanization']
           },
           {
             label: "FEDERALIST 78 — defended JUDICIAL INDEPENDENCE via LIFETIME TENURE + COUNTER-MAJORITARIAN role: ___",
-            options: ['Madison defended extended republic + representation refining + enlarging public views', 'Hamilton argued Senate insulates from popular passions; people intend good but not always reason right', 'Hamilton argued judiciary requires lifetime tenure + counter-majoritarian role + least dangerous branch', 'Madison argued constitutional change requires sustained deliberation not popular passions', 'Putnam documented declining civic engagement + social capital from TV + suburbanization']
+            options: ['Madison defended extended republic + representation refining + enlarging public views', 'Madison argued separation of powers + checks and balances control abuses by majorities', 'Hamilton argued judiciary requires lifetime tenure + counter-majoritarian role + least dangerous branch', 'Brutus warned a large republic would be far from the people and swallow the states', 'Putnam documented declining civic engagement + social capital from TV + suburbanization']
           }
         ],
-        correctAnswers: ['Madison defended extended republic + representation refining + enlarging public views', 'Hamilton argued Senate insulates from popular passions; people intend good but not always reason right', 'Hamilton argued judiciary requires lifetime tenure + counter-majoritarian role + least dangerous branch'],
+        correctAnswers: ['Madison defended extended republic + representation refining + enlarging public views', 'Madison argued separation of powers + checks and balances control abuses by majorities', 'Hamilton argued judiciary requires lifetime tenure + counter-majoritarian role + least dangerous branch'],
         hint1: 'FEDERALIST 10 — Madison\'s most famous essay (1787); defines FACTION = "number of citizens... united and actuated by common impulse of passion or interest, adversed to rights of other citizens or aggregate interests"; rejects eliminating factions (would destroy liberty); argues REMOVING CAUSES impossible + CONTROLLING EFFECTS via large republic + representation + diversity; multiple checking factions in extended republic; representatives "REFINE AND ENLARGE the public views"; THE central document on Madisonian institutional filtering of public opinion.',
-        hint2: 'FEDERALIST 71 — Hamilton (1788); defended PRESIDENT 4-year term but applies to SENATE 6-year terms too; Senate provides STABILITY + DELIBERATION; insulates from immediate public passions; famous quote: "the people commonly INTEND the PUBLIC GOOD" but "do not always REASON RIGHT about the means of promoting it"; Senate can correct momentary errors in public sentiment + provide deliberative check.',
+        hint2: 'FEDERALIST 51 — Madison (1788); "if men were angels, no government would be necessary"; separation of powers and checks and balances control potential abuses by majorities (EK 1.6.A.2).',
         hint3: 'FEDERALIST 78 — Hamilton (1788); defended judicial INDEPENDENCE via LIFETIME TENURE for federal judges; COUNTER-MAJORITARIAN role to PROTECT RIGHTS against majorities; "LEAST DANGEROUS BRANCH" (no purse + no sword — depends on respect + legitimacy); foundational for judicial independence + judicial review; Marshall famously cited in Marbury 1803; explains Roberts Court\'s legitimacy concerns (NFIB protected ACA 2012; Dobbs 2022 reversed Roe despite ~60% support).'
       }
     },
@@ -349,7 +347,7 @@ For Public Opinion + Polling FRQs, use SCAR:
               "Cite the Articles of Confederation, explain that Madison praised small republics, and connect state sovereignty to rule by local majorities.",
             ],
             correctAnswer: 0,
-            explanation: 'STRONG SCAR RESPONSE on Federalist 10 + public opinion: SPECIFICS — Federalist 10 by Madison (1787 ratification debate; in FEDERALIST PAPERS Oct 1787-May 1788 NY newspapers; collectively most influential American political theory); responds to Anti-Federalists (especially Brutus 1 by Robert Yates likely on extended republic dangers). CONCEPTS — Madison\'s KEY: (1) FACTION = citizens "united and actuated by some common impulse of passion or interest adversed to the rights of other citizens or aggregate interests of the community"; (2) CAUSES "sown in the nature of man" — religious + governmental + leadership + property differences; (3) MAJORITY FACTION especially dangerous; (4) REMOVING CAUSES rejected (destroying liberty/giving same opinions impossible); (5) CONTROLLING EFFECTS via REPRESENTATION + EXTENDED REPUBLIC + DIVERSITY; (6) representatives "REFINE AND ENLARGE the public views" via deliberation. APPLICATION — Madison\'s view: (a) public opinion can be DANGEROUS (majority factions oppressing minority rights — concerned about state legislatures + paper money + canceling debts after Revolution); (b) DIRECT DEMOCRACY → TYRANNY (Athens + Rome instability); (c) representation = ESSENTIAL FILTER (echoes Burke 1774 trustee); (d) EXTENDED REPUBLIC INVERSE INTUITION — Anti-Federalists argued large republic dangerous; Madison argued large SAFER (more diverse interests + harder for single faction to dominate); defies Montesquieu small-republic theory; (e) diversity prevents single majority. REASONING — consequences: (a) institutional filters work as designed (filibuster + EC + gerrymandering + judicial + federalism); (b) universal background checks 80%+ fail Senate filibuster — Madisonian outcome; (c) Dobbs 2022 reversed Roe despite ~60% support — counter-majoritarian Federalist 78; (d) asymmetric polarization (Hacker + Pierson; Mann + Ornstein) — modern problem of intense minorities (which Madison didn\'t fully anticipate — focused on majority factions); (e) Lowi END OF LIBERALISM (1969) — INTEREST GROUP LIBERALISM; (f) Madisonian filtering vs popular accountability debate continues; (g) progressive reforms partially undid filters (initiative + referendum + 17th 1913 direct senator election + 19th + 24th + 26th + primaries); (h) core design remains dominant; (i) modern theory (Dahl POLYARCHY 1971; Bessette MILD VOICE OF REASON 1994) defends institutional deliberation; (j) authoritarian populism critique (Mounk THE PEOPLE VS DEMOCRACY 2018; Levitsky + Ziblatt HOW DEMOCRACIES DIE 2018) argues Madisonian filters protect liberal democracy from majority/populist threats — confirming Madisonian wisdom.'
+            explanation: 'STRONG SCAR RESPONSE on Federalist 10 + public opinion: SPECIFICS — Federalist 10 by Madison (1787 ratification debate; in FEDERALIST PAPERS Oct 1787-May 1788 NY newspapers; collectively most influential American political theory); responds to Anti-Federalists (especially Brutus 1 by Robert Yates likely on extended republic dangers). CONCEPTS — Madison\'s KEY: (1) FACTION = citizens "united and actuated by some common impulse of passion or interest adversed to the rights of other citizens or aggregate interests of the community"; (2) CAUSES "sown in the nature of man" — religious + governmental + leadership + property differences; (3) MAJORITY FACTION especially dangerous; (4) REMOVING CAUSES rejected (destroying liberty/giving same opinions impossible); (5) CONTROLLING EFFECTS via REPRESENTATION + EXTENDED REPUBLIC + DIVERSITY; (6) representatives "REFINE AND ENLARGE the public views" via deliberation. APPLICATION — Madison\'s view: (a) public opinion can be DANGEROUS (majority factions oppressing minority rights — concerned about state legislatures + paper money + canceling debts after Revolution); (b) DIRECT DEMOCRACY → TYRANNY (Athens + Rome instability); (c) representation = ESSENTIAL FILTER (echoes Burke 1774 trustee); (d) EXTENDED REPUBLIC INVERSE INTUITION — Anti-Federalists argued large republic dangerous; Madison argued large SAFER (more diverse interests + harder for single faction to dominate); defies Montesquieu small-republic theory; (e) diversity prevents single majority. REASONING — consequences: (a) institutional filters work as designed (filibuster + EC + gerrymandering + judicial + federalism); (b) universal background checks 80%+ fail Senate filibuster — Madisonian outcome; (c) Dobbs 2022 reversed Roe despite ~60% support — counter-majoritarian Federalist 78; (d) modern problem of intense minorities (which Madison didn\'t fully anticipate — focused on majority factions); (e) Lowi END OF LIBERALISM (1969) — INTEREST GROUP LIBERALISM; (f) Madisonian filtering vs popular accountability debate continues; (g) progressive reforms partially undid filters (initiative + referendum + 17th 1913 direct senator election + 19th + 24th + 26th + primaries); (h) core design remains dominant; (i) modern theory (Dahl POLYARCHY 1971; Bessette MILD VOICE OF REASON 1994) defends institutional deliberation; (j) authoritarian populism critique (Mounk THE PEOPLE VS DEMOCRACY 2018; Levitsky + Ziblatt HOW DEMOCRACIES DIE 2018) argues Madisonian filters protect liberal democracy from majority/populist threats — confirming Madisonian wisdom.'
           }
         ]
       }

@@ -19,7 +19,7 @@ export const govBureaucracyPart4Data = {
 | Bureaucracy × Interest groups + media |
 | Bureaucracy × Federalism |
 
-> 🔑 Key idea: The federal bureaucracy SITS AT THE CENTER of multiple cross-branch interactions. Congress CREATES + FUNDS + OVERSEES agencies; President APPOINTS + DIRECTS via OMB + executive orders; Courts REVIEW agency action under APA + emerging Major Questions Doctrine; Interest groups + media engage through IRON TRIANGLES + ISSUE NETWORKS; State/local governments execute many federal programs through GRANT-IN-AID arrangements.
+> 🔑 Key idea: The federal bureaucracy SITS AT THE CENTER of multiple cross-branch interactions. Congress CREATES + FUNDS + OVERSEES agencies; President APPOINTS + DIRECTS via OMB + executive orders; Courts REVIEW agency action when affected parties sue; Interest groups + media engage through IRON TRIANGLES + ISSUE NETWORKS; State/local governments execute many federal programs through GRANT-IN-AID arrangements.
       `
     },
     {
@@ -37,11 +37,9 @@ Congress's relationships with agencies:
 | **AUTHORIZATION** | Some programs require periodic reauthorization (e.g., FAA Reauthorization Act every ~5 yrs; PEPFAR every ~5 yrs; FISA Section 702 surveillance authority) |
 | **OVERSIGHT HEARINGS** | Committees hold hearings to investigate agency conduct; ~3,000+ congressional hearings/year |
 | **GAO INVESTIGATIONS** | Government Accountability Office investigates spending + program effectiveness for Congress |
-| **INSPECTORS GENERAL (IGs)** | ~74 agency-level IGs investigate waste, fraud, abuse; report to both agency head + Congress |
 | **CASEWORK** | Members + staff intervene with agencies for individual constituents (e.g., immigration cases, VA benefits, Social Security disability) |
 | **CONFIRMATION** | Senate confirms ~1,200 PAS (Presidential Appointed/Senate Confirmed) positions |
 | **SUBPOENAS + CONTEMPT** | Congress can subpoena agency officials + documents; contempt for non-compliance |
-| **CRA (Congressional Review Act 1996)** | 60-day window for Congress to OVERTURN final agency rules via joint resolution (presidential signature OR veto override); used ~20+ times since 2017 |
 | **STATUTORY OVERRIDE** | Pass new law to overrule agency action or court interpretation (e.g., Lilly Ledbetter Fair Pay Act 2009 overruled *Ledbetter v. Goodyear*) |
 
 ## Bureaucracy × President
@@ -50,7 +48,7 @@ Congress's relationships with agencies:
 |---|---|
 | **APPOINTMENT + REMOVAL** | President nominates ~1,200 PAS positions; appoints another ~3,000-4,000 political officials; can remove most political appointees AT WILL |
 | **EXECUTIVE ORDERS + MEMORANDA** | Direct agencies on policy (within statutory limits); president can REVERSE prior EOs (Biden Day 1 = 17 EOs reversing Trump policies; Trump Day 1 2025 = 26+ EOs reversing Biden) |
-| **OMB CONTROL** | Office of Management and Budget reviews agency budgets + 'significant' regulations through OIRA (EO 12866 Clinton 1993); \\$200M+ rules require OIRA review |
+| **OMB CONTROL** | Office of Management and Budget (part of the Executive Office of the President) reviews agency budget requests + major regulations so they match the president's agenda |
 | **AGENDA SETTING** | President prioritizes administration goals + signals to agencies through speeches, memoranda, executive actions |
 | **REORGANIZATION** | Limited authority to reorganize (Reorganization Act expired 1984); Trump Executive Reorganization (2017-2020) reduced regulations + restructured |
 | **PARDON POWER** | Can pardon individuals subject to agency criminal referrals (e.g., Trump pardons of immigration officials) |
@@ -60,15 +58,10 @@ Congress's relationships with agencies:
 
 | Tool | Description |
 |---|---|
-| **APA JUDICIAL REVIEW** | Affected parties may challenge agency action under 5 U.S.C. § 706 — arbitrary-and-capricious + substantial evidence + de novo + statutory interpretation |
-| **STATUTORY INTERPRETATION** | Loper Bright (2024) replaced Chevron deference (1984) with INDEPENDENT JUDICIAL JUDGMENT; agencies entitled to RESPECT (Skidmore) but NOT DEFERENCE |
-| **MAJOR QUESTIONS DOCTRINE** | West Virginia v. EPA (2022) requires CLEAR congressional authorization for agency action of major economic or political significance |
-| **ARBITRARY-AND-CAPRICIOUS REVIEW** | Motor Vehicle Mfrs. v. State Farm (1983) — agency must consider relevant factors + provide reasoned explanation |
-| **NONDELEGATION DOCTRINE** | Limits Congressional delegation; mostly dormant since *Schechter Poultry* 1935; Gorsuch + Thomas signaling potential revival |
+| **LAWSUITS OVER STATUTORY AUTHORITY** | Affected parties may sue, arguing an agency rule goes beyond what Congress authorized; courts can set the rule aside |
 | **CONSTITUTIONAL CHALLENGES** | Suits challenge agency action under 1st Am, 4th Am, 5th Am, due process, etc.; e.g., suits against Trump immigration orders |
 | **VACATUR + REMAND** | Court can VACATE agency action (set aside) + REMAND to agency for further proceedings |
 | **NATIONWIDE INJUNCTIONS** | Single district court can enjoin agency action nationwide (controversial; growing use 2017+; *Trump v. CASA* 2025 limited) |
-| **JARKESY V. SEC (2024)** | SCOTUS held SEC use of administrative law judges for civil money penalties violates 7th Am jury-trial right |
 
 ## Bureaucracy × Interest Groups + Media
 
@@ -80,7 +73,6 @@ Congress's relationships with agencies:
 | **ISSUE NETWORKS** | Looser webs of think tanks, experts, media, agencies, committees, interest groups (Hugh Heclo 1978) |
 | **REGULATORY CAPTURE** | Phenomenon where regulated industry effectively controls regulatory agency; Stigler (1971) classic theory |
 | **MEDIA SCRUTINY** | Investigative journalism on agency misconduct (e.g., VA wait times scandal 2014 Phoenix VA, EPA Pruitt scandals 2018) |
-| **LEAKS + WHISTLEBLOWERS** | Whistleblower Protection Act 1989 + Inspector General Act 1978 provide some protection; FBI agent leaks; Snowden 2013 NSA leaks |
 
 ## Bureaucracy × Federalism
 
@@ -90,14 +82,14 @@ The federal bureaucracy implements MANY federal programs through state + local g
 |---|---|
 | **CATEGORICAL GRANTS** | Federal funds for specific purposes with strict requirements (e.g., Medicaid, federal-aid highways, Title I education) |
 | **BLOCK GRANTS** | Broader purposes with state flexibility (e.g., TANF welfare 1996, Community Development Block Grants) |
-| **MANDATES** | Required state action, often UNFUNDED (Brady Act 1993 background checks by local officials, struck in *Printz v. US* 1997; REAL ID Act 2005); the minimum drinking age is NOT a mandate but a grant condition (see crossover sanctions) |
+| **MANDATES** | Required state action, often UNFUNDED (e.g., REAL ID Act 2005 ID-card standards; Americans with Disabilities Act accessibility requirements); the minimum drinking age is NOT a mandate but a grant condition (see crossover sanctions) |
 | **CROSSOVER SANCTIONS** | Withhold funds in one program to enforce compliance in another (e.g., highway funds tied to drinking age via *South Dakota v. Dole* 1987) |
 | **PREEMPTION** | Federal statutes/regulations override state law under Supremacy Clause (e.g., FAA airline regulation, federal immigration enforcement, federal banking regulation) |
 | **COOPERATIVE FEDERALISM** | Federal-state collaboration in many policy areas (Medicaid, environmental SIPs under Clean Air Act, Workforce Investment Boards, etc.) |
 | **STATE IMPLEMENTATION OF FEDERAL LAW** | Many federal programs administered by state agencies (e.g., state OSHA-equivalents, state environmental agencies for Clean Water Act permits) |
 | **INTERGOVERNMENTAL LOBBYING** | National Governors Association, US Conference of Mayors, NACo (National Association of Counties) lobby federal agencies |
 
-> 🔑 Key takeaway: Bureaucracy = nexus of cross-branch interactions — Congress (creation + appropriations + oversight + IGs + CRA), President (appointments + EOs + OMB/OIRA + reorganization), Courts (APA review + major questions + Loper Bright + Jarkesy), interest groups + media (notice-and-comment + revolving door + iron triangles + issue networks + capture), federalism (categorical/block grants + mandates + crossover sanctions + preemption + cooperative federalism + state implementation).
+> 🔑 Key takeaway: Bureaucracy = nexus of cross-branch interactions — Congress (creation + appropriations + oversight hearings + confirmation), President (appointments + EOs + OMB + reorganization), Courts (lawsuits over statutory authority + constitutional challenges), interest groups + media (notice-and-comment + revolving door + iron triangles + issue networks + capture), federalism (categorical/block grants + mandates + crossover sanctions + preemption + cooperative federalism + state implementation).
       `
     },
     {
@@ -115,7 +107,7 @@ The federal bureaucracy implements MANY federal programs through state + local g
               "Congress relies on the President to oversee agencies, holding hearings only during impeachment proceedings"
             ],
             correctAnswer: 0,
-            explanation: 'Congressional oversight tools: (1) APPROPRIATIONS — annual + supplemental funding via 12 bills; "power of the purse"; (2) AUTHORIZATION — periodic reauthorization (FAA ~5yr); (3) OVERSIGHT HEARINGS — ~3,000+/yr; (4) GAO investigations; (5) ~74 INSPECTORS GENERAL; (6) CASEWORK; (7) CONFIRMATION — ~1,200 PAS; (8) SUBPOENAS + CONTEMPT; (9) CRA 1996 — 60-day window to overturn rules via joint resolution; used ~20+ times since 2017; (10) STATUTORY OVERRIDE.'
+            explanation: 'Congressional oversight tools: (1) APPROPRIATIONS — annual + supplemental funding via 12 bills; "power of the purse"; (2) AUTHORIZATION — periodic reauthorization (FAA ~5yr); (3) OVERSIGHT HEARINGS — ~3,000+/yr; (4) GAO investigations; (5) CASEWORK; (6) CONFIRMATION — ~1,200 PAS; (7) SUBPOENAS + CONTEMPT; (8) STATUTORY OVERRIDE. Executive orders, pardons and signing statements are presidential tools; judicial review belongs to the courts.'
           },
           {
             question: "Which best describes the IRON TRIANGLE concept and its modern variant ISSUE NETWORKS?",
@@ -138,22 +130,22 @@ The federal bureaucracy implements MANY federal programs through state + local g
       exercise: {
         questions: [
           {
-            prompt: "Year the CONGRESSIONAL REVIEW ACT created the 60-day window for Congress to overturn final agency rules.",
-            answer: '1996',
-            acceptableAnswers: ['1996'],
-            hint: 'Same year as TANF welfare reform; Clinton signed.'
+            prompt: "Congress's ability to check the bureaucracy by appropriating or withholding funds is called the power of the ___.",
+            answer: 'purse',
+            acceptableAnswers: ['purse', 'power of the purse', 'the purse'],
+            hint: 'EK 2.14.A.1 — the money tool.'
           },
           {
-            prompt: "Year the INSPECTOR GENERAL ACT established statutory IG offices in major agencies.",
-            answer: '1978',
-            acceptableAnswers: ['1978'],
-            hint: 'Same year as CSRA + ethics in government act; Carter signed.'
+            prompt: "Term for a temporary coalition of groups, experts, and officials that forms to promote a common issue or agenda.",
+            answer: 'issue network',
+            acceptableAnswers: ['issue network', 'issue networks', 'an issue network'],
+            hint: 'Looser and more fluid than an iron triangle.'
           },
           {
-            prompt: "Year EXECUTIVE ORDER 12866 (Clinton) established OIRA review of significant agency rules.",
-            answer: '1993',
-            acceptableAnswers: ['1993'],
-            hint: 'Clinton early in administration; replaced Reagan EO 12291.'
+            prompt: "Term for checking that agencies use funds properly and follow regulations, which can complicate policy implementation (two words).",
+            answer: 'compliance monitoring',
+            acceptableAnswers: ['compliance monitoring', 'compliance-monitoring', 'monitoring compliance'],
+            hint: 'EK 2.14.B.2.'
           }
         ]
       }
@@ -165,22 +157,22 @@ The federal bureaucracy implements MANY federal programs through state + local g
       exercise: {
         dropdowns: [
           {
-            label: "Annual appropriations + Inspectors General + GAO investigations + Congressional Review Act 1996: ___",
+            label: "Annual appropriations + oversight hearings + GAO investigations + Senate confirmation of agency heads: ___",
             options: ['Congress', 'President', 'Courts', 'Interest groups']
           },
           {
-            label: "Appointments + executive orders + OMB/OIRA review + reorganization authority: ___",
+            label: "Appointments + executive orders + OMB budget review + reorganization authority: ___",
             options: ['Congress', 'President', 'Courts', 'Interest groups']
           },
           {
-            label: "APA judicial review + Major Questions Doctrine + Loper Bright independent judgment + Jarkesy v. SEC: ___",
+            label: "Rulings that an agency rule exceeds its statute or violates the Constitution: ___",
             options: ['Congress', 'President', 'Courts', 'Interest groups']
           }
         ],
         correctAnswers: ['Congress', 'President', 'Courts'],
-        hint1: 'Congress = create + fund + oversee; appropriations + IGs + GAO + CRA + hearings + subpoenas + statutory override.',
-        hint2: 'President = appoint + direct + restructure; nominations + EOs + OMB + OIRA + reorganization.',
-        hint3: 'Courts = review + interpret; APA arbitrary-and-capricious + Loper Bright (overruled Chevron) + WV v. EPA Major Questions + Jarkesy SEC ALJs.'
+        hint1: 'Congress = create + fund + oversee; appropriations + GAO + hearings + subpoenas + statutory override.',
+        hint2: 'President = appoint + direct + restructure; nominations + EOs + OMB + reorganization.',
+        hint3: 'Courts = review + interpret; they act only when someone sues over an agency action.'
       }
     },
     {
@@ -198,7 +190,7 @@ The federal bureaucracy implements MANY federal programs through state + local g
               "Agencies have only advisory powers, so the label is controversial because they never make binding rules"
             ],
             correctAnswer: 0,
-            explanation: 'FOURTH BRANCH = bureaucracy combines LEGISLATIVE-LIKE (rulemaking via APA), EXECUTIVE-LIKE (enforcement), JUDICIAL-LIKE (adjudication via ALJs) — combining formally separated powers (Articles I + II + III). CONSTITUTIONAL CONCERNS: (1) NONDELEGATION — Congress can\'t delegate legislative power without intelligible principle (Mistretta 1989); dormant since Schechter 1935; Gorsuch + Thomas signaling revival; (2) APPOINTMENTS CLAUSE — Officers per Art II § 2 cl 2; career bureaucrats not (inferior officer questions); (3) UNITARY EXECUTIVE — Art II vests ALL executive power in president (Seila Law 2020 + Collins 2021 modified Humphrey\'s Executor 1935); (4) DEMOCRATIC LEGITIMACY — unelected, long tenure; (5) SCHEDULE F + DOGE.'
+            explanation: 'FOURTH BRANCH = bureaucracy combines LEGISLATIVE-LIKE (rulemaking via APA), EXECUTIVE-LIKE (enforcement), JUDICIAL-LIKE (adjudication via ALJs) — combining formally separated powers (Articles I + II + III). CONCERNS: (1) SEPARATION OF POWERS — one agency writes, enforces, and judges its own rules; (2) DEMOCRATIC LEGITIMACY — unelected, long-tenured officials make policy; (3) ACCOUNTABILITY — which is why Congress (oversight, purse), the president (appointments, EOs), and courts (lawsuits) all check agencies (EK 2.15.A.1). Article IV does not mention agencies.'
           },
           {
             question: "How does the COOPERATIVE FEDERALISM model describe the relationship between the federal bureaucracy and state governments?",

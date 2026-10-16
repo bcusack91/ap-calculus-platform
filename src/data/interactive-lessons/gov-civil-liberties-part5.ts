@@ -16,10 +16,10 @@ export const govCivilLibertiesPart5Data = {
 | Era 1: Founding-Reconstruction (1791-1868) — Bill of Rights + Barron limitation |
 | Era 2: Limited Incorporation (1868-1925) — 14th Am ratified, slow start |
 | Era 3: Warren-Burger Revolution (1925-1972) — major incorporation + criminal procedure + speech |
-| Era 4: Rehnquist Reconfiguration (1972-2005) — campaign finance + commercial speech + religion |
-| Era 5: Roberts Court (2005-present) — 2nd Am, religious liberty expansion, Dobbs, content-based scrutiny |
+| Era 4: Rehnquist Reconfiguration (1972-2005) — campaign finance + religion + privacy |
+| Era 5: Roberts Court (2005-present) — 2nd Am, religious liberty expansion, campaign finance, Dobbs |
 
-> 🔑 Key idea: Civil liberties evolved across 5 ERAS: (1) FOUNDING-RECONSTRUCTION 1791-1868 — Bill of Rights ratified 1791; Barron v. Baltimore 1833 limited to federal; (2) LIMITED INCORPORATION 1868-1925 — 14th Am 1868; Slaughter-House 1873 narrowed; Hurtado 1884 + Maxwell v. Dow 1900; (3) WARREN-BURGER REVOLUTION 1925-1972 — Gitlow 1925 first incorporation; Brandenburg 1969; Mapp 1961 + Gideon 1963 + Miranda 1966 + Tinker 1969 + Engel 1962; criminal procedure revolution; (4) REHNQUIST RECONFIGURATION 1972-2005 — Smith 1990 + RFRA 1993; Buckley 1976 + Citizens United precursors; Lawrence 2003; (5) ROBERTS COURT 2005-PRESENT — Heller 2008 + McDonald 2010 + Bruen 2022; Citizens United 2010; Hobby Lobby 2014 + Trinity Lutheran 2017 + Espinoza 2020 + Carson 2022 + 303 Creative 2023; Obergefell 2015; Dobbs 2022 OVERRULED Roe.
+> 🔑 Key idea: Civil liberties evolved across 5 ERAS: (1) FOUNDING-RECONSTRUCTION 1791-1868 — Bill of Rights ratified 1791; Barron v. Baltimore 1833 limited to federal; (2) LIMITED INCORPORATION 1868-1925 — 14th Am 1868; Hurtado 1884 + Maxwell v. Dow 1900 declined to incorporate; (3) WARREN-BURGER REVOLUTION 1925-1972 — Gitlow 1925 first incorporation; Brandenburg 1969; Mapp 1961 + Gideon 1963 + Miranda 1966 + Tinker 1969 + Engel 1962; criminal procedure revolution; (4) REHNQUIST RECONFIGURATION 1972-2005 — Smith 1990 + RFRA 1993; Buckley 1976 + Citizens United precursors; Lawrence 2003; (5) ROBERTS COURT 2005-PRESENT — Heller 2008 + McDonald 2010; Citizens United 2010; Hobby Lobby 2014 + Trinity Lutheran 2017 + Espinoza 2020 + Carson 2022 + 303 Creative 2023; Obergefell 2015; Dobbs 2022 OVERRULED Roe.
       `
     },
     {
@@ -30,7 +30,7 @@ export const govCivilLibertiesPart5Data = {
 
 | Year | Event | Significance |
 |---|---|---|
-| 1789 | First Congress drafts Bill of Rights | Madison drafted in response to Anti-Federalist demand (Brutus 2 + Mason + Henry); 12 amendments proposed |
+| 1789 | First Congress drafts Bill of Rights | Madison drafted in response to Anti-Federalist demand (Mason + Henry + other Anti-Federalists); 12 amendments proposed |
 | 1791 | Bill of Rights RATIFIED | 10 amendments ratified December 15; foundation of civil liberties |
 | 1798 | Alien and Sedition Acts | Adams administration prosecuted Republican press critics; constitutional concerns; Acts expired/repealed; Madison + Jefferson Virginia + Kentucky Resolutions argued state nullification |
 | 1833 | Barron v. Baltimore | Marshall held Bill of Rights applied ONLY TO FEDERAL GOVERNMENT, not states |
@@ -42,7 +42,6 @@ export const govCivilLibertiesPart5Data = {
 
 | Year | Event | Significance |
 |---|---|---|
-| 1873 | Slaughter-House Cases | Narrowly construed PRIVILEGES AND IMMUNITIES CLAUSE of 14th Am; foreclosed PI as vehicle for incorporation; due process became alternative |
 | 1884 | Hurtado v. California | Held 5th Am GRAND JURY INDICTMENT requirement NOT incorporated to states; states can use information |
 | 1896 | Plessy v. Ferguson | 'Separate but equal' upheld for racial segregation; major civil rights setback (overruled Brown v. Board 1954) |
 | 1900 | Maxwell v. Dow | Held 6th Am 12-juror requirement NOT incorporated to states (later modified) |
@@ -86,7 +85,6 @@ export const govCivilLibertiesPart5Data = {
 | 1992 | Planned Parenthood v. Casey | Replaced trimester with UNDUE BURDEN; reaffirmed Roe core |
 | 1993 | RELIGIOUS FREEDOM RESTORATION ACT | Congressional response to Smith 1990 — restored compelling interest test |
 | 1997 | City of Boerne v. Flores | Limited RFRA to federal government |
-| 2000 | Boy Scouts v. Dale | Allowed Boy Scouts to exclude gay scoutmaster (1st Am expressive association) |
 | 2002 | Zelman v. Simmons-Harris | Allowed school vouchers used at religious schools |
 | 2003 | Lawrence v. Texas | Struck Texas anti-sodomy law; OVERRULED Bowers 1986 |
 
@@ -104,22 +102,15 @@ export const govCivilLibertiesPart5Data = {
 | 2015 | OBERGEFELL v. HODGES | Same-sex marriage right under 14th Am Due Process + Equal Protection |
 | 2017 | Trinity Lutheran v. Comer | Cannot exclude religious schools from neutral playground funding |
 | 2018 | Carpenter v. US | Cell-site location info requires warrant |
-| 2018 | Trump v. Hawaii | Upheld travel ban; repudiated Korematsu 1944 |
 | 2019 | Timbs v. Indiana | Incorporated 8th Am EXCESSIVE FINES CLAUSE |
 | 2020 | Espinoza v. Montana | Cannot exclude religious schools from neutral tax credit programs |
 | 2020 | Bostock v. Clayton County | 1964 Civil Rights Act protects LGBTQ+ employment |
 | 2020 | Ramos v. Louisiana | Required UNANIMOUS criminal jury verdicts in state courts |
-| 2022 | NY State Rifle v. Bruen | History-and-tradition test for 2nd Am; struck NY may-issue concealed carry |
 | 2022 | Carson v. Makin | Cannot exclude religious schools from tuition assistance |
-| 2022 | Kennedy v. Bremerton | Coach's post-game prayer protected; OVERRULED LEMON TEST |
 | 2022 | DOBBS v. JACKSON | OVERRULED Roe + Casey; abortion returned to states |
 | 2023 | 303 Creative v. Elenis | Web designer's 1st Am right not to design same-sex wedding sites |
-| 2024 | NetChoice v. Paxton/Moody | Platform 1st Am editorial rights signaled; remanded |
-| 2024 | Murthy v. Missouri | Limited standing in jawboning case (Biden COVID misinformation outreach) |
-| 2024 | US v. Rahimi | Refined Bruen — DV restraining order firearm restriction upheld |
-| 2024 | SEC v. Jarkesy | 7th Am jury trial right limits SEC ALJs for civil penalties |
 
-> 🔑 Key takeaway: 5 ERAS — (1) FOUNDING-RECONSTRUCTION 1791-1868 — Bill of Rights + Barron 1833 limited to federal; (2) LIMITED INCORPORATION 1868-1925 — 14th Am 1868 + Slaughter-House 1873 narrowed PI + Hurtado 1884; (3) WARREN-BURGER REVOLUTION 1925-1972 — Gitlow 1925 first incorporation + Brandenburg 1969 + Mapp 1961 + Gideon 1963 + Miranda 1966 + Tinker 1969 + Engel 1962 + criminal procedure revolution; (4) REHNQUIST 1972-2005 — Smith 1990 + RFRA 1993; Buckley 1976 + Citizens United precursors; Lawrence 2003; (5) ROBERTS 2005-present — Heller 2008 + McDonald 2010 + Bruen 2022; Citizens United 2010; Hobby Lobby 2014 + Trinity 2017 + Espinoza 2020 + Carson 2022 + 303 Creative 2023; Obergefell 2015; DOBBS 2022.
+> 🔑 Key takeaway: 5 ERAS — (1) FOUNDING-RECONSTRUCTION 1791-1868 — Bill of Rights + Barron 1833 limited to federal; (2) LIMITED INCORPORATION 1868-1925 — 14th Am 1868 + Hurtado 1884 declined to incorporate grand juries; (3) WARREN-BURGER REVOLUTION 1925-1972 — Gitlow 1925 first incorporation + Brandenburg 1969 + Mapp 1961 + Gideon 1963 + Miranda 1966 + Tinker 1969 + Engel 1962 + criminal procedure revolution; (4) REHNQUIST 1972-2005 — Smith 1990 + RFRA 1993; Buckley 1976 + Citizens United precursors; Lawrence 2003; (5) ROBERTS 2005-present — Heller 2008 + McDonald 2010; Citizens United 2010; Hobby Lobby 2014 + Trinity 2017 + Espinoza 2020 + Carson 2022 + 303 Creative 2023; Obergefell 2015; DOBBS 2022.
       `
     },
     {
@@ -137,7 +128,7 @@ export const govCivilLibertiesPart5Data = {
               "The Warren Court expanded gun and religious rights, while the Roberts Court has expanded rights of the accused"
             ],
             correctAnswer: 0,
-            explanation: 'WARREN COURT (1953-69) — major EXPANSION especially criminal defendants, minorities, voters, free speech: (1) CRIMINAL PROCEDURE REVOLUTION — Mapp 1961, Gideon 1963, Miranda 1966, Terry 1968; (2) FREE EXPRESSION — Brandenburg 1969, Tinker 1969, NYT v. Sullivan 1964; (3) RELIGION — Engel 1962, Abington 1963; (4) PRIVACY — Griswold 1965; (5) CIVIL RIGHTS — Brown 1954, Loving 1967, Reynolds v. Sims 1964. ROBERTS COURT (2005-present) — MORE MIXED: EXPANDED 2nd Am + religious liberty + corporate speech but RESTRICTED reproductive rights + voting rights: (1) 2ND AM — Heller 2008, McDonald 2010, Bruen 2022; (2) RELIGION — Hobby Lobby 2014, Trinity 2017, Espinoza 2020, Carson 2022, Kennedy v. Bremerton 2022, 303 Creative 2023; (3) CORPORATE — Citizens United 2010; (4) Obergefell 2015; (5) RESTRICTIONS — Dobbs 2022, Shelby County 2013, Brnovich 2021, SFFA 2023, Loper Bright 2024.'
+            explanation: 'WARREN COURT (1953-69) — major EXPANSION especially criminal defendants, minorities, voters, free speech: (1) CRIMINAL PROCEDURE REVOLUTION — Mapp 1961, Gideon 1963, Miranda 1966, Terry 1968; (2) FREE EXPRESSION — Brandenburg 1969, Tinker 1969, NYT v. Sullivan 1964; (3) RELIGION — Engel 1962, Abington 1963; (4) PRIVACY — Griswold 1965; (5) CIVIL RIGHTS — Brown 1954, Loving 1967, Reynolds v. Sims 1964. ROBERTS COURT (2005-present) — MORE MIXED: EXPANDED 2nd Am + religious liberty + corporate speech but RESTRICTED reproductive rights + voting rights: (1) 2ND AM — Heller 2008, McDonald 2010; (2) RELIGION — Hobby Lobby 2014, Trinity 2017, Espinoza 2020, Carson 2022, 303 Creative 2023; (3) CORPORATE — Citizens United 2010; (4) Obergefell 2015; (5) RESTRICTIONS — Dobbs 2022, Shelby County 2013, Brnovich 2021, SFFA 2023.'
           },
           {
             question: "How does the SELECTIVE INCORPORATION timeline reflect changing constitutional priorities from Gitlow v. New York (1925) to Timbs v. Indiana (2019)?",
@@ -160,22 +151,22 @@ export const govCivilLibertiesPart5Data = {
       exercise: {
         questions: [
           {
-            prompt: "Year *BARRON v. BALTIMORE* held Bill of Rights applied ONLY to federal government (not states).",
-            answer: '1833',
-            acceptableAnswers: ['1833'],
-            hint: 'Marshall Court; pre-14th Amendment.'
+            prompt: "Year the 14th Amendment, whose Due Process Clause later became the vehicle for selective incorporation, was ratified.",
+            answer: '1868',
+            acceptableAnswers: ['1868'],
+            hint: 'Reconstruction; three years after the 13th Amendment abolished slavery.'
           },
           {
-            prompt: "Year *BRANDENBURG v. OHIO* established IMMINENT LAWLESS ACTION test, replacing Schenck clear-and-present-danger.",
+            prompt: "Year *SCHENCK v. UNITED STATES* upheld a conviction for anti-draft leaflets under the clear-and-present-danger test.",
+            answer: '1919',
+            acceptableAnswers: ['1919'],
+            hint: 'Decided just after World War I ended; Holmes wrote the opinion.'
+          },
+          {
+            prompt: "Year *TINKER v. DES MOINES* protected students' black armbands protesting the Vietnam War as symbolic speech.",
             answer: '1969',
             acceptableAnswers: ['1969'],
-            hint: 'Warren Court last full year; KKK leader case.'
-          },
-          {
-            prompt: "Year *KENNEDY v. BREMERTON SCHOOL DISTRICT* OVERRULED the Lemon test and protected coach's post-game prayer.",
-            answer: '2022',
-            acceptableAnswers: ['2022'],
-            hint: 'Same Term as Dobbs + Bruen.'
+            hint: 'Late Warren Court; the Vietnam War was at its height.'
           }
         ]
       }
@@ -195,14 +186,14 @@ export const govCivilLibertiesPart5Data = {
             options: ['Founding-Reconstruction (1791-1868)', 'Warren-Burger Revolution (1925-1972)', 'Roberts Court (2005-present)', 'Limited Incorporation (1868-1925)']
           },
           {
-            label: "Heller 2008 + McDonald 2010 + Bruen 2022 (2nd Am); Hobby Lobby 2014 + Kennedy v. Bremerton 2022 (religious liberty); Citizens United 2010; Obergefell 2015; Dobbs 2022 OVERRULED Roe: ___",
+            label: "Heller 2008 + McDonald 2010 (2nd Am); Hobby Lobby 2014 (religious liberty); Citizens United 2010; Obergefell 2015; Dobbs 2022 OVERRULED Roe: ___",
             options: ['Founding-Reconstruction (1791-1868)', 'Warren-Burger Revolution (1925-1972)', 'Roberts Court (2005-present)', 'Limited Incorporation (1868-1925)']
           }
         ],
         correctAnswers: ['Founding-Reconstruction (1791-1868)', 'Warren-Burger Revolution (1925-1972)', 'Roberts Court (2005-present)'],
         hint1: 'Founding era — Bill of Rights ratified Dec 15, 1791; Barron v. Baltimore 1833 (Marshall) limited to federal; Alien and Sedition Acts 1798; Dred Scott 1857; era ended with 13th + 14th Am 1865-68.',
         hint2: 'Warren-Burger Revolution — Gitlow v. New York 1925 first incorporation; explosion of incorporation 1961-1969 (Mapp + Gideon + Malloy + Duncan + Benton); Engel + Tinker + Brandenburg + Griswold + Yoder defining cases.',
-        hint3: 'Roberts Court — major EXPANSION of 2nd Am (Heller/McDonald/Bruen) + religious liberty (Hobby Lobby/Trinity/Espinoza/Carson/Kennedy/303 Creative) + corporate speech (Citizens United); Obergefell 2015; Dobbs 2022 overruled Roe.'
+        hint3: 'Roberts Court — EXPANSION of 2nd Am (Heller/McDonald) + religious liberty (Hobby Lobby/Trinity/Espinoza/Carson/303 Creative) + corporate speech (Citizens United); Obergefell 2015; Dobbs 2022 overruled Roe.'
       }
     },
     {
@@ -212,26 +203,26 @@ export const govCivilLibertiesPart5Data = {
       exercise: {
         questions: [
           {
-            question: "How does the trajectory from KOREMATSU v. UNITED STATES (1944) → Trump v. Hawaii (2018) reveal both continuity + change in civil liberties during national security crises?",
+            question: "Which development best illustrates how changes in the Court's membership can lead it to reject an existing precedent?",
             options: [
-              "Each upheld a security measure, and Trump v. Hawaii repudiated Korematsu even as it still deferred to the President",
-              "Each struck down a security measure, and Trump v. Hawaii reaffirmed Korematsu as good law",
-              "Each applied rational basis review to citizens, and Trump v. Hawaii extended Korematsu to allow internment of noncitizens during war",
-              "Each was decided by Congress, and Trump v. Hawaii overruled Korematsu through new legislation"
+              "Dobbs v. Jackson (2022) overturning Roe v. Wade (1973) and returning abortion regulation to legislatures",
+              "Gideon v. Wainwright (1963) reaffirming that states need not provide lawyers in felony trials",
+              "Engel v. Vitale (1962) overturning Schenck's clear-and-present-danger test for wartime speech",
+              "McDonald v. Chicago (2010) overturning Tinker v. Des Moines and ending protection for student armbands in public schools"
             ],
             correctAnswer: 0,
-            explanation: 'KOREMATSU 1944 → TRUMP v. HAWAII 2018 — CONTINUITY + CHANGE: (1) KOREMATSU 1944 — UPHELD EO 9066 (FDR 1942) Japanese internment ~120K (mostly citizens) on West Coast; "strict scrutiny" nominally but DEFERRED to military judgment; Black majority emphasized military emergency; (2) AFTERMATH — Civil Liberties Act 1988 (Reagan) — \\$20K reparations to ~82K survivors + formal apology; (3) TRUMP v. HAWAII 2018 — UPHELD travel ban v3; Roberts majority DEFERENTIAL RATIONAL BASIS for immigration + national security; rejected Establishment Clause despite Trump anti-Muslim statements; (4) KOREMATSU REPUDIATION — Roberts: "gravely wrong the day it was decided"; (5) Sotomayor analogy to Korematsu; (6) CONTINUITY — both: executive action targeting based on national/ethnic/religious characteristics; judicial deference; dissents; (7) CHANGE — explicit repudiation; clearer doctrine; demonstrates difficulty of constraining executive in national security despite expressed regret.'
+            explanation: 'EK 2.9.A.2: ideological changes in the Court\'s composition due to presidential appointments have led it to establish new precedents or reject existing ones. After several new appointments, the Court in DOBBS (2022) overruled ROE (1973) and left abortion regulation to legislatures (EK 3.9.A.2) — a sharp departure from stare decisis. Gideon required, rather than rejected, counsel for poor felony defendants; Engel was an establishment-clause case that did not touch Schenck; McDonald incorporated the Second Amendment and left Tinker in place.'
           },
           {
-            question: "How does the evolution from EVERSON v. BOARD (1947) → LEMON v. KURTZMAN (1971) → KENNEDY v. BREMERTON (2022) reflect changing Establishment Clause doctrine?",
+            question: "How do *Engel v. Vitale* (1962) and *Wisconsin v. Yoder* (1972) reflect the two religion clauses of the First Amendment?",
             options: [
-              "Strict separation under Everson and the Lemon test gave way in Kennedy v. Bremerton to a history and tradition approach",
-              "Kennedy v. Bremerton adopted the Lemon test, replacing Everson's history and tradition approach",
-              "Everson required prayer in schools, Lemon allowed funding of churches, and Kennedy banned all religious expression by public employees",
-              "The Court has kept the Lemon test unchanged since 1971, applying it in Kennedy v. Bremerton"
+              "Engel limited government under the establishment clause, while Yoder protected a religious practice under free exercise",
+              "Engel protected a religious practice under free exercise, while Yoder limited government under the establishment clause",
+              "Both cases relied on the establishment clause to remove religion from public schools",
+              "Both cases upheld state laws, showing deference to states on religious matters"
             ],
             correctAnswer: 0,
-            explanation: 'EVOLUTION: (1) EVERSON 1947 (Black) — FIRST INCORPORATED Establishment Clause; "set up a church"; ALLOWED NJ school bus reimbursement to religious schools as "general welfare"; "WALL OF SEPARATION" (Jefferson 1802 Danbury Baptist letter); (2) LEMON 1971 — THREE-PART TEST: (a) SECULAR PURPOSE; (b) PRIMARY EFFECT NEITHER advances nor inhibits; (c) NO EXCESSIVE ENTANGLEMENT; struck PA + RI parochial school reimbursement; (3) Lemon broadly applied through 1990s; criticized for inconsistency; (4) MODIFIED — Marsh 1983 (legislative prayers historical), Lynch 1984 (nativity context), Lee v. Weisman 1992 (graduation coercion), Town of Greece 2014 (legislative prayers historical); (5) KENNEDY v. BREMERTON 2022 (Gorsuch) OVERRULED LEMON; HISTORICAL PRACTICES AND UNDERSTANDINGS test; protected football coach midfield prayer; (6) Major shift; with Trinity 2017 + Espinoza 2020 + Carson 2022 + 303 Creative 2023 → broader REACCOMMODATION of religion in public life.'
+            explanation: 'Both are required cases, and together they show the tension in EK 3.2.A.1. ENGEL (1962) applied the ESTABLISHMENT CLAUSE: a state may not compose or sponsor an official school prayer, even a voluntary, nondenominational one — a limit on government. YODER (1972) applied the FREE EXERCISE CLAUSE: Wisconsin could not force Amish children to attend school past eighth grade — protection for a religious practice. Each case struck down (not upheld) the state policy.'
           }
         ]
       }

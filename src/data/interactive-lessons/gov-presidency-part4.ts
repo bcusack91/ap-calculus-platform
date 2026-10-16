@@ -43,7 +43,6 @@ export const govPresidencyPart4Data = {
 | **Bargaining (Neustadt)** | "Power to persuade" — quid pro quo with members |
 | **Going public (Kernell)** | Mobilize public opinion to pressure Congress |
 | **Unilateral action (Howell)** | Act via EO, executive agreement, signing statement when Congress is gridlocked |
-| **Reconciliation strategy** | Use 51-vote budget procedure for major partisan legislation (Bush tax cuts, ACA parts, Trump tax cuts, ARPA, IRA) |
 
 ## Presidency × Judiciary
 
@@ -77,8 +76,7 @@ export const govPresidencyPart4Data = {
 | **Cabinet appointments** | President appoints Cabinet secretaries (Senate confirms); secretaries serve at presidential pleasure |
 | **EOP (Executive Office of the President)** | ~1,800 staff; OMB, NSC, Council of Economic Advisers, etc. — centralizes policy in White House |
 | **Executive orders** | Direct executive-branch officials |
-| **Removal power** | *Myers v. US* 1926 (broad removal); *Humphrey's Executor* 1935 (independent agency limit); *Seila Law* 2020 (CFPB single director removable at will) |
-| **OIRA review** | Office of Information and Regulatory Affairs reviews proposed rules (since Reagan EO 12291) |
+| **Presidential ideology + compliance monitoring** | A president's ideology, authority, and influence shape how agencies pursue the administration's goals; monitoring checks that funds and rules are followed (EK 2.14.B.1-2) |
 | **Senate-confirmed appointments** | ~1,200 Senate-confirmed positions across executive branch |
 
 ### Bureaucratic Resistance to Presidential Direction
@@ -89,7 +87,6 @@ export const govPresidencyPart4Data = {
 | **Independent agencies** | SEC, FCC, FRB, NLRB — multimember boards w/ staggered terms; commissioners removable only for cause |
 | **Iron triangles** | Agency-Congress committee-interest group alliances resist presidential change |
 | **Issue networks** | Modern looser policy communities w/ similar resistance dynamics |
-| **Schedule F (Trump 2020 + 2025)** | Attempted to convert ~50,000 career employees to at-will to enable removal — a major modern presidential challenge to civil service |
 
 ## Presidency × Federalism
 
@@ -131,7 +128,7 @@ export const govPresidencyPart4Data = {
               "Independent agencies report only to the Supreme Court, so presidents directly control just the Cabinet departments"
             ],
             correctAnswer: 0,
-            explanation: 'Presidential-bureaucratic relationship: CONSTITUTIONAL AUTHORITY (Take Care Art II § 3 + Vesting Art II § 1) + PRACTICAL TENSIONS. Presidents control: Cabinet + ~1,200 Senate-confirmed + ~1,800 EOP + EOs + at-will firing of political appointees + OIRA rule review (Reagan EO 12291). RESISTANCE: (1) Pendleton 1883 protects ~2M career civil servants (cause only); (2) Independent agencies (SEC/FCC/FRB/NLRB) — multimember boards + staggered terms + for-cause removal per Humphrey\'s Executor 1935; (3) Iron triangles + issue networks; (4) Trump SCHEDULE F (2020/2025) → ~50K career → at-will = modern challenge to civil service.'
+            explanation: 'Presidential-bureaucratic relationship: CONSTITUTIONAL AUTHORITY (Take Care Art II § 3 + Vesting Art II § 1) + PRACTICAL TENSIONS. Presidents control: Cabinet + ~1,200 Senate-confirmed + ~1,800 EOP + EOs + at-will firing of political appointees (EK 2.14.B.1). RESISTANCE: (1) Pendleton 1883 merit system protects career civil servants (EK 2.12.A.2); (2) Independent agencies (SEC/FCC/FRB/NLRB) — multimember boards + staggered terms + for-cause removal; (3) Iron triangles + issue networks (EK 2.12.A.1); (4) congressional statutes and oversight (EK 2.14.A.1).'
           },
           {
             question: "Which best describes the relationship between Presidency and Judiciary regarding judicial appointments?",
@@ -142,7 +139,7 @@ export const govPresidencyPart4Data = {
               "The Chief Justice nominates lower federal judges for Senate confirmation, so presidents influence only Supreme Court seats"
             ],
             correctAnswer: 0,
-            explanation: 'Art II § 2 cl 2: President nominates federal judges (SCOTUS, COA, district); Senate majority confirms. SIGNIFICANCE: shapes judiciary for DECADES because Art III § 1 LIFE TENURE ("good Behaviour"). Patterns: (1) Reagan = 3 SCOTUS (O\'Connor + Scalia + Kennedy + Rehnquist CJ promotion) + ~400 lower-court; (2) Trump T1 = 3 SCOTUS (Gorsuch + Kavanaugh + Barrett → 6-3 conservative) + 230+ lower-court; (3) Biden = 1 SCOTUS (Jackson, 1st Black woman) + 235+ lower-court (diversity). 6-3 SCOTUS → Dobbs 2022 (overturned Roe 1973), Bruen 2022 (2A), Loper Bright 2024 (overturned Chevron).'
+            explanation: 'Art II § 2 cl 2: President nominates federal judges (SCOTUS, COA, district); Senate majority confirms. SIGNIFICANCE: shapes judiciary for DECADES because Art III § 1 LIFE TENURE ("good Behaviour"). Patterns: (1) Reagan = 3 SCOTUS (O\'Connor + Scalia + Kennedy + Rehnquist CJ promotion) + ~400 lower-court; (2) Trump T1 = 3 SCOTUS (Gorsuch + Kavanaugh + Barrett → 6-3 conservative) + 230+ lower-court; (3) Biden = 1 SCOTUS (Jackson, 1st Black woman) + 235+ lower-court (diversity). 6-3 SCOTUS → Dobbs 2022 (overturned Roe 1973) (EK 2.5.A.2, 2.9.A.2).'
           }
         ]
       }
@@ -160,10 +157,10 @@ export const govPresidencyPart4Data = {
             hint: 'Two years after Garfield assassination by disappointed office-seeker Charles Guiteau.'
           },
           {
-            prompt: "Year of *Humphrey's Executor v. United States* — Court holds FTC commissioners removable only for cause (limiting presidential removal of independent agency officials).",
-            answer: '1935',
-            acceptableAnswers: ['1935'],
-            hint: 'Same year as Wagner Act + Social Security Act + Schechter Poultry striking NIRA.'
+            prompt: "The 1974 law (a CED illustrative example) limiting a president's ability to refuse to spend money Congress appropriated: the Budget and ___ Control Act.",
+            answer: 'Impoundment',
+            acceptableAnswers: ['Impoundment', 'impoundment'],
+            hint: 'Passed after Nixon withheld appropriated funds.'
           },
           {
             prompt: "Approximate number of staff in the modern Executive Office of the President (EOP) — round to the nearest hundred.",
@@ -189,14 +186,14 @@ export const govPresidencyPart4Data = {
             options: ['Congress', 'Judiciary', 'Bureaucracy', 'Public/media']
           },
           {
-            label: "Executive order + OIRA review + Cabinet appointments + Schedule F: ___",
+            label: "Executive order + OMB budget review + Cabinet appointments + directives to agencies: ___",
             options: ['Congress', 'Judiciary', 'Bureaucracy', 'Public/media']
           }
         ],
         correctAnswers: ['Congress', 'Judiciary', 'Bureaucracy'],
         hint1: 'Veto + signing statement + treaty negotiation all directly engage the lawmaking process (Congress).',
         hint2: 'Solicitor General + judicial nominations + pardon all directly involve the federal courts (Judiciary).',
-        hint3: 'Executive order + OIRA review + Cabinet appointments + Schedule F all primarily target the bureaucracy.'
+        hint3: 'Executive orders, OMB review, Cabinet appointments, and agency directives all primarily target the bureaucracy (EK 2.14.B.1).'
       }
     },
     {

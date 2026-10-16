@@ -46,10 +46,12 @@ export const govConstitutionalFoundationsPart2Data = {
 
 ## The Amendment Process (Article V)
 
-| Step | Method 1 (Used 27 times) | Method 2 (Never used at federal level) |
+| Stage | Route A | Route B |
 |---|---|---|
-| **Proposal** | 2/3 vote of both houses of Congress | 2/3 of state legislatures (currently 34 of 50) call a convention |
-| **Ratification** | 3/4 of state legislatures (currently 38 of 50), OR | 3/4 of state ratifying conventions (used once: 21st Amendment, 1933, repealing Prohibition) |
+| **Proposal** | 2/3 vote of both houses of Congress (used for all 27 amendments) | A national convention called by 2/3 of state legislatures (currently 34 of 50); never used |
+| **Ratification** | 3/4 of state legislatures (currently 38 of 50); used for 26 amendments | 3/4 of state ratifying conventions; used once, for the 21st Amendment (1933), repealing Prohibition |
+
+Any proposal route can be paired with either ratification route; Congress chooses the ratification route.
 
 | Era | Amendments | Significance |
 |---|---|---|
@@ -60,7 +62,9 @@ export const govConstitutionalFoundationsPart2Data = {
 | Mid-20th Century (1933–71) | 20 (lame duck), 21 (Prohibition repeal), 22 (presidential 2-term limit), 23 (DC electors), 24 (poll tax abolition), 25 (presidential succession), 26 (18-year-old vote) | Procedural and voting-rights expansion |
 | Late 20th Century (1992) | 27 (congressional pay) — proposed 1789, ratified 1992 | Long-pending Madison amendment |
 
-## Separation of Powers in Action — Three AP Cases
+## Separation of Powers in Action — Three Cases
+
+*Marbury* and *McCulloch* are two of the 14 required Supreme Court cases; *United States v. Nixon* is an illustrative (not required) example the CED lists for Topic 2.9.
 
 | Case | Year | Holding |
 |---|---|---|
@@ -162,15 +166,15 @@ export const govConstitutionalFoundationsPart2Data = {
       exercise: {
         questions: [
           {
-            question: 'AP SCOTUS comparison prompt: A non-required case asks whether a presidential executive order seizing private steel mills during the Korean War was constitutional. Which landmark case on presidential power provides the most useful comparison?',
+            question: 'AP SCOTUS comparison prompt: In a non-required case (Youngstown Sheet & Tube v. Sawyer, 1952), the Supreme Court ruled that President Truman could not seize private steel mills during the Korean War without authorization from Congress. Which REQUIRED case shares the principle the Court applied?',
             options: [
-              "United States v. Nixon (1974), which held that executive privilege is not absolute and that the President must comply with a judicial subpoena",
-              "Marbury v. Madison (1803), which held that the Court could order the Secretary of State to deliver a commission",
-              "Clinton v. City of New York (1998), which held that the President may cancel individual items in spending bills",
-              "Schenck v. United States (1919), which held that wartime emergencies allow the executive to seize private property without approval from Congress"
+              "Marbury v. Madison (1803), which established the judiciary's power to declare actions of the other branches unconstitutional",
+              "Schenck v. United States (1919), which upheld limits on speech that created a clear and present danger in wartime",
+              "McCulloch v. Maryland (1819), which held that a state may not tax a bank created under Congress's implied powers",
+              "Engel v. Vitale (1962), which held that school-sponsored prayer in public schools violates the establishment clause"
             ],
             correctAnswer: 0,
-            explanation: 'AP SCOTUS comparison: US v. Nixon (1974) — judicial enforcement of constitutional limits on executive power → analogous to Youngstown (1952, Black + Jackson concurrence with three zones depending on congressional support) striking Truman steel seizure as unauthorized by Congress and beyond Article II.'
+            explanation: 'The SCOTUS comparison question always pairs a non-required case with a REQUIRED one. Youngstown applied JUDICIAL REVIEW to strike down an executive action that lacked constitutional or statutory authority — the power Marbury v. Madison (1803) established. Schenck upheld government power in wartime; McCulloch concerned federal-state relations; Engel concerned the establishment clause.'
           },
           {
             question: 'Which best demonstrates AP "complexity" by analyzing the limits of formal checks and balances?',
@@ -181,7 +185,7 @@ export const govConstitutionalFoundationsPart2Data = {
               "The formal checks have shifted practical power toward Congress, which now writes detailed statutes that leave agencies and the President little discretion in carrying them out"
             ],
             correctAnswer: 0,
-            explanation: 'AP complexity: post-New Deal balance shift toward executive — executive orders (EO 9981, 10730, DACA, 13769) + executive agreements (~90% intl agreements vs treaties) + signing statements (Bush 43 ~1,200 challenges) + prosecutorial discretion + administrative state + Chevron deference 1984 (overturned 2024) → formal text and operational reality diverge.'
+            explanation: 'AP complexity: post-New Deal balance shift toward executive — executive orders (EO 9981, 10730, DACA, 13769) + executive agreements (~90% intl agreements vs treaties) + signing statements (Bush 43 ~1,200 challenges) + prosecutorial discretion + administrative state (broad delegated discretion) → formal text and operational reality diverge.'
           }
         ]
       }

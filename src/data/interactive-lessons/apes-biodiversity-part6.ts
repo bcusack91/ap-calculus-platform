@@ -39,7 +39,7 @@ Brown-headed cowbirds are **edge** species that lay their eggs in other birds' n
 
 (a) **Identify** the species richness of each plot.
 
-(b) **Calculate** Simpson's diversity index, $D = 1 - \\Sigma (n/N)^{2}$, for Plot B.
+(b) **Calculate** the percent of Plot B's birds that are brown-headed cowbirds.
 
 (c) **Calculate** the percent of the original forest that was lost.
 
@@ -56,7 +56,7 @@ Brown-headed cowbirds are **edge** species that lay their eggs in other birds' n
       content: `
 **Calculate It** 🧮
 
-1) (b) Simpson's diversity index for Plot B (three decimals):
+1) (b) Percent of Plot B's birds that are cowbirds:
 
 2) (c) Percent of the original forest lost:
 
@@ -64,11 +64,11 @@ Brown-headed cowbirds are **edge** species that lay their eggs in other birds' n
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.465', '96', '14'],
-        hint1: 'Square each proportion: 0.70, 0.20, 0.05 and 0.05. Add the squares and subtract from 1.',
+        correctAnswers: ['70', '96', '14'],
+        hint1: 'Cowbirds ÷ total birds in Plot B × 100.',
         hint2: '480 of the 500 hectares were cleared.',
         hint3: 'Rule of 70: 70 ÷ the percent rate of decline.',
-        explanation: '(b) 0.49 + 0.04 + 0.0025 + 0.0025 = 0.535, so D = 1 − 0.535 = 0.465. (c) 480 ÷ 500 × 100 = 96 percent. (d) 70 ÷ 5 = 14 years.'
+        explanation: '(b) 70 ÷ 100 × 100 = 70 percent. (c) 480 ÷ 500 × 100 = 96 percent. (d) 70 ÷ 5 = 14 years.'
       }
     },
     {
@@ -79,17 +79,7 @@ Brown-headed cowbirds are **edge** species that lay their eggs in other birds' n
 
 **(a)** Plot A: **5** species. Plot B: **4** species (vireo, tanager, robin, cowbird).
 
-**(b)** Proportions in Plot B: cowbird 0.70, robin 0.20, vireo 0.05, tanager 0.05.
-
-| Species | $n/N$ | $(n/N)^{2}$ |
-|---|---|---|
-| Cowbird | 0.70 | 0.4900 |
-| Robin | 0.20 | 0.0400 |
-| Vireo | 0.05 | 0.0025 |
-| Tanager | 0.05 | 0.0025 |
-| **Sum** | | **0.5350** |
-
-$D = 1 - 0.535 = 0.465$. For comparison, Plot A has five species at 0.20 each: $\\Sigma = 5 \\times 0.04 = 0.20$, so $D = 0.80$. Plot B is far less diverse: lower richness **and** much lower evenness.
+**(b)** $\\dfrac{70}{100} \\times 100 = 70\\%$ of Plot B's birds are cowbirds. Plot A's five species each make up 20 percent, so Plot B is far less diverse: lower richness **and** one edge species dominating.
 
 **(c)** $\\dfrac{480}{500} \\times 100 = 96\\%$ lost (equivalently, percent change in forest area $= \\dfrac{20 - 500}{500} \\times 100 = -96\\%$).
 

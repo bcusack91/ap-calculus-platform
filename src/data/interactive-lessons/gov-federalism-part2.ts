@@ -16,7 +16,7 @@ export const govFederalismPart2Data = {
 | Fiscal federalism: grants-in-aid mechanics |
 | Mandates and preemption |
 | Federal-state cooperation in policy delivery |
-| Anti-commandeering doctrine |
+| Who prefers which funding tool (EK 1.7.A.5) |
 
 > 🔑 Key idea: The most important modern federalism mechanisms are NOT direct constitutional structure — they are FISCAL: federal money flowing to states with conditions attached. Roughly 30% of state and local government revenue comes from federal grants, making federalism in practice a constant negotiation over money.
       `
@@ -56,17 +56,20 @@ The federal government distributes hundreds of billions of dollars annually to s
 | **Conflict preemption** | Compliance with both federal and state law is impossible OR state law frustrates federal regulatory purpose | Federal labor law preempting state laws that interfere with collective bargaining; federal drug-approval requirements vs. state liability claims |
 | **Anti-preemption** | State law is NOT preempted because Congress has not legislated in the field, has expressly preserved state authority, or has enacted only minimum federal standards (states may exceed) | California vehicle-emissions standards stricter than federal; state minimum-wage laws above federal floor |
 
-## Anti-Commandeering Doctrine
+## Who Prefers Which Funding Tool — EK 1.7.A.5
 
-The Supreme Court has held that the federal government may NOT directly conscript state legislatures or state executive officers to enforce federal regulatory programs:
+The CED ranks the four tools that distribute power between national and state governments by how much control each side keeps:
 
-| Case | Year | Holding |
-|---|---|---|
-| ***New York v. United States*** | 1992 | Federal Low-Level Radioactive Waste Policy Amendments Act\'s "take title" provision (compelling states to take title to radioactive waste they failed to dispose of) violated the 10th Amendment by commandeering state legislative process |
-| ***Printz v. United States*** | 1997 | Federal Brady Handgun Violence Prevention Act\'s requirement that state and local law enforcement perform background checks on handgun purchasers commandeered state executive officers in violation of the 10th Amendment |
-| ***Murphy v. NCAA*** | 2018 | Federal Professional and Amateur Sports Protection Act of 1992 (prohibiting states from authorizing sports gambling) commandeered state legislatures by directly regulating their lawmaking |
+| Tool | Restrictions on states | Who prefers it | How often used |
+|---|---|---|---|
+| **Revenue sharing** | Almost none | States (most freedom) | LEAST used form of funding today |
+| **Block grants** | Minimal — broad purpose | PREFERRED BY THE STATES | Common (TANF, CDBG) |
+| **Categorical grants** | Restricted to specific categories of spending | PREFERRED BY THE NATIONAL GOVERNMENT | MOST COMMONLY USED form of funding |
+| **Mandates** | Requirements the states must follow, funded or not | National government | Frequent (ADA, Real ID, Clean Air Act standards) |
 
-> 🔑 The federal government CAN: (1) regulate the private conduct directly itself (rather than commanding states to do so); (2) condition federal money on state compliance; (3) preempt conflicting state law. The federal government CANNOT: directly command state legislatures to enact specific laws OR state executive officers to enforce specific federal programs.
+**How this plays out (EK 1.9.A.1-2):** because power is shared, national policy depends on state cooperation. The National Minimum Drinking Age Act (1984) — a CED illustrative example — did not set a national drinking age directly; it withheld a share of federal highway money from states with a drinking age under 21, and every state complied. Each level is also an ACCESS POINT: groups that lose in Congress can lobby state legislatures, and vice versa.
+
+> 🔑 The federal government's strongest tools for shaping state policy are money (categorical grants and conditions of aid), mandates, and preemption under the Supremacy Clause. States push back by preferring block grants and by using their reserved powers.
       `
     },
     {
@@ -87,15 +90,15 @@ The Supreme Court has held that the federal government may NOT directly conscrip
             explanation: 'Categorical vs block grants: CATEGORICAL = specific purpose + extensive federal regulations (high federal control / low state autonomy) — Title I, Head Start, Medicaid components, federal highway construction. BLOCK = broad purpose + state discretion (medium control / medium-high autonomy) — CDBG, TANF (since 1996), WIA. Trend: partial shift to block as devolution.'
           },
           {
-            question: "Which best describes the anti-commandeering doctrine?",
+            question: "Which best explains why state governments generally prefer block grants while the national government generally prefers categorical grants?",
             options: [
-              "Congress may not order state legislatures or officers to carry out federal programs, as in Printz v. United States",
-              "Congress may not attach any conditions to federal grants, so states can accept the money while ignoring the rules, as in South Dakota v. Dole",
-              "Congress may direct state officers to enforce federal laws, since the Supremacy Clause makes them national agents, as in McCulloch v. Maryland",
-              "Federal agencies may not regulate private individuals directly, so they must work through the states, as in New York v. United States"
+              "Block grants let states set their own priorities, while categorical grants let Washington control how money is spent",
+              "Block grants must be repaid to the Treasury with interest, while categorical grants are gifts that states never have to account for",
+              "Block grants come with more detailed federal rules, while categorical grants let states spend the money on any purpose they choose",
+              "Block grants are the most commonly used form of federal aid, while categorical grants are rarely used by Congress today"
             ],
             correctAnswer: 0,
-            explanation: 'Anti-commandeering: federal government may NOT conscript state legislatures or executives to enforce federal programs. New York v. United States (1992, take-title radioactive waste). Printz v. United States (1997, Brady Act background checks). Murphy v. NCAA (2018, sports-gambling ban). Grounded in 10th Amendment + dual sovereignty.'
+            explanation: 'EK 1.7.A.5: BLOCK GRANTS carry minimal restrictions and are preferred by the states; CATEGORICAL GRANTS are restricted to specific categories of expenditure, are preferred by the national government, and are the MOST commonly used form of funding. Neither is a loan, and the distractors reverse which grant carries more rules and which is used more.'
           }
         ]
       }
@@ -107,16 +110,16 @@ The Supreme Court has held that the federal government may NOT directly conscrip
       exercise: {
         questions: [
           {
-            prompt: "The 1987 Supreme Court case (Rehnquist) UPHOLDING the federal condition that states adopt a 21-year-old drinking age or lose federal HIGHWAY funds: South Dakota v. ___.",
-            answer: 'Dole',
-            acceptableAnswers: ['Dole', 'dole', 'south dakota v. dole'],
-            hint: 'Named for the Secretary of Transportation (Elizabeth Dole) who administered the highway funds.'
+            prompt: "The 1984 federal law that withheld highway funds from states with a drinking age below 21 (a CED illustrative example): the National Minimum ___ Age Act.",
+            answer: 'Drinking',
+            acceptableAnswers: ['Drinking', 'drinking'],
+            hint: 'Congress used money, not a direct order, to change state alcohol laws.'
           },
           {
-            prompt: "The 1997 Supreme Court case (Scalia) STRIKING DOWN the federal Brady Handgun Act requirement that state law enforcement perform background checks (anti-commandeering): Printz v. ___.",
-            answer: 'United States',
-            acceptableAnswers: ['United States', 'united states', 'us', 'u.s.'],
-            hint: '5-4 decision; Scalia majority opinion; landmark anti-commandeering case alongside New York v. United States 1992.'
+            prompt: "The type of federal grant that the national government prefers and that is the most commonly used form of funding: ___ grant.",
+            answer: 'categorical',
+            acceptableAnswers: ['categorical', 'Categorical', 'categorical grant', 'categorical grants'],
+            hint: 'EK 1.7.A.5.iii — restricted to specific categories of expenditures.'
           },
           {
             prompt: "The general term for federal requirements that states implement federal policies WITHOUT federal funding (partially limited by the 1995 Reform Act): ___ mandates.",
@@ -142,15 +145,15 @@ The Supreme Court has held that the federal government may NOT directly conscrip
             options: ['categorical', 'block', 'project', 'formula']
           },
           {
-            label: "Federal funds awarded competitively to states/localities/non-profits submitting specific proposals: ___ grant.",
-            options: ['categorical', 'block', 'project', 'formula']
+            label: "Federal funds with almost no restrictions on their use — the least-used form of funding today: ___.",
+            options: ['categorical', 'block', 'revenue sharing', 'formula']
           }
         ],
-        correctAnswers: ['categorical', 'block', 'project'],
+        correctAnswers: ['categorical', 'block', 'revenue sharing'],
         hint1: 'Specific purpose + extensive regulations = highest federal control.',
         hint2: 'Broad purpose + state discretion = medium control = TANF, CDBG.',
-        hint3: 'Competitive selection = Race to the Top, NSF research, DOE research.',
-        explanation: 'Grant types: Categorical = specific + regulated (Title I, Head Start, federal highway). Block = broad + state discretion (CDBG, TANF post-1996, WIA). Project = competitive (Race to the Top, NSF, DOE). Formula = statutory distribution (highway, Medicaid, Title I).'
+        hint3: 'No strings at all = revenue sharing (1972-86).',
+        explanation: 'Grant types: Categorical = specific + regulated (Title I, Head Start, federal highway). Block = broad + state discretion (CDBG, TANF post-1996, WIA). Revenue sharing = almost no restrictions; least used (EK 1.7.A.5.i). Project = competitive (Race to the Top, NSF, DOE). Formula = statutory distribution (highway, Medicaid, Title I).'
       }
     },
     {
@@ -160,15 +163,15 @@ The Supreme Court has held that the federal government may NOT directly conscrip
       exercise: {
         questions: [
           {
-            question: "AP scenario: Congress enacts a statute requiring state DMVs to share driver-license data with the federal government and to verify federal immigration status before issuing licenses. State officials refuse, citing the 10th Amendment. Which Supreme Court precedent most directly controls?",
+            question: "AP scenario: In 1984 Congress wanted every state to raise its drinking age to 21, but setting a minimum drinking age is a power reserved to the states. Which approach did Congress use in the National Minimum Drinking Age Act?",
             options: [
-              "Printz v. United States, because the federal government cannot command state officers to administer a federal regulatory program",
-              "South Dakota v. Dole, because Congress can require state compliance by threatening to withhold all federal highway funding from noncompliant states",
-              "McCulloch v. Maryland, because the Supremacy Clause lets the national government direct state agencies and officers whenever a federal law requires it",
-              "United States v. Lopez, because issuing driver's licenses is not an economic activity that Congress may regulate"
+              "It withheld part of the federal highway money from any state that kept a drinking age under 21",
+              "It proposed a constitutional amendment setting a national drinking age",
+              "It ordered state police to enforce a new federal criminal statute against underage drinkers",
+              "It used the Supremacy Clause to void every state law that allowed people under 21 to drink alcohol"
             ],
             correctAnswer: 0,
-            explanation: 'Printz v. United States (1997) controls: struck Brady Act state background-check requirement → federal government may NOT commandeer state executives ("may neither issue directives requiring States to address particular problems, nor command States\' officers to administer federal regulatory program"). DMV/immigration scenario = paradigm forbidden executive commandeering. Federal alternatives: (a) condition federal funds (Dole 1987) OR (b) regulate private conduct directly through federal officers.'
+            explanation: 'The National Minimum Drinking Age Act (1984) is a CED illustrative example for EK 1.7.A: Congress attached a CONDITION to federal highway money instead of commanding the states, and the Supreme Court upheld the condition in 1987. It shows how national funding (EK 1.7.A.5) shifts the balance of power even over reserved powers. No amendment was proposed, Congress did not create a federal crime for underage drinking, and the Supremacy Clause applies only when a valid federal law conflicts with state law.'
           },
           {
             question: "AP scenario: A state legislature passes a stricter motor-vehicle emissions standard than the federal Clean Air Act standard, citing a state goal of reducing air pollution. A national auto manufacturers\' association argues the state law is preempted. What is the most likely outcome under federalism doctrine?",

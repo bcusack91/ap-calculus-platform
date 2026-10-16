@@ -43,7 +43,7 @@ PARTY IDENTIFICATION (PID) is the single STRONGEST predictor of vote choice + po
 MOTIVATED REASONING = tendency to PROCESS INFORMATION in ways that confirm prior beliefs/identities; differential standards for accepting vs rejecting info.
 
 - Reps + Dems literally see different "facts" — economic conditions perceived through partisan lens (Reps rated Trump economy higher than Biden economy with similar metrics)
-- 61% of Reps still doubt 2020 election results despite no evidence of fraud + 60+ failed lawsuits + Trump's own DOJ + DHS + courts confirming results
+- ~2/3 of Reps still doubt 2020 election results despite no evidence of fraud + 60+ failed lawsuits + Trump's own DOJ + DHS + courts confirming results
 - Climate change denial concentrated among Reps despite scientific consensus
 - COVID vaccine refusal correlated with Rep ID
 - Hostile media perception — both partisans see same media as biased against their side
@@ -89,9 +89,9 @@ Madison FEDERALIST 10 worried about MAJORITY FACTIONS oppressing minorities; mod
 
 | Outlet | Audience | Lean |
 |---|---|---|
-| **FOX NEWS** | ~2.5M prime time | Conservative |
-| **MSNBC** | ~1.5M prime time | Liberal |
-| **CNN** | ~600K prime time | Center-left (declining) |
+| **FOX NEWS** | ~2.4M prime time (2024) | Conservative |
+| **MSNBC** | ~1.2M prime time (2024) | Liberal |
+| **CNN** | ~700K prime time (2024) | Center-left (declining) |
 | **NEWSMAX + OAN** | Smaller but growing | Hard right |
 | **NEW YORK TIMES** | Largest US newspaper subscribership | Center-left |
 | **WASHINGTON POST** | Major | Center-left |
@@ -118,7 +118,7 @@ Madison FEDERALIST 10 worried about MAJORITY FACTIONS oppressing minorities; mod
 ### 2024 Media Story
 
 Trump 2024 victory partly attributed to:
-- ROGAN ENDORSEMENT (3-hr interview late October; Rogan endorsed Trump; ~50M reach)
+- ROGAN ENDORSEMENT (3-hr interview late October; Rogan endorsed Trump; tens of millions of views)
 - MANOSPHERE PODCAST CIRCUIT — Trump did Theo Von, Andrew Schulz, Lex Fridman, Shawn Ryan, Adin Ross, etc.
 - MUSK X TAKEOVER → GOP-friendly algorithm + Trump unbanned
 - HARRIS DECLINED ROGAN INVITATION (or it fell through over scheduling)
@@ -208,7 +208,7 @@ Trump 2024 victory partly attributed to:
               "Motivated reasoning affects only independents, so strong partisans judge economic news accurately and hold their own leaders fully accountable at the polls.",
             ],
             correctAnswer: 0,
-            explanation: 'PARTY IDENTIFICATION (PID) = stable psychological attachment to party from socialization (esp family); foundational per AMERICAN VOTER (Campbell + Converse + Miller + Stokes 1960). PID = PERCEPTUAL SCREEN filtering info + evaluating events. (1) STRENGTH — strongest predictor of vote/policy/evaluations; 90%+ partisans vote party (up from ~75% in 1960s); TRUE INDEPENDENTS ~10% (most "independents" lean); more stable than ideology/issues. (2) MOTIVATED REASONING — process info to confirm prior beliefs (Kunda 1990; Lodge + Taber 2000). (3) EXAMPLES — economic perceptions (Reps rated Trump econ higher than Biden with similar metrics); 61% Reps doubt 2020 despite no evidence + failed lawsuits + Trump\'s DOJ + DHS + courts; climate denial concentrated Reps despite consensus; COVID vaccine refusal correlated Rep ID; hostile media perception both sides (Vallone + Ross + Lepper 1985); negativity asymmetry. (4) PARTISAN SORTING — Levendusky THE PARTISAN SORT (2009) + Mason UNCIVIL AGREEMENT (2018) "mega-identity" race+religion+region+culture+party; mid-20th C parties COALITIONS (Southern conservative Dems + NE liberal Reps); today no liberal Reps/conservative Dems. (5) WHY IT MATTERS — undermines accountability (insulates incumbents from blame/opponents from credit); RETROSPECTIVE VOTING (Fiorina) less reliable (partisans retroject); SPIRALING POLARIZATION; NEGATIVE PARTISANSHIP (Abramowitz) — fear/hatred of opposing party = strongest predictor; weakens deliberative democracy; institutions struggle to convey shared facts; DEMOCRATIC BACKSLIDING (Levitsky + Ziblatt HOW DEMOCRACIES DIE 2018; Mounk).'
+            explanation: 'PARTY IDENTIFICATION (PID) = stable psychological attachment to party from socialization (esp family); foundational per AMERICAN VOTER (Campbell + Converse + Miller + Stokes 1960). PID = PERCEPTUAL SCREEN filtering info + evaluating events. (1) STRENGTH — strongest predictor of vote/policy/evaluations; 90%+ partisans vote party (up from ~75% in 1960s); TRUE INDEPENDENTS ~10% (most "independents" lean); more stable than ideology/issues. (2) MOTIVATED REASONING — process info to confirm prior beliefs (Kunda 1990; Lodge + Taber 2000). (3) EXAMPLES — economic perceptions (Reps rated Trump econ higher than Biden with similar metrics); ~2/3 of Reps doubt 2020 despite no evidence + failed lawsuits + Trump\'s DOJ + DHS + courts; climate denial concentrated Reps despite consensus; COVID vaccine refusal correlated Rep ID; hostile media perception both sides (Vallone + Ross + Lepper 1985); negativity asymmetry. (4) PARTISAN SORTING — Levendusky THE PARTISAN SORT (2009) + Mason UNCIVIL AGREEMENT (2018) "mega-identity" race+religion+region+culture+party; mid-20th C parties COALITIONS (Southern conservative Dems + NE liberal Reps); today no liberal Reps/conservative Dems. (5) WHY IT MATTERS — undermines accountability (insulates incumbents from blame/opponents from credit); RETROSPECTIVE VOTING (Fiorina) less reliable (partisans retroject); SPIRALING POLARIZATION; NEGATIVE PARTISANSHIP (Abramowitz) — fear/hatred of opposing party = strongest predictor; weakens deliberative democracy; institutions struggle to convey shared facts; DEMOCRATIC BACKSLIDING (Levitsky + Ziblatt HOW DEMOCRACIES DIE 2018; Mounk).'
           }
         ]
       }
@@ -232,10 +232,10 @@ Trump 2024 victory partly attributed to:
             hint: 'Alan Abramowitz documented in THE GREAT ALIGNMENT (2018) + THE DISAPPEARING CENTER (2010); voters increasingly motivated by anti-other-party feeling; combined with asymmetric polarization creates spiraling dynamic; produces high turnout in modern era + strong party loyalty.'
           },
           {
-            prompt: "1987 study by Iyengar + Kinder of media PRIMING + AGENDA-SETTING + FRAMING effects on viewers of TV news.",
-            answer: 'News That Matters',
-            acceptableAnswers: ['News That Matters', 'News that Matters', 'news that matters'],
-            hint: 'Foundational experimental research on TV news effects; demonstrated AGENDA-SETTING (issues covered become important), PRIMING (covered issues used as evaluation criteria), FRAMING (presentation shapes interpretation); challenged "minimal effects" view; established sophisticated subtle media effects.'
+            prompt: "Term for election coverage that uses polling results to treat a race as a contest over who is ahead rather than candidates' qualifications and platforms (EK 5.12.A.2).",
+            answer: 'horse race',
+            acceptableAnswers: ['horse race', 'horse-race', 'horse race journalism', 'horse-race journalism', 'horse race coverage', 'horse-race coverage'],
+            hint: 'Named after a sport in which the only question is who is leading.'
           }
         ]
       }
@@ -280,7 +280,7 @@ Trump 2024 victory partly attributed to:
               "Federal equal-time rules required Rogan to host both candidates, showing that the FCC still regulates political content on online podcasts and streams.",
             ],
             correctAnswer: 0,
-            explanation: 'JOE ROGAN + MANOSPHERE + TRUMP 2024: (1) ROGAN — JRE ~50M listeners + #1 Spotify (~\\$200M deal + \\$250M renewal); 3-hour Trump interview late October 2024; endorsed Trump night before election (previously libertarian, Bernie 2020); reached massive young male audience. (2) TRUMP CIRCUIT — Theo Von, Andrew Schulz (Flagrant), Lex Fridman, Shawn Ryan (ex-Navy SEAL), Adin Ross (streamer), Logan Paul (Impaulsive), Patrick Bet-David, Tucker Carlson Network, Nelk Boys, Dr. Phil — long-form authentic vs traditional adversarial. (3) HARRIS DECLINED Rogan (Austin 3-hr requirement; scheduling) — generally avoided long-form unscripted. (4) MUSK + X — \\$44B Oct 2022; reinstated Trump (banned Jan 2021); algorithm + personal endorsement + campaigning. (5) MANOSPHERE — Andrew Tate, Jordan Peterson, Tucker Carlson, Patrick Bet-David, Daily Wire (Shapiro + Peterson + Walsh), Rogan, Von, Schulz, Fridman, Ryan, Ross, Nelk, Logan Paul, Sneako, Sam Hyde — anti-feminism + anti-woke + masculine-traditional + anti-establishment. (6) IMPACT — Trump won young men 18-29 by ~14 pts (vs Biden +13 2020 = ~27 pt swing); young men + Hispanic men + Black men all swung; young women heavily Dem = ~30 pt Gen Z gender gap. (7) TRADITIONAL MEDIA DECLINE — cable + newspapers + broadcast declining; Americans (esp young) get news from social media + podcasts + YouTube + TikTok; fragmented partisan ecosystems. (8) IMPLICATIONS — info location shift; gatekeeping transformed (algorithm + creators not editors); PARASOCIAL trusted voices vs institutions; fragmented factual universes; authenticity + length vs scripted soundbites; Dems lack comparable ecosystem (Pod Save + Bulwark + Klein smaller); platform-fragmented future; misinformation + algorithm + foreign influence + platform concentration concerns (Musk X; TikTok ByteDance).'
+            explanation: 'JOE ROGAN + MANOSPHERE + TRUMP 2024: (1) ROGAN — JRE #1 on Spotify (reported ~\\$200M deal + up to \\$250M renewal); 3-hour Trump interview late October 2024; endorsed Trump night before election (previously libertarian, Bernie 2020); reached massive young male audience. (2) TRUMP CIRCUIT — Theo Von, Andrew Schulz (Flagrant), Lex Fridman, Shawn Ryan (ex-Navy SEAL), Adin Ross (streamer), Logan Paul (Impaulsive), Patrick Bet-David, Tucker Carlson Network, Nelk Boys, Dr. Phil — long-form authentic vs traditional adversarial. (3) HARRIS DECLINED Rogan (Austin 3-hr requirement; scheduling) — generally avoided long-form unscripted. (4) MUSK + X — \\$44B Oct 2022; reinstated Trump (banned Jan 2021); algorithm + personal endorsement + campaigning. (5) MANOSPHERE — Andrew Tate, Jordan Peterson, Tucker Carlson, Patrick Bet-David, Daily Wire (Shapiro + Peterson + Walsh), Rogan, Von, Schulz, Fridman, Ryan, Ross, Nelk, Logan Paul, Sneako, Sam Hyde — anti-feminism + anti-woke + masculine-traditional + anti-establishment. (6) IMPACT — young men 18-29 split ~evenly in exit polls (Trump 49-48) after favoring Biden in 2020; AP VoteCast had Trump winning them; young men + Hispanic men + Black men all swung; young women heavily Dem = ~24 pt Gen Z gender gap (margins). (7) TRADITIONAL MEDIA DECLINE — cable + newspapers + broadcast declining; Americans (esp young) get news from social media + podcasts + YouTube + TikTok; fragmented partisan ecosystems. (8) IMPLICATIONS — info location shift; gatekeeping transformed (algorithm + creators not editors); PARASOCIAL trusted voices vs institutions; fragmented factual universes; authenticity + length vs scripted soundbites; Dems lack comparable ecosystem (Pod Save + Bulwark + Klein smaller); platform-fragmented future; misinformation + algorithm + foreign influence + platform concentration concerns (Musk X; TikTok ByteDance).'
           }
         ]
       }

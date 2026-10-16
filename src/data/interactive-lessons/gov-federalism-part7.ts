@@ -39,14 +39,11 @@ export const govFederalismPart7Data = {
 | 1819 | *McCulloch v. Maryland* | Implied federal powers + supremacy |
 | 1824 | *Gibbons v. Ogden* | Broad Commerce Clause federal authority |
 | 1828-33 | South Carolina Nullification Crisis | Calhoun states\'-rights doctrine; Force Bill ended |
-| 1857 | *Dred Scott v. Sandford* | Federal cannot bar slavery in territories |
 | 1861-65 | Civil War | Permanent end of nullification/secession |
 | 1865 | 13th Amendment | Federal abolition |
 | 1868 | 14th Amendment | CONSTITUTIONAL REVOLUTION — states bound by federal individual-rights guarantees |
 | 1870 | 15th Amendment | Federal voting rights |
-| 1873 | *Slaughter-House Cases* | Privileges or Immunities Clause gutted |
 | 1896 | *Plessy v. Ferguson* | "Separate but equal" — federal acquiescence to state segregation |
-| 1905 | *Lochner v. New York* | State labor regulation unconstitutional under substantive due process |
 | 1918 | *Hammer v. Dagenhart* | Federal child-labor exceeds commerce power |
 | 1933-37 | New Deal + Court resistance | Schechter Poultry 1935; Carter v. Carter Coal 1936 |
 | 1937 | "Switch in time" | END of dual federalism era |
@@ -55,20 +52,18 @@ export const govFederalismPart7Data = {
 | 1964 | Civil Rights Act + *Heart of Atlanta Motel v. United States* | CRA valid under commerce clause |
 | 1965 | Voting Rights Act + Medicare/Medicaid + ESEA | 15th Amendment enforced; cooperative federalism peak |
 | 1972 | General Revenue Sharing | Nixon "New Federalism" begins |
-| 1981 | Omnibus Budget Reconciliation Act | Reagan: 77 categorical → 9 block grants |
+| 1981 | Omnibus Budget Reconciliation Act | Reagan: 77 categorical → 9 block grants ("devolution revolution" — CED illustrative) |
+| 1984 | National Minimum Drinking Age Act | Highway funds tied to a 21 drinking age — CED illustrative example |
 | 1987 | *South Dakota v. Dole* | Federal spending conditions on state action upheld |
-| 1992 | *New York v. United States* | Anti-commandeering of state legislatures |
 | 1995 | Unfunded Mandates Reform Act + *United States v. Lopez* | First Commerce Clause limit since 1937 |
-| 1996 | Personal Responsibility and Work Opportunity Reconciliation Act (TANF) | AFDC entitlement → TANF block grant |
-| 1997 | *Printz v. United States* | Anti-commandeering of state executives |
+| 1996 | Personal Responsibility and Work Opportunity Reconciliation Act (TANF) + Defense of Marriage Act | AFDC entitlement → TANF block grant; DOMA vs state marriage laws (CED illustrative) |
 | 2000 | *United States v. Morrison* | VAWA civil-suit provision exceeds commerce |
 | 2001 | No Child Left Behind | Federal mandate-and-condition era |
 | 2005 | *Gonzales v. Raich* | CSA applies to home-grown medical marijuana |
 | 2010 | Affordable Care Act + *McDonald v. City of Chicago* | Major federal expansion + 2nd Amendment incorporation |
+| 2012 | Colorado + Washington legalize recreational marijuana | State policy in conflict with federal law — CED illustrative example |
 | 2012 | *NFIB v. Sebelius* | ACA mandate as tax + Medicaid expansion coercive |
-| 2013 | *Shelby County v. Holder* | VRA § 4 preclearance struck |
 | 2015 | Every Student Succeeds Act + *Obergefell v. Hodges* | NCLB partial rollback + same-sex marriage federal rule |
-| 2018 | *Murphy v. NCAA* | Anti-commandeering applied to sports gambling |
 | 2020-22 | COVID-19 pandemic + ARPA | State variation in pandemic response; \\$350B ARPA federal aid |
 | 2022 | *Dobbs v. Jackson Women\'s Health* | Abortion regulation returned to states |
 
@@ -79,7 +74,9 @@ export const govFederalismPart7Data = {
 | ***McCulloch v. Maryland*** | 1819 | Implied federal powers + supremacy over states | Federal ↑ |
 | ***United States v. Lopez*** | 1995 | First Commerce Clause limit since 1937 (Gun-Free School Zones Act unconstitutional) | States ↑ |
 
-## Other High-Yield Federalism Cases (Not Required But Likely)
+## Other Federalism Cases (Not Required — Context)
+
+If the exam uses one of these, the question supplies the facts and holding.
 
 | Case | Year | Holding |
 |---|---|---|
@@ -87,13 +84,9 @@ export const govFederalismPart7Data = {
 | *Wickard v. Filburn* | 1942 | Maximum Commerce Clause expansion |
 | *Heart of Atlanta Motel v. United States* | 1964 | CRA 1964 valid under commerce |
 | *South Dakota v. Dole* | 1987 | Spending conditions valid |
-| *New York v. United States* | 1992 | Anti-commandeering of legislatures |
-| *Printz v. United States* | 1997 | Anti-commandeering of executives |
 | *United States v. Morrison* | 2000 | VAWA civil-suit provision exceeds commerce |
 | *Gonzales v. Raich* | 2005 | CSA applies to home-grown medical marijuana |
 | *NFIB v. Sebelius* | 2012 | ACA mandate as tax + Medicaid expansion coercive |
-| *Shelby County v. Holder* | 2013 | VRA § 4 preclearance struck |
-| *Murphy v. NCAA* | 2018 | Anti-commandeering of sports gambling |
 
 ## Sprint Terms
 
@@ -112,7 +105,6 @@ export const govFederalismPart7Data = {
 | **14th Amendment** | Subjects states to federal individual-rights guarantees (1868) |
 | **Selective incorporation** | Bill of Rights → states via 14th Amendment Due Process |
 | **Commerce Clause** | Article I, § 8, cl. 3 — federal regulation of interstate/foreign commerce |
-| **Dormant Commerce Clause** | Implicit Commerce Clause limit on state burdens on interstate commerce |
 | **Police power** | State authority to regulate health, safety, welfare, morals |
 | **Dual federalism** | "Layer cake" — distinct federal and state spheres (1789-1937) |
 | **Cooperative federalism** | "Marble cake" — intermingled federal and state authority (1937-69) |
@@ -120,33 +112,29 @@ export const govFederalismPart7Data = {
 | **Coercive federalism** | Federal preemption + spending-clause coercion (modern overlay) |
 | **Categorical grant** | Federal \\$ for specific narrow purpose with extensive regulations |
 | **Block grant** | Federal \\$ for broad purpose with state discretion |
-| **Project grant** | Federal $ awarded competitively |
-| **Formula grant** | Federal $ distributed by statutory formula |
-| **Revenue sharing** | General federal \\$ with no specific purpose (1972-86) |
+| **Revenue sharing** | General federal \\$ with almost no restrictions — the least-used form of funding (EK 1.7.A.5.i) |
 | **Mandate (funded)** | Federal requirement on states with federal funds (Medicaid, SNAP, VRA) |
 | **Mandate (unfunded)** | Federal requirement on states without federal funds (NCLB testing, ADA, Real ID) |
 | **Preemption** | Federal statute displaces conflicting state statute |
-| **Anti-commandeering** | Federal cannot conscript state legislatures or executives (New York 1992, Printz 1997, Murphy 2018) |
 | **Devolution** | Transfer of authority from federal to state |
+| **Multiple access points** | Divided power gives stakeholders many places to influence policy (EK 1.9.A.1) |
+| **Federalist No. 39** | Madison: the Constitution is partly national, partly federal — required document (EK 1.7.A.1) |
 | **Conditions of aid** | Federal $ conditioned on state compliance (Dole 1987 — drinking age + highway $) |
 | **Crossover sanctions** | Failure to comply in one area triggers loss of funding in different area |
 | **Crosscutting requirements** | Federal regulations across all federal-grant programs (Title VI, Title IX, ADA) |
-| **Full Faith and Credit Clause** | Article IV, § 1 — recognize other states\' acts/records/judgments |
-| **Privileges and Immunities Clause** | Article IV, § 2, cl. 1 — no discrimination against out-of-state citizens |
-| **Compact Clause** | Article I, § 10, cl. 3 — interstate compacts need congressional consent |
 
 ## AP Free-Response Strategy
 
 > ⚡ Sample concept-application prompt structure:
-> *"In 2018, the Supreme Court decided Murphy v. NCAA, holding that the Professional and Amateur Sports Protection Act of 1992 (which prohibited most states from authorizing sports gambling) violated the 10th Amendment by commandeering state legislatures. (A) Identify the constitutional principle at the core of this decision. (B) Explain how this decision relates to the constitutional structure of federalism. (C) Explain how an interest group might respond to this decision."*
+> *"In 1984 Congress passed the National Minimum Drinking Age Act, which withheld part of each state's federal highway funds unless the state raised its minimum drinking age to 21. Within a few years every state had complied. (A) Describe the power Congress used to influence state drinking-age laws. (B) Explain how this law illustrates the distribution of power between the national and state governments. (C) Explain how a state that opposed the law could respond."*
 
 **Approach:**
 
 | Part | What to do |
 |---|---|
-| **(A) Identify the constitutional principle** | Anti-commandeering doctrine — the federal government may not commandeer state legislatures or state executives to enforce federal regulatory programs; rooted in 10th Amendment + structural dual sovereignty |
-| **(B) Relate to federalism structure** | The doctrine protects state institutional integrity (preventing federal coercion of state lawmaking process), preserves dual sovereignty (states retain authority over their own legislative choices), and limits the practical reach of federal authority to areas where Congress can regulate the underlying private conduct directly OR offer federal funds with conditions (per *South Dakota v. Dole* 1987) |
-| **(C) Interest group response** | Sports-gambling industry trade groups would lobby state legislatures (since federal preemption is now removed) to authorize regulated sports gambling; opposing interest groups (problem-gambling treatment organizations, sports leagues concerned about integrity) would lobby state legislatures against authorization or for restrictive regulations; both sides might also lobby Congress to enact a different federal regulatory framework that would not run afoul of anti-commandeering (e.g., Congress could regulate interstate sports-gambling commerce DIRECTLY through federal statute, or condition federal funds on state cooperation) |
+| **(A) Describe the power** | Congress used its SPENDING power — a CONDITION attached to federal grant money — rather than a direct command, because setting a drinking age is a power reserved to the states (10th Amendment, EK 1.7.A.3). This is national funding used to steer state policy (EK 1.7.A.5) |
+| **(B) Explain the distribution of power** | Federalism shares power between levels (EK 1.7.A.1), but federal money lets the national government shape policy in areas it cannot regulate directly; because states depend on that money, the balance shifts toward the national government even over reserved powers. States still had to ACT — national policy depended on state cooperation (EK 1.9.A.2) |
+| **(C) Explain a state response** | A state could refuse the funds and keep its own drinking age; sue (South Dakota did, and the Court upheld the condition in 1987); or use other ACCESS POINTS (EK 1.9.A.1) — lobbying its congressional delegation, joining with other governors to push for fewer strings or block-grant flexibility |
 
 > 🔑 Key takeaway: Mastery of the AP Gov federalism content (Articles failure → Constitution → 10th Amendment → 14th Amendment → cooperative federalism → modern revival → Dobbs) is essential for the unit-1 + unit-2 portions of the AP exam. The required cases (*McCulloch v. Maryland* 1819 and *United States v. Lopez* 1995) anchor the federalism arc — federal expansion via implied powers vs. modern Commerce Clause limits.
       `
@@ -177,7 +165,7 @@ export const govFederalismPart7Data = {
               "Its enforcement clause let states veto federal civil rights laws, which the Court confirmed in Marbury v. Madison and McCulloch v. Maryland"
             ],
             correctAnswer: 0,
-            explanation: '14th Amendment (1868) most consequential federalism provision since original Constitution: § 1 = Citizenship (overruled Dred Scott 1857) + Due Process (basis for selective incorporation of most Bill of Rights to states throughout 20thC) + Equal Protection (Brown 1954, Loving 1967, Obergefell 2015, Dobbs 2022). § 5 enforcement (CRA 1875, CRA 1964, VRA 1965, ADA 1990). Subjected states to federal individual-rights guarantees framers never imposed → modern "federalism BOUNDED by federal individual-rights protections."'
+            explanation: '14th Amendment (1868) most consequential federalism provision since original Constitution: § 1 = Citizenship (overruled Dred Scott 1857) + Due Process (basis for selective incorporation of most Bill of Rights to states throughout 20thC) + Equal Protection (Brown 1954, Loving 1967, Obergefell 2015). § 5 enforcement (CRA 1875, CRA 1964, VRA 1965, ADA 1990). Subjected states to federal individual-rights guarantees framers never imposed → modern "federalism BOUNDED by federal individual-rights protections."'
           }
         ]
       }
@@ -212,27 +200,27 @@ export const govFederalismPart7Data = {
     {
       id: 'govfed7-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Match each required AP Gov SCOTUS case or doctrine.**`,
+      content: `**Match each required AP Gov SCOTUS case.**`,
       exercise: {
         dropdowns: [
           {
             label: "The 1819 Marshall Court case establishing implied federal powers and federal supremacy over conflicting state action involving federal instrumentalities: ___",
-            options: ['McCulloch v. Maryland', 'United States v. Lopez', 'New York v. United States', 'Printz v. United States']
+            options: ['McCulloch v. Maryland', 'United States v. Lopez', 'Gibbons v. Ogden', 'McDonald v. Chicago']
           },
           {
             label: "The 1995 Rehnquist Court case marking the first Commerce Clause limit on Congress since 1937 (Gun-Free School Zones Act unconstitutional): ___",
-            options: ['McCulloch v. Maryland', 'United States v. Lopez', 'New York v. United States', 'Printz v. United States']
+            options: ['McCulloch v. Maryland', 'United States v. Lopez', 'Gibbons v. Ogden', 'McDonald v. Chicago']
           },
           {
-            label: "The 1997 Rehnquist Court case applying anti-commandeering to state EXECUTIVE officers (Brady Act background-check requirement unconstitutional): ___",
-            options: ['McCulloch v. Maryland', 'United States v. Lopez', 'New York v. United States', 'Printz v. United States']
+            label: "The 2010 case that incorporated the Second Amendment against the states through the 14th Amendment: ___",
+            options: ['McCulloch v. Maryland', 'United States v. Lopez', 'Gibbons v. Ogden', 'McDonald v. Chicago']
           }
         ],
-        correctAnswers: ['McCulloch v. Maryland', 'United States v. Lopez', 'Printz v. United States'],
+        correctAnswers: ['McCulloch v. Maryland', 'United States v. Lopez', 'McDonald v. Chicago'],
         hint1: 'Marshall, 1819 — implied powers + supremacy.',
         hint2: 'Rehnquist 5-4, 1995 — Gun-Free School Zones Act struck.',
-        hint3: 'Scalia 5-4, 1997 — Brady Act background-check provision struck.',
-        explanation: 'Required AP Gov federalism cases: McCulloch v. Maryland (1819, Marshall — implied powers + supremacy). United States v. Lopez (1995, Rehnquist 5-4 — first Commerce Clause limit since 1937). Other high-yield: New York v. United States (1992, anti-commandeering legislatures); Printz (1997, Scalia 5-4, anti-commandeering executives — Brady Act); Murphy v. NCAA (2018, anti-commandeering sports gambling).'
+        hint3: 'Chicago handgun ban — selective incorporation of the 2nd Amendment.',
+        explanation: 'Required AP Gov federalism cases: McCulloch v. Maryland (1819, Marshall — implied powers + supremacy). United States v. Lopez (1995, Rehnquist 5-4 — first Commerce Clause limit since 1937). McDonald v. Chicago (2010 — Second Amendment incorporated against the states; the 14th Amendment binds states to national rights standards). Gibbons v. Ogden is a non-required commerce case.'
       }
     },
     {
@@ -255,13 +243,13 @@ export const govFederalismPart7Data = {
           {
             question: "AP argumentative essay: Construct an alternative-perspective response to the prompt \"Develop an argument that explains whether modern federalism does or does not adequately balance federal and state authority.\" What is the strongest counter to a thesis that modern federalism INADEQUATELY balances federal and state authority?",
             options: [
-              "Modern federalism is adequately balanced, since cases like Lopez and Printz limit federal power while incorporation protects rights nationwide",
+              "Modern federalism is adequately balanced, since cases like Lopez and Morrison limit federal power while incorporation protects rights nationwide",
               "Modern federalism is adequately balanced, since the states now hold most powers they had under the Articles of Confederation",
               "Modern federalism is inadequately balanced, since Congress can now commandeer state legislatures and officers whenever it chooses",
               "Modern federalism is adequately balanced, since the Supreme Court has stopped deciding federalism cases and left every dispute to negotiation between governors and Congress"
             ],
             correctAnswer: 0,
-            explanation: 'Strongest alternative: modern federalism ADEQUATELY balances: (1) modern revival doctrinal limits (Lopez 1995 + Morrison 2000 + Printz 1997 + NFIB 2012 + Shelby County 2013 + Murphy v. NCAA 2018) = most significant since 1937; (2) Dobbs 2022 returned abortion to states; (3) 14th Amendment properly bounds state authority where threatens liberty (federalism without bounds = state-level rights violations); (4) federal grants ~30% state/local revenue VOLUNTARY (some declined ACA Medicaid); (5) dual sovereignty operates vigorously (both tax/regulate/adjudicate). Workable federalism even if imperfect.'
+            explanation: 'Strongest alternative: modern federalism ADEQUATELY balances: (1) modern revival doctrinal limits (Lopez 1995 + Morrison 2000 + NFIB 2012) = most significant since 1937; (2) Dobbs 2022 returned abortion to states; (3) 14th Amendment properly bounds state authority where threatens liberty (federalism without bounds = state-level rights violations); (4) federal grants ~30% state/local revenue VOLUNTARY (some declined ACA Medicaid); (5) dual sovereignty operates vigorously (both tax/regulate/adjudicate). Workable federalism even if imperfect.'
           }
         ]
       }

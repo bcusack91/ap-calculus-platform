@@ -313,7 +313,7 @@ export const MCQS: MCQItem[] = [
       'Syncretism, blending traits from two cultures to create a distinct new form',
       'Assimilation, as local artists abandon their own culture for an American one',
       'Relocation diffusion, carried to Lagos by Bronx residents who moved there',
-      'Reverse hierarchical diffusion, rising from small towns to major cities',
+      'Contagious diffusion, spreading only to places next to the hearth',
     ],
     correctAnswer: 0,
     explanation:
@@ -445,16 +445,16 @@ export const MCQS: MCQItem[] = [
     type: 'mcq',
     topic: 'unit-4-political-patterns',
     question:
-      'A state whose territory includes a long, narrow corridor extending outward from its main body, as Namibia\'s Caprivi Strip does, is best described as a(n)',
+      'Namibia\'s Caprivi Strip, a long, narrow corridor reaching the Zambezi River, was drawn by Britain and Germany in 1890 with no regard for the peoples living there. Its boundaries are best described as',
     options: [
-      'prorupted state',
-      'fragmented state',
-      'perforated state',
-      'elongated state',
+      'superimposed boundaries',
+      'antecedent boundaries',
+      'consequent boundaries',
+      'relict boundaries',
     ],
     correctAnswer: 0,
     explanation:
-      'A prorupted state is mostly compact but has a long arm of territory extending from its core, such as Namibia\'s Caprivi Strip (renamed the Zambezi Region in 2013) or Thailand\'s southern peninsula. An elongated state such as Chile is long and narrow throughout, not a compact core with a single extension.',
+      'A superimposed boundary is drawn by outside powers without regard to the existing cultural landscape, as European colonial powers did across Africa (CED 4.4). Antecedent boundaries predate settlement, consequent boundaries follow cultural divisions, and relict boundaries no longer function.',
   },
   {
     type: 'mcq',

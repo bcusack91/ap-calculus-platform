@@ -13,12 +13,12 @@ export const govCivilRightsPart3Data = {
 
 | Section |
 |---|
-| Race & ethnicity (Brown, Loving, Korematsu/Trump v. Hawaii, SFFA) |
-| Gender equality (Reed → Craig → VMI → Bostock) |
-| LGBTQ+ rights (Romer → Lawrence → Windsor → Obergefell → Bostock → 303 Creative) |
+| Race & ethnicity (Brown, Loving, Bakke, Grutter, SFFA) |
+| Gender equality (Reed → VMI → Bostock) |
+| LGBTQ+ rights (Lawrence → Windsor → Obergefell → Bostock) |
 | Disability + voting rights + women's suffrage + Native Americans |
 
-> 🔑 Key idea: Civil rights doctrine has expanded across multiple categories: RACE & ETHNICITY (Brown 1954, Loving 1967, Korematsu 1944 + repudiated Trump v. Hawaii 2018, SFFA 2023); GENDER (Reed v. Reed 1971, Craig v. Boren 1976 intermediate scrutiny, US v. Virginia 1996 VMI "exceedingly persuasive justification"); LGBTQ+ (Romer 1996 → Lawrence 2003 overruled Bowers → Windsor 2013 → Obergefell 2015 → Bostock 2020 Title VII → 303 Creative 2023 First Am limit); DISABILITY (ADA 1990, Olmstead 1999 community-based services); VOTING RIGHTS (Reynolds v. Sims 1964 one-person-one-vote, Shelby County 2013 + Brnovich 2021 + Allen v. Milligan 2023); WOMEN'S SUFFRAGE (19th Am 1920); NATIVE AMERICANS (1924 Citizenship Act).
+> 🔑 Key idea: Civil rights doctrine has expanded across multiple categories: RACE & ETHNICITY (Brown 1954, Loving 1967, Bakke 1978, Grutter 2003, SFFA 2023); GENDER (Reed v. Reed 1971, US v. Virginia 1996 VMI, Title IX 1972); LGBTQ+ (Lawrence 2003 → Windsor 2013 → Obergefell 2015 → Bostock 2020 Title VII); DISABILITY (ADA 1990, Olmstead 1999 community-based services); VOTING RIGHTS (Baker v. Carr 1962 + Reynolds v. Sims 1964 one-person-one-vote, VRA 1965, Shaw v. Reno 1993); WOMEN'S SUFFRAGE (19th Am 1920); NATIVE AMERICANS (1924 Citizenship Act).
       `
     },
     {
@@ -30,65 +30,50 @@ export const govCivilRightsPart3Data = {
 | Case | Year | Holding |
 |---|---|---|
 | **PLESSY v. FERGUSON** | 1896 | Upheld separate but equal; Harlan dissent |
-| **KOREMATSU v. US** | 1944 | UPHELD Japanese American internment under strict scrutiny — only racial classification ever upheld; widely condemned; formally REPUDIATED in TRUMP v. HAWAII 2018 ("Korematsu was gravely wrong the day it was decided") |
 | **BROWN v. BOARD OF EDUCATION** | 1954 | OVERRULED Plessy in education; Warren unanimous; "separate educational facilities are inherently unequal" |
 | **LOVING v. VIRGINIA** | 1967 | Struck Virginia anti-miscegenation law (interracial marriage); Equal Protection + Due Process; unanimous Warren |
 | **REGENTS v. BAKKE** | 1978 | Powell controlling — struck UC Davis quota but allowed race as one factor (Harvard Plan) |
-| **CITY OF RICHMOND v. CROSON** | 1989 | Strict scrutiny for state/local racial classifications |
-| **ADARAND v. PEÑA** | 1995 | Strict scrutiny for federal racial classifications |
 | **GRUTTER v. BOLLINGER** | 2003 | Upheld Michigan Law School holistic race-conscious admissions; diversity = compelling interest |
 | **PARENTS INVOLVED v. SEATTLE** | 2007 | Struck K-12 race-conscious student assignment plans |
 | **FISHER v. UT II** | 2016 | Upheld UT Austin Top 10% + holistic |
-| **TRUMP v. HAWAII** | 2018 | Upheld travel ban (rational basis for facially neutral national security policy); formally REPUDIATED Korematsu 1944 |
 | **STUDENTS FOR FAIR ADMISSIONS v. HARVARD/UNC** | 2023 | STRUCK Harvard + UNC race-conscious admissions; effectively OVERRULED Grutter; race as negative against Asian Americans + race as stereotype + no logical endpoint |
 
 ## Gender Equality
 
 | Case | Year | Holding |
 |---|---|---|
-| **REED v. REED** | 1971 | First case striking law as sex-discriminatory; Idaho preference for males as estate administrators violated EP; rational basis "with bite" |
-| **FRONTIERO v. RICHARDSON** | 1973 | Plurality: STRICT scrutiny for sex (failed to get majority); struck differential military spouse benefits |
-| **CRAIG v. BOREN** | 1976 | ESTABLISHED INTERMEDIATE SCRUTINY for sex; Oklahoma 3.2 beer (males 21, females 18) violated EP |
-| **US v. VIRGINIA (VMI)** | 1996 | Ginsburg majority — struck Virginia Military Institute all-male admissions; "EXCEEDINGLY PERSUASIVE JUSTIFICATION" required for sex classifications; refined intermediate scrutiny |
-| **NEVADA v. HIBBS** | 2003 | Upheld FMLA against state sovereign immunity challenge under Section 5 of 14th Am — Congress had power to address pattern of state sex discrimination in family leave |
+| **REED v. REED** | 1971 | First case striking law as sex-discriminatory; Idaho preference for males as estate administrators violated EP |
+| **US v. VIRGINIA (VMI)** | 1996 | Ginsburg majority — struck Virginia Military Institute's all-male admissions as sex discrimination violating equal protection |
 | **BOSTOCK v. CLAYTON COUNTY** | 2020 | Title VII of CRA 1964 protects LGBTQ+ employment discrimination (sex includes sexual orientation + gender identity); Gorsuch majority; STATUTORY not constitutional |
 
 ## LGBTQ+ Rights
 
 | Case | Year | Holding |
 |---|---|---|
-| **BOWERS v. HARDWICK** | 1986 | Upheld Georgia sodomy law (no fundamental right to "homosexual sodomy"); OVERRULED Lawrence 2003 |
-| **ROMER v. EVANS** | 1996 | STRUCK Colorado Amendment 2 (banned local LGBTQ+ anti-discrimination ordinances); rational basis "with bite" — found bare desire to harm politically unpopular group not a legitimate state interest; Kennedy majority |
 | **LAWRENCE v. TEXAS** | 2003 | OVERRULED Bowers; struck Texas sodomy law; Kennedy majority — substantive due process liberty interest in private consensual adult intimate conduct; O'Connor concurrence on equal protection grounds |
 | **US v. WINDSOR** | 2013 | Struck Defense of Marriage Act (DOMA) Section 3 (federal definition of marriage as man-woman); Kennedy 5-4 — equal protection + federalism mix; required federal recognition of state-recognized same-sex marriages |
 | **OBERGEFELL v. HODGES** | 2015 | Established constitutional right to same-sex marriage under 14th Am Due Process + Equal Protection; Kennedy 5-4; Roberts + Scalia + Thomas + Alito dissents |
 | **BOSTOCK v. CLAYTON COUNTY** | 2020 | Title VII protects LGBTQ+ employment discrimination; Gorsuch majority — sex discrimination "necessarily" includes sexual orientation + gender identity; STATUTORY |
-| **303 CREATIVE LLC v. ELENIS** | 2023 | Upheld First Am free speech right of website designer to refuse same-sex wedding website services; narrow ruling on EXPRESSIVE conduct; Gorsuch 6-3 |
 | **RESPECT FOR MARRIAGE ACT** | 2022 | Statute — repealed DOMA; required federal + state recognition of same-sex + interracial marriages performed legally elsewhere; bipartisan response to Dobbs 2022 + Thomas concurrence |
 
 ## Disability Rights
 
 | Case/Statute | Year | Holding |
 |---|---|---|
-| **CITY OF CLEBURNE v. CLEBURNE LIVING CENTER** | 1985 | Struck zoning denial for group home for persons with intellectual disabilities; rational basis "with bite"; refused to recognize disability as quasi-suspect class |
 | **AMERICANS WITH DISABILITIES ACT (ADA)** | 1990 | Comprehensive disability rights statute; signed by GHW Bush; Title I employment + Title II state/local govt + Title III public accommodations + Title IV telecommunications; "REASONABLE ACCOMMODATIONS" required |
 | **OLMSTEAD v. LC** | 1999 | Held unjustified institutionalization of persons with disabilities is discrimination under ADA; required community-based services where appropriate |
-| **TENNESSEE v. LANE** | 2004 | Upheld ADA Title II as applied to state court access for persons with mobility disabilities — Congress's Section 5 power |
 
 ## Voting Rights
 
 | Case/Statute | Year | Holding |
 |---|---|---|
 | **SMITH v. ALLWRIGHT** | 1944 | Struck Texas all-white primary; primaries are state action even if conducted by political parties |
-| **BAKER v. CARR** | 1962 | Held legislative apportionment is JUSTICIABLE (not political question); opened federal courts to one-person-one-vote claims |
+| **BAKER v. CARR** (required case) | 1962 | Held legislative apportionment is JUSTICIABLE (not political question); opened federal courts to one-person-one-vote claims |
 | **REYNOLDS v. SIMS** | 1964 | "ONE PERSON ONE VOTE" — required state legislative districts of equal population under EP |
 | **WESBERRY v. SANDERS** | 1964 | One-person-one-vote for US House districts |
 | **HARPER v. VIRGINIA BOARD OF ELECTIONS** | 1966 | Struck poll tax in state elections under EP (24th Am banned in federal elections 1964) |
 | **VOTING RIGHTS ACT** | 1965 | Section 2 + Section 5 preclearance; reauthorized 1970, 1975, 1982, 2006 |
-| **SHELBY COUNTY v. HOLDER** | 2013 | Roberts 5-4 STRUCK Section 4(b) coverage formula; rendered Section 5 dead |
-| **BRNOVICH v. DNC** | 2021 | Alito 6-3 weakened Section 2 vote denial claims; upheld AZ out-of-precinct + ballot collection rules |
-| **ALLEN v. MILLIGAN** | 2023 | Roberts 5-4 upheld Section 2 vote dilution claim against AL congressional map; preserved Thornburg v. Gingles 1986 |
-| **MOORE v. HARPER** | 2023 | Roberts 6-3 REJECTED Independent State Legislature theory |
+| **SHAW v. RENO** (required case) | 1993 | A congressional district drawn so irregularly that it can be explained only by race is subject to an EQUAL PROTECTION challenge — an example of the Court limiting majority-minority districting (EK 3.12.A.1.iv) |
 
 ## Women's Suffrage + Native Americans
 
@@ -104,7 +89,7 @@ export const govCivilRightsPart3Data = {
 | **AMERICAN INDIAN MOVEMENT (AIM)** | 1968-present | Activist organization; occupation of Alcatraz 1969-1971; Wounded Knee occupation 1973; raised awareness of Native American civil rights issues |
 | **INDIAN SELF-DETERMINATION ACT** | 1975 | Allowed tribes to administer federal programs; restored measure of tribal sovereignty |
 
-> 🔑 Key takeaway: Civil rights doctrine has expanded across categories: RACE (Brown 1954, Loving 1967, Korematsu 1944 / repudiated Trump v. Hawaii 2018, SFFA 2023); GENDER (Reed 1971, Craig 1976 INTERMEDIATE SCRUTINY, US v. Virginia 1996 "exceedingly persuasive justification"); LGBTQ+ (Romer 1996 → Lawrence 2003 overruled Bowers → Windsor 2013 → Obergefell 2015 → Bostock 2020 Title VII → 303 Creative 2023 First Am exception); DISABILITY (Cleburne 1985, ADA 1990, Olmstead 1999); VOTING RIGHTS (Smith v. Allwright 1944, Baker v. Carr 1962, Reynolds v. Sims 1964 ONE PERSON ONE VOTE, Harper 1966, VRA 1965, Shelby 2013, Brnovich 2021, Allen 2023, Moore 2023); WOMEN'S SUFFRAGE (Seneca Falls 1848 → 19th Am 1920 → ERA 1972/never ratified → Title IX 1972); NATIVE AMERICANS (Indian Citizenship Act 1924, AIM 1968+, Self-Determination Act 1975).
+> 🔑 Key takeaway: Civil rights doctrine has expanded across categories: RACE (Brown 1954, Loving 1967, Bakke 1978, Grutter 2003, SFFA 2023); GENDER (Reed 1971, US v. Virginia 1996, Title IX 1972); LGBTQ+ (Lawrence 2003 → Windsor 2013 → Obergefell 2015 → Bostock 2020 Title VII); DISABILITY (ADA 1990, Olmstead 1999); VOTING RIGHTS (Smith v. Allwright 1944, Baker v. Carr 1962, Reynolds v. Sims 1964 ONE PERSON ONE VOTE, Harper 1966, VRA 1965, Shaw v. Reno 1993); WOMEN'S SUFFRAGE (Seneca Falls 1848 → 19th Am 1920 → ERA 1972/never ratified → Title IX 1972); NATIVE AMERICANS (Indian Citizenship Act 1924, AIM 1968+, Self-Determination Act 1975).
       `
     },
     {
@@ -114,26 +99,26 @@ export const govCivilRightsPart3Data = {
       exercise: {
         questions: [
           {
-            question: "How did GENDER EQUALITY doctrine evolve from REED v. REED (1971) through CRAIG v. BOREN (1976) to US v. VIRGINIA (1996) to BOSTOCK (2020)?",
+            question: "In *Reed v. Reed* (1971), the Court struck down an Idaho law that automatically preferred men over women as administrators of estates. What constitutional basis did the ruling rest on, and what does the case show?",
             options: [
-              "Reed first struck a sex-based law, Craig set intermediate scrutiny, Virginia demanded an exceedingly persuasive justification, and Bostock read Title VII to cover LGBTQ+ workers.",
-              "Reed upheld sex-based estate rules, Craig applied strict scrutiny to sex, Virginia let VMI stay all-male, and Bostock limited Title VII to pay discrimination.",
-              "Reed set strict scrutiny for sex, Craig lowered it to rational basis, Virginia required quotas for women, and Bostock rested on the Equal Rights Amendment.",
-              "Reed and Craig dealt only with voting, Virginia concerned state taxes, and Bostock held Title VII excludes sexual orientation and gender identity.",
+              "The 14th Amendment's equal protection clause, showing how it was used to challenge sex discrimination as the women's rights movement grew.",
+              "The 19th Amendment, showing that women's suffrage also guaranteed women equal treatment in property and inheritance law.",
+              "The commerce clause, showing Congress's power to regulate estates whose property crosses state lines.",
+              "The establishment clause, showing that religious beliefs about gender cannot shape state inheritance laws.",
             ],
             correctAnswer: 0,
-            explanation: 'GENDER EQUALITY: (1) PRE-1971 — Bradwell 1873, Goesaert 1948 deferential rational basis; (2) REED 1971 — Burger unanimous, FIRST sex-discrimination strike — Idaho probate; rational basis with bite; (3) FRONTIERO 1973 — Brennan plurality (4) sought STRICT SCRUTINY, missed 5th vote; (4) CRAIG v. BOREN 1976 — Brennan ESTABLISHED INTERMEDIATE SCRUTINY; OK 3.2 beer; IMPORTANT INTEREST + SUBSTANTIALLY RELATED; (5) Mississippi U. for Women v. Hogan 1982; (6) US v. VIRGINIA 1996 — Ginsburg, VMI all-male, "EXCEEDINGLY PERSUASIVE JUSTIFICATION"; (7) HIBBS 2003 — UPHELD FMLA against state sovereign immunity; (8) BOSTOCK 2020 — Gorsuch — Title VII "because of sex" includes sexual orientation + gender identity; STATUTORY; (9) DOBBS 2022 overruled Roe.'
+            explanation: 'REED v. REED (1971) is an illustrative case for Topic 3.10 (holding given in the stem): the Court held that Idaho\'s automatic preference for men violated the 14th Amendment\'s EQUAL PROTECTION CLAUSE — the first time it struck down a law for discriminating on the basis of sex. It shows how the equal protection clause supported the women\'s rights movement (EK 3.10.A.2.ii; NOW, founded 1966). The 19th Amendment protects only the right to vote, and the commerce and establishment clauses were not at issue.'
           },
           {
-            question: "How did LGBTQ+ RIGHTS evolve from BOWERS v. HARDWICK (1986) through ROMER v. EVANS (1996) to LAWRENCE v. TEXAS (2003) to OBERGEFELL (2015) to BOSTOCK (2020) and 303 CREATIVE (2023)?",
+            question: "The CED cites advocacy for LGBTQ rights as evidence of how the equal protection clause can support and motivate social movements. Which development best illustrates this?",
             options: [
-              "Bowers upheld sodomy bans, Romer and Lawrence rejected animus and overruled Bowers, Obergefell recognized same-sex marriage, Bostock protected LGBTQ+ workers and 303 Creative upheld a designer's speech claim.",
-              "Bowers struck sodomy bans, Romer upheld Colorado's Amendment 2, Lawrence reinstated Bowers, Obergefell left marriage to the states, Bostock excluded LGBTQ+ workers from Title VII and 303 Creative rejected the designer's claim.",
-              "Bowers recognized same-sex marriage, Romer and Lawrence narrowed it, Obergefell applied strict scrutiny to sexual orientation, and Bostock and 303 Creative concerned military service.",
-              "Bowers, Romer and Lawrence were decided under Title VII, Obergefell rested on the Commerce Clause, and Bostock and 303 Creative both upheld state bans on same-sex marriage.",
+              "Same-sex couples suing under the 14th Amendment in cases that led to Obergefell v. Hodges (2015) and its requirement that states license same-sex marriages.",
+              "Gun-rights groups pressing for concealed-carry laws, relying on the Second Amendment right to keep and bear arms that was recognized in McDonald v. Chicago (2010).",
+              "Anti-Federalists demanding a Bill of Rights, relying on Brutus No. 1's warnings about a large central government.",
+              "Campaign finance reformers pushing for the Bipartisan Campaign Reform Act, relying on Congress's power to regulate interstate commerce.",
             ],
             correctAnswer: 0,
-            explanation: 'LGBTQ+ RIGHTS: (1) BOWERS 1986 — White 5-4 upheld GA sodomy; (2) ROMER 1996 — Kennedy 6-3 STRUCK CO Amendment 2; rational basis with bite — bare desire to harm not legitimate; (3) LAWRENCE 2003 — Kennedy 6-3 OVERRULED Bowers; substantive DP liberty in private consensual conduct; O\'Connor EP concurrence; Scalia dissent re same-sex marriage; (4) WINDSOR 2013 — Kennedy 5-4 STRUCK DOMA §3; required federal recognition of state SS marriages; (5) HOLLINGSWORTH 2013 — Prop 8 standing; (6) OBERGEFELL 2015 — Kennedy 5-4 right to same-sex marriage under 14th Am DP + EP; (7) MASTERPIECE 2018 — narrow on religious hostility; (8) BOSTOCK 2020 — Gorsuch 6-3 — Title VII protects LGBTQ+ employment; (9) FULTON 2021 — narrow individualized exemption; (10) 303 CREATIVE 2023 — Gorsuch 6-3 First Am for expressive wedding website services; (11) Respect for Marriage Act 2022 — repealed DOMA, required federal + state recognition of same-sex + interracial marriages.'
+            explanation: 'EK 3.10.A.2: the civil rights movement, the women\'s rights movement and ADVOCACY FOR LGBTQ RIGHTS show how the EQUAL PROTECTION CLAUSE can support and motivate social movements. Same-sex couples challenged state marriage bans under the 14th Amendment\'s equal protection and due process clauses, and in Obergefell v. Hodges (2015, an illustrative case in Topic 4.10) the Court required states to license and recognize same-sex marriages. The gun-rights, Anti-Federalist and campaign-finance examples rest on other provisions.'
           }
         ]
       }
@@ -145,22 +130,22 @@ export const govCivilRightsPart3Data = {
       exercise: {
         questions: [
           {
-            prompt: "Year *LOVING v. VIRGINIA* struck Virginia anti-miscegenation law banning interracial marriage.",
-            answer: '1967',
-            acceptableAnswers: ['1967'],
-            hint: 'Warren unanimous; Equal Protection + Due Process; Mildred + Richard Loving.'
+            prompt: "Number of the amendment that granted women the right to vote.",
+            answer: '19',
+            acceptableAnswers: ['19', '19th', 'nineteenth', 'nineteen'],
+            hint: 'Ratified 1920, 72 years after the Seneca Falls Convention (EK 5.1.A.1.iv).'
           },
           {
-            prompt: "Year *OBERGEFELL v. HODGES* established constitutional right to same-sex marriage.",
-            answer: '2015',
-            acceptableAnswers: ['2015'],
-            hint: 'Kennedy 5-4; 14th Am Due Process + Equal Protection; Roberts dissent: "who do we think we are?"'
+            prompt: "Number of the amendment that eliminated poll taxes in federal elections.",
+            answer: '24',
+            acceptableAnswers: ['24', '24th', 'twenty-fourth', 'twenty fourth', 'twenty-four'],
+            hint: 'Ratified 1964; poll taxes were a structural barrier to voting (EK 5.1.A.1.v).'
           },
           {
-            prompt: "Year *REYNOLDS v. SIMS* established \"ONE PERSON ONE VOTE\" for state legislative districts.",
-            answer: '1964',
-            acceptableAnswers: ['1964'],
-            hint: 'Warren majority; followed Baker v. Carr 1962 (justiciability); Wesberry v. Sanders 1964 applied to US House.'
+            prompt: "Number of the amendment that granted citizenship to all persons born or naturalized in the United States, including the formerly enslaved.",
+            answer: '14',
+            acceptableAnswers: ['14', '14th', 'fourteenth', 'fourteen'],
+            hint: 'Ratified 1868; the same amendment contains the Equal Protection Clause (EK 5.1.A.1.i).'
           }
         ]
       }
@@ -168,26 +153,26 @@ export const govCivilRightsPart3Data = {
     {
       id: 'govcivr3-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Match each landmark case to its holding.**`,
+      content: `**Match each required case to its holding.**`,
       exercise: {
         dropdowns: [
           {
-            label: "Struck Colorado Amendment 2 banning local LGBTQ+ anti-discrimination ordinances; rational basis with bite — bare desire to harm politically unpopular group not legitimate: ___",
-            options: ['Bowers v. Hardwick (1986)', 'Romer v. Evans (1996)', 'Lawrence v. Texas (2003)', 'Obergefell v. Hodges (2015)', 'Bostock v. Clayton County (2020)']
+            label: "Race-based segregation of public schools violates the 14th Amendment's Equal Protection Clause: ___",
+            options: ['Brown v. Board of Education (1954)', 'Baker v. Carr (1962)', 'Shaw v. Reno (1993)', 'Plessy v. Ferguson (1896)', 'Obergefell v. Hodges (2015)']
           },
           {
-            label: "Title VII of CRA 1964 'because of sex' protects LGBTQ+ employment discrimination — STATUTORY (not constitutional); Gorsuch 6-3: ___",
-            options: ['Bowers v. Hardwick (1986)', 'Romer v. Evans (1996)', 'Lawrence v. Texas (2003)', 'Obergefell v. Hodges (2015)', 'Bostock v. Clayton County (2020)']
+            label: "Redistricting challenges are justiciable, opening federal courts to 'one person, one vote' claims: ___",
+            options: ['Brown v. Board of Education (1954)', 'Baker v. Carr (1962)', 'Shaw v. Reno (1993)', 'Plessy v. Ferguson (1896)', 'Obergefell v. Hodges (2015)']
           },
           {
-            label: "Established constitutional right to same-sex marriage under 14th Am Due Process + Equal Protection; Kennedy 5-4: ___",
-            options: ['Bowers v. Hardwick (1986)', 'Romer v. Evans (1996)', 'Lawrence v. Texas (2003)', 'Obergefell v. Hodges (2015)', 'Bostock v. Clayton County (2020)']
+            label: "A congressional district drawn so oddly that only race can explain it may be challenged under equal protection: ___",
+            options: ['Brown v. Board of Education (1954)', 'Baker v. Carr (1962)', 'Shaw v. Reno (1993)', 'Plessy v. Ferguson (1896)', 'Obergefell v. Hodges (2015)']
           }
         ],
-        correctAnswers: ['Romer v. Evans (1996)', 'Bostock v. Clayton County (2020)', 'Obergefell v. Hodges (2015)'],
-        hint1: 'Romer 1996 — Kennedy 6-3 — first major SCOTUS LGBTQ+ rights victory; rational basis with bite found bare desire to harm politically unpopular group not a legitimate state interest.',
-        hint2: 'Bostock 2020 — Gorsuch 6-3 statutory ruling — sex discrimination "necessarily" includes sexual orientation + gender identity (cannot discriminate against gay man without taking sex into account).',
-        hint3: 'Obergefell 2015 — Kennedy 5-4 — 14th Am Due Process + Equal Protection; Roberts + Scalia + Thomas + Alito dissents.'
+        correctAnswers: ['Brown v. Board of Education (1954)', 'Baker v. Carr (1962)', 'Shaw v. Reno (1993)'],
+        hint1: 'Brown 1954 — Warren unanimous; "separate educational facilities are inherently unequal"; overruled Plessy in education.',
+        hint2: 'Baker 1962 — Tennessee had not redrawn legislative districts in 60 years; the Court said such claims are not "political questions."',
+        hint3: 'Shaw 1993 — North Carolina\'s snake-like 12th District; limits majority-minority districting (EK 3.12.A.1.iv).'
       }
     },
     {
@@ -197,26 +182,26 @@ export const govCivilRightsPart3Data = {
       exercise: {
         questions: [
           {
-            question: "How does the VOTING RIGHTS doctrine combine constitutional one-person-one-vote precedents (Baker v. Carr 1962, Reynolds v. Sims 1964) with the Voting Rights Act 1965 and modern voting rights cases (Shelby County 2013, Brnovich 2021, Allen v. Milligan 2023, Moore v. Harper 2023)?",
+            question: "How do *Baker v. Carr* (1962) and *Shaw v. Reno* (1993) affect the drawing of legislative districts?",
             options: [
-              "Baker opened apportionment to courts and Reynolds required equal districts, the VRA added Section 2 and preclearance, and Shelby ended preclearance but Allen kept dilution claims.",
-              "Baker held apportionment a political question and Reynolds allowed unequal districts, the VRA added new poll taxes, and Shelby restored preclearance while Allen ended all vote dilution claims.",
-              "Baker and Reynolds applied only to congressional districts, the VRA covered only federal elections, and Shelby struck Section 2 while Moore v. Harper adopted the independent state legislature theory.",
-              "Baker and Reynolds rested on the 15th Amendment, the VRA of 1965 replaced both rulings with a statute, and Shelby, Brnovich and Allen together moved all election disputes to state courts.",
+              "Baker let federal courts hear apportionment challenges, and Shaw allowed equal protection challenges to districts drawn mainly by race.",
+              "Baker made redistricting a political question that courts may not review, and Shaw required every state to draw majority-minority districts.",
+              "Baker gave Congress sole power to draw state legislative districts, and Shaw ended the use of single-member districts for the House of Representatives.",
+              "Baker and Shaw both rested on the 15th Amendment, and together they banned states from considering population when drawing any district lines.",
             ],
             correctAnswer: 0,
-            explanation: 'MODERN VOTING RIGHTS: (1) ONE-PERSON-ONE-VOTE — Baker v. Carr 1962 (justiciability), Reynolds v. Sims 1964 (state legislatures), Wesberry v. Sanders 1964 (US House); (2) POLL TAX — 24th Am 1964 (federal), Harper 1966 (state under EP); (3) WHITE PRIMARY — Smith v. Allwright 1944; (4) VRA 1965 — §2 nationwide + §5 preclearance; reauthorized 1970, 1975, 1982, 2006; (5) SHELBY COUNTY 2013 — Roberts 5-4 struck §4(b) coverage formula; equal sovereignty; §5 dead; Ginsburg umbrella dissent; (6) BRNOVICH 2021 — Alito 6-3 weakened §2 vote denial; AZ out-of-precinct + ballot collection; 5-factor test; (7) ALLEN v. MILLIGAN 2023 — Roberts 5-4 surprisingly upheld §2 vote dilution against AL map; preserved Thornburg v. Gingles 1986; (8) MOORE v. HARPER 2023 — Roberts 6-3 rejected ISL theory; preserved state court review; (9) Net: §5 dead; §2 denial weakened; §2 dilution preserved; ISL rejected.'
+            explanation: 'Both are REQUIRED cases tied to EK 2.3.A.2 (Supreme Court cases opened the door to equal protection challenges to redistricting). BAKER v. CARR (1962) held that malapportionment claims are JUSTICIABLE, not political questions, leading to "one person, one vote" (Reynolds v. Sims 1964). SHAW v. RENO (1993) held that a district drawn so irregularly that it can be explained only by race is subject to an EQUAL PROTECTION challenge — the Court limiting majority-minority districting (EK 3.12.A.1.iv). Neither case gave Congress control of state districts or rested on the 15th Amendment.'
           },
           {
-            question: "How does DISABILITY RIGHTS doctrine combine the AMERICANS WITH DISABILITIES ACT 1990 with constitutional Equal Protection cases (Cleburne 1985), Olmstead 1999 community-based services, and Tennessee v. Lane 2004?",
+            question: "Disability rights activists staged sit-ins in federal buildings in 1977 and lobbied for years before Congress passed the Americans with Disabilities Act (1990). This sequence is best described as an example of:",
             options: [
-              "Cleburne applied rational basis with bite to disability, the ADA 1990 bars disability discrimination, Olmstead required community-based services and Lane upheld ADA Title II for court access.",
-              "Cleburne made disability a suspect class under strict scrutiny, the ADA 1990 covers only federal agencies, Olmstead rejected community-based services in favor of institutions and Lane struck Title II.",
-              "Cleburne upheld the group-home ban, the ADA 1990 replaced the Rehabilitation Act, Olmstead concerned school testing and Lane held states fully immune from ADA suits.",
-              "Cleburne, Olmstead and Lane were decided under the Commerce Clause alone, and the ADA 1990 applies only to employers with more than five hundred workers.",
+              "A social movement prompting a government response through legislation enacted by Congress.",
+              "Judicial activism, in which a Supreme Court ruling replaced the movement's demands with a court-made rule.",
+              "A constitutional amendment proposed by Congress and ratified by three-fourths of the states to protect disability rights.",
+              "An executive order issued by the president without any action from Congress.",
             ],
             correctAnswer: 0,
-            explanation: 'DISABILITY RIGHTS: (1) CLEBURNE 1985 — White struck zoning denial for group home for persons with intellectual disabilities; rational basis "with bite"; REFUSED to recognize disability as quasi-suspect class; (2) Rehabilitation Act 1973 §504 — first major federal disability statute (federally funded programs); (3) ADA 1990 — GHW Bush signed; Title I employment (reasonable accommodations); Title II state/local govt; Title III public accommodations + commercial facilities; Title IV telecom; (4) ADA Amendments Act 2008 — broadened "disability" after Toyota v. Williams 2002 + Sutton 1999 narrowed; (5) OLMSTEAD 1999 — Ginsburg — unjustified institutionalization is discrimination under ADA Title II; required community-based services; (6) TENNESSEE v. LANE 2004 — Stevens 5-4 upheld ADA Title II for state court access; fundamental right justified abrogation of state sovereign immunity; (7) IDEA 1975 — FAPE + IEPs.'
+            explanation: 'EK 3.11.A.1: the government can respond to social movements through court rulings and/or POLICIES. The ADA was a statute — Congress passed it and President George H. W. Bush signed it — after years of protest and lobbying by disability rights activists, so it is a LEGISLATIVE response. It was not a court ruling, a constitutional amendment or an executive order.'
           }
         ]
       }

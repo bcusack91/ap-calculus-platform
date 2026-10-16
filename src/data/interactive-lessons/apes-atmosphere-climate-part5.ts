@@ -238,15 +238,15 @@ Enter numbers only. (Illustrative data.)
             explanation: 'A seawall reduces harm from rising seas without reducing emissions, so it is adaptation. Wind power, methane capture and reforestation all cut or remove greenhouse gases, which is mitigation.'
           },
           {
-            question: 'Which statement correctly contrasts the Kyoto Protocol with the Paris Agreement?',
+            question: 'Which statement best describes the Kyoto Protocol (1997)?',
             options: [
-              'Kyoto limited CFCs that harm the ozone layer; Paris limits carbon dioxide',
-              'Kyoto applied to all nations equally; Paris applies only to wealthy nations',
-              'Kyoto set binding targets for rich nations; Paris lets each set its own',
-              'Kyoto created a global carbon tax; Paris replaced it with emissions trading'
+              'It phased out the CFCs that destroy stratospheric ozone',
+              'It banned international trade in endangered wildlife products',
+              'It set binding greenhouse gas targets for developed nations',
+              'It regulated how U.S. hazardous waste is stored and disposed of'
             ],
             correctAnswer: 2,
-            explanation: 'Kyoto (1997) set binding targets only for developed countries, while under Paris (2015) every country chooses its own nationally determined contribution. CFCs are handled by the Montreal Protocol, and neither treaty created a global carbon tax.'
+            explanation: 'The Kyoto Protocol set binding emission-reduction targets for developed countries to slow climate change. Phasing out CFCs was the Montreal Protocol, banning trade in endangered species is CITES, and hazardous waste management in the United States falls under RCRA; all four are required legislation in the CED.'
           },
           {
             question: 'A student writes that the ozone hole is the main cause of global warming. Which correction is most accurate?',

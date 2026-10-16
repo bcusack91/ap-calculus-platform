@@ -25,16 +25,15 @@ export const hgPoliticalPowerPart1Data = {
 
 ---
 
-## Shapes of States
+## Political Power and Territoriality
 
-| Shape | Description | Advantage/Disadvantage | Example |
-|-------|-----------|----------------------|---------|
-| **Compact** | Roughly circular | Easy to govern, short distances | Poland, Zimbabwe |
-| **Elongated** | Long and narrow | Difficult communication coast to coast | Chile, Vietnam |
-| **Prorupted** | Compact with an extension | Access to resources or strategic area | Thailand, Myanmar |
-| **Fragmented** | Multiple non-contiguous pieces | Difficult to unite culturally | Indonesia, Philippines |
-| **Perforated** | Surrounds another state | Complex border relations | South Africa (contains Lesotho) |
-| **Landlocked** | No coastline | Limited trade access, dependent on neighbors | Bolivia, Nepal, Mongolia |
+Political power is expressed geographically as **control over people, land and resources**. **Territoriality** is the connection of people, their culture and their economic systems to the land.
+
+| Concept | Meaning | Example |
+|---------|---------|---------|
+| **Neocolonialism** | A powerful state or company controls a weaker state's economy or politics without formal rule | Foreign firms controlling a former colony's mines and export earnings |
+| **Shatterbelt** | A region caught between outside powers and split by internal divisions, so conflict is common | Eastern Europe during the Cold War; the Middle East |
+| **Choke point** | A narrow passage on a key route whose control gives power over trade or military movement | Strait of Hormuz, Strait of Malacca, Suez and Panama Canals |
       `
     },
     {
@@ -57,15 +56,15 @@ export const hgPoliticalPowerPart1Data = {
             explanation: 'Devolution = transferring power from a central government to regional authorities. The UK created the Scottish Parliament and Welsh Assembly, giving these regions more self-governance.'
           },
           {
-            question: 'Indonesia, consisting of over 17,000 islands, is best classified as a:',
+            question: 'About one-fifth of the world\'s oil passes through the narrow Strait of Hormuz. The strait is best described as a:',
             options: [
-              'Compact state',
-              'Elongated state',
-              'Fragmented state',
-              'Perforated state'
+              'Shatterbelt',
+              'Relict boundary',
+              'Choke point',
+              'Stateless nation'
             ],
             correctAnswer: 2,
-            explanation: 'Indonesia territory is spread across thousands of non-contiguous islands — making governance, communication, and national unity challenging. This is a fragmented state.'
+            explanation: 'A choke point is a narrow passage on a vital route; whoever controls it gains power over trade and military movement. A shatterbelt is a whole region torn by outside rivalry and internal division, a relict boundary no longer functions, and a stateless nation is a people without a state.'
           }
         ]
       }
@@ -130,23 +129,23 @@ export const hgPoliticalPowerPart1Data = {
       exercise: {
         dropdowns: [
           {
-            label: 'Chile, stretching 2,600 miles along the Pacific coast, is a ___ state',
-            options: ['Elongated', 'Compact', 'Fragmented', 'Prorupted']
+            label: 'Foreign corporations controlling a former colony\'s mines and export earnings, without formal colonial rule, is ___',
+            options: ['Neocolonialism', 'Devolution', 'Supranationalism', 'Irredentism']
           },
           {
-            label: 'South Africa completely surrounding the country of Lesotho makes South Africa a ___ state',
-            options: ['Perforated', 'Compact', 'Fragmented', 'Elongated']
+            label: 'A region squeezed between rival outside powers and split by internal ethnic divisions is a ___',
+            options: ['Shatterbelt', 'Choke point', 'Nation-state', 'Federal state']
           },
           {
             label: 'Concentrating opposition voters into one district so they win by huge margins but lose everywhere else is called ___',
             options: ['Packing', 'Cracking', 'Stacking', 'Devolution']
           }
         ],
-        correctAnswers: ['Elongated', 'Perforated', 'Packing'],
-        hint1: 'Very long and narrow.',
-        hint2: 'Contains another country inside it.',
+        correctAnswers: ['Neocolonialism', 'Shatterbelt', 'Packing'],
+        hint1: 'Control without formal rule.',
+        hint2: 'Caught between outside powers and divided inside.',
         hint3: 'Pack them all into one place.',
-        explanation: 'Chile = elongated (long and narrow). South Africa = perforated (surrounds Lesotho). Packing = concentrating opposition voters in few districts.'
+        explanation: 'Neocolonialism = economic or political control of a weaker state without formal rule. Shatterbelt = a region pressured by outside powers and split internally. Packing = concentrating opposition voters in few districts.'
       }
     },
     {
@@ -159,7 +158,7 @@ export const hgPoliticalPowerPart1Data = {
 - **Devolution reasons**: ethnic/linguistic differences, economic inequality, physical geography (islands, mountains)
 - **Gerrymandering**: be able to identify packing vs cracking from a map diagram
 - **Supranationalism**: EU is the most tested — know its benefits (trade, travel) and challenges (loss of sovereignty, Brexit)
-- **State shapes**: be ready to identify from a map and explain how shape affects governance
+- **Territoriality**: explain how neocolonialism, shatterbelts and choke points express control over people, land and resources
       `
     },
     {
@@ -182,15 +181,15 @@ export const hgPoliticalPowerPart1Data = {
             explanation: 'Brexit reflects the tension between maintaining national sovereignty (controlling own laws, borders, trade) and the benefits of supranational cooperation (EU free trade, free movement).'
           },
           {
-            question: 'A country composed of several islands spread across 1,000 miles of ocean would most likely face challenges related to its ___ shape.',
+            question: 'A country made up of islands spread across 1,000 miles of ocean faces a strong movement for self-rule on its most distant island. Which devolutionary factor does this best illustrate?',
             options: [
-              'Compact',
-              'Elongated',
-              'Fragmented',
-              'Perforated'
+              'Irredentism by a neighboring state',
+              'Division of groups by physical geography',
+              'Supranational limits on sovereignty',
+              'Ethnic cleansing by the central state'
             ],
-            correctAnswer: 2,
-            explanation: 'Fragmented states (like Indonesia or the Philippines) face challenges in transportation, communication, national unity, and governance because their territory is not connected.'
+            correctAnswer: 1,
+            explanation: 'Physical geography such as open water or mountains can divide groups and weaken ties to the capital, a devolutionary factor the CED names (SPS-4.A.1). Irredentism is a claim by another state, supranationalism involves organizations like the EU, and nothing in the scenario involves ethnic cleansing.'
           }
         ]
       }

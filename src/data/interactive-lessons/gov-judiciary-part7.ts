@@ -13,47 +13,43 @@ export const govJudiciaryPart7Data = {
 
 | Section |
 |---|
-| High-yield dates 1789-2024 |
+| High-yield dates 1789-2023 |
 | Required AP Gov SCOTUS cases on the Judiciary |
 | Sprint terms |
 | AP free-response strategy |
 
-> 🔑 Key idea: The federal judiciary is the LEAST DANGEROUS BRANCH (Federalist 78) but exercises POWERFUL JUDICIAL REVIEW (*Marbury v. Madison* 1803). Mastery of Article III + Federalist 78 + Brutus 1 + key cases (Marbury, McCulloch, Brown, Roe/Dobbs, Heller, Citizens United, Trump v. US) anchors strong AP performance.
+> 🔑 Key idea: The federal judiciary is the LEAST DANGEROUS BRANCH (Federalist 78) but exercises POWERFUL JUDICIAL REVIEW (*Marbury v. Madison* 1803). Mastery of Article III + Federalist 78 + Brutus 1 + the 14 required cases (Marbury, McCulloch, Brown, Baker, Citizens United and the rest) + the EK-named Griswold/Roe/Dobbs anchors strong AP performance.
       `
     },
     {
       id: 'govjudic7-content',
       type: 'text' as const,
       content: `
-## High-Yield Dates 1789-2024
+## High-Yield Dates 1789-2023
 
 | Year | Event | Judicial significance |
 |---|---|---|
 | 1789 | Judiciary Act | Created lower federal courts + 6-justice SCOTUS |
 | 1803 | *Marbury v. Madison* | Established judicial review |
 | 1819 | *McCulloch v. Maryland* | National supremacy + broad implied powers |
-| 1824 | *Gibbons v. Ogden* | Broad federal commerce power |
-| 1857 | *Dred Scott v. Sandford* | Worst SCOTUS decision; Black Americans not citizens; voided Missouri Compromise |
-| 1865-70 | 13th + 14th + 15th Amendments | Civil War Amendments effectively repudiated *Dred Scott* |
+| 1865-70 | 13th + 14th + 15th Amendments | Civil War Amendments — abolished slavery, defined citizenship + equal protection, barred racial denial of the vote (EK 3.12.A.1, 5.1.A.1) |
 | 1869 | Judiciary Act | Set SCOTUS at 9 justices (held since) |
-| 1873 | *Slaughter-House Cases* | Began narrowing Reconstruction protections |
-| 1883 | *Civil Rights Cases* | Struck Civil Rights Act of 1875 (state-action limit) |
 | 1896 | *Plessy v. Ferguson* | 'Separate but equal'; Harlan dissent |
-| 1905 | *Lochner v. New York* | Defining Lochner-era decision |
-| 1925 | Judiciary Act ('Judges' Bill') | Gave SCOTUS broad cert discretion |
+| 1919 | *Schenck v. United States* | Clear and present danger (REQUIRED) |
 | 1925 | *Gitlow v. New York* | First major incorporation (1A speech) |
 | 1937 | FDR court-packing plan + 'Switch in time' | Hughes Court abandoned Lochner |
 | 1937 | *West Coast Hotel v. Parrish* + *NLRB v. Jones & Laughlin* | New Deal upheld |
-| 1942 | *Wickard v. Filburn* | Cemented broad federal commerce power |
 | 1954 | *Brown v. Board of Education* | Overruled *Plessy*; ended de jure school segregation |
 | 1957 | Eisenhower deploys 101st Airborne to Little Rock | Enforce *Brown* against Faubus's resistance |
-| 1958 | *Cooper v. Aaron* | States bound by SCOTUS interpretations |
 | 1961 | *Mapp v. Ohio* | Exclusionary rule incorporated |
 | 1962 | *Engel v. Vitale* + *Baker v. Carr* | School prayer + reapportionment |
 | 1963 | *Gideon v. Wainwright* | Right to counsel incorporated |
-| 1964 | *Reynolds v. Sims* + *NYT v. Sullivan* | One-person-one-vote + actual malice |
+| 1964 | *Reynolds v. Sims* | One-person-one-vote (follows *Baker*) |
+| 1965 | *Griswold v. Connecticut* | Right to privacy (named in EK 3.9.A.2) |
 | 1966 | *Miranda v. Arizona* | Miranda warnings |
 | 1969 | *Tinker v. Des Moines* + Burger CJ | Student speech + Burger Court begins |
+| 1971 | *New York Times v. United States* | Prior restraint (REQUIRED) |
+| 1972 | *Wisconsin v. Yoder* | Free exercise (REQUIRED) |
 | 1973 | *Roe v. Wade* | Abortion right (overruled 2022) |
 | 1974 | *US v. Nixon* | Executive privilege qualified |
 | 1976 | *Buckley v. Valeo* | Campaign finance framework |
@@ -61,22 +57,17 @@ export const govJudiciaryPart7Data = {
 | 1986 | Rehnquist becomes CJ | Conservative shift begins |
 | 1987 | Bork rejected 42-58 | Modern partisan judicial nomination era begins |
 | 1991 | Thomas confirmed 52-48 (Anita Hill) | Contentious confirmations |
-| 1992 | *Casey* | Affirmed Roe + 'undue burden'; articulated 4-factor stare decisis test |
+| 1992 | *Casey* | Affirmed Roe + 'undue burden' standard (illustrative) |
+| 1993 | *Shaw v. Reno* | Racial gerrymandering (REQUIRED) |
 | 1995 | *US v. Lopez* | First Commerce Clause limit since 1937 |
-| 2000 | *Bush v. Gore* | Decided 2000 election |
 | 2005 | Roberts becomes CJ | Roberts Court begins |
-| 2008 | *DC v. Heller* | Individual right to bear arms |
-| 2010 | *Citizens United v. FEC* + *McDonald v. Chicago* | Corporate political expenditures + 2A incorporated |
-| 2012 | *NFIB v. Sebelius* | ACA upheld as tax |
-| 2013 | *Shelby County v. Holder* | Struck VRA preclearance formula |
+| 2010 | *Citizens United v. FEC* + *McDonald v. Chicago* | Corporate political expenditures + 2A incorporated (both REQUIRED) |
 | 2015 | *Obergefell v. Hodges* | Same-sex marriage |
 | 2016 | Garland blockade | McConnell refused hearing for 11 months |
-| 2017 | Nuclear option 2.0 + Gorsuch confirmed | SCOTUS filibuster eliminated |
 | 2018 | Kavanaugh confirmed 50-48 (Ford) | Narrowest margin since 1881 |
 | 2020 | Barrett confirmed 8 days before election | 6-3 conservative majority cemented |
-| 2022 | *Dobbs* + *Bruen* + *WV v. EPA* | Major conservative term — overruled Roe; 2A history-and-tradition; major questions doctrine |
+| 2022 | *Dobbs v. Jackson Women's Health* | Overruled Roe + Casey (named in EK 3.9.A.2) |
 | 2023 | *SFFA v. Harvard* | Race-based affirmative action in college admissions struck |
-| 2024 | *Loper Bright v. Raimondo* + *Trump v. United States* | Overruled *Chevron*; presidential immunity for official acts |
 
 ## Required AP Gov SCOTUS Cases on the Judiciary
 
@@ -85,51 +76,37 @@ export const govJudiciaryPart7Data = {
 | *Marbury v. Madison* | 1803 | Established judicial review | Founded judicial review of executive + legislative actions |
 | *McCulloch v. Maryland* | 1819 | National supremacy + broad implied powers | Foundational case on federal-state relations + necessary and proper |
 
-## Other High-Yield Cases on the Judiciary
+## Other Cases You Will Meet — Required or Not?
 
-| Case | Year | Holding |
-|---|---|---|
-| *Chisholm v. Georgia* | 1793 | Citizens can sue states (overruled by 11th Am 1795) |
-| *Fletcher v. Peck* | 1810 | Contract Clause; first state law struck |
-| *Gibbons v. Ogden* | 1824 | Broad federal commerce power |
-| *Dred Scott v. Sandford* | 1857 | Black Americans not citizens; Missouri Compromise void |
-| *Slaughter-House Cases* | 1873 | Narrow Privileges or Immunities Clause |
-| *Civil Rights Cases* | 1883 | Struck CRA 1875 (state-action limit) |
-| *Plessy v. Ferguson* | 1896 | Separate but equal |
-| *Lochner v. New York* | 1905 | Economic substantive due process |
-| *Gitlow v. New York* | 1925 | First major incorporation (1A speech) |
-| *West Coast Hotel v. Parrish* | 1937 | Switch in time; minimum wage upheld |
-| *NLRB v. Jones & Laughlin* | 1937 | Federal labor regulation upheld |
-| *Wickard v. Filburn* | 1942 | Broad commerce reach over local activity |
-| *Brown v. Board* | 1954 | Overruled Plessy |
-| *Mapp v. Ohio* | 1961 | Exclusionary rule incorporated |
-| *Engel v. Vitale* | 1962 | Public school prayer struck |
-| *Baker v. Carr* | 1962 | Reapportionment justiciable |
-| *Gideon v. Wainwright* | 1963 | Right to counsel incorporated |
-| *NYT v. Sullivan* | 1964 | Actual malice for public-figure libel |
-| *Miranda v. Arizona* | 1966 | Miranda warnings |
-| *Tinker v. Des Moines* | 1969 | Student speech protected |
-| *Roe v. Wade* | 1973 | Abortion right (overruled by Dobbs 2022) |
-| *US v. Nixon* | 1974 | Executive privilege qualified |
-| *Buckley v. Valeo* | 1976 | Campaign-finance framework |
-| *Casey* | 1992 | Affirmed Roe + undue burden + 4-factor stare decisis test |
-| *US v. Lopez* | 1995 | First Commerce Clause limit since 1937 |
-| *Bush v. Gore* | 2000 | Decided 2000 election |
-| *DC v. Heller* | 2008 | Individual right to bear arms |
-| *Citizens United v. FEC* | 2010 | Corporate political expenditures |
-| *McDonald v. Chicago* | 2010 | 2A incorporated |
-| *NFIB v. Sebelius* | 2012 | ACA upheld as tax |
-| *Shelby County v. Holder* | 2013 | Struck VRA preclearance formula |
-| *Obergefell v. Hodges* | 2015 | Same-sex marriage |
-| *Janus v. AFSCME* | 2018 | Public union dues; overruled Abood |
-| *Trump v. Hawaii* | 2018 | Travel ban upheld |
-| *Bostock v. Clayton County* | 2020 | LGBTQ Title VII protection |
-| *Dobbs v. Jackson Women's Health* | 2022 | Overruled Roe + Casey |
-| *NYSRPA v. Bruen* | 2022 | 2A history-and-tradition test |
-| *West Virginia v. EPA* | 2022 | Major questions doctrine |
-| *Students for Fair Admissions v. Harvard* | 2023 | Race-based affirmative action struck |
-| *Loper Bright v. Raimondo* | 2024 | Overruled Chevron deference |
-| *Trump v. United States* | 2024 | Presidential immunity for official acts |
+The CED requires 14 cases. Know each required case's facts, holding, and reasoning; for every other case, the exam supplies the facts and holding if it uses it.
+
+| Case | Year | Holding | Status |
+|---|---|---|---|
+| *Plessy v. Ferguson* | 1896 | Separate but equal | Doctrine named in EK 3.12.A.1 |
+| *Schenck v. United States* | 1919 | Clear and present danger | REQUIRED |
+| *Gitlow v. New York* | 1925 | First major incorporation (1A speech) | Context for selective incorporation |
+| *NLRB v. Jones & Laughlin* | 1937 | Federal labor regulation upheld | Context (New Deal conflict) |
+| *Brown v. Board* | 1954 | Overruled Plessy | REQUIRED |
+| *Mapp v. Ohio* | 1961 | Exclusionary rule incorporated | Rule named in EK 3.8.A.4 |
+| *Engel v. Vitale* | 1962 | Public school prayer struck | REQUIRED |
+| *Baker v. Carr* | 1962 | Reapportionment justiciable | REQUIRED |
+| *Gideon v. Wainwright* | 1963 | Right to counsel incorporated | REQUIRED |
+| *Griswold v. Connecticut* | 1965 | Right to privacy | Named in EK 3.9.A.2 |
+| *Miranda v. Arizona* | 1966 | Miranda warnings | Rule named in EK 3.8.A.2 |
+| *Tinker v. Des Moines* | 1969 | Student speech protected | REQUIRED |
+| *New York Times v. United States* | 1971 | No prior restraint of the Pentagon Papers | REQUIRED |
+| *Wisconsin v. Yoder* | 1972 | Amish free exercise outweighs compulsory schooling | REQUIRED |
+| *Roe v. Wade* | 1973 | Abortion right (overruled by Dobbs 2022) | Named in EK 3.9.A.2 |
+| *US v. Nixon* | 1974 | Executive privilege qualified | Illustrative |
+| *Buckley v. Valeo* | 1976 | Campaign-finance framework | Context for EK 5.11 |
+| *Casey* | 1992 | Affirmed Roe + undue burden | Illustrative |
+| *Shaw v. Reno* | 1993 | Race-based districts face equal protection challenge | REQUIRED |
+| *US v. Lopez* | 1995 | First Commerce Clause limit since 1937 | REQUIRED |
+| *Citizens United v. FEC* | 2010 | Corporate political expenditures | REQUIRED |
+| *McDonald v. Chicago* | 2010 | 2A incorporated | REQUIRED |
+| *Obergefell v. Hodges* | 2015 | Same-sex marriage | Illustrative |
+| *Dobbs v. Jackson Women's Health* | 2022 | Overruled Roe + Casey | Named in EK 3.9.A.2 |
+| *Students for Fair Admissions v. Harvard* | 2023 | Race-based affirmative action struck | Context for EK 3.13.A.1 |
 
 ## Sprint Terms
 
@@ -137,31 +114,23 @@ export const govJudiciaryPart7Data = {
 |---|---|
 | **Article III** | Judicial branch; vested in 'one supreme Court' + 'inferior Courts' Congress establishes |
 | **Judicial Review** | Power of federal courts to declare acts of Congress + executive unconstitutional; Marbury 1803 |
-| **Writ of Certiorari** | Order for lower court to send case to SCOTUS for review |
-| **Rule of Four** | Only 4 of 9 justices needed to GRANT cert (5 needed for majority decision) |
 | **Original Jurisdiction** | SCOTUS first hears case (ambassadors + states cases per Art III § 2 cl. 2) |
 | **Appellate Jurisdiction** | SCOTUS reviews lower court decisions; ~99% of SCOTUS cases |
 | **Stare Decisis** | 'Stand by what is decided' — respect for precedent |
-| **Casey 4-factor Test** | Workability, reliance, doctrinal development, factual changes |
-| **Originalism** | Constitution interpreted according to ORIGINAL PUBLIC MEANING at ratification |
-| **Living Constitution** | Constitution evolves with contemporary values |
-| **Textualism** | Statutes interpreted according to ordinary meaning of text |
 | **Judicial Activism** | Court actively interprets Constitution; may strike statutes; may overturn precedent |
 | **Judicial Restraint** | Court defers to elected branches; presumes statutes constitutional |
 | **Majority Opinion** | Opinion of 5+ justices; binding precedent |
 | **Concurring Opinion** | Justice agrees w/ result, different reasoning |
 | **Dissenting Opinion** | Justice disagrees w/ majority; not binding |
-| **Plurality Opinion** | When no opinion gets 5 votes; precedent on narrowest grounds (Marks rule) |
+| **Plurality Opinion** | When no single opinion gets 5 votes; the opinion with the most votes announces the judgment |
 | **Per Curiam** | Unsigned opinion of the Court |
 | **Federalist 78** | Hamilton — judiciary 'least dangerous branch'; defends judicial review + life tenure |
 | **Brutus 1** | Anti-Federalist — warned of expansive federal authority + unaccountable judiciary |
-| **Solicitor General** | 'Tenth Justice' represents US in SCOTUS |
-| **Senatorial Courtesy** | Senate tradition deferring to home-state senators on lower-court nominations |
-| **Nuclear Option 2.0** | 2017 elimination of filibuster for SCOTUS nominees |
 | **Court-Packing** | Adding justices to alter ideological balance; FDR 1937 plan failed |
+| **Life Tenure** | Justices serve 'during good Behaviour' — lets the Court issue unpopular rulings independent of the political climate (EK 2.10.A.1) |
+| **Amicus Curiae** | 'Friend of the court' brief filed by an interest group to inform the justices (EK 5.6.A.1) |
+| **Limits on the Court** | Statutes modifying a decision, constitutional amendments, appointments, delayed implementation, removing appellate jurisdiction (EK 2.11.B.1) |
 | **Incorporation Doctrine** | 14th Am Due Process incorporates Bill of Rights against states |
-| **Major Questions Doctrine** | Courts require CLEAR congressional authorization for agencies on major issues; WV v. EPA 2022 |
-| **Chevron Deference** | Courts deferred to reasonable agency interpretations; OVERRULED by Loper Bright 2024 |
 
 ## AP Free-Response Strategy
 
@@ -171,10 +140,10 @@ export const govJudiciaryPart7Data = {
 | Part | Approach |
 |---|---|
 | **(A) Constitutional clause** | The 14TH AMENDMENT DUE PROCESS CLAUSE — which provides 'nor shall any State deprive any person of life, liberty, or property, without due process of law' — was the clause analyzed in Dobbs; the question was whether 'liberty' protected by the clause includes a right to abortion under SUBSTANTIVE DUE PROCESS doctrine |
-| **(B) Majority justification** | The MAJORITY (Alito + 4 conservatives) justified overruling Roe through several arguments: (1) HISTORY-AND-TRADITION TEST (Glucksberg 1997 standard) — abortion right is NOT 'deeply rooted in this Nation's history and tradition' because abortion was criminalized in most states from the founding through 1973; (2) TEXT — the Constitution does not mention abortion; (3) SUBSTANTIVE DUE PROCESS is a SUSPECT DOCTRINE that had previously enabled the Lochner-era misuse of judicial power; (4) DEMOCRATIC LEGITIMACY — abortion involves a moral question on which the people may decide through their elected representatives; (5) CASEY 4-FACTOR STARE DECISIS TEST — Roe was 'egregiously wrong' from the start, the rule was unworkable, reliance interests were weak, and doctrinal development undermined Roe |
-| **(C) Effect on federal-state relationship** | Dobbs SHIFTED ABORTION REGULATION FROM FEDERAL CONSTITUTIONAL RIGHT to STATE LEGISLATIVE PREROGATIVE — a major federalism realignment: (1) ~13-14 STATES IMPLEMENTED NEAR-TOTAL ABORTION BANS; ~25 STATES MAINTAINED BROAD ACCESS; (2) RESULT — SIGNIFICANT INTERSTATE VARIATION mirroring pre-Roe patterns; (3) NEW FEDERAL-STATE TENSIONS — interstate travel rights (Bigelow v. Virginia 1975 protects travel for abortion services); medication abortion regulated by FDA (Mifepristone access litigation); EMTALA (federal Emergency Medical Treatment and Active Labor Act) emergency abortion care; (4) 2024 ELECTION — abortion ballot initiatives passed in multiple states even as Trump won presidency, demonstrating federal-state-political-process interaction post-Dobbs |
+| **(B) Majority justification** | The MAJORITY (Alito + 4 conservatives) justified overruling Roe through several arguments: (1) HISTORY AND TRADITION — an abortion right is NOT 'deeply rooted in this Nation's history and tradition' because abortion was criminalized in most states from the founding through 1973; (2) TEXT — the Constitution does not mention abortion; (3) SUBSTANTIVE DUE PROCESS should be used cautiously when recognizing rights the text does not name; (4) DEMOCRATIC LEGITIMACY — abortion involves a moral question on which the people may decide through their elected representatives; (5) STARE DECISIS does not require keeping a precedent the majority considered 'egregiously wrong' from the start |
+| **(C) Effect on federal-state relationship** | Dobbs SHIFTED ABORTION REGULATION FROM FEDERAL CONSTITUTIONAL RIGHT to STATE LEGISLATIVE PREROGATIVE — a major federalism realignment: (1) ~13-14 STATES IMPLEMENTED NEAR-TOTAL ABORTION BANS; ~25 STATES MAINTAINED BROAD ACCESS; (2) RESULT — SIGNIFICANT INTERSTATE VARIATION mirroring pre-Roe patterns; (3) NEW FEDERAL-STATE TENSIONS — interstate travel for abortion services; medication abortion regulated by FDA (Mifepristone access litigation); EMTALA (federal Emergency Medical Treatment and Active Labor Act) emergency abortion care; (4) 2024 ELECTION — abortion ballot initiatives passed in multiple states even as Trump won presidency, demonstrating federal-state-political-process interaction post-Dobbs |
 
-> 🔑 Key takeaway: Mastery of the AP Gov Judiciary content (Article III + judicial review + Federalist 78 + key cases including Marbury + McCulloch + Brown + Roe/Dobbs + Heller + Citizens United + Trump v. US + interpretive methods + stare decisis + nomination process) anchors strong unit-2 + unit-3 + unit-5 performance.
+> 🔑 Key takeaway: Mastery of the AP Gov Judiciary content (Article III + judicial review + Federalist 78 + Brutus 1 + required cases including Marbury + McCulloch + Brown + Citizens United + EK cases Griswold/Roe/Dobbs + activism vs restraint + stare decisis + limits on the Court + nomination process) anchors strong unit-2 + unit-3 + unit-5 performance.
       `
     },
     {
@@ -192,7 +161,7 @@ export const govJudiciaryPart7Data = {
               "Marbury created the Rule of Four and McCulloch set the Court's size at nine justices"
             ],
             correctAnswer: 0,
-            explanation: 'Marbury + McCulloch = TWO of the 15 REQUIRED AP Gov SCOTUS cases; FOUNDATIONAL to Judiciary unit. (1) MARBURY (1803) → JUDICIAL REVIEW; Marshall: "the province and duty of the Judicial Department to say what the law is"; struck Judiciary Act 1789 § 13 as expanding original jurisdiction beyond Art III § 2 cl 2. (2) McCULLOCH (1819) → NATIONAL SUPREMACY + BROAD IMPLIED POWERS; upheld Bank of US via "necessary and proper"; struck MD tax — "the power to tax involves the power to destroy." JOINT: federal judicial power over federal political branches (Marbury) + over states (McCulloch); both by JOHN MARSHALL → Marshall Court nationalist FEDERALIST jurisprudence = foundation of modern American constitutional law.'
+            explanation: 'Marbury + McCulloch = TWO of the 14 REQUIRED AP Gov SCOTUS cases; FOUNDATIONAL to Judiciary unit. (1) MARBURY (1803) → JUDICIAL REVIEW; Marshall: "the province and duty of the Judicial Department to say what the law is"; struck Judiciary Act 1789 § 13 as expanding original jurisdiction beyond Art III § 2 cl 2. (2) McCULLOCH (1819) → NATIONAL SUPREMACY + BROAD IMPLIED POWERS; upheld Bank of US via "necessary and proper"; struck MD tax — "the power to tax involves the power to destroy." JOINT: federal judicial power over federal political branches (Marbury) + over states (McCulloch); both by JOHN MARSHALL → Marshall Court nationalist FEDERALIST jurisprudence = foundation of modern American constitutional law.'
           },
           {
             question: "How does the relationship between Federalist 78 and Brutus 1 frame modern debates about judicial power?",
@@ -275,7 +244,7 @@ export const govJudiciaryPart7Data = {
               "The Court has avoided controversial rulings, letting Congress settle every rights question"
             ],
             correctAnswer: 0,
-            explanation: 'Pro-modern-Court: (1) RIGHTS REVOLUTION — Warren Court expanded civil rights (Brown 1954, Loving 1967), criminal procedure (Mapp 1961, Gideon 1963, Miranda 1966), reapportionment (Baker 1962, Reynolds 1964 "one person, one vote"). (2) MINORITY-RIGHTS PROTECTION (Federalist 78) — Court protected unpopular minorities (racial minorities Brown; criminal defendants Gideon + Miranda; religious dissenters Engel; LGBTQ Lawrence 2003 + Obergefell 2015 + Bostock 2020) when democratic process wouldn\'t. (3) EXECUTIVE OVERREACH CHECK — Youngstown 1952, US v. Nixon 1974, Hamdan 2006. (4) FEDERALISM BALANCE — expansion (Wickard 1942, Heart of Atlanta 1964) + limitation (Lopez 1995, Morrison 2000, NFIB v. Sebelius 2012). (5) INSTITUTIONAL LEGITIMACY — generally trusted; provides constitutional certainty + dispute resolution.'
+            explanation: 'Pro-modern-Court: (1) RIGHTS REVOLUTION — Warren Court expanded civil rights (Brown 1954, Loving 1967), criminal procedure (Mapp 1961, Gideon 1963, Miranda 1966), reapportionment (Baker 1962, Reynolds 1964 "one person, one vote"). (2) MINORITY-RIGHTS PROTECTION (Federalist 78) — Court protected unpopular minorities (racial minorities Brown; criminal defendants Gideon + Miranda; religious dissenters Engel; same-sex couples Obergefell 2015) when democratic process wouldn\'t. (3) EXECUTIVE OVERREACH CHECK — Youngstown 1952, US v. Nixon 1974. (4) FEDERALISM BALANCE — expansion (Wickard 1942, Heart of Atlanta 1964) + limitation (Lopez 1995, Morrison 2000, NFIB v. Sebelius 2012). (5) INSTITUTIONAL LEGITIMACY — generally trusted; provides constitutional certainty + dispute resolution.'
           },
           {
             question: "What is the strongest argument that the modern Supreme Court has been BAD for American constitutional democracy?",
@@ -286,7 +255,7 @@ export const govJudiciaryPart7Data = {
               "The Court has shrunk federal power so far that Brutus's fears of national dominance were proved wrong"
             ],
             correctAnswer: 0,
-            explanation: 'Counter (modern Court BAD): (1) BRUTUS 1 WARNING REALIZED — Anti-Federalist warned of life-tenured unaccountable judges expanding federal power; modern Court did EXACTLY this (Lochner 1897-1937, Roe 1973, Citizens United 2010, Dobbs 2022, Trump v US 2024). (2) DEMOCRATIC ILLEGITIMACY — 6-3 majority decided by 5 justices appointed by popular-vote losers (Bush 2000 → Roberts + Alito; Trump → Gorsuch + Kavanaugh + Barrett). (3) PARTISAN PATTERN — overrulings (Dobbs, Janus, Loper Bright, SFFA) = 5-4/6-3 partisan splits → RESULT-DRIVEN. (4) STARE DECISIS EROSION — Roe 49y, Chevron 40y, Abood 41y; Gallup ~40-45% post-2020. (5) CITIZENS UNITED — corporate money. (6) DOBBS — eliminated 49-yr right against majority opinion. (7) Earl Warren\'s "is this right?" standard violated.'
+            explanation: 'Counter (modern Court BAD): (1) BRUTUS 1 WARNING REALIZED — Anti-Federalist warned of life-tenured unaccountable judges expanding federal power; modern Court did EXACTLY this (Lochner 1897-1937, Roe 1973, Citizens United 2010, Dobbs 2022). (2) DEMOCRATIC ILLEGITIMACY — 6-3 majority decided by 5 justices appointed by popular-vote losers (Bush 2000 → Roberts + Alito; Trump → Gorsuch + Kavanaugh + Barrett). (3) PARTISAN PATTERN — overrulings like Dobbs split 5-4/6-3 along ideological lines → critics call them RESULT-DRIVEN. (4) STARE DECISIS EROSION — Roe stood 49 years; Gallup ~40-45% approval post-2020. (5) CITIZENS UNITED — corporate money. (6) DOBBS — eliminated 49-yr right against majority opinion. (7) Earl Warren\'s "is this right?" standard violated.'
           }
         ]
       }

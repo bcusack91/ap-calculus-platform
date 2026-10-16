@@ -13,13 +13,13 @@ export const govVotingElectionsPart1Data = {
 
 | Section |
 |---|
-| Suffrage expansion (15th + 19th + 23rd + 24th + 26th Amendments + VRA 1965 + reauthorizations + Shelby County 2013) |
+| Suffrage expansion (15th + 19th + 23rd + 24th + 26th Amendments + VRA 1965 + reauthorizations) |
 | Voter turnout patterns (~60-67% presidential + ~40% midterm + 25% local; demographic patterns by age + education + income + race + gender + region) |
-| Rational + sociological + psychological models of voting (Downs 1957 + Columbia + Michigan schools) |
+| Models of voting behavior (rational choice, retrospective, prospective, straight-ticket) |
 | Election types (general + primary — open/closed/blanket + caucus + runoff + recall + initiative + referendum) |
-| Electoral College (538 electors = 435 House + 100 Senate + 3 DC; winner-take-all 48 states + Maine/Nebraska district; 270 to win; faithless electors + Chiafalo 2020) |
+| Electoral College (538 electors = 435 House + 100 Senate + 3 DC; winner-take-all 48 states + Maine/Nebraska district; 270 to win; faithless electors) |
 
-> 🔑 Key idea: ELECTIONS = central mechanism translating PUBLIC OPINION into POLICY through INSTITUTIONAL DESIGN that reflects MADISONIAN FILTERING. SUFFRAGE has expanded dramatically through 5 constitutional amendments (15th 1870 race + 19th 1920 sex + 23rd 1961 DC + 24th 1964 poll tax + 26th 1971 age 18) + VOTING RIGHTS ACT 1965 (Section 5 preclearance + Section 2 vote dilution + 1970/1975/1982/2006 reauthorizations) — but Shelby County v. Holder 2013 gutted preclearance + state restrictions followed. VOTER TURNOUT varies by election type (~60-67% presidential 2020/2024 vs ~40% midterm vs 25% local) + correlates with EDUCATION (strongest) + AGE + INCOME + party mobilization. THREE MODELS of voting behavior: RATIONAL CHOICE (Downs 1957 — voter cost-benefit + paradox of voting); SOCIOLOGICAL (Columbia school 1940s Lazarsfeld THE PEOPLE'S CHOICE — group memberships predict vote); PSYCHOLOGICAL (Michigan school THE AMERICAN VOTER 1960 Campbell+Converse+Miller+Stokes — party ID + funnel of causality). Multiple ELECTION TYPES — general (Nov 1st Tuesday after Mon); primary (closed/open/blanket — Washington/California top-two); caucus (Iowa famous; declining); runoff (Georgia 50%+1); recall (CA Davis 2003 + Newsom 2021); initiative + referendum (24 states; CA Prop 13 1978/Prop 8 2008/Prop 187 1994). ELECTORAL COLLEGE — 538 electors (435 House + 100 Senate + 3 DC per 23rd Am); 270 to win; winner-take-all 48 states + ME/NE district; mismatch with popular vote 5 times (1824 + 1876 + 1888 + 2000 Bush/Gore + 2016 Trump/Clinton); Chiafalo v. Washington 2020 upheld faithless elector laws; ECRA 2022 reformed counting after Jan 6 2021.
+> 🔑 Key idea: ELECTIONS = central mechanism translating PUBLIC OPINION into POLICY through INSTITUTIONAL DESIGN that reflects MADISONIAN FILTERING. SUFFRAGE has expanded dramatically through 5 constitutional amendments (15th 1870 race + 19th 1920 sex + 23rd 1961 DC + 24th 1964 poll tax + 26th 1971 age 18) + VOTING RIGHTS ACT 1965 (Section 5 preclearance + Section 2 vote dilution + 1970/1975/1982/2006 reauthorizations) — and state election laws (voter ID, registration rules, early and mail voting) still shape access. VOTER TURNOUT varies by election type (~60-67% presidential 2020/2024 vs ~40% midterm vs 25% local) + correlates with EDUCATION (strongest) + AGE + INCOME + party mobilization. FOUR MODELS of voting behavior (EK 5.1.B.1): RATIONAL CHOICE (vote one's perceived best interest); RETROSPECTIVE (judge the party in power by the recent past); PROSPECTIVE (vote on predictions of future performance); STRAIGHT-TICKET (vote for all of one party's candidates). Multiple ELECTION TYPES — general (Nov 1st Tuesday after Mon); primary (closed/open/blanket — Washington/California top-two); caucus (Iowa famous; declining); runoff (Georgia 50%+1); recall (CA Davis 2003 + Newsom 2021); initiative + referendum (24 states; CA Prop 13 1978/Prop 8 2008/Prop 187 1994). ELECTORAL COLLEGE — 538 electors (435 House + 100 Senate + 3 DC per 23rd Am); 270 to win; winner-take-all 48 states + ME/NE district; mismatch with popular vote 5 times (1824 + 1876 + 1888 + 2000 Bush/Gore + 2016 Trump/Clinton); states may penalize faithless electors.
       `
     },
     {
@@ -53,25 +53,19 @@ The American electorate has expanded dramatically over 235 years through CONSTIT
 
 THE most important VOTING RIGHTS LAW in US history; signed by LBJ Aug 6 1965 after Selma Bloody Sunday (March 7 1965) + LBJ's "We Shall Overcome" speech (March 15 1965).
 
-- **SECTION 2** — bans VOTE DILUTION nationwide; permanent provision; basis for racial gerrymandering challenges (Shaw v. Reno 1993; Allen v. Milligan 2023 upheld Section 2 + ordered Alabama to draw second Black-majority district)
+- **SECTION 2** — bans VOTE DILUTION nationwide; permanent provision; basis for challenges to election rules and district lines that dilute minority votes
 - **SECTION 5 (PRECLEARANCE)** — required jurisdictions with HISTORY OF DISCRIMINATION (most of South + parts of NY/CA/NH/MI/SD/AK) to get federal approval before changing voting laws; covered by SECTION 4(b) FORMULA
 - **SECTION 4(b) (COVERAGE FORMULA)** — identified covered jurisdictions based on 1964/1968/1972 voting practices + low turnout
 - **REAUTHORIZATIONS** — 1970, 1975, 1982 (Reagan signed; banned VOTE DILUTION practices intentionally OR by RESULT/EFFECT), 2006 (Bush signed 25-year extension)
 - **IMPACT** — Black voter registration in MS rose 6.7% (1964) → 59.8% (1967); transformed Southern politics; created MAJORITY-MINORITY DISTRICTS
 
-### Shelby County v. Holder (2013) — VRA Gutted
+### State Voting Laws (EK 5.2.A.2)
 
-- **5-4 decision** Chief Justice ROBERTS struck down Section 4(b) coverage formula as UNCONSTITUTIONAL
-- **REASONING** — formula based on "decades-old data" + "current burdens must be justified by current needs"; states' equal sovereignty
-- **EFFECT** — Section 5 preclearance UNUSABLE without coverage formula (Congress hasn't passed new formula despite repeated bills — John Lewis Voting Rights Advancement Act, Freedom to Vote Act)
-- **IMMEDIATE AFTERMATH** — Texas implemented voter ID law within hours; NC passed sweeping voter restrictions; multiple states closed polling places (especially in Black + Hispanic areas)
-
-### Post-Shelby Voting Restrictions
-
-- **VOTER ID LAWS** — 36 states have ID requirements (some strict like GA + IN + KS + MS + ND + TN + TX + WI; some less strict like AZ + LA + MO + OH); Crawford v. Marion County 2008 upheld photo ID
-- **VOTER REGISTRATION REQUIREMENTS** — purges (Husted v. APRI 2018 upheld Ohio purge); same-day registration in some states; automatic registration via DMV in 22 states + DC
-- **EARLY VOTING** — expanded in many states; restricted in others (NC after 2013)
-- **MAIL VOTING** — exploded during 2020 COVID (61% mail/early); subsequent restrictions (Georgia SB 202 2021); Trump 2024 reversed GOP opposition + encouraged GOP mail voting
+- **VOTER ID LAWS** — 36 states have ID requirements (some strict like GA + IN + KS + MS + ND + TN + TX + WI; some less strict like AZ + LA + MO + OH)
+- **VOTER REGISTRATION REQUIREMENTS** — registering in person, online or AUTOMATICALLY (via DMV in 22 states + DC); same-day registration in some states; voter-roll purges
+- **EARLY VOTING** — expanded in many states; restricted in others
+- **MAIL + ABSENTEE VOTING** — exploded during 2020 COVID (~69% voted by mail or early, Census); some states later added limits (Georgia SB 202 2021), others expanded
+- **POLLING HOURS + FUNDING** — hours polls are open and funding for polling places and workers vary by state and county
 - **FELON DISENFRANCHISEMENT** — 4.6M Americans cannot vote due to felony conviction (2022 Sentencing Project); FL Amendment 4 2018 restored voting rights to ~1.4M felons (legislature limited via Senate Bill 7066 requiring all fines/fees paid)
 - **ELECTION ADMINISTRATION** — partisan election officials (secretaries of state) controversial post-2020
 
@@ -79,8 +73,8 @@ THE most important VOTING RIGHTS LAW in US history; signed by LBJ Aug 6 1965 aft
 
 | Election Type | Typical Turnout |
 |---|---|
-| **PRESIDENTIAL** | ~60-67% of voting-age population (66.6% 2020 highest since 1900; 65% 2024) |
-| **MIDTERM CONGRESSIONAL** | ~40-50% (47% 2018 highest in century; ~46% 2022) |
+| **PRESIDENTIAL** | ~60-67% of voting-age population (66.6% 2020 highest since 1900; ~64% 2024) |
+| **MIDTERM CONGRESSIONAL** | ~40-50% (~50% 2018 highest midterm in a century; ~47% 2022) |
 | **PRIMARY** | ~15-25% |
 | **MUNICIPAL/LOCAL** | ~15-25% |
 | **SPECIAL ELECTIONS** | Highly variable (5-30%) |
@@ -93,7 +87,7 @@ THE most important VOTING RIGHTS LAW in US history; signed by LBJ Aug 6 1965 aft
 | **EDUCATION** | College graduates vote MUCH MORE (~80%) than non-college (~55%) — strongest single predictor |
 | **INCOME** | Higher income votes more (top quintile ~80%; bottom quintile ~50%) |
 | **RACE/ETHNICITY** | White (~71%) > Black (~63%) > Hispanic (~54%) > Asian (~60%) in 2020 |
-| **GENDER** | Women vote slightly more than men (~3-5 pt advantage); +63% women in 2024 |
+| **GENDER** | Women vote slightly more than men (~3-5 pt advantage, Census) |
 | **MARITAL STATUS** | Married vote more than single |
 | **PARTY ID + STRENGTH** | Strong partisans vote much more than weak partisans/independents |
 
@@ -107,29 +101,29 @@ THE most important VOTING RIGHTS LAW in US history; signed by LBJ Aug 6 1965 aft
 - **STRUCTURAL** — gerrymandering makes most House districts uncompetitive; Electoral College makes most states irrelevant ("safe states")
 - **PARADOX OF VOTING** — Downs 1957: rational individual benefit ≈ 0 (one vote rarely decisive); cost > benefit; vote anyway due to civic duty/expressive value
 
-## Three Models of Voting Behavior
+## Models of Voting Behavior (EK 5.1.B.1)
 
-### 1. Rational Choice (Downs 1957)
+### 1. Rational Choice
 
-- **AN ECONOMIC THEORY OF DEMOCRACY** (1957) — Anthony Downs
-- **VOTERS** maximize utility by choosing party/candidate closest to their preferences
-- **PARADOX OF VOTING** — rational individual benefit nearly zero; explained by EXPRESSIVE VOTING + CIVIC DUTY
-- **MEDIAN VOTER THEOREM** — in 2-party majoritarian system, parties converge on median voter to maximize votes (challenged by polarization data)
-- **RETROSPECTIVE VOTING** — V.O. Key Jr THE RESPONSIBLE ELECTORATE (1966) — voters reward/punish incumbents based on PERFORMANCE (especially economy); Fiorina 1981 confirmed; "It's the economy, stupid" (Carville 1992 Clinton campaign)
+- **VOTERS** base decisions on what they perceive to be in their BEST INTEREST — choosing the party/candidate closest to their preferences (Anthony Downs 1957 popularized the idea)
+- **PARADOX OF VOTING** — one vote is rarely decisive, so many vote out of civic duty or to express identity
+- **EXAMPLE** — a small-business owner votes for the candidate promising the tax cut that helps her firm
 
-### 2. Sociological Model (Columbia School 1940s)
+### 2. Retrospective Voting
 
-- **THE PEOPLE'S CHOICE** (1944) — Lazarsfeld + Berelson + Gaudet — Erie County OH 1940 study
-- **VOTERS PREDICTABLE** by SOCIAL CHARACTERISTICS — religion + class + region + ethnicity
-- **TWO-STEP FLOW** — media → opinion leaders → mass public; INTERPERSONAL INFLUENCE more important than direct media exposure
-- **CROSS-PRESSURED VOTERS** — those with conflicting group memberships vote later/turn out less
+- Voters decide whether the party or candidate IN POWER should be REELECTED based on the RECENT PAST (especially the economy)
+- "It's the economy, stupid" (Carville, 1992 Clinton campaign) — voters punished the incumbent for a recession
+- **EXAMPLE** — high inflation in 2022-2024 hurt the incumbent party in 2024
 
-### 3. Psychological Model (Michigan School 1960)
+### 3. Prospective Voting
 
-- **THE AMERICAN VOTER** (1960) — Campbell + Converse + Miller + Stokes
-- **PARTY IDENTIFICATION** — psychological attachment formed via socialization; STRONGEST predictor of vote choice
-- **FUNNEL OF CAUSALITY** — long-term factors (PID + group identity) → mid-term (issues + ideology) → short-term (candidates + events) → vote
-- **MOST INFLUENTIAL VOTING THEORY** in political science; modified by sorting + polarization
+- Voters choose based on PREDICTIONS of how a party or candidate will perform in the FUTURE
+- **EXAMPLE** — a voter backs the candidate whose health-care plan she expects to lower her costs
+
+### 4. Straight-Ticket Voting
+
+- Voters choose ALL the candidates from ONE PARTY on the ballot
+- Tied to PARTY IDENTIFICATION, a leading factor in voter choice (EK 5.2.A.4); fewer split tickets as partisanship has hardened
 
 ## Election Types
 
@@ -161,7 +155,7 @@ THE most distinctive + controversial American electoral institution.
 
 - **HISTORICAL** — 165 faithless electors in US history (most votes for losing candidates)
 - **2016 RECORD** — 7 faithless electors (4 WA Clinton → Powell 3 + Faith Spotted Eagle 1; 2 TX Trump → Kasich/Paul; 1 HI Clinton → Sanders)
-- **CHIAFALO v. WASHINGTON (2020)** — Supreme Court UNANIMOUSLY upheld state laws penalizing faithless electors; states can require electors to vote per popular vote winner
+- **STATE LAWS** — most states require electors to vote for the winner of the state's popular vote, and may penalize those who do not
 
 ### Mismatch with Popular Vote
 
@@ -177,16 +171,7 @@ PRESIDENT WON ELECTORAL COLLEGE BUT LOST POPULAR VOTE 5 TIMES:
 - **NATIONAL POPULAR VOTE INTERSTATE COMPACT (NPVIC)** — states agree to give electors to national popular vote winner once states totaling 270 EVs join; currently 17 states + DC = 209 EVs; would not require constitutional amendment but would face SCOTUS challenge
 - **CONSTITUTIONAL AMENDMENT** — never gained 2/3 each chamber + 3/4 states; defenders cite federalism + small state protection + need for broad geographic coalition
 
-### Electoral Count Reform Act (ECRA) 2022
-
-After Jan 6 2021 Capitol attack + attempts to overturn election:
-- Clarified VP role at counting is CEREMONIAL (cannot reject electors)
-- Raised threshold for objections from 1 House + 1 Senate to 1/5 each chamber
-- Set CONCLUSIVE date for state certification (6 days before electors meet)
-- Limited grounds for objection
-- Bipartisan bill signed by Biden Dec 2022
-
-> 🔑 Key takeaway: ELECTIONS = central mechanism translating PUBLIC OPINION into POLICY through INSTITUTIONAL DESIGN reflecting MADISONIAN FILTERING. SUFFRAGE expanded through 5 amendments (15th 1870 race + 19th 1920 sex + 23rd 1961 DC + 24th 1964 poll tax + 26th 1971 age 18) + VRA 1965 (Section 5 preclearance + Section 2 vote dilution + reauthorizations 1970/1975/1982 RESULTS test/2006) — but Shelby County 2013 gutted preclearance + voter restrictions followed (TX/NC/GA SB 202 2021); Allen v. Milligan 2023 upheld Section 2. VOTER TURNOUT varies (~60-67% pres + 40-50% midterm + 15-25% primary/local); EDUCATION strongest predictor + age + income + race + gender; non-voting due to registration barriers + Tuesday voting + alienation + apathy + paradox of voting (Downs 1957). THREE MODELS: RATIONAL CHOICE (Downs 1957 + median voter theorem + retrospective voting per V.O. Key 1966 + Fiorina 1981 + "economy stupid"); SOCIOLOGICAL (Columbia school Lazarsfeld THE PEOPLE'S CHOICE 1944 + two-step flow + cross-pressured voters); PSYCHOLOGICAL (Michigan school THE AMERICAN VOTER 1960 + party ID + funnel of causality). ELECTION TYPES — general (Tuesday after Monday Nov 1845 law); primary (closed/open/blanket — CA + WA + LA top-two); caucus (Iowa famous + declining); runoff (Georgia 50%+1); recall (CA Davis 2003 + Newsom 2021); initiative + referendum (24 states; CA Prop 13/8/187). ELECTORAL COLLEGE — 538 (435 House + 100 Senate + 3 DC); 270 to win; winner-take-all 48 states + ME/NE district; popular vote mismatch 5 times (1824 + 1876 + 1888 + 2000 Bush v. Gore + 2016); Chiafalo 2020 upheld faithless elector penalties; ECRA 2022 reformed counting after Jan 6.
+> 🔑 Key takeaway: ELECTIONS = central mechanism translating PUBLIC OPINION into POLICY through INSTITUTIONAL DESIGN reflecting MADISONIAN FILTERING. SUFFRAGE expanded through 5 amendments (15th 1870 race + 19th 1920 sex + 23rd 1961 DC + 24th 1964 poll tax + 26th 1971 age 18) + VRA 1965 (Section 5 preclearance + Section 2 vote dilution + reauthorizations 1970/1975/1982 RESULTS test/2006) — state election laws (voter ID, registration, early + mail voting) still shape access. VOTER TURNOUT varies (~60-67% pres + 40-50% midterm + 15-25% primary/local); EDUCATION strongest predictor + age + income + race + gender; non-voting due to registration barriers + Tuesday voting + alienation + apathy + paradox of voting (Downs 1957). FOUR MODELS (EK 5.1.B.1): RATIONAL CHOICE (best interest); RETROSPECTIVE ("it's the economy, stupid"); PROSPECTIVE (future performance); STRAIGHT-TICKET (all one party). ELECTION TYPES — general (Tuesday after Monday Nov 1845 law); primary (closed/open/blanket — CA + WA + LA top-two); caucus (Iowa famous + declining); runoff (Georgia 50%+1); recall (CA Davis 2003 + Newsom 2021); initiative + referendum (24 states; CA Prop 13/8/187). ELECTORAL COLLEGE — 538 (435 House + 100 Senate + 3 DC); 270 to win; winner-take-all 48 states + ME/NE district; popular vote mismatch 5 times (1824 + 1876 + 1888 + 2000 Bush v. Gore + 2016); states may penalize faithless electors.
       `
     },
     {
@@ -196,15 +181,15 @@ After Jan 6 2021 Capitol attack + attempts to overturn election:
       exercise: {
         questions: [
           {
-            question: "Which 2013 Supreme Court decision struck down the COVERAGE FORMULA of the VOTING RIGHTS ACT, effectively ending PRECLEARANCE?",
+            question: "A voter decides whether to reelect the president mainly by asking how the economy has performed over the past four years. Which model of voting behavior does this illustrate?",
             options: [
-              "Shelby County v. Holder, holding that the coverage formula relied on decades-old data",
-              "Brnovich v. DNC, holding that Arizona's ballot collection limits did not violate Section 2 of the act",
-              "Allen v. Milligan, holding that Alabama's map diluted Black votes under Section 2",
-              "Northwest Austin v. Holder, holding that preclearance and its coverage formula violated the 15th Amendment",
+              "Retrospective voting, judging the party in power by its recent record",
+              "Prospective voting, predicting how each candidate will perform in the future",
+              "Straight-ticket voting, choosing every candidate from one party on the ballot",
+              "Rational choice voting, based only on self-interest",
             ],
             correctAnswer: 0,
-            explanation: 'SHELBY COUNTY v. HOLDER (2013) — 5-4 Roberts struck down Section 4(b) coverage formula as unconstitutional; reasoning: decades-old data + current burdens must be justified by current needs + states\' equal sovereignty; effect: Section 5 preclearance unusable without coverage formula (Congress hasn\'t passed new formula despite John Lewis VRA + Freedom to Vote Act); aftermath: TX voter ID within hours; NC sweeping restrictions; poll closures (Black + Hispanic areas); GA SB 202 2021; ongoing access impact in formerly covered jurisdictions.'
+explanation: 'EK 5.1.B.1: RETROSPECTIVE VOTING refers to individuals who decide whether the party or candidate in power should be reelected based on the recent past — exactly the voter judging the president by the last four years of economic performance. Prospective voting looks forward to predicted performance, straight-ticket voting means choosing all of one party\'s candidates, and rational choice voting is any decision based on perceived self-interest rather than a judgment of the incumbent\'s record.'
           }
         ]
       }
@@ -222,16 +207,16 @@ After Jan 6 2021 Capitol attack + attempts to overturn election:
             hint: 'DC has 3 electoral votes — the MINIMUM number of any state (DC pop ~700K is bigger than VT/WY but gets only 3 EV vs VT/WY 3 EV); 23rd Amendment ratified 1961 gave DC residents PRESIDENTIAL VOTE (still no voting representation in Congress); statehood proposals would expand DC representation but require Congress to admit; total 538 electoral votes; 270 needed to win.'
           },
           {
-            prompt: "Anthony Downs's 1957 book established RATIONAL CHOICE THEORY of voting; title includes 'AN ECONOMIC THEORY OF ___'.",
-            answer: 'democracy',
-            acceptableAnswers: ['democracy', 'Democracy', 'DEMOCRACY'],
-            hint: 'AN ECONOMIC THEORY OF DEMOCRACY (1957) — Downs applied economic logic to voting; voters maximize utility by choosing party closest to preferences; PARADOX OF VOTING (rational individual benefit ≈ 0 since one vote rarely decisive — explained by expressive voting + civic duty); MEDIAN VOTER THEOREM (in 2-party majoritarian system, parties converge on median voter); foundational text.'
+            prompt: "Model of voting behavior in which individuals vote based on predictions of how a party or candidate will perform in the future (EK 5.1.B.1): ___ voting.",
+            answer: 'prospective',
+            acceptableAnswers: ['prospective', 'Prospective', 'prospective voting', 'Prospective voting'],
+            hint: 'The opposite of retrospective voting, which looks back at the recent record of the party in power.'
           },
           {
             prompt: "1965 federal law that BANNED RACIAL DISCRIMINATION in voting + required PRECLEARANCE in covered jurisdictions; signed by LBJ after Selma Bloody Sunday.",
             answer: 'Voting Rights Act',
             acceptableAnswers: ['Voting Rights Act', 'VRA', 'voting rights act', 'Voting Rights Act of 1965', 'Voting Rights Act 1965', 'voting rights act of 1965'],
-            hint: 'VOTING RIGHTS ACT 1965 — THE most important voting rights law in US history; signed by LBJ Aug 6 1965 after Selma Bloody Sunday March 7 1965 + LBJ "We Shall Overcome" speech March 15 1965; SECTION 2 bans vote dilution nationwide (permanent; basis for Allen v. Milligan 2023); SECTION 5 required preclearance in covered jurisdictions per SECTION 4(b) coverage formula (gutted by Shelby County 2013); REAUTHORIZED 1970, 1975, 1982 (results test), 2006 (25 years).'
+            hint: 'VOTING RIGHTS ACT 1965 — THE most important voting rights law in US history; signed by LBJ Aug 6 1965 after Selma Bloody Sunday March 7 1965 + LBJ "We Shall Overcome" speech March 15 1965; SECTION 2 bans vote dilution nationwide (permanent); SECTION 5 required preclearance in covered jurisdictions per SECTION 4(b) coverage formula; REAUTHORIZED 1970, 1975, 1982 (results test), 2006 (25 years).'
           }
         ]
       }

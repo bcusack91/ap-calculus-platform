@@ -67,15 +67,14 @@ export const govConstitutionalFoundationsPart4Data = {
 | Doctrine | "It is emphatically the province and duty of the judicial department to say what the law is. Those who apply the rule to particular cases, must of necessity expound and interpret that rule." |
 | Why politically brilliant | Marshall avoided a confrontation with Jefferson (who would have ignored a mandamus order) while establishing the larger judicial-review power against Congress |
 
-**Limits of judicial review:**
-- Article III "case or controversy" requirement — courts decide only actual disputes, not abstract questions
-- Standing doctrine — plaintiffs must show concrete particularized injury caused by the defendant and redressable by the court
-- Political question doctrine — some questions are constitutionally committed to the political branches (e.g., impeachment trials per *Nixon v. United States*, 1993; foreign affairs)
-- Mootness — courts will not decide cases where the controversy has dissolved
-- Ripeness — courts will not decide cases brought before injury has occurred
-- Constitutional amendment — the people can override the Court (e.g., 11th, 14th § 1, 16th, 26th Amendments)
+**Limits on judicial review (EK 2.11.B.1)** — the other branches can restrict the Court through:
+- Congressional legislation that modifies the impact of a prior Supreme Court decision (e.g., rewriting a statute the Court interpreted)
+- Ratification of a constitutional amendment — the people can override the Court (e.g., 11th, 14th § 1, 16th, 26th Amendments)
+- Judicial appointments and confirmations that shift the Court's ideological balance
+- The president and states delaying implementation of a decision (the Court has "neither force nor will" — Federalist 78)
+- Legislation removing the Court's appellate jurisdiction over a category of cases (Article III, § 2: "with such Exceptions")
 
-> 🔑 Key takeaway: Constitutional law is a network of interacting doctrines — federalism allocates power between levels, incorporation extends federal protections to states via the 14th Amendment, implied powers expand federal authority beyond explicit text, and judicial review enforces constitutional limits while remaining limited by justiciability doctrines and the amendment process.
+> 🔑 Key takeaway: Constitutional law is a network of interacting doctrines — federalism allocates power between levels, incorporation extends federal protections to states via the 14th Amendment, implied powers expand federal authority beyond explicit text, and judicial review enforces constitutional limits while remaining checked by Congress, the president, the states, and the amendment process.
       `
     },
     {
@@ -188,7 +187,7 @@ export const govConstitutionalFoundationsPart4Data = {
               "Incorporation applies only to criminal procedure, so state power over speech, religion, and guns remains as it was at the founding"
             ],
             correctAnswer: 0,
-            explanation: 'AP complexity: federalism transformed by 3 doctrines expanding federal authority — (1) 14th Amendment + selective incorporation (Gideon, Mapp, Obergefell); (2) post-New Deal commerce-clause (Wickard 1942); (3) post-1965 civil-rights + grant conditions → modern "cooperative federalism" vs. founding "dual federalism" + counter-movements (Lopez 1995, Printz 1997, NFIB 2012).'
+            explanation: 'AP complexity: federalism transformed by 3 doctrines expanding federal authority — (1) 14th Amendment + selective incorporation (Gideon, Mapp, Obergefell); (2) post-New Deal commerce-clause (Wickard 1942); (3) post-1965 civil-rights + grant conditions → modern "cooperative federalism" vs. founding "dual federalism" + counter-movements (Lopez 1995, NFIB 2012).'
           }
         ]
       }

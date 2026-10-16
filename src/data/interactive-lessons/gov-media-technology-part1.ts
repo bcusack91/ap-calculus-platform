@@ -20,7 +20,7 @@ export const govMediaTechnologyPart1Data = {
 | 1st Amendment press freedoms (NYT v. Sullivan 1964 actual malice + Pentagon Papers 1971 + Branzburg v. Hayes 1972) |
 | Section 230 of CDA 1996 + platform immunity + ongoing reform debates |
 
-> 🔑 Key idea: MEDIA + TECHNOLOGY are CRITICAL FORCES in modern American politics — Harold LASSWELL 1948 identified 4 FUNCTIONS of mass communication (SURVEILLANCE of environment + CORRELATION of response + TRANSMISSION of culture + ENTERTAINMENT) with WRIGHT 1959 adding MOBILIZATION; TYPES include traditional PRINT (newspapers + magazines), BROADCAST (network TV + radio), CABLE (Fox News 1996 + MSNBC 1996 + CNN 1980), DIGITAL (websites + apps), SOCIAL MEDIA (Facebook 2004 + Twitter/X 2006 + YouTube 2005 + Instagram 2010 + TikTok 2016), and PODCASTS (Joe Rogan 2009 + Theo Von + Lex Fridman); media serves as 4TH ESTATE (Edmund Burke 1787 + Thomas Carlyle 1841 — press as crucial check on government) + WATCHDOG function (investigative journalism exposing corruption Watergate 1972-74 + Pentagon Papers 1971 + Spotlight Boston Globe 2002); MEDIA BIAS frameworks (GATEKEEPING — David Manning White 1950 — editors decide what becomes news; FRAMING — Robert Entman 1993 — how stories presented; AGENDA-SETTING — Maxwell McCombs + Donald Shaw 1972 Chapel Hill study — media tells people what to THINK ABOUT; PRIMING — Iyengar + Kinder 1987 News That Matters — media activates certain considerations); 1ST AMENDMENT press protections (NYT v. Sullivan 1964 actual malice for public officials + Pentagon Papers 1971 NYT v. US prior restraint extremely difficult + Branzburg v. Hayes 1972 no reporter privilege constitutionally + Hazelwood v. Kuhlmeier 1988 student press limited); SECTION 230 of COMMUNICATIONS DECENCY ACT 1996 — platform immunity for user content + 26 words that created the modern internet (Kosseff 2019) + ongoing reform debates (Trump + Biden both criticized + EU Digital Services Act 2022 different approach).
+> 🔑 Key idea: MEDIA + TECHNOLOGY are CRITICAL FORCES in modern American politics — Harold LASSWELL 1948 identified 4 FUNCTIONS of mass communication (SURVEILLANCE of environment + CORRELATION of response + TRANSMISSION of culture + ENTERTAINMENT) with WRIGHT 1959 adding MOBILIZATION; TYPES include traditional PRINT (newspapers + magazines), BROADCAST (network TV + radio), CABLE (Fox News 1996 + MSNBC 1996 + CNN 1980), DIGITAL (websites + apps), SOCIAL MEDIA (Facebook 2004 + Twitter/X 2006 + YouTube 2005 + Instagram 2010 + TikTok 2016), and PODCASTS (Joe Rogan 2009 + Theo Von + Lex Fridman); media serves as 4TH ESTATE (Edmund Burke 1787 + Thomas Carlyle 1841 — press as crucial check on government) + WATCHDOG function (investigative journalism exposing corruption Watergate 1972-74 + Pentagon Papers 1971 + Spotlight Boston Globe 2002); MEDIA BIAS frameworks (GATEKEEPING — David Manning White 1950 — editors decide what becomes news; FRAMING — Robert Entman 1993 — how stories presented; AGENDA-SETTING — Maxwell McCombs + Donald Shaw 1972 Chapel Hill study — media tells people what to THINK ABOUT; PRIMING — Iyengar + Kinder 1987 News That Matters — media activates certain considerations); 1ST AMENDMENT press protections (NYT v. Sullivan 1964 actual malice for public officials + Pentagon Papers 1971 NYT v. US prior restraint extremely difficult + Branzburg v. Hayes 1972 no reporter privilege constitutionally + Hazelwood v. Kuhlmeier 1988 student press limited); SECTION 230 of COMMUNICATIONS DECENCY ACT 1996 — platform immunity for user content, a brief example of debates over regulating online platforms.
       `
     },
     {
@@ -43,13 +43,13 @@ Harold **LASSWELL** (1948) identified **3 functions**, with **WRIGHT** (1959) ad
 
 | Type | Examples + Reach |
 |---|---|
-| **PRINT** | Newspapers (NYT + WaPo + WSJ + USA Today) + magazines (Time + Newsweek + Atlantic + New Yorker + National Review) — DECLINING ~20% daily circulation since 2010 |
+| **PRINT** | Newspapers (NYT + WaPo + WSJ + USA Today) + magazines (Time + Newsweek + Atlantic + New Yorker + National Review) — DECLINING by roughly half since 2010 (~21M weekday circulation 2022, Pew) |
 | **BROADCAST TV** | ABC + CBS + NBC + PBS — DECLINING evening news ~20M (down from ~50M 1970s) |
-| **CABLE TV** | Fox News (1996) + MSNBC (1996) + CNN (1980) — Fox ~3M primetime + MSNBC ~1.5M + CNN ~600K (2024) |
+| **CABLE TV** | Fox News (1996) + MSNBC (1996) + CNN (1980) — Fox ~2.4M primetime + MSNBC ~1.2M + CNN ~700K (2024) |
 | **TALK RADIO** | ~1,500 stations; Rush Limbaugh (d. 2021) + Sean Hannity + Mark Levin + Glenn Beck — overwhelmingly conservative |
 | **DIGITAL NEWS** | Politico (2007) + Axios (2017) + The Hill + Bloomberg + Reuters + AP + Substack newsletters |
 | **SOCIAL MEDIA** | Facebook (2004; ~3B users) + Twitter/X (2006; Musk acquired Oct 2022 \\$44B) + YouTube (2005; ~2.5B users) + Instagram (2010) + TikTok (2016; ~1.5B users; ByteDance) |
-| **PODCASTS** | Joe Rogan Experience (2009; ~14M listeners; Trump 3-hour Oct 2024 ~50M+ views) + Theo Von + Lex Fridman + Pod Save America + The Daily |
+| **PODCASTS** | Joe Rogan Experience (2009; #1 podcast; Trump 3-hour Oct 2024 ~40M+ views) + Theo Von + Lex Fridman + Pod Save America + The Daily |
 
 ## Media as 4th Estate + Watchdog
 
@@ -87,21 +87,11 @@ Term **4TH ESTATE** attributed to **Edmund Burke** (1787) referring to PRESS as 
 | **HAZELWOOD v. KUHLMEIER** | 1988 | School-sponsored student press has limited 1st Amendment protection; school can censor school-sponsored speech for legitimate pedagogical purposes |
 | **CITIZENS UNITED v. FEC** | 2010 | Corporate (including media corporation) 1st Amendment speech rights for independent political expenditures |
 
-## Section 230 of Communications Decency Act 1996
+## Regulating Online Platforms: Section 230 (brief example)
 
-**Section 230(c)(1)** — "No provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider."
+**Section 230** of the Communications Decency Act (1996) generally shields online platforms from liability for content their users post and lets them moderate content without losing that protection. Debates over changing it illustrate a CED theme: emerging technologies raise new questions about media regulation, credibility and free expression (EK 5.13.A.3). Know the idea, not the bill or case names.
 
-**26 WORDS** that created modern internet (Jeff Kosseff 2019 book title); enables platforms (Facebook + YouTube + X + TikTok) to host user content without being liable as publishers; enables CONTENT MODERATION without losing immunity (Section 230(c)(2)).
-
-**ONGOING REFORM DEBATES**:
-- **Trump + Biden BOTH criticized** (different reasons)
-- **Conservative critique** — platforms suppress conservative speech; demand "neutrality"
-- **Progressive critique** — platforms enable misinformation + hate speech + harassment
-- **Section 230 reform proposals** — EARN IT Act + PACT Act + Kids Online Safety Act KOSA
-- **EU DIGITAL SERVICES ACT 2022** — different approach with platform obligations + transparency
-- **MOODY v. NETCHOICE 2024** + **NETCHOICE v. PAXTON 2024** — SCOTUS vacated + remanded the challenges to FL + TX content moderation laws (lower courts had not done the full facial analysis) while recognizing platform content moderation as 1st Amendment-protected editorial discretion
-
-> 🔑 Key takeaway: MEDIA + TECHNOLOGY are CRITICAL FORCES in modern American politics — LASSWELL 1948 identified 4 FUNCTIONS (SURVEILLANCE + CORRELATION + TRANSMISSION + ENTERTAINMENT) with WRIGHT 1959 adding MOBILIZATION; TYPES include traditional PRINT (newspapers declining ~20% since 2010), BROADCAST (network news ~20M down from ~50M 1970s), CABLE (Fox 1996 + MSNBC 1996 + CNN 1980; Fox ~3M primetime), TALK RADIO (~1,500 stations overwhelmingly conservative), DIGITAL NEWS (Politico + Axios + Substack), SOCIAL MEDIA (Facebook 2004 ~3B + X 2006 + YouTube 2005 ~2.5B + Instagram 2010 + TikTok 2016 ~1.5B; Musk acquired Twitter/X Oct 2022 \\$44B), PODCASTS (Joe Rogan ~14M; Trump 3-hour Oct 2024 ~50M+ views); media as 4TH ESTATE (Burke 1787 + Carlyle 1841) + WATCHDOG (Watergate 1972-74 + Pentagon Papers 1971 + Spotlight 2002 + NSA 2013 + Panama Papers 2016 + January 6 investigation 2021-22); MEDIA BIAS frameworks (GATEKEEPING White 1950 + AGENDA-SETTING McCombs + Shaw 1972 Chapel Hill + FRAMING Entman 1993 + PRIMING Iyengar + Kinder 1987 News That Matters + HORSE RACE Patterson 1993 + HOSTILE MEDIA Vallone + Ross + Lepper 1985); 1ST AMENDMENT press protections (Near 1931 prior restraint + NYT v. Sullivan 1964 actual malice + Pentagon Papers 1971 + Branzburg v. Hayes 1972 no reporter privilege + Hazelwood 1988 student press); SECTION 230 of CDA 1996 — platform immunity (26 words that created modern internet — Kosseff 2019); ongoing reform debates (Trump + Biden both criticize for different reasons; EARN IT + PACT + KOSA proposals; EU Digital Services Act 2022; Moody v. NetChoice 2024 + NetChoice v. Paxton 2024 SCOTUS struck FL/TX content moderation laws).
+> 🔑 Key takeaway: MEDIA + TECHNOLOGY are CRITICAL FORCES in modern American politics — LASSWELL 1948 identified 4 FUNCTIONS (SURVEILLANCE + CORRELATION + TRANSMISSION + ENTERTAINMENT) with WRIGHT 1959 adding MOBILIZATION; TYPES include traditional PRINT (newspaper circulation down roughly half since 2010), BROADCAST (network news ~20M down from ~50M 1970s), CABLE (Fox 1996 + MSNBC 1996 + CNN 1980; Fox ~2.4M primetime 2024), TALK RADIO (~1,500 stations overwhelmingly conservative), DIGITAL NEWS (Politico + Axios + Substack), SOCIAL MEDIA (Facebook 2004 ~3B + X 2006 + YouTube 2005 ~2.5B + Instagram 2010 + TikTok 2016 ~1.5B; Musk acquired Twitter/X Oct 2022 \\$44B), PODCASTS (Joe Rogan #1; Trump 3-hour Oct 2024 ~40M+ views); media as 4TH ESTATE (Burke 1787 + Carlyle 1841) + WATCHDOG (Watergate 1972-74 + Pentagon Papers 1971 + Spotlight 2002 + NSA 2013 + Panama Papers 2016 + January 6 investigation 2021-22); MEDIA BIAS frameworks (GATEKEEPING White 1950 + AGENDA-SETTING McCombs + Shaw 1972 Chapel Hill + FRAMING Entman 1993 + PRIMING Iyengar + Kinder 1987 News That Matters + HORSE RACE Patterson 1993 + HOSTILE MEDIA Vallone + Ross + Lepper 1985); 1ST AMENDMENT press protections (Near 1931 prior restraint + NYT v. Sullivan 1964 actual malice + Pentagon Papers 1971 + Branzburg v. Hayes 1972 no reporter privilege + Hazelwood 1988 student press); SECTION 230 of CDA 1996 — a brief example of debates over regulating online platforms.
       `
     },
     {
@@ -111,15 +101,15 @@ Term **4TH ESTATE** attributed to **Edmund Burke** (1787) referring to PRESS as 
       exercise: {
         questions: [
           {
-            question: "Which 1972 STUDY by MAXWELL McCOMBS + DONALD SHAW (CHAPEL HILL study) established AGENDA-SETTING — the theory that MEDIA tells people WHAT to THINK ABOUT (issue salience) — not necessarily WHAT to think?",
+            question: "A week of nonstop coverage of a border crisis leads many voters to tell pollsters that immigration is the nation's most important problem, though their views on immigration policy do not change. This illustrates:",
             options: [
-              "The Chapel Hill study of agenda-setting among undecided voters",
-              "The Erie County study, setting out the two-step flow of influence",
-              "The Columbia study of how voters set their own agenda by selective exposure",
-              "A Chapel Hill study of framing effects in local campaign advertising",
+              "Agenda setting, shaping the issues people think about",
+              "Horse-race coverage, turning the campaign into a popularity contest",
+              "Prior restraint, blocking stories before they are published",
+              "Political socialization, forming lifelong values in childhood",
             ],
             correctAnswer: 0,
-            explanation: 'AGENDA-SETTING (Maxwell McCombs + Donald Shaw 1972 Chapel Hill study) — landmark research establishing MEDIA AGENDA-SETTING function — media tells people WHAT to THINK ABOUT (issue salience), not necessarily WHAT to think; mechanism — stories media covers become issues voters prioritize; CHAPEL HILL methodology — surveyed undecided voters in 1968 presidential campaign + content-analyzed news coverage + found strong correlation between issues media emphasized + issues voters considered important; 100+ subsequent studies confirmed; FOUNDATION for modern media effects research; DISTINGUISHES from older hypodermic needle/direct effects theories (1920s-40s Lippmann + Lasswell + Hovland) which assumed media directly determines opinions; agenda-setting accepts more limited but powerful effect — media doesn\'t change minds but shapes agenda; CONNECTED to PRIMING (Iyengar + Kinder 1987 News That Matters) + FRAMING (Entman 1993); modern applications — climate change + immigration + crime + economic news + scandals; social media amplifies via trending + algorithms + viral content; cable news (Fox + MSNBC + CNN) creates parallel partisan agendas; modern research — Stroud 2011 Niche News + Levendusky 2013 + Allcott + Gentzkow 2017.'
+            explanation: 'EK 5.12.A.1: AGENDA SETTING occurs when the media influence which issues citizens consider important — the media tell people what to think ABOUT rather than what to think, so salience rises while opinions stay the same. Horse-race coverage (EK 5.12.A.2) focuses on who is ahead in polls; prior restraint is government blocking publication (EK 3.4.A.1); political socialization is the lifelong development of political values (EK 4.2.A.1).'
           }
         ]
       }
@@ -131,22 +121,22 @@ Term **4TH ESTATE** attributed to **Edmund Burke** (1787) referring to PRESS as 
       exercise: {
         questions: [
           {
-            prompt: "1948 SCHOLAR who identified the 4 FUNCTIONS of mass communication (SURVEILLANCE + CORRELATION + TRANSMISSION + ENTERTAINMENT):",
-            answer: "Lasswell",
-            acceptableAnswers: ["Lasswell", "Harold Lasswell", "lasswell", "LASSWELL", "Harold D. Lasswell"],
-            hint: "Harold LASSWELL (1948) — landmark political communication scholar; identified 3 FUNCTIONS of mass communication in 'The Structure and Function of Communication in Society' (1948): (1) SURVEILLANCE of environment (news/information about world); (2) CORRELATION of response to environment (interpretation + commentary linking events); (3) TRANSMISSION of cultural heritage across generations; WRIGHT (1959) added (4) ENTERTAINMENT + (5) MOBILIZATION; Lasswell's model — 'WHO says WHAT in WHICH CHANNEL to WHOM with WHAT EFFECT' — foundation of communication studies; political scientist + Yale + Chicago; foundational for understanding media's role in society; central concept for AP Government understanding of media functions."
+            prompt: "Reporting that digs out hidden government wrongdoing, as the Washington Post did with Watergate (EK 5.12.A.1): ___ journalism.",
+            answer: 'investigative',
+            acceptableAnswers: ['investigative', 'Investigative', 'investigative journalism', 'investigative reporting'],
+            hint: 'It is one way the media act as a watchdog on government.'
           },
           {
-            prompt: "1964 SCOTUS case establishing the ACTUAL MALICE standard for LIBEL of PUBLIC OFFICIALS (revolutionary 1st Amendment press protection):",
-            answer: 'NYT v. Sullivan',
-            acceptableAnswers: ['NYT v. Sullivan', 'New York Times v. Sullivan', 'NYT v Sullivan', 'New York Times v Sullivan', 'Sullivan', 'New York Times Co. v. Sullivan'],
-            hint: 'NYT v. SULLIVAN (1964) — landmark unanimous SCOTUS decision; HELD PUBLIC OFFICIALS suing for LIBEL must prove ACTUAL MALICE — knowledge that statement was FALSE or RECKLESS DISREGARD for whether it was true or false; revolutionized libel law; arose from Civil Rights Movement (Alabama official L.B. Sullivan sued NYT over advertisement criticizing AL police treatment of civil rights protesters); LATER EXTENDED to PUBLIC FIGURES (Curtis Publishing v. Butts 1967); LANDMARK 1st Amendment victory protecting press freedom + criticism of public officials; WITHOUT this protection, public officials could chill press through libel suits; modern controversy — Justice Thomas + Gorsuch have called for reconsideration (Berisha v. Lawson 2021 + McKee v. Cosby 2019); central concept for AP Government understanding of press freedoms.'
+            prompt: "Written defamation, which the First Amendment does not protect (EK 3.3.A.2.iii).",
+            answer: 'libel',
+            acceptableAnswers: ['libel', 'Libel'],
+            hint: 'Spoken defamation is slander; public officials must show actual malice to win such suits.'
           },
           {
-            prompt: "Number of WORDS in SECTION 230(c)(1) of the COMMUNICATIONS DECENCY ACT 1996 — Jeff KOSSEFF 2019 book title:",
-            answer: '26',
-            acceptableAnswers: ['26', '26 words', 'twenty-six', 'twenty six'],
-            hint: '26 — number of WORDS in Section 230(c)(1) of Communications Decency Act 1996; Jeff KOSSEFF 2019 book "The Twenty-Six Words That Created the Internet"; SECTION 230(c)(1): "No provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider"; ENABLES platforms (Facebook + YouTube + X + TikTok) to host user content without being liable as publishers; SECTION 230(c)(2) enables CONTENT MODERATION without losing immunity (good faith removal of objectionable content); WITHOUT Section 230 — platforms would face crushing liability for user content; ongoing reform debates (Trump + Biden both criticized for different reasons); EU Digital Services Act 2022 took different approach; Moody v. NetChoice 2024 + NetChoice v. Paxton 2024 struck FL + TX content moderation laws.'
+            prompt: "Government action blocking publication in advance, against which New York Times Co. v. United States (1971) set a heavy presumption: prior ___.",
+            answer: 'restraint',
+            acceptableAnswers: ['restraint', 'Restraint', 'prior restraint'],
+            hint: 'EK 3.4.A.1 — even national-security claims did not justify stopping the Pentagon Papers.'
           }
         ]
       }
@@ -183,15 +173,15 @@ Term **4TH ESTATE** attributed to **Edmund Burke** (1787) referring to PRESS as 
       exercise: {
         questions: [
           {
-            question: "An AP FRQ asks students to ANALYZE the SIGNIFICANCE of NYT v. SULLIVAN (1964) for AMERICAN PRESS FREEDOM and CONNECT it to BROADER 1ST AMENDMENT JURISPRUDENCE on PRIOR RESTRAINT (Near 1931 + Pentagon Papers 1971) + REPORTER PRIVILEGE (Branzburg 1972) + SECTION 230 of CDA 1996. Which response BEST CAPTURES the COMPREHENSIVE ANALYSIS?",
+            question: "An AP FRQ asks how *New York Times Co. v. United States* (1971) supports the media's role as a watchdog on government. Which response is strongest?",
             options: [
-              "Sullivan's actual malice rule protects criticism of officials, Near and the Pentagon Papers bar prior restraint, Branzburg denies a reporter's privilege, and Section 230 shields platforms.",
-              "Sullivan lets officials win libel suits on proof of error alone, Near and the Pentagon Papers allow prior restraint in wartime, and Section 230 makes platforms liable for posts.",
-              "Sullivan, Near and Branzburg together created an absolute reporter's privilege, and Section 230 requires platforms to carry all lawful speech from users.",
-              "It summarizes each case's facts and dates in order but never explains how actual malice, prior restraint, reporter's privilege or Section 230 shape press freedom.",
+              "The Court refused to stop publication of the Pentagon Papers, so the heavy presumption against prior restraint lets the press expose government secrets even when national security is claimed.",
+              "The Court let the government block the Pentagon Papers, showing that national security claims always override the press's role as a watchdog on government officials.",
+              "The Court held newspapers liable for any error about public officials, making reporters cautious about criticizing the government.",
+              "The Court ruled that broadcasters must present balanced views, which turned the press into a neutral recorder rather than a watchdog.",
             ],
             correctAnswer: 0,
-            explanation: 'NYT v. SULLIVAN (1964) — unanimous SCOTUS Brennan majority; HELD public officials suing for libel must prove ACTUAL MALICE (knowledge of falsity or reckless disregard); arose from Civil Rights Movement (AL Commissioner Sullivan sued NYT over "Heed Their Rising Voices"; AL awarded \\$500K threatening to bankrupt NYT); Brennan declared "profound national commitment to the principle that debate on public issues should be uninhibited, robust, and wide-open"; extended to public figures (Curtis Publishing 1967 + Gertz 1974); CONNECTIONS — NEAR v. MINNESOTA (1931) prior restraint unconstitutional except extreme cases; PENTAGON PAPERS (NYT v. US 1971) per curiam heavy presumption against prior restraint upheld publication; BRANZBURG v. HAYES (1972) 5-4 White no constitutional reporter privilege; states can create by statute (~40+ shield laws; Judith Miller 85 days 2005); HAZELWOOD v. KUHLMEIER (1988) student press limited; SECTION 230 of CDA 1996 — 26 words (Kosseff 2019); (c)(1) immunity + (c)(2) content moderation; Trump + Biden both criticized; reform proposals EARN IT + PACT + KOSA; EU Digital Services Act 2022; MOODY v. NETCHOICE 2024 + NETCHOICE v. PAXTON 2024 vacated + remanded the FL + TX content moderation cases while recognizing platform editorial discretion. SIGNIFICANCE — collectively constitute MODERN AMERICAN PRESS FREEDOM REGIME; uniquely robust globally; enables watchdog journalism (Watergate 1972-74 + Pentagon Papers + NSA 2013 + Panama Papers 2016 + January 6 2021-22). MODERN CHALLENGES — declining trust (~30% from ~70%); newspaper industry collapse (~50% jobs since 2005); news deserts; misinformation + deepfakes + AI + foreign interference (Russia/China/Iran); polarized ecosystem; Thomas + Gorsuch reconsideration calls (Berisha 2021 + McKee 2019); Trump threats to "open up libel laws".'
+            explanation: 'NYT v. US (1971) is a required case: the Nixon administration sought to stop the New York Times and Washington Post from publishing the classified Pentagon Papers, and the Court refused because the government had not overcome the HEAVY PRESUMPTION AGAINST PRIOR RESTRAINT, even in a national-security case (EK 3.4.A.1). That protection is what lets investigative journalism expose government wrongdoing (EK 5.12.A.1). The Court did not side with the government, did not impose liability for any error (public officials must show actual malice in libel suits), and the case had nothing to do with broadcast balance rules.'
           }
         ]
       }

@@ -14,7 +14,6 @@ export const hgCultureDiffusionPart3Data = {
 | Section |
 |---------|
 | 📖 A Four-Question Decision Procedure |
-| Reverse Hierarchical Diffusion |
 | Six Worked Cases |
 | Barriers and Mixed Cases |
 
@@ -36,8 +35,7 @@ Ask these in order. The first "yes" usually gives the main type.
 | 3 | Did the trait spread **outward to neighbors**, like a wave, regardless of status? | **Contagious diffusion** |
 | 4 | Did people adopt the **underlying idea** but change or reject the specific trait? | **Stimulus diffusion** |
 
-### Reverse Hierarchical Diffusion
-Hierarchical diffusion usually runs **downward**, from large cities or high-status people to smaller places. **Reverse hierarchical** diffusion runs **upward**: a trait starts in small towns or among ordinary people and later reaches large cities.
+Some textbooks add a "reverse hierarchical" type for traits that start in small places; the CED's expansion types are **contagious**, **hierarchical** and **stimulus**, so classify exam cases with those (CED 3.4).
 
 ### What the Exam Rewards
 - Naming the type is only the start. **Explain the evidence**: "Because merchants physically carried the faith to port cities, this is relocation diffusion."
@@ -97,9 +95,9 @@ Hierarchical diffusion usually runs **downward**, from large cities or high-stat
 - Reached other large U.S. cities and then Paris, London, Tokyo and Seoul through recordings, radio and later the internet: **hierarchical**.
 - Local artists rapping in French, Korean or Arabic about local issues adopted the form but changed the content: **stimulus**.
 
-**Case 4: Walmart (founded 1962, Rogers, Arkansas)**
-- Opened stores first in **small towns** in the South and Midwest and reached large metropolitan areas later.
-- **Type: reverse hierarchical.** It moved up the urban hierarchy rather than down.
+**Case 4: Mobile money in Kenya (M-Pesa, launched 2007)**
+- Users sent money by phone to friends and relatives, who then signed up so they could receive and send it too.
+- **Type: contagious.** Each new user spread the service to the people in direct contact with them, regardless of status, and adoption rippled outward through social networks.
 
 **Case 5: Sequoyah's Cherokee syllabary (completed 1821)**
 - Sequoyah saw English speakers using writing but did not learn the English alphabet. He invented a new system of symbols for Cherokee syllables.
@@ -130,15 +128,15 @@ Hierarchical diffusion usually runs **downward**, from large cities or high-stat
             explanation: 'Sequoyah adopted the underlying idea of writing but invented a different system, which defines stimulus diffusion. No group carried an alphabet with them, and the case is not about status or neighbor-to-neighbor spread.'
           },
           {
-            question: 'A discount chain opened its first stores in small rural towns and reached major cities only decades later. This pattern is best described as:',
+            question: 'A phone-based payment service spreads as each new user signs up the friends and relatives they send money to, without anyone moving and without regard to status. This pattern is best described as:',
             options: [
-              'Contagious diffusion',
+              'Hierarchical diffusion',
               'Relocation diffusion',
-              'Reverse hierarchical diffusion',
+              'Contagious diffusion',
               'Stimulus diffusion'
             ],
             correctAnswer: 2,
-            explanation: 'Spread that starts at the bottom of the urban hierarchy and moves up toward large cities is reverse hierarchical diffusion. Contagious diffusion ignores city size, and relocation requires the people themselves to move.'
+            explanation: 'Spread from person to person through direct contact, regardless of status, is contagious diffusion. Hierarchical diffusion would reach powerful people or large places first, and relocation requires the people themselves to move.'
           },
           {
             question: 'Which statement about the early spread of Islam is most accurate?',
@@ -196,7 +194,7 @@ Distance decay means traits weaken with distance from the hearth unless somethin
           },
           {
             label: 'A dance spreads from student to student across a school in one week. This is ___',
-            options: ['Contagious diffusion', 'Relocation diffusion', 'Reverse hierarchical diffusion', 'Stimulus diffusion']
+            options: ['Contagious diffusion', 'Relocation diffusion', 'Hierarchical diffusion', 'Stimulus diffusion']
           },
           {
             label: 'A government blocks foreign streaming sites, slowing the spread of foreign music. This is a ___',

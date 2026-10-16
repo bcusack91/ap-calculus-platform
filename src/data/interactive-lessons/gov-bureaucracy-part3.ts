@@ -17,7 +17,7 @@ export const govBureaucracyPart3Data = {
 | Major independent agencies + commissions |
 | Major government corporations |
 | Sample regulatory programs in action |
-| Modern reform debates |
+| Modern debates about controlling the bureaucracy |
 
 > 🔑 Key idea: The federal bureaucracy includes 15 CABINET DEPARTMENTS organized around major policy domains, prominent INDEPENDENT EXECUTIVE AGENCIES (EPA, NASA, CIA, SSA), powerful INDEPENDENT REGULATORY COMMISSIONS (Fed, SEC, FCC, NLRB, FTC, NRC, CPSC), and GOVERNMENT CORPORATIONS (USPS, Amtrak, TVA, FDIC). Each has distinct creation history, statutory authority, structure, and operational patterns.
       `
@@ -74,7 +74,7 @@ export const govBureaucracyPart3Data = {
 **KEY FEATURES**:
 - Multi-member; bipartisan limit (no more than bare majority from one party)
 - Fixed staggered terms — insulates from president
-- For-cause removal — *Humphrey's Executor v. US* (1935); modified for single-director agencies *Seila Law v. CFPB* (2020) + *Collins v. Yellen* (2021)
+- For-cause removal — the president generally cannot fire commissioners over policy disagreements, which limits presidential control (EK 2.14.B.1)
 
 ## Major Government Corporations
 
@@ -98,19 +98,17 @@ export const govBureaucracyPart3Data = {
 | **NRC** | Reactor licensing | ~94 commercial nuclear reactors at ~54 plants; 40-year licenses + 20-year renewals |
 | **FAA** | Aviation safety | Certifies aircraft + pilots + airlines; FAR Part 121 (commercial), Part 135 (charter), Part 91 (private) |
 
-## Modern Reform Debates
+## Modern Debates About Controlling the Bureaucracy
 
 | Debate | Description |
 |---|---|
-| **REGULATORY REFORM** | Trump 2017 EO 13771 'two for one' rule (rescind 2 rules for every 1 issued) — cited 22-1 ratio; rescinded by Biden Jan 2021 |
-| **DOGE (Department of Government Efficiency)** | Trump Jan 2025 advisory body led by Elon Musk + Vivek Ramaswamy; controversial mass-firings + agency restructuring; legal challenges |
-| **SCHEDULE F** | Trump Oct 2020 EO reclassifying career civil servants as at-will; rescinded Biden Jan 2021; restored Trump Jan 2025; affects tens of thousands of employees |
-| **NONDELEGATION REVIVAL** | Conservative justices (Gorsuch, Thomas) signaling potential revival of nondelegation; *Gundy v. US* (2019) plurality + Gorsuch dissent |
-| **ALJ REFORM** | Jarkesy v. SEC (2024) limited SEC ALJ use for civil money penalties under 7th Am jury-trial right |
-| **SUNSET CLAUSES** | Some statutes include automatic expiration unless reauthorized (e.g., FISA Section 702 — surveillance authority renewed periodically) |
-| **CONSOLIDATED RULEMAKING** | Recent presidents have increased use of executive orders + memoranda for policy direction; controversial use of OIRA review |
+| **REGULATORY REFORM** | Trump 2017 executive order 'two for one' rule (rescind 2 rules for every 1 issued); rescinded by Biden Jan 2021 — presidential ideology shapes how agencies regulate (EK 2.14.B.1) |
+| **DOGE (Department of Government Efficiency)** | Trump Jan 2025 advisory body pushing agency cuts and restructuring; controversial mass-firings + legal challenges — a president using authority and influence to redirect agencies (EK 2.14.B.1) |
+| **SUNSET CLAUSES** | Some statutes include automatic expiration unless Congress reauthorizes them (e.g., FISA Section 702 surveillance authority) — forces periodic congressional review |
+| **OVERSIGHT HEARINGS + FUNDING LIMITS** | Congress answers agency controversies with investigations, committee hearings, and appropriations limits (EK 2.14.A.1) |
+| **EXECUTIVE DIRECTION** | Recent presidents increasingly use executive orders + memoranda to direct agencies when Congress does not act on their agenda (EK 2.5.A.3) |
 
-> 🔑 Key takeaway: 15 CABINET DEPARTMENTS (State 1789 → DHS 2003); INDEPENDENT EXECUTIVE AGENCIES (EPA 1970, NASA 1958, CIA 1947); INDEPENDENT REGULATORY COMMISSIONS (Fed 1913, SEC + FCC 1934, NLRB 1935, FTC 1914, NRC 1974, CPSC 1972) with multi-member structure + fixed terms + for-cause removal (Humphrey\'s Executor 1935, modified Seila Law 2020); GOVERNMENT CORPORATIONS (TVA + FDIC 1933, USPS + Amtrak 1971); REFORM DEBATES include Schedule F + DOGE + nondelegation revival + ALJ reform.
+> 🔑 Key takeaway: 15 CABINET DEPARTMENTS (State 1789 → DHS 2003); INDEPENDENT EXECUTIVE AGENCIES (EPA 1970, NASA 1958, CIA 1947); INDEPENDENT REGULATORY COMMISSIONS (Fed 1913, SEC + FCC 1934, NLRB 1935, FTC 1914, NRC 1974, CPSC 1972) with multi-member structure + fixed terms + for-cause removal; GOVERNMENT CORPORATIONS (TVA + FDIC 1933, USPS + Amtrak 1971); MODERN DEBATES pit presidential direction (executive orders, restructuring) against congressional oversight.
       `
     },
     {
@@ -128,7 +126,7 @@ export const govBureaucracyPart3Data = {
               "Carter created it in 1977 as a Cabinet department, merging the Interior and Energy departments"
             ],
             correctAnswer: 0,
-            explanation: 'EPA established 1970 by NIXON via EXECUTIVE REORGANIZATION (Reorganization Plan No. 3) — consolidated scattered environmental functions. INDEPENDENT EXECUTIVE AGENCY (single-administrator, NOT multi-member). FOUNDING CONTEXT: environmental movement (Earth Day 1970; Rachel Carson Silent Spring 1962). MAJOR STATUTES: Clean Air Act (1970, amendments 1977 + 1990), Clean Water Act (1972), SDWA (1974), RCRA (1976), CERCLA/Superfund (1980), TSCA (1976). PROGRAMS: NAAQS for 6 criteria pollutants; SIPs; pesticide registration; Superfund; GHG. CASES: Mass v. EPA (2007); WV v. EPA (2022) Major Questions struck Clean Power Plan.'
+            explanation: 'EPA established 1970 by NIXON via EXECUTIVE REORGANIZATION (Reorganization Plan No. 3) — consolidated scattered environmental functions. INDEPENDENT EXECUTIVE AGENCY (single-administrator, NOT multi-member). FOUNDING CONTEXT: environmental movement (Earth Day 1970; Rachel Carson Silent Spring 1962). MAJOR STATUTES: Clean Air Act (1970, amendments 1977 + 1990), Clean Water Act (1972), SDWA (1974), RCRA (1976), CERCLA/Superfund (1980), TSCA (1976). PROGRAMS: NAAQS for 6 criteria pollutants; SIPs; pesticide registration; Superfund; GHG.'
           },
           {
             question: "Which best describes the FEDERAL RESERVE SYSTEM and its independence from the President?",
@@ -139,7 +137,7 @@ export const govBureaucracyPart3Data = {
               "It is a Cabinet department under the Treasury Secretary, so monetary policy follows the President's economic agenda closely"
             ],
             correctAnswer: 0,
-            explanation: 'FEDERAL RESERVE SYSTEM (Federal Reserve Act 1913) = U.S. central bank; INDEPENDENT REGULATORY COMMISSION. (1) STRUCTURE — 7 BOARD OF GOVERNORS + 12 REGIONAL FED BANKS + FOMC (12 voting: 7 Governors + NY Fed President + 4 rotating regional Fed Presidents); (2) GOVERNOR TERMS — 14 YRS (longest); chair + vice chair 4-yr designations; (3) FOR-CAUSE REMOVAL (Humphrey\'s Executor 1935); Powell-Trump tension 2018-2020 + 2025; (4) FUNDING — interest income, NOT appropriations → budgetary independence; (5) DUAL MANDATE — max employment + price stability (~2% target since 2012); (6) BANK SUPERVISION + LENDER OF LAST RESORT (2008 Bernanke; COVID 2020 Powell).'
+            explanation: 'FEDERAL RESERVE SYSTEM (Federal Reserve Act 1913) = U.S. central bank; INDEPENDENT REGULATORY COMMISSION. (1) STRUCTURE — 7 BOARD OF GOVERNORS + 12 REGIONAL FED BANKS + FOMC (12 voting: 7 Governors + NY Fed President + 4 rotating regional Fed Presidents); (2) GOVERNOR TERMS — 14 YRS (longest); chair + vice chair 4-yr designations; (3) FOR-CAUSE REMOVAL; Powell-Trump tension 2018-2020 + 2025; (4) FUNDING — interest income, NOT appropriations → budgetary independence; (5) DUAL MANDATE — max employment + price stability (~2% target since 2012); (6) BANK SUPERVISION + LENDER OF LAST RESORT (2008 Bernanke; COVID 2020 Powell).'
           }
         ]
       }
@@ -211,7 +209,7 @@ export const govBureaucracyPart3Data = {
               "Executive agencies are created by executive order and commissions by constitutional amendment, so presidents control neither type directly"
             ],
             correctAnswer: 0,
-            explanation: 'IEAs vs. IRCs: (1) STRUCTURE — IEAs (EPA, NASA, CIA, GSA, OPM, SSA) = SINGLE ADMINISTRATOR, presidentially appointed + Senate confirmed; IRCs (Fed, SEC, FCC, NLRB, FTC, NRC, CPSC) = MULTI-MEMBER BOARD (5-7) bipartisan; (2) TERMS — single = president\'s pleasure; commissioners = FIXED STAGGERED (5-14 yrs); (3) REMOVAL — single AT WILL (until Seila Law 2020 raised doubt for single-director agencies); commissioners FOR CAUSE only (Humphrey\'s Executor 1935); (4) PRESIDENTIAL CONTROL — IEAs substantially under presidential control; IRCs relatively independent (insulation from political pressure); (5) RATIONALE — multi-member for technical/expert regulation; CONTINUITY + INSULATION.'
+            explanation: 'IEAs vs. IRCs: (1) STRUCTURE — IEAs (EPA, NASA, CIA, GSA, OPM, SSA) = SINGLE ADMINISTRATOR, presidentially appointed + Senate confirmed; IRCs (Fed, SEC, FCC, NLRB, FTC, NRC, CPSC) = MULTI-MEMBER BOARD (5-7) bipartisan; (2) TERMS — single = president\'s pleasure; commissioners = FIXED STAGGERED (5-14 yrs); (3) REMOVAL — single head AT WILL; commissioners FOR CAUSE only; (4) PRESIDENTIAL CONTROL — IEAs substantially under presidential control; IRCs relatively independent (insulation from political pressure); (5) RATIONALE — multi-member for technical/expert regulation; CONTINUITY + INSULATION.'
           },
           {
             question: "Why is the post-9/11 creation of the DEPARTMENT OF HOMELAND SECURITY (2003) constitutionally + bureaucratically significant?",

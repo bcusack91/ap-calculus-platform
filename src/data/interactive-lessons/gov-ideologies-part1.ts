@@ -59,7 +59,7 @@ Ideologies provide **MENTAL SHORTCUTS** (heuristics) for evaluating political is
 
 ## 2-Dimensional Models (Nolan Chart)
 
-The **NOLAN CHART** (David Nolan 1971) separates two dimensions:
+The **NOLAN CHART** (David Nolan) separates two dimensions:
 - **ECONOMIC FREEDOM** (high = low taxes, deregulation, free markets; low = high taxes, regulation, redistribution)
 - **SOCIAL/PERSONAL FREEDOM** (high = no government interference in private life; low = government enforcement of moral/social order)
 
@@ -138,10 +138,10 @@ Americans acquire political ideology through **POLITICAL SOCIALIZATION** — the
             hint: 'Process; agents include family (strongest), education, religion, peers, media, generational events, geography, race, gender.'
           },
           {
-            prompt: "Two-dimensional ideological model (David Nolan 1971) separating ECONOMIC freedom from SOCIAL/PERSONAL freedom — yields 4 quadrants (Liberal, Conservative, Libertarian, Populist/Statist).",
-            answer: 'Nolan chart',
-            acceptableAnswers: ['Nolan chart', 'Nolan Chart', 'nolan chart', 'Nolan'],
-            hint: 'Created by Libertarian Party founder David Nolan; rejects single left-right spectrum; widely used in American political quizzes.'
+            prompt: "Core American value holding that each person can shape their own life and destiny through the choices they make (EK 4.1.A.1).",
+            answer: 'individualism',
+            acceptableAnswers: ['individualism', 'Individualism'],
+            hint: 'One of four core values in the CED, alongside equality of opportunity, free enterprise and rule of law.'
           },
           {
             prompt: "Ideology favoring MINIMAL government in BOTH economic AND personal life, plus non-interventionist foreign policy — exemplified by the Libertarian Party + Rand Paul + Cato Institute.",

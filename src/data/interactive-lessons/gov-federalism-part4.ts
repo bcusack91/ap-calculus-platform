@@ -16,7 +16,7 @@ export const govFederalismPart4Data = {
 | Federalism × Civil Rights & Civil Liberties |
 | Federalism × Branches (Congress, President, Court) |
 | Federalism × Political Ideology |
-| Horizontal federalism (state-to-state) |
+| Federalism × policymaking (access points) |
 
 > 🔑 Key idea: Federalism does not exist in isolation — it interacts with every other constitutional structure. The same federalism principles that protect state sovereignty under the 10th Amendment have been deployed BY conservatives to limit federal civil rights enforcement (1830s nullification, 1950s "massive resistance") AND BY liberals to limit federal authority on criminal-immigration enforcement (modern "sanctuary city" movement) — federalism\'s ideological valence is contingent on which level of government holds power.
       `
@@ -32,7 +32,7 @@ export const govFederalismPart4Data = {
 | **1791-1868** | States dominant; Bill of Rights restricts only federal action (*Barron v. Baltimore* 1833) | States free to violate individual rights against state action; slavery; Black Codes |
 | **1868-1925** | 14th Amendment ratified but largely unenforced; *Slaughter-House Cases* 1873 gutted Privileges or Immunities Clause; *Plessy v. Ferguson* 1896 ratified "separate but equal" | Reconstruction failure; Jim Crow consolidation; segregation |
 | **1925-1968** | Selective incorporation begins (*Gitlow v. New York* 1925); *Brown v. Board* 1954; Civil Rights Act 1964 (commerce clause); Voting Rights Act 1965 (15th Amendment § 2) | Federal power deployed to overcome state resistance to civil rights — federal authority = pro-civil-rights |
-| **1968-present** | Most Bill of Rights protections incorporated against states; civil rights statutes enforced; modern federalism revival (*Lopez* 1995, *Shelby County* 2013, *Murphy* 2018) | Selective incorporation now near-complete; modern federalism revival has had MIXED effects on civil rights — *Shelby County* 2013 weakened VRA preclearance, but anti-commandeering doctrine has protected sanctuary cities |
+| **1968-present** | Most Bill of Rights protections incorporated against states; civil rights statutes enforced; modern federalism revival (*Lopez* 1995) | Selective incorporation now near-complete; modern federalism revival has had MIXED effects on civil rights and liberties |
 
 > 🔑 The 14th Amendment (1868) was a constitutional revolution that fundamentally reshaped federalism: states are now constrained by the Bill of Rights (selective incorporation), the Equal Protection Clause, and the Due Process Clause — federalism since 1868 has been federalism BOUNDED by individual-rights protections enforced by federal courts.
 
@@ -42,7 +42,7 @@ export const govFederalismPart4Data = {
 |---|---|
 | **Congress** | (1) Defines federal authority through statutes (Civil Rights Act 1964 commerce clause; ACA 2010 spending clause); (2) provides federal funding to states (grants-in-aid totaling hundreds of billions annually); (3) preempts state law via federal statutes (Cigarette Labeling Act 1965; Airline Deregulation Act 1978); (4) imposes federal mandates on states (No Child Left Behind 2001; Real ID Act 2005); (5) enforces 14th Amendment via § 5 enforcement power (CRA 1964; VRA 1965; ADA 1990) |
 | **President** | (1) Appoints federal judges who decide federalism cases; (2) executes federal grants programs; (3) issues executive orders directing federal agencies to act in cooperation with or in opposition to state policies (immigration enforcement, marijuana enforcement, sanctuary cities); (4) negotiates federal-state cooperation in disasters (FEMA, COVID response) |
-| **Court** | (1) Interprets the constitutional limits of federal authority (Commerce Clause, Spending Clause, Necessary and Proper Clause, 10th Amendment, Supremacy Clause, anti-commandeering); (2) interprets selective incorporation (which Bill of Rights provisions apply to states); (3) interprets Equal Protection and Due Process limits on state action; (4) interprets dormant Commerce Clause limits on state authority over interstate commerce |
+| **Court** | (1) Interprets the constitutional limits of federal authority (Commerce Clause, Spending Clause, Necessary and Proper Clause, 10th Amendment, Supremacy Clause); (2) interprets selective incorporation (which Bill of Rights provisions apply to states); (3) interprets Equal Protection and Due Process limits on state action |
 | **Federal bureaucracy** | (1) Administers federal grants and regulations affecting states (HHS administers Medicaid; DOT administers federal highway funds; EPA administers environmental regulations); (2) federal agencies vs. state agencies in dual sovereignty (FBI vs. state police; SEC vs. state securities regulators; FDA vs. state pharmacy boards) |
 
 ## Federalism × Political Ideology
@@ -54,17 +54,19 @@ export const govFederalismPart4Data = {
 
 > 🔑 The historical inversion: in the 1950s-60s, federalism principles (states\' rights) were associated with Southern resistance to civil rights; in the 21st century, federalism principles (sanctuary cities, state-level progressive policy) have been frequently invoked by liberals — federalism\'s ideological valence depends on which level of government holds power AND which direction policy is moving.
 
-## Horizontal Federalism (State-to-State Relations)
+## Federalism × Policymaking — Access Points and Constraints
 
-Federalism includes not only national-state relations but also relations AMONG the states, governed by Article IV:
+EK 1.9.A.1-2: dividing power between national and state governments creates MULTIPLE ACCESS POINTS for stakeholders, and it CONSTRAINS national policymaking because concurrent powers are shared. The CED's illustrative examples show both effects:
 
-| Provision | Effect | Example |
+| Example | What happened | Federalism lesson |
 |---|---|---|
-| **Article IV § 1 — Full Faith and Credit Clause** | States must give "full faith and credit" to the public acts, records, and judicial proceedings of other states | A divorce decree, marriage certificate, court judgment, or driver\'s license issued in one state must be recognized by other states; basis for *Obergefell v. Hodges* 2015 same-sex marriage recognition (though Court ultimately decided on Equal Protection grounds) |
-| **Article IV § 2, cl. 1 — Privileges and Immunities Clause** | "The Citizens of each State shall be entitled to all Privileges and Immunities of Citizens in the several States" — generally prohibits states from discriminating against out-of-state citizens | A state cannot impose hiring discrimination against out-of-state workers in commercial activities; state cannot deny non-residents access to state courts |
-| **Article IV § 2, cl. 2 — Extradition Clause** | A person charged with a crime in one state who flees to another state must be returned upon request | Extradition is the constitutional norm, though states have some discretion |
-| **Article I § 10 cl. 3 — Compact Clause** | "No State shall, without the Consent of Congress, . . . enter into any Agreement or Compact with another State" | Interstate compacts (Port Authority of NY & NJ; Colorado River Compact; multistate driver\'s license agreement) require congressional consent |
-| **Dormant Commerce Clause** | Even when Congress has not legislated, the Commerce Clause implicitly prohibits states from imposing substantial burdens on interstate commerce or discriminating against out-of-state commerce | A state cannot impose a tariff on goods imported from other states; cannot impose discriminatory taxes on out-of-state businesses |
+| **Hurricanes Katrina (2005) and Sandy (2012)** | Federal (FEMA), state, and local agencies shared responsibility for evacuation and relief; confusion over who was in charge slowed the Katrina response | Shared powers can complicate and slow national action (EK 1.9.A.2) |
+| **No Child Left Behind Act (2001)** | National testing and accountability requirements attached to federal education money; states pushed back on cost and control, and Congress loosened the rules in 2015 | Conditions of aid and mandates shift power toward Washington; states use their role in education to resist (EK 1.7.A.5) |
+| **Defense of Marriage Act (1996) and state marriage laws** | Congress defined marriage for federal purposes while states set their own marriage rules; the Court later struck down DOMA and, in 2015, required states to license same-sex marriages | Supreme Court interpretations shift the balance between levels (EK 1.8.A) |
+| **State marijuana legalization (Colorado, Washington 2012)** | States legalized recreational use while federal law still bans it | Groups that cannot change federal law win at the state level — multiple access points (EK 1.9.A.1) |
+| **Abortion after *Dobbs* (2022)** | Regulation returned to state legislatures; laws now range from near-total bans to broad protections | Returning an issue to the states produces policy variation (EK 3.9.A.2) |
+
+> 🔑 Federalism gives activists more than one arena: an interest group that loses in Congress can lobby a state legislature, sue in state or federal court, or push a state ballot measure — and the result is often different policy in different states.
       `
     },
     {
@@ -82,18 +84,18 @@ Federalism includes not only national-state relations but also relations AMONG t
               "Federal power over civil rights shrank after Brown v. Board, since the Court left desegregation and voting rules to the states"
             ],
             correctAnswer: 0,
-            explanation: 'Federalism × civil rights shifts: 1791-1868: Bill of Rights only federal (Barron 1833) → states free to violate (slavery, Black Codes). 1868: 14th Amendment constitutional revolution — but largely unenforced (Slaughter-House 1873 → Plessy 1896 → Brown 1954). 1925-1965: selective incorporation begins (Gitlow) + CRA + VRA → federal power overcomes state resistance. Modern revival = MIXED (Shelby County 2013 weakened VRA preclearance; anti-commandeering protected sanctuary cities).'
+            explanation: 'Federalism × civil rights shifts: 1791-1868: Bill of Rights only federal (Barron 1833) → states free to violate (slavery, Black Codes). 1868: 14th Amendment constitutional revolution — but largely unenforced (Slaughter-House 1873 → Plessy 1896 → Brown 1954). 1925-1965: selective incorporation begins (Gitlow) + CRA + VRA → federal power overcomes state resistance. Modern revival = MIXED effects.'
           },
           {
-            question: "Which best describes how horizontal federalism (state-to-state) is regulated by the Constitution?",
+            question: "Which best explains how federalism creates multiple access points for interest groups?",
             options: [
-              "Article IV requires full faith and credit for other states' records, equal privileges for out-of-state citizens, and extradition of fugitives",
-              "Article I lets Congress settle all disputes between states, requires states to adopt identical laws, and bars states from making agreements with each other",
-              "The Tenth Amendment lets each state ignore court judgments from other states, charge higher fees to all outsiders, and refuse to return fugitives",
-              "The Supremacy Clause makes the law of the largest state binding on its neighbors, sets interstate tariffs, and assigns disputes to state courts"
+              "Groups that lose at one level of government can pursue the same goal at another level",
+              "Interest groups may lobby only Congress, since state governments cannot make policy on any national issue",
+              "Federalism requires every policy to be approved by both the national and state governments before it takes effect",
+              "The Supremacy Clause bars interest groups from lobbying state legislatures on any issue Congress has addressed"
             ],
             correctAnswer: 0,
-            explanation: 'Article IV horizontal federalism: § 1 Full Faith and Credit (recognize other states\' public acts/records/judicial proceedings — divorce, marriage, judgments, licenses); § 2 cl 1 Privileges and Immunities (no discrim vs out-of-state citizens); § 2 cl 2 Extradition (return fugitives). Art I § 10 cl 3 Compact Clause (interstate compacts need Congress consent — Port Authority, Colorado River). Dormant Commerce Clause (implicit limit on state burdens). Together = single national market + state sovereignty in non-discriminatory respects.'
+            explanation: 'EK 1.9.A.1: the allocation of powers between national and state governments creates MULTIPLE ACCESS POINTS — a group that loses in Congress can lobby a state legislature, sue in state court, or push a ballot measure (e.g., state marijuana legalization in Colorado and Washington, 2012). States make policy on many national issues, most policies do not need approval at both levels, and the Supremacy Clause does not restrict lobbying.'
           }
         ]
       }
@@ -105,22 +107,22 @@ Federalism includes not only national-state relations but also relations AMONG t
       exercise: {
         questions: [
           {
-            prompt: "The Article IV clause requiring states to recognize the public acts, records, and judicial proceedings of other states (basis for cross-state recognition of marriages, divorces, court judgments): the ___ Clause.",
-            answer: 'Full Faith and Credit',
-            acceptableAnswers: ['Full Faith and Credit', 'full faith and credit', 'full faith and credit clause'],
-            hint: 'Article IV, § 1 — single national legal market.'
+            prompt: "Because power is divided between national and state governments, stakeholders have many places to influence policy — multiple ___ points.",
+            answer: 'access',
+            acceptableAnswers: ['access', 'Access', 'access points'],
+            hint: 'EK 1.9.A.1.'
           },
           {
-            prompt: "The doctrine that even when Congress has NOT legislated, the Commerce Clause implicitly prohibits states from imposing substantial burdens on interstate commerce: the ___ Commerce Clause.",
-            answer: 'dormant',
-            acceptableAnswers: ['dormant', 'Dormant', 'negative'],
-            hint: 'Also called the "negative" Commerce Clause — bars state tariffs on out-of-state goods, discriminatory state taxes on out-of-state businesses.'
+            prompt: "Powers held by both the national and state governments, such as collecting taxes and building roads: ___ powers.",
+            answer: 'concurrent',
+            acceptableAnswers: ['concurrent', 'Concurrent', 'concurrent powers'],
+            hint: 'EK 1.7.A.4 — shared, not exclusive.'
           },
           {
-            prompt: "The Article I clause requiring congressional consent for interstate compacts (e.g., Port Authority of NY-NJ, Colorado River Compact, multistate driver\'s license agreements): the ___ Clause.",
-            answer: 'Compact',
-            acceptableAnswers: ['Compact', 'compact', 'compact clause'],
-            hint: 'Article I, § 10, clause 3 — prevents state combinations that would threaten federal authority.'
+            prompt: "The 1996 federal law, a CED illustrative example, that defined marriage for federal purposes: the Defense of ___ Act.",
+            answer: 'Marriage',
+            acceptableAnswers: ['Marriage', 'marriage'],
+            hint: 'DOMA — later struck down by the Supreme Court.'
           }
         ]
       }
@@ -140,15 +142,15 @@ Federalism includes not only national-state relations but also relations AMONG t
             options: ['Bill of Rights (1791)', '14th Amendment (1868)', '10th Amendment (1791)', 'Necessary and Proper Clause']
           },
           {
-            label: "Reserves to states all powers not delegated to federal government and not prohibited to states; centerpiece of modern federalism revival (Lopez 1995, Printz 1997): the ___.",
+            label: "Reserves to states all powers not delegated to federal government and not prohibited to states; centerpiece of modern federalism revival (Lopez 1995): the ___.",
             options: ['Bill of Rights (1791)', '14th Amendment (1868)', '10th Amendment (1791)', 'Necessary and Proper Clause']
           }
         ],
         correctAnswers: ['Bill of Rights (1791)', '14th Amendment (1868)', '10th Amendment (1791)'],
         hint1: 'First 10 amendments — Anti-Federalist concession; pre-incorporation only restricted federal action.',
         hint2: 'Reconstruction Amendment that revolutionized federalism by subjecting states to federal individual-rights guarantees.',
-        hint3: 'Centerpiece of modern federalism revival — basis for anti-commandeering doctrine.',
-        explanation: 'Federalism × constitutional provisions: Bill of Rights 1791 = restricts only federal action until 1925 incorporation begins. 14th Amendment 1868 = subjects states to federal individual-rights guarantees (Due Process selective incorporation + Equal Protection + § 5 enforcement). 10th Amendment 1791 = reserved powers + centerpiece of modern revival (Lopez, Printz, Murphy v. NCAA).'
+        hint3: 'Reserved powers — EK 1.7.A.3.',
+        explanation: 'Federalism × constitutional provisions: Bill of Rights 1791 = restricts only federal action until 1925 incorporation begins. 14th Amendment 1868 = subjects states to federal individual-rights guarantees (Due Process selective incorporation + Equal Protection + § 5 enforcement). 10th Amendment 1791 = reserved powers + centerpiece of modern revival (Lopez).'
       }
     },
     {
@@ -158,26 +160,26 @@ Federalism includes not only national-state relations but also relations AMONG t
       exercise: {
         questions: [
           {
-            question: "AP scenario: A state passes a law prohibiting out-of-state liquor wholesalers from selling directly to in-state retailers, while permitting in-state wholesalers to do so. An out-of-state wholesaler sues. What is the most likely outcome?",
+            question: "AP scenario: After Hurricane Katrina struck in 2005, federal, state, and local officials disagreed over who was responsible for evacuation and relief, and the response was badly delayed. Which concept does this best illustrate?",
             options: [
-              "The law likely violates the dormant Commerce Clause, since it openly favors in-state wholesalers over out-of-state competitors",
-              "The law is likely upheld, since the 21st Amendment gives states unlimited power over alcohol, including power to protect local wholesalers from outside competition",
-              "The law likely violates the Privileges and Immunities Clause, since corporations are citizens entitled to equal treatment in every state",
-              "The law is likely upheld, since only Congress, not private businesses, may challenge a state's trade rules in court"
+              "Shared national and state powers can complicate and slow national policymaking",
+              "The Supremacy Clause lets federal agencies take over state governments completely whenever a disaster strikes",
+              "Disaster relief is a reserved power, so the national government has no role in responding to hurricanes",
+              "Block grants require states to return any unused disaster relief money to the federal Treasury"
             ],
             correctAnswer: 0,
-            explanation: 'State law violates dormant Commerce Clause: facial discrimination vs out-of-state commerce = presumptively unconstitutional. State must show legitimate local purpose unachievable by non-discriminatory alternatives (rarely met for explicit economic protectionism). 21st Amendment (1933) grants states some alcohol authority BUT Granholm v. Heald (2005) held 21st Amendment does NOT permit facial discrimination against out-of-state alcohol commerce.'
+            explanation: 'EK 1.9.A.2: national policymaking is constrained by the sharing of powers with state governments. The federal response to Hurricanes Katrina and Sandy is a CED illustrative example — FEMA, governors, and mayors all had roles, and unclear lines of responsibility slowed the response. The national government does have a large disaster-relief role, but it does not take over state governments, and nothing about block grants explains the delay.'
           },
           {
-            question: "AP scenario: After the Supreme Court overrules *Roe v. Wade* in *Dobbs v. Jackson Women\'s Health* (2022), state authority over abortion regulation expands dramatically. Some states adopt restrictive bans; others adopt protective statutes. A patient travels from a restrictive state to a permissive state for an abortion. The restrictive state seeks to prosecute. Which constitutional provisions are most directly implicated?",
+            question: "AP scenario: After the Supreme Court overruled *Roe v. Wade* in *Dobbs v. Jackson Women\'s Health Organization* (2022), some states adopted near-total abortion bans while others passed laws protecting access. Which concept does this variation best illustrate?",
             options: [
-              "The constitutional right to travel and Article IV's Privileges and Immunities Clause, which limit a state's power to punish lawful out-of-state conduct",
-              "The Tenth Amendment and the Supremacy Clause, which let a state punish its residents for any act wherever it occurs",
-              "The Necessary and Proper Clause and the Establishment Clause, which give Congress sole constitutional authority over medical procedures performed across state lines",
-              "The Full Faith and Credit Clause alone, which requires the permissive state to extradite any patient who traveled there for trial"
+              "Returning an issue to state legislatures lets policy differ from state to state under federalism",
+              "The Supremacy Clause requires every state to adopt the same policy once the Supreme Court has ruled",
+              "Selective incorporation applied one national abortion standard to every state through the Fourteenth Amendment",
+              "Categorical grants force the states to adopt identical health policies in exchange for federal money"
             ],
             correctAnswer: 0,
-            explanation: 'Post-Dobbs interstate abortion travel implicates multiple constitutional provisions: (1) Art IV § 2 cl 1 Privileges and Immunities + right to travel (Saenz v. Roe 1999); (2) dormant Commerce Clause (interstate medical services); (3) Full Faith and Credit (recognition of lawful out-of-state procedures — contested as to criminal prosecution); (4) federalism generally tolerates state policy variation BUT right to travel + dormant Commerce Clause likely limit extraterritorial enforcement. Major contested post-Dobbs question.'
+            explanation: 'Dobbs held that the Constitution does not confer a right to abortion and left its regulation to legislatures (EK 3.9.A.2). Under federalism, returning an issue to the states produces DIFFERENT POLICIES in different states — and gives advocates on both sides state-level access points (EK 1.9.A.1). The Supremacy Clause makes valid FEDERAL law supreme; it does not force states to adopt identical laws, and no national standard was incorporated.'
           }
         ]
       }

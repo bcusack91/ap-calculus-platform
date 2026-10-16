@@ -16,7 +16,7 @@ export const govCivilLibertiesPart1Data = {
 | Civil liberties vs. civil rights distinction |
 | The Bill of Rights (1791) — 10 amendments |
 | Selective Incorporation via 14th Amendment Due Process Clause |
-| Ratification debate — Federalist 84 + Anti-Federalist Brutus 2 (context; not CED-required documents) |
+| Why a Bill of Rights was added — the Anti-Federalist demand and the 9th Amendment |
 
 > 🔑 Key idea: CIVIL LIBERTIES = constitutional PROTECTIONS FROM GOVERNMENT (what government CANNOT do); CIVIL RIGHTS = protections AGAINST DISCRIMINATION (what government MUST DO to ensure equality). Bill of Rights (1791) — 10 amendments ratified after Anti-Federalist demand. SELECTIVE INCORPORATION applies most Bill of Rights protections to STATES via 14th Amendment Due Process Clause (1868) — case-by-case from Gitlow v. New York 1925 (1st Am speech) to McDonald v. Chicago 2010 (2nd Am) and Timbs v. Indiana 2019 (8th Am Excessive Fines).
       `
@@ -37,20 +37,20 @@ export const govCivilLibertiesPart1Data = {
 
 ## The Bill of Rights (1791)
 
-The first 10 amendments were ratified December 15, 1791 to address Anti-Federalist concerns voiced by Brutus 2 + George Mason + Patrick Henry that the original Constitution lacked sufficient protection of individual liberty.
+The first 10 amendments were ratified December 15, 1791 to address Anti-Federalist concerns voiced by George Mason + Patrick Henry and other Anti-Federalists that the original Constitution lacked sufficient protection of individual liberty.
 
 | Amendment | Protections | Key cases |
 |---|---|---|
 | **1st** | Freedom of religion (Establishment + Free Exercise) + speech + press + assembly + petition | Engel v. Vitale 1962, Tinker v. Des Moines 1969, NYT v. US 1971, Citizens United v. FEC 2010, Wisconsin v. Yoder 1972 |
-| **2nd** | Right to keep and bear arms | DC v. Heller 2008 (individual right), McDonald v. Chicago 2010 (incorporated to states), NY State Rifle v. Bruen 2022 (history-and-tradition test) |
+| **2nd** | Right to keep and bear arms | DC v. Heller 2008 (individual right), McDonald v. Chicago 2010 (incorporated to states) |
 | **3rd** | No quartering of soldiers in private homes during peace | Engblom v. Carey 1982 (only major case; rarely litigated) |
 | **4th** | No unreasonable searches and seizures; warrant requirement | Mapp v. Ohio 1961 (exclusionary rule incorporated), Terry v. Ohio 1968 (stop-and-frisk), Carpenter v. US 2018 (cell phone location) |
 | **5th** | Grand jury indictment, no double jeopardy, no self-incrimination, due process, takings (eminent domain with just compensation) | Miranda v. Arizona 1966, Kelo v. City of New London 2005 |
 | **6th** | Speedy + public + jury trial in criminal cases; counsel; confrontation; subpoena | Gideon v. Wainwright 1963 (right to counsel), Crawford v. Washington 2004 |
-| **7th** | Jury trial in civil cases >\\$20 (federal) | SEC v. Jarkesy 2024 (limited agency adjudication of civil money penalties) |
+| **7th** | Jury trial in civil cases >\\$20 (federal) | Rarely litigated; not incorporated to the states |
 | **8th** | No excessive bail, no excessive fines, no cruel and unusual punishment | Furman v. Georgia 1972, Gregg v. Georgia 1976, Roper v. Simmons 2005, Timbs v. Indiana 2019 |
 | **9th** | Enumeration not denial of unenumerated rights | Griswold v. Connecticut 1965 (penumbral right to privacy), Roe v. Wade 1973 (overruled by Dobbs 2022) |
-| **10th** | Powers not delegated to federal government reserved to states + people | Murphy v. NCAA 2018 (anti-commandeering) |
+| **10th** | Powers not delegated to federal government reserved to states + people | US v. Lopez 1995 (federalism limit on the Commerce Clause; required case) |
 
 ## Selective Incorporation
 
@@ -73,17 +73,15 @@ Original Bill of Rights applied ONLY to FEDERAL GOVERNMENT (Barron v. Baltimore 
 
 NOT INCORPORATED: 3rd Am quartering of soldiers (no major case); 5th Am grand jury indictment (Hurtado v. California 1884); 7th Am civil jury trial.
 
-## Ratification Debate Documents (Context)
+## Why a Bill of Rights Was Added
 
-> Note: Federalist 84 and Brutus 2 are useful context for the Bill of Rights debate, but they are NOT on the AP Gov list of required foundational documents. The required Anti-Federalist document is *Brutus No. 1*.
-
-| Document | Position on Bill of Rights |
+| Step | What happened |
 |---|---|
-| **Federalist 84 (Hamilton)** | OPPOSED Bill of Rights — argued (1) unnecessary since federal government had only ENUMERATED powers; (2) DANGEROUS because listing rights might imply UNLISTED rights are not protected; (3) Constitution itself contained protections (no titles of nobility, habeas corpus, no ex post facto) |
-| **Brutus 2 (Anti-Federalist Robert Yates 1787)** | DEMANDED Bill of Rights — argued original Constitution lacked sufficient protection for INDIVIDUAL LIBERTIES; relied on Magna Carta + English Bill of Rights 1689 + colonial bills of rights as precedents; Anti-Federalist demand led to ratification compromise — Madison drafted what became Bill of Rights in First Congress |
-| **9th Amendment Compromise** | Madison addressed Hamilton's concern by including the 9th Amendment — 'enumeration in the Constitution of certain rights shall not be construed to deny or disparage others retained by the people' |
+| **Anti-Federalist demand** | Anti-Federalists, who wanted more power left to the states (Brutus No. 1 is the required Anti-Federalist document), warned that a strong central government endangered personal liberty and that the Constitution listed no protections for individuals |
+| **Ratification compromise** | Promising to add a Bill of Rights was one of the compromises needed to win ratification (EK 1.5.A.1); Madison drafted the amendments in the First Congress and ten were ratified in 1791 |
+| **9th Amendment** | Federalists worried that listing some rights would imply that unlisted rights were unprotected; the 9th Amendment answers this — 'the enumeration in the Constitution, of certain rights, shall not be construed to deny or disparage others retained by the people' — and is one basis for unenumerated rights such as privacy (EK 3.9.A.1) |
 
-> 🔑 Key takeaway: CIVIL LIBERTIES = protections FROM government (Bill of Rights 1791) vs. CIVIL RIGHTS = protections AGAINST DISCRIMINATION. SELECTIVE INCORPORATION applies most Bill of Rights to STATES case-by-case via 14th Amendment Due Process Clause from 1925 (Gitlow) to 2019 (Timbs). FEDERALIST 84 (Hamilton) opposed Bill of Rights as unnecessary + dangerous; BRUTUS 2 (Anti-Federalist) demanded it; compromise included 9th Amendment.
+> 🔑 Key takeaway: CIVIL LIBERTIES = protections FROM government (Bill of Rights 1791) vs. CIVIL RIGHTS = protections AGAINST DISCRIMINATION. SELECTIVE INCORPORATION applies most Bill of Rights to STATES case-by-case via 14th Amendment Due Process Clause from 1925 (Gitlow) to 2019 (Timbs). The Bill of Rights itself was added to answer the ANTI-FEDERALIST demand for written protections; the 9th Amendment protects rights the list leaves out.
       `
     },
     {
@@ -104,15 +102,15 @@ NOT INCORPORATED: 3rd Am quartering of soldiers (no major case); 5th Am grand ju
             explanation: 'SELECTIVE INCORPORATION = SCOTUS applies most Bill of Rights to STATES case-by-case via 14TH AM DUE PROCESS CLAUSE (1868). (1) ORIGINAL — Barron v. Baltimore 1833 — Bill of Rights only federal; (2) 14TH AM 1868 — no state shall deprive "life, liberty, or property without due process"; (3) INCORPORATION — from Gitlow 1925 (1st Am speech); "fundamental to ordered liberty" (Palko 1937) → "fundamental to American scheme of justice" (Duncan 1968); (4) MAJORS — Near 1931 (press); Cantwell 1940 (free exercise); Everson 1947 (establishment); Mapp 1961; Gideon 1963; McDonald 2010 (2nd Am); Timbs 2019 (excessive fines); (5) NOT INCORPORATED — 3rd Am, 5th Am grand jury (Hurtado 1884), 7th Am civil jury.'
           },
           {
-            question: "How did Federalist 84 and Brutus 2 reach opposite conclusions about whether the Constitution needed a Bill of Rights?",
+            question: "Why was a Bill of Rights added to the Constitution soon after ratification?",
             options: [
-              "Hamilton called a bill of rights unneeded and even dangerous, while Brutus said federal power made one essential",
-              "Hamilton demanded a bill of rights to limit federal power, while Brutus said enumerated powers made one unnecessary",
-              "Hamilton and Brutus both opposed a bill of rights, but Brutus wanted the 10th Amendment added instead as a compromise",
-              "Hamilton backed a bill of rights for the states only, while Brutus wanted one that limited state legislatures instead"
+              "Anti-Federalists feared a strong central government, and promising one helped win their support",
+              "Federalists wanted to expand national power, and listing rights let Congress regulate them more freely",
+              "The Articles of Confederation required it, since every amendment had to protect the rights of states",
+              "The Supreme Court ordered it, ruling in Marbury v. Madison that the Constitution lacked individual rights"
             ],
             correctAnswer: 0,
-            explanation: 'FEDERALIST 84 (Hamilton) OPPOSED Bill of Rights: (1) UNNECESSARY — only ENUMERATED POWERS; (2) DANGEROUS — listing might imply unlisted not protected (→ 9th Am); (3) ALREADY PROTECTED — no titles of nobility, habeas corpus, no ex post facto, criminal jury trial. BRUTUS 2 (Yates 1787) DEMANDED: (1) Necessary and Proper + Supremacy could expand federal power; (2) PRECEDENT — Magna Carta 1215 + English Bill of Rights 1689 + colonial bills; (3) LIBERTY REQUIRES EXPLICIT PROTECTION. RESOLUTION → ratification compromise; Madison drafted Bill of Rights in First Congress 1789; 9th Am addressed Hamilton\'s concern.'
+            explanation: 'The Bill of Rights answered the ANTI-FEDERALISTS (EK 1.3.A.2, 1.5.A.1): they wanted more power reserved to the states and warned that a large, centralized government endangered personal liberty, while the original Constitution listed few protections for individuals. Agreeing to add a Bill of Rights was one of the compromises needed to secure ratification; Madison drafted the amendments in the First Congress and ten were ratified in 1791. It did not come from the Articles of Confederation or from any Supreme Court ruling (Marbury v. Madison, 1803, established judicial review), and it limits government rather than expanding Congress\'s power.'
           }
         ]
       }
@@ -130,10 +128,10 @@ NOT INCORPORATED: 3rd Am quartering of soldiers (no major case); 5th Am grand ju
             hint: 'December 15; 4 years after Constitution drafted; 2 years after Washington inaugurated.'
           },
           {
-            prompt: "Year *GITLOW v. NEW YORK* first applied a Bill of Rights provision (1st Am speech) to states via 14th Am Due Process Clause.",
-            answer: '1925',
-            acceptableAnswers: ['1925'],
-            hint: 'Coolidge era; first major incorporation case.'
+            prompt: "Number of the amendment whose Due Process Clause is used to apply (incorporate) Bill of Rights protections to the states.",
+            answer: '14',
+            acceptableAnswers: ['14', '14th', 'fourteenth', 'fourteen'],
+            hint: 'Ratified in 1868 after the Civil War; it says no STATE may deprive any person of life, liberty, or property without due process of law.'
           },
           {
             prompt: "Year *MCDONALD v. CHICAGO* incorporated the 2nd Amendment to states via 14th Am Due Process Clause.",

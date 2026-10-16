@@ -19,7 +19,7 @@ export const govPartiesInterestGroupsPart3Data = {
 | Iron triangles + issue networks (sub-government model; agriculture iron triangle USDA + ag committees + Farm Bureau; defense MIC; Heclo 1978 issue networks) |
 | Pluralism vs elitism vs hyperpluralism debates (Dahl 1961 Who Governs; Mills 1956 Power Elite; Lowi 1969 End of Liberalism; Bachrach + Baratz 1962 Two Faces of Power) |
 
-> 🔑 Key idea: MODERN PARTY COALITIONS reshaped dramatically in 2016/2024. REPUBLICAN COALITION — WORKING-CLASS MULTIRACIAL (non-college voters across races; Latino men 55% Trump 2024; Black men 22% Trump 2024 highest since 1960; Asian men 50% Trump) + EVANGELICALS (~80% Trump 2016/2020/2024) + SUN BELT + SOUTH (since 1968 Nixon Southern Strategy) + RURAL voters (~70% Trump 2024) + SMALL BUSINESS (NFIB) + POPULIST NATIONALIST (anti-immigration + anti-globalization + economic nationalism). DEMOCRATIC COALITION — COLLEGE-EDUCATED SUBURBAN (especially women; White college Harris 56-42) + MINORITIES (Black ~80% though slipping; Latino 51% Harris though slipping; Asian 54% Harris) + YOUNG (18-29 Harris 52-46 though down from Biden +24) + URBAN (cities Harris 60%+) + PUBLIC SECTOR + CULTURAL CREATIVES (academics + media + tech) + ORGANIZED LABOR (declining union density 1955 35% → 2024 10%; private sector 6%; public sector 32%); GENDER GAP — women Harris +13 vs men Trump +12 (~25 pt gap). MAJOR INTEREST GROUP CASE STUDIES — NRA (~5M members; A-F ratings drove GOP gun rights orthodoxy; Heller v. DC 2008 individual right; financial troubles since 2018 + LaPierre resignation 2024); AARP (~38M members; Social Security + Medicare advocacy; technically nonpartisan); AIPAC (pro-Israel; United Democracy Project ~\\$32M 2024 cycle defeated Cori Bush + Jamaal Bowman); AFL-CIO (~12M members; labor coordination; Democratic-aligned; ~\\$50M+ for Harris 2024); US CHAMBER OF COMMERCE (largest business federation; ~3M businesses; Republican-leaning though some Dem support); SIERRA CLUB + LCV (environmental; Democratic-aligned; key endorsements + GOTV). IRON TRIANGLES (Theodore Lowi 1969 The End of Liberalism + Hugh Heclo 1978) — SUB-GOVERNMENT MODEL where 3 ACTORS dominate policy area: (1) CONGRESSIONAL COMMITTEE (subcommittee actually); (2) BUREAUCRATIC AGENCY; (3) INTEREST GROUP; classic examples — AGRICULTURE iron triangle (USDA + House/Senate Ag committees + Farm Bureau + commodity groups); DEFENSE military-industrial complex (DOD + Armed Services committees + Lockheed/Boeing/RTX); ISSUE NETWORKS (Heclo 1978) — looser groupings of experts + advocates + think tanks + journalists across many topics (broader than iron triangles); NEPLE replaced iron triangles in many areas with ISSUE NETWORKS (more diverse + complex + transparent). PLURALISM vs ELITISM vs HYPERPLURALISM — PLURALISM (Robert Dahl 1961 Who Governs?; James Madison Federalist 10) — multiple competing groups balance each other; democratic + diverse; ELITISM (C. Wright Mills 1956 The Power Elite) — small interlocking elite (corporate + military + political) controls major decisions; HYPERPLURALISM (Theodore Lowi 1969) — too many competing groups paralyzes government + serves no clear public interest; INTEREST GROUP LIBERALISM; CRITICISM (Bachrach + Baratz 1962 Two Faces of Power) — power has 2 faces — visible (decisions made) + invisible (issues kept off agenda); modern political science largely uses MODIFIED PLURALIST framework with awareness of elite dynamics + collective action problems.
+> 🔑 Key idea: MODERN PARTY COALITIONS reshaped dramatically in 2016/2024. REPUBLICAN COALITION — WORKING-CLASS MULTIRACIAL (non-college voters across races; Latino men 54% Trump 2024; Black men 21% Trump 2024) + EVANGELICALS (~80% Trump 2016/2020/2024) + SUN BELT + SOUTH (since 1968 Nixon Southern Strategy) + RURAL voters (~64% Trump 2024) + SMALL BUSINESS (NFIB) + POPULIST NATIONALIST (anti-immigration + anti-globalization + economic nationalism). DEMOCRATIC COALITION — COLLEGE-EDUCATED SUBURBAN (especially women; White college Harris 53-45) + MINORITIES (Black ~86% though slipping; Latino 51% Harris though slipping; Asian 55% Harris) + YOUNG (18-29 Harris 54-43 though down from Biden +24) + URBAN (cities Harris 60%+) + PUBLIC SECTOR + CULTURAL CREATIVES (academics + media + tech) + ORGANIZED LABOR (declining union density 1955 35% → 2024 10%; private sector 6%; public sector 32%); GENDER GAP — women Harris +8 vs men Trump +12 (~20 pt gap). MAJOR INTEREST GROUP CASE STUDIES — NRA (~4M+ members, self-reported; A-F ratings drove GOP gun rights orthodoxy; Heller v. DC 2008 individual right; financial troubles since 2018 + LaPierre resignation 2024); AARP (~38M members; Social Security + Medicare advocacy; technically nonpartisan); AIPAC (pro-Israel; United Democracy Project ~\\$24M+ 2024 cycle defeated Cori Bush + Jamaal Bowman); AFL-CIO (~12M members; labor coordination; Democratic-aligned; major spending for Harris 2024); US CHAMBER OF COMMERCE (largest business federation; ~3M businesses; Republican-leaning though some Dem support); SIERRA CLUB + LCV (environmental; Democratic-aligned; key endorsements + GOTV). IRON TRIANGLES (with the later issue-network idea of Hugh Heclo 1978) — SUB-GOVERNMENT MODEL where 3 ACTORS dominate policy area: (1) CONGRESSIONAL COMMITTEE (subcommittee actually); (2) BUREAUCRATIC AGENCY; (3) INTEREST GROUP; classic examples — AGRICULTURE iron triangle (USDA + House/Senate Ag committees + Farm Bureau + commodity groups); DEFENSE military-industrial complex (DOD + Armed Services committees + Lockheed/Boeing/RTX); ISSUE NETWORKS (Heclo 1978) — looser groupings of experts + advocates + think tanks + journalists across many topics (broader than iron triangles); NEPLE replaced iron triangles in many areas with ISSUE NETWORKS (more diverse + complex + transparent). PLURALISM vs ELITISM vs HYPERPLURALISM — PLURALISM (Robert Dahl 1961 Who Governs?; James Madison Federalist 10) — multiple competing groups balance each other; democratic + diverse; ELITISM (C. Wright Mills 1956 The Power Elite) — small interlocking elite (corporate + military + political) controls major decisions; HYPERPLURALISM (Theodore Lowi 1969) — too many competing groups paralyzes government + serves no clear public interest; INTEREST GROUP LIBERALISM; CRITICISM (Bachrach + Baratz 1962 Two Faces of Power) — power has 2 faces — visible (decisions made) + invisible (issues kept off agenda); modern political science largely uses MODIFIED PLURALIST framework with awareness of elite dynamics + collective action problems.
       `
     },
     {
@@ -31,12 +31,12 @@ export const govPartiesInterestGroupsPart3Data = {
 | Component | Pattern |
 |---|---|
 | **WORKING-CLASS MULTIRACIAL** | Non-college voters across races (~+14 Trump); diploma divide expanded post-2016 |
-| **LATINO** | 46% Trump 2024 historic high; men 55% Trump |
-| **BLACK MEN** | 22% Trump 2024 highest since 1960 |
-| **ASIAN** | 46% Trump 2024 (men 50%) |
+| **LATINO** | 46% Trump 2024 historic high; men 54% Trump |
+| **BLACK MEN** | 21% Trump 2024 (exit poll) |
+| **ASIAN** | ~40% Trump 2024 (exit poll) |
 | **EVANGELICALS** | ~80% Trump 2016/2020/2024 |
 | **SUN BELT + SOUTH** | Solid Republican since 1968 Nixon Southern Strategy |
-| **RURAL** | ~70% Trump 2024 (urban-rural divide widest in history) |
+| **RURAL** | ~64% Trump 2024 (exit poll) |
 | **SMALL BUSINESS** | NFIB-aligned; tax cut + regulatory relief priorities |
 | **POPULIST NATIONALIST** | Anti-immigration + anti-globalization + economic nationalism |
 
@@ -44,14 +44,14 @@ export const govPartiesInterestGroupsPart3Data = {
 
 | Component | Pattern |
 |---|---|
-| **COLLEGE-EDUCATED SUBURBAN** | Especially women; White college Harris 56-42 |
-| **MINORITIES** | Black ~80% Harris (slipping from ~92% Obama 2008); Latino 51% (slipping); Asian 54% |
+| **COLLEGE-EDUCATED SUBURBAN** | Especially women; White college Harris 53-45 |
+| **MINORITIES** | Black ~86% Harris (slipping from ~95% Obama 2008); Latino 51% (slipping); Asian 55% |
 | **YOUNG (18-29)** | Harris 52-46 (down from Biden +24 in 2020) |
 | **URBAN** | Cities Harris 60%+ |
 | **PUBLIC SECTOR** | Government employees + teachers (NEA + AFT) |
 | **CULTURAL CREATIVES** | Academics + media + tech |
 | **ORGANIZED LABOR** | Declining union density (1955 35% → 2024 10%; private 6%; public 32%) |
-| **GENDER GAP** | Women Harris +13 vs Men Trump +12 (~25 pt total) |
+| **GENDER GAP** | Women Harris +8 vs Men Trump +12 (~20 pt total) |
 
 ## Major Interest Group Case Studies
 
@@ -78,7 +78,7 @@ export const govPartiesInterestGroupsPart3Data = {
 ### AIPAC (American Israel Public Affairs Committee)
 
 - **PRO-ISRAEL** lobby; influential bipartisan
-- **UNITED DEMOCRACY PROJECT** (Super PAC arm) — ~\\$32M 2024 cycle
+- **UNITED DEMOCRACY PROJECT** (Super PAC arm) — ~\\$24M+ 2024 cycle
 - **2024 PRIMARY DEFEATS** — Cori Bush (MO-1) + Jamaal Bowman (NY-16) Democratic primaries (both critics of Israel during Gaza war)
 - **CRITICS** allege excessive influence; defenders argue legitimate ethnic/political advocacy
 - **INFRASTRUCTURE** — annual policy conference; congressional trips; bipartisan endorsements
@@ -87,7 +87,7 @@ export const govPartiesInterestGroupsPart3Data = {
 
 - **MEMBERSHIP** — ~12M (federation of 60 unions)
 - **LABOR COORDINATION** — political endorsements + GOTV + member education
-- **DEMOCRATIC-ALIGNED** — endorsed Harris 2024; ~\\$50M+ spending
+- **DEMOCRATIC-ALIGNED** — endorsed Harris 2024; major spending
 - **DECLINE** — union density 1955 35% → 2024 10%; private sector 6%; public sector 32%
 - **JANUS v. AFSCME (2018)** — struck mandatory union dues for public employees; weakened public sector unions
 
@@ -198,9 +198,9 @@ Most modern political scientists use a MODIFIED PLURALIST framework:
 - **SYSTEMATIC BIAS** toward wealthy + organized + sophisticated (elitist insight)
 - **AGENDA-SETTING POWER** important (Bachrach + Baratz insight)
 - **COLLECTIVE ACTION PROBLEMS** affect group formation (Olson insight)
-- **ASYMMETRIC POLARIZATION** + interest group capture (Hacker + Pierson)
+- **INTEREST GROUP CAPTURE** of policy by well-funded groups
 
-> 🔑 Key takeaway: MODERN PARTY COALITIONS reshaped dramatically in 2016/2024. REPUBLICAN COALITION — WORKING-CLASS MULTIRACIAL (non-college across races + Latino men 55% Trump 2024 + Black men 22% Trump highest since 1960 + Asian men 50% Trump) + EVANGELICALS (~80% Trump 2016/2020/2024) + SUN BELT + SOUTH (since 1968 Nixon Southern Strategy) + RURAL (~70% Trump) + SMALL BUSINESS NFIB + POPULIST NATIONALIST. DEMOCRATIC COALITION — COLLEGE-EDUCATED SUBURBAN (esp. women; White college Harris 56-42) + MINORITIES (Black ~80% slipping; Latino 51% slipping; Asian 54%) + YOUNG (18-29 Harris 52-46 down from Biden +24) + URBAN (cities 60%+) + PUBLIC SECTOR (NEA + AFT) + CULTURAL CREATIVES (academics + media + tech) + ORGANIZED LABOR (declining 35% 1955 → 10% 2024); GENDER GAP women +13 Harris vs men +12 Trump (~25 pt). MAJOR INTEREST GROUP CASE STUDIES — NRA (~5M; A-F ratings; Heller 2008 individual right; Bruen 2022; financial troubles + LaPierre resignation 2024); AARP (~38M; Social Security + Medicare; nonpartisan; "third rail"); AIPAC (United Democracy Project ~\\$32M 2024 defeated Bush + Bowman); AFL-CIO (~12M; ~\\$50M+ Harris; declining union density); Chamber (~3M; Republican-leaning + some moderate Dem support); Sierra Club + LCV (~3.5M; environmental; Democratic-aligned). IRON TRIANGLES (Theodore Lowi 1969 End of Liberalism) — sub-government model 3 actors: CONGRESSIONAL COMMITTEE + BUREAUCRATIC AGENCY + INTEREST GROUP; classic examples — agriculture (USDA + Ag committees + Farm Bureau); defense MIC (DOD + Armed Services + Lockheed/Boeing); veterans (VA + American Legion); ISSUE NETWORKS (Hugh Heclo 1978) — looser groupings of experts + advocates + think tanks + journalists; many policy areas moved from iron triangles → issue networks due to media + advocacy explosion + congressional staff + sunshine laws. PLURALISM (Dahl 1961 Who Governs + Madison Federalist 10 — multiple competing groups balance) vs ELITISM (Mills 1956 Power Elite — interlocking elite controls; Gilens + Page 2014 confirmed) vs HYPERPLURALISM (Lowi 1969 — too many groups paralyze + serve no public interest); CRITICISM (Bachrach + Baratz 1962 Two Faces of Power — agenda-setting matters); modern political science uses MODIFIED PLURALIST framework with awareness of elite dynamics + collective action problems + asymmetric polarization (Hacker + Pierson).
+> 🔑 Key takeaway: MODERN PARTY COALITIONS reshaped dramatically in 2016/2024. REPUBLICAN COALITION — WORKING-CLASS MULTIRACIAL (non-college across races + Latino men 54% Trump 2024 + Black men 21% Trump) + EVANGELICALS (~80% Trump 2016/2020/2024) + SUN BELT + SOUTH (since 1968 Nixon Southern Strategy) + RURAL (~70% Trump) + SMALL BUSINESS NFIB + POPULIST NATIONALIST. DEMOCRATIC COALITION — COLLEGE-EDUCATED SUBURBAN (esp. women; White college Harris 53-45) + MINORITIES (Black ~86% slipping; Latino 51% slipping; Asian 55%) + YOUNG (18-29 Harris 54-43 down from Biden +24) + URBAN (cities 60%+) + PUBLIC SECTOR (NEA + AFT) + CULTURAL CREATIVES (academics + media + tech) + ORGANIZED LABOR (declining 35% 1955 → 10% 2024); GENDER GAP women +8 Harris vs men +12 Trump (~20 pt). MAJOR INTEREST GROUP CASE STUDIES — NRA (~4M+; A-F ratings; Heller 2008 individual right; financial troubles + LaPierre resignation 2024); AARP (~38M; Social Security + Medicare; nonpartisan; "third rail"); AIPAC (United Democracy Project ~\\$24M+ 2024 defeated Bush + Bowman); AFL-CIO (~12M; pro-Harris spending; declining union density); Chamber (~3M; Republican-leaning + some moderate Dem support); Sierra Club + LCV (~3.5M; environmental; Democratic-aligned). IRON TRIANGLES — sub-government model 3 actors: CONGRESSIONAL COMMITTEE + BUREAUCRATIC AGENCY + INTEREST GROUP; classic examples — agriculture (USDA + Ag committees + Farm Bureau); defense MIC (DOD + Armed Services + Lockheed/Boeing); veterans (VA + American Legion); ISSUE NETWORKS (Hugh Heclo 1978) — looser groupings of experts + advocates + think tanks + journalists; many policy areas moved from iron triangles → issue networks due to media + advocacy explosion + congressional staff + sunshine laws. PLURALISM (Dahl 1961 Who Governs + Madison Federalist 10 — multiple competing groups balance) vs ELITISM (Mills 1956 Power Elite — interlocking elite controls; Gilens + Page 2014 confirmed) vs HYPERPLURALISM (Lowi 1969 — too many groups paralyze + serve no public interest); CRITICISM (Bachrach + Baratz 1962 Two Faces of Power — agenda-setting matters); modern political science uses MODIFIED PLURALIST framework with awareness of elite dynamics + collective action problems + asymmetric polarization (Hacker + Pierson).
       `
     },
     {
@@ -210,15 +210,15 @@ Most modern political scientists use a MODIFIED PLURALIST framework:
       exercise: {
         questions: [
           {
-            question: "Which 1969 BOOK by THEODORE LOWI coined the term IRON TRIANGLE + critiqued INTEREST GROUP LIBERALISM as paralyzing American government?",
+            question: "What is an iron triangle?",
             options: [
-              "The End of Liberalism, attacking interest-group liberalism",
-              "The Semisovereign People, attacking the business bias of the interest-group system",
-              "The Logic of Collective Action, attacking liberal assumptions about group formation",
-              "Who Governs?, attacking elite theory with a pluralist study of New Haven politics",
+              "An alliance of an interest group, a congressional committee and an agency",
+              "A temporary coalition of many groups that forms around one issue and then dissolves",
+              "A three-way split in the Supreme Court in which no opinion wins a majority of justices",
+              "A partnership of the president, the Speaker and the Senate majority leader on the budget",
             ],
             correctAnswer: 0,
-            explanation: 'THE END OF LIBERALISM (Theodore Lowi 1969) — coined IRON TRIANGLE (sub-government model: CONGRESSIONAL COMMITTEE + BUREAUCRATIC AGENCY + INTEREST GROUP); critiqued INTEREST GROUP LIBERALISM as paralyzing government + serving no public interest (HYPERPLURALISM); argued government CAPTURED by competing demands without DEMOCRATIC ACCOUNTABILITY. CLASSIC IRON TRIANGLES — agriculture (USDA + Ag committees + Farm Bureau + commodity groups); defense MIC (DOD + Armed Services + Lockheed/Boeing/RTX); veterans (VA + American Legion + VFW); education (Ed Dept + NEA + AFT). Each actor has reinforcing incentive — committee reelection + donations; agency budget + autonomy; interest group favorable policy + access. CHALLENGED by Hugh Heclo (1978) Issue Networks — looser groupings of experts + advocates + think tanks + journalists; modern policy areas moved from iron triangles to issue networks due to media + advocacy explosion + congressional staff + sunshine laws.'
+            explanation: 'EK 2.12.A.1.iv and 5.6.A.2: an IRON TRIANGLE is an alliance of congressional committees, bureaucratic agencies and interest groups that are prominent in a specific policy area (e.g., agriculture committees + USDA + farm groups). A temporary coalition around one issue is an ISSUE NETWORK (EK 2.12.A.1.v). The other two options describe a fractured Court and a leadership summit, neither of which is an iron triangle.'
           }
         ]
       }
@@ -230,22 +230,22 @@ Most modern political scientists use a MODIFIED PLURALIST framework:
       exercise: {
         questions: [
           {
-            prompt: "1956 SOCIOLOGICAL TEXT by C. WRIGHT MILLS arguing small INTERLOCKING ELITE (corporate + military + political) controls major decisions.",
-            answer: 'The Power Elite',
-            acceptableAnswers: ['The Power Elite', 'Power Elite', 'the power elite', 'POWER ELITE'],
-            hint: 'THE POWER ELITE (C. Wright Mills 1956) — landmark sociological text; argued small INTERLOCKING ELITE (corporate + military + political) controls major decisions in American society; evidence: interlocking directorates + revolving door + shared social backgrounds + Yale/Harvard/Princeton networks; foundational ELITISM text; modern elitists Larry Bartels (Unequal Democracy 2008) + Martin Gilens + Benjamin Page (Affluence + Influence 2014) confirmed key claims with empirical analysis showing average voter preferences correlate ~0 with policy outcomes vs economic elite + business interest groups correlate strongly.'
+            prompt: "Model of representative democracy that emphasizes limited participation in politics and civil society (EK 1.2.A.1): ___ democracy.",
+            answer: 'elite',
+            acceptableAnswers: ['elite', 'Elite', 'elite democracy', 'Elite democracy', 'elitist'],
+            hint: 'Associated with filtered participation such as the Electoral College; contrast with participatory and pluralist democracy.'
           },
           {
-            prompt: "1961 BOOK by ROBERT DAHL studying NEW HAVEN that DEFENDED PLURALIST view of multiple competing groups balancing each other.",
-            answer: 'Who Governs',
-            acceptableAnswers: ['Who Governs', 'Who Governs?', 'who governs', 'WHO GOVERNS', 'Who Governs? Democracy and Power in an American City'],
-            hint: 'WHO GOVERNS? Democracy and Power in an American City (Robert Dahl 1961) — landmark pluralist study of New Haven CT; found multiple competing groups + issue-specific influence; no single dominant elite; SUPPORTS Madisonian Federalist 10 vision of extended republic + diverse factions checking each other; foundational PLURALISM text; CRITICIZED by Bachrach + Baratz (1962) Two Faces of Power for missing agenda-setting power (issues kept OFF agenda); modern political science uses modified pluralist framework acknowledging both insights + Olson collective action + Hacker + Pierson asymmetric polarization.'
+            prompt: "Model of representative democracy that emphasizes group-based activism by nongovernmental interests striving to affect political decisions (EK 1.2.A.1): ___ democracy.",
+            answer: 'pluralist',
+            acceptableAnswers: ['pluralist', 'Pluralist', 'pluralist democracy', 'pluralism', 'Pluralism'],
+            hint: 'Interest groups competing for influence are its clearest modern example.'
           },
           {
             prompt: "Approximate UNION DENSITY (% of workers in unions) in US in 2024 — declined from ~35% in 1955.",
             answer: '10',
             acceptableAnswers: ['10', '10%', '~10', '~10%', '10 percent'],
-            hint: '~10% — current union density in US (2024); DRAMATICALLY DECLINED from ~35% in 1955 peak; PRIVATE SECTOR ~6% (lowest in industrialized democracies); PUBLIC SECTOR ~32% (much higher; teachers + government employees); JANUS v. AFSCME (2018) struck mandatory union dues for public employees + weakened public sector unions; AFL-CIO ~12M members; right-to-work laws in 27 states; declining labor power major factor in working-class shift toward Republicans + diploma divide expansion.'
+            hint: '~10% — current union density in US (2024); DRAMATICALLY DECLINED from ~35% in 1955 peak; PRIVATE SECTOR ~6% (lowest in industrialized democracies); PUBLIC SECTOR ~32% (much higher; teachers + government employees); JANUS v. AFSCME (2018) struck mandatory union dues for public employees + weakened public sector unions; AFL-CIO ~12M members; right-to-work laws in 26 states (Michigan repealed 2024); declining labor power major factor in working-class shift toward Republicans + diploma divide expansion.'
           }
         ]
       }
@@ -290,7 +290,7 @@ Most modern political scientists use a MODIFIED PLURALIST framework:
               "It describes FDR's and Trump's personalities in detail but never explains which voter groups joined or left either party over time.",
             ],
             correctAnswer: 0,
-            explanation: 'COMPREHENSIVE COALITION EVOLUTION 1932-2024: (1) NEW DEAL COALITION (1932-1968) — FDR coalition: urban workers + Catholics + Jews + Black Americans + Southern whites + farmers + intellectuals + labor; FDR won 4 elections; coalition fractured over civil rights (1948 Dixiecrats; 1964 CRA + 1965 VRA Southern shift; LBJ "lost the South for a generation") + Vietnam (1968 Wallace 13.5%). (2) NIXON SUN BELT (1968-1992) — Southern Strategy + Sun Belt + suburbs + business + religious right; Reagan expanded with evangelicals (Moral Majority Falwell 1979) + neocons + Reagan Democrats; Bush 1988 Atwater Horton. (3) CLINTON/OBAMA (1992-2016) — Clinton DLC Third Way reclaimed Reagan Democrats + added college-educated suburban + minorities; Obama coalition urban + minorities (Black 95%) + young (60%+) + women + college-educated + secular + cultural creatives + "rising American electorate" (Judis + Teixeira 2002). (4) TRUMP (2016-2024) — 2016 Rust Belt (PA/MI/WI flipped); 2024 working-class multiracial (Latino men 55% + Black men 22% highest since 1960 + Asian men 50%); evangelicals ~80%; Sun Belt + South + rural ~70% + NFIB + populist nationalist. (5) DEMOCRATIC 2024 — college-educated suburban (White college Harris 56-42) + minorities (Black ~80% slipping from Obama 92%; Latino 51% slipping; Asian 54%) + young (52-46 down from Biden +24) + urban + public sector + cultural creatives + organized labor declining. (6) REALIGNMENTS — V.O. Key 1955 + Burnham 1970 + Mayhew 2002 critique + Levendusky 2009 sorting + Wattenberg 1996 dealignment; major realignments 1860/1896/1932/1968/2024? (7) DIPLOMA DIVIDE — ~37 pt White swing since 1992. (8) GENDER GAP — 1980 Reagan emergence → 2024 ~25 pt. (9) Federalist 10 + 78. CONSEQUENCES — sorted/polarized; nationalization; ticket-splitting RARE (1960 ~75% → 2024 ~95%); negative partisanship Abramowitz; 2024 may be NEW REALIGNMENT or cyclical; 2026 midterms test.'
+            explanation: 'COMPREHENSIVE COALITION EVOLUTION 1932-2024: (1) NEW DEAL COALITION (1932-1968) — FDR coalition: urban workers + Catholics + Jews + Black Americans + Southern whites + farmers + intellectuals + labor; FDR won 4 elections; coalition fractured over civil rights (1948 Dixiecrats; 1964 CRA + 1965 VRA Southern shift; LBJ "lost the South for a generation") + Vietnam (1968 Wallace 13.5%). (2) NIXON SUN BELT (1968-1992) — Southern Strategy + Sun Belt + suburbs + business + religious right; Reagan expanded with evangelicals (Moral Majority Falwell 1979) + neocons + Reagan Democrats; Bush 1988 Atwater Horton. (3) CLINTON/OBAMA (1992-2016) — Clinton DLC Third Way reclaimed Reagan Democrats + added college-educated suburban + minorities; Obama coalition urban + minorities (Black 95%) + young (60%+) + women + college-educated + secular + cultural creatives + "rising American electorate" (Judis + Teixeira 2002). (4) TRUMP (2016-2024) — 2016 Rust Belt (PA/MI/WI flipped); 2024 working-class multiracial (Latino men 54% + Black men 21%); evangelicals ~80%; Sun Belt + South + rural ~64% + NFIB + populist nationalist. (5) DEMOCRATIC 2024 — college-educated suburban (White college Harris 53-45) + minorities (Black ~86% slipping from Obama 93%; Latino 51% slipping; Asian 55%) + young (54-43 down from Biden +24) + urban + public sector + cultural creatives + organized labor declining. (6) REALIGNMENTS — V.O. Key 1955 + Burnham 1970 + Mayhew 2002 critique + Levendusky 2009 sorting + Wattenberg 1996 dealignment; major realignments 1860/1896/1932/1968/2024? (7) DIPLOMA DIVIDE — ~30+ pt White swing since 1992. (8) GENDER GAP — 1980 Reagan emergence → 2024 ~20 pt (margins). (9) Federalist 10 + 78. CONSEQUENCES — sorted/polarized; nationalization; ticket-splitting RARE (1960 ~75% → 2024 ~95%); negative partisanship Abramowitz; 2024 may be NEW REALIGNMENT or cyclical; 2026 midterms test.'
           }
         ]
       }

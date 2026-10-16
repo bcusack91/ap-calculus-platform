@@ -14,7 +14,7 @@ export const govConstitutionalFoundationsPart6Data = {
 | Section |
 |---|
 | Document analysis framework for AP Gov |
-| Six required documents in detail |
+| Six of the 13 required documents in detail |
 | AP argumentative essay structure |
 | Common AP traps |
 
@@ -37,7 +37,7 @@ For any AP Gov foundational-document scenario, ask:
 | How does the document apply to the specific scenario? | The application step is where most students lose points |
 | What real-world example reinforces the argument? | Required for the evidence point on argument essays |
 
-## Six Required Documents — Deep Dive
+## Six of the 13 Required Documents — Deep Dive
 
 > **Declaration of Independence** (Jefferson, July 4, 1776)
 > "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness. — That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed."
@@ -115,7 +115,7 @@ For any AP Gov foundational-document scenario, ask:
               "The Articles of Confederation, which allowed Congress to direct state officers to enforce national laws and so offer a precedent for the statute's requirements"
             ],
             correctAnswer: 0,
-            explanation: 'Brutus No. 1 strongest against federal commandeering: warns federal authority will absorb state sovereignty + Necessary and Proper + Supremacy → no genuine state authority. Court adopted similar reasoning in Printz v. United States (1997) striking Brady Act commandeering on 10th Amendment + dual sovereignty grounds.'
+            explanation: 'Brutus No. 1 strongest against federal commandeering: warns federal authority will absorb state sovereignty + Necessary and Proper + Supremacy → no genuine state authority. The statute is an unfunded federal MANDATE (EK 1.7.A.5.iv) — the kind of national requirement on the states that Anti-Federalists feared.'
           }
         ]
       }

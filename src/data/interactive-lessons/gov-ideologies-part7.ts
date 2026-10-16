@@ -19,7 +19,7 @@ export const govIdeologiesPart7Data = {
 | AP FRQ strategy for ideology questions |
 | Sprint terms |
 
-> 🔑 Key idea: Master HIGH-YIELD CONCEPTS — left-right ideological spectrum (radical-liberal-moderate-conservative-reactionary); core American ideologies (modern liberalism, modern conservatism, libertarianism, progressivism, populism); NOLAN CHART 2-D (economic + social axes → 4 quadrants); POLITICAL SOCIALIZATION (family strongest + education + religion + peers + media + generational events + geography + race + gender); POLLING (random sampling + margin of error + Literary Digest 1936 + Truman-Dewey 1948); economic ideologies (Keynesian vs supply-side); constitutional interpretation (originalism + textualism vs living constitution + purposivism); MAJOR REALIGNMENTS (1932 New Deal, 1964-1980 Southern Shift, 1980 Reagan, 2016 Educational); POLARIZATION (elite vs mass + partisan sorting + affective polarization + Pew typology); REQUIRED FOUNDATIONAL DOCUMENTS (Federalist 10 large republic controls faction; Brutus 1 large republic threatens liberty + Bill of Rights; Letter from Birmingham Jail 1963 nonviolent civil disobedience).
+> 🔑 Key idea: Master HIGH-YIELD CONCEPTS — left-right ideological spectrum (radical-liberal-moderate-conservative-reactionary); core American ideologies (modern liberalism, modern conservatism, libertarianism, progressivism, populism); NOLAN CHART 2-D (economic + social axes → 4 quadrants); POLITICAL SOCIALIZATION (family strongest + education + religion + peers + media + generational events + geography + race + gender); POLLING (random sampling + margin of error + Literary Digest 1936 + Truman-Dewey 1948); economic ideologies (Keynesian vs supply-side); ideology and the courts (judicial activism vs restraint; appointments shifting precedent); MAJOR REALIGNMENTS (1932 New Deal, 1964-1980 Southern Shift, 1980 Reagan, 2016 Educational); POLARIZATION (elite vs mass + partisan sorting + affective polarization + Pew typology); REQUIRED FOUNDATIONAL DOCUMENTS (Federalist 10 large republic controls faction; Brutus 1 large republic threatens liberty + Bill of Rights; Letter from Birmingham Jail 1963 nonviolent civil disobedience).
       `
     },
     {
@@ -40,7 +40,7 @@ export const govIdeologiesPart7Data = {
 - CONSERVATIVE — preserve traditions + limited government in economy
 - REACTIONARY — restore earlier social/political order
 
-**NOLAN CHART 2-D (David Nolan 1969 — Libertarian Party founder):**
+**NOLAN CHART 2-D (David Nolan, a Libertarian Party founder):**
 - ECONOMIC axis (more vs less government regulation/redistribution)
 - PERSONAL/SOCIAL axis (more vs less government regulation of individual behavior)
 - 4 QUADRANTS:
@@ -87,17 +87,15 @@ export const govIdeologiesPart7Data = {
 | **KEYNESIAN** | Aggregate demand drives output; recessions = demand failure | Fiscal stimulus + countercyclical spending + monetary easing | LIBERAL — FDR New Deal, Obama ARRA, Biden ARP |
 | **SUPPLY-SIDE / TRICKLE-DOWN** | Tax cuts + deregulation boost investment + work + growth | Cuts to top marginal + corporate + capital gains tax rates + deregulation | CONSERVATIVE — Reagan, Bush 43, Trump TCJA |
 | **MONETARIST** | Inflation = monetary phenomenon (Friedman) | Money supply control via Fed; rules-based monetary policy | LIBERTARIAN/CONSERVATIVE |
-| **CLASSICAL/AUSTRIAN** | Free markets self-correct; gov't intervention causes problems | Free market + sound money + minimal gov't | LIBERTARIAN |
-| **HETERODOX/MMT** | Sovereign currency issuers face inflation not solvency limit | Fiscal-led demand management + Job Guarantee | PROGRESSIVE — Sanders, AOC sympathy |
 
-### Constitutional Interpretation
+### Ideology and the Courts
 
-| Approach | Method | Cases | Justices |
-|---|---|---|---|
-| **ORIGINALISM** | Original public meaning at adoption | Heller 2008, Bruen 2022, Dobbs 2022 | Scalia, Thomas, Gorsuch, Kavanaugh, Barrett, Alito |
-| **TEXTUALISM** | Plain text reading; minimize purposivism | Bostock 2020 (Gorsuch — textualist outcome surprised conservatives) | Scalia, Gorsuch |
-| **LIVING CONSTITUTION** | Evolving meaning to address contemporary problems | Brown 1954, Roe 1973, Obergefell 2015 | Brennan, Marshall, Ginsburg, Sotomayor, Kagan |
-| **PURPOSIVISM** | Underlying purpose + structure of provision | Many liberal opinions | Breyer (now retired), Sotomayor, Kagan, Jackson |
+| Concept | Meaning | Example |
+|---|---|---|
+| **JUDICIAL ACTIVISM** | Judicial review lets courts overturn existing precedent or invalidate legislative or executive acts (EK 2.11.A.1) | Brown 1954 overturned Plessy |
+| **JUDICIAL RESTRAINT** | Judicial review should be constrained to decisions that adhere to existing precedent (EK 2.11.A.1) | Deferring to laws passed by the elected branches |
+| **STARE DECISIS** | Following precedent in cases with similar facts (EK 2.9.A.1) | Lower courts applying Supreme Court rulings |
+| **APPOINTMENTS** | Ideological changes in the Court's composition can lead it to set new precedents or reject old ones (EK 2.9.A.2) | Dobbs 2022 overruled Roe after three new appointments |
 
 ### Major Realignments
 
@@ -147,11 +145,11 @@ export const govIdeologiesPart7Data = {
 - **A**rgue / explain reasoning
 - **R**efute alternative
 
-**SCOTUS COMPARISON FRQ (FRQ #3):** Compare a non-required case to a REQUIRED case (15 required cases — Marbury 1803, McCulloch 1819, US v. Lopez 1995, Engel 1962, Wisconsin v. Yoder 1972, Tinker 1969, NYT v. US 1971, Schenck 1919, Gideon 1963, McDonald 2010, Brown 1954, Citizens United 2010, Baker v. Carr 1962, Shaw v. Reno 1993). Identify constitutional clause + comparison + reasoning + impact.
+**SCOTUS COMPARISON FRQ (FRQ #3):** Compare a non-required case to a REQUIRED case (14 required cases — Marbury 1803, McCulloch 1819, US v. Lopez 1995, Engel 1962, Wisconsin v. Yoder 1972, Tinker 1969, NYT v. US 1971, Schenck 1919, Gideon 1963, McDonald 2010, Brown 1954, Citizens United 2010, Baker v. Carr 1962, Shaw v. Reno 1993). Identify constitutional clause + comparison + reasoning + impact.
 
-**CONCEPT APPLICATION FRQ (FRQ #2):** Apply political concepts to a specific scenario; identify concept + describe + explain implications.
+**CONCEPT APPLICATION FRQ (FRQ #1):** Apply political concepts to a specific scenario; identify concept + describe + explain implications.
 
-**QUANTITATIVE ANALYSIS FRQ (FRQ #1):** Interpret data table/chart/map; identify pattern + draw conclusion + connect to political concept.
+**QUANTITATIVE ANALYSIS FRQ (FRQ #2):** Interpret data table/chart/map; identify pattern + draw conclusion + connect to political concept.
 
 ## Sprint Terms
 
@@ -165,9 +163,9 @@ export const govIdeologiesPart7Data = {
 - **GENDER GAP** — difference in voting + opinions between men + women (women +Dem since 1980)
 - **DIPLOMA DIVIDE** — gap in voting between college + non-college voters; central to 2016+ realignment
 - **ISSUE OWNERSHIP** — perception that one party handles issues better (Dems = healthcare/education; Reps = economy/national security)
-- **ORIGINALISM** — interpret Constitution per original public meaning
-- **TEXTUALISM** — interpret laws per plain text
-- **LIVING CONSTITUTION** — evolving meaning to address contemporary problems
+- **JUDICIAL ACTIVISM** — view that courts may overturn precedent or invalidate laws through judicial review
+- **JUDICIAL RESTRAINT** — view that courts should adhere to existing precedent and defer to elected branches
+- **STARE DECISIS** — following precedent in cases with similar facts
 - **SUPPLY-SIDE / TRICKLE-DOWN** — economic theory that tax cuts + deregulation boost growth
 - **KEYNESIAN** — fiscal stimulus during recessions to boost demand
 - **NOLAN CHART** — 2-D ideological mapping (economic + personal axes; 4 quadrants)
@@ -176,7 +174,7 @@ export const govIdeologiesPart7Data = {
 - **TEA PARTY** — right-wing populist movement 2009-2016 that transformed into MAGA
 - **MAGA** — Make America Great Again; Trump-era populist-nationalist Republican coalition 2016+
 
-> 🔑 Key takeaway: HIGH-YIELD CONCEPTS — left-right spectrum (radical-liberal-moderate-conservative-reactionary); Nolan chart 2-D (4 quadrants: liberal, conservative, libertarian, populist/authoritarian); core American ideologies; political socialization agents (family strongest); polling fundamentals + historical failures (Literary Digest 1936 + Truman-Dewey 1948 + 2016/2020); Keynesian vs supply-side vs monetarist economic policy; originalism vs living constitution interpretation; MAJOR REALIGNMENTS (1932 New Deal, 1964-1980 Southern Shift, 1980 Reagan, 2016 Educational); POLARIZATION (elite + mass + partisan sorting + affective + Pew typology); REQUIRED FOUNDATIONAL DOCUMENTS (Federalist 10/51/70/78, Brutus 1, Letter from Birmingham Jail); AP FRQ strategy (SCAR template + 15 required cases + 13 required documents for 2026-27).
+> 🔑 Key takeaway: HIGH-YIELD CONCEPTS — left-right spectrum (radical-liberal-moderate-conservative-reactionary); Nolan chart 2-D (4 quadrants: liberal, conservative, libertarian, populist/authoritarian); core American ideologies; political socialization agents (family strongest); polling fundamentals + historical failures (Literary Digest 1936 + Truman-Dewey 1948 + 2016/2020); Keynesian vs supply-side vs monetarist economic policy; judicial activism vs restraint; MAJOR REALIGNMENTS (1932 New Deal, 1964-1980 Southern Shift, 1980 Reagan, 2016 Educational); POLARIZATION (elite + mass + partisan sorting + affective + Pew typology); REQUIRED FOUNDATIONAL DOCUMENTS (Federalist 10/51/70/78, Brutus 1, Letter from Birmingham Jail); AP FRQ strategy (SCAR template + 14 required cases + 13 required documents for 2026-27).
       `
     },
     {
@@ -266,7 +264,7 @@ export const govIdeologiesPart7Data = {
               "A defensible thesis using only contemporary examples like January 6, no foundational document as a piece of evidence, sound reasoning, and a summary of the opposing view.",
             ],
             correctAnswer: 0,
-            explanation: 'ARGUMENT ESSAY (POLARIZATION UNDERMINED DEMOCRACY): (1) THESIS — polarization (affective + partisan sorting + elite) since Gingrich 1994 has undermined democracy by eroding bipartisan governance, fueling backsliding, threatening peaceful transfers — even though Madison anticipated faction in F10. (2) EVIDENCE 1 (F10 required document) — Madison defined faction; cure must NOT remove liberty but CONTROL effects via large diverse republic. (3) REASONING 1 — Madison\'s framework presupposed no single faction controls all institutions + ambition counteracts ambition (F51); polarization defeated this via PARTISAN SORTING (fewer cross-cutting cleavages); historic party-line voting (DW-NOMINATE most polarized since Reconstruction); single-party trifectas weaken checks; AFFECTIVE POLARIZATION not anticipated. (4) EVIDENCE 2 (JAN 6 + ELECTION DENIALISM) — Trump lost 2020 by 7M + 232-306 EC; Jan 6 mob attacked Capitol; 5 deaths; Trump impeached + Senate acquitted 57-43; 60+ election lawsuits failed; election denialism mainstream in GOP; secretary of state + governor election deniers 2022+2024; peaceful transfer (Madisonian since Revolution of 1800) contested. (5) REASONING 2 — partisan media (FOX/talk radio/Newsmax/OAN/social media) sustains stolen election narrative; affective polarization willing to overturn outcomes; Levitsky+Ziblatt HOW DEMOCRACIES DIE 2018 lost "mutual toleration" + "institutional forbearance"; Trump v. US 2024 immunity + 6-3 SCOTUS constrains accountability; mirrors Hungary/Turkey/Venezuela/Brazil/India backsliding. (6) ALT — Madison anticipated faction; checks operate; 2020 respected; 66.8% turnout 2020; Fiorina CULTURE WAR 2005 mass less polarized than elites. (7) REFUTATION — had Pence/states sided with Trump or GOP states invoked ISL theory (rejected Moore v. Harper 2023), could overturn; future vulnerable; Schedule F 2025 partisanizes federal officials; Madison\'s framework assumed background conditions polarization eroded; Levitsky+Ziblatt central insight = backsliding via incremental norm erosion not coups — exactly Gingrich → Tea Party → MAGA → Trump II pattern. (8) CONCLUSION — polarization substantially undermined; even though formal institutions survived 2020-2021, ongoing threat real.'
+            explanation: 'ARGUMENT ESSAY (POLARIZATION UNDERMINED DEMOCRACY): (1) THESIS — polarization (affective + partisan sorting + elite) since Gingrich 1994 has undermined democracy by eroding bipartisan governance, fueling backsliding, threatening peaceful transfers — even though Madison anticipated faction in F10. (2) EVIDENCE 1 (F10 required document) — Madison defined faction; cure must NOT remove liberty but CONTROL effects via large diverse republic. (3) REASONING 1 — Madison\'s framework presupposed no single faction controls all institutions + ambition counteracts ambition (F51); polarization defeated this via PARTISAN SORTING (fewer cross-cutting cleavages); historic party-line voting (DW-NOMINATE most polarized since Reconstruction); single-party trifectas weaken checks; AFFECTIVE POLARIZATION not anticipated. (4) EVIDENCE 2 (JAN 6 + ELECTION DENIALISM) — Trump lost 2020 by 7M + 232-306 EC; Jan 6 mob attacked Capitol; 5 deaths; Trump impeached + Senate acquitted 57-43; 60+ election lawsuits failed; election denialism mainstream in GOP; secretary of state + governor election deniers 2022+2024; peaceful transfer (Madisonian since Revolution of 1800) contested. (5) REASONING 2 — partisan media (FOX/talk radio/Newsmax/OAN/social media) sustains stolen election narrative; affective polarization willing to overturn outcomes; Levitsky+Ziblatt HOW DEMOCRACIES DIE 2018 lost "mutual toleration" + "institutional forbearance"; mirrors Hungary/Turkey/Venezuela/Brazil/India backsliding. (6) ALT — Madison anticipated faction; checks operate; 2020 respected; 66.8% turnout 2020; Fiorina CULTURE WAR 2005 mass less polarized than elites. (7) REFUTATION — had Pence/states sided with Trump, the outcome could have been overturned; future vulnerable; Madison\'s framework assumed background conditions polarization eroded; Levitsky+Ziblatt central insight = backsliding via incremental norm erosion not coups — exactly Gingrich → Tea Party → MAGA → Trump II pattern. (8) CONCLUSION — polarization substantially undermined; even though formal institutions survived 2020-2021, ongoing threat real.'
           }
         ]
       }

@@ -182,15 +182,15 @@ Despite two-party dominance, third parties have INFLUENCED American politics:
       exercise: {
         questions: [
           {
-            question: "Which FRENCH POLITICAL SCIENTIST'S LAW (1951) explains why the US has a TWO-PARTY SYSTEM (single-member plurality districts + winner-take-all favor TWO PARTIES)?",
+            question: "Why do winner-take-all, single-member districts make it hard for third parties to win seats in the United States?",
             options: [
-              "Duverger's Law, linking plurality districts to two-party competition",
-              "Arrow's theorem, linking ranked ballots in plurality districts to unstable outcomes",
-              "Michels's iron law of oligarchy, linking party organizations to rule by small elites",
-              "Tocqueville's law of associations, linking civic groups to a stable multiparty system",
+              "A party must finish first to win anything, so minor-party votes earn no seats",
+              "Third parties are barred by the Constitution from holding seats in Congress or the Electoral College",
+              "Proportional representation gives seats only to parties that win at least half the vote nationwide",
+              "Federal law requires every candidate to be nominated by either the Democratic or Republican Party",
             ],
             correctAnswer: 0,
-            explanation: 'DUVERGER\'S LAW (Maurice Duverger 1951) — French political scientist; ELECTORAL SYSTEM SHAPES PARTY SYSTEM via MECHANICAL + PSYCHOLOGICAL effects; SINGLE-MEMBER PLURALITY + WINNER-TAKE-ALL → favors TWO PARTIES (US House + EC + UK pre-2010); PROPORTIONAL REPRESENTATION → favors MULTI-PARTY (Germany + Israel + Netherlands); MIXED SYSTEMS → intermediate (Mexico + NZ + Japan). MECHANICAL EFFECT — single-member districts mathematically eliminate small parties. PSYCHOLOGICAL EFFECT — voters strategic + don\'t vote for likely losers (wasted vote). US has TWO-PARTY system because: (1) constitutional design — single-member House + EC winner-take-all; (2) state laws — ballot access; (3) campaign finance advantages; (4) historical precedent (Republican + Democratic since 1854); (5) wasted vote dynamic. THIRD PARTIES rarely win but SHIFT major party policies (TR 1912 27.4%; Wallace 1968 13.5%; Perot 1992 18.9% → Clinton balanced budget; Nader 2000 2.7% → Gore FL).'
+            explanation: 'EK 5.5.A.1: in comparison to proportional systems, WINNER-TAKE-ALL voting districts serve as a structural barrier to third-party and independent candidates — only the top finisher wins, so a party with 15% everywhere can win nothing, and voters avoid "wasting" votes. (Political scientists call this pattern Duverger\'s Law.) The Constitution does not bar third parties, proportional representation awards seats in proportion to vote share, and no law limits nominations to the two major parties.'
           }
         ]
       }
@@ -208,10 +208,10 @@ Despite two-party dominance, third parties have INFLUENCED American politics:
             hint: 'MANCUR OLSON (1932-1998) — American political economist; THE LOGIC OF COLLECTIVE ACTION (1965) explains FREE RIDER PROBLEM; central insight: large groups struggle to organize because individuals can BENEFIT FROM PUBLIC GOODS WITHOUT CONTRIBUTING; small groups organize more easily; SOLUTIONS — SELECTIVE BENEFITS (AARP magazine + travel discounts; AAA roadside service; Farm Bureau insurance; Sierra Club outings; NRA insurance) + SOCIAL SOLIDARITY + PURPOSIVE BENEFITS + COERCION (limited by Janus v. AFSCME 2018); foundational text for political science.'
           },
           {
-            prompt: "Year REPUBLICAN PARTY was FOUNDED (anti-slavery; absorbed Whigs + Free Soilers; LINCOLN won 1860).",
-            answer: '1854',
-            acceptableAnswers: ['1854'],
-            hint: 'REPUBLICAN PARTY founded 1854 — anti-slavery party; absorbed Whigs (collapsed over slavery) + Free Soilers + Liberty Party; first major candidate Frémont 1856 (lost); Lincoln won 1860 leading to Civil War; original platform: free labor + free soil + free men + Frémont; eventually became party of business + tariffs + Reconstruction (initially) + Sun Belt/Southern Strategy after 1968; current iteration since 2016 working-class realignment under Trump.'
+            prompt: "Electoral system, used in many democracies, that gives parties seats in proportion to their share of the vote, unlike U.S. winner-take-all districts (EK 5.5.A.1).",
+            answer: 'proportional representation',
+            acceptableAnswers: ['proportional representation', 'Proportional representation', 'proportional', 'PR', 'proportional system'],
+            hint: 'Under it, a party winning 15% of the vote gets about 15% of the seats, so third parties survive.'
           },
           {
             prompt: "1992 THIRD PARTY CANDIDATE (Reform Party founder) won 18.9% popular vote highlighting BALANCED BUDGET concerns; influenced Clinton's deficit focus.",

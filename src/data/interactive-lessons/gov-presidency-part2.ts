@@ -61,13 +61,6 @@ export const govPresidencyPart2Data = {
 | Effect | Bill dies; President cannot be overridden because Congress is not in session to receive vetoed bill |
 | Modern usage | Reduced because Congresses now usually stay technically in session via pro forma sessions |
 
-### Line-Item Veto — Unconstitutional
-
-| Year | Event |
-|---|---|
-| 1996 | Line Item Veto Act passed (allowing president to cancel specific spending + tax provisions) |
-| 1998 | *Clinton v. New York* struck down as violating Presentment Clause — president cannot edit legislation |
-
 ## Treaty Power vs. Executive Agreement
 
 | Type | Process | Examples |
@@ -126,7 +119,7 @@ export const govPresidencyPart2Data = {
 |---|---|
 | Must rest on constitutional + statutory authority | *Youngstown Sheet & Tube v. Sawyer* 1952 — Truman steel-mill seizure unconstitutional |
 | Subject to judicial review | *Trump v. Hawaii* 2018 (upheld) vs. multiple lower-court travel-ban injunctions |
-| Subject to congressional override (statute) | Congressional Review Act allows disapproval of agency rules |
+| Subject to congressional override (statute) | Congress can pass a law reversing an order or refuse to fund it (power of the purse) |
 | Subject to subsequent rescission | Trump 2017 + 2025 rescinded Obama orders; Biden 2021 rescinded Trump orders; Trump 2025 rescinded Biden orders |
 
 ## Signing Statements
@@ -135,7 +128,7 @@ export const govPresidencyPart2Data = {
 |---|---|
 | **Definition** | Statement issued by President when signing a bill, articulating constitutional concerns or interpretive guidance for executive enforcement |
 | **Modern usage** | Reagan + GHW Bush + GW Bush expanded use (~1,200 challenges by GW Bush); Obama reduced; Trump + Biden moderate |
-| **Controversy** | Critics argue signing statements function as line-item vetoes (which are unconstitutional per *Clinton v. New York* 1998); defenders argue they are legitimate interpretive tools |
+| **Controversy** | Critics argue signing statements let presidents announce they will not enforce parts of laws they sign; defenders argue they are legitimate interpretive tools that inform Congress and the public (EK 2.4.A.2.v) |
 
 > 🔑 Key takeaway: Modern presidents combine Article II constitutional processes (veto, treaty, appointment) with informal practices (executive orders, executive agreements, signing statements) to govern. The veto is defensive (legislative); executive orders + agreements are unilateral; appointments shape the executive + judiciary for decades.
       `
@@ -166,7 +159,7 @@ export const govPresidencyPart2Data = {
               "They rest on Senate ratification of each order, and they lapse automatically at the end of the issuing President's term"
             ],
             correctAnswer: 0,
-            explanation: 'Executive orders = presidential directives w/ force of law if consistent w/ Constitution + statutes. Basis: (1) VESTING CLAUSE Art II § 1; (2) TAKE CARE CLAUSE Art II § 3; (3) STATUTORY DELEGATIONS. Limits: (a) JUDICIAL REVIEW — Youngstown Sheet & Tube (1952) struck Truman steel-mill seizure; Jackson concurrence 3-tier (express authority → max; silence → twilight; prohibition → lowest ebb); (b) CONGRESSIONAL OVERRIDE via statute; (c) SUBSEQUENT RESCISSION.'
+            explanation: 'Executive orders = presidential directives w/ force of law if consistent w/ Constitution + statutes. Basis: (1) VESTING CLAUSE Art II § 1; (2) TAKE CARE CLAUSE Art II § 3; (3) STATUTORY DELEGATIONS. Limits: (a) JUDICIAL REVIEW — courts struck down Truman\'s steel-mill seizure (1952) because no law authorized it; (b) CONGRESSIONAL OVERRIDE via statute; (c) SUBSEQUENT RESCISSION.'
           }
         ]
       }
@@ -190,10 +183,10 @@ export const govPresidencyPart2Data = {
             hint: 'Same fraction as Senate treaty ratification.'
           },
           {
-            prompt: "Year of *Clinton v. New York* striking down the Line Item Veto Act as violating the Presentment Clause.",
-            answer: '1998',
-            acceptableAnswers: ['1998'],
-            hint: 'Same year as Clinton impeachment.'
+            prompt: "The informal power a President uses to tell Congress and the public how he interprets a law at the moment he signs it: a signing ___.",
+            answer: 'statement',
+            acceptableAnswers: ['statement', 'statements', 'signing statement'],
+            hint: 'EK 2.4.A.2.v.'
           }
         ]
       }
@@ -249,7 +242,7 @@ export const govPresidencyPart2Data = {
               "Divided party control has no effect on appointments, since the Senate confirms nearly all nominees within weeks"
             ],
             correctAnswer: 0,
-            explanation: 'Merrick Garland precedent (Obama nominated March 2016 for Scalia seat; Senate R/McConnell refused hearings 293 days; Trump won Nov 2016 → Gorsuch confirmed April 2017). Illustrates: (1) SHARED-POWER appointments — Art II § 2 cl 2 gives President nomination + Senate "advice and consent"; doesn\'t specify procedures → Senate can delay/refuse; (2) MODERN POLARIZATION — partisan battles, procedural tools (filibuster pre-2017, blue slips, holds, refusal to hear); (3) NUCLEAR OPTION 2017 lowered SCOTUS cloture 60→51 → Gorsuch (54-45), Kavanaugh (50-48), Barrett (52-48), Jackson (53-47) on party-line votes.'
+            explanation: 'Merrick Garland precedent (Obama nominated March 2016 for Scalia seat; Senate R/McConnell refused hearings 293 days; Trump won Nov 2016 → Gorsuch confirmed April 2017). Illustrates: (1) SHARED-POWER appointments — Art II § 2 cl 2 gives President nomination + Senate "advice and consent"; doesn\'t specify procedures → Senate can delay/refuse; (2) MODERN POLARIZATION — partisan battles, procedural tools (filibuster pre-2017, blue slips, holds, refusal to hear); (3) DIVIDED GOVERNMENT intensifies partisanship over appointments, especially those of a lame-duck president (EK 2.3.A.3) — and because justices serve for life, appointments are the president\'s longest-lasting influence (EK 2.5.A.2).'
           }
         ]
       }

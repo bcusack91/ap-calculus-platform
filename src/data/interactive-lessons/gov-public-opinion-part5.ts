@@ -17,9 +17,9 @@ export const govPublicOpinionPart5Data = {
 | Civil rights opinion evolution (Black equality 1940s-2020s; school desegregation; interracial marriage) |
 | Gay rights opinion revolution (DOMA 1996 majority opposed gay marriage → Obergefell 2015 majority supportive → trans rights contested) |
 | Abortion opinion (stable ~60% pro-Roe 1973-2022 → Dobbs reaction 2022) |
-| Trust in government decline (75% in 1958 → ~20% post-Watergate sustained low) |
+| Trust in government decline (~73% in 1958 → ~20% post-Watergate sustained low) |
 
-> 🔑 Key idea: Public opinion CHANGES OVER TIME — sometimes dramatically (gay marriage transformed in ~20 years from majority opposed to majority supportive), sometimes minimally (abortion stable ~60% pro-Roe for 50 years until Dobbs 2022 + post-Dobbs mobilization), sometimes one-direction (declining trust in government from 75% in 1958 to ~20% after Watergate sustained low). POLLING METHODOLOGY EVOLVED to track these changes — Literary Digest 1936 failure → Gallup scientific era → telephone (RDD) → cellphone-inclusive → online probability panels (Pew ATP, NORC AmeriSpeak) + opt-in panels with weighting. CIVIL RIGHTS OPINION transformed dramatically (1942 only 32% supported school integration → 1995 90%; 1958 only 4% approved interracial marriage → 2021 94%); GAY RIGHTS revolution faster (1996 27% supported same-sex marriage → 2024 71%); ABORTION stable until Dobbs reaction; TRUST IN GOVERNMENT plummeted post-Watergate + Vietnam + Iran-Contra + Iraq + financial crisis + COVID + Trump-era + sustained at historic lows.
+> 🔑 Key idea: Public opinion CHANGES OVER TIME — sometimes dramatically (gay marriage transformed in ~20 years from majority opposed to majority supportive), sometimes minimally (abortion stable ~60% pro-Roe for 50 years until Dobbs 2022 + post-Dobbs mobilization), sometimes one-direction (declining trust in government from ~73% in 1958 to ~20% after Watergate sustained low). POLLING METHODOLOGY EVOLVED to track these changes — Literary Digest 1936 failure → Gallup scientific era → telephone (RDD) → cellphone-inclusive → online probability panels (Pew ATP, NORC AmeriSpeak) + opt-in panels with weighting. CIVIL RIGHTS OPINION transformed dramatically (1942 only 32% supported school integration → 1995 90%; 1958 only 4% approved interracial marriage → 2021 94%); GAY RIGHTS revolution faster (1996 27% supported same-sex marriage → 2024 69%); ABORTION stable until Dobbs reaction; TRUST IN GOVERNMENT plummeted post-Watergate + Vietnam + Iran-Contra + Iraq + financial crisis + COVID + Trump-era + sustained at historic lows.
       `
     },
     {
@@ -143,9 +143,9 @@ export const govPublicOpinionPart5Data = {
 | 1996 | 27% (DOMA passed bipartisan) |
 | 2003 | 32% (Lawrence v. Texas struck sodomy laws) |
 | 2008 | 39% (CA Prop 8 banned same-sex marriage) |
-| 2011 | 46% (FIRST MAJORITY in Gallup) |
+| 2011 | 53% (FIRST MAJORITY in Gallup) |
 | 2015 | 60% (Obergefell v. Hodges) |
-| 2024 | 71% |
+| 2024 | 69% (record 71% in 2022-23) |
 
 ONE OF FASTEST OPINION SHIFTS IN AMERICAN HISTORY — driven by:
 - INCREASED VISIBILITY of LGBTQ Americans (coming out + Will & Grace + Modern Family + Ellen)
@@ -214,7 +214,7 @@ PARTISAN GAP MASSIVE: 78% Dems urgent action vs 23% Reps urgent action (largest 
 | 2001 | 60% (post-9/11 spike) |
 | 2008 | 17% (Iraq + financial crisis) |
 | 2014 | 24% (Obama) |
-| 2024 | 16-22% (sustained low) |
+| 2024 | 22% (2023 low: 16%) |
 
 DRAMATIC DECLINE since 1960s — driven by:
 - VIETNAM WAR credibility gap
@@ -236,16 +236,16 @@ CIVIC ENGAGEMENT (Putnam BOWLING ALONE 2000) declined alongside trust — fewer 
 
 | Issue | Direction | Magnitude |
 |---|---|---|
-| Marijuana legalization | Up | 1969 12% → 2024 70%+ |
-| Capital punishment | Down then up then down | 80% 1990s → 55% 2024 |
-| Confidence in police | Down (esp post-Floyd 2020) | 64% 1990s → 45% 2023 |
-| Confidence in Supreme Court | Down (post-Dobbs) | 50%+ historically → 40% 2024 |
+| Marijuana legalization | Up | 1969 12% → 2024 68% |
+| Capital punishment | Down then up then down | 80% 1990s → 53% 2024 |
+| Confidence in police | Down (esp post-Floyd 2020) | 64% 1990s → 43% 2023 |
+| Confidence in Supreme Court | Down (post-Dobbs) | 50%+ historically → ~30% 2024 (Gallup confidence) |
 | Confidence in Congress | Sustained low | <20% routinely |
 | Confidence in scientists | Bipartisan high → polarized post-COVID | Reps now skeptical |
 | Confidence in higher education | Bipartisan high → Reps now negative | 60% Reps negative view 2024 |
 | Confidence in corporations | Sustained low | <30% |
 
-> 🔑 Key takeaway: Public opinion CHANGES OVER TIME — sometimes dramatically (gay marriage 12%→71% in 35 years; interracial marriage 4%→94% in 60 years), sometimes stably (abortion ~60% pro-Roe stable 50 years until Dobbs reaction), sometimes one-direction (trust in government 75% 1958 → 16-22% sustained low). POLLING HISTORY: 1824 first straw poll → Literary Digest 1916-32 success → 1936 failure + Gallup scientific era → 1948 Truman-Dewey + quota sampling abandoned → 1950s-70s telephone + ANES → 1980s-2000s RDD network polls + 2000 FL exit poll fiasco → 2000s-2010s cellphone challenge → 2010s+ online era (Pew ATP + NORC AmeriSpeak) → 2016 + 2020 underestimating Trump → reforms → 2024 improved accuracy. CIVIL RIGHTS opinion transformed (32%→90%+ school integration; 4%→94% interracial marriage); GAY RIGHTS revolutionary fast (visibility + contact + generational replacement + court rulings + Obama "evolved" 2012); ABORTION stable then post-Dobbs mobilization; GUN CONTROL persistent intensity mismatch (80%+ background checks failed); CLIMATE CHANGE largest partisan gap (78 vs 23); TRUST IN GOVERNMENT declined dramatically (Vietnam + Watergate + stagflation + Iran + Iran-Contra + Iraq + financial crisis + COVID + Trump-era); BOWLING ALONE (Putnam 2000) social capital decline alongside trust.
+> 🔑 Key takeaway: Public opinion CHANGES OVER TIME — sometimes dramatically (gay marriage 12%→71% by 2022-23; interracial marriage 4%→94% in 60 years), sometimes stably (abortion ~60% pro-Roe stable 50 years until Dobbs reaction), sometimes one-direction (trust in government ~73% 1958 → ~16-22% sustained low). POLLING HISTORY: 1824 first straw poll → Literary Digest 1916-32 success → 1936 failure + Gallup scientific era → 1948 Truman-Dewey + quota sampling abandoned → 1950s-70s telephone + ANES → 1980s-2000s RDD network polls + 2000 FL exit poll fiasco → 2000s-2010s cellphone challenge → 2010s+ online era (Pew ATP + NORC AmeriSpeak) → 2016 + 2020 underestimating Trump → reforms → 2024 improved accuracy. CIVIL RIGHTS opinion transformed (32%→90%+ school integration; 4%→94% interracial marriage); GAY RIGHTS revolutionary fast (visibility + contact + generational replacement + court rulings + Obama "evolved" 2012); ABORTION stable then post-Dobbs mobilization; GUN CONTROL persistent intensity mismatch (80%+ background checks failed); CLIMATE CHANGE largest partisan gap (78 vs 23); TRUST IN GOVERNMENT declined dramatically (Vietnam + Watergate + stagflation + Iran + Iran-Contra + Iraq + financial crisis + COVID + Trump-era); BOWLING ALONE (Putnam 2000) social capital decline alongside trust.
       `
     },
     {
@@ -255,7 +255,7 @@ CIVIC ENGAGEMENT (Putnam BOWLING ALONE 2000) declined alongside trust — fewer 
       exercise: {
         questions: [
           {
-            question: "What explains the DRAMATIC TRANSFORMATION of PUBLIC OPINION on SAME-SEX MARRIAGE — from 12% support in 1988 to 71% in 2024 — making it ONE OF THE FASTEST OPINION SHIFTS IN AMERICAN HISTORY?",
+            question: "What explains the DRAMATIC TRANSFORMATION of PUBLIC OPINION on SAME-SEX MARRIAGE — from 12% support in 1988 to 69% in 2024 — making it ONE OF THE FASTEST OPINION SHIFTS IN AMERICAN HISTORY?",
             options: [
               "More people came out and gained gay friends and relatives, younger cohorts replaced older ones, and elite cues and court rulings reinforced the change.",
               "Older Americans changed their minds en masse after Obergefell, while younger cohorts grew more opposed, so generational replacement slowed the overall shift.",
@@ -263,7 +263,7 @@ CIVIC ENGAGEMENT (Putnam BOWLING ALONE 2000) declined alongside trust — fewer 
               "Religious leaders united behind same-sex marriage in the 1990s, and both parties endorsed it before any state legalized it in 2003.",
             ],
             correctAnswer: 0,
-            explanation: 'SAME-SEX MARRIAGE OPINION TRANSFORMATION (12% 1988 → 71% 2024) — fastest opinion shifts in American history. DRIVERS: (1) VISIBILITY — Will & Grace (1998-2006), Modern Family (2009-2020), Ellen (1997 banned by affiliates → cultural moment), Glee, Queer Eye, Game of Thrones; celebrity coming out (Ellen 1997); Milk 2008. (2) INTERPERSONAL CONTACT — Allport CONTACT HYPOTHESIS (1954); coming out → straight Americans knew gay family/friends/colleagues; replaced abstraction with personal relationships; even Republican families (Cheney + daughter Mary 2004; Portman + son 2013). (3) GENERATIONAL REPLACEMENT — Silent strongly opposed; Boomers split; Gen X mostly supportive; Millennials + Gen Z overwhelming; ~50% of total shift. (4) COURT RULINGS — Massachusetts Goodridge (2003 first state); Lawrence v. Texas (2003 sodomy); Windsor (2013 DOMA); Obergefell (2015 nationwide); courts often LED but public opinion caught up. (5) ELITE LEADERSHIP — Obama "EVOLVED" 2012 (after Biden Meet the Press May 2012); Clinton evolved; Dem near-unanimity; even Rep leaders personal shifts. (6) COUNTERMOBILIZATION FAILED — DOMA 1996 bipartisan; CA Prop 8 2008; 30+ state amendments 2004-2012; collapsed post-Obergefell. (7) ECONOMIC ALLIES — Apple + Google + Microsoft + Disney + Coca-Cola amicus briefs; Pride Month commercialization. (8) MILITARY — DADT 1993 → repealed 2010; trans Trump 2017 → Biden 2021 → Trump II 2025. (9) FRAMING SHIFT — "marriage equality" emphasized equal love + family + traditional values applying. (10) RELIGIOUS LIBERTY COUNTERMOB — Hobby Lobby 2014 + Masterpiece Cakeshop 2018 + 303 Creative 2023. (11) TRANS RIGHTS now most contested — athletes in women\'s sports + youth gender-affirming care + bathrooms + military service; backlash paralleling earlier gay marriage shift but slower.'
+            explanation: 'SAME-SEX MARRIAGE OPINION TRANSFORMATION (12% 1988 → 69% 2024; record 71% 2022-23) — fastest opinion shifts in American history. DRIVERS: (1) VISIBILITY — Will & Grace (1998-2006), Modern Family (2009-2020), Ellen (1997 banned by affiliates → cultural moment), Glee, Queer Eye, Game of Thrones; celebrity coming out (Ellen 1997); Milk 2008. (2) INTERPERSONAL CONTACT — Allport CONTACT HYPOTHESIS (1954); coming out → straight Americans knew gay family/friends/colleagues; replaced abstraction with personal relationships; even Republican families (Cheney + daughter Mary 2004; Portman + son 2013). (3) GENERATIONAL REPLACEMENT — Silent strongly opposed; Boomers split; Gen X mostly supportive; Millennials + Gen Z overwhelming; ~50% of total shift. (4) COURT RULINGS — Massachusetts Goodridge (2003 first state); Lawrence v. Texas (2003 sodomy); Windsor (2013 DOMA); Obergefell (2015 nationwide); courts often LED but public opinion caught up. (5) ELITE LEADERSHIP — Obama "EVOLVED" 2012 (after Biden Meet the Press May 2012); Clinton evolved; Dem near-unanimity; even Rep leaders personal shifts. (6) COUNTERMOBILIZATION FAILED — DOMA 1996 bipartisan; CA Prop 8 2008; 30+ state amendments 2004-2012; collapsed post-Obergefell. (7) ECONOMIC ALLIES — Apple + Google + Microsoft + Disney + Coca-Cola amicus briefs; Pride Month commercialization. (8) MILITARY — DADT 1993 → repealed 2010; trans Trump 2017 → Biden 2021 → Trump II 2025. (9) FRAMING SHIFT — "marriage equality" emphasized equal love + family + traditional values applying. (10) RELIGIOUS LIBERTY COUNTERMOB — Hobby Lobby 2014 + Masterpiece Cakeshop 2018 + 303 Creative 2023. (11) TRANS RIGHTS now most contested — athletes in women\'s sports + youth gender-affirming care + bathrooms + military service; backlash paralleling earlier gay marriage shift but slower.'
           }
         ]
       }
@@ -275,16 +275,16 @@ CIVIC ENGAGEMENT (Putnam BOWLING ALONE 2000) declined alongside trust — fewer 
       exercise: {
         questions: [
           {
-            prompt: "2000 Robert Putnam book documenting decline in CIVIC ENGAGEMENT + SOCIAL CAPITAL alongside trust decline (fewer associations + church + bowling leagues + community ties).",
-            answer: 'Bowling Alone',
-            acceptableAnswers: ['Bowling Alone', 'bowling alone', 'Bowling Alone: The Collapse and Revival of American Community'],
-            hint: 'Robert D. Putnam Harvard political scientist; full title BOWLING ALONE: THE COLLAPSE AND REVIVAL OF AMERICAN COMMUNITY (2000); used dramatic image of declining bowling LEAGUES (more bowling than ever but fewer leagues) as metaphor for declining civic engagement; documented decline in PTA + Elks + Rotary + church attendance + voting + local newspaper subscriptions + family meals + bridge clubs; argued TV + suburbanization + women workforce + generational change drove decline.'
+            prompt: "Term for the belief that an individual's participation in the political process will make a difference, which falls as trust in government declines (EK 5.2.A.1).",
+            answer: 'political efficacy',
+            acceptableAnswers: ['political efficacy', 'Political efficacy', 'efficacy', 'Efficacy'],
+            hint: 'Low levels of it help explain lower voter turnout.'
           },
           {
-            prompt: "2015 Supreme Court case (5-4 Kennedy) establishing CONSTITUTIONAL RIGHT TO SAME-SEX MARRIAGE nationwide.",
-            answer: 'Obergefell v. Hodges',
-            acceptableAnswers: ['Obergefell v. Hodges', 'Obergefell', 'Obergefell vs Hodges', 'Obergefell vs. Hodges'],
-            hint: 'Decided June 26 2015 (12th anniversary of Lawrence v. Texas); Justice Anthony Kennedy majority opinion + 4 conservative dissents; struck down state same-sex marriage bans nationwide; established 14th Amendment Due Process + Equal Protection Clause requires marriage equality; followed Goodridge 2003 (Massachusetts), Lawrence 2003 (sodomy), Windsor 2013 (DOMA federal definition).'
+            prompt: "Type of poll that follows how views of a candidate change over the course of a campaign (EK 4.5.A.1).",
+            answer: 'tracking poll',
+            acceptableAnswers: ['tracking poll', 'Tracking poll', 'tracking', 'tracking polls'],
+            hint: 'Often a rolling daily sample; compare with a benchmark poll at the campaign\'s start.'
           },
           {
             prompt: "1996 federal law (signed by Bill Clinton + bipartisan majorities) defining MARRIAGE federally as ONE MAN + ONE WOMAN + permitting states to refuse recognition of other states' same-sex marriages.",
@@ -317,7 +317,7 @@ CIVIC ENGAGEMENT (Putnam BOWLING ALONE 2000) declined alongside trust — fewer 
         correctAnswers: ['1964 — 77% (peak)', '1976 — 33% (Watergate aftermath)', '2001 — 60% (post-9/11 spike)'],
         hint1: '1964 PEAK — 77% trusted federal government always or most of the time; reflected post-WWII consensus + Eisenhower-Kennedy era + Civil Rights Act 1964 + Great Society programs; high faith in institutions; before Vietnam credibility gap (CIA Pentagon Papers 1971; LBJ Tonkin Resolution exaggeration revealed); subsequent decline almost continuous (with rare upticks).',
         hint2: '1976 WATERGATE AFTERMATH — 33% trusted federal government; collapsed from 77% in 1964 to 33% within 12 years; Nixon Watergate scandal 1972-74 + resignation August 1974; Vietnam War end 1975 (Saigon falls); economic stagflation 1973-75 oil shock + 1979 Iran shock; 1976 Carter elected on outsider/honest message; never recovered to mid-60s levels.',
-        hint3: '2001 POST-9/11 SPIKE — 60% briefly recovered after September 11 2001 attacks (rally-around-the-flag effect); Bush approval reached 90%+; major bipartisan legislation (PATRIOT Act, Iraq Authorization, NCLB); but quickly declined as Iraq War + WMD lies + Hurricane Katrina + financial crisis tanked trust again; 2008 trust at 17% during financial crisis; never returned to post-9/11 levels; sustained 16-22% range since 2008.'
+        hint3: '2001 POST-9/11 SPIKE — 60% briefly recovered after September 11 2001 attacks (rally-around-the-flag effect); Bush approval reached 90%+; major bipartisan legislation (PATRIOT Act, Iraq Authorization, NCLB); but quickly declined as Iraq War + WMD lies + Hurricane Katrina + financial crisis tanked trust again; 2008 trust at 17% during financial crisis; never returned to post-9/11 levels; mostly ~15-25% range since 2008.'
       }
     },
     {
@@ -335,7 +335,7 @@ CIVIC ENGAGEMENT (Putnam BOWLING ALONE 2000) declined alongside trust — fewer 
               "Polls overestimated Trump in 2016 and 2020, so pollsters reduced the weight given to rural and non-college voters in their 2024 samples.",
             ],
             correctAnswer: 0,
-            explanation: 'POLLS UNDERESTIMATED TRUMP 2016 + 2020 + REFORMS BY 2024: (1) 2016 — National polls Clinton +3 (actual +2.1 within MOE); Rust Belt state polls all called for Clinton (MI/PA/WI Trump won by ~1 pt); 538 gave Trump 28.6% (most 1-15%); Trump 304-227. (2) 2020 — National polls Biden +8 (actual +4.5 outside MOE); state polls underestimated Trump in FL + IA + OH + TX + NC; Biden 306-232. (3) CAUSES — (a) NON-RESPONSE BIAS — Trump voters less likely to participate (distrust media/establishment); (b) EDUCATION WEIGHTING — historically didn\'t weight by education; non-college Whites underrepresented; (c) "SHY TRUMP VOTER" — social desirability (controversial); (d) COVID 2020 — Trump voters less home; (e) STATE POLLING CUTS + reliance on lower-quality online opt-in; (f) HOUSE EFFECTS visible; (g) LIKELY VOTER MODELS imperfect for unprecedented turnout. (4) REFORMS BY 2024 — (a) cellphone/mobile inclusion improved; ABS + online; (b) WEIGHTING BY EDUCATION — most pollsters now weight White non-college; (c) RECALL VOTE WEIGHTING — by reported 2020 vote (controversial); (d) VOTER FILE CALIBRATION — NGP VAN + i360 + Catalist; (e) MULTI-MODE — phone + online + text + ABS; (f) METHODOLOGICAL TRANSPARENCY — Pew + NYT/Siena + ABC/WaPo; (g) PROBABILISTIC MODELS — Silver Bulletin + NYT Upshot + Economist + 538 (before closure). (5) 2024 IMPROVED — close race within MOE; TRAFALGAR + INSIDER ADVANTAGE Trump-friendly more accurate; POLYMARKET + KALSHI showed Trump favored 75%+ election day; Trump +1.5% popular + 312-226 EC. (6) REMAINING CHALLENGES — declining response rates; demographic representation (Hispanic + Asian + young + rural + non-college); partisan hostility toward pollsters; AI-enabled polling tools; pollster consolidation; "shy voter" phenomenon risk; prediction markets serious competitors (manipulation risk).'
+            explanation: 'POLLS UNDERESTIMATED TRUMP 2016 + 2020 + REFORMS BY 2024: (1) 2016 — National polls Clinton +3 (actual +2.1 within MOE); Rust Belt state polls all called for Clinton (MI/PA/WI Trump won by ~1 pt); 538 gave Trump 28.6% (most 1-15%); Trump 304-227. (2) 2020 — National polls Biden +8 (actual +4.5 outside MOE); state polls underestimated Trump in FL + IA + OH + TX + NC; Biden 306-232. (3) CAUSES — (a) NON-RESPONSE BIAS — Trump voters less likely to participate (distrust media/establishment); (b) EDUCATION WEIGHTING — historically didn\'t weight by education; non-college Whites underrepresented; (c) "SHY TRUMP VOTER" — social desirability (controversial); (d) COVID 2020 — Trump voters less home; (e) STATE POLLING CUTS + reliance on lower-quality online opt-in; (f) HOUSE EFFECTS visible; (g) LIKELY VOTER MODELS imperfect for unprecedented turnout. (4) REFORMS BY 2024 — (a) cellphone/mobile inclusion improved; ABS + online; (b) WEIGHTING BY EDUCATION — most pollsters now weight White non-college; (c) RECALL VOTE WEIGHTING — by reported 2020 vote (controversial); (d) VOTER FILE CALIBRATION — NGP VAN + i360 + Catalist; (e) MULTI-MODE — phone + online + text + ABS; (f) METHODOLOGICAL TRANSPARENCY — Pew + NYT/Siena + ABC/WaPo; (g) PROBABILISTIC MODELS — Silver Bulletin + NYT Upshot + Economist + 538 (before closure). (5) 2024 IMPROVED — close race within MOE; TRAFALGAR + INSIDER ADVANTAGE Trump-friendly more accurate; POLYMARKET + KALSHI showed Trump favored ~55-62% election day; Trump +1.5% popular + 312-226 EC. (6) REMAINING CHALLENGES — declining response rates; demographic representation (Hispanic + Asian + young + rural + non-college); partisan hostility toward pollsters; AI-enabled polling tools; pollster consolidation; "shy voter" phenomenon risk; prediction markets serious competitors (manipulation risk).'
           }
         ]
       }

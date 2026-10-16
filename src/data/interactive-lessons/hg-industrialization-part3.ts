@@ -95,20 +95,16 @@ German economist **Alfred Weber (1909)** asked where a factory should locate to 
 3. Labor is available only at certain places, at fixed wages.
 4. The firm sells everything it makes, so it only has to **minimize costs**.
 
-### The Location Triangle and the Material Index
-Weber drew a **locational triangle**: two raw material sources and one market. The best site is the point where the weighted pulls of the three corners balance.
+### Weight-Losing and Weight-Gaining Industries
+Compare the weight of the inputs with the weight of the finished product. Whichever is heavier is the costlier thing to ship, so it pulls the factory toward itself.
 
-The **material index** tells you which corner pulls hardest:
-
-$$\\text{Material index} = \\frac{\\text{weight of localized raw materials}}{\\text{weight of finished product}}$$
-
-| Material index | Type of industry | Locate near | Example |
+| The finished product is... | Type of industry | Locate near | Example |
 |---|---|---|---|
-| Greater than 1 | **Weight-losing** (bulk-reducing) | Raw materials | Copper smelting, sugar milling, sawmills |
-| Less than 1 | **Weight-gaining** (bulk-gaining) | The market | Soft-drink bottling, brewing, concrete |
-| About 1 | Neither | Anywhere along the route | Assembly of light parts |
+| Much lighter than its raw materials | **Weight-losing** (bulk-reducing) | Raw materials | Copper smelting, sugar milling, sawmills |
+| Heavier or bulkier than its shipped inputs | **Weight-gaining** (bulk-gaining) | The market | Soft-drink bottling, brewing, concrete |
+| About the same weight | Neither | Anywhere along the route | Assembly of light parts |
 
-A **localized** material is found in only some places, such as iron ore. A **ubiquitous** material, such as water in most regions, is available everywhere, so it adds weight to the product without pulling the factory toward any source. That is why adding water makes bottling weight-gaining.
+Water, available almost everywhere, adds weight to soft drinks and concrete without pulling the factory toward any one source. That is why bottling is weight-gaining and locates near its markets.
 `
     },
     {
@@ -125,14 +121,14 @@ A mine and a market are **200 km** apart on a straight railway. Shipping costs *
 | Halfway (100 km) | 5 tonnes of ore × 100 km + 1 tonne of metal × 100 km | 500 + 100 = **\\$600** |
 | At the market | 5 tonnes of ore × 200 km | **\\$1,000** |
 
-**Result:** the material index is 5 ÷ 1 = 5, so the smelter belongs at the mine, where it ships only the light product.
+**Result:** smelting is weight-losing (5 tonnes in, 1 tonne out), so the smelter belongs at the mine, where it ships only the light product.
 
 ### Now Reverse It: A Bottling Plant
 A bottler mixes **1 tonne of syrup** with **9 tonnes of local water** to make **10 tonnes of soda**. The syrup plant is 200 km from the market.
 - Bottle at the syrup plant: ship 10 tonnes × 200 km = **\\$2,000**.
 - Bottle at the market: ship 1 tonne of syrup × 200 km = **\\$200**.
 
-Water is ubiquitous, so only the syrup counts as localized: the material index is 1 ÷ 10 = 0.1, and the plant belongs at the market. That is why soda is bottled in many regional plants rather than one central factory.
+Water is available at the market, so only the syrup has to travel: bottling is weight-gaining, and the plant belongs at the market. That is why soda is bottled in many regional plants rather than one central factory.
 `
     },
     {
@@ -143,7 +139,7 @@ Water is ubiquitous, so only the syrup counts as localized: the material index i
 
 A sawmill turns **4 tonnes of logs** into **1 tonne of lumber**. The forest and the market are **150 km** apart, and shipping costs **\\$2 per tonne per km**.
 
-**1)** What is the material index?
+**1)** How many tonnes of logs go into each tonne of lumber?
 
 **2)** What is the transport cost, in dollars, per tonne of lumber if the mill is built at the forest?
 
@@ -152,10 +148,10 @@ A sawmill turns **4 tonnes of logs** into **1 tonne of lumber**. The forest and 
       exercise: {
         boxes: 3,
         correctAnswers: ['4', '300', '1200'],
-        hint1: 'Divide the weight of the raw material by the weight of the product.',
+        hint1: 'Read it from the description of the sawmill.',
         hint2: 'At the forest you ship only the 1 tonne of lumber: 1 × 150 × 2.',
         hint3: 'At the market you ship all 4 tonnes of logs: 4 × 150 × 2.',
-        explanation: '1) 4 ÷ 1 = 4, so sawmilling is weight-losing. 2) 1 × 150 × \\$2 = \\$300. 3) 4 × 150 × \\$2 = \\$1,200. Building at the forest saves \\$900 per tonne, as Weber predicts for a weight-losing industry.'
+        explanation: '1) 4 tonnes of logs make 1 tonne of lumber, so sawmilling is weight-losing. 2) 1 × 150 × \\$2 = \\$300. 3) 4 × 150 × \\$2 = \\$1,200. Building at the forest saves \\$900 per tonne, as Weber predicts for a weight-losing industry.'
       }
     },
     {
@@ -165,7 +161,7 @@ A sawmill turns **4 tonnes of logs** into **1 tonne of lumber**. The forest and 
 ## Labor, Agglomeration and Break-of-Bulk Points
 
 ### Labor Can Outweigh Transport
-Weber argued a firm will leave its cheapest transport site **only if labor savings exceed the extra transport cost**. Suppose a garment maker's least-transport site is near its market, but a site 1,000 km away adds **\\$3** of transport cost per shirt and saves **\\$5** in wages per shirt. The firm moves, because it gains \\$2 per shirt. Weber mapped this with **isodapanes**, lines of equal extra transport cost around the least-cost point. Labor-intensive, light products such as clothing and electronics assembly cross those lines easily, which is why they moved to lower-wage countries.
+Weber argued a firm will leave its cheapest transport site **only if labor savings exceed the extra transport cost**. Suppose a garment maker's least-transport site is near its market, but a site 1,000 km away adds **\\$3** of transport cost per shirt and saves **\\$5** in wages per shirt. The firm moves, because it gains \\$2 per shirt. Labor-intensive, light products such as clothing and electronics assembly cross those lines easily, which is why they moved to lower-wage countries.
 
 ### Agglomeration and Deglomeration
 - **Agglomeration economies:** firms clustered together share suppliers, skilled workers, infrastructure and ideas. Examples: the auto cluster around Detroit in the 1900s; software in Silicon Valley today.
@@ -257,15 +253,15 @@ A **break-of-bulk point** is a place where cargo moves from one mode of transpor
             options: ['A footloose industry', 'A weight-gaining industry', 'A break-of-bulk industry', 'A primary-sector industry']
           },
           {
-            label: 'Lines of equal extra transport cost drawn around a least-cost site are ___',
-            options: ['Isodapanes', 'Isotherms', 'Isobars', 'Isolines of income']
+            label: 'A flour mill is built where grain arrives by ship and is loaded onto trains. The deciding factor is ___',
+            options: ['A break-of-bulk point', 'Weight-gaining inputs', 'Deglomeration', 'A quinary-sector labor pool']
           }
         ],
-        correctAnswers: ['Weight-losing raw materials', 'A footloose industry', 'Isodapanes'],
+        correctAnswers: ['Weight-losing raw materials', 'A footloose industry', 'A break-of-bulk point'],
         hint1: 'Compare the weight of the cane with the weight of the sugar.',
         hint2: 'Its product weighs nothing to ship.',
-        hint3: 'Weber\'s own term for cost contours.',
-        explanation: 'Sugar milling is weight-losing, so it locates at the raw material. A software firm ships a digital product, so it is footloose. Weber called lines of equal extra transport cost isodapanes.'
+        hint3: 'Where does the cargo change transport mode?',
+        explanation: 'Sugar milling is weight-losing, so it locates at the raw material. A software firm ships a digital product, so it is footloose. A mill where cargo shifts from ship to rail sits at a break-of-bulk point.'
       }
     }
   ]

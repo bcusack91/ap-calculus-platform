@@ -72,13 +72,11 @@ export const govFederalismPart5Data = {
 | 1937-69 | Cooperative federalism / "marble cake" era | Federal \\$ + federal regulations + state implementation; Wickard v. Filburn 1942 (max Commerce Clause); Heart of Atlanta Motel 1964 (CRA valid under commerce); Civil Rights Act 1964; Voting Rights Act 1965 |
 | 1969-77 | Nixon "New Federalism" | General Revenue Sharing 1972; first major block grants |
 | 1981-89 | Reagan New Federalism | 77 categorical → 9 block grants (OBRA 1981); cuts to federal aid |
-| 1995-2018 | Modern federalism revival | Lopez 1995, Printz 1997, Morrison 2000, NFIB v. Sebelius 2012, Shelby County 2013, Murphy v. NCAA 2018 |
+| 1995-2012 | Modern federalism revival | Lopez 1995 (required), Morrison 2000 (CED illustrative), NFIB v. Sebelius 2012 |
 | 1996 | TANF welfare reform | Major devolution: AFDC entitlement → TANF block grant |
 | 2001-15 | NCLB / ESSA | Federal mandate-and-condition era in education |
 | 2010 | Affordable Care Act | Major federal expansion via spending power AND Medicaid expansion |
 | 2012 | NFIB v. Sebelius | ACA mandate as tax (federal authority) + Medicaid expansion coercive (state authority) |
-| 2013 | Shelby County v. Holder | VRA § 4 preclearance formula struck (state authority) |
-| 2018 | Murphy v. NCAA | Anti-commandeering applied to PASPA (state authority) |
 | 2020-22 | COVID-19 pandemic | State variation in pandemic response; federal CARES + ARPA $; federalism stress-tested |
 | 2022 | Dobbs v. Jackson Women\'s Health | Abortion regulation returned to states; major devolution of contested constitutional question |
       `
@@ -109,7 +107,7 @@ export const govFederalismPart5Data = {
               "Centralized at the founding, then decentralized by the 14th Amendment, then fixed in place by the Supreme Court's 1937 rulings, with no shifts since"
             ],
             correctAnswer: 0,
-            explanation: 'Federalism trajectory 1789-2022: 1789-1865 contested (nullification 1798-99 + 1828-33; Dred Scott 1857 → Civil War 1861-65). 1865-1937: 14th Amendment bounds states by federal civil-rights guarantees BUT Reconstruction\'s collapse → Jim Crow state-authority dominance. 1937-present: Commerce + Spending dramatic expansion (cooperative + Great Society) + modern revival 1995-present (Lopez/Printz/NFIB/Shelby/Murphy) + Dobbs 2022 abortion to states. Net: federal expansion 1865-1937, dramatic 1937-95, partial state-authority revival 1995-present.'
+            explanation: 'Federalism trajectory 1789-2022: 1789-1865 contested (nullification 1798-99 + 1828-33; Dred Scott 1857 → Civil War 1861-65). 1865-1937: 14th Amendment bounds states by federal civil-rights guarantees BUT Reconstruction\'s collapse → Jim Crow state-authority dominance. 1937-present: Commerce + Spending dramatic expansion (cooperative + Great Society) + modern revival 1995-present (Lopez/Morrison/NFIB) + Dobbs 2022 abortion to states. Net: federal expansion 1865-1937, dramatic 1937-95, partial state-authority revival 1995-present.'
           }
         ]
       }
@@ -121,10 +119,10 @@ export const govFederalismPart5Data = {
       exercise: {
         questions: [
           {
-            prompt: "Year of the South Carolina Nullification Crisis when Calhoun deployed states\'-rights doctrine against federal tariffs and Jackson\'s Force Bill ended the crisis: 1828–___.",
-            answer: '1833',
-            acceptableAnswers: ['1833', '33'],
-            hint: 'Same year as the Compromise Tariff that politically resolved the crisis.'
+            prompt: "Year Shays\' Rebellion began in western Massachusetts, exposing the Articles of Confederation\'s lack of centralized military power: ___.",
+            answer: '1786',
+            acceptableAnswers: ['1786'],
+            hint: 'EK 1.4.A.1.i — the year before the Philadelphia Convention.'
           },
           {
             prompt: "Year of the Supreme Court\'s 'switch in time that saved nine' — END of dual federalism era; West Coast Hotel v. Parrish (state minimum wage upheld) + NLRB v. Jones & Laughlin Steel (federal labor regulation upheld under expanded commerce clause): ___.",
@@ -133,10 +131,10 @@ export const govFederalismPart5Data = {
             hint: 'Same year as FDR\'s court-packing proposal that the "switch" defused.'
           },
           {
-            prompt: "Year of NFIB v. Sebelius — ACA individual mandate upheld as TAX but Medicaid expansion struck as unconstitutionally COERCIVE: ___.",
+            prompt: "Year Colorado and Washington legalized recreational marijuana in defiance of federal law (a CED illustrative example of federalism tension): ___.",
             answer: '2012',
             acceptableAnswers: ['2012'],
-            hint: 'Same year as Obama re-election; Roberts 5-4 opinion.'
+            hint: 'Same year as Obama re-election.'
           }
         ]
       }
@@ -187,13 +185,13 @@ export const govFederalismPart5Data = {
           {
             question: "AP scenario: A scholar argues that Dobbs v. Jackson Women\'s Health (2022) represents the most significant federalism event of the early 21st century. Which evaluation is best supported by evidence?",
             options: [
-              "Plausible but contestable, since Dobbs returned abortion policy to the states, yet rulings such as NFIB v. Sebelius and Shelby County also reshaped federalism",
+              "Plausible but contestable, since Dobbs returned abortion policy to the states, yet NFIB v. Sebelius and the COVID-19 response also reshaped federalism",
               "Strongly supported, since Dobbs made abortion a federal statutory matter and ended state authority over health regulation",
               "Unsupported, since Dobbs affirmed Roe v. Wade and left the federal constitutional rule on abortion unchanged for every state in the nation",
               "Strongly supported, since Dobbs was the only Supreme Court ruling affecting state power between 2000 and 2022, and it applied the commerce power to medical care"
             ],
             correctAnswer: 0,
-            explanation: 'Dobbs (2022) thesis plausible but contestable: returned abortion from Roe/Casey federal rule to state legislative/constitutional authority → ~14 near-total bans + ~22 explicit protections + interstate travel + medication-abortion disputes + state constitutional campaigns. Competing candidates: Shelby County 2013 (VRA preclearance + state-by-state election administration); continued administrative-state growth; COVID-19 pandemic federalism stress-test 2020-22. Dobbs plausibly most contested but "most significant" contested.'
+            explanation: 'Dobbs (2022) thesis plausible but contestable: returned abortion from Roe/Casey federal rule to state legislative/constitutional authority → ~14 near-total bans + ~22 explicit protections + interstate travel + medication-abortion disputes + state constitutional campaigns. Competing candidates: NFIB v. Sebelius 2012 (Medicaid expansion made optional); continued administrative-state growth; COVID-19 pandemic federalism stress-test 2020-22. Dobbs plausibly most contested but "most significant" contested.'
           }
         ]
       }

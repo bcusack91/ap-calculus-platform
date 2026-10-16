@@ -62,7 +62,7 @@ How does ideology OPERATE through institutions?
 - POLITICAL PARTIES — internal factional struggles + presidential nominations + congressional party discipline
 - INTEREST GROUPS — endorsements + funding + lobbying + grassroots mobilization
 - MEDIA — partisan cable, talk radio, social media echo chambers, partisan press
-- POLICYMAKING — divided government, executive orders, judicial nominations, congressional procedure (filibuster, reconciliation)
+- POLICYMAKING — divided government, executive orders, judicial nominations, congressional procedure (filibuster, cloture)
 
 ### STEP 5: Impact
 
@@ -131,7 +131,7 @@ Trump 2016 + 2024 represents the **2016 EDUCATIONAL REALIGNMENT** — one of lar
 
 **POLICYMAKING:**
 - Trump I (2017-2021): TCJA 2017, 3 SCOTUS appointments, regulatory rollbacks, Muslim ban, border wall, withdrew from Paris/TPP/Iran/WHO; failed ACA repeal (McCain July 2017); 2 impeachments (acquitted)
-- Trump II (2025+): Schedule F restoration, mass federal layoffs, broad tariffs (10-50%), immigration crackdown + deportation surge, withdrew Paris + WHO again, dismantled USAID, ended DEI in federal contracting, expanded executive control over agencies + civil service, Pete Hegseth Defense + RFK Jr. HHS + Tulsi Gabbard DNI + Doge (Musk) cost-cutting
+- Trump II (2025+): mass federal layoffs, broad tariffs (10-50%), immigration crackdown + deportation surge, withdrew Paris + WHO again, dismantled USAID, ended DEI in federal contracting, expanded executive control over agencies + civil service, Pete Hegseth Defense + RFK Jr. HHS + Tulsi Gabbard DNI + Doge (Musk) cost-cutting
 
 ### STEP 5: Impact
 
@@ -139,8 +139,8 @@ Trump 2016 + 2024 represents the **2016 EDUCATIONAL REALIGNMENT** — one of lar
 
 **LONG-TERM:**
 - DURABLE REALIGNMENT — diploma divide + minority shift toward GOP appear structural; party coalitions transformed
-- DEMOCRATIC NORM EROSION — Jan 6 2021; election denialism mainstream in GOP; political violence threats; 6-3 SCOTUS Trump v. US 2024 presidential immunity; democratic backsliding concerns (Levitsky + Ziblatt)
-- POLICY SHIFTS — judicial revolution (Dobbs, Bruen, WV v. EPA, SFFA, Trump v. US); economic nationalism + tariffs becoming bipartisan (Biden retained Trump China tariffs + added more); immigration restrictions hardening; entitlement programs increasingly partisan
+- DEMOCRATIC NORM EROSION — Jan 6 2021; election denialism mainstream in GOP; political violence threats; democratic backsliding concerns (Levitsky + Ziblatt)
+- POLICY SHIFTS — judicial appointments reshaping precedent (Dobbs, SFFA); economic nationalism + tariffs becoming bipartisan (Biden retained Trump China tariffs + added more); immigration restrictions hardening; entitlement programs increasingly partisan
 - INTERNATIONAL — US alliances + global liberal order under stress; rise of similar populist-nationalist movements (Orbán Hungary, Meloni Italy, Le Pen France, Milei Argentina, Bolsonaro Brazil, Modi India, Erdogan Turkey)
 
 ---
@@ -219,9 +219,10 @@ Tea Party continued + intensified the CONSERVATIVE RESURGENCE pattern from Goldw
 | **FEDERALIST 70** | 1788 | Hamilton | Energetic single executive necessary for energy + dispatch + responsibility + secrecy | FEDERALIST defense of strong unitary executive |
 | **FEDERALIST 78** | 1788 | Hamilton | Judicial review necessary; judiciary "least dangerous branch" with neither sword nor purse | FEDERALIST defense of independent + powerful judiciary |
 | **BRUTUS 1** | 1787 | Anti-Federalist (likely Robert Yates) | Large republic CANNOT preserve liberty; federal government will absorb states; need Bill of Rights | ANTI-FEDERALIST critique — origin of states' rights tradition + small government conservatism |
+| **THE WEALTH OF NATIONS** (core principles) | 1776 | Adam Smith | Free enterprise — pursuit of self-interest, competition, efficient allocation of resources and limited government regulation of the market (EK 4.1.A.1) | Intellectual root of free-market CONSERVATIVE and LIBERTARIAN economic positions (EK 4.9.A.1) |
 | **LETTER FROM BIRMINGHAM JAIL** | 1963 | Martin Luther King Jr. | Defense of NONVIOLENT DIRECT ACTION + CIVIL DISOBEDIENCE; "unjust law is no law at all"; white moderate critique; "justice too long delayed is justice denied" | LIBERAL/PROGRESSIVE tradition — civil rights as moral imperative; structural analysis of injustice; participatory democracy via direct action |
 
-> 🔑 Key takeaway: Apply 5-STEP framework: (1) IDEOLOGICAL STAKE; (2) COALITIONS (demographic + interest groups + geography); (3) HISTORICAL PRECEDENT (1932 + 1964-1980 + 2016 realignments); (4) CHANNELS (parties + interest groups + media + policymaking); (5) IMPACT (short-term electoral + long-term doctrinal/coalitional). Worked examples: Trump 2016 + 2024 = populist-nationalist realignment + diploma divide + Hispanic shift; Tea Party 2009 → MAGA 2016+ continuity. Foundational documents: Declaration 1776 (Enlightenment liberal); Constitution 1787-1788 (compromise); Federalist 10 + 51 + 70 + 78 (Federalist large republic + checks + executive + judicial review); Brutus 1 (Anti-Federalist limited gov + Bill of Rights demand); Letter from Birmingham Jail 1963 (civil rights as moral imperative + civil disobedience).
+> 🔑 Key takeaway: Apply 5-STEP framework: (1) IDEOLOGICAL STAKE; (2) COALITIONS (demographic + interest groups + geography); (3) HISTORICAL PRECEDENT (1932 + 1964-1980 + 2016 realignments); (4) CHANNELS (parties + interest groups + media + policymaking); (5) IMPACT (short-term electoral + long-term doctrinal/coalitional). Worked examples: Trump 2016 + 2024 = populist-nationalist realignment + diploma divide + Hispanic shift; Tea Party 2009 → MAGA 2016+ continuity. Foundational documents: Declaration 1776 (Enlightenment liberal); Constitution 1787-1788 (compromise); Federalist 10 + 51 + 70 + 78 (Federalist large republic + checks + executive + judicial review); Brutus 1 (Anti-Federalist limited gov + Bill of Rights demand); Wealth of Nations 1776 (free enterprise); Letter from Birmingham Jail 1963 (civil rights as moral imperative + civil disobedience).
       `
     },
     {
@@ -239,7 +240,7 @@ Tea Party continued + intensified the CONSERVATIVE RESURGENCE pattern from Goldw
               "Trump's coalition matched Romney's 2012 coalition, so 2016 and 2024 produced no shift in which groups vote Republican or in party ideology.",
             ],
             correctAnswer: 0,
-            explanation: 'TRUMP 5-STEP: (1) POPULIST-NATIONALIST rejecting GOP 3 pillars — tariffs vs free trade, retained Reagan tax cuts, no entitlement reform, anti-immigration AMERICA FIRST, border wall + Muslim ban + child separation + mass deportation, religious right alliance + 3 SCOTUS + Dobbs, neo-isolationist (withdrew TPP/Paris/Iran/WHO, questioned NATO). (2) COALITIONS — White non-college 67-32; evangelicals 80%; rural 70%+; Hispanic 46% 2024 (highest since Bush 2004); Asian gains; men +13; older 60+; geographic South/Plains/Mountain West/Rust Belt PA/MI/WI/OH; anti-Trump = White college (especially women), Black 85%, young, urban, LGBTQ+, nones, coastal metros. (3) 2016 EDUCATIONAL REALIGNMENT comparable to 1932 + 1964-1980; continues Reagan Dems + Tea Party + Brexit + global populism. (4) CHANNELS — Parties: captured GOP over Bush/Rubio/Cruz, ousted Never Trumpers (Romney/Cheney/Kinzinger); INTEREST GROUPS: NRA, Heritage, Federalist Society judicial pipeline, Project 2025; MEDIA: FOX, talk radio, Newsmax, X/Musk, Joe Rogan/manosphere, Truth Social; POLICY: Trump I — TCJA, 3 SCOTUS, Muslim ban, withdrew Paris/TPP/Iran/WHO, failed ACA repeal, 2 impeachments; Trump II 2025+ — Schedule F, layoffs, 10-50% tariffs, deportation, withdrew Paris/WHO, dismantled USAID, ended DEI, Hegseth + RFK Jr + Gabbard + Doge. (5) IMPACT — short: 2016 EC only -2.9M popular; 2020 lost -7M; 2024 won +1.5% popular + 312-226 EC + unified GOP + 6-3 SCOTUS; long: durable realignment, democratic backsliding (Jan 6 + immunity + Levitsky/Ziblatt), judicial revolution (Dobbs/Bruen/WV v EPA/SFFA), economic nationalism bipartisan, global populist wave (Orbán/Meloni/Le Pen/Milei/Bolsonaro/Modi/Erdogan).'
+            explanation: 'TRUMP 5-STEP: (1) POPULIST-NATIONALIST rejecting GOP 3 pillars — tariffs vs free trade, retained Reagan tax cuts, no entitlement reform, anti-immigration AMERICA FIRST, border wall + Muslim ban + child separation + mass deportation, religious right alliance + 3 SCOTUS + Dobbs, neo-isolationist (withdrew TPP/Paris/Iran/WHO, questioned NATO). (2) COALITIONS — White non-college 67-32; evangelicals 80%; rural 70%+; Hispanic 46% 2024 (highest since Bush 2004); Asian gains; men +13; older 60+; geographic South/Plains/Mountain West/Rust Belt PA/MI/WI/OH; anti-Trump = White college (especially women), Black 85%, young, urban, LGBTQ+, nones, coastal metros. (3) 2016 EDUCATIONAL REALIGNMENT comparable to 1932 + 1964-1980; continues Reagan Dems + Tea Party + Brexit + global populism. (4) CHANNELS — Parties: captured GOP over Bush/Rubio/Cruz, ousted Never Trumpers (Romney/Cheney/Kinzinger); INTEREST GROUPS: NRA, Heritage, Federalist Society judicial pipeline, Project 2025; MEDIA: FOX, talk radio, Newsmax, X/Musk, Joe Rogan/manosphere, Truth Social; POLICY: Trump I — TCJA, 3 SCOTUS, Muslim ban, withdrew Paris/TPP/Iran/WHO, failed ACA repeal, 2 impeachments; Trump II 2025+ — layoffs, 10-50% tariffs, deportation, withdrew Paris/WHO, dismantled USAID, ended DEI, Hegseth + RFK Jr + Gabbard + Doge. (5) IMPACT — short: 2016 EC only -2.9M popular; 2020 lost -7M; 2024 won +1.5% popular + 312-226 EC + unified GOP + 6-3 SCOTUS; long: durable realignment, democratic backsliding (Jan 6 + Levitsky/Ziblatt), judicial appointments reshaping precedent (Dobbs/SFFA), economic nationalism bipartisan, global populist wave (Orbán/Meloni/Le Pen/Milei/Bolsonaro/Modi/Erdogan).'
           }
         ]
       }

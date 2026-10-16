@@ -103,7 +103,7 @@ export const govIdeologiesPart4Data = {
 | 2011-2014 | Obama (D) | Dem | Rep (Tea Party wave) | Divided; debt ceiling crises 2011 + 2013; government shutdown 2013 (16 days over ACA defunding) |
 | 2015-2016 | Obama (D) | Rep | Rep | Divided; McConnell blocked Garland nomination 2016 |
 | 2017-2018 | Trump (R) | Rep | Rep | UNIFIED — passed Tax Cuts and Jobs Act 2017; failed ACA repeal (McCain thumbs down July 2017) |
-| 2019-2020 | Trump (R) | Rep | Dem (2018 blue wave) | Divided; impeachments 2019 + 2021; CARES Act 2020 bipartisan; Trump judicial nominees (incl. Barrett 2020, 52-48) confirmed by simple Senate majorities after the 2017 nuclear option (reconciliation applies to budget bills, not nominations) |
+| 2019-2020 | Trump (R) | Rep | Dem (2018 blue wave) | Divided; impeachments 2019 + 2021; CARES Act 2020 bipartisan; Trump judicial nominees (incl. Barrett 2020, 52-48) confirmed by the Republican Senate |
 | 2021-2022 | Biden (D) | Dem 50/50* (Harris breaks ties) | Dem | UNIFIED narrowly — passed ARP 2021, Bipartisan Infrastructure 2021, CHIPS 2022, Inflation Reduction Act 2022, Respect for Marriage Act 2022 |
 | 2023-2024 | Biden (D) | Dem | Rep | Divided; multiple speaker votes (15 ballots McCarthy Jan 2023; ousted Oct 2023; Mike Johnson elected); debt ceiling deal June 2023; minimal legislation |
 | 2025+ | Trump (R) | Rep | Rep (narrow) | Unified — focus on border, tax cut extension, Project 2025 implementation |
@@ -114,7 +114,7 @@ When Congress is gridlocked or hostile, Presidents use **EXECUTIVE ORDERS** + me
 - OBAMA — DACA 2012, Clean Power Plan 2015, transgender military service, Title IX guidance, immigration enforcement priorities
 - TRUMP I — Muslim ban 2017, withdrew from Paris Accord + TPP + Iran deal, repealed Obama EOs, regulatory rollbacks
 - BIDEN — rejoined Paris + WHO + Iran (failed) + JCPOA, reversed Trump EOs day 1, student debt forgiveness (struck Biden v. Nebraska 2023), Title IX expansion
-- TRUMP II 2025+ — restored Schedule F, mass federal layoffs, immigration crackdown, tariffs, withdrew Paris + WHO again
+- TRUMP II 2025+ — mass federal layoffs, immigration crackdown, tariffs, withdrew Paris + WHO again
 
 ### Judicial Nominations Escalation
 
@@ -122,15 +122,14 @@ When Congress is gridlocked or hostile, Presidents use **EXECUTIVE ORDERS** + me
 |---|---|
 | 1987 | Robert Bork rejected 42-58; "Borking" of nominees begins; Reagan eventually appoints Anthony Kennedy |
 | 1991 | Clarence Thomas confirmed 52-48 after Anita Hill testimony |
-| 2013 | "Nuclear option" — Reid eliminated filibuster for non-SCOTUS executive nominees + judges; enabled Obama D.C. Circuit appointees |
 | 2016 | McConnell refuses Merrick Garland hearing for 269 days after Scalia death; "Biden Rule" cited; unprecedented blockade |
-| 2017 | "Nuclear option" extended — McConnell eliminated filibuster for SCOTUS; Gorsuch confirmed 54-45 |
+| 2017 | Neil Gorsuch confirmed 54-45 to the seat left open after the Garland blockade |
 | 2018 | Brett Kavanaugh confirmed 50-48 after Christine Blasey Ford testimony |
 | 2020 | Amy Coney Barrett confirmed 52-48 just 8 days before election; reversed McConnell's 2016 Garland reasoning |
 | 2022 | Ketanji Brown Jackson confirmed 53-47 (1st Black woman Justice) — Republicans Collins, Murkowski, Romney joined Dems |
 | 2025+ | Trump expected to fill any vacancies with Federalist Society pipeline conservatives |
 
-> 🔑 Key takeaway: Ideology drives American politics through major channels: (1) PARTIES — Democratic coalition (Black + Latino + Asian + LGBTQ+ + young + secular + college-educated White + labor) split establishment vs progressive; Republican coalition (White non-college + religious + rural + older + Hispanic + Asian gains) split traditional vs MAGA vs religious right vs libertarian; INSURGENCIES (Tea Party 2009, MAGA 2015+, Squad 2018+) reshape parties; (2) INTEREST GROUPS — right (NRA, Heritage, Federalist Society, Chamber, Christian Coalition); left (ACLU, Sierra Club, NAACP, NOW, AFL-CIO, CAP); (3) MEDIA — partisan cable (FOX, MSNBC), talk radio (mostly conservative), social media echo chambers, decline of local newspapers + centrist news; (4) POLICYMAKING — GRIDLOCK from divided government; UNIFIED government brief (2009-2010 Obama, 2017-2018 Trump, 2021-2022 Biden); EXECUTIVE ORDERS workaround; JUDICIAL NOMINATIONS ESCALATION (Bork 1987 → nuclear option 2013 + 2017 → Garland blocked 2016 → Kavanaugh 2018 → Barrett 2020 → KBJ 2022).
+> 🔑 Key takeaway: Ideology drives American politics through major channels: (1) PARTIES — Democratic coalition (Black + Latino + Asian + LGBTQ+ + young + secular + college-educated White + labor) split establishment vs progressive; Republican coalition (White non-college + religious + rural + older + Hispanic + Asian gains) split traditional vs MAGA vs religious right vs libertarian; INSURGENCIES (Tea Party 2009, MAGA 2015+, Squad 2018+) reshape parties; (2) INTEREST GROUPS — right (NRA, Heritage, Federalist Society, Chamber, Christian Coalition); left (ACLU, Sierra Club, NAACP, NOW, AFL-CIO, CAP); (3) MEDIA — partisan cable (FOX, MSNBC), talk radio (mostly conservative), social media echo chambers, decline of local newspapers + centrist news; (4) POLICYMAKING — GRIDLOCK from divided government; UNIFIED government brief (2009-2010 Obama, 2017-2018 Trump, 2021-2022 Biden); EXECUTIVE ORDERS workaround; JUDICIAL NOMINATIONS ESCALATION (Bork 1987 → Garland blocked 2016 → Kavanaugh 2018 → Barrett 2020 → KBJ 2022).
       `
     },
     {
@@ -148,7 +147,7 @@ When Congress is gridlocked or hostile, Presidents use **EXECUTIVE ORDERS** + me
               "The Federalist Society trains only conservative state judges, and the confirmations of Kavanaugh, Barrett and Jackson were decided by the House.",
             ],
             correctAnswer: 0,
-            explanation: 'FEDERALIST SOCIETY (founded 1982) trains + screens conservative judicial nominees for Republican administrations; Leonard Leo key adviser; ALL current Republican Justices (Roberts, Thomas, Alito, Gorsuch, Kavanaugh, Barrett) have ties; liberal counterpart American Constitution Society (2001) less institutionally powerful. ESCALATION: BORK 1987 rejected 42-58; Ted Kennedy speech; Kennedy nominated → Lawrence + Obergefell. THOMAS 1991 — Anita Hill 52-48. NUCLEAR OPTION 2013 — Reid for non-SCOTUS. GARLAND 2016 — McConnell 269-day blockade citing "Biden Rule"; Gorsuch nominated. NUCLEAR EXTENDED 2017 — Gorsuch 54-45. KAVANAUGH 2018 — Ford testimony 50-48. BARRETT 2020 — REVERSED Garland reasoning, 8 days before election, 52-48; cemented 6-3. KBJ 2022 — first Black woman 53-47. 6-3 IMPACT — Dobbs, Bruen, WV v. EPA, SFFA, Trump v. US 2024 immunity.'
+            explanation: 'FEDERALIST SOCIETY (founded 1982) trains + screens conservative judicial nominees for Republican administrations; Leonard Leo key adviser; ALL current Republican Justices (Roberts, Thomas, Alito, Gorsuch, Kavanaugh, Barrett) have ties; liberal counterpart American Constitution Society (2001) less institutionally powerful. ESCALATION: BORK 1987 rejected 42-58; Ted Kennedy speech; Kennedy nominated → Lawrence + Obergefell. THOMAS 1991 — Anita Hill 52-48. GARLAND 2016 — McConnell 269-day blockade citing "Biden Rule"; Gorsuch nominated. GORSUCH 2017 — 54-45. KAVANAUGH 2018 — Ford testimony 50-48. BARRETT 2020 — REVERSED Garland reasoning, 8 days before election, 52-48; cemented 6-3. KBJ 2022 — first Black woman 53-47. 6-3 IMPACT — e.g., Dobbs 2022 overruled Roe (EK 2.9.A.2).'
           }
         ]
       }
@@ -160,10 +159,10 @@ When Congress is gridlocked or hostile, Presidents use **EXECUTIVE ORDERS** + me
       exercise: {
         questions: [
           {
-            prompt: "Conservative legal organization founded 1982 that trains + screens judicial nominees for Republican administrations — every current Republican-appointed SCOTUS Justice has ties to it.",
-            answer: 'Federalist Society',
-            acceptableAnswers: ['Federalist Society', 'federalist society', 'The Federalist Society'],
-            hint: 'Leonard Leo longtime co-chair + key Bush 43 + Trump adviser; liberal counterpart American Constitution Society (founded 2001) less institutionally powerful; produced Roberts, Thomas, Alito, Gorsuch, Kavanaugh, Barrett.'
+            prompt: "Term for when one party controls the presidency and the other party controls at least one chamber of Congress (EK 2.3.A.3).",
+            answer: 'divided government',
+            acceptableAnswers: ['divided government', 'Divided government', 'Divided Government', 'divided'],
+            hint: 'It can lead to more intense partisanship and to votes against a president\'s initiatives and appointments.'
           },
           {
             prompt: "Right-wing populist + anti-Obama Republican movement that emerged 2009 protesting ACA, TARP, and ARRA stimulus — produced Freedom Caucus + ousted Boehner 2015 + absorbed into MAGA by 2016.",
@@ -172,10 +171,10 @@ When Congress is gridlocked or hostile, Presidents use **EXECUTIVE ORDERS** + me
             hint: 'Took House 2010 (60-seat GOP gain — largest midterm shift since 1948); fiscal conservative + anti-government; later evolved into populist-nationalist MAGA.'
           },
           {
-            prompt: "Year of the McConnell blockade of Merrick Garland's SCOTUS nomination after Justice Scalia's death — 269-day refusal to hold hearings citing the (made-up) 'Biden Rule'.",
-            answer: '2016',
-            acceptableAnswers: ['2016'],
-            hint: 'Scalia died Feb 13 2016; Obama nominated Garland March 16; McConnell within hours refused; Trump took office Jan 2017 + nominated Gorsuch; reversed reasoning when Barrett confirmed 8 days before Nov 2020 election.'
+            prompt: "Presidential power that Senate confirmation checks — at stake in the Bork, Garland, Kavanaugh and Barrett fights (EK 2.5.A.1): the ___ power.",
+            answer: 'appointment',
+            acceptableAnswers: ['appointment', 'appointments', 'appointment power', 'Appointment', 'nomination', 'nominating'],
+            hint: 'The president\'s longest-lasting influence comes from life-tenured judges chosen this way (EK 2.5.A.2).'
           }
         ]
       }
@@ -220,7 +219,7 @@ When Congress is gridlocked or hostile, Presidents use **EXECUTIVE ORDERS** + me
               "Divided control has no effect on lawmaking, and executive orders require approval from two-thirds of the Senate before they take effect.",
             ],
             correctAnswer: 0,
-            explanation: 'DIVIDED GOVT + EXECUTIVE ORDERS: (1) Divided govt ~70% of years since 1968 vs UNIFIED bursts (Obama 2009-2010, Trump 2017-2018, Biden 2021-2022); (2) GRIDLOCK — shutdowns (1995-1996 Clinton-Gingrich, 2013 Obama-Boehner 16d, 2018-2019 Trump-Pelosi 35d longest); debt ceiling 2011/2013/2023; FILIBUSTER 60-vote; CRs + omnibus replace appropriations; (3) EOs workaround; (4) EXAMPLES: OBAMA — DACA 2012 (DHS v. Regents 2020), Clean Power Plan (WV v. EPA 2022), JCPOA, Cuba; TRUMP I — Muslim ban (Trump v. Hawaii 2018), withdrew Paris/TPP/Iran/WHO, child separation; BIDEN — rejoined Paris/WHO, student debt (struck Biden v. Nebraska 2023), Title IX; TRUMP II 2025+ — Schedule F restoration, federal layoffs, immigration crackdown, tariffs, dismantled USAID, ended DEI; (5) LIMITS — reversible; can\'t create statutory authority; courts (WV v. EPA major questions; NFIB v. OSHA); appropriations; (6) NORMATIVE — aggrandizement vs response to dysfunction; (7) UNITARY EXECUTIVE — strong (Trump II) vs weak; Humphrey\'s Executor 1935 → Seila Law 2020 → Collins v. Yellen 2021.'
+            explanation: 'DIVIDED GOVT + EXECUTIVE ORDERS: (1) Divided govt ~70% of years since 1968 vs UNIFIED bursts (Obama 2009-2010, Trump 2017-2018, Biden 2021-2022); (2) GRIDLOCK — shutdowns (1995-1996 Clinton-Gingrich, 2013 Obama-Boehner 16d, 2018-2019 Trump-Pelosi 35d longest); debt ceiling 2011/2013/2023; FILIBUSTER 60-vote; CRs + omnibus replace appropriations; (3) EOs workaround; (4) EXAMPLES: OBAMA — DACA 2012 (DHS v. Regents 2020), Clean Power Plan (WV v. EPA 2022), JCPOA, Cuba; TRUMP I — Muslim ban (Trump v. Hawaii 2018), withdrew Paris/TPP/Iran/WHO, child separation; BIDEN — rejoined Paris/WHO, student debt (struck Biden v. Nebraska 2023), Title IX; TRUMP II 2025+ — federal layoffs, immigration crackdown, tariffs, dismantled USAID, ended DEI; (5) LIMITS — reversible by successors; can\'t create statutory authority; courts can strike them down; Congress controls appropriations; (6) NORMATIVE — aggrandizement vs response to dysfunction.'
           }
         ]
       }

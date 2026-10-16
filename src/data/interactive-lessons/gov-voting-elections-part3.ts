@@ -19,7 +19,7 @@ export const govVotingElectionsPart3Data = {
 | Gender + race + class + age + region patterns 2020 + 2024 (gender gap + diploma divide + Latino shift + young men shift) |
 | Battleground state evolution (FL/OH/IA dropping out + AZ/GA/NV/NC emerging; PA/MI/WI/NV/AZ/GA/NC = 2024 Big 7) |
 
-> 🔑 Key idea: AMERICAN ELECTIONS show recurring PATTERNS — REALIGNING ELECTIONS (V.O. Key 1955 + Burnham 1970 critical realignment theory) historically reshape coalitions every ~30-40 years (1800 Jefferson + 1828 Jackson + 1860 Lincoln + 1896 McKinley + 1932 FDR + 1968 Nixon + ARGUABLY 2024 Trump); MODERN POLITICAL SCIENCE has critiqued realignment theory — argues GRADUAL SORTING (Levendusky 2009) + DEALIGNMENT (declining party identification + rising independents) better describe modern era. COALITION SHIFTS — NEW DEAL COALITION (1932-68: White Southerners + ethnic Catholics + Jews + urban workers + Blacks added 1936 + intellectuals); SUN BELT/REAGAN COALITION (1968-92: Sun Belt suburbs + South + evangelicals + Reagan Democrats + economic conservatives + Cold War hawks); CLINTON/OBAMA COALITION (1992-2016: minorities + young + college-educated whites + women + urban + cultural liberals); TRUMP COALITION (2016-?: working-class whites + non-college voters across races + rural + evangelicals + heartland + manosphere/young men). MODERN PATTERNS — GENDER GAP (Dems +10-15 since 1980; widened post-Dobbs); DIPLOMA DIVIDE (White college Dem + White non-college Rep — completed 2024 ~37 pt swing since 1992); LATINO SHIFT (Trump 46% 2024 historic high; Latino men ~55% Trump); YOUNG MEN SHIFT (~27 pt swing toward Trump 2020-2024 driven by manosphere podcasts); RACIAL/EDUCATION REALIGNMENT (working-class non-college + multiracial vs college + multiracial coalition). BATTLEGROUND STATES evolve — FL + OH + IA dropping from competitive (now solid Rep); AZ + GA + NC + NV emerging as competitive; 2024 BIG 7 = PA + GA + NC + AZ + NV + WI + MI; TRUMP SWEPT ALL 7 in 2024; potential new battlegrounds emerging (TX leaning competitive long-term + VA possibly competitive again).
+> 🔑 Key idea: AMERICAN ELECTIONS show recurring PATTERNS — REALIGNING ELECTIONS (V.O. Key 1955 + Burnham 1970 critical realignment theory) historically reshape coalitions every ~30-40 years (1800 Jefferson + 1828 Jackson + 1860 Lincoln + 1896 McKinley + 1932 FDR + 1968 Nixon + ARGUABLY 2024 Trump); MODERN POLITICAL SCIENCE has critiqued realignment theory — argues GRADUAL SORTING (Levendusky 2009) + DEALIGNMENT (declining party identification + rising independents) better describe modern era. COALITION SHIFTS — NEW DEAL COALITION (1932-68: White Southerners + ethnic Catholics + Jews + urban workers + Blacks added 1936 + intellectuals); SUN BELT/REAGAN COALITION (1968-92: Sun Belt suburbs + South + evangelicals + Reagan Democrats + economic conservatives + Cold War hawks); CLINTON/OBAMA COALITION (1992-2016: minorities + young + college-educated whites + women + urban + cultural liberals); TRUMP COALITION (2016-?: working-class whites + non-college voters across races + rural + evangelicals + heartland + manosphere/young men). MODERN PATTERNS — GENDER GAP (Dems +4-12 since 1980; widened post-Dobbs); DIPLOMA DIVIDE (White college Dem + White non-college Rep — completed 2024 ~30+ pt swing since 1992); LATINO SHIFT (Trump 46% 2024 historic high; Latino men ~54% Trump); YOUNG MEN SHIFT (sharp swing toward Trump 2020-2024 driven by manosphere podcasts); RACIAL/EDUCATION REALIGNMENT (working-class non-college + multiracial vs college + multiracial coalition). BATTLEGROUND STATES evolve — FL + OH + IA dropping from competitive (now solid Rep); AZ + GA + NC + NV emerging as competitive; 2024 BIG 7 = PA + GA + NC + AZ + NV + WI + MI; TRUMP SWEPT ALL 7 in 2024; potential new battlegrounds emerging (TX leaning competitive long-term + VA possibly competitive again).
       `
     },
     {
@@ -49,7 +49,7 @@ ARGUABLY YES — but realignment theorists divided.
 - TRUMP WON SWEEP of all 7 swing states (PA + GA + NC + AZ + NV + WI + MI) — most decisive Republican EC win since 1988
 - POPULAR VOTE — first GOP presidential popular vote win since 2004 Bush
 - LATINO + ASIAN + BLACK MEN SHIFT — historic GOP gains with non-white voters
-- YOUNG MEN SHIFT — ~27 pt swing toward Trump
+- YOUNG MEN SHIFT — sharp swing toward Trump
 - WORKING-CLASS MULTIRACIAL COALITION — Trump won non-college voters by ~14 pts across all races
 - TRIFECTA WIN — Senate 53-47 + House (narrow) + Trump White House
 
@@ -100,7 +100,7 @@ CLINTON 1992 + OBAMA 2008 + 2012 created DEMOCRATIC COALITION based on CULTURAL 
 - **MINORITIES** — Blacks 90%+ Dem; Hispanics ~65% Dem; Asians ~60-65% Dem (post-2000)
 - **YOUNG VOTERS** — Millennials + Gen Z lean Dem; Obama 2008 won 18-29 by ~34 pts
 - **COLLEGE-EDUCATED WHITES** — diploma divide grew; women especially shifted
-- **WOMEN** — gender gap ~10-15 pts Dem since 1980
+- **WOMEN** — gender gap ~4-12 pts Dem since 1980
 - **URBAN VOTERS** — cities + dense suburbs Dem
 - **CULTURAL LIBERALS** — pro-choice + pro-LGBT (especially after Obergefell 2015) + pro-immigration + pro-environment
 
@@ -110,12 +110,12 @@ CLINTON 1992 + OBAMA 2008 + 2012 created DEMOCRATIC COALITION based on CULTURAL 
 
 TRUMP 2016 + 2024 created REPUBLICAN COALITION based on POPULISM + ANTI-ESTABLISHMENT + MULTIRACIAL WORKING CLASS:
 
-- **WORKING-CLASS WHITES** — non-college Whites Trump 67-32 in 2024 (vs Bush 53-46 in 2004; +37 pt swing)
-- **WORKING-CLASS MINORITIES** — Latino men ~55% Trump 2024; Asian men ~50% Trump 2024; Black men ~22% Trump 2024 (record GOP performance with Black voters)
+- **WORKING-CLASS WHITES** — non-college Whites Trump 66-32 in 2024 (far wider margin than in 2004)
+- **WORKING-CLASS MINORITIES** — Latino men ~54% Trump 2024; Black men ~21% Trump 2024 (exit poll)
 - **RURAL VOTERS** — overwhelmingly Trump
 - **EVANGELICAL CHRISTIANS** — 80%+ Trump (despite Trump's personal life — transactional politics for SCOTUS justices + abortion restrictions)
 - **HEARTLAND VOTERS** — Midwest manufacturing + rural communities
-- **MANOSPHERE/YOUNG MEN** — 18-29 men Trump +14 in 2024 (vs Biden +13 in 2020 = ~27 pt swing); driven by Joe Rogan + Theo Von + Andrew Schulz + Lex Fridman + Shawn Ryan + Nelk Boys + Patrick Bet-David + Tucker Carlson + Logan Paul podcast circuit
+- **MANOSPHERE/YOUNG MEN** — 18-29 men ~even in 2024 exit polls (Trump 49-48) after favoring Biden in 2020; driven by Joe Rogan + Theo Von + Andrew Schulz + Lex Fridman + Shawn Ryan + Nelk Boys + Patrick Bet-David + Tucker Carlson + Logan Paul podcast circuit
 - **ANTI-ESTABLISHMENT** — populist resentment of "elite" institutions (media + universities + intelligence community + courts + bureaucracy)
 
 **COALITION VULNERABILITIES** — Trump-specific (does it survive without Trump?); economy + inflation issues benefited Trump 2024 but could reverse; lacks supermajority; suburban college voters gone; coalition success depends on continuing realignment of working-class minorities.
@@ -123,26 +123,26 @@ TRUMP 2016 + 2024 created REPUBLICAN COALITION based on POPULISM + ANTI-ESTABLIS
 ## Modern Voting Patterns (2024 Detail)
 
 ### Gender Gap
-- Women Harris ~+13 pts; Men Trump ~+12 pts
-- Widest in MARRIED MEN (~+25 Trump) vs SINGLE WOMEN (~+30 Harris)
+- Women Harris ~+8 pts; Men Trump ~+12 pts
+- Widest in MARRIED MEN (~+22 Trump) vs SINGLE WOMEN (~+23 Harris)
 - Widened post-Dobbs but not enough to overcome other factors
 
 ### Diploma Divide (Education)
-- White college: Harris 56-42 (~+14)
-- White non-college: Trump 67-32 (~+35)
-- 2024 ~37 pt swing among White non-college since 1992
+- White college: Harris 53-45 (~+8)
+- White non-college: Trump 66-32 (~+34)
+- 2024 ~30+ pt swing among White non-college since 1992
 - Most powerful predictor for White voters
 
 ### Race + Ethnicity
 - White: Trump ~57%; Harris ~42%
-- Black: Harris ~85%; Trump ~13% (with Black men ~22% — historic GOP)
+- Black: Harris ~86%; Trump ~13% (with Black men ~21%)
 - Hispanic: Harris ~52%; Trump ~46% (historic GOP performance)
-  - Hispanic men: ~55% Trump
-  - Hispanic women: ~60% Harris
-- Asian: Harris ~52%; Trump ~46%
+  - Hispanic men: ~54% Trump
+  - Hispanic women: ~58% Harris
+- Asian: Harris ~55%; Trump ~40%
 
 ### Age + Generation
-- 18-29: Harris ~52%; Trump ~46% (closest in decades; Biden was ~+24 in 2020)
+- 18-29: Harris ~54%; Trump ~43% (closest in decades; Biden was ~+24 in 2020)
 - 30-44: Harris ~50%; Trump ~48%
 - 45-64: Trump ~52%; Harris ~46%
 - 65+: Trump ~52%; Harris ~46%
@@ -159,11 +159,11 @@ TRUMP 2016 + 2024 created REPUBLICAN COALITION based on POPULISM + ANTI-ESTABLIS
 - \\$100K+: Mixed; college-educated white-collar leaned Harris
 
 ### Marital Status
-- Married men: Trump ~+25
+- Married men: Trump ~+22
 - Married women: Slightly Trump
-- Single men: Trump ~+5
-- Single women: Harris ~+30
-- Largest divide in modern politics
+- Single men: about even (48-48)
+- Single women: Harris ~+23
+- One of the largest divides in modern politics
 
 ## Battleground State Evolution
 
@@ -196,7 +196,7 @@ TRUMP 2016 + 2024 created REPUBLICAN COALITION based on POPULISM + ANTI-ESTABLIS
 - **VIRGINIA** — Could swing back toward competitive (recent Republican gubernatorial win Youngkin 2021)
 - **NEW HAMPSHIRE** — Already competitive in some elections
 
-> 🔑 Key takeaway: AMERICAN ELECTIONS show recurring PATTERNS — REALIGNING ELECTIONS theory (V.O. Key 1955 + Burnham 1970) holds that critical elections (1800 Jefferson + 1828 Jackson + 1860 Lincoln + 1896 McKinley + 1932 FDR + 1968 Nixon) durably reshape coalitions every ~30-40 years; MAYHEW 2002 critique + GRADUAL SORTING (Levendusky 2009; Mason 2018) + DEALIGNMENT (Wattenberg 1996) thesis modify; 2024 may be NEW REALIGNMENT (Trump swept all 7 swing states + first GOP popular vote win since 2004 + working-class multiracial coalition) but narrow margins + cyclical factors leave open. SUCCESSIVE COALITIONS — NEW DEAL (1932-68: Southerners + ethnic Catholics + Jews + urban workers + Blacks added 1936 + intellectuals; cracked by Civil Rights Acts 1964/65/68 alienating Southerners + Vietnam + 1968 chaos); SUN BELT/REAGAN (1968-92: Sun Belt suburbs + South + evangelicals + Reagan Democrats + economic conservatives + Cold War hawks; cracked by end of Cold War + Bush 41 tax pledge + Clinton); CLINTON/OBAMA (1992-2016: minorities + young + college whites + women + urban + cultural liberals; cracked by Trump 2016 blue wall break + 2024 minority shifts); TRUMP (2016-?: working-class whites + working-class minorities + rural + evangelicals + heartland + manosphere; vulnerabilities Trump-specific). 2024 PATTERNS — gender gap (women +13 Harris; men +12 Trump; widest married men vs single women); DIPLOMA DIVIDE (White college Harris 56-42; White non-college Trump 67-32; ~37 pt swing since 1992); race/ethnicity (Whites 57% Trump; Black 85% Harris with men 22% Trump; Hispanic 46% Trump historic with men 55%; Asian 46% Trump); age (18-29 Harris 52-46 closest in decades vs Biden +24 in 2020); region (Northeast + West Coast Dem; South + heartland Trump; PA/MI/WI swung); income (top + bottom Harris; middle Trump — REVERSE of historical); marital (married men +25 Trump vs single women +30 Harris). BATTLEGROUND EVOLUTION — OH/FL/IA/MO/IN dropped from competitive; AZ/GA/NV/NC emerged; 2024 BIG 7 (PA/GA/NC/MI/AZ/WI/NV) all Trump-won; TX/VA/NH potential future.
+> 🔑 Key takeaway: AMERICAN ELECTIONS show recurring PATTERNS — REALIGNING ELECTIONS theory (V.O. Key 1955 + Burnham 1970) holds that critical elections (1800 Jefferson + 1828 Jackson + 1860 Lincoln + 1896 McKinley + 1932 FDR + 1968 Nixon) durably reshape coalitions every ~30-40 years; MAYHEW 2002 critique + GRADUAL SORTING (Levendusky 2009; Mason 2018) + DEALIGNMENT (Wattenberg 1996) thesis modify; 2024 may be NEW REALIGNMENT (Trump swept all 7 swing states + first GOP popular vote win since 2004 + working-class multiracial coalition) but narrow margins + cyclical factors leave open. SUCCESSIVE COALITIONS — NEW DEAL (1932-68: Southerners + ethnic Catholics + Jews + urban workers + Blacks added 1936 + intellectuals; cracked by Civil Rights Acts 1964/65/68 alienating Southerners + Vietnam + 1968 chaos); SUN BELT/REAGAN (1968-92: Sun Belt suburbs + South + evangelicals + Reagan Democrats + economic conservatives + Cold War hawks; cracked by end of Cold War + Bush 41 tax pledge + Clinton); CLINTON/OBAMA (1992-2016: minorities + young + college whites + women + urban + cultural liberals; cracked by Trump 2016 blue wall break + 2024 minority shifts); TRUMP (2016-?: working-class whites + working-class minorities + rural + evangelicals + heartland + manosphere; vulnerabilities Trump-specific). 2024 PATTERNS — gender gap (women +8 Harris; men +12 Trump; widest married men vs single women); DIPLOMA DIVIDE (White college Harris 53-45; White non-college Trump 66-32; ~30+ pt swing since 1992); race/ethnicity (Whites 57% Trump; Black 85% Harris with men 21% Trump; Hispanic 46% Trump historic with men 54%; Asian ~40% Trump); age (18-29 Harris 54-43 closest in decades vs Biden +24 in 2020); region (Northeast + West Coast Dem; South + heartland Trump; PA/MI/WI swung); income (top + bottom Harris; middle Trump — REVERSE of historical); marital (married men +22 Trump vs single women +23 Harris). BATTLEGROUND EVOLUTION — OH/FL/IA/MO/IN dropped from competitive; AZ/GA/NV/NC emerged; 2024 BIG 7 (PA/GA/NC/MI/AZ/WI/NV) all Trump-won; TX/VA/NH potential future.
       `
     },
     {
@@ -226,10 +226,10 @@ TRUMP 2016 + 2024 created REPUBLICAN COALITION based on POPULISM + ANTI-ESTABLIS
       exercise: {
         questions: [
           {
-            prompt: "DEMOCRATIC GENDER GAP since 1980 has been ~10-15 pts; widest in 2024 between MARRIED MEN ~+25 Trump and SINGLE WOMEN ~+___ Harris.",
-            answer: '30',
-            acceptableAnswers: ['30', 'thirty', '30%', 'about 30'],
-            hint: 'SINGLE WOMEN supported Harris by ~+30 pts in 2024 (~65-35 Harris vs Trump); driven partly by Dobbs reversal of Roe + abortion rights concerns + economic insecurity for single women + LGBT rights + reproductive autonomy + cultural liberalism; MARRIED MEN supported Trump ~+25 (~62-37 Trump vs Harris); LARGEST DEMOGRAPHIC DIVIDE in modern American politics (~55 pt gap).'
+            prompt: "DEMOCRATIC GENDER GAP since 1980 has been ~4-12 pts; in 2024 exit polls MARRIED MEN went ~+22 Trump and SINGLE WOMEN ~+___ Harris.",
+            answer: '23',
+            acceptableAnswers: ['23', 'twenty-three', '23%', 'about 23'],
+            hint: 'SINGLE (unmarried) WOMEN supported Harris by ~+23 pts in 2024 (61-38 Harris vs Trump, national exit poll); driven partly by Dobbs reversal of Roe + abortion rights concerns + economic insecurity for single women + LGBT rights + reproductive autonomy + cultural liberalism; MARRIED MEN supported Trump ~+22 (60-38 Trump vs Harris); one of the LARGEST DEMOGRAPHIC DIVIDES in modern American politics (~45 pt gap in margins).'
           },
           {
             prompt: "Theory by V.O. Key Jr. (1955) that argues American politics has been periodically reshaped by ___ ELECTIONS that durably reorder coalitions.",
@@ -286,7 +286,7 @@ TRUMP 2016 + 2024 created REPUBLICAN COALITION based on POPULISM + ANTI-ESTABLIS
               "It describes the candidates' biographies, slogans and debate moments in detail but never connects them to demographic or geographic voting patterns.",
             ],
             correctAnswer: 0,
-            explanation: 'COMPREHENSIVE 2024 PATTERNS — CONTINUITY: race + religion (Black 85% Dem; evangelicals 80% Rep; Jews 70% Dem); gender gap (women +13 Dem; men +12 Rep — established 1980); urban-rural (cities Dem; rural Rep — since 1992); age turnout (65+ ~75% vs 18-29 ~47%); education trajectory (growing since 1980s); geography (Northeast+West Dem; South+heartland Rep); religion intensity. CHANGE: (1) DIPLOMA DIVIDE EXPANSION — White college Harris 56-42; White non-college Trump 67-32; ~37 pt swing since 1992; (2) LATINO REALIGNMENT — Trump 46% (men 55%); Cubans always Rep but now Mexican + PR + Dominican shifting; (3) ASIAN SHIFT — Trump ~46%; ~10-15 pt swing since 2020; (4) BLACK MEN SHIFT — Trump 22% (highest GOP since 1960); (5) YOUNG MEN SHIFT — 18-29 men Trump +14 vs Biden +13 in 2020 = ~27 pt swing via manosphere podcasts (Rogan + Von + Schulz + Fridman + Ryan + Ross + Nelk + Bet-David + Carlson + Paul); (6) INCOME PATTERN INVERSION — top + bottom Harris; middle Trump (REVERSE of historical); (7) BATTLEGROUND EVOLUTION — FL/OH/IA/MO/IN dropped (now solid Rep); AZ/GA/NV/NC emerged; Trump swept all 7 swing states; (8) WORKING-CLASS MULTIRACIAL COALITION — non-college voters across races +14 Trump; unprecedented for Republicans; suggests CLASS-EDUCATION cleavage replacing RACIAL cleavage. SYNTHESIS — 2024 = BOTH continuity AND change; critical realignment (V.O. Key 1955; Burnham 1970) vs gradual sorting (Levendusky 2009; Mason 2018) debated; EDUCATION + CULTURE replacing CLASS + RACE as primary cleavages; uncertain durability beyond Trump.'
+            explanation: 'COMPREHENSIVE 2024 PATTERNS — CONTINUITY: race + religion (Black 85% Dem; evangelicals 80% Rep; Jews ~78% Dem); gender gap (women +8 Dem; men +12 Rep — established 1980); urban-rural (cities Dem; rural Rep — since 1992); age turnout (65+ ~75% vs 18-24 under 50%, Census 2024); education trajectory (growing since 1980s); geography (Northeast+West Dem; South+heartland Rep); religion intensity. CHANGE: (1) DIPLOMA DIVIDE EXPANSION — White college Harris 53-45; White non-college Trump 66-32; ~30+ pt swing since 1992; (2) LATINO REALIGNMENT — Trump 46% (men 54%); Cubans always Rep but now Mexican + PR + Dominican shifting; (3) ASIAN SHIFT — Trump ~40%; ~10-15 pt swing since 2020; (4) BLACK MEN SHIFT — Trump 21% (exit poll); (5) YOUNG MEN SHIFT — 18-29 men ~even in exit polls (Trump 49-48) after favoring Biden in 2020, a swing credited to manosphere podcasts (Rogan + Von + Schulz + Fridman + Ryan + Ross + Nelk + Bet-David + Carlson + Paul); (6) INCOME PATTERN INVERSION — top + bottom Harris; middle Trump (REVERSE of historical); (7) BATTLEGROUND EVOLUTION — FL/OH/IA/MO/IN dropped (now solid Rep); AZ/GA/NV/NC emerged; Trump swept all 7 swing states; (8) WORKING-CLASS MULTIRACIAL COALITION — non-college voters across races +14 Trump; unprecedented for Republicans; suggests CLASS-EDUCATION cleavage replacing RACIAL cleavage. SYNTHESIS — 2024 = BOTH continuity AND change; critical realignment (V.O. Key 1955; Burnham 1970) vs gradual sorting (Levendusky 2009; Mason 2018) debated; EDUCATION + CULTURE replacing CLASS + RACE as primary cleavages; uncertain durability beyond Trump.'
           }
         ]
       }

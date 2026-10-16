@@ -47,7 +47,7 @@ export const govConstitutionalFoundationsPart5Data = {
 | Amendment | Year | Provision | Significance |
 |---|---|---|---|
 | **20th** | 1933 | Lame-duck amendment: presidential term begins Jan 20 (was March 4); congressional term begins Jan 3 | Reduced the lame-duck period that had created the 1933 banking crisis transition |
-| **21st** | 1933 | Repealed 18th (Prohibition) | Only amendment ratified by state ratifying conventions rather than state legislatures (Article V Method 1, Convention Track) |
+| **21st** | 1933 | Repealed 18th (Prohibition) | Only amendment ratified by state ratifying conventions rather than state legislatures (proposed by Congress, then ratified through Article V's state-convention route) |
 | **22nd** | 1951 | Two-term limit on the presidency | Enshrined the Washington precedent (broken by FDR\'s 4 terms 1933–45) |
 | **23rd** | 1961 | Granted DC presidential electors (3) | DC residents could vote for President for the first time |
 | **24th** | 1964 | Abolished poll tax in federal elections | One of several Civil Rights Era amendments; *Harper v. Virginia Board of Elections* (1966) extended the ban to state elections under Equal Protection |
@@ -177,7 +177,7 @@ export const govConstitutionalFoundationsPart5Data = {
               "Requiring only a simple majority of both chambers has produced frequent amendments, which keeps the courts from interpreting the text"
             ],
             correctAnswer: 0,
-            explanation: 'AP complexity: Article V extreme difficulty — 2/3 propose + 3/4 ratify; only 27 amendments in 230+ years; only 1 since 1971 → constitutional change shifts to (1) judicial reinterpretation (New Deal commerce-clause; Warren Court incorporation; Roberts Court — Citizens United, Shelby County, Dobbs); (2) thousands of failed proposals (ERA 1972-82; Balanced Budget; Flag Burning) → contemporary change is judicial not democratic-amendment.'
+            explanation: 'AP complexity: Article V extreme difficulty — 2/3 propose + 3/4 ratify; only 27 amendments in 230+ years; only 1 since 1971 → constitutional change shifts to (1) judicial reinterpretation (New Deal commerce-clause; Warren Court incorporation; Roberts Court — Citizens United, Dobbs); (2) thousands of failed proposals (ERA 1972-82; Balanced Budget; Flag Burning) → contemporary change is judicial not democratic-amendment.'
           }
         ]
       }

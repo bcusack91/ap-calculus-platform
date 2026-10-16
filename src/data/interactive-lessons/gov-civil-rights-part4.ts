@@ -33,7 +33,7 @@ export const govCivilRightsPart4Data = {
 | **Civil Rights Act of 1875** | 1875 | Prohibited private discrimination in public accommodations; STRUCK by CIVIL RIGHTS CASES 1883 (state action requirement of 14th Am) |
 | **CIVIL RIGHTS ACT 1964** | 1964 | Title II public accommodations + Title VI federal funding + Title VII employment + EEOC; LBJ; Commerce Clause basis (Heart of Atlanta + Katzenbach v. McClung 1964) |
 | **24TH AMENDMENT** | 1964 | Banned poll taxes in federal elections; Harper 1966 extended to state |
-| **VOTING RIGHTS ACT 1965** | 1965 | Section 2 nationwide + Section 5 preclearance; reauthorized 1970, 1975, 1982, 2006; gutted Shelby County 2013 |
+| **VOTING RIGHTS ACT 1965** | 1965 | Section 2 nationwide + Section 5 preclearance; reauthorized 1970, 1975, 1982, 2006 |
 | **IMMIGRATION ACT 1965** | 1965 | Repealed national origin quotas of 1924 Act; eliminated explicit racial discrimination in immigration |
 | **FAIR HOUSING ACT 1968** | 1968 | Banned housing discrimination on race, color, religion, national origin; expanded to sex 1974 + disability + familial status 1988 |
 | **TITLE IX** | 1972 | Sex discrimination in federally funded education; transformed women's athletics |
@@ -73,11 +73,11 @@ export const govCivilRightsPart4Data = {
 | **Reconstruction (1865-1877)** | Federal occupation of South enforced 13th + 14th + 15th Amendments + civil rights statutes; Hayes-Tilden Compromise of 1877 ended Reconstruction; federal troops withdrew |
 | **Jim Crow (1877-1954)** | Southern states enacted comprehensive segregation + disenfranchisement laws (literacy tests, poll taxes, grandfather clauses, white primaries, residency requirements); Plessy v. Ferguson 1896 gave constitutional cover; federal acquiescence |
 | **Massive Resistance (1954-1968)** | Southern states resisted Brown v. Board — Southern Manifesto 1956 (101 Congressional signatories); George Wallace "Stand in the Schoolhouse Door" 1963; Prince Edward County VA closed all public schools 1959-1964; required federal intervention (Eisenhower Little Rock 1957; Kennedy James Meredith Ole Miss 1962; LBJ + civil rights statutes); BROWN II 1955 "with all deliberate speed" allowed delay |
-| **Voting Rights Restoration (1965+)** | VRA 1965 Section 5 preclearance forced federal review of state voting changes; gutted Shelby County 2013 leading to renewed state-level voter ID + polling place changes + redistricting + post-Shelby litigation |
+| **Voting Rights Restoration (1965+)** | VRA 1965 Section 5 preclearance forced federal review of state voting changes in covered jurisdictions; states still set many election rules (voter ID, polling hours, early voting) that affect turnout (EK 5.2.A.2) |
 | **State RFRAs (1993+)** | Religious Freedom Restoration Act 1993 federal version + state versions (~30 states); allow religious exemptions from civil rights laws in some cases (Hobby Lobby 2014, Masterpiece 2018, 303 Creative 2023) |
-| **State Voting Laws (post-Shelby)** | TX, NC, GA, AL, FL etc. enacted voter ID + polling place reductions + signature matching + reduced early voting after Shelby County 2013; counter-mobilization in some states with automatic voter registration + same-day registration + mail-in voting expansion |
+| **State Voting Laws** | TX, NC, GA, AL, FL etc. enacted voter ID + polling place reductions + signature matching + reduced early voting; counter-mobilization in some states with automatic voter registration + same-day registration + mail-in voting expansion |
 | **State Abortion Laws (post-Dobbs)** | After Dobbs 2022 returned abortion to states, ~13 states banned/severely restricted; ~6+ states (CA, MI, OH, KY, KS) enacted state constitutional protections via ballot initiatives; CIVIL RIGHTS dimension because impact on women's equality + bodily autonomy |
-| **Sanctuary Cities (immigration)** | State + local governments resist cooperation with federal immigration enforcement (LA, NYC, Chicago, SF, etc.); upheld in part Murphy v. NCAA 2018 anti-commandeering doctrine |
+| **Sanctuary Cities (immigration)** | State + local governments decline to cooperate with federal immigration enforcement (LA, NYC, Chicago, SF, etc.) |
 
 ## Civil Rights × Interest Groups + Social Movements
 
@@ -111,7 +111,7 @@ export const govCivilRightsPart4Data = {
 | **Black Lives Matter** | 2013-present | Founded after George Zimmerman acquittal in Trayvon Martin killing; mass mobilization after George Floyd murder May 25 2020; criminal justice + policing focus |
 | **Me Too Movement** | 2017+ (Tarana Burke 2006) | Sexual harassment + assault accountability |
 
-> 🔑 Key takeaway: Civil rights = INTERACTING institutions: CONGRESS (CRA 1866 + 1875 + 1964 + 1991 + 24th Am 1964 + VRA 1965 + Immigration Act 1965 + FHA 1968 + Title IX 1972 + Rehab Act 1973 + IDEA 1975 + ADA 1990 + ADA Amendments 2008 + Lilly Ledbetter 2009 + Hate Crimes 2009 + Respect for Marriage 2022); PRESIDENT (Lincoln Emancipation 1863, FDR EO 8802 1941, TRUMAN EO 9981 1948 desegregating military, Eisenhower 101st Airborne 1957, Kennedy EO 10925 1961 affirmative action, LBJ CRA + VRA + EO 11246 1965, Obama DACA 2012, Biden LGBTQ+ EOs); FEDERALISM (Reconstruction → Jim Crow → Massive Resistance to Brown → VRA preclearance → Shelby County 2013 + state voting laws → state RFRAs → state abortion laws post-Dobbs → sanctuary cities); INTEREST GROUPS (NAACP 1909 + LDF 1940 + ACLU 1920 + NOW 1966 + HRC 1980 + GLAAD 1985 + Lambda Legal 1973 + DREDF 1979); SOCIAL MOVEMENTS (Abolitionist → Women's Suffrage → CRM 1954-1968 → Black Power → Chicano → AIM → Disability Rights → LGBTQ+ → BLM 2013+ → MeToo 2017+).
+> 🔑 Key takeaway: Civil rights = INTERACTING institutions: CONGRESS (CRA 1866 + 1875 + 1964 + 1991 + 24th Am 1964 + VRA 1965 + Immigration Act 1965 + FHA 1968 + Title IX 1972 + Rehab Act 1973 + IDEA 1975 + ADA 1990 + ADA Amendments 2008 + Lilly Ledbetter 2009 + Hate Crimes 2009 + Respect for Marriage 2022); PRESIDENT (Lincoln Emancipation 1863, FDR EO 8802 1941, TRUMAN EO 9981 1948 desegregating military, Eisenhower 101st Airborne 1957, Kennedy EO 10925 1961 affirmative action, LBJ CRA + VRA + EO 11246 1965, Obama DACA 2012, Biden LGBTQ+ EOs); FEDERALISM (Reconstruction → Jim Crow → Massive Resistance to Brown → VRA preclearance → state voting laws → state RFRAs → state abortion laws post-Dobbs → sanctuary cities); INTEREST GROUPS (NAACP 1909 + LDF 1940 + ACLU 1920 + NOW 1966 + HRC 1980 + GLAAD 1985 + Lambda Legal 1973 + DREDF 1979); SOCIAL MOVEMENTS (Abolitionist → Women's Suffrage → CRM 1954-1968 → Black Power → Chicano → AIM → Disability Rights → LGBTQ+ → BLM 2013+ → MeToo 2017+).
       `
     },
     {
@@ -132,14 +132,14 @@ export const govCivilRightsPart4Data = {
             explanation: 'PRESIDENTIAL CIVIL RIGHTS EOs: (1) FDR EO 8802 1941 — banned federal contractor racial discrimination; FEPC; response to A. Philip Randolph; (2) TRUMAN EO 9981 1948 — DESEGREGATED MILITARY; EO 9980 federal civilian; (3) EISENHOWER — 101st Airborne Little Rock 1957; (4) KENNEDY EO 10925 1961 — first "AFFIRMATIVE ACTION" phrase; Mississippi NG for Meredith Ole Miss 1962; (5) LBJ — signed CRA + VRA + FHA; EO 11246 1965 affirmative action federal contractors; EO 11375 1967 added sex; (6) NIXON Philadelphia Plan 1969 — goals + timetables; (7) CARTER expanded; (8) REAGAN-GHW BUSH restricted; GHW Bush signed ADA 1990; (9) CLINTON — DADT 1993 (repealed 2010); EO 13087 1998; (10) GW BUSH restricted; (11) OBAMA — DACA 2012 (upheld DHS v. Regents UC 2020); DADT repeal 2010; Lilly Ledbetter 2009; trans military 2016; (12) TRUMP restricted; (13) BIDEN restored; (14) Pattern: faster than Congress, extend statutes, reverse predecessors; subject to judicial review + override + reversal.'
           },
           {
-            question: "How does FEDERALISM create both barriers to + venues for civil rights — Reconstruction, Jim Crow, Massive Resistance, post-Shelby state voting laws, state RFRAs, and post-Dobbs state abortion politics?",
+            question: "How does FEDERALISM create both barriers to + venues for civil rights — Reconstruction, Jim Crow, Massive Resistance, state voting laws, state RFRAs, and post-Dobbs state abortion politics?",
             options: [
-              "States enforced Jim Crow and resisted Brown, yet federalism also lets states expand rights through their own laws and ballot measures after Shelby and Dobbs.",
+              "States enforced Jim Crow and resisted Brown, yet federalism also lets states expand rights through their own laws and ballot measures, as after Dobbs.",
               "States led the fight against Jim Crow while Congress resisted Brown, and federalism since Dobbs blocks states from passing their own voting, religious-liberty or abortion laws.",
-              "States lost nearly all authority over civil rights after Reconstruction, so Jim Crow, massive resistance and post-Shelby voting laws were all federal statutes.",
+              "States lost nearly all authority over civil rights after Reconstruction, so Jim Crow, massive resistance and later state voting laws were all federal statutes.",
             ],
             correctAnswer: 0,
-            explanation: 'CIVIL RIGHTS × FEDERALISM: (1) RECONSTRUCTION 1865-1877 — federal occupation; first Black Congress + state legislators; ended HAYES-TILDEN 1877; (2) JIM CROW 1877-1954 — segregation + disenfranchisement (literacy tests, poll taxes, grandfather clauses, white primaries); PLESSY 1896; (3) MASSIVE RESISTANCE 1954-1968 — Southern Manifesto 1956 (101 sigs); Wallace; Prince Edward closed schools 1959-1964; required federal intervention (Eisenhower 1957, Kennedy Meredith 1962, LBJ); Brown II "all deliberate speed"; (4) VRA 1965 §5 preclearance; (5) SHELBY 2013 — Roberts 5-4 — outdated formula + equal sovereignty; (6) POST-SHELBY — TX/NC/GA/AL/FL voter ID etc.; counter-mobilization auto registration etc.; (7) STATE RFRAs — federal 1993 + ~30 states; Hobby Lobby 2014, Masterpiece 2018, 303 Creative 2023, Fulton 2021; (8) POST-DOBBS — ~13 states banned, ~6+ enacted state constitutional protections (CA, MI, OH, KY, KS) via ballot initiatives; (9) SANCTUARY CITIES — Murphy v. NCAA 2018 anti-commandeering; (10) States BOTH violators AND expanders.'
+            explanation: 'CIVIL RIGHTS × FEDERALISM: (1) RECONSTRUCTION 1865-1877 — federal occupation; first Black Congress + state legislators; ended HAYES-TILDEN 1877; (2) JIM CROW 1877-1954 — segregation + disenfranchisement (literacy tests, poll taxes, grandfather clauses, white primaries); PLESSY 1896; (3) MASSIVE RESISTANCE 1954-1968 — Southern Manifesto 1956 (101 sigs); Wallace; Prince Edward closed schools 1959-1964; required federal intervention (Eisenhower 1957, Kennedy Meredith 1962, LBJ); Brown II "all deliberate speed"; (4) VRA 1965 §5 preclearance; (5) STATE VOTING LAWS — TX/NC/GA/AL/FL voter ID etc.; counter-mobilization auto registration etc.; (7) STATE RFRAs — federal 1993 + ~30 states; Hobby Lobby 2014, Masterpiece 2018, 303 Creative 2023, Fulton 2021; (8) POST-DOBBS — ~13 states banned, ~6+ enacted state constitutional protections (CA, MI, OH, KY, KS) via ballot initiatives; (9) SANCTUARY CITIES — local refusal to assist federal immigration enforcement; (10) States BOTH violators AND expanders.'
           }
         ]
       }
@@ -151,10 +151,10 @@ export const govCivilRightsPart4Data = {
       exercise: {
         questions: [
           {
-            prompt: "Year *EXECUTIVE ORDER 9981* (TRUMAN) DESEGREGATED THE MILITARY.",
-            answer: '1948',
-            acceptableAnswers: ['1948'],
-            hint: 'Truman acting unilaterally before any congressional civil rights statute; preceded CRA 1964 by 16 years.'
+            prompt: "Year Lincoln issued the EMANCIPATION PROCLAMATION, a required foundational document that freed enslaved people in the states in rebellion.",
+            answer: '1863',
+            acceptableAnswers: ['1863'],
+            hint: 'Issued during the Civil War, effective January 1; the 13th Amendment followed in 1865 (EK 3.12.A.1.i).'
           },
           {
             prompt: "Year *EXECUTIVE ORDER 11246* (LBJ) required AFFIRMATIVE ACTION by federal contractors.",
@@ -163,10 +163,10 @@ export const govCivilRightsPart4Data = {
             hint: 'Followed CRA 1964; foundation of modern affirmative action regulations; sex added by EO 11375 in 1967.'
           },
           {
-            prompt: "Year of *DACA (Deferred Action for Childhood Arrivals)* under Obama.",
-            answer: '2012',
-            acceptableAnswers: ['2012'],
-            hint: 'Deferred deportation for ~700K childhood arrivals; upheld DHS v. Regents UC 2020 (Trump rescission was arbitrary).'
+            prompt: "Number of the amendment that permanently abolished slavery after the Emancipation Proclamation.",
+            answer: '13',
+            acceptableAnswers: ['13', '13th', 'thirteenth', 'thirteen'],
+            hint: 'Ratified 1865; marked a shift toward civil rights for the formerly enslaved (EK 3.12.A.1.i).'
           }
         ]
       }

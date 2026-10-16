@@ -42,7 +42,6 @@ export const apesBiodiversityPart1Data = {
 |--------|-----------------|
 | **Species richness** | Total number of different species in an area |
 | **Species evenness** | How equally individuals are distributed among species |
-| **Shannon diversity index (H)** | Combines richness and evenness into one value; higher H = more diverse |
       `
     },
     {
@@ -158,7 +157,7 @@ export const apesBiodiversityPart1Data = {
       content: `
 ## AP Exam Strategy: Biodiversity
 
-- Shannon diversity index (H) questions: higher H = more diverse. You do not need to calculate H, but know what it represents
+- Species richness questions: count the different species; when richness is equal, the community whose individuals are spread more evenly is more diverse
 - Know the four categories of ecosystem services — the AP exam frequently asks you to classify examples
 - **Island biogeography** applies to habitat fragments too (a forest patch surrounded by farmland acts like an island)
 - Biodiversity is highest at the equator and lowest at the poles — know WHY (climate stability, energy input)

@@ -73,7 +73,6 @@ CONGRESS CREATES AGENCIES via statute, specifying:
 - **PENDLETON ACT 1883** — created MERIT-BASED civil service; ~10% initially, expanded to ~90% today
 - **HATCH ACT 1939** — limits political activities of federal workers
 - **CIVIL SERVICE REFORM ACT 1978** — created OPM (Office of Personnel Management) + MSPB (Merit Systems Protection Board) + SES; replaced 1883-era Civil Service Commission
-- **SCHEDULE F (Trump Oct 2020)** — proposed reclassifying tens of thousands of policy-related career civil servants as at-will employees; rescinded by Biden Jan 2021; restored by Trump Jan 2025 — major bureaucratic restructuring debate
 
 ## Iron Triangles + Issue Networks
 
@@ -112,7 +111,7 @@ CONGRESS CREATES AGENCIES via statute, specifying:
               "They are White House offices inside the Executive Office of the President whose staff need no Senate confirmation"
             ],
             correctAnswer: 0,
-            explanation: 'INDEPENDENT REGULATORY COMMISSIONS (Fed 1913, SEC 1934, FCC 1934, NLRB 1935, FTC 1914, NRC 1974, CPSC 1972): (1) MULTI-MEMBER 5-7 commissioners; (2) BIPARTISAN — bare majority limit; (3) FIXED STAGGERED TERMS (Fed 14yr, most 5-7yr); (4) FOR-CAUSE REMOVAL — Humphrey\'s Executor v. US (1935) limited Myers v. US (1926); president removes only for inefficiency/neglect/malfeasance; (5) INSULATION from political pressure for technical regulation; (6) MODERN — Seila Law v. CFPB (2020) + Collins v. Yellen (2021) limited Humphrey\'s for SINGLE-DIRECTOR agencies.'
+            explanation: 'INDEPENDENT REGULATORY COMMISSIONS (Fed 1913, SEC 1934, FCC 1934, NLRB 1935, FTC 1914, NRC 1974, CPSC 1972): (1) MULTI-MEMBER 5-7 commissioners; (2) BIPARTISAN — bare majority limit; (3) FIXED STAGGERED TERMS (Fed 14yr, most 5-7yr); (4) FOR-CAUSE REMOVAL — the president generally cannot fire commissioners over policy disagreements; (5) INSULATION from political pressure for technical regulation.'
           }
         ]
       }
@@ -120,7 +119,7 @@ CONGRESS CREATES AGENCIES via statute, specifying:
     {
       id: 'govburea1-input',
       type: 'input-boxes' as const,
-      content: `**Sprint quiz — name the year**`,
+      content: `**Sprint quiz — civil service + bureaucracy terms**`,
       exercise: {
         questions: [
           {
@@ -130,16 +129,16 @@ CONGRESS CREATES AGENCIES via statute, specifying:
             hint: 'Two years after Garfield assassination by disgruntled office-seeker.'
           },
           {
-            prompt: "Year the HATCH ACT limited political activities of federal workers.",
-            answer: '1939',
-            acceptableAnswers: ['1939'],
-            hint: 'Mid-FDR era; named for Senator Carl Hatch (D-NM).'
+            prompt: "Term for the civil-service hiring system based on professionalism, specialization, and neutrality rather than political patronage.",
+            answer: 'merit system',
+            acceptableAnswers: ['merit system', 'the merit system', 'merit', 'merit-based system', 'merit based system'],
+            hint: 'The Pendleton Act replaced the spoils system with this.'
           },
           {
-            prompt: "Year the CIVIL SERVICE REFORM ACT created OPM + MSPB + SES, replacing the Civil Service Commission.",
-            answer: '1978',
-            acceptableAnswers: ['1978'],
-            hint: 'Carter-era reform; same year as inflation crisis.'
+            prompt: "Term for the stable alliance of a congressional committee, a bureaucratic agency, and an interest group in one policy area.",
+            answer: 'iron triangle',
+            acceptableAnswers: ['iron triangle', 'an iron triangle', 'iron triangles'],
+            hint: 'Three sides: committee, agency, interest group.'
           }
         ]
       }
@@ -164,7 +163,7 @@ CONGRESS CREATES AGENCIES via statute, specifying:
           }
         ],
         correctAnswers: ['Independent Regulatory Commissions', 'Cabinet Departments', 'Government Corporations'],
-        hint1: 'IRCs (Fed, SEC, FCC, NLRB, FTC, NRC, CPSC) — multi-member, fixed terms, Humphrey\'s Executor for-cause protection.',
+        hint1: 'IRCs (Fed, SEC, FCC, NLRB, FTC, NRC, CPSC) — multi-member, fixed terms, for-cause removal protection.',
         hint2: 'Cabinet = State, Treasury, Defense, Justice, Interior, Ag, Commerce, Labor, HHS, HUD, DOT, Energy, Ed, VA, DHS.',
         hint3: 'Gov\'t corporations = USPS, Amtrak, TVA, FDIC.'
       }
@@ -176,15 +175,15 @@ CONGRESS CREATES AGENCIES via statute, specifying:
       exercise: {
         questions: [
           {
-            question: "AP concept-application: 'Schedule F' has been a major bureaucratic restructuring debate. What does it propose and why is it constitutionally significant?",
+            question: "AP concept-application: A newly elected president wants to reward campaign volunteers with mid-level jobs at a federal agency, but finds that almost none of those jobs can be filled that way. Which best explains why?",
             options: [
-              "It would reclassify policy-related career staff as at-will employees, testing the unitary executive theory against merit protections",
-              "It would give civil servants lifetime tenure, extending Pendleton Act protections to every political appointee",
-              "It would transfer hiring of career staff to Congress, so that committees rather than presidents control the workforce of each federal agency",
-              "It would abolish the Senate's role in confirming Cabinet secretaries, shifting appointments to the President alone"
+              "Since the Pendleton Act, most civil service positions are awarded through competitive merit hiring rather than patronage",
+              "Article II requires the Senate to confirm every federal employee, including clerks and inspectors",
+              "Federal judges appoint career civil servants so that agency staff stay independent of the president and of Congress",
+              "Each chamber of Congress elects agency staff by majority vote at the start of every new term"
             ],
             correctAnswer: 0,
-            explanation: 'SCHEDULE F (Trump Oct 2020 EO → Biden rescinded Jan 2021 → Trump restored Jan 2025) RECLASSIFIES policy-related CAREER civil servants from MERIT-PROTECTED competitive service to AT-WILL excepted service → removable BY PRESIDENT WITHOUT CAUSE. (1) UNITARY EXECUTIVE THEORY — Art II vests ALL executive power in president → must remove subordinates; (2) PROPONENTS — restores PRESIDENTIAL ACCOUNTABILITY; (3) CRITICS — dismantles PENDLETON 1883 + CSRA 1978; SPOILS-SYSTEM return; (4) Seila Law (2020) + Collins v. Yellen (2021) similarly limited for-cause removal for single-director agencies.'
+            explanation: 'EK 2.12.A.2: the civil service primarily uses a MERIT SYSTEM that hires and promotes on professionalism, specialization, and neutrality, as opposed to POLITICAL PATRONAGE. The Pendleton Act (1883) began replacing the spoils system; today the large majority of federal civilian jobs are merit-based, and only a few thousand top positions are political appointments. The Senate confirms only senior officials (Cabinet secretaries, ambassadors, judges), not ordinary employees; judges and Congress do not hire agency staff.'
           },
           {
             question: "Why does the federal bureaucracy exercise SIGNIFICANT POLICY-MAKING POWER even though Article I vests legislative power in Congress?",
@@ -195,7 +194,7 @@ CONGRESS CREATES AGENCIES via statute, specifying:
               "The Supreme Court assigns policy areas to agencies when Congress fails to act within a set deadline"
             ],
             correctAnswer: 0,
-            explanation: 'Bureaucracy = significant POLICY-MAKING POWER despite Art I vesting legislative power in Congress. (1) RULEMAKING — Congress passes broad statutes (Clean Air Act → EPA "requisite to protect public health"); DELEGATES detail via APA 1946; ~3,000-4,000 final rules/year; (2) ENFORCEMENT DISCRETION — finite resources; what to investigate; (3) ADJUDICATION — ~1,800 ALJs; ~750,000 cases/yr (SSA, immigration, labor); (4) GUIDANCE — informal interpretive memos; (5) NONDELEGATION (Schechter 1935 last enforcement) + MAJOR QUESTIONS DOCTRINE (WV v. EPA 2022, Loper Bright 2024 overruling Chevron) constrain MAJOR new authority claims without clear authorization.'
+            explanation: 'Bureaucracy = significant POLICY-MAKING POWER despite Art I vesting legislative power in Congress. (1) RULEMAKING — Congress passes broad statutes (Clean Air Act → EPA "requisite to protect public health"); DELEGATES detail via APA 1946; ~3,000-4,000 final rules/year; (2) ENFORCEMENT DISCRETION — finite resources; what to investigate; (3) ADJUDICATION — ~1,800 ALJs; ~750,000 cases/yr (SSA, immigration, labor); (4) GUIDANCE — informal interpretive memos. This delegated DISCRETIONARY AUTHORITY is the core of EK 2.13.A.1.'
           }
         ]
       }

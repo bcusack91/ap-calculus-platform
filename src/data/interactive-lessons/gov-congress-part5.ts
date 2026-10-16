@@ -79,10 +79,10 @@ export const govCongressPart5Data = {
 | Year | Reform |
 |---|---|
 | 1973 | War Powers Resolution (over Nixon's veto) |
-| 1974 | Budget Act creates Congressional Budget Office (CBO) + budget process (authorization vs. appropriation; reconciliation) |
+| 1974 | Budget and Impoundment Control Act (CED illustrative) creates Congressional Budget Office (CBO) + budget committees; limits presidential impoundment |
 | 1974 | Nixon resigns following House Judiciary impeachment vote |
 | 1975 | Senate cloture lowered from 2/3 (67) to 3/5 (60); House strips committee chairs of seniority-only selection |
-| 1978 | Ethics in Government Act + Inspector General Act + FISA |
+| 1978 | Ethics in Government Act + FISA |
 
 ## Gingrich Revolution + Polarization Era (1995-PRESENT)
 
@@ -93,9 +93,7 @@ export const govCongressPart5Data = {
 | 1995-96 | Government shutdown (21 days December 1995-January 1996) over budget fight with Clinton |
 | 1998 | House impeaches Clinton (Lewinsky / perjury); Senate acquits |
 | 2010 | Tea Party wave — Republicans win House; deepening polarization |
-| 2013 | Senate Reid (D) eliminates filibuster for executive + lower-court nominations ("nuclear option") |
 | 2013 | 16-day government shutdown (October) over ACA defunding fight |
-| 2017 | Senate McConnell (R) eliminates filibuster for SCOTUS nominations (Gorsuch confirmation) |
 | 2018-19 | 35-day government shutdown (longest in history) over border wall funding |
 | 2019, 2021 | House impeaches Trump twice; Senate acquits both times |
 | 2021-22 | January 6 Select Committee investigates Capitol attack |
@@ -124,13 +122,13 @@ export const govCongressPart5Data = {
           {
             question: "Which best describes the institutional changes wrought by the 1974 Budget Act?",
             options: [
-              "It created the budget committees and the Congressional Budget Office, limited impoundment, and set up the reconciliation process",
+              "It created the budget committees and the Congressional Budget Office and limited presidential impoundment of funds",
               "It gave the President a line-item veto, abolished the appropriations committees, and moved all budget writing to the Treasury Department",
               "It required a balanced budget every year, banned deficit spending, and let the Supreme Court cancel appropriations that exceed revenue",
               "It expanded the President's power to impound funds, created the Office of Management and Budget, and ended the filibuster on spending"
             ],
             correctAnswer: 0,
-            explanation: 'Congressional Budget and Impoundment Control Act 1974: addressed (1) Nixon impoundment; (2) lack of congressional budget capacity. Created: (1) Budget Committees House + Senate; (2) CBO independent analysis; (3) Budget Resolution binding overall targets; (4) Authorization vs. Appropriation distinction; (5) RECONCILIATION fast-track immune from filibuster. Restructured congressional fiscal authority + unintentionally created modern reconciliation workaround dominating legislation since Bush tax cuts 2001.'
+            explanation: 'Congressional Budget and Impoundment Control Act 1974: addressed (1) Nixon impoundment; (2) lack of congressional budget capacity. Created: (1) Budget Committees House + Senate; (2) CBO independent analysis; (3) Budget Resolution binding overall targets; (4) limits on IMPOUNDMENT — presidents must ask Congress before refusing to spend appropriated funds. A CED illustrative example of congressional oversight and the power of the purse (EK 2.14.A.1-2).'
           }
         ]
       }
@@ -148,16 +146,16 @@ export const govCongressPart5Data = {
             hint: 'Progressive Era democratic reform; replaced original Article I § 3.'
           },
           {
-            prompt: "The 1974 statute creating the Congressional Budget Office and the modern reconciliation procedure. Three words.",
+            prompt: "The 1974 statute (a CED illustrative example) that created the Congressional Budget Office and limited presidential impoundment of funds. Two words: the ___ Act.",
             answer: 'Budget Act',
             acceptableAnswers: ['Budget Act', 'budget act', 'Congressional Budget Act', 'Congressional Budget and Impoundment Control Act'],
             hint: 'Watergate-era reform; addressed Nixon impoundment + congressional budget capacity.'
           },
           {
-            prompt: "The 1995 Republican legislative agenda introduced by Speaker Newt Gingrich. Three words.",
-            answer: 'Contract with America',
-            acceptableAnswers: ['Contract with America', 'contract with america', 'Contract With America'],
-            hint: 'Released September 1994 before midterm; emphasized welfare reform, term limits, balanced budget, tort reform.'
+            prompt: "Term for the exchange of political favors among legislators, such as trading votes to gain support for each other's bills. One word.",
+            answer: 'logrolling',
+            acceptableAnswers: ['logrolling', 'Logrolling', 'log-rolling', 'log rolling'],
+            hint: 'EK 2.2.A.5 — "you vote for my bill, I\'ll vote for yours."'
           }
         ]
       }
@@ -177,14 +175,14 @@ export const govCongressPart5Data = {
             options: ['1920s', '1930s', '1940s', '1950s']
           },
           {
-            label: "Senate cloture lowered from 2/3 (67) to 3/5 (60): ___",
-            options: ['1917', '1955', '1975', '2013']
+            label: "17th Amendment establishes direct popular election of senators: ___",
+            options: ['1870', '1913', '1920', '1971']
           }
         ],
-        correctAnswers: ['1910s', '1930s', '1975'],
+        correctAnswers: ['1910s', '1930s', '1913'],
         hint1: 'March 1910; led by Progressive Republican George Norris.',
         hint2: 'Same year FDR\'s court-packing plan failed; coalition lasted until 1960s.',
-        hint3: 'Watergate-era Senate reform; lower than 67 but higher than majority.'
+        hint3: 'Progressive Era — same year as the 16th Amendment (EK 5.1.A.1.iii).'
       }
     },
     {

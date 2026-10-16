@@ -19,7 +19,7 @@ export const govPublicOpinionPart1Data = {
 | Types of polls (benchmark, tracking, exit, focus group, push polls) |
 | Demographic patterns in public opinion (race, gender, religion, age, education, region) |
 
-> 🔑 Key idea: PUBLIC OPINION = the AGGREGATE of individual attitudes + beliefs about politics + government + policy held by a defined population at a given time. Three dimensions matter: SALIENCE (importance to respondents), INTENSITY (strength of feeling), STABILITY (durability over time). POLITICAL SOCIALIZATION = the lifelong process by which individuals acquire political beliefs + values + party identification through agents — FAMILY is strongest predictor (~70% children share parents' party identification), then EDUCATION, RELIGION, PEERS, MEDIA, GENERATIONAL EVENTS, GEOGRAPHY, RACE/ETHNICITY/GENDER. POLLS measure public opinion via RANDOM SAMPLING (every member equal probability of selection); MARGIN OF ERROR typically ±3-4% for n≈1000 at 95% confidence; SAMPLING ERROR (random variation from sampling) vs NON-SAMPLING ERROR (selection bias, non-response bias, social desirability bias, question wording effects). POLL TYPES include BENCHMARK polls (campaign baseline), TRACKING polls (daily over time), EXIT polls (post-vote demographic breakdowns), FOCUS GROUPS (small qualitative discussion), PUSH POLLS (negative campaigning disguised as polling — unethical). DEMOGRAPHIC PATTERNS: women +Dem ~10-15 pts since 1980 (gender gap); Black ~85% Dem (most loyal); Hispanic Dem majority eroding (Trump 46% 2024 highest GOP since Bush 2004); diploma divide central to 2016+ realignment; evangelicals 80% Rep + nones 65%+ Dem; older Rep + Gen Z Dem.
+> 🔑 Key idea: PUBLIC OPINION = the AGGREGATE of individual attitudes + beliefs about politics + government + policy held by a defined population at a given time. Three dimensions matter: SALIENCE (importance to respondents), INTENSITY (strength of feeling), STABILITY (durability over time). POLITICAL SOCIALIZATION = the lifelong process by which individuals acquire political beliefs + values + party identification through agents — FAMILY is strongest predictor (~70% children share parents' party identification), then EDUCATION, RELIGION, PEERS, MEDIA, GENERATIONAL EVENTS, GEOGRAPHY, RACE/ETHNICITY/GENDER. POLLS measure public opinion via RANDOM SAMPLING (every member equal probability of selection); MARGIN OF ERROR typically ±3-4% for n≈1000 at 95% confidence; SAMPLING ERROR (random variation from sampling) vs NON-SAMPLING ERROR (selection bias, non-response bias, social desirability bias, question wording effects). POLL TYPES include BENCHMARK polls (campaign baseline), TRACKING polls (daily over time), EXIT polls (post-vote demographic breakdowns), FOCUS GROUPS (small qualitative discussion), PUSH POLLS (negative campaigning disguised as polling — unethical). DEMOGRAPHIC PATTERNS: women +Dem ~4-12 pts since 1980 (gender gap); Black ~85% Dem (most loyal); Hispanic Dem majority eroding (Trump 46% 2024, highest GOP share in modern exit polls); diploma divide central to 2016+ realignment; evangelicals 80% Rep + nones 65%+ Dem; older Rep + Gen Z Dem.
       `
     },
     {
@@ -138,12 +138,12 @@ MOE = statistical range around poll result reflecting RANDOM SAMPLING ERROR; typ
 
 | Demographic | Pattern |
 |---|---|
-| **GENDER** | Women +Dem ~10-15 pts since 1980 (gender gap); Harris won women 53-45 in 2024; widened post-Dobbs 2022 |
+| **GENDER** | Women +Dem ~4-12 pts since 1980 (gender gap); Harris won women 53-45 in 2024; widened post-Dobbs 2022 |
 | **RACE/ETHNICITY** | Black ~85% Dem (most loyal Dem constituency); Hispanic Dem majority eroding (Trump 46% 2024); Asian Dem majority but Trump gains; White college vs non-college diploma divide |
-| **EDUCATION** | DIPLOMA DIVIDE — White college grads → Dem (Harris 56-42 2024); White non-college → Rep (Trump 67-32 2024) |
+| **EDUCATION** | DIPLOMA DIVIDE — White college grads → Dem (Harris 53-45 2024); White non-college → Rep (Trump 66-32 2024) |
 | **RELIGION** | White evangelicals 80% Rep (3 Trump elections); Black Protestants 85%+ Dem; Catholics split (Hispanic Dem, White Catholic Rep); Jews 70%+ Dem; Muslims Dem; Mormons heavily Rep; NONES (~25%) heavily Dem |
 | **AGE/GENERATION** | Older voters Rep lean (Silent + Boomer); younger voters Dem (Millennials + Gen Z); but Trump gains with young men 2024 (manosphere podcasts) |
-| **GEOGRAPHY** | Urban (Dem) > suburban (mixed) > rural (Rep ~70%+); coastal metros vs heartland; Sun Belt vs Rust Belt |
+| **GEOGRAPHY** | Urban (Dem) > suburban (mixed) > rural (Rep ~64% in 2024); coastal metros vs heartland; Sun Belt vs Rust Belt |
 | **INCOME** | Middle income split; high income split (top 1% increasingly Dem; small business + non-billionaire wealthy split); low income Dem lean but Trump gains 2024 |
 | **MARITAL STATUS** | Married more Rep; single + cohabiting more Dem; "marriage gap" |
 | **UNION MEMBERSHIP** | Union households Dem lean but eroding (Trump cracked Reagan Democrat coalition further) |
@@ -184,10 +184,10 @@ MOE = statistical range around poll result reflecting RANDOM SAMPLING ERROR; typ
             hint: 'First + most enduring agent; transmits party identification + ideology + religious affiliation; explains why children typically inherit parents\' partisanship; weakened by college experience + generational events + new media environments.'
           },
           {
-            prompt: "Founder of SCIENTIFIC POLLING in 1935 (Gallup Organization) who correctly predicted the 1936 FDR victory with a far smaller, demographically balanced sample while the Literary Digest failed.",
-            answer: 'George Gallup',
-            acceptableAnswers: ['George Gallup', 'Gallup', 'George Horace Gallup'],
-            hint: 'Founded American Institute of Public Opinion 1935; Gallup Organization remains major polling firm today; demonstrated importance of RANDOM SAMPLING over large but biased samples; replaced Literary Digest straw poll method.'
+            prompt: "Polling methodology element requiring specific and unbiased wording of questions, one of the features that makes a poll more precise (EK 4.5.A.2): ___ framing.",
+            answer: 'neutral',
+            acceptableAnswers: ['neutral', 'neutral framing', 'Neutral', 'neutral wording', 'unbiased'],
+            hint: 'Compare "assistance to the poor" with "welfare" — loaded wording shifts answers.'
           },
           {
             prompt: "Statistical range around poll result reflecting RANDOM SAMPLING ERROR; typically ±3-4% for sample of 1000 at 95% confidence.",

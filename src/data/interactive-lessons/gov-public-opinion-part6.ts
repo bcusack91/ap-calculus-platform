@@ -17,9 +17,9 @@ export const govPublicOpinionPart6Data = {
 | Worked example: Why polls underestimated Trump 2016 + 2020 |
 | Worked example: How to evaluate poll quality + read a poll |
 | Worked example: How to interpret partisan opinion gap on contested issue (climate change) |
-| Foundational documents: Federalist 10 (factions); Federalist 49 (constitutional change deliberation); Madison letters on public opinion |
+| Required foundational documents: Federalist 10 (factions); Federalist 51 (checks and balances); Federalist 78 (judicial independence); Brutus No. 1 |
 
-> 🔑 Key idea: AP FRQ questions on PUBLIC OPINION + POLLING require systematic ANALYSIS — first IDENTIFY the question type (factual interpretation? methodological evaluation? policy implication?), then IDENTIFY relevant CONCEPTS (random sampling, MOE, sources of error, motivated reasoning, agenda-setting, etc.), then APPLY to specific situation, then CONNECT to broader institutional + political context, then PREDICT impact on policymaking + elections + democratic accountability. WORKED EXAMPLES of polling failures (2016 + 2020 Trump underestimation) + poll quality evaluation (sample size + MOE + methodology + dates + sponsor + question wording) + partisan opinion gaps (climate change as case study) demonstrate the framework. FOUNDATIONAL DOCUMENTS connect public opinion to constitutional design — Federalist 10 on factions, Federalist 49 on constitutional change requiring deliberation, Federalist 71 on senatorial check on popular passions.
+> 🔑 Key idea: AP FRQ questions on PUBLIC OPINION + POLLING require systematic ANALYSIS — first IDENTIFY the question type (factual interpretation? methodological evaluation? policy implication?), then IDENTIFY relevant CONCEPTS (random sampling, MOE, sources of error, motivated reasoning, agenda-setting, etc.), then APPLY to specific situation, then CONNECT to broader institutional + political context, then PREDICT impact on policymaking + elections + democratic accountability. WORKED EXAMPLES of polling failures (2016 + 2020 Trump underestimation) + poll quality evaluation (sample size + MOE + methodology + dates + sponsor + question wording) + partisan opinion gaps (climate change as case study) demonstrate the framework. REQUIRED FOUNDATIONAL DOCUMENTS connect public opinion to constitutional design — Federalist 10 on factions, Federalist 51 on checks and balances, Federalist 78 on judicial independence, and Brutus No. 1's opposing case for a small republic close to the people.
       `
     },
     {
@@ -146,7 +146,7 @@ When evaluating any poll, check:
 Factual interpretation + political consequences of partisan opinion gap on contested scientific/policy issue.
 
 ### Step 2 — Relevant concepts
-PARTY IDENTIFICATION as perceptual screen + motivated reasoning + partisan sorting + agenda-setting + framing + asymmetric polarization.
+PARTY IDENTIFICATION as perceptual screen + motivated reasoning + partisan sorting + agenda-setting + framing + polarization.
 
 ### Step 3 — Apply
 **HOW DID GAP EMERGE?**
@@ -167,7 +167,7 @@ PARTY IDENTIFICATION as perceptual screen + motivated reasoning + partisan sorti
 - FEDERALISM PATCHWORK — California climate leadership; red states resist
 
 ### Step 4 — Broader context
-Climate is largest example of ASYMMETRIC POLARIZATION — once bipartisan issue (1988 + 2008), now polarized along party lines. Affects US ability to act on global problem requiring sustained policy commitment across administrations. Affects democratic accountability — Reps don't pay political price for climate stance among Rep base; Dems vulnerable to Rep attacks on energy costs from green policies.
+Climate is a leading example of PARTISAN POLARIZATION (EK 2.3.A.1) — once bipartisan issue (1988 + 2008), now polarized along party lines. Affects US ability to act on global problem requiring sustained policy commitment across administrations. Affects democratic accountability — Reps don't pay political price for climate stance among Rep base; Dems vulnerable to Rep attacks on energy costs from green policies.
 
 ### Step 5 — Predict
 - Climate policy will continue OSCILLATING with administration changes (Obama-Trump-Biden-Trump cycle)
@@ -191,21 +191,13 @@ Climate is largest example of ASYMMETRIC POLARIZATION — once bipartisan issue 
 
 **Connection to public opinion**: Madison saw public opinion as POTENTIALLY DANGEROUS (passions could overwhelm interests) + designed institutions to FILTER + DELIBERATE rather than directly implement.
 
-### Federalist 49 (Madison)
+### Federalist 51 (Madison)
 
-**On constitutional change requiring careful deliberation rather than passions:**
-- REJECTED frequent appeals to public to amend Constitution
-- "VENERATION which time bestows on every thing" provides STABILITY
-- POPULAR PASSIONS without REASON would be dangerous
-- Constitutional change should require DELIBERATION + SUSTAINED MAJORITY across institutions (Article V supermajorities)
-
-### Federalist 71 (Hamilton)
-
-**On senatorial check on popular passions:**
-- 6-year Senate terms designed to insulate from immediate public passions
-- Senate should provide STABILITY + DELIBERATION
-- Hamilton famously: "the people commonly INTEND the PUBLIC GOOD" but "do not always REASON RIGHT about the means of promoting it"
-- Senate should help correct momentary errors in public sentiment
+**On checks and balances as a filter on majorities (EK 1.6.A.2):**
+- SEPARATION OF POWERS gives each branch its own will and powers
+- CHECKS AND BALANCES — "ambition must be made to counteract ambition"
+- "If men were angels, no government would be necessary" — government must control the governed AND itself
+- Multiple branches + federalism mean a passing majority must win several institutions before its opinion becomes policy
 
 ### Federalist 78 (Hamilton)
 
@@ -214,14 +206,15 @@ Climate is largest example of ASYMMETRIC POLARIZATION — once bipartisan issue 
 - COUNTER-MAJORITARIAN role to protect rights against majorities
 - Judiciary "least dangerous branch" but must be insulated to perform constitutional duty
 
-### Madison's Letters on Public Opinion
+### Brutus No. 1 (Anti-Federalist, 1787)
 
-- Madison continued writing on public opinion throughout his life
-- Argued for REFINED public opinion through education + deliberation + free press
-- Concerned about both MAJORITY TYRANNY + DEMAGOGUERY
-- Foundational TENSION in American democracy: respect for popular sovereignty vs need for institutional filters
+**The opposing view of public opinion:**
+- A free republic must be SMALL so representatives know and share the views of the people
+- A LARGE republic cannot reflect public opinion; distant representatives will not be trusted
+- Warned that the Necessary and Proper and Supremacy clauses would let the national government swallow the states
+- Popular-democratic theory: government should stay close to, not filter, public opinion (EK 1.3.A.2)
 
-> 🔑 Key takeaway: AP FRQ on PUBLIC OPINION requires 5-step ANALYSIS — identify question type (factual interpretation, methodological evaluation, policy implication, political consequences, constitutional/democratic), identify relevant concepts (polling methodology + sources of error + party ID + motivated reasoning + media effects + representation models + opinion-policy linkage), apply to specific situation, connect to broader context (Madisonian design + electoral accountability + federalism + civil liberties/rights), predict impact on policymaking + elections + democratic accountability. WORKED EXAMPLES: (1) Trump polling underestimation 2016+2020 (non-response bias + education weighting + shy Trump + COVID + state polling cuts → reforms by 2024); (2) poll quality evaluation (pollster reputation + sample size + MOE + methodology + dates + question wording + sponsor + house effects + use aggregators not individual polls); (3) climate change partisan gap (78 vs 23 Dem-Rep largest gap; emerged 2010+ via Tea Party + Koch + GOP elite cues + interest group alliances + ideological + cultural identity + federalism patchwork). FOUNDATIONAL DOCUMENTS: Federalist 10 (factions + extended republic + representation refines + enlarges), Federalist 49 (constitutional change requires deliberation not passions), Federalist 71 (senatorial check on popular passions), Federalist 78 (judicial independence + counter-majoritarian); Madison letters on need for refined public opinion through education + deliberation + free press.
+> 🔑 Key takeaway: AP FRQ on PUBLIC OPINION requires 5-step ANALYSIS — identify question type (factual interpretation, methodological evaluation, policy implication, political consequences, constitutional/democratic), identify relevant concepts (polling methodology + sources of error + party ID + motivated reasoning + media effects + representation models + opinion-policy linkage), apply to specific situation, connect to broader context (Madisonian design + electoral accountability + federalism + civil liberties/rights), predict impact on policymaking + elections + democratic accountability. WORKED EXAMPLES: (1) Trump polling underestimation 2016+2020 (non-response bias + education weighting + shy Trump + COVID + state polling cuts → reforms by 2024); (2) poll quality evaluation (pollster reputation + sample size + MOE + methodology + dates + question wording + sponsor + house effects + use aggregators not individual polls); (3) climate change partisan gap (78 vs 23 Dem-Rep largest gap; emerged 2010+ via Tea Party + Koch + GOP elite cues + interest group alliances + ideological + cultural identity + federalism patchwork). REQUIRED FOUNDATIONAL DOCUMENTS: Federalist 10 (factions + extended republic + representation refines + enlarges), Federalist 51 (separation of powers + checks and balances), Federalist 78 (judicial independence + counter-majoritarian), Brutus No. 1 (small republic close to the people).
       `
     },
     {
@@ -239,7 +232,7 @@ Climate is largest example of ASYMMETRIC POLARIZATION — once bipartisan issue 
               "Find the pollster's party, reject data that contradicts your view, and argue that every poll is biased so the question cannot be answered.",
             ],
             correctAnswer: 0,
-            explanation: '5-STEP PUBLIC OPINION FRQ FRAMEWORK: (1) IDENTIFY TYPE — factual interpretation (poll data + percentages/differences), methodological evaluation (sample size + MOE + methodology + dates + sponsor + wording + weighting), policy implication (presidential responsiveness + congressional voting + judicial constraint + electoral feedback), political consequences (party ID + motivated reasoning + sorting + negative partisanship), constitutional/democratic (Madisonian + delegate vs trustee + counter-majoritarian). (2) IDENTIFY CONCEPTS — polling methodology (random sampling, MOE, sources of error: sampling/selection/non-response/social desirability/wording/order/house), poll types (benchmark/tracking/exit/focus/push banned by AAPOR), political socialization (8 agents: family ~70% → education → religion → peers → media → generational → geography → race/gender), party ID (perceptual screen + motivated reasoning per Kunda 1990 + Lodge + Taber 2000 + partisan sorting per Levendusky 2009 + Mason 2018 + negative partisanship per Abramowitz), media effects (agenda-setting per McCombs + Shaw 1972, framing per Tversky + Kahneman 1981, priming per Iyengar + Kinder 1987, hostile media per Vallone + Ross + Lepper 1985), representation models (delegate, trustee per Burke 1774, politico most common), opinion-policy linkage (responsiveness, intensity vs numbers, institutional filters: filibuster + EC + gerrymandering + judicial independence + federalism). (3) APPLY — facts + outside evidence; concepts EXPLICITLY; specific examples (Literary Digest 1936, Truman-Dewey 1948, 2016 + 2020 polling failures, Brown, Obergefell, Dobbs). (4) CONNECT — Madisonian design (Federalist 10/49/71/78); electoral accountability (retrospective voting per Fiorina); federalism + separation + judicial review interaction; civil liberties/rights connections. (5) PREDICT — policy change channels + intensity gap; voting shifts; democratic legitimacy + institutional trust. EVIDENCE TO HAVE READY — civil rights opinion (32%→90%+ school integration; 4%→94% interracial marriage); gay marriage (12%→71% in 35 years); abortion stable + Dobbs reaction; trust 75% 1958 → 16-22%; polling history; media ecosystem (Rogan + manosphere); demographic patterns.'
+            explanation: '5-STEP PUBLIC OPINION FRQ FRAMEWORK: (1) IDENTIFY TYPE — factual interpretation (poll data + percentages/differences), methodological evaluation (sample size + MOE + methodology + dates + sponsor + wording + weighting), policy implication (presidential responsiveness + congressional voting + judicial constraint + electoral feedback), political consequences (party ID + motivated reasoning + sorting + negative partisanship), constitutional/democratic (Madisonian + delegate vs trustee + counter-majoritarian). (2) IDENTIFY CONCEPTS — polling methodology (random sampling, MOE, sources of error: sampling/selection/non-response/social desirability/wording/order/house), poll types (benchmark/tracking/exit/focus/push banned by AAPOR), political socialization (8 agents: family ~70% → education → religion → peers → media → generational → geography → race/gender), party ID (perceptual screen + motivated reasoning per Kunda 1990 + Lodge + Taber 2000 + partisan sorting per Levendusky 2009 + Mason 2018 + negative partisanship per Abramowitz), media effects (agenda-setting per McCombs + Shaw 1972, framing per Tversky + Kahneman 1981, priming per Iyengar + Kinder 1987, hostile media per Vallone + Ross + Lepper 1985), representation models (delegate, trustee per Burke 1774, politico most common), opinion-policy linkage (responsiveness, intensity vs numbers, institutional filters: filibuster + EC + gerrymandering + judicial independence + federalism). (3) APPLY — facts + outside evidence; concepts EXPLICITLY; specific examples (Literary Digest 1936, Truman-Dewey 1948, 2016 + 2020 polling failures, Brown, Obergefell, Dobbs). (4) CONNECT — Madisonian design (Federalist 10/51/78; Brutus No. 1 as the opposing view); electoral accountability (retrospective voting per Fiorina); federalism + separation + judicial review interaction; civil liberties/rights connections. (5) PREDICT — policy change channels + intensity gap; voting shifts; democratic legitimacy + institutional trust. EVIDENCE TO HAVE READY — civil rights opinion (32%→90%+ school integration; 4%→94% interracial marriage); gay marriage (12%→71% by 2022-23); abortion stable + Dobbs reaction; trust ~73% 1958 → ~16-22% recently; polling history; media ecosystem (Rogan + manosphere); demographic patterns.'
           }
         ]
       }
@@ -257,16 +250,16 @@ Climate is largest example of ASYMMETRIC POLARIZATION — once bipartisan issue 
             hint: 'Famous defense of large republic; defined faction = "number of citizens... united and actuated by some common impulse of passion, or of interest, adversed to the rights of other citizens, or to the permanent and aggregate interests of the community"; rejected eliminating factions (would require destroying liberty); argued large republic + representation + diversity controls faction effects via multiple checking factions.'
           },
           {
-            prompt: "Hamilton's Federalist essay arguing for SENATORIAL CHECK on popular passions via 6-year terms; quote: 'the people commonly INTEND the PUBLIC GOOD' but 'do not always REASON RIGHT about the means.'",
-            answer: 'Federalist 71',
-            acceptableAnswers: ['Federalist 71', 'Federalist No. 71', 'Federalist No 71', 'Federalist Number 71', 'F71', 'Federalist Paper 71'],
-            hint: 'Hamilton arguing for executive (presidency in actual essay context); discussed need for institutional check on momentary passions; Senate provides STABILITY + DELIBERATION; 6-year terms insulate Senate from immediate public passions; quote about people intending public good but not always reasoning right about means.'
+            prompt: "Madison's required Federalist essay arguing that separation of powers and checks and balances let 'ambition... counteract ambition' to control abuses by majorities.",
+            answer: 'Federalist 51',
+            acceptableAnswers: ['Federalist 51', 'Federalist No. 51', 'Federalist No 51', 'Federalist Number 51', 'F51', 'Federalist Paper 51', '51'],
+            hint: '"If men were angels, no government would be necessary" (EK 1.6.A.2).'
           },
           {
             prompt: "Cognitive psychology framework by Kunda 1990 + Lodge + Taber 2000 — TENDENCY TO PROCESS INFORMATION in ways that confirm prior BELIEFS or IDENTITIES.",
             answer: 'motivated reasoning',
             acceptableAnswers: ['motivated reasoning', 'Motivated reasoning', 'Motivated Reasoning'],
-            hint: 'Differential standards for accepting vs rejecting information; central to political psychology; explains why partisans see same data differently (economic perceptions through partisan lens); explains 61% Reps still doubt 2020 election; explains climate denial concentrated among Reps; explains COVID vaccine refusal correlated with Rep ID; explains hostile media perception (both sides see media as biased against them).'
+            hint: 'Differential standards for accepting vs rejecting information; central to political psychology; explains why partisans see same data differently (economic perceptions through partisan lens); explains why ~2/3 of Reps still doubt 2020 election; explains climate denial concentrated among Reps; explains COVID vaccine refusal correlated with Rep ID; explains hostile media perception (both sides see media as biased against them).'
           }
         ]
       }
@@ -279,20 +272,20 @@ Climate is largest example of ASYMMETRIC POLARIZATION — once bipartisan issue 
         dropdowns: [
           {
             label: "FEDERALIST 10 (Madison) — controlling FACTIONS via EXTENDED REPUBLIC + REPRESENTATION + DIVERSITY: ___",
-            options: ['Large republic + representation refines + enlarges public views; multiple factions check each other', 'Constitutional change requires sustained deliberation not popular passions', '6-year Senate terms insulate from immediate public passions; people intend good but not always reason right', 'Lifetime tenure for judges; counter-majoritarian role protecting rights against majorities', 'Bill of Rights specifically enumerates limits on government action against individuals']
+            options: ['Large republic + representation refines + enlarges public views; multiple factions check each other', 'A large republic cannot reflect the people and will swallow the states', 'Separation of powers + checks and balances let ambition counteract ambition', 'Lifetime tenure for judges; counter-majoritarian role protecting rights against majorities', 'Bill of Rights specifically enumerates limits on government action against individuals']
           },
           {
-            label: "FEDERALIST 49 (Madison) — CONSTITUTIONAL CHANGE requires careful deliberation rather than popular passions: ___",
-            options: ['Large republic + representation refines + enlarges public views; multiple factions check each other', 'Constitutional change requires sustained deliberation not popular passions', '6-year Senate terms insulate from immediate public passions; people intend good but not always reason right', 'Lifetime tenure for judges; counter-majoritarian role protecting rights against majorities', 'Bill of Rights specifically enumerates limits on government action against individuals']
+            label: "BRUTUS No. 1 (Anti-Federalist) — warned against a large, centralized republic far from the people: ___",
+            options: ['Large republic + representation refines + enlarges public views; multiple factions check each other', 'A large republic cannot reflect the people and will swallow the states', 'Separation of powers + checks and balances let ambition counteract ambition', 'Lifetime tenure for judges; counter-majoritarian role protecting rights against majorities', 'Bill of Rights specifically enumerates limits on government action against individuals']
           },
           {
             label: "FEDERALIST 78 (Hamilton) — JUDICIAL INDEPENDENCE from public opinion via LIFETIME TENURE; COUNTER-MAJORITARIAN role: ___",
-            options: ['Large republic + representation refines + enlarges public views; multiple factions check each other', 'Constitutional change requires sustained deliberation not popular passions', '6-year Senate terms insulate from immediate public passions; people intend good but not always reason right', 'Lifetime tenure for judges; counter-majoritarian role protecting rights against majorities', 'Bill of Rights specifically enumerates limits on government action against individuals']
+            options: ['Large republic + representation refines + enlarges public views; multiple factions check each other', 'A large republic cannot reflect the people and will swallow the states', 'Separation of powers + checks and balances let ambition counteract ambition', 'Lifetime tenure for judges; counter-majoritarian role protecting rights against majorities', 'Bill of Rights specifically enumerates limits on government action against individuals']
           }
         ],
-        correctAnswers: ['Large republic + representation refines + enlarges public views; multiple factions check each other', 'Constitutional change requires sustained deliberation not popular passions', 'Lifetime tenure for judges; counter-majoritarian role protecting rights against majorities'],
+        correctAnswers: ['Large republic + representation refines + enlarges public views; multiple factions check each other', 'A large republic cannot reflect the people and will swallow the states', 'Lifetime tenure for judges; counter-majoritarian role protecting rights against majorities'],
         hint1: 'FEDERALIST 10 — Madison\'s most famous essay; defines FACTION; rejects eliminating (would require destroying liberty); identifies CAUSES "sown in the nature of man"; argues LARGE REPUBLIC + REPRESENTATION (not direct democracy) + DIVERSITY OF INTERESTS solves problem; "REFINE AND ENLARGE the public views"; multiple factions in extended republic CHECK each other.',
-        hint2: 'FEDERALIST 49 — Madison rejected frequent appeals to public to amend Constitution; "VENERATION which time bestows on every thing" provides STABILITY; popular PASSIONS without REASON would be dangerous; constitutional change should require DELIBERATION + SUSTAINED MAJORITY across institutions; Article V supermajority requirements (2/3 + 3/4) reflect this principle.',
+        hint2: 'BRUTUS No. 1 — the required Anti-Federalist document; argued a free republic must be small so representatives share the views of the people, and that the national government would absorb the states (EK 1.3.A.2).',
         hint3: 'FEDERALIST 78 — Hamilton on judiciary; LIFETIME TENURE for federal judges; COUNTER-MAJORITARIAN role to protect RIGHTS against MAJORITIES; "LEAST DANGEROUS BRANCH" (judges have no purse + no sword) but must be INSULATED from public opinion to perform constitutional duty; foundational for judicial independence; explains Marshall Court self-aware of public opinion (Marbury 1803) vs Roberts protection of ACA (NFIB 2012) to preserve legitimacy vs Dobbs 2022 reversed Roe DESPITE ~60% public support.'
       }
     },
@@ -311,7 +304,7 @@ Climate is largest example of ASYMMETRIC POLARIZATION — once bipartisan issue 
               "Most states, including Texas and Florida, have already adopted universal background checks, so Congress sees no need to act and the Supreme Court has upheld every gun law since Heller.",
             ],
             correctAnswer: 0,
-            explanation: 'GUN CONTROL FAILURE DESPITE 80%+ BACKGROUND CHECK SUPPORT — 5-STEP FRAMEWORK: (1) TYPE — policy implication + political consequences + constitutional/democratic. (2) CONCEPTS — intensity vs numbers; interest group power (NRA + GOA); institutional filters (Senate filibuster); federalism (state variation); judicial interpretation (Heller 2008 + McDonald 2010 + Bruen 2022); congressional responsiveness to organized constituencies; party polarization. (3) APPLY — universal background checks 80%+ both parties decades; assault weapons ban ~60%; red flag laws ~70%; legislative action fails. WHY: (a) INTENSITY MISMATCH — supporters majority + diffuse + lukewarm; NRA + GOA minority + intensely mobilized + single-issue voters threatening primary defeats; NRA scorecard rates + endorses + spends + mobilizes. (b) FILIBUSTER 60-vote — Manchin-Toomey 2013 failed despite Newtown public outrage. (c) CONGRESSIONAL DISTRICT GEOGRAPHY — gerrymandered safe Rep districts pro-gun; Rep primary threats from gun rights challengers. (d) FEDERALISM — CA + NY + NJ + IL + MA + CT strict; TX + FL + AZ + AL + MS permissive concealed/constitutional carry + stand-your-ground; uneven enforcement. (e) JUDICIAL — Heller 2008 Scalia individual right (overturned militia interpretation); McDonald 2010 incorporated 2nd Am to states; Bruen 2022 Thomas expanded public carry + "history + tradition" test; SCOTUS increasingly restricts gun regulation. (f) PARTY POLARIZATION — previously bipartisan (Reagan personally + Brady Act 1993) → now polarized; cross-pressured rare. (g) MEDIA POLARIZATION — Fox/Newsmax/OAN amplify gun rights vs MSNBC/CNN amplify gun control. (h) CONSTITUTIONAL ARGUMENTS elevate beyond ordinary policy. (4) BROADER CONTEXT — illustrates MADISONIAN DESIGN working as INTENDED; Federalist 10 + 51 + 71 explicitly designed to filter + delay + sometimes defeat majority preferences. (5) PREDICT — universal background checks unlikely federal Senate 60-vote absent dramatic crisis + sustained mobilization; state-level diverging; SCOTUS restricting state regulation under Bruen "history + tradition"; Bipartisan Safer Communities Act 2022 post-Uvalde modest reform required intense crisis; long-term depends on intensity gap closing (March for Our Lives 2018 attempted limited durability).'
+            explanation: 'GUN CONTROL FAILURE DESPITE 80%+ BACKGROUND CHECK SUPPORT — 5-STEP FRAMEWORK: (1) TYPE — policy implication + political consequences + constitutional/democratic. (2) CONCEPTS — intensity vs numbers; interest group power (NRA + GOA); institutional filters (Senate filibuster); federalism (state variation); judicial interpretation (Heller 2008 + McDonald 2010); congressional responsiveness to organized constituencies; party polarization. (3) APPLY — universal background checks 80%+ both parties decades; assault weapons ban ~60%; red flag laws ~70%; legislative action fails. WHY: (a) INTENSITY MISMATCH — supporters majority + diffuse + lukewarm; NRA + GOA minority + intensely mobilized + single-issue voters threatening primary defeats; NRA scorecard rates + endorses + spends + mobilizes. (b) FILIBUSTER 60-vote — Manchin-Toomey 2013 failed despite Newtown public outrage. (c) CONGRESSIONAL DISTRICT GEOGRAPHY — gerrymandered safe Rep districts pro-gun; Rep primary threats from gun rights challengers. (d) FEDERALISM — CA + NY + NJ + IL + MA + CT strict; TX + FL + AZ + AL + MS permissive concealed/constitutional carry + stand-your-ground; uneven enforcement. (e) JUDICIAL — Heller 2008 Scalia individual right (overturned militia interpretation); McDonald 2010 incorporated 2nd Am to states; SCOTUS increasingly restricts gun regulation. (f) PARTY POLARIZATION — previously bipartisan (Reagan personally + Brady Act 1993) → now polarized; cross-pressured rare. (g) MEDIA POLARIZATION — Fox/Newsmax/OAN amplify gun rights vs MSNBC/CNN amplify gun control. (h) CONSTITUTIONAL ARGUMENTS elevate beyond ordinary policy. (4) BROADER CONTEXT — illustrates MADISONIAN DESIGN working as INTENDED; Federalist 10 + 51 explicitly designed to filter + delay + sometimes defeat majority preferences. (5) PREDICT — universal background checks unlikely federal Senate 60-vote absent dramatic crisis + sustained mobilization; state-level diverging; SCOTUS restricting state regulation; Bipartisan Safer Communities Act 2022 post-Uvalde modest reform required intense crisis; long-term depends on intensity gap closing (March for Our Lives 2018 attempted limited durability).'
           }
         ]
       }

@@ -15,11 +15,11 @@ export const govVotingElectionsPart6Data = {
 |---|
 | 5-step framework for voting/elections AP problems (identify question type → identify concepts → apply data → connect to documents/cases → predict consequences) |
 | Worked example 1 — Why did Trump win 2024 despite trailing in fundraising? (multi-causal analysis: economy + immigration + media ecosystem + coalition shifts) |
-| Worked example 2 — Compare Voting Rights Act 1965 + Shelby County 2013 + Allen v. Milligan 2023 (continuity + change in voting rights) |
+| Worked example 2 — Continuity + change in voting rights (15th Amendment → Voting Rights Act 1965 → today's state voting laws) |
 | Worked example 3 — Should the Electoral College be abolished? (Federalism vs majoritarianism + reform proposals + constitutional constraints) |
-| Foundational documents for voting + elections (Federalist 10/52/57/68/71; Brutus 1; Constitution Articles I + II + Bill of Rights + 12th + 15th + 17th + 19th + 22nd + 23rd + 24th + 25th + 26th amendments) |
+| Foundational documents for voting + elections (required: Federalist 10, 51, 78; Brutus No. 1; Constitution Articles I + II + Bill of Rights + 12th + 15th + 17th + 19th + 22nd + 23rd + 24th + 25th + 26th amendments) |
 
-> 🔑 Key idea: PROBLEM-SOLVING for AP Voting/Elections requires SYSTEMATIC FRAMEWORK — (1) IDENTIFY question type (causal explanation, comparison, evaluation, prediction); (2) IDENTIFY relevant CONCEPTS (electoral systems + party theory + media + interest groups + suffrage + campaign finance); (3) APPLY DATA + EVIDENCE (poll numbers + election results + court decisions + constitutional provisions); (4) CONNECT to FOUNDATIONAL DOCUMENTS + REQUIRED CASES; (5) PREDICT CONSEQUENCES + COUNTERARGUMENTS. WORKED EXAMPLES — (1) Trump 2024 victory despite Harris fundraising lead requires MULTI-CAUSAL analysis (economic anxiety from inflation + Border crisis + manosphere podcast media ecosystem + ~27 pt young men shift + ~15 pt Latino shift + working-class multiracial coalition + Biden withdrawal disruption + RETROSPECTIVE VOTING); (2) Voting rights trajectory shows BOTH CONTINUITY (15th + 19th + 24th + 26th Amendments + VRA 1965 protect voting access) + CHANGE (Shelby County 2013 gutted preclearance; Allen v. Milligan 2023 preserved Section 2; ongoing struggle); (3) Electoral College debate balances FEDERALISM + small state protection + broad coalition vs MAJORITARIANISM + popular vote primacy + 5 popular vote losses (2000+2016) + slavery origins; reform difficult constitutionally (2/3+3/4 supermajorities); NPVIC alternative (17 states + DC = 209 EV) faces SCOTUS challenges. FOUNDATIONAL DOCUMENTS — Federalist 10 (factions + extended republic + representation), 52 + 57 (House design — close to people + 2-year terms), 68 (Electoral College defense per Hamilton), 71 (Senate insulation per Hamilton), 78 (judicial independence); Brutus 1 (Anti-Federalist on extended republic dangers); Constitution Articles I + II + amendments (12th 1804 separated pres/VP ballots; 15th 1870 race; 17th 1913 direct senators; 19th 1920 women; 22nd 1951 2-term presidential limit; 23rd 1961 DC; 24th 1964 poll tax; 25th 1967 succession; 26th 1971 age 18).
+> 🔑 Key idea: PROBLEM-SOLVING for AP Voting/Elections requires SYSTEMATIC FRAMEWORK — (1) IDENTIFY question type (causal explanation, comparison, evaluation, prediction); (2) IDENTIFY relevant CONCEPTS (electoral systems + party theory + media + interest groups + suffrage + campaign finance); (3) APPLY DATA + EVIDENCE (poll numbers + election results + court decisions + constitutional provisions); (4) CONNECT to FOUNDATIONAL DOCUMENTS + REQUIRED CASES; (5) PREDICT CONSEQUENCES + COUNTERARGUMENTS. WORKED EXAMPLES — (1) Trump 2024 victory despite Harris fundraising lead requires MULTI-CAUSAL analysis (economic anxiety from inflation + Border crisis + manosphere podcast media ecosystem + sharp young-men shift + ~15 pt Latino shift + working-class multiracial coalition + Biden withdrawal disruption + RETROSPECTIVE VOTING); (2) Voting rights trajectory shows BOTH CONTINUITY (15th + 19th + 24th + 26th Amendments + VRA 1965 protect voting access) + CHANGE (state voting laws on ID, registration, early and mail voting now vary widely; ongoing struggle); (3) Electoral College debate balances FEDERALISM + small state protection + broad coalition vs MAJORITARIANISM + popular vote primacy + 5 popular vote losses (2000+2016) + slavery origins; reform difficult constitutionally (2/3+3/4 supermajorities); NPVIC alternative (17 states + DC = 209 EV) faces SCOTUS challenges. REQUIRED FOUNDATIONAL DOCUMENTS — Federalist 10 (factions + extended republic + representation), 51 (separation of powers + checks), 78 (judicial independence); Brutus 1 (Anti-Federalist on extended republic dangers); Constitution Articles I + II + amendments (12th 1804 separated pres/VP ballots; 15th 1870 race; 17th 1913 direct senators; 19th 1920 women; 22nd 1951 2-term presidential limit; 23rd 1961 DC; 24th 1964 poll tax; 25th 1967 succession; 26th 1971 age 18).
       `
     },
     {
@@ -45,7 +45,7 @@ For AP Voting/Elections problems, use this systematic approach:
 - **Party theory** (sorting + polarization + nationalization + negative partisanship)
 - **Media effects** (agenda-setting + framing + priming + cultivation + minimal effects + manosphere podcasts)
 - **Interest groups** (PACs + Super PACs + 501(c)(4)s + ratings + endorsements + GOTV)
-- **Suffrage history** (5 amendments + VRA 1965 + Shelby 2013 + Allen 2023)
+- **Suffrage history** (5 amendments + VRA 1965 + state voting laws)
 - **Campaign finance** (FECA 1971 + Buckley 1976 + BCRA 2002 + Citizens United 2010 + SpeechNow 2010 + McCutcheon 2014)
 - **Voting behavior** (rational choice + sociological + psychological models)
 - **Realignment theory** (V.O. Key 1955 + Burnham 1970 + Mayhew 2002 + Levendusky 2009)
@@ -60,8 +60,8 @@ For AP Voting/Elections problems, use this systematic approach:
 
 ### Step 4: Connect to Foundational Documents + Cases
 
-- **FOUNDATIONAL DOCUMENTS** — Federalist 10 + 52 + 57 + 68 + 71 + 78; Brutus 1; Constitution + Bill of Rights + Amendments
-- **REQUIRED CASES** — Marbury + McCulloch + Brown + Engel + Tinker + NYT v US + Roe + Shaw + Lopez + Sullivan + Citizens United + Heller + Obergefell + Dobbs + (voting-specific) Allen v. Milligan 2023 + Bush v. Gore 2000
+- **FOUNDATIONAL DOCUMENTS** — required ones most useful here: Federalist 10 + 51 + 78; Brutus 1; Constitution + Bill of Rights + Amendments
+- **REQUIRED CASES** — the 14: Marbury + McCulloch + Schenck + Brown + Baker v. Carr + Engel + Gideon + Tinker + NYT v. US + Yoder + Shaw v. Reno + Lopez + McDonald + Citizens United; for elections, Baker v. Carr, Shaw v. Reno and Citizens United matter most
 
 ### Step 5: Predict Consequences + Counterarguments
 
@@ -79,26 +79,26 @@ For AP Voting/Elections problems, use this systematic approach:
 
 **STEP 3 — APPLY DATA + EVIDENCE**:
 
-(1) **ECONOMIC ANXIETY** — Biden ~38% approval (lowest since Carter 1980); inflation peaked 9.1% June 2022 (40-year high); ~25% cumulative price increase since pandemic; despite GDP/employment improving in 2023-24, economic anxiety persisted; "It's the economy, stupid" (Carville 1992) confirmed
+(1) **ECONOMIC ANXIETY** — Biden ~40% approval; inflation peaked 9.1% June 2022 (40-year high); ~20% cumulative price increase since 2021; despite GDP/employment improving in 2023-24, economic anxiety persisted; "It's the economy, stupid" (Carville 1992) confirmed
 
 (2) **IMMIGRATION CRISIS** — Border encounters peaked 300K+ monthly Dec 2023; voters cited immigration as #1 or #2 issue; Trump promised mass deportation + border wall completion; Harris associated with border crisis (despite being designated VP point person 2021)
 
-(3) **MEDIA ECOSYSTEM SHIFT** — Joe Rogan Experience (#1 podcast ~50M); Theo Von + Andrew Schulz + Lex Fridman + Shawn Ryan + Adin Ross + Nelk Boys + Patrick Bet-David + Tucker Carlson + Logan Paul; Trump did EXTENSIVE manosphere podcast circuit; reached YOUNG MEN in unprecedented way; FREE MEDIA worth millions in equivalent paid advertising
+(3) **MEDIA ECOSYSTEM SHIFT** — Joe Rogan Experience (#1 podcast); Theo Von + Andrew Schulz + Lex Fridman + Shawn Ryan + Adin Ross + Nelk Boys + Patrick Bet-David + Tucker Carlson + Logan Paul; Trump did EXTENSIVE manosphere podcast circuit; reached YOUNG MEN in unprecedented way; FREE MEDIA worth millions in equivalent paid advertising
 
-(4) **COALITION SHIFTS** — DIPLOMA DIVIDE expanded; LATINO REALIGNMENT (46% Trump historic high; men 55%); ASIAN SHIFT (~46% Trump); BLACK MEN SHIFT (22% Trump highest since 1960); YOUNG MEN SHIFT (~27 pt swing toward Trump 2020-2024); WORKING-CLASS MULTIRACIAL COALITION (non-college voters across races +14 Trump)
+(4) **COALITION SHIFTS** — DIPLOMA DIVIDE expanded; LATINO REALIGNMENT (46% Trump historic high; men 54%); ASIAN SHIFT (~40% Trump); BLACK MEN SHIFT (21% Trump); YOUNG MEN SHIFT (sharp swing toward Trump 2020-2024); WORKING-CLASS MULTIRACIAL COALITION (non-college voters across races +14 Trump)
 
 (5) **BIDEN WITHDRAWAL DISRUPTION** — Biden withdrew July 21 (after disastrous June 27 debate); Harris had only 3.5 months to introduce herself; no primary process; voters didn't have full opportunity to evaluate; Harris underperformed Biden 2020 in nearly every demographic
 
 (6) **TRUMP ASSASSINATION ATTEMPT** — July 13 Butler PA; bullet grazed ear; iconic bloody fist pump; rally-goer Corey Comperatore killed; Trump perceived as resilient; Republican unification at Milwaukee convention next day
 
-(7) **CAMPAIGN STRATEGY DIFFERENCES** — Harris focused on traditional ad buys + ground game; Trump used Musk's America PAC (~\\$300M+) for door-knocking + outside ads; Trump leveraged free media; both raised ~\\$2B+ with Super PACs (effectively similar resources)
+(7) **CAMPAIGN STRATEGY DIFFERENCES** — Harris focused on traditional ad buys + ground game; Trump used Musk's America PAC (~\\$260M) for door-knocking + outside ads; Trump leveraged free media; both sides had heavy Super PAC backing
 
 (8) **STRUCTURAL ELECTORAL COLLEGE FACTORS** — Trump won popular vote (no EC mismatch this time) but EC system favored geographic distribution of Trump's coalition
 
 **STEP 4 — CONNECT to FOUNDATIONAL DOCUMENTS + CASES**:
 - FEDERALIST 10 (Madison) — extended republic + representation refining + enlarging public views; Trump appealed to multiple constituencies across diverse coalition
 - FEDERALIST 71 (Hamilton) — Senate insulation; people don't always reason right; relevant to debate over economic perceptions (incumbent loss despite improving objective indicators)
-- CITIZENS UNITED v. FEC (2010) — campaign finance landscape allowed Musk's \\$300M+ unprecedented individual giving via Super PACs
+- CITIZENS UNITED v. FEC (2010) — campaign finance landscape allowed Musk's ~\\$290M unprecedented individual giving via Super PACs
 
 **STEP 5 — PREDICT CONSEQUENCES + COUNTERARGUMENTS**:
 - COUNTERARGUMENT — money MATTERED but at MARGINS (Trump won despite outspent in candidate-direct funds); structural factors + retrospective voting + media ecosystem more important
@@ -106,40 +106,32 @@ For AP Voting/Elections problems, use this systematic approach:
 - CONSEQUENCES — Republican TRIFECTA (White House + Senate 53-47 + House narrow); enables tax cuts + immigration + judicial confirmations + executive order ratifications; potential 2-3 SCOTUS appointments
 - BROADER CONTEXT — confirmed RETROSPECTIVE VOTING + party sorting; question whether 2024 represents NEW REALIGNMENT (V.O. Key 1955) or cyclical correction; midterms 2026 will test
 
-## Worked Example 2: Continuity + Change in Voting Rights (VRA 1965 → Shelby 2013 → Allen 2023)
+## Worked Example 2: Continuity + Change in Voting Rights (15th Amendment → VRA 1965 → State Voting Laws)
 
-**QUESTION** — Compare the IMPACT of the Voting Rights Act of 1965, the Supreme Court's 2013 decision in Shelby County v. Holder, and the 2023 decision in Allen v. Milligan. What do these cases tell us about CONTINUITY + CHANGE in American voting rights?
+**QUESTION** — How do the 15th Amendment, the Voting Rights Act of 1965 and today's state election laws show CONTINUITY + CHANGE in American voting rights?
 
-**STEP 1 — QUESTION TYPE** — Comparison + analytic; requires identifying both similarities + differences; assessing trajectory
+**STEP 1 — QUESTION TYPE** — Comparison over time; identify what stayed the same and what changed
 
-**STEP 2 — RELEVANT CONCEPTS** — Voting rights; preclearance (Section 5); coverage formula (Section 4(b)); vote dilution (Section 2); racial gerrymandering; 14th + 15th Amendment Equal Protection + voting rights; majority-minority districts; federalism balance; counter-majoritarian role
+**STEP 2 — RELEVANT CONCEPTS** — suffrage amendments (EK 5.1.A.1); government responses to social movements (EK 3.11.A.1.iv); structural barriers + state-controlled election rules (EK 5.2.A.1, 5.2.A.2); federalism
 
 **STEP 3 — APPLY DATA + EVIDENCE**:
-
-**VOTING RIGHTS ACT 1965** — signed by LBJ Aug 6 1965 after Selma Bloody Sunday + LBJ "We Shall Overcome" speech; SECTION 2 banned vote dilution NATIONWIDE (permanent); SECTION 5 required PRECLEARANCE for jurisdictions with HISTORY OF DISCRIMINATION; SECTION 4(b) COVERAGE FORMULA identified covered jurisdictions; reauthorized 1970 + 1975 + 1982 (Reagan; results test) + 2006 (Bush 25 years); Black voter registration in MS rose 6.7% (1964) → 59.8% (1967); created MAJORITY-MINORITY DISTRICTS
-
-**SHELBY COUNTY v. HOLDER (2013)** — 5-4 ROBERTS MAJORITY struck down Section 4(b) coverage formula as UNCONSTITUTIONAL; reasoning: formula based on "decades-old data" + "current burdens must be justified by current needs" + states' equal sovereignty; Section 5 preclearance UNUSABLE without coverage formula; AFTERMATH — Texas voter ID law within hours; NC sweeping 2013; multiple states closed polling places (especially Black + Hispanic areas); Georgia SB 202 2021; Congress hasn't passed new formula despite John Lewis Voting Rights Advancement Act + Freedom to Vote Act
-
-**ALLEN v. MILLIGAN (2023)** — 5-4 ROBERTS + KAVANAUGH MAJORITY (with liberals); SURPRISED observers; UPHELD SECTION 2 of VRA; ordered Alabama to draw SECOND BLACK-MAJORITY DISTRICT; held Alabama redistricting plan likely violated Section 2 by not creating sufficient majority-minority districts; Roberts continued Gingles framework requiring race CAN be considered to remedy past discrimination; significant DEPARTURE from anticipated further VRA gutting
+- **15TH AMENDMENT (1870)** — barred denying the vote on account of race, but Jim Crow states blocked Black voters with poll taxes, literacy tests, grandfather clauses and white primaries
+- **24TH AMENDMENT (1964)** — banned poll taxes in federal elections
+- **VOTING RIGHTS ACT 1965** — passed after the Selma marches; prohibited racial discrimination in voting, suspended literacy tests, sent federal examiners, and required covered jurisdictions to preclear changes (Section 5); Black registration in Mississippi rose from 6.7% (1964) to 59.8% (1967)
+- **TODAY'S STATE LAWS** — states still control polling hours, voter ID, registration (in person, online, automatic), and early, absentee and mail voting, so access varies by state
 
 **STEP 4 — CONNECT to FOUNDATIONAL DOCUMENTS + CASES**:
 - 14TH AMENDMENT EQUAL PROTECTION + 15TH AMENDMENT (no race-based voting denial)
-- BROWN v. BOARD (1954) precedent for using federal power to remedy discrimination
-- SHAW v. RENO (1993) — race CANNOT be PREDOMINANT redistricting factor (different context — racial gerrymandering challenges)
-- LULAC v. PERRY (2006) — Texas redistricting; mid-decade redistricting issues
-- NORTHWEST AUSTIN MUNICIPAL UTILITY DISTRICT v. HOLDER (2009) — Roberts signaled VRA preclearance under threat (signaled Shelby coming)
+- BAKER v. CARR (1962) — redistricting is justiciable; led to "one person, one vote"
+- SHAW v. RENO (1993) — districts drawn only on the basis of race face equal protection challenges
 
 **STEP 5 — PREDICT CONSEQUENCES + COUNTERARGUMENTS**:
 
-**CONTINUITY** — voting rights remain PROTECTED in principle; 15th + 14th Amendments + VRA Section 2 still apply; courts still protect against egregious discrimination; principle that voting is fundamental right + race-based discrimination prohibited remains
+**CONTINUITY** — the constitutional principle that the vote cannot be denied on account of race, sex, age 18+ or failure to pay a poll tax remains; federalism still leaves most election administration to states
 
-**CHANGE** — preclearance regime EFFECTIVELY GONE; states have MORE FLEXIBILITY in voting rules including rules with discriminatory effects; voter ID + reduced poll hours + closed locations + voter purges + restrictive registration + restricted mail voting easier to implement; federal courts MORE DEFERENTIAL to states; Congress DEADLOCKED on new coverage formula
+**CHANGE** — federal law now actively protects minority voting, and turnout gaps by race have narrowed, but state rules differ widely and debates over access vs. security continue
 
-**ASYMMETRIC** — Allen v. Milligan 2023 SURPRISED observers; suggests Roberts + Kavanaugh willing to defend SOME parts of VRA against further erosion; uneven trajectory not pure retreat
-
-**FUTURE** — voting rights litigation continues; LWV + ACLU + Brennan Center + state AGs file numerous lawsuits; states continue testing limits; CONGRESS IS DEADLOCKED on comprehensive VRA reform; SCOTUS may decide additional cases on Section 2 + voter ID + automatic registration
-
-**BROADER CONTEXT** — voting rights remain TENSION between FEDERAL ENFORCEMENT vs STATE FLEXIBILITY; reflects ongoing FEDERALISM debate; democratic legitimacy concerns; majority-minority districts both ENABLE Black + Latino representation AND CREATE GERRYMANDERING concerns
+**COUNTERARGUMENT** — supporters of strict ID and registration rules argue they protect election integrity; opponents argue they act as structural barriers that lower turnout (EK 5.2.A.1)
 
 ## Worked Example 3: Should the Electoral College Be Abolished?
 
@@ -158,10 +150,8 @@ For AP Voting/Elections problems, use this systematic approach:
 **REFORM PROPOSALS** — (1) NATIONAL POPULAR VOTE INTERSTATE COMPACT (NPVIC); 17 states + DC = 209 EV; would not require constitutional amendment but face SCOTUS challenges; (2) CONSTITUTIONAL AMENDMENT — never gained 2/3 + 3/4; defenders cite federalism + small state protection; (3) PROPORTIONAL ALLOCATION (Maine + Nebraska districts; CO proposed 2004 lost referendum); (4) DISTRICT METHOD; (5) AUTOMATIC PLAN; (6) REGIONAL PRIMARY system
 
 **STEP 4 — CONNECT to FOUNDATIONAL DOCUMENTS + CASES**:
-- FEDERALIST 68 (HAMILTON) — defended Electoral College — small group of "men most capable of analyzing the qualities adapted to the station" + checks against intrigue + foreign influence; provided LEGITIMATE method to determine winner
 - ARTICLE II + 12TH AMENDMENT 1804 (separated President + VP ballots after 1800 Jefferson/Burr tie)
-- CHIAFALO v. WASHINGTON (2020) — UNANIMOUS upheld state laws penalizing faithless electors
-- BUSH v. GORE (2000) — 5-4 stopped Florida recount; Equal Protection violation; controversially decided election in favor of Bush
+- EK 5.8.B.1 — states choose how to allocate electors; because the Electoral College result may differ from the national popular vote, the debate continues
 
 **STEP 5 — PREDICT CONSEQUENCES + COUNTERARGUMENTS**:
 
@@ -181,10 +171,7 @@ For AP Voting/Elections problems, use this systematic approach:
 | **Constitution Article I §3** | 1787 | Senate elected by state legislatures (changed by 17th Amendment 1913) |
 | **Constitution Article II §1** | 1787 | President elected by Electoral College |
 | **Federalist 10** | 1787 | Madison — extended republic + representation; representatives "refine and enlarge the public views" |
-| **Federalist 52** | 1788 | Madison — House design — close to people + 2-year terms |
-| **Federalist 57** | 1788 | Madison — House representation; election checks against tyranny |
-| **Federalist 68** | 1788 | Hamilton — Electoral College defense — small group of "men most capable" |
-| **Federalist 71** | 1788 | Hamilton — Senate insulation; people intend good but don't always reason right |
+| **Federalist 51** | 1788 | Madison — separation of powers + checks and balances; two-year House terms and six-year staggered Senate terms give each chamber a different relationship to voters |
 | **Federalist 78** | 1788 | Hamilton — judicial independence; counter-majoritarian role |
 | **Brutus 1** | 1787 | Anti-Federalist — extended republic dangers; lost ratification but won Bill of Rights |
 | **Bill of Rights** | 1791 | 1st Amendment speech + assembly + petition (campaign + voting protections) |
@@ -198,7 +185,7 @@ For AP Voting/Elections problems, use this systematic approach:
 | **25th Amendment** | 1967 | Presidential succession + disability (post-Kennedy assassination) |
 | **26th Amendment** | 1971 | Voting age lowered to 18 (Vietnam-era) |
 
-> 🔑 Key takeaway: PROBLEM-SOLVING for AP Voting/Elections requires SYSTEMATIC FRAMEWORK — (1) IDENTIFY question type (causal/comparison/evaluation/prediction); (2) IDENTIFY relevant CONCEPTS; (3) APPLY DATA + EVIDENCE; (4) CONNECT to FOUNDATIONAL DOCUMENTS + REQUIRED CASES; (5) PREDICT CONSEQUENCES + COUNTERARGUMENTS. WORKED EXAMPLES — (1) Trump 2024 victory despite Harris fundraising lead requires MULTI-CAUSAL analysis (RETROSPECTIVE VOTING per V.O. Key 1966 + Fiorina 1981 + economic anxiety from inflation + immigration concerns + manosphere podcast media ecosystem driving ~27 pt young men shift + diploma divide + Latino realignment 46% Trump + working-class multiracial coalition + Biden withdrawal disruption + Trump assassination attempt + Musk \\$300M+ funding); money MATTERED but at MARGINS not as primary determinant. (2) Voting rights trajectory shows BOTH CONTINUITY (15th + 19th + 24th + 26th Amendments + VRA 1965 + reauthorizations protect voting access; courts still strike egregious discrimination) AND CHANGE (Shelby County 2013 gutted preclearance via 5-4 Roberts on coverage formula; restrictions followed TX/NC/GA SB 202 2021; Allen v. Milligan 2023 SURPRISED observers + preserved Section 2 + ordered Alabama draw second Black-majority district); ASYMMETRIC trajectory not pure retreat; ongoing federal-state tension. (3) Electoral College debate balances FEDERALISM (Federalist 68 Hamilton; small state protection from 1787 grand bargain; broad geographic coalition; finality/legitimacy; swing state rotation; moderation incentives) vs MAJORITARIANISM (5 popular vote losses 1824/1876/1888/2000/2016; safe states disenfranchised; policy distortion to swing states; winner-take-all; small state overrepresentation 3.7x weight WY vs CA; slavery origins via 3/5 compromise); REFORM proposals — NPVIC (17 states + DC = 209 EV; doesn't require amendment but faces SCOTUS challenges); constitutional amendment (impossible currently — 2/3 + 3/4 supermajorities); proportional allocation; Chiafalo v. Washington 2020 unanimous upheld faithless elector laws; Bush v. Gore 2000 stopped Florida recount. FOUNDATIONAL DOCUMENTS for voting — Constitution Articles I + II + 12th + 15th + 17th + 19th + 22nd + 23rd + 24th + 25th + 26th amendments; Federalist 10 (Madison extended republic) + 52 + 57 (Madison House) + 68 (Hamilton EC defense) + 71 (Hamilton Senate insulation) + 78 (Hamilton judicial); Brutus 1 (Anti-Federalist).
+> 🔑 Key takeaway: PROBLEM-SOLVING for AP Voting/Elections requires SYSTEMATIC FRAMEWORK — (1) IDENTIFY question type (causal/comparison/evaluation/prediction); (2) IDENTIFY relevant CONCEPTS; (3) APPLY DATA + EVIDENCE; (4) CONNECT to FOUNDATIONAL DOCUMENTS + REQUIRED CASES; (5) PREDICT CONSEQUENCES + COUNTERARGUMENTS. WORKED EXAMPLES — (1) Trump 2024 victory despite Harris fundraising lead requires MULTI-CAUSAL analysis (RETROSPECTIVE VOTING per V.O. Key 1966 + Fiorina 1981 + economic anxiety from inflation + immigration concerns + manosphere podcast media ecosystem driving a sharp young-men shift + diploma divide + Latino realignment 46% Trump + working-class multiracial coalition + Biden withdrawal disruption + Trump assassination attempt + Musk ~\\$290M funding); money MATTERED but at MARGINS not as primary determinant. (2) Voting rights trajectory shows BOTH CONTINUITY (15th + 19th + 24th + 26th Amendments + VRA 1965 + reauthorizations protect voting access) AND CHANGE (Jim Crow barriers dismantled, but state rules on ID, registration and mail voting now vary widely); ongoing federal-state tension. (3) Electoral College debate balances FEDERALISM (small state protection from 1787 grand bargain; broad geographic coalition; finality/legitimacy; swing state rotation; moderation incentives) vs MAJORITARIANISM (5 popular vote losses 1824/1876/1888/2000/2016; safe states disenfranchised; policy distortion to swing states; winner-take-all; small state overrepresentation 3.7x weight WY vs CA; slavery origins via 3/5 compromise); REFORM proposals — NPVIC (17 states + DC = 209 EV; doesn't require amendment but faces SCOTUS challenges); constitutional amendment (impossible currently — 2/3 + 3/4 supermajorities); proportional allocation. REQUIRED FOUNDATIONAL DOCUMENTS for voting — Constitution Articles I + II + 12th + 15th + 17th + 19th + 22nd + 23rd + 24th + 25th + 26th amendments; Federalist 10 (Madison extended republic) + 51 (Madison checks) + 78 (Hamilton judicial); Brutus 1 (Anti-Federalist).
       `
     },
     {
@@ -216,7 +203,7 @@ For AP Voting/Elections problems, use this systematic approach:
               "Treat the outcome as random polling error, since retrospective voting theory does not apply to an election in which the incumbent did not run.",
             ],
             correctAnswer: 0,
-            explanation: 'MULTI-CAUSAL APPROACH using 5-step framework: (1) QUESTION TYPE — causal explanation; (2) CONCEPTS — RETROSPECTIVE VOTING (V.O. Key 1966; Fiorina 1981) + economic voting + presidential approval + partisan media + manosphere podcast effects + coalition shifts + campaign finance reality; (3) DATA — ECONOMIC ANXIETY (Biden ~38% approval lowest since Carter 1980; inflation 9.1% June 2022 peak; ~25% cumulative since pandemic; "It\'s the economy, stupid" Carville 1992); IMMIGRATION (300K+ monthly Dec 2023; #1-2 issue; Harris associated); MEDIA ECOSYSTEM (Rogan ~50M + manosphere circuit Von+Schulz+Fridman+Ryan+Ross+Nelk+Bet-David+Carlson+Paul drove ~27 pt young men shift; FREE MEDIA worth millions); COALITION SHIFTS (diploma divide expanded; Latino 46% Trump men 55%; Asian 46%; Black men 22% highest since 1960; young men ~27 pt shift; working-class multiracial); BIDEN WITHDRAWAL (July 21 after June 27 debate; Harris 3.5 months; no primary; underperformed Biden 2020); TRUMP ASSASSINATION ATTEMPT (July 13 Butler PA bloody fist pump; Republican unification); CAMPAIGN STRATEGY (Harris traditional ad buys + ground game; Trump Musk\'s America PAC ~\\$300M+ door-knocking + free media); (4) FOUNDATIONAL DOCS + CASES — Federalist 10 (+ non-required Federalist 71) + required case Citizens United 2010; (5) CONSEQUENCES — money MATTERED at MARGINS not primary; Republican TRIFECTA enables tax cuts + immigration + judicial + executive orders + 2-3 SCOTUS appointments; 2026 midterms test realignment (V.O. Key 1955; Burnham 1970) vs cyclical.'
+            explanation: 'MULTI-CAUSAL APPROACH using 5-step framework: (1) QUESTION TYPE — causal explanation; (2) CONCEPTS — RETROSPECTIVE VOTING (V.O. Key 1966; Fiorina 1981) + economic voting + presidential approval + partisan media + manosphere podcast effects + coalition shifts + campaign finance reality; (3) DATA — ECONOMIC ANXIETY (Biden ~40% approval; inflation 9.1% June 2022 peak; ~20% cumulative since 2021; "It\'s the economy, stupid" Carville 1992); IMMIGRATION (300K+ monthly Dec 2023; #1-2 issue; Harris associated); MEDIA ECOSYSTEM (Rogan #1 podcast + manosphere circuit Von+Schulz+Fridman+Ryan+Ross+Nelk+Bet-David+Carlson+Paul drove a sharp young-men shift; FREE MEDIA worth millions); COALITION SHIFTS (diploma divide expanded; Latino 46% Trump men 54%; Asian ~40%; Black men 21%; young men sharp shift; working-class multiracial); BIDEN WITHDRAWAL (July 21 after June 27 debate; Harris 3.5 months; no primary; underperformed Biden 2020); TRUMP ASSASSINATION ATTEMPT (July 13 Butler PA bloody fist pump; Republican unification); CAMPAIGN STRATEGY (Harris traditional ad buys + ground game; Trump Musk\'s America PAC ~\\$260M door-knocking + free media); (4) FOUNDATIONAL DOCS + CASES — Federalist 10 (+ non-required Federalist 71) + required case Citizens United 2010; (5) CONSEQUENCES — money MATTERED at MARGINS not primary; Republican TRIFECTA enables tax cuts + immigration + judicial + executive orders + 2-3 SCOTUS appointments; 2026 midterms test realignment (V.O. Key 1955; Burnham 1970) vs cyclical.'
           }
         ]
       }
@@ -228,10 +215,10 @@ For AP Voting/Elections problems, use this systematic approach:
       exercise: {
         questions: [
           {
-            prompt: "FEDERALIST PAPER (Hamilton 1788) defended ELECTORAL COLLEGE as 'small group of MEN MOST CAPABLE OF ANALYZING THE QUALITIES ADAPTED TO THE STATION'.",
-            answer: 'Federalist 68',
-            acceptableAnswers: ['Federalist 68', 'Federalist No. 68', '68', 'Fed 68', 'federalist 68', 'Federalist Paper 68', 'Federalist no 68'],
-            hint: 'FEDERALIST 68 (Hamilton 1788) — defended ELECTORAL COLLEGE; argued small group of "men most capable of analyzing the qualities adapted to the station" + checks against intrigue + foreign influence; provided LEGITIMATE method to determine winner; ENGLISH constitutional precedent of indirect selection; protected against demagoguery; Founders feared direct democracy + executive demagoguery; modern critics argue actual EC has not functioned as Hamilton envisioned (electors mostly bound by state law per Chiafalo v. Washington 2020); ARTICLE II + 12TH AMENDMENT 1804 (separated pres/VP after 1800 Jefferson/Burr tie).'
+            prompt: "Number of electoral votes a presidential candidate needs to win (a majority of the 538).",
+            answer: '270',
+            acceptableAnswers: ['270'],
+            hint: '538 = 435 House + 100 Senate + 3 for DC; if no one reaches a majority, the House chooses (EK 5.8.A.1).'
           },
           {
             prompt: "Year that 17TH AMENDMENT changed SENATE ELECTION from STATE LEGISLATURES to DIRECT VOTE BY PEOPLE.",
@@ -255,20 +242,20 @@ For AP Voting/Elections problems, use this systematic approach:
       exercise: {
         dropdowns: [
           {
-            label: "FEDERALIST 68 (Hamilton 1788) — _______:",
-            options: ['Defended Electoral College — small group of "men most capable of analyzing the qualities adapted to the station"; checks against intrigue + foreign influence', 'Madison defended extended republic + representation refining + enlarging public views; controlling effects of factions', 'Madison defended House design — close to people + 2-year terms; representation checks against tyranny', 'Hamilton defended judicial independence + lifetime tenure + counter-majoritarian role + "least dangerous branch"', 'Anti-Federalist (Robert Yates likely) argued extended republic dangerous + lost ratification but won Bill of Rights']
+            label: "FEDERALIST 51 (Madison 1788) — _______:",
+            options: ['Madison defended separation of powers + checks and balances; ambition must counteract ambition', 'Madison defended extended republic + representation refining + enlarging public views; controlling effects of factions', 'Madison defended House design — close to people + 2-year terms; representation checks against tyranny', 'Hamilton defended judicial independence + lifetime tenure + counter-majoritarian role + "least dangerous branch"', 'Anti-Federalist (Robert Yates likely) argued extended republic dangerous + lost ratification but won Bill of Rights']
           },
           {
             label: "FEDERALIST 10 (Madison 1787) — _______:",
-            options: ['Defended Electoral College — small group of "men most capable of analyzing the qualities adapted to the station"; checks against intrigue + foreign influence', 'Madison defended extended republic + representation refining + enlarging public views; controlling effects of factions', 'Madison defended House design — close to people + 2-year terms; representation checks against tyranny', 'Hamilton defended judicial independence + lifetime tenure + counter-majoritarian role + "least dangerous branch"', 'Anti-Federalist (Robert Yates likely) argued extended republic dangerous + lost ratification but won Bill of Rights']
+            options: ['Madison defended separation of powers + checks and balances; ambition must counteract ambition', 'Madison defended extended republic + representation refining + enlarging public views; controlling effects of factions', 'Madison defended House design — close to people + 2-year terms; representation checks against tyranny', 'Hamilton defended judicial independence + lifetime tenure + counter-majoritarian role + "least dangerous branch"', 'Anti-Federalist (Robert Yates likely) argued extended republic dangerous + lost ratification but won Bill of Rights']
           },
           {
             label: "BRUTUS 1 (1787) — _______:",
-            options: ['Defended Electoral College — small group of "men most capable of analyzing the qualities adapted to the station"; checks against intrigue + foreign influence', 'Madison defended extended republic + representation refining + enlarging public views; controlling effects of factions', 'Madison defended House design — close to people + 2-year terms; representation checks against tyranny', 'Hamilton defended judicial independence + lifetime tenure + counter-majoritarian role + "least dangerous branch"', 'Anti-Federalist (Robert Yates likely) argued extended republic dangerous + lost ratification but won Bill of Rights']
+            options: ['Madison defended separation of powers + checks and balances; ambition must counteract ambition', 'Madison defended extended republic + representation refining + enlarging public views; controlling effects of factions', 'Madison defended House design — close to people + 2-year terms; representation checks against tyranny', 'Hamilton defended judicial independence + lifetime tenure + counter-majoritarian role + "least dangerous branch"', 'Anti-Federalist (Robert Yates likely) argued extended republic dangerous + lost ratification but won Bill of Rights']
           }
         ],
-        correctAnswers: ['Defended Electoral College — small group of "men most capable of analyzing the qualities adapted to the station"; checks against intrigue + foreign influence', 'Madison defended extended republic + representation refining + enlarging public views; controlling effects of factions', 'Anti-Federalist (Robert Yates likely) argued extended republic dangerous + lost ratification but won Bill of Rights'],
-        hint1: 'FEDERALIST 68 (Hamilton 1788) — defended ELECTORAL COLLEGE in EIGHTH essay on Article II executive design; argued small group of "men most capable of analyzing the qualities adapted to the station" + checks against intrigue + foreign influence; provided LEGITIMATE method to determine winner; ARTICLE II + 12TH AMENDMENT 1804 (separated pres/VP after 1800 Jefferson/Burr tie); modern critics argue actual EC has not functioned as Hamilton envisioned (electors mostly bound by state law per Chiafalo v. Washington 2020).',
+        correctAnswers: ['Madison defended separation of powers + checks and balances; ambition must counteract ambition', 'Madison defended extended republic + representation refining + enlarging public views; controlling effects of factions', 'Anti-Federalist (Robert Yates likely) argued extended republic dangerous + lost ratification but won Bill of Rights'],
+        hint1: 'FEDERALIST 51 (Madison 1788) — "if men were angels, no government would be necessary"; separation of powers and checks and balances control abuses by majorities (EK 1.6.A.2); the two chambers\' different terms and constituencies are part of that design.',
         hint2: 'FEDERALIST 10 (Madison 1787) — defended EXTENDED REPUBLIC + REPRESENTATION + DIVERSITY as remedy for FACTIONS; representatives "REFINE AND ENLARGE the public views" via deliberation; rejected eliminating factions (would destroy liberty); argued LARGE REPUBLIC SAFER than small (more diverse interests + harder for single faction to dominate); defies Montesquieu small-republic theory; THE central document on Madisonian institutional filtering of public opinion.',
         hint3: 'BRUTUS 1 (1787) — Anti-Federalist essay (Robert Yates likely author); argued extended republic dangerous (loses direct connection to people) + national power threats to liberty + judicial review danger to popular sovereignty + bill of rights necessary; DIRECTLY OPPOSES Federalist 10 extended republic argument; lost ratification debate but secured Bill of Rights as compromise; foundational Anti-Federalist text on direct democracy + small republic + state sovereignty.'
       }
@@ -288,7 +275,7 @@ For AP Voting/Elections problems, use this systematic approach:
               "Citizens United is a required case that upheld BCRA's limits on corporate ads, so super PACs remain illegal and Brutus 1's fears were answered.",
             ],
             correctAnswer: 0,
-            explanation: '5-STEP FRAMEWORK on Citizens United: (1) QUESTION TYPE — Causal/evaluative; intended + unintended consequences. (2) CONCEPTS — Campaign finance regulation + corporate personhood (Dartmouth College v. Woodward 1819) + 1st Am speech + corruption + independent vs coordinated + mega-donor influence + accountability + democratic legitimacy. (3) DATA — CITIZENS UNITED v. FEC (2010) — 5-4 Kennedy (with Roberts + Scalia + Alito + Thomas); reversed Austin v. Michigan Chamber of Commerce 1990 + parts of McConnell v. FEC 2003; struck BCRA Section 203 corporate/union electioneering prohibition; corporations have 1st Am speech rights for independent expenditures; speaker identity-neutral; preserved disclosure + direct contribution ban; SPEECHNOW v. FEC 2010 DC Circuit created Super PACs 2 months later; McCUTCHEON 2014 struck aggregate individual limits; aftermath: Super PAC + dark money + mega-donor era; Musk 2024 ~\\$300M+ (America PAC + Future Coalition); 2024 ~\\$15B vs ~\\$1B 1990 inflation-adjusted; 0.01% donors give 70%+. (4) FOUNDATIONAL DOCS + CASES — 1st Am; Buckley v. Valeo 1976 "money = speech"; Austin 1990 (overturned); McConnell 2003 (partially overturned); Federalist 10 (factional landscape). (5) CONSEQUENCES — INTENDED: protects political speech; UNINTENDED: mega-donor influence; corporate + union spending exploded; dark money via 501(c)(4); cost explosion (\\$15B 2024); Super PACs (Musk + Adelson + Soros + Bloomberg + Mercer + Koch); 0.01% give 70%+; democratic legitimacy concerns; partisan asymmetry; COUNTERARGUMENTS — defenders cite 1st Am protection + corporations as aggregations + balance from opposing donors + strict scrutiny; REFORMS — DISCLOSE + Freedom to Vote fail filibuster; small donor matching (NYC + DC); amendment impossible (2/3 + 3/4); FUTURE — controversial precedent; current 6-3 majority unlikely to reverse; transparency more achievable; ASYMMETRIC POLARIZATION amplifies effects.'
+            explanation: '5-STEP FRAMEWORK on Citizens United: (1) QUESTION TYPE — Causal/evaluative; intended + unintended consequences. (2) CONCEPTS — Campaign finance regulation + corporate personhood (Dartmouth College v. Woodward 1819) + 1st Am speech + corruption + independent vs coordinated + mega-donor influence + accountability + democratic legitimacy. (3) DATA — CITIZENS UNITED v. FEC (2010) — 5-4 Kennedy (with Roberts + Scalia + Alito + Thomas); reversed Austin v. Michigan Chamber of Commerce 1990 + parts of McConnell v. FEC 2003; struck BCRA Section 203 corporate/union electioneering prohibition; corporations have 1st Am speech rights for independent expenditures; speaker identity-neutral; preserved disclosure + direct contribution ban; SPEECHNOW v. FEC 2010 DC Circuit created Super PACs 2 months later; McCUTCHEON 2014 struck aggregate individual limits; aftermath: Super PAC + dark money + mega-donor era; Musk 2024 ~\\$290M (America PAC + Future Coalition); 2024 ~\\$16B (record); 0.01% donors give ~25-40%. (4) FOUNDATIONAL DOCS + CASES — 1st Am; Buckley v. Valeo 1976 "money = speech"; Austin 1990 (overturned); McConnell 2003 (partially overturned); Federalist 10 (factional landscape). (5) CONSEQUENCES — INTENDED: protects political speech; UNINTENDED: mega-donor influence; corporate + union spending exploded; dark money via 501(c)(4); cost explosion (\\$16B 2024); Super PACs (Musk + Adelson + Soros + Bloomberg + Mercer + Koch); 0.01% give ~25-40%; democratic legitimacy concerns; partisan asymmetry; COUNTERARGUMENTS — defenders cite 1st Am protection + corporations as aggregations + balance from opposing donors + strict scrutiny; REFORMS — DISCLOSE + Freedom to Vote fail filibuster; small donor matching (NYC + DC); amendment impossible (2/3 + 3/4); FUTURE — controversial precedent; current 6-3 majority unlikely to reverse; transparency more achievable; ASYMMETRIC POLARIZATION amplifies effects.'
           }
         ]
       }

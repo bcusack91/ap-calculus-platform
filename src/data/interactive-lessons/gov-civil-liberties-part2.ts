@@ -18,7 +18,7 @@ export const govCivilLibertiesPart2Data = {
 | 2nd Amendment + 4th Amendment doctrine |
 | Right to privacy + due process evolution |
 
-> 🔑 Key idea: First Amendment religion: ESTABLISHMENT (Engel 1962, Lemon 1971, Kennedy v. Bremerton 2022) + FREE EXERCISE (Yoder 1972, Smith 1990, Hobby Lobby 2014). Speech evolution: CLEAR-AND-PRESENT-DANGER (Schenck 1919) → BRANDENBURG IMMINENT LAWLESS ACTION (1969); SYMBOLIC SPEECH (Tinker 1969, Texas v. Johnson 1989); CONTENT NEUTRALITY (R.A.V. v. St. Paul 1992); UNPROTECTED SPEECH categories. 2nd Am: HELLER 2008 (individual right) → MCDONALD 2010 (incorporated) → BRUEN 2022 (history-and-tradition test). 4th Am: WARRANT REQUIREMENT + EXCLUSIONARY RULE (Mapp 1961) + EXCEPTIONS. PRIVACY: Griswold 1965 → Roe 1973 → Casey 1992 → Dobbs 2022 (overruled Roe).
+> 🔑 Key idea: First Amendment religion: ESTABLISHMENT (Engel 1962) + FREE EXERCISE (Yoder 1972, Smith 1990, Hobby Lobby 2014). Speech evolution: CLEAR-AND-PRESENT-DANGER (Schenck 1919) → BRANDENBURG IMMINENT LAWLESS ACTION (1969); SYMBOLIC SPEECH (Tinker 1969, Texas v. Johnson 1989); UNPROTECTED SPEECH categories. 2nd Am: HELLER 2008 (individual right) → MCDONALD 2010 (incorporated to the states). 4th Am: WARRANT REQUIREMENT + EXCLUSIONARY RULE (Mapp 1961) + EXCEPTIONS. PRIVACY: Griswold 1965 → Roe 1973 → Casey 1992 → Dobbs 2022 (overruled Roe).
       `
     },
     {
@@ -29,7 +29,7 @@ export const govCivilLibertiesPart2Data = {
 
 | Clause | Text | Doctrine | Key cases |
 |---|---|---|---|
-| **Establishment** | 'Congress shall make no law respecting an establishment of religion' | Government cannot establish official religion or favor one religion over others (or religion over non-religion); recently shifted from LEMON TEST to HISTORICAL TRADITION TEST | Engel v. Vitale 1962 (school prayer struck), Lemon v. Kurtzman 1971 (3-prong test: secular purpose + primary effect neither advances nor inhibits religion + no excessive entanglement), Kennedy v. Bremerton 2022 (overruled Lemon; coach's post-game prayer protected) |
+| **Establishment** | 'Congress shall make no law respecting an establishment of religion' | Government cannot establish official religion or favor one religion over others (or religion over non-religion) | Engel v. Vitale 1962 (school prayer struck — government may not compose or sponsor an official school prayer, even a voluntary, nondenominational one) |
 | **Free Exercise** | 'or prohibiting the free exercise thereof' | Government cannot prohibit religious practice; balance with neutral generally-applicable laws | Reynolds v. US 1879 (no polygamy exemption), Wisconsin v. Yoder 1972 (Amish exempt from compulsory school after 8th grade), Employment Division v. Smith 1990 (Scalia: neutral generally-applicable laws don\'t require religious exemption), Burwell v. Hobby Lobby 2014 (RFRA 1993 protects closely-held corporations from contraceptive mandate) |
 
 ## First Amendment — Speech Doctrines
@@ -39,9 +39,7 @@ export const govCivilLibertiesPart2Data = {
 | **1919-1969** | CLEAR AND PRESENT DANGER | Schenck v. US 1919 (Holmes: 'falsely shouting fire in a theatre'); Whitney v. California 1927 |
 | **1969-present** | IMMINENT LAWLESS ACTION (BRANDENBURG TEST) | Brandenburg v. Ohio 1969 — speech protected unless directed to inciting imminent lawless action AND likely to produce such action |
 | **Symbolic speech** | Conduct intended to convey message + others would understand | Tinker v. Des Moines 1969 (black armbands), Texas v. Johnson 1989 (flag burning), Snyder v. Phelps 2011 (Westboro funeral protests) |
-| **Content neutrality** | Content-based regulation gets STRICT SCRUTINY | R.A.V. v. St. Paul 1992 (cross-burning ordinance struck), Reed v. Town of Gilbert 2015 |
 | **Prior restraint** | Strong presumption AGAINST prior restraint | Near v. Minnesota 1931, NYT v. US 1971 (Pentagon Papers) |
-| **Commercial speech** | Less protection than political; CENTRAL HUDSON test | Central Hudson v. PSC 1980, Sorrell v. IMS Health 2011 |
 | **Campaign finance** | Spending = speech (Buckley v. Valeo 1976) | Citizens United v. FEC 2010 (corporate independent expenditures), McCutcheon v. FEC 2014 (aggregate limits) |
 
 UNPROTECTED categories: (1) INCITEMENT (Brandenburg); (2) FIGHTING WORDS (Chaplinsky v. New Hampshire 1942); (3) TRUE THREATS (Virginia v. Black 2003); (4) OBSCENITY (Miller v. California 1973 three-part test); (5) DEFAMATION of private individuals; for public figures NYT v. Sullivan 1964 actual malice standard; (6) CHILD PORNOGRAPHY (NY v. Ferber 1982).
@@ -52,8 +50,6 @@ UNPROTECTED categories: (1) INCITEMENT (Brandenburg); (2) FIGHTING WORDS (Chapli
 |---|---|---|
 | 2008 | DC v. Heller | INDIVIDUAL right to keep firearms in home for self-defense (5-4 Scalia majority); REJECTED collective militia-only interpretation |
 | 2010 | McDonald v. Chicago | INCORPORATED 2nd Am to states via 14th Am Due Process Clause |
-| 2022 | NY State Rifle v. Bruen | Established HISTORY-AND-TRADITION TEST — government must show regulation is consistent with HISTORICAL TRADITION of firearm regulation; struck NY's may-issue concealed carry permit law |
-| 2024 | US v. Rahimi | Upheld federal law barring those subject to domestic violence restraining orders from possessing firearms; refined Bruen test |
 
 ## Fourth Amendment
 
@@ -81,7 +77,7 @@ The Constitution does NOT explicitly mention 'privacy' but the Court has recogni
 | 2015 | Obergefell v. Hodges | Same-sex marriage right under 14th Am Due Process + Equal Protection |
 | 2022 | DOBBS v. JACKSON | OVERRULED Roe + Casey; 'right to abortion is not deeply rooted in this Nation\'s history and tradition'; returned abortion to state regulation |
 
-> 🔑 Key takeaway: First Amendment SPEECH evolved from CLEAR-AND-PRESENT-DANGER (Schenck 1919) to BRANDENBURG IMMINENT LAWLESS ACTION (1969). RELIGION clauses recently moved from LEMON TEST to HISTORICAL TRADITION (Kennedy v. Bremerton 2022). 2ND AM: HELLER 2008 individual right + MCDONALD 2010 incorporated + BRUEN 2022 history-and-tradition. 4TH AM: WARRANT + EXCLUSIONARY RULE + exceptions. PRIVACY: Griswold 1965 → Roe 1973 → Casey 1992 → DOBBS 2022 OVERRULED Roe; abortion returned to states.
+> 🔑 Key takeaway: First Amendment SPEECH evolved from CLEAR-AND-PRESENT-DANGER (Schenck 1919) to BRANDENBURG IMMINENT LAWLESS ACTION (1969). RELIGION clauses balance ESTABLISHMENT (Engel 1962) against FREE EXERCISE (Yoder 1972). 2ND AM: HELLER 2008 individual right + MCDONALD 2010 incorporated; the gun debate weighs public safety against individual rights (EK 3.6.A.2). 4TH AM: WARRANT + EXCLUSIONARY RULE + exceptions. PRIVACY: Griswold 1965 → Roe 1973 → Casey 1992 → DOBBS 2022 OVERRULED Roe; abortion returned to states.
       `
     },
     {
@@ -91,26 +87,26 @@ The Constitution does NOT explicitly mention 'privacy' but the Court has recogni
       exercise: {
         questions: [
           {
-            question: "How did *Brandenburg v. Ohio* (1969) modify the *Schenck v. United States* (1919) clear-and-present-danger standard for speech?",
+            question: "In *Brandenburg v. Ohio* (1969), the Court held that the government may not punish advocacy of force unless it is directed to inciting imminent lawless action and is likely to produce such action. How does this holding refine the clear-and-present-danger standard of *Schenck v. United States* (1919)?",
             options: [
-              "It replaced clear and present danger with a stricter test protecting speech unless it incites imminent lawless action",
-              "It replaced imminent lawless action with clear and present danger, letting states punish more antiwar speech",
-              "It reaffirmed clear and present danger, upholding the conviction of a Klan leader for advocating violence",
-              "It abolished all limits on speech, so even direct incitement to immediate violence is now protected"
+              "It narrows Schenck's limit, so speech may be punished only when it aims to cause immediate illegal acts and probably will cause them",
+              "It loosens Schenck's limit, so states may now punish any speech that criticizes a war or the draft",
+              "It reaffirms Schenck unchanged, so speech with any tendency to cause harm in wartime may be punished",
+              "It abolishes all limits on speech, so even direct incitement to immediate violence is now protected"
             ],
             correctAnswer: 0,
-            explanation: 'BRANDENBURG (1969) replaced SCHENCK (1919) clear-and-present-danger with more SPEECH-PROTECTIVE IMMINENT LAWLESS ACTION test. (1) SCHENCK 1919 (Holmes) — clear-and-present-danger; Espionage Act anti-draft leaflets; "falsely shouting fire"; (2) WHITNEY 1927 + DENNIS 1951 — broad version to convict communists; (3) BRANDENBURG 1969 — KKK leader, Ohio criminal syndicalism; unanimous REVERSED + adopted IMMINENT LAWLESS ACTION: speech protected unless (a) DIRECTED TO inciting imminent lawless action AND (b) LIKELY to produce; (4) Both INTENT to incite imminent (not future) AND LIKELIHOOD; mere advocacy of future violence protected; (5) Much more SPEECH-PROTECTIVE; protects most political/extremist; governs incitement.'
+            explanation: 'EK 3.3.A.2.iv: restrictions on speech that creates a CLEAR AND PRESENT DANGER (Schenck 1919, a required case — anti-draft leaflets in wartime) have been REFINED by later rulings. Brandenburg narrowed the restriction: abstract advocacy of violence is protected, and only speech aimed at producing imminent lawless action that is likely to produce it may be punished. The refinement does not loosen Schenck to allow punishing war criticism, does not leave a broad "bad tendency" rule in place, and does not remove all limits (incitement is still punishable).'
           },
           {
-            question: "What does the *Bruen* (2022) HISTORY-AND-TRADITION TEST require for 2nd Amendment regulations?",
+            question: "What did the Supreme Court decide in *McDonald v. Chicago* (2010)?",
             options: [
-              "Gun laws must fit the nation's historical tradition of firearm regulation, not just serve an important interest",
-              "Gun laws must pass strict scrutiny rather than any tradition test, so states need a compelling interest and narrow means",
-              "Gun laws need only a rational basis, so states may ignore history and require permit applicants to show proper cause",
-              "Gun laws must be approved by Congress, since the Second Amendment reserves firearm regulation to the national government"
+              "The Second Amendment right to keep and bear arms applies to state and local governments",
+              "The Second Amendment protects only state militias, so cities may ban handguns for private citizens",
+              "Congress may ban guns near schools under the Commerce Clause, overriding any state law on firearms",
+              "The Second Amendment binds only the national government, so Chicago's handgun ban was upheld in full"
             ],
             correctAnswer: 0,
-            explanation: 'BRUEN (2022) established HISTORY-AND-TRADITION TEST, REPLACING tiers-of-scrutiny. (1) PRIOR — after Heller 2008 + McDonald 2010, courts applied TWO-STEP: (a) historical; (b) means-end scrutiny; (2) BRUEN (Thomas) — REJECTED means-end scrutiny; only HISTORY-AND-TRADITION: regulation valid only if CONSISTENT WITH HISTORICAL TRADITION OF FIREARM REGULATION; identify historical analogues from FOUNDING ERA (1791) + possibly 1868 RECONSTRUCTION; (3) APPLICATION — struck NY MAY-ISSUE concealed carry "proper cause"; (4) RAHIMI 2024 — refined; analogues not "historical twin"/"dead ringer"; UPHELD federal DV restraining order firearm prohibition; (5) Strengthened 2nd Am; many regulations vulnerable.'
+            explanation: 'McDONALD v. CHICAGO (2010) is a required case (Topics 3.5 and 3.7): the Court held that the Second Amendment right to keep and bear arms is incorporated against state and local governments through the Due Process Clause of the 14th Amendment, and it struck down Chicago\'s handgun ban. It is an example of SELECTIVE INCORPORATION limiting state regulation of a civil liberty. The Commerce Clause gun case is US v. Lopez (1995), which struck down — not upheld — a federal ban on guns near schools.'
           }
         ]
       }
@@ -125,19 +121,19 @@ The Constitution does NOT explicitly mention 'privacy' but the Court has recogni
             prompt: "Year *DOBBS v. JACKSON WOMEN'S HEALTH ORGANIZATION* OVERRULED Roe v. Wade.",
             answer: '2022',
             acceptableAnswers: ['2022'],
-            hint: 'Same Term as Bruen; Alito majority.'
+            hint: 'Alito majority; returned abortion regulation to legislatures (EK 3.9.A.2).'
           },
           {
-            prompt: "Year *MAPP v. OHIO* incorporated the 4th Am EXCLUSIONARY RULE to states.",
-            answer: '1961',
-            acceptableAnswers: ['1961'],
-            hint: 'Warren Court; first major criminal procedure incorporation.'
+            prompt: "Name of the rule that bars evidence illegally seized in violation of the 4th Amendment from being used against a suspect in a criminal trial.",
+            answer: 'exclusionary rule',
+            acceptableAnswers: ['exclusionary rule', 'exclusionary', 'the exclusionary rule'],
+            hint: 'It EXCLUDES the tainted evidence from trial (EK 3.8.A.4).'
           },
           {
-            prompt: "Year *DC v. HELLER* established 2nd Am as INDIVIDUAL right (not collective militia-only).",
-            answer: '2008',
-            acceptableAnswers: ['2008'],
-            hint: 'Two years before McDonald v. Chicago incorporated 2nd Am to states.'
+            prompt: "Number of the amendment whose ban on cruel and unusual punishment is the basis for Court rulings on the death penalty.",
+            answer: '8',
+            acceptableAnswers: ['8', '8th', 'eighth', 'eight'],
+            hint: 'Also bans excessive bail and excessive fines (EK 3.6.A.1).'
           }
         ]
       }
@@ -149,20 +145,20 @@ The Constitution does NOT explicitly mention 'privacy' but the Court has recogni
       exercise: {
         dropdowns: [
           {
-            label: "Established BRANDENBURG IMMINENT LAWLESS ACTION test for 1st Am incitement (1969): ___",
-            options: ['*Brandenburg v. Ohio*', '*Tinker v. Des Moines*', '*Engel v. Vitale*', '*Wisconsin v. Yoder*']
+            label: "Upheld a conviction for distributing anti-draft leaflets during World War I — clear-and-present-danger test (1919): ___",
+            options: ['*Schenck v. United States*', '*Tinker v. Des Moines*', '*Engel v. Vitale*', '*Wisconsin v. Yoder*']
           },
           {
             label: "Symbolic speech via black armbands protesting Vietnam — student speech does not 'shed at schoolhouse gate' (1969): ___",
-            options: ['*Brandenburg v. Ohio*', '*Tinker v. Des Moines*', '*Engel v. Vitale*', '*Wisconsin v. Yoder*']
+            options: ['*Schenck v. United States*', '*Tinker v. Des Moines*', '*Engel v. Vitale*', '*Wisconsin v. Yoder*']
           },
           {
             label: "Struck NY public school morning prayer under 1st Am Establishment Clause (1962): ___",
-            options: ['*Brandenburg v. Ohio*', '*Tinker v. Des Moines*', '*Engel v. Vitale*', '*Wisconsin v. Yoder*']
+            options: ['*Schenck v. United States*', '*Tinker v. Des Moines*', '*Engel v. Vitale*', '*Wisconsin v. Yoder*']
           }
         ],
-        correctAnswers: ['*Brandenburg v. Ohio*', '*Tinker v. Des Moines*', '*Engel v. Vitale*'],
-        hint1: 'Brandenburg 1969 — KKK leader; Ohio criminal syndicalism statute; SCOTUS unanimously reversed + adopted imminent lawless action test (replaced Schenck clear-and-present-danger).',
+        correctAnswers: ['*Schenck v. United States*', '*Tinker v. Des Moines*', '*Engel v. Vitale*'],
+        hint1: 'Schenck 1919 — Holmes; Espionage Act conviction for anti-draft leaflets; "falsely shouting fire in a theatre"; clear-and-present-danger, later refined by Brandenburg 1969.',
         hint2: 'Tinker 1969 — Iowa students suspended for black armbands protesting Vietnam; Fortas: "students do not shed their constitutional rights at the schoolhouse gate"; symbolic speech protected.',
         hint3: 'Engel 1962 — NY Regents prayer; Black majority struck on 1st Am Establishment Clause grounds; major school prayer case.'
       }
@@ -174,26 +170,26 @@ The Constitution does NOT explicitly mention 'privacy' but the Court has recogni
       exercise: {
         questions: [
           {
-            question: "How did *Wisconsin v. Yoder* (1972), *Employment Division v. Smith* (1990), and *Burwell v. Hobby Lobby* (2014) shape Free Exercise doctrine?",
+            question: "In *Wisconsin v. Yoder* (1972), the Court ruled that Amish parents could not be required to keep their children in school past eighth grade. Which First Amendment tension does the case illustrate?",
             options: [
-              "Yoder applied strict scrutiny, Smith exempted neutral general laws from it, and Hobby Lobby used RFRA to restore it",
-              "Yoder denied the Amish exemption, Smith created the Lemon test, and Hobby Lobby struck down RFRA",
-              "Yoder used rational basis review, Smith required strict scrutiny for all laws, and Hobby Lobby limited religious claims by corporations",
-              "Yoder incorporated free exercise, Smith ended school prayer, and Hobby Lobby banned religious employers' exemptions"
+              "Free exercise of religion outweighed the state's interest in compulsory education",
+              "Establishment clause limits outweighed the parents' interest in practicing their faith",
+              "Freedom of the press outweighed the state's power to regulate what schools may teach about religion",
+              "The state's police power outweighed the Amish families' religious practice"
             ],
             correctAnswer: 0,
-            explanation: 'FREE EXERCISE EVOLUTION: (1) YODER (1972) — Amish exempt from Wisconsin compulsory schooling through 16; UNANIMOUS; COMPELLING INTEREST + LEAST RESTRICTIVE MEANS (strict scrutiny); 300 years of Amish communities; (2) SMITH (1990, Scalia) — REJECTED strict scrutiny for NEUTRAL LAWS OF GENERAL APPLICABILITY; Native Am Church peyote unemployment; narrowed Yoder; (3) RFRA 1993 — Congress RESTORED strict scrutiny; compelling interest + least restrictive means before substantially burdening religion; (4) HOBBY LOBBY (2014) — closely-held corporation exempt from ACA contraceptive mandate under RFRA; (5) Subsequent — Trinity Lutheran 2017 + Espinoza 2020 + Carson 2022 (school funding); Kennedy v. Bremerton 2022 (prayer + overruled Lemon).'
+            explanation: 'EK 3.2.A.1: the free exercise and establishment clauses reflect an ongoing tension between government power to make law and an individual\'s right to religious freedom. In YODER (1972, a required case) the Court held that Wisconsin\'s compulsory-attendance law, as applied to Amish children past eighth grade, burdened the parents\' FREE EXERCISE of religion more than the state\'s interest in two more years of schooling could justify — so the religious claim won, not the state. The establishment clause and freedom of the press were not the issue.'
           },
           {
-            question: "How did *Griswold v. Connecticut* (1965) → *Roe v. Wade* (1973) → *Planned Parenthood v. Casey* (1992) → *Dobbs v. Jackson* (2022) evolve the right to privacy doctrine?",
+            question: "How did *Griswold v. Connecticut* (1965), *Roe v. Wade* (1973) and *Dobbs v. Jackson Women's Health Organization* (2022) shape the right to privacy?",
             options: [
-              "Griswold found a privacy right, Roe extended it to abortion, Casey kept it with an undue burden test, and Dobbs overruled both",
-              "Griswold rejected a privacy right, Roe created one for contraception, Casey overruled Roe, and Dobbs restored it",
-              "Griswold located privacy in the Commerce Clause, Roe limited it to marriage, Casey ended trimesters, and Dobbs extended it nationwide",
-              "Griswold, Roe, Casey and Dobbs each expanded privacy step by step, with Dobbs adding protection for abortion"
+              "Griswold found a privacy right, Roe extended it to abortion, and Dobbs overruled Roe and left abortion to legislatures",
+              "Griswold rejected a privacy right, Roe created one for contraception, and Dobbs restored it",
+              "Griswold located privacy in the Commerce Clause, Roe limited it to marriage, and Dobbs extended it nationwide to every state",
+              "Griswold, Roe and Dobbs each expanded privacy step by step, with Dobbs adding protection for abortion"
             ],
             correctAnswer: 0,
-            explanation: 'PRIVACY DOCTRINE: (1) GRISWOLD (1965, Douglas) — struck CT marital contraception ban; PENUMBRAS + EMANATIONS from 1st + 3rd + 4th + 5th + 9th Amendments; (2) ROE (1973, Blackmun) — extended to abortion; TRIMESTER FRAMEWORK; 14th Am SUBSTANTIVE DUE PROCESS; (3) CASEY (1992, joint opinion) — REPLACED trimester with UNDUE BURDEN; reaffirmed Roe under stare decisis; (4) DOBBS (2022, Alito 6-3 outcome / 5-4 overruling) — OVERRULED Roe + Casey; abortion NOT "deeply rooted in history and tradition" (Glucksberg test); returned to STATE; trigger laws + protections; (5) Thomas concurrence suggested reconsidering Griswold + Lawrence + Obergefell; major Roberts Court shift.'
+            explanation: 'EK 3.9.A.2 names these three cases (they are not on the list of 14 required cases, but their holdings are tested): GRISWOLD (1965) interpreted the due process clause to protect a right of PRIVACY from government infringement (a ban on contraceptives); ROE (1973) used substantive due process to extend that privacy right to ABORTION; DOBBS (2022) OVERRULED Roe, holding that the Constitution does not confer a right to abortion and leaving its regulation to LEGISLATURES. Which actions the privacy right protects continues to be debated.'
           }
         ]
       }

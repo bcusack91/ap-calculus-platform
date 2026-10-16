@@ -167,15 +167,15 @@ Burning 1 t of methane makes $44/16 = 2.75$ t of $CO_{2}$, so 300 t makes about 
             options: ['water vapor', 'carbon dioxide', 'nitrous oxide', 'methane']
           },
           {
-            label: 'The 2015 agreement under which each country sets its own emission targets is the ___',
-            options: ['Paris Agreement', 'Kyoto Protocol', 'Montreal Protocol', 'Kigali Amendment']
+            label: 'The 1997 treaty that set binding greenhouse gas targets for developed countries is the ___',
+            options: ['Kyoto Protocol', 'Montreal Protocol', 'Clean Air Act', 'Endangered Species Act']
           }
         ],
-        correctAnswers: ['global warming potential', 'water vapor', 'Paris Agreement'],
+        correctAnswers: ['global warming potential', 'water vapor', 'Kyoto Protocol'],
         hint1: 'Carbon dioxide is the reference, with a value of 1.',
         hint2: 'Its residence time is only about nine days.',
-        hint3: 'Kyoto came first, in 1997, with binding targets for developed countries only.',
-        explanation: 'Global warming potential compares heat trapped per kilogram with carbon dioxide. Water vapor dominates the natural greenhouse effect but rains out in days, so it amplifies warming rather than starting it. The Paris Agreement (2015) uses nationally determined contributions.'
+        hint3: 'Montreal handled ozone; this one handled greenhouse gases.',
+        explanation: 'Global warming potential compares heat trapped per kilogram with carbon dioxide. Water vapor dominates the natural greenhouse effect but rains out in days, so it amplifies warming rather than starting it. The Kyoto Protocol (1997) set binding greenhouse gas targets for developed countries; the Montreal Protocol addressed ozone-depleting CFCs.'
       }
     },
     {

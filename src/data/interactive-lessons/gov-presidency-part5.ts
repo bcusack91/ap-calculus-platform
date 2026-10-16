@@ -17,7 +17,7 @@ export const govPresidencyPart5Data = {
 | Lincoln + Reconstruction (1861-77) | Wartime expansion + Johnson impeachment retreat |
 | Progressive Era (1901-21) | TR's "stewardship theory" + Wilson's rhetorical presidency |
 | Modern presidency (1933-present) | FDR's transformation; rhetorical + administrative + national-security state |
-| Imperial/post-imperial (1945-present) | Schlesinger's Imperial Presidency thesis; Watergate response; modern reassertion |
+| Imperial/post-imperial (1945-present) | Limited vs expansive views of the office debated (EK 2.6.A.3); Watergate response; modern reassertion |
 
 > 🔑 Key idea: The presidency has expanded from a limited Article II office to the dominant institution of American government — driven by INTERNAL TRANSFORMATIONS (TR/Wilson/FDR) + EXTERNAL FORCES (industrialization, Cold War, mass media).
       `
@@ -58,7 +58,7 @@ export const govPresidencyPart5Data = {
 |---|---|
 | Suspended habeas corpus | Without congressional approval (Art I § 9 cl. 2 reserves this power); challenged in *Ex parte Merryman* 1861 (Chief Justice Taney circuit-ruled against; Lincoln ignored) |
 | Blockade of Confederate ports (1861) | Without congressional war declaration; upheld in *Prize Cases* 1863 |
-| Emancipation Proclamation (1863) | Executive war measure freeing slaves in rebel territory |
+| Emancipation Proclamation (1863) — required foundational document | Executive war measure freeing enslaved people in states in rebellion; the 13th Amendment (1865) then abolished slavery permanently (EK 3.12.A.1.i) |
 | Habeas Corpus Suspension Act 1863 | Congressional ratification of Lincoln's earlier suspension |
 
 ## Progressive Era (1901-21)
@@ -89,7 +89,7 @@ export const govPresidencyPart5Data = {
 | **Nixon-Ford-Carter (1969-81)** | Watergate (Imperial Presidency thesis); War Powers 1973; pardon (Ford 1974); Iran hostage crisis |
 | **Reagan-GHW Bush (1981-93)** | Conservative restoration; Cold War end; Gulf War 1991 |
 | **Clinton-GW Bush-Obama (1993-2017)** | Globalization era; 9/11 + War on Terror; financial crisis 2008; ACA 2010 |
-| **Trump-Biden-Trump (2017-)** | Polarization era; impeachment normalization (4 impeachments — none convicted); EO + agreement oscillation; January 6 + presidential immunity (*Trump v. United States* 2024) |
+| **Trump-Biden-Trump (2017-)** | Polarization era; impeachment normalization (4 impeachments — none convicted); EO + agreement oscillation; January 6 |
 
 ### FDR's Modern-Presidency Transformation
 
@@ -103,7 +103,7 @@ export const govPresidencyPart5Data = {
 
 ## Imperial Presidency Era (1945-present)
 
-### Schlesinger's "Imperial Presidency" Thesis
+### The "Imperial Presidency" Debate (EK 2.6.A.3)
 
 | Element | Description |
 |---|---|
@@ -120,7 +120,7 @@ export const govPresidencyPart5Data = {
 | GW Bush (2001-09) | Post-9/11 AUMF; Iraq War 2003; warrantless wiretapping; enhanced interrogation; military commissions; Guantanamo |
 | Obama (2009-17) | Drone strikes (~500+); Libya 2011 without congressional authorization; Iran nuclear deal as executive agreement |
 | Trump (2017-21, 2025-) | Travel ban (3 versions); border wall via emergency declaration; Soleimani strike 2020; January 6; mass pardons; second-term EO blitz |
-| Biden (2021-25) | Afghanistan withdrawal; student-loan forgiveness via HEROES Act (struck *Biden v. Nebraska* 2023); Israel + Ukraine military aid |
+| Biden (2021-25) | Afghanistan withdrawal; student-loan forgiveness by executive action (blocked by the courts in 2023); Israel + Ukraine military aid |
 
 > 🔑 Key takeaway: The presidency has evolved from a LIMITED Article II office (1789-1900) through PROGRESSIVE-ERA EXPANSION (TR + Wilson) to the MODERN PRESIDENCY (FDR onward) characterized by institutional EOP + administrative state + national security state + rhetorical presidency + unilateral action; Schlesinger's Imperial Presidency thesis (1973) captured a critical moment but the underlying expansion has continued and accelerated.
       `
@@ -143,15 +143,15 @@ export const govPresidencyPart5Data = {
             explanation: 'Andrew Jackson (1829-37) INVENTED modern democratic + assertive presidency: (1) DIRECT POPULAR MANDATE — first elected primarily by popular vote (1828 democratization) → first to claim representative authority outside Congress as tribune of "the people"; (2) ACTIVE VETO on POLICY grounds (not just constitutional); BANK VETO 1832 = defining moment, central issue 1832 election (Jackson won); (3) SPOILS SYSTEM "to the victor belong the spoils" — replaced Federalist civil service; (4) ASSERTIVE REMOVAL — unlimited removal authority; (5) KITCHEN CABINET — informal advisors. Template for TR + Wilson + FDR.'
           },
           {
-            question: "Which best describes Schlesinger's 'Imperial Presidency' thesis and its modern relevance?",
+            question: "Which best describes Lincoln's Emancipation Proclamation (1863), a required foundational document, as an exercise of presidential power?",
             options: [
-              "Schlesinger argued presidents, especially Nixon, had pushed war and secrecy powers beyond constitutional limits",
-              "Schlesinger argued presidents had become too weak after Watergate, leaving Congress to dominate foreign and war policy",
-              "Schlesinger argued Congress had seized the war power from presidents, using the War Powers Resolution to micromanage troops",
-              "Schlesinger argued that FDR's New Deal agencies, not presidents, had become the true rulers of national security policy"
+              "A wartime order issued as commander in chief that freed enslaved people only in the states in rebellion",
+              "A constitutional amendment passed by Congress and ratified by the states that abolished slavery in every state at once",
+              "A Supreme Court order, issued after a ruling that slavery violated the Equal Protection Clause, that freed all enslaved people",
+              "A treaty negotiated with Great Britain and ratified by two-thirds of the Senate to end the international slave trade for good"
             ],
             correctAnswer: 0,
-            explanation: 'Schlesinger Imperial Presidency (1973): modern presidency (especially Nixon Vietnam + Watergate) grew BEYOND CONSTITUTIONAL BOUNDS in war + national security. (1) DRIVERS: Cold War (1947-91), nuclear weapons (sole launch authority), intelligence growth, standing military, EOP growth (~50 1939 → ~1,800 modern). (2) NIXON: Cambodia bombing, impoundment, executive privilege overreach, Watergate. (3) REACTION: War Powers Resolution 1973, Budget Act 1974, FOIA 1974, FISA 1978, Independent Counsel 1978. (4) MODERN RELEVANCE: despite reforms, presidential power has continued growing post-9/11 — sweeping AUMFs, drone strikes, surveillance, mass deportations, emergency declarations.'
+            explanation: 'EK 3.12.A.1.i: the Emancipation Proclamation freed enslaved people in the states in rebellion against the United States; Lincoln justified it as a WAR MEASURE under his commander-in-chief power — an expansive use of presidential power (EK 2.6.A.3). Permanent, nationwide abolition came only with the 13th Amendment (1865). It was not a court order, and it was not a treaty.'
           }
         ]
       }
@@ -175,10 +175,10 @@ export const govPresidencyPart5Data = {
             hint: 'Two years before Korean War armistice (1953).'
           },
           {
-            prompt: "Year of the War Powers Resolution + Schlesinger's *Imperial Presidency* publication.",
-            answer: '1973',
-            acceptableAnswers: ['1973'],
-            hint: 'Watergate-era; Nixon\'s second term; same year as *Roe v. Wade*.'
+            prompt: "Year Lincoln issued the Emancipation Proclamation, a required foundational document.",
+            answer: '1863',
+            acceptableAnswers: ['1863'],
+            hint: 'January 1, in the middle of the Civil War; same year as the Gettysburg Address.'
           }
         ]
       }
@@ -234,7 +234,7 @@ export const govPresidencyPart5Data = {
               "The framers favored a congressional council to run the government, so modern change fits their plan"
             ],
             correctAnswer: 0,
-            explanation: 'Counter (modern presidency NOT fundamental break): framers wrote Art II in DELIBERATELY GENERAL TERMS expecting adaptation. (1) HAMILTON Federalist 70 ANTICIPATED energetic executive — "Energy in the Executive is a leading character in the definition of good government" — defended unity + 4-yr term for ACTIVE NATIONAL LEADERSHIP. (2) WASHINGTON set modern precedents (refused 3rd term but flexibility; Cabinet outside Constitution; neutrality power). (3) STRUCTURAL CHECKS REMAIN ROBUST — Congress (lawmaking/appropriations/impeachment/override/advice + consent); courts (Youngstown, US v. Nixon, Trump v. US); voters (elections). (4) POPULAR SOVEREIGNTY — president only nationally-elected official. (5) ALL expansions subject to constitutional checks — even controversial (steel-mill seizure, Watergate, Pentagon Papers, NSA surveillance, J6 immunity) faced judicial + congressional + electoral pushback.'
+            explanation: 'Counter (modern presidency NOT fundamental break): framers wrote Art II in DELIBERATELY GENERAL TERMS expecting adaptation. (1) HAMILTON Federalist 70 ANTICIPATED energetic executive — "Energy in the Executive is a leading character in the definition of good government" — defended unity + 4-yr term for ACTIVE NATIONAL LEADERSHIP. (2) WASHINGTON set modern precedents (refused 3rd term but flexibility; Cabinet outside Constitution; neutrality power). (3) STRUCTURAL CHECKS REMAIN ROBUST — Congress (lawmaking/appropriations/impeachment/override/advice + consent); courts (Youngstown, US v. Nixon); voters (elections). (4) POPULAR SOVEREIGNTY — president only nationally-elected official. (5) ALL expansions subject to constitutional checks — even controversial (steel-mill seizure, Watergate, Pentagon Papers, NSA surveillance) faced judicial + congressional + electoral pushback.'
           }
         ]
       }

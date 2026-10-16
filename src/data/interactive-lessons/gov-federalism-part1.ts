@@ -117,7 +117,7 @@ Federalism is one of three principal forms of constitutional organization for di
             prompt: "The amendment that reserves to the states all powers not delegated to the federal government: the ___ Amendment.",
             answer: '10th',
             acceptableAnswers: ['10th', 'tenth', '10', 'X', 'tenth amendment'],
-            hint: 'Part of the Bill of Rights (ratified 1791); centerpiece of the modern federalism revival (Lopez 1995, Printz 1997, NFIB 2012).'
+            hint: 'Part of the Bill of Rights (ratified 1791); centerpiece of the modern federalism revival (Lopez 1995).'
           },
           {
             prompt: "The constitutional clause that authorizes Congress to use 'all means which are appropriate' to its enumerated powers (Article I, § 8, clause 18): the ___ Clause (also called the Elastic Clause).",

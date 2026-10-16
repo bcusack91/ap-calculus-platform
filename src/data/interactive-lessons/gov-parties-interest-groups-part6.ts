@@ -17,9 +17,9 @@ export const govPartiesInterestGroupsPart6Data = {
 | Worked example 1 (analyze Citizens United impact on interest group activity) |
 | Worked example 2 (analyze AIPAC United Democracy Project 2024 primary defeats of Bush + Bowman) |
 | Worked example 3 (analyze working-class multiracial realignment 2016/2024) |
-| Foundational documents (Federalist 10 factions; Federalist 51 ambition counter ambition; Federalist 56 representation; Federalist 70 energetic executive; Federalist 78 judicial review; Brutus 1) |
+| Foundational documents (Federalist 10 factions; Federalist 51 ambition counter ambition; Federalist 70 energetic executive; Federalist 78 judicial review; Brutus 1) |
 
-> 🔑 Key idea: 5-STEP FRAMEWORK for AP party + interest group analysis — (1) IDENTIFY the political phenomenon (party realignment + interest group strategy + campaign finance + lobbying + polarization); (2) IDENTIFY relevant ACTORS (parties + interest groups + candidates + voters + courts + legislators + bureaucracy + media); (3) APPLY relevant THEORIES (pluralism Dahl 1961 + elitism Mills 1956 + hyperpluralism Lowi 1969 + Olson 1965 collective action + Iyengar 2012 affective polarization + Levendusky 2009 partisan sort + The Party Decides 2008 elite control) + RELEVANT CASES (Citizens United 2010 + SpeechNow 2010 + McCutcheon 2014 + Buckley v. Valeo 1976 + Janus v. AFSCME 2018 + DC v. Heller 2008); (4) APPLY relevant FOUNDATIONAL DOCUMENTS (Federalist 10 factions + Federalist 51 ambition counter ambition + Federalist 56 representation + Federalist 70 energetic executive + Federalist 78 judicial review + Brutus 1 anti-federalist + Constitution); (5) EVALUATE consequences for democratic governance + interest group influence + party system + electoral competition + legislative process + judicial confirmations + executive action.
+> 🔑 Key idea: 5-STEP FRAMEWORK for AP party + interest group analysis — (1) IDENTIFY the political phenomenon (party realignment + interest group strategy + campaign finance + lobbying + polarization); (2) IDENTIFY relevant ACTORS (parties + interest groups + candidates + voters + courts + legislators + bureaucracy + media); (3) APPLY relevant THEORIES (pluralism Dahl 1961 + elitism Mills 1956 + hyperpluralism Lowi 1969 + Olson 1965 collective action + Iyengar 2012 affective polarization + Levendusky 2009 partisan sort + The Party Decides 2008 elite control) + RELEVANT CASES (Citizens United 2010 + SpeechNow 2010 + McCutcheon 2014 + Buckley v. Valeo 1976 + DC v. Heller 2008); (4) APPLY relevant FOUNDATIONAL DOCUMENTS (Federalist 10 factions + Federalist 51 ambition counter ambition + Federalist 70 energetic executive + Federalist 78 judicial review + Brutus 1 anti-federalist + Constitution); (5) EVALUATE consequences for democratic governance + interest group influence + party system + electoral competition + legislative process + judicial confirmations + executive action.
       `
     },
     {
@@ -34,7 +34,7 @@ What is being analyzed?
 - Party realignment (1860 Lincoln + 1932 FDR + 1968 Nixon + 2024 Trump?)
 - Interest group strategy (lobbying + litigation + electoral)
 - Campaign finance (Citizens United + SpeechNow + Super PACs + dark money)
-- Lobbying influence (~\\$4.1B + 12,000 registered + ALEC + revolving door)
+- Lobbying influence (~\\$4.4B + 13,000 registered + ALEC + revolving door)
 - Polarization (party loyalty 95% + affective polarization)
 
 ### Step 2 — Identify Relevant Actors
@@ -78,9 +78,7 @@ Who are the key players?
 | **Citizens United v. FEC** | 2010 | Corporate 1st Am speech rights for independent expenditures |
 | **SpeechNow.org v. FEC** | 2010 (DC Cir.) | Created Super PACs (unlimited individual contributions) |
 | **McCutcheon v. FEC** | 2014 | Struck aggregate individual contribution limits |
-| **Janus v. AFSCME** | 2018 | Public employees can opt out of union dues |
 | **DC v. Heller** | 2008 | 2nd Amendment individual right; NRA litigation |
-| **NY State Rifle v. Bruen** | 2022 | Struck NY concealed carry restrictions |
 
 ### Step 4 — Apply Relevant Foundational Documents
 
@@ -98,12 +96,6 @@ Who are the key players?
 - **SEPARATION of POWERS** + CHECKS + BALANCES
 - **DOUBLE SECURITY** — federalism (state v. national) + separation of powers (within national)
 - **'IF MEN WERE ANGELS, NO GOVERNMENT NECESSARY'**
-
-#### Federalist 56 (Madison 1788) — Number of Representatives
-
-- House size adequate to represent diverse interests
-- Each rep needs sufficient local knowledge
-- 65 original House members adequate
 
 #### Federalist 70 (Hamilton 1788) — Energetic Executive
 
@@ -157,13 +149,13 @@ CITIZENS UNITED v. FEC (2010) — 5-4 Kennedy; held CORPORATIONS have 1st Amendm
 ### Step 5 — Consequences
 
 - INTEREST GROUP INFLUENCE EXPANDED dramatically
-- SUPER PACS proliferated (American Bridge + American Crossroads + Senate Majority + Senate Leadership + Future Forward + MAGA Inc. + America PAC ~\\$300M+)
+- SUPER PACS proliferated (American Bridge + American Crossroads + Senate Majority + Senate Leadership + Future Forward + MAGA Inc. + America PAC ~\\$260M)
 - DARK MONEY 501(c)(4)s explosion (Crossroads GPS + CAP + AFP + One Nation)
 - MEGA-DONOR ERA (Adelson + Soros + Mercer + Koch + Bloomberg + Musk)
-- ~\\$15B 2024 cycle record; 0.01% give 70%+
+- ~\\$16B 2024 cycle record; 0.01% give ~25-40%
 - INTEREST GROUP REORGANIZATION — many established Super PAC arms + 501(c)(4) arms
-- AIPAC United Democracy Project ~\\$32M 2024 defeated Cori Bush + Jamaal Bowman primaries
-- AFL-CIO ~\\$50M+ for Harris
+- AIPAC United Democracy Project ~\\$24M+ 2024 defeated Cori Bush + Jamaal Bowman primaries
+- AFL-CIO major pro-Harris spending
 - DEMOCRATIC LEGITIMACY CONCERNS — public trust + perception money buys influence
 - REFORM EFFORTS FAIL — DISCLOSE Act + Freedom to Vote + constitutional amendment all fail
 
@@ -175,7 +167,7 @@ CITIZENS UNITED v. FEC (2010) — 5-4 Kennedy; held CORPORATIONS have 1st Amendm
 
 - **AIPAC** (American Israel Public Affairs Committee) traditional bipartisan pro-Israel lobby
 - **UNITED DEMOCRACY PROJECT** (Super PAC arm) created post-Citizens United/SpeechNow 2010
-- **SPENDING** — ~\\$32M 2024 cycle (~\\$15M to defeat Bush + Bowman)
+- **SPENDING** — ~\\$24M+ 2024 vs Bush + Bowman (~\\$15M vs Bowman; ~\\$9M vs Bush)
 - **DEFEATED** — Bush (MO-1) lost primary to Wesley Bell July 2024; Bowman (NY-16) lost to George Latimer June 2024
 - **CONTEXT** — Both had been critical of Israel during Gaza war
 - **TACTICS** — heavy ad spending + GOTV + endorsements (often did NOT mention Israel; focused on local issues)
@@ -190,7 +182,7 @@ CITIZENS UNITED v. FEC (2010) — 5-4 Kennedy; held CORPORATIONS have 1st Amendm
 ### Analysis
 
 - **2016 TRIGGER** — Trump won Rust Belt (PA + MI + WI flipped from Obama 2012)
-- **2024 EXPANSION** — Latino men 55% Trump; Black men 22% Trump (highest since 1960); Asian men 50% Trump
+- **2024 EXPANSION** — Latino men 54% Trump; Black men 21% Trump
 - **DIPLOMA DIVIDE** — non-college voters across races shifted Republican; college-educated suburban Democratic
 - **CAUSES** — economic concerns (immigration + trade + manufacturing decline); cultural concerns (cancel culture + DEI + crime); media disruption (Joe Rogan podcast circuit + manosphere influencers); declining trust in institutions
 - **THEORIES** — REALIGNMENT THEORY (V.O. Key 1955; Burnham 1970); SORTING (Levendusky 2009); AFFECTIVE POLARIZATION (Iyengar 2012)
@@ -198,7 +190,7 @@ CITIZENS UNITED v. FEC (2010) — 5-4 Kennedy; held CORPORATIONS have 1st Amendm
 - **CONSEQUENCES** — Trump won popular vote 2024 (first GOP since Bush 2004); won all 7 swing states; potential 7th party system?
 - **UNCERTAINTY** — premature to confirm new realignment; 2026 + 2028 elections will test; could be Trump-specific phenomenon or durable coalition shift
 
-> 🔑 Key takeaway: 5-STEP FRAMEWORK for AP party + interest group analysis — (1) IDENTIFY phenomenon (realignment + strategy + finance + lobbying + polarization); (2) IDENTIFY actors (parties + interest groups + candidates + voters + courts + legislators + bureaucracy + media); (3) APPLY theories (pluralism Dahl 1961 + elitism Mills 1956 + hyperpluralism Lowi 1969 + Olson 1965 collective action + Iyengar 2012 affective polarization + Levendusky 2009 partisan sort + Party Decides 2008 elite control + Heclo 1978 issue networks + Stigler 1971 agency capture + Bachrach + Baratz 1962 two faces + Key 1955 critical elections + Abramowitz/Webster 2016 negative partisanship + Putnam 2000 Bowling Alone + Skocpol 2003 Diminished Democracy) + cases (Buckley 1976 + Citizens United 2010 + SpeechNow 2010 + McCutcheon 2014 + Janus 2018 + Heller 2008 + Bruen 2022); (4) APPLY foundational documents (Federalist 10 factions + Federalist 51 ambition counter ambition + Federalist 56 representation + Federalist 70 energetic executive + Federalist 78 judicial review + Brutus 1 + Constitution); (5) EVALUATE consequences (democratic governance + interest group influence + party system + electoral competition + legislative process + judicial confirmations + executive action). WORKED EXAMPLES — Citizens United impact (interest group expansion via Super PACs + dark money + mega-donors); AIPAC UDP 2024 (Cori Bush + Jamaal Bowman primary defeats demonstrating post-Citizens United interest group power); working-class multiracial realignment 2016/2024 (Trump Rust Belt 2016 + Latino men 55%/Black men 22%/Asian men 50% in 2024 + diploma divide + potential 7th party system).
+> 🔑 Key takeaway: 5-STEP FRAMEWORK for AP party + interest group analysis — (1) IDENTIFY phenomenon (realignment + strategy + finance + lobbying + polarization); (2) IDENTIFY actors (parties + interest groups + candidates + voters + courts + legislators + bureaucracy + media); (3) APPLY theories (pluralism Dahl 1961 + elitism Mills 1956 + hyperpluralism Lowi 1969 + Olson 1965 collective action + Iyengar 2012 affective polarization + Levendusky 2009 partisan sort + Party Decides 2008 elite control + Heclo 1978 issue networks + Stigler 1971 agency capture + Bachrach + Baratz 1962 two faces + Key 1955 critical elections + Abramowitz/Webster 2016 negative partisanship + Putnam 2000 Bowling Alone + Skocpol 2003 Diminished Democracy) + cases (Buckley 1976 + Citizens United 2010 + SpeechNow 2010 + McCutcheon 2014 + Heller 2008); (4) APPLY foundational documents (Federalist 10 factions + Federalist 51 ambition counter ambition + Federalist 70 energetic executive + Federalist 78 judicial review + Brutus 1 + Constitution); (5) EVALUATE consequences (democratic governance + interest group influence + party system + electoral competition + legislative process + judicial confirmations + executive action). WORKED EXAMPLES — Citizens United impact (interest group expansion via Super PACs + dark money + mega-donors); AIPAC UDP 2024 (Cori Bush + Jamaal Bowman primary defeats demonstrating post-Citizens United interest group power); working-class multiracial realignment 2016/2024 (Trump Rust Belt 2016 + Latino men 54%/Black men 21% in 2024 + diploma divide + potential 7th party system).
       `
     },
     {
@@ -288,7 +280,7 @@ CITIZENS UNITED v. FEC (2010) — 5-4 Kennedy; held CORPORATIONS have 1st Amendm
               "It quotes Federalist 10 and 51 at length but never connects them to modern parties, interest groups or the polarization seen in Congress today.",
             ],
             correctAnswer: 0,
-            explanation: 'COMPREHENSIVE ANALYSIS: (1) FEDERALIST 10 (Madison 1787) — FACTION defined; CAUSES sown in nature of man; EFFECTS controlled via EXTENDED REPUBLIC + multiple competing factions + REPRESENTATION refines public views. (2) FEDERALIST 51 (Madison 1788) — AMBITION COUNTER AMBITION; SEPARATION OF POWERS + CHECKS + DOUBLE SECURITY (federalism + separation); "if men were angels". (3) REALIZATIONS — extended republic produced ~25,000+ interest groups (vs ~5,000 in 1960); multiple competing factions check each other; SoP + checks + federalism + representation operate. (4) CHALLENGES — AFFECTIVE POLARIZATION (Iyengar 2012; thermometers ~50° → ~20°); PARTISAN SORTING (Levendusky 2009); MEGA-IDENTITY (Mason 2018); PARTY LOYALTY ~95% 2024. (5) WEALTH + ORGANIZATIONAL ASYMMETRY — ELITISM (Mills 1956; Gilens + Page 2014); ~12,000 lobbyists + \\$4.1B; 0.01% give 70%+; Citizens United/SpeechNow/McCutcheon enabled unlimited Super PAC + dark money + mega-donors; Skocpol 2003 federated → professional. (6) HYPERPLURALISM (Lowi 1969); Stigler 1971 capture; Heclo 1978 issue networks; legislative paralysis. (7) AMBITION TENSIONS — asymmetric polarization (Hacker + Pierson 2005); filibuster eliminated 2013/2017/2022 nominations; executive action expanded; Loper Bright 2024 reduced agency deference; judicial polarization. (8) Electoral competition — gerrymandering + primary extremism + campaign finance. (9) Legitimacy concerns — Jan 6 2021 + Trump assassination attempts July/Sept 2024 + Pelosi 2022 + Whitmer 2020 + Scalise 2017; election acceptance + shared facts. (10) Media fragmentation — cable + social + podcasts (Rogan). (11) ASSESSMENT — Madison framework largely SUCCESSFUL 235+ years (longest continuously functioning constitutional republic); BUT did not fully anticipate parties + media + globalization + campaign finance + professionalization. (12) REFORM PROPOSALS — DISCLOSE + Freedom to Vote + amendment + RCV + redistricting + primary reform + fusion + media literacy.'
+            explanation: 'COMPREHENSIVE ANALYSIS: (1) FEDERALIST 10 (Madison 1787) — FACTION defined; CAUSES sown in nature of man; EFFECTS controlled via EXTENDED REPUBLIC + multiple competing factions + REPRESENTATION refines public views. (2) FEDERALIST 51 (Madison 1788) — AMBITION COUNTER AMBITION; SEPARATION OF POWERS + CHECKS + DOUBLE SECURITY (federalism + separation); "if men were angels". (3) REALIZATIONS — extended republic produced ~25,000+ interest groups (vs ~5,000 in 1960); multiple competing factions check each other; SoP + checks + federalism + representation operate. (4) CHALLENGES — AFFECTIVE POLARIZATION (Iyengar 2012; thermometers ~50° → ~20°); PARTISAN SORTING (Levendusky 2009); MEGA-IDENTITY (Mason 2018); PARTY LOYALTY ~95% 2024. (5) WEALTH + ORGANIZATIONAL ASYMMETRY — ELITISM (Mills 1956; Gilens + Page 2014); ~13,000 lobbyists + \\$4.4B; 0.01% give ~25-40%; Citizens United/SpeechNow/McCutcheon enabled unlimited Super PAC + dark money + mega-donors; Skocpol 2003 federated → professional. (6) HYPERPLURALISM (Lowi 1969); Stigler 1971 capture; Heclo 1978 issue networks; legislative paralysis. (7) AMBITION TENSIONS — asymmetric polarization (Hacker + Pierson 2005); filibuster eliminated 2013/2017 nominations; executive action expanded; judicial polarization. (8) Electoral competition — gerrymandering + primary extremism + campaign finance. (9) Legitimacy concerns — Jan 6 2021 + Trump assassination attempts July/Sept 2024 + Pelosi 2022 + Whitmer 2020 + Scalise 2017; election acceptance + shared facts. (10) Media fragmentation — cable + social + podcasts (Rogan). (11) ASSESSMENT — Madison framework largely SUCCESSFUL 235+ years (longest continuously functioning constitutional republic); BUT did not fully anticipate parties + media + globalization + campaign finance + professionalization. (12) REFORM PROPOSALS — DISCLOSE + Freedom to Vote + amendment + RCV + redistricting + primary reform + fusion + media literacy.'
           }
         ]
       }

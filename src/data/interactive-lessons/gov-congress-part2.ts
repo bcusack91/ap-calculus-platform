@@ -15,8 +15,8 @@ export const govCongressPart2Data = {
 |---|
 | Lawmaking process: bill to law |
 | Committee system: standing, select, joint, conference |
-| Budget process: authorization vs appropriation; reconciliation |
-| Filibuster + cloture + reconciliation workarounds |
+| Budget process: authorization vs appropriation; mandatory vs discretionary spending |
+| Chamber rules: filibuster, cloture, holds, unanimous consent, discharge petitions |
 
 > 🔑 Key idea: The legislative process is intentionally difficult — bicameralism + presentment + committee gatekeeping + Senate filibuster create multiple veto points designed to require broad consensus before federal law passes.
       `
@@ -68,17 +68,21 @@ export const govCongressPart2Data = {
 | 2. Congressional Budget Resolution | Sets overall spending + revenue targets | Budget Committees |
 | 3. Authorization | Statutes creating + structuring federal programs | Authorization committees (e.g., Armed Services) |
 | 4. Appropriation | 12 separate appropriations bills providing actual funding | Appropriations Committees |
-| 5. Reconciliation | Optional fast-track procedure (no Senate filibuster); bypasses 60-vote requirement | Per Budget Act 1974 |
+| 5. Mandatory vs discretionary | MANDATORY spending (Social Security, Medicare, Medicaid) is required by law; DISCRETIONARY spending (defense, education, infrastructure) is approved each year — as entitlements grow, discretionary room shrinks unless revenue or deficits rise (EK 2.2.A.4) | Whole Congress |
 
-## Filibuster + Cloture + Reconciliation
+## Chamber-Specific Rules (EK 2.2.A.3)
 
-| Mechanism | Description | Significance |
-|---|---|---|
-| **Filibuster** | Senator can speak indefinitely or refuse to allow vote (threat alone often sufficient — 'silent filibuster'); requires 60 votes to overcome | Effectively raises Senate threshold from 51 to 60 for most legislation |
-| **Cloture** | Procedure to end debate; requires 60 votes (changed from 67 in 1975) | Bypassed for executive nominations (50 votes since 2013 'nuclear option') and Supreme Court nominations (50 votes since 2017) |
-| **Reconciliation** | Optional fast-track procedure for budget-related legislation; cannot be filibustered | Used for major tax + spending: Bush tax cuts 2001/2003; ACA 2010 (parts); Trump tax cuts 2017; ARPA 2021; IRA 2022 |
+| Mechanism | Chamber | Description | Significance |
+|---|---|---|---|
+| **Speaker + Rules Committee** | House | Speaker (elected by a majority of members) presides; the Rules Committee sets the terms of debate for each bill | Majority party controls the House floor |
+| **Committee of the Whole** | House | The full House sits as one large committee to speed debate | Fewer formal requirements (smaller quorum) |
+| **Discharge petition** | House | A petition signed by a majority of members (218) forces a bill out of committee to the floor | Rarely succeeds — a check on committee gatekeeping |
+| **Unanimous consent** | Senate | Bills typically reach the floor by unanimous agreement | Any one senator can object |
+| **Hold** | Senate | A senator signals objection to keep a bill or nomination off the floor | Gives individual senators leverage |
+| **Filibuster** | Senate | Senator can speak indefinitely or refuse to allow a vote (threat alone often sufficient) | Effectively raises the Senate threshold from 51 to 60 for most legislation |
+| **Cloture** | Senate | Motion to end debate; requires 60 votes for legislation | The only way to overcome a filibuster |
 
-> 🔑 Key takeaway: The lawmaking process has multiple veto points (committee gatekeeping, filibuster, presidential veto), making major legislation difficult; reconciliation has emerged as the key workaround for partisan major legislation.
+> 🔑 Key takeaway: The lawmaking process has multiple veto points (committee gatekeeping, Senate holds and filibusters, presidential veto), making major legislation difficult — the framers' design for deliberation, and a source of gridlock in polarized times (EK 2.3.A.1).
       `
     },
     {
@@ -99,15 +103,15 @@ export const govCongressPart2Data = {
             explanation: 'Committees = central GATEKEEPERS: ~90% of bills die in committee. Committee chairs (majority party) have substantial agenda power. Committees hold hearings (experts + interest groups + agencies), markup (debate + amend), vote to report. Wilson 1885 "Congressional Government." Reflects policy specialization needed. Powerful: House Ways and Means (tax), House + Senate Appropriations (spending), Senate Judiciary (nominations).'
           },
           {
-            question: "Which best describes the modern significance of the Senate filibuster and reconciliation?",
+            question: "Which best describes how Senate procedures let a minority of senators block a bill?",
             options: [
-              "The filibuster makes most bills need 60 votes for cloture, while reconciliation lets budget measures pass the Senate by simple majority",
-              "The filibuster lets the House block Senate bills by unlimited debate, while reconciliation requires 67 votes for any budget measure to pass",
-              "The filibuster was abolished for all legislation in 2013, while reconciliation now requires 60 votes for any spending, tax, or debt measure",
-              "The filibuster applies only to judicial nominations, while reconciliation lets the President pass a budget without any congressional vote at all"
+              "A senator can place a hold or filibuster, and ending debate takes a cloture vote of 60",
+              "Any senator can veto a bill passed by the House, and only the Speaker can override that veto with a vote of the full Congress",
+              "The Senate Rules Committee can refuse to schedule a bill, and only a discharge petition signed by every senator can free it",
+              "The Vice President can filibuster any bill, and debate ends only when the President signs an order ending it"
             ],
             correctAnswer: 0,
-            explanation: 'Filibuster: any senator can speak indefinitely or block vote; cloture requires 60 (changed from 67 in 1975). Frequent post-1993 use → gridlock when no 60. Reconciliation (Budget Act 1974, fast-track for budget-related) = key WORKAROUND, immune from filibuster. Used: Bush tax 2001/2003, ACA 2010 parts, Trump tax 2017, ARPA 2021, IRA 2022. Nuclear option 2013 + 2017 eliminated filibuster for executive + judicial nominations including SCOTUS.'
+            explanation: 'EK 2.2.A.3.ii: in the Senate, bills usually reach the floor by unanimous consent, but a senator may place a HOLD to keep a bill off the floor; during debate a senator can FILIBUSTER, and only a CLOTURE motion (60 votes for legislation) ends debate. Senators do not veto House bills, the Rules Committee and discharge petitions are House procedures, and the Vice President does not filibuster.'
           }
         ]
       }
@@ -125,10 +129,10 @@ export const govCongressPart2Data = {
             hint: 'Replaced the 2/3 (67-vote) requirement; allows the Senate to bypass a filibuster.'
           },
           {
-            prompt: "Optional Senate fast-track procedure for budget-related legislation that cannot be filibustered (created by the Budget Act of 1974). One word.",
-            answer: 'reconciliation',
-            acceptableAnswers: ['reconciliation', 'Reconciliation', 'budget reconciliation'],
-            hint: 'Used for Bush tax cuts 2001/2003, parts of ACA 2010, Trump tax cuts 2017, ARPA 2021, IRA 2022.'
+            prompt: "The rarely used House procedure in which a majority of members sign on to force a bill out of committee and onto the floor. Two words.",
+            answer: 'discharge petition',
+            acceptableAnswers: ['discharge petition', 'Discharge petition', 'Discharge Petition', 'discharge'],
+            hint: 'EK 2.2.A.3.i — needs 218 signatures.'
           },
           {
             prompt: "The temporary committee created to reconcile differing House and Senate versions of the same bill. Two words.",
@@ -171,15 +175,15 @@ export const govCongressPart2Data = {
       exercise: {
         questions: [
           {
-            question: "Why has reconciliation become the dominant vehicle for major legislation in the modern Congress?",
+            question: "Spending on Social Security, Medicare, and Medicaid is growing faster than federal revenue. Unless taxes rise or the deficit grows, what is the most likely effect on the rest of the budget?",
             options: [
-              "Frequent filibusters and polarization make 60 votes rare, so majorities turn to reconciliation because it needs only 51 votes for budget-related bills",
-              "The Constitution requires all major laws to pass through reconciliation, which the framers created to protect small states",
-              "Reconciliation lets bills skip committees and the House entirely, so senators prefer it for every type of policy including civil rights and immigration",
-              "Reconciliation bills cannot be vetoed by the President, which makes them the safest vehicle for major legislation"
+              "Room for the discretionary spending Congress approves each year shrinks",
+              "Entitlement spending stops growing on its own",
+              "The President may cut entitlement benefits without any approval from Congress",
+              "Defense spending rises automatically, since it is mandatory spending set by the Constitution"
             ],
             correctAnswer: 0,
-            explanation: 'Reconciliation dominant because: (1) FILIBUSTER USE: frequent post-1993 → impossible without 60 Senate seats (rare: brief 2009-10, 2021); (2) POLARIZATION: parties rarely cooperate on major economics → no bipartisan 60; (3) IMMUNITY: Budget Act 1974 → cannot be filibustered; budget-related (Byrd Rule) passes 51; (4) BIPARTISAN PRECEDENT: Republicans (Bush 2001/2003, Trump 2017), Democrats (ACA 2010 parts, ARPA 2021, IRA 2022). Nearly all major economic legislation now reconciliation not regular order.'
+            explanation: 'EK 2.2.A.4: MANDATORY spending is required by law for entitlement programs such as Social Security, Medicare, and Medicaid; DISCRETIONARY spending (defense, education, infrastructure) is approved annually. As entitlement costs grow, discretionary spending opportunities decrease unless tax revenues increase or the deficit increases. Entitlement growth is driven by law and demographics, the President cannot cut benefits alone, and defense is discretionary, not mandatory.'
           },
           {
             question: "What is the constitutional + political significance of the Origination Clause (Art I § 7), which requires revenue bills to originate in the House?",

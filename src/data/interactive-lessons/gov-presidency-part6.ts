@@ -14,11 +14,11 @@ export const govPresidencyPart6Data = {
 | Section |
 |---|
 | Five-step framework for analyzing presidential power claims |
-| Worked example — Trump v. United States (2024) presidential immunity |
+| Worked example — the 2011 Libya intervention |
 | Required documents linkage (Federalist 70, Article II) |
 | AP argument essay structure |
 
-> 🔑 Key idea: Mastery of presidential power requires SYSTEMATIC analysis combining (1) constitutional authority, (2) statutory authority, (3) historical practice, (4) political consequences, (5) judicial review.
+> 🔑 Key idea: Mastery of presidential power requires SYSTEMATIC analysis combining (1) constitutional authority, (2) Congress's position, (3) the formal and informal powers used, (4) the checks available, (5) the debate over how expansive presidential power should be.
       `
     },
     {
@@ -32,89 +32,79 @@ export const govPresidencyPart6Data = {
 | Question | Tool |
 |---|---|
 | Is there express Article II text? | Vesting Clause, Take Care Clause, Commander-in-Chief, Treaty, Appointment, Pardon, Veto |
-| Is there implied Article II authority? | Vesting Clause + Take Care Clause as residual sources |
-| Is there 25th or other amendment authority? | Succession + disability provisions |
+| Is there implied Article II authority? | Vesting Clause + Take Care Clause as sources for executive orders (EK 2.4.A.2.iv) |
+| What does Article I give Congress on the same subject? | Declare war, raise and fund armies, power of the purse, Senate advice and consent |
 
-### Step 2 — Identify Statutory Authority
-
-| Question | Tool |
-|---|---|
-| Does Congress authorize the action? | Specific statutory delegations (e.g., AUMFs, emergency powers) |
-| Does Congress prohibit the action? | Statutory prohibitions limit even constitutional grants |
-| Is Congress silent? | Twilight zone per Jackson concurrence in *Youngstown* |
-
-### Step 3 — Apply Jackson's Three-Tier Framework (Youngstown 1952)
-
-| Tier | Power level |
-|---|---|
-| 1. Express/implied congressional authorization | MAXIMUM (Article II + delegated authority) |
-| 2. Congressional silence | TWILIGHT ZONE (uncertain; depends on prior practice + necessity) |
-| 3. Express/implied congressional prohibition | LOWEST EBB (Article II minus congressional preemption) |
-
-### Step 4 — Assess Political Consequences
+### Step 2 — Identify Congress's Position
 
 | Question | Tool |
 |---|---|
-| Will Congress override or impeach? | 2/3 override; impeachment + Senate 2/3 conviction |
-| Will the public approve or disapprove? | Approval rating + electoral consequences |
-| Will allies + opponents react? | Foreign + domestic political reactions |
+| Did Congress authorize the action? | Statutes and authorizations for the use of military force — the President's footing is strongest |
+| Did Congress forbid or refuse to fund it? | Statutory prohibitions and funding limits — the President's footing is weakest |
+| Is Congress silent? | Presidents rely on their own Article II authority and past practice; conflict is likely (EK 2.5.A.3) |
 
-### Step 5 — Anticipate Judicial Review
+### Step 3 — Classify the Powers Used (EK 2.4.A.2)
+
+| Formal powers | Informal powers |
+|---|---|
+| Veto and pocket veto; commander in chief; treaties (with Senate approval); appointments | Executive orders; executive agreements; signing statements; bargaining and persuasion; the bully pulpit |
+
+### Step 4 — Identify the Checks Available
+
+| Check | Tool |
+|---|---|
+| Congress | Power of the purse; override (2/3); Senate confirmation and treaty ratification; oversight hearings; impeachment and removal |
+| Courts | Judicial review of executive actions (e.g., the 1952 steel-seizure ruling; *United States v. Nixon* 1974) |
+| Public | Approval ratings, elections, media coverage |
+
+### Step 5 — Place It in the Debate Over Presidential Power (EK 2.6.A)
 
 | Question | Tool |
 |---|---|
-| Will courts review the action? | Standing, ripeness, political question doctrine |
-| What standard will courts apply? | Constitutional + statutory + Jackson framework |
-| What relief might courts grant? | Injunction, declaratory judgment, damages |
+| Does it fit Hamilton's "energetic executive"? | Federalist No. 70 — unity, energy, protection against foreign attacks |
+| Is it a limited or an expansive view of the office? | Taft's limited view vs Theodore Roosevelt's stewardship view (CED illustrative examples) |
+| Does it raise the concern behind term limits? | 22nd Amendment — worry about expanding presidential power (EK 2.6.A.2) |
 
-## Worked Example — *Trump v. United States* (2024) Presidential Immunity
+## Worked Example — The 2011 Libya Intervention
 
-### The Question
-Does a former president have immunity from criminal prosecution for actions taken while in office? (Specifically, can Donald Trump be criminally prosecuted for his role in challenging the 2020 election results + January 6, 2021?)
+The CED lists U.S. military conflicts including Libya as illustrative examples of tension between the President and Congress (Topic 2.5).
+
+### The Facts
+In March 2011, President Obama ordered U.S. airstrikes in Libya as part of a NATO operation authorized by a UN Security Council resolution. He did not ask Congress for authorization. When the campaign passed 60 days, the administration argued that the War Powers Resolution's time limit did not apply because U.S. forces were not engaged in full "hostilities."
 
 ### Step 1 — Constitutional Authority
 | Element | Analysis |
 |---|---|
-| Article II text on immunity | NO express immunity provision |
-| Vesting Clause + Take Care Clause | Could imply functional immunity for "official acts" |
-| Article I impeachment | Suggests removal-then-prosecution sequence (Art I § 3 cl. 7 — convicted persons "shall nevertheless be liable and subject to Indictment, Trial, Judgment and Punishment, according to Law") |
+| Article II | Commander in chief of the armed forces |
+| Article I | Congress declares war and funds the military |
+| Tension | The Constitution splits war powers, inviting conflict (EK 2.5.A) |
 
-### Step 2 — Statutory Authority
+### Step 2 — Congress's Position
 | Element | Analysis |
 |---|---|
-| Federal criminal statutes | Apply to all persons including presidents (no express immunity exception) |
-| Special Counsel regulations | Authorize criminal investigation of presidential conduct |
-| Impeachment Judgment Clause | Anticipates post-impeachment criminal prosecution |
+| Authorization | None — Congress never voted to approve the mission |
+| Prohibition | None — on June 24, 2011 the House rejected a resolution to authorize the operation and also rejected a bill to limit its funding to support roles |
+| Result | Congressional silence and division let the President continue |
 
-### Step 3 — Jackson Framework
-| Tier | Application |
-|---|---|
-| Maximum power | N/A — no congressional authorization for prosecution immunity |
-| Twilight zone | Possibly applicable — Congress has not specified post-presidency immunity |
-| Lowest ebb | Possibly applicable — Impeachment Judgment Clause arguably contemplates prosecution |
-
-### Step 4 — Political Consequences
+### Step 3 — Powers Used
 | Element | Analysis |
 |---|---|
-| Election impact | Immunity ruling shaped 2024 election timing |
-| Public approval | Major partisan divide on immunity |
-| Future presidents | Ruling sets precedent for all future presidents (Biden, future Democrats + Republicans) |
+| Formal | Commander-in-chief power to order the strikes |
+| Informal | Coordination with NATO allies and the UN; persuasion of Congress and the public |
 
-### Step 5 — Judicial Review
-
+### Step 4 — Checks
 | Element | Analysis |
 |---|---|
-| Trump v. United States (2024) holding | (1) Presidents have ABSOLUTE IMMUNITY for official acts within their CORE constitutional authority (e.g., commander-in-chief, pardon, removal of executive officials); (2) PRESUMPTIVE IMMUNITY for other official acts; (3) NO IMMUNITY for unofficial (private) acts |
-| Test | Court must distinguish official from unofficial acts — fact-specific analysis |
-| Result | Trump's prosecution returned to lower courts to determine which acts qualify for immunity; criminal trials substantially delayed; cases dismissed after Trump's 2024 election victory |
+| Congress | The House passed a resolution rebuking the President for not seeking authorization; it could have used the power of the purse but did not |
+| Courts | Lawsuits by members of Congress were dismissed; courts usually avoid war-powers disputes |
+| Public | Limited public attention; no U.S. ground troops |
 
-### Significance + Critical Reactions
-
+### Step 5 — The Debate
 | Element | Analysis |
 |---|---|
-| Majority (Roberts CJ + 5 conservatives) | Immunity necessary to enable "bold and unhesitating action" by future presidents (echoing *Federalist 70*) |
-| Dissent (Sotomayor, Kagan, Jackson) | Immunity ruling means "the President is now a king above the law" (the dissent does not cite Brutus 1, but its warning parallels Brutus 1's fear of unchecked power) |
-| Long-term impact | Substantially expanded presidential immunity from criminal prosecution; one of the most consequential separation-of-powers rulings in American history |
+| Expansive view | Federalist No. 70's "energy" — quick action to protect civilians and allies |
+| Limited view | Article I gives the decision to go to war to Congress; unilateral action concentrates that power in one person |
+| Significance | Shows why presidents' war actions keep generating "tension and frequent confrontations with Congress" (LO 2.5.A) |
 
 ## Required Documents Linkage
 
@@ -124,13 +114,13 @@ Does a former president have immunity from criminal prosecution for actions take
 |---|---|
 | "Energy in the Executive is a leading character in the definition of good government" | Modern presidents need authority to act decisively in war + crisis |
 | Unity, duration, support, competent powers | Modern unitary executive theory derives from this |
-| Anti-Federalist concern about monarchy | Modern *Trump v. US* dissent (Sotomayor) cites this concern |
+| Anti-Federalist concern about monarchy | Critics of unilateral war-making and executive orders raise the same concern |
 
 ### Article II of the Constitution
 
 | Article II provision | Modern application |
 |---|---|
-| § 1 — Vesting Clause | Source of unitary executive authority (Scalia in *Morrison* dissent; modern conservative theory) |
+| § 1 — Vesting Clause | Source of unitary executive authority and of executive orders |
 | § 2 cl. 1 — Commander-in-Chief | Source of war powers + military decisions |
 | § 2 cl. 1 — Pardon | Used by Ford-Nixon, Trump-J6, Biden-Hunter |
 | § 2 cl. 2 — Treaty + Appointment | Senate confirmation politics |
@@ -140,31 +130,31 @@ Does a former president have immunity from criminal prosecution for actions take
 
 | Brutus's argument | Modern application |
 |---|---|
-| Strong central government will tend toward tyranny | Modern dissent in *Trump v. US* echoes |
-| Necessary and Proper Clause will expand federal power | Modern unitary executive expansion |
+| Strong central government will tend toward tyranny | Critics of expansive presidential power echo this fear |
+| Necessary and Proper Clause will expand federal power | Growth of national power, including the executive branch |
 
 ## AP Argument Essay Structure
 
 ### Sample prompt
-*"Develop an argument that explains whether the Supreme Court's decision in Trump v. United States (2024) is consistent with Federalist 70 or whether it represents a dangerous expansion of presidential power."*
+*"Develop an argument that explains whether presidents' use of military force without a declaration of war is consistent with Federalist No. 70 or a dangerous expansion of presidential power."*
 
 ### Argument 1 — Consistent with Federalist 70
 
 | Element | Argument |
 |---|---|
-| Hamilton's "energetic executive" | Hamilton explicitly argued that an "energetic" executive requires the latitude to act DECISIVELY without fear of personal consequences |
-| Unitary structure | Hamilton defended UNITARY structure (one president) precisely so that executive accountability lies with the office and the political process (election + impeachment), not with criminal prosecution by political opponents |
-| Take Care Clause | Without immunity for official acts, future presidents would be deterred from making controversial but necessary decisions (e.g., Lincoln's habeas suspension, FDR's wartime measures, Truman's atomic bomb decision, Obama's drone strikes) |
+| Hamilton's "energetic executive" | Hamilton argued that energy in the executive is "essential to the protection of the community against foreign attacks" — crises require speed Congress cannot provide |
+| Unitary structure | One commander in chief can act with secrecy and dispatch; accountability comes through elections, oversight, and impeachment |
+| Evidence | Libya 2011 — the President acted within days to protect civilians, with NATO and UN support |
 
 ### Argument 2 — Dangerous Expansion
 
 | Element | Argument |
 |---|---|
-| Brutus 1's monarchic concern | Brutus warned that strong central government would tend toward tyranny — *Trump v. US* immunity ruling makes the president functionally above the law for "official acts" |
-| Impeachment Judgment Clause (Art I § 3 cl. 7) | The Constitution explicitly anticipates that convicted-in-impeachment officials remain "liable and subject to Indictment" — suggesting framers intended NO immunity from criminal law |
-| Sotomayor dissent | "The President is now a king above the law" — major departure from American republican tradition |
+| Article I | The Constitution gives Congress, not the President, the power to declare war |
+| Brutus 1's concern | Concentrated power tends toward tyranny; unilateral war-making places a grave decision in one person's hands |
+| Evidence | No formal declaration of war since World War II, despite conflicts in Vietnam, Iraq, Kosovo, Libya, and Syria (CED illustrative examples) |
 
-> 🔑 Key takeaway: Use the 5-step framework (constitutional + statutory + Jackson + political + judicial) for ALL presidential power questions. Connect to required documents (Federalist 70, Article II, Brutus 1, Constitution amendments). Recognize that modern questions like immunity, war power, and unilateral action turn on the same constitutional principles the framers debated.
+> 🔑 Key takeaway: Use the 5-step framework (constitutional authority + Congress's position + formal/informal powers + checks + the debate over presidential power) for ALL presidential power questions. Connect to required documents (Federalist 70, Article II, Brutus 1). Modern questions about war power and unilateral action turn on the same constitutional principles the framers debated.
       `
     },
     {
@@ -174,26 +164,26 @@ Does a former president have immunity from criminal prosecution for actions take
       exercise: {
         questions: [
           {
-            question: "Which best describes the application of Jackson's three-tier framework to a hypothetical presidential action?",
+            question: "During the 2011 U.S. air campaign in Libya, launched without congressional authorization, which action was an example of Congress checking the President?",
             options: [
-              "Classify the action by Congress's position, with power strongest when Congress approved it and weakest when Congress forbade it",
-              "Classify the action by public opinion, with power strongest when most voters support it and weakest when they oppose it",
-              "Classify the action by the President's party, with power strongest under unified government and weakest under divided rule",
-              "Classify the action by its subject, with power strongest in domestic policy and weakest in foreign affairs"
+              "The House voted to rebuke the President for not asking Congress to approve the mission beforehand",
+              "The President ordered airstrikes as commander in chief under a UN Security Council resolution",
+              "NATO allies agreed to take command of the air campaign without any vote by Congress",
+              "The Supreme Court ruled the campaign unconstitutional and ordered the planes home"
             ],
             correctAnswer: 0,
-            explanation: 'Jackson framework (Youngstown 1952 concurrence) by CONGRESSIONAL POSITION: (1) MAXIMUM — express/implied congressional authorization → Art II + delegation (Bush 2003 Iraq AUMF; Truman 1950 Korea UN authorization); (2) TWILIGHT — congressional silence → "imperatives of events" + prior practice (Lincoln 1861 habeas pre-ratification; Truman 1950 initial Korea deployment); (3) LOWEST EBB — against express/implied congressional will → Art II minus preemption (Truman 1952 steel-mill seizure that Congress declined to authorize). Dominant tool for modern executive-power cases.'
+            explanation: 'LO 2.5.A: the President\'s agenda can create tension and confrontations with Congress. The House rebuke was a legislative check (EK 1.6.A.1); the airstrikes were the presidential action being checked; NATO command is an alliance decision, not a check by Congress; and no court ruled on the campaign (lawsuits by members of Congress were dismissed).'
           },
           {
-            question: "How does the *Trump v. United States* (2024) immunity ruling interact with the Impeachment Judgment Clause (Art I § 3 cl. 7)?",
+            question: "Which argument from Federalist No. 70 best supports a president's decision to act quickly in a foreign crisis?",
             options: [
-              "The clause keeps convicted officials open to indictment, while the ruling shields official acts from prosecution",
-              "The ruling effectively repealed the clause, while also holding that former presidents can never be impeached after leaving office",
-              "The clause bars prosecuting any former official, and the ruling extended that bar to unofficial and private acts as well",
-              "The clause applies only to federal judges, so the ruling has no bearing on whether presidents may be indicted after office"
+              "A single executive acts with the energy needed to protect the nation from external threats",
+              "Ambition must counteract ambition, so Congress should approve every deployment before any troops move",
+              "A large republic controls factions, so foreign crises should be left to the state governments to resolve",
+              "The judiciary is the least dangerous branch, so courts should direct the military during emergencies"
             ],
             correctAnswer: 0,
-            explanation: 'Trump v. US (2024): former presidents = ABSOLUTE IMMUNITY for OFFICIAL ACTS within CORE constitutional authority (commander-in-chief, pardon, removal); PRESUMPTIVE IMMUNITY for other official acts; NO IMMUNITY for unofficial (private). TENSION with Impeachment Judgment Clause (Art I § 3 cl 7): convicted-in-impeachment officials "shall nevertheless be liable and subject to Indictment, Trial, Judgment and Punishment, according to Law" → ANTICIPATES post-impeachment prosecution. MAJORITY (Roberts + 5 conservatives) interpreted clause as not foreclosing immunity for official acts. DISSENT (Sotomayor, Kagan, Jackson) argued framers EXPLICITLY contemplated criminal prosecution; immunity "makes a mockery of...no man is above the law." Major separation-of-powers ruling.'
+            explanation: 'EK 2.6.A.1: Federalist No. 70 justifies a single executive, arguing a strong executive is "essential to the protection of the community against foreign attacks." Ambition counteracting ambition is Federalist No. 51, controlling factions is Federalist No. 10, and the "least dangerous" branch is Federalist No. 78 — none of them argues that courts or states should run foreign crises.'
           }
         ]
       }
@@ -205,22 +195,22 @@ Does a former president have immunity from criminal prosecution for actions take
       exercise: {
         questions: [
           {
-            prompt: "Year of *Youngstown Sheet & Tube v. Sawyer* — source of Jackson's three-tier framework.",
-            answer: '1952',
-            acceptableAnswers: ['1952'],
-            hint: 'Same year Eisenhower elected; Korean War still ongoing.'
+            prompt: "The President's constitutional role as head of the armed forces: commander in ___.",
+            answer: 'chief',
+            acceptableAnswers: ['chief', 'Chief', 'commander in chief', 'commander-in-chief'],
+            hint: 'Article II § 2 cl. 1 — a formal foreign-policy power (EK 2.4.A.2.ii).'
           },
           {
-            prompt: "Year of *Trump v. United States* presidential immunity decision.",
-            answer: '2024',
-            acceptableAnswers: ['2024'],
-            hint: 'Decided July 2024 during the Trump-Biden-Harris election campaign.'
+            prompt: "An international agreement a President makes without Senate ratification: an executive ___.",
+            answer: 'agreement',
+            acceptableAnswers: ['agreement', 'agreements', 'executive agreement'],
+            hint: 'An informal foreign-policy power (EK 2.4.A.2.ii).'
           },
           {
-            prompt: "Article + clause containing the Impeachment Judgment Clause anticipating post-impeachment criminal prosecution (e.g., 'I § 3 cl. 7').",
-            answer: 'I § 3 cl. 7',
-            acceptableAnswers: ['I § 3 cl. 7', 'I Section 3 Clause 7', 'Article I Section 3 Clause 7', 'Article I § 3 cl. 7', 'Art I § 3 cl. 7', 'I 3 7'],
-            hint: 'Article I (legislative) + Section 3 (Senate) + Clause 7 (impeachment judgment).'
+            prompt: "The Federalist paper in which Hamilton defends a single, energetic executive: Federalist No. ___.",
+            answer: '70',
+            acceptableAnswers: ['70', 'No. 70', 'Federalist 70', 'Federalist No. 70'],
+            hint: 'EK 2.6.A.1.'
           }
         ]
       }
@@ -228,26 +218,26 @@ Does a former president have immunity from criminal prosecution for actions take
     {
       id: 'govpres6-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Match each presidential power example to its Jackson tier.**`,
+      content: `**Match each presidential action to the type of power it uses.**`,
       exercise: {
         dropdowns: [
           {
-            label: "Bush 2003 Iraq War invasion (with 2002 AUMF passed by Congress): ___",
-            options: ['Maximum (express/implied authorization)', 'Twilight zone (congressional silence)', 'Lowest ebb (express/implied prohibition)', 'Outside framework']
+            label: "Ordering airstrikes in Libya as head of the armed forces (2011): ___",
+            options: ['Formal — commander in chief', 'Formal — treaty power', 'Informal — executive agreement', 'Informal — bargaining and persuasion']
           },
           {
-            label: "Truman 1952 steel-mill seizure during Korean War (Congress declined to authorize seizure when passing Taft-Hartley): ___",
-            options: ['Maximum (express/implied authorization)', 'Twilight zone (congressional silence)', 'Lowest ebb (express/implied prohibition)', 'Outside framework']
+            label: "Joining the 2015 Paris climate accord without a Senate vote: ___",
+            options: ['Formal — commander in chief', 'Formal — treaty power', 'Informal — executive agreement', 'Informal — bargaining and persuasion']
           },
           {
-            label: "Lincoln 1861 habeas suspension before Congress ratified (Congress not in session): ___",
-            options: ['Maximum (express/implied authorization)', 'Twilight zone (congressional silence)', 'Lowest ebb (express/implied prohibition)', 'Outside framework']
+            label: "Phoning wavering members of Congress to win their votes for a bill: ___",
+            options: ['Formal — commander in chief', 'Formal — treaty power', 'Informal — executive agreement', 'Informal — bargaining and persuasion']
           }
         ],
-        correctAnswers: ['Maximum (express/implied authorization)', 'Lowest ebb (express/implied prohibition)', 'Twilight zone (congressional silence)'],
-        hint1: 'AUMFs are EXPRESS congressional authorization — places presidential power at maximum.',
-        hint2: 'Congress\'s decision to NOT authorize seizure when passing Taft-Hartley was IMPLIED prohibition — places power at lowest ebb (Youngstown holding).',
-        hint3: 'Lincoln\'s 1861 suspension occurred when Congress was not in session — congressional silence places power in the twilight zone.'
+        correctAnswers: ['Formal — commander in chief', 'Informal — executive agreement', 'Informal — bargaining and persuasion'],
+        hint1: 'Article II § 2 — the formal foreign-policy power over the military (EK 2.4.A.2.ii).',
+        hint2: 'No Senate ratification means it is not a treaty (EK 2.4.A.2.ii).',
+        hint3: 'EK 2.4.A.2.iii — informal powers that secure congressional action.'
       }
     },
     {
@@ -257,26 +247,26 @@ Does a former president have immunity from criminal prosecution for actions take
       exercise: {
         questions: [
           {
-            question: "AP argument essay prompt: 'Develop an argument that explains whether the Supreme Court's decision in Trump v. United States (2024) is consistent with Federalist 70 or represents a dangerous expansion of presidential power.' What is the strongest argument for CONSISTENCY with Federalist 70?",
+            question: "AP argument essay prompt: 'Develop an argument that explains whether presidents' use of military force without a declaration of war is consistent with Federalist No. 70 or a dangerous expansion of presidential power.' What is the strongest argument for CONSISTENCY with Federalist 70?",
             options: [
-              "Immunity supports the energy and decisiveness Hamilton sought, since presidents need not fear prosecution for official acts",
-              "Hamilton opposed any executive immunity, so the ruling contradicts Federalist 70 directly",
-              "Federalist 70 calls for a plural executive council, and immunity spreads responsibility among several officers to check rash decisions",
-              "Hamilton wanted presidents chosen by Congress, which immunity honors by keeping them dependent on legislators"
+              "Hamilton held that energy in one executive is essential against foreign attacks, and sudden crises demand speed Congress lacks",
+              "Hamilton opposed any presidential role in war, so modern practice matches his call for congressional control",
+              "Federalist 70 calls for a plural executive council, which modern national security councils now provide",
+              "Hamilton wanted presidents chosen by Congress and kept dependent on it, so deploying troops without any congressional vote honors that design"
             ],
             correctAnswer: 0,
-            explanation: 'Pro-immunity from Federalist 70: (1) Hamilton "Energy in Executive is a leading character" + UNITY + DURATION + SUPPORT + COMPETENT POWERS = ingredients of energy. (2) IMMUNITY SUPPORTS ENERGY — presidents act DECISIVELY without fear of political retaliation after office (chilling effect on Lincoln habeas, FDR wartime, Truman atomic bomb, Obama drones). (3) UNITY + ACCOUNTABILITY — Hamilton defended unitary structure so accountability lies with ELECTIONS + IMPEACHMENT (elected reps), NOT criminal prosecution by unelected prosecutors. (4) PRESUMPTIVE not ABSOLUTE — Trump v US: ABSOLUTE only for CORE acts (small category); PRESUMPTIVE (rebuttable) for other official acts; preserves accountability for unofficial. (5) PRECEDENT — Nixon v. Fitzgerald (1982) absolute civil immunity for official acts; Trump v US extends to criminal.'
+            explanation: 'Pro-consistency: Federalist No. 70 (EK 2.6.A.1) argues energy in a single executive is "essential to the protection of the community against foreign attacks"; unity allows "decision, activity, secrecy, and dispatch." Hamilton did not oppose a presidential war role, rejected a plural executive, and did not want Congress to choose presidents.'
           },
           {
-            question: "What is the strongest argument that Trump v. United States represents a DANGEROUS EXPANSION of presidential power?",
+            question: "What is the strongest argument that presidents' use of force without a declaration of war is a DANGEROUS EXPANSION of presidential power?",
             options: [
-              "It places presidents above the law for official acts, undercutting the Impeachment Judgment Clause's promise of later indictment",
-              "It lets Congress prosecute presidents during their term, weakening the energetic executive",
-              "It requires impeachment before any civil lawsuit, which gives the House too much power over presidential conduct and private disputes",
-              "It strips presidents of the pardon power, making the office weaker than the framers intended"
+              "Article I assigns Congress the choice to begin hostilities, and unilateral deployments shift that grave decision to one person",
+              "It lets Congress command troops directly, weakening the energetic executive",
+              "It requires the Senate to ratify every deployment as a treaty, giving senators too much power",
+              "It strips presidents of the commander-in-chief role, making the office weaker than the framers intended"
             ],
             correctAnswer: 0,
-            explanation: 'Counter (Trump v US = DANGEROUS EXPANSION): (1) BRUTUS 1 monarchic concern — Anti-Federalist warned strong central government → TYRANNY; immunity from criminal prosecution makes president FUNCTIONALLY ABOVE THE LAW. (2) IMPEACHMENT JUDGMENT CLAUSE Art I § 3 cl 7 — convicted-in-impeachment officials "liable and subject to Indictment, Trial, Judgment and Punishment, according to Law" — framers EXPLICITLY anticipated post-impeachment prosecution; ruling forecloses. (3) ABSENT CONSTITUTIONAL TEXT — Art II has NO express immunity; judicial creation contradicting plain text. (4) DEMOCRATIC ACCOUNTABILITY UNDERMINED — Sotomayor dissent: "President is now a king above the law"; criminal accountability = ULTIMATE check; presidents may engage in unprosecutable conduct (foreign conspiracy, election manipulation, surveillance) if characterized as "official". (5) FUTURE PRESIDENTS — protects ALL future (R + D); class uniquely insulated from criminal law; departs from "no man is above the law" tradition.'
+            explanation: 'The Constitution splits war powers: Congress declares war and funds the military (EK 2.1.A.4.ii), while the President commands the forces. Repeated unilateral deployments (Vietnam, Kosovo, Libya, Syria — CED illustrative conflicts) move the decision to go to war toward the President, the concern Brutus No. 1 raised about concentrated power. The other options describe things these deployments do not do.'
           }
         ]
       }

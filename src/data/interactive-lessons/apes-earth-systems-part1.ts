@@ -32,11 +32,9 @@ export const apesEarthSystemsPart1Data = {
 | **Convergent** | Plates move together | Mountains, trenches, subduction zones | Strong earthquakes, volcanoes, tsunamis |
 | **Transform** | Plates slide past each other | Fault lines | Earthquakes (San Andreas Fault) |
 
-### Rock Cycle
+### From Rock to Soil
 
-Igneous → (weathering/erosion) → Sedimentary → (heat/pressure) → Metamorphic → (melting) → Igneous
-
-Soil formation depends on: **parent material, climate, organisms, topography, time** (ClORPT)
+Soils form when **parent material** is weathered, transported and deposited (CED 4.2). Soil formation depends on: **parent material, climate, organisms, topography, time** (ClORPT)
       `
     },
     {

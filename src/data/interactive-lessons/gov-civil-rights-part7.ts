@@ -14,11 +14,11 @@ export const govCivilRightsPart7Data = {
 | Section |
 |---|
 | High-yield dates 1865 → 2023 |
-| Required AP Gov SCOTUS case (Brown v. Board 1954) |
-| Sprint terms (separate-but-equal, scrutiny tiers, suspect class, Title VI/VII/IX, ADA, VRA, BFOQ, etc.) |
+| Required AP Gov SCOTUS cases (Brown v. Board 1954 + Shaw v. Reno 1993) |
+| Sprint terms (separate-but-equal, equal protection, state action, Title VI/VII/IX, ADA, VRA, affirmative action, etc.) |
 | AP FRQ strategy (argument essay + SCOTUS comparison) |
 
-> 🔑 Key idea: Master high-yield dates 1865 13th Am → 1868 14th Am → 1870 15th Am → 1896 Plessy → 1920 19th Am → 1924 Indian Citizenship → 1948 EO 9981 → 1954 Brown → 1955 Montgomery → 1957 Little Rock → 1960 sit-ins → 1961 Freedom Rides → 1963 MOW + Letter from Birmingham Jail → 1964 CRA + 24th Am → 1965 VRA → 1967 Loving → 1968 FHA → 1971 Reed → 1972 Title IX + ERA → 1976 Craig → 1978 Bakke → 1990 ADA → 1996 VMI → 2003 Lawrence + Grutter → 2013 Shelby + Windsor → 2015 Obergefell → 2020 Bostock → 2022 Dobbs + Respect for Marriage → 2023 SFFA + Allen v. Milligan + Moore v. Harper + 303 Creative. Required AP Gov SCOTUS case = BROWN v. BOARD 1954.
+> 🔑 Key idea: Master high-yield dates 1865 13th Am → 1868 14th Am → 1870 15th Am → 1896 Plessy → 1920 19th Am → 1924 Indian Citizenship → 1948 EO 9981 → 1954 Brown → 1955 Montgomery → 1957 Little Rock → 1960 sit-ins → 1961 Freedom Rides → 1963 MOW + Letter from Birmingham Jail → 1964 CRA + 24th Am → 1965 VRA → 1967 Loving → 1968 FHA → 1971 Reed → 1972 Title IX + ERA → 1978 Bakke → 1990 ADA → 1993 Shaw v. Reno → 1996 VMI → 2003 Lawrence + Grutter → 2013 Windsor → 2015 Obergefell → 2020 Bostock → 2022 Dobbs + Respect for Marriage → 2023 SFFA. Required AP Gov SCOTUS cases for this topic = BROWN v. BOARD 1954 + SHAW v. RENO 1993 (Baker v. Carr 1962 also connects to redistricting).
       `
     },
     {
@@ -40,7 +40,7 @@ export const govCivilRightsPart7Data = {
 | 1909 | NAACP founded |
 | 1920 | 19TH AMENDMENT — women's suffrage |
 | 1924 | INDIAN CITIZENSHIP ACT |
-| 1944 | KOREMATSU v. US (later repudiated Trump v. Hawaii 2018); Smith v. Allwright (white primary) |
+| 1944 | KOREMATSU v. US (Japanese American internment upheld; later widely condemned); Smith v. Allwright (white primary) |
 | 1948 | TRUMAN EO 9981 desegregated military; Shelley v. Kraemer |
 | 1950 | Sweatt v. Painter + McLaurin v. Oklahoma |
 | 1954 | BROWN v. BOARD I — overruled Plessy in education |
@@ -61,16 +61,12 @@ export const govCivilRightsPart7Data = {
 | 1973 | Roe v. Wade; Frontiero v. Richardson; Rehabilitation Act §504; Lambda Legal founded |
 | 1974 | Milliken v. Bradley limited cross-district busing |
 | 1975 | IDEA — special education |
-| 1976 | CRAIG v. BOREN — INTERMEDIATE SCRUTINY for sex |
 | 1978 | REGENTS v. BAKKE — race as one factor |
-| 1985 | City of Cleburne v. Cleburne Living Center — rational basis with bite for disability |
-| 1986 | Bowers v. Hardwick (overruled Lawrence 2003); Thornburg v. Gingles (VRA §2 vote dilution) |
-| 1989 | Croson — strict scrutiny for state/local racial classifications |
 | 1990 | AMERICANS WITH DISABILITIES ACT (GHW Bush) |
 | 1991 | CRA 1991 — jury trials + damages; Anita Hill testimony |
 | 1993 | RFRA — Religious Freedom Restoration Act; Don't Ask Don't Tell (Clinton compromise) |
-| 1995 | Adarand v. Peña — strict scrutiny federal racial |
-| 1996 | US v. VIRGINIA (VMI) — exceedingly persuasive justification; ROMER v. EVANS — first major SCOTUS LGBTQ+ rights victory; DOMA enacted |
+| 1993 | SHAW v. RENO (required case) — race-based district subject to equal protection challenge |
+| 1996 | US v. VIRGINIA (VMI) — struck all-male admissions as sex discrimination; DOMA enacted |
 | 1999 | Olmstead v. LC — community-based services for disabled |
 | 2003 | LAWRENCE v. TEXAS — overruled Bowers; GRUTTER v. BOLLINGER — upheld Michigan Law holistic; Goodridge first state SS marriage |
 | 2007 | Parents Involved v. Seattle — struck K-12 race-conscious assignment |
@@ -78,17 +74,16 @@ export const govCivilRightsPart7Data = {
 | 2009 | LILLY LEDBETTER FAIR PAY ACT (1st Obama bill); Matthew Shepard Hate Crimes Act |
 | 2010 | DON'T ASK DON'T TELL REPEAL |
 | 2012 | DACA (Obama EO) — deferred deportation childhood arrivals |
-| 2013 | US v. WINDSOR — struck DOMA §3; Hollingsworth v. Perry — CA Prop 8 standing; SHELBY COUNTY v. HOLDER — gutted VRA §5; BLM founded |
+| 2013 | US v. WINDSOR — struck DOMA §3; BLM founded |
 | 2014 | Burwell v. Hobby Lobby — RFRA contraceptive exemption |
 | 2015 | OBERGEFELL v. HODGES — same-sex marriage |
 | 2016 | Fisher v. UT II — upheld UT Austin admissions; Trump elected |
-| 2018 | TRUMP v. HAWAII — upheld travel ban + REPUDIATED KOREMATSU 1944; Masterpiece Cakeshop (narrow) |
 | 2020 | GEORGE FLOYD murdered May 25; LARGEST PROTESTS in US history (15-26M); BOSTOCK v. CLAYTON COUNTY — Title VII protects LGBTQ+ employment; DHS v. Regents UC upheld DACA |
-| 2021 | BRNOVICH v. DNC — weakened VRA §2 vote denial; Fulton v. Philadelphia (narrow); George Floyd Justice in Policing Act passed House (failed Senate) |
+| 2021 | George Floyd Justice in Policing Act passed House (failed Senate) |
 | 2022 | DOBBS v. JACKSON — overruled Roe; RESPECT FOR MARRIAGE ACT — repealed DOMA |
-| 2023 | SFFA v. HARVARD/UNC — STRUCK race-conscious admissions; ALLEN v. MILLIGAN — preserved VRA §2 vote dilution; MOORE v. HARPER — REJECTED Independent State Legislature theory; 303 CREATIVE — First Am exemption for expressive wedding services |
+| 2023 | SFFA v. HARVARD/UNC — STRUCK race-conscious admissions |
 
-## Required AP Gov SCOTUS Case
+## Required AP Gov SCOTUS Cases
 
 **BROWN v. BOARD OF EDUCATION (1954)** — required AP Gov case
 - Warren UNANIMOUS — overruled PLESSY v. FERGUSON 1896 in education context
@@ -101,32 +96,30 @@ export const govCivilRightsPart7Data = {
 - COMPARISON to BAKKE 1978 + GRUTTER 2003 + SFFA 2023 — Brown's color-blind principle invoked by both supporters + opponents of race-conscious admissions
 - IMPACT — moral + legal foundation for entire Civil Rights Movement; required federal enforcement (Eisenhower 101st Airborne Little Rock 1957; Cooper v. Aaron 1958); MASSIVE RESISTANCE delayed implementation; Green v. County School Board 1968 + Swann v. Charlotte-Mecklenburg 1971 + Milliken v. Bradley 1974 implementation cases
 
+**SHAW v. RENO (1993)** — required AP Gov case
+- North Carolina's second majority-Black congressional district (the 12th) snaked about 160 miles along Interstate 85
+- Held: a district so irregular that it can be explained only by race is subject to a 14th Am EQUAL PROTECTION challenge (O'Connor, 5-4)
+- Shows the Court UPHOLDING THE RIGHTS OF THE MAJORITY by limiting majority-minority districting (EK 3.12.A.1.iv)
+- Builds on BAKER v. CARR 1962 (required case — redistricting is justiciable); connects to gerrymandering and redistricting in Congress (EK 2.3.A.2)
+
 ## Sprint Terms
 
 | Term | Definition |
 |---|---|
 | **SEPARATE BUT EQUAL** | Plessy 1896 doctrine permitting racial segregation if facilities equal; OVERRULED Brown 1954 in education |
 | **EQUAL PROTECTION** | 14th Am 1868 prohibition on state denial of equal protection of laws; foundation of civil rights doctrine |
-| **STRICT SCRUTINY** | Most demanding constitutional review — requires COMPELLING INTEREST + NARROWLY TAILORED + LEAST RESTRICTIVE; for race + national origin + alienage + fundamental rights |
-| **INTERMEDIATE SCRUTINY** | Middle review — requires IMPORTANT INTEREST + SUBSTANTIALLY RELATED; for sex/gender + illegitimacy (Craig v. Boren 1976) |
-| **RATIONAL BASIS** | Most deferential review — requires LEGITIMATE INTEREST + RATIONALLY RELATED; for most other classifications |
-| **RATIONAL BASIS WITH BITE** | More searching rational basis when classification appears motivated by ANIMUS toward unpopular group (Cleburne 1985, Romer 1996) |
-| **SUSPECT CLASS** | Classification triggering strict scrutiny — race, national origin, alienage |
-| **QUASI-SUSPECT CLASS** | Classification triggering intermediate scrutiny — sex/gender, illegitimacy |
 | **STATE ACTION** | 14th Am only restricts state government action, not private (Civil Rights Cases 1883); reach private via Commerce Clause statutes or 13th Am |
 | **DE JURE vs DE FACTO** | DE JURE = segregation BY LAW (Plessy era); DE FACTO = segregation IN FACT (residential patterns); Court distinguishes for remedial purposes (Milliken v. Bradley 1974 limited cross-district busing absent de jure cause) |
-| **DISPARATE IMPACT** | Statistical pattern of discrimination against protected class; Title VII allows in some contexts (Griggs v. Duke Power 1971); Equal Protection requires INTENT (Washington v. Davis 1976) |
 | **AFFIRMATIVE ACTION** | Term coined Kennedy EO 10925 1961; LBJ EO 11246 1965; race-conscious admissions struck SFFA 2023 |
 | **TITLE VI** | CRA 1964 prohibits discrimination in federally funded programs |
 | **TITLE VII** | CRA 1964 prohibits employment discrimination on race, color, religion, sex, national origin; created EEOC; extended to LGBTQ+ Bostock 2020 |
 | **TITLE IX** | 1972 prohibits sex discrimination in federally funded education |
 | **ADA** | Americans with Disabilities Act 1990 — Title I employment + II state/local + III public accommodations + IV telecom; reasonable accommodations |
-| **VRA PRECLEARANCE** | VRA §5 (1965) required jurisdictions with history of voting discrimination to get DOJ/court approval before changing voting practices; gutted Shelby County 2013 (struck §4(b) coverage formula) |
-| **VRA §2** | Nationwide ban on racially discriminatory voting practices; vote denial weakened Brnovich 2021; vote dilution preserved Allen v. Milligan 2023 |
-| **UNDUE BURDEN** | Casey 1992 (abortion regulations) — replaced strict scrutiny; rejected Dobbs 2022 |
-| **BFOQ (Bona Fide Occupational Qualification)** | Title VII defense allowing sex/religion/national origin discrimination in employment when reasonably necessary to normal operation of business; very narrow (Dothard v. Rawlinson 1977 prison guard) |
+| **VRA PRECLEARANCE** | VRA §5 (1965) required jurisdictions with history of voting discrimination to get DOJ/court approval before changing voting practices |
+| **VRA §2** | Nationwide ban on racially discriminatory voting practices |
+| **MAJORITY-MINORITY DISTRICT** | District in which a racial or ethnic minority group makes up a majority of voters; limited by Shaw v. Reno 1993 when race is the only explanation for the lines |
+| **UNDUE BURDEN** | Casey 1992 (abortion regulations) — replaced Roe's trimester framework; rejected Dobbs 2022 |
 | **REASONABLE ACCOMMODATION** | ADA + Title VII religion requirement that employers + public accommodations make modifications for disabilities + religious practices unless undue hardship |
-| **INDEPENDENT STATE LEGISLATURE THEORY** | Theory state legislatures have plenary authority over federal elections free from state court review; REJECTED Moore v. Harper 2023 |
 
 ## AP FRQ Strategy
 
@@ -143,14 +136,13 @@ export const govCivilRightsPart7Data = {
 **FRQ 2 (QUANTITATIVE ANALYSIS):** interpret data on civil rights (e.g., voter turnout by race, congressional representation, etc.)
 
 **STUDY TIPS:**
-- MEMORIZE: scrutiny tiers + which classifications trigger which tier
 - MEMORIZE: state action doctrine + how civil rights statutes reach private discrimination
-- MEMORIZE: required AP Gov case (Brown v. Board 1954)
+- MEMORIZE: required AP Gov cases (Brown v. Board 1954, Shaw v. Reno 1993; Baker v. Carr 1962 for redistricting)
 - MEMORIZE: Letter from Birmingham Jail key arguments + foundational document status
-- MEMORIZE: high-yield SCOTUS cases by category (race: Brown, Loving, SFFA; sex: Reed, Craig, VMI; LGBTQ+: Romer, Lawrence, Windsor, Obergefell, Bostock; voting: Shelby, Brnovich, Allen v. Milligan, Moore v. Harper; affirmative action: Bakke, Grutter, SFFA)
+- MEMORIZE: high-yield SCOTUS cases by category (race: Brown, Loving, SFFA; sex: Reed, VMI; LGBTQ+: Obergefell, Bostock; voting: Baker v. Carr, Shaw v. Reno; affirmative action: Bakke, Grutter, SFFA)
 - PRACTICE: 5-step civil rights case analysis framework
 
-> 🔑 Key takeaway: Civil rights doctrine analyzed via tiered scrutiny + state action doctrine + foundational documents + landmark legislation + interest groups. Required AP Gov case = BROWN v. BOARD 1954. Required foundational documents for civil rights = the Constitution (14th Am 1868) + LETTER FROM BIRMINGHAM JAIL 1963 + (new for 2026-27) EMANCIPATION PROCLAMATION 1863 + GETTYSBURG ADDRESS 1863; BROWN 1954 is a required CASE, and the CIVIL RIGHTS ACT 1964 + VOTING RIGHTS ACT 1965 are landmark STATUTES, not foundational documents. Memorize high-yield dates + sprint terms (separate-but-equal, scrutiny tiers, suspect class, Title VI/VII/IX, ADA, VRA §2/§5, BFOQ, reasonable accommodation, ISL theory). Apply 5-step framework: (1) provision + tier; (2) state action; (3) classification + suspect class; (4) precedent; (5) impact + interests.
+> 🔑 Key takeaway: Civil rights doctrine analyzed via equal protection + state action doctrine + foundational documents + landmark legislation + interest groups. Required AP Gov cases = BROWN v. BOARD 1954 + SHAW v. RENO 1993. Required foundational documents for civil rights = the Constitution (14th Am 1868) + LETTER FROM BIRMINGHAM JAIL 1963 + (new for 2026-27) EMANCIPATION PROCLAMATION 1863 + GETTYSBURG ADDRESS 1863; BROWN 1954 is a required CASE, and the CIVIL RIGHTS ACT 1964 + VOTING RIGHTS ACT 1965 are landmark STATUTES, not foundational documents. Memorize high-yield dates + sprint terms (separate-but-equal, equal protection, state action, Title VI/VII/IX, ADA, VRA §2/§5, majority-minority district, reasonable accommodation). Apply 5-step framework: (1) provision; (2) state action; (3) characteristic + group affected; (4) precedent; (5) impact + interests.
       `
     },
     {
@@ -186,10 +178,10 @@ export const govCivilRightsPart7Data = {
             hint: 'Warren unanimous; overruled Plessy 1896 in education; "separate educational facilities are inherently unequal"; 14th Am Equal Protection.'
           },
           {
-            prompt: "Year of *SHELBY COUNTY v. HOLDER* gutting VRA Section 4(b) coverage formula and effectively ending Section 5 preclearance.",
-            answer: '2013',
-            acceptableAnswers: ['2013'],
-            hint: 'Roberts 5-4; equal sovereignty doctrine; Ginsburg dissent: "throwing away your umbrella in a rainstorm because you are not getting wet."'
+            prompt: "Year *SHAW v. RENO* held that a district drawn so irregularly that only race can explain it is subject to an equal protection challenge.",
+            answer: '1993',
+            acceptableAnswers: ['1993'],
+            hint: 'Required case; North Carolina\'s 12th District, drawn after the 1990 census.'
           },
           {
             prompt: "Year *DOBBS v. JACKSON* overruled Roe v. Wade.",
@@ -203,26 +195,26 @@ export const govCivilRightsPart7Data = {
     {
       id: 'govcivr7-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Match each civil rights case to its year.**`,
+      content: `**Match each civil rights case or law to its year.**`,
       exercise: {
         dropdowns: [
           {
-            label: "OBERGEFELL v. HODGES — established constitutional right to same-sex marriage under 14th Am Due Process + Equal Protection: ___",
-            options: ['1954', '1967', '1996', '2003', '2015', '2020', '2023']
+            label: "BROWN v. BOARD OF EDUCATION — race-based school segregation violates the Equal Protection Clause: ___",
+            options: ['1954', '1964', '1965', '1972', '1993', '2015', '2023']
           },
           {
-            label: "BOSTOCK v. CLAYTON COUNTY — Title VII of CRA 1964 protects LGBTQ+ employment discrimination (statutory): ___",
-            options: ['1954', '1967', '1996', '2003', '2015', '2020', '2023']
+            label: "CIVIL RIGHTS ACT — bans discrimination in public accommodations (Title II), federally funded programs (Title VI) and employment (Title VII): ___",
+            options: ['1954', '1964', '1965', '1972', '1993', '2015', '2023']
           },
           {
-            label: "SFFA v. HARVARD/UNC — STRUCK race-conscious admissions; effectively OVERRULED Grutter v. Bollinger (2003): ___",
-            options: ['1954', '1967', '1996', '2003', '2015', '2020', '2023']
+            label: "SHAW v. RENO — a district drawn only on the basis of race can be challenged under equal protection: ___",
+            options: ['1954', '1964', '1965', '1972', '1993', '2015', '2023']
           }
         ],
-        correctAnswers: ['2015', '2020', '2023'],
-        hint1: 'Obergefell 2015 — Kennedy 5-4; Roberts + Scalia + Thomas + Alito dissents; preceded by Lawrence 2003 + Windsor 2013.',
-        hint2: 'Bostock 2020 — Gorsuch 6-3 — Title VII "because of sex" "necessarily" includes sexual orientation + gender identity (cannot discriminate against gay man without taking sex into account).',
-        hint3: 'SFFA 2023 — Roberts 6-3 — STRUCK Harvard + UNC race-conscious admissions; effectively OVERRULED Grutter; narrow exception for military service academies + essays about how race affected applicant individually.'
+        correctAnswers: ['1954', '1964', '1993'],
+        hint1: 'Brown 1954 — Warren unanimous; overruled Plessy in public education.',
+        hint2: 'Civil Rights Act 1964 — signed by LBJ after a long Senate filibuster; the Voting Rights Act followed in 1965.',
+        hint3: 'Shaw v. Reno 1993 — North Carolina\'s 12th District after the 1990 census.'
       }
     },
     {
@@ -234,13 +226,13 @@ export const govCivilRightsPart7Data = {
           {
             question: "AP FRQ 4 (Argument Essay) prompt: 'Develop an argument that explains whether the federal judiciary should INTERPRET the 14th Am Equal Protection Clause to permit race-conscious affirmative action in higher education admissions.' Which response BEST demonstrates AP-quality argumentation using foundational documents + course concepts?",
             options: [
-              "A defensible thesis, evidence from a foundational document such as the 14th Amendment, a course concept like strict scrutiny, reasoning, and a rebuttal of the opposing view.",
+              "A defensible thesis, evidence from a foundational document such as the 14th Amendment, a course concept like stare decisis, reasoning, and a rebuttal of the opposing view.",
               "A thesis restating the prompt, a summary of the 14th Amendment's history, a list of course concepts and cases without analysis, and a closing personal opinion about fairness in admissions.",
               "A one-sided thesis, evidence only from news coverage of SFFA instead of any foundational document, and a conclusion that ignores the opposing view.",
-              "A balanced thesis that takes no side, two quotations from Brown with no explanation, a list of scrutiny tiers, and a plea for Congress to decide.",
+              "A balanced thesis that takes no side, two quotations from Brown with no explanation, a list of court cases, and a plea for Congress to decide.",
             ],
             correctAnswer: 0,
-            explanation: 'AP FRQ 4 ARGUMENT ESSAY structure: (1) DEFENSIBLE THESIS with reasoning — either YES or NO permitted; e.g., NO because EP plain meaning prohibits racial classifications + Brown 1954 color-blind + race as negative against Asian Americans + no logical endpoint per SFFA 2023; OR YES because 14th Am enacted to remedy slavery + Jim Crow + Brown anti-subordination + Grutter diversity compelling; (2) EVIDENCE 1 FOUNDATIONAL DOCUMENT — 14TH AM (anti-classification vs anti-subordination reading); BROWN v. BOARD 1954 (a required case, so supporting evidence rather than the foundational-document evidence; color-blind vs anti-subordination); OR LETTER FROM BIRMINGHAM JAIL (King structural injustice supports anti-subordination); (3) EVIDENCE 2 COURSE CONCEPT — STRICT SCRUTINY (compelling + narrowly tailored + least restrictive); Grutter 2003 (diversity compelling, narrowly tailored holistic) vs SFFA 2023 (failed — race as negative + race as stereotype + no logical endpoint); (4) REASONING — explain why evidence supports thesis; (5) COUNTERARGUMENT — identify strongest opposing + explain why thesis stands.'
+            explanation: 'AP FRQ 4 ARGUMENT ESSAY structure: (1) DEFENSIBLE THESIS with reasoning — either YES or NO permitted; e.g., NO because EP plain meaning prohibits racial classifications + Brown 1954 color-blind + race as negative against Asian Americans + no logical endpoint per SFFA 2023; OR YES because 14th Am enacted to remedy slavery + Jim Crow + Brown anti-subordination + Grutter diversity compelling; (2) EVIDENCE 1 FOUNDATIONAL DOCUMENT — 14TH AM (anti-classification vs anti-subordination reading); BROWN v. BOARD 1954 (a required case, so supporting evidence rather than the foundational-document evidence; color-blind vs anti-subordination); OR LETTER FROM BIRMINGHAM JAIL (King structural injustice supports anti-subordination); (3) EVIDENCE 2 COURSE CONCEPT — STARE DECISIS (EK 2.9.A.1) and the affirmative action debate over the equal protection clause (EK 3.13.A.1); Grutter 2003 (diversity accepted, holistic review upheld) vs SFFA 2023 (race-conscious admissions struck — race as negative + race as stereotype + no logical endpoint); (4) REASONING — explain why evidence supports thesis; (5) COUNTERARGUMENT — identify strongest opposing + explain why thesis stands.'
           }
         ]
       }

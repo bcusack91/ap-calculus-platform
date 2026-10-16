@@ -33,7 +33,6 @@ export const apesBiodiversityPart7Data = {
 | Skill | Rule |
 |---|---|
 | Percent composition | $n \\div N \\times 100$ |
-| Simpson's diversity index | $D = 1 - \\Sigma (n/N)^{2}$; higher D = more diverse |
 | Species–area rule of thumb | 10 times the area ≈ 2 times the species |
 | Percent change and percent lost | (new − old) ÷ old × 100 |
 | Area units | 1 $km^{2}$ = 100 ha = 1,000,000 $m^{2}$ |
@@ -118,7 +117,7 @@ export const apesBiodiversityPart7Data = {
       content: `
 **Calculate It** 🧮
 
-1) A meadow sample has 60 bees, 30 beetles and 10 butterflies. What is Simpson's D? (two decimals)
+1) A meadow sample has 60 bees, 30 beetles and 10 butterflies. What percent of the sample are bees?
 
 2) A 4 $km^{2}$ marsh is valued at \\$1,500 per hectare per year for storm protection. What is its total value, in dollars per year? (no commas)
 
@@ -126,11 +125,11 @@ export const apesBiodiversityPart7Data = {
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.54', '600000', '7'],
-        hint1: 'Proportions 0.6, 0.3 and 0.1. Square, add, subtract from 1.',
+        correctAnswers: ['60', '600000', '7'],
+        hint1: 'Bees ÷ total insects × 100.',
         hint2: '4 km² = 400 ha.',
         hint3: '70 ÷ 10.',
-        explanation: '1) 0.36 + 0.09 + 0.01 = 0.46, so D = 1 − 0.46 = 0.54. 2) 400 ha × 1,500 = 600,000 dollars per year. 3) 70 ÷ 10 = 7 years.'
+        explanation: '1) 60 ÷ 100 × 100 = 60 percent. 2) 400 ha × 1,500 = 600,000 dollars per year. 3) 70 ÷ 10 = 7 years.'
       }
     },
     {
@@ -186,7 +185,7 @@ export const apesBiodiversityPart7Data = {
 Before the exam, make sure you can do each of these without notes:
 
 - Define genetic, species and ecosystem diversity, and explain how a bottleneck lowers adaptive potential
-- Compare two communities by richness and evenness, and calculate Simpson's D
+- Compare two communities by richness and percent composition
 - Classify ecosystem services into the four categories and explain the economic cost of losing one
 - Read the island biogeography graph and predict species number from island size and distance
 - Apply the species–area rule of thumb and explain edge effects and corridors

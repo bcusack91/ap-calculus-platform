@@ -969,7 +969,7 @@ International cooperation is essential for global commons. Key agreements:
 | **Kyoto Protocol (1997)** | First binding greenhouse-gas targets (developed nations) |
 | **Paris Agreement (2015)** | Nearly all nations pledge to limit warming (voluntary national targets) |
 
-> ⚠️ **Classic distinction:** **Montreal Protocol = CFCs / ozone layer**; **Paris Agreement = $CO_{2}$ / climate change**. Don't swap them. Montreal is celebrated because nearly universal participation actually shrank the ozone hole.`,
+> ⚠️ **Classic distinction:** **Montreal Protocol = CFCs / ozone layer**; **Kyoto Protocol = greenhouse gases / climate change**. Don't swap them. (Montreal and Kyoto are on the CED's required legislation list; the Paris Agreement is useful context but not required.) Montreal is celebrated because nearly universal participation actually shrank the ozone hole.`,
       },
       {
         id: 'apsus7-input-tax',
@@ -1016,13 +1016,13 @@ The encouraging news is that solutions exist and are being deployed: renewable c
             { label: 'A cost imposed on third parties, like pollution, is a(n):', options: ['Negative externality', 'Subsidy', 'Ecosystem service', 'Biocapacity'] },
             { label: 'Set a total cap, then let firms trade emission allowances:', options: ['Cap-and-trade', 'Carbon tax', 'Command-and-control', 'Green subsidy'] },
             { label: 'Treaty that phased out CFCs to heal the ozone layer:', options: ['Montreal Protocol', 'Paris Agreement', 'Clean Water Act', 'Kyoto Protocol'] },
-            { label: '2015 treaty where nearly all nations pledged to limit warming:', options: ['Paris Agreement', 'Montreal Protocol', 'Endangered Species Act', 'Brundtland Report'] },
+            { label: '1997 treaty setting binding greenhouse-gas targets for developed nations:', options: ['Kyoto Protocol', 'Montreal Protocol', 'Endangered Species Act', 'Brundtland Report'] },
           ],
-          correctAnswers: ['Negative externality', 'Cap-and-trade', 'Montreal Protocol', 'Paris Agreement'],
+          correctAnswers: ['Negative externality', 'Cap-and-trade', 'Montreal Protocol', 'Kyoto Protocol'],
           hint1: 'A pollution cost paid by others is a negative externality.',
           hint2: 'Cap the total, then trade allowances = cap-and-trade.',
-          hint3: 'Montreal = CFCs/ozone; Paris (2015) = $climate/CO_{2}$.',
-          explanation: 'Pollution is a negative externality; cap-and-trade caps total emissions and lets firms trade allowances; the Montreal Protocol phased out CFCs (ozone layer); and the 2015 Paris Agreement is the near-universal climate pledge.',
+          hint3: 'Montreal = CFCs/ozone; Kyoto (1997) = greenhouse gases.',
+          explanation: 'Pollution is a negative externality; cap-and-trade caps total emissions and lets firms trade allowances; the Montreal Protocol phased out CFCs (ozone layer); and the 1997 Kyoto Protocol set binding greenhouse-gas targets for developed nations.',
         },
       },
       {
@@ -1069,11 +1069,11 @@ The encouraging news is that solutions exist and are being deployed: renewable c
               options: [
                 'Montreal Protocol → phased out CFCs to protect the ozone layer',
                 'Montreal Protocol → set binding $CO_{2}$ targets for climate change',
-                'Paris Agreement → phased out CFCs to protect the ozone layer',
-                'Kyoto Protocol → created a network of Marine Protected Areas',
+                'Kyoto Protocol → phased out CFCs to protect the ozone layer',
+                'CITES → created a network of Marine Protected Areas',
               ],
               correctAnswer: 0,
-              explanation: 'The Montreal Protocol (1987) phased out CFCs to heal the stratospheric ozone layer. The Kyoto Protocol and Paris Agreement target greenhouse gases / climate change, not the ozone layer.',
+              explanation: 'The Montreal Protocol (1987) phased out CFCs to heal the stratospheric ozone layer. The Kyoto Protocol targets greenhouse gases and climate change, not the ozone layer, and CITES regulates trade in endangered species.',
             },
           ],
         },

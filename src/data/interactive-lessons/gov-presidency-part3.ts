@@ -14,7 +14,7 @@ export const govPresidencyPart3Data = {
 | Section |
 |---|
 | Modern presidencies — FDR through Trump-Biden-Trump |
-| Landmark Supreme Court cases on executive power |
+| Supreme Court cases + CED illustrative examples on executive power |
 | Famous executive orders + executive agreements |
 | Patterns in presidential power expansion |
 
@@ -42,7 +42,7 @@ export const govPresidencyPart3Data = {
 | Achievement | Significance |
 |---|---|
 | Civil Rights Act 1964 | Ended legal segregation; enforced via Title II + Title VII |
-| Voting Rights Act 1965 | Ended Southern voter suppression; preclearance until *Shelby County v. Holder* 2013 |
+| Voting Rights Act 1965 | Prohibited racial discrimination in voting; federal oversight of Southern election laws (EK 3.11.A.1.iv) |
 | Medicare + Medicaid (1965) | Federal health insurance for elderly + poor |
 | ESEA 1965 | First major federal aid to elementary + secondary education |
 | Vietnam escalation (1965-68) | Gulf of Tonkin Resolution 1964 = effective war declaration without formal Article I declaration |
@@ -81,7 +81,7 @@ export const govPresidencyPart3Data = {
 
 | Achievement | Significance |
 |---|---|
-| Tax Cuts and Jobs Act 2017 | Major tax reduction (reconciliation) |
+| Tax Cuts and Jobs Act 2017 | Major tax reduction (party-line vote) |
 | 3 SCOTUS appointments (Gorsuch, Kavanaugh, Barrett) | Largest SCOTUS impact since Reagan |
 | Withdrawals (Paris Climate, Iran deal, TPP) | Used executive agreement reversibility |
 | Impeached twice (2019, 2021) | Acquitted both times |
@@ -91,25 +91,29 @@ export const govPresidencyPart3Data = {
 
 | Achievement | Significance |
 |---|---|
-| ARPA 2021 | \\$1.9T COVID relief (reconciliation) |
+| ARPA 2021 | \\$1.9T COVID relief (party-line vote) |
 | Bipartisan Infrastructure Law 2021 | \\$1.2T infrastructure (rare bipartisan major bill) |
-| Inflation Reduction Act 2022 | Climate + healthcare + minimum corporate tax (reconciliation) |
+| Inflation Reduction Act 2022 | Climate + healthcare + minimum corporate tax (party-line vote) |
 | 1 SCOTUS appointment (Jackson) | First Black woman justice |
 
-## Landmark SCOTUS Cases on Executive Power
+## Supreme Court Cases on Executive Power
+
+None of the 14 required cases is mainly about presidential power; *United States v. Nixon* is a CED illustrative example, and the exam supplies the facts for any other case.
 
 | Case | Year | Holding | Significance |
 |---|---|---|---|
-| *Youngstown Sheet & Tube v. Sawyer* | 1952 | Truman's seizure of steel mills during Korean War unconstitutional | Jackson's 3-tier framework: max power w/ congressional authorization; twilight zone in silence; lowest ebb against Congress |
+| *Youngstown Sheet & Tube v. Sawyer* | 1952 | Truman's seizure of steel mills during Korean War unconstitutional | No law authorized the seizure — a judicial check on executive action |
 | *US v. Nixon* | 1974 | Executive privilege qualified — Court ordered tape release | Limits absolute executive privilege; established judicial review of presidential claims |
-| *INS v. Chadha* | 1983 | Legislative veto unconstitutional | Strengthens executive vs. congressional micromanagement |
-| *Clinton v. Jones* | 1997 | President not immune from civil suit for unofficial conduct | Allowed Paula Jones suit to proceed → Lewinsky discovery → impeachment |
-| *Clinton v. New York* | 1998 | Line-item veto unconstitutional | President cannot edit legislation per Presentment Clause |
-| *Hamdan v. Rumsfeld* | 2006 | Bush military commissions for Guantanamo detainees exceeded executive authority | Required congressional authorization (which followed via MCA 2006) |
-| *Boumediene v. Bush* | 2008 | Guantanamo detainees have habeas corpus rights | Limits executive detention power |
-| *NLRB v. Noel Canning* | 2014 | Recess appointments require Senate recess of 10+ days | Limited recess appointment power |
-| *Trump v. Hawaii* | 2018 | Travel ban (3rd version) upheld | Broad executive authority over immigration + national security |
-| *Trump v. United States* | 2024 | Presidents have absolute immunity for core constitutional acts; presumptive immunity for other official acts | Major expansion of presidential immunity from criminal prosecution |
+
+## CED Illustrative Examples for the Presidency (Topics 2.5-2.6)
+
+| Example | What it shows |
+|---|---|
+| **Conflicts in Vietnam, Iraq, Kosovo, Libya, Syria** | Presidents committing forces with limited or no congressional authorization — tension with Congress's war power (EK 2.5.A) |
+| **Appointments of Thurgood Marshall (1967) and Sandra Day O'Connor (1981)** | Judicial appointments as a president's longest-lasting influence (EK 2.5.A.2) |
+| **Failed appointments: Abe Fortas (1968), Robert Bork (1987), John Tower (1989)** | Senate confirmation as a real check on appointments (EK 2.5.A.1) |
+| **No Child Left Behind (2001)** | President working with Congress to pass a signature agenda item (EK 2.5.A.3) |
+| **Theodore Roosevelt's "stewardship" vs. Taft's limited view; FDR's 1941 State of the Union** | Competing interpretations of how far presidential power extends (EK 2.6.A.3) |
 
 ## Famous Executive Orders + Agreements
 
@@ -148,15 +152,15 @@ export const govPresidencyPart3Data = {
       exercise: {
         questions: [
           {
-            question: "Which best describes the significance of Youngstown Sheet & Tube v. Sawyer (1952) and Justice Jackson's three-tier framework?",
+            question: "In 1987 the Senate rejected Robert Bork's Supreme Court nomination 42-58, and in 1989 it rejected John Tower's nomination as Secretary of Defense. Which concept do these CED illustrative examples best show?",
             options: [
-              "It struck down Truman's steel mill seizure, and Jackson's concurrence ties presidential power to whether Congress authorized or barred the act",
-              "It upheld Truman's steel mill seizure, and Jackson's concurrence said wartime emergencies give the President inherent power to act alone",
-              "It struck down Truman's firing of a regulator, and Jackson's concurrence said Congress may limit removal of independent agency heads",
-              "It struck down a Korean War draft order, and Jackson's concurrence said Congress alone may decide when troops deploy abroad"
+              "Senate confirmation is a check on the President's appointment power that can produce conflict between the branches",
+              "The Senate may remove Cabinet officers and federal judges at any time by a simple majority vote",
+              "Presidents need House approval as well as Senate approval for their most important appointments",
+              "Judicial review lets the Supreme Court veto any nominee it considers unqualified"
             ],
             correctAnswer: 0,
-            explanation: 'Youngstown Sheet & Tube (1952): struck Truman steel-mill seizure during Korean War as exceeding constitutional + statutory authority. Jackson concurrence 3-tier: (1) MAXIMUM — express/implied congressional authorization → Art II + delegation; (2) TWILIGHT — congressional silence → "imperatives of events" + prior practice; (3) LOWEST EBB — against express/implied congressional will → only Art II minus preemption. Modern citations: Hamdi 2004, Hamdan 2006, Medellín 2008, Noel Canning 2014.'
+            explanation: 'EK 2.5.A.1: Senate confirmation is an important check on appointment powers, but there can be conflict based on who the President chooses — for Cabinet members, ambassadors, and federal judges. Bork and Tower are CED illustrative failed appointments. The Senate cannot remove officials by simple vote (removal requires impeachment and a 2/3 conviction), the House has no confirmation role, and courts do not review nominations.'
           },
           {
             question: "Which best illustrates the difference between treaties and executive agreements in modern American foreign policy?",
@@ -185,10 +189,10 @@ export const govPresidencyPart3Data = {
             hint: 'Same year as War Powers Resolution\'s 1st year + Nixon\'s resignation August 9.'
           },
           {
-            prompt: "Year of *Youngstown Sheet & Tube v. Sawyer* — Court strikes down Truman's steel-mill seizure during Korean War.",
-            answer: '1952',
-            acceptableAnswers: ['1952'],
-            hint: 'Same year Eisenhower elected; Korean War still ongoing.'
+            prompt: "Year the Senate rejected Robert Bork's Supreme Court nomination, a CED illustrative failed appointment.",
+            answer: '1987',
+            acceptableAnswers: ['1987'],
+            hint: 'Reagan\'s second term; vote was 42-58.'
           },
           {
             prompt: "Year of the 22nd Amendment limiting the President to two elected terms (in response to FDR's 4 terms).",
@@ -221,7 +225,7 @@ export const govPresidencyPart3Data = {
         correctAnswers: ['FDR', 'LBJ', 'Obama'],
         hint1: 'FDR launched the modern activist presidency through the Hundred Days + New Deal.',
         hint2: 'LBJ engineered the most dramatic peacetime legislative achievement in modern American history during the Great Society peak.',
-        hint3: 'Obama used reconciliation for ACA + executive agreements for major foreign-policy initiatives.'
+        hint3: 'Obama signed the ACA and used executive agreements for major foreign-policy initiatives.'
       }
     },
     {
@@ -239,18 +243,18 @@ export const govPresidencyPart3Data = {
                 "Only a formal declaration of war lets presidents use force abroad, and the AUMF legally counted as one"
               ],
               correctAnswer: 0,
-              explanation: '2001 AUMF (Sept 14, 3 days after 9/11) — "those nations, organizations, or persons" responsible for 9/11. Used by Bush (Afghanistan, al-Qaeda), Obama (drone strikes Pakistan/Yemen/Somalia, Libya 2011), Trump (Syria, ISIS), Biden (Afghanistan withdrawal 2021, ISIS) — ~20 countries, 20+ years. Illustrates: (1) MASSIVE EXEC WAR POWER EXPANSION via OPEN-ENDED authorization (no geographic/temporal/target limits); (2) CONGRESSIONAL ABDICATION (no declaration since WWII; no revision despite proposals); (3) WAR POWERS RESOLUTION 1973 IRRELEVANT (withdrawal requirement doesn\'t apply to authorized ops); (4) JUDICIAL DEFERENCE (Hamdi 2004 upheld detention; Hamdan 2006 limited but didn\'t eliminate).'
+              explanation: '2001 AUMF (Sept 14, 3 days after 9/11) — "those nations, organizations, or persons" responsible for 9/11. Used by Bush (Afghanistan, al-Qaeda), Obama (drone strikes Pakistan/Yemen/Somalia, Libya 2011), Trump (Syria, ISIS), Biden (Afghanistan withdrawal 2021, ISIS) — ~20 countries, 20+ years. Illustrates: (1) MASSIVE EXEC WAR POWER EXPANSION via OPEN-ENDED authorization (no geographic/temporal/target limits); (2) CONGRESSIONAL ABDICATION (no declaration since WWII; no revision despite proposals); (3) WAR POWERS RESOLUTION 1973 IRRELEVANT (withdrawal requirement doesn\'t apply to authorized ops); (4) CED illustrative conflicts (Iraq, Libya, Syria) show the continuing tension between the commander-in-chief role and Congress\'s war power.'
           },
           {
             question: "AP scenario: 'A president nominates a Supreme Court justice. The Senate confirms the nominee on a party-line 52-48 vote.' What does this illustrate about modern Supreme Court confirmation politics?",
             options: [
-              "Confirmations have become partisan contests after the Senate ended the filibuster for Supreme Court nominees in 2017",
+              "Confirmations have become partisan contests, and a simple majority of senators is enough to confirm a justice",
               "Confirmations still need 60 votes to end debate, so a 52-48 vote shows the nominee won a broad bipartisan compromise",
               "Supreme Court confirmations now require a two-thirds Senate vote, so a 52-48 tally means the nomination failed",
               "The House must also confirm justices, so a 52-48 Senate vote completes only half of the process"
             ],
             correctAnswer: 0,
-            explanation: 'Party-line ~52-48 SCOTUS confirmations = modern norm post-2017 nuclear option. Gorsuch 54-45 (2017), Kavanaugh 50-48 (2018), Barrett 52-48 (2020), Jackson 53-47 (2022). Illustrates: (1) END of bipartisan tradition (Scalia 98-0 1986; Ginsburg 96-3 1993; Kennedy 97-0 1988); (2) NUCLEAR OPTION 2017 lowered cloture 60 → 51 → eliminated minority filibuster; (3) INCREASED IDEOLOGICAL STAKES — 6-3 conservative majority post-Barrett; each appointment shapes doctrine for decades (Dobbs 2022 overturned Roe 1973 — made possible by 3 Trump appointees).'
+            explanation: 'Party-line ~52-48 SCOTUS confirmations = modern norm. Gorsuch 54-45 (2017), Kavanaugh 50-48 (2018), Barrett 52-48 (2020), Jackson 53-47 (2022). Illustrates: (1) END of bipartisan tradition (Scalia 98-0 1986; Ginsburg 96-3 1993; Kennedy 97-0 1988); (2) SIMPLE MAJORITY confirms — the Senate needs no supermajority for nominees; (3) INCREASED IDEOLOGICAL STAKES — 6-3 conservative majority post-Barrett; each appointment shapes doctrine for decades (Dobbs 2022 overturned Roe 1973 — made possible by 3 Trump appointees).'
           }
         ]
       }

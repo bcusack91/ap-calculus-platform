@@ -14,7 +14,7 @@ export const govConstitutionalFoundationsPart7Data = {
 | Section |
 |---|
 | High-yield dates 1776–1992 |
-| Required Supreme Court cases |
+| Required Supreme Court cases (14) |
 | Sprint terms |
 | AP free-response strategy |
 
@@ -40,18 +40,15 @@ export const govConstitutionalFoundationsPart7Data = {
 | 1803 | *Marbury v. Madison* | Judicial review established |
 | 1819 | *McCulloch v. Maryland* | Implied federal powers + supremacy |
 | 1833 | *Barron v. Baltimore* | Bill of Rights restricts only federal action |
-| 1857 | *Dred Scott v. Sandford* | Court denies Black citizenship |
 | 1865 | 13th Amendment (abolition) | Reconstruction begins |
 | 1868 | 14th Amendment (citizenship + due process + equal protection) | Constitutional revolution |
 | 1870 | 15th Amendment (Black male suffrage) | Reconstruction Amendments complete |
-| 1873 | *Slaughter-House Cases* | Privileges or Immunities Clause gutted |
 | 1896 | *Plessy v. Ferguson* | "Separate but equal" |
 | 1913 | 16th + 17th Amendments | Income tax + direct election senators |
 | 1919–20 | 18th + 19th Amendments | Prohibition + women\'s suffrage |
 | 1925 | *Gitlow v. New York* | 1st Amendment incorporation begins |
 | 1933 | 20th + 21st Amendments | Lame duck reform + Prohibition repeal |
 | 1937 | "Switch in time that saved nine" (*West Coast Hotel v. Parrish*) | New Deal commerce-clause acceptance |
-| 1942 | *Wickard v. Filburn* | Maximum commerce-clause expansion |
 | 1951 | 22nd Amendment | Presidential 2-term limit |
 | 1954 | *Brown v. Board of Education* | Equal Protection ends school segregation |
 | 1961 | *Mapp v. Ohio* | 4th Amendment exclusionary rule incorporated |
@@ -59,7 +56,7 @@ export const govConstitutionalFoundationsPart7Data = {
 | 1964 | 24th Amendment + Civil Rights Act | Poll-tax abolition + comprehensive civil rights |
 | 1965 | Voting Rights Act | 15th Amendment enforced |
 | 1966 | *Miranda v. Arizona* | 5th Amendment self-incrimination warnings |
-| 1967 | 25th Amendment + *Loving v. Virginia* | Presidential succession + interracial marriage |
+| 1967 | 25th Amendment | Presidential succession + disability |
 | 1971 | 26th Amendment | 18-year-old vote |
 | 1973 | *Roe v. Wade* | Substantive due process privacy (overruled 2022) |
 | 1974 | *United States v. Nixon* | No absolute executive privilege |
@@ -70,7 +67,7 @@ export const govConstitutionalFoundationsPart7Data = {
 | 2015 | *Obergefell v. Hodges* | Same-sex marriage as fundamental right |
 | 2022 | *Dobbs v. Jackson Women\'s Health* | *Roe* overruled |
 
-## Required Supreme Court Cases (AP Gov 15)
+## Required Supreme Court Cases (AP Gov 14)
 
 | Case | Year | Holding | Constitutional Hook |
 |---|---|---|---|
@@ -83,12 +80,13 @@ export const govConstitutionalFoundationsPart7Data = {
 | ***Tinker v. Des Moines*** | 1969 | Student speech protection | 1st Amendment |
 | ***New York Times v. United States*** | 1971 | Prior restraint disfavored (Pentagon Papers) | 1st Amendment |
 | ***Wisconsin v. Yoder*** | 1972 | Free Exercise Clause exemption from compulsory schooling | 1st Amendment |
-| ***Roe v. Wade*** | 1973 | Constitutional right to abortion (overruled 2022) | 14th Amendment Due Process |
 | ***Shaw v. Reno*** | 1993 | Racial gerrymandering subject to strict scrutiny | 14th Amendment Equal Protection |
 | ***United States v. Lopez*** | 1995 | First commerce-clause limit since 1937 | Article I, § 8 commerce clause |
 | ***McDonald v. City of Chicago*** | 2010 | 2nd Amendment incorporated against states | 14th Amendment Due Process |
 | ***Citizens United v. FEC*** | 2010 | Corporate independent political expenditures protected | 1st Amendment |
 | ***Baker v. Carr*** | 1962 | "One person, one vote" — apportionment justiciable | 14th Amendment Equal Protection |
+
+*Roe v. Wade* (1973) is NOT on the 2026 required list. The CED names its holding in EK 3.9.A.2, together with *Griswold v. Connecticut* (1965) and *Dobbs v. Jackson Women's Health Organization* (2022), which overruled it — know those holdings, but they are not required cases.
 
 ## Sprint Terms
 
@@ -138,7 +136,7 @@ export const govConstitutionalFoundationsPart7Data = {
 
 5. **Alternative perspective:** Acknowledge that polarization has intensified the structural problem (DW-NOMINATE polarization measures show the highest congressional polarization since Reconstruction) — but argue that the structure produced gridlock even under less polarized historical periods (e.g., Truman\'s "Do-Nothing 80th Congress" 1947–48), so the structural cause is more fundamental.
 
-> 🔑 Key takeaway: Mastery of foundational constitutional content + the 15 required SCOTUS cases + the 13 required documents (this unit covers 8 of them, including Federalist No. 39 and the Gettysburg Address, both added for 2026–27) is the foundation for the entire AP Gov course. Every later unit builds on these structures.
+> 🔑 Key takeaway: Mastery of foundational constitutional content + the 14 required SCOTUS cases + the 13 required documents (this unit covers 8 of them, including Federalist No. 39 and the Gettysburg Address, both added for 2026–27) is the foundation for the entire AP Gov course. Every later unit builds on these structures.
       `
     },
     {
@@ -167,7 +165,7 @@ export const govConstitutionalFoundationsPart7Data = {
               "Its Citizenship Clause underlies Engel v. Vitale and Wisconsin v. Yoder, which apply the 14th Amendment directly to religious practice in public life and in schools"
             ],
             correctAnswer: 0,
-            explanation: '14th Amendment hook for required AP cases: Equal Protection → Brown 1954 + Shaw v. Reno 1993 + Baker v. Carr 1962. Due Process (selective incorporation) → Gideon 1963 (6th counsel) + McDonald 2010 (2nd) + Roe v. Wade 1973 (substantive due process — overruled Dobbs 2022). Largest single source of required cases.'
+            explanation: '14th Amendment hook for required AP cases: Equal Protection → Brown 1954 + Shaw v. Reno 1993 + Baker v. Carr 1962. Due Process (selective incorporation) → Gideon 1963 (6th counsel) + McDonald 2010 (2nd). Largest single source of required cases. (Roe v. Wade, a due process case overruled by Dobbs in 2022, is named in the EK but is not a required case.)'
           }
         ]
       }
@@ -222,7 +220,7 @@ export const govConstitutionalFoundationsPart7Data = {
         hint1: 'Judicial review = Marshall, 1803.',
         hint2: 'Implied powers + supremacy = Marshall, 1819.',
         hint3: 'First commerce-clause limit since New Deal = Rehnquist, 1995 — gun-free school zones.',
-        explanation: 'Marshall Court foundational cases: Marbury (1803, judicial review), McCulloch (1819, implied powers + supremacy). Modern federalism revival: Lopez (1995, first commerce-clause limit since 1937), Printz (1997, anti-commandeering), NFIB v. Sebelius (2012, ACA Medicaid expansion coercion).'
+        explanation: 'Marshall Court foundational cases: Marbury (1803, judicial review), McCulloch (1819, implied powers + supremacy). Modern federalism revival: Lopez (1995, first commerce-clause limit since 1937).'
       }
     },
     {
@@ -240,7 +238,7 @@ export const govConstitutionalFoundationsPart7Data = {
               "Article V is too difficult, because the President can veto any proposed amendment that passes both houses of Congress"
             ],
             correctAnswer: 0,
-            explanation: 'Defensible thesis: Article V too difficult — 2/3 propose + 3/4 ratify → only 27 amendments in 230+ years; only 1 since 1971 → harmful consequences: (1) shift to judicial reinterpretation (Warren incorporation; Roe 1973; Citizens United 2010; Shelby County 2013; Dobbs 2022) → 9 unelected justices vs. people; (2) failed widely-supported reforms (ERA 1972-82; Balanced Budget; Electoral College reform; campaign finance) — structurally resistant to democratic updating; founders coordinating 13 states vs. 50 today.'
+            explanation: 'Defensible thesis: Article V too difficult — 2/3 propose + 3/4 ratify → only 27 amendments in 230+ years; only 1 since 1971 → harmful consequences: (1) shift to judicial reinterpretation (Warren incorporation; Roe 1973; Citizens United 2010; Dobbs 2022) → 9 unelected justices vs. people; (2) failed widely-supported reforms (ERA 1972-82; Balanced Budget; Electoral College reform; campaign finance) — structurally resistant to democratic updating; founders coordinating 13 states vs. 50 today.'
           },
           {
             question: 'Which response best demonstrates the AP "alternative perspective" point for the same prompt?',

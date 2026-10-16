@@ -60,7 +60,7 @@ Conscious effort to return authority and discretion from federal to state govern
 | **Nixon "New Federalism"** | 1969-77 | Richard Nixon | General Revenue Sharing (1972, abolished 1986); first major block grants (Comprehensive Employment and Training Act 1973) |
 | **Reagan New Federalism** | 1981-89 | Ronald Reagan | Consolidated 77 categorical grants into 9 block grants (Omnibus Budget Reconciliation Act 1981); cuts to federal aid; "swap" proposal (federal takes welfare, state takes education) — never enacted |
 | **1994-96 devolution** | 1994-96 | Republican Congress + Clinton | Personal Responsibility and Work Opportunity Reconciliation Act 1996 — TANF block grant replaced AFDC; Unfunded Mandates Reform Act 1995 |
-| **Modern federalism revival** | 1995-present | Rehnquist + Roberts Courts | Renewed judicial limits on federal power: *Lopez* 1995, *Printz* 1997, *Morrison* 2000, *NFIB v. Sebelius* 2012, *Murphy v. NCAA* 2018, *Shelby County v. Holder* 2013 (struck VRA preclearance formula) |
+| **Modern federalism revival** | 1995-present | Rehnquist + Roberts Courts | Renewed judicial limits on federal power: *Lopez* 1995 (required), *Morrison* 2000 (CED illustrative), *NFIB v. Sebelius* 2012 |
 
 ## Era 4: Coercive Federalism and Contemporary Patterns (1990s-present)
 
@@ -71,28 +71,24 @@ Modern federalism is characterized by simultaneous trends in opposite directions
 | **Federal expansion via spending power** | Federal → states | ACA Medicaid expansion (initially mandatory, made optional by *NFIB v. Sebelius* 2012); No Child Left Behind 2001; Every Student Succeeds Act 2015 |
 | **Federal preemption of state regulation** | Federal → states | Banking deregulation; airline deregulation; some state environmental authority preempted |
 | **Devolution to states** | States ↑ | TANF 1996; Medicaid waivers; state experimentation in marijuana legalization, same-sex marriage (pre-2015), abortion regulation (post-2022 Dobbs) |
-| **Anti-commandeering doctrine** | States ↑ | New York 1992, Printz 1997, Murphy 2018 — protects state institutions from federal directives |
 | **Modern revival of state authority** | States ↑ | Rehnquist Court Lopez 1995 + Morrison 2000 limited Commerce Clause; Roberts Court NFIB 2012 limited Spending Clause coercion |
-| **National preemption via federal policy** | Federal ↑ | Federal civil rights law (CRA 1964 + ADA 1990 + 2020 Bostock decision applying Title VII to LGBTQ); federal environmental law; federal financial regulation |
+| **National preemption via federal policy** | Federal ↑ | Federal civil rights law (CRA 1964 + ADA 1990); federal environmental law; federal financial regulation |
 
 ## Key Federalism Cases — Summary Table
 
-| Case | Year | Direction | Holding |
-|---|---|---|---|
-| *McCulloch v. Maryland* | 1819 | Federal ↑ | Implied federal powers + supremacy |
-| *Gibbons v. Ogden* | 1824 | Federal ↑ | Broad commerce-clause federal authority |
-| *Dred Scott v. Sandford* | 1857 | States ↑ | Federal cannot bar slavery in territories (overruled by 13th Amendment) |
-| *Wickard v. Filburn* | 1942 | Federal ↑ | Maximum commerce-clause expansion |
-| *Heart of Atlanta Motel v. United States* | 1964 | Federal ↑ | Civil Rights Act 1964 valid under commerce clause |
-| *South Dakota v. Dole* | 1987 | Federal ↑ | Federal spending conditions on state action upheld |
-| *New York v. United States* | 1992 | States ↑ | Anti-commandeering of legislatures |
-| *United States v. Lopez* | 1995 | States ↑ | First commerce-clause limit since 1937 |
-| *Printz v. United States* | 1997 | States ↑ | Anti-commandeering of executives |
-| *United States v. Morrison* | 2000 | States ↑ | Violence Against Women Act civil-suit provision exceeds commerce power |
-| *Gonzales v. Raich* | 2005 | Federal ↑ | Federal Controlled Substances Act applies to home-grown medical marijuana |
-| *NFIB v. Sebelius* | 2012 | Mixed | ACA individual mandate valid as tax; Medicaid expansion coercive |
-| *Shelby County v. Holder* | 2013 | States ↑ | VRA § 4 preclearance formula unconstitutional |
-| *Murphy v. NCAA* | 2018 | States ↑ | Anti-commandeering applied to sports gambling |
+Only *McCulloch* and *Lopez* are required cases; the others show how Supreme Court interpretations shifted the balance over time (EK 1.8.A.2-3). If the exam uses a non-required case, it supplies the facts and holding.
+
+| Case | Year | Direction | Holding | Status |
+|---|---|---|---|---|
+| *McCulloch v. Maryland* | 1819 | Federal ↑ | Implied federal powers + supremacy | REQUIRED |
+| *Gibbons v. Ogden* | 1824 | Federal ↑ | Broad commerce-clause federal authority | Context |
+| *Wickard v. Filburn* | 1942 | Federal ↑ | Maximum commerce-clause expansion | Context |
+| *Heart of Atlanta Motel v. United States* | 1964 | Federal ↑ | Civil Rights Act 1964 valid under commerce clause | Context |
+| *South Dakota v. Dole* | 1987 | Federal ↑ | Federal spending conditions on state action upheld (National Minimum Drinking Age Act) | Context for a CED illustrative example |
+| *United States v. Lopez* | 1995 | States ↑ | First commerce-clause limit since 1937 | REQUIRED |
+| *United States v. Morrison* | 2000 | States ↑ | Violence Against Women Act civil-suit provision exceeds commerce power | CED illustrative example |
+| *Gonzales v. Raich* | 2005 | Federal ↑ | Federal Controlled Substances Act applies to home-grown medical marijuana | Context |
+| *NFIB v. Sebelius* | 2012 | Mixed | ACA individual mandate valid as tax; Medicaid expansion coercive | Context |
       `
     },
     {
@@ -115,13 +111,13 @@ Modern federalism is characterized by simultaneous trends in opposite directions
           {
             question: "Which best describes the modern federalism revival (1995-present)?",
             options: [
-              "Since Lopez in 1995, the Court has again set limits on federal power, striking laws that exceeded the commerce power or commandeered states",
+              "Since Lopez in 1995, the Court has again set limits on federal power, striking laws that exceeded the commerce power",
               "In the decades after 1995, the Court has expanded the commerce power further, upholding every federal statute challenged on Tenth Amendment grounds",
               "Since Wickard in 1942, the Court has refused to review federalism disputes, treating the balance of power as a political question for Congress alone",
               "Since Brown in 1954, the Court has returned civil rights enforcement to the states, overruling the incorporation cases decided by the Warren Court"
             ],
             correctAnswer: 0,
-            explanation: 'Modern federalism revival (1995-present): Rehnquist + Roberts Courts reversed monotonic post-1937 expansion. Lopez 1995 (1st Commerce Clause limit since 1937 — Gun-Free School Zones Act). Printz 1997 (Brady Act anti-commandeering). Morrison 2000 (VAWA civil suit exceeds commerce). NFIB 2012 (ACA Medicaid coercion). Shelby County 2013 (VRA § 4 preclearance unconstitutional). Murphy v. NCAA 2018 (PASPA commandeered legislatures). Most significant federalism revival since 1937.'
+            explanation: 'Modern federalism revival (1995-present): Rehnquist + Roberts Courts reversed monotonic post-1937 expansion. Lopez 1995 (required case; 1st Commerce Clause limit since 1937 — Gun-Free School Zones Act). Morrison 2000 (CED illustrative; VAWA civil suit exceeds commerce). NFIB 2012 (ACA Medicaid coercion). Most significant federalism revival since 1937 (EK 1.8.A.2).'
           }
         ]
       }
@@ -133,10 +129,10 @@ Modern federalism is characterized by simultaneous trends in opposite directions
       exercise: {
         questions: [
           {
-            prompt: "The 1942 Supreme Court case representing maximum Commerce Clause expansion: a farmer growing wheat for his own consumption affected interstate commerce. Wickard v. ___.",
-            answer: 'Filburn',
-            acceptableAnswers: ['Filburn', 'filburn', 'wickard v. filburn'],
-            hint: 'Roscoe Filburn grew 23 acres of wheat over his federal allotment; Court held even personal consumption affects interstate market in aggregate.'
+            prompt: "The 1980s push to return power and program control from the national government to the states (a CED illustrative example): the ___ revolution.",
+            answer: 'devolution',
+            acceptableAnswers: ['devolution', 'Devolution'],
+            hint: 'Reagan-era block grants consolidated dozens of categorical grants.'
           },
           {
             prompt: "The 1995 Supreme Court case (Rehnquist 5-4) that was the FIRST Commerce Clause limit on Congress since 1937: United States v. ___.",
@@ -145,10 +141,10 @@ Modern federalism is characterized by simultaneous trends in opposite directions
             hint: 'Struck the Gun-Free School Zones Act of 1990 — possessing a gun in a school zone was not "commerce."'
           },
           {
-            prompt: "The 2012 Supreme Court case (Roberts 5-4) that upheld the ACA individual mandate as a TAX but struck the Medicaid expansion as unconstitutionally COERCIVE: NFIB v. ___.",
-            answer: 'Sebelius',
-            acceptableAnswers: ['Sebelius', 'sebelius', 'nfib v. sebelius'],
-            hint: 'Named for Kathleen Sebelius, then-Secretary of HHS. Mixed federalism decision — major revival of Spending Clause limits.'
+            prompt: "The Article I clause whose reach the Court limited in United States v. Lopez (1995): the ___ Clause.",
+            answer: 'Commerce',
+            acceptableAnswers: ['Commerce', 'commerce', 'commerce clause', 'interstate commerce'],
+            hint: 'EK 1.8.A.2 — Congress regulates interstate ___.'
           }
         ]
       }
@@ -175,7 +171,7 @@ Modern federalism is characterized by simultaneous trends in opposite directions
         correctAnswers: ['dual ("layer cake")', 'cooperative ("marble cake")', 'new (devolution)'],
         hint1: 'Two distinct layers = strict separation; pre-New Deal.',
         hint2: 'Marble cake = Grodzins; New Deal + Great Society.',
-        hint3: 'Devolution = Nixon GRS 1972, Reagan block grants 1981, TANF 1996, Rehnquist/Roberts modern revival.',
+        hint3: 'Devolution = Nixon GRS 1972, Reagan block grants 1981, TANF 1996.',
         explanation: 'Federalism eras: Dual ("layer cake," 1789-1937) = distinct spheres. Cooperative ("marble cake," 1937-1969) = intermingled. New (devolution, 1969-present) = federal-to-state return. Coercive (1990s-present, modern overlay) = federal preemption + spending-clause coercion + simultaneous trends in opposite directions.'
       }
     },
@@ -197,15 +193,15 @@ Modern federalism is characterized by simultaneous trends in opposite directions
             explanation: 'Lopez (1995) directly controls: Gun-Free School Zones Act of 1990 = virtually identical statute. Rehnquist 5-4: gun possession in school zone NOT "commerce" (not economic), no substantial effect on interstate commerce, within state police-power domain. First Commerce Clause limit since 1937. Constitutional alternatives: Spending Clause (condition education funds) or tie to firearms moved in interstate commerce.'
           },
           {
-            question: "AP scenario: A state legalizes recreational marijuana for adult use. The federal Controlled Substances Act of 1970 still prohibits marijuana. A state cultivator is prosecuted under federal law. Which precedent controls and what is the most accurate analysis?",
+            question: "AP scenario: A state legalizes recreational marijuana for adult use, as Colorado and Washington did in 2012. The federal Controlled Substances Act still prohibits marijuana, and a state-licensed grower is prosecuted under federal law. Which constitutional provision most directly allows the federal prosecution to proceed?",
             options: [
-              "Gonzales v. Raich, since federal drug law reaches local marijuana through the commerce power and overrides state legalization through the Supremacy Clause",
-              "United States v. Lopez, since growing marijuana is noneconomic activity that Congress cannot reach, so the state's legalization fully protects the cultivator",
-              "Printz v. United States, since federal prosecutors may not bring charges in a state that has chosen to legalize the drug",
-              "McCulloch v. Maryland, since a state may tax and license marijuana sellers without federal interference"
+              "The Supremacy Clause, because a valid federal law takes precedence over a conflicting state law",
+              "The Tenth Amendment, because drug policy is a reserved power that the federal government may enforce only with state consent",
+              "The Full Faith and Credit Clause, because every state must honor the drug laws of the other states",
+              "The Necessary and Proper Clause, because it lets states carry out federal laws in whatever way they choose"
             ],
             correctAnswer: 0,
-            explanation: 'Gonzales v. Raich (2005, Stevens 6-3) controls: federal CSA applies to home-grown marijuana — aggregate intrastate effect on interstate market satisfies Commerce Clause (cites Wickard 1942). Supremacy Clause: federal prohibition supplants state authorization. BUT federal lacks resources + Printz (1997) prevents conscripting state law enforcement → de facto federal non-enforcement in recreational states (CO since 2014). State cultivator IS subject to federal prosecution as constitutional matter.'
+            explanation: 'EK 1.8.A.4: the SUPREMACY CLAUSE gives national law general precedence over state law, so the federal ban still applies to the grower even though the state has legalized marijuana (the Court upheld federal reach over home-grown marijuana in 2005). State legalization in Colorado and Washington is a CED illustrative example of federalism tension: in practice, enforcement depends on federal priorities, which is why legal state markets operate. The Tenth Amendment does not let states nullify a valid federal law; Full Faith and Credit concerns public acts and records, not criminal enforcement.'
           }
         ]
       }

@@ -13,7 +13,7 @@ export const govSeparationOfPowersPart7Data = {
 
 | Section |
 |---|
-| High-yield dates 1787-2024 |
+| High-yield dates 1787-2022 |
 | Required AP Gov SCOTUS cases on separation of powers |
 | Sprint terms |
 | AP free-response strategy |
@@ -25,7 +25,7 @@ export const govSeparationOfPowersPart7Data = {
       id: 'govsep7-content',
       type: 'text' as const,
       content: `
-## High-Yield Dates 1787-2024
+## High-Yield Dates 1787-2022
 
 | Year | Event | Separation-of-powers significance |
 |---|---|---|
@@ -39,26 +39,22 @@ export const govSeparationOfPowersPart7Data = {
 | 1832 | Worcester v. Georgia | Jackson reportedly defied Court ruling |
 | 1867 | Tenure of Office Act | Congress restricts presidential removal |
 | 1868 | Andrew Johnson impeachment | Acquitted by 1 vote (Senate) |
-| 1935 | *Schechter Poultry* | NIRA struck; non-delegation doctrine |
 | 1937 | Court-packing plan + "switch in time" | New Deal constitutional revolution |
-| 1947 | National Security Act | NSC + CIA + Defense Department created |
-| 1952 | *Youngstown Sheet & Tube Co. v. Sawyer* | Truman steel seizure unconstitutional; Jackson 3-tier framework |
+| 1951 | 22nd Amendment | Two-term limit — concern about expanding presidential power (EK 2.6.A.2) |
+| 1952 | *Youngstown Sheet & Tube Co. v. Sawyer* | Truman steel seizure unconstitutional — no law authorized it |
 | 1958 | *Cooper v. Aaron* | Judicial supremacy over constitutional interpretation |
 | 1962 | *Baker v. Carr* | One person, one vote — judicial review of apportionment |
-| 1973 | War Powers Resolution + Schlesinger *Imperial Presidency* | Watergate-era restoration |
+| 1973 | War Powers Resolution | Watergate-era restoration |
 | 1974 | *United States v. Nixon* + Budget Act + FECA | Executive privilege not absolute; Nixon resigns |
-| 1978 | FISA + IG Act + Ethics in Government Act | Watergate-era reform |
-| 1983 | *INS v. Chadha* | One-house legislative veto unconstitutional |
-| 1984 | *Chevron* | Deference to agency interpretation (until 2024) |
-| 1988 | *Morrison v. Olson* | Independent Counsel upheld 7-1 |
-| 1998 | *Clinton v. New York* | Line-item veto unconstitutional |
+| 1978 | FISA + Ethics in Government Act | Watergate-era reform |
+| 1987 | Senate rejects Robert Bork | Confirmation as a check (CED illustrative) |
+| 1993 | Religious Freedom Restoration Act | Congress modifies the impact of a Court ruling (CED illustrative) |
+| 1998-99 | Clinton impeachment | House impeaches; Senate acquits (CED illustrative) |
 | 2001 | AUMF + PATRIOT Act | Post-9/11 executive expansion |
 | 2010 | *Citizens United v. FEC* | Corporate political spending = speech |
 | 2012 | *NFIB v. Sebelius* | ACA mandate as tax; Medicaid expansion coercive |
-| 2018 | *Trump v. Hawaii* + *Murphy v. NCAA* | Travel ban upheld; anti-commandeering applied |
-| 2020 | *Seila Law v. CFPB* | CFPB single-director removal restriction unconstitutional |
-| 2022 | *West Virginia v. EPA* + *Dobbs* | Major-questions doctrine; abortion to states |
-| 2024 | *Loper Bright* + *Trump v. United States* | Chevron overruled; presidential immunity expanded |
+| 2014-16 | Obama immigration executive actions (DAPA) | House defunding vote + court injunction (CED illustrative) |
+| 2022 | *Dobbs v. Jackson Women's Health* | Abortion returned to legislatures; appointments reshape precedent (EK 2.9.A.2) |
 
 ## Required AP Gov SCOTUS Cases on Separation of Powers
 
@@ -66,22 +62,16 @@ export const govSeparationOfPowersPart7Data = {
 |---|---|---|---|
 | ***Marbury v. Madison*** | 1803 | Establishes judicial review of federal acts | Judicial ↑ |
 
-## Other High-Yield Separation-of-Powers Cases
+## Other Cases (Not Required Unless Marked)
+
+If the exam uses a non-required case, it supplies the facts and holding.
 
 | Case | Year | Holding |
 |---|---|---|
-| *Youngstown Sheet & Tube Co. v. Sawyer* | 1952 | Limits on executive emergency authority + Jackson 3-tier framework |
+| *Youngstown Sheet & Tube Co. v. Sawyer* | 1952 | Limits on executive emergency authority |
 | *Cooper v. Aaron* | 1958 | Judicial supremacy over constitutional interpretation |
-| *Baker v. Carr* | 1962 | One person, one vote |
-| *United States v. Nixon* | 1974 | Executive privilege not absolute |
-| *INS v. Chadha* | 1983 | One-house legislative veto unconstitutional |
-| *Morrison v. Olson* | 1988 | Independent Counsel upheld (functional analysis) |
-| *Clinton v. New York* | 1998 | Line-item veto unconstitutional |
-| *Bush v. Gore* | 2000 | Equal Protection halts Florida recount |
-| *Seila Law v. CFPB* | 2020 | CFPB single-director removal restriction unconstitutional |
-| *West Virginia v. EPA* | 2022 | Major-questions doctrine — agencies need clear statutory authority for major questions |
-| *Loper Bright Enterprises v. Raimondo* | 2024 | Chevron deference overruled |
-| *Trump v. United States* | 2024 | Presidential immunity tiered structure (core/official/unofficial) |
+| *Baker v. Carr* (REQUIRED) | 1962 | One person, one vote |
+| *United States v. Nixon* (CED illustrative) | 1974 | Executive privilege not absolute |
 
 ## Sprint Terms
 
@@ -102,12 +92,10 @@ export const govSeparationOfPowersPart7Data = {
 | **Advice and consent** | Senate confirms presidential appointments (Art II § 2) |
 | **Power of the purse** | Congress's appropriations authority (Art I § 8 + § 9 cl 7) |
 | **War Powers Resolution** | 1973 statute; 48-hour notification, 60-90 day withdrawal absent congressional authorization |
-| **Imperial Presidency** | Schlesinger 1973 — post-WWII executive expansion |
 | **Unitary executive theory** | All executive authority belongs to president alone |
-| **Independent agency** | Agency with for-cause removal protection (Humphrey\'s Executor 1935) |
-| **Chevron deference** | Court defers to agency interpretation of ambiguous statutes (1984; OVERRULED Loper Bright 2024) |
-| **Major-questions doctrine** | Agencies need clear statutory authorization for major economic-political questions (West Virginia v. EPA 2022) |
-| **Jackson 3-tier framework** | Tier 1 (max + Congress authorization); Tier 2 (twilight zone, Congress silent); Tier 3 (lowest ebb, against Congress) |
+| **Independent agency** | Multi-member commission whose members have fixed terms and for-cause removal protection |
+| **Multiple access points** | Separation of powers gives stakeholders many places to influence policy (EK 1.6.B.1) |
+| **22nd Amendment** | Two-term presidential limit (1951) — concern about expanding presidential power (EK 2.6.A.2) |
 | **Counter-majoritarian dilemma** | Tension between unelected courts and majoritarian legislatures (Bickel 1962) |
 | **Federalist 10** | Madison on faction; large republic check |
 | **Federalist 51** | Madison on separation of powers; "ambition counteract ambition"; "double security" |
@@ -118,15 +106,15 @@ export const govSeparationOfPowersPart7Data = {
 ## AP Free-Response Strategy
 
 > ⚡ Sample concept-application prompt:
-> *"In 2024, the Supreme Court decided Loper Bright Enterprises v. Raimondo, overruling the Chevron deference doctrine. (A) Identify the constitutional principle at the core of this decision. (B) Explain how this decision affects the relationship between the executive and judicial branches. (C) Explain how Congress might respond."*
+> *"In 1990 the Supreme Court ruled that a neutral, generally applicable law does not violate the free exercise clause even if it burdens a religious practice. In 1993 Congress passed the Religious Freedom Restoration Act (RFRA), requiring government to meet a much higher standard before substantially burdening religious exercise. In 1997 the Court ruled that RFRA could not be applied to state governments. (A) Describe the power Congress used when it passed RFRA. (B) Explain how this sequence illustrates checks and balances. (C) Explain one other way Congress could respond to the 1997 ruling."*
 
 | Part | Approach |
 |---|---|
-| **(A) Constitutional principle** | Article III's vesting of 'judicial Power' in federal courts requires courts (not executive agencies) to determine what the law means; Chevron's 40-year practice of deferring to agency interpretations of ambiguous statutes had effectively transferred a judicial function to the executive branch |
-| **(B) Branch relationship** | Substantially shifts statutory-interpretation authority FROM executive (agencies) TO judicial (courts); reduces administrative-state regulatory flexibility; strengthens judicial check on agency rulemaking; together with the major-questions doctrine (West Virginia v. EPA 2022) and non-delegation revival, represents major judicial-branch reassertion against the post-1937 administrative state |
-| **(C) Congressional response** | Congress could (1) draft more specific statutes leaving less ambiguity for agencies to fill (politically difficult given polarization); (2) explicitly delegate interpretive authority to specific agencies in statutes (untested whether sufficient under Loper Bright); (3) restructure agencies (some Democrats have proposed expanding Federal Reserve-style independence to other agencies); (4) leave the matter to courts and accept reduced regulatory ambition |
+| **(A) Describe the power** | Congress passed LEGISLATION TO MODIFY THE IMPACT OF A PRIOR SUPREME COURT DECISION (EK 2.11.B.1.i). RFRA is a CED illustrative example for Topic 1.6 |
+| **(B) Explain checks and balances** | Each branch used its own tool: the Court interpreted the Constitution; Congress answered with a statute; the Court then used JUDICIAL REVIEW to limit that statute. No branch had the final word alone — separation of powers channels conflict rather than ending it (EK 1.6.A.1) |
+| **(C) Another response** | Congress could propose a CONSTITUTIONAL AMENDMENT (2/3 of both houses, then 3/4 of the states — EK 1.5.A.2, 2.11.B.1.ii); the Senate could weigh nominees' views on religious liberty in CONFIRMATIONS (EK 2.11.B.1.iii); or advocates could use other ACCESS POINTS — many states passed their own RFRAs (EK 1.6.B.1) |
 
-> 🔑 Key takeaway: Mastery of the AP Gov separation-of-powers content (Federalist 10/51/70/78 + required Marbury case + Youngstown Jackson 3-tier framework + Watergate-era restoration + modern administrative-state debates) anchors strong unit-1 + unit-2 performance.
+> 🔑 Key takeaway: Mastery of the AP Gov separation-of-powers content (Federalist 10/51/70/78 + required Marbury case + impeachment and removal + multiple access points + Watergate-era restoration + modern executive-order debates) anchors strong unit-1 + unit-2 performance.
       `
     },
     {
@@ -173,10 +161,10 @@ export const govSeparationOfPowersPart7Data = {
             hint: 'First major Marshall Court decision; same year as Louisiana Purchase.'
           },
           {
-            prompt: "Year of *Youngstown Sheet & Tube Co. v. Sawyer* — Truman steel seizure unconstitutional; Jackson 3-tier framework.",
-            answer: '1952',
-            acceptableAnswers: ['1952'],
-            hint: 'Korean War era; same year as Eisenhower\'s election.'
+            prompt: "Year the 22nd Amendment, limiting presidents to two terms, was ratified.",
+            answer: '1951',
+            acceptableAnswers: ['1951'],
+            hint: 'EK 2.6.A.2 — six years after FDR\'s death in his fourth term.'
           },
           {
             prompt: "Year of *United States v. Nixon* — Court orders Nixon to turn over Oval Office tapes; Nixon resigns 16 days later.",
@@ -228,7 +216,7 @@ export const govSeparationOfPowersPart7Data = {
               "Presidents can now amend the Constitution by executive order, bypassing Article V, the states, and Congress entirely, which the framers never permitted or anticipated at the founding"
             ],
             correctAnswer: 0,
-            explanation: 'Modern presidency exceeds framers\' design: (1) admin state ~2M civilians + ~430 agencies → regulatory authority over virtually all American life beyond limited federal scope framers envisioned; (2) post-1945 national-security executive (NSC + CIA + DoD) → unilateral war-making (War Powers Resolution 1973 routinely flouted); (3) executive orders substitute for legislation under both parties (DACA 2012, travel ban 2017, student-loan 2022) → bypasses deliberative legislative process; (4) modern Court expanded executive (Trump v. US 2024 tiered immunity, Seila Law 2020 independent-agency limits, unitary-executive theory ascendance); (5) congressional polarization weakened legislative check. Framers (who rejected monarchy) would not recognize.'
+            explanation: 'Modern presidency exceeds framers\' design: (1) admin state ~2M civilians + ~430 agencies → regulatory authority over virtually all American life beyond limited federal scope framers envisioned; (2) post-1945 national-security executive (NSC + CIA + DoD) → unilateral war-making (War Powers Resolution 1973 routinely flouted); (3) executive orders substitute for legislation under both parties (DACA 2012, travel ban 2017, student-loan 2022) → bypasses deliberative legislative process; (4) unitary-executive theory gained ground in the White House and among judges; (5) congressional polarization weakened legislative check. Framers (who rejected monarchy) would not recognize.'
           },
           {
             question: "What is the strongest counter-argument that the modern presidency does NOT exceed the framers' design?",
@@ -239,7 +227,7 @@ export const govSeparationOfPowersPart7Data = {
               "The framers created an energetic executive, and since Federalist 70 promised presidents could legislate by decree, modern executive orders simply fulfill that original plan"
             ],
             correctAnswer: 0,
-            explanation: 'Counter (modern presidency NOT exceeding framers\' design): (1) framers DELIBERATELY created energetic unitary executive (Federalist 70 Hamilton: "energy in the executive = leading character in good government"); presidency expected to grow with country. (2) admin state operates per CONGRESSIONAL DELEGATION — Congress retains ultimate authority through statutes/appropriations/oversight. (3) modern war-making via AUMF 2001 + 2002 — Congress acquiesced, not bypassed. (4) executive orders struck when exceeding (DACA partial, Trump travel ban v1/v2, Biden student-loan). (5) modern Court actively checks (major-questions, Loper Bright, Seila Law, federalism revival). (6) impeachment available (Trump 2x impeached, not convicted). Framers\' design adapting while preserving balance.'
+            explanation: 'Counter (modern presidency NOT exceeding framers\' design): (1) framers DELIBERATELY created energetic unitary executive (Federalist 70 Hamilton: "energy in the executive = leading character in good government"); presidency expected to grow with country. (2) admin state operates per CONGRESSIONAL DELEGATION — Congress retains ultimate authority through statutes/appropriations/oversight. (3) modern war-making via AUMF 2001 + 2002 — Congress acquiesced, not bypassed. (4) executive orders struck when exceeding (DACA partial, Trump travel ban v1/v2, Biden student-loan). (5) courts actively check executive action (e.g., blocking DAPA 2015-16). (6) impeachment available (Trump 2x impeached, not convicted). Framers\' design adapting while preserving balance.'
           }
         ]
       }

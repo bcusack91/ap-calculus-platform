@@ -64,10 +64,10 @@ export const govJudiciaryPart5Data = {
 
 | Period | Key developments |
 |---|---|
-| **Rehnquist Court 1986-2005** | William Rehnquist (Reagan appointee CJ) led conservative shift; FEDERALISM REVIVAL (*US v. Lopez* 1995 first commerce-clause limit since 1937; *US v. Morrison* 2000 struck VAWA civil remedy); state sovereign immunity (*Seminole Tribe* 1996, *Alden v. Maine* 1999); anti-commandeering (*Printz v. US* 1997); *Bush v. Gore* (2000); *DC v. Heller* coming |
+| **Rehnquist Court 1986-2005** | William Rehnquist (Reagan appointee CJ) led conservative shift; FEDERALISM REVIVAL (*US v. Lopez* 1995 first commerce-clause limit since 1937; *US v. Morrison* 2000 struck VAWA civil remedy — a CED illustrative example); *Bush v. Gore* (2000) |
 | **Roberts Court 2005-present** | John Roberts (Bush 43 appointee CJ) — conservative consolidation across multiple areas: |
-| **Pre-Trump Roberts Court 2005-17** | *DC v. Heller* (2008) individual right to bear arms; *Citizens United* (2010) corporate political expenditures; *NFIB v. Sebelius* (2012) ACA upheld as tax; *Shelby County v. Holder* (2013) struck VRA preclearance formula; *Obergefell v. Hodges* (2015) same-sex marriage (Kennedy w/ liberals) |
-| **Post-Trump Roberts Court 2018-present** | Trump's 3 appointments (Gorsuch 2017, Kavanaugh 2018, Barrett 2020) cemented 6-3 conservative majority; major decisions: *Janus* (2018), *Dobbs* (2022) overruled *Roe*, *Bruen* (2022), *WV v. EPA* (2022), *SFFA v. Harvard* (2023), *Loper Bright* (2024) overruled *Chevron*, *Trump v. US* (2024) |
+| **Pre-Trump Roberts Court 2005-17** | *DC v. Heller* (2008) individual right to bear arms; *Citizens United* (2010) corporate political expenditures; *McDonald v. Chicago* (2010) incorporated the Second Amendment; *NFIB v. Sebelius* (2012) ACA upheld as tax; *Obergefell v. Hodges* (2015) same-sex marriage (Kennedy w/ liberals) |
+| **Post-Trump Roberts Court 2018-present** | Trump's 3 appointments (Gorsuch 2017, Kavanaugh 2018, Barrett 2020) cemented 6-3 conservative majority; major decisions: *Dobbs* (2022) overruled *Roe*; *SFFA v. Harvard* (2023) ended race-conscious college admissions — appointments reshaping precedent (EK 2.9.A.2) |
       `
     },
     {
@@ -120,10 +120,10 @@ export const govJudiciaryPart5Data = {
             hint: 'Same year as McKinley elected; Justice Harlan dissented.'
           },
           {
-            prompt: "Year *Wickard v. Filburn* cemented broad federal commerce power over local activities affecting interstate commerce.",
-            answer: '1942',
-            acceptableAnswers: ['1942'],
-            hint: 'Same year as Battle of Midway; FDR consolidating war powers.'
+            prompt: "Year *United States v. Lopez* ruled that Congress exceeded its commerce power for the first time in nearly 60 years.",
+            answer: '1995',
+            acceptableAnswers: ['1995'],
+            hint: 'Rehnquist Court; Gun-Free School Zones Act.'
           }
         ]
       }
@@ -135,21 +135,21 @@ export const govJudiciaryPart5Data = {
       exercise: {
         dropdowns: [
           {
-            label: "Used economic substantive due process to strike progressive labor regulations (1897-1937): ___",
+            label: "Established judicial review (Marbury) and national supremacy (McCulloch) (1801-35): ___",
             options: ['Marshall Court', 'Taney Court', 'Lochner Era', 'Warren Court']
           },
           {
-            label: "Pro-states' rights jurisprudence; expanded slavery (Dred Scott 1857) (1836-64): ___",
-            options: ['Marshall Court', 'Taney Court', 'Lochner Era', 'Roberts Court']
+            label: "Expanded civil rights and the rights of the accused in Brown, Gideon, and Tinker (1953-69): ___",
+            options: ['Marshall Court', 'Taney Court', 'Lochner Era', 'Warren Court']
           },
           {
-            label: "Conservative consolidation including Citizens United, Heller, Dobbs, Bruen, Loper Bright (2005-present): ___",
+            label: "Conservative consolidation including Citizens United, McDonald, and Dobbs (2005-present): ___",
             options: ['Burger Court', 'Rehnquist Court', 'Roberts Court', 'Warren Court']
           }
         ],
-        correctAnswers: ['Lochner Era', 'Taney Court', 'Roberts Court'],
-        hint1: 'Lochner Era (1897-1937) = economic substantive due process + liberty of contract; Lochner v. NY 1905, Adkins 1923; ended by 1937 switch in time.',
-        hint2: 'Taney Court (1836-64) = pro-states\' rights; Dred Scott 1857; precipitated Civil War.',
+        correctAnswers: ['Marshall Court', 'Warren Court', 'Roberts Court'],
+        hint1: 'Marshall Court (1801-35) = Marbury 1803 + McCulloch 1819; nation-building federalism.',
+        hint2: 'Warren Court (1953-69) = rights revolution; Brown, Engel, Baker, Gideon, Tinker are all required cases.',
         hint3: 'Roberts Court (2005-present) = conservative consolidation; cemented 6-3 majority after Trump appointees.'
       }
     },
@@ -160,15 +160,15 @@ export const govJudiciaryPart5Data = {
       exercise: {
         questions: [
           {
-            question: "How did the Roberts Court's recent overrulings (Dobbs, Loper Bright) compare to historic overrulings (Brown, West Coast Hotel)?",
+            question: "How did the Roberts Court's overruling of Roe in Dobbs (2022) compare with the Warren Court's rejection of Plessy's 'separate but equal' doctrine in Brown (1954)?",
             options: [
-              "Each overturned old precedent, but the historic cases widened rights or government power while the recent ones narrowed them",
-              "All four overturned recent precedent and expanded federal agency power while shrinking individual rights",
-              "Only the historic cases overturned precedent, since Dobbs and Loper Bright merely clarified Roe and Chevron",
-              "Each was decided unanimously, which shows that overruling decisions rarely divide the justices along ideological lines at all"
+              "Both overturned long-standing precedent, but Brown expanded a constitutional right while Dobbs held one did not exist",
+              "Both were decided unanimously, showing that overruling a precedent rarely divides the justices along ideological lines",
+              "Only Brown overturned precedent, since Dobbs merely clarified the standard Roe had set",
+              "Both expanded federal power by requiring every state to adopt one uniform national policy"
             ],
             correctAnswer: 0,
-            explanation: 'Roberts Court overrulings (Dobbs 2022, Janus 2018, Loper Bright 2024) vs HISTORIC overrulings (Brown 1954 overruled Plessy; West Coast Hotel 1937 overruled Adkins): SIMILARITIES — both overturn long-standing precedents (Plessy 58y, Adkins 14y, Roe 49y, Chevron 40y, Abood 41y); both major doctrinal shifts. DIFFERENCES — (1) HISTORIC moved toward GREATER PROTECTION of INDIVIDUAL RIGHTS (Brown expanded equal protection; West Coast Hotel labor) → MORAL PROGRESS; (2) MODERN moved CONSERVATIVE (Dobbs eliminated abortion right; Janus weakened public unions; Loper Bright weakened administrative state) → MORE CONTESTED public opinion; (3) DEBATE about stare decisis as meaningful constraint; (4) HISTORIC = broader coalitions (Brown 9-0 unanimous, West Coast Hotel 5-4 but rapidly consolidated); MODERN = 5-4 or 6-3 partisan splits.'
+            explanation: 'Both decisions rejected long-standing precedent (Plessy stood 58 years, Roe 49 years) — the EK 2.9.A.2 pattern of a changed Court establishing new or rejecting existing precedents. DIFFERENCE: Brown (required case) extended equal protection to strike down school segregation, while Dobbs held that the Constitution does not confer a right to abortion and returned the issue to legislatures (EK 3.9.A.2). Brown was 9-0, but Dobbs split the Court along ideological lines; neither imposed one uniform national policy in the way described.'
           },
           {
             question: "Which best explains the historical development of the incorporation doctrine through the 14th Amendment?",

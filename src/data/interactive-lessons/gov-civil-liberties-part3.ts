@@ -13,19 +13,19 @@ export const govCivilLibertiesPart3Data = {
 
 | Section |
 |---|
-| Required AP Gov SCOTUS cases on civil liberties (8 cases) |
-| Speech doctrine examples — symbolic, content-neutrality, prior restraint, campaign finance |
+| Required AP Gov SCOTUS cases on civil liberties (7 cases) + the privacy cases named in the CED |
+| Speech doctrine examples — symbolic, prior restraint, time-place-manner, campaign finance |
 | Religion clause examples — Establishment + Free Exercise patterns |
 | Criminal procedure examples — 4th + 5th + 6th + 8th Amendments |
 
-> 🔑 Key idea: The AP Gov exam REQUIRES knowledge of 8 SCOTUS cases on civil liberties: ENGEL v. VITALE (1962), WISCONSIN v. YODER (1972), TINKER v. DES MOINES (1969), NYT v. UNITED STATES (1971), SCHENCK v. UNITED STATES (1919), GIDEON v. WAINWRIGHT (1963), MCDONALD v. CHICAGO (2010), and ROE v. WADE (1973, overruled by Dobbs 2022). GRISWOLD v. CONNECTICUT (1965) is useful background for Roe but is NOT on the list of required cases. Master facts + holding + reasoning + significance for each.
+> 🔑 Key idea: Of the 14 AP Gov required SCOTUS cases, 7 deal with civil liberties: ENGEL v. VITALE (1962), WISCONSIN v. YODER (1972), TINKER v. DES MOINES (1969), NYT v. UNITED STATES (1971), SCHENCK v. UNITED STATES (1919), GIDEON v. WAINWRIGHT (1963), and MCDONALD v. CHICAGO (2010). GRISWOLD v. CONNECTICUT (1965), ROE v. WADE (1973) and DOBBS v. JACKSON (2022) are NOT required cases, but the CED names them in EK 3.9.A.2, so know their holdings. Master facts + holding + reasoning + significance for each required case.
       `
     },
     {
       id: 'govcivil3-content',
       type: 'text' as const,
       content: `
-## Required AP Gov SCOTUS Cases — Civil Liberties
+## Required AP Gov SCOTUS Cases — Civil Liberties (plus the CED's privacy cases)
 
 | Case | Year | Constitutional issue | Holding |
 |---|---|---|---|
@@ -36,15 +36,14 @@ export const govCivilLibertiesPart3Data = {
 | **Schenck v. United States** | 1919 | 1st Am Speech | Holmes UNANIMOUS — upheld Espionage Act conviction of socialist Charles Schenck for distributing anti-draft leaflets during WWI; 'clear-and-present-danger' standard; 'falsely shouting fire in a theatre' analogy; later effectively overturned by Brandenburg v. Ohio 1969 imminent-lawless-action test |
 | **Gideon v. Wainwright** | 1963 | 6th Am Right to Counsel | Black UNANIMOUS — Florida defendant Clarence Gideon convicted of breaking-and-entering without counsel; Court held 6th Am right to counsel applies to STATE FELONY trials via 14th Am Due Process; OVERRULED Betts v. Brady 1942; states must provide counsel for indigent felony defendants |
 | **McDonald v. Chicago** | 2010 | 2nd Am Incorporation | Alito majority (5-4) — INCORPORATED 2nd Am right to keep and bear arms (established as individual right in DC v. Heller 2008) to STATES via 14th Am Due Process Clause; struck Chicago handgun ban |
-| **Roe v. Wade** | 1973 | 14th Am Substantive Due Process / Privacy | Blackmun majority (7-2) — established right to abortion; trimester framework — overruled Dobbs 2022 |
-| **Griswold v. Connecticut** (background — NOT a required case) | 1965 | 14th Am Substantive Due Process / Privacy | Douglas majority — struck Connecticut law banning marital contraception use; established right to PRIVACY based on 'PENUMBRAS + EMANATIONS' from 1st + 3rd + 4th + 5th + 9th Amendments |
+| **Roe v. Wade** (named in EK 3.9.A.2 — NOT a required case) | 1973 | 14th Am Substantive Due Process / Privacy | Blackmun majority (7-2) — established right to abortion; trimester framework — overruled Dobbs 2022 |
+| **Griswold v. Connecticut** (named in EK 3.9.A.2 — NOT a required case) | 1965 | 14th Am Substantive Due Process / Privacy | Douglas majority — struck Connecticut law banning marital contraception use; established right to PRIVACY based on 'PENUMBRAS + EMANATIONS' from 1st + 3rd + 4th + 5th + 9th Amendments |
 
 ## Speech Doctrine Examples
 
 | Doctrine | Example case | Application |
 |---|---|---|
 | **SYMBOLIC SPEECH** | Tinker v. Des Moines 1969 (black armbands); Texas v. Johnson 1989 (flag burning); Snyder v. Phelps 2011 (Westboro funeral protests) | Conduct intended to convey message + reasonably understood; protected unless meets specific exception |
-| **CONTENT NEUTRALITY** | R.A.V. v. St. Paul 1992 (cross-burning ordinance struck because viewpoint-based); Reed v. Town of Gilbert 2015 | Content-based regulation gets STRICT SCRUTINY; content-neutral regulations get intermediate review |
 | **PRIOR RESTRAINT** | Near v. Minnesota 1931; NYT v. US 1971 (Pentagon Papers); rare exceptions: troop movements, obscenity, national security |
 | **TIME-PLACE-MANNER** | Hill v. Colorado 2000 (abortion clinic buffer zones); McCullen v. Coakley 2014 (struck broader buffer) | Content-neutral, narrowly tailored, leave alternative channels |
 | **CAMPAIGN FINANCE** | Buckley v. Valeo 1976 (spending = speech); Citizens United v. FEC 2010 (corporate independent expenditures); McCutcheon v. FEC 2014 (aggregate limits) | Spending = expressive activity; SCOTUS skeptical of broad campaign finance restrictions |
@@ -56,8 +55,8 @@ export const govCivilLibertiesPart3Data = {
 
 | Clause | Pattern | Examples |
 |---|---|---|
-| **ESTABLISHMENT — schools** | Government cannot endorse, promote, or compel religion in public schools | Engel v. Vitale 1962 (Regents prayer struck); Abington v. Schempp 1963 (Bible reading struck); Wallace v. Jaffree 1985 (moment of silence with religious purpose struck); Lee v. Weisman 1992 (graduation prayer struck); Santa Fe v. Doe 2000 (football game prayer struck); Kennedy v. Bremerton 2022 (coach's post-game prayer protected; OVERRULED LEMON TEST) |
-| **ESTABLISHMENT — funding** | Aid to religious institutions tested for neutrality | Everson v. Board 1947 (school bus reimbursement allowed); Lemon v. Kurtzman 1971 (3-part test); Zelman v. Simmons-Harris 2002 (school vouchers allowed); Trinity Lutheran v. Comer 2017 + Espinoza v. Montana 2020 + Carson v. Makin 2022 (cannot exclude religious schools from neutral funding programs) |
+| **ESTABLISHMENT — schools** | Government cannot endorse, promote, or compel religion in public schools | Engel v. Vitale 1962 (Regents prayer struck); Abington v. Schempp 1963 (Bible reading struck); Wallace v. Jaffree 1985 (moment of silence with religious purpose struck); Lee v. Weisman 1992 (graduation prayer struck); Santa Fe v. Doe 2000 (football game prayer struck) |
+| **ESTABLISHMENT — funding** | Aid to religious institutions tested for neutrality | Everson v. Board 1947 (school bus reimbursement allowed); Zelman v. Simmons-Harris 2002 (school vouchers allowed); Trinity Lutheran v. Comer 2017 + Espinoza v. Montana 2020 + Carson v. Makin 2022 (cannot exclude religious schools from neutral funding programs) |
 | **FREE EXERCISE — exemption** | Government cannot prohibit religious practice; balance with neutral generally-applicable laws | Reynolds v. US 1879 (no polygamy exemption); Wisconsin v. Yoder 1972 (Amish school exemption); Employment Division v. Smith 1990 (no peyote exemption from neutral law); Burwell v. Hobby Lobby 2014 (RFRA contraceptive exemption); 303 Creative v. Elenis 2023 (web designer not required to design same-sex wedding sites) |
 
 ## Criminal Procedure Examples (4th + 5th + 6th + 8th)
@@ -67,13 +66,12 @@ export const govCivilLibertiesPart3Data = {
 | **4th — searches** | Warrant + probable cause; exclusionary rule with exceptions | Mapp v. Ohio 1961 (incorporated exclusionary rule); Terry v. Ohio 1968 (stop-and-frisk); Katz v. US 1967 (reasonable expectation of privacy); Riley v. California 2014 (cell phone warrant); Carpenter v. US 2018 (CSLI warrant) |
 | **5th — self-incrimination** | Miranda warnings before custodial interrogation | Miranda v. Arizona 1966 (Warren majority); Dickerson v. US 2000 (reaffirmed Miranda) |
 | **5th — double jeopardy** | Cannot be tried twice for same offense | Benton v. Maryland 1969 (incorporated); separate sovereigns doctrine (Gamble v. US 2019) |
-| **5th — takings** | Just compensation for public use | Kelo v. City of New London 2005 (broad public use); state backlash via legislation |
 | **6th — counsel** | Right to counsel in criminal cases | Gideon v. Wainwright 1963 (felonies); Argersinger v. Hamlin 1972 (any imprisonment); Padilla v. Kentucky 2010 (immigration consequences) |
 | **6th — jury** | Speedy + public + jury trial | Duncan v. Louisiana 1968 (incorporated); Apprendi v. NJ 2000 (jury must find facts increasing sentence); Ramos v. Louisiana 2020 (unanimous jury required for state criminal conviction) |
 | **8th — death penalty** | Cruel and unusual punishment limits | Furman v. Georgia 1972 (struck arbitrary application); Gregg v. Georgia 1976 (allowed with bifurcated trials + guidelines); Atkins v. Virginia 2002 (no execution of intellectually disabled); Roper v. Simmons 2005 (no execution for crimes by minors); Glossip v. Gross 2015 (lethal injection protocols) |
 | **8th — excessive fines** | Limits on fines | Timbs v. Indiana 2019 (incorporated excessive fines clause; civil asset forfeiture limited) |
 
-> 🔑 Key takeaway: Master AP Gov REQUIRED CASES — Engel v. Vitale 1962, Wisconsin v. Yoder 1972, Tinker v. Des Moines 1969, NYT v. US 1971, Schenck v. US 1919, Gideon v. Wainwright 1963, McDonald v. Chicago 2010, Roe v. Wade 1973 (plus background, not required: Griswold v. Connecticut 1965). Speech doctrines: SYMBOLIC, CONTENT NEUTRALITY, PRIOR RESTRAINT, CAMPAIGN FINANCE, STUDENT, OBSCENITY. Religion: ESTABLISHMENT (schools + funding) + FREE EXERCISE (exemptions). Criminal procedure: 4TH (searches) + 5TH (self-incrimination + double jeopardy + takings) + 6TH (counsel + jury) + 8TH (death penalty + excessive fines).
+> 🔑 Key takeaway: Master the 7 civil-liberties REQUIRED CASES — Engel v. Vitale 1962, Wisconsin v. Yoder 1972, Tinker v. Des Moines 1969, NYT v. US 1971, Schenck v. US 1919, Gideon v. Wainwright 1963, McDonald v. Chicago 2010 — plus the holdings of Griswold 1965, Roe 1973 and Dobbs 2022, which EK 3.9.A.2 names (not required cases). Speech doctrines: SYMBOLIC, PRIOR RESTRAINT, TIME-PLACE-MANNER, CAMPAIGN FINANCE, STUDENT, OBSCENITY. Religion: ESTABLISHMENT (schools + funding) + FREE EXERCISE (exemptions). Criminal procedure: 4TH (searches) + 5TH (self-incrimination + double jeopardy) + 6TH (counsel + jury) + 8TH (death penalty + excessive fines).
       `
     },
     {
@@ -83,15 +81,15 @@ export const govCivilLibertiesPart3Data = {
       exercise: {
         questions: [
           {
-            question: "How did *Tinker v. Des Moines* (1969) shape student First Amendment rights, and how did *Bethel v. Fraser* (1986), *Hazelwood v. Kuhlmeier* (1988), and *Mahanoy v. B.L.* (2021) modify the doctrine?",
+            question: "In *Morse v. Frederick* (2007), the Court upheld a school's punishment of a student who displayed a banner promoting illegal drug use at a school-supervised event. How does this ruling relate to *Tinker v. Des Moines* (1969)?",
             options: [
-              "Tinker protected student speech absent substantial disruption, and later cases let schools limit lewd and school-sponsored speech",
-              "Tinker let schools ban any political speech, and later cases expanded student rights to unlimited off-campus speech",
-              "Tinker applied only to college students, and later cases extended its protection to high school newspapers",
-              "Tinker was overruled by Hazelwood, and Mahanoy then barred schools from punishing any student speech at all"
+              "It narrows Tinker, letting schools limit some student expression even when that expression causes no substantial disruption",
+              "It overrules Tinker, so students have no free-speech rights at all while they are on school grounds",
+              "It extends Tinker, so all student speech at school is now protected regardless of its content",
+              "It applies Tinker unchanged, finding that the banner caused a riot that disrupted classes"
             ],
             correctAnswer: 0,
-            explanation: 'STUDENT SPEECH EVOLUTION: (1) TINKER (1969, Fortas) — black armbands protest Vietnam; SYMBOLIC SPEECH protected unless "materially and substantially" disrupts; "students do not shed their rights at the schoolhouse gate"; BASE STANDARD; (2) BETHEL v. FRASER (1986) — LEWD assembly speech; schools may PROHIBIT VULGAR/LEWD; (3) HAZELWOOD (1988) — newspaper articles censored; schools have BROAD AUTHORITY OVER SCHOOL-SPONSORED EXPRESSION reasonably related to pedagogical concerns; (4) MORSE (2007) — "Bong Hits 4 Jesus"; schools may prohibit speech advocating illegal drug use; (5) MAHANOY (2021, Breyer 8-1) — OFF-CAMPUS Snapchat; schools have DIMINISHED INTEREST in OFF-CAMPUS speech; first major social media case.'
+            explanation: 'TINKER (1969, a required case) protects student symbolic speech unless it causes a material and substantial disruption — students do not shed their rights at the schoolhouse gate. MORSE (2007, an illustrative case for Topic 3.3; the stem gives its holding) carved out a narrower rule: a school may restrict student speech it reasonably sees as promoting illegal drug use, even without disruption. That NARROWS Tinker\'s protection rather than overruling or extending it — an example of the Court balancing social order and individual freedom (EK 3.3.A.2).'
           },
           {
             question: "How does the AP Gov required case *NYT v. United States* (1971 — Pentagon Papers) establish the 'heavy presumption against prior restraint'?",
@@ -126,10 +124,10 @@ export const govCivilLibertiesPart3Data = {
             hint: 'Warren Court; Black majority opinion; Florida defendant.'
           },
           {
-            prompt: "Year *MIRANDA v. ARIZONA* required pre-interrogation warnings of right to remain silent + right to counsel.",
-            answer: '1966',
-            acceptableAnswers: ['1966'],
-            hint: 'Warren Court; significantly transformed police interrogation procedures.'
+            prompt: "Name the exception the Court has allowed to the Miranda rule, which lets an unwarned statement be used as evidence when officers face an immediate threat: the ___ exception.",
+            answer: 'public safety',
+            acceptableAnswers: ['public safety', 'public-safety', 'public safety exception'],
+            hint: 'EK 3.8.A.2 — Miranda protections are not absolute; danger to the public can justify questioning first.'
           }
         ]
       }
@@ -185,7 +183,7 @@ export const govCivilLibertiesPart3Data = {
               "School prayer violates the Free Exercise Clause because it forces students to pray, and Congress passed an amendment overturning it"
             ],
             correctAnswer: 0,
-            explanation: 'ENGEL v. VITALE (1962) — GOVERNMENT-SPONSORED PRAYER in PUBLIC SCHOOLS violates 1st Am ESTABLISHMENT CLAUSE. (1) FACTS — NY Regents composed NONDENOMINATIONAL daily prayer; technically voluntary; Engel + parents sued; (2) HOLDING — Black 6-1 struck; ESTABLISHMENT CLAUSE prohibits COMPOSING official prayer regardless of denominational neutrality or voluntary nature; (3) REASONING — Establishment Clause prevents government from ENDORSING/PROMOTING RELIGION; even nondenominational crosses line; voluntary doesn\'t cure due to COERCION ON YOUNG STUDENTS; (4) Extremely controversial; constitutional amendments to overturn failed; Abington v. Schempp 1963 (Bible reading); (5) Affirmed in Lee v. Weisman 1992 (graduation) + Santa Fe v. Doe 2000 (football); Kennedy v. Bremerton 2022 OVERRULED LEMON but PRESERVED Engel\'s core holding banning government-sponsored school prayer.'
+            explanation: 'ENGEL v. VITALE (1962) — GOVERNMENT-SPONSORED PRAYER in PUBLIC SCHOOLS violates 1st Am ESTABLISHMENT CLAUSE. (1) FACTS — NY Regents composed NONDENOMINATIONAL daily prayer; technically voluntary; Engel + parents sued; (2) HOLDING — Black 6-1 struck; ESTABLISHMENT CLAUSE prohibits COMPOSING official prayer regardless of denominational neutrality or voluntary nature; (3) REASONING — Establishment Clause prevents government from ENDORSING/PROMOTING RELIGION; even nondenominational crosses line; voluntary doesn\'t cure due to COERCION ON YOUNG STUDENTS; (4) Extremely controversial; constitutional amendments to overturn failed; Abington v. Schempp 1963 (Bible reading); (5) Affirmed in Lee v. Weisman 1992 (graduation) + Santa Fe v. Doe 2000 (football); Engel\'s core holding banning government-sponsored school prayer still stands.'
           }
         ]
       }

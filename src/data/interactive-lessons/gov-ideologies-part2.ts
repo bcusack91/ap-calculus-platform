@@ -16,10 +16,10 @@ export const govIdeologiesPart2Data = {
 | Political socialization process (lifecycle stages) |
 | Measuring ideology (PUBLIC OPINION POLLS — random sampling, sampling error, weighting, exit polls, tracking polls) |
 | Ideology → policy (KEYNESIAN demand-side vs SUPPLY-SIDE / monetarist) |
-| Ideology → SCOTUS interpretation (originalism + textualism vs living constitution + purposivism) |
+| Ideology → the courts (judicial activism vs judicial restraint; appointments) |
 | Federalism preference by ideology (devolution vs federal power) |
 
-> 🔑 Key idea: Ideology is FORMED via political socialization (childhood family imprint → adolescent peer + education refinement → young adult experience-based crystallization → midlife stability with periodic generational shifts), MEASURED via PUBLIC OPINION POLLS (random sampling for ~3-4% margin of error at n=1000; weighting for representativeness; LITERARY DIGEST 1936 disaster from non-random sample missed FDR landslide; modern polls struggle with declining response rates + cell phone vs landline + 2016/2020 polling errors), and TRANSLATED INTO POLICY through partisan elected officials (KEYNESIAN demand-side stimulus vs SUPPLY-SIDE / Reagan-era tax cuts), SCOTUS interpretation (ORIGINALISM + TEXTUALISM — Scalia, Thomas, Alito, Gorsuch, Kavanaugh, Barrett — vs LIVING CONSTITUTION + PURPOSIVISM — Brennan, Marshall, Ginsburg, Sotomayor, Kagan, Jackson), and FEDERALISM preferences (conservatives + libertarians favor DEVOLUTION to states, especially after Reagan; liberals + progressives favor FEDERAL action when states fail to protect rights or provide social welfare).
+> 🔑 Key idea: Ideology is FORMED via political socialization (childhood family imprint → adolescent peer + education refinement → young adult experience-based crystallization → midlife stability with periodic generational shifts), MEASURED via PUBLIC OPINION POLLS (random sampling for ~3-4% margin of error at n=1000; weighting for representativeness; LITERARY DIGEST 1936 disaster from non-random sample missed FDR landslide; modern polls struggle with declining response rates + cell phone vs landline + 2016/2020 polling errors), and TRANSLATED INTO POLICY through partisan elected officials (KEYNESIAN demand-side stimulus vs SUPPLY-SIDE / Reagan-era tax cuts), JUDICIAL APPOINTMENTS and the debate over JUDICIAL ACTIVISM vs JUDICIAL RESTRAINT, and FEDERALISM preferences (conservatives + libertarians favor DEVOLUTION to states, especially after Reagan; liberals + progressives favor FEDERAL action when states fail to protect rights or provide social welfare).
       `
     },
     {
@@ -59,14 +59,15 @@ export const govIdeologiesPart2Data = {
 | **KEYNESIAN (DEMAND-SIDE)** | John Maynard Keynes (1936) — government spending + tax cuts during recession STIMULATE AGGREGATE DEMAND, increase consumer spending, reduce unemployment; deficit spending acceptable in downturn (paid down in expansion) | Stimulus packages (Obama ARRA 2009 = \\$787B; CARES Act 2020 = \\$2.2T; American Rescue Plan 2021 = \\$1.9T); unemployment benefits expansion; infrastructure spending; SAFETY NET expansion | Liberal / Progressive — FDR New Deal; Obama recovery; Biden ARP |
 | **SUPPLY-SIDE / MONETARIST** | Tax cuts + deregulation INCREASE PRODUCTIVE INVESTMENT + work incentives; Federal Reserve controls money supply to manage inflation; smaller government reduces "crowding out" of private investment; LAFFER CURVE (cutting taxes can increase revenue if rates above optimal) | Tax cuts (Reagan 1981 + 1986; Bush 2001 + 2003; Trump 2017); deregulation (Reagan, Trump); reduced federal spending (Reagan tried, mixed success); Federal Reserve interest rate management | Conservative / Libertarian — Reagan REAGANOMICS; Bush; Trump TCJA 2017 |
 
-## Ideology → Constitutional Interpretation
+## Ideology → The Courts
 
-| Approach | Method | Justices | Cases |
-|---|---|---|---|
-| **ORIGINALISM** (original meaning) | Constitution interpreted according to ORIGINAL PUBLIC MEANING at time of ratification (text understood by reasonable framer/ratifier in 1788 or amendment date); judges should NOT update meaning to fit modern values | Scalia, Thomas, Alito, Gorsuch, Kavanaugh, Barrett (variations) | DC v. Heller 2008 (2nd Am individual right based on 1791 meaning); McDonald 2010; Bruen 2022 (history + tradition for gun regulations); Dobbs 2022 (no abortion right because not in 14th Am 1868 meaning) |
-| **TEXTUALISM** (statutory) | Statute interpreted according to ORDINARY MEANING of text at time of enactment; judges should NOT use legislative history or "purpose" to override clear text | Scalia (founder), Thomas, Gorsuch, Alito, Barrett | Bostock 2020 (Title VII "because of sex" textually includes LGBTQ+ — Gorsuch textualist majority surprised conservatives); West Virginia v. EPA 2022 (major questions doctrine) |
-| **LIVING CONSTITUTION** | Constitution should be interpreted as a LIVING DOCUMENT with meaning evolving to reflect contemporary values + circumstances; framers chose general principles for future generations to apply | Brennan, Marshall, Warren, Ginsburg, Sotomayor, Kagan, Jackson | Brown v. Board 1954 (overruled Plessy 1896 separate-but-equal despite no clear original meaning prohibiting); Roe v. Wade 1973 (privacy right not in text); Obergefell 2015 (same-sex marriage 14th Am evolving liberty) |
-| **PURPOSIVISM** (statutory) | Statute interpreted according to legislative PURPOSE / intent including legislative history; text should be read in light of policy goals | Breyer (esp.), Stevens (retired), Sotomayor, Kagan (varies) | King v. Burwell 2015 (Roberts: ACA "established by the State" includes federal exchange to fulfill statutory purpose); Kisor v. Wilkie 2019 (preserved Auer deference reading) |
+| Concept | What it means | Example |
+|---|---|---|
+| **JUDICIAL ACTIVISM** | View that judicial review allows courts to OVERTURN existing constitutional and case precedent or INVALIDATE legislative or executive acts (EK 2.11.A.1) | Brown v. Board 1954 overturned Plessy's "separate but equal" |
+| **JUDICIAL RESTRAINT** | View that judicial review should be constrained to decisions that ADHERE to existing constitutional and case precedent, deferring to the elected branches (EK 2.11.A.1) | Upholding laws passed by Congress unless they clearly violate the Constitution |
+| **STARE DECISIS** | Courts follow precedent when deciding cases with similar facts (EK 2.9.A.1) | Later rulings applying Brown's reasoning to other segregated public facilities |
+| **APPOINTMENTS + IDEOLOGY** | Presidents nominate justices who share their ideology; ideological changes in the Court's composition have led it to establish new precedents or reject existing ones (EK 2.9.A.2) | The liberal Warren Court (1953-1969) expanded the rights of the accused; a more conservative Court overruled Roe in Dobbs 2022 |
+| **ACTIVISM IS NOT ONE IDEOLOGY** | Liberal and conservative majorities have both overturned precedent; "activist" describes a willingness to overturn, not a side | Brown 1954 (liberal outcome); Citizens United 2010 and Dobbs 2022 (conservative outcomes) |
 
 ## Ideology → Federalism Preference
 
@@ -87,7 +88,7 @@ export const govIdeologiesPart2Data = {
 **House Effects:**
 Different polling firms produce systematically different results due to methodology choices (likely-voter screens, weighting decisions, question wording). Aggregators (FiveThirtyEight, RealClearPolitics) average polls + adjust for house effects.
 
-> 🔑 Key takeaway: Ideology FORMED through socialization stages (childhood family imprint → adolescent peer/education → young adult crystallization → midlife stability → older adulthood). MEASURED via public opinion polls (RANDOM SAMPLING crucial; ~3-4% margin of error at n=1000; LITERARY DIGEST 1936 + Truman-Dewey 1948 + 2016/2020 errors illustrate methodology importance). TRANSLATED into policy through partisan elected officials (KEYNESIAN demand-side vs SUPPLY-SIDE), SCOTUS interpretation (ORIGINALISM/TEXTUALISM vs LIVING CONSTITUTION/PURPOSIVISM), and FEDERALISM preferences (conservative devolution vs liberal federal action; both switch when convenient).
+> 🔑 Key takeaway: Ideology FORMED through socialization stages (childhood family imprint → adolescent peer/education → young adult crystallization → midlife stability → older adulthood). MEASURED via public opinion polls (RANDOM SAMPLING crucial; ~3-4% margin of error at n=1000; LITERARY DIGEST 1936 + Truman-Dewey 1948 + 2016/2020 errors illustrate methodology importance). TRANSLATED into policy through partisan elected officials (KEYNESIAN demand-side vs SUPPLY-SIDE), the courts (appointments; JUDICIAL ACTIVISM vs RESTRAINT), and FEDERALISM preferences (conservative devolution vs liberal federal action; both switch when convenient).
       `
     },
     {
@@ -97,15 +98,15 @@ Different polling firms produce systematically different results due to methodol
       exercise: {
         questions: [
           {
-            question: "How does the IDEOLOGICAL DIVIDE between ORIGINALISM/TEXTUALISM and LIVING CONSTITUTIONALISM/PURPOSIVISM affect SCOTUS decisions, and how do BOSTOCK v. CLAYTON COUNTY (2020) and DOBBS v. JACKSON (2022) illustrate the divide?",
+            question: "How do the competing views of JUDICIAL ACTIVISM and JUDICIAL RESTRAINT connect to ideology and the composition of the Supreme Court?",
               options: [
-              "Originalists read text by its original public meaning, yet Gorsuch's textualism extended Title VII to LGBTQ+ workers in Bostock and Alito's originalism overruled Roe in Dobbs.",
-              "Textualists read statutes by modern values, so Gorsuch's purposivism limited Title VII to biological sex in Bostock and Kennedy's living constitutionalism overruled Roe in Dobbs.",
-              "Living constitutionalists wrote both decisions, with Ginsburg extending Title VII in Bostock and Sotomayor upholding Roe in Dobbs on evolving values.",
-              "Textualism and originalism produced identical liberal results in Bostock and Dobbs, showing that interpretive method has no ideological effect.",
+              "Restraint favors keeping existing precedent and deferring to elected branches, activism favors overturning precedent or laws, and appointments can shift the Court between them.",
+              "Activism means deferring to Congress and the president, restraint means striking down laws freely, and justices' views never change once their Senate confirmation hearings end.",
+              "Activism and restraint describe the size of the Court's caseload, so ideology has no effect on which approach a justice takes.",
+              "Restraint is required by Article III, so activism is unconstitutional and has never been used to overturn a precedent.",
             ],
             correctAnswer: 0,
-            explanation: 'ORIGINALISM (constitutional) + TEXTUALISM (statutory) — original public meaning + ordinary text; LIVING CONSTITUTIONALISM + PURPOSIVISM — evolving meaning + legislative purpose. (1) BOSTOCK 2020 — Gorsuch 6-3 TEXTUALIST majority — Title VII "because of sex" plain meaning includes LGBTQ+ (cannot fire gay man without taking sex into account); SURPRISED conservatives; Alito + Kavanaugh dissents argued original meaning of "sex" in 1964 didn\'t include LGBTQ+; TEXTUALISM CAN PRODUCE LIBERAL OUTCOMES. (2) DOBBS 2022 — Alito 6-3 ORIGINALIST majority OVERRULED Roe + Casey; no abortion right because 14th Am 1868 didn\'t include + not "deeply rooted in history and tradition"; returned to states; Sotomayor/Kagan/Breyer dissent — LIVING CONSTITUTIONALIST 14th Am liberty evolves. (3) Originalism: Scalia/Thomas/Gorsuch/Kavanaugh/Barrett/Alito; Living: Brennan/Marshall/Ginsburg/Sotomayor/Kagan/Jackson; Roberts + Kavanaugh sometimes middle. (4) Federalist Society pipeline for Republican nominees.'
+            explanation: 'EK 2.11.A.1: JUDICIAL ACTIVISM asserts that judicial review allows courts to overturn current constitutional and case precedent or invalidate legislative or executive acts; JUDICIAL RESTRAINT asserts that judicial review should be constrained to decisions that adhere to current precedent. EK 2.9.A.2: ideological changes in the Court\'s composition due to presidential appointments have led it to establish new precedents or reject existing ones (e.g., Brown 1954 rejecting Plessy; Dobbs 2022 overruling Roe). Neither approach belongs to one ideology, the Constitution does not require restraint, and the terms are not about caseload.'
           }
         ]
       }
@@ -129,10 +130,10 @@ Different polling firms produce systematically different results due to methodol
             hint: 'Famous polling fail; demonstrated importance of RANDOM sampling over large convenience samples; Gallup + Roper used 1,500-3,000 random samples + correctly predicted FDR victory.'
           },
           {
-            prompt: "Approach to constitutional interpretation associated with Scalia + Thomas + Alito + Gorsuch + Kavanaugh + Barrett — meaning fixed at time of ratification (1788 or amendment date).",
-            answer: 'originalism',
-            acceptableAnswers: ['originalism', 'Originalism', 'original meaning', 'original public meaning'],
-            hint: 'Contrasts with LIVING CONSTITUTIONALISM (Brennan, Marshall, Ginsburg); applied in DC v. Heller 2008 (2nd Am 1791) + Dobbs 2022 (no abortion right because 14th Am 1868 didn\'t contemplate); Federalist Society pipeline.'
+            prompt: "View that courts should decide cases in line with existing constitutional and case precedent and defer to the elected branches rather than overturn laws (EK 2.11.A.1).",
+            answer: 'judicial restraint',
+            acceptableAnswers: ['judicial restraint', 'Judicial restraint', 'Judicial Restraint', 'restraint'],
+            hint: 'The opposite view, judicial activism, holds that judicial review lets courts overturn precedent or invalidate laws.'
           }
         ]
       }

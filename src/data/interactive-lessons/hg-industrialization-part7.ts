@@ -31,7 +31,7 @@ export const hgIndustrializationPart7Data = {
 |---|---|---|---|
 | 1 | What are the sectors and models? | Five sectors; Rostow, dependency, Wallerstein; Weber's factors | National, global |
 | 2 | Where and why did industry begin and spread? | Britain's advantages; diffusion to Europe, the U.S., Japan and Russia; imperialism; urbanization | Regional to global |
-| 3 | Where does industry locate today? | Sector shifts; material index; labor and agglomeration; break-of-bulk; footloose industry | Regional |
+| 3 | Where does industry locate today? | Sector shifts; weight-losing vs. weight-gaining; labor and agglomeration; break-of-bulk; footloose industry | Regional |
 | 4 | How is development measured? | GDP, GNP, GNI, PPP; TFR, IMR, literacy; Gini; HDI and GII | National, with subnational gaps |
 | 5 | How does development affect women? | U-shaped curve; pay, work and representation gaps; garment work; microfinance | Household to global |
 | 6 | Why are some countries rich and others poor? | Rostow's stages, dependency and commodity dependence, world-system theory, with critiques | National, global |
@@ -151,7 +151,7 @@ Try each part before reading the model.
         dropdowns: [
           {
             label: 'A steel mill is built at a port where ore ships unload onto trains. The location factor is ___',
-            options: ['A break-of-bulk point', 'A ubiquitous material', 'A footloose firm', 'A quinary activity']
+            options: ['A break-of-bulk point', 'A weight-gaining input', 'A footloose firm', 'A quinary activity']
           },
           {
             label: 'The index that measures gender gaps in reproductive health, empowerment and the labor market is the ___',

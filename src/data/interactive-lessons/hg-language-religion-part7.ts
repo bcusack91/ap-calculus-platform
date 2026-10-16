@@ -30,7 +30,7 @@ export const hgLanguageReligionPart7Data = {
 | Part | Big question | Core ideas |
 |---|---|---|
 | 1 | What are the main families and religions? | Families; universalizing vs. ethnic; lingua franca, pidgin, creole, dialect, isogloss; religious landscapes |
-| 2 | Where did language families start, and how did they spread? | Family, branch, group; isolates; steppe vs. Anatolian models; Bantu and Austronesian expansions; Latin and colonial spreads |
+| 2 | Where did language families start, and how did they spread? | Family, branch, group; isolates; the Indo-European hearth and toponyms; Bantu and Austronesian expansions; Latin and colonial spreads |
 | 3 | Where did religions start, and how did they spread? | Hearths and diffusion types; branches and their regions; ethnic religions; sacred space |
 | 4 | How do we read the data? | Native vs. total speakers; Pew religion shares; majority maps hide minorities; multilingual states |
 | 5 | How do language and religion unite, divide and change? | Centripetal vs. centrifugal by scale; extinction and revival; creolization; secularization |

@@ -182,7 +182,7 @@ export const govPresidencyPart1Data = {
     {
       id: 'govpres1-applied',
       type: 'multiple-choice' as const,
-      content: `**Applied AP Practice — Selection & Succession**`,
+      content: `**Applied AP Practice — Selection & Term Limits**`,
       exercise: {
         questions: [
           {
@@ -197,15 +197,15 @@ export const govPresidencyPart1Data = {
             explanation: '12th Amendment (1804) contingent election: HOUSE selects President from TOP 3 Electoral College vote-getters; STATE DELEGATION CASTS ONE VOTE (CA 52 = 1 vote; WY 1 = 1 vote); 26 states needed. SENATE separately selects VP from top 2 vice-presidential vote-getters; each senator votes individually; 51 needed. Historical: 1800 (Jefferson over Burr after 36 House ballots) + 1824 (Adams over Jackson plurality — "corrupt bargain" → Jackson 1828 revenge).'
           },
           {
-            question: "AP scenario: 'A sitting president dies in office. What is the immediate succession process and modern constitutional framework?'",
+            question: "AP scenario: 'Franklin Roosevelt won four presidential elections (1932-1944). Six years after his death, the states ratified the 22nd Amendment.' Which best explains the purpose of that amendment?",
             options: [
-              "The Vice President becomes President at once, as the 25th Amendment confirmed in 1967 after Tyler set the precedent in 1841",
-              "The Vice President only acts as President until Congress holds a special election within 90 days",
-              "The Speaker of the House becomes President, as the Presidential Succession Act of 1947 places the Speaker first in line",
-              "The Vice President must win Senate confirmation by majority vote before taking the oath, under the 22nd Amendment ratified in 1951"
+              "It limited presidents to two terms in office, reflecting concern about the expansion of executive power",
+              "It let the Vice President act as President whenever the President is disabled",
+              "It lowered the minimum age for the presidency from 35 to 30",
+              "It required Senate approval of every executive order a President issues during a declared war or other national emergency"
             ],
             correctAnswer: 0,
-            explanation: '25th Amendment § 1 (1967): VP IMMEDIATELY becomes President on death/resignation/removal. 8 succeeded via death (Tyler 1841, Fillmore 1850, A. Johnson 1865, Arthur 1881, TR 1901, Coolidge 1923, Truman 1945, LBJ 1963) + 1 via resignation (Ford 1974 after Nixon). § 2: new President nominates new VP, confirmed by majority of both House + Senate (Ford 1973, Rockefeller 1974). After VP: Presidential Succession Act 1947 → Speaker, President pro tempore, Cabinet (in order of creation).'
+            explanation: 'EK 2.6.A.2: passage of the TWENTY-SECOND AMENDMENT, which established presidential term limits, demonstrates concern about the expansion of presidential power. It turned Washington\'s two-term tradition, broken by FDR, into constitutional law. Presidential disability is handled by a different amendment, the age requirement is still 35, and executive orders do not need Senate approval.'
           }
         ]
       }

@@ -141,14 +141,14 @@ export const govConstitutionalFoundationsPart1Data = {
             options: ['Locke', 'Montesquieu', 'Hobbes', 'Rousseau']
           },
           {
-            label: 'The thinker whose Social Contract (1762) provided the principle of popular sovereignty ("We the People"): ___',
+            label: 'The thinker who described an anarchic "state of nature" without government, where life is "solitary, poor, nasty, brutish, and short": ___',
             options: ['Locke', 'Montesquieu', 'Hobbes', 'Rousseau']
           }
         ],
-        correctAnswers: ['Montesquieu', 'Locke', 'Rousseau'],
+        correctAnswers: ['Montesquieu', 'Locke', 'Hobbes'],
         hint1: 'Articles I/II/III separation of powers traces to Montesquieu.',
         hint2: 'Declaration\'s natural rights traces to Locke.',
-        hint3: 'Preamble\'s "We the People" traces to Rousseau\'s general will.',
+        hint3: 'Leviathan (1651) — the CED\'s illustrative example of the state of nature (Topic 1.1).',
         explanation: 'Locke = natural rights + consent of governed; Montesquieu = separation of powers; Hobbes = sovereign authority over state of nature; Rousseau = popular sovereignty + general will.'
       }
     },

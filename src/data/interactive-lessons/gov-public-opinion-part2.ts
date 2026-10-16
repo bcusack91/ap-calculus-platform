@@ -67,7 +67,7 @@ POLITICAL SOCIALIZATION operates throughout the LIFESPAN with different agents d
 ### Later Adulthood (65+)
 
 - MOST STABLE beliefs; most resistant to change
-- **HIGHEST TURNOUT** — ~70%+ in presidential elections; even higher in midterms
+- **HIGHEST TURNOUT** — ~70%+ in presidential elections; age gap even wider in midterms
 - ACTIVE POLITICAL ENGAGEMENT — phone calls + town halls + AARP + religious community
 - Generational events that shaped them (Depression, WWII, 1960s) continue to color worldview
 - Older voters disproportionately Republican since Reagan; Boomers split
@@ -172,7 +172,7 @@ Combines polls + FUNDAMENTALS (economy, incumbency, approval) into probabilistic
 
 ### Prediction Markets
 
-- **POLYMARKET** (crypto-based; not legal in US for residents) + **KALSHI** (CFTC-regulated US legal as of 2024)
+- **POLYMARKET** (crypto-based; long barred to U.S. residents) + **KALSHI** (CFTC-regulated US legal as of 2024)
 - Real-money betting on election outcomes
 - Aggregate decentralized information
 - 2024: Polymarket consistently higher Trump probability than poll aggregators; Trump won
@@ -217,7 +217,7 @@ Burke famously rejected delegate model: "Your representative owes you, not his i
               "School and church dominate adolescence, family matters most after retirement, and political views are fixed permanently by age 12 for nearly everyone.",
             ],
             correctAnswer: 0,
-            explanation: 'POLITICAL SOCIALIZATION LIFECYCLE: (1) CHILDHOOD (0-12) — FAMILY (~70% share parents\' party by 12) + SCHOOL civic education + Pledge; primary orientations form; "benevolent leader" research (Easton + Hess 1960s — weakened in polarized era). (2) ADOLESCENCE (13-17) — peers grow + can challenge family; current events awareness; first opinions; generational differences emerge (Gen Z = COVID + Trump + climate + social media). (3) EARLY ADULTHOOD (18-29) — 26th Am 1971 voting at 18 ("old enough to fight"); college/work/military expose; party ID loosens then restabilizes; marriage + children → conservative shift; "emerging adulthood" (Arnett); LOWEST TURNOUT ~50% vs 70%+ for 65+. (4) MIDDLE ADULTHOOD (30-64) — beliefs stabilize; occupation reinforces (lawyers + academics Dem; small business + military Rep); home + children → conservative shift; baseline stable. (5) LATER ADULTHOOD (65+) — MOST STABLE; HIGHEST TURNOUT (~70%+ pres, even higher midterm); active engagement (phone + town halls + AARP); generational events continue coloring; older Rep since Reagan + Boomers split.'
+            explanation: 'POLITICAL SOCIALIZATION LIFECYCLE: (1) CHILDHOOD (0-12) — FAMILY (~70% share parents\' party by 12) + SCHOOL civic education + Pledge; primary orientations form; "benevolent leader" research (Easton + Hess 1960s — weakened in polarized era). (2) ADOLESCENCE (13-17) — peers grow + can challenge family; current events awareness; first opinions; generational differences emerge (Gen Z = COVID + Trump + climate + social media). (3) EARLY ADULTHOOD (18-29) — 26th Am 1971 voting at 18 ("old enough to fight"); college/work/military expose; party ID loosens then restabilizes; marriage + children → conservative shift; "emerging adulthood" (Arnett); LOWEST TURNOUT ~50% vs 70%+ for 65+. (4) MIDDLE ADULTHOOD (30-64) — beliefs stabilize; occupation reinforces (lawyers + academics Dem; small business + military Rep); home + children → conservative shift; baseline stable. (5) LATER ADULTHOOD (65+) — MOST STABLE; HIGHEST TURNOUT (~70%+ pres; age gap widest in midterms); active engagement (phone + town halls + AARP); generational events continue coloring; older Rep since Reagan + Boomers split.'
           }
         ]
       }
@@ -229,10 +229,10 @@ Burke famously rejected delegate model: "Your representative owes you, not his i
       exercise: {
         questions: [
           {
-            prompt: "British political thinker who in 1774 SPEECH TO ELECTORS OF BRISTOL articulated the TRUSTEE model of representation: 'Your representative owes you, not his industry only, but his judgment.'",
-            answer: 'Edmund Burke',
-            acceptableAnswers: ['Edmund Burke', 'Burke'],
-            hint: 'Conservative philosopher; 1774 speech rejected delegate model + insisted on representative\'s independent judgment; lost next election (1780) — voters rejected his independent voting on Catholic emancipation + free trade with Ireland; foundational TRUSTEE doctrine.'
+            prompt: "Role conception in which a representative votes on issues based on their own knowledge and judgment rather than constituent opinion (EK 2.3.A.4).",
+            answer: 'trustee',
+            acceptableAnswers: ['trustee', 'Trustee', 'trustee model', 'trustee role'],
+            hint: 'Contrast with the delegate (votes constituents\' interests) and the politico (a mix of both).'
           },
           {
             prompt: "Amendment ratified 1971 lowering voting age from 21 to 18 during Vietnam War; argued 'old enough to fight, old enough to vote.'",
@@ -241,10 +241,10 @@ Burke famously rejected delegate model: "Your representative owes you, not his i
             hint: 'Ratified July 1 1971 in fastest amendment ratification in US history (3 months 8 days); came amid Vietnam War draft + youth protest movement; expanded electorate by ~11M young voters; followed Oregon v. Mitchell 1970 SCOTUS ruling.'
           },
           {
-            prompt: "Online probability-based survey panel run by Pew Research Center using address-based sampling for recruitment then surveying online.",
-            answer: 'American Trends Panel',
-            acceptableAnswers: ['American Trends Panel', 'ATP', 'Pew American Trends Panel', 'Pew ATP', 'Pew Research American Trends Panel'],
-            hint: 'Pew\'s flagship probability-based online panel; founded 2014; over 12,000 randomly selected US adults; recruited via address-based sampling + completes surveys online; high-quality methodology + frequent published data; competitor to NORC AmeriSpeak + Ipsos KnowledgePanel.'
+            prompt: "Type of poll taken early in a campaign to create a baseline view of a candidate (EK 4.5.A.1).",
+            answer: 'benchmark poll',
+            acceptableAnswers: ['benchmark poll', 'Benchmark poll', 'benchmark', 'Benchmark'],
+            hint: 'Later tracking polls measure change against this starting point.'
           }
         ]
       }
@@ -289,7 +289,7 @@ Burke famously rejected delegate model: "Your representative owes you, not his i
               "Question wording affects only uninformed respondents, and house effects come from interviewers' accents, so the most recent poll is always the best one to read.",
             ],
             correctAnswer: 0,
-            explanation: 'POLLING METHODOLOGY: (1) QUESTION WORDING — "welfare" vs "assistance to poor" (opposite responses); "death tax" vs "estate tax" (Frank Luntz GOP renamed); "Obamacare" vs "ACA" (same law different responses); "right to life" vs "right to choose"; "tax breaks for wealthy" vs "tax relief for job creators"; "climate change" vs "global warming." (2) FRAMING — gain frame ("save 200 lives") vs loss frame ("let 800 die") same outcome but loss more compelling (Tversky + Kahneman 1981 PROSPECT THEORY 2002 Nobel); episodic vs thematic; priming. (3) HOUSE EFFECTS — weighting by party ID vs stable demographics; turnout models; mode effects (phone/online/in-person); RASMUSSEN leans Rep (3-5 pts); CIVIQS + DFP + PPP lean Dem; NYT/Siena + ABC/WaPo reference standards; Suffolk + Emerson + UMass Lowell + Marist quality; Trump-era TRAFALGAR + INSIDER ADVANTAGE + McLAUGHLIN closer to Trump margins 2016 + 2020 (controversial — "shy Trump voter" or selective methodology). (4) IMPLICATIONS — don\'t trust single polls; check wording + sample + house effects; use AGGREGATORS (RCP, 538, Silver Bulletin, NYT Upshot, Economist); be skeptical of dramatic changes (statistical noise + wording); pollsters/media/politicians use polling strategically. (5) REFORMS post-2016 + 2020 underestimating Trump — better cellphone/mobile inclusion + non-college White representation + voter file calibration + recall checks; 2024 more accurate (Trump +1.5% popular; close race within MOE).'
+            explanation: 'POLLING METHODOLOGY: (1) QUESTION WORDING — "welfare" vs "assistance to poor" (opposite responses); "death tax" vs "estate tax" (Frank Luntz GOP renamed); "Obamacare" vs "ACA" (same law different responses); "right to life" vs "right to choose"; "tax breaks for wealthy" vs "tax relief for job creators"; "climate change" vs "global warming." (2) FRAMING — gain frame ("save 200 lives") vs loss frame ("let 800 die") same outcome but loss more compelling (Tversky + Kahneman 1981 PROSPECT THEORY 2002 Nobel); episodic vs thematic; priming. (3) HOUSE EFFECTS — weighting by party ID vs stable demographics; turnout models; mode effects (phone/online/in-person); RASMUSSEN leans Rep; CIVIQS + DFP + PPP lean Dem; NYT/Siena + ABC/WaPo reference standards; Suffolk + Emerson + UMass Lowell + Marist quality; Trump-era TRAFALGAR + INSIDER ADVANTAGE + McLAUGHLIN closer to Trump margins 2016 + 2020 (controversial — "shy Trump voter" or selective methodology). (4) IMPLICATIONS — don\'t trust single polls; check wording + sample + house effects; use AGGREGATORS (RCP, 538, Silver Bulletin, NYT Upshot, Economist); be skeptical of dramatic changes (statistical noise + wording); pollsters/media/politicians use polling strategically. (5) REFORMS post-2016 + 2020 underestimating Trump — better cellphone/mobile inclusion + non-college White representation + voter file calibration + recall checks; 2024 more accurate (Trump +1.5% popular; close race within MOE).'
           }
         ]
       }

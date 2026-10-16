@@ -23,7 +23,7 @@ export const apesBiodiversityConservationPart7Data = {
 
 | Part | Big idea | What you should be able to do |
 |---|---|---|
-| 1 | HIPPCO, laws, strategies | Classify a threat; match ESA, CITES, Lacey Act and MMPA to what they regulate |
+| 1 | HIPPCO, laws, strategies | Classify a threat; match the ESA and CITES to what they regulate |
 | 2 | Invasive species | Name invader traits; trace an invader's effects; explain why early response is cheapest |
 | 3 | Endangered species | Name risk traits; explain listing, take and critical habitat; distinguish CITES Appendix I and II |
 | 4 | Monitoring | Calculate mark-recapture and quadrat estimates; spot violated assumptions; describe a trend |
@@ -55,11 +55,11 @@ export const apesBiodiversityConservationPart7Data = {
             options: [
               'CITES: international trade in threatened species and their products',
               'ESA: international trade in ivory between other nations',
-              'Lacey Act: designation of critical habitat for listed plants',
-              'MMPA: protection of migratory songbirds from hunting'
+              'Clean Water Act: designation of critical habitat for listed plants',
+              'RCRA: protection of migratory songbirds from hunting'
             ],
             correctAnswer: 0,
-            explanation: 'CITES regulates cross-border trade in listed species and products such as ivory and pelts. The ESA is a U.S. law, the Lacey Act targets trade in illegally taken wildlife, and the MMPA protects marine mammals.'
+            explanation: 'CITES regulates cross-border trade in listed species and products such as ivory and pelts. The ESA is a U.S. law rather than an international trade treaty, the Clean Water Act regulates water pollution, and RCRA governs hazardous waste.'
           },
           {
             question: 'A fish species is a generalist feeder, matures in one year and lays thousands of eggs. In which situation is this profile most worrying?',

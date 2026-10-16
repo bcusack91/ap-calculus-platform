@@ -17,7 +17,7 @@ export const apesEarthSystemsPart2Data = {
 | How Soil Forms and How It Is Lost |
 | Testing Soil: Texture, Water and Permeability |
 
-> 🔑 **Key Concept:** Part 1 introduced the plate boundary types, the rock cycle and the soil horizons. This part adds the map-reading skills the CED expects for plate tectonics (Topic 4.1), the processes that build and erode soil (Topic 4.2), and the measurements used to test soil (Topic 4.3), with the calculations that go with them.
+> 🔑 **Key Concept:** Part 1 introduced the plate boundary types, soil formation from parent material and the soil horizons. This part adds the map-reading skills the CED expects for plate tectonics (Topic 4.1), the processes that build and erode soil (Topic 4.2), and the measurements used to test soil (Topic 4.3), with the calculations that go with them.
       `
     },
     {

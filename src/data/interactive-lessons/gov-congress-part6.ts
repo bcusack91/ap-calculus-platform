@@ -14,7 +14,7 @@ export const govCongressPart6Data = {
 | Section |
 |---|
 | 5-step framework for analyzing congressional behavior |
-| Worked example: Inflation Reduction Act 2022 (reconciliation) |
+| Worked example: Civil Rights Act of 1964 (cloture) |
 | Required AP documents linkage |
 | AP argument-essay structure |
 
@@ -31,21 +31,21 @@ export const govCongressPart6Data = {
 |---|---|---|
 | 1. CONSTITUTIONAL | What constitutional provision authorizes/constrains this? | Article I powers (enumerated + implied + Necessary and Proper); bicameralism + presentment; specific clauses (Origination, Spending, Commerce, War) |
 | 2. POLITICAL | What political conditions shape this? | Unified vs divided government; party majorities; presidential election cycle; public opinion |
-| 3. PROCEDURAL | What congressional rules + procedures apply? | Committee referral; filibuster + cloture (60 votes); reconciliation eligibility; Rules Committee terms; conference committee |
+| 3. PROCEDURAL | What congressional rules + procedures apply? | Committee referral; filibuster + cloture (60 votes); holds + unanimous consent; Rules Committee terms; discharge petitions; conference committee |
 | 4. INSTITUTIONAL | What institutional incentives drive members? | Reelection (Mayhew); committee assignments; party loyalty; constituency interests; donor concerns |
 | 5. HISTORICAL | What historical pattern fits? | New Deal coalition; Conservative Coalition; Reagan revolution; Gingrich revolution; modern polarization |
 
-## Worked Example: Inflation Reduction Act 2022 (Reconciliation)
+## Worked Example: Civil Rights Act of 1964 (Cloture)
 
-> ⚡ Question: Apply the 5-step framework to explain how the Inflation Reduction Act 2022 — Biden's signature climate + healthcare + tax legislation — passed Congress despite intense Republican opposition and only a 50-50 Senate.
+> ⚡ Question: Apply the 5-step framework to explain how the Civil Rights Act of 1964 — which the CED names as a government response to the civil rights movement (EK 3.11.A.1.ii) — passed Congress despite a determined Southern filibuster.
 
 | Step | Application |
 |---|---|
-| 1. **CONSTITUTIONAL** | The IRA exercises Congress's Article I § 8 cl. 1 spending + taxing powers (clean-energy tax credits, prescription drug price negotiation, corporate minimum tax); bicameralism + presentment satisfied (House 220-207 + Senate 51-50 with VP Harris tie-breaker; signed by Biden August 16, 2022); no Commerce Clause challenges expected |
-| 2. **POLITICAL** | Democrats had: (a) 50-50 Senate (with Harris tie-breaker) — minimum possible majority; (b) ~221 House majority; (c) Biden presidency — UNIFIED government; (d) had failed to pass broader Build Back Better in 2021-22 due to Joe Manchin (D-WV) + Kyrsten Sinema (D-AZ) opposition; (e) needed to show pre-midterm legislative achievement; result: scaled-back IRA finally negotiated July 2022 with Manchin support |
-| 3. **PROCEDURAL** | Used RECONCILIATION (Budget Act 1974) to bypass Senate filibuster — only path with 50-50 Senate; Senate Parliamentarian Elizabeth MacDonough enforced Byrd Rule (limiting reconciliation to budget-related provisions, removing some climate + healthcare provisions); 51 votes (Manchin + Sinema + 48 other Democrats + Harris tie-breaker) sufficient under reconciliation |
-| 4. **INSTITUTIONAL** | (a) Manchin extracted concessions favoring West Virginia coal/gas industry (Mountain Valley Pipeline permitting); (b) Sinema secured carried-interest tax-loophole preservation + drug-pricing scope reduction; (c) all 50 Democrats had reelection or party-loyalty incentives to support deal once final terms negotiated; (d) all 50 Republicans had partisan + ideological + donor incentives to oppose |
-| 5. **HISTORICAL** | Fits modern polarization-era pattern: major partisan legislation passes via reconciliation with razor-thin party-line votes; followed Bush tax cuts 2001/2003, Trump tax cuts 2017, ARPA 2021 pattern; demonstrates that reconciliation is the only viable path for major partisan economic legislation in modern era |
+| 1. **CONSTITUTIONAL** | Congress relied on its Commerce Clause power (Art I § 8 cl. 3) to ban discrimination in public accommodations and on the 14th Amendment's enforcement power; bicameralism + presentment satisfied (House 290-130; Senate 73-27; signed by Johnson July 2, 1964) |
+| 2. **POLITICAL** | Large Democratic majorities, but Southern Democrats opposed; momentum from the civil rights movement (Birmingham, March on Washington 1963) and from Kennedy's assassination; President Johnson used bargaining and persuasion (EK 2.4.A.2.iii) |
+| 3. **PROCEDURAL** | House Rules Committee chair Howard Smith (D-VA) bottled up the bill; Judiciary chair Emanuel Celler filed a DISCHARGE PETITION (EK 2.2.A.3.i), and although it fell short of a majority, mounting support pushed Smith to hold hearings and release the bill; in the Senate, Southern senators FILIBUSTERED for about 60 working days until the Senate voted CLOTURE 71-29 on June 10, 1964 (then 67 votes were required) — the first successful cloture vote on a civil rights bill |
+| 4. **INSTITUTIONAL** | Minority Leader Everett Dirksen (R-IL) delivered Republican votes in exchange for amendments; members weighed constituency pressure (delegate role) against their own judgment (trustee role) (EK 2.3.A.4) |
+| 5. **HISTORICAL** | Broke the Conservative Coalition's hold on civil rights; followed by the Voting Rights Act of 1965 (EK 3.11.A.1.iv); shows that the filibuster can be overcome when a broad, bipartisan coalition exists |
 
 ## Required AP Documents Linkage
 
@@ -64,7 +64,7 @@ export const govCongressPart6Data = {
 |---|---|
 | **Thesis** | Take a clear, defensible position on the prompt's claim about Congress; preview your reasoning |
 | **Supporting evidence 1** | Use one piece of evidence from the foundational documents (Federalist 10/51/70/78, Brutus 1, Constitution) to support your thesis |
-| **Supporting evidence 2** | Use one piece of evidence from a SECOND DIFFERENT source (e.g., a SCOTUS case like McCulloch, Lopez, or NFIB v. Sebelius; or a specific historical example like the New Deal, Great Society, or modern reconciliation) |
+| **Supporting evidence 2** | Use one piece of evidence from a SECOND DIFFERENT source (e.g., a required SCOTUS case like McCulloch or Lopez; or a specific historical example like the New Deal, the Civil Rights Act of 1964, or a recent shutdown) |
 | **Reasoning** | Explain how your evidence proves your thesis; do not merely quote evidence — make explicit the logical link |
 | **Counter-argument + rebuttal** | Acknowledge a strong counter-claim (e.g., "Some argue that Congress's modern dysfunction shows the framers' design has failed"); rebut with reasoning + evidence (e.g., "But the framers explicitly anticipated faction in Federalist 10 and built procedural checks to slow rapid action") |
 
@@ -78,26 +78,26 @@ export const govCongressPart6Data = {
       exercise: {
         questions: [
           {
-            question: "AP analysis prompt: 'Develop an argument that explains whether the modern reconciliation procedure undermines the framers' design for Congress.' What is the strongest argument that reconciliation DOES undermine the framers' design?",
+            question: "AP analysis prompt: 'Develop an argument that explains whether the Senate filibuster undermines the framers' design for Congress.' What is the strongest argument that the filibuster DOES undermine the framers' design?",
             options: [
-              "The framers built Congress to require broad coalitions, and reconciliation lets a bare Senate majority pass sweeping tax and spending laws without them",
-              "Reconciliation lets the President write budget laws alone, which removes Congress from the process the framers designed",
-              "Reconciliation violates the Origination Clause, since every reconciliation bill starts in the Senate",
-              "Article I requires a filibuster, and reconciliation unconstitutionally bypasses it"
+              "The Constitution lists the few actions that need supermajorities, so letting 41 senators block ordinary bills departs from the framers' majority rule",
+              "The filibuster lets the President write laws alone, which removes Congress from the process the framers designed",
+              "The filibuster violates the Origination Clause, since every filibustered bill starts in the Senate",
+              "Article I forbids each chamber from setting its own rules, so any filibuster is unconstitutional"
             ],
             correctAnswer: 0,
-            explanation: 'Reconciliation undermines framers\' design (strongest argument): framers designed Congress for BROAD COALITIONS — bicameralism, presentment, Senate longer terms + equal-state representation, committee specialization slow legislation + require accommodation. Senate filibuster (informal 19th c, Rule 22 1917, 60 votes 1975) reinforced supermajority. Reconciliation (Budget Act 1974) allows budget-related at 51 → circumvents supermajority protection against narrow factions. Modern use for sweeping economics (Bush 2001/2003, ACA 2010, Trump 2017, ARPA 2021, IRA 2022) → bare majority + presidency enacts transformative policy without minority participation → inadvertent rewriting of Senate\'s structural role.'
+            explanation: 'Strongest DOES-undermine argument: the Constitution spells out the few actions that need supermajorities (veto override, treaties, impeachment conviction, amendments); ordinary lawmaking was meant to need simple majorities in each chamber. A filibuster (EK 2.2.A.3.ii) that only CLOTURE can end lets a minority of 41 senators block bills, contributing to GRIDLOCK in polarized times (EK 2.3.A.1). The President does not write laws, filibusters have nothing to do with the Origination Clause, and Article I § 5 lets each chamber set its own rules.'
           },
           {
-            question: "What is the strongest counter-argument that reconciliation does NOT undermine the framers' design?",
+            question: "What is the strongest counter-argument that the filibuster does NOT undermine the framers' design?",
             options: [
-              "The filibuster is not in the Constitution, which lets each chamber set its rules, so majority rule by reconciliation fits the design",
-              "The framers wrote reconciliation into Article I, so using it simply follows the budget procedure they spelled out in the original Constitution",
-              "Reconciliation needs two-thirds of the Senate, so it requires even broader coalitions than ordinary bills that face a filibuster on the floor",
-              "The Supreme Court has upheld reconciliation, which means it cannot conflict with the framers' design, whatever its effect on how Congress works"
+              "The framers built the Senate to slow hasty majorities, and a rule demanding broad support fits that design",
+              "Article I itself creates the filibuster, so using it simply follows the procedure the framers spelled out in the original Constitution",
+              "The filibuster requires two-thirds of the House to end debate, so it protects the people's chamber from the more aristocratic Senate",
+              "The Supreme Court has ordered the Senate to keep the filibuster, which means it cannot conflict with the framers' design in any way"
             ],
             correctAnswer: 0,
-            explanation: 'Counter (reconciliation NOT undermining framers): framers did NOT establish filibuster — informal 19th c, formalized 1917 (Rule 22). Reconciliation can\'t undermine design that didn\'t include filibuster. (1) Art I § 5 cl 2 ("Each House may determine the Rules of its Proceedings") contemplates simple-majority. (2) Supermajorities LISTED (treaties 2/3, impeachment 2/3, amendments 2/3, override 2/3) → absence for ordinary legislation suggests simple majority intended. (3) Reconciliation within rules-of-proceedings. (4) Byrd Rule preserves broader deliberation for non-budget. (5) New Deal + Great Society = simple-majority passage when one party had Senate supermajority — reconciliation = functional equivalent when filibuster exists.'
+            explanation: 'Strongest counter: the framers deliberately designed the Senate — six-year terms, equal state representation, smaller size — to cool popular passions and slow hasty majorities (Federalist 51\'s internal checks). Article I § 5 lets each chamber make its own rules, and a rule that forces broader coalitions fits that deliberative purpose. The filibuster is a Senate rule, not part of Article I; it has nothing to do with the House; and no court has ordered it.'
           }
         ]
       }
@@ -109,16 +109,16 @@ export const govCongressPart6Data = {
       exercise: {
         questions: [
           {
-            prompt: "The 2010 Affordable Care Act passed via what procedural workaround after Senate Democrats lost their 60-vote majority in February 2010?",
-            answer: 'reconciliation',
-            acceptableAnswers: ['reconciliation', 'Reconciliation', 'budget reconciliation'],
-            hint: 'Used to amend the Senate-passed bill after the House passed it without further Senate amendments.'
+            prompt: "The Senate tactic of prolonging debate to delay or prevent a vote on a bill, used against the Civil Rights Act of 1964. One word.",
+            answer: 'filibuster',
+            acceptableAnswers: ['filibuster', 'Filibuster'],
+            hint: 'EK 2.2.A.3.ii.'
           },
           {
-            prompt: "The senator whose objections forced Democrats to scale back Build Back Better into the smaller IRA 2022 (West Virginia Democrat). Two words.",
-            answer: 'Joe Manchin',
-            acceptableAnswers: ['Joe Manchin', 'joe manchin', 'Manchin'],
-            hint: 'Centrist Democrat from coal-state West Virginia; left party in 2024.'
+            prompt: "The representation model in which a member votes based on his or her own knowledge and judgment rather than constituents' wishes. One word.",
+            answer: 'trustee',
+            acceptableAnswers: ['trustee', 'Trustee', 'trustee model'],
+            hint: 'EK 2.3.A.4 — contrast with delegate and politico.'
           },
           {
             prompt: "The Senate procedure that requires 60 votes to overcome unlimited debate. One word.",
@@ -169,7 +169,7 @@ export const govCongressPart6Data = {
               "Both parties agree on reform, but the President has vetoed every immigration bill passed since the 1990s"
             ],
             correctAnswer: 0,
-            explanation: 'Immigration gridlock 5-step: (1) CONSTITUTIONAL — Art I § 8 cl 4 clear authority. (2) POLITICAL — deep partisan division; both parties internally divided (Republicans business-pro vs. nativist; Democrats labor-restriction vs. civil-rights legalization). (3) PROCEDURAL — Senate filibuster needs 60; reconciliation unavailable (Byrd Rule); committee gatekeeping. (4) INSTITUTIONAL — Republican primary voters punish "amnesty" (Eric Cantor 2014 primary loss); swing-district Democrats vulnerable on enforcement. (5) HISTORICAL — 1986 Simpson-Mazzoli last comprehensive; Gang of Eight 2013 (68-32 Senate) died in House; Trump 2018, Biden 2021 USCA failed. Cross-cutting cleavages within both parties → broad coalition extremely difficult.'
+            explanation: 'Immigration gridlock 5-step: (1) CONSTITUTIONAL — Art I § 8 cl 4 clear authority. (2) POLITICAL — deep partisan division; both parties internally divided (Republicans business-pro vs. nativist; Democrats labor-restriction vs. civil-rights legalization). (3) PROCEDURAL — Senate filibuster needs 60 for cloture; committee gatekeeping. (4) INSTITUTIONAL — Republican primary voters punish "amnesty" (Eric Cantor 2014 primary loss); swing-district Democrats vulnerable on enforcement. (5) HISTORICAL — 1986 Simpson-Mazzoli last comprehensive; Gang of Eight 2013 (68-32 Senate) died in House; Trump 2018, Biden 2021 USCA failed. Cross-cutting cleavages within both parties → broad coalition extremely difficult.'
           },
           {
             question: "Which best illustrates the relationship between the Mayhew 'reelection imperative' and modern congressional behavior?",

@@ -112,7 +112,7 @@ export const govJudiciaryPart1Data = {
     {
       id: 'govjudic1-input',
       type: 'input-boxes' as const,
-      content: `**Sprint quiz — name the year**`,
+      content: `**Sprint quiz**`,
       exercise: {
         questions: [
           {
@@ -128,10 +128,10 @@ export const govJudiciaryPart1Data = {
             hint: 'Same year Constitution ratified by 9th state (NH).'
           },
           {
-            prompt: "Year of the Judiciary Act that created the lower federal courts (and Section 13 struck down in *Marbury*).",
-            answer: '1789',
-            acceptableAnswers: ['1789'],
-            hint: 'Same year Washington inaugurated; First Congress.'
+            prompt: "Latin term for the legal doctrine under which courts follow precedent when deciding cases with similar facts.",
+            answer: 'stare decisis',
+            acceptableAnswers: ['stare decisis', 'Stare Decisis', 'stare-decisis'],
+            hint: "EK 2.9.A.1 — 'let the decision stand.'"
           }
         ]
       }
@@ -139,11 +139,11 @@ export const govJudiciaryPart1Data = {
     {
       id: 'govjudic1-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Match each judicial philosophy to its core principle.**`,
+      content: `**Match each judicial approach to its core principle.**`,
       exercise: {
         dropdowns: [
           {
-            label: "Constitution should be interpreted according to ORIGINAL PUBLIC MEANING at time of ratification: ___",
+            label: "Judicial review lets courts OVERTURN precedent or INVALIDATE legislative and executive acts: ___",
             options: ['Originalism', 'Living Constitution', 'Judicial Activism', 'Stare Decisis']
           },
           {
@@ -151,14 +151,14 @@ export const govJudiciaryPart1Data = {
             options: ['Judicial Activism', 'Judicial Restraint', 'Living Constitution', 'Originalism']
           },
           {
-            label: "Constitution should EVOLVE with contemporary values + circumstances: ___",
+            label: "Courts FOLLOW legal precedents when deciding cases with similar facts: ___",
             options: ['Originalism', 'Textualism', 'Living Constitution', 'Stare Decisis']
           }
         ],
-        correctAnswers: ['Originalism', 'Judicial Restraint', 'Living Constitution'],
-        hint1: 'Originalism (Scalia, Thomas, Alito, Gorsuch, Barrett) = ORIGINAL PUBLIC MEANING at ratification.',
+        correctAnswers: ['Judicial Activism', 'Judicial Restraint', 'Stare Decisis'],
+        hint1: 'Judicial Activism (EK 2.11.A.1.i) = courts may overturn precedent or strike down acts of other branches.',
         hint2: 'Judicial Restraint (Frankfurter, Bickel) = DEFER to elected branches; presume statutes constitutional.',
-        hint3: 'Living Constitution (Brennan, Marshall) = Constitution EVOLVES with contemporary values.'
+        hint3: 'Stare Decisis (EK 2.9.A.1) = "let the decision stand" — follow precedent.'
       }
     },
     {

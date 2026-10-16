@@ -14,12 +14,12 @@ export const govVotingElectionsPart7Data = {
 | Section |
 |---|
 | High-yield concepts (suffrage amendments + VRA + turnout patterns + voting models + Electoral College + campaign finance + gerrymandering + realignment) |
-| AP foundational documents table (Declaration + Articles + Constitution + Federalist 10/49/51/52/57/68/70/71/78 + Brutus 1 + MLK Letter from Birmingham Jail + Bill of Rights) |
-| Required SCOTUS cases (Marbury + McCulloch + Brown + Engel + Tinker + NYT v US + Roe + Shaw v Reno + Lopez + Sullivan + Citizens United + Heller + Obergefell + Dobbs + Baker v Carr + Reynolds v Sims + Buckley + Shelby + Rucho + Allen v Milligan + McCutcheon + Bush v Gore + Crawford + Husted + Chiafalo) |
+| AP foundational documents table (the 13 required documents) |
+| Required SCOTUS cases (the 14) + other election cases (not required) |
 | SCAR template (State Claim + Arrange evidence + Reasoning + Counterarguments) for FRQ writing |
 | Sprint terms (50+ key vocab + concepts + dates + people for rapid review) |
 
-> 🔑 Key idea: AP REVIEW for Voting & Elections — HIGH-YIELD CONCEPTS — (1) SUFFRAGE AMENDMENTS (15th 1870 race + 19th 1920 women + 23rd 1961 DC + 24th 1964 poll tax + 26th 1971 age 18); (2) VOTING RIGHTS ACT 1965 + reauthorizations 1970/75/82/2006 + Section 2 + Section 5 preclearance + Section 4(b) coverage formula + Shelby County 2013 gutting + Allen v. Milligan 2023 preserving Section 2; (3) VOTER TURNOUT PATTERNS — ~60-67% pres + 40% midterm + 25% local + by age (younger lower) + education (more education higher) + income (higher higher) + race (White > Black > Hispanic = Asian) + gender (women slightly higher); (4) VOTING MODELS — Rational (Downs 1957) + Sociological (Columbia school Lazarsfeld 1944 The People's Choice) + Psychological (Michigan school 1960 The American Voter Campbell + Converse + Miller + Stokes); (5) ELECTORAL COLLEGE — 538 EV (435 House + 100 Senate + 3 DC) + 270 to win + winner-take-all 48 states + Maine + Nebraska district + 5 popular vote losses (1824 + 1876 + 1888 + 2000 + 2016) + 2024 Trump won popular too; Chiafalo v. Washington 2020 unanimous upheld faithless elector laws; (6) CAMPAIGN FINANCE — FECA 1971 + Buckley v. Valeo 1976 + BCRA 2002 + Citizens United v. FEC 2010 + SpeechNow v. FEC 2010 + McCutcheon v. FEC 2014; ~\\$15B 2024 + Musk ~\\$300M+ to Trump; (7) GERRYMANDERING — Elbridge Gerry 1812 + packing/cracking + Shaw v. Reno 1993 + Rucho v. Common Cause 2019 partisan non-justiciable + Allen v. Milligan 2023 racial preserved + Moore v. Harper 2023 ISL theory rejected; (8) REALIGNMENT — V.O. Key 1955 + Burnham 1970 + Mayhew 2002 critique + Levendusky 2009 sorting + Wattenberg 1996 dealignment; major realignments 1800/1828/1860/1896/1932/1968/2024?; (9) 2024 ELECTION — Trump won EC 312-226 + popular +1.5%; Harris underperformed Biden 2020; ~27 pt young men shift; Latino 46% Trump; Black men 22%; Asian 46%; manosphere podcast circuit central. AP FOUNDATIONAL DOCUMENTS — Declaration + Articles + Constitution (incl. Bill of Rights) + Federalist 10/39/51/70/78 + Brutus 1 + MLK Letter from Birmingham Jail (+ new for 2026-27: Emancipation Proclamation, Gettysburg Address, Wealth of Nations principles); Federalist 49/52/57/68/71 are useful but not required. REQUIRED SCOTUS CASES (15 from College Board) + voting-specific (Baker + Reynolds + Shaw + Buckley + Citizens United + Shelby + Rucho + Allen + McCutcheon + Bush v. Gore + Crawford + Husted + Chiafalo). SCAR TEMPLATE (State + Claim + Arrange + Reasoning + Counterarguments). SPRINT TERMS for rapid review.
+> 🔑 Key idea: AP REVIEW for Voting & Elections — HIGH-YIELD CONCEPTS — (1) SUFFRAGE AMENDMENTS (15th 1870 race + 19th 1920 women + 23rd 1961 DC + 24th 1964 poll tax + 26th 1971 age 18); (2) VOTING RIGHTS ACT 1965 + reauthorizations 1970/75/82/2006 + Section 2 + Section 5 preclearance + Section 4(b) coverage formula; (3) VOTER TURNOUT PATTERNS — ~60-67% pres + 40% midterm + 25% local + by age (younger lower) + education (more education higher) + income (higher higher) + race (White > Black > Hispanic = Asian) + gender (women slightly higher); (4) VOTING MODELS (EK 5.1.B.1) — rational choice + retrospective + prospective + straight-ticket; (5) ELECTORAL COLLEGE — 538 EV (435 House + 100 Senate + 3 DC) + 270 to win + winner-take-all 48 states + Maine + Nebraska district + 5 popular vote losses (1824 + 1876 + 1888 + 2000 + 2016) + 2024 Trump won popular too; (6) CAMPAIGN FINANCE — FECA 1971 + Buckley v. Valeo 1976 + BCRA 2002 + Citizens United v. FEC 2010 + SpeechNow v. FEC 2010 + McCutcheon v. FEC 2014; ~\\$16B 2024 + Musk ~\\$290M to Trump; (7) GERRYMANDERING — Elbridge Gerry 1812 + packing/cracking + Shaw v. Reno 1993 + Rucho v. Common Cause 2019 partisan non-justiciable; (8) REALIGNMENT — V.O. Key 1955 + Burnham 1970 + Mayhew 2002 critique + Levendusky 2009 sorting + Wattenberg 1996 dealignment; major realignments 1800/1828/1860/1896/1932/1968/2024?; (9) 2024 ELECTION — Trump won EC 312-226 + popular +1.5%; Harris underperformed Biden 2020; sharp young-men shift; Latino 46% Trump; Black men 21%; Asian ~40%; manosphere podcast circuit central. AP FOUNDATIONAL DOCUMENTS — Declaration + Articles + Constitution (incl. Bill of Rights) + Federalist 10/39/51/70/78 + Brutus 1 + MLK Letter from Birmingham Jail (+ new for 2026-27: Emancipation Proclamation, Gettysburg Address, Wealth of Nations principles); Federalist 49/52/57/68/71 are useful but not required. REQUIRED SCOTUS CASES (14 from College Board; Baker v. Carr + Shaw v. Reno + Citizens United are the election ones) + other election cases, not required (Reynolds + Buckley + Rucho + McCutcheon). SCAR TEMPLATE (State + Claim + Arrange + Reasoning + Counterarguments). SPRINT TERMS for rapid review.
       `
     },
     {
@@ -46,14 +46,13 @@ export const govVotingElectionsPart7Data = {
 - **SECTION 4(b)** — coverage formula identifying covered jurisdictions
 - **REAUTHORIZED** 1970 + 1975 + 1982 (Reagan; results test) + 2006 (Bush 25 years)
 - **IMPACT** — Black voter registration in MS rose 6.7% (1964) → 59.8% (1967); transformed Southern politics
-- **SHELBY COUNTY v. HOLDER (2013)** — 5-4 Roberts struck Section 4(b) coverage formula; Section 5 preclearance unusable; restrictions followed (TX voter ID + NC sweeping 2013 + GA SB 202 2021)
-- **ALLEN v. MILLIGAN (2023)** — 5-4 Roberts + Kavanaugh preserved Section 2; ordered Alabama draw second Black-majority district
+- **STATE VOTING LAWS** — voter ID, registration rules, polling hours and early/mail voting still vary by state (EK 5.2.A.2)
 
 ### Voter Turnout Patterns
 
 | Election Type | Typical Turnout |
 |---|---|
-| **Presidential** | ~60-67% (62% 2016; 67% 2020; 64% 2024) |
+| **Presidential** | ~60-67% (~60% 2016; ~67% 2020; ~64% 2024, VEP) |
 | **Midterm** | ~40-50% (50% 2018; 47% 2022) |
 | **Local** | ~15-25% |
 | **Off-year** | ~5-15% |
@@ -85,8 +84,7 @@ export const govVotingElectionsPart7Data = {
 - **DISTRICT METHOD** in Maine + Nebraska (2 statewide + 1 per congressional district)
 - **5 POPULAR VOTE LOSSES** — 1824 Adams + 1876 Hayes + 1888 Harrison + 2000 Bush + 2016 Trump
 - **2024** — Trump won popular vote +1.5% AND EC 312-226 (no mismatch)
-- **CHIAFALO v. WASHINGTON (2020)** — UNANIMOUS upheld state laws penalizing faithless electors
-- **ECRA 2022** — Electoral Count Reform Act after Jan 6; clarified VP role + raised objection threshold
+- **FAITHLESS ELECTORS** — states may require electors to vote for the state's popular-vote winner
 
 ### Campaign Finance
 
@@ -100,8 +98,8 @@ export const govVotingElectionsPart7Data = {
 | **SpeechNow v. FEC 2010** | DC Circuit | Created Super PACs |
 | **McCutcheon v. FEC 2014** | Roberts | Struck aggregate individual limits |
 
-- **2024 SPENDING** — ~\\$15B total cycle; Harris ~\\$1.5B; Trump ~\\$1.2B; Super PACs \\$2B+ each; MUSK ~\\$300M+ to Trump groups
-- **0.01% OF DONORS** give 70%+ of all political money
+- **2024 SPENDING** — ~\\$16B total cycle; Harris ~\\$1.5B; Trump ~\\$1.2B; Super PACs \\$2B+; MUSK ~\\$290M to Trump groups
+- **0.01% OF DONORS** give ~25-40% of disclosed political money
 - **DARK MONEY** via 501(c)(4)s
 
 ### Gerrymandering
@@ -111,8 +109,6 @@ export const govVotingElectionsPart7Data = {
 - **CRACKING** — splitting opposition voters across multiple districts
 - **SHAW v. RENO (1993)** — race CANNOT be PREDOMINANT redistricting factor
 - **RUCHO v. COMMON CAUSE (2019)** — partisan gerrymandering NON-JUSTICIABLE in federal court
-- **ALLEN v. MILLIGAN (2023)** — racial gerrymandering claims preserved under Section 2 VRA
-- **MOORE v. HARPER (2023)** — REJECTED Independent State Legislature theory; state courts CAN review state legislatures' federal election rules
 
 ### Realignment Theory
 
@@ -142,75 +138,65 @@ export const govVotingElectionsPart7Data = {
 - **FIRST NON-CONSECUTIVE TERMS** since Cleveland 1892
 - **HARRIS UNDERPERFORMED BIDEN 2020** in nearly every demographic
 - **~27 PT YOUNG MEN SHIFT** toward Trump 2020-2024
-- **LATINO 46% TRUMP** historic high; Latino men 55%
-- **BLACK MEN 22% TRUMP** highest since 1960
+- **LATINO 46% TRUMP** historic high; Latino men 54%
+- **BLACK MEN 21% TRUMP** (exit poll)
 - **ASIAN 46%** Trump
-- **DIPLOMA DIVIDE** expanded; White college Harris 56-42; non-college Trump 67-32
-- **GENDER GAP** narrowed slightly (women +13 Harris; men +12 Trump)
-- **MUSK ~\\$300M+** to Trump groups (America PAC + Future Coalition)
+- **DIPLOMA DIVIDE** expanded; White college Harris 53-45; non-college Trump 66-32
+- **GENDER GAP** narrowed slightly (women +8 Harris; men +12 Trump)
+- **MUSK ~\\$290M** to Trump groups (America PAC + Future Coalition)
 - **MANOSPHERE PODCAST CIRCUIT** central to Trump strategy
 
-## AP Foundational Documents Table
+## AP Foundational Documents Table (the 13 required)
 
 | Document | Year | Author | Key Voting/Elections Connection |
 |---|---|---|---|
 | **Declaration of Independence** | 1776 | Jefferson | Consent of governed; right to alter/abolish |
+| **The Wealth of Nations** (core principles) | 1776 | Adam Smith | Free enterprise — a core value that shapes economic issue voting (EK 4.1.A.1) |
 | **Articles of Confederation** | 1781 | Continental Congress | Weak central; states equal; informed federalism design |
-| **Constitution** | 1787 | Convention | Articles I + II election structures + amendments |
+| **Constitution** (incl. Bill of Rights + amendments) | 1787 | Convention | Articles I + II election structures; 1st Am speech + assembly + petition; suffrage amendments |
 | **Federalist 10** | 1787 | Madison | Extended republic + factions + representation refining |
-| **Federalist 49** | 1788 | Madison | Constitutional change difficulty; reverence for stability |
-| **Federalist 51** | 1788 | Madison | Separation of powers + checks + balances |
-| **Federalist 52** | 1788 | Madison | House design — close to people + 2-year terms |
-| **Federalist 57** | 1788 | Madison | House popular branch; election checks tyranny |
-| **Federalist 68** | 1788 | Hamilton | Electoral College defense |
-| **Federalist 70** | 1788 | Hamilton | Energetic executive; unitary president |
-| **Federalist 71** | 1788 | Hamilton | Senate insulation; people not always reason right |
-| **Federalist 78** | 1788 | Hamilton | Judicial independence; counter-majoritarian |
 | **Brutus 1** | 1787 | Yates? | Anti-Federalist; extended republic dangerous |
-| **Bill of Rights** | 1791 | Madison | 1st Am speech + assembly + petition (campaign + voting) |
+| **Federalist 39** | 1788 | Madison | Mixed national + federal features — e.g., House chosen by the people, Senate originally by state legislatures |
+| **Federalist 51** | 1788 | Madison | Separation of powers + checks + balances |
+| **Federalist 70** | 1788 | Hamilton | Energetic executive; unitary president |
+| **Federalist 78** | 1788 | Hamilton | Judicial independence; counter-majoritarian |
+| **Emancipation Proclamation** | 1863 | Lincoln | Step toward the 13th–15th Amendments and Black citizenship and suffrage |
+| **Gettysburg Address** | 1863 | Lincoln | "Government of the people, by the people, for the people" — popular sovereignty |
 | **MLK Letter from Birmingham Jail** | 1963 | King | Civil disobedience for civil + voting rights |
 
-## Required SCOTUS Cases (15 College Board + Voting-Specific)
+Federalist Nos. 49, 52, 57, 68 and 71 are useful background (68 defends the Electoral College) but are NOT on the required list.
 
-### 15 Required Cases (College Board)
+## Required SCOTUS Cases (14 College Board) + Other Election Cases
+
+### 14 Required Cases (College Board)
 
 | Case | Year | Topic |
 |---|---|---|
 | **Marbury v. Madison** | 1803 | Judicial review |
 | **McCulloch v. Maryland** | 1819 | National supremacy + necessary + proper |
+| **Schenck v. US** | 1919 | Free speech + clear and present danger |
 | **Brown v. Board** | 1954 | Equal protection + desegregation |
+| **Baker v. Carr** | 1962 | Justiciability of redistricting; "one person one vote" framework |
 | **Engel v. Vitale** | 1962 | Establishment clause + school prayer |
+| **Gideon v. Wainwright** | 1963 | Right to counsel in state felony trials |
 | **Tinker v. Des Moines** | 1969 | Free speech + students |
 | **NYT v. US** | 1971 | Free press + prior restraint |
-| **Roe v. Wade** | 1973 | Privacy + abortion (overruled by Dobbs 2022) |
+| **Wisconsin v. Yoder** | 1972 | Free exercise + compulsory schooling |
 | **Shaw v. Reno** | 1993 | Racial gerrymandering |
 | **US v. Lopez** | 1995 | Commerce Clause limits |
-| **NYT v. Sullivan** | 1964 | Free press + actual malice |
-| **Citizens United v. FEC** | 2010 | Campaign finance + corporate speech |
-| **DC v. Heller** | 2008 | 2nd Amendment individual right |
-| **Obergefell v. Hodges** | 2015 | Same-sex marriage |
 | **McDonald v. Chicago** | 2010 | 2nd Amendment incorporation |
-| **Schenck v. US** | 1919 | Free speech + clear and present danger |
+| **Citizens United v. FEC** | 2010 | Campaign finance + corporate speech |
 
-### Additional Voting-Specific Cases
+### Other Election Cases (not required)
 
 | Case | Year | Topic |
 |---|---|---|
-| **Baker v. Carr** | 1962 | Justiciability of redistricting; "one person one vote" framework |
 | **Reynolds v. Sims** | 1964 | "One person one vote" applied to state legislatures |
 | **Buckley v. Valeo** | 1976 | Campaign finance; "money = speech"; struck spending limits |
-| **Bush v. Gore** | 2000 | 2000 Florida recount; Equal Protection violation |
 | **McConnell v. FEC** | 2003 | Upheld most BCRA provisions |
-| **Crawford v. Marion County** | 2008 | Upheld Indiana voter ID law |
-| **Citizens United v. FEC** | 2010 | Corporate independent expenditures |
 | **SpeechNow v. FEC** | 2010 (DC Cir) | Created Super PACs |
-| **Shelby County v. Holder** | 2013 | Struck VRA Section 4(b) coverage formula |
 | **McCutcheon v. FEC** | 2014 | Struck aggregate individual contribution limits |
-| **Husted v. APRI** | 2018 | Upheld OH voter purge process |
-| **Rucho v. Common Cause** | 2019 | Partisan gerrymandering non-justiciable |
-| **Chiafalo v. Washington** | 2020 | Upheld faithless elector laws |
-| **Allen v. Milligan** | 2023 | Preserved VRA Section 2; ordered AL second Black district |
-| **Moore v. Harper** | 2023 | Rejected Independent State Legislature theory |
+| **Rucho v. Common Cause** | 2019 | Partisan gerrymandering non-justiciable in federal court |
 
 ## SCAR Template for FRQ Writing
 
@@ -233,33 +219,33 @@ Use SCAR for ALL FRQs (Free Response Questions):
 
 **A** — Federal preclearance prevented states from implementing new discriminatory laws + literacy tests/poll taxes (24th Am 1964) + grandfather clauses (Guinn 1915) + white primaries (Smith v. Allwright 1944) had previously blocked Black voting; impact: Black voter registration in MS rose 6.7% (1964) → 59.8% (1967); transformed Southern politics + created majority-minority districts.
 
-**R** — However, Shelby County v. Holder 2013 gutted Section 4(b) coverage formula; subsequent voter restrictions implemented in TX + NC + GA + others; Allen v. Milligan 2023 preserved Section 2; ongoing debate over whether VRA effective enough or new federal protections needed (John Lewis Voting Rights Advancement Act + Freedom to Vote Act); represents BOTH continuity (15th + 14th Amendments + VRA Section 2 still apply) AND change (preclearance regime gone; states more flexibility) in voting rights trajectory.
+**R** — However, states still control many election rules (voter ID, registration, polling hours, early and mail voting), so debates continue over whether those rules are reasonable safeguards or structural barriers that lower turnout (EK 5.2.A.1–2); represents BOTH continuity (15th + 14th Amendments + VRA still apply) AND change (federal enforcement transformed Southern participation).
 
 ## Sprint Terms for Rapid Review
 
 **Suffrage**: 15th Am 1870; 19th Am 1920; 23rd Am 1961; 24th Am 1964; 26th Am 1971; Seneca Falls 1848; NAWSA Catt; NWP Paul; Selma Bloody Sunday March 7 1965; LBJ "We Shall Overcome" March 15 1965
 
-**VRA + Voting Rights**: VRA 1965; Section 2 vote dilution; Section 5 preclearance; Section 4(b) coverage formula; reauthorizations 1970/75/82/2006; Smith v. Allwright 1944; Guinn v. US 1915; Shelby County 2013; Allen v. Milligan 2023; Crawford v. Marion County 2008; Husted v. APRI 2018; Motor Voter Act 1993; HAVA 2002
+**VRA + Voting Rights**: VRA 1965; Section 2 vote dilution; Section 5 preclearance; Section 4(b) coverage formula; reauthorizations 1970/75/82/2006; Smith v. Allwright 1944; Guinn v. US 1915; state voter ID + registration laws; Motor Voter Act 1993; HAVA 2002
 
-**Voting Models**: Anthony Downs 1957 An Economic Theory of Democracy; Lazarsfeld Columbia school 1944 The People's Choice; Campbell + Converse + Miller + Stokes Michigan school 1960 The American Voter; V.O. Key 1966 retrospective; Morris Fiorina 1981 retrospective
+**Voting Models** (EK 5.1.B.1): rational choice; retrospective; prospective; straight-ticket
 
-**Electoral College**: 538 EV; 270 to win; winner-take-all; ME + NE district; 1824 Adams + 1876 Hayes + 1888 Harrison + 2000 Bush + 2016 Trump popular losses; Chiafalo v. Washington 2020 unanimous; ECRA 2022; Federalist 68 Hamilton
+**Electoral College**: 538 EV; 270 to win; winner-take-all; ME + NE district; 1824 Adams + 1876 Hayes + 1888 Harrison + 2000 Bush + 2016 Trump popular losses; faithless electors
 
-**Campaign Finance**: Tillman 1907; FECA 1971 + 1974; Buckley v. Valeo 1976 "money = speech"; BCRA 2002 McCain-Feingold; McConnell v. FEC 2003; Wisconsin Right to Life 2007; Citizens United v. FEC 2010 5-4 Kennedy; SpeechNow v. FEC 2010 Super PACs; McCutcheon v. FEC 2014 aggregate limits; 501(c)(4) dark money; Crossroads GPS; Heritage Action; ~\\$15B 2024; Musk ~\\$300M+ to Trump
+**Campaign Finance**: Tillman 1907; FECA 1971 + 1974; Buckley v. Valeo 1976 "money = speech"; BCRA 2002 McCain-Feingold; McConnell v. FEC 2003; Wisconsin Right to Life 2007; Citizens United v. FEC 2010 5-4 Kennedy; SpeechNow v. FEC 2010 Super PACs; McCutcheon v. FEC 2014 aggregate limits; 501(c)(4) dark money; Crossroads GPS; Heritage Action; ~\\$16B 2024; Musk ~\\$290M to Trump
 
-**Gerrymandering**: Elbridge Gerry 1812; packing; cracking; Shaw v. Reno 1993; Rucho v. Common Cause 2019 partisan non-justiciable; Allen v. Milligan 2023 racial preserved; Moore v. Harper 2023 ISL rejected; Baker v. Carr 1962; Reynolds v. Sims 1964
+**Gerrymandering**: Elbridge Gerry 1812; packing; cracking; Shaw v. Reno 1993; Rucho v. Common Cause 2019 partisan non-justiciable; Baker v. Carr 1962; Reynolds v. Sims 1964
 
 **Realignment**: V.O. Key 1955 critical elections; Walter Dean Burnham 1970; David Mayhew 2002 critique; Matthew Levendusky 2009 sorting; Martin Wattenberg 1996 dealignment; 1800 Jefferson; 1828 Jackson; 1860 Lincoln; 1896 McKinley; 1932 FDR New Deal; 1968 Nixon; 2024 Trump?
 
-**2024 Election**: Trump EC 312-226 + popular +1.5%; Biden withdrawal July 21; Trump assassination July 13 Butler PA; second attempt Sept 15 West Palm Beach; Harris/Walz Aug 6; Sept 10 debate; first felon (34 NY counts May 2024); oldest 78; first non-consecutive since Cleveland 1892; ~27 pt young men shift; Latino 46% Trump; Black men 22%; Asian 46%; manosphere podcast circuit Joe Rogan + Theo Von + Andrew Schulz + Lex Fridman + Shawn Ryan + Adin Ross + Nelk Boys + Bet-David + Carlson + Logan Paul
+**2024 Election**: Trump EC 312-226 + popular +1.5%; Biden withdrawal July 21; Trump assassination July 13 Butler PA; second attempt Sept 15 West Palm Beach; Harris/Walz Aug 6; Sept 10 debate; first felon (34 NY counts May 2024); oldest 78; first non-consecutive since Cleveland 1892; sharp young-men shift; Latino 46% Trump; Black men 21%; Asian ~40%; manosphere podcast circuit Joe Rogan + Theo Von + Andrew Schulz + Lex Fridman + Shawn Ryan + Adin Ross + Nelk Boys + Bet-David + Carlson + Logan Paul
 
 **Polarization**: 1960 ~75% party loyalty → 2024 ~95%; ticket-splitting RARE; nationalization; negative partisanship Abramowitz; Levendusky 2009 sorting; Mason 2018 Uncivil Agreement; Hacker + Pierson asymmetric polarization; Mann + Ornstein It's Even Worse Than It Looks 2012 + 2016
 
 **Historical Cases**: Smith v. Allwright 1944 white primaries; Guinn v. US 1915 grandfather clauses; Harper v. Virginia BoE 1966 state poll taxes; Oregon v. Mitchell 1970 voting age federal/state
 
-**Foundational Documents**: Federalist 10 Madison extended republic; Federalist 52 + 57 Madison House design; Federalist 68 Hamilton EC defense; Federalist 70 Hamilton energetic executive; Federalist 71 Hamilton Senate insulation; Federalist 78 Hamilton judicial independence; Brutus 1 Anti-Federalist; MLK Letter from Birmingham Jail 1963
+**Foundational Documents** (required): Federalist 10 Madison extended republic; Federalist 39 Madison national + federal; Federalist 51 Madison checks; Federalist 70 Hamilton energetic executive; Federalist 78 Hamilton judicial independence; Brutus 1 Anti-Federalist; Gettysburg Address; MLK Letter from Birmingham Jail 1963
 
-> 🔑 Key takeaway: AP REVIEW for VOTING & ELECTIONS — HIGH-YIELD CONCEPTS — (1) SUFFRAGE AMENDMENTS (15th 1870 + 19th 1920 + 23rd 1961 + 24th 1964 + 26th 1971); (2) VRA 1965 + reauthorizations 1970/75/82/2006 + Section 2 + Section 5 preclearance + Section 4(b) coverage formula + Shelby County 2013 + Allen v. Milligan 2023; (3) VOTER TURNOUT — pres ~60-67% + midterm ~40-50% + local ~15-25% + by age/education/income/race/gender; (4) VOTING MODELS — Rational Downs 1957 + Sociological Lazarsfeld Columbia 1944 + Psychological Michigan 1960 Campbell+Converse+Miller+Stokes + Retrospective V.O. Key 1966 + Fiorina 1981; (5) ELECTORAL COLLEGE — 538 EV + 270 to win + winner-take-all + 5 popular vote losses (1824/1876/1888/2000/2016) + Chiafalo v. Washington 2020 + ECRA 2022; (6) CAMPAIGN FINANCE — Tillman 1907 + FECA 1971 + Buckley v. Valeo 1976 + BCRA 2002 + Citizens United 2010 + SpeechNow 2010 + McCutcheon 2014 + ~\\$15B 2024 + Musk ~\\$300M+; (7) GERRYMANDERING — Elbridge Gerry 1812 + packing/cracking + Shaw v. Reno 1993 + Rucho v. Common Cause 2019 + Allen v. Milligan 2023 + Moore v. Harper 2023; (8) REALIGNMENT — V.O. Key 1955 + Burnham 1970 + Mayhew 2002 critique + Levendusky 2009 sorting + Wattenberg 1996 dealignment + 1800/1828/1860/1896/1932/1968/2024?; (9) 2024 ELECTION — Trump EC 312-226 + popular +1.5% + first felon + oldest + first non-consecutive since Cleveland 1892 + ~27 pt young men shift + Latino 46% Trump + Black men 22% + Asian 46% + manosphere podcast circuit. AP FOUNDATIONAL DOCUMENTS — Declaration + Articles + Constitution (incl. Bill of Rights) + Federalist 10/39/51/70/78 + Brutus 1 + MLK Letter from Birmingham Jail (+ new for 2026-27: Emancipation Proclamation, Gettysburg Address, Wealth of Nations principles); Federalist 49/52/57/68/71 are useful but not required. REQUIRED SCOTUS CASES (15 College Board) + voting-specific (Baker + Reynolds + Shaw + Buckley + Citizens United + Shelby + Rucho + Allen + McCutcheon + Bush v. Gore + Crawford + Husted + Chiafalo + Moore v. Harper). SCAR TEMPLATE (State + Cite + Analyze/Apply + Reasoning/Response/Counterarguments).
+> 🔑 Key takeaway: AP REVIEW for VOTING & ELECTIONS — HIGH-YIELD CONCEPTS — (1) SUFFRAGE AMENDMENTS (15th 1870 + 19th 1920 + 23rd 1961 + 24th 1964 + 26th 1971); (2) VRA 1965 + reauthorizations 1970/75/82/2006 + Section 2 + Section 5 preclearance + Section 4(b) coverage formula; (3) VOTER TURNOUT — pres ~60-67% + midterm ~40-50% + local ~15-25% + by age/education/income/race/gender; (4) VOTING MODELS (EK 5.1.B.1) — rational choice + retrospective + prospective + straight-ticket; (5) ELECTORAL COLLEGE — 538 EV + 270 to win + winner-take-all + 5 popular vote losses (1824/1876/1888/2000/2016); (6) CAMPAIGN FINANCE — Tillman 1907 + FECA 1971 + Buckley v. Valeo 1976 + BCRA 2002 + Citizens United 2010 + SpeechNow 2010 + McCutcheon 2014 + ~\\$16B 2024 + Musk ~\\$290M; (7) GERRYMANDERING — Elbridge Gerry 1812 + packing/cracking + Shaw v. Reno 1993 + Rucho v. Common Cause 2019; (8) REALIGNMENT — V.O. Key 1955 + Burnham 1970 + Mayhew 2002 critique + Levendusky 2009 sorting + Wattenberg 1996 dealignment + 1800/1828/1860/1896/1932/1968/2024?; (9) 2024 ELECTION — Trump EC 312-226 + popular +1.5% + first felon + oldest + first non-consecutive since Cleveland 1892 + sharp young-men shift + Latino 46% Trump + Black men 21% + Asian ~40% + manosphere podcast circuit. AP FOUNDATIONAL DOCUMENTS — Declaration + Articles + Constitution (incl. Bill of Rights) + Federalist 10/39/51/70/78 + Brutus 1 + MLK Letter from Birmingham Jail (+ new for 2026-27: Emancipation Proclamation, Gettysburg Address, Wealth of Nations principles); Federalist 49/52/57/68/71 are useful but not required. REQUIRED SCOTUS CASES (14 College Board; election-related: Baker + Shaw + Citizens United) + other election cases, not required (Reynolds + Buckley + Rucho + McCutcheon). SCAR TEMPLATE (State + Cite + Analyze/Apply + Reasoning/Response/Counterarguments).
       `
     },
     {
@@ -289,10 +275,10 @@ Use SCAR for ALL FRQs (Free Response Questions):
       exercise: {
         questions: [
           {
-            prompt: "5-4 ROBERTS DECISION (2013) struck VRA SECTION 4(b) coverage formula as UNCONSTITUTIONAL; Section 5 PRECLEARANCE became unusable.",
-            answer: 'Shelby County',
-            acceptableAnswers: ['Shelby County', 'Shelby County v. Holder', 'Shelby v. Holder', 'Shelby', 'shelby county', 'Shelby County 2013', 'SHELBY'],
-            hint: 'SHELBY COUNTY v. HOLDER (2013) — 5-4 ROBERTS MAJORITY (with Scalia + Kennedy + Thomas + Alito); struck down VRA Section 4(b) coverage formula as UNCONSTITUTIONAL; reasoning: formula based on "decades-old data" + "current burdens must be justified by current needs" + violates equal sovereignty principle; aftermath: Section 5 preclearance UNUSABLE without coverage formula; TX implemented voter ID law within HOURS; NC sweeping 2013; multiple states closed polling places; GA SB 202 2021; Congress hasn\'t passed new formula despite John Lewis Voting Rights Advancement Act + Freedom to Vote Act efforts.'
+            prompt: "Required case (1993) holding that a congressional district drawn so irregularly that only race can explain it may be challenged under the Equal Protection Clause.",
+            answer: 'Shaw v. Reno',
+            acceptableAnswers: ['Shaw v. Reno', 'Shaw v Reno', 'Shaw', 'shaw v. reno', 'shaw v reno'],
+            hint: 'North Carolina\'s 12th District after the 1990 census (EK 3.12.A.1.iv).'
           },
           {
             prompt: "FRAMEWORK for AP FRQ writing: S = STATE; C = ___; A = ANALYZE/APPLY; R = REASONING.",
@@ -301,10 +287,10 @@ Use SCAR for ALL FRQs (Free Response Questions):
             hint: 'SCAR template — S = STATE the claim (direct answer to question prompt); C = CITE evidence (specific data + cases + amendments + dates + people); A = ANALYZE/APPLY (connect evidence to claim; explain HOW + WHY); R = REASONING/RESPONSE (counterarguments + deeper analysis + future implications); use for ALL AP FRQs to ensure complete + organized responses; never just state claim without evidence; never just list evidence without analysis; never end without addressing counterarguments + deeper implications.'
           },
           {
-            prompt: "Year of MOORE v. HARPER decision REJECTING the INDEPENDENT STATE LEGISLATURE THEORY (state courts CAN review state legislatures' federal election rules).",
-            answer: '2023',
-            acceptableAnswers: ['2023'],
-            hint: 'MOORE v. HARPER (2023) — 6-3 ROBERTS MAJORITY (with Kavanaugh + Barrett + Sotomayor + Kagan + Jackson; Thomas + Alito + Gorsuch dissented); REJECTED the INDEPENDENT STATE LEGISLATURE (ISL) theory which would have given state legislatures unchecked authority over federal elections; state courts CAN review state legislatures\' federal election rules + state constitutions CAN constrain state legislative authority over federal elections; preserved federalist balance + checks on state legislative authority; same year as Allen v. Milligan 2023 (both surprised observers by limiting potential VRA + voting rights damage).'
+            prompt: "Year the 24th Amendment banned poll taxes in federal elections.",
+            answer: '1964',
+            acceptableAnswers: ['1964'],
+            hint: 'Same year as the Civil Rights Act; poll taxes were a structural barrier to voting (EK 5.1.A.1.v).'
           }
         ]
       }
@@ -312,26 +298,26 @@ Use SCAR for ALL FRQs (Free Response Questions):
     {
       id: 'govvotin7-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Match each VOTING-RELATED SCOTUS CASE to its KEY HOLDING.**`,
+      content: `**Match each REQUIRED voting-related SCOTUS case to its KEY HOLDING.**`,
       exercise: {
         dropdowns: [
           {
             label: "BAKER v. CARR (1962) — _______:",
-            options: ['Established justiciability of redistricting; "one person one vote" framework via Equal Protection Clause', 'Created Super PACs (DC Circuit); held individuals can give unlimited contributions to independent expenditure-only PACs', 'Struck VRA Section 4(b) coverage formula 5-4 Roberts; Section 5 preclearance unusable', 'Held partisan gerrymandering non-justiciable in federal court; political question', 'Unanimously upheld state laws penalizing faithless electors']
+            options: ['Established justiciability of redistricting; "one person one vote" framework via Equal Protection Clause', 'Held a district drawn only on the basis of race is subject to an equal protection challenge', 'Held political spending by corporations and unions is protected speech under the First Amendment', 'Created Super PACs (DC Circuit); held individuals can give unlimited contributions to independent expenditure-only PACs', 'Held partisan gerrymandering non-justiciable in federal court; political question']
           },
           {
-            label: "RUCHO v. COMMON CAUSE (2019) — _______:",
-            options: ['Established justiciability of redistricting; "one person one vote" framework via Equal Protection Clause', 'Created Super PACs (DC Circuit); held individuals can give unlimited contributions to independent expenditure-only PACs', 'Struck VRA Section 4(b) coverage formula 5-4 Roberts; Section 5 preclearance unusable', 'Held partisan gerrymandering non-justiciable in federal court; political question', 'Unanimously upheld state laws penalizing faithless electors']
+            label: "SHAW v. RENO (1993) — _______:",
+            options: ['Established justiciability of redistricting; "one person one vote" framework via Equal Protection Clause', 'Held a district drawn only on the basis of race is subject to an equal protection challenge', 'Held political spending by corporations and unions is protected speech under the First Amendment', 'Created Super PACs (DC Circuit); held individuals can give unlimited contributions to independent expenditure-only PACs', 'Held partisan gerrymandering non-justiciable in federal court; political question']
           },
           {
-            label: "CHIAFALO v. WASHINGTON (2020) — _______:",
-            options: ['Established justiciability of redistricting; "one person one vote" framework via Equal Protection Clause', 'Created Super PACs (DC Circuit); held individuals can give unlimited contributions to independent expenditure-only PACs', 'Struck VRA Section 4(b) coverage formula 5-4 Roberts; Section 5 preclearance unusable', 'Held partisan gerrymandering non-justiciable in federal court; political question', 'Unanimously upheld state laws penalizing faithless electors']
+            label: "CITIZENS UNITED v. FEC (2010) — _______:",
+            options: ['Established justiciability of redistricting; "one person one vote" framework via Equal Protection Clause', 'Held a district drawn only on the basis of race is subject to an equal protection challenge', 'Held political spending by corporations and unions is protected speech under the First Amendment', 'Created Super PACs (DC Circuit); held individuals can give unlimited contributions to independent expenditure-only PACs', 'Held partisan gerrymandering non-justiciable in federal court; political question']
           }
         ],
-        correctAnswers: ['Established justiciability of redistricting; "one person one vote" framework via Equal Protection Clause', 'Held partisan gerrymandering non-justiciable in federal court; political question', 'Unanimously upheld state laws penalizing faithless electors'],
-        hint1: 'BAKER v. CARR (1962) — 6-2 BRENNAN MAJORITY; established JUSTICIABILITY of redistricting (rejected "political question" doctrine for redistricting); landmark case enabling federal courts to address malapportionment; created framework for "one person, one vote" via Equal Protection Clause; followed by Reynolds v. Sims 1964 ("one person one vote" applied to state legislatures); transformed American politics by ensuring equal representation; ended era of severe rural overrepresentation in state legislatures.',
-        hint2: 'RUCHO v. COMMON CAUSE (2019) — 5-4 ROBERTS MAJORITY; held PARTISAN GERRYMANDERING claims NON-JUSTICIABLE in FEDERAL COURT (political question); reasoning: federal courts lack manageable standards for partisan gerrymandering; STATE COURTS may still adjudicate under state constitutions (PA Supreme Court struck PA congressional map 2018); contrast with racial gerrymandering still justiciable per Allen v. Milligan 2023; Section 2 VRA + Equal Protection Clause still apply.',
-        hint3: 'CHIAFALO v. WASHINGTON (2020) — UNANIMOUS KAGAN MAJORITY; UPHELD state laws PENALIZING FAITHLESS ELECTORS; held states may bind electors to vote for popular vote winner of state; reasoning: states have plenary authority under Article II to direct manner of choosing electors + Constitution doesn\'t require electors be FREE AGENTS; same day as Colorado Department of State v. Baca; preserved Electoral College integrity by allowing state enforcement; followed by ECRA 2022 reforms.'
+        correctAnswers: ['Established justiciability of redistricting; "one person one vote" framework via Equal Protection Clause', 'Held a district drawn only on the basis of race is subject to an equal protection challenge', 'Held political spending by corporations and unions is protected speech under the First Amendment'],
+        hint1: 'BAKER v. CARR (1962) — Tennessee had not redrawn districts since 1901; the Court held malapportionment claims are not political questions, leading to Reynolds v. Sims (1964) "one person, one vote" (EK 2.3.A.2).',
+        hint2: 'SHAW v. RENO (1993) — North Carolina\'s snake-like 12th District; race-based districting limited (EK 3.12.A.1.iv).',
+        hint3: 'CITIZENS UNITED v. FEC (2010) — 5-4 Kennedy; struck BCRA limits on corporate and union independent expenditures (EK 5.11.A.1.ii).'
       }
     },
     {
@@ -343,13 +329,13 @@ Use SCAR for ALL FRQs (Free Response Questions):
           {
             question: "An AP FRQ asks students to ANALYZE the ROLE of the SUPREME COURT in shaping VOTING RIGHTS through THREE SPECIFIC CASES. Apply the SCAR FRAMEWORK + connect to FOUNDATIONAL DOCUMENTS + provide HISTORICAL CONTEXT.",
             options: [
-              "Trace Baker v. Carr opening redistricting to courts, Shelby County ending preclearance and Allen v. Milligan preserving Section 2, tied to the 15th Amendment and Federalist 51.",
-              "Explain that Baker v. Carr closed redistricting to courts, Shelby County expanded preclearance and Allen v. Milligan struck Section 2, tied to the Articles of Confederation.",
+              "Trace Baker v. Carr opening redistricting to the courts, Shaw v. Reno allowing challenges to race-based districts and Citizens United protecting election spending, tied to the 14th and 1st Amendments.",
+              "Explain that Baker v. Carr closed redistricting to courts, Shaw v. Reno required race-based districts and Citizens United banned super PACs, tied to the Articles of Confederation.",
               "List Marbury, McCulloch and Gibbons as the three voting rights cases, and connect them to the 19th Amendment without explaining any of their holdings.",
               "Describe one case in depth, Bush v. Gore, and argue that the Supreme Court has never shaped voting rights apart from that single decision.",
             ],
             correctAnswer: 0,
-            explanation: 'SCAR FRAMEWORK on SCOTUS voting rights: STATE — SCOTUS played CRUCIAL but VARIABLE role across eras. CITE — (1) BAKER v. CARR (1962) — 6-2 Brennan; established justiciability of redistricting; followed by REYNOLDS v. SIMS (1964) — 8-1 Warren applying "one person one vote" to state legislatures; ended rural overrepresentation; (2) SHELBY COUNTY v. HOLDER (2013) — 5-4 Roberts struck VRA Section 4(b) coverage formula; "decades-old data" + "current burdens must be justified by current needs"; Ginsburg dissent ("throwing away your umbrella in a rainstorm"); aftermath: Section 5 unusable; TX voter ID hours later; NC sweeping; GA SB 202 2021; (3) ALLEN v. MILLIGAN (2023) — 5-4 Roberts + Kavanaugh + liberals SURPRISED observers; upheld VRA Section 2; ordered AL second Black-majority district; Gingles framework preserved. ANALYZE/APPLY — Baker ENABLED federal protection; Shelby RESTRICTED enforcement; Allen PRESERVED Section 2; pattern shows SCOTUS NOT consistent — depends on composition + doctrinal approach. REASONING — COUNTERARGUMENTS: defenders of Shelby cite outdated formula + state sovereignty + Allen demonstrates protection; critics argue Shelby neutered enforcement; FOUNDATIONAL DOCS — 14th Am Equal Protection (Baker + Reynolds); 15th Am (VRA + Allen); 1st Am; Federalist 78 Hamilton judicial; Federalist 10 Madison; HISTORICAL CONTEXT — Warren Court 1962 liberal → Roberts Court conservative 2013 + 6-3 with Roberts/Kavanaugh moderating 2023; FUTURE — litigation continues (LWV + ACLU + Brennan); Congress deadlocked on John Lewis VRA Advancement Act + Freedom to Vote Act; future cases on Section 2 + voter ID + registration + mail voting; partisan DOJ enforcement varies.'
+            explanation: 'SCAR on the Court and elections, using three REQUIRED cases: STATE — the Court has shaped elections by opening redistricting to review, limiting race-based districts and protecting campaign spending. CITE — (1) BAKER v. CARR (1962): redistricting is justiciable, leading to "one person, one vote" (Reynolds v. Sims 1964) — Equal Protection Clause (EK 2.3.A.2); (2) SHAW v. RENO (1993): districts explainable only by race face equal protection challenges (EK 3.12.A.1.iv); (3) CITIZENS UNITED v. FEC (2010): corporate and union political spending is protected speech under the 1st Amendment (EK 5.11.A.1.ii). ANALYZE — each decision changed how votes translate into representation or how campaigns are funded. RESPOND — critics say the Court has at times limited minority representation (Shaw) or political equality (Citizens United); defenders cite equal treatment and free speech. The wrong options misstate the holdings, use cases unrelated to voting (Marbury, McCulloch, Gibbons), or rely on a single non-required case.'
           }
         ]
       }

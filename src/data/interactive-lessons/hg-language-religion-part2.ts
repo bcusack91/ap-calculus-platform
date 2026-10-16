@@ -14,7 +14,7 @@ export const hgLanguageReligionPart2Data = {
 | Section |
 |---------|
 | 📖 The Language Tree, Level by Level |
-| Two Models for the Indo-European Hearth |
+| The Indo-European Hearth and Its Spread |
 | Bantu and Austronesian: Two Great Expansions |
 | Later Spreads: Empire and Colonialism |
 
@@ -88,22 +88,20 @@ Part 1 listed the major families. Here is how the levels nest, using English and
       id: 'hglangua2-hearths',
       type: 'text' as const,
       content: `
-## Two Models for the Indo-European Hearth
+## The Indo-European Hearth and Its Spread
 
-Nearly half of the world's people speak an Indo-European language as their first language, from Iceland to Bangladesh. No written records survive from before the family spread, so geographers and linguists use **competing models**.
+Nearly half of the world's people speak an Indo-European language as their first language, from Iceland to Bangladesh. Linguists agree that the family began in a **single hearth in western Eurasia** several thousand years ago, before any written records, and spread through **relocation diffusion**, as migrating peoples carried it, and **expansion diffusion**, as neighboring groups adopted it. Its exact hearth and timing are still debated by specialists; the competing hypotheses are not tested on the AP exam. What you need is the idea of a **hearth**, the **diffusion processes** that produced today's map, and the **evidence** of shared vocabulary shown above.
 
-| | **Steppe (Kurgan) hypothesis** | **Anatolian hypothesis** |
-|---|---|---|
-| **Main proponent** | Marija Gimbutas (1950s) | Colin Renfrew (1987) |
-| **Hearth** | Grasslands north of the Black and Caspian seas, in today's Ukraine and southern Russia | Anatolia, in today's Turkey |
-| **Timing** | About 6,000 to 5,000 years ago | About 9,000 to 8,000 years ago |
-| **Who spread it** | Herders who used horses and wheeled vehicles | Early farmers |
-| **How it spread** | Migration and conquest: relocation | Farming spread gradually from community to community: expansion |
-| **Key evidence** | Shared Indo-European words for wheel, axle and horse, which could not predate those inventions | The spread of agriculture into Europe from Southwest Asia |
+### Reading Diffusion in Maps and Toponyms
+The CED notes that language diffusion can be shown on **maps**, in **charts** and in **toponyms** (place names).
 
-**What newer evidence shows:** studies of ancient DNA published since 2015 found a large migration from the steppe into Europe about 5,000 years ago, which many researchers see as support for the steppe model for most European branches. The debate is not fully settled, and some scholars propose combinations of the two.
+| Toponyms | What they record |
+|---|---|
+| **Los Angeles, San Antonio, Santa Fe** in the U.S. Southwest | Spanish colonization and missions, before the region became part of the United States |
+| English towns ending in **-chester** or **-caster** (Manchester, Lancaster) | Latin *castra*, "camp": Roman military settlement in Britain |
+| **Brooklyn** and **Harlem** in New York City | Dutch colonists, who named them after Breukelen and Haarlem in the Netherlands |
 
-**Limitation of both models:** they reconstruct a hearth from indirect evidence: word comparisons, archaeology and genetics. Genes and languages do not always move together, since people can adopt a new language without migrating.
+A toponym can outlast the language of the people who coined it, so place names are a record of **relocation diffusion** and of **sequent occupance**.
 
 ## Bantu and Austronesian: Two Great Expansions
 
@@ -129,15 +127,15 @@ Nearly half of the world's people speak an Indo-European language as their first
       exercise: {
         questions: [
           {
-            question: 'Supporters of the steppe hypothesis point out that Indo-European languages share old words for wheel and axle. Why does this matter?',
+            question: 'Spanish place names such as San Antonio and Santa Fe are common across the U.S. Southwest, even where most residents now speak English. What do these toponyms best show?',
             options: [
-              'The family probably split after such vehicles existed',
-              'It proves Indo-European began among the earliest farmers',
-              'It shows the family spread before the invention of farming',
-              'It means every branch borrowed the words from Latin'
+              'Relocation diffusion of Spanish through colonization',
+              'Stimulus diffusion of Spanish grammar into English',
+              'Contagious diffusion of English from Mexico',
+              'A language isolate surviving in one region'
             ],
             correctAnswer: 0,
-            explanation: 'If the shared ancestor already had words for wheeled vehicles, the family cannot have split up before wheels were invented, which fits the later steppe date. Early farming predates the wheel, so these words are a problem for the Anatolian timing.'
+            explanation: 'Spanish colonists and missionaries carried their language into the region and named its settlements, which is relocation diffusion recorded in toponyms. The names do not show English spreading or an isolate, and stimulus diffusion would change the underlying idea of a trait rather than leave place names behind.'
           },
           {
             question: 'Malagasy, spoken in Madagascar, is related to Indonesian rather than to nearby African languages. Which process best explains this?',
@@ -151,15 +149,15 @@ Nearly half of the world's people speak an Indo-European language as their first
             explanation: 'Austronesian speakers sailed west across the Indian Ocean and settled Madagascar, a case of relocation diffusion. Bantu and Arabic belong to other families, and Malagasy is a full Austronesian language, not a pidgin.'
           },
           {
-            question: 'Which statement describes a limitation shared by both models of the Indo-European hearth?',
+            question: 'Indo-European languages are spoken as first languages from Iceland to Bangladesh. Which statement best explains this distribution?',
             options: [
-              'They rely on indirect evidence from before written records',
-              'They ignore the role of farming in human history entirely',
-              'They place the hearth outside Europe and Asia altogether',
-              'They depend mainly on census data from modern countries'
+              'Diffusion from one Eurasian hearth by migration and later empires',
+              'Separate invention of similar languages in many regions at once',
+              'Recent spread through the internet and global media alone',
+              'Descent from Latin, the ancestor of every Indo-European branch'
             ],
             correctAnswer: 0,
-            explanation: 'Both reconstruct a prehistoric hearth from word comparisons, archaeology and genetics, because the family spread before writing. The Anatolian model is built around farming, and both place the hearth in Eurasia.'
+            explanation: 'Indo-European spread from a single hearth in western Eurasia through migration and later through empires and colonialism (CED 3.7). Shared vocabulary rules out separate invention, the spread took thousands of years rather than decades, and Latin is the ancestor only of the Romance branch.'
           }
         ]
       }

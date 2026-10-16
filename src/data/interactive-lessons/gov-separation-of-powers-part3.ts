@@ -35,12 +35,11 @@ export const govSeparationOfPowersPart3Data = {
 | 1936-37 | New Deal vs. Court | "Switch in time" 1937; FDR Court-packing plan failed |
 | 1952 | Truman steel seizure | Youngstown Sheet & Tube Co. v. Sawyer — President's seizure unconstitutional |
 | 1973-74 | Watergate | United States v. Nixon — executive privilege not absolute; Nixon resigns 1974 |
-| 1983 | Legislative veto | INS v. Chadha — one-house legislative veto unconstitutional |
+| 1987 | Bork nomination | Senate rejects Robert Bork for the Supreme Court, 42-58 — confirmation as a check (CED illustrative) |
 | 1995-96 | Government shutdown | Clinton vs. Gingrich Congress over budget |
-| 2012 | NFIB v. Sebelius | ACA mandate as tax; Medicaid expansion coercive |
+| 1998-99 | Clinton impeachment | House impeaches; Senate acquits (CED illustrative) |
 | 2018-19 | Mueller investigation | Special counsel investigation of Russian interference |
 | 2019 + 2021 | Trump impeachments | Both acquitted by Senate |
-| 2024 | Trump v. United States | Presidential immunity for "official acts"; Court extends executive authority |
 
 ## Required AP Gov SCOTUS Cases on Separation of Powers
 
@@ -48,20 +47,17 @@ export const govSeparationOfPowersPart3Data = {
 |---|---|---|---|
 | ***Marbury v. Madison*** | 1803 | Judicial → Executive (Madison) | Court establishes judicial review; can declare federal acts unconstitutional |
 
-## Other High-Yield Separation-of-Powers Cases
+## Other Cases on Inter-Branch and Federal-State Power
+
+*McCulloch* and *Baker* are also required cases; *United States v. Nixon* is a CED illustrative example; the rest are context, and the exam supplies the facts if it uses them.
 
 | Case | Year | Branch action | Holding |
 |---|---|---|---|
-| *McCulloch v. Maryland* | 1819 | Judicial → Federalism | Implied federal powers; Necessary and Proper |
-| *Youngstown Sheet & Tube Co. v. Sawyer* | 1952 | Judicial → Executive | Truman steel seizure unconstitutional; Justice Jackson's three-tier framework |
+| *McCulloch v. Maryland* (REQUIRED) | 1819 | Judicial → Federalism | Implied federal powers; Necessary and Proper |
+| *Youngstown Sheet & Tube Co. v. Sawyer* | 1952 | Judicial → Executive | Truman steel seizure unconstitutional — no law authorized it |
 | *Cooper v. Aaron* | 1958 | Judicial → State | Court establishes judicial supremacy over constitutional interpretation |
-| *Baker v. Carr* | 1962 | Judicial → State | "One person, one vote" — judicial review of legislative apportionment |
+| *Baker v. Carr* (REQUIRED) | 1962 | Judicial → State | "One person, one vote" — judicial review of legislative apportionment |
 | *United States v. Nixon* | 1974 | Judicial → Executive | Executive privilege not absolute; Nixon must turn over tapes |
-| *INS v. Chadha* | 1983 | Judicial → Legislative | One-house legislative veto unconstitutional |
-| *Clinton v. New York* | 1998 | Judicial → Executive | Line-item veto unconstitutional |
-| *Bush v. Gore* | 2000 | Judicial → Electoral | Equal Protection halts Florida recount |
-| *Trump v. Hawaii* | 2018 | Judicial → Executive | Travel ban upheld under deferential review |
-| *Trump v. United States* | 2024 | Judicial → Executive | Presidential immunity for "official acts" |
 
 ## Landmark "Constitutional Moments"
 
@@ -73,7 +69,7 @@ export const govSeparationOfPowersPart3Data = {
 | **New Deal Constitutional Revolution** | 1933-37 | Massive expansion of federal commerce + spending power; cooperative federalism |
 | **Civil Rights Era** | 1954-65 | Brown v. Board, CRA, VRA; federal supremacy over state segregation |
 | **Watergate Era** | 1973-74 | Limits on executive power; restoration of congressional authority |
-| **Modern Federalism Revival** | 1995-present | Lopez, Printz, NFIB, Shelby County, Murphy v. NCAA |
+| **Modern Federalism Revival** | 1995-present | Lopez (required), Morrison, NFIB |
 
 ## Patterns of Branch Supremacy
 
@@ -98,26 +94,26 @@ export const govSeparationOfPowersPart3Data = {
       exercise: {
         questions: [
           {
-            question: "Which best describes the holding and significance of Youngstown Sheet & Tube Co. v. Sawyer (1952)?",
+            question: "In 1952 the Supreme Court ruled that President Truman could not seize the nation's steel mills during the Korean War, because neither the Constitution nor any law passed by Congress authorized the seizure. Which principle does this ruling best illustrate?",
             options: [
-              "The Court struck down Truman's seizure of the steel mills because no statute authorized it and Congress had declined to grant that power, limiting emergency presidential action",
-              "The Court upheld Truman's seizure of the steel mills because the commander-in-chief power covers all property needed for a war",
-              "The Court struck down a congressional seizure of the steel mills because only the President may manage the wartime economy",
-              "The Court declined to rule on Truman's seizure because disputes between the branches are political questions"
+              "Separation of powers confines the President to the authority actually granted to the office, even during a wartime emergency",
+              "Federalism reserves the regulation of private industry to the states during wartime",
+              "Judicial restraint requires courts to defer to the President on wartime decisions",
+              "The commander-in-chief power gives the President unlimited authority over the economy in war"
             ],
             correctAnswer: 0,
-            explanation: 'Youngstown (1952): Korean War, Truman EO 10340 directed Sawyer to seize steel mills; SCOTUS 6-3 unconstitutional because Congress rejected such authority in Taft-Hartley 1947 + no statutory/constitutional authorization. Justice Jackson CONCURRENCE = canonical framework: three tiers — (1) MAX with Congress authorization; (2) AMBIGUOUS "twilight zone" silence; (3) MIN (only valid if Congress lacks power) against express Congress will. Steel seizure = tier 3 → unconstitutional.'
+            explanation: 'SEPARATION OF POWERS (EK 1.6.A.1): each branch has specific, separate powers, and the President\'s power comes from the Constitution or from laws passed by Congress. Because Congress had not authorized the seizure (it had even declined to grant that power), the Court held the President lacked authority — a judicial check on the executive. Industry regulation is not reserved to the states in this situation, the Court did not defer, and the commander-in-chief power is not unlimited.'
           },
           {
-            question: "Which best describes the holding and significance of United States v. Nixon (1974)?",
+            question: "In United States v. Nixon (1974), the Supreme Court unanimously ordered President Nixon to turn over subpoenaed White House tapes, rejecting his claim that executive privilege is absolute. Which principle does this ruling best illustrate?",
             options: [
-              "Executive privilege exists but is not absolute, so Nixon had to give the subpoenaed tapes to the special prosecutor",
-              "Executive privilege is absolute, so Nixon could keep the tapes from both prosecutors and Congress even during a criminal investigation",
-              "Executive privilege does not exist at all, so every presidential conversation must be made public once the President leaves office",
-              "Executive privilege is decided by Congress, so the House Judiciary Committee rather than the Court ordered the tapes released"
+              "Checks and balances allow legal action against officials who abuse power",
+              "Federalism lets state courts overrule federal officials who withhold evidence in criminal trials",
+              "Popular sovereignty requires the President to release every record whenever voters ask for it",
+              "Judicial restraint requires courts to accept the President's own view of his constitutional powers"
             ],
             correctAnswer: 0,
-            explanation: 'United States v. Nixon (1974): Watergate, Special Prosecutor Jaworski subpoenaed Oval Office tapes; Nixon resisted citing executive privilege. SCOTUS 8-0: executive privilege has Art II foundation BUT NOT ABSOLUTE — balance presidential confidentiality vs. judicial need for evidence in criminal proceeding. Ordered compliance. Nixon turned over tapes ("smoking gun") + resigned 16 days later (Aug 9, 1974) — only U.S. president to resign. No person, including President, above the law.'
+            explanation: 'EK 1.6.B.2: checks and balances and separation of powers allow LEGAL ACTIONS to be taken against public officials deemed to have abused their power. United States v. Nixon (a CED illustrative example) required the President to comply with a judicial subpoena; Nixon released the tapes and resigned in August 1974 as the House moved toward impeachment. State courts do not overrule federal officials, voters cannot demand all records, and the Court rejected — not accepted — the President\'s view.'
           }
         ]
       }
@@ -125,7 +121,7 @@ export const govSeparationOfPowersPart3Data = {
     {
       id: 'govsep3-input',
       type: 'input-boxes' as const,
-      content: `**Quick recall — name the case**`,
+      content: `**Quick recall — cases and checks**`,
       exercise: {
         questions: [
           {
@@ -135,16 +131,16 @@ export const govSeparationOfPowersPart3Data = {
             hint: 'Chief Justice John Marshall opinion involving William Marbury\'s undelivered judicial commission.'
           },
           {
-            prompt: "The 1952 case in which the Supreme Court ruled that President Truman's seizure of steel mills was unconstitutional.",
-            answer: 'Youngstown Sheet & Tube Co. v. Sawyer',
-            acceptableAnswers: ['Youngstown Sheet & Tube Co. v. Sawyer', 'Youngstown', 'Youngstown v. Sawyer', 'Youngstown Steel', 'youngstown'],
-            hint: 'Steel mill case from the Korean War era; Justice Jackson\'s three-tier framework.'
+            prompt: "The House's power to formally charge an official with abuse of power or misconduct, the first step toward removal: ___.",
+            answer: 'impeachment',
+            acceptableAnswers: ['impeachment', 'Impeachment', 'impeach'],
+            hint: 'EK 1.6.B.2 — the Senate then holds the trial.'
           },
           {
-            prompt: "The 1974 case in which the Supreme Court ordered President Nixon to turn over the Oval Office tapes.",
-            answer: 'United States v. Nixon',
-            acceptableAnswers: ['United States v. Nixon', 'US v. Nixon', 'U.S. v. Nixon', 'Nixon', 'United States v Nixon', 'us v nixon'],
-            hint: 'Watergate-era case; resulted in Nixon\'s resignation 16 days later.'
+            prompt: "The Federalist paper in which Madison explains how separation of powers and checks and balances control abuses by majorities: Federalist No. ___.",
+            answer: '51',
+            acceptableAnswers: ['51', 'No. 51', 'Federalist 51', 'Federalist No. 51'],
+            hint: '"Ambition must be made to counteract ambition."'
           }
         ]
       }
@@ -152,27 +148,27 @@ export const govSeparationOfPowersPart3Data = {
     {
       id: 'govsep3-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Match each case to its branch-on-branch holding.**`,
+      content: `**Match each example to the check it illustrates.**`,
       exercise: {
         dropdowns: [
           {
-            label: "The 1803 case establishing JUDICIAL review of federal statutes (judicial check on legislative): ___",
-            options: ['Marbury v. Madison', 'Youngstown Sheet & Tube Co. v. Sawyer', 'INS v. Chadha', 'Clinton v. New York']
+            label: "The Supreme Court declares part of an act of Congress unconstitutional (Marbury v. Madison, 1803): ___",
+            options: ['Judicial review', 'Impeachment', 'Senate confirmation', 'Presidential veto']
           },
           {
-            label: "The 1952 case establishing limits on EXECUTIVE emergency seizure authority (judicial check on executive): ___",
-            options: ['Marbury v. Madison', 'Youngstown Sheet & Tube Co. v. Sawyer', 'INS v. Chadha', 'Clinton v. New York']
+            label: "The House formally charges President Andrew Johnson (1868) and President Bill Clinton (1998) with misconduct: ___",
+            options: ['Judicial review', 'Impeachment', 'Senate confirmation', 'Presidential veto']
           },
           {
-            label: "The 1983 case striking down the one-house LEGISLATIVE veto (judicial check on legislative): ___",
-            options: ['Marbury v. Madison', 'Youngstown Sheet & Tube Co. v. Sawyer', 'INS v. Chadha', 'Clinton v. New York']
+            label: "The Senate votes 42-58 against Robert Bork's 1987 Supreme Court nomination: ___",
+            options: ['Judicial review', 'Impeachment', 'Senate confirmation', 'Presidential veto']
           }
         ],
-        correctAnswers: ['Marbury v. Madison', 'Youngstown Sheet & Tube Co. v. Sawyer', 'INS v. Chadha'],
-        hint1: 'John Marshall, 1803 — judicial review.',
-        hint2: 'Truman steel seizure during the Korean War.',
-        hint3: 'Burger Court 1983 — Congress cannot reverse executive action by one-house resolution.',
-        explanation: 'Branch-on-branch cases: Marbury (1803) = judicial review (judicial check on Legislative). Youngstown (1952) = limits on executive emergency seizure (judicial check on Executive). INS v. Chadha (1983) = one-house legislative veto unconstitutional (judicial check on Legislative). Clinton v. New York (1998) = line-item veto unconstitutional (judicial check on Executive).'
+        correctAnswers: ['Judicial review', 'Impeachment', 'Senate confirmation'],
+        hint1: 'Marbury v. Madison (1803) — the judiciary checks Congress.',
+        hint2: 'EK 1.6.B.2 — the House charges, the Senate tries.',
+        hint3: 'EK 2.5.A.1 — the Senate checks the appointment power; Bork is a CED illustrative failed appointment.',
+        explanation: 'Each example is a different check (EK 1.6.A.1, 1.6.B.2, 2.5.A.1): judicial review (Marbury) lets courts strike laws; impeachment (Johnson, Clinton — CED illustrative examples) lets Congress charge and try officials; Senate confirmation lets the Senate reject nominees (Bork). A presidential veto is the President\'s check on Congress.'
       }
     },
     {
@@ -201,7 +197,7 @@ export const govSeparationOfPowersPart3Data = {
               "When Nixon abused power, the states, the press, and the parties forced him out, with no role for Congress or the courts"
             ],
             correctAnswer: 0,
-            explanation: 'Watergate (1972-74) shows separation-of-powers functioning as intended: executive overreach (Nixon DNC cover-up) → JUDICIAL check (US v. Nixon 1974, 8-0 ordered tapes) + LEGISLATIVE check (House Judiciary articles July 1974). Nixon resigned Aug 9, 1974 (only U.S. president to resign). Congress enacted: War Powers Resolution 1973, Budget Act 1974, FECA amendments 1974, FISA 1978, Inspector General Act 1978, Ethics in Government Act 1978 → substantial inter-branch balance restoration.'
+            explanation: 'Watergate (1972-74) shows separation-of-powers functioning as intended: executive overreach (Nixon DNC cover-up) → JUDICIAL check (US v. Nixon 1974, 8-0 ordered tapes) + LEGISLATIVE check (House Judiciary articles July 1974). Nixon resigned Aug 9, 1974 (only U.S. president to resign). Congress enacted: War Powers Resolution 1973, Budget Act 1974, FECA amendments 1974, FISA 1978, Ethics in Government Act 1978 → substantial inter-branch balance restoration.'
           }
         ]
       }

@@ -15,9 +15,7 @@ export const govJudiciaryPart3Data = {
 |---|
 | Major Court eras (Marshall, Taney, Lochner, Hughes, Warren, Burger, Rehnquist, Roberts) |
 | Landmark cases beyond *Marbury* |
-| Modern Roberts Court 2005-present |
-| Patterns of judicial activism + restraint by era |
-| Demographic + ideological evolution |
+| Activism vs restraint across eras |
 
 > 🔑 Key idea: SCOTUS's role and ideology have shifted dramatically across eras — from Marshall's nation-building federalism (1801-35) to Taney's pro-slavery jurisprudence (1836-64) to the Lochner-era property protection (1897-1937) to the Warren Court rights revolution (1953-69) to the Roberts Court's modern conservative majority (2005-present).
       `
@@ -38,52 +36,48 @@ export const govJudiciaryPart3Data = {
 | **Warren Court** | Earl Warren | 1953-69 | RIGHTS REVOLUTION — civil rights (*Brown* 1954, *Loving* 1967), criminal procedure (*Mapp* 1961, *Gideon* 1963, *Miranda* 1966), reapportionment (*Baker* 1962, *Reynolds* 1964), free speech (*Tinker* 1969), school prayer (*Engel* 1962); the most ACTIVIST liberal Court in history |
 | **Burger Court** | Warren Burger | 1969-86 | Mixed; expanded individual rights (*Roe v. Wade* 1973) but began pulling back on Warren-era criminal procedure; school busing decisions; *US v. Nixon* 1974 |
 | **Rehnquist Court** | William Rehnquist | 1986-2005 | Conservative shift; FEDERALISM REVIVAL (*US v. Lopez* 1995, *US v. Morrison* 2000); state sovereign immunity (*Seminole Tribe* 1996); *Bush v. Gore* 2000 |
-| **Roberts Court** | John Roberts | 2005-present | Conservative consolidation; *Citizens United* 2010, *DC v. Heller* 2008, *Shelby County* 2013, *Obergefell* 2015 (Kennedy); since Trump appointees: *Bruen* 2022, *Dobbs* 2022, *Students for Fair Admissions* 2023, *Trump v. US* 2024 |
+| **Roberts Court** | John Roberts | 2005-present | Conservative consolidation; *Citizens United* 2010, *McDonald* 2010, *Obergefell* 2015 (Kennedy); since Trump appointees: *Dobbs* 2022, *Students for Fair Admissions* 2023 |
 
 ## Landmark Cases Beyond Marbury
 
-| Case | Year | Holding | Significance |
-|---|---|---|---|
-| *McCulloch v. Maryland* | 1819 | Necessary + proper clause supports Bank of US; states cannot tax federal entities | NATIONAL SUPREMACY; broad implied powers |
-| *Gibbons v. Ogden* | 1824 | Federal commerce power preempts state monopolies | Broad commerce power |
-| *Dred Scott v. Sandford* | 1857 | African Americans not citizens; Missouri Compromise unconstitutional | Worst SCOTUS decision ever; precipitated Civil War |
-| *Plessy v. Ferguson* | 1896 | 'Separate but equal' constitutional | Established Jim Crow until *Brown* |
-| *Lochner v. New York* | 1905 | NY 60-hour bakery law unconstitutional under economic substantive due process | Defined the Lochner Era; abandoned 1937 |
-| *Schenck v. United States* | 1919 | 'Clear and present danger' test for speech restrictions | Holmes's famous 'fire in crowded theater' analogy |
-| *Brown v. Board* | 1954 | Segregated schools unconstitutional | Overruled *Plessy*; ignited civil rights movement |
-| *Mapp v. Ohio* | 1961 | Exclusionary rule applies to states | Expanded 4th Amendment protections |
-| *Engel v. Vitale* | 1962 | Public-school prayer unconstitutional | Establishment Clause expansion |
-| *Baker v. Carr* | 1962 | Reapportionment is justiciable | One person, one vote era |
-| *Gideon v. Wainwright* | 1963 | Right to counsel for indigent defendants | 6th Amendment incorporation |
-| *Miranda v. Arizona* | 1966 | Miranda warnings required | 5th Amendment protections |
-| *Loving v. Virginia* | 1967 | Anti-miscegenation laws unconstitutional | Racial classifications strict scrutiny |
-| *Tinker v. Des Moines* | 1969 | Student speech protected | 'Schoolhouse gate' standard |
-| *Roe v. Wade* | 1973 | Abortion right constitutional | Overruled by *Dobbs* 2022 |
-| *Planned Parenthood v. Casey* | 1992 | 'Undue burden' abortion standard | Overruled by *Dobbs* 2022 |
-| *DC v. Heller* | 2008 | Individual right to bear arms | Modern 2A jurisprudence |
-| *Citizens United v. FEC* | 2010 | Corporate independent political expenditures protected | Massive campaign-finance impact |
-| *Shelby County v. Holder* | 2013 | VRA preclearance formula unconstitutional | Voting rights setback |
-| *Obergefell v. Hodges* | 2015 | Same-sex marriage right | 14th Amendment due process + equal protection |
-| *Dobbs v. Jackson Women's Health* | 2022 | Overruled *Roe* + *Casey* | Abortion returned to states |
-| *NYSRPA v. Bruen* | 2022 | History + tradition test for 2A | Strict 2A jurisprudence |
-| *Students for Fair Admissions v. Harvard* | 2023 | Race-based affirmative action in college admissions unconstitutional | Major equal protection ruling |
-| *Trump v. United States* | 2024 | Presidential immunity for official acts | Major separation-of-powers ruling |
+The CED requires exactly 14 Supreme Court cases. The table marks them, along with the decisions whose holdings the CED names in its essential knowledge (EK) and a few illustrative examples.
 
-## Roberts Court Since 2017 (Trump Appointees Era)
+| Case | Year | Holding | Significance | Status |
+|---|---|---|---|---|
+| *McCulloch v. Maryland* | 1819 | Necessary + proper clause supports Bank of US; states cannot tax federal entities | NATIONAL SUPREMACY; broad implied powers | REQUIRED |
+| *Plessy v. Ferguson* | 1896 | 'Separate but equal' constitutional | Established Jim Crow until *Brown* | Doctrine named in EK 3.12.A.1 |
+| *Schenck v. United States* | 1919 | 'Clear and present danger' test for speech restrictions | Holmes's famous 'fire in crowded theater' analogy | REQUIRED |
+| *Brown v. Board* | 1954 | Segregated schools unconstitutional | Overruled *Plessy*; ignited civil rights movement | REQUIRED |
+| *Mapp v. Ohio* | 1961 | Exclusionary rule applies to states | Expanded 4th Amendment protections | Rule named in EK 3.8.A.4 (case not required) |
+| *Engel v. Vitale* | 1962 | Public-school prayer unconstitutional | Establishment Clause expansion | REQUIRED |
+| *Baker v. Carr* | 1962 | Reapportionment is justiciable | One person, one vote era | REQUIRED |
+| *Gideon v. Wainwright* | 1963 | Right to counsel for indigent defendants | 6th Amendment incorporation | REQUIRED |
+| *Griswold v. Connecticut* | 1965 | Right to privacy protected by due process | Foundation for substantive due process privacy cases | Named in EK 3.9.A.2 |
+| *Miranda v. Arizona* | 1966 | Miranda warnings required | 5th Amendment protections | Rule named in EK 3.8.A.2 (case not required) |
+| *Tinker v. Des Moines* | 1969 | Student speech protected | 'Schoolhouse gate' standard | REQUIRED |
+| *New York Times v. United States* | 1971 | Government cannot block publication of the Pentagon Papers | Heavy presumption against prior restraint | REQUIRED |
+| *Wisconsin v. Yoder* | 1972 | Amish parents may stop schooling after 8th grade | Free exercise outweighs compulsory-attendance law | REQUIRED |
+| *Roe v. Wade* | 1973 | Abortion right constitutional | Overruled by *Dobbs* 2022 | Named in EK 3.9.A.2 |
+| *Planned Parenthood v. Casey* | 1992 | 'Undue burden' abortion standard | Overruled by *Dobbs* 2022 | Illustrative |
+| *Shaw v. Reno* | 1993 | Race-based district lines face equal protection challenge | Limits majority-minority districting | REQUIRED |
+| *United States v. Lopez* | 1995 | Gun-Free School Zones Act exceeded the commerce power | First limit on the Commerce Clause in decades | REQUIRED |
+| *McDonald v. Chicago* | 2010 | Second Amendment right incorporated against states (building on *DC v. Heller* 2008) | Selective incorporation of 2A | REQUIRED |
+| *Citizens United v. FEC* | 2010 | Corporate independent political expenditures protected | Massive campaign-finance impact | REQUIRED |
+| *Obergefell v. Hodges* | 2015 | Same-sex marriage right | 14th Amendment due process + equal protection | Illustrative |
+| *Dobbs v. Jackson Women's Health* | 2022 | Overruled *Roe* + *Casey* | Abortion returned to states | Named in EK 3.9.A.2 |
+| *Students for Fair Admissions v. Harvard* | 2023 | Race-based affirmative action in college admissions unconstitutional | Latest turn in the affirmative action debate (EK 3.13.A.1) | Context only |
 
-| Year | Major decision | Vote |
+## Activism + Restraint Across Eras
+
+EK 2.9.A.2 and EK 2.11.A.1 explain WHY the Court's direction changes: presidents appoint justices with different ideologies, and each new majority decides how far to follow or overturn precedent.
+
+| Era | Pattern | Why it matters for the exam |
 |---|---|---|
-| 2018 | *Janus v. AFSCME* — public-sector union dues | 5-4 (overruled *Abood* 1977) |
-| 2018 | *Trump v. Hawaii* — travel ban upheld | 5-4 |
-| 2018 | *Wayfair v. South Dakota* — internet sales tax | 5-4 |
-| 2020 | *Bostock v. Clayton County* — LGBTQ Title VII protection | 6-3 (Gorsuch w/ liberals) |
-| 2020 | *Seila Law v. CFPB* — limit on independent agencies | 5-4 |
-| 2022 | *Dobbs v. Jackson Women's Health* — overruled *Roe* | 5-4 (6-3 result) |
-| 2022 | *NYSRPA v. Bruen* — 2A history + tradition | 6-3 |
-| 2022 | *West Virginia v. EPA* — major questions doctrine | 6-3 |
-| 2023 | *Students for Fair Admissions* — race-based admissions | 6-3 |
-| 2024 | *Loper Bright v. Raimondo* — overruled *Chevron* deference | 6-3 |
-| 2024 | *Trump v. United States* — presidential immunity | 6-3 |
+| **Lochner Era (1897-1937)** | Conservative ACTIVISM — struck down state and federal economic regulations | Shows activism is not tied to one ideology |
+| **After 1937** | RESTRAINT on economic regulation — the Court deferred to Congress on the New Deal after FDR's court-packing threat | Court-packing = an attempted check on the Court through appointments (EK 2.11.B.1) |
+| **Warren Court (1953-69)** | Liberal ACTIVISM — overturned precedent (*Plessy*) and expanded rights of the accused | Required cases *Brown*, *Engel*, *Baker*, *Gideon*, *Tinker* |
+| **Rehnquist Court (1986-2005)** | Revived limits on federal power (*Lopez*) | Federalism case required for Unit 1 |
+| **Roberts Court (2005-present)** | 6-3 conservative majority after 2017-2020 appointments; overturned *Roe* in *Dobbs* (2022) | Appointments reshaping precedent (EK 2.9.A.2); critics call it activism, supporters call it correcting error |
       `
     },
     {
@@ -106,13 +100,13 @@ export const govJudiciaryPart3Data = {
           {
             question: "Which best describes the modern Roberts Court since the Trump appointees solidified the 6-3 conservative majority?",
             options: [
-              "Its conservative majority overruled Roe in Dobbs and narrowed agency power in West Virginia v. EPA",
-              "Its six conservatives expanded federal agency power by reaffirming Chevron deference and upholding broad mandates",
-              "Its liberal majority expanded abortion rights in Dobbs and strengthened state gun regulations in NYSRPA v. Bruen",
-              "Its moderate majority avoided major rulings, declining to hear any abortion, gun or agency power cases at all"
+              "Its conservative majority overruled Roe in Dobbs, returning abortion policy to the states",
+              "Its six conservatives reaffirmed Roe and Casey, keeping a national right to abortion in place",
+              "Its liberal majority expanded abortion rights in Dobbs and upheld strict state limits on handguns",
+              "Its moderate majority avoided major rulings, declining to hear any abortion or gun cases at all"
             ],
             correctAnswer: 0,
-            explanation: 'MODERN ROBERTS COURT (2020-present, post-Barrett) — major conservative decisions reflecting 6-3 majority: (1) Dobbs (2022) overruled Roe + Casey → abortion to states; (2) Bruen (2022) "history and tradition" 2A → struck NY conceal-carry; (3) West Virginia v. EPA (2022) MAJOR QUESTIONS DOCTRINE limiting agency authority; (4) Students for Fair Admissions (2023) race-based admissions unconstitutional; (5) Loper Bright (2024) overruled Chevron 1984 → reduced administrative-state authority; (6) Trump v. US (2024) presidential immunity. PATTERN: major overrulings (Roe 1973, Casey 1992, Chevron 1984, Abood 1977) → stare decisis debate.'
+            explanation: 'MODERN ROBERTS COURT — Trump\'s three appointments (2017-2020) produced a 6-3 conservative majority, and in Dobbs (2022) the Court overruled Roe (1973) and Casey (1992), holding that the Constitution does not confer a right to abortion and leaving regulation to legislatures (EK 3.9.A.2). This is the EK 2.9.A.2 pattern: ideological change through appointments leads the Court to reject existing precedent. The Court did not reaffirm Roe, does not have a liberal majority, and has taken major abortion and gun cases.'
           }
         ]
       }
@@ -166,13 +160,13 @@ export const govJudiciaryPart3Data = {
         correctAnswers: ['John Marshall', 'Earl Warren', 'John Roberts'],
         hint1: 'Marshall (1801-35) = Marbury, McCulloch, Gibbons; nation-building federalism.',
         hint2: 'Warren (1953-69) = Brown, Mapp, Gideon, Miranda, Baker, Reynolds, Engel.',
-        hint3: 'Roberts (2005-present) = Citizens United, Heller, Shelby County, Obergefell, Dobbs, Bruen, Loper Bright, Trump v US.'
+        hint3: 'Roberts (2005-present) = Citizens United, McDonald, Obergefell, Dobbs.'
       }
     },
     {
       id: 'govjudic3-applied',
       type: 'multiple-choice' as const,
-      content: `**Applied AP Practice — The Lochner Era + Switch in Time**`,
+      content: `**Applied AP Practice — Court Eras + Limits on the Court**`,
       exercise: {
         questions: [
           {
@@ -187,15 +181,15 @@ export const govJudiciaryPart3Data = {
             explanation: 'LOCHNER ERA (1897-1937) = economic substantive due process under 14th Am to STRIKE progressive labor regulations as violations of LIBERTY OF CONTRACT. (1) Lochner 1905 struck NY 60-hour bakery as "unreasonable" interference; (2) Adkins 1923 struck minimum wage for women; (3) Schechter 1935 + Carter Coal 1936 struck major New Deal. SWITCH IN TIME 1937: facing FDR court-packing threat → Justice OWEN ROBERTS shifted → West Coast Hotel v. Parrish 1937 upheld minimum wage; NLRB v. Jones & Laughlin 1937 upheld federal labor regulation; Darby 1941 + Wickard v. Filburn 1942 cemented broad federal regulatory power. → enabled modern administrative + regulatory state.'
           },
           {
-            question: "How does the Marshall Court (1801-35) compare to the Taney Court (1836-64) in shaping federal judicial power and constitutional jurisprudence?",
+            question: "After the Supreme Court's 1954 ruling in Brown v. Board of Education, officials in several states kept schools segregated for years, and the Court itself had called only for desegregation 'with all deliberate speed.' Which limit on the Court's power does this best illustrate?",
             options: [
-              "Marshall strengthened national and judicial power, whereas Taney favored states' rights and issued Dred Scott",
-              "Marshall favored states' rights and limited judicial review, whereas Taney built national supremacy through McCulloch",
-              "Marshall and Taney both expanded federal power, and Taney's Dred Scott ruling ended slavery in the territories",
-              "Marshall avoided constitutional cases entirely, whereas Taney first used judicial review in Marbury v. Madison"
+              "States and the president can delay carrying out a judicial decision they oppose",
+              "Congress can pass a law removing the Court's jurisdiction to hear that type of case on appeal",
+              "A constitutional amendment can be ratified by the states to reverse the Court's interpretation",
+              "New appointments can shift the ideological balance of the Court over time"
             ],
             correctAnswer: 0,
-            explanation: 'Marshall vs Taney = OPPOSITE constitutional visions. MARSHALL (1801-35) — JUDICIAL REVIEW (Marbury 1803), NATIONAL SUPREMACY (McCulloch 1819 broad implied powers + BUS), broad COMMERCE (Gibbons 1824 federal preempts state monopolies). Nationalist FEDERALIST → strong central gov\'t + co-equal federal judiciary. TANEY (1836-64) — pro-STATES\' RIGHTS; expanded slavery (Prigg 1842 fugitive slave clause; Dred Scott 1857 — Black Americans not citizens, voided Missouri Compromise; HASTENED CIVIL WAR by foreclosing political compromise). Dred Scott = WORST SCOTUS DECISION EVER; 13th + 14th Amendments effectively repudiated it.'
+            explanation: 'EK 2.11.B.1.iv: the president and states can DELAY IMPLEMENTATION of a Supreme Court decision. The Court has no enforcement power of its own (Federalist 78: "neither force nor will"), so resistance by state officials slowed school desegregation after Brown for more than a decade. Jurisdiction-stripping, constitutional amendments, and new appointments are also real limits, but none of them describes officials simply not carrying out a ruling.'
           }
         ]
       }

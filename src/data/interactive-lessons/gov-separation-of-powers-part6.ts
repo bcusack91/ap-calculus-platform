@@ -14,7 +14,7 @@ export const govSeparationOfPowersPart6Data = {
 | Section |
 |---|
 | 5-step framework for analyzing inter-branch conflicts |
-| Worked example: Trump v. United States (2024) presidential immunity |
+| Worked example: Obama's immigration executive actions (2014-2016) |
 | Required AP Gov foundational documents |
 | AP argumentative essay structure |
 
@@ -31,33 +31,34 @@ export const govSeparationOfPowersPart6Data = {
 |---|---|---|
 | **1. Identify the branches in conflict** | Which two (or more) branches are exercising authority? | Truman seizure: Executive vs. Congress (Taft-Hartley) |
 | **2. Identify the constitutional sources** | What article, section, clause, or amendment authorizes each branch's action? | Truman: Art II Take Care Clause vs. Art I § 8 (commerce/property) |
-| **3. Apply the relevant doctrinal framework** | Justice Jackson 3-tier (executive); judicial review (Marbury); separation-of-powers cases (Chadha, Clinton v. NY) | Truman: Jackson tier 3 (against express congressional will) |
+| **3. Apply the relevant constitutional principle** | Separation of powers, checks and balances, judicial review (Marbury), federalism (EK 1.6.A, 1.7.A) | Truman: no statute authorized the seizure and Congress had declined to grant that power, so the President exceeded his authority |
 | **4. Identify the practical political response** | What can the OTHER branches actually do? | Truman: Court ordered return of mills; Congress could appropriate response; impeachment unlikely |
 | **5. Predict the outcome and significance** | What does this case tell us about the balance of branches in this era? | Truman: Established judicial limit on executive emergency authority |
 
-## Worked Example — Trump v. United States (2024)
+## Worked Example — Obama's Immigration Executive Actions (2014-2016)
 
-**Facts:** After leaving office, former President Trump faced federal indictment in Washington, D.C. for actions related to the January 6, 2021 Capitol riot. Trump moved to dismiss arguing that former presidents have absolute immunity from criminal prosecution for acts taken while in office. The case reached the Supreme Court.
+The CED lists "Congressional response to the Obama administration's executive actions on immigration" as an illustrative example for Topic 1.6.
 
-**Step 1 — Branches in conflict:** Executive (Trump claiming immunity protected by Article II) vs. Judicial (federal court conducting criminal prosecution authorized by Congress's criminal statutes).
+**Facts:** After Congress failed to pass immigration reform, President Obama announced in November 2014 an executive program (DAPA) deferring deportation for millions of parents of citizens and permanent residents, expanding the 2012 DACA program. The House voted to block funding for the program, and Texas led 26 states in a lawsuit. A federal district court blocked the program in February 2015, an appeals court agreed, and in 2016 an evenly divided (4-4) Supreme Court left the block in place. The program never took effect and was rescinded in 2017.
+
+**Step 1 — Branches in conflict:** Executive (President acting through a directive to the Department of Homeland Security rather than through legislation) vs. Legislative (Congress, which writes immigration law and controls funding) — with the Judiciary as referee and the states as plaintiffs.
 
 **Step 2 — Constitutional sources:**
 
 | Argument | Constitutional source |
 |---|---|
-| Trump for absolute immunity | Article II Vesting Clause + structural presidential authority + *Nixon v. Fitzgerald* 1982 (civil immunity) |
-| Government against immunity | Article III judicial power + Article II Take Care Clause (no person above law) + *United States v. Nixon* 1974 (executive privilege not absolute) |
+| President for the program | Article II vesting + "take Care that the Laws be faithfully executed" — executive discretion over enforcement priorities (EK 2.4.A.2.iv) |
+| Opponents against the program | Article I gives Congress power over naturalization and lawmaking; a program this large rewrote the law rather than enforcing it; the power of the purse |
 
-**Step 3 — Doctrinal framework:** *Nixon v. Fitzgerald* 1982 (absolute civil immunity for official acts as president) + *Clinton v. Jones* 1997 (no civil immunity for unofficial pre-presidential acts) + *United States v. Nixon* 1974 (no absolute immunity from criminal subpoena). The Court had not previously addressed criminal immunity for former presidents.
+**Step 3 — Principle applied:** SEPARATION OF POWERS and CHECKS AND BALANCES (EK 1.6.A.1): the President used directives to the bureaucracy when his agenda stalled in Congress (EK 2.5.A.3); Congress answered with its funding power; the courts reviewed whether the executive exceeded its authority.
 
-**Step 4 — Holding:** The Court held 6-3 (Roberts majority) that former presidents have:
-- ABSOLUTE immunity for actions within "core" constitutional authority (e.g., issuing pardons, vetoing legislation)
-- PRESUMPTIVE immunity for "official acts" (rebuttable by showing prosecution would not pose dangers of intrusion on executive function)
-- NO immunity for "unofficial acts"
+**Step 4 — Practical political response:** The House defunding vote failed in the Senate, so the decisive check came from the courts — showing how MULTIPLE ACCESS POINTS let opponents who lose in one branch win in another (EK 1.6.B.1). States used federalism as a second avenue.
 
-**Step 5 — Significance:** Substantially expanded protection for former presidents from criminal accountability for acts arguably within their official duties; remanded to lower courts to determine which Trump actions fell into which category. The dissent (Sotomayor) warned this places presidents "above the law" for any conduct plausibly characterized as "official."
+**Step 5 — Significance:** Executive action can move faster than Congress, but it is fragile: courts can block it, and the next president can reverse it. The episode illustrates the CED's point that separation of powers constrains national policymaking (EK 2.15.B.2).
 
-## Required AP Gov Foundational Documents
+## Required AP Gov Foundational Documents (9 of the 13)
+
+The other four required documents — Federalist No. 39, the Emancipation Proclamation, the Gettysburg Address, and the core principles of Adam Smith's *Wealth of Nations* — bear less directly on separation of powers.
 
 | Document | Year | Separation-of-powers relevance |
 |---|---|---|
@@ -77,7 +78,7 @@ export const govSeparationOfPowersPart6Data = {
 |---|---|
 | **THESIS** | Clear claim with reasoning (e.g., "Increased presidential use of executive orders has weakened the framers' separation-of-powers design because...") |
 | **EVIDENCE 1** | Primary source from required documents (e.g., Federalist 51 quote) |
-| **EVIDENCE 2** | Specific historical example (e.g., Obama DACA 2012, Trump travel ban 2017) |
+| **EVIDENCE 2** | Specific historical example (e.g., Obama DACA 2012 and DAPA 2014, Trump travel ban 2017) |
 | **REASONING** | Connect evidence to thesis explicitly |
 | **ALTERNATIVE PERSPECTIVE** | Acknowledge opposing view (e.g., "Some argue executive orders are necessary because Congress is dysfunctional...") |
 | **REBUTTAL** | Refute the alternative perspective |
@@ -92,26 +93,26 @@ export const govSeparationOfPowersPart6Data = {
       exercise: {
         questions: [
           {
-            question: "Which best describes the Supreme Court's holding in Trump v. United States (2024)?",
+            question: "In the 2014-2016 dispute over President Obama's immigration executive actions, which event was a JUDICIAL check on the executive branch?",
             options: [
-              "Former presidents have absolute immunity for core constitutional acts, presumptive immunity for other official acts, and no immunity for unofficial conduct",
-              "Former presidents have no immunity, so they may be prosecuted for vetoes, pardons, and other official acts just like any other citizen",
-              "Former presidents have absolute immunity for all conduct in office, including personal, campaign, and private business acts",
-              "Former presidents have immunity only if Congress first declines to impeach them, as the Impeachment Judgment Clause requires"
+              "A federal district court blocked the program from taking effect, and an evenly divided Supreme Court left that order in place in 2016",
+              "The House of Representatives voted to deny funding for carrying out the President's immigration program",
+              "President Obama announced the program through executive action after immigration reform stalled in Congress",
+              "The Senate held confirmation hearings for the President's nominee to lead Homeland Security"
             ],
             correctAnswer: 0,
-            explanation: 'Trump v. United States (2024, Roberts 6-3): TIERED immunity for former presidents — (1) ABSOLUTE for "core" constitutional authority (pardons, vetoes, removal); (2) PRESUMPTIVE for "official acts" (rebuttable by no-intrusion-on-executive showing); (3) NO immunity for "unofficial acts." Remanded to lower courts. Sotomayor dissent (joined by Kagan + Jackson): places presidents "above the law" for any plausibly "official" conduct → expanded presidential authority + weakened Watergate-era accountability norms.'
+            explanation: 'Judicial check (EK 1.6.A.1, 1.6.B.1): after Texas and 25 other states sued, federal courts blocked the program, and the 4-4 Supreme Court split left the block in place — the courts limited the executive. The House defunding vote was a LEGISLATIVE check; the announcement was the executive action being checked; confirmation hearings are a Senate check on appointments, not on this program.'
           },
           {
-            question: "Which best describes Justice Jackson's three-tier framework from Youngstown Sheet & Tube Co. v. Sawyer (1952)?",
+            question: "A student argues that presidents need broad authority to act quickly through executive orders when Congress is gridlocked. Which required foundational document best supports this argument?",
             options: [
-              "Presidential power is greatest with congressional authorization, uncertain when Congress is silent, and weakest when defying Congress",
-              "Presidential power is greatest when Congress is silent, uncertain when it authorizes action, and weakest when the courts have not yet ruled on the issue",
-              "Presidential power is equal in all three settings, because the Vesting Clause gives the President full executive power whatever Congress has said or done",
-              "Presidential power is greatest in wartime, uncertain in peacetime, and weakest during emergencies that Congress has formally declared by statute"
+              "Federalist No. 70, which argues that energy in one unified office of chief magistrate is essential to good government",
+              "Federalist No. 51, which argues that each branch must be given the means to resist encroachment by the others",
+              "Brutus No. 1, which warns that a distant and powerful national government will threaten the liberty of the people",
+              "Federalist No. 10, which argues that a large republic will control the effects of faction by multiplying competing interests"
             ],
             correctAnswer: 0,
-            explanation: 'Jackson concurrence in Youngstown (1952): three-tier framework. TIER 1 MAX (Congress authorization): authority = own + delegated. TIER 2 AMBIGUOUS "twilight zone" (Congress silent): only own independent powers; concurrent zone possible. TIER 3 MIN (against express/implied Congress): "lowest ebb"; constitutional only if Congress lacks power to act. Truman steel seizure = Tier 3 (Congress rejected authority in Taft-Hartley 1947) → unconstitutional.'
+            explanation: 'EK 2.6.A.1: Federalist No. 70 justifies a single executive, arguing a strong executive is "essential to the protection of the community against foreign attacks… [and] to the steady administration of the laws." Federalist No. 51 stresses checks on every branch (better for the opposing argument), Brutus No. 1 warns against concentrated national power, and Federalist No. 10 concerns factions, not executive power.'
           }
         ]
       }
@@ -123,10 +124,10 @@ export const govSeparationOfPowersPart6Data = {
       exercise: {
         questions: [
           {
-            prompt: "Justice Jackson's tier in which the President acts against the express or implied will of Congress (lowest ebb of presidential authority).",
-            answer: 'Tier 3',
-            acceptableAnswers: ['Tier 3', 'tier 3', 'Tier three', '3', 'Third tier', 'lowest ebb', 'minimum tier'],
-            hint: 'The tier in which Truman\'s steel seizure was held unconstitutional.'
+            prompt: "A presidential directive that manages the federal government, implied by the President's vested executive power — the tool Obama used for his 2014 immigration program: an executive ___.",
+            answer: 'order',
+            acceptableAnswers: ['order', 'orders', 'executive order', 'executive action'],
+            hint: 'EK 2.4.A.2.iv.'
           },
           {
             prompt: "The Federalist Paper in which Hamilton defended judicial review and described the judiciary as the 'least dangerous branch.'",
@@ -135,10 +136,10 @@ export const govSeparationOfPowersPart6Data = {
             hint: 'Hamilton\'s argument: courts have neither force nor will, only judgment.'
           },
           {
-            prompt: "The 1982 case establishing absolute civil immunity for sitting presidents for acts taken in their official capacity.",
-            answer: 'Nixon v. Fitzgerald',
-            acceptableAnswers: ['Nixon v. Fitzgerald', 'Nixon v Fitzgerald', 'Fitzgerald v. Nixon', 'nixon v fitzgerald'],
-            hint: 'Civil immunity case (different from US v. Nixon 1974 which was criminal).'
+            prompt: "The 1993 law Congress passed to modify the impact of a Supreme Court free-exercise ruling (a CED illustrative example for checks and balances): the Religious Freedom ___ Act.",
+            answer: 'Restoration',
+            acceptableAnswers: ['Restoration', 'restoration'],
+            hint: 'RFRA — Congress checking the Court by statute (EK 2.11.B.1.i).'
           }
         ]
       }
@@ -146,27 +147,27 @@ export const govSeparationOfPowersPart6Data = {
     {
       id: 'govsep6-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Apply Justice Jackson's three-tier framework.**`,
+      content: `**Identify the check in the immigration dispute.**`,
       exercise: {
         dropdowns: [
           {
-            label: "Congress passes a law authorizing the President to impose tariffs on national-security grounds; the President imposes tariffs accordingly. This falls in Justice Jackson's: ___",
-            options: ['Tier 1 (maximum authority — congressional authorization)', 'Tier 2 (twilight zone — congressional silence)', 'Tier 3 (lowest ebb — against congressional will)', 'Outside Justice Jackson framework entirely']
+            label: "The House votes to deny funds for carrying out the President's immigration program: ___",
+            options: ['Legislative check on the executive', 'Judicial check on the executive', 'Executive check on the legislature', 'Judicial check on the legislature']
           },
           {
-            label: "Congress is silent on a matter; the President acts on the basis of his own Article II authority. This falls in Justice Jackson's: ___",
-            options: ['Tier 1 (maximum authority — congressional authorization)', 'Tier 2 (twilight zone — congressional silence)', 'Tier 3 (lowest ebb — against congressional will)', 'Outside Justice Jackson framework entirely']
+            label: "A federal court orders that the program may not take effect while the lawsuit continues: ___",
+            options: ['Legislative check on the executive', 'Judicial check on the executive', 'Executive check on the legislature', 'Judicial check on the legislature']
           },
           {
-            label: "Congress has expressly prohibited a particular executive action; the President takes that action anyway. This falls in Justice Jackson's: ___",
-            options: ['Tier 1 (maximum authority — congressional authorization)', 'Tier 2 (twilight zone — congressional silence)', 'Tier 3 (lowest ebb — against congressional will)', 'Outside Justice Jackson framework entirely']
+            label: "The President threatens to veto any bill that would overturn the program: ___",
+            options: ['Legislative check on the executive', 'Judicial check on the executive', 'Executive check on the legislature', 'Judicial check on the legislature']
           }
         ],
-        correctAnswers: ['Tier 1 (maximum authority — congressional authorization)', 'Tier 2 (twilight zone — congressional silence)', 'Tier 3 (lowest ebb — against congressional will)'],
-        hint1: 'Congress affirmatively authorizes → maximum.',
-        hint2: 'Congress silent → twilight zone.',
-        hint3: 'Congress affirmatively prohibits → lowest ebb (Truman steel seizure scenario).',
-        explanation: 'Jackson three-tier framework application: Tier 1 (MAX) = Congress authorizes (e.g., tariff statute → presidential tariffs). Tier 2 (TWILIGHT) = Congress silent (concurrent authority possible). Tier 3 (LOWEST EBB) = Congress prohibits (Truman steel seizure scenario; constitutional only if Congress lacks the power to act).'
+        correctAnswers: ['Legislative check on the executive', 'Judicial check on the executive', 'Executive check on the legislature'],
+        hint1: 'The power of the purse belongs to Congress.',
+        hint2: 'Courts reviewing executive action.',
+        hint3: 'The veto is the President\'s check on Congress.',
+        explanation: 'EK 1.6.A.1: each branch checks the others. Defunding = Congress checking the President; a court injunction = the judiciary checking the President; a veto threat = the President checking Congress. No court ruled on an act of Congress here.'
       }
     },
     {
@@ -184,18 +185,18 @@ export const govSeparationOfPowersPart6Data = {
               "A thesis that both sides have good points, supported mainly by personal opinion and a single news story"
             ],
             correctAnswer: 0,
-            explanation: 'Full-credit AP essay: THESIS = clear claim + reasoning. EVIDENCE 1 = primary source (Federalist 51 "ambition counteract ambition"). EVIDENCE 2 = specific examples (DACA 2012, travel ban 2017, student-loan forgiveness 2022) + statistical trend (~50 EOs/year on substantive policy) + judicial response (West Virginia v. EPA 2022 major-questions, Loper Bright 2024). ALTERNATIVE PERSPECTIVE: gridlock necessitates EOs. REBUTTAL: polarization partly product of EO bypass (parties expect to govern from White House regardless of Congress). Framers tolerated inefficiency to force inter-branch deliberation.'
+            explanation: 'Full-credit AP essay: THESIS = clear claim + reasoning. EVIDENCE 1 = primary source (Federalist 51 "ambition counteract ambition"). EVIDENCE 2 = specific examples (DACA 2012, travel ban 2017, student-loan forgiveness 2022) + statistical trend (~50 EOs/year on substantive policy) + judicial response (courts blocking DAPA 2015-16). ALTERNATIVE PERSPECTIVE: gridlock necessitates EOs. REBUTTAL: polarization partly product of EO bypass (parties expect to govern from White House regardless of Congress). Framers tolerated inefficiency to force inter-branch deliberation.'
           },
           {
-            question: "AP scenario: Congress passes a statute creating an Independent Counsel with prosecutorial authority over executive-branch officials. The President argues this violates the Take Care Clause by removing prosecutorial discretion from his control. Which framework best applies?",
+            question: "AP scenario: After failing to stop a presidential immigration program in Congress, a coalition of states and interest groups won a court order blocking it. Which concept does this sequence best illustrate?",
             options: [
-              "Morrison v. Olson, which upheld the Independent Counsel law because the counsel's role was limited and the Attorney General could remove for good cause",
-              "Marbury v. Madison, which held that Congress may never create offices outside the three branches established by the Constitution",
-              "United States v. Nixon, which held that independent prosecutors of executive officials must be appointed and removable at will by the President alone, with no role for Congress",
-              "Clinton v. City of New York, which held that Congress may never limit the President's power to remove an independent counsel"
+              "Separation of powers creates multiple access points for stakeholders seeking to influence policy, so those who lose in one branch can try another",
+              "Federalism requires the states to approve every federal executive action before it can take effect",
+              "Judicial restraint bars federal courts from reviewing any action that the President takes under Article II, even when states sue",
+              "The Supremacy Clause lets states nullify any federal policy their legislatures oppose"
             ],
             correctAnswer: 0,
-            explanation: 'Morrison v. Olson (1988, 7-1): UPHELD Independent Counsel statute against unitary-executive challenge. (1) Did not impermissibly interfere with Art II — limited jurisdiction + AG retained for-cause removal. (2) Court rejected STRICT FORMALIST in favor of FUNCTIONAL analysis (does structural innovation prevent executive performing constitutional functions?). Scalia LONE DISSENT: all executive power belongs to President alone (unitary-executive); statute fundamentally subverts. Statute lapsed 1999, not renewed. Modern Court (Seila Law 2020 + Trump v. US 2024) moved toward Scalia → Morrison precedential force uncertain.'
+            explanation: 'EK 1.6.B.1: separation of powers and checks and balances create MULTIPLE ACCESS POINTS for stakeholders and institutions to influence public policy. Opponents who lost in Congress turned to the courts and won. States do not approve federal executive actions, courts do review executive actions, and the Supremacy Clause makes valid federal law supreme over state law, not the reverse.'
           }
         ]
       }

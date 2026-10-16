@@ -16,7 +16,7 @@ export const apesBiodiversityPart2Data = {
 | 🧬 Genetic Diversity and Adaptive Potential |
 | Population Bottlenecks and Inbreeding |
 | Richness, Evenness and Percent Composition |
-| Simpson's Diversity Index |
+| Comparing Two Communities |
 | Why Diversity Builds Resilience |
 
 > 🔑 **Key Concept:** Part 1 named the three levels of biodiversity. This part goes deeper into two of them. Genetic diversity decides whether a **population** can survive a new stress. Species diversity can be **measured** from field counts, and the number you calculate predicts how well an **ecosystem** will recover from a disruption.
@@ -140,50 +140,26 @@ One species makes up 85% of Meadow B, a clear sign of low evenness.
 
 ---
 
-## Simpson's Diversity Index
+## Comparing Two Communities
 
-Field ecologists combine richness and evenness into one number. A version you can calculate by hand is **Simpson's diversity index**:
+The CED measures species diversity with **species richness**, the number of different species in an ecosystem (CED 2.1). When two communities have the same richness, compare **how evenly** their individuals are spread among the species.
 
-$$D = 1 - \\Sigma \\left(\\frac{n}{N}\\right)^2$$
-
-**What D means:** the probability that two individuals picked at random from the sample (with replacement) belong to **different** species. D runs from **0** (only one species) up toward **1** (many species, evenly spread). Higher D = more diverse.
-
-### Worked Example: Meadow A vs Meadow B
-
-**Meadow A**
-
-| Species | $n/N$ | $(n/N)^2$ |
+| | Meadow A | Meadow B |
 |---|---|---|
-| Clover | 25/100 = 0.25 | 0.0625 |
-| Goldenrod | 0.25 | 0.0625 |
-| Milkweed | 0.25 | 0.0625 |
-| Aster | 0.25 | 0.0625 |
-| **Sum** | | **0.25** |
+| Species richness | 4 | 4 |
+| Largest species' share | 25% (clover) | 85% (clover) |
+| Smallest species' share | 25% | 5% |
+| Diversity | **Higher**: individuals spread evenly | **Lower**: one species dominates |
 
-$D = 1 - 0.25 = $ **0.75**
+Same four species, but Meadow A is more diverse, because no single species dominates. If clover suffers a disease, Meadow B loses most of its plants; Meadow A loses only a quarter.
 
-**Meadow B**
+### Steps for Comparing Any Two Samples
+1. Count the species in each sample (richness).
+2. Convert each species count to a percent of the total.
+3. If richness is equal, the sample whose percents are closer to equal is more diverse.
+4. If richness differs, say so first, then compare how evenly individuals are spread.
 
-| Species | $n/N$ | $(n/N)^2$ |
-|---|---|---|
-| Clover | 85/100 = 0.85 | 0.7225 |
-| Goldenrod | 0.05 | 0.0025 |
-| Milkweed | 0.05 | 0.0025 |
-| Aster | 0.05 | 0.0025 |
-| **Sum** | | **0.73** |
-
-$D = 1 - 0.73 = $ **0.27**
-
-Same four species, but Meadow A's index is nearly three times higher, because evenness counts.
-
-### Steps for Any Sample
-1. Add up all individuals to get $N$.
-2. Divide each species count by $N$.
-3. Square each fraction.
-4. Add the squares.
-5. Subtract the sum from 1.
-
-> 🔑 **AP Connection:** Some textbooks report Simpson's index without the "1 minus" step (where **lower** means more diverse), and Part 1's Shannon index (H) uses logarithms instead. Read the formula a question gives you, and always state which direction means "more diverse" in your answer.
+> 🔑 **AP Connection:** Diversity indices such as Simpson's or Shannon's are beyond the CED. Answer with richness and percent composition, and always say which sample is more diverse and why.
       `
     },
     {
@@ -196,17 +172,17 @@ A student surveys Plot C and counts 50 trees: 20 oak, 15 maple, 10 hickory and 5
 
 **1)** What percent of the trees in Plot C are oak? (number only)
 
-**2)** Calculate Simpson's diversity index, $D = 1 - \\Sigma (n/N)^2$, for Plot C. (decimal)
+**2)** What percent of the trees in Plot C are beech? (number only)
 
-**3)** Plot D also has 50 trees, but 45 are oak and 5 are maple. Calculate D for Plot D. (decimal)
+**3)** Plot D also has 50 trees, but 45 are oak and 5 are maple. What is the species richness of Plot D?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['40', '0.7', '0.18'],
+        correctAnswers: ['40', '10', '2'],
         hint1: 'Percent composition = (20 ÷ 50) × 100.',
-        hint2: 'The fractions are 0.4, 0.3, 0.2 and 0.1. Square each one, add the squares, then subtract from 1.',
-        hint3: 'The fractions are 0.9 and 0.1, so the squares are 0.81 and 0.01.',
-        explanation: '1) 20 ÷ 50 = 0.40, or 40%. 2) 0.16 + 0.09 + 0.04 + 0.01 = 0.30, so D = 1 − 0.30 = 0.70. 3) 0.81 + 0.01 = 0.82, so D = 1 − 0.82 = 0.18: lower richness and lower evenness give a much lower index.'
+        hint2: 'Percent composition = (5 ÷ 50) × 100.',
+        hint3: 'Richness is the number of different species.',
+        explanation: '1) 20 ÷ 50 = 0.40, or 40%. 2) 5 ÷ 50 = 0.10, or 10%. 3) Plot D has only oak and maple, so its richness is 2; with lower richness and 90% oak, it is far less diverse than Plot C.'
       }
     },
     {
@@ -248,7 +224,7 @@ When habitat is lost, species do not vanish at random. The CED pattern:
       exercise: {
         questions: [
           {
-            question: 'Forest Plot X has a Simpson\'s diversity index (D = 1 − Σ(n/N)²) of 0.82, and Plot Y has an index of 0.41. Both plots contain the same six tree species. What can you conclude?',
+            question: 'Forest Plots X and Y contain the same six tree species. In Plot X each species makes up 15 to 20 percent of the trees; in Plot Y one species makes up 80 percent. What can you conclude?',
             options: [
               'Plot X contains more tree species than Plot Y contains',
               'Trees in Plot X are spread more evenly among the six species',
@@ -256,7 +232,7 @@ When habitat is lost, species do not vanish at random. The CED pattern:
               'Plot Y holds more trees in total than Plot X holds'
             ],
             correctAnswer: 1,
-            explanation: 'With richness fixed at six species, the only way the index can differ is through evenness, so Plot X is more even. Simpson\'s index does not measure genetic variation, and it uses proportions, so it says nothing about total tree counts.'
+            explanation: 'Both plots have a richness of six, so the difference is in how evenly the trees are spread, and Plot X is more even and more diverse. Percent composition says nothing about genetic variation or total tree counts.'
           },
           {
             question: 'A severe drought strikes two grasslands of equal area. Grassland A has 16 plant species and Grassland B has 2. Based on field studies, which outcome is most likely?',

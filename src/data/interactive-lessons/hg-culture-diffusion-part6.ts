@@ -158,11 +158,11 @@ Use Stimulus 2.
             options: [
               'Sequent occupance',
               'Cultural relativism',
-              'Reverse hierarchical diffusion',
+              'Hierarchical diffusion',
               'Cultural divergence'
             ],
             correctAnswer: 0,
-            explanation: 'A later group\'s building placed directly on an earlier group\'s sacred site is a clear layer of sequent occupance. Relativism is an attitude, and nothing here moved up an urban hierarchy.'
+            explanation: 'A later group\'s building placed directly on an earlier group\'s sacred site is a clear layer of sequent occupance. Relativism is an attitude, and nothing here moved through an urban hierarchy.'
           },
           {
             question: 'The global coffee chain and English tourist signs on the plaza are most directly evidence of:',

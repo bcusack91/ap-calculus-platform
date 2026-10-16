@@ -13,35 +13,28 @@ export const govJudiciaryPart2Data = {
 
 | Section |
 |---|
-| Cert process — how cases reach SCOTUS |
+| How cases reach SCOTUS |
 | Oral argument + conference + opinion drafting |
 | Types of opinions (majority, concurring, dissenting, plurality) |
 | Stare decisis + overturning precedent |
 | Judicial nominations + confirmations |
 
-> 🔑 Key idea: Most SCOTUS decisions go through a multi-step process — CERT PETITION → CERT GRANT (RULE OF FOUR) → BRIEFING → ORAL ARGUMENT → CONFERENCE → OPINION ASSIGNMENT → DRAFTING → CIRCULATION → ANNOUNCEMENT — that takes a year or more from start to finish.
+> 🔑 Key idea: The Supreme Court hears a small number of appeals each year, decides them through MAJORITY opinions that set PRECEDENT (with CONCURRING and DISSENTING opinions alongside), relies on STARE DECISIS while sometimes overturning precedent as its membership changes, and is shaped over decades by PRESIDENTIAL APPOINTMENTS and SENATE CONFIRMATION.
       `
     },
     {
       id: 'govjudic2-content',
       type: 'text' as const,
       content: `
-## Cert Process
+## How Cases Reach SCOTUS
 
-| Step | Detail |
-|---|---|
-| **Cert petition filed** | Losing party in lower court files PETITION FOR WRIT OF CERTIORARI; ~7,000-8,000 filed annually |
-| **Cert pool review** | Most justices participate in 'cert pool' — clerks divide petitions and write memos summarizing each |
-| **Discuss list** | Chief Justice circulates 'discuss list' of petitions worth considering; ~99% of petitions denied without further consideration |
-| **Conference vote** | Justices vote on cert grant; RULE OF FOUR — only 4 of 9 votes needed to grant cert (minority protection) |
-| **Cert granted** | ~70-80 cases per year (~1% of petitions); briefing schedule established |
-| **Cert denied** | ~99% of petitions; lower court ruling stands; not a ruling on merits |
+Almost every Supreme Court case arrives on APPEAL from a federal court of appeals or a state supreme court. The losing party asks the Court to hear the case, and the justices choose only about 70-80 of the ~7,000-8,000 requests each year (the formal request is called a petition for a writ of certiorari). When the Court declines, the lower-court ruling stands. The mechanics of choosing cases are not tested; what matters for the exam is what the Court does with the cases it decides.
 
 ## Briefing + Oral Argument + Conference + Opinion
 
 | Step | Detail |
 |---|---|
-| **Briefing** | Petitioner brief (50 pages) + respondent brief + reply brief + AMICUS CURIAE briefs (often dozens) |
+| **Briefing** | Petitioner brief (50 pages) + respondent brief + reply brief + AMICUS CURIAE ('friend of the court') briefs from interest groups (EK 5.6.A.1) — often dozens |
 | **Oral argument** | Typically 30 min/side; justices interrupt frequently; recorded + transcripts released same day |
 | **Conference** | Friday after argument; only justices present; CJ speaks first then by seniority; tentative vote |
 | **Opinion assignment** | If CJ in majority, CJ assigns; if not, most senior justice in majority assigns |
@@ -55,7 +48,7 @@ export const govJudiciaryPart2Data = {
 | **Majority** | Opinion of 5+ justices establishing binding precedent |
 | **Concurring** | Justice agrees w/ result but writes separately to explain different reasoning |
 | **Dissenting** | Justice disagrees w/ majority; not binding but may influence future cases (e.g., Harlan's *Plessy* dissent vindicated by *Brown*) |
-| **Plurality** | When no opinion gets 5 votes, plurality (most votes) is precedent on narrowest grounds (*Marks v. United States* rule) |
+| **Plurality** | When no single opinion gets 5 votes, the opinion with the most votes announces the judgment |
 | **Per curiam** | Unsigned opinion of the Court |
 | **In chambers** | Single-justice opinion (e.g., emergency stay) |
 
@@ -64,9 +57,9 @@ export const govJudiciaryPart2Data = {
 | Element | Detail |
 |---|---|
 | **Stare decisis defined** | 'Stand by what is decided' — respect for prior judicial decisions; provides PREDICTABILITY + STABILITY |
-| **Casey 4-factor test** (1992) | (1) Workability of rule; (2) reliance interests; (3) doctrinal development; (4) factual changes |
-| **Major overrulings** | *Brown v. Board* (1954) overruled *Plessy v. Ferguson* (1896); *Lawrence v. Texas* (2003) overruled *Bowers v. Hardwick* (1986); *Dobbs v. Jackson Women's Health* (2022) overruled *Roe v. Wade* (1973) + *Casey* (1992); *Janus v. AFSCME* (2018) overruled *Abood* (1977) |
-| **Recent debate** | Modern conservative majority has overturned multiple precedents (Dobbs, Janus, Citizens United partial, Bruen partial) — generating debate about stare decisis |
+| **Major overrulings** | *Brown v. Board* (1954) overruled the 'separate but equal' doctrine of *Plessy v. Ferguson* (1896); *Dobbs v. Jackson Women's Health* (2022) overruled *Roe v. Wade* (1973) + *Casey* (1992) |
+| **Why precedent changes** | EK 2.9.A.2: ideological changes in the Court's composition due to PRESIDENTIAL APPOINTMENTS have led the Court to establish new precedents or reject existing ones — e.g., the 6-3 majority formed by 2017-2020 appointments decided *Dobbs* |
+| **The debate** | Overturning precedent fuels the activism vs restraint debate (EK 2.11.A.1): critics call it activism; supporters say a wrongly decided precedent should not stand |
 
 ## Judicial Nominations + Confirmations
 
@@ -75,27 +68,26 @@ export const govJudiciaryPart2Data = {
 | **Vacancy** | Vacancy occurs (death, retirement, resignation); president nominates |
 | **Vetting** | White House counsel + ABA review nominee (Trump dropped ABA pre-nomination role) |
 | **Senate Judiciary Committee** | Committee hearings (sometimes contentious — Bork 1987, Thomas 1991, Kavanaugh 2018); committee vote |
-| **Filibuster history** | Until 2017, filibuster could block SCOTUS nominees (60 votes needed); McConnell invoked NUCLEAR OPTION 2.0 (April 2017) — eliminated filibuster for SCOTUS nominees (Gorsuch confirmed 54-45) |
 | **Floor vote** | Simple majority confirms; tie broken by VP |
-| **Modern partisan tilt** | Trump's 3 SCOTUS appointments (Gorsuch 2017, Kavanaugh 2018, Barrett 2020) cemented 6-3 conservative majority |
+| **Modern partisan tilt** | Trump's 3 SCOTUS appointments (Gorsuch 2017, Kavanaugh 2018, Barrett 2020) cemented 6-3 conservative majority — the president's longest-lasting influence comes from life-tenured judicial appointments (EK 2.5.A.2) |
       `
     },
     {
       id: 'govjudic2-quiz',
       type: 'multiple-choice' as const,
-      content: `**Concept Check — Cert Process & Opinions** 🎯`,
+      content: `**Concept Check — Precedent & Opinions** 🎯`,
       exercise: {
         questions: [
           {
-            question: "Which best describes the 'Rule of Four' for granting certiorari?",
+            question: "Three new justices joined the Supreme Court between 2017 and 2020, and in 2022 the Court overturned *Roe v. Wade* in *Dobbs v. Jackson Women's Health Organization*. Which concept does this sequence best illustrate?",
             options: [
-              "Four of nine justices can grant certiorari, letting a minority place a case on the docket even though five votes decide it",
-              "Four circuit courts must disagree before the Court may grant certiorari, so most legal splits are settled below",
-              "Four of nine justices must join an opinion for it to set binding precedent for the lower federal courts",
-              "Four justices may overrule a precedent if the Chief Justice agrees, since that makes a working majority"
+              "Ideological changes in the Court's membership through presidential appointments can lead it to reject existing precedents",
+              "Congress can pass legislation that modifies the impact of a prior Supreme Court decision",
+              "Judicial restraint requires the Court to keep its earlier precedents in place in every case",
+              "Life tenure keeps the Court's ideological balance the same from one decade to the next"
             ],
             correctAnswer: 0,
-            explanation: 'RULE OF FOUR: only 4 of 9 justices needed to GRANT cert (5 needed for MAJORITY on merits). (1) MINORITY PROTECTION — minority (4) can force Court to hear; (2) PRACTICAL — ~1% granted (~70-80 of ~7,000-8,000); (3) ORIGIN — informal rule after Judiciary Act 1925 (Judges\' Bill) gave SCOTUS broad cert discretion; (4) "Rule of four to grant, five to win" — cert grant doesn\'t guarantee victory.'
+            explanation: 'EK 2.9.A.2: ideological changes in the composition of the Court due to presidential appointments have led it to establish new precedents or reject existing ones. Dobbs (2022) overruled Roe (1973) after appointments created a 6-3 majority. Congress did not pass a law here; restraint favors keeping precedent but does not require it; and life tenure is exactly why each new appointment can shift the Court for decades (EK 2.5.A.2).'
           },
           {
             question: "Which best describes the doctrine of stare decisis and recent SCOTUS practice?",
@@ -106,7 +98,7 @@ export const govJudiciaryPart2Data = {
               "Stare decisis binds Congress to its past statutes, so the Roberts Court has struck down laws that conflict with older acts"
             ],
             correctAnswer: 0,
-            explanation: 'STARE DECISIS = "stand by what is decided" → PREDICTABILITY + STABILITY. Casey (1992) 4-factor: (1) WORKABILITY; (2) RELIANCE INTERESTS; (3) DOCTRINAL DEVELOPMENT; (4) FACTUAL CHANGES. Modern conservative majority overrulings: Dobbs (2022) overruled Roe + Casey; Janus (2018) overruled Abood; Citizens United (2010) overruled parts of Austin + McConnell. Significant debate whether stare decisis remains meaningful constraint.'
+            explanation: 'STARE DECISIS = "stand by what is decided" → PREDICTABILITY + STABILITY. Courts usually follow precedent (EK 2.9.A.1), but appointments that change the Court\'s ideology can lead it to reject precedent (EK 2.9.A.2): Dobbs (2022) overruled Roe + Casey; Brown (1954) rejected Plessy\'s separate-but-equal doctrine. Significant debate whether stare decisis remains a meaningful constraint.'
           }
         ]
       }
@@ -114,14 +106,14 @@ export const govJudiciaryPart2Data = {
     {
       id: 'govjudic2-input',
       type: 'input-boxes' as const,
-      content: `**Sprint quiz — fill in the number**`,
+      content: `**Sprint quiz**`,
       exercise: {
         questions: [
           {
-            prompt: "Number of votes needed to GRANT certiorari (Rule of Four).",
-            answer: '4',
-            acceptableAnswers: ['4', 'four'],
-            hint: 'Minority protection — only need majority to win on merits.'
+            prompt: "Latin term for the 'friend of the court' brief an interest group files to give justices more information about a case.",
+            answer: 'amicus curiae',
+            acceptableAnswers: ['amicus curiae', 'amicus', 'amicus brief', 'amicus curiae brief'],
+            hint: 'EK 5.6.A.1.'
           },
           {
             prompt: "Number of justices on the Supreme Court (since 1869).",
@@ -130,10 +122,10 @@ export const govJudiciaryPart2Data = {
             hint: 'Set by statute, not Constitution; Judiciary Act 1869.'
           },
           {
-            prompt: "Year filibuster eliminated for SCOTUS nominees (nuclear option 2.0).",
-            answer: '2017',
-            acceptableAnswers: ['2017'],
-            hint: 'Same year Gorsuch confirmed 54-45.'
+            prompt: "Type of opinion written by a justice who disagrees with the Court's decision (one word).",
+            answer: 'dissenting',
+            acceptableAnswers: ['dissenting', 'dissent', 'dissenting opinion', 'a dissent'],
+            hint: 'Not binding, but can shape future cases — Harlan in Plessy.'
           }
         ]
       }
@@ -153,14 +145,14 @@ export const govJudiciaryPart2Data = {
             options: ['Majority opinion', 'Concurring opinion', 'Dissenting opinion', 'Plurality opinion']
           },
           {
-            label: "When no opinion gets 5 votes; precedent established on NARROWEST GROUNDS (Marks rule): ___",
-            options: ['Majority opinion', 'Concurring opinion', 'Per curiam opinion', 'Plurality opinion']
+            label: "Opinion joined by at least five justices that states the Court's holding and sets BINDING PRECEDENT: ___",
+            options: ['Majority opinion', 'Concurring opinion', 'Dissenting opinion', 'Plurality opinion']
           }
         ],
-        correctAnswers: ['Concurring opinion', 'Dissenting opinion', 'Plurality opinion'],
+        correctAnswers: ['Concurring opinion', 'Dissenting opinion', 'Majority opinion'],
         hint1: 'Concurring = agrees with result, different reasoning.',
         hint2: 'Dissenting = disagrees with majority; e.g., Harlan in Plessy vindicated by Brown.',
-        hint3: 'Plurality = no 5-vote majority; precedent on narrowest grounds per Marks v. United States.'
+        hint3: 'Majority = the opinion of the Court; lower courts must follow it.'
       }
     },
     {
@@ -181,15 +173,15 @@ export const govJudiciaryPart2Data = {
             explanation: 'Modern judicial nominations INCREASINGLY PARTISAN: (1) BORK 1987 — rejected 42-58 ("to bork"); (2) THOMAS 1991 — Hill testimony, 52-48; (3) FILIBUSTER USE 2003-05 + Gang of 14; (4) NUCLEAR OPTION 1.0 — Reid 2013 (lower courts + executive); (5) GARLAND BLOCKADE 2016 — McConnell 11-month refusal; (6) NUCLEAR OPTION 2.0 — McConnell 2017 (SCOTUS) → Gorsuch 54-45; (7) KAVANAUGH 2018 — Ford testimony, 50-48 (narrowest since Stanley Matthews 1881); (8) BARRETT 2020 — 8 days before election (vs. Garland refused 8 months before).'
           },
           {
-            question: "How did the Judiciary Act of 1925 (Judges' Bill) transform SCOTUS's role?",
+            question: "In 1954 the Supreme Court unanimously ordered an end to racial segregation in public schools, a ruling that was deeply unpopular in much of the country. Which feature of the federal judiciary most directly allowed the justices to issue it?",
             options: [
-              "It gave the Court broad discretion through certiorari, letting it choose the few cases of national importance it hears",
-              "It required the Court to hear every appeal from federal courts, expanding its docket to thousands of cases a year",
-              "It fixed the Court at nine justices and barred Congress from changing the Court's size again",
-              "It granted the Court original jurisdiction over all federal crimes, making it the main trial court for felony cases nationwide"
+              "Life tenure, which frees justices from having to win reelection or reappointment",
+              "Senate confirmation, which requires justices to follow the views of the Senate majority",
+              "Original jurisdiction, which lets the Court decide any case before lower courts hear it",
+              "Judicial restraint, which requires justices to defer to the decisions of elected officials"
             ],
             correctAnswer: 0,
-            explanation: 'JUDICIARY ACT 1925 ("Judges\' Bill," championed by CJ Taft) → BROAD DISCRETIONARY JURISDICTION via cert. (1) BEFORE 1925 — must hear most appeals → unmanageable; (2) AFTER 1925 — chooses via CERT (~1% granted); (3) MODERN — shifted from ERROR-CORRECTION court → LAW-DECLARATION court (major constitutional + statutory questions of national importance); (4) RULE OF FOUR developed informally; (5) IMPACT — ~70-80 cases/year (down from ~250+) focused on circuit splits + major constitutional + national importance.'
+            explanation: 'EK 2.10.A.1: LIFE TENURE allows the Court to function independent of the current political climate, so it can deliver controversial or unpopular decisions — which in turn fuels debate about the Court\'s power. Brown v. Board (1954) is a required case. Senate confirmation happens once and does not bind later votes; the Court hears Brown-type cases on appeal, not under original jurisdiction; and restraint would have pointed toward deferring to the segregation laws, not striking them.'
           }
         ]
       }

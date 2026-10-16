@@ -16,7 +16,7 @@ export const govCongressPart1Data = {
 | Bicameral structure: House vs. Senate |
 | Article I powers: enumerated + implied + Necessary and Proper |
 | Representation: trustee, delegate, politico models |
-| Foundational documents: Federalist 10, 51, 53; Brutus 1 |
+| Required foundational documents: Federalist 10, 51; Brutus 1 (plus Federalist 53, not required) |
 
 > 🔑 Key idea: Congress is the FIRST branch of government in the Constitution (Article I) — the framers intended it to be the most powerful branch, with broad enumerated powers + the Necessary and Proper Clause + the power of the purse.
       `
@@ -67,7 +67,7 @@ The framers designed the bicameral Congress as a Great Compromise (Connecticut C
 
 > ⚡ Federalist 51 (Madison): bicameralism is one of the structural checks that 'ambition must be made to counteract ambition'; the Senate's longer term + smaller size + state-based equal representation creates a counterweight to the more democratic House.
 
-> ⚡ Federalist 53 (Madison): defends the 2-year House term as long enough for members to gain expertise but short enough to maintain accountability to constituents.
+> ⚡ Federalist 53 (Madison — context only, NOT one of the 13 required documents): defends the 2-year House term as long enough for members to gain expertise but short enough to maintain accountability to constituents.
 
 > ⚡ Brutus 1 (Anti-Federalist): warns that the Necessary and Proper Clause + Supremacy Clause + broad federal powers will allow Congress to swallow state authority and produce a consolidated government incompatible with republican liberty.
 

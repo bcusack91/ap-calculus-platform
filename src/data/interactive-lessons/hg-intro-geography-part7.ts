@@ -53,7 +53,6 @@ export const hgIntroGeographyPart7Data = {
 | **Diffusion (relocation)** | Trait carried by migrating people |
 | **Diffusion (contagious)** | Person-to-person rapid spread |
 | **Diffusion (hierarchical)** | Spreads top-down through tiers of places |
-| **Diffusion (reverse hierarchical)** | Spreads from small place upward (Walmart) |
 | **Diffusion (stimulus)** | Idea spreads, local form modified (McAloo Tikki) |
 | **Cultural hearth** (Sauer) | Place where an innovation originates |
 | **GIS / GPS / Remote sensing / VGI** | Data-collection technologies |
@@ -71,7 +70,7 @@ export const hgIntroGeographyPart7Data = {
           {
             question: "Which COMBINATION of concepts BEST explains why Walmart distribution centers locate at rural interstate interchanges in Arkansas, Missouri, and Oklahoma?",
             options: [
-              "Site, perceptual region and reverse hierarchical diffusion",
+              "Site, perceptual region and hierarchical diffusion",
               "Situation, accessibility and low friction of distance",
               "Cultural hearth, formal region and stimulus diffusion",
               "Time-space convergence, functional regions and the MAUP"

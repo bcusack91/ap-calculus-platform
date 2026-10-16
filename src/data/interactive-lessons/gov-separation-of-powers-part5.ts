@@ -71,15 +71,15 @@ export const govSeparationOfPowersPart5Data = {
 
 | Period | Dominant branch | Key developments |
 |---|---|---|
-| 1973-1980 (Watergate aftermath) | Legislative resurgence | War Powers Resolution 1973; Budget Act 1974; FECA 1974; FISA 1978; Inspector General Act 1978; Ethics in Government Act 1978; Nixon resigns August 1974 |
-| 1980-2000 (Reagan-Clinton) | Executive resurgence | Reagan unitary-executive theory; Iran-Contra; *Clinton v. New York* 1998 (line-item veto unconstitutional) |
+| 1973-1980 (Watergate aftermath) | Legislative resurgence | War Powers Resolution 1973; Budget Act 1974; FECA 1974; FISA 1978; Ethics in Government Act 1978; Nixon resigns August 1974 |
+| 1980-2000 (Reagan-Clinton) | Executive resurgence | Reagan unitary-executive theory; Iran-Contra; Clinton impeachment 1998-99 (CED illustrative) |
 | 2001-2009 (post-9/11 Bush) | Executive expansion | AUMF 2001; PATRIOT Act 2001; warrantless surveillance; Guantánamo; signing statements |
 | 2009-2017 (Obama) | Mixed; legislative gridlock + executive action | ACA 2010 (unified government); 2010-16 unified opposition Congress; DACA 2012; executive action on climate |
 | 2017-2021 (Trump 1) | Executive contested | Travel ban litigation; two impeachments (acquitted); January 6 |
 | 2021-2025 (Biden) | Mixed | ARPA 2021; IIJA 2021; CHIPS 2022; IRA 2022 (unified govt); 2022-24 divided govt |
-| 2024-present (modern federalism + admin-state revival) | Judicial revival | *Loper Bright* 2024 (Chevron overruled); *Trump v. United States* 2024 (presidential immunity); *Dobbs* 2022 |
+| 2017-present (Trump appointees) | Judicial reshaping | Three appointments create a 6-3 majority; *Dobbs* 2022 overrules *Roe* — appointments reshaping precedent (EK 2.9.A.2) |
 
-> 🔑 Key takeaway: The separation of powers is dynamic. Crisis (Civil War, Depression, WWII, Cold War, 9/11) tilts toward executive; constitutional moments (Reconstruction, Watergate) restore congressional authority; and the modern Court has been increasingly willing to check both branches via *Loper Bright*, the major-questions doctrine, and the modern federalism revival.
+> 🔑 Key takeaway: The separation of powers is dynamic. Crisis (Civil War, Depression, WWII, Cold War, 9/11) tilts toward executive; constitutional moments (Reconstruction, Watergate) restore congressional authority; and the modern Court, reshaped by appointments, has been increasingly willing to revisit precedent and check the other branches.
       `
     },
     {
@@ -108,7 +108,7 @@ export const govSeparationOfPowersPart5Data = {
               "Continuous growth since 1945, with no rollback, because Watergate-era reforms were all struck down by the Supreme Court before taking effect"
             ],
             correctAnswer: 0,
-            explanation: 'Post-WWII executive trajectory: (1) MASSIVE EXPANSION 1945-73 (Cold War + NSC + CIA 1947 + Korea + Vietnam without declaration; Schlesinger 1973 Imperial Presidency); (2) PARTIAL ROLLBACK 1973-80 (War Powers 1973, Budget 1974, FECA 1974, FISA 1978, IG Act 1978, Ethics 1978, Nixon resigns 1974); (3) RENEWED EXPANSION 1981-2000 (Reagan unitary-executive theory; Iran-Contra showed oversight limits); (4) DRAMATIC EXPANSION 2001-08 post-9/11 (AUMF 2001, PATRIOT 2001, warrantless surveillance, Guantánamo, signing statements); (5) MIXED 2009-present (continued exec expansion BUT judicial check via federalism revival, major-questions, Loper Bright 2024).'
+            explanation: 'Post-WWII executive trajectory: (1) MASSIVE EXPANSION 1945-73 (Cold War + NSC + CIA 1947 + Korea + Vietnam without declaration; Schlesinger 1973 Imperial Presidency); (2) PARTIAL ROLLBACK 1973-80 (War Powers 1973, Budget 1974, FECA 1974, FISA 1978, Ethics 1978, Nixon resigns 1974); (3) RENEWED EXPANSION 1981-2000 (Reagan unitary-executive theory; Iran-Contra showed oversight limits); (4) DRAMATIC EXPANSION 2001-08 post-9/11 (AUMF 2001, PATRIOT 2001, warrantless surveillance, Guantánamo, signing statements); (5) MIXED 2009-present (continued executive orders under both parties BUT renewed judicial and congressional checks).'
           }
         ]
       }
@@ -116,7 +116,7 @@ export const govSeparationOfPowersPart5Data = {
     {
       id: 'govsep5-input',
       type: 'input-boxes' as const,
-      content: `**Quick recall — name the era**`,
+      content: `**Quick recall — presidential power over time**`,
       exercise: {
         questions: [
           {
@@ -126,16 +126,16 @@ export const govSeparationOfPowersPart5Data = {
             hint: 'Passed over Nixon\'s veto in November 1973; widely flouted but never repealed.'
           },
           {
-            prompt: "The 1947 statute creating the National Security Council, the CIA, and unifying the armed forces under the Defense Department.",
-            answer: 'National Security Act',
-            acceptableAnswers: ['National Security Act', 'National Security Act of 1947', 'NSA 1947', 'national security act'],
-            hint: 'Truman-era reorganization that created the modern national-security executive apparatus.'
+            prompt: "The amendment, ratified in 1951 after FDR's four elections, that limits presidents to two terms: the ___ Amendment.",
+            answer: '22nd',
+            acceptableAnswers: ['22nd', '22', 'Twenty-Second', 'Twenty-second', 'twenty-second', '22nd Amendment'],
+            hint: 'EK 2.6.A.2 — concern about the expansion of presidential power.'
           },
           {
-            prompt: "The historian who coined the phrase 'Imperial Presidency' in his 1973 book.",
-            answer: 'Schlesinger',
-            acceptableAnswers: ['Schlesinger', 'Arthur Schlesinger', 'Arthur Schlesinger Jr.', 'Arthur Schlesinger Jr', 'schlesinger'],
-            hint: 'Pulitzer Prize-winning historian; advisor to JFK; book published during Watergate.'
+            prompt: "The Federalist paper in which Hamilton argues that a single, energetic executive is essential to good government: Federalist No. ___.",
+            answer: '70',
+            acceptableAnswers: ['70', 'No. 70', 'Federalist 70', 'Federalist No. 70'],
+            hint: 'EK 2.6.A.1 — "energy in the executive."'
           }
         ]
       }
@@ -162,8 +162,8 @@ export const govSeparationOfPowersPart5Data = {
         correctAnswers: ['Judicial branch ascending (Marbury, McCulloch, Gibbons)', 'Legislative branch dominant (Reconstruction Congress)', 'Mixed/balanced (Watergate restoration)'],
         hint1: 'Marshall Court establishes judicial review and broad federal powers.',
         hint2: '13th, 14th, 15th Amendments + Andrew Johnson impeachment.',
-        hint3: 'War Powers Resolution + Budget Act + FECA + FISA + IG Act + Ethics in Government Act.',
-        explanation: 'Eras: 1801-29 = JUDICIAL ascending (Marshall: Marbury 1803, McCulloch 1819, Gibbons 1824). 1865-77 = LEGISLATIVE dominant (Reconstruction Congress + 13/14/15 Amendments + Tenure of Office Act + Johnson impeachment). 1973-80 = MIXED/balanced (Watergate-era restoration: WPR 1973, Budget Act 1974, FECA 1974, FISA 1978, IG Act 1978, Ethics 1978).'
+        hint3: 'War Powers Resolution + Budget Act + FECA + FISA + Ethics in Government Act.',
+        explanation: 'Eras: 1801-29 = JUDICIAL ascending (Marshall: Marbury 1803, McCulloch 1819, Gibbons 1824). 1865-77 = LEGISLATIVE dominant (Reconstruction Congress + 13/14/15 Amendments + Tenure of Office Act + Johnson impeachment). 1973-80 = MIXED/balanced (Watergate-era restoration: WPR 1973, Budget Act 1974, FECA 1974, FISA 1978, Ethics 1978).'
       }
     },
     {
@@ -181,7 +181,7 @@ export const govSeparationOfPowersPart5Data = {
               "The Court's role has grown because justices now serve fixed terms and claim a direct popular mandate"
             ],
             correctAnswer: 0,
-            explanation: 'SCOTUS role expansion factors: (1) Marbury 1803 established judicial review; (2) 14th Amendment 1868 + selective incorporation → new authority over state action affecting rights; (3) New Deal federal regulation expansion → more federal cases; (4) post-WWII civil/individual-rights revolutions (Brown 1954, Gideon 1963, Miranda 1966, Roe 1973); (5) admin state → statutory interpretation (Chevron 1984; Loper Bright 2024); (6) congressional polarization + gridlock since ~1990 → policy authority to courts (default + deliberate punt); (7) modern federalism revival (Lopez 1995+) → reinvigorated commerce/spending review. → Court more central than framers anticipated.'
+            explanation: 'SCOTUS role expansion factors: (1) Marbury 1803 established judicial review; (2) 14th Amendment 1868 + selective incorporation → new authority over state action affecting rights; (3) New Deal federal regulation expansion → more federal cases; (4) post-WWII civil/individual-rights revolutions (Brown 1954, Gideon 1963, Miranda 1966, Roe 1973); (5) admin state → lawsuits over agency rules; (6) congressional polarization + gridlock since ~1990 → policy authority to courts (default + deliberate punt); (7) modern federalism revival (Lopez 1995+) → reinvigorated commerce/spending review. → Court more central than framers anticipated.'
           },
           {
             question: "How has the rise of polarization since ~1990 altered the framers' separation-of-powers design?",

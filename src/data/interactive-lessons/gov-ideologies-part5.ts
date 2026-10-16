@@ -13,89 +13,30 @@ export const govIdeologiesPart5Data = {
 
 | Section |
 |---|
-| Founding era ideology (Federalists vs Anti-Federalists; Hamilton vs Jefferson; Whig + classical liberal influences) |
-| Antebellum + Civil War (Jacksonian Democracy; Whigs; Republicans 1854 anti-slavery; Lincoln; Reconstruction) |
-| Progressive Era (Wilson + TR + reform progressivism 1890-1920; women's suffrage; trust-busting; muckrakers) |
+| Party systems before 1932 in brief (critical elections of 1800, 1828, 1860 and 1896; the Progressive reformers) |
 | New Deal Liberalism (FDR 1932-1945; Great Society 1964-1968; consensus liberalism 1932-1968) |
 | Conservative Resurgence (Goldwater 1964; Reagan Revolution 1980; Bush 41+43; conservative ascendance 1980-2016) |
 | Polarization Era (1990s+; Newt Gingrich; Tea Party; Trumpism; progressive resurgence; current crisis) |
 
-> 🔑 Key idea: American political ideology has undergone successive REORGANIZATIONS: (1) FOUNDING ERA (1789-1820s) — FEDERALISTS (Hamilton, Adams; strong national government, commercial republic, pro-British) vs ANTI-FEDERALISTS / DEMOCRATIC-REPUBLICANS (Jefferson, Madison; states' rights, agrarian, pro-French); (2) ANTEBELLUM (1828-1860) — JACKSONIAN DEMOCRACY (universal White male suffrage, spoils system, Indian removal) vs WHIGS (national bank, internal improvements); collapse over slavery → REPUBLICANS 1854 anti-slavery; (3) CIVIL WAR + RECONSTRUCTION (1861-1877) — Lincoln Republican Party; 13th + 14th + 15th Amendments; ended by Hayes-Tilden Compromise 1877; (4) GILDED AGE (1877-1900) — Republican dominance; Populism + Greenback Party + farmer revolts; (5) PROGRESSIVE ERA (1900-1920) — TR Republican + Wilson Democrat reformers; trust-busting, women's suffrage 1920, income tax 16th Am 1913, direct election senators 17th Am 1913, prohibition 18th Am 1919; (6) NEW DEAL LIBERALISM (1932-1968) — FDR coalition + Great Society; consensus on activist federal government + Cold War; (7) CONSERVATIVE RESURGENCE (1968-2008) — Goldwater 1964 + Nixon 1968 + Reagan 1980 + Bush 41+43; supply-side economics, social conservatism, hawkish foreign policy; (8) POLARIZATION ERA (1994+) — Gingrich Contract with America, Clinton triangulation, Bush 43, Obama, Tea Party, Trump MAGA, progressive Squad insurgency; ideological + partisan + affective polarization; democratic backsliding concerns.
+> 🔑 Key idea: American political ideology has undergone successive REORGANIZATIONS: (1) BEFORE 1932 — a series of party systems, each launched by a CRITICAL ELECTION (1800, 1828, 1860, 1896) that realigned party coalitions; (6) NEW DEAL LIBERALISM (1932-1968) — FDR coalition + Great Society; consensus on activist federal government + Cold War; (7) CONSERVATIVE RESURGENCE (1968-2008) — Goldwater 1964 + Nixon 1968 + Reagan 1980 + Bush 41+43; supply-side economics, social conservatism, hawkish foreign policy; (8) POLARIZATION ERA (1994+) — Gingrich Contract with America, Clinton triangulation, Bush 43, Obama, Tea Party, Trump MAGA, progressive Squad insurgency; ideological + partisan + affective polarization; democratic backsliding concerns.
       `
     },
     {
       id: 'govideol5-content',
       type: 'text' as const,
       content: `
-## Era 1: Founding (1789-1820s)
+## Eras 1–5 in Brief: Party Systems Before 1932
 
-### Federalists vs Anti-Federalists / Democratic-Republicans
+The AP course uses party history for one purpose: to show how **critical elections** realign party coalitions and how parties adapt their positions (EK 5.4.A.3, 5.5.A.2). Know the pattern, not the details.
 
-| Federalists | Anti-Federalists / Democratic-Republicans |
-|---|---|
-| Hamilton, Adams, Marshall, Washington (somewhat) | Jefferson, Madison (initially), Monroe, Jackson |
-| STRONG NATIONAL GOVERNMENT | LIMITED national gov't, STATES' RIGHTS |
-| Commercial / industrial REPUBLIC | AGRARIAN republic of yeoman farmers |
-| Pro-BRITISH (cultural ties + trade) | Pro-FRENCH (revolutionary alliance) |
-| BROAD construction Constitution (Necessary + Proper) | STRICT construction |
-| FIRST BANK OF UNITED STATES (1791) | OPPOSED bank as unconstitutional + corrupt |
-| Hamiltonian financial system: assumption of state debts, tariffs, excise taxes | Opposed; Whiskey Rebellion 1794 |
-| FEDERALIST PAPERS 1787-1788 (Hamilton, Madison, Jay) | ANTI-FEDERALIST PAPERS (Brutus, Cato, Federal Farmer); Brutus 1 — required AP Gov foundational document |
-| Alien + Sedition Acts 1798 (criminalized criticism of Federalist gov) | KENTUCKY + VIRGINIA RESOLUTIONS 1798-1799 (Jefferson + Madison; states' rights, nullification doctrine) |
-| Lost 1800 ELECTION ("REVOLUTION OF 1800" — first peaceful transfer of power between parties); declined as party | Won 1800; dominated until 1824 |
+| Era | Main parties | Realigning (critical) election | Core divide |
+|---|---|---|---|
+| **Founding (1790s–1820s)** | Federalists vs Democratic-Republicans | **1800**, the first peaceful transfer of power between parties | Strong national government and broad construction vs limited government and states' rights (the debate of Federalist No. 10 and Brutus No. 1 carried into party politics) |
+| **Jacksonian (1828–1850s)** | Democrats vs Whigs | **1828** | Expanded white male suffrage and limited federal power vs an active federal role in banking, tariffs and internal improvements |
+| **Civil War and Reconstruction (1860–1890s)** | Republicans vs Democrats | **1860** | The Republican Party, founded in 1854 to oppose the spread of slavery, built a Northern coalition; Democrats dominated the "Solid South" after Reconstruction |
+| **Industrial era (1896–1932)** | Republicans dominant | **1896** | Republicans' pro-business, urban-industrial coalition defeated William Jennings Bryan's Democratic–Populist farm coalition; Progressive reformers in both parties then pushed for regulation and the 16th, 17th and 19th Amendments |
 
-### Era of Good Feelings (1816-1824)
-
-After Federalist Party collapse following War of 1812 + Hartford Convention 1814, single-party DEMOCRATIC-REPUBLICAN dominance under James Monroe; deceptive "good feelings" obscured emerging factional + sectional divisions over slavery (MISSOURI COMPROMISE 1820) + economy (PANIC OF 1819) + tariffs.
-
-## Era 2: Antebellum (1828-1860)
-
-### Jacksonian Democracy vs Whigs
-
-| Jacksonian Democrats | Whigs |
-|---|---|
-| Andrew Jackson, Van Buren, Polk | Henry Clay, Daniel Webster, John Quincy Adams (after 1828) |
-| UNIVERSAL WHITE MALE SUFFRAGE (extended state-by-state 1820s-1830s; eliminated property requirements) | Often supported property qualifications longer |
-| SPOILS SYSTEM ("to the victor go the spoils" — replace federal employees with party loyalists) | OPPOSED spoils system; favored merit |
-| INDIAN REMOVAL ACT 1830 (Trail of Tears 1838-1839 — Cherokee, Creek, Chickasaw, Choctaw, Seminole removed from Southeast despite Worcester v. Georgia 1832) | Opposed Indian removal but powerless |
-| BANK WAR — Jackson vetoed 1832 recharter of Second Bank of US; transferred deposits to "pet banks" | Supported BANK as economic stabilizer |
-| Anti-tariff (Nullification Crisis 1832-1833 SC threatened secession over tariff; Compromise Tariff 1833) | Pro-tariff (American System: tariffs + national bank + internal improvements) |
-| LOW TAXES + minimal federal government | Active federal government supporting commerce |
-| Coalition: South + West + Northern working class + immigrants (Irish Catholics) | Coalition: New England + commercial Northeast + planters opposed to Jackson |
-
-### Republican Party Founded 1854
-
-The Republican Party founded **1854** in opposition to KANSAS-NEBRASKA ACT 1854 (Stephen Douglas; allowed popular sovereignty on slavery in territories north of Missouri Compromise 36°30' line, repealing 1820 compromise). Coalition: ANTI-SLAVERY Whigs + FREE SOIL + KNOW-NOTHING + NORTHERN DEMOCRATS opposed to slavery expansion. Lincoln won 1860 → SOUTHERN SECESSION → CIVIL WAR.
-
-## Era 3: Civil War + Reconstruction (1861-1877)
-
-| Republican (1860-1877) | Democratic (1860-1877) |
-|---|---|
-| Lincoln, Grant; ABOLITIONIST + Free Soil roots | Tied to slavery + Southern Confederacy + Lost Cause mythology |
-| 13TH AMENDMENT 1865 (abolition); 14TH AMENDMENT 1868 (citizenship + EP); 15TH AMENDMENT 1870 (voting on race) | OPPOSED Civil War Amendments |
-| RECONSTRUCTION — military occupation South; federal protection of Black voting + officeholding (Hiram Revels 1870 1st Black Senator MS; Blanche Bruce 1875 MS); Freedmen's Bureau | Resisted; KKK founded 1866; redemption movements; intimidation + violence |
-| HAYES-TILDEN COMPROMISE 1877 — disputed election awarded Hayes (R) presidency in exchange for federal troop withdrawal from South → end Reconstruction → JIM CROW era | "Solid South" — Democratic dominance lasted until Civil Rights Movement |
-
-## Era 4: Gilded Age (1877-1900)
-
-REPUBLICAN DOMINANCE in presidency (Grant, Hayes, Garfield, Arthur, Harrison, McKinley) interrupted by Cleveland (D) twice. ECONOMIC LAISSEZ-FAIRE — pro-business, high tariffs, Gold Standard, industrialization; corruption (Crédit Mobilier, Tweed Ring, Robber Barons — Vanderbilt, Carnegie, Rockefeller, Morgan).
-
-**POPULIST MOVEMENT** — agrarian revolt against railroads + banks + monetary policy; **PEOPLE'S PARTY 1892** (Populist Party); demands: free silver, graduated income tax, direct election senators, government ownership railroads + telegraph, secret ballot, 8-hour day; William Jennings Bryan "CROSS OF GOLD" 1896; absorbed into Democratic Party.
-
-## Era 5: Progressive Era (1900-1920)
-
-CROSS-PARTY REFORM movement led by both Republicans (TR, La Follette) and Democrats (Wilson, Bryan):
-- TRUST-BUSTING — Northern Securities 1904 (TR); Standard Oil 1911; Sherman Antitrust 1890 + Clayton 1914 + FTC 1914
-- CONSUMER PROTECTION — Pure Food + Drug Act 1906; Meat Inspection Act 1906 (after Sinclair *The Jungle*); FDA created
-- LABOR REFORMS — minimum age laws, workers' comp, factory inspections (state-level mostly)
-- WOMEN'S SUFFRAGE — 19TH AMENDMENT 1920 (Susan B. Anthony, Elizabeth Cady Stanton, Alice Paul, NAWSA, NWP)
-- INCOME TAX — 16TH AMENDMENT 1913 (replaced tariffs as primary federal revenue)
-- DIRECT ELECTION OF SENATORS — 17TH AMENDMENT 1913 (replaced state legislative election)
-- PROHIBITION — 18TH AMENDMENT 1919 (repealed 21st 1933)
-- DIRECT DEMOCRACY — initiative + referendum + recall (state-level — esp. CA, OR, ND, ID)
-- MUCKRAKERS — Ida Tarbell (Standard Oil), Upton Sinclair (*The Jungle*), Lincoln Steffens (urban corruption), Jacob Riis (*How the Other Half Lives*)
-- TR REPUBLICAN PROGRESSIVISM (Square Deal); WILSON DEMOCRATIC PROGRESSIVISM (New Freedom)
-- Race + segregation worsened — Wilson resegregated federal civil service; *Birth of a Nation* 1915 first film at White House
+> 🔑 **AP Connection:** Each row shows the same process the exam tests for 1932, 1968 and later: a major election reshuffles which groups vote for which party, and the parties change their platforms to hold or win those groups.
 
 ## Era 6: New Deal Liberalism (1932-1968)
 
@@ -173,7 +114,7 @@ CLINTON "THIRD WAY" CENTRIST:
 
 ### Trump 2017-2021
 
-- TAX CUTS AND JOBS ACT 2017 (cut corporate rate 35% → 21%; mostly through reconciliation)
+- TAX CUTS AND JOBS ACT 2017 (cut corporate rate 35% → 21%)
 - 3 SCOTUS APPOINTMENTS (Gorsuch 2017 replaced Scalia; Kavanaugh 2018 replaced Kennedy; Barrett 2020 replaced Ginsburg) cementing 6-3 conservative supermajority
 - WITHDREW from Paris + TPP + Iran + WHO; tariffs on China + steel + aluminum
 - IMMIGRATION CRACKDOWN — Muslim ban 2017 (upheld Trump v. Hawaii 2018); child separation 2018; border wall construction; rescinded DACA (Reversed by DHS v. Regents 2020)
@@ -195,7 +136,7 @@ CLINTON "THIRD WAY" CENTRIST:
 
 ### Trump II 2025+
 
-Implementing Project 2025 + executive order surge: Schedule F restoration, mass federal layoffs, dismantled USAID, broad tariffs (10-50%), immigration crackdown + deportation surge, withdrew Paris + WHO, ended DEI in federal contracting, expanded executive control over agencies + civil service, Pete Hegseth Defense + RFK Jr. HHS + Tulsi Gabbard DNI, Doge (Musk) cost-cutting initiative.
+Implementing Project 2025 + executive order surge: mass federal layoffs, dismantled USAID, broad tariffs (10-50%), immigration crackdown + deportation surge, withdrew Paris + WHO, ended DEI in federal contracting, expanded executive control over agencies + civil service, Pete Hegseth Defense + RFK Jr. HHS + Tulsi Gabbard DNI, Doge (Musk) cost-cutting initiative.
 
 > 🔑 Key takeaway: American ideology has reorganized through 8 ERAS: (1) FOUNDING (1789-1820s) — Federalists vs Anti-Federalists/Dem-Reps; Hamilton-Jefferson rivalry; Federalist papers + Brutus 1; Alien + Sedition Acts 1798 + KY/VA Resolutions; Revolution of 1800; (2) ANTEBELLUM (1828-1860) — Jacksonian Democracy + Whigs; Bank War + Indian Removal + nullification; Republican Party founded 1854 anti-slavery; (3) CIVIL WAR + RECONSTRUCTION (1861-1877) — Lincoln; 13th + 14th + 15th Amendments; Hayes-Tilden 1877 ended Reconstruction; (4) GILDED AGE (1877-1900) — Republican dominance + Populist Party 1892 + Bryan 1896; (5) PROGRESSIVE ERA (1900-1920) — TR + Wilson reform; trust-busting + suffrage 1920 + income tax 1913 + direct election senators 1913 + prohibition 1919; (6) NEW DEAL LIBERALISM (1932-1968) — FDR coalition + Eisenhower modern Republicanism + LBJ Great Society + CRA 1964 + VRA 1965 + Medicare/Medicaid 1965; (7) CONSERVATIVE RESURGENCE (1968-2008) — Goldwater 1964 + Nixon Southern Strategy + Reagan Revolution 1980 + Bush 41+43 + Gingrich 1994 Contract; Clinton triangulation; (8) POLARIZATION ERA (2009+) — Obama ACA + Tea Party + Trump MAGA + 2 impeachments + Jan 6 + 6-3 SCOTUS + Biden + Trump II.
       `
@@ -227,10 +168,10 @@ Implementing Project 2025 + executive order surge: Schedule F restoration, mass 
       exercise: {
         questions: [
           {
-            prompt: "Year the Republican Party was founded in opposition to the Kansas-Nebraska Act allowing popular sovereignty on slavery in territories north of the Missouri Compromise line.",
-            answer: '1854',
-            acceptableAnswers: ['1854'],
-            hint: 'Coalition: anti-slavery Whigs + Free Soil + Know-Nothing + Northern Democrats opposed to slavery expansion; Lincoln won presidency 1860.'
+            prompt: "Term for an election in which there is a realignment of political party support among voters, such as 1932 (EK 5.4.A.3).",
+            answer: 'critical election',
+            acceptableAnswers: ['critical election', 'Critical election', 'critical elections', 'realigning election', 'critical'],
+            hint: 'FDR\'s 1932 victory built the New Deal coalition that lasted until the late 1960s.'
           },
           {
             prompt: "President whose Great Society program (1964-1968) included Civil Rights Act 1964 + VRA 1965 + Medicare/Medicaid 1965 + ESEA + HEA 1965 + Immigration Act 1965 + War on Poverty.",

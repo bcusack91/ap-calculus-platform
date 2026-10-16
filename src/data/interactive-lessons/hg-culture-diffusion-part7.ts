@@ -31,7 +31,7 @@ export const hgCultureDiffusionPart7Data = {
 |---|---|---|
 | 1 | How does culture spread, and what do we call its pieces? | Diffusion types; trait, complex, region; folk vs. popular culture |
 | 2 | How do we see culture on the land? | Ethnocentrism vs. cultural relativism; sequent occupance; survey systems; architecture; gender and indigenous lands; placemaking |
-| 3 | How do we classify a real case? | Four-question procedure; reverse hierarchical; barriers; mixed cases by stage and scale |
+| 3 | How do we classify a real case? | Four-question procedure; worked cases; barriers; mixed cases by stage and scale |
 | 4 | What spread culture in the past? | Trade routes; colonialism and imperialism; forced migration and diasporas; reading diffusion maps |
 | 5 | What spreads it now, and with what effects? | Communication technology, time-space compression, urbanization, globalization; convergence and divergence; four effects |
 | 6 | How is it tested? | Arrival data against distance and city size; landscapes read in layers |
@@ -127,7 +127,7 @@ export const hgCultureDiffusionPart7Data = {
         dropdowns: [
           {
             label: 'A trend that reaches the largest cities first, regardless of distance, shows ___',
-            options: ['Hierarchical diffusion', 'Contagious diffusion', 'Relocation diffusion', 'Reverse hierarchical diffusion']
+            options: ['Hierarchical diffusion', 'Contagious diffusion', 'Relocation diffusion', 'Stimulus diffusion']
           },
           {
             label: 'France requiring French in advertising is an example of ___',

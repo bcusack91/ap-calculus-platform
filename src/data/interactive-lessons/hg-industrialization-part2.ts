@@ -131,7 +131,7 @@ Britain tried to protect its lead, for example by banning the emigration of skil
         dropdowns: [
           {
             label: 'A British mechanic emigrates and rebuilds mill machinery from memory in New England. This is ___',
-            options: ['Relocation diffusion', 'Contagious diffusion', 'Stimulus diffusion', 'Reverse hierarchical diffusion']
+            options: ['Relocation diffusion', 'Contagious diffusion', 'Stimulus diffusion', 'Hierarchical diffusion']
           },
           {
             label: 'Japan\'s government imports foreign engineers and builds model factories after 1868. This is ___',
@@ -139,7 +139,7 @@ Britain tried to protect its lead, for example by banning the emigration of skil
           },
           {
             label: 'Factories appear first in ports and capitals and only later in small towns. This is ___',
-            options: ['Hierarchical diffusion', 'Relocation diffusion', 'Contagious diffusion', 'Reverse hierarchical diffusion']
+            options: ['Hierarchical diffusion', 'Relocation diffusion', 'Contagious diffusion', 'Stimulus diffusion']
           }
         ],
         correctAnswers: ['Relocation diffusion', 'State-led industrialization', 'Hierarchical diffusion'],

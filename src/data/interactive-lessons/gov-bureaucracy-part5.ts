@@ -17,9 +17,9 @@ export const govBureaucracyPart5Data = {
 | Pendleton-Progressive (1883-1932) — Merit Civil Service |
 | New Deal-Great Society (1933-1969) — Bureaucratic Expansion |
 | Reagan-Clinton (1980-2000) — Reform + Reinvention |
-| Modern (2001-present) — Post-9/11 + Major Questions |
+| Modern (2001-present) — Post-9/11 + Presidential Control |
 
-> 🔑 Key idea: The federal bureaucracy has UNDERGONE FIVE MAJOR ERAS — (1) FOUNDING-JACKSONIAN spoils system; (2) PENDLETON-PROGRESSIVE merit civil service after Garfield assassination; (3) NEW DEAL-GREAT SOCIETY bureaucratic expansion; (4) REAGAN-CLINTON regulatory reform + reinventing government; (5) MODERN post-9/11 expansion + Major Questions Doctrine constraints. Each era reflected broader political + economic transformations.
+> 🔑 Key idea: The federal bureaucracy has UNDERGONE FIVE MAJOR ERAS — (1) FOUNDING-JACKSONIAN spoils system; (2) PENDLETON-PROGRESSIVE merit civil service after Garfield assassination; (3) NEW DEAL-GREAT SOCIETY bureaucratic expansion; (4) REAGAN-CLINTON regulatory reform + reinventing government; (5) MODERN post-9/11 expansion + partisan fights over presidential control of agencies. Each era reflected broader political + economic transformations.
       `
     },
     {
@@ -66,25 +66,23 @@ export const govBureaucracyPart5Data = {
 | Period | Key developments |
 |---|---|
 | **CSRA 1978 (Carter)** | Created OPM + MSPB + SES; replaced Civil Service Commission |
-| **REAGAN 1981-1989** | Anti-bureaucracy rhetoric ('government is the problem'); cut civilian federal workforce; deregulation in airlines (Carter 1978 act), trucking, telecom; Chevron deference 1984; Reagan EO 12291 created OIRA review |
-| **GRAMM-RUDMAN-HOLLINGS 1985** | Mandatory deficit reduction; sequestration (struck partly in *Bowsher v. Synar* 1986) |
+| **REAGAN 1981-1989** | Anti-bureaucracy rhetoric ('government is the problem'); cut civilian federal workforce; deregulation in airlines (Carter 1978 act), trucking, telecom |
 | **CLEAN AIR ACT AMENDMENTS 1990** | Acid rain cap-and-trade; major EPA program |
 | **AMERICANS WITH DISABILITIES ACT 1990** | New federal regulatory regime; EEOC + DOJ enforcement |
-| **CLINTON 1993-2001** | Reinventing Government (Gore initiative); cut ~377,000 federal employees; CRA 1996 + EO 12866 OIRA reform; welfare reform PRWORA 1996 (TANF block grant); deregulation of telecom (1996 Act) + electricity |
+| **CLINTON 1993-2001** | Reinventing Government (Gore initiative); cut ~377,000 federal employees; welfare reform PRWORA 1996 (TANF block grant); deregulation of telecom (1996 Act) + electricity |
 
-## Modern (2001-Present) — Post-9/11 + Major Questions
+## Modern (2001-Present) — Post-9/11 + Presidential Control
 
 | Period | Key developments |
 |---|---|
 | **9/11 RESPONSE 2001-2005** | TSA 2001, Patriot Act 2001, DHS 2003 (largest reorganization since 1947); ODNI 2004; massive expansion of intelligence + homeland security bureaucracy |
 | **BUSH 43 2001-2009** | Medicare Part D (2003), No Child Left Behind (2002), Iraq War, financial deregulation contributing to 2008 crisis |
 | **OBAMA 2009-2017** | ARRA stimulus 2009, Dodd-Frank 2010 (created CFPB + FSOC), ACA 2010 (Healthcare.gov), Clean Power Plan, immigration EOs (DACA 2012, DAPA 2014); regulatory expansion |
-| **TRUMP 1.0 2017-2021** | Anti-regulatory agenda; EO 13771 'two-for-one'; Schedule F EO Oct 2020; cabinet appointments + judicial appointments (Gorsuch, Kavanaugh, Barrett); travel ban; immigration enforcement |
-| **BIDEN 2021-2025** | Reversed 80+ Trump EOs Day 1; American Rescue Plan 2021, infrastructure 2021 (IIJA), CHIPS 2022, Inflation Reduction Act 2022 (~\\$370B climate + clean energy); rescinded Schedule F |
-| **SCOTUS CONSTRAINTS 2020-2024** | Seila Law v. CFPB 2020 (modified Humphrey\'s Executor); West Virginia v. EPA 2022 (Major Questions); Biden v. Nebraska 2023 (struck student loan forgiveness); SFFA 2023 (struck race-conscious admissions); Loper Bright 2024 (overruled Chevron); Jarkesy 2024 (limited SEC ALJs); Trump v. US 2024 (presidential immunity) |
-| **TRUMP 2.0 JAN 2025** | DOGE created; Schedule F restored; mass agency restructuring + firings; immigration enforcement; tariff regime; ongoing legal challenges |
+| **TRUMP 1.0 2017-2021** | Anti-regulatory agenda; EO 13771 'two-for-one'; cabinet appointments + judicial appointments (Gorsuch, Kavanaugh, Barrett); travel ban; immigration enforcement |
+| **BIDEN 2021-2025** | Reversed 80+ Trump EOs Day 1; American Rescue Plan 2021, infrastructure 2021 (IIJA), CHIPS 2022, Inflation Reduction Act 2022 (~\\$370B climate + clean energy) |
+| **TRUMP 2.0 JAN 2025** | DOGE created; mass agency restructuring + firings; immigration enforcement; tariff regime; ongoing legal challenges |
 
-> 🔑 Key takeaway: 5 ERAS — (1) FOUNDING-JACKSONIAN 1789-1881 spoils system; (2) PENDLETON-PROGRESSIVE 1883-1932 merit civil service after Garfield + ICC 1887 first regulatory commission; (3) NEW DEAL-GREAT SOCIETY 1933-1969 alphabet agencies + APA 1946 + National Security Act 1947 + DHEW 1953 + NASA 1958 + Medicare/Medicaid 1965 + DHS-style civil rights enforcement; (4) REAGAN-CLINTON 1980-2000 deregulation + Chevron 1984 + reinventing government; (5) MODERN 2001-present — post-9/11 expansion (DHS 2003) + major questions doctrine + Loper Bright + Schedule F + DOGE.
+> 🔑 Key takeaway: 5 ERAS — (1) FOUNDING-JACKSONIAN 1789-1881 spoils system; (2) PENDLETON-PROGRESSIVE 1883-1932 merit civil service after Garfield + ICC 1887 first regulatory commission; (3) NEW DEAL-GREAT SOCIETY 1933-1969 alphabet agencies + APA 1946 + National Security Act 1947 + DHEW 1953 + NASA 1958 + Medicare/Medicaid 1965 + DHS-style civil rights enforcement; (4) REAGAN-CLINTON 1980-2000 deregulation + reinventing government; (5) MODERN 2001-present — post-9/11 expansion (DHS 2003) + presidents of each party redirecting agencies by executive order + DOGE.
       `
     },
     {
@@ -121,7 +119,7 @@ export const govBureaucracyPart5Data = {
     {
       id: 'govburea5-input',
       type: 'input-boxes' as const,
-      content: `**Sprint quiz — name the year**`,
+      content: `**Sprint quiz**`,
       exercise: {
         questions: [
           {
@@ -131,16 +129,16 @@ export const govBureaucracyPart5Data = {
             hint: 'Two years after Garfield assassinated by office-seeker Charles Guiteau.'
           },
           {
-            prompt: "Year the INTERSTATE COMMERCE COMMISSION (ICC) was created — first federal independent regulatory commission.",
-            answer: '1887',
-            acceptableAnswers: ['1887'],
-            hint: 'Cleveland administration; regulated railroad rates.'
+            prompt: "Term for filling government jobs with political supporters, the practice the merit system replaced.",
+            answer: 'patronage',
+            acceptableAnswers: ['patronage', 'political patronage', 'spoils system', 'the spoils system', 'spoils'],
+            hint: 'EK 2.12.A.2 contrasts the merit system with political ___.'
           },
           {
-            prompt: "Year the NATIONAL SECURITY ACT created DoD + CIA + NSC.",
-            answer: '1947',
-            acceptableAnswers: ['1947'],
-            hint: 'Two years after WWII; early Cold War.'
+            prompt: "Term for the group of advisers made up of the heads of the executive departments who help the president carry out a policy agenda.",
+            answer: 'Cabinet',
+            acceptableAnswers: ['Cabinet', 'the Cabinet', 'cabinet'],
+            hint: 'EK 2.4.A.1 — Vice President, ___, and Executive Office of the President.'
           }
         ]
       }
@@ -153,21 +151,21 @@ export const govBureaucracyPart5Data = {
         dropdowns: [
           {
             label: "1789-1881 — federal jobs as political rewards under 'to the victor belong the spoils': ___",
-            options: ['Spoils System Era', 'Pendleton-Progressive Era', 'New Deal Era', 'Modern Major Questions Era']
+            options: ['Spoils System Era', 'Pendleton-Progressive Era', 'New Deal Era', 'Post-9/11 Security Era']
           },
           {
             label: "1933-1939 — alphabet soup agencies (FDIC, SEC, NLRB, TVA, WPA, FCC, SSA): ___",
-            options: ['Spoils System Era', 'Pendleton-Progressive Era', 'New Deal Era', 'Modern Major Questions Era']
+            options: ['Spoils System Era', 'Pendleton-Progressive Era', 'New Deal Era', 'Post-9/11 Security Era']
           },
           {
-            label: "2022-present — courts require clear congressional authorization for major agency action; Loper Bright overruled Chevron 2024: ___",
-            options: ['Spoils System Era', 'Pendleton-Progressive Era', 'New Deal Era', 'Modern Major Questions Era']
+            label: "2001-2005 — TSA, DHS, and a vast new homeland-security bureaucracy built after terrorist attacks: ___",
+            options: ['Spoils System Era', 'Pendleton-Progressive Era', 'New Deal Era', 'Post-9/11 Security Era']
           }
         ],
-        correctAnswers: ['Spoils System Era', 'New Deal Era', 'Modern Major Questions Era'],
+        correctAnswers: ['Spoils System Era', 'New Deal Era', 'Post-9/11 Security Era'],
         hint1: 'Spoils System ~1829-1881 — Jackson era; Sen. Marcy 1832 quote; ended after Garfield assassination + Pendleton Act 1883.',
         hint2: 'New Deal 1933-1939 — FDR; alphabet soup agencies addressing Great Depression; SCOTUS resistance + court-packing + switch in time.',
-        hint3: 'Modern Major Questions Era 2022-present — WV v. EPA codified Major Questions Doctrine; Loper Bright 2024 overruled Chevron 1984; reduced agency authority.'
+        hint3: 'Post-9/11 era — TSA 2001, DHS 2003 (largest reorganization since 1947), ODNI 2004.'
       }
     },
     {
@@ -188,15 +186,15 @@ export const govBureaucracyPart5Data = {
             explanation: 'DHS (2003) vs. New Deal (1933-1939) — major bureaucratic transformations: SIMILARITIES — (1) NATIONAL CRISIS responses (Depression + 9/11); (2) consolidation + expansion; (3) constitutional challenges (New Deal SCOTUS resistance — Schechter, Butler, Carter Coal; DHS civil liberties — surveillance, ICE). DIFFERENCES — (1) New Deal CREATED NEW AGENCIES vs. DHS REORGANIZED 22 EXISTING (TSA new 2001 + FEMA + Coast Guard + Customs + Secret Service + INS→ICE+USCIS+CBP); (2) ECONOMIC/SOCIAL vs. SECURITY/COUNTERTERRORISM/IMMIGRATION/DISASTER; (3) ~50% increase fed employment vs. consolidation only ~180K; (4) modern ADMINISTRATIVE STATE vs. modern NATIONAL SECURITY STATE; (5) New Deal: 1937 switch resolved constitutional issues; DHS: civil liberties challenges PERSIST.'
           },
           {
-            question: "What does the SCOTUS shift since 2022 (West Virginia v. EPA, Loper Bright, Jarkesy, Trump v. US) represent for the federal bureaucracy?",
+            question: "On their first days in office, Presidents Biden (2021) and Trump (2025) each signed executive orders reversing dozens of their predecessor's directives to federal agencies. Which concept does this pattern best illustrate?",
             options: [
-              "It marks a sharp limit on agency power, with courts demanding clear statutes and no longer deferring to agency readings",
-              "It marks an expansion of agency power, with courts deferring to agencies on every major question",
-              "It marks a return to Chevron deference, with courts again bound to accept any reasonable agency interpretation of a statute",
-              "It marks no real change, with courts reviewing agency rules exactly as they did before 2022"
+              "Presidential ideology and authority shape how the bureaucracy carries out an administration's goals",
+              "Congressional oversight forces agencies to follow the original intent of the laws Congress passed",
+              "Judicial review requires agencies to follow the precedents the Supreme Court set in earlier cases about agencies",
+              "The merit system shields career staff from being replaced whenever a new party wins the presidency"
             ],
             correctAnswer: 0,
-            explanation: 'POST-2022 SCOTUS SHIFT = SIGNIFICANT CONSTRAINT on modern administrative state. (1) MAJOR QUESTIONS DOCTRINE — WV v. EPA 2022 + Biden v. Nebraska 2023 — clear congressional authorization for major economic/political significance; struck Clean Power Plan + \\$430B loan forgiveness; (2) LOPER BRIGHT 2024 OVERRULED CHEVRON 1984 — independent judgment; Skidmore respect not deference; (3) JARKESY v. SEC 2024 — limited SEC ALJs for civil penalties under 7th Am; (4) TRUMP v. US 2024 — presidential immunity + unitary executive; (5) SEILA LAW 2020 + COLLINS 2021 — limited Humphrey\'s Executor for single-director; (6) CORNER POST 2024 — APA SOL from injury not promulgation. POWER SHIFT from AGENCIES → COURTS + CONGRESS.'
+            explanation: 'EK 2.14.B.1: presidential ideology, authority, and influence affect how executive branch agencies carry out the goals of the administration. Executive orders (EK 2.4.A.2.iv) let each new president redirect agency priorities quickly, which is why policy can swing when party control of the White House changes. Congressional oversight and judicial review are checks from other branches, not the cause of these reversals; the merit system protects career staff, but it does not stop a president from changing agency directives.'
           }
         ]
       }

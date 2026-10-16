@@ -90,7 +90,7 @@ export const govSeparationOfPowersPart2Data = {
 | 3 | Congress overrides | Legislative checks back |
 | 4 | President directs non-compliance | Executive resists (constitutional crisis) |
 | 5 | Court hears case | Judicial reviews under Art III |
-| 6 | Court rules (likely citing *INS v. Chadha* 1983 vs. *Youngstown* 1952) | Judicial checks both |
+| 6 | Court rules on whether the statute and the President's refusal are constitutional (judicial review, *Marbury* 1803) | Judicial checks both |
 | 7 | Court ruling enforced | Executive enforces (or constitutional crisis if defied) |
 
 > 🔑 Key takeaway: The Constitution's checks and balances don't ELIMINATE inter-branch conflict — they CHANNEL it. The Supreme Court is often the ultimate arbiter, but only because the other branches accept its rulings (the "norm of judicial supremacy" since *Cooper v. Aaron* 1958).

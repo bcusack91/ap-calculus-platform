@@ -1023,11 +1023,11 @@ Enter numbers only, without units or commas.
 | 📖 "The Dose Makes the Poison" |
 | Comparing Two Dose-Response Curves |
 | LC50: Toxicity Tests for Water |
-| Acute, Chronic and Mixed Exposures |
-| From Toxicity to Risk |
-| Worked Example: Is This Well Water Safe? |
+| Acute and Chronic Exposures |
+| Why Cause and Effect Is Hard to Prove |
+| Worked Example: Dose from Drinking Water |
 
-> 🔑 **Key Concept:** The definitions of LD50, ED50 and threshold, and how to read one LD50 from a table, are covered in Water Resources, Part 4. This part goes further: comparing whole curves, the aquatic **LC50** test, safety margins, chemical mixtures, and the **risk assessment** steps that turn a lab result into a drinking-water decision (CED 8.12, 8.13, 8.14).`,
+> 🔑 **Key Concept:** The definitions of LD50, ED50 and threshold, and how to read one LD50 from a table, are covered in Water Resources, Part 4. This part goes further: comparing whole dose-response curves, the aquatic **LC50** test, acute versus chronic exposure, and why it is hard to link a pollutant to a human health problem (CED 8.12, 8.13, 8.14).`,
     },
     {
       id: 'apewp5-curves',
@@ -1060,13 +1060,7 @@ The LD50 is one point on a curve. The **shape** of the whole curve matters too. 
 3. **Slope:** P's curve is steep (10% to 90% between 10 and 40 mg/kg), so a small increase in dose sharply raises harm. Q's is shallow.
 4. **Low doses:** at 5 mg/kg, Q harms more fish than P. A chemical with a **higher** ED50 can still be the bigger concern at the low doses found in the environment.
 
-Regulators often assume that **carcinogens have no threshold**: any dose carries some risk, scaled to the dose. For many other toxins they assume a threshold and set limits below it.
-
-### Margin of safety
-
-For a drug or pesticide, compare the dose that does the intended job with the dose that kills:
-$$\\text{margin of safety} = \\frac{\\text{LD50}}{\\text{ED50}}$$
-A sedative with ED50 = 2 mg/kg and LD50 = 200 mg/kg has a margin of $200 \\div 2 = 100$. A pesticide with ED50 (for killing the target insect) close to the LD50 for birds would be dangerous to use near wildlife.`,
+Regulators often assume that **carcinogens have no threshold**: any dose carries some risk, scaled to the dose. For many other toxins they assume a threshold and set limits below it.`,
     },
     {
       id: 'apewp5-q-curves',
@@ -1086,15 +1080,15 @@ A sedative with ED50 = 2 mg/kg and LD50 = 200 mg/kg has a margin of $200 \\div 2
             explanation: 'Q affects 15% of fish at the lowest tested dose, where P has no effect, and it shows no clear threshold. Q actually has the higher ED50 and the shallower curve, and it reaches only 70% at 80 mg/kg.',
           },
           {
-            question: 'Drug X has an ED50 of 10 mg/kg and an LD50 of 50 mg/kg. Drug Y has an ED50 of 10 mg/kg and an LD50 of 1,000 mg/kg. Which statement is correct?',
+            question: 'Pesticide X has an LD50 of 50 mg/kg in rats, and Pesticide Y has an LD50 of 1,000 mg/kg. Which statement is correct?',
             options: [
-              'X is safer, as its margin of safety is 5',
-              'Y is safer, as its margin of safety is 100',
-              'X and Y are equally safe, with one ED50',
-              'Y is safer, as its margin of safety is 1,000'
+              'X is less toxic, as more of it is needed to kill',
+              'X is more toxic, as a smaller dose kills half the rats',
+              'X and Y are equally toxic, as both kill half the rats',
+              'Y is more toxic, as its LD50 is the larger number'
             ],
             correctAnswer: 1,
-            explanation: 'Margin of safety is LD50 ÷ ED50: 50 ÷ 10 = 5 for X and 1,000 ÷ 10 = 100 for Y. A larger margin means the effective dose is far below the lethal dose.',
+            explanation: 'The LD50 is the dose that kills 50% of a test population, so a lower LD50 means a smaller dose is lethal and the chemical is more toxic (CED 8.12). Y needs twenty times the dose to kill half the rats, so it is less toxic.',
           },
           {
             question: 'Why do regulators often assume a cancer-causing chemical has no threshold?',
@@ -1128,17 +1122,14 @@ The LC50 lies between 4 mg/L (30%) and 8 mg/L (70%). Since 50% is halfway betwee
 
 Discharge permits often require that a pipe's effluent be **diluted well below** the LC50 for local species, because an LC50 still kills half the population and sublethal harm (slower growth, fewer eggs) begins at lower concentrations.
 
-## Acute, Chronic and Mixed Exposures
+## Acute and Chronic Exposures
 
 | Term | Meaning | Water example |
 |---|---|---|
 | **Acute** | A large dose over a short time, with effects soon after | A pesticide spill that kills fish within hours |
 | **Chronic** | Small doses over a long time, with effects that build slowly | Years of drinking water with low levels of arsenic |
-| **Additive** | Combined effect equals the sum of the separate effects | Two similar pesticides in one stream |
-| **Synergistic** | Combined effect is **greater** than the sum | Smoking plus asbestos exposure raises lung-cancer risk far more than either alone |
-| **Antagonistic** | One substance **reduces** the effect of another | Selenium in the diet can lessen some effects of mercury |
 
-Standard tests examine one chemical at a time, but real streams carry mixtures. Synergism is one reason safe limits include extra caution.`,
+Standard tests such as the LD50 examine one chemical over a short time, but people and fish in real streams face low doses of many chemicals for years. That gap is one reason it is hard to connect a pollutant to a health problem (below).`,
     },
     {
       id: 'apewp5-dd',
@@ -1148,51 +1139,39 @@ Standard tests examine one chemical at a time, but real streams carry mixtures. 
 Choose the term that fits each situation.`,
       exercise: {
         dropdowns: [
-          { label: 'A truck spills a herbicide into a creek, and fish die by evening:', options: ['Acute toxicity', 'Chronic toxicity', 'Antagonism', 'Synergism'] },
-          { label: 'Two chemicals that each kill 10% of test fish together kill 60%:', options: ['Acute toxicity', 'Chronic toxicity', 'Antagonism', 'Synergism'] },
-          { label: 'Villagers drink well water with low arsenic for 20 years and develop skin lesions:', options: ['Acute toxicity', 'Chronic toxicity', 'Antagonism', 'Synergism'] },
-          { label: 'Adding a second chemical cuts the deaths caused by the first from 40% to 10%:', options: ['Acute toxicity', 'Chronic toxicity', 'Antagonism', 'Synergism'] },
+          { label: 'A truck spills a herbicide into a creek, and fish die by evening:', options: ['Acute toxicity', 'Chronic toxicity', 'LD50', 'Threshold'] },
+          { label: 'The dose of a chemical that kills half of a test population:', options: ['LD50', 'Threshold', 'Chronic toxicity', 'Acute toxicity'] },
+          { label: 'Villagers drink well water with low arsenic for 20 years and develop skin lesions:', options: ['Acute toxicity', 'Chronic toxicity', 'LD50', 'Threshold'] },
+          { label: 'The highest dose at which a dose-response curve still shows no effect:', options: ['LD50', 'Threshold', 'Chronic toxicity', 'Acute toxicity'] },
         ],
-        correctAnswers: ['Acute toxicity', 'Synergism', 'Chronic toxicity', 'Antagonism'],
+        correctAnswers: ['Acute toxicity', 'LD50', 'Chronic toxicity', 'Threshold'],
         hint1: 'Acute means a short, large exposure; chronic means long and low.',
-        hint2: 'If the combination is worse than the sum, it is synergism; if it is milder, it is antagonism.',
-        hint3: '10% + 10% would be 20% if additive, so 60% is far more than the sum.',
-        explanation: 'The spill is acute toxicity and the 20 years of arsenic exposure is chronic. A combined 60% far exceeds the 20% expected from adding the two effects, which is synergism, and a second chemical that lowers deaths is antagonism.',
+        hint2: 'The 50 in LD50 stands for 50 percent of the test population.',
+        hint3: 'Below this dose the curve stays flat at zero.',
+        explanation: 'The spill is acute toxicity and the 20 years of arsenic exposure is chronic. The LD50 is the dose that kills 50% of a test population (CED 8.12), and the threshold is the dose below which a dose-response curve shows no effect (CED 8.13).',
       },
     },
     {
       id: 'apewp5-risk',
       type: 'text' as const,
-      content: `## From Toxicity to Risk
+      content: `## Why Cause and Effect Is Hard to Prove
 
-A toxic chemical is a **hazard**. **Risk** depends on how toxic it is **and** how much people are actually exposed to. Agencies follow four steps:
-
-| Step | Question it answers | Example for a solvent found in a town's wells |
-|---|---|---|
-| 1. **Hazard identification** | Can this chemical cause harm at all? | Animal studies and worker records link it to liver damage |
-| 2. **Dose-response assessment** | How does harm change with dose? | Find the threshold, then divide by safety factors to set a **reference dose** |
-| 3. **Exposure assessment** | How much do people actually take in? | Measure concentrations, how much water people drink, and for how long |
-| 4. **Risk characterization** | What is the likely harm, and how certain is it? | Compare exposure with the reference dose and state the uncertainties |
-
-Then comes **risk management**, a policy decision that also weighs cost, technology and fairness: set a drinking-water limit, install treatment, or supply other water.
-
-**Why cause and effect is hard to prove** (CED 8.14; the core examples are in Water Resources, Part 5):
+The CED notes that it can be difficult to establish cause and effect between pollutants and human health problems (CED 8.14; the core examples are in Water Resources, Part 5):
 
 - **Toxicology** doses lab animals in controlled experiments, so it can show cause, but results must be extrapolated to people.
 - **Epidemiology** studies patterns of disease in human populations. It deals with real people but finds **correlations**, which can be confounded by smoking, diet, income or other exposures.
 - **Latency:** some diseases appear decades after exposure (mesothelioma typically 20 or more years after asbestos), so the cause may be long gone.
 - People are exposed to **many chemicals at once**, and deliberately dosing people with a suspected toxin would be unethical.
 
-## Worked Example: Is This Well Water Safe?
+## Worked Example: Dose from Drinking Water
 
 The daily dose from drinking water, in mg per kg of body mass:
 $$\\text{dose} = \\frac{\\text{concentration (mg/L)} \\times \\text{water drunk (L/day)}}{\\text{body mass (kg)}}$$
 
-A well contains a solvent at **0.35 mg/L**. An adult of **70 kg** drinks **2 L/day**. The reference dose is **0.005 mg/kg per day** (illustrative data).
+A well contains a solvent at **0.35 mg/L**. An adult of **70 kg** drinks **2 L/day** (illustrative data).
 
 1. Dose: $\\frac{0.35 \\times 2}{70} = \\frac{0.70}{70} = 0.01$ mg/kg per day
-2. **Hazard quotient** = dose ÷ reference dose $= 0.01 \\div 0.005 = 2$
-3. A hazard quotient **above 1** means exposure exceeds the level judged safe, so the town should act: treat the water or switch sources.
+2. Compare the dose with the **threshold** on the solvent's dose-response curve. If the threshold is 0.005 mg/kg per day, this dose is **twice** the level at which effects begin, so the town should act: treat the water or switch sources.
 
 > 🔑 **AP Connection:** In FRQ calculations, carry the units: (mg/L × L/day) ÷ kg gives mg/kg per day. The units cancel only if every number is in the right form, which is how graders check your setup.`,
     },
@@ -1205,16 +1184,16 @@ Enter numbers only, without units or commas.
 
 **1)** A 20 kg child drinks 1 L/day of water containing 0.1 mg/L of a contaminant. What is the child's daily dose, in mg/kg per day?
 
-**2)** The contaminant's reference dose is 0.01 mg/kg per day. What is the child's hazard quotient?
+**2)** The contaminant's dose-response curve shows no effect below 0.01 mg/kg per day. How many times smaller than that threshold is the child's dose? (number only)
 
-**3)** A pesticide's LD50 is 300 mg/kg and its ED50 is 15 mg/kg. What is its margin of safety?`,
+**3)** Using the minnow table above, what is the LC50 of the solvent, in mg/L?`,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.005', '0.5', '20'],
+        correctAnswers: ['0.005', '2', '6'],
         hint1: 'Multiply concentration by liters per day, then divide by body mass.',
-        hint2: 'Hazard quotient = dose ÷ reference dose.',
-        hint3: 'Margin of safety = LD50 ÷ ED50.',
-        explanation: '1) (0.1 × 1) ÷ 20 = 0.005 mg/kg per day. 2) 0.005 ÷ 0.01 = 0.5, below 1, so this exposure is within the safe level. 3) 300 ÷ 15 = 20.',
+        hint2: 'Divide the threshold by the dose.',
+        hint3: 'Find the concentration halfway between 30% and 70% dead.',
+        explanation: '1) (0.1 × 1) ÷ 20 = 0.005 mg/kg per day. 2) 0.01 ÷ 0.005 = 2, so the dose is half the threshold and no effect is expected. 3) 50% dead lies halfway between 4 mg/L (30%) and 8 mg/L (70%), so the LC50 is about 6 mg/L.',
       },
     },
     {
@@ -1246,15 +1225,15 @@ Enter numbers only, without units or commas.
             explanation: 'The control shows deaths from handling, disease or tank conditions, so deaths in the treated tanks cannot be blamed on the chemical alone. The test should be repeated with healthy conditions in the control.',
           },
           {
-            question: 'In which step of risk assessment do scientists measure how much contaminated water residents actually drink and for how long?',
+            question: 'Workers exposed to asbestos often develop mesothelioma 20 or more years later. Why does this long delay make cause and effect hard to establish?',
             options: [
-              'Hazard identification',
-              'Dose-response assessment',
-              'Exposure assessment',
-              'Risk characterization'
+              'Asbestos breaks down completely within a few weeks',
+              'Mesothelioma is caused by many unrelated infections',
+              'Other exposures pile up during the decades in between',
+              'Asbestos exposure leaves no record in any workplace'
             ],
             correctAnswer: 2,
-            explanation: 'Exposure assessment estimates how much of the chemical people take in, by what route and for how long. Hazard identification asks whether harm is possible, dose-response relates dose to harm, and risk characterization combines them.',
+            explanation: 'Over decades people encounter many other chemicals and habits, so a disease that appears long after exposure is hard to tie to one cause, even though mesothelioma is caused mainly by asbestos (CED 8.14). Asbestos fibers persist, mesothelioma is not an infection, and workplace records often exist.',
           },
         ],
       },
@@ -1269,12 +1248,9 @@ Enter numbers only, without units or commas.
 | Dose makes the poison | Even salt has an LD50; compare substances in mg/kg |
 | Curve shape | Threshold vs no threshold; steep vs shallow slope; low-dose effects can matter most |
 | Carcinogens | Usually modeled with no threshold |
-| Margin of safety | LD50 ÷ ED50; larger is safer |
 | LC50 | Concentration in water killing 50% in a set time (often 96 h for fish); needs a control |
 | Acute vs chronic | Large and short vs small and long |
-| Interactions | Additive, synergistic (more than the sum), antagonistic (less) |
-| Risk assessment | Hazard identification → dose-response → exposure → risk characterization |
-| Dose from water | mg/L × L/day ÷ kg; hazard quotient above 1 = concern |
+| Dose from water | mg/L × L/day ÷ kg; compare with the curve's threshold |
 | Proving cause | Toxicology shows cause in animals; epidemiology shows correlation in people |
 
 **Next:** Part 6 follows sewage beyond the treatment plant, into septic systems, combined sewers and the laws that protect water.`,
@@ -1729,15 +1705,15 @@ Use the FRQ 3 information. Enter numbers only, without units or commas.
             explanation: 'Methylmercury is a neurotoxin that biomagnifies and harms fetuses and children most. Phosphorus harms through eutrophication rather than poisoning, warm water lowers DO, and eggshell thinning came from DDT.',
           },
           {
-            question: 'A town finds a solvent in its wells at a hazard quotient of 4. Which response best follows from this result?',
+            question: 'Residents\' daily dose of a solvent from their wells is four times the threshold on its dose-response curve. Which response best follows?',
             options: [
               'Treat the water or switch sources to reduce exposure',
-              'Take no action, since the quotient is well below 10',
-              'Repeat the LD50 test on rats to confirm it is toxic',
-              'Raise the reference dose so the quotient falls below 1'
+              'Take no action, since only an LD50 dose would harm people',
+              'Repeat the LD50 test on rats before considering any action',
+              'Wait for an epidemiology study to prove that it causes harm'
             ],
             correctAnswer: 0,
-            explanation: 'A hazard quotient above 1 means people take in more than the dose judged safe, so managers should cut exposure by treatment or a new source. Changing the reference dose to fit the data is not science-based risk management.',
+            explanation: 'A dose above the threshold means effects are expected, so managers should cut exposure by treatment or a new source (CED 8.13). Harm begins well below the LD50, and waiting for proof of cause, which is hard to obtain (CED 8.14), leaves people exposed.',
           },
           {
             question: 'Which source would be regulated with a Clean Water Act discharge permit?',
@@ -1784,7 +1760,7 @@ Choose the pollution problem that best explains each set of data.`,
 | 2. Eutrophication | P limits lakes, N limits coasts; stratified bottom water goes hypoxic | Load = concentration × flow |
 | 3. Oil, heat, sediment | Spills differ by setting; cleanup recovers little; cooling design matters | Barrels × 42; flow-weighted mixing |
 | 4. Persistent toxins | Minamata, PCBs, DDT, global distillation, hormone mimics | Biomagnification factor; safe servings |
-| 5. Dose and risk | Curve shape, LC50, interactions, four-step risk assessment | Dose from water; hazard quotient; LD50 ÷ ED50 |
+| 5. Dose and risk | Curve shape, LC50, acute vs chronic, proving cause | Dose from water; reading LD50 and LC50 |
 | 6. Sewage and law | CSOs, septic systems, indicator bacteria, CWA vs SDWA, Flint | Runoff volume; colonies per 100 mL |
 | 7. Exam practice | Cite the data; link pollutant → mechanism → organism | Percent change; cost per kg |
 

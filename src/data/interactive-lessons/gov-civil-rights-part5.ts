@@ -17,9 +17,9 @@ export const govCivilRightsPart5Data = {
 | Jim Crow Era (1877-1954) — Plessy + disenfranchisement + lynching |
 | CRM Era (1954-1968) — Brown + Montgomery + Birmingham + Selma + CRA + VRA + FHA |
 | Post-CRM Expansion (1968-2000s) — gender + ADA + LGBTQ+ rights |
-| Marriage Equality + Backlash Era (2003-present) — Lawrence + Obergefell + Bostock + Shelby + Dobbs + SFFA |
+| Marriage Equality + Backlash Era (2003-present) — Lawrence + Obergefell + Bostock + Dobbs + SFFA |
 
-> 🔑 Key idea: Civil rights doctrine evolved through FIVE ERAS: (1) RECONSTRUCTION 1865-1877 (13th + 14th + 15th Amendments + Civil Rights Acts 1866 + 1875; Slaughter-House 1873 narrow Privileges or Immunities; Civil Rights Cases 1883 state action); (2) JIM CROW 1877-1954 (Plessy 1896 separate-but-equal; lynching; comprehensive disenfranchisement); (3) CIVIL RIGHTS MOVEMENT 1954-1968 (Brown 1954; Montgomery 1955-1956; Little Rock 1957; sit-ins 1960; Freedom Rides 1961; Birmingham 1963; March on Washington 1963; CRA 1964; VRA 1965; FHA 1968; King assassinated 1968); (4) POST-CRM EXPANSION 1968-2000s (gender — Reed 1971 + Craig 1976 + VMI 1996; ADA 1990; Lawrence 2003); (5) MARRIAGE EQUALITY + BACKLASH 2003-present (Lawrence 2003 → Windsor 2013 → Obergefell 2015 → Bostock 2020; Shelby 2013 + Brnovich 2021; Dobbs 2022; SFFA 2023; Allen v. Milligan 2023).
+> 🔑 Key idea: Civil rights doctrine evolved through FIVE ERAS: (1) RECONSTRUCTION 1865-1877 (13th + 14th + 15th Amendments + Civil Rights Acts 1866 + 1875; Civil Rights Cases 1883 state action); (2) JIM CROW 1877-1954 (Plessy 1896 separate-but-equal; lynching; comprehensive disenfranchisement); (3) CIVIL RIGHTS MOVEMENT 1954-1968 (Brown 1954; Montgomery 1955-1956; Little Rock 1957; sit-ins 1960; Freedom Rides 1961; Birmingham 1963; March on Washington 1963; CRA 1964; VRA 1965; FHA 1968; King assassinated 1968); (4) POST-CRM EXPANSION 1968-2000s (gender — Reed 1971 + Title IX 1972 + VMI 1996; ADA 1990; Shaw v. Reno 1993; Lawrence 2003); (5) MARRIAGE EQUALITY + BACKLASH 2003-present (Lawrence 2003 → Windsor 2013 → Obergefell 2015 → Bostock 2020; Dobbs 2022; SFFA 2023).
       `
     },
     {
@@ -37,7 +37,6 @@ export const govCivilRightsPart5Data = {
 | **1870** | 15TH AMENDMENT — voting rights "shall not be denied or abridged ... on account of race, color, or previous condition of servitude"; DID NOT include sex |
 | **1870-1871** | ENFORCEMENT ACTS / KU KLUX KLAN ACT — federal enforcement against KKK + voting violence |
 | **1872** | Amnesty Act restored most former Confederate political rights |
-| **1873** | SLAUGHTER-HOUSE CASES — narrow reading of 14th Am Privileges or Immunities Clause |
 | **1875** | CIVIL RIGHTS ACT 1875 — prohibited private discrimination in public accommodations; struck Civil Rights Cases 1883 |
 | **1877** | HAYES-TILDEN COMPROMISE — disputed 1876 election resolved; Hayes presidency in exchange for federal troops withdrawing from South; END OF RECONSTRUCTION |
 | **1883** | CIVIL RIGHTS CASES — STRUCK CRA 1875 as exceeding 14th Am power; STATE ACTION REQUIREMENT confirmed |
@@ -55,7 +54,7 @@ export const govCivilRightsPart5Data = {
 | **1921** | TULSA RACE MASSACRE — Greenwood "Black Wall Street" destroyed; ~300 killed |
 | **1925** | Gitlow v. New York — incorporated 1st Am Speech against states (selective incorporation begins) |
 | **1930s-1940s** | NAACP LDF (founded 1940, Marshall) systematic litigation strategy challenging Jim Crow |
-| **1944** | SMITH v. ALLWRIGHT — struck Texas all-white primary; KOREMATSU v. US — upheld Japanese American internment (later repudiated Trump v. Hawaii 2018) |
+| **1944** | SMITH v. ALLWRIGHT — struck Texas all-white primary; KOREMATSU v. US — upheld Japanese American internment (later widely condemned) |
 | **1948** | TRUMAN EO 9981 desegregated military; Shelley v. Kraemer — court enforcement of restrictive covenants = state action |
 | **1950** | SWEATT v. PAINTER + MCLAURIN v. OKLAHOMA — graduate school segregation cases; foundation for Brown |
 | **1954** | BROWN v. BOARD OF EDUCATION — OVERRULED Plessy in education |
@@ -85,20 +84,17 @@ export const govCivilRightsPart5Data = {
 |---|---|
 | **1971** | REED v. REED — first sex discrimination strike (Idaho probate); Swann v. Charlotte-Mecklenburg — busing as remedy |
 | **1972** | TITLE IX — sex discrimination in federally funded education; ERA passed Congress (never ratified); Furman v. Georgia death penalty moratorium |
-| **1973** | ROE v. WADE; Frontiero v. Richardson; San Antonio v. Rodriguez (no fundamental right to education); Rehabilitation Act §504; Lambda Legal founded |
+| **1973** | ROE v. WADE; San Antonio v. Rodriguez (no fundamental right to education); Rehabilitation Act §504; Lambda Legal founded |
 | **1974** | Milliken v. Bradley limited cross-district busing remedies |
 | **1975** | IDEA — Free Appropriate Public Education for students with disabilities |
-| **1976** | CRAIG v. BOREN — INTERMEDIATE SCRUTINY for sex |
 | **1977** | "Section 504 sit-ins" — disability rights activists occupied federal buildings demanding §504 regulations |
 | **1978** | REGENTS v. BAKKE — race as one factor permissible (no quotas) |
-| **1986** | BOWERS v. HARDWICK — upheld Georgia sodomy law (overruled Lawrence 2003) |
-| **1989** | Croson — strict scrutiny for state/local racial classifications |
 | **1990** | AMERICANS WITH DISABILITIES ACT — comprehensive disability rights; GHW Bush signed |
 | **1991** | CRA 1991 — jury trials + damages for Title VII violations; Anita Hill testimony at Clarence Thomas confirmation hearings |
 | **1993** | Religious Freedom Restoration Act (RFRA); Don't Ask Don't Tell compromise (Clinton) |
 | **1994** | VAWA — Violence Against Women Act |
-| **1995** | Adarand v. Peña — strict scrutiny for federal racial classifications |
-| **1996** | US v. VIRGINIA (VMI) — Ginsburg refined intermediate scrutiny ("exceedingly persuasive justification"); ROMER v. EVANS — first major SCOTUS LGBTQ+ rights victory; DOMA enacted (struck Windsor 2013) |
+| **1993** | SHAW v. RENO (required case) — race-based districts open to equal protection challenge |
+| **1996** | US v. VIRGINIA (VMI) — Ginsburg struck VMI's all-male admissions as sex discrimination; DOMA enacted (struck Windsor 2013) |
 | **1999** | Olmstead v. LC — community-based services for disabled |
 | **2003** | LAWRENCE v. TEXAS — overruled Bowers; substantive due process liberty in private consensual conduct; GRUTTER v. BOLLINGER — upheld holistic race-conscious admissions; Massachusetts SJC Goodridge — first state same-sex marriage |
 | **2007** | Parents Involved v. Seattle — struck race-conscious K-12 student assignment |
@@ -113,19 +109,18 @@ export const govCivilRightsPart5Data = {
 | **2009** | LILLY LEDBETTER FAIR PAY ACT (1st bill Obama signed); Matthew Shepard Hate Crimes Act |
 | **2010** | DON'T ASK DON'T TELL REPEAL allowed openly LGBTQ+ military service |
 | **2012** | DACA (Obama EO) deferred deportation for ~700K childhood arrivals; Obama re-elected; Trayvon Martin killed by George Zimmerman (Feb 26) |
-| **2013** | US v. WINDSOR — struck DOMA §3; HOLLINGSWORTH v. PERRY — CA Prop 8 invalidated on standing; SHELBY COUNTY v. HOLDER — gutted VRA Section 5 preclearance; BLACK LIVES MATTER founded after Zimmerman acquittal |
+| **2013** | US v. WINDSOR — struck DOMA §3; BLACK LIVES MATTER founded after Zimmerman acquittal |
 | **2014** | Burwell v. Hobby Lobby — RFRA exemption from contraceptive mandate; Michael Brown killed in Ferguson MO Aug 9 (DOJ investigation); Eric Garner killed in NYC ("I can't breathe") |
 | **2015** | OBERGEFELL v. HODGES — same-sex marriage right; Charleston AME church massacre June 17 (9 killed by white supremacist) |
 | **2016** | FISHER v. UT II — upheld UT Austin admissions; Obama opened all combat positions to women + transgender military service; Trump elected |
 | **2017** | UNITE THE RIGHT rally Charlottesville Aug 12 (Heather Heyer killed); Trump "very fine people on both sides"; #MeToo movement explodes (Tarana Burke 2006 + Weinstein revelations) |
-| **2018** | TRUMP v. HAWAII — upheld travel ban; formally REPUDIATED Korematsu 1944; Masterpiece Cakeshop (narrow ruling) |
 | **2020** | GEORGE FLOYD MURDERED May 25 by police officer Derek Chauvin; LARGEST PROTESTS IN US HISTORY (15-26M participants); BOSTOCK v. CLAYTON COUNTY — Title VII protects LGBTQ+ employment; DHS v. Regents UC — upheld DACA against Trump rescission; Ginsburg dies Sept 18; Amy Coney Barrett confirmed |
-| **2021** | Biden inaugurated; Brnovich v. DNC — weakened VRA Section 2 vote denial; Fulton v. Philadelphia (narrow); George Floyd Justice in Policing Act passed House (failed Senate); Derek Chauvin convicted of murder April 20 |
+| **2021** | Biden inaugurated; George Floyd Justice in Policing Act passed House (failed Senate); Derek Chauvin convicted of murder April 20 |
 | **2022** | DOBBS v. JACKSON — overruled Roe + Planned Parenthood v. Casey; Respect for Marriage Act signed Dec 13 (repealed DOMA, required state recognition of SS + interracial marriages performed legally); affirmative action argued |
-| **2023** | SFFA v. HARVARD/UNC — STRUCK race-conscious admissions; effectively OVERRULED Grutter; ALLEN v. MILLIGAN — UPHELD VRA Section 2 vote dilution claim; MOORE v. HARPER — REJECTED Independent State Legislature theory; 303 Creative — First Am exemption from anti-discrimination for expressive wedding website services |
+| **2023** | SFFA v. HARVARD/UNC — STRUCK race-conscious admissions; effectively OVERRULED Grutter |
 | **2024+** | Post-SFFA admissions cycles; abortion ballot initiatives in multiple states; ongoing voting rights litigation |
 
-> 🔑 Key takeaway: Civil rights doctrine evolved through 5 ERAS: (1) RECONSTRUCTION 1865-1877 — 13th + 14th + 15th + CRA 1866 + 1875 + Slaughter-House 1873 + Civil Rights Cases 1883; (2) JIM CROW 1877-1954 — Plessy 1896 + disenfranchisement + lynching + Korematsu 1944 + Smith v. Allwright 1944 + Truman EO 9981 1948 + Sweatt + McLaurin 1950; (3) CRM 1954-1968 — Brown 1954 + Montgomery 1955-1956 + Little Rock 1957 + sit-ins 1960 + Freedom Rides 1961 + Meredith Ole Miss 1962 + Birmingham 1963 + Letter from Birmingham Jail + MOW 1963 + Evers + 16th St Church + Mississippi Freedom Summer 1964 + CRA 1964 + 24th Am 1964 + Selma 1965 + VRA 1965 + Loving 1967 + MLK assassinated 1968 + FHA 1968; (4) POST-CRM EXPANSION 1968-2000s — Reed 1971 + Title IX 1972 + Roe 1973 + IDEA 1975 + Craig 1976 + Bakke 1978 + Bowers 1986 + ADA 1990 + Casey 1992 + RFRA 1993 + DADT 1993 + VMI 1996 + Romer 1996 + DOMA 1996 + Olmstead 1999; (5) MARRIAGE EQUALITY + BACKLASH 2003-present — Lawrence 2003 + Goodridge 2003 + Lilly Ledbetter 2009 + DADT repeal 2010 + DACA 2012 + Windsor 2013 + Shelby 2013 + BLM founded 2013 + Obergefell 2015 + Trump v. Hawaii 2018 + George Floyd 2020 + Bostock 2020 + Brnovich 2021 + Dobbs 2022 + Respect for Marriage 2022 + SFFA 2023 + Allen v. Milligan 2023 + Moore v. Harper 2023 + 303 Creative 2023.
+> 🔑 Key takeaway: Civil rights doctrine evolved through 5 ERAS: (1) RECONSTRUCTION 1865-1877 — 13th + 14th + 15th + CRA 1866 + 1875 + Civil Rights Cases 1883; (2) JIM CROW 1877-1954 — Plessy 1896 + disenfranchisement + lynching + Korematsu 1944 + Smith v. Allwright 1944 + Truman EO 9981 1948 + Sweatt + McLaurin 1950; (3) CRM 1954-1968 — Brown 1954 + Montgomery 1955-1956 + Little Rock 1957 + sit-ins 1960 + Freedom Rides 1961 + Meredith Ole Miss 1962 + Birmingham 1963 + Letter from Birmingham Jail + MOW 1963 + Evers + 16th St Church + Mississippi Freedom Summer 1964 + CRA 1964 + 24th Am 1964 + Selma 1965 + VRA 1965 + Loving 1967 + MLK assassinated 1968 + FHA 1968; (4) POST-CRM EXPANSION 1968-2000s — Reed 1971 + Title IX 1972 + Roe 1973 + IDEA 1975 + Bakke 1978 + ADA 1990 + Casey 1992 + RFRA 1993 + Shaw v. Reno 1993 + DADT 1993 + VMI 1996 + DOMA 1996 + Olmstead 1999; (5) MARRIAGE EQUALITY + BACKLASH 2003-present — Lawrence 2003 + Goodridge 2003 + Lilly Ledbetter 2009 + DADT repeal 2010 + DACA 2012 + Windsor 2013 + BLM founded 2013 + Obergefell 2015 + George Floyd 2020 + Bostock 2020 + Dobbs 2022 + Respect for Marriage 2022 + SFFA 2023.
       `
     },
     {
@@ -161,16 +156,16 @@ export const govCivilRightsPart5Data = {
             hint: 'Reconstruction Amendment; followed 13th Am 1865; preceded 15th Am 1870.'
           },
           {
-            prompt: "Year *PLESSY v. FERGUSON* established \"separate but equal\" doctrine.",
-            answer: '1896',
-            acceptableAnswers: ['1896'],
-            hint: 'Upheld Louisiana railroad segregation; Harlan dissent: "Constitution is color-blind"; OVERRULED in education by Brown 1954.'
+            prompt: "Year the 19th Amendment granted women the right to vote.",
+            answer: '1920',
+            acceptableAnswers: ['1920'],
+            hint: 'Ratified 72 years after the Seneca Falls Convention of 1848 (EK 5.1.A.1.iv).'
           },
           {
-            prompt: "Year *OBERGEFELL v. HODGES* established constitutional right to same-sex marriage.",
-            answer: '2015',
-            acceptableAnswers: ['2015'],
-            hint: 'Kennedy 5-4; 14th Am Due Process + Equal Protection.'
+            prompt: "Year *BAKER v. CARR* held that challenges to legislative apportionment can be heard by federal courts.",
+            answer: '1962',
+            acceptableAnswers: ['1962'],
+            hint: 'Required case; Tennessee had not redrawn its districts since 1901 (EK 2.3.A.2).'
           }
         ]
       }
@@ -182,7 +177,7 @@ export const govCivilRightsPart5Data = {
       exercise: {
         dropdowns: [
           {
-            label: "13th + 14th + 15th Amendments + Civil Rights Acts 1866 + 1875 + Slaughter-House 1873 + Civil Rights Cases 1883: ___",
+            label: "13th + 14th + 15th Amendments + Civil Rights Acts 1866 + 1875 + Civil Rights Cases 1883: ___",
             options: ['Reconstruction Era (1865-1877)', 'Jim Crow Era (1877-1954)', 'CRM Era (1954-1968)', 'Post-CRM Expansion (1968-2000s)', 'Marriage Equality + Backlash Era (2003-present)']
           },
           {
@@ -190,14 +185,14 @@ export const govCivilRightsPart5Data = {
             options: ['Reconstruction Era (1865-1877)', 'Jim Crow Era (1877-1954)', 'CRM Era (1954-1968)', 'Post-CRM Expansion (1968-2000s)', 'Marriage Equality + Backlash Era (2003-present)']
           },
           {
-            label: "Lawrence 2003 + Lilly Ledbetter 2009 + Windsor 2013 + Shelby County 2013 + Obergefell 2015 + Bostock 2020 + Dobbs 2022 + SFFA 2023 + Allen v. Milligan 2023: ___",
+            label: "Lawrence 2003 + Lilly Ledbetter 2009 + Windsor 2013 + Obergefell 2015 + Bostock 2020 + Dobbs 2022 + SFFA 2023: ___",
             options: ['Reconstruction Era (1865-1877)', 'Jim Crow Era (1877-1954)', 'CRM Era (1954-1968)', 'Post-CRM Expansion (1968-2000s)', 'Marriage Equality + Backlash Era (2003-present)']
           }
         ],
         correctAnswers: ['Reconstruction Era (1865-1877)', 'CRM Era (1954-1968)', 'Marriage Equality + Backlash Era (2003-present)'],
         hint1: 'Reconstruction 1865-1877 — federal occupation of South enforced 13th + 14th + 15th + CRA 1866 + CRA 1875; ended Hayes-Tilden Compromise 1877; Civil Rights Cases 1883 confirmed state action.',
         hint2: 'CRM 1954-1968 — Brown overruled Plessy in education; led to direct action (Montgomery, Birmingham, Selma) + landmark legislation (CRA 1964, 24th Am 1964, VRA 1965, Immigration Act 1965, FHA 1968).',
-        hint3: 'Marriage Equality + Backlash 2003-present — Lawrence overruled Bowers; expansion through Windsor + Obergefell + Bostock; counter-trends with Shelby County + Dobbs + SFFA + 303 Creative.'
+        hint3: 'Marriage Equality + Backlash 2003-present — Lawrence overruled Bowers; expansion through Windsor + Obergefell + Bostock; counter-trends with Dobbs + SFFA.'
       }
     },
     {
@@ -207,15 +202,15 @@ export const govCivilRightsPart5Data = {
       exercise: {
         questions: [
           {
-            question: "How does the MARRIAGE EQUALITY + BACKLASH ERA (2003-present) reflect both EXPANSION (Lawrence 2003 → Obergefell 2015 → Bostock 2020 → Respect for Marriage 2022) and RETRENCHMENT (Shelby County 2013 → Dobbs 2022 → SFFA 2023) of civil rights?",
+            question: "Which pair best illustrates that the government has at times RESTRICTED and at other times PROTECTED the civil rights of minority groups?",
             options: [
-              "Lawrence, Obergefell, Bostock and the Respect for Marriage Act expanded rights, while Shelby County, Dobbs and SFFA narrowed earlier protections in the same era.",
-              "Obergefell, Lawrence and Bostock narrowed rights, while Shelby County, Dobbs and SFFA expanded federal protections for voting, abortion and race-conscious admissions.",
-              "Shelby County, Dobbs and SFFA were all reversed by the Respect for Marriage Act of 2022, completing a steady expansion with no retrenchment in the period.",
-              "Lawrence and Obergefell were overruled by Dobbs in 2022, and Bostock and SFFA restored Bowers v. Hardwick and the Grutter diversity rationale together.",
+              "State laws upheld under the \"separate but equal\" doctrine, followed by Brown v. Board's ruling that school segregation violates equal protection.",
+              "The 15th Amendment and the Voting Rights Act of 1965, which both expanded voting rights for African American citizens.",
+              "Engel v. Vitale and Tinker v. Des Moines, which both limited government power over public schools.",
+              "The 19th Amendment and Title IX of the Education Amendments of 1972, which both expanded protections against sex discrimination in politics and education.",
             ],
             correctAnswer: 0,
-            explanation: 'MARRIAGE EQUALITY + BACKLASH ERA bidirectional: (1) EXPANSION — Lawrence 2003, Goodridge 2003, Lilly Ledbetter 2009, Hate Crimes 2009, DADT repeal 2010, DACA 2012, Windsor 2013 (struck DOMA §3), Obergefell 2015, Bostock 2020 (Title VII LGBTQ+), Respect for Marriage 2022 (repealed DOMA), Allen v. Milligan 2023 (preserved §2 vote dilution), Moore v. Harper 2023 (rejected ISL); (2) RETRENCHMENT — Parents Involved 2007 (K-12), Shelby County 2013 (gutted §4(b)), Hobby Lobby 2014, Masterpiece 2018, Trump v. Hawaii 2018 (Korematsu repudiated but policy upheld), Brnovich 2021 (weakened §2 vote denial), Fulton 2021, Dobbs 2022 (overruled Roe + Casey; Thomas concurrence — Lawrence/Obergefell/Griswold), SFFA 2023 (effectively overruled Grutter), 303 Creative 2023 (First Am for expressive services); (3) PARALLEL TRACKS — same era expanded LGBTQ+ + restricted reproductive + mixed voting; (4) STRUCTURAL — Trump 3 SCOTUS appointees (Gorsuch 2017, Kavanaugh 2018, Barrett 2020); 6-3 conservative supermajority; (5) MASS MOBILIZATION — Summer 2020 (15-26M); abortion ballot initiatives CA/MI/OH/KY/KS; (6) Doctrine CONTESTED + IN FLUX.'
+            explanation: 'EK 3.12.A.1: decisions showing minority rights restricted at times and protected at other times include STATE LAWS AND COURT HOLDINGS BASED ON "SEPARATE BUT EQUAL" (restriction — Plessy 1896 and Jim Crow) and COURT DECISIONS DECLARING RACE-BASED SCHOOL SEGREGATION A VIOLATION OF EQUAL PROTECTION (protection — Brown 1954). The other pairs each show only protection or expansion (voting rights, sex discrimination) or concern civil liberties rather than minority rights (Engel, Tinker).'
           }
         ]
       }

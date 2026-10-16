@@ -32,8 +32,6 @@ export const apesBiodiversityConservationPart1Data = {
 |-----|------|---------------|
 | **Endangered Species Act (ESA)** | 1973 | Protects listed threatened/endangered species; prohibits "take"; requires habitat protection |
 | **CITES** | 1975 | Intl treaty regulating trade of endangered species and products (ivory, pelts) |
-| **Lacey Act** | 1900 | Prohibits trade in illegally captured wildlife |
-| **Marine Mammal Protection Act** | 1972 | Protects whales, dolphins, seals from harassment or killing |
       `
     },
     {

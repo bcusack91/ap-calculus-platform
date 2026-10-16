@@ -14,7 +14,7 @@ export const hgIntroGeographyPart5Data = {
 | Section |
 |---------|
 | 📖 Relocation vs. Expansion Diffusion |
-| Four Types of Expansion Diffusion |
+| Three Types of Expansion Diffusion |
 | 📌 Hearths & Worked Examples |
 | Distance Decay Revisited |
 
@@ -32,13 +32,12 @@ export const hgIntroGeographyPart5Data = {
 | **Relocation diffusion** | A person/group physically migrates and brings the trait with them | Spanish carrying Catholicism to the Americas; Irish carrying step-dancing to Boston |
 | **Expansion diffusion** | The trait spreads outward from a hearth while remaining strong at the source | Islam radiating from Mecca; TikTok adoption from China outward |
 
-### Four Types of Expansion Diffusion
+### Three Types of Expansion Diffusion
 
 | Type | How It Works | Example |
 |------|-------------|---------|
 | **Contagious** | Spreads rapidly and widely through proximity, like a virus | COVID-19 in March 2020; viral memes; the 1918 flu |
 | **Hierarchical** | Jumps from major node to major node, then trickles down | Hip-hop from NYC & LA → Atlanta & Chicago → suburbs; fashion from Paris/Milan to global cities; corporate HQ openings |
-| **Reverse hierarchical** | Spreads from a small place upward to bigger ones | **Walmart** from Bentonville, Arkansas (pop. ~10,000) → small towns → suburbs → eventually metro areas |
 | **Stimulus** | The underlying *idea* spreads, but the local form is modified | Pentecostal Christianity adapting to local music & language in Brazil & Nigeria; McDonald's selling McAloo Tikki in India |
 
 ### Cultural Hearths
@@ -64,22 +63,22 @@ export const hgIntroGeographyPart5Data = {
       exercise: {
         questions: [
           {
-            question: "Walmart opened its first store in Rogers, Arkansas (1962), then spread through small towns of the South and Midwest before reaching major metropolitan markets. This pattern is BEST classified as:",
+            question: "A clothing style appears first in Paris, Milan and New York, then in regional cities, and only later in small towns, skipping many places in between. This pattern is BEST classified as:",
             options: [
               "Contagious diffusion",
               "Hierarchical diffusion",
-              "Reverse hierarchical diffusion",
+              "Stimulus diffusion",
               "Relocation diffusion by migrants"
             ],
-            correctAnswer: 2,
-            explanation: "Walmart spread *upward* from a small place (Bentonville/Rogers) to larger places — the textbook example of reverse hierarchical diffusion."
+            correctAnswer: 1,
+            explanation: "The style jumped between major nodes of the urban hierarchy before reaching smaller places, which is hierarchical diffusion. Contagious diffusion would spread to neighboring places in a continuous wave, stimulus diffusion would change the trait itself, and no migrants carried it."
           },
           {
             question: "Pentecostal Christianity arrived in Brazil from the United States, but Brazilian congregations now incorporate samba rhythms, Portuguese-language preaching, and locally relevant prosperity-gospel themes. The underlying religion spread, but its expression was modified locally. This is:",
             options: [
               "Contagious diffusion",
               "Stimulus diffusion",
-              "Reverse hierarchical diffusion",
+              "Hierarchical diffusion",
               "Relocation diffusion"
             ],
             correctAnswer: 1,
@@ -149,7 +148,7 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
           },
           {
             label: "Hip-hop spreading from New York and Los Angeles to Atlanta, then to suburban radio stations, then to small towns. Diffusion type: ___",
-            options: ["Hierarchical", "Reverse hierarchical", "Relocation", "Contagious"]
+            options: ["Hierarchical", "Stimulus", "Relocation", "Contagious"]
           },
           {
             label: "A viral TikTok dance trend spreading person-to-person within a high school in a single week. Diffusion type: ___",
@@ -171,7 +170,7 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
 
 ### Misconceptions
 - "Hierarchical" doesn't mean "important." It means it travels through a hierarchy of places (big → small).
-- Reverse hierarchical is **rare** — be sure the example actually starts in a small place (Walmart, Cracker Barrel).
+- Some textbooks add a "reverse hierarchical" type; the CED's expansion types are contagious, hierarchical and stimulus, so classify exam cases with those.
 - Contagious diffusion can feel "viral" but it requires **proximity**. A trend that requires Twitter to jump from NYC to Tokyo is hierarchical, not contagious.
 - Stimulus diffusion preserves the *idea*, not the form. McAloo Tikki is McDonald's (idea) reformatted (local form).
 
@@ -195,7 +194,7 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
             options: [
               "Contagious diffusion reaching all places at the same time",
               "Hierarchical diffusion through tiers of places linked by air",
-              "Reverse hierarchical diffusion from the countryside upward",
+              "Relocation diffusion carried by rural migrants",
               "Stimulus diffusion of new vaccination practices"
             ],
             correctAnswer: 1,

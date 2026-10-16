@@ -16,10 +16,10 @@ export const govBureaucracyPart2Data = {
 | Rulemaking — APA 1946 + notice-and-comment |
 | Enforcement + adjudication |
 | Implementation + delegated discretion |
-| Major-questions doctrine + Chevron's overruling |
+| Rulemaking authority in action — the CED's agencies |
 | Bureaucratic budgeting + appropriations |
 
-> 🔑 Key idea: BUREAUCRATIC PROCESSES include RULEMAKING (APA 1946 notice-and-comment; ~3,000-4,000 final rules/year published in Federal Register), ENFORCEMENT (investigation + prosecution discretion), ADJUDICATION (ALJs handle ~750,000 cases/year), and IMPLEMENTATION of statutes through delegated discretion. Recent SCOTUS decisions — *West Virginia v. EPA* (2022) MAJOR QUESTIONS DOCTRINE + *Loper Bright v. Raimondo* (2024) overruling *Chevron* deference (1984) — have significantly constrained agency authority.
+> 🔑 Key idea: BUREAUCRATIC PROCESSES include RULEMAKING (APA 1946 notice-and-comment; ~3,000-4,000 final rules/year published in Federal Register), ENFORCEMENT (investigation + prosecution discretion), ADJUDICATION (ALJs handle ~750,000 cases/year), and IMPLEMENTATION of statutes through delegated discretion. Congress, the president, and the courts each check how agencies use that discretion.
       `
     },
     {
@@ -34,16 +34,12 @@ The ADMINISTRATIVE PROCEDURE ACT 1946 (APA) governs how federal agencies make ru
 |---|---|
 | **1. Notice of Proposed Rulemaking (NPRM)** | Agency publishes proposed rule in *Federal Register* with rationale, statutory authority, regulatory text |
 | **2. Public Comment** | Public + interest groups + regulated parties submit comments (typically 30-60-90 days; sometimes years for major rules) |
-| **3. Review + Revision** | Agency reviews comments, may revise rule; OIRA (Office of Information and Regulatory Affairs in OMB) reviews 'significant' rules under EO 12866 (Clinton 1993) |
+| **3. Review + Revision** | Agency reviews comments, may revise rule; the White House (OMB) reviews major rules so they fit the president's agenda |
 | **4. Final Rule** | Final rule published in *Federal Register* with REASONED EXPLANATION + responses to significant comments; takes effect after 30+ days |
 | **5. Codification** | Final rule codified in *Code of Federal Regulations* (CFR) |
-| **6. Judicial Review** | Affected parties may challenge under APA standards |
+| **6. Judicial Review** | Affected parties may sue; courts can strike a rule that goes beyond what the statute authorizes |
 
-**STANDARDS OF JUDICIAL REVIEW** (5 U.S.C. § 706):
-- **ARBITRARY AND CAPRICIOUS** — most common standard for informal rulemaking; *Motor Vehicle Mfrs. Ass'n v. State Farm* (1983) — agency must consider relevant factors + provide reasoned explanation
-- **SUBSTANTIAL EVIDENCE** — formal rulemaking + on-record adjudication
-- **DE NOVO** — fact questions in narrow circumstances
-- **STATUTORY INTERPRETATION** — Loper Bright (2024) replaced Chevron deference with INDEPENDENT JUDICIAL JUDGMENT
+Every step is an ACCESS POINT (EK 2.15.B.1): interest groups, businesses, and citizens can comment, lobby the agency, ask Congress to intervene, or sue.
 
 ## Enforcement + Adjudication
 
@@ -54,7 +50,7 @@ The ADMINISTRATIVE PROCEDURE ACT 1946 (APA) governs how federal agencies make ru
 | **CRIMINAL REFERRAL** | Agencies refer cases to DOJ for prosecution |
 | **ADMINISTRATIVE LAW JUDGES (ALJs)** | ~1,800 ALJs decide cases on Social Security disability, immigration, labor disputes, environmental violations, etc.; ~750,000 administrative adjudications/year |
 | **APPEALS** | Within agency (e.g., SSA Appeals Council) → federal circuit court of appeals |
-| **JARKESY V. SEC (2024)** | SCOTUS held SEC's use of administrative law judges for civil penalty cases (when seeking civil money penalties) violates Seventh Amendment jury-trial right; significant constraint on agency adjudication |
+| **FINES** | Agencies ISSUE FINES for violations (EK 2.12.A.1.ii) — e.g., FCC fines broadcasters, EPA fines polluters, SEC fines firms that mislead investors |
 
 ## Implementation + Delegated Discretion
 
@@ -67,20 +63,23 @@ Congress passes BROAD statutes; agencies fill in details:
 | **Communications Act 1934** | FCC may regulate as 'public interest, convenience, or necessity' requires |
 | **Securities Exchange Act 1934** | SEC may make rules 'necessary or appropriate in the public interest' for protection of investors |
 
-This DELEGATION enables expertise + flexibility but raises CONSTITUTIONAL CONCERNS about Article I:
-- **NONDELEGATION DOCTRINE** — Congress cannot delegate legislative power; courts require an 'INTELLIGIBLE PRINCIPLE' to guide agency discretion (*Mistretta v. US* 1989); doctrine has been MOSTLY DORMANT since *Schechter Poultry* (1935) was the last successful nondelegation challenge
-- **MAJOR QUESTIONS DOCTRINE** — modern revival; courts require CLEAR congressional authorization for agency action of major economic or political significance
+This DELEGATION of DISCRETIONARY AUTHORITY (EK 2.13.A.1) lets agencies apply expertise and adjust to new problems without Congress passing a new law each time. The trade-off: unelected officials make consequential policy choices, which is why Congress (oversight, power of the purse), the president (appointments, executive orders), and the courts (lawsuits over whether a rule exceeds the statute) all work to keep agencies ACCOUNTABLE (EK 2.15.A.1).
 
-## Major-Questions Doctrine + Chevron's Overruling
+## Rulemaking Authority in Action — the CED's Agencies
 
-| Decision | Year | Holding | Impact |
-|---|---|---|---|
-| **Chevron v. NRDC** | 1984 | Two-step deference: (1) is statute clear? (2) if ambiguous, defer to reasonable agency interpretation | Foundational doctrine for ~40 years; cited in ~70 SCOTUS cases + ~17,000+ lower-court cases |
-| **King v. Burwell** | 2015 | Court declined Chevron deference for ACA premium tax credit issue because question was MAJOR | Early articulation of major-questions concept |
-| **West Virginia v. EPA** | 2022 | EPA Clean Power Plan struck because Clean Air Act did not CLEARLY authorize EPA to mandate fuel-source shifting from coal | EXPLICITLY CODIFIED MAJOR QUESTIONS DOCTRINE |
-| **Biden v. Nebraska** | 2023 | Struck Biden student loan forgiveness (\\$430B program) because HEROES Act did not CLEARLY authorize sweeping debt cancellation | Major Questions Doctrine applied |
-| **Loper Bright v. Raimondo** | 2024 | OVERRULED CHEVRON DEFERENCE — courts must exercise INDEPENDENT JUDGMENT on statutory interpretation; agencies entitled to RESPECT (Skidmore) but not deference | Reduced agency authority broadly |
-| **Corner Post v. Federal Reserve** | 2024 | APA statute of limitations runs from when plaintiff is INJURED (not when rule was promulgated) | Opens decades-old rules to new challenges |
+The CED (EK 2.13.A.1) names seven agencies as examples of bureaucratic discretion and rulemaking. Know what kind of rules each one writes and enforces:
+
+| Agency | Type | Discretionary rulemaking example |
+|---|---|---|
+| **Department of Homeland Security** | Cabinet department | Sets airport screening rules (through TSA) and immigration enforcement priorities |
+| **Department of Transportation** | Cabinet department | Writes vehicle safety and fuel-economy standards; sets rules for airlines and trucking |
+| **Department of Veterans Affairs** | Cabinet department | Decides eligibility rules for veterans' health care and disability benefits |
+| **Department of Education** | Cabinet department | Writes rules for federal student aid and for how schools comply with Title IX |
+| **Environmental Protection Agency (EPA)** | Independent executive agency | Sets air- and water-pollution limits under broad statutes such as the Clean Air Act |
+| **Federal Election Commission (FEC)** | Independent regulatory commission | Writes and enforces campaign-finance disclosure and contribution rules |
+| **Securities and Exchange Commission (SEC)** | Independent regulatory commission | Writes disclosure rules for public companies and fines firms that mislead investors |
+
+**The AP pattern:** Congress writes a broad goal ("protect public health," "ensure safe transportation") → the agency uses DISCRETION to write specific rules → the agency ENFORCES them (inspections, fines) → Congress, the president, and the courts check the result.
 
 ## Bureaucratic Budgeting + Appropriations
 
@@ -94,7 +93,7 @@ This DELEGATION enables expertise + flexibility but raises CONSTITUTIONAL CONCER
 | **OBLIGATION + EXPENDITURE** | Agencies obligate + spend funds per appropriations |
 | **AUDITS** | GAO (Government Accountability Office) audits federal spending |
 
-> 🔑 Key takeaway: Bureaucratic processes — RULEMAKING (APA 1946 notice-and-comment, ~3,000-4,000 final rules/yr), ENFORCEMENT + ADJUDICATION (~1,800 ALJs, ~750K cases/yr), IMPLEMENTATION via DELEGATED DISCRETION, BUDGETING (OMB → Congress → appropriations) — all face increasing CONSTITUTIONAL CONSTRAINTS via MAJOR QUESTIONS DOCTRINE (WV v. EPA 2022) + LOPER BRIGHT (2024) overruling Chevron.
+> 🔑 Key takeaway: Bureaucratic processes — RULEMAKING (APA 1946 notice-and-comment, ~3,000-4,000 final rules/yr), ENFORCEMENT + ADJUDICATION (~1,800 ALJs, ~750K cases/yr), IMPLEMENTATION via DELEGATED DISCRETION, BUDGETING (OMB → Congress → appropriations) — all rest on DISCRETIONARY AUTHORITY delegated by Congress and are checked by Congress, the president, and the courts.
       `
     },
     {
@@ -112,18 +111,18 @@ This DELEGATION enables expertise + flexibility but raises CONSTITUTIONAL CONCER
               "An agency submits a rule to the Supreme Court, waits for an advisory opinion, then prints it in the Congressional Record"
             ],
             correctAnswer: 0,
-            explanation: 'Standard NOTICE-AND-COMMENT under APA § 553: (1) NPRM — proposed rule in Federal Register with authority + rationale + text; (2) PUBLIC COMMENT — 30-60-90 days; (3) REVIEW + REVISION — OIRA reviews "significant" rules per EO 12866 (Clinton 1993); (4) FINAL RULE — Federal Register with REASONED EXPLANATION + responses; effective 30+ days; (5) CFR codification; (6) JUDICIAL REVIEW under arbitrary-and-capricious (Motor Vehicle Mfrs v. State Farm 1983).'
+            explanation: 'Standard NOTICE-AND-COMMENT under APA § 553: (1) NPRM — proposed rule in Federal Register with authority + rationale + text; (2) PUBLIC COMMENT — 30-60-90 days; (3) REVIEW + REVISION — agency considers the comments; (4) FINAL RULE — Federal Register with REASONED EXPLANATION + responses; effective 30+ days; (5) CFR codification; (6) JUDICIAL REVIEW — affected parties may challenge the rule in court. Congress does not vote on individual rules; that is the point of delegated rulemaking authority (EK 2.13.A.1).'
           },
           {
-            question: "Which best describes how *Loper Bright v. Raimondo* (2024) changed the legal framework for agency interpretation of statutes?",
+            question: "Congress directs the EPA to set air-quality limits 'requisite to protect the public health' but writes no specific numbers into the law. Which best describes the EPA's role in setting the actual limits?",
             options: [
-              "It overruled Chevron, so courts now judge statutory meaning themselves instead of deferring to agencies",
-              "It extended Chevron, so courts must now defer to agency readings even when the statute's text itself is clear",
-              "It overruled the major questions doctrine, so agencies may now address any issue Congress has not expressly barred",
-              "It required Congress to approve every major rule, so courts no longer review agency interpretations of statutes at all"
+              "It uses delegated discretion to issue binding rules that fill in the details",
+              "It must return to Congress for a floor vote on each specific number before any limit can take effect",
+              "It waits for the Supreme Court to set the numbers, since courts interpret all ambiguous statutes first",
+              "It cannot act, because only Congress may make rules that bind private businesses and individuals"
             ],
             correctAnswer: 0,
-            explanation: 'LOPER BRIGHT v. RAIMONDO (2024) OVERRULED CHEVRON DEFERENCE (Chevron v. NRDC 1984; ~40 yrs). OLD CHEVRON: (Step 1) Statute clear? (Step 2) If ambiguous, DEFER to reasonable agency interpretation. NEW LOPER BRIGHT: courts exercise INDEPENDENT JUDGMENT; agencies entitled to RESPECT (Skidmore — expertise + persuasiveness) but NOT DEFERENCE. (1) Reduces agency authority broadly; (2) shifts power from agencies → COURTS; (3) increases litigation; (4) uncertainty on long-standing regs; (5) combined with MAJOR QUESTIONS DOCTRINE (WV v. EPA 2022) → major constraint on administrative state.'
+            explanation: 'EK 2.13.A.1: the bureaucracy uses DISCRETIONARY POWER delegated by Congress to interpret and implement policies; through RULEMAKING AUTHORITY agencies create and enforce regulations. Congress set the goal (protect public health) and left the EPA to choose the specific limits using its expertise. Congress does not vote on each rule, courts review rules only when someone sues, and agency rules issued under a statute do bind businesses and individuals.'
           }
         ]
       }
@@ -135,22 +134,22 @@ This DELEGATION enables expertise + flexibility but raises CONSTITUTIONAL CONCER
       exercise: {
         questions: [
           {
-            prompt: "Year the ADMINISTRATIVE PROCEDURE ACT was enacted to govern federal agency rulemaking.",
-            answer: '1946',
-            acceptableAnswers: ['1946'],
-            hint: 'One year after WWII; same year as Atomic Energy Act.'
+            prompt: "Term for an agency's power to write binding regulations that carry out a law passed by Congress.",
+            answer: 'rulemaking',
+            acceptableAnswers: ['rulemaking', 'rule making', 'rule-making', 'rulemaking authority', 'rulemaking power'],
+            hint: 'Notice → comment → final ___.'
           },
           {
-            prompt: "Year *CHEVRON v. NRDC* established the deference doctrine that governed agency interpretation for ~40 years.",
-            answer: '1984',
-            acceptableAnswers: ['1984'],
-            hint: 'Reagan administration; first major Term of post-Burger Court.'
+            prompt: "Abbreviation of the independent regulatory commission that writes and enforces federal campaign-finance rules.",
+            answer: 'FEC',
+            acceptableAnswers: ['FEC', 'Federal Election Commission', 'the FEC'],
+            hint: 'Federal ___ Commission.'
           },
           {
-            prompt: "Year *LOPER BRIGHT v. RAIMONDO* OVERRULED Chevron deference.",
-            answer: '2024',
-            acceptableAnswers: ['2024'],
-            hint: 'Same Term as Trump v. United States presidential immunity case.'
+            prompt: "Term for the judgment agencies use, as delegated by Congress, to interpret and implement policies (two words).",
+            answer: 'discretionary authority',
+            acceptableAnswers: ['discretionary authority', 'discretionary power', 'discretion', 'delegated discretion', 'delegated discretionary authority'],
+            hint: 'EK 2.13.A.1 — Congress delegates it; agencies use it to write rules.'
           }
         ]
       }
@@ -176,7 +175,7 @@ This DELEGATION enables expertise + flexibility but raises CONSTITUTIONAL CONCER
         ],
         correctAnswers: ['Rulemaking', 'Adjudication', 'Budgeting'],
         hint1: 'Rulemaking = APA 1946 § 553 notice-and-comment; ~3,000-4,000 final rules/yr in Federal Register.',
-        hint2: 'Adjudication = ~1,800 ALJs; ~750K cases/yr; Jarkesy v. SEC 2024 limited SEC ALJ use for civil penalties.',
+        hint2: 'Adjudication = ~1,800 ALJs; ~750K cases/yr; court-like hearings inside agencies.',
         hint3: 'Budgeting = Budget and Accounting Act 1921 + Budget Act 1974; OMB integrates; Congress appropriates.'
       }
     },
@@ -187,26 +186,26 @@ This DELEGATION enables expertise + flexibility but raises CONSTITUTIONAL CONCER
       exercise: {
         questions: [
           {
-            question: "AP concept-application: How does the MAJOR QUESTIONS DOCTRINE constrain agency action?",
+            question: "AP concept-application: Congress directs the Department of Transportation to set 'reasonable' safety standards for self-driving cars without defining 'reasonable.' The department then writes detailed rules after a public comment period. Which concept does this scenario best illustrate?",
             options: [
-              "Agencies need clear authorization from Congress before acting on issues of vast economic or political significance",
-              "Courts must defer to agencies on major questions, since those require technical expertise judges lack",
-              "Agencies may act on any major question once the President certifies a national emergency, even without a statute from Congress",
-              "Only Cabinet departments, not independent agencies, may decide questions of national importance"
+              "Discretionary authority, because Congress delegated to the agency the job of filling in the law",
+              "Judicial review, because the department decides whether the statute is constitutional before applying it",
+              "Pork-barrel spending, because the department directs federal money to projects in members' districts",
+              "Executive privilege, because the department withholds its internal deliberations from Congress"
             ],
             correctAnswer: 0,
-            explanation: 'MAJOR QUESTIONS DOCTRINE (codified WV v. EPA 2022; applied Biden v. Nebraska 2023; reinforced Loper Bright 2024) → COURTS REQUIRE CLEAR CONGRESSIONAL AUTHORIZATION for agencies on MAJOR ECONOMIC OR POLITICAL SIGNIFICANCE. APPLICATIONS: (1) WV v. EPA struck EPA Clean Power Plan — Clean Air Act § 111(d) did not CLEARLY authorize fuel-source shifting from coal; (2) Biden v. Nebraska struck \\$430B student loan forgiveness — HEROES Act did not clearly authorize. SHIFT IN POWER from AGENCIES → COURTS + CONGRESS; constrains administrative state.'
+            explanation: 'EK 2.13.A.1: the bureaucracy uses DISCRETIONARY POWER delegated by Congress to interpret and implement policies, and its RULEMAKING AUTHORITY lets it create and enforce regulations. The Department of Transportation is one of the agencies the CED names. Courts, not agencies, exercise judicial review; pork-barrel spending is a congressional funding practice; nothing in the scenario involves withholding information.'
           },
           {
-            question: "Why is the BUDGET AND ACCOUNTING ACT 1921 historically significant for the federal bureaucracy?",
+            question: "A House appropriations subcommittee, unhappy with how an agency enforces a regulation, writes a spending bill that bars the agency from using any funds to enforce that rule. Which congressional oversight tool is being used?",
             options: [
-              "It created the Bureau of the Budget and the GAO, giving the President a unified budget and Congress an auditor",
-              "It created the Congressional Budget Office, ending the President's role in preparing federal budgets",
-              "It created the Office of Personnel Management, replacing the spoils system with competitive exams for all federal jobs",
-              "It created the Federal Reserve, giving an independent bureau control of agency spending and audits"
+              "The power of the purse, by withholding the money the agency needs to carry out the rule",
+              "Senate confirmation, by refusing to approve the agency head the President has nominated",
+              "A discharge petition, by forcing the bill out of a committee that has refused to act on it",
+              "Impeachment, by formally charging the agency's officials with abuse of power in the House"
             ],
             correctAnswer: 0,
-            explanation: 'BUDGET AND ACCOUNTING ACT 1921 fundamentally reshaped federal budgeting: (1) CREATED BUREAU OF THE BUDGET (now OMB) — institutionalized presidential review + integration of agency budget requests; (2) CREATED GENERAL ACCOUNTING OFFICE (now GAO) — independent audit + investigation for Congress; (3) MANDATED PRESIDENT\'S BUDGET — consolidated budget to Congress (today first Monday in February); (4) ENDED "BOTTOM-UP" BUDGETING — pre-1921 agencies submitted directly to Congress without presidential coordination. Shifted to UNIFIED EXECUTIVE-LED PROCESS; later refined by CONGRESSIONAL BUDGET + IMPOUNDMENT CONTROL ACT 1974 (CBO + Budget Cmtes + reconciliation).'
+            explanation: 'EK 2.14.A.1.iii: the POWER OF THE PURSE is Congress\'s ability to check the bureaucracy by appropriating or withholding funds. A funding limit in an appropriations bill (often a rider) stops the agency from enforcing the rule without changing the underlying law. Senate confirmation applies to nominees, a discharge petition moves a bill out of committee, and impeachment is aimed at officials, not at a policy.'
           }
         ]
       }
