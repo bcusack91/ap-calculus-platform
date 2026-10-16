@@ -64,7 +64,7 @@ $$K_{\\text{total}} = 12 + 24 = 36 \\text{ J} = \\frac{1}{2}(2)(6)^2 \\checkmark
       question: 'In a perfectly inelastic collision, what fraction of the initial KE is lost when a mass $m$ hits a stationary mass $M$?',
       options: ['$M/(m+M)$', '$m/(m+M)$', '$1/2$', '$(m-M)/(m+M)$'],
       correctAnswer: 0,
-      explanation: 'The lost KE equals $K_{\\text{int}}$. Using the reduced mass $\\mu = mM/(m+M)$: $K_{\\text{int}} = \\frac{1}{2}\\mu v_{\\text{rel}}^2$. The fraction lost is $K_{\\text{int}}/K_{\\text{total}} = \\mu v_{\\text{rel}}^2/(m v^2) = M/(m+M)$.'
+      explanation: 'After sticking, $v_f = mv/(m+M)$, so $K_f/K_i = \\frac{(m+M)v_f^2}{mv^2} = \\frac{m}{m+M}$. The fraction lost is $1 - \\frac{m}{m+M} = \\frac{M}{m+M}$, which is exactly $K_{\\text{int}}/K_{\\text{total}}$.'
     },
     {
       id: 'com4-elastic',
@@ -90,10 +90,10 @@ $$v_2^{\\text{after}} = \\frac{2m_1}{m_1+m_2}v_1 + \\frac{m_2 - m_1}{m_1+m_2}v_2
       type: 'mcq' as const,
       question: 'In an elastic collision, a particle of mass $m$ strikes a stationary particle of mass $2m$. In the COM frame, the incoming particle\'s speed after the collision is:',
       options: [
-        'The same as before (just reversed)',
-        'Zero',
-        'Reduced by half',
-        'Doubled'
+        'The same, with its direction reversed',
+        'Zero, since it stops',
+        'Half as large as before',
+        'Twice as large as before'
       ],
       correctAnswer: 0,
       explanation: 'In the COM frame, elastic collisions simply reverse velocities. The speed of each particle is unchanged; only the direction flips.'
@@ -101,10 +101,10 @@ $$v_2^{\\text{after}} = \\frac{2m_1}{m_1+m_2}v_1 + \\frac{m_2 - m_1}{m_1+m_2}v_2
     {
       id: 'com4-mcq4',
       type: 'mcq' as const,
-      question: 'The reduced mass $\\mu = \\frac{m_1 m_2}{m_1 + m_2}$ appears in two-body problems. If $m_1 = m_2 = m$, then $\\mu =$',
-      options: ['$m/2$', '$m$', '$2m$', '$m/4$'],
+      question: 'A 2 kg ball at $6$ m/s hits a 4 kg ball at rest. The greatest kinetic energy the collision could possibly convert to other forms is:',
+      options: ['$24$ J', '$36$ J', '$12$ J', '$18$ J'],
       correctAnswer: 0,
-      explanation: '$\\mu = \\frac{m \\cdot m}{m + m} = \\frac{m^2}{2m} = m/2$. The reduced mass is always less than or equal to the smaller mass.'
+      explanation: 'Momentum conservation keeps $K_{\\text{cm}} = \\frac{1}{2}(6)(2)^2 = 12$ J no matter what, so at most $K_{\\text{int}} = 36 - 12 = 24$ J can be lost, which happens when the balls stick.'
     },
     {
       id: 'com4-summary',
@@ -118,7 +118,7 @@ $$v_2^{\\text{after}} = \\frac{2m_1}{m_1+m_2}v_1 + \\frac{m_2 - m_1}{m_1+m_2}v_2
 | KE decomposition | $K = K_{\\text{cm}} + K_{\\text{int}}$ |
 | Elastic (COM frame) | Velocities reverse |
 | Perfectly inelastic | All $K_{\\text{int}}$ is lost |
-| Reduced mass | $\\mu = m_1 m_2/(m_1+m_2)$ |
+| Maximum KE loss | $K_{\\text{int}}$ (when the objects stick) |
 
 > **Next:** Part 5 — COM motion under external forces.`
     }

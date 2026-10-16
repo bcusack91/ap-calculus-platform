@@ -9,7 +9,7 @@ export const physCRotationPart2Data = {
 
 **Part 2 of 7 — Moment of Inertia**
 
-$I = \\sum m_i r_i^2 = \\int r^2\,dm$
+$I = \\sum m_i r_i^2 = \\int r^2\\,dm$
 
 Common moments of inertia:
 - Point mass: $I = mr^2$
@@ -46,9 +46,9 @@ $I = mr^2 = 3(4) = 12$ $kg\\cdot m^{2}$ ✅
                     "question": "The moment of inertia depends on:",
                     "options": [
                               "Mass and its distribution from the axis",
-                              "Mass only",
-                              "Shape only",
-                              "Angular velocity"
+                              "Mass only, not where it is located",
+                              "The shape only, not the mass",
+                              "The angular velocity of rotation"
                     ],
                     "correctAnswer": 0,
                     "explanation": "$I = \\sum mr^2$. It depends on both mass and how far it is from the axis."
@@ -85,7 +85,7 @@ $I = mr^2 = 3(4) = 12$ $kg\\cdot m^{2}$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"A hoop has moment of inertia","options":["$mr^2$","$\\frac{1}{2}mr^2$","$\\frac{2}{5}mr^2$","$\\frac{1}{12}mL^2$"]},{"label":"Moving mass further from the axis","options":["Increases $I$","Decreases $I$","No effect on $I$","Decreases $\\omega$"]}],
+        dropdowns: [{"label":"A hoop has moment of inertia","options":["$mr^2$","$\\frac{1}{2}mr^2$","$\\frac{2}{5}mr^2$","$\\frac{1}{12}mL^2$"]},{"label":"Moving mass further from the axis","options":["Increases $I$","Decreases $I$","No effect on $I$","Decreases $m$"]}],
         correctAnswers: ["$mr^2$","Increases $I$"],
         hint1: "A hoop has all mass at radius $r$.",
         hint2: "$I \\propto r^2$.",

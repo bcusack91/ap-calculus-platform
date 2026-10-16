@@ -62,13 +62,13 @@ So $v_2 = 2\\,\\text{m/s}$ and $v_1 = 1.732(2) \\approx 3.46\\,\\text{m/s}$.
         questions: [
           {
             question: 'In 2D collisions, momentum is conserved:',
-            options: ['Only in x', 'Only in y', 'In each direction independently', 'Only for elastic collisions'],
+            options: ['Only along the initial direction of motion', 'Only along the line joining the centers', 'In each direction independently', 'Only when the collision is elastic'],
             correctAnswer: 2,
             explanation: 'Momentum is a vector; each component ($p_x$ and $p_y$) is conserved independently.'
           },
           {
             question: 'A 1 kg disk moving east at 4 m/s hits a stationary 1 kg disk. If the first leaves at $30^\\circ$ north of east, conserving $y$-momentum requires the second to move:',
-            options: ['Due north', 'South of east', 'Due east', 'West'],
+            options: ['North of east', 'South of east', 'Due east', 'Due west'],
             correctAnswer: 1,
             explanation: 'Initial $p_y = 0$. If one disk gains northward ($+y$) momentum, the other must carry equal southward ($-y$) momentum to keep $p_y = 0$.'
           },
@@ -87,10 +87,10 @@ So $v_2 = 2\\,\\text{m/s}$ and $v_1 = 1.732(2) \\approx 3.46\\,\\text{m/s}$.
           {
             question: 'To analyze a 2D collision where an object enters at angle $\\theta$, you should first:',
             options: [
-              'Add all the speeds together',
+              'Add the speeds of the objects before and after the collision',
               'Resolve each velocity into $x$ and $y$ components',
-              'Assume kinetic energy is always conserved',
-              'Ignore the $y$-direction'
+              'Assume kinetic energy is conserved in each direction',
+              'Apply momentum conservation along the incoming direction only'
             ],
             correctAnswer: 1,
             explanation: 'Resolving into components lets you write a separate conservation equation for each axis, just like projectile motion.'

@@ -42,9 +42,9 @@ Maximum speed occurs where $U(x)$ is minimum.`
       question: 'On an energy diagram, the kinetic energy at position $x$ is represented by:',
       options: [
         'The vertical gap between the $E$ line and the $U(x)$ curve',
-        'The slope of the $U(x)$ curve',
-        'The value of $U(x)$',
-        'The area under the $U(x)$ curve'
+        'The slope of the $U(x)$ curve at that point',
+        'The height of the $U(x)$ curve above the axis',
+        'The area under the $U(x)$ curve up to $x$'
       ],
       correctAnswer: 0,
       explanation: '$K = E - U(x)$. On the diagram, this is the vertical distance from the $U(x)$ curve up to the constant $E$ line. Where they meet ($K = 0$), the object has zero speed — a turning point.'
@@ -87,13 +87,13 @@ Think: a ball on a flat table.
       type: 'mcq' as const,
       question: 'Consider $U(x) = x^3 - 3x$. The equilibrium points and their stability are:',
       options: [
-        '$x = -1$ (stable, local min) and $x = 1$ (unstable, local max)',
-        '$x = -1$ (unstable) and $x = 1$ (stable)',
-        '$x = 0$ (stable) only',
-        '$x = \\pm\\sqrt{3}$ (both stable)'
+        '$x = -1$ stable, $x = 1$ unstable',
+        '$x = -1$ unstable, $x = 1$ stable',
+        '$x = 0$ stable, the only equilibrium',
+        '$x = \\pm\\sqrt{3}$, both stable'
       ],
-      correctAnswer: 0,
-      explanation: '$U\'(x) = 3x^2 - 3 = 0 \\implies x = \\pm 1$. $U\'\'(x) = 6x$. At $x = -1$: $U\'\' = -6 < 0$ — wait, that\'s unstable. At $x = 1$: $U\'\' = 6 > 0$ — stable. Actually: $U(-1) = -1 + 3 = 2$ (local max), $U(1) = 1 - 3 = -2$ (local min). So $x = 1$ is stable and $x = -1$ is unstable.'
+      correctAnswer: 1,
+      explanation: '$U\'(x) = 3x^2 - 3 = 0$ gives $x = \\pm 1$, and $U\'\'(x) = 6x$. At $x = -1$, $U\'\' = -6 < 0$: a local maximum ($U = 2$), so unstable. At $x = 1$, $U\'\' = 6 > 0$: a local minimum ($U = -2$), so stable.'
     },
     {
       id: 'cf4-bounded',
@@ -150,23 +150,23 @@ So bounded motion occurs for $-U_0 < E < 0$.`
       type: 'mcq' as const,
       question: 'For the gravitational potential $U(r) = -GMm/r$, a particle with $E = -GMm/(2r_0)$ has its motion:',
       options: [
-        'Bounded between $r_{\\min}$ and $r_{\\max}$ (elliptical orbit)',
-        'Unbounded (escapes to infinity)',
-        'Circular at $r = r_0$',
-        'Straight-line fall into center'
+        'Bounded, since $E < 0$ keeps it from reaching infinity',
+        'Unbounded, since $U \\to 0$ at infinity',
+        'Unbounded, since $E$ is greater than $U(r_0)$',
+        'Impossible, since total energy cannot be negative'
       ],
       correctAnswer: 0,
-      explanation: 'Since $E < 0$ and $U(\\infty) = 0$, the particle cannot reach infinity. It oscillates between two turning points — for gravity with angular momentum, this gives an elliptical orbit.'
+      explanation: 'Since $E < 0$ and $U(\\infty) = 0$, reaching infinity would need negative kinetic energy, so the motion is bounded. (This value of $E$ is the energy of a circular orbit of radius $r_0$; with less angular momentum the orbit is an ellipse.)'
     },
     {
       id: 'cf4-mcq5',
       type: 'mcq' as const,
       question: 'On an energy diagram, the magnitude of the force at a position $x$ is proportional to:',
       options: [
-        'The steepness (slope) of the $U(x)$ curve at that point',
-        'The value of $U(x)$',
-        'The gap between $E$ and $U(x)$',
-        'The curvature of the $U(x)$ curve'
+        'The slope of the $U(x)$ curve at that point',
+        'The height of the $U(x)$ curve at that point',
+        'The gap between $E$ and $U(x)$ at that point',
+        'The curvature of the $U(x)$ curve at that point'
       ],
       correctAnswer: 0,
       explanation: '$F = -dU/dx$, so $|F| = |dU/dx|$ — the magnitude of the force is the absolute value of the slope of the potential energy curve. Steep slope = large force; flat = small or zero force.'

@@ -80,33 +80,23 @@ $$\\tau = \\frac{d}{dt}(I\\omega) = I\\frac{d\\omega}{dt} + \\omega\\frac{dI}{dt
 
 This is **not** the same as $I\\alpha$! The $\\omega\\,dI/dt$ term accounts for the redistribution of mass.
 
-### Example: Wrapping Rope
+### Example: Unwinding Rope (constant $I$)
 
-A disk ($I = \\frac{1}{2}MR^2$) has a rope wound around it. The rope unwinds under a hanging mass $m$.
+A disk ($I = \\frac{1}{2}MR^2$) on a fixed axle has a rope wound around it, and the rope supports a hanging mass $m$. The torque on the disk comes from the rope **tension** $T$, not from $mg$: the hanging mass accelerates, so $T < mg$.
 
-Torque: $\\tau = mgR$ (ignoring rope mass)
+For the hanging mass: $mg - T = ma$
 
-$$mgR = I\\alpha = \\frac{1}{2}MR^2 \\alpha$$
+For the disk: $TR = \\frac{1}{2}MR^2 \\alpha$ with $a = R\\alpha$, so $T = \\frac{1}{2}Ma$
 
-$$\\alpha = \\frac{2mg}{MR}$$
+$$mg - \\frac{1}{2}Ma = ma \\implies a = \\frac{mg}{m + M/2}$$
 
-Linear acceleration of the hanging mass: $a = R\\alpha = \\frac{2mg}{M}$
-
-Note: if $m \\ll M$, then $a \\approx 0$ (the heavy disk barely accelerates). If $M \\ll m$, then $a \\to \\infty$ — but we'd need to account for the mass falling at $a = g$.
-
-Correct treatment with tension $T$:
-
-For hanging mass: $mg - T = ma$
-
-For disk: $TR = \\frac{1}{2}MR^2 \\alpha$, $T = \\frac{1}{2}Ma$
-
-$$mg - \\frac{1}{2}Ma = ma \\implies a = \\frac{mg}{m + M/2}$$`
+Check the limits: a very light disk ($M \\to 0$) gives $a \\to g$ (free fall), and a very heavy disk gives $a \\to 0$.`
     },
     {
       id: 'am3-mcq3',
       type: 'mcq' as const,
       question: 'A force $\\vec{F} = 5\\hat{x}$ N acts on a particle at position $\\vec{r} = 3\\hat{x} + 4\\hat{y}$ m. The torque about the origin is:',
-      options: ['$-20\\hat{z}$ N·m', '$20\\hat{z}$ N·m', '$15\\hat{z}$ N·m', '$0$'],
+      options: ['$-20\\hat{z}$ N·m', '$20\\hat{z}$ N·m', '$15\\hat{z}$ N·m', '$-15\\hat{z}$ N·m'],
       correctAnswer: 0,
       explanation: '$\\vec{\\tau} = \\vec{r} \\times \\vec{F} = (3\\hat{x} + 4\\hat{y}) \\times 5\\hat{x} = 15(\\hat{x}\\times\\hat{x}) + 20(\\hat{y}\\times\\hat{x}) = 0 + 20(-\\hat{z}) = -20\\hat{z}$ N·m.'
     },

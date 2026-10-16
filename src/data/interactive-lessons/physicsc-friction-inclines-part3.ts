@@ -96,7 +96,7 @@ Notice: $v_{\\text{return}} < v_0$ because friction dissipated energy.`
       options: [
         '$g(\\sin 45° - 0.3\\cos 45°) \\approx 4.95$ $m/s^{2}$',
         '$g\\sin 45° \\approx 7.07$ $m/s^{2}$',
-        '$g(\\sin 45° + 0.3\\cos 45°) \\approx 9.19$ $m/s^{2}$',
+        '$g(\\sin 45° + 0.3) \\approx 10.1$ $m/s^{2}$',
         '$g\\cos 45° \\approx 7.07$ $m/s^{2}$'
       ],
       correctAnswer: 0,
@@ -136,22 +136,22 @@ where $d = \\frac{v_0^2}{2g(\\sin\\theta + \\mu_k\\cos\\theta)}$ is the distance
       type: 'mcq' as const,
       question: 'A 2 kg block slides 5 m down a rough $30°$ ramp ($\\mu_k = 0.2$) from rest. What is its final speed? ($g = 10$ $m/s^{2}$)',
       options: [
-        '$\\sqrt{2(10)(5)(\\sin 30° - 0.2\\cos 30°)} \\approx 5.66$ m/s',
+        '$\\sqrt{2(10)(5)(\\sin 30° - 0.2\\cos 30°)} \\approx 5.72$ m/s',
         '$\\sqrt{2(10)(5)\\sin 30°} \\approx 7.07$ m/s',
         '$\\sqrt{2(10)(5)(0.5 + 0.173)} \\approx 8.2$ m/s',
         '$\\sqrt{2(10)(5)\\cos 30°} \\approx 9.3$ m/s'
       ],
       correctAnswer: 0,
-      explanation: '$v = \\sqrt{2gd(\\sin\\theta - \\mu_k\\cos\\theta)} = \\sqrt{2(10)(5)(0.5 - 0.173)} = \\sqrt{32.7} \\approx 5.66$ m/s. Friction reduces the speed compared to the frictionless case.'
+      explanation: '$v = \\sqrt{2gd(\\sin\\theta - \\mu_k\\cos\\theta)} = \\sqrt{2(10)(5)(0.5 - 0.173)} = \\sqrt{32.7} \\approx 5.72$ m/s. Friction reduces the speed compared to the frictionless case.'
     },
     {
       id: 'fri3-mcq4',
       type: 'mcq' as const,
       question: 'A block is launched up a rough incline and returns to the start. Compared to its initial speed $v_0$, its return speed $v_f$ is:',
       options: [
-        '$v_f < v_0$ because friction dissipates energy both going up and coming down',
-        '$v_f = v_0$ because the height change is zero for a round trip',
-        '$v_f > v_0$ because gravity accelerates it coming back',
+        '$v_f < v_0$, since friction removes energy both ways',
+        '$v_f = v_0$, since the net height change is zero',
+        '$v_f > v_0$, since gravity speeds it up coming back',
         '$v_f = v_0$ only if the incline is $45°$'
       ],
       correctAnswer: 0,

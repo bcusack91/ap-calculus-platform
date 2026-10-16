@@ -18,7 +18,7 @@ export const physCMomentumPart7Data = {
 | $\\vec{J} = \\int \\vec{F}\\,dt = \\Delta\\vec{p}$ | Impulse-momentum theorem |
 | $\\vec{p}_i = \\vec{p}_f$ | Conservation of momentum |
 | $x_{\\text{cm}} = \\dfrac{\\sum m_i x_i}{M}$ | Center of mass |
-| $v_f - v_i = u\\ln(m_i/m_f)$ | Rocket equation |
+| $F = v\\,dm/dt$ | Mass added at constant velocity |
 | Elastic: $K_i = K_f$ | Kinetic energy conserved |
 | Inelastic: $K_i > K_f$ | KE lost to deformation/heat |`
     },
@@ -53,15 +53,15 @@ $J_x = m\\,v_{xf} - m\\,v_{xi}\\;\\Rightarrow\\; v_{xf} = v_{xi} + \\frac{J_x}{m
         questions: [
           {
             question: 'Which quantity is ALWAYS conserved in collisions (with no external forces)?',
-            options: ['Kinetic energy', 'Momentum', 'Speed', 'Force'],
+            options: ['Kinetic energy', 'Momentum', 'Speed of each object', 'Mechanical energy'],
             correctAnswer: 1,
             explanation: 'Momentum is always conserved in an isolated system. Kinetic energy is conserved only in elastic collisions.'
           },
           {
-            question: 'A rocket in space expels gas backward. The rocket:',
-            options: ['Violates conservation of momentum', 'Accelerates forward', 'Stays in place', 'Decelerates'],
+            question: 'An astronaut floating at rest in space throws a wrench away from herself. Afterward, she:',
+            options: ['Stays at rest, since no external force acts', 'Moves opposite the wrench', 'Moves with the wrench, at a lower speed', 'Moves away at the wrench\'s speed'],
             correctAnswer: 1,
-            explanation: 'The gas carries momentum backward, so the rocket gains equal momentum forward. Total system momentum stays constant.'
+            explanation: 'The total momentum stays zero, so she gains momentum equal and opposite to the wrench\'s. She moves the other way, more slowly than the wrench because she has more mass.'
           },
           {
             question: 'A 0.40 kg ball at $5\\,\\text{m/s}$ receives an impulse $J_x = \\int_0^{0.05}(200 - 4000t)\\,dt$. Its final velocity is:',
@@ -78,10 +78,10 @@ $J_x = m\\,v_{xf} - m\\,v_{xi}\\;\\Rightarrow\\; v_{xf} = v_{xi} + \\frac{J_x}{m
           {
             question: 'In a perfectly inelastic collision, the fraction of kinetic energy lost is greatest when:',
             options: [
-              'The two masses are equal and approach with equal speeds',
-              'One mass is huge and at rest',
-              'Both objects are already at rest',
-              'The collision is elastic'
+              'Two equal masses approach with equal and opposite speeds',
+              'A heavy object hits a much lighter one at rest',
+              'Equal masses collide, one initially at rest',
+              'Both move the same way at nearly equal speeds'
             ],
             correctAnswer: 0,
             explanation: 'Two equal masses approaching at equal and opposite speeds stop entirely after sticking, losing $100\\%$ of the kinetic energy.'

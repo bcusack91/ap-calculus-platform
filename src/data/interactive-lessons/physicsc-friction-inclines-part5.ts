@@ -36,13 +36,13 @@ $$T = m_2(g - a) = \\frac{m_1 m_2 g(1 + \\sin\\theta + \\mu_k\\cos\\theta)}{m_1 
       type: 'mcq' as const,
       question: 'In an Atwood-incline system: $m_1 = 4$ kg on a $30°$ rough incline ($\\mu_k = 0.2$), $m_2 = 3$ kg hanging. What is the acceleration? ($g = 10$ $m/s^{2}$)',
       options: [
-        '$\\approx 0.88$ $m/s^{2}$ (hanging mass descends)',
-        '$\\approx 1.43$ $m/s^{2}$ (block slides up)',
-        '$0$ $m/s^{2}$ (system is in equilibrium)',
-        '$\\approx 2.14$ $m/s^{2}$ (block slides down)'
+        '$\\approx 0.44$ $m/s^{2}$',
+        '$\\approx 1.43$ $m/s^{2}$',
+        '$\\approx 0.88$ $m/s^{2}$',
+        '$0$ $m/s^{2}$'
       ],
       correctAnswer: 0,
-      explanation: '$a = \\frac{m_2 g - m_1 g(\\sin 30° + 0.2\\cos 30°)}{m_1 + m_2} = \\frac{30 - 4(10)(0.5 + 0.173)}{7} = \\frac{30 - 26.93}{7} \\approx 0.44$ $m/s^{2}$. Wait — let me recalculate: $a = \\frac{30 - 40(0.673)}{7} = \\frac{30 - 26.93}{7} = 0.438$ $m/s^{2}$. The direction: since $a > 0$, the hanging mass descends.'
+      explanation: '$a = \\frac{m_2 g - m_1 g(\\sin 30° + 0.2\\cos 30°)}{m_1 + m_2} = \\frac{30 - 40(0.673)}{7} = \\frac{3.07}{7} \\approx 0.44$ $m/s^{2}$, with the hanging mass descending. Leaving out friction gives $10/7 \\approx 1.43$ $m/s^{2}$.'
     },
     {
       id: 'fri5-two-inclines',
@@ -82,13 +82,13 @@ For a block of mass $m_1$ on top of a block $m_2$ on a ramp:
       type: 'mcq' as const,
       question: 'Two blocks (3 kg and 5 kg) are stacked on a frictionless $30°$ incline. The coefficient of static friction between the blocks is $\\mu_s = 0.4$. Do they slide together or separately?',
       options: [
-        'Together — the required friction ($m_1 g\\sin\\theta$) is less than $\\mu_s m_1 g\\cos\\theta$',
-        'Separately — the top block slides off',
-        'Together only if the incline angle is less than $\\arctan(0.4) \\approx 21.8°$',
-        'It depends on which block is on top'
+        'Together only if $\\theta < \\arctan(0.4) \\approx 21.8°$',
+        'Separately, since $30° > \\arctan(0.4)$',
+        'Together at $g\\sin\\theta$ with no friction between them',
+        'Separately, since the top block is lighter'
       ],
       correctAnswer: 2,
-      explanation: 'The top block needs friction $f = m_1 g\\sin\\theta$ to keep it from sliding. The maximum static friction between blocks is $\\mu_s m_1 g\\cos\\theta$. They slide together when $\\tan\\theta \\leq \\mu_s$, i.e., $\\theta \\leq \\arctan(0.4) \\approx 21.8°$. Since $30° > 21.8°$, they actually slide separately.'
+      explanation: 'With a frictionless incline, each block on its own would accelerate at $g\\sin\\theta$, so they move together with no friction needed between them. The $\\tan\\theta \\leq \\mu_s$ test applies only when the bottom block is held still.'
     },
     {
       id: 'fri5-constraint',
@@ -135,7 +135,7 @@ $$20 = 17a \\implies a = 1.18 \\text{ m/s}^2$$`
       question: 'In an Atwood machine (two masses over a pulley, no incline), mass $m_1 > m_2$. If friction in the pulley axle provides a constant torque that effectively reduces the net force by $f$, the acceleration is:',
       options: [
         '$a = \\frac{(m_1 - m_2)g - f}{m_1 + m_2}$',
-        '$a = \\frac{(m_1 - m_2)g}{m_1 + m_2} - f$',
+        '$a = \\frac{(m_1 - m_2)g}{m_1 + m_2} - \\frac{f}{m_1}$',
         '$a = \\frac{m_1 g - m_2 g}{m_1 + m_2 + f/g}$',
         '$a = \\frac{(m_1 - m_2)(g - f)}{m_1 + m_2}$'
       ],

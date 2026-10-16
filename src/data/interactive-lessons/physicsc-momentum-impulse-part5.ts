@@ -67,7 +67,7 @@ $x_{\\text{cm}} = \\frac{\\lambda_0}{ML}\\cdot\\frac{L^3}{3} = \\frac{\\lambda_0
           },
           {
             question: 'The center of mass of an isolated system:',
-            options: ['Accelerates', 'Moves at constant velocity', 'Is always at rest', 'Changes direction'],
+            options: ['Accelerates during collisions', 'Moves at constant velocity', 'Stays at rest no matter what', 'Moves with the heaviest object'],
             correctAnswer: 1,
             explanation: 'With no net external force, $\\vec{a}_{\\text{cm}} = 0$, so $\\vec{v}_{\\text{cm}}$ is constant — even during internal collisions or explosions.'
           },

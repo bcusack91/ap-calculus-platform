@@ -43,7 +43,7 @@ $P = \\frac{W}{t} = \\frac{mgh}{t} = \\frac{100(10)(10)}{5} = 2000$ W ✅
                     "question": "One Watt equals:",
                     "options": [
                               "One Joule per second",
-                              "One Newton per second",
+                              "One N per second",
                               "One kg·m/s",
                               "One Newton·meter"
                     ],
@@ -63,7 +63,7 @@ $P = \\frac{W}{t} = \\frac{mgh}{t} = \\frac{100(10)(10)}{5} = 2000$ W ✅
 
 2) A force of 50 N moves an object at 10 m/s. Instantaneous power (W)?
 
-3) A 1000 W motor runs for 5 s. How much energy (J) does it deliver? Divide your answer by 5 to give energy per second... wait. 1000 W for 5 s = 5000 J. Hmm. Let me redo: A motor delivers 1000 J in 5 s. What is the power (W)?
+3) A motor delivers 1000 J of energy in 5 s. What is its average power (W)?
     
     `,
       exercise: {

@@ -11,7 +11,7 @@ export const physCNewtonPart7Data = {
 
 ### Key Formulas
 - $\\sum F = ma = m\\frac{dv}{dt}$
-- $f_s \\leq \mu_s N$, $f_k = \mu_k N$
+- $f_s \\leq \\mu_s N$, $f_k = \\mu_k N$
 - $F_c = mv^2/r$
 - Action-reaction: $F_{AB} = -F_{BA}$
     
@@ -41,7 +41,7 @@ $a = \\frac{(m_2 - m_1)g}{m_1 + m_2} = \\frac{(5-3)(10)}{3+5} = \\frac{20}{8} = 
                     "question": "An elevator accelerates upward at 2 $m/s^{2}$. A person's apparent weight:",
                     "options": [
                               "Increases",
-                              "Decreases",
+                              "Decreases by $ma$",
                               "Stays the same",
                               "Becomes zero"
                     ],

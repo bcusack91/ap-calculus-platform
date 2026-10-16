@@ -75,7 +75,7 @@ $T = \\frac{2\\pi}{\\omega} = 2\\pi\\sqrt{\\frac{L}{g}}$
         questions: [
           {
             question: 'Doubling the length of a simple pendulum changes the period by:',
-            options: ['$2$', '$\\sqrt{2}$', '$4$', '$1/2$'],
+            options: ['$2$', '$\\sqrt{2}$', '$4$', '$1/\\sqrt{2}$'],
             correctAnswer: 1,
             explanation: '$T = 2\\pi\\sqrt{L/g}$. Doubling $L$ multiplies $T$ by $\\sqrt{2}$.'
           },
@@ -87,7 +87,7 @@ $T = \\frac{2\\pi}{\\omega} = 2\\pi\\sqrt{\\frac{L}{g}}$
           },
           {
             question: 'The simple-pendulum equation $d^2\\theta/dt^2 = -(g/L)\\theta$ relies on the approximation:',
-            options: ['$\\cos\\theta \\approx 1$', '$\\sin\\theta \\approx \\theta$', '$\\tan\\theta \\approx 0$', '$\\theta \\approx \\pi$'],
+            options: ['$\\cos\\theta \\approx 1$', '$\\sin\\theta \\approx \\theta$', '$\\tan\\theta \\approx 0$', '$\\cos\\theta \\approx \\theta$'],
             correctAnswer: 1,
             explanation: 'Replacing $\\sin\\theta$ with $\\theta$ (valid for small angles) turns the equation of motion into the SHM form.'
           },
@@ -99,7 +99,7 @@ $T = \\frac{2\\pi}{\\omega} = 2\\pi\\sqrt{\\frac{L}{g}}$
           },
           {
             question: 'For a physical pendulum, the period is $T = 2\\pi\\sqrt{I/(mgd)}$. Increasing the moment of inertia $I$ (with $d$ fixed):',
-            options: ['Decreases the period', 'Increases the period', 'Leaves the period unchanged', 'Makes it stop oscillating'],
+            options: ['Makes the period shorter', 'Increases the period', 'Leaves the period unchanged', 'Increases the period in proportion to $I$'],
             correctAnswer: 1,
             explanation: 'Period grows as $\\sqrt{I}$. A larger rotational inertia means a slower swing, so $T$ increases.'
           },

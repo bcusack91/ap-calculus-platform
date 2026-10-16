@@ -9,14 +9,14 @@ export const physCNewtonPart4Data = {
 
 **Part 4 of 7 — Friction Forces**
 
-- **Static friction:** $f_s \\leq \mu_s N$ (prevents motion)
-- **Kinetic friction:** $f_k = \mu_k N$ (opposes sliding motion)
+- **Static friction:** $f_s \\leq \\mu_s N$ (prevents motion)
+- **Kinetic friction:** $f_k = \\mu_k N$ (opposes sliding motion)
 
 Where $N$ is the normal force and $\\mu$ is the coefficient of friction.
 
 For an object on an incline at angle $\\theta$:
 - $N = mg\\cos\\theta$
-- Friction along the incline: $f = \\mu mg\\cos\\theta$
+- Friction along the incline (kinetic, or maximum static): $f = \\mu mg\\cos\\theta$
     
     `
     },
@@ -26,11 +26,11 @@ For an object on an incline at angle $\\theta$:
       content: `
 ## Worked Example
 
-**A 10 kg block on a horizontal surface has $\mu_k = 0.3$. Find the kinetic friction force.**
+**A 10 kg block on a horizontal surface has $\\mu_k = 0.3$. Find the kinetic friction force.**
 
 $N = mg = 10 \\times 10 = 100$ N
 
-$f_k = \mu_k N = 0.3 \\times 100 = 30$ N ✅
+$f_k = \\mu_k N = 0.3 \\times 100 = 30$ N ✅
     
     `
     },
@@ -47,8 +47,8 @@ $f_k = \mu_k N = 0.3 \\times 100 = 30$ N ✅
                     "options": [
                               "Static friction",
                               "Kinetic friction",
-                              "Rolling friction",
-                              "Air resistance"
+                              "The normal force",
+                              "Air resistance on it"
                     ],
                     "correctAnswer": 0,
                     "explanation": "Static friction prevents an object from starting to slide."
@@ -62,11 +62,11 @@ $f_k = \mu_k N = 0.3 \\times 100 = 30$ N ✅
       content: `
 **Friction Forces** 🧮
 
-1) A 10 kg block on a flat surface has $\mu_k = 0.3$. Kinetic friction force (N)? (Use $g = 10$ $m/s^{2}$)
+1) A 10 kg block on a flat surface has $\\mu_k = 0.3$. Kinetic friction force (N)? (Use $g = 10$ $m/s^{2}$)
 
-2) A 5 kg block requires 20 N to start sliding on a flat surface. What is $\mu_s$? (Use $g = 10$ $m/s^{2}$)
+2) A 5 kg block requires 20 N to start sliding on a flat surface. What is $\\mu_s$? (Use $g = 10$ $m/s^{2}$)
 
-3) A 10 kg block is on a surface with $\mu_k = 0.5$. What horizontal force (N) is needed to move it at constant velocity? (Use $g = 10$ $m/s^{2}$)
+3) A 10 kg block is on a surface with $\\mu_k = 0.5$. What horizontal force (N) is needed to move it at constant velocity? (Use $g = 10$ $m/s^{2}$)
     
     `,
       exercise: {
@@ -102,7 +102,7 @@ $f_k = \mu_k N = 0.3 \\times 100 = 30$ N ✅
 |---|----------|-------------|
 | 1 | Flat surface | $f = \\mu mg$ |
 | 2 | Inclined plane | $f = \\mu mg\\cos\\theta$ |
-| 3 | Threshold of sliding | $f_s = \mu_s N$ |
+| 3 | Threshold of sliding | $f_s = \\mu_s N$ |
     
     `
     },

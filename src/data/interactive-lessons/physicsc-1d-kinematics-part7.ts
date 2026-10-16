@@ -32,9 +32,9 @@ export const physC1dKinPart7Data = {
       id: '1dkin7-mcq1',
       type: 'mcq' as const,
       question: 'A particle has acceleration $a(t) = 6 - 2t$ with $v(0) = 0$ and $x(0) = 0$. When does the particle first return to the origin?',
-      options: ['$t = 6$ s', '$t = 3$ s', '$t = 9$ s', '$t = 4$ s'],
+      options: ['$t = 9$ s', '$t = 3$ s', '$t = 6$ s', '$t = 4$ s'],
       correctAnswer: 0,
-      explanation: '$v(t) = 6t - t^2$. $x(t) = 3t^2 - t^3/3$. Set $x = 0$: $t^2(3 - t/3) = 0$, so $t = 0$ or $t = 9$. Wait — let me recalculate. $x(t) = 3t^2 - t^3/3 = t^2(3 - t/3)$. Setting $x = 0$: $t = 0$ or $3 - t/3 = 0 \\implies t = 9$. But let me check $t = 6$: $x(6) = 108 - 72 = 36 \\neq 0$. Actually the answer is $t = 9$.'
+      explanation: '$v(t) = 6t - t^2$ and $x(t) = 3t^2 - t^3/3 = t^2(3 - t/3)$, which is zero again at $t = 9$ s. At $t = 6$ s the particle is momentarily at rest ($v = 0$) but at $x = 36$ m, not the origin.'
     },
     {
       id: '1dkin7-applications',

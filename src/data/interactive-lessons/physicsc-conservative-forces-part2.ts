@@ -50,7 +50,7 @@ $$\\boxed{U_{\\text{grav}} = -\\frac{GMm}{r}}$$
       question: 'The potential energy for a force $F(x) = -\\alpha x^3$ (where $\\alpha > 0$) with $U(0) = 0$ is:',
       options: [
         '$U(x) = \\frac{\\alpha}{4}x^4$',
-        '$U(x) = -\\frac{\\alpha}{4}x^4$',
+        '$U(x) = -\\alpha x^4$',
         '$U(x) = \\alpha x^4$',
         '$U(x) = -3\\alpha x^2$'
       ],
@@ -80,23 +80,22 @@ $$U(x) = 2x^3 - 2x^2$$
 
 **Check:** $-\\frac{dU}{dx} = -(6x^2 - 4x) = -6x^2 + 4x$ ✓
 
-### Example: Inverse-Square Force (Electrostatic)
+### Example: Repulsive Inverse-Square Force
 
-$$F(r) = \\frac{kq_1q_2}{r^2} \\quad \\text{(positive = repulsive)}$$
+$$F(r) = \\frac{A}{r^2} \\quad (A > 0\\text{, pointing outward, so repulsive})$$
 
 With $U(\\infty) = 0$:
 
-$$U(r) = -\\int_\\infty^r \\frac{kq_1q_2}{r'^2}\\,dr' = -\\left[-\\frac{kq_1q_2}{r'}\\right]_\\infty^r = \\frac{kq_1q_2}{r}$$
+$$U(r) = -\\int_\\infty^r \\frac{A}{r'^2}\\,dr' = -\\left[-\\frac{A}{r'}\\right]_\\infty^r = \\frac{A}{r}$$
 
-For like charges ($q_1 q_2 > 0$): $U > 0$ — energy decreases as charges separate.
-For unlike charges ($q_1 q_2 < 0$): $U < 0$ — energy decreases as charges attract.`
+$U$ is positive and decreases as $r$ grows, so the force pushes the objects apart, toward lower $U$. Compare gravity, $F = -GMm/r^2$, which is attractive and gives the negative $U = -GMm/r$.`
     },
     {
       id: 'cf2-mcq2',
       type: 'mcq' as const,
       question: 'For universal gravitation, $U(r) = -GMm/r$. At what radius is the potential energy half of its value at the surface ($r = R$)?',
       options: [
-        '$r = 2R$ (since $U(2R) = -GMm/(2R) = U(R)/2$)',
+        '$r = 2R$',
         '$r = R/2$',
         '$r = R\\sqrt{2}$',
         '$r = 4R$'
@@ -140,13 +139,13 @@ We'll explore this further in Part 4 (Energy Diagrams).`
       type: 'mcq' as const,
       question: 'Given $U(x) = 3x^2 - x^3$, the force at $x = 1$ is:',
       options: [
-        '$F = -3$ N (force points in $-x$ direction)',
+        '$F = -3$ N',
         '$F = 3$ N',
-        '$F = 0$ (equilibrium)',
+        '$F = 0$',
         '$F = -6$ N'
       ],
       correctAnswer: 0,
-      explanation: '$F = -dU/dx = -(6x - 3x^2)$. At $x = 1$: $F = -(6 - 3) = -3$ N.'
+      explanation: '$F = -dU/dx = -(6x - 3x^2)$. At $x = 1$: $F = -(6 - 3) = -3$ N, pointing in the $-x$ direction. Forgetting the minus sign gives $+3$ N.'
     },
     {
       id: 'cf2-mcq4',

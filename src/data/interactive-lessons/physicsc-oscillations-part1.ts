@@ -89,13 +89,13 @@ $v = \\omega\\sqrt{A^2 - x^2} = \\omega\\sqrt{A^2 - (A/2)^2} = \\omega A\\sqrt{1
           },
           {
             question: 'At the equilibrium position in SHM:',
-            options: ['KE is maximum', 'PE is maximum', 'Speed is zero', 'Acceleration is maximum'],
+            options: ['KE is maximum', 'Elastic PE is maximum', 'The speed is zero', 'Acceleration is maximum'],
             correctAnswer: 0,
             explanation: 'At equilibrium ($x=0$) all energy is kinetic, so KE and speed are maximum while acceleration is zero.'
           },
           {
             question: 'The restoring force in SHM is:',
-            options: ['Constant', 'Proportional to displacement', 'Proportional to velocity', 'Zero'],
+            options: ['Constant in size, always toward equilibrium', 'Proportional to displacement, toward equilibrium', 'Proportional to velocity, opposite the motion', 'Proportional to displacement, outward'],
             correctAnswer: 1,
             explanation: '$F = -kx$ — the force is proportional to displacement and directed toward equilibrium.'
           },
@@ -107,7 +107,7 @@ $v = \\omega\\sqrt{A^2 - x^2} = \\omega\\sqrt{A^2 - (A/2)^2} = \\omega A\\sqrt{1
           },
           {
             question: 'A mass on a spring has amplitude $A$. Its speed when $x = A/2$ is:',
-            options: ['$v_{\\max}$', '$\\tfrac{1}{2}v_{\\max}$', '$\\tfrac{\\sqrt{3}}{2}v_{\\max}$', '$0$'],
+            options: ['$\\tfrac{1}{2}v_{\\max}$', '$\\tfrac{\\sqrt{3}}{4}v_{\\max}$', '$\\tfrac{\\sqrt{3}}{2}v_{\\max}$', '$\\tfrac{3}{4}v_{\\max}$'],
             correctAnswer: 2,
             explanation: '$v = \\omega\\sqrt{A^2 - x^2} = \\omega A\\sqrt{1 - 1/4} = \\tfrac{\\sqrt{3}}{2}\\,\\omega A = \\tfrac{\\sqrt{3}}{2}v_{\\max}$.'
           },

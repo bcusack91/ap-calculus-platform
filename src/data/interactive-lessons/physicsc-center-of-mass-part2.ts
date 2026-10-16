@@ -18,7 +18,7 @@ The key is expressing $dm$ in terms of geometry:
 |:---|:---|
 | 1D (rod, wire) | $dm = \\lambda(x)\\,dx$ |
 | 2D (plate, disk) | $dm = \\sigma(x,y)\\,dA$ |
-| 3D (solid) | $dm = \\rho(x,y,z)\\,dV$ |
+| 3D (solid) | $dm = \\rho\\,dV$ |
 
 where $\\lambda$, $\\sigma$, $\\rho$ are linear, surface, and volume mass densities.`
     },
@@ -72,17 +72,18 @@ $$dm = \\lambda R\\,d\\theta, \\quad y = R\\sin\\theta$$
 
 $$y_{\\text{cm}} = \\frac{1}{M}\\int_0^{\\pi} R\\sin\\theta \\cdot \\lambda R\\,d\\theta = \\frac{\\lambda R^2}{M}[-\\cos\\theta]_0^{\\pi} = \\frac{\\lambda R^2 \\cdot 2}{\\lambda \\pi R} = \\frac{2R}{\\pi}$$
 
-### Semicircular Disk (Uniform)
+### Semicircular Plate (Uniform) — Slicing into Strips
 
-For a solid semicircular disk, use area element $dA = r\\,dr\\,d\\theta$:
+For a flat semicircular plate (surface density $\\sigma$), slice it into horizontal strips of thickness $dy$. A strip at height $y$ has width $2\\sqrt{R^2 - y^2}$, so $dm = \\sigma\\,2\\sqrt{R^2 - y^2}\\,dy$ and $M = \\sigma\\,\\frac{\\pi R^2}{2}$:
 
-$$y_{\\text{cm}} = \\frac{1}{M}\\int_0^{\\pi}\\int_0^R (r\\sin\\theta)\\sigma \\cdot r\\,dr\\,d\\theta = \\frac{4R}{3\\pi}$$
+$$y_{\\text{cm}} = \\frac{1}{M}\\int_0^{R} y\\,\\sigma\\,2\\sqrt{R^2 - y^2}\\,dy = \\frac{\\sigma \\cdot \\frac{2}{3}R^3}{\\sigma\\,\\pi R^2/2} = \\frac{4R}{3\\pi}$$
+
+(The integral uses the substitution $u = R^2 - y^2$.)
 
 | Shape | $y_{\\text{cm}}$ |
 |:---|:---|
 | Semicircular wire | $2R/\\pi$ |
-| Semicircular disk | $4R/(3\\pi)$ |
-| Hemisphere shell | $R/2$ |
+| Semicircular plate | $4R/(3\\pi)$ |
 | Solid hemisphere | $3R/8$ |`
     },
     {

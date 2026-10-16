@@ -102,9 +102,9 @@ $$\\Delta v \\approx \\sum_{i} \\frac{a_i + a_{i+1}}{2} \\Delta t_i$$`
       id: 'varaccel2-mcq3',
       type: 'mcq' as const,
       question: 'The acceleration of a particle is given in the table below. If $v(0) = 5$ m/s, estimate $v(4)$ using the trapezoidal rule.\n\n| $t$ (s) | 0 | 1 | 2 | 3 | 4 |\n|:---:|:---:|:---:|:---:|:---:|:---:|\n| $a$ $(m/s^{2})$ | 2 | 4 | 3 | 1 | 0 |',
-      options: ['$15$ m/s', '$10$ m/s', '$5$ m/s', '$20$ m/s'],
+      options: ['$14$ m/s', '$15$ m/s', '$13$ m/s', '$9$ m/s'],
       correctAnswer: 0,
-      explanation: '$\\Delta v \\approx \\frac{1}{2}[(2+4) + (4+3) + (3+1) + (1+0)] \\cdot 1 = \\frac{1}{2}(6+7+4+1) = 9$. Wait: $\\frac{1}{2}(18) = 9$. But actually each trapezoid: $(2+4)/2 + (4+3)/2 + (3+1)/2 + (1+0)/2 = 3 + 3.5 + 2 + 0.5 = 9$. Hmm, that gives $\\Delta v = 9$, not $10$. Let me recheck: the areas are $\\frac{1}{2}(2+4)(1) + \\frac{1}{2}(4+3)(1) + \\frac{1}{2}(3+1)(1) + \\frac{1}{2}(1+0)(1) = 3 + 3.5 + 2 + 0.5 = 9$. So $v(4) = 5 + 9 = 14$. Hmm, none matches exactly. Let me recalculate: $3+3.5+2+0.5 = 9$. $v(4) = 14$. The closest answer should be... Actually the answer options I gave have $15$. Let me fix: using left-endpoint Riemann: $(2+4+3+1)(1) = 10$, giving $v(4) = 15$. With trapezoidal: $v(4) = 14$. The answer $15$ corresponds to left Riemann sum.'
+      explanation: 'The trapezoids give $\\Delta v \\approx 3 + 3.5 + 2 + 0.5 = 9$ m/s, so $v(4) \\approx 5 + 9 = 14$ m/s. A left-endpoint sum would give 15 m/s and a right-endpoint sum 13 m/s.'
     },
     {
       id: 'varaccel2-piecewise',

@@ -30,11 +30,11 @@ $$T_{\\text{bot}} = \\frac{mv_{\\text{bot}}^2}{r} + mg$$
 
 ### At an Arbitrary Angle $\\theta$ from Bottom
 
-The component of gravity toward the center: $mg\\cos\\theta$ (measuring $\\theta$ from the bottom).
+Measure $\\theta$ from the bottom of the circle. Tension points toward the center, and the component of gravity along the string points **away** from the center with magnitude $mg\\cos\\theta$:
 
-Wait — let's be precise. If $\\theta$ is measured from the *vertical* (i.e., from the bottom position):
+$$T - mg\\cos\\theta = \\frac{mv^2}{r}$$
 
-$$T - mg\\cos\\theta = \\frac{mv^2}{r}$$`
+At $\\theta = 0$ this reduces to the bottom equation, and at $\\theta = 180°$ ($\\cos\\theta = -1$) it becomes the top equation.`
     },
     {
       id: 'cm4-mcq1',
@@ -130,7 +130,7 @@ $$v_{\\text{leave}} = \\sqrt{gr}$$
 
 ### Worked Example: Roller Coaster
 
-A roller coaster starts from height $h$ above the top of a circular loop of radius $r$. What is the normal force at the top of the loop?
+A roller coaster starts from rest at height $h$ above the bottom of a circular loop of radius $r$ (no friction). What is the normal force at the top of the loop?
 
 By energy conservation from start to top of loop (height $= 2r$):
 $$mgh = \\frac{1}{2}mv_{\\text{top}}^2 + mg(2r)$$

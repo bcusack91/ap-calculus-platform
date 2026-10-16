@@ -22,7 +22,7 @@ $F = G\\frac{m_1 m_2}{r^2}$
 
 ### Gravitational Field
 
-$\\vec{g} = -\\frac{GM}{r^2}\\hat{r}$
+$g = \\frac{F_g}{m} = \\frac{GM}{r^2}$, directed toward the center of mass $M$
 
 At Earth's surface: $g \\approx 9.8 \\text{ m/s}^2$
 
@@ -77,8 +77,8 @@ $g = \\frac{(6.674 \\times 10^{-11})(5.97 \\times 10^{24})}{(6.37 \\times 10^6)^
           },
           {
             question: 'The gravitational force that the Earth exerts on the Moon compared to the force the Moon exerts on the Earth is:',
-            options: ['Much larger', 'Much smaller', 'Equal in magnitude (Newton\'s third law)', 'Zero'],
-            correctAnswer: 2,
+            options: ['Larger, since Earth has more mass', 'Equal in magnitude', 'Larger by the ratio of their masses', 'Zero, since the Moon is in free fall'],
+            correctAnswer: 1,
             explanation: 'By Newton\'s third law (and the symmetry of $F = Gm_1m_2/r^2$), the two gravitational forces are equal in magnitude and opposite in direction.'
           },
           {

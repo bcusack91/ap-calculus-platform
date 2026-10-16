@@ -67,7 +67,7 @@ This is equivalent to the **work-energy theorem** (as you'll see later in the co
       id: '1dkin2-mcq2',
       type: 'mcq' as const,
       question: 'A ball is thrown upward with $v_0 = 20\\text{ m/s}$. What is its velocity when it returns to the launch height? (Take $g = 10\\text{ m/s}^2$, up is positive.)',
-      options: ['$-20$ m/s', '$0$ m/s', '$20$ m/s', '$-10$ m/s'],
+      options: ['$-20$ m/s', '$0$ m/s', '$20$ m/s', '$10$ m/s'],
       correctAnswer: 0,
       explanation: 'Using $v^2 = v_0^2 + 2a\\Delta x$ with $\\Delta x = 0$: $v^2 = v_0^2$, so $v = \\pm 20$ m/s. Since the ball is moving downward on return, $v = -20$ m/s.'
     },
@@ -130,9 +130,9 @@ $$x_2 = 20 \\times 5 = 100 \\text{ m}$$
       id: '1dkin2-mcq4',
       type: 'mcq' as const,
       question: 'Two cars start at the same point. Car A accelerates from rest at $2\\text{ m/s}^2$. Car B starts $3$ s later from rest at $4\\text{ m/s}^2$. When does Car B catch Car A?',
-      options: ['$t = 3 + 3\\sqrt{2}$ s after Car A starts', '$t = 6$ s', '$t = 9$ s', '$t = 3 + 6\\sqrt{2}$ s'],
+      options: ['$6 + 3\\sqrt{2} \\approx 10.2$ s after A starts', '$3 + 3\\sqrt{2} \\approx 7.2$ s after A starts', '$6 - 3\\sqrt{2} \\approx 1.8$ s after A starts', '$9$ s after A starts'],
       correctAnswer: 0,
-      explanation: 'Car A: $x_A = t^2$. Car B (starting at $t = 3$): $x_B = 2(t-3)^2$ for $t \\ge 3$. Setting equal: $t^2 = 2(t-3)^2 \\implies t^2 = 2t^2 - 12t + 18 \\implies t^2 - 12t + 18 = 0 \\implies t = 6 \\pm 3\\sqrt{2}$. Taking $t = 6 - 3\\sqrt{2} \\approx 1.76$ s (before B starts, invalid). So $t = 6 + 3\\sqrt{2} \\approx 10.24$ s, which is $3 + 3\\sqrt{2}$ s after A starts... Actually let me recheck: $t = \\frac{12 \\pm \\sqrt{144-72}}{2} = 6 \\pm 3\\sqrt{2}$. We need $t > 3$, so $t = 6 + 3\\sqrt{2}$ or equivalently $3 + 3 + 3\\sqrt{2} = 3 + 3(1+\\sqrt{2})$. The answer $t = 3 + 3\\sqrt{2}$ needs verification. Actually $6 + 3\\sqrt{2} = 3 + 3 + 3\\sqrt{2} = 3 + 3(1+\\sqrt{2})$, not $3 + 3\\sqrt{2}$. The total time is $6 + 3\\sqrt{2}$ s after A starts.'
+      explanation: 'Car A: $x_A = t^2$. Car B (starting at $t = 3$): $x_B = 2(t-3)^2$. Setting them equal: $t^2 - 12t + 18 = 0$, so $t = 6 \\pm 3\\sqrt{2}$. The smaller root (1.8 s) is before B starts, so B catches A at $t = 6 + 3\\sqrt{2} \\approx 10.2$ s after A starts.'
     }
   ]
 };

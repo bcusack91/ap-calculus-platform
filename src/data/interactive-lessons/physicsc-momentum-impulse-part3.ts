@@ -76,7 +76,7 @@ Final KE: $K_f = \\tfrac{1}{2}(6)(1)^2 = 3\\,\\text{J}$.
         questions: [
           {
             question: 'In a perfectly inelastic collision, the objects:',
-            options: ['Bounce apart', 'Stick together', 'Exchange velocities', 'Both stop'],
+            options: ['Bounce apart elastically', 'Stick together', 'Exchange velocities', 'Both come to rest'],
             correctAnswer: 1,
             explanation: 'Perfectly inelastic means the objects stick together and move with a common velocity — the maximum possible KE loss.'
           },
@@ -95,10 +95,10 @@ Final KE: $K_f = \\tfrac{1}{2}(6)(1)^2 = 3\\,\\text{J}$.
           {
             question: 'In an elastic collision between two equal masses, one moving and one at rest, after the collision:',
             options: [
-              'They move off together',
-              'The moving one stops and the other moves with the original velocity',
-              'Both reverse direction',
-              'Both keep their original velocities'
+              'They move off together at half the original speed',
+              'The moving one stops and the other leaves with its velocity',
+              'Both move forward, each at half the original speed',
+              'The first bounces back and the second moves slowly'
             ],
             correctAnswer: 1,
             explanation: 'For equal masses ($m_1 = m_2$) the coefficients give $v_{1f} = 0$ and $v_{2f} = v_{1i}$ — the velocities swap.'

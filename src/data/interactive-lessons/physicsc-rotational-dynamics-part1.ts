@@ -15,9 +15,9 @@ Rotational analogs of linear kinematics:
 $\\omega = \\frac{d\\theta}{dt}, \\quad \\alpha = \\frac{d\\omega}{dt}$
 
 For constant $\\alpha$:
-- $\\omega = \omega_0 + \\alpha t$
-- $\\theta = \omega_0 t + \\frac{1}{2}\\alpha t^2$
-- $\\omega^2 = \omega_0^2 + 2\\alpha\\theta$
+- $\\omega = \\omega_0 + \\alpha t$
+- $\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2$
+- $\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$
     
     `
     },
@@ -29,7 +29,7 @@ For constant $\\alpha$:
 
 **A wheel accelerates from rest at $\\alpha = 4$ $rad/s^{2}$. Find $\\omega$ at $t = 3$ s.**
 
-$\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
+$\\omega = \\omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
     
     `
     },
@@ -46,7 +46,7 @@ $\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
                     "options": [
                               "Angular acceleration $\\alpha$",
                               "Angular velocity $\\omega$",
-                              "Torque $\\\\tau$",
+                              "Torque $\\tau$",
                               "Moment of inertia $I$"
                     ],
                     "correctAnswer": 0,
@@ -65,7 +65,7 @@ $\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
 
 2) Same wheel: angular displacement (rad) in 3 s?
 
-3) A wheel has $\omega_0 = 2$ rad/s, $\\alpha = 4$ $rad/s^{2}$. Find $\\omega$ (rad/s) at $t = 2$ s.
+3) A wheel has $\\omega_0 = 2$ rad/s, $\\alpha = 4$ $rad/s^{2}$. Find $\\omega$ (rad/s) at $t = 2$ s.
     
     `,
       exercise: {
@@ -84,7 +84,7 @@ $\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The tangential velocity of a point at distance $r$ from the axis is","options":["$v = r\\omega$","$v = r\\alpha$","$v = r/\\omega$","$v = \\omega/r$"]},{"label":"Angular velocity is measured in","options":["rad/s","m/s","rev/s","degrees/s"]}],
+        dropdowns: [{"label":"The tangential velocity of a point at distance $r$ from the axis is","options":["$v = r\\omega$","$v = r\\alpha$","$v = r/\\omega$","$v = \\omega/r$"]},{"label":"The SI unit of angular velocity is","options":["rad/s","m/s","rad/s²","N·m"]}],
         correctAnswers: ["$v = r\\omega$","rad/s"],
         hint1: "Tangential velocity is radius times angular velocity.",
         hint2: "The SI unit for angular velocity.",
@@ -99,9 +99,9 @@ $\\omega = \omega_0 + \\alpha t = 0 + 4(3) = 12$ rad/s ✅
 
 | # | Quantity | Formula |
 |---|---------|---------|
-| 1 | Angular velocity | $\\omega = \omega_0 + \\alpha t$ |
-| 2 | Angular displacement | $\\theta = \omega_0 t + \\frac{1}{2}\\alpha t^2$ |
-| 3 | Without time | $\\omega^2 = \omega_0^2 + 2\\alpha\\theta$ |
+| 1 | Angular velocity | $\\omega = \\omega_0 + \\alpha t$ |
+| 2 | Angular displacement | $\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2$ |
+| 3 | Without time | $\\omega^2 = \\omega_0^2 + 2\\alpha\\theta$ |
     
     `
     },

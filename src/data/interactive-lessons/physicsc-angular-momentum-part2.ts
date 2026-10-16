@@ -50,23 +50,22 @@ A uniform rod of mass $M$ and length $L$ — find $I$ about one end.
 
 $$I_{\\text{end}} = I_{\\text{cm}} + M(L/2)^2 = \\frac{1}{12}ML^2 + \\frac{1}{4}ML^2 = \\frac{1}{3}ML^2 \\quad \\checkmark$$
 
-## Angular Momentum About a Point vs. an Axis
+### The Axis Matters
 
-For rotation about a fixed axis, $L$ along that axis is simply $I\\omega$.
+The same object has different angular momentum about different axes, because $I$ depends on the axis. A uniform disk ($M$, $R$) spinning at $\\omega$ has:
 
-But the **total** angular momentum vector may not be parallel to $\\omega$ unless the object is symmetric about the rotation axis. This leads to:
+- About its central axis: $L = \\frac{1}{2}MR^2\\omega$
+- About a parallel axis through its rim: $L = \\left(\\frac{1}{2}MR^2 + MR^2\\right)\\omega = \\frac{3}{2}MR^2\\omega$
 
-$$\\vec{L} = I\\vec{\\omega}$$
-
-only when $\\vec{\\omega}$ is along a **principal axis** of inertia. Otherwise, $\\vec{L}$ precesses — we'll explore this in Part 5.`
+Always state the axis before computing $L = I\\omega$.`
     },
     {
       id: 'am2-mcq2',
       type: 'mcq' as const,
-      question: 'A hoop (ring) of mass $M$ and radius $R$ rotates about an axis tangent to the ring and in the plane of the ring. Its moment of inertia is:',
+      question: 'A uniform disk of mass $M$ and radius $R$ rotates about an axis perpendicular to its face through a point on its rim. Its moment of inertia is:',
       options: ['$\\frac{3}{2}MR^2$', '$MR^2$', '$2MR^2$', '$\\frac{1}{2}MR^2$'],
       correctAnswer: 0,
-      explanation: 'Using parallel axis theorem: $I_{\\text{cm}}$ about a diameter $= \\frac{1}{2}MR^2$ (for a ring). Parallel axis: $I = \\frac{1}{2}MR^2 + MR^2 = \\frac{3}{2}MR^2$.'
+      explanation: 'The central-axis value is $I_{\\text{cm}} = \\frac{1}{2}MR^2$, and the rim axis is a distance $R$ away, so $I = \\frac{1}{2}MR^2 + MR^2 = \\frac{3}{2}MR^2$.'
     },
     {
       id: 'am2-combo',
@@ -100,10 +99,10 @@ For rolling without slipping, the instantaneous axis of rotation is the contact 
     {
       id: 'am2-mcq4',
       type: 'mcq' as const,
-      question: 'The perpendicular axis theorem states that for a flat (planar) body in the $xy$-plane: $I_z = I_x + I_y$. For a uniform disk of mass $M$ and radius $R$, $I_x$ (about a diameter) is:',
-      options: ['$\\frac{1}{4}MR^2$', '$\\frac{1}{2}MR^2$', '$MR^2$', '$\\frac{1}{3}MR^2$'],
+      question: 'A uniform rod of mass $M$ and length $L$ rotates about a perpendicular axis a distance $L/4$ from one end. Its moment of inertia is:',
+      options: ['$\\frac{7}{48}ML^2$', '$\\frac{1}{3}ML^2$', '$\\frac{1}{16}ML^2$', '$\\frac{31}{48}ML^2$'],
       correctAnswer: 0,
-      explanation: 'By the perpendicular axis theorem: $I_z = I_x + I_y$. By symmetry $I_x = I_y$. $I_z = \\frac{1}{2}MR^2$. So $I_x = I_z/2 = \\frac{1}{4}MR^2$.'
+      explanation: 'The axis is $L/4$ from the center, so $I = \\frac{1}{12}ML^2 + M(L/4)^2 = \\frac{4}{48}ML^2 + \\frac{3}{48}ML^2 = \\frac{7}{48}ML^2$. Measuring $d$ as $3L/4$ from the center gives the incorrect $\\frac{31}{48}ML^2$.'
     },
     {
       id: 'am2-summary',
@@ -114,7 +113,7 @@ For rolling without slipping, the instantaneous axis of rotation is the contact 
 |:---|:---|
 | Rigid body $L$ | $L = I\\omega$ |
 | Parallel axis | $I = I_{\\text{cm}} + Md^2$ |
-| Perpendicular axis (planar) | $I_z = I_x + I_y$ |
+| Disk about a rim axis | $I = \\frac{3}{2}MR^2$ |
 | Rolling body $L$ | $L = Mv_{\\text{cm}}R + I_{\\text{cm}}\\omega$ |
 | Sphere rolling $L$ | $\\frac{7}{5}MvR$ (about contact) |
 

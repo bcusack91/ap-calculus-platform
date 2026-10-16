@@ -69,7 +69,7 @@ $J = \\Delta p = m\\,v_f$ (since $v_i = 0$), so $v_f = \\dfrac{J}{m} = \\dfrac{4
         questions: [
           {
             question: 'Impulse has the same units as:',
-            options: ['Force', 'Energy', 'Momentum', 'Power'],
+            options: ['Force', 'Kinetic energy', 'Momentum', 'Power'],
             correctAnswer: 2,
             explanation: 'Impulse equals change in momentum. Both have units of $\\text{kg}\\cdot\\text{m/s}$ (equivalently $\\text{N}\\cdot\\text{s}$).'
           },
@@ -88,10 +88,10 @@ $J = \\Delta p = m\\,v_f$ (since $v_i = 0$), so $v_f = \\dfrac{J}{m} = \\dfrac{4
           {
             question: 'Why does a longer follow-through (larger $\\Delta t$) reduce the peak force needed for a given impulse?',
             options: [
-              'Because impulse decreases with time',
-              'Because $J = \\bar{F}\\,\\Delta t$, so a larger $\\Delta t$ allows a smaller average force for the same $J$',
-              'Because momentum is not conserved',
-              'Because force and time are unrelated'
+              'A larger $\\Delta t$ makes the impulse $\\bar{F}\\,\\Delta t$ larger',
+              'With $J = \\bar{F}\\Delta t$ fixed, a larger $\\Delta t$ means less $\\bar{F}$',
+              'A larger $\\Delta t$ reduces the momentum change $\\Delta p$',
+              'Momentum is not conserved during a longer contact'
             ],
             correctAnswer: 1,
             explanation: 'For a fixed change in momentum, $J = \\bar{F}\\,\\Delta t$ is fixed, so increasing $\\Delta t$ lowers $\\bar{F}$. This is why airbags and bending knees reduce injury.'
@@ -102,7 +102,7 @@ $J = \\Delta p = m\\,v_f$ (since $v_i = 0$), so $v_f = \\dfrac{J}{m} = \\dfrac{4
               'Slope of the $F$ vs. $t$ graph',
               'Area under the $F$ vs. $t$ graph',
               'Slope of the $v$ vs. $t$ graph',
-              'Area under the $p$ vs. $t$ graph'
+              'Area under the $p$–$t$ graph'
             ],
             correctAnswer: 1,
             explanation: 'Since $J = \\int F\\,dt$, the impulse is the area between the force curve and the time axis.'

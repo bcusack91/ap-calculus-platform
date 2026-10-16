@@ -21,7 +21,6 @@ export const physCConsForcePart7Data = {
 | Stable equilibrium | $U'' > 0$ (local min) | 3, 4 |
 | Turning points | $U(x) = E$ | 4 |
 | Small oscillation | $\\omega = \\sqrt{U''(x_0)/m}$ | 3 |
-| Curl test (2D) | $\\partial F_x/\\partial y = \\partial F_y/\\partial x$ | 5 |
 | Closed loop | $\\oint \\vec{F}\\cdot d\\vec{r} = 0$ | 5 |`
     },
     {
@@ -32,7 +31,7 @@ export const physCConsForcePart7Data = {
         '$N = mg(2h/R - 5)$',
         '$N = mg(h/R - 2)$',
         '$N = mg(h/R - 1)$',
-        '$N = mg(2h/R - 1)$'
+        '$N = mg(2h/R)$'
       ],
       correctAnswer: 0,
       explanation: 'Energy: $mgh = \\frac{1}{2}mv^2_{\\text{top}} + mg(2R)$, so $v^2_{\\text{top}} = 2g(h - 2R)$. At top: $N + mg = mv^2/R = 2mg(h-2R)/R$. $N = mg(2h/R - 4 - 1) = mg(2h/R - 5)$.'
@@ -64,10 +63,10 @@ For Earth: $v_{\\text{esc}} = \\sqrt{\\frac{2(6.67 \\times 10^{-11})(5.97 \\time
       type: 'mcq' as const,
       question: 'If a planet has twice Earth\'s mass and twice Earth\'s radius, its escape velocity compared to Earth\'s is:',
       options: [
-        'The same ($v_{\\text{esc}} = \\sqrt{2GM/R}$, and $2M/2R = M/R$)',
-        'Twice as large',
-        '$\\sqrt{2}$ times as large',
-        'Half as large'
+        'The same as Earth\'s',
+        'Twice Earth\'s',
+        '$\\sqrt{2}$ times Earth\'s',
+        'Half of Earth\'s'
       ],
       correctAnswer: 0,
       explanation: '$v_{\\text{esc}} = \\sqrt{2GM/R}$. With $M\' = 2M$ and $R\' = 2R$: $v\' = \\sqrt{2G(2M)/(2R)} = \\sqrt{2GM/R} = v_{\\text{esc}}$. The escape velocity is unchanged!'
@@ -75,38 +74,28 @@ For Earth: $v_{\\text{esc}} = \\sqrt{\\frac{2(6.67 \\times 10^{-11})(5.97 \\time
     {
       id: 'cf7-app2',
       type: 'text' as const,
-      content: `## Application: Molecular Potential Energy
+      content: `## Application: Bungee Jump (Gravity + Spring)
 
-The Morse potential models the bond between atoms:
+A $60$ kg jumper steps off a bridge with a bungee cord of natural length $20$ m that acts like a spring with $k = 300$ N/m once taut ($g = 10$ m/s²). Air resistance is negligible.
 
-$$U(r) = D_e\\left(1 - e^{-a(r - r_e)}\\right)^2 - D_e$$
+**Lowest point.** Let $x$ be the maximum stretch. The jumper starts and ends at rest, so all the gravitational energy lost goes into the cord:
 
-where $D_e$ is the bond dissociation energy, $r_e$ is the equilibrium bond length, and $a$ controls the width.
+$$mg(20 + x) = \\tfrac{1}{2}kx^2 \\implies 600(20 + x) = 150x^2 \\implies x^2 - 4x - 80 = 0$$
 
-**Equilibrium:** $U'(r_e) = 0$. $U(r_e) = -D_e$ (minimum).
+$$x = \\frac{4 + \\sqrt{16 + 320}}{2} \\approx 11.2 \\text{ m}$$
 
-**Force near equilibrium:**
-$$F = -U'(r) = -2D_e a\\left(1 - e^{-a(r-r_e)}\\right)e^{-a(r-r_e)}$$
+so the jumper falls about $31.2$ m in total.
 
-**Effective spring constant:**
-$$k_{\\text{eff}} = U''(r_e) = 2D_e a^2$$
+**Maximum speed.** Speed is greatest where the net force is zero, at a stretch of $mg/k = 2.0$ m (22 m below the bridge):
 
-**Small oscillation frequency:**
-$$\\omega = \\sqrt{\\frac{2D_e a^2}{\\mu}}$$
+$$\\tfrac{1}{2}mv^2 = mg(22) - \\tfrac{1}{2}k(2.0)^2 \\implies v^2 = 440 - 20 = 420 \\implies v \\approx 20.5 \\text{ m/s}$$
 
-where $\\mu$ is the reduced mass.
-
-**Energy levels:**
-- Bound states: $E < 0$ (particle oscillates between turning points)
-- Dissociation: $E \\geq 0$ (molecule breaks apart)
-- Total binding energy: $D_e$ (depth of the well)
-
-This directly connects conservative force theory to chemistry and quantum mechanics.`
+Both answers come from $K + U_{\\text{grav}} + U_{\\text{spring}} = \\text{constant}$, without ever solving for the motion in time.`
     },
     {
       id: 'cf7-mcq3',
       type: 'mcq' as const,
-      question: 'A particle moves in the potential $U(x) = -U_0 \\text{sech}^2(x/a)$ (a "potential well" that goes to zero at $\\pm\\infty$). For this particle to be bound, its total energy must satisfy:',
+      question: 'A particle moves in the potential $U(x) = -\\frac{U_0}{1 + x^2/a^2}$ (a well that goes to zero at $\\pm\\infty$). For this particle to be bound, its total energy must satisfy:',
       options: [
         '$-U_0 < E < 0$',
         '$E > 0$',
@@ -121,26 +110,26 @@ This directly connects conservative force theory to chemistry and quantum mechan
       type: 'mcq' as const,
       question: 'A 3 kg block compressed against a spring ($k = 600$ N/m, compression $x = 0.2$ m) is released on a surface. After traveling 5 m on a flat rough surface ($\\mu_k = 0.15$), its speed is:',
       options: [
-        '$\\sqrt{\\frac{600(0.04) - 2(0.15)(30)(5)}{3}} \\approx 1.41$ m/s',
-        '$\\sqrt{\\frac{600(0.04)}{3}} = 2.83$ m/s',
-        '$0$ (friction stops it)',
-        '$\\sqrt{\\frac{600(0.04) - 2(0.15)(30)(5)}{3}}$ is imaginary — block stops'
+        'It stops after about 2.67 m',
+        '$\\approx 2.83$ m/s at 5 m',
+        '$\\approx 1.00$ m/s at 5 m',
+        'It stops exactly at 5 m'
       ],
       correctAnswer: 0,
-      explanation: '$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2 + \\mu_k mgd$. $12 = 1.5v^2 + 0.15(30)(5) = 1.5v^2 + 22.5$. Wait: $12 < 22.5$, so the block actually stops before reaching 5 m! Let me recalculate: $d_{\\max} = kx^2/(2\\mu_k mg) = 24/(2 \\times 0.15 \\times 30) = 24/9 = 2.67$ m. The block stops at 2.67 m.'
+      explanation: 'The spring stores $\\frac{1}{2}kx^2 = \\frac{1}{2}(600)(0.2)^2 = 12$ J, but friction over 5 m would remove $\\mu_k mgd = 0.15(30)(5) = 22.5$ J. The block runs out of energy first, after $d = 12/(0.15 \\times 30) \\approx 2.67$ m. Ignoring friction gives 2.83 m/s; using $kx^2$ instead of $\\frac{1}{2}kx^2$ gives 1.00 m/s.'
     },
     {
       id: 'cf7-mcq5',
       type: 'mcq' as const,
-      question: 'The curl test $\\partial F_x/\\partial y = \\partial F_y/\\partial x$ is equivalent to testing whether:',
+      question: 'A force does zero total work on an object carried around ANY closed path. This tells you the force:',
       options: [
-        'A potential energy function $U(x,y)$ exists such that $\\vec{F} = -\\nabla U$',
-        'The force is perpendicular to the displacement everywhere',
-        'The force has constant magnitude',
-        'The force is velocity-dependent'
+        'Is conservative, so a $U$ function exists',
+        'Is perpendicular to the motion',
+        'Has constant magnitude and direction',
+        'Does no work on any open path either'
       ],
       correctAnswer: 0,
-      explanation: 'The equality of mixed partial derivatives ($\\partial F_x/\\partial y = \\partial F_y/\\partial x$) is the integrability condition. If satisfied, $\\vec{F}$ is the gradient of a scalar field — specifically $\\vec{F} = -\\nabla U$ for some potential $U$. This makes the force conservative.'
+      explanation: 'Zero work around every closed path is equivalent to path-independent work, which is the definition of a conservative force, so a potential energy can be defined for it. It can still do work on an open path (gravity does).'
     },
     {
       id: 'cf7-completion',

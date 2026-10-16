@@ -45,7 +45,7 @@ These are an action-reaction pair acting on different objects (person and wall).
                     "question": "Action-reaction force pairs act on:",
                     "options": [
                               "Different objects",
-                              "The same object",
+                              "The same single object",
                               "Only stationary objects",
                               "Only moving objects"
                     ],

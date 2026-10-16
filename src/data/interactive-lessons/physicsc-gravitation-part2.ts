@@ -73,9 +73,9 @@ $U(r) = -\\frac{GMm}{r}$
           },
           {
             question: 'Escape velocity from Earth\'s surface is approximately:',
-            options: ['$7.9$ km/s', '$11.2$ km/s', '$3.0 \\times 10^8$ m/s', '$299$ m/s'],
+            options: ['$7.9$ km/s', '$11.2$ km/s', '$15.8$ km/s', '$5.6$ km/s'],
             correctAnswer: 1,
-            explanation: '$v_{esc} = \\sqrt{\\frac{2GM}{R}} \\approx 11.2$ km/s for Earth.'
+            explanation: '$v_{esc} = \\sqrt{\\frac{2GM}{R}} \\approx 11.2$ km/s for Earth, which is $\\sqrt{2}$ times the 7.9 km/s speed of a low circular orbit.'
           },
           {
             question: 'The escape velocity from a planet does not depend on:',
@@ -97,7 +97,7 @@ $U(r) = -\\frac{GMm}{r}$
           },
           {
             question: 'At escape speed, the total mechanical energy of the projectile (taking $U = 0$ at infinity) is:',
-            options: ['Negative', 'Exactly zero', 'Positive', 'Equal to its rest energy'],
+            options: ['Negative', 'Exactly zero', 'Positive', '$-GMm/R$'],
             correctAnswer: 1,
             explanation: 'Escape speed is the minimum speed for which $KE + U = 0$, so the object just barely reaches infinity with zero kinetic energy.'
           }

@@ -39,8 +39,8 @@ $W = \\frac{1}{2}(3)(36) - \\frac{1}{2}(3)(4) = 54 - 6 = 48$ J ✅
                     "question": "If the speed of an object doubles, its kinetic energy:",
                     "options": [
                               "Quadruples",
-                              "Doubles",
-                              "Halves",
+                              "Doubles, like the speed",
+                              "Is cut in half",
                               "Stays the same"
                     ],
                     "correctAnswer": 0,
@@ -65,7 +65,7 @@ $W = \\frac{1}{2}(3)(36) - \\frac{1}{2}(3)(4) = 54 - 6 = 48$ J ✅
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["48","50","25"],
+        correctAnswers: ["48","50","5"],
         hint1: "$W = \\frac{1}{2}m(v_f^2 - v_i^2) = \\frac{1}{2}(3)(36-4)$.",
         hint2: "$\\frac{1}{2}(4)(25)$.",
         hint3: "$v = \\sqrt{2(25)/2} = \\sqrt{25}$.",
@@ -79,7 +79,7 @@ $W = \\frac{1}{2}(3)(36) - \\frac{1}{2}(3)(4) = 54 - 6 = 48$ J ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The work-energy theorem relates net work to change in","options":["Kinetic energy","Potential energy","Temperature","Momentum"]},{"label":"Kinetic energy is always","options":["Non-negative","Negative","Zero","Imaginary"]}],
+        dropdowns: [{"label":"The work-energy theorem relates net work to change in","options":["Kinetic energy","Potential energy","Mechanical energy","Momentum"]},{"label":"Kinetic energy is always","options":["Non-negative","Negative","Zero","Equal to $mv$"]}],
         correctAnswers: ["Kinetic energy","Non-negative"],
         hint1: "The theorem has \"kinetic energy\" in its name.",
         hint2: "$KE = \\frac{1}{2}mv^2$. Can $m$ or $v^2$ be negative?",

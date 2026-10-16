@@ -44,11 +44,11 @@ $\\tau = rF\\sin 90° = 0.5(10)(1) = 5$ N·m ✅
                     "options": [
                               "Perpendicular to the lever arm",
                               "Parallel to the lever arm",
-                              "At the pivot",
-                              "At 45°"
+                              "At the pivot point itself",
+                              "At 45° to the lever arm"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\tau = rF\\sin\\theta$. Maximum when $\\theta = 90°$, i.e., perpendicular."
+                    "explanation": "$\\tau = rF\\sin\\theta$. Maximum when $\\theta = 90°$, i.e., perpendicular."
           }
 ]
       }
@@ -82,7 +82,7 @@ $\\tau = rF\\sin 90° = 0.5(10)(1) = 5$ N·m ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The SI unit of torque is","options":["N·m","J","W","$kg\\cdot m^{2}$"]},{"label":"A force applied at the pivot creates","options":["Zero torque","Maximum torque","Infinite torque","Negative torque"]}],
+        dropdowns: [{"label":"The SI unit of torque is","options":["N·m","N/m","W","$kg\\cdot m^{2}$"]},{"label":"A force applied at the pivot creates","options":["Zero torque","Maximum torque","Infinite torque","Negative torque"]}],
         correctAnswers: ["N·m","Zero torque"],
         hint1: "Torque = force × distance.",
         hint2: "If $r = 0$...",
@@ -114,13 +114,13 @@ $\\tau = rF\\sin 90° = 0.5(10)(1) = 5$ N·m ✅
           {
                     "question": "The rotational analog of $F = ma$ is:",
                     "options": [
-                              "$\\\\tau = I\\alpha$",
-                              "$\\\\tau = mr^2$",
+                              "$\\tau = I\\alpha$",
+                              "$\\tau = mr^2$",
                               "$L = I\\omega$",
-                              "$\\omega = \\alpha t$"
+                              "$\\omega = \\alpha/t$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Newton's second law for rotation: $\\\\tau = I\\alpha$."
+                    "explanation": "Newton's second law for rotation: $\\tau = I\\alpha$."
           }
 ]
       }

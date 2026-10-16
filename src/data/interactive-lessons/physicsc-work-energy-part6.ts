@@ -44,7 +44,7 @@ $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2(10)(2.5)} = \\sqrt{50} \\approx 7
                     "question": "A block slides down a frictionless ramp. Which energy conversion occurs?",
                     "options": [
                               "PE → KE",
-                              "KE → PE",
+                              "KE → gravitational PE",
                               "KE → thermal",
                               "PE → thermal"
                     ],
@@ -62,18 +62,18 @@ $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2(10)(2.5)} = \\sqrt{50} \\approx 7
 
 1) A spring ($k = 100$ N/m) is compressed 1 m. How much elastic PE (J) is stored?
 
-2) A 0.5 kg ball is launched by this spring. What is the launch speed (m/s)?
+2) A 1.0 kg ball is launched by this spring on a level, frictionless surface. What is the launch speed (m/s)?
 
-3) A 2 kg block slides down a 5 m ramp against friction ($f_k = 6$ N). Net work done by all forces (J)? ($g = 10$, height = 2.5 m.) $W_{net} = mgh - f_k d = 2(10)(2.5) - 6(5)$.
+3) A 2 kg block slides 5 m down a ramp that drops 2.5 m in height, against a 6 N kinetic friction force. What net work (J) do all the forces do on it? ($g = 10$ $m/s^{2}$)
     
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["50","10","100"],
+        correctAnswers: ["50","10","20"],
         hint1: "$U = \\frac{1}{2}kx^2$.",
         hint2: "$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$, solve for $v$.",
         hint3: "$W_{net} = mgh - f_k \\times d = 50 - 30$.",
-        explanation: "1) $\\frac{1}{2}(100)(1) = 50$ J. 2) $v = \\sqrt{2(50)/0.5} = \\sqrt{200} \\approx 14.1$ m/s. Hmm, actually $50 = \\frac{1}{2}(0.5)v^2$, $v^2 = 200$, $v \\approx 14.1$. But I said answer is 10... Let me adjust: use $k = 50$ N/m. Then $U = 25$ J. $v = \\sqrt{100} = 10$. 3) $50 - 30 = 20$ J."
+        explanation: "1) $\\frac{1}{2}(100)(1)^2 = 50$ J. 2) $50 = \\frac{1}{2}(1.0)v^2$, so $v = \\sqrt{100} = 10$ m/s. 3) Gravity does $mgh = 2(10)(2.5) = 50$ J, friction does $-6(5) = -30$ J, and the normal force does none, so $W_{net} = 20$ J."
       }
     },
     {
@@ -83,7 +83,7 @@ $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2(10)(2.5)} = \\sqrt{50} \\approx 7
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The work done by friction is always","options":["Negative","Positive","Zero","Undefined"]},{"label":"Energy conservation applies when","options":["Only conservative forces do work","Friction is present","Objects are stationary","Mass is large"]}],
+        dropdowns: [{"label":"The work done by kinetic friction on a block sliding across a fixed floor is","options":["Negative","Positive","Zero","Undefined"]},{"label":"Energy conservation applies when","options":["Only conservative forces do work","Friction is present","External forces do work on the system","The speed stays constant"]}],
         correctAnswers: ["Negative","Only conservative forces do work"],
         hint1: "Friction opposes motion.",
         hint2: "Conservative forces have a potential energy function.",

@@ -27,7 +27,7 @@ export const physCFrictionPart7Data = {
       type: 'mcq' as const,
       question: 'A box is pushed at constant velocity across a floor by a force $F$ at $20°$ below horizontal. If $\\mu_k = 0.3$ and $m = 10$ kg, what is $F$? ($g = 10$ $m/s^{2}$)',
       options: [
-        '$\\approx 35.1$ N',
+        '$\\approx 35.8$ N',
         '$30$ N',
         '$\\approx 28.2$ N',
         '$\\approx 40$ N'
@@ -75,34 +75,28 @@ Since $\\mu_s > \\mu_k$, ABS gives shorter stopping distances.`
       type: 'mcq' as const,
       question: 'A car traveling 30 m/s brakes on a $10°$ downhill with $\\mu_k = 0.7$. Stopping distance? ($g = 10$ $m/s^{2}$)',
       options: [
-        '$\\approx 78.5$ m',
-        '$\\approx 65$ m',
-        '$\\approx 45$ m',
-        '$\\approx 95.7$ m'
+        '$\\approx 87.3$ m',
+        '$\\approx 64.3$ m',
+        '$\\approx 52.1$ m',
+        '$\\approx 85.5$ m'
       ],
       correctAnswer: 0,
-      explanation: '$d = \\frac{v_0^2}{2g(\\mu_k\\cos\\theta - \\sin\\theta)} = \\frac{900}{2(10)(0.7\\cos 10° - \\sin 10°)} = \\frac{900}{20(0.689 - 0.174)} = \\frac{900}{10.31} \\approx 87.3$ m. (Values depend on precise trig.)'
+      explanation: '$d = \\frac{v_0^2}{2g(\\mu_k\\cos\\theta - \\sin\\theta)} = \\frac{900}{20(0.689 - 0.174)} = \\frac{900}{10.31} \\approx 87.3$ m. Ignoring the slope gives 64.3 m, treating it as uphill gives 52.1 m, and using $N = mg$ gives 85.5 m.'
     },
     {
       id: 'fri7-application2',
       type: 'text' as const,
       content: `## Application: Drag on a Falling Object
 
-A skydiver ($m = 80$ kg) falls with quadratic drag $f = 0.25v^2$.
+A skydiver ($m = 80$ kg) falls with a drag force of magnitude $f = 0.25v^2$ (SI units).
 
-**Terminal velocity:**
-$$v_T = \\sqrt{\\frac{mg}{c}} = \\sqrt{\\frac{800}{0.25}} = \\sqrt{3200} = 56.6 \\text{ m/s} \\approx 127 \\text{ mph}$$
+**Terminal velocity** (net force zero):
+$$mg = cv_T^2 \\implies v_T = \\sqrt{\\frac{mg}{c}} = \\sqrt{\\frac{800}{0.25}} = \\sqrt{3200} \\approx 56.6 \\text{ m/s}$$
 
-**Velocity as a function of time:**
-$$v(t) = 56.6\\tanh\\left(\\frac{10t}{56.6}\\right) = 56.6\\tanh(0.177t)$$
+**Acceleration at $v = 40$ m/s** (Newton's second law at that instant):
+$$f = 0.25(40)^2 = 400 \\text{ N}, \\qquad a = \\frac{mg - f}{m} = \\frac{800 - 400}{80} = 5.0 \\text{ m/s}^2$$
 
-**At $t = 5$ s:**
-$$v(5) = 56.6\\tanh(0.883) = 56.6(0.708) = 40.1 \\text{ m/s}$$
-
-**At $t = 15$ s:**
-$$v(15) = 56.6\\tanh(2.65) = 56.6(0.990) = 56.0 \\text{ m/s}$$
-
-The skydiver is essentially at terminal velocity after about 15 seconds.`
+As the speed rises toward $v_T$, the drag approaches the weight and the acceleration falls toward zero.`
     },
     {
       id: 'fri7-mcq3',
@@ -135,13 +129,13 @@ The skydiver is essentially at terminal velocity after about 15 seconds.`
       type: 'mcq' as const,
       question: 'A block on a $30°$ rough incline ($\\mu_k = 0.2$) is attached to a spring ($k = 100$ N/m) parallel to the incline. If the block (2 kg) is displaced 0.3 m down from equilibrium and released, what is its speed as it passes through equilibrium?',
       options: [
-        '$\\approx 1.78$ m/s',
+        '$\\approx 1.86$ m/s',
         '$\\approx 2.12$ m/s',
-        '$\\approx 1.22$ m/s',
-        '$\\approx 0.95$ m/s'
+        '$\\approx 0.68$ m/s',
+        '$\\approx 1.56$ m/s'
       ],
       correctAnswer: 0,
-      explanation: 'Energy: $\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2 + \\mu_k mg\\cos\\theta \\cdot x + mg\\sin\\theta(0)$. Wait — at equilibrium the spring PE is zero. $\\frac{1}{2}(100)(0.09) - \\mu_k mg\\cos 30°(0.3) + mg\\sin 30°(0.3) = \\frac{1}{2}(2)v^2$. The gravitational PE change and friction work must be accounted for: $4.5 - 0.2(20)(0.866)(0.3) + 0 = v^2$. Actually: $4.5 - 1.04 = v^2$, but the gravity term depends on direction. Since block moves up to equilibrium: $4.5 - 0.2(2)(10)(0.866)(0.3) - 2(10)(0.5)(0.3) = v^2$. $4.5 - 1.04 - 3 = v^2$. $v^2 \\approx 0.46$. $v \\approx 0.68$ m/s. (Exact answer depends on orientation.)'
+      explanation: 'Measured from the spring–gravity equilibrium, the spring and gravitational energies together act like $\\frac{1}{2}kx^2 = \\frac{1}{2}(100)(0.3)^2 = 4.5$ J. Friction removes $\\mu_k mg\\cos 30°(0.3) = 0.2(20)(0.866)(0.3) = 1.04$ J, so $\\frac{1}{2}(2)v^2 = 3.46$ J and $v \\approx 1.86$ m/s. Ignoring friction gives 2.12 m/s; adding a separate $mg\\sin\\theta(0.3)$ term counts gravity twice and gives 0.68 m/s.'
     },
     {
       id: 'fri7-completion',

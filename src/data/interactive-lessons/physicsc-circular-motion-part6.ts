@@ -25,9 +25,9 @@ export const physCCircMotionPart6Data = {
       question: 'A 1000 kg car rounds an unbanked curve of radius 80 m at 25 m/s. If $\\mu_s = 0.9$, what is the ratio of the required centripetal force to the maximum static friction? ($g = 10$ $m/s^{2}$)',
       options: [
         '$\\approx 0.87$ (the car is close to skidding)',
-        '$\\approx 0.50$ (comfortably within the limit)',
+        '$\\approx 0.50$ (well within the limit)',
         '$\\approx 1.1$ (the car is skidding)',
-        '$\\approx 0.35$ (well within the limit)'
+        '$\\approx 0.35$ (far below the limit)'
       ],
       correctAnswer: 0,
       explanation: 'Required centripetal force: $F_c = mv^2/r = 1000(625)/80 = 7812.5$ N. Max friction: $f_{s,\\max} = \\mu_s mg = 0.9(10000) = 9000$ N. Ratio: $7812.5/9000 \\approx 0.87$.'
@@ -49,9 +49,7 @@ $$T = \\frac{2\\pi}{\\omega} = 2\\pi\\sqrt{\\frac{L\\cos\\theta}{g}}$$
 
 $$\\frac{dT}{d\\theta} = 2\\pi \\cdot \\frac{1}{2}\\left(\\frac{L\\cos\\theta}{g}\\right)^{-1/2} \\cdot \\frac{-L\\sin\\theta}{g}$$
 
-$$\\frac{dT}{d\\theta} = -\\pi\\sin\\theta\\sqrt{\\frac{L}{g\\cos\\theta}} \\cdot \\frac{1}{\\cos\\theta}$$
-
-$$\\frac{dT}{d\\theta} = -\\frac{\\pi L \\sin\\theta}{\\sqrt{gL\\cos^3\\theta}}$$
+$$\\frac{dT}{d\\theta} = -\\pi\\sin\\theta\\sqrt{\\frac{L}{g\\cos\\theta}} = -\\frac{\\pi L \\sin\\theta}{\\sqrt{gL\\cos\\theta}}$$
 
 Since $dT/d\\theta < 0$ for $0 < \\theta < 90°$: as the angle increases, the period **decreases**. A wider swing means a faster revolution (shorter period).
 
@@ -105,33 +103,33 @@ $$\\cos\\theta = \\frac{g}{\\omega^2 R}$$
 - If $\\omega^2 R < g$ (slow rotation): $\\cos\\theta > 1$ is impossible — the bead stays at the bottom ($\\theta = 0$).
 - Critical angular speed: $\\omega_c = \\sqrt{g/R}$
 
-This is a beautiful example of a **bifurcation**: the equilibrium jumps from $\\theta = 0$ to a nonzero value at $\\omega = \\omega_c$.`
+Above $\\omega_c$ the bead rides up the hoop, and the faster the hoop spins, the closer $\\theta$ gets to $90°$ (it never quite reaches it).`
     },
     {
       id: 'cm6-mcq3',
       type: 'mcq' as const,
       question: 'For the bead on a rotating hoop, the critical angular speed $\\omega_c = \\sqrt{g/R}$ is the speed at which:',
       options: [
-        'The bead first lifts off the bottom — a bifurcation',
-        'The bead reaches the top of the hoop',
-        'The bead leaves the hoop entirely',
-        'The normal force becomes zero'
+        'The bead first rises off the bottom of the hoop',
+        'The bead climbs all the way to the side of the hoop',
+        'The normal force on the bead first becomes zero',
+        'The bead flies off the hoop entirely'
       ],
       correctAnswer: 0,
-      explanation: 'Below $\\omega_c$, the only equilibrium is $\\theta = 0$ (bottom). At $\\omega_c$, new equilibria at $\\theta > 0$ appear. This is a supercritical pitchfork bifurcation.'
+      explanation: 'From $\\cos\\theta = g/(\\omega^2 R)$, a nonzero angle requires $\\omega^2 R > g$. Below $\\omega_c$ the bead stays at the bottom; just above it, the bead begins to rise. The normal force is $m\\omega^2 R$, never zero.'
     },
     {
       id: 'cm6-mcq4',
       type: 'mcq' as const,
       question: 'A ball on a string swings in a vertical circle. At the 3 o\'clock position ($\\theta = 90°$), the centripetal force is provided by:',
       options: [
-        'Tension alone (gravity is entirely tangential at this point)',
-        'Gravity alone',
-        'Both tension and gravity',
-        'Neither — the ball is momentarily in free fall'
+        'Tension alone',
+        'The weight of the ball alone',
+        'Tension and gravity together',
+        'Neither, since the ball is in free fall'
       ],
       correctAnswer: 0,
-      explanation: 'At $\\theta = 90°$ (measuring from bottom), the string points horizontally toward the center. Gravity points straight down (tangential, not radial). So only tension provides the centripetal force: $T = mv^2/r$.'
+      explanation: 'At $\\theta = 90°$ (measuring from bottom), the string points horizontally toward the center while gravity points straight down, which is tangential there. So only tension provides the centripetal force: $T = mv^2/r$.'
     },
     {
       id: 'cm6-mcq5',
@@ -139,9 +137,9 @@ This is a beautiful example of a **bifurcation**: the equilibrium jumps from $\\
       question: 'A particle moves on a circle of radius $R$ with speed $v(t) = v_0 + \\beta t$. At what time does the angle between the total acceleration vector and the radius equal $45°$?',
       options: [
         'When $a_t = a_c$, i.e., $\\beta = (v_0 + \\beta t)^2/R$',
-        'When $a_t = 0$',
-        'When $v = 0$',
-        'Always, since $a_t$ and $a_c$ are always equal'
+        'When $a_t = 2a_c$, i.e., $\\beta = 2(v_0 + \\beta t)^2/R$',
+        'When $a_c = 0$, i.e., $v_0 + \\beta t = 0$',
+        'Never, since $a_t$ is constant while $a_c$ grows'
       ],
       correctAnswer: 0,
       explanation: 'The angle from the radial direction: $\\tan\\phi = a_t/a_c$. At $\\phi = 45°$: $a_t = a_c$. So $\\beta = v^2/R = (v_0 + \\beta t)^2/R$. Solving this quadratic in $t$ gives the time.'
@@ -159,7 +157,7 @@ This is a beautiful example of a **bifurcation**: the equilibrium jumps from $\\
 | Banked curve | Resolve $N$ and $f$ into radial and vertical |
 | Vertical circle | Energy for speeds, N2L for forces at each position |
 | Conical pendulum | Vertical = $mg$, horizontal = centripetal |
-| Rotating hoop | Bifurcation at $\\omega_c = \\sqrt{g/R}$ |
+| Rotating hoop | $\\cos\\theta = g/(\\omega^2 R)$; rises only if $\\omega > \\sqrt{g/R}$ |
 
 > **Next up:** Part 7 — Review & Applications, bringing it all together.`
     }

@@ -130,10 +130,10 @@ For $a(t) = \\text{polynomial of degree } n$:
     {
       id: 'varaccel3-mcq4',
       type: 'mcq' as const,
-      question: 'A particle with $a(t) = 2e^{-t}$ starts from rest at the origin. As $t \\to \\infty$, the position approaches:',
-      options: ['$2$ m', '$\\infty$', '$1$ m', '$4$ m'],
+      question: 'A particle with $a(t) = 2e^{-t}$ starts from rest at the origin. For large $t$, the position is best approximated by:',
+      options: ['$x \\approx 2t - 2$', '$x \\approx 2$', '$x \\approx 2t$', '$x \\approx 2t + 2$'],
       correctAnswer: 0,
-      explanation: '$v(t) = -2e^{-t} + 2 = 2(1 - e^{-t})$. $x(t) = 2t + 2e^{-t} - 2 = 2(t - 1 + e^{-t})$. As $t \\to \\infty$, $x \\approx 2t - 2 \\to \\infty$. Wait — velocity approaches $2$ m/s (not zero), so position grows without bound. The answer is $\\infty$. Actually, let me reconsider: $v \\to 2$, so the particle keeps moving at constant $2$ m/s — position diverges. The answer should be $\\infty$, not $2$.'
+      explanation: '$v(t) = 2(1 - e^{-t})$, so $x(t) = 2t + 2e^{-t} - 2$. As $e^{-t} \\to 0$, $x \\approx 2t - 2$: the particle approaches a constant 2 m/s but lags 2 m behind a particle that moved at 2 m/s from the start.'
     }
   ]
 };

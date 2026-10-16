@@ -44,11 +44,11 @@ $$\\frac{1}{2}mv^2 = \\frac{1}{2}\\cdot\\frac{1}{12}ML^2 \\omega^2 + \\frac{1}{2
 
 These two equations solve for $\\omega$ and $v'$.
 
-For the special case $m = M/3$:
+For the special case $m = M/3$, divide the momentum equation by $ML/6$ and the energy equation by $M/3$. With $u = (L/2)\\omega$ (the speed of the rod's end):
 
-$$v' = \\frac{m - M/3}{m + M/3}\\cdot v \\cdot \\frac{L/2 \\text{ factors}}{\\cdots}$$
+$$v = u + v', \\qquad v^2 = u^2 + v'^2 \\implies v' = 0, \\quad \\omega = \\frac{2v}{L}$$
 
-The algebra is involved but the approach is systematic:
+The ball stops dead and the rod takes all the angular momentum. In general the approach is systematic:
 1. Write $L$-conservation about the pivot
 2. Write $K$-conservation
 3. Solve the two equations for two unknowns ($\\omega$, $v'$)`
@@ -57,9 +57,9 @@ The algebra is involved but the approach is systematic:
       id: 'am6-mcq2',
       type: 'mcq' as const,
       question: 'A merry-go-round (uniform disk, $M = 200$ kg, $R = 2$ m) spins at $0.5$ rad/s. A $50$ kg child jumps on at the rim. The new angular velocity is:',
-      options: ['$\\frac{1}{3}$ rad/s', '$0.4$ rad/s', '$0.25$ rad/s', '$0.5$ rad/s'],
+      options: ['$0.33$ rad/s', '$0.4$ rad/s', '$0.25$ rad/s', '$0.5$ rad/s'],
       correctAnswer: 0,
-      explanation: '$I_{\\text{disk}} = \\frac{1}{2}(200)(4) = 400$ $kg\\cdot m^{2}$. $I_{\\text{child}} = 50(4) = 200$ $kg\\cdot m^{2}$. $L = 400(0.5) = 200$. $\\omega_f = 200/(400+200) = 200/600 = 1/3$ rad/s.'
+      explanation: '$I_{\\text{disk}} = \\frac{1}{2}(200)(4) = 400$ $kg\\cdot m^{2}$. $I_{\\text{child}} = 50(4) = 200$ $kg\\cdot m^{2}$. $L = 400(0.5) = 200$. $\\omega_f = 200/(400+200) = 1/3 \\approx 0.33$ rad/s.'
     },
     {
       id: 'am6-prob2',
@@ -94,7 +94,7 @@ Compare to the massless pulley result: $a = (m_1-m_2)g/(m_1+m_2)$. The massive p
       question: 'A uniform rod of length $L$ and mass $M$ is released from a horizontal position, pivoted at one end. Its angular velocity when it passes through vertical is:',
       options: ['$\\sqrt{3g/L}$', '$\\sqrt{2g/L}$', '$\\sqrt{g/L}$', '$\\sqrt{6g/L}$'],
       correctAnswer: 0,
-      explanation: 'Using energy conservation: COM drops $L/2$. $Mg(L/2) = \\frac{1}{2}I\\omega^2 = \\frac{1}{2}\\cdot\\frac{1}{3}ML^2\\omega^2$. $gL/2 = ML^2\\omega^2/6$. Wait: $Mg(L/2) = \\frac{1}{6}ML^2\\omega^2$. $\\omega^2 = 3g/L$. $\\omega = \\sqrt{3g/L}$.'
+      explanation: 'The center of mass drops $L/2$, so $Mg(L/2) = \\frac{1}{2}\\left(\\frac{1}{3}ML^2\\right)\\omega^2 = \\frac{1}{6}ML^2\\omega^2$, giving $\\omega^2 = 3g/L$ and $\\omega = \\sqrt{3g/L}$.'
     },
     {
       id: 'am6-summary',

@@ -16,7 +16,7 @@ export const physCAngMomPart7Data = {
 | Rigid body | $L = I\\omega$ |
 | Newton's 2nd | $\\vec{\\tau} = d\\vec{L}/dt$ |
 | Conservation | $\\tau_{\\text{ext}} = 0 \\implies L = \\text{const}$ |
-| Precession | $\\Omega = Mgr/(I\\omega)$ |
+| Collision with a pivot | Conserve $L$ about the pivot |
 | Rolling ($L$ about contact) | $L = (I_{\\text{cm}} + MR^2)\\omega$ |
 | Angular impulse | $\\int \\tau\\,dt = \\Delta L$ |
 | Kinetic energy | $K_{\\text{rot}} = L^2/(2I)$ |
@@ -36,7 +36,7 @@ export const physCAngMomPart7Data = {
       id: 'am7-mcq1',
       type: 'mcq' as const,
       question: 'A particle of mass $m$ moves in a circle of radius $R$ with speed $v(t) = v_0 + at$ (uniformly increasing). The angular momentum $L(t)$ about the center is:',
-      options: ['$mR(v_0 + at)$', '$mR^2(v_0 + at)$', '$mRv_0$', '$\\frac{1}{2}mR(v_0 + at)^2$'],
+      options: ['$mR(v_0 + at)$', '$mR^2(v_0 + at)$', '$mR(v_0 + \\tfrac{1}{2}at)$', '$\\frac{1}{2}mR(v_0 + at)^2$'],
       correctAnswer: 0,
       explanation: '$L = mvr = m(v_0 + at)R$. Since the motion is circular and $\\vec{v} \\perp \\vec{r}$, $L = mRv$ at all times.'
     },
@@ -87,25 +87,25 @@ The rod swings past horizontal!`
       id: 'am7-mcq3',
       type: 'mcq' as const,
       question: 'A solid sphere of mass $M$ and radius $R$ rolls without slipping down an incline of height $h$. Its speed at the bottom is:',
-      options: ['$\\sqrt{10gh/7}$', '$\\sqrt{2gh}$', '$\\sqrt{gh}$', '$\\sqrt{5gh/3}$'],
+      options: ['$\\sqrt{10gh/7}$', '$\\sqrt{2gh}$', '$\\sqrt{6gh/5}$', '$\\sqrt{20gh/9}$'],
       correctAnswer: 0,
       explanation: 'Energy: $Mgh = \\frac{1}{2}Mv^2 + \\frac{1}{2}I\\omega^2 = \\frac{1}{2}Mv^2 + \\frac{1}{2}(\\frac{2}{5}MR^2)(v/R)^2 = \\frac{1}{2}Mv^2(1+2/5) = \\frac{7}{10}Mv^2$. $v = \\sqrt{10gh/7}$.'
     },
     {
       id: 'am7-mcq4',
       type: 'mcq' as const,
-      question: 'A turntable ($I_T = 0.5$ $kg\\cdot m^{2}$) rotates at $2$ rad/s. A person ($I_P = 1.5$ $kg\\cdot m^{2}$, initially on the turntable and stationary relative to it) starts walking in the opposite direction at $\\omega_P = 1$ rad/s relative to the ground. The turntable\'s new angular velocity is:',
-      options: ['$5$ rad/s', '$3$ rad/s', '$2$ rad/s', '$4$ rad/s'],
+      question: 'A turntable ($I_T = 0.5$ $kg\\cdot m^{2}$) rotates at $2$ rad/s. A person ($I_P = 1.5$ $kg\\cdot m^{2}$, initially rotating with the turntable) starts walking so that her angular velocity relative to the ground is $1$ rad/s in the opposite direction. The turntable\'s new angular speed is:',
+      options: ['$11$ rad/s', '$5$ rad/s', '$8$ rad/s', '$2.75$ rad/s'],
       correctAnswer: 0,
-      explanation: 'Initially: $L = (0.5 + 1.5)(2) = 4$ $kg\\cdot m^{2}/s$. After: person walks at $\\omega_P = -1$ rad/s. $L = 0.5\\omega_T + 1.5(-1) = 4$. $\\omega_T = (4 + 1.5)/0.5 = 5.5/0.5 = 11$... Let me recalculate. $L_i = I_T(2) + I_P(2) = 0.5(2) + 1.5(2) = 4$. $L_f = 0.5\\omega_T + 1.5(-1)$. $0.5\\omega_T - 1.5 = 4$. $\\omega_T = 11$. Hmm that doesn\'t match options. With the constraint that person walks at $1$ rad/s relative to turntable: $\\omega_P = \\omega_T - 1$. $L = 0.5\\omega_T + 1.5(\\omega_T - 1) = 4$. $2\\omega_T - 1.5 = 4$. $\\omega_T = 2.75$. None match exactly. Taking the answer as $5$ rad/s for the scenario as stated.'
+      explanation: 'No external torque: $L_i = (0.5 + 1.5)(2) = 4$ $kg\\cdot m^{2}/s$. After, $0.5\\,\\omega_T + 1.5(-1) = 4$, so $\\omega_T = 5.5/0.5 = 11$ rad/s. Dropping the minus sign on the person\'s term gives 5 rad/s.'
     },
     {
       id: 'am7-mcq5',
       type: 'mcq' as const,
       question: 'During a supernova, a star\'s core collapses from radius $R$ to $R/1000$. If the initial rotation period was $30$ days, the final period is approximately:',
-      options: ['$2.6$ ms', '$30$ ms', '$0.03$ days', '$3$ s'],
+      options: ['$2.6$ s', '$2.6$ ms', '$0.03$ days', '$30$ days'],
       correctAnswer: 0,
-      explanation: '$L = I\\omega = \\text{const}$. $I \\propto R^2$ (assuming uniform density sphere — approximately). $I_f/I_i = (R/1000)^2/R^2 = 10^{-6}$. $\\omega_f = 10^6 \\omega_i$. $T_f = T_i/10^6 = 30 \\times 86400/(10^6) = 2{,}592{,}000/10^6 \\approx 2.6$ s. Actually $30$ days = $2.592 \\times 10^6$ s. $T_f = 2.592 \\times 10^6/10^6 = 2.6$ s. Adjusting for collapse factors, millisecond pulsars have $T \\sim$ ms. With the given ratio, $T_f \\approx 2.6$ ms matches for a $10^6$ ratio factor.'
+      explanation: 'Treat the core as a uniform sphere, $I = \\frac{2}{5}MR^2 \\propto R^2$, so $I_f/I_i = 10^{-6}$ and $\\omega_f = 10^6\\,\\omega_i$. Then $T_f = (30 \\times 86\\,400 \\text{ s})/10^6 \\approx 2.6$ s. Scaling by $1000$ instead of $1000^2$ gives 0.03 days.'
     },
     {
       id: 'am7-summary',
@@ -120,7 +120,7 @@ You've mastered:
 | 2 | $L = I\\omega$ (rigid bodies) | ✅ |
 | 3 | Torque and $d\\vec{L}/dt$ | ✅ |
 | 4 | Conservation of angular momentum | ✅ |
-| 5 | Precession and gyroscopes | ✅ |
+| 5 | Angular impulse from graphs and angular momentum exchange | ✅ |
 | 6 | Problem-solving workshop | ✅ |
 | 7 | Review & applications | ✅ |
 

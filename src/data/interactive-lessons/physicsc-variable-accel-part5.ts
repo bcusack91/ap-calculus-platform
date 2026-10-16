@@ -117,19 +117,17 @@ From $v^2 = v_0^2 + 2\\int_{x_0}^x a(x')\\,dx'$, a **turning point** occurs wher
 
 $$v_0^2 + 2\\int_{x_0}^{x_{\\text{turn}}} a(x')\\,dx' = 0$$
 
-### Example: Potential Well
+### Example: Motion in a Potential Well
 
-$a(x) = -8x + 2x^3$, with $v = 0$ at $x = 0$.
+$a(x) = -8x + 2x^3$, and the particle passes $x = 0$ with $v_0 = 2$ m/s.
 
-$$v^2 = 2\\int_0^x (-8x' + 2x'^3)\\,dx' = 2\\left[-4x^2 + \\frac{x^4}{2}\\right] = -8x^2 + x^4$$
+$$v^2 = 4 + 2\\int_0^x (-8x' + 2x'^3)\\,dx' = 4 - 8x^2 + x^4$$
 
-Turning points: $v = 0$ when $x^4 - 8x^2 = 0 \\implies x^2(x^2-8) = 0$
+**Turning points:** $v = 0$ when $x^4 - 8x^2 + 4 = 0$, so $x^2 = 4 \\pm \\sqrt{12}$. The particle reaches the smaller root first: $x^2 = 4 - 3.46 = 0.54$, so $x \\approx \\pm 0.73$ m. It oscillates between these two points.
 
-So $x = 0$ (start) or $x = \\pm 2\\sqrt{2}$.
+**Equilibria:** $a = 0$ where $-8x + 2x^3 = 0$, i.e. $x = 0$ and $x = \\pm 2$. Near $x = 0$, $a \\approx -8x$ (restoring), so $x = 0$ is **stable**. At $x = \\pm 2$ the force pushes the particle away on either side, so those are **unstable** equilibria (tops of the potential-energy hills).
 
-But we need $v^2 \\ge 0$: $x^4 - 8x^2 \\ge 0 \\implies x^2 \\ge 8$.
-
-This means the particle stays at $x = 0$ (it's a **turning point** where motion reverses... but actually $v^2 < 0$ for small displacements from $x = 0$). This indicates $x = 0$ is an **unstable equilibrium**.`
+**Escaping the well:** the most $v^2$ can drop is $8x^2 - x^4$ evaluated at $x^2 = 4$, which is $16$. A particle passing $x = 0$ with $v_0 > 4$ m/s gets over the hill at $x = 2$ and is no longer bounded.`
     },
     {
       id: 'varaccel5-mcq4',
@@ -138,7 +136,7 @@ This means the particle stays at $x = 0$ (it's a **turning point** where motion 
       options: [
         'The work-energy theorem',
         'Conservation of momentum',
-        'Newton\'s third law',
+        'Newton\'s third law of motion',
         'The impulse-momentum theorem'
       ],
       correctAnswer: 0,

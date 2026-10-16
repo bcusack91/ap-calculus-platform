@@ -76,15 +76,7 @@ A 60 kg person on a frictionless frozen lake throws a 5 kg ball at $10$ m/s (rel
 
 $$0 = 60 v_p + 5(10) \\implies v_p = -\\frac{50}{60} = -\\frac{5}{6} \\approx -0.83 \\text{ m/s}$$
 
-The person recoils in the opposite direction.
-
-### Continuous Mass Loss
-
-If mass is ejected continuously (foreshadowing rockets), the momentum equation becomes differential:
-
-$$d\\vec{p} = \\vec{v}\\,dm$$
-
-This leads to the variable-mass equation we'll study in Topic 8.`
+The person recoils in the opposite direction, and the center of mass of the person–ball system stays at rest.`
     },
     {
       id: 'com3-mcq3',

@@ -15,9 +15,9 @@ When acceleration depends on **velocity** — $a = a(v)$ — we can no longer si
 | Situation | $a(v)$ |
 |:---|:---:|
 | Linear drag (low speed) | $a = -bv$ |
-| Quadratic drag (high speed) | $a = -cv^2$ |
-| Quadratic drag + gravity | $a = g - cv^2$ |
-| Thrust minus drag | $a = F_0/m - bv$ |
+| Falling with linear drag | $a = g - (k/m)v$ |
+| Constant applied force minus linear drag | $a = F_0/m - bv$ |
+| Other power laws (math practice) | $a = -cv^2$, $a = -c\\sqrt{v}$ |
 
 ### The Technique
 
@@ -80,33 +80,29 @@ The velocity decays exponentially. The object covers a **finite total distance**
     {
       id: 'varaccel4-quadratic',
       type: 'text' as const,
-      content: `## Falling with Quadratic Drag: $a = g - cv^2$
+      content: `## Falling with Linear Drag: $a = g - (k/m)v$
 
-For an object falling under gravity with quadratic air resistance:
+For an object released from rest and falling with a resistive force $-kv$ (down is positive):
 
-$$m\\frac{dv}{dt} = mg - bv^2 \\implies \\frac{dv}{dt} = g - \\frac{b}{m}v^2 = g\\left(1 - \\frac{v^2}{v_T^2}\\right)$$
-
-where the terminal velocity is $v_T = \\sqrt{mg/b}$.
+$$m\\frac{dv}{dt} = mg - kv$$
 
 ### Separation of Variables
 
-$$\\frac{dv}{1 - v^2/v_T^2} = g\\,dt$$
+$$\\int_0^{v} \\frac{dv'}{g - (k/m)v'} = \\int_0^t dt' \\implies -\\frac{m}{k}\\ln\\left(1 - \\frac{kv}{mg}\\right) = t$$
 
-Using partial fractions:
+### Solution
 
-$$\\frac{v_T}{2}\\left[\\frac{1}{v_T+v} + \\frac{1}{v_T-v}\\right]dv = g\\,dt$$
-
-$$\\frac{v_T}{2}\\ln\\frac{v_T+v}{v_T-v} = gt$$
-
-### Solution (starting from rest)
-
-$$v(t) = v_T\\tanh\\left(\\frac{gt}{v_T}\\right)$$
+$$v(t) = \\frac{mg}{k}\\left(1 - e^{-kt/m}\\right)$$
 
 ### Behavior
 
-- At small $t$: $v \\approx gt$ (free fall, drag negligible)
-- As $t \\to \\infty$: $v \\to v_T$ (terminal velocity)
-- The characteristic time scale is $v_T/g$.`
+- At small $t$: $v \\approx gt$ (drag negligible at first)
+- As $t \\to \\infty$: $v \\to v_T = mg/k$, the **terminal velocity**, where the net force is zero
+- The time constant is $m/k$: after one time constant, $v \\approx 0.63\\,v_T$
+
+### Terminal Speed for Any Drag Law
+
+You can always find terminal speed by setting the net force to zero, even when you cannot solve for $v(t)$. For a drag force of magnitude $bv^2$: $mg = bv_T^2 \\implies v_T = \\sqrt{mg/b}$. (On the AP Physics C exam, full $v(t)$ solutions use the linear model $-kv$.)`
     },
     {
       id: 'varaccel4-mcq3',

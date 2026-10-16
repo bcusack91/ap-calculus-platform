@@ -85,7 +85,7 @@ This is valid until $v = 0$ at $x_{\\max} = \\frac{v_0^2}{2g\\sin\\theta}$.`
     {
       id: 'fri2-mcq2',
       type: 'mcq' as const,
-      question: 'A ball rolls up a frictionless $60°$ ramp with $v_0 = 8$ m/s. What maximum height does it reach? ($g = 10$ $m/s^{2}$)',
+      question: 'A block slides up a frictionless $60°$ ramp with $v_0 = 8$ m/s. What maximum height does it reach? ($g = 10$ $m/s^{2}$)',
       options: [
         '$3.2$ m',
         '$3.7$ m',
@@ -135,7 +135,7 @@ The speed increases linearly with position — a result unique to this geometry.
       question: 'A block slides from rest down a frictionless ramp of length $L$ at angle $\\theta$. Which gives the speed at the bottom?',
       options: [
         '$v = \\sqrt{2gL\\sin\\theta}$',
-        '$v = \\sqrt{2gL\\cos\\theta}$',
+        '$v = \\sqrt{gL\\cos\\theta}$',
         '$v = \\sqrt{2gL}$',
         '$v = gL\\sin\\theta$'
       ],
@@ -147,10 +147,10 @@ The speed increases linearly with position — a result unique to this geometry.
       type: 'mcq' as const,
       question: 'Two frictionless ramps have the same height $h$ but different angles ($30°$ and $60°$). A block slides from rest down each. Which statement is correct?',
       options: [
-        'Both reach the same speed at the bottom, but the $60°$ ramp takes less time',
-        'The $60°$ ramp gives a greater final speed',
-        'The $30°$ ramp gives a greater final speed',
-        'Both reach the same speed and take the same time'
+        'Same final speed, but the $60°$ ramp takes less time',
+        'The $60°$ ramp gives a greater final speed and takes less time',
+        'The $30°$ ramp gives a greater final speed because it is longer',
+        'Both reach the same speed, and both take the same time'
       ],
       correctAnswer: 0,
       explanation: 'Final speed depends only on height: $v = \\sqrt{2gh}$, so both are the same. But the steeper ramp is shorter ($L = h/\\sin\\theta$) and has greater acceleration ($g\\sin\\theta$), so it takes less time.'

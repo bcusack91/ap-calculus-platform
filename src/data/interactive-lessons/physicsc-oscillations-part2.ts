@@ -61,7 +61,7 @@ $v = -0.80(1) = -0.80\\,\\text{m/s}, \\qquad a = -6.4(0) = 0\\,\\text{m/s}^2$
         questions: [
           {
             question: 'Maximum acceleration in SHM occurs when:',
-            options: ['$x = 0$', '$x = A$ or $x = -A$', '$v$ is maximum', 'Energy is all kinetic'],
+            options: ['$x = 0$', '$x = A$ or $x = -A$', '$v$ is maximum', 'KE is maximum'],
             correctAnswer: 1,
             explanation: '$a = -\\omega^2 x$, so $\\lvert a \\rvert$ is maximum where $\\lvert x \\rvert$ is maximum — at the turning points.'
           },

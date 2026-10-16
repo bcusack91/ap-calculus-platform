@@ -34,7 +34,7 @@ For 2D motion in the $xy$-plane, $\\vec{L}$ points along $\\hat{z}$:
       id: 'am1-mcq1',
       type: 'mcq' as const,
       question: 'A 2 kg particle moves with velocity $\\vec{v} = 3\\hat{x}$ m/s at position $\\vec{r} = 4\\hat{y}$ m. Its angular momentum about the origin is:',
-      options: ['$-24\\hat{z}$ $kg\\cdot m^{2}/s$', '$24\\hat{z}$ $kg\\cdot m^{2}/s$', '$12\\hat{z}$ $kg\\cdot m^{2}/s$', '$0$'],
+      options: ['$-24\\hat{z}$ $kg\\cdot m^{2}/s$', '$24\\hat{z}$ $kg\\cdot m^{2}/s$', '$12\\hat{z}$ $kg\\cdot m^{2}/s$', '$-12\\hat{z}$ $kg\\cdot m^{2}/s$'],
       correctAnswer: 0,
       explanation: '$\\vec{L} = \\vec{r} \\times m\\vec{v} = 4\\hat{y} \\times 2(3\\hat{x}) = 24(\\hat{y}\\times\\hat{x}) = -24\\hat{z}$ $kg\\cdot m^{2}/s$. Recall $\\hat{y}\\times\\hat{x} = -\\hat{z}$.'
     },
@@ -63,7 +63,7 @@ This remains constant because $\\vec{\\tau} = \\vec{r} \\times \\vec{F} = 0$ (no
       id: 'am1-mcq2',
       type: 'mcq' as const,
       question: 'A particle moves in a straight line with constant velocity. Its angular momentum about a point NOT on the line is:',
-      options: ['Constant and nonzero', 'Zero', 'Increasing', 'Decreasing'],
+      options: ['Constant and nonzero', 'Zero, since the path is straight', 'Largest at closest approach', 'Decreasing as it moves away'],
       correctAnswer: 0,
       explanation: '$L = mvd$ where $d$ is the perpendicular distance from the point to the line. Since $v$ is constant and $d$ is a geometric constant, $L$ is constant and nonzero (as long as the point is not on the line).'
     },
@@ -94,17 +94,17 @@ This is the $z$-component: $L_z = m(xv_y - yv_x)$.`
       id: 'am1-mcq3',
       type: 'mcq' as const,
       question: 'A planet of mass $m$ orbits a star in an elliptical orbit. At perihelion (closest approach $r_1$, speed $v_1$) and aphelion (farthest distance $r_2$, speed $v_2$), angular momentum conservation gives:',
-      options: ['$r_1 v_1 = r_2 v_2$', '$r_1^2 v_1 = r_2^2 v_2$', '$r_1 v_1^2 = r_2 v_2^2$', '$v_1 = v_2$'],
+      options: ['$r_1 v_1 = r_2 v_2$', '$r_1^2 v_1 = r_2^2 v_2$', '$r_1 v_1^2 = r_2 v_2^2$', '$v_1/r_1 = v_2/r_2$'],
       correctAnswer: 0,
-      explanation: 'At both points, $\\vec{v} \\perp \\vec{r}$, so $L = mvr$. Conservation: $mv_1r_1 = mv_2r_2$, giving $r_1v_1 = r_2v_2$. This is Kepler\'s second law (equal areas in equal times).'
+      explanation: 'At both points, $\\vec{v} \\perp \\vec{r}$, so $L = mvr$. Conservation: $mv_1r_1 = mv_2r_2$, giving $r_1v_1 = r_2v_2$.'
     },
     {
       id: 'am1-mcq4',
       type: 'mcq' as const,
       question: 'The SI units of angular momentum are:',
-      options: ['$kg\\cdot m^{2}/s$', '$kg\\cdot m/s^{2}$', 'N·m', 'J·s'],
+      options: ['$kg\\cdot m^{2}/s$', '$kg\\cdot m/s^{2}$', '$kg\\cdot m/s$', '$kg\\cdot m^{2}/s^{2}$'],
       correctAnswer: 0,
-      explanation: '$[L] = [r][p] = \\text{m} \\cdot \\text{kg}\\cdot\\text{m/s} = \\text{kg}\\cdot\\text{m}^2/\\text{s}$. Note that J·s (joule-seconds) has the same dimensions — this is why Planck\'s constant $\\hbar$ has units of angular momentum.'
+      explanation: '$[L] = [r][p] = \\text{m} \\cdot \\text{kg}\\cdot\\text{m/s} = \\text{kg}\\cdot\\text{m}^2/\\text{s}$. This is equivalent to J·s. The unit kg·m/s belongs to linear momentum, and kg·m²/s² is the unit of torque (or energy).'
     },
     {
       id: 'am1-summary',

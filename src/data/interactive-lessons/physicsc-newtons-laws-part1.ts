@@ -86,7 +86,7 @@ An object remains at rest or in uniform motion unless acted upon by a net extern
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"An object at rest with zero net force will","options":["Remain at rest","Accelerate forward","Decelerate","Float upward"]},{"label":"Inertia depends on an object's","options":["Mass","Shape","Color","Temperature"]}],
+        dropdowns: [{"label":"An object at rest with zero net force will","options":["Remain at rest","Accelerate forward","Speed up slowly","Drift slowly forward"]},{"label":"Inertia depends on an object's","options":["Mass","Speed","Net force","Volume"]}],
         correctAnswers: ["Remain at rest","Mass"],
         hint1: "Think about what Newton's first law says.",
         hint2: "Which property resists changes in motion?",
@@ -120,8 +120,8 @@ An object remains at rest or in uniform motion unless acted upon by a net extern
                     "options": [
                               "Inertial",
                               "Accelerating",
-                              "Rotating",
-                              "Any frame"
+                              "A rotating frame",
+                              "Any frame at all"
                     ],
                     "correctAnswer": 0,
                     "explanation": "Newton's laws hold in inertial (non-accelerating) reference frames."

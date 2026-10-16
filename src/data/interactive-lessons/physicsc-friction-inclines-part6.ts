@@ -26,13 +26,13 @@ This workshop presents AP Physics C–style problems that integrate concepts fro
       type: 'mcq' as const,
       question: 'A 2 kg block on a $53°$ incline ($\\mu_s = 0.5$, $\\mu_k = 0.4$) is connected to a 1.5 kg hanging mass. Initially at rest. Does the system move, and if so, in which direction? ($g = 10$ $m/s^{2}$, $\\sin 53° \\approx 0.8$, $\\cos 53° \\approx 0.6$)',
       options: [
-        'The incline block slides down (gravity on $m_1$ dominates)',
-        'The hanging mass descends (gravity on $m_2$ dominates)',
+        'The incline block slides down, since 16 N > 15 N',
+        'The hanging mass descends, since its weight wins',
         'The system remains at rest',
         'Cannot be determined without more information'
       ],
-      correctAnswer: 0,
-      explanation: 'Down-ramp gravity on $m_1$: $m_1 g\\sin 53° = 16$ N. Weight of $m_2$: $m_2 g = 15$ N. The incline block tends to slide down. Maximum static friction opposing downward slide: $\\mu_s m_1 g\\cos 53° = 0.5(20)(0.6) = 6$ N. Net tendency down: $16 - 15 - 6 < 0$... Actually: net force trying to move $m_1$ down =$16 - 15 = 1$ N. Can static friction hold? $f_{s,\\max} = 6$ N $> 1$ N, so actually it stays at rest! Let me re-examine: The net gravitational tendency is for $m_1$ to go down. The net unbalanced gravity = $m_1 g\\sin\\theta - m_2 g = 16 - 15 = 1$ N. Since $f_{s,\\max} = 6$ N $> 1$ N, the system stays at rest.'
+      correctAnswer: 2,
+      explanation: 'The down-ramp pull on $m_1$ is $m_1 g\\sin 53° = 16$ N and the hanging weight is $m_2 g = 15$ N, an imbalance of only 1 N. Maximum static friction is $\\mu_s m_1 g\\cos 53° = 0.5(20)(0.6) = 6$ N, more than enough to hold the system at rest.'
     },
     {
       id: 'fri6-problem2',
@@ -103,28 +103,28 @@ $$a(t) = g\\sin\\theta \\cdot e^{-bt/m} = 7.07 e^{-2} = 0.957 \\text{ m/s}^2$$`
     {
       id: 'fri6-mcq3',
       type: 'mcq' as const,
-      question: 'A horizontal surface has velocity-dependent friction $f = 3v^2$. A 2 kg block starts with $v_0 = 6$ m/s. The ODE for velocity is:',
+      question: 'A 2 kg block slides on a horizontal surface where the only horizontal force is a resistive force $f = 3v$ (SI units). It starts with $v_0 = 6$ m/s. The differential equation for its velocity is:',
       options: [
-        '$2\\frac{dv}{dt} = -3v^2$',
         '$2\\frac{dv}{dt} = -3v$',
-        '$\\frac{dv}{dt} = -3v^2$',
-        '$2\\frac{dv}{dt} = 3v^2$'
+        '$2\\frac{dv}{dt} = -3$',
+        '$\\frac{dv}{dt} = -3v$',
+        '$2\\frac{dv}{dt} = 3v$'
       ],
       correctAnswer: 0,
-      explanation: 'Newton\'s second law: $ma = -f = -3v^2$ (friction opposes motion). So $2\\frac{dv}{dt} = -3v^2$.'
+      explanation: 'Newton\'s second law: $ma = -f = -3v$, since the resistive force opposes the motion. So $2\\frac{dv}{dt} = -3v$; dropping the mass or the minus sign gives the other forms.'
     },
     {
       id: 'fri6-mcq4',
       type: 'mcq' as const,
-      question: 'For $2\\frac{dv}{dt} = -3v^2$ with $v_0 = 6$ m/s, what is $v(t)$?',
+      question: 'For $2\\frac{dv}{dt} = -3v$ with $v_0 = 6$ m/s, what is $v(t)$?',
       options: [
-        '$v(t) = \\frac{6}{1 + 18t}$',
-        '$v(t) = 6e^{-1.5t}$',
-        '$v(t) = 6 - 9t$',
-        '$v(t) = \\frac{1}{\\frac{1}{6} + 1.5t}$'
+        '$v(t) = 6e^{-3t}$',
+        '$v(t) = 6 - 1.5t$',
+        '$v(t) = 6(1 - e^{-1.5t})$',
+        '$v(t) = 6e^{-1.5t}$'
       ],
       correctAnswer: 3,
-      explanation: 'Separating variables: $\\frac{dv}{v^2} = -\\frac{3}{2}dt$. Integrating: $-\\frac{1}{v} = -\\frac{3}{2}t + C$. With $v(0) = 6$: $C = -1/6$. So $\\frac{1}{v} = \\frac{1}{6} + \\frac{3}{2}t$, which simplifies to $\\frac{6}{1 + 9t}$. (Forgetting to divide the 3 by 2 gives the $1 + 18t$ trap.)'
+      explanation: 'Separating variables: $\\frac{dv}{v} = -\\frac{3}{2}dt$, so $\\ln(v/6) = -1.5t$ and $v = 6e^{-1.5t}$. Forgetting to divide the 3 by the mass gives $6e^{-3t}$.'
     },
     {
       id: 'fri6-mcq5',

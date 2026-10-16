@@ -30,7 +30,7 @@ $\\vec{F}_{\\text{net}} = \\frac{d\\vec{p}}{dt}$
 
 For constant mass: $\\vec{F} = m\\vec{a} = m\\frac{d\\vec{v}}{dt} = \\frac{d(m\\vec{v})}{dt}$
 
-This more general form handles cases where mass changes (like rockets).
+This more general form also handles systems whose mass changes, such as sand pouring onto a conveyor belt that moves at constant speed (Part 6).
 
 ---
 
@@ -83,7 +83,7 @@ $F_{\\text{net}}(2) = 24(2) - 6 = 42\\,\\text{N}$
           },
           {
             question: 'Momentum is conserved when:',
-            options: ['Energy is conserved', 'No external net force acts', 'Objects are elastic', 'Mass is constant'],
+            options: ['Kinetic energy is conserved too', 'No external net force acts', 'The objects are perfectly elastic', 'The total mass stays constant'],
             correctAnswer: 1,
             explanation: 'Conservation of momentum requires zero net external force on the system. Internal forces cancel by Newton’s third law.'
           },
@@ -101,7 +101,7 @@ $F_{\\text{net}}(2) = 24(2) - 6 = 42\\,\\text{N}$
           },
           {
             question: 'Two objects have equal kinetic energy. The one with greater mass has:',
-            options: ['Smaller momentum', 'Greater momentum', 'Equal momentum', 'Zero momentum'],
+            options: ['Less momentum, since it is slower', 'More momentum', 'The same momentum', 'No momentum at all'],
             correctAnswer: 1,
             explanation: 'Since $K = \\frac{p^2}{2m}$, equal $K$ gives $p = \\sqrt{2mK}$. Larger $m$ at the same $K$ means larger $p$.'
           },

@@ -45,10 +45,10 @@ where $\\tau = m/b$ is the **time constant**.`
       type: 'mcq' as const,
       question: 'An object falling with linear drag $f = bv$ reaches what fraction of terminal velocity after one time constant $\\tau = m/b$?',
       options: [
-        '$(1 - 1/e) \\approx 63\\%$',
-        '$50\\%$',
-        '$37\\%$',
-        '$90\\%$'
+        '$1 - 1/e \\approx 63\\%$',
+        '$1/e \\approx 37\\%$',
+        '$1/2 = 50\\%$',
+        '$1 - 1/e^2 \\approx 86\\%$'
       ],
       correctAnswer: 0,
       explanation: 'At $t = \\tau$: $v = v_T(1 - e^{-1}) = v_T(1 - 0.368) = 0.632\\,v_T$, or about 63%.'
@@ -66,31 +66,13 @@ $$m\\frac{dv}{dt} = mg - cv^2$$
 
 $$v_T = \\sqrt{\\frac{mg}{c}}$$
 
-### Solving the ODE
+Terminal speed always comes from setting the **net force to zero**, whatever the drag law. You can also find the acceleration at any speed directly from Newton's second law:
 
-$$\\frac{dv}{g - (c/m)v^2} = dt$$
+$$a = g - \\frac{c}{m}v^2 = g\\left(1 - \\frac{v^2}{v_T^2}\\right)$$
 
-Let $\\alpha = c/m$. Then:
+For example, at half the terminal speed the drag is one quarter of the weight, so $a = \\tfrac{3}{4}g$.
 
-$$\\frac{dv}{g - \\alpha v^2} = dt$$
-
-Using partial fractions or the substitution $v = v_T \\tanh(u)$:
-
-$$v(t) = v_T \\tanh\\left(\\frac{gt}{v_T}\\right)$$
-
-where $v_T = \\sqrt{g/\\alpha} = \\sqrt{mg/c}$.
-
-### Position by Integration
-
-$$x(t) = \\int_0^t v_T \\tanh\\left(\\frac{gt'}{v_T}\\right)dt' = \\frac{v_T^2}{g}\\ln\\cosh\\left(\\frac{gt}{v_T}\\right)$$
-
-### Key Behavior
-
-| Time | Speed | Acceleration |
-|:---:|:---:|:---:|
-| $t = 0$ | $0$ | $g$ |
-| $t \\to \\infty$ | $v_T$ | $0$ |
-| $t = v_T/g$ | $\\approx 0.76\\,v_T$ | $\\approx 0.42\\,g$ |`
+The AP Physics C exam solves for $v(t)$ only with the linear model $f = bv$; for quadratic drag you need the terminal speed and force-balance reasoning, not a full solution.`
     },
     {
       id: 'fri4-mcq2',
@@ -145,7 +127,7 @@ $$a(t) = g\\sin\\theta \\cdot e^{-bt/m} = 5 \\cdot e^{-2} = 0.677 \\text{ m/s}^2
       options: [
         '$v_0 e^{-bt/m}$',
         '$v_0(1 - e^{-bt/m})$',
-        '$v_0 - (b/m)t$',
+        '$v_0 - (b/m)v_0 t$',
         '$v_0/(1 + bt/m)$'
       ],
       correctAnswer: 0,
@@ -172,7 +154,7 @@ $$a(t) = g\\sin\\theta \\cdot e^{-bt/m} = 5 \\cdot e^{-2} = 0.677 \\text{ m/s}^2
 | Model | ODE | Solution | $v_T$ |
 |:---:|:---:|:---:|:---:|
 | Linear drag ($f=bv$) | $m\\dot{v} = mg - bv$ | $v_T(1-e^{-t/\\tau})$ | $mg/b$ |
-| Quadratic drag ($f=cv^2$) | $m\\dot{v} = mg - cv^2$ | $v_T\\tanh(gt/v_T)$ | $\\sqrt{mg/c}$ |
+| Quadratic drag ($f=cv^2$) | $m\\dot{v} = mg - cv^2$ | Force balance only | $\\sqrt{mg/c}$ |
 | Linear drag, no driving | $m\\dot{v} = -bv$ | $v_0 e^{-t/\\tau}$ | $0$ |
 
 > **AP Tip:** The AP Physics C exam frequently tests your ability to set up and solve first-order ODEs with separation of variables.

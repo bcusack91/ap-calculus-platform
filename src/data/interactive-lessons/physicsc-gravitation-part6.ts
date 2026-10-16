@@ -52,13 +52,13 @@ $v_{esc} = \\sqrt{\\frac{2(3.99 \\times 10^{14})}{6.37 \\times 10^6}} \\approx 1
         questions: [
           {
             question: 'To move a satellite to a higher orbit, you must:',
-            options: ['Remove energy', 'Add energy', 'Add no energy (it moves naturally)', 'Reduce mass'],
+            options: ['Remove energy, since it will move slower', 'Add energy', 'Add no energy, since gravity is conservative', 'Supply energy only for a heavy satellite'],
             correctAnswer: 1,
             explanation: '$E = -\\frac{GMm}{2r}$. A higher $r$ means a less negative $E$, so energy must be added (positive work done on the satellite).'
           },
           {
             question: 'Which approach best finds the speed of a satellite in a known circular orbit?',
-            options: ['$v = \\frac{GM}{r}$', '$v = \\sqrt{\\frac{GM}{r}}$', '$v = \\sqrt{\\frac{2GM}{r}}$', '$v = 2\\pi r$'],
+            options: ['$v = \\frac{GM}{r}$', '$v = \\sqrt{\\frac{GM}{r}}$', '$v = \\sqrt{\\frac{2GM}{r}}$', '$v = \\sqrt{GMr}$'],
             correctAnswer: 1,
             explanation: 'Setting gravity equal to the centripetal force gives $v = \\sqrt{GM/r}$ for a circular orbit.'
           },
@@ -70,9 +70,9 @@ $v_{esc} = \\sqrt{\\frac{2(3.99 \\times 10^{14})}{6.37 \\times 10^6}} \\approx 1
           },
           {
             question: 'For a problem asking for the energy to raise an orbit, the most direct relation is:',
-            options: ['$\\Delta E = \\frac{GMm}{2}\\left(\\frac{1}{r_i} - \\frac{1}{r_f}\\right)$', '$\\Delta E = GMm(r_f - r_i)$', '$\\Delta E = \\frac{1}{2}mv^2$ only', '$\\Delta E = 0$'],
+            options: ['$\\Delta E = \\frac{GMm}{2}\\left(\\frac{1}{r_i} - \\frac{1}{r_f}\\right)$', '$\\Delta E = GMm\\left(\\frac{1}{r_i} - \\frac{1}{r_f}\\right)$', '$\\Delta E = \\frac{GMm}{2}\\left(\\frac{1}{r_f} - \\frac{1}{r_i}\\right)$', '$\\Delta E = \\frac{GMm}{2}(r_f - r_i)$'],
             correctAnswer: 0,
-            explanation: 'Since $E = -\\frac{GMm}{2r}$, the required energy is $\\Delta E = \\frac{GMm}{2}\\left(\\frac{1}{r_i} - \\frac{1}{r_f}\\right)$, positive when $r_f > r_i$.'
+            explanation: 'Since $E = -\\frac{GMm}{2r}$, the required energy is $\\Delta E = \\frac{GMm}{2}\\left(\\frac{1}{r_i} - \\frac{1}{r_f}\\right)$, positive when $r_f > r_i$. Dropping the $\\frac{1}{2}$ gives only the change in potential energy.'
           },
           {
             question: 'Two satellites orbit the same planet. Satellite B has 8 times the period of A. Its orbital radius is larger by a factor of:',

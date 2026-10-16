@@ -25,7 +25,7 @@ This is the most powerful consequence of the COM concept:
       id: 'com5-mcq1',
       type: 'mcq' as const,
       question: 'A 2 kg ball and a 3 kg ball are connected by a spring and tossed upward together. The acceleration of their center of mass while in the air (ignoring drag) is:',
-      options: ['$g$ downward', 'Less than $g$ downward', 'Zero', 'Depends on the spring constant'],
+      options: ['$g$ downward', 'Less than $g$ downward', 'Zero, since the spring cancels gravity', 'Depends on the spring constant'],
       correctAnswer: 0,
       explanation: 'The spring force is internal. The only external force is gravity: $\\vec{F}_{\\text{ext}} = -Mg\\hat{j}$. So $\\vec{a}_{\\text{cm}} = -g\\hat{j}$, regardless of the spring.'
     },
@@ -73,15 +73,15 @@ The acceleration: $a = \\frac{(m_1 - m_2)g}{m_1 + m_2}$
 
 **COM acceleration:** Mass $m_1$ accelerates down, $m_2$ accelerates up, both with magnitude $a$.
 
-$$a_{\\text{cm}} = \\frac{m_1 a_{\\downarrow} + m_2 a_{\\uparrow}}{m_1 + m_2} = \\frac{m_1(-a) + m_2(a)}{m_1+m_2}$$
+Taking **downward** as positive, $m_1$ has acceleration $+a$ and $m_2$ has $-a$:
 
-Wait — actually $m_1$ goes down ($-a$) and $m_2$ goes up ($+a$)... but the net external force is $(m_1 - m_2)g$ downward while the string/pulley system is internal.
+$$a_{\\text{cm}} = \\frac{m_1(a) + m_2(-a)}{m_1 + m_2} = \\frac{(m_1 - m_2)}{m_1+m_2}\\,a = \\frac{(m_1 - m_2)^2 g}{(m_1+m_2)^2}$$
 
-$$a_{\\text{cm}} = \\frac{(m_1 - m_2)g - 0}{m_1 + m_2}$$
+**Check with external forces.** The two masses (plus the string) form the system. External forces are gravity, $(m_1 + m_2)g$ down, and the pulley's upward pull on the string, $2T$ with $T = \\frac{2m_1m_2 g}{m_1+m_2}$:
 
-Actually: the constraint forces (tension, normal from pulley) contribute externally via the pulley support. The COM accelerates downward at:
+$$(m_1 + m_2)\\,a_{\\text{cm}} = (m_1 + m_2)g - 2T = \\frac{(m_1 - m_2)^2 g}{m_1 + m_2}$$
 
-$$a_{\\text{cm}} = \\frac{(m_1 - m_2)^2 g}{(m_1+m_2)^2}$$`
+which gives the same result. The tension is internal to the string but the pulley's force on the string is external, so the COM accelerates downward, but by less than $g$.`
     },
     {
       id: 'com5-mcq3',

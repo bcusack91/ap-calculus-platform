@@ -69,7 +69,7 @@ Centripetal acceleration is *caused by* a real force (or combination of forces) 
 | Ball on a string | Tension |
 | Car on a curve | Static friction |
 | Planet orbiting | Gravity |
-| Electron in B-field | Magnetic force |
+| Conical pendulum | Horizontal component of tension |
 | Banked curve (no friction) | Normal force component |
 
 Newton's second law in the radial direction:
@@ -135,13 +135,13 @@ Notice: the period depends on the angle $\\theta$ and string length $L$, but **n
       type: 'mcq' as const,
       question: 'A conical pendulum with $L = 1$ m makes angle $\\theta = 30°$ with the vertical. What is the speed of the mass? ($g = 10$ $m/s^{2}$)',
       options: [
-        '$\\sqrt{gL\\sin^2\\theta/\\cos\\theta} \\approx 1.88$ m/s',
+        '$\\sqrt{gL\\sin\\theta\\tan\\theta} \\approx 1.70$ m/s',
         '$\\sqrt{gL\\sin\\theta} \\approx 2.24$ m/s',
         '$\\sqrt{gL} \\approx 3.16$ m/s',
         '$\\sqrt{gL\\tan\\theta} \\approx 2.40$ m/s'
       ],
-      correctAnswer: 3,
-      explanation: 'From $\\tan\\theta = v^2/(gr)$ and $r = L\\sin\\theta$: $v^2 = gL\\sin\\theta\\tan\\theta$. So $v = \\sqrt{10(1)(0.5)(0.577)} = \\sqrt{2.89} \\approx 1.7$ m/s. Or more directly: $v^2 = grtan\\theta = g L\\sin\\theta\\tan\\theta$.'
+      correctAnswer: 0,
+      explanation: 'From $\\tan\\theta = v^2/(gr)$ with $r = L\\sin\\theta$: $v^2 = gL\\sin\\theta\\tan\\theta = 10(1)(0.5)(0.577) = 2.89$, so $v \\approx 1.70$ m/s. Leaving out the $\\sin\\theta$ (using $r = L$) gives the 2.40 m/s value.'
     },
     {
       id: 'cm1-mcq4',
@@ -149,7 +149,7 @@ Notice: the period depends on the angle $\\theta$ and string length $L$, but **n
       question: 'If you double the speed of a car on a flat curve while keeping the same radius, the required friction force:',
       options: [
         'Quadruples',
-        'Doubles',
+        'Doubles, like the speed',
         'Stays the same',
         'Increases by $\\sqrt{2}$'
       ],

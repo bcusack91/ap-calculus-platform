@@ -10,7 +10,7 @@ export const physCRotationPart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Key Formulas
-- Angular kinematics: $\\omega = \omega_0 + \\alpha t$
+- Angular kinematics: $\\omega = \\omega_0 + \\alpha t$
 - Moment of inertia: $I = \\sum mr^2$
 - Torque: $\\tau = rF\\sin\\theta = I\\alpha$
 - Angular momentum: $L = I\\omega$
@@ -28,7 +28,7 @@ export const physCRotationPart7Data = {
 
 $I_f = 500 + 50(4) = 700$ $kg\\cdot m^{2}$
 
-$\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \\approx 1.43$ rad/s ✅
+$\\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \\approx 1.43$ rad/s ✅
     
     `
     },
@@ -43,7 +43,7 @@ $\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \\approx 1.43$ rad/s ✅
           {
                     "question": "Rotational equilibrium requires:",
                     "options": [
-                              "$\\sum \\\\tau = 0$",
+                              "$\\sum \\tau = 0$",
                               "$\\sum F = 0$",
                               "$\\omega = 0$",
                               "$\\alpha > 0$"
@@ -83,11 +83,11 @@ $\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \\approx 1.43$ rad/s ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The direction of angular velocity is determined by","options":["The right-hand rule","The left-hand rule","The direction of force","The direction of displacement"]},{"label":"A solid disk and a hoop of equal mass and radius roll down a ramp. Which arrives first?","options":["The solid disk","The hoop","They arrive together","Cannot determine"]}],
+        dropdowns: [{"label":"The direction of the torque $\\vec{\\tau} = \\vec{r} \\times \\vec{F}$ is found with","options":["The right-hand rule","The left-hand rule","The direction of $\\vec{F}$","The direction of $\\vec{r}$"]},{"label":"A solid disk and a hoop of equal mass and radius roll down a ramp. Which arrives first?","options":["The solid disk","The hoop","They arrive together","Cannot determine"]}],
         correctAnswers: ["The right-hand rule","The solid disk"],
-        hint1: "Curl fingers in direction of rotation, thumb points...",
+        hint1: "Point fingers along $\\vec{r}$, curl them toward $\\vec{F}$; the thumb gives $\\vec{\\tau}$.",
         hint2: "The disk has less rotational inertia ($I/mr^2$).",
-        explanation: "Right-hand rule determines $\\vec{\\omega}$ direction. The disk ($I = mr^2/2$) has less rotational inertia fraction than the hoop ($I = mr^2$), so more KE goes to translation."
+        explanation: "The right-hand rule gives the direction of $\\vec{r} \\times \\vec{F}$, perpendicular to both. The disk ($I = mr^2/2$) has less rotational inertia fraction than the hoop ($I = mr^2$), so more KE goes to translation."
       }
     },
     {
@@ -100,7 +100,7 @@ $\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \\approx 1.43$ rad/s ✅
 |---|-------|------------------|
 | 1 | Angular kinematics | $\\omega, \\alpha, \\theta$ |
 | 2 | Torque & equilibrium | $\\sum \\tau = 0$ |
-| 3 | Conservation of $L$ | $I_i\omega_i = I_f\omega_f$ |
+| 3 | Conservation of $L$ | $I_i\\omega_i = I_f\\omega_f$ |
     
     `
     },
@@ -115,13 +115,13 @@ $\omega_f = \\frac{500(2)}{700} = \\frac{1000}{700} \\approx 1.43$ rad/s ✅
           {
                     "question": "A planet orbits the Sun. As it moves closer, it:",
                     "options": [
-                              "Speeds up (conservation of $L$)",
+                              "Speeds up",
                               "Slows down",
-                              "Maintains constant speed",
-                              "Stops"
+                              "Keeps a constant speed",
+                              "Keeps a constant angular speed"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "As $r$ decreases, $\\omega$ increases to conserve $L = I\\omega$."
+                    "explanation": "Gravity exerts no torque about the Sun, so $L = mrv_{\\perp}$ is constant. As $r$ decreases, the speed must increase."
           }
 ]
       }

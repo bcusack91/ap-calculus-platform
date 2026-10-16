@@ -134,8 +134,8 @@ This is the fundamental theorem of calculus applied to motion!`
       question: 'If the velocity-time graph of a particle is a straight line with positive slope passing through the origin, which statement is true?',
       options: [
         'The acceleration is constant and positive',
-        'The acceleration is increasing',
-        'The position is a linear function of time',
+        'Its acceleration increases steadily',
+        'The position grows linearly with time',
         'The particle is decelerating'
       ],
       correctAnswer: 0,

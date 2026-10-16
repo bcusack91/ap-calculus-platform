@@ -70,11 +70,11 @@ $F_c = \\frac{mv^2}{r} = \\frac{2(16)}{0.5} = 64$ N ✅
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["8","4","32"],
+        correctAnswers: ["8","4","64"],
         hint1: "$a_c = v^2/r = (20)^2/50$.",
         hint2: "$v^2 = a_c \\cdot r$, then take the square root.",
         hint3: "$F_c = mv^2/r = 2(16)/0.5$.",
-        explanation: "1) $400/50 = 8$ $m/s^{2}$. 2) $v = \\sqrt{8 \\times 2} = \\sqrt{16} = 4$ m/s. 3) $32/0.5 = 64$... wait, $2(16)/0.5 = 64$ N. Let me recheck: $F = 2 \\times 16 / 0.5 = 64$ N."
+        explanation: "1) $400/50 = 8$ $m/s^{2}$. 2) $v = \\sqrt{8 \\times 2} = \\sqrt{16} = 4$ m/s. 3) $F = 2(16)/0.5 = 64$ N."
       }
     },
     {
@@ -117,8 +117,8 @@ $F_c = \\frac{mv^2}{r} = \\frac{2(16)}{0.5} = 64$ N ✅
                     "question": "If the speed of an object in circular motion doubles while the radius stays the same, the centripetal force:",
                     "options": [
                               "Quadruples",
-                              "Doubles",
-                              "Halves",
+                              "Doubles, like the speed",
+                              "Is cut in half",
                               "Stays the same"
                     ],
                     "correctAnswer": 0,

@@ -56,27 +56,27 @@ $M = \\frac{4\\pi^2 r^3}{G\\,T^2} = \\frac{4\\pi^2 (8.0 \\times 10^6)^3}{(6.674 
           },
           {
             question: 'Knowing a satellite\'s orbital radius $r$ and period $T$, you can directly compute the central body\'s:',
-            options: ['Radius', 'Mass', 'Temperature', 'Charge'],
+            options: ['Radius', 'Mass', 'Surface gravity', 'Rotation period'],
             correctAnswer: 1,
             explanation: 'Rearranging $T^2 = \\frac{4\\pi^2 r^3}{GM}$ gives $M = \\frac{4\\pi^2 r^3}{G T^2}$ — this is how astronomers "weigh" planets and stars.'
           },
           {
             question: 'The gravitational potential energy $U = -\\frac{GMm}{r}$ is negative because:',
-            options: ['Gravity repels', 'The reference $U = 0$ is taken at $r = \\infty$ and work is released as masses approach', 'Mass is negative', 'It is a typo'],
+            options: ['Gravity does negative work as masses move closer', 'Gravity is attractive and $U = 0$ is set at $r = \\infty$', 'Kinetic energy is lost as the masses approach', 'The reference $U = 0$ is set at the planet\'s surface'],
             correctAnswer: 1,
             explanation: 'With $U = 0$ at infinity, bringing masses together releases energy, making bound configurations have negative potential energy.'
           },
           {
             question: 'For a uniform solid sphere, the gravitational field is greatest at:',
-            options: ['The center', 'The surface', 'Infinity', 'Halfway to the center'],
+            options: ['The very center', 'The surface', 'Very far away', 'Halfway to the center'],
             correctAnswer: 1,
             explanation: 'Inside, $g \\propto r$ (rising to the surface); outside, $g \\propto 1/r^2$ (falling). The maximum occurs right at the surface, $r = R$.'
           },
           {
-            question: 'Which quantity is conserved throughout an elliptical orbit (no thrust)?',
-            options: ['Orbital speed', 'Kinetic energy', 'Total mechanical energy and angular momentum', 'Distance from the focus'],
+            question: 'Which quantity is conserved throughout an elliptical orbit (gravity the only force)?',
+            options: ['Speed and kinetic energy', 'Kinetic energy and angular momentum', 'Mechanical energy and angular momentum', 'Potential energy and distance'],
             correctAnswer: 2,
-            explanation: 'Speed, KE, and $r$ all change around an ellipse, but total mechanical energy and angular momentum are both conserved.'
+            explanation: 'Speed, kinetic energy, potential energy, and $r$ all change around an ellipse, but total mechanical energy and angular momentum are both conserved.'
           },
           {
             question: 'A planet at 9 AU from a Sun-like star has an orbital period of about:',

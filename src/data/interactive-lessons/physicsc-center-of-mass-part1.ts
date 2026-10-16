@@ -90,17 +90,17 @@ The COM shifts **away** from the hole.`
       id: 'com1-mcq3',
       type: 'mcq' as const,
       question: 'A uniform square plate of side $a$ has a square hole of side $a/2$ cut from one corner. The COM of the remaining piece is at what distance from the center of the original square?',
-      options: ['$a/(4\\sqrt{2}) \\cdot \\frac{1}{3}$', '$a/6$', '$a/4$', '$a\\sqrt{2}/6$'],
+      options: ['$a/12$', '$a\\sqrt{2}/6$', '$a\\sqrt{2}/4$', '$a\\sqrt{2}/12$'],
       correctAnswer: 3,
-      explanation: 'Full plate COM at origin, hole COM at $(a/4, a/4)$, hole mass $= M/4$. $x_{\\text{cm}} = \\frac{0 - (M/4)(a/4)}{3M/4} = -a/12$. Similarly $y_{\\text{cm}} = -a/12$. Distance $= \\sqrt{2}(a/12) = a\\sqrt{2}/12 \\cdot 2/2 = a\\sqrt{2}/6$ — wait, let me recompute: $\\sqrt{(a/12)^2 + (a/12)^2} = (a/12)\\sqrt{2} = a\\sqrt{2}/12$. Among the given choices, $a\\sqrt{2}/6$ with the proper factor. Actually distance $= a\\sqrt{2}/12$. The closest match with the factor is $a\\sqrt{2}/6$ when the hole is side $a/2$ centered at distance $a/4$ with a mass ratio correction.'
+      explanation: 'Put the original center at the origin; the hole (mass $M/4$) is centered at $(a/4, a/4)$. Then $x_{\\text{cm}} = \\frac{0 - (M/4)(a/4)}{3M/4} = -a/12$ and likewise $y_{\\text{cm}} = -a/12$, so the distance is $\\sqrt{2}\\,(a/12) = a\\sqrt{2}/12$. The value $a/12$ is only one component.'
     },
     {
       id: 'com1-mcq4',
       type: 'mcq' as const,
       question: 'If all external forces on a system are zero, the center of mass:',
       options: [
-        'Moves with constant velocity (or stays at rest)',
-        'Accelerates toward the heaviest particle',
+        'Keeps a constant velocity, possibly zero',
+        'Drifts toward the heaviest particle',
         'Remains at the geometric center',
         'Oscillates about the origin'
       ],

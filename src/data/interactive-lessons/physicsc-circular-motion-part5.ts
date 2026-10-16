@@ -12,7 +12,7 @@ When an object moves in a circle with changing speed, it has both **centripetal*
 
 ## Decomposing Acceleration
 
-$$\\vec{a} = a_c\\hat{r} + a_t\\hat{\\theta}$$
+The acceleration has two perpendicular components: one toward the center and one along the velocity.
 
 | Component | Direction | Formula | Cause |
 |:---:|:---:|:---:|:---:|
@@ -38,9 +38,9 @@ $$\\alpha = \\frac{d\\omega}{dt} = \\frac{d^2\\theta}{dt^2}$$`
       type: 'mcq' as const,
       question: 'A car moves around a circular track of radius 50 m. At one instant, its speed is 20 m/s and it is accelerating at 3 $m/s^{2}$ tangentially. What is the magnitude of its total acceleration?',
       options: [
-        '$\\sqrt{(v^2/r)^2 + a_t^2} = \\sqrt{64 + 9} \\approx 8.54$ $m/s^{2}$',
-        '$v^2/r = 8$ $m/s^{2}$',
-        '$3$ $m/s^{2}$',
+        '$\\approx 8.54$ $m/s^{2}$',
+        '$8.0$ $m/s^{2}$',
+        '$3.0$ $m/s^{2}$',
         '$11$ $m/s^{2}$'
       ],
       correctAnswer: 0,
@@ -49,17 +49,13 @@ $$\\alpha = \\frac{d\\omega}{dt} = \\frac{d^2\\theta}{dt^2}$$`
     {
       id: 'cm5-polar',
       type: 'text' as const,
-      content: `## Full Polar Coordinate Analysis
+      content: `## Components from Angular Quantities
 
-Recall from Part 2, the general acceleration in polar coordinates:
+For a point at fixed radius $r$ on a rotating object, both components come straight from the angular velocity $\\omega$ and angular acceleration $\\alpha$:
 
-$$\\vec{a} = (\\ddot{r} - r\\dot{\\theta}^2)\\hat{r} + (r\\ddot{\\theta} + 2\\dot{r}\\dot{\\theta})\\hat{\\theta}$$
+$$a_c = r\\omega^2 \\quad \\text{(toward the center)}, \\qquad a_t = r\\alpha \\quad \\text{(along the velocity)}$$
 
-For circular motion ($r$ = constant, $\\dot{r} = 0$, $\\ddot{r} = 0$):
-
-$$\\vec{a} = -r\\omega^2\\hat{r} + r\\alpha\\hat{\\theta}$$
-
-where $\\omega = \\dot{\\theta}$ and $\\alpha = \\ddot{\\theta}$.
+The net acceleration is the vector sum of these two perpendicular components.
 
 ### Example: Constant Angular Acceleration
 
@@ -84,9 +80,9 @@ The acceleration is almost purely centripetal because $\\omega$ has built up sub
       question: 'For a particle in circular motion with constant angular acceleration $\\alpha$, starting from rest, the ratio $a_t/a_c$ at time $t$ is:',
       options: [
         '$1/(\\alpha t^2)$, which decreases with time',
-        '$\\alpha t$, which increases with time',
-        'Constant',
-        '$1/(\\alpha t)$'
+        '$\\alpha t^2$, which increases with time',
+        '$1/\\alpha$, which stays constant',
+        '$1/(\\alpha t)$, which decreases with time'
       ],
       correctAnswer: 0,
       explanation: '$a_t = r\\alpha$ (constant). $a_c = r\\omega^2 = r(\\alpha t)^2 = r\\alpha^2 t^2$. So $a_t/a_c = r\\alpha/(r\\alpha^2 t^2) = 1/(\\alpha t^2)$. As time increases, the centripetal component dominates.'
@@ -136,10 +132,10 @@ $$T = \\frac{mv_0^2}{r} - mg(2 - 3\\cos\\theta)$$`
       type: 'mcq' as const,
       question: 'In a vertical circle, the tangential acceleration at the top ($\\theta = 180°$) is:',
       options: [
-        '$0$ (gravity is purely radial at the top)',
-        '$g$ (tangential)',
-        '$-g$ (tangential)',
-        '$g\\sin(180°) = 0$'
+        '$0$, as gravity is radial there',
+        '$g$, along the direction of motion',
+        '$g$, opposite the direction of motion',
+        '$g/\\sqrt{2}$, along the direction of motion'
       ],
       correctAnswer: 0,
       explanation: 'At the top, $\\theta = 180°$ (measured from bottom). $a_t = -g\\sin\\theta = -g\\sin(180°) = 0$. At the top, gravity points entirely toward the center (radially), with no tangential component.'
@@ -149,10 +145,10 @@ $$T = \\frac{mv_0^2}{r} - mg(2 - 3\\cos\\theta)$$`
       type: 'mcq' as const,
       question: 'For a ball on a string in a vertical circle, at what angle $\\theta$ from the bottom is the tangential acceleration maximum?',
       options: [
-        '$\\theta = 90°$ (3 o\'clock position)',
+        '$\\theta = 90°$ (side)',
         '$\\theta = 0°$ (bottom)',
-        '$\\theta = 180°$ (top)',
-        '$\\theta = 45°$'
+        '$\\theta = 180°$ (the top)',
+        '$\\theta = 45°$ (between)'
       ],
       correctAnswer: 0,
       explanation: '$a_t = -g\\sin\\theta$. Maximum magnitude at $\\sin\\theta = 1$, i.e., $\\theta = 90°$, where gravity is entirely tangential.'
@@ -162,10 +158,10 @@ $$T = \\frac{mv_0^2}{r} - mg(2 - 3\\cos\\theta)$$`
       type: 'mcq' as const,
       question: 'The centripetal force acting on an object in non-uniform circular motion:',
       options: [
-        'Does no work because it is always perpendicular to the velocity',
-        'Does positive work when the object speeds up',
-        'Does negative work when the object speeds up',
-        'Does work proportional to $a_c \\cdot v$'
+        'Does no work, being perpendicular to the velocity',
+        'Does positive work whenever the object speeds up',
+        'Does negative work whenever the object speeds up',
+        'Does work equal to $F_c$ times the arc length'
       ],
       correctAnswer: 0,
       explanation: 'The centripetal force always points toward the center while the velocity is tangential. Since they are perpendicular: $W = \\vec{F}_c \\cdot \\vec{v} = 0$. Only tangential forces change the kinetic energy.'

@@ -12,8 +12,8 @@ export const physCNewtonPart2Data = {
 $\\vec{F}_{\\text{net}} = m\\vec{a} = m\\frac{d\\vec{v}}{dt} = \\frac{d\\vec{p}}{dt}$
 
 When force varies with time or position, use calculus:
-- $v(t) = v_0 + \int_0^t \\frac{F(t')}{m}\,dt'$
-- $x(t) = x_0 + \int_0^t v(t')\,dt'$
+- $v(t) = v_0 + \\int_0^t \\frac{F(t')}{m}\\,dt'$
+- $x(t) = x_0 + \\int_0^t v(t')\\,dt'$
     
     `
     },
@@ -27,7 +27,7 @@ When force varies with time or position, use calculus:
 
 $a(t) = \\frac{F}{m} = \\frac{6t}{2} = 3t$
 
-$v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s ✅
+$v(3) = \\int_0^3 3t\\,dt = \\frac{3t^2}{2}\\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s ✅
     
     `
     },
@@ -68,9 +68,9 @@ $v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s 
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["5","4.5","9"],
+        correctAnswers: ["5","13.5","9"],
         hint1: "$a = F/m = 20/4$.",
-        hint2: "$v = \\int_0^3 3t\\,dt = [3t^2/2]_0^3$. Evaluate carefully.",
+        hint2: "$v = \\int_0^3 3t\\,dt = [3t^2/2]_0^3$.",
         hint3: "$v = at = (F/m) \\cdot t$.",
         explanation: "1) $a = 20/4 = 5$ $m/s^{2}$. 2) $v = 3(9)/2 = 13.5$ m/s. 3) $a = 3$ $m/s^{2}$, $v = 3(3) = 9$ m/s."
       }
@@ -98,8 +98,8 @@ $v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s 
 | # | Concept | Formula |
 |---|---------|---------|
 | 1 | $F = ma$ | Constant force |
-| 2 | $v = \\int a\,dt$ | Variable force |
-| 3 | $x = \\int v\,dt$ | Position from velocity |
+| 2 | $v = \\int a\\,dt$ | Variable force |
+| 3 | $x = \\int v\\,dt$ | Position from velocity |
     
     `
     },
@@ -114,13 +114,13 @@ $v(3) = \int_0^3 3t\,dt = \\frac{3t^2}{2}\\Big|_0^3 = \\frac{27}{2} = 13.5$ m/s 
           {
                     "question": "The impulse delivered by a variable force from $t = 0$ to $t = T$ is:",
                     "options": [
-                              "$\\int_0^T F(t)\\\\,dt$",
-                              "$F \\cdot T$",
+                              "$\\int_0^T F(t)\\,dt$",
+                              "$F(T) \\cdot T$",
                               "$ma$",
                               "$\\frac{dF}{dt}$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Impulse is the integral of force over time: $J = \\int F\\\\,dt$."
+                    "explanation": "Impulse is the integral of force over time: $J = \\int F\\,dt$."
           }
 ]
       }

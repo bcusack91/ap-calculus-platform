@@ -85,10 +85,10 @@ This range widens with more friction and narrows to a single value ($v_{\\text{d
       type: 'mcq' as const,
       question: 'A banked curve with $\\beta = 20°$, $r = 150$ m, $\\mu_s = 0.3$. What is $v_{\\max}$? ($g = 10$ $m/s^{2}$)',
       options: [
-        '$\\sqrt{1500 \\cdot \\frac{\\tan 20° + 0.3}{1 - 0.3\\tan 20°}} \\approx 33.0$ m/s',
+        '$\\sqrt{1500 \\cdot \\frac{\\tan 20° + 0.3}{1 - 0.3\\tan 20°}} \\approx 33.4$ m/s',
         '$\\sqrt{1500\\tan 20°} \\approx 23.4$ m/s',
         '$\\sqrt{1500 \\cdot 0.3} \\approx 21.2$ m/s',
-        '$\\sqrt{1500(\\tan 20° + 0.3)} \\approx 28.3$ m/s'
+        '$\\sqrt{1500(\\tan 20° + 0.3)} \\approx 31.6$ m/s'
       ],
       correctAnswer: 0,
       explanation: '$v_{\\max} = \\sqrt{rg \\cdot \\frac{\\tan\\beta + \\mu_s}{1 - \\mu_s\\tan\\beta}} = \\sqrt{1500 \\cdot \\frac{0.364 + 0.3}{1 - 0.109}} = \\sqrt{1500 \\cdot 0.745} \\approx 33.4$ m/s.'
@@ -133,7 +133,7 @@ $$\\boxed{v_{\\max} = \\sqrt{rg\\cdot\\frac{\\tan\\beta + \\mu_s}{1 - \\mu_s\\ta
         'Slide up the bank (outward)',
         'Slide down the bank (inward)',
         'Maintain its position on the bank',
-        'Slow down naturally'
+        'Slow down on its own, then stop'
       ],
       correctAnswer: 0,
       explanation: 'At $v > v_{\\text{design}}$, the centripetal force needed ($mv^2/r$) exceeds what the normal force can provide. The car slides outward (up the bank), which is why friction must point down the bank to help.'
@@ -143,7 +143,7 @@ $$\\boxed{v_{\\max} = \\sqrt{rg\\cdot\\frac{\\tan\\beta + \\mu_s}{1 - \\mu_s\\ta
       type: 'mcq' as const,
       question: 'The formula $v_{\\max}^2 = rg\\tan(\\beta + \\phi)$ where $\\phi = \\arctan(\\mu_s)$ shows that $v_{\\max}$ becomes infinite when:',
       options: [
-        '$\\beta + \\phi = 90°$, i.e., $\\beta = 90° - \\arctan(\\mu_s)$',
+        '$\\beta + \\phi = 90°$',
         '$\\beta = 90°$',
         '$\\mu_s = 1$',
         '$\\beta + \\phi = 180°$'

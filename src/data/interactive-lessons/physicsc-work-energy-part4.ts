@@ -44,7 +44,7 @@ $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(20)} = 20$ m/s 
                     "question": "A pendulum at its lowest point has:",
                     "options": [
                               "Maximum KE, minimum PE",
-                              "Minimum KE, maximum PE",
+                              "Zero KE, maximum PE",
                               "Equal KE and PE",
                               "Zero KE and PE"
                     ],
@@ -69,11 +69,11 @@ $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(20)} = 20$ m/s 
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["20","10","15"],
+        correctAnswers: ["20","10","20"],
         hint1: "$v = \\sqrt{2gh}$.",
         hint2: "Use $\\frac{1}{2}mv_i^2 = \\frac{1}{2}mv_f^2 + mgh$. Solve for $v_f$.",
         hint3: "At max height, $v = 0$. So $\\frac{1}{2}v_i^2 = gh$.",
-        explanation: "1) $v = \\sqrt{2(10)(20)} = 20$ m/s. 2) $v_f = \\sqrt{400 - 300} = \\sqrt{100} = 10$ m/s. 3) $h = 400/20 = 20$ m. Hmm wait: $h = v^2/(2g) = 400/20 = 20$ m."
+        explanation: "1) $v = \\sqrt{2(10)(20)} = 20$ m/s. 2) $v_f = \\sqrt{400 - 300} = \\sqrt{100} = 10$ m/s. 3) $h = v^2/(2g) = 400/20 = 20$ m."
       }
     },
     {
@@ -86,7 +86,7 @@ $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(20)} = 20$ m/s 
         dropdowns: [{"label":"Conservation of mechanical energy requires","options":["Only conservative forces do work","Friction is present","External forces act","The system is open"]},{"label":"The total energy of an isolated system","options":["Is always conserved","Increases over time","Decreases over time","Oscillates"]}],
         correctAnswers: ["Only conservative forces do work","Is always conserved"],
         hint1: "Non-conservative forces dissipate energy.",
-        hint2: "First law of thermodynamics for an isolated system.",
+        hint2: "Energy is conserved in all interactions; it can change form.",
         explanation: "Mechanical energy is conserved when only conservative forces act. Total energy (including thermal) is always conserved in an isolated system."
       }
     },
@@ -117,8 +117,8 @@ $mgh = \\frac{1}{2}mv^2 \\implies v = \\sqrt{2gh} = \\sqrt{2(10)(20)} = 20$ m/s 
                     "options": [
                               "Thermal energy",
                               "Potential energy",
-                              "Kinetic energy",
-                              "Nuclear energy"
+                              "Kinetic energy of the object",
+                              "Elastic potential energy"
                     ],
                     "correctAnswer": 0,
                     "explanation": "Friction is a non-conservative force that converts mechanical energy to heat."

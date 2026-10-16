@@ -16,7 +16,7 @@ Examples of time-dependent acceleration:
 
 | Physical Situation | $a(t)$ |
 |:---|:---:|
-| Rocket with linearly increasing thrust | $a_0 + bt$ |
+| Applied force that grows linearly in time | $a_0 + bt$ |
 | Oscillating force | $A\\cos(\\omega t)$ |
 | Exponentially decaying force | $a_0 e^{-t/\\tau}$ |
 | Jerk (constant rate of change of $a$) | $a_0 + jt$ |
@@ -114,15 +114,15 @@ $$x(t) = \\int_0^t 5[1-\\cos(2t')]\\,dt' = 5\\left[t' - \\frac{\\sin(2t')}{2}\\r
 
 Exponentially decaying acceleration models many real systems (e.g., drag-limited motion, RC circuits).
 
-### Example: Decaying Thrust
+### Example: A Fading Push
 
-A rocket has $a(t) = 20e^{-t/5}$ $m/s^{2}$, $v(0) = 0$.
+A cart is pushed by a force that fades with time, giving $a(t) = 20e^{-t/5}$ $m/s^{2}$, with $v(0) = 0$.
 
 $$v(t) = \\int_0^t 20e^{-t'/5}\\,dt' = 20(-5)\\left[e^{-t'/5}\\right]_0^t = -100(e^{-t/5} - 1) = 100(1 - e^{-t/5})$$
 
-### Terminal velocity
+### Limiting velocity
 
-As $t \\to \\infty$: $v \\to 100$ m/s. The acceleration approaches zero, and the velocity approaches a constant — this is the **terminal velocity**.
+As $t \\to \\infty$: $v \\to 100$ m/s. The acceleration approaches zero, and the velocity approaches a constant asymptote.
 
 ### Position
 
@@ -133,10 +133,10 @@ At large $t$: $x \\approx 100t - 500$ → linear growth (constant velocity).`
     {
       id: 'varaccel1-mcq4',
       type: 'mcq' as const,
-      question: 'An object has $a(t) = a_0 e^{-kt}$ with $v(0) = 0$. The terminal velocity ($t \\to \\infty$) is:',
+      question: 'An object has $a(t) = a_0 e^{-kt}$ with $v(0) = 0$. The limiting velocity as $t \\to \\infty$ is:',
       options: ['$a_0/k$', '$a_0 k$', '$a_0$', '$\\infty$'],
       correctAnswer: 0,
-      explanation: '$v(t) = \\frac{a_0}{k}(1 - e^{-kt})$. As $t \\to \\infty$: $v \\to a_0/k$. The terminal velocity is the ratio of initial acceleration to the decay constant.'
+      explanation: '$v(t) = \\frac{a_0}{k}(1 - e^{-kt})$. As $t \\to \\infty$: $v \\to a_0/k$. The limiting velocity is the ratio of the initial acceleration to the decay constant.'
     }
   ]
 };

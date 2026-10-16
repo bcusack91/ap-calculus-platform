@@ -25,28 +25,28 @@ export const physCCOMPart6Data = {
       question: 'A cone of height $h$ and base radius $R$ has uniform density. The COM is at height (from base):',
       options: ['$h/4$', '$h/3$', '$h/2$', '$3h/4$'],
       correctAnswer: 0,
-      explanation: 'Using disk slicing from apex ($z=0$) to base ($z=h$): radius at height $z$ is $rz/h$. $dm = \\rho \\pi (Rz/h)^2 dz$. $z_{\\text{cm}} = \\frac{\\int_0^h z \\cdot z^2 dz}{\\int_0^h z^2 dz} = \\frac{h^4/4}{h^3/3} = 3h/4$ from apex $= h/4$ from base.'
+      explanation: 'Using disk slicing from apex ($z=0$) to base ($z=h$): radius at height $z$ is $Rz/h$. $dm = \\rho \\pi (Rz/h)^2 dz$. $z_{\\text{cm}} = \\frac{\\int_0^h z \\cdot z^2 dz}{\\int_0^h z^2 dz} = \\frac{h^4/4}{h^3/3} = 3h/4$ from apex $= h/4$ from base.'
     },
     {
       id: 'com6-prob1',
       type: 'text' as const,
-      content: `### Problem 1: Two-Dimensional Integration
+      content: `### Problem 1: A Rod Whose Density Grows Linearly
 
-Find the COM of a quarter-disk of radius $R$ and uniform surface density $\\sigma$ in the first quadrant.
+A rod lies from $x = 0$ to $x = L$ with $\\lambda(x) = \\lambda_0\\left(1 + \\dfrac{x}{L}\\right)$, so the right end is twice as dense as the left. Find $x_{\\text{cm}}$.
 
 **Solution:**
 
-By symmetry, $x_{\\text{cm}} = y_{\\text{cm}}$.
+Total mass:
 
-$$M = \\sigma \\cdot \\frac{\\pi R^2}{4}$$
+$$M = \\int_0^L \\lambda_0\\left(1 + \\frac{x}{L}\\right)dx = \\lambda_0\\left(L + \\frac{L}{2}\\right) = \\frac{3}{2}\\lambda_0 L$$
 
-Using polar coordinates with $x = r\\cos\\theta$:
+First moment:
 
-$$x_{\\text{cm}} = \\frac{\\sigma}{M}\\int_0^{\\pi/2}\\int_0^R (r\\cos\\theta)\\,r\\,dr\\,d\\theta$$
+$$\\int_0^L x\\,\\lambda_0\\left(1 + \\frac{x}{L}\\right)dx = \\lambda_0\\left(\\frac{L^2}{2} + \\frac{L^2}{3}\\right) = \\frac{5}{6}\\lambda_0 L^2$$
 
-$$= \\frac{\\sigma}{M} \\cdot \\frac{R^3}{3} \\cdot [\\sin\\theta]_0^{\\pi/2} = \\frac{\\sigma R^3/3}{\\sigma \\pi R^2/4} = \\frac{4R}{3\\pi}$$
+$$x_{\\text{cm}} = \\frac{\\frac{5}{6}\\lambda_0 L^2}{\\frac{3}{2}\\lambda_0 L} = \\frac{5L}{9} \\approx 0.56L$$
 
-$$\\vec{r}_{\\text{cm}} = \\left(\\frac{4R}{3\\pi}, \\frac{4R}{3\\pi}\\right)$$`
+The COM sits just past the midpoint, toward the denser end, as expected.`
     },
     {
       id: 'com6-mcq2',
@@ -87,9 +87,9 @@ Back to lab frame:
       id: 'com6-mcq3',
       type: 'mcq' as const,
       question: 'A 5 kg ball moving at $8$ m/s collides elastically with a 3 kg ball at rest. The speed of the 5 kg ball after the collision is:',
-      options: ['$2.5$ m/s', '$5$ m/s', '$4$ m/s', '$1$ m/s'],
+      options: ['$2$ m/s', '$5$ m/s', '$10$ m/s', '$4$ m/s'],
       correctAnswer: 0,
-      explanation: '$v_1\' = \\frac{m_1-m_2}{m_1+m_2}v_1 = \\frac{5-3}{8}(8) = 2$ m/s. Actually $v_1\' = \\frac{5-3}{5+3}(8) = \\frac{2}{8}(8) = 2$ m/s. Let me recalculate: $\\frac{m_1-m_2}{m_1+m_2} = 2/8 = 1/4$. $v_1 = (1/4)(8) = 2$ m/s. Hmm, among choices, $2.5$ m/s would come from $v_{\\text{cm}} = 5$ and the COM-frame analysis. Using the formula: $v_1 = \\frac{5-3}{5+3}(8) = 2$ m/s. The answer is $2$ m/s but marked as $2.5$ to test. Actually the correct answer $= 2$ m/s. Selecting the closest: $2.5$ m/s. Note: On a real exam, compute carefully.'
+      explanation: '$v_{\\text{cm}} = 5(8)/8 = 5$ m/s. In the COM frame the 5 kg ball moves at $+3$ m/s and reverses to $-3$ m/s, so in the lab it moves at $-3 + 5 = 2$ m/s, matching $\\frac{m_1-m_2}{m_1+m_2}v_1 = \\frac{2}{8}(8) = 2$ m/s. The 3 kg ball leaves at 10 m/s.'
     },
     {
       id: 'com6-mcq4',
@@ -107,7 +107,7 @@ Back to lab frame:
 | Problem Type | Key Technique |
 |:---|:---|
 | Non-uniform rod | $x_{\\text{cm}} = \\frac{\\int x\\lambda(x)dx}{\\int \\lambda(x)dx}$ |
-| 2D shapes | Use polar coords for circular regions |
+| 2D shapes | Slice into strips: $dm = \\sigma \\times$ (strip area) |
 | Collisions | Transform to COM frame, reverse, transform back |
 | Missing piece | Negative-mass subtraction |
 | Solids of revolution | Use disk/shell slicing |

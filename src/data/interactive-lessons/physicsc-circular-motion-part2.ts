@@ -12,7 +12,7 @@ On the AP Physics C exam, you may need to *derive* the centripetal acceleration 
 
 ## Method 1: Calculus Derivation
 
-Start with position in polar-like Cartesian form:
+Start with the position vector in Cartesian unit vectors:
 
 $$\\vec{r}(t) = r\\cos(\\omega t)\\,\\hat{x} + r\\sin(\\omega t)\\,\\hat{y}$$
 
@@ -37,10 +37,10 @@ The minus sign in $\\vec{a} = -\\omega^2\\vec{r}$ shows the acceleration is **an
       type: 'mcq' as const,
       question: 'For uniform circular motion, $\\vec{a} = -\\omega^2\\vec{r}$. What does the negative sign indicate?',
       options: [
-        'The acceleration points opposite to the position vector (toward the center)',
-        'The object is decelerating',
-        'The angular velocity is decreasing',
-        'The radius is shrinking'
+        'The acceleration points opposite $\\vec{r}$, toward the center',
+        'The object is slowing down as it goes around',
+        'The angular velocity is decreasing over time',
+        'The radius of the circle is slowly shrinking'
       ],
       correctAnswer: 0,
       explanation: '$\\vec{r}$ points from the center to the object. $-\\omega^2\\vec{r}$ points from the object toward the center. This is the centripetal ("center-seeking") direction.'
@@ -82,9 +82,9 @@ As $\\Delta t \\to 0$, the direction of $\\Delta\\vec{v}$ becomes perpendicular 
       question: 'In the geometric derivation, we use $\\Delta\\vec{v} \\approx v\\Delta\\theta$ for small $\\Delta\\theta$. This comes from:',
       options: [
         'The small-angle approximation $\\sin\\theta \\approx \\theta$',
-        'The Pythagorean theorem',
-        'Taylor expansion of $\\cos\\theta$',
-        'The law of cosines'
+        'The Pythagorean theorem applied to the $\\Delta\\vec{v}$ triangle',
+        'The approximation $\\cos\\theta \\approx 1$ for small angles',
+        'The law of cosines with $\\cos\\Delta\\theta = 0$'
       ],
       correctAnswer: 0,
       explanation: '$|\\Delta\\vec{v}| = 2v\\sin(\\Delta\\theta/2)$. For small angles, $\\sin(\\Delta\\theta/2) \\approx \\Delta\\theta/2$, giving $|\\Delta\\vec{v}| \\approx v\\Delta\\theta$.'
@@ -92,52 +92,34 @@ As $\\Delta t \\to 0$, the direction of $\\Delta\\vec{v}$ becomes perpendicular 
     {
       id: 'cm2-polar',
       type: 'text' as const,
-      content: `## Method 3: Polar Coordinates (Advanced)
+      content: `## Method 3: Period and Frequency Form
 
-In polar coordinates, the unit vectors $\\hat{r}$ and $\\hat{\\theta}$ rotate with the object:
+Problems often give the period $T$ (time per revolution) or frequency $f = 1/T$ instead of the speed. Since $v = 2\\pi r/T$:
 
-$$\\hat{r} = \\cos\\theta\\,\\hat{x} + \\sin\\theta\\,\\hat{y}$$
-$$\\hat{\\theta} = -\\sin\\theta\\,\\hat{x} + \\cos\\theta\\,\\hat{y}$$
+$$a_c = \\frac{v^2}{r} = \\frac{(2\\pi r/T)^2}{r} = \\frac{4\\pi^2 r}{T^2} = 4\\pi^2 r f^2$$
 
-Key derivatives:
-$$\\frac{d\\hat{r}}{dt} = \\dot{\\theta}\\hat{\\theta} = \\omega\\hat{\\theta}$$
-$$\\frac{d\\hat{\\theta}}{dt} = -\\dot{\\theta}\\hat{r} = -\\omega\\hat{r}$$
+### Worked Example
 
-### General Acceleration in Polar Coordinates
+A point on a wheel of radius $0.20$ m makes $5.0$ revolutions per second.
 
-$$\\vec{r} = r\\hat{r}$$
-$$\\vec{v} = \\dot{r}\\hat{r} + r\\dot{\\theta}\\hat{\\theta}$$
-$$\\vec{a} = (\\ddot{r} - r\\dot{\\theta}^2)\\hat{r} + (r\\ddot{\\theta} + 2\\dot{r}\\dot{\\theta})\\hat{\\theta}$$
+$$a_c = 4\\pi^2 (0.20)(5.0)^2 = 4\\pi^2(5.0) \\approx 197 \\text{ m/s}^2$$
 
-For **uniform** circular motion: $\\dot{r} = 0$, $\\ddot{r} = 0$, $\\dot{\\theta} = \\omega$ (constant), $\\ddot{\\theta} = 0$:
+Check with speed: $v = 2\\pi(0.20)(5.0) = 6.28$ m/s, and $v^2/r = 39.5/0.20 \\approx 197$ m/s$^2$ ✓
 
-$$\\vec{a} = -r\\omega^2\\hat{r}$$
-
-This is purely radial (centripetal), confirming $a_c = r\\omega^2 = v^2/r$.
-
-### Why This Matters
-
-The full polar coordinate acceleration formula is essential for non-uniform circular motion and orbital mechanics (Part 5 and beyond). The terms have physical meaning:
-
-| Term | Name | Direction |
-|:---:|:---:|:---:|
-| $\\ddot{r} - r\\dot{\\theta}^2$ | Radial acceleration | $\\hat{r}$ |
-| $-r\\dot{\\theta}^2$ | Centripetal acceleration | $-\\hat{r}$ |
-| $r\\ddot{\\theta}$ | Tangential (angular) acceleration | $\\hat{\\theta}$ |
-| $2\\dot{r}\\dot{\\theta}$ | Coriolis term | $\\hat{\\theta}$ |`
+At a fixed rotation rate, $a_c \\propto r$: points farther from the axle have larger centripetal acceleration.`
     },
     {
       id: 'cm2-mcq3',
       type: 'mcq' as const,
-      question: 'In polar coordinates, the velocity of an object in uniform circular motion is:',
+      question: 'A point on a wheel of radius $0.20$ m completes $5.0$ revolutions per second. Its centripetal acceleration is about:',
       options: [
-        '$\\vec{v} = r\\omega\\hat{\\theta}$ (purely tangential)',
-        '$\\vec{v} = r\\omega\\hat{r}$ (purely radial)',
-        '$\\vec{v} = r\\omega(\\hat{r} + \\hat{\\theta})$',
-        '$\\vec{v} = \\omega\\hat{\\theta}$'
+        '$197$ $m/s^{2}$',
+        '$39$ $m/s^{2}$',
+        '$6.3$ $m/s^{2}$',
+        '$987$ $m/s^{2}$'
       ],
       correctAnswer: 0,
-      explanation: 'For uniform circular motion, $\\dot{r} = 0$ so $\\vec{v} = r\\dot{\\theta}\\hat{\\theta} = r\\omega\\hat{\\theta}$. The velocity is entirely in the tangential direction.'
+      explanation: '$a_c = 4\\pi^2 r f^2 = 4\\pi^2(0.20)(25) \\approx 197$ $m/s^{2}$. Forgetting to square $f$ gives 39, and 6.3 is the speed in m/s, not an acceleration.'
     },
     {
       id: 'cm2-mcq4',
@@ -157,10 +139,10 @@ The full polar coordinate acceleration formula is essential for non-uniform circ
       type: 'mcq' as const,
       question: 'For an object in uniform circular motion, $\\vec{v} \\cdot \\vec{a}$ equals:',
       options: [
-        '$0$ (they are perpendicular)',
-        '$v \\cdot a_c$',
-        '$-va_c$',
-        '$v^3/r$'
+        '$0$, since they are perpendicular',
+        '$va_c$, since both are nonzero',
+        '$-va_c$, since $\\vec{a}$ points inward',
+        '$v^3/r$, from $a_c = v^2/r$'
       ],
       correctAnswer: 0,
       explanation: 'In UCM, $\\vec{v}$ is tangential and $\\vec{a}$ is radial (centripetal). Since tangential $\\perp$ radial: $\\vec{v} \\cdot \\vec{a} = 0$. This also explains why speed is constant: $\\frac{d}{dt}(\\frac{1}{2}v^2) = \\vec{v}\\cdot\\vec{a} = 0$.'
@@ -176,7 +158,7 @@ Three equivalent derivations of $a_c = v^2/r$:
 |:---:|:---:|
 | Calculus | Differentiate $\\vec{r}(t)$ twice |
 | Geometric | Small-angle limit of $\\Delta\\vec{v}$ triangle |
-| Polar coordinates | Use rotating unit vectors $\\hat{r}$, $\\hat{\\theta}$ |
+| Period form | $a_c = 4\\pi^2 r/T^2$ |
 
 **Key Results:**
 - $\\vec{a} = -\\omega^2 \\vec{r}$ (always points toward center)

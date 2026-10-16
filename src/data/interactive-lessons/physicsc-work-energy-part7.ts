@@ -10,7 +10,7 @@ export const physCWorkEnergyPart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Summary
-- $W = \\int F\,dx$, $W = Fd\\cos\\theta$
+- $W = \\int F\\,dx$, $W = Fd\\cos\\theta$
 - Work-KE Theorem: $W_{net} = \\Delta KE$
 - $F = -dU/dx$ for conservative forces
 - Conservation: $E_i = E_f$ (no friction)
@@ -43,12 +43,12 @@ $v = x\\sqrt{k/m} = 2\\sqrt{50/2} = 2(5) = 10$ m/s ✅
           {
                     "question": "Which has more kinetic energy: a 2 kg object at 3 m/s or a 1 kg object at 4 m/s?",
                     "options": [
-                              "They are equal (9 J each)",
+                              "They are equal",
                               "The 2 kg object",
                               "The 1 kg object",
-                              "Cannot determine"
+                              "It depends on their directions"
                     ],
-                    "correctAnswer": 0,
+                    "correctAnswer": 1,
                     "explanation": "$KE_1 = \\frac{1}{2}(2)(9) = 9$ J. $KE_2 = \\frac{1}{2}(1)(16) = 8$ J. The 2 kg object has more."
           }
 ]
@@ -98,7 +98,7 @@ $v = x\\sqrt{k/m} = 2\\sqrt{50/2} = 2(5) = 10$ m/s ✅
 
 | # | Topic | Key Formula |
 |---|-------|-------------|
-| 1 | Work integral | $W = \\int F\,dx$ |
+| 1 | Work integral | $W = \\int F\\,dx$ |
 | 2 | Energy conservation | $KE_i + PE_i = KE_f + PE_f$ |
 | 3 | Power | $P = Fv$ |
     
@@ -116,8 +116,8 @@ $v = x\\sqrt{k/m} = 2\\sqrt{50/2} = 2(5) = 10$ m/s ✅
                     "question": "A roller coaster at the top of a hill has 500 J of PE. At the bottom (frictionless), it has:",
                     "options": [
                               "500 J of KE",
-                              "250 J of KE",
-                              "500 J of PE",
+                              "250 J of KE and 250 J of PE",
+                              "500 J of PE still",
                               "0 J of energy"
                     ],
                     "correctAnswer": 0,

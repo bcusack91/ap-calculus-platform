@@ -68,7 +68,7 @@ Setting $a = 0$ gives $\\cos(20t) = 0$, i.e. $20t = \\dfrac{\\pi}{2}$, so the fi
         questions: [
           {
             question: 'A spring ($k = 50\\,\\text{N/m}$) with a 0.2 kg mass has $\\omega =$',
-            options: ['$5\\,\\text{rad/s}$', '$\\sqrt{250}\\,\\text{rad/s}$', '$10\\,\\text{rad/s}$', '$250\\,\\text{rad/s}$'],
+            options: ['$5\\,\\text{rad/s}$', '$15.8\\,\\text{rad/s}$', '$10\\,\\text{rad/s}$', '$\\sqrt{10}\\,\\text{rad/s}$'],
             correctAnswer: 1,
             explanation: '$\\omega = \\sqrt{k/m} = \\sqrt{50/0.2} = \\sqrt{250} \\approx 15.8\\,\\text{rad/s}$.'
           },
@@ -80,9 +80,9 @@ Setting $a = 0$ gives $\\cos(20t) = 0$, i.e. $20t = \\dfrac{\\pi}{2}$, so the fi
           },
           {
             question: 'To find where speed is maximum in SHM, you set which quantity to zero?',
-            options: ['Position $x$', 'Acceleration $a = dv/dt$', 'Total energy $E$', 'Amplitude $A$'],
+            options: ['Velocity $v = dx/dt$', 'Acceleration $a = dv/dt$', 'Kinetic energy $K = \\tfrac{1}{2}mv^2$', 'Jerk $da/dt$'],
             correctAnswer: 1,
-            explanation: 'Maximum speed occurs where $dv/dt = a = 0$, i.e. at the equilibrium position $x = 0$.'
+            explanation: 'Maximum speed occurs where $dv/dt = a = 0$, i.e. at the equilibrium position $x = 0$. Setting $v$ or $K$ to zero finds the turning points instead.'
           },
           {
             question: 'A 0.5 kg mass on a $k = 200\\,\\text{N/m}$ spring with amplitude 0.1 m has total energy:',
@@ -92,7 +92,7 @@ Setting $a = 0$ gives $\\cos(20t) = 0$, i.e. $20t = \\dfrac{\\pi}{2}$, so the fi
           },
           {
             question: 'If the amplitude of an oscillator triples, its maximum speed $v_{\\max} = A\\omega$:',
-            options: ['Stays the same', 'Triples', 'Increases by a factor of 9', 'Halves'],
+            options: ['Stays the same', 'Increases by a factor of 3', 'Increases by a factor of 9', 'Is cut in half'],
             correctAnswer: 1,
             explanation: '$v_{\\max} = A\\omega \\propto A$ (since $\\omega$ depends only on $k$ and $m$), so tripling $A$ triples $v_{\\max}$.'
           },

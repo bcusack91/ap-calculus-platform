@@ -66,10 +66,10 @@ $$v = \\sqrt{\\frac{kx_0^2}{m} - 2gd\\sin\\theta} = \\sqrt{\\frac{72}{2} - 2(10)
       type: 'mcq' as const,
       question: 'In Problem 2, if the ramp were steeper (larger $\\theta$, same height), the block launched by the same spring would reach:',
       options: [
-        'The same height (energy conservation depends on height, not angle)',
-        'A greater height',
-        'A lesser height',
-        'The same distance along the ramp'
+        'The same height as before',
+        'A greater height than before',
+        'A lesser height than before',
+        'An equal distance along the ramp'
       ],
       correctAnswer: 0,
       explanation: 'On a frictionless incline, the final height depends only on energy: $\\frac{1}{2}kx_0^2 = mgh$, so $h = kx_0^2/(2mg)$ regardless of $\\theta$. The distance along the ramp changes, but not the height.'
@@ -112,13 +112,13 @@ $$\\omega = \\sqrt{\\frac{U''(0)}{m}} = \\sqrt{\\frac{10}{1}} = \\sqrt{10} \\app
       type: 'mcq' as const,
       question: 'For $U(x) = 5x^2 - x^4$, a particle with $E = 6.25$ J released at $x = 0$ will:',
       options: [
-        'Reach the unstable equilibrium points and stop momentarily (barely)',
-        'Oscillate between $x \\approx -1$ and $x \\approx 1$',
-        'Escape to infinity immediately',
-        'Stay at $x = 0$ forever'
+        'Approach $x = \\pm 1.58$ m, slowing to zero speed there',
+        'Oscillate between about $x = -1$ and $x = 1$',
+        'Escape past the barriers to infinity',
+        'Stay at $x = 0$, since it is stable'
       ],
       correctAnswer: 0,
-      explanation: '$E = 6.25$ J exactly matches $U(\\pm\\sqrt{2.5})$, the height of the energy barriers. The particle can just barely reach the unstable equilibria, where it would stop momentarily. In practice, any tiny perturbation would cause it to either return or escape.'
+      explanation: '$E = 6.25$ J exactly matches $U(\\pm\\sqrt{2.5})$, the height of the energy barriers. The particle can just barely climb to the tops of the barriers (the unstable equilibria), where its speed falls to zero. Any tiny extra energy would let it escape; any less would turn it back.'
     },
     {
       id: 'cf6-mcq4',
@@ -160,7 +160,7 @@ $$\\omega = \\sqrt{\\frac{U''(0)}{m}} = \\sqrt{\\frac{10}{1}} = \\sqrt{10} \\app
 | "Find equilibria and stability" | Set $dU/dx = 0$; check sign of $d^2U/dx^2$ |
 | "Is the motion bounded?" | Compare $E$ to the barrier heights in $U(x)$ |
 | "Period of small oscillations" | $T = 2\\pi\\sqrt{m/k_{\\text{eff}}}$ with $k_{\\text{eff}} = U''(x_0)$ |
-| "Is the force conservative?" | Check $\\partial F_x/\\partial y = \\partial F_y/\\partial x$ |
+| "Is the force conservative?" | Check whether its work around a closed path is zero |
 
 > **Next up:** Part 7 — Review & Applications, tying everything together.`
     }

@@ -46,10 +46,10 @@ A centrifuge of radius $R = 0.15$ m spins at $n = 3000$ RPM.
 $$\\omega = 2\\pi \\times \\frac{3000}{60} = 100\\pi \\approx 314 \\text{ rad/s}$$
 
 **Centripetal acceleration:**
-$$a_c = \\omega^2 R = (100\\pi)^2(0.15) = 14,804 \\text{ m/s}^2$$
+$$a_c = \\omega^2 R = (100\\pi)^2(0.15) = 14\\,804 \\text{ m/s}^2$$
 
 **In units of $g$:**
-$$\\frac{a_c}{g} = \\frac{14,804}{9.8} \\approx 1,511\\,g$$
+$$\\frac{a_c}{g} = \\frac{14\\,804}{9.8} \\approx 1\\,511\\,g$$
 
 ### Application: Car on a Banked Curve
 
@@ -101,7 +101,7 @@ For a satellite orbiting with $T = 24$ hours:
 
 $$r = \\left(\\frac{GMT^2}{4\\pi^2}\\right)^{1/3}$$
 
-$$r = \\left(\\frac{6.67 \\times 10^{-11} \\times 5.97 \\times 10^{24} \\times (86400)^2}{4\\pi^2}\\right)^{1/3} \\approx 42,200 \\text{ km}$$
+$$r = \\left(\\frac{6.67 \\times 10^{-11} \\times 5.97 \\times 10^{24} \\times (86400)^2}{4\\pi^2}\\right)^{1/3} \\approx 42\\,200 \\text{ km}$$
 
 This is about 35,800 km above Earth's surface.`
     },
@@ -112,8 +112,8 @@ This is about 35,800 km above Earth's surface.`
       options: [
         '$2\\sqrt{2} \\approx 2.83$',
         '$2$',
-        '$4$',
-        '$\\sqrt{2}$'
+        '$2^{2/3} \\approx 1.59$',
+        '$\\sqrt{2} \\approx 1.41$'
       ],
       correctAnswer: 0,
       explanation: '$T^2 \\propto r^3$. If $r \\to 2r$: $T^2 \\to 8T^2$, so $T \\to 2\\sqrt{2}\\,T$.'
@@ -123,7 +123,7 @@ This is about 35,800 km above Earth's surface.`
       type: 'mcq' as const,
       question: 'A mass on a frictionless table is attached to a string through a hole in the table. It orbits with radius $r_1$ and speed $v_1$. The string is pulled from below, reducing the radius to $r_2 = r_1/2$. The new speed is:',
       options: [
-        '$2v_1$ (angular momentum conservation: $mv_1r_1 = mv_2r_2$)',
+        '$2v_1$',
         '$v_1\\sqrt{2}$',
         '$v_1/2$',
         '$4v_1$'
@@ -161,7 +161,7 @@ You've mastered the full AP Physics C treatment of circular motion:
 | 6 | Problem-solving workshop | ✅ |
 | 7 | Review & applications | ✅ |
 
-> **Key Takeaway:** Circular motion problems require (1) identifying the center and radius, (2) applying Newton's second law in the radial direction with $\\sum F_r = mv^2/r$, and (3) using energy conservation for speed relationships. The calculus-level content (derivations, polar coordinates, angular kinematics) is what distinguishes AP Physics C from AP Physics 1.`
+> **Key Takeaway:** Circular motion problems require (1) identifying the center and radius, (2) applying Newton's second law in the radial direction with $\\sum F_r = mv^2/r$, and (3) using energy conservation for speed relationships. The calculus-level content (derivations, angular kinematics, energy methods) is what distinguishes AP Physics C from AP Physics 1.`
     }
   ]
 };

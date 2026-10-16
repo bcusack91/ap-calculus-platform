@@ -18,8 +18,8 @@ export const physCOscillationsPart7Data = {
 | Defining equation | $\\dfrac{d^2x}{dt^2} = -\\omega^2 x$ |
 | Angular frequency | $\\omega = \\sqrt{k/m}$ (spring), $\\omega = \\sqrt{g/L}$ (pendulum) |
 | Total energy | $E = \\tfrac{1}{2}kA^2$ |
-| Damped SHM | $x(t) = Ae^{-\\gamma t}\\cos(\\omega^{\\prime} t)$ |
-| Resonance | Max amplitude at $\\omega_d \\approx \\omega_0$ |
+| Physical pendulum | $T = 2\\pi\\sqrt{I/(mgd)}$; torsion: $T = 2\\pi\\sqrt{I/\\kappa}$ |
+| Resonance | Driving at the natural frequency increases the amplitude |
 
 > 🔑 SHM = any system with $F \\propto -x$. Recognize the pattern, then apply the formulas.`
     },
@@ -28,7 +28,7 @@ export const physCOscillationsPart7Data = {
       type: 'text' as const,
       content: `### 📝 Worked Example — Building Energy from the Equation of Motion
 
-Starting from $m\\dfrac{d^2x}{dt^2} = -kx$, derive the conserved energy of an undamped oscillator.
+Starting from $m\\dfrac{d^2x}{dt^2} = -kx$, derive the conserved energy of a spring oscillator.
 
 **Step 1 — Multiply both sides by $v = \\dfrac{dx}{dt}$.**
 
@@ -62,7 +62,7 @@ $\\frac{d}{dt}\\left(\\tfrac{1}{2}mv^2 + \\tfrac{1}{2}kx^2\\right) = 0 \\;\\Righ
           },
           {
             question: 'If you take a pendulum to the Moon (gravity $g/6$), the period:',
-            options: ['Decreases by 6', 'Increases by $\\sqrt{6}$', 'Stays the same', 'Doubles'],
+            options: ['Decreases by a factor of 6', 'Increases by a factor of $\\sqrt{6}$', 'Increases by a factor of 6', 'Stays the same'],
             correctAnswer: 1,
             explanation: '$T = 2\\pi\\sqrt{L/g}$. Reducing $g$ by a factor of 6 multiplies $T$ by $\\sqrt{6}$.'
           },
@@ -70,9 +70,9 @@ $\\frac{d}{dt}\\left(\\tfrac{1}{2}mv^2 + \\tfrac{1}{2}kx^2\\right) = 0 \\;\\Righ
             question: 'Multiplying $m\\,d^2x/dt^2 = -kx$ by $v$ and integrating yields:',
             options: [
               '$\\tfrac{1}{2}mv^2 + \\tfrac{1}{2}kx^2 = \\text{const}$',
-              '$mv = -kx$',
-              '$v = -\\omega^2 x$',
-              '$x = A\\omega t$'
+              '$\\tfrac{1}{2}mv^2 - \\tfrac{1}{2}kx^2 = 0$',
+              '$\\tfrac{1}{2}mv^2 = \\tfrac{1}{2}kx^2$',
+              '$mv = -kxt + \\text{const}$'
             ],
             correctAnswer: 0,
             explanation: 'The two sides become total time derivatives, giving conservation of $\\tfrac{1}{2}mv^2 + \\tfrac{1}{2}kx^2$.'
@@ -91,7 +91,7 @@ $\\frac{d}{dt}\\left(\\tfrac{1}{2}mv^2 + \\tfrac{1}{2}kx^2\\right) = 0 \\;\\Righ
           },
           {
             question: 'In SHM, the speed at displacement $x$ is given by:',
-            options: ['$v = \\omega(A - x)$', '$v = \\omega\\sqrt{A^2 - x^2}$', '$v = \\omega A x$', '$v = \\omega\\sqrt{A^2 + x^2}$'],
+            options: ['$v = \\omega(A - x)$', '$v = \\omega\\sqrt{A^2 - x^2}$', '$v = \\omega A x$', '$v = \\omega(A^2 - x^2)$'],
             correctAnswer: 1,
             explanation: 'From energy conservation $\\tfrac{1}{2}kA^2 = \\tfrac{1}{2}kx^2 + \\tfrac{1}{2}mv^2$, solving gives $v = \\omega\\sqrt{A^2 - x^2}$.'
           }

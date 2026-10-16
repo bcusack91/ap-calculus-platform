@@ -17,7 +17,7 @@ export const physCCOMPart7Data = {
 | COM velocity | $\\vec{v}_{\\text{cm}} = \\frac{\\vec{p}_{\\text{total}}}{M}$ |
 | Newton's 2nd (system) | $\\vec{F}_{\\text{ext}} = M\\vec{a}_{\\text{cm}}$ |
 | KE decomposition | $K = \\frac{1}{2}Mv_{\\text{cm}}^2 + K_{\\text{int}}$ |
-| Reduced mass | $\\mu = \\frac{m_1 m_2}{m_1+m_2}$ |
+| Total mass (rod) | $M = \\int \\lambda(x)\\,dx$ |
 
 ### Key COM Positions
 
@@ -45,7 +45,7 @@ export const physCCOMPart7Data = {
       id: 'com7-mcq2',
       type: 'mcq' as const,
       question: 'Two particles ($m$ at origin, $3m$ at position $d$) are connected by a spring and released. When they collide, they meet at:',
-      options: ['$3d/4$ from the origin', '$d/2$', '$d/4$', '$d/3$'],
+      options: ['$3d/4$', '$d/4$', '$d/2$', '$2d/3$'],
       correctAnswer: 0,
       explanation: 'The COM is at $x_{\\text{cm}} = \\frac{m(0)+3m(d)}{4m} = 3d/4$. With no external forces, the COM doesn\'t move, so they meet at $x = 3d/4$.'
     },
@@ -62,11 +62,7 @@ Let the disk center be at the origin and the hole center at $x = R/3$.
 
 Area of full disk: $\\pi R^2$. Area of hole: $\\pi(R/3)^2 = \\pi R^2/9$.
 
-Mass of full disk: $M_{\\text{full}} = M \\cdot \\frac{\\pi R^2}{\\pi R^2 - \\pi R^2/9} = M \\cdot \\frac{9}{8}$
-
-Mass of hole: $M_{\\text{hole}} = \\frac{M}{8} \\cdot \\frac{9}{8}$... Let me redo this more carefully.
-
-Let $\\sigma = M/(\\pi R^2 - \\pi R^2/9) = M/(8\\pi R^2/9) = 9M/(8\\pi R^2)$
+The remaining piece has mass $M$, so its surface density is $\\sigma = M/(\\pi R^2 - \\pi R^2/9) = M/(8\\pi R^2/9) = 9M/(8\\pi R^2)$
 
 $M_{\\text{full}} = \\sigma \\pi R^2 = 9M/8$
 
@@ -91,7 +87,7 @@ The COM shifts $R/24$ **away** from the hole.`
       options: [
         'Continues on the original parabolic path',
         'Stops at the peak',
-        'Follows a new path determined by the explosion',
+        'Follows a path set by the explosion',
         'Falls straight down from the peak'
       ],
       correctAnswer: 0,

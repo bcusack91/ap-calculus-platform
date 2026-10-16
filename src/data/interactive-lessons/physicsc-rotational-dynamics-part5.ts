@@ -66,16 +66,16 @@ $v = \\sqrt{\\frac{10gh}{7}} = \\sqrt{\\frac{10(10)(5)}{7}} \\approx 8.45$ m/s ‚
 
 2) A ball rolls at $v = 6$ m/s with $R = 2$ m. What is $\\omega$ (rad/s)?
 
-3) A solid cylinder ($I = \\frac{1}{2}mr^2$) rolls without slipping. If $v_{cm} = 4$ m/s and $m = 2$ kg, what is the translational KE (J)? Hmm: $KE_{trans} = \\frac{1}{2}(2)(16) = 16$. But I set the answer to 4...
+3) A solid cylinder ($I = \\frac{1}{2}mr^2$) rolls without slipping. If $v_{cm} = 4$ m/s and $m = 2$ kg, what is its translational KE (J)?
     
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["6","3","4"],
+        correctAnswers: ["6","3","16"],
         hint1: "$v = R\\omega$.",
         hint2: "$\\omega = v/R$.",
-        hint3: "$KE_{trans} = \\frac{1}{2}mv^2$. But check the question.",
-        explanation: "1) $v = 2(3) = 6$ m/s. 2) $\\omega = 6/2 = 3$ rad/s. 3) Translational KE = $\\frac{1}{2}(2)(16) = 16$ J."
+        hint3: "$KE_{trans} = \\frac{1}{2}mv_{cm}^2$.",
+        explanation: "1) $v = 2(3) = 6$ m/s. 2) $\\omega = 6/2 = 3$ rad/s. 3) Translational KE = $\\frac{1}{2}(2)(16) = 16$ J (the rotational KE adds another 8 J)."
       }
     },
     {
@@ -85,8 +85,8 @@ $v = \\sqrt{\\frac{10gh}{7}} = \\sqrt{\\frac{10(10)(5)}{7}} \\approx 8.45$ m/s ‚
 **Concept Check** üîç
     `,
       exercise: {
-        dropdowns: [{"label":"A hoop rolls down a ramp slower than a sphere because","options":["The hoop has more rotational inertia (relative to $mr^2$)","The hoop is heavier","The hoop has more friction","The hoop is bigger"]},{"label":"Rolling without slipping requires","options":["Static friction at the contact point","Kinetic friction","No friction","Air resistance"]}],
-        correctAnswers: ["The hoop has more rotational inertia (relative to $mr^2$)","Static friction at the contact point"],
+        dropdowns: [{"label":"A hoop rolls down a ramp slower than a sphere because","options":["Its rotational inertia is a larger fraction of $mr^2$","It has more mass to accelerate","Friction does more negative work on it","Its size adds air resistance"]},{"label":"Rolling without slipping down an incline requires","options":["Static friction at the contact point","Kinetic friction","No friction","Air resistance"]}],
+        correctAnswers: ["Its rotational inertia is a larger fraction of $mr^2$","Static friction at the contact point"],
         hint1: "Compare $I/mr^2$ ratios: hoop=1, sphere=2/5.",
         hint2: "The contact point has zero velocity if no slipping occurs.",
         explanation: "Hoop: $I = mr^2$ (all mass at rim) vs sphere: $I = 2mr^2/5$. Static friction prevents slipping."
@@ -118,8 +118,8 @@ $v = \\sqrt{\\frac{10gh}{7}} = \\sqrt{\\frac{10(10)(5)}{7}} \\approx 8.45$ m/s ‚
                     "question": "Which reaches the bottom of a ramp first (same mass and radius)?",
                     "options": [
                               "Solid sphere",
-                              "Solid cylinder",
-                              "Hollow sphere",
+                              "Solid disk",
+                              "Hollow ball",
                               "Hoop"
                     ],
                     "correctAnswer": 0,

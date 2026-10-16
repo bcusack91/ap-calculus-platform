@@ -34,13 +34,13 @@ $$\\text{Force} = -\\text{(slope of } U\\text{)}$$`
       type: 'mcq' as const,
       question: 'At a point where the potential energy graph $U(x)$ has a positive slope and is concave down, the force is:',
       options: [
-        'Negative (pointing in $-x$ direction) and increasing in magnitude',
-        'Positive and decreasing',
-        'Zero',
+        'Negative and increasing in magnitude',
+        'Positive and decreasing in magnitude',
+        'Zero, since the curve is at a peak',
         'Negative and decreasing in magnitude'
       ],
-      correctAnswer: 0,
-      explanation: 'Positive slope of $U$ means $dU/dx > 0$, so $F = -dU/dx < 0$ (force points in $-x$). Concave down means the slope is increasing, so $|dU/dx|$ is getting larger, meaning $|F|$ is increasing.'
+      correctAnswer: 3,
+      explanation: 'A positive slope means $dU/dx > 0$, so $F = -dU/dx < 0$. Concave down means the slope is decreasing as $x$ increases, so $|dU/dx|$, and with it $|F|$, is getting smaller.'
     },
     {
       id: 'cf3-examples',
@@ -73,7 +73,7 @@ $$U(r) = -\\frac{GMm}{r}$$
 
 $$F(r) = -\\frac{dU}{dr} = -\\frac{GMm}{r^2}$$
 
-But wait — this is the *radial* force, pointing inward (attractive). The negative sign means the force points toward decreasing $r$ (toward the center), which is correct for gravity.
+This is the *radial* force component, and it points inward (attractive). The negative sign means the force points toward decreasing $r$ (toward the center), which is correct for gravity.
 
 ### Example 4: Piecewise Potential
 
@@ -88,8 +88,8 @@ This describes an asymmetric spring — stiffer on one side than the other.`
       type: 'mcq' as const,
       question: 'Given $U(x) = A e^{-x/\\lambda}$ where $A, \\lambda > 0$, the force is:',
       options: [
-        '$F = \\frac{A}{\\lambda}e^{-x/\\lambda}$ (positive, repulsive)',
-        '$F = -\\frac{A}{\\lambda}e^{-x/\\lambda}$ (negative, attractive)',
+        '$F = \\frac{A}{\\lambda}e^{-x/\\lambda}$',
+        '$F = -\\frac{A}{\\lambda}e^{-x/\\lambda}$',
         '$F = A\\lambda e^{-x/\\lambda}$',
         '$F = -Ae^{-x/\\lambda}$'
       ],
@@ -139,10 +139,10 @@ $$\\omega = \\sqrt{\\frac{U_0}{8ma^2}}$$`
       type: 'mcq' as const,
       question: 'Near a stable equilibrium, any potential energy looks approximately like:',
       options: [
-        'A parabola ($U \\approx \\frac{1}{2}k_{\\text{eff}}x^2$), giving simple harmonic motion',
-        'A linear function',
-        'A cubic',
-        'An exponential'
+        'A parabola, so small motions are SHM',
+        'A straight line, so the force is constant',
+        'A cubic, so the force is quadratic in $x$',
+        'An exponential, so the force decays smoothly'
       ],
       correctAnswer: 0,
       explanation: 'Taylor expanding around a minimum ($U\' = 0$): the leading nonzero term is $\\frac{1}{2}U\'\'(x_0)(x-x_0)^2$, which is parabolic. This means all small oscillations are simple harmonic.'
@@ -152,10 +152,10 @@ $$\\omega = \\sqrt{\\frac{U_0}{8ma^2}}$$`
       type: 'mcq' as const,
       question: 'For $U(x) = \\beta x^4$ (with $\\beta > 0$), the equilibrium at $x = 0$ is:',
       options: [
-        'Stable, but NOT simple harmonic (since $U\'\'(0) = 0$, the restoring force is not linear)',
-        'Unstable',
+        'Stable, but the oscillations are not SHM',
+        'Unstable, since $U\'\'(0) = 0$',
         'Stable and simple harmonic',
-        'Neutral (indifferent equilibrium)'
+        'Neutral, since $U$ is flat at $x = 0$'
       ],
       correctAnswer: 0,
       explanation: '$U\'(0) = 0$ and $U(x) > 0$ for all $x \\neq 0$ — this is a minimum, hence stable. However, $U\'\'(0) = 12\\beta(0)^2 = 0$, so the harmonic approximation fails. The force $F = -4\\beta x^3$ is restoring but not proportional to $x$ — the oscillation is anharmonic.'

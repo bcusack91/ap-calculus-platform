@@ -40,10 +40,10 @@ $$N = mg + F\\sin\\theta$$`
       type: 'mcq' as const,
       question: 'A 10 kg block sits on a surface with $\\mu_s = 0.4$ and $\\mu_k = 0.3$. A horizontal force of 30 N is applied. What is the friction force on the block? (Use $g = 10$ $m/s^{2}$)',
       options: [
-        '$30$ N (static friction matches applied force)',
-        '$39.2$ N (maximum static friction)',
-        '$29.4$ N (kinetic friction)',
-        '$40$ N (maximum static friction)'
+        '$30$ N, the same as the push',
+        '$40$ N, the maximum static friction',
+        '$0$ N, since the block does not move',
+        '$10$ N, the difference between 40 N and 30 N'
       ],
       correctAnswer: 0,
       explanation: '$f_{s,\\max} = \\mu_s N = 0.4 \\times 100 = 40$ N. Since the applied force (30 N) $< f_{s,\\max}$ (40 N), the block doesn\'t move. Static friction matches the applied force: $f_s = 30$ N.'
@@ -127,9 +127,9 @@ $$\\theta_{\\text{opt}} = \\arctan(\\mu_s)$$`
       question: 'For $\\mu_s = 0.5$, what pulling angle $\\theta$ above horizontal minimizes the force needed to start a block sliding?',
       options: [
         '$\\arctan(0.5) \\approx 26.6°$',
-        '$45°$',
-        '$0°$ (horizontal)',
-        '$30°$'
+        '$\\arctan(2) \\approx 63.4°$',
+        '$0°$, a horizontal pull',
+        '$\\arcsin(0.5) = 30°$'
       ],
       correctAnswer: 0,
       explanation: 'The optimal angle satisfies $\\tan\\theta = \\mu_s = 0.5$, giving $\\theta = \\arctan(0.5) \\approx 26.6°$. This balances reducing the normal force (and thus friction) against losing horizontal pulling force.'

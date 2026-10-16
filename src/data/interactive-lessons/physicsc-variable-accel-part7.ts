@@ -23,8 +23,8 @@ export const physCVarAccelPart7Data = {
 | Force Model | $v(t)$ |
 |:---|:---:|
 | $a = -bv$ (linear drag) | $v_0 e^{-bt}$ |
-| $a = -cv^2$ (quadratic drag) | $\\frac{v_0}{1 + cv_0 t}$ |
-| $a = g - cv^2$ (gravity + drag) | $v_T\\tanh(gt/v_T)$ |
+| $a = -cv^2$ (separable power law) | $\\frac{v_0}{1 + cv_0 t}$ |
+| $a = g - (k/m)v$ (falling, linear drag) | $\\frac{mg}{k}\\left(1 - e^{-kt/m}\\right)$ |
 | $a = -\\omega^2 x$ (spring) | $v = \\omega\\sqrt{A^2 - x^2}$ |`
     },
     {
@@ -90,7 +90,7 @@ Variable acceleration is not just kinematics — it connects to nearly every top
 
 $$a = F_{\\text{net}}/m$$
 
-When forces depend on position (springs, gravity), velocity (drag), or time (varying thrust), acceleration is variable.
+When forces depend on position (springs, gravity), velocity (drag), or time (a varying applied force), acceleration is variable.
 
 ### Work-Energy Theorem
 
@@ -115,7 +115,7 @@ The mathematical techniques are the same in all cases!`
       id: 'varaccel7-mcq3',
       type: 'mcq' as const,
       question: 'A particle starts from rest and has $a(x) = 6\\sqrt{x}$. The speed at $x = 4$ is:',
-      options: ['$8$ m/s', '$4\\sqrt{3}$ m/s', '$12$ m/s', '$4$ m/s'],
+      options: ['$8$ m/s', '$4\\sqrt{3}$ m/s', '$12$ m/s', '$64$ m/s'],
       correctAnswer: 0,
       explanation: '$v^2 = 2\\int_0^4 6\\sqrt{x}\\,dx = 12 \\cdot [\\frac{2}{3}x^{3/2}]_0^4 = 12 \\cdot \\frac{2}{3}(8) = 64$. So $v = 8$ m/s.'
     },

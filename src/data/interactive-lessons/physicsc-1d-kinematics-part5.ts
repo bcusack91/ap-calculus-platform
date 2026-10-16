@@ -103,7 +103,7 @@ When $|v|$ is increasing, the particle speeds up. When $|v|$ is decreasing, it s
       question: 'A particle has $v(t) = -3e^{-t}$ for $t \\ge 0$. The particle is:',
       options: [
         'Always slowing down',
-        'Always speeding up',
+        'Speeding up at all times',
         'Speeding up then slowing down',
         'Moving at constant speed'
       ],

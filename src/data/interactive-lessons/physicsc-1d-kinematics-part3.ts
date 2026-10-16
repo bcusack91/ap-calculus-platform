@@ -66,7 +66,7 @@ A ball is thrown upward at $30$ m/s from the ground ($g = 10$ m/s$^2$):
       id: '1dkin3-mcq2',
       type: 'mcq' as const,
       question: 'A stone is thrown upward at $20$ m/s from a $15$ m ledge. What is its speed just before hitting the ground? (Use $g = 10\\text{ m/s}^2$.)',
-      options: ['$\\sqrt{700}$ m/s $\\approx 26.5$ m/s', '$20$ m/s', '$25$ m/s', '$30$ m/s'],
+      options: ['$26.5$ m/s', '$20$ m/s', '$25$ m/s', '$30$ m/s'],
       correctAnswer: 0,
       explanation: '$\\Delta y = -15$ m (below launch point). $v^2 = 20^2 + 2(10)(15) = 400 + 300 = 700$. So $v = \\sqrt{700} \\approx 26.5$ m/s.'
     },

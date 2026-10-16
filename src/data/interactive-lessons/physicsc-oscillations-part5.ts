@@ -4,52 +4,43 @@ export const physCOscillationsPart5Data = {
     {
       id: 'physicsc-oscillations-p5-intro',
       type: 'text' as const,
-      content: `# 🔊 Driven Oscillations & Resonance
+      content: `# 🔊 Natural Frequency, Resonance, and SHM Graphs
 
-**Part 5 of 7 — Forced Vibrations**
+**Part 5 of 7 — Natural Frequency, Resonance, and SHM Graphs**
 
 ---
 
-### Driven Oscillation
+### Natural Frequency
 
-Apply a periodic driving force $F(t) = F_0\\cos(\\omega_d t)$:
+The **natural frequency** of a system is the frequency at which it oscillates on its own after being displaced from equilibrium and released:
 
-$m\\frac{d^2x}{dt^2} + b\\frac{dx}{dt} + kx = F_0\\cos(\\omega_d t)$
+| System | Natural angular frequency |
+|--------|---------------------------|
+| Mass on a spring | $\\omega_0 = \\sqrt{k/m}$ |
+| Simple pendulum | $\\omega_0 = \\sqrt{g/L}$ |
+| Physical pendulum | $\\omega_0 = \\sqrt{mgd/I}$ |
+| Torsion pendulum | $\\omega_0 = \\sqrt{\\kappa/I}$ |
 
-Steady-state solution: $x(t) = A(\\omega_d)\\cos(\\omega_d t - \\delta)$
+Convert with $f_0 = \\dfrac{\\omega_0}{2\\pi}$ and $T = \\dfrac{1}{f_0}$.
 
 ---
 
 ### Resonance
 
-$A(\\omega_d) = \\frac{F_0/m}{\\sqrt{(\\omega_0^2 - \\omega_d^2)^2 + (b\\omega_d/m)^2}}$
+Now push the system with a **sinusoidal external force**. If the push repeats at the natural frequency, each push arrives in step with the motion and adds energy every cycle, so the amplitude grows. This is **resonance**:
 
-The amplitude is maximum near $\\omega_d = \\omega_0$ (the natural frequency).
+- Resonance occurs when the external force is exerted **at the natural frequency** of the system.
+- Resonance **increases the amplitude** of the oscillation.
 
-> 🔑 **Resonance** = the driving frequency matches the natural frequency, producing maximum energy transfer and the largest amplitude.`
-    },
-    {
-      id: 'physicsc-oscillations-p5-worked',
-      type: 'text' as const,
-      content: `### 📝 Worked Example — Amplitude On and Off Resonance
+Everyday examples: pushing a child on a swing once per swing, a singer's note shattering a glass, a washing machine shaking hardest at one spin speed.
 
-A driven oscillator has $m = 1.0\\,\\text{kg}$, $k = 100\\,\\text{N/m}$, $b = 2.0\\,\\text{kg/s}$, and a driving force amplitude $F_0 = 5.0\\,\\text{N}$. Compare the steady-state amplitude **at resonance** ($\\omega_d = \\omega_0$) with a low-frequency drive ($\\omega_d \\to 0$).
+The AP Physics C exam treats resonance qualitatively; formulas for the driven amplitude are not tested.
 
-**Step 1 — Natural frequency.**
+---
 
-$\\omega_0 = \\sqrt{\\frac{k}{m}} = \\sqrt{\\frac{100}{1.0}} = 10\\,\\text{rad/s}$
+### Amplitude Does Not Change the Period
 
-**Step 2 — Amplitude at resonance.** At $\\omega_d = \\omega_0$ the $(\\omega_0^2 - \\omega_d^2)$ term vanishes, leaving:
-
-$A_{\\text{res}} = \\frac{F_0/m}{b\\omega_0/m} = \\frac{F_0}{b\\omega_0} = \\frac{5.0}{(2.0)(10)} = 0.25\\,\\text{m}$
-
-**Step 3 — Amplitude at very low frequency.** As $\\omega_d \\to 0$, the denominator approaches $\\omega_0^2$:
-
-$A_{0} = \\frac{F_0/m}{\\omega_0^2} = \\frac{F_0}{k} = \\frac{5.0}{100} = 0.050\\,\\text{m}$
-
-**Result:** Driving at resonance gives an amplitude $0.25/0.050 = 5\\times$ larger than the slow ("static") response — and smaller damping $b$ would make the peak even sharper.
-
-> 🔑 The resonance peak height is set by the **damping**: smaller $b$ → taller, narrower peak (higher quality factor $Q = \\omega_0 m / b$).`
+For SHM, $T = 2\\pi\\sqrt{m/k}$ (or $2\\pi\\sqrt{L/g}$) contains no amplitude. Pulling a spring farther before release raises the energy $\\tfrac{1}{2}kA^2$ and the maximum speed $A\\omega$, but the period stays the same.`
     },
     {
       id: 'physicsc-oscillations-p5-mcq1',
@@ -60,40 +51,85 @@ $A_{0} = \\frac{F_0/m}{\\omega_0^2} = \\frac{F_0}{k} = \\frac{5.0}{100} = 0.050\
       exercise: {
         questions: [
           {
-            question: 'Resonance occurs when the driving frequency:',
-            options: ['Is zero', 'Equals the natural frequency', 'Is twice the natural frequency', 'Is very high'],
-            correctAnswer: 1,
-            explanation: 'The amplitude peaks when $\\omega_d \\approx \\omega_0$, the natural frequency of the oscillator.'
+            question: 'Resonance occurs when a periodic external force is exerted:',
+            options: ['At the natural frequency', 'At twice the natural frequency', 'At any frequency, as long as the force is large', 'At a frequency much higher than the natural one'],
+            correctAnswer: 0,
+            explanation: 'Pushes that repeat at the natural frequency stay in step with the motion and add energy every cycle, so the amplitude grows.'
           },
           {
-            question: 'For $m = 1.0\\,\\text{kg}$ and $k = 100\\,\\text{N/m}$, the resonant (natural) frequency is:',
-            options: ['$1\\,\\text{rad/s}$', '$10\\,\\text{rad/s}$', '$50\\,\\text{rad/s}$', '$100\\,\\text{rad/s}$'],
-            correctAnswer: 1,
-            explanation: '$\\omega_0 = \\sqrt{k/m} = \\sqrt{100/1.0} = 10\\,\\text{rad/s}$.'
+            question: 'A 1.0 kg cart on a spring ($k = 100$ N/m) is shaken by a motor. The amplitude is largest when the motor runs at about:',
+            options: ['$1.6\\,\\text{Hz}$', '$10\\,\\text{Hz}$', '$0.63\\,\\text{Hz}$', '$100\\,\\text{Hz}$'],
+            correctAnswer: 0,
+            explanation: '$\\omega_0 = \\sqrt{100/1.0} = 10\\,\\text{rad/s}$, so $f_0 = 10/(2\\pi) \\approx 1.6\\,\\text{Hz}$. Using 10 Hz confuses angular frequency with frequency.'
           },
           {
-            question: 'At exact resonance, the steady-state amplitude is:',
-            options: ['$F_0/k$', '$F_0/(b\\omega_0)$', '$F_0 m$', 'Infinite for any damping'],
+            question: 'A spring–block oscillator is released from twice its earlier starting displacement. Its period:',
+            options: ['Doubles', 'Is unchanged', 'Increases by a factor of $\\sqrt{2}$', 'Halves'],
             correctAnswer: 1,
-            explanation: 'At $\\omega_d = \\omega_0$ the $(\\omega_0^2 - \\omega_d^2)$ term is zero, so $A = (F_0/m)/(b\\omega_0/m) = F_0/(b\\omega_0)$.'
+            explanation: '$T = 2\\pi\\sqrt{m/k}$ has no amplitude dependence. The larger amplitude raises the energy and the maximum speed, not the period.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'physicsc-oscillations-p5-worked',
+      type: 'text' as const,
+      content: `### 📝 Worked Example — Reading an SHM Graph
+
+A graph of position versus time for a block on a spring shows: $x = 0$ at $t = 0$ with a **positive** slope, a first maximum of $x = 0.05\\,\\text{m}$ at $t = 0.25\\,\\text{s}$, and a return to $x = 0$ at $t = 0.50\\,\\text{s}$. Write $x(t)$ and find $v_{\\max}$.
+
+**Step 1 — Amplitude.** The largest displacement is $A = 0.05\\,\\text{m}$.
+
+**Step 2 — Period.** Going from equilibrium to the maximum is one quarter of a cycle, so $T = 4(0.25) = 1.0\\,\\text{s}$ and
+
+$\\omega = \\frac{2\\pi}{T} = 2\\pi\\,\\text{rad/s}$
+
+**Step 3 — Phase.** The block starts at equilibrium moving in the $+x$ direction. A sine starts that way:
+
+$x(t) = 0.05\\sin(2\\pi t) = 0.05\\cos\\!\\left(2\\pi t - \\tfrac{\\pi}{2}\\right)\\,\\text{m}$
+
+so in the form $A\\cos(\\omega t + \\phi)$, the phase constant is $\\phi = -\\pi/2$.
+
+**Step 4 — Maximum speed.** The slope of the graph is the velocity, and it is steepest at the equilibrium crossings:
+
+$v_{\\max} = A\\omega = 0.05(2\\pi) \\approx 0.31\\,\\text{m/s}$
+
+**Reading other features from the graph:**
+
+| Feature on the $x$–$t$ graph | Meaning |
+|------------------------------|---------|
+| Peaks and troughs | $v = 0$ and $\\lvert a \\rvert = A\\omega^2$ (turning points) |
+| Zero crossings | $\\lvert v \\rvert = A\\omega$ and $a = 0$ |
+| Slope sign | Direction of motion |
+| Concave down | $a < 0$, which happens where $x > 0$ |
+
+> 🔑 Read $A$ from the peak height, $T$ from the time between matching points, and $\\phi$ from where the graph starts and which way it is heading.`
+    },
+    {
+      id: 'physicsc-oscillations-p5-mcq2',
+      type: 'multiple-choice' as const,
+      content: `
+**Apply It** 🎯
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'An $x$–$t$ graph for an oscillator shows a maximum at $t = 0$ and the next maximum at $t = 0.8$ s, with peaks at $x = 3$ cm. Its position is:',
+            options: ['$x = 3\\cos(2.5\\pi t)$ cm', '$x = 3\\sin(2.5\\pi t)$ cm', '$x = 3\\cos(0.8\\pi t)$ cm', '$x = 6\\cos(2.5\\pi t)$ cm'],
+            correctAnswer: 0,
+            explanation: 'Starting at a maximum means a cosine with $\\phi = 0$. Maximum to maximum is one period, $T = 0.8$ s, so $\\omega = 2\\pi/0.8 = 2.5\\pi\\,\\text{rad/s}$, and the amplitude is the peak height, 3 cm.'
           },
           {
-            question: 'Reducing the damping constant $b$ in a driven oscillator makes the resonance peak:',
-            options: ['Shorter and wider', 'Taller and narrower', 'Shift to higher frequency', 'Disappear'],
-            correctAnswer: 1,
-            explanation: 'Smaller $b$ gives a larger peak amplitude $F_0/(b\\omega_0)$ and a sharper (higher-$Q$) resonance curve.'
+            question: 'At an instant when the $x$–$t$ graph of an oscillator crosses $x = 0$ with negative slope, the object has:',
+            options: ['Maximum speed in the $-x$ direction and zero acceleration', 'Zero speed and maximum acceleration in the $+x$ direction', 'Maximum speed in the $+x$ direction and zero acceleration', 'Zero speed and maximum acceleration in the $-x$ direction'],
+            correctAnswer: 0,
+            explanation: 'The slope is the velocity, so a negative slope at the equilibrium crossing means maximum speed moving in $-x$; since $a = -\\omega^2 x$, the acceleration there is zero.'
           },
           {
-            question: 'In the steady state, a driven oscillator vibrates at:',
-            options: ['Its natural frequency $\\omega_0$', 'The driving frequency $\\omega_d$', 'The average of $\\omega_0$ and $\\omega_d$', 'Zero frequency'],
-            correctAnswer: 1,
-            explanation: 'Once transients die out, the oscillator follows the driving force at $\\omega_d$, generally with a phase lag $\\delta$.'
-          },
-          {
-            question: 'As the driving frequency approaches zero ($\\omega_d \\to 0$), the amplitude approaches:',
-            options: ['$0$', '$F_0/k$', '$F_0/(b\\omega_0)$', 'Infinity'],
-            correctAnswer: 1,
-            explanation: 'The denominator tends to $\\omega_0^2$, giving $A \\to (F_0/m)/\\omega_0^2 = F_0/k$ — the static spring displacement.'
+            question: 'A 2.5 m simple pendulum ($g = 10\\,\\text{m/s}^2$) is pushed gently once per cycle. Its amplitude grows fastest if the pushes come every:',
+            options: ['$3.1\\,\\text{s}$', '$1.6\\,\\text{s}$', '$0.5\\,\\text{s}$', '$6.3\\,\\text{s}$'],
+            correctAnswer: 0,
+            explanation: '$\\omega_0 = \\sqrt{10/2.5} = 2\\,\\text{rad/s}$, so $T = 2\\pi/2 \\approx 3.1$ s. Pushing once per natural period keeps every push in step with the swing.'
           }
         ]
       }

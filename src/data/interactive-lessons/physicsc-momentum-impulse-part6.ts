@@ -18,7 +18,7 @@ export const physCMomentumPart6Data = {
 | Collision (1D) | Conservation of $p$; check if elastic |
 | Collision (2D) | Separate $x$ and $y$ components |
 | Explosion | Reverse collision — one object splits |
-| Variable mass | $F = dp/dt$ with changing $m$ |
+| Mass added at constant velocity | $F = v\\,dm/dt$ |
 | Center of mass | $x_{\\text{cm}} = \\sum m_i x_i / M$ |
 
 ---
@@ -42,27 +42,31 @@ $h = \\frac{V^2}{2g} = \\frac{(1.99)^2}{2(9.8)} \\approx 0.20\\,\\text{m}$`
     {
       id: 'physicsc-momentum-impulse-p6-worked',
       type: 'text' as const,
-      content: `### 📝 Worked Example — Variable Mass (the Rocket Equation)
+      content: `### 📝 Worked Example — Changing Mass at Constant Velocity (Conveyor Belt)
 
-A rocket ejects fuel at constant exhaust speed $u$ relative to itself. Starting from $\\vec{F} = \\dfrac{d\\vec{p}}{dt}$ applied to the rocket-plus-fuel system in free space, we can derive how the rocket's speed grows.
+Sand falls straight down onto a horizontal conveyor belt at a rate $\\dfrac{dm}{dt} = 5.0\\,\\text{kg/s}$. A motor keeps the belt moving at a constant $v = 2.0\\,\\text{m/s}$. Find the extra horizontal force the motor must supply and the extra power it delivers.
 
-**Step 1 — Set up momentum conservation over a small time $dt$.** In $dt$ the rocket of mass $m$ expels $-dm$ of fuel (mass decreases, so $dm < 0$) at speed $u$ backward relative to the rocket. With no external force, total momentum is unchanged, which leads to:
+**Step 1 — Use the general form of Newton's second law.** The momentum of the belt-plus-sand system is $p = mv$, and the mass on the belt grows while $v$ stays fixed:
 
-$m\\,dv = -u\\,dm$
+$F = \\frac{dp}{dt} = m\\frac{dv}{dt} + v\\frac{dm}{dt} = 0 + v\\frac{dm}{dt}$
 
-**Step 2 — Separate variables and integrate.**
+**Step 2 — Evaluate the force.**
 
-$\\int_{v_i}^{v_f} dv = -u\\int_{m_i}^{m_f}\\frac{dm}{m}$
+$F = (2.0)(5.0) = 10\\,\\text{N}$
 
-**Step 3 — Evaluate the integral.**
+Using $F = ma$ would wrongly give zero, because the belt does not accelerate. The force is needed to bring each new bit of sand up to belt speed.
 
-$v_f - v_i = -u\\big[\\ln m\\big]_{m_i}^{m_f} = u\\,\\ln\\!\\left(\\frac{m_i}{m_f}\\right)$
+**Step 3 — Power.** The motor's force acts on a belt moving at $v$:
 
-This is the **Tsiolkovsky rocket equation**. The thrust is $F_{\\text{thrust}} = u\\left|\\dfrac{dm}{dt}\\right|$.
+$P = Fv = (10)(2.0) = 20\\,\\text{W}$
 
-**Numeric check:** If $u = 2500\\,\\text{m/s}$ and the rocket burns from $m_i = 3000\\,\\text{kg}$ to $m_f = 1000\\,\\text{kg}$, then $\\Delta v = 2500\\,\\ln(3) \\approx 2747\\,\\text{m/s}$.
+**Step 4 — Where does the power go?** The sand's kinetic energy grows at
 
-> 🔑 Variable-mass problems require the general law $F = dp/dt$ — you cannot just use $F = ma$ with constant $m$.`
+$\\frac{dK}{dt} = \\frac{1}{2}\\frac{dm}{dt}v^2 = \\frac{1}{2}(5.0)(2.0)^2 = 10\\,\\text{W}$
+
+The other $10\\,\\text{W}$ is dissipated by kinetic friction while each new grain slides on the belt before it matches the belt's speed.
+
+> 🔑 For a system whose mass changes while its velocity stays constant, $F = v\\,\\dfrac{dm}{dt}$. This is the only variable-mass case the AP Physics C exam requires.`
     },
     {
       id: 'physicsc-momentum-impulse-p6-mcq1',
@@ -74,7 +78,7 @@ This is the **Tsiolkovsky rocket equation**. The thrust is $F_{\\text{thrust}} =
         questions: [
           {
             question: 'In a ballistic pendulum, which is conserved during the collision?',
-            options: ['Kinetic energy', 'Momentum', 'Both KE and momentum', 'Neither'],
+            options: ['Kinetic energy', 'Momentum', 'Both KE and momentum', 'Neither quantity'],
             correctAnswer: 1,
             explanation: 'The collision is perfectly inelastic (the bullet embeds), so only momentum is conserved. KE is lost; energy conservation is then used for the swing.'
           },
@@ -85,27 +89,27 @@ This is the **Tsiolkovsky rocket equation**. The thrust is $F_{\\text{thrust}} =
             explanation: 'After the collision $V \\approx 1.99\\,\\text{m/s}$, then $h = V^2/(2g) = (1.99)^2/(2\\cdot 9.8) \\approx 0.20\\,\\text{m}$.'
           },
           {
-            question: 'The rocket equation $\\Delta v = u\\,\\ln(m_i/m_f)$ comes from integrating:',
-            options: ['$F = ma$ with constant mass', '$m\\,dv = -u\\,dm$', '$J = F\\,\\Delta t$', '$E = \\tfrac{1}{2}mv^2$'],
+            question: 'Sand drops vertically onto a conveyor belt at 5.0 kg/s while the belt keeps moving at a constant 2.0 m/s. The extra horizontal force the motor must supply is:',
+            options: ['$2.5\\,\\text{N}$', '$10\\,\\text{N}$', '$5.0\\,\\text{N}$', '$20\\,\\text{N}$'],
             correctAnswer: 1,
-            explanation: 'Separating variables in $m\\,dv = -u\\,dm$ and integrating gives $\\Delta v = u\\ln(m_i/m_f)$.'
+            explanation: 'With $dv/dt = 0$, $F = dp/dt = v\\,dm/dt = (2.0)(5.0) = 10\\,\\text{N}$. Basing the force on the sand\'s kinetic-energy gain alone gives half that, 5.0 N.'
           },
           {
-            question: 'A rocket with exhaust speed $u = 2500\\,\\text{m/s}$ burns from 3000 kg to 1000 kg. Its speed gain is closest to:',
-            options: ['$1250\\,\\text{m/s}$', '$2747\\,\\text{m/s}$', '$5000\\,\\text{m/s}$', '$7500\\,\\text{m/s}$'],
-            correctAnswer: 1,
-            explanation: '$\\Delta v = 2500\\,\\ln(3000/1000) = 2500\\,\\ln 3 \\approx 2500(1.099) \\approx 2747\\,\\text{m/s}$.'
+            question: 'For that belt, the motor supplies an extra 20 W, but the sand\'s kinetic energy grows at only 10 W. The other 10 W:',
+            options: ['Is dissipated by friction as the sand slips on the belt', 'Is stored as gravitational energy of the sand', 'Is lost because momentum is not conserved', 'Goes into the kinetic energy of the belt itself'],
+            correctAnswer: 0,
+            explanation: 'Each new grain slides on the belt until it reaches belt speed, and kinetic friction dissipates energy during that slipping. The belt\'s own speed, and so its kinetic energy, does not change.'
           },
           {
-            question: 'Why must $F = dp/dt$ (not $F = ma$ with constant $m$) be used for rockets?',
+            question: 'Why must $F = dp/dt$ (rather than $F = ma$) be used for the conveyor belt?',
             options: [
-              'Because rockets travel in vacuum',
-              'Because the system’s mass changes as fuel is ejected',
-              'Because momentum is not conserved for rockets',
-              'Because gravity is negligible'
+              'Because its velocity is constant',
+              'Because the moving mass changes with time',
+              'Because friction on the sand is not constant',
+              'Because momentum is not conserved for the belt'
             ],
             correctAnswer: 1,
-            explanation: 'The rocket continuously loses mass, so $dp/dt = m\\,dv/dt + v\\,dm/dt$. Only the general form captures the $v\\,dm/dt$ thrust term.'
+            explanation: 'Expanding $dp/dt = m\\,dv/dt + v\\,dm/dt$: the belt\'s velocity is constant, so $F = ma$ would give zero, but the growing mass on the belt requires $F = v\\,dm/dt$.'
           },
           {
             question: 'An explosion splits a stationary 4 kg object into a 1 kg piece moving at $+9\\,\\text{m/s}$ and a 3 kg piece. The 3 kg piece moves at:',

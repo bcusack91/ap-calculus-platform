@@ -17,7 +17,6 @@ This workshop brings together all the variable-acceleration techniques. The key 
 | $t$ only | Direct integration | $v = v_0 + \\int a(t)\\,dt$ |
 | $v$ only | Separation of variables | $\\frac{dv}{a(v)} = dt$ |
 | $x$ only | Energy method | $v\\,dv = a(x)\\,dx$ |
-| $t$ and $v$ | Separation + integrating factor | Case-by-case |
 | $v$ and $x$ | $v\\,dv/dx = a(v,x)$ | Often separable |`
     },
     {
@@ -31,9 +30,9 @@ This workshop brings together all the variable-acceleration techniques. The key 
     {
       id: 'varaccel6-prob1',
       type: 'text' as const,
-      content: `## Worked Problem 1: Rocket with Drag
+      content: `## Worked Problem 1: Constant Force with Linear Drag
 
-A rocket in space has thrust $F = F_0$ and experiences drag $F_d = -bv$. Its mass $m$ is constant. Find $v(t)$.
+A boat's engine pushes with a constant force $F_0$, and the water exerts a resistive force $-bv$. The boat's mass $m$ is constant and it starts from rest. Find $v(t)$.
 
 $$ma = F_0 - bv \\implies \\frac{dv}{dt} = \\frac{F_0}{m} - \\frac{b}{m}v$$
 
@@ -51,14 +50,14 @@ $$-\\frac{1}{\\beta}\\ln\\frac{\\alpha - \\beta v}{\\alpha} = t$$
 
 $$v(t) = \\frac{\\alpha}{\\beta}(1 - e^{-\\beta t}) = \\frac{F_0}{b}(1 - e^{-bt/m})$$
 
-**Terminal velocity:** $v_T = F_0/b$ (when thrust balances drag).
+**Terminal velocity:** $v_T = F_0/b$ (when the engine force balances the drag).
 
 **Time constant:** $\\tau = m/b$ (time to reach $\\approx 63\\%$ of $v_T$).`
     },
     {
       id: 'varaccel6-mcq2',
       type: 'mcq' as const,
-      question: 'In the rocket-drag problem, what fraction of terminal velocity is reached after $2$ time constants?',
+      question: 'In the boat problem, what fraction of terminal velocity is reached after $2$ time constants?',
       options: [
         '$1 - e^{-2} \\approx 86\\%$',
         '$1 - e^{-1} \\approx 63\\%$',
@@ -102,10 +101,10 @@ So $x = 6$ (the other root is the starting point $x = 0$).`
       type: 'mcq' as const,
       question: 'A block on a surface has friction force $f = -\\mu_k m g \\text{sign}(v)$ and spring force $F = -kx$. What makes solving for $x(t)$ particularly challenging?',
       options: [
-        'The friction force direction changes at each turning point',
-        'The spring force is nonlinear',
-        'The mass changes with time',
-        'Gravity is variable'
+        'Friction reverses direction at each turning point',
+        'The friction force grows with the block\'s speed',
+        'The normal force changes as the spring stretches',
+        'The spring constant shrinks as the block slows'
       ],
       correctAnswer: 0,
       explanation: 'Kinetic friction always opposes the velocity direction. When the block oscillates, $\\text{sign}(v)$ reverses at each turning point, changing the effective equation of motion. You must re-solve the ODE for each half-cycle with new initial conditions.'

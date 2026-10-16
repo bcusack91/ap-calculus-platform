@@ -11,7 +11,7 @@ export const physCWorkEnergyPart1Data = {
 
 Work done by a variable force along a path:
 
-$W = \int_{x_1}^{x_2} F(x)\,dx$
+$W = \\int_{x_1}^{x_2} F(x)\\,dx$
 
 For a constant force at angle $\\theta$ to displacement:
 $W = Fd\\cos\\theta$
@@ -28,7 +28,7 @@ Work is a scalar quantity measured in Joules (J).
 
 **Find the work done by $F(x) = 3x^2$ from $x = 0$ to $x = 2$ m.**
 
-$W = \int_0^2 3x^2\,dx = x^3\\Big|_0^2 = 8$ J ✅
+$W = \\int_0^2 3x^2\\,dx = x^3\\Big|_0^2 = 8$ J ✅
     
     `
     },
@@ -46,7 +46,7 @@ $W = \int_0^2 3x^2\,dx = x^3\\Big|_0^2 = 8$ J ✅
                               "Zero",
                               "Maximum",
                               "Negative",
-                              "$Fd$"
+                              "Equal to $Fd$"
                     ],
                     "correctAnswer": 0,
                     "explanation": "$W = Fd\\cos 90° = 0$. A perpendicular force does no work."
@@ -62,9 +62,9 @@ $W = \int_0^2 3x^2\,dx = x^3\\Big|_0^2 = 8$ J ✅
 
 1) A constant force of 10 N pushes an object 5 m. Work done (J)?
 
-2) $W = \int_0^2 3x^2\,dx = ?$ J
+2) $W = \\int_0^2 3x^2\\,dx = ?$ J
 
-3) $W = \int_0^3 4x\,dx = ?$ J
+3) $W = \\int_0^3 4x\\,dx = ?$ J
     
     `,
       exercise: {

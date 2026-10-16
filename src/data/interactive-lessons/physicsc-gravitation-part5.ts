@@ -65,7 +65,7 @@ For $r_f > r_i$ this is positive — you must add energy to climb to a higher or
           },
           {
             question: 'To move a satellite from a low circular orbit to a higher one, the required energy is:',
-            options: ['Negative (energy is released)', 'Zero', 'Positive (energy must be added)', 'Equal to the kinetic energy at the lower orbit'],
+            options: ['Negative, because energy is released', 'Zero, because gravity is conservative', 'Positive, because energy must be added', 'Equal to the lower orbit\'s KE'],
             correctAnswer: 2,
             explanation: '$E = -\\frac{GMm}{2r}$ becomes less negative as $r$ increases, so $\\Delta E > 0$: energy must be added.'
           },
@@ -77,7 +77,7 @@ For $r_f > r_i$ this is positive — you must add energy to climb to a higher or
           },
           {
             question: 'If a satellite\'s circular-orbit radius is halved, its total energy $E = -\\frac{GMm}{2r}$ becomes:',
-            options: ['Twice as negative', 'Half as negative', 'Zero', 'Positive'],
+            options: ['Twice as negative', 'Half as negative as before', 'Four times as negative', 'Positive, since $r$ is smaller'],
             correctAnswer: 0,
             explanation: 'Halving $r$ doubles $\\frac{1}{r}$, so $E$ becomes twice as negative (the system is more tightly bound).'
           },

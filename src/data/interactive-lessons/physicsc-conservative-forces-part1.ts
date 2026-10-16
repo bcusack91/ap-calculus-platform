@@ -16,9 +16,9 @@ A force is **conservative** if and only if:
 
 1. The work done by the force is **independent of the path** taken between two points.
 2. Equivalently: the work done around any **closed loop** is zero.
-3. Equivalently: the force can be written as the negative gradient of a **potential energy** function.
+3. Equivalently: the force can be written as the negative slope of a **potential energy** function.
 
-$$\\vec{F} = -\\nabla U = -\\frac{dU}{dx}\\hat{x} \\quad \\text{(1D)}$$
+$$F_x = -\\frac{dU}{dx} \\quad \\text{(one dimension)}$$
 
 $$\\oint \\vec{F} \\cdot d\\vec{r} = 0 \\quad \\text{(closed path)}$$
 
@@ -28,7 +28,7 @@ $$\\oint \\vec{F} \\cdot d\\vec{r} = 0 \\quad \\text{(closed path)}$$
 |:---:|:---:|
 | Gravity ($\\vec{F} = -mg\\hat{y}$) | Kinetic friction ($f_k = \\mu_k N$) |
 | Spring force ($F = -kx$) | Air resistance ($f = bv$) |
-| Electrostatic ($F = kq_1q_2/r^2$) | Tension (when string does net work) |
+| Any force with a $U(x)$, $F = -dU/dx$ | Tension (when string does net work) |
 | Gravitational ($F = GMm/r^2$) | Applied/push forces (generally) |`
     },
     {
@@ -36,10 +36,10 @@ $$\\oint \\vec{F} \\cdot d\\vec{r} = 0 \\quad \\text{(closed path)}$$
       type: 'mcq' as const,
       question: 'Which property uniquely identifies a conservative force?',
       options: [
-        'The work done is path-independent (depends only on endpoints)',
-        'The force is always constant',
-        'The force always acts toward a fixed point',
-        'The force does no work'
+        'Its work depends only on the endpoints',
+        'Its magnitude stays constant along any path',
+        'It always points toward one fixed point',
+        'It does no work at all on a moving object'
       ],
       correctAnswer: 0,
       explanation: 'A conservative force has path-independent work: $W = \\int_A^B \\vec{F}\\cdot d\\vec{r}$ depends only on $A$ and $B$, not the path. This is equivalent to having a potential energy function.'
@@ -83,10 +83,10 @@ This depends only on the endpoints $y_A$ and $y_B$.`
       type: 'mcq' as const,
       question: 'A block slides around a closed loop on a rough surface and returns to its starting point. The work done by friction is:',
       options: [
-        'Negative (friction always opposes the displacement)',
-        'Zero (closed loop, so displacement is zero)',
-        'Positive (friction provides energy)',
-        'Cannot be determined'
+        'Negative, since friction opposes every displacement',
+        'Zero, since the net displacement is zero',
+        'Positive, since friction adds thermal energy',
+        'Cannot be determined without the path'
       ],
       correctAnswer: 0,
       explanation: 'For a closed loop, friction does $W = -f_k \\times (\\text{total distance traveled}) < 0$. The work is negative because friction always opposes the direction of motion at every point. This proves friction is non-conservative.'
@@ -132,10 +132,10 @@ $$v^2 = 22.7 \\implies v = 4.76 \\text{ m/s}$$`
       type: 'mcq' as const,
       question: 'An applied force pushes a block up a frictionless incline at constant velocity. The work done by the applied force equals:',
       options: [
-        '$\\Delta U = mgh$ (since $\\Delta K = 0$, all work becomes potential energy)',
-        '$0$ (constant velocity means no work)',
-        '$-mgh$ (force opposes gravity)',
-        '$\\frac{1}{2}mv^2$ (kinetic energy)'
+        '$mgh$, all going into potential energy',
+        '$0$, because the velocity is constant',
+        '$-mgh$, because the force opposes gravity',
+        '$\\frac{1}{2}mv^2$, the kinetic energy'
       ],
       correctAnswer: 0,
       explanation: '$W_{nc} = \\Delta K + \\Delta U = 0 + mgh = mgh$. The applied force is non-conservative, and since the velocity is constant ($\\Delta K = 0$), all the work goes into increasing potential energy.'
@@ -145,10 +145,10 @@ $$v^2 = 22.7 \\implies v = 4.76 \\text{ m/s}$$`
       type: 'mcq' as const,
       question: 'For which of these forces can we define a potential energy function?',
       options: [
-        'Gravity and spring forces (both are conservative)',
-        'Friction and gravity',
-        'All forces',
-        'Only gravity'
+        'Gravity and spring forces',
+        'Friction and gravity forces',
+        'All forces, including friction',
+        'Gravity only, not spring forces'
       ],
       correctAnswer: 0,
       explanation: 'Potential energy can be defined only for conservative forces. Both gravity ($U = mgh$) and spring ($U = \\frac{1}{2}kx^2$) are conservative. Friction is non-conservative — no $U$ exists for it.'
@@ -162,7 +162,7 @@ $$v^2 = 22.7 \\implies v = 4.76 \\text{ m/s}$$`
 |:---:|:---:|
 | Conservative force | Path-independent work; $\\oint \\vec{F}\\cdot d\\vec{r} = 0$ |
 | Non-conservative | Path-dependent; $\\oint \\vec{F}\\cdot d\\vec{r} \\neq 0$ |
-| Potential energy | Exists only for conservative forces: $\\vec{F} = -\\nabla U$ |
+| Potential energy | Exists only for conservative forces: $F = -dU/dx$ |
 | Energy theorem | $W_{nc} = \\Delta K + \\Delta U = \\Delta E_{\\text{mech}}$ |
 
 > **Next up:** Part 2 — Potential Energy Functions, deriving $U(x)$ for various forces.`

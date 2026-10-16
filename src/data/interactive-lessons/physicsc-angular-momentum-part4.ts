@@ -47,7 +47,7 @@ $$K_2 = \\frac{1}{2}I_2\\left(\\frac{I_1}{I_2}\\omega_1\\right)^2 = \\frac{I_1^2
 
 Since $I_2 < I_1$: $K_2 > K_1$. **Kinetic energy increases!**
 
-Where does this energy come from? From the **internal work** done by the skater's muscles as she pulls her arms inward against the centrifugal tendency.
+Where does this energy come from? From the **internal work** done by the skater's muscles: her hands move in circles, so she must pull them toward the axis, and that inward pull does positive work as her arms move inward.
 
 ### Worked Example
 
@@ -63,9 +63,9 @@ The skater does $60$ J of internal work.`
       id: 'am4-mcq2',
       type: 'mcq' as const,
       question: 'When a spinning ice skater pulls her arms in (no external torques), the kinetic energy:',
-      options: ['Increases', 'Decreases', 'Stays the same', 'Depends on the angular velocity'],
+      options: ['Increases', 'Decreases, since $I$ is smaller', 'Stays the same, since $L$ is conserved', 'Depends on the angular velocity'],
       correctAnswer: 0,
-      explanation: '$K = L^2/(2I)$. $L$ is constant, but $I$ decreases, so $K = L^2/(2I)$ increases. The skater does work by pulling inward against the outward centrifugal tendency.'
+      explanation: '$K = L^2/(2I)$. $L$ is constant, but $I$ decreases, so $K = L^2/(2I)$ increases. The skater\'s muscles do positive work pulling her arms inward.'
     },
     {
       id: 'am4-collisions',
@@ -94,30 +94,30 @@ Forces at the pivot have zero moment arm → zero torque about the pivot. This m
       id: 'am4-mcq3',
       type: 'mcq' as const,
       question: 'A $0.01$ kg bullet at $400$ m/s embeds in a $2$ kg rod of length $1$ m, pivoted at one end. The angular velocity after impact is approximately:',
-      options: ['$5.97$ rad/s', '$2$ rad/s', '$4$ rad/s', '$200$ rad/s'],
+      options: ['$5.91$ rad/s', '$6.00$ rad/s', '$1.99$ rad/s', '$4.00$ rad/s'],
       correctAnswer: 0,
-      explanation: '$L_i = 0.01 \\times 400 \\times 1 = 4$ $kg\\cdot m^{2}/s$. $I_f = \\frac{1}{3}(2)(1)^2 + 0.01(1)^2 = 0.667 + 0.01 = 0.677$ $kg\\cdot m^{2}$. $\\omega = 4/0.677 \\approx 5.91$ rad/s $\\approx 5.97$ rad/s.'
+      explanation: '$L_i = 0.01 \\times 400 \\times 1 = 4$ $kg\\cdot m^{2}/s$. $I_f = \\frac{1}{3}(2)(1)^2 + 0.01(1)^2 = 0.667 + 0.01 = 0.677$ $kg\\cdot m^{2}$. $\\omega = 4/0.677 \\approx 5.91$ rad/s. Leaving the bullet out of $I$ gives 6.00 rad/s.'
     },
     {
       id: 'am4-kepler',
       type: 'text' as const,
-      content: `## Kepler's Second Law from Angular Momentum
+      content: `## Orbits: Angular Momentum Under a Central Force
 
-For a planet in orbit, gravity is a central force ($\\vec{F} \\parallel \\vec{r}$), so $\\vec{\\tau} = \\vec{r} \\times \\vec{F} = 0$.
+For a satellite in orbit, gravity is a central force ($\\vec{F} \\parallel \\vec{r}$), so about the central body $\\vec{\\tau} = \\vec{r} \\times \\vec{F} = 0$ and the satellite's angular momentum is constant:
 
 $$L = mr v_{\\perp} = \\text{const}$$
 
-The area swept per unit time:
+At the closest and farthest points of an elliptical orbit the velocity is perpendicular to $\\vec{r}$, so
 
-$$\\frac{dA}{dt} = \\frac{1}{2}r v_{\\perp} = \\frac{L}{2m} = \\text{const}$$
+$$r_{\\min} v_{\\max} = r_{\\max} v_{\\min}$$
 
-This is **Kepler's second law**: a planet sweeps out equal areas in equal times — a direct consequence of angular momentum conservation under a central force.`
+The satellite moves fastest where it is closest to the central body.`
     },
     {
       id: 'am4-mcq4',
       type: 'mcq' as const,
-      question: 'A satellite in an elliptical orbit has speed $v_1 = 8000$ m/s at distance $r_1 = 7000$ km. At $r_2 = 14{,}000$ km, its speed is:',
-      options: ['$4000$ m/s', '$8000$ m/s', '$16{,}000$ m/s', '$2000$ m/s'],
+      question: 'A satellite in an elliptical orbit has speed $v_1 = 8000$ m/s at distance $r_1 = 7000$ km. At $r_2 = 14\\,000$ km, its speed is:',
+      options: ['$4000$ m/s', '$8000$ m/s', '$16\\,000$ m/s', '$2000$ m/s'],
       correctAnswer: 0,
       explanation: 'At perigee and apogee, $v \\perp r$. Conservation: $r_1 v_1 = r_2 v_2$. $v_2 = r_1 v_1/r_2 = 7000(8000)/14000 = 4000$ m/s.'
     },
@@ -132,9 +132,9 @@ This is **Kepler's second law**: a planet sweeps out equal areas in equal times 
 | Skater pulls arms in | $\\omega$ increases, $K$ increases |
 | $K$ change | $K = L^2/(2I)$ — inversely proportional to $I$ |
 | Collision with pivot | Conserve $L$ about pivot |
-| Central forces | $\\vec{\\tau} = 0$ → Kepler's second law |
+| Central forces | $\\vec{\\tau} = 0$ → $r v_{\\perp}$ constant in orbit |
 
-> **Next:** Part 5 — Precession and gyroscopes.`
+> **Next:** Part 5 — Angular impulse from graphs and angular momentum exchange.`
     }
   ]
 };
