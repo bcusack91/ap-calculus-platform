@@ -351,6 +351,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   // Thermo Applications
   'spontaneity-free-energy-applications': () => import('./ap-chemistry'),
   'galvanic-cells-thermo-applications': () => import('./ap-chemistry'),
+  'atomic-spectra': () => import('./ap-chemistry'),
 
   // ═══════════════════════════════════════════════════
   // AP Physics 1 Exit Quizzes
@@ -1131,6 +1132,7 @@ export const EXIT_QUIZ_ALIASES: Record<string, string> = {
   'related-rates': 'related-rates-calcab',
   'derivatives-of-exponential-functions': 'derivatives-exp-log-calcab',
   'second-derivative-test': 'concavity-inflection-points-calcab',
+  'solubility-equilibrium': 'solubility-ksp',
 }
 
 /** The pool slug that holds a topic's exit-quiz items. */
