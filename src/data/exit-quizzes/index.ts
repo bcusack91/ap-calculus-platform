@@ -392,6 +392,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   'fluids-buoyancy': () => import('./ap-physics-1'),
   'fluids-continuity': () => import('./ap-physics-1'),
   'fluids-bernoulli': () => import('./ap-physics-1'),
+  'power-physics': () => import('./ap-physics-1'),
 
   // ═══════════════════════════════════════════════════
   // AP Physics 2 Exit Quizzes
@@ -461,6 +462,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   'physics-c-rotational-kinematics-dynamics': () => import('./ap-physics-c-mechanics'),
   'physics-c-angular-momentum': () => import('./ap-physics-c-mechanics'),
   'physics-c-simple-harmonic-motion': () => import('./ap-physics-c-mechanics'),
+  'physics-c-universal-gravitation': () => import('./ap-physics-c-mechanics'),
 
   // ═══════════════════════════════════════════════════
   // AP Physics C: E&M Exit Quizzes
@@ -488,6 +490,9 @@ const quizLoaders: Record<string, QuizLoader> = {
   'physics-c-faraday-induction': () => import('./ap-physics-c-em'),
   'physics-c-inductance-rl': () => import('./ap-physics-c-em'),
   'physics-c-maxwell-equations': () => import('./ap-physics-c-em'),
+  'physics-c-electric-field-coulomb': () => import('./ap-physics-c-em'),
+  'physics-c-capacitors-dielectrics': () => import('./ap-physics-c-em'),
+  'physics-c-inductance-rl-circuits': () => import('./ap-physics-c-em'),
 
   // ═══════════════════════════════════════════════════
   // AP Calculus AB Exit Quizzes
@@ -1182,6 +1187,9 @@ export const EXIT_QUIZ_ALIASES: Record<string, string> = {
   'unit-circle-radian-measure': 'the-unit-circle',
   'trigonometric-identities': 'trigonometric-identities-precalc',
   'inverse-trig-functions': 'inverse-trig-functions-precalc',
+  'physics-c-position-velocity-acceleration': 'physics-c-1d-kinematics',
+  'physics-c-moment-of-inertia': 'physics-c-rotational-kinematics-dynamics',
+  'physics-c-faraday-lenz': 'physics-c-faraday-induction',
 }
 
 /** The pool slug that holds a topic's exit-quiz items. */

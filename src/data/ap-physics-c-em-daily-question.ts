@@ -7,22 +7,16 @@
 import { generateExitQuiz } from '@/data/exit-quizzes'
 
 const TOPIC_SLUGS = [
-  'physics-c-coulomb-law',
-  'physics-c-electric-fields',
+  'physics-c-electric-field-coulomb',
   'physics-c-gauss-law',
   'physics-c-electric-potential',
-  'physics-c-conductors-equilibrium',
-  'physics-c-potential-energy',
-  'physics-c-capacitors',
-  'physics-c-dielectrics',
-  'physics-c-energy-density',
+  'physics-c-capacitors-dielectrics',
   'physics-c-dc-circuits',
   'physics-c-rc-circuits',
-  'physics-c-power-circuits',
   'physics-c-magnetic-forces',
   'physics-c-magnetic-field-sources',
-  'physics-c-faraday-induction',
-  'physics-c-inductance-rl',
+  'physics-c-faraday-induction', // pool slug for production topic physics-c-faraday-lenz
+  'physics-c-inductance-rl-circuits',
   'physics-c-maxwell-equations',
 ]
 

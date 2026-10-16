@@ -18,7 +18,7 @@ const TOPIC_SLUGS = [
   'physics-c-potential-energy-curves',
   'physics-c-momentum-collisions',
   'physics-c-center-of-mass',
-  'physics-c-variable-mass',
+  'physics-c-universal-gravitation',
   'physics-c-rotational-kinematics-dynamics',
   'physics-c-angular-momentum',
   'physics-c-simple-harmonic-motion',
