@@ -64,7 +64,7 @@ export const AP_PRACTICE_EXAMS: Record<string, ApPracticeExam> = {
   'ap-micro': { courseSlug: 'ap-microeconomics', path: '/ap-micro-practice', load: () => import('@/data/ap-micro-practice/config').then((m) => m.config) },
   'ap-physics-c-em': { courseSlug: 'ap-physics-c-em', path: '/ap-physics-c-em-practice', load: () => import('@/data/ap-physics-c-em-practice/config').then((m) => m.config) },
   'ap-physics-c-mech': { courseSlug: 'ap-physics-c-mechanics', path: '/ap-physics-c-mech-practice', load: () => import('@/data/ap-physics-c-mech-practice/config').then((m) => m.config) },
-  'ap-physics1': { courseSlug: 'ap-physics-1', path: '/ap-physics1-practice', load: () => import('@/data/ap-physics1-practice/config').then((m) => m.config) },
+  'ap-physics1': { courseSlug: 'ap-physics-1', path: '/ap-physics1-practice', load: () => import('@/data/ap-physics1-practice/config').then((m) => m.config), moreForms: [() => import('@/data/ap-physics1-practice/form-2/config').then((m) => m.config), () => import('@/data/ap-physics1-practice/form-3/config').then((m) => m.config)] },
   'ap-physics2': { courseSlug: 'ap-physics-2', path: '/ap-physics2-practice', load: () => import('@/data/ap-physics2-practice/config').then((m) => m.config) },
   'ap-precalc': { courseSlug: 'ap-precalculus', path: '/ap-precalc-practice', load: () => import('@/data/ap-precalc-practice/config').then((m) => m.config) },
   'ap-psych': { courseSlug: 'ap-psychology', path: '/ap-psych-practice', load: () => import('@/data/ap-psych-practice/config').then((m) => m.config) },
