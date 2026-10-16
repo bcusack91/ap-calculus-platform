@@ -88,11 +88,11 @@ No value satisfies both — the particle is **never at rest** (it's always movin
             explanation: '$\\vec{v}(t) = \\lim_{\\Delta t \\to 0}\\frac{\\vec{r}(t+\\Delta t) - \\vec{r}(t)}{\\Delta t}$ — the limit of secant vectors, which is tangent to the curve. Velocity need not be perpendicular to acceleration, its magnitude is the speed (not always 1), and it is the derivative of position, not the antiderivative.'
           },
           {
-            label: 'If the speed of a particle is constant, the acceleration vector is:',
-            options: ['Perpendicular to velocity (or zero)', 'Zero (constant speed means no acceleration)', 'Parallel to velocity (pointing along the path)', 'A constant vector (fixed size and direction)'],
-            correctAnswers: ['Perpendicular to velocity (or zero)'],
-            hints: ['Differentiate $\\|\\vec{v}\\|^2 = v_x^2 + v_y^2 = c^2$.'],
-            explanation: 'If $\\|\\vec{v}\\|^2 = c^2$, then $\\frac{d}{dt}(\\vec{v}\\cdot\\vec{v}) = 2\\vec{v}\\cdot\\vec{a} = 0$, so $\\vec{a} \\perp \\vec{v}$ (or $\\vec{a} = \\vec{0}$). Constant speed does not mean zero acceleration: on a circle at constant speed, $\\vec{a}$ points toward the center and keeps changing direction.'
+            label: 'For $\\vec{r}(t) = \\langle \\cos t, \\sin t \\rangle$ the speed is always $1$. The acceleration vector is:',
+            options: ['$\\langle -\\cos t, -\\sin t \\rangle$, which is never zero', '$\\langle 0, 0 \\rangle$, because the speed is constant', '$\\langle -\\sin t, \\cos t \\rangle$, the same as velocity', '$\\langle \\cos t, \\sin t \\rangle$, the same as position'],
+            correctAnswers: ['$\\langle -\\cos t, -\\sin t \\rangle$, which is never zero'],
+            hints: ['Differentiate $\\vec{v}(t) = \\langle -\\sin t, \\cos t \\rangle$ component by component.'],
+            explanation: '$\\vec{a}(t) = \\vec{v}\\,\'(t) = \\langle -\\cos t, -\\sin t \\rangle$, whose length is $1$, so it is never the zero vector. Constant speed does not mean zero acceleration: the direction of $\\vec{v}$ keeps changing, and acceleration measures any change in the velocity vector.'
           }
         ]
       }

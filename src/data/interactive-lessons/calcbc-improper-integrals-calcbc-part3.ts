@@ -85,16 +85,18 @@ The case $p = 1$ is special:
 
 This shows the $p$-test has a sharp threshold: the tiniest push above $p = 1$ makes the integral converge.
 
-### Exponential vs. Polynomial Decay
+### Four Benchmarks, Each Decided by a Limit
 
-| Function | Behavior at $\\infty$ | $\\int_0^{\\infty}$ |
+| Integral | Antiderivative | Limit as $b \\to \\infty$ |
 |:---:|:---:|:---:|
-| $e^{-x}$ | Decays exponentially | Converges ($= 1$) |
-| $\\frac{1}{x^2}$ | Decays like $x^{-2}$ | Converges ($= 1$ from $1$) |
-| $\\frac{1}{x}$ | Decays like $x^{-1}$ | Diverges |
-| $\\frac{1}{\\ln x}$ | Decays slower than $x^{-1}$ | Diverges |
+| $\\int_0^{b} e^{-x}\\,dx$ | $-e^{-x}$ | $1 - e^{-b} \\to 1$ (converges) |
+| $\\int_1^{b} \\frac{1}{x^2}\\,dx$ | $-\\frac{1}{x}$ | $1 - \\frac{1}{b} \\to 1$ (converges) |
+| $\\int_1^{b} \\frac{1}{x}\\,dx$ | $\\ln x$ | $\\ln b \\to \\infty$ (diverges) |
+| $\\int_e^{b} \\frac{1}{x\\ln x}\\,dx$ | $\\ln(\\ln x)$ | $\\ln(\\ln b) \\to \\infty$ (diverges) |
 
-$$\\boxed{\\text{Exponential decay} \\gg \\text{polynomial decay} \\gg \\text{logarithmic decay}}$$`
+$$\\boxed{\\text{Every verdict comes from an antiderivative and a limit}}$$
+
+> **Exam scope:** the AP exam decides improper integrals by evaluating the limit (LIM-6.A.2). Comparison tests belong to series (Unit 10), not to improper integrals.`
     },
     {
       id: 'imp3-dropdown',

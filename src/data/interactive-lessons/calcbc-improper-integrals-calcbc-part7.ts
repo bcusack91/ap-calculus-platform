@@ -74,10 +74,10 @@ $$\\boxed{\\text{Type I: } p > 1 \\text{ converges} \\qquad \\text{Type II: } p 
           },
           {
             label: '$\\int_1^{\\infty} \\frac{x+1}{x^3}\\,dx$: Result?',
-            options: ['Converges to $1$', 'Diverges (like $1/x$)', 'Converges to $\\frac{3}{2}$', 'Converges to $\\frac{1}{2}$'],
+            options: ['Converges to $1$', 'Diverges', 'Converges to $\\frac{3}{2}$', 'Converges to $\\frac{1}{2}$'],
             correctAnswers: ['Converges to $\\frac{3}{2}$'],
             hints: ['$\\frac{x + 1}{x^3} = \\frac{1}{x^2} + \\frac{1}{x^3}$.'],
-            explanation: 'Split into $\\int_1^{\\infty} x^{-2}\\,dx + \\int_1^{\\infty} x^{-3}\\,dx = 1 + \\frac{1}{2} = \\frac{3}{2}$. Keeping only one term gives $1$ or $\\frac{1}{2}$, and the integrand behaves like $\\frac{1}{x^2}$, not $\\frac{1}{x}$.'
+            explanation: 'Split into $\\int_1^{\\infty} x^{-2}\\,dx + \\int_1^{\\infty} x^{-3}\\,dx = 1 + \\frac{1}{2} = \\frac{3}{2}$. Keeping only one term gives $1$ or $\\frac{1}{2}$, and both limits are finite, so it does not diverge.'
           },
           {
             label: '$\\int_0^{\\infty} x e^{-x}\\,dx$: Result?',

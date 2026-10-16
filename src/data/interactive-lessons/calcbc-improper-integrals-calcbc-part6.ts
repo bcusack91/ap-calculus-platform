@@ -79,7 +79,7 @@ $$\\text{Then: find the antiderivative and take the limit}$$
             options: ['Converges to $1$', 'Diverges', 'Converges to $\\ln 2$', 'Converges to $\\frac{1}{2}$'],
             correctAnswers: ['Converges to $\\ln 2$'],
             hints: ['Let $u = 1 + e^{-x}$, so $du = -e^{-x}\\,dx$.', 'An antiderivative is $-\\ln(1 + e^{-x})$.'],
-            explanation: '$\\lim_{t \\to \\infty}\\left[-\\ln(1 + e^{-x})\\right]_0^t = -\\ln 1 + \\ln 2 = \\ln 2$. The value $1$ is $\\int_0^{\\infty} e^{-x}\\,dx$, which ignores the denominator; $\\frac{1}{2}$ is the integrand at $x = 0$; and the integrand decays like $e^{-x}$, so it does not diverge.'
+            explanation: '$\\lim_{t \\to \\infty}\\left[-\\ln(1 + e^{-x})\\right]_0^t = -\\ln 1 + \\ln 2 = \\ln 2$. The value $1$ is $\\int_0^{\\infty} e^{-x}\\,dx$, which ignores the denominator; $\\frac{1}{2}$ is the integrand at $x = 0$; and the limit is finite, so it does not diverge.'
           },
           {
             label: '$\\int_0^{\\infty} \\frac{\\arctan x}{1+x^2}\\,dx$:',
@@ -107,17 +107,17 @@ $$\\int_0^{\\infty} \\frac{1}{\\sqrt{x}(1+x)}\\,dx$$
 
 This has BOTH issues: discontinuity at $x=0$ (Type II) and $\\infty$ upper limit (Type I).
 
-**Split at $x = 1$:**
+**Antiderivative first.** Let $u = \\sqrt{x}$, so $x = u^2$ and $dx = 2u\\,du$:
 
-**Part A:** $\\int_0^1 \\frac{1}{\\sqrt{x}(1+x)}\\,dx$ \u2014 Type II at $x=0$
+$$\\int \\frac{dx}{\\sqrt{x}(1+x)} = \\int \\frac{2u\\,du}{u(1+u^2)} = 2\\arctan u + C = 2\\arctan\\sqrt{x} + C$$
 
-Near $x = 0$: $\\frac{1}{\\sqrt{x}(1+x)} \\approx \\frac{1}{\\sqrt{x}}$. Since $\\int_0^1 x^{-1/2}\\,dx$ converges ($p = 1/2 < 1$), Part A converges.
+**Split at $x = 1$** and give each improper end its own limit:
 
-**Part B:** $\\int_1^{\\infty} \\frac{1}{\\sqrt{x}(1+x)}\\,dx$ \u2014 Type I
+**Part A:** $\\int_0^1 \\frac{dx}{\\sqrt{x}(1+x)} = \\lim_{a \\to 0^+} \\Big[2\\arctan\\sqrt{x}\\Big]_a^1 = 2 \\cdot \\frac{\\pi}{4} - 0 = \\frac{\\pi}{2}$
 
-For large $x$: $\\frac{1}{\\sqrt{x}(1+x)} \\approx \\frac{1}{x^{3/2}}$. Since $\\int_1^{\\infty} x^{-3/2}\\,dx$ converges ($p = 3/2 > 1$), Part B converges.
+**Part B:** $\\int_1^{\\infty} \\frac{dx}{\\sqrt{x}(1+x)} = \\lim_{b \\to \\infty} \\Big[2\\arctan\\sqrt{x}\\Big]_1^b = 2 \\cdot \\frac{\\pi}{2} - \\frac{\\pi}{2} = \\frac{\\pi}{2}$
 
-Full integral converges. (Its exact value is $\\pi$, via the substitution $u = \\sqrt{x}$.)`
+Both halves converge, so the full integral converges to $\\frac{\\pi}{2} + \\frac{\\pi}{2} = \\pi$.`
     },
     {
       id: 'imp6-input',

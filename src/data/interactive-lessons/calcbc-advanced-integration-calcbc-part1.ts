@@ -19,6 +19,7 @@ When facing an integral on the BC exam, use this decision process:
 | $\\frac{P(x)}{Q(x)}$ with $\\deg P \\ge \\deg Q$ | **Long division first** |
 | $\\frac{P(x)}{Q(x)}$ with factorable $Q$ | **Partial fractions** |
 | $\\frac{1}{a^2 + u^2}$ or $\\frac{1}{\\sqrt{a^2 - u^2}}$ (complete the square if needed) | **Inverse trig form** |
+| $\\sin^2 x$ or $\\cos^2 x$ alone | **One identity**: $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$, $\\cos^2 x = \\frac{1 + \\cos 2x}{2}$ |
 | Infinite limits or discontinuities | **Improper integral** |
 
 $$\\boxed{\\text{Step 1: Simplify} \\to \\text{Step 2: Identify pattern} \\to \\text{Step 3: Apply method}}$$`

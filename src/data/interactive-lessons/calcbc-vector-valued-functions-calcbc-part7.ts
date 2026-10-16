@@ -47,10 +47,10 @@ export const calcbcVectorsPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'If $\\|\\vec{v}(t)\\|$ is constant and nonzero, which is true?',
-            options: ['$\\vec{a} \\cdot \\vec{v} = 0$ for all $t$', '$\\vec{a} = \\vec{0}$ for all $t$', 'The path is a straight line', 'The speed is increasing'],
+            question: 'A particle has velocity $\\vec{v}(t) = \\langle 3\\cos t, 3\\sin t \\rangle$. Which is true?',
+            options: ['Its speed is $3$ at every time $t$', 'Its acceleration is the zero vector', 'The particle moves along a straight line', 'The particle speeds up as $t$ increases'],
             correctAnswer: 0,
-            explanation: '$\\frac{d}{dt}(\\vec{v}\\cdot\\vec{v}) = 2\\vec{v}\\cdot\\vec{a} = \\frac{d}{dt}(c^2) = 0$. So $\\vec{a} \\perp \\vec{v}$: the acceleration is perpendicular to the velocity. Uniform circular motion is a classic example, and it shows the acceleration need not be zero and the path need not be straight.'
+            explanation: 'Speed $= \\sqrt{9\\cos^2 t + 9\\sin^2 t} = 3$ for every $t$. The acceleration $\\vec{a}(t) = \\langle -3\\sin t, 3\\cos t \\rangle$ has length $3$, so it is never zero; because the velocity keeps changing direction, the path is not a straight line; and a constant speed is not increasing.'
           },
           {
             question: 'The displacement from $t = 0$ to $t = T$ equals $\\langle 0, 0 \\rangle$. This means:',

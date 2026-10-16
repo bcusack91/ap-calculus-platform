@@ -88,7 +88,7 @@ Let $I = \\int e^x \\cos x\\,dx$.
 | Combine | $I = e^x\\cos x + e^x\\sin x - I$ |
 | Solve for $I$ | $I = \\frac{e^x(\\sin x + \\cos x)}{2} + C$ |
 
-> **AP Tip:** Keep the same type of function as $u$ in both rounds (trig both times here). Switching to $u = e^x$ in the second round undoes the first step. Trigonometric substitution and reduction formulas for powers of sine and cosine are not tested on the AP Calculus BC exam.`
+> **AP Tip:** Keep the same type of function as $u$ in both rounds (trig both times here). Switching to $u = e^x$ in the second round undoes the first step. Trigonometric substitution and reduction formulas for higher powers of sine and cosine are not tested on the AP Calculus BC exam. A single identity rewrite such as $\\sin^2 x = \\frac{1 - \\cos 2x}{2}$ is fair game, especially in polar area.`
     },
     {
       id: 'ai2-dropdown',

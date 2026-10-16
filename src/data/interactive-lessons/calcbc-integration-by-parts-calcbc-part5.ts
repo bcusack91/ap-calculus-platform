@@ -80,8 +80,7 @@ $$= x(\\ln x)^2 - 2\\int \\ln x\\,dx = x(\\ln x)^2 - 2(x\\ln x - x) + C$$
 
 $$\\boxed{\\int (\\ln x)^2\\,dx = x[(\\ln x)^2 - 2\\ln x + 2] + C}$$
 
-**Reduction formula** (for reference):
-$$\\int (\\ln x)^n\\,dx = x(\\ln x)^n - n\\int (\\ln x)^{n-1}\\,dx$$`
+Each round of parts lowers the power of $\\ln x$ by one, so $(\\ln x)^2$ needs two rounds: the second round is just $\\int \\ln x\\,dx$ (result 1 above).`
     },
     {
       id: 'ibp5-mc1',
@@ -161,7 +160,7 @@ $$\\int (\\ln x)^n\\,dx = x(\\ln x)^n - n\\int (\\ln x)^{n-1}\\,dx$$`
 | $\\int \\arcsin x\\,dx$ | $x\\arcsin x + \\sqrt{1-x^2} + C$ |
 | $\\int (\\ln x)^2\\,dx$ | $x[(\\ln x)^2 - 2\\ln x + 2] + C$ |
 
-> **AP Tip:** These results are worth memorizing \u2014 they appear frequently in free-response questions and save substantial time.
+> **AP Tip:** Know how to derive these with the $dv = dx$ setup rather than memorizing them. The exam tests the setup, and a derivation takes under a minute.
 
 > **Coming Up:** Part 6 is a **problem-solving workshop** with mixed IBP challenges.`
     }

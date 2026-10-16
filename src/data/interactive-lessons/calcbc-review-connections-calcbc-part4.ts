@@ -123,7 +123,7 @@ $$\\sum_{n=0}^\\infty c_n(x-a)^n$$
 
 - **Divergence test** → always check first ($a_n \\to 0$?)
 - **Geometric/p-series** → direct conclusion if the form matches
-- **Ratio/root** → factorial or exponential terms
+- **Ratio** → factorial or exponential terms
 - **AST** → alternating series
 - **Comparison/integral** → everything else
 - **Power series** → ratio test for $R$, then check endpoints

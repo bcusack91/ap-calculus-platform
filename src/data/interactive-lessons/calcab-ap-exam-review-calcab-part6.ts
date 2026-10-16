@@ -47,7 +47,7 @@ $$\\boxed{\\frac{dy}{dt} = ky \\implies y(t) = y_0 e^{kt}}$$
 |:---|:---|
 | Exponential growth | Exponential decay |
 | Population growth | Radioactive decay |
-| Compound interest | Cooling (Newton\u2019s Law) |
+| Continuously compounded interest | Drug elimination from the bloodstream |
 
 > **Key Fact:** Half-life formula: $t_{1/2} = \\frac{\\ln 2}{|k|}$`
     },

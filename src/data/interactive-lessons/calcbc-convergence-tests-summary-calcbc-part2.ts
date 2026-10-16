@@ -73,10 +73,10 @@ Since $\\sum 1/n$ diverges and our series is term-by-term larger, $\\sum 1/(n - 
             explanation: 'Dominant terms: $n^2/n^4 = 1/n^2$. LCT: $\\lim \\frac{n^2+3}{n^4+n+7} \\cdot n^2 = 1$. Since $\\sum 1/n^2$ converges, the series converges.'
           },
           {
-            question: 'For LCT, if $\\lim a_n/b_n = 0$:',
-            options: ['If $\\sum b_n$ converges, so does $\\sum a_n$', 'Both series converge, or else both series diverge', 'If $\\sum b_n$ diverges, then $\\sum a_n$ diverges too', 'If $\\sum a_n$ converges, then $\\sum b_n$ converges too'],
-            correctAnswer: 0,
-            explanation: '$L = 0$ means $a_n$ is eventually much smaller than $b_n$. If $\\sum b_n$ converges, $\\sum a_n$ does too. The converse fails: $\\sum a_n$ could converge while $\\sum b_n$ diverges. "Same behavior" is the conclusion only for $0 < L < \\infty$.'
+            question: 'For positive terms, $\\lim a_n/b_n = 5$ and the partial sums of $\\sum b_n$ grow without bound. By LCT:',
+            options: ['$\\sum a_n$ converges, with sum $5\\sum b_n$', 'The series $\\sum a_n$ also diverges', 'The test gives no conclusion here', 'The series $\\sum a_n$ converges'],
+            correctAnswer: 1,
+            explanation: 'A finite positive limit ($0 < 5 < \\infty$) means the two series behave alike, so $\\sum a_n$ diverges with $\\sum b_n$. LCT never gives a sum, and it does give a conclusion whenever the limit is finite and positive.'
           }
         ]
       }
@@ -88,11 +88,11 @@ Since $\\sum 1/n$ diverges and our series is term-by-term larger, $\\sum 1/(n - 
       exercise: {
         dropdowns: [
           {
-            label: '$\\sum \\frac{\\ln n}{n^2}$. Compare with $1/n^{3/2}$ using LCT:',
-            options: ['$\\lim \\ln n/\\sqrt{n} = 0$ and $\\sum 1/n^{3/2}$ converges, so ours converges too', '$\\lim \\ln n/\\sqrt{n} = \\infty$, so this comparison is inconclusive', '$\\lim \\ln n/\\sqrt{n} = 1$, so the two series behave alike', '$\\lim \\ln n/\\sqrt{n} = 0$, so LCT says our series diverges'],
-            correctAnswers: ['$\\lim \\ln n/\\sqrt{n} = 0$ and $\\sum 1/n^{3/2}$ converges, so ours converges too'],
-            hints: ['$\\ln n$ grows slower than any power of $n$.'],
-            explanation: '$\\frac{\\ln n/n^2}{1/n^{3/2}} = \\frac{\\ln n}{\\sqrt{n}} \\to 0$ (logs grow slower than any power). $L = 0$ with a convergent comparison series means our series converges too. A limit of $0$ never signals divergence.'
+            label: '$\\sum \\frac{\\sqrt{n}}{n^2 + 1}$. Compare with $1/n^{3/2}$ using LCT:',
+            options: ['$\\lim \\frac{n^2}{n^2+1} = 1$ and $\\sum 1/n^{3/2}$ converges, so ours converges too', '$\\lim \\frac{n^2}{n^2+1} = \\infty$, so this comparison is inconclusive', '$\\lim \\frac{n^2}{n^2+1} = 1$, but $\\sum 1/n^{3/2}$ diverges, so ours diverges too', '$\\lim \\frac{n^2}{n^2+1} = 0$, so LCT says that our series must diverge as well'],
+            correctAnswers: ['$\\lim \\frac{n^2}{n^2+1} = 1$ and $\\sum 1/n^{3/2}$ converges, so ours converges too'],
+            hints: ['Divide: $\\frac{\\sqrt{n}}{n^2+1} \\cdot n^{3/2} = \\frac{n^2}{n^2+1}$.'],
+            explanation: '$\\frac{\\sqrt{n}/(n^2+1)}{1/n^{3/2}} = \\frac{n^2}{n^2+1} \\to 1$. Since $0 < 1 < \\infty$ and $\\sum 1/n^{3/2}$ is a convergent $p$-series ($p = \\frac{3}{2} > 1$), our series converges. A limit of $1$ means the series share the behavior of the comparison series, which converges here.'
           },
           {
             label: '$\\sum \\frac{1}{\\sqrt{n^2 + 1}}$. Best comparison for LCT:',
@@ -124,8 +124,8 @@ Since $\\sum 1/n$ diverges and our series is term-by-term larger, $\\sum 1/(n - 
 - DCT: prove $a_n \\le b_n$ directly; used when comparison is obvious
 - LCT: compute $\\lim a_n/b_n$; easier, more flexible
 - Pick comparison by looking at dominant terms
-- $L = 0$ or $L = \\infty$: partial results (one direction only)
 - $0 < L < \\infty$: both series have same behavior
+- Limit of $0$ or $\\infty$: the AP form of LCT gives no conclusion, so choose a comparison series that matches the dominant terms
 
 > **Next:** Part 3 — Integral Test and Unusual Series.`
     }

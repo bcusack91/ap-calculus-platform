@@ -41,7 +41,7 @@ $a_n = \\frac{3n^2 + 1}{n^2 - 5} \\to \\frac{3}{1} = 3$ (divide by highest power
 
 **Technique 2: Squeeze Theorem**
 
-$0 \\le \\frac{\\sin n}{n} \\le \\frac{1}{n} \\to 0$, so $\\frac{\\sin n}{n} \\to 0$.
+$-\\frac{1}{n} \\le \\frac{\\sin n}{n} \\le \\frac{1}{n}$ and both bounds $\\to 0$, so $\\frac{\\sin n}{n} \\to 0$.
 
 **Technique 3: L'Hôpital's via continuous extension**
 
@@ -49,9 +49,9 @@ If $f(x)$ is continuous and $\\lim_{x \\to \\infty} f(x) = L$, then $\\lim_{n \\
 
 $a_n = \\frac{\\ln n}{n}: \\lim_{x \\to \\infty}\\frac{\\ln x}{x} \\overset{\\text{L'H}}{=} \\lim \\frac{1/x}{1} = 0$
 
-**Technique 4: Root/ratio for exponential behavior**
+**Technique 4: Write factorials out as products**
 
-$a_n = \\frac{n!}{n^n} \\to 0$ (factorial grows slower than exponential of $n$)`
+$a_n = \\frac{n!}{n^n} = \\frac{1}{n} \\cdot \\frac{2}{n} \\cdots \\frac{n}{n}$. Every factor is at most $1$ and the first is $\\frac{1}{n}$, so $0 < \\frac{n!}{n^n} \\le \\frac{1}{n} \\to 0$, and the Squeeze Theorem gives $\\frac{n!}{n^n} \\to 0$: $n^n$ grows faster than $n!$.`
     },
     {
       id: 'seq1-mc1',
@@ -122,7 +122,7 @@ $a_n = \\frac{n!}{n^n} \\to 0$ (factorial grows slower than exponential of $n$)`
 
 - Sequence: ordered list $\\{a_n\\}$
 - Converges if $\\lim_{n \\to \\infty} a_n = L$ (finite)
-- Techniques: direct comparison, squeeze theorem, L'Hôpital's, growth rate ordering
+- Techniques: divide by the highest power, squeeze theorem, L'Hôpital's, factorials written as products, growth rate ordering
 - Growth rate hierarchy: $\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n$
 
 > **Next:** Part 2 — Decreasing terms and limits by L\'Hospital\'s Rule.`

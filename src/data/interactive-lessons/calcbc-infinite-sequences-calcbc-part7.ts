@@ -113,7 +113,7 @@ You've mastered infinite sequences and the bridge to series:
 
 $$\\boxed{\\sum_{n=1}^\\infty a_n = \\lim_{N \\to \\infty} S_N \\qquad \\sum ar^n = \\frac{a}{1-r} \\;(|r|<1)}$$
 
-> **Up next:** Infinite Series — convergence tests (comparison, integral, ratio, root).`
+> **Up next:** Infinite Series — convergence tests (comparison, integral, ratio).`
     }
   ]
 };

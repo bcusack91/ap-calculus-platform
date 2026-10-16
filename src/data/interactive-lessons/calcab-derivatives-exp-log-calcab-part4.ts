@@ -14,7 +14,7 @@ export const calcabDerivExpLogPart4Data = {
     {
       "id": "del4-compound",
       "type": "text" as const,
-      "content": "## Compound Interest\n\n### Continuous Compounding\n\n$$A = Pe^{rt}$$\n\nwhere $P$ = principal, $r$ = rate, $t$ = time.\n\n$\\frac{dA}{dt} = Pr e^{rt} = rA$\n\nThe rate of growth of money is proportional to current amount.\n\n### Example\n\n\\$1000 at $5\\%$ continuously compounded:\n\n$A = 1000e^{0.05t}$\n\n$\\frac{dA}{dt} = 50e^{0.05t}$\n\nAt $t = 10$: $\\frac{dA}{dt} = 50e^{0.5} \\approx 82.44$, i.e. \\$82.44/year\n\n---\n\n### Newton's Law of Cooling\n\n$$T(t) = T_s + (T_0 - T_s)e^{-kt}$$\n\n$$\\frac{dT}{dt} = -k(T_0 - T_s)e^{-kt} = -k(T - T_s)$$\n\nRate of cooling is proportional to temperature difference."
+      "content": "## Rate Proportional to Amount\n\n### Continuous Growth of a Balance\n\n$$A = A_0e^{rt}$$\n\nwhere $A_0$ = starting amount, $r$ = continuous growth rate, $t$ = time.\n\n$\\frac{dA}{dt} = rA_0 e^{rt} = rA$\n\nThe balance grows at a rate proportional to its current size, the same $\\frac{dy}{dt} = ky$ model as population growth.\n\n### Example\n\nA balance starts at \\$1000 and satisfies $\\frac{dA}{dt} = 0.05A$:\n\n$A = 1000e^{0.05t}$\n\n$\\frac{dA}{dt} = 50e^{0.05t}$\n\nAt $t = 10$: $\\frac{dA}{dt} = 50e^{0.5} \\approx 82.44$, i.e. \\$82.44/year\n\n---\n\n### Newton's Law of Cooling\n\n$$T(t) = T_s + (T_0 - T_s)e^{-kt}$$\n\n$$\\frac{dT}{dt} = -k(T_0 - T_s)e^{-kt} = -k(T - T_s)$$\n\nRate of cooling is proportional to temperature difference."
     },
     {
       "id": "del4-quiz",

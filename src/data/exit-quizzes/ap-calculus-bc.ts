@@ -1242,10 +1242,10 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     part: 3,
   },
   {
-    question: 'Given $\\mathbf{r}(t) = \\langle t^2, t^3, t \\rangle$ (in 3D), the velocity vector is:',
-    options: ['$\\langle 2t, 3t^2, 1 \\rangle$', '$\\langle t, t^2, 1 \\rangle$', '$\\langle 2, 6t, 0 \\rangle$', '$\\langle 2t, 3t^2, 0 \\rangle$'],
+    question: 'Given $\\mathbf{r}(t) = \\langle t^2, \\sin(\\pi t) \\rangle$, the velocity vector at $t = 1$ is:',
+    options: ['$\\langle 2, -\\pi \\rangle$', '$\\langle 1, -\\pi \\rangle$', '$\\langle 2, \\pi \\rangle$', '$\\langle 1, 0 \\rangle$'],
     correctAnswer: 0,
-    explanation: 'v(t) = r\'(t) = ⟨2t, $3t^{2}$, 1⟩.',
+    explanation: 'Differentiate each component: $\\mathbf{r}\'(t) = \\langle 2t, \\pi\\cos(\\pi t) \\rangle$, so $\\mathbf{r}\'(1) = \\langle 2, \\pi\\cos\\pi \\rangle = \\langle 2, -\\pi \\rangle$. Writing $1$ for the first component drops the factor $2$ from the power rule, $+\\pi$ uses $\\cos\\pi = 1$ instead of $-1$, and $\\langle 1, 0 \\rangle$ is the position $\\mathbf{r}(1)$, not the velocity.',
     difficulty: 'easy',
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',

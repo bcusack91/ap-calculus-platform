@@ -64,11 +64,11 @@ So $\\int_0^{\\infty} xe^{-x}\\,dx = 1$. Applying parts twice the same way gives
             options: [
               '$\\int_e^{\\infty} \\frac{1}{x \\ln^2 x}\\,dx$',
               '$\\int_e^{\\infty} \\frac{1}{x \\ln x}\\,dx$',
-              '$\\int_e^{\\infty} \\frac{1}{x^2 \\ln x}\\,dx$',
-              '$\\int_0^{\\infty} e^{-x^2}\\,dx$'
+              '$\\int_0^{\\infty} x e^{-x^2}\\,dx$',
+              '$\\int_1^{\\infty} x^{-3/2}\\,dx$'
             ],
             correctAnswer: 1,
-            explanation: '$\\int_e^{\\infty} \\frac{1}{x \\ln x}\\,dx$: substitute $u = \\ln x$ to get $\\int_1^{\\infty} \\frac{1}{u}\\,du = \\lim_{b \\to \\infty} \\ln b = \\infty$. The others converge: $\\frac{1}{x\\ln^2 x}$ becomes $\\int_1^{\\infty} u^{-2}\\,du = 1$; $\\frac{1}{x^2 \\ln x}$ is smaller than $\\frac{1}{x^2}$ for $x \\ge e$; and $e^{-x^2}$ shrinks much faster than any power of $x$.'
+            explanation: '$\\int_e^{\\infty} \\frac{1}{x \\ln x}\\,dx$: substitute $u = \\ln x$ to get $\\int_1^{\\infty} \\frac{1}{u}\\,du = \\lim_{b \\to \\infty} \\ln b = \\infty$. Each of the others has an antiderivative with a finite limit: $\\frac{1}{x\\ln^2 x}$ becomes $\\int_1^{\\infty} u^{-2}\\,du = 1$; $u = x^2$ turns $\\int_0^{\\infty} xe^{-x^2}\\,dx$ into $\\frac{1}{2}\\int_0^{\\infty} e^{-u}\\,du = \\frac{1}{2}$; and $\\int_1^{\\infty} x^{-3/2}\\,dx = \\lim_{b \\to \\infty}\\left(2 - \\frac{2}{\\sqrt{b}}\\right) = 2$.'
           }
         ]
       }
