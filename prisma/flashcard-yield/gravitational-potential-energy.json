@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Can gravitational PE be negative?",
+  "fp": "be2e68d73a9a",
+  "yield": "MEDIUM",
+  "why": "Negative gravitational PE with reference; secondary"
+ },
+ {
+  "front": "Does the formula $PE = mgh$ work for satellites?",
+  "fp": "fe0a7bb0eaa6",
+  "yield": "HIGH",
+  "why": "CED 3.4 U = -GMm/r beyond the surface"
+ },
+ {
+  "front": "How much work must you do to lift a 5 kg box 2 m vertically?",
+  "fp": "28835a462585",
+  "yield": "MEDIUM",
+  "why": "Lifting work example; restates mgh"
+ },
+ {
+  "front": "If an object slides down a 10 m ramp at 30°, what is the change in PE?",
+  "fp": "78f4c088ed3c",
+  "yield": "HIGH",
+  "why": "CED 3.4 use vertical height for dPE"
+ },
+ {
+  "front": "What does it mean that gravity is a conservative force?",
+  "fp": "c3ed4ee032bf",
+  "yield": "MEDIUM",
+  "why": "Gravity conservative; restates conservative-force card"
+ },
+ {
+  "front": "What is the formula for gravitational potential energy near Earth's surface?",
+  "fp": "770d471a01e4",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.4 U = mgh; tested every exam"
+ },
+ {
+  "front": "What is the relationship between work done by gravity and change in PE?",
+  "fp": "4bdc95c75043",
+  "yield": "HIGH",
+  "why": "CED 3.4 W_gravity = -dU"
+ },
+ {
+  "front": "Why must you choose a reference point for potential energy?",
+  "fp": "5971cf84c989",
+  "yield": "MEDIUM",
+  "why": "PE reference point; secondary"
+ }
+]

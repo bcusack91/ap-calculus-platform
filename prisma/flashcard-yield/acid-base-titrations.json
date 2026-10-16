@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Describe the titration curve for strong acid + strong base.",
+  "fp": "5590e4557dc0",
+  "yield": "HIGH",
+  "why": "CED 8.5 strong acid-strong base titration curve"
+ },
+ {
+  "front": "How do you choose the right indicator for a titration?",
+  "fp": "48479db9b6bb",
+  "yield": "HIGH",
+  "why": "CED 8.5 choosing an indicator"
+ },
+ {
+  "front": "How do you find an unknown concentration from titration data?",
+  "fp": "b145f0d4e87f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.6/8.5 titration to find concentration; FRQ staple"
+ },
+ {
+  "front": "What are the key features of weak acid + strong base titration curve?",
+  "fp": "3e033e7c574f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.5 weak acid titration curve features; FRQ staple"
+ },
+ {
+  "front": "What is a titration and what is the equivalence point?",
+  "fp": "881bcf689f71",
+  "yield": "HIGH",
+  "why": "CED 8.5 titration and equivalence point"
+ },
+ {
+  "front": "What is an acid-base indicator and how does it work?",
+  "fp": "2c8897ccfc5b",
+  "yield": "MEDIUM",
+  "why": "Indicator mechanism; secondary"
+ },
+ {
+  "front": "What is special about the half-equivalence point?",
+  "fp": "21c0f7b2a841",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.5 half-equivalence pH = pKa; tested every exam"
+ },
+ {
+  "front": "Why is equivalence point pH ≠ 7 for weak acid/base titrations?",
+  "fp": "67e19f7e71d1",
+  "yield": "HIGH",
+  "why": "CED 8.5 equivalence pH for weak acid/base titrations"
+ }
+]

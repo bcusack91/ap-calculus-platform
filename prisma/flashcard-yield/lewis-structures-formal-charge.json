@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you determine the central atom in a Lewis structure?",
+  "fp": "224e53e4e0a4",
+  "yield": "MEDIUM",
+  "why": "Choosing the central atom; supporting rule"
+ },
+ {
+  "front": "What are resonance structures?",
+  "fp": "daf578b2d441",
+  "yield": "HIGH",
+  "why": "CED 2.6 resonance structures"
+ },
+ {
+  "front": "What are the rules for using formal charge to determine best Lewis structure?",
+  "fp": "2b3af26f50a7",
+  "yield": "HIGH",
+  "why": "CED 2.6 formal charge to choose structure"
+ },
+ {
+  "front": "What are the steps to draw a Lewis structure?",
+  "fp": "00821a1d67e7",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.5 drawing Lewis structures; tested every exam"
+ },
+ {
+  "front": "What does it mean when a molecule has equivalent resonance structures?",
+  "fp": "3b8080147ba0",
+  "yield": "HIGH",
+  "why": "CED 2.6 equivalent resonance and bond order"
+ },
+ {
+  "front": "What is the formula for formal charge?",
+  "fp": "055b677cd677",
+  "yield": "HIGH",
+  "why": "CED 2.6 formal charge formula"
+ },
+ {
+  "front": "What is the octet rule and what are the main exceptions?",
+  "fp": "da1be4299466",
+  "yield": "HIGH",
+  "why": "CED 2.5 octet rule and exceptions"
+ },
+ {
+  "front": "Which elements can have expanded octets and why?",
+  "fp": "edf820602bb0",
+  "yield": "MEDIUM",
+  "why": "Expanded octets; secondary"
+ }
+]

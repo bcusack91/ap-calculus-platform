@@ -1,0 +1,38 @@
+[
+ {
+  "front": "How are $\\int_a^b f(x)\\,dx$ and $\\int_b^a f(x)\\,dx$ related?",
+  "fp": "e12a11e67494",
+  "yield": "HIGH",
+  "why": "CED 6.6 reversing limits flips sign"
+ },
+ {
+  "front": "If $g(x) = \\int_a^{u(x)} f(t)\\,dt$, what is $g'(x)$?",
+  "fp": "633bffe21db8",
+  "yield": "HIGH",
+  "why": "CED 6.4 FTC with variable upper limit"
+ },
+ {
+  "front": "State the Fundamental Theorem of Calculus (Part 1).",
+  "fp": "01306696cc45",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.4 FTC part 1 (core card in this topic)"
+ },
+ {
+  "front": "State the Fundamental Theorem of Calculus (Part 2).",
+  "fp": "bdb9137861c8",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.7 FTC part 2 (core card in this topic)"
+ },
+ {
+  "front": "What is the average value formula for a function?",
+  "fp": "c82a4b8d528d",
+  "yield": "HIGH",
+  "why": "CED 8.1 average value formula"
+ },
+ {
+  "front": "What's the difference between definite and indefinite integrals?",
+  "fp": "48bb8cd9dc6c",
+  "yield": "MEDIUM",
+  "why": "Definite vs indefinite; restatement"
+ }
+]

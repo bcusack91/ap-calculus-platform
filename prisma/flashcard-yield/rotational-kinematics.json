@@ -1,0 +1,74 @@
+[
+ {
+  "front": "A wheel starts from rest and has angular acceleration $\\alpha = 2.0$ rad/s² for 5.0 s. Find its final angular velocity and the angle it turns through.",
+  "fp": "b2b2ad671dff",
+  "yield": "HIGH",
+  "why": "CED 5.2 rotational kinematics example"
+ },
+ {
+  "front": "How are angular and linear quantities related?",
+  "fp": "9485fd979ec9",
+  "yield": "HIGH",
+  "why": "CED 5.3 linear-angular relations"
+ },
+ {
+  "front": "How is linear velocity related to angular velocity?",
+  "fp": "007e44942a20",
+  "yield": "MEDIUM",
+  "why": "Restates v = r omega"
+ },
+ {
+  "front": "How is period related to angular velocity?",
+  "fp": "3c7e661ac6ca",
+  "yield": "MEDIUM",
+  "why": "Restates T = 2 pi / omega"
+ },
+ {
+  "front": "How many radians in one complete revolution?",
+  "fp": "32cb02e4a849",
+  "yield": "MEDIUM",
+  "why": "Radians per revolution; prerequisite"
+ },
+ {
+  "front": "MUST angles be in radians or degrees for rotational equations?",
+  "fp": "196d5605df3f",
+  "yield": "MEDIUM",
+  "why": "Radians required; technique tip"
+ },
+ {
+  "front": "What are the rotational kinematic equations (constant α)?",
+  "fp": "1be136dd225a",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.2 rotational kinematic equations"
+ },
+ {
+  "front": "What is angular acceleration?",
+  "fp": "b737c8e659ce",
+  "yield": "HIGH",
+  "why": "CED 5.1 angular acceleration"
+ },
+ {
+  "front": "What is angular velocity?",
+  "fp": "15ea1f43dd05",
+  "yield": "HIGH",
+  "why": "CED 5.1 angular velocity"
+ },
+ {
+  "front": "What is tangential acceleration?",
+  "fp": "e1ac7f5f296f",
+  "yield": "MEDIUM",
+  "why": "Tangential acceleration; secondary"
+ },
+ {
+  "front": "What is the difference between tangential and centripetal acceleration?",
+  "fp": "c06fceaba33c",
+  "yield": "MEDIUM",
+  "why": "Tangential vs centripetal acceleration; secondary"
+ },
+ {
+  "front": "What is the rolling without slipping condition?",
+  "fp": "5b0774cbec97",
+  "yield": "HIGH",
+  "why": "CED 6.6 rolling without slipping"
+ }
+]

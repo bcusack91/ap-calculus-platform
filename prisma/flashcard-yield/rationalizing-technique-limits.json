@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Evaluate $\\lim_{x \\to 0} \\frac{\\sqrt{x+9}-3}{x}$.",
+  "fp": "6c0f588366bd",
+  "yield": "HIGH",
+  "why": "CED 1.7 rationalizing a limit"
+ },
+ {
+  "front": "What happens when you multiply $(\\sqrt{a} + b)(\\sqrt{a} - b)$?",
+  "fp": "ec5ea42ccdd2",
+  "yield": "LOW",
+  "why": "Conjugate product; algebra prerequisite"
+ },
+ {
+  "front": "What is the conjugate of $\\sqrt{x} + 5$?",
+  "fp": "9682743b3280",
+  "yield": "LOW",
+  "why": "Conjugate of a binomial; algebra prerequisite"
+ },
+ {
+  "front": "When rationalizing a limit, why should you expand the difference of squares but leave the conjugate factor unmultiplied?",
+  "fp": "cbb0c5e16aca",
+  "yield": "MEDIUM",
+  "why": "Leave conjugate factored; technique"
+ },
+ {
+  "front": "When should you use the rationalizing technique for limits?",
+  "fp": "fc9afa8745d5",
+  "yield": "MEDIUM",
+  "why": "When to rationalize; technique"
+ },
+ {
+  "front": "Why does multiplying by the conjugate help?",
+  "fp": "1afa3a5ddb13",
+  "yield": "MEDIUM",
+  "why": "Why conjugates help; restatement"
+ }
+]

@@ -1,0 +1,62 @@
+[
+ {
+  "front": "If net force is zero, what can you conclude about acceleration?",
+  "fp": "222d86d1a425",
+  "yield": "HIGH",
+  "why": "CED 2.3 zero net force, zero acceleration"
+ },
+ {
+  "front": "If you double the net force on an object while keeping mass constant, what happens to acceleration?",
+  "fp": "c9c708139d0c",
+  "yield": "HIGH",
+  "why": "CED 2.4 a proportional to F"
+ },
+ {
+  "front": "Is normal force always equal to weight?",
+  "fp": "7e813b652f28",
+  "yield": "HIGH",
+  "why": "CED 2.4 normal force not always mg"
+ },
+ {
+  "front": "What are the units of force?",
+  "fp": "e14435787b4f",
+  "yield": "MEDIUM",
+  "why": "Units of force; prerequisite"
+ },
+ {
+  "front": "What direction is acceleration relative to net force?",
+  "fp": "64e2b2c67556",
+  "yield": "HIGH",
+  "why": "CED 2.4 a parallel to net force"
+ },
+ {
+  "front": "What is a free body diagram?",
+  "fp": "82bd538b780a",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.2 free-body diagrams; on every FRQ set"
+ },
+ {
+  "front": "What is inertia?",
+  "fp": "d26099fb0f27",
+  "yield": "MEDIUM",
+  "why": "Inertia definition; secondary"
+ },
+ {
+  "front": "What is Newton's First Law?",
+  "fp": "2c45e6847537",
+  "yield": "HIGH",
+  "why": "CED 2.3 Newton's first law"
+ },
+ {
+  "front": "What is Newton's Second Law?",
+  "fp": "673ee6b84587",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.4 Newton's second law; tested every exam"
+ },
+ {
+  "front": "What is the difference between mass and weight?",
+  "fp": "8cc5948a419b",
+  "yield": "MEDIUM",
+  "why": "Restates mass vs weight"
+ }
+]

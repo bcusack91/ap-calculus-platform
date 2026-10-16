@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Catalyzed mechanism: (1) X + A ⇌ AX (fast, K₁), (2) AX + B → products + X (slow, k₂). (a) Identify catalyst/intermediate. (b) Overall equation. (c) Rate law.",
+  "fp": "29af92bee5bf",
+  "yield": "HIGH",
+  "why": "CED 5.9/5.11 catalyst vs intermediate in mechanism"
+ },
+ {
+  "front": "Identify intermediates and overall equation: (1) NO + O₃ → NO₂ + O₂ (fast), (2) NO₂ + O → NO + O₂ (slow), (3) O₃ ⇌ O₂ + O (fast). Determine the overall reaction and the intermediate(s).",
+  "fp": "58d11853f7b1",
+  "yield": "HIGH",
+  "why": "CED 5.7 identify intermediates and overall reaction"
+ },
+ {
+  "front": "Pre-equilibrium example: (1) 2A ⇌ A₂ (fast, K₁), (2) A₂ + B → products (slow, k₂). Derive the rate law.",
+  "fp": "86e1e27e30c0",
+  "yield": "MEDIUM",
+  "why": "CED 5.9 pre-equilibrium rate law; secondary"
+ },
+ {
+  "front": "RDS first step vs second step: (1) A + B → C (slow), (2) C + B → D (fast). (a) Rate law? Now swap RDS: (1) A + B ⇌ C (fast, K), (2) C + B → D (slow). (b) New rate law?",
+  "fp": "8085eeb3e675",
+  "yield": "MEDIUM",
+  "why": "CED 5.8/5.9 rate law when RDS changes"
+ },
+ {
+  "front": "What is a catalyst?",
+  "fp": "d1cfeb57e4e4",
+  "yield": "HIGH",
+  "why": "CED 5.11 catalyst in a mechanism"
+ },
+ {
+  "front": "What is an intermediate?",
+  "fp": "c32891d1759c",
+  "yield": "HIGH",
+  "why": "CED 5.7 intermediate definition"
+ },
+ {
+  "front": "What is the rate-determining step?",
+  "fp": "7ff27ef5c545",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.8 rate-determining step"
+ },
+ {
+  "front": "Which statement about reaction mechanisms is correct?",
+  "fp": "82533b13cdce",
+  "yield": "MEDIUM",
+  "why": "Restates RDS card"
+ }
+]

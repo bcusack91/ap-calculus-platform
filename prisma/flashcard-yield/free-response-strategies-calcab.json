@@ -1,0 +1,32 @@
+[
+ {
+  "front": "By the Mean Value Theorem, if $f$ is continuous on $[2, 6]$ and differentiable on $(2, 6)$ with $f(2) = 3$ and $f(6) = 11$, then there exists $c$ where $f'(c) = $",
+  "fp": "7f8672a2db84",
+  "yield": "MEDIUM",
+  "why": "MVT practice item; restatement"
+ },
+ {
+  "front": "Given $f(2) = 3$ and $f'(2) = -4$, the tangent-line approximation at $x = 2.1$ is:",
+  "fp": "9474f1e44236",
+  "yield": "HIGH",
+  "why": "CED 4.6 tangent-line estimate from values"
+ },
+ {
+  "front": "If $\\dfrac{d}{dx}\\left[\\int_0^x f(t)\\,dt\\right] = \\sin(x^2)$, then $f(x) = $",
+  "fp": "d4febbfb91f0",
+  "yield": "MEDIUM",
+  "why": "FTC part 1 practice item; restatement"
+ },
+ {
+  "front": "If $f'$ changes from negative to positive at $x = c$, and $f$ is continuous at $x = c$, then at $x = c$ the function $f$ has:",
+  "fp": "13edce044701",
+  "yield": "MEDIUM",
+  "why": "Restates first derivative test for min"
+ },
+ {
+  "front": "On an AP Calculus FRQ, what must you write when you use the calculator to evaluate a definite integral?",
+  "fp": "2c0ab81bde74",
+  "yield": "HIGH",
+  "why": "Show integral setup on calculator FRQs; scoring rule"
+ }
+]

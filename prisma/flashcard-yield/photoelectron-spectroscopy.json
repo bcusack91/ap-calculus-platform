@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How can you identify an element from its PES spectrum?",
+  "fp": "d594169d5507",
+  "yield": "HIGH",
+  "why": "CED 1.6 identify element from PES"
+ },
+ {
+  "front": "How do you determine the number of occupied sublevels from PES?",
+  "fp": "21b33bcdec80",
+  "yield": "MEDIUM",
+  "why": "Restates PES peaks = sublevels"
+ },
+ {
+  "front": "How does binding energy change across a period?",
+  "fp": "2f6c6c4bf96c",
+  "yield": "HIGH",
+  "why": "CED 1.6 binding energy across a period"
+ },
+ {
+  "front": "What does a PES spectrum measure?",
+  "fp": "7774f1c39f3b",
+  "yield": "HIGH",
+  "why": "CED 1.6 what PES measures"
+ },
+ {
+  "front": "What does each peak in a PES spectrum represent?",
+  "fp": "da13822c350b",
+  "yield": "HIGH",
+  "why": "CED 1.6 PES peak position and height"
+ },
+ {
+  "front": "What is the equation relating photon energy, ionization energy, and kinetic energy in PES?",
+  "fp": "f40d8ff85c31",
+  "yield": "LOW",
+  "why": "BE = hv - KE; owner-borderline (C) item"
+ },
+ {
+  "front": "Which peak has the highest binding energy in a PES spectrum?",
+  "fp": "3ebb73eefa3b",
+  "yield": "MEDIUM",
+  "why": "1s peak highest BE; restates PES cards"
+ },
+ {
+  "front": "Why do 2s electrons show a higher binding energy than 2p electrons?",
+  "fp": "da4959e73466",
+  "yield": "HIGH",
+  "why": "CED 1.6 2s vs 2p binding energy"
+ }
+]

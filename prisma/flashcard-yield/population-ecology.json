@@ -1,0 +1,20 @@
+[
+ {
+  "front": "Density-dependent vs. density-independent factors?",
+  "fp": "6b08d92d4e51",
+  "yield": "HIGH",
+  "why": "CED 8.4 density-dependent factors"
+ },
+ {
+  "front": "What is carrying capacity?",
+  "fp": "4011c4b09bd2",
+  "yield": "HIGH",
+  "why": "CED 8.4 carrying capacity"
+ },
+ {
+  "front": "What is the difference between exponential and logistic growth?",
+  "fp": "d44258ee0153",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.3/8.4 exponential vs logistic growth"
+ }
+]

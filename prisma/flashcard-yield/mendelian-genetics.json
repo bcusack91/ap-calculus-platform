@@ -1,0 +1,44 @@
+[
+ {
+  "front": "Define genotype vs. phenotype.",
+  "fp": "9a217549fe1f",
+  "yield": "HIGH",
+  "why": "CED 5.5 genotype vs phenotype"
+ },
+ {
+  "front": "What is a testcross and what is its purpose?",
+  "fp": "12298625ad4e",
+  "yield": "HIGH",
+  "why": "CED 5.5 testcross"
+ },
+ {
+  "front": "What is the Law of Independent Assortment?",
+  "fp": "22579f72a400",
+  "yield": "HIGH",
+  "why": "CED 5.5 law of independent assortment"
+ },
+ {
+  "front": "What is the Law of Segregation?",
+  "fp": "ca69013e1344",
+  "yield": "HIGH",
+  "why": "CED 5.5 law of segregation"
+ },
+ {
+  "front": "What is the phenotypic ratio for a dihybrid cross F₂?",
+  "fp": "a44e3510d919",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.5 dihybrid 9:3:3:1; tested every exam"
+ },
+ {
+  "front": "What is the phenotypic ratio for a monohybrid cross (Aa × Aa)?",
+  "fp": "003d4b33d69b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.5 monohybrid 3:1 and 1:2:1"
+ },
+ {
+  "front": "When do you use the product rule vs. sum rule in genetics?",
+  "fp": "cfed3631dd08",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.5 product and sum rules; formula sheet"
+ }
+]

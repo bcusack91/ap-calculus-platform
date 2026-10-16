@@ -17,15 +17,16 @@ import {
  * PATCH /api/flashcards/settings on blur/Enter; blank = use the default
  * (see flashcard-daily-limits.ts). Reverts and shows an error if the save fails.
  *
- * The exam-yield toggles only appear for a student who has MCAT cards (the MCAT
- * is the only course whose cards carry yield tiers); for everyone else they
- * would change nothing and just raise questions.
+ * The exam-yield toggles only appear for a student who has yield-labeled cards
+ * (the MCAT deck and the AP Chemistry, AP Biology, AP Physics 1 and AP Calculus
+ * AB decks); for everyone else they would change nothing and just raise
+ * questions.
  */
 
 /**
  * Show the medium/low-yield toggles? Only when the student has cards that
- * carry an exam-yield tier (today: MCAT cards). An older API response without
- * the flag hides them, the safe default for the non-MCAT majority.
+ * carry an exam-yield tier (MCAT and the four flagship AP decks). An older API
+ * response without the flag hides them, the safe default for everyone else.
  */
 export function shouldShowYieldToggles(settings: { hasYieldCards?: unknown } | null | undefined): boolean {
   return settings?.hasYieldCards === true
@@ -69,7 +70,7 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
   const [values, setValues] = useState<Record<FieldKey, string>>({ newPerDay: '', maxReviewsPerDay: '' })
   const [error, setError] = useState<string | null>(null)
   const [saved, setSaved] = useState(false)
-  // MCAT exam-yield tiers: ultra-high and high are always in the queue;
+  // Exam-yield tiers: ultra-high and high are always in the queue;
   // medium (default on) and low (default off) are the student's choice.
   const [includeMediumYield, setIncludeMediumYield] = useState(true)
   const [includeLowYield, setIncludeLowYield] = useState(false)
@@ -214,9 +215,10 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
       {showYield && (
         <>
           <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-            MCAT cards are labeled by how often their content shows up on the exam. Ultra-high and
-            high-yield cards are always in your queue; choose whether to add the rest. Your review
-            history is kept either way.
+            Cards in some courses (MCAT, AP Chemistry, AP Biology, AP Physics 1 and AP Calculus AB)
+            are labeled by how often their content shows up on the exam. Ultra-high and high-yield
+            cards are always in your queue; choose whether to add the rest. Your review history is
+            kept either way.
           </p>
           <label className="mt-2 flex items-start gap-3 text-sm text-gray-900 dark:text-white">
             <input
@@ -227,7 +229,7 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
               className="mt-0.5 h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-accent focus:ring-accent"
             />
             <span>
-              <span className="font-semibold">Include medium-yield MCAT cards</span>
+              <span className="font-semibold">Include medium-yield cards</span>
               <span className="block text-xs text-gray-500 dark:text-gray-400">Plausible but secondary material. On by default.</span>
             </span>
           </label>
@@ -240,7 +242,7 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
               className="mt-0.5 h-4 w-4 rounded border-gray-300 dark:border-gray-600 text-accent focus:ring-accent"
             />
             <span>
-              <span className="font-semibold">Include low-yield MCAT cards</span>
+              <span className="font-semibold">Include low-yield cards</span>
               <span className="block text-xs text-gray-500 dark:text-gray-400">Detail most students will not need. Off by default.</span>
             </span>
           </label>

@@ -1,0 +1,192 @@
+[
+ {
+  "topicSlug": "motion-graphs",
+  "front": "How do you know if an object is speeding up from a velocity-time graph?",
+  "back": "The velocity and acceleration have the same sign (both above or both below the time axis at that instant)"
+ },
+ {
+  "topicSlug": "motion-graphs",
+  "front": "On a velocity-time graph, how do you find total distance traveled instead of displacement?",
+  "back": "Add every area as a positive amount, including area below the time axis. For displacement, area below the axis counts as negative instead."
+ },
+ {
+  "topicSlug": "motion-graphs",
+  "front": "What does a curved position-time graph indicate?",
+  "back": "Changing velocity (non-zero acceleration)"
+ },
+ {
+  "topicSlug": "motion-graphs",
+  "front": "What does a horizontal line on a position-time graph indicate?",
+  "back": "The object is at rest (zero velocity)"
+ },
+ {
+  "topicSlug": "motion-graphs",
+  "front": "What does a horizontal line on a velocity-time graph indicate?",
+  "back": "Constant velocity (zero acceleration)"
+ },
+ {
+  "topicSlug": "motion-graphs",
+  "front": "What does the area under a velocity-time graph represent?",
+  "back": "Displacement (change in position)"
+ },
+ {
+  "topicSlug": "motion-graphs",
+  "front": "What does the area under an acceleration-time graph represent?",
+  "back": "Change in velocity"
+ },
+ {
+  "topicSlug": "motion-graphs",
+  "front": "What does the slope of a position-time graph represent?",
+  "back": "Velocity"
+ },
+ {
+  "topicSlug": "motion-graphs",
+  "front": "What does the slope of a velocity-time graph represent?",
+  "back": "Acceleration"
+ },
+ {
+  "topicSlug": "motion-graphs",
+  "front": "What shape is a velocity-time graph for constant acceleration?",
+  "back": "A straight line (constant slope)"
+ },
+ {
+  "topicSlug": "one-dimensional-motion",
+  "front": "At the peak of vertical motion, what are the velocity and acceleration?",
+  "back": "Velocity: $v = 0$. Acceleration: $a = -g$ (gravity still acts!)"
+ },
+ {
+  "topicSlug": "one-dimensional-motion",
+  "front": "If an object has positive velocity and negative acceleration, what is happening?",
+  "back": "The object is moving in the positive direction but slowing down"
+ },
+ {
+  "topicSlug": "one-dimensional-motion",
+  "front": "What are the units of acceleration?",
+  "back": "m/s² (meters per second squared)"
+ },
+ {
+  "topicSlug": "one-dimensional-motion",
+  "front": "What does instantaneous velocity represent on a position-time graph?",
+  "back": "The slope of the tangent line at that point"
+ },
+ {
+  "topicSlug": "one-dimensional-motion",
+  "front": "What is the acceleration due to gravity?",
+  "back": "$g = 9.8$ m/s² (often approximated as $10$ m/s²), directed downward"
+ },
+ {
+  "topicSlug": "one-dimensional-motion",
+  "front": "What is the difference between distance and displacement?",
+  "back": "Distance is total path length (scalar, always positive). Displacement is the straight-line change in position (vector, can be negative)."
+ },
+ {
+  "topicSlug": "one-dimensional-motion",
+  "front": "What is the formula for average velocity?",
+  "back": "$v_{avg} = \\frac{\\Delta x}{\\Delta t} = \\frac{x_f - x_i}{t_f - t_i}$"
+ },
+ {
+  "topicSlug": "one-dimensional-motion",
+  "front": "What is the kinematic equation without displacement?",
+  "back": "$v = v_0 + at$"
+ },
+ {
+  "topicSlug": "one-dimensional-motion",
+  "front": "What is the kinematic equation without final velocity?",
+  "back": "$x = x_0 + v_0 t + \\frac{1}{2}at^2$"
+ },
+ {
+  "topicSlug": "one-dimensional-motion",
+  "front": "What is the kinematic equation without time?",
+  "back": "$v^2 = v_0^2 + 2a(x - x_0)$"
+ },
+ {
+  "topicSlug": "projectile-motion",
+  "front": "For a projectile launched and landing at the same height, how does landing speed compare to launch speed?",
+  "back": "They are equal in magnitude (but landing velocity is at angle below horizontal)"
+ },
+ {
+  "topicSlug": "projectile-motion",
+  "front": "What is the acceleration at the peak of projectile motion?",
+  "back": "$a = -g$ downward (acceleration is always $-g$ throughout flight!)"
+ },
+ {
+  "topicSlug": "projectile-motion",
+  "front": "What is the formula for maximum height of a projectile?",
+  "back": "$h_{max} = \\frac{v_{0y}^2}{2g}$"
+ },
+ {
+  "topicSlug": "projectile-motion",
+  "front": "What is the horizontal acceleration in projectile motion?",
+  "back": "$a_x = 0$ (no horizontal acceleration)"
+ },
+ {
+  "topicSlug": "projectile-motion",
+  "front": "What is the shape of a projectile's path?",
+  "back": "A parabola"
+ },
+ {
+  "topicSlug": "projectile-motion",
+  "front": "What is the time to reach maximum height in projectile motion?",
+  "back": "$t = \\frac{v_{0y}}{g}$ (when $v_y = 0$)"
+ },
+ {
+  "topicSlug": "projectile-motion",
+  "front": "What is the vertical acceleration in projectile motion?",
+  "back": "$a_y = -g = -9.8$ m/s² (constant downward)"
+ },
+ {
+  "topicSlug": "projectile-motion",
+  "front": "What is the vertical velocity at the peak of projectile motion?",
+  "back": "$v_y = 0$ (but horizontal velocity is still $v_x$!)"
+ },
+ {
+  "topicSlug": "projectile-motion",
+  "front": "What launch angle gives maximum range for a projectile?",
+  "back": "$45°$ (for a given initial speed)"
+ },
+ {
+  "topicSlug": "projectile-motion",
+  "front": "Which two launch angles give the same range?",
+  "back": "Complementary angles: $\\theta$ and $(90° - \\theta)$ (e.g., 30° and 60°)"
+ },
+ {
+  "topicSlug": "two-dimensional-motion",
+  "front": "How do you find the angle of a vector from its components?",
+  "back": "$\\theta = \\tan^{-1}(v_y / v_x)$"
+ },
+ {
+  "topicSlug": "two-dimensional-motion",
+  "front": "How do you find the horizontal component of a vector at angle $\\theta$?",
+  "back": "$v_x = v \\cos \\theta$"
+ },
+ {
+  "topicSlug": "two-dimensional-motion",
+  "front": "How do you find the magnitude of a vector from its components?",
+  "back": "$v = \\sqrt{v_x^2 + v_y^2}$ (Pythagorean theorem)"
+ },
+ {
+  "topicSlug": "two-dimensional-motion",
+  "front": "How do you find the vertical component of a vector at angle $\\theta$?",
+  "back": "$v_y = v \\sin \\theta$"
+ },
+ {
+  "topicSlug": "two-dimensional-motion",
+  "front": "What direction is the velocity vector relative to the path?",
+  "back": "Always tangent to the path"
+ },
+ {
+  "topicSlug": "two-dimensional-motion",
+  "front": "What is the formula for relative velocity?",
+  "back": "$\\vec{v}_{A/B} = \\vec{v}_A - \\vec{v}_B$ (velocity of A relative to B)"
+ },
+ {
+  "topicSlug": "two-dimensional-motion",
+  "front": "What is the key principle of 2D motion?",
+  "back": "Horizontal and vertical motions are independent of each other"
+ },
+ {
+  "topicSlug": "two-dimensional-motion",
+  "front": "What is the same in both $x$ and $y$ directions for projectile motion?",
+  "back": "Time $t$ is the same for both horizontal and vertical components"
+ }
+]

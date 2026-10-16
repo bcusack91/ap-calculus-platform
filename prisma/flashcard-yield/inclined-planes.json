@@ -1,0 +1,62 @@
+[
+ {
+  "front": "At what angle does a frictionless incline give the same acceleration as free fall?",
+  "fp": "536001da3d0b",
+  "yield": "LOW",
+  "why": "Vertical incline gives g; trivial limit"
+ },
+ {
+  "front": "What are the components of weight on an incline?",
+  "fp": "23faba77b635",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.4 weight components on an incline"
+ },
+ {
+  "front": "What is the acceleration of an object on a frictionless incline?",
+  "fp": "6de6d1e4b308",
+  "yield": "HIGH",
+  "why": "CED 2.4 a = g sin theta frictionless"
+ },
+ {
+  "front": "What is the acceleration of an object sliding down an incline with friction?",
+  "fp": "4b80b95831cc",
+  "yield": "HIGH",
+  "why": "CED 2.7 incline with kinetic friction"
+ },
+ {
+  "front": "What is the critical angle for an object on an incline with friction?",
+  "fp": "ea25ceee263f",
+  "yield": "MEDIUM",
+  "why": "Critical angle tan theta = mu_s; secondary"
+ },
+ {
+  "front": "What is the friction force on an incline?",
+  "fp": "f080673129cf",
+  "yield": "HIGH",
+  "why": "CED 2.7 friction on an incline"
+ },
+ {
+  "front": "What is the magnitude of the acceleration of an object sliding UP a rough incline?",
+  "fp": "93141c6b00dc",
+  "yield": "MEDIUM",
+  "why": "Sliding up a rough incline; secondary case"
+ },
+ {
+  "front": "What is the normal force on an incline?",
+  "fp": "806a8b51afe2",
+  "yield": "HIGH",
+  "why": "CED 2.4 normal force on an incline"
+ },
+ {
+  "front": "Which direction does friction point when an object slides down an incline?",
+  "fp": "bd2a6a7e665a",
+  "yield": "MEDIUM",
+  "why": "Restates friction direction"
+ },
+ {
+  "front": "Why do we rotate the coordinate system for incline problems?",
+  "fp": "a7447073eaa3",
+  "yield": "MEDIUM",
+  "why": "Tilted axes for inclines; technique tip"
+ }
+]

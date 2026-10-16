@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Use implicit differentiation to find $\\frac{dy}{dx}$ for $x^2 + y^2 = 25$.",
+  "fp": "66916ef8b77b",
+  "yield": "HIGH",
+  "why": "CED 3.2 implicit differentiation example"
+ },
+ {
+  "front": "What is $\\frac{d}{dx}[xy]$ using implicit differentiation?",
+  "fp": "94788bb05448",
+  "yield": "HIGH",
+  "why": "CED 3.2 d/dx of xy"
+ },
+ {
+  "front": "What is $\\frac{d}{dx}[y^2]$ using implicit differentiation?",
+  "fp": "246e293256b3",
+  "yield": "HIGH",
+  "why": "CED 3.2 d/dx of y^2"
+ },
+ {
+  "front": "What is implicit differentiation?",
+  "fp": "fccae59e961d",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.2 implicit differentiation"
+ },
+ {
+  "front": "What is the key difference between explicit and implicit differentiation?",
+  "fp": "ae3055b7286d",
+  "yield": "MEDIUM",
+  "why": "Explicit vs implicit; restatement"
+ },
+ {
+  "front": "When is a tangent line horizontal on an implicit curve?",
+  "fp": "eb86b14269db",
+  "yield": "HIGH",
+  "why": "CED 3.2 horizontal tangents on implicit curves"
+ }
+]

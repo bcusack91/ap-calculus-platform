@@ -1,0 +1,44 @@
+[
+ {
+  "front": "Down syndrome is caused by trisomy of chromosome:",
+  "fp": "d227805f982e",
+  "yield": "LOW",
+  "why": "OFF-EXAM: named disorders excluded (5.6/6.7); trim de-named aneuploidy cards"
+ },
+ {
+  "front": "Genetic recombination during meiosis increases:",
+  "fp": "5907dab74aeb",
+  "yield": "HIGH",
+  "why": "CED 5.3 meiosis increases genetic diversity"
+ },
+ {
+  "front": "How does meiosis differ from mitosis?",
+  "fp": "fcb67e1f4d95",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.2 meiosis vs mitosis; tested every exam"
+ },
+ {
+  "front": "Independent assortment contributes to genetic variation by:",
+  "fp": "a74b21d937f8",
+  "yield": "HIGH",
+  "why": "CED 5.3 independent assortment"
+ },
+ {
+  "front": "Independent assortment occurs because:",
+  "fp": "19b2dfba931e",
+  "yield": "MEDIUM",
+  "why": "Restates independent assortment card above"
+ },
+ {
+  "front": "The law of segregation states that:",
+  "fp": "a33960028f8f",
+  "yield": "HIGH",
+  "why": "CED 5.5 law of segregation"
+ },
+ {
+  "front": "What is crossing over?",
+  "fp": "946b43ff434e",
+  "yield": "HIGH",
+  "why": "CED 5.3 crossing over"
+ }
+]

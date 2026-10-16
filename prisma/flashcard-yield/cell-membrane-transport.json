@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Define hypertonic, hypotonic, and isotonic.",
+  "fp": "1d95d82bddeb",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.8 tonicity; tested every exam"
+ },
+ {
+  "front": "How does the Na⁺/K⁺ pump work?",
+  "fp": "95177ee6cd33",
+  "yield": "HIGH",
+  "why": "CED 2.6 Na+/K+ pump active transport"
+ },
+ {
+  "front": "Simple diffusion vs. facilitated diffusion?",
+  "fp": "b8ccdf345b4c",
+  "yield": "HIGH",
+  "why": "CED 2.6 simple vs facilitated diffusion"
+ },
+ {
+  "front": "Water potential equation?",
+  "fp": "470dc305955c",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.8 water potential; formula-sheet FRQ calc"
+ },
+ {
+  "front": "What are the main components of the cell membrane?",
+  "fp": "634569a89e25",
+  "yield": "HIGH",
+  "why": "CED 2.3/2.4 membrane components"
+ },
+ {
+  "front": "What are the types of endocytosis?",
+  "fp": "8335f132c4b6",
+  "yield": "MEDIUM",
+  "why": "CED 2.7 endocytosis subtypes; detail"
+ },
+ {
+  "front": "What is osmosis?",
+  "fp": "3c157400956c",
+  "yield": "HIGH",
+  "why": "CED 2.8 osmosis definition"
+ },
+ {
+  "front": "What is the fluid mosaic model?",
+  "fp": "759711affc5f",
+  "yield": "HIGH",
+  "why": "CED 2.4 fluid mosaic model"
+ }
+]

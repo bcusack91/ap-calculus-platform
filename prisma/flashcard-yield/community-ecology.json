@@ -1,0 +1,32 @@
+[
+ {
+  "front": "Compare Batesian and Müllerian mimicry.",
+  "fp": "7ea8778f8db3",
+  "yield": "LOW",
+  "why": "Batesian/Mullerian mimicry; not in the CED"
+ },
+ {
+  "front": "Compare mutualism, commensalism, and parasitism.",
+  "fp": "c8b21126f3fd",
+  "yield": "MEDIUM",
+  "why": "Symbiosis types; minor in Unit 8"
+ },
+ {
+  "front": "What is a keystone species?",
+  "fp": "69b1ad1f4e37",
+  "yield": "HIGH",
+  "why": "CED 8.5 keystone species"
+ },
+ {
+  "front": "What is resource partitioning?",
+  "fp": "ffd59e3ac489",
+  "yield": "MEDIUM",
+  "why": "Resource partitioning; secondary"
+ },
+ {
+  "front": "What is the competitive exclusion principle?",
+  "fp": "198c293526e9",
+  "yield": "MEDIUM",
+  "why": "Competitive exclusion; secondary"
+ }
+]

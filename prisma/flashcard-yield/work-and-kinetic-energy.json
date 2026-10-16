@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Does holding a heavy box stationary do any work?",
+  "fp": "1ee5e5b9405b",
+  "yield": "HIGH",
+  "why": "CED 3.2 no work without displacement"
+ },
+ {
+  "front": "If the net work on an object is zero, what happens to its speed?",
+  "fp": "bb7a289b55bf",
+  "yield": "HIGH",
+  "why": "CED 3.3 zero net work, constant speed"
+ },
+ {
+  "front": "If you double the speed of an object, how does its kinetic energy change?",
+  "fp": "8a2a7a6e699e",
+  "yield": "HIGH",
+  "why": "CED 3.1 KE scales with v^2"
+ },
+ {
+  "front": "What are the SI units of work and energy?",
+  "fp": "e4e9ebf1e2a8",
+  "yield": "MEDIUM",
+  "why": "Units of work; prerequisite"
+ },
+ {
+  "front": "What is the definition of work in physics?",
+  "fp": "63aa657a35d3",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.2 W = Fd cos theta; tested every exam"
+ },
+ {
+  "front": "What is the formula for kinetic energy?",
+  "fp": "7a2b92479adc",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.1 KE = mv^2/2"
+ },
+ {
+  "front": "What is the work-energy theorem?",
+  "fp": "195fa315df11",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.3 work-energy theorem"
+ },
+ {
+  "front": "When is work positive, negative, or zero?",
+  "fp": "92e60cd3ae70",
+  "yield": "HIGH",
+  "why": "CED 3.2 sign of work"
+ }
+]

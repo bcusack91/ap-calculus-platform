@@ -1,0 +1,146 @@
+[
+ {
+  "front": "$\\text{Mg(OH)}_{2}$ has $K_{sp} = 5.6 \\times 10^{-12}$. What is its molar solubility?",
+  "fp": "63c15e05abc5",
+  "yield": "HIGH",
+  "why": "CED 7.11 molar solubility from Ksp"
+ },
+ {
+  "front": "$K_{sp}$ for $\\text{PbCl}_{2}$",
+  "fp": "afa8811eb724",
+  "yield": "HIGH",
+  "why": "CED 7.11 writing Ksp"
+ },
+ {
+  "front": "$K_{sp}$–$s$ relation for $A_{3}B_{2}$ salt (e.g., $\\text{Ca}_{3}(\\text{PO}_{4})_{2}$)",
+  "fp": "72548c948de7",
+  "yield": "LOW",
+  "why": "A3B2 Ksp = 108s^5; rare stoichiometry"
+ },
+ {
+  "front": "$K_{sp}$–$s$ relation for $AB_{2}$ salt (e.g., $\\text{PbCl}_{2}$)",
+  "fp": "f57a39755377",
+  "yield": "HIGH",
+  "why": "CED 7.11 AB2 Ksp-s relation"
+ },
+ {
+  "front": "$K_{sp}$–$s$ relation for $AB$ salt (e.g., AgCl)",
+  "fp": "608e661d6ccb",
+  "yield": "HIGH",
+  "why": "CED 7.11 AB Ksp-s relation"
+ },
+ {
+  "front": "$Q < K_{sp}$ means…",
+  "fp": "581eadddd3ad",
+  "yield": "HIGH",
+  "why": "CED 7.11 Q < Ksp unsaturated"
+ },
+ {
+  "front": "$Q = K_{sp}$ means…",
+  "fp": "31d38a39f8c3",
+  "yield": "MEDIUM",
+  "why": "Q = Ksp saturated; restates Q cards"
+ },
+ {
+  "front": "AgCl vs. AgI — which precipitates first when $\\text{Ag}^{+}$ is added to a Cl⁻/I⁻ mix?",
+  "fp": "de5b485feada",
+  "yield": "MEDIUM",
+  "why": "Which salt precipitates first; secondary"
+ },
+ {
+  "front": "Can you compare $K_{sp}$ values directly to rank solubilities?",
+  "fp": "3db33ba47e31",
+  "yield": "HIGH",
+  "why": "CED 7.11 compare Ksp only with matching stoichiometry"
+ },
+ {
+  "front": "Common-ion effect — which way does solubility move?",
+  "fp": "477d55b0116d",
+  "yield": "HIGH",
+  "why": "CED 7.12 common-ion effect lowers solubility"
+ },
+ {
+  "front": "Critical step when mixing two solutions to compute $Q$",
+  "fp": "542723dc34b3",
+  "yield": "MEDIUM",
+  "why": "Dilution before computing Q; technique detail"
+ },
+ {
+  "front": "Definition of molar solubility",
+  "fp": "1ffd752db0c3",
+  "yield": "HIGH",
+  "why": "CED 7.11 molar solubility definition"
+ },
+ {
+  "front": "Effect of low pH on $\\text{CaF}_{2}$ solubility",
+  "fp": "dbb2bb4d080b",
+  "yield": "MEDIUM",
+  "why": "CED 7.13 pH and solubility, qualitative only (R32)"
+ },
+ {
+  "front": "Effect of low pH on AgCl solubility",
+  "fp": "61c5709c9816",
+  "yield": "MEDIUM",
+  "why": "CED 7.13 pH and solubility, qualitative only"
+ },
+ {
+  "front": "General $K_{sp}$ for $A_p B_q(s) \\rightleftharpoons p\\,A^{m+} + q\\,B^{n-}$",
+  "fp": "863d94079a48",
+  "yield": "HIGH",
+  "why": "CED 7.11 general Ksp expression"
+ },
+ {
+  "front": "How \"complete\" can selective precipitation be?",
+  "fp": "85e3d98cbaa4",
+  "yield": "LOW",
+  "why": "Completeness of selective precipitation; beyond the CED"
+ },
+ {
+  "front": "How does raising the temperature change $K_{sp}$ for a salt that dissolves endothermically?",
+  "fp": "009d6d3f259b",
+  "yield": "MEDIUM",
+  "why": "Temperature and Ksp; secondary"
+ },
+ {
+  "front": "Selective precipitation principle",
+  "fp": "b47039db94cb",
+  "yield": "MEDIUM",
+  "why": "Selective precipitation principle; secondary"
+ },
+ {
+  "front": "Solubility of AgCl in 0.10 M NaCl vs. pure water",
+  "fp": "5d4230456ffa",
+  "yield": "HIGH",
+  "why": "CED 7.12 common-ion Ksp calculation"
+ },
+ {
+  "front": "Three things $K_{sp}$ lets you predict",
+  "fp": "0b62807a3868",
+  "yield": "MEDIUM",
+  "why": "Survey of Ksp uses; restatement"
+ },
+ {
+  "front": "When does $K_{sp}$ apply?",
+  "fp": "79eaddf7d409",
+  "yield": "MEDIUM",
+  "why": "When Ksp applies; restatement"
+ },
+ {
+  "front": "When does a precipitate form?",
+  "fp": "e642c375d09f",
+  "yield": "HIGH",
+  "why": "CED 7.11 precipitate when Q > Ksp"
+ },
+ {
+  "front": "Why does the common-ion effect work conceptually?",
+  "fp": "bdea7eaa1aaa",
+  "yield": "MEDIUM",
+  "why": "Restates common-ion effect"
+ },
+ {
+  "front": "Why is $\\text{Mg(OH)}_{2}$ less soluble in NaOH?",
+  "fp": "f86a89c459da",
+  "yield": "MEDIUM",
+  "why": "Restates common-ion effect"
+ }
+]

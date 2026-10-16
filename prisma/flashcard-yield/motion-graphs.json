@@ -1,0 +1,62 @@
+[
+ {
+  "front": "How do you know if an object is speeding up from a velocity-time graph?",
+  "fp": "bb08920ef6c6",
+  "yield": "HIGH",
+  "why": "CED 1.3 speeding up when v and a share sign"
+ },
+ {
+  "front": "On a velocity-time graph, how do you find total distance traveled instead of displacement?",
+  "fp": "008556a972cb",
+  "yield": "HIGH",
+  "why": "CED 1.3 distance vs displacement from v-t area"
+ },
+ {
+  "front": "What does a curved position-time graph indicate?",
+  "fp": "6ebc2c916ddb",
+  "yield": "HIGH",
+  "why": "CED 1.3 curved x-t means acceleration"
+ },
+ {
+  "front": "What does a horizontal line on a position-time graph indicate?",
+  "fp": "716626cd35f4",
+  "yield": "MEDIUM",
+  "why": "Flat x-t means rest; basic graph read"
+ },
+ {
+  "front": "What does a horizontal line on a velocity-time graph indicate?",
+  "fp": "10d96214391d",
+  "yield": "MEDIUM",
+  "why": "Flat v-t means constant velocity; basic read"
+ },
+ {
+  "front": "What does the area under a velocity-time graph represent?",
+  "fp": "899fd1fa421a",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.3 area under v-t = displacement"
+ },
+ {
+  "front": "What does the area under an acceleration-time graph represent?",
+  "fp": "c54618493d44",
+  "yield": "HIGH",
+  "why": "CED 1.3 area under a-t = dv"
+ },
+ {
+  "front": "What does the slope of a position-time graph represent?",
+  "fp": "e6444ab15408",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.3 slope of x-t = velocity"
+ },
+ {
+  "front": "What does the slope of a velocity-time graph represent?",
+  "fp": "84d8c2bd668a",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.3 slope of v-t = acceleration"
+ },
+ {
+  "front": "What shape is a velocity-time graph for constant acceleration?",
+  "fp": "f29ac062f50c",
+  "yield": "MEDIUM",
+  "why": "Linear v-t for constant a; restatement"
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Give an important small-angle approximation.",
+  "fp": "231c62f451c4",
+  "yield": "LOW",
+  "why": "Small-angle approximation; not in the CED"
+ },
+ {
+  "front": "If $f$ is concave up near $x = a$, does the tangent line approximation overestimate or underestimate $f(x)$?",
+  "fp": "476b1d37f172",
+  "yield": "HIGH",
+  "why": "CED 4.6 over/under from concavity"
+ },
+ {
+  "front": "Use linear approximation to estimate $\\sqrt{4.1}$.",
+  "fp": "531a81d9bb6a",
+  "yield": "HIGH",
+  "why": "CED 4.6 linear approximation example"
+ },
+ {
+  "front": "What is the differential form $dy$ and how does it relate to linear approximation?",
+  "fp": "22e3b05be8be",
+  "yield": "MEDIUM",
+  "why": "Differentials dy; secondary"
+ },
+ {
+  "front": "What is the formula for linear approximation of $f(x)$ near $x = a$?",
+  "fp": "c645085830b7",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.6 tangent-line approximation; FRQ staple"
+ },
+ {
+  "front": "Why does linear approximation work?",
+  "fp": "27405acaf6c5",
+  "yield": "MEDIUM",
+  "why": "Why linearization works; conceptual aside"
+ }
+]

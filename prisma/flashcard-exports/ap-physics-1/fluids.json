@@ -1,0 +1,202 @@
+[
+ {
+  "topicSlug": "fluids-bernoulli",
+  "front": "Bernoulli for horizontal flow?",
+  "back": "$P_1 + \\tfrac12\\rho v_1^2 = P_2 + \\tfrac12\\rho v_2^2$."
+ },
+ {
+  "topicSlug": "fluids-bernoulli",
+  "front": "Bernoulli's equation?",
+  "back": "$P + \\tfrac12\\rho v^2 + \\rho g y$ = constant along a streamline."
+ },
+ {
+  "topicSlug": "fluids-bernoulli",
+  "front": "Conditions required for Bernoulli's equation?",
+  "back": "Incompressible, non-viscous, steady flow, along a single streamline."
+ },
+ {
+  "topicSlug": "fluids-bernoulli",
+  "front": "Equation usually paired with Bernoulli to solve flow problems?",
+  "back": "The continuity equation $A_1 v_1 = A_2 v_2$."
+ },
+ {
+  "topicSlug": "fluids-bernoulli",
+  "front": "Faster fluid speed (at same height) means…",
+  "back": "…lower pressure."
+ },
+ {
+  "topicSlug": "fluids-bernoulli",
+  "front": "Torricelli's theorem?",
+  "back": "$v = \\sqrt{2gh}$ — speed of fluid leaving a hole depth $h$ below an open surface."
+ },
+ {
+  "topicSlug": "fluids-bernoulli",
+  "front": "Units of each term in Bernoulli's equation?",
+  "back": "Pa (= N/m² = J/m³) — energy per unit volume."
+ },
+ {
+  "topicSlug": "fluids-bernoulli",
+  "front": "What does Bernoulli's equation represent physically?",
+  "back": "Conservation of energy per unit volume for an incompressible, non-viscous fluid."
+ },
+ {
+  "topicSlug": "fluids-bernoulli",
+  "front": "When does Bernoulli reduce to $P = P_0 + \\rho g h$?",
+  "back": "When the fluid is at rest ($v = 0$)."
+ },
+ {
+  "topicSlug": "fluids-bernoulli",
+  "front": "Why does an airplane wing produce lift?",
+  "back": "Air moves faster over the curved top → lower pressure on top → net upward force."
+ },
+ {
+  "topicSlug": "fluids-buoyancy",
+  "front": "A boat made of steel ($\\rho > \\rho_{\\text{water}}$) floats — why?",
+  "back": "Its hollow shape displaces enough water that the average density is less than water."
+ },
+ {
+  "topicSlug": "fluids-buoyancy",
+  "front": "A scale reads less for a submerged object because…",
+  "back": "…the buoyant force partially supports the weight; the scale registers $W - F_b$."
+ },
+ {
+  "topicSlug": "fluids-buoyancy",
+  "front": "Apparent weight underwater?",
+  "back": "$W_{\\text{app}} = W - F_b$."
+ },
+ {
+  "topicSlug": "fluids-buoyancy",
+  "front": "Does a floating object's submerged volume depend on $g$?",
+  "back": "No — $g$ cancels in the equilibrium equation."
+ },
+ {
+  "topicSlug": "fluids-buoyancy",
+  "front": "For a floating object, what fraction is submerged?",
+  "back": "$V_{\\text{sub}}/V_{\\text{obj}} = \\rho_{\\text{obj}}/\\rho_{\\text{fluid}}$."
+ },
+ {
+  "topicSlug": "fluids-buoyancy",
+  "front": "State Archimedes' principle.",
+  "back": "Buoyant force = weight of fluid displaced: $F_b = \\rho_{\\text{fluid}} g V_{\\text{disp}}$."
+ },
+ {
+  "topicSlug": "fluids-buoyancy",
+  "front": "What happens if $\\rho_{\\text{obj}} = \\rho_{\\text{fluid}}$?",
+  "back": "The object stays at neutral buoyancy — suspended at any depth."
+ },
+ {
+  "topicSlug": "fluids-buoyancy",
+  "front": "When does an object float in a fluid?",
+  "back": "When $\\rho_{\\text{obj}} < \\rho_{\\text{fluid}}$."
+ },
+ {
+  "topicSlug": "fluids-buoyancy",
+  "front": "Which density goes in the buoyant-force formula?",
+  "back": "The density of the **fluid**, not the object."
+ },
+ {
+  "topicSlug": "fluids-buoyancy",
+  "front": "Why does buoyancy exist physically?",
+  "back": "Pressure increases with depth → more upward pressure on the bottom of the object than downward pressure on the top."
+ },
+ {
+  "topicSlug": "fluids-continuity",
+  "front": "A pipe of radius 2.0 cm carries water at 3.0 m/s. What is the volume flow rate?",
+  "back": "$Q = Av = \\pi(0.020)^2(3.0) \\approx 3.8 \\times 10^{-3}$ m³/s, about 3.8 L/s."
+ },
+ {
+  "topicSlug": "fluids-continuity",
+  "front": "Continuity equation (incompressible)?",
+  "back": "$A_1 v_1 = A_2 v_2$"
+ },
+ {
+  "topicSlug": "fluids-continuity",
+  "front": "Does continuity hold for compressible gases?",
+  "back": "Only as $\\rho A v$ = const; the simpler $Av$ = const requires incompressibility."
+ },
+ {
+  "topicSlug": "fluids-continuity",
+  "front": "If pipe radius halves, by what factor does fluid speed change?",
+  "back": "Speed is multiplied by 4 (area ∝ r²)."
+ },
+ {
+  "topicSlug": "fluids-continuity",
+  "front": "Mass flow rate?",
+  "back": "$\\dot m = \\rho A v$ (kg/s)"
+ },
+ {
+  "topicSlug": "fluids-continuity",
+  "front": "Two pipes merge into one — what is conserved at the junction?",
+  "back": "The total volume flow rate: $Q_1 + Q_2 = Q_{\\text{out}}$."
+ },
+ {
+  "topicSlug": "fluids-continuity",
+  "front": "Volume flow rate?",
+  "back": "$Q = A v$ (m³/s)"
+ },
+ {
+  "topicSlug": "fluids-continuity",
+  "front": "What conservation law gives the continuity equation?",
+  "back": "Conservation of mass for an incompressible fluid in steady flow."
+ },
+ {
+  "topicSlug": "fluids-continuity",
+  "front": "Where does fluid flow fastest in a pipe of varying width?",
+  "back": "In the **narrowest** section."
+ },
+ {
+  "topicSlug": "fluids-continuity",
+  "front": "Why must $Av$ be constant along a streamline?",
+  "back": "Because the same mass per second must cross every section in steady, incompressible flow."
+ },
+ {
+  "topicSlug": "fluids-density-and-pressure",
+  "front": "1 atm in pascals?",
+  "back": "$\\approx 1.0\\times10^{5}$ Pa."
+ },
+ {
+  "topicSlug": "fluids-density-and-pressure",
+  "front": "Absolute pressure at depth $h$?",
+  "back": "$P = P_{\\text{atm}} + \\rho g h$"
+ },
+ {
+  "topicSlug": "fluids-density-and-pressure",
+  "front": "Density formula?",
+  "back": "$\\rho = m/V$ (kg/m³)"
+ },
+ {
+  "topicSlug": "fluids-density-and-pressure",
+  "front": "Density of water?",
+  "back": "$1000$ kg/m³ = 1 g/cm³"
+ },
+ {
+  "topicSlug": "fluids-density-and-pressure",
+  "front": "Does pressure depend on container shape?",
+  "back": "No — only on depth and fluid density."
+ },
+ {
+  "topicSlug": "fluids-density-and-pressure",
+  "front": "Hydraulic lift relation?",
+  "back": "$F_1/A_1 = F_2/A_2$ — small piston force × area ratio = large piston force."
+ },
+ {
+  "topicSlug": "fluids-density-and-pressure",
+  "front": "Hydrostatic / gauge pressure at depth $h$?",
+  "back": "$P_{\\text{gauge}} = \\rho g h$"
+ },
+ {
+  "topicSlug": "fluids-density-and-pressure",
+  "front": "Pressure formula?",
+  "back": "$P = F_\\perp/A$ (Pa = N/m²)"
+ },
+ {
+  "topicSlug": "fluids-density-and-pressure",
+  "front": "State Pascal's principle.",
+  "back": "A pressure change in a confined incompressible fluid is transmitted undiminished throughout."
+ },
+ {
+  "topicSlug": "fluids-density-and-pressure",
+  "front": "What is specific gravity (relative density)?",
+  "back": "It is the dimensionless ratio $\\rho_{\\text{object}}/\\rho_{\\text{water}}$. Less than 1 → floats in water; greater than 1 → sinks. Aluminum's is 2.7, so it sinks."
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "front": "How do you calculate gas volumes from electrolysis?",
+  "fp": "e5f41d48a5bc",
+  "yield": "MEDIUM",
+  "why": "Electrolysis gas volumes; secondary Faraday application"
+ },
+ {
+  "front": "How does electroplating work?",
+  "fp": "fb3431f9e2a6",
+  "yield": "MEDIUM",
+  "why": "Electroplating; secondary Faraday context"
+ },
+ {
+  "front": "What happens during electrolysis of aqueous solutions?",
+  "fp": "3234c36def9e",
+  "yield": "LOW",
+  "why": "Competing water electrolysis; beyond the CED"
+ },
+ {
+  "front": "What is Faraday's law and how do you use it?",
+  "fp": "9c5c118988c5",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 9.11 Faraday's law q = It; FRQ staple"
+ },
+ {
+  "front": "What is metal purification by electrolysis?",
+  "fp": "ae8cdd8c566e",
+  "yield": "LOW",
+  "why": "OFF-EXAM: electrorefining/industrial electrolysis not in CED (R21)"
+ },
+ {
+  "front": "What is the difference between galvanic and electrolytic cells?",
+  "fp": "c26644b02abf",
+  "yield": "HIGH",
+  "why": "CED 9.8/9.11 galvanic vs electrolytic"
+ }
+]

@@ -1,0 +1,56 @@
+[
+ {
+  "front": "Henderson-Hasselbalch equation?",
+  "fp": "a7db55c05318",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.9 Henderson-Hasselbalch; equation-sheet staple"
+ },
+ {
+  "front": "How do you calculate pH change when strong acid/base added to buffer?",
+  "fp": "33b9358fd67d",
+  "yield": "LOW",
+  "why": "OFF-EXAM: pH change after adding acid/base to a buffer (8.9 exclusion; R31)"
+ },
+ {
+  "front": "How do you choose the right buffer for a desired pH?",
+  "fp": "9b59b178aa70",
+  "yield": "HIGH",
+  "why": "CED 8.10 choose buffer with pKa near target pH"
+ },
+ {
+  "front": "How does a buffer resist pH change when acid or base is added?",
+  "fp": "71f5541dd19d",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.8 how a buffer resists pH change; FRQ staple"
+ },
+ {
+  "front": "What are the major buffer systems in human blood?",
+  "fp": "78d8bc742cf8",
+  "yield": "LOW",
+  "why": "Blood buffer systems; not in the CED"
+ },
+ {
+  "front": "What are the two methods for preparing buffer solutions?",
+  "fp": "3ea2ebc3174c",
+  "yield": "MEDIUM",
+  "why": "Two ways to prepare a buffer; secondary"
+ },
+ {
+  "front": "What is a buffer and what are the two types of buffer systems?",
+  "fp": "bac363b7d1d2",
+  "yield": "HIGH",
+  "why": "CED 8.8 buffer definition and components"
+ },
+ {
+  "front": "What is buffer capacity and what factors affect it?",
+  "fp": "b6dd12c0a225",
+  "yield": "HIGH",
+  "why": "CED 8.10 buffer capacity"
+ },
+ {
+  "front": "What is the Henderson-Hasselbalch equation for weak acid buffers?",
+  "fp": "d8db03ec30d9",
+  "yield": "MEDIUM",
+  "why": "Restates Henderson-Hasselbalch card"
+ }
+]

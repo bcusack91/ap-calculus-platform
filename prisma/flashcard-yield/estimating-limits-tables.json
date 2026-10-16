@@ -1,0 +1,38 @@
+[
+ {
+  "front": "A table shows $f(x) \\to 2$ as $x \\to 3^-$ and $f(x) \\to 5$ as $x \\to 3^+$. What is $\\lim_{x \\to 3} f(x)$?",
+  "fp": "82899a6de6bf",
+  "yield": "HIGH",
+  "why": "CED 1.4 one-sided values disagree, DNE"
+ },
+ {
+  "front": "How do you estimate a limit from a table?",
+  "fp": "98c38a669bef",
+  "yield": "HIGH",
+  "why": "CED 1.4 estimating limits from tables"
+ },
+ {
+  "front": "What does it mean if table values grow without bound?",
+  "fp": "bf3bc740069e",
+  "yield": "MEDIUM",
+  "why": "Unbounded table values; restatement"
+ },
+ {
+  "front": "What indicates that a limit exists when using a table of values?",
+  "fp": "fb93bfe86586",
+  "yield": "MEDIUM",
+  "why": "Restates table-limit existence"
+ },
+ {
+  "front": "When using tables to estimate limits, what two directions should you always check?",
+  "fp": "e11a8b8098ac",
+  "yield": "MEDIUM",
+  "why": "Check both sides; restatement"
+ },
+ {
+  "front": "Why might a table method be misleading for estimating limits?",
+  "fp": "ee74ec7c753a",
+  "yield": "LOW",
+  "why": "Pitfalls of table method; aside"
+ }
+]

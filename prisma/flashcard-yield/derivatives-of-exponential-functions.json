@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Find $\\frac{d}{dx}[e^{5x}]$ using the Chain Rule.",
+  "fp": "432e3ea7f743",
+  "yield": "HIGH",
+  "why": "CED 3.1 derivative of e^{5x}"
+ },
+ {
+  "front": "Simplify: $xe^x + e^x$",
+  "fp": "cededb7451d3",
+  "yield": "LOW",
+  "why": "Factoring e^x; algebra tip"
+ },
+ {
+  "front": "What is $\\frac{d}{dx}[2^x]$?",
+  "fp": "35be1f554aab",
+  "yield": "HIGH",
+  "why": "CED 2.8 derivative of a^x"
+ },
+ {
+  "front": "What is $\\frac{d}{dx}[3^{2x}]$?",
+  "fp": "eaf7435937d5",
+  "yield": "MEDIUM",
+  "why": "Derivative of 3^{2x}; practice item"
+ },
+ {
+  "front": "What is $\\frac{d}{dx}[e^x]$?",
+  "fp": "e0dcec1e061f",
+  "yield": "HIGH",
+  "why": "CED 2.8 derivative of e^x (core card in this topic)"
+ },
+ {
+  "front": "What is $\\frac{d}{dx}[x^2 e^x]$?",
+  "fp": "22f71fb346d0",
+  "yield": "MEDIUM",
+  "why": "Product rule with e^x; practice item"
+ }
+]

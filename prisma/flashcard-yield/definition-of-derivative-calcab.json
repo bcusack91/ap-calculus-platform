@@ -1,0 +1,38 @@
+[
+ {
+  "front": "$\\lim_{x \\to \\pi} \\dfrac{\\sin x - 0}{x - \\pi} = $",
+  "fp": "2f0e8108506b",
+  "yield": "HIGH",
+  "why": "CED 2.1 limit recognized as a derivative"
+ },
+ {
+  "front": "An equivalent limit definition of $f'(a)$ is:",
+  "fp": "8fde531e87c7",
+  "yield": "MEDIUM",
+  "why": "Restates alternate derivative definition"
+ },
+ {
+  "front": "If $f$ is differentiable at $a$, is $f$ continuous at $a$?",
+  "fp": "abe8a2982137",
+  "yield": "HIGH",
+  "why": "CED 2.4 differentiability implies continuity"
+ },
+ {
+  "front": "Use the limit definition to find $f'(x)$ for $f(x) = x^2$.",
+  "fp": "edabac6c5227",
+  "yield": "HIGH",
+  "why": "CED 2.2 derivative from the definition"
+ },
+ {
+  "front": "What is the alternative form of the derivative at $x = a$?",
+  "fp": "03da5cd7e2b1",
+  "yield": "HIGH",
+  "why": "CED 2.1 alternate form of derivative"
+ },
+ {
+  "front": "What is the limit definition of the derivative?",
+  "fp": "679b3ebc7ae1",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.1 limit definition of derivative"
+ }
+]

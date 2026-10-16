@@ -1,0 +1,26 @@
+[
+ {
+  "front": "A midpoint Riemann sum with $n = 3$ for $\\displaystyle\\int_0^6 f(x)\\,dx$ uses sample points at:",
+  "fp": "5896ad566cbb",
+  "yield": "HIGH",
+  "why": "CED 6.2 midpoint sample points"
+ },
+ {
+  "front": "A table gives $f(t)$ at $t = 0, 2, 5, 9$. How do you approximate $\\int_0^9 f(t)\\,dt$ with a trapezoidal sum?",
+  "fp": "b8bde3e96bda",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.2 trapezoidal sum with unequal widths; FRQ staple"
+ },
+ {
+  "front": "The error in a trapezoidal approximation is generally reduced by:",
+  "fp": "186dcb9524af",
+  "yield": "MEDIUM",
+  "why": "More subintervals reduce error; secondary"
+ },
+ {
+  "front": "The table below shows values of $f(x)$:<br/><table style=\"border-collapse:collapse;margin:12px 0\"><tr><th style=\"border:1px solid #888;padding:6px 14px\">$x$</th><td style=\"border:1px solid #888;padding:6px 14px\">$1$</td><td style=\"border:1px solid #888;padding:6px 14px\">$2$</td><td style=\"border:1px solid #888;padding:6px 14px\">$3$</td><td style=\"border:1px solid #888;padding:6px 14px\">$4$</td></tr><tr><th style=\"border:1px solid #888;padding:6px 14px\">$f(x)$</th><td style=\"border:1px solid #888;padding:6px 14px\">$3$</td><td style=\"border:1px solid #888;padding:6px 14px\">$5$</td><td style=\"border:1px solid #888;padding:6px 14px\">$6$</td><td style=\"border:1px solid #888;padding:6px 14px\">$10$</td></tr></table>Using a left Riemann sum with $n = 3$, $\\displaystyle\\int_1^4 f(x)\\,dx \\approx$",
+  "fp": "84fa9cd361a2",
+  "yield": "HIGH",
+  "why": "CED 6.2 left Riemann sum from a table"
+ }
+]

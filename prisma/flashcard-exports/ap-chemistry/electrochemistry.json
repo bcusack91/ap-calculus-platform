@@ -1,0 +1,97 @@
+[
+ {
+  "topicSlug": "electrolytic-cells-faraday",
+  "front": "How do you calculate gas volumes from electrolysis?",
+  "back": "mol gas = (mol e⁻)/n where n=electrons per molecule. H₂: 2e⁻→1H₂ (n=2). O₂: 4e⁻→1O₂ (n=4). Cl₂: 2e⁻→1Cl₂ (n=2). Volume at STP: V=mol×22.4 L/mol. Electrolysis of NaCl(aq): equal volumes H₂ and Cl₂!"
+ },
+ {
+  "topicSlug": "electrolytic-cells-faraday",
+  "front": "How does electroplating work?",
+  "back": "Coat object with metal. Anode: pure metal dissolves (M→M^n++ne⁻). Cathode: object gets plated (M^n++ne⁻→M). Electrolyte: metal ion solution. Thickness controlled by current, time, current density. Chrome plating: Cr³⁺+3e⁻→Cr at cathode."
+ },
+ {
+  "topicSlug": "electrolytic-cells-faraday",
+  "front": "What happens during electrolysis of aqueous solutions?",
+  "back": "Competition! Water can oxidize or reduce. Cathode: most easily reduced wins (higher E°) - active metals (Na⁺,K⁺)→H₂O reduced to H₂, less active (Cu²⁺,Ag⁺)→metal. Anode: most easily oxidized wins - active anions (Cl⁻,Br⁻)→X₂, oxyanions→O₂."
+ },
+ {
+  "topicSlug": "electrolytic-cells-faraday",
+  "front": "What is Faraday's law and how do you use it?",
+  "back": "mol e⁻ = Q/F where Q=charge (C), F=96,485 C/mol. Steps: 1) Q=I×t (current×time), 2) mol e⁻=Q/F, 3) Use stoichiometry (e⁻ to substance), 4) Calculate mass/volume. Example: 2e⁻→Cu means 10 mol e⁻ gives 5 mol Cu."
+ },
+ {
+  "topicSlug": "electrolytic-cells-faraday",
+  "front": "What is metal purification by electrolysis?",
+  "back": "Copper purification: Anode=impure Cu→Cu²⁺+2e⁻. Cathode=Cu²⁺+2e⁻→pure Cu. More active impurities (Fe,Zn) stay dissolved. Less active (Ag,Au) fall to bottom as anode sludge (recovered!). Result: 99.99% pure copper."
+ },
+ {
+  "topicSlug": "electrolytic-cells-faraday",
+  "front": "What is the difference between galvanic and electrolytic cells?",
+  "back": "Galvanic: spontaneous, chemical→electrical, E°>0, ΔG<0 (batteries). Electrolytic: non-spontaneous forced by external voltage, electrical→chemical, E°<0, ΔG>0 (electroplating, charging). Electrode polarity REVERSED in electrolytic!"
+ },
+ {
+  "topicSlug": "galvanic-cells-potentials",
+  "front": "How do you calculate standard cell potential E°_cell?",
+  "back": "E°_cell = E°_cathode - E°_anode = E°_reduction - E°_oxidation. 1) Identify oxidation and reduction, 2) Look up E° (as reduction), 3) Calculate difference, 4) If E°_cell > 0: spontaneous. E° is intensive - don't multiply!"
+ },
+ {
+  "topicSlug": "galvanic-cells-potentials",
+  "front": "How do you predict if a redox reaction will occur spontaneously?",
+  "back": "Compare E° values: species with higher E° gets reduced (cathode), lower E° gets oxidized (anode). Calculate E°_cell = E°_cathode - E°_anode. If E°_cell > 0: spontaneous. Example: Cu (E°=+0.34) won't dissolve in HCl (E°=0) because E°_cell<0."
+ },
+ {
+  "topicSlug": "galvanic-cells-potentials",
+  "front": "How does cell potential relate to spontaneity and ΔG°?",
+  "back": "E°_cell > 0: spontaneous (ΔG° < 0). E°_cell = 0: equilibrium (ΔG° = 0). E°_cell < 0: non-spontaneous (ΔG° > 0). Relationship: ΔG° = -nFE°_cell. n=electrons, F=96,485 C/mol."
+ },
+ {
+  "topicSlug": "galvanic-cells-potentials",
+  "front": "What does the position in the reduction potential table tell you?",
+  "back": "Top (large positive E°): species such as F₂ and Au³⁺ are the most easily reduced. Bottom (large negative E°): metals such as Li and Zn are the most easily oxidized. In a spontaneous reaction, the half-reaction with the higher E° runs as the reduction and the one with the lower E° runs as the oxidation."
+ },
+ {
+  "topicSlug": "galvanic-cells-potentials",
+  "front": "What is a galvanic (voltaic) cell and what are its main components?",
+  "back": "Galvanic cell: spontaneous redox produces electric current. Anode: oxidation occurs (negative, loses mass). Cathode: reduction occurs (positive, gains mass). Salt bridge: ion flow for neutrality. External circuit: electrons flow anode→cathode. \"AN OX, RED CAT\""
+ },
+ {
+  "topicSlug": "galvanic-cells-potentials",
+  "front": "What is cell notation and how do you write it?",
+  "back": "Format: Anode | Anode solution || Cathode solution | Cathode. Example: Zn(s) | Zn²⁺(aq) || Cu²⁺(aq) | Cu(s). Single line |: phase boundary. Double line ||: salt bridge. Anode always left, cathode right."
+ },
+ {
+  "topicSlug": "galvanic-cells-potentials",
+  "front": "What is standard reduction potential (E°) and what is the reference?",
+  "back": "E°: voltage for half-reaction under standard conditions (25°C, 1M, 1atm). Reference: standard hydrogen electrode (SHE): 2H⁺+2e⁻→H₂, E°=0.00V. All potentials measured relative to this. More positive E° = better oxidizing agent."
+ },
+ {
+  "topicSlug": "galvanic-cells-potentials",
+  "front": "Why is E° an intensive property and what does this mean?",
+  "back": "E° doesn't depend on amount - same whether 1 or 1000 electrons transfer. Don't multiply E° when balancing equations! But ΔG° IS extensive - multiply by n (moles electrons). E° tells tendency, not total energy."
+ },
+ {
+  "topicSlug": "nernst-equation-concentration",
+  "front": "How do concentration changes affect cell potential?",
+  "back": "Increase [products]: Q↑, E decreases (less favorable). Increase [reactants]: Q↓, E increases (more favorable). Le Chatelier applies! Q<1 (excess reactants): E>E°. Q>1 (excess products): E<E°."
+ },
+ {
+  "topicSlug": "nernst-equation-concentration",
+  "front": "How does pH affect electrochemical cells?",
+  "back": "Many half-reactions involve H⁺. Lower pH (high [H⁺]): shifts reduction forward, E increases, stronger oxidizing agent. Higher pH (low [H⁺]): shifts reduction backward, E decreases, weaker oxidizing agent. Must include [H⁺] in Q!"
+ },
+ {
+  "topicSlug": "nernst-equation-concentration",
+  "front": "What happens when a battery dies?",
+  "back": "E → 0 as cell approaches equilibrium. Q → K, reactants and products balanced. No driving force left. Recharging: apply external voltage to reverse reaction and restore reactants. Chemical energy depleted."
+ },
+ {
+  "topicSlug": "nernst-equation-concentration",
+  "front": "What is a concentration cell?",
+  "back": "Same species at both electrodes, different concentrations. E° = 0 but E ≠ 0! The dilute side is the anode (oxidation raises its concentration); the concentrated side is the cathode (reduction lowers its concentration). The cell runs until the concentrations are equal, when E = 0."
+ },
+ {
+  "topicSlug": "nernst-equation-concentration",
+  "front": "What is the relationship between E, ΔG, and spontaneity?",
+  "back": "ΔG = -nFE (any conditions). E>0: ΔG<0 (spontaneous). E=0: ΔG=0 (equilibrium). E<0: ΔG>0 (non-spontaneous). At standard: ΔG° = -nFE°. E and ΔG always opposite signs."
+ }
+]

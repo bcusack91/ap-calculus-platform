@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Evaluate $\\lim_{x \\to 1} \\frac{x^{2}-1}{x^{2}-3x+2}$.",
+  "fp": "f957777f7cd9",
+  "yield": "HIGH",
+  "why": "CED 1.6 factoring a limit"
+ },
+ {
+  "front": "Evaluate $\\lim_{x \\to 3} \\frac{x^{2}-9}{x-3}$.",
+  "fp": "0a2e49acdd9a",
+  "yield": "HIGH",
+  "why": "CED 1.6 factoring example"
+ },
+ {
+  "front": "What is the factored form of $x^2 - a^2$?",
+  "fp": "cef1f282f4b6",
+  "yield": "LOW",
+  "why": "Difference of squares; algebra prerequisite"
+ },
+ {
+  "front": "What should you do after canceling in a limit problem?",
+  "fp": "bae760230cf5",
+  "yield": "MEDIUM",
+  "why": "Substitute after cancelling; restatement"
+ },
+ {
+  "front": "When you get $\\frac{0}{0}$ from direct substitution, what algebraic technique should you try first?",
+  "fp": "0c189162cada",
+  "yield": "MEDIUM",
+  "why": "Factor first on 0/0; technique tip"
+ },
+ {
+  "front": "Why can we cancel the factor $(x - a)$ when evaluating $\\lim_{x \\to a}$?",
+  "fp": "c1190424957e",
+  "yield": "MEDIUM",
+  "why": "Why cancelling is allowed; conceptual aside"
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "front": "As $x \\to \\infty$, which grows fastest: $\\ln x$, $x^{100}$, or $e^x$?",
+  "fp": "1fb4c2b2adc6",
+  "yield": "HIGH",
+  "why": "CED 1.15/4.7 growth rates at infinity"
+ },
+ {
+  "front": "For a rational function where the degrees of numerator and denominator are equal, what is the limit at infinity?",
+  "fp": "7ab3f354f9ec",
+  "yield": "MEDIUM",
+  "why": "Restates equal-degree rule"
+ },
+ {
+  "front": "How do you find lim(x→∞) of a rational function?",
+  "fp": "93612eb3049a",
+  "yield": "HIGH",
+  "why": "CED 1.15 limits at infinity of rationals"
+ },
+ {
+  "front": "How does $\\lim_{x \\to \\infty} \\dfrac{p(x)}{q(x)}$ behave when $p$ and $q$ have different degrees?",
+  "fp": "6e92ce7defc7",
+  "yield": "HIGH",
+  "why": "CED 1.15 unequal degrees at infinity"
+ },
+ {
+  "front": "If $\\lim_{x \\to \\infty} f(x) = 5$, what does this tell you about the graph?",
+  "fp": "fc92307823f4",
+  "yield": "HIGH",
+  "why": "CED 1.15 limit at infinity gives horizontal asymptote"
+ },
+ {
+  "front": "What happens to $\\frac{1}{x}$ as $x \\to \\infty$?",
+  "fp": "b0a91429d264",
+  "yield": "MEDIUM",
+  "why": "1/x goes to 0; basic"
+ }
+]

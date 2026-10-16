@@ -1,0 +1,32 @@
+[
+ {
+  "front": "How do you solve the separable differential equation $\\frac{dy}{dx} = ky$?",
+  "fp": "96ea7a8db57d",
+  "yield": "HIGH",
+  "why": "CED 7.6 separating dy/dx = ky"
+ },
+ {
+  "front": "In the slope field for $\\dfrac{dy}{dx} = y(2 - y)$, the equilibrium solutions are:",
+  "fp": "57c4b83d52da",
+  "yield": "HIGH",
+  "why": "CED 7.3 equilibrium solutions in slope field"
+ },
+ {
+  "front": "Solve $\\dfrac{dy}{dx} = \\dfrac{x}{y}$ with $y(0) = 4$.",
+  "fp": "4abe6f02fbd4",
+  "yield": "HIGH",
+  "why": "CED 7.7 separable DE with initial condition; worked example"
+ },
+ {
+  "front": "The general solution to $\\dfrac{dy}{dx} = 3x^2$ is:",
+  "fp": "31da1328f074",
+  "yield": "MEDIUM",
+  "why": "General solution by integration; basic"
+ },
+ {
+  "front": "Which ODE is separable?",
+  "fp": "4f4dfd034f02",
+  "yield": "MEDIUM",
+  "why": "Recognizing separable ODEs; secondary"
+ }
+]

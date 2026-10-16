@@ -1,0 +1,301 @@
+[
+ {
+  "topicSlug": "ice-tables-calculations",
+  "front": "For large K values, what approximation can simplify the problem?",
+  "back": "For very large K (>>1), reaction goes nearly to completion. Find limiting reactant, assume complete reaction, then set up reverse ICE with small amount coming back. Often easier than standard approach."
+ },
+ {
+  "topicSlug": "ice-tables-calculations",
+  "front": "How do you set up the change row in an ICE table for aA + bB ⇌ cC + dD?",
+  "back": "Use variable x with stoichiometric coefficients. Reactants decrease: A changes by -ax, B by -bx. Products increase: C changes by +cx, D by +dx. Changes proportional to coefficients."
+ },
+ {
+  "topicSlug": "ice-tables-calculations",
+  "front": "What are common mistakes to avoid with ICE tables?",
+  "back": "Wrong stoichiometry in C row (use coefficients!), forgetting exponents in K expression, using I row instead of E row in K, taking wrong quadratic root (need positive conc), invalid small x approximation."
+ },
+ {
+  "topicSlug": "ice-tables-calculations",
+  "front": "What are the three types of equilibrium calculations?",
+  "back": "Type 1: Given all equilibrium conc, find K (plug directly). Type 2: Given initial conc and K, find equilibrium (ICE table). Type 3: Given some initial reactants and products, find equilibrium (calculate Q first)."
+ },
+ {
+  "topicSlug": "ice-tables-calculations",
+  "front": "What is an ICE table and what do the letters stand for?",
+  "back": "ICE = Initial, Change, Equilibrium. Organized table to track concentrations: I row = starting concentrations, C row = changes (use stoichiometry), E row = I + C for each species. Use E row in K expression."
+ },
+ {
+  "topicSlug": "ice-tables-calculations",
+  "front": "What is the general strategy for solving equilibrium problems with ICE tables?",
+  "back": "1) Write balanced equation, 2) List initial concentrations, 3) Set up ICE table with stoichiometry, 4) Write K expression from E row, 5) Solve for x (approximation or quadratic), 6) Calculate final concentrations, verify."
+ },
+ {
+  "topicSlug": "ice-tables-calculations",
+  "front": "What is the quadratic formula and when must you use it?",
+  "back": "For ax² + bx + c = 0: x = [-b ± √(b²-4ac)]/2a. Use when small x approximation invalid (x > 5% of initial). Choose root that gives positive concentrations. Often need (+) root."
+ },
+ {
+  "topicSlug": "ice-tables-calculations",
+  "front": "When can you use the small x approximation and how do you check validity?",
+  "back": "Use when K << 1 (typically K < 10⁻³) and initial concentration >> K. Assume x negligible: [initial]-x ≈ [initial]. Check: x/[initial] < 5% valid. If > 5%, must use quadratic."
+ },
+ {
+  "topicSlug": "intro-equilibrium",
+  "front": "How do you interpret the magnitude of K?",
+  "back": "K >> 1 (>10³): products favored, equilibrium right. K ≈ 1 (10⁻³ to 10³): significant amounts of both. K << 1 (<10⁻³): reactants favored, equilibrium left. K is temperature dependent."
+ },
+ {
+  "topicSlug": "intro-equilibrium",
+  "front": "How do you write K_c expression for aA + bB ⇌ cC + dD?",
+  "back": "K_c = [C]^c[D]^d / [A]^a[B]^b. Products in numerator, reactants in denominator. Coefficients become exponents. Use equilibrium concentrations (mol/L). Temperature dependent."
+ },
+ {
+  "topicSlug": "intro-equilibrium",
+  "front": "What do you exclude from equilibrium constant expressions?",
+  "back": "Exclude: 1) Pure solids, 2) Pure liquids, 3) Solvents (usually H₂O). Include only: gases (g) and aqueous solutions (aq). Use concentrations [M] or partial pressures."
+ },
+ {
+  "topicSlug": "intro-equilibrium",
+  "front": "What happens to K when you multiply a reaction by a factor n?",
+  "back": "K_new = (K_original)^n. Example: if A ⇌ B has K = 10, then 2A ⇌ 2B has K = 10² = 100. All exponents in K expression multiply by n."
+ },
+ {
+  "topicSlug": "intro-equilibrium",
+  "front": "What happens to K when you reverse a reaction?",
+  "back": "K_reverse = 1/K_forward. Example: if forward K = 100, reverse K = 0.01. Products and reactants swap positions in expression. Large K becomes small K."
+ },
+ {
+  "topicSlug": "intro-equilibrium",
+  "front": "What is chemical equilibrium and what does \"dynamic\" mean?",
+  "back": "Equilibrium: state where forward and reverse rates are equal. Dynamic: reactions still occurring but no net change in concentrations. Both directions proceed continuously at equal rates."
+ },
+ {
+  "topicSlug": "intro-equilibrium",
+  "front": "What is the difference between homogeneous and heterogeneous equilibria?",
+  "back": "Homogeneous: all species in same phase (all gas or all aqueous). Heterogeneous: multiple phases (solid+gas, solid+aqueous). For heterogeneous, omit pure solids and liquids from K expression."
+ },
+ {
+  "topicSlug": "reaction-quotient-le-chatelier",
+  "front": "For $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$ with $\\Delta H < 0$, which way does equilibrium shift if you (a) raise the temperature, (b) decrease the volume, (c) remove $\\text{NH}_3$?",
+  "back": "(a) Left — heat behaves as a product, and K itself decreases. (b) Right — toward the side with fewer moles of gas (4 → 2). (c) Right — the system replaces the removed product; K is unchanged."
+ },
+ {
+  "topicSlug": "reaction-quotient-le-chatelier",
+  "front": "How do concentration changes affect equilibrium?",
+  "back": "Add reactant → shift right (consume it). Add product → shift left. Remove reactant → shift left (replace it). Remove product → shift right. Note: Adding/removing pure solids or liquids has NO effect."
+ },
+ {
+  "topicSlug": "reaction-quotient-le-chatelier",
+  "front": "How do pressure/volume changes affect gas equilibria?",
+  "back": "Decrease volume (↑ pressure) → shift to fewer moles gas. Increase volume (↓ pressure) → shift to more moles gas. If Δn=0 (equal moles both sides) → no shift. Adding inert gas at constant V: no shift."
+ },
+ {
+  "topicSlug": "reaction-quotient-le-chatelier",
+  "front": "How do you use Q to predict reaction direction?",
+  "back": "Compare Q to K: Q < K → forward (make products), Q = K → equilibrium (no change), Q > K → reverse (make reactants). Memory: Q<K need more products, Q>K too many products."
+ },
+ {
+  "topicSlug": "reaction-quotient-le-chatelier",
+  "front": "How does temperature affect equilibrium differently than other stresses?",
+  "back": "Temperature actually CHANGES K value! Other stresses don't. Exothermic (ΔH<0): increase T shifts left, K decreases. Endothermic (ΔH>0): increase T shifts right, K increases. Think heat as product/reactant."
+ },
+ {
+  "topicSlug": "reaction-quotient-le-chatelier",
+  "front": "What effect does a catalyst have on equilibrium?",
+  "back": "NO effect on equilibrium position or K value. Speeds forward and reverse equally. Reaches equilibrium FASTER but same final concentrations. Only affects kinetics, not thermodynamics."
+ },
+ {
+  "topicSlug": "reaction-quotient-le-chatelier",
+  "front": "What is Le Chatelier's Principle?",
+  "back": "When stress applied to equilibrium, system shifts to relieve stress. Stresses: concentration, pressure/volume, temperature. System opposes the change by shifting equilibrium position."
+ },
+ {
+  "topicSlug": "reaction-quotient-le-chatelier",
+  "front": "What is the reaction quotient Q and how does it differ from K?",
+  "back": "Q has the same expression as K, $\\frac{[\\text{products}]^{\\text{coeff}}}{[\\text{reactants}]^{\\text{coeff}}}$, but it is evaluated at ANY set of concentrations, not only equilibrium ones. Q changes as the reaction proceeds; K is fixed at a given temperature, and $Q = K$ exactly at equilibrium."
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "$\\text{Mg(OH)}_{2}$ has $K_{sp} = 5.6 \\times 10^{-12}$. What is its molar solubility?",
+  "back": "$\\text{Mg(OH)}_{2} \\rightleftharpoons \\text{Mg}^{2+} + 2\\,\\text{OH}^{-}$ gives $K_{sp} = 4s^{3}$, so $s = \\sqrt[3]{K_{sp}/4} = \\sqrt[3]{1.4\\times10^{-12}} \\approx 1.1 \\times 10^{-4}$ M.",
+  "lessonPart": 6
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "$K_{sp}$ for $\\text{PbCl}_{2}$",
+  "back": "$\\text{PbCl}_{2} \\rightleftharpoons \\text{Pb}^{2+} + 2\\,\\text{Cl}^{-}$ → $K_{sp} = [\\text{Pb}^{2+}][\\text{Cl}^{-}]^{2}$.",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "$K_{sp}$–$s$ relation for $A_{3}B_{2}$ salt (e.g., $\\text{Ca}_{3}(\\text{PO}_{4})_{2}$)",
+  "back": "$K_{sp} = (3s)^{3}(2s)^{2} = 108\\,s^{5}$.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "$K_{sp}$–$s$ relation for $AB_{2}$ salt (e.g., $\\text{PbCl}_{2}$)",
+  "back": "$K_{sp} = s\\,(2s)^{2} = 4s^{3}$, so $s = \\sqrt[3]{K_{sp}/4}$.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "$K_{sp}$–$s$ relation for $AB$ salt (e.g., AgCl)",
+  "back": "$K_{sp} = s^{2}$, so $s = \\sqrt{K_{sp}}$.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "$Q < K_{sp}$ means…",
+  "back": "The solution is unsaturated — more solid can dissolve. No precipitate forms.",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "$Q = K_{sp}$ means…",
+  "back": "The solution is saturated and at equilibrium. No net change.",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "AgCl vs. AgI — which precipitates first when $\\text{Ag}^{+}$ is added to a Cl⁻/I⁻ mix?",
+  "back": "AgI ($K_{sp} = 8.5 \\times 10^{-17}$) — far smaller than AgCl ($K_{sp} = 1.8 \\times 10^{-10}$).",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Can you compare $K_{sp}$ values directly to rank solubilities?",
+  "back": "Only when stoichiometries match. Otherwise compute $s$ from each $K_{sp}$ first.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Common-ion effect — which way does solubility move?",
+  "back": "Solubility decreases. Adding a common ion shifts the dissolution equilibrium to the left (Le Châtelier).",
+  "lessonPart": 3
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Critical step when mixing two solutions to compute $Q$",
+  "back": "Account for **dilution** — divide each starting concentration by the appropriate volume factor before computing $Q$.",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Definition of molar solubility",
+  "back": "Moles of compound that dissolve per liter of solution at saturation. Symbol $s$.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Effect of low pH on $\\text{CaF}_{2}$ solubility",
+  "back": "Solubility **increases**: $\\text{H}^{+}$ converts $\\text{F}^{-}$ to weak-acid HF, removing it and shifting dissolution right.",
+  "lessonPart": 6
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Effect of low pH on AgCl solubility",
+  "back": "Essentially **no effect** — $\\text{Cl}^{-}$ is the conjugate base of strong acid HCl and does not react with $\\text{H}^{+}$.",
+  "lessonPart": 6
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "General $K_{sp}$ for $A_p B_q(s) \\rightleftharpoons p\\,A^{m+} + q\\,B^{n-}$",
+  "back": "$K_{sp} = [A^{m+}]^{p}[B^{n-}]^{q}$. Solid omitted; ion concentrations raised to stoichiometric powers.",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "How \"complete\" can selective precipitation be?",
+  "back": "Often >99.999% removal of the first ion before the second begins to precipitate, when the $K_{sp}$ values differ by many orders of magnitude.",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "How does raising the temperature change $K_{sp}$ for a salt that dissolves endothermically?",
+  "back": "$K_{sp}$ increases — heat behaves as a reactant, so dissolution shifts right and molar solubility rises. $K_{sp}$ is constant only at a fixed temperature.",
+  "lessonPart": 7
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Selective precipitation principle",
+  "back": "For salts with the same stoichiometry, the one with the **smaller $K_{sp}$** precipitates first as a common reagent is added.",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Solubility of AgCl in 0.10 M NaCl vs. pure water",
+  "back": "In NaCl: $[\\text{Ag}^{+}] = K_{sp}/[\\text{Cl}^{-}] = 1.8 \\times 10^{-9}$ M, ~7400× less than in pure water.",
+  "lessonPart": 3
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Three things $K_{sp}$ lets you predict",
+  "back": "(1) molar solubility, (2) whether a precipitate forms ($Q$ vs $K_{sp}$), (3) how solubility changes with common ions or pH.",
+  "lessonPart": 7
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "When does $K_{sp}$ apply?",
+  "back": "To slightly soluble (sparingly soluble) ionic compounds at equilibrium between solid and dissolved ions.",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "When does a precipitate form?",
+  "back": "When $Q > K_{sp}$ (supersaturated). Precipitation continues until $Q$ falls back to $K_{sp}$.",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Why does the common-ion effect work conceptually?",
+  "back": "The ion already in solution makes the right side of the dissolution equation \"crowded,\" so equilibrium shifts back to the solid.",
+  "lessonPart": 3
+ },
+ {
+  "topicSlug": "solubility-equilibrium",
+  "front": "Why is $\\text{Mg(OH)}_{2}$ less soluble in NaOH?",
+  "back": "OH⁻ is a common ion. By Le Châtelier, dissolution shifts left → less $\\text{Mg(OH)}_{2}$ dissolves.",
+  "lessonPart": 6
+ },
+ {
+  "topicSlug": "solubility-ksp",
+  "front": "How do complex ions affect solubility?",
+  "back": "Complex ion formation increases solubility. Example: AgCl in NH₃. Ag⁺ + 2NH₃ ⇌ Ag(NH₃)₂⁺ removes Ag⁺ from solution, shifts dissolution right, more AgCl dissolves. Opposite of common ion effect."
+ },
+ {
+  "topicSlug": "solubility-ksp",
+  "front": "How do you calculate molar solubility from K_sp?",
+  "back": "1) Write dissolution equation, 2) Express ion concentrations in terms of s (use stoichiometry!), 3) Write K_sp expression, 4) Substitute and solve. Example: Ag₂CrO₄: [Ag⁺]=2s, [CrO₄²⁻]=s, so K_sp=4s³."
+ },
+ {
+  "topicSlug": "solubility-ksp",
+  "front": "How do you perform selective precipitation to separate ions?",
+  "back": "Add precipitating reagent slowly. Compound with smaller K_sp precipitates first (at equal cation concentrations). Calculate [anion] for each precipitation. Control addition to window where one precipitates but not other."
+ },
+ {
+  "topicSlug": "solubility-ksp",
+  "front": "How does pH affect solubility of salts?",
+  "back": "Salts with basic anions (conjugate bases of weak acids: F⁻, OH⁻, CO₃²⁻, S²⁻, PO₄³⁻) are more soluble in acid, since H⁺ removes the anion — e.g. CaF₂ dissolves better in acid because H⁺ + F⁻ → HF. Anions of strong acids (Cl⁻, NO₃⁻, ClO₄⁻) do not react with H⁺, so those salts are pH-independent. Added base makes hydroxides less soluble (common ion), except amphoteric ones like Al(OH)₃ and Zn(OH)₂, which dissolve in excess OH⁻ as complex ions."
+ },
+ {
+  "topicSlug": "solubility-ksp",
+  "front": "What is K_sp and how do you write the expression for M_aX_b(s)?",
+  "back": "K_sp = solubility product constant for saturated solution. For M_aX_b(s) ⇌ aM^b+ + bX^a-: K_sp = [M^b+]^a[X^a-]^b. Pure solid NOT included. Only dissolved ions. Temperature dependent."
+ },
+ {
+  "topicSlug": "solubility-ksp",
+  "front": "What is molar solubility and how does it relate to K_sp?",
+  "back": "Molar solubility (s) = max moles dissolving per liter (mol/L). Different from K_sp. Relationship depends on stoichiometry. Example: AgCl, K_sp = s². PbI₂, K_sp = 4s³. Must consider ion ratios."
+ },
+ {
+  "topicSlug": "solubility-ksp",
+  "front": "What is Q_sp and how do you use it to predict precipitation?",
+  "back": "Q_sp = ion product (like Q for solubility), uses current concentrations. Q_sp < K_sp: unsaturated, no precipitate. Q_sp = K_sp: saturated, equilibrium. Q_sp > K_sp: supersaturated, PRECIPITATE forms."
+ },
+ {
+  "topicSlug": "solubility-ksp",
+  "front": "What is the common ion effect on solubility?",
+  "back": "Adding ion already in equilibrium decreases solubility (Le Chatelier). Example: AgCl in NaCl solution - extra Cl⁻ shifts left, less AgCl dissolves. Common ion always decreases solubility."
+ }
+]

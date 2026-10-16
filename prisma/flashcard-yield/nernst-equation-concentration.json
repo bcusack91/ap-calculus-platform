@@ -1,0 +1,32 @@
+[
+ {
+  "front": "How do concentration changes affect cell potential?",
+  "fp": "a19709f675a7",
+  "yield": "HIGH",
+  "why": "CED 9.10 qualitative concentration effect on E"
+ },
+ {
+  "front": "How does pH affect electrochemical cells?",
+  "fp": "2d395ef13613",
+  "yield": "LOW",
+  "why": "pH effect on cell potential; uses excluded oxidizing-agent term"
+ },
+ {
+  "front": "What happens when a battery dies?",
+  "fp": "8177f7a50f62",
+  "yield": "MEDIUM",
+  "why": "Dead battery as Q = K; secondary qualitative"
+ },
+ {
+  "front": "What is a concentration cell?",
+  "fp": "826d340d4113",
+  "yield": "LOW",
+  "why": "Concentration cells; ruling R20 cut their quantitative form"
+ },
+ {
+  "front": "What is the relationship between E, ΔG, and spontaneity?",
+  "fp": "a8806a90aa36",
+  "yield": "HIGH",
+  "why": "CED 9.9 delta G = -nFE"
+ }
+]

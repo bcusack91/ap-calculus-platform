@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Distinguish directional, stabilizing, and disruptive selection.",
+  "fp": "715a4d73a93d",
+  "yield": "MEDIUM",
+  "why": "Modes of selection; borderline per trim"
+ },
+ {
+  "front": "What does fitness mean biologically?",
+  "fp": "299111b64adc",
+  "yield": "HIGH",
+  "why": "CED 7.2 fitness as reproductive success"
+ },
+ {
+  "front": "What four conditions are required for natural selection?",
+  "fp": "1e53ad522b09",
+  "yield": "HIGH",
+  "why": "CED 7.2 conditions for natural selection"
+ },
+ {
+  "front": "What is an adaptation?",
+  "fp": "21baf35921a1",
+  "yield": "HIGH",
+  "why": "CED 7.2 adaptation"
+ },
+ {
+  "front": "What is sexual selection?",
+  "fp": "d688bd65b360",
+  "yield": "MEDIUM",
+  "why": "Sexual selection; borderline per trim"
+ },
+ {
+  "front": "Why does antibiotic resistance illustrate natural selection?",
+  "fp": "40fca11d60fa",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.2 antibiotic resistance as selection"
+ }
+]

@@ -1,8 +1,8 @@
 // @vitest-environment jsdom
 /**
- * The medium/low-yield toggles only show for a student with MCAT cards — the
- * MCAT is the only course whose cards carry exam-yield tiers, so for everyone
- * else the toggles changed nothing and just raised questions. Also guards the
+ * The medium/low-yield toggles only show for a student with yield-labeled cards
+ * (MCAT and the four flagship AP decks) — for everyone else the toggles change
+ * nothing and just raise questions. Also guards the
  * brand rule: no third-party flashcard-app name ("Anki-style pacing") in UI.
  */
 import { describe, it, expect, vi, afterEach } from 'vitest'
@@ -24,7 +24,7 @@ afterEach(() => {
 })
 
 describe('shouldShowYieldToggles', () => {
-  it('shows only when the student has yield-tiered (MCAT) cards', () => {
+  it('shows only when the student has yield-tiered (MCAT or flagship AP) cards', () => {
     expect(shouldShowYieldToggles({ hasYieldCards: true })).toBe(true)
     expect(shouldShowYieldToggles({ hasYieldCards: false })).toBe(false)
   })
@@ -36,7 +36,7 @@ describe('shouldShowYieldToggles', () => {
 })
 
 describe('FlashcardDailyLimits', () => {
-  it('hides the yield toggles for a student with no MCAT cards', async () => {
+  it('hides the yield toggles for a student with no yield-labeled cards', async () => {
     const fetchSpy = vi.fn(async () => ({ ok: true, json: async () => ({ ...BASE, hasYieldCards: false }) }) as unknown as Response)
     vi.stubGlobal('fetch', fetchSpy)
     render(<FlashcardDailyLimits />)
@@ -48,11 +48,11 @@ describe('FlashcardDailyLimits', () => {
     expect(screen.queryByLabelText(/low-yield/i)).toBeNull()
   })
 
-  it('shows them for a student with MCAT cards', async () => {
+  it('shows them for a student with yield-labeled cards', async () => {
     mockSettings({ ...BASE, hasYieldCards: true })
     render(<FlashcardDailyLimits />)
-    expect(await screen.findByLabelText(/Include medium-yield MCAT cards/i)).toBeChecked()
-    expect(screen.getByLabelText(/Include low-yield MCAT cards/i)).not.toBeChecked()
+    expect(await screen.findByLabelText(/Include medium-yield cards/i)).toBeChecked()
+    expect(screen.getByLabelText(/Include low-yield cards/i)).not.toBeChecked()
   })
 
   it('never names a third-party flashcard app', async () => {

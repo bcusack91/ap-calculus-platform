@@ -1,0 +1,32 @@
+[
+ {
+  "front": "A bacteria culture triples every $4$ hours. Starting with $500$ bacteria, the population after $12$ hours is:",
+  "fp": "ed1a7e7b7dde",
+  "yield": "MEDIUM",
+  "why": "Tripling growth arithmetic; precalc skill"
+ },
+ {
+  "front": "A population $P$ grows at a rate proportional to itself: $\\dfrac{dP}{dt} = kP$. If $P(0) = 100$ and $P(5) = 200$, which equation models $P(t)$?",
+  "fp": "71f0d3e6ace8",
+  "yield": "HIGH",
+  "why": "CED 7.8 exponential model from dP/dt = kP"
+ },
+ {
+  "front": "A radioactive substance has a decay constant $k = 0.05$. How long until $75\\%$ has decayed?",
+  "fp": "ba1945ff7222",
+  "yield": "MEDIUM",
+  "why": "Decay time calculation; practice item"
+ },
+ {
+  "front": "The half-life of a substance is $5$ years. If $y_0 = 100$ g, how much remains after $15$ years?",
+  "fp": "bb59239c998c",
+  "yield": "MEDIUM",
+  "why": "Half-life arithmetic; precalc skill"
+ },
+ {
+  "front": "Which differential equation models exponential growth or decay, and what is its solution?",
+  "fp": "3121fce57b41",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.8 dy/dt = ky and its solution"
+ }
+]

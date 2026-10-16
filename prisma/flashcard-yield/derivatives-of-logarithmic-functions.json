@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Find $\\frac{d}{dx}[\\ln(3x + 1)]$ using the Chain Rule.",
+  "fp": "09f5ddbb448c",
+  "yield": "HIGH",
+  "why": "CED 3.1 derivative of ln(3x+1)"
+ },
+ {
+  "front": "Simplify $\\ln(x^2)$ before differentiating.",
+  "fp": "27c84833c81b",
+  "yield": "MEDIUM",
+  "why": "Simplify ln before differentiating; tip"
+ },
+ {
+  "front": "What is $\\frac{d}{dx}[\\ln x]$?",
+  "fp": "f25b0b58b759",
+  "yield": "HIGH",
+  "why": "CED 2.8 derivative of ln x (core card in this topic)"
+ },
+ {
+  "front": "What is $\\frac{d}{dx}[\\ln|x|]$?",
+  "fp": "cda2d94b4321",
+  "yield": "MEDIUM",
+  "why": "Derivative of ln|x|; secondary"
+ },
+ {
+  "front": "What is d/dx[logₐ(x)]?",
+  "fp": "55d75d37200f",
+  "yield": "MEDIUM",
+  "why": "Derivative of log base a; secondary"
+ },
+ {
+  "front": "When should you use logarithmic differentiation?",
+  "fp": "8fb8bdf4ce96",
+  "yield": "LOW",
+  "why": "Logarithmic differentiation; owner-borderline (C), not named in CED"
+ }
+]

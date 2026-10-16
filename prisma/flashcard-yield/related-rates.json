@@ -1,0 +1,38 @@
+[
+ {
+  "front": "A 10 ft ladder leans against a wall and its base slides away at 2 ft/s. How fast is the top sliding down when the base is 6 ft from the wall?",
+  "fp": "1cd983895718",
+  "yield": "HIGH",
+  "why": "CED 4.4/4.5 ladder related-rates worked example"
+ },
+ {
+  "front": "If a quantity is decreasing, what sign does its rate have?",
+  "fp": "4ae8752f3b38",
+  "yield": "HIGH",
+  "why": "CED 4.4 decreasing quantity has negative rate"
+ },
+ {
+  "front": "What are related rates problems?",
+  "fp": "7b0c8fa5d678",
+  "yield": "HIGH",
+  "why": "CED 4.4 related rates definition"
+ },
+ {
+  "front": "What are the 6 steps for solving related rates problems?",
+  "fp": "37922ef01f30",
+  "yield": "MEDIUM",
+  "why": "Related rates steps; survey"
+ },
+ {
+  "front": "What does $\\frac{dV}{dt} = 5$ m³/min mean?",
+  "fp": "40a25e7731ba",
+  "yield": "MEDIUM",
+  "why": "dV/dt meaning; restatement"
+ },
+ {
+  "front": "What is the most important rule for related rates problems?",
+  "fp": "ac2d0d1c828a",
+  "yield": "HIGH",
+  "why": "CED 4.5 differentiate before substituting"
+ }
+]

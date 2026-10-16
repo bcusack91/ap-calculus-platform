@@ -1,0 +1,54 @@
+[
+ {
+  "topicSlug": "differential-equations-calcab",
+  "front": "How do you solve the separable differential equation $\\frac{dy}{dx} = ky$?",
+  "back": "Separate the variables and integrate: $\\int \\frac{1}{y}\\,dy = \\int k\\,dx$ gives $\\ln|y| = kx + C$, so $y = Ae^{kx}$ — growth if $k > 0$, decay if $k < 0$. Use the initial condition to find $A$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "differential-equations-calcab",
+  "front": "In the slope field for $\\dfrac{dy}{dx} = y(2 - y)$, the equilibrium solutions are:",
+  "back": "**$y = 0$ and $y = 2$**\n\nEquilibria where $\\frac{dy}{dx} = 0$: $y(2 - y) = 0 \\Rightarrow y = 0$ or $y = 2$."
+ },
+ {
+  "topicSlug": "differential-equations-calcab",
+  "front": "Solve $\\dfrac{dy}{dx} = \\dfrac{x}{y}$ with $y(0) = 4$.",
+  "back": "**$y = \\sqrt{x^2 + 16}$**\n\n$y\\,dy = x\\,dx$. $\\frac{y^2}{2} = \\frac{x^2}{2} + C$. $y(0) = 4$: $C = 8$. $y^2 = x^2 + 16$, $y = \\sqrt{x^2 + 16}$."
+ },
+ {
+  "topicSlug": "differential-equations-calcab",
+  "front": "The general solution to $\\dfrac{dy}{dx} = 3x^2$ is:",
+  "back": "**$y = x^3 + C$**\n\nIntegrate both sides: y = $\\int 3x^{2}$ dx = $x^{3}$ + C."
+ },
+ {
+  "topicSlug": "differential-equations-calcab",
+  "front": "Which ODE is separable?",
+  "back": "**$\\dfrac{dy}{dx} = xy + x$**\n\n$\\frac{dy}{dx} = xy + x = x(y + 1)$. This factors as a function of $x$ times a function of $y$, so it is separable."
+ },
+ {
+  "topicSlug": "exponential-models-calcab",
+  "front": "A bacteria culture triples every $4$ hours. Starting with $500$ bacteria, the population after $12$ hours is:",
+  "back": "**$13500$**\n\n12 hours $= 3$ periods. $500 \\times 3^3 = 500 \\times 27 = 13500$."
+ },
+ {
+  "topicSlug": "exponential-models-calcab",
+  "front": "A population $P$ grows at a rate proportional to itself: $\\dfrac{dP}{dt} = kP$. If $P(0) = 100$ and $P(5) = 200$, which equation models $P(t)$?",
+  "back": "**$P = 100 \\cdot 2^{t/5}$**\n\ndP/dt = kP gives P = $P_{0}e^{kt}$ = $100e^{kt}$. P(5) = 200 → $e^{nk}$ = 2 → P = 100 · $2^{t/5}$."
+ },
+ {
+  "topicSlug": "exponential-models-calcab",
+  "front": "A radioactive substance has a decay constant $k = 0.05$. How long until $75\\%$ has decayed?",
+  "back": "**$\\dfrac{\\ln 4}{0.05}$**\n\n$75\\%$ decayed means $25\\%$ remains: $0.25 = e^{-0.05t}$. $\\ln(0.25) = -0.05t$. $t = \\frac{\\ln 4}{0.05}$."
+ },
+ {
+  "topicSlug": "exponential-models-calcab",
+  "front": "The half-life of a substance is $5$ years. If $y_0 = 100$ g, how much remains after $15$ years?",
+  "back": "**$12.5$ g**\n\nAfter $5$ yrs: $50$ g. After $10$ yrs: $25$ g. After $15$ yrs: $12.5$ g. (Three half-lives.)"
+ },
+ {
+  "topicSlug": "exponential-models-calcab",
+  "front": "Which differential equation models exponential growth or decay, and what is its solution?",
+  "back": "$\\frac{dy}{dt} = ky$ — the rate of change is proportional to the amount present — with solution $y = y_0e^{kt}$. For $y_0 > 0$, $k > 0$ gives growth and $k < 0$ gives decay.",
+  "hint": "Think about the key characteristic"
+ }
+]

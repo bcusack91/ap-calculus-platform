@@ -1,0 +1,32 @@
+[
+ {
+  "front": "How does temperature affect solubility of solids vs. gases in liquids?",
+  "fp": "2b916e7312cd",
+  "yield": "MEDIUM",
+  "why": "Temperature and solubility of gases; secondary"
+ },
+ {
+  "front": "What are the three energy steps in solution formation?",
+  "fp": "40c74a23c4dd",
+  "yield": "HIGH",
+  "why": "Solution formation: break and form IMFs (CED 3.1 with 6.x enthalpy)"
+ },
+ {
+  "front": "What does \"like dissolves like\" mean?",
+  "fp": "23646553f53b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.10 like dissolves like; IMF FRQ staple"
+ },
+ {
+  "front": "What is Henry's Law and when does it apply?",
+  "fp": "393842798a91",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Henry's law excluded (7.3; R30)"
+ },
+ {
+  "front": "What is the van't Hoff factor (i) and how do you determine it?",
+  "fp": "d3bcc367ee2a",
+  "yield": "LOW",
+  "why": "OFF-EXAM: van 't Hoff factor/colligative excluded (3.8; R1)"
+ }
+]

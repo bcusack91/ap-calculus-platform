@@ -1,0 +1,62 @@
+[
+ {
+  "front": "Sign convention for torque in 2D problems?",
+  "fp": "268cadee602a",
+  "yield": "MEDIUM",
+  "why": "Torque sign convention; technique"
+ },
+ {
+  "front": "What are the two conditions for complete static equilibrium?",
+  "fp": "bfcc7688282e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.5 two conditions for static equilibrium"
+ },
+ {
+  "front": "What are the units of torque?",
+  "fp": "7a67cf5a31a3",
+  "yield": "LOW",
+  "why": "Torque units vs joules; trivia"
+ },
+ {
+  "front": "What is the condition for rotational equilibrium?",
+  "fp": "9cd9219c2c82",
+  "yield": "HIGH",
+  "why": "CED 5.5 rotational equilibrium"
+ },
+ {
+  "front": "What is the lever arm?",
+  "fp": "01a7013d1614",
+  "yield": "HIGH",
+  "why": "CED 5.3 lever arm"
+ },
+ {
+  "front": "What is torque?",
+  "fp": "7027cfdc7a7e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.3 torque = rF sin theta"
+ },
+ {
+  "front": "When is torque maximum for a given force?",
+  "fp": "519e557111f4",
+  "yield": "MEDIUM",
+  "why": "Torque max at 90 degrees; restatement"
+ },
+ {
+  "front": "When is torque zero?",
+  "fp": "18e533ccec80",
+  "yield": "MEDIUM",
+  "why": "Zero torque along the line to axis; restatement"
+ },
+ {
+  "front": "Why are door handles far from hinges?",
+  "fp": "78190821db2b",
+  "yield": "MEDIUM",
+  "why": "Door-handle lever arm; example"
+ },
+ {
+  "front": "Why can you choose ANY point as the axis for torque calculations?",
+  "fp": "bce43f746bfc",
+  "yield": "HIGH",
+  "why": "CED 5.5 choose any pivot in equilibrium"
+ }
+]

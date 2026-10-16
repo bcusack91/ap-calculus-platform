@@ -1,0 +1,96 @@
+[
+ {
+  "topicSlug": "equilibrium-constants-expressions",
+  "front": "For the general reaction $aA + bB \\rightleftharpoons cC + dD$, what is the equilibrium expression $K_c$?",
+  "back": "$K_c = \\frac{[C]^c[D]^d}{[A]^a[B]^b}$, using equilibrium molar concentrations — products over reactants, each raised to its coefficient.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "equilibrium-constants-expressions",
+  "front": "How does $K$ change when you manipulate a reaction equation?",
+  "back": "Reverse the reaction: $K' = 1/K$. Multiply all coefficients by $n$: $K' = K^n$. Add two reactions together: multiply their $K$ values.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "equilibrium-constants-expressions",
+  "front": "What does the magnitude of $K$ tell you about an equilibrium?",
+  "back": "$K \\gg 1$: products dominate at equilibrium. $K \\approx 1$: significant amounts of both reactants and products. $K \\ll 1$: reactants dominate.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "equilibrium-constants-expressions",
+  "front": "What is $K_c$ vs $K_p$?",
+  "back": "$K_c$ uses equilibrium molar concentrations; $K_p$ uses equilibrium partial pressures of gases. They are related by $K_p = K_c(RT)^{\\Delta n}$, where $\\Delta n$ = moles of gaseous products − moles of gaseous reactants and $R = 0.0821$ L·atm/(mol·K).",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "equilibrium-constants-expressions",
+  "front": "What is Reaction Quotient ($Q$)?",
+  "back": "$Q$ has the same form as $K$ but uses current (not necessarily equilibrium) concentrations. If $Q < K$ the reaction proceeds forward; if $Q > K$ it proceeds in reverse; if $Q = K$ the system is at equilibrium.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "equilibrium-constants-expressions",
+  "front": "Which species are left out of an equilibrium constant expression?",
+  "back": "Pure solids and pure liquids (including water as the solvent in dilute solution) are omitted — only aqueous and gaseous species appear. Example: for $CaCO_3(s) \\rightleftharpoons CaO(s) + CO_2(g)$, $K_c = [CO_2]$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "equilibrium-constants-expressions",
+  "front": "Write the $K_p$ expression for $2SO_2(g) + O_2(g) \\rightleftharpoons 2SO_3(g)$.",
+  "back": "$K_p = \\frac{(P_{SO_3})^2}{(P_{SO_2})^2 (P_{O_2})}$ — equilibrium partial pressures, products over reactants, each raised to its coefficient.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "equilibrium-constants-expressions",
+  "front": "Write the equilibrium constant expression $K_c$ for $N_2(g) + 3H_2(g) \\rightleftharpoons 2NH_3(g)$.",
+  "back": "$K_c = \\frac{[NH_3]^2}{[N_2][H_2]^3}$ — products over reactants, each concentration raised to its stoichiometric coefficient."
+ },
+ {
+  "topicSlug": "le-chatelier-equilibrium-shifts",
+  "front": "How do concentration changes shift an equilibrium, and do they change $K$?",
+  "back": "Adding a reactant or removing a product shifts the equilibrium right; adding a product or removing a reactant shifts it left. $K$ does not change — only temperature changes $K$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "le-chatelier-equilibrium-shifts",
+  "front": "How do pressure/volume changes shift a gas-phase equilibrium?",
+  "back": "Decreasing volume (increasing pressure) shifts toward the side with fewer moles of gas; increasing volume shifts toward the side with more moles. If both sides have equal moles of gas, or an inert gas is added at constant volume, there is no shift.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "le-chatelier-equilibrium-shifts",
+  "front": "How does a catalyst affect an equilibrium?",
+  "back": "A catalyst speeds up the forward and reverse reactions equally, so equilibrium is reached faster — but the equilibrium position and $K$ are unchanged.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "le-chatelier-equilibrium-shifts",
+  "front": "How does raising the temperature shift an exothermic vs an endothermic equilibrium, and what happens to $K$?",
+  "back": "Exothermic ($\\Delta H < 0$): heat is a product, so raising $T$ shifts left and $K$ decreases. Endothermic: heat is a reactant, so raising $T$ shifts right and $K$ increases. Temperature is the only stress that changes $K$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "le-chatelier-equilibrium-shifts",
+  "front": "Solid NaCl is added to a saturated solution at equilibrium: $\\text{AgCl}(s) \\rightleftharpoons \\text{Ag}^+(aq) + \\text{Cl}^-(aq)$. Which way does the equilibrium shift?",
+  "back": "Left. The added common ion $\\text{Cl}^-$ makes $Q > K_{sp}$, so more AgCl precipitates and $[\\text{Ag}^+]$ decreases. $K_{sp}$ itself is unchanged."
+ },
+ {
+  "topicSlug": "le-chatelier-equilibrium-shifts",
+  "front": "What is Common Ion Effect?",
+  "back": "Adding an ion already present in solution shifts the equilibrium away from that ion.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "le-chatelier-equilibrium-shifts",
+  "front": "What is Le Chatelier's Principle?",
+  "back": "When a stress (a change in concentration, pressure/volume, or temperature) is applied to a system at equilibrium, the system shifts in the direction that partially counteracts the stress.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "le-chatelier-equilibrium-shifts",
+  "front": "What two things must a Le Chatelier justification include on a free-response question?",
+  "back": "The direction of the shift AND the reason: name the stress and explain how the shift partially counteracts it (or argue from $Q$ vs $K$). Stating the direction alone earns no credit.",
+  "hint": "Think about the key characteristic"
+ }
+]

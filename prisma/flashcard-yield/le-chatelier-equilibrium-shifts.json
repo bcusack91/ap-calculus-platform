@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do concentration changes shift an equilibrium, and do they change $K$?",
+  "fp": "d9d833cd4fff",
+  "yield": "HIGH",
+  "why": "CED 7.9 concentration shifts, K unchanged"
+ },
+ {
+  "front": "How do pressure/volume changes shift a gas-phase equilibrium?",
+  "fp": "91bff024af75",
+  "yield": "HIGH",
+  "why": "CED 7.9 volume/pressure shifts"
+ },
+ {
+  "front": "How does a catalyst affect an equilibrium?",
+  "fp": "63493b5546f5",
+  "yield": "HIGH",
+  "why": "CED 7.9 catalyst does not shift equilibrium"
+ },
+ {
+  "front": "How does raising the temperature shift an exothermic vs an endothermic equilibrium, and what happens to $K$?",
+  "fp": "4f33937dc987",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.9 temperature shifts and K; tested every exam"
+ },
+ {
+  "front": "Solid NaCl is added to a saturated solution at equilibrium: $\\text{AgCl}(s) \\rightleftharpoons \\text{Ag}^+(aq) + \\text{Cl}^-(aq)$. Which way does the equilibrium shift?",
+  "fp": "ef9d33fc5c64",
+  "yield": "HIGH",
+  "why": "CED 7.12 common ion shifts Ksp equilibrium"
+ },
+ {
+  "front": "What is Common Ion Effect?",
+  "fp": "3ca2710c183d",
+  "yield": "MEDIUM",
+  "why": "Restates common-ion card"
+ },
+ {
+  "front": "What is Le Chatelier's Principle?",
+  "fp": "afcc1dcdc291",
+  "yield": "HIGH",
+  "why": "CED 7.9 Le Chatelier's principle"
+ },
+ {
+  "front": "What two things must a Le Chatelier justification include on a free-response question?",
+  "fp": "e652b0935603",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.9 FRQ justification for shifts"
+ }
+]

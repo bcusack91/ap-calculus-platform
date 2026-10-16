@@ -1,0 +1,62 @@
+[
+ {
+  "front": "At what position is KE = PE in SHM?",
+  "fp": "26fa4e2bd6c6",
+  "yield": "MEDIUM",
+  "why": "KE = PE position in SHM; secondary"
+ },
+ {
+  "front": "At x = A/2, what fraction of energy is potential?",
+  "fp": "102ede3ebf41",
+  "yield": "MEDIUM",
+  "why": "Energy fraction at x = A/2; secondary"
+ },
+ {
+  "front": "Does total energy depend on mass in mass-spring system?",
+  "fp": "eaa52a406461",
+  "yield": "MEDIUM",
+  "why": "Total energy independent of mass; secondary"
+ },
+ {
+  "front": "How do you find speed at any position x using energy?",
+  "fp": "b9c1f12b12ed",
+  "yield": "MEDIUM",
+  "why": "Speed at any x; secondary"
+ },
+ {
+  "front": "How does total energy change if amplitude doubles?",
+  "fp": "f6655502b579",
+  "yield": "HIGH",
+  "why": "CED 7.4 energy scales with A^2"
+ },
+ {
+  "front": "What happens to energy in a damped oscillator?",
+  "fp": "3c8526a427db",
+  "yield": "LOW",
+  "why": "Damped oscillator; damping not in the CED"
+ },
+ {
+  "front": "What is the potential energy formula for a spring?",
+  "fp": "c05d1f052a54",
+  "yield": "MEDIUM",
+  "why": "Restates spring PE card"
+ },
+ {
+  "front": "What is the total energy in an ideal SHM system?",
+  "fp": "e29db5be9d24",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.4 total SHM energy kA^2/2"
+ },
+ {
+  "front": "Where is kinetic energy maximum in SHM?",
+  "fp": "19b2888c3949",
+  "yield": "HIGH",
+  "why": "CED 7.4 KE max at equilibrium"
+ },
+ {
+  "front": "Where is potential energy maximum in SHM?",
+  "fp": "1908b208e984",
+  "yield": "HIGH",
+  "why": "CED 7.4 PE max at amplitude"
+ }
+]

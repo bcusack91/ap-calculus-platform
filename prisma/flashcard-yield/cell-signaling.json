@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Autocrine signaling means:",
+  "fp": "813a249b5030",
+  "yield": "MEDIUM",
+  "why": "CED 4.1 autocrine; minor signaling distance term"
+ },
+ {
+  "front": "Endocrine signaling uses:",
+  "fp": "ff41f0049e07",
+  "yield": "HIGH",
+  "why": "CED 4.1 endocrine signaling; commonly tested"
+ },
+ {
+  "front": "Negative feedback in signaling:",
+  "fp": "37c2c9f11410",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.5 negative feedback; homeostasis tested every exam"
+ },
+ {
+  "front": "Paracrine signaling involves:",
+  "fp": "3057bb161e68",
+  "yield": "HIGH",
+  "why": "CED 4.1 paracrine signaling"
+ },
+ {
+  "front": "What are the 3 stages of cell signaling?",
+  "fp": "6d71c8232906",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.2 reception-transduction-response; FRQ staple"
+ },
+ {
+  "front": "What is a second messenger, and why does it matter in signal transduction?",
+  "fp": "f6dbc3bee194",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.3 second messengers/amplification; FRQ staple"
+ }
+]

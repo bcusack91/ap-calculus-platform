@@ -1,0 +1,44 @@
+[
+ {
+  "front": "Name the major functions of proteins, with an example of each.",
+  "fp": "907d06aab786",
+  "yield": "MEDIUM",
+  "why": "Protein function list; general survey"
+ },
+ {
+  "front": "What are the four levels of protein structure?",
+  "fp": "3843a7756aaf",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.5 four levels of protein structure"
+ },
+ {
+  "front": "What determines a protein's final 3D structure?",
+  "fp": "d0fe729324ac",
+  "yield": "HIGH",
+  "why": "CED 1.5 sequence determines folding"
+ },
+ {
+  "front": "What interactions stabilize tertiary structure?",
+  "fp": "e776c7567e52",
+  "yield": "HIGH",
+  "why": "CED 1.5 R-group interactions in tertiary structure"
+ },
+ {
+  "front": "What is a peptide bond?",
+  "fp": "f39d38c049b6",
+  "yield": "HIGH",
+  "why": "CED 1.4 peptide bond via dehydration"
+ },
+ {
+  "front": "What is protein denaturation?",
+  "fp": "18e1c73f1efb",
+  "yield": "HIGH",
+  "why": "CED 3.3 denaturation and function"
+ },
+ {
+  "front": "What is the basic structure of an amino acid?",
+  "fp": "d1c08e59ecb3",
+  "yield": "HIGH",
+  "why": "CED 1.5 amino acid structure"
+ }
+]

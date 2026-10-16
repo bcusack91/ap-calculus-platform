@@ -1,0 +1,50 @@
+[
+ {
+  "front": "For the general reaction $aA + bB \\rightleftharpoons cC + dD$, what is the equilibrium expression $K_c$?",
+  "fp": "c4cf2241d28e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.3 Kc expression; tested every exam"
+ },
+ {
+  "front": "How does $K$ change when you manipulate a reaction equation?",
+  "fp": "c118ab85907b",
+  "yield": "HIGH",
+  "why": "CED 7.5 manipulating K"
+ },
+ {
+  "front": "What does the magnitude of $K$ tell you about an equilibrium?",
+  "fp": "413acc012bf0",
+  "yield": "HIGH",
+  "why": "CED 7.6 magnitude of K"
+ },
+ {
+  "front": "What is $K_c$ vs $K_p$?",
+  "fp": "6190bcef490d",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Kp = Kc(RT)^dn conversion excluded (7.3; R29)"
+ },
+ {
+  "front": "What is Reaction Quotient ($Q$)?",
+  "fp": "c50f5558ec6d",
+  "yield": "HIGH",
+  "why": "CED 7.2/7.10 Q vs K"
+ },
+ {
+  "front": "Which species are left out of an equilibrium constant expression?",
+  "fp": "87a414edad75",
+  "yield": "HIGH",
+  "why": "CED 7.3 species omitted from K"
+ },
+ {
+  "front": "Write the $K_p$ expression for $2SO_2(g) + O_2(g) \\rightleftharpoons 2SO_3(g)$.",
+  "fp": "930e50be95b0",
+  "yield": "HIGH",
+  "why": "CED 7.3 writing Kp"
+ },
+ {
+  "front": "Write the equilibrium constant expression $K_c$ for $N_2(g) + 3H_2(g) \\rightleftharpoons 2NH_3(g)$.",
+  "fp": "ed05093c80fa",
+  "yield": "MEDIUM",
+  "why": "Restates Kc-writing card"
+ }
+]

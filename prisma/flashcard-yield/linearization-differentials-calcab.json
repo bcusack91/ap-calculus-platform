@@ -1,0 +1,32 @@
+[
+ {
+  "front": "A linear approximation overestimates $f$ when $f$ is:",
+  "fp": "1fde6be1604d",
+  "yield": "HIGH",
+  "why": "CED 4.6 overestimate when concave down"
+ },
+ {
+  "front": "Linearize $f(x) = \\sqrt{x}$ at $a = 25$. $L(x) = $",
+  "fp": "eaa766d33534",
+  "yield": "MEDIUM",
+  "why": "Linearization example; restatement"
+ },
+ {
+  "front": "The linearization of $f(x) = \\sqrt{x}$ at $a = 25$ is used to approximate $\\sqrt{26}$. The approximation is:",
+  "fp": "924e38833d92",
+  "yield": "MEDIUM",
+  "why": "Linearization estimate; restatement"
+ },
+ {
+  "front": "The linearization of $f$ at $x = a$ is:",
+  "fp": "cf8856af2f6a",
+  "yield": "MEDIUM",
+  "why": "Restates linearization formula"
+ },
+ {
+  "front": "What is the linearization $L(x)$ of $f$ at $x = a$, and what is it used for?",
+  "fp": "b7c81e229b25",
+  "yield": "HIGH",
+  "why": "CED 4.6 linearization and dy"
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How is linear speed $v$ related to period $T$ in circular motion?",
+  "fp": "2d72412b7edb",
+  "yield": "HIGH",
+  "why": "CED 2.9 v = 2 pi r / T"
+ },
+ {
+  "front": "If an object in circular motion is suddenly released, what direction does it move?",
+  "fp": "6c868c6c1b6c",
+  "yield": "HIGH",
+  "why": "CED 2.9 tangent path when released"
+ },
+ {
+  "front": "What is \"centrifugal force\"?",
+  "fp": "997e17987d3a",
+  "yield": "MEDIUM",
+  "why": "Centrifugal force misconception; secondary"
+ },
+ {
+  "front": "What is angular velocity $\\omega$ and how does it relate to linear velocity?",
+  "fp": "d5d469de1172",
+  "yield": "HIGH",
+  "why": "CED 5.1 angular velocity and v = r omega"
+ },
+ {
+  "front": "What is the formula for centripetal acceleration?",
+  "fp": "2a002aed2f70",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.9 a = v^2/r toward center"
+ },
+ {
+  "front": "What is the relationship between period $T$ and frequency $f$?",
+  "fp": "0f30274a05ad",
+  "yield": "MEDIUM",
+  "why": "f = 1/T; prerequisite relation"
+ },
+ {
+  "front": "What is uniform circular motion?",
+  "fp": "34ae9fbb0d98",
+  "yield": "HIGH",
+  "why": "CED 2.9 uniform circular motion definition"
+ },
+ {
+  "front": "Why is there acceleration in uniform circular motion even though speed is constant?",
+  "fp": "c6603780a7b2",
+  "yield": "HIGH",
+  "why": "CED 2.9 acceleration at constant speed"
+ }
+]

@@ -1,0 +1,44 @@
+[
+ {
+  "front": "Key differences between DNA and RNA?",
+  "fp": "596d971ab369",
+  "yield": "HIGH",
+  "why": "CED 1.6 DNA vs RNA"
+ },
+ {
+  "front": "What are Chargaff's rules?",
+  "fp": "bbda1843c066",
+  "yield": "MEDIUM",
+  "why": "Chargaff's rules; secondary"
+ },
+ {
+  "front": "What are the purines and pyrimidines?",
+  "fp": "8089aab601c2",
+  "yield": "HIGH",
+  "why": "CED 1.6 purines vs pyrimidines (named in CED)"
+ },
+ {
+  "front": "What are the three components of a nucleotide?",
+  "fp": "79f1c2907bd5",
+  "yield": "HIGH",
+  "why": "CED 1.6 nucleotide components"
+ },
+ {
+  "front": "What are the three types of RNA and their functions?",
+  "fp": "61e9a5692953",
+  "yield": "HIGH",
+  "why": "CED 6.3/6.4 mRNA/tRNA/rRNA roles"
+ },
+ {
+  "front": "What does antiparallel mean in DNA?",
+  "fp": "280fab4141ca",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.6/6.2 antiparallel 5'-3'; tested every exam"
+ },
+ {
+  "front": "What is complementary base pairing in DNA?",
+  "fp": "dc441076a5e5",
+  "yield": "HIGH",
+  "why": "CED 1.6 complementary base pairing"
+ }
+]

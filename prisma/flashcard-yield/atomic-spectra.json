@@ -1,0 +1,146 @@
+[
+ {
+  "front": "Balmer series — $n_f$ and EM region",
+  "fp": "c6fc30302805",
+  "yield": "LOW",
+  "why": "Balmer series name/wavelengths; series names not in the CED"
+ },
+ {
+  "front": "Bohr energy formula for hydrogen",
+  "fp": "d9d0eea43a1c",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Bohr energy formula not in CED (ruling R28)"
+ },
+ {
+  "front": "Continuous vs. line spectrum — source?",
+  "fp": "6e8790c1aa59",
+  "yield": "LOW",
+  "why": "Continuous vs line source; not in the CED"
+ },
+ {
+  "front": "Converting photon energy from J to kJ/mol",
+  "fp": "dc55443e30f2",
+  "yield": "MEDIUM",
+  "why": "J per photon to kJ/mol conversion; supporting skill"
+ },
+ {
+  "front": "Effective nuclear charge $Z_\\text{eff}$",
+  "fp": "6f36f969d430",
+  "yield": "LOW",
+  "why": "Z_eff = Z - S; owner-borderline (C) item"
+ },
+ {
+  "front": "How does photon energy change with wavelength?",
+  "fp": "f7a571a35359",
+  "yield": "HIGH",
+  "why": "CED 1.8/3.12 photon energy vs wavelength"
+ },
+ {
+  "front": "Identifying an element from a PES spectrum",
+  "fp": "3ad04defe5b0",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.6 identify element from PES; tested every exam"
+ },
+ {
+  "front": "In a PES spectrum, peak HEIGHT represents…",
+  "fp": "072e8a3d0c01",
+  "yield": "HIGH",
+  "why": "CED 1.6 PES peak height = electron count"
+ },
+ {
+  "front": "In a PES spectrum, peak POSITION represents…",
+  "fp": "3d8415f53ee2",
+  "yield": "HIGH",
+  "why": "CED 1.6 PES peak position = binding energy"
+ },
+ {
+  "front": "Ionization energy of hydrogen",
+  "fp": "570e07eb7dea",
+  "yield": "LOW",
+  "why": "OFF-EXAM: hydrogen IE from Bohr energies (ruling R28)"
+ },
+ {
+  "front": "Lyman series — $n_f$ and EM region",
+  "fp": "30393542d3b8",
+  "yield": "LOW",
+  "why": "Lyman series name; series names not in the CED"
+ },
+ {
+  "front": "Paschen series — $n_f$ and EM region",
+  "fp": "91d3f299abd4",
+  "yield": "LOW",
+  "why": "Paschen series name; series names not in the CED"
+ },
+ {
+  "front": "PES key equation",
+  "fp": "9f0a12222721",
+  "yield": "LOW",
+  "why": "BE = hv - KE; owner-borderline (C) item"
+ },
+ {
+  "front": "Photon energy formula",
+  "fp": "80fae8d754c1",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.12 E = hv = hc/lambda; equation-sheet staple"
+ },
+ {
+  "front": "Rydberg formula",
+  "fp": "2c069c3ef28a",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Rydberg equation not in CED (ruling R28)"
+ },
+ {
+  "front": "Visible-light wavelength range",
+  "fp": "a42c73d206a7",
+  "yield": "MEDIUM",
+  "why": "Visible range; supporting fact"
+ },
+ {
+  "front": "Wave–frequency relation for light",
+  "fp": "837f4c2f7ed2",
+  "yield": "HIGH",
+  "why": "CED 3.12 c = lambda nu"
+ },
+ {
+  "front": "What produces a line emission spectrum?",
+  "fp": "ce5c72ad1a69",
+  "yield": "HIGH",
+  "why": "CED 1.8/3.12 emission from electron relaxation"
+ },
+ {
+  "front": "What produces an absorption spectrum?",
+  "fp": "615c300d4b59",
+  "yield": "HIGH",
+  "why": "CED 3.12 absorption spectrum"
+ },
+ {
+  "front": "Why are Bohr energies negative?",
+  "fp": "47d9478b689a",
+  "yield": "LOW",
+  "why": "Why Bohr energies are negative; Bohr history"
+ },
+ {
+  "front": "Why are line spectra \"atomic fingerprints\"?",
+  "fp": "29b331f4ea47",
+  "yield": "MEDIUM",
+  "why": "Line spectra as fingerprints; secondary"
+ },
+ {
+  "front": "Why does quantization → line spectra?",
+  "fp": "a42c01da71ab",
+  "yield": "HIGH",
+  "why": "CED 3.12 quantized levels give line spectra"
+ },
+ {
+  "front": "Why doesn't Bohr work for multi-electron atoms?",
+  "fp": "617d6323c45d",
+  "yield": "LOW",
+  "why": "Limits of Bohr model; qualitative Bohr history"
+ },
+ {
+  "front": "Within a spectral series, which transition gives the longest-wavelength line?",
+  "fp": "dc3a97fa993a",
+  "yield": "LOW",
+  "why": "Longest line in a Bohr series; series detail"
+ }
+]

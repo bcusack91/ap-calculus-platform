@@ -1,0 +1,50 @@
+[
+ {
+  "front": "$\\frac{d}{dx}[\\cos x] = ?$",
+  "fp": "88f7a5ecfdb6",
+  "yield": "HIGH",
+  "why": "CED 2.7 derivative of cos x"
+ },
+ {
+  "front": "$\\frac{d}{dx}[\\ln x] = ?$",
+  "fp": "d430d97eec6d",
+  "yield": "HIGH",
+  "why": "CED 2.8 derivative of ln x"
+ },
+ {
+  "front": "$\\frac{d}{dx}[\\sin x] = ?$",
+  "fp": "b11c64f48edd",
+  "yield": "HIGH",
+  "why": "CED 2.7 derivative of sin x"
+ },
+ {
+  "front": "$\\frac{d}{dx}[\\tan x] = ?$",
+  "fp": "3200f835a348",
+  "yield": "HIGH",
+  "why": "CED 2.9 derivative of tan x"
+ },
+ {
+  "front": "$\\frac{d}{dx}[e^x] = ?$",
+  "fp": "3b59f3a5d678",
+  "yield": "HIGH",
+  "why": "CED 2.8 derivative of e^x"
+ },
+ {
+  "front": "Power Rule: $\\frac{d}{dx}[x^n] = ?$",
+  "fp": "2b1418f070b3",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.5 power rule; used on every exam"
+ },
+ {
+  "front": "Product Rule: $\\frac{d}{dx}[f \\cdot g] = ?$",
+  "fp": "b914cc770e54",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.9 product rule"
+ },
+ {
+  "front": "Quotient Rule: $\\frac{d}{dx}\\left[\\frac{f}{g}\\right] = ?$",
+  "fp": "3b24f3418e0e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.9 quotient rule"
+ }
+]

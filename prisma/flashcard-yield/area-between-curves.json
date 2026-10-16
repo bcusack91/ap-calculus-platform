@@ -1,0 +1,38 @@
+[
+ {
+  "front": "How do you find the intersection points of two curves?",
+  "fp": "98e1eaa1db58",
+  "yield": "HIGH",
+  "why": "CED 8.4 intersections as limits"
+ },
+ {
+  "front": "How does area between curves differ from the net value of $\\int_a^b f(x)\\,dx$?",
+  "fp": "d30fda8d9c4c",
+  "yield": "HIGH",
+  "why": "CED 8.4/6.6 area vs net integral"
+ },
+ {
+  "front": "What is the area of the region between $y = x$ and $y = x^2$ from $x = 0$ to $x = 1$?",
+  "fp": "5d96fdbaf492",
+  "yield": "MEDIUM",
+  "why": "Area example; restatement"
+ },
+ {
+  "front": "What is the formula for area between two curves?",
+  "fp": "3ce49ca381e5",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.4/8.5 area between curves formula"
+ },
+ {
+  "front": "When should you split an area integral into multiple parts?",
+  "fp": "fcd44f4a7219",
+  "yield": "HIGH",
+  "why": "CED 8.6 split when curves cross"
+ },
+ {
+  "front": "When should you use dy instead of dx for area between curves?",
+  "fp": "f4eef56ce7b5",
+  "yield": "HIGH",
+  "why": "CED 8.5 integrate in y"
+ }
+]

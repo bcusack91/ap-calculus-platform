@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Explain ABO blood type inheritance.",
+  "fp": "4c37e4bc92f4",
+  "yield": "HIGH",
+  "why": "CED 5.4 ABO multiple alleles/codominance"
+ },
+ {
+  "front": "Give examples of environmental effects on phenotype.",
+  "fp": "2fdd8cf2fb7e",
+  "yield": "HIGH",
+  "why": "CED 5.5/5.6 environment affects phenotype"
+ },
+ {
+  "front": "Incomplete dominance vs. codominance?",
+  "fp": "629328e6032b",
+  "yield": "HIGH",
+  "why": "CED 5.4 incomplete dominance vs codominance"
+ },
+ {
+  "front": "What is epistasis?",
+  "fp": "8cc5ff4a3554",
+  "yield": "MEDIUM",
+  "why": "Epistasis; borderline per trim"
+ },
+ {
+  "front": "What is pleiotropy?",
+  "fp": "42db47be614b",
+  "yield": "MEDIUM",
+  "why": "Pleiotropy; secondary"
+ },
+ {
+  "front": "What is polygenic inheritance?",
+  "fp": "cf50ec816c42",
+  "yield": "MEDIUM",
+  "why": "Polygenic inheritance; secondary"
+ },
+ {
+  "front": "What is the phenotypic ratio for incomplete dominance F₂?",
+  "fp": "dc08d6f614ab",
+  "yield": "HIGH",
+  "why": "CED 5.4 incomplete-dominance F2 ratio"
+ },
+ {
+  "front": "Why are X-linked recessive traits more common in males?",
+  "fp": "e2ffd41f9f18",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.4 X-linked recessive in males"
+ }
+]

@@ -1,0 +1,32 @@
+[
+ {
+  "front": "A particle moves along the x-axis with position $s(t) = t^3 - 6t^2 + 9t$. At what time(s) is the particle at rest?",
+  "fp": "1bc031eca08a",
+  "yield": "HIGH",
+  "why": "CED 4.2 particle at rest when v = 0"
+ },
+ {
+  "front": "For a particle moving along a line, how do velocity and speed differ?",
+  "fp": "e3a81ba56724",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.2 velocity vs speed; speed increasing test"
+ },
+ {
+  "front": "If a particle's position is $s(t) = t^3 - 9t^2 + 24t$, when is the particle moving to the left?",
+  "fp": "14e48b2a5a67",
+  "yield": "HIGH",
+  "why": "CED 4.2 moving left when v < 0"
+ },
+ {
+  "front": "If the velocity of a particle is $v(t) = t^2 - 4t + 3$, the particle changes direction at $t = $",
+  "fp": "8c7686b4ab5a",
+  "yield": "HIGH",
+  "why": "CED 4.2 direction change when v changes sign"
+ },
+ {
+  "front": "The speed of a particle at time $t$ is $|v(t)|$ where $v(t) = t^2 - 4$. The speed is increasing at $t = 3$ because:",
+  "fp": "54131eff1a80",
+  "yield": "HIGH",
+  "why": "CED 4.2 speeding up when v and a share sign"
+ }
+]

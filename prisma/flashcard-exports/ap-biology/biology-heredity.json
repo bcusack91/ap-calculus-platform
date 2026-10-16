@@ -1,0 +1,117 @@
+[
+ {
+  "topicSlug": "chromosomal-inheritance",
+  "front": "Define aneuploidy and give examples.",
+  "back": "An abnormal number of individual chromosomes, usually caused by nondisjunction during meiosis. Monosomy (2n − 1): one chromosome of a pair is missing. Trisomy (2n + 1): one chromosome has an extra copy."
+ },
+ {
+  "topicSlug": "chromosomal-inheritance",
+  "front": "How does recombination frequency relate to gene distance?",
+  "back": "% recombinant offspring indicates distance between genes. 1% recombination = 1 map unit (centimorgan). Closer genes have lower recombination frequency."
+ },
+ {
+  "topicSlug": "chromosomal-inheritance",
+  "front": "How is biological sex determined in humans?",
+  "back": "Sex chromosomes: XX = female, XY = male. SRY gene on Y chromosome triggers male development. Sex ratio is ~1:1."
+ },
+ {
+  "topicSlug": "chromosomal-inheritance",
+  "front": "What are linked genes?",
+  "back": "Genes located on the same chromosome that tend to be inherited together. They violate the law of independent assortment."
+ },
+ {
+  "topicSlug": "chromosomal-inheritance",
+  "front": "What are the four types of chromosomal structural changes?",
+  "back": "Deletion (segment lost), Duplication (segment repeated), Inversion (segment reversed), Translocation (segment moved to different chromosome)."
+ },
+ {
+  "topicSlug": "chromosomal-inheritance",
+  "front": "What is the maximum recombination frequency and what does it mean?",
+  "back": "50%. Means genes are on different chromosomes or very far apart on same chromosome, so they assort independently."
+ },
+ {
+  "topicSlug": "chromosomal-inheritance",
+  "front": "What is X-inactivation and why does it occur?",
+  "back": "In female mammals, one X chromosome is randomly inactivated in each cell (forms Barr body). Dosage compensation: equalizes gene expression between XX females and XY males."
+ },
+ {
+  "topicSlug": "chromosomal-inheritance",
+  "front": "Why are calico cats almost always female?",
+  "back": "Coat color gene on X chromosome. Random X-inactivation creates orange and black patches. Males (XY) have only one X, so can't have both colors (except rare XXY males)."
+ },
+ {
+  "topicSlug": "mendelian-genetics",
+  "front": "Define genotype vs. phenotype.",
+  "back": "Genotype: genetic makeup (allele combination, e.g., Aa). Phenotype: physical appearance or trait expression (e.g., tall)."
+ },
+ {
+  "topicSlug": "mendelian-genetics",
+  "front": "What is a testcross and what is its purpose?",
+  "back": "Cross unknown genotype with homozygous recessive (tt). If all offspring show dominant phenotype → unknown is homozygous (TT). If 1:1 ratio → unknown is heterozygous (Tt)."
+ },
+ {
+  "topicSlug": "mendelian-genetics",
+  "front": "What is the Law of Independent Assortment?",
+  "back": "Genes for different traits assort independently during gamete formation. Applies to genes on different chromosomes. Exception: linked genes on same chromosome."
+ },
+ {
+  "topicSlug": "mendelian-genetics",
+  "front": "What is the Law of Segregation?",
+  "back": "Each parent has two alleles for each gene. Alleles separate during gamete formation, so each gamete gets one allele. Fertilization restores pairs."
+ },
+ {
+  "topicSlug": "mendelian-genetics",
+  "front": "What is the phenotypic ratio for a dihybrid cross F₂?",
+  "back": "9:3:3:1. (9 both dominant, 3 first dominant/second recessive, 3 first recessive/second dominant, 1 both recessive)."
+ },
+ {
+  "topicSlug": "mendelian-genetics",
+  "front": "What is the phenotypic ratio for a monohybrid cross (Aa × Aa)?",
+  "back": "3:1 (3 dominant phenotype : 1 recessive phenotype). Genotypic ratio is 1:2:1 (1 AA : 2 Aa : 1 aa)."
+ },
+ {
+  "topicSlug": "mendelian-genetics",
+  "front": "When do you use the product rule vs. sum rule in genetics?",
+  "back": "Product rule (multiply): probability of independent events occurring together (AND). Sum rule (add): probability of alternative events (OR)."
+ },
+ {
+  "topicSlug": "non-mendelian-genetics",
+  "front": "Explain ABO blood type inheritance.",
+  "back": "Multiple alleles: $I^A$, $I^B$, and $i$. $I^A$ and $I^B$ are codominant and both dominant to $i$: type A is $I^AI^A$ or $I^Ai$, type B is $I^BI^B$ or $I^Bi$, type AB is $I^AI^B$, type O is $ii$."
+ },
+ {
+  "topicSlug": "non-mendelian-genetics",
+  "front": "Give examples of environmental effects on phenotype.",
+  "back": "Temperature (Himalayan rabbit coat color), nutrition (height), light (chlorophyll production), pH (hydrangea flower color). Genotype provides potential, environment influences expression."
+ },
+ {
+  "topicSlug": "non-mendelian-genetics",
+  "front": "Incomplete dominance vs. codominance?",
+  "back": "Incomplete dominance: heterozygote shows intermediate/blended phenotype (e.g., pink flowers). Codominance: both alleles fully expressed simultaneously (e.g., AB blood type)."
+ },
+ {
+  "topicSlug": "non-mendelian-genetics",
+  "front": "What is epistasis?",
+  "back": "One gene masks the expression of another gene (gene interaction). Example: Labrador coat color - E gene determines if pigment is deposited, B gene determines color."
+ },
+ {
+  "topicSlug": "non-mendelian-genetics",
+  "front": "What is pleiotropy?",
+  "back": "One gene affects multiple phenotypic traits. Example: sickle cell allele affects blood cells, anemia, pain, organ damage, and malaria resistance."
+ },
+ {
+  "topicSlug": "non-mendelian-genetics",
+  "front": "What is polygenic inheritance?",
+  "back": "Multiple genes control one trait, producing continuous variation (range of phenotypes). Examples: height, skin color. Shows bell curve distribution."
+ },
+ {
+  "topicSlug": "non-mendelian-genetics",
+  "front": "What is the phenotypic ratio for incomplete dominance F₂?",
+  "back": "1:2:1 (same as genotypic ratio). Example: 1 Red : 2 Pink : 1 White. Each genotype has unique phenotype."
+ },
+ {
+  "topicSlug": "non-mendelian-genetics",
+  "front": "Why are X-linked recessive traits more common in males?",
+  "back": "Males have only one X chromosome (XY). One recessive allele causes the trait. Females need two recessive alleles (XX) to show the trait."
+ }
+]

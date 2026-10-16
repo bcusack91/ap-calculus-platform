@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do complex ions affect solubility?",
+  "fp": "9ed34f8f4d1f",
+  "yield": "LOW",
+  "why": "OFF-EXAM: complex-ion formation not in the CED"
+ },
+ {
+  "front": "How do you calculate molar solubility from K_sp?",
+  "fp": "88f4ae85d12c",
+  "yield": "HIGH",
+  "why": "CED 7.11 molar solubility from Ksp"
+ },
+ {
+  "front": "How do you perform selective precipitation to separate ions?",
+  "fp": "b5329e749485",
+  "yield": "LOW",
+  "why": "Selective precipitation procedure; beyond the CED"
+ },
+ {
+  "front": "How does pH affect solubility of salts?",
+  "fp": "b67d67230d7a",
+  "yield": "MEDIUM",
+  "why": "CED 7.13 pH and solubility, qualitative only"
+ },
+ {
+  "front": "What is K_sp and how do you write the expression for M_aX_b(s)?",
+  "fp": "07adaaedb3dd",
+  "yield": "HIGH",
+  "why": "CED 7.11 Ksp expression"
+ },
+ {
+  "front": "What is molar solubility and how does it relate to K_sp?",
+  "fp": "2c655ddcbbca",
+  "yield": "MEDIUM",
+  "why": "Restates molar solubility card"
+ },
+ {
+  "front": "What is Q_sp and how do you use it to predict precipitation?",
+  "fp": "8f8acf091ad2",
+  "yield": "HIGH",
+  "why": "CED 7.11 Q vs Ksp predicts precipitation"
+ },
+ {
+  "front": "What is the common ion effect on solubility?",
+  "fp": "7bde4ffd849c",
+  "yield": "HIGH",
+  "why": "CED 7.12 common-ion effect"
+ }
+]

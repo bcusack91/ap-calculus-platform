@@ -1,0 +1,44 @@
+[
+ {
+  "front": "Chlorophyll a absorbs light most effectively in the:",
+  "fp": "bbebfcc27303",
+  "yield": "MEDIUM",
+  "why": "Chlorophyll absorption peaks; secondary detail"
+ },
+ {
+  "front": "Plant cells, unlike animal cells, have:",
+  "fp": "cf003af52749",
+  "yield": "MEDIUM",
+  "why": "Plant vs animal cell; restates organelle cards"
+ },
+ {
+  "front": "The Calvin cycle takes place in the:",
+  "fp": "903bcab1163f",
+  "yield": "HIGH",
+  "why": "CED 3.5 Calvin cycle in stroma"
+ },
+ {
+  "front": "The electron transport chain in chloroplasts creates a H+ gradient in the:",
+  "fp": "e96590253d42",
+  "yield": "HIGH",
+  "why": "CED 3.5 H+ gradient in thylakoid lumen"
+ },
+ {
+  "front": "The light reactions occur in the:",
+  "fp": "79c681c5611c",
+  "yield": "HIGH",
+  "why": "CED 3.5 light reactions in thylakoid membranes"
+ },
+ {
+  "front": "What are the two stages of photosynthesis?",
+  "fp": "a9784585c1d5",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.5 two stages of photosynthesis; tested every exam"
+ },
+ {
+  "front": "What is the role of chlorophyll?",
+  "fp": "69ed92b7938b",
+  "yield": "HIGH",
+  "why": "CED 3.5 chlorophyll excites electrons"
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "front": "How do human activities impact biogeochemical cycles?",
+  "fp": "e59161a2c1a2",
+  "yield": "HIGH",
+  "why": "CED 8.6/8.7 human disruption of cycles"
+ },
+ {
+  "front": "How does carbon cycle through ecosystems?",
+  "fp": "bde6a8b83863",
+  "yield": "HIGH",
+  "why": "CED 8.2 carbon cycle"
+ },
+ {
+  "front": "What are the main steps of the nitrogen cycle?",
+  "fp": "608bd0f9cdb1",
+  "yield": "MEDIUM",
+  "why": "Nitrogen cycle step names; secondary"
+ },
+ {
+  "front": "What are the roles of producers, consumers, and decomposers?",
+  "fp": "6bfd19def55b",
+  "yield": "HIGH",
+  "why": "CED 8.2 producers/consumers/decomposers"
+ },
+ {
+  "front": "What is nitrogen fixation?",
+  "fp": "f566d3523b96",
+  "yield": "MEDIUM",
+  "why": "Nitrogen fixation; secondary"
+ },
+ {
+  "front": "What is the 10% rule in ecosystems?",
+  "fp": "9f0c042cf706",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.2 energy transfer between trophic levels"
+ }
+]

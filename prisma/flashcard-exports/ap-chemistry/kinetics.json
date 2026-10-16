@@ -1,0 +1,252 @@
+[
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "A reaction has $E_a = 50$ kJ/mol. By roughly what factor does $k$ increase when $T$ goes from $300$ K to $310$ K?",
+  "back": "About $1.9\\times$. $\\ln(k_2/k_1) = (E_a/R)(1/T_1 - 1/T_2) = (50000/8.314)(1/300 - 1/310) \\approx 0.65$, so $k_2/k_1 = e^{0.65} \\approx 1.9$ — the source of the 'rate roughly doubles per 10 °C' rule."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "According to collision theory, what two conditions must be met for reaction to occur?",
+  "back": "1) Particles must collide with sufficient energy (≥ Ea), 2) Particles must have proper orientation. Not all collisions lead to reaction - most lack energy or wrong orientation."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "Given Ea values, how can you estimate which reaction is more temperature-sensitive?",
+  "back": "Higher Ea → greater temperature sensitivity. A small increase in T yields a larger increase in k when Ea is larger."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "How do A and Ea compete to determine which reaction is faster at a given temperature?",
+  "back": "At low $T$ the smaller $E_a$ usually wins; at high $T$ a larger $A$ can win even with a larger $E_a$. Compare $k = Ae^{-E_a/RT}$ numerically at the temperature of interest."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "How do you determine Ea graphically using the Arrhenius equation?",
+  "back": "Linear form: ln(k) = ln(A) - Ea/R × (1/T). Plot ln(k) vs 1/T gives straight line with slope = -Ea/R. From slope, Ea = -slope × R."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "How does a catalyst affect a reaction and what does it NOT change?",
+  "back": "Catalyst provides alternative pathway with lower Ea → faster rate. Does NOT change: ΔH, equilibrium position, or nature of products. Increases both forward and reverse rates equally."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "How does a catalyst change an Arrhenius plot?",
+  "back": "A catalyst typically lowers Ea (less negative slope magnitude). The lines for catalyzed vs uncatalyzed have different slopes; ln(A) can also change because the mechanism changes."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "How does a Maxwell–Boltzmann distribution curve change when temperature increases?",
+  "back": "The curve flattens and shifts right — its peak drops and moves to higher energy — so a much larger fraction of molecules lies beyond $E_a$, which is why $k$ climbs exponentially with $T$."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "On a reaction energy profile, what do the peak and the reactant-to-product gap represent?",
+  "back": "The peak is the transition state (activated complex); the climb from reactants up to it is the forward $E_a$, and the gap between the reactant and product levels is $\\Delta H$."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "Physically, what does the pre-exponential factor A represent?",
+  "back": "A captures collision frequency and orientation probability (steric factor). In ln(k) vs 1/T, ln(A) is the y-intercept."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "What are common pitfalls when using the Arrhenius equation in calculations?",
+  "back": "Forgetting to convert kJ→J, using °C instead of K, mixing base-10 and natural logs, and rounding too early when exponentiating."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "What are the units for Ea and R, and why must temperature be in Kelvin in the Arrhenius equation?",
+  "back": "Ea is typically in J/mol (or kJ/mol, convert to J/mol when using R = 8.314 J/(mol·K)). Temperature must be absolute (Kelvin) so energy ratios and exponential factors are dimensionally consistent."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "What is activation energy (Ea) and how does it affect reaction rate?",
+  "back": "Ea is minimum energy needed for reaction to occur. Higher Ea → slower reaction (fewer molecules have enough energy). Lower Ea → faster reaction. Catalysts work by lowering Ea."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "What is the Arrhenius equation and what does each term represent?",
+  "back": "k = Ae^(-Ea/RT). k = rate constant, A = frequency factor, Ea = activation energy, R = 8.314 J/(mol·K), T = temperature (K). Shows exponential dependence of k on T."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "What is the relationship between Ea(forward), Ea(reverse), and ΔH?",
+  "back": "Ea(forward) - Ea(reverse) = ΔH. For exothermic (ΔH < 0): Ea(reverse) > Ea(forward). For endothermic (ΔH > 0): Ea(forward) > Ea(reverse)."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "Why does increasing temperature dramatically increase reaction rate?",
+  "back": "Exponential effect from Arrhenius equation. Higher T → more molecules have E ≥ Ea. Rule of thumb: rate doubles for every 10°C increase. Effect on energy distribution more important than collision frequency."
+ },
+ {
+  "topicSlug": "activation-energy-arrhenius",
+  "front": "Why is the \"rate doubles for every 10 °C\" rule only approximate?",
+  "back": "The true factor is $e^{(E_a/R)(1/T - 1/(T+10))}$, so it depends on both $E_a$ and the temperature range. It lands near $2$ only for moderate $E_a$ around room temperature."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "A first-order process has k = 0.080 min⁻¹. What fraction remains after 30 min?",
+  "back": "Use [A]_t/[A]_0 = e^{-kt} = e^{-0.080×30} = e^{-2.4} ≈ 0.090. About 9% remains (91% consumed)."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "A rate constant is reported as $k = 0.025\\ \\text{M}^{-1}\\text{s}^{-1}$. What is the reaction order?",
+  "back": "Second order overall. Units of $k$ follow $\\text{M}^{1-n}\\cdot\\text{s}^{-1}$, so $n = 2$. For a single reactant, $\\text{rate} = k[A]^2$ and the linear plot is $1/[A]$ vs $t$."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "Derive the first-order integrated rate law from the differential form.",
+  "back": "Start with d[A]/dt = -k[A]. Separate variables: d[A]/[A] = -k dt. Integrate: ln[A]_t - ln[A]_0 = -kt. Rearranged: ln[A]_t = ln[A]_0 - kt, or [A]_t = [A]_0 e^{-kt}."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "Diagnostic: ln[A] vs t is nearly linear but 1/[A] vs t is slightly curved. What is the likely order and why?",
+  "back": "Likely first order. The most linear transformation indicates order. Small curvature in 1/[A] vs t signals it is not second order."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "For a first-order reaction, if t₁/₂ = 10 min, how much remains after 30 min?",
+  "back": "30 min = 3 half-lives. After each t₁/₂, concentration halves. After 3 half-lives: [A] = [A]₀/2³ = [A]₀/8 = 12.5% remains. General: after n half-lives, [A] = [A]₀/2ⁿ."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "Given two times and concentrations for a first-order reaction, how can you compute k without [A]_0?",
+  "back": "Use ln([A]_1/[A]_2) = k(t_2 − t_1). Rearranged from ln[A]_t = ln[A]_0 − kt by subtracting two times to eliminate [A]_0."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "How do half-lives differ for zero, first, and second order reactions?",
+  "back": "Zero order: t₁/₂ = [A]₀/(2k) (decreases each cycle). First order: t₁/₂ = 0.693/k (constant). Second order: t₁/₂ = 1/(k[A]₀) (increases each cycle, doubles)."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "How do you calculate time needed for concentration to drop from [A]₀ to [A]_t for first order?",
+  "back": "Rearrange ln[A]_t = ln[A]₀ - kt to get: t = (1/k)ln([A]₀/[A]_t). For half-life, [A]_t = [A]₀/2, giving t = (1/k)ln(2) = 0.693/k."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "How do you determine reaction order graphically using integrated rate laws?",
+  "back": "Plot [A] vs t (zero order linear), ln[A] vs t (first order linear), and 1/[A] vs t (second order linear). Whichever plot is linear indicates the order. Slope gives k."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "How to compute time for a first-order reaction to reach 10% of its initial concentration?",
+  "back": "Set [A]_t/[A]_0 = 0.10, so t = (1/k)ln(1/0.10) = (1/k)ln(10)."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "In each integrated-rate-law plot, what does the y-intercept represent?",
+  "back": "$[A]$ vs $t$: intercept $= [A]_0$. $\\ln[A]$ vs $t$: intercept $= \\ln[A]_0$. $1/[A]$ vs $t$: intercept $= 1/[A]_0$. The slope gives $k$ ($-k$ for zero and first order, $+k$ for second)."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "Second-order: doubling the initial concentration has what effect on the first half-life?",
+  "back": "For second order, t₁/₂ = 1/(k[A]_0). Doubling [A]_0 halves the first half-life."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "What are the integrated rate laws for zero, first, and second order reactions?",
+  "back": "Zero: [A]_t = [A]₀ - kt. First: ln[A]_t = ln[A]₀ - kt. Second: 1/[A]_t = 1/[A]₀ + kt. These allow calculating concentration at any time."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "What are the units of k for zero, first, and second order reactions?",
+  "back": "Zero order: M·s⁻¹. First order: s⁻¹. Second order: M⁻¹·s⁻¹. Units ensure dimensional consistency in integrated rate laws."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "What is special about first-order half-life and what is the equation?",
+  "back": "t₁/₂ = 0.693/k = ln(2)/k. Unique feature: half-life is CONSTANT (independent of concentration). Only first order has this property. Useful for radioactive decay and drug metabolism."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "What is the relationship between slope and k in integrated rate law plots?",
+  "back": "Zero order ([A] vs t): slope = -k. First order (ln[A] vs t): slope = -k. Second order (1/[A] vs t): slope = +k. Note sign difference for second order!"
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "Why does each successive half-life of a zero-order reaction get shorter?",
+  "back": "$t_{1/2} = \\frac{[A]_0}{2k}$ uses the concentration at the start of that interval. Each half-life begins with half as much A, so each takes half as long as the one before (e.g. 100 s, then 50 s, then 25 s)."
+ },
+ {
+  "topicSlug": "integrated-rate-laws",
+  "front": "Zero-order decay: time to drop from 0.40 M to 0.10 M with $k = 1.0\\times 10^{-3}\\ \\text{M/s}$?",
+  "back": "Use $[A]_t = [A]_0 - kt$. So $t = \\dfrac{[A]_0 - [A]_t}{k} = \\dfrac{0.40 - 0.10}{1.0\\times 10^{-3}} = 300\\ \\text{s}$."
+ },
+ {
+  "topicSlug": "reaction-mechanisms",
+  "front": "Catalyzed mechanism: (1) X + A ⇌ AX (fast, K₁), (2) AX + B → products + X (slow, k₂). (a) Identify catalyst/intermediate. (b) Overall equation. (c) Rate law.",
+  "back": "X is a catalyst (consumed then regenerated). AX is an intermediate (formed then consumed). Overall: add steps and cancel X, AX ⇒ A + B → products. Rate law from RDS: Rate = k₂[AX][B]. From step 1: [AX] = K₁[X][A]. Thus Rate = k₂K₁[X][A][B] = k[X][A][B]."
+ },
+ {
+  "topicSlug": "reaction-mechanisms",
+  "front": "Identify intermediates and overall equation: (1) NO + O₃ → NO₂ + O₂ (fast), (2) NO₂ + O → NO + O₂ (slow), (3) O₃ ⇌ O₂ + O (fast). Determine the overall reaction and the intermediate(s).",
+  "back": "Add steps and cancel common species. Species that appear and cancel: NO (consumed in step 1, produced in step 2) cancels; O (from step 3, consumed in step 2) cancels; NO₂ (produced in step 1, consumed in step 2) cancels. Overall: O₃ → O₂. Intermediates: O and NO₂."
+ },
+ {
+  "topicSlug": "reaction-mechanisms",
+  "front": "Pre-equilibrium example: (1) 2A ⇌ A₂ (fast, K₁), (2) A₂ + B → products (slow, k₂). Derive the rate law.",
+  "back": "RDS: step 2 ⇒ Rate = k₂[A₂][B]. From step 1: K₁ = [A₂]/[A]^2 ⇒ [A₂] = K₁[A]^2. Substitute: Rate = k₂K₁[A]^2[B] = k[A]^2[B], where k = k₂K₁."
+ },
+ {
+  "topicSlug": "reaction-mechanisms",
+  "front": "RDS first step vs second step: (1) A + B → C (slow), (2) C + B → D (fast). (a) Rate law? Now swap RDS: (1) A + B ⇌ C (fast, K), (2) C + B → D (slow). (b) New rate law?",
+  "back": "(a) If step 1 is slow: Rate = k[A][B]. (b) If step 2 is slow, use pre-equilibrium for step 1: [C] = K[A][B]. Rate = k₂[C][B] = k₂K[A][B]^2 = k[A][B]^2. The observed rate law changes when the RDS changes."
+ },
+ {
+  "topicSlug": "reaction-mechanisms",
+  "front": "What is a catalyst?",
+  "back": "A substance that speeds a reaction by providing a pathway with lower activation energy. In a mechanism it is a reactant in an early step and is regenerated in a later step, so it is not consumed overall — the mirror image of an intermediate, which is produced first and then used up.",
+  "hint": "Appears in one step, regenerated in another."
+ },
+ {
+  "topicSlug": "reaction-mechanisms",
+  "front": "What is an intermediate?",
+  "back": "A species produced in one step and consumed in a later step. It does NOT appear in the overall balanced equation.",
+  "hint": "Made and then used up during the mechanism."
+ },
+ {
+  "topicSlug": "reaction-mechanisms",
+  "front": "What is the rate-determining step?",
+  "back": "The slowest elementary step in a reaction mechanism. It limits the overall reaction rate.",
+  "hint": "Bottleneck of the reaction."
+ },
+ {
+  "topicSlug": "reaction-mechanisms",
+  "front": "Which statement about reaction mechanisms is correct?",
+  "back": "**The slowest step is the rate-determining step**\n\nThe rate-determining step (RDS) is the slowest elementary step. The rate law is derived from the RDS, not the overall equation. Intermediates are produced and consumed but do NOT appear in the overall equation."
+ },
+ {
+  "topicSlug": "reaction-rates-and-rate-laws",
+  "front": "A catalyst speeds up a reaction by:",
+  "back": "**Providing an alternative pathway with lower $E_a$**\n\nCatalysts lower the activation energy barrier."
+ },
+ {
+  "topicSlug": "reaction-rates-and-rate-laws",
+  "front": "A reaction is found to be first order in A and second order in B. (a) Write the rate law. (b) By what factor does the rate increase if [A] is tripled and [B] is doubled? (c) What are the units of the rate constant?",
+  "back": "(a) **Rate law:**\n**Rate = k[A]¹[B]²** or Rate = k[A][B]²\n\n(b) **Rate change factor:**\nInitial rate: Rate₁ = k[A]₁[B]₁²\nNew rate: Rate₂ = k[A]₂[B]₂²\n\nWhere: [A]₂ = 3[A]₁ and [B]₂ = 2[B]₁\n\nRate₂ = k(3[A]₁)(2[B]₁)²\nRate₂ = k(3[A]₁)(4[B]₁²)\nRate₂ = 12k[A]₁[B]₁²\nRate₂ = 12 × Rate₁\n\n**The rate increases by a factor of 12**\n\n(c) **Units of k:**\nFrom Rate = k[A][B]²\nM/s = k × M × M²\nM/s = k × M³\nk = M/s ÷ M³ = **M⁻²s⁻¹**\n\nGeneral pattern for units:\n- 0th order: M/s\n- 1st order: s⁻¹\n- 2nd order: M⁻¹s⁻¹\n- 3rd order: M⁻²s⁻¹"
+ },
+ {
+  "topicSlug": "reaction-rates-and-rate-laws",
+  "front": "For a reaction that is first order in [A] and first order in [B], tripling [A] and doubling [B] will change the rate by a factor of:",
+  "back": "**6**\n\nRate = k[A][B]. New rate = k(3[A])(2[B]) = 6k[A][B]. Factor = 6."
+ },
+ {
+  "topicSlug": "reaction-rates-and-rate-laws",
+  "front": "General rate law form?",
+  "back": "$\\text{Rate} = k[A]^m[B]^n$\n\nk = rate constant, m and n = reaction orders (determined experimentally).",
+  "hint": "Orders are NOT from balanced equation coefficients."
+ },
+ {
+  "topicSlug": "reaction-rates-and-rate-laws",
+  "front": "Increasing temperature speeds up a reaction because:",
+  "back": "**It increases the fraction of molecules with sufficient energy**\n\nHigher T → more molecules exceed $E_a$ → more effective collisions."
+ },
+ {
+  "topicSlug": "reaction-rates-and-rate-laws",
+  "front": "What is the Arrhenius equation, and what does each symbol mean?",
+  "back": "$k = Ae^{-E_a/RT}$ — $A$ is the frequency (pre-exponential) factor, $E_a$ the activation energy, $R = 8.314$ J/(mol·K), and $T$ the absolute temperature. Raising $T$ or lowering $E_a$ makes $k$ larger.",
+  "hint": "Higher temperature → larger k → faster reaction."
+ }
+]

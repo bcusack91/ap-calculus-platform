@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How does the size of a cation compare to its neutral atom?",
+  "fp": "6d5547688eef",
+  "yield": "HIGH",
+  "why": "CED 1.7 cation smaller than atom"
+ },
+ {
+  "front": "How does the size of an anion compare to its neutral atom?",
+  "fp": "a9313f280f05",
+  "yield": "HIGH",
+  "why": "CED 1.7 anion larger than atom"
+ },
+ {
+  "front": "What is an isoelectronic series and how does size vary?",
+  "fp": "c024cb84b7dc",
+  "yield": "HIGH",
+  "why": "CED 1.7 isoelectronic series size"
+ },
+ {
+  "front": "What is electron affinity and its general trend?",
+  "fp": "7e2fc1566add",
+  "yield": "MEDIUM",
+  "why": "Electron affinity trend; secondary"
+ },
+ {
+  "front": "What is electronegativity and what is its trend?",
+  "fp": "9df89d655bb9",
+  "yield": "HIGH",
+  "why": "CED 1.7 electronegativity trend"
+ },
+ {
+  "front": "What is ionization energy and what is its trend?",
+  "fp": "a0bb8ae0ffea",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.7 ionization energy trend; Coulombic FRQ staple"
+ },
+ {
+  "front": "What is the trend for atomic radius across a period and down a group?",
+  "fp": "4904a4a67ac8",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.7 atomic radius trend; Coulombic FRQ staple"
+ },
+ {
+  "front": "Why is there a large jump in successive ionization energies?",
+  "fp": "5f5e13ba13c6",
+  "yield": "HIGH",
+  "why": "CED 1.7 successive IE jump"
+ }
+]

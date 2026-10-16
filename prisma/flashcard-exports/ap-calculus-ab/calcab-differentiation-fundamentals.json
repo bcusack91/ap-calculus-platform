@@ -1,0 +1,157 @@
+[
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "$\\frac{d}{dx}[\\cos x] = ?$",
+  "back": "$-\\sin x$",
+  "hint": "Note the negative sign."
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "$\\frac{d}{dx}[\\ln x] = ?$",
+  "back": "$\\frac{1}{x}$",
+  "hint": "The natural log derivative is reciprocal."
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "$\\frac{d}{dx}[\\sin x] = ?$",
+  "back": "$\\cos x$",
+  "hint": "Cosine is the derivative of sine."
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "$\\frac{d}{dx}[\\tan x] = ?$",
+  "back": "$\\sec^2 x$",
+  "hint": "Think of tan = sin/cos and apply quotient rule."
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "$\\frac{d}{dx}[e^x] = ?$",
+  "back": "$e^x$",
+  "hint": "The exponential function is its own derivative."
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Power Rule: $\\frac{d}{dx}[x^n] = ?$",
+  "back": "$nx^{n-1}$",
+  "hint": "Bring down the exponent, subtract one."
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Product Rule: $\\frac{d}{dx}[f \\cdot g] = ?$",
+  "back": "$f'g + fg'$",
+  "hint": "First times derivative of second plus second times derivative of first."
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Quotient Rule: $\\frac{d}{dx}\\left[\\frac{f}{g}\\right] = ?$",
+  "back": "$\\frac{f'g - fg'}{g^2}$",
+  "hint": "Low d-high minus high d-low, over low squared."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "$\\frac{d}{dx}[\\ln(g(x))] = ?$",
+  "back": "$\\frac{g'(x)}{g(x)}$",
+  "hint": "Reciprocal of inside times derivative of inside."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "$\\frac{d}{dx}[e^{g(x)}] = ?$",
+  "back": "$e^{g(x)} \\cdot g'(x)$",
+  "hint": "Exponential times the derivative of the exponent."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "If $h(x) = f(g(x))$, $g(3) = 7$, $g'(3) = 4$, and $f'(7) = -2$, then $h'(3) = $",
+  "back": "**$-8$**\n\n$h'(3) = f'(g(3)) \\cdot g'(3) = f'(7) \\cdot 4 = (-2)(4) = -8$."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "If $y = (x^3 + 1)^5$, what is $\\dfrac{dy}{dx}$?",
+  "back": "**$15x^2(x^3 + 1)^4$**\n\nChain rule: dy/dx = $5(x^{3}+1)^{4}$ · $3x^{2}$ = $15x^{2}(x^{3}+1)^{4}$."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "If $y = \\cos^3(2x)$, then $\\dfrac{dy}{dx} = $",
+  "back": "**$-6\\cos^2(2x)\\sin(2x)$**\n\nChain rule twice: $3\\cos^2(2x) \\cdot (-\\sin(2x)) \\cdot 2 = -6\\cos^2(2x)\\sin(2x)$."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "State the Chain Rule.",
+  "back": "$\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)$",
+  "hint": "Derivative of outer times derivative of inner."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "The derivative of $y = e^{\\sin x}$ is:",
+  "back": "**$e^{\\sin x} \\cos x$**\n\nChain rule: $e^{\\sin x} \\cdot \\cos x$."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "What is $\\dfrac{d}{dx}[\\sin(3x^2)]$?",
+  "back": "**$6x\\cos(3x^2)$**\n\nChain rule: d/dx [sin(u)] = cos(u)·u', where u = $3x^{2}$, u' = 6x. Answer: 6x $\\cos (3x^{2})$."
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "$\\lim_{x \\to \\pi} \\dfrac{\\sin x - 0}{x - \\pi} = $",
+  "back": "**$-1$**\n\nThis is $f'(\\pi)$ for $f(x) = \\sin x$. $\\cos \\pi = -1$."
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "An equivalent limit definition of $f'(a)$ is:",
+  "back": "**$\\lim_{x \\to a} \\dfrac{f(x) - f(a)}{x - a}$**\n\nEquivalent (point-form) definition."
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "If $f$ is differentiable at $a$, is $f$ continuous at $a$?",
+  "back": "Yes. Differentiability implies continuity, but continuity does NOT imply differentiability.",
+  "hint": "One direction only."
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "Use the limit definition to find $f'(x)$ for $f(x) = x^2$.",
+  "back": "**$2x$**\n\n$\\dfrac{(x+h)^2 - x^2}{h} = 2x + h \\to 2x$."
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "What is the alternative form of the derivative at $x = a$?",
+  "back": "$f'(a) = \\lim_{x \\to a} \\frac{f(x) - f(a)}{x - a}$",
+  "hint": "Replace h with (x − a)."
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "What is the limit definition of the derivative?",
+  "back": "$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$",
+  "hint": "Slope of the tangent line as a limit."
+ },
+ {
+  "topicSlug": "inverse-functions-derivatives-calcab",
+  "front": "$\\dfrac{d}{dx}[\\arctan x] = $",
+  "back": "**$\\dfrac{1}{1 + x^2}$**\n\nStandard derivative of arctangent."
+ },
+ {
+  "topicSlug": "inverse-functions-derivatives-calcab",
+  "front": "If $f$ is differentiable and $f(a) = b$, what is $(f^{-1})'(b)$?",
+  "back": "$(f^{-1})'(b) = \\frac{1}{f'(a)}$ — the derivative of the inverse at $b$ is the reciprocal of $f'$ at the matching input $a$ (requires $f'(a) \\ne 0$).",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "inverse-functions-derivatives-calcab",
+  "front": "If $f$ is one-to-one and differentiable with inverse $g$, then:",
+  "back": "**$g'(x) = \\dfrac{1}{f'(g(x))}$**\n\nInverse function derivative formula."
+ },
+ {
+  "topicSlug": "inverse-functions-derivatives-calcab",
+  "front": "If $y = \\tan^{-1}(e^x)$, then $\\dfrac{dy}{dx} = $",
+  "back": "**$\\dfrac{e^x}{1+e^{2x}}$**\n\nChain rule: $\\frac{1}{1+(e^x)^2} \\cdot e^x = \\frac{e^x}{1+e^{2x}}$."
+ },
+ {
+  "topicSlug": "inverse-functions-derivatives-calcab",
+  "front": "What is $\\dfrac{d}{dx}[\\arctan x]$?",
+  "back": "**$\\dfrac{1}{1 + x^2}$**\n\nd/dx [arctan x] = $1/(1 + x^{2})$. This is a standard inverse trig derivative."
+ },
+ {
+  "topicSlug": "inverse-functions-derivatives-calcab",
+  "front": "What is $\\dfrac{d}{dx}[\\arctan(x)]$?",
+  "back": "**$\\dfrac{1}{1+x^2}$**\n\nStandard inverse trig derivative: $\\frac{d}{dx}[\\arctan x] = \\frac{1}{1+x^2}$."
+ }
+]

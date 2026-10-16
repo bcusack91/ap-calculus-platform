@@ -1,0 +1,38 @@
+[
+ {
+  "front": "A farmer has 200 m of fencing. What dimensions of a rectangular field maximize the area?",
+  "fp": "8937ab071376",
+  "yield": "HIGH",
+  "why": "CED 5.11 fence optimization"
+ },
+ {
+  "front": "A rectangle has its base on the $x$-axis and vertices on $y = 4 - x^2$. The maximum area is:",
+  "fp": "94d509f7df13",
+  "yield": "MEDIUM",
+  "why": "Inscribed rectangle optimization; practice item"
+ },
+ {
+  "front": "Find two positive numbers whose sum is $20$ and whose product is maximum.",
+  "fp": "9c7a251057d1",
+  "yield": "MEDIUM",
+  "why": "Max product example; practice item"
+ },
+ {
+  "front": "In an optimization problem, after writing the objective function, you typically:",
+  "fp": "d2a02a38f022",
+  "yield": "MEDIUM",
+  "why": "Set derivative to zero; restatement"
+ },
+ {
+  "front": "In an optimization problem, what is the difference between the primary (objective) equation and the constraint equation?",
+  "fp": "a6eaeebbbdf5",
+  "yield": "HIGH",
+  "why": "CED 5.11 objective vs constraint equation"
+ },
+ {
+  "front": "The function $f(x) = x + \\dfrac{4}{x}$ for $x > 0$ has a minimum value of:",
+  "fp": "08ebd9b385fa",
+  "yield": "MEDIUM",
+  "why": "Minimum of x + 4/x; practice item"
+ }
+]

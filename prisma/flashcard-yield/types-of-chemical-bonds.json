@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you predict bond type using electronegativity difference (ΔEN)?",
+  "fp": "071691163594",
+  "yield": "MEDIUM",
+  "why": "Delta-EN cutoffs; continuum guideline"
+ },
+ {
+  "front": "What are metallic bonds and their properties?",
+  "fp": "93a679f4d343",
+  "yield": "HIGH",
+  "why": "CED 2.4 metallic bonding"
+ },
+ {
+  "front": "What are the key characteristics of ionic bonds?",
+  "fp": "8a4550fefcfc",
+  "yield": "HIGH",
+  "why": "CED 2.1/2.3 ionic bonding properties"
+ },
+ {
+  "front": "What are the three main types of chemical bonds?",
+  "fp": "64850d540a74",
+  "yield": "MEDIUM",
+  "why": "Three bond types; survey card"
+ },
+ {
+  "front": "What is a network covalent solid?",
+  "fp": "b2ad1665469a",
+  "yield": "HIGH",
+  "why": "CED 3.2 covalent network solids"
+ },
+ {
+  "front": "What is the difference between polar and nonpolar covalent bonds?",
+  "fp": "abeeb34fc74b",
+  "yield": "HIGH",
+  "why": "CED 2.1 polar vs nonpolar bonds"
+ },
+ {
+  "front": "What is the relationship between bond length and bond energy?",
+  "fp": "e787585622a8",
+  "yield": "HIGH",
+  "why": "CED 2.2 bond length vs bond energy"
+ },
+ {
+  "front": "Why do ionic compounds have high melting points?",
+  "fp": "970b5dc16ac6",
+  "yield": "HIGH",
+  "why": "CED 2.3 ionic melting points (Coulomb's law)"
+ }
+]

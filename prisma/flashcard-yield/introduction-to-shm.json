@@ -1,0 +1,62 @@
+[
+ {
+  "front": "Does amplitude affect the period of SHM?",
+  "fp": "7a6ffee57ebf",
+  "yield": "HIGH",
+  "why": "CED 7.2 period independent of amplitude"
+ },
+ {
+  "front": "Does the mass of a pendulum bob affect its period?",
+  "fp": "b9c347f309a6",
+  "yield": "HIGH",
+  "why": "CED 7.2 pendulum period independent of mass"
+ },
+ {
+  "front": "What is angular frequency ω and how does it relate to regular frequency?",
+  "fp": "326cf9c31aed",
+  "yield": "MEDIUM",
+  "why": "Angular frequency; secondary"
+ },
+ {
+  "front": "What is frequency and how does it relate to period?",
+  "fp": "501b3fcd0d1e",
+  "yield": "MEDIUM",
+  "why": "Restates f = 1/T"
+ },
+ {
+  "front": "What is Hooke's Law?",
+  "fp": "4d83745fd4a0",
+  "yield": "MEDIUM",
+  "why": "Restates Hooke's law"
+ },
+ {
+  "front": "What is the defining characteristic of Simple Harmonic Motion?",
+  "fp": "009e63a8f23d",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.1 restoring force defines SHM"
+ },
+ {
+  "front": "What is the maximum speed in SHM?",
+  "fp": "8c84eb5fd0d6",
+  "yield": "MEDIUM",
+  "why": "v_max = A omega; secondary"
+ },
+ {
+  "front": "What is the period formula for a mass-spring system?",
+  "fp": "0bb74cc710b6",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.2 mass-spring period; equation-sheet staple"
+ },
+ {
+  "front": "What is the period formula for a simple pendulum?",
+  "fp": "f8063cd1eca9",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.2 pendulum period; equation-sheet staple"
+ },
+ {
+  "front": "What is the relationship between acceleration and displacement in SHM?",
+  "fp": "913f726e8d4b",
+  "yield": "MEDIUM",
+  "why": "a = -omega^2 x; secondary"
+ }
+]

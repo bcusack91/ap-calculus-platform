@@ -1,0 +1,93 @@
+[
+ {
+  "topicSlug": "cellular-respiration",
+  "front": "What happens during glycolysis?",
+  "back": "Glucose (6C) is split into 2 pyruvate (3C) molecules.\n\n**Inputs**: glucose, 2 ATP, 2 NAD⁺\n**Outputs**: 2 pyruvate, 4 ATP (net 2), 2 NADH\n\nOccurs in the **cytoplasm**, doesn't require O₂.",
+  "hint": "Glyco = sugar, lysis = splitting."
+ },
+ {
+  "topicSlug": "cellular-respiration",
+  "front": "What happens in the electron transport chain (ETC)?",
+  "back": "NADH and FADH₂ donate electrons to protein complexes in the inner mitochondrial membrane; the energy released pumps H⁺ into the intermembrane space. H⁺ flows back through ATP synthase (chemiosmosis), making ~26-28 ATP. **O₂ is the final electron acceptor**, joining electrons and H⁺ to form water.",
+  "hint": "The ETC + chemiosmosis make most of the ATP."
+ },
+ {
+  "topicSlug": "cellular-respiration",
+  "front": "What is fermentation?",
+  "back": "Anaerobic pathway to regenerate NAD⁺ when O₂ is absent.\n\n**Lactic acid fermentation**: pyruvate → lactate (muscles)\n**Alcoholic fermentation**: pyruvate → ethanol + CO₂ (yeast)",
+  "hint": "Allows glycolysis to continue without oxygen."
+ },
+ {
+  "topicSlug": "cellular-respiration",
+  "front": "What is the Krebs (citric acid) cycle?",
+  "back": "Acetyl-CoA enters a cycle of reactions in the mitochondrial matrix.\n\n**Per glucose (2 turns)**:\n- 6 NADH, 2 FADH₂, 2 ATP\n- 4 CO₂ released",
+  "hint": "The main electron carrier producer."
+ },
+ {
+  "topicSlug": "enzymes-metabolism",
+  "front": "Cofactors vs. coenzymes?",
+  "back": "Cofactors: inorganic helpers (metal ions like Zn²⁺, Fe²⁺). Coenzymes: organic helpers derived from vitamins (NAD⁺, FAD). Both required for enzyme function."
+ },
+ {
+  "topicSlug": "enzymes-metabolism",
+  "front": "Competitive vs. noncompetitive inhibition?",
+  "back": "Competitive: inhibitor competes for active site, can be overcome with more substrate. Noncompetitive: inhibitor binds allosteric site, changes enzyme shape, cannot be overcome."
+ },
+ {
+  "topicSlug": "enzymes-metabolism",
+  "front": "How does temperature affect enzyme activity?",
+  "back": "Each enzyme has optimal temperature (usually 37°C for humans). Too low = slow activity. Too high = denaturation and loss of function."
+ },
+ {
+  "topicSlug": "enzymes-metabolism",
+  "front": "What is feedback inhibition?",
+  "back": "End product of metabolic pathway inhibits an earlier enzyme in the pathway. Prevents overproduction and regulates metabolism."
+ },
+ {
+  "topicSlug": "enzymes-metabolism",
+  "front": "What is the function of enzymes?",
+  "back": "Biological catalysts that speed up reactions by lowering activation energy. They are not consumed in the reaction and do not change the ΔG."
+ },
+ {
+  "topicSlug": "enzymes-metabolism",
+  "front": "What is the induced fit model?",
+  "back": "Enzyme active site changes shape when substrate binds, molding around substrate to form enzyme-substrate complex. After reaction, products released and enzyme returns to original shape."
+ },
+ {
+  "topicSlug": "photosynthesis",
+  "front": "Chlorophyll a absorbs light most effectively in the:",
+  "back": "**Blue-violet and red wavelengths**\n\nChlorophyll a has absorption peaks in blue-violet (~430 nm) and red (~662 nm)."
+ },
+ {
+  "topicSlug": "photosynthesis",
+  "front": "Plant cells, unlike animal cells, have:",
+  "back": "**Cell walls and chloroplasts**\n\nPlants have rigid cell walls and chloroplasts for photosynthesis."
+ },
+ {
+  "topicSlug": "photosynthesis",
+  "front": "The Calvin cycle takes place in the:",
+  "back": "**Stroma**\n\nCarbon fixation reactions occur in the chloroplast stroma."
+ },
+ {
+  "topicSlug": "photosynthesis",
+  "front": "The electron transport chain in chloroplasts creates a H+ gradient in the:",
+  "back": "**Thylakoid lumen**\n\nProtons accumulate inside the thylakoid lumen, driving ATP synthase."
+ },
+ {
+  "topicSlug": "photosynthesis",
+  "front": "The light reactions occur in the:",
+  "back": "**Thylakoid membranes**\n\nLight-dependent reactions happen in/on the thylakoid membranes."
+ },
+ {
+  "topicSlug": "photosynthesis",
+  "front": "What are the two stages of photosynthesis?",
+  "back": "1. **Light reactions** (thylakoid membranes): water is split, O₂ is released, and ATP and NADPH are made\n2. **Calvin cycle** (stroma): ATP and NADPH are used to fix CO₂ into sugars",
+  "hint": "Light reactions capture energy; Calvin cycle builds sugar."
+ },
+ {
+  "topicSlug": "photosynthesis",
+  "front": "What is the role of chlorophyll?",
+  "back": "Chlorophyll absorbs red and blue light (reflects green). It excites electrons using light energy, initiating the electron transport chain in the thylakoid membrane.",
+  "hint": "The primary photosynthetic pigment."
+ }
+]

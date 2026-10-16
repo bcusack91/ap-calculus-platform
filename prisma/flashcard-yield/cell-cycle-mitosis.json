@@ -1,0 +1,44 @@
+[
+ {
+  "front": "Bundle sheath cells in C4 plants are where:",
+  "fp": "e962da9928e6",
+  "yield": "LOW",
+  "why": "OFF-EXAM: C4 plants/bundle sheath not in the CED (3.4); trim removed C4/CAM"
+ },
+ {
+  "front": "DNA replication occurs during which phase?",
+  "fp": "4613e87a8a16",
+  "yield": "HIGH",
+  "why": "CED 4.6 cell cycle phases; S phase = replication"
+ },
+ {
+  "front": "How many turns of the Calvin cycle are needed to produce one glucose molecule?",
+  "fp": "3b9329e8307c",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Calvin-cycle steps/turn counts excluded (3.4 exclusion)"
+ },
+ {
+  "front": "The Calvin cycle fixes $CO_{2}$ using the enzyme:",
+  "fp": "1ce5b072802f",
+  "yield": "LOW",
+  "why": "OFF-EXAM: enzyme names in Calvin cycle (RuBisCO) excluded (3.4 exclusion)"
+ },
+ {
+  "front": "The carbon cycle includes:",
+  "fp": "0e297fd3feee",
+  "yield": "MEDIUM",
+  "why": "CED 8.2 carbon cycle; secondary detail"
+ },
+ {
+  "front": "What are the phases of mitosis (in order)?",
+  "fp": "999ce660fa17",
+  "yield": "HIGH",
+  "why": "CED 4.6 mitosis phases; commonly tested"
+ },
+ {
+  "front": "What happens during the cell cycle checkpoints?",
+  "fp": "edf2449a2253",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.7 cell-cycle checkpoints; regulation tested every exam"
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "front": "A promoter is a region where:",
+  "fp": "3b5be5411f47",
+  "yield": "HIGH",
+  "why": "CED 6.3 promoter binds RNA polymerase"
+ },
+ {
+  "front": "microRNAs (miRNAs) regulate gene expression by:",
+  "fp": "482400d39dff",
+  "yield": "MEDIUM",
+  "why": "Restates miRNA card"
+ },
+ {
+  "front": "The 5′ cap and poly-A tail of mRNA function to:",
+  "fp": "cbf2deb050e5",
+  "yield": "MEDIUM",
+  "why": "Cap/poly-A tail function; restates processing card"
+ },
+ {
+  "front": "Translation occurs on:",
+  "fp": "3be3fa3b3d75",
+  "yield": "MEDIUM",
+  "why": "Translation on ribosomes; basic restatement"
+ },
+ {
+  "front": "What are the steps of translation?",
+  "fp": "b1dd4dbc8ab2",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.4 translation steps; tested every exam"
+ },
+ {
+  "front": "What is the role of tRNA?",
+  "fp": "a1f3473c66ba",
+  "yield": "HIGH",
+  "why": "CED 6.4 tRNA anticodon"
+ }
+]

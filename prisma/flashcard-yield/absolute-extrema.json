@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Find the absolute maximum and minimum of $f(x) = x^3 - 3x$ on $[0, 3]$.",
+  "fp": "d7ba1985bef4",
+  "yield": "HIGH",
+  "why": "CED 5.5 closed-interval extrema example"
+ },
+ {
+  "front": "State the Extreme Value Theorem.",
+  "fp": "7fb6b6095823",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.2 Extreme Value Theorem; FRQ justification"
+ },
+ {
+  "front": "What is the Closed Interval Method for finding absolute extrema?",
+  "fp": "d473279183c9",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.5 candidates test; FRQ staple"
+ },
+ {
+  "front": "What's the difference between local and absolute extrema?",
+  "fp": "df3f907b2b90",
+  "yield": "MEDIUM",
+  "why": "Local vs absolute extrema; restatement"
+ },
+ {
+  "front": "Where can absolute extrema occur on a closed interval?",
+  "fp": "6bbeb4d96605",
+  "yield": "HIGH",
+  "why": "CED 5.5 where absolute extrema occur"
+ },
+ {
+  "front": "Why must you check endpoints for absolute extrema?",
+  "fp": "7fe9d207c55b",
+  "yield": "MEDIUM",
+  "why": "Why check endpoints; restates candidates test"
+ }
+]

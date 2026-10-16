@@ -1,0 +1,68 @@
+[
+ {
+  "front": "Can kinetic energy INCREASE in a collision?",
+  "fp": "b3e8285a03df",
+  "yield": "MEDIUM",
+  "why": "KE can rise in explosions; secondary"
+ },
+ {
+  "front": "For a ball bouncing, how is coefficient of restitution related to height?",
+  "fp": "cb5cc4ac74bb",
+  "yield": "LOW",
+  "why": "OFF-EXAM: coefficient of restitution not in the CED"
+ },
+ {
+  "front": "How can you tell from before-and-after data whether a collision was elastic?",
+  "fp": "082cb0d62653",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.4 elastic vs inelastic from KE data"
+ },
+ {
+  "front": "In a 2D collision, how many equations do you need?",
+  "fp": "cd8543709c2a",
+  "yield": "MEDIUM",
+  "why": "2D collision equations; secondary"
+ },
+ {
+  "front": "In an elastic collision between equal masses (one at rest), what happens?",
+  "fp": "61468b6ad04e",
+  "yield": "MEDIUM",
+  "why": "Equal-mass elastic swap; secondary"
+ },
+ {
+  "front": "Is momentum conserved in ALL types of collisions?",
+  "fp": "3a01faaaa75b",
+  "yield": "HIGH",
+  "why": "CED 4.3 momentum conserved in all collisions"
+ },
+ {
+  "front": "What is a perfectly inelastic collision?",
+  "fp": "25177e524d37",
+  "yield": "HIGH",
+  "why": "CED 4.4 perfectly inelastic collisions"
+ },
+ {
+  "front": "What is the coefficient of restitution?",
+  "fp": "952621e377ec",
+  "yield": "LOW",
+  "why": "OFF-EXAM: coefficient of restitution not in the CED"
+ },
+ {
+  "front": "What is the difference between elastic and inelastic collisions?",
+  "fp": "c424ff64f636",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.4 elastic vs inelastic; tested every exam"
+ },
+ {
+  "front": "Where does the \"lost\" kinetic energy go in an inelastic collision?",
+  "fp": "8c5ee78eb3b5",
+  "yield": "HIGH",
+  "why": "CED 4.4 where lost KE goes"
+ },
+ {
+  "front": "Why are car crumple zones designed to deform (inelastic collision)?",
+  "fp": "1f49bfbaf581",
+  "yield": "MEDIUM",
+  "why": "Crumple zones; restates impulse"
+ }
+]

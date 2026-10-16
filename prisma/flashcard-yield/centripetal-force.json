@@ -1,0 +1,50 @@
+[
+ {
+  "front": "At the top of a vertical loop, what is the minimum speed to maintain circular motion?",
+  "fp": "5e17c549837c",
+  "yield": "HIGH",
+  "why": "CED 2.9 minimum speed at loop top (N = 0)"
+ },
+ {
+  "front": "Common mistake: Should you draw \"centripetal force\" as a separate arrow on a free body diagram?",
+  "fp": "128b2b638e48",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.9 centripetal force is not a separate force; FBD staple"
+ },
+ {
+  "front": "How does the normal force compare at the top vs. bottom of a vertical loop?",
+  "fp": "b5cb5cceb7e2",
+  "yield": "HIGH",
+  "why": "CED 2.9 normal force top vs bottom of loop"
+ },
+ {
+  "front": "What is centripetal force?",
+  "fp": "5d122f0b2856",
+  "yield": "HIGH",
+  "why": "CED 2.9 centripetal force as net force"
+ },
+ {
+  "front": "What is the formula for centripetal force?",
+  "fp": "67222e461e31",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.9 F = mv^2/r; tested every exam"
+ },
+ {
+  "front": "What is the ideal banking angle for a curve with no friction?",
+  "fp": "bd8aa4d76c2c",
+  "yield": "MEDIUM",
+  "why": "Frictionless banking angle; secondary application"
+ },
+ {
+  "front": "What is the maximum safe speed for a car on a flat curve?",
+  "fp": "27eeb1732b80",
+  "yield": "HIGH",
+  "why": "CED 2.9 max speed on a flat curve"
+ },
+ {
+  "front": "What provides the centripetal force for: (a) a satellite orbiting Earth, (b) a car on a curve, (c) a ball on a string?",
+  "fp": "8bbb10c49185",
+  "yield": "HIGH",
+  "why": "CED 2.9 identifying the centripetal force"
+ }
+]

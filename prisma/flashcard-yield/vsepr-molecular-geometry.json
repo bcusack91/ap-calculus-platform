@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do lone pairs affect bond angles?",
+  "fp": "438be03c62e5",
+  "yield": "HIGH",
+  "why": "CED 2.7 lone pairs compress angles"
+ },
+ {
+  "front": "How do you determine if a molecule is polar using VSEPR?",
+  "fp": "708a01f8ba2c",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.7 molecular polarity from VSEPR"
+ },
+ {
+  "front": "In trigonal bipyramidal geometry (SN 5), where do lone pairs prefer to go?",
+  "fp": "e43b1eee65dc",
+  "yield": "MEDIUM",
+  "why": "Equatorial lone pairs in TBP; secondary"
+ },
+ {
+  "front": "What are the 5 basic electron geometries and their steric numbers?",
+  "fp": "72e2e51b1832",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.7 electron geometries; tested every exam"
+ },
+ {
+  "front": "What is steric number and how do you calculate it?",
+  "fp": "33e9a940fc64",
+  "yield": "HIGH",
+  "why": "CED 2.7 steric number"
+ },
+ {
+  "front": "What is the difference between electron geometry and molecular geometry?",
+  "fp": "b74b5e4b2314",
+  "yield": "HIGH",
+  "why": "CED 2.7 electron vs molecular geometry"
+ },
+ {
+  "front": "What is the molecular geometry for SN 4 with 2 lone pairs? What about the bond angle?",
+  "fp": "e6d555cc3516",
+  "yield": "HIGH",
+  "why": "CED 2.7 bent shape and angle"
+ },
+ {
+  "front": "What is VSEPR theory and its main principle?",
+  "fp": "fd4e9de18e4a",
+  "yield": "MEDIUM",
+  "why": "VSEPR principle; restatement"
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do the molar entropies of the solid, liquid, and gas phases of one substance compare?",
+  "fp": "feafb11c69ef",
+  "yield": "HIGH",
+  "why": "CED 9.1 entropy by phase"
+ },
+ {
+  "front": "How do you calculate $\\Delta S^\\circ_{\\text{rxn}}$ from a table of standard molar entropies?",
+  "fp": "8c16bac4b3c4",
+  "yield": "HIGH",
+  "why": "CED 9.2 dS from standard entropies"
+ },
+ {
+  "front": "How do you compute $\\Delta S_{\\text{universe}}$, and what does its sign tell you?",
+  "fp": "84cfc2c66747",
+  "yield": "LOW",
+  "why": "OFF-EXAM: dS universe calculations not in CED (R16)"
+ },
+ {
+  "front": "How does the enthalpy of a reaction affect the entropy of the surroundings?",
+  "fp": "8fe03b668642",
+  "yield": "LOW",
+  "why": "OFF-EXAM: dS surroundings = -dH/T not in CED (R16)"
+ },
+ {
+  "front": "What does the Second Law of Thermodynamics state?",
+  "fp": "a5d6fab6ce56",
+  "yield": "MEDIUM",
+  "why": "Second law statement; secondary"
+ },
+ {
+  "front": "What does the Third Law of Thermodynamics state?",
+  "fp": "63c426b3838f",
+  "yield": "LOW",
+  "why": "Third law; not in the CED"
+ },
+ {
+  "front": "What is entropy?",
+  "fp": "dfdc5cb05e64",
+  "yield": "HIGH",
+  "why": "CED 9.1 entropy as dispersal"
+ },
+ {
+  "front": "What kinds of changes give $\\Delta S > 0$?",
+  "fp": "c0af0477081b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 9.1 predicting sign of dS; tested every exam"
+ }
+]

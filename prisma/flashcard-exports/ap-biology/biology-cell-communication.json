@@ -1,0 +1,108 @@
+[
+ {
+  "topicSlug": "cell-cycle-mitosis",
+  "front": "Bundle sheath cells in C4 plants are where:",
+  "back": "**The Calvin cycle occurs**\n\nC4 plants shuttle $CO_{2}$ to bundle sheath cells for the Calvin cycle, away from $O_{2}$."
+ },
+ {
+  "topicSlug": "cell-cycle-mitosis",
+  "front": "DNA replication occurs during which phase?",
+  "back": "**S**\n\nThe S phase is when DNA is synthesized."
+ },
+ {
+  "topicSlug": "cell-cycle-mitosis",
+  "front": "How many turns of the Calvin cycle are needed to produce one glucose molecule?",
+  "back": "**6**\n\nEach turn fixes one $CO_{2}$. Six turns produce two G3P molecules → one glucose."
+ },
+ {
+  "topicSlug": "cell-cycle-mitosis",
+  "front": "The Calvin cycle fixes $CO_{2}$ using the enzyme:",
+  "back": "**RuBisCO**\n\nRuBisCO catalyzes $CO_{2}$ fixation by combining $CO_{2}$ with RuBP."
+ },
+ {
+  "topicSlug": "cell-cycle-mitosis",
+  "front": "The carbon cycle includes:",
+  "back": "**Photosynthesis, respiration, decomposition, and combustion**\n\nCarbon cycles through biological and geological processes."
+ },
+ {
+  "topicSlug": "cell-cycle-mitosis",
+  "front": "What are the phases of mitosis (in order)?",
+  "back": "**PMAT**:\n1. **Prophase**: Chromosomes condense, spindle forms\n2. **Metaphase**: Chromosomes align at metaphase plate\n3. **Anaphase**: Sister chromatids separate, move to poles\n4. **Telophase**: Nuclear envelopes reform, chromosomes decondense\n\nFollowed by **cytokinesis** (cell division).",
+  "hint": "PMAT — \"Please Make Another Taco\""
+ },
+ {
+  "topicSlug": "cell-cycle-mitosis",
+  "front": "What happens during the cell cycle checkpoints?",
+  "back": "**G1 checkpoint**: Is DNA undamaged? Is the cell large enough?\n**G2 checkpoint**: Is DNA replication complete?\n**M checkpoint (spindle)**: Are all chromosomes properly attached to spindle fibers?",
+  "hint": "p53 is a key checkpoint protein (tumor suppressor)."
+ },
+ {
+  "topicSlug": "cell-signaling",
+  "front": "Autocrine signaling means:",
+  "back": "**A cell signals itself**\n\nIn autocrine signaling, the cell releases a signal that binds to its own receptors."
+ },
+ {
+  "topicSlug": "cell-signaling",
+  "front": "Endocrine signaling uses:",
+  "back": "**Hormones traveling through the bloodstream**\n\nEndocrine glands secrete hormones that travel via blood to distant targets."
+ },
+ {
+  "topicSlug": "cell-signaling",
+  "front": "Negative feedback in signaling:",
+  "back": "**Reduces or stops the signal after a response**\n\nNegative feedback loops dampen a response once it reaches an appropriate level."
+ },
+ {
+  "topicSlug": "cell-signaling",
+  "front": "Paracrine signaling involves:",
+  "back": "**Local signals to nearby cells**\n\nParacrine signals affect nearby target cells (short-range)."
+ },
+ {
+  "topicSlug": "cell-signaling",
+  "front": "What are the 3 stages of cell signaling?",
+  "back": "1. **Reception**: Signal molecule (ligand) binds to receptor\n2. **Transduction**: Signal is relayed and amplified via signal cascade\n3. **Response**: Cell changes activity (gene expression, enzyme activation, etc.)",
+  "hint": "Receive → Relay → Respond."
+ },
+ {
+  "topicSlug": "cell-signaling",
+  "front": "What is a second messenger, and why does it matter in signal transduction?",
+  "back": "A small intracellular molecule that relays a signal from a membrane receptor to targets inside the cell, amplifying it so one ligand can trigger many responses. Example: cAMP activates protein kinase A, which phosphorylates other proteins in a kinase cascade. Ca²⁺ is the other major second messenger.",
+  "hint": "One signal molecule can trigger thousands of responses."
+ },
+ {
+  "topicSlug": "meiosis",
+  "front": "Down syndrome is caused by trisomy of chromosome:",
+  "back": "**21**\n\nThree copies of chromosome 21 cause Down syndrome."
+ },
+ {
+  "topicSlug": "meiosis",
+  "front": "Genetic recombination during meiosis increases:",
+  "back": "**Genetic diversity in offspring**\n\nCrossing over and independent assortment create new allele combinations."
+ },
+ {
+  "topicSlug": "meiosis",
+  "front": "How does meiosis differ from mitosis?",
+  "back": "**Meiosis**: 2 divisions → 4 haploid cells, crossing over, independent assortment (genetic variation)\n**Mitosis**: 1 division → 2 identical diploid cells",
+  "hint": "Meiosis makes gametes; mitosis grows the body."
+ },
+ {
+  "topicSlug": "meiosis",
+  "front": "Independent assortment contributes to genetic variation by:",
+  "back": "**Random orientation of homologous pairs**\n\nHomologous pairs orient randomly at metaphase I."
+ },
+ {
+  "topicSlug": "meiosis",
+  "front": "Independent assortment occurs because:",
+  "back": "**Homologous pairs line up randomly at the metaphase plate**\n\nRandom orientation of homologs at metaphase I gives independent assortment."
+ },
+ {
+  "topicSlug": "meiosis",
+  "front": "The law of segregation states that:",
+  "back": "**Allele pairs separate during gamete formation**\n\nEach parent passes one allele per gene to offspring; alleles segregate in meiosis."
+ },
+ {
+  "topicSlug": "meiosis",
+  "front": "What is crossing over?",
+  "back": "During prophase I, homologous chromosomes exchange segments of DNA at chiasmata. This creates new allele combinations (recombinant chromosomes).",
+  "hint": "Increases genetic diversity."
+ }
+]

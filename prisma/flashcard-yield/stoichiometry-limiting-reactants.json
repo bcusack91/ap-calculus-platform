@@ -1,0 +1,26 @@
+[
+ {
+  "front": "For the reaction $N_{2}$ + $3H_{2}$ → $2NH_{3}$, how many grams of $NH_{3}$ are produced from 14 g of $N_{2}$? ($M_{N_2}$ = 28 g/mol, $M_{NH_3}$ = 17 g/mol)",
+  "fp": "5a37549509f8",
+  "yield": "HIGH",
+  "why": "CED 4.5 mass-to-mass stoichiometry"
+ },
+ {
+  "front": "How do you calculate percent yield?",
+  "fp": "61f15d912234",
+  "yield": "MEDIUM",
+  "why": "Percent yield; secondary"
+ },
+ {
+  "front": "In stoichiometry, mole ratios come from:",
+  "fp": "388a95ee3c0a",
+  "yield": "MEDIUM",
+  "why": "Mole ratios from coefficients; restatement"
+ },
+ {
+  "front": "What is the limiting reactant?",
+  "fp": "2f8f2800674e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.5 limiting reactant; tested every exam"
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Can you use the sum rule for products like f(x)·g(x)?",
+  "fp": "7293bbee53c8",
+  "yield": "MEDIUM",
+  "why": "Sum rule not for products; study tip"
+ },
+ {
+  "front": "Differentiate $f(x) = 5x^4 - 3x^2 + 8$ using the constant multiple and sum rules.",
+  "fp": "ada390443663",
+  "yield": "HIGH",
+  "why": "CED 2.6 term-by-term differentiation"
+ },
+ {
+  "front": "Does the sum rule also work for differences?",
+  "fp": "9568d96a99f9",
+  "yield": "MEDIUM",
+  "why": "Difference rule; restatement"
+ },
+ {
+  "front": "What is the Constant Multiple Rule?",
+  "fp": "2b7899029843",
+  "yield": "HIGH",
+  "why": "CED 2.6 constant multiple rule"
+ },
+ {
+  "front": "What is the derivative of a constant?",
+  "fp": "055e990f908a",
+  "yield": "MEDIUM",
+  "why": "Derivative of a constant; basic"
+ },
+ {
+  "front": "What is the Sum Rule for derivatives?",
+  "fp": "cf85cc759774",
+  "yield": "HIGH",
+  "why": "CED 2.6 sum rule"
+ }
+]

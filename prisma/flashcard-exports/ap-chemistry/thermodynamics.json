@@ -1,0 +1,123 @@
+[
+ {
+  "topicSlug": "enthalpy-calorimetry",
+  "front": "A 50.0 g sample of aluminum is heated from 20.0°C to 95.0°C. (a) Calculate the heat absorbed by the aluminum (specific heat of Al = 0.900 J/g°C). (b) If this heat came from burning methane (CH₄), which releases 890 kJ/mol, how many grams of methane were burned?",
+  "back": "(a) **Heat absorbed by aluminum:**\nq = mcΔT\nwhere m = mass, c = specific heat, ΔT = temperature change\n\nq = (50.0 g)(0.900 J/g°C)(95.0 - 20.0)°C\nq = (50.0)(0.900)(75.0)\nq = **3,375 J = 3.38 kJ**\n\n(b) **Mass of methane burned:**\nEnergy from CH₄: 890 kJ/mol\n\nMoles of CH₄ = 3.38 kJ / 890 kJ/mol = 0.00380 mol\n\nMolar mass of CH₄ = 12.01 + 4(1.008) = 16.04 g/mol\nMass = 0.00380 mol × 16.04 g/mol = **0.0609 g**"
+ },
+ {
+  "topicSlug": "enthalpy-calorimetry",
+  "front": "Calorimetry formula?",
+  "back": "$q = mc\\Delta T$\n\nq = heat (J), m = mass (g), c = specific heat capacity, $\\Delta T$ = temperature change",
+  "hint": "Heat = mass × specific heat × change in temperature."
+ },
+ {
+  "topicSlug": "enthalpy-calorimetry",
+  "front": "Hess's law states that $\\Delta H$ for a reaction is the same regardless of:",
+  "back": "**The pathway taken**\n\nEnthalpy is a state function → path-independent."
+ },
+ {
+  "topicSlug": "enthalpy-calorimetry",
+  "front": "How do you find $\\Delta H^\\circ_{\\text{rxn}}$ from standard enthalpies of formation?",
+  "back": "$\\Delta H^\\circ_{\\text{rxn}} = \\sum n\\Delta H^\\circ_f(\\text{products}) - \\sum n\\Delta H^\\circ_f(\\text{reactants})$, where each $n$ is the coefficient from the balanced equation. Any element in its standard state has $\\Delta H^\\circ_f = 0$.",
+  "hint": "Products minus reactants."
+ },
+ {
+  "topicSlug": "enthalpy-calorimetry",
+  "front": "In a coffee-cup calorimeter, q = mcΔT. If m = 100 g, c = 4.18 J/g·°C, and ΔT = 5 °C, then q equals:",
+  "back": "**2,090 J**\n\nq = (100)(4.18)(5) = 2,090 J."
+ },
+ {
+  "topicSlug": "enthalpy-calorimetry",
+  "front": "Standard enthalpy of formation ($\\Delta H_f°$) of an element in its standard state is:",
+  "back": "**Zero**\n\nBy definition, $\\Delta H_f°$ for elements in standard state = 0."
+ },
+ {
+  "topicSlug": "enthalpy-calorimetry",
+  "front": "State Hess's Law.",
+  "back": "The total enthalpy change for a reaction is the sum of the enthalpy changes for individual steps, regardless of the pathway.",
+  "hint": "Enthalpy is a state function — path independent."
+ },
+ {
+  "topicSlug": "enthalpy-calorimetry",
+  "front": "When 50.0 g of water (specific heat = 4.18 J/g·°C) is heated from 20°C to 80°C, how much heat is absorbed?",
+  "back": "**12,540 J**\n\nq = mcΔT = 50.0 g × 4.18 J/g·°C × (80−20)°C = 50.0 × 4.18 × 60 = 12,540 J."
+ },
+ {
+  "topicSlug": "entropy-second-law",
+  "front": "How do the molar entropies of the solid, liquid, and gas phases of one substance compare?",
+  "back": "$S_{\\text{gas}} \\gg S_{\\text{liquid}} > S_{\\text{solid}}$, because a gas disperses its energy over vastly more microstates. Among similar substances, larger and more complex molecules also have higher $S^\\circ$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "entropy-second-law",
+  "front": "How do you calculate $\\Delta S^\\circ_{\\text{rxn}}$ from a table of standard molar entropies?",
+  "back": "$\\Delta S^\\circ_{\\text{rxn}} = \\sum n S^\\circ(\\text{products}) - \\sum n S^\\circ(\\text{reactants})$, with each $n$ the balanced coefficient. Unlike $\\Delta H^\\circ_f$, the $S^\\circ$ of a pure element is not zero."
+ },
+ {
+  "topicSlug": "entropy-second-law",
+  "front": "How do you compute $\\Delta S_{\\text{universe}}$, and what does its sign tell you?",
+  "back": "$\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}}$. Positive means the process is spontaneous, zero means equilibrium, and negative means the reverse process is the spontaneous one."
+ },
+ {
+  "topicSlug": "entropy-second-law",
+  "front": "How does the enthalpy of a reaction affect the entropy of the surroundings?",
+  "back": "$\\Delta S_{\\text{surroundings}} = -\\frac{\\Delta H_{\\text{system}}}{T}$. An exothermic reaction ($\\Delta H < 0$) releases heat and raises the surroundings' entropy, and that effect is larger at low temperature.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "entropy-second-law",
+  "front": "What does the Second Law of Thermodynamics state?",
+  "back": "Every spontaneous process increases the total entropy of the universe, $\\Delta S_{\\text{universe}} > 0$; only an idealized reversible process leaves it unchanged. This is why heat flows from hot to cold on its own but never spontaneously back.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "entropy-second-law",
+  "front": "What does the Third Law of Thermodynamics state?",
+  "back": "A perfect crystalline solid at $0$ K has zero entropy. That absolute reference point is why tabulated standard molar entropies $S^\\circ$ are absolute values — positive for any pure substance — not changes like $\\Delta H^\\circ_f$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "entropy-second-law",
+  "front": "What is entropy?",
+  "back": "Entropy ($S$) is a measure of the dispersal of energy and matter — the number of microstates available to a system. Units: J/(mol·K). Greater dispersal means higher entropy.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "entropy-second-law",
+  "front": "What kinds of changes give $\\Delta S > 0$?",
+  "back": "- Phase change toward more freedom: solid → liquid → gas\n- More moles of gas on the product side than the reactant side\n- Dissolving a solid or mixing substances\n- Raising the temperature\n\nEach increases the number of microstates available to the system.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "gibbs-free-energy",
+  "front": "$\\Delta G = \\Delta H - T\\Delta S$. A reaction is spontaneous when $\\Delta G$ is:",
+  "back": "**Negative**\n\n$\\Delta G < 0$ → spontaneous (thermodynamically favorable)."
+ },
+ {
+  "topicSlug": "gibbs-free-energy",
+  "front": "$\\Delta G°$ and $K$ are related by:",
+  "back": "**$\\Delta G° = -RT\\ln K$**\n\n$\\Delta G° = -RT\\ln K$; negative $\\Delta G°$ → $K > 1$."
+ },
+ {
+  "topicSlug": "gibbs-free-energy",
+  "front": "A reaction has ΔH = −100 kJ and ΔS = −200 J/K at 298 K. What is ΔG?",
+  "back": "**−40.4 kJ**\n\nΔG = ΔH − TΔS = −100,000 J − (298)(−200) J = −100,000 + 59,600 = −40,400 J = −40.4 kJ. Spontaneous (ΔG < 0)."
+ },
+ {
+  "topicSlug": "gibbs-free-energy",
+  "front": "Gibbs Free Energy equation?",
+  "back": "$\\Delta G = \\Delta H - T\\Delta S$\n\n$\\Delta G < 0$: spontaneous\n$\\Delta G > 0$: non-spontaneous\n$\\Delta G = 0$: equilibrium",
+  "hint": "Negative ΔG means favorable."
+ },
+ {
+  "topicSlug": "gibbs-free-energy",
+  "front": "If $\\Delta H < 0$ and $\\Delta S > 0$, the reaction is spontaneous at:",
+  "back": "**All temperatures**\n\n$\\Delta G = (-) - T(+) < 0$ always → spontaneous at all $T$."
+ },
+ {
+  "topicSlug": "gibbs-free-energy",
+  "front": "Relationship between $\\Delta G$ and equilibrium constant $K$?",
+  "back": "$\\Delta G^\\circ = -RT\\ln K$\n\nIf $K > 1$, $\\Delta G^\\circ < 0$ (products favored).\nIf $K < 1$, $\\Delta G^\\circ > 0$ (reactants favored).",
+  "hint": "Large K = negative ΔG°."
+ }
+]

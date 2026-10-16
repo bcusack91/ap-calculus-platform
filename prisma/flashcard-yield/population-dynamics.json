@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Compare r-selected and K-selected strategies.",
+  "fp": "152314e3a93d",
+  "yield": "LOW",
+  "why": "OFF-EXAM: r/K selection removed in the trim (not in CED)"
+ },
+ {
+  "front": "Contrast exponential and logistic growth models.",
+  "fp": "e802e879241b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.3/8.4 exponential vs logistic; formula-sheet FRQ"
+ },
+ {
+  "front": "Distinguish density-dependent and density-independent factors.",
+  "fp": "9fde735e9845",
+  "yield": "HIGH",
+  "why": "CED 8.4 density-dependent vs independent"
+ },
+ {
+  "front": "What do the three survivorship curves show?",
+  "fp": "23904a29d1bc",
+  "yield": "LOW",
+  "why": "OFF-EXAM: survivorship curve types removed in the trim"
+ },
+ {
+  "front": "What does an age-structure pyramid predict?",
+  "fp": "e331c4874395",
+  "yield": "MEDIUM",
+  "why": "Age-structure pyramids; secondary"
+ },
+ {
+  "front": "What is carrying capacity?",
+  "fp": "51945ddd4874",
+  "yield": "HIGH",
+  "why": "CED 8.4 carrying capacity"
+ }
+]

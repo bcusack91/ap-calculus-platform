@@ -1,0 +1,50 @@
+[
+ {
+  "front": "A 50.0 g sample of aluminum is heated from 20.0°C to 95.0°C. (a) Calculate the heat absorbed by the aluminum (specific heat of Al = 0.900 J/g°C). (b) If this heat came from burning methane (CH₄), which releases 890 kJ/mol, how many grams of methane were burned?",
+  "fp": "caf330e7fe17",
+  "yield": "HIGH",
+  "why": "CED 6.4 q = mc dT multi-part"
+ },
+ {
+  "front": "Calorimetry formula?",
+  "fp": "048f69977d7e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.4 calorimetry formula; equation-sheet staple"
+ },
+ {
+  "front": "Hess's law states that $\\Delta H$ for a reaction is the same regardless of:",
+  "fp": "8242a7442159",
+  "yield": "HIGH",
+  "why": "CED 6.9 Hess's law path independence"
+ },
+ {
+  "front": "How do you find $\\Delta H^\\circ_{\\text{rxn}}$ from standard enthalpies of formation?",
+  "fp": "5616d32606fe",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.8 dH from formation values"
+ },
+ {
+  "front": "In a coffee-cup calorimeter, q = mcΔT. If m = 100 g, c = 4.18 J/g·°C, and ΔT = 5 °C, then q equals:",
+  "fp": "7c82db8d9d06",
+  "yield": "MEDIUM",
+  "why": "Restates q = mc dT"
+ },
+ {
+  "front": "Standard enthalpy of formation ($\\Delta H_f°$) of an element in its standard state is:",
+  "fp": "fdf407663bfe",
+  "yield": "HIGH",
+  "why": "CED 6.8 dHf of elements is zero"
+ },
+ {
+  "front": "State Hess's Law.",
+  "fp": "ec6b7f091fe9",
+  "yield": "HIGH",
+  "why": "CED 6.9 Hess's law"
+ },
+ {
+  "front": "When 50.0 g of water (specific heat = 4.18 J/g·°C) is heated from 20°C to 80°C, how much heat is absorbed?",
+  "fp": "0c220a23d873",
+  "yield": "MEDIUM",
+  "why": "Restates q = mc dT"
+ }
+]

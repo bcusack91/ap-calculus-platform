@@ -1,0 +1,192 @@
+[
+ {
+  "topicSlug": "carbohydrates",
+  "front": "Compare starch and glycogen.",
+  "back": "Both are α-glucose storage polymers. Starch (plants) is less branched. Glycogen (animals) is highly branched for rapid energy release, stored in liver/muscle."
+ },
+ {
+  "topicSlug": "carbohydrates",
+  "front": "Key difference between α-glucose and β-glucose?",
+  "back": "OH group position on carbon 1: α has it below (forms digestible starch), β has it above (forms indigestible cellulose)."
+ },
+ {
+  "topicSlug": "carbohydrates",
+  "front": "What are the components of maltose, sucrose, and lactose?",
+  "back": "Maltose = glucose + glucose; Sucrose = glucose + fructose; Lactose = glucose + galactose."
+ },
+ {
+  "topicSlug": "carbohydrates",
+  "front": "What is a glycosidic bond?",
+  "back": "A covalent bond between two monosaccharides, formed by dehydration synthesis (removes H₂O)."
+ },
+ {
+  "topicSlug": "carbohydrates",
+  "front": "What is the general formula for carbohydrates?",
+  "back": "(CH₂O)ₙ - approximately 1:2:1 ratio of carbon to hydrogen to oxygen atoms."
+ },
+ {
+  "topicSlug": "carbohydrates",
+  "front": "Why can't humans digest cellulose?",
+  "back": "Cellulose is built from β-glucose, so its glycosidic linkages differ from the α linkages in starch. Humans lack the enzyme (cellulase) that breaks them; animals such as cows and termites rely on gut microbes that make it."
+ },
+ {
+  "topicSlug": "enzyme-kinetics",
+  "front": "How do temperature and pH affect enzyme activity?",
+  "back": "Each enzyme has an optimum; beyond it, denaturation disrupts active-site geometry and activity falls sharply."
+ },
+ {
+  "topicSlug": "enzyme-kinetics",
+  "front": "How does a competitive inhibitor change $K_m$ and $V_{max}$?",
+  "back": "Raises $K_m$; leaves $V_{max}$ unchanged, since excess substrate can still outcompete it."
+ },
+ {
+  "topicSlug": "enzyme-kinetics",
+  "front": "How does a noncompetitive inhibitor change kinetics?",
+  "back": "Lowers $V_{max}$; $K_m$ unchanged, because it binds an allosteric site regardless of substrate."
+ },
+ {
+  "topicSlug": "enzyme-kinetics",
+  "front": "What does $K_m$ measure?",
+  "back": "The substrate concentration at half $V_{max}$; a low $K_m$ indicates high apparent affinity."
+ },
+ {
+  "topicSlug": "enzyme-kinetics",
+  "front": "What does $V_{max}$ represent?",
+  "back": "Maximum reaction rate when all enzyme active sites are saturated with substrate."
+ },
+ {
+  "topicSlug": "enzyme-kinetics",
+  "front": "What is the induced fit model?",
+  "back": "The active site changes shape on substrate binding, optimizing catalysis and stabilizing the transition state."
+ },
+ {
+  "topicSlug": "lipids",
+  "front": "How do phospholipids form cell membranes?",
+  "back": "Form bilayers with hydrophilic heads facing aqueous environments (outside/inside cell) and hydrophobic tails facing each other in the middle."
+ },
+ {
+  "topicSlug": "lipids",
+  "front": "Saturated vs. unsaturated fatty acids?",
+  "back": "Saturated: no C=C double bonds, straight chains, solid at room temp. Unsaturated: one or more C=C bonds, kinks in chain, liquid at room temp."
+ },
+ {
+  "topicSlug": "lipids",
+  "front": "What is the basic structure of steroids?",
+  "back": "Four fused carbon rings with various functional groups attached. Examples: cholesterol, sex hormones, cortisol."
+ },
+ {
+  "topicSlug": "lipids",
+  "front": "What is the structure of a phospholipid?",
+  "back": "Glycerol + 2 fatty acids + phosphate group. Amphipathic: hydrophilic phosphate head and hydrophobic fatty acid tails."
+ },
+ {
+  "topicSlug": "lipids",
+  "front": "What is the structure of a triglyceride?",
+  "back": "1 glycerol molecule + 3 fatty acid chains, linked by ester bonds formed through dehydration synthesis."
+ },
+ {
+  "topicSlug": "lipids",
+  "front": "What makes lipids hydrophobic?",
+  "back": "Lipids are mostly nonpolar molecules composed of C and H atoms. They don't have charges or polarity to interact with water molecules."
+ },
+ {
+  "topicSlug": "lipids",
+  "front": "Why do fats store more energy per gram than carbohydrates?",
+  "back": "Fatty acid tails are highly reduced — long runs of C–H bonds with almost no oxygen — so oxidizing them releases more energy: about 9 kcal/g for fat versus 4 kcal/g for carbohydrate."
+ },
+ {
+  "topicSlug": "nucleic-acids",
+  "front": "Key differences between DNA and RNA?",
+  "back": "DNA: deoxyribose sugar, thymine, double-stranded, stores info. RNA: ribose sugar, uracil, single-stranded, transfers info."
+ },
+ {
+  "topicSlug": "nucleic-acids",
+  "front": "What are Chargaff's rules?",
+  "back": "In DNA, the amount of adenine equals thymine, and the amount of guanine equals cytosine. %A=%T and %G=%C."
+ },
+ {
+  "topicSlug": "nucleic-acids",
+  "front": "What are the purines and pyrimidines?",
+  "back": "Purines (double ring): Adenine (A) and Guanine (G). Pyrimidines (single ring): Cytosine (C), Thymine (T in DNA), Uracil (U in RNA)."
+ },
+ {
+  "topicSlug": "nucleic-acids",
+  "front": "What are the three components of a nucleotide?",
+  "back": "1) Pentose sugar (5-carbon), 2) Phosphate group, 3) Nitrogenous base."
+ },
+ {
+  "topicSlug": "nucleic-acids",
+  "front": "What are the three types of RNA and their functions?",
+  "back": "mRNA (messenger): carries genetic code to ribosomes. tRNA (transfer): brings amino acids. rRNA (ribosomal): component of ribosomes."
+ },
+ {
+  "topicSlug": "nucleic-acids",
+  "front": "What does antiparallel mean in DNA?",
+  "back": "The two DNA strands run in opposite directions. One runs 5'→3', the other runs 3'→5'. The ends are labeled by the carbon numbers on the sugar."
+ },
+ {
+  "topicSlug": "nucleic-acids",
+  "front": "What is complementary base pairing in DNA?",
+  "back": "A pairs with T (2 hydrogen bonds), G pairs with C (3 hydrogen bonds). This allows the two strands to bond together."
+ },
+ {
+  "topicSlug": "proteins",
+  "front": "Name the major functions of proteins, with an example of each.",
+  "back": "Enzymes (catalysis), structure (collagen), transport (hemoglobin), defense (antibodies), movement (actin/myosin), and signaling (insulin)."
+ },
+ {
+  "topicSlug": "proteins",
+  "front": "What are the four levels of protein structure?",
+  "back": "Primary (amino acid sequence), Secondary (α-helix/β-sheet), Tertiary (3D shape), Quaternary (multiple subunits)."
+ },
+ {
+  "topicSlug": "proteins",
+  "front": "What determines a protein's final 3D structure?",
+  "back": "Primary structure (amino acid sequence) determines how the protein will fold. This folding is driven by interactions between R groups."
+ },
+ {
+  "topicSlug": "proteins",
+  "front": "What interactions stabilize tertiary structure?",
+  "back": "Hydrogen bonds, ionic bonds, hydrophobic interactions, and disulfide bridges (covalent S-S bonds between cysteine residues)."
+ },
+ {
+  "topicSlug": "proteins",
+  "front": "What is a peptide bond?",
+  "back": "A covalent bond between the carboxyl group of one amino acid and the amino group of another, formed by dehydration synthesis."
+ },
+ {
+  "topicSlug": "proteins",
+  "front": "What is protein denaturation?",
+  "back": "Loss of a protein's 3D shape and therefore its function when heat, pH shifts, or chemicals break the bonds holding the fold together. The primary structure (sequence) is unchanged, and some proteins refold (renature) once normal conditions return."
+ },
+ {
+  "topicSlug": "proteins",
+  "front": "What is the basic structure of an amino acid?",
+  "back": "Central α-carbon bonded to: amino group (-NH₂), carboxyl group (-COOH), hydrogen, and an R group (side chain that varies)."
+ },
+ {
+  "topicSlug": "water-properties",
+  "front": "Calculate pH when $[\\text{H}^+] = 1 \\times 10^{-3}\\ \\text{M}$",
+  "back": "$\\text{pH} = -\\log[\\text{H}^+] = -\\log(10^{-3}) = 3$. This is acidic (pH < 7)."
+ },
+ {
+  "topicSlug": "water-properties",
+  "front": "Define cohesion vs. adhesion.",
+  "back": "Cohesion: water molecules stick to each other (hydrogen bonding). Adhesion: water molecules stick to other polar surfaces. Both critical for water transport in plants."
+ },
+ {
+  "topicSlug": "water-properties",
+  "front": "What causes water to be polar?",
+  "back": "Oxygen is more electronegative than hydrogen, creating partial negative charge on O and partial positive charges on H. The bent molecular geometry prevents charges from canceling."
+ },
+ {
+  "topicSlug": "water-properties",
+  "front": "What makes water an excellent solvent?",
+  "back": "Water's polarity allows it to form hydration shells around ions and dissolve polar molecules by surrounding charged particles with partial charges."
+ },
+ {
+  "topicSlug": "water-properties",
+  "front": "Why does ice float on liquid water?",
+  "back": "Ice has lower density than liquid water because hydrogen bonds form a crystalline lattice structure with more space between molecules."
+ }
+]

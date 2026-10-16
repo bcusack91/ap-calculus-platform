@@ -1,0 +1,32 @@
+[
+ {
+  "front": "How are $\\Delta G^\\circ$, $K$, and $E^\\circ_{\\text{cell}}$ related?",
+  "fp": "877cc175a716",
+  "yield": "HIGH",
+  "why": "CED 9.5/9.9 dG, K and E relations"
+ },
+ {
+  "front": "How does the Nernst equation adjust cell potential for non-standard concentrations?",
+  "fp": "0e77e67b414c",
+  "yield": "LOW",
+  "why": "OFF-EXAM: quantitative Nernst not assessed (9.10; R20)"
+ },
+ {
+  "front": "In a table of standard reduction potentials, which species is the strongest oxidizing agent?",
+  "fp": "5d2f395e458f",
+  "yield": "LOW",
+  "why": "OFF-EXAM: oxidizing-agent term excluded (4.7; R24)"
+ },
+ {
+  "front": "What are practical applications of galvanic cells?",
+  "fp": "c6c902e420f5",
+  "yield": "LOW",
+  "why": "OFF-EXAM: batteries/fuel cells/sacrificial anodes not in CED (R21)"
+ },
+ {
+  "front": "What equation links standard cell potential to standard free-energy change?",
+  "fp": "1aeef660a470",
+  "yield": "HIGH",
+  "why": "CED 9.9 dG = -nFE with example"
+ }
+]

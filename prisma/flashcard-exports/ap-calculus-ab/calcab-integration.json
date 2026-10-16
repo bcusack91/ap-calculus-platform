@@ -1,0 +1,131 @@
+[
+ {
+  "topicSlug": "accumulation-functions-calcab",
+  "front": "If $F(x) = \\displaystyle\\int_0^x t^2\\,dt$, then $F'(x) = $?",
+  "back": "**$x^2$**\n\nBy the Fundamental Theorem of Calculus Part 1: d/dx [$\\int_{0}^{x}$ f(t)dt] = f(x). So F'(x) = $x^{2}$."
+ },
+ {
+  "topicSlug": "accumulation-functions-calcab",
+  "front": "If $F(x) = \\displaystyle\\int_2^{x^3} \\sqrt{t}\\,dt$, then $F'(x) = $",
+  "back": "**$3x^2 \\sqrt{x^3}$**\n\nFTC with chain rule: $F'(x) = \\sqrt{x^3} \\cdot 3x^2 = 3x^2 \\cdot x^{3/2} = 3x^{7/2}$. Equivalently, $3x^2\\sqrt{x^3}$."
+ },
+ {
+  "topicSlug": "accumulation-functions-calcab",
+  "front": "If $g(x) = \\displaystyle\\int_0^{x^2} \\sin t\\,dt$, then $g'(x) = $",
+  "back": "**$2x\\sin(x^2)$**\n\nFTC with chain rule: $g'(x) = \\sin(x^2) \\cdot 2x$."
+ },
+ {
+  "topicSlug": "accumulation-functions-calcab",
+  "front": "If $h(x) = \\displaystyle\\int_x^5 t^2\\,dt$, then $h'(x) = $",
+  "back": "**$-x^2$**\n\n$h(x) = -\\int_5^x t^2\\,dt$, so $h'(x) = -x^2$ by FTC."
+ },
+ {
+  "topicSlug": "accumulation-functions-calcab",
+  "front": "The graph of $f$ is piecewise linear on $[0, 6]$ with $f(0) = 4$, $f(2) = 4$, $f(4) = -2$, $f(6) = -2$. Let $g(x) = \\displaystyle\\int_0^x f(t)\\,dt$. On which interval is $g$ decreasing?",
+  "back": "**$(3, 6)$**\n\n$g'(x) = f(x)$. The function $g$ is decreasing where $f(x) < 0$. The line from $(2,4)$ to $(4,-2)$ crosses zero at $x = \\frac{2(4)+4(2)}{4+2} = \\frac{16}{6}$… actually $f$ goes from $4$ to $-2$ linearly on $[2,4]$, crossing zero at $x = 2 + 2\\cdot\\frac{4}{6} = \\frac{10}{3} \\approx 3.33$. Then $f < 0$ on $(\\frac{10}{3}, 6)$, so $g$ is decreasing on $(3, 6)$ which contains that interval."
+ },
+ {
+  "topicSlug": "accumulation-functions-calcab",
+  "front": "What does the accumulation function $F(x) = \\int_a^x f(t)\\,dt$ represent, and what is $F'(x)$?",
+  "back": "$F(x)$ is the net amount accumulated by the rate $f$ from $a$ to $x$ — the signed area under $f$ on $[a, x]$, with $F(a) = 0$. By the Fundamental Theorem of Calculus, $F'(x) = f(x)$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "$\\int \\sec^2 x \\, dx = $",
+  "back": "**$\\tan x + C$**\n\nStandard antiderivative."
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "$\\int 6x^2 \\, dx = $",
+  "back": "**$2x^3 + C$**\n\nPower rule: $\\int x^n \\, dx = x^{n+1}/(n+1) + C$."
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "Evaluate $\\displaystyle\\int \\dfrac{\\sin x}{\\cos^2 x}\\,dx$.",
+  "back": "**$\\sec x + C$**\n\n$\\frac{\\sin x}{\\cos^2 x} = \\sec x \\tan x$. $\\int \\sec x \\tan x\\,dx = \\sec x + C$."
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "Evaluate $\\displaystyle\\int \\dfrac{3}{x}\\,dx$.",
+  "back": "**$3\\ln|x| + C$**\n\n$\\int \\frac{3}{x}dx = 3\\ln|x| + C$. The absolute value is needed for $x < 0$."
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "If $f'(x) = 6x^2 + \\sec^2 x$ and $f(0) = 4$, find $f(x)$.",
+  "back": "Antidifferentiate term by term: $f(x) = 2x^3 + \\tan x + C$. Then $f(0) = 0 + 0 + C = 4$, so $C = 4$ and $f(x) = 2x^3 + \\tan x + 4$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "What is $\\displaystyle\\int (3x^2 + 2x)\\,dx$?",
+  "back": "**$x^3 + x^2 + C$**\n\n$\\int 3x^{2}$ dx = $x^{3}$, ∫2x dx = $x^{2}$. So $\\int (3x^{2} + 2x)dx$ = $x^{3}$ + $x^{2}$ + C."
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "Evaluate $\\int_0^1 e^x\\,dx$.",
+  "back": "$\\left[e^x\\right]_0^1 = e^1 - e^0 = e - 1 \\approx 1.718$, since $e^x$ is its own antiderivative.",
+  "hint": "The exponential integrates to itself."
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "Evaluate $\\int_1^2 x^3\\,dx$.",
+  "back": "$\\left[\\frac{x^4}{4}\\right]_1^2 = 4 - \\frac{1}{4} = \\frac{15}{4}$ — antidifferentiate with the power rule, then evaluate at the upper limit minus the lower limit.",
+  "hint": "Add one to exponent, divide by new exponent."
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "Evaluate $\\int_1^e \\frac{1}{x}\\,dx$.",
+  "back": "$\\left[\\ln|x|\\right]_1^e = \\ln e - \\ln 1 = 1 - 0 = 1$, since the antiderivative of $\\frac{1}{x}$ is $\\ln|x|$.",
+  "hint": "Absolute value is important."
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "State the Fundamental Theorem of Calculus, Part 1.",
+  "back": "If $F(x) = \\int_a^x f(t)\\,dt$, then $F'(x) = f(x)$.",
+  "hint": "Derivative of an integral undoes the integral."
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "State the Fundamental Theorem of Calculus, Part 2.",
+  "back": "$\\int_a^b f(x)\\,dx = F(b) - F(a)$, where $F$ is any antiderivative of $f$.",
+  "hint": "Evaluate the antiderivative at the bounds."
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "$\\int \\sin x \\cos x\\,dx$ using $u = \\sin x$?",
+  "back": "$\\frac{\\sin^2 x}{2} + C$. Let $u = \\sin x$, $du = \\cos x\\,dx$, so $\\int u\\,du = \\frac{u^2}{2} + C$.",
+  "hint": "Pick the function whose derivative also appears."
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "Evaluate $\\displaystyle\\int \\dfrac{2x + 1}{x^2 + x + 5}\\,dx$.",
+  "back": "**$\\ln|x^2+x+5| + C$**\n\nThe numerator is exactly the derivative of the denominator. $\\int \\frac{u'}{u}\\,dx = \\ln|u| + C$."
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "Evaluate $\\displaystyle\\int \\dfrac{e^x}{e^x + 1}\\,dx$.",
+  "back": "**$\\ln(e^x + 1) + C$**\n\nLet $u = e^x + 1$, $du = e^x\\,dx$. $\\int \\frac{du}{u} = \\ln|u| + C = \\ln(e^x + 1) + C$."
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "Evaluate $\\displaystyle\\int_0^1 xe^{x^2}\\,dx$.",
+  "back": "**$\\dfrac{e-1}{2}$**\n\nLet $u = x^2$, $du = 2x\\,dx$. $\\frac{1}{2}\\int_0^1 e^u\\,du = \\frac{1}{2}[e^u]_0^1 = \\frac{e - 1}{2}$."
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "What is $\\displaystyle\\int \\cos(2x)\\,dx$?",
+  "back": "**$\\dfrac{\\sin(2x)}{2} + C$**\n\nu-substitution: u = 2x, du = 2dx. ∫cos u · du/2 = sin(u)/2 + C = sin(2x)/2 + C."
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "What is $\\displaystyle\\int \\dfrac{x}{x^2 + 4}\\,dx$?",
+  "back": "**$\\dfrac{1}{2}\\ln(x^2+4) + C$**\n\nLet $u = x^2 + 4$, $du = 2x\\,dx$. $\\int \\frac{x}{u} \\cdot \\frac{du}{2x} = \\frac{1}{2}\\ln|u| + C = \\frac{1}{2}\\ln(x^2+4) + C$."
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "What is the key idea of $u$-substitution?",
+  "back": "Reverse the chain rule: let $u = g(x)$, then $du = g'(x)\\,dx$, and rewrite the integral in terms of $u$.",
+  "hint": "Look for a function and its derivative inside the integral."
+ }
+]

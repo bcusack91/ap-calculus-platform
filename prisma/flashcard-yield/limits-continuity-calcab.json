@@ -1,0 +1,146 @@
+[
+ {
+  "front": "\"Limit equals $+\\infty$\" — does the limit exist?",
+  "fp": "f1b7da8d6524",
+  "yield": "MEDIUM",
+  "why": "Infinite limit does not exist; restatement"
+ },
+ {
+  "front": "Does the limit care about $f(a)$?",
+  "fp": "cdb5bddaafb5",
+  "yield": "HIGH",
+  "why": "CED 1.2 limit ignores f(a)"
+ },
+ {
+  "front": "Evaluate $\\lim_{x \\to 0} \\dfrac{\\sin x}{x}$.",
+  "fp": "1b6a163fd6f0",
+  "yield": "HIGH",
+  "why": "CED 1.8 sin x / x limit"
+ },
+ {
+  "front": "Evaluate $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x}$.",
+  "fp": "84c28843eee0",
+  "yield": "MEDIUM",
+  "why": "(1 - cos x)/x limit; secondary"
+ },
+ {
+  "front": "How do you decide whether an infinite limit is $+\\infty$ or $-\\infty$?",
+  "fp": "6087d6ed0ce3",
+  "yield": "HIGH",
+  "why": "CED 1.14 sign of infinite limit with example"
+ },
+ {
+  "front": "How must you justify a vertical asymptote at $x = a$ on the AP exam?",
+  "fp": "fa91f0f00779",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.14 justify vertical asymptote; FRQ scoring"
+ },
+ {
+  "front": "Infinite discontinuity",
+  "fp": "5ed7bf483994",
+  "yield": "MEDIUM",
+  "why": "Infinite discontinuity; restatement"
+ },
+ {
+  "front": "Intermediate Value Theorem (IVT)",
+  "fp": "20732274a580",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.16 Intermediate Value Theorem"
+ },
+ {
+  "front": "Intuitive definition of a limit",
+  "fp": "ebb1a904a61f",
+  "yield": "HIGH",
+  "why": "CED 1.2 intuitive limit definition"
+ },
+ {
+  "front": "Jump discontinuity",
+  "fp": "a1b5e2104c66",
+  "yield": "HIGH",
+  "why": "CED 1.11 jump discontinuity"
+ },
+ {
+  "front": "One-sided limit notation",
+  "fp": "24819a010e59",
+  "yield": "MEDIUM",
+  "why": "One-sided limit notation; notation only"
+ },
+ {
+  "front": "Rational function as $x \\to \\infty$ — degree(num) < degree(den)",
+  "fp": "46f732502a13",
+  "yield": "MEDIUM",
+  "why": "Restates lower-degree rule"
+ },
+ {
+  "front": "Rational function as $x \\to \\infty$ — degree(num) = degree(den)",
+  "fp": "800a11cdb5f4",
+  "yield": "MEDIUM",
+  "why": "Restates equal-degree rule"
+ },
+ {
+  "front": "Rational function as $x \\to \\infty$ — degree(num) > degree(den)",
+  "fp": "bcda15483649",
+  "yield": "MEDIUM",
+  "why": "Restates higher-degree rule"
+ },
+ {
+  "front": "Removable discontinuity",
+  "fp": "487b2966bcd2",
+  "yield": "HIGH",
+  "why": "CED 1.11 removable discontinuity"
+ },
+ {
+  "front": "Required hypothesis to cite IVT on the AP exam",
+  "fp": "6942eb708ce6",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.16 IVT hypothesis; FRQ justification"
+ },
+ {
+  "front": "Squeeze Theorem",
+  "fp": "af54a3f3bfce",
+  "yield": "HIGH",
+  "why": "CED 1.8 Squeeze theorem"
+ },
+ {
+  "front": "Strategy when direct substitution gives $0/0$",
+  "fp": "e5c65867d2ad",
+  "yield": "HIGH",
+  "why": "CED 1.7 strategies for 0/0"
+ },
+ {
+  "front": "Three things a limit can do at $x = a$",
+  "fp": "084399144b37",
+  "yield": "MEDIUM",
+  "why": "Three things a limit can do; survey"
+ },
+ {
+  "front": "Three-part definition of continuity at $x = a$",
+  "fp": "51afd623547a",
+  "yield": "HIGH",
+  "why": "CED 1.12 three-part continuity definition"
+ },
+ {
+  "front": "What does L'Hôpital's Rule let you do with a $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$ limit?",
+  "fp": "fe1ff036d618",
+  "yield": "MEDIUM",
+  "why": "Restates L'Hospital's rule"
+ },
+ {
+  "front": "What must you show to prove a piecewise function is continuous at its break point $x = c$?",
+  "fp": "c1596d151d76",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.12 piecewise continuity justification; FRQ staple"
+ },
+ {
+  "front": "When does a limit exist?",
+  "fp": "5cdae6a43e91",
+  "yield": "HIGH",
+  "why": "CED 1.5 limit exists when one-sided limits agree"
+ },
+ {
+  "front": "Why limits matter in the rest of calculus",
+  "fp": "bdce828f755b",
+  "yield": "LOW",
+  "why": "Why limits matter; motivational survey"
+ }
+]

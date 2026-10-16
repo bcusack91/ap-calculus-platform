@@ -1,0 +1,157 @@
+[
+ {
+  "topicSlug": "hybridization-sigma-pi-bonds",
+  "front": "Do lone pairs occupy hybrid orbitals?",
+  "back": "YES! Lone pairs occupy hybrid orbitals just like bonding pairs. Example: H₂O has sp³ O with 2 bonds and 2 lone pairs in sp³ orbitals (SN = 4)."
+ },
+ {
+  "topicSlug": "hybridization-sigma-pi-bonds",
+  "front": "How do you determine hybridization from steric number?",
+  "back": "SN 2: sp, SN 3: sp², SN 4: sp³. Steric number = atoms bonded to the central atom + its lone pairs. For steric numbers 5 and 6, AP Chemistry asks only for the electron-domain geometry and molecular shape, not a hybridization label."
+ },
+ {
+  "topicSlug": "hybridization-sigma-pi-bonds",
+  "front": "How many sigma and pi bonds are in a triple bond?",
+  "back": "1 sigma (σ) bond and 2 pi (π) bonds. Total = 1 σ + 2 π. The σ bond is from sp-sp overlap; the 2 π bonds from two sets of p-p overlaps."
+ },
+ {
+  "topicSlug": "hybridization-sigma-pi-bonds",
+  "front": "What hybridization does carbon have in CH₄, C₂H₄, and C₂H₂?",
+  "back": "CH₄ (methane): sp³ (tetrahedral). C₂H₄ (ethylene): sp² (trigonal planar). C₂H₂ (acetylene): sp (linear). Relates to number of bonds to each C."
+ },
+ {
+  "topicSlug": "hybridization-sigma-pi-bonds",
+  "front": "What is hybridization and why does it occur?",
+  "back": "Mixing of atomic orbitals to form new hybrid orbitals of equal energy. Occurs to explain observed molecular geometries that pure s, p, d orbitals cannot explain."
+ },
+ {
+  "topicSlug": "hybridization-sigma-pi-bonds",
+  "front": "What is the difference between sigma (σ) and pi (π) bonds?",
+  "back": "σ bonds: head-on orbital overlap along internuclear axis, strongest, allows rotation. π bonds: side-by-side overlap of parallel p orbitals, weaker, restricts rotation. Every bond has 1 σ; π only in multiple bonds."
+ },
+ {
+  "topicSlug": "hybridization-sigma-pi-bonds",
+  "front": "Why does a double bond restrict rotation?",
+  "back": "The pi (π) bond requires parallel p orbitals with side-by-side overlap. Rotation would break this overlap, destroying the π bond. Only σ bonds allow free rotation."
+ },
+ {
+  "topicSlug": "lewis-structures-formal-charge",
+  "front": "How do you determine the central atom in a Lewis structure?",
+  "back": "Usually the least electronegative atom (except H). H is always terminal. C is typically central in organic molecules. More electronegative atoms go on the outside."
+ },
+ {
+  "topicSlug": "lewis-structures-formal-charge",
+  "front": "What are resonance structures?",
+  "back": "Multiple valid Lewis structures with same atom positions but different electron arrangements. Actual structure is hybrid (average). Use ↔ between structures. Only electrons move, not atoms."
+ },
+ {
+  "topicSlug": "lewis-structures-formal-charge",
+  "front": "What are the rules for using formal charge to determine best Lewis structure?",
+  "back": "1) Sum of FC = molecular charge 2) Minimize FC magnitudes 3) Negative FC on more electronegative atoms 4) Avoid adjacent same-sign charges. Structure with FC closer to zero is preferred."
+ },
+ {
+  "topicSlug": "lewis-structures-formal-charge",
+  "front": "What are the steps to draw a Lewis structure?",
+  "back": "1) Count valence electrons 2) Draw skeletal structure 3) Connect with single bonds 4) Complete octets of outer atoms 5) Place remaining electrons on central atom 6) Form multiple bonds if needed."
+ },
+ {
+  "topicSlug": "lewis-structures-formal-charge",
+  "front": "What does it mean when a molecule has equivalent resonance structures?",
+  "back": "All resonance structures have same energy and contribute equally to the hybrid. Electrons are delocalized equally. Example: CO₃²⁻ has 3 equivalent structures with 1.33 bond order for each C-O."
+ },
+ {
+  "topicSlug": "lewis-structures-formal-charge",
+  "front": "What is the formula for formal charge?",
+  "back": "$FC = V - L - \\frac{B}{2}$, where $V$ = valence electrons, $L$ = lone pair electrons, $B$ = bonding electrons. Or: $FC = V - (\\text{nonbonding } e^{-}) - \\frac{1}{2}(\\text{bonding } e^{-})$."
+ },
+ {
+  "topicSlug": "lewis-structures-formal-charge",
+  "front": "What is the octet rule and what are the main exceptions?",
+  "back": "Atoms tend to have 8 valence electrons. Exceptions: H (duet, 2e⁻), B (6e⁻), Be (4e⁻), Period 3+ can expand octet (>8e⁻), odd-electron radicals."
+ },
+ {
+  "topicSlug": "lewis-structures-formal-charge",
+  "front": "Which elements can have expanded octets and why?",
+  "back": "Only central atoms in period 3 and beyond (P, S, Cl, Br, I, Xe), which are large enough to bond to more atoms and hold more than 8 electrons. Examples: PCl₅ (10 e⁻), SF₆ (12 e⁻). Period 2 atoms never exceed an octet."
+ },
+ {
+  "topicSlug": "types-of-chemical-bonds",
+  "front": "How do you predict bond type using electronegativity difference (ΔEN)?",
+  "back": "ΔEN < 0.4: Nonpolar covalent; 0.4 < ΔEN < 1.7: Polar covalent; ΔEN > 1.7: Ionic. These are guidelines on a bonding continuum."
+ },
+ {
+  "topicSlug": "types-of-chemical-bonds",
+  "front": "What are metallic bonds and their properties?",
+  "back": "Metal cations in sea of delocalized electrons. Conduct electricity/heat in solid state, malleable, ductile, lustrous. Electrons move freely throughout structure."
+ },
+ {
+  "topicSlug": "types-of-chemical-bonds",
+  "front": "What are the key characteristics of ionic bonds?",
+  "back": "Form between metal and nonmetal, complete electron transfer, form crystalline lattice, high melting points, conduct electricity when molten/dissolved, brittle."
+ },
+ {
+  "topicSlug": "types-of-chemical-bonds",
+  "front": "What are the three main types of chemical bonds?",
+  "back": "Ionic (electron transfer, metal+nonmetal), Covalent (electron sharing, nonmetal+nonmetal), and Metallic (delocalized electrons, metal+metal)."
+ },
+ {
+  "topicSlug": "types-of-chemical-bonds",
+  "front": "What is a network covalent solid?",
+  "back": "Giant covalent structure (diamond, SiO₂) where atoms are covalently bonded throughout. Very high melting points, very hard, do not conduct electricity (exception: graphite)."
+ },
+ {
+  "topicSlug": "types-of-chemical-bonds",
+  "front": "What is the difference between polar and nonpolar covalent bonds?",
+  "back": "Nonpolar: equal sharing (ΔEN < 0.4), no charge separation. Polar: unequal sharing (0.4 < ΔEN < 1.7), partial charges (δ+ and δ-) create dipole."
+ },
+ {
+  "topicSlug": "types-of-chemical-bonds",
+  "front": "What is the relationship between bond length and bond energy?",
+  "back": "Inverse relationship: Shorter bonds are stronger (higher energy). Bond order increases: triple > double > single (shorter and stronger)."
+ },
+ {
+  "topicSlug": "types-of-chemical-bonds",
+  "front": "Why do ionic compounds have high melting points?",
+  "back": "Must break strong electrostatic attractions in 3D crystal lattice. Requires significant energy to overcome many ionic bonds throughout the structure."
+ },
+ {
+  "topicSlug": "vsepr-molecular-geometry",
+  "front": "How do lone pairs affect bond angles?",
+  "back": "Lone pairs cause bond angles to be SMALLER than ideal. Repulsion order: LP-LP > LP-BP > BP-BP. Lone pairs take more space and compress bonding pairs closer together."
+ },
+ {
+  "topicSlug": "vsepr-molecular-geometry",
+  "front": "How do you determine if a molecule is polar using VSEPR?",
+  "back": "Check: 1) Are bonds polar? (ΔEN) 2) Is geometry symmetrical? Asymmetric molecules with polar bonds are polar. Symmetric molecules with identical bonds are nonpolar (dipoles cancel)."
+ },
+ {
+  "topicSlug": "vsepr-molecular-geometry",
+  "front": "In trigonal bipyramidal geometry (SN 5), where do lone pairs prefer to go?",
+  "back": "Equatorial positions (the middle three at 120°) because they have more space and experience less repulsion than axial positions (90° angles)."
+ },
+ {
+  "topicSlug": "vsepr-molecular-geometry",
+  "front": "What are the 5 basic electron geometries and their steric numbers?",
+  "back": "SN 2: Linear (180°), SN 3: Trigonal planar (120°), SN 4: Tetrahedral (109.5°), SN 5: Trigonal bipyramidal (90°,120°), SN 6: Octahedral (90°)."
+ },
+ {
+  "topicSlug": "vsepr-molecular-geometry",
+  "front": "What is steric number and how do you calculate it?",
+  "back": "SN = (bonding domains) + (lone pairs on central atom). Multiple bonds count as ONE domain. SN determines electron geometry."
+ },
+ {
+  "topicSlug": "vsepr-molecular-geometry",
+  "front": "What is the difference between electron geometry and molecular geometry?",
+  "back": "Electron geometry: arrangement of ALL electron domains (bonds + lone pairs). Molecular geometry: arrangement of ATOMS only (ignores lone pairs in shape description)."
+ },
+ {
+  "topicSlug": "vsepr-molecular-geometry",
+  "front": "What is the molecular geometry for SN 4 with 2 lone pairs? What about the bond angle?",
+  "back": "Bent molecular geometry. Bond angle is <109.5° (typically ~104.5° like in H₂O). Electron geometry is tetrahedral, but only 2 atoms are visible."
+ },
+ {
+  "topicSlug": "vsepr-molecular-geometry",
+  "front": "What is VSEPR theory and its main principle?",
+  "back": "Valence Shell Electron Pair Repulsion theory. Principle: Electron pairs (bonding and lone) repel each other and arrange to be as far apart as possible, minimizing repulsion."
+ }
+]

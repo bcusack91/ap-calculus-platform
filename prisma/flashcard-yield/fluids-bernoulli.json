@@ -1,0 +1,62 @@
+[
+ {
+  "front": "Bernoulli for horizontal flow?",
+  "fp": "14206870fea0",
+  "yield": "HIGH",
+  "why": "CED 8.4 Bernoulli, horizontal flow"
+ },
+ {
+  "front": "Bernoulli's equation?",
+  "fp": "87a5d603bd41",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.4 Bernoulli's equation; equation-sheet staple"
+ },
+ {
+  "front": "Conditions required for Bernoulli's equation?",
+  "fp": "31201b768a85",
+  "yield": "MEDIUM",
+  "why": "Bernoulli assumptions; secondary"
+ },
+ {
+  "front": "Equation usually paired with Bernoulli to solve flow problems?",
+  "fp": "1365760ef8ce",
+  "yield": "HIGH",
+  "why": "CED 8.3/8.4 pair continuity with Bernoulli"
+ },
+ {
+  "front": "Faster fluid speed (at same height) means…",
+  "fp": "46ca237f1be0",
+  "yield": "HIGH",
+  "why": "CED 8.4 faster flow, lower pressure"
+ },
+ {
+  "front": "Torricelli's theorem?",
+  "fp": "d62b09c54499",
+  "yield": "MEDIUM",
+  "why": "Torricelli's theorem; secondary result"
+ },
+ {
+  "front": "Units of each term in Bernoulli's equation?",
+  "fp": "278e14c3d195",
+  "yield": "LOW",
+  "why": "Bernoulli term units; trivia"
+ },
+ {
+  "front": "What does Bernoulli's equation represent physically?",
+  "fp": "e67a0caca27a",
+  "yield": "HIGH",
+  "why": "CED 8.4 Bernoulli as energy conservation"
+ },
+ {
+  "front": "When does Bernoulli reduce to $P = P_0 + \\rho g h$?",
+  "fp": "d1757cb7f4fd",
+  "yield": "MEDIUM",
+  "why": "Bernoulli at rest reduces to hydrostatics"
+ },
+ {
+  "front": "Why does an airplane wing produce lift?",
+  "fp": "96a773999fa7",
+  "yield": "MEDIUM",
+  "why": "Wing lift explanation; secondary"
+ }
+]

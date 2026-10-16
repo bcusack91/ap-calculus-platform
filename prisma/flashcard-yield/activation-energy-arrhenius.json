@@ -1,0 +1,104 @@
+[
+ {
+  "front": "A reaction has $E_a = 50$ kJ/mol. By roughly what factor does $k$ increase when $T$ goes from $300$ K to $310$ K?",
+  "fp": "04b2098d2ea1",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Arrhenius calculation not assessed (5.6 exclusion; R15)"
+ },
+ {
+  "front": "According to collision theory, what two conditions must be met for reaction to occur?",
+  "fp": "66eab1b7fe7a",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.5 collision theory energy and orientation"
+ },
+ {
+  "front": "Given Ea values, how can you estimate which reaction is more temperature-sensitive?",
+  "fp": "5f8ea6976fda",
+  "yield": "MEDIUM",
+  "why": "Higher Ea means more T-sensitive; secondary"
+ },
+ {
+  "front": "How do A and Ea compete to determine which reaction is faster at a given temperature?",
+  "fp": "d3a907e98bf6",
+  "yield": "LOW",
+  "why": "OFF-EXAM: numeric Arrhenius comparison not assessed (R15)"
+ },
+ {
+  "front": "How do you determine Ea graphically using the Arrhenius equation?",
+  "fp": "2ff1b43bec61",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Ea from ln k vs 1/T slope not assessed (R15)"
+ },
+ {
+  "front": "How does a catalyst affect a reaction and what does it NOT change?",
+  "fp": "c62446e3c0eb",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.11 catalysts lower Ea; tested every exam"
+ },
+ {
+  "front": "How does a catalyst change an Arrhenius plot?",
+  "fp": "e8f77221c032",
+  "yield": "LOW",
+  "why": "Catalyst on an Arrhenius plot; graphical Arrhenius cut (R15)"
+ },
+ {
+  "front": "How does a Maxwell–Boltzmann distribution curve change when temperature increases?",
+  "fp": "27bf059c6cc5",
+  "yield": "HIGH",
+  "why": "CED 5.6 Maxwell-Boltzmann shift with T"
+ },
+ {
+  "front": "On a reaction energy profile, what do the peak and the reactant-to-product gap represent?",
+  "fp": "3469ec2e3ade",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.6 energy profile: Ea and dH"
+ },
+ {
+  "front": "Physically, what does the pre-exponential factor A represent?",
+  "fp": "03e680588513",
+  "yield": "LOW",
+  "why": "Pre-exponential factor/intercept; graphical Arrhenius detail"
+ },
+ {
+  "front": "What are common pitfalls when using the Arrhenius equation in calculations?",
+  "fp": "8848cfb240d7",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Arrhenius calculation pitfalls; calculations not assessed (R15)"
+ },
+ {
+  "front": "What are the units for Ea and R, and why must temperature be in Kelvin in the Arrhenius equation?",
+  "fp": "81c25d65441b",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Arrhenius calculation units; calculations not assessed (R15)"
+ },
+ {
+  "front": "What is activation energy (Ea) and how does it affect reaction rate?",
+  "fp": "1d1f68e8bf5e",
+  "yield": "HIGH",
+  "why": "CED 5.6 activation energy and rate"
+ },
+ {
+  "front": "What is the Arrhenius equation and what does each term represent?",
+  "fp": "91e6c23e11bd",
+  "yield": "MEDIUM",
+  "why": "Arrhenius equation, qualitative only on exam"
+ },
+ {
+  "front": "What is the relationship between Ea(forward), Ea(reverse), and ΔH?",
+  "fp": "df385fe423f6",
+  "yield": "HIGH",
+  "why": "CED 5.6 Ea forward - Ea reverse = dH"
+ },
+ {
+  "front": "Why does increasing temperature dramatically increase reaction rate?",
+  "fp": "a20ea4992b30",
+  "yield": "HIGH",
+  "why": "CED 5.6 why T raises rate"
+ },
+ {
+  "front": "Why is the \"rate doubles for every 10 °C\" rule only approximate?",
+  "fp": "348c7b94ec42",
+  "yield": "LOW",
+  "why": "OFF-EXAM: quantitative Arrhenius factor not assessed (R15)"
+ }
+]

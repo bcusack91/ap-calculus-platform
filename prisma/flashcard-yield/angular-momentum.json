@@ -1,0 +1,80 @@
+[
+ {
+  "front": "A merry-go-round with moment of inertia $I$ spins at angular speed $\\omega$. A child climbs on, doubling the moment of inertia to $2I$. What is the new angular speed?",
+  "fp": "dc64195cec6a",
+  "yield": "HIGH",
+  "why": "CED 6.4 angular momentum conservation worked example"
+ },
+ {
+  "front": "Define angular momentum for a particle.",
+  "fp": "159db6c1e037",
+  "yield": "HIGH",
+  "why": "CED 6.3 angular momentum of a particle"
+ },
+ {
+  "front": "For rolling motion, what is the total kinetic energy?",
+  "fp": "1ab27134f029",
+  "yield": "HIGH",
+  "why": "CED 6.6 rolling total KE"
+ },
+ {
+  "front": "How does a net torque change a rigid body's angular momentum?",
+  "fp": "6b76e7d8bc0b",
+  "yield": "HIGH",
+  "why": "CED 6.3 angular impulse"
+ },
+ {
+  "front": "What is moment of inertia?",
+  "fp": "c1827d9bcdbe",
+  "yield": "HIGH",
+  "why": "CED 5.4 rotational inertia"
+ },
+ {
+  "front": "What is Newton's 2nd Law for rotation?",
+  "fp": "dd0857144254",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.6 tau = I alpha; tested every exam"
+ },
+ {
+  "front": "What is rotational kinetic energy?",
+  "fp": "a0c18598abf6",
+  "yield": "HIGH",
+  "why": "CED 6.1 rotational KE"
+ },
+ {
+  "front": "What is the moment of inertia of a solid disk about its center?",
+  "fp": "c233a95d34cb",
+  "yield": "MEDIUM",
+  "why": "Disk vs hoop inertia; values given on exam"
+ },
+ {
+  "front": "What is the moment of inertia of a solid sphere about its center?",
+  "fp": "517ecfbc1cf8",
+  "yield": "MEDIUM",
+  "why": "Sphere and shell inertia; values given on exam"
+ },
+ {
+  "front": "When a spinning skater pulls in their arms, what happens to their rotational kinetic energy?",
+  "fp": "f1da88766e37",
+  "yield": "MEDIUM",
+  "why": "Skater KE rises; secondary"
+ },
+ {
+  "front": "When is angular momentum conserved?",
+  "fp": "d25ae6e5f6e0",
+  "yield": "HIGH",
+  "why": "CED 6.4 when L is conserved"
+ },
+ {
+  "front": "Why does a figure skater spin faster when pulling arms in?",
+  "fp": "b4f254afb732",
+  "yield": "HIGH",
+  "why": "CED 6.4 skater spins faster"
+ },
+ {
+  "front": "Why does a solid sphere roll down an incline faster than a hollow cylinder?",
+  "fp": "e40597e8b75b",
+  "yield": "HIGH",
+  "why": "CED 6.6 rolling race by inertia"
+ }
+]

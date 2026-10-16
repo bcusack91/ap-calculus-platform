@@ -1,0 +1,38 @@
+[
+ {
+  "front": "A catalyst speeds up a reaction by:",
+  "fp": "d45aae2d6c34",
+  "yield": "HIGH",
+  "why": "CED 5.11 catalysts lower Ea"
+ },
+ {
+  "front": "A reaction is found to be first order in A and second order in B. (a) Write the rate law. (b) By what factor does the rate increase if [A] is tripled and [B] is doubled? (c) What are the units of the rate constant?",
+  "fp": "98bd4f53d2a1",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.2 rate law and concentration changes"
+ },
+ {
+  "front": "For a reaction that is first order in [A] and first order in [B], tripling [A] and doubling [B] will change the rate by a factor of:",
+  "fp": "8382972a4c82",
+  "yield": "HIGH",
+  "why": "CED 5.2 rate factor from orders"
+ },
+ {
+  "front": "General rate law form?",
+  "fp": "38ad5388b43b",
+  "yield": "HIGH",
+  "why": "CED 5.2 general rate law"
+ },
+ {
+  "front": "Increasing temperature speeds up a reaction because:",
+  "fp": "b981030fcb5c",
+  "yield": "HIGH",
+  "why": "CED 5.6 temperature and rate"
+ },
+ {
+  "front": "What is the Arrhenius equation, and what does each symbol mean?",
+  "fp": "84d0affdf30b",
+  "yield": "MEDIUM",
+  "why": "Arrhenius equation, qualitative only on exam"
+ }
+]

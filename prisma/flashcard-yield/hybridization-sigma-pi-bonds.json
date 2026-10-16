@@ -1,0 +1,44 @@
+[
+ {
+  "front": "Do lone pairs occupy hybrid orbitals?",
+  "fp": "93a9fa9dc92e",
+  "yield": "MEDIUM",
+  "why": "Lone pairs in hybrid orbitals; secondary"
+ },
+ {
+  "front": "How do you determine hybridization from steric number?",
+  "fp": "e0dc5a7e4cd0",
+  "yield": "HIGH",
+  "why": "CED 2.7 hybridization from steric number"
+ },
+ {
+  "front": "How many sigma and pi bonds are in a triple bond?",
+  "fp": "1e61c6ece913",
+  "yield": "HIGH",
+  "why": "CED 2.7 sigma/pi in a triple bond"
+ },
+ {
+  "front": "What hybridization does carbon have in CH₄, C₂H₄, and C₂H₂?",
+  "fp": "6458f5bda16d",
+  "yield": "HIGH",
+  "why": "CED 2.7 carbon hybridization examples"
+ },
+ {
+  "front": "What is hybridization and why does it occur?",
+  "fp": "e0025960bbb1",
+  "yield": "MEDIUM",
+  "why": "Why hybridization occurs; secondary"
+ },
+ {
+  "front": "What is the difference between sigma (σ) and pi (π) bonds?",
+  "fp": "71b37be99913",
+  "yield": "HIGH",
+  "why": "CED 2.7 sigma vs pi bonds"
+ },
+ {
+  "front": "Why does a double bond restrict rotation?",
+  "fp": "ded9b82fad6f",
+  "yield": "MEDIUM",
+  "why": "Restricted rotation; secondary"
+ }
+]

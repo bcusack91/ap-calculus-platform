@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Can elastic potential energy be negative?",
+  "fp": "003dd1ee6fa3",
+  "yield": "MEDIUM",
+  "why": "Elastic PE never negative; secondary"
+ },
+ {
+  "front": "For a horizontal spring-mass system, when is KE maximum and when is PE maximum?",
+  "fp": "eb29f8e7345f",
+  "yield": "HIGH",
+  "why": "CED 3.4/7.4 spring KE/PE locations"
+ },
+ {
+  "front": "How do springs in series vs parallel combine?",
+  "fp": "9b59c76facf6",
+  "yield": "MEDIUM",
+  "why": "Springs in series/parallel; secondary"
+ },
+ {
+  "front": "If you double the compression of a spring, how does the stored energy change?",
+  "fp": "77b243f5bdd0",
+  "yield": "HIGH",
+  "why": "CED 3.4 PE scales with x^2"
+ },
+ {
+  "front": "What does the spring constant $k$ tell you?",
+  "fp": "f7e5822f2cc7",
+  "yield": "MEDIUM",
+  "why": "Spring constant meaning; secondary"
+ },
+ {
+  "front": "What is Hooke's Law?",
+  "fp": "4569839b52fa",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.8 Hooke's law; equation-sheet staple"
+ },
+ {
+  "front": "What is the formula for elastic potential energy?",
+  "fp": "5c5d642da8cf",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.4 elastic PE = kx^2/2"
+ },
+ {
+  "front": "Why is there a ½ in the elastic PE formula?",
+  "fp": "7225ad9d14c9",
+  "yield": "MEDIUM",
+  "why": "Why the 1/2 in kx^2/2; derivation aside"
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "front": "$\\int \\sec^2 x \\, dx = $",
+  "fp": "9cee430c5aa8",
+  "yield": "HIGH",
+  "why": "CED 6.8 integral of sec^2 x"
+ },
+ {
+  "front": "$\\int 6x^2 \\, dx = $",
+  "fp": "a066a3b8ee49",
+  "yield": "MEDIUM",
+  "why": "Power rule integral example"
+ },
+ {
+  "front": "Evaluate $\\displaystyle\\int \\dfrac{\\sin x}{\\cos^2 x}\\,dx$.",
+  "fp": "35da80dc9c1e",
+  "yield": "MEDIUM",
+  "why": "Rewrite to sec x tan x; practice item"
+ },
+ {
+  "front": "Evaluate $\\displaystyle\\int \\dfrac{3}{x}\\,dx$.",
+  "fp": "eefbe0332efb",
+  "yield": "HIGH",
+  "why": "CED 6.8 integral of 1/x"
+ },
+ {
+  "front": "If $f'(x) = 6x^2 + \\sec^2 x$ and $f(0) = 4$, find $f(x)$.",
+  "fp": "1b1ded87683f",
+  "yield": "HIGH",
+  "why": "CED 6.8 antiderivative with initial condition"
+ },
+ {
+  "front": "What is $\\displaystyle\\int (3x^2 + 2x)\\,dx$?",
+  "fp": "37bc05a03306",
+  "yield": "MEDIUM",
+  "why": "Power rule integral example; restatement"
+ }
+]

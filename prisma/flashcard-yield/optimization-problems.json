@@ -1,0 +1,38 @@
+[
+ {
+  "front": "A rectangular pen is built against a barn wall using 100 ft of fence on the other three sides. What dimensions maximize the area?",
+  "fp": "543eb0e0dfde",
+  "yield": "HIGH",
+  "why": "CED 5.11 optimization example"
+ },
+ {
+  "front": "In an optimization problem, what should you check to verify you have a maximum or minimum?",
+  "fp": "d5107fbcb561",
+  "yield": "HIGH",
+  "why": "CED 5.11 justify optimum"
+ },
+ {
+  "front": "What are the main steps for solving optimization problems?",
+  "fp": "94224ffbb886",
+  "yield": "MEDIUM",
+  "why": "Optimization steps; survey card"
+ },
+ {
+  "front": "What is a common mistake when answering optimization problems?",
+  "fp": "79c2ea9c18e5",
+  "yield": "MEDIUM",
+  "why": "Answer the question asked; study tip"
+ },
+ {
+  "front": "Why might you minimize D² instead of D in distance problems?",
+  "fp": "72740fa0e61f",
+  "yield": "LOW",
+  "why": "Minimize D squared trick; niche technique"
+ },
+ {
+  "front": "Why must you reduce the function to one variable before differentiating?",
+  "fp": "8ff2ee64c505",
+  "yield": "MEDIUM",
+  "why": "Reduce to one variable; technique"
+ }
+]

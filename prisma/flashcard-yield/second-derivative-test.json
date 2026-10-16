@@ -1,0 +1,38 @@
+[
+ {
+  "front": "If $f''(c) = 0$ at a critical point, does that mean $f$ has no extremum at $c$?",
+  "fp": "c63a3d244049",
+  "yield": "HIGH",
+  "why": "CED 5.7 second derivative test inconclusive"
+ },
+ {
+  "front": "Use the Second Derivative Test to classify the critical points of $f(x) = x^3 - 3x$.",
+  "fp": "90c0367912f4",
+  "yield": "HIGH",
+  "why": "CED 5.7 second derivative test example"
+ },
+ {
+  "front": "What does $f''(c) > 0$ mean for a critical point?",
+  "fp": "fcb2e85293bf",
+  "yield": "HIGH",
+  "why": "CED 5.7 f'' > 0 means local min"
+ },
+ {
+  "front": "What does the Second Derivative Test tell you?",
+  "fp": "e7e502535660",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.7 second derivative test"
+ },
+ {
+  "front": "When does the Second Derivative Test fail?",
+  "fp": "ada7d4a128ed",
+  "yield": "MEDIUM",
+  "why": "When second derivative test fails; restatement"
+ },
+ {
+  "front": "Which is faster: First Derivative Test or Second Derivative Test?",
+  "fp": "8fe3ab7d7911",
+  "yield": "MEDIUM",
+  "why": "Which test is faster; study tip"
+ }
+]

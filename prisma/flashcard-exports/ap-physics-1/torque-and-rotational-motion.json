@@ -1,0 +1,212 @@
+[
+ {
+  "topicSlug": "angular-momentum",
+  "front": "A merry-go-round with moment of inertia $I$ spins at angular speed $\\omega$. A child climbs on, doubling the moment of inertia to $2I$. What is the new angular speed?",
+  "back": "No external torque acts about the axis, so $L$ is conserved: $I\\omega = 2I\\omega_f$, giving $\\omega_f = \\omega/2$ — half the original angular speed.",
+  "hint": "L initial = L final if no external torques"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "Define angular momentum for a particle.",
+  "back": "L = r × p = r × mv. Magnitude: L = mvr sin θ. For circular motion: L = Iω.",
+  "hint": "Cross product of r and p"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "For rolling motion, what is the total kinetic energy?",
+  "back": "$KE_{total} = \\frac{1}{2}mv^2 + \\frac{1}{2}I\\omega^2$ - sum of translational and rotational KE.",
+  "hint": "Translational plus rotational"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "How does a net torque change a rigid body's angular momentum?",
+  "back": "$\\tau_{net} = \\frac{\\Delta L}{\\Delta t}$, so angular impulse equals the change in angular momentum: $\\tau_{net}\\Delta t = \\Delta L$. Units of $L$ are $\\text{kg} \\cdot \\text{m}^2/\\text{s}$.",
+  "hint": "I times omega"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "What is moment of inertia?",
+  "back": "$I = \\sum mr^2$ - rotational equivalent of mass. Measures resistance to rotational acceleration. Depends on mass distribution and axis.",
+  "hint": "Sum of m times r squared"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "What is Newton's 2nd Law for rotation?",
+  "back": "$\\tau = I\\alpha$ - net torque equals moment of inertia times angular acceleration. Analogous to $F = ma$.",
+  "hint": "Torque = I times alpha"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "What is rotational kinetic energy?",
+  "back": "$KE_{rot} = \\frac{1}{2}I\\omega^2$ - analogous to $KE = \\frac{1}{2}mv^2$ for linear motion.",
+  "hint": "Half I omega squared"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "What is the moment of inertia of a solid disk about its center?",
+  "back": "$I = \\frac{1}{2}mr^2$, about the central axis perpendicular to the face. A hoop of the same mass and radius has $I = mr^2$ — twice as hard to angularly accelerate, because its mass sits farther from the axis.",
+  "hint": "Half m r squared"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "What is the moment of inertia of a solid sphere about its center?",
+  "back": "$I = \\frac{2}{5}mr^2$ for a uniform solid sphere about any diameter. A thin hollow shell of the same mass and radius is larger, $I = \\frac{2}{3}mr^2$, since its mass lies entirely at radius $r$.",
+  "hint": "Two-fifths m r squared"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "When a spinning skater pulls in their arms, what happens to their rotational kinetic energy?",
+  "back": "It increases. With $L$ constant, $KE_{rot} = \\frac{L^2}{2I}$, so a smaller $I$ means larger $KE$ — the extra energy comes from the work the skater does pulling their arms inward.",
+  "hint": "Conservation of angular momentum"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "When is angular momentum conserved?",
+  "back": "When the net external torque is zero: τ_net = dL/dt = 0 → L = constant.",
+  "hint": "No net external torque"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "Why does a figure skater spin faster when pulling arms in?",
+  "back": "Pulling arms in decreases $I$. Since $L = I\\omega$ is conserved, $\\omega$ must increase to keep $L$ constant!",
+  "hint": "Conservation: if I decreases, ω increases"
+ },
+ {
+  "topicSlug": "angular-momentum",
+  "front": "Why does a solid sphere roll down an incline faster than a hollow cylinder?",
+  "back": "Solid sphere has smaller $I$ relative to mass. Less energy goes to rotation, more to translation → higher speed.",
+  "hint": "Smaller moment of inertia wins the race"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "A wheel starts from rest and has angular acceleration $\\alpha = 2.0$ rad/s² for 5.0 s. Find its final angular velocity and the angle it turns through.",
+  "back": "$\\omega = \\omega_0 + \\alpha t = 0 + (2.0)(5.0) = 10$ rad/s. $\\theta = \\omega_0 t + \\frac{1}{2}\\alpha t^2 = \\frac{1}{2}(2.0)(5.0)^2 = 25$ rad.",
+  "hint": "Replace v→ω, a→α, x→θ"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "How are angular and linear quantities related?",
+  "back": "$s = r\\theta$ (arc length), $v = r\\omega$ (tangential speed), $a_t = r\\alpha$. Each linear quantity is the radius times its angular counterpart — valid only with angles in radians.",
+  "hint": "Multiply by r"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "How is linear velocity related to angular velocity?",
+  "back": "$v = r\\omega$ - tangential velocity equals radius times angular velocity.",
+  "hint": "v = rω"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "How is period related to angular velocity?",
+  "back": "$T = \\frac{2\\pi}{\\omega}$ - time for one complete rotation. Also: $\\omega = 2\\pi f$",
+  "hint": "2π divided by ω"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "How many radians in one complete revolution?",
+  "back": "$2\\pi$ radians = 360° = 1 revolution. Conversion: $\\theta_{rad} = \\theta_{deg} \\times \\frac{\\pi}{180}$",
+  "hint": "2π radians per revolution"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "MUST angles be in radians or degrees for rotational equations?",
+  "back": "MUST use RADIANS! Equations like $v = r\\omega$ and $s = r\\theta$ only work with radians.",
+  "hint": "Always radians!"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "What are the rotational kinematic equations (constant α)?",
+  "back": "$\\omega_f = \\omega_i + \\alpha t$; $\\theta = \\omega_i t + \\frac{1}{2}\\alpha t^2$; $\\omega_f^2 = \\omega_i^2 + 2\\alpha\\Delta\\theta$ - exactly analogous to linear equations!",
+  "hint": "Replace v→ω, a→α, x→θ"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "What is angular acceleration?",
+  "back": "The rate at which angular velocity changes: $\\alpha = \\Delta\\omega / \\Delta t$, in rad/s². It is nonzero only when the rotation is speeding up or slowing down.",
+  "hint": "Change in angular velocity per time"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "What is angular velocity?",
+  "back": "The rate at which angular position changes: $\\omega = \\Delta\\theta / \\Delta t$, in rad/s. Counterclockwise rotation is taken as positive.",
+  "hint": "Change in angle per time"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "What is tangential acceleration?",
+  "back": "$a_t = r\\alpha$ - component of acceleration tangent to circular path. Changes the speed.",
+  "hint": "r times angular acceleration"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "What is the difference between tangential and centripetal acceleration?",
+  "back": "$a_t = r\\alpha$ (changes speed, tangent to circle), $a_c = \\omega^2 r$ (changes direction, toward center). Total: $a = \\sqrt{a_t^2 + a_c^2}$",
+  "hint": "Tangential changes speed, centripetal changes direction"
+ },
+ {
+  "topicSlug": "rotational-kinematics",
+  "front": "What is the rolling without slipping condition?",
+  "back": "$v_{cm} = r\\omega$ - velocity of center of mass equals radius times angular velocity. Point of contact is instantaneously at rest.",
+  "hint": "v = rω for rolling"
+ },
+ {
+  "topicSlug": "torque-and-equilibrium",
+  "front": "Sign convention for torque in 2D problems?",
+  "back": "Counterclockwise rotation: positive (+). Clockwise rotation: negative (−).",
+  "hint": "Counterclockwise positive, clockwise negative"
+ },
+ {
+  "topicSlug": "torque-and-equilibrium",
+  "front": "What are the two conditions for complete static equilibrium?",
+  "back": "1) $\\sum \\vec{F} = 0$ (translational equilibrium), 2) $\\sum \\vec{\\tau} = 0$ (rotational equilibrium)",
+  "hint": "Zero net force AND zero net torque"
+ },
+ {
+  "topicSlug": "torque-and-equilibrium",
+  "front": "What are the units of torque?",
+  "back": "N·m (newton-meters). NOT joules! Same dimensions as energy but different physical meaning (vector vs scalar).",
+  "hint": "Newton-meters, not joules"
+ },
+ {
+  "topicSlug": "torque-and-equilibrium",
+  "front": "What is the condition for rotational equilibrium?",
+  "back": "$\\sum \\tau = 0$ - net torque equals zero. Object has no angular acceleration.",
+  "hint": "Sum of torques equals zero"
+ },
+ {
+  "topicSlug": "torque-and-equilibrium",
+  "front": "What is the lever arm?",
+  "back": "$r_{\\perp} = r\\sin\\theta$ - the perpendicular distance from axis to line of action of force. Also called moment arm.",
+  "hint": "Perpendicular distance to force line"
+ },
+ {
+  "topicSlug": "torque-and-equilibrium",
+  "front": "What is torque?",
+  "back": "$\\tau = rF\\sin\\theta$ - the rotational equivalent of force. Depends on force, distance from axis, and angle of application.",
+  "hint": "r times F times sine of angle"
+ },
+ {
+  "topicSlug": "torque-and-equilibrium",
+  "front": "When is torque maximum for a given force?",
+  "back": "When $\\theta = 90°$ (force perpendicular to position vector): $\\tau_{max} = rF$",
+  "hint": "Force perpendicular gives maximum"
+ },
+ {
+  "topicSlug": "torque-and-equilibrium",
+  "front": "When is torque zero?",
+  "back": "When $\\theta = 0°$ or $180°$ (force along line to axis). No lever arm means no torque!",
+  "hint": "Force along the line to axis"
+ },
+ {
+  "topicSlug": "torque-and-equilibrium",
+  "front": "Why are door handles far from hinges?",
+  "back": "To maximize lever arm $r$. Same force produces more torque, making it easier to open the door.",
+  "hint": "Maximize lever arm for easier rotation"
+ },
+ {
+  "topicSlug": "torque-and-equilibrium",
+  "front": "Why can you choose ANY point as the axis for torque calculations?",
+  "back": "In equilibrium, net torque is zero about ANY axis. Choose wisely to simplify (often where unknown forces act).",
+  "hint": "Smart choice simplifies calculations"
+ }
+]

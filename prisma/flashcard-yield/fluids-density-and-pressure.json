@@ -1,0 +1,62 @@
+[
+ {
+  "front": "1 atm in pascals?",
+  "fp": "1179ddd1e06c",
+  "yield": "MEDIUM",
+  "why": "1 atm in pascals; supporting fact"
+ },
+ {
+  "front": "Absolute pressure at depth $h$?",
+  "fp": "ea4ba70200de",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.1 absolute pressure at depth"
+ },
+ {
+  "front": "Density formula?",
+  "fp": "aa32750e489f",
+  "yield": "HIGH",
+  "why": "CED 8.1 density"
+ },
+ {
+  "front": "Density of water?",
+  "fp": "25a435738e83",
+  "yield": "MEDIUM",
+  "why": "Density of water; supporting fact"
+ },
+ {
+  "front": "Does pressure depend on container shape?",
+  "fp": "42268043f67c",
+  "yield": "HIGH",
+  "why": "CED 8.1 pressure depends on depth only"
+ },
+ {
+  "front": "Hydraulic lift relation?",
+  "fp": "dbc2f11f9929",
+  "yield": "MEDIUM",
+  "why": "Hydraulic lift; secondary"
+ },
+ {
+  "front": "Hydrostatic / gauge pressure at depth $h$?",
+  "fp": "a23f66426c76",
+  "yield": "HIGH",
+  "why": "CED 8.1 gauge pressure rho g h"
+ },
+ {
+  "front": "Pressure formula?",
+  "fp": "2ed1c633dbcf",
+  "yield": "HIGH",
+  "why": "CED 8.1 P = F/A"
+ },
+ {
+  "front": "State Pascal's principle.",
+  "fp": "cdec4ab4895b",
+  "yield": "MEDIUM",
+  "why": "Pascal's principle; secondary"
+ },
+ {
+  "front": "What is specific gravity (relative density)?",
+  "fp": "076bb3811a2c",
+  "yield": "LOW",
+  "why": "Specific gravity; not in the CED"
+ }
+]

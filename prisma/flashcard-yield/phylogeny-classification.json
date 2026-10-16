@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Distinguish homologous and analogous structures.",
+  "fp": "fc186d98799e",
+  "yield": "HIGH",
+  "why": "CED 7.9 homologous vs analogous"
+ },
+ {
+  "front": "What does a phylogenetic tree represent?",
+  "fp": "3ea5146dc30f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.9 reading phylogenetic trees"
+ },
+ {
+  "front": "What is a clade?",
+  "fp": "b93ede91772f",
+  "yield": "HIGH",
+  "why": "CED 7.9 clade"
+ },
+ {
+  "front": "What is a derived vs. ancestral character?",
+  "fp": "532cc4c095e1",
+  "yield": "HIGH",
+  "why": "CED 7.9 shared derived characters"
+ },
+ {
+  "front": "What is a molecular clock?",
+  "fp": "c8d588852a15",
+  "yield": "MEDIUM",
+  "why": "Molecular clock; secondary"
+ },
+ {
+  "front": "What is an outgroup and why include one?",
+  "fp": "a433661bb65c",
+  "yield": "HIGH",
+  "why": "CED 7.9 outgroup"
+ }
+]

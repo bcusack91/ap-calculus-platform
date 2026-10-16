@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Compare directional, stabilizing, and disruptive selection.",
+  "fp": "11bcabc62676",
+  "yield": "MEDIUM",
+  "why": "Modes of selection; borderline per trim, standard vocabulary"
+ },
+ {
+  "front": "Homologous vs. analogous structures?",
+  "fp": "2e9f9df71af5",
+  "yield": "HIGH",
+  "why": "CED 7.9/7.10 homologous vs analogous"
+ },
+ {
+  "front": "What are Darwin's key observations for natural selection?",
+  "fp": "22fb367c05ba",
+  "yield": "HIGH",
+  "why": "CED 7.2 conditions for natural selection"
+ },
+ {
+  "front": "What are five types of evidence for evolution?",
+  "fp": "6bb085763bc7",
+  "yield": "HIGH",
+  "why": "CED 7.8 evidence for evolution"
+ },
+ {
+  "front": "What are the Hardy-Weinberg conditions?",
+  "fp": "ebc22749532d",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.5 Hardy-Weinberg conditions"
+ },
+ {
+  "front": "What is evolution?",
+  "fp": "8599c2bf5a56",
+  "yield": "HIGH",
+  "why": "CED 7.1/7.4 evolution as allele-frequency change"
+ },
+ {
+  "front": "What is genetic drift?",
+  "fp": "063e10ca0552",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.4 genetic drift, bottleneck, founder"
+ },
+ {
+  "front": "What is the Hardy-Weinberg equation?",
+  "fp": "d057939714d4",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.5 Hardy-Weinberg equation; formula-sheet calc"
+ }
+]

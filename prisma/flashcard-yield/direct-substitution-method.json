@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Evaluate $\\lim_{x \\to 2} (x^2 + 3x - 1)$.",
+  "fp": "fad6eeba1072",
+  "yield": "MEDIUM",
+  "why": "Direct substitution example; basic"
+ },
+ {
+  "front": "What does it mean if direct substitution gives a nonzero number over zero, such as $\\frac{5}{0}$?",
+  "fp": "f406053aeccb",
+  "yield": "HIGH",
+  "why": "CED 1.14 nonzero over zero means asymptote"
+ },
+ {
+  "front": "What does it mean when you get $\\frac{0}{0}$ after direct substitution?",
+  "fp": "9d6cac96ad75",
+  "yield": "HIGH",
+  "why": "CED 1.6/1.7 0/0 is indeterminate"
+ },
+ {
+  "front": "What is the first method you should always try when evaluating a limit?",
+  "fp": "ed2d8cfefb5b",
+  "yield": "MEDIUM",
+  "why": "Try substitution first; basic tip"
+ },
+ {
+  "front": "What types of functions are always continuous?",
+  "fp": "ab80eb9df037",
+  "yield": "MEDIUM",
+  "why": "Continuous families; restatement"
+ },
+ {
+  "front": "When can you use direct substitution to evaluate a limit?",
+  "fp": "5a4137120b63",
+  "yield": "MEDIUM",
+  "why": "When substitution works; restatement"
+ }
+]

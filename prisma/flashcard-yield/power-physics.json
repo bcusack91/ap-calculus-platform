@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Define power and give its formula.",
+  "fp": "bf0cb89bc6ba",
+  "yield": "HIGH",
+  "why": "CED 3.6 power definition"
+ },
+ {
+  "front": "Give power in terms of force and velocity.",
+  "fp": "c4631f50a8e1",
+  "yield": "HIGH",
+  "why": "CED 3.6 P = Fv"
+ },
+ {
+  "front": "How does machine efficiency relate to power?",
+  "fp": "a418dc905784",
+  "yield": "MEDIUM",
+  "why": "Efficiency; secondary"
+ },
+ {
+  "front": "How much power lifts a 50 kg mass 2 m in 4 s ($g = 10$)?",
+  "fp": "9841073c8e45",
+  "yield": "MEDIUM",
+  "why": "Power example; restates power card"
+ },
+ {
+  "front": "What is a kilowatt-hour a unit of?",
+  "fp": "e5e46af8461b",
+  "yield": "LOW",
+  "why": "Kilowatt-hour as energy; trivia"
+ },
+ {
+  "front": "What is the difference between energy and power?",
+  "fp": "0f73a5fd0b5b",
+  "yield": "MEDIUM",
+  "why": "Energy vs power; restatement"
+ }
+]

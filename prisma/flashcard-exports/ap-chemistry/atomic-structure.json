@@ -1,0 +1,293 @@
+[
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Balmer series — $n_f$ and EM region",
+  "back": "$n_f = 2$; the brightest lines are **visible** (656, 486, 434, 410 nm).",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Bohr energy formula for hydrogen",
+  "back": "$E_n = -2.18 \\times 10^{-18}/n^{2}$ J $= -13.6/n^{2}$ eV.",
+  "lessonPart": 3
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Continuous vs. line spectrum — source?",
+  "back": "Continuous: hot, dense source (solid, liquid, dense gas). Line: isolated atoms in a low-density gas.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Converting photon energy from J to kJ/mol",
+  "back": "Multiply by $N_A = 6.022 \\times 10^{23}$, then divide by 1000.",
+  "lessonPart": 6
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Effective nuclear charge $Z_\\text{eff}$",
+  "back": "$Z_\\text{eff} = Z - S$ (S = shielding from inner electrons). Determines orbital binding energies in multi-electron atoms.",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "How does photon energy change with wavelength?",
+  "back": "Inversely. Shorter $\\lambda$ → higher $\\nu$ → higher $E$.",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Identifying an element from a PES spectrum",
+  "back": "Sum peak heights → total electrons → $Z$. Match each peak's position and height to a subshell (1s, 2s, 2p, 3s, …) to write the configuration.",
+  "lessonPart": 7
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "In a PES spectrum, peak HEIGHT represents…",
+  "back": "The **number of electrons** in that subshell.",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "In a PES spectrum, peak POSITION represents…",
+  "back": "The **binding energy** of electrons in that subshell. Higher BE = closer to the nucleus.",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Ionization energy of hydrogen",
+  "back": "$|E_1| = 2.18 \\times 10^{-18}$ J = 13.6 eV per atom = 1310 kJ/mol.",
+  "lessonPart": 3
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Lyman series — $n_f$ and EM region",
+  "back": "$n_f = 1$; lines fall in the **ultraviolet** (e.g., 121.6 nm Lyα).",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Paschen series — $n_f$ and EM region",
+  "back": "$n_f = 3$; lines fall in the **infrared** (e.g., 1875 nm).",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "PES key equation",
+  "back": "Binding energy = photon energy − ejected-electron KE: $BE = h\\nu - KE$.",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Photon energy formula",
+  "back": "$E = h\\nu = hc/\\lambda$, with $h = 6.626 \\times 10^{-34}$ J·s.",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Rydberg formula",
+  "back": "$1/\\lambda = R_H\\,(1/n_f^{2} - 1/n_i^{2})$, $R_H = 1.097 \\times 10^{7}$ m⁻¹.",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Visible-light wavelength range",
+  "back": "~400 nm (violet, high E) to ~700 nm (red, low E).",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Wave–frequency relation for light",
+  "back": "$c = \\lambda\\nu$, with $c = 3.00 \\times 10^{8}$ m/s.",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "What produces a line emission spectrum?",
+  "back": "Excited electrons relax from higher to lower quantized levels, emitting photons of energy $\\Delta E = E_i - E_f$.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "What produces an absorption spectrum?",
+  "back": "Cool atoms absorb photons matching allowed energy gaps; missing wavelengths appear as dark lines on a continuous background.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Why are Bohr energies negative?",
+  "back": "The electron is bound to the nucleus. Zero energy corresponds to ionization ($n = \\infty$).",
+  "lessonPart": 3
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Why are line spectra \"atomic fingerprints\"?",
+  "back": "Each element has a unique set of energy gaps, producing a unique pattern of spectral lines.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Why does quantization → line spectra?",
+  "back": "Only discrete energy gaps are allowed, so only photons of specific energies (and wavelengths) can be emitted or absorbed.",
+  "lessonPart": 3
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Why doesn't Bohr work for multi-electron atoms?",
+  "back": "It ignores e⁻–e⁻ repulsion, shielding, and subshell splitting. It only works for one-electron systems (H, He⁺, Li²⁺).",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "atomic-spectra",
+  "front": "Within a spectral series, which transition gives the longest-wavelength line?",
+  "back": "The one with the smallest energy gap, $n_i = n_f + 1$ — e.g. $3 \\to 2$ produces the 656 nm Balmer-$\\alpha$ line. The shortest wavelength in a series comes from $n_i = \\infty$ (the series limit).",
+  "lessonPart": 6
+ },
+ {
+  "topicSlug": "electron-configuration",
+  "front": "How many electrons can each sublevel hold? (s, p, d, f)",
+  "back": "s: 2 electrons (1 orbital), p: 6 electrons (3 orbitals), d: 10 electrons (5 orbitals), f: 14 electrons (7 orbitals)"
+ },
+ {
+  "topicSlug": "electron-configuration",
+  "front": "What are the three fundamental subatomic particles and their charges?",
+  "back": "Proton (+1), Neutron (0), Electron (-1). Protons and neutrons are in the nucleus; electrons are in the electron cloud."
+ },
+ {
+  "topicSlug": "electron-configuration",
+  "front": "What are valence electrons?",
+  "back": "Electrons in the outermost shell (highest $n$ value). They determine chemical properties and bonding behavior."
+ },
+ {
+  "topicSlug": "electron-configuration",
+  "front": "What is Hund's Rule?",
+  "back": "When filling orbitals of equal energy, place one electron in each orbital before pairing. This maximizes unpaired electrons."
+ },
+ {
+  "topicSlug": "electron-configuration",
+  "front": "What is the Aufbau Principle?",
+  "back": "Electrons fill orbitals in order of increasing energy, starting with the lowest energy orbital (1s) first."
+ },
+ {
+  "topicSlug": "electron-configuration",
+  "front": "What is the Pauli Exclusion Principle?",
+  "back": "No two electrons in an atom can have the same four quantum numbers. This means each orbital can hold a maximum of 2 electrons with opposite spins."
+ },
+ {
+  "topicSlug": "electron-configuration",
+  "front": "When forming cations, which electrons are removed first?",
+  "back": "Electrons are removed from the highest principal energy level (highest $n$) first. For transition metals, remove $s$ electrons before $d$ electrons."
+ },
+ {
+  "topicSlug": "electron-configuration",
+  "front": "Why do Cr and Cu have anomalous electron configurations?",
+  "back": "Cr: $[Ar] 4s^1 3d^5$ and Cu: $[Ar] 4s^1 3d^{10}$ because half-filled and fully-filled d sublevels are more stable than expected configurations."
+ },
+ {
+  "topicSlug": "moles-molar-mass",
+  "front": "A chemist has 45.0 g of hydrated copper(II) sulfate (CuSO₄·5H₂O). (a) Calculate the number of moles of the hydrated compound. (b) How many moles of water molecules are in the sample? (c) What mass of anhydrous CuSO₄ would remain if all the water were removed?",
+  "back": "(a) **Moles of hydrated compound:**\n- Molar mass of CuSO₄·5H₂O = 63.55 + 32.07 + 4(16.00) + 5(18.02) = 249.72 g/mol\n- Moles = 45.0 g ÷ 249.72 g/mol = **0.180 mol**\n\n(b) **Moles of water:**\n- Each formula unit has 5 water molecules\n- Moles of H₂O = 0.180 mol × 5 = **0.900 mol**\n\n(c) **Mass of anhydrous CuSO₄:**\n- Molar mass of CuSO₄ = 63.55 + 32.07 + 4(16.00) = 159.62 g/mol\n- Mass = 0.180 mol × 159.62 g/mol = **28.7 g**"
+ },
+ {
+  "topicSlug": "moles-molar-mass",
+  "front": "A sample contains 2.50 moles of calcium carbonate (CaCO₃). (a) Calculate the mass of this sample in grams. (b) How many formula units of CaCO₃ are present? (c) How many total atoms are in this sample?",
+  "back": "(a) **Mass calculation:**\n- Molar mass of CaCO₃ = Ca + C + 3(O) = 40.08 + 12.01 + 3(16.00) = 100.09 g/mol\n- Mass = moles × molar mass = 2.50 mol × 100.09 g/mol = **250 g**\n\n(b) **Formula units:**\n- Use Avogadro's number: 6.022 × 10²³ formula units/mol\n- Formula units = 2.50 mol × 6.022 × 10²³ = **1.51 × 10²⁴ formula units**\n\n(c) **Total atoms:**\n- Each CaCO₃ has 5 atoms (1 Ca + 1 C + 3 O)\n- Total atoms = 1.51 × 10²⁴ × 5 = **7.53 × 10²⁴ atoms**"
+ },
+ {
+  "topicSlug": "moles-molar-mass",
+  "front": "How do you convert grams to moles?",
+  "back": "$n = \\frac{\\text{mass (g)}}{\\text{molar mass (g/mol)}}$",
+  "hint": "Divide mass by molar mass."
+ },
+ {
+  "topicSlug": "moles-molar-mass",
+  "front": "If 180 g of glucose ($C_6H_{12}O_6$, MM = 180 g/mol) is dissolved, how many moles is that?",
+  "back": "**1 mol**\n\n$n = m/M = 180/180 = 1$ mol."
+ },
+ {
+  "topicSlug": "moles-molar-mass",
+  "front": "What is Avogadro's number?",
+  "back": "$6.022 \\times 10^{23}$ particles per mole.",
+  "hint": "This defines a mole of any substance."
+ },
+ {
+  "topicSlug": "periodic-trends",
+  "front": "How does the size of a cation compare to its neutral atom?",
+  "back": "Cations are ALWAYS smaller than their parent atoms. Losing electrons means same nuclear charge pulls fewer electrons, reducing electron-electron repulsion."
+ },
+ {
+  "topicSlug": "periodic-trends",
+  "front": "How does the size of an anion compare to its neutral atom?",
+  "back": "Anions are ALWAYS larger than their parent atoms. Gaining electrons increases electron-electron repulsion while nuclear charge stays the same."
+ },
+ {
+  "topicSlug": "periodic-trends",
+  "front": "What is an isoelectronic series and how does size vary?",
+  "back": "Species with same number of electrons (e.g., O²⁻, F⁻, Ne, Na⁺, Mg²⁺). As nuclear charge increases, radius decreases."
+ },
+ {
+  "topicSlug": "periodic-trends",
+  "front": "What is electron affinity and its general trend?",
+  "back": "The energy change when a neutral atom gains an electron. It generally becomes more negative (more favorable) left to right across a period, with the halogens most negative. Cl has the most negative EA of any element (about −349 kJ/mol), just beyond F; noble gases are near zero or positive."
+ },
+ {
+  "topicSlug": "periodic-trends",
+  "front": "What is electronegativity and what is its trend?",
+  "back": "Ability to attract electrons in a bond. Increases across a period and decreases down a group. F is most electronegative (4.0), Cs is least (0.7)."
+ },
+ {
+  "topicSlug": "periodic-trends",
+  "front": "What is ionization energy and what is its trend?",
+  "back": "Energy required to remove an electron. Increases across a period (left to right) and decreases down a group. He has the highest IE."
+ },
+ {
+  "topicSlug": "periodic-trends",
+  "front": "What is the trend for atomic radius across a period and down a group?",
+  "back": "Across a period (left to right): DECREASES due to increasing nuclear charge. Down a group: INCREASES due to additional electron shells."
+ },
+ {
+  "topicSlug": "periodic-trends",
+  "front": "Why is there a large jump in successive ionization energies?",
+  "back": "When an electron is removed from a filled inner shell (core electrons), it requires significantly more energy. The position of the jump reveals the number of valence electrons."
+ },
+ {
+  "topicSlug": "photoelectron-spectroscopy",
+  "front": "How can you identify an element from its PES spectrum?",
+  "back": "Add all the peak heights to get the total electrons (= atomic number for a neutral atom). Then assign peaks starting at the highest binding energy (far left on AP plots) as 1s, then 2s, 2p, …, write the configuration, and read off the element."
+ },
+ {
+  "topicSlug": "photoelectron-spectroscopy",
+  "front": "How do you determine the number of occupied sublevels from PES?",
+  "back": "Number of peaks = number of occupied sublevels. For example, 4 peaks means 4 occupied orbitals (like 1s, 2s, 2p, 3s)."
+ },
+ {
+  "topicSlug": "photoelectron-spectroscopy",
+  "front": "How does binding energy change across a period?",
+  "back": "Binding energy INCREASES across a period (left to right) because more protons create stronger nuclear charge while shielding remains similar."
+ },
+ {
+  "topicSlug": "photoelectron-spectroscopy",
+  "front": "What does a PES spectrum measure?",
+  "back": "Photoelectron Spectroscopy measures the energy required to remove electrons from different orbitals. X-axis shows binding energy (IE), Y-axis shows number of electrons."
+ },
+ {
+  "topicSlug": "photoelectron-spectroscopy",
+  "front": "What does each peak in a PES spectrum represent?",
+  "back": "Each peak represents electrons in a specific orbital/sublevel. Peak position (x) = binding energy, peak height (y) = number of electrons in that orbital."
+ },
+ {
+  "topicSlug": "photoelectron-spectroscopy",
+  "front": "What is the equation relating photon energy, ionization energy, and kinetic energy in PES?",
+  "back": "E_photon = IE + KE, or rearranged: IE = E_photon - KE. Lower KE of ejected electron means higher binding energy (ionization energy)."
+ },
+ {
+  "topicSlug": "photoelectron-spectroscopy",
+  "front": "Which peak has the highest binding energy in a PES spectrum?",
+  "back": "The 1s peak — core electrons closest to the nucleus. AP-style PES plots run with binding energy increasing to the left, so the 1s peak sits farthest left, and all core peaks lie left of the valence peaks."
+ },
+ {
+  "topicSlug": "photoelectron-spectroscopy",
+  "front": "Why do 2s electrons show a higher binding energy than 2p electrons?",
+  "back": "2s electrons penetrate closer to the nucleus and are less shielded by the core, so they are held more tightly — their PES peak appears at a higher binding energy than the 2p peak."
+ }
+]

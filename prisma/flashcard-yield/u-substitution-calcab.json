@@ -1,0 +1,44 @@
+[
+ {
+  "front": "$\\int \\sin x \\cos x\\,dx$ using $u = \\sin x$?",
+  "fp": "23bd550461a9",
+  "yield": "MEDIUM",
+  "why": "u-sub example; restatement"
+ },
+ {
+  "front": "Evaluate $\\displaystyle\\int \\dfrac{2x + 1}{x^2 + x + 5}\\,dx$.",
+  "fp": "96374019569a",
+  "yield": "HIGH",
+  "why": "CED 6.9 u'/u pattern gives ln"
+ },
+ {
+  "front": "Evaluate $\\displaystyle\\int \\dfrac{e^x}{e^x + 1}\\,dx$.",
+  "fp": "78445b9694a3",
+  "yield": "MEDIUM",
+  "why": "u-sub to ln; restatement"
+ },
+ {
+  "front": "Evaluate $\\displaystyle\\int_0^1 xe^{x^2}\\,dx$.",
+  "fp": "88a61ca8cda2",
+  "yield": "HIGH",
+  "why": "CED 6.9 definite integral u-sub"
+ },
+ {
+  "front": "What is $\\displaystyle\\int \\cos(2x)\\,dx$?",
+  "fp": "2daa2831fcd6",
+  "yield": "MEDIUM",
+  "why": "Linear u-sub; restatement"
+ },
+ {
+  "front": "What is $\\displaystyle\\int \\dfrac{x}{x^2 + 4}\\,dx$?",
+  "fp": "2c67ae7b0839",
+  "yield": "MEDIUM",
+  "why": "u-sub to ln; restatement"
+ },
+ {
+  "front": "What is the key idea of $u$-substitution?",
+  "fp": "d31541b51a39",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.9 u-sub reverses the chain rule"
+ }
+]

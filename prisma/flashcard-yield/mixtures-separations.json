@@ -1,0 +1,38 @@
+[
+ {
+  "front": "How do you separate sand, salt, and a subliming organic compound?",
+  "fp": "b6679edffdc9",
+  "yield": "MEDIUM",
+  "why": "Separation sequence puzzle; secondary"
+ },
+ {
+  "front": "How does column chromatography work and what elutes first?",
+  "fp": "b758bb784c4a",
+  "yield": "HIGH",
+  "why": "CED 3.10 column chromatography"
+ },
+ {
+  "front": "How does paper chromatography separate components and what does Rf mean?",
+  "fp": "dcd5aff8eff6",
+  "yield": "HIGH",
+  "why": "CED 3.10 paper chromatography and Rf"
+ },
+ {
+  "front": "What is an azeotrope and why does it matter for distillation?",
+  "fp": "8ebbbff3156a",
+  "yield": "LOW",
+  "why": "OFF-EXAM: azeotropes not in the CED"
+ },
+ {
+  "front": "What is fractional distillation and when is it better than simple distillation?",
+  "fp": "b6f685236451",
+  "yield": "LOW",
+  "why": "Fractional distillation detail; beyond CED 3.10"
+ },
+ {
+  "front": "When should you use distillation vs. filtration vs. chromatography?",
+  "fp": "dc9d997af11d",
+  "yield": "MEDIUM",
+  "why": "Choosing a separation method; secondary"
+ }
+]

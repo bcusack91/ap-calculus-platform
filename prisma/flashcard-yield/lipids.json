@@ -1,0 +1,44 @@
+[
+ {
+  "front": "How do phospholipids form cell membranes?",
+  "fp": "f542c026c7a2",
+  "yield": "HIGH",
+  "why": "CED 2.4 phospholipid bilayer orientation"
+ },
+ {
+  "front": "Saturated vs. unsaturated fatty acids?",
+  "fp": "554e22df8fcd",
+  "yield": "HIGH",
+  "why": "CED 1.6 saturated vs unsaturated"
+ },
+ {
+  "front": "What is the basic structure of steroids?",
+  "fp": "e12a5ac00681",
+  "yield": "MEDIUM",
+  "why": "Steroid ring structure; secondary"
+ },
+ {
+  "front": "What is the structure of a phospholipid?",
+  "fp": "bfe503dfb919",
+  "yield": "HIGH",
+  "why": "CED 1.6 phospholipid amphipathic structure"
+ },
+ {
+  "front": "What is the structure of a triglyceride?",
+  "fp": "fca4ee8e05e8",
+  "yield": "MEDIUM",
+  "why": "Triglyceride structure; secondary"
+ },
+ {
+  "front": "What makes lipids hydrophobic?",
+  "fp": "83ad821f19aa",
+  "yield": "HIGH",
+  "why": "CED 1.6 nonpolar lipids hydrophobic"
+ },
+ {
+  "front": "Why do fats store more energy per gram than carbohydrates?",
+  "fp": "71affe0fe53b",
+  "yield": "LOW",
+  "why": "kcal/g figures; not in the CED"
+ }
+]

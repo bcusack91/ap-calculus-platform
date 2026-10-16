@@ -1,0 +1,32 @@
+[
+ {
+  "front": "Calculate pH when $[\\text{H}^+] = 1 \\times 10^{-3}\\ \\text{M}$",
+  "fp": "b9c834259e11",
+  "yield": "LOW",
+  "why": "pH arithmetic not in CED 1.1 (owner borderline)"
+ },
+ {
+  "front": "Define cohesion vs. adhesion.",
+  "fp": "73e00922cfe7",
+  "yield": "HIGH",
+  "why": "CED 1.1 cohesion vs adhesion"
+ },
+ {
+  "front": "What causes water to be polar?",
+  "fp": "fa5ef54aa0be",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.1 water polarity/H bonding; tested every exam"
+ },
+ {
+  "front": "What makes water an excellent solvent?",
+  "fp": "273c4396ad86",
+  "yield": "HIGH",
+  "why": "CED 1.1 water as solvent"
+ },
+ {
+  "front": "Why does ice float on liquid water?",
+  "fp": "419a9c4ef5a9",
+  "yield": "MEDIUM",
+  "why": "Ice floating; borderline for CED 1.1"
+ }
+]

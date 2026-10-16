@@ -1,0 +1,50 @@
+[
+ {
+  "front": "(a) Calculate the pH of a solution with [H⁺] = 2.5 × 10⁻⁴ M. (b) Calculate the pOH. (c) Is this solution acidic, basic, or neutral?",
+  "fp": "b4f390caeef2",
+  "yield": "HIGH",
+  "why": "CED 8.1 pH/pOH from [H+]; routine calculation"
+ },
+ {
+  "front": "A Brønsted-Lowry acid is a:",
+  "fp": "f8564236bf54",
+  "yield": "HIGH",
+  "why": "CED 8.1/8.2 Bronsted-Lowry acid as proton donor"
+ },
+ {
+  "front": "According to the Brønsted-Lowry definition, an acid is:",
+  "fp": "3e03a7cd76e0",
+  "yield": "MEDIUM",
+  "why": "Restates Bronsted-Lowry card"
+ },
+ {
+  "front": "Calculate the pH of a 0.025 M HCl solution. Assume HCl is a strong acid that completely dissociates.",
+  "fp": "994d724ff77c",
+  "yield": "HIGH",
+  "why": "CED 8.2 strong-acid pH calculation"
+ },
+ {
+  "front": "pH + pOH =",
+  "fp": "9c45e295a9f5",
+  "yield": "MEDIUM",
+  "why": "pH + pOH = 14; restates pH formula card"
+ },
+ {
+  "front": "pH formula?",
+  "fp": "2f7e78377682",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.1 pH/pOH definitions; used on every exam"
+ },
+ {
+  "front": "What is $K_w$ at 25°C?",
+  "fp": "bedc04cdec8a",
+  "yield": "HIGH",
+  "why": "CED 8.1 Kw value"
+ },
+ {
+  "front": "Which of the following is classified as a Lewis acid?",
+  "fp": "ceaf7b7ddfb4",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Lewis acid-base not assessed (CED 4.8 exclusion; ruling R12)"
+ }
+]

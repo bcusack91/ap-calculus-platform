@@ -1,0 +1,78 @@
+[
+ {
+  "topicSlug": "galvanic-cells-thermo-applications",
+  "front": "How are $\\Delta G^\\circ$, $K$, and $E^\\circ_{\\text{cell}}$ related?",
+  "back": "$\\Delta G^\\circ = -RT\\ln K = -nFE^\\circ_{\\text{cell}}$. So $E^\\circ_{\\text{cell}} > 0 \\iff \\Delta G^\\circ < 0 \\iff K > 1$; at 25 °C this gives $\\log K = nE^\\circ_{\\text{cell}}/0.0592$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "galvanic-cells-thermo-applications",
+  "front": "How does the Nernst equation adjust cell potential for non-standard concentrations?",
+  "back": "$E = E^\\circ - \\frac{RT}{nF}\\ln Q$, which at 25 °C becomes $E = E^\\circ - \\frac{0.0592}{n}\\log Q$. As the cell runs, $Q$ rises and $E$ falls; at equilibrium $Q = K$ and $E = 0$ — a dead battery.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "galvanic-cells-thermo-applications",
+  "front": "In a table of standard reduction potentials, which species is the strongest oxidizing agent?",
+  "back": "The one with the most positive $E^\\circ$ at the top of the table (e.g. $\\text{F}_2$, $+2.87$ V) — it is reduced most easily. The most negative $E^\\circ$ (e.g. $\\text{Li}^+/\\text{Li}$, $-3.04$ V) identifies the strongest reducing agent.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "galvanic-cells-thermo-applications",
+  "front": "What are practical applications of galvanic cells?",
+  "back": "Batteries (portable galvanic cells), fuel cells, and corrosion protection (sacrificial anodes that oxidize instead of the protected metal).",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "galvanic-cells-thermo-applications",
+  "front": "What equation links standard cell potential to standard free-energy change?",
+  "back": "$\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}$, with $n$ = moles of electrons transferred and $F = 96{,}485$ C/mol. Example: $n = 2$, $E^\\circ = +1.10$ V gives $\\Delta G^\\circ \\approx -212$ kJ/mol (spontaneous)."
+ },
+ {
+  "topicSlug": "spontaneity-free-energy-applications",
+  "front": "At what temperature does a reaction switch between favorable and unfavorable?",
+  "back": "When $\\Delta H$ and $\\Delta S$ have the same sign, $\\Delta G = 0$ at $T = \\frac{\\Delta H}{\\Delta S}$. Above that temperature the $T\\Delta S$ term dominates, so an endothermic reaction with $\\Delta S > 0$ is favorable only when $T > \\frac{\\Delta H}{\\Delta S}$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "spontaneity-free-energy-applications",
+  "front": "Give an example of a thermodynamically favorable process and its ΔG°.",
+  "back": "ATP hydrolysis: $\\Delta G^\\circ \\approx -30.5\\ \\text{kJ/mol}$ — spontaneous under standard conditions, which is why cells couple it to unfavorable reactions.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "spontaneity-free-energy-applications",
+  "front": "How do you calculate $\\Delta G^\\circ_{\\text{rxn}}$ from standard free energies of formation?",
+  "back": "$\\Delta G^\\circ_{\\text{rxn}} = \\sum n\\,\\Delta G^\\circ_f(\\text{products}) - \\sum n\\,\\Delta G^\\circ_f(\\text{reactants})$, where each term is multiplied by its coefficient $n$ and $\\Delta G^\\circ_f = 0$ for an element in its standard state.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "spontaneity-free-energy-applications",
+  "front": "How do you find $\\Delta G$ when a reaction is not at standard conditions?",
+  "back": "$\\Delta G = \\Delta G^\\circ + RT\\ln Q$, where $Q$ is the reaction quotient. At equilibrium $Q = K$ and $\\Delta G = 0$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "spontaneity-free-energy-applications",
+  "front": "How does reaction coupling drive a process with $\\Delta G > 0$?",
+  "back": "Couple it to a strongly favorable reaction that shares a common intermediate. Free energies add, so the overall process runs whenever the sum of the $\\Delta G$ values is negative — this is how blast furnaces reduce $\\text{Fe}_2\\text{O}_3$ using CO oxidation.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "spontaneity-free-energy-applications",
+  "front": "How is $\\Delta G^\\circ$ related to the equilibrium constant $K$?",
+  "back": "$\\Delta G^\\circ = -RT\\ln K$. So $K > 1$ gives $\\Delta G^\\circ < 0$ (products favored), $K < 1$ gives $\\Delta G^\\circ > 0$, and $K = 1$ gives $\\Delta G^\\circ = 0$.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "spontaneity-free-energy-applications",
+  "front": "How is $\\Delta G^\\circ$ related to the standard cell potential $E^\\circ_{\\text{cell}}$?",
+  "back": "$\\Delta G^\\circ = -nFE^\\circ_{\\text{cell}}$, where $n$ is the moles of electrons transferred and $F = 96{,}485$ C/mol. A positive $E^\\circ_{\\text{cell}}$ therefore means a negative $\\Delta G^\\circ$ (favorable).",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "spontaneity-free-energy-applications",
+  "front": "What equation relates Gibbs free energy to enthalpy and entropy?",
+  "back": "$\\Delta G = \\Delta H - T\\Delta S$, with $T$ in kelvin. A process is thermodynamically favorable when $\\Delta G < 0$."
+ }
+]

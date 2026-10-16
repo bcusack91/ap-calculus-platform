@@ -5,14 +5,15 @@
  *
  * Prints: label distribution per in-scope topic; labeled cards OUTSIDE scope
  * (must be 0); unlabeled cards INSIDE scope (must be 0 once applied); and,
- * for every student with MCAT progress rows, their queue counted both ways —
+ * for every student with progress rows in a yield course (MCAT and the four
+ * flagship AP decks), their queue counted both ways —
  * everything vs. served-only — so "due today 312 -> 197" can be seen for real
  * students without touching their data.
  */
 import { config } from 'dotenv'
 config({ path: process.env.PROD ? '.env' : '.env.local', override: true })
 import { PrismaClient } from '@prisma/client'
-import { loadScopedExport } from '../src/lib/flashcard-yield-artifact'
+import { YIELD_COURSES, loadScopedExport } from '../src/lib/flashcard-yield-artifact'
 import { DEFAULT_YIELD_PREFS, servedProgressWhere } from '../src/lib/flashcard-yield'
 
 async function main() {
@@ -45,13 +46,13 @@ async function main() {
   console.log(`\nlabeled cards outside scope: ${stray} (must be 0)`)
   console.log(`unlabeled cards inside scope: ${unlabeledInScope} (must be 0 once applied)`)
 
-  // Students who hold MCAT cards: queue size with and without the filter.
+  // Students who hold yield-course cards: queue size with and without the filter.
   const students = await prisma.flashcardProgress.groupBy({
     by: ['userId', 'context'],
-    where: { flashcard: { topic: { category: { course: { slug: 'mcat-prep' } } } } },
+    where: { flashcard: { topic: { category: { course: { slug: { in: YIELD_COURSES } } } } } },
     _count: { _all: true },
   })
-  console.log(`\nMCAT decks (student x context): ${students.length}`)
+  console.log(`\nyield-course decks (student x context): ${students.length}`)
   const now = new Date()
   for (const s of students.slice(0, 40)) {
     const base = { userId: s.userId, context: s.context }

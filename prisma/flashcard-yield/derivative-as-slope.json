@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Find the equation of the tangent line to $f(x) = x^2$ at $x = 3$.",
+  "fp": "4958e0149278",
+  "yield": "HIGH",
+  "why": "CED 2.2 tangent line example"
+ },
+ {
+  "front": "How do you find the equation of a tangent line at point (a, f(a))?",
+  "fp": "a23eafcb7b5b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.2 tangent-line equation"
+ },
+ {
+  "front": "If a tangent line has slope m, what is the slope of the normal line?",
+  "fp": "33ecbdba733c",
+  "yield": "LOW",
+  "why": "Normal line slope; not in the CED"
+ },
+ {
+  "front": "The graph of $f$ has a sharp corner at $x = 2$. What does that tell you about $f'(2)$?",
+  "fp": "a6eeb86eaa9d",
+  "yield": "HIGH",
+  "why": "CED 2.4 no derivative at a corner"
+ },
+ {
+  "front": "What does it mean when f'(a) = 0?",
+  "fp": "80394ac6d8ff",
+  "yield": "MEDIUM",
+  "why": "f'(a) = 0 horizontal tangent; restatement"
+ },
+ {
+  "front": "What does the derivative tell you about the tangent line?",
+  "fp": "036aa3e497f3",
+  "yield": "HIGH",
+  "why": "CED 2.1 derivative as tangent slope"
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "front": "For $f(x) = x^2$ on $[0, 4]$, find the $c$ guaranteed by MVT.",
+  "fp": "cc4877b93f60",
+  "yield": "MEDIUM",
+  "why": "MVT example; restatement"
+ },
+ {
+  "front": "If $f$ is continuous on $[0, 4]$, differentiable on $(0, 4)$, and $f(0) = 1$, $f(4) = 9$, the Mean Value Theorem guarantees there is a $c$ in $(0, 4)$ where $f'(c) =$",
+  "fp": "bd93c426d205",
+  "yield": "HIGH",
+  "why": "CED 5.1 MVT from given values"
+ },
+ {
+  "front": "If $f$ is continuous on $[a,b]$, $f(a) > 0$, and $f(b) > 0$, can we conclude there is no $c \\in (a,b)$ with $f(c) = 0$?",
+  "fp": "0bef918d0efe",
+  "yield": "HIGH",
+  "why": "CED 1.16 IVT misread"
+ },
+ {
+  "front": "MVT conclusion: there exists $c \\in (a, b)$ such that:",
+  "fp": "0351e21bab68",
+  "yield": "MEDIUM",
+  "why": "Restates MVT conclusion"
+ },
+ {
+  "front": "Rolle's Theorem guarantees a zero of $f'$ on $(a,b)$ when:",
+  "fp": "a6d84769063a",
+  "yield": "MEDIUM",
+  "why": "Rolle's hypotheses; special case"
+ },
+ {
+  "front": "State the Mean Value Theorem, including its hypotheses.",
+  "fp": "a2b438fdbf08",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.1 MVT with hypotheses; FRQ justification"
+ }
+]

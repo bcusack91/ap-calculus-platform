@@ -1,0 +1,62 @@
+[
+ {
+  "front": "For a satellite calculation, should you use Earth's radius or the distance from Earth's center?",
+  "fp": "eeb489e80665",
+  "yield": "MEDIUM",
+  "why": "Use distance from center; technique detail"
+ },
+ {
+  "front": "How does gravitational force change if the distance between two objects doubles?",
+  "fp": "dd29d94a8134",
+  "yield": "HIGH",
+  "why": "CED 2.6 inverse-square scaling"
+ },
+ {
+  "front": "How does orbital speed depend on orbital radius?",
+  "fp": "4a9632c0a9c3",
+  "yield": "MEDIUM",
+  "why": "Orbital speed vs radius; secondary"
+ },
+ {
+  "front": "What is escape velocity?",
+  "fp": "db37f60d45d9",
+  "yield": "MEDIUM",
+  "why": "Escape speed from energy conservation with U = -GMm/r (CED 3.4); reviewer fix"
+ },
+ {
+  "front": "What is gravitational field strength $g$?",
+  "fp": "7b133e1cbdc2",
+  "yield": "HIGH",
+  "why": "CED 2.6 g = GM/r^2"
+ },
+ {
+  "front": "What is Newton's Law of Universal Gravitation?",
+  "fp": "264b42b4934b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.6 universal gravitation; equation-sheet staple"
+ },
+ {
+  "front": "What is the difference between mass and weight?",
+  "fp": "4a06f5cef31c",
+  "yield": "MEDIUM",
+  "why": "Mass vs weight; prerequisite"
+ },
+ {
+  "front": "What is the orbital period formula?",
+  "fp": "2edce2182420",
+  "yield": "MEDIUM",
+  "why": "Orbital period/Kepler's third law; secondary"
+ },
+ {
+  "front": "What is the orbital speed for a circular orbit?",
+  "fp": "e8eff198bfaa",
+  "yield": "HIGH",
+  "why": "CED 2.9 circular orbital speed"
+ },
+ {
+  "front": "Why do astronauts feel \"weightless\" on the ISS if gravity is still 89% of Earth's surface value?",
+  "fp": "7728bd68dfd6",
+  "yield": "MEDIUM",
+  "why": "Apparent weightlessness; secondary"
+ }
+]

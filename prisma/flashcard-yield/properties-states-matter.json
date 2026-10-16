@@ -1,0 +1,44 @@
+[
+ {
+  "front": "How do IMFs affect viscosity and surface tension?",
+  "fp": "c2ac13c09242",
+  "yield": "LOW",
+  "why": "Viscosity/surface tension; owner-borderline (C) item"
+ },
+ {
+  "front": "What are the four types of crystalline solids and their properties?",
+  "fp": "18925a9cb133",
+  "yield": "HIGH",
+  "why": "CED 3.1/3.2 types of solids and properties"
+ },
+ {
+  "front": "What determines the state of matter (solid, liquid, or gas)?",
+  "fp": "3589f3536bca",
+  "yield": "HIGH",
+  "why": "CED 3.3 KE vs IMF sets state"
+ },
+ {
+  "front": "What happens during the plateaus on a heating curve?",
+  "fp": "247485c3223f",
+  "yield": "HIGH",
+  "why": "CED 6.5 heating-curve plateaus"
+ },
+ {
+  "front": "What is the relationship between ΔHvap and ΔHfus?",
+  "fp": "6bf2b3bcec1f",
+  "yield": "MEDIUM",
+  "why": "dHvap > dHfus; secondary"
+ },
+ {
+  "front": "What is vapor pressure and what factors affect it?",
+  "fp": "f59fcf94a545",
+  "yield": "HIGH",
+  "why": "CED 3.3/3.5 vapor pressure and IMF"
+ },
+ {
+  "front": "Why is ice less dense than liquid water?",
+  "fp": "1b2c6b2d9f4f",
+  "yield": "LOW",
+  "why": "Ice structure density; not in the CED"
+ }
+]

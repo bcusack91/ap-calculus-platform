@@ -1,0 +1,44 @@
+[
+ {
+  "front": "How do you interpret the magnitude of K?",
+  "fp": "5cbbef94de7c",
+  "yield": "HIGH",
+  "why": "CED 7.6 magnitude of K"
+ },
+ {
+  "front": "How do you write K_c expression for aA + bB ⇌ cC + dD?",
+  "fp": "69d707683f74",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.3 writing Kc; tested every exam"
+ },
+ {
+  "front": "What do you exclude from equilibrium constant expressions?",
+  "fp": "b7c05f30374e",
+  "yield": "HIGH",
+  "why": "CED 7.3 omit solids/liquids from K"
+ },
+ {
+  "front": "What happens to K when you multiply a reaction by a factor n?",
+  "fp": "27ee1c8fcb67",
+  "yield": "HIGH",
+  "why": "CED 7.5 K for multiplied reaction"
+ },
+ {
+  "front": "What happens to K when you reverse a reaction?",
+  "fp": "016be1a4bb33",
+  "yield": "HIGH",
+  "why": "CED 7.5 K for reversed reaction"
+ },
+ {
+  "front": "What is chemical equilibrium and what does \"dynamic\" mean?",
+  "fp": "caf3288630a5",
+  "yield": "HIGH",
+  "why": "CED 7.1 dynamic equilibrium"
+ },
+ {
+  "front": "What is the difference between homogeneous and heterogeneous equilibria?",
+  "fp": "42062d86bacd",
+  "yield": "MEDIUM",
+  "why": "Homogeneous vs heterogeneous terms; secondary"
+ }
+]

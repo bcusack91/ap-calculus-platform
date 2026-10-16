@@ -1,0 +1,38 @@
+[
+ {
+  "front": "$\\Delta G = \\Delta H - T\\Delta S$. A reaction is spontaneous when $\\Delta G$ is:",
+  "fp": "032a010d9764",
+  "yield": "HIGH",
+  "why": "CED 9.3 negative dG is favorable"
+ },
+ {
+  "front": "$\\Delta G°$ and $K$ are related by:",
+  "fp": "04f354772b2e",
+  "yield": "MEDIUM",
+  "why": "Restates dG = -RT ln K"
+ },
+ {
+  "front": "A reaction has ΔH = −100 kJ and ΔS = −200 J/K at 298 K. What is ΔG?",
+  "fp": "7ac0b5bc4df0",
+  "yield": "HIGH",
+  "why": "CED 9.3 dG = dH - TdS calculation"
+ },
+ {
+  "front": "Gibbs Free Energy equation?",
+  "fp": "ac069fa1d22e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 9.3 dG = dH - TdS (core card in this topic)"
+ },
+ {
+  "front": "If $\\Delta H < 0$ and $\\Delta S > 0$, the reaction is spontaneous at:",
+  "fp": "32e3f0ccd5e6",
+  "yield": "HIGH",
+  "why": "CED 9.3 sign combinations of dH and dS"
+ },
+ {
+  "front": "Relationship between $\\Delta G$ and equilibrium constant $K$?",
+  "fp": "84ad9d9181a6",
+  "yield": "HIGH",
+  "why": "CED 9.5 dG = -RT ln K"
+ }
+]

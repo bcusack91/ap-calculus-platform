@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you calculate standard cell potential E°_cell?",
+  "fp": "452e8cd6e97f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 9.8/9.9 calculating E cell; tested every exam"
+ },
+ {
+  "front": "How do you predict if a redox reaction will occur spontaneously?",
+  "fp": "882ea17faf66",
+  "yield": "HIGH",
+  "why": "CED 9.8 predicting spontaneous redox from E"
+ },
+ {
+  "front": "How does cell potential relate to spontaneity and ΔG°?",
+  "fp": "5b2b8e6c0206",
+  "yield": "HIGH",
+  "why": "CED 9.9 E cell sign and delta G"
+ },
+ {
+  "front": "What does the position in the reduction potential table tell you?",
+  "fp": "468bed3aefe3",
+  "yield": "MEDIUM",
+  "why": "Reading the reduction table; restates E cards"
+ },
+ {
+  "front": "What is a galvanic (voltaic) cell and what are its main components?",
+  "fp": "d5d6e36a7447",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 9.8 galvanic cell parts and flows; FRQ staple"
+ },
+ {
+  "front": "What is cell notation and how do you write it?",
+  "fp": "4ccaaaa8cf73",
+  "yield": "MEDIUM",
+  "why": "Cell notation; secondary"
+ },
+ {
+  "front": "What is standard reduction potential (E°) and what is the reference?",
+  "fp": "97ae0a01a2e3",
+  "yield": "MEDIUM",
+  "why": "Standard hydrogen electrode reference; secondary"
+ },
+ {
+  "front": "Why is E° an intensive property and what does this mean?",
+  "fp": "fd819c3c22ec",
+  "yield": "HIGH",
+  "why": "CED 9.9 E is intensive, not multiplied"
+ }
+]

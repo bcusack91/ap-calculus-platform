@@ -1,0 +1,38 @@
+[
+ {
+  "front": "A tank drains at rate $r(t) = 50 - 2t$ gallons/min for $0 \\leq t \\leq 25$. Total gallons drained:",
+  "fp": "5c338e1b9bfb",
+  "yield": "HIGH",
+  "why": "CED 8.3 total amount from a rate"
+ },
+ {
+  "front": "If the velocity of a particle is $v(t) = 3t^2 - 6t$ and $s(0) = 2$, the position function $s(t)$ is:",
+  "fp": "ae54774c05c6",
+  "yield": "HIGH",
+  "why": "CED 8.2 position from velocity and initial value"
+ },
+ {
+  "front": "The average value of $f(x) = 3x^2 + 1$ on $[0, 2]$ is:",
+  "fp": "dc3b7976d022",
+  "yield": "MEDIUM",
+  "why": "Average value example; restatement"
+ },
+ {
+  "front": "The average value of $f(x) = x^2$ on $[0, 3]$ is:",
+  "fp": "ccc94928d391",
+  "yield": "MEDIUM",
+  "why": "Average value example; restatement"
+ },
+ {
+  "front": "The net displacement of a particle with $v(t) = \\sin t$ on $[0, 2\\pi]$ is:",
+  "fp": "6c87adb284ad",
+  "yield": "HIGH",
+  "why": "CED 8.2 net displacement from velocity"
+ },
+ {
+  "front": "What is the average value of a continuous function $f$ on $[a,b]$?",
+  "fp": "2844cbeba758",
+  "yield": "HIGH",
+  "why": "CED 8.1 average value meaning"
+ }
+]

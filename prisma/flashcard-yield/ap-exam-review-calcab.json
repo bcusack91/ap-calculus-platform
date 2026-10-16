@@ -1,0 +1,38 @@
+[
+ {
+  "front": "For \"use a Riemann sum to approximate $\\int_0^4 f(x) dx$ using values from a table at $x = 0, 1, 2, 4$\" — the subintervals have widths:",
+  "fp": "e4918237a581",
+  "yield": "HIGH",
+  "why": "CED 6.2 unequal Riemann widths from tables"
+ },
+ {
+  "front": "If $f'(c) = 0$ and $f'$ changes from $+$ to $-$ at $c$, then $c$ is a:",
+  "fp": "5999fcbfd975",
+  "yield": "MEDIUM",
+  "why": "Restates first derivative test"
+ },
+ {
+  "front": "On the AP Calculus exam, the formula sheet provides:",
+  "fp": "938666b2ecc4",
+  "yield": "LOW",
+  "why": "No formula sheet; exam logistics"
+ },
+ {
+  "front": "The average value of $f$ on $[a,b]$ is:",
+  "fp": "1a57329fd391",
+  "yield": "HIGH",
+  "why": "CED 8.1 average value formula"
+ },
+ {
+  "front": "When the AP exam allows a calculator, you may:",
+  "fp": "f3d9e8b0ba8b",
+  "yield": "MEDIUM",
+  "why": "Allowed calculator uses; exam logistics"
+ },
+ {
+  "front": "Which parts of the AP Calculus AB exam allow a graphing calculator?",
+  "fp": "6daeeba22066",
+  "yield": "LOW",
+  "why": "Calculator sections; timings outdated for May 2027 (29/62 and 13/38)"
+ }
+]

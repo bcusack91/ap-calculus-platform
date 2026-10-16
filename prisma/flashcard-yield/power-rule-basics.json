@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Does the power rule work for negative and fractional exponents?",
+  "fp": "5a659c474b1b",
+  "yield": "HIGH",
+  "why": "CED 2.5 power rule for any real exponent"
+ },
+ {
+  "front": "Use the power rule to differentiate $f(x) = \\dfrac{1}{x^3}$.",
+  "fp": "e81ae06fbac4",
+  "yield": "HIGH",
+  "why": "CED 2.5 power rule with negative exponent"
+ },
+ {
+  "front": "Use the power rule to differentiate $f(x) = \\sqrt{x}$.",
+  "fp": "ec2f47c1fd6b",
+  "yield": "HIGH",
+  "why": "CED 2.5 power rule with root"
+ },
+ {
+  "front": "What is the derivative of any constant c?",
+  "fp": "3997c50d316d",
+  "yield": "MEDIUM",
+  "why": "Derivative of a constant; restatement"
+ },
+ {
+  "front": "What is the derivative of x?",
+  "fp": "d5a76cfe41e0",
+  "yield": "MEDIUM",
+  "why": "Derivative of x; basic"
+ },
+ {
+  "front": "What is the Power Rule for derivatives?",
+  "fp": "b9f6ede946b1",
+  "yield": "HIGH",
+  "why": "CED 2.5 power rule (core card in this topic)"
+ }
+]

@@ -1,0 +1,26 @@
+[
+ {
+  "front": "What happens during glycolysis?",
+  "fp": "1820ff1e60f2",
+  "yield": "HIGH",
+  "why": "CED 3.6 glycolysis inputs/outputs"
+ },
+ {
+  "front": "What happens in the electron transport chain (ETC)?",
+  "fp": "661743733386",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.6 ETC and chemiosmosis; tested every exam"
+ },
+ {
+  "front": "What is fermentation?",
+  "fp": "fe590122c5bf",
+  "yield": "HIGH",
+  "why": "CED 3.6 fermentation regenerates NAD+"
+ },
+ {
+  "front": "What is the Krebs (citric acid) cycle?",
+  "fp": "871a8f603371",
+  "yield": "MEDIUM",
+  "why": "Krebs per-glucose tallies; steps excluded, outputs secondary"
+ }
+]

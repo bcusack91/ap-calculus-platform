@@ -1,0 +1,224 @@
+[
+ {
+  "topicSlug": "conservation-of-energy",
+  "front": "For a pendulum, where is KE maximum and where is PE maximum?",
+  "back": "KE max at lowest point (bottom of swing), PE max at highest points (ends of swing). Energy continuously converts between KE and PE.",
+  "hint": "Speed is highest at bottom, height is highest at ends"
+ },
+ {
+  "topicSlug": "conservation-of-energy",
+  "front": "How do you account for friction in energy problems?",
+  "back": "$E_i + W_{friction} = E_f$ where $W_{friction} = -f_k \\cdot d = -\\mu_k N \\cdot d$ (negative because friction opposes motion)",
+  "hint": "Friction dissipates mechanical energy to heat"
+ },
+ {
+  "topicSlug": "conservation-of-energy",
+  "front": "What are conservative forces? Give examples.",
+  "back": "Forces for which work is path-independent and PE can be defined. Examples: gravity, spring force, electrostatic force. NOT friction or air resistance.",
+  "hint": "Work depends only on start/end points, not path"
+ },
+ {
+  "topicSlug": "conservation-of-energy",
+  "front": "What is mechanical energy?",
+  "back": "$E_{mech} = KE + PE = \\frac{1}{2}mv^2 + mgh + \\frac{1}{2}kx^2$ (sum of kinetic and all potential energies)",
+  "hint": "Kinetic plus potential"
+ },
+ {
+  "topicSlug": "conservation-of-energy",
+  "front": "What is power and what are its units?",
+  "back": "$P = \\frac{W}{t} = \\frac{\\Delta E}{t}$ or $P = Fv$. Units: Watt (W) = J/s. Power is rate of energy transfer.",
+  "hint": "How fast work is done or energy is transferred"
+ },
+ {
+  "topicSlug": "conservation-of-energy",
+  "front": "What is the law of conservation of energy?",
+  "back": "Energy cannot be created or destroyed, only transformed from one form to another. Total energy of an isolated system remains constant.",
+  "hint": "One of the most fundamental laws in physics"
+ },
+ {
+  "topicSlug": "conservation-of-energy",
+  "front": "When is mechanical energy conserved?",
+  "back": "When ONLY conservative forces (gravity, springs, elastic) do work. If friction or air resistance present, mechanical energy is NOT conserved.",
+  "hint": "No friction, no air resistance, no dissipation"
+ },
+ {
+  "topicSlug": "conservation-of-energy",
+  "front": "When should you use energy methods vs. force methods (Newton's laws)?",
+  "back": "Energy: finding speeds, heights, complex paths. Force: finding acceleration, forces, motion at specific points. Many problems can use either!",
+  "hint": "Energy is often easier for speed problems"
+ },
+ {
+  "topicSlug": "elastic-potential-energy",
+  "front": "Can elastic potential energy be negative?",
+  "back": "NO! Always positive or zero because $PE = \\frac{1}{2}kx^2$ and $x^2 \\geq 0$ always. Same PE whether compressed or stretched.",
+  "hint": "x squared is always positive"
+ },
+ {
+  "topicSlug": "elastic-potential-energy",
+  "front": "For a horizontal spring-mass system, when is KE maximum and when is PE maximum?",
+  "back": "KE max at equilibrium ($x = 0$), PE max at maximum compression/extension. They trade back and forth.",
+  "hint": "Energy transforms between KE and elastic PE"
+ },
+ {
+  "topicSlug": "elastic-potential-energy",
+  "front": "How do springs in series vs parallel combine?",
+  "back": "Series (end-to-end): $\\frac{1}{k_{eff}} = \\frac{1}{k_1} + \\frac{1}{k_2}$ (softer). Parallel (side-by-side): $k_{eff} = k_1 + k_2$ (stiffer).",
+  "hint": "Like resistors in circuits, but opposite!"
+ },
+ {
+  "topicSlug": "elastic-potential-energy",
+  "front": "If you double the compression of a spring, how does the stored energy change?",
+  "back": "Energy increases by factor of 4 (since $PE \\propto x^2$). Double compression = quadruple energy.",
+  "hint": "Quadratic relationship"
+ },
+ {
+  "topicSlug": "elastic-potential-energy",
+  "front": "What does the spring constant $k$ tell you?",
+  "back": "Stiffness of spring. Large $k$ = stiff spring (hard to stretch). Small $k$ = soft spring (easy to stretch). Units: N/m",
+  "hint": "Force per unit displacement"
+ },
+ {
+  "topicSlug": "elastic-potential-energy",
+  "front": "What is Hooke's Law?",
+  "back": "$F_s = -kx$ where $k$ is spring constant and $x$ is displacement from equilibrium. Negative sign means force is restoring (opposes displacement).",
+  "hint": "Spring force is proportional to displacement"
+ },
+ {
+  "topicSlug": "elastic-potential-energy",
+  "front": "What is the formula for elastic potential energy?",
+  "back": "$PE_{elastic} = \\frac{1}{2}kx^2$ where $k$ is spring constant and $x$ is displacement from equilibrium",
+  "hint": "Don't forget the ½! Energy goes as x squared"
+ },
+ {
+  "topicSlug": "elastic-potential-energy",
+  "front": "Why is there a ½ in the elastic PE formula?",
+  "back": "Spring force is variable ($F = kx$), so average force is $\\frac{kx}{2}$. Work = avg force × distance = $\\frac{kx}{2} \\cdot x = \\frac{1}{2}kx^2$",
+  "hint": "Variable force requires averaging"
+ },
+ {
+  "topicSlug": "gravitational-potential-energy",
+  "front": "Can gravitational PE be negative?",
+  "back": "YES! If you're below your chosen reference point, PE is negative. This is perfectly valid and doesn't cause problems.",
+  "hint": "It's all relative to your choice of zero"
+ },
+ {
+  "topicSlug": "gravitational-potential-energy",
+  "front": "Does the formula $PE = mgh$ work for satellites?",
+  "back": "No! Only valid near Earth's surface where $g$ is approximately constant. For satellites, use $PE = -\\frac{GMm}{r}$",
+  "hint": "g changes significantly at satellite altitudes"
+ },
+ {
+  "topicSlug": "gravitational-potential-energy",
+  "front": "How much work must you do to lift a 5 kg box 2 m vertically?",
+  "back": "$W = mgh = (5)(9.8)(2) = 98$ J - This equals the increase in PE",
+  "hint": "Work against gravity equals change in PE"
+ },
+ {
+  "topicSlug": "gravitational-potential-energy",
+  "front": "If an object slides down a 10 m ramp at 30°, what is the change in PE?",
+  "back": "Vertical drop: $h = 10\\sin(30°) = 5$ m. Since the object descends, $\\Delta PE = -mgh = -mg(5)$ (PE decreases). Always use the vertical height, not the ramp length.",
+  "hint": "Only vertical height change matters for PE"
+ },
+ {
+  "topicSlug": "gravitational-potential-energy",
+  "front": "What does it mean that gravity is a conservative force?",
+  "back": "Work done by gravity is path-independent - only the height change matters, not how you get there. This allows us to define potential energy.",
+  "hint": "Same work whether you go straight up, take a ramp, or zigzag"
+ },
+ {
+  "topicSlug": "gravitational-potential-energy",
+  "front": "What is the formula for gravitational potential energy near Earth's surface?",
+  "back": "$PE_g = mgh$ where $m$ is mass, $g = 9.8$ m/s², and $h$ is height above a chosen reference point",
+  "hint": "Mass times g times height"
+ },
+ {
+  "topicSlug": "gravitational-potential-energy",
+  "front": "What is the relationship between work done by gravity and change in PE?",
+  "back": "$W_g = -\\Delta PE$. Negative sign because: if object rises (PE increases), gravity does negative work. If object falls (PE decreases), gravity does positive work.",
+  "hint": "Negative relationship - opposite signs"
+ },
+ {
+  "topicSlug": "gravitational-potential-energy",
+  "front": "Why must you choose a reference point for potential energy?",
+  "back": "PE is relative - depends on where you define $h = 0$. Different references give different PE values, but changes in PE ($\\Delta PE$) are always the same.",
+  "hint": "PE is relative, but changes in PE are absolute"
+ },
+ {
+  "topicSlug": "power-physics",
+  "front": "Define power and give its formula.",
+  "back": "The rate of energy transfer: $P = \\frac{W}{t}$, measured in watts (J/s)."
+ },
+ {
+  "topicSlug": "power-physics",
+  "front": "Give power in terms of force and velocity.",
+  "back": "$P = Fv$ when force and velocity are parallel; more generally $P = Fv\\cos\\theta$."
+ },
+ {
+  "topicSlug": "power-physics",
+  "front": "How does machine efficiency relate to power?",
+  "back": "Efficiency $= \\frac{P_{out}}{P_{in}} \\times 100\\%$; the shortfall is lost to friction and heat."
+ },
+ {
+  "topicSlug": "power-physics",
+  "front": "How much power lifts a 50 kg mass 2 m in 4 s ($g = 10$)?",
+  "back": "$W = mgh = 1000$ J; $P = \\frac{1000}{4} = 250$ W."
+ },
+ {
+  "topicSlug": "power-physics",
+  "front": "What is a kilowatt-hour a unit of?",
+  "back": "Energy, not power — it is power (kW) multiplied by time (hours)."
+ },
+ {
+  "topicSlug": "power-physics",
+  "front": "What is the difference between energy and power?",
+  "back": "Energy is the total capacity to do work (joules); power is how fast it is delivered (watts)."
+ },
+ {
+  "topicSlug": "work-and-kinetic-energy",
+  "front": "Does holding a heavy box stationary do any work?",
+  "back": "NO! Work requires displacement. $W = Fd$ and $d = 0$, so $W = 0$. (Even though it feels tiring, no physical work is done.)",
+  "hint": "No displacement = no work"
+ },
+ {
+  "topicSlug": "work-and-kinetic-energy",
+  "front": "If the net work on an object is zero, what happens to its speed?",
+  "back": "Speed remains constant. $W_{net} = 0$ means $\\Delta KE = 0$, so $v_f = v_i$.",
+  "hint": "Work-energy theorem: no net work = no change in KE"
+ },
+ {
+  "topicSlug": "work-and-kinetic-energy",
+  "front": "If you double the speed of an object, how does its kinetic energy change?",
+  "back": "KE increases by a factor of 4 (since $KE \\propto v^2$). This is why stopping distance quadruples when speed doubles!",
+  "hint": "Speed is squared in the formula"
+ },
+ {
+  "topicSlug": "work-and-kinetic-energy",
+  "front": "What are the SI units of work and energy?",
+  "back": "Joule (J), where 1 J = 1 N·m = 1 kg·m²/s²",
+  "hint": "Named after physicist James Prescott Joule"
+ },
+ {
+  "topicSlug": "work-and-kinetic-energy",
+  "front": "What is the definition of work in physics?",
+  "back": "$W = Fd\\cos\\theta$ where $F$ is force, $d$ is displacement, and $\\theta$ is the angle between them. Work is done when force causes displacement.",
+  "hint": "Cosine of the angle is crucial!"
+ },
+ {
+  "topicSlug": "work-and-kinetic-energy",
+  "front": "What is the formula for kinetic energy?",
+  "back": "$KE = \\frac{1}{2}mv^2$ where $m$ is mass and $v$ is speed. Always positive (or zero).",
+  "hint": "Energy of motion - depends on speed squared"
+ },
+ {
+  "topicSlug": "work-and-kinetic-energy",
+  "front": "What is the work-energy theorem?",
+  "back": "$W_{net} = \\Delta KE = \\frac{1}{2}mv_f^2 - \\frac{1}{2}mv_i^2$ - Net work equals change in kinetic energy",
+  "hint": "Connects work to change in KE"
+ },
+ {
+  "topicSlug": "work-and-kinetic-energy",
+  "front": "When is work positive, negative, or zero?",
+  "back": "Positive: force component along motion ($0° \\leq \\theta < 90°$). Negative: force opposes motion ($90° < \\theta \\leq 180°$). Zero: force perpendicular to motion ($\\theta = 90°$) or no displacement.",
+  "hint": "Think about whether force helps, hinders, or is perpendicular to motion"
+ }
+]

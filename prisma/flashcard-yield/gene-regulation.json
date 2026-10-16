@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How does histone acetylation affect gene expression?",
+  "fp": "92ae1d1b3b1d",
+  "yield": "HIGH",
+  "why": "CED 6.5 histone acetylation"
+ },
+ {
+  "front": "How does the lac operon work?",
+  "fp": "cf5b552e2c5f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.5 lac operon; FRQ staple"
+ },
+ {
+  "front": "How does the trp operon work?",
+  "fp": "d19d504f3e70",
+  "yield": "HIGH",
+  "why": "CED 6.5 trp repressible operon"
+ },
+ {
+  "front": "What are microRNAs (miRNA)?",
+  "fp": "7b778f17bc0b",
+  "yield": "MEDIUM",
+  "why": "CED 6.3/6.5 miRNA; secondary"
+ },
+ {
+  "front": "What are the levels of eukaryotic gene regulation?",
+  "fp": "7480e2d47b2e",
+  "yield": "MEDIUM",
+  "why": "Levels of eukaryotic regulation; survey card"
+ },
+ {
+  "front": "What are transcription factors?",
+  "fp": "57389842e90c",
+  "yield": "HIGH",
+  "why": "CED 6.5 transcription factors"
+ },
+ {
+  "front": "What is an operon?",
+  "fp": "d0b54fbea1b6",
+  "yield": "HIGH",
+  "why": "CED 6.5 operon definition"
+ },
+ {
+  "front": "What is epigenetics?",
+  "fp": "d70588a2eed8",
+  "yield": "HIGH",
+  "why": "CED 6.5 epigenetics/methylation"
+ }
+]

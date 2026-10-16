@@ -1,0 +1,20 @@
+[
+ {
+  "front": "Find the derivative of $5x^3$",
+  "fp": "31117c4d200f",
+  "yield": "MEDIUM",
+  "why": "Power rule example; basic"
+ },
+ {
+  "front": "Find the derivative of $x^4$",
+  "fp": "e5e4f105f0a2",
+  "yield": "MEDIUM",
+  "why": "Power rule example; basic"
+ },
+ {
+  "front": "State the Power Rule",
+  "fp": "fabd06ebf4cd",
+  "yield": "HIGH",
+  "why": "CED 2.5 power rule (core card in this topic)"
+ }
+]

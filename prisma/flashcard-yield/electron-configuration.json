@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How many electrons can each sublevel hold? (s, p, d, f)",
+  "fp": "b55b66ff39c6",
+  "yield": "HIGH",
+  "why": "CED 1.5 sublevel capacities"
+ },
+ {
+  "front": "What are the three fundamental subatomic particles and their charges?",
+  "fp": "2f000ae5d259",
+  "yield": "MEDIUM",
+  "why": "Subatomic particles; prerequisite recall"
+ },
+ {
+  "front": "What are valence electrons?",
+  "fp": "2a4cd219ea34",
+  "yield": "HIGH",
+  "why": "CED 1.5/1.7 valence electrons"
+ },
+ {
+  "front": "What is Hund's Rule?",
+  "fp": "be930e762fea",
+  "yield": "HIGH",
+  "why": "CED 1.5 Hund's rule as filling rule"
+ },
+ {
+  "front": "What is the Aufbau Principle?",
+  "fp": "40d627c35b8d",
+  "yield": "HIGH",
+  "why": "CED 1.5 Aufbau principle"
+ },
+ {
+  "front": "What is the Pauli Exclusion Principle?",
+  "fp": "55057bed5bcf",
+  "yield": "MEDIUM",
+  "why": "Pauli exclusion; quantum numbers excluded (R9)"
+ },
+ {
+  "front": "When forming cations, which electrons are removed first?",
+  "fp": "d4d54ebe0565",
+  "yield": "HIGH",
+  "why": "CED 1.5 cation configs: remove s before d"
+ },
+ {
+  "front": "Why do Cr and Cu have anomalous electron configurations?",
+  "fp": "db068304d291",
+  "yield": "LOW",
+  "why": "OFF-EXAM: Aufbau exceptions Cr/Cu not assessed (1.7 exclusion; R10)"
+ }
+]

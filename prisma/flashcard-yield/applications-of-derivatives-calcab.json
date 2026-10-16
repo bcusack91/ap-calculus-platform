@@ -1,0 +1,26 @@
+[
+ {
+  "front": "How do you find critical points of $f$?",
+  "fp": "e5d81c0c509e",
+  "yield": "HIGH",
+  "why": "CED 5.4 finding critical points"
+ },
+ {
+  "front": "If $f''(x) > 0$ on an interval, $f$ is…",
+  "fp": "2c6cf3154da2",
+  "yield": "HIGH",
+  "why": "CED 5.6 f'' > 0 concave up"
+ },
+ {
+  "front": "State the Mean Value Theorem.",
+  "fp": "a71fc591de0b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.1 MVT statement; FRQ justification"
+ },
+ {
+  "front": "What is L'Hôpital's Rule?",
+  "fp": "b4df92539ce1",
+  "yield": "HIGH",
+  "why": "CED 4.7 L'Hospital's rule"
+ }
+]

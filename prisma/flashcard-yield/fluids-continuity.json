@@ -1,0 +1,62 @@
+[
+ {
+  "front": "A pipe of radius 2.0 cm carries water at 3.0 m/s. What is the volume flow rate?",
+  "fp": "f490c8505ebf",
+  "yield": "MEDIUM",
+  "why": "Volume flow example; restates Q = Av"
+ },
+ {
+  "front": "Continuity equation (incompressible)?",
+  "fp": "5dbff74997ed",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.3 continuity A1v1 = A2v2"
+ },
+ {
+  "front": "Does continuity hold for compressible gases?",
+  "fp": "44b6093c68ba",
+  "yield": "LOW",
+  "why": "Compressible continuity; beyond the CED"
+ },
+ {
+  "front": "If pipe radius halves, by what factor does fluid speed change?",
+  "fp": "7aea009190c5",
+  "yield": "HIGH",
+  "why": "CED 8.3 speed when radius halves"
+ },
+ {
+  "front": "Mass flow rate?",
+  "fp": "124d54fecc0f",
+  "yield": "MEDIUM",
+  "why": "Mass flow rate; secondary"
+ },
+ {
+  "front": "Two pipes merge into one — what is conserved at the junction?",
+  "fp": "db88e94bd221",
+  "yield": "MEDIUM",
+  "why": "Flow at a junction; secondary"
+ },
+ {
+  "front": "Volume flow rate?",
+  "fp": "0e79b0a2cd4a",
+  "yield": "HIGH",
+  "why": "CED 8.3 volume flow rate"
+ },
+ {
+  "front": "What conservation law gives the continuity equation?",
+  "fp": "d8580fccf775",
+  "yield": "HIGH",
+  "why": "CED 8.3 continuity from mass conservation"
+ },
+ {
+  "front": "Where does fluid flow fastest in a pipe of varying width?",
+  "fp": "7b56150988a0",
+  "yield": "HIGH",
+  "why": "CED 8.3 fastest in narrowest section"
+ },
+ {
+  "front": "Why must $Av$ be constant along a streamline?",
+  "fp": "60738630502e",
+  "yield": "MEDIUM",
+  "why": "Restates continuity reasoning"
+ }
+]

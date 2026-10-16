@@ -1,0 +1,70 @@
+[
+ {
+  "topicSlug": "net-ionic-equations",
+  "front": "In the reaction NaOH(aq) + HCl(aq) → NaCl(aq) + $H_{2}O(l)$, the net ionic equation is:",
+  "back": "**$OH^{-}$ + $H^{+}$ → $H_{2}O$**\n\n$Na^{+}$ and $Cl^{-}$ are spectators; net ionic: $H^{+}$ + $OH^{-}$ → $H_{2}O$."
+ },
+ {
+  "topicSlug": "net-ionic-equations",
+  "front": "Strong electrolytes are written as ___ in ionic equations.",
+  "back": "**Separated ions**\n\nStrong electrolytes fully dissociate → written as separate ions."
+ },
+ {
+  "topicSlug": "net-ionic-equations",
+  "front": "What are spectator ions?",
+  "back": "Ions that appear on both sides of an equation and do not participate in the reaction. They are removed to write the net ionic equation.",
+  "hint": "They just \"watch\" the reaction happen."
+ },
+ {
+  "topicSlug": "net-ionic-equations",
+  "front": "What are the solubility rules for nitrates and alkali metals?",
+  "back": "All **nitrates** ($\\text{NO}_3^-$) and all alkali metal compounds (**Li, Na, K, Rb, Cs**) are soluble.",
+  "hint": "These are never precipitates."
+ },
+ {
+  "topicSlug": "oxidation-reduction-reactions",
+  "front": "How do you assign oxidation numbers to elements in their standard state?",
+  "back": "Elements in their standard state have oxidation number **0**.\n\nExamples: $\\text{O}_2$, $\\text{Fe}$, $\\text{N}_2$ all have oxidation number 0.",
+  "hint": "Free elements = zero."
+ },
+ {
+  "topicSlug": "oxidation-reduction-reactions",
+  "front": "What is oxidation?",
+  "back": "Loss of electrons (increase in oxidation number).\n\nMnemonic: **OIL** — Oxidation Is Loss.",
+  "hint": "Think about what happens to the electrons."
+ },
+ {
+  "topicSlug": "oxidation-reduction-reactions",
+  "front": "What is reduction?",
+  "back": "Gain of electrons (decrease in oxidation number).\n\nMnemonic: **RIG** — Reduction Is Gain.",
+  "hint": "OIL RIG helps remember both."
+ },
+ {
+  "topicSlug": "reaction-types",
+  "front": "What is a combustion reaction?",
+  "back": "A substance reacts with $\\text{O}_2$, releasing energy.\n\nHydrocarbon combustion: $\\text{C}_x\\text{H}_y + \\text{O}_2 \\to \\text{CO}_2 + \\text{H}_2\\text{O}$",
+  "hint": "Burning = reaction with oxygen."
+ },
+ {
+  "topicSlug": "stoichiometry-limiting-reactants",
+  "front": "For the reaction $N_{2}$ + $3H_{2}$ → $2NH_{3}$, how many grams of $NH_{3}$ are produced from 14 g of $N_{2}$? ($M_{N_2}$ = 28 g/mol, $M_{NH_3}$ = 17 g/mol)",
+  "back": "**17 g**\n\n14 g $N_{2}$ × (1 mol/28 g) = 0.5 mol $N_{2}$. Stoichiometry: 1 mol $N_{2}$ → 2 mol $NH_{3}$, so 0.5 → 1 mol $NH_{3}$. Mass = 1 mol × 17 g/mol = 17 g $NH_{3}$."
+ },
+ {
+  "topicSlug": "stoichiometry-limiting-reactants",
+  "front": "How do you calculate percent yield?",
+  "back": "$\\text{Percent yield} = \\frac{\\text{actual yield}}{\\text{theoretical yield}} \\times 100\\%$",
+  "hint": "What you actually got divided by what you expected."
+ },
+ {
+  "topicSlug": "stoichiometry-limiting-reactants",
+  "front": "In stoichiometry, mole ratios come from:",
+  "back": "**Coefficients in the balanced equation**\n\nBalanced equation coefficients give mole ratios of reactants and products."
+ },
+ {
+  "topicSlug": "stoichiometry-limiting-reactants",
+  "front": "What is the limiting reactant?",
+  "back": "The reactant that is completely consumed first, determining the maximum amount of product.",
+  "hint": "Convert each reactant to moles of product and compare."
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Compare starch and glycogen.",
+  "fp": "6e8372974996",
+  "yield": "MEDIUM",
+  "why": "Starch vs glycogen; secondary structure detail"
+ },
+ {
+  "front": "Key difference between α-glucose and β-glucose?",
+  "fp": "6dfffef3a3d4",
+  "yield": "LOW",
+  "why": "Alpha vs beta glucose; trim cut alpha/beta linkages"
+ },
+ {
+  "front": "What are the components of maltose, sucrose, and lactose?",
+  "fp": "f90211cee5d7",
+  "yield": "LOW",
+  "why": "Disaccharide compositions; trim cut lactose composition"
+ },
+ {
+  "front": "What is a glycosidic bond?",
+  "fp": "58faa11da75c",
+  "yield": "MEDIUM",
+  "why": "CED 1.4 glycosidic bond via dehydration"
+ },
+ {
+  "front": "What is the general formula for carbohydrates?",
+  "fp": "2cccab689acb",
+  "yield": "LOW",
+  "why": "(CH2O)n formula; trivia"
+ },
+ {
+  "front": "Why can't humans digest cellulose?",
+  "fp": "0fe3813ea2a2",
+  "yield": "MEDIUM",
+  "why": "Cellulose indigestibility; borderline detail"
+ }
+]

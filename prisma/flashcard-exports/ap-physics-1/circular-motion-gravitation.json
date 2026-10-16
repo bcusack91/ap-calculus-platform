@@ -1,0 +1,158 @@
+[
+ {
+  "topicSlug": "centripetal-force",
+  "front": "At the top of a vertical loop, what is the minimum speed to maintain circular motion?",
+  "back": "$v_{min} = \\sqrt{gr}$ - Below this speed, the object falls away from the circle",
+  "hint": "Set normal force equal to zero at the top"
+ },
+ {
+  "topicSlug": "centripetal-force",
+  "front": "Common mistake: Should you draw \"centripetal force\" as a separate arrow on a free body diagram?",
+  "back": "NO! Centripetal force is the NET force from real forces (tension, friction, gravity, normal). Don't add it as a separate force.",
+  "hint": "Only draw real forces: weight, normal, tension, friction"
+ },
+ {
+  "topicSlug": "centripetal-force",
+  "front": "How does the normal force compare at the top vs. bottom of a vertical loop?",
+  "back": "Bottom: $N = \\frac{mv^2}{r} + mg$ (largest). Top: $N = \\frac{mv^2}{r} - mg$ (smallest). Normal force is greater at the bottom.",
+  "hint": "At bottom you feel heavier, at top you feel lighter"
+ },
+ {
+  "topicSlug": "centripetal-force",
+  "front": "What is centripetal force?",
+  "back": "The NET force directed toward the center of a circular path. It's not a new type of force - it's whatever force (tension, friction, gravity, etc.) causes circular motion.",
+  "hint": "It's the name for the net force, not a separate force"
+ },
+ {
+  "topicSlug": "centripetal-force",
+  "front": "What is the formula for centripetal force?",
+  "back": "$F_c = \\frac{mv^2}{r}$ where $m$ is mass, $v$ is speed, and $r$ is radius",
+  "hint": "Comes from $F = ma$ with $a_c = \\frac{v^2}{r}$"
+ },
+ {
+  "topicSlug": "centripetal-force",
+  "front": "What is the ideal banking angle for a curve with no friction?",
+  "back": "$\\tan\\theta = \\frac{v^2}{rg}$ where $v$ is the design speed",
+  "hint": "Horizontal component of normal force provides centripetal force"
+ },
+ {
+  "topicSlug": "centripetal-force",
+  "front": "What is the maximum safe speed for a car on a flat curve?",
+  "back": "$v_{max} = \\sqrt{\\mu_s gr}$ where $\\mu_s$ is coefficient of static friction, $g$ is gravity, and $r$ is radius",
+  "hint": "Friction provides the centripetal force"
+ },
+ {
+  "topicSlug": "centripetal-force",
+  "front": "What provides the centripetal force for: (a) a satellite orbiting Earth, (b) a car on a curve, (c) a ball on a string?",
+  "back": "(a) Gravity, (b) Friction, (c) Tension in the string",
+  "hint": "Different situations, different sources"
+ },
+ {
+  "topicSlug": "uniform-circular-motion",
+  "front": "How is linear speed $v$ related to period $T$ in circular motion?",
+  "back": "$v = \\frac{2\\pi r}{T}$ - The circumference divided by the time for one revolution",
+  "hint": "Distance per revolution divided by time per revolution"
+ },
+ {
+  "topicSlug": "uniform-circular-motion",
+  "front": "If an object in circular motion is suddenly released, what direction does it move?",
+  "back": "Tangent to the circle (in the direction of the instantaneous velocity), NOT radially outward",
+  "hint": "Newton's 1st Law - objects continue in straight line when force is removed"
+ },
+ {
+  "topicSlug": "uniform-circular-motion",
+  "front": "What is \"centrifugal force\"?",
+  "back": "A fictitious (apparent) force felt in a rotating reference frame. There is NO real outward force - the object wants to go straight (Newton's 1st Law) while centripetal force pulls it inward.",
+  "hint": "Not a real force - just inertia in a rotating frame"
+ },
+ {
+  "topicSlug": "uniform-circular-motion",
+  "front": "What is angular velocity $\\omega$ and how does it relate to linear velocity?",
+  "back": "$\\omega = \\frac{2\\pi}{T} = 2\\pi f$ (in rad/s), and $v = r\\omega$ connects it to linear velocity",
+  "hint": "Measures how fast the angle changes"
+ },
+ {
+  "topicSlug": "uniform-circular-motion",
+  "front": "What is the formula for centripetal acceleration?",
+  "back": "$a_c = \\frac{v^2}{r}$ where $v$ is speed and $r$ is radius. It always points toward the center of the circle.",
+  "hint": "Speed squared over radius"
+ },
+ {
+  "topicSlug": "uniform-circular-motion",
+  "front": "What is the relationship between period $T$ and frequency $f$?",
+  "back": "$f = \\frac{1}{T}$ and $T = \\frac{1}{f}$ - They are reciprocals. Period is time per revolution, frequency is revolutions per time.",
+  "hint": "Inverse relationship"
+ },
+ {
+  "topicSlug": "uniform-circular-motion",
+  "front": "What is uniform circular motion?",
+  "back": "Motion in a circular path at constant **speed** (but NOT constant velocity, since direction changes continuously)",
+  "hint": "Speed is constant, but velocity changes because direction changes"
+ },
+ {
+  "topicSlug": "uniform-circular-motion",
+  "front": "Why is there acceleration in uniform circular motion even though speed is constant?",
+  "back": "Because velocity is a vector - changing direction means changing velocity, which means acceleration exists (centripetal acceleration toward center)",
+  "hint": "Acceleration can change direction without changing speed"
+ },
+ {
+  "topicSlug": "universal-gravitation",
+  "front": "For a satellite calculation, should you use Earth's radius or the distance from Earth's center?",
+  "back": "Distance from Earth's CENTER: $r = R_{Earth} + h$ where $h$ is altitude above surface",
+  "hint": "Common mistake: forgetting to add Earth's radius!"
+ },
+ {
+  "topicSlug": "universal-gravitation",
+  "front": "How does gravitational force change if the distance between two objects doubles?",
+  "back": "The force becomes $\\frac{1}{4}$ as strong (inverse square law: $F \\propto \\frac{1}{r^2}$)",
+  "hint": "If $r \\to 2r$, then $F \\to \\frac{F}{4}$"
+ },
+ {
+  "topicSlug": "universal-gravitation",
+  "front": "How does orbital speed depend on orbital radius?",
+  "back": "Closer orbits are faster: $v \\propto \\frac{1}{\\sqrt{r}}$. As $r$ increases, $v$ decreases.",
+  "hint": "Mercury orbits faster than Earth, Earth faster than Mars"
+ },
+ {
+  "topicSlug": "universal-gravitation",
+  "front": "What is escape velocity?",
+  "back": "$v_{esc} = \\sqrt{\\frac{2GM}{R}}$ - the minimum speed needed to escape a planet's gravity. For Earth, about 11,200 m/s.",
+  "hint": "This is $\\sqrt{2}$ times the orbital velocity at the surface"
+ },
+ {
+  "topicSlug": "universal-gravitation",
+  "front": "What is gravitational field strength $g$?",
+  "back": "$g = \\frac{GM}{r^2}$ - the gravitational force per unit mass at distance $r$ from mass $M$",
+  "hint": "On Earth's surface, $g = 9.8$ m/s²"
+ },
+ {
+  "topicSlug": "universal-gravitation",
+  "front": "What is Newton's Law of Universal Gravitation?",
+  "back": "$F_g = \\frac{Gm_1m_2}{r^2}$ where $G = 6.67 \\times 10^{-11}$ N·m²/kg², $m_1$ and $m_2$ are masses, and $r$ is the distance between their centers",
+  "hint": "Inverse square law - force decreases with distance squared"
+ },
+ {
+  "topicSlug": "universal-gravitation",
+  "front": "What is the difference between mass and weight?",
+  "back": "Mass is the amount of matter (constant, in kg). Weight is gravitational force $W = mg$ (varies with location, in N).",
+  "hint": "Your mass is the same on Moon; your weight is less"
+ },
+ {
+  "topicSlug": "universal-gravitation",
+  "front": "What is the orbital period formula?",
+  "back": "$T = 2\\pi\\sqrt{\\frac{r^3}{GM}}$ - This is Kepler's 3rd Law: $T^2 \\propto r^3$",
+  "hint": "Larger orbits take longer to complete"
+ },
+ {
+  "topicSlug": "universal-gravitation",
+  "front": "What is the orbital speed for a circular orbit?",
+  "back": "$v = \\sqrt{\\frac{GM}{r}}$ where $M$ is the central mass and $r$ is orbital radius. Note: satellite's mass cancels!",
+  "hint": "Set gravitational force equal to centripetal force"
+ },
+ {
+  "topicSlug": "universal-gravitation",
+  "front": "Why do astronauts feel \"weightless\" on the ISS if gravity is still 89% of Earth's surface value?",
+  "back": "They're in continuous free fall toward Earth. Both they and the ISS fall together at the same rate, creating the sensation of weightlessness.",
+  "hint": "Not zero gravity - just free fall!"
+ }
+]

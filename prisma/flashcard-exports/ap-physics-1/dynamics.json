@@ -1,0 +1,192 @@
+[
+ {
+  "topicSlug": "friction",
+  "front": "Do coefficients of friction have units?",
+  "back": "No, they are dimensionless (no units)"
+ },
+ {
+  "topicSlug": "friction",
+  "front": "Does friction depend on surface area?",
+  "back": "No! Friction depends only on the normal force and coefficient of friction, not on surface area."
+ },
+ {
+  "topicSlug": "friction",
+  "front": "How do you know whether to use static or kinetic friction?",
+  "back": "Static friction: surfaces not sliding (at rest or no relative motion). Kinetic friction: surfaces sliding relative to each other."
+ },
+ {
+  "topicSlug": "friction",
+  "front": "If an object is at rest on a horizontal surface with friction, what is the friction force?",
+  "back": "Static friction adjusts to balance the applied force: $f_s = F_{app}$ (up to maximum $\\mu_s N$)"
+ },
+ {
+  "topicSlug": "friction",
+  "front": "If an object moves at constant velocity, what can you conclude about forces?",
+  "back": "Net force is zero. Applied force equals friction: $F_{app} = f_k$ (if kinetic friction applies)"
+ },
+ {
+  "topicSlug": "friction",
+  "front": "What direction does friction act?",
+  "back": "Parallel to the contact surface, opposing the **relative sliding** (or attempted sliding) of the two surfaces — not necessarily the object's own motion. A car's drive tires push backward on the road, so static friction on the car points forward."
+ },
+ {
+  "topicSlug": "friction",
+  "front": "What is the formula for kinetic friction?",
+  "back": "$f_k = \\mu_k N$ where $\\mu_k$ is the coefficient of kinetic friction and $N$ is the normal force"
+ },
+ {
+  "topicSlug": "friction",
+  "front": "What is the formula for maximum static friction?",
+  "back": "$f_{s,max} = \\mu_s N$ where $\\mu_s$ is the coefficient of static friction and $N$ is the normal force"
+ },
+ {
+  "topicSlug": "friction",
+  "front": "What is the minimum force needed to start an object moving?",
+  "back": "$F_{min} = f_{s,max} = \\mu_s N$"
+ },
+ {
+  "topicSlug": "friction",
+  "front": "Which is larger: static or kinetic coefficient of friction?",
+  "back": "Static: $\\mu_s > \\mu_k$ (always). It's harder to start motion than to maintain it."
+ },
+ {
+  "topicSlug": "inclined-planes",
+  "front": "At what angle does a frictionless incline give the same acceleration as free fall?",
+  "back": "$90°$ (vertical) - then $a = g\\sin 90° = g$"
+ },
+ {
+  "topicSlug": "inclined-planes",
+  "front": "What are the components of weight on an incline?",
+  "back": "Parallel to incline: $mg\\sin\\theta$ (down slope). Perpendicular: $mg\\cos\\theta$ (into surface)"
+ },
+ {
+  "topicSlug": "inclined-planes",
+  "front": "What is the acceleration of an object on a frictionless incline?",
+  "back": "$a = g\\sin\\theta$ (independent of mass!)"
+ },
+ {
+  "topicSlug": "inclined-planes",
+  "front": "What is the acceleration of an object sliding down an incline with friction?",
+  "back": "$a = g(\\sin\\theta - \\mu_k\\cos\\theta)$"
+ },
+ {
+  "topicSlug": "inclined-planes",
+  "front": "What is the critical angle for an object on an incline with friction?",
+  "back": "$\\theta_c = \\tan^{-1}(\\mu_s)$ - the angle at which the object just starts to slide"
+ },
+ {
+  "topicSlug": "inclined-planes",
+  "front": "What is the friction force on an incline?",
+  "back": "Maximum static: $f_{s,max} = \\mu_s mg\\cos\\theta$. Kinetic: $f_k = \\mu_k mg\\cos\\theta$"
+ },
+ {
+  "topicSlug": "inclined-planes",
+  "front": "What is the magnitude of the acceleration of an object sliding UP a rough incline?",
+  "back": "$a = g(\\sin\\theta + \\mu_k\\cos\\theta)$, directed down the slope. While the object moves up, gravity's component and kinetic friction both point down the incline, so it decelerates."
+ },
+ {
+  "topicSlug": "inclined-planes",
+  "front": "What is the normal force on an incline?",
+  "back": "$N = mg\\cos\\theta$ (less than $mg$ on an incline!)"
+ },
+ {
+  "topicSlug": "inclined-planes",
+  "front": "Which direction does friction point when an object slides down an incline?",
+  "back": "Up the incline (opposes motion)"
+ },
+ {
+  "topicSlug": "inclined-planes",
+  "front": "Why do we rotate the coordinate system for incline problems?",
+  "back": "To align one axis with the motion (parallel to incline), simplifying the math since there's no acceleration perpendicular to the incline"
+ },
+ {
+  "topicSlug": "newtons-first-second-laws",
+  "front": "If net force is zero, what can you conclude about acceleration?",
+  "back": "Acceleration is zero. The object is either at rest or moving at constant velocity (equilibrium)."
+ },
+ {
+  "topicSlug": "newtons-first-second-laws",
+  "front": "If you double the net force on an object while keeping mass constant, what happens to acceleration?",
+  "back": "Acceleration doubles (direct proportionality: $a \\propto F$)"
+ },
+ {
+  "topicSlug": "newtons-first-second-laws",
+  "front": "Is normal force always equal to weight?",
+  "back": "No! Normal force equals whatever is needed to prevent the object from accelerating through the surface. It only equals weight on a horizontal surface with no other vertical forces."
+ },
+ {
+  "topicSlug": "newtons-first-second-laws",
+  "front": "What are the units of force?",
+  "back": "Newton (N): $1\\,\\text{N} = 1\\,\\text{kg}\\cdot\\text{m/s}^2$"
+ },
+ {
+  "topicSlug": "newtons-first-second-laws",
+  "front": "What direction is acceleration relative to net force?",
+  "back": "Acceleration is always in the same direction as the net force"
+ },
+ {
+  "topicSlug": "newtons-first-second-laws",
+  "front": "What is a free body diagram?",
+  "back": "A diagram showing all forces acting on a single isolated object, with arrows representing force vectors"
+ },
+ {
+  "topicSlug": "newtons-first-second-laws",
+  "front": "What is inertia?",
+  "back": "The tendency of an object to resist changes in its motion. Mass is the measure of inertia."
+ },
+ {
+  "topicSlug": "newtons-first-second-laws",
+  "front": "What is Newton's First Law?",
+  "back": "An object at rest stays at rest, and an object in motion stays in motion at constant velocity, unless acted upon by a net external force"
+ },
+ {
+  "topicSlug": "newtons-first-second-laws",
+  "front": "What is Newton's Second Law?",
+  "back": "$\\sum \\vec{F} = m\\vec{a}$ - Net force equals mass times acceleration"
+ },
+ {
+  "topicSlug": "newtons-first-second-laws",
+  "front": "What is the difference between mass and weight?",
+  "back": "Mass is the amount of matter (kg, scalar, same everywhere). Weight is gravitational force (N, vector, varies with location). $W = mg$"
+ },
+ {
+  "topicSlug": "newtons-third-law",
+  "front": "Are weight and normal force an action-reaction pair?",
+  "back": "No! They both act on the same object. Action-reaction pairs must act on different objects."
+ },
+ {
+  "topicSlug": "newtons-third-law",
+  "front": "How does a rocket accelerate in space if there's no air to push against?",
+  "back": "The rocket pushes gas backward (action), and the gas pushes the rocket forward (reaction). Newton's Third Law doesn't require a medium."
+ },
+ {
+  "topicSlug": "newtons-third-law",
+  "front": "If you push a car and it pushes back on you with equal force, why does the car move?",
+  "back": "The forces act on different objects. The car experiences your push (and friction from ground). You experience the car's push. Each object's motion depends on the net force acting on it."
+ },
+ {
+  "topicSlug": "newtons-third-law",
+  "front": "What are the characteristics of action-reaction force pairs?",
+  "back": "Equal magnitude, opposite directions, same type of force, act on different objects, and occur simultaneously"
+ },
+ {
+  "topicSlug": "newtons-third-law",
+  "front": "What is Newton's Third Law?",
+  "back": "For every action, there is an equal and opposite reaction. $\\vec{F}_{AB} = -\\vec{F}_{BA}$"
+ },
+ {
+  "topicSlug": "newtons-third-law",
+  "front": "What is the difference between internal and external forces for a system?",
+  "back": "Internal forces are between objects in the system (come in action-reaction pairs, cancel out). External forces come from outside the system and cause acceleration."
+ },
+ {
+  "topicSlug": "newtons-third-law",
+  "front": "What is the reaction force to the Earth pulling down on you (your weight)?",
+  "back": "You pulling up on the Earth with equal force"
+ },
+ {
+  "topicSlug": "newtons-third-law",
+  "front": "Why don't action-reaction forces cancel each other?",
+  "back": "Because they act on different objects. Forces only cancel if they act on the same object."
+ }
+]

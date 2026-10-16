@@ -1,0 +1,110 @@
+[
+ {
+  "front": "A first-order process has k = 0.080 min⁻¹. What fraction remains after 30 min?",
+  "fp": "14e1cef78d00",
+  "yield": "HIGH",
+  "why": "CED 5.3 first-order fraction remaining"
+ },
+ {
+  "front": "A rate constant is reported as $k = 0.025\\ \\text{M}^{-1}\\text{s}^{-1}$. What is the reaction order?",
+  "fp": "e221791e8571",
+  "yield": "HIGH",
+  "why": "CED 5.2 order from units of k"
+ },
+ {
+  "front": "Derive the first-order integrated rate law from the differential form.",
+  "fp": "9be627aa99ea",
+  "yield": "LOW",
+  "why": "Calculus derivation of rate law; not required"
+ },
+ {
+  "front": "Diagnostic: ln[A] vs t is nearly linear but 1/[A] vs t is slightly curved. What is the likely order and why?",
+  "fp": "781e6a3c5599",
+  "yield": "HIGH",
+  "why": "CED 5.3 order from linear plot"
+ },
+ {
+  "front": "For a first-order reaction, if t₁/₂ = 10 min, how much remains after 30 min?",
+  "fp": "0e084846e70b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.3 first-order half-lives; tested every exam"
+ },
+ {
+  "front": "Given two times and concentrations for a first-order reaction, how can you compute k without [A]_0?",
+  "fp": "eedb1ea44d92",
+  "yield": "MEDIUM",
+  "why": "Two-point first-order k; secondary"
+ },
+ {
+  "front": "How do half-lives differ for zero, first, and second order reactions?",
+  "fp": "d2148eae8e64",
+  "yield": "MEDIUM",
+  "why": "Half-lives of all orders; only first order is core"
+ },
+ {
+  "front": "How do you calculate time needed for concentration to drop from [A]₀ to [A]_t for first order?",
+  "fp": "e25b8d77f874",
+  "yield": "HIGH",
+  "why": "CED 5.3 first-order time calculation"
+ },
+ {
+  "front": "How do you determine reaction order graphically using integrated rate laws?",
+  "fp": "4c7e6984329e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.3 order from integrated-rate plots"
+ },
+ {
+  "front": "How to compute time for a first-order reaction to reach 10% of its initial concentration?",
+  "fp": "76cc13b26c3c",
+  "yield": "MEDIUM",
+  "why": "First-order time to 10%; restates time calc"
+ },
+ {
+  "front": "In each integrated-rate-law plot, what does the y-intercept represent?",
+  "fp": "4c37d7e8e835",
+  "yield": "MEDIUM",
+  "why": "Plot intercepts; secondary"
+ },
+ {
+  "front": "Second-order: doubling the initial concentration has what effect on the first half-life?",
+  "fp": "810080816b8e",
+  "yield": "LOW",
+  "why": "Second-order half-life dependence; not in CED"
+ },
+ {
+  "front": "What are the integrated rate laws for zero, first, and second order reactions?",
+  "fp": "8c6a26e45134",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.3 integrated rate laws; equation-sheet staple"
+ },
+ {
+  "front": "What are the units of k for zero, first, and second order reactions?",
+  "fp": "1941fc485ae3",
+  "yield": "HIGH",
+  "why": "CED 5.2 units of k"
+ },
+ {
+  "front": "What is special about first-order half-life and what is the equation?",
+  "fp": "0e27a8baa3b0",
+  "yield": "HIGH",
+  "why": "CED 5.3 constant first-order half-life"
+ },
+ {
+  "front": "What is the relationship between slope and k in integrated rate law plots?",
+  "fp": "caf4d330de65",
+  "yield": "HIGH",
+  "why": "CED 5.3 slope = -k or +k"
+ },
+ {
+  "front": "Why does each successive half-life of a zero-order reaction get shorter?",
+  "fp": "20f6747938da",
+  "yield": "LOW",
+  "why": "Zero-order half-life shrinkage; not in CED"
+ },
+ {
+  "front": "Zero-order decay: time to drop from 0.40 M to 0.10 M with $k = 1.0\\times 10^{-3}\\ \\text{M/s}$?",
+  "fp": "5a8b13498f07",
+  "yield": "MEDIUM",
+  "why": "Zero-order time calculation; secondary"
+ }
+]

@@ -1,0 +1,38 @@
+[
+ {
+  "front": "How do you rotate a region around the y-axis?",
+  "fp": "e857b1921748",
+  "yield": "HIGH",
+  "why": "CED 8.10 revolve about the y-axis"
+ },
+ {
+  "front": "The region under $y = \\sqrt{x}$ from $x = 0$ to $x = 4$ is revolved about the x-axis. Find the volume.",
+  "fp": "d5e5c65e30d8",
+  "yield": "MEDIUM",
+  "why": "Disc example; restatement"
+ },
+ {
+  "front": "What are common mistakes with the disk method?",
+  "fp": "0f1c2bb07ccb",
+  "yield": "MEDIUM",
+  "why": "Disc mistakes; tip"
+ },
+ {
+  "front": "What is the disk method formula for volumes of revolution?",
+  "fp": "55a505637ea4",
+  "yield": "HIGH",
+  "why": "CED 8.9 and 8.10 disc method (core card in this topic)"
+ },
+ {
+  "front": "What's the difference between disk method and washer method?",
+  "fp": "6de16f384518",
+  "yield": "MEDIUM",
+  "why": "Disc vs washer; restatement"
+ },
+ {
+  "front": "When rotating about a horizontal line y = k, what is the radius?",
+  "fp": "9984eeececc9",
+  "yield": "HIGH",
+  "why": "CED 8.10 radius about y = k"
+ }
+]

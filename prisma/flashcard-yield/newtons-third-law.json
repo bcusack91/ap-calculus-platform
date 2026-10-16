@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Are weight and normal force an action-reaction pair?",
+  "fp": "3b7d9e0a96d9",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.5 weight and normal are not a pair"
+ },
+ {
+  "front": "How does a rocket accelerate in space if there's no air to push against?",
+  "fp": "0d4720371f70",
+  "yield": "MEDIUM",
+  "why": "Rocket propulsion via third law; secondary"
+ },
+ {
+  "front": "If you push a car and it pushes back on you with equal force, why does the car move?",
+  "fp": "3cc420344c95",
+  "yield": "HIGH",
+  "why": "CED 2.5 third-law pairs act on different objects"
+ },
+ {
+  "front": "What are the characteristics of action-reaction force pairs?",
+  "fp": "ba8b6d23985d",
+  "yield": "HIGH",
+  "why": "CED 2.5 action-reaction properties"
+ },
+ {
+  "front": "What is Newton's Third Law?",
+  "fp": "197b4215c543",
+  "yield": "HIGH",
+  "why": "CED 2.5 Newton's third law"
+ },
+ {
+  "front": "What is the difference between internal and external forces for a system?",
+  "fp": "3f48cabe0cef",
+  "yield": "HIGH",
+  "why": "CED 2.1 internal vs external forces"
+ },
+ {
+  "front": "What is the reaction force to the Earth pulling down on you (your weight)?",
+  "fp": "1288637a2f8f",
+  "yield": "MEDIUM",
+  "why": "Earth-you pair; restates third law"
+ },
+ {
+  "front": "Why don't action-reaction forces cancel each other?",
+  "fp": "a4d691f0e565",
+  "yield": "HIGH",
+  "why": "CED 2.5 why pairs do not cancel"
+ }
+]

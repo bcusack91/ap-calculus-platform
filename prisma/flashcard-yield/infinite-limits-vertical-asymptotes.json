@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Does $\\lim_{x \\to a} f(x) = \\infty$ mean the limit exists?",
+  "fp": "d49595a12fe3",
+  "yield": "MEDIUM",
+  "why": "Infinite limit does not exist; restatement"
+ },
+ {
+  "front": "How do you determine if an infinite limit is +∞ or -∞?",
+  "fp": "b914a4e72e00",
+  "yield": "HIGH",
+  "why": "CED 1.14 sign of infinite limit"
+ },
+ {
+  "front": "How do you find vertical asymptotes?",
+  "fp": "c1842102eb35",
+  "yield": "HIGH",
+  "why": "CED 1.14 finding vertical asymptotes"
+ },
+ {
+  "front": "If $(x - a)^2$ appears in the denominator, what can you say about the infinite limit?",
+  "fp": "a752ff982587",
+  "yield": "MEDIUM",
+  "why": "Squared factor gives same-sign limits; secondary"
+ },
+ {
+  "front": "What creates a vertical asymptote in a rational function?",
+  "fp": "d5901eb1b3fa",
+  "yield": "MEDIUM",
+  "why": "Restates vertical asymptote rule"
+ },
+ {
+  "front": "What is an infinite limit?",
+  "fp": "dec57976e02d",
+  "yield": "MEDIUM",
+  "why": "Infinite limit definition; restatement"
+ }
+]

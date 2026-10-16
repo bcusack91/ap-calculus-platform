@@ -1,0 +1,132 @@
+[
+ {
+  "topicSlug": "natural-selection",
+  "front": "Compare directional, stabilizing, and disruptive selection.",
+  "back": "Directional: one extreme favored (mean shifts). Stabilizing: intermediate favored (reduces variation). Disruptive: both extremes favored (increases variation)."
+ },
+ {
+  "topicSlug": "natural-selection",
+  "front": "Homologous vs. analogous structures?",
+  "back": "Homologous: same structure, different function, common ancestry (vertebrate forelimbs). Analogous: different structure, same function, convergent evolution (bird/insect wings)."
+ },
+ {
+  "topicSlug": "natural-selection",
+  "front": "What are Darwin's key observations for natural selection?",
+  "back": "1) Overproduction of offspring, 2) Variation in traits, 3) Heredity (traits inherited), 4) Competition for resources. Result: differential survival and reproduction."
+ },
+ {
+  "topicSlug": "natural-selection",
+  "front": "What are five types of evidence for evolution?",
+  "back": "1) Fossil record, 2) Comparative anatomy (homologous/vestigial structures), 3) Molecular biology (DNA/protein similarities), 4) Biogeography, 5) Direct observation (bacteria, insects)."
+ },
+ {
+  "topicSlug": "natural-selection",
+  "front": "What are the Hardy-Weinberg conditions?",
+  "back": "1) No mutations, 2) Random mating, 3) No gene flow, 4) Large population, 5) No natural selection. If met, population is NOT evolving (allele frequencies constant)."
+ },
+ {
+  "topicSlug": "natural-selection",
+  "front": "What is evolution?",
+  "back": "Change in allele frequencies in a population over time. Descent with modification from common ancestors."
+ },
+ {
+  "topicSlug": "natural-selection",
+  "front": "What is genetic drift?",
+  "back": "Random changes in allele frequencies, especially in small populations. Includes bottleneck effect (population crash) and founder effect (small group colonizes). Not based on fitness."
+ },
+ {
+  "topicSlug": "natural-selection",
+  "front": "What is the Hardy-Weinberg equation?",
+  "back": "p² + 2pq + q² = 1 and p + q = 1. p = dominant allele frequency, q = recessive. p² = AA, 2pq = Aa, q² = aa."
+ },
+ {
+  "topicSlug": "natural-selection-adaptation",
+  "front": "Distinguish directional, stabilizing, and disruptive selection.",
+  "back": "Directional favors one extreme; stabilizing favors intermediates; disruptive favors both extremes."
+ },
+ {
+  "topicSlug": "natural-selection-adaptation",
+  "front": "What does fitness mean biologically?",
+  "back": "Relative reproductive success — passing genes to the next generation, not strength or longevity."
+ },
+ {
+  "topicSlug": "natural-selection-adaptation",
+  "front": "What four conditions are required for natural selection?",
+  "back": "Variation, heritability, differential reproductive success, and more offspring than can survive."
+ },
+ {
+  "topicSlug": "natural-selection-adaptation",
+  "front": "What is an adaptation?",
+  "back": "A heritable trait increasing survival and reproduction in a particular environment."
+ },
+ {
+  "topicSlug": "natural-selection-adaptation",
+  "front": "What is sexual selection?",
+  "back": "Selection based on mating success, which can favor traits that reduce survival odds (elaborate plumage)."
+ },
+ {
+  "topicSlug": "natural-selection-adaptation",
+  "front": "Why does antibiotic resistance illustrate natural selection?",
+  "back": "Resistant variants already present survive treatment and reproduce; the antibiotic selects rather than creates them."
+ },
+ {
+  "topicSlug": "phylogeny-classification",
+  "front": "Distinguish homologous and analogous structures.",
+  "back": "Homologous share ancestry (divergent evolution); analogous share function only (convergent evolution)."
+ },
+ {
+  "topicSlug": "phylogeny-classification",
+  "front": "What does a phylogenetic tree represent?",
+  "back": "Evolutionary relationships, with nodes as common ancestors and branch points as divergences."
+ },
+ {
+  "topicSlug": "phylogeny-classification",
+  "front": "What is a clade?",
+  "back": "A monophyletic group containing an ancestor and ALL its descendants."
+ },
+ {
+  "topicSlug": "phylogeny-classification",
+  "front": "What is a derived vs. ancestral character?",
+  "back": "Derived characters are newly evolved in a lineage and define clades; ancestral characters are shared more broadly."
+ },
+ {
+  "topicSlug": "phylogeny-classification",
+  "front": "What is a molecular clock?",
+  "back": "Using a roughly constant mutation rate to estimate divergence times between lineages."
+ },
+ {
+  "topicSlug": "phylogeny-classification",
+  "front": "What is an outgroup and why include one?",
+  "back": "A distantly related taxon providing a reference to determine which character states are ancestral."
+ },
+ {
+  "topicSlug": "speciation",
+  "front": "Contrast allopatric and sympatric speciation.",
+  "back": "Allopatric requires geographic isolation; sympatric occurs without it, via polyploidy or niche divergence."
+ },
+ {
+  "topicSlug": "speciation",
+  "front": "Contrast gradualism and punctuated equilibrium.",
+  "back": "Gradualism is steady slow change; punctuated equilibrium is long stasis broken by rapid speciation bursts."
+ },
+ {
+  "topicSlug": "speciation",
+  "front": "Name postzygotic isolating mechanisms.",
+  "back": "Hybrid inviability, hybrid sterility (mule), and hybrid breakdown in later generations."
+ },
+ {
+  "topicSlug": "speciation",
+  "front": "Name prezygotic isolating mechanisms.",
+  "back": "Temporal, habitat, behavioral, mechanical, and gametic isolation — all prevent fertilization."
+ },
+ {
+  "topicSlug": "speciation",
+  "front": "What is adaptive radiation?",
+  "back": "Rapid diversification from a common ancestor into many niches, as with Darwin's finches."
+ },
+ {
+  "topicSlug": "speciation",
+  "front": "What is the biological species concept?",
+  "back": "A group of populations that can interbreed and produce fertile offspring in nature."
+ }
+]

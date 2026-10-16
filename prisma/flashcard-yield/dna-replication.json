@@ -1,0 +1,50 @@
+[
+ {
+  "front": "During S phase of the cell cycle:",
+  "fp": "fb3af7a9f879",
+  "yield": "MEDIUM",
+  "why": "Restates S-phase card"
+ },
+ {
+  "front": "During the lysogenic cycle, the viral DNA:",
+  "fp": "f95c071ee432",
+  "yield": "LOW",
+  "why": "Lysogenic cycle; viral replication not in the CED"
+ },
+ {
+  "front": "Key enzymes in DNA replication?",
+  "fp": "af9c292d6217",
+  "yield": "HIGH",
+  "why": "CED 6.2 replication enzymes (helicase, ligase, primase named)"
+ },
+ {
+  "front": "PCR is used to:",
+  "fp": "1cfd4e7384b8",
+  "yield": "HIGH",
+  "why": "CED 6.8 PCR amplifies DNA (named technique)"
+ },
+ {
+  "front": "Tumor suppressor genes like p53:",
+  "fp": "c1d855a7aab2",
+  "yield": "MEDIUM",
+  "why": "p53 tumor suppressor; borderline example for 4.7"
+ },
+ {
+  "front": "What is semiconservative replication?",
+  "fp": "cdc14a4d22cb",
+  "yield": "HIGH",
+  "why": "CED 6.2 semiconservative replication"
+ },
+ {
+  "front": "What is the difference between leading and lagging strands?",
+  "fp": "232960f076a9",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.2 leading vs lagging strand; tested every exam"
+ },
+ {
+  "front": "Which bond holds the two strands of DNA together?",
+  "fp": "881b4e8ad3b3",
+  "yield": "MEDIUM",
+  "why": "Hydrogen bonds hold strands; restates base pairing"
+ }
+]

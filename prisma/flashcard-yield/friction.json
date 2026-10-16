@@ -1,0 +1,62 @@
+[
+ {
+  "front": "Do coefficients of friction have units?",
+  "fp": "72d751b639c7",
+  "yield": "LOW",
+  "why": "Friction coefficients unitless; trivia"
+ },
+ {
+  "front": "Does friction depend on surface area?",
+  "fp": "a45484387945",
+  "yield": "MEDIUM",
+  "why": "Friction independent of area; secondary"
+ },
+ {
+  "front": "How do you know whether to use static or kinetic friction?",
+  "fp": "1959caeee335",
+  "yield": "HIGH",
+  "why": "CED 2.7 static vs kinetic friction"
+ },
+ {
+  "front": "If an object is at rest on a horizontal surface with friction, what is the friction force?",
+  "fp": "c880927ed682",
+  "yield": "HIGH",
+  "why": "CED 2.7 static friction matches applied force"
+ },
+ {
+  "front": "If an object moves at constant velocity, what can you conclude about forces?",
+  "fp": "e3346bee8748",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.3 constant velocity means zero net force"
+ },
+ {
+  "front": "What direction does friction act?",
+  "fp": "8a449bc9fcd4",
+  "yield": "HIGH",
+  "why": "CED 2.7 direction of friction"
+ },
+ {
+  "front": "What is the formula for kinetic friction?",
+  "fp": "84424351f341",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.7 f_k = mu_k N; equation-sheet staple"
+ },
+ {
+  "front": "What is the formula for maximum static friction?",
+  "fp": "fb142c987e63",
+  "yield": "HIGH",
+  "why": "CED 2.7 f_s max = mu_s N"
+ },
+ {
+  "front": "What is the minimum force needed to start an object moving?",
+  "fp": "cf5c5567f4ca",
+  "yield": "MEDIUM",
+  "why": "Restates max static friction"
+ },
+ {
+  "front": "Which is larger: static or kinetic coefficient of friction?",
+  "fp": "16c382778f4d",
+  "yield": "MEDIUM",
+  "why": "mu_s > mu_k; secondary"
+ }
+]

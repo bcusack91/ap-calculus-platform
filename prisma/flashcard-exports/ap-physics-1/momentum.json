@@ -1,0 +1,164 @@
+[
+ {
+  "topicSlug": "collisions",
+  "front": "Can kinetic energy INCREASE in a collision?",
+  "back": "Yes! In an explosion or if there's an internal energy source (spring, chemical). But momentum is still conserved.",
+  "hint": "Explosions add energy to the system"
+ },
+ {
+  "topicSlug": "collisions",
+  "front": "For a ball bouncing, how is coefficient of restitution related to height?",
+  "back": "$e = \\sqrt{\\frac{h_f}{h_i}}$ where $h_i$ is drop height and $h_f$ is bounce height.",
+  "hint": "Square root of height ratio"
+ },
+ {
+  "topicSlug": "collisions",
+  "front": "How can you tell from before-and-after data whether a collision was elastic?",
+  "back": "Compare total kinetic energy: if $\\sum \\frac{1}{2}mv^2$ is the same before and after, the collision is elastic; if it dropped, it is inelastic. Momentum is conserved either way, so momentum cannot tell the two apart.",
+  "hint": "Two conservation laws"
+ },
+ {
+  "topicSlug": "collisions",
+  "front": "In a 2D collision, how many equations do you need?",
+  "back": "At least 2: momentum conservation in x-direction AND y-direction. For elastic, also add energy conservation (3rd equation).",
+  "hint": "One equation per dimension, plus energy if elastic"
+ },
+ {
+  "topicSlug": "collisions",
+  "front": "In an elastic collision between equal masses (one at rest), what happens?",
+  "back": "The velocities are exchanged! Moving object stops, stationary object takes on the velocity of the first object.",
+  "hint": "Perfect momentum and energy transfer"
+ },
+ {
+  "topicSlug": "collisions",
+  "front": "Is momentum conserved in ALL types of collisions?",
+  "back": "YES! Momentum is conserved in elastic, inelastic, and perfectly inelastic collisions (if system is isolated).",
+  "hint": "Momentum: always. KE: only in elastic"
+ },
+ {
+  "topicSlug": "collisions",
+  "front": "What is a perfectly inelastic collision?",
+  "back": "Objects stick together after collision. Maximum possible KE loss (for given conditions). Momentum still conserved: $(m_1 + m_2)v_f = m_1v_{1i} + m_2v_{2i}$",
+  "hint": "Objects stick together"
+ },
+ {
+  "topicSlug": "collisions",
+  "front": "What is the coefficient of restitution?",
+  "back": "$e = \\frac{v_{separation}}{v_{approach}}$ - measures \"bounciness\". $e=1$ (perfectly elastic), $0<e<1$ (inelastic), $e=0$ (perfectly inelastic)",
+  "hint": "Ratio of relative speeds after/before"
+ },
+ {
+  "topicSlug": "collisions",
+  "front": "What is the difference between elastic and inelastic collisions?",
+  "back": "Elastic: both momentum AND kinetic energy conserved. Inelastic: only momentum conserved, some KE lost to heat/sound/deformation.",
+  "hint": "Think about what happens to kinetic energy"
+ },
+ {
+  "topicSlug": "collisions",
+  "front": "Where does the \"lost\" kinetic energy go in an inelastic collision?",
+  "back": "Converted to heat, sound, and deformation (crushing/bending). Energy is conserved overall, just not in kinetic form.",
+  "hint": "Heat, sound, deformation"
+ },
+ {
+  "topicSlug": "collisions",
+  "front": "Why are car crumple zones designed to deform (inelastic collision)?",
+  "back": "Deformation absorbs energy and increases collision time, reducing force on passengers. Better to destroy metal than people!",
+  "hint": "Energy absorption protects passengers"
+ },
+ {
+  "topicSlug": "conservation-of-momentum",
+  "front": "Can you use conservation of momentum if friction is present?",
+  "back": "Usually NO (friction is external force). BUT during brief collisions where collision forces >> friction, can approximate as conserved.",
+  "hint": "Depends on whether friction is significant"
+ },
+ {
+  "topicSlug": "conservation-of-momentum",
+  "front": "For 2D collisions, how do you apply conservation of momentum?",
+  "back": "Conserve momentum in EACH direction independently: x-direction equation AND y-direction equation. Use components of velocities.",
+  "hint": "Two equations: one for x, one for y"
+ },
+ {
+  "topicSlug": "conservation-of-momentum",
+  "front": "In an explosion from rest, how do the pieces move?",
+  "back": "In opposite directions with equal magnitude momenta: $m_1\\vec{v}_1 = -m_2\\vec{v}_2$. Total momentum stays zero.",
+  "hint": "Started at rest, total momentum must stay zero"
+ },
+ {
+  "topicSlug": "conservation-of-momentum",
+  "front": "Is momentum conserved in ALL collisions?",
+  "back": "Yes (if system is isolated)! Both elastic AND inelastic collisions conserve momentum. Only kinetic energy is different between them.",
+  "hint": "Momentum: always. Kinetic energy: only in elastic"
+ },
+ {
+  "topicSlug": "conservation-of-momentum",
+  "front": "What happens to the center of mass of an isolated system?",
+  "back": "Moves at constant velocity (or stays at rest). $\\vec{v}_{cm} = \\frac{\\vec{p}_{total}}{m_{total}}$ = constant if isolated.",
+  "hint": "Center of mass doesn't accelerate if isolated"
+ },
+ {
+  "topicSlug": "conservation-of-momentum",
+  "front": "What is the law of conservation of momentum?",
+  "back": "In an isolated system (no external forces), total momentum remains constant: $\\vec{p}_{total,i} = \\vec{p}_{total,f}$",
+  "hint": "Total momentum before = total momentum after"
+ },
+ {
+  "topicSlug": "conservation-of-momentum",
+  "front": "What makes a system \"isolated\"?",
+  "back": "No external forces act on the system (or they sum to zero, or are negligible compared to internal forces during interaction)",
+  "hint": "External forces are absent or negligible"
+ },
+ {
+  "topicSlug": "conservation-of-momentum",
+  "front": "Why is momentum conserved? (Newton's Laws perspective)",
+  "back": "Internal forces come in action-reaction pairs (Newton's 3rd Law) that cancel: $\\vec{F}_{12} = -\\vec{F}_{21}$, so total momentum doesn't change.",
+  "hint": "Action-reaction pairs cancel out"
+ },
+ {
+  "topicSlug": "momentum-and-impulse",
+  "front": "A 0.15 kg ball hits your hands at 20 m/s and stops. How much smaller is the average force if you pull your hands back so the stop takes 0.10 s instead of 0.01 s?",
+  "back": "Ten times smaller. $\\Delta p = 3.0$ kg·m/s either way, so $F = 3.0 / 0.01 = 300$ N versus $F = 3.0 / 0.10 = 30$ N.",
+  "hint": "Extend the collision time"
+ },
+ {
+  "topicSlug": "momentum-and-impulse",
+  "front": "How can you reduce the force in a collision?",
+  "back": "Increase the collision time $\\Delta t$. Since $F\\Delta t = \\Delta p$ (constant), larger $\\Delta t$ means smaller $F$. Examples: airbags, bending knees when landing.",
+  "hint": "If Δt doubles, F is cut in half"
+ },
+ {
+  "topicSlug": "momentum-and-impulse",
+  "front": "How does momentum differ from kinetic energy?",
+  "back": "Momentum is a vector, $p = mv$ (linear in $v$), and is conserved in any collision of an isolated system. Kinetic energy is a scalar, $KE = \\frac{1}{2}mv^2$ (quadratic in $v$), and is conserved only in elastic collisions.",
+  "hint": "One is a vector, one is a scalar"
+ },
+ {
+  "topicSlug": "momentum-and-impulse",
+  "front": "If a ball bounces off a wall vs. sticks to it, which creates more impulse?",
+  "back": "Bouncing — if it rebounds at the same speed, $\\Delta v = (-v) - v = -2v$, twice the $\\Delta v$ of sticking ($0 - v = -v$), so twice the impulse.",
+  "hint": "Reversing direction doubles the change in velocity"
+ },
+ {
+  "topicSlug": "momentum-and-impulse",
+  "front": "What does the area under a Force vs. Time graph represent?",
+  "back": "The impulse $J = \\int F\\,dt$. For constant force, $J = F\\Delta t$ (rectangle area).",
+  "hint": "Area = impulse"
+ },
+ {
+  "topicSlug": "momentum-and-impulse",
+  "front": "What is impulse?",
+  "back": "$\\vec{J} = \\vec{F}\\Delta t$ - the product of force and time. Has same units as momentum (N·s = kg·m/s).",
+  "hint": "Force times time interval"
+ },
+ {
+  "topicSlug": "momentum-and-impulse",
+  "front": "What is momentum?",
+  "back": "$\\vec{p} = m\\vec{v}$ - the product of mass and velocity. It's a vector quantity with units kg·m/s.",
+  "hint": "Mass times velocity"
+ },
+ {
+  "topicSlug": "momentum-and-impulse",
+  "front": "What is the impulse-momentum theorem?",
+  "back": "$\\vec{J} = \\Delta \\vec{p}$ or $\\vec{F}\\Delta t = m\\vec{v}_f - m\\vec{v}_i$ - impulse equals change in momentum",
+  "hint": "Connects force/time to change in motion"
+ }
+]

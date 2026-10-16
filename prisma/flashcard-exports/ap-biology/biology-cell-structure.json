@@ -1,0 +1,107 @@
+[
+ {
+  "topicSlug": "cell-membrane-transport",
+  "front": "Define hypertonic, hypotonic, and isotonic.",
+  "back": "Hypertonic: higher solute outside, cell shrinks. Hypotonic: lower solute outside, cell swells. Isotonic: equal solute, no net water movement."
+ },
+ {
+  "topicSlug": "cell-membrane-transport",
+  "front": "How does the Na⁺/K⁺ pump work?",
+  "back": "Primary active transport: uses ATP to pump 3 Na⁺ out and 2 K⁺ in against their concentration gradients. Maintains electrochemical gradient."
+ },
+ {
+  "topicSlug": "cell-membrane-transport",
+  "front": "Simple diffusion vs. facilitated diffusion?",
+  "back": "Simple: small nonpolar molecules cross directly down gradient. Facilitated: uses channel or carrier proteins for polar/large molecules, still down gradient."
+ },
+ {
+  "topicSlug": "cell-membrane-transport",
+  "front": "Water potential equation?",
+  "back": "Ψ = Ψₛ + Ψₚ. Water moves from high to low water potential. Ψₛ = solute potential (negative), Ψₚ = pressure potential."
+ },
+ {
+  "topicSlug": "cell-membrane-transport",
+  "front": "What are the main components of the cell membrane?",
+  "back": "Phospholipids (bilayer), proteins (integral/peripheral), cholesterol (fluidity), carbohydrates (glycoproteins/glycolipids for recognition)."
+ },
+ {
+  "topicSlug": "cell-membrane-transport",
+  "front": "What are the types of endocytosis?",
+  "back": "Phagocytosis (cell eating - solid particles), pinocytosis (cell drinking - fluid), receptor-mediated endocytosis (specific molecules)."
+ },
+ {
+  "topicSlug": "cell-membrane-transport",
+  "front": "What is osmosis?",
+  "back": "Diffusion of water across a selectively permeable membrane from high water concentration (low solute) to low water concentration (high solute)."
+ },
+ {
+  "topicSlug": "cell-membrane-transport",
+  "front": "What is the fluid mosaic model?",
+  "back": "Model of cell membrane as phospholipid bilayer with embedded proteins. Fluid: components can move laterally. Mosaic: varied composition of lipids and proteins."
+ },
+ {
+  "topicSlug": "cell-organelles",
+  "front": "Rough ER vs. Smooth ER functions?",
+  "back": "Rough ER: has ribosomes, synthesizes and modifies proteins (especially secreted/membrane proteins). Smooth ER: no ribosomes, synthesizes lipids, detoxification, calcium storage."
+ },
+ {
+  "topicSlug": "cell-organelles",
+  "front": "What are the three types of cytoskeleton fibers?",
+  "back": "1) Microfilaments (actin, 7nm): movement, shape. 2) Intermediate filaments (8-12nm): structural support. 3) Microtubules (25nm): shape, transport, spindle fibers."
+ },
+ {
+  "topicSlug": "cell-organelles",
+  "front": "What does the Golgi apparatus do?",
+  "back": "Modifies, sorts, packages, and ships proteins. Adds molecular tags (glycosylation). Sends proteins to their final destinations."
+ },
+ {
+  "topicSlug": "cell-organelles",
+  "front": "What is the function of lysosomes?",
+  "back": "Contain digestive enzymes that break down macromolecules, old organelles (autophagy), and pathogens. Involved in apoptosis. Found mainly in animal cells."
+ },
+ {
+  "topicSlug": "cell-organelles",
+  "front": "What is the function of the nucleus?",
+  "back": "Stores genetic information (DNA), controls cell activities, site of transcription. Surrounded by nuclear envelope with pores."
+ },
+ {
+  "topicSlug": "cell-organelles",
+  "front": "What is the function of the plant central vacuole?",
+  "back": "Storage of water, ions, and pigments. Maintains turgor pressure (keeps plant rigid). Waste disposal."
+ },
+ {
+  "topicSlug": "cell-organelles",
+  "front": "What is the structure and function of chloroplasts?",
+  "back": "Double membrane with thylakoids (stacked in grana) and stroma. Site of photosynthesis - convert light to chemical energy. Have own DNA."
+ },
+ {
+  "topicSlug": "cell-organelles",
+  "front": "What is the structure and function of mitochondria?",
+  "back": "Double membrane with cristae (folded inner membrane). Site of cellular respiration and ATP production. Have own DNA and divide independently."
+ },
+ {
+  "topicSlug": "prokaryotic-eukaryotic-cells",
+  "front": "Calculate SA:V ratio for cube with side = 2 cm",
+  "back": "SA = 6(2²) = 24 cm². V = 2³ = 8 cm³. Ratio = 24/8 = 3:1 or 3 cm⁻¹."
+ },
+ {
+  "topicSlug": "prokaryotic-eukaryotic-cells",
+  "front": "Key differences: Prokaryotic vs. Eukaryotic cells?",
+  "back": "Prokaryotes: no nucleus, no membrane-bound organelles, smaller (1-10 μm), 70S ribosomes. Eukaryotes: nucleus, membrane-bound organelles, larger (10-100 μm), 80S ribosomes."
+ },
+ {
+  "topicSlug": "prokaryotic-eukaryotic-cells",
+  "front": "What are the three tenets of cell theory?",
+  "back": "1) All living things are composed of cells. 2) The cell is the basic unit of life. 3) All cells come from preexisting cells."
+ },
+ {
+  "topicSlug": "prokaryotic-eukaryotic-cells",
+  "front": "What structures are unique to plant cells?",
+  "back": "Cell wall (cellulose), chloroplasts (photosynthesis), large central vacuole (storage/turgor), plasmodesmata (cell-cell channels)."
+ },
+ {
+  "topicSlug": "prokaryotic-eukaryotic-cells",
+  "front": "Why does surface area to volume ratio limit cell size?",
+  "back": "As cells grow, volume increases faster than surface area. Lower SA:V ratio makes diffusion less efficient. Cells must divide to maintain high SA:V for adequate nutrient/waste exchange."
+ }
+]

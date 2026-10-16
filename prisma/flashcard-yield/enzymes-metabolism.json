@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Cofactors vs. coenzymes?",
+  "fp": "ea0cdddac7f0",
+  "yield": "MEDIUM",
+  "why": "CED 3.2 cofactors/coenzymes; secondary"
+ },
+ {
+  "front": "Competitive vs. noncompetitive inhibition?",
+  "fp": "44215a3f16aa",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.2 competitive vs noncompetitive inhibition"
+ },
+ {
+  "front": "How does temperature affect enzyme activity?",
+  "fp": "3ccae0aa004d",
+  "yield": "HIGH",
+  "why": "CED 3.2 temperature and denaturation"
+ },
+ {
+  "front": "What is feedback inhibition?",
+  "fp": "ec94d31ff668",
+  "yield": "HIGH",
+  "why": "CED 3.2/4.5 feedback inhibition"
+ },
+ {
+  "front": "What is the function of enzymes?",
+  "fp": "4441d7668e70",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.1 enzymes lower activation energy"
+ },
+ {
+  "front": "What is the induced fit model?",
+  "fp": "51f6c41f84ef",
+  "yield": "HIGH",
+  "why": "CED 3.1 induced fit/active site"
+ }
+]

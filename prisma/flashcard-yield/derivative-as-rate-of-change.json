@@ -1,0 +1,38 @@
+[
+ {
+  "front": "If $V(t)$ is the volume of water in a tank in gallons and $t$ is in minutes, what does $V'(3) = -5$ mean?",
+  "fp": "9325785e7b42",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.1 interpret derivative with units; FRQ staple"
+ },
+ {
+  "front": "If s(t) is position, what does s''(t) represent?",
+  "fp": "94f9e0593c99",
+  "yield": "HIGH",
+  "why": "CED 4.2 s'' is acceleration"
+ },
+ {
+  "front": "If s(t) is position, what does s'(t) represent?",
+  "fp": "e1806a935e2b",
+  "yield": "HIGH",
+  "why": "CED 4.2 s' is velocity"
+ },
+ {
+  "front": "In economics, what is marginal cost?",
+  "fp": "4f809b36c782",
+  "yield": "LOW",
+  "why": "Marginal cost; economics context not in CED"
+ },
+ {
+  "front": "What does it mean when f'(x) > 0?",
+  "fp": "0c05cfeb9ea1",
+  "yield": "MEDIUM",
+  "why": "Restates f' > 0 increasing"
+ },
+ {
+  "front": "What is the physical meaning of the derivative?",
+  "fp": "90c50b444d46",
+  "yield": "HIGH",
+  "why": "CED 4.1 derivative as instantaneous rate"
+ }
+]

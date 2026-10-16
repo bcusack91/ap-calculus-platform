@@ -1,0 +1,44 @@
+[
+ {
+  "front": "CRISPR-Cas9 technology allows scientists to:",
+  "fp": "9234b1146a03",
+  "yield": "LOW",
+  "why": "CRISPR; trim removed CRISPR detail (6.8 exclusion)"
+ },
+ {
+  "front": "DNA methylation typically:",
+  "fp": "2f9513ae0788",
+  "yield": "MEDIUM",
+  "why": "Restates methylation; secondary"
+ },
+ {
+  "front": "In the lac operon, lactose presence generally:",
+  "fp": "7346259248d7",
+  "yield": "MEDIUM",
+  "why": "Restates lac operon card"
+ },
+ {
+  "front": "RNA polymerase:",
+  "fp": "fda6b4da3d76",
+  "yield": "MEDIUM",
+  "why": "RNA polymerase needs no primer; detail"
+ },
+ {
+  "front": "Transcription produces:",
+  "fp": "b737ecc746a6",
+  "yield": "MEDIUM",
+  "why": "Transcription makes RNA; restates core card"
+ },
+ {
+  "front": "What are the steps of transcription?",
+  "fp": "8e618731077f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.3 transcription steps and direction"
+ },
+ {
+  "front": "What is RNA processing in eukaryotes?",
+  "fp": "13f2d7d51a13",
+  "yield": "HIGH",
+  "why": "CED 6.3 RNA processing (cap, tail, splicing)"
+ }
+]

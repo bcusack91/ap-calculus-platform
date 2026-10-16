@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do you calculate pH of a weak acid solution?",
+  "fp": "e86267e8d458",
+  "yield": "HIGH",
+  "why": "CED 8.3 weak acid pH via ICE"
+ },
+ {
+  "front": "What are polyprotic acids and how do K_a values compare?",
+  "fp": "4ecca74a32b8",
+  "yield": "MEDIUM",
+  "why": "Polyprotic Ka1>>Ka2; qualitative only on exam (R14)"
+ },
+ {
+  "front": "What is a weak acid and how does it differ from a strong acid?",
+  "fp": "5e278564e12b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.3 weak vs strong acid; tested every exam"
+ },
+ {
+  "front": "What is K_a and what does its magnitude tell you?",
+  "fp": "98130c06d6d5",
+  "yield": "HIGH",
+  "why": "CED 8.3 Ka meaning and magnitude"
+ },
+ {
+  "front": "What is K_b and how do you calculate pH of a weak base?",
+  "fp": "c918c8164212",
+  "yield": "HIGH",
+  "why": "CED 8.3 Kb and weak base pH"
+ },
+ {
+  "front": "What is percent ionization and what does it tell you?",
+  "fp": "59f099c23f3a",
+  "yield": "HIGH",
+  "why": "CED 8.3 percent ionization"
+ },
+ {
+  "front": "What is the relationship between K_a and K_b for conjugate pairs?",
+  "fp": "87f11f8d618d",
+  "yield": "HIGH",
+  "why": "CED 8.3 Ka x Kb = Kw"
+ },
+ {
+  "front": "When can you use the small x approximation for weak acids?",
+  "fp": "b7c899c69ad2",
+  "yield": "MEDIUM",
+  "why": "Small-x approximation check; technique detail"
+ }
+]

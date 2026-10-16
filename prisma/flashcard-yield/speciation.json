@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Contrast allopatric and sympatric speciation.",
+  "fp": "16712eaa0f4f",
+  "yield": "HIGH",
+  "why": "CED 7.10 allopatric vs sympatric"
+ },
+ {
+  "front": "Contrast gradualism and punctuated equilibrium.",
+  "fp": "090b7758cf92",
+  "yield": "MEDIUM",
+  "why": "CED 7.10 gradualism vs punctuated equilibrium"
+ },
+ {
+  "front": "Name postzygotic isolating mechanisms.",
+  "fp": "ee9657b7cfb4",
+  "yield": "HIGH",
+  "why": "CED 7.10 postzygotic isolation"
+ },
+ {
+  "front": "Name prezygotic isolating mechanisms.",
+  "fp": "35b1eebcdd0e",
+  "yield": "HIGH",
+  "why": "CED 7.10 prezygotic isolation"
+ },
+ {
+  "front": "What is adaptive radiation?",
+  "fp": "140838e45a9d",
+  "yield": "MEDIUM",
+  "why": "Adaptive radiation; secondary"
+ },
+ {
+  "front": "What is the biological species concept?",
+  "fp": "8d9487e46704",
+  "yield": "HIGH",
+  "why": "CED 7.10 biological species concept"
+ }
+]

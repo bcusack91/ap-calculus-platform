@@ -1,0 +1,154 @@
+[
+ {
+  "topicSlug": "dna-replication",
+  "front": "During S phase of the cell cycle:",
+  "back": "**DNA is replicated**\n\nS (synthesis) phase is when DNA replication occurs."
+ },
+ {
+  "topicSlug": "dna-replication",
+  "front": "During the lysogenic cycle, the viral DNA:",
+  "back": "**Integrates into the host chromosome as a prophage**\n\nIn lysogeny, phage DNA integrates into the bacterial chromosome and replicates passively with the host."
+ },
+ {
+  "topicSlug": "dna-replication",
+  "front": "Key enzymes in DNA replication?",
+  "back": "- **Helicase**: Unwinds double helix\n- **Primase**: Makes RNA primer\n- **DNA Polymerase III**: Adds nucleotides 5'→3'\n- **Ligase**: Seals Okazaki fragments\n- **Topoisomerase**: Relieves tension ahead of fork",
+  "hint": "Helicase opens, polymerase builds, ligase glues."
+ },
+ {
+  "topicSlug": "dna-replication",
+  "front": "PCR is used to:",
+  "back": "**Amplify DNA**\n\nPolymerase chain reaction amplifies selected DNA regions."
+ },
+ {
+  "topicSlug": "dna-replication",
+  "front": "Tumor suppressor genes like p53:",
+  "back": "**Inhibit cell division or promote apoptosis when damage is detected**\n\np53 halts the cell cycle or triggers apoptosis if DNA is damaged."
+ },
+ {
+  "topicSlug": "dna-replication",
+  "front": "What is semiconservative replication?",
+  "back": "Each new DNA molecule contains one original (parent) strand and one newly synthesized strand.",
+  "hint": "Meselson-Stahl experiment proved this."
+ },
+ {
+  "topicSlug": "dna-replication",
+  "front": "What is the difference between leading and lagging strands?",
+  "back": "**Leading strand**: Synthesized continuously 5'→3' toward the replication fork.\n**Lagging strand**: Synthesized in short Okazaki fragments 5'→3' away from the fork, then joined by ligase.",
+  "hint": "DNA polymerase only works 5' to 3'."
+ },
+ {
+  "topicSlug": "dna-replication",
+  "front": "Which bond holds the two strands of DNA together?",
+  "back": "**Hydrogen**\n\nHydrogen bonds between complementary bases hold the double helix together."
+ },
+ {
+  "topicSlug": "gene-regulation",
+  "front": "How does histone acetylation affect gene expression?",
+  "back": "Acetylation loosens chromatin structure (euchromatin), making DNA accessible to transcription factors and RNA polymerase. Activates gene expression."
+ },
+ {
+  "topicSlug": "gene-regulation",
+  "front": "How does the lac operon work?",
+  "back": "Inducible operon. Without lactose: repressor blocks transcription. With lactose: lactose binds repressor, repressor releases, genes transcribed. Genes turned ON when needed."
+ },
+ {
+  "topicSlug": "gene-regulation",
+  "front": "How does the trp operon work?",
+  "back": "Repressible operon. Without tryptophan: genes ON, trp synthesized. With tryptophan: trp binds repressor, activated repressor blocks genes. Genes turned OFF when product present."
+ },
+ {
+  "topicSlug": "gene-regulation",
+  "front": "What are microRNAs (miRNA)?",
+  "back": "Small RNA molecules that bind to complementary mRNA sequences. Block translation or cause mRNA degradation. Post-transcriptional gene silencing."
+ },
+ {
+  "topicSlug": "gene-regulation",
+  "front": "What are the levels of eukaryotic gene regulation?",
+  "back": "1) Chromatin structure, 2) Transcription, 3) RNA processing (splicing), 4) mRNA stability, 5) Translation, 6) Post-translational modifications."
+ },
+ {
+  "topicSlug": "gene-regulation",
+  "front": "What are transcription factors?",
+  "back": "Proteins that control transcription. Activators: promote transcription, bind enhancers. Repressors: inhibit transcription, bind silencers. Work with RNA polymerase."
+ },
+ {
+  "topicSlug": "gene-regulation",
+  "front": "What is an operon?",
+  "back": "Cluster of genes under control of a single promoter in prokaryotes. Genes transcribed together as one mRNA. Allows coordinated regulation."
+ },
+ {
+  "topicSlug": "gene-regulation",
+  "front": "What is epigenetics?",
+  "back": "Changes in gene expression without changes to DNA sequence. Mechanisms: DNA methylation, histone modifications, chromatin remodeling. Can be heritable and influenced by environment."
+ },
+ {
+  "topicSlug": "transcription-rna-processing",
+  "front": "CRISPR-Cas9 technology allows scientists to:",
+  "back": "**Edit specific DNA sequences in organisms**\n\nCRISPR-Cas9 is a precise genome-editing tool guided by a short RNA sequence."
+ },
+ {
+  "topicSlug": "transcription-rna-processing",
+  "front": "DNA methylation typically:",
+  "back": "**Silences gene expression**\n\nMethyl groups added to DNA (especially CpG islands) usually suppress transcription."
+ },
+ {
+  "topicSlug": "transcription-rna-processing",
+  "front": "In the lac operon, lactose presence generally:",
+  "back": "**Inhibits repressor and allows transcription**\n\nAllolactose inactivates the repressor, allowing transcription."
+ },
+ {
+  "topicSlug": "transcription-rna-processing",
+  "front": "RNA polymerase:",
+  "back": "**Does not require a primer to initiate transcription**\n\nUnlike DNA polymerase, RNA polymerase can start a new strand without a primer."
+ },
+ {
+  "topicSlug": "transcription-rna-processing",
+  "front": "Transcription produces:",
+  "back": "**RNA from DNA**\n\nTranscription copies DNA information into RNA."
+ },
+ {
+  "topicSlug": "transcription-rna-processing",
+  "front": "What are the steps of transcription?",
+  "back": "1. **Initiation**: RNA polymerase binds to promoter\n2. **Elongation**: RNA polymerase reads template 3'→5', builds mRNA 5'→3'\n3. **Termination**: Reaches terminator sequence, mRNA released",
+  "hint": "Template strand is read 3' to 5'."
+ },
+ {
+  "topicSlug": "transcription-rna-processing",
+  "front": "What is RNA processing in eukaryotes?",
+  "back": "1. **5' cap**: Modified GTP added for ribosome binding\n2. **3' poly-A tail**: ~200 adenines for stability\n3. **Splicing**: Introns removed, exons joined by spliceosome",
+  "hint": "Introns are \"in\" the trash; exons are \"ex\"pressed."
+ },
+ {
+  "topicSlug": "translation",
+  "front": "A promoter is a region where:",
+  "back": "**RNA polymerase binds to begin transcription**\n\nThe promoter is the DNA sequence recognized by RNA polymerase."
+ },
+ {
+  "topicSlug": "translation",
+  "front": "microRNAs (miRNAs) regulate gene expression by:",
+  "back": "**Binding to and degrading or blocking mRNA**\n\nmiRNAs silence genes post-transcriptionally by targeting complementary mRNA."
+ },
+ {
+  "topicSlug": "translation",
+  "front": "The 5′ cap and poly-A tail of mRNA function to:",
+  "back": "**Protect mRNA from degradation and aid in ribosome binding**\n\nThese modifications stabilize mRNA and help initiate translation."
+ },
+ {
+  "topicSlug": "translation",
+  "front": "Translation occurs on:",
+  "back": "**Ribosomes**\n\nRibosomes are the site of translation (protein synthesis)."
+ },
+ {
+  "topicSlug": "translation",
+  "front": "What are the steps of translation?",
+  "back": "1. **Initiation**: the ribosome assembles on the mRNA at the start codon (AUG), and the first tRNA (methionine) binds\n2. **Elongation**: tRNAs bring amino acids matched to each codon; peptide bonds form; the ribosome moves along the mRNA\n3. **Termination**: a stop codon (UAA, UAG, UGA) is reached and the polypeptide is released",
+  "hint": "AUG starts it; stop codons end it."
+ },
+ {
+  "topicSlug": "translation",
+  "front": "What is the role of tRNA?",
+  "back": "Transfer RNA carries specific amino acids to the ribosome. Its anticodon base-pairs with the mRNA codon, ensuring correct amino acid placement.",
+  "hint": "The adapter molecule between mRNA and protein."
+ }
+]

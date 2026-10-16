@@ -1,0 +1,62 @@
+[
+ {
+  "front": "A boat made of steel ($\\rho > \\rho_{\\text{water}}$) floats — why?",
+  "fp": "780a15d1c643",
+  "yield": "MEDIUM",
+  "why": "Steel boat floats; secondary"
+ },
+ {
+  "front": "A scale reads less for a submerged object because…",
+  "fp": "233609eb8eca",
+  "yield": "HIGH",
+  "why": "CED 8.2 apparent weight on a scale"
+ },
+ {
+  "front": "Apparent weight underwater?",
+  "fp": "d3b7a27ba214",
+  "yield": "HIGH",
+  "why": "CED 8.2 apparent weight W - Fb"
+ },
+ {
+  "front": "Does a floating object's submerged volume depend on $g$?",
+  "fp": "ce60e43a9303",
+  "yield": "MEDIUM",
+  "why": "g cancels for floating; secondary"
+ },
+ {
+  "front": "For a floating object, what fraction is submerged?",
+  "fp": "ef1511d16017",
+  "yield": "HIGH",
+  "why": "CED 8.2 fraction submerged"
+ },
+ {
+  "front": "State Archimedes' principle.",
+  "fp": "a3e6ac1d2705",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.2 Archimedes' principle; tested every exam"
+ },
+ {
+  "front": "What happens if $\\rho_{\\text{obj}} = \\rho_{\\text{fluid}}$?",
+  "fp": "e9233ab4a840",
+  "yield": "MEDIUM",
+  "why": "Neutral buoyancy; secondary"
+ },
+ {
+  "front": "When does an object float in a fluid?",
+  "fp": "453a10880279",
+  "yield": "HIGH",
+  "why": "CED 8.2 float when less dense"
+ },
+ {
+  "front": "Which density goes in the buoyant-force formula?",
+  "fp": "436be52d6fe4",
+  "yield": "HIGH",
+  "why": "CED 8.2 fluid density in Fb"
+ },
+ {
+  "front": "Why does buoyancy exist physically?",
+  "fp": "ca936f41a703",
+  "yield": "HIGH",
+  "why": "CED 8.2 buoyancy from pressure difference"
+ }
+]

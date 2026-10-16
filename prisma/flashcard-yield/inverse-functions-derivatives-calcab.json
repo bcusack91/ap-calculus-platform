@@ -1,0 +1,38 @@
+[
+ {
+  "front": "$\\dfrac{d}{dx}[\\arctan x] = $",
+  "fp": "b38c3d515bd4",
+  "yield": "HIGH",
+  "why": "CED 3.3 derivative of arctan"
+ },
+ {
+  "front": "If $f$ is differentiable and $f(a) = b$, what is $(f^{-1})'(b)$?",
+  "fp": "fea465efe76e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.2 derivative of inverse function"
+ },
+ {
+  "front": "If $f$ is one-to-one and differentiable with inverse $g$, then:",
+  "fp": "435800e81577",
+  "yield": "MEDIUM",
+  "why": "Restates inverse-function derivative"
+ },
+ {
+  "front": "If $y = \\tan^{-1}(e^x)$, then $\\dfrac{dy}{dx} = $",
+  "fp": "3c92140b6f89",
+  "yield": "MEDIUM",
+  "why": "Chain rule with arctan; practice item"
+ },
+ {
+  "front": "What is $\\dfrac{d}{dx}[\\arctan x]$?",
+  "fp": "b968bcadc1d3",
+  "yield": "MEDIUM",
+  "why": "Duplicate of arctan derivative card"
+ },
+ {
+  "front": "What is $\\dfrac{d}{dx}[\\arctan(x)]$?",
+  "fp": "3124012745d4",
+  "yield": "MEDIUM",
+  "why": "Duplicate of arctan derivative card"
+ }
+]

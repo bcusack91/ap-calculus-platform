@@ -1,0 +1,32 @@
+[
+ {
+  "front": "A chemist has 45.0 g of hydrated copper(II) sulfate (CuSO₄·5H₂O). (a) Calculate the number of moles of the hydrated compound. (b) How many moles of water molecules are in the sample? (c) What mass of anhydrous CuSO₄ would remain if all the water were removed?",
+  "fp": "9e597cad7823",
+  "yield": "MEDIUM",
+  "why": "Hydrate mole problem; multi-step practice"
+ },
+ {
+  "front": "A sample contains 2.50 moles of calcium carbonate (CaCO₃). (a) Calculate the mass of this sample in grams. (b) How many formula units of CaCO₃ are present? (c) How many total atoms are in this sample?",
+  "fp": "e45911fc0232",
+  "yield": "HIGH",
+  "why": "CED 1.1 mass-mole-particle conversions"
+ },
+ {
+  "front": "How do you convert grams to moles?",
+  "fp": "8f8e0264e3e3",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.1 grams to moles; used on every exam"
+ },
+ {
+  "front": "If 180 g of glucose ($C_6H_{12}O_6$, MM = 180 g/mol) is dissolved, how many moles is that?",
+  "fp": "291bc1d42a28",
+  "yield": "MEDIUM",
+  "why": "Restates grams-to-moles card"
+ },
+ {
+  "front": "What is Avogadro's number?",
+  "fp": "e14dd9f81ba3",
+  "yield": "HIGH",
+  "why": "CED 1.1 Avogadro's number"
+ }
+]

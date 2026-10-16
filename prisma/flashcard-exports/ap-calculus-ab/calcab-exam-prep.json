@@ -1,0 +1,80 @@
+[
+ {
+  "topicSlug": "ap-exam-review-calcab",
+  "front": "For \"use a Riemann sum to approximate $\\int_0^4 f(x) dx$ using values from a table at $x = 0, 1, 2, 4$\" — the subintervals have widths:",
+  "back": "**$1, 1, 2$**\n\nSubinterval widths are differences in given $x$-values: $1-0, 2-1, 4-2 = 1, 1, 2$."
+ },
+ {
+  "topicSlug": "ap-exam-review-calcab",
+  "front": "If $f'(c) = 0$ and $f'$ changes from $+$ to $-$ at $c$, then $c$ is a:",
+  "back": "**Local maximum**\n\nFirst Derivative Test: $+$ to $-$ ⇒ local max."
+ },
+ {
+  "topicSlug": "ap-exam-review-calcab",
+  "front": "On the AP Calculus exam, the formula sheet provides:",
+  "back": "**No formulas — students must memorize all**\n\nAP Calculus exam provides NO formula sheet — memorize derivatives, integrals, and key formulas."
+ },
+ {
+  "topicSlug": "ap-exam-review-calcab",
+  "front": "The average value of $f$ on $[a,b]$ is:",
+  "back": "**$\\dfrac{1}{b - a} \\int_a^b f(x) dx$**\n\nMean Value Theorem for Integrals."
+ },
+ {
+  "topicSlug": "ap-exam-review-calcab",
+  "front": "When the AP exam allows a calculator, you may:",
+  "back": "**Use it for arithmetic, graphing, root-finding, integration, and derivatives at a point**\n\nFour allowed calculator uses: graph, root, derivative-at-a-point, definite integral."
+ },
+ {
+  "topicSlug": "ap-exam-review-calcab",
+  "front": "Which parts of the AP Calculus AB exam allow a graphing calculator?",
+  "back": "Section I Part B (15 multiple-choice, 45 min) and Section II Part A (2 free-response, 30 min). Section I Part A (30 MC, 60 min) and Section II Part B (4 FRQ, 60 min) are no-calculator.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "free-response-strategies-calcab",
+  "front": "By the Mean Value Theorem, if $f$ is continuous on $[2, 6]$ and differentiable on $(2, 6)$ with $f(2) = 3$ and $f(6) = 11$, then there exists $c$ where $f'(c) = $",
+  "back": "**$2$**\n\n$f'(c) = \\frac{f(6) - f(2)}{6 - 2} = \\frac{11 - 3}{4} = 2$."
+ },
+ {
+  "topicSlug": "free-response-strategies-calcab",
+  "front": "Given $f(2) = 3$ and $f'(2) = -4$, the tangent-line approximation at $x = 2.1$ is:",
+  "back": "**$2.6$**\n\n$f(2.1) \\approx f(2) + f'(2)(0.1) = 3 + (-4)(0.1) = 3 - 0.4 = 2.6$."
+ },
+ {
+  "topicSlug": "free-response-strategies-calcab",
+  "front": "If $\\dfrac{d}{dx}\\left[\\int_0^x f(t)\\,dt\\right] = \\sin(x^2)$, then $f(x) = $",
+  "back": "**$\\sin(x^2)$**\n\nBy FTC Part 1: $\\frac{d}{dx}\\int_0^x f(t)dt = f(x)$. So $f(x) = \\sin(x^2)$."
+ },
+ {
+  "topicSlug": "free-response-strategies-calcab",
+  "front": "If $f'$ changes from negative to positive at $x = c$, and $f$ is continuous at $x = c$, then at $x = c$ the function $f$ has:",
+  "back": "**A local minimum**\n\nFirst Derivative Test: $f'$ changing from $-$ to $+$ indicates $f$ is changing from decreasing to increasing. This is a local minimum."
+ },
+ {
+  "topicSlug": "free-response-strategies-calcab",
+  "front": "On an AP Calculus FRQ, what must you write when you use the calculator to evaluate a definite integral?",
+  "back": "Show the setup — the full definite integral with its limits and integrand — and then the numeric value to at least three decimal places. A bare number with no setup earns no points.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "tables-data-calcab",
+  "front": "A midpoint Riemann sum with $n = 3$ for $\\displaystyle\\int_0^6 f(x)\\,dx$ uses sample points at:",
+  "back": "**$x = 1, 3, 5$**\n\n$\\Delta x = 2$. Subintervals: $[0,2], [2,4], [4,6]$. Midpoints: $1, 3, 5$."
+ },
+ {
+  "topicSlug": "tables-data-calcab",
+  "front": "A table gives $f(t)$ at $t = 0, 2, 5, 9$. How do you approximate $\\int_0^9 f(t)\\,dt$ with a trapezoidal sum?",
+  "back": "Add one trapezoid per subinterval, each with its own width: $\\frac{2}{2}[f(0)+f(2)] + \\frac{3}{2}[f(2)+f(5)] + \\frac{4}{2}[f(5)+f(9)]$. Never factor out a single $\\frac{\\Delta x}{2}$ when the widths are unequal.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "tables-data-calcab",
+  "front": "The error in a trapezoidal approximation is generally reduced by:",
+  "back": "**Using more subintervals**\n\nMore subintervals $\\Rightarrow$ smaller $\\Delta x$ $\\Rightarrow$ better approximation."
+ },
+ {
+  "topicSlug": "tables-data-calcab",
+  "front": "The table below shows values of $f(x)$:<br/><table style=\"border-collapse:collapse;margin:12px 0\"><tr><th style=\"border:1px solid #888;padding:6px 14px\">$x$</th><td style=\"border:1px solid #888;padding:6px 14px\">$1$</td><td style=\"border:1px solid #888;padding:6px 14px\">$2$</td><td style=\"border:1px solid #888;padding:6px 14px\">$3$</td><td style=\"border:1px solid #888;padding:6px 14px\">$4$</td></tr><tr><th style=\"border:1px solid #888;padding:6px 14px\">$f(x)$</th><td style=\"border:1px solid #888;padding:6px 14px\">$3$</td><td style=\"border:1px solid #888;padding:6px 14px\">$5$</td><td style=\"border:1px solid #888;padding:6px 14px\">$6$</td><td style=\"border:1px solid #888;padding:6px 14px\">$10$</td></tr></table>Using a left Riemann sum with $n = 3$, $\\displaystyle\\int_1^4 f(x)\\,dx \\approx$",
+  "back": "**$14$**\n\nLeft Riemann sum: Δx = 1. Sum = f(1)·1 + f(2)·1 + f(3)·1 = 3 + 5 + 6 = 14."
+ }
+]

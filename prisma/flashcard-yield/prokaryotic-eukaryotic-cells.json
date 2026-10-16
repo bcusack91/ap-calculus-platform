@@ -1,0 +1,32 @@
+[
+ {
+  "front": "Calculate SA:V ratio for cube with side = 2 cm",
+  "fp": "133e3e75753e",
+  "yield": "HIGH",
+  "why": "CED 2.3 SA:V calculation; formula-sheet skill"
+ },
+ {
+  "front": "Key differences: Prokaryotic vs. Eukaryotic cells?",
+  "fp": "c0d9ea8768f7",
+  "yield": "HIGH",
+  "why": "CED 2.10 prokaryote vs eukaryote"
+ },
+ {
+  "front": "What are the three tenets of cell theory?",
+  "fp": "575664b45dca",
+  "yield": "LOW",
+  "why": "Cell theory tenets not in the CED; basic recall"
+ },
+ {
+  "front": "What structures are unique to plant cells?",
+  "fp": "30a0951095a6",
+  "yield": "MEDIUM",
+  "why": "Plant-cell structures; overlaps organelle cards"
+ },
+ {
+  "front": "Why does surface area to volume ratio limit cell size?",
+  "fp": "1cf9a061463f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.3 SA:V limits cell size; FRQ staple"
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "front": "$\\frac{d}{dx}[\\ln(g(x))] = ?$",
+  "fp": "c96a12764a54",
+  "yield": "HIGH",
+  "why": "CED 3.1 chain rule with ln"
+ },
+ {
+  "front": "$\\frac{d}{dx}[e^{g(x)}] = ?$",
+  "fp": "fcf316c111b1",
+  "yield": "HIGH",
+  "why": "CED 3.1 chain rule with e^u"
+ },
+ {
+  "front": "If $h(x) = f(g(x))$, $g(3) = 7$, $g'(3) = 4$, and $f'(7) = -2$, then $h'(3) = $",
+  "fp": "b2b7f1981844",
+  "yield": "HIGH",
+  "why": "CED 3.1 chain rule from table values; worked example"
+ },
+ {
+  "front": "If $y = (x^3 + 1)^5$, what is $\\dfrac{dy}{dx}$?",
+  "fp": "3c131d4ba961",
+  "yield": "HIGH",
+  "why": "CED 3.1 chain rule example"
+ },
+ {
+  "front": "If $y = \\cos^3(2x)$, then $\\dfrac{dy}{dx} = $",
+  "fp": "cc0348c59f3e",
+  "yield": "HIGH",
+  "why": "CED 3.1 nested chain rule"
+ },
+ {
+  "front": "State the Chain Rule.",
+  "fp": "0cab4be43d08",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.1 chain rule statement"
+ },
+ {
+  "front": "The derivative of $y = e^{\\sin x}$ is:",
+  "fp": "d95bee2d7776",
+  "yield": "MEDIUM",
+  "why": "Chain rule example; restatement"
+ },
+ {
+  "front": "What is $\\dfrac{d}{dx}[\\sin(3x^2)]$?",
+  "fp": "a3e06aad9335",
+  "yield": "MEDIUM",
+  "why": "Chain rule example; restatement"
+ }
+]

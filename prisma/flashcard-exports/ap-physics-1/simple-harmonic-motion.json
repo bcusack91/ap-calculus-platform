@@ -1,0 +1,122 @@
+[
+ {
+  "topicSlug": "energy-in-shm",
+  "front": "At what position is KE = PE in SHM?",
+  "back": "At $x = \\pm\\frac{A}{\\sqrt{2}} \\approx \\pm 0.707A$. Each has half the total energy.",
+  "hint": "A divided by square root of 2"
+ },
+ {
+  "topicSlug": "energy-in-shm",
+  "front": "At x = A/2, what fraction of energy is potential?",
+  "back": "$PE = \\frac{1}{2}k(A/2)^2 = \\frac{1}{8}kA^2 = \\frac{1}{4}E$ (25%). So KE = 75% of total.",
+  "hint": "One quarter (25%)"
+ },
+ {
+  "topicSlug": "energy-in-shm",
+  "front": "Does total energy depend on mass in mass-spring system?",
+  "back": "NO! $E = \\frac{1}{2}kA^2$ depends only on spring constant and amplitude, not mass.",
+  "hint": "Independent of mass"
+ },
+ {
+  "topicSlug": "energy-in-shm",
+  "front": "How do you find speed at any position x using energy?",
+  "back": "$v = \\omega\\sqrt{A^2 - x^2}$ from $\\frac{1}{2}kA^2 = \\frac{1}{2}kx^2 + \\frac{1}{2}mv^2$",
+  "hint": "Energy conservation: total = KE + PE"
+ },
+ {
+  "topicSlug": "energy-in-shm",
+  "front": "How does total energy change if amplitude doubles?",
+  "back": "Energy quadruples! $E \\propto A^2$. Double amplitude → 4× energy.",
+  "hint": "Energy proportional to A²"
+ },
+ {
+  "topicSlug": "energy-in-shm",
+  "front": "What happens to energy in a damped oscillator?",
+  "back": "Total energy decreases over time due to friction. Converts to heat and sound. Amplitude decreases.",
+  "hint": "Energy dissipated by friction"
+ },
+ {
+  "topicSlug": "energy-in-shm",
+  "front": "What is the potential energy formula for a spring?",
+  "back": "$PE = \\frac{1}{2}kx^2$ - Always positive, maximum at amplitude ($\\pm A$), zero at equilibrium.",
+  "hint": "Half k times displacement squared"
+ },
+ {
+  "topicSlug": "energy-in-shm",
+  "front": "What is the total energy in an ideal SHM system?",
+  "back": "$E = \\frac{1}{2}kA^2$ - constant at all positions. Energy oscillates between kinetic and potential.",
+  "hint": "Half k times amplitude squared"
+ },
+ {
+  "topicSlug": "energy-in-shm",
+  "front": "Where is kinetic energy maximum in SHM?",
+  "back": "At equilibrium ($x = 0$). All energy is kinetic: $KE_{max} = \\frac{1}{2}mv_{max}^2 = \\frac{1}{2}kA^2$",
+  "hint": "Where speed is maximum"
+ },
+ {
+  "topicSlug": "energy-in-shm",
+  "front": "Where is potential energy maximum in SHM?",
+  "back": "At amplitude ($x = \\pm A$). All energy is potential: $PE_{max} = \\frac{1}{2}kA^2$. Object momentarily at rest.",
+  "hint": "Where speed is zero"
+ },
+ {
+  "topicSlug": "introduction-to-shm",
+  "front": "Does amplitude affect the period of SHM?",
+  "back": "NO! Period is independent of amplitude (for ideal SHM). Large or small swing, same period.",
+  "hint": "Period independent of amplitude"
+ },
+ {
+  "topicSlug": "introduction-to-shm",
+  "front": "Does the mass of a pendulum bob affect its period?",
+  "back": "NO! Pendulum period $T = 2\\pi\\sqrt{\\frac{L}{g}}$ depends only on length and gravity, not mass.",
+  "hint": "Period independent of mass for pendulum"
+ },
+ {
+  "topicSlug": "introduction-to-shm",
+  "front": "What is angular frequency ω and how does it relate to regular frequency?",
+  "back": "$\\omega = 2\\pi f = \\frac{2\\pi}{T}$ (units: rad/s). For mass-spring: $\\omega = \\sqrt{\\frac{k}{m}}$",
+  "hint": "ω = 2πf"
+ },
+ {
+  "topicSlug": "introduction-to-shm",
+  "front": "What is frequency and how does it relate to period?",
+  "back": "Frequency $f$ = oscillations per second (Hz). $f = \\frac{1}{T}$ (reciprocal of period)",
+  "hint": "f = 1/T"
+ },
+ {
+  "topicSlug": "introduction-to-shm",
+  "front": "What is Hooke's Law?",
+  "back": "$F = -kx$ where $k$ is spring constant (N/m). Larger $k$ = stiffer spring.",
+  "hint": "Spring force law"
+ },
+ {
+  "topicSlug": "introduction-to-shm",
+  "front": "What is the defining characteristic of Simple Harmonic Motion?",
+  "back": "Restoring force proportional to displacement: $F = -kx$. Negative sign means force always points toward equilibrium.",
+  "hint": "Force proportional to displacement"
+ },
+ {
+  "topicSlug": "introduction-to-shm",
+  "front": "What is the maximum speed in SHM?",
+  "back": "$v_{max} = A\\omega$ where $A$ is amplitude and $\\omega$ is angular frequency. Occurs at equilibrium position.",
+  "hint": "Amplitude times angular frequency"
+ },
+ {
+  "topicSlug": "introduction-to-shm",
+  "front": "What is the period formula for a mass-spring system?",
+  "back": "$T = 2\\pi\\sqrt{\\frac{m}{k}}$ - Heavier mass or softer spring → longer period. Independent of amplitude!",
+  "hint": "2π times square root of m/k"
+ },
+ {
+  "topicSlug": "introduction-to-shm",
+  "front": "What is the period formula for a simple pendulum?",
+  "back": "$T = 2\\pi\\sqrt{\\frac{L}{g}}$ - Only depends on length and gravity. Independent of mass and (small) amplitude!",
+  "hint": "2π times square root of L/g"
+ },
+ {
+  "topicSlug": "introduction-to-shm",
+  "front": "What is the relationship between acceleration and displacement in SHM?",
+  "back": "$a = -\\omega^2 x$ - Acceleration is always proportional to (and opposite) displacement.",
+  "hint": "a = -ω²x"
+ }
+]

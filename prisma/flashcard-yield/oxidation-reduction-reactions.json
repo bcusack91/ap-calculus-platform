@@ -1,0 +1,20 @@
+[
+ {
+  "front": "How do you assign oxidation numbers to elements in their standard state?",
+  "fp": "da28c2dc87b2",
+  "yield": "MEDIUM",
+  "why": "Oxidation number of elements; supporting rule"
+ },
+ {
+  "front": "What is oxidation?",
+  "fp": "188dab55bc07",
+  "yield": "HIGH",
+  "why": "CED 4.7/4.9 oxidation as electron loss"
+ },
+ {
+  "front": "What is reduction?",
+  "fp": "42565ba5d232",
+  "yield": "HIGH",
+  "why": "CED 4.7/4.9 reduction as electron gain"
+ }
+]

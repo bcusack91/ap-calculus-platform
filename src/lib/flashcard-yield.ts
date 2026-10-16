@@ -3,7 +3,9 @@ import type { ExamYield, Prisma } from '@prisma/client'
 /**
  * Exam-yield filtering for flashcard study queues.
  *
- * MCAT cards carry an `examYield` tier: ULTRA_HIGH, HIGH, MEDIUM or LOW.
+ * MCAT cards and the four flagship AP decks (AP Chemistry, AP Biology, AP
+ * Physics 1, AP Calculus AB) carry an `examYield` tier: ULTRA_HIGH, HIGH,
+ * MEDIUM or LOW.
  * ULTRA_HIGH and HIGH are always served. MEDIUM (on by default) and LOW (off
  * by default) are per-student opt-ins on the User row. Every other card on
  * the site is unlabeled (NULL) and must always be served — that rule is the
@@ -38,7 +40,7 @@ export function servedFlashcardWhere(prefs: YieldPrefs): Prisma.FlashcardWhereIn
   if (!lowYieldHiddenByDefault()) return {}
   const tiers = servedYields(prefs)
   if (tiers.length === 4) return {}
-  // NULL is "never labeled", which is every non-MCAT card. SQL comparisons
+  // NULL is "never labeled", which is every card outside the yield courses. SQL comparisons
   // drop NULL rows, so `examYield: { notIn: [...] }` would silently hide
   // ~8,600 unlabeled cards. The null case has to be spelled out.
   return { OR: [{ examYield: null }, { examYield: { in: tiers } }] }

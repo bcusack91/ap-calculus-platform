@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Can you use conservation of momentum if friction is present?",
+  "fp": "7d2f7e07f1a4",
+  "yield": "MEDIUM",
+  "why": "Friction during brief collisions; secondary"
+ },
+ {
+  "front": "For 2D collisions, how do you apply conservation of momentum?",
+  "fp": "69bb84526995",
+  "yield": "MEDIUM",
+  "why": "Momentum by components in 2D; secondary"
+ },
+ {
+  "front": "In an explosion from rest, how do the pieces move?",
+  "fp": "50e82de50720",
+  "yield": "HIGH",
+  "why": "CED 4.3 explosion from rest"
+ },
+ {
+  "front": "Is momentum conserved in ALL collisions?",
+  "fp": "c1af0d09f1a3",
+  "yield": "MEDIUM",
+  "why": "Restates momentum-in-all-collisions card"
+ },
+ {
+  "front": "What happens to the center of mass of an isolated system?",
+  "fp": "c53550ef0857",
+  "yield": "HIGH",
+  "why": "CED 4.3 center-of-mass velocity constant"
+ },
+ {
+  "front": "What is the law of conservation of momentum?",
+  "fp": "0f7f00eb3e0a",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.3 conservation of momentum"
+ },
+ {
+  "front": "What makes a system \"isolated\"?",
+  "fp": "10629f495600",
+  "yield": "HIGH",
+  "why": "CED 4.3 isolated system"
+ },
+ {
+  "front": "Why is momentum conserved? (Newton's Laws perspective)",
+  "fp": "c28d227e808a",
+  "yield": "MEDIUM",
+  "why": "Momentum conservation from third law; derivation"
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "front": "Set up and evaluate the integral for the area enclosed by $y = 2x$ and $y = x^2$.",
+  "fp": "8e960ab2f1e4",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.4 area between curves setup"
+ },
+ {
+  "front": "The area between $y = x^2$ and $y = x$ from $x = 0$ to $x = 1$ is:",
+  "fp": "abbd038c4414",
+  "yield": "MEDIUM",
+  "why": "Area between curves example; restatement"
+ }
+]

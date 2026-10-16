@@ -1,0 +1,50 @@
+[
+ {
+  "front": "How do intermolecular forces affect boiling point?",
+  "fp": "1b95310221f7",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.1 IMF strength sets boiling point"
+ },
+ {
+  "front": "How does molecular shape affect London Dispersion Forces?",
+  "fp": "4bebef07f80d",
+  "yield": "HIGH",
+  "why": "CED 3.1 shape and dispersion forces"
+ },
+ {
+  "front": "What are London Dispersion Forces and what affects their strength?",
+  "fp": "f459f812d4fa",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.1 London dispersion strength; tested every exam"
+ },
+ {
+  "front": "What are the requirements for hydrogen bonding?",
+  "fp": "339e9653af2a",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.1 hydrogen-bond requirements"
+ },
+ {
+  "front": "What are the three main types of intermolecular forces in order of strength?",
+  "fp": "e1c9c9add40b",
+  "yield": "HIGH",
+  "why": "CED 3.1 IMF types and order"
+ },
+ {
+  "front": "What IMFs are present in: (a) nonpolar molecules, (b) polar molecules without N-H/O-H/F-H, (c) molecules with N-H/O-H/F-H?",
+  "fp": "9ff6209cd293",
+  "yield": "HIGH",
+  "why": "CED 3.1 identify IMFs present"
+ },
+ {
+  "front": "What is the difference between intramolecular and intermolecular forces?",
+  "fp": "fda3ec836d87",
+  "yield": "HIGH",
+  "why": "CED 3.1 intra vs intermolecular forces"
+ },
+ {
+  "front": "Why does H₂O have a higher BP than H₂S despite lower molar mass?",
+  "fp": "f1da917588fb",
+  "yield": "HIGH",
+  "why": "CED 3.1 H2O vs H2S boiling point"
+ }
+]

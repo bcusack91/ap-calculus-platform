@@ -1,0 +1,32 @@
+[
+ {
+  "front": "Evaluate $\\int_0^1 e^x\\,dx$.",
+  "fp": "2c5e26543041",
+  "yield": "MEDIUM",
+  "why": "Definite integral of e^x; practice"
+ },
+ {
+  "front": "Evaluate $\\int_1^2 x^3\\,dx$.",
+  "fp": "19f752b7a871",
+  "yield": "MEDIUM",
+  "why": "Definite integral of x^3; practice"
+ },
+ {
+  "front": "Evaluate $\\int_1^e \\frac{1}{x}\\,dx$.",
+  "fp": "a06b074fcf68",
+  "yield": "MEDIUM",
+  "why": "Definite integral of 1/x; practice"
+ },
+ {
+  "front": "State the Fundamental Theorem of Calculus, Part 1.",
+  "fp": "d5705e94bc2a",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.4 FTC part 1"
+ },
+ {
+  "front": "State the Fundamental Theorem of Calculus, Part 2.",
+  "fp": "cc453f99057a",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.7 FTC part 2"
+ }
+]

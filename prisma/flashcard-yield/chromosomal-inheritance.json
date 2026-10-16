@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Define aneuploidy and give examples.",
+  "fp": "42e5fc4d91cf",
+  "yield": "MEDIUM",
+  "why": "CED 5.6 nondisjunction/aneuploidy"
+ },
+ {
+  "front": "How does recombination frequency relate to gene distance?",
+  "fp": "ef585043a442",
+  "yield": "HIGH",
+  "why": "CED 5.4 recombination frequency to map distance"
+ },
+ {
+  "front": "How is biological sex determined in humans?",
+  "fp": "6b9d8fcc8ca8",
+  "yield": "MEDIUM",
+  "why": "Sex determination XX/XY; secondary"
+ },
+ {
+  "front": "What are linked genes?",
+  "fp": "efc5843d5da2",
+  "yield": "HIGH",
+  "why": "CED 5.4 linked genes"
+ },
+ {
+  "front": "What are the four types of chromosomal structural changes?",
+  "fp": "92fd3b6eab3d",
+  "yield": "MEDIUM",
+  "why": "Chromosome structural changes; secondary"
+ },
+ {
+  "front": "What is the maximum recombination frequency and what does it mean?",
+  "fp": "b1b766189163",
+  "yield": "HIGH",
+  "why": "CED 5.4 50% max recombination"
+ },
+ {
+  "front": "What is X-inactivation and why does it occur?",
+  "fp": "136b95ee3928",
+  "yield": "LOW",
+  "why": "X-inactivation; trim removed Barr bodies (borderline)"
+ },
+ {
+  "front": "Why are calico cats almost always female?",
+  "fp": "22ee6f64356d",
+  "yield": "LOW",
+  "why": "Calico cats; X-inactivation trivia"
+ }
+]

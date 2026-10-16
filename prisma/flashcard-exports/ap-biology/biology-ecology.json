@@ -1,0 +1,102 @@
+[
+ {
+  "topicSlug": "community-ecology",
+  "front": "Compare Batesian and Müllerian mimicry.",
+  "back": "Batesian: a harmless species mimics a harmful one (a hoverfly mimicking a stinging wasp). Müllerian: two or more genuinely harmful species converge on the same appearance and share one warning signal (monarch and queen butterflies)."
+ },
+ {
+  "topicSlug": "community-ecology",
+  "front": "Compare mutualism, commensalism, and parasitism.",
+  "back": "Mutualism (+/+): both benefit (pollinators/flowers). Commensalism (+/0): one benefits, other unaffected (barnacles on whales). Parasitism (+/-): parasite benefits, host harmed (tapeworms)."
+ },
+ {
+  "topicSlug": "community-ecology",
+  "front": "What is a keystone species?",
+  "back": "Species with disproportionately large effect relative to its abundance. Removal drastically changes community structure. Examples: sea otters, wolves."
+ },
+ {
+  "topicSlug": "community-ecology",
+  "front": "What is resource partitioning?",
+  "back": "Species divide resources to reduce competition. Allows coexistence. Example: different warbler species feed at different heights in trees."
+ },
+ {
+  "topicSlug": "community-ecology",
+  "front": "What is the competitive exclusion principle?",
+  "back": "Two species cannot occupy the same ecological niche. One will outcompete the other, leading to extinction or evolution. Resource partitioning allows coexistence."
+ },
+ {
+  "topicSlug": "ecosystems-energy",
+  "front": "How do human activities impact biogeochemical cycles?",
+  "back": "Burning fossil fuels increases CO₂ (climate change). Deforestation reduces CO₂ absorption. Fertilizers cause nitrogen/phosphorus runoff (eutrophication, algal blooms, oxygen depletion)."
+ },
+ {
+  "topicSlug": "ecosystems-energy",
+  "front": "How does carbon cycle through ecosystems?",
+  "back": "Photosynthesis: CO₂ → organic compounds. Cellular respiration: organic → CO₂. Combustion and decomposition release CO₂. Fossilization stores carbon long-term."
+ },
+ {
+  "topicSlug": "ecosystems-energy",
+  "front": "What are the main steps of the nitrogen cycle?",
+  "back": "1) Fixation (N₂ → NH₃/NO₃⁻), 2) Nitrification (NH₃ → NO₃⁻), 3) Assimilation (plants absorb), 4) Ammonification (organic N → NH₃), 5) Denitrification (NO₃⁻ → N₂)."
+ },
+ {
+  "topicSlug": "ecosystems-energy",
+  "front": "What are the roles of producers, consumers, and decomposers?",
+  "back": "Producers (autotrophs): convert light to chemical energy. Consumers (heterotrophs): eat other organisms. Decomposers: break down dead matter, recycle nutrients."
+ },
+ {
+  "topicSlug": "ecosystems-energy",
+  "front": "What is nitrogen fixation?",
+  "back": "Conversion of atmospheric N₂ into usable forms (NH₃ or NO₃⁻). Done by nitrogen-fixing bacteria in soil or root nodules, and by lightning."
+ },
+ {
+  "topicSlug": "ecosystems-energy",
+  "front": "What is the 10% rule in ecosystems?",
+  "back": "Only about 10% of energy is transferred from one trophic level to the next. 90% is lost as heat through metabolism and movement. This limits food chain length."
+ },
+ {
+  "topicSlug": "population-dynamics",
+  "front": "Compare r-selected and K-selected strategies.",
+  "back": "r-selected: many offspring, little care, unstable environments. K-selected: few offspring, high care, stable environments."
+ },
+ {
+  "topicSlug": "population-dynamics",
+  "front": "Contrast exponential and logistic growth models.",
+  "back": "Exponential is unlimited J-shaped growth; logistic is S-shaped, leveling at carrying capacity $K$."
+ },
+ {
+  "topicSlug": "population-dynamics",
+  "front": "Distinguish density-dependent and density-independent factors.",
+  "back": "Density-dependent intensify with crowding (disease, competition); density-independent do not (weather, fire)."
+ },
+ {
+  "topicSlug": "population-dynamics",
+  "front": "What do the three survivorship curves show?",
+  "back": "Type I high late-life mortality, Type II constant mortality, Type III high early mortality."
+ },
+ {
+  "topicSlug": "population-dynamics",
+  "front": "What does an age-structure pyramid predict?",
+  "back": "A wide base signals rapid future growth; a narrow base signals stability or decline."
+ },
+ {
+  "topicSlug": "population-dynamics",
+  "front": "What is carrying capacity?",
+  "back": "The maximum population size an environment can sustain given its resources."
+ },
+ {
+  "topicSlug": "population-ecology",
+  "front": "Density-dependent vs. density-independent factors?",
+  "back": "Density-dependent: effect increases with population density (competition, predation, disease). Density-independent: effect regardless of density (weather, disasters)."
+ },
+ {
+  "topicSlug": "population-ecology",
+  "front": "What is carrying capacity?",
+  "back": "Maximum population size that an environment can sustain indefinitely. Determined by resources like food, water, space, and shelter."
+ },
+ {
+  "topicSlug": "population-ecology",
+  "front": "What is the difference between exponential and logistic growth?",
+  "back": "Exponential (J-curve): unlimited resources, continuous acceleration. Logistic (S-curve): limited resources, levels off at carrying capacity (K)."
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "front": "Rough ER vs. Smooth ER functions?",
+  "fp": "6b612992a674",
+  "yield": "HIGH",
+  "why": "CED 2.1 rough vs smooth ER"
+ },
+ {
+  "front": "What are the three types of cytoskeleton fibers?",
+  "fp": "507434cfbc2d",
+  "yield": "MEDIUM",
+  "why": "Cytoskeleton fiber sizes; detail beyond CED 2.1"
+ },
+ {
+  "front": "What does the Golgi apparatus do?",
+  "fp": "024913320a0a",
+  "yield": "HIGH",
+  "why": "CED 2.1 Golgi function"
+ },
+ {
+  "front": "What is the function of lysosomes?",
+  "fp": "3d567d7484cd",
+  "yield": "HIGH",
+  "why": "CED 2.1 lysosome function"
+ },
+ {
+  "front": "What is the function of the nucleus?",
+  "fp": "b4814ad768e8",
+  "yield": "MEDIUM",
+  "why": "Nucleus basics; usually assumed knowledge"
+ },
+ {
+  "front": "What is the function of the plant central vacuole?",
+  "fp": "fbb608f15670",
+  "yield": "HIGH",
+  "why": "CED 2.1 central vacuole/turgor"
+ },
+ {
+  "front": "What is the structure and function of chloroplasts?",
+  "fp": "23a817a09869",
+  "yield": "HIGH",
+  "why": "CED 2.1 chloroplast structure (thylakoid/stroma)"
+ },
+ {
+  "front": "What is the structure and function of mitochondria?",
+  "fp": "f2694e15da7c",
+  "yield": "HIGH",
+  "why": "CED 2.1 mitochondria structure (cristae)"
+ }
+]

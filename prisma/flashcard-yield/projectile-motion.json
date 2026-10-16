@@ -1,0 +1,62 @@
+[
+ {
+  "front": "For a projectile launched and landing at the same height, how does landing speed compare to launch speed?",
+  "fp": "9eca64f6edc8",
+  "yield": "MEDIUM",
+  "why": "Landing speed equals launch speed; secondary"
+ },
+ {
+  "front": "What is the acceleration at the peak of projectile motion?",
+  "fp": "0e6e7277cb93",
+  "yield": "HIGH",
+  "why": "CED 1.5 a = -g at the peak"
+ },
+ {
+  "front": "What is the formula for maximum height of a projectile?",
+  "fp": "263b83def78b",
+  "yield": "MEDIUM",
+  "why": "Max-height formula; derivable"
+ },
+ {
+  "front": "What is the horizontal acceleration in projectile motion?",
+  "fp": "7ab0dca0ab4e",
+  "yield": "HIGH",
+  "why": "CED 1.5 a_x = 0"
+ },
+ {
+  "front": "What is the shape of a projectile's path?",
+  "fp": "766b6701357d",
+  "yield": "MEDIUM",
+  "why": "Projectile path is a parabola; basic but on-exam"
+ },
+ {
+  "front": "What is the time to reach maximum height in projectile motion?",
+  "fp": "a003610a7c9b",
+  "yield": "MEDIUM",
+  "why": "Time to max height; derivable"
+ },
+ {
+  "front": "What is the vertical acceleration in projectile motion?",
+  "fp": "11ac4cd537f1",
+  "yield": "HIGH",
+  "why": "CED 1.5 a_y = -g"
+ },
+ {
+  "front": "What is the vertical velocity at the peak of projectile motion?",
+  "fp": "d6c8b273e58a",
+  "yield": "HIGH",
+  "why": "CED 1.5 v_y = 0 at peak, v_x unchanged"
+ },
+ {
+  "front": "What launch angle gives maximum range for a projectile?",
+  "fp": "df026ea1dae5",
+  "yield": "MEDIUM",
+  "why": "45 degrees for max range; secondary"
+ },
+ {
+  "front": "Which two launch angles give the same range?",
+  "fp": "09732f69c15e",
+  "yield": "MEDIUM",
+  "why": "Complementary angles same range; secondary"
+ }
+]

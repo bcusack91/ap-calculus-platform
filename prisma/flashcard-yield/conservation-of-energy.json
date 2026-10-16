@@ -1,0 +1,50 @@
+[
+ {
+  "front": "For a pendulum, where is KE maximum and where is PE maximum?",
+  "fp": "532e78d2beb2",
+  "yield": "HIGH",
+  "why": "CED 3.4 pendulum KE/PE locations"
+ },
+ {
+  "front": "How do you account for friction in energy problems?",
+  "fp": "bab633434f0c",
+  "yield": "HIGH",
+  "why": "CED 3.5 friction work in energy accounting"
+ },
+ {
+  "front": "What are conservative forces? Give examples.",
+  "fp": "aba7a9486a9b",
+  "yield": "HIGH",
+  "why": "CED 3.4 conservative forces"
+ },
+ {
+  "front": "What is mechanical energy?",
+  "fp": "a6f3becd965c",
+  "yield": "HIGH",
+  "why": "CED 3.4 mechanical energy"
+ },
+ {
+  "front": "What is power and what are its units?",
+  "fp": "95e5b4ada7c0",
+  "yield": "HIGH",
+  "why": "CED 3.6 power P = W/t = Fv"
+ },
+ {
+  "front": "What is the law of conservation of energy?",
+  "fp": "43eb9d1a7329",
+  "yield": "HIGH",
+  "why": "CED 3.5 conservation of energy"
+ },
+ {
+  "front": "When is mechanical energy conserved?",
+  "fp": "d0fdca6e6f29",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.5 when mechanical energy is conserved"
+ },
+ {
+  "front": "When should you use energy methods vs. force methods (Newton's laws)?",
+  "fp": "1ab0ae132710",
+  "yield": "MEDIUM",
+  "why": "Energy vs force methods; strategy tip"
+ }
+]

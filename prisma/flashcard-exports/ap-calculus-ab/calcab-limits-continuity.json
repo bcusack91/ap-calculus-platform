@@ -1,0 +1,516 @@
+[
+ {
+  "topicSlug": "continuity-introduction",
+  "front": "Can a function have a limit at a point but not be continuous there?",
+  "back": "Yes! If the limit exists but either f(a) doesn't exist or f(a) ≠ lim f(x), it's discontinuous"
+ },
+ {
+  "topicSlug": "continuity-introduction",
+  "front": "Name three types of functions that are continuous everywhere on their domains.",
+  "back": "Polynomials, exponential functions, and trigonometric functions like sin and cos"
+ },
+ {
+  "topicSlug": "continuity-introduction",
+  "front": "What are the three conditions for a function to be continuous at x = a?",
+  "back": "1) f(a) exists, 2) lim as x→a of f(x) exists, 3) lim as x→a of f(x) = f(a)"
+ },
+ {
+  "topicSlug": "continuity-introduction",
+  "front": "What does it mean to be continuous on an interval?",
+  "back": "A function is continuous on an interval if it's continuous at every point in that interval.",
+  "hint": "Continuous at every point"
+ },
+ {
+  "topicSlug": "continuity-introduction",
+  "front": "Where can a rational function fail to be continuous?",
+  "back": "Only where its denominator is zero. Everywhere else it is continuous, so $f(x) = \\frac{x+1}{x-2}$ is continuous for every $x \\neq 2$.",
+  "hint": "Polynomials, basic trig, exponentials"
+ },
+ {
+  "topicSlug": "continuity-introduction",
+  "front": "Why is $f(x) = \\frac{x^2 - 9}{x - 3}$ discontinuous at $x = 3$?",
+  "back": "Condition 1 fails: $f(3)$ is undefined (it gives $0/0$). The limit does exist, $\\lim_{x \\to 3} f(x) = 6$, so this is a removable discontinuity.",
+  "hint": "Defined, limit exists, limit = value"
+ },
+ {
+  "topicSlug": "direct-substitution-method",
+  "front": "Evaluate $\\lim_{x \\to 2} (x^2 + 3x - 1)$.",
+  "back": "$9$. Polynomials are continuous everywhere, so substitute directly: $2^2 + 3(2) - 1 = 9$.",
+  "hint": "If continuous, just plug in"
+ },
+ {
+  "topicSlug": "direct-substitution-method",
+  "front": "What does it mean if direct substitution gives a nonzero number over zero, such as $\\frac{5}{0}$?",
+  "back": "That form is not indeterminate — it signals a vertical asymptote, so the function grows without bound. Check the one-sided limits to decide whether the limit is $+\\infty$, $-\\infty$, or does not exist because the two sides disagree in sign.",
+  "hint": "0/0 = indeterminate, need other method"
+ },
+ {
+  "topicSlug": "direct-substitution-method",
+  "front": "What does it mean when you get $\\frac{0}{0}$ after direct substitution?",
+  "back": "It's an indeterminate form, meaning you need to use algebraic techniques like factoring or rationalizing"
+ },
+ {
+  "topicSlug": "direct-substitution-method",
+  "front": "What is the first method you should always try when evaluating a limit?",
+  "back": "Direct substitution - plug in the value and see if you get a real number"
+ },
+ {
+  "topicSlug": "direct-substitution-method",
+  "front": "What types of functions are always continuous?",
+  "back": "Polynomials, sin(x), cos(x), eˣ are continuous everywhere. Rational functions are continuous except where denominator = 0.",
+  "hint": "Polynomials, trig, exponential"
+ },
+ {
+  "topicSlug": "direct-substitution-method",
+  "front": "When can you use direct substitution to evaluate a limit?",
+  "back": "When the function is continuous at that point (you can plug in the value without any issues)"
+ },
+ {
+  "topicSlug": "estimating-limits-graphs",
+  "front": "A graph has a hole at $(2, 3)$ and a solid dot at $(2, 5)$. What are $\\lim_{x \\to 2} f(x)$ and $f(2)$?",
+  "back": "$\\lim_{x \\to 2} f(x) = 3$ (where the curve heads from both sides) and $f(2) = 5$ (the solid dot). The limit and the function value need not agree.",
+  "hint": "Hole doesn't stop limit"
+ },
+ {
+  "topicSlug": "estimating-limits-graphs",
+  "front": "Can a limit exist at a point where the function is undefined?",
+  "back": "Yes! The limit describes where the function is heading, not where it actually is. A hole is a perfect example."
+ },
+ {
+  "topicSlug": "estimating-limits-graphs",
+  "front": "How do you estimate a limit from a graph?",
+  "back": "Trace the graph as x approaches the target value from both left and right. See what y-value the graph approaches.",
+  "hint": "Trace from both sides"
+ },
+ {
+  "topicSlug": "estimating-limits-graphs",
+  "front": "If a graph shows the curve approaching different y-values from the left and right, what can you conclude?",
+  "back": "The limit does not exist (DNE) at that point - this is a jump discontinuity"
+ },
+ {
+  "topicSlug": "estimating-limits-graphs",
+  "front": "On a graph, what does an open circle represent?",
+  "back": "A hole - the function is undefined at that point, even though the limit may exist there"
+ },
+ {
+  "topicSlug": "estimating-limits-graphs",
+  "front": "What does a vertical asymptote tell you about limits?",
+  "back": "It indicates an infinite limit. The function approaches ±∞ as x approaches the asymptote.",
+  "hint": "Vertical asymptote = infinite limit"
+ },
+ {
+  "topicSlug": "estimating-limits-tables",
+  "front": "A table shows $f(x) \\to 2$ as $x \\to 3^-$ and $f(x) \\to 5$ as $x \\to 3^+$. What is $\\lim_{x \\to 3} f(x)$?",
+  "back": "It does not exist — a two-sided limit requires the left- and right-hand values to approach the same number.",
+  "hint": "Left = right?"
+ },
+ {
+  "topicSlug": "estimating-limits-tables",
+  "front": "How do you estimate a limit from a table?",
+  "back": "Look at function values as x approaches the target from both sides. If values approach the same number L, then the limit is L.",
+  "hint": "Approach from both sides"
+ },
+ {
+  "topicSlug": "estimating-limits-tables",
+  "front": "What does it mean if table values grow without bound?",
+  "back": "The limit is infinite (∞ or -∞). This is a special case - we say the limit \"does not exist\" or describe it as an infinite limit.",
+  "hint": "Unbounded = infinite limit"
+ },
+ {
+  "topicSlug": "estimating-limits-tables",
+  "front": "What indicates that a limit exists when using a table of values?",
+  "back": "When values from both the left and right approach the same number"
+ },
+ {
+  "topicSlug": "estimating-limits-tables",
+  "front": "When using tables to estimate limits, what two directions should you always check?",
+  "back": "Approach from the left (values less than a) and from the right (values greater than a)"
+ },
+ {
+  "topicSlug": "estimating-limits-tables",
+  "front": "Why might a table method be misleading for estimating limits?",
+  "back": "If you don't get close enough, if the function oscillates wildly, or if there's a steep change right at the point"
+ },
+ {
+  "topicSlug": "factoring-method-limits",
+  "front": "Evaluate $\\lim_{x \\to 1} \\frac{x^{2}-1}{x^{2}-3x+2}$.",
+  "back": "Factor both parts: $\\frac{(x-1)(x+1)}{(x-1)(x-2)} = \\frac{x+1}{x-2}$ for $x \\neq 1$, so the limit is $\\frac{2}{-1} = -2$.",
+  "hint": "Use when 0/0, factor and cancel"
+ },
+ {
+  "topicSlug": "factoring-method-limits",
+  "front": "Evaluate $\\lim_{x \\to 3} \\frac{x^{2}-9}{x-3}$.",
+  "back": "Factor the numerator: $\\frac{(x-3)(x+3)}{x-3} = x + 3$ for $x \\neq 3$, so the limit is $6$.",
+  "hint": "We never actually reach the point"
+ },
+ {
+  "topicSlug": "factoring-method-limits",
+  "front": "What is the factored form of $x^2 - a^2$?",
+  "back": "$(x - a)(x + a)$ - this is the difference of squares pattern"
+ },
+ {
+  "topicSlug": "factoring-method-limits",
+  "front": "What should you do after canceling in a limit problem?",
+  "back": "Substitute the value of x to evaluate the simplified expression.",
+  "hint": "Simplify, then substitute"
+ },
+ {
+  "topicSlug": "factoring-method-limits",
+  "front": "When you get $\\frac{0}{0}$ from direct substitution, what algebraic technique should you try first?",
+  "back": "Factoring - both the numerator and denominator likely have a common factor that can be cancelled"
+ },
+ {
+  "topicSlug": "factoring-method-limits",
+  "front": "Why can we cancel the factor $(x - a)$ when evaluating $\\lim_{x \\to a}$?",
+  "back": "Because we're evaluating the limit as x approaches a, not at x = a, so x ≠ a during the approach"
+ },
+ {
+  "topicSlug": "infinite-limits-vertical-asymptotes",
+  "front": "Does $\\lim_{x \\to a} f(x) = \\infty$ mean the limit exists?",
+  "back": "Technically no - the limit DNE. But we say it equals infinity to describe the specific unbounded behavior"
+ },
+ {
+  "topicSlug": "infinite-limits-vertical-asymptotes",
+  "front": "How do you determine if an infinite limit is +∞ or -∞?",
+  "back": "Check the signs of the numerator and denominator as x approaches the asymptote from each side.",
+  "hint": "Check signs from each side"
+ },
+ {
+  "topicSlug": "infinite-limits-vertical-asymptotes",
+  "front": "How do you find vertical asymptotes?",
+  "back": "Set denominator = 0 and solve. Check that numerator ≠ 0 at those points.",
+  "hint": "Denominator = 0, numerator ≠ 0"
+ },
+ {
+  "topicSlug": "infinite-limits-vertical-asymptotes",
+  "front": "If $(x - a)^2$ appears in the denominator, what can you say about the infinite limit?",
+  "back": "Both one-sided limits will have the same sign (both $+\\infty$ or both $-\\infty$) because a squared term is always positive"
+ },
+ {
+  "topicSlug": "infinite-limits-vertical-asymptotes",
+  "front": "What creates a vertical asymptote in a rational function?",
+  "back": "When the denominator approaches 0 while the numerator approaches a non-zero value"
+ },
+ {
+  "topicSlug": "infinite-limits-vertical-asymptotes",
+  "front": "What is an infinite limit?",
+  "back": "When f(x) approaches ±∞ as x approaches a. Often indicates a vertical asymptote at x = a.",
+  "hint": "Function approaches ±∞"
+ },
+ {
+  "topicSlug": "limits-at-infinity",
+  "front": "As $x \\to \\infty$, which grows fastest: $\\ln x$, $x^{100}$, or $e^x$?",
+  "back": "$e^x$ grows fastest and $\\ln x$ slowest. Hence $\\lim_{x \\to \\infty} \\dfrac{x^{100}}{e^x} = 0$ and $\\lim_{x \\to \\infty} \\dfrac{\\ln x}{x} = 0$.",
+  "hint": "1/x → 0"
+ },
+ {
+  "topicSlug": "limits-at-infinity",
+  "front": "For a rational function where the degrees of numerator and denominator are equal, what is the limit at infinity?",
+  "back": "The ratio of the leading coefficients"
+ },
+ {
+  "topicSlug": "limits-at-infinity",
+  "front": "How do you find lim(x→∞) of a rational function?",
+  "back": "Divide numerator and denominator by the highest power of x in the denominator, then evaluate.",
+  "hint": "Divide by highest power"
+ },
+ {
+  "topicSlug": "limits-at-infinity",
+  "front": "How does $\\lim_{x \\to \\infty} \\dfrac{p(x)}{q(x)}$ behave when $p$ and $q$ have different degrees?",
+  "back": "If $\\deg p < \\deg q$, the limit is $0$ (horizontal asymptote $y = 0$). If $\\deg p > \\deg q$, the limit is $\\pm\\infty$, so there is no horizontal asymptote (a slant asymptote when the degrees differ by 1).",
+  "hint": "Leading coefficient ratio"
+ },
+ {
+  "topicSlug": "limits-at-infinity",
+  "front": "If $\\lim_{x \\to \\infty} f(x) = 5$, what does this tell you about the graph?",
+  "back": "The function has a horizontal asymptote at y = 5"
+ },
+ {
+  "topicSlug": "limits-at-infinity",
+  "front": "What happens to $\\frac{1}{x}$ as $x \\to \\infty$?",
+  "back": "It approaches 0 (larger denominators make fractions smaller)"
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "\"Limit equals $+\\infty$\" — does the limit exist?",
+  "back": "On the AP exam: **no**, the limit does not exist (in the formal sense). The notation $\\lim = \\pm\\infty$ describes vertical-asymptote behavior.",
+  "lessonPart": 3
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Does the limit care about $f(a)$?",
+  "back": "No. The limit is about behavior **near** $a$, not at $a$. $f(a)$ may be undefined and the limit can still exist.",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Evaluate $\\lim_{x \\to 0} \\dfrac{\\sin x}{x}$.",
+  "back": "$1$ (with $x$ in radians). This is the special limit behind $\\frac{d}{dx}\\sin x = \\cos x$, and it is proved with the Squeeze Theorem.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Evaluate $\\lim_{x \\to 0} \\dfrac{1 - \\cos x}{x}$.",
+  "back": "$0$. Multiply by the conjugate: $\\frac{1-\\cos x}{x}\\cdot\\frac{1+\\cos x}{1+\\cos x} = \\frac{\\sin^2 x}{x(1+\\cos x)} = \\frac{\\sin x}{x}\\cdot\\frac{\\sin x}{1+\\cos x} \\to 1 \\cdot \\frac{0}{2} = 0$.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "How do you decide whether an infinite limit is $+\\infty$ or $-\\infty$?",
+  "back": "Test the signs of numerator and denominator just on that side of $a$. Example: $\\lim_{x \\to 2^{-}} \\frac{1}{x-2} = -\\infty$ because $x - 2$ is a small negative number, while $\\lim_{x \\to 2^{+}} \\frac{1}{x-2} = +\\infty$.",
+  "lessonPart": 3
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "How must you justify a vertical asymptote at $x = a$ on the AP exam?",
+  "back": "State a one-sided limit equal to $\\pm\\infty$, e.g. $\\lim_{x \\to a^{+}} f(x) = \\infty$. Saying only that \"$f(a)$ is undefined\" does not earn the point.",
+  "lessonPart": 7
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Infinite discontinuity",
+  "back": "At least one one-sided limit is $\\pm\\infty$. Vertical asymptote. Not removable.",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Intermediate Value Theorem (IVT)",
+  "back": "If $f$ is continuous on $[a,b]$ and $N$ is between $f(a)$ and $f(b)$, then $\\exists\\, c \\in (a,b)$ with $f(c) = N$.",
+  "lessonPart": 6
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Intuitive definition of a limit",
+  "back": "$\\lim_{x \\to a} f(x) = L$ means: as $x$ gets arbitrarily close to $a$ (but not equal), $f(x)$ gets arbitrarily close to $L$.",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Jump discontinuity",
+  "back": "Both one-sided limits exist and are finite, but disagree. Cannot be fixed by redefining a single point.",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "One-sided limit notation",
+  "back": "$\\lim_{x \\to a^{-}} f(x)$ approaches $a$ from the left; $\\lim_{x \\to a^{+}} f(x)$ approaches from the right.",
+  "lessonPart": 3
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Rational function as $x \\to \\infty$ — degree(num) < degree(den)",
+  "back": "Limit = 0. Horizontal asymptote $y = 0$.",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Rational function as $x \\to \\infty$ — degree(num) = degree(den)",
+  "back": "Limit = ratio of leading coefficients. Horizontal asymptote at that value.",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Rational function as $x \\to \\infty$ — degree(num) > degree(den)",
+  "back": "Limit is $\\pm\\infty$. No horizontal asymptote (may have a slant asymptote if degree differs by 1).",
+  "lessonPart": 4
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Removable discontinuity",
+  "back": "Limit exists at $a$ but $f(a)$ is undefined or doesn't equal the limit. Fixable by redefining $f(a)$.",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Required hypothesis to cite IVT on the AP exam",
+  "back": "**Continuity on a closed interval $[a, b]$.** Skipping this loses the point.",
+  "lessonPart": 6
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Squeeze Theorem",
+  "back": "If $g(x) \\le f(x) \\le h(x)$ near $a$ and $\\lim g = \\lim h = L$, then $\\lim f = L$.",
+  "lessonPart": 6
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Strategy when direct substitution gives $0/0$",
+  "back": "Try to **factor and cancel**, or **rationalize** (multiply by conjugate), or **simplify a complex fraction**, or use a **trig identity**.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Three things a limit can do at $x = a$",
+  "back": "(1) equal a finite number, (2) be $\\pm\\infty$ (vertical asymptote), or (3) DNE (jump, oscillation, or one-sided $\\pm\\infty$ disagreement).",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Three-part definition of continuity at $x = a$",
+  "back": "(1) $f(a)$ defined. (2) $\\lim_{x \\to a} f(x)$ exists. (3) $\\lim_{x \\to a} f(x) = f(a)$.",
+  "lessonPart": 5
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "What does L'Hôpital's Rule let you do with a $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$ limit?",
+  "back": "Replace it with $\\lim \\dfrac{f'}{g'}$ — differentiate numerator and denominator **separately** (never the quotient rule) — provided that new limit exists.",
+  "lessonPart": 2
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "What must you show to prove a piecewise function is continuous at its break point $x = c$?",
+  "back": "Show $\\lim_{x \\to c^{-}} f(x) = \\lim_{x \\to c^{+}} f(x) = f(c)$: evaluate both formulas at $c$, set them equal to solve for the unknown constant, and write each equality explicitly.",
+  "lessonPart": 7
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "When does a limit exist?",
+  "back": "When the left and right one-sided limits both exist, are finite, and agree.",
+  "lessonPart": 1
+ },
+ {
+  "topicSlug": "limits-continuity-calcab",
+  "front": "Why limits matter in the rest of calculus",
+  "back": "Derivative: $f'(a) = \\lim_{h \\to 0} \\dfrac{f(a + h) - f(a)}{h}$. Definite integral: $\\int_{a}^{b} f \\,dx = \\lim$ of Riemann sums.",
+  "lessonPart": 7
+ },
+ {
+  "topicSlug": "one-sided-limits",
+  "front": "Existence theorem: $\\lim_{x \\to a} f(x)$ exists if and only if:",
+  "back": "**Both one-sided limits exist and are equal**\n\nThe defining theorem; $f(a)$ does not enter."
+ },
+ {
+  "topicSlug": "one-sided-limits",
+  "front": "For $f(x) = \\sqrt{x - 3}$: $\\lim_{x \\to 3^+} f(x) = ?$",
+  "back": "**$0$**\n\nFor $x > 3$, $\\sqrt{x - 3}$ is defined and approaches $\\sqrt{0} = 0$."
+ },
+ {
+  "topicSlug": "one-sided-limits",
+  "front": "For a two-sided limit to exist, what must be true about one-sided limits?",
+  "back": "Both the left and right-hand limits must exist and be equal."
+ },
+ {
+  "topicSlug": "one-sided-limits",
+  "front": "For the same $f$: $\\lim_{x \\to 2^-} f(x) = ?$",
+  "back": "**$-1$**\n\nFor $x < 2$, $|x - 2| = -(x - 2)$, so the ratio is $-1$."
+ },
+ {
+  "topicSlug": "one-sided-limits",
+  "front": "Given $f(x) = \\begin{cases} 2x + 1 & \\text{if } x < 3 \\\\ x^2 & \\text{if } x \\geq 3 \\end{cases}$, find the left and right-hand limits as $x \\to 3$.",
+  "back": "**Left-hand limit** (use $2x + 1$):\n$$\\lim_{x \\to 3^-} f(x) = 2(3) + 1 = 7$$\n\n**Right-hand limit** (use $x^2$):\n$$\\lim_{x \\to 3^+} f(x) = 3^2 = 9$$\n\nSince $7 \\neq 9$, $\\lim_{x \\to 3} f(x)$ **does not exist**."
+ },
+ {
+  "topicSlug": "one-sided-limits",
+  "front": "In $\\lim_{x \\to 6^-} f(x)$, the \"$-$\" superscript means:",
+  "back": "**$x$ approaches 6 from values LESS than 6 (left)**\n\n\"$-$\" = \"from the left.\" Has nothing to do with sign."
+ },
+ {
+  "topicSlug": "one-sided-limits",
+  "front": "Same piecewise $f$: $\\lim_{x \\to 2^+} f(x) = ?$",
+  "back": "**$8$**\n\nApproach from the right → use $x^2 + 4$, plug in 2 → 8."
+ },
+ {
+  "topicSlug": "one-sided-limits",
+  "front": "What does the notation $\\lim_{x \\to 5^-} f(x)$ mean?",
+  "back": "The limit of f(x) as x approaches 5 from the left (values less than 5)."
+ },
+ {
+  "topicSlug": "rationalizing-technique-limits",
+  "front": "Evaluate $\\lim_{x \\to 0} \\frac{\\sqrt{x+9}-3}{x}$.",
+  "back": "$\\frac{1}{6}$. Multiply by $\\frac{\\sqrt{x+9}+3}{\\sqrt{x+9}+3}$: the numerator becomes $(x+9)-9 = x$, cancel the $x$, leaving $\\frac{1}{\\sqrt{x+9}+3} \\to \\frac{1}{6}$.",
+  "hint": "Square roots + 0/0 = rationalize"
+ },
+ {
+  "topicSlug": "rationalizing-technique-limits",
+  "front": "What happens when you multiply $(\\sqrt{a} + b)(\\sqrt{a} - b)$?",
+  "back": "You get $a - b^2$ using the difference of squares formula, which eliminates the radical"
+ },
+ {
+  "topicSlug": "rationalizing-technique-limits",
+  "front": "What is the conjugate of $\\sqrt{x} + 5$?",
+  "back": "$\\sqrt{x} - 5$ (same terms, opposite sign in the middle)"
+ },
+ {
+  "topicSlug": "rationalizing-technique-limits",
+  "front": "When rationalizing a limit, why should you expand the difference of squares but leave the conjugate factor unmultiplied?",
+  "back": "Because the goal is cancellation. Expanding the difference of squares kills the radical and exposes a common factor; keeping the conjugate factored lets that factor cancel: $\\frac{x}{x(\\sqrt{x+9}+3)} = \\frac{1}{\\sqrt{x+9}+3}$. Multiplying out $(\\sqrt{x+9}+3)$ would only rebuild a messy expression with nothing left to cancel.",
+  "hint": "Change the sign"
+ },
+ {
+  "topicSlug": "rationalizing-technique-limits",
+  "front": "When should you use the rationalizing technique for limits?",
+  "back": "When you have radicals (square roots) and direct substitution gives an indeterminate form like $\\frac{0}{0}$"
+ },
+ {
+  "topicSlug": "rationalizing-technique-limits",
+  "front": "Why does multiplying by the conjugate help?",
+  "back": "It uses the difference of squares to eliminate the square root, often revealing a common factor to cancel.",
+  "hint": "Difference of squares eliminates radical"
+ },
+ {
+  "topicSlug": "types-of-discontinuity",
+  "front": "Classify the discontinuity of $f(x) = \\frac{|x|}{x}$ at $x = 0$.",
+  "back": "Jump discontinuity: $\\lim_{x \\to 0^-} f(x) = -1$ and $\\lim_{x \\to 0^+} f(x) = 1$. Both one-sided limits exist but differ, so the two-sided limit does not exist and no choice of $f(0)$ can repair it.",
+  "hint": "Left ≠ right"
+ },
+ {
+  "topicSlug": "types-of-discontinuity",
+  "front": "Classify the discontinuity of $f(x) = \\frac{x^2-9}{x-3}$ at $x = 3$ and explain how to remove it.",
+  "back": "Removable. For $x \\neq 3$, $f(x) = x+3$, so $\\lim_{x \\to 3} f(x) = 6$ while $f(3)$ is undefined. Defining $f(3) = 6$ fills the hole and makes $f$ continuous.",
+  "hint": "Hole - can be removed"
+ },
+ {
+  "topicSlug": "types-of-discontinuity",
+  "front": "In a rational function, how can you tell whether $x = a$ gives a hole or a vertical asymptote?",
+  "back": "Factor and cancel. If every $(x-a)$ factor cancels, $x=a$ is a removable discontinuity (hole); if an $(x-a)$ factor remains in the denominator after simplifying, $x=a$ is an infinite discontinuity (vertical asymptote).",
+  "hint": "Vertical asymptote"
+ },
+ {
+  "topicSlug": "types-of-discontinuity",
+  "front": "What characterizes a jump discontinuity?",
+  "back": "The left and right limits exist but are different values, causing the graph to \"jump\""
+ },
+ {
+  "topicSlug": "types-of-discontinuity",
+  "front": "What is a removable discontinuity and why is it called \"removable\"?",
+  "back": "A hole where the limit exists but f(a) is wrong or missing. It's \"removable\" because you can fix it by defining f(a) = the limit value"
+ },
+ {
+  "topicSlug": "types-of-discontinuity",
+  "front": "When does an infinite discontinuity occur?",
+  "back": "When at least one one-sided limit is infinite (±∞), usually creating a vertical asymptote"
+ },
+ {
+  "topicSlug": "what-is-a-limit",
+  "front": "If $f(2) = 10$ but $f(x) = 3$ for every $x \\neq 2$, what is $\\lim_{x \\to 2} f(x)$?",
+  "back": "$3$. The limit depends only on the values of $f$ near $x = 2$, never on $f(2)$ itself — the single out-of-place value at $x = 2$ creates a removable discontinuity but does not change the limit.",
+  "hint": "Near vs. at"
+ },
+ {
+  "topicSlug": "what-is-a-limit",
+  "front": "True or False: The limit of f(x) as x approaches a must equal f(a).",
+  "back": "False! The limit describes where f(x) is heading as x approaches a, which may be different from the actual value at a, or f(a) may not even exist."
+ },
+ {
+  "topicSlug": "what-is-a-limit",
+  "front": "What are limits used for in calculus?",
+  "back": "Limits are the foundation for defining derivatives (rate of change) and integrals (area under curves), and for understanding function behavior."
+ },
+ {
+  "topicSlug": "what-is-a-limit",
+  "front": "What does the notation $\\lim_{x \\to a} f(x) = L$ mean in words?",
+  "back": "The limit of f(x) as x approaches a equals L. It means as x gets closer to a, f(x) gets closer to L."
+ },
+ {
+  "topicSlug": "what-is-a-limit",
+  "front": "When does a limit NOT exist?",
+  "back": "When left and right limits don't agree, or when the function oscillates infinitely, or when it approaches ±∞ (unless considering infinite limits).",
+  "hint": "Left ≠ right, oscillation, or unbounded"
+ },
+ {
+  "topicSlug": "what-is-a-limit",
+  "front": "Why can't you evaluate $\\lim_{x \\to 1} \\frac{x^2 - 1}{x - 1}$ by substituting $x = 1$, and what is the limit?",
+  "back": "Substituting gives the indeterminate form $\\frac{0}{0}$ — the expression is undefined at $x = 1$. But for every $x \\neq 1$, $\\frac{x^2 - 1}{x - 1} = \\frac{(x-1)(x+1)}{x-1} = x + 1$, so the values approach $2$: the limit is $2$.",
+  "hint": "Describes nearby behavior"
+ }
+]

@@ -1,0 +1,50 @@
+[
+ {
+  "front": "For $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$ with $\\Delta H < 0$, which way does equilibrium shift if you (a) raise the temperature, (b) decrease the volume, (c) remove $\\text{NH}_3$?",
+  "fp": "0e7173454b51",
+  "yield": "HIGH",
+  "why": "CED 7.9 Le Chatelier worked example"
+ },
+ {
+  "front": "How do concentration changes affect equilibrium?",
+  "fp": "4b74a48bbbff",
+  "yield": "HIGH",
+  "why": "CED 7.9 concentration stresses"
+ },
+ {
+  "front": "How do pressure/volume changes affect gas equilibria?",
+  "fp": "71aa2ea8d118",
+  "yield": "HIGH",
+  "why": "CED 7.9 volume/pressure stresses"
+ },
+ {
+  "front": "How do you use Q to predict reaction direction?",
+  "fp": "537efaf9c0b5",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 7.10 Q vs K predicts direction"
+ },
+ {
+  "front": "How does temperature affect equilibrium differently than other stresses?",
+  "fp": "4274ca087a7c",
+  "yield": "HIGH",
+  "why": "CED 7.9 temperature changes K"
+ },
+ {
+  "front": "What effect does a catalyst have on equilibrium?",
+  "fp": "7cfe6d53f56f",
+  "yield": "HIGH",
+  "why": "CED 5.11/7.9 catalyst does not shift equilibrium"
+ },
+ {
+  "front": "What is Le Chatelier's Principle?",
+  "fp": "f268b3397ee4",
+  "yield": "HIGH",
+  "why": "CED 7.9 Le Chatelier's principle"
+ },
+ {
+  "front": "What is the reaction quotient Q and how does it differ from K?",
+  "fp": "65bcdf0a90ad",
+  "yield": "HIGH",
+  "why": "CED 7.2/7.10 Q vs K definition"
+ }
+]

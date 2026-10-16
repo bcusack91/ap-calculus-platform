@@ -1,0 +1,140 @@
+[
+ {
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "How do you find critical points of $f$?",
+  "back": "Solve $f'(x)=0$ and locate where $f'(x)$ is undefined, then keep only the $x$-values that are in the domain of $f$. Example: $f(x)=x^{2/3}$ has a critical point at $x=0$ because $f'(0)$ is undefined but $f(0)=0$ exists.",
+  "hint": "Set the first derivative equal to zero."
+ },
+ {
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "If $f''(x) > 0$ on an interval, $f$ is…",
+  "back": "Concave up (opens upward like a cup).",
+  "hint": "Second derivative positive = smiling curve."
+ },
+ {
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "State the Mean Value Theorem.",
+  "back": "If $f$ is continuous on $[a,b]$ and differentiable on $(a,b)$, then there exists $c \\in (a,b)$ such that $f'(c) = \\frac{f(b)-f(a)}{b-a}$.",
+  "hint": "Instantaneous rate equals average rate somewhere."
+ },
+ {
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "What is L'Hôpital's Rule?",
+  "back": "If $\\lim \\frac{f(x)}{g(x)}$ has indeterminate form $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$, then $\\lim \\frac{f(x)}{g(x)} = \\lim \\frac{f'(x)}{g'(x)}$, provided that second limit exists. Differentiate numerator and denominator separately — do not use the quotient rule.",
+  "hint": "Take derivatives of top and bottom separately."
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "A linear approximation overestimates $f$ when $f$ is:",
+  "back": "**Concave down**\n\nTangent lies above a concave-down graph."
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "Linearize $f(x) = \\sqrt{x}$ at $a = 25$. $L(x) = $",
+  "back": "**$5 + \\tfrac{1}{10}(x - 25)$**\n\n$f(25) = 5$, $f'(25) = 1/(2\\sqrt{25}) = 1/10$."
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "The linearization of $f(x) = \\sqrt{x}$ at $a = 25$ is used to approximate $\\sqrt{26}$. The approximation is:",
+  "back": "**5.1**\n\nL(x) = f(25) + f'(25)(x − 25) = 5 + 1/(2·5)(26 − 25) = 5 + 0.1 = 5.1."
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "The linearization of $f$ at $x = a$ is:",
+  "back": "**$L(x) = f(a) + f'(a)(x - a)$**\n\nTangent line at $a$."
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "What is the linearization $L(x)$ of $f$ at $x = a$, and what is it used for?",
+  "back": "$L(x) = f(a) + f'(a)(x - a)$ — the tangent line at $a$. For $x$ near $a$, $f(x) \\approx L(x)$; equivalently $dy = f'(a)\\,dx$ estimates the change $\\Delta y = f(x) - f(a)$, which is how tangent-line error estimates are made.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "A farmer has 200 m of fencing. What dimensions of a rectangular field maximize the area?",
+  "back": "**50 m × 50 m**\n\nPerimeter = 2l + 2w = 200, so l + w = 100. Area A = lw = l(100 − l). A'(l) = 100 − 2l = 0 → l = 50. So 50 × 50."
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "A rectangle has its base on the $x$-axis and vertices on $y = 4 - x^2$. The maximum area is:",
+  "back": "**$\\dfrac{32\\sqrt{3}}{9}$**\n\nArea $= 2x(4-x^2)$. $A'(x) = 8 - 6x^2 = 0 \\Rightarrow x = \\frac{2}{\\sqrt{3}}$. $A = 2 \\cdot \\frac{2}{\\sqrt{3}} \\cdot \\frac{8}{3} = \\frac{32}{3\\sqrt{3}} = \\frac{32\\sqrt{3}}{9}$."
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "Find two positive numbers whose sum is $20$ and whose product is maximum.",
+  "back": "**$10$ and $10$**\n\n$P(x) = x(20 - x)$. $P'(x) = 20 - 2x = 0 \\Rightarrow x = 10$."
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "In an optimization problem, after writing the objective function, you typically:",
+  "back": "**Take its derivative and set it to $0$**\n\nCritical points come from $f' = 0$ (or undefined)."
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "In an optimization problem, what is the difference between the primary (objective) equation and the constraint equation?",
+  "back": "The primary equation gives the quantity being maximized or minimized (area, cost, volume). The constraint relates the variables (fixed perimeter, fixed budget) and is used to rewrite the primary equation in a single variable before differentiating.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "The function $f(x) = x + \\dfrac{4}{x}$ for $x > 0$ has a minimum value of:",
+  "back": "**$4$**\n\n$f'(x) = 1 - \\frac{4}{x^2} = 0 \\Rightarrow x^2 = 4 \\Rightarrow x = 2$. $f(2) = 2 + 2 = 4$. $f''(2) = \\frac{8}{8} = 1 > 0$, confirmed min."
+ },
+ {
+  "topicSlug": "particle-motion-calcab",
+  "front": "A particle moves along the x-axis with position $s(t) = t^3 - 6t^2 + 9t$. At what time(s) is the particle at rest?",
+  "back": "**$t = 1$ and $t = 3$**\n\nVelocity v(t) = s'(t) = $3t^{2}$ − 12t + 9 = 3(t − 1)(t − 3) = 0 → t = 1 and t = 3."
+ },
+ {
+  "topicSlug": "particle-motion-calcab",
+  "front": "For a particle moving along a line, how do velocity and speed differ?",
+  "back": "Velocity $v(t) = x'(t)$ is signed and tells you direction; speed is $|v(t)|$ and is never negative. Speed is increasing exactly when $v(t)$ and $a(t)$ have the same sign.",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "particle-motion-calcab",
+  "front": "If a particle's position is $s(t) = t^3 - 9t^2 + 24t$, when is the particle moving to the left?",
+  "back": "**$2 < t < 4$**\n\n$v(t) = 3t^2 - 18t + 24 = 3(t-2)(t-4)$. $v < 0$ when $2 < t < 4$, so the particle moves left on that interval."
+ },
+ {
+  "topicSlug": "particle-motion-calcab",
+  "front": "If the velocity of a particle is $v(t) = t^2 - 4t + 3$, the particle changes direction at $t = $",
+  "back": "**$t = 1$ and $t = 3$**\n\n$v(t) = (t-1)(t-3) = 0$ at $t = 1, 3$. $v$ changes sign at both, so direction changes at both."
+ },
+ {
+  "topicSlug": "particle-motion-calcab",
+  "front": "The speed of a particle at time $t$ is $|v(t)|$ where $v(t) = t^2 - 4$. The speed is increasing at $t = 3$ because:",
+  "back": "**$v(3) > 0$ and $a(3) > 0$**\n\n$v(3) = 5 > 0$ and $a(t) = 2t$, $a(3) = 6 > 0$. Same sign means speed is increasing."
+ },
+ {
+  "topicSlug": "theorem-applications-calcab",
+  "front": "For $f(x) = x^2$ on $[0, 4]$, find the $c$ guaranteed by MVT.",
+  "back": "**$c = 2$**\n\nSecant slope: $(16 - 0)/4 = 4$. Set $f'(c) = 2c = 4 \\Rightarrow c = 2$."
+ },
+ {
+  "topicSlug": "theorem-applications-calcab",
+  "front": "If $f$ is continuous on $[0, 4]$, differentiable on $(0, 4)$, and $f(0) = 1$, $f(4) = 9$, the Mean Value Theorem guarantees there is a $c$ in $(0, 4)$ where $f'(c) =$",
+  "back": "**2**\n\nMVT: f'(c) = [f(4) − f(0)]/(4 − 0) = (9 − 1)/4 = 2."
+ },
+ {
+  "topicSlug": "theorem-applications-calcab",
+  "front": "If $f$ is continuous on $[a,b]$, $f(a) > 0$, and $f(b) > 0$, can we conclude there is no $c \\in (a,b)$ with $f(c) = 0$?",
+  "back": "**No — $f$ might dip below zero and return**\n\nIVT says that between two values, all intermediate values are hit — but $f$ could go below $0$ between $a$ and $b$ and return."
+ },
+ {
+  "topicSlug": "theorem-applications-calcab",
+  "front": "MVT conclusion: there exists $c \\in (a, b)$ such that:",
+  "back": "**$f'(c) = \\dfrac{f(b) - f(a)}{b - a}$**\n\nSome tangent has slope equal to the secant slope."
+ },
+ {
+  "topicSlug": "theorem-applications-calcab",
+  "front": "Rolle's Theorem guarantees a zero of $f'$ on $(a,b)$ when:",
+  "back": "**$f$ is continuous on $[a,b]$, differentiable on $(a,b)$, and $f(a) = f(b)$**\n\nRolle's Theorem requires continuity on $[a,b]$, differentiability on $(a,b)$, and $f(a) = f(b)$."
+ },
+ {
+  "topicSlug": "theorem-applications-calcab",
+  "front": "State the Mean Value Theorem, including its hypotheses.",
+  "back": "If $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$, then there is some $c$ in $(a, b)$ with $f'(c) = \\frac{f(b) - f(a)}{b - a}$: at some interior point the instantaneous rate of change equals the average rate of change.",
+  "hint": "Think about the key characteristic"
+ }
+]

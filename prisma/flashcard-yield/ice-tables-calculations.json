@@ -1,0 +1,50 @@
+[
+ {
+  "front": "For large K values, what approximation can simplify the problem?",
+  "fp": "4368378ec4ff",
+  "yield": "LOW",
+  "why": "Large-K reverse-ICE shortcut; beyond the CED"
+ },
+ {
+  "front": "How do you set up the change row in an ICE table for aA + bB ⇌ cC + dD?",
+  "fp": "dc09f5630a78",
+  "yield": "HIGH",
+  "why": "CED 7.7 ICE change row stoichiometry"
+ },
+ {
+  "front": "What are common mistakes to avoid with ICE tables?",
+  "fp": "127e7ca72773",
+  "yield": "MEDIUM",
+  "why": "ICE-table pitfalls; study tip"
+ },
+ {
+  "front": "What are the three types of equilibrium calculations?",
+  "fp": "468cc52ef9ca",
+  "yield": "MEDIUM",
+  "why": "Three equilibrium problem types; survey card"
+ },
+ {
+  "front": "What is an ICE table and what do the letters stand for?",
+  "fp": "032373e797be",
+  "yield": "HIGH",
+  "why": "CED 7.7 ICE table basics"
+ },
+ {
+  "front": "What is the general strategy for solving equilibrium problems with ICE tables?",
+  "fp": "6b0278f3f964",
+  "yield": "MEDIUM",
+  "why": "ICE strategy; restates ICE basics"
+ },
+ {
+  "front": "What is the quadratic formula and when must you use it?",
+  "fp": "dd8ce88c282c",
+  "yield": "LOW",
+  "why": "Quadratic ICE; owner-borderline (C) item"
+ },
+ {
+  "front": "When can you use the small x approximation and how do you check validity?",
+  "fp": "7634a978b579",
+  "yield": "MEDIUM",
+  "why": "Small-x validity check; technique detail"
+ }
+]

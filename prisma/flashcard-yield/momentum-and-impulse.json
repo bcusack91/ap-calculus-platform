@@ -1,0 +1,50 @@
+[
+ {
+  "front": "A 0.15 kg ball hits your hands at 20 m/s and stops. How much smaller is the average force if you pull your hands back so the stop takes 0.10 s instead of 0.01 s?",
+  "fp": "54b5f7539e3f",
+  "yield": "HIGH",
+  "why": "CED 4.2 impulse with longer stopping time"
+ },
+ {
+  "front": "How can you reduce the force in a collision?",
+  "fp": "189efb4d4b00",
+  "yield": "HIGH",
+  "why": "CED 4.2 reduce force by increasing time"
+ },
+ {
+  "front": "How does momentum differ from kinetic energy?",
+  "fp": "0c6ae436d6ad",
+  "yield": "HIGH",
+  "why": "CED 4.1/4.4 momentum vs KE"
+ },
+ {
+  "front": "If a ball bounces off a wall vs. sticks to it, which creates more impulse?",
+  "fp": "43631e42b046",
+  "yield": "HIGH",
+  "why": "CED 4.2 bouncing doubles impulse"
+ },
+ {
+  "front": "What does the area under a Force vs. Time graph represent?",
+  "fp": "829b6471e60c",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.2 area under F-t = impulse"
+ },
+ {
+  "front": "What is impulse?",
+  "fp": "e12cb714b5eb",
+  "yield": "HIGH",
+  "why": "CED 4.2 impulse definition"
+ },
+ {
+  "front": "What is momentum?",
+  "fp": "51858e3098b9",
+  "yield": "HIGH",
+  "why": "CED 4.1 momentum definition"
+ },
+ {
+  "front": "What is the impulse-momentum theorem?",
+  "fp": "08b623f9bc14",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.2 impulse-momentum theorem"
+ }
+]

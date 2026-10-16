@@ -1,7 +1,13 @@
 /**
  * The exam-yield decision artifact: one JSON file per topic under
- * prisma/flashcard-yield/, each entry labeling one card from the committed
- * export mirror in prisma/flashcard-exports/mcat-prep/.
+ * prisma/flashcard-yield/, each entry labeling one card from a committed
+ * export mirror in prisma/flashcard-exports/<course>/ (written by
+ * scripts/export-flashcards.ts, text-identical to prod).
+ *
+ * Courses in scope: the MCAT deck and the four flagship AP decks (AP
+ * Chemistry, AP Biology, AP Physics 1, AP Calculus AB). Topic slugs are
+ * globally unique, so all courses share one flat artifact directory. Every
+ * other course stays unlabeled (NULL = always served).
  *
  * Cards have no stable authored id, so identity is a fingerprint of the exact
  * front + back text. A classifier that rewords, drops or invents a card fails
@@ -17,16 +23,30 @@ export const YIELD_VALUES = ['ULTRA_HIGH', 'HIGH', 'MEDIUM', 'LOW'] as const
 export type YieldValue = (typeof YIELD_VALUES)[number]
 
 export const ARTIFACT_DIR = path.join(process.cwd(), 'prisma', 'flashcard-yield')
-export const EXPORT_DIR = path.join(process.cwd(), 'prisma', 'flashcard-exports', 'mcat-prep')
+export const EXPORT_ROOT = path.join(process.cwd(), 'prisma', 'flashcard-exports')
 
-/** Which cards are in scope, by export file: the whole MCAT course. */
-export const SCOPE: Record<string, (topicSlug: string) => boolean> = {
-  'mcat-bio-biochem-foundations.json': () => true,
-  'mcat-psych-soc-foundations.json': () => true,
-  'mcat-chem-phys-foundations.json': () => true,
-  'mcat-cars.json': () => true,
-  'mcat-strategy.json': () => true,
+/**
+ * Which cards are in scope, by course export directory and file. A course
+ * listed with `'*'` covers every category file in its directory (files
+ * starting with `_` are metadata), so a re-export that adds a category is
+ * picked up and fails verification until its cards are labeled.
+ */
+export const SCOPE: Record<string, readonly string[] | '*'> = {
+  'mcat-prep': [
+    'mcat-bio-biochem-foundations.json',
+    'mcat-psych-soc-foundations.json',
+    'mcat-chem-phys-foundations.json',
+    'mcat-cars.json',
+    'mcat-strategy.json',
+  ],
+  'ap-chemistry': '*',
+  'ap-biology': '*',
+  'ap-physics-1': '*',
+  'ap-calculus-ab': '*',
 }
+
+/** The courses whose cards carry yield labels. */
+export const YIELD_COURSES = Object.keys(SCOPE)
 
 export type ExportedCard = { topicSlug: string; front: string; back: string }
 export type ArtifactEntry = { front: string; fp: string; yield: YieldValue; why: string }
@@ -37,16 +57,36 @@ export function fingerprint(front: string, back: string): string {
   return crypto.createHash('sha256').update(`${front}\u0000${back}`).digest('hex').slice(0, 12)
 }
 
-/** In-scope export cards, grouped by topic. */
-export function loadScopedExport(exportDir = EXPORT_DIR): Map<string, ExportedCard[]> {
+function scopedFiles(exportRoot: string, course: string): string[] {
+  const files = SCOPE[course]
+  if (files !== '*') return [...files]
+  return fs
+    .readdirSync(path.join(exportRoot, course))
+    .filter((f) => f.endsWith('.json') && !f.startsWith('_'))
+    .sort()
+}
+
+/** In-scope export cards of one course, grouped by topic. */
+export function loadCourseExport(course: string, exportRoot = EXPORT_ROOT): Map<string, ExportedCard[]> {
   const byTopic = new Map<string, ExportedCard[]>()
-  for (const [file, inScope] of Object.entries(SCOPE)) {
-    const cards: ExportedCard[] = JSON.parse(fs.readFileSync(path.join(exportDir, file), 'utf8'))
+  for (const file of scopedFiles(exportRoot, course)) {
+    const cards: ExportedCard[] = JSON.parse(fs.readFileSync(path.join(exportRoot, course, file), 'utf8'))
     for (const card of cards) {
-      if (!inScope(card.topicSlug)) continue
       const list = byTopic.get(card.topicSlug) ?? []
       list.push(card)
       byTopic.set(card.topicSlug, list)
+    }
+  }
+  return byTopic
+}
+
+/** In-scope export cards of every yield course, grouped by topic. */
+export function loadScopedExport(exportRoot = EXPORT_ROOT): Map<string, ExportedCard[]> {
+  const byTopic = new Map<string, ExportedCard[]>()
+  for (const course of YIELD_COURSES) {
+    for (const [topic, cards] of loadCourseExport(course, exportRoot)) {
+      if (byTopic.has(topic)) throw new Error(`topic ${topic} appears in more than one course export`)
+      byTopic.set(topic, cards)
     }
   }
   return byTopic

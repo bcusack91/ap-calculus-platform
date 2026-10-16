@@ -1,0 +1,26 @@
+[
+ {
+  "front": "In the reaction NaOH(aq) + HCl(aq) → NaCl(aq) + $H_{2}O(l)$, the net ionic equation is:",
+  "fp": "8006cf77543e",
+  "yield": "HIGH",
+  "why": "CED 4.2 net ionic equation"
+ },
+ {
+  "front": "Strong electrolytes are written as ___ in ionic equations.",
+  "fp": "0f3d44ea21b2",
+  "yield": "HIGH",
+  "why": "CED 4.2 strong electrolytes as ions"
+ },
+ {
+  "front": "What are spectator ions?",
+  "fp": "056f6e565d28",
+  "yield": "HIGH",
+  "why": "CED 4.2 spectator ions"
+ },
+ {
+  "front": "What are the solubility rules for nitrates and alkali metals?",
+  "fp": "eedb33eb44ae",
+  "yield": "HIGH",
+  "why": "CED 4.2 solubility rules the CED keeps (R26)"
+ }
+]

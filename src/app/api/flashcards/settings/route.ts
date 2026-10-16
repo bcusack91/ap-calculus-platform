@@ -17,7 +17,7 @@ import {
  * GET  /api/flashcards/settings — the user's stored prefs (null = unset),
  *      the effective values, the defaults/bounds for the UI, and
  *      `hasYieldCards` (does the student have any card with an exam-yield
- *      tier — today only MCAT cards — so the UI knows whether to offer the
+ *      tier — MCAT and the four flagship AP decks — so the UI knows whether to offer the
  *      medium/low-yield toggles).
  * PATCH /api/flashcards/settings — update either or both limits. A field set
  *      to null resets it to the code default; an omitted field is unchanged.
@@ -33,7 +33,7 @@ function settingsPayload(user: {
   return {
     newPerDay: user.flashcardNewPerDay,
     maxReviewsPerDay: user.flashcardMaxReviewsPerDay,
-    // MCAT exam-yield tiers: ultra-high and high always; medium and low opt-in.
+    // Exam-yield tiers: ultra-high and high always; medium (default on) and low (default off) opt-in.
     includeMediumYield: user.flashcardIncludeMediumYield,
     includeLowYield: user.flashcardIncludeLowYield,
     effective: effectiveDailyLimits(user),
@@ -57,7 +57,7 @@ export async function GET() {
   if (!user) {
     return NextResponse.json({ error: 'Not found' }, { status: 404 })
   }
-  // Any studied card carrying a yield tier (NULL = unlabeled, every non-MCAT card).
+  // Any studied card carrying a yield tier (NULL = unlabeled: every card outside the yield courses).
   const yieldCard = await prisma.flashcardProgress
     .findFirst({
       where: { userId: session.user.id, flashcard: { examYield: { not: null } } },

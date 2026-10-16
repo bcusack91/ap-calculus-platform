@@ -1,0 +1,50 @@
+[
+ {
+  "front": "At what temperature does a reaction switch between favorable and unfavorable?",
+  "fp": "c0b7509dc5dc",
+  "yield": "HIGH",
+  "why": "CED 9.3 crossover temperature dH/dS"
+ },
+ {
+  "front": "Give an example of a thermodynamically favorable process and its ΔG°.",
+  "fp": "8012f1f6e374",
+  "yield": "LOW",
+  "why": "ATP hydrolysis example; biology trivia"
+ },
+ {
+  "front": "How do you calculate $\\Delta G^\\circ_{\\text{rxn}}$ from standard free energies of formation?",
+  "fp": "a86caa672069",
+  "yield": "HIGH",
+  "why": "CED 9.3 dG from formation values"
+ },
+ {
+  "front": "How do you find $\\Delta G$ when a reaction is not at standard conditions?",
+  "fp": "097e6695ba07",
+  "yield": "LOW",
+  "why": "OFF-EXAM: dG = dG + RT ln Q not in CED (R23)"
+ },
+ {
+  "front": "How does reaction coupling drive a process with $\\Delta G > 0$?",
+  "fp": "271edb4a8f02",
+  "yield": "HIGH",
+  "why": "CED 9.6 coupled reactions"
+ },
+ {
+  "front": "How is $\\Delta G^\\circ$ related to the equilibrium constant $K$?",
+  "fp": "a5752cc2d810",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 9.5 dG = -RT ln K; tested every exam"
+ },
+ {
+  "front": "How is $\\Delta G^\\circ$ related to the standard cell potential $E^\\circ_{\\text{cell}}$?",
+  "fp": "9edf6ccee7a9",
+  "yield": "HIGH",
+  "why": "CED 9.9 dG = -nFE"
+ },
+ {
+  "front": "What equation relates Gibbs free energy to enthalpy and entropy?",
+  "fp": "163b33df6cf4",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 9.3 dG = dH - TdS; tested every exam"
+ }
+]

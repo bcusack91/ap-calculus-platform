@@ -1,0 +1,38 @@
+[
+ {
+  "front": "A sample of nitrogen gas occupies 5.00 L at 25°C and 1.50 atm. (a) How many moles of N₂ are present? (b) What is the mass of the nitrogen gas? (c) If the temperature is increased to 100°C at constant pressure, what will be the new volume?",
+  "fp": "f4edcea09d05",
+  "yield": "HIGH",
+  "why": "CED 3.4 PV = nRT multi-part"
+ },
+ {
+  "front": "At constant temperature, a gas is compressed from 4.0 L to 1.0 L. If the initial pressure was 1.5 atm, what is the final pressure?",
+  "fp": "5d7553e68019",
+  "yield": "HIGH",
+  "why": "CED 3.4 Boyle's law"
+ },
+ {
+  "front": "At STP (0 °C, 1 atm), one mole of an ideal gas occupies approximately:",
+  "fp": "abf7c4a112e7",
+  "yield": "MEDIUM",
+  "why": "Molar volume at STP; secondary"
+ },
+ {
+  "front": "Dalton's law states that total pressure equals the sum of:",
+  "fp": "84e77a3dc503",
+  "yield": "MEDIUM",
+  "why": "Restates Dalton's law card"
+ },
+ {
+  "front": "Ideal Gas Law formula?",
+  "fp": "7abfc7224936",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.4 ideal gas law; equation-sheet staple"
+ },
+ {
+  "front": "What is Dalton's Law of Partial Pressures?",
+  "fp": "0ba8ad1237c7",
+  "yield": "HIGH",
+  "why": "CED 3.4 Dalton's law"
+ }
+]

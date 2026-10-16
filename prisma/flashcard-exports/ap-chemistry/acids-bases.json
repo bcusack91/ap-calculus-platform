@@ -1,0 +1,170 @@
+[
+ {
+  "topicSlug": "acid-base-theories-ph",
+  "front": "(a) Calculate the pH of a solution with [H⁺] = 2.5 × 10⁻⁴ M. (b) Calculate the pOH. (c) Is this solution acidic, basic, or neutral?",
+  "back": "(a) **Calculate pH:**\npH = -log[H⁺]\npH = -log(2.5 × 10⁻⁴)\npH = **3.60**\n\n(b) **Calculate pOH:**\npH + pOH = 14.00\npOH = 14.00 - 3.60 = **10.40**\n\n(c) **Acidic, basic, or neutral?**\npH < 7, so the solution is **acidic**"
+ },
+ {
+  "topicSlug": "acid-base-theories-ph",
+  "front": "A Brønsted-Lowry acid is a:",
+  "back": "**Proton donor**\n\nBrønsted-Lowry: acid = proton $(H^{+})$ donor."
+ },
+ {
+  "topicSlug": "acid-base-theories-ph",
+  "front": "According to the Brønsted-Lowry definition, an acid is:",
+  "back": "**A proton $(H^{+})$ donor**\n\nBrønsted-Lowry acids DONATE protons $(H^{+})$. Arrhenius acids produce $H^{+}$ in water. Lewis acids accept electron pairs."
+ },
+ {
+  "topicSlug": "acid-base-theories-ph",
+  "front": "Calculate the pH of a 0.025 M HCl solution. Assume HCl is a strong acid that completely dissociates.",
+  "back": "**HCl dissociation:**\nHCl → H⁺ + Cl⁻\n\nSince HCl is a strong acid, it completely dissociates:\n[H⁺] = 0.025 M\n\n**Calculate pH:**\npH = -log[H⁺]\npH = -log(0.025)\npH = -log(2.5 × 10⁻²)\npH = **1.60**\n\n**Note:** For strong acids (HCl, HNO₃, H₂SO₄, HBr, HI, HClO₄), pH calculation is straightforward because [H⁺] = initial acid concentration."
+ },
+ {
+  "topicSlug": "acid-base-theories-ph",
+  "front": "pH + pOH =",
+  "back": "**14**\n\nAt 25°C: $pH + pOH = 14$."
+ },
+ {
+  "topicSlug": "acid-base-theories-ph",
+  "front": "pH formula?",
+  "back": "$\\text{pH} = -\\log[\\text{H}^+]$\n\n$\\text{pOH} = -\\log[\\text{OH}^-]$\n\n$\\text{pH} + \\text{pOH} = 14$ (at 25°C)",
+  "hint": "Lower pH = more acidic."
+ },
+ {
+  "topicSlug": "acid-base-theories-ph",
+  "front": "What is $K_w$ at 25°C?",
+  "back": "$K_w = [\\text{H}^+][\\text{OH}^-] = 1.0 \\times 10^{-14}$",
+  "hint": "Autoionization constant of water."
+ },
+ {
+  "topicSlug": "acid-base-theories-ph",
+  "front": "Which of the following is classified as a Lewis acid?",
+  "back": "**$BF_{3}$**\n\n$BF_{3}$ has an empty p orbital and accepts electron pairs — it is a Lewis acid. $NH_{3}$ and $OH^{-}$ donate electron pairs (Lewis bases)."
+ },
+ {
+  "topicSlug": "acid-base-titrations",
+  "front": "Describe the titration curve for strong acid + strong base.",
+  "back": "Before equiv: low pH, excess acid. Equivalence: pH=7 (neutral salt Na⁺, Cl⁻). Sharp pH jump (3-11). After equiv: high pH, excess base. NO buffer region. pH=7 only for strong/strong at 25°C."
+ },
+ {
+  "topicSlug": "acid-base-titrations",
+  "front": "How do you choose the right indicator for a titration?",
+  "back": "Match indicator range to equivalence pH. Strong/strong (pH=7): any (phenolphthalein, bromothymol blue). Weak acid/strong base (pH>7): phenolphthalein (8.3-10). Strong acid/weak base (pH<7): methyl orange (3.1-4.4). Range must include equiv point!"
+ },
+ {
+  "topicSlug": "acid-base-titrations",
+  "front": "How do you find an unknown concentration from titration data?",
+  "back": "At the equivalence point, moles of titrant × mole ratio = moles of analyte. For a 1:1 reaction this is $M_aV_a = M_bV_b$; e.g. if $25.0$ mL of acid requires $32.0$ mL of $0.100$ M NaOH, then $M_a = (0.100)(32.0)/25.0 = 0.128$ M."
+ },
+ {
+  "topicSlug": "acid-base-titrations",
+  "front": "What are the key features of weak acid + strong base titration curve?",
+  "back": "Initial: weak acid pH (higher than strong). Buffer region: HA + A⁻ present, pH changes slowly. Half-equivalence: pH=pK_a ([HA]=[A⁻]). Equivalence: pH>7 (weak base A⁻ present). Narrower pH jump than strong/strong."
+ },
+ {
+  "topicSlug": "acid-base-titrations",
+  "front": "What is a titration and what is the equivalence point?",
+  "back": "Titration: gradual addition of titrant (known conc) to analyte (unknown). Equivalence point: moles acid = moles base (stoichiometric). Endpoint: where indicator changes (ideally = equivalence point). Determine unknown concentration."
+ },
+ {
+  "topicSlug": "acid-base-titrations",
+  "front": "What is an acid-base indicator and how does it work?",
+  "back": "Indicator: weak acid (HIn) with different colors for HIn and In⁻. HIn ⇌ H⁺ + In⁻. Color change over ~2 pH units centered at pK_a(indicator). Match indicator range to equivalence point pH."
+ },
+ {
+  "topicSlug": "acid-base-titrations",
+  "front": "What is special about the half-equivalence point?",
+  "back": "Moles base = ½ moles acid, so [HA]=[A⁻]. From Henderson-Hasselbalch: pH = pK_a + log(1) = pK_a. Best buffering point. Can determine pK_a from titration curve. Only for weak acid or weak base titrations."
+ },
+ {
+  "topicSlug": "acid-base-titrations",
+  "front": "Why is equivalence point pH ≠ 7 for weak acid/base titrations?",
+  "back": "Weak acid + strong base: equiv point has conjugate base A⁻ (basic), so pH>7. Strong acid + weak base: equiv point has conjugate acid BH⁺ (acidic), so pH<7. Only strong/strong gives pH=7."
+ },
+ {
+  "topicSlug": "buffer-solutions-henderson-hasselbalch",
+  "front": "Henderson-Hasselbalch equation?",
+  "back": "$\\text{pH} = \\text{p}K_a + \\log\\frac{[\\text{A}^-]}{[\\text{HA}]}$, where $\\text{HA}$ is the weak acid and $\\text{A}^-$ its conjugate base. It applies to buffer solutions, where appreciable amounts of both species are present.",
+  "hint": "Used for buffer pH calculations."
+ },
+ {
+  "topicSlug": "buffer-solutions-henderson-hasselbalch",
+  "front": "How do you calculate pH change when strong acid/base added to buffer?",
+  "back": "1) Calculate initial moles (use moles not M!), 2) Neutralization reaction (completion), 3) Calculate new moles after reaction, 4) Find new concentrations (÷volume), 5) Use Henderson-Hasselbalch. Key: strong acid/base reactions go to completion."
+ },
+ {
+  "topicSlug": "buffer-solutions-henderson-hasselbalch",
+  "front": "How do you choose the right buffer for a desired pH?",
+  "back": "Select acid with pK_a ≈ desired pH. Buffer effective within pK_a ± 1. Examples: pH 7 → H₂PO₄⁻/HPO₄²⁻ (pK_a=7.2). pH 4.7 → CH₃COOH/CH₃COO⁻ (pK_a=4.76). Match pK_a to target pH."
+ },
+ {
+  "topicSlug": "buffer-solutions-henderson-hasselbalch",
+  "front": "How does a buffer resist pH change when acid or base is added?",
+  "back": "Add H⁺: conjugate base neutralizes (A⁻ + H⁺ → HA). Add OH⁻: weak acid neutralizes (HA + OH⁻ → A⁻ + H₂O). Both components present to handle either addition. pH stays relatively constant."
+ },
+ {
+  "topicSlug": "buffer-solutions-henderson-hasselbalch",
+  "front": "What are the major buffer systems in human blood?",
+  "back": "Blood pH = 7.4 (tightly controlled). Major: H₂CO₃/HCO₃⁻ (pK_a=6.1) - respiratory system controls CO₂, kidneys control HCO₃⁻. Also: H₂PO₄⁻/HPO₄²⁻ (pK_a=7.2) in cells, protein buffers (hemoglobin)."
+ },
+ {
+  "topicSlug": "buffer-solutions-henderson-hasselbalch",
+  "front": "What are the two methods for preparing buffer solutions?",
+  "back": "Method 1: Mix weak acid + its salt (e.g., CH₃COOH + NaCH₃COO). Method 2: Partial neutralization - start with weak acid, add strong base to create conjugate base (or vice versa). Both create HA/A⁻ system."
+ },
+ {
+  "topicSlug": "buffer-solutions-henderson-hasselbalch",
+  "front": "What is a buffer and what are the two types of buffer systems?",
+  "back": "Buffer: solution resisting pH change when acid/base added. Type 1: weak acid (HA) + conjugate base (A⁻). Type 2: weak base (B) + conjugate acid (BH⁺). Need significant amounts of BOTH components."
+ },
+ {
+  "topicSlug": "buffer-solutions-henderson-hasselbalch",
+  "front": "What is buffer capacity and what factors affect it?",
+  "back": "Capacity: amount of acid/base buffer can neutralize. Factors: 1) Higher concentrations = more capacity, 2) Ratio 1:1 = maximum capacity. Effective range: pK_a ± 1. Best buffer: pH ≈ pK_a with high concentrations."
+ },
+ {
+  "topicSlug": "buffer-solutions-henderson-hasselbalch",
+  "front": "What is the Henderson-Hasselbalch equation for weak acid buffers?",
+  "back": "pH = pK_a + log([A⁻]/[HA]) or pH = pK_a + log([base]/[acid]). When [A⁻]=[HA], pH=pK_a (best buffering). pK_a = -log(K_a). Quick way to calculate buffer pH."
+ },
+ {
+  "topicSlug": "weak-acids-bases-ka-kb",
+  "front": "How do you calculate pH of a weak acid solution?",
+  "back": "Set up ICE table: HA ⇌ H⁺ + A⁻. K_a = x²/(HA₀-x). Try approximation if [HA]₀/K_a>100. Solve for x=[H⁺]. pH=-log(x). Check approximation validity (<5%)."
+ },
+ {
+  "topicSlug": "weak-acids-bases-ka-kb",
+  "front": "What are polyprotic acids and how do K_a values compare?",
+  "back": "Polyprotic: multiple ionizable H⁺ (H₂SO₃, H₃PO₄). Multiple K_a: K_a1 >> K_a2 >> K_a3. First ionization much stronger. For pH calculations, usually only K_a1 matters. Each step progressively weaker."
+ },
+ {
+  "topicSlug": "weak-acids-bases-ka-kb",
+  "front": "What is a weak acid and how does it differ from a strong acid?",
+  "back": "Weak acid: partially ionizes (<100%) in water. Exists mostly as HA, small amounts as H⁺ and A⁻. Strong acid: completely ionizes (100%). Examples weak: CH₃COOH, HF, HNO₂. Weak acids have K_a < 1."
+ },
+ {
+  "topicSlug": "weak-acids-bases-ka-kb",
+  "front": "What is K_a and what does its magnitude tell you?",
+  "back": "K_a = acid dissociation constant = [H⁺][A⁻]/[HA]. Larger K_a = stronger acid, more ionization. Typical range 10⁻² to 10⁻¹⁴. Strong acids K_a>>1. Use to calculate pH of weak acid solutions."
+ },
+ {
+  "topicSlug": "weak-acids-bases-ka-kb",
+  "front": "What is K_b and how do you calculate pH of a weak base?",
+  "back": "K_b = base dissociation constant = [BH⁺][OH⁻]/[B]. Set up ICE: B + H₂O ⇌ BH⁺ + OH⁻. Solve for x=[OH⁻]. pOH=-log[OH⁻]. pH=14-pOH. Similar to weak acid but solve for OH⁻ first."
+ },
+ {
+  "topicSlug": "weak-acids-bases-ka-kb",
+  "front": "What is percent ionization and what does it tell you?",
+  "back": "% ionization = ([H⁺]eq/[HA]₀) × 100%. Measures extent of ionization. Weak acids typically <5%. Increases with dilution. Larger K_a → larger %. Example: 1% means 99% remains as HA."
+ },
+ {
+  "topicSlug": "weak-acids-bases-ka-kb",
+  "front": "What is the relationship between K_a and K_b for conjugate pairs?",
+  "back": "K_a × K_b = K_w = 1.0×10⁻¹⁴. For any conjugate acid-base pair. Example: NH₃/NH₄⁺. Stronger acid → weaker conjugate base. Stronger base → weaker conjugate acid. Can calculate one from other."
+ },
+ {
+  "topicSlug": "weak-acids-bases-ka-kb",
+  "front": "When can you use the small x approximation for weak acids?",
+  "back": "When [HA]₀/K_a > 100, assume x negligible. Simplify: K_a ≈ x²/[HA]₀, so x=√(K_a·[HA]₀). CHECK: x/[HA]₀ < 5% valid, >5% use quadratic. Saves time on calculations."
+ }
+]

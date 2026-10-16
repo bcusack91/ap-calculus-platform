@@ -1,0 +1,38 @@
+[
+ {
+  "front": "If $F(x) = \\displaystyle\\int_0^x t^2\\,dt$, then $F'(x) = $?",
+  "fp": "83bf3ce770df",
+  "yield": "HIGH",
+  "why": "CED 6.4 FTC part 1 example"
+ },
+ {
+  "front": "If $F(x) = \\displaystyle\\int_2^{x^3} \\sqrt{t}\\,dt$, then $F'(x) = $",
+  "fp": "ce6ecc5a69eb",
+  "yield": "HIGH",
+  "why": "CED 6.4 FTC with chain rule"
+ },
+ {
+  "front": "If $g(x) = \\displaystyle\\int_0^{x^2} \\sin t\\,dt$, then $g'(x) = $",
+  "fp": "3d131600d07d",
+  "yield": "HIGH",
+  "why": "CED 6.4 FTC with chain rule"
+ },
+ {
+  "front": "If $h(x) = \\displaystyle\\int_x^5 t^2\\,dt$, then $h'(x) = $",
+  "fp": "5765b64cbef6",
+  "yield": "HIGH",
+  "why": "CED 6.4 variable lower limit"
+ },
+ {
+  "front": "The graph of $f$ is piecewise linear on $[0, 6]$ with $f(0) = 4$, $f(2) = 4$, $f(4) = -2$, $f(6) = -2$. Let $g(x) = \\displaystyle\\int_0^x f(t)\\,dt$. On which interval is $g$ decreasing?",
+  "fp": "1bf7f420f5bd",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.4/5.3 graph of f gives behavior of g = integral"
+ },
+ {
+  "front": "What does the accumulation function $F(x) = \\int_a^x f(t)\\,dt$ represent, and what is $F'(x)$?",
+  "fp": "e9c539147137",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.4 accumulation function meaning"
+ }
+]

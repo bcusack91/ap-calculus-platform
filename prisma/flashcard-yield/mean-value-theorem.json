@@ -1,0 +1,38 @@
+[
+ {
+  "front": "For $f(x) = x^2$ on $[0,4]$, find the value of $c$ guaranteed by the Mean Value Theorem.",
+  "fp": "fb9013d40131",
+  "yield": "HIGH",
+  "why": "CED 5.1 MVT c-value example"
+ },
+ {
+  "front": "Give a real-world example of the Mean Value Theorem.",
+  "fp": "525daa98e57a",
+  "yield": "MEDIUM",
+  "why": "MVT real-world example; restatement"
+ },
+ {
+  "front": "What are the two hypotheses needed for MVT to apply?",
+  "fp": "2c6539a5bc8e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.1 MVT hypotheses; FRQ justification"
+ },
+ {
+  "front": "What does the Mean Value Theorem state?",
+  "fp": "8e7833dae1f1",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.1 MVT statement; FRQ justification"
+ },
+ {
+  "front": "What is Rolle's Theorem?",
+  "fp": "f0e288072436",
+  "yield": "MEDIUM",
+  "why": "Rolle's theorem; special case of MVT"
+ },
+ {
+  "front": "What is the geometric interpretation of MVT?",
+  "fp": "85d04abb84f9",
+  "yield": "MEDIUM",
+  "why": "MVT geometric meaning; restatement"
+ }
+]
