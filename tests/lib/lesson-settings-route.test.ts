@@ -27,14 +27,14 @@ describe('/api/lessons/settings', () => {
 
   it('reports low-yield as off by default', async () => {
     const { GET } = await import('@/app/api/lessons/settings/route')
-    const res = await GET()
+    const res = await GET(new Request('http://localhost/api/lessons/settings'))
     expect(await res.json()).toEqual({ includeLowYield: false })
   })
 
   it('saves the choice', async () => {
     const { GET, PATCH } = await import('@/app/api/lessons/settings/route')
     expect(await (await PATCH(patch({ includeLowYield: true }))).json()).toEqual({ includeLowYield: true })
-    expect(await (await GET()).json()).toEqual({ includeLowYield: true })
+    expect(await (await GET(new Request('http://localhost/api/lessons/settings'))).json()).toEqual({ includeLowYield: true })
   })
 
   it('rejects anything but a boolean', async () => {
@@ -46,7 +46,7 @@ describe('/api/lessons/settings', () => {
   it('requires sign-in', async () => {
     sessionUser = null
     const { GET, PATCH } = await import('@/app/api/lessons/settings/route')
-    expect((await GET()).status).toBe(401)
+    expect((await GET(new Request('http://localhost/api/lessons/settings'))).status).toBe(401)
     expect((await PATCH(patch({ includeLowYield: true }))).status).toBe(401)
   })
 })

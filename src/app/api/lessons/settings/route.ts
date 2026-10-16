@@ -17,10 +17,10 @@ import { apTrackForUser } from '@/lib/ap-track-server'
  * — the lesson draws its gating exit quiz at the track's mix. Left out for a
  * course without tracks. Served here because every lesson already loads this.
  */
-export async function GET(request?: Request) {
+export async function GET(request: Request) {
   const session = await auth()
   if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
-  const courseSlug = request ? new URL(request.url).searchParams.get('courseSlug') : null
+  const courseSlug = new URL(request.url).searchParams.get('courseSlug')
   const [user, apTrack] = await Promise.all([
     prisma.user.findUnique({
       where: { id: session.user.id },
