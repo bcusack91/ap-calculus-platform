@@ -1,39 +1,170 @@
 /**
- * Entrance Quiz — Integration Applications (AP Calculus AB)
- * 14 questions covering all 7 lesson parts (2 per part).
+ * Entrance Quiz — Integration Applications — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
  */
-
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Net Change Theorem
-  { id: 'ia-ent-1a', question: 'The Net Change Theorem states $\\int_a^b f\'(x)\\,dx =$', options: ['$f\'(b) - f\'(a)$', '$f(b) - f(a)$', '$f(a) + f(b)$', '$\\frac{f(b)-f(a)}{b-a}$'], correctIndex: 1, explanation: 'The integral of a rate of change gives the net change in the original quantity.', partNumber: 1, partTitle: 'Net Change Theorem' },
-  { id: 'ia-ent-1b', question: 'If water flows into a tank at rate $R(t)$ liters/min, total water added from $t=0$ to $t=10$ is:', options: ['$R(10) - R(0)$', '$\\int_0^{10} R(t)\\,dt$', '$R(10)$', '$10R(5)$'], correctIndex: 1, explanation: 'Integrate the rate to find total accumulated quantity.', partNumber: 1, partTitle: 'Net Change Theorem' },
+  // Part 1 — Area Between Curves (Advanced)
+  {
+    id: 'ia-ent-1a',
+    question: 'What is the total area between $y = x^3$ and $y = x$ on the interval $[0, 2]$?',
+    options: ['$2$', '$\\frac{5}{2}$', '$6$', '$-2$'],
+    correctIndex: 1,
+    explanation: 'The curves cross at $x = 1$, so split: $\\int_0^1 (x - x^3)\\,dx + \\int_1^2 (x^3 - x)\\,dx = \\frac{1}{4} + \\frac{9}{4} = \\frac{5}{2}$. One unsplit integral gives the net value $-2$ (or $2$), and $6$ comes from adding the functions instead of subtracting.',
+    partNumber: 1,
+    partTitle: 'Area Between Curves (Advanced)',
+  },
+  {
+    id: 'ia-ent-1b',
+    question: 'Which integral gives the area of the region bounded by $x = y^2 - 4$ and $x = 2 - y$?',
+    options: [
+      '$\\int_{-2}^{3}(6-y-y^2)\\,dy$',
+      '$\\int_{-3}^{2}(y^2+y-6)\\,dy$',
+      '$\\int_{-3}^{2}(2-y-y^2)\\,dy$',
+      '$\\int_{-3}^{2}(6-y-y^2)\\,dy$',
+    ],
+    correctIndex: 3,
+    explanation: 'Setting $y^2 - 4 = 2 - y$ gives $y = -3$ and $y = 2$; the line $x = 2 - y$ is on the right, so the integrand is $(2 - y) - (y^2 - 4) = 6 - y - y^2$. The integrand $y^2 + y - 6$ is left minus right, and $2 - y - y^2$ drops the $-4$.',
+    partNumber: 1,
+    partTitle: 'Area Between Curves (Advanced)',
+  },
 
-  // Part 2: Average Value of a Function
-  { id: 'ia-ent-2a', question: 'The average value of $f$ on $[a,b]$ is:', options: ['$\\frac{f(a)+f(b)}{2}$', '$\\frac{1}{b-a}\\int_a^b f(x)\\,dx$', '$\\int_a^b f(x)\\,dx$', '$\\frac{f\'(a)+f\'(b)}{2}$'], correctIndex: 1, explanation: 'Average value = $\\frac{1}{b-a}\\int_a^b f(x)\\,dx$.', partNumber: 2, partTitle: 'Average Value of a Function' },
-  { id: 'ia-ent-2b', question: 'The Mean Value Theorem for Integrals guarantees a $c$ in $[a,b]$ where:', options: ['$f\'(c) = 0$', '$f(c) = \\frac{1}{b-a}\\int_a^b f(x)\\,dx$', '$f(c) = f\'(c)$', '$\\int f(c) = 0$'], correctIndex: 1, explanation: 'There exists $c$ where $f(c)$ equals the average value.', partNumber: 2, partTitle: 'Average Value of a Function' },
+  // Part 2 — Cross-Sectional Volumes
+  {
+    id: 'ia-ent-2a',
+    question: 'The base of a solid is the triangle bounded by $y = 4 - 2x$, the $x$-axis, and the $y$-axis. Cross sections perpendicular to the $x$-axis are semicircles with diameters in the base. What is the volume?',
+    options: ['$\\frac{32}{3}$', '$\\frac{16\\pi}{3}$', '$\\frac{4\\pi}{3}$', '$\\frac{8\\pi}{3}$'],
+    correctIndex: 2,
+    explanation: 'A semicircle with diameter $s$ has area $\\frac{\\pi}{8}s^2$, so $V = \\frac{\\pi}{8}\\int_0^2 (4 - 2x)^2\\,dx = \\frac{\\pi}{8} \\cdot \\frac{32}{3} = \\frac{4\\pi}{3}$. Using $s$ as the radius gives $\\frac{16\\pi}{3}$, and $\\frac{32}{3}$ is the volume for square cross sections.',
+    partNumber: 2,
+    partTitle: 'Cross-Sectional Volumes',
+  },
+  {
+    id: 'ia-ent-2b',
+    question: 'The base of a solid is the first-quadrant region bounded by $y = x^2$, the line $y = 4$, and the $y$-axis. Cross sections perpendicular to the $y$-axis are squares. What is the volume?',
+    options: ['$\\frac{256}{15}$', '$8$', '$\\frac{16}{3}$', '$\\frac{32}{5}$'],
+    correctIndex: 1,
+    explanation: 'Slices perpendicular to the $y$-axis run from $x = 0$ to $x = \\sqrt{y}$, so $V = \\int_0^4 (\\sqrt{y})^2\\,dy = \\int_0^4 y\\,dy = 8$. Slicing perpendicular to the $x$-axis instead gives $\\frac{256}{15}$, and forgetting to square the side gives $\\frac{16}{3}$.',
+    partNumber: 2,
+    partTitle: 'Cross-Sectional Volumes',
+  },
 
-  // Part 3: Connecting Position Velocity & Acceleration via Integrals
-  { id: 'ia-ent-3a', question: 'If $v(t) = s\'(t)$, then $\\int_a^b v(t)\\,dt =$', options: ['$v(b) - v(a)$', '$s(b) - s(a)$', '$a(b) - a(a)$', '$s\'(b) - s\'(a)$'], correctIndex: 1, explanation: 'The integral of velocity gives displacement: $s(b) - s(a)$.', partNumber: 3, partTitle: 'Connecting Position Velocity & Acceleration via Integrals' },
-  { id: 'ia-ent-3b', question: 'If $a(t) = v\'(t)$ and $v(0) = 5$, then $v(t) =$', options: ['$5 + \\int_0^t a(s)\\,ds$', '$a(t) + 5$', '$\\int a(t)\\,dt$', '$5a(t)$'], correctIndex: 0, explanation: '$v(t) = v(0) + \\int_0^t a(s)\\,ds = 5 + \\int_0^t a(s)\\,ds$.', partNumber: 3, partTitle: 'Connecting Position Velocity & Acceleration via Integrals' },
+  // Part 3 — Volumes: Disk and Washer Methods
+  {
+    id: 'ia-ent-3a',
+    question: 'The region between $y = \\sqrt{x}$ and $y = x$ is revolved about the $x$-axis. What is the volume of the solid?',
+    options: ['$\\frac{\\pi}{30}$', '$\\frac{\\pi}{6}$', '$\\frac{\\pi}{2}$', '$\\frac{\\pi}{3}$'],
+    correctIndex: 1,
+    explanation: 'The curves meet at $x = 0$ and $x = 1$, and $\\sqrt{x} \\ge x$ there, so washers have $R = \\sqrt{x}$ and $r = x$: $V = \\pi\\int_0^1 (x - x^2)\\,dx = \\frac{\\pi}{6}$. Squaring the difference of the radii gives $\\frac{\\pi}{30}$, and revolving only one curve gives $\\frac{\\pi}{2}$ or $\\frac{\\pi}{3}$.',
+    partNumber: 3,
+    partTitle: 'Volumes: Disk and Washer Methods',
+  },
+  {
+    id: 'ia-ent-3b',
+    question: 'The region bounded by $y = x^2$, $y = 0$, and $x = 2$ is revolved about the line $y = -2$. Which integral gives the volume?',
+    options: [
+      '$\\pi\\int_0^2[(x^2-2)^2-4]\\,dx$',
+      '$\\pi\\int_0^2[(x^2+2)-2]^2\\,dx$',
+      '$\\pi\\int_0^2[(x^2+2)^2-4]\\,dx$',
+      '$\\pi\\int_0^2(x^2+2)^2\\,dx$',
+    ],
+    correctIndex: 2,
+    explanation: 'The axis is 2 units below the region, so the outer radius is $x^2 + 2$ and the inner radius (from $y = 0$) is $2$, giving $\\pi\\int_0^2[(x^2+2)^2 - 2^2]\\,dx$. Squaring the difference of the radii, or ignoring the hole, are the usual errors.',
+    partNumber: 3,
+    partTitle: 'Volumes: Disk and Washer Methods',
+  },
 
-  // Part 4: Work & Physical Applications
-  { id: 'ia-ent-4a', question: 'Work done by a variable force $F(x)$ over $[a,b]$ is:', options: ['$F(b) - F(a)$', '$\\int_a^b F(x)\\,dx$', '$F \\cdot d$', '$\\frac{F(a)+F(b)}{2} \\cdot (b-a)$'], correctIndex: 1, explanation: 'Work = $\\int_a^b F(x)\\,dx$ for variable force.', partNumber: 4, partTitle: 'Work & Physical Applications' },
-  { id: 'ia-ent-4b', question: 'The work to stretch a spring from natural length by $x$ is $W = \\int_0^x kx\\,dx$. This equals:', options: ['$kx$', '$\\frac{1}{2}kx^2$', '$k$', '$kx^2$'], correctIndex: 1, explanation: 'Hooke\'s law: $W = \\frac{1}{2}kx^2$.', partNumber: 4, partTitle: 'Work & Physical Applications' },
+  // Part 4 — Riemann Sums and Trapezoidal Rule
+  {
+    id: 'ia-ent-4a',
+    question: 'A continuous function has $f(0) = 4$, $f(3) = 10$, $f(5) = 8$, and $f(10) = 2$. Using a trapezoidal sum with the three subintervals given by the table, what is the estimate of $\\int_0^{10} f(x)\\,dx$?',
+    options: ['$70$', '$72$', '$64$', '$56$'],
+    correctIndex: 2,
+    explanation: 'Each trapezoid uses its own width: $3 \\cdot \\frac{4+10}{2} + 2 \\cdot \\frac{10+8}{2} + 5 \\cdot \\frac{8+2}{2} = 21 + 18 + 25 = 64$. Treating the widths as equal gives $70$; the left and right sums are $72$ and $56$.',
+    partNumber: 4,
+    partTitle: 'Riemann Sums and Trapezoidal Rule',
+  },
+  {
+    id: 'ia-ent-4b',
+    question: 'A function $f$ is increasing and concave down on $[0, 8]$. With four equal subintervals, the left sum is $30$ and the right sum is $38$. What is true of the trapezoidal sum $T$ and the exact integral $I$?',
+    options: ['$T = 34$ and $T > I$', '$T = 68$ and $T < I$', '$T = 34$ and $T < I$', '$T = 68$ and $T > I$'],
+    correctIndex: 2,
+    explanation: 'The trapezoidal sum is the average of the left and right sums, $T = \\frac{30 + 38}{2} = 34$. For a concave down function the trapezoid tops lie below the curve, so $T$ underestimates the integral. Adding without halving gives $68$.',
+    partNumber: 4,
+    partTitle: 'Riemann Sums and Trapezoidal Rule',
+  },
 
-  // Part 5: Density & Mass Applications
-  { id: 'ia-ent-5a', question: 'If density varies along a rod as $\\rho(x)$ kg/m, total mass is:', options: ['$\\rho(b) - \\rho(a)$', '$\\int_a^b \\rho(x)\\,dx$', '$\\rho(a) \\cdot (b-a)$', '$\\frac{\\rho(a)+\\rho(b)}{2}$'], correctIndex: 1, explanation: 'Mass = $\\int$ density $dx$ for variable density.', partNumber: 5, partTitle: 'Density & Mass Applications' },
-  { id: 'ia-ent-5b', question: 'Population growth rate is 100 people/year. Total population change over 5 years is:', options: ['$500$', '$100$', '$20$', '$105$'], correctIndex: 0, explanation: '$\\int_0^5 100\\,dt = 500$ people.', partNumber: 5, partTitle: 'Density & Mass Applications' },
+  // Part 5 — Rate Problems & Net Change
+  {
+    id: 'ia-ent-5a',
+    question: 'A tank holds $120$ liters at $t = 0$. Water enters at $12$ liters per minute and drains at $3\\sqrt{t}$ liters per minute, with $t$ in minutes. How many liters are in the tank at $t = 4$?',
+    options: ['$168$', '$104$', '$184$', '$152$'],
+    correctIndex: 3,
+    explanation: 'Amount $= 120 + \\int_0^4 (12 - 3\\sqrt{t})\\,dt = 120 + 48 - 2t^{3/2}\\big|_0^4 = 120 + 48 - 16 = 152$. Ignoring the drain gives $168$, and adding the drained water gives $184$.',
+    partNumber: 5,
+    partTitle: 'Rate Problems & Net Change',
+  },
+  {
+    id: 'ia-ent-5b',
+    question: 'A wildfire has burned $A(t)$ acres after $t$ hours, so $A\'(t)$ is in acres per hour. What does $\\int_1^4 A\'(t)\\,dt = 90$ mean?',
+    options: [
+      'By hour 4, the fire had burned 90 acres in total',
+      '90 acres burned from hour 1 to hour 4',
+      'The fire averaged 90 acres per hour over that span',
+      'At hour 4, the fire was spreading at 90 acres per hour',
+    ],
+    correctIndex: 1,
+    explanation: 'The integral of a rate is the net change: $A(4) - A(1) = 90$, so 90 more acres burned between hour 1 and hour 4. It is not the running total since $t = 0$, and the average rate on that interval would be $90/3 = 30$ acres per hour.',
+    partNumber: 5,
+    partTitle: 'Rate Problems & Net Change',
+  },
 
-  // Part 6: Problem-Solving Workshop
-  { id: 'ia-ent-6a', question: 'If $R(t) = 50 - 2t$ gallons/min is the rate water drains, total drained in 10 min:', options: ['$300$', '$400$', '$500$', '$200$'], correctIndex: 1, explanation: '$\\int_0^{10}(50-2t)\\,dt = [50t - t^2]_0^{10} = 500 - 100 = 400$.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'ia-ent-6b', question: 'Average temperature if $T(t) = 70 + 10\\sin(\\frac{\\pi t}{12})$ on $[0,12]$ is approximately:', options: ['$70 + \\frac{20}{\\pi}$', '$70$', '$80$', '$70 + \\frac{10}{\\pi}$'], correctIndex: 0, explanation: 'Average = $\\frac{1}{12}\\int_0^{12}[70+10\\sin(\\frac{\\pi t}{12})]\\,dt = 70 + \\frac{10}{12} \\cdot \\frac{24}{\\pi} = 70 + \\frac{20}{\\pi}$.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  // Part 6 — Practice Workshop
+  {
+    id: 'ia-ent-6a',
+    question: 'Region $R$ is bounded by $y = e^x$, the $x$-axis, $x = 0$, and $x = \\ln 3$. Solid A is $R$ revolved about the $x$-axis; solid B has base $R$ and square cross sections perpendicular to the $x$-axis. What are their volumes?',
+    options: ['$V_A=4$ and $V_B=4\\pi$', '$V_A=8\\pi$ and $V_B=8$', '$V_A=2\\pi$ and $V_B=2$', '$V_A=4\\pi$ and $V_B=4$'],
+    correctIndex: 3,
+    explanation: 'Both solids use $\\int_0^{\\ln 3} e^{2x}\\,dx = \\frac{9 - 1}{2} = 4$; the revolved solid has circular slices, so it carries the factor $\\pi$ and the square slices do not. Dropping the $\\frac{1}{2}$ from the antiderivative gives $8$, and not squaring $e^x$ gives $2$.',
+    partNumber: 6,
+    partTitle: 'Practice Workshop',
+  },
+  {
+    id: 'ia-ent-6b',
+    question: 'The first-quadrant region bounded by $y = x^3$, the line $y = 8$, and the $y$-axis is revolved about the $y$-axis. What is the volume?',
+    options: ['$\\frac{768\\pi}{7}$', '$\\frac{128\\pi}{7}$', '$\\frac{96\\pi}{5}$', '$12\\pi$'],
+    correctIndex: 2,
+    explanation: 'Slices perpendicular to the $y$-axis are disks of radius $x = y^{1/3}$, so $V = \\pi\\int_0^8 y^{2/3}\\,dy = \\pi \\cdot \\frac{3}{5} \\cdot 32 = \\frac{96\\pi}{5}$. Writing $\\pi\\int_0^2 x^6\\,dx$ uses the wrong variable for a vertical axis, $\\frac{768\\pi}{7}$ revolves about the $x$-axis, and $12\\pi$ forgets to square the radius.',
+    partNumber: 6,
+    partTitle: 'Practice Workshop',
+  },
 
-  // Part 7: Review & AP Exam Applications
-  { id: 'ia-ent-7a', question: 'The total change interpretation of $\\int_a^b f\'(x)\\,dx = f(b) - f(a)$ is the basis of:', options: ['The power rule', 'The Net Change Theorem', 'L\'Hôpital\'s Rule', 'The chain rule'], correctIndex: 1, explanation: 'The Net Change Theorem = FTC Part 2 applied to rates of change.', partNumber: 7, partTitle: 'Review & AP Exam Applications' },
-  { id: 'ia-ent-7b', question: 'When an AP FRQ asks for total amount, you use:', options: ['Differentiation', 'Integration of the rate function', 'The average value', 'The derivative'], correctIndex: 1, explanation: 'Total = integral of rate. This is a very common AP exam pattern.', partNumber: 7, partTitle: 'Review & AP Exam Applications' },
+  // Part 7 — Final Assessment
+  {
+    id: 'ia-ent-7a',
+    question: 'What is the average value of $f(x) = 3x^2 - 2x$ on the interval $[1, 3]$?',
+    options: ['$18$', '$9$', '$10$', '$8$'],
+    correctIndex: 1,
+    explanation: 'Average value $= \\frac{1}{3 - 1}\\int_1^3 (3x^2 - 2x)\\,dx = \\frac{1}{2}\\left[x^3 - x^2\\right]_1^3 = \\frac{18}{2} = 9$. Forgetting to divide gives $18$, the average rate of change $\\frac{f(3) - f(1)}{2}$ is $10$, and $f(2) = 8$ is just the midpoint value.',
+    partNumber: 7,
+    partTitle: 'Final Assessment',
+  },
+  {
+    id: 'ia-ent-7b',
+    question: 'The region between $y = x + 1$ and $y = 1$ for $0 \\le x \\le 2$ is revolved about the $x$-axis. A student writes the volume as $\\pi\\int_0^2 x^2\\,dx$. What is the error?',
+    options: [
+      'The factor $\\pi$ should be dropped for a solid with a hole',
+      'The limits should run from $y=1$ to $y=3$, not $0$ to $2$',
+      'The radii were subtracted before squaring instead of using $R^2-r^2$',
+      'Nothing is wrong, as the inner radius of $1$ cancels out',
+    ],
+    correctIndex: 2,
+    explanation: 'The washer method needs $R^2 - r^2 = (x+1)^2 - 1^2$, not $(R - r)^2 = x^2$, so the correct volume is $\\pi\\int_0^2 (x^2 + 2x)\\,dx = \\frac{20\\pi}{3}$. Washers still carry $\\pi$, and the slices are vertical, so $x$ runs from $0$ to $2$.',
+    partNumber: 7,
+    partTitle: 'Final Assessment',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -42,12 +173,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Net Change Theorem' },
-    { partNumber: 2, partTitle: 'Average Value of a Function' },
-    { partNumber: 3, partTitle: 'Connecting Position Velocity & Acceleration via Integrals' },
-    { partNumber: 4, partTitle: 'Work & Physical Applications' },
-    { partNumber: 5, partTitle: 'Density & Mass Applications' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & AP Exam Applications' },
+    { partNumber: 1, partTitle: 'Area Between Curves (Advanced)' },
+    { partNumber: 2, partTitle: 'Cross-Sectional Volumes' },
+    { partNumber: 3, partTitle: 'Volumes: Disk and Washer Methods' },
+    { partNumber: 4, partTitle: 'Riemann Sums and Trapezoidal Rule' },
+    { partNumber: 5, partTitle: 'Rate Problems & Net Change' },
+    { partNumber: 6, partTitle: 'Practice Workshop' },
+    { partNumber: 7, partTitle: 'Final Assessment' },
   ]
 }

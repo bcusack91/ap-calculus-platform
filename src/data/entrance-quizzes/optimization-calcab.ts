@@ -1,216 +1,144 @@
+/**
+ * Entrance Quiz — Optimization (AP Calculus AB) — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
+ */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Setting Up Optimization Problems
+  // Part 1 — Setting Up Optimization Problems
   {
     id: 'opt-ent-1a',
-    question: 'In an optimization problem, the first step is usually to:',
-    options: [
-      'Take the derivative',
-      'Identify the quantity to maximize or minimize',
-      'Set the derivative to zero',
-      'Graph the function'
-    ],
-    correctIndex: 1,
-    explanation: 'You must first identify what you are optimizing before writing equations.',
+    question: 'A closed box with a square base of side $x$ must hold a volume of $64$. Which function of $x$ should be minimized to use the least material?',
+    options: ['$S(x) = 2x^2 + \\frac{256}{x}$', '$S(x) = x^2 + \\frac{256}{x}$', '$S(x) = 2x^2 + \\frac{64}{x}$', '$S(x) = 2x^2 + 4x$'],
+    correctIndex: 0,
+    explanation: 'The surface area is $2x^2 + 4xh$ (top, bottom and four sides). The constraint $x^2h = 64$ gives $h = \\frac{64}{x^2}$, so $4xh = \\frac{256}{x}$. Using $x^2$ alone would describe an open-top box.',
     partNumber: 1,
-    partTitle: 'Setting Up Optimization Problems'
+    partTitle: 'Setting Up Optimization Problems',
   },
   {
     id: 'opt-ent-1b',
-    question: 'A constraint equation in optimization relates:',
-    options: [
-      'The derivative to zero',
-      'Two or more variables in the problem',
-      'The answer to the question',
-      'The domain to the range'
-    ],
+    question: 'An area function $A(x)$ is differentiable on $0 < x < 10$ and has exactly one critical point, $x = 4$, where $A\'\'(4) = -3$. What can be concluded?',
+    options: ['$A$ has an absolute minimum at $x = 4$', '$A$ has an absolute maximum at $x = 4$', '$A$ has a local maximum but no absolute maximum', 'The endpoints $x = 0$ and $x = 10$ give the maximum'],
     correctIndex: 1,
-    explanation: 'Constraints express relationships between variables, reducing the problem to one variable.',
+    explanation: '$A\'\'(4) < 0$ makes $x = 4$ a local maximum, and because it is the only critical point on the interval, $A$ cannot rise above that value anywhere else. So it is the absolute maximum.',
     partNumber: 1,
-    partTitle: 'Setting Up Optimization Problems'
+    partTitle: 'Setting Up Optimization Problems',
   },
-
-  // Part 2: Critical Points in Context
+  // Part 2 — Geometric Optimization
   {
     id: 'opt-ent-2a',
-    question: 'To find where a maximum or minimum of $f(x)$ occurs, you set:',
-    options: [
-      '$f(x) = 0$',
-      '$f\'(x) = 0$',
-      '$f\'\'(x) = 0$',
-      '$f(x) = f\'(x)$'
-    ],
-    correctIndex: 1,
-    explanation: 'Candidates for extrema occur where $f\'(x) = 0$ or is undefined.',
+    question: 'An open-top box is made by cutting squares of side $x$ from the corners of an $18 \\times 18$ sheet and folding up the sides. What is the largest possible volume?',
+    options: ['$864$', '$108$', '$432$', '$144$'],
+    correctIndex: 2,
+    explanation: '$V(x) = x(18 - 2x)^2$ on $0 < x < 9$. Then $V\'(x) = (18 - 2x)(18 - 6x) = 0$ gives $x = 3$ in the domain, and $V(3) = 3 \\cdot 12^2 = 432$. Forgetting the factor 2 in $18 - 2x$ leads to 864.',
     partNumber: 2,
-    partTitle: 'Critical Points in Context'
+    partTitle: 'Geometric Optimization',
   },
   {
     id: 'opt-ent-2b',
-    question: 'How do you confirm a critical point is a maximum?',
-    options: [
-      '$f\'(c) > 0$',
-      '$f\'\'(c) < 0$',
-      '$f(c) > 0$',
-      '$f\'\'(c) > 0$'
-    ],
-    correctIndex: 1,
-    explanation: 'If $f\'\'(c) < 0$, the function is concave down at $c$, confirming a local maximum.',
+    question: 'Which point on the parabola $y = x^2$ is closest to the point $(3, 0)$?',
+    options: ['$\\left(\\frac{3}{2}, \\frac{9}{4}\\right)$', '$\\left(\\frac{1}{2}, \\frac{1}{4}\\right)$', '$(3, 9)$', '$(1, 1)$'],
+    correctIndex: 3,
+    explanation: 'Minimize $D^2 = (x - 3)^2 + x^4$: $2(x - 3) + 4x^3 = 0$, or $2x^3 + x - 3 = 0$, which has root $x = 1$. The point is $(1, 1)$. Writing $y$ instead of $y^2$ in the distance gives $\\left(\\frac{3}{2}, \\frac{9}{4}\\right)$.',
     partNumber: 2,
-    partTitle: 'Critical Points in Context'
+    partTitle: 'Geometric Optimization',
   },
-
-  // Part 3: Maximizing Area & Volume
+  // Part 3 — Cost & Revenue Optimization
   {
     id: 'opt-ent-3a',
-    question: 'A farmer has 200 ft of fencing for a rectangular area. If one side is $x$, the area $A = x(100-x)$. What $x$ maximizes area?',
-    options: [
-      '$25$',
-      '$50$',
-      '$100$',
-      '$200$'
-    ],
-    correctIndex: 1,
-    explanation: '$A\'(x)=100-2x=0 \\Rightarrow x=50$.',
+    question: 'Items sell at price $p = 60 - 0.5x$ dollars when $x$ are sold, and the cost of making $x$ items is $C(x) = 10x + 300$ dollars. What is the maximum profit?',
+    options: ['$\\$950$', '$\\$1{,}250$', '$\\$1{,}800$', '$\\$1{,}750$'],
+    correctIndex: 0,
+    explanation: 'Profit is $P(x) = x(60 - 0.5x) - (10x + 300) = 50x - 0.5x^2 - 300$. Then $P\'(x) = 50 - x = 0$ at $x = 50$, and $P(50) = 2500 - 1250 - 300 = 950$. The value $\\$1{,}800$ is the maximum revenue, not profit.',
     partNumber: 3,
-    partTitle: 'Maximizing Area & Volume'
+    partTitle: 'Cost & Revenue Optimization',
   },
   {
     id: 'opt-ent-3b',
-    question: 'An open-top box is cut from a 12×12 sheet by removing squares of side $x$. The volume is:',
-    options: [
-      '$x(12-x)^2$',
-      '$x(12-2x)^2$',
-      '$(12-x)^2$',
-      '$12x^2$'
-    ],
+    question: 'The cost of producing $x$ units is $C(x) = 2x^2 + 50x + 800$. At what production level is the average cost $\\frac{C(x)}{x}$ smallest?',
+    options: ['$x = 400$', '$x = 20$', '$x = 20\\sqrt{2}$', '$x = 800$'],
     correctIndex: 1,
-    explanation: 'Folding up gives dimensions $(12-2x) \\times (12-2x) \\times x$.',
+    explanation: 'Average cost is $2x + 50 + \\frac{800}{x}$, with derivative $2 - \\frac{800}{x^2} = 0$ at $x^2 = 400$, so $x = 20$. Stopping at $x^2 = 400$ gives the distractor 400.',
     partNumber: 3,
-    partTitle: 'Maximizing Area & Volume'
+    partTitle: 'Cost & Revenue Optimization',
   },
-
-  // Part 4: Revenue & Cost Applications
+  // Part 4 — 3D Optimization (Cylinders & Cones)
   {
     id: 'opt-ent-4a',
-    question: 'Revenue is maximized when:',
-    options: [
-      'Price is highest',
-      'Marginal revenue equals zero',
-      'Cost equals zero',
-      'Demand is unlimited'
-    ],
-    correctIndex: 1,
-    explanation: 'Set $R\'(x)=0$ to find the quantity that maximizes revenue.',
+    question: 'A closed cylindrical can must hold $128\\pi$ cm$^3$. What radius, in cm, minimizes its total surface area?',
+    options: ['$r = 8$', '$r = 2$', '$r = 4$', '$r = 4\\sqrt[3]{2}$'],
+    correctIndex: 2,
+    explanation: 'With $h = \\frac{128}{r^2}$, $S = 2\\pi r^2 + \\frac{256\\pi}{r}$ and $S\' = 4\\pi r - \\frac{256\\pi}{r^2} = 0$ gives $r^3 = 64$, so $r = 4$ (and $h = 8 = 2r$). The value $4\\sqrt[3]{2}$ is the answer for an open-top can.',
     partNumber: 4,
-    partTitle: 'Revenue & Cost Applications'
+    partTitle: '3D Optimization (Cylinders & Cones)',
   },
   {
     id: 'opt-ent-4b',
-    question: 'If $C(x)=0.01x^2+5x+100$, the marginal cost at $x=50$ is:',
-    options: [
-      '$6$',
-      '$5$',
-      '$7$',
-      '$50$'
-    ],
-    correctIndex: 0,
-    explanation: '$C\'(x)=0.02x+5$. At $x=50$: $C\'(50)=1+5=6$.',
+    question: 'An open-top box with a square base must hold $500$ cm$^3$ using the least material. How do its optimal dimensions compare?',
+    options: ['The height equals the base side', 'The height is twice the base side', 'The base side is half the height', 'The height is half the side of the base'],
+    correctIndex: 3,
+    explanation: 'With $h = \\frac{500}{x^2}$, $S = x^2 + \\frac{2000}{x}$ and $S\' = 2x - \\frac{2000}{x^2} = 0$ gives $x = 10$. Then $h = 5$, half the base side.',
     partNumber: 4,
-    partTitle: 'Revenue & Cost Applications'
+    partTitle: '3D Optimization (Cylinders & Cones)',
   },
-
-  // Part 5: Constraint Equations
+  // Part 5 — Distance & Mixed Problems
   {
     id: 'opt-ent-5a',
-    question: 'Eliminating a variable using a constraint is done by:',
-    options: [
-      'Integration',
-      'Substitution',
-      'Differentiation',
-      'Factoring'
-    ],
-    correctIndex: 1,
-    explanation: 'Use the constraint to substitute one variable in terms of another.',
+    question: 'A 40-cm wire is cut into two pieces, and each piece is bent into a square. How should it be cut to make the total enclosed area as small as possible?',
+    options: ['Into two equal $20$-cm pieces', 'Into pieces of $10$ and $30$ cm', 'Using all $40$ cm for one square', 'Into pieces of $16$ and $24$ cm'],
+    correctIndex: 0,
+    explanation: 'With one piece $x$, the area is $A = \\frac{x^2}{16} + \\frac{(40 - x)^2}{16}$, and $A\' = \\frac{x - (40 - x)}{8} = 0$ at $x = 20$. Since $A\'\' > 0$, equal pieces minimize the area; using all the wire for one square gives the maximum.',
     partNumber: 5,
-    partTitle: 'Constraint Equations'
+    partTitle: 'Distance & Mixed Problems',
   },
   {
     id: 'opt-ent-5b',
-    question: 'If $x + y = 20$ and you maximize $P = xy$, substitution gives:',
-    options: [
-      '$P = x(20-x)$',
-      '$P = 20x$',
-      '$P = x^2 - 20$',
-      '$P = 20/x$'
-    ],
-    correctIndex: 0,
-    explanation: '$y = 20 - x$, so $P = x(20 - x)$.',
+    question: 'What is the absolute maximum value of $f(x) = x^3 - 6x^2 + 9x + 2$ on $[0, 5]$?',
+    options: ['$6$', '$22$', '$2$', '$5$'],
+    correctIndex: 1,
+    explanation: 'Critical points: $f\'(x) = 3(x - 1)(x - 3) = 0$ at $x = 1, 3$. Candidates: $f(0) = 2$, $f(1) = 6$, $f(3) = 2$, $f(5) = 22$. The maximum is 22 at the endpoint; 6 is only a local maximum.',
     partNumber: 5,
-    partTitle: 'Constraint Equations'
+    partTitle: 'Distance & Mixed Problems',
   },
-
-  // Part 6: Problem-Solving Workshop
+  // Part 6 — AP-Style Workshop
   {
     id: 'opt-ent-6a',
-    question: 'On a closed interval, absolute extrema can occur at:',
-    options: [
-      'Only critical points',
-      'Only endpoints',
-      'Critical points and endpoints',
-      'Only where $f\'\' = 0$'
-    ],
+    question: 'A cost function $C$ is differentiable for $x > 0$ with $C\'(x) < 0$ for $x < 6$ and $C\'(x) > 0$ for $x > 6$. Which statement justifies that $x = 6$ gives the absolute minimum?',
+    options: ['$C\'(6) = 0$, so $x = 6$ must give a minimum', '$C(6)$ is smaller than $C(5)$ and $C(7)$', 'It is the only critical point and $C\'$ changes from $-$ to $+$', 'A calculator graph shows a low point at $x = 6$'],
     correctIndex: 2,
-    explanation: 'On a closed interval, you must check both critical points and endpoints.',
+    explanation: 'The sign change of $C\'$ from negative to positive shows a minimum, and because it is the only critical point, $C$ decreases before 6 and increases after it, making it the absolute minimum. A zero derivative or two sample values alone do not justify this.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: 'AP-Style Workshop',
   },
   {
     id: 'opt-ent-6b',
-    question: 'A wire of length 40 cm is bent into a circle and a square. To minimize total area, what fraction goes to the circle?',
-    options: [
-      'All of it',
-      'None of it',
-      '$\\frac{40\\pi}{4+\\pi}$',
-      '$\\frac{40}{4+\\pi}$'
-    ],
+    question: 'A poster must have $50$ in$^2$ of printed area with margins of $1$ in on each side and $2$ in at the top and bottom. What page dimensions (width by height) use the least paper?',
+    options: ['$5$ in by $10$ in', '$\\sqrt{50}$ in by $\\sqrt{50}$ in', '$6$ in by $12$ in', '$7$ in by $14$ in'],
     correctIndex: 3,
-    explanation: 'Minimize $A = \\frac{x^2}{4\\pi}+\\frac{(40-x)^2}{16}$; set $A\'=0$ and solve.',
+    explanation: 'With printed width $u$, the printed height is $\\frac{50}{u}$ and the page area is $(u + 2)\\left(\\frac{50}{u} + 4\\right) = 58 + 4u + \\frac{100}{u}$. Setting $4 - \\frac{100}{u^2} = 0$ gives $u = 5$, so the page is $7$ by $14$ in; $5$ by $10$ is only the printed region.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: 'AP-Style Workshop',
   },
-
-  // Part 7: Review & AP Exam Applications
+  // Part 7 — Comprehensive Assessment
   {
     id: 'opt-ent-7a',
-    question: 'A cylindrical can must hold 1000 $cm^{3}$. The radius minimizing surface area satisfies $r =$:',
-    options: [
-      '$\\sqrt[3]{\\frac{500}{\\pi}}$',
-      '$10$',
-      '$\\frac{1000}{\\pi}$',
-      '$5$'
-    ],
+    question: 'Positive numbers $x$ and $y$ satisfy $x + y = 30$. What is the largest possible value of $xy^2$?',
+    options: ['$4000$', '$3375$', '$1000$', '$2000$'],
     correctIndex: 0,
-    explanation: '$S\'(r)=0$ yields $r = \\sqrt[3]{\\frac{V}{2\\pi}} = \\sqrt[3]{\\frac{500}{\\pi}}$.',
+    explanation: 'Write $f(y) = (30 - y)y^2 = 30y^2 - y^3$. Then $f\'(y) = 60y - 3y^2 = 0$ at $y = 20$, so $x = 10$ and $xy^2 = 4000$. Splitting evenly gives only 3375, and swapping the roles gives 2000.',
     partNumber: 7,
-    partTitle: 'Review & AP Exam Applications'
+    partTitle: 'Comprehensive Assessment',
   },
   {
     id: 'opt-ent-7b',
-    question: 'After finding a critical point in an optimization problem on the AP exam, you should:',
-    options: [
-      'Stop — the critical point is the answer',
-      'Justify it is a max or min using a derivative test',
-      'Check if $f\'\' = 0$',
-      'Graph the function'
-    ],
+    question: 'At price $p$ dollars, a store sells $400 - 8p$ items, so revenue is $R(p) = p(400 - 8p)$. What is the maximum revenue?',
+    options: ['$\\$2{,}500$', '$\\$5{,}000$', '$\\$10{,}000$', '$\\$20{,}000$'],
     correctIndex: 1,
-    explanation: 'You must always justify that a critical point gives the desired extremum.',
+    explanation: '$R\'(p) = 400 - 16p = 0$ at $p = 25$, and $R\'\' = -16 < 0$, so this is the maximum: $R(25) = 25 \\cdot 200 = 5000$ dollars. Ignoring the drop in sales gives $25 \\cdot 400 = 10{,}000$.',
     partNumber: 7,
-    partTitle: 'Review & AP Exam Applications'
-  }
+    partTitle: 'Comprehensive Assessment',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -220,11 +148,11 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Setting Up Optimization Problems' },
-    { partNumber: 2, partTitle: 'Critical Points in Context' },
-    { partNumber: 3, partTitle: 'Maximizing Area & Volume' },
-    { partNumber: 4, partTitle: 'Revenue & Cost Applications' },
-    { partNumber: 5, partTitle: 'Constraint Equations' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & AP Exam Applications' }
+    { partNumber: 2, partTitle: 'Geometric Optimization' },
+    { partNumber: 3, partTitle: 'Cost & Revenue Optimization' },
+    { partNumber: 4, partTitle: '3D Optimization (Cylinders & Cones)' },
+    { partNumber: 5, partTitle: 'Distance & Mixed Problems' },
+    { partNumber: 6, partTitle: 'AP-Style Workshop' },
+    { partNumber: 7, partTitle: 'Comprehensive Assessment' },
   ]
 }

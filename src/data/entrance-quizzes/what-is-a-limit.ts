@@ -1,10 +1,6 @@
 /**
- * Entrance Quiz — What Is a Limit? — 8 questions (2 per lesson part)
- *
- * Scope is INTENTIONALLY narrow: only the conceptual idea of a limit.
- * No factoring, no rationalizing, no continuity 3-step test, no
- * graph-reading drills, no AP synthesis — those belong to other topics
- * in Unit 1.
+ * Entrance Quiz — What Is a Limit? — 8 questions (2 per lesson part, 4 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
@@ -12,110 +8,77 @@ import { shuffleArray } from '@/lib/shuffle-options'
 const questions: EntranceQuizQuestion[] = [
   // Part 1 — The Intuitive Idea of a Limit
   {
-    id: 'wal-ent-1a',
-    question: 'Which informal sentence best captures $\\lim_{x\\to a} f(x) = L$?',
-    options: [
-      '$f(a) = L$',
-      'As $x$ gets arbitrarily close to $a$, $f(x)$ gets arbitrarily close to $L$',
-      '$f(x)$ equals $L$ at every point',
-      'There is some $x$ near $a$ with $f(x) = L$',
-    ],
+    id: 'wil-ent-1a',
+    question: 'The graph of $f$ is an unbroken curve except for an open circle at $(2, 5)$ and a filled dot at $(2, 1)$. Which pair of statements is correct?',
+    options: ['$\\lim_{x \\to 2} f(x) = 1$ and $f(2) = 5$', '$\\lim_{x \\to 2} f(x) = 5$ and $f(2) = 1$', '$\\lim_{x \\to 2} f(x) = 5$ and $f(2)$ is undefined', '$\\lim_{x \\to 2} f(x)$ does not exist and $f(2) = 1$'],
     correctIndex: 1,
-    explanation: 'A limit describes the value $f$ is approaching as $x$ approaches $a$ — it is not the value at $a$.',
+    explanation: 'The curve heads toward the open circle from both sides, so the limit is 5; the filled dot gives the actual value $f(2) = 1$. The limit describes behavior near 2, not the value at 2.',
     partNumber: 1,
     partTitle: 'The Intuitive Idea of a Limit',
   },
   {
-    id: 'wal-ent-1b',
-    question: 'In $\\lim_{x \\to 3} f(x)$, the symbol "$x \\to 3$" means:',
-    options: [
-      '$x$ equals 3',
-      '$x$ is getting arbitrarily close to 3, but $x \\ne 3$',
-      '$x$ is exactly 3.0001',
-      '$x$ is moving away from 3',
-    ],
-    correctIndex: 1,
-    explanation: 'The arrow means "approaches" — $x$ is allowed to be as close as you want to 3, but never equal to 3. The limit deliberately ignores the value at $x = 3$ itself.',
+    id: 'wil-ent-1b',
+    question: 'All you know about a function $f$ is that $f(5) = 8$. What can you conclude about $\\lim_{x \\to 5} f(x)$?',
+    options: ['It must equal 8, the value of $f(5)$', 'It cannot exist, since $f(5)$ is defined', 'It must equal 5, the value $x$ approaches', 'Nothing, since it depends on values near 5'],
+    correctIndex: 3,
+    explanation: 'A limit depends only on the values of $f$ near 5, not on $f(5)$ itself. The single value $f(5) = 8$ says nothing about where $f(x)$ is heading.',
     partNumber: 1,
     partTitle: 'The Intuitive Idea of a Limit',
   },
-
   // Part 2 — Limit Notation
   {
-    id: 'wal-ent-2a',
-    question: 'How do you read $\\lim_{x \\to 2^-} f(x) = 5$ in English?',
-    options: [
-      'The limit of $f$ as $x$ equals 2 minus 1 is 5',
-      'As $x$ approaches 2 from the left, $f(x)$ approaches 5',
-      'As $x$ approaches 2 from the right, $f(x)$ approaches 5',
-      '$f(2) - 1 = 5$',
-    ],
+    id: 'wil-ent-2a',
+    question: 'Which statement says "as $x$ approaches $-1$ from the right, $p(x)$ decreases without bound"?',
+    options: ['$\\lim_{x \\to -1^-} p(x) = -\\infty$', '$\\lim_{x \\to -1^+} p(x) = -\\infty$', '$\\lim_{x \\to +\\infty} p(x) = -1$', '$\\lim_{x \\to -\\infty} p(x) = -1$'],
     correctIndex: 1,
-    explanation: 'A "$-$" superscript on the target means "approach from the left" (from values less than the target).',
+    explanation: 'Approaching from the right is written $x \\to -1^+$, and decreasing without bound is written $= -\\infty$. The superscript minus would mean approaching from the left.',
     partNumber: 2,
     partTitle: 'Limit Notation',
   },
   {
-    id: 'wal-ent-2b',
-    question: 'Which symbol expresses "as $x$ runs to positive infinity, $g(x)$ approaches 0"?',
-    options: [
-      '$\\lim_{x \\to 0} g(x) = \\infty$',
-      '$\\lim_{x \\to \\infty} g(x) = 0$',
-      '$\\lim_{x \\to -\\infty} g(x) = 0$',
-      '$g(\\infty) = 0$',
-    ],
+    id: 'wil-ent-2b',
+    question: 'If $\\lim_{x \\to \\infty} r(x) = -4$, which feature must the graph of $r$ have?',
+    options: ['A vertical asymptote at $x = -4$', 'A horizontal asymptote $y = -4$', 'An absolute minimum value of $-4$', 'A horizontal tangent line at $y = -4$'],
     correctIndex: 1,
-    explanation: 'The arrow always points to where $x$ is going. Here $x$ goes to $+\\infty$, and the function approaches 0.',
+    explanation: 'A limit at infinity describes end behavior: as $x$ grows without bound, $r(x)$ approaches $-4$, so $y = -4$ is a horizontal asymptote. A vertical asymptote would come from a limit equal to $\\pm\\infty$ at a finite $x$.',
     partNumber: 2,
     partTitle: 'Limit Notation',
   },
-
   // Part 3 — When Does a Limit Exist?
   {
-    id: 'wal-ent-3a',
-    question: '$\\lim_{x \\to a} f(x)$ exists if and only if:',
-    options: [
-      '$f(a)$ is defined',
-      'Both one-sided limits exist and are equal',
-      '$f$ is differentiable at $a$',
-      '$f$ is bounded near $a$',
-    ],
-    correctIndex: 1,
-    explanation: 'The Existence Theorem: the two-sided limit exists ⟺ both one-sided limits exist and are equal. Nothing about $f(a)$ enters the definition.',
+    id: 'wil-ent-3a',
+    question: 'Let $f(x) = \\begin{cases} 4 - x^2 & x < -1 \\\\ x + 4 & x \\ge -1 \\end{cases}$. What is $\\lim_{x \\to -1} f(x)$?',
+    options: ['$5$', 'Does not exist', '$3$', '$4$'],
+    correctIndex: 2,
+    explanation: 'From the left, $4 - (-1)^2 = 3$; from the right, $-1 + 4 = 3$. Both one-sided limits equal 3, so the limit exists and equals 3. Getting 5 comes from treating $(-1)^2$ as $-1$.',
     partNumber: 3,
     partTitle: 'When Does a Limit Exist?',
   },
   {
-    id: 'wal-ent-3b',
-    question: 'Suppose $\\lim_{x \\to 4^-} f(x) = 7$ and $\\lim_{x \\to 4^+} f(x) = 7$, but $f(4) = 100$. What is $\\lim_{x \\to 4} f(x)$?',
-    options: ['$7$', '$100$', 'Does not exist', 'Cannot be determined'],
-    correctIndex: 0,
-    explanation: 'Both one-sided limits agree at 7, so the two-sided limit equals 7. The value $f(4) = 100$ is irrelevant to the limit — it only tells us $f$ is discontinuous at 4.',
+    id: 'wil-ent-3b',
+    question: 'For a function $g$: $\\lim_{x \\to 0^-} g(x) = 2$ and $g(0) = 2$, but as $x \\to 0^+$, $g(x)$ oscillates between $1$ and $3$ forever. What is $\\lim_{x \\to 0} g(x)$?',
+    options: ['It equals 2', 'It equals 1', 'It equals 3', 'It does not exist'],
+    correctIndex: 3,
+    explanation: 'A two-sided limit requires both one-sided limits to exist and agree. The right-hand limit fails to exist because of the oscillation, so the two-sided limit does not exist even though the left side and $g(0)$ both equal 2.',
     partNumber: 3,
     partTitle: 'When Does a Limit Exist?',
   },
-
   // Part 4 — Limits That Do Not Exist
   {
-    id: 'wal-ent-4a',
-    question: 'Suppose $\\lim_{x \\to 0^-} g(x) = -1$ and $\\lim_{x \\to 0^+} g(x) = +1$. What is $\\lim_{x \\to 0} g(x)$?',
-    options: ['$-1$', '$+1$', '$0$ (the average)', 'Does not exist'],
-    correctIndex: 3,
-    explanation: 'The two one-sided limits disagree, so the two-sided limit DNE. This is a jump discontinuity.',
+    id: 'wil-ent-4a',
+    question: 'Why does $\\lim_{x \\to -2} \\dfrac{x}{x + 2}$ fail to exist?',
+    options: ['The one-sided limits are finite but unequal', 'The function values grow without bound', 'The function oscillates without settling', 'The function is undefined at $x = -2$'],
+    correctIndex: 1,
+    explanation: 'Near $x = -2$ the numerator is close to $-2$ while the denominator approaches 0, so the values blow up ($+\\infty$ from the left, $-\\infty$ from the right). Being undefined at $-2$ alone would not stop a limit from existing.',
     partNumber: 4,
     partTitle: 'Limits That Do Not Exist',
   },
   {
-    id: 'wal-ent-4b',
-    question: 'Why does $\\lim_{x\\to 0} \\sin(1/x)$ fail to exist?',
-    options: [
-      'The function jumps from one finite value to another',
-      'The function blows up to $\\pm\\infty$',
-      'The function oscillates infinitely fast between $-1$ and $+1$ and never settles',
-      'The function equals 0 everywhere near 0',
-    ],
-    correctIndex: 2,
-    explanation: 'As $x \\to 0$, the input $1/x$ races to infinity, and $\\sin$ keeps cycling between $-1$ and $+1$ — there is no destination value.',
+    id: 'wil-ent-4b',
+    question: 'For $g(x) = \\dfrac{|2x - 6|}{x - 3}$, which describes the one-sided limits at $x = 3$?',
+    options: ['Left limit $2$, right limit $-2$', 'Both one-sided limits equal $2$', 'Left limit $-1$, right limit $1$', 'Left limit $-2$, right limit $2$'],
+    correctIndex: 3,
+    explanation: 'Since $|2x - 6| = 2|x - 3|$, the function equals $-2$ for $x < 3$ and $2$ for $x > 3$. The one-sided limits are $-2$ and $2$, a jump, so the two-sided limit does not exist.',
     partNumber: 4,
     partTitle: 'Limits That Do Not Exist',
   },

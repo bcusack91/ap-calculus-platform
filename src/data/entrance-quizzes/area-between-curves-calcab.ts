@@ -1,39 +1,144 @@
 /**
- * Entrance Quiz — Area Between Curves (AP Calculus AB)
- * 14 questions covering all 7 lesson parts (2 per part).
+ * Entrance Quiz — Area Between Curves (AP Calculus AB) — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
  */
-
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Area Under a Single Curve
-  { id: 'abc-ent-1a', question: 'The area under $f(x) \\geq 0$ from $a$ to $b$ is:', options: ['$f(b) - f(a)$', '$\\int_a^b f(x)\\,dx$', '$f\'(b) - f\'(a)$', '$\\sum f(x)$'], correctIndex: 1, explanation: 'For nonnegative functions, area = definite integral.', partNumber: 1, partTitle: 'Area Under a Single Curve' },
-  { id: 'abc-ent-1b', question: 'If $f(x) < 0$ on $[a,b]$, the area between $f$ and the $x$-axis is:', options: ['$\\int_a^b f(x)\\,dx$', '$-\\int_a^b f(x)\\,dx$', '$0$', '$|f(a) - f(b)|$'], correctIndex: 1, explanation: 'Take the absolute value (or negate) since $f$ is negative.', partNumber: 1, partTitle: 'Area Under a Single Curve' },
-
-  // Part 2: Area Between Two Curves (Vertical)
-  { id: 'abc-ent-2a', question: 'The area between $f(x)$ and $g(x)$ from $a$ to $b$ (where $f \\geq g$) is:', options: ['$\\int_a^b [f(x) + g(x)]\\,dx$', '$\\int_a^b [f(x) - g(x)]\\,dx$', '$\\int_a^b f(x)\\,dx \\cdot \\int_a^b g(x)\\,dx$', '$f(b) - g(a)$'], correctIndex: 1, explanation: 'Area = $\\int_a^b [\\text{top} - \\text{bottom}]\\,dx$.', partNumber: 2, partTitle: 'Area Between Two Curves (Vertical)' },
-  { id: 'abc-ent-2b', question: 'Find the area between $y = x^2$ and $y = x$ from $x = 0$ to $x = 1$:', options: ['$\\frac{1}{6}$', '$\\frac{1}{3}$', '$\\frac{1}{2}$', '$1$'], correctIndex: 0, explanation: '$\\int_0^1 (x - x^2)\\,dx = [\\frac{x^2}{2} - \\frac{x^3}{3}]_0^1 = \\frac{1}{6}$.', partNumber: 2, partTitle: 'Area Between Two Curves (Vertical)' },
-
-  // Part 3: Area Between Two Curves (Horizontal)
-  { id: 'abc-ent-3a', question: 'When integrating with respect to $y$, the formula is:', options: ['$\\int_c^d [\\text{right} - \\text{left}]\\,dy$', '$\\int_c^d [\\text{top} - \\text{bottom}]\\,dy$', '$\\int_c^d [f(y) + g(y)]\\,dy$', '$\\int_a^b [f(x) - g(x)]\\,dx$'], correctIndex: 0, explanation: 'Horizontal slicing: area = $\\int [\\text{right function} - \\text{left function}]\\,dy$.', partNumber: 3, partTitle: 'Area Between Two Curves (Horizontal)' },
-  { id: 'abc-ent-3b', question: 'You might prefer integrating with respect to $y$ when:', options: ['The curves are simple polynomials', 'The curves cross multiple times as functions of $x$', 'The region is bounded by functions of $y$', 'Always'], correctIndex: 2, explanation: 'If the boundary curves are easier to express as $x = f(y)$, integrate with respect to $y$.', partNumber: 3, partTitle: 'Area Between Two Curves (Horizontal)' },
-
-  // Part 4: Setting Up Integrals from Graphs
-  { id: 'abc-ent-4a', question: 'From a graph, you determine which function is on top by:', options: ['Taking derivatives', 'Looking at which curve has higher $y$-values', 'Checking concavity', 'Integrating both'], correctIndex: 1, explanation: 'The \'top\' function has greater $y$-values in the region.', partNumber: 4, partTitle: 'Setting Up Integrals from Graphs' },
-  { id: 'abc-ent-4b', question: 'If two curves cross at $x = 2$, you need to:', options: ['Ignore the crossing', 'Split the integral at $x = 2$', 'Only integrate to $x = 2$', 'Use absolute values'], correctIndex: 1, explanation: 'When curves swap top/bottom, split the integral at the crossing point.', partNumber: 4, partTitle: 'Setting Up Integrals from Graphs' },
-
-  // Part 5: Absolute Value Considerations
-  { id: 'abc-ent-5a', question: 'To handle regions where $f - g$ changes sign, use:', options: ['$\\int_a^b \\left| f(x) - g(x) \\right|\\,dx$', '$\\int_a^b [f(x) - g(x)]\\,dx$', '$\\left| \\int_a^b f(x)\\,dx \\right|$', '$\\int_a^b [f(x) + g(x)]\\,dx$'], correctIndex: 0, explanation: 'Absolute value ensures all area is positive.', partNumber: 5, partTitle: 'Absolute Value Considerations' },
-  { id: 'abc-ent-5b', question: 'The total shaded area is always:', options: ['Zero', 'Nonnegative', 'Equal to displacement', 'Negative'], correctIndex: 1, explanation: 'Geometric area is always nonnegative.', partNumber: 5, partTitle: 'Absolute Value Considerations' },
-
-  // Part 6: Problem-Solving Workshop
-  { id: 'abc-ent-6a', question: 'Find the area enclosed by $y = x^2$ and $y = 4$:', options: ['$\\frac{32}{3}$', '$\\frac{16}{3}$', '$8$', '$\\frac{8}{3}$'], correctIndex: 0, explanation: 'Intersect at $x = \\pm 2$. $\\int_{-2}^{2}(4-x^2)\\,dx = [4x - \\frac{x^3}{3}]_{-2}^{2} = \\frac{32}{3}$.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'abc-ent-6b', question: 'The area between $y = \\sin x$ and $y = 0$ from $0$ to $2\\pi$ is:', options: ['$0$', '$2$', '$4$', '$\\pi$'], correctIndex: 2, explanation: '$\\int_0^{\\pi} \\sin x\\,dx + \\int_{\\pi}^{2\\pi}|\\sin x|\\,dx = 2 + 2 = 4$.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-
-  // Part 7: Review & AP Exam Applications
-  { id: 'abc-ent-7a', question: 'On the AP exam, always check whether the curves:', options: ['Have derivatives', 'Intersect within the given interval', 'Are continuous', 'Have antiderivatives'], correctIndex: 1, explanation: 'Intersection points determine where to split or set up limits.', partNumber: 7, partTitle: 'Review & AP Exam Applications' },
-  { id: 'abc-ent-7b', question: 'The area between $y = e^x$ and $y = 1$ from $x = 0$ to $x = 1$ is:', options: ['$e - 2$', '$e - 1$', '$e$', '$1$'], correctIndex: 0, explanation: '$\\int_0^1(e^x - 1)\\,dx = [e^x - x]_0^1 = (e-1) - (1-0) = e - 2$.', partNumber: 7, partTitle: 'Review & AP Exam Applications' },
+  // Part 1 — Area Between Two Curves
+  {
+    id: 'abc-ent-1a',
+    question: 'Find the area of the region enclosed by $y = 8 - x^2$ and $y = x^2$.',
+    options: ['$\\frac{32}{3}$', '$-\\frac{64}{3}$', '$\\frac{64}{3}$', '$\\frac{80}{3}$'],
+    correctIndex: 2,
+    explanation: 'The curves meet where $8 - x^2 = x^2$, at $x = \\pm 2$, and $8 - x^2$ is on top. The area is $\\int_{-2}^{2} (8 - 2x^2)\\,dx = 2\\left(16 - \\frac{16}{3}\\right) = \\frac{64}{3}$. Subtracting in the wrong order gives a negative value.',
+    partNumber: 1,
+    partTitle: 'Area Between Two Curves',
+  },
+  {
+    id: 'abc-ent-1b',
+    question: 'Which integral gives the area between $y = e^x$ and $y = x + 1$ for $0 \\le x \\le 2$?',
+    options: ['$\\int_0^2 (e^x - x)\\,dx$', '$\\int_0^2 (e^x - x - 1)\\,dx$', '$\\int_0^2 (x + 1)\\,dx$', '$\\int_0^2 e^x\\,dx$'],
+    correctIndex: 1,
+    explanation: 'On $[0, 2]$, $e^x \\ge x + 1$, so the area is $\\int_0^2 [e^x - (x + 1)]\\,dx$. The whole bottom function must be subtracted; the single-curve integrals give areas down to the $x$-axis.',
+    partNumber: 1,
+    partTitle: 'Area Between Two Curves',
+  },
+  // Part 2 — When Curves Switch Position
+  {
+    id: 'abc-ent-2a',
+    question: 'What is the total area between the graph of $y = x^2 - 2x$ and the $x$-axis on $[0, 3]$?',
+    options: ['$0$', '$-\\frac{4}{3}$', '$\\frac{8}{3}$', '$\\frac{4}{3}$'],
+    correctIndex: 2,
+    explanation: 'The curve is below the axis on $(0, 2)$ and above it on $(2, 3)$. The pieces have areas $\\int_0^2 (2x - x^2)\\,dx = \\frac{4}{3}$ and $\\int_2^3 (x^2 - 2x)\\,dx = \\frac{4}{3}$, for a total of $\\frac{8}{3}$. Integrating without splitting gives 0.',
+    partNumber: 2,
+    partTitle: 'When Curves Switch Position',
+  },
+  {
+    id: 'abc-ent-2b',
+    question: 'Find the total area between $y = x^3$ and $y = 4x$ on $[0, 3]$.',
+    options: ['$\\frac{9}{4}$', '$4$', '$\\frac{25}{4}$', '$\\frac{41}{4}$'],
+    correctIndex: 3,
+    explanation: 'The curves cross at $x = 2$. On $[0, 2]$, $4x$ is on top: $\\int_0^2 (4x - x^3)\\,dx = 4$. On $[2, 3]$, $x^3$ is on top: $\\int_2^3 (x^3 - 4x)\\,dx = \\frac{25}{4}$. The total is $\\frac{41}{4}$; a single unsplit integral has absolute value $\\frac{9}{4}$.',
+    partNumber: 2,
+    partTitle: 'When Curves Switch Position',
+  },
+  // Part 3 — Integrating with Respect to y
+  {
+    id: 'abc-ent-3a',
+    question: 'Find the area of the region enclosed by $x = y^2 - 4$ and $x = 2 - y$.',
+    options: ['$\\frac{125}{6}$', '$-\\frac{125}{6}$', '$\\frac{22}{3}$', '$\\frac{27}{2}$'],
+    correctIndex: 0,
+    explanation: 'Set $y^2 - 4 = 2 - y$: $y = -3$ and $y = 2$. The right curve is $x = 2 - y$, so the area is $\\int_{-3}^{2} (6 - y - y^2)\\,dy = \\frac{125}{6}$. Using only $y \\ge 0$ or only $y \\le 0$ gives $\\frac{22}{3}$ or $\\frac{27}{2}$.',
+    partNumber: 3,
+    partTitle: 'Integrating with Respect to y',
+  },
+  {
+    id: 'abc-ent-3b',
+    question: 'The region is bounded by $y = \\sqrt{x}$, $y = 0$ and $x = 9$. Which integral with respect to $y$ gives its area?',
+    options: ['$\\int_0^9 (9 - \\sqrt{y})\\,dy$', '$\\int_0^3 (9 - y^2)\\,dy$', '$\\int_0^9 (3 - \\sqrt{x})\\,dx$', '$\\int_0^3 (9 - \\sqrt{y})\\,dy$'],
+    correctIndex: 1,
+    explanation: 'Solve $y = \\sqrt{x}$ for $x = y^2$ (the left boundary); the right boundary is $x = 9$, and $y$ runs from 0 to 3. Area $= \\int_0^3 (9 - y^2)\\,dy$. The $dx$ integral shown measures the region above the curve instead.',
+    partNumber: 3,
+    partTitle: 'Integrating with Respect to y',
+  },
+  // Part 4 — Multiple Regions
+  {
+    id: 'abc-ent-4a',
+    question: 'Find the area of the region bounded by $y = \\sqrt{x}$, $y = x - 2$ and $y = 0$.',
+    options: ['$\\frac{16}{3}$', '$\\frac{22}{3}$', '$\\frac{10}{3}$', '$\\frac{8}{3}$'],
+    correctIndex: 2,
+    explanation: 'In $y$: the left boundary is $x = y^2$, the right is $x = y + 2$, and they meet at $y = 2$. Area $= \\int_0^2 (y + 2 - y^2)\\,dy = 2 + 4 - \\frac{8}{3} = \\frac{10}{3}$. Ignoring the line gives $\\int_0^4 \\sqrt{x}\\,dx = \\frac{16}{3}$.',
+    partNumber: 4,
+    partTitle: 'Multiple Regions',
+  },
+  {
+    id: 'abc-ent-4b',
+    question: 'A triangle is bounded by $y = 2x$, $y = 6 - x$ and $y = 0$. Which expression gives its area using integrals in $x$?',
+    options: ['$\\int_0^2 (6 - 3x)\\,dx + \\int_2^6 (6 - x)\\,dx$', '$\\int_0^4 2x\\,dx + \\int_4^6 (6 - x)\\,dx$', '$\\int_0^2 (6 - x)\\,dx + \\int_2^6 2x\\,dx$', '$\\int_0^2 2x\\,dx + \\int_2^6 (6 - x)\\,dx$'],
+    correctIndex: 3,
+    explanation: 'The top boundary changes at the vertex $(2, 4)$: it is $y = 2x$ on $[0, 2]$ and $y = 6 - x$ on $[2, 6]$, with $y = 0$ below. So the area is the sum of two integrals, which equals 12. Splitting at the height 4 instead of at $x = 2$, swapping the two boundaries, or subtracting the lines on $[0, 2]$ all describe the wrong region.',
+    partNumber: 4,
+    partTitle: 'Multiple Regions',
+  },
+  // Part 5 — Area with Absolute Value
+  {
+    id: 'abc-ent-5a',
+    question: 'For $f(x) = x^2 - 1$ on $[0, 2]$, what are the signed area $\\int_0^2 f(x)\\,dx$ and the total area $\\int_0^2 |f(x)|\\,dx$?',
+    options: ['Signed $\\frac{2}{3}$, total $2$', 'Both equal $\\frac{2}{3}$', 'Both equal $2$', 'Signed $0$, total $2$'],
+    correctIndex: 0,
+    explanation: 'Signed: $\\left[\\frac{x^3}{3} - x\\right]_0^2 = \\frac{2}{3}$. Total: split at $x = 1$, giving $\\frac{2}{3}$ below the axis and $\\frac{4}{3}$ above, for $2$. The below-axis part cancels in the signed area but adds in the total.',
+    partNumber: 5,
+    partTitle: 'Area with Absolute Value',
+  },
+  {
+    id: 'abc-ent-5b',
+    question: 'For a continuous $f$, $\\int_a^b f(x)\\,dx = -5$, and the region between $f$ and the $x$-axis that lies below the axis has area 7. What is the total area between $f$ and the axis on $[a, b]$?',
+    options: ['$12$', '$9$', '$-5$', '$-12$'],
+    correctIndex: 1,
+    explanation: 'If $A$ is the area above the axis, then $A - 7 = -5$, so $A = 2$. The total area is $2 + 7 = 9$. Adding 5 and 7 mixes signed and unsigned quantities.',
+    partNumber: 5,
+    partTitle: 'Area with Absolute Value',
+  },
+  // Part 6 — AP-Style Workshop
+  {
+    id: 'abc-ent-6a',
+    question: 'Region $R$ is bounded by $y = e^x$, the line $y = e$, and the $y$-axis. What is the area of $R$?',
+    options: ['$e - 1$', '$e - 2$', '$1$', '$2e - 1$'],
+    correctIndex: 2,
+    explanation: 'The curves meet at $x = 1$, and $y = e$ is on top on $[0, 1]$: $\\int_0^1 (e - e^x)\\,dx = e - (e - 1) = 1$. The value $e - 1$ is the area under $y = e^x$, not between the curves.',
+    partNumber: 6,
+    partTitle: 'AP-Style Workshop',
+  },
+  {
+    id: 'abc-ent-6b',
+    question: 'Find the area of the region enclosed by $y = \\dfrac{3}{x}$ and $y = 4 - x$.',
+    options: ['$4$', '$4 - \\ln 3$', '$3\\ln 3$', '$4 - 3\\ln 3$'],
+    correctIndex: 3,
+    explanation: 'The curves meet where $x^2 - 4x + 3 = 0$, at $x = 1$ and $x = 3$, with the line on top. Area $= \\int_1^3 \\left(4 - x - \\frac{3}{x}\\right) dx = 4 - 3\\ln 3$. Dropping the coefficient 3 on the logarithm gives $4 - \\ln 3$.',
+    partNumber: 6,
+    partTitle: 'AP-Style Workshop',
+  },
+  // Part 7 — Comprehensive Assessment
+  {
+    id: 'abc-ent-7a',
+    question: 'Find the area of the region enclosed by $y = x^2$ and $y = 4x$.',
+    options: ['$\\frac{32}{3}$', '$-\\frac{32}{3}$', '$\\frac{160}{3}$', '$32$'],
+    correctIndex: 0,
+    explanation: 'The curves meet at $x = 0$ and $x = 4$, with $4x$ on top: $\\int_0^4 (4x - x^2)\\,dx = 32 - \\frac{64}{3} = \\frac{32}{3}$. Adding the functions instead of subtracting gives $\\frac{160}{3}$.',
+    partNumber: 7,
+    partTitle: 'Comprehensive Assessment',
+  },
+  {
+    id: 'abc-ent-7b',
+    question: 'What is the total area between $y = \\sin x$ and the $x$-axis on $\\left[0, \\frac{3\\pi}{2}\\right]$?',
+    options: ['$1$', '$3$', '$2$', '$\\frac{3\\pi}{2}$'],
+    correctIndex: 1,
+    explanation: 'On $[0, \\pi]$ the area is 2, and on $\\left[\\pi, \\frac{3\\pi}{2}\\right]$ the curve is below the axis with area 1. The total is 3, while the signed integral would be $2 - 1 = 1$.',
+    partNumber: 7,
+    partTitle: 'Comprehensive Assessment',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -42,12 +147,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Area Under a Single Curve' },
-    { partNumber: 2, partTitle: 'Area Between Two Curves (Vertical)' },
-    { partNumber: 3, partTitle: 'Area Between Two Curves (Horizontal)' },
-    { partNumber: 4, partTitle: 'Setting Up Integrals from Graphs' },
-    { partNumber: 5, partTitle: 'Absolute Value Considerations' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & AP Exam Applications' },
+    { partNumber: 1, partTitle: 'Area Between Two Curves' },
+    { partNumber: 2, partTitle: 'When Curves Switch Position' },
+    { partNumber: 3, partTitle: 'Integrating with Respect to y' },
+    { partNumber: 4, partTitle: 'Multiple Regions' },
+    { partNumber: 5, partTitle: 'Area with Absolute Value' },
+    { partNumber: 6, partTitle: 'AP-Style Workshop' },
+    { partNumber: 7, partTitle: 'Comprehensive Assessment' },
   ]
 }

@@ -1,144 +1,154 @@
 /**
- * Entrance Quiz — Exponential Models (AP Calculus AB)
- * 14 questions covering all 7 lesson parts (2 per part).
+ * Entrance Quiz — Exponential Models — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
  */
-
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Exponential Growth Model
+  // Part 1 — Exponential Growth & Decay
   {
     id: 'em-ent-1a',
-    question: 'The exponential growth model is $y =$',
-    options: ['$y_0 + kt$', '$y_0 e^{kt}$ where $k > 0$', '$y_0 e^{-kt}$', '$y_0 \\cdot t^k$'],
-    correctIndex: 1,
-    explanation: '$y = y_0 e^{kt}$ with $k > 0$ gives exponential growth.',
+    question: 'A town\'s population satisfies $\\frac{dP}{dt} = kP$, with $t$ in years. It was $12{,}000$ at $t = 0$ and $18{,}000$ at $t = 5$. What is $k$?',
+    options: ['$\\frac{1}{5}\\ln\\frac{2}{3}$', '$\\frac{\\ln 6000}{5}$', '$\\frac{1}{5}\\ln\\frac{3}{2}$', '$5\\ln\\frac{3}{2}$'],
+    correctIndex: 2,
+    explanation: '$18000 = 12000e^{5k}$ gives $e^{5k} = \\frac{3}{2}$, so $k = \\frac{1}{5}\\ln\\frac{3}{2}$. The ratio upside down gives a negative (decay) constant, $k$ depends on the growth factor rather than the $6000$ gained, and multiplying by $5$ instead of dividing misplaces the time.',
     partNumber: 1,
-    partTitle: 'Exponential Growth Model',
+    partTitle: 'Exponential Growth & Decay',
   },
   {
     id: 'em-ent-1b',
-    question: 'In $y = y_0 e^{kt}$, the constant $y_0$ represents:',
-    options: ['The growth rate', 'The initial value', 'The time', 'The decay constant'],
-    correctIndex: 1,
-    explanation: '$y_0 = y(0)$ is the initial amount.',
+    question: 'A quantity satisfies $\\frac{dy}{dt} = ky$ with $y(0) = 100$ and $y(4) = 150$. What is $y(12)$?',
+    options: ['$337.5$', '$250$', '$450$', '$225$'],
+    correctIndex: 0,
+    explanation: 'Exponential growth multiplies by the same factor over equal times: $\\frac{150}{100} = 1.5$ every 4 units, so $y(12) = 100(1.5)^3 = 337.5$. Adding $50$ every 4 units is linear growth ($250$), and $225$ is the value at $t = 8$.',
     partNumber: 1,
-    partTitle: 'Exponential Growth Model',
+    partTitle: 'Exponential Growth & Decay',
   },
-  // Part 2: Exponential Decay Model
+
+  // Part 2 — Newton's Law of Cooling
   {
     id: 'em-ent-2a',
-    question: 'Exponential decay has $k$ that is:',
-    options: ['Positive', 'Negative', 'Zero', 'Undefined'],
-    correctIndex: 1,
-    explanation: 'Decay means $k < 0$ in $y = y_0 e^{kt}$.',
+    question: 'Soup at $190^\\circ$F is set in a room at $70^\\circ$F and cools by Newton\'s Law of Cooling. After 15 minutes it is $130^\\circ$F. What is its temperature after 30 minutes?',
+    options: ['$70$', '$65$', '$85$', '$100$'],
+    correctIndex: 3,
+    explanation: 'The gap above room temperature falls from $120$ to $60$ in 15 minutes, so it halves every 15 minutes; after 30 minutes the gap is $30$ and $T = 70 + 30 = 100$. Losing $60^\\circ$ every 15 minutes is linear cooling ($70$), and halving $130$ applies the decay to the temperature instead of the gap.',
     partNumber: 2,
-    partTitle: 'Exponential Decay Model',
+    partTitle: 'Newton\'s Law of Cooling',
   },
   {
     id: 'em-ent-2b',
-    question: 'Half-life is the time for a quantity to:',
-    options: ['Double', 'Reduce to half', 'Reach zero', 'Triple'],
+    question: 'A cold drink warms according to $T(t) = 25 - 20e^{-0.1t}$, with $T$ in degrees Celsius and $t$ in minutes. How fast is $T$ changing, in degrees per minute, at the moment when $T = 15$?',
+    options: ['$1.5$', '$1$', '$-1$', '$-1.5$'],
     correctIndex: 1,
-    explanation: 'Half-life: $y = \\frac{y_0}{2}$.',
+    explanation: 'This model satisfies $\\frac{dT}{dt} = 0.1(25 - T)$, so at $T = 15$ the rate is $0.1(10) = 1$ degree per minute, positive because the drink is warming. Using $0.1 \\cdot 15$ makes the rate proportional to the temperature rather than to the gap.',
     partNumber: 2,
-    partTitle: 'Exponential Decay Model',
+    partTitle: 'Newton\'s Law of Cooling',
   },
-  // Part 3: Solving Growth/Decay Problems
+
+  // Part 3 — Doubling Time & Half-Life
   {
     id: 'em-ent-3a',
-    question: 'If a population doubles every 5 years and $P_0 = 100$, find $k$:',
-    options: ['$k = \\frac{\\ln 2}{5}$', '$k = \\frac{2}{5}$', '$k = 5\\ln 2$', '$k = \\frac{1}{5}$'],
+    question: 'A radioactive substance satisfies $\\frac{dy}{dt} = ky$ and has a half-life of 8 years. At the moment 40 grams remain, what is $\\frac{dy}{dt}$ in grams per year?',
+    options: ['$-5\\ln 2$', '$-\\frac{\\ln 2}{8}$', '$-320\\ln 2$', '$-40\\ln 2$'],
     correctIndex: 0,
-    explanation: '$200 = 100e^{5k}$. $e^{5k} = 2$. $k = \\frac{\\ln 2}{5}$.',
+    explanation: 'The half-life gives $k = -\\frac{\\ln 2}{8}$, and the differential equation gives the rate directly: $ky = -\\frac{\\ln 2}{8} \\cdot 40 = -5\\ln 2$. The value $-\\frac{\\ln 2}{8}$ is only $k$, and multiplying by the half-life instead of dividing gives $-320\\ln 2$.',
     partNumber: 3,
-    partTitle: 'Solving Growth/Decay Problems',
+    partTitle: 'Doubling Time & Half-Life',
   },
   {
     id: 'em-ent-3b',
-    question: 'A substance has half-life 10 years. After 30 years, the fraction remaining is:',
-    options: ['$\\frac{1}{2}$', '$\\frac{1}{4}$', '$\\frac{1}{8}$', '$\\frac{1}{16}$'],
+    question: 'A population modeled by $\\frac{dP}{dt} = kP$ triples every 6 years. What is its doubling time, in years?',
+    options: ['$\\frac{6\\ln 3}{\\ln 2}$', '$3$', '$\\frac{6\\ln 2}{\\ln 3}$', '$\\frac{\\ln 2}{6\\ln 3}$'],
     correctIndex: 2,
-    explanation: '30 years = 3 half-lives. $(\\frac{1}{2})^3 = \\frac{1}{8}$.',
+    explanation: 'Tripling in 6 years gives $k = \\frac{\\ln 3}{6}$, so the doubling time is $\\frac{\\ln 2}{k} = \\frac{6\\ln 2}{\\ln 3} \\approx 3.79$ years. The value $3$ assumes linear growth, and the other two fractions invert part of the calculation.',
     partNumber: 3,
-    partTitle: 'Solving Growth/Decay Problems',
+    partTitle: 'Doubling Time & Half-Life',
   },
-  // Part 4: Continuous Compounding
+
+  // Part 4 — Derivatives & Integrals of Exponentials
   {
     id: 'em-ent-4a',
-    question: 'Continuous compounding uses the formula $A =$',
-    options: ['$P(1+r)^t$', '$Pe^{rt}$', '$P + rt$', '$P(1+\\frac{r}{n})^{nt}$'],
-    correctIndex: 1,
-    explanation: 'As $n \\to \\infty$: $A = Pe^{rt}$.',
+    question: 'What is $\\int x\\cdot 3^{x^2}\\,dx$?',
+    options: ['$\\frac{3^{x^2}\\ln 3}{2}+C$', '$\\frac{x\\cdot 3^{x^2}}{\\ln 3}+C$', '$\\frac{3^{x^2+1}}{2(x^2+1)}+C$', '$\\frac{3^{x^2}}{2\\ln 3}+C$'],
+    correctIndex: 3,
+    explanation: 'With $u = x^2$, $x\\,dx = \\frac{1}{2}du$, so the integral is $\\frac{1}{2}\\int 3^u\\,du = \\frac{3^u}{2\\ln 3} + C$. Multiplying by $\\ln 3$ uses the derivative rule, keeping the factor $x$ skips the substitution, and raising the power treats $3^{x^2}$ like a power of $x$.',
     partNumber: 4,
-    partTitle: 'Continuous Compounding',
+    partTitle: 'Derivatives & Integrals of Exponentials',
   },
   {
     id: 'em-ent-4b',
-    question: '$1000 at 5% compounded continuously for 10 years gives:',
-    options: ['$\\$1000e^{0.5}$', '$\\$1500$', '$\\$1000e^{50}$', '$\\$1000(1.05)^{10}$'],
-    correctIndex: 0,
-    explanation: '$A = 1000e^{(0.05)(10)} = 1000e^{0.5}$.',
+    question: 'What is $\\int_0^{\\ln 2} e^{3x}\\,dx$?',
+    options: ['$7$', '$\\frac{7}{3}$', '$21$', '$\\frac{8}{3}$'],
+    correctIndex: 1,
+    explanation: 'An antiderivative is $\\frac{1}{3}e^{3x}$, so the integral is $\\frac{1}{3}\\left(e^{3\\ln 2} - e^0\\right) = \\frac{1}{3}(8 - 1) = \\frac{7}{3}$. Leaving out $\\frac{1}{3}$ gives $7$, multiplying by $3$ gives $21$, and dropping the lower limit gives $\\frac{8}{3}$.',
     partNumber: 4,
-    partTitle: 'Continuous Compounding',
+    partTitle: 'Derivatives & Integrals of Exponentials',
   },
-  // Part 5: Newton's Law of Cooling
+
+  // Part 5 — Writing and Solving Rate Models
   {
     id: 'em-ent-5a',
-    question: 'Newton\'s Law of Cooling: $\\frac{dT}{dt} =$',
-    options: ['$k(T - T_s)$ where $T_s$ is ambient temp', '$kT$', '$-kT^2$', '$T - t$'],
+    question: 'A positive quantity $Q$ decreases at a rate proportional to the cube of $Q$. With $k > 0$, which equation models $Q$?',
+    options: ['$\\frac{dQ}{dt} = -kQ^3$', '$\\frac{dQ}{dt} = -\\frac{k}{Q^3}$', '$\\frac{dQ}{dt} = -k\\sqrt[3]{Q}$', '$\\frac{dQ}{dt} = -3kQ^2$'],
     correctIndex: 0,
-    explanation: 'Rate of temp change is proportional to difference from surrounding temp.',
+    explanation: 'The rate of change is $\\frac{dQ}{dt}$, "proportional to the cube of $Q$" means $kQ^3$, and the minus sign makes it decrease. $\\frac{k}{Q^3}$ is inverse proportion, $\\sqrt[3]{Q}$ is the cube root, and $3kQ^2$ differentiates $Q^3$ instead of using it.',
     partNumber: 5,
-    partTitle: 'Newton\'s Law of Cooling',
+    partTitle: 'Writing and Solving Rate Models',
   },
   {
     id: 'em-ent-5b',
-    question: 'In Newton\'s cooling, the solution is $T(t) =$',
-    options: ['$T_s + (T_0 - T_s)e^{kt}$ with $k < 0$', '$T_0 e^{kt}$', '$T_s - T_0 e^{kt}$', '$T_0 + kt$'],
-    correctIndex: 0,
-    explanation: 'Temperature approaches $T_s$ exponentially.',
+    question: 'What is the solution of $\\frac{dy}{dt} = 3(10 - y)$ with $y(0) = 4$?',
+    options: ['$y = 10-4e^{-3t}$', '$y = 4+6e^{-3t}$', '$y = 10-6e^{3t}$', '$y = 10-6e^{-3t}$'],
+    correctIndex: 3,
+    explanation: 'Separating gives $10 - y = Be^{-3t}$, and $y(0) = 4$ gives $B = 6$, so $y = 10 - 6e^{-3t}$, which rises toward $10$. Using $4$ as the coefficient confuses the start with the gap, $4 + 6e^{-3t}$ starts at $10$, and a positive exponent sends $y$ away from $10$.',
     partNumber: 5,
-    partTitle: 'Newton\'s Law of Cooling',
+    partTitle: 'Writing and Solving Rate Models',
   },
-  // Part 6: Problem-Solving Workshop
+
+  // Part 6 — Practice Workshop
   {
     id: 'em-ent-6a',
-    question: 'A bacteria culture has 500 at $t=0$ and 1500 at $t=2$. Find $k$:',
-    options: ['$\\frac{\\ln 3}{2}$', '$\\frac{3}{2}$', '$\\ln(1000)$', '$\\frac{\\ln 2}{3}$'],
-    correctIndex: 0,
-    explanation: '$1500 = 500e^{2k}$. $e^{2k} = 3$. $k = \\frac{\\ln 3}{2}$.',
+    question: 'A substance has a half-life of 10 years. How many years until 20% of the original amount remains?',
+    options: ['$\\frac{10\\ln 0.2}{\\ln 2}$', '$\\frac{10\\ln 5}{\\ln 2}$', '$\\frac{10\\ln 1.25}{\\ln 2}$', '$\\frac{\\ln 5}{10\\ln 2}$'],
+    correctIndex: 1,
+    explanation: 'Solve $\\left(\\frac{1}{2}\\right)^{t/10} = 0.2$: $t = \\frac{10\\ln 0.2}{\\ln 0.5} = \\frac{10\\ln 5}{\\ln 2} \\approx 23.2$ years. Using $\\ln 0.2$ over $\\ln 2$ gives a negative time, $\\ln 1.25$ answers "80% remains", and the last option places the 10 in the denominator.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
+    partTitle: 'Practice Workshop',
   },
   {
     id: 'em-ent-6b',
-    question: 'Carbon-14 has half-life 5730 years. If 25% remains, the age is approximately:',
-    options: ['$5730$ years', '$11460$ years', '$2865$ years', '$17190$ years'],
-    correctIndex: 1,
-    explanation: '25% = $(\\frac{1}{2})^2$, so 2 half-lives = $2 \\times 5730 = 11460$ years.',
+    question: 'Salt leaves a tank at a rate proportional to the amount $S$ present, with $t$ in minutes. At $t = 0$, $S = 50$ kg and $S$ is decreasing at 2 kg per minute. After how many minutes will 25 kg remain?',
+    options: ['$12.5$', '$\\frac{\\ln 2}{25}$', '$25\\ln 2$', '$\\frac{25}{\\ln 2}$'],
+    correctIndex: 2,
+    explanation: 'From $\\frac{dS}{dt} = kS$, $-2 = k(50)$ gives $k = -0.04$, so the half-life is $\\frac{\\ln 2}{0.04} = 25\\ln 2 \\approx 17.3$ minutes. Losing a steady 2 kg per minute would take $12.5$ minutes, but the rate slows as $S$ shrinks.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
+    partTitle: 'Practice Workshop',
   },
-  // Part 7: Review & AP Exam Applications
+
+  // Part 7 — Final Assessment
   {
     id: 'em-ent-7a',
-    question: 'The differential equation $\\frac{dy}{dt} = ky$ always produces:',
-    options: ['Linear growth', 'Exponential behavior', 'Polynomial growth', 'Logarithmic growth'],
-    correctIndex: 1,
-    explanation: '$\\frac{dy}{dt} = ky$ has solution $y = Ce^{kt}$, which is exponential.',
+    question: 'The mass of a substance is $W(t) = 400e^{-0.03t}$ grams, with $t$ in days, and $W\'(10) \\approx -8.9$. What does this mean?',
+    options: [
+      'Over the first 10 days, the mass fell by about 8.9 grams',
+      'At day 10, about 8.9 grams of the substance remain',
+      'The mass falls by about 8.9 percent per day after day 10',
+      'At day 10, the mass is decreasing at about 8.9 grams per day',
+    ],
+    correctIndex: 3,
+    explanation: 'A derivative is an instantaneous rate with units of grams per day, so at $t = 10$ the mass is shrinking at about 8.9 grams per day. It is not a total change over an interval, not an amount, and the percent rate is the constant 3% per day.',
     partNumber: 7,
-    partTitle: 'Review & AP Exam Applications',
+    partTitle: 'Final Assessment',
   },
   {
     id: 'em-ent-7b',
-    question: 'On the AP exam, exponential models often appear in:',
-    options: ['Multiple choice only', 'Free response with separation of variables', 'Only in BC', 'Geometry problems'],
-    correctIndex: 1,
-    explanation: 'Separable DEs leading to exponential models are common FRQ topics.',
+    question: 'A sample decays exponentially from 60 grams at $t = 0$ to 45 grams at $t = 3$ hours. At what time will 20 grams remain?',
+    options: ['$\\frac{3\\ln 3}{\\ln(4/3)}$', '$8$', '$\\frac{\\ln 3}{\\ln(4/3)}$', '$\\frac{3\\ln 2}{\\ln(4/3)}$'],
+    correctIndex: 0,
+    explanation: 'The amount is multiplied by $\\frac{3}{4}$ every 3 hours, so solve $\\left(\\frac{3}{4}\\right)^{t/3} = \\frac{1}{3}$: $t = \\frac{3\\ln 3}{\\ln(4/3)} \\approx 11.5$ hours. A steady loss of 5 g per hour gives $8$, leaving out the 3 hours gives the middle fraction, and $\\ln 2$ in the numerator is the half-life.',
     partNumber: 7,
-    partTitle: 'Review & AP Exam Applications',
+    partTitle: 'Final Assessment',
   },
 ]
 
@@ -148,12 +158,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Exponential Growth Model' },
-    { partNumber: 2, partTitle: 'Exponential Decay Model' },
-    { partNumber: 3, partTitle: 'Solving Growth/Decay Problems' },
-    { partNumber: 4, partTitle: 'Continuous Compounding' },
-    { partNumber: 5, partTitle: 'Newton\'s Law of Cooling' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & AP Exam Applications' },
+    { partNumber: 1, partTitle: 'Exponential Growth & Decay' },
+    { partNumber: 2, partTitle: 'Newton\'s Law of Cooling' },
+    { partNumber: 3, partTitle: 'Doubling Time & Half-Life' },
+    { partNumber: 4, partTitle: 'Derivatives & Integrals of Exponentials' },
+    { partNumber: 5, partTitle: 'Writing and Solving Rate Models' },
+    { partNumber: 6, partTitle: 'Practice Workshop' },
+    { partNumber: 7, partTitle: 'Final Assessment' },
   ]
 }

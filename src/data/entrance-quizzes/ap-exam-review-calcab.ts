@@ -1,144 +1,154 @@
 /**
- * Entrance Quiz — AP Exam Review (AP Calculus AB)
- * 14 questions covering all 7 lesson parts (2 per part).
+ * Entrance Quiz — AP Calculus AB Exam Review — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
  */
-
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Limits & Continuity Review
+  // Part 1 — Limits & Continuity Review
   {
-    id: 'ar-ent-1a',
-    question: '$\\lim_{x \\to 0} \\frac{\\sin x}{x} =$',
-    options: ['$0$', '$1$', '$\\infty$', '$-1$'],
-    correctIndex: 1,
-    explanation: 'This fundamental limit equals 1.',
+    id: 'rev-ent-1a',
+    question: 'Let $f(x) = ax + 1$ for $x < 2$ and $f(x) = x^2 + a$ for $x \\ge 2$. For what value of $a$ is $f$ continuous at $x = 2$?',
+    options: ['$\\frac{3}{2}$', '$-3$', '$\\frac{5}{2}$', '$3$'],
+    correctIndex: 3,
+    explanation: 'Continuity needs the one-sided limits to match $f(2)$: $2a + 1 = 4 + a$, so $a = 3$. Dropping the $a$ on the right side gives $\\frac{3}{2}$, and a sign slip gives $-3$.',
     partNumber: 1,
     partTitle: 'Limits & Continuity Review',
   },
   {
-    id: 'ar-ent-1b',
-    question: 'A function is continuous at $x = a$ if:',
-    options: ['$f(a)$ exists', '$\\lim_{x \\to a} f(x)$ exists', '$f(a) = \\lim_{x \\to a} f(x)$ and both exist', '$f\'(a)$ exists'],
+    id: 'rev-ent-1b',
+    question: 'What is $\\lim_{x \\to -\\infty} \\frac{\\sqrt{9x^2 + 1}}{2x - 3}$?',
+    options: ['$-\\frac{3}{2}$', '$\\frac{3}{2}$', '$\\frac{9}{2}$', '$0$'],
+    correctIndex: 0,
+    explanation: 'For large $|x|$, $\\sqrt{9x^2 + 1} \\approx 3|x|$, and $|x| = -x$ when $x < 0$, so the ratio approaches $\\frac{-3x}{2x} = -\\frac{3}{2}$. Treating $\\sqrt{x^2}$ as $x$ gives $\\frac{3}{2}$, and $\\frac{9}{2}$ forgets the square root.',
+    partNumber: 1,
+    partTitle: 'Limits & Continuity Review',
+  },
+
+  // Part 2 — Differentiation Rules
+  {
+    id: 'rev-ent-2a',
+    question: 'What is $\\frac{d}{dx}\\left[\\cos^3(2x)\\right]$?',
+    options: ['$6\\cos^2(2x)\\sin(2x)$', '$3\\cos^2(2x)$', '$-6\\cos^2(2x)\\sin(2x)$', '$-6\\cos^2(2x)$'],
     correctIndex: 2,
-    explanation: 'Continuity requires: $f(a)$ exists, the limit exists, and they are equal.',
-    partNumber: 1,
-    partTitle: 'Limits & Continuity Review',
-  },
-  // Part 2: Differentiation Review
-  {
-    id: 'ar-ent-2a',
-    question: '$\\frac{d}{dx}[\\sin(x^2)] =$',
-    options: ['$\\cos(x^2)$', '$2x\\cos(x^2)$', '$-\\sin(x^2) \\cdot 2x$', '$2x\\sin(x^2)$'],
-    correctIndex: 1,
-    explanation: 'Chain rule: $\\cos(x^2) \\cdot 2x$.',
+    explanation: 'The chain rule applies three times: $3\\cos^2(2x) \\cdot (-\\sin(2x)) \\cdot 2 = -6\\cos^2(2x)\\sin(2x)$. Dropping the minus sign from the derivative of cosine, or stopping after the power rule, are the usual slips.',
     partNumber: 2,
-    partTitle: 'Differentiation Review',
+    partTitle: 'Differentiation Rules',
   },
   {
-    id: 'ar-ent-2b',
-    question: 'If $xy + y^2 = 1$, find $\\frac{dy}{dx}$:',
-    options: ['$\\frac{-y}{x+2y}$', '$\\frac{y}{x+2y}$', '$\\frac{-x}{2y}$', '$\\frac{1-x}{y}$'],
-    correctIndex: 0,
-    explanation: 'Implicit diff: $y + xy\' + 2yy\' = 0$. $y\'(x+2y) = -y$. $y\' = \\frac{-y}{x+2y}$.',
+    id: 'rev-ent-2b',
+    question: 'The curve $xy^2 - x^2 = 3$ passes through $(1, 2)$. What is $\\frac{dy}{dx}$ at that point?',
+    options: ['$\\frac{1}{2}$', '$-\\frac{1}{2}$', '$-2$', '$\\frac{3}{2}$'],
+    correctIndex: 1,
+    explanation: 'Differentiating gives $y^2 + 2xy\\frac{dy}{dx} - 2x = 0$, so $\\frac{dy}{dx} = \\frac{2x - y^2}{2xy} = \\frac{2 - 4}{4} = -\\frac{1}{2}$. Skipping the product rule on $xy^2$ gives $\\frac{1}{2}$, and $-2$ is the reciprocal.',
     partNumber: 2,
-    partTitle: 'Differentiation Review',
+    partTitle: 'Differentiation Rules',
   },
-  // Part 3: Applications of Derivatives Review
+
+  // Part 3 — Applications of Derivatives
   {
-    id: 'ar-ent-3a',
-    question: 'Related rates problems require:',
-    options: ['Only algebra', 'Implicit differentiation with respect to time', 'Explicit differentiation', 'Integration'],
-    correctIndex: 1,
-    explanation: 'Differentiate the relationship with respect to $t$.',
+    id: 'rev-ent-3a',
+    question: 'The radius of a circle grows at 2 cm per second. How fast is the area growing, in square centimeters per second, at the moment the area is $36\\pi$ square centimeters?',
+    options: ['$24\\pi$', '$12\\pi$', '$144\\pi$', '$72\\pi$'],
+    correctIndex: 0,
+    explanation: 'An area of $36\\pi$ means $r = 6$, and $\\frac{dA}{dt} = 2\\pi r\\frac{dr}{dt} = 2\\pi(6)(2) = 24\\pi$. Leaving out $\\frac{dr}{dt}$ gives $12\\pi$, and using $36$ as the radius gives $144\\pi$.',
     partNumber: 3,
-    partTitle: 'Applications of Derivatives Review',
+    partTitle: 'Applications of Derivatives',
   },
   {
-    id: 'ar-ent-3b',
-    question: 'The second derivative test: if $f\'(c) = 0$ and $f\'\'(c) > 0$, then $c$ is a:',
-    options: ['Local max', 'Local min', 'Inflection point', 'Saddle point'],
-    correctIndex: 1,
-    explanation: '$f\'\'(c) > 0$: concave up at $c$, so local minimum.',
+    id: 'rev-ent-3b',
+    question: 'What is the absolute maximum value of $f(x) = x^3 - 6x^2 + 9x + 1$ on $[0, 5]$?',
+    options: ['$5$', '$1$', '$9$', '$21$'],
+    correctIndex: 3,
+    explanation: 'The critical points are $x = 1$ and $x = 3$, with $f(1) = 5$ and $f(3) = 1$; the endpoints give $f(0) = 1$ and $f(5) = 21$. The largest value is $21$. The local maximum $5$ is not the absolute maximum, and $9$ is $f\'(0)$, a slope rather than a value of $f$.',
     partNumber: 3,
-    partTitle: 'Applications of Derivatives Review',
+    partTitle: 'Applications of Derivatives',
   },
-  // Part 4: Integration Review
+
+  // Part 4 — Integration Techniques
   {
-    id: 'ar-ent-4a',
-    question: '$\\int_0^4 |2x - 4|\\,dx =$',
-    options: ['$4$', '$8$', '$0$', '$16$'],
-    correctIndex: 1,
-    explanation: 'Split at $x = 2$: $\\int_0^2(4-2x)\\,dx + \\int_2^4(2x-4)\\,dx = 4 + 4 = 8$.',
+    id: 'rev-ent-4a',
+    question: 'What is $\\int_1^e \\frac{(\\ln x)^2}{x}\\,dx$?',
+    options: ['$\\frac{e^3-1}{3}$', '$1$', '$\\frac{1}{3}$', '$\\frac{1}{2}$'],
+    correctIndex: 2,
+    explanation: 'With $u = \\ln x$ and $du = \\frac{dx}{x}$, the limits become $u = 0$ to $u = 1$, so the integral is $\\int_0^1 u^2\\,du = \\frac{1}{3}$. Keeping the $x$-limits after substituting gives $\\frac{e^3 - 1}{3}$.',
     partNumber: 4,
-    partTitle: 'Integration Review',
+    partTitle: 'Integration Techniques',
   },
   {
-    id: 'ar-ent-4b',
-    question: '$\\int \\frac{2x}{x^2+1}\\,dx =$',
-    options: ['$\\ln(x^2+1) + C$', '$\\frac{1}{x^2+1} + C$', '$\\arctan x + C$', '$x\\ln(x^2+1) + C$'],
-    correctIndex: 0,
-    explanation: '$u = x^2+1$, $du = 2x\\,dx$. $\\int \\frac{du}{u} = \\ln|u| + C$.',
+    id: 'rev-ent-4b',
+    question: 'What is $\\frac{d}{dx}\\int_x^4 e^{t^2}\\,dt$?',
+    options: ['$e^{16}-e^{x^2}$', '$-e^{x^2}$', '$-2xe^{x^2}$', '$-\\frac{e^{x^2}}{2x}$'],
+    correctIndex: 1,
+    explanation: 'Reversing the limits gives $-\\int_4^x e^{t^2}\\,dt$, and the Fundamental Theorem gives $-e^{x^2}$. There is no chain factor because the variable limit is just $x$, and the answer is not an evaluated difference (the integrand has no elementary antiderivative).',
     partNumber: 4,
-    partTitle: 'Integration Review',
+    partTitle: 'Integration Techniques',
   },
-  // Part 5: Applications of Integration Review
+
+  // Part 5 — Applications of Integration
   {
-    id: 'ar-ent-5a',
-    question: 'The average value of $f(x) = x^2$ on $[0,3]$ is:',
-    options: ['$3$', '$9$', '$4.5$', '$\\frac{9}{4}$'],
+    id: 'rev-ent-5a',
+    question: 'Let $F(x) = 4 + \\int_2^x f(t)\\,dt$, where $\\int_0^2 f(t)\\,dt = 3$ and $\\int_2^5 f(t)\\,dt = 6$. What is $F(0)$?',
+    options: ['$1$', '$7$', '$-3$', '$13$'],
     correctIndex: 0,
-    explanation: '$\\frac{1}{3}\\int_0^3 x^2\\,dx = \\frac{1}{3}(9) = 3$.',
+    explanation: '$F(0) = 4 + \\int_2^0 f(t)\\,dt = 4 - \\int_0^2 f(t)\\,dt = 4 - 3 = 1$. Forgetting that reversed limits change the sign gives $7$, and leaving out the starting value $4$ gives $-3$.',
     partNumber: 5,
-    partTitle: 'Applications of Integration Review',
+    partTitle: 'Applications of Integration',
   },
   {
-    id: 'ar-ent-5b',
-    question: 'Volume by washers about $x$-axis between $y = x$ and $y = x^2$ from $0$ to $1$:',
-    options: ['$\\frac{2\\pi}{15}$', '$\\frac{\\pi}{6}$', '$\\frac{\\pi}{3}$', '$\\frac{\\pi}{30}$'],
-    correctIndex: 0,
-    explanation: '$\\pi\\int_0^1(x^2 - x^4)\\,dx = \\pi[\\frac{x^3}{3}-\\frac{x^5}{5}]_0^1 = \\pi(\\frac{1}{3}-\\frac{1}{5}) = \\frac{2\\pi}{15}$.',
+    id: 'rev-ent-5b',
+    question: 'What is the area of the region bounded by $x = y^2$ and $x = 2y$?',
+    options: ['$-\\frac{4}{3}$', '$\\frac{8}{3}$', '$4$', '$\\frac{4}{3}$'],
+    correctIndex: 3,
+    explanation: 'The curves meet at $y = 0$ and $y = 2$, and $x = 2y$ is on the right, so the area is $\\int_0^2 (2y - y^2)\\,dy = 4 - \\frac{8}{3} = \\frac{4}{3}$. Left minus right gives the negative value, and $4$ and $\\frac{8}{3}$ each use only one curve.',
     partNumber: 5,
-    partTitle: 'Applications of Integration Review',
+    partTitle: 'Applications of Integration',
   },
-  // Part 6: Problem-Solving Workshop
+
+  // Part 6 — Differential Equations & Modeling
   {
-    id: 'ar-ent-6a',
-    question: 'Solve $\\frac{dy}{dx} = 2xy$, $y(0) = 1$:',
-    options: ['$y = e^{x^2}$', '$y = e^{2x}$', '$y = 2xe^x$', '$y = x^2 + 1$'],
-    correctIndex: 0,
-    explanation: 'Separate: $\\frac{dy}{y} = 2x\\,dx$. $\\ln|y| = x^2 + C$. $y = e^{x^2}$ (since $y(0) = 1$).',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  {
-    id: 'ar-ent-6b',
-    question: 'If $F(x) = \\int_1^x \\frac{1}{t}\\,dt$, then $F(x) =$',
-    options: ['$\\ln x$', '$\\ln x - 1$', '$\\frac{1}{x}$', '$x - 1$'],
-    correctIndex: 0,
-    explanation: '$\\int_1^x \\frac{1}{t}\\,dt = \\ln x$ for $x > 0$.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  // Part 7: Comprehensive Review
-  {
-    id: 'ar-ent-7a',
-    question: 'The AP Calculus AB exam tests which core ideas?',
-    options: ['Only limits', 'Limits, derivatives, integrals, and their applications', 'Only integration', 'Only derivatives'],
+    id: 'rev-ent-6a',
+    question: 'What is the solution of $\\frac{dy}{dx} = x(1 + y^2)$ with $y(0) = 0$?',
+    options: ['$y = \\frac{x^2}{2}$', '$y = \\tan(\\frac{x^2}{2})$', '$y = e^{x^2/2}-1$', '$y = \\tan(x^2)$'],
     correctIndex: 1,
-    explanation: 'The exam covers the full calculus toolkit: limits, derivatives, and integrals.',
-    partNumber: 7,
-    partTitle: 'Comprehensive Review',
+    explanation: 'Separating gives $\\int \\frac{dy}{1 + y^2} = \\int x\\,dx$, so $\\arctan y = \\frac{x^2}{2} + C$ with $C = 0$, and $y = \\tan\\left(\\frac{x^2}{2}\\right)$. Ignoring the $y$ factor gives $\\frac{x^2}{2}$, and $\\tan(x^2)$ drops the $\\frac{1}{2}$.',
+    partNumber: 6,
+    partTitle: 'Differential Equations & Modeling',
   },
   {
-    id: 'ar-ent-7b',
-    question: 'The relationship $\\int_a^b f\'(x)\\,dx = f(b) - f(a)$ is called:',
-    options: ['The chain rule', 'The Fundamental Theorem of Calculus', 'The product rule', 'L\'Hôpital\'s Rule'],
-    correctIndex: 1,
-    explanation: 'FTC Part 2 connects differentiation and integration.',
+    id: 'rev-ent-6b',
+    question: 'For $\\frac{dy}{dx} = x(y - 3)$, what is true of the solution curve through the point $(1, 1)$?',
+    options: [
+      'It is increasing at $x = 1$, rising toward $y = 3$',
+      'It has a horizontal tangent line at $x = 1$',
+      'It is decreasing at $x = 1$',
+      'It is constant, since $y = 3$ is an equilibrium',
+    ],
+    correctIndex: 2,
+    explanation: 'The slope at $(1, 1)$ is $1(1 - 3) = -2 < 0$, so the solution is decreasing there. The slope is not zero, and the curve through $(1, 1)$ is not the constant solution $y = 3$.',
+    partNumber: 6,
+    partTitle: 'Differential Equations & Modeling',
+  },
+
+  // Part 7 — Full Practice Exam
+  {
+    id: 'rev-ent-7a',
+    question: 'What is $\\lim_{h \\to 0} \\frac{(2 + h)^4 - 16}{h}$?',
+    options: ['$32$', '$16$', '$0$', '$8$'],
+    correctIndex: 0,
+    explanation: 'This is the definition of the derivative of $x^4$ at $x = 2$, which is $4(2)^3 = 32$. Substituting $h = 0$ only into the numerator gives $0$, and $16$ is the value of the function, not its slope.',
     partNumber: 7,
-    partTitle: 'Comprehensive Review',
+    partTitle: 'Full Practice Exam',
+  },
+  {
+    id: 'rev-ent-7b',
+    question: 'A particle\'s velocity is positive on $(0, 2)$ and negative on $(2, 5)$, and its acceleration is negative on all of $(0, 5)$. On what interval is its speed increasing?',
+    options: ['On $(0, 2)$, while $v$ is positive', 'On all of $(0, 5)$', 'Never, since $a(t) < 0$ throughout', 'On $(2, 5)$'],
+    correctIndex: 3,
+    explanation: 'Speed increases when velocity and acceleration have the same sign, which happens on $(2, 5)$, where both are negative. On $(0, 2)$ they have opposite signs, so the particle is slowing down.',
+    partNumber: 7,
+    partTitle: 'Full Practice Exam',
   },
 ]
 
@@ -149,11 +159,11 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Limits & Continuity Review' },
-    { partNumber: 2, partTitle: 'Differentiation Review' },
-    { partNumber: 3, partTitle: 'Applications of Derivatives Review' },
-    { partNumber: 4, partTitle: 'Integration Review' },
-    { partNumber: 5, partTitle: 'Applications of Integration Review' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Comprehensive Review' },
+    { partNumber: 2, partTitle: 'Differentiation Rules' },
+    { partNumber: 3, partTitle: 'Applications of Derivatives' },
+    { partNumber: 4, partTitle: 'Integration Techniques' },
+    { partNumber: 5, partTitle: 'Applications of Integration' },
+    { partNumber: 6, partTitle: 'Differential Equations & Modeling' },
+    { partNumber: 7, partTitle: 'Full Practice Exam' },
   ]
 }
