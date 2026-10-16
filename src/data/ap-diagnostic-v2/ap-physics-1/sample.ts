@@ -1,7 +1,10 @@
 /**
- * AP Physics 1 diagnostic v2: sample items (8, including one figure-based
- * stimulus set with an authored SVG diagram) that exercise the engine end to
- * end. Authors add unit files beside this one and register them in ./index.ts.
+ * AP Physics 1 diagnostic v2: the engine sample set (phys1-s001, a figure-based
+ * stimulus set with an authored SVG diagram; Unit 2). The guard test
+ * tests/lib/ap-diagnostic-v2.test.ts reads this set by id. The five standalone
+ * sample items were retired when the bank was filled (2026-10-16): three
+ * echoed v1 / practice-form setups (2 kg + 1 kg sticking carts, the 600 kg/m³
+ * floating block, the 5 m drop), and unit files ./unit-*.ts replace them.
  * Uses g = 10 m/s², as the AP Physics 1 equation sheet allows.
  */
 import type { ApDiagV2Item, ApDiagV2Stimulus } from '@/lib/ap-diagnostic-v2/types'
@@ -63,7 +66,7 @@ export const ITEMS: ApDiagV2Item[] = [
     difficulty: 'hard',
     stem: 'The experiment is repeated with the same 10 N force applied to block X instead, so that Y now trails behind. How does the string tension compare with its value in the original setup?',
     options: [
-      'It is greater, because the string must now accelerate the more massive block.',
+      'It is greater, because the string now accelerates the more massive block.',
       'It is the same, because the system’s total mass and acceleration are unchanged.',
       'It is smaller, because the force now acts directly on the less massive block.',
       'It is greater, because the net force on the two-block system is now larger.',
@@ -71,70 +74,5 @@ export const ITEMS: ApDiagV2Item[] = [
     correctIndex: 0,
     explanation:
       'The acceleration is still 2.0 m/s², but the string now pulls Y, so T = m_Y a = (3.0 kg)(2.0 m/s²) = 6.0 N, more than the original 4.0 N. The tension depends on which block the string must accelerate, not only on the system’s acceleration. The net force on the system is still 10 N.',
-  },
-  {
-    id: 'phys1-u1-001',
-    unit: 'unit-1',
-    topicSlug: 'one-dimensional-motion',
-    difficulty: 'easy',
-    stem: 'A ball is thrown straight up and caught at the same height. Air resistance is negligible. Which statement describes the ball at the top of its path?',
-    options: [
-      'Its velocity is zero and its acceleration is 10 m/s² downward.',
-      'Its velocity is zero and its acceleration is also exactly zero.',
-      'Its velocity is 10 m/s downward and its acceleration is zero.',
-      'Its velocity is zero and its acceleration is 10 m/s² upward.',
-    ],
-    correctIndex: 0,
-    explanation:
-      'At the top the ball momentarily stops, so its velocity is zero. Gravity still acts, so its acceleration is g = 10 m/s² downward throughout the flight, including at the top. If the acceleration were zero there, the ball would stay at the top.',
-  },
-  {
-    id: 'phys1-u3-001',
-    unit: 'unit-3',
-    topicSlug: 'conservation-of-energy',
-    difficulty: 'medium',
-    stem: 'A 2.0 kg ball is released from rest 5.0 m above the ground. Air resistance is negligible. What is its speed just before it hits the ground?',
-    options: ['10 m/s', '5.0 m/s', '50 m/s', '100 m/s'],
-    correctIndex: 0,
-    explanation:
-      'mgh = ½mv², so v = √(2gh) = √(2 × 10 × 5.0) = 10 m/s. The mass cancels. 100 m/s is v², and 50 m/s is gh.',
-  },
-  {
-    id: 'phys1-u4-001',
-    unit: 'unit-4',
-    topicSlug: 'collisions',
-    difficulty: 'medium',
-    stem: 'A 2.0 kg cart moving at 3.0 m/s collides with a 1.0 kg cart at rest, and the carts stick together. What is their speed just after the collision?',
-    options: ['2.0 m/s', '1.0 m/s', '1.5 m/s', '3.0 m/s'],
-    correctIndex: 0,
-    explanation:
-      'Momentum is conserved: (2.0)(3.0) = (2.0 + 1.0)v, so v = 6.0/3.0 = 2.0 m/s. Kinetic energy is not conserved in a collision where the carts stick, so an energy calculation gives the wrong speed.',
-  },
-  {
-    id: 'phys1-u7-001',
-    unit: 'unit-7',
-    topicSlug: 'introduction-to-shm',
-    difficulty: 'easy',
-    stem: 'A simple pendulum swings with small amplitude. Its string is replaced with one four times as long, and nothing else changes. What happens to the period?',
-    options: [
-      'The period becomes twice as long.',
-      'The period becomes four times as long.',
-      'The period becomes half as long.',
-      'The period stays exactly the same.',
-    ],
-    correctIndex: 0,
-    explanation:
-      'T = 2π√(L/g), so the period is proportional to √L. Multiplying L by 4 multiplies T by √4 = 2. Neither the mass nor the small amplitude affects the period.',
-  },
-  {
-    id: 'phys1-u8-001',
-    unit: 'unit-8',
-    topicSlug: 'fluids-buoyancy',
-    difficulty: 'medium',
-    stem: 'A solid block floats at rest in fresh water (density 1000 kg/m³) with 60% of its volume below the surface. What is the density of the block?',
-    options: ['600 kg/m³', '400 kg/m³', '1000 kg/m³', '1600 kg/m³'],
-    correctIndex: 0,
-    explanation:
-      'For a floating object the buoyant force equals the weight: ρ_water(0.60V)g = ρ_block V g, so ρ_block = 0.60 × 1000 = 600 kg/m³. 400 kg/m³ uses the fraction above the surface.',
   },
 ]
