@@ -40,6 +40,12 @@ export const MCQS: MCQItem[] = [
     options: ['Na', 'K', 'Mg', 'Cl'],
     correctAnswer: 1,
     explanation: 'Atomic radius increases down a group, because valence electrons occupy a higher shell, and decreases across a period as nuclear charge grows. K is in period 4, below Na, so it is the largest. Na is the largest of the period-3 atoms listed, but its valence electron is in the third shell rather than the fourth.',
+    optionExplanations: [
+      'Na is the largest of the period-3 atoms listed, but its valence electron is in the third shell. K, directly below Na in group 1, has its valence electron in the fourth shell, so K is larger.',
+      'Atomic radius increases down a group because the valence electrons occupy a higher shell. K is in period 4, so its 4s valence electron lies farther from the nucleus than the valence electrons of any period-3 atom listed.',
+      'Mg is in period 3 to the right of Na, so its greater nuclear charge pulls its third-shell electrons in more tightly. It is smaller than Na and much smaller than K.',
+      'Cl is at the right end of period 3, where the nuclear charge is highest for the same shell, so it has the smallest radius of the four, not the largest.',
+    ],
   },
   {
     type: 'mcq',
@@ -48,6 +54,12 @@ export const MCQS: MCQItem[] = [
     options: ['Sodium (Na)', 'Magnesium (Mg)', 'Aluminum (Al)', 'Chlorine (Cl)'],
     correctAnswer: 1,
     explanation: 'The peaks correspond to 1s (126), 2s (9.07), 2p (5.31), and 3s (0.74). The 2p peak is three times as tall, so it holds 6 electrons, and the equal 1s, 2s, and 3s peaks hold 2 each: $1s^{2}2s^{2}2p^{6}3s^{2}$, which is Mg. Sodium would show a 3s peak only half as tall as the 1s and 2s peaks, since it has a single 3s electron.',
+    optionExplanations: [
+      'Sodium has a single 3s electron, so its 3s peak would be only half as tall as the 1s and 2s peaks. Here the 0.74 MJ/mol peak matches those peaks in height, so it represents two 3s electrons.',
+      'The peaks are 1s (126), 2s (9.07), 2p (5.31) and 3s (0.74). The 2p peak holds 6 electrons and the other three hold 2 each, giving $1s^2 2s^2 2p^6 3s^2$, the configuration of Mg.',
+      'Aluminum has a 3p electron, which would add a fifth peak at a binding energy below that of the 3s electrons. The spectrum has only four peaks, ending with two 3s electrons.',
+      'Chlorine has five 3p electrons and 17 electrons in all, so its spectrum would include a fifth peak for the 3p electrons. Four peaks totaling 12 electrons fit a much smaller atom.',
+    ],
   },
   {
     type: 'mcq',
@@ -61,6 +73,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Neutral Fe is $[\\text{Ar}]3d^6 4s^2$, and when a transition metal forms a cation the 4s electrons are removed first. Removing both 4s electrons and then one 3d electron gives $[\\text{Ar}]3d^5$. The configuration $[\\text{Ar}]4s^2 3d^3$ removes all three electrons from the 3d subshell, which is the reverse of the observed order.',
+    optionExplanations: [
+      'Neutral Fe is $[\\text{Ar}]3d^6 4s^2$. A transition-metal cation loses its 4s electrons first, so removing both 4s electrons and then one 3d electron leaves $[\\text{Ar}]3d^5$.',
+      '$[\\text{Ar}]3d^6 4s^0$ has only 24 electrons, the configuration of $\\text{Fe}^{2+}$. Forming $\\text{Fe}^{3+}$ removes a third electron, which must come from the 3d subshell, leaving five 3d electrons.',
+      'This keeps both 4s electrons and removes all three electrons from the 3d subshell, the reverse of the observed order: a transition metal loses its 4s electrons before any 3d electrons.',
+      'This has the correct total of 23 electrons, but it removes one 4s electron and two 3d electrons. Both 4s electrons are lost before any 3d electron when a transition-metal cation forms.',
+    ],
   },
   {
     type: 'mcq',
@@ -69,6 +87,12 @@ export const MCQS: MCQItem[] = [
     options: ['Na', 'Mg', 'Al', 'Si'],
     correctAnswer: 3,
     explanation: 'First ionization energy generally increases across a period as effective nuclear charge increases, so Si, the farthest right, is highest. Mg is higher than Al because Al loses a 3p electron that is shielded by the filled 3s subshell, but Mg is still below Si.',
+    optionExplanations: [
+      'Na has the lowest first ionization energy of the four: its single 3s electron feels the smallest effective nuclear charge in period 3 and is removed easily.',
+      'Mg is higher than Al, because Al loses a 3p electron shielded by the filled 3s subshell, but Mg is still below Si, whose greater nuclear charge holds its valence electrons more tightly.',
+      'Al loses a 3p electron that is shielded by the filled 3s subshell, so its first ionization energy is even lower than that of Mg and well below that of Si.',
+      'First ionization energy generally increases across a period as effective nuclear charge increases. Si is the farthest right of the four, so its valence electrons are held most tightly.',
+    ],
   },
   {
     type: 'mcq',
@@ -77,6 +101,12 @@ export const MCQS: MCQItem[] = [
     options: ['24.0 amu', '24.2 amu', '24.5 amu', '25.0 amu'],
     correctAnswer: 1,
     explanation: 'The average is weighted by abundance: $0.78(24)+0.22(25)=18.72+5.50=24.22$ amu. The value 24.5 is the simple average of the two masses, which ignores that mass 24 is far more abundant.',
+    optionExplanations: [
+      '24.0 amu would mean that nearly all the atoms have mass 24. With 22% of the atoms at mass 25, the weighted average must lie noticeably above 24.',
+      'The average is weighted by abundance: $0.78(24) + 0.22(25) = 18.72 + 5.50 = 24.22$ amu, which rounds to 24.2 amu.',
+      '24.5 amu is the simple average of the two masses, which ignores that mass 24 is far more abundant than mass 25 and should dominate the average.',
+      '25.0 amu is the mass of the less abundant isotope. The average must fall between 24 and 25 and closer to 24, since 78% of the atoms have mass 24.',
+    ],
   },
 
   /* ---- U2 Compound Structure & Properties (6) ---- */
@@ -87,6 +117,12 @@ export const MCQS: MCQItem[] = [
     options: ['tetrahedral', 'square planar', 'seesaw', 'trigonal bipyramidal'],
     correctAnswer: 2,
     explanation: 'S in $\\text{SF}_4$ has five electron domains (four bonds and one lone pair), giving a trigonal bipyramidal electron-domain geometry; the lone pair takes an equatorial position, so the molecular shape is seesaw. Trigonal bipyramidal describes the electron domains, not the arrangement of the atoms.',
+    optionExplanations: [
+      'Tetrahedral geometry needs four electron domains with no lone pairs. S in $\\text{SF}_4$ has four bonds plus one lone pair, five domains in all, so its shape is not tetrahedral.',
+      'Square planar geometry arises from six electron domains with two lone pairs, as in $\\text{XeF}_4$. S in $\\text{SF}_4$ has only five domains, one of them a lone pair.',
+      'S has four bonding pairs and one lone pair, five domains in a trigonal bipyramidal arrangement. The lone pair takes an equatorial position, so the four F atoms form a seesaw shape.',
+      'Trigonal bipyramidal describes the arrangement of the five electron domains, but molecular geometry describes only the atoms. One domain is a lone pair, so the atoms form a seesaw.',
+    ],
   },
   {
     type: 'mcq',
@@ -95,6 +131,12 @@ export const MCQS: MCQItem[] = [
     options: ['C–C single bond', 'C=C double bond', 'C≡C triple bond', 'C–H single bond'],
     correctAnswer: 2,
     explanation: 'Bond energy increases with bond order because more shared electron pairs hold the nuclei together more strongly. The C≡C triple bond (about 839 kJ/mol) is the strongest listed; the C–H bond (about 413 kJ/mol) is strong for a single bond but weaker than either multiple bond.',
+    optionExplanations: [
+      'A C–C single bond shares only one electron pair, so it has the lowest bond order of the carbon–carbon bonds listed and is the weakest of them.',
+      'A double bond is stronger than a single bond, but with two shared pairs it is still weaker than the triple bond, which shares three pairs between the same two atoms.',
+      'Bond energy increases with bond order because more shared electron pairs hold the nuclei together more strongly. The C≡C triple bond, about 839 kJ/mol, is the strongest bond listed.',
+      'The C–H bond (about 413 kJ/mol) is strong for a single bond, but it is weaker than either carbon–carbon multiple bond and far weaker than the triple bond.',
+    ],
   },
   {
     type: 'mcq',
@@ -109,6 +151,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Benzene is described by two equivalent resonance structures with alternating single and double bonds, and the real molecule is a blend of them: each C–C bond has a bond order of 1.5, so its length (140 pm) lies between those of a single bond (154 pm) and a double bond (134 pm). The molecule does not flip back and forth between the two structures, and six double bonds or six single bonds would give lengths near 134 pm or 154 pm rather than an intermediate value.',
+    optionExplanations: [
+      'The two equivalent resonance structures blend into one real structure in which every C–C bond has a bond order of 1.5, so its 140 pm length lies between the single-bond (154 pm) and double-bond (134 pm) lengths.',
+      'Resonance structures are not real forms that interconvert. The molecule does not flip between them; it has one structure in which all six C–C bonds are identical at every moment.',
+      'Six C–C double bonds would give each carbon five bonds, and double bonds would be near 134 pm. The observed 140 pm reflects a bond order of 1.5, not double bonds stretched by H–H repulsion.',
+      'Six single bonds would be near 154 pm. Benzene\'s flat hexagonal ring has 120° angles and is not strained; the shorter 140 pm length reflects the partial double-bond character from resonance.',
+    ],
   },
   {
     type: 'mcq',
@@ -117,6 +165,12 @@ export const MCQS: MCQItem[] = [
     options: ['$-1$', '$0$', '$+1$', '$+2$'],
     correctAnswer: 2,
     explanation: 'In each resonance structure N forms one double and two single bonds (4 bonding pairs) and has no lone pairs, so its formal charge is $5-0-4=+1$. A value of $-1$ is the overall charge of the ion, which is carried by the single-bonded oxygen atoms, not by N.',
+    optionExplanations: [
+      '−1 is the overall charge of the nitrate ion, and it is carried by the single-bonded oxygen atoms, not by the central nitrogen atom.',
+      'A formal charge of zero would require five electrons to be assigned to N. With four bonding pairs and no lone pairs, N is assigned only four electrons, so its formal charge is not zero.',
+      'In each resonance structure N has one double bond and two single bonds (four bonding pairs) and no lone pairs, so its formal charge is $5 - 0 - 4 = +1$.',
+      '+2 would mean only three electrons are assigned to N. Counting one electron from each of its four bonding pairs gives four, so the formal charge is +1, not +2.',
+    ],
   },
   {
     type: 'mcq',
@@ -125,6 +179,12 @@ export const MCQS: MCQItem[] = [
     options: ['NaF', 'NaCl', 'KCl', 'CaO'],
     correctAnswer: 2,
     explanation: 'Coulombic attraction, and so lattice energy, is proportional to $|q_+q_-|/r$. KCl pairs +1 and −1 ions with the largest ion separation of the choices, so it has the smallest lattice energy. CaO has the largest, because its 2+ and 2− charges outweigh any difference in ion size.',
+    optionExplanations: [
+      'NaF pairs +1 and −1 ions, but both ions are small, so the ion separation is short and the Coulombic attraction is larger than in either chloride.',
+      'NaCl has the same ion charges as KCl, but $\\text{Na}^+$ is smaller than $\\text{K}^+$, so the ions sit closer together and the lattice energy is larger.',
+      'Lattice energy is proportional to $|q_+q_-|/r$. KCl pairs +1 and −1 ions with the largest ion separation of the choices, so its Coulombic attraction and lattice energy are the smallest.',
+      'CaO has 2+ and 2− ions, so its charge product is four times that of the other compounds. It has the largest lattice energy of the four, not the smallest.',
+    ],
   },
   {
     type: 'mcq',
@@ -139,6 +199,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Atoms of similar size can take each other\'s places in a metallic lattice, forming a substitutional alloy. An interstitial alloy requires a much smaller atom, such as carbon in steel, to fit into the gaps between the larger metal atoms.',
+    optionExplanations: [
+      'Copper and zinc atoms have similar radii (128 pm and 134 pm), so zinc atoms can take the places of some copper atoms in the metallic lattice, forming a substitutional alloy.',
+      'An interstitial alloy needs a much smaller atom, such as carbon in steel, to fit into the gaps between metal atoms. Zinc atoms are slightly larger than copper atoms, so they cannot fit in those gaps.',
+      'Copper and zinc are both metals and do not form anions with each other. Melting them together gives a metallic solid held by delocalized electrons, not an ionic lattice.',
+      'Brass is held together by metallic bonding with delocalized electrons. A covalent network solid, such as diamond, has localized bonds between nonmetal atoms, which two metals do not form.',
+    ],
   },
 
   /* ---- U3 Intermolecular Forces & Properties (13) ---- */
@@ -149,6 +215,12 @@ export const MCQS: MCQItem[] = [
     options: ['$\\text{CH}_4$', '$\\text{NH}_3$', '$\\text{H}_2\\text{O}$', '$\\text{HF}$'],
     correctAnswer: 2,
     explanation: 'Water can form up to four hydrogen bonds per molecule (two donors and two acceptors), giving it the most extensive hydrogen-bonding network and the highest boiling point (100°C). HF forms stronger individual hydrogen bonds, but only about two per molecule, so it boils at about 20°C.',
+    optionExplanations: [
+      '$\\text{CH}_4$ is nonpolar and has only weak London dispersion forces, so it has by far the lowest boiling point of the four substances.',
+      '$\\text{NH}_3$ hydrogen bonds, but N is less electronegative than O and each molecule has only one lone pair, so its hydrogen-bonding network is weaker than that of water.',
+      'Each water molecule can form up to four hydrogen bonds (two as a donor and two as an acceptor), giving the most extensive hydrogen-bonding network and the highest boiling point, 100°C.',
+      'HF forms stronger individual hydrogen bonds, but only about two per molecule because it has a single H atom, so its overall attractions are weaker and it boils at about 20°C.',
+    ],
   },
   {
     type: 'mcq',
@@ -158,6 +230,12 @@ export const MCQS: MCQItem[] = [
     options: ['0.177 atm', '1.48 atm', '1.97 atm', '19.7 atm'],
     correctAnswer: 2,
     explanation: 'The container holds 0.80 mol of gas in all, and with $T = 300$ K, $P = \\frac{nRT}{V} = \\frac{(0.80)(0.0821)(300)}{10.0} = 1.97$ atm. Using 27 instead of the Kelvin temperature gives 0.177 atm, counting only the $\\text{N}_2$ gives 1.48 atm, and 19.7 atm divides by 1.00 L instead of 10.0 L.',
+    optionExplanations: [
+      '0.177 atm results from using 27 in place of the Kelvin temperature. The ideal gas law requires $T = 27 + 273 = 300$ K.',
+      '1.48 atm counts only the 0.60 mol of $\\text{N}_2$. The total pressure must include all 0.80 mol of gas in the container, including the $\\text{O}_2$.',
+      'The container holds 0.80 mol of gas at 300 K, so $P = \\frac{nRT}{V} = \\frac{(0.80)(0.0821)(300)}{10.0} = 1.97$ atm.',
+      '19.7 atm is ten times too large because it divides by 1.00 L instead of by the 10.0 L volume of the container.',
+    ],
   },
   {
     type: 'mcq',
@@ -167,6 +245,12 @@ export const MCQS: MCQItem[] = [
     options: ['0.49 atm', '0.66 atm', '0.99 atm', '1.48 atm'],
     correctAnswer: 0,
     explanation: 'The mole fraction of $\\text{O}_2$ is $\\frac{0.20}{0.80} = 0.25$, so $P_{\\text{O}_2} = 0.25(1.97\\text{ atm}) = 0.49$ atm. Splitting the pressure equally between the two gases (0.99 atm) ignores that partial pressure is proportional to the number of moles, 0.66 atm divides the moles of $\\text{O}_2$ by the moles of $\\text{N}_2$ instead of the total, and 1.48 atm is the partial pressure of $\\text{N}_2$.',
+    optionExplanations: [
+      'The mole fraction of $\\text{O}_2$ is $\\frac{0.20}{0.80} = 0.25$, so $P_{\\text{O}_2} = 0.25(1.97\\text{ atm}) = 0.49$ atm.',
+      '0.66 atm divides the moles of $\\text{O}_2$ by the moles of $\\text{N}_2$ (0.20/0.60) instead of by the total moles, 0.80, when forming the mole fraction.',
+      '0.99 atm splits the total pressure equally between the two gases, but partial pressure is proportional to the number of moles, and the container holds three times as much $\\text{N}_2$ as $\\text{O}_2$.',
+      '1.48 atm is the partial pressure of $\\text{N}_2$, which makes up 0.60 of the 0.80 mol of gas, not the partial pressure of $\\text{O}_2$.',
+    ],
   },
   {
     type: 'mcq',
@@ -181,6 +265,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Both gases are at the same temperature, and average kinetic energy depends only on temperature, so the two match. Since $KE=\\frac{1}{2}mv^2$, the lighter $\\text{N}_2$ molecules must move faster on average. Equal temperature means equal kinetic energy, not equal speed, and neither gas has the greater kinetic energy.',
+    optionExplanations: [
+      'Both gases are at the same temperature, and average kinetic energy depends only on temperature, so the two match. Since $KE = \\frac{1}{2}mv^2$, the lighter $\\text{N}_2$ molecules move faster on average.',
+      'Average kinetic energy depends only on temperature, so the $\\text{O}_2$ molecules cannot have more of it. They do move more slowly, but only because they are heavier at the same kinetic energy.',
+      'The $\\text{N}_2$ molecules are faster, but their average kinetic energy equals that of the $\\text{O}_2$ molecules, because both gases are at the same temperature.',
+      'Equal temperature means equal average kinetic energy, not equal speed. With equal kinetic energy, the lighter $\\text{N}_2$ molecules must have the higher average speed.',
+    ],
   },
   {
     type: 'mcq',
@@ -189,6 +279,12 @@ export const MCQS: MCQItem[] = [
     options: ['0.020 M', '0.50 M', '0.13 M', '2.0 M'],
     correctAnswer: 1,
     explanation: 'Moles of NaOH are $5.0/40=0.125$ mol, and molarity is $0.125\\text{ mol}/0.250\\text{ L}=0.50$ M. The value 0.020 M divides by 250 instead of converting the volume to liters.',
+    optionExplanations: [
+      '0.020 M is 5.0 divided by 250, which skips converting grams to moles and milliliters to liters. Molarity is the 0.125 mol of NaOH divided by the 0.250 L of solution.',
+      'Moles of NaOH are $5.0/40 = 0.125$ mol, and the volume is 0.250 L, so the molarity is $0.125\\text{ mol}/0.250\\text{ L} = 0.50$ M.',
+      '0.13 M is the number of moles, 0.125 mol, rounded. It has not been divided by the 0.250 L volume of the solution.',
+      '2.0 M inverts the ratio, dividing the volume by the moles (0.250/0.125). Molarity is moles of solute per liter of solution, not liters per mole.',
+    ],
   },
   {
     type: 'mcq',
@@ -202,6 +298,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation: 'A large $R_f$ means the dye spends most of its time dissolved in the mobile phase, because its attractions to the solvent outcompete its attractions to the paper. A dye more attracted to the stationary phase would stay near the starting line.',
+    optionExplanations: [
+      'A dye attracted more strongly to the stationary phase would spend more time bound to the paper and stay near the starting line, giving a small $R_f$ rather than traveling near the solvent front.',
+      'A dye that travels nearly as far as the solvent front has a large $R_f$: its attractions to the solvent outcompete its attractions to the paper, so it spends most of its time in the mobile phase.',
+      'Separation in paper chromatography depends on the relative attractions of a component to the mobile and stationary phases, not on molar mass, so a large molar mass does not explain a large $R_f$.',
+      'A dye that is insoluble in the mobile phase would not be carried along by it and would stay near the starting line. Moving with the solvent front requires the dye to dissolve well in the solvent.',
+    ],
   },
   {
     type: 'mcq',
@@ -216,6 +318,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Both compounds are nonpolar isomers with the same molar mass, so the difference comes from shape: the long n-pentane molecules contact each other over more surface area, giving stronger dispersion forces. Neither compound has H bonded to N, O, or F, so hydrogen bonding is not possible.',
+    optionExplanations: [
+      'Both compounds are nonpolar isomers with the same molar mass, so the difference comes from shape: long n-pentane molecules contact each other over more surface area, giving stronger London dispersion forces and a higher boiling point.',
+      'Neither compound has H bonded to N, O or F, so neither can hydrogen bond. Both are held together only by London dispersion forces, which differ because of molecular shape.',
+      'The two compounds are isomers with the same formula, $\\text{C}_5\\text{H}_{12}$, so they have the same molar mass and the same number of electrons; molar mass cannot explain the difference.',
+      'Boiling separates molecules from one another without breaking covalent C–C bonds. The boiling point reflects intermolecular forces, not the strength of the bonds within each molecule.',
+    ],
   },
   {
     type: 'mcq',
@@ -225,6 +333,12 @@ export const MCQS: MCQItem[] = [
     options: ['0.020 M', '0.025 M', '0.030 M', '0.050 M'],
     correctAnswer: 1,
     explanation: 'The data follow Beer\'s law, $A=\\varepsilon bc$, with absorbance rising 0.20 for every 0.010 M, so $A=0.50$ corresponds to 0.025 M. The value 0.050 M treats the absorbance as if it were ten times the concentration, a relationship the standards do not support.',
+    optionExplanations: [
+      '0.020 M corresponds to an absorbance of 0.40 in the table. An absorbance of 0.50 is higher, so the unknown concentration must be greater than 0.020 M.',
+      'Absorbance rises 0.20 for every 0.010 M, consistent with $A = \\varepsilon bc$, so an absorbance of 0.50 corresponds to 0.025 M, halfway between the 0.020 M and 0.030 M standards.',
+      '0.030 M corresponds to an absorbance of 0.60. The unknown absorbance of 0.50 lies between the 0.020 M and 0.030 M standards, so its concentration is lower than 0.030 M.',
+      '0.050 M treats the absorbance as ten times the concentration, but the standards show absorbance is twenty times the concentration, so 0.050 M would give an absorbance of 1.00.',
+    ],
   },
   {
     type: 'mcq',
@@ -239,6 +353,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'The instrument attributes all absorbed light to the sample, so the smudge raises the measured absorbance, and the calibration curve converts that higher absorbance into a higher concentration. The number of dye particles is indeed unchanged, but the calculation uses the measured absorbance, not the true particle count.',
+    optionExplanations: [
+      'The instrument attributes all absorbed light to the sample, so the smudge raises the measured absorbance, and the calibration curve converts that higher absorbance into a concentration that is too high.',
+      'The smudge does not reduce how many dye particles absorb; the detector simply receives less light. The instrument reads that lost light as extra absorbance, so the calculated concentration is too high, not too low.',
+      'Molar absorptivity is constant, but the calculation uses the measured absorbance, which the smudge raises. A larger measured absorbance gives a larger calculated concentration.',
+      'The number of dye particles is indeed unchanged, but the calculation uses the measured absorbance, not the true particle count, and the smudge raises that measured absorbance.',
+    ],
   },
   {
     type: 'mcq',
@@ -247,6 +367,12 @@ export const MCQS: MCQItem[] = [
     options: ['$3.98 \\times 10^{-19}$ J', '$3.98 \\times 10^{-28}$ J', '$1.99 \\times 10^{-25}$ J', '$6.00 \\times 10^{14}$ J'],
     correctAnswer: 0,
     explanation: 'Using $E=\\frac{hc}{\\lambda}$ with $\\lambda=500.\\times10^{-9}$ m gives $E=\\frac{(6.626\\times10^{-34})(3.00\\times10^{8})}{5.00\\times10^{-7}}=3.98\\times10^{-19}$ J. The value $3.98\\times10^{-28}$ J results from leaving the wavelength in nanometers instead of converting to meters.',
+    optionExplanations: [
+      'Using $E = \\frac{hc}{\\lambda}$ with $\\lambda = 5.00 \\times 10^{-7}$ m gives $E = \\frac{(6.626 \\times 10^{-34})(3.00 \\times 10^{8})}{5.00 \\times 10^{-7}} = 3.98 \\times 10^{-19}$ J.',
+      '$3.98 \\times 10^{-28}$ J results from leaving the wavelength in nanometers (500.) instead of converting it to meters ($5.00 \\times 10^{-7}$ m) before dividing.',
+      '$1.99 \\times 10^{-25}$ J is the product $hc$, the numerator of $E = \\frac{hc}{\\lambda}$, without dividing by the wavelength of the light.',
+      '$6.00 \\times 10^{14}$ is the frequency of the light in $\\text{s}^{-1}$, found from $c/\\lambda$, not an energy; multiplying it by Planck\'s constant gives the photon energy.',
+    ],
   },
   {
     type: 'mcq',
@@ -260,6 +386,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'The ideal gas model ignores particle volume and intermolecular attractions. At high pressure the particles are close together, so their volume is a significant fraction of the container, and at low temperature they move slowly enough for attractions to matter. At low pressure and high temperature particles are far apart and fast, which is where gases behave most ideally.',
+    optionExplanations: [
+      'At high pressure the particles are close together, so their volume is a significant fraction of the container, and at low temperature they move slowly enough for attractions to matter. Both effects violate ideal-gas assumptions.',
+      'Low pressure and high temperature are where gases behave most ideally: the particles are far apart, so their volume is negligible, and they move too fast for attractions to have much effect.',
+      'Low temperature does make attractions more important, but at low pressure the particles are far apart, so their volume is negligible and they rarely interact; deviation is greatest when the pressure is also high.',
+      'High pressure makes particle volume significant, but high temperature makes attractions less important. Frequent collisions with the walls are part of ideal behavior, not a cause of deviation.',
+    ],
   },
   {
     type: 'mcq',
@@ -269,6 +401,12 @@ export const MCQS: MCQItem[] = [
     options: ['Ionic', 'Metallic', 'Molecular', 'Covalent network'],
     correctAnswer: 0,
     explanation: 'Ions locked in a lattice cannot carry current, but they become mobile when the solid melts or dissolves; a shifted lattice brings like charges together, so the solid shatters. A covalent network solid also has a very high melting point, but it does not conduct when melted and generally does not dissolve in water.',
+    optionExplanations: [
+      'Ions locked in a lattice cannot carry current, but they become mobile when the solid melts or dissolves, and a shifted lattice brings like charges together, so the solid shatters.',
+      'A metallic solid conducts electricity as a solid because of its delocalized electrons, and it is malleable rather than brittle. This solid does not conduct as a solid and shatters when struck.',
+      'Molecular solids are held by intermolecular forces and usually melt far below 801°C, and they do not conduct when melted, because they contain no mobile ions.',
+      'A covalent network solid also has a very high melting point, but it does not conduct when melted and generally does not dissolve in water.',
+    ],
   },
   {
     type: 'mcq',
@@ -283,6 +421,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Each water molecule can form more hydrogen bonds than an ethanol molecule, so ethanol\'s overall intermolecular attractions are weaker, its vapor pressure is higher, and its vapor is enriched in the first distillate. Ethanol does hydrogen bond through its O–H group, just less extensively than water.',
+    optionExplanations: [
+      'Each water molecule can form more hydrogen bonds than an ethanol molecule, so ethanol\'s overall intermolecular attractions are weaker, its vapor pressure is higher, and its vapor enriches the first distillate.',
+      'Ethanol does hydrogen bond through its O–H group, just less extensively than water. The first distillate is also only enriched in ethanol, so water molecules evaporate along with it.',
+      'Heavier molecules move more slowly at the same temperature, not faster. Ethanol vaporizes more readily because its overall intermolecular attractions are weaker than those in water.',
+      'Boiling and distillation separate whole molecules without breaking O–H covalent bonds. Volatility depends on intermolecular attractions, not on the strength of bonds within the molecule.',
+    ],
   },
 
   /* ---- U4 Chemical Reactions (6) ---- */
@@ -293,6 +437,12 @@ export const MCQS: MCQItem[] = [
     options: ['39.2 g', '78.4 g', '52.2 g', '118 g'],
     correctAnswer: 1,
     explanation: 'Moles of $\\text{KClO}_3$ are $200./122.5=1.633$, which give $\\frac{3}{2}(1.633)=2.449$ mol $\\text{O}_2$, or $2.449\\times32.0=78.4$ g. Using a 1:1 mole ratio instead of 3:2 gives 52.2 g.',
+    optionExplanations: [
+      '39.2 g uses 16.0 g/mol, the molar mass of an O atom, in place of 32.0 g/mol for $\\text{O}_2$. The 2.449 mol of $\\text{O}_2$ formed has a mass of 78.4 g.',
+      'Moles of $\\text{KClO}_3$ are $200./122.5 = 1.633$, which give $\\frac{3}{2}(1.633) = 2.449$ mol $\\text{O}_2$, or $2.449 \\times 32.0 = 78.4$ g.',
+      '52.2 g uses a 1 : 1 mole ratio, $1.633 \\times 32.0$. The balanced equation gives 3 mol of $\\text{O}_2$ for every 2 mol of $\\text{KClO}_3$ that decomposes.',
+      '118 g is more oxygen than the sample contains: 200. g of $\\text{KClO}_3$ holds only $200. \\times \\frac{48.0}{122.5} = 78.4$ g of oxygen, and all of it ends up as $\\text{O}_2$.',
+    ],
   },
   {
     type: 'mcq',
@@ -301,6 +451,12 @@ export const MCQS: MCQItem[] = [
     options: ['$\\text{Zn}(s)$', '$\\text{H}^+(aq)$', '$\\text{Cl}^-(aq)$', '$\\text{H}_2(g)$'],
     correctAnswer: 0,
     explanation: 'Zn goes from oxidation state 0 to +2, losing two electrons, so it is oxidized. $\\text{H}^+$ goes from +1 to 0, gaining electrons, so it is the species reduced, not the species oxidized.',
+    optionExplanations: [
+      'Zn goes from oxidation state 0 to +2 in $\\text{ZnCl}_2$, losing two electrons, so it is the species oxidized.',
+      '$\\text{H}^+$ goes from +1 to 0 as it forms $\\text{H}_2$, gaining electrons, so it is the species reduced, not the species oxidized.',
+      '$\\text{Cl}^-$ stays at −1 on both sides of the equation. It is a spectator ion and is neither oxidized nor reduced.',
+      '$\\text{H}_2$ is the product of the reduction of $\\text{H}^+$. A product formed by gaining electrons is not the species that is oxidized.',
+    ],
   },
   {
     type: 'mcq',
@@ -314,6 +470,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation: 'All sodium, potassium, ammonium, and nitrate salts are soluble, so in the other pairs every possible product stays dissolved. Only lead(II) nitrate and potassium iodide can form a product outside those groups, $\\text{PbI}_2$, which precipitates as a yellow solid.',
+    optionExplanations: [
+      'All sodium, potassium and nitrate salts are soluble, so mixing NaCl and $\\text{KNO}_3$ can form only soluble products, KCl and $\\text{NaNO}_3$, and no precipitate appears.',
+      'The possible product $\\text{PbI}_2$ falls outside the always-soluble sodium, potassium, ammonium and nitrate groups, and it precipitates as a yellow solid.',
+      'Every possible product here, $\\text{NH}_4\\text{NO}_3$ or $\\text{K}_2\\text{SO}_4$, is an ammonium or potassium salt, and all such salts are soluble, so no precipitate forms.',
+      'The possible products, NaCl and $\\text{NH}_4\\text{NO}_3$, are sodium and ammonium salts, which are always soluble, so all of the ions stay dissolved.',
+    ],
   },
   {
     type: 'mcq',
@@ -322,6 +484,12 @@ export const MCQS: MCQItem[] = [
     options: ['acidic', 'basic', 'neutral', 'a buffer'],
     correctAnswer: 2,
     explanation: 'Equal moles of a strong acid and a strong base react completely, leaving only water and NaCl, whose ions do not react with water, so the solution is neutral. It is not a buffer, because no weak acid or weak base and its conjugate remain.',
+    optionExplanations: [
+      'An acidic solution would need leftover $\\text{H}_3\\text{O}^+$, but equal moles of HCl and NaOH react completely, and the remaining $\\text{Na}^+$ and $\\text{Cl}^-$ ions do not react with water.',
+      'A basic solution would need excess $\\text{OH}^-$ or a basic anion, but the NaOH is fully consumed and $\\text{Cl}^-$, the conjugate base of a strong acid, does not react with water.',
+      'Equal moles of a strong acid and a strong base react completely, leaving only water and NaCl, whose ions do not react with water, so the solution is neutral.',
+      'A buffer needs a weak acid and its conjugate base, or a weak base and its conjugate acid. Only the ions of a strong acid and a strong base remain here, so no buffer forms.',
+    ],
   },
   {
     type: 'mcq',
@@ -335,6 +503,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'AgCl is the insoluble product, and $\\text{Na}^+$ and $\\text{NO}_3^-$ are spectator ions, so the net ionic equation shows only $\\text{Ag}^+$ and $\\text{Cl}^-$ forming the solid. The equation with full formulas for every compound is the molecular equation, which still includes the spectator ions.',
+    optionExplanations: [
+      'AgCl is the insoluble product, and $\\text{Na}^+$ and $\\text{NO}_3^-$ are spectator ions, so the net ionic equation shows only $\\text{Ag}^+$ and $\\text{Cl}^-$ combining to form the solid.',
+      'Silver nitrate is soluble, so $\\text{Ag}^+$ and $\\text{NO}_3^-$ do not combine into a solid. The white precipitate is AgCl, and nitrate is a spectator ion.',
+      'Sodium nitrate is soluble, so $\\text{Na}^+$ and $\\text{NO}_3^-$ remain dissolved as spectator ions and do not form a precipitate.',
+      'This is the molecular equation, with full formulas for every compound. A net ionic equation writes soluble strong electrolytes as ions and leaves out the spectator ions.',
+    ],
   },
   {
     type: 'mcq',
@@ -344,6 +518,12 @@ export const MCQS: MCQItem[] = [
     options: ['0.0800 M', '0.125 M', '0.100 M', '0.044 M'],
     correctAnswer: 0,
     explanation: 'Moles of NaOH are $0.100\\times0.02000=2.00\\times10^{-3}$ mol, which equal the moles of HCl in the 1:1 reaction, so $[\\text{HCl}]=\\frac{2.00\\times10^{-3}}{0.02500}=0.0800$ M. Dividing by the total volume of 45.00 mL instead of the 25.00 mL acid sample gives 0.044 M, which underestimates the concentration.',
+    optionExplanations: [
+      'Moles of NaOH are $0.100 \\times 0.02000 = 2.00 \\times 10^{-3}$, which equal the moles of HCl in the 1 : 1 reaction, so $[\\text{HCl}] = \\frac{2.00 \\times 10^{-3}}{0.02500} = 0.0800$ M.',
+      '0.125 M inverts the volume ratio, $0.100 \\times \\frac{25.00}{20.00}$. A smaller volume of base than of acid was needed, so the acid must be less concentrated than the 0.100 M base.',
+      '0.100 M assumes the acid matches the base concentration, which would require equal volumes. Only 20.00 mL of base neutralized the 25.00 mL of acid, so the acid is more dilute.',
+      '0.044 M divides the moles of HCl by the total volume of 45.00 mL instead of the 25.00 mL acid sample, which underestimates the original concentration.',
+    ],
   },
 
   /* ---- U5 Kinetics (5) ---- */
@@ -354,6 +534,12 @@ export const MCQS: MCQItem[] = [
     options: ['zero order in A', 'first order in A', 'second order in A', 'third order in A'],
     correctAnswer: 1,
     explanation: 'With rate $=k[A]^n$, doubling [A] multiplies the rate by $2^n$, and $2^n=2$ gives $n=1$. A second-order reaction would quadruple its rate when [A] doubles.',
+    optionExplanations: [
+      'In a zero-order reaction the rate does not depend on [A], so doubling [A] would leave the rate unchanged rather than doubling it.',
+      'With rate $= k[A]^n$, doubling [A] multiplies the rate by $2^n$. A doubled rate means $2^n = 2$, so $n = 1$ and the reaction is first order in A.',
+      'A second-order reaction would quadruple its rate when [A] doubles, since $2^2 = 4$, but the observed factor is only 2.',
+      'A third-order reaction would multiply the rate by $2^3 = 8$ when [A] doubles, far more than the observed doubling of the rate.',
+    ],
   },
   {
     type: 'mcq',
@@ -362,6 +548,12 @@ export const MCQS: MCQItem[] = [
     options: ['15 s', '30 s', '43 s', '60 s'],
     correctAnswer: 1,
     explanation: 'For a first-order reaction $t_{1/2}=\\frac{\\ln 2}{k}=\\frac{0.693}{0.0231\\text{ s}^{-1}}=30$ s. The value 43 s is $\\frac{1}{k}$, which omits the $\\ln 2$ factor.',
+    optionExplanations: [
+      '15 s is half the actual half-life. For a first-order reaction $t_{1/2} = \\frac{\\ln 2}{k} = \\frac{0.693}{0.0231\\text{ s}^{-1}} = 30$ s, with no extra factor of one-half.',
+      'For a first-order reaction $t_{1/2} = \\frac{\\ln 2}{k} = \\frac{0.693}{0.0231\\text{ s}^{-1}} = 30$ s, independent of the starting concentration.',
+      '43 s is $\\frac{1}{k}$, which omits the $\\ln 2$ factor from the first-order half-life expression $t_{1/2} = \\frac{\\ln 2}{k}$.',
+      '60 s is twice the half-life, the time for the reactant to fall to one-quarter of its starting amount rather than to one-half.',
+    ],
   },
   {
     type: 'mcq',
@@ -375,6 +567,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation: 'At higher temperature the Maxwell–Boltzmann distribution shifts toward higher energies, so a larger fraction of collisions have enough energy to overcome $E_a$. Collision frequency does rise, but only slightly; it cannot account for the large rate increase on its own.',
+    optionExplanations: [
+      'Activation energy is a property of the reaction pathway and does not decrease as temperature rises; only a catalyst lowers it, by providing a different mechanism.',
+      'At higher temperature the Maxwell–Boltzmann distribution shifts toward higher energies, so a larger fraction of collisions have energy equal to or greater than $E_a$, and the rate rises sharply.',
+      'The equilibrium constant describes the extent of reaction, not its rate, and $K$ can rise or fall with temperature depending on the sign of ΔH, so it cannot explain faster rates.',
+      'Collision frequency does rise with temperature, but only slightly; it cannot account for the large rate increase on its own. The main effect is the larger fraction of energetic collisions.',
+    ],
   },
   {
     type: 'mcq',
@@ -383,6 +581,12 @@ export const MCQS: MCQItem[] = [
     options: ['rate = $k[A]$', 'rate = $k[A][B]$', 'rate = $k[A][B]^2$', 'rate = $k[B]^2$'],
     correctAnswer: 1,
     explanation: 'The slow first step is rate-determining, and for an elementary step the rate law follows from its molecularity: rate $=k[A][B]$. The rate law $k[A][B]^2$ comes from the overall equation, which counts the B used in the fast step after the bottleneck.',
+    optionExplanations: [
+      'The slow step involves one A and one B, so its rate depends on both concentrations. Dropping [B] ignores the role of B in the rate-determining step.',
+      'The slow first step is rate-determining, and for an elementary step the rate law follows from its molecularity: one A and one B collide, so rate $= k[A][B]$.',
+      '$k[A][B]^2$ follows from the overall equation, which counts the B used in the fast second step after the rate-determining step.',
+      '$k[B]^2$ would require a slow step in which two B molecules collide. The slow step here is a collision of one A with one B.',
+    ],
   },
   {
     type: 'mcq',
@@ -396,6 +600,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation: 'A catalyst supplies an alternative mechanism with a lower activation energy, lowering the barrier for the forward and reverse reactions alike. Because both directions speed up equally, the equilibrium position does not change.',
+    optionExplanations: [
+      'A catalyst speeds up the forward and reverse reactions equally, so it does not shift the equilibrium position; it only lets the system reach equilibrium sooner.',
+      'Average kinetic energy depends only on temperature, which a catalyst does not change. A catalyst works by lowering the energy barrier, not by giving the particles more energy.',
+      'A catalyst supplies an alternative mechanism with a lower activation energy, so a larger fraction of collisions can react. It lowers the barrier for the forward and reverse reactions alike.',
+      'A catalyst does not make the reactant particles collide more often in general. It provides a lower-energy pathway, so more of the collisions that do occur lead to reaction.',
+    ],
   },
 
   /* ---- U6 Thermodynamics (5) ---- */
@@ -406,6 +616,12 @@ export const MCQS: MCQItem[] = [
     options: ['$+400$ kJ', '$-400$ kJ', '$+200$ kJ', '$-4.00 \\times 10^5$ kJ'],
     correctAnswer: 1,
     explanation: 'Heat released by the system makes the process exothermic, so $\\Delta H=-400$ kJ. The positive value describes the surroundings, which gain the 400 kJ, rather than the reaction system, and $-4.00\\times10^5$ kJ converts kilojoules to joules but keeps the kJ label.',
+    optionExplanations: [
+      '+400 kJ describes the surroundings, which gain the heat, rather than the reaction system. A system that releases heat is exothermic and has a negative ΔH.',
+      'Heat released by the system at constant pressure makes the process exothermic, so $\\Delta H = -400$ kJ.',
+      '+200 kJ has both the wrong sign and the wrong magnitude. Nothing in the problem halves the 400 kJ, and a reaction that releases heat has a negative ΔH.',
+      '$-4.00 \\times 10^5$ kJ converts kilojoules to joules but keeps the kJ label. The value $-4.00 \\times 10^5$ J equals −400 kJ, the correct ΔH.',
+    ],
   },
   {
     type: 'mcq',
@@ -414,6 +630,12 @@ export const MCQS: MCQItem[] = [
     options: ['10.5 kJ', '20.9 kJ', '41.8 kJ', '83.6 kJ'],
     correctAnswer: 1,
     explanation: 'Using $q=mc\\Delta T=(200.)(4.18)(25)=20{,}900$ J, or 20.9 kJ. The value 41.8 kJ uses the final temperature of 50°C in place of the temperature change of 25°C.',
+    optionExplanations: [
+      '10.5 kJ is half the correct value, as if only 100 g of water were heated. The full calculation, $q = (200.)(4.18)(25) = 20{,}900$ J, gives 20.9 kJ.',
+      'Using $q = mc\\Delta T = (200.\\text{ g})(4.18\\text{ J/(g·°C)})(25\\text{°C}) = 20{,}900$ J, the heat absorbed is 20.9 kJ.',
+      '41.8 kJ uses the final temperature of 50°C in place of the temperature change of 25°C in $q = mc\\Delta T$.',
+      '83.6 kJ would require a temperature change of 100°C for 200. g of water. The water warms by only 25°C, so $q = (200.)(4.18)(25) = 20.9$ kJ.',
+    ],
   },
   {
     type: 'mcq',
@@ -422,6 +644,12 @@ export const MCQS: MCQItem[] = [
     options: ['$-160$ kJ', '$-40$ kJ', '$+5.95 \\times 10^4$ kJ', '$+160$ kJ'],
     correctAnswer: 1,
     explanation: 'Converting $\\Delta S$ to kJ/K, $\\Delta G=\\Delta H-T\\Delta S=-100-(298)(-0.200)=-100+59.6=-40$ kJ. Getting $-160$ kJ comes from adding $T\\Delta S$ instead of subtracting it, and $+5.95\\times10^4$ kJ comes from leaving $\\Delta S$ in J/K.',
+    optionExplanations: [
+      '−160 kJ comes from adding $T\\Delta S$ instead of subtracting it. In $\\Delta G = \\Delta H - T\\Delta S = -100 - (298)(-0.200)$, subtracting a negative term raises ΔG to −40 kJ.',
+      'Converting ΔS to −0.200 kJ/K, $\\Delta G = \\Delta H - T\\Delta S = -100 - (298)(-0.200) = -100 + 59.6 = -40$ kJ.',
+      '$+5.95 \\times 10^4$ kJ comes from leaving ΔS in J/K while ΔH is in kJ. The units must match, so ΔS must be converted to −0.200 kJ/K first.',
+      '+160 kJ would need both terms to be positive. With ΔH = −100 kJ and $-T\\Delta S = +59.6$ kJ, the sum is negative, about −40 kJ.',
+    ],
   },
   {
     type: 'mcq',
@@ -435,6 +663,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$\\Delta H$ depends only on the initial reactants and final products, and any sequence of steps connecting them gives the same total. If $\\Delta H$ depended on the intermediate steps, adding the steps of a different path could not give the overall value.',
+    optionExplanations: [
+      'Enthalpy is a state function: ΔH depends only on the initial reactants and the final products, so any sequence of steps connecting them gives the same total.',
+      'If ΔH depended on the intermediate steps, adding the steps of a different path could not give the overall value. Hess\'s law works precisely because the path does not matter.',
+      'Activation energy is a kinetic quantity that determines the rate. It is unrelated to the size of ΔH, which compares only the energies of reactants and products.',
+      'Different reactions have different enthalpy changes, even at standard conditions. Hess\'s law adds those different values rather than assuming they are all equal.',
+    ],
   },
   {
     type: 'mcq',
@@ -443,6 +677,12 @@ export const MCQS: MCQItem[] = [
     options: ['strongly positive', 'slightly positive', 'strongly negative', 'close to zero'],
     correctAnswer: 2,
     explanation: 'Three moles of gas become two moles of liquid, so the particles become far more constrained and the entropy decreases sharply. A positive value would require an increase in moles of gas or a change toward a less ordered phase.',
+    optionExplanations: [
+      'A strongly positive ΔS would require an increase in moles of gas or a change toward a less ordered phase. Here gas molecules become liquid, a large decrease in entropy.',
+      'Any positive value is ruled out: three moles of gas become two moles of liquid, so the particles lose freedom of motion and the entropy decreases.',
+      'Three moles of gas become two moles of liquid, so the particles become far more constrained in position and motion, and the entropy decreases sharply.',
+      'ΔS is close to zero only when the moles of gas and the phases barely change. Converting all of the gas into liquid water causes a large entropy decrease.',
+    ],
   },
 
   /* ---- U7 Equilibrium (6) ---- */
@@ -453,6 +693,12 @@ export const MCQS: MCQItem[] = [
     options: ['0.25 M', '1.0 M', '4 M', '16 M'],
     correctAnswer: 2,
     explanation: 'Since $K=\\frac{[C]}{[A][B]}$, $[C]=K[A][B]=4(1)(1)=4$ M. The value 0.25 M comes from inverting the expression and putting the product in the denominator.',
+    optionExplanations: [
+      '0.25 M comes from inverting the expression and putting the product in the denominator. Since $K = \\frac{[C]}{[A][B]}$, [C] equals $K[A][B]$.',
+      '1.0 M would correspond to $K = 1$. With $K = 4$ and $[A] = [B] = 1$ M, [C] must be four times the product of the reactant concentrations.',
+      'Since $K = \\frac{[C]}{[A][B]}$, $[C] = K[A][B] = 4(1)(1) = 4$ M.',
+      '16 M multiplies by $K$ twice, or squares it. The expression $[C] = K[A][B] = 4(1)(1)$ gives only 4 M.',
+    ],
   },
   {
     type: 'mcq',
@@ -466,6 +712,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation: 'The forward reaction is exothermic, so heat acts as a product; raising the temperature favors the endothermic reverse reaction and lowers $K$, shifting the mixture left. Temperature is the one stress that changes the value of $K$ itself.',
+    optionExplanations: [
+      'This reverses the effect. The forward reaction is exothermic, so heat acts as a product, and adding heat favors the endothermic reverse reaction, which consumes $\\text{NH}_3$.',
+      'With heat acting as a product of the exothermic forward reaction, raising the temperature favors the endothermic reverse reaction and lowers $K$, so the mixture shifts left and less $\\text{NH}_3$ remains.',
+      'Temperature is the one stress that changes the value of $K$ itself. For an exothermic reaction, raising the temperature lowers $K$, so the mixture must shift.',
+      'Temperature does change the rates, but it also changes $K$. Because the forward reaction is exothermic, $K$ falls as the temperature rises, and the equilibrium shifts left.',
+    ],
   },
   {
     type: 'mcq',
@@ -479,6 +731,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation: 'Decreasing the volume raises the pressure, and the system responds by shifting toward the side with fewer moles of gas: 1 mole on the left versus 2 on the right, so it shifts left. $K$ depends only on temperature, so it is unchanged.',
+    optionExplanations: [
+      'Decreasing the volume favors the side with fewer moles of gas. The right side has 2 mol of gas and the left only 1, so the shift is to the left, not the right.',
+      'Decreasing the volume raises the pressure, and the system shifts toward the side with fewer moles of gas: 1 mol on the left versus 2 on the right, so it shifts left.',
+      'Compression has no effect only when both sides have equal moles of gas. Here they differ, 1 versus 2, so Q becomes greater than K and the mixture shifts left.',
+      '$K$ depends only on temperature, so compressing the mixture at constant temperature leaves it unchanged. The system responds by shifting, not by changing $K$.',
+    ],
   },
   {
     type: 'mcq',
@@ -492,6 +750,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Because $K\\ll1$, the product concentrations in the equilibrium expression are much smaller than the reactant concentrations, so reactants are strongly favored. Roughly equal amounts would correspond to $K$ near 1.',
+    optionExplanations: [
+      'Because $K \\ll 1$, the product concentrations in the equilibrium expression are much smaller than the reactant concentrations, so reactants are strongly favored.',
+      'Products are strongly favored only when $K \\gg 1$. A value of $1 \\times 10^{-5}$ is far less than 1, so the equilibrium lies on the reactant side.',
+      'Roughly equal amounts of reactants and products correspond to $K$ near 1, not to a value as small as $1 \\times 10^{-5}$.',
+      'A reaction that goes essentially to completion has a very large $K$. A $K$ of $1 \\times 10^{-5}$ means that only a small amount of product forms.',
+    ],
   },
   {
     type: 'mcq',
@@ -500,6 +764,12 @@ export const MCQS: MCQItem[] = [
     options: ['$1.8 \\times 10^{-10}$ M', '$1.3 \\times 10^{-5}$ M', '$9.0 \\times 10^{-11}$ M', '$6.7 \\times 10^{-6}$ M'],
     correctAnswer: 1,
     explanation: 'Each mole of AgCl that dissolves gives $s$ mol of each ion, so $K_{sp}=s^2$ and $s=\\sqrt{1.8\\times10^{-10}}\\approx1.3\\times10^{-5}$ M. Taking $K_{sp}$ itself as the solubility skips the square root.',
+    optionExplanations: [
+      'Taking $K_{sp}$ itself as the molar solubility skips the square root. Since $K_{sp} = s^2$ for AgCl, $s = \\sqrt{1.8 \\times 10^{-10}}$.',
+      'Each mole of AgCl that dissolves gives $s$ mol of each ion, so $K_{sp} = s^2$ and $s = \\sqrt{1.8 \\times 10^{-10}} \\approx 1.3 \\times 10^{-5}$ M.',
+      '$9.0 \\times 10^{-11}$ M divides $K_{sp}$ by 2, as if the two ions shared it. The correct relation is $K_{sp} = s^2$, which requires a square root.',
+      '$6.7 \\times 10^{-6}$ M is half of $\\sqrt{K_{sp}}$. AgCl releases one ion of each kind, so $s$ equals $\\sqrt{K_{sp}}$ with no factor of one-half.',
+    ],
   },
   {
     type: 'mcq',
@@ -513,7 +783,13 @@ export const MCQS: MCQItem[] = [
       '$Q = 0.01$, so the mixture shifts right and HI grows',
     ],
     correctAnswer: 0,
-    explanation: '$Q=\\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]}=\\frac{(1.0)^2}{(0.10)(0.10)}=100$, which is greater than $K_c=50$, so the reaction runs in reverse and HI decreases. A value of 10 comes from forgetting to square [HI] in the expression.',
+    explanation: '$Q=\\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]}=\\frac{(1.0)^2}{(0.10)(0.10)}=100$, which is greater than $K_c=50$, so the reaction runs in reverse and HI decreases. A value of 10 leaves one reactant out of the denominator, $\\frac{(1.0)^2}{0.10}$.',
+    optionExplanations: [
+      '$Q = \\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]} = \\frac{(1.0)^2}{(0.10)(0.10)} = 100$, which is greater than $K_c = 50$, so the reverse reaction runs and HI decreases.',
+      'The value of Q is right, but $Q = 100$ is greater than $K_c = 50$, so the mixture has too much product and shifts left; shifting right would move it farther from equilibrium.',
+      '$Q = 10$ leaves one reactant out of the denominator, $\\frac{(1.0)^2}{0.10}$. With $\\frac{[\\text{HI}]^2}{[\\text{H}_2][\\text{I}_2]} = \\frac{(1.0)^2}{(0.10)(0.10)}$, Q is 100, which exceeds $K_c$, so the mixture shifts left.',
+      '$Q = 0.01$ inverts the reaction quotient, putting the product in the denominator. The correct $Q = 100$ exceeds $K_c$, so the mixture shifts left, not right.',
+    ],
   },
 
   /* ---- U8 Acids & Bases (9) ---- */
@@ -524,6 +800,12 @@ export const MCQS: MCQItem[] = [
     options: ['1.00', '2.00', '12.00', '-2.00'],
     correctAnswer: 1,
     explanation: 'HCl is a strong acid, so $[\\text{H}_3\\text{O}^+]=0.010=10^{-2}$ M and pH $=2.00$. The value 12.00 is the pH of a 0.010 M strong base, which results from treating $10^{-2}$ M as the hydroxide concentration; $-2.00$ is $\\log(0.010)$ without the negative sign in the pH definition.',
+    optionExplanations: [
+      'pH 1.00 corresponds to $[\\text{H}_3\\text{O}^+] = 0.10$ M, ten times the actual concentration. A concentration of 0.010 M is $10^{-2}$ M, which gives pH 2.00.',
+      'HCl is a strong acid that ionizes completely, so $[\\text{H}_3\\text{O}^+] = 0.010 = 10^{-2}$ M and pH $= -\\log(10^{-2}) = 2.00$.',
+      '12.00 is the pH of a 0.010 M strong base. It treats $10^{-2}$ M as the hydroxide concentration rather than the hydronium concentration.',
+      '−2.00 is $\\log(0.010)$ without the negative sign in the definition pH $= -\\log[\\text{H}_3\\text{O}^+]$.',
+    ],
   },
   {
     type: 'mcq',
@@ -532,6 +814,12 @@ export const MCQS: MCQItem[] = [
     options: ['1.0', '3.0', '5.0', '6.0'],
     correctAnswer: 1,
     explanation: 'For a weak acid $[\\text{H}^+]\\approx\\sqrt{K_aC}=\\sqrt{(1.0\\times10^{-5})(0.10)}=10^{-3}$ M, so pH $\\approx3.0$. A pH of 1.0 treats HA as a strong acid that ionizes completely.',
+    optionExplanations: [
+      'pH 1.0 treats HA as a strong acid that ionizes completely. A weak acid with $K_a = 1.0 \\times 10^{-5}$ ionizes only slightly, so its $[\\text{H}^+]$ is far below 0.10 M.',
+      'For a weak acid $[\\text{H}^+] \\approx \\sqrt{K_aC} = \\sqrt{(1.0 \\times 10^{-5})(0.10)} = 1.0 \\times 10^{-3}$ M, so the pH is about 3.0.',
+      '5.0 is the $\\text{p}K_a$, which equals the pH only when [HA] equals $[\\text{A}^-]$, as in a half-neutralized solution, not in a solution of the weak acid alone.',
+      'pH 6.0 is $-\\log(K_aC) = -\\log(1.0 \\times 10^{-6})$, which skips the square root in $[\\text{H}^+] \\approx \\sqrt{K_aC}$.',
+    ],
   },
   {
     type: 'mcq',
@@ -541,6 +829,12 @@ export const MCQS: MCQItem[] = [
     options: ['3.74', '4.74', '5.74', '7.00'],
     correctAnswer: 1,
     explanation: 'Henderson–Hasselbalch gives pH $=\\text{p}K_a+\\log\\frac{[\\text{A}^-]}{[\\text{HA}]}=4.74+\\log(1)=4.74$. A pH of 7.00 assumes equal concentrations of acid and base make the solution neutral, but the acid here is weak with its own $\\text{p}K_a$, and 3.74 and 5.74 would require a tenfold excess of the acid or the base.',
+    optionExplanations: [
+      '3.74 is one unit below the $\\text{p}K_a$, which would require ten times as much acetic acid as acetate. With equal concentrations the log term is $\\log(1) = 0$.',
+      'Henderson–Hasselbalch gives pH $= \\text{p}K_a + \\log\\frac{[\\text{A}^-]}{[\\text{HA}]} = 4.74 + \\log(1) = 4.74$.',
+      '5.74 is one unit above the $\\text{p}K_a$, which would require ten times as much acetate as acetic acid, but the two concentrations here are equal.',
+      '7.00 assumes that equal amounts of acid and base make the solution neutral, but acetic acid is a weak acid with its own $\\text{p}K_a$, and equal concentrations give pH $= \\text{p}K_a$.',
+    ],
   },
   {
     type: 'mcq',
@@ -555,6 +849,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'The added $\\text{H}_3\\text{O}^+$ is consumed by the conjugate base, acetate, converting it to the weak acid, so few free hydronium ions remain. The reaction of acetic acid with $\\text{OH}^-$ is how the buffer responds to added base, and the ionization of acetic acid would add more hydronium rather than remove it.',
+    optionExplanations: [
+      'The added $\\text{H}_3\\text{O}^+$ is consumed by acetate, the conjugate base, converting it to the weak acid, so few free hydronium ions remain and the pH changes little.',
+      'The reaction of acetic acid with $\\text{OH}^-$ is how the buffer responds to added base, not added acid. HCl supplies $\\text{H}_3\\text{O}^+$, not hydroxide ions.',
+      'This is the ionization of acetic acid, which produces hydronium rather than removing it, so it cannot counteract the added acid.',
+      'The buffer at pH 4.74 contains very little $\\text{OH}^-$ to neutralize added acid. The species that consumes the added $\\text{H}_3\\text{O}^+$ is the acetate ion.',
+    ],
   },
   {
     type: 'mcq',
@@ -569,6 +869,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'With equal concentrations of acetic acid and acetate, pH $=\\text{p}K_a = 4.74$, and the buffer holds equal reserves of the weak acid (which consumes added $\\text{OH}^-$) and its conjugate base (which consumes added $\\text{H}_3\\text{O}^+$). Equal amounts of a weak acid and its conjugate base do not give pH 7; a pH one unit above the $\\text{p}K_a$ would mean ten times as much base as acid, so the buffer would resist added base poorly; and at the equivalence point essentially no weak acid remains.',
+    optionExplanations: [
+      'With equal concentrations of acetic acid and acetate, the buffer holds equal reserves of the weak acid, which consumes added $\\text{OH}^-$, and its conjugate base, which consumes added $\\text{H}_3\\text{O}^+$.',
+      'Equal amounts of a weak acid and its conjugate base give pH $= \\text{p}K_a = 4.74$, not 7, and the two buffer components coexist rather than neutralizing each other.',
+      'With equal concentrations the pH equals the $\\text{p}K_a$. A pH one unit above it would mean ten times as much base as acid, so the buffer would resist added base poorly.',
+      'At the equivalence point essentially no acetic acid remains, so the solution could not consume added base. This buffer corresponds to the half-equivalence point, where pH equals the $\\text{p}K_a$.',
+    ],
   },
   {
     type: 'mcq',
@@ -578,6 +884,12 @@ export const MCQS: MCQItem[] = [
     options: ['$6.3 \\times 10^{-5}$', '$1.6 \\times 10^{-10}$', '$4.0 \\times 10^{-8}$', '$1.0 \\times 10^{-7}$'],
     correctAnswer: 0,
     explanation: 'After 15.0 mL, half the acid has been converted to $\\text{A}^-$, so $[\\text{HA}]=[\\text{A}^-]$ and pH $=\\text{p}K_a=4.20$; then $K_a=10^{-4.20}=6.3\\times10^{-5}$. The value $1.6\\times10^{-10}$ is $K_b$ of the conjugate base, $\\frac{K_w}{K_a}$; $4.0\\times10^{-8}$ treats the half-equivalence solution as if it were 0.10 M HA alone ($[\\text{H}^+]^2/0.10$); and $1.0\\times10^{-7}$ is the $[\\text{H}^+]$ of pure water.',
+    optionExplanations: [
+      'After 15.0 mL, half the acid has become $\\text{A}^-$, so $[\\text{HA}] = [\\text{A}^-]$ and pH $= \\text{p}K_a = 4.20$, giving $K_a = 10^{-4.20} = 6.3 \\times 10^{-5}$.',
+      '$1.6 \\times 10^{-10}$ is $K_b$ of the conjugate base, $\\frac{K_w}{K_a}$, not $K_a$ of the acid itself.',
+      '$4.0 \\times 10^{-8}$ treats the half-equivalence solution as if it were 0.10 M HA alone, using $\\frac{[\\text{H}^+]^2}{0.10}$, but half the acid has already been converted to $\\text{A}^-$.',
+      '$1.0 \\times 10^{-7}$ is the $[\\text{H}^+]$ of pure water, which says nothing about the strength of HA. The half-equivalence pH of 4.20 is what determines $K_a$.',
+    ],
   },
   {
     type: 'mcq',
@@ -587,6 +899,12 @@ export const MCQS: MCQItem[] = [
     options: ['less than 7', 'equal to 7', 'greater than 7', 'equal to 4.20'],
     correctAnswer: 2,
     explanation: 'At equivalence the solution contains $\\text{A}^-$, the conjugate base of the weak acid, which reacts with water to produce $\\text{OH}^-$, so pH $>7$. The pH equals the $\\text{p}K_a$ (4.20) at the half-equivalence point, after 15.0 mL, not at equivalence, and a pH of exactly 7 would require that neither product ion react with water, as in a strong acid–strong base titration.',
+    optionExplanations: [
+      'A pH below 7 would require an acidic species at equivalence, but all of the HA has been converted to $\\text{A}^-$, a weak base, so the solution is basic.',
+      'A pH of exactly 7 requires that neither product ion react with water, as in a strong acid–strong base titration. Here $\\text{A}^-$ reacts with water to make $\\text{OH}^-$.',
+      'At equivalence the solution contains $\\text{A}^-$, the conjugate base of the weak acid, which reacts with water to produce $\\text{OH}^-$, so the pH is greater than 7.',
+      'The pH equals the $\\text{p}K_a$, 4.20, at the half-equivalence point after 15.0 mL of NaOH, not at the equivalence point after 30.0 mL.',
+    ],
   },
   {
     type: 'mcq',
@@ -601,6 +919,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'The half-equivalence pH gives $\\text{p}K_a = 4.20$, and from pH $=\\text{p}K_a+\\log\\frac{[\\text{A}^-]}{[\\text{HA}]}$, $\\log\\frac{[\\text{A}^-]}{[\\text{HA}]}=6.20-4.20=2$, so the base form is about $10^2=100$ times more concentrated. When the pH is above the $\\text{p}K_a$ the deprotonated form predominates; a factor of 2 mistakes the logarithmic difference for a linear one.',
+    optionExplanations: [
+      'From pH $= \\text{p}K_a + \\log\\frac{[\\text{A}^-]}{[\\text{HA}]}$ with $\\text{p}K_a = 4.20$, the log term is $6.20 - 4.20 = 2$, so $[\\text{A}^-]$ is about $10^2 = 100$ times [HA].',
+      'This reverses the ratio. When the pH is above the $\\text{p}K_a$, the deprotonated form predominates, so $[\\text{A}^-]$, not [HA], is about 100 times larger.',
+      'A factor of 2 mistakes the logarithmic difference of 2 pH units for a linear one. Each pH unit corresponds to a tenfold change in the ratio, so the factor is 100.',
+      '[HA] and $[\\text{A}^-]$ are equal only when the pH equals the $\\text{p}K_a$, 4.20. At pH 6.20, two units higher, the base form far exceeds the acid form.',
+    ],
   },
   {
     type: 'mcq',
@@ -609,6 +933,12 @@ export const MCQS: MCQItem[] = [
     options: ['11.30', '11.00', '2.70', '3.00'],
     correctAnswer: 0,
     explanation: 'Each formula unit releases two hydroxide ions, so $[\\text{OH}^-]=0.0020$ M, pOH $=2.70$, and pH $=14.00-2.70=11.30$. The value 11.00 ignores the second hydroxide ion, and 2.70 is the pOH rather than the pH.',
+    optionExplanations: [
+      'Each formula unit releases two hydroxide ions, so $[\\text{OH}^-] = 0.0020$ M, pOH $= 2.70$, and pH $= 14.00 - 2.70 = 11.30$.',
+      '11.00 ignores the second hydroxide ion: it uses $[\\text{OH}^-] = 0.0010$ M, but each $\\text{Ba(OH)}_2$ formula unit releases two $\\text{OH}^-$ ions.',
+      '2.70 is the pOH, $-\\log(0.0020)$, not the pH. The pH of the basic solution is $14.00 - 2.70 = 11.30$.',
+      '3.00 treats 0.0010 M as a hydronium concentration and ignores the second hydroxide ion. A solution of a strong base has a pH well above 7.',
+    ],
   },
 
   /* ---- U9 Applications of Thermodynamics (5) ---- */
@@ -624,6 +954,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'With $\\Delta G=\\Delta H-T\\Delta S$, a negative $\\Delta H$ and positive $\\Delta S$ make both terms negative, so $\\Delta G<0$ at every temperature. When both are negative, the reaction is favorable only at low temperature, where the $T\\Delta S$ term is small.',
+    optionExplanations: [
+      'With $\\Delta G = \\Delta H - T\\Delta S$, a negative ΔH and a positive ΔS make both terms negative, so ΔG is negative at every temperature.',
+      'With a positive ΔH and a negative ΔS, both terms of $\\Delta H - T\\Delta S$ are positive, so the reaction is unfavorable at every temperature.',
+      'When ΔH and ΔS are both negative, the reaction is favorable only at low temperature, where the unfavorable $-T\\Delta S$ term is small.',
+      'When ΔH and ΔS are both positive, the reaction is favorable only at high temperature, where $T\\Delta S$ is larger than ΔH.',
+    ],
   },
   {
     type: 'mcq',
@@ -632,7 +968,13 @@ export const MCQS: MCQItem[] = [
     question: 'The standard cell potential for the cell reaction $\\text{Zn} + \\text{Cu}^{2+} \\to \\text{Zn}^{2+} + \\text{Cu}$ is',
     options: ['$+0.42$ V', '$+1.10$ V', '$-1.10$ V', '$-0.42$ V'],
     correctAnswer: 1,
-    explanation: 'Cu is reduced at the cathode and Zn oxidized at the anode, so $E°_{cell}=E°_{cathode}-E°_{anode}=0.34-(-0.76)=+1.10$ V. The value $+0.42$ V adds the two reduction potentials without reversing the sign for the oxidation half-reaction.',
+    explanation: 'Cu is reduced at the cathode and Zn oxidized at the anode, so $E°_{cell}=E°_{cathode}-E°_{anode}=0.34-(-0.76)=+1.10$ V. The value $+0.42$ V subtracts the magnitudes of the two potentials, $0.76 - 0.34$, and $-0.42$ V adds the two reduction potentials without reversing the sign for the oxidation half-reaction.',
+    optionExplanations: [
+      '+0.42 V subtracts the magnitudes of the two potentials, 0.76 − 0.34. The correct calculation is $E°_{cathode} - E°_{anode} = 0.34 - (-0.76) = +1.10$ V.',
+      'Cu is reduced at the cathode and Zn is oxidized at the anode, so $E°_{cell} = E°_{cathode} - E°_{anode} = 0.34 - (-0.76) = +1.10$ V.',
+      '−1.10 V is the potential of the reverse reaction. As written, Zn reduces $\\text{Cu}^{2+}$, a thermodynamically favorable process with a positive cell potential.',
+      '−0.42 V simply adds the two reduction potentials, $0.34 + (-0.76)$, without reversing the sign for zinc, whose half-reaction runs as an oxidation.',
+    ],
   },
   {
     type: 'mcq',
@@ -642,6 +984,12 @@ export const MCQS: MCQItem[] = [
     options: ['$-2.12 \\times 10^5$ J', '$-1.06 \\times 10^5$ J', '$+1.06 \\times 10^5$ J', '$+2.12 \\times 10^5$ J'],
     correctAnswer: 0,
     explanation: 'From the table, $E°_{cell} = 0.34 - (-0.76) = +1.10$ V, and two electrons are transferred ($n = 2$), so $\\Delta G°=-nFE°=-(2)(96{,}485)(1.10)\\approx-2.12\\times10^5$ J; the negative sign matches a positive cell potential and a thermodynamically favorable cell. Leaving out $n=2$ gives $-1.06\\times10^5$ J.',
+    optionExplanations: [
+      'With $E°_{cell} = +1.10$ V and $n = 2$, $\\Delta G° = -nFE° = -(2)(96{,}485)(1.10) \\approx -2.12 \\times 10^5$ J; the negative sign matches a positive cell potential.',
+      '$-1.06 \\times 10^5$ J leaves out $n = 2$. Two electrons are transferred, since each Zn atom loses two electrons and each $\\text{Cu}^{2+}$ ion gains two.',
+      '$+1.06 \\times 10^5$ J both omits $n = 2$ and drops the negative sign in $\\Delta G° = -nFE°$. A positive cell potential means a negative ΔG°.',
+      '$+2.12 \\times 10^5$ J has the right magnitude but drops the negative sign in $\\Delta G° = -nFE°$. A cell with a positive potential is favorable, so ΔG° is negative.',
+    ],
   },
   {
     type: 'mcq',
@@ -655,6 +1003,12 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'In molten NaCl the only ions are $\\text{Na}^+$, which is reduced to sodium metal at the cathode, and $\\text{Cl}^-$, which is oxidized to chlorine gas at the anode. Hydrogen gas forms at the cathode only in aqueous NaCl, where water can be reduced.',
+    optionExplanations: [
+      'In molten NaCl the only ions are $\\text{Na}^+$, which is reduced to sodium metal at the cathode, and $\\text{Cl}^-$, which is oxidized to chlorine gas at the anode.',
+      'This swaps the electrodes. Reduction occurs at the cathode, where $\\text{Na}^+$ gains electrons, and oxidation occurs at the anode, where $\\text{Cl}^-$ loses them.',
+      'Hydrogen gas forms at the cathode only in aqueous NaCl, where water can be reduced. Molten NaCl contains no water, so $\\text{Na}^+$ is reduced instead.',
+      'Oxygen could come only from oxidizing water, which molten NaCl does not contain. The anion present, $\\text{Cl}^-$, is oxidized to $\\text{Cl}_2$ at the anode.',
+    ],
   },
   {
     type: 'mcq',
@@ -663,5 +1017,11 @@ export const MCQS: MCQItem[] = [
     options: ['$0$', '$-RT \\ln K$', '$\\Delta H$', '$-T\\Delta S$'],
     correctAnswer: 0,
     explanation: 'At equilibrium there is no further net driving force in either direction, so $\\Delta G=0$. The expression $-RT\\ln K$ equals $\\Delta G°$, the standard free energy change, which is generally not zero.',
+    optionExplanations: [
+      'At equilibrium there is no net driving force for reaction in either direction, so the free-energy change for the mixture, ΔG, is zero.',
+      '$-RT\\ln K$ equals $\\Delta G°$, the standard free-energy change, which compares reactants and products in their standard states and is generally not zero.',
+      'ΔH is the enthalpy change of the reaction, which is generally not zero for a mixture at equilibrium; the condition for equilibrium is $\\Delta G = 0$, not a particular value of ΔH.',
+      '$-T\\Delta S$ is only one term of $\\Delta G = \\Delta H - T\\Delta S$. It would equal ΔG only if ΔH were zero, which equilibrium does not require.',
+    ],
   },
 ]
