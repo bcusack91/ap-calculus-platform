@@ -394,7 +394,7 @@ This single habit will prevent most mistakes in the parts ahead.
       exercise: {
         questions: [
           {
-            question: 'Which of these statements about white light is FALSE?',
+            question: 'Which of these statements about white light is false?',
             options: [
               'White light is a mixture of many colors',
               'Every color in white light has the same wavelength',

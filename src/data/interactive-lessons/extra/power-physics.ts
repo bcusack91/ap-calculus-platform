@@ -890,7 +890,7 @@ Answer all three to finish the lesson.`,
         exercise: {
           questions: [
             {
-              question: 'Which equation is NOT a valid way to compute power?',
+              question: 'Which equation is not a valid way to compute power?',
               options: ['$P = Fv$', '$P = W/t$', '$P = Fd/t$', '$P = Fd$'],
               correctAnswer: 3,
               explanation: '$Fd$ is *work* (energy), not power. Power must include time: $P = W/t = Fd/t = Fv$.',

@@ -175,7 +175,7 @@ Final quiz covering the entire topic!
               "50.0°"
             ],
             correctAnswer: 2,
-            explanation: "Using Snell's Law: (1.5)sin(25°) = $(1.0)\\sin (\\theta_{2})$. Solving: $\\sin (\\theta_{2})$ = 0.634, so $\\theta_{2}$ = 39.3°. Light bends AWAY from normal when entering a less dense medium."
+            explanation: "Using Snell's Law: (1.5)sin(25°) = $(1.0)\\sin (\\theta_{2})$. Solving: $\\sin (\\theta_{2})$ = 0.634, so $\\theta_{2}$ = 39.3°. Light bends away from normal when entering a less dense medium."
           },
           {
             question: "What is the critical angle for light going from diamond (n=2.42) to air (n=1.0)?",
@@ -197,7 +197,7 @@ Final quiz covering the entire topic!
               "Light refracts at 90° along the surface"
             ],
             correctAnswer: 1,
-            explanation: "Since 55° > 48.8° (critical angle), total internal reflection occurs! ALL the light reflects back into the water. No light escapes to air."
+            explanation: "Since 55° > 48.8° (critical angle), total internal reflection occurs! All the light reflects back into the water. No light escapes to air."
           },
           {
             question: "A student plots $\\sin\\theta$ in air (vertical axis) against $\\sin\\theta$ in a plastic (horizontal axis) and gets a straight line through the origin with slope 1.6. What is the plastic's index of refraction?",

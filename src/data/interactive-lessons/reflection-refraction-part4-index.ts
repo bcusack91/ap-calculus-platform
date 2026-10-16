@@ -107,7 +107,7 @@ Calculate and apply!
             explanation: "Speed in water: v = c/n = c/1.33 ≈ 0.75c. The speed decreases to about 75% of its original value, meaning it slows down by about 25%."
           },
           {
-            question: "Which property of light does NOT change when it enters a new medium?",
+            question: "Which property of light does not change when it enters a new medium?",
             options: [
               "Speed",
               "Wavelength",
@@ -142,13 +142,13 @@ Calculate and apply!
           {
             question: 'True or false: "Frequency changes when light enters water."',
             options: [
-              'True — everything changes at a boundary',
-              'False — frequency stays constant; only speed and wavelength change',
-              'Partially true — color shifts but frequency doesn\'t',
-              'Nothing changes when entering a new medium'
+              'True, because the light slows down in water',
+              'False; it stays fixed while speed and wavelength drop',
+              'True, because the wavelength gets shorter in water',
+              'False; none of the light\'s properties change in water'
             ],
             correctAnswer: 1,
-            explanation: 'Frequency is locked in by the source and doesn\'t change at a boundary. Speed and wavelength both decrease by the factor n.'
+            explanation: 'Frequency is set by the source and does not change at a boundary. Speed and wavelength both decrease by the factor n, and because $v = f\\lambda$, a lower speed with the same frequency means a shorter wavelength. Slowing down and a shorter wavelength are real changes, but neither one changes the frequency.'
           },
           {
             question: 'You calculate n = 0.82 for a piece of glass. What probably happened?',

@@ -5,172 +5,214 @@ export const reflectionRefractionPart2LearningJourneyData = {
       id: 'part2-roadmap',
       type: 'text' as const,
       content: `
-# 🗺️ Your Game Plan
+# 🗺️ Learning Journey: Tools for Every Optics Problem
 
 **Part 2 of 8**
 
-Now that you know *what* light does, let's talk about *how* to tackle optics problems like a pro.
+Sign conventions, reflection, the index of refraction, Snell's law, total internal reflection and refraction through several surfaces all rely on the same three tools.
 
-This short part covers:
-- The structure of the 8-part journey ahead
-- Three success tips that top students swear by
-- A simple problem-solving workflow you'll use everywhere
-
-After this, the real physics starts in Part 3.
+This part builds those tools:
+- The **ray model** of light, and when it works
+- The **normal** line, and why every optics angle is measured from it
+- The **ray diagram**, the picture you draw before any calculation
       `
     },
     {
-      id: 'lesson-overview',
+      id: 'part2-ray-model',
       type: 'text' as const,
       content: `
-# Your Learning Journey 🗺️
+## The Ray Model of Light
 
-This interactive lesson has **8 parts**, each building on the previous one.
+A **ray** is a straight line that points in the direction a light wave travels. Rays are drawn **perpendicular to the wavefronts** (the lines joining the crests of the wave).
 
-## The Complete Path:
+- In a uniform material, a ray travels in a straight line.
+- A ray changes direction only where the material changes, such as at a boundary between air and glass.
+- A laser beam is the closest real thing to a single ray: narrow, one color, and nearly straight.
 
-**Part 1:** Introduction ✓
+### Two Common Sources
 
-**Part 2:** Learning Journey (You Are Here!)
+| Source | Wavefronts | Rays |
+|--------|-----------|------|
+| Distant source or plane wave | Straight and parallel | Parallel lines |
+| Small bulb (point source) | Circles centered on the source | Straight lines spreading out from the source |
 
-**Part 3:** Sign Conventions 📐  
-The coordinate system that makes everything easy
+### When Rays Are Enough, and When They Are Not
 
-**Part 4:** Law of Reflection 🪞  
-How light bounces off surfaces
+Rays describe light well when mirrors, lenses and openings are much larger than the wavelength. This is **geometric optics**, and it covers every part of this lesson.
 
-**Part 5:** Index of Refraction 🌊  
-Why light slows down in materials
-
-**Part 6:** Snell's Law ⚡  
-The master equation for predicting how light bends
-
-**Part 7:** Total Internal Reflection 💎  
-When light can't escape (fiber optics & diamonds!)
-
-**Part 8:** Refraction Through Several Surfaces 🧊  
-Glass blocks, layered materials, and measuring $n$ in the lab
-
-## Time Investment:
-
-⏱️ **Complete lesson:** 45-60 minutes  
-📚 **Casual pace:** 90-120 minutes (take breaks!)
-
-**Each part unlocks the next as you complete it.**
+Rays cannot explain light spreading out after a very narrow slit, or the bright and dark fringes made by two slits. Those effects need the **wave model**, which the interference and diffraction lessons cover.
       `
     },
     {
-      id: 'learning-tip-1',
+      id: 'part2-ray-quiz',
+      type: 'multiple-choice' as const,
+      content: `
+**Check: The Ray Model**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'On a diagram, a plane light wave has straight, parallel wavefronts drawn as vertical lines. How should its rays be drawn?',
+            options: [
+              'As horizontal lines, perpendicular to the wavefronts',
+              'As vertical lines lying along the wavefronts',
+              'As circles centered on the light source',
+              'As lines tilted 45° to the wavefronts'
+            ],
+            correctAnswer: 0,
+            explanation: 'Rays point in the direction the wave travels, which is always perpendicular to the wavefronts. Vertical wavefronts mean the wave moves horizontally, so the rays are horizontal. Circles describe the wavefronts of a point source, not rays.'
+          },
+          {
+            question: 'Which observation needs the wave model of light rather than the ray model?',
+            options: [
+              'An image appearing behind a flat mirror',
+              'A sharp shadow cast by a book on a wall',
+              'Fringes from two narrow slits',
+              'A straw looking bent in a glass of water'
+            ],
+            correctAnswer: 2,
+            explanation: 'Bright and dark fringes come from waves overlapping and interfering, which straight-line rays cannot describe. Mirror images, sharp shadows and the bent-straw effect are all explained by rays reflecting, traveling straight, or refracting.'
+          },
+          {
+            question: 'A small bulb sends light out in all directions. How are its rays best drawn?',
+            options: [
+              'As parallel lines in one direction',
+              'As straight lines spreading out from the bulb',
+              'As circles centered on the bulb',
+              'As curved lines that bend around the bulb\'s edges'
+            ],
+            correctAnswer: 1,
+            explanation: 'A point source has circular wavefronts centered on it. Rays are perpendicular to those circles, so they are straight lines pointing outward from the bulb. The circles themselves are the wavefronts, and parallel rays describe a distant source.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'part2-normal',
       type: 'text' as const,
       content: `
-# Success Tip #1: Draw Diagrams! ✏️
+## The Normal and How Angles Are Measured
 
-Optics is highly visual. For every problem, you should:
+Where a ray hits a surface, draw the **normal**: a line perpendicular to the surface at that point.
 
-## Your Diagram Checklist:
+- **Flat surface:** the normal points the same way everywhere on the surface.
+- **Curved surface** (a spherical mirror or a lens): the normal at any point lies along the radius through that point, so its direction changes from point to point.
 
-- Draw the light ray with an arrow
-- Mark the **normal** (perpendicular line to the surface)
-- Label all angles **from the normal**
-- Show the direction light travels
+The **angle of incidence** $\\theta_1$ is the angle between the incoming ray and the normal. The angles of reflection and refraction are measured from the normal too, never from the surface.
 
-**Pro tip:** Your diagram is often 80% of the solution!
+### Converting From the Surface
 
-Students who draw clear diagrams solve problems 3x faster than those who don't.
+Problems sometimes give the angle between the ray and the surface instead. The normal is 90° from the surface, so:
+
+$$\\theta_{\\text{from normal}} = 90° - \\theta_{\\text{from surface}}$$
+
+**Example:** a ray makes 35° with the surface of a flat mirror.
+- Angle of incidence: $90° - 35° = 55°$
+- The reflected ray is also 55° from the normal, on the other side.
+- The angle between the incoming and reflected rays is $55° + 55° = 110°$.
+
+### What Happens at a Boundary
+
+At a boundary between two transparent materials, part of the light reflects and the rest is transmitted into the new material, usually changing direction (refraction).
+
+- A ray that arrives **along the normal** ($\\theta_1 = 0$) is transmitted without bending.
+- The **frequency** of the light never changes at a boundary. Its speed and wavelength can change in the new material.
       `
     },
     {
-      id: 'learning-tip-2',
-      type: 'text' as const,
+      id: 'part2-normal-quiz',
+      type: 'multiple-choice' as const,
       content: `
-# Success Tip #2: Master Sign Conventions 📏
-
-The AP "real is positive" sign convention (Part 3) is the **single most important** concept in this entire lesson.
-
-## Why It Matters:
-
-**Get this right →** Everything else becomes easy  
-**Skip this →** You'll struggle with every single problem
-
-Part 3 walks through worked mirror and lens examples and sign practice to make it crystal clear.
-
-**Take your time on Part 3.** It's worth it!
-      `
+**Check: Measuring From the Normal**
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A ray makes a 40° angle with the surface of a flat glass plate. What is its angle of incidence?',
+            options: ['40°', '50°', '130°', '80°'],
+            correctAnswer: 1,
+            explanation: 'The angle of incidence is measured from the normal, which is 90° from the surface: $90° - 40° = 50°$. Using 40° directly measures from the surface, and 130° adds the angles instead of subtracting.'
+          },
+          {
+            question: 'A ray strikes a flat mirror with an angle of incidence of 30°. What is the angle between the incoming ray and the reflected ray?',
+            options: ['30°', '60°', '120°', '150°'],
+            correctAnswer: 1,
+            explanation: 'The reflected ray is also 30° from the normal, on the opposite side, so the two rays are $30° + 30° = 60°$ apart. 120° comes from treating the 30° as measured from the surface, which would put each ray 60° from the normal.'
+          },
+          {
+            question: 'Light strikes a curved mirror. How should the normal be drawn at the point where the light hits?',
+            options: [
+              'Along the radius at that point',
+              'Parallel to the principal axis of the mirror',
+              'Tangent to the mirror at that point',
+              'Vertically, whatever the mirror\'s shape'
+            ],
+            correctAnswer: 0,
+            explanation: 'The normal is perpendicular to the surface at the point of contact. For a spherical surface, the line perpendicular to the surface is the radius through that point. A tangent line lies along the surface, which is the opposite of a normal.'
+          },
+          {
+            question: 'A ray of light in air strikes a glass block along the normal. What happens to the light that enters the glass?',
+            options: [
+              'It continues straight in, without bending',
+              'It bends toward the surface',
+              'It bends away from the normal',
+              'None of it enters the glass'
+            ],
+            correctAnswer: 0,
+            explanation: 'A ray along the normal has an angle of incidence of zero, so it is transmitted without changing direction (part of the light still reflects straight back). It does slow down inside the glass, but slowing down alone does not bend a ray that arrives head-on.'
+          }
+        ]
+      }
     },
     {
-      id: 'learning-tip-3',
+      id: 'part2-ray-diagrams',
       type: 'text' as const,
       content: `
-# Success Tip #3: Angles From Normal! ⊥
+## Drawing a Ray Diagram
 
-This trips up many students, so pay attention:
+Draw the diagram before any calculation:
 
-## Common Mistake:
+1. Draw the boundary (the surface) as a line.
+2. Mark the point where the ray hits, and draw the normal there as a dashed line.
+3. Draw the incoming ray with an arrow showing its direction of travel.
+4. Measure every angle from the normal, and label it.
+5. Draw the reflected ray on the other side of the normal at the same angle. Draw any transmitted ray on the far side of the boundary.
 
-❌ **WRONG:** "Light hits at 30° to the surface"  
-✅ **RIGHT:** "Light hits at 60° from the normal"
+### Worked Example: Two Mirrors at a Right Angle
 
-## Remember:
+A horizontal mirror and a vertical mirror meet at a corner. A ray strikes the horizontal mirror with an angle of incidence of 30°.
 
-The **normal** is always perpendicular (⊥) to the surface.
+- **First reflection:** the ray leaves the horizontal mirror 30° from that mirror's normal (which is vertical).
+- **Second mirror:** the vertical mirror's normal is horizontal, 90° from the first normal. The ray's angle from it is $90° - 30° = 60°$.
+- **Second reflection:** the ray leaves 60° from the horizontal normal.
 
-**All angles in optics are measured from the normal, never from the surface itself.**
-
-This is a universal rule that applies to reflection AND refraction!
-      `
-    },
-    {
-      id: 'ready-to-begin',
-      type: 'text' as const,
-      content: `
-# 🚀 Ready to Begin?
-
-You now understand:
-
-✅ What light is and how it travels  
-✅ Real-world applications you'll be able to explain  
-✅ The structure of this 8-part journey  
-✅ Key strategies for success
-
-## Next Up: Part 3
-
-**Click "Next" to dive into Sign Conventions**
-
-This is where the real magic begins. You're about to learn the coordinate system that makes everything in optics crystal clear!
-
-*The foundation you build in Part 3 will make everything else smooth sailing.*
+Following the arrows shows that the ray leaves traveling exactly opposite to its original direction. This works for any angle of incidence, which is why corner reflectors are used on bicycle reflectors and road signs: they send light straight back toward its source.
       `
     },
     {
       id: 'part2-checkpoint',
       type: 'multiple-choice' as const,
       content: `
-**Quick Check** — Make sure you're set before Part 3.
+**Exit Check: Rays, Normals and Diagrams**
       `,
       exercise: {
         questions: [
           {
-            question: 'Which part of this course deserves the most careful attention?',
-            options: ['Part 1 (Introduction)', 'Part 3 (Sign Convention)', 'Part 6 (Snell\'s Law)', 'Part 8 (Several Surfaces)'],
+            question: 'Two flat mirrors meet at a right angle. A ray strikes the first mirror with an angle of incidence of 25°. What is its angle of incidence on the second mirror?',
+            options: ['25°', '65°', '50°', '90°'],
             correctAnswer: 1,
-            explanation: 'Part 3 (Sign Convention) is the foundation for every calculation that follows. Take your time with it!'
+            explanation: 'The two normals are 90° apart, so a ray that leaves the first mirror 25° from its normal is $90° - 25° = 65°$ from the second mirror\'s normal. 50° doubles the first angle, and 25° assumes the two normals point the same way.'
           },
           {
-            question: 'When you see a new optics problem, what should you write first?',
-            options: ['Your final answer estimate', 'The given values and context', 'A list of every formula you know', 'A graph of the solution'],
-            correctAnswer: 1,
-            explanation: 'Start with "Given" — listing what you know prevents you from skipping key constraints.'
-          },
-          {
-            question: 'A classmate says they will skip sign convention and just use positive numbers everywhere. What\'s the risk?',
+            question: 'After reflecting off both mirrors in a right-angle corner, the ray travels:',
             options: [
-              'No risk — signs don\'t matter in optics',
-              'They will place images on the wrong side of the mirror',
-              'It only matters for prism problems',
-              'Sign convention is optional for AP exams'
+              'Back the way it came, parallel to its original path',
+              'Along the surface of the second mirror',
+              'Perpendicular to its original path',
+              'Into the corner, where it is absorbed'
             ],
-            correctAnswer: 1,
-            explanation: 'Without the sign convention, your numbers might look right but your interpretation (which side? real or virtual?) will often be wrong.'
+            correctAnswer: 0,
+            explanation: 'Each reflection reverses one component of the ray\'s direction: the horizontal mirror reverses the vertical component and the vertical mirror reverses the horizontal component. With both reversed, the ray leaves parallel to its original path, heading back the way it came.'
           }
         ]
       }
