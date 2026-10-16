@@ -6,6 +6,7 @@ import { UNIT_TEST_COURSES, isUnitTestCourse } from '@/lib/unit-test-courses'
 import { unitTestStatusFor, type McatUnitTestStatus } from '@/lib/mcat-unit-test-server'
 import { classPlanCourse } from '@/lib/class-plan-config'
 import { AP_CANONICAL_TOPIC_NAMES, canonicalApTopicSlug } from '@/lib/ap-topic-canonical'
+import { apTrackFromResults, isApTrackCourse, orderTopicsForTrack, type ApTrackPlacement } from '@/lib/ap-track'
 
 type RecommendedTopic = {
   slug: string
@@ -45,6 +46,8 @@ export interface GenericPlanStatus {
   pendingTopics: (RecommendedTopic & { isSatisfied: boolean; [key: string]: unknown })[]
   unitTest: McatUnitTestStatus | null
   summary?: { totalRecommended: number; completed: number; pending: number }
+  /** AP track courses only (src/lib/ap-track.ts): the student's track, which also ordered the topics. */
+  apTrack?: ApTrackPlacement
 }
 
 export type ActPlanStatus = GenericPlanStatus
@@ -98,8 +101,14 @@ export async function buildGenericPlanStatus(userId: string, courseKey: string):
     }
   })
 
-  const recommendedTopics = Array.from(dedupedMap.values()).sort(
-    (a, b) => priorityValue(a.priority) - priorityValue(b.priority),
+  // AP track courses: the student's track (from this same diagnostic) orders
+  // the plan — Foundation earliest units first, 5-track heaviest units first
+  // (orderTopicsForTrack). Regular, and every other course, keep priority order.
+  const apTrack = isApTrackCourse(course.courseSlug) ? apTrackFromResults(latestDiagnostic.results) : undefined
+  const recommendedTopics = orderTopicsForTrack(
+    course.courseSlug,
+    Array.from(dedupedMap.values()).sort((a, b) => priorityValue(a.priority) - priorityValue(b.priority)),
+    apTrack?.track ?? 'regular',
   )
 
   if (recommendedTopics.length === 0) {
@@ -112,6 +121,7 @@ export async function buildGenericPlanStatus(userId: string, courseKey: string):
       recommendedTopics: [],
       pendingTopics: [],
       unitTest: null,
+      ...(apTrack ? { apTrack } : {}),
     }
   }
 
@@ -206,5 +216,6 @@ export async function buildGenericPlanStatus(userId: string, courseKey: string):
       completed: recommendedWithStatus.length - pendingTopics.length,
       pending: pendingTopics.length,
     },
+    ...(apTrack ? { apTrack } : {}),
   }
 }

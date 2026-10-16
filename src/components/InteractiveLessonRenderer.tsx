@@ -25,7 +25,7 @@ import StudyPlanNextUp from '@/components/StudyPlanNextUp'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import Image from 'next/image'
-import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
+import { generateExitQuiz, hasExitQuiz, isTrackMix, type ExitQuizTrackMix } from '@/data/exit-quizzes'
 import { bestSegment, termsOf } from '@/lib/text-terms'
 import type { ExitQuizQuestion } from '@/data/exit-quizzes'
 import LessonProgressBar from '@/components/LessonProgressBar'
@@ -478,9 +478,13 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   // quiz authoritatively (see /api/exit-quiz/submit). 31-bit positive int.
   const [exitQuizSeed, setExitQuizSeed] = useState<number>(0)
   // Difficulty tier the current exit quiz was generated at. The first (gating)
-  // attempt is mixed (undefined); students can re-open a tiered PRACTICE quiz
+  // attempt is mixed (undefined) — or, for an AP track student, the track's
+  // mix (src/lib/ap-track.ts); students can re-open a tiered PRACTICE quiz
   // from the results screen without weakening the mastery gate.
-  const [exitQuizDifficulty, setExitQuizDifficulty] = useState<'easy' | 'medium' | 'hard' | undefined>(undefined)
+  const [exitQuizDifficulty, setExitQuizDifficulty] = useState<'easy' | 'medium' | 'hard' | ExitQuizTrackMix | undefined>(undefined)
+  // The student's AP track mix for this course, from /api/lessons/settings
+  // (resolves undefined: no track, signed out, or the request failed).
+  const trackMixRef = useRef<Promise<ExitQuizTrackMix | undefined>>(Promise.resolve(undefined))
   const [exitQuizStatus, setExitQuizStatus] = useState<{
     totalAttempts: number
     hasPassed: boolean
@@ -517,8 +521,14 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     [preloadedParts],
   )
   const openExitQuiz = useCallback(
-    async (difficulty?: 'easy' | 'medium' | 'hard'): Promise<boolean> => {
+    async (requested?: 'easy' | 'medium' | 'hard' | ExitQuizTrackMix): Promise<boolean> => {
       const seed = (Math.floor(Math.random() * 0x7fffffff)) | 0
+      // The gating quiz (no tier asked for) is drawn at the student's AP track
+      // mix, if they have one; a slow lookup gives up after 2 s and draws untracked.
+      const difficulty = requested ?? (await Promise.race([
+        trackMixRef.current,
+        new Promise<undefined>((resolve) => setTimeout(() => resolve(undefined), 2000)),
+      ]))
       let questions: ExitQuizQuestion[] = []
       try {
         // Low-yield questions are asked only of students who chose to see
@@ -855,6 +865,9 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   useEffect(() => {
     if (exitQuizDeepLinkFired.current || !topicHasExitQuiz) return
     if (typeof window === 'undefined') return
+    // Wait for the session, so a signed-in student's AP track lookup (the
+    // settings effect below) has started before the quiz is drawn.
+    if (sessionKey === undefined) return
     if (!new URLSearchParams(window.location.search).has('exitQuiz')) return
     exitQuizDeepLinkFired.current = true
     // Deferred off the effect body so the overlay's state lands in a later
@@ -862,18 +875,22 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     // a cleanup could otherwise drop the quiz the student was sent to take).
     // Resolves false for a topic with no usable pool — stay on the lesson.
     void Promise.resolve().then(() => openExitQuiz())
-  }, [topicHasExitQuiz, session?.user, openExitQuiz])
+  }, [topicHasExitQuiz, session?.user, sessionKey, openExitQuiz])
 
-  // The student's saved choice (signed out: hidden, toggle lasts the visit).
+  // The student's saved choice (signed out: hidden, toggle lasts the visit),
+  // and their AP difficulty track in this course (src/lib/ap-track.ts).
   useEffect(() => {
     if (!sessionUserId) return
     let active = true
-    fetch('/api/lessons/settings')
+    trackMixRef.current = fetch(`/api/lessons/settings${courseSlug ? `?courseSlug=${encodeURIComponent(courseSlug)}` : ''}`)
       .then((r) => (r.ok ? r.json() : null))
-      .then((d) => { if (active && typeof d?.includeLowYield === 'boolean') setIncludeLowYield(d.includeLowYield) })
-      .catch(() => {})
+      .then((d) => {
+        if (active && typeof d?.includeLowYield === 'boolean') setIncludeLowYield(d.includeLowYield)
+        return isTrackMix(d?.apTrack?.mix) ? d.apTrack.mix : undefined
+      })
+      .catch(() => undefined)
     return () => { active = false }
-  }, [sessionUserId])
+  }, [sessionUserId, courseSlug])
 
   /** Flip the low-yield setting, keeping the student on the same material:
    *  the current section and the completed ones are carried over by id. */

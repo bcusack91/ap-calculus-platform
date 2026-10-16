@@ -8,6 +8,7 @@ import { canonicalizeRecommendedTopics } from '@/lib/ap-topic-canonical'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { passedUnitTestCycles } from '@/lib/mcat-unit-test-server'
 import { buildSatPlan, satPlacementsFor, type SatPlacement, type SatPlan } from '@/lib/sat-plan'
+import { apTrackFromResults, isApTrackCourse } from '@/lib/ap-track'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -241,8 +242,12 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     const pending = satPlan
       ? satPlan.recommendedTopics.filter(t => !t.isSatisfied).length
       : recs.filter(t => !moduleCleared(m.userId, t.slug)).length
+    // AP track courses: the difficulty track this student's latest diagnostic
+    // places them in (src/lib/ap-track.ts) — the same rule their lessons use.
+    const apTrack = isApTrackCourse(course.courseSlug) ? apTrackFromResults(attempt?.results ?? null) : null
     return {
       ...(placement ? { satLane: placement.lane, satOverride: placement.override } : {}),
+      ...(apTrack ? { apTrack: { track: apTrack.track, label: apTrack.label, source: apTrack.source } } : {}),
       userId: m.userId,
       name: nameOf.get(m.userId) ?? 'Student',
       takenAt: attempt?.createdAt ?? null,

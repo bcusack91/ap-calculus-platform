@@ -10,6 +10,7 @@
  */
 
 import { relevantPool } from './relevance-fallback'
+import { drawWithTrackMix } from './track-mix'
 export interface ExitQuizQuestion {
   id: string
   question: string
@@ -961,10 +962,15 @@ export const apBioQuestionPool: APBioQuestion[] = questionPool.map((q, i) => ({
 /*  Generator function — used by exit quiz registry                   */
 /* ------------------------------------------------------------------ */
 
-export function generateExitQuiz(count: number = 10, topicSlug?: string): ExitQuizQuestion[] {
+/** This pool honours the AP track mixes (track-mix.ts); index.ts reads the flag. */
+export const supportsTrackMix = true
+
+export function generateExitQuiz(count: number = 10, topicSlug?: string, difficulty?: string): ExitQuizQuestion[] {
   const source = topicSlug ? relevantPool(questionPool, topicSlug) : questionPool
-  return shuffle(source)
-    .slice(0, count)
+  // Untracked: the plain shuffle, unchanged (old attempts replay exactly). A
+  // track mix reads authored tags only; untagged legacy items count as medium
+  // (their apBioQuestionPool tier is positional, not a judgement).
+  return drawWithTrackMix(source, count, difficulty, () => shuffle(source).slice(0, count))
     .map((q) => ({
       id: q.id,
       question: q.question,

@@ -10,6 +10,7 @@
 
 import { relevantPool } from './relevance-fallback'
 import { shuffleArray } from '@/lib/shuffle-options'
+import { drawWithTrackMix } from './track-mix'
 export interface APPhysics1Question {
   question: string
   options: string[]
@@ -638,10 +639,14 @@ export const apPhysics1QuestionPool: APPhysics1Question[] = [
 /*  Generator function — used by exit quiz registry                   */
 /* ------------------------------------------------------------------ */
 
-export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug?: string; partNumber?: number }[] {
+/** This pool honours the AP track mixes (track-mix.ts); index.ts reads the flag. */
+export const supportsTrackMix = true
+
+export function generateExitQuiz(count = 10, topicSlug?: string, difficulty?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug?: string; partNumber?: number }[] {
   let pool = apPhysics1QuestionPool
   if (topicSlug) pool = relevantPool(pool, topicSlug)
-  return shuffleArray(pool).slice(0, count).map((q, i) => ({
+  // Untracked: the plain shuffle, unchanged (old attempts replay exactly).
+  return drawWithTrackMix(pool, count, difficulty, () => shuffleArray(pool).slice(0, count)).map((q, i) => ({
     id: `${q.topicSlug}-q${i}`,
     question: q.question,
     options: q.options,

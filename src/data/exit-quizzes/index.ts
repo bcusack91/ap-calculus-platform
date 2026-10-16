@@ -7,6 +7,8 @@
 
 export type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
 import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
+import { isTrackMix, type ExitQuizTrackMix } from './track-mix'
+export { isTrackMix, type ExitQuizTrackMix } from './track-mix'
 
 /* ------------------------------------------------------------------ */
 /*  Lazy loader map — each entry dynamically imports its quiz file     */
@@ -17,8 +19,11 @@ import type { ExitQuizQuestion } from './sat-linear-equations-inequalities'
  *  low-yield details". Pools that ignore the argument behave as before. */
 export interface ExitQuizOptions { includeLowYield?: boolean }
 
+// Method syntax on purpose (bivariant parameters): pools declare `difficulty`
+// as a tier, a string, or not at all. `supportsTrackMix`: the pool honours the
+// AP track mixes (track-mix.ts); others never receive one.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type QuizLoader = () => Promise<{ generateExitQuiz: (count?: number, topicSlug?: string, difficulty?: 'easy' | 'medium' | 'hard', opts?: ExitQuizOptions) => any[] }>
+type QuizLoader = () => Promise<{ generateExitQuiz(count?: number, topicSlug?: string, difficulty?: ExitQuizDifficulty | ExitQuizTrackMix, opts?: ExitQuizOptions): any[]; supportsTrackMix?: boolean }>
 
 const quizLoaders: Record<string, QuizLoader> = {
   // Original math
@@ -1269,7 +1274,9 @@ function mulberry32(seed: number): () => number {
  *
  * `difficulty` filters to a tier where the pool supports it (SAT pools tag
  * every template). Pools that ignore the extra argument behave exactly as
- * before, so passing a difficulty is always safe.
+ * before, so passing a difficulty is always safe. A track mix
+ * ('foundation-mix' / 'five-mix', track-mix.ts) reweights the draw of the
+ * pools that honour it (the AP flagships) and is dropped for every other pool.
  *
  * When `seed` is provided, generation is made deterministic by overriding the
  * global `Math.random` with a seeded PRNG for the duration of the pool's
@@ -1279,7 +1286,7 @@ function mulberry32(seed: number): () => number {
  * override/call/restore is fully synchronous, so it can't interleave with other
  * requests on Node's single thread.
  */
-export async function generateExitQuiz(topicSlug: string, count: number = 10, difficulty?: ExitQuizDifficulty, seed?: number, opts?: ExitQuizOptions): Promise<ExitQuizQuestion[]> {
+export async function generateExitQuiz(topicSlug: string, count: number = 10, difficulty?: ExitQuizDifficulty | ExitQuizTrackMix, seed?: number, opts?: ExitQuizOptions): Promise<ExitQuizQuestion[]> {
   // Core Skills topics have no item pool of their own: they draw the EASY tier
   // of the topic they are built from. Normalizing here rather than registering
   // 26 adapter entries means the difficulty is forced to 'easy' no matter what
@@ -1298,6 +1305,10 @@ export async function generateExitQuiz(topicSlug: string, count: number = 10, di
     throw new Error(`No exit quiz found for topic: ${requestedSlug}`)
   }
   const mod = await loader()
+  // A track mix (AP difficulty tracks) means nothing to a pool that does not
+  // honour it: draw that pool untracked. The same rule runs at replay, so the
+  // stored attempt still rebuilds exactly.
+  if (isTrackMix(difficulty) && mod.supportsTrackMix !== true) difficulty = undefined
   let questions: ReturnType<typeof mod.generateExitQuiz>
   if (typeof seed === 'number' && Number.isFinite(seed)) {
     const rng = mulberry32(seed)
@@ -1347,10 +1358,11 @@ async function blendHardTier(
   topicSlug: string,
   generated: ExitQuizQuestion[],
   count: number,
-  difficulty: ExitQuizDifficulty | undefined,
+  difficulty: ExitQuizDifficulty | ExitQuizTrackMix | undefined,
   seed?: number,
 ): Promise<ExitQuizQuestion[]> {
-  if (difficulty === 'easy' || difficulty === 'medium') return generated
+  // A track mix only ever reaches here for an AP pool, which has no 700-800 tier.
+  if (difficulty === 'easy' || difficulty === 'medium' || isTrackMix(difficulty)) return generated
   // Lazy-loaded: the tier file is ~700KB and must never land in the initial
   // bundle (the whole reason the banks below use dynamic imports too).
   let tier: ExitQuizQuestion[]

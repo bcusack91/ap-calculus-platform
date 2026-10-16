@@ -36,6 +36,8 @@ export type PlanStatus = {
   planSource?: 'regular' | 'hard' | 'core-skills'
   /** The cycle's unit test (src/lib/unit-test-courses.ts). */
   unitTest?: { available?: boolean; passed: boolean; path: string; questionCount: number; passPercent: number; attempts: number; inProgressId?: string | null; locksDiagnostic?: boolean; testName?: string } | null
+  /** AP track courses (src/lib/ap-track.ts): the student's difficulty track. */
+  apTrack?: { track: 'foundation' | 'regular' | 'five'; label: string; explanation: string } | null
 }
 
 type FlashcardStats = {
@@ -86,6 +88,7 @@ interface GenericPlan {
   unitTest?: PlanStatus['unitTest']
   requiredScorePercent?: number
   topics?: PlanTopicStatus[]
+  apTrack?: PlanStatus['apTrack']
 }
 
 /** One course's plan from the generic /api/study-plan/plan-status payload. */
@@ -102,6 +105,7 @@ export function planFromGenericPayload(body: unknown, courseKey: string): PlanSt
     recommendedTopics: topics,
     pendingTopics: topics.filter((t) => !t.isSatisfied),
     unitTest: plan.unitTest ?? null,
+    apTrack: plan.apTrack ?? null,
   }
 }
 
@@ -339,6 +343,14 @@ export default function CourseStudyPlan({
                     : 'From your last diagnostic'} · {cleared} of {plan!.recommendedTopics.length} cleared
               </span>
             </div>
+            {plan!.apTrack && (
+              <p className="-mt-2 mb-4 text-sm text-gray-600 dark:text-gray-400">
+                <span className="mr-2 rounded-full bg-accent-subtle px-2 py-0.5 text-xs font-semibold text-accent-hover dark:bg-accent-light/20 dark:text-accent-muted">
+                  {plan!.apTrack.label}
+                </span>
+                {plan!.apTrack.explanation}
+              </p>
+            )}
             <ul className="space-y-2">
               {plan!.recommendedTopics.map((topic) => (
                 <li key={topic.slug}>

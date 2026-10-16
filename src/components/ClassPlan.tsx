@@ -49,6 +49,8 @@ interface StudentRow {
   /** SAT only: the lane this student studies in, and any teacher override. */
   satLane?: 'core-skills' | 'regular' | 'advanced'
   satOverride?: 'core-skills' | 'regular' | 'advanced' | null
+  /** AP Chemistry / Biology / Physics 1 / Calculus AB: the difficulty track (src/lib/ap-track.ts). */
+  apTrack?: { track: 'foundation' | 'regular' | 'five'; label: string; source: 'diagnostic' | 'none' }
 }
 
 const SAT_LANE_LABEL: Record<NonNullable<StudentRow['satLane']>, string> = {
@@ -182,6 +184,8 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
   const blocks = data.classTopics.slice(0, 4)
   const alsoSurfaced = data.classTopics.slice(4)
   const gated = data.course.gated
+  // The API sends apTrack only for the AP track courses.
+  const hasApTrack = data.students.some(s => !!s.apTrack)
 
   return (
     <div className="space-y-6">
@@ -293,6 +297,8 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
           {gated && ' For the MCAT, clearing all of them and then passing a 25-question unit test on those topics unlocks their next weekly diagnostic.'}
           {data.course.key === 'sat' &&
             ' Each SAT student studies in a track: Core Skills (short lessons, easy items), Standard, or 700-800. Automatic places them from their diagnostics; pick a track to pin it.'}
+          {hasApTrack &&
+            ' Each student is placed in a track by their latest diagnostic: Foundation (estimated 1–2: exit quizzes lean easy/medium, earliest units first), Regular (3–4), or 5-track (estimated 5: quizzes lean medium/hard, heaviest-weighted units first). The pass mark is 80% on every track.'}
         </p>
         {trackError && <p className="mb-3 text-sm text-red-600 dark:text-red-400">{trackError}</p>}
         <div className="overflow-x-auto">
@@ -303,7 +309,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
                 <th className="py-2 pr-4">Last diagnostic</th>
                 <th className="py-2 pr-4">Score</th>
                 <th className="py-2 pr-4">Homework</th>
-                {data.course.key === 'sat' && <th className="py-2 pr-4">Track</th>}
+                {(data.course.key === 'sat' || hasApTrack) && <th className="py-2 pr-4">Track</th>}
                 {gated && <th className="py-2">Next test</th>}
               </tr>
             </thead>
@@ -325,6 +331,11 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
                   <td className="py-2 pr-4 text-gray-600 dark:text-gray-400">
                     {s.recommendedCount === 0 ? '—' : `${s.recommendedCount - s.pendingCount}/${s.recommendedCount} topics`}
                   </td>
+                  {hasApTrack && (
+                    <td className="py-2 pr-4 text-gray-600 dark:text-gray-400">
+                      {s.apTrack && s.apTrack.source === 'diagnostic' ? s.apTrack.label : '—'}
+                    </td>
+                  )}
                   {data.course.key === 'sat' && (
                     <td className="py-2 pr-4">
                       <label className="sr-only" htmlFor={`sat-track-${s.userId}`}>SAT track for {s.name}</label>

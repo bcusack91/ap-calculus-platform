@@ -13,6 +13,7 @@ import { fullLengthReadiness } from '@/lib/full-length-progress-server'
 import { FULL_LENGTH_COURSES, isApFullLengthCourse, type FullLengthCourse } from '@/lib/full-length-progress'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { canonicalizeRecommendedTopics } from '@/lib/ap-topic-canonical'
+import { apTrackFromResults, isApTrackCourse, orderTopicsForTrack, type ApTrackPlacement } from '@/lib/ap-track'
 
 /**
  * Every course's diagnostic study plan, with per-topic done/pending state.
@@ -98,16 +99,20 @@ export async function GET() {
     const satPlan = satCourse && hasSatAttempt ? await buildSatPlan(userId) : null
 
     // Latest attempt per course, plus the topics it recommended.
-    const perCourse = new Map<string, { diagnosticId: string; takenAt: Date; topics: RecommendedTopic[] }>()
+    const perCourse = new Map<string, { diagnosticId: string; takenAt: Date; topics: RecommendedTopic[]; apTrack?: ApTrackPlacement }>()
     for (const course of CLASS_PLAN_COURSES) {
       if (course.key === 'sat') continue
       const latest = attempts.find((a) => a.category.startsWith(course.categoryPrefix))
       if (!latest) continue
       // Attempts stored before the Oct 2026 fix can carry legacy AP slugs with
       // no Topic row (ap-bio-*, *-calcab lesson keys); map them to real topics.
-      const topics = canonicalizeRecommendedTopics(course.courseSlug, parseRecommended(latest.results))
-      if (topics.length === 0) continue
-      perCourse.set(course.key, { diagnosticId: latest.id, takenAt: latest.createdAt, topics })
+      const recommended = canonicalizeRecommendedTopics(course.courseSlug, parseRecommended(latest.results))
+      if (recommended.length === 0) continue
+      // AP track courses (src/lib/ap-track.ts): the track this diagnostic
+      // places the student in orders the plan, as buildGenericPlanStatus does.
+      const apTrack = isApTrackCourse(course.courseSlug) ? apTrackFromResults(latest.results) : undefined
+      const topics = apTrack ? orderTopicsForTrack(course.courseSlug, recommended, apTrack.track) : recommended
+      perCourse.set(course.key, { diagnosticId: latest.id, takenAt: latest.createdAt, topics, apTrack })
     }
     const satEntry =
       satCourse && satPlan?.hasDiagnostic && satPlan.recommendedTopics.length > 0
@@ -268,6 +273,10 @@ export async function GET() {
         canRetakeDiagnostic: course.gated === true ? pending === 0 : true,
         unitTest: null as McatUnitTestStatus | null,
         fullLength: null as FullLengthSummary | null,
+        // The AP track (course hub shows it); null for courses without tracks.
+        apTrack: plan.apTrack
+          ? { track: plan.apTrack.track, label: plan.apTrack.label, explanation: plan.apTrack.explanation }
+          : null,
       }]
     })
 

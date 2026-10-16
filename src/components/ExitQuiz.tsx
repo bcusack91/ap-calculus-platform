@@ -39,7 +39,7 @@ interface ExitQuizProps {
   mustRedoUnit: boolean // from last attempt
   variant?: number // current content variant (1-3)
   seed?: number // generation seed — lets the server regenerate + regrade this exact quiz
-  difficulty?: 'easy' | 'medium' | 'hard' // tier the quiz was generated at
+  difficulty?: 'easy' | 'medium' | 'hard' | 'foundation-mix' | 'five-mix' // tier (or AP track mix, src/lib/ap-track.ts) the quiz was generated at
   includeLowYield?: boolean // the draw included low-yield items (student's lesson setting)
   onPracticeAtDifficulty?: (difficulty: 'easy' | 'medium' | 'hard') => void // re-open as tiered practice
   /**

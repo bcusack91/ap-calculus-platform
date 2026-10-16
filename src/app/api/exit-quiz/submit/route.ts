@@ -25,7 +25,9 @@ const submitSchema = z.object({
   // Generation seed + difficulty tier the client used. When present, the server
   // regenerates the identical quiz and grades authoritatively (no client trust).
   seed: z.number().int().optional(),
-  difficulty: z.enum(['easy', 'medium', 'hard']).optional(),
+  // A tier, or an AP track mix (src/lib/ap-track.ts: the gating quiz of a
+  // Foundation / 5-track student). Either way only a generation input.
+  difficulty: z.enum(['easy', 'medium', 'hard', 'foundation-mix', 'five-mix']).optional(),
   // Whether the draw included low-yield items (the student's lesson setting).
   // A generation input like difficulty, used only to reproduce the draw.
   includeLowYield: z.boolean().optional(),

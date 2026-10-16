@@ -29,7 +29,7 @@
 
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { questionKey } from '@/lib/question-key'
-import { generateExitQuiz, hasExitQuiz, type ExitQuizDifficulty } from '@/data/exit-quizzes'
+import { generateExitQuiz, hasExitQuiz, isTrackMix, type ExitQuizDifficulty, type ExitQuizTrackMix } from '@/data/exit-quizzes'
 
 export interface SubmittedAnswer {
   questionId?: string | number
@@ -233,7 +233,7 @@ export async function regradeExitQuizSeeded(
   answers: SubmittedAnswer[],
   seed: number,
   count: number,
-  difficulty?: ExitQuizDifficulty,
+  difficulty?: ExitQuizDifficulty | ExitQuizTrackMix,
   includeLowYield?: boolean,
 ): Promise<RegradeResult | null> {
   if (!hasExitQuiz(topicSlug) || !Number.isFinite(seed)) return null
@@ -277,8 +277,9 @@ export interface ExitQuizGeneration {
   includeLowYield?: boolean | null
 }
 
-function asDifficulty(d: string | null | undefined): ExitQuizDifficulty | undefined {
-  return d === 'easy' || d === 'medium' || d === 'hard' ? d : undefined
+/** A stored difficulty as a generation input: a tier, an AP track mix (ap-track.ts), or none. */
+function asDifficulty(d: string | null | undefined): ExitQuizDifficulty | ExitQuizTrackMix | undefined {
+  return d === 'easy' || d === 'medium' || d === 'hard' || isTrackMix(d) ? d : undefined
 }
 
 /**
