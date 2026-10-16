@@ -34,9 +34,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   // ══════════════════════════════════════════════════════════════════
   {
     question: '$\\displaystyle\\int x \\cdot e^x\\,dx = $?',
-    options: ['$xe^x - e^x + C$', '$xe^x + e^x + C$', '$e^x(x + 1) + C$', '$\\dfrac{x^2 e^x}{2} + C$'],
+    options: ['$xe^x - e^x + C$', '$xe^x + e^x + C$', '$e^x - xe^x + C$', '$\\dfrac{x^2 e^x}{2} + C$'],
     correctAnswer: 0,
-    explanation: 'Integration by parts: u = x, dv = $e^{x}$ dx. du = dx, v = $e^{x}$. $\\int x\\cdot e^{x}$ dx = $xe^{x}$ − $\\int e^{x}$ dx = $xe^{x}$ − $e^{x}$ + C.',
+    explanation: 'Integration by parts with $u = x$, $dv = e^x\\,dx$: $\\int xe^x\\,dx = xe^x - \\int e^x\\,dx = xe^x - e^x + C$. A plus sign forgets that the second term is subtracted, $e^x - xe^x$ swaps $u$ and $v$ in the formula, and $\\frac{x^2 e^x}{2}$ integrates the two factors separately.',
     difficulty: 'medium',
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
@@ -64,9 +64,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int \\frac{3x + 1}{(x + 1)(x - 2)}\\,dx$ uses partial fractions. What is $A + B$ if $3x+1 = A(x-2) + B(x+1)$?',
-    options: ['$3$', '$2$', '$1$', '$4$'],
+    options: ['$3$', '$\\dfrac{7}{3}$', '$\\dfrac{2}{3}$', '$-\\dfrac{5}{3}$'],
     correctAnswer: 0,
-    explanation: 'Set x = 2: 7 = 3B → B = 7/3. Set x = −1: −2 = −3A → A = 2/3. A + B = 2/3 + 7/3 = 3.',
+    explanation: 'Set $x = 2$: $7 = 3B$, so $B = \\frac{7}{3}$. Set $x = -1$: $-2 = -3A$, so $A = \\frac{2}{3}$. Then $A + B = 3$ (which also matches the $x$-coefficient, $3 = A + B$). $\\frac{7}{3}$ and $\\frac{2}{3}$ are $B$ and $A$ alone, and $-\\frac{5}{3}$ is $A - B$.',
     difficulty: 'medium',
     domain: 'advanced-integration',
     topicSlug: 'partial-fractions-calcbc',
@@ -74,9 +74,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Does $\\displaystyle\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ converge or diverge? If it converges, what is its value?',
-    options: ['Diverges', 'Converges to $1$', 'Converges to $2$', 'Converges to $\\dfrac{1}{2}$'],
+    options: ['Diverges, as the integrand stays positive', 'Converges to $1$', 'Converges to $-1$', 'Converges to $\\dfrac{1}{2}$'],
     correctAnswer: 1,
-    explanation: '$\\int_{1}^{\\infty}$ $x^{-2}$ dx = [−1/x]$ {}_{1}^{\\infty}$ = 0 − (−1) = 1. The integral converges to 1.',
+    explanation: '$\\int_1^{\\infty} x^{-2}\\,dx = \\lim_{t \\to \\infty}\\left[-\\frac{1}{x}\\right]_1^t = 0 - (-1) = 1$, so it converges to $1$. A positive integrand can still have finite area, a sign slip in $-\\frac{1}{x}$ gives $-1$, and $\\frac{1}{2}$ comes from using $\\frac{x^{-1}}{2}$ as the antiderivative.',
     difficulty: 'medium',
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
@@ -94,9 +94,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int \\ln x\\,dx = $?',
-    options: ['$x\\ln x - x + C$', '$x\\ln x + x + C$', '$\\dfrac{1}{x} + C$', '$\\dfrac{\\ln x}{x} + C$'],
+    options: ['$x\\ln x - x + C$', '$x\\ln x + x + C$', '$\\dfrac{1}{x} + C$', '$x - x\\ln x + C$'],
     correctAnswer: 0,
-    explanation: 'IBP: u = ln x, dv = dx → du = dx/x, v = x. ∫ln x dx = x ln x − ∫x·(1/x) dx = x ln x − x + C.',
+    explanation: 'Integration by parts with $u = \\ln x$, $dv = dx$: $\\int \\ln x\\,dx = x\\ln x - \\int x \\cdot \\frac{1}{x}\\,dx = x\\ln x - x + C$. A plus sign forgets to subtract the second integral, $x - x\\ln x$ has both signs reversed, and $\\frac{1}{x}$ is the derivative of $\\ln x$, not an antiderivative.',
     difficulty: 'medium',
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
@@ -118,9 +118,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   // ══════════════════════════════════════════════════════════════════
   {
     question: 'For the parametric curve $x = t^2$, $y = t^3$, what is $\\dfrac{dy}{dx}$?',
-    options: ['$\\dfrac{3t^2}{2t} = \\dfrac{3t}{2}$', '$\\dfrac{2t}{3t^2}$', '$t$', '$3t^2$'],
+    options: ['$\\dfrac{3t}{2}$', '$\\dfrac{2}{3t}$', '$t$', '$6t^3$'],
     correctAnswer: 0,
-    explanation: 'dy/dx = (dy/dt)/(dx/dt) = $3t^{2}/(2t)$ = 3t/2.',
+    explanation: '$\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt} = \\frac{3t^2}{2t} = \\frac{3t}{2}$. Dividing in the other order gives $\\frac{2}{3t}$, multiplying the two derivatives gives $6t^3$, and $t$ comes from cancelling exponents without the coefficients.',
     difficulty: 'medium',
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
@@ -137,7 +137,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'If $\\mathbf{r}(t) = \\langle \\cos t,\, \\sin t \\rangle$, what is the speed $|\\mathbf{r}\'(t)|$?',
+    question: 'If $\\mathbf{r}(t) = \\langle \\cos t, \\sin t \\rangle$, what is the speed $|\\mathbf{r}\'(t)|$?',
     options: ['$0$', '$1$', '$\\cos t + \\sin t$', '$\\sqrt{2}$'],
     correctAnswer: 1,
     explanation: 'r\'(t) = ⟨−sin t, cos t⟩. |r\'(t)| = $\\sqrt{\\sin^{2}t + \\cos^{2}t}$ = 1.',
@@ -158,17 +158,17 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'For the polar curve $r = 1 + \\cos\\theta$ (cardioid), the curve passes through the origin when:',
-    options: ['$\\theta = 0$', '$\\theta = \\dfrac{\\pi}{2}$', '$\\theta = \\pi$', '$\\theta = 2\\pi$'],
+    options: ['$\\theta = 0$', '$\\theta = \\dfrac{\\pi}{2}$', '$\\theta = \\pi$', '$\\theta = \\dfrac{3\\pi}{2}$'],
     correctAnswer: 2,
-    explanation: 'r = 0 when 1 + cos θ = 0 → cos θ = −1 → θ = π.',
+    explanation: '$r = 0$ when $1 + \\cos\\theta = 0$, so $\\cos\\theta = -1$ and $\\theta = \\pi$. At $\\theta = 0$ (or $2\\pi$) $r = 2$, at $\\frac{\\pi}{2}$ $r = 1$, and $\\theta = \\frac{3\\pi}{2}$ is where $1 + \\sin\\theta = 0$, which confuses cosine with sine.',
     difficulty: 'easy',
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
     formSet: 'B',
   },
   {
-    question: 'If a particle has position $\\mathbf{r}(t) = \\langle t^2,\, t^3 \\rangle$, the acceleration vector at $t = 1$ is:',
-    options: ['$\\langle 2,\, 3 \\rangle$', '$\\langle 2,\, 6 \\rangle$', '$\\langle 1,\, 3 \\rangle$', '$\\langle 4,\, 9 \\rangle$'],
+    question: 'If a particle has position $\\mathbf{r}(t) = \\langle t^2, t^3 \\rangle$, the acceleration vector at $t = 1$ is:',
+    options: ['$\\langle 2, 3 \\rangle$', '$\\langle 2, 6 \\rangle$', '$\\langle 1, 3 \\rangle$', '$\\langle 4, 9 \\rangle$'],
     correctAnswer: 1,
     explanation: 'r\'(t) = ⟨2t, $3t^{2}$⟩, r\'\'(t) = ⟨2, 6t⟩. At t = 1: a = ⟨2, 6⟩.',
     difficulty: 'medium',
@@ -178,14 +178,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The area inside $r = 3\\sin\\theta$ and outside $r = 1 + \\sin\\theta$ requires:',
-    options: [
-      'Finding intersection points and integrating the difference of $r^2$ values',
-      'Just integrating r = 3 sin θ from 0 to π',
-      'Using rectangular coordinates only',
-      'No integration — it can be computed geometrically'
-    ],
+    options: ['Integrating $\\frac{1}{2}(r_1^2 - r_2^2)$ between the intersections', 'Integrating $\\frac{1}{2}(r_1 - r_2)^2$ between the intersection angles', 'Integrating $\\frac{1}{2}(3\\sin\\theta)^2$ alone from $\\theta = 0$ to $\\pi$', 'Integrating $(r_1 - r_2)$ between the intersection angles'],
     correctAnswer: 0,
-    explanation: 'For area between polar curves: A = (1/2)∫[$r_{1}^{2}$ − $r_{2}^{2}$] dθ over the appropriate interval determined by intersection points.',
+    explanation: 'Find where $3\\sin\\theta = 1 + \\sin\\theta$ (at $\\theta = \\frac{\\pi}{6}$ and $\\frac{5\\pi}{6}$), then integrate $\\frac{1}{2}(r_1^2 - r_2^2)$ between those angles with $r_1 = 3\\sin\\theta$. Squaring the difference $(r_1 - r_2)^2$ is not the same as the difference of squares, integrating the circle alone ignores the region removed, and polar area needs $\\frac{1}{2}r^2$, not $r$.',
     difficulty: 'medium',
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
@@ -207,9 +202,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Does the series $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{1}{n^2}$ converge? If so, what type of series is it?',
-    options: ['Diverges', 'Converges — p-series with $p = 2 > 1$', 'Converges — geometric series', 'Converges — telescoping series'],
+    options: ['Diverges, like the harmonic series', 'Converges as a $p$-series', 'Converges as a geometric series', 'Converges as a telescoping series'],
     correctAnswer: 1,
-    explanation: '$\\Sigma 1/n^{2}$ is a p-series with p = 2 > 1, so it converges (to $\\pi^{2}/6$, though that value is not needed for the test).',
+    explanation: '$\\sum \\frac{1}{n^2}$ is a $p$-series with $p = 2 > 1$, so it converges. The harmonic series has $p = 1$, the ratio $\\frac{a_{n+1}}{a_n}$ is not constant (so it is not geometric), and the terms do not cancel in pairs (so it is not telescoping).',
     difficulty: 'easy',
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
@@ -237,9 +232,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The alternating series $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$:',
-    options: ['Diverges', 'Converges absolutely', 'Converges conditionally', 'Neither converges nor diverges'],
+    options: ['Diverges like $\\sum 1/n$', 'Converges absolutely by the AST', 'Converges conditionally', 'Neither converges nor diverges'],
     correctAnswer: 2,
-    explanation: '$\\Sigma (-1)^{n+1}/n$ is the alternating harmonic series. It converges by the Alternating Series Test, but Σ1/n diverges, so it converges conditionally.',
+    explanation: 'The alternating harmonic series converges by the Alternating Series Test, but $\\sum \\frac{1}{n}$ diverges, so it converges conditionally. The alternating signs make it converge even though the harmonic series diverges, the AST never proves absolute convergence, and every series either converges or diverges.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'alternating-series-calcbc',
@@ -321,9 +316,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Maclaurin series for $\\dfrac{1}{1 - x}$ is:',
-    options: ['$\\displaystyle\\sum_{n=0}^{\\infty} x^n$, $|x| < 1$', '$\\displaystyle\\sum_{n=0}^{\\infty} (-x)^n$', '$\\displaystyle\\sum_{n=0}^{\\infty} nx^n$', '$1 + x + x^2$ (finite)'],
+    options: ['$\\displaystyle\\sum_{n=0}^{\\infty} x^n$', '$\\displaystyle\\sum_{n=0}^{\\infty} (-x)^n$', '$\\displaystyle\\sum_{n=0}^{\\infty} nx^n$', '$\\displaystyle\\sum_{n=0}^{\\infty} \\dfrac{x^n}{n!}$'],
     correctAnswer: 0,
-    explanation: '1/(1−x) = Σ(n=0 to ∞) $x^{n}$ = 1 + x + $x^{2}$ + $x^{3}$ + ... for |x| < 1. This is the geometric series.',
+    explanation: '$\\frac{1}{1 - x}$ is the sum of the geometric series $1 + x + x^2 + \\cdots = \\sum x^n$ for $|x| < 1$. $\\sum (-x)^n$ is the series for $\\frac{1}{1 + x}$, $\\sum nx^n$ is related to the derivative of the geometric series, and $\\sum \\frac{x^n}{n!}$ is the series for $e^x$.',
     difficulty: 'easy',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -375,9 +370,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The logistic differential equation is $\\dfrac{dP}{dt} = kP\\!\\left(1 - \\dfrac{P}{L}\\right)$. The carrying capacity is:',
-    options: ['$k$', '$P$', '$L$', '$kP$'],
+    options: ['$\\frac{L}{2}$', '$kL$', '$L$', '$kP$'],
     correctAnswer: 2,
-    explanation: 'In the logistic model dP/dt = kP(1 − P/L), L is the carrying capacity — the maximum sustainable population.',
+    explanation: 'In $\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{L}\\right)$, the growth rate is $0$ when $P = L$, and solutions level off there, so $L$ is the carrying capacity. $\\frac{L}{2}$ is where growth is fastest, and $kL$ and $kP$ are rates, not population sizes.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
@@ -395,14 +390,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'In Euler\'s method, decreasing the step size $h$ will generally:',
-    options: [
-      'Increase accuracy but require more steps',
-      'Decrease accuracy but run faster',
-      'Have no effect on accuracy',
-      'Always give the exact answer'
-    ],
+    options: ['Improve accuracy but need more steps', 'Reduce accuracy because errors pile up over more steps', 'Leave the accuracy unchanged for any step size', 'Make the approximation exact for every equation'],
     correctAnswer: 0,
-    explanation: 'Smaller step sizes produce more accurate approximations because the linear approximation is better over shorter intervals, but require more computational steps.',
+    explanation: 'A smaller step keeps each tangent-line step closer to the curve, so accuracy improves, but reaching the same $x$ takes more steps. The per-step error shrinks faster than the number of steps grows, so errors do not pile up; the result still depends on $h$; and Euler\'s method stays an approximation.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
@@ -431,9 +421,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int e^x \\sin x\\,dx$ requires IBP applied twice and then:',
-    options: ['Solving for the integral algebraically', 'A third application of IBP', 'u-substitution', 'Partial fractions'],
+    options: ['Solving algebraically for the integral', 'Applying integration by parts a third time', 'Substituting $u = e^x \\sin x$ and integrating', 'Rewriting $\\sin x$ with a half-angle identity'],
     correctAnswer: 0,
-    explanation: 'After two applications of IBP the original integral reappears on both sides. Collect like terms and solve algebraically.',
+    explanation: 'After two applications of integration by parts the original integral reappears on the right side, so you collect it on one side and solve for it algebraically. A third application just cycles again, and the substitution and identity do not simplify the product.',
     difficulty: 'hard',
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
@@ -486,14 +476,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int_0^{\\infty}\\frac{1}{(x+1)^2}\\,dx = $',
-    options: [
-      '$1$, since $\\lim_{t \\to \\infty}\\left(1 - \\frac{1}{t+1}\\right) = 1$',
-      'It diverges, since the integrand is never $0$',
-      '$-1$, from evaluating $-\\frac{1}{x+1}$ at $0$ only',
-      '$\\frac{1}{2}$, the value of the integrand at $x = 1$'
-    ],
+    options: ['$1$', 'Diverges', '$-1$', '$\\frac{1}{2}$'],
     correctAnswer: 0,
-    explanation: '$\\int_0^t (x+1)^{-2}\\,dx = \\left[-\\frac{1}{x+1}\\right]_0^t = 1 - \\frac{1}{t+1} \\to 1$. A positive integrand can still have finite total area, the lower-limit term enters with a minus sign, and the integrand value at one point is not the integral.',
+    explanation: '$\\int_0^t (x+1)^{-2}\\,dx = \\left[-\\frac{1}{x+1}\\right]_0^t = 1 - \\frac{1}{t+1} \\to 1$. A positive integrand can still have finite total area, so it does not diverge; evaluating $-\\frac{1}{x+1}$ at the lower limit only gives $-1$; and $\\frac{1}{2}$ is the value of the integrand at $x = 1$, not the integral.',
     difficulty: 'medium',
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
@@ -551,9 +536,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The integral $\\displaystyle\\int \\frac{3x^2+2}{x^3+2x}\\,dx$ simplifies to:',
-    options: ['$\\ln|x^3+2x|+C$', '$\\frac{3x^2+2}{2(x^3+2x)}+C$', '$3\\ln|x|+C$', '$\\arctan(x)+C$'],
+    options: ['$\\ln|x^3+2x|+C$', '$\\frac{3x^2+2}{2(x^3+2x)}+C$', '$\\ln|x^3| + \\ln|2x| + C$', '$\\frac{1}{x^3+2x}+C$'],
     correctAnswer: 0,
-    explanation: '$d/dx(x^{3}+2x)$ = $3x^{2}+2$. So this is ∫du/u = ln|u| + C = ln|$x^{3}+2x$| + C.',
+    explanation: 'The numerator $3x^2 + 2$ is the derivative of $x^3 + 2x$, so this is $\\int \\frac{du}{u} = \\ln|x^3 + 2x| + C$. Splitting the log of a sum into a sum of logs is not valid, $\\frac{1}{x^3+2x}$ would come from $u^{-2}$, and the other choice treats the integrand like $u\\,du$.',
     difficulty: 'easy',
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
@@ -581,9 +566,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int \\frac{dx}{\\sqrt{1-x^2}} =$',
-    options: ['$\\arctan x + C$', '$\\arcsin x + C$', '$-\\arcsin x + C$', '$\\ln|1-x^2|+C$'],
+    options: ['$-\\sqrt{1-x^2}+C$', '$\\arcsin x + C$', '$-\\arcsin x + C$', '$\\sec^{-1} x + C$'],
     correctAnswer: 1,
-    explanation: 'This is the standard inverse-sine antiderivative: $\\int dx/\\sqrt{1-x^{2}}$ = arcsin x + C.',
+    explanation: 'This is the standard inverse-sine antiderivative: $\\int \\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C$. $-\\sqrt{1-x^2}$ is an antiderivative of $\\frac{x}{\\sqrt{1-x^2}}$, the minus sign gives the derivative of $\\arccos x$, and $\\sec^{-1} x$ has derivative $\\frac{1}{|x|\\sqrt{x^2-1}}$.',
     difficulty: 'easy',
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
@@ -621,9 +606,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int_1^{\\infty}\\frac{\\ln x}{x^2}\\,dx$ converges to:',
-    options: ['$0$', '$1$', '$\\frac{1}{2}$', 'Diverges'],
+    options: ['$-1$', '$1$', '$\\frac{1}{2}$', 'Diverges'],
     correctAnswer: 1,
-    explanation: 'IBP: u = ln x, dv = $x^{-2}dx$. [−ln x/x]$ {}_{1}^{\\infty}$ + $\\int_{1}^{\\infty}$ $x^{-2}dx$ = 0 + [−1/x]$ {}_{1}^{\\infty}$ = 0−(−1) = 1.',
+    explanation: 'Integration by parts with $u = \\ln x$, $dv = x^{-2}\\,dx$: $\\left[-\\frac{\\ln x}{x}\\right]_1^{\\infty} + \\int_1^{\\infty} x^{-2}\\,dx = 0 + 1 = 1$. A sign slip in the parts formula gives $-1$, $\\frac{1}{2}$ uses the wrong antiderivative of $x^{-2}$, and $\\frac{\\ln x}{x} \\to 0$, so nothing diverges.',
     difficulty: 'hard',
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
@@ -706,9 +691,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int_0^{\\infty}\\frac{dx}{(1+x)^2} =$',
-    options: ['$1$', '$\\frac{1}{2}$', '$2$', 'Diverges'],
+    options: ['$1$', '$\\frac{1}{2}$', '$-1$', 'Diverges'],
     correctAnswer: 0,
-    explanation: '$\\int_{0}^{\\infty}(1+x)^{-2}dx$ = [−1/(1+x)]$ {}_{0}^{\\infty}$ = 0−(−1) = 1.',
+    explanation: '$\\int_0^{\\infty}(1+x)^{-2}\\,dx = \\left[-\\frac{1}{1+x}\\right]_0^{\\infty} = 0 - (-1) = 1$. Keeping only the lower-limit term without its minus sign gives $-1$, $\\frac{1}{2}$ is the integrand at $x = 1$, and the integrand shrinks like $\\frac{1}{x^2}$, so the integral converges.',
     difficulty: 'medium',
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
@@ -766,14 +751,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int \\arctan x\\,dx =$',
-    options: [
-      '$x\\arctan x - \\frac{1}{2}\\ln(1+x^2)+C$',
-      '$\\frac{1}{1+x^2}+C$',
-      '$x\\arctan x + \\frac{1}{2}\\ln(1+x^2)+C$',
-      '$\\frac{(\\arctan x)^2}{2}+C$'
-    ],
+    options: ['$x\\arctan x - \\frac{1}{2}\\ln(1+x^2)+C$', '$\\frac{1}{1+x^2}+C$', '$x\\arctan x + \\frac{1}{2}\\ln(1+x^2)+C$', '$x\\arctan x - \\ln(1+x^2)+C$'],
     correctAnswer: 0,
-    explanation: 'IBP: u = arctan x, dv = dx. ∫arctan x dx = x arctan x − $\\int x/(1+x^{2})dx$ = x arctan x − $(1/2)\\ln (1+x^{2})$ + C.',
+    explanation: 'Integration by parts with $u = \\arctan x$, $dv = dx$: $x\\arctan x - \\int \\frac{x}{1+x^2}\\,dx = x\\arctan x - \\frac{1}{2}\\ln(1+x^2) + C$. A plus sign forgets to subtract, dropping the $\\frac{1}{2}$ forgets the factor from $u = 1 + x^2$, and $\\frac{1}{1+x^2}$ is the derivative of $\\arctan x$.',
     difficulty: 'medium',
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
@@ -801,14 +781,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'A tabular method (repeated IBP) is most efficient for:',
-    options: [
-      '$\\int x^4 e^x\\,dx$',
-      '$\\int \\ln x\\,dx$',
-      '$\\int \\frac{1}{x^2+1}\\,dx$',
-      '$\\int \\sin x\\cos x\\,dx$'
-    ],
+    options: ['$\\int x^4 e^x\\,dx$', '$\\int x^4 \\ln x\\,dx$', '$\\int \\frac{1}{x^2+1}\\,dx$', '$\\int \\sin x\\cos x\\,dx$'],
     correctAnswer: 0,
-    explanation: 'The tabular method shines when one factor is a polynomial $(x^{4})$ and the other $(e^{x})$ can be integrated repeatedly.',
+    explanation: 'The tabular method works when one factor is a polynomial that differentiates to $0$ and the other, like $e^x$, can be integrated repeatedly. $\\ln x$ cannot be integrated repeatedly in a clean way (with $x^4 \\ln x$ you take $u = \\ln x$ and integrate once), $\\frac{1}{x^2+1}$ is an arctangent, and $\\sin x\\cos x$ needs only a substitution.',
     difficulty: 'easy',
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
@@ -861,9 +836,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Does $\\displaystyle\\int_2^{\\infty}\\frac{1}{x\\ln x}\\,dx$ converge or diverge?',
-    options: ['Converges', 'Diverges', 'Cannot be determined', 'Equals $1$'],
+    options: ['Converges', 'Diverges', 'Converges, as it shrinks faster than the divergent $\\int \\frac{dx}{x}$', 'Equals $1$'],
     correctAnswer: 1,
-    explanation: 'Let u = ln x. $\\int_{2}^{\\infty}$ dx/(x ln x) = ∫_{ln 2}^∞ du/u = [ln|u|]_{ln 2}^∞ = ∞. Diverges.',
+    explanation: 'With $u = \\ln x$, $\\int_2^{\\infty} \\frac{dx}{x\\ln x} = \\int_{\\ln 2}^{\\infty} \\frac{du}{u} = \\lim_{t \\to \\infty} [\\ln u]_{\\ln 2}^{t} = \\infty$, so it diverges. Being smaller than a divergent integral proves nothing, and the integral has no finite value.',
     difficulty: 'hard',
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
@@ -886,9 +861,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int x\\arcsin x\\,dx$ is best evaluated using:',
-    options: ['u-substitution', 'Trig substitution', 'Integration by parts', 'Partial fractions'],
+    options: ['A $u$-substitution with $u = x^2$', 'A trigonometric substitution', 'Integration by parts', 'Partial fraction decomposition'],
     correctAnswer: 2,
-    explanation: 'With the product of a polynomial and an inverse trig function, IBP is the correct approach. Let u = arcsin x, dv = x dx.',
+    explanation: 'The integrand is a polynomial times an inverse trig function, so integration by parts with $u = \\arcsin x$ and $dv = x\\,dx$ is the approach. $u = x^2$ does not produce the needed $du$, there is no radical to substitute away at the start, and the integrand is not a rational function.',
     difficulty: 'easy',
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
@@ -931,9 +906,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int \\sin(\\ln x)\\,dx$ is evaluated using:',
-    options: ['u-substitution alone', 'Integration by parts (twice)', 'Trig substitution', 'Partial fractions'],
+    options: ['A single $u$-substitution', 'Integration by parts twice', 'A trigonometric substitution', 'Partial fraction decomposition'],
     correctAnswer: 1,
-    explanation: 'Like $\\int e^{x}$ sin x dx, this requires two applications of IBP, after which the original integral reappears and can be solved algebraically.',
+    explanation: 'Like $\\int e^x \\sin x\\,dx$, this needs integration by parts twice (with $u = \\sin(\\ln x)$, then $u = \\cos(\\ln x)$), after which the original integral reappears and can be solved for. The substitution $u = \\ln x$ alone only turns it into $\\int e^u \\sin u\\,du$, which still needs parts, and there is no radical or rational function to decompose.',
     difficulty: 'hard',
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
@@ -941,14 +916,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'When $\\displaystyle\\int_a^b f(x)\\,dx$ has an integrand with a vertical asymptote at $x = c$ where $a < c < b$, we must:',
-    options: [
-      'Split the integral at $x = c$ and take limits from both sides',
-      'Simply ignore the asymptote',
-      'Use L\'Hôpital\'s Rule on $f(x)$',
-      'Change to polar coordinates'
-    ],
+    options: ['Split at $c$ and take a limit on each side', 'Ignore the asymptote and integrate as usual', 'Apply L\'Hospital\'s Rule to $f(x)$ near $c$', 'Evaluate $F(b) - F(a)$ with any antiderivative'],
     correctAnswer: 0,
-    explanation: 'Split into $\\int_{a}^{c^{-}}$ + $\\int_{c^{+}}^{b}$, evaluating each as a limit. Both must converge for the integral to converge.',
+    explanation: 'Split into $\\int_a^c + \\int_c^b$ and evaluate each piece as a one-sided limit; the integral converges only if both pieces do. Ignoring the asymptote or plugging the endpoints into an antiderivative can give a finite number for a divergent integral (for example $\\int_{-1}^{1} \\frac{dx}{x^2}$), and L\'Hospital\'s Rule is for limits of quotients.',
     difficulty: 'medium',
     domain: 'advanced-integration',
     topicSlug: 'improper-integrals-calcbc',
@@ -966,9 +936,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int_1^e \\ln x\\,dx =$',
-    options: ['$1$', '$e-1$', '$e$', '$0$'],
+    options: ['$1$', '$e-1$', '$2e-1$', '$-1$'],
     correctAnswer: 0,
-    explanation: '∫ln x dx = x ln x − x. [x ln x − x]$ {}_{1}^{e}$ = (e·1 − e) − (1·0 − 1) = 0 − (−1) = 1.',
+    explanation: '$\\int \\ln x\\,dx = x\\ln x - x$, so $[x\\ln x - x]_1^e = (e - e) - (0 - 1) = 1$. A plus sign in the antiderivative gives $(e + e) - (0 + 1) = 2e - 1$, subtracting in the wrong order gives $-1$, and $e - 1$ is just the width of the interval.',
     difficulty: 'medium',
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
@@ -986,9 +956,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int \\frac{\\sin x}{\\cos^2 x}\\,dx =$',
-    options: ['$\\sec x + C$', '$-\\sec x + C$', '$\\tan x + C$', '$-\\cos x + C$'],
+    options: ['$\\sec x + C$', '$-\\sec x + C$', '$-\\ln|\\cos x| + C$', '$-\\cos x + C$'],
     correctAnswer: 0,
-    explanation: 'sin $x/\\cos^{2}x$ = sec x tan x. ∫sec x tan x dx = sec x + C.',
+    explanation: '$\\frac{\\sin x}{\\cos^2 x} = \\sec x\\tan x$, and $\\int \\sec x\\tan x\\,dx = \\sec x + C$ (or let $u = \\cos x$: $-\\int u^{-2}\\,du = u^{-1}$). Losing the minus sign from $du$ gives $-\\sec x$, treating $u^{-2}$ as $u^{-1}$ gives a logarithm, and $-\\cos x$ integrates only the numerator.',
     difficulty: 'easy',
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
@@ -998,9 +968,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   // ── BATCH 1 EXPANSION: parametric-polar-vector (53 new) ───────────
   {
     question: 'For $x = \\cos t$, $y = \\sin t$, the curve traced for $0 \\leq t \\leq 2\\pi$ is:',
-    options: ['A circle of radius 1', 'An ellipse', 'A parabola', 'A line segment'],
+    options: ['A circle of radius 1', 'An ellipse with axes 1 and 2', 'A parabola opening upward', 'A line segment from $-1$ to $1$'],
     correctAnswer: 0,
-    explanation: '$x^{2}+y^{2}$ = $\\cos^{2}t+\\sin^{2}t$ = 1. This traces the unit circle.',
+    explanation: '$x^2 + y^2 = \\cos^2 t + \\sin^2 t = 1$, so the curve is the unit circle, traced once for $0 \\le t \\le 2\\pi$. The axes are equal, so it is not a non-circular ellipse, and neither coordinate is a polynomial in the other.',
     difficulty: 'easy',
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
@@ -1008,9 +978,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'For the parametric curve $x = 2\\cos t$, $y = 3\\sin t$, the curve is:',
-    options: ['A circle', 'An ellipse with semi-axes $2$ and $3$', 'A parabola', 'A hyperbola'],
+    options: ['A circle', 'An ellipse', 'A parabola', 'A hyperbola'],
     correctAnswer: 1,
-    explanation: '$(x/2)^{2}$ + $(y/3)^{2}$ = $\\cos^{2}t$ + $\\sin^{2}t$ = 1. This is an ellipse with semi-major axis 3 and semi-minor axis 2.',
+    explanation: '$\\left(\\frac{x}{2}\\right)^2 + \\left(\\frac{y}{3}\\right)^2 = \\cos^2 t + \\sin^2 t = 1$, an ellipse with semi-axes $2$ (horizontal) and $3$ (vertical). Unequal coefficients rule out a circle, and the sum of squares equal to $1$ rules out a parabola or hyperbola.',
     difficulty: 'easy',
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
@@ -1028,14 +998,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The second derivative $\\dfrac{d^2y}{dx^2}$ for a parametric curve is:',
-    options: [
-      '$\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right) \\div \\frac{dx}{dt}$',
-      '$\\frac{d^2y/dt^2}{d^2x/dt^2}$',
-      '$\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right)$',
-      '$\\frac{dy/dt}{dx/dt}$ squared'
-    ],
+    options: ['$\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right) \\div \\frac{dx}{dt}$', '$\\frac{d^2y/dt^2}{d^2x/dt^2}$', '$\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right)$', '$\\left(\\frac{dy/dt}{dx/dt}\\right)^2$'],
     correctAnswer: 0,
-    explanation: '$d^{2}y/dx^{2}$ = (d/dt)(dy/dx) / (dx/dt). It is NOT simply $(d^{2}y/dt^{2})/(d^{2}x/dt^{2})$.',
+    explanation: '$\\frac{d^2y}{dx^2} = \\frac{d}{dx}\\left(\\frac{dy}{dx}\\right) = \\frac{\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right)}{dx/dt}$ by the chain rule. Dividing the second derivatives in $t$ is not valid, differentiating with respect to $t$ alone forgets to divide by $\\frac{dx}{dt}$, and squaring the first derivative is unrelated.',
     difficulty: 'medium',
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
@@ -1093,14 +1058,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'For the polar curve $r(\\theta)$, the slope of the tangent line is:',
-    options: [
-      '$\\frac{dr}{d\\theta}$',
-      '$\\frac{r\'\\sin\\theta + r\\cos\\theta}{r\'\\cos\\theta - r\\sin\\theta}$',
-      '$\\frac{r\\cos\\theta}{r\\sin\\theta}$',
-      '$r\'(\\theta)\\cdot\\theta$'
-    ],
+    options: ['$\\frac{dr}{d\\theta}$', '$\\frac{r\'\\sin\\theta + r\\cos\\theta}{r\'\\cos\\theta - r\\sin\\theta}$', '$\\frac{r\'\\cos\\theta + r\\sin\\theta}{r\'\\sin\\theta - r\\cos\\theta}$', '$\\frac{r\'\\sin\\theta - r\\cos\\theta}{r\'\\cos\\theta + r\\sin\\theta}$'],
     correctAnswer: 1,
-    explanation: 'dy/dx = (dy/dθ)/(dx/dθ) where x = r cos θ, y = r sin θ. So dy/dx = (r\'sin θ + r cos θ)/(r\'cos θ − r sin θ).',
+    explanation: 'With $x = r\\cos\\theta$ and $y = r\\sin\\theta$, $\\frac{dy}{dx} = \\frac{dy/d\\theta}{dx/d\\theta} = \\frac{r\'\\sin\\theta + r\\cos\\theta}{r\'\\cos\\theta - r\\sin\\theta}$. Swapping $\\sin$ and $\\cos$ throughout differentiates the wrong coordinate, flipping the inner signs misapplies the product rule, and $\\frac{dr}{d\\theta}$ is the rate of change of $r$, not a slope.',
     difficulty: 'medium',
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
@@ -1233,9 +1193,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The polar curve $r = 1 + 2\\cos\\theta$ is a:',
-    options: ['Cardioid', 'Circle', 'Limaçon with inner loop', 'Rose'],
+    options: ['Cardioid', 'Limaçon without a loop', 'Limaçon with inner loop', 'Three-petaled rose'],
     correctAnswer: 2,
-    explanation: 'r = a + b cos θ with b > a (2 > 1) is a limaçon with an inner loop.',
+    explanation: 'For $r = a + b\\cos\\theta$ with $b > a$ (here $2 > 1$), $r$ becomes negative for some $\\theta$, which creates an inner loop. A cardioid needs $a = b$, a limaçon without a loop needs $a > b$, and roses have the form $\\cos(n\\theta)$.',
     difficulty: 'easy',
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
@@ -1333,14 +1293,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The area between $r_1 = 2$ and $r_2 = 2(1+\\cos\\theta)$ for the region outside the circle and inside the cardioid is found by:',
-    options: [
-      '$\\frac{1}{2}\\int_\\alpha^\\beta (r_2^2 - r_1^2)\\,d\\theta$ over the appropriate interval',
-      '$\\int_0^{2\\pi}(r_2 - r_1)\\,d\\theta$',
-      '$\\pi r_2^2 - \\pi r_1^2$',
-      'It cannot be computed with a single integral'
-    ],
+    options: ['$\\frac{1}{2}\\int_\\alpha^\\beta (r_2^2 - r_1^2)\\,d\\theta$', '$\\frac{1}{2}\\int_\\alpha^\\beta (r_2 - r_1)^2\\,d\\theta$', '$\\int_\\alpha^\\beta (r_2 - r_1)\\,d\\theta$', '$\\pi r_2^2 - \\pi r_1^2$'],
     correctAnswer: 0,
-    explanation: 'Area between two polar curves: A = $(1/2)\\int (r_{2}^{2} - r_{1}^{2})d\\theta$ over the interval where $r_{2}$ > $r_{1}$.',
+    explanation: 'The area between two polar curves is $\\frac{1}{2}\\int_\\alpha^\\beta (r_{\\text{outer}}^2 - r_{\\text{inner}}^2)\\,d\\theta$ over the angles where the cardioid is outside the circle. Squaring the difference is not the difference of squares, polar area needs $\\frac{1}{2}r^2$, and a cardioid is not a circle, so $\\pi r^2$ does not apply.',
     difficulty: 'hard',
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
@@ -1423,14 +1378,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'If a particle moves along $\\mathbf{r}(t) = \\langle 3\\cos t, 3\\sin t \\rangle$, it moves:',
-    options: [
-      'In a straight line',
-      'Along a circle of radius 3',
-      'Along a spiral',
-      'Along an ellipse'
-    ],
+    options: ['Along a straight line through the origin', 'Along a circle of radius 3', 'Along a spiral moving outward', 'Along a circle of radius $9$'],
     correctAnswer: 1,
-    explanation: '$x^{2}+y^{2}$ = $9\\cos^{2}t$ + $9\\sin^{2}t$ = 9. The particle moves on a circle of radius 3.',
+    explanation: '$x^2 + y^2 = 9\\cos^2 t + 9\\sin^2 t = 9$, a circle of radius $3$ (the radius is $\\sqrt{9}$, not $9$). The distance from the origin stays constant, so the path is neither a line nor a spiral.',
     difficulty: 'easy',
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
@@ -1468,9 +1418,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The polar equation $r = \\theta$ for $\\theta \\geq 0$ describes:',
-    options: ['A circle', 'A cardioid', 'An Archimedean spiral', 'A rose'],
+    options: ['A circle centered at the origin', 'A cardioid through the origin', 'An Archimedean spiral', 'A line through the origin'],
     correctAnswer: 2,
-    explanation: 'r = θ is the Archimedean spiral, where the radius increases linearly with the angle.',
+    explanation: '$r = \\theta$ makes the distance from the origin grow linearly with the angle, which is an Archimedean spiral. A circle needs constant $r$, a line through the origin is $\\theta = c$, and a cardioid has the form $a(1 \\pm \\cos\\theta)$.',
     difficulty: 'easy',
     domain: 'parametric-polar-vector',
     topicSlug: 'polar-calculus-calcbc',
@@ -1498,14 +1448,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\int_0^{2\\pi} |\\mathbf{r}\'(t)|\\,dt$ (where $\\mathbf{r}(t)$ is a position vector) gives the:',
-    options: [
-      'Displacement',
-      'Total distance traveled',
-      'Average velocity',
-      'Final position'
-    ],
+    options: ['Displacement of the particle', 'Total distance traveled', 'Average velocity over the interval', 'Final position of the particle'],
     correctAnswer: 1,
-    explanation: '$\\int_{0}^{2\\pi}$|r\'(t)|dt is the integral of speed, which gives total distance traveled (arc length).',
+    explanation: '$|\\mathbf{r}\'(t)|$ is the speed, and integrating speed gives the total distance traveled (the arc length of the path). Displacement and final position come from integrating the velocity vector itself, and average velocity divides displacement by elapsed time.',
     difficulty: 'easy',
     domain: 'parametric-polar-vector',
     topicSlug: 'vector-valued-functions-calcbc',
@@ -1525,9 +1470,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The geometric series $\\sum_{n=0}^{\\infty} ar^n$ converges when:',
-    options: ['$|r| < 1$', '$|r| \\leq 1$', '$r < 1$', '$|r| > 1$'],
+    options: ['$|r| < 1$', '$|r| \\leq 1$', '$-1 \\le r < 1$', '$|r| \\ge 1$'],
     correctAnswer: 0,
-    explanation: 'A geometric series converges if and only if |r| < 1, with sum a/(1−r).',
+    explanation: 'A geometric series converges exactly when $|r| < 1$, with sum $\\frac{a}{1-r}$. At $r = \\pm 1$ the terms do not go to $0$ (so including either endpoint is wrong), and $|r| \\ge 1$ is where it diverges.',
     difficulty: 'easy',
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
@@ -1545,9 +1490,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The series $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^3}$ is:',
-    options: ['A divergent p-series', 'A convergent p-series ($p = 3 > 1$)', 'A geometric series', 'An alternating series'],
+    options: ['A divergent $p$-series', 'A convergent $p$-series', 'A convergent geometric series', 'A conditionally convergent series'],
     correctAnswer: 1,
-    explanation: 'p-series with p = 3 > 1 converges.',
+    explanation: '$\\sum \\frac{1}{n^3}$ is a $p$-series with $p = 3 > 1$, so it converges. The ratio of consecutive terms is not constant (not geometric), and all terms are positive, so convergence is absolute, not conditional.',
     difficulty: 'easy',
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
@@ -1575,9 +1520,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n^2}$:',
-    options: ['Diverges', 'Converges conditionally', 'Converges absolutely', 'Converges by ratio test'],
+    options: ['Diverges by the $n$th term test', 'Converges conditionally', 'Converges absolutely', 'Converges by ratio test'],
     correctAnswer: 2,
-    explanation: '|$a_{n}$| = $1/n^{2}$ is a convergent p-series. Since it converges absolutely, it converges absolutely (not just conditionally).',
+    explanation: '$|a_n| = \\frac{1}{n^2}$ is a convergent $p$-series, so the series converges absolutely (not just conditionally). The terms go to $0$, so the $n$th term test shows nothing, and the ratio test gives $L = 1$, which is inconclusive.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'alternating-series-calcbc',
@@ -1585,14 +1530,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'A telescoping series is one where:',
-    options: [
-      'Most terms cancel in the partial sums',
-      'The ratio of consecutive terms is constant',
-      'All terms are positive',
-      'The terms alternate in sign'
-    ],
+    options: ['Most terms cancel in the partial sums', 'The ratio of consecutive terms is constant', 'Its terms are all positive and decreasing', 'Its terms alternate between positive and negative'],
     correctAnswer: 0,
-    explanation: 'In a telescoping series, partial fraction decomposition causes most terms to cancel, leaving only a few boundary terms.',
+    explanation: 'In a telescoping series, partial fractions make most terms of each partial sum cancel, leaving only a few at the ends. A constant ratio describes a geometric series, positive decreasing terms describe integral-test candidates, and alternating signs describe alternating series.',
     difficulty: 'easy',
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
@@ -1610,14 +1550,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The integral test applies when $f(x)$ is:',
-    options: [
-      'Continuous, positive, and decreasing on $[1, \\infty)$',
-      'Differentiable and increasing',
-      'Continuous on $[0, 1]$',
-      'Any continuous function'
-    ],
+    options: ['Continuous, positive, and decreasing on $[1, \\infty)$', 'Continuous, positive, and increasing on $[1, \\infty)$', 'Continuous on $[0, 1]$', 'Any continuous function'],
     correctAnswer: 0,
-    explanation: 'The Integral Test requires f to be continuous, positive, and decreasing on [1, ∞).',
+    explanation: 'The Integral Test requires $f$ to be continuous, positive, and decreasing on $[1, \\infty)$ (at least eventually), with $f(n) = a_n$. An increasing positive function makes the series diverge by the $n$th-term test, and continuity alone or on the wrong interval is not enough.',
     difficulty: 'easy',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -1625,9 +1560,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Using the Integral Test on $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^2+1}$, we evaluate $\\displaystyle\\int_1^{\\infty}\\frac{dx}{x^2+1} =$',
-    options: ['$\\frac{\\pi}{4}$', '$\\frac{\\pi}{2}$', '$\\frac{\\pi}{2}-\\frac{\\pi}{4}=\\frac{\\pi}{4}$', '$\\frac{3\\pi}{4}$'],
+    options: ['$-\\frac{\\pi}{4}$', '$\\frac{\\pi}{2}$', '$\\frac{\\pi}{4}$', '$\\frac{3\\pi}{4}$'],
     correctAnswer: 2,
-    explanation: '$\\int_{1}^{\\infty}$ $dx/(x^{2}+1)$ = [arctan x]$ {}_{1}^{\\infty}$ = π/2 − π/4 = π/4. Finite, so the series converges.',
+    explanation: '$\\int_1^{\\infty} \\frac{dx}{x^2+1} = \\lim_{t \\to \\infty} [\\arctan x]_1^t = \\frac{\\pi}{2} - \\frac{\\pi}{4} = \\frac{\\pi}{4}$. Subtracting in the wrong order gives $-\\frac{\\pi}{4}$, ignoring the lower limit gives $\\frac{\\pi}{2}$, and adding the two values gives $\\frac{3\\pi}{4}$.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -1635,9 +1570,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Direct Comparison Test: if $0 \\leq a_n \\leq b_n$ and $\\sum b_n$ converges, then:',
-    options: ['$\\sum a_n$ diverges', '$\\sum a_n$ converges', 'Nothing can be concluded', '$\\sum a_n = \\sum b_n$'],
+    options: ['$\\sum a_n$ diverges', '$\\sum a_n$ converges', 'Nothing can be concluded', '$\\sum a_n$ converges to $\\sum b_n$'],
     correctAnswer: 1,
-    explanation: 'If the larger series converges, the smaller one does too.',
+    explanation: 'If the larger series $\\sum b_n$ converges, the smaller nonnegative series $\\sum a_n$ converges too. The test gives no information about divergence here, and it does not say the two sums are equal.',
     difficulty: 'easy',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -1660,9 +1595,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Does $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n}{n^2+1}$ converge or diverge?',
-    options: ['Converges', 'Diverges', 'Converges conditionally', 'Cannot be determined'],
+    options: ['Converges', 'Diverges', 'Converges conditionally', 'Converges by comparison with the divergent $\\sum \\frac{1}{n}$'],
     correctAnswer: 1,
-    explanation: '$n/(n^{2}+1)$ ~ 1/n for large n. By LCT with Σ1/n (harmonic, diverges), this series diverges.',
+    explanation: '$\\frac{n}{n^2+1}$ behaves like $\\frac{1}{n}$ for large $n$, and the limit comparison test with the divergent harmonic series shows this series diverges. Being smaller than a divergent series proves nothing, and positive-term series cannot converge conditionally.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -1715,9 +1650,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'If $\\sum |a_n|$ converges, then $\\sum a_n$:',
-    options: ['Diverges', 'Converges absolutely', 'Converges conditionally', 'May diverge'],
+    options: ['Diverges by comparison', 'Converges absolutely', 'Converges conditionally', 'May diverge if signs vary'],
     correctAnswer: 1,
-    explanation: 'Absolute convergence implies convergence. If Σ|$a_{n}$| converges, so does $\\Sigma a_{n}$ (absolutely).',
+    explanation: 'Absolute convergence implies convergence: if $\\sum |a_n|$ converges, then $\\sum a_n$ converges, and absolutely. It cannot be merely conditional, and changing signs cannot make it diverge.',
     difficulty: 'easy',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -1735,14 +1670,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Ratio Test gives $L = 1$ for $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n}$. This means:',
-    options: [
-      'The series converges',
-      'The series diverges',
-      'The Ratio Test is inconclusive',
-      'The series converges conditionally'
-    ],
+    options: ['The series converges', 'The series diverges', 'The test is inconclusive', 'The series converges conditionally'],
     correctAnswer: 2,
-    explanation: 'When L = 1, the Ratio Test is inconclusive. We know Σ1/n diverges by other means (p-series, p=1).',
+    explanation: 'When $L = 1$ the Ratio Test is inconclusive; $\\sum \\frac{1}{n}$ diverges, but that is known from the $p$-series test, not from the ratio. The ratio alone cannot show convergence or divergence here, and a series of positive terms cannot converge conditionally.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -1805,14 +1735,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n^2}{2^n}$ converges because:',
-    options: [
-      'Ratio test: $L = 1/2 < 1$',
-      'It is a p-series with $p > 1$',
-      'Terms alternate in sign',
-      'Comparison with $\\sum 1/n^2$'
-    ],
+    options: ['The ratio test gives $L = \\frac{1}{2} < 1$', 'It is a $p$-series with $p > 1$', 'Its terms alternate in sign', 'Its terms approach $0$ as $n \\to \\infty$'],
     correctAnswer: 0,
-    explanation: 'Ratio: $a_{n+1}/a_{n}$ = $(n+1)^{2}/(2n^{2})$ → 1/2 < 1. Converges.',
+    explanation: '$\\frac{a_{n+1}}{a_n} = \\frac{(n+1)^2}{2n^2} \\to \\frac{1}{2} < 1$, so the series converges by the ratio test. It is not a $p$-series (the denominator is exponential), all terms are positive, and terms approaching $0$ is necessary but never sufficient for convergence.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -1820,14 +1745,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Which series can be tested with the Alternating Series Test?',
-    options: [
-      '$\\displaystyle\\sum \\frac{(-1)^n}{n}$',
-      '$\\displaystyle\\sum \\frac{1}{n^2}$',
-      '$\\displaystyle\\sum \\frac{n}{2^n}$',
-      '$\\displaystyle\\sum \\frac{1}{n!}$'
-    ],
+    options: ['$\\displaystyle\\sum \\frac{(-1)^n}{n}$', '$\\displaystyle\\sum \\frac{(-1)^{2n}}{n}$', '$\\displaystyle\\sum \\frac{n}{2^n}$', '$\\displaystyle\\sum \\frac{1}{n!}$'],
     correctAnswer: 0,
-    explanation: 'Only $\\Sigma (-1)^{n}/n$ has alternating signs. The AST applies to series of the form $\\Sigma (-1)^{n}b_{n}$.',
+    explanation: 'The AST applies to series of the form $\\sum (-1)^n b_n$ with $b_n > 0$, and $\\sum \\frac{(-1)^n}{n}$ alternates in sign. $(-1)^{2n} = 1$ for every $n$, so that series is just the harmonic series, and the other two have only positive terms.',
     difficulty: 'easy',
     domain: 'sequences-series',
     topicSlug: 'alternating-series-calcbc',
@@ -1845,9 +1765,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The sequence $a_n = \\frac{n!}{n^n}$:',
-    options: ['Diverges to $\\infty$', 'Converges to $0$', 'Converges to $1$', 'Oscillates'],
+    options: ['Diverges to $\\infty$', 'Converges to $0$', 'Converges to $\\frac{1}{e}$', 'Oscillates'],
     correctAnswer: 1,
-    explanation: 'n!/$n^{n}$ = (1/n)·(2/n)···(n/n). Each factor ≤ 1, and many go to 0. So $a_{n}$ → 0.',
+    explanation: '$\\frac{n!}{n^n} = \\frac{1}{n} \\cdot \\frac{2}{n} \\cdots \\frac{n}{n} \\le \\frac{1}{n} \\to 0$. The value $\\frac{1}{e}$ is the limit of the ratio $\\frac{a_{n+1}}{a_n}$, not of the terms themselves, every term is positive, and the terms shrink rather than grow.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'infinite-sequences-calcbc',
@@ -1855,9 +1775,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Does $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{\\sin n}{n^2}$ converge absolutely?',
-    options: ['Yes', 'No', 'Only conditionally', 'Cannot be determined'],
+    options: ['Yes', 'No, it diverges', 'Only conditionally', 'Cannot be determined'],
     correctAnswer: 0,
-    explanation: '|sin $n/n^{2}$| ≤ $1/n^{2}$. Since $\\Sigma 1/n^{2}$ converges, by comparison Σ|sin $n/n^{2}$| converges. So it converges absolutely.',
+    explanation: '$\\left|\\frac{\\sin n}{n^2}\\right| \\le \\frac{1}{n^2}$, and $\\sum \\frac{1}{n^2}$ converges, so by direct comparison $\\sum \\left|\\frac{\\sin n}{n^2}\\right|$ converges: the series converges absolutely. It therefore does not diverge, is not merely conditional, and comparison settles it.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -1865,9 +1785,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n}{e^n}$:',
-    options: ['Diverges', 'Converges', 'Oscillates', 'Converges to $e$'],
+    options: ['Diverges to $\\infty$', 'Converges', 'Oscillates', 'Converges to $e$'],
     correctAnswer: 1,
-    explanation: 'Ratio test: $(n+1)\\cdot e^{-(n+1)}/(n\\cdot e^{-n})$ = (n+1)/(ne) → 1/e < 1. Converges.',
+    explanation: 'The ratio test gives $\\frac{(n+1)e^{-(n+1)}}{ne^{-n}} = \\frac{n+1}{ne} \\to \\frac{1}{e} < 1$, so the series converges. Exponential decay beats the growing factor $n$, the terms are all positive (no oscillation), and the ratio test does not give the sum.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -1885,9 +1805,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{2^n+3^n}{5^n} =$',
-    options: ['$\\frac{35}{6}$', '$\\frac{5}{2}$', '$\\frac{25}{6}$', '$\\frac{11}{6}$'],
+    options: ['$\\frac{25}{6}$', '$\\frac{5}{2}$', '$\\frac{13}{6}$', 'Diverges'],
     correctAnswer: 0,
-    explanation: 'Split: $\\Sigma (2/5)^{n}$ + $\\Sigma (3/5)^{n}$ = 1/(1−2/5) + 1/(1−3/5) = 5/3 + 5/2 = 10/6+15/6 = 25/6. Wait: 5/3+5/2 = 10/6+15/6 = 25/6.',
+    explanation: 'Split into two geometric series: $\\sum \\left(\\frac{2}{5}\\right)^n + \\sum \\left(\\frac{3}{5}\\right)^n = \\frac{1}{1 - 2/5} + \\frac{1}{1 - 3/5} = \\frac{5}{3} + \\frac{5}{2} = \\frac{25}{6}$. $\\frac{5}{2}$ keeps only the second series, $\\frac{13}{6}$ starts both sums at $n = 1$, and adding the numerators to get ratio $\\frac{5}{5} = 1$ is not a valid way to combine them.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
@@ -1925,9 +1845,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n^{3/2}}$:',
-    options: ['Diverges', 'Converges ($p$-series, $p = 3/2 > 1$)', 'Need more information', 'Converges to $\\pi$'],
+    options: ['Diverges, like $\\sum 1/n$', 'Converges', 'Need more information', 'Converges to $\\pi$'],
     correctAnswer: 1,
-    explanation: 'p-series with p = 3/2 > 1. Converges.',
+    explanation: '$\\sum \\frac{1}{n^{3/2}}$ is a $p$-series with $p = \\frac{3}{2} > 1$, so it converges. The harmonic series has $p = 1$, the $p$-series test settles the question, and the test does not give the sum.',
     difficulty: 'easy',
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
@@ -1935,9 +1855,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'For $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{n!}{(2n)!}$, the ratio test gives:',
-    options: ['$L = 0$', '$L = 1/2$', '$L = 1$', '$L = 2$'],
+    options: ['$L = 0$', '$L = 1/2$', '$L = \\frac{1}{4}$', '$L = \\infty$'],
     correctAnswer: 0,
-    explanation: '$a_{n+1}/a_{n}$ = (n+1)!/[(2n+2)!] × (2n)!/n! = (n+1)/[(2n+1)(2n+2)] → 0. Converges.',
+    explanation: '$\\frac{a_{n+1}}{a_n} = \\frac{(n+1)!}{(2n+2)!} \\cdot \\frac{(2n)!}{n!} = \\frac{n+1}{(2n+1)(2n+2)} \\to 0$, so the series converges. The denominator is quadratic in $n$ and the numerator linear, so the ratio does not settle at $\\frac{1}{2}$ or $\\frac{1}{4}$ (those come from comparing only leading coefficients), and it certainly does not grow.',
     difficulty: 'hard',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -1990,9 +1910,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The series $\\displaystyle\\sum_{n=2}^{\\infty}\\frac{1}{n(\\ln n)^2}$:',
-    options: ['Diverges', 'Converges', 'Oscillates', 'Is a p-series'],
+    options: ['Diverges, like $\\sum \\frac{1}{n\\ln n}$', 'Converges', 'Oscillates', 'Is a p-series'],
     correctAnswer: 1,
-    explanation: 'By Integral Test: $\\int_{2}^{\\infty}$ dx/[$x(\\ln x)^{2}$]. Let u = ln x: $\\int du/u^{2}$ = [−1/u] = finite. Converges.',
+    explanation: 'Integral test: with $u = \\ln x$, $\\int_2^{\\infty} \\frac{dx}{x(\\ln x)^2} = \\int_{\\ln 2}^{\\infty} \\frac{du}{u^2}$, which is finite, so the series converges. The square on $\\ln n$ is what separates it from the divergent $\\sum \\frac{1}{n\\ln n}$, the terms are positive, and it is not of the form $\\frac{1}{n^p}$.',
     difficulty: 'hard',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -2017,14 +1937,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Maclaurin series for $\\ln(1+x)$ is:',
-    options: [
-      '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}x^n}{n}$ for $|x| \\leq 1$, $x\\neq -1$',
-      '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}$',
-      '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{x^n}{n}$',
-      '$\\displaystyle\\sum_{n=0}^{\\infty}(-1)^n x^n$'
-    ],
+    options: ['$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}x^n}{n}$', '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^n}{n!}$', '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{x^n}{n}$', '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}x^n}{n!}$'],
     correctAnswer: 0,
-    explanation: 'ln(1+x) = x − $x^{2}/2$ + $x^{3}/3$ − $x^{4}/4$ + … = $\\Sigma (-1)^{n+1}x^{n}/n$ for −1 < x ≤ 1.',
+    explanation: '$\\ln(1+x) = x - \\frac{x^2}{2} + \\frac{x^3}{3} - \\cdots = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}x^n}{n}$ for $-1 < x \\le 1$. Factorials belong to the $e^x$ family (the alternating one is $1 - e^{-x}$), and without alternating signs $\\sum \\frac{x^n}{n}$ is $-\\ln(1 - x)$.',
     difficulty: 'medium',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -2127,14 +2042,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Taylor polynomial $P_2(x)$ for $\\sqrt{x}$ centered at $a = 4$ is:',
-    options: [
-      '$2 + \\frac{1}{4}(x-4) - \\frac{1}{64}(x-4)^2$',
-      '$2 + \\frac{1}{2}(x-4)$',
-      '$\\sqrt{4} + \\frac{x-4}{4}$',
-      '$2 + \\frac{1}{4}(x-4) + \\frac{1}{64}(x-4)^2$'
-    ],
+    options: ['$2 + \\frac{1}{4}(x-4) - \\frac{1}{64}(x-4)^2$', '$2 + \\frac{1}{4}(x-4) - \\frac{1}{32}(x-4)^2$', '$\\sqrt{4} + \\frac{x-4}{4}$', '$2 + \\frac{1}{4}(x-4) + \\frac{1}{64}(x-4)^2$'],
     correctAnswer: 0,
-    explanation: 'f(x)=$x^{1/2}$: f(4)=2, f\'(4)=1/4, f\'\'(4)=−1/32. $P_{2}$ = 2 + (1/4)(x−4) + $(-1/32)/2\\cdot (x-4)^{2}$ = $2+(x-4)/4-(x-4)^{2}/64$.',
+    explanation: 'For $f(x) = x^{1/2}$: $f(4) = 2$, $f\'(4) = \\frac{1}{4}$, $f\'\'(4) = -\\frac{1}{32}$, so $P_2 = 2 + \\frac{1}{4}(x-4) - \\frac{1}{32 \\cdot 2!}(x-4)^2 = 2 + \\frac{1}{4}(x-4) - \\frac{1}{64}(x-4)^2$. Using $f\'\'(4)$ without dividing by $2!$ gives $\\frac{1}{32}$, a plus sign misses that $f\'\'(4) < 0$, and stopping at the linear term gives only $P_1$.',
     difficulty: 'hard',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -2157,14 +2067,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Maclaurin series for $\\arctan x$ is:',
-    options: [
-      '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n x^{2n+1}}{2n+1}$, $|x|\\leq 1$',
-      '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^{2n+1}}{(2n+1)!}$',
-      '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n x^n}{n}$',
-      '$x - \\frac{x^2}{2} + \\frac{x^3}{3}$'
-    ],
+    options: ['$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n x^{2n+1}}{2n+1}$', '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^{2n+1}}{(2n+1)!}$', '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n x^n}{n}$', '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n x^{2n+1}}{(2n+1)!}$'],
     correctAnswer: 0,
-    explanation: 'arctan x = $\\int dx/(1+x^{2})$ = $\\int \\Sigma (-1)^{n}x^{2n}dx$ = $\\Sigma (-1)^{n}x^{2n+1}/(2n+1)$ for |x| ≤ 1.',
+    explanation: '$\\arctan x = \\int_0^x \\frac{dt}{1+t^2} = \\int_0^x \\sum (-1)^n t^{2n}\\,dt = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$ for $|x| \\le 1$. Factorials in the denominator give $\\sin x$ (alternating) or $\\sinh x$ (not alternating), and odd powers are required because $\\arctan$ is odd.',
     difficulty: 'medium',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -2187,9 +2092,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Find the coefficient of $x^3$ in the Maclaurin series for $e^x\\sin x$:',
-    options: ['$-\\frac{1}{3}$', '$\\frac{1}{3}$', '$\\frac{1}{6}$', '$-\\frac{1}{6}$'],
+    options: ['$\\frac{1}{3}$', '$\\frac{2}{3}$', '$\\frac{1}{6}$', '$-\\frac{1}{6}$'],
     correctAnswer: 0,
-    explanation: '$e^{x}$ = $1+x+x^{2}/2+x^{3}/6$+… sin x = $x-x^{3}/6$+… Product up to $x^{3}$: x + $x^{2}$ + $(1/2-1/6)x^{3}$ = $x+x^{2}+x^{3}/3$. Coefficient of $x^{3}$ = 1/3.',
+    explanation: '$e^x = 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6} + \\cdots$ and $\\sin x = x - \\frac{x^3}{6} + \\cdots$. The $x^3$ terms of the product come from $\\frac{x^2}{2} \\cdot x$ and $1 \\cdot \\left(-\\frac{x^3}{6}\\right)$: $\\frac{1}{2} - \\frac{1}{6} = \\frac{1}{3}$. Adding instead of subtracting gives $\\frac{2}{3}$, and $\\pm\\frac{1}{6}$ uses only one of the two factors\' cubic terms.',
     difficulty: 'hard',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -2212,14 +2117,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'If $R$ is the radius of convergence, the series $\\sum a_n(x-c)^n$ converges absolutely for:',
-    options: [
-      '$|x - c| < R$',
-      '$|x - c| \\leq R$',
-      '$|x - c| > R$',
-      '$x < c + R$'
-    ],
+    options: ['$|x - c| < R$', '$|x - c| \\leq R$', '$|x - c| \\ge R$', '$c - R < x \\le c + R$'],
     correctAnswer: 0,
-    explanation: 'A power series converges absolutely inside its radius: |x−c| < R.',
+    explanation: 'A power series converges absolutely for $|x - c| < R$, strictly inside its radius. At the endpoints $x = c \\pm R$ the behavior must be checked separately, so including either endpoint is not guaranteed, and outside the radius the series diverges.',
     difficulty: 'easy',
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
@@ -2227,9 +2127,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The interval of convergence for $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(x-2)^n}{3^n}$ is:',
-    options: ['$(-1, 5)$', '$[-1, 5]$', '$(-1, 5]$', '$[-1, 5)$'],
+    options: ['$-1 < x < 5$', '$-1 \\le x \\le 5$', '$-1 < x \\le 5$', '$-1 \\le x < 5$'],
     correctAnswer: 0,
-    explanation: 'Geometric with r = (x−2)/3. |r| < 1: |x−2| < 3, so −1 < x < 5. At endpoints: |r| = 1, diverges. IOC = (−1, 5).',
+    explanation: 'This is geometric with ratio $r = \\frac{x-2}{3}$, so it converges when $|x - 2| < 3$, that is $-1 < x < 5$. At both endpoints $|r| = 1$ and the terms do not go to $0$ (they are $1$ or $\\pm 1$), so neither endpoint is included.',
     difficulty: 'medium',
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
@@ -2247,14 +2147,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'To find the Maclaurin series for $\\int_0^x e^{-t^2}\\,dt$, you should:',
-    options: [
-      'Replace $t$ with $-t^2$ in $e^t$ series, then integrate term by term',
-      'Use integration by parts on $e^{-t^2}$',
-      'Find a closed form first',
-      'Use L\'Hôpital\'s Rule'
-    ],
+    options: ['Substitute $-t^2$ into the $e^t$ series and integrate termwise', 'Integrate by parts first, then write the result as a series', 'Find a closed-form antiderivative, then expand it in a series', 'Apply L\'Hospital\'s Rule to $e^{-t^2}$ near $t = 0$'],
     correctAnswer: 0,
-    explanation: '$e^{-t^{2}}$ = $\\Sigma (-1)^{n}t^{2n}/n$!. Integrate: $\\int_{0}^{x}$ = $\\Sigma (-1)^{n}x^{2n+1}$/[n!(2n+1)]. No closed form exists.',
+    explanation: '$e^{-t^2} = \\sum \\frac{(-t^2)^n}{n!} = \\sum \\frac{(-1)^n t^{2n}}{n!}$, and integrating term by term gives $\\sum \\frac{(-1)^n x^{2n+1}}{n!(2n+1)}$. $e^{-t^2}$ has no elementary antiderivative, so integration by parts or a closed form cannot get started, and L\'Hospital\'s Rule is for limits.',
     difficulty: 'medium',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -2262,9 +2157,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'If $f(x) = \\sum_{n=0}^{\\infty}\\frac{x^n}{n!}$ and $g(x) = \\sum_{n=0}^{\\infty}\\frac{(-1)^n x^n}{n!}$, then $f(x)\\cdot g(x) =$',
-    options: ['$1$', '$e^{2x}$', '$e^{x^2}$', '$0$'],
+    options: ['$1$', '$e^{2x}$', '$e^{x^2}$', '$e^{-x^2}$'],
     correctAnswer: 0,
-    explanation: 'f(x) = $e^{x}$ and g(x) = $e^{-x}$. f(x)g(x) = $e^{x}\\cdot e^{-x}$ = $e^{0}$ = 1.',
+    explanation: '$f(x) = e^x$ and $g(x) = e^{-x}$, so $f(x)g(x) = e^{x - x} = e^0 = 1$. Exponents add when exponentials multiply, so $e^{-x^2}$ (multiplying exponents), $e^{x^2}$ and $e^{2x}$ are all incorrect.',
     difficulty: 'medium',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -2297,14 +2192,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Using Lagrange error, to guarantee $|e^{0.1} - P_3(0.1)| < 10^{-4}$, we need $\\frac{M|0.1|^4}{4!}$ where $M$ is:',
-    options: [
-      'max $|e^c|$ for $0 \\leq c \\leq 0.1$, which is $e^{0.1}$',
-      '$e^0 = 1$',
-      '$4! = 24$',
-      '$0.1^4$'
-    ],
+    options: ['$e^{0.1}$', '$e^{0}$', '$4!$', '$0.1^4$'],
     correctAnswer: 0,
-    explanation: 'M = max|$f^{(4)}(c)$| on [0, 0.1]. Since $f^{(4)}(x)$ = $e^{x}$ is increasing, M = $e^{0.1}$.',
+    explanation: '$M$ is the maximum of $|f^{(4)}(c)| = e^c$ on $[0, 0.1]$; since $e^c$ is increasing, $M = e^{0.1}$. $e^0 = 1$ is the minimum, not the maximum, and $4!$ and $0.1^4$ already appear elsewhere in the bound.',
     difficulty: 'hard',
     domain: 'taylor-series',
     topicSlug: 'lagrange-error-bound-calcbc',
@@ -2342,14 +2232,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'A function equals its Taylor series on an interval if:',
-    options: [
-      'The remainder $R_n(x) \\to 0$ as $n \\to \\infty$',
-      'The function is continuous',
-      'The function is differentiable once',
-      'The Taylor series converges'
-    ],
+    options: ['Its remainder $R_n(x) \\to 0$', 'Its Taylor series converges at each point', '$f(x)$ is continuous on the interval', '$f$ has derivatives of every order there'],
     correctAnswer: 0,
-    explanation: 'A function equals its Taylor series when the remainder $R_{n}(x)$ → 0. Some $C^{\\infty}$ functions have Taylor series that converge to a different function.',
+    explanation: 'A function equals its Taylor series exactly where the remainder $R_n(x) \\to 0$ as $n \\to \\infty$. A Taylor series can converge to a different function, and even infinitely differentiable functions can fail to equal their Taylor series, so convergence or smoothness alone is not enough; continuity is far too weak.',
     difficulty: 'medium',
     domain: 'taylor-series',
     topicSlug: 'lagrange-error-bound-calcbc',
@@ -2392,14 +2277,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The binomial series $(1+x)^k$ for non-integer $k$ is:',
-    options: [
-      '$\\displaystyle\\sum_{n=0}^{\\infty}\\binom{k}{n}x^n$ where $\\binom{k}{n} = \\frac{k(k-1)\\cdots(k-n+1)}{n!}$',
-      'A finite polynomial of degree $k$',
-      '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{k^n x^n}{n!}$',
-      'Only defined for $k > 0$'
-    ],
+    options: ['$\\displaystyle\\sum_{n=0}^{\\infty}\\binom{k}{n}x^n$', 'A polynomial of degree $k$', '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{k^n x^n}{n!}$', 'A series defined only for $k > 0$'],
     correctAnswer: 0,
-    explanation: 'For non-integer k, the binomial series is infinite with generalized binomial coefficients C(k,n) = k(k−1)…(k−n+1)/n!.',
+    explanation: 'For non-integer $k$, $(1+x)^k = \\sum_{n=0}^{\\infty} \\binom{k}{n} x^n$ with $\\binom{k}{n} = \\frac{k(k-1)\\cdots(k-n+1)}{n!}$, an infinite series for $|x| < 1$. It is a polynomial only when $k$ is a nonnegative integer, $\\sum \\frac{k^n x^n}{n!}$ is $e^{kx}$, and negative $k$ works too.',
     difficulty: 'hard',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -2417,14 +2297,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'To find the Taylor series for $f(x) = x^2 e^x$ centered at $0$:',
-    options: [
-      'Multiply the Maclaurin series for $e^x$ by $x^2$',
-      'Find all derivatives of $x^2 e^x$ individually',
-      'Use partial fractions on $x^2 e^x$',
-      'Use the binomial theorem'
-    ],
+    options: ['Multiply the $e^x$ series by $x^2$', 'Add $x^2$ to each term of the $e^x$ series', 'Use partial fractions on $x^2 e^x$', 'Replace $x$ with $x^2$ in the $e^x$ series'],
     correctAnswer: 0,
-    explanation: '$x^{2}e^{x}$ = $x^{2}\\cdot \\Sigma x^{n}/n$! = $\\Sigma x^{n+2}/n$! = $\\Sigma x^{n+2}/n$!. Much easier than computing derivatives.',
+    explanation: '$x^2 e^x = x^2 \\sum \\frac{x^n}{n!} = \\sum \\frac{x^{n+2}}{n!}$, which is much faster than computing derivatives. Adding $x^2$ to each term changes the function, replacing $x$ with $x^2$ gives $e^{x^2}$, and partial fractions apply only to rational functions.',
     difficulty: 'easy',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -2442,14 +2317,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Maclaurin series for $\\frac{1}{(1-x)^2}$ can be found by:',
-    options: [
-      'Differentiating $\\frac{1}{1-x} = \\sum x^n$',
-      'Squaring $\\sum x^n$',
-      'Integrating $\\sum x^n$',
-      'Using partial fractions'
-    ],
+    options: ['Differentiating $\\sum x^n$ term by term', 'Integrating $\\sum x^n$ term by term', 'Substituting $x^2$ for $x$ in $\\sum x^n$', 'Using partial fractions on $\\frac{1}{(1-x)^2}$'],
     correctAnswer: 0,
-    explanation: 'd/dx[1/(1−x)] = $1/(1-x)^{2}$. d/dx[$\\Sigma x^{n}$] = $\\Sigma nx^{n-1}$. So $1/(1-x)^{2}$ = $\\Sigma (n+1)x^{n}$ (shifted).',
+    explanation: '$\\frac{d}{dx}\\left[\\frac{1}{1-x}\\right] = \\frac{1}{(1-x)^2}$, so differentiating $\\sum x^n$ gives $\\sum n x^{n-1}$. Integrating gives $-\\ln(1-x)$, substituting $x^2$ gives $\\frac{1}{1-x^2}$, and $\\frac{1}{(1-x)^2}$ is already a single partial fraction.',
     difficulty: 'medium',
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
@@ -2457,14 +2327,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Lagrange Error Bound for the $n$th degree Taylor polynomial uses the $(n+1)$th derivative because:',
-    options: [
-      'The error depends on how well the next term approximates the omitted part',
-      'We always need one more derivative than the degree',
-      'It simplifies the calculation',
-      'Taylor\'s Theorem requires it'
-    ],
+    options: ['The first omitted term controls the remainder', 'The $(n+1)$th derivative is always the largest one', 'It makes the bound easier to compute', 'Higher derivatives are always smaller'],
     correctAnswer: 0,
-    explanation: 'The remainder $R_{n}$ involves $f^{(n+1)}$ — the first derivative not captured by the polynomial.',
+    explanation: '$P_n$ matches $f$ through the $n$th derivative, so the remainder is governed by the first term it leaves out, which involves $f^{(n+1)}$. The $(n+1)$th derivative need not be the largest or smallest, and the choice follows from Taylor\'s Theorem, not convenience.',
     difficulty: 'easy',
     domain: 'taylor-series',
     topicSlug: 'lagrange-error-bound-calcbc',
@@ -2472,9 +2337,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'For $f(x) = \\sin x$, the Lagrange error bound for $P_5(x)$ on $|x| \\leq 1$ is at most:',
-    options: ['$\\frac{1}{720}$', '$\\frac{1}{6!} = \\frac{1}{720}$', '$\\frac{1}{7!}$', '$\\frac{1}{5!}$'],
+    options: ['$\\frac{1}{720}$', '$\\frac{1}{120}$', '$\\frac{1}{6}$', '$\\frac{1}{360}$'],
     correctAnswer: 0,
-    explanation: '|$R_{n}$| ≤ M|x|$ {}^{6}/6$!. M = max|$f^{(6)}(c)$| = max|−sin c| ≤ 1. Error ≤ 1/720.',
+    explanation: '$|R_5(x)| \\le \\frac{M|x|^6}{6!}$ with $M = \\max|f^{(6)}(c)| = \\max|\\sin c| \\le 1$ and $|x| \\le 1$, so the bound is $\\frac{1}{720}$. Using $5!$ uses the degree instead of degree plus one, $\\frac{1}{6}$ forgets the factorial, and $\\frac{1}{360}$ uses the interval width $2$ instead of $|x - 0| \\le 1$.',
     difficulty: 'medium',
     domain: 'taylor-series',
     topicSlug: 'lagrange-error-bound-calcbc',
@@ -2579,14 +2444,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The solution to $\\frac{dP}{dt} = kP(1 - P/L)$ with $P(0) = P_0$ has the form:',
-    options: [
-      '$P(t) = \\frac{L}{1 + Ce^{-kt}}$ where $C = \\frac{L - P_0}{P_0}$',
-      '$P(t) = P_0 e^{kt}$',
-      '$P(t) = L - P_0 e^{-kt}$',
-      '$P(t) = \\frac{kL}{1 + e^{kt}}$'
-    ],
+    options: ['$P(t) = \\frac{L}{1 + Ce^{-kt}}$', '$P(t) = P_0 e^{kt}$', '$P(t) = L - P_0 e^{-kt}$', '$P(t) = \\frac{kL}{1 + e^{kt}}$'],
     correctAnswer: 0,
-    explanation: 'The logistic equation has solution P(t) = $L/(1+Ce^{-kt})$ with C = $(L-P_{0})/P_{0}$.',
+    explanation: 'The logistic equation has solution $P(t) = \\frac{L}{1 + Ce^{-kt}}$ with $C = \\frac{L - P_0}{P_0}$ from the initial condition. $P_0 e^{kt}$ is unlimited exponential growth, $L - P_0 e^{-kt}$ does not satisfy the equation, and $\\frac{kL}{1 + e^{kt}}$ decreases to $0$.',
     difficulty: 'medium',
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
@@ -2594,14 +2454,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Euler\'s method approximation is a sequence of:',
-    options: [
-      'Tangent line approximations',
-      'Parabolic approximations',
-      'Newton\'s method steps',
-      'Riemann sums'
-    ],
+    options: ['Tangent line approximations', 'Quadratic Taylor approximations', 'Steps of Newton\'s root-finding method', 'Left Riemann sums of the slope'],
     correctAnswer: 0,
-    explanation: 'Each step of Euler\'s method follows the tangent line (linear approximation) for a short distance.',
+    explanation: 'Each Euler step follows the tangent line (the linear approximation) at the current point for a short distance $h$. It uses no quadratic terms, it does not find roots, and although it adds up slope times step like a Riemann sum, the slope is re-evaluated at the approximate point, so it is a chain of tangent-line steps.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
@@ -2629,9 +2484,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'When $P = L$ in the logistic model, $dP/dt =$',
-    options: ['$0$', '$kL$', '$k$', '$L/2$'],
+    options: ['$0$', '$kL$', '$\\frac{kL}{4}$', '$L/2$'],
     correctAnswer: 0,
-    explanation: 'dP/dt = kP(1−P/L). When P = L: dP/dt = kL(1−1) = 0. The population stays at the carrying capacity.',
+    explanation: '$\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{L}\\right) = kL(1 - 1) = 0$ when $P = L$, so the population stays at the carrying capacity. $\\frac{kL}{4}$ is the maximum rate (at $P = \\frac{L}{2}$), $kL$ forgets the factor $1 - \\frac{P}{L}$, and $\\frac{L}{2}$ is a population, not a rate.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
@@ -2649,9 +2504,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'If the Euler\'s method approximation of $y(1)$ for $dy/dx = y$, $y(0) = 1$ with $h = 1$ is $2$, the exact value is:',
-    options: ['$e \\approx 2.718$', '$2$', '$3$', '$\\pi$'],
+    options: ['$e$', '$e - 1$', '$e^2$', '$2.25$'],
     correctAnswer: 0,
-    explanation: 'dy/dx = y with y(0) = 1 has exact solution y = $e^{x}$. y(1) = e ≈ 2.718. Euler gives 2 (underestimate).',
+    explanation: '$\\frac{dy}{dx} = y$ with $y(0) = 1$ has exact solution $y = e^x$, so $y(1) = e \\approx 2.718$; Euler\'s value $2$ is an underestimate. $e - 1$ is $\\int_0^1 e^x\\,dx$, $e^2$ would solve $y\' = 2y$, and $2.25$ is just Euler\'s method with $h = 0.5$, a better approximation but still not exact.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
@@ -2794,14 +2649,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The graph of $dP/dt$ vs $P$ for the logistic model is:',
-    options: [
-      'A downward-opening parabola with roots at $P = 0$ and $P = L$',
-      'An exponential curve',
-      'A straight line',
-      'An upward-opening parabola'
-    ],
+    options: ['A downward-opening parabola', 'An upward-opening parabola', 'An exponential curve', 'A straight line'],
     correctAnswer: 0,
-    explanation: 'dP/dt = kP(1−P/L) = kP − $kP^{2}/L$. This is quadratic in P (parabola opening downward) with roots at 0 and L.',
+    explanation: '$\\frac{dP}{dt} = kP - \\frac{k}{L}P^2$ is quadratic in $P$ with a negative leading coefficient, so it is a downward-opening parabola with zeros at $P = 0$ and $P = L$. The rate is neither linear nor exponential in $P$, and the parabola opens downward because the $P^2$ coefficient is negative.',
     difficulty: 'medium',
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
@@ -2819,14 +2669,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\frac{dP}{dt} = 0.1P(1 - P/300)$. At what population is the growth half its maximum?',
-    options: [
-      'Cannot be determined without solving',
-      '$P = 75$ or $P = 225$',
-      '$P = 150$ only',
-      '$P = 50$'
-    ],
+    options: ['$P = 75$ or $P = 225$', '$P = 150 \\pm 75\\sqrt{2}$', '$P = 150$ only', '$P = 3.75$'],
     correctAnswer: 1,
-    explanation: 'Max rate at P = 150: rate = 0.1(150)(1/2) = 7.5. Half max = 3.75. Solve 0.1P(1−P/300) = 3.75: $P^{2}-300P+11250$ = 0. P = $(300\\pm \\sqrt{90000-45000})/2$ = $(300\\pm \\sqrt{45000})/2$ ≈ 75 or 225.',
+    explanation: 'The maximum rate is at $P = 150$: $0.1(150)\\left(\\frac{1}{2}\\right) = 7.5$. Half of it is $3.75$, and $0.1P\\left(1 - \\frac{P}{300}\\right) = 3.75$ gives $P^2 - 300P + 11250 = 0$, so $P = 150 \\pm \\sqrt{11250} = 150 \\pm 75\\sqrt{2}$ (about $44$ and $256$). The populations $75$ and $225$ give rate $5.625$, $P = 150$ is where the rate is largest, and $3.75$ is the rate, not a population.',
     difficulty: 'hard',
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
@@ -2844,14 +2689,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'In the logistic model $P(t) = L/(1+Ce^{-kt})$, the constant $C$ is determined by:',
-    options: [
-      'The initial condition $P(0) = P_0$',
-      'The carrying capacity alone',
-      'The growth rate $k$ alone',
-      'The inflection point'
-    ],
+    options: ['The initial condition $P(0) = P_0$', 'The carrying capacity $L$ alone', 'The growth rate $k$ alone', 'The limit of $P(t)$ as $t \\to \\infty$'],
     correctAnswer: 0,
-    explanation: 'Set t = 0: $P_{0}$ = L/(1+C). Solve: C = $(L-P_{0})/P_{0}$.',
+    explanation: 'Setting $t = 0$ gives $P_0 = \\frac{L}{1 + C}$, so $C = \\frac{L - P_0}{P_0}$, which depends on the initial population. $L$ or $k$ alone cannot fix $C$, and the limit as $t \\to \\infty$ is just $L$.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
@@ -2869,14 +2709,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'A DE is separable if it can be written as:',
-    options: [
-      '$g(y)\\,dy = f(x)\\,dx$',
-      '$dy/dx = f(x)g(x)$',
-      '$d^2y/dx^2 = f(x)$',
-      '$y\'\' + y = 0$'
-    ],
+    options: ['$g(y)dy = f(x)dx$', '$dy/dx = f(x) + g(y)$', '$d^2y/dx^2 = f(x)$', '$y\'\' + y = 0$'],
     correctAnswer: 0,
-    explanation: 'A separable DE can be written with all y terms and dy on one side, all x terms and dx on the other.',
+    explanation: 'A separable equation can be written with all $y$ terms and $dy$ on one side and all $x$ terms and $dx$ on the other: $g(y)\\,dy = f(x)\\,dx$. A sum $f(x) + g(y)$ cannot be split that way in general, and the other two are second-order equations.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
@@ -2884,9 +2719,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The solution to $dy/dx = ky$ is:',
-    options: ['$y = Ce^{kx}$', '$y = kx + C$', '$y = Ce^{-kx}$', '$y = \\sin(kx)$'],
+    options: ['$y = Ce^{kx}$', '$y = \\frac{ky^2}{2} + C$', '$y = Ce^{-kx}$', '$y = \\sin(kx)$'],
     correctAnswer: 0,
-    explanation: 'dy/dx = ky is the standard exponential growth/decay DE with solution y = $Ce^{kx}$.',
+    explanation: 'Separate: $\\frac{dy}{y} = k\\,dx$, so $\\ln|y| = kx + C_1$ and $y = Ce^{kx}$. Integrating $ky$ as if $y$ were the variable gives $\\frac{ky^2}{2}$, the negative exponent solves $y\' = -ky$, and $\\sin(kx)$ does not satisfy $y\' = ky$.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
@@ -2974,14 +2809,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The logistic DE $dP/dt = rP(1-P/K)$ — the growth rate $r$ represents:',
-    options: [
-      'The intrinsic (per capita) growth rate at low population',
-      'The carrying capacity',
-      'The initial population',
-      'The time to reach equilibrium'
-    ],
+    options: ['The per capita rate when $P$ is small', 'The carrying capacity of the population', 'The size of the population at $t = 0$', 'The growth rate at the inflection point'],
     correctAnswer: 0,
-    explanation: 'r is the intrinsic (maximum per capita) growth rate, achieved when P << K.',
+    explanation: 'For small $P$, $\\frac{dP}{dt} \\approx rP$, so $r$ is the intrinsic per capita growth rate. The carrying capacity is $K$, the initial population is a separate condition, and the rate at the inflection point is $\\frac{rK}{4}$, not $r$.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
@@ -2989,9 +2819,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'In three Euler steps with $h = 1/3$ for $dy/dx = 3y$, $y(0) = 1$, what is $y(1)$?',
-    options: ['$8$', '$2^3 = 8$', '$e^3$', '$3$'],
+    options: ['$8$', '$\\left(\\frac{4}{3}\\right)^3$', '$e^3$', '$27$'],
     correctAnswer: 0,
-    explanation: '$y_{1}$ = 1 + (1/3)(3·1) = 2. $y_{2}$ = 2 + (1/3)(3·2) = 4. $y_{3}$ = 4 + (1/3)(3·4) = 8.',
+    explanation: 'Each step multiplies $y$ by $1 + h \\cdot 3 = 2$: $y_1 = 2$, $y_2 = 4$, $y_3 = 8$. Using $1 + h$ as the factor gives $\\left(\\frac{4}{3}\\right)^3$, multiplying by $3$ each step gives $27$, and $e^3$ is the exact value, not Euler\'s estimate.',
     difficulty: 'medium',
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
@@ -2999,9 +2829,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'For $\\frac{dy}{dx} = \\frac{y}{x}$, this is a _____ DE:',
-    options: ['Homogeneous separable', 'Logistic', 'Second-order', 'Non-separable'],
+    options: ['Separable', 'Logistic', 'Second-order', 'Non-separable'],
     correctAnswer: 0,
-    explanation: 'dy/y = dx/x. This is separable. Solution: ln|y| = ln|x| + C, so y = Ax.',
+    explanation: '$\\frac{dy}{dx} = \\frac{y}{x}$ separates as $\\frac{dy}{y} = \\frac{dx}{x}$, so $\\ln|y| = \\ln|x| + C$ and $y = Ax$. It is first-order, it has no carrying-capacity factor, and it does separate.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
@@ -3034,14 +2864,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The slope field for $dy/dx = y$ has slopes that:',
-    options: [
-      'Depend only on $y$ (constant along horizontal lines)',
-      'Depend only on $x$',
-      'Are all $1$',
-      'Are all $0$ on the $x$-axis'
-    ],
+    options: ['Depend only on $y$ (constant along horizontal lines)', 'Depend only on $x$ (constant along vertical lines)', 'Are all $1$', 'Are all $0$ on the $y$-axis'],
     correctAnswer: 0,
-    explanation: 'dy/dx = y: slope depends only on y. Along y = c, all slopes equal c. On y = 0 (x-axis), slopes are 0.',
+    explanation: 'For $\\frac{dy}{dx} = y$ the slope depends only on $y$: along a horizontal line $y = c$ every slope equals $c$ (so slopes are $0$ on the $x$-axis). The slope does not depend on $x$, it is not always $1$, and on the $y$-axis the slope is $y$, which is zero only at the origin.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'euler-method-advanced-calcbc',
@@ -3171,9 +2996,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'For the parametric curve $x = e^t$, $y = e^{-t}$, eliminating $t$ gives:',
-    options: ['$xy = 1$', '$x + y = 1$', '$x^2 + y^2 = 1$', '$y = x$'],
+    options: ['$xy = 1$', '$x + y = 1$', '$x^2 + y^2 = 1$', '$y = -\\ln x$'],
     correctAnswer: 0,
-    explanation: 'x = $e^{t}$, y = $e^{-t}$. xy = $e^{t}\\cdot e^{-t}$ = 1. The curve is a hyperbola.',
+    explanation: '$xy = e^t \\cdot e^{-t} = 1$, a hyperbola in the first quadrant. $y = -\\ln x$ treats $e^{-t}$ as $-t$ after using $t = \\ln x$, and the sum or sum of squares of $e^t$ and $e^{-t}$ is not constant.',
     difficulty: 'easy',
     domain: 'parametric-polar-vector',
     topicSlug: 'parametric-curves-calculus-calcbc',
@@ -3256,14 +3081,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The logistic solution $P(t) = L/(1+Ce^{-kt})$ is:',
-    options: [
-      'An S-shaped (sigmoid) curve',
-      'An exponential curve',
-      'A parabola',
-      'A cosine curve'
-    ],
+    options: ['An S-shaped curve', 'An exponential growth curve', 'A downward-opening parabola', 'A cosine wave about $P = L$'],
     correctAnswer: 0,
-    explanation: 'The logistic function produces a characteristic S-shaped (sigmoid) curve.',
+    explanation: 'The logistic function rises slowly, grows fastest at $P = \\frac{L}{2}$, then levels off toward $L$: an S-shaped (sigmoid) curve. It looks exponential only at first, the parabola is the graph of $\\frac{dP}{dt}$ against $P$, and the solution never oscillates.',
     difficulty: 'easy',
     domain: 'advanced-diffeq',
     topicSlug: 'logistic-models-calcbc',
@@ -3301,9 +3121,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The integral $\\displaystyle\\int \\sin x \\cos x\\,dx =$',
-    options: ['$\\frac{\\sin^2 x}{2}+C$', '$-\\cos^2 x + C$', '$\\sin x + C$', '$\\frac{-\\cos 2x}{4}+C$'],
+    options: ['$\\frac{\\sin^2 x}{2}+C$', '$-\\cos^2 x + C$', '$\\sin x + C$', '$\\frac{-\\cos 2x}{2}+C$'],
     correctAnswer: 0,
-    explanation: 'Let u = sin x: ∫u du = $u^{2}/2$ + C = $\\sin^{2}x/2$ + C. (Or use sin 2x/2 identity.)',
+    explanation: 'Let $u = \\sin x$: $\\int u\\,du = \\frac{u^2}{2} + C = \\frac{\\sin^2 x}{2} + C$. $-\\cos^2 x$ and $-\\frac{\\cos 2x}{2}$ each differentiate to $\\sin 2x = 2\\sin x\\cos x$, twice the integrand, and $\\sin x$ ignores the factor $\\cos x$.',
     difficulty: 'easy',
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
@@ -3311,14 +3131,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'For $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^n n}{n+1}$, the $n$th term test shows:',
-    options: [
-      'The series diverges because $\\lim a_n \\neq 0$',
-      'The series converges',
-      'The test is inconclusive',
-      'The series converges absolutely'
-    ],
+    options: ['The series diverges', 'The series converges', 'The test is inconclusive', 'The series converges absolutely'],
     correctAnswer: 0,
-    explanation: 'lim $(-1)^{n}n/(n+1)$ does not equal 0 (oscillates between ±1). By the nth-term test, the series diverges.',
+    explanation: '$\\frac{n}{n+1} \\to 1$, so $a_n = \\frac{(-1)^n n}{n+1}$ keeps approaching $\\pm 1$ and $\\lim a_n \\ne 0$. By the $n$th term test the series diverges. The test is conclusive when the limit is not $0$, and a divergent series cannot converge absolutely.',
     difficulty: 'medium',
     domain: 'sequences-series',
     topicSlug: 'convergence-tests-summary-calcbc',
@@ -3326,9 +3141,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The interval of convergence for $\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^{2n}}{n!}$ is:',
-    options: ['$(-\\infty, \\infty)$', '$(-1, 1)$', '$[0, 1]$', '$(-e, e)$'],
+    options: ['$-\\infty < x < \\infty$', '$-1 < x < 1$', '$0 \\le x \\le 1$', '$-e < x < e$'],
     correctAnswer: 0,
-    explanation: 'This is $e^{x^{2}}$. Ratio: $x^{2}/(n+1)$ → 0 for all x. Converges everywhere. IOC = (−∞, ∞).',
+    explanation: 'This is $e^{x^2}$. The ratio test gives $\\frac{x^2}{n+1} \\to 0 < 1$ for every $x$, so the series converges for all real $x$. There is no finite radius, so no bounded interval is correct.',
     difficulty: 'medium',
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
@@ -3430,10 +3245,10 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     formSet: 'both',
   },
   {
-    question: 'The series $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{1}{n2^n}$ has radius of convergence $R = 2$ and at $x = 2$ gives:',
-    options: ['$\\ln 2$', '$1$', '$\\frac{1}{2}$', 'Diverges'],
+    question: 'The power series $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{x^n}{n2^n}$ has radius of convergence $R = 2$. Its value at $x = 1$ is:',
+    options: ['$\\ln 2$', '$\\ln\\frac{1}{2}$', '$\\frac{1}{2}$', 'Diverges'],
     correctAnswer: 0,
-    explanation: '$\\Sigma x^{n}/(n)$ = −ln(1−x) for |x| < 1. At x = 1/2 (substituting back): $\\Sigma (1/2)^{n}/n$ = −ln(1/2) = ln 2. Actually $\\Sigma x^{n}/n$ for the power series centered at 0 with x = 1/2.',
+    explanation: 'At $x = 1$ the series is $\\sum \\frac{(1/2)^n}{n}$, and $\\sum \\frac{u^n}{n} = -\\ln(1 - u)$ for $|u| < 1$, so the value is $-\\ln\\frac{1}{2} = \\ln 2$. Dropping the minus sign gives $\\ln\\frac{1}{2}$, $\\frac{1}{2}$ is only the first term, and $x = 1$ lies inside the radius $2$, so the series converges there.',
     difficulty: 'hard',
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
@@ -3441,14 +3256,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Maclaurin series for $\\frac{x}{1+x}$ is:',
-    options: [
-      '$\\displaystyle\\sum_{n=0}^{\\infty}(-1)^n x^{n+1}$, $|x| < 1$',
-      '$\\displaystyle\\sum_{n=0}^{\\infty}x^{n+1}$',
-      '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{x^n}{n}$',
-      '$x - x^2/2 + x^3/3 - \\cdots$'
-    ],
+    options: ['$\\displaystyle\\sum_{n=0}^{\\infty}(-1)^n x^{n+1}$', '$\\displaystyle\\sum_{n=0}^{\\infty}x^{n+1}$', '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{x^n}{n}$', '$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}x^n}{n}$'],
     correctAnswer: 0,
-    explanation: '1/(1+x) = $\\Sigma (-1)^{n}x^{n}$. Multiply by x: x/(1+x) = $\\Sigma (-1)^{n}x^{n+1}$ for |x| < 1.',
+    explanation: '$\\frac{1}{1+x} = \\sum (-1)^n x^n$, so multiplying by $x$ gives $\\frac{x}{1+x} = \\sum (-1)^n x^{n+1}$ for $|x| < 1$. Without the alternating sign the series is $\\frac{x}{1-x}$, and the series with $\\frac{x^n}{n}$ are $-\\ln(1-x)$ and $\\ln(1+x)$.',
     difficulty: 'easy',
     domain: 'taylor-series',
     topicSlug: 'power-series-calcbc',
@@ -3468,9 +3278,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   // ─────────────── infinite-sequences-calcbc (top-up) ───────────────
   {
     question: 'A sequence $\\{a_n\\}$ converges if:',
-    options: ['$\\lim_{n \\to \\infty} a_n$ exists and is finite', 'It is bounded', 'It is monotonic', '$\\sum a_n$ converges'],
+    options: ['$\\lim_{n \\to \\infty} a_n$ exists as a finite number', 'It is bounded above and below', 'It is monotonic from some point on', 'Its terms alternate in sign'],
     correctAnswer: 0,
-    explanation: 'Convergence of sequence = existence of finite limit.',
+    explanation: 'A sequence converges exactly when $\\lim_{n \\to \\infty} a_n$ exists and is finite. Boundedness alone allows oscillation (such as $(-1)^n$), monotonic alone allows growth to $\\infty$, and alternating signs alone allows $(-1)^n n$.',
     difficulty: 'easy', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both',
   },
   {
@@ -3505,16 +3315,16 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   // ─────────────── lagrange-error-bound-calcbc (top-up) ───────────────
   {
     question: 'The Lagrange error bound for the $n$-th degree Taylor polynomial $T_n$ states $|R_n(x)| \\le$:',
-    options: ['$\\dfrac{M}{(n+1)!} |x - c|^{n+1}$ where $M \\ge \\max |f^{(n+1)}|$', '$M |x - c|^n$', '$\\dfrac{M}{n!}$', '$M \\cdot n!$'],
+    options: ['$\\dfrac{M}{(n+1)!}|x - c|^{n+1}$', '$\\dfrac{M}{n!}|x - c|^{n}$', '$\\dfrac{M}{(n+1)!}|x - c|^{n}$', '$M|x - c|^{n+1}$'],
     correctAnswer: 0,
-    explanation: 'Standard Lagrange error formula.',
+    explanation: 'Lagrange: $|R_n(x)| \\le \\frac{M}{(n+1)!}|x - c|^{n+1}$, where $M$ bounds $|f^{(n+1)}|$ between $c$ and $x$. Using $n$ instead of $n + 1$ in the factorial or the power describes the last included term, not the first omitted one, and the factorial cannot be dropped.',
     difficulty: 'easy', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both',
   },
   {
     question: 'For $f(x) = \\sin x$, $|f^{(n)}(x)| \\le $',
-    options: ['$1$ (always)', '$n$', '$x$', '$\\infty$'],
+    options: ['$1$', '$n!$', '$|x|^n$', '$\\frac{1}{n!}$'],
     correctAnswer: 0,
-    explanation: 'All derivatives of $\\sin x$ are $\\pm \\sin x$ or $\\pm \\cos x$, bounded by $1$.',
+    explanation: 'Every derivative of $\\sin x$ is $\\pm\\sin x$ or $\\pm\\cos x$, so $|f^{(n)}(x)| \\le 1$ for all $n$ and $x$. The factorials and powers of $x$ belong to the terms of the series, not to the size of the derivatives.',
     difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both',
   },
   {
@@ -3533,9 +3343,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'If the Lagrange bound on $|R_n(x)|$ tends to $0$ as $n \\to \\infty$, then:',
-    options: ['The Taylor series converges to $f(x)$ at $x$', 'The series diverges', 'The series oscillates', 'Cannot conclude anything'],
+    options: ['The Taylor series converges to $f(x)$ at $x$', 'The Taylor series diverges at that $x$', 'The series converges to a value other than $f(x)$', 'Nothing can be concluded about $f(x)$'],
     correctAnswer: 0,
-    explanation: 'Vanishing remainder ⇒ Taylor series equals $f(x)$.',
+    explanation: 'The Lagrange bound controls $|f(x) - P_n(x)|$, so if it tends to $0$ then $P_n(x) \\to f(x)$: the Taylor series converges, and to $f(x)$ itself. That rules out divergence and convergence to a different value.',
     difficulty: 'hard', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both',
   },
 
@@ -3577,30 +3387,30 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Maclaurin series for $\\dfrac{1}{1 - x}$ (geometric) is:',
-    options: ['$\\sum_{n=0}^\\infty x^n$ for $|x| < 1$', '$\\sum (-1)^n x^n$', '$\\sum \\dfrac{x^n}{n!}$', '$\\sum nx^{n-1}$'],
+    options: ['$\\sum_{n=0}^\\infty x^n$', '$\\sum (-1)^n x^n$', '$\\sum \\dfrac{x^n}{n!}$', '$\\sum nx^{n-1}$'],
     correctAnswer: 0,
-    explanation: 'Geometric series.',
+    explanation: '$\\frac{1}{1 - x} = 1 + x + x^2 + \\cdots = \\sum x^n$ for $|x| < 1$, a geometric series with ratio $x$. The alternating version is $\\frac{1}{1+x}$, $\\sum \\frac{x^n}{n!}$ is $e^x$, and $\\sum nx^{n-1}$ is $\\frac{1}{(1-x)^2}$.',
     difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
   },
   {
     question: 'Differentiate $\\sum_{n=0}^\\infty x^n = \\dfrac{1}{1-x}$ term-by-term:',
-    options: ['$\\sum_{n=1}^\\infty n x^{n-1} = \\dfrac{1}{(1-x)^2}$', '$\\sum x^n$', '$-\\ln(1-x)$', '$\\sum n!  x^n$'],
+    options: ['$\\sum_{n=1}^\\infty n x^{n-1}$', '$\\sum_{n=0}^\\infty \\dfrac{x^{n+1}}{n+1}$', '$\\sum_{n=1}^\\infty x^{n-1}$', '$\\sum_{n=0}^\\infty n x^{n+1}$'],
     correctAnswer: 0,
-    explanation: 'Termwise differentiation valid inside radius of convergence.',
+    explanation: 'Differentiating $x^n$ gives $nx^{n-1}$, so the derivative series is $\\sum n x^{n-1} = \\frac{1}{(1-x)^2}$. $\\sum \\frac{x^{n+1}}{n+1}$ is the integral, dropping the factor $n$ loses the power rule\'s coefficient, and raising the exponent to $n + 1$ is the integration pattern, not differentiation.',
     difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
   },
   {
     question: 'Integrate $\\sum_{n=0}^\\infty (-1)^n x^n = \\dfrac{1}{1+x}$ to get:',
-    options: ['$\\ln(1 + x) = \\sum_{n=1}^\\infty \\dfrac{(-1)^{n-1} x^n}{n}$', '$\\arctan x$', '$\\dfrac{1}{(1+x)^2}$', '$e^x$'],
+    options: ['$\\ln(1 + x)$', '$\\arctan x$', '$\\dfrac{1}{(1+x)^2}$', '$-\\ln(1 - x)$'],
     correctAnswer: 0,
-    explanation: 'Term-by-term integration of geometric series.',
+    explanation: '$\\int_0^x \\frac{dt}{1+t} = \\ln(1+x) = \\sum_{n=1}^{\\infty} \\frac{(-1)^{n-1}x^n}{n}$. $\\arctan x$ comes from $\\frac{1}{1+x^2}$, $\\frac{1}{(1+x)^2}$ is (up to sign) the derivative of $\\frac{1}{1+x}$, and $-\\ln(1-x)$ comes from the non-alternating $\\sum x^n$.',
     difficulty: 'medium', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
   },
   {
-    question: 'The series $\\sum \\dfrac{1}{1+x^2}$ integrated gives $\\arctan x$. Its series representation is:',
-    options: ['$\\sum (-1)^n x^{2n}$ → $\\arctan x = \\sum \\dfrac{(-1)^n x^{2n+1}}{2n+1}$', '$\\sum x^n$', '$\\sum \\dfrac{x^{2n}}{(2n)!}$', '$\\sum \\dfrac{(-1)^n x^n}{n}$'],
+    question: 'Integrating $\\dfrac{1}{1+x^2} = \\sum (-1)^n x^{2n}$ term by term gives $\\arctan x$. Its series representation is:',
+    options: ['$\\sum \\dfrac{(-1)^n x^{2n+1}}{2n+1}$', '$\\sum (-1)^n x^{2n}$', '$\\sum \\dfrac{(-1)^n x^{2n+1}}{(2n+1)!}$', '$\\sum \\dfrac{(-1)^n x^n}{n}$'],
     correctAnswer: 0,
-    explanation: 'Geometric in $-x^2$, then integrate.',
+    explanation: '$\\frac{1}{1+x^2}$ is geometric in $-x^2$, and integrating $x^{2n}$ gives $\\frac{x^{2n+1}}{2n+1}$, so $\\arctan x = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$. $\\sum (-1)^n x^{2n}$ is the series before integrating, the factorial version is $\\sin x$, and $\\sum \\frac{(-1)^n x^n}{n}$ is $-\\ln(1+x)$.',
     difficulty: 'hard', domain: 'taylor-series', topicSlug: 'series-applications-calcbc', formSet: 'both',
   },
   {
@@ -3614,16 +3424,16 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   // ─────────────── bc-exam-strategies-calcbc ───────────────
   {
     question: 'On the BC exam, in addition to AB topics, you can expect questions on:',
-    options: ['Only series', 'Parametric/polar/vector + series + advanced integration + advanced diffeq', 'Linear algebra', 'Multivariable calculus'],
+    options: ['Series only, with every other unit shared', 'Series and parametric/polar curves', 'Linear algebra and systems of linear equations', 'Multivariable calculus and partial derivatives'],
     correctAnswer: 1,
-    explanation: 'BC adds those four big areas to the AB content.',
+    explanation: 'Beyond the AB topics, BC adds infinite series, parametric, polar and vector-valued functions, and extra integration and differential-equation topics such as integration by parts, improper integrals, Euler\'s method and logistic models. Linear algebra and multivariable calculus are not on the exam.',
     difficulty: 'easy', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
   },
   {
     question: 'The BC exam awards a separate "AB sub-score" reflecting:',
-    options: ['Performance only on AB-content questions', 'Random subset', 'Multiple-choice only', 'Free-response only'],
+    options: ['Only the questions on AB topics', 'A random sample of all the questions', 'The multiple-choice section alone', 'The free-response questions alone'],
     correctAnswer: 0,
-    explanation: 'Sub-score is computed from the AB-overlapping content.',
+    explanation: 'The AB subscore is computed from the BC exam questions that cover AB content, across both sections. It is not a random sample and not limited to one section.',
     difficulty: 'easy', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
   },
   {
@@ -3642,9 +3452,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'On a series-convergence FRQ, you must:',
-    options: ['Just state the answer', 'Identify the test, verify hypotheses, and state conclusion', 'Use only the ratio test', 'Use a graphing calculator'],
+    options: ['State only whether the series converges', 'Name the test and check its conditions', 'Use the ratio test no matter the series', 'Estimate the sum on a graphing calculator'],
     correctAnswer: 1,
-    explanation: 'Rubrics require named test + hypothesis check + conclusion.',
+    explanation: 'Rubrics require naming the test, verifying its hypotheses, and stating the conclusion. A bare answer earns little, the ratio test fails for many series (it is inconclusive for $p$-series), and a calculator estimate is not a justification.',
     difficulty: 'medium', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
   },
   {
@@ -3663,9 +3473,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'For a logistic model $\\dfrac{dP}{dt} = kP(1 - P/M)$, the carrying capacity is:',
-    options: ['$k$', '$M$', '$P_0$', '$kM$'],
+    options: ['$\\frac{M}{2}$', '$M$', '$P_0$', '$kM$'],
     correctAnswer: 1,
-    explanation: '$M$ is the limit as $t \\to \\infty$.',
+    explanation: '$\\frac{dP}{dt} = 0$ when $P = M$, and solutions level off there, so $M$ is the carrying capacity. $\\frac{M}{2}$ is where growth is fastest, $P_0$ is the starting population, and $kM$ is a rate.',
     difficulty: 'medium', domain: 'advanced-diffeq', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both',
   },
   {
@@ -3686,16 +3496,16 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   // ─────────────── review-connections-calcbc ───────────────
   {
     question: 'BC adds which topic NOT in AB?',
-    options: ['Limits', 'Power series', 'Derivatives', 'Definite integrals'],
+    options: ['Limits at infinity', 'Power series', 'Related rates', 'Definite integrals'],
     correctAnswer: 1,
-    explanation: 'Series content (including power, Taylor) is BC-only.',
+    explanation: 'Infinite series, including power and Taylor series, are BC-only content. Limits at infinity, related rates and definite integrals are all in AB as well.',
     difficulty: 'easy', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both',
   },
   {
     question: 'A polar curve $r = 2\\cos\\theta$ is equivalent in Cartesian form to:',
-    options: ['A circle: $(x - 1)^2 + y^2 = 1$', 'A line', 'A parabola', 'An ellipse'],
+    options: ['$(x - 1)^2 + y^2 = 1$', '$x^2 + (y - 1)^2 = 1$', '$(x - 2)^2 + y^2 = 4$', '$x = 2$'],
     correctAnswer: 0,
-    explanation: '$r = 2\\cos\\theta \\Rightarrow r^2 = 2r\\cos\\theta \\Rightarrow x^2 + y^2 = 2x$.',
+    explanation: 'Multiply by $r$: $r^2 = 2r\\cos\\theta$, so $x^2 + y^2 = 2x$, which completes to $(x - 1)^2 + y^2 = 1$, a circle of radius 1 centered at $(1, 0)$. Centering on the $y$-axis describes $r = 2\\sin\\theta$, using $2$ as the radius doubles the circle, and $x = 2$ comes from treating $r\\cos\\theta$ as $2$.',
     difficulty: 'medium', domain: 'parametric-polar-vector', topicSlug: 'review-connections-calcbc', formSet: 'both',
   },
   {
@@ -3714,23 +3524,23 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'Does $\\sum_{n=1}^\\infty \\dfrac{1}{n^2}$ converge?',
-    options: ['Yes (p-series with $p = 2 > 1$)', 'No', 'Conditionally', 'Cannot tell'],
+    options: ['Yes, as a $p$-series with $p = 2$', 'No, its terms shrink too slowly', 'Only conditionally convergent', 'It cannot be determined'],
     correctAnswer: 0,
-    explanation: '$p$-series converges iff $p > 1$.',
+    explanation: '$\\sum \\frac{1}{n^2}$ is a $p$-series with $p = 2 > 1$, so it converges. Its terms shrink fast enough, all terms are positive so convergence is absolute, and the $p$-series test settles it.',
     difficulty: 'easy', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both',
   },
   {
     question: 'Does $\\sum_{n=1}^\\infty \\dfrac{1}{n}$ converge?',
-    options: ['Yes', 'No (harmonic series diverges)', 'Conditionally', 'Cannot determine'],
+    options: ['Yes, since its terms approach $0$', 'No, it is the harmonic series', 'Yes, but only conditionally', 'It cannot be determined'],
     correctAnswer: 1,
-    explanation: 'Harmonic series diverges (p-series with $p = 1$).',
+    explanation: '$\\sum \\frac{1}{n}$ is the harmonic series, a $p$-series with $p = 1$, so it diverges. Terms approaching $0$ do not guarantee convergence, conditional convergence needs alternating signs, and the $p$-series test settles it.',
     difficulty: 'easy', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both',
   },
   {
     question: '$\\sum_{n=1}^\\infty \\dfrac{(-1)^n}{n}$ converges by:',
-    options: ['Geometric series test', 'Alternating series test (terms decreasing to 0)', 'Ratio test (gives 1)', 'p-series test'],
+    options: ['The geometric series test', 'The alternating series test', 'The ratio test, since $L = 1$', 'The $p$-series test with $p = 1$'],
     correctAnswer: 1,
-    explanation: 'Alternating, $1/n$ decreases to $0$ — AST applies. (Conditionally convergent.)',
+    explanation: 'The terms alternate in sign and $\\frac{1}{n}$ decreases to $0$, so the alternating series test gives convergence (conditional). The ratio is not constant (not geometric), $L = 1$ makes the ratio test inconclusive, and the $p$-series test with $p = 1$ shows that $\\sum \\frac{1}{n}$ diverges, not that this series converges.',
     difficulty: 'medium', domain: 'sequences-series', topicSlug: 'review-connections-calcbc', formSet: 'both',
   },
   {
@@ -3742,9 +3552,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'For $\\int x e^x dx$ via integration by parts with $u = x$, $dv = e^x dx$, the result is:',
-    options: ['$x e^x + C$', '$x e^x - e^x + C$', '$x e^x + e^x + C$', '$\\dfrac{x^2 e^x}{2} + C$'],
+    options: ['$e^x - x e^x + C$', '$x e^x - e^x + C$', '$x e^x + e^x + C$', '$\\dfrac{x^2 e^x}{2} + C$'],
     correctAnswer: 1,
-    explanation: '$uv - \\int v du = xe^x - \\int e^x dx = xe^x - e^x + C$.',
+    explanation: '$uv - \\int v\\,du = xe^x - \\int e^x\\,dx = xe^x - e^x + C$. Reversing both signs gives $e^x - xe^x$, a plus sign forgets to subtract the second integral, and $\\frac{x^2 e^x}{2}$ integrates the factors separately.',
     difficulty: 'medium', domain: 'advanced-integration', topicSlug: 'review-connections-calcbc', formSet: 'both',
   },
   {
@@ -3758,23 +3568,23 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   // ─────────────── alternating-series-calcbc (top-up) ───────────────
   {
     question: 'The Alternating Series Test (Leibniz) requires the series $\\sum (-1)^n b_n$ to have:',
-    options: ['$b_n > 0$, $b_n$ eventually decreasing, and $b_n \\to 0$', '$b_n \\to \\infty$', '$b_n$ constant', '$\\sum b_n$ convergent'],
+    options: ['$b_n$ decreasing to a limit of $0$', '$b_n \\to \\infty$ as $n \\to \\infty$', '$b_n$ decreasing to any finite limit', '$\\sum b_n$ itself convergent'],
     correctAnswer: 0,
-    explanation: 'Three Leibniz hypotheses.',
+    explanation: 'The Alternating Series Test needs $b_n > 0$, eventually decreasing, with $b_n \\to 0$. If $b_n$ grows or has a nonzero limit, the terms do not go to $0$ and the series diverges, and requiring $\\sum b_n$ to converge would test absolute convergence, which is not needed.',
     difficulty: 'easy', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both',
   },
   {
     question: 'The Alternating Series Estimation Theorem says $|S - S_n| \\le$:',
-    options: ['$|b_{n+1}|$ (the first omitted term)', '$|b_n|$', '$\\sum_{k=n}^\\infty b_k$', '$1/n$'],
+    options: ['$|b_{n+1}|$', '$|b_n|$', '$\\sum_{k=n}^\\infty b_k$', '$|b_{n+1} - b_n|$'],
     correctAnswer: 0,
-    explanation: 'Error bound = absolute value of the next term.',
+    explanation: 'The error after $n$ terms is at most the first omitted term, $|b_{n+1}|$. $|b_n|$ is the last included term, the tail sum is the error itself (not the bound), and the difference of consecutive terms is unrelated.',
     difficulty: 'medium', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both',
   },
   {
     question: '$\\sum_{n=1}^\\infty \\dfrac{(-1)^n}{n^2}$ is:',
-    options: ['Absolutely convergent (since $\\sum 1/n^2$ converges)', 'Conditionally convergent only', 'Divergent', 'Cannot determine'],
+    options: ['Absolutely convergent', 'Conditionally convergent only', 'Divergent by the $n$th term test', 'Not decidable with these tests'],
     correctAnswer: 0,
-    explanation: '$\\sum |a_n| = \\sum 1/n^2$ converges by p-series ($p = 2$).',
+    explanation: '$\\sum \\left|\\frac{(-1)^n}{n^2}\\right| = \\sum \\frac{1}{n^2}$ converges as a $p$-series with $p = 2$, so the series converges absolutely. Absolute convergence rules out "conditionally only", and the terms do go to $0$.',
     difficulty: 'hard', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both',
   },
 
