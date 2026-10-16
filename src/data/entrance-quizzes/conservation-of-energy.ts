@@ -1,153 +1,211 @@
+/**
+ * Entrance Quiz — Conservation of Energy — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
+ */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Law of Conservation of Energy
+  // Part 1 — Energy Conservation Principle
   {
     id: 'coe-ent-1a',
-    question: 'The law of conservation of energy states that in an isolated system, total energy:',
-    options: ['Increases over time', 'Decreases over time', 'Remains constant', 'Equals zero'],
-    correctIndex: 2,
-    explanation: 'Energy cannot be created or destroyed in an isolated system; it can only transform between forms. Total energy remains constant.',
+    question: 'A cart on a frictionless track passes a point 5.0 m above the ground at 10 m/s. What is the greatest height above the ground it can reach? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '5.0 m',
+      '7.5 m',
+      '15 m',
+      '10 m',
+    ],
+    correctIndex: 3,
+    explanation: 'Its kinetic energy can raise it a further $v^2/(2g) = 100/20 = 5.0$ m, so the highest point is $5.0 + 5.0 = 10$ m. The 5.0 m value forgets the starting height, and 15 m drops the 2 in $2g$.',
     partNumber: 1,
-    partTitle: 'Law of Conservation of Energy',
+    partTitle: 'Energy Conservation Principle',
   },
   {
     id: 'coe-ent-1b',
-    question: 'Which of the following is a conservative force?',
-    options: ['Friction', 'Air resistance', 'Gravity', 'Drag force'],
-    correctIndex: 2,
-    explanation: 'Gravity is conservative — the work it does depends only on initial and final positions, not the path. Friction and air resistance are non-conservative.',
+    question: 'In which situation is the mechanical energy of the object-Earth system constant?',
+    options: [
+      'A pendulum swinging in a vacuum',
+      'A box pushed up a ramp at constant speed',
+      'A car braking to a stop on a level road',
+      'A skydiver falling at constant terminal speed',
+    ],
+    correctIndex: 0,
+    explanation: 'Only gravity and the string act on the pendulum, and the string does no work, so kinetic plus potential energy is constant. The push adds energy, braking friction removes it, and drag removes energy from the falling skydiver (her potential energy drops while her kinetic energy stays the same).',
     partNumber: 1,
-    partTitle: 'Law of Conservation of Energy',
+    partTitle: 'Energy Conservation Principle',
   },
-
-  // Part 2: KE–PE Conversions
+  // Part 2 — Non-Conservative Forces & Work-Energy
   {
     id: 'coe-ent-2a',
-    question: 'A ball is thrown upward. As it rises, kinetic energy converts to:',
-    options: ['Thermal energy', 'Elastic PE', 'Gravitational PE', 'Chemical energy'],
-    correctIndex: 2,
-    explanation: 'As the ball rises, it slows down (KE decreases) and gains height (gravitational PE increases). KE converts to gravitational PE.',
+    question: 'A 2.0 kg block slides from rest down a frictionless ramp 4.0 m high and then 5.0 m across a rough floor with $\\mu_k = 0.30$. What is its speed at the end of the rough section? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '8.9 m/s',
+      '7.1 m/s',
+      '5.0 m/s',
+      '10 m/s',
+    ],
+    correctIndex: 1,
+    explanation: 'The block starts with $mgh = 80$ J; friction removes $\\mu_k mgd = 0.30(20)(5.0) = 30$ J, leaving 50 J of kinetic energy, so $v = \\sqrt{2(50)/2.0} = 7.1$ m/s. Ignoring friction gives 8.9 m/s.',
     partNumber: 2,
-    partTitle: 'KE–PE Conversions',
+    partTitle: 'Non-Conservative Forces & Work-Energy',
   },
   {
     id: 'coe-ent-2b',
-    question: 'A pendulum reaches maximum speed at the ______ of its swing.',
-    options: ['Highest point', 'Lowest point', 'Midway between high and low', 'It has constant speed'],
-    correctIndex: 1,
-    explanation: 'At the lowest point, all gravitational PE has converted to KE, giving maximum speed.',
+    question: 'A student pushes a box up a rough ramp at constant speed. How does the work the student does compare with the increase in gravitational potential energy?',
+    options: [
+      'Smaller, since friction does part of the lifting',
+      'Equal, since the box\'s speed stays constant',
+      'Larger, by the heat friction makes',
+      'Zero, since the net force on the box is zero',
+    ],
+    correctIndex: 2,
+    explanation: 'The push must supply both the gain in gravitational energy and the thermal energy produced by friction, $f_k d$. Zero net force means zero net work, not zero work by the student.',
     partNumber: 2,
-    partTitle: 'KE–PE Conversions',
+    partTitle: 'Non-Conservative Forces & Work-Energy',
   },
-
-  // Part 3: Conservation Without Friction
+  // Part 3 — Springs and Gravity Combined
   {
     id: 'coe-ent-3a',
-    question: 'A $2$ kg ball is released from $5$ m. What is its speed at the bottom? (Use $g = 10$ $m/s^{2}$, no friction.)',
-    options: ['$5$ m/s', '$10$ m/s', '$20$ m/s', '$50$ m/s'],
-    correctIndex: 1,
-    explanation: '$mgh = \\frac{1}{2}mv^2 \\Rightarrow v = \\sqrt{2gh} = \\sqrt{2(10)(5)} = \\sqrt{100} = 10$ m/s.',
+    question: 'A 2.0 kg block slides from rest down a frictionless ramp 0.80 m high and then compresses a horizontal spring with $k = 400$ N/m. What is the spring\'s maximum compression? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '0.080 m',
+      '0.040 m',
+      '0.20 m',
+      '0.28 m',
+    ],
+    correctIndex: 3,
+    explanation: 'All 16 J of gravitational energy becomes elastic energy: $\\tfrac{1}{2}(400)x^2 = 16$, so $x^2 = 0.080$ and $x = 0.28$ m. Forgetting the square root gives 0.080 m, and dropping the $\\tfrac{1}{2}$ gives 0.20 m.',
     partNumber: 3,
-    partTitle: 'Conservation Without Friction',
+    partTitle: 'Springs and Gravity Combined',
   },
   {
     id: 'coe-ent-3b',
-    question: 'A roller coaster starts from rest at height $h_1$ and reaches height $h_2 < h_1$ (no friction). Its speed at $h_2$ depends on:',
-    options: ['$h_1$ only', '$h_2$ only', '$h_1 - h_2$', 'The shape of the track'],
-    correctIndex: 2,
-    explanation: '$v = \\sqrt{2g(h_1 - h_2)}$. Only the height difference matters, not the path taken.',
+    question: 'A compressed spring launches a block up a frictionless ramp, and the block rises to height $h$. If the spring were compressed three times as far, how high would the block rise?',
+    options: [
+      '$9h$',
+      '$3h$',
+      '$6h$',
+      '$\\sqrt{3}\\,h$',
+    ],
+    correctIndex: 0,
+    explanation: 'The stored energy $\\tfrac{1}{2}kx^2$ becomes $mgh$, so $h \\propto x^2$. Tripling the compression stores 9 times the energy and gives 9 times the height.',
     partNumber: 3,
-    partTitle: 'Conservation Without Friction',
+    partTitle: 'Springs and Gravity Combined',
   },
-
-  // Part 4: Conservation With Friction
+  // Part 4 — Roller Coasters & Pendulums
   {
     id: 'coe-ent-4a',
-    question: 'When friction is present, mechanical energy is converted to:',
-    options: ['Gravitational PE', 'Elastic PE', 'Thermal energy', 'Nuclear energy'],
-    correctIndex: 2,
-    explanation: 'Friction converts mechanical energy (KE + PE) into thermal energy (heat). Total energy is still conserved, but mechanical energy decreases.',
+    question: 'A pendulum 2.0 m long is released from rest with its string at $60^\\circ$ from the vertical ($\\cos 60^\\circ = 0.50$). What is the bob\'s speed at the bottom of the swing? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '6.3 m/s',
+      '4.5 m/s',
+      '5.9 m/s',
+      '3.2 m/s',
+    ],
+    correctIndex: 1,
+    explanation: 'The bob drops $h = L(1 - \\cos 60^\\circ) = 1.0$ m, so $v = \\sqrt{2gh} = \\sqrt{20} = 4.5$ m/s. Using the full string length as the drop gives 6.3 m/s.',
     partNumber: 4,
-    partTitle: 'Conservation With Friction',
+    partTitle: 'Roller Coasters & Pendulums',
   },
   {
     id: 'coe-ent-4b',
-    question: 'A $4$ kg block slides down from $5$ m and reaches the bottom at $8$ m/s. How much energy was lost to friction? (Use $g = 10$ $m/s^{2}$.)',
-    options: ['$40$ J', '$72$ J', '$128$ J', '$200$ J'],
-    correctIndex: 0,
-    explanation: '$PE_i = mgh = 4(10)(5) = 200$ J. $KE_f = \\frac{1}{2}(4)(64) = 128$ J. Energy lost = $200 - 128 = 72$ J. Hmm wait: $\\frac{1}{2}(4)(8^2) = \\frac{1}{2}(4)(64) = 128$ J. Lost = $200 - 128 = 72$ J. The answer is $72$ J.',
+    question: 'A cart starts from rest at height $h$ on a frictionless roller-coaster track. What is its speed as it passes over a hilltop at height $h/2$?',
+    options: [
+      '$\\sqrt{gh/2}$',
+      '$\\sqrt{2gh}$',
+      '$\\sqrt{gh}$',
+      '$gh$',
+    ],
+    correctIndex: 2,
+    explanation: 'It has dropped $h/2$, so $\\tfrac{1}{2}mv^2 = mg(h/2)$ and $v = \\sqrt{gh}$. The shape of the track between the two points does not matter.',
     partNumber: 4,
-    partTitle: 'Conservation With Friction',
+    partTitle: 'Roller Coasters & Pendulums',
   },
-
-  // Part 5: Springs & Energy Conservation
+  // Part 5 — Energy Dissipation by Friction
   {
     id: 'coe-ent-5a',
-    question: 'A spring-loaded launcher ($k = 500$ N/m, $x = 0.2$ m) shoots a $0.5$ kg ball. What is the ball\'s speed? (Horizontal, frictionless.)',
-    options: ['$\\sqrt{20}$ m/s', '$\\sqrt{40}$ m/s', '$10$ m/s', '$20$ m/s'],
-    correctIndex: 1,
-    explanation: '$\\frac{1}{2}kx^2 = \\frac{1}{2}mv^2$. $v^2 = kx^2/m = 500(0.04)/0.5 = 40$. $v = \\sqrt{40} \\approx 6.3$ m/s.',
+    question: 'A car moving at 25 m/s locks its brakes and skids to a stop on a road where $\\mu_k = 0.50$. How far does it skid? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '125 m',
+      '31 m',
+      '6.3 m',
+      '63 m',
+    ],
+    correctIndex: 3,
+    explanation: 'The kinetic energy is removed by friction: $\\tfrac{1}{2}mv^2 = \\mu_k mgd$, so $d = v^2/(2\\mu_k g) = 625/10 = 63$ m, whatever the car\'s mass. Dropping the 2 gives 125 m.',
     partNumber: 5,
-    partTitle: 'Springs & Energy Conservation',
+    partTitle: 'Energy Dissipation by Friction',
   },
   {
     id: 'coe-ent-5b',
-    question: 'A block slides into a spring on a frictionless surface. At maximum spring compression:',
+    question: 'A block is released from rest at the top of a frictionless ramp 2.0 m high. At the bottom it slides onto a long rough floor with $\\mu_k = 0.25$. How far along the floor does it slide before stopping?',
     options: [
-      'KE is maximum',
-      'KE equals elastic PE',
-      'All KE has become elastic PE',
-      'Energy is lost',
-    ],
-    correctIndex: 2,
-    explanation: 'At maximum compression, the block is momentarily at rest. All kinetic energy has been stored as elastic PE in the spring.',
-    partNumber: 5,
-    partTitle: 'Springs & Energy Conservation',
-  },
-
-  // Part 6: Energy Bar Charts
-  {
-    id: 'coe-ent-6a',
-    question: 'In an energy bar chart for a falling ball (no friction), as the ball falls:',
-    options: [
-      'The KE bar grows and PE bar shrinks by the same amount',
-      'Both bars grow',
-      'Both bars shrink',
-      'Only the KE bar changes',
+      '8.0 m',
+      '0.50 m',
+      '4.0 m',
+      '16 m',
     ],
     correctIndex: 0,
-    explanation: 'Total energy is conserved. As PE decreases, KE increases by exactly the same amount. The bars exchange height symmetrically.',
+    explanation: 'All of the gravitational energy $mgh$ is dissipated by friction $\\mu_k mgd$, so $d = h/\\mu_k = 2.0/0.25 = 8.0$ m. Multiplying instead of dividing gives 0.50 m.',
+    partNumber: 5,
+    partTitle: 'Energy Dissipation by Friction',
+  },
+  // Part 6 — Problem-Solving Workshop
+  {
+    id: 'coe-ent-6a',
+    question: 'A 1.0 kg block slides from rest down a frictionless ramp 3.0 m high, crosses a 2.0 m rough patch with $\\mu_k = 0.50$, and then compresses a spring with $k = 400$ N/m on a frictionless floor. What is the maximum compression? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '0.39 m',
+      '0.32 m',
+      '0.10 m',
+      '0.22 m',
+    ],
+    correctIndex: 1,
+    explanation: 'The block starts with 30 J; the rough patch removes $0.50(10)(2.0) = 10$ J, leaving 20 J for the spring: $\\tfrac{1}{2}(400)x^2 = 20$ gives $x = 0.32$ m. Ignoring friction gives 0.39 m.',
     partNumber: 6,
-    partTitle: 'Energy Bar Charts',
+    partTitle: 'Problem-Solving Workshop',
   },
   {
     id: 'coe-ent-6b',
-    question: 'In an energy bar chart with friction, the sum of KE + PE bars over time:',
-    options: ['Stays constant', 'Increases', 'Decreases', 'Oscillates'],
+    question: 'A 0.50 kg ball is dropped from 0.30 m above the top of a vertical spring with $k = 100$ N/m. What is the spring\'s maximum compression? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '0.17 m',
+      '0.050 m',
+      '0.23 m',
+      '0.30 m',
+    ],
     correctIndex: 2,
-    explanation: 'With friction, some mechanical energy converts to thermal energy. The sum KE + PE (mechanical energy) decreases.',
+    explanation: 'The ball falls $0.30 + x$ in all, so $5.0(0.30 + x) = \\tfrac{1}{2}(100)x^2$, giving $50x^2 - 5x - 1.5 = 0$ and $x = 0.23$ m. Leaving out the extra fall $x$ gives 0.17 m, and 0.050 m is only where the ball would rest in equilibrium.',
     partNumber: 6,
-    partTitle: 'Energy Bar Charts',
+    partTitle: 'Problem-Solving Workshop',
   },
-
-  // Part 7: Synthesis & AP Review
+  // Part 7 — Synthesis & AP Review
   {
     id: 'coe-ent-7a',
-    question: 'A $1$ kg ball bounces to $80\\%$ of its original height. What fraction of mechanical energy is conserved per bounce?',
-    options: ['$60\\%$', '$80\\%$', '$90\\%$', '$64\\%$'],
-    correctIndex: 1,
-    explanation: 'Since PE = mgh and it reaches $0.8h$, the ball retains $80\\%$ of its mechanical energy per bounce. The other $20\\%$ becomes thermal/sound energy.',
+    question: 'A cart released from rest 1.25 m above the bottom of a curved track reaches the bottom at 4.0 m/s. What does this show? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      'The cart\'s mass is needed before anything can be concluded',
+      'Its total was conserved, as would be expected',
+      'The track did positive work on the cart along the way',
+      'Mechanical energy decreased, so friction or drag acted on it',
+    ],
+    correctIndex: 3,
+    explanation: 'Per kilogram, the cart had $gh = 12.5$ J of potential energy but ends with only $\\tfrac{1}{2}v^2 = 8.0$ J of kinetic energy, so about a third of the mechanical energy was dissipated. Mass cancels, so it is not needed.',
     partNumber: 7,
     partTitle: 'Synthesis & AP Review',
   },
   {
     id: 'coe-ent-7b',
-    question: 'A skater goes up a frictionless ramp. To reach a height of $3.2$ m, the minimum speed at the bottom must be: (Use $g = 10$ $m/s^{2}$.)',
-    options: ['$4$ m/s', '$6$ m/s', '$8$ m/s', '$10$ m/s'],
-    correctIndex: 2,
-    explanation: '$\\frac{1}{2}mv^2 = mgh \\Rightarrow v = \\sqrt{2gh} = \\sqrt{2(10)(3.2)} = \\sqrt{64} = 8$ m/s.',
+    question: 'A ball is launched from level ground at $40^\\circ$ above the horizontal. Ignoring air resistance, how does its kinetic energy at the highest point compare with its kinetic energy at launch?',
+    options: [
+      'Less than at launch, but not zero',
+      'Zero, because the ball is momentarily at rest',
+      'Equal to its value at launch, since energy is conserved',
+      'Greater than at launch, since it has risen higher',
+    ],
+    correctIndex: 0,
+    explanation: 'At the top the vertical velocity is zero but the horizontal component remains, so some kinetic energy is left; the rest has become gravitational potential energy. Total mechanical energy is conserved, not kinetic energy alone.',
     partNumber: 7,
     partTitle: 'Synthesis & AP Review',
   },
@@ -159,12 +217,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Law of Conservation of Energy' },
-    { partNumber: 2, partTitle: 'KE–PE Conversions' },
-    { partNumber: 3, partTitle: 'Conservation Without Friction' },
-    { partNumber: 4, partTitle: 'Conservation With Friction' },
-    { partNumber: 5, partTitle: 'Springs & Energy Conservation' },
-    { partNumber: 6, partTitle: 'Energy Bar Charts' },
+    { partNumber: 1, partTitle: 'Energy Conservation Principle' },
+    { partNumber: 2, partTitle: 'Non-Conservative Forces & Work-Energy' },
+    { partNumber: 3, partTitle: 'Springs and Gravity Combined' },
+    { partNumber: 4, partTitle: 'Roller Coasters & Pendulums' },
+    { partNumber: 5, partTitle: 'Energy Dissipation by Friction' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }

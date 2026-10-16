@@ -1,158 +1,211 @@
+/**
+ * Entrance Quiz — Newton's First and Second Laws — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
+ */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Newton's First Law (Inertia)
+  // Part 1 — Inertia & Newton's First Law
   {
-    id: 'n12-ent-1a',
-    question: 'Newton\'s first law states that an object at rest stays at rest unless acted on by a:',
-    options: ['Balanced force', 'Net external force', 'Gravitational force', 'Frictional force'],
-    correctIndex: 1,
-    explanation: 'Newton\'s first law (law of inertia) says an object maintains its state of motion unless a net external force acts on it.',
-    partNumber: 1,
-    partTitle: "Newton's First Law (Inertia)",
-  },
-  {
-    id: 'n12-ent-1b',
-    question: 'A book rests on a table. The net force on the book is zero. This is an example of:',
-    options: ['Newton\'s first law', 'Newton\'s second law', 'Newton\'s third law', 'The law of gravitation'],
+    id: 'nfs-ent-1a',
+    question: 'A hockey puck slides across level, frictionless ice in a straight line at constant speed. Which statement about the forces on the puck is correct?',
+    options: [
+      'The forces on it add up to zero',
+      'A small forward force keeps it going',
+      'Its forward push slowly runs out',
+      'The net force points along its motion',
+    ],
     correctIndex: 0,
-    explanation: 'The book is at rest and remains at rest because the net force is zero (normal force balances gravity). This illustrates Newton\'s first law.',
+    explanation: 'Constant velocity means zero acceleration, so by Newton\'s first law the net force is zero (weight and the normal force cancel). No force is needed to maintain motion, only to change it.',
     partNumber: 1,
-    partTitle: "Newton's First Law (Inertia)",
-  },
-
-  // Part 2: Mass & Inertia
-  {
-    id: 'n12-ent-2a',
-    question: 'Which quantity is the measure of an object\'s inertia?',
-    options: ['Weight', 'Force', 'Mass', 'Acceleration'],
-    correctIndex: 2,
-    explanation: 'Mass is the measure of inertia — the resistance of an object to changes in its motion. More mass means more inertia.',
-    partNumber: 2,
-    partTitle: 'Mass & Inertia',
+    partTitle: 'Inertia & Newton\'s First Law',
   },
   {
-    id: 'n12-ent-2b',
-    question: 'An astronaut with mass $80$ kg floats in the International Space Station. The astronaut\'s inertia is:',
-    options: ['Zero because they are weightless', 'Less than on Earth', 'The same as on Earth', 'Greater than on Earth'],
-    correctIndex: 2,
-    explanation: 'Inertia depends on mass, not weight. The astronaut\'s mass (and inertia) is the same regardless of the gravitational environment.',
-    partNumber: 2,
-    partTitle: 'Mass & Inertia',
-  },
-
-  // Part 3: Newton's Second Law (F = ma)
-  {
-    id: 'n12-ent-3a',
-    question: 'A $5$ kg object experiences a net force of $20$ N. What is its acceleration?',
-    options: ['$2$ $m/s^{2}$', '$4$ $m/s^{2}$', '$25$ $m/s^{2}$', '$100$ $m/s^{2}$'],
+    id: 'nfs-ent-1b',
+    question: 'A ball hangs from a string attached to the ceiling of a train car. The train has been moving at constant speed and then begins to brake. While the train slows, what happens to the string, as seen by a passenger?',
+    options: [
+      'It hangs straight down as before',
+      'It tilts toward the front of the train',
+      'It tilts toward the back of the train',
+      'It tilts toward one side of the train',
+    ],
     correctIndex: 1,
-    explanation: '$a = F_{net}/m = 20/5 = 4$ $m/s^{2}$.',
-    partNumber: 3,
-    partTitle: "Newton's Second Law",
+    explanation: 'The ball tends to keep moving forward at its original speed (inertia) while the car slows, so it swings forward until the string\'s tilt supplies the backward force that slows the ball with the train.',
+    partNumber: 1,
+    partTitle: 'Inertia & Newton\'s First Law',
   },
+  // Part 2 — Newton's Second Law
   {
-    id: 'n12-ent-3b',
-    question: 'If the net force on an object doubles while mass stays constant, the acceleration:',
-    options: ['Halves', 'Stays the same', 'Doubles', 'Quadruples'],
+    id: 'nfs-ent-2a',
+    question: 'Three horizontal forces act on a 4.0 kg box on a frictionless floor: 30 N east, 18 N west, and 16 N north. What is the magnitude of the box\'s acceleration?',
+    options: [
+      '$16\\text{ m/s}^2$',
+      '$7.0\\text{ m/s}^2$',
+      '$5.0\\text{ m/s}^2$',
+      '$3.0\\text{ m/s}^2$',
+    ],
     correctIndex: 2,
-    explanation: 'From $F = ma$, acceleration is directly proportional to net force when mass is constant. Doubling force doubles acceleration.',
-    partNumber: 3,
-    partTitle: "Newton's Second Law",
+    explanation: 'The net force has components 12 N east and 16 N north, so $F_{\\text{net}} = \\sqrt{12^2 + 16^2} = 20$ N and $a = 20/4.0 = 5.0\\text{ m/s}^2$. Adding the component magnitudes (28 N) gives 7.0, and adding all three forces gives 16.',
+    partNumber: 2,
+    partTitle: 'Newton\'s Second Law',
   },
-
-  // Part 4: Weight & Normal Force
   {
-    id: 'n12-ent-4a',
-    question: 'What is the weight of a $10$ kg object near Earth\'s surface? (Use $g = 9.8$ $m/s^{2}$.)',
-    options: ['$10$ N', '$98$ N', '$0.98$ N', '$980$ N'],
+    id: 'nfs-ent-2b',
+    question: 'At one instant a cart is moving to the right, while the net force on it points to the left. Which statement is correct at that instant?',
+    options: [
+      'It is speeding up now',
+      'It is moving to the left',
+      'It is moving at constant speed',
+      'It is slowing down',
+    ],
+    correctIndex: 3,
+    explanation: 'Acceleration always points along the net force, here to the left. With velocity to the right and acceleration to the left, the cart is slowing down; it is still moving right at that instant and will reverse only if the force keeps acting after it stops.',
+    partNumber: 2,
+    partTitle: 'Newton\'s Second Law',
+  },
+  // Part 3 — Free Body Diagrams
+  {
+    id: 'nfs-ent-3a',
+    question: 'A box is pulled up a rough ramp at constant speed by a rope parallel to the ramp. Which list gives all the forces acting on the box?',
+    options: [
+      'Weight, normal force, tension, and friction',
+      'Weight, tension, friction, and a force of motion',
+      'Weight, normal force, tension, friction, and the net force',
+      'Weight, normal force, and tension, nothing else',
+    ],
+    correctIndex: 0,
+    explanation: 'The Earth pulls down (weight), the ramp pushes perpendicular to its surface (normal) and along it opposing the sliding (friction), and the rope pulls (tension). The net force is the sum of these, not an extra force, and there is no "force of motion".',
+    partNumber: 3,
+    partTitle: 'Free Body Diagrams',
+  },
+  {
+    id: 'nfs-ent-3b',
+    question: 'A skydiver falls straight down at a constant (terminal) speed. Which describes the forces on her?',
+    options: [
+      'Weight down only, since she is moving downward',
+      'Weight down and air resistance up, equal in size',
+      'Weight down, larger than the air resistance up',
+      'Air resistance up, larger than the weight down',
+    ],
     correctIndex: 1,
-    explanation: 'Weight $= mg = 10 \\times 9.8 = 98$ N.',
+    explanation: 'Constant velocity means zero net force, so the upward air resistance must exactly balance her weight. A larger weight would make her speed up, and a larger drag would slow her.',
+    partNumber: 3,
+    partTitle: 'Free Body Diagrams',
+  },
+  // Part 4 — Applying F = ma — Single Object Problems
+  {
+    id: 'nfs-ent-4a',
+    question: 'A 60 kg person stands on a scale in an elevator that is moving upward but slowing down at $2.0\\text{ m/s}^2$. What does the scale read? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '720 N',
+      '600 N',
+      '480 N',
+      '120 N',
+    ],
+    correctIndex: 2,
+    explanation: 'The acceleration points down (slowing while moving up), so with up positive $N - mg = m(-2.0)$ and $N = 60(10 - 2.0) = 480$ N. The direction of the acceleration, not of the velocity, sets the reading.',
     partNumber: 4,
+    partTitle: 'Applying F = ma — Single Object Problems',
+  },
+  {
+    id: 'nfs-ent-4b',
+    question: 'A 20 kg sled on frictionless snow is pulled by a rope with a 100 N tension at $37^\\circ$ above the horizontal ($\\sin 37^\\circ = 0.6$, $\\cos 37^\\circ = 0.8$). What is the normal force on the sled? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '200 N',
+      '260 N',
+      '120 N',
+      '140 N',
+    ],
+    correctIndex: 3,
+    explanation: 'Vertically, $N + T\\sin 37^\\circ - mg = 0$, so $N = 200 - 60 = 140$ N. The upward component of the pull reduces the normal force; using the cosine instead gives 120 N.',
+    partNumber: 4,
+    partTitle: 'Applying F = ma — Single Object Problems',
+  },
+  // Part 5 — Weight & Normal Force
+  {
+    id: 'nfs-ent-5a',
+    question: 'A 50 kg student stands on a scale in an elevator, and the scale reads 400 N. Which must be true of the elevator? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      'It is accelerating downward at $2\\text{ m/s}^2$',
+      'It is accelerating upward at $2\\text{ m/s}^2$',
+      'It is moving down at a constant speed of $2$ m/s',
+      'It is accelerating downward at $8\\text{ m/s}^2$',
+    ],
+    correctIndex: 0,
+    explanation: 'The student\'s weight is 500 N, so $N - mg = 400 - 500 = -100$ N gives $a = -2\\text{ m/s}^2$: a downward acceleration of $2\\text{ m/s}^2$. The elevator could be moving down and speeding up or moving up and slowing down; constant velocity would make the scale read 500 N.',
+    partNumber: 5,
     partTitle: 'Weight & Normal Force',
   },
   {
-    id: 'n12-ent-4b',
-    question: 'A person stands in an elevator accelerating upward. The normal force from the floor is:',
+    id: 'nfs-ent-5b',
+    question: 'A 5.0 kg box rests on a table while a string pulls straight up on it with a 20 N force. What is the normal force from the table on the box? Use $g = 10\\text{ m/s}^2$.',
     options: [
-      'Equal to their weight',
-      'Less than their weight',
-      'Greater than their weight',
-      'Zero',
+      '50 N',
+      '30 N',
+      '20 N',
+      '70 N',
     ],
-    correctIndex: 2,
-    explanation: 'When accelerating upward, $N - mg = ma$ so $N = m(g + a) > mg$. The normal force exceeds the weight (the person feels heavier).',
-    partNumber: 4,
+    correctIndex: 1,
+    explanation: 'The box is in equilibrium, so $N + 20 - 50 = 0$ and $N = 30$ N. The normal force adjusts to whatever the other vertical forces require; it equals $mg$ only when nothing else pushes or pulls vertically.',
+    partNumber: 5,
     partTitle: 'Weight & Normal Force',
   },
-
-  // Part 5: Free-Body Diagrams
+  // Part 6 — Problem-Solving Workshop
   {
-    id: 'n12-ent-5a',
-    question: 'In a free-body diagram, which forces act on a box sliding across a rough horizontal surface?',
+    id: 'nfs-ent-6a',
+    question: 'On a frictionless table, a horizontal rope pulls a 3.0 kg block with a 24 N force, and a light string connects that block to a 1.0 kg block trailing behind it. What is the tension in the connecting string?',
     options: [
-      'Gravity, normal, applied force, friction',
-      'Gravity and normal only',
-      'Applied force and friction only',
-      'Gravity, friction, and applied force only',
+      '24 N',
+      '18 N',
+      '6 N',
+      '12 N',
+    ],
+    correctIndex: 2,
+    explanation: 'Both blocks share $a = 24/(3.0 + 1.0) = 6.0\\text{ m/s}^2$. The string is the only horizontal force on the 1.0 kg block, so $T = (1.0)(6.0) = 6$ N; the 18 N value is the net force on the front block.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  {
+    id: 'nfs-ent-6b',
+    question: 'A 1200 kg car brakes from 25 m/s to rest over a distance of 50 m with constant deceleration. What is the magnitude of the net braking force?',
+    options: [
+      '3750 N',
+      '600 N',
+      '15000 N',
+      '7500 N',
+    ],
+    correctIndex: 3,
+    explanation: 'From $v^2 = v_0^2 + 2a\\Delta x$, $a = 625/100 = 6.25\\text{ m/s}^2$, so $F = ma = 1200(6.25) = 7500$ N. Leaving out the 2 in $2a\\Delta x$ doubles the result to 15000 N.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  // Part 7 — Synthesis & AP Review
+  {
+    id: 'nfs-ent-7a',
+    question: 'Cart X has three times the mass of cart Y. Starting from rest, each is pushed by the same constant net force over the same distance. How does X\'s final speed compare with Y\'s?',
+    options: [
+      '$\\dfrac{1}{\\sqrt{3}}$ of Y\'s speed',
+      'One-third of Y\'s speed',
+      'One-ninth of Y\'s speed',
+      'Equal to Y\'s speed',
     ],
     correctIndex: 0,
-    explanation: 'All contact and field forces on the object are shown: gravity (down), normal (up), applied force (horizontal), and kinetic friction (opposing motion).',
-    partNumber: 5,
-    partTitle: 'Free-Body Diagrams',
-  },
-  {
-    id: 'n12-ent-5b',
-    question: 'On a free-body diagram, all force arrows should originate from:',
-    options: ['The ground', 'The surface of contact', 'The center of the object', 'Outside the object'],
-    correctIndex: 2,
-    explanation: 'In a free-body diagram, force vectors are drawn originating from the center of mass of the object being analyzed.',
-    partNumber: 5,
-    partTitle: 'Free-Body Diagrams',
-  },
-
-  // Part 6: Applying F = ma
-  {
-    id: 'n12-ent-6a',
-    question: 'Two forces act on a $3$ kg object: $12$ N east and $4$ N west. What is the acceleration?',
-    options: ['$\\frac{8}{3}$ $m/s^{2}$ east', '$\\frac{16}{3}$ $m/s^{2}$ east', '$4$ $m/s^{2}$ west', '$\\frac{8}{3}$ $m/s^{2}$ west'],
-    correctIndex: 0,
-    explanation: '$F_{net} = 12 - 4 = 8$ N east. $a = F_{net}/m = 8/3 \\approx 2.67$ $m/s^{2}$ east.',
-    partNumber: 6,
-    partTitle: 'Applying F = ma',
-  },
-  {
-    id: 'n12-ent-6b',
-    question: 'A $1000$ kg car accelerates from rest to $20$ m/s in $10$ s. What net force is required?',
-    options: ['$1000$ N', '$2000$ N', '$10000$ N', '$20000$ N'],
-    correctIndex: 1,
-    explanation: '$a = \\Delta v/\\Delta t = 20/10 = 2$ $m/s^{2}$. $F = ma = 1000 \\times 2 = 2000$ N.',
-    partNumber: 6,
-    partTitle: 'Applying F = ma',
-  },
-
-  // Part 7: Synthesis & AP Review
-  {
-    id: 'n12-ent-7a',
-    question: 'A skydiver reaches terminal velocity. At this point, the net force on the skydiver is:',
-    options: ['Equal to their weight', 'Greater than zero downward', 'Zero', 'Dependent on altitude'],
-    correctIndex: 2,
-    explanation: 'At terminal velocity, the skydiver moves at constant speed. By Newton\'s first law, constant velocity means zero net force (air resistance equals weight).',
+    explanation: 'X\'s acceleration is one-third of Y\'s, and from $v^2 = 2a\\Delta x$ its $v^2$ is one-third as large, so its speed is $1/\\sqrt{3}$ of Y\'s. One-third would be right for equal pushing times, not equal distances.',
     partNumber: 7,
     partTitle: 'Synthesis & AP Review',
   },
   {
-    id: 'n12-ent-7b',
-    question: 'An object moves at constant velocity across a rough surface under an applied force. The applied force must:',
+    id: 'nfs-ent-7b',
+    question: 'A worker pushes a heavy crate across a level floor at constant speed with a 200 N horizontal force. Which statement is correct?',
     options: [
-      'Be greater than friction',
-      'Equal the friction force',
-      'Be less than friction',
-      'Equal the weight of the object',
+      'The push is larger than the friction force',
+      'Friction and the push are equal in size',
+      'The net force is 200 N in the forward direction',
+      'The crate\'s inertia supplies a forward force',
     ],
     correctIndex: 1,
-    explanation: 'Constant velocity means zero acceleration, so net force is zero. The applied force must exactly balance friction.',
+    explanation: 'Constant velocity means zero net force, so the backward friction (200 N) must balance the 200 N push. A push larger than friction would make the crate speed up, and inertia is not a force.',
     partNumber: 7,
     partTitle: 'Synthesis & AP Review',
   },
@@ -164,12 +217,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: "Newton's First Law (Inertia)" },
-    { partNumber: 2, partTitle: 'Mass & Inertia' },
-    { partNumber: 3, partTitle: "Newton's Second Law" },
-    { partNumber: 4, partTitle: 'Weight & Normal Force' },
-    { partNumber: 5, partTitle: 'Free-Body Diagrams' },
-    { partNumber: 6, partTitle: 'Applying F = ma' },
+    { partNumber: 1, partTitle: 'Inertia & Newton\'s First Law' },
+    { partNumber: 2, partTitle: 'Newton\'s Second Law' },
+    { partNumber: 3, partTitle: 'Free Body Diagrams' },
+    { partNumber: 4, partTitle: 'Applying F = ma — Single Object Problems' },
+    { partNumber: 5, partTitle: 'Weight & Normal Force' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }

@@ -1,158 +1,211 @@
+/**
+ * Entrance Quiz — Torque and Rotational Equilibrium — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
+ */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Torque Definition
+  // Part 1 — What Is Torque?
   {
-    id: 'te-ent-1a',
-    question: 'Torque is calculated as:',
-    options: ['$\\tau = Fr$', '$\\tau = Fr\\sin\\theta$', '$\\tau = Fr\\cos\\theta$', '$\\tau = F/r$'],
-    correctIndex: 1,
-    explanation: 'Torque $\\tau = rF\\sin\\theta$, where $\\theta$ is the angle between the position vector $r$ and the force $F$.',
-    partNumber: 1,
-    partTitle: 'Torque Definition',
-  },
-  {
-    id: 'te-ent-1b',
-    question: 'The SI unit of torque is:',
-    options: ['Newton', 'Joule', 'Newton-meter', 'Watt'],
-    correctIndex: 2,
-    explanation: 'Torque has units of force × distance = N·m. Although dimensionally the same as a joule, torque is expressed in N·m to distinguish it from energy.',
-    partNumber: 1,
-    partTitle: 'Torque Definition',
-  },
-
-  // Part 2: Lever Arm
-  {
-    id: 'te-ent-2a',
-    question: 'The lever arm is the:',
+    id: 'tq-ent-1a',
+    question: 'A mechanic pulls on the end of a 0.40 m wrench with a 60 N force directed at $30^\\circ$ to the wrench handle ($\\sin 30^\\circ = 0.50$, $\\cos 30^\\circ = 0.87$). What is the magnitude of the torque about the bolt?',
     options: [
-      'Length of the object',
-      'Distance from the pivot to where the force is applied',
-      'Perpendicular distance from the pivot to the line of action of the force',
-      'The force times the distance',
+      '24 N·m',
+      '12 N·m',
+      '21 N·m',
+      '150 N·m',
+    ],
+    correctIndex: 1,
+    explanation: '$\\tau = rF\\sin\\theta = 0.40(60)(0.50) = 12$ N·m; only the force component perpendicular to the wrench turns the bolt. Ignoring the angle gives 24 N·m, and using the cosine gives 21 N·m.',
+    partNumber: 1,
+    partTitle: 'What Is Torque?',
+  },
+  {
+    id: 'tq-ent-1b',
+    question: 'You push on a door with the same size force each time. Which push produces the greatest torque about the hinges?',
+    options: [
+      'At the handle, directed toward the hinges',
+      'Near the hinges, perpendicular to the door',
+      'At the handle, perpendicular to the door',
+      'At the handle, at $30^\\circ$ to the door\'s face',
     ],
     correctIndex: 2,
-    explanation: 'The lever arm (moment arm) is the perpendicular distance from the axis of rotation to the line of action of the force.',
-    partNumber: 2,
-    partTitle: 'Lever Arm',
+    explanation: 'Torque is $rF\\sin\\theta$: it is largest for the greatest distance from the axis and a force at $90^\\circ$ to the door. A push aimed at the hinges has zero lever arm.',
+    partNumber: 1,
+    partTitle: 'What Is Torque?',
   },
+  // Part 2 — Calculating Torque
   {
-    id: 'te-ent-2b',
-    question: 'A force is applied at the end of a $0.5$ m wrench at $90°$ to the handle. If the force is $40$ N, the torque is:',
-    options: ['$10$ N·m', '$20$ N·m', '$40$ N·m', '$80$ N·m'],
-    correctIndex: 1,
-    explanation: '$\\tau = rF\\sin 90° = 0.5 \\times 40 \\times 1 = 20$ N·m.',
-    partNumber: 2,
-    partTitle: 'Lever Arm',
-  },
-
-  // Part 3: Sign Convention for Torque
-  {
-    id: 'te-ent-3a',
-    question: 'By convention, a counterclockwise torque is considered:',
-    options: ['Negative', 'Positive', 'Zero', 'Undefined'],
-    correctIndex: 1,
-    explanation: 'By the right-hand rule convention, counterclockwise torques are positive and clockwise torques are negative.',
-    partNumber: 3,
-    partTitle: 'Sign Convention for Torque',
-  },
-  {
-    id: 'te-ent-3b',
-    question: 'Two forces act on a bar: $20$ N·m clockwise and $15$ N·m counterclockwise. The net torque is:',
-    options: ['$35$ N·m CW', '$5$ N·m CW', '$5$ N·m CCW', '$35$ N·m CCW'],
-    correctIndex: 1,
-    explanation: 'Net torque = $-20 + 15 = -5$ N·m (negative = clockwise). The net torque is $5$ N·m clockwise.',
-    partNumber: 3,
-    partTitle: 'Sign Convention for Torque',
-  },
-
-  // Part 4: Conditions for Static Equilibrium
-  {
-    id: 'te-ent-4a',
-    question: 'For an object to be in static equilibrium, which conditions must be met?',
+    id: 'tq-ent-2a',
+    question: 'A horizontal beam 3.0 m long is hinged at a wall. A cable attached to the far end pulls with 200 N at $37^\\circ$ above the beam ($\\sin 37^\\circ = 0.6$, $\\cos 37^\\circ = 0.8$). What is the cable\'s torque about the hinge?',
     options: [
-      'Net force = 0 only',
-      'Net torque = 0 only',
-      'Both net force = 0 and net torque = 0',
-      'Velocity = 0 only',
+      '600 N·m',
+      '120 N·m',
+      '480 N·m',
+      '360 N·m',
+    ],
+    correctIndex: 3,
+    explanation: 'The lever arm is the perpendicular distance from the hinge to the cable\'s line of action, $3.0\\sin 37^\\circ = 1.8$ m, so $\\tau = 1.8(200) = 360$ N·m. Using the cosine gives 480 N·m.',
+    partNumber: 2,
+    partTitle: 'Calculating Torque',
+  },
+  {
+    id: 'tq-ent-2b',
+    question: 'Three pushes act on a door, each at a stated distance from the hinge: A is 30 N at 0.90 m, perpendicular to the door; B is 60 N at 0.90 m, at $30^\\circ$ to the door ($\\sin 30^\\circ = 0.50$); C is 45 N at 0.60 m, perpendicular. How do their torques about the hinge compare?',
+    options: [
+      '$\\tau_A = \\tau_B = \\tau_C$',
+      '$\\tau_B > \\tau_C > \\tau_A$',
+      '$\\tau_B > \\tau_A > \\tau_C$',
+      '$\\tau_A > \\tau_C > \\tau_B$',
+    ],
+    correctIndex: 0,
+    explanation: 'A gives $0.90(30) = 27$ N·m, B gives $0.90(60)(0.50) = 27$ N·m, and C gives $0.60(45) = 27$ N·m. The largest force does not win when its perpendicular component or its distance is smaller.',
+    partNumber: 2,
+    partTitle: 'Calculating Torque',
+  },
+  // Part 3 — Rotational Equilibrium
+  {
+    id: 'tq-ent-3a',
+    question: 'A meter stick of negligible mass balances on a pivot at its 50 cm mark. A 3.0 N weight hangs at the 20 cm mark. Where must a 2.0 N weight hang to keep it balanced?',
+    options: [
+      'At the 80 cm mark',
+      'At the 95 cm mark',
+      'At the 70 cm mark',
+      'At the 30 cm mark',
+    ],
+    correctIndex: 1,
+    explanation: 'The 3.0 N weight is 30 cm from the pivot, giving $3.0(30) = 90$ N·cm. The 2.0 N weight needs $90/2.0 = 45$ cm on the other side, at the 95 cm mark. Mirroring the 30 cm distance gives the 80 cm mark.',
+    partNumber: 3,
+    partTitle: 'Rotational Equilibrium',
+  },
+  {
+    id: 'tq-ent-3b',
+    question: 'A uniform plank balanced at its center holds a 600 N person 1.0 m to the left of center and a 400 N person 1.5 m to the right. Both people then move 0.50 m farther from the center. What happens?',
+    options: [
+      'The lighter person\'s end drops down',
+      'It stays balanced, since both moved the same amount',
+      'It tips toward the heavier person',
+      'It stays balanced, since neither weight changed',
     ],
     correctIndex: 2,
-    explanation: 'Static equilibrium requires both translational equilibrium ($\\Sigma F = 0$) and rotational equilibrium ($\\Sigma \\tau = 0$).',
+    explanation: 'Afterward the torques are $600(1.5) = 900$ N·m and $400(2.0) = 800$ N·m, so the net torque turns the plank down on the heavier person\'s side. Equal shifts add more torque for the larger weight.',
+    partNumber: 3,
+    partTitle: 'Rotational Equilibrium',
+  },
+  // Part 4 — Static Equilibrium
+  {
+    id: 'tq-ent-4a',
+    question: 'A uniform 4.0 m beam weighing 200 N rests on supports at its two ends. A 600 N load sits 1.0 m from the left end. What force does the left support exert?',
+    options: [
+      '250 N',
+      '450 N',
+      '400 N',
+      '550 N',
+    ],
+    correctIndex: 3,
+    explanation: 'Taking torques about the right support: $N_L(4.0) = 600(3.0) + 200(2.0) = 2200$ N·m, so $N_L = 550$ N (and the right support gives the remaining 250 N). Leaving out the beam\'s weight gives 450 N.',
     partNumber: 4,
-    partTitle: 'Conditions for Static Equilibrium',
+    partTitle: 'Static Equilibrium',
   },
   {
-    id: 'te-ent-4b',
-    question: 'A uniform beam rests on two supports. The beam is in equilibrium. The sum of the upward support forces equals:',
-    options: ['Zero', 'The weight of the beam', 'Half the weight', 'Twice the weight'],
-    correctIndex: 1,
-    explanation: 'By $\\Sigma F_y = 0$: the total upward normal forces from the supports must equal the downward weight of the beam.',
+    id: 'tq-ent-4b',
+    question: 'An object is in translational equilibrium but not in rotational equilibrium. Which describes its possible motion?',
+    options: [
+      'Its spin can change, but its center of mass cannot accelerate',
+      'It must be at rest and must stay at rest',
+      'It must move in a straight line with increasing speed',
+      'It accelerates in a straight line without any rotation',
+    ],
+    correctIndex: 0,
+    explanation: 'Zero net force means the center of mass has no acceleration, but a nonzero net torque (as from a couple) gives an angular acceleration, so the object\'s rotation changes.',
     partNumber: 4,
-    partTitle: 'Conditions for Static Equilibrium',
+    partTitle: 'Static Equilibrium',
   },
-
-  // Part 5: Balancing Torques
+  // Part 5 — Balancing Beams and See-Saw Problems
   {
-    id: 'te-ent-5a',
-    question: 'A $4$ kg object sits $2$ m from a pivot. Where should a $2$ kg object be placed on the other side to balance?',
-    options: ['$1$ m', '$2$ m', '$4$ m', '$8$ m'],
-    correctIndex: 2,
-    explanation: 'Balance: $m_1 r_1 = m_2 r_2$. $4(2) = 2(r_2)$. $r_2 = 4$ m.',
-    partNumber: 5,
-    partTitle: 'Balancing Torques',
-  },
-  {
-    id: 'te-ent-5b',
-    question: 'A seesaw has a $30$ kg child $2$ m from the pivot. A $20$ kg child must sit ______ from the pivot to balance.',
-    options: ['$1.5$ m', '$2$ m', '$3$ m', '$4$ m'],
-    correctIndex: 2,
-    explanation: '$30 \\times 2 = 20 \\times d$. $d = 60/20 = 3$ m.',
-    partNumber: 5,
-    partTitle: 'Balancing Torques',
-  },
-
-  // Part 6: Center of Mass
-  {
-    id: 'te-ent-6a',
-    question: 'The center of mass of a uniform symmetric object is located at:',
-    options: ['The edge', 'The geometric center', 'The heaviest end', 'Outside the object'],
+    id: 'tq-ent-5a',
+    question: 'A uniform 6.0 m plank weighing 200 N lies on a flat roof with 2.0 m sticking out past the edge. How far past the edge can a 500 N person walk before the plank starts to tip?',
+    options: [
+      '2.0 m',
+      '0.40 m',
+      '1.0 m',
+      '0.80 m',
+    ],
     correctIndex: 1,
-    explanation: 'For a uniform object with symmetry, the center of mass is at the geometric center.',
-    partNumber: 6,
-    partTitle: 'Center of Mass',
+    explanation: 'The plank\'s center is 1.0 m back from the edge, so about the edge its weight gives $200(1.0) = 200$ N·m. The plank tips when $500\\,d$ exceeds that, at $d = 0.40$ m.',
+    partNumber: 5,
+    partTitle: 'Balancing Beams and See-Saw Problems',
   },
   {
-    id: 'te-ent-6b',
-    question: 'A $1$ kg mass is at $x = 0$ and a $3$ kg mass is at $x = 4$ m. Where is the center of mass?',
-    options: ['$x = 1$ m', '$x = 2$ m', '$x = 3$ m', '$x = 4$ m'],
+    id: 'tq-ent-5b',
+    question: 'A uniform 4.0 m beam weighing 100 N balances on a pivot 1.0 m from its left end, with a 50 N weight hanging at its right end. What weight hangs at the left end?',
+    options: [
+      '150 N',
+      '350 N',
+      '250 N',
+      '200 N',
+    ],
     correctIndex: 2,
-    explanation: '$x_{cm} = (m_1 x_1 + m_2 x_2)/(m_1 + m_2) = (1(0) + 3(4))/(1+3) = 12/4 = 3$ m.',
-    partNumber: 6,
-    partTitle: 'Center of Mass',
+    explanation: 'About the pivot, the left weight\'s torque $W(1.0)$ must balance the beam\'s weight at its center, $100(1.0)$, plus the right weight, $50(3.0)$: $W = 100 + 150 = 250$ N. Ignoring the beam gives 150 N.',
+    partNumber: 5,
+    partTitle: 'Balancing Beams and See-Saw Problems',
   },
-
-  // Part 7: Synthesis & AP Review
+  // Part 6 — Problem-Solving Workshop
   {
-    id: 'te-ent-7a',
-    question: 'A ladder leans against a frictionless wall. The friction at the floor prevents sliding. If the ladder makes a steeper angle with the floor, the required friction force:',
-    options: ['Increases', 'Decreases', 'Stays the same', 'Becomes zero'],
+    id: 'tq-ent-6a',
+    question: 'A horizontal 2.0 m beam weighing 100 N is hinged at a wall. A cable from its far end to the wall makes $30^\\circ$ with the beam, and a 300 N sign hangs from the far end. What is the cable tension? Use $\\sin 30^\\circ = 0.50$.',
+    options: [
+      '350 N',
+      '1400 N',
+      '800 N',
+      '700 N',
+    ],
+    correctIndex: 3,
+    explanation: 'About the hinge, $T\\sin 30^\\circ(2.0) = 300(2.0) + 100(1.0) = 700$ N·m, so $T = 700/(0.50 \\times 2.0) = 700$ N. Ignoring the angle gives 350 N.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  {
+    id: 'tq-ent-6b',
+    question: 'When solving for a cable\'s tension in a hinged-beam problem, why is the hinge the most useful point to take torques about?',
+    options: [
+      'The unknown hinge force has no torque about that point',
+      'The hinge force is always zero in equilibrium',
+      'Torques about any other point are not balanced',
+      'Only that point gives the correct answer',
+    ],
+    correctIndex: 0,
+    explanation: 'Any force acting at the pivot has zero lever arm, so the unknown hinge force drops out of the torque equation. Torques balance about every point in equilibrium; the hinge is simply the most convenient.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  // Part 7 — Synthesis & AP Review
+  {
+    id: 'tq-ent-7a',
+    question: 'A uniform rod of weight $W$ is hinged at one end and held horizontal by a vertical string attached three-quarters of the way along the rod from the hinge. What is the tension in the string?',
+    options: [
+      '$\\tfrac{1}{2}W$',
+      '$\\tfrac{2}{3}W$',
+      '$\\tfrac{3}{4}W$',
+      '$\\tfrac{3}{2}W$',
+    ],
     correctIndex: 1,
-    explanation: 'A steeper angle increases the lever arm of the weight about the base relative to the wall\'s normal force lever arm. This decreases the wall\'s normal force, which in turn decreases the required friction at the floor.',
+    explanation: 'About the hinge, $T(\\tfrac{3}{4}L) = W(\\tfrac{1}{2}L)$ because the weight acts at the rod\'s center, so $T = \\tfrac{2}{3}W$. Putting the weight at the string\'s position gives $W$, and inverting the ratio gives $\\tfrac{3}{2}W$.',
     partNumber: 7,
     partTitle: 'Synthesis & AP Review',
   },
   {
-    id: 'te-ent-7b',
-    question: 'An object can have zero net force but nonzero net torque. Such an object will:',
+    id: 'tq-ent-7b',
+    question: 'Two 20 N forces act perpendicular to a 0.60 m rod at its two ends, one pushing up and the other pushing down. What are the net force and net torque on the rod?',
     options: [
-      'Remain in equilibrium',
-      'Translate without rotating',
-      'Rotate without translating',
-      'Both translate and rotate',
+      '40 N net force, zero net torque',
+      'Zero net force and zero net torque',
+      'Zero net force, 12 N·m torque',
+      'Zero net force, 6.0 N·m of net torque',
     ],
     correctIndex: 2,
-    explanation: 'Zero net force means no translational acceleration. Nonzero net torque means angular acceleration. The object rotates in place without its center of mass accelerating.',
+    explanation: 'The forces cancel, but about the center each gives $0.30(20) = 6.0$ N·m in the same rotational sense, for 12 N·m in all (a couple). Counting only one force gives 6.0 N·m.',
     partNumber: 7,
     partTitle: 'Synthesis & AP Review',
   },
@@ -164,12 +217,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Torque Definition' },
-    { partNumber: 2, partTitle: 'Lever Arm' },
-    { partNumber: 3, partTitle: 'Sign Convention for Torque' },
-    { partNumber: 4, partTitle: 'Conditions for Static Equilibrium' },
-    { partNumber: 5, partTitle: 'Balancing Torques' },
-    { partNumber: 6, partTitle: 'Center of Mass' },
+    { partNumber: 1, partTitle: 'What Is Torque?' },
+    { partNumber: 2, partTitle: 'Calculating Torque' },
+    { partNumber: 3, partTitle: 'Rotational Equilibrium' },
+    { partNumber: 4, partTitle: 'Static Equilibrium' },
+    { partNumber: 5, partTitle: 'Balancing Beams and See-Saw Problems' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }

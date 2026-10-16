@@ -763,6 +763,7 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'two-sample-proportions': () => import('./paired-data'),
   'two-sample-means': () => import('./paired-data'),
   'chi-square-independence-homogeneity': () => import('./chi-square-tests'),
+  'power-physics': () => import('./power-physics'),
 }
 
 /**

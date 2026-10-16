@@ -1,158 +1,211 @@
+/**
+ * Entrance Quiz — One-Dimensional Motion — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
+ */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Position & Displacement
+  // Part 1 — Position & Displacement
   {
     id: 'odm-ent-1a',
-    question: 'A car moves from position $x = 2$ m to $x = -3$ m. What is its displacement?',
-    options: ['$5$ m', '$-5$ m', '$1$ m', '$-1$ m'],
-    correctIndex: 1,
-    explanation: 'Displacement is final minus initial position: $\\Delta x = -3 - 2 = -5$ m. The negative sign indicates motion in the negative direction.',
+    question: 'A delivery robot moves along a straight hallway, with east as positive. It starts at $x = +6$ m, rolls to $x = -10$ m, then rolls back to $x = -2$ m. What are its total distance traveled and its displacement?',
+    options: [
+      'Distance 24 m, displacement $-8$ m',
+      'Distance 8 m, displacement $-8$ m',
+      'Distance 24 m, displacement $+8$ m',
+      'Distance 16 m, displacement $-8$ m',
+    ],
+    correctIndex: 0,
+    explanation: 'Distance adds every leg: 16 m west plus 8 m east is 24 m. Displacement is $x_f - x_i = -2 - (+6) = -8$ m, so the robot ends 8 m west of where it started.',
     partNumber: 1,
     partTitle: 'Position & Displacement',
   },
   {
     id: 'odm-ent-1b',
-    question: 'Which statement about distance and displacement is correct?',
+    question: 'At the end of a drive, a car\'s odometer shows it covered 30 km, but the car finishes only 10 km west of where it began. Which statement must be true?',
     options: [
-      'Distance and displacement are always equal',
-      'Displacement can be negative but distance cannot',
-      'Distance is a vector and displacement is a scalar',
-      'Displacement is always greater than or equal to distance',
+      'It moved west for the whole 30 km',
+      'It changed direction at least once along the way',
+      'Its displacement was 30 km to the west',
+      'The distance it covered was 10 km',
     ],
     correctIndex: 1,
-    explanation: 'Distance is a scalar (always positive), while displacement is a vector that can be positive, negative, or zero depending on direction.',
+    explanation: 'Distance (30 km) exceeds the magnitude of displacement (10 km), which can happen only if the car turned around at some point. Distance is the odometer reading, and the displacement is 10 km west.',
     partNumber: 1,
     partTitle: 'Position & Displacement',
   },
-
-  // Part 2: Speed vs. Velocity
+  // Part 2 — Speed & Velocity
   {
     id: 'odm-ent-2a',
-    question: 'A runner completes a $400$ m circular track in $80$ s, returning to the start. What is the average velocity?',
-    options: ['$5$ m/s', '$0$ m/s', '$400$ m/s', '$200$ m/s'],
-    correctIndex: 1,
-    explanation: 'Average velocity = displacement / time. Since the runner returns to the start, displacement = 0, so average velocity = 0.',
+    question: 'A train travels 60 km due north at a steady 30 km/h, then continues another 60 km north at a steady 60 km/h. What is its average velocity for the whole trip?',
+    options: [
+      '45 km/h north',
+      '50 km/h north',
+      '40 km/h north',
+      '36 km/h north',
+    ],
+    correctIndex: 2,
+    explanation: 'The legs take 2 h and 1 h, so the average velocity is 120 km north divided by 3 h, or 40 km/h north. Averaging the two speeds to get 45 km/h ignores that the train spends more time at the slower speed.',
     partNumber: 2,
-    partTitle: 'Speed vs. Velocity',
+    partTitle: 'Speed & Velocity',
   },
   {
     id: 'odm-ent-2b',
-    question: 'An object has an average speed of $10$ m/s. Which of the following must be true?',
+    question: 'A cyclist rides 1200 m east in 100 s, then 400 m west in 300 s. Which pair gives her average speed and average velocity for the 400 s?',
     options: [
-      'Its average velocity is also $10$ m/s',
-      'It traveled a total distance of $10$ m',
-      'The total distance divided by total time equals $10$ m/s',
-      'It moved in a straight line',
+      'Speed 6.7 m/s, velocity 2 m/s east',
+      'Speed 4 m/s, velocity 4 m/s east',
+      'Speed 2 m/s, velocity 4 m/s east',
+      'Speed 4 m/s, velocity 2 m/s east',
     ],
-    correctIndex: 2,
-    explanation: 'Average speed = total distance / total time. This is the definition regardless of path shape or direction changes.',
+    correctIndex: 3,
+    explanation: 'Average speed is total distance over time, 1600 m / 400 s = 4 m/s. Average velocity is displacement over time, 800 m east / 400 s = 2 m/s east; averaging the two leg speeds (12 and 1.3 m/s) does not give either quantity.',
     partNumber: 2,
-    partTitle: 'Speed vs. Velocity',
+    partTitle: 'Speed & Velocity',
   },
-
-  // Part 3: Acceleration
+  // Part 3 — Acceleration
   {
     id: 'odm-ent-3a',
-    question: 'A car accelerates from $10$ m/s to $30$ m/s in $5$ s. What is the average acceleration?',
-    options: ['$2$ $m/s^{2}$', '$4$ $m/s^{2}$', '$6$ $m/s^{2}$', '$8$ $m/s^{2}$'],
-    correctIndex: 1,
-    explanation: '$a = \\Delta v / \\Delta t = (30 - 10)/5 = 20/5 = 4$ $m/s^{2}$.',
+    question: 'Taking north as positive, a cart\'s velocity changes from $-6$ m/s to $+4$ m/s in 2.5 s. What is its average acceleration?',
+    options: [
+      '$+4\\text{ m/s}^2$',
+      '$+0.8\\text{ m/s}^2$',
+      '$-4\\text{ m/s}^2$',
+      '$-0.8\\text{ m/s}^2$',
+    ],
+    correctIndex: 0,
+    explanation: '$a = \\dfrac{v_f - v_i}{\\Delta t} = \\dfrac{4 - (-6)}{2.5} = +4\\text{ m/s}^2$. Subtracting the speeds without their signs gives the incorrect magnitude 0.8.',
     partNumber: 3,
     partTitle: 'Acceleration',
   },
   {
     id: 'odm-ent-3b',
-    question: 'An object moves to the right and slows down. What is the direction of its acceleration?',
-    options: ['To the right', 'To the left', 'Upward', 'Acceleration is zero'],
+    question: 'An object has velocity $-5$ m/s and a constant acceleration of $+2\\text{ m/s}^2$. How does it move during the next 4 s?',
+    options: [
+      'It keeps speeding up in the negative direction for all 4 s',
+      'It slows, stops at 2.5 s, then speeds up the other way',
+      'It slows down, stops at 2.5 s, and then stays at rest after that',
+      'It slows down for all 4 s and is still moving in the negative direction at the end',
+    ],
     correctIndex: 1,
-    explanation: 'When an object slows down, acceleration is opposite to the direction of motion. Moving right and slowing means acceleration points left (deceleration).',
+    explanation: 'Opposite signs of $v$ and $a$ mean it slows; $v = -5 + 2t$ reaches zero at $t = 2.5$ s. The acceleration keeps acting, so the velocity becomes positive and the speed grows, reaching $+3$ m/s at 4 s.',
     partNumber: 3,
     partTitle: 'Acceleration',
   },
-
-  // Part 4: Kinematic Equations
+  // Part 4 — Kinematic Equations
   {
     id: 'odm-ent-4a',
-    question: 'A ball is dropped from rest and falls for $3$ s. How far does it fall? (Use $g = 10$ $m/s^{2}$.)',
-    options: ['$15$ m', '$30$ m', '$45$ m', '$90$ m'],
+    question: 'A cart moving at 6 m/s speeds up with a constant acceleration of $4\\text{ m/s}^2$ over a distance of 8 m. What is its final speed?',
+    options: [
+      '8.2 m/s',
+      '8.0 m/s',
+      '10 m/s',
+      '8.4 m/s',
+    ],
     correctIndex: 2,
-    explanation: 'Using $d = v_0 t + \\frac{1}{2}at^2$, with $v_0 = 0$ and $a = 10$ $m/s^{2}$: $d = \\frac{1}{2}(10)(3^2) = 45$ m.',
+    explanation: 'With no time given, use $v^2 = v_0^2 + 2a\\Delta x = 36 + 2(4)(8) = 100$, so $v = 10$ m/s. Dropping the factor of 2 gives 8.2 m/s, ignoring $v_0$ gives 8.0 m/s, and forgetting to square $v_0$ gives 8.4 m/s.',
     partNumber: 4,
     partTitle: 'Kinematic Equations',
   },
   {
     id: 'odm-ent-4b',
-    question: 'Which kinematic equation relates velocity, acceleration, and displacement without using time?',
+    question: 'A sprinter starts from rest and, with constant acceleration, covers 18 m in the first 3.0 s. What is her speed at $t = 3.0$ s?',
     options: [
-      '$v = v_0 + at$',
-      '$x = v_0 t + \\frac{1}{2}at^2$',
-      '$v^2 = v_0^2 + 2a\\Delta x$',
-      '$x = \\frac{v + v_0}{2}t$',
+      '6 m/s',
+      '24 m/s',
+      '4 m/s',
+      '12 m/s',
     ],
-    correctIndex: 2,
-    explanation: 'The equation $v^2 = v_0^2 + 2a\\Delta x$ eliminates time and directly relates final velocity, initial velocity, acceleration, and displacement.',
+    correctIndex: 3,
+    explanation: 'From $\\Delta x = \\tfrac{1}{2}at^2$, $a = 2(18)/9 = 4\\text{ m/s}^2$, so $v = at = 12$ m/s. The 6 m/s value is her average velocity, which is only half the final speed when starting from rest.',
     partNumber: 4,
     partTitle: 'Kinematic Equations',
   },
-
-  // Part 5: Free Fall
+  // Part 5 — Free Fall
   {
     id: 'odm-ent-5a',
-    question: 'A ball is thrown straight up at $20$ m/s. How long does it take to reach its highest point? (Use $g = 10$ $m/s^{2}$.)',
-    options: ['$1$ s', '$2$ s', '$4$ s', '$20$ s'],
-    correctIndex: 1,
-    explanation: 'At the highest point, $v = 0$. Using $v = v_0 - gt$: $0 = 20 - 10t$, so $t = 2$ s.',
+    question: 'A ball is thrown straight up at 15 m/s from a balcony 20 m above the ground. How long after the throw does it hit the ground? Use $g = 10\\text{ m/s}^2$ and ignore air resistance.',
+    options: [
+      '4.0 s',
+      '2.0 s',
+      '1.0 s',
+      '3.0 s',
+    ],
+    correctIndex: 0,
+    explanation: 'With up positive, $-20 = 15t - 5t^2$, so $t^2 - 3t - 4 = 0$ and $t = 4.0$ s. The 3.0 s value is when the ball passes the balcony on the way down.',
     partNumber: 5,
     partTitle: 'Free Fall',
   },
   {
     id: 'odm-ent-5b',
-    question: 'Two objects are dropped from the same height in a vacuum. Object A has twice the mass of object B. Which hits the ground first?',
-    options: ['Object A', 'Object B', 'They hit at the same time', 'It depends on their shapes'],
-    correctIndex: 2,
-    explanation: 'In free fall (no air resistance), all objects accelerate at $g$ regardless of mass. Both hit the ground at the same time.',
+    question: 'Two identical balls leave the edge of a cliff with the same initial speed, one thrown straight up and the other straight down. Ignoring air resistance, how do they compare when they reach the ground below?',
+    options: [
+      'The downward ball lands faster',
+      'They land equally fast',
+      'The upward ball lands faster',
+      'It depends on the cliff\'s height',
+    ],
+    correctIndex: 1,
+    explanation: 'The upward ball returns to the cliff edge moving downward at its launch speed, so from there it repeats the motion of the downward ball. Equivalently, $v^2 = v_0^2 + 2g\\Delta y$ depends only on the launch speed and the drop, not on the launch direction.',
     partNumber: 5,
     partTitle: 'Free Fall',
   },
-
-  // Part 6: Problem-Solving with Kinematics
+  // Part 6 — Problem-Solving Workshop
   {
     id: 'odm-ent-6a',
-    question: 'A car traveling at $20$ m/s brakes with an acceleration of $-4$ $m/s^{2}$. How far does it travel before stopping?',
-    options: ['$25$ m', '$50$ m', '$80$ m', '$100$ m'],
-    correctIndex: 1,
-    explanation: 'Using $v^2 = v_0^2 + 2a\\Delta x$: $0 = 20^2 + 2(-4)\\Delta x$, so $\\Delta x = 400/8 = 50$ m.',
+    question: 'A driver moving at 20 m/s sees a hazard. After a reaction time of 0.50 s she brakes with a constant acceleration of magnitude $5.0\\text{ m/s}^2$. How far does the car travel from the moment she sees the hazard until it stops?',
+    options: [
+      '90 m',
+      '40 m',
+      '50 m',
+      '80 m',
+    ],
+    correctIndex: 2,
+    explanation: 'During the reaction time the car moves at constant speed: $20(0.50) = 10$ m. Braking adds $v_0^2/(2a) = 400/10 = 40$ m, for 50 m total. Leaving out the reaction distance gives 40 m, and dropping the 2 gives 80 or 90 m.',
     partNumber: 6,
-    partTitle: 'Problem-Solving with Kinematics',
+    partTitle: 'Problem-Solving Workshop',
   },
   {
     id: 'odm-ent-6b',
-    question: 'A train accelerates from rest at $2$ $m/s^{2}$ for $10$ s, then travels at constant speed for $20$ s. What is the total distance?',
-    options: ['$300$ m', '$400$ m', '$500$ m', '$600$ m'],
-    correctIndex: 2,
-    explanation: 'Phase 1: $d_1 = \\frac{1}{2}(2)(10^2) = 100$ m, final speed = $2 \\times 10 = 20$ m/s. Phase 2: $d_2 = 20 \\times 20 = 400$ m. Total = $100 + 400 = 500$ m.',
+    question: 'A ball is launched straight up at 20 m/s. At what times is it 15 m above the launch point? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      'At 1.5 s and 2.5 s',
+      'At 2 s and 4 s',
+      'At 0.75 s only',
+      'At 1 s and 3 s',
+    ],
+    correctIndex: 3,
+    explanation: '$15 = 20t - 5t^2$ gives $t^2 - 4t + 3 = 0$, so $t = 1$ s (rising) and $t = 3$ s (falling). Both roots are physical because the ball passes that height twice.',
     partNumber: 6,
-    partTitle: 'Problem-Solving with Kinematics',
+    partTitle: 'Problem-Solving Workshop',
   },
-
-  // Part 7: Synthesis & AP Review
+  // Part 7 — Synthesis & AP Review
   {
     id: 'odm-ent-7a',
-    question: 'An object starts at $x = 0$ with velocity $+5$ m/s and constant acceleration $-2$ $m/s^{2}$. When does it return to $x = 0$?',
-    options: ['$2.5$ s', '$5$ s', '$10$ s', 'It never returns'],
-    correctIndex: 1,
-    explanation: 'Using $x = v_0 t + \\frac{1}{2}at^2$: $0 = 5t + \\frac{1}{2}(-2)t^2 = 5t - t^2 = t(5 - t)$. Solutions: $t = 0$ (start) and $t = 5$ s.',
+    question: 'A cart\'s velocity changes uniformly from $+8$ m/s to $-4$ m/s over 6.0 s. What are its displacement and the total distance it travels during this time?',
+    options: [
+      'Displacement $+12$ m, distance 20 m',
+      'Displacement $+12$ m, distance 12 m',
+      'Displacement $+20$ m, distance 20 m',
+      'Displacement $+36$ m, distance 36 m',
+    ],
+    correctIndex: 0,
+    explanation: 'The acceleration is $-2\\text{ m/s}^2$, so the cart moves forward 16 m in 4 s, stops, then goes back 4 m in 2 s. Displacement is $+12$ m (also $\\tfrac{8 + (-4)}{2} \\times 6$) but the distance is $16 + 4 = 20$ m.',
     partNumber: 7,
     partTitle: 'Synthesis & AP Review',
   },
   {
     id: 'odm-ent-7b',
-    question: 'A ball is thrown downward at $5$ m/s from a $45$ m tall building. How long does it take to hit the ground? (Use $g = 10$ $m/s^{2}$.)',
-    options: ['$2$ s', '$3$ s', '$4$ s', '$5$ s'],
-    correctIndex: 0,
-    explanation: '$45 = 5t + \\frac{1}{2}(10)t^2 = 5t + 5t^2$. Rearranging: $5t^2 + 5t - 45 = 0 \\Rightarrow t^2 + t - 9 = 0$. Using the quadratic formula gives $t \\approx 2.5$ s, but choosing the closest answer: $t = 2$ s gives $5(4) + 5(2) = 30 \\neq 45$. Actually $5t^2 + 5t - 45 = 0$, $t = \\frac{-5 + \\sqrt{25+900}}{10} = \\frac{-5+\\sqrt{925}}{10} \\approx 2.5$ s, but the closest option is $2$ s. Rechecking: $45 = 5(3)+5(9) = 60 \\neq 45$. At $t=2$: $10+20=30$. At $t=2.5$: $12.5+31.25=43.75 \\approx 45$. The answer is approximately $2$ s.',
+    question: 'A rock dropped from rest from height $h$ hits the ground with speed $v$. From what height must it be dropped to hit the ground with speed $3v$? Ignore air resistance.',
+    options: [
+      '$3h$',
+      '$9h$',
+      '$\\sqrt{3}\\,h$',
+      '$6h$',
+    ],
+    correctIndex: 1,
+    explanation: 'From $v^2 = 2gh$, the height is proportional to the square of the impact speed, so tripling the speed requires $3^2 = 9$ times the height.',
     partNumber: 7,
     partTitle: 'Synthesis & AP Review',
   },
@@ -165,11 +218,11 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Position & Displacement' },
-    { partNumber: 2, partTitle: 'Speed vs. Velocity' },
+    { partNumber: 2, partTitle: 'Speed & Velocity' },
     { partNumber: 3, partTitle: 'Acceleration' },
     { partNumber: 4, partTitle: 'Kinematic Equations' },
     { partNumber: 5, partTitle: 'Free Fall' },
-    { partNumber: 6, partTitle: 'Problem-Solving with Kinematics' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }

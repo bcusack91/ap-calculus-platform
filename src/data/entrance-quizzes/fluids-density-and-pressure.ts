@@ -1,39 +1,214 @@
 /**
- * Entrance Quiz — Fluids: Density & Pressure (AP Physics 1)
- * 14 questions · 7 parts (2 per part)
+ * Entrance Quiz — Fluids: Density and Pressure — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
  */
-
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1 — Density: Definition & SI Units
-  { id: 'fdp-ent-1a', question: 'A 4.0 kg block has volume $2.0\\times10^{-3}$ $m^{3}$. Its density is:', options: ['$0.5$ $kg/m^{3}$', '$2.0\\times10^{3}$ $kg/m^{3}$', '$2.0\\times10^{-3}$ $kg/m^{3}$', '$8.0$ $kg/m^{3}$'], correctIndex: 1, explanation: '$\\rho = m/V = 4.0 / 2.0\\times10^{-3} = 2000$ $kg/m^{3}$.', partNumber: 1, partTitle: 'Density: Definition & Units' },
-  { id: 'fdp-ent-1b', question: 'The SI unit of density is:', options: ['kg', 'kg/m', '$kg/m^{2}$', '$kg/m^{3}$'], correctIndex: 3, explanation: 'Density = mass per unit volume → $kg/m^{3}$ in SI.', partNumber: 1, partTitle: 'Density: Definition & Units' },
-
-  // Part 2 — Pressure: Definition & SI Units
-  { id: 'fdp-ent-2a', question: 'Pressure is defined as:', options: ['Force times area', 'Force divided by area', 'Mass divided by volume', 'Energy per unit time'], correctIndex: 1, explanation: '$P = F/A$. The pascal (Pa) is $N/m^{2}$.', partNumber: 2, partTitle: 'Pressure: Definition & Units' },
-  { id: 'fdp-ent-2b', question: 'A 200 N force pushes on a 0.5 $m^{2}$ surface. The pressure exerted is:', options: ['100 Pa', '200 Pa', '400 Pa', '0.0025 Pa'], correctIndex: 2, explanation: '$P = F/A = 200/0.5 = 400$ Pa.', partNumber: 2, partTitle: 'Pressure: Definition & Units' },
-
+  // Part 1 — Density: Definition & Units
+  {
+    id: 'fdp-ent-1a',
+    question: 'A 250 cm³ sample of a material has a mass of 0.60 kg. What is its density in SI units?',
+    options: [
+      '$2400\\text{ kg/m}^3$',
+      '$2.4\\text{ kg/m}^3$',
+      '$240\\text{ kg/m}^3$',
+      '$24{,}000\\text{ kg/m}^3$',
+    ],
+    correctIndex: 0,
+    explanation: '$250\\text{ cm}^3 = 2.5 \\times 10^{-4}\\text{ m}^3$, so $\\rho = 0.60/(2.5 \\times 10^{-4}) = 2400\\text{ kg/m}^3$. The value 2.4 is the density in g/cm³ with the wrong units attached.',
+    partNumber: 1,
+    partTitle: 'Density: Definition & Units',
+  },
+  {
+    id: 'fdp-ent-1b',
+    question: 'A solid gold bar is melted and recast into two identical smaller bars. Compared with the original bar, each smaller bar has:',
+    options: [
+      'Half the mass; half the density',
+      'Half the mass; same density',
+      'Same mass; one-half the density',
+      'Half the mass; twice the density',
+    ],
+    correctIndex: 1,
+    explanation: 'Density $\\rho = m/V$ is a property of the material: each new bar has half the mass and half the volume, so the ratio is unchanged.',
+    partNumber: 1,
+    partTitle: 'Density: Definition & Units',
+  },
+  // Part 2 — Pressure: Definition & Units
+  {
+    id: 'fdp-ent-2a',
+    question: 'A 60 kg hiker stands on snowshoes whose total contact area with the snow is 0.30 m². What average pressure does she exert on the snow? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '200 Pa',
+      '180 Pa',
+      '2000 Pa',
+      '20,000 Pa',
+    ],
+    correctIndex: 2,
+    explanation: '$P = F/A = mg/A = 600/0.30 = 2000$ Pa. Using the mass instead of the weight gives 200 Pa, and multiplying force by area gives 180.',
+    partNumber: 2,
+    partTitle: 'Pressure: Definition & Units',
+  },
+  {
+    id: 'fdp-ent-2b',
+    question: 'A rectangular brick can rest on the floor on its largest face or on its smallest face. How do the two cases compare?',
+    options: [
+      'The force is greater on the largest face; the pressure is equal',
+      'The force and the pressure are both the same in the two cases',
+      'The pressure is the same, but the smallest face gets more force',
+      'The force is the same, but the pressure is greater on the smallest face',
+    ],
+    correctIndex: 3,
+    explanation: 'The floor supports the brick\'s full weight either way, so the force is the same. Pressure is that force divided by the contact area, so the smaller face gives the greater pressure.',
+    partNumber: 2,
+    partTitle: 'Pressure: Definition & Units',
+  },
   // Part 3 — Hydrostatic Pressure
-  { id: 'fdp-ent-3a', question: 'Gauge pressure 5.0 m below the surface of fresh water ($\\rho = 1000$ $kg/m^{3}$, $g = 9.8$ $m/s^{2}$) is approximately:', options: ['$5{,}000$ Pa', '$49{,}000$ Pa', '$98{,}000$ Pa', '$1.0\\times10^{5}$ Pa'], correctIndex: 1, explanation: '$P_{gauge} = \\rho g h = 1000(9.8)(5.0) = 49{,}000$ Pa.', partNumber: 3, partTitle: 'Hydrostatic Pressure' },
-  { id: 'fdp-ent-3b', question: 'Hydrostatic pressure in a static fluid depends on:', options: ['Container shape', 'Total volume of fluid', 'Depth and fluid density', 'Surface area at the top'], correctIndex: 2, explanation: '$P = P_0 + \\rho g h$ — only depth and density of the fluid matter, not container shape.', partNumber: 3, partTitle: 'Hydrostatic Pressure' },
-
+  {
+    id: 'fdp-ent-3a',
+    question: 'An open tank holds oil of density $800\\text{ kg/m}^3$. What is the gauge pressure 3.0 m below the oil\'s surface? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '24,000 Pa',
+      '30,000 Pa',
+      '2,400 Pa',
+      '124,000 Pa',
+    ],
+    correctIndex: 0,
+    explanation: '$P_{gauge} = \\rho g h = 800(10)(3.0) = 24{,}000$ Pa. Using water\'s density gives 30,000 Pa, and adding atmospheric pressure gives the absolute pressure, 124,000 Pa.',
+    partNumber: 3,
+    partTitle: 'Hydrostatic Pressure',
+  },
+  {
+    id: 'fdp-ent-3b',
+    question: 'Two dams hold back lakes that are both 30 m deep at the dam. One lake is 10 km long and the other is 100 m long. How does the water pressure at the base of the two dams compare?',
+    options: [
+      'Greater at the long lake\'s dam, which holds back more water',
+      'The same at both, since the depths are equal',
+      'Greater at the short lake\'s dam, where the water is confined',
+      'Greater at the long lake\'s dam, by a factor of 100',
+    ],
+    correctIndex: 1,
+    explanation: 'Fluid pressure depends only on the density, $g$, and the depth ($P = \\rho g h$), not on how much water lies behind the dam, so equal depths give equal pressures.',
+    partNumber: 3,
+    partTitle: 'Hydrostatic Pressure',
+  },
   // Part 4 — Absolute vs Gauge Pressure
-  { id: 'fdp-ent-4a', question: 'Absolute pressure equals:', options: ['Gauge pressure only', 'Atmospheric pressure only', 'Atmospheric pressure + gauge pressure', 'Atmospheric pressure − gauge pressure'], correctIndex: 2, explanation: '$P_{abs} = P_{atm} + P_{gauge}$.', partNumber: 4, partTitle: 'Absolute vs Gauge Pressure' },
-  { id: 'fdp-ent-4b', question: 'A tire gauge reads 220 kPa. If atmospheric pressure is 101 kPa, the absolute pressure inside the tire is:', options: ['119 kPa', '220 kPa', '321 kPa', '441 kPa'], correctIndex: 2, explanation: '$P_{abs} = P_{atm} + P_{gauge} = 101 + 220 = 321$ kPa.', partNumber: 4, partTitle: 'Absolute vs Gauge Pressure' },
-
+  {
+    id: 'fdp-ent-4a',
+    question: 'Atmospheric pressure is $1.0 \\times 10^5$ Pa. At what depth in a freshwater lake ($\\rho = 1000\\text{ kg/m}^3$) is the absolute pressure three times atmospheric pressure? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '30 m',
+      '10 m',
+      '20 m',
+      '200 m',
+    ],
+    correctIndex: 2,
+    explanation: 'Absolute pressure is $P_{atm} + \\rho g h$, so $\\rho g h = 2.0 \\times 10^5$ Pa and $h = 2.0 \\times 10^5/(1000 \\cdot 10) = 20$ m. Setting $\\rho g h$ alone equal to three atmospheres gives 30 m.',
+    partNumber: 4,
+    partTitle: 'Absolute vs Gauge Pressure',
+  },
+  {
+    id: 'fdp-ent-4b',
+    question: 'A vacuum-sealed jar has an absolute pressure of 30 kPa inside, while the air outside is at 100 kPa. The lid\'s area is $5.0 \\times 10^{-3}\\text{ m}^2$. What is the gauge pressure inside the jar, and what net force does the air exert on the lid?',
+    options: [
+      '$-30$ kPa and 150 N',
+      '$-70$ kPa and 500 N',
+      '$+30$ kPa and 150 N',
+      '$-70$ kPa and 350 N',
+    ],
+    correctIndex: 3,
+    explanation: 'Gauge pressure is $P_{abs} - P_{atm} = 30 - 100 = -70$ kPa. The net force is the pressure difference times the area, $(70{,}000)(5.0 \\times 10^{-3}) = 350$ N pressing the lid on; 500 N counts only the outside air.',
+    partNumber: 4,
+    partTitle: 'Absolute vs Gauge Pressure',
+  },
   // Part 5 — Pascal's Principle & Hydraulics
-  { id: 'fdp-ent-5a', question: "Pascal's principle states that pressure applied to an enclosed fluid is:", options: ['Lost as heat', 'Transmitted equally to every part of the fluid', 'Reduced by depth', 'Absorbed by the container walls'], correctIndex: 1, explanation: 'Pascal: a change in applied pressure is transmitted undiminished throughout an enclosed fluid.', partNumber: 5, partTitle: "Pascal's Principle & Hydraulics" },
-  { id: 'fdp-ent-5b', question: 'A hydraulic lift has $A_1 = 0.01$ $m^{2}$ and $A_2 = 0.10$ $m^{2}$. A 150 N force on the small piston produces what force on the large piston?', options: ['15 N', '150 N', '1500 N', '15000 N'], correctIndex: 2, explanation: '$F_2 = F_1 (A_2/A_1) = 150 \\times 10 = 1500$ N.', partNumber: 5, partTitle: "Pascal's Principle & Hydraulics" },
-
+  {
+    id: 'fdp-ent-5a',
+    question: 'A hydraulic lift has an input piston of diameter 4.0 cm and an output piston of diameter 40 cm. A 120 N force is applied to the input piston. What is the largest weight the output piston can support?',
+    options: [
+      '12,000 N',
+      '1,200 N',
+      '120 N',
+      '1.2 N',
+    ],
+    correctIndex: 0,
+    explanation: 'The pressure is the same on both pistons, so the force scales with area, which scales with diameter squared: $(40/4.0)^2 = 100$, giving 12,000 N. Using the diameter ratio without squaring gives 1,200 N.',
+    partNumber: 5,
+    partTitle: 'Pascal\'s Principle & Hydraulics',
+  },
+  {
+    id: 'fdp-ent-5b',
+    question: 'A hydraulic jack lets a mechanic lift a car that weighs far more than the force she applies. Why does this not violate conservation of energy?',
+    options: [
+      'The fluid stores the extra energy as pressure until the car is lowered',
+      'The output piston moves a much smaller distance, so the work out equals the work in',
+      'The extra energy comes from heat produced as the fluid is compressed',
+      'The pressure is greater at the output piston, and that supplies the energy',
+    ],
+    correctIndex: 1,
+    explanation: 'The same volume of fluid leaves the small cylinder and enters the large one, so the large piston rises only a small distance. Force times distance, the work, is the same at both ends (ignoring friction).',
+    partNumber: 5,
+    partTitle: 'Pascal\'s Principle & Hydraulics',
+  },
   // Part 6 — Problem-Solving Workshop
-  { id: 'fdp-ent-6a', question: 'A column of mercury ($\\rho = 13{,}600$ $kg/m^{3}$) is 0.76 m tall. The pressure at its base (g = 9.8) is approximately:', options: ['$10{,}300$ Pa', '$76{,}000$ Pa', '$1.01\\times10^{5}$ Pa', '$1.36\\times10^{6}$ Pa'], correctIndex: 2, explanation: '$P = \\rho g h = 13{,}600(9.8)(0.76) \\approx 1.01\\times10^{5}$ Pa — i.e. one atmosphere.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'fdp-ent-6b', question: 'Two open columns of fresh water are connected at the bottom. If one column is 2 m tall and the other is 5 m tall, the pressure at the connecting point:', options: ['Is greater under the 2 m column', 'Is greater under the 5 m column', 'Is equal under both columns', 'Cannot be determined'], correctIndex: 2, explanation: 'Connected static fluids reach the same level. If both are open to atmosphere they cannot stay at different heights — the system equalizes; pressure at the connecting point is equal.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-
+  {
+    id: 'fdp-ent-6a',
+    question: 'An aquarium has a rectangular bottom 0.50 m by 0.30 m and holds water 0.40 m deep. What force does the water exert on the bottom, not counting atmospheric pressure? Use $g = 10\\text{ m/s}^2$ and $\\rho = 1000\\text{ kg/m}^3$.',
+    options: [
+      '60 N',
+      '1500 N',
+      '600 N',
+      '300 N',
+    ],
+    correctIndex: 2,
+    explanation: 'The gauge pressure at the bottom is $\\rho g h = 1000(10)(0.40) = 4000$ Pa, and the area is $0.15\\text{ m}^2$, so $F = PA = 600$ N. Leaving out $g$ gives 60 N, and leaving out the depth gives 1500 N.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  {
+    id: 'fdp-ent-6b',
+    question: 'A sealed, completely full container of water has a tight piston on top. A push on the piston raises the pressure just under it by 2000 Pa. By how much does the pressure increase at a point 0.50 m lower in the water? Use $g = 10\\text{ m/s}^2$ and $\\rho = 1000\\text{ kg/m}^3$.',
+    options: [
+      '0 Pa',
+      '7000 Pa',
+      '5000 Pa',
+      '2000 Pa',
+    ],
+    correctIndex: 3,
+    explanation: 'By Pascal\'s principle, a pressure change applied to an enclosed incompressible fluid is transmitted undiminished to every point, so the increase is 2000 Pa everywhere. The $\\rho g h = 5000$ Pa was already there before the push and does not change.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
   // Part 7 — Synthesis & AP Review
-  { id: 'fdp-ent-7a', question: 'Which everyday object best illustrates the principle that pressure depends on depth (not container shape)?', options: ['A balloon held under water', 'A dam, which is built thicker at the bottom', 'A hot-air balloon rising', 'A pressure cooker on a stove'], correctIndex: 1, explanation: 'Dam thickness increases with depth because hydrostatic pressure $\\rho g h$ grows linearly with depth, requiring more material to resist the larger force per area.', partNumber: 7, partTitle: 'Synthesis & AP Review' },
-  { id: 'fdp-ent-7b', question: 'On the AP exam, you are asked: "Why is atmospheric pressure greater at sea level than at the top of a mountain?" The best answer involves:', options: ['The Sun heating the lower atmosphere more', 'A larger column of air above sea level pressing down', 'Oxygen being denser at sea level', 'Earth\'s rotation pulling air down'], correctIndex: 1, explanation: 'Atmospheric pressure at any altitude equals the weight of the column of air above per unit area. Sea level → tallest column → greatest pressure (~101 kPa).', partNumber: 7, partTitle: 'Synthesis & AP Review' },
+  {
+    id: 'fdp-ent-7a',
+    question: 'A solid cube 0.20 m on each side, made of a material with density $3000\\text{ kg/m}^3$, rests on a table. What pressure does it exert on the table? Use $g = 10\\text{ m/s}^2$.',
+    options: [
+      '6000 Pa',
+      '1200 Pa',
+      '600 Pa',
+      '30,000 Pa',
+    ],
+    correctIndex: 0,
+    explanation: 'The cube\'s mass is $3000(0.20)^3 = 24$ kg, so its weight is 240 N, spread over $0.040\\text{ m}^2$: $P = 6000$ Pa (the same as $\\rho g h$ for the cube\'s height). Using the mass instead of the weight gives 600 Pa.',
+    partNumber: 7,
+    partTitle: 'Synthesis & AP Review',
+  },
+  {
+    id: 'fdp-ent-7b',
+    question: 'Open tank A holds oil ($\\rho = 800\\text{ kg/m}^3$) to a depth of 5.0 m. Open tank B holds water ($\\rho = 1000\\text{ kg/m}^3$) to a depth of 4.0 m. How do the gauge pressures at the bottoms of the tanks compare?',
+    options: [
+      'Tank A\'s, as its liquid is deeper',
+      'Neither tank\'s is greater',
+      'Tank B\'s, as water is denser',
+      'Tank A\'s, by a factor of 1.25',
+    ],
+    correctIndex: 1,
+    explanation: 'Tank A: $800(10)(5.0) = 40{,}000$ Pa; tank B: $1000(10)(4.0) = 40{,}000$ Pa. The extra depth of the oil exactly makes up for its lower density.',
+    partNumber: 7,
+    partTitle: 'Synthesis & AP Review',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -46,7 +221,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 2, partTitle: 'Pressure: Definition & Units' },
     { partNumber: 3, partTitle: 'Hydrostatic Pressure' },
     { partNumber: 4, partTitle: 'Absolute vs Gauge Pressure' },
-    { partNumber: 5, partTitle: "Pascal's Principle & Hydraulics" },
+    { partNumber: 5, partTitle: 'Pascal\'s Principle & Hydraulics' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
