@@ -1,6 +1,7 @@
 import { prisma } from '@/lib/prisma'
 import { buildMcatPlanStatus } from '@/lib/mcat-plan'
 import { buildSatPlan } from '@/lib/sat-plan'
+import { buildGenericPlanStatus } from '@/lib/act-plan'
 import { unitTestStatusFor } from '@/lib/mcat-unit-test-server'
 import { isOpenClassDiagnostic } from '@/lib/class-diagnostic-open'
 import { FULL_LENGTH_COURSES, isFullLengthCourse, type FullLengthCourse } from '@/lib/full-length-progress'
@@ -25,6 +26,20 @@ export interface CycleDueDate {
 export async function currentCycleUnits(userId: string, course: FullLengthCourse): Promise<{ diagnosticId: string; units: CycleUnit[] } | null> {
   if (course === 'mcat') {
     const p = await buildMcatPlanStatus(userId)
+    if (!p.hasDiagnostic || !p.diagnosticId) return null
+    return {
+      diagnosticId: p.diagnosticId,
+      units: cycleUnitsFromPlan({
+        course,
+        diagnosticId: p.diagnosticId,
+        topics: p.recommendedTopics.map((t) => ({ slug: t.slug, name: t.name, isSatisfied: t.isSatisfied })),
+        unitTestPassed: p.unitTest?.passed ?? false,
+      }),
+    }
+  }
+  if (course !== 'sat') {
+    // AP: the generic class-plan cycle (canonical topics + the recommended cycle test).
+    const p = await buildGenericPlanStatus(userId, course)
     if (!p.hasDiagnostic || !p.diagnosticId) return null
     return {
       diagnosticId: p.diagnosticId,
@@ -67,7 +82,7 @@ export async function classDueDateFor(userId: string, course: FullLengthCourse):
   let latestTaken: Date | null = null
   if (diagnostics.some((d) => isOpenClassDiagnostic(d.testData))) {
     const latest = await prisma.diagnosticTest.findFirst({
-      where: { userId, category: { startsWith: course === 'mcat' ? 'mcat-full-diagnostic' : 'sat-full-diagnostic' } },
+      where: { userId, category: { startsWith: FULL_LENGTH_COURSES[course].diagnosticCategoryPrefix } },
       orderBy: { createdAt: 'desc' },
       select: { createdAt: true },
     })

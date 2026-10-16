@@ -15,7 +15,7 @@ import FullLengthProgress from '@/components/FullLengthProgress'
 import ExamGoalCard from '@/components/ExamGoalCard'
 import BluebookPromptCard from '@/components/BluebookPromptCard'
 import MistakeLogChip from '@/components/MistakeLogChip'
-import { isFullLengthCourse } from '@/lib/full-length-progress'
+import { isApFullLengthCourse, isFullLengthCourse } from '@/lib/full-length-progress'
 import AchievementToast from '@/components/AchievementToast'
 import ProgressCharts from '@/components/ProgressCharts'
 import StudyPlanner from '@/components/StudyPlanner'
@@ -564,15 +564,18 @@ function DashboardContent() {
         {/* New class announcements — below the one next step, until read or dismissed */}
         <ClassAnnouncementsBanner />
 
-        {/* Full-length readiness for each test-prep plan (MCAT 4 cycles, SAT 2) */}
+        {/* Full-length readiness for each test-prep plan (MCAT 4 cycles, SAT 2).
+            AP courses show theirs on the course page and calendar only: a
+            student in several AP classes would otherwise get a bar and a goal
+            card per class here; level 10 still reaches the next-step card. */}
         {plansLoaded &&
-          studyPlans.flatMap((p) => (isFullLengthCourse(p.courseKey) ? [p.courseKey] : [])).map((course) => (
+          studyPlans.flatMap((p) => (isFullLengthCourse(p.courseKey) && !isApFullLengthCourse(p.courseKey) ? [p.courseKey] : [])).map((course) => (
             <FullLengthProgress key={course} course={course} compact className="mb-6" />
           ))}
 
-        {/* Score goal per test-prep plan */}
+        {/* Score goal per test-prep plan (not AP, as above) */}
         {plansLoaded &&
-          studyPlans.flatMap((p) => (isFullLengthCourse(p.courseKey) ? [p.courseKey] : [])).map((course) => (
+          studyPlans.flatMap((p) => (isFullLengthCourse(p.courseKey) && !isApFullLengthCourse(p.courseKey) ? [p.courseKey] : [])).map((course) => (
             <ExamGoalCard key={`goal-${course}`} course={course} className="mb-6" />
           ))}
 

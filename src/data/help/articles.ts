@@ -21,7 +21,7 @@ import {
 } from '@/lib/flashcard-daily-limits'
 import { MAX_ROSTER_ROWS } from '@/lib/roster-parse'
 import { FREE_DIAGNOSTIC_PLANS } from '@/lib/premium'
-import { FULL_LENGTH_COURSES, READINESS_LEVELS } from '@/lib/full-length-progress'
+import { AP_CYCLES_REQUIRED, FULL_LENGTH_COURSES, READINESS_LEVELS } from '@/lib/full-length-progress'
 import { HELP_ARTICLES, type HelpArticleSlug } from './slugs'
 
 export type HelpAudience = 'student' | 'teacher' | 'everyone'
@@ -640,14 +640,14 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
       'The calendar puts your lessons, unit tests and diagnostics on real days, spaced out to your next due date. Move anything; your choice is kept.',
     audience: 'student',
     blocks: [
-      { type: 'p', text: 'Your **study calendar** is at [/calendar](/calendar) (also linked from your Dashboard’s Practice tab). It shows every lesson, unit test and diagnostic from your MCAT or SAT study cycle on a day, plus class diagnostics and assignments your teacher set, and any tasks you add yourself.' },
+      { type: 'p', text: 'Your **study calendar** is at [/calendar](/calendar) (also linked from your Dashboard’s Practice tab). It shows every lesson, unit test and diagnostic from your MCAT, SAT or AP study cycle on a day, plus class diagnostics and assignments your teacher set, and any tasks you add yourself.' },
       { type: 'h2', id: 'how-dates-are-chosen', text: 'How the dates are chosen' },
-      { type: 'p', text: 'Your cycle is the lessons your last diagnostic recommended, then its unit test, then the next diagnostic. Once the next diagnostic has a due date, the calendar spreads the lessons you still have to clear evenly over the days until then — every day, weekends included — so each day stays light.' },
+      { type: 'p', text: 'Your cycle is the lessons your last diagnostic recommended, then its unit test (the **cycle test** in AP courses), then the next diagnostic. Once the next diagnostic has a due date, the calendar spreads the lessons you still have to clear evenly over the days until then — every day, weekends included — so each day stays light.' },
       {
         type: 'list',
         items: [
-          'Lessons run up to two days before the due date (MCAT) or the day before (SAT).',
-          'The unit test lands the day before the diagnostic.',
+          'Lessons run up to two days before the due date (MCAT) or the day before (SAT and AP).',
+          'The unit test (AP: cycle test) lands the day before the diagnostic.',
           'The diagnostic sits on the due date itself.',
           'Lessons you already cleared are ticked off for you.',
         ],
@@ -672,7 +672,7 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
         items: [
           { q: 'Nothing is scheduled. Why?', a: 'Scheduling needs two things: a diagnostic (so there are lessons to place) and a due date, from your teacher or from your own target in the card at the top.' },
           { q: 'I cleared a lesson but it still shows on a later day.', a: 'It is ticked off on the day it was scheduled; the date is just where it sat. Open the calendar again and it will show as done.' },
-          { q: 'Can I see other courses here?', a: 'Scheduled cycles exist for the MCAT and SAT. Assignments, class diagnostics and your own tasks show for every course.' },
+          { q: 'Can I see other courses here?', a: 'Scheduled cycles exist for the MCAT, the SAT and every AP course: each course whose diagnostic you have taken gets its own card at the top. Assignments, class diagnostics and your own tasks show for every course.' },
         ],
       },
     ],
@@ -682,10 +682,10 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
     slug: A.fullLengthReadiness,
     title: 'Full-length readiness: how the levels work',
     description:
-      `The readiness bar climbs from level 1 to ${READINESS_LEVELS} as you finish study cycles: ${FULL_LENGTH_COURSES.mcat.cyclesRequired} for the MCAT, ${FULL_LENGTH_COURSES.sat.cyclesRequired} for the SAT. Level ${READINESS_LEVELS} means it is time for a full-length.`,
+      `The readiness bar climbs from level 1 to ${READINESS_LEVELS} as you finish study cycles: ${FULL_LENGTH_COURSES.mcat.cyclesRequired} for the MCAT, ${FULL_LENGTH_COURSES.sat.cyclesRequired} for the SAT, ${AP_CYCLES_REQUIRED} for an AP course. Level ${READINESS_LEVELS} means it is time for a full-length.`,
     audience: 'student',
     blocks: [
-      { type: 'p', text: `The **full-length readiness** bar on your [MCAT](/mcat) or [SAT](/sat) page (and on your Dashboard) shows how close you are to your next full-length exam. It climbs from level 1 to level ${READINESS_LEVELS} as you complete study cycles.` },
+      { type: 'p', text: `The **full-length readiness** bar on your [MCAT](/mcat), [SAT](/sat) or AP course page (and on your Dashboard) shows how close you are to your next full-length exam. For an AP course the full-length is that course’s AP practice exam, any form. It climbs from level 1 to level ${READINESS_LEVELS} as you complete study cycles.` },
       { type: 'h2', id: 'what-counts', text: 'What counts' },
       { type: 'p', text: 'A **cycle** is one diagnostic, the lessons it recommended, and — for the MCAT — the unit test on those lessons. Taking the diagnostic fills the first part of the cycle; each lesson you clear adds more; the unit test finishes it.' },
       {
@@ -693,6 +693,7 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
         items: [
           `MCAT: ${FULL_LENGTH_COURSES.mcat.cyclesRequired} complete cycles between full-lengths. A cycle needs every recommended lesson cleared and the unit test passed.`,
           `SAT: ${FULL_LENGTH_COURSES.sat.cyclesRequired} complete cycles. A cycle needs every recommended lesson cleared; the unit test is recommended but not required.`,
+          `AP: ${AP_CYCLES_REQUIRED} complete cycles between practice exams. A cycle needs every recommended lesson cleared; the cycle test is recommended but not required.`,
           'Cycles you finished before the bar existed already count.',
         ],
       },
@@ -704,9 +705,9 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
       {
         type: 'steps',
         items: [
-          'Open your MCAT or SAT page and find the readiness bar.',
-          `Choose **I took an AAMC full-length** (MCAT) or **I took a College Board / Bluebook practice test** (SAT). Below level ${READINESS_LEVELS}, use the **Enter the score** link instead.`,
-          `Pick the test, the date, and your total (MCAT ${FULL_LENGTH_COURSES.mcat.total.min}–${FULL_LENGTH_COURSES.mcat.total.max}; SAT ${FULL_LENGTH_COURSES.sat.total.min}–${FULL_LENGTH_COURSES.sat.total.max}). Section scores are optional.`,
+          'Open your MCAT, SAT or AP course page and find the readiness bar.',
+          `Choose **I took an AAMC full-length** (MCAT), **I took a College Board / Bluebook practice test** (SAT) or **I took an AP exam or released practice exam** (AP). Below level ${READINESS_LEVELS}, use the **Enter the score** link instead.`,
+          `Pick the test, the date, and your total (MCAT ${FULL_LENGTH_COURSES.mcat.total.min}–${FULL_LENGTH_COURSES.mcat.total.max}; SAT ${FULL_LENGTH_COURSES.sat.total.min}–${FULL_LENGTH_COURSES.sat.total.max}; AP 1–5). Section scores are optional (the AP takes just the 1–5 score).`,
           'Save. The score joins your history, and your teacher can see it on your study report.',
         ],
       },
@@ -716,6 +717,7 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
         items: [
           { q: 'I took a full-length in the middle of a cycle. Did I lose that progress?', a: 'No. A cycle you were still working on carries over and counts toward the next full-length.' },
           { q: 'Why did my level barely move after a lesson?', a: 'Later levels need more work than early ones. The line under the bar always shows the real count.' },
+          { q: 'My AP score came out in July. Where do I put it?', a: 'On your AP course page, open the readiness bar’s score entry and pick **Official AP Exam**. It becomes the current score on your AP score goal.' },
           { q: 'Does the bar change anything my teacher sees?', a: 'Only entered outside scores, which appear on your score trend in their study report. The bar itself is for you.' },
         ],
       },

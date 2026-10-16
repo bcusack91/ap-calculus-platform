@@ -11,6 +11,7 @@
  * ticked off; leftovers from an earlier cycle are removed.
  */
 import { FULL_LENGTH_COURSES, type FullLengthCourse } from '@/lib/full-length-progress'
+import { UNIT_TEST_COURSES } from '@/lib/unit-test-courses'
 
 export const CYCLE_PLAN_GOAL = 'CYCLE'
 export const CYCLE_KEY_PREFIX = 'cycle:'
@@ -149,7 +150,7 @@ export function reconcileTasks(existing: ExistingTask[], schedule: ScheduledUnit
   return changes
 }
 
-/** The cycle's units from a live plan (MCAT or SAT plan-status shape). */
+/** The cycle's units from a live plan (MCAT, SAT or AP plan-status shape). AP's test is its "cycle test". */
 export function cycleUnitsFromPlan(input: {
   course: FullLengthCourse
   diagnosticId: string
@@ -157,6 +158,7 @@ export function cycleUnitsFromPlan(input: {
   unitTestPassed: boolean
 }): CycleUnit[] {
   const cfg = FULL_LENGTH_COURSES[input.course]
+  const testName = UNIT_TEST_COURSES[input.course].testName
   const units: CycleUnit[] = input.topics.map((t, i) => ({
     key: cycleKey(input.diagnosticId, t.slug),
     title: t.name,
@@ -167,7 +169,7 @@ export function cycleUnitsFromPlan(input: {
   }))
   units.push({
     key: cycleKey(input.diagnosticId, 'unit-test'),
-    title: cfg.unitTestRequired ? `${cfg.label} unit test` : `${cfg.label} unit test (recommended)`,
+    title: cfg.unitTestRequired ? `${cfg.label} ${testName}` : `${cfg.label} ${testName} (recommended)`,
     type: 'UNIT_TEST',
     topicSlug: null,
     done: input.unitTestPassed,

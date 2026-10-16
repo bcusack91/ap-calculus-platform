@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { goalBodySchema, isGoalCourse, normalizeGoalColleges, parseStoredColleges } from '@/lib/exam-goals'
+import { goalBodySchema, isApGoalCourse, isGoalCourse, normalizeGoalColleges, parseStoredColleges, type GoalCourse } from '@/lib/exam-goals'
 import { currentScoreFor } from '@/lib/exam-goal-server'
 
 export const dynamic = 'force-dynamic'
@@ -10,7 +10,7 @@ export const dynamic = 'force-dynamic'
  * A student's score goal and target colleges for one exam. Owner-scoped: every
  * read and write is keyed on the session user, never on a client-sent id.
  *
- *   GET /api/exam-goals?course=sat|mcat|act|psat → { goal | null, current }
+ *   GET /api/exam-goals?course=sat|mcat|act|psat|<AP class-plan key> → { goal | null, current }
  *   PUT /api/exam-goals { course, targetScore, colleges?: [{ name }] } → { goal }
  *
  * College ranges come from the curated list (src/data/college-score-ranges.ts);
@@ -48,8 +48,10 @@ export async function PUT(req: NextRequest) {
     const message = parsed.error.issues.find((i) => i.path[0] === 'targetScore')?.message
     return NextResponse.json({ error: message && !message.startsWith('Invalid') ? message : 'Check the goal and try again.' }, { status: 400 })
   }
-  const { course, targetScore } = parsed.data
-  const colleges = normalizeGoalColleges(course, parsed.data.colleges)
+  const course = parsed.data.course as GoalCourse
+  const { targetScore } = parsed.data
+  // AP goals take no schools (credit policies are per score, not a range).
+  const colleges = isApGoalCourse(course) ? [] : normalizeGoalColleges(course, parsed.data.colleges)
 
   const row = await prisma.examGoal.upsert({
     where: { userId_course: { userId, course } },

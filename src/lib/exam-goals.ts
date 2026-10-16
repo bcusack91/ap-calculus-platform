@@ -1,17 +1,41 @@
 /**
  * Score goals + target colleges (ExamGoal rows). Pure config and validation;
  * the route is src/app/api/exam-goals/route.ts.
+ *
+ * AP courses (Oct 2026) take a 1–5 goal keyed by the class-plan key
+ * ('ap-chem', 'calcab', …), with no target colleges: AP credit policies are
+ * per score, not a middle-50% range.
  */
 import { z } from 'zod'
 import { findCollege } from '@/data/college-score-ranges'
+import { classPlanCourse } from '@/lib/class-plan-config'
+import { AP_UNIT_TEST_COURSES, type ApUnitTestCourse } from '@/lib/unit-test-courses'
 
-export type GoalCourse = 'sat' | 'mcat' | 'act' | 'psat'
+export type GoalCourse = 'sat' | 'mcat' | 'act' | 'psat' | ApUnitTestCourse
 
-export const GOAL_COURSES: Record<GoalCourse, { label: string; min: number; max: number; step: number; collegeRanges: 'sat' | 'act' | null }> = {
-  sat: { label: 'SAT', min: 400, max: 1600, step: 10, collegeRanges: 'sat' },
-  mcat: { label: 'MCAT', min: 472, max: 528, step: 1, collegeRanges: null },
-  act: { label: 'ACT', min: 1, max: 36, step: 1, collegeRanges: 'act' },
-  psat: { label: 'PSAT/NMSQT', min: 320, max: 1520, step: 10, collegeRanges: null },
+export interface GoalCourseConfig {
+  label: string
+  min: number
+  max: number
+  step: number
+  collegeRanges: 'sat' | 'act' | null
+  /** Whether the goal takes target schools (not PSAT or AP). */
+  colleges: boolean
+}
+
+export const GOAL_COURSES: Record<GoalCourse, GoalCourseConfig> = {
+  sat: { label: 'SAT', min: 400, max: 1600, step: 10, collegeRanges: 'sat', colleges: true },
+  mcat: { label: 'MCAT', min: 472, max: 528, step: 1, collegeRanges: null, colleges: true },
+  act: { label: 'ACT', min: 1, max: 36, step: 1, collegeRanges: 'act', colleges: true },
+  psat: { label: 'PSAT/NMSQT', min: 320, max: 1520, step: 10, collegeRanges: null, colleges: false },
+  ...(Object.fromEntries(
+    AP_UNIT_TEST_COURSES.map((k) => [k, { label: classPlanCourse(k)?.label ?? k, min: 1, max: 5, step: 1, collegeRanges: null, colleges: false }]),
+  ) as Record<ApUnitTestCourse, GoalCourseConfig>),
+}
+
+/** An AP course goal (1–5). */
+export function isApGoalCourse(v: unknown): v is ApUnitTestCourse {
+  return typeof v === 'string' && (AP_UNIT_TEST_COURSES as readonly string[]).includes(v)
 }
 
 export function isGoalCourse(v: unknown): v is GoalCourse {
@@ -30,7 +54,7 @@ export type GoalCollege = {
 
 export const goalBodySchema = z
   .object({
-    course: z.enum(['sat', 'mcat', 'act', 'psat']),
+    course: z.string().refine(isGoalCourse, { message: 'Unknown course.' }),
     targetScore: z.number().int(),
     colleges: z
       .array(z.object({ name: z.string().trim().min(1).max(100) }))
@@ -38,13 +62,14 @@ export const goalBodySchema = z
       .optional(),
   })
   .superRefine((v, ctx) => {
+    if (!isGoalCourse(v.course)) return
     const cfg = GOAL_COURSES[v.course]
     if (v.targetScore < cfg.min || v.targetScore > cfg.max) {
       ctx.addIssue({ code: 'custom', path: ['targetScore'], message: `${cfg.label} goals run ${cfg.min}–${cfg.max}.` })
     }
   })
 
-export type GoalBody = z.infer<typeof goalBodySchema>
+export type GoalBody = Omit<z.infer<typeof goalBodySchema>, 'course'> & { course: GoalCourse }
 
 /**
  * Normalize the submitted colleges: dedupe by name (case-insensitive), and take

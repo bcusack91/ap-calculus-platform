@@ -1,8 +1,11 @@
 import { prisma } from '@/lib/prisma'
 import { loadSatSuperscore } from '@/lib/superscore-server'
 import type { Superscore } from '@/lib/superscore'
-import type { GoalCourse } from '@/lib/exam-goals'
+import { isApGoalCourse, type GoalCourse } from '@/lib/exam-goals'
 import { latestActFullLength } from '@/lib/act-full-length-server'
+import { apPracticeCategory, apPracticeAttemptTitle } from '@/lib/ap-practice-exams'
+import { apPracticeKeyFor } from '@/lib/full-length-progress'
+import type { ApUnitTestCourse } from '@/lib/unit-test-courses'
 
 /** The score a goal is measured against. */
 export interface CurrentScore {
@@ -63,11 +66,46 @@ async function latestAct(userId: string): Promise<CurrentScore> {
 }
 
 /**
+ * Latest AP score (1–5): the newest of a StudyMondo practice exam (any form,
+ * its estimated AP score) and a logged outside score — a released College
+ * Board exam or the real AP score, which arrives in July.
+ */
+async function latestAp(userId: string, course: ApUnitTestCourse): Promise<CurrentScore> {
+  const [practice, ext] = await Promise.all([
+    prisma.diagnosticTest.findMany({
+      where: { userId, category: apPracticeCategory(apPracticeKeyFor(course)) },
+      orderBy: { createdAt: 'desc' },
+      take: 10,
+      select: { category: true, createdAt: true, results: true },
+    }),
+    prisma.externalExamScore.findFirst({
+      where: { userId, course },
+      orderBy: { takenAt: 'desc' },
+      select: { takenAt: true, totalScore: true, source: true },
+    }),
+  ])
+  const own = practice.find((r) => inRange((r.results as { estimatedAPScore?: unknown } | null)?.estimatedAPScore, 1, 5))
+  const candidates: CurrentScore[] = []
+  if (own) {
+    candidates.push({
+      score: (own.results as { estimatedAPScore: number }).estimatedAPScore,
+      basis: 'Latest practice exam',
+      source: apPracticeAttemptTitle(own.category, own.results),
+      at: own.createdAt.toISOString(),
+    })
+  }
+  if (ext && inRange(ext.totalScore, 1, 5)) candidates.push({ score: ext.totalScore, basis: 'Latest AP score', source: ext.source, at: ext.takenAt.toISOString() })
+  if (!candidates.length) return NONE
+  return candidates.sort((a, b) => ((a.at ?? '') < (b.at ?? '') ? 1 : -1))[0]
+}
+
+/**
  * The student's current score for a goal. SAT: superscore across StudyMondo
  * full practice tests and entered College Board scores. MCAT: latest
  * full-length (StudyMondo or AAMC). ACT: latest ACT full-length composite or
- * logged real ACT score. PSAT has no stored full-length scores yet, so its
- * goal shows without a current score.
+ * logged real ACT score. AP: latest practice-exam estimate or logged AP
+ * score (1–5). PSAT has no stored full-length scores yet, so its goal shows
+ * without a current score.
  */
 export async function currentScoreFor(userId: string, course: GoalCourse): Promise<CurrentScore> {
   if (course === 'sat') {
@@ -84,5 +122,6 @@ export async function currentScoreFor(userId: string, course: GoalCourse): Promi
   }
   if (course === 'mcat') return latestMcat(userId)
   if (course === 'act') return latestAct(userId)
+  if (isApGoalCourse(course)) return latestAp(userId, course)
   return NONE
 }

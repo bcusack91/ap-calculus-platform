@@ -175,7 +175,7 @@ describe('resolveNextStep — plans and fallbacks', () => {
     }
     const step = resolveNextStep({ ...base, plans: [sat] })
     expect(step).toMatchObject({ kind: 'full-length', href: '/sat-practice', planLabel: 'SAT' })
-    expect(describeNextStep(step as Exclude<typeof step, { kind: 'loading' }>)).toMatchObject({ cta: 'Take a SAT practice test', href: '/sat-practice' })
+    expect(describeNextStep(step as Exclude<typeof step, { kind: 'loading' }>)).toMatchObject({ cta: 'Take an SAT practice test', href: '/sat-practice' })
     // Not ready: the usual order (unit test, then retake) still holds
     expect(resolveNextStep({ ...base, plans: [{ ...sat, fullLength: { ...fullLength, ready: false, level: 7 } }] }).kind).toBe('unit-test')
     // A pending lesson always comes before the full-length nudge

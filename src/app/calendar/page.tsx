@@ -22,6 +22,7 @@ import {
 import type { CalendarCycle, CalendarEvent, CalendarEventKind } from '@/lib/calendar-types'
 import FullLengthProgress from '@/components/FullLengthProgress'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
+import { diagnosticRouteForKey } from '@/lib/class-plan-config'
 
 /* ── dates (all "days" are local YYYY-MM-DD strings) ─────────────────── */
 
@@ -312,7 +313,7 @@ function CycleCard({ cycle, today, onSetTarget }: { cycle: CalendarCycle; today:
       {!cycle.hasDiagnostic ? (
         <p className="mt-1 text-sm text-gray-700 dark:text-gray-300">
           Take the {cycle.label} diagnostic first — it picks the lessons that get scheduled.{' '}
-          <Link href={`/${cycle.course}-diagnostic`} className="font-medium text-accent hover:underline">Take it →</Link>
+          <Link href={diagnosticRouteForKey(cycle.course)} className="font-medium text-accent hover:underline">Take it →</Link>
         </p>
       ) : due && cycle.source === 'class' ? (
         <>

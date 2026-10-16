@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { ArrowRight, Trophy } from 'lucide-react'
 import ExternalScoreForm from '@/components/ExternalScoreForm'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
-import { describeReadiness, levelThresholds, type FullLengthCourse, type FullLengthReadiness } from '@/lib/full-length-progress'
+import { aOrAn, describeReadiness, levelThresholds, type FullLengthCourse, type FullLengthReadiness } from '@/lib/full-length-progress'
 
 const TICKS = levelThresholds().slice(1, -1)
 
@@ -15,7 +15,7 @@ function formatDay(iso: string): string {
 
 /**
  * How close the student is to their next full-length: an experience bar from
- * level 1 to 10 over complete study cycles (MCAT 4, SAT 2). Early levels fill
+ * level 1 to 10 over complete study cycles (MCAT 4, SAT and AP 2). Early levels fill
  * fast, later ones take longer; the plain line underneath says exactly where
  * they are. At level 10 it offers the full-length — on StudyMondo, or by
  * entering an outside score — and starts over afterwards.
@@ -104,7 +104,7 @@ export default function FullLengthProgress({
             href={r.fullLengthHref}
             className="inline-flex items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-hover"
           >
-            Take a {r.fullLengthLabel} <ArrowRight className="h-4 w-4" aria-hidden />
+            Take {aOrAn(r.fullLengthLabel)} {r.fullLengthLabel} <ArrowRight className="h-4 w-4" aria-hidden />
           </Link>
           <button
             type="button"
@@ -112,7 +112,7 @@ export default function FullLengthProgress({
             aria-expanded={showForm}
             className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700"
           >
-            I took {course === 'mcat' ? 'an' : 'a'} {r.externalLabel}
+            I took {aOrAn(r.externalLabel)} {r.externalLabel}
           </button>
         </div>
       ) : (
@@ -129,7 +129,7 @@ export default function FullLengthProgress({
                 .{' '}
               </>
             )}
-            Took {course === 'mcat' ? 'an' : 'a'} {r.externalLabel} already?{' '}
+            Took {aOrAn(r.externalLabel)} {r.externalLabel} already?{' '}
             <button type="button" onClick={() => setShowForm((v) => !v)} aria-expanded={showForm} className="font-medium text-accent hover:underline">
               Enter the score
             </button>

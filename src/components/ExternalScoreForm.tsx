@@ -2,10 +2,11 @@
 
 import { useId, useState } from 'react'
 import { externalScoreConfig, type ExternalScoreCourse } from '@/lib/external-score-courses'
+import { aOrAn } from '@/lib/full-length-progress'
 
 /**
  * Enter a full-length score earned outside StudyMondo (AAMC / College Board /
- * ACT). For MCAT and SAT, saving counts as a full-length taken: the readiness
+ * ACT / an AP exam or released AP practice exam, 1–5). For MCAT and SAT, saving counts as a full-length taken: the readiness
  * bar starts over and the score joins the student's history. For the ACT it
  * is the student's real score: it feeds their ACT goal and our calibration.
  */
@@ -73,7 +74,7 @@ export default function ExternalScoreForm({
   return (
     <form onSubmit={submit} noValidate className="space-y-3 rounded-xl border border-gray-200 bg-gray-50 p-4 dark:border-gray-700 dark:bg-gray-900/40" aria-labelledby={`${id}-title`}>
       <p id={`${id}-title`} className="text-sm font-semibold text-gray-900 dark:text-white">
-        Enter {cfg.label === 'MCAT' || cfg.label === 'ACT' ? 'an' : 'a'} {cfg.externalLabel} score
+        Enter {aOrAn(cfg.externalLabel)} {cfg.externalLabel} score
       </p>
       <p className="text-xs text-gray-500 dark:text-gray-400">
         {cfg.countsAsFullLength
@@ -92,7 +93,7 @@ export default function ExternalScoreForm({
           <input id={`${id}-date`} type="date" value={takenAt} max={todayIso} onChange={(e) => setTakenAt(e.target.value)} required className={`mt-1 ${input}`} />
         </div>
         <div>
-          <label htmlFor={`${id}-total`} className={label}>{cfg.label === 'ACT' ? 'Composite' : 'Total score'} ({cfg.total.min}–{cfg.total.max})</label>
+          <label htmlFor={`${id}-total`} className={label}>{cfg.label === 'ACT' ? 'Composite' : cfg.sections.length === 0 && cfg.total.max === 5 ? 'AP score' : 'Total score'} ({cfg.total.min}–{cfg.total.max})</label>
           <input
             id={`${id}-total`}
             type="number"
@@ -106,7 +107,7 @@ export default function ExternalScoreForm({
           />
         </div>
       </div>
-      {showSections ? (
+      {cfg.sections.length === 0 ? null : showSections ? (
         <div className={`grid gap-3 ${cfg.sections.length > 2 ? 'sm:grid-cols-4' : 'sm:grid-cols-2'}`}>
           {cfg.sections.map((s) => (
             <div key={s.key}>

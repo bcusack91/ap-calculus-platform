@@ -1,7 +1,8 @@
 /**
  * Courses whose outside scores a student can log (ExternalExamScore): the
- * full-length readiness courses (MCAT, SAT — an entry there counts as a
- * full-length taken) plus the ACT, where a logged official ACT / ACT practice
+ * full-length readiness courses (MCAT, SAT and every AP course, keyed by its
+ * class-plan key with a 1–5 total and no sections — an entry there counts as
+ * a full-length taken) plus the ACT, where a logged official ACT / ACT practice
  * score is calibration data for the 1-36 curve and the ACT score goal.
  * Pure — safe for client components.
  */

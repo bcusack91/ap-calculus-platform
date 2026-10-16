@@ -4,7 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { diagnosticRouteForKey } from '@/lib/class-plan-config'
 import { isOpenClassDiagnostic } from '@/lib/class-diagnostic-open'
 import { UNIT_TEST_COURSES } from '@/lib/unit-test-courses'
-import { FULL_LENGTH_COURSES, isFullLengthCourse } from '@/lib/full-length-progress'
+import { FULL_LENGTH_COURSES, FULL_LENGTH_COURSE_KEYS, isFullLengthCourse, type FullLengthCourse } from '@/lib/full-length-progress'
 import { CYCLE_KEY_PREFIX, CYCLE_PLAN_GOAL } from '@/lib/cycle-scheduler'
 import { effectiveDueDate, syncCycleSchedule } from '@/lib/cycle-scheduler-server'
 
@@ -24,8 +24,13 @@ function lessonHref(slug: string | null, course: string | null): string | null {
  * GET /api/calendar?from=YYYY-MM-DD&to=YYYY-MM-DD[&sync=1]
  * Everything with a date in the range: study-plan tasks (the auto-scheduled
  * cycle plus the student's own), class diagnostics due, assignments due.
- * `sync=1` first brings the MCAT/SAT cycle schedules up to date (new
+ * `sync=1` first brings the MCAT/SAT/AP cycle schedules up to date (new
  * diagnostic, lessons cleared since, a due date the teacher just set).
+ *
+ * A course gets a cycle card when the student has taken its diagnostic, has a
+ * cycle plan (a target they set), or is in a class with a dated diagnostic in
+ * it; three cheap queries pick those courses so the 25 readiness courses are
+ * never checked one by one.
  */
 export async function GET(req: NextRequest) {
   const session = await auth()
@@ -39,12 +44,22 @@ export async function GET(req: NextRequest) {
 
   try {
     const cycles: CalendarCycle[] = []
-    for (const course of ['mcat', 'sat'] as const) {
+    const [takenCategories, cyclePlans, classDated] = await Promise.all([
+      prisma.diagnosticTest.findMany({ where: { userId }, distinct: ['category'], select: { category: true } }),
+      prisma.studyPlan.findMany({ where: { userId, goalType: CYCLE_PLAN_GOAL }, select: { courseSlug: true } }),
+      prisma.classDiagnostic.findMany({
+        where: { classroom: { members: { some: { userId, isActive: true } } }, dueDate: { not: null } },
+        distinct: ['courseKey'],
+        select: { courseKey: true },
+      }),
+    ])
+    const tookDiagnostic = (course: FullLengthCourse) =>
+      takenCategories.some((d) => d.category.startsWith(FULL_LENGTH_COURSES[course].diagnosticCategoryPrefix))
+    const candidates = new Set<string>([...cyclePlans.map((p) => p.courseSlug ?? ''), ...classDated.map((d) => d.courseKey)])
+    for (const course of FULL_LENGTH_COURSE_KEYS) {
+      const hasDiagnostic = tookDiagnostic(course)
+      if (!hasDiagnostic && !candidates.has(course)) continue
       const cfg = FULL_LENGTH_COURSES[course]
-      const hasDiagnostic = !!(await prisma.diagnosticTest.findFirst({
-        where: { userId, category: { startsWith: course === 'mcat' ? 'mcat-full-diagnostic' : 'sat-full-diagnostic' } },
-        select: { id: true },
-      }))
       if (hasDiagnostic && sp.get('sync') === '1') {
         await syncCycleSchedule(userId, course).catch((err) => console.error('[calendar] sync failed (ignored):', course, err))
       }

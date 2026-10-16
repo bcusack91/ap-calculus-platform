@@ -48,6 +48,12 @@ describe('PUT /api/exam-goals validation', () => {
     ['mcat', 472, 528, 471, 529],
     ['act', 1, 36, 0, 37],
     ['psat', 320, 1520, 310, 1530],
+    // AP goals are 1–5, keyed by the class-plan key (the four flagships and one more).
+    ['ap-chem', 1, 5, 0, 6],
+    ['ap-bio', 1, 5, 0, 6],
+    ['ap-physics1', 1, 5, 0, 6],
+    ['calcab', 1, 5, 0, 6],
+    ['ap-us-history', 1, 5, 0, 6],
   ])('%s accepts %i–%i and rejects %i / %i', async (course, lo, hi, below, above) => {
     expect((await put({ course, targetScore: lo })).status).toBe(200)
     expect((await put({ course, targetScore: hi })).status).toBe(200)
@@ -112,6 +118,22 @@ describe('colleges', () => {
       { name: 'Rice University', low: 1500, high: 1570 },
       { name: 'My Local College', low: null, high: null },
     ])
+  })
+
+  it('stores no schools on an AP goal, whatever the client sends', async () => {
+    const res = await put({ course: 'ap-chem', targetScore: 5, colleges: [{ name: 'Rice University' }] })
+    expect(res.status).toBe(200)
+    expect(mockUpsert.mock.calls[0][0].create).toMatchObject({ course: 'ap-chem', targetScore: 5, colleges: [] })
+    expect((await res.json()).goal).toMatchObject({ course: 'ap-chem', targetScore: 5, colleges: [] })
+    expect((await put({ course: 'ap-chem', targetScore: 4.5 })).status).toBe(400)
+    expect((await put({ course: 'ap-fake', targetScore: 4 })).status).toBe(400)
+  })
+
+  it('GET reads an AP goal by its class-plan key', async () => {
+    mockFindUnique.mockResolvedValue({ targetScore: 4, colleges: [], updatedAt: new Date() })
+    const res = await get('?course=calcab')
+    expect(res.status).toBe(200)
+    expect(mockCurrent).toHaveBeenCalledWith('stu-1', 'calcab')
   })
 
   it('uses ACT ranges for ACT goals and no ranges for MCAT', () => {

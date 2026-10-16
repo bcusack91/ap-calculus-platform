@@ -9,8 +9,10 @@ export const dynamic = 'force-dynamic'
 
 /**
  * Full-length scores earned outside StudyMondo — an AAMC MCAT full-length, a
- * College Board / Bluebook SAT practice test. An entry counts as a full-length
- * taken: it resets the readiness bar and joins the student's score history.
+ * College Board / Bluebook SAT practice test, a released AP exam or the real
+ * AP score (1–5, course = the AP class-plan key, e.g. 'ap-chem'). An entry
+ * counts as a full-length taken: it resets the readiness bar and joins the
+ * student's score history.
  *
  * ACT entries (an official ACT or an ACT practice test, composite 1-36 plus
  * optional English/Math/Reading/Science) are calibration data and feed the ACT
@@ -20,7 +22,7 @@ export const dynamic = 'force-dynamic'
  * (1 = from a full-length, 0 = from a diagnostic). The official source gets
  * its month appended ('Official ACT (Apr 2026)').
  *
- *   GET    /api/exam-scores?course=mcat|sat|act   → { scores }
+ *   GET    /api/exam-scores?course=mcat|sat|act|<AP key>   → { scores }
  *   POST   /api/exam-scores                    { course, source, totalScore, sectionScores?, takenAt, note? }
  *   DELETE /api/exam-scores?id=…               (own entries only)
  */

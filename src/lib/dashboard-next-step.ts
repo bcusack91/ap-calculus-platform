@@ -20,6 +20,7 @@
 import { pickNextPendingTopic, planTopicHref, type PlanTopic } from '@/components/StudyPlanNextUp'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { unitTestIsNextStep, unitTestName } from '@/lib/unit-test-courses'
+import { aOrAn } from '@/lib/full-length-progress'
 
 /** The rated review session — the one flashcard destination on the dashboard. */
 export const FLASHCARD_REVIEW_HREF = '/flashcards/review'
@@ -33,7 +34,7 @@ export interface NextStepPlan {
   topics: PlanTopic[]
   /** The cycle's unit test (src/lib/unit-test-courses.ts): MCAT, SAT, ACT, and every AP course (its "cycle test"). */
   unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; inProgressId?: string | null; locksDiagnostic?: boolean; testName?: string } | null
-  /** Full-length readiness (MCAT, SAT): level 10 = enough cycles done to sit a full-length. */
+  /** Full-length readiness (MCAT, SAT, AP): level 10 = enough cycles done to sit a full-length. */
   fullLength?: { ready: boolean; level: number; href: string; label: string; externalLabel: string; coursePage: string } | null
 }
 
@@ -209,9 +210,9 @@ export function describeNextStep(step: Exclude<NextStep, { kind: 'loading' }>): 
       }
     case 'full-length':
       return {
-        title: `You're ready for a ${step.label}`,
-        reason: `Level 10: you've finished every study cycle before your next full-length. Sit one now to see where you stand, or enter ${step.planLabel === 'MCAT' ? 'an' : 'a'} ${step.externalLabel} score on your ${step.planLabel} page.`,
-        cta: `Take a ${step.label}`,
+        title: `You're ready for ${aOrAn(step.label)} ${step.label}`,
+        reason: `Level 10: you've finished every study cycle before your next full-length. Sit one now to see where you stand, or enter ${aOrAn(step.externalLabel)} ${step.externalLabel} score on your ${step.planLabel} page.`,
+        cta: `Take ${aOrAn(step.label)} ${step.label}`,
         href: step.href,
       }
     case 'retake-diagnostic':

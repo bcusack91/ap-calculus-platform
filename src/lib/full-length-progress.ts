@@ -1,16 +1,26 @@
 /**
- * Full-length readiness: how close an MCAT or SAT student is to their next
- * full-length exam, as an experience bar (levels 1–10) over complete study
- * cycles. A cycle = a diagnostic, its recommended lessons cleared, and (MCAT)
- * the cycle's unit test passed. MCAT students do 4 cycles between
- * full-lengths, SAT students 2. Taking a full-length — on StudyMondo or an
- * outside one whose score they enter — starts the count over.
+ * Full-length readiness: how close an MCAT, SAT or AP student is to their
+ * next full-length exam, as an experience bar (levels 1–10) over complete
+ * study cycles. A cycle = a diagnostic, its recommended lessons cleared, and
+ * (MCAT) the cycle's unit test passed. MCAT students do 4 cycles between
+ * full-lengths, SAT and AP students 2. Taking a full-length — on StudyMondo or
+ * an outside one whose score they enter — starts the count over.
  *
- * Pure math here; src/lib/full-length-progress-server.ts replays the
+ * AP (Oct 2026): every AP class-plan course has a StudyMondo practice exam
+ * (src/lib/ap-practice-exams.ts), so every AP course gets the bar. The
+ * full-length is any form of that exam (DiagnosticTest category
+ * 'ap-practice-exam:<key>'); the outside score is a released College Board
+ * practice exam or the real AP score (1–5). The AP cycle test is recommended,
+ * not required, as for the SAT.
+ *
+ * Pure here (client-safe); src/lib/full-length-progress-server.ts replays the
  * student's history to feed it.
  */
+import { classPlanCourse } from '@/lib/class-plan-config'
+import { AP_UNIT_TEST_COURSES, type ApUnitTestCourse } from '@/lib/unit-test-courses'
 
-export type FullLengthCourse = 'mcat' | 'sat'
+/** MCAT, SAT, or an AP course by its class-plan key ('ap-chem', 'calcab', …). */
+export type FullLengthCourse = 'mcat' | 'sat' | ApUnitTestCourse
 
 export interface FullLengthCourseConfig {
   label: string
@@ -24,6 +34,60 @@ export interface FullLengthCourseConfig {
   externalSources: string[]
   total: { min: number; max: number }
   sections: { key: string; label: string; min: number; max: number }[]
+  /** DiagnosticTest.category prefix of the course's cycle diagnostic. */
+  diagnosticCategoryPrefix: string
+  /** The course's hub page. */
+  coursePage: string
+  /** AP only: the AP_PRACTICE_EXAMS key whose attempts are the full-lengths. */
+  apPracticeKey?: string
+}
+
+/**
+ * AP practice-exam keys that differ from the class-plan key (the registry
+ * keys follow the exam pages: /ap-calcab-practice, /ap-precalc-practice, …).
+ * Guarded against AP_PRACTICE_EXAMS by tests/lib/ap-full-length-readiness.test.ts.
+ */
+const AP_PRACTICE_KEY_OVERRIDES: Partial<Record<ApUnitTestCourse, string>> = {
+  calcab: 'ap-calcab',
+  calcbc: 'ap-calcbc',
+  'ap-precalculus': 'ap-precalc',
+  'ap-aas': 'ap-african-american-studies',
+}
+
+/** Hub pages that are not /<Course.slug>. */
+const AP_COURSE_PAGE_OVERRIDES: Partial<Record<ApUnitTestCourse, string>> = {
+  'ap-csp': '/ap-cs-principles',
+}
+
+/** The AP practice-exam key (AP_PRACTICE_EXAMS) for an AP class-plan key. */
+export function apPracticeKeyFor(course: ApUnitTestCourse): string {
+  return AP_PRACTICE_KEY_OVERRIDES[course] ?? course
+}
+
+/** Released College Board exams and the real score count; both are 1–5. */
+export const AP_EXTERNAL_SOURCES = ['Official AP Exam', 'AP Classroom practice exam', 'Released College Board exam', 'Other practice exam']
+
+/** AP: the SAT's 2 cycles, since an AP practice exam is a 3-hour sitting and most courses have one to three forms. */
+export const AP_CYCLES_REQUIRED = 2
+
+function apConfig(course: ApUnitTestCourse): FullLengthCourseConfig {
+  const c = classPlanCourse(course)
+  if (!c?.courseSlug) throw new Error(`full-length-progress: ${course} is not an AP class-plan course`)
+  const practiceKey = apPracticeKeyFor(course)
+  return {
+    label: c.label,
+    cyclesRequired: AP_CYCLES_REQUIRED,
+    unitTestRequired: false,
+    fullLengthHref: `/${practiceKey}-practice`,
+    fullLengthLabel: `${c.label} practice exam`,
+    externalLabel: 'AP exam or released practice exam',
+    externalSources: AP_EXTERNAL_SOURCES,
+    total: { min: 1, max: 5 },
+    sections: [],
+    diagnosticCategoryPrefix: c.categoryPrefix,
+    coursePage: AP_COURSE_PAGE_OVERRIDES[course] ?? `/${c.courseSlug}`,
+    apPracticeKey: practiceKey,
+  }
 }
 
 export const FULL_LENGTH_COURSES: Record<FullLengthCourse, FullLengthCourseConfig> = {
@@ -42,6 +106,8 @@ export const FULL_LENGTH_COURSES: Record<FullLengthCourse, FullLengthCourseConfi
       { key: 'bio-biochem', label: 'Bio/Biochem', min: 118, max: 132 },
       { key: 'psych-soc', label: 'Psych/Soc', min: 118, max: 132 },
     ],
+    diagnosticCategoryPrefix: 'mcat-full-diagnostic',
+    coursePage: '/mcat',
   },
   sat: {
     label: 'SAT',
@@ -57,11 +123,33 @@ export const FULL_LENGTH_COURSES: Record<FullLengthCourse, FullLengthCourseConfi
       { key: 'rw', label: 'Reading & Writing', min: 200, max: 800 },
       { key: 'math', label: 'Math', min: 200, max: 800 },
     ],
+    diagnosticCategoryPrefix: 'sat-full-diagnostic',
+    coursePage: '/sat',
   },
+  ...(Object.fromEntries(AP_UNIT_TEST_COURSES.map((k) => [k, apConfig(k)])) as Record<ApUnitTestCourse, FullLengthCourseConfig>),
 }
 
+/** Every readiness course: MCAT, SAT, then the AP courses in class-plan order. */
+export const FULL_LENGTH_COURSE_KEYS = Object.keys(FULL_LENGTH_COURSES) as FullLengthCourse[]
+
 export function isFullLengthCourse(key: unknown): key is FullLengthCourse {
-  return key === 'mcat' || key === 'sat'
+  return typeof key === 'string' && Object.prototype.hasOwnProperty.call(FULL_LENGTH_COURSES, key)
+}
+
+/** An AP readiness course (its full-length is an AP practice exam). */
+export function isApFullLengthCourse(key: unknown): key is ApUnitTestCourse {
+  return isFullLengthCourse(key) && key !== 'mcat' && key !== 'sat'
+}
+
+/**
+ * 'a' or 'an' before a label: "an AAMC full-length", "an MCAT full-length",
+ * "a College Board …", "an AP Chemistry practice exam". Initialisms go by the
+ * sound of their first letter; words by their first letter.
+ */
+export function aOrAn(label: string): 'a' | 'an' {
+  const first = label.trim().split(/[\s/-]/)[0] ?? ''
+  if (/^[A-Z]{2,}$/.test(first)) return /^[AEFHILMNORSX]/.test(first) ? 'an' : 'a'
+  return /^[aeiou]/i.test(first) ? 'an' : 'a'
 }
 
 export const READINESS_LEVELS = 10

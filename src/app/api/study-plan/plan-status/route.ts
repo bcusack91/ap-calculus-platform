@@ -10,7 +10,7 @@ import { buildActPlanStatus } from '@/lib/act-plan'
 import { unitTestStatusFor, type McatUnitTestStatus } from '@/lib/mcat-unit-test-server'
 import { UNIT_TEST_COURSES, isApUnitTestCourse } from '@/lib/unit-test-courses'
 import { fullLengthReadiness } from '@/lib/full-length-progress-server'
-import { FULL_LENGTH_COURSES, type FullLengthCourse } from '@/lib/full-length-progress'
+import { FULL_LENGTH_COURSES, isApFullLengthCourse, type FullLengthCourse } from '@/lib/full-length-progress'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { canonicalizeRecommendedTopics } from '@/lib/ap-topic-canonical'
 
@@ -62,7 +62,7 @@ async function fullLengthSummary(
   try {
     const r = await fullLengthReadiness(userId, course, { currentPlan })
     const cfg = FULL_LENGTH_COURSES[course]
-    return { ready: r.ready, level: r.level, href: cfg.fullLengthHref, label: cfg.fullLengthLabel, externalLabel: cfg.externalLabel, coursePage: `/${course}` }
+    return { ready: r.ready, level: r.level, href: cfg.fullLengthHref, label: cfg.fullLengthLabel, externalLabel: cfg.externalLabel, coursePage: cfg.coursePage }
   } catch (err) {
     // Readiness is a nudge; never let it take the study plan down with it.
     console.error('[plan-status] full-length readiness failed (ignored):', err)
@@ -267,15 +267,26 @@ export async function GET() {
         summary: { total: topics.length, completed: topics.length - pending, pending },
         canRetakeDiagnostic: course.gated === true ? pending === 0 : true,
         unitTest: null as McatUnitTestStatus | null,
+        fullLength: null as FullLengthSummary | null,
       }]
     })
 
     // AP courses end the cycle with the recommended cycle test (never a lock:
     // canRetakeDiagnostic stays true). Same topics and clear rule as the
     // test's own API (buildGenericPlanStatus), from the rows loaded above.
+    // They also get the full-length readiness summary (level 10 → the
+    // dashboard suggests the AP practice exam), from the same counts.
     await Promise.all(plans.map(async (p) => {
       const diagnosticId = perCourse.get(p.courseKey)?.diagnosticId
-      if (!diagnosticId || !isApUnitTestCourse(p.courseKey) || !UNIT_TEST_COURSES[p.courseKey].enabled) return
+      if (!diagnosticId) return
+      if (isApFullLengthCourse(p.courseKey)) {
+        p.fullLength = await fullLengthSummary(userId, p.courseKey, {
+          diagnosticId,
+          topicsTotal: p.summary.total,
+          topicsCleared: p.summary.completed,
+        })
+      }
+      if (!isApUnitTestCourse(p.courseKey) || !UNIT_TEST_COURSES[p.courseKey].enabled) return
       try {
         p.unitTest = await unitTestStatusFor(userId, diagnosticId, p.summary.pending === 0, p.courseKey)
       } catch (err) {

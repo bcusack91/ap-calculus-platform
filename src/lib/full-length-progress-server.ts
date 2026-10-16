@@ -7,6 +7,9 @@ import { trackSlugFor, type SatLane } from '@/lib/sat-plan'
 import { canonicalizeSlug } from '@/data/sat-practice/diagnostic-generator'
 import { HARD_MODULE_CATEGORY } from '@/data/sat-practice/hard-modules'
 import { CORE_MODULE_CATEGORY } from '@/data/sat-practice/core-skills-modules'
+import { canonicalApTopicSlug } from '@/lib/ap-topic-canonical'
+import { classPlanCourse } from '@/lib/class-plan-config'
+import { apPracticeCategory, apPracticeAttemptTitle } from '@/lib/ap-practice-exams'
 import {
   FULL_LENGTH_COURSES,
   cycleComplete,
@@ -32,14 +35,21 @@ export interface CurrentPlanCounts {
 
 const SAT_LANES: SatLane[] = ['regular', 'advanced', 'core-skills']
 
-/** Distinct recommended slugs stored on a diagnostic's results. */
+/**
+ * Distinct recommended slugs stored on a diagnostic's results. SAT slugs are
+ * canonicalized across tracks; AP attempts can carry legacy slugs with no
+ * Topic row, mapped to the production topic the plan shows
+ * (ap-topic-canonical.ts, the same mapping buildGenericPlanStatus uses).
+ */
 export function recommendedSlugs(results: unknown, course: FullLengthCourse): string[] {
   const raw = (results as { recommendedTopics?: unknown } | null)?.recommendedTopics
   if (!Array.isArray(raw)) return []
+  const apCourseSlug = FULL_LENGTH_COURSES[course].apPracticeKey ? classPlanCourse(course)?.courseSlug ?? null : null
   const out = new Set<string>()
   for (const t of raw) {
     const slug = (t as { slug?: unknown } | null)?.slug
-    if (typeof slug === 'string' && slug) out.add(course === 'sat' ? canonicalizeSlug(slug) : slug)
+    if (typeof slug !== 'string' || !slug) continue
+    out.add(course === 'sat' ? canonicalizeSlug(slug) : apCourseSlug ? canonicalApTopicSlug(apCourseSlug, slug) : slug)
   }
   return [...out]
 }
@@ -56,7 +66,24 @@ async function fullLengthEvents(userId: string, course: FullLengthCourse): Promi
     select: { takenAt: true, totalScore: true, source: true },
   })
   const events: FullLengthEvent[] = external.map((e) => ({ at: e.takenAt.toISOString(), kind: 'external', score: e.totalScore, source: e.source }))
-  if (course === 'mcat') {
+  const apPracticeKey = FULL_LENGTH_COURSES[course].apPracticeKey
+  if (apPracticeKey) {
+    // AP: any form of the course's practice exam (results.form; 1–5 estimate).
+    const rows = await prisma.diagnosticTest.findMany({
+      where: { userId, category: apPracticeCategory(apPracticeKey) },
+      select: { id: true, category: true, createdAt: true, results: true },
+    })
+    for (const r of rows) {
+      const res = r.results as { estimatedAPScore?: unknown; review?: unknown } | null
+      const score = res?.estimatedAPScore
+      events.push({
+        at: r.createdAt.toISOString(), kind: 'studymondo', score: typeof score === 'number' ? score : null,
+        source: apPracticeAttemptTitle(r.category, r.results),
+        // Attempts saved with a review copy open the permanent review page.
+        href: res?.review && typeof res.review === 'object' ? `/review/ap-practice/${r.id}` : null,
+      })
+    }
+  } else if (course === 'mcat') {
     const rows = await prisma.diagnosticTest.findMany({
       where: { userId, category: 'mcat-full-length' },
       select: { id: true, createdAt: true, results: true },
@@ -106,7 +133,10 @@ export async function fullLengthReadiness(
       userId,
       ...(course === 'mcat'
         ? { category: 'mcat-full-diagnostic' }
-        : { OR: [{ category: 'sat-full-diagnostic' }, { category: { startsWith: HARD_MODULE_CATEGORY } }, { category: { startsWith: CORE_MODULE_CATEGORY } }] }),
+        : course === 'sat'
+          ? { OR: [{ category: 'sat-full-diagnostic' }, { category: { startsWith: HARD_MODULE_CATEGORY } }, { category: { startsWith: CORE_MODULE_CATEGORY } }] }
+          // AP: the course's diagnostic (self-taken or a class diagnostic), as the plan reads it.
+          : { category: { startsWith: cfg.diagnosticCategoryPrefix } }),
     },
     orderBy: { createdAt: 'asc' },
     select: { id: true, createdAt: true, results: true },

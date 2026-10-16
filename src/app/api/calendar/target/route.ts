@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { auth } from '@/lib/auth'
-import { isFullLengthCourse } from '@/lib/full-length-progress'
+import { FULL_LENGTH_COURSES, isFullLengthCourse } from '@/lib/full-length-progress'
 import { dayAtNoonUTC } from '@/lib/cycle-scheduler'
 import { classDueDateFor, syncCycleSchedule } from '@/lib/cycle-scheduler-server'
 
@@ -26,7 +26,7 @@ export async function PUT(req: NextRequest) {
   const parsed = bodySchema.safeParse(await req.json().catch(() => null))
   if (!parsed.success) return NextResponse.json({ error: 'Pick a date.' }, { status: 400 })
   const { course, date } = parsed.data
-  if (!isFullLengthCourse(course)) return NextResponse.json({ error: 'Only MCAT and SAT cycles can be scheduled.' }, { status: 400 })
+  if (!isFullLengthCourse(course)) return NextResponse.json({ error: 'Only MCAT, SAT and AP cycles can be scheduled.' }, { status: 400 })
   if (await classDueDateFor(userId, course)) {
     return NextResponse.json({ error: 'Your teacher set this due date. Ask them to change it.' }, { status: 409 })
   }
@@ -36,7 +36,7 @@ export async function PUT(req: NextRequest) {
   }
   try {
     const result = await syncCycleSchedule(userId, course, { dueDate })
-    if (!result) return NextResponse.json({ error: `Take the ${course.toUpperCase()} diagnostic first — it builds the lessons to schedule.` }, { status: 409 })
+    if (!result) return NextResponse.json({ error: `Take the ${FULL_LENGTH_COURSES[course].label} diagnostic first — it builds the lessons to schedule.` }, { status: 409 })
     return NextResponse.json({ ok: true, dueDate: result.dueDate?.toISOString() ?? null, scheduled: result.created + result.updated })
   } catch (err) {
     console.error('[PUT /api/calendar/target]', err)

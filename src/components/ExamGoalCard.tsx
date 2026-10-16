@@ -4,6 +4,7 @@ import { useCallback, useEffect, useId, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { GraduationCap, Pencil, Plus, Target, X } from 'lucide-react'
 import { COLLEGE_SCORE_RANGES } from '@/data/college-score-ranges'
+import { FULL_LENGTH_COURSES, isApFullLengthCourse } from '@/lib/full-length-progress'
 import {
   GOAL_COURSES,
   MAX_GOAL_COLLEGES,
@@ -33,11 +34,19 @@ const STANDING_COPY: Record<RangeStanding, { label: string; className: string }>
   unknown: { label: '', className: '' },
 }
 
-const NO_SCORE_COPY: Record<GoalCourse, { text: string; href: string; cta: string }> = {
+const NO_SCORE_COPY: Record<'sat' | 'mcat' | 'act' | 'psat', { text: string; href: string; cta: string }> = {
   sat: { text: 'Take a full SAT practice test or enter a College Board score to see your superscore here.', href: '/sat-practice', cta: 'Take a practice test' },
   mcat: { text: 'Take a full-length or enter an AAMC score to measure progress toward your goal.', href: '/mcat-full-length', cta: 'Take a full-length' },
   act: { text: 'Take an ACT full-length or log a real ACT score to measure progress toward your goal.', href: '/act-practice/full-length', cta: 'Take a full-length' },
   psat: { text: 'Your goal is saved. See where your section scores put you for National Merit.', href: '/psat-selection-index', cta: 'Selection Index calculator' },
+}
+
+function noScoreCopy(course: GoalCourse): { text: string; href: string; cta: string } {
+  if (isApFullLengthCourse(course)) {
+    const cfg = FULL_LENGTH_COURSES[course]
+    return { text: `Take the ${cfg.fullLengthLabel} or log a released exam or your real AP score to measure progress toward your goal.`, href: cfg.fullLengthHref, cta: 'Take the practice exam' }
+  }
+  return NO_SCORE_COPY[course as keyof typeof NO_SCORE_COPY]
 }
 
 function formatDay(iso: string): string {
@@ -51,7 +60,8 @@ const inputClass =
 /**
  * Score goal + target colleges for one exam. Shows the student's current score
  * (SAT: superscore across StudyMondo tests and entered College Board scores;
- * MCAT: latest full-length), progress toward the goal, and each chosen
+ * MCAT: latest full-length; AP: latest practice exam or AP score, 1–5),
+ * progress toward the goal, and each chosen
  * college's middle-50% range against that score. Renders nothing signed out.
  */
 export default function ExamGoalCard({ course, className = '' }: { course: GoalCourse; className?: string }) {
@@ -149,7 +159,7 @@ export default function ExamGoalCard({ course, className = '' }: { course: GoalC
   const superscore = course === 'sat' ? current.superscore ?? null : null
   const progress = goal ? goalProgress(course, current.score, goal.targetScore) : 0
   const toGo = goal && current.score != null ? goal.targetScore - current.score : null
-  const noScore = NO_SCORE_COPY[course]
+  const noScore = noScoreCopy(course)
 
   return (
     <section
@@ -196,7 +206,7 @@ export default function ExamGoalCard({ course, className = '' }: { course: GoalC
             />
           </div>
 
-          {course !== 'psat' && (
+          {cfg.colleges && (
             <div>
               <label htmlFor={`${id}-college`} className="text-xs font-semibold text-gray-700 dark:text-gray-300">
                 {course === 'mcat' ? 'Target medical schools' : 'Target colleges'} (up to {MAX_GOAL_COLLEGES})
@@ -322,7 +332,7 @@ export default function ExamGoalCard({ course, className = '' }: { course: GoalC
 
           {!goal && (
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              Set a target score{course === 'psat' ? '' : ' and the schools you’re aiming for'} to track how far you have to go.
+              Set a target score{cfg.colleges ? ' and the schools you’re aiming for' : ''} to track how far you have to go.
             </p>
           )}
 
