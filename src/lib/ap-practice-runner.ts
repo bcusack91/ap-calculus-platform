@@ -284,11 +284,40 @@ function itemText(item: ExamItem): string {
   return item.promptOptions.map((p) => p.prompt).join('|')
 }
 
-/** Identifies the exact exam a saved sitting belongs to. */
-export function examSignature(subject: string, sections: readonly Pick<FullExamSection, 'id' | 'items'>[], stages: readonly ExamStage[]): string {
+/**
+ * Identifies the exact exam a saved sitting belongs to. The form number is
+ * part of it for forms 2 and 3 (form 1 hashes as before, so sittings saved
+ * before forms existed still resume).
+ */
+export function examSignature(
+  subject: string,
+  sections: readonly Pick<FullExamSection, 'id' | 'items'>[],
+  stages: readonly ExamStage[],
+  form = 1,
+): string {
   const body = sections.map((s) => `${s.id}:${s.items.length}:${s.items.map(itemText).join('#')}`).join('||')
   const layout = stages.map((st) => `${st.sectionIdx}.${st.start}-${st.end}.${st.seconds}`).join(',')
-  return `${hashText(subject)}-${hashText(body)}-${hashText(layout)}`
+  return `${hashText(form > 1 ? `${subject}#form-${form}` : subject)}-${hashText(body)}-${hashText(layout)}`
+}
+
+/**
+ * What the form picker shows for a sitting saved on the device, without the
+ * exam itself: whether one is there and still fresh enough to resume. null
+ * when missing, corrupt or stale. (Resuming re-checks it against the exam.)
+ */
+export function peekApExamProgress(raw: string | null, now: number): { phase: ApExamPhase; savedAt: number } | null {
+  if (!raw) return null
+  let p: unknown
+  try {
+    p = JSON.parse(raw)
+  } catch {
+    return null
+  }
+  if (!isRec(p) || p.v !== 1 || typeof p.sig !== 'string') return null
+  if (!['section', 'section-complete', 'final-results'].includes(String(p.phase))) return null
+  const savedAt = typeof p.savedAt === 'number' ? p.savedAt : 0
+  if (now - savedAt > AP_PROGRESS_MAX_AGE_MS) return null
+  return { phase: p.phase as ApExamPhase, savedAt }
 }
 
 /** Key for a highlightable block: shared stimuli by their text, so a set keeps one set of marks. */

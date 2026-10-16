@@ -4,20 +4,48 @@
  * here — through the same content store the page used — so it grades the
  * version the student actually saw, never numbers sent by the browser.
  *
+ * Forms: every course has form 1 (`load`, the `src/data/<key>-practice`
+ * config) and may add forms 2 and 3 (`moreForms`). Each form is its own
+ * content-store row: form 1 keeps the original key 'exam', form N is 'exam-N'
+ * (apPracticeFormContentKey).
+ *
  * Attempts are stored as DiagnosticTest rows with category
  * `${AP_PRACTICE_CATEGORY_PREFIX}<key>` (like 'mcat-full-length' and
- * 'act-full-length'); no AP diagnostic query matches that prefix.
+ * 'act-full-length'), for EVERY form, with the form number in
+ * `results.form` (attempts saved before forms existed have none and are
+ * form 1). Keeping one category per course means every reader (the review
+ * resolver, the teacher's Tests to review, the score predictor) sees all
+ * forms without changes. No AP diagnostic query matches that prefix.
  */
 import type { FullLengthExamConfig } from '@/components/FullLengthPracticeExam'
+import { AP_PRACTICE_MAX_FORMS, apPracticeFormContentKey, apPracticeFormOf } from '@/lib/ap-practice-forms'
+
+// The client-safe form helpers (no exam loaders) live in ap-practice-forms.
+export * from '@/lib/ap-practice-forms'
 
 export const AP_PRACTICE_CATEGORY_PREFIX = 'ap-practice-exam:'
+
+type LoadConfig = () => Promise<FullLengthExamConfig>
 
 export interface ApPracticeExam {
   /** DB Course.slug. */
   courseSlug: string
   /** The exam page. */
   path: string
-  load: () => Promise<FullLengthExamConfig>
+  /** Form 1. */
+  load: LoadConfig
+  /** Forms 2 and 3, in order, when the course has them. */
+  moreForms?: readonly [LoadConfig] | readonly [LoadConfig, LoadConfig]
+}
+
+export interface ApPracticeForm {
+  /** 1, 2 or 3. */
+  form: number
+  /** ContentItem.key of this form's row (type 'practice-exam', courseSlug = the exam key). */
+  contentKey: string
+  /** "Form 2". */
+  label: string
+  load: LoadConfig
 }
 
 export const AP_PRACTICE_EXAMS: Record<string, ApPracticeExam> = {
@@ -50,3 +78,37 @@ export const isApPracticeKey = (key: unknown): key is string => typeof key === '
 export const apPracticeCategory = (key: string) => `${AP_PRACTICE_CATEGORY_PREFIX}${key}`
 export const apPracticeKeyOfCategory = (category: string) =>
   category.startsWith(AP_PRACTICE_CATEGORY_PREFIX) ? category.slice(AP_PRACTICE_CATEGORY_PREFIX.length) : null
+
+/** Every form of an exam, form 1 first ([] for an unknown key). */
+export function apPracticeForms(key: string): ApPracticeForm[] {
+  if (!isApPracticeKey(key)) return []
+  const exam = AP_PRACTICE_EXAMS[key]
+  return [exam.load, ...(exam.moreForms ?? [])].slice(0, AP_PRACTICE_MAX_FORMS).map((load, i) => ({
+    form: i + 1,
+    contentKey: apPracticeFormContentKey(i + 1),
+    label: `Form ${i + 1}`,
+    load,
+  }))
+}
+
+/** The forms as the page passes them to the form picker (no loaders, so it serializes). */
+export const apPracticeFormList = (key: string) => apPracticeForms(key).map(({ form, label }) => ({ form, label }))
+
+/** One form of an exam, or undefined when the exam has no such form. */
+export function apPracticeForm(key: string, form: number): ApPracticeForm | undefined {
+  return Number.isInteger(form) ? apPracticeForms(key)[form - 1] : undefined
+}
+
+/**
+ * "AP Chemistry practice exam · Form 2" for a stored attempt (the review page
+ * and the teacher's Tests to review). The form is named once the course has
+ * more than one, or when the attempt is on a later form.
+ */
+export function apPracticeAttemptTitle(category: string, results: unknown): string {
+  const r = results && typeof results === 'object' && !Array.isArray(results) ? (results as Record<string, unknown>) : {}
+  const subject = typeof r.subject === 'string' ? r.subject : 'AP'
+  const form = apPracticeFormOf(results)
+  const key = apPracticeKeyOfCategory(category) ?? ''
+  const named = form > 1 || apPracticeForms(key).length > 1
+  return `${subject} practice exam${named ? ` · Form ${form}` : ''}`
+}

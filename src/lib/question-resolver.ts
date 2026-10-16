@@ -11,13 +11,13 @@ import { diagnosticReviewItems } from '@/lib/question-sources/diagnostic'
 import { qbankReviewItems } from '@/lib/question-sources/qbank'
 import { actFlReviewItems } from '@/lib/question-sources/act'
 import { ACT_FL_CATEGORY } from '@/lib/act-full-length-server'
-import { AP_PRACTICE_CATEGORY_PREFIX, AP_PRACTICE_EXAMS, apPracticeKeyOfCategory } from '@/lib/ap-practice-exams'
+import { AP_PRACTICE_CATEGORY_PREFIX, AP_PRACTICE_EXAMS, apPracticeAttemptTitle, apPracticeFormHref, apPracticeFormOf, apPracticeKeyOfCategory } from '@/lib/ap-practice-exams'
 import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanations'
 import { courseForCategory, diagnosticRouteForKey } from '@/lib/class-plan-config'
-import { UNIT_TEST_COURSES, isApUnitTestCourse } from '@/lib/unit-test-courses'
 import { canonicalizeDiagnosticResults } from '@/lib/ap-topic-canonical'
 import { apDiagV2CourseOfCategory, apDiagV2Stimulus } from '@/lib/ap-diagnostic-v2/banks'
 import type { ApDiagV2Course } from '@/lib/ap-diagnostic-v2/types'
+import { UNIT_TEST_COURSES, isApUnitTestCourse } from '@/lib/unit-test-courses'
 
 /**
  * Rebuilds any stored attempt into review items — the permanent review page
@@ -225,9 +225,9 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
       const correct = items.filter((i) => i && i.chosenIndex === i.correctIndex).length
       return {
         kind, id, course: exam?.courseSlug ?? 'ap', takenAt: iso(d.createdAt),
-        title: `${typeof r.subject === 'string' ? r.subject : 'AP'} practice exam`,
+        title: apPracticeAttemptTitle(d.category, d.results),
         score: { correct, total: items.length, label: typeof r.estimatedAPScore === 'number' ? `${r.estimatedAPScore}/5` : undefined },
-        backHref: exam?.path ?? '/',
+        backHref: exam ? apPracticeFormHref(exam.path, apPracticeFormOf(d.results)) : '/',
         items,
         ...(frq.length ? { frq } : {}),
       }

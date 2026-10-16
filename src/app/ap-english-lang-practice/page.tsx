@@ -1,4 +1,5 @@
-import FullLengthPracticeExam from '@/components/FullLengthPracticeExam'
+import ApPracticeExam from '@/components/ApPracticeExam'
+import { apPracticeFormList } from '@/lib/ap-practice-exams'
 import { config } from '@/data/ap-english-lang-practice/config'
 import { getPracticeExamConfig } from '@/lib/content-store'
 
@@ -8,5 +9,5 @@ export const revalidate = 300
 
 export default async function Page() {
   const examConfig = await getPracticeExamConfig('ap-english-lang', config)
-  return <FullLengthPracticeExam {...examConfig} examKey="ap-english-lang" />
+  return <ApPracticeExam examKey="ap-english-lang" forms={apPracticeFormList('ap-english-lang')} initialConfig={examConfig} />
 }

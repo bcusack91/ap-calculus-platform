@@ -18,7 +18,11 @@ export const CONTENT_TYPES = {
   unitTestUnits: 'unit-test-units',
 } as const
 
-/** Stable key for the single full-length practice-exam config per course. */
+/**
+ * Stable key for a course's full-length practice-exam config (form 1). AP
+ * courses with more forms store form N under `exam-N`
+ * (apPracticeFormContentKey in src/lib/ap-practice-exams.ts).
+ */
 export const PRACTICE_EXAM_KEY = 'exam'
 /** Stable key for a course's unit-test unit definitions. */
 export const UNIT_TEST_UNITS_KEY = 'units'
@@ -71,13 +75,23 @@ export async function getContentItems<T>(
 }
 
 /**
- * The full-length practice-exam config for a course, from the DB (one row,
- * key="exam") or the static fallback. Whole-config storage, so no per-question
- * IDs are needed. Never throws — falls back to the static config on any failure.
+ * A full-length practice-exam config from the DB (the PUBLISHED row with this
+ * key; form 1 is key "exam") or the static fallback. Whole-config storage, so
+ * no per-question IDs are needed. Read by key, so a course's other forms (or a
+ * stale row) never stand in for this one. Never throws — falls back to the
+ * static config on any failure.
  */
-export async function getPracticeExamConfig<T>(courseSlug: string, staticConfig: T): Promise<T> {
-  const [config] = await getContentItems(CONTENT_TYPES.practiceExam, courseSlug, [staticConfig])
-  return config ?? staticConfig
+export async function getPracticeExamConfig<T>(courseSlug: string, staticConfig: T, formKey: string = PRACTICE_EXAM_KEY): Promise<T> {
+  try {
+    const row = await prisma.contentItem.findUnique({
+      where: { type_courseSlug_key: { type: CONTENT_TYPES.practiceExam, courseSlug, key: formKey } },
+      select: { payload: true, status: true },
+    })
+    if (row && row.status === 'PUBLISHED') return row.payload as T
+  } catch (err) {
+    console.error(`[content-store] practice exam read failed for ${courseSlug}/${formKey}; using static:`, err)
+  }
+  return staticConfig
 }
 
 /**

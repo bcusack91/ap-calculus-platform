@@ -1,4 +1,5 @@
-import FullLengthPracticeExam from '@/components/FullLengthPracticeExam'
+import ApPracticeExam from '@/components/ApPracticeExam'
+import { apPracticeFormList } from '@/lib/ap-practice-exams'
 import { config } from '@/data/ap-african-american-studies-practice/config'
 import { getPracticeExamConfig } from '@/lib/content-store'
 
@@ -8,5 +9,5 @@ export const revalidate = 300
 
 export default async function Page() {
   const examConfig = await getPracticeExamConfig('ap-african-american-studies', config)
-  return <FullLengthPracticeExam {...examConfig} examKey="ap-african-american-studies" />
+  return <ApPracticeExam examKey="ap-african-american-studies" forms={apPracticeFormList('ap-african-american-studies')} initialConfig={examConfig} />
 }

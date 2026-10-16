@@ -15,7 +15,7 @@
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { ToolBreadcrumb } from '@/components/ToolBreadcrumb'
 import { toolLearningResourceJsonLd } from '@/lib/jsonld'
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef, type ReactNode } from 'react'
 import Link from 'next/link'
 import { Ban, BookOpen, ClipboardCheck, Flag, LayoutGrid, LogOut } from 'lucide-react'
 import type { AccentColor } from './PracticeExam'
@@ -55,6 +55,7 @@ import {
   type ApFrqSubmission,
   type ItemAnswer,
 } from '@/lib/ap-practice-runner'
+import { apPracticeSittingId } from '@/lib/ap-practice-forms'
 import 'katex/dist/katex.min.css'
 
 /**
@@ -194,6 +195,16 @@ export interface FullLengthExamConfig {
    * estimated AP score on the shared 1–5 scale.
    */
   examKey?: string
+  /**
+   * AP exams with more than one form (src/lib/ap-practice-exams.ts): which
+   * form this is (default 1). Saved with the attempt; forms 2 and 3 resume
+   * from their own device slot.
+   */
+  form?: number
+  /** The form picker, shown on the start screen (ApPracticeFormPicker). */
+  formPicker?: ReactNode
+  /** Called once a finished exam has been saved. */
+  onAttemptSaved?: (id: string) => void
 }
 
 /* ------------------------------------------------------------------ */
@@ -230,7 +241,8 @@ const TEXTAREA =
 type Phase = 'overview' | ApExamPhase
 
 function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
-  const { subject, description, backLink, ctaLinks, accent, sections: rawSections, totalTimeMinutes, aboutInfo, scaledExam, examKey } = config
+  const { subject, description, backLink, ctaLinks, accent, sections: rawSections, totalTimeMinutes, aboutInfo, scaledExam, examKey, formPicker, onAttemptSaved } = config
+  const form = config.form ?? 1
   const t = TOKENS[accent]
 
   // Deterministically shuffle every MCQ's options. Authored key positions
@@ -257,8 +269,8 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   // change grading.
   const tools = useMemo(() => apExamTools(examKey), [examKey])
   const stages = useMemo(() => buildStages(sections, tools), [sections, tools])
-  const sig = useMemo(() => examSignature(subject, sections, stages), [subject, sections, stages])
-  const storageKey = useMemo(() => apProgressKey(examKey ?? `subject-${hashText(subject)}`), [examKey, subject])
+  const sig = useMemo(() => examSignature(subject, sections, stages, form), [subject, sections, stages, form])
+  const storageKey = useMemo(() => apProgressKey(examKey ? apPracticeSittingId(examKey, form) : `subject-${hashText(subject)}`), [examKey, form, subject])
   const examHasCalculator = stages.some((s) => s.calculator)
 
   const [phase, setPhase] = useState<Phase>('overview')
@@ -420,16 +432,19 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
     fetch('/api/ap-practice/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ examKey, clientAttemptId: attemptId || undefined, mcq, frq }),
+      body: JSON.stringify({ examKey, form, clientAttemptId: attemptId || undefined, mcq, frq }),
     })
       .then(async (r) => {
         const d = await r.json().catch(() => ({}))
         if (r.status === 401) setSave({ state: 'signin' })
         else if (!r.ok) setSave({ state: 'error' })
-        else setSave({ state: 'saved', id: d.id })
+        else {
+          setSave({ state: 'saved', id: d.id })
+          if (typeof d.id === 'string') onAttemptSaved?.(d.id)
+        }
       })
       .catch(() => setSave({ state: 'error' }))
-  }, [examKey, sections, answers, attemptId])
+  }, [examKey, form, sections, answers, attemptId, onAttemptSaved])
 
   // Save on reaching the results (including a results screen restored after a
   // refresh: the attempt id makes a repeat POST a no-op on the server).
@@ -538,6 +553,8 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
           </Link>
           <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl dark:text-white">{subject} Full Practice Exam</h1>
           <p className="mt-2 text-lg text-gray-600 dark:text-gray-400">{description}</p>
+
+          {formPicker}
 
           <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6 dark:border-gray-700 dark:bg-gray-800">
             <h2 className="mb-4 text-xl font-semibold text-gray-800 dark:text-gray-200">Exam Structure</h2>

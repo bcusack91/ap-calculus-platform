@@ -1,104 +1,105 @@
 /**
- * One-time importer: copy static full-length practice-exam configs from
- * src/data/*-practice into the ContentItem table (#10, Tier-2).
+ * Importer: copy static full-length practice-exam configs from src/data/*-practice
+ * into the ContentItem table (#10, Tier-2). The pages serve the PUBLISHED row
+ * first (src/lib/content-store.ts), so data-file edits reach a database only
+ * through this script.
  *
- * Each course's config (exam metadata + embedded MCQ/FRQ sections) is stored as
- * ONE row (key = "exam"). Storing the whole config — which is how the page
- * consumes it — sidesteps the lack of per-question IDs entirely.
+ * Each exam form is ONE row holding the whole config (exam metadata + embedded
+ * MCQ/FRQ sections), which is how the page consumes it. Keys: form 1 = "exam"
+ * (every course, unchanged since June 2026); AP forms 2 and 3 = "exam-2",
+ * "exam-3" (every form in src/lib/ap-practice-exams.ts is imported).
  *
- * Idempotent: re-running refreshes each config's payload from the static source
- * but preserves any admin-set `status`.
+ * Idempotent: re-running refreshes each payload from the static source but
+ * preserves any admin-set `status`. A row an admin edited (updatedBy set) is
+ * skipped unless --overwrite-admin-edits is passed.
  *
- *   npx tsx prisma/import-practice.ts
+ * Stale rows: afterwards, every remaining practice-exam row of a course this
+ * script manages whose key it did not import this run (a removed form) is set
+ * to ARCHIVED (reversible) and listed. Rows of other courses are listed and
+ * left alone.
+ *
+ *   npx tsx prisma/import-practice.ts             # local DB (.env.local)
+ *   npx tsx prisma/import-practice.ts --dry-run   # print what would change
  */
 import type { Prisma } from '@prisma/client'
 import { prisma } from '../src/lib/prisma'
 import { CONTENT_TYPES, PRACTICE_EXAM_KEY } from '../src/lib/content-store'
+import { AP_PRACTICE_EXAMS, apPracticeForms } from '../src/lib/ap-practice-exams'
 
-import { config as aas } from '../src/data/ap-african-american-studies-practice/config'
-import { config as bio } from '../src/data/ap-bio-practice/config'
-import { config as calcab } from '../src/data/ap-calcab-practice/config'
-import { config as calcbc } from '../src/data/ap-calcbc-practice/config'
-import { config as chem } from '../src/data/ap-chem-practice/config'
-import { config as csa } from '../src/data/ap-csa-practice/config'
-import { config as englang } from '../src/data/ap-english-lang-practice/config'
-import { config as englit } from '../src/data/ap-english-lit-practice/config'
-import { config as enviro } from '../src/data/ap-enviro-practice/config'
-import { config as humangeo } from '../src/data/ap-human-geo-practice/config'
-import { config as macro } from '../src/data/ap-macro-practice/config'
-import { config as micro } from '../src/data/ap-micro-practice/config'
-import { config as physcem } from '../src/data/ap-physics-c-em-practice/config'
-import { config as physcmech } from '../src/data/ap-physics-c-mech-practice/config'
-import { config as phys1 } from '../src/data/ap-physics1-practice/config'
-import { config as phys2 } from '../src/data/ap-physics2-practice/config'
-import { config as precalc } from '../src/data/ap-precalc-practice/config'
-import { config as psych } from '../src/data/ap-psych-practice/config'
-import { config as stats } from '../src/data/ap-stats-practice/config'
-// Same whole-config shape, different internal section composition (ACT splits
-// MCQs by subject; history/gov use DBQ/LEQ/SAQ/argument essays).
+// Non-AP full-length configs with the same whole-config shape (ACT splits
+// MCQs by subject). One form each, key "exam".
 import { config as act } from '../src/data/act-practice/config'
-import { config as csp } from '../src/data/ap-csp-practice/config'
-import { config as usgov } from '../src/data/ap-us-gov-practice/config'
-import { config as ushistory } from '../src/data/ap-us-history-practice/config'
-import { config as worldhistory } from '../src/data/ap-world-history-practice/config'
 import { config as psat } from '../src/data/psat-practice/config'
 
-// courseSlug = the practice dir prefix (matches the read path).
-const SOURCES: { courseSlug: string; config: unknown }[] = [
-  { courseSlug: 'ap-african-american-studies', config: aas },
-  { courseSlug: 'ap-bio', config: bio },
-  { courseSlug: 'ap-calcab', config: calcab },
-  { courseSlug: 'ap-calcbc', config: calcbc },
-  { courseSlug: 'ap-chem', config: chem },
-  { courseSlug: 'ap-csa', config: csa },
-  { courseSlug: 'ap-english-lang', config: englang },
-  { courseSlug: 'ap-english-lit', config: englit },
-  { courseSlug: 'ap-enviro', config: enviro },
-  { courseSlug: 'ap-human-geo', config: humangeo },
-  { courseSlug: 'ap-macro', config: macro },
-  { courseSlug: 'ap-micro', config: micro },
-  { courseSlug: 'ap-physics-c-em', config: physcem },
-  { courseSlug: 'ap-physics-c-mech', config: physcmech },
-  { courseSlug: 'ap-physics1', config: phys1 },
-  { courseSlug: 'ap-physics2', config: phys2 },
-  { courseSlug: 'ap-precalc', config: precalc },
-  { courseSlug: 'ap-psych', config: psych },
-  { courseSlug: 'ap-stats', config: stats },
-  { courseSlug: 'act', config: act },
-  { courseSlug: 'ap-csp', config: csp },
-  { courseSlug: 'ap-us-gov', config: usgov },
-  { courseSlug: 'ap-us-history', config: ushistory },
-  { courseSlug: 'ap-world-history', config: worldhistory },
-  { courseSlug: 'psat', config: psat },
-]
+interface Source { courseSlug: string; key: string; label: string; load: () => Promise<unknown> }
+
+/** Every row this script writes. courseSlug = the practice dir prefix (matches the read path). */
+function sources(): Source[] {
+  const ap = Object.keys(AP_PRACTICE_EXAMS).flatMap((examKey) =>
+    apPracticeForms(examKey).map((f) => ({ courseSlug: examKey, key: f.contentKey, label: `${examKey} ${f.label}`, load: f.load as () => Promise<unknown> })),
+  )
+  return [
+    ...ap,
+    { courseSlug: 'act', key: PRACTICE_EXAM_KEY, label: 'act Form 1', load: async () => act },
+    { courseSlug: 'psat', key: PRACTICE_EXAM_KEY, label: 'psat Form 1', load: async () => psat },
+  ]
+}
 
 async function main() {
+  const dryRun = process.argv.includes('--dry-run')
+  const overwriteAdminEdits = process.argv.includes('--overwrite-admin-edits')
+  const type = CONTENT_TYPES.practiceExam
+  const list = sources()
+  const imported = new Set(list.map((s) => `${s.courseSlug}/${s.key}`))
+  const managedCourses = new Set(list.map((s) => s.courseSlug))
+  const existing = await prisma.contentItem.findMany({
+    where: { type },
+    select: { id: true, courseSlug: true, key: true, status: true, updatedBy: true, updatedAt: true },
+  })
+  const existingOf = new Map(existing.map((r) => [`${r.courseSlug}/${r.key}`, r]))
+
   let created = 0
   let updated = 0
-  for (const { courseSlug, config } of SOURCES) {
-    const payload = config as Prisma.InputJsonValue
-    const res = await prisma.contentItem.upsert({
-      where: {
-        type_courseSlug_key: {
-          type: CONTENT_TYPES.practiceExam,
-          courseSlug,
-          key: PRACTICE_EXAM_KEY,
-        },
-      },
-      create: {
-        type: CONTENT_TYPES.practiceExam,
-        courseSlug,
-        key: PRACTICE_EXAM_KEY,
-        payload,
-        status: 'PUBLISHED',
-      },
+  const skipped: string[] = []
+  for (const src of list) {
+    const id = `${src.courseSlug}/${src.key}`
+    const row = existingOf.get(id)
+    if (row?.updatedBy && !overwriteAdminEdits) {
+      skipped.push(`${id} (admin-edited by ${row.updatedBy} at ${row.updatedAt.toISOString()})`)
+      continue
+    }
+    if (dryRun) {
+      if (row) updated++
+      else created++
+      continue
+    }
+    const payload = (await src.load()) as Prisma.InputJsonValue
+    await prisma.contentItem.upsert({
+      where: { type_courseSlug_key: { type, courseSlug: src.courseSlug, key: src.key } },
+      create: { type, courseSlug: src.courseSlug, key: src.key, payload, status: 'PUBLISHED' },
       update: { payload, version: { increment: 1 } },
-      select: { createdAt: true, updatedAt: true },
+      select: { id: true },
     })
-    if (res.createdAt.getTime() === res.updatedAt.getTime()) created++
-    else updated++
+    if (row) updated++
+    else created++
   }
-  console.log(`Practice-exam configs imported across ${SOURCES.length} courses — created: ${created}, updated: ${updated}`)
+
+  // Stale rows: a managed course's key that is no longer imported (a removed form).
+  const stale = existing.filter((r) => managedCourses.has(r.courseSlug) && !imported.has(`${r.courseSlug}/${r.key}`) && r.status !== 'ARCHIVED')
+  const unmanaged = existing.filter((r) => !managedCourses.has(r.courseSlug))
+  if (stale.length && !dryRun) {
+    await prisma.contentItem.updateMany({ where: { id: { in: stale.map((r) => r.id) } }, data: { status: 'ARCHIVED' } })
+  }
+
+  const verb = dryRun ? 'would be ' : ''
+  console.log(`${dryRun ? '[dry run] ' : ''}Practice-exam configs across ${managedCourses.size} courses (${list.length} forms) — ${verb}created: ${created}, ${verb}updated: ${updated}, skipped: ${skipped.length}`)
+  for (const s of skipped) console.log(`  skipped (pass --overwrite-admin-edits to replace): ${s}`)
+  console.log(`Stale rows ${verb}archived: ${stale.length}`)
+  for (const r of stale) console.log(`  archived ${r.courseSlug}/${r.key} (was ${r.status}, updated ${r.updatedAt.toISOString()})`)
+  if (unmanaged.length) {
+    console.log(`Rows of courses this script does not manage, left alone: ${unmanaged.length}`)
+    for (const r of unmanaged) console.log(`  ${r.courseSlug}/${r.key} (${r.status})`)
+  }
 }
 
 main()

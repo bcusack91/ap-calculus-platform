@@ -3,7 +3,7 @@ import { Prisma } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { getPracticeExamConfig } from '@/lib/content-store'
-import { AP_PRACTICE_EXAMS, apPracticeCategory, isApPracticeKey } from '@/lib/ap-practice-exams'
+import { AP_PRACTICE_EXAMS, apPracticeCategory, apPracticeForm, isApPracticeKey } from '@/lib/ap-practice-exams'
 import { gradeApExam } from '@/lib/ap-practice-grading'
 import { recordQuestions } from '@/lib/study-tracking'
 import { optionKey, questionKey } from '@/lib/question-key'
@@ -11,11 +11,12 @@ import { optionKey, questionKey } from '@/lib/question-key'
 /**
  * POST /api/ap-practice/submit — save a finished AP full-length practice exam.
  *
- * Body: { examKey, clientAttemptId?, mcq: [{ s, i, chosen }], frq: [{ s, i, earned, responses?, ticked?, submitted?, chosenPromptIndex? }] }
+ * Body: { examKey, form?, clientAttemptId?, mcq: [{ s, i, chosen }], frq: [{ s, i, earned, responses?, ticked?, submitted?, chosenPromptIndex? }] }
  * (s = section index, i = item index, chosen = the option text picked,
  * responses = what the student wrote, ticked = the rubric boxes checked).
  * The exam is rebuilt server-side and multiple choice regraded; the attempt is
- * stored as a DiagnosticTest (category 'ap-practice-exam:<key>') with a review
+ * stored as a DiagnosticTest (category 'ap-practice-exam:<key>' for every
+ * form, with the form number in results.form; form defaults to 1) with a review
  * copy (multiple choice as shown, free response with the student's responses
  * and rubric ticks in review.frq), and each multiple-choice answer goes to the answer log (attemptKind
  * 'ap-practice') so teachers can review it and see it in the study report.
@@ -30,7 +31,9 @@ export async function POST(req: Request) {
     if (!body || !isApPracticeKey(body.examKey)) return NextResponse.json({ error: 'Unknown exam' }, { status: 400 })
     const examKey = body.examKey
     const exam = AP_PRACTICE_EXAMS[examKey]
-    const config = await getPracticeExamConfig(examKey, await exam.load())
+    const form = apPracticeForm(examKey, body.form === undefined ? 1 : Number(body.form))
+    if (!form) return NextResponse.json({ error: 'Unknown exam form' }, { status: 400 })
+    const config = await getPracticeExamConfig(examKey, await form.load(), form.contentKey)
     const category = apPracticeCategory(examKey)
 
     const clientAttemptId = typeof body.clientAttemptId === 'string' && /^[\w-]{8,100}$/.test(body.clientAttemptId) ? body.clientAttemptId : null
@@ -56,6 +59,7 @@ export async function POST(req: Request) {
         results: {
           version: 1,
           examKey,
+          form: form.form,
           courseSlug: exam.courseSlug,
           ...graded,
           ...(clientAttemptId ? { clientAttemptId } : {}),

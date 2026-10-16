@@ -1,4 +1,5 @@
-import FullLengthPracticeExam from '@/components/FullLengthPracticeExam'
+import ApPracticeExam from '@/components/ApPracticeExam'
+import { apPracticeFormList } from '@/lib/ap-practice-exams'
 import { config } from '@/data/ap-physics-c-em-practice/config'
 import { getPracticeExamConfig } from '@/lib/content-store'
 
@@ -8,5 +9,5 @@ export const revalidate = 300
 
 export default async function Page() {
   const examConfig = await getPracticeExamConfig('ap-physics-c-em', config)
-  return <FullLengthPracticeExam {...examConfig} examKey="ap-physics-c-em" />
+  return <ApPracticeExam examKey="ap-physics-c-em" forms={apPracticeFormList('ap-physics-c-em')} initialConfig={examConfig} />
 }
