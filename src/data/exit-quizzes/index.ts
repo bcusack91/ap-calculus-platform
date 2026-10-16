@@ -1133,6 +1133,8 @@ export const EXIT_QUIZ_ALIASES: Record<string, string> = {
   'derivatives-of-exponential-functions': 'derivatives-exp-log-calcab',
   'second-derivative-test': 'concavity-inflection-points-calcab',
   'solubility-equilibrium': 'solubility-ksp',
+  'natural-selection-adaptation': 'natural-selection',
+  'population-dynamics': 'population-ecology',
 }
 
 /** The pool slug that holds a topic's exit-quiz items. */
