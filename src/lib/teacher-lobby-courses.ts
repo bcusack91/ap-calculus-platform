@@ -56,9 +56,10 @@ async function getApCalculusBCQuestions(count?: number, topicSlug?: string): Pro
   const m = await import('@/data/competitive-questions/ap-calculus-bc-bank')
   return (m.getApCalculusBCQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
 }
-async function getPreCalcQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+// AP Precalculus: the on-exam view of the precalc bank (Unit 4 items dropped).
+async function getApPrecalcQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
   const m = await import('@/data/competitive-questions/precalc-bank')
-  return (m.getPreCalcQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+  return m.getApPrecalcQuestions(count, topicSlug) as unknown as AnyQuestion[]
 }
 async function getAlgebra2Questions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
   const m = await import('@/data/competitive-questions/algebra2-bank')
@@ -354,7 +355,7 @@ const COURSES: CourseRegistryEntry[] = [
   { slug: 'algebra-1', name: 'Algebra 1', getQuestions: topicTagged(getAlgebra1Questions) },
   { slug: 'algebra-2', name: 'Algebra 2', getQuestions: algebra2Adapter() },
   { slug: 'geometry', name: 'Geometry', getQuestions: topicTagged(getGeometryQuestions) },
-  { slug: 'ap-precalculus', name: 'AP Precalculus', getQuestions: topicTagged(getPreCalcQuestions) },
+  { slug: 'ap-precalculus', name: 'AP Precalculus', getQuestions: topicTagged(getApPrecalcQuestions) },
   { slug: 'ap-calculus-ab', name: 'AP Calculus AB', getQuestions: topicTagged(getApCalculusQuestions) },
   { slug: 'ap-calculus-bc', name: 'AP Calculus BC', getQuestions: topicTagged(getApCalculusBCQuestions) },
   { slug: 'ap-statistics', name: 'AP Statistics', getQuestions: untagged(getApStatisticsQuestions) },

@@ -34,7 +34,8 @@ describe('pickDailySet — which bank a student gets', () => {
   it('maps catalog aliases (PSAT, precalc, both O-Chem courses, CS Principles)', () => {
     expect(dailySetForCourse('psat')).toBe('sat')
     expect(dailySetForCourse('sat-prep')).toBe('sat')
-    expect(dailySetForCourse('ap-precalculus')).toBe('precalc')
+    expect(dailySetForCourse('ap-precalculus')).toBe('ap-precalculus') // on-exam view of the precalc bank
+    expect(dailySetForCourse('precalculus')).toBe('precalc')
     expect(dailySetForCourse('organic-chemistry-1')).toBe('ochem')
     expect(dailySetForCourse('organic-chemistry-2')).toBe('ochem')
     expect(dailySetForCourse('ap-cs-principles')).toBe('ap-computer-science-principles')

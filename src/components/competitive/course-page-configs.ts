@@ -121,7 +121,8 @@ export const COURSE_PAGE_CONFIGS: Record<string, CompetitiveCoursePageConfig> = 
   'ap-precalculus': {
     slug: 'ap-precalculus', courseName: 'AP Precalculus',
     topicsEndpoint: '/api/competitive/precalculus-topics',
-    fallbackTopicSlug: 'precalc',
+    // The AP view of the shared precalc bank ('precalc' would serve Unit 4).
+    fallbackTopicSlug: 'ap-precalculus',
     backHref: '/ap-precalculus', browseHref: '/courses/ap-precalculus',
     unitEmojis: ['📊', '📈', '🔢', '📐', '🧮', '🔣'],
   },

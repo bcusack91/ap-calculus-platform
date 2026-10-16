@@ -45,6 +45,7 @@ async function getActMathQuestions(count?: number, _topicSlug?: string): Promise
 async function getActScienceQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/act-science-bank'); return m.getActScienceQuestions(count ?? 10) }
 async function getOChemQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ochem-bank'); return m.getOChemQuestions(count ?? 10) }
 async function getPreCalcQuestions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/precalc-bank'); return m.getPreCalcQuestions(count ?? 10, topicSlug) }
+async function getApPrecalcQuestions(count?: number, topicSlug?: string | readonly string[]): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/precalc-bank'); return m.getApPrecalcQuestions(count ?? 10, topicSlug) }
 async function getGeometryQuestions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/geometry-bank'); return m.getGeometryQuestions(count ?? 10, topicSlug) }
 async function getApCalculusQuestions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-calculus-bank'); return m.getApCalculusQuestions(count ?? 10, topicSlug) }
 async function getApPhysics2Questions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-physics2-bank'); return m.getApPhysics2Questions(count ?? 10, topicSlug) }
@@ -554,6 +555,151 @@ const COURSE_GROUPING_LESSONS: Record<string, 'ap-calculus-ab' | 'ap-calculus-bc
   'calcbc-sequences-series': 'ap-calculus-bc',
 }
 
+/**
+ * AP lesson slugs (Topic rows that render a lesson) whose name matches no
+ * topicSlug in their course's competitive bank. Without an entry here such a
+ * slug misses every bank route and falls through to cumulative questions from
+ * other subjects (an AP Precalculus "Complex Numbers" match served calculus
+ * and optics items). Each entry names the course bank and the bank topic(s)
+ * the lesson covers; a lesson spanning several bank topics lists them all.
+ * tests/lib/ap-precalc-competitive.test.ts probes every AP fixture slug.
+ *
+ * AP Precalculus goes through getApPrecalcQuestions, the on-exam view of the
+ * precalc bank it shares with the non-AP course. 'the-unit-circle' is left
+ * out on purpose: it serves the click-the-position unit-circle game.
+ */
+type ApLessonBankCourse =
+  | 'ap-precalculus' | 'ap-calculus-ab' | 'ap-chemistry' | 'ap-biology' | 'ap-human-geo'
+  | 'ap-us-gov' | 'ap-world-history' | 'ap-african-american-studies' | 'ap-english-lit'
+  | 'ap-english-lang' | 'ap-enviro' | 'ap-csa' | 'ap-csp'
+const AP_LESSON_BANK_GETTERS: Record<ApLessonBankCourse, (count: number) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>> = {
+  'ap-precalculus': getApPrecalcQuestions,
+  'ap-calculus-ab': getApCalculusQuestions,
+  'ap-chemistry': getApChemistryQuestions,
+  'ap-biology': getApBiologyQuestions,
+  'ap-human-geo': getApHumanGeoQuestions,
+  'ap-us-gov': getApUSGovQuestions,
+  'ap-world-history': getApWorldHistoryQuestions,
+  'ap-african-american-studies': getApAASQuestions,
+  'ap-english-lit': getApEngLitQuestions,
+  'ap-english-lang': getApEngLangQuestions,
+  'ap-enviro': getApAPESQuestions,
+  'ap-csa': getApCSAQuestions,
+  'ap-csp': getApCSPQuestions,
+}
+const lessonTopics = (course: ApLessonBankCourse, ...topics: string[]) => ({ course, topics })
+export const AP_LESSON_BANK_TOPICS: Record<string, { course: ApLessonBankCourse; topics: string[] }> = {
+  // ---- AP Precalculus (Units 1-3; Unit 4 bank topics are excluded from the AP view)
+  'function-transformations': lessonTopics('ap-precalculus', 'transformations-of-functions'),
+  'transformations-functions-precalc': lessonTopics('ap-precalculus', 'transformations-of-functions'),
+  'transformations-precalc': lessonTopics('ap-precalculus', 'transformations-of-functions'),
+  'composite-inverse-functions': lessonTopics('ap-precalculus', 'composite-functions', 'inverse-functions'),
+  'function-composition-inverses-precalc': lessonTopics('ap-precalculus', 'composite-functions', 'inverse-functions'),
+  'piecewise-functions': lessonTopics('ap-precalculus', 'piecewise-functions'),
+  'rates-of-change': lessonTopics('ap-precalculus', 'rates-of-change'),
+  'rates-of-change-precalc': lessonTopics('ap-precalculus', 'rates-of-change'),
+  'polynomial-functions-end-behavior': lessonTopics('ap-precalculus', 'polynomial-functions-end-behavior'),
+  'polynomial-functions-end-behavior-precalc': lessonTopics('ap-precalculus', 'polynomial-functions-end-behavior'),
+  'polynomial-functions-precalc': lessonTopics('ap-precalculus', 'polynomial-functions-end-behavior', 'polynomial-zeros-multiplicity'),
+  'polynomial-division-remainder-theorem': lessonTopics('ap-precalculus', 'polynomial-division'),
+  'solving-polynomial-inequalities': lessonTopics('ap-precalculus', 'polynomial-zeros-multiplicity'),
+  'complex-numbers': lessonTopics('ap-precalculus', 'complex-numbers-fundamental-theorem'),
+  'fundamental-theorem-algebra': lessonTopics('ap-precalculus', 'complex-numbers-fundamental-theorem', 'polynomial-zeros-multiplicity'),
+  'rational-functions-asymptotes': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'),
+  'rational-functions-asymptotes-precalc': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'),
+  'rational-functions-precalc': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'),
+  'solving-rational-inequalities': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'),
+  'sequences-arithmetic-geometric': lessonTopics('ap-precalculus', 'arithmetic-geometric-sequences', 'sequences-and-series'),
+  'sequences-series-precalc': lessonTopics('ap-precalculus', 'arithmetic-geometric-sequences', 'sequences-and-series'),
+  'exponential-functions-growth-decay': lessonTopics('ap-precalculus', 'exponential-functions-growth-decay'),
+  'exponential-functions-precalc': lessonTopics('ap-precalculus', 'exponential-functions-growth-decay'),
+  'exponential-functions-modeling-precalc': lessonTopics('ap-precalculus', 'exponential-functions-growth-decay', 'exponential-models-applications'),
+  'logarithmic-exponential-models': lessonTopics('ap-precalculus', 'exponential-models-applications'),
+  'logarithmic-functions': lessonTopics('ap-precalculus', 'logarithmic-functions-properties', 'natural-log-and-e'),
+  'logarithmic-functions-precalc': lessonTopics('ap-precalculus', 'logarithmic-functions-properties'),
+  'logarithmic-functions-equations-precalc': lessonTopics('ap-precalculus', 'logarithmic-functions-properties', 'logarithmic-equations'),
+  'solving-exponential-logarithmic-equations': lessonTopics('ap-precalculus', 'logarithmic-equations', 'natural-log-and-e'),
+  'degrees-and-radians': lessonTopics('ap-precalculus', 'trigonometric-ratios-unit-circle'),
+  'unit-circle-radian-measure': lessonTopics('ap-precalculus', 'trigonometric-ratios-unit-circle'),
+  'trigonometric-functions-precalc': lessonTopics('ap-precalculus', 'trigonometric-ratios-unit-circle', 'graphs-of-sine-and-cosine'),
+  'graphing-trig-functions': lessonTopics('ap-precalculus', 'graphs-of-sine-and-cosine'),
+  'inverse-trig-functions': lessonTopics('ap-precalculus', 'inverse-trig-functions'),
+  'inverse-trig-functions-precalc': lessonTopics('ap-precalculus', 'inverse-trig-functions'),
+  'trigonometric-identities': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'),
+  'trigonometric-identities-precalc': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'),
+  'sum-difference-identities': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'),
+  'double-half-angle-identities': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'),
+  'solving-trig-equations': lessonTopics('ap-precalculus', 'inverse-trig-functions', 'trig-identities-pythagorean'),
+  // Polar is Topics 3.13-3.15. 'polar-coordinates' was also a legacy BC polar
+  // category id (mcqBanks below); the live AP Precalculus topic wins.
+  'polar-coordinates': lessonTopics('ap-precalculus', 'polar-coordinates-graphs'),
+  'polar-coordinates-precalc': lessonTopics('ap-precalculus', 'polar-coordinates-graphs'),
+  // ---- AP Calculus AB
+  'basic-differentiation-rules-calcab': lessonTopics('ap-calculus-ab', 'power-rule', 'product-rule', 'quotient-rule', 'derivatives-of-trig-functions'),
+  'linearization-differentials-calcab': lessonTopics('ap-calculus-ab', 'linear-approximation'),
+  'one-sided-limits': lessonTopics('ap-calculus-ab', 'estimating-limits-graphs', 'estimating-limits-tables'),
+  'what-is-a-limit': lessonTopics('ap-calculus-ab', 'estimating-limits-graphs', 'estimating-limits-tables'),
+  'optimization-calcab': lessonTopics('ap-calculus-ab', 'optimization-problems'),
+  'theorem-applications-calcab': lessonTopics('ap-calculus-ab', 'mean-value-theorem', 'absolute-extrema', 'continuity-introduction'),
+  // ---- AP Chemistry / AP Biology
+  'solubility-equilibrium': lessonTopics('ap-chemistry', 'solubility-ksp'),
+  'population-dynamics': lessonTopics('ap-biology', 'population-ecology', 'community-ecology'),
+  // ---- AP Human Geography / AP US Government
+  'hg-industrialization': lessonTopics('ap-human-geo', 'hg-industrialization-development'),
+  'gov-ideologies': lessonTopics('ap-us-gov', 'gov-political-ideology'),
+  // ---- AP World History (lesson = CED unit; bank topics are finer)
+  'wh-global-tapestry': lessonTopics('ap-world-history', 'wh-developments-east-asia', 'wh-dar-al-islam', 'wh-americas-africa-1200'),
+  'wh-land-based-empires': lessonTopics('ap-world-history', 'wh-islamic-empires', 'wh-east-asian-empires'),
+  'wh-transoceanic': lessonTopics('ap-world-history', 'wh-exploration-columbian-exchange', 'wh-maritime-empires-labor'),
+  'wh-revolutions': lessonTopics('ap-world-history', 'wh-enlightenment-political-revolutions', 'wh-industrial-revolution'),
+  'wh-consequences-industrialization': lessonTopics('ap-world-history', 'wh-imperialism', 'wh-reform-migration'),
+  'wh-newly-independent-states': lessonTopics('ap-world-history', 'wh-cold-war-decolonization'),
+  'wh-challenges-21st-century': lessonTopics('ap-world-history', 'wh-globalization-tech'),
+  // ---- AP African American Studies
+  'aas-origins-diaspora': lessonTopics('ap-african-american-studies', 'aas-african-kingdoms', 'aas-transatlantic-slave-trade'),
+  'aas-freedom-enslavement': lessonTopics('ap-african-american-studies', 'aas-slavery-in-america', 'aas-resistance-abolition'),
+  'aas-practice-freedom': lessonTopics('ap-african-american-studies', 'aas-reconstruction-jim-crow'),
+  'aas-movements-debates': lessonTopics('ap-african-american-studies', 'aas-great-migration-harlem', 'aas-black-power-beyond'),
+  // ---- AP English Literature
+  'englit-short-fiction-1': lessonTopics('ap-english-lit', 'englit-character-setting', 'englit-plot-conflict-theme', 'englit-narration-pov'),
+  'englit-short-fiction-2': lessonTopics('ap-english-lit', 'englit-narrative-perspective', 'englit-character-setting', 'englit-symbol-motif-fiction'),
+  'englit-short-fiction-3': lessonTopics('ap-english-lit', 'englit-narrative-complexity', 'englit-essay-writing'),
+  'englit-poetry-1': lessonTopics('ap-english-lit', 'englit-poetic-structure-form', 'englit-figurative-language'),
+  'englit-poetry-2': lessonTopics('ap-english-lit', 'englit-tone-speaker', 'englit-complex-poetic-analysis', 'englit-figurative-language'),
+  'englit-longer-fiction': lessonTopics('ap-english-lit', 'englit-character-setting', 'englit-symbol-motif-fiction', 'englit-prose-style-analysis'),
+  'englit-longer-fiction-2': lessonTopics('ap-english-lit', 'englit-plot-conflict-theme', 'englit-narrative-complexity'),
+  // ---- AP English Language
+  'englang-rhetorical-situation': lessonTopics('ap-english-lang', 'englang-intro-rhetoric'),
+  'englang-rhetorical-situation-writing': lessonTopics('ap-english-lang', 'englang-writing-for-audience'),
+  'englang-claims-evidence-reading': lessonTopics('ap-english-lang', 'englang-claims-evidence'),
+  'englang-claims-evidence-writing': lessonTopics('ap-english-lang', 'englang-claims-evidence', 'englang-developing-arguments'),
+  'englang-reasoning-org-reading': lessonTopics('ap-english-lang', 'englang-argument-structure'),
+  'englang-reasoning-org-writing': lessonTopics('ap-english-lang', 'englang-argument-structure', 'englang-developing-arguments'),
+  'englang-style-reading': lessonTopics('ap-english-lang', 'englang-diction-syntax', 'englang-tone-voice-analysis', 'englang-rhetorical-devices'),
+  'englang-style-writing': lessonTopics('ap-english-lang', 'englang-diction-syntax'),
+  'englang-synthesis': lessonTopics('ap-english-lang', 'englang-synthesis-essay'),
+  'englang-rhetorical-analysis-essay': lessonTopics('ap-english-lang', 'englang-ethos-pathos-logos', 'englang-rhetorical-devices', 'englang-developing-arguments'),
+  // ---- AP Environmental Science
+  'apes-earth-systems': lessonTopics('ap-enviro', 'apes-geology-soil', 'apes-atmosphere-climate'),
+  'apes-biodiversity': lessonTopics('ap-enviro', 'apes-biodiversity-conservation'),
+  'apes-energy': lessonTopics('ap-enviro', 'apes-fossil-fuels-nuclear', 'apes-renewable-energy'),
+  'apes-atmospheric-pollution': lessonTopics('ap-enviro', 'apes-air-pollution', 'apes-ozone-indoor-air'),
+  // ---- AP Computer Science A
+  'csa-using-objects': lessonTopics('ap-csa', 'csa-strings-objects'),
+  'csa-boolean-if': lessonTopics('ap-csa', 'csa-conditionals'),
+  'csa-iteration': lessonTopics('ap-csa', 'csa-loops'),
+  'csa-writing-classes': lessonTopics('ap-csa', 'csa-class-design'),
+  'csa-array': lessonTopics('ap-csa', 'csa-arrays'),
+  'csa-arraylist': lessonTopics('ap-csa', 'csa-arraylist-usage'),
+  'csa-2d-array': lessonTopics('ap-csa', 'csa-2d-arrays'),
+  // ---- AP Computer Science Principles
+  'csp-creative-development': lessonTopics('ap-csp', 'csp-collaboration-development'),
+  'csp-data': lessonTopics('ap-csp', 'csp-binary-data', 'csp-data-compression-analysis'),
+  'csp-algorithms-programming': lessonTopics('ap-csp', 'csp-algorithms', 'csp-procedures-lists', 'csp-variables-control'),
+  'csp-computing-systems-networks': lessonTopics('ap-csp', 'csp-internet-protocols', 'csp-fault-tolerance-security'),
+  'csp-impact-of-computing': lessonTopics('ap-csp', 'csp-social-ethical-impacts', 'csp-safe-computing'),
+}
+
 // Every AP competitive bank getter. Each one filters by the question's canonical
 // topicSlug — the same slug the curriculum DB / competitive topic filter uses —
 // so a selected topic resolves to exactly that topic's questions.
@@ -805,6 +951,31 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
           } as MatchQuestion
         })
       }
+    }
+  }
+
+  // AP lesson slugs whose names differ from their bank's topic slugs (see
+  // AP_LESSON_BANK_TOPICS). Runs before the generic AP routing so a mapped
+  // lesson always draws from its own course bank, never another subject.
+  const apLesson = topicSlug ? AP_LESSON_BANK_TOPICS[topicSlug] : undefined
+  if (apLesson) {
+    const wanted = new Set(apLesson.topics)
+    const pool = (await AP_LESSON_BANK_GETTERS[apLesson.course](1_000_000)).filter(q => q.topicSlug !== undefined && wanted.has(q.topicSlug))
+    if (pool.length > 0) {
+      const picked = tier ? pickTieredQuestions(pool, totalQuestions, tier) : shuffleArray(pool).slice(0, totalQuestions)
+      return picked.map((q, i) => {
+        const shuffled = shuffleOptions(q)
+        return {
+          id: i,
+          question: q.question as string,
+          options: shuffled.options,
+          correctAnswer: shuffled.correctAnswer,
+          answerIndex: shuffled.answerIndex,
+          explanation: q.explanation as string,
+          difficulty: q.difficulty,
+          type: 'multiple-choice',
+        } as MatchQuestion
+      })
     }
   }
 
@@ -1201,7 +1372,7 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     'ap-physics-c-mech': getApPhysicsCMechQuestions,
     'ap-physics-c-em': getApPhysicsCEMQuestions,
     'ap-calculus-bc': getApCalculusBCQuestions,
-    'ap-precalculus': getPreCalcQuestions,
+    'ap-precalculus': getApPrecalcQuestions,
     'ap-human-geo': getApHumanGeoQuestions,
     'ap-us-gov': getApUSGovQuestions,
     'ap-world-history': getApWorldHistoryQuestions,
@@ -1222,6 +1393,7 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     'ap-physics1': getApPhysics1Questions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
     'ap-biology': getApBiologyQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
     'precalc': getPreCalcQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
+    'ap-precalculus': getApPrecalcQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
     'ap-calculus-ab': getApCalculusQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
     'ap-physics2': getApPhysics2Questions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
     'ap-physics-c-mech': getApPhysicsCMechQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
@@ -1235,7 +1407,10 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     // Standard mode: only include questions from topics both students have completed
     const bankFn = courseTopicBanks[topicSlug]
     const allCourseQuestions = await bankFn(999) // get all questions
-    const filteredQuestions = allCourseQuestions.filter(q => completedTopics.includes(q.topicSlug))
+    // Completed topics are curriculum lesson slugs; expand the ones that map
+    // onto differently named bank topics (AP_LESSON_BANK_TOPICS).
+    const completedBankTopics = new Set(completedTopics.flatMap(s => [s, ...(AP_LESSON_BANK_TOPICS[s]?.topics ?? [])]))
+    const filteredQuestions = allCourseQuestions.filter(q => completedBankTopics.has(q.topicSlug))
     if (filteredQuestions.length > 0) {
       const shuffled = shuffleArray(filteredQuestions)
       const selected = shuffled.slice(0, Math.min(totalQuestions, shuffled.length))

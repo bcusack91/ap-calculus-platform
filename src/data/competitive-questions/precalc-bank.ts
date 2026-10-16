@@ -409,3 +409,59 @@ export function getPreCalcQuestions(count: number = 10, topicSlug?: string): Pre
   const shuffled = shuffleArray(pool)
   return shuffled.slice(0, Math.min(count, shuffled.length))
 }
+
+// ============ AP PRECALCULUS VIEW ============
+// The bank above is shared with the non-AP Precalculus course and its unit
+// tests (src/data/unit-tests/precalculus.ts), which use all 27 topics, so
+// off-exam items stay in it. AP Precalculus draws through
+// getApPrecalcQuestions, which drops what the AP exam does not assess (owner
+// rule: "If the exam doesn't cover it, we shouldn't have it in the program").
+
+/** Whole bank topics that are AP Precalculus Unit 4, which the exam does not assess. */
+export const AP_PRECALC_EXCLUDED_TOPIC_SLUGS: ReadonlySet<string> = new Set([
+  'law-of-sines-and-cosines', // only in EK 4.8.D.2
+  'parametric-equations-motion', // Topics 4.1-4.4, 4.7
+  'vectors-in-two-dimensions', // Topics 4.8-4.9
+  'matrices-and-determinants', // Topics 4.10-4.14
+  'systems-of-equations-matrices', // Topics 4.10-4.14
+])
+
+/** Single off-exam items inside on-exam topics. */
+export const AP_PRECALC_EXCLUDED_IDS: ReadonlySet<number> = new Set([
+  69, // limaçon a/b classification (cardioid form); 3.14 graphs polar functions, does not classify by a/b
+  207, // needs rectangular-polar EQUATION conversion; 3.13 converts points only
+  208, // limaçon a/b classification (names the cardioid case)
+])
+
+/**
+ * On-exam items served only to AP Precalculus (kept out of allQuestions so
+ * the non-AP course and its seeded unit tests see exactly the same bank).
+ * They keep polar-coordinates-graphs at 10 items after the exclusions.
+ */
+const apOnlyQuestions: PreCalcQuestion[] = [
+  { id: 271, question: 'Which polar coordinates represent the point with rectangular coordinates $(-\\sqrt{3}, 1)$?', options: ['$(2, 5\\pi/6)$', '$(2, \\pi/6)$', '$(2, -\\pi/6)$', '$(4, 5\\pi/6)$'], correctAnswer: 0, explanation: '$r = \\sqrt{(-\\sqrt{3})^2 + 1^2} = 2$. The point is in Quadrant II with reference angle $\\pi/6$, so $\\theta = \\pi - \\pi/6 = 5\\pi/6$.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
+  { id: 272, question: 'For the polar function $r = 4\\cos\\theta$ on the interval $\\pi/2 < \\theta < \\pi$, which statement is true?', options: ['$r$ is negative and decreasing, so the distance from the origin increases', '$r$ is decreasing, so the distance from the origin decreases', '$r$ is positive and increasing, so the distance from the origin increases','$r$ is positive and decreasing, so the distance from the origin decreases'], correctAnswer: 0, explanation: 'On $(\\pi/2, \\pi)$, $\\cos\\theta$ falls from $0$ to $-1$, so $r$ falls from $0$ to $-4$: negative and decreasing. The distance from the origin is $|r|$, which grows from $0$ to $4$.', difficulty: 'hard', topicSlug: 'polar-coordinates-graphs' },
+  { id: 273, question: 'What is the average rate of change of $r = 3\\cos\\theta$ with respect to $\\theta$ on the interval $[0, \\pi/2]$?', options: ['$-\\frac{6}{\\pi}$', '$\\frac{6}{\\pi}$', '$-\\frac{3}{\\pi}$', '$-\\frac{2\\pi}{3}$'], correctAnswer: 0, explanation: '$\\frac{r(\\pi/2) - r(0)}{\\pi/2 - 0} = \\frac{0 - 3}{\\pi/2} = -\\frac{6}{\\pi}$.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
+]
+
+/** Raw, unshuffled AP Precalculus pool: the shared bank minus off-exam items, plus the AP-only items. */
+export const apPrecalcQuestionBank: PreCalcQuestion[] = [
+  ...allQuestions.filter(q => !AP_PRECALC_EXCLUDED_TOPIC_SLUGS.has(q.topicSlug) && !AP_PRECALC_EXCLUDED_IDS.has(q.id)),
+  ...apOnlyQuestions,
+]
+
+/**
+ * AP Precalculus draw. `topicSlug` is a bank topic slug, or a list of them
+ * (an AP lesson can span several bank topics). Unknown or off-exam topics
+ * fall back to the whole on-exam pool, never to an excluded item.
+ */
+export function getApPrecalcQuestions(count: number = 10, topicSlug?: string | readonly string[]): PreCalcQuestion[] {
+  let pool = apPrecalcQuestionBank
+  const wanted = topicSlug === undefined ? [] : typeof topicSlug === 'string' ? [topicSlug] : topicSlug
+  if (wanted.length > 0) {
+    const filtered = pool.filter(q => wanted.includes(q.topicSlug))
+    if (filtered.length > 0) pool = filtered
+  }
+  const shuffled = shuffleArray(pool)
+  return shuffled.slice(0, Math.min(count, shuffled.length))
+}

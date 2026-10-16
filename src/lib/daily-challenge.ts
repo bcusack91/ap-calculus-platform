@@ -118,6 +118,7 @@ const DAILY_SETS: Record<string, { label: string; banks: DailyBank[] }> = {
   'ap-calculus-ab': { label: 'AP Calculus AB', banks: [bank('ap-calculus', 'AP Calculus AB', async () => (await import('@/data/competitive-questions/ap-calculus-bank')).getApCalculusQuestions(ALL))] },
   'ap-calculus-bc': { label: 'AP Calculus BC', banks: [bank('ap-calculus-bc', 'AP Calculus BC', async () => (await import('@/data/competitive-questions/ap-calculus-bc-bank')).getApCalculusBCQuestions(ALL))] },
   precalc: { label: 'Precalculus', banks: [bank('precalc', 'Precalculus', async () => (await import('@/data/competitive-questions/precalc-bank')).getPreCalcQuestions(ALL))] },
+  'ap-precalculus': { label: 'AP Precalculus', banks: [bank('ap-precalculus', 'AP Precalculus', async () => (await import('@/data/competitive-questions/precalc-bank')).getApPrecalcQuestions(ALL))] },
   'ap-statistics': { label: 'AP Statistics', banks: [bank('ap-statistics', 'AP Statistics', async () => (await import('@/data/competitive-questions/ap-statistics-bank')).getApStatisticsQuestions(ALL))] },
   'ap-biology': { label: 'AP Biology', banks: [bank('ap-biology', 'AP Biology', async () => (await import('@/data/competitive-questions/ap-biology-bank')).getApBiologyQuestions(ALL))] },
   'ap-chemistry': { label: 'AP Chemistry', banks: [bank('ap-chemistry', 'AP Chemistry', async () => (await import('@/data/competitive-questions/ap-chemistry-bank')).getApChemistryQuestions(ALL))] },
@@ -154,7 +155,7 @@ const COURSE_DAILY_SET: Record<string, string> = {
   'sat-prep': 'sat', sat: 'sat', psat: 'sat',
   'act-prep': 'act', act: 'act',
   'mcat-prep': 'mcat', mcat: 'mcat',
-  'ap-precalculus': 'precalc', precalculus: 'precalc',
+  precalculus: 'precalc',
   'organic-chemistry-1': 'ochem', 'organic-chemistry-2': 'ochem',
   'ap-cs-principles': 'ap-computer-science-principles',
 }
