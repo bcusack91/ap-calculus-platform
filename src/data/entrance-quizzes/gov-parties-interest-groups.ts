@@ -1,172 +1,164 @@
+/**
+ * Entrance Quiz — Political Parties and Interest Groups (AP US Government and Politics) — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
+ */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
-const allQuestions: EntranceQuizQuestion[] = [
-  // Part 1 — Core Concepts
+const questions: EntranceQuizQuestion[] = [
+  // Part 1 — Core Concepts: the free-rider problem; third parties in a two-party system
   {
-    id: 'govparti-ent-1',
+    id: 'gov-parties-interest-groups-ent-1a',
+    question: "A national environmental group's policy victories benefit everyone who breathes cleaner air, yet only a small share of its supporters pay dues. The group responds by offering dues-paying members a magazine, outdoor trips, and gear discounts. What problem is the group addressing, and how?",
+    options: ["Hyperpluralism, by reducing the number of competing groups", "Agency capture, by hiring former regulators as staff", "Astroturfing, by recruiting supporters through paid ads", "Free riding, countered with selective incentives"],
+    correctIndex: 3,
+    explanation: "Because people can enjoy a public good without paying for it, groups struggle to recruit members; offering benefits available only to members is a standard solution, often called selective benefits. Agency capture and astroturfing describe different problems entirely.",
     partNumber: 1,
-    partTitle: 'Core Concepts',
-    question: "Which 1951 LAW formulated by MAURICE DUVERGER predicts that SINGLE-MEMBER DISTRICT PLURALITY (SMDP) electoral systems FAVOR a TWO-PARTY system?",
-    options: ["Olson's Law", "Madison's Law", "Duverger's Law", "Dahl's Law"],
-    correctIndex: 2,
-    explanation: "DUVERGER'S LAW (Maurice Duverger 1951) — political science principle predicting SINGLE-MEMBER DISTRICT PLURALITY (SMDP) electoral systems FAVOR TWO-PARTY SYSTEMS; mechanism — voters strategic; don't waste votes on third parties unlikely to win; US system (SMDP for House + presidential Electoral College) produces 2 major parties (Democratic + Republican); contrast with PROPORTIONAL REPRESENTATION (PR) systems (Germany + Israel + Netherlands) which produce multi-party systems; THIRD PARTIES chronically underperform — Bull Moose 1912 + Wallace 1968 + Anderson 1980 + Perot 1992 + Nader 2000 + RFK Jr 2024."
+    partTitle: "Core Concepts",
   },
   {
-    id: 'govparti-ent-2',
+    id: 'gov-parties-interest-groups-ent-1b',
+    question: "A third-party presidential candidate wins 19 percent of the national popular vote but no electoral votes. In the following years, both major parties adopt his signature issue of balancing the federal budget. What does this episode best illustrate?",
+    options: ["Third parties can win electoral votes only through proportional rules", "Third parties rarely win but can steer big parties' agendas", "Third parties lose votes mainly because ballot access is barred to them", "Third parties replace a major party after a strong showing like this one"],
+    correctIndex: 1,
+    explanation: "Winner-take-all rules denied the candidate any electors, yet the major parties absorbed his issue to win back his voters, a common way third parties shape policy. He was on the ballot, so access was not the barrier.",
     partNumber: 1,
-    partTitle: 'Core Concepts',
-    question: "Which 1965 BOOK by MANCUR OLSON established the COLLECTIVE ACTION PROBLEM + FREE RIDER + SELECTIVE BENEFITS framework for understanding INTEREST GROUP formation?",
-    options: ['Who Governs?', 'The Logic of Collective Action', 'The Power Elite', 'Bowling Alone'],
-    correctIndex: 1,
-    explanation: 'THE LOGIC OF COLLECTIVE ACTION: Public Goods and the Theory of Groups (Mancur Olson 1965) — landmark book; argued RATIONAL INDIVIDUALS would NOT contribute to COLLECTIVE ACTION without (1) SELECTIVE BENEFITS (member-only benefits like AAA roadside assistance + AARP magazine + Sierra Club outings + NRA insurance) or (2) SMALL GROUP coordination; FREE RIDER PROBLEM — beneficiaries who do not contribute; explains why CONCENTRATED INTERESTS (small + business + producers) better organized than DIFFUSE INTERESTS (consumers + taxpayers + public); foundation for interest group politics; Janus v. AFSCME 2018 created free rider problem for public sector unions.'
+    partTitle: "Core Concepts",
   },
-  // Part 2 — Key Processes
+
+  // Part 2 — Key Processes: lobbying tactics; litigation strategy
   {
-    id: 'govparti-ent-3',
+    id: 'gov-parties-interest-groups-ent-2a',
+    question: "A trade association hires a consulting firm that uses paid online ads to recruit people, then sends thousands of nearly identical emails to Congress signed by these \"concerned citizens.\" Which tactic is this?",
+    options: ["Astroturf lobbying", "Direct lobbying", "The revolving door", "Filing an amicus brief"],
+    correctIndex: 0,
+    explanation: "Astroturfing is a professionally manufactured campaign designed to look like spontaneous grassroots pressure. Direct lobbying means meeting officials face to face, and the revolving door refers to officials moving into lobbying jobs.",
     partNumber: 2,
-    partTitle: 'Key Processes',
-    question: "Which 2008 BOOK by COHEN, KAROL, NOEL + ZALLER argued that PARTY ELITES (not voters) effectively CONTROL PRESIDENTIAL NOMINATIONS through the INVISIBLE PRIMARY?",
-    options: ['Why Parties?', 'The Party Decides', 'Polarized America', 'Off Center'],
-    correctIndex: 1,
-    explanation: 'THE PARTY DECIDES: Presidential Nominations Before and After Reform (Marty Cohen + David Karol + Hans Noel + John Zaller 2008) — landmark book; argued PARTY ELITES (officeholders + activists + donors + party officials + interest group leaders) effectively CONTROL PRESIDENTIAL NOMINATIONS through the INVISIBLE PRIMARY (pre-primary endorsements + fundraising + media coverage + organizational support); challenged narrative that primaries democratized nominations post-McGovern-Fraser 1972 reforms; CHALLENGED by Trump 2016 (won despite GOP elite opposition) + Biden 2020 (party elite consolidation behind Biden after SC primary); modified theory — PARTY DECIDES applies less reliably in modern fragmented + polarized + media-driven environment.'
+    partTitle: "Key Processes",
   },
   {
-    id: 'govparti-ent-4',
+    id: 'gov-parties-interest-groups-ent-2b',
+    question: "A civil rights organization searches for a sympathetic plaintiff whose facts make the strongest case, then files a lawsuit it hopes will reach the Supreme Court and overturn an earlier precedent. Which strategy is the organization using?",
+    options: ["Grassroots lobbying of members of Congress", "Filing a class action on behalf of shareholders", "Bringing a test case meant to change the law", "Running issue ads during a general election campaign"],
+    correctIndex: 2,
+    explanation: "A test case is litigation deliberately chosen to set a precedent, the approach the NAACP used in the cases leading to *Brown v. Board of Education*. The other choices target legislators or voters rather than the courts.",
     partNumber: 2,
-    partTitle: 'Key Processes',
-    question: "Which 2010 DC CIRCUIT COURT decision created SUPER PACs by allowing UNLIMITED INDIVIDUAL CONTRIBUTIONS to INDEPENDENT EXPENDITURE-ONLY PACs?",
-    options: ['Buckley v. Valeo', 'Citizens United v. FEC', 'SpeechNow.org v. FEC', 'McCutcheon v. FEC'],
-    correctIndex: 2,
-    explanation: 'SPEECHNOW.org v. FEC (2010 DC Circuit) — followed Citizens United 2010 by 2 months; HELD INDIVIDUALS can give UNLIMITED CONTRIBUTIONS to PACs that make ONLY INDEPENDENT EXPENDITURES (no direct candidate contributions); CREATED SUPER PAC structure; reasoning — extending Citizens United logic that independent expenditures pose no corruption risk; IMPACT — Super PACs now dominant force in modern campaigns ($\\$2$B+ each side 2024); examples — American Crossroads (R) + Senate Majority PAC (D) + Future Forward (D) + MAGA Inc. (R) + America PAC (Musk for Trump 2024 ~$\\$300$M+); not formally a SCOTUS case but functionally treated as one given DC Circuit influence + government did not appeal.'
+    partTitle: "Key Processes",
   },
-  // Part 3 — Patterns & Examples
+
+  // Part 3 — Patterns & Examples: theories of group influence; issue networks
   {
-    id: 'govparti-ent-5',
+    id: 'gov-parties-interest-groups-ent-3a',
+    question: "Groups representing farmers, food processors, environmentalists and consumer advocates each lobby on a farm bill, and the final law gives each of them part of what it wanted while none gets everything. Which theory does this outcome best fit?",
+    options: ["Elite theory", "Pluralist theory", "Hyperpluralism", "Duverger's law"],
+    correctIndex: 1,
+    explanation: "Pluralism holds that many groups compete and bargain, so policy reflects compromise among them rather than domination by one. Elite theory predicts that a small wealthy group prevails, and hyperpluralism that so many demands leave government unable to act coherently.",
     partNumber: 3,
-    partTitle: 'Patterns & Examples',
-    question: "Which 1969 BOOK by THEODORE LOWI argued that the EXPLOSION of INTEREST GROUPS produced HYPERPLURALISM + IRON TRIANGLES that PARALYZE government and undermine DEMOCRATIC ACCOUNTABILITY?",
-    options: ['The End of Liberalism', 'Who Governs?', 'The Power Elite', 'The Semisovereign People'],
-    correctIndex: 0,
-    explanation: 'THE END OF LIBERALISM: The Second Republic of the United States (Theodore Lowi 1969) — landmark critique of modern American interest group politics; argued post-New Deal explosion of interest groups produced INTEREST GROUP LIBERALISM (Lowi term) + HYPERPLURALISM (too many groups paralyze) + IRON TRIANGLES (committee + agency + interest group sub-governments capturing policy areas); CHALLENGED Dahl 1961 pluralist optimism; argued Congress increasingly delegates authority to bureaucracy + interest groups + courts undermining democratic accountability; foundation for ISSUE NETWORK concept (Heclo 1978 expanded with looser groupings of experts + advocates) + AGENCY CAPTURE (Stigler 1971); REQUIRED reading for understanding modern interest group politics + bureaucratic governance.'
+    partTitle: "Patterns & Examples",
   },
   {
-    id: 'govparti-ent-6',
+    id: 'gov-parties-interest-groups-ent-3b',
+    question: "The debate over regulating artificial intelligence involves dozens of technology firms, university experts, civil liberties groups, think tanks, journalists, and several congressional committees and agencies, with alliances that shift from one question to the next. Which concept best describes this policy community?",
+    options: ["An iron triangle", "A party machine", "A closed primary", "An issue network"],
+    correctIndex: 3,
+    explanation: "An issue network is a loose, open, and changing web of many participants in a policy area. An iron triangle is a stable, closed alliance of just one committee, one agency, and one interest group.",
     partNumber: 3,
-    partTitle: 'Patterns & Examples',
-    question: 'Which 1956 BOOK by C. WRIGHT MILLS argued that AMERICAN POLITICS is dominated by an INTERLOCKING ELITE of CORPORATE + MILITARY + POLITICAL leaders rather than COMPETING INTEREST GROUPS?',
-    options: ['Who Governs?', 'The Power Elite', 'The End of Liberalism', 'The Semisovereign People'],
-    correctIndex: 1,
-    explanation: 'THE POWER ELITE (C. Wright Mills 1956) — landmark sociological critique; argued American politics dominated by INTERLOCKING ELITE of (1) CORPORATE leaders (top business executives), (2) MILITARY leaders (Pentagon top brass), (3) POLITICAL leaders (top federal officials); CHALLENGED Dahl 1961 pluralist view; argued elite shares similar background (Ivy League + upper-class + WASP historically) + circulates between sectors; foundation for ELITISM theory; CONFIRMED empirically by Gilens + Page 2014 Testing Theories (~1,800 policy outcomes; economic elite + business interests have substantial impact; average citizens + mass public have near-zero independent influence); modern manifestation — wealthy mega-donors (Adelson + Soros + Mercer + Koch + Bloomberg + Musk) + 0.01% provide 70%+ of political money.'
+    partTitle: "Patterns & Examples",
   },
-  // Part 4 — Connections & Interactions
+
+  // Part 4 — Connections & Interactions: parties and opinion; groups and the bureaucracy
   {
-    id: 'govparti-ent-7',
-    partNumber: 4,
-    partTitle: 'Connections & Interactions',
-    question: "Which 2012 STUDY by IYENGAR, SOOD + LELKES established AFFECTIVE POLARIZATION (emotional dislike of out-party) as more powerful than IDEOLOGICAL POLARIZATION in modern American politics?",
-    options: ['Affect, Not Ideology', 'The Big Sort', 'Asymmetric Politics', 'Off Center'],
-    correctIndex: 0,
-    explanation: 'AFFECT, NOT IDEOLOGY: A Social Identity Perspective on Polarization (Shanto Iyengar + Gaurav Sood + Yphtach Lelkes 2012) — landmark study establishing AFFECTIVE POLARIZATION (emotional dislike of out-party + warmth toward in-party) as MORE POWERFUL than IDEOLOGICAL POLARIZATION; OUT-PARTY FEELING THERMOMETERS — ~50° in 1980 → ~20° in 2024 (lower than racial out-groups); IN-PARTY FEELING ~75° steady; SOCIAL DISTANCE INCREASING — partisans don\'t want children to marry across party lines (5% in 1960 → ~50% in 2020s); foundation for understanding modern partisan dynamics; related to LEVENDUSKY 2009 PARTISAN SORTING + MASON 2018 MEGA-IDENTITY (Uncivil Agreement combining race + religion + region + culture into 2 mega-coalitions).'
-  },
-  {
-    id: 'govparti-ent-8',
-    partNumber: 4,
-    partTitle: 'Connections & Interactions',
-    question: "Which 1971 ARTICLE by GEORGE STIGLER established AGENCY CAPTURE — the theory that REGULATORY AGENCIES come to serve the INTERESTS of REGULATED INDUSTRIES rather than the PUBLIC?",
-    options: ['The Theory of Economic Regulation', 'Iron Triangles in Action', 'The Captured Economy', 'Public Choice'],
-    correctIndex: 0,
-    explanation: 'THE THEORY OF ECONOMIC REGULATION (George Stigler 1971) — landmark article establishing AGENCY CAPTURE; argued REGULATORY AGENCIES come to serve INTERESTS of REGULATED INDUSTRIES rather than PUBLIC INTEREST; mechanism — concentrated industry interests have stronger incentive + resources to influence agencies than diffuse public; REVOLVING DOOR — officials move between agency + industry; INDUSTRY EXPERTISE — agencies depend on industry information + technical staff; INFORMATION ASYMMETRY; modern examples — FAA + Boeing 737 MAX certification scandal + FDA + pharmaceutical industry + SEC + Wall Street + EPA + chemical industry; FOUNDATION for public choice theory + connects to LOWI 1969 iron triangles + HECLO 1978 issue networks; LOPER BRIGHT 2024 reduced Chevron deference partly motivated by capture concerns.'
-  },
-  // Part 5 — Change Over Time
-  {
-    id: 'govparti-ent-9',
-    partNumber: 5,
-    partTitle: 'Change Over Time',
-    question: "Which 2010 SCOTUS DECISION fundamentally TRANSFORMED CAMPAIGN FINANCE by holding CORPORATIONS have 1ST AMENDMENT speech rights for INDEPENDENT POLITICAL EXPENDITURES?",
-    options: ['Buckley v. Valeo (1976)', 'McConnell v. FEC (2003)', 'Citizens United v. FEC (2010)', 'McCutcheon v. FEC (2014)'],
+    id: 'gov-parties-interest-groups-ent-4a',
+    question: "Within a few months after a party's presidential nominee came out against a trade agreement, the share of that party's voters who opposed the agreement doubled, while views in the other party barely changed. Which concept best explains this shift?",
+    options: ["Random error in the polls taken before the nominee spoke", "Dealignment, as voters left the party over the issue", "Elite cues, as party leaders shaped how followers saw the deal", "Hyperpluralism, as many groups lobbied on trade"],
     correctIndex: 2,
-    explanation: 'CITIZENS UNITED v. FEC (2010) — landmark 5-4 SCOTUS Kennedy majority decision; HELD CORPORATIONS have 1st Amendment speech rights for INDEPENDENT POLITICAL EXPENDITURES; reasoning — government cannot restrict political speech based on speaker identity; STRUCK BCRA Section 203 (electioneering communications by corporations + unions in 30/60 days before election); REVERSED Austin v. Michigan Chamber of Commerce 1990; PRESERVED — direct contributions banned (Tillman Act 1907) + disclosure requirements; FOLLOWED 2 months later by SpeechNow.org v. FEC 2010 DC Circuit creating Super PACs (unlimited individual contributions to independent expenditure-only PACs); MCCUTCHEON v. FEC 2014 struck aggregate individual limits; transformed campaign finance into ~$15B 2024 cycle + 0.01% provide 70%+ of political money + mega-donor era.'
+    explanation: "Partisans often take cues from their party's leaders on new or complex issues, so a nominee's stance can move followers' opinions quickly. A one-sided shift among only that party's voters points to leadership cues rather than polling error.",
+    partNumber: 4,
+    partTitle: "Connections & Interactions",
   },
   {
-    id: 'govparti-ent-10',
-    partNumber: 5,
-    partTitle: 'Change Over Time',
-    question: 'Which 2000 BOOK by ROBERT PUTNAM documented the DECLINE of CIVIC ENGAGEMENT + SOCIAL CAPITAL in America since the 1960s?',
-    options: ['The Great Disruption', 'Bowling Alone', 'Diminished Democracy', 'Coming Apart'],
-    correctIndex: 1,
-    explanation: 'BOWLING ALONE: The Collapse and Revival of American Community (Robert Putnam 2000) — landmark book documenting DECLINE of CIVIC ENGAGEMENT + SOCIAL CAPITAL in America since 1960s; bowling league participation collapsed (people still bowl but alone, not in leagues); declining membership in PTAs + Rotary + Elks + League of Women Voters + labor unions + churches + community organizations; INTEREST GROUP UNIVERSE simultaneously EXPLODED (~5,000 groups 1960 → ~25,000+ today); but new groups are PROFESSIONAL ADVOCACY (Skocpol 2003 Diminished Democracy) — federated grassroots organizations replaced by DC-based professional advocacy with paid staff + minimal member engagement; transformation of American civic life with implications for democratic participation + interest group representation.'
-  },
-  // Part 6 — Problem-Solving Workshop
-  {
-    id: 'govparti-ent-11',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-    question: "In FEDERALIST 10 (1787), MADISON argued the CURE for the MISCHIEFS of FACTION is creating a LARGE, EXTENDED REPUBLIC because:",
-    options: [
-      'A small republic eliminates faction by enforcing unity through religious establishment + censorship laws.',
-      'An extended republic encompasses MULTIPLE COMPETING FACTIONS that CHECK EACH OTHER + REPRESENTATION refines public views through chosen body of citizens.',
-      "Direct democracy is the only safeguard against majority tyranny because every citizen votes on every law.",
-      "The federal government should ban factions outright through constitutional amendment + criminal prosecution of organizers.",
-    ],
-    correctIndex: 1,
-    explanation: 'FEDERALIST 10 (Madison 1787) — landmark argument; defined FACTION as "a number of citizens, whether amounting to a majority or a minority of the whole, who are united and actuated by some common impulse of passion, or of interest, adverse to the rights of other citizens, or to the permanent and aggregate interests of the community"; ARGUED the CURE for MISCHIEFS of FACTION is creating a LARGE, EXTENDED REPUBLIC because (1) ENCOMPASSES MULTIPLE COMPETING FACTIONS that CHECK EACH OTHER (no single faction can dominate); (2) REPRESENTATION refines public views "through the medium of a chosen body of citizens, whose wisdom may best discern the true interest of their country"; rejected REMOVING CAUSES of faction (would require eliminating liberty or enforcing unity — both unacceptable); FOUNDATION for American pluralist tradition + checks + balances + extended republic theory.'
-  },
-  {
-    id: 'govparti-ent-12',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-    question: "In FEDERALIST 51 (1788), MADISON's most famous principle for CONSTITUTIONAL DESIGN is:",
-    options: [
-      "'The accumulation of all powers, legislative, executive, and judiciary, in the same hands... may justly be pronounced the very definition of tyranny.'",
-      "'Ambition must be made to counteract ambition.'",
-      "'The judiciary is beyond comparison the weakest of the three departments of power.'",
-      "'Energy in the executive is a leading character in the definition of good government.'",
-    ],
-    correctIndex: 1,
-    explanation: 'FEDERALIST 51 (Madison 1788) — most famous principle: "AMBITION MUST BE MADE TO COUNTERACT AMBITION"; argued for SEPARATION OF POWERS + CHECKS + BALANCES as means of preventing tyranny; full quote: "the great security against a gradual concentration of the several powers in the same department, consists in giving to those who administer each department the necessary constitutional means and personal motives to resist encroachments of the others. The provision for defense must in this, as in all other cases, be made commensurate to the danger of attack. Ambition must be made to counteract ambition"; also articulated DOUBLE SECURITY of FEDERALISM ("a double security arises to the rights of the people. The different governments will control each other, at the same time that each will be controlled by itself"); foundation of American constitutional design; "the accumulation of all powers" quote is from Federalist 47; "the judiciary is beyond comparison the weakest" is from Federalist 78 (Hamilton); "energy in the executive" is from Federalist 70 (Hamilton).'
-  },
-  // Part 7 — AP Review
-  {
-    id: 'govparti-ent-13',
-    partNumber: 7,
-    partTitle: 'AP Review',
-    question: 'Which 2018 SCOTUS DECISION held PUBLIC EMPLOYEES CANNOT be required to PAY UNION DUES — overruled Abood v. Detroit BoE 1977 + significantly weakened public sector unions?',
-    options: ['Abood v. Detroit BoE', 'Friedrichs v. CTA', 'Janus v. AFSCME', 'Harris v. Quinn'],
-    correctIndex: 2,
-    explanation: 'JANUS v. AFSCME (2018) — 5-4 SCOTUS Alito majority (joined by Roberts + Kennedy + Thomas + Gorsuch); HELD PUBLIC EMPLOYEES CANNOT be required to PAY UNION DUES (or "agency fees" / "fair share fees" for non-union members); reasoning — compelling speech violation under 1st AMENDMENT (forcing non-members to pay for union political speech they disagree with); OVERRULED Abood v. Detroit Board of Education (1977) which had upheld agency fees for non-union members covering collective bargaining costs (not political activity); IMPACT — significantly weakened public sector unions (~32% public density vs ~6% private); union density continued decline (1955 ~35% → 2024 ~10%); ~$100M+ dues revenue lost; brought by Mark Janus IL state employee + funded by National Right to Work Legal Defense Foundation; followed earlier Friedrichs v. CTA 2016 (4-4 after Scalia death) + Harris v. Quinn 2014; REQUIRED AP Government case.'
-  },
-  {
-    id: 'govparti-ent-14',
-    partNumber: 7,
-    partTitle: 'AP Review',
-    question: 'Which 1976 SCOTUS DECISION established the "MONEY = SPEECH" framework — struck SPENDING LIMITS as 1st Amendment violation but UPHELD CONTRIBUTION LIMITS as anti-corruption measure?',
-    options: ['Buckley v. Valeo (1976)', 'First National Bank v. Bellotti (1978)', 'McConnell v. FEC (2003)', 'Citizens United v. FEC (2010)'],
+    id: 'gov-parties-interest-groups-ent-4b',
+    question: "An understaffed federal agency writing a complex new rule relies heavily on data, studies, and detailed comments supplied by a well-funded industry association, while consumer groups submit only brief comments. What concern does this situation most directly raise?",
+    options: ["Unequal expertise may tilt the rule toward wealthier interests", "The agency has acted outside the notice-and-comment process", "Consumer groups have been barred from commenting by the agency", "Congress has lost its power to oversee the agency's work"],
     correctIndex: 0,
-    explanation: 'BUCKLEY v. VALEO (1976) — landmark per curiam SCOTUS decision establishing MODERN CAMPAIGN FINANCE FRAMEWORK; STRUCK SPENDING LIMITS as unconstitutional under 1st Amendment ("MONEY = SPEECH" framework — restricting spending restricts speech); UPHELD CONTRIBUTION LIMITS as constitutional (anti-corruption interest justifies); STRUCK individual independent expenditure limits; FOUNDATION for 50 years of campaign finance jurisprudence; followed by First National Bank v. Bellotti 1978 (corporate political speech rights) + McConnell v. FEC 2003 (upheld BCRA 2002) + Citizens United 2010 (struck BCRA Section 203 + corporate independent expenditures) + SpeechNow 2010 (Super PACs) + McCutcheon 2014 (struck aggregate individual limits); REQUIRED AP Government case.'
-  }
+    explanation: "When agencies depend on technical information from well-resourced groups, the resulting rules may favor those groups, a step toward agency capture. Comments are part of normal notice-and-comment rulemaking, and nothing suggests anyone was barred.",
+    partNumber: 4,
+    partTitle: "Connections & Interactions",
+  },
+
+  // Part 5 — Change Over Time: the advocacy explosion; dealignment
+  {
+    id: 'gov-parties-interest-groups-ent-5a',
+    question: "Since the 1960s, membership groups with local chapters that brought people of different classes together face to face have declined, while Washington-based groups run by professional staff and supported by mailed-in dues have multiplied. Which consequence do scholars most often draw from this shift?",
+    options: ["Interest groups now have far less influence on national policy", "Political parties have absorbed most interest groups' functions", "Local chapters now control the agendas of national organizations", "Advocacy grew more remote and less tied to civic life"],
+    correctIndex: 3,
+    explanation: "The move from federated membership groups to staff-driven advocacy organizations professionalized interest-group politics and weakened face-to-face civic participation. Group influence in Washington grew rather than shrank.",
+    partNumber: 5,
+    partTitle: "Change Over Time",
+  },
+  {
+    id: 'gov-parties-interest-groups-ent-5b',
+    question: "White Southern voters, who had backed Democrats almost without exception for nearly a century, became mostly Republican between the 1960s and the 1990s, giving Republicans a durable base in the region. Which concept best describes this change?",
+    options: ["Dealignment", "Realignment", "Divided government", "Split-ticket voting"],
+    correctIndex: 1,
+    explanation: "A lasting shift of a large group from one party's coalition to the other's is a realignment, here a gradual one driven by civil rights and other issues. Dealignment is a weakening of party ties without a new coalition taking shape.",
+    partNumber: 5,
+    partTitle: "Change Over Time",
+  },
+
+  // Part 6 — Problem-Solving Workshop: analyzing outside spending; evidence for competing theories
+  {
+    id: 'gov-parties-interest-groups-ent-6a',
+    question: "A national interest group's super PAC spends millions of dollars in a House primary to defeat an incumbent who opposed the group's position, running ads that focus mostly on local issues. Which concern about representation would an analyst most likely raise?",
+    options: ["Members may avoid crossing well-funded groups, which magnifies one faction's power", "The spending was illegal, since super PACs may not take part in primary elections", "Primaries reduce the influence of interest groups compared with general elections", "Local issue ads show that national groups have little interest in House races"],
+    correctIndex: 0,
+    explanation: "Heavy independent spending against members who cross a group can make other lawmakers reluctant to oppose it, raising the concern about factions that Federalist No. 10 addressed. Super PACs may legally spend in primaries if they do not coordinate with candidates.",
+    partNumber: 6,
+    partTitle: "Problem-Solving Workshop",
+  },
+  {
+    id: 'gov-parties-interest-groups-ent-6b',
+    question: "A student argues that the campaign finance system since 2010 supports the elitist critique of American politics rather than the pluralist view. Which piece of evidence would best support this argument?",
+    options: ["Thousands of PACs representing very different interests now give to candidates", "Interest groups on both sides of most issues file amicus briefs in major cases", "A tiny fraction of donors supplies a huge share of all reported donations", "Voters who belong to several groups face cross-pressures from different sides"],
+    correctIndex: 2,
+    explanation: "Concentration of political money among a very small number of wealthy donors fits the elitist claim that a narrow group dominates. Many competing PACs and briefs on both sides of issues are evidence for pluralism instead.",
+    partNumber: 6,
+    partTitle: "Problem-Solving Workshop",
+  },
+
+  // Part 7 — AP Review: required campaign finance case; primary types
+  {
+    id: 'gov-parties-interest-groups-ent-7a',
+    question: "Which of the following activities remains prohibited after the Supreme Court's decision in *Citizens United v. FEC* (2010)?",
+    options: ["A union paying for its own ads that oppose a candidate", "A corporation giving treasury funds straight to a candidate", "A corporation funding a super PAC that supports a candidate", "A nonprofit group airing a film that criticizes a candidate"],
+    correctIndex: 1,
+    explanation: "*Citizens United* protected independent spending by corporations and unions, but the long-standing ban on corporate contributions directly to federal candidates still stands. Funding a super PAC and independent ads are permitted.",
+    partNumber: 7,
+    partTitle: "AP Review",
+  },
+  {
+    id: 'gov-parties-interest-groups-ent-7b',
+    question: "In State R, candidates of every party appear on a single primary ballot open to all voters, and the two top vote-getters advance to the general election even if both belong to the same party. What kind of primary does State R use?",
+    options: ["A closed primary", "A caucus", "An open primary", "A top-two primary"],
+    correctIndex: 3,
+    explanation: "A top-two, or blanket, primary puts all candidates on one ballot and advances the two leaders regardless of party. A closed primary is limited to party members, and an open primary lets any voter choose one party's ballot.",
+    partNumber: 7,
+    partTitle: "AP Review",
+  },
 ]
 
-function shuffle<T>(array: T[]): T[] {
-  const result = [...array]
-  for (let i = result.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[result[i], result[j]] = [result[j], result[i]]
-  }
-  return result
-}
-
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return shuffle(allQuestions)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Core Concepts' },
-    { partNumber: 2, partTitle: 'Key Processes' },
-    { partNumber: 3, partTitle: 'Patterns & Examples' },
-    { partNumber: 4, partTitle: 'Connections & Interactions' },
-    { partNumber: 5, partTitle: 'Change Over Time' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' },
+    { partNumber: 1, partTitle: "Core Concepts" },
+    { partNumber: 2, partTitle: "Key Processes" },
+    { partNumber: 3, partTitle: "Patterns & Examples" },
+    { partNumber: 4, partTitle: "Connections & Interactions" },
+    { partNumber: 5, partTitle: "Change Over Time" },
+    { partNumber: 6, partTitle: "Problem-Solving Workshop" },
+    { partNumber: 7, partTitle: "AP Review" },
   ]
 }

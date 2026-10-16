@@ -1,228 +1,164 @@
+/**
+ * Entrance Quiz — Media and Technology (AP US Government and Politics) — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
+ */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
-export const govMediaTechnologyEntranceQuiz: EntranceQuizQuestion[] = [
-  // Part 1: Core Concepts
+const questions: EntranceQuizQuestion[] = [
+  // Part 1 — Core Concepts: framing; the watchdog role
   {
-    id: 'govmedia-ent-1',
-    partTitle: 'Core Concepts',
+    id: 'gov-media-technology-ent-1a',
+    question: "Two news outlets cover the same downtown gathering. One describes \"protesters demanding justice,\" and the other describes \"rioters damaging property.\" Which media effect does this difference illustrate?",
+    options: ["Agenda-setting effects", "Framing effects", "Gatekeeping", "Horse-race coverage"],
+    correctIndex: 1,
+    explanation: "Framing is how a story is presented, which shapes how audiences interpret the same event. Agenda-setting concerns which issues people think are important, and gatekeeping concerns which stories get covered at all.",
     partNumber: 1,
-    question: "Harold LASSWELL (1948) identified FOUR FUNCTIONS of media. Which is NOT one of them?",
-    options: [
-      "Surveillance (information about environment)",
-      "Correlation (interpretation + analysis)",
-      "Transmission (cultural socialization)",
-      "Litigation (judicial proceedings)"
-    ],
+    partTitle: "Core Concepts",
+  },
+  {
+    id: 'gov-media-technology-ent-1b',
+    question: "Reporters uncover documents showing that a federal agency hid repeated safety failures. Their stories prompt congressional hearings, and two senior officials resign. Which function of the media does this episode best illustrate?",
+    options: ["Entertainment that attracts large audiences", "Horse-race coverage of a political contest", "Transmission of cultural values to the young", "The watchdog role of exposing misconduct"],
     correctIndex: 3,
-    explanation: "LASSWELL 1948 identified SURVEILLANCE + CORRELATION + TRANSMISSION + ENTERTAINMENT (Charles Wright 1959 added MOBILIZATION). LITIGATION is not a media function — it's a judicial process. Lasswell's framework remains foundational for AP analysis of media's role in politics."
-  },
-  {
-    id: 'govmedia-ent-2',
-    partTitle: 'Core Concepts',
+    explanation: "Investigative reporting that exposes wrongdoing and triggers accountability, as in Watergate, is the press acting as a watchdog. Horse-race coverage concerns who is ahead in an election.",
     partNumber: 1,
-    question: "NEW YORK TIMES CO. v. SULLIVAN (1964) established what STANDARD for DEFAMATION suits by PUBLIC OFFICIALS?",
-    options: [
-      "Strict liability — any false statement = defamation",
-      "Actual malice — knowing falsity or reckless disregard for truth",
-      "Negligence — failure to exercise reasonable care",
-      "Substantial truth — close-enough is sufficient"
-    ],
-    correctIndex: 1,
-    explanation: "NYT v. SULLIVAN 1964 (UNANIMOUS Brennan) established ACTUAL MALICE STANDARD — public officials must prove KNOWING FALSITY or RECKLESS DISREGARD for truth + by clear + convincing evidence. Civil Rights Era origins (Heed Their Rising Voices ad March 29 1960). Foundation of modern press freedom. Applied in Dominion v. Fox $787.5M settlement April 18, 2023."
+    partTitle: "Core Concepts",
   },
-  // Part 2: Key Processes
+
+  // Part 2 — Key Processes: earned media; shifting ad spending
   {
-    id: 'govmedia-ent-3',
-    partTitle: 'Key Processes',
-    partNumber: 2,
-    question: "DOMINION VOTING SYSTEMS v. FOX NEWS (April 18, 2023) settled for HOW MUCH related to 2020 election fraud claims?",
-    options: [
-      "$50 million",
-      "$200 million",
-      "$787.5 million",
-      "$1.5 billion"
-    ],
-    correctIndex: 2,
-    explanation: "DOMINION v. FOX NEWS settled for $\\$787.5$ MILLION on April 18, 2023 — largest known defamation settlement in US media history. Fox knowingly broadcast false claims about Dominion voting machines manipulating 2020 election. Applied NYT v. Sullivan 1964 actual malice standard. Internal Fox communications showed hosts/executives knew claims were false but aired anyway for ratings. Smartmatic separate $\\$2.7$B suit pending."
-  },
-  {
-    id: 'govmedia-ent-4',
-    partTitle: 'Key Processes',
-    partNumber: 2,
-    question: "The MUELLER REPORT (April 18, 2019) confirmed that RUSSIA's INTERNET RESEARCH AGENCY (IRA) interfered in the 2016 election by:",
-    options: [
-      "Hacking voting machines to flip vote totals in swing states",
-      "Conducting social media disinformation + creating fake American personas + organizing real-world rallies",
-      "Bribing US election officials to allow non-citizen voting",
-      "There was no Russian interference confirmed by Mueller"
-    ],
-    correctIndex: 1,
-    explanation: "MUELLER REPORT 2019 confirmed RUSSIAN IRA conducted SOCIAL MEDIA DISINFORMATION campaign + created FAKE AMERICAN PERSONAS + organized REAL-WORLD RALLIES (Heart of Texas + Blacktivist + others); reached ~126M Americans on Facebook + ~20M on Instagram. Did NOT find evidence of vote-machine hacking but did find HACKING of DNC + Clinton campaign emails by GRU (Russian military intelligence). 2024 cycle Russia/China/Iran continued interference per FBI/ODNI."
-  },
-  // Part 3: Patterns & Examples
-  {
-    id: 'govmedia-ent-5',
-    partTitle: 'Patterns & Examples',
-    partNumber: 3,
-    question: "Eli PARISER (2011) coined which TERM describing how ALGORITHMIC CURATION creates information silos?",
-    options: [
-      "Echo chamber",
-      "Filter bubble",
-      "Cable news divide",
-      "Spiral of silence"
-    ],
-    correctIndex: 1,
-    explanation: "ELI PARISER (2011 The Filter Bubble: What the Internet Is Hiding from You) coined FILTER BUBBLE — algorithmic curation creates personalized information environments that filter out opposing views; concept distinct from but related to ECHO CHAMBERS (Cass Sunstein 2001 Republic.com + 2017 #Republic — voluntary self-selection into ideologically homogeneous communities). Both contribute to AFFECTIVE POLARIZATION (Iyengar 2012). MEGA-IDENTITY (Mason 2018)."
-  },
-  {
-    id: 'govmedia-ent-6',
-    partTitle: 'Patterns & Examples',
-    partNumber: 3,
-    question: "REPUBLICAN TRUST in MASS MEDIA collapsed from approximately ~41% in 1997 to approximately WHAT % in 2024 per Gallup polling?",
-    options: [
-      "~35% (modest decline)",
-      "~25% (significant decline)",
-      "~12% (near-collapse)",
-      "Republican trust has actually increased to ~50%"
-    ],
-    correctIndex: 2,
-    explanation: "GALLUP 2024 — REPUBLICAN trust in mass media collapsed to ~12% (from ~41% 1997) representing NEAR-COLLAPSE; DEMOCRATIC trust ~54%; MASSIVE PARTISAN GAP ~42 points. OVERALL TRUST 1976 ~72% → 2024 ~31%. Key drivers — Fairness Doctrine repeal 1987 + cable explosion + Fox News 1996 + talk radio + internet + Trump anti-media rhetoric ('fake news' + 'enemy of the people') + algorithmic content + foreign interference. Profound implications for democratic deliberation."
-  },
-  // Part 4: Connections & Interactions
-  {
-    id: 'govmedia-ent-7',
-    partTitle: 'Connections & Interactions',
-    partNumber: 4,
-    question: "On MAY 2, 2022, Politico published an UNPRECEDENTED leak of WHICH SCOTUS DOCUMENT?",
-    options: [
-      "Justice Roberts' dissent in Bush v. Gore (2000)",
-      "Justice Alito's draft majority opinion in Dobbs v. Jackson Women's Health (2022)",
-      "Justice Sotomayor's dissent in Citizens United (2010)",
-      "There was no SCOTUS leak in May 2022"
-    ],
-    correctIndex: 1,
-    explanation: "DOBBS DRAFT LEAK (May 2, 2022) — Politico published Justice ALITO's DRAFT MAJORITY OPINION in Dobbs v. Jackson Women's Health Organization ~2 months before official June 24 release; FIRST KNOWN INSTANCE in SCOTUS history of draft majority opinion publicly leaked; revealed 5-Justice majority overruling Roe (1973) + Casey (1992); Marshal Gail Curley investigation (Jan 2023) INCONCLUSIVE; LEAKER UNKNOWN. Armed man Nicholas Roske arrested outside Kavanaugh home June 8, 2022."
-  },
-  {
-    id: 'govmedia-ent-8',
-    partTitle: 'Connections & Interactions',
-    partNumber: 4,
-    question: "Approximately how many FOIA REQUESTS are RECEIVED by FEDERAL AGENCIES per FISCAL YEAR (recent years)?",
-    options: [
-      "~10,000",
-      "~100,000",
-      "~800,000",
-      "~5 million"
-    ],
-    correctIndex: 2,
-    explanation: "~800,000 FOIA REQUESTS received per FISCAL YEAR (recent years 2020-2023; FOIA.gov annual reports). Most to (1) DHS/USCIS immigration files dominate ~400,000+ + (2) DOJ + (3) State + (4) DoD + (5) HHS. FOIA 1966 + 1974 + 1996 + 2007 + 2016 amendments. Routine investigative + research + commercial + advocacy tool. Backlogs + 9 exemptions + litigation common. Sunshine Week (March; ASNE-sponsored) celebrates open government."
-  },
-  // Part 5: Change Over Time
-  {
-    id: 'govmedia-ent-9',
-    partTitle: 'Change Over Time',
-    partNumber: 5,
-    question: "On AUGUST 4, 1987, the FCC under REAGAN ELIMINATED which 1949 RULE that had required broadcasters to present BALANCED views on controversial issues?",
-    options: [
-      "Equal Time Rule",
-      "Fairness Doctrine",
-      "Section 230 of CDA",
-      "Telecommunications Act"
-    ],
-    correctIndex: 1,
-    explanation: "FAIRNESS DOCTRINE (FCC 1949-1987) — required broadcasters to (1) cover controversial issues + (2) present contrasting viewpoints; based on SCARCITY DOCTRINE (Red Lion Broadcasting v. FCC 1969 unanimous SCOTUS); REPEALED Aug 4 1987 Reagan FCC Chairman Mark Fowler; ENABLED EXPLOSION of conservative talk radio (Limbaugh 1988 ~15M peak) + cable news (Fox 1996 + MSNBC 1996); Congress attempted restoration 1987/1991/1993/2007 — failed; formally removed 2011 (Obama FCC); CRITICAL TURNING POINT in modern American media-politics."
-  },
-  {
-    id: 'govmedia-ent-10',
-    partTitle: 'Change Over Time',
-    partNumber: 5,
-    question: "The TELECOMMUNICATIONS ACT of 1996 included which LANDMARK PROVISION (now known as the '26 WORDS that CREATED the INTERNET')?",
-    options: [
-      "Section 315 (Equal Time Rule)",
-      "Section 230 (platform immunity for user content)",
-      "Title V (CDA indecency provisions struck by Reno v. ACLU 1997)",
-      "Section 326 (broadcast licensing)"
-    ],
-    correctIndex: 1,
-    explanation: "SECTION 230 of CDA 1996 — Kosseff (2019) '26 words that created the internet': 'No provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider.' Provides PLATFORM IMMUNITY for user-generated content. (c)(2) Good Samaritan immunity for moderation. Wyden D-OR + Cox R-CA bipartisan sponsors. Enabled Facebook + Google + YouTube + Twitter. Current reform — EARN IT/PACT/KOSA. Moody/Paxton 2024 affirmed platform editorial discretion."
-  },
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'govmedia-ent-11',
-    partTitle: 'Problem-Solving Workshop',
-    partNumber: 6,
-    question: "Per SECTION 230 of CDA 1996, the KEY PHRASE about platforms is approximately HOW MANY WORDS (per Kosseff 2019)?",
-    options: [
-      "26 words",
-      "100 words",
-      "500 words",
-      "1,000 words"
-    ],
+    id: 'gov-media-technology-ent-2a',
+    question: "During a presidential campaign, networks repeatedly air a candidate's rallies live and replay his posts online, giving him coverage worth billions of dollars for which his campaign pays nothing. What is this coverage called?",
+    options: ["Earned media", "Paid advertising", "An issue ad", "A push poll"],
     correctIndex: 0,
-    explanation: "26 WORDS THAT CREATED THE INTERNET — Jeff Kosseff (2019 Cornell University Press) book title; Section 230(c)(1): 'No provider or user of an interactive computer service shall be treated as the publisher or speaker of any information provided by another information content provider.' Enabled platform immunity for user-generated content + revolutionized internet. Current reform proposals — EARN IT (Graham/Blumenthal CSAM) + PACT (Schatz/Thune transparency) + KOSA (Blumenthal/Blackburn minors). EU DSA 2022 alternative model."
+    explanation: "Earned media is free news coverage a candidate attracts, as opposed to paid advertising the campaign buys. Issue ads and push polls are both purchased by campaigns or outside groups.",
+    partNumber: 2,
+    partTitle: "Key Processes",
   },
   {
-    id: 'govmedia-ent-12',
-    partTitle: 'Problem-Solving Workshop',
-    partNumber: 6,
-    question: "FEDERALIST 10 by JAMES MADISON addresses the PROBLEM of FACTION through which mechanism?",
-    options: [
-      "Strong central authority + suppression of opposition",
-      "Direct democracy + frequent referendums",
-      "Extended republic + structural representation that filters factions",
-      "Religious unity + national church"
-    ],
+    id: 'gov-media-technology-ent-2b',
+    question: "Hypothetical data on the share of political advertising spending by medium:\n- Broadcast television: 70 percent in 2012, 48 percent in 2024\n- Digital and social media: 15 percent in 2012, 45 percent in 2024\nWhich conclusion do these data best support?",
+    options: ["Campaigns spent less on advertising in 2024 than they did in 2012", "Broadcast television disappeared as an advertising medium by 2024", "Campaigns moved much of their advertising money toward online platforms", "Digital ads made up most political ad spending in both years shown"],
     correctIndex: 2,
-    explanation: "FEDERALIST 10 (Madison 1787) — addresses FACTION CONTROL through EXTENDED REPUBLIC + structural mechanisms; large diverse republic prevents any single faction from dominating + representation filters passions through deliberation; modern application — fragmented media ecosystem + filter bubbles undermine extended republic logic by allowing factions to NEVER ENCOUNTER opposing views; requires NEW STRUCTURAL MECHANISMS for digital age. Foundational document for AP Government media + technology + democracy analysis."
+    explanation: "Digital's share tripled while broadcast's share fell by about a third, showing a shift toward online and targeted advertising. The data give shares, not totals, so they say nothing about whether overall spending fell.",
+    partNumber: 2,
+    partTitle: "Key Processes",
   },
-  // Part 7: AP Review
+
+  // Part 3 — Patterns & Examples: selective exposure; trust in the media
   {
-    id: 'govmedia-ent-13',
-    partTitle: 'AP Review',
-    partNumber: 7,
-    question: "CITIZENS UNITED v. FEC (2010) held that CORPORATIONS + UNIONS have a 1st AMENDMENT RIGHT to:",
-    options: [
-      "Direct contributions to candidates without limit",
-      "Independent political expenditures (not direct contributions)",
-      "Run for office without disclosure",
-      "Vote in federal elections through corporate proxies"
-    ],
-    correctIndex: 1,
-    explanation: "CITIZENS UNITED v. FEC (2010) — 5-4 SCOTUS (Kennedy majority); held CORPORATIONS + UNIONS have 1st Amendment right to INDEPENDENT POLITICAL EXPENDITURES (NOT direct contributions to candidates which remain regulated); STRUCK BCRA McCain-Feingold 2002 §203 ban on corporate/union electioneering communications; OVERRULED Austin (1990) + parts of McConnell (2003); enabled SUPER PAC era (SpeechNow.org v. FEC 2010 D.C. Circuit) + DARK MONEY (501(c)(4)). 2024 cycle ~$15B+ total spending."
+    id: 'gov-media-technology-ent-3a',
+    question: "Hypothetical audience data: 80 percent of one cable network's regular viewers identify with Party A, while 75 percent of a rival network's regular viewers identify with Party B. Which concept best explains these audiences?",
+    options: ["Gatekeeping", "Agenda-setting", "Prior restraint", "Selective exposure"],
+    correctIndex: 3,
+    explanation: "Selective exposure is the tendency to choose news sources that match one's existing views, which sorts partisan audiences toward different outlets. Gatekeeping is done by editors deciding what becomes news, not by audiences.",
+    partNumber: 3,
+    partTitle: "Patterns & Examples",
   },
   {
-    id: 'govmedia-ent-14',
-    partTitle: 'AP Review',
-    partNumber: 7,
-    question: "MOODY v. NETCHOICE + NETCHOICE v. PAXTON (July 1, 2024) — what did SCOTUS DECIDE?",
-    options: [
-      "Upheld Florida + Texas social media content moderation laws",
-      "Vacated/remanded lower courts + AFFIRMED platform editorial discretion as 1st Amendment-protected",
-      "Required platforms to host all viewpoints without moderation",
-      "SCOTUS declined to hear the cases"
-    ],
+    id: 'gov-media-technology-ent-3b',
+    question: "Survey data on the share of Americans who trust the mass media a great deal or a fair amount:\n- 1976: 72 percent of all adults\n- 2024: 31 percent of all adults; 54 percent of Democrats; 12 percent of Republicans\nWhich conclusion do these data best support?",
+    options: ["Trust rose over time and became similar across the parties", "Overall trust dropped and now differs widely by party", "Trust fell only among Democrats while Republicans held steady", "Trust stayed at about the same level from 1976 to 2024"],
     correctIndex: 1,
-    explanation: "MOODY v. NETCHOICE + NETCHOICE v. PAXTON (July 1, 2024) — UNANIMOUS 9-0 SCOTUS (Kagan majority); VACATED + REMANDED 11th Circuit + 5th Circuit decisions on FLORIDA SB 7072 + TEXAS HB 20 social media content moderation laws; ruled lower courts inadequately analyzed 1st Amendment claims using FACIAL CHALLENGE standards; AFFIRMED platforms have 1st AMENDMENT EDITORIAL DISCRETION (citing Miami Herald v. Tornillo 1974); 'expressive product' of content moderation = 1st Am-protected; concurrences Barrett + Jackson + Thomas + Alito (skeptical)."
-  }
+    explanation: "Overall trust dropped from 72 to 31 percent, and the 42-point gap between Democrats and Republicans shows a strong partisan divide. Such low and divided trust raises concern about the credibility of news sources.",
+    partNumber: 3,
+    partTitle: "Patterns & Examples",
+  },
+
+  // Part 4 — Connections & Interactions: media and the bureaucracy; priming
+  {
+    id: 'gov-media-technology-ent-4a',
+    question: "A reporter uses a 1966 federal law to request an agency's internal safety inspection records and, after a long wait, receives most of them. Which tool did the reporter use, and what does it support?",
+    options: ["The Freedom of Information Act, aiding oversight of agencies", "The Fairness Doctrine, requiring agencies to give balanced views", "The equal-time rule, guaranteeing reporters access to officials", "A prior restraint order, allowing agencies to block publication"],
+    correctIndex: 0,
+    explanation: "The Freedom of Information Act lets the public and press obtain government records, a key tool for holding the bureaucracy accountable. The Fairness Doctrine and equal-time rule applied to broadcasters, not to agency records.",
+    partNumber: 4,
+    partTitle: "Connections & Interactions",
+  },
+  {
+    id: 'gov-media-technology-ent-4b',
+    question: "After months of heavy coverage of a president's handling of a foreign war, surveys show that voters' overall approval of the president depends much more on the war and much less on the economy than before. Which media effect does this illustrate?",
+    options: ["Gatekeeping", "Hostile media perception", "Priming", "Earned media"],
+    correctIndex: 2,
+    explanation: "Priming occurs when coverage makes certain considerations more prominent in how people evaluate leaders. Hostile media perception is the tendency of partisans to see neutral coverage as biased against them.",
+    partNumber: 4,
+    partTitle: "Connections & Interactions",
+  },
+
+  // Part 5 — Change Over Time: muckraking; partisan media then and now
+  {
+    id: 'gov-media-technology-ent-5a',
+    question: "In the early 1900s, magazine and book exposés of unsanitary meatpacking and of monopoly practices helped produce the Pure Food and Drug Act and antitrust action. What does this history best illustrate?",
+    options: ["Government censorship of the press during a reform era", "Investigative journalism prompting major policy reform", "Broadcast media replacing print as the main news source", "Yellow journalism pushing the nation into a foreign war"],
+    correctIndex: 1,
+    explanation: "Progressive Era muckrakers such as Upton Sinclair and Ida Tarbell exposed abuses that spurred reforms, an early example of the watchdog press shaping policy. Radio and television came later.",
+    partNumber: 5,
+    partTitle: "Change Over Time",
+  },
+  {
+    id: 'gov-media-technology-ent-5b',
+    question: "Newspapers in the 1790s were openly funded by and loyal to political parties. In the mid-twentieth century, a few broadcast networks aimed for balanced coverage. After 1987, when the rule requiring broadcasters to present balanced views was repealed, openly partisan talk radio and cable news grew. Which long-term pattern does this describe?",
+    options: ["A steady move toward ever more balanced coverage", "A permanent end to the partisan press after 1800", "A shift from broadcast to print as the main source", "A swing from partisan press to balance and back again"],
+    correctIndex: 3,
+    explanation: "Media have moved from a partisan press, to an era of objective broadcast journalism, and back toward partisan outlets after the Fairness Doctrine was repealed and cable and the internet fragmented audiences.",
+    partNumber: 5,
+    partTitle: "Change Over Time",
+  },
+
+  // Part 6 — Problem-Solving Workshop: regulating new technology; required documents
+  {
+    id: 'gov-media-technology-ent-6a',
+    question: "A state wants to address AI-generated fake videos of candidates while respecting the First Amendment. Which approach is most likely to survive a court challenge?",
+    options: ["Banning every video that mocks or criticizes a candidate", "Requiring state approval before any political video is posted", "Requiring clear labels on political ads made with AI tools", "Letting candidates order platforms to delete any post they dislike"],
+    correctIndex: 2,
+    explanation: "A narrow disclosure requirement addresses deception without banning speech, while broad bans on criticism, prior approval of videos, and deletion on demand would sweep in protected political speech and satire. Prior approval is a form of prior restraint, which courts strongly disfavor.",
+    partNumber: 6,
+    partTitle: "Problem-Solving Workshop",
+  },
+  {
+    id: 'gov-media-technology-ent-6b',
+    question: "An essay argues that the framers counted on a large and diverse republic to keep like-minded factions from finding one another and combining, but that partisan media and social networks now let them coordinate across the whole country. Which required document is the essay engaging?",
+    options: ["Federalist No. 10", "Federalist No. 78", "Brutus No. 1", "Federalist No. 70"],
+    correctIndex: 0,
+    explanation: "Federalist No. 10 argues that an extended republic makes it harder for a majority faction to form and act together, the logic the essay says modern media undercut. Federalist No. 78 concerns the judiciary.",
+    partNumber: 6,
+    partTitle: "Problem-Solving Workshop",
+  },
+
+  // Part 7 — AP Review: required press case; platform liability
+  {
+    id: 'gov-media-technology-ent-7a',
+    question: "A federal judge orders a newspaper not to publish leaked documents about a classified military program, and the Supreme Court lifts the order because the government has not shown sufficient justification. Which required case does this ruling most closely resemble?",
+    options: ["*Schenck v. United States*", "*Tinker v. Des Moines*", "*Citizens United v. FEC*", "*New York Times Co. v. United States*"],
+    correctIndex: 3,
+    explanation: "*New York Times Co. v. United States* refused to block publication of the Pentagon Papers, applying a heavy presumption against prior restraint. *Schenck* upheld punishment of speech after the fact during wartime.",
+    partNumber: 7,
+    partTitle: "AP Review",
+  },
+  {
+    id: 'gov-media-technology-ent-7b',
+    question: "A user posts a false claim on a large social media site that a family restaurant failed its health inspections, and the restaurant sues the site rather than the user. Under the 1996 federal provision known as Section 230, what is the most likely result?",
+    options: ["The site is liable, since it published the claim to its users", "The site is shielded from liability for what its users post", "The site must pay the owner whatever the user cannot afford", "The site must remove all posts that mention local businesses"],
+    correctIndex: 1,
+    explanation: "Section 230 generally shields online platforms from liability for content posted by their users, so the user, not the site, would be the proper defendant. Supporters say this protects online speech; critics want it narrowed.",
+    partNumber: 7,
+    partTitle: "AP Review",
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  const shuffled = [...govMediaTechnologyEntranceQuiz]
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
-  }
-  return shuffled
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Core Concepts' },
-    { partNumber: 2, partTitle: 'Key Processes' },
-    { partNumber: 3, partTitle: 'Patterns & Examples' },
-    { partNumber: 4, partTitle: 'Connections & Interactions' },
-    { partNumber: 5, partTitle: 'Change Over Time' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' },
+    { partNumber: 1, partTitle: "Core Concepts" },
+    { partNumber: 2, partTitle: "Key Processes" },
+    { partNumber: 3, partTitle: "Patterns & Examples" },
+    { partNumber: 4, partTitle: "Connections & Interactions" },
+    { partNumber: 5, partTitle: "Change Over Time" },
+    { partNumber: 6, partTitle: "Problem-Solving Workshop" },
+    { partNumber: 7, partTitle: "AP Review" },
   ]
 }

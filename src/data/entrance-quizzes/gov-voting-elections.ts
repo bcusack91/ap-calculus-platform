@@ -1,162 +1,164 @@
+/**
+ * Entrance Quiz — Voting and Elections (AP US Government and Politics) — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
+ */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
+import { shuffleArray } from '@/lib/shuffle-options'
 
-const allQuestions: EntranceQuizQuestion[] = [
-  // Part 1 — Core Concepts
+const questions: EntranceQuizQuestion[] = [
+  // Part 1 — Core Concepts: models of voting behavior; turnout patterns
   {
-    id: 'govvotin-ent-1',
+    id: 'gov-voting-elections-ent-1a',
+    question: "Before an election, a voter studies each candidate's plans for the next four years and chooses the one whose agenda she expects will work best for the country, regardless of how the current officeholders have performed. Which model of voting behavior does this illustrate?",
+    options: ["Retrospective voting", "Straight-ticket voting", "Prospective voting", "Party-line voting"],
+    correctIndex: 2,
+    explanation: "Prospective voting bases a choice on predictions of how candidates will perform in the future. Retrospective voting judges the party in power by its past record, and straight-ticket voting means backing one party for every office.",
     partNumber: 1,
-    partTitle: 'Core Concepts',
-    question: 'Which AMENDMENT lowered the VOTING AGE from 21 to 18 in 1971 during the VIETNAM WAR?',
-    options: ['15th Amendment', '19th Amendment', '24th Amendment', '26th Amendment'],
-    correctIndex: 3,
-    explanation: '26TH AMENDMENT (1971) lowered voting age from 21 to 18 during Vietnam War; "old enough to fight, old enough to vote"; FASTEST amendment ratification in US history (3 months 8 days); expanded electorate by ~11M young voters; 15th 1870 (race), 19th 1920 (women), 24th 1964 (poll tax).'
+    partTitle: "Core Concepts",
   },
   {
-    id: 'govvotin-ent-2',
-    partNumber: 1,
-    partTitle: 'Core Concepts',
-    question: 'How many ELECTORAL VOTES are needed to WIN the PRESIDENCY?',
-    options: ['250', '270', '300', '538'],
-    correctIndex: 1,
-    explanation: '270 electoral votes needed to win (majority of 538); 538 = 435 House + 100 Senate + 3 DC (per 23rd Amendment 1961); winner-take-all in 48 states + DC; district method in ME + NE; 5 popular vote losses (1824/1876/1888/2000/2016); Chiafalo v. Washington 2020 unanimous upheld faithless elector laws.'
-  },
-  // Part 2 — Key Processes
-  {
-    id: 'govvotin-ent-3',
-    partNumber: 2,
-    partTitle: 'Key Processes',
-    question: 'Which 2010 SCOTUS DECISION held CORPORATIONS HAVE 1ST AMENDMENT RIGHTS for INDEPENDENT POLITICAL EXPENDITURES?',
-    options: ['Buckley v. Valeo', 'McConnell v. FEC', 'Citizens United v. FEC', 'McCutcheon v. FEC'],
-    correctIndex: 2,
-    explanation: 'CITIZENS UNITED v. FEC (2010) — 5-4 Kennedy majority held corporations have 1st Amendment speech rights for independent political expenditures; reversed Austin v. Michigan Chamber 1990; struck BCRA Section 203; SpeechNow v. FEC 2010 (DC Circuit) followed creating Super PACs; McCutcheon 2014 struck aggregate individual limits; 2024 ~$15B + Musk $300M+ to Trump.'
-  },
-  {
-    id: 'govvotin-ent-4',
-    partNumber: 2,
-    partTitle: 'Key Processes',
-    question: 'Who was the MASSACHUSETTS GOVERNOR (1812) whose name became associated with PARTISAN DISTRICT MANIPULATION (salamander-shaped district)?',
-    options: ['John Hancock', 'Samuel Adams', 'Elbridge Gerry', 'John Adams'],
-    correctIndex: 2,
-    explanation: 'ELBRIDGE GERRY — Massachusetts governor 1812; salamander-shaped district drawn during his tenure; Boston Gazette cartoonist combined "Gerry" + "salamander" = "gerrymander"; Gerry was Founding Father + signer of Declaration + VP under Madison; PACKING (concentrating) + CRACKING (splitting); Shaw v. Reno 1993 + Rucho v. Common Cause 2019 + Allen v. Milligan 2023 + Moore v. Harper 2023.'
-  },
-  // Part 3 — Patterns & Examples
-  {
-    id: 'govvotin-ent-5',
-    partNumber: 3,
-    partTitle: 'Patterns & Examples',
-    question: 'Which 1932 PRESIDENT created the NEW DEAL COALITION that dominated American politics until 1968?',
-    options: ['Herbert Hoover', 'Franklin D. Roosevelt', 'Harry Truman', 'Woodrow Wilson'],
-    correctIndex: 1,
-    explanation: 'FDR 1932 — created NEW DEAL COALITION combining urban workers + Catholics + Jews + African Americans (shifted from Republican post-Reconstruction) + Southern whites + farmers + intellectuals + labor; dominated American politics 1932-1968 (36 years); won 4 presidential elections (1932/36/40/44); died April 12 1945; coalition fractured over civil rights + Vietnam culminating in 1968 Nixon victory + Sun Belt realignment.'
-  },
-  {
-    id: 'govvotin-ent-6',
-    partNumber: 3,
-    partTitle: 'Patterns & Examples',
-    question: 'In 2024, what was the GENDER GAP pattern in the presidential election?',
-    options: ['Men +13 Harris; Women +12 Trump', 'Women +13 Harris; Men +12 Trump', 'No gender gap', 'Both genders supported Trump equally'],
-    correctIndex: 1,
-    explanation: '2024 GENDER GAP — Women +13 Harris; Men +12 Trump; ~25 pt total gap; consistent with historic pattern (women lean Democratic since 1980; men lean Republican); diploma divide expanded — White college Harris 56-42; non-college Trump 67-32; Latino 46% Trump historic high; Black men 22% Trump highest since 1960; ~27 pt young men shift toward Trump 2020-2024.'
-  },
-  // Part 4 — Connections
-  {
-    id: 'govvotin-ent-7',
-    partNumber: 4,
-    partTitle: 'Connections & Interactions',
-    question: 'Whose famous 1992 CAMPAIGN SLOGAN — "It\'s the economy, stupid" — captured RETROSPECTIVE ECONOMIC VOTING?',
-    options: ['George H.W. Bush', 'Ross Perot', 'James Carville', 'Bill Clinton'],
-    correctIndex: 2,
-    explanation: 'JAMES CARVILLE — Bill Clinton\'s 1992 campaign strategist; coined "It\'s the economy, stupid" as one of three campaign focus points (along with "Change vs. more of the same" + "Don\'t forget health care"); captured RETROSPECTIVE ECONOMIC VOTING per V.O. Key 1966 + Morris Fiorina 1981; Bush lost 1992 despite Gulf War victory due to recession; Clinton won 43% (Perot 19% third party); Carville became famous Democratic strategist.'
-  },
-  {
-    id: 'govvotin-ent-8',
-    partNumber: 4,
-    partTitle: 'Connections & Interactions',
-    question: 'When ONE PARTY controls the WHITE HOUSE + SENATE + HOUSE, this is called a:',
-    options: ['Divided government', 'Parliamentary majority', 'Trifecta', 'Coalition government'],
-    correctIndex: 2,
-    explanation: 'TRIFECTA — when ONE PARTY controls the WHITE HOUSE + SENATE + HOUSE simultaneously; enables passage of partisan legislation; recent trifectas — Bush 2003-07 (R; tax cuts + Medicare Part D + Iraq War); Obama 2009-11 (D; ACA + Dodd-Frank); Trump 2017-19 (R; tax cuts + Gorsuch); Biden 2021-23 (D; ARP + IIJA + IRA + CHIPS); TRUMP 2025-? (R; second trifecta); typically lost in midterm "shellacking" pattern.'
-  },
-  // Part 5 — Change Over Time
-  {
-    id: 'govvotin-ent-9',
-    partNumber: 5,
-    partTitle: 'Change Over Time',
-    question: 'Which 1965 LANDMARK LEGISLATION restored BLACK VOTING ACCESS by banning literacy tests + creating PRECLEARANCE?',
-    options: ['Civil Rights Act 1957', 'Civil Rights Act 1964', 'Voting Rights Act 1965', 'Help America Vote Act 2002'],
-    correctIndex: 2,
-    explanation: 'VOTING RIGHTS ACT 1965 — signed by LBJ Aug 6 1965 after Selma Bloody Sunday March 7 1965 + LBJ "We Shall Overcome" speech March 15 1965; Section 2 vote dilution nationwide; Section 5 preclearance; Section 4(b) coverage formula; reauthorized 1970/75/82/2006; impact: Black voter registration in MS rose 6.7% (1964) → 59.8% (1967); Shelby County 2013 gutted Section 4(b); Allen v. Milligan 2023 preserved Section 2.'
-  },
-  {
-    id: 'govvotin-ent-10',
-    partNumber: 5,
-    partTitle: 'Change Over Time',
-    question: 'In what year was the 26TH AMENDMENT (lowering voting age to 18) RATIFIED?',
-    options: ['1965', '1968', '1971', '1976'],
-    correctIndex: 2,
-    explanation: '26TH AMENDMENT (1971) — lowered voting age from 21 to 18; FASTEST amendment ratification in US history (3 months 8 days from Congress passage to ratification); Vietnam War context ("old enough to fight, old enough to vote"); followed Oregon v. Mitchell 1970 SCOTUS that Congress could lower age for federal but not state elections; expanded electorate by ~11M young voters; 18-29 turnout has historically been LOWEST.'
-  },
-  // Part 6 — Problem-Solving Workshop
-  {
-    id: 'govvotin-ent-11',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-    question: 'Which FEDERALIST PAPER (Madison 1787) defended the EXTENDED REPUBLIC + REPRESENTATION as remedy for FACTIONS?',
-    options: ['Federalist 10', 'Federalist 51', 'Federalist 70', 'Federalist 78'],
+    id: 'gov-voting-elections-ent-1b',
+    question: "Hypothetical turnout data from a recent presidential election:\n- Ages 18 to 29: 50 percent; ages 65 and older: 75 percent\n- College graduates: 78 percent; no college degree: 52 percent\nWhich conclusion do these data best support?",
+    options: ["Older and better-educated citizens were more likely to vote", "Younger citizens voted at higher rates than older citizens", "Education made little difference in who turned out to vote", "Turnout was roughly equal across every group shown"],
     correctIndex: 0,
-    explanation: 'FEDERALIST 10 (Madison 1787) — defended EXTENDED REPUBLIC + REPRESENTATION + DIVERSITY as remedy for FACTIONS; representatives "refine and enlarge the public views" via deliberation; rejected eliminating factions (would destroy liberty); argued large republic safer than small (more diverse interests + harder for single faction to dominate); defies Montesquieu small-republic theory; THE central document on Madisonian institutional filtering of public opinion.'
+    explanation: "Turnout was 25 points higher for the oldest group than the youngest and 26 points higher for college graduates than for those without degrees, consistent with age and education being strong predictors of voting.",
+    partNumber: 1,
+    partTitle: "Core Concepts",
+  },
+
+  // Part 2 — Key Processes: campaign finance; delegate allocation in primaries
+  {
+    id: 'gov-voting-elections-ent-2a',
+    question: "A group raises \\$20 million from a handful of wealthy donors and one corporation, then runs television ads supporting a Senate candidate. It never coordinates its spending with the candidate's campaign. How is the group best classified under current law?",
+    options: ["An illegal group, since contributions to a campaign are capped", "A party committee, since it spends to help one candidate win", "A traditional PAC, which may accept unlimited corporate funds", "A super PAC, which may collect unlimited sums if it acts independently"],
+    correctIndex: 3,
+    explanation: "Since *Citizens United v. FEC* and a related 2010 lower-court ruling, independent-expenditure-only committees, or super PACs, may raise unlimited amounts from individuals, corporations, and unions as long as they do not coordinate with candidates. Traditional PACs remain subject to contribution limits.",
+    partNumber: 2,
+    partTitle: "Key Processes",
   },
   {
-    id: 'govvotin-ent-12',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-    question: 'Which FEDERALIST PAPER (Hamilton 1788) argued the SENATE should be INSULATED FROM POPULAR PASSIONS because PEOPLE DON\'T ALWAYS REASON RIGHT?',
-    options: ['Federalist 10', 'Federalist 51', 'Federalist 71', 'Federalist 78'],
-    correctIndex: 2,
-    explanation: 'FEDERALIST 71 (Hamilton 1788) — argued Senate should be INSULATED from popular passions; "people commonly intend the public good but they do not always reason right about the means of promoting it"; defended Senate\'s 6-year terms + indirect election (then by state legislatures pre-17th Amendment 1913) + smaller size; central to Madisonian institutional filtering theory; relevant to modern debates about Senate filibuster + EC + judicial review serving counter-majoritarian functions.'
-  },
-  // Part 7 — AP Review
-  {
-    id: 'govvotin-ent-13',
-    partNumber: 7,
-    partTitle: 'AP Review',
-    question: 'Which JURIST coined the term "COUNTER-MAJORITARIAN DIFFICULTY" to describe judicial review tension with democracy?',
-    options: ['Earl Warren', 'Antonin Scalia', 'Alexander Bickel', 'John Marshall'],
-    correctIndex: 2,
-    explanation: 'ALEXANDER BICKEL — Yale Law professor; coined "COUNTER-MAJORITARIAN DIFFICULTY" in The Least Dangerous Branch (1962); argued judicial review creates fundamental tension with democratic principle (unelected judges overturning democratic decisions); central concept in debates over judicial review + JUDICIAL ACTIVISM vs RESTRAINT; Federalist 78 Hamilton defended judicial independence + lifetime tenure as "least dangerous branch"; relevant to all SCOTUS voting rights decisions.'
-  },
-  {
-    id: 'govvotin-ent-14',
-    partNumber: 7,
-    partTitle: 'AP Review',
-    question: 'In the SCAR template for AP FRQ writing, what does the "C" stand for?',
-    options: ['Compare alternatives', 'Cite evidence', 'Connect to context', 'Critique the question'],
+    id: 'gov-voting-elections-ent-2b',
+    question: "A party awards primary delegates in proportion to the vote, but only to candidates who win at least 15 percent. In one state's primary, Candidate A wins 45 percent, B wins 40 percent, C wins 10 percent, and D wins 5 percent. How are the state's delegates divided?",
+    options: ["All delegates go to Candidate A as the plurality winner", "A and B split the delegates roughly by their vote shares", "All four candidates receive delegates matching their shares", "The delegates are held until the national convention votes"],
     correctIndex: 1,
-    explanation: 'SCAR template — S = STATE the claim; C = CITE evidence (specific data + cases + amendments + dates + people); A = ANALYZE/APPLY (connect evidence to claim; explain HOW + WHY); R = REASONING/RESPONSE (counterarguments + deeper analysis + future implications); use for ALL AP FRQs to ensure complete + organized responses; never just state claim without evidence; never just list evidence without analysis; never end without addressing counterarguments + deeper implications.'
-  }
+    explanation: "Only A and B clear the 15 percent threshold, so they divide the delegates roughly in proportion to their shares, with A receiving somewhat more. Winner-take-all allocation would give everything to A.",
+    partNumber: 2,
+    partTitle: "Key Processes",
+  },
+
+  // Part 3 — Patterns & Examples: realigning elections; battleground states
+  {
+    id: 'gov-voting-elections-ent-3a',
+    question: "Black voters, who had mostly supported the Republican Party since the Civil War, shifted heavily toward the Democrats during the 1930s. Which development best explains this shift?",
+    options: ["The Democrats' adoption of the Voting Rights Act in that decade", "The Republican Party's abandonment of its Northern supporters", "The economic relief programs of Franklin Roosevelt's New Deal", "A constitutional amendment that ended segregation in the South"],
+    correctIndex: 2,
+    explanation: "New Deal relief and jobs programs drew Black voters into the Democratic coalition by 1936, part of the realignment that began in 1932. The Voting Rights Act came in 1965, and no amendment ended segregation.",
+    partNumber: 3,
+    partTitle: "Patterns & Examples",
+  },
+  {
+    id: 'gov-voting-elections-ent-3b',
+    question: "In recent presidential elections, only about seven states have been truly competitive, while the rest vote reliably for one party. Given that 48 states award all their electoral votes to the statewide winner, how does this pattern most likely shape campaigns?",
+    options: ["Candidates focus their visits and ad spending on a few swing states", "Candidates spend evenly in every state to win the national popular vote", "Candidates campaign mainly in the largest states, whatever their lean", "Candidates avoid swing states, since those states split their electors"],
+    correctIndex: 0,
+    explanation: "Under winner-take-all rules, extra votes in a safe state add no electors, so campaigns concentrate resources where the statewide result is in doubt. Maine and Nebraska are the only states that can split their electoral votes.",
+    partNumber: 3,
+    partTitle: "Patterns & Examples",
+  },
+
+  // Part 4 — Connections & Interactions: interest groups and parties in elections
+  {
+    id: 'gov-voting-elections-ent-4a',
+    question: "Before each election, an advocacy organization publishes letter grades for every member of Congress based on their votes on its issues and endorses the candidates with the highest grades. How does this activity most directly influence elections?",
+    options: ["It sets the legal limit on how much each candidate may spend", "It decides which candidates will appear on the general election ballot", "It replaces party identification as most voters' main guide", "It gives voters a shortcut for judging where candidates stand"],
+    correctIndex: 3,
+    explanation: "Ratings and endorsements act as cues, especially for voters with limited information, signaling which candidates share the group's views. Groups do not control ballot access or spending limits, and party identification remains the strongest guide for most voters.",
+    partNumber: 4,
+    partTitle: "Connections & Interactions",
+  },
+  {
+    id: 'gov-voting-elections-ent-4b',
+    question: "A hypothetical study tracks how often states choose the same party in a Senate race and the presidential race held in the same year:\n- 1980s: 55 percent of such contests\n- 2020s: 95 percent of such contests\nWhich conclusion do these data best support?",
+    options: ["Voters became more likely to choose different parties for different offices", "Split-ticket voting declined as loyalty to one side grew stronger", "Senate races came to depend mostly on candidates' local reputations", "Presidential coattails disappeared as a factor in Senate elections"],
+    correctIndex: 1,
+    explanation: "When nearly every state picks the same party for both offices, voters are rarely splitting their tickets, consistent with partisan sorting and the nationalization of elections. The data point toward stronger, not weaker, links between presidential and Senate voting.",
+    partNumber: 4,
+    partTitle: "Connections & Interactions",
+  },
+
+  // Part 5 — Change Over Time: media and campaigns; campaign finance law
+  {
+    id: 'gov-voting-elections-ent-5a',
+    question: "In the first televised presidential debate in 1960, according to accounts at the time, radio listeners thought Richard Nixon had done well, while many television viewers favored John Kennedy, who appeared calm and rested. What change in campaigning does this episode best illustrate?",
+    options: ["The new TV era made a candidate's on-screen image far more important", "Radio replaced newspapers as the main source of campaign information", "Debates stopped mattering because voters had already made up their minds", "Televised debates required candidates to accept public campaign funding"],
+    correctIndex: 0,
+    explanation: "The 1960 debate is a classic example of how television shifted attention toward candidates' visual presentation, a change that shaped campaigns from then on. Debates were not tied to public funding.",
+    partNumber: 5,
+    partTitle: "Change Over Time",
+  },
+  {
+    id: 'gov-voting-elections-ent-5b',
+    question: "Federal campaign finance rules changed in three steps: a 1971 law set contribution limits and disclosure rules, a 2002 law banned unlimited \"soft money\" gifts to national parties, and a 2010 Supreme Court ruling allowed unlimited independent spending by corporations and unions. Which statement best describes this pattern?",
+    options: ["Congress tightened rules, then the Court loosened them for outside groups", "Congress steadily removed limits, and the Court then restored them", "The rules have stayed basically the same since the 1970s", "The Court has banned corporate involvement in elections since 2010"],
+    correctIndex: 0,
+    explanation: "The 1971 and 2002 laws expanded regulation, while *Citizens United v. FEC* (2010) treated independent spending as protected speech, opening the way for super PACs. Direct corporate contributions to candidates remain banned, but outside spending is now unlimited.",
+    partNumber: 5,
+    partTitle: "Change Over Time",
+  },
+
+  // Part 6 — Problem-Solving Workshop: question types; required documents
+  {
+    id: 'gov-voting-elections-ent-6a',
+    question: "A free-response question asks: \"Should states join the National Popular Vote Interstate Compact?\" Using the problem-solving framework, what type of question is this, and what does a strong answer need?",
+    options: ["A causal explanation, needing several reasons why the compact was proposed", "A comparison, needing a parallel description of two different elections", "An evaluation, needing clear criteria and a weighing of pros and cons", "A prediction, needing a forecast of the next presidential election result"],
+    correctIndex: 2,
+    explanation: "A should-question asks for a judgment, so it is an evaluation that requires stating criteria and weighing arguments on both sides before reaching a conclusion. Causal, comparison, and prediction questions ask for different kinds of reasoning.",
+    partNumber: 6,
+    partTitle: "Problem-Solving Workshop",
+  },
+  {
+    id: 'gov-voting-elections-ent-6b',
+    question: "An essay defends the framers' choice of indirect methods for selecting some officials, arguing that passing public views through a chosen body of citizens will refine and enlarge them and help control the effects of faction. Which required document does the essay draw on?",
+    options: ["Brutus No. 1", "Federalist No. 10", "Federalist No. 78", "Federalist No. 70"],
+    correctIndex: 1,
+    explanation: "Federalist No. 10 argues that representation refines and enlarges public views and that a large republic controls the effects of faction. Brutus No. 1 argues instead that representatives in a large republic will be too distant from the people.",
+    partNumber: 6,
+    partTitle: "Problem-Solving Workshop",
+  },
+
+  // Part 7 — AP Review: required case comparison; why turnout is low
+  {
+    id: 'gov-voting-elections-ent-7a',
+    question: "In a case that is not on the required list, the Supreme Court strikes down a state law that barred corporations from spending their own money on advertisements about ballot measures, reasoning that such spending is protected political speech. Which required case does this ruling most closely resemble?",
+    options: ["*Baker v. Carr*", "*Shaw v. Reno*", "*Schenck v. United States*", "*Citizens United v. FEC*"],
+    correctIndex: 3,
+    explanation: "*Citizens United v. FEC* held that the First Amendment protects independent political spending by corporations, the same reasoning applied here. *Baker v. Carr* and *Shaw v. Reno* concern how election districts are drawn.",
+    partNumber: 7,
+    partTitle: "AP Review",
+  },
+  {
+    id: 'gov-voting-elections-ent-7b',
+    question: "Turnout in U.S. presidential elections is lower than in many other democracies. Which pair of factors best helps explain this?",
+    options: ["Required advance registration and holding elections on a weekday", "Compulsory voting laws and a fixed national election day", "Automatic registration and long early-voting periods", "Proportional representation and a large number of parties"],
+    correctIndex: 0,
+    explanation: "Many democracies register voters automatically and vote on weekends or holidays, while most Americans must register in advance and vote on a Tuesday. Compulsory voting and automatic registration raise turnout rather than lower it.",
+    partNumber: 7,
+    partTitle: "AP Review",
+  },
 ]
 
-function shuffle<T>(array: T[]): T[] {
-  const result = [...array]
-  for (let i = result.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[result[i], result[j]] = [result[j], result[i]]
-  }
-  return result
-}
-
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
-  return shuffle(allQuestions)
+  return shuffleArray(questions)
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Core Concepts' },
-    { partNumber: 2, partTitle: 'Key Processes' },
-    { partNumber: 3, partTitle: 'Patterns & Examples' },
-    { partNumber: 4, partTitle: 'Connections & Interactions' },
-    { partNumber: 5, partTitle: 'Change Over Time' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' },
+    { partNumber: 1, partTitle: "Core Concepts" },
+    { partNumber: 2, partTitle: "Key Processes" },
+    { partNumber: 3, partTitle: "Patterns & Examples" },
+    { partNumber: 4, partTitle: "Connections & Interactions" },
+    { partNumber: 5, partTitle: "Change Over Time" },
+    { partNumber: 6, partTitle: "Problem-Solving Workshop" },
+    { partNumber: 7, partTitle: "AP Review" },
   ]
 }

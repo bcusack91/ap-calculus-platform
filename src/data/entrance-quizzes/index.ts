@@ -805,6 +805,8 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'double-half-angle-identities': () => import('./double-half-angle-identities'),
   'solving-trig-equations': () => import('./solving-trig-equations'),
   'inverse-trig-functions': () => import('./inverse-trig-functions-precalc'),
+  'hg-industrialization-development': () => import('./hg-industrialization'),
+  'gov-political-ideology': () => import('./gov-ideologies'),
 }
 
 /**
