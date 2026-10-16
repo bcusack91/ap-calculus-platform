@@ -57,7 +57,6 @@ export const govJudiciaryPart7Data = {
 | 1986 | Rehnquist becomes CJ | Conservative shift begins |
 | 1987 | Bork rejected 42-58 | Modern partisan judicial nomination era begins |
 | 1991 | Thomas confirmed 52-48 (Anita Hill) | Contentious confirmations |
-| 1992 | *Casey* | Affirmed Roe + 'undue burden' standard (illustrative) |
 | 1993 | *Shaw v. Reno* | Racial gerrymandering (REQUIRED) |
 | 1995 | *US v. Lopez* | First Commerce Clause limit since 1937 |
 | 2005 | Roberts becomes CJ | Roberts Court begins |
@@ -66,7 +65,7 @@ export const govJudiciaryPart7Data = {
 | 2016 | Garland blockade | McConnell refused hearing for 11 months |
 | 2018 | Kavanaugh confirmed 50-48 (Ford) | Narrowest margin since 1881 |
 | 2020 | Barrett confirmed 8 days before election | 6-3 conservative majority cemented |
-| 2022 | *Dobbs v. Jackson Women's Health* | Overruled Roe + Casey (named in EK 3.9.A.2) |
+| 2022 | *Dobbs v. Jackson Women's Health* | Overruled Roe; no constitutional right to abortion (named in EK 3.9.A.2) |
 | 2023 | *SFFA v. Harvard* | Race-based affirmative action in college admissions struck |
 
 ## Required AP Gov SCOTUS Cases on the Judiciary
@@ -99,13 +98,12 @@ The CED requires 14 cases. Know each required case's facts, holding, and reasoni
 | *Roe v. Wade* | 1973 | Abortion right (overruled by Dobbs 2022) | Named in EK 3.9.A.2 |
 | *US v. Nixon* | 1974 | Executive privilege qualified | Illustrative |
 | *Buckley v. Valeo* | 1976 | Campaign-finance framework | Context for EK 5.11 |
-| *Casey* | 1992 | Affirmed Roe + undue burden | Illustrative |
 | *Shaw v. Reno* | 1993 | Race-based districts face equal protection challenge | REQUIRED |
 | *US v. Lopez* | 1995 | First Commerce Clause limit since 1937 | REQUIRED |
 | *Citizens United v. FEC* | 2010 | Corporate political expenditures | REQUIRED |
 | *McDonald v. Chicago* | 2010 | 2A incorporated | REQUIRED |
 | *Obergefell v. Hodges* | 2015 | Same-sex marriage | Illustrative |
-| *Dobbs v. Jackson Women's Health* | 2022 | Overruled Roe + Casey | Named in EK 3.9.A.2 |
+| *Dobbs v. Jackson Women's Health* | 2022 | Overruled Roe; left abortion to legislatures | Named in EK 3.9.A.2 |
 | *Students for Fair Admissions v. Harvard* | 2023 | Race-based affirmative action struck | Context for EK 3.13.A.1 |
 
 ## Sprint Terms
@@ -135,13 +133,13 @@ The CED requires 14 cases. Know each required case's facts, holding, and reasoni
 ## AP Free-Response Strategy
 
 > ⚡ Sample concept-application prompt:
-> *"In 2022, the Supreme Court held in Dobbs v. Jackson Women's Health Organization that the Constitution does not protect a right to abortion, overruling Roe v. Wade (1973) and Planned Parenthood v. Casey (1992). (A) Identify the constitutional clause that the Court analyzed in Dobbs. (B) Explain how the majority justified overruling Roe. (C) Explain how this ruling could affect the relationship between federal and state governments."*
+> *"In 2022, the Supreme Court held in Dobbs v. Jackson Women's Health Organization that the Constitution does not protect a right to abortion, overruling the Court's earlier abortion precedents. (A) Identify the constitutional clause that the Court analyzed in Dobbs. (B) Explain how the majority justified overruling those precedents. (C) Explain how this ruling could affect the relationship between federal and state governments."*
 
 | Part | Approach |
 |---|---|
 | **(A) Constitutional clause** | The 14TH AMENDMENT DUE PROCESS CLAUSE — which provides 'nor shall any State deprive any person of life, liberty, or property, without due process of law' — was the clause analyzed in Dobbs; the question was whether 'liberty' protected by the clause includes a right to abortion under SUBSTANTIVE DUE PROCESS doctrine |
-| **(B) Majority justification** | The MAJORITY (Alito + 4 conservatives) justified overruling Roe through several arguments: (1) HISTORY AND TRADITION — an abortion right is NOT 'deeply rooted in this Nation's history and tradition' because abortion was criminalized in most states from the founding through 1973; (2) TEXT — the Constitution does not mention abortion; (3) SUBSTANTIVE DUE PROCESS should be used cautiously when recognizing rights the text does not name; (4) DEMOCRATIC LEGITIMACY — abortion involves a moral question on which the people may decide through their elected representatives; (5) STARE DECISIS does not require keeping a precedent the majority considered 'egregiously wrong' from the start |
-| **(C) Effect on federal-state relationship** | Dobbs SHIFTED ABORTION REGULATION FROM FEDERAL CONSTITUTIONAL RIGHT to STATE LEGISLATIVE PREROGATIVE — a major federalism realignment: (1) ~13-14 STATES IMPLEMENTED NEAR-TOTAL ABORTION BANS; ~25 STATES MAINTAINED BROAD ACCESS; (2) RESULT — SIGNIFICANT INTERSTATE VARIATION mirroring pre-Roe patterns; (3) NEW FEDERAL-STATE TENSIONS — interstate travel for abortion services; medication abortion regulated by FDA (Mifepristone access litigation); EMTALA (federal Emergency Medical Treatment and Active Labor Act) emergency abortion care; (4) 2024 ELECTION — abortion ballot initiatives passed in multiple states even as Trump won presidency, demonstrating federal-state-political-process interaction post-Dobbs |
+| **(B) Majority justification** | The MAJORITY (Alito + 4 conservatives) justified overruling the earlier precedents through several arguments: (1) HISTORY AND TRADITION — an abortion right is NOT 'deeply rooted in this Nation's history and tradition' because abortion was criminalized in most states from the founding through 1973; (2) TEXT — the Constitution does not mention abortion; (3) SUBSTANTIVE DUE PROCESS should be used cautiously when recognizing rights the text does not name; (4) DEMOCRATIC LEGITIMACY — abortion involves a moral question on which the people may decide through their elected representatives; (5) STARE DECISIS does not require keeping a precedent the majority considered 'egregiously wrong' from the start |
+| **(C) Effect on federal-state relationship** | Dobbs SHIFTED ABORTION REGULATION FROM FEDERAL CONSTITUTIONAL RIGHT to STATE LEGISLATIVE PREROGATIVE — a major federalism realignment: (1) MORE THAN A DOZEN STATES ENFORCED NEAR-TOTAL ABORTION BANS, while many others kept or expanded access; (2) RESULT — SIGNIFICANT INTERSTATE VARIATION, much like the state-by-state patterns before 1973; (3) NEW FEDERAL-STATE TENSIONS — for example, over federal rules for medication approved by a federal agency and over travel between states; (4) STATE ACCESS POINTS — advocates on both sides shifted to state legislatures, state courts and ballot measures (EK 1.9.A.1) |
 
 > 🔑 Key takeaway: Mastery of the AP Gov Judiciary content (Article III + judicial review + Federalist 78 + Brutus 1 + required cases including Marbury + McCulloch + Brown + Citizens United + EK cases Griswold/Roe/Dobbs + activism vs restraint + stare decisis + limits on the Court + nomination process) anchors strong unit-2 + unit-3 + unit-5 performance.
       `
@@ -220,7 +218,7 @@ The CED requires 14 cases. Know each required case's facts, holding, and reasoni
           },
           {
             label: "Overruled *Plessy v. Ferguson*; ended de jure school segregation (1954): ___",
-            options: ['*Marbury v. Madison*', '*McCulloch v. Maryland*', '*Brown v. Board*', '*Roe v. Wade*']
+            options: ['*Marbury v. Madison*', '*McCulloch v. Maryland*', '*Brown v. Board*', '*Gideon v. Wainwright*']
           }
         ],
         correctAnswers: ['*Marbury v. Madison*', '*McCulloch v. Maryland*', '*Brown v. Board*'],
@@ -244,7 +242,7 @@ The CED requires 14 cases. Know each required case's facts, holding, and reasoni
               "The Court has avoided controversial rulings, letting Congress settle every rights question"
             ],
             correctAnswer: 0,
-            explanation: 'Pro-modern-Court: (1) RIGHTS REVOLUTION — Warren Court expanded civil rights (Brown 1954, Loving 1967), criminal procedure (Mapp 1961, Gideon 1963, Miranda 1966), reapportionment (Baker 1962, Reynolds 1964 "one person, one vote"). (2) MINORITY-RIGHTS PROTECTION (Federalist 78) — Court protected unpopular minorities (racial minorities Brown; criminal defendants Gideon + Miranda; religious dissenters Engel; same-sex couples Obergefell 2015) when democratic process wouldn\'t. (3) EXECUTIVE OVERREACH CHECK — Youngstown 1952, US v. Nixon 1974. (4) FEDERALISM BALANCE — expansion (Wickard 1942, Heart of Atlanta 1964) + limitation (Lopez 1995, Morrison 2000, NFIB v. Sebelius 2012). (5) INSTITUTIONAL LEGITIMACY — generally trusted; provides constitutional certainty + dispute resolution.'
+            explanation: 'Pro-modern-Court: (1) RIGHTS REVOLUTION — Warren Court expanded civil rights (Brown 1954, Loving 1967), criminal procedure (Mapp 1961, Gideon 1963, Miranda 1966), reapportionment (Baker 1962, Reynolds 1964 "one person, one vote"). (2) MINORITY-RIGHTS PROTECTION (Federalist 78) — Court protected unpopular minorities (racial minorities Brown; criminal defendants Gideon + Miranda; religious dissenters Engel; same-sex couples Obergefell 2015) when democratic process wouldn\'t. (3) EXECUTIVE OVERREACH CHECK — rulings against presidents, from Truman\'s 1952 steel-mill seizure to Nixon\'s Watergate tapes in 1974. (4) FEDERALISM BALANCE — expansion (Wickard 1942, Heart of Atlanta 1964) + limitation (Lopez 1995, Morrison 2000, NFIB v. Sebelius 2012). (5) INSTITUTIONAL LEGITIMACY — generally trusted; provides constitutional certainty + dispute resolution.'
           },
           {
             question: "What is the strongest argument that the modern Supreme Court has been BAD for American constitutional democracy?",
@@ -255,7 +253,7 @@ The CED requires 14 cases. Know each required case's facts, holding, and reasoni
               "The Court has shrunk federal power so far that Brutus's fears of national dominance were proved wrong"
             ],
             correctAnswer: 0,
-            explanation: 'Counter (modern Court BAD): (1) BRUTUS 1 WARNING REALIZED — Anti-Federalist warned of life-tenured unaccountable judges expanding federal power; modern Court did EXACTLY this (Lochner 1897-1937, Roe 1973, Citizens United 2010, Dobbs 2022). (2) DEMOCRATIC ILLEGITIMACY — 6-3 majority decided by 5 justices appointed by popular-vote losers (Bush 2000 → Roberts + Alito; Trump → Gorsuch + Kavanaugh + Barrett). (3) PARTISAN PATTERN — overrulings like Dobbs split 5-4/6-3 along ideological lines → critics call them RESULT-DRIVEN. (4) STARE DECISIS EROSION — Roe stood 49 years; Gallup ~40-45% approval post-2020. (5) CITIZENS UNITED — corporate money. (6) DOBBS — eliminated 49-yr right against majority opinion. (7) Earl Warren\'s "is this right?" standard violated.'
+            explanation: 'Counter (modern Court BAD): (1) BRUTUS 1 WARNING REALIZED — the Anti-Federalist warned that life-tenured, unaccountable judges would expand their own power; critics point to rulings that struck down or reversed democratic choices, from Citizens United (2010) to Dobbs (2022). (2) ACCOUNTABILITY — justices are unelected and serve for life, so voters cannot remove them (EK 2.10.A.1). (3) PARTISAN PATTERN — major overrulings such as Dobbs split along ideological lines, so critics call them RESULT-DRIVEN. (4) STARE DECISIS EROSION — overruling a precedent that had stood for nearly 50 years unsettles the law, and public approval of the Court fell afterward. (5) CITIZENS UNITED — critics say it let corporate and union money flood elections. The other choices are wrong: the Court uses judicial review often, federal judges never face reelection, and the Court has not shrunk federal power to nothing.'
           }
         ]
       }

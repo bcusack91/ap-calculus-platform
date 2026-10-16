@@ -14,7 +14,7 @@ export const hgPopulationGrowthPart4Data = {
 | Section |
 |---------|
 | 📖 Malthus's Argument |
-| Neo-Malthusians, Boserup and the Cornucopians |
+| Critiques of Malthus: Neo-Malthusians, Intensification and the Cornucopians |
 | The Data: Population and Food Since 1800 |
 | Which Theory Fits Which Scale? |
 
@@ -115,24 +115,26 @@ England's population was growing quickly in the 1790s, and most people still liv
       id: 'hgpopula4-critics',
       type: 'text' as const,
       content: `
-## Neo-Malthusians, Boserup and the Cornucopians
+## Critiques of Malthus: Neo-Malthusians, Intensification and the Cornucopians
+
+The CED asks you to use **Malthusian theory and its critiques** to analyze population change (Topic 2.6). You need the arguments, not the authors' names.
 
 | Thinker or school | Key work | Core claim | Direction of cause |
 |---|---|---|---|
 | **Malthus** | *Essay on the Principle of Population* (1798) | Population outruns food unless checked | Population growth → scarcity |
 | **Neo-Malthusians** (Paul Ehrlich) | *The Population Bomb* (1968) | Growth strains not only food but water, energy, forests and climate | Population growth → environmental limits |
-| **Ester Boserup** | *The Conditions of Agricultural Growth* (1965) | Population pressure **drives** farmers to intensify | Population growth → more food |
+| **Intensification critique** | Economist Ester Boserup (1965) | Population pressure **drives** farmers to intensify | Population growth → more food |
 | **Cornucopians** (Julian Simon) | *The Ultimate Resource* (1981) | Human ingenuity, prices and markets overcome scarcity | Scarcity → innovation → abundance |
 
 ### Neo-Malthusians
 
 Ehrlich predicted that hundreds of millions of people would starve in the 1970s. Famines did occur, such as in Bangladesh in 1974, but not on the scale he forecast. Neo-Malthusians widened Malthus's concern from **food** to all **resources** and the environment: groundwater depletion, deforestation, biodiversity loss and climate change. They argue that both population growth in poorer countries and high **consumption** in richer countries push against Earth's carrying capacity.
 
-### Ester Boserup: Intensification
+### The Intensification Critique
 
-Boserup reversed Malthus's logic. When population grows, farmers do not simply run out of land; they **intensify** production on the land they have.
+This critique reverses Malthus's logic. When population grows, farmers do not simply run out of land; they **intensify** production on the land they have.
 
-**Boserup's sequence of intensification, from least to most intensive:**
+**The sequence of intensification, from least to most intensive:**
 
 1. Forest fallow: land farmed one or two years, then left 20 years or more to regrow
 2. Bush fallow: shorter rest periods
@@ -140,13 +142,13 @@ Boserup reversed Malthus's logic. When population grows, farmers do not simply r
 4. Annual cropping: one crop every year
 5. Multicropping: two or more crops a year on the same plot, often with irrigation
 
-Each step takes more labor per hectare but yields more food per hectare. A well-known study of Kenya's Machakos District (Tiffen, Mortimore and Gichuki, 1994) found that as population rose several-fold over six decades, farmers built terraces, reduced erosion and raised output per hectare.
+Each step takes more labor per hectare but yields more food per hectare. A well-known study of Kenya's Machakos District found that as population rose several-fold over six decades, farmers built terraces, reduced erosion and raised output per hectare.
 
 ### Cornucopians and the Simon–Ehrlich Wager
 
 Julian Simon argued that scarcity raises prices, and high prices reward people who find substitutes, conserve or invent. In **1980** he bet Ehrlich that the inflation-adjusted prices of five metals (chromium, copper, nickel, tin and tungsten) would **fall** by 1990. They did, and Ehrlich paid. Critics note that a different decade could have produced a different result, and that market prices leave out environmental damage such as greenhouse gas emissions.
 
-> 🔑 **AP Connection:** Boserup and Malthus disagree about **causation**. Malthus: population growth leads to food shortages. Boserup: population growth leads to agricultural innovation. If an FRQ describes farmers shortening fallow periods or terracing hillsides as density rises, it is describing Boserup.
+> 🔑 **AP Connection:** Malthus and the intensification critique disagree about **causation**. Malthus: population growth leads to food shortages. The critique: population growth leads to agricultural innovation. If an FRQ describes farmers shortening fallow periods or terracing hillsides as density rises, it is describing intensification, a critique of Malthusian theory.
 `
     },
     {
@@ -217,14 +219,14 @@ The UN Food and Agriculture Organization estimated that about **733 million** pe
 |---|---|---|---|---|
 | **Malthus** | Food insecurity where growth is fast and farmland is degraded | Global food per person has risen since the 1960s | Local or regional, short run | Ignored technology, trade and fertility decline |
 | **Neo-Malthusian** | Groundwater depletion, deforestation and climate change | Predicted famines of the 1970s did not occur at the forecast scale | Global environmental systems | Often underestimates adaptation; critics say it blames poor countries' numbers more than rich countries' consumption |
-| **Boserup** | Intensification in densely settled farm regions, such as Machakos | Intensification can exhaust soil and aquifers | Local agricultural systems | Requires access to capital, land rights and markets |
+| **Intensification critique** | Intensification in densely settled farm regions, such as Machakos | Intensification can exhaust soil and aquifers | Local agricultural systems | Requires access to capital, land rights and markets |
 | **Cornucopian** | Falling real prices of many resources; the Simon–Ehrlich wager | Climate change and biodiversity loss are not reflected in prices | Global markets, long run | Assumes innovation will always arrive in time |
 
 ### Worked Evaluation: A Densely Populated Farming Region
 
 **Prompt:** A region's population doubles in 40 years. Farmers terrace hillsides and plant two crops a year, but wells are falling and soil quality is declining.
 
-1. **Boserup** explains the terracing and double-cropping: population pressure caused intensification.
+1. **The intensification critique** explains the terracing and double-cropping: population pressure caused intensification.
 2. **Neo-Malthusians** explain the falling wells and declining soil: intensification is pressing against environmental limits.
 3. **Evaluation:** both theories capture part of the situation. Intensification raised output in the short run, but its sustainability depends on how water and soil are managed.
 
@@ -251,7 +253,7 @@ A strong answer names **evidence** for each theory and states a limit, rather th
             explanation: "Food per person has risen globally, so hunger reflects who can obtain food, which depends on income, conflict and access. Hunger is concentrated in sub-Saharan Africa and South Asia rather than spread evenly."
           },
           {
-            question: "Ester Boserup would most likely explain a densely settled valley's shift from long fallow periods to multicropping as",
+            question: "The intensification critique of Malthus would most likely explain a densely settled valley's shift from long fallow periods to multicropping as",
             options: [
               "a response to population pressure",
               "a sign the valley has passed its carrying capacity",
@@ -259,7 +261,7 @@ A strong answer names **evidence** for each theory and states a limit, rather th
               "evidence that food can grow only arithmetically"
             ],
             correctAnswer: 0,
-            explanation: "Boserup argued that rising population pushes farmers to intensify, shortening fallow and adding labor and inputs. Passing carrying capacity and arithmetic food growth are Malthusian ideas, and intensification needs more labor, not less."
+            explanation: "The intensification critique holds that rising population pushes farmers to intensify, shortening fallow and adding labor and inputs. Passing carrying capacity and arithmetic food growth are Malthusian ideas, and intensification needs more labor, not less."
           },
           {
             question: "In 1980 Julian Simon bet Paul Ehrlich that the prices of five metals would fall by 1990, and they did. A neo-Malthusian critic would most likely reply that",

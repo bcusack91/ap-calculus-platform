@@ -171,7 +171,7 @@ EK 1.9.A.1-2: dividing power between national and state governments creates MULT
             explanation: 'EK 1.9.A.2: national policymaking is constrained by the sharing of powers with state governments. The federal response to Hurricanes Katrina and Sandy is a CED illustrative example — FEMA, governors, and mayors all had roles, and unclear lines of responsibility slowed the response. The national government does have a large disaster-relief role, but it does not take over state governments, and nothing about block grants explains the delay.'
           },
           {
-            question: "AP scenario: After the Supreme Court overruled *Roe v. Wade* in *Dobbs v. Jackson Women\'s Health Organization* (2022), some states adopted near-total abortion bans while others passed laws protecting access. Which concept does this variation best illustrate?",
+            question: "AP scenario: After the Supreme Court held in *Dobbs v. Jackson Women\'s Health Organization* (2022) that the Constitution does not confer a right to abortion, some states adopted near-total abortion bans while others passed laws protecting access. Which concept does this variation best illustrate?",
             options: [
               "Returning an issue to state legislatures lets policy differ from state to state under federalism",
               "The Supremacy Clause requires every state to adopt the same policy once the Supreme Court has ruled",

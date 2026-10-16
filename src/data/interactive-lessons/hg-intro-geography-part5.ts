@@ -18,7 +18,7 @@ export const hgIntroGeographyPart5Data = {
 | 📌 Hearths & Worked Examples |
 | Distance Decay Revisited |
 
-> 🔑 **Key Concept:** Geographer **Carl Sauer** (Berkeley, 1952, *Agricultural Origins and Dispersals*) framed diffusion as the spread of innovations from a **cultural hearth**. Modern APHG distinguishes **relocation** (people physically carry the trait) from **expansion** (the trait spreads outward while staying in the original location too).
+> 🔑 **Key Concept:** Diffusion is the spread of innovations and cultural traits from a **cultural hearth**, the place where they began. Modern APHG distinguishes **relocation** (people physically carry the trait) from **expansion** (the trait spreads outward while staying in the original location too).
       `
     },
     {
@@ -98,7 +98,7 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
 | Concept | Definition | Example |
 |---------|------------|---------|
 | **Distance decay** | Strength of an interaction declines with distance | TikTok adoption peaked first in East Asia, then weakened across continents |
-| **Time-space convergence** (Janelle 1969) | Distances shrink as transport/communication speed up | A 19th-century letter took 4 weeks to cross the Atlantic; an email takes seconds |
+| **Time-space convergence** | Distances shrink as transport/communication speed up | A 19th-century letter took 4 weeks to cross the Atlantic; an email takes seconds |
 | **Friction of distance** | The "cost" (time, money, effort) of crossing space | A toll bridge raises friction; a free interstate lowers it |
 | **Barriers to diffusion** | Physical, cultural, political, economic obstacles | The Himalayas blocked Buddhism's northward spread; the Iron Curtain blocked Western media into the USSR |
 
@@ -119,7 +119,7 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
       content: `
 **Applied Recall (exact-term answers)** ✍️
 
-1) Geographer who, in 1952, traced agricultural innovations from cultural hearths (last name only):
+1) The term for the place where an innovation or cultural trait originates (one word, plural not needed):
 
 2) Diffusion type where the *idea* spreads but the local form is modified (one word):
 
@@ -127,11 +127,11 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["Sauer", "Stimulus", "Time-space convergence"],
-        hint1: "Berkeley geographer; 'Agricultural Origins and Dispersals.'",
+        correctAnswers: ["Hearth", "Stimulus", "Time-space convergence"],
+        hint1: "The Fertile Crescent was one for agriculture; South Asia was one for Hinduism.",
         hint2: "McDonald's McAloo Tikki, Pentecostal samba services.",
-        hint3: "Janelle, 1969. Three-word phrase. Use a hyphen between the first two words.",
-        explanation: "Carl Sauer (Berkeley) defined cultural hearths. Stimulus diffusion modifies the form locally. Time-space convergence (Janelle, 1969) describes effective shrinkage of distance via faster transport/communication."
+        hint3: "Three-word phrase. Use a hyphen between the first two words.",
+        explanation: "A (cultural) hearth is where a trait originates. Stimulus diffusion modifies the form locally. Time-space convergence describes the effective shrinking of distance through faster transport and communication."
       }
     },
     {
@@ -178,7 +178,7 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
 - Always pair a diffusion classification with a **mechanism** ("hierarchical — because urban tiers acted as adoption nodes before the trait reached small towns").
 - For relocation diffusion, **name the migrants** and **the route**.
 - For barrier questions, give **physical** (Himalayas, oceans) AND **cultural/political** (language difference, border closures) examples.
-- Cite **Carl Sauer** for cultural hearths; cite **Janelle (1969)** for time-space convergence.
+- Use the CED terms (*cultural hearth*, *time-space convergence* or *compression*) with a specific example; naming individual geographers earns no extra credit.
       `
     },
     {
@@ -209,7 +209,7 @@ Diffusion does not spread perfectly — it weakens with distance and slows at ba
               "The friction of distance"
             ],
             correctAnswer: 1,
-            explanation: "Time-space convergence is the concept Donald Janelle introduced in 1969 to describe places effectively becoming closer as transport and communication speed up."
+            explanation: "Time-space convergence is the concept that describes places effectively becoming closer as transport and communication speed up."
           }
         ]
       }

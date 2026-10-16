@@ -21,26 +21,26 @@ export const whAmericasAfrica1200Part5Data = {
       exercise: {
         questions: [
           {
-            question: 'What was the primary source of Mali Empire\'s wealth?',
+            question: 'Great Zimbabwe left no written records. How do historians know about its past?',
             options: [
-              'Taxing the trans-Saharan trade that exchanged West African gold for salt from the Sahara and North Africa',
-              'Exporting surplus millet and rice north across the Sahara to feed the cities of Egypt and the Maghreb',
-              'Maritime trade with China and India carried through Mali\'s own ports on the Indian Ocean coast',
-              'Tribute seized through military raids on the Swahili city-states and gold towns of East Africa'
+              'They read the detailed tax records its rulers kept in Arabic script',
+              'Through the ruins and imported goods at the site and through oral traditions',
+              'They cannot know anything, because the site left no physical evidence at all',
+              'Portuguese reports written while the city was still at the height of its power'
             ],
-            correctAnswer: 0,
-            explanation: 'The gold-salt trade is the economic foundation of Mali and Songhai: West Africa had gold but needed salt (essential for food preservation); the Sahara had salt but needed gold. Controlling the exchange points made Mali and later Songhai extraordinarily wealthy rulers.'
+            correctAnswer: 1,
+            explanation: 'Without written records, historians rebuild Great Zimbabwe\'s history from archaeology (its walls, houses and the goods found there) and from oral traditions. Its rulers did not keep Arabic records, the ruins themselves are rich evidence, and the city had declined before the Portuguese reached the coast around 1500.'
           },
           {
-            question: 'Mansa Musa\'s 1324 hajj (pilgrimage to Mecca) is historically significant for AP because:',
+            question: 'Chinese porcelain and Persian pottery found at Great Zimbabwe are best used as evidence that',
             options: [
-              'It displayed Mali\'s wealth to the Islamic world and put Mali on European maps as a land of gold',
-              'It was the first hajj ever made by a ruler from sub-Saharan Africa, opening Mecca to West Africans',
-              'It led Mali\'s rulers to abandon Islam after Musa returned disappointed from Cairo',
-              'It triggered a Mamluk invasion of Mali, since Egypt\'s sultan wanted to seize its gold fields'
+              'the city was a Chinese colony founded by Ming treasure fleets',
+              'it was linked by coastal ports to Indian Ocean trade',
+              'Great Zimbabwe made porcelain for export to China and Persia',
+              'Portuguese traders carried Asian goods inland before 1450'
             ],
-            correctAnswer: 0,
-            explanation: 'Mansa Musa\'s pilgrimage put West Africa on the global mental map: his gift-giving in Cairo was so lavish it depressed gold prices, and his retinue of 60,000 was unprecedented. European maps began marking Mali as a source of gold after 1324 — stimulating eventual Portuguese interest in finding sea routes to West African gold.'
+            correctAnswer: 1,
+            explanation: 'Imported porcelain, pottery and glass beads show that gold and ivory from the Zimbabwe plateau were traded through Swahili ports such as Sofala and Kilwa for goods from across the Indian Ocean. The city was built by ancestors of the Shona people, not Chinese colonists, it imported rather than made porcelain, and the Portuguese did not arrive until about 1500.'
           }
         ]
       }
@@ -90,15 +90,15 @@ East African cities integrated into Indian Ocean trade network:
       exercise: {
         questions: [
           {
-            question: 'Timbuktu\'s University of Sankore demonstrates which historical principle?',
+            question: 'Kilwa Kisiwani became one of the richest Swahili city-states mainly because it',
             options: [
-              'That the trans-Saharan routes carrying gold and salt also carried Islamic scholars and books',
-              'That Timbuktu served mainly as a military fortress, with scholars confined to the royal court in Cairo',
-              'That Islamic scholarship flourished only in the Middle East, while West Africa imported finished legal rulings',
-              'That West African rulers ignored learning, leaving schools to be founded by European missionaries'
+              'held a monopoly on Saharan salt shipped south to the forest zone',
+              'controlled the gold exported from the interior through Sofala',
+              'served as the Indian Ocean capital of the Mali Empire',
+              'grew wheat for export to the cities of Mediterranean Europe'
             ],
-            correctAnswer: 0,
-            explanation: 'Timbuktu shows the dual nature of Islamic trade networks: they transmitted both goods (gold, salt) and ideas (scholarship, religious practice, legal traditions). The University of Sankore\'s 25,000 students and its manuscripts on astronomy, law, and medicine demonstrate that sub-Saharan African Islamic civilization was fully integrated into the broader Islamic intellectual world.'
+            correctAnswer: 1,
+            explanation: 'Kilwa dominated the coastal gold trade by controlling Sofala, the port that received gold from the Zimbabwe plateau; its Great Mosque and Husuni Kubwa palace reflect that wealth. Saharan salt belongs to the trans-Saharan trade of West Africa, Mali never reached the Indian Ocean, and Kilwa did not export wheat to Europe.'
           },
           {
             question: 'Great Zimbabwe\'s most important significance for AP World History is:',
@@ -132,23 +132,23 @@ East African cities integrated into Indian Ocean trade network:
       exercise: {
         dropdowns: [
           {
-            label: 'Match Term 1 for Great Zimbabwe and East African City-States',
-            options: ['Key Term A', 'Key Term B', 'Key Term C', 'Key Term D']
+            label: 'The stone-walled city of the southern African interior whose rulers controlled gold sent to the coast was ___',
+            options: ['Great Zimbabwe', 'Kilwa Kisiwani', 'Sofala', 'Malindi']
           },
           {
-            label: 'Match Term 2 for Great Zimbabwe and East African City-States',
-            options: ['Key Term B', 'Key Term A', 'Key Term C', 'Key Term D']
+            label: 'The Swahili city-state with the Husuni Kubwa palace that dominated the coastal gold trade was ___',
+            options: ['Great Zimbabwe', 'Kilwa Kisiwani', 'Sofala', 'Malindi']
           },
           {
-            label: 'Match Term 3 for Great Zimbabwe and East African City-States',
-            options: ['Key Term C', 'Key Term A', 'Key Term B', 'Key Term D']
+            label: 'The southern port that linked the coast to the gold of the Zimbabwe plateau was ___',
+            options: ['Great Zimbabwe', 'Kilwa Kisiwani', 'Sofala', 'Malindi']
           }
         ],
-        correctAnswers: ['Key Term A', 'Key Term B', 'Key Term C'],
-        hint1: 'Think about the primary feature of this concept',
-        hint2: 'Consider the governance or economic function',
-        hint3: 'Recall the long-term historical consequence',
-        explanation: 'Review the key terms in the content section above to reinforce these AP vocabulary connections for Americas & Africa (c. 1200–1450) Part 5.'
+        correctAnswers: ['Great Zimbabwe', 'Kilwa Kisiwani', 'Sofala'],
+        hint1: 'The inland city, built of stacked granite without mortar',
+        hint2: 'The richest Swahili city-state, in modern Tanzania',
+        hint3: 'The port in modern Mozambique at the southern end of the network',
+        explanation: 'Great Zimbabwe controlled the gold of the interior, Sofala carried it to the coast, and Kilwa dominated the trade from there. Malindi, in modern Kenya, is best known as the port where Vasco da Gama found a pilot in 1498.'
       }
     },
     {
@@ -166,18 +166,18 @@ East African cities integrated into Indian Ocean trade network:
               'Military conquest by Arab sultans alone explains the rise of the East African coast and its interior'
             ],
             correctAnswer: 0,
-            explanation: 'Strong AP theses acknowledge both change and continuity, explain mechanisms rather than just outcomes, and connect specific evidence to broader historical arguments. Recognizing complexity within apparent simplicity is the hallmark of high-scoring AP responses.'
+            explanation: 'The strongest thesis pairs continuity (Bantu-speaking farming and herding societies, African building traditions and the Bantu grammar of Swahili) with change (wealth and Islam brought by Indian Ocean trade). Both places traded far beyond Africa, both kept deep local roots, and trade and intermarriage, not conquest, built the Swahili coast.'
           },
           {
-            question: 'Which comparison best demonstrates AP historical reasoning about Americas & Africa (c. 1200–1450)?',
+            question: 'Which comparison of Great Zimbabwe and the Swahili city-states is most accurate?',
             options: [
-              'Mali and the Inca both built vast states, but Mali taxed trade while the Inca drafted labor',
-              'Mali and the Inca were identical states, since both depended on gold mined by drafted village laborers',
-              'Comparing Mali and the Inca is not useful, because societies with no contact share no common patterns at all',
-              'Mali and the Inca differed only in religion, so their economies and governments can be treated as the same'
+              'Both were Muslim sultanates governed by Arab officials sent out from Baghdad',
+              'Both were inland farming villages with no ties at all to long-distance trade',
+              'Both were founded as Portuguese trading posts after Vasco da Gama arrived in 1498',
+              'Both depended on Indian Ocean trade, but only the coastal towns adopted Islam'
             ],
-            correctAnswer: 0,
-            explanation: 'AP comparison questions reward arguments that identify both similarities and differences AND explain why those similarities and differences exist. Using comparison to generate broader principles about human societies — rather than just listing similarities and differences — earns the highest AP scores.'
+            correctAnswer: 3,
+            explanation: 'Great Zimbabwe supplied gold to the coast and imported Asian goods, so both depended on Indian Ocean trade, but Islam, Arabic loanwords and stone mosques took root in the Swahili ports, not on the inland plateau. Neither was ruled from Baghdad, both were tied to long-distance trade, and both existed long before the Portuguese arrived.'
           }
         ]
       }

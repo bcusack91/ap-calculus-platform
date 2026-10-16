@@ -204,7 +204,7 @@ export const govIdeologiesPart7Data = {
       exercise: {
         questions: [
           {
-            prompt: "Strongest single AGENT OF POLITICAL SOCIALIZATION — accounting for ~70% of children sharing parents' party identification.",
+            prompt: "Strongest single AGENT OF POLITICAL SOCIALIZATION — the main reason many children grow up sharing their parents' party identification.",
             answer: 'family',
             acceptableAnswers: ['family', 'Family', 'parents', 'Parents'],
             hint: 'First + most enduring agent; transmits party identification + ideology + religious affiliation; explains why children typically inherit parents\' partisanship; weakened by college experience + generational events + new media environments.'

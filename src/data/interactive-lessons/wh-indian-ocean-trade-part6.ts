@@ -76,7 +76,7 @@ Trade transmitted technologies and goods that transformed cultures:
 - **Cotton textiles:** Indian cotton spread clothing technology across Indian Ocean world
 - **New food crops:** Southeast Asian spices → global cuisine; Southeast Asian bananas, taro → East Africa
 - **Technologies:** Iron-smelting, boat-building techniques, agricultural methods
-- **Languages:** Arabic loanwords in Swahili (50%+ vocabulary); Sanskrit loanwords across Southeast Asian languages
+- **Languages:** Many Arabic loanwords in Swahili (estimates of their share of the vocabulary vary widely); Sanskrit loanwords across Southeast Asian languages
 
 > **AP Comparison Anchor**
 

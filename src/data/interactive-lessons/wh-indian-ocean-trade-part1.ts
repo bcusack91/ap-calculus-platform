@@ -56,7 +56,7 @@ Merchants settled in foreign ports, creating **diasporic trading communities**:
 - **Chinese merchants** in Southeast Asian port cities
 - These communities maintained their own customs while integrating into host societies — creating **cultural synthesis**
 
-> ⚠️ **AP Alert:** Indian Ocean trade was **voluntary and mutually beneficial** — unlike later European colonialism. No single power dominated; trade was decentralized and relied on trust, shared commercial practices, and diasporic networks.
+> ⚠️ **AP Alert:** Before 1500, Indian Ocean trade was **polycentric and run by merchants rather than by armed force**: no navy policed the sea or forced traders to buy permits, unlike later European colonialism. That is not the same as saying everyone involved was free: the trade also carried enslaved East Africans to Arabia, the Persian Gulf and India. No single power dominated; trade was decentralized and relied on trust, shared commercial practices, and diasporic networks.
       `
     },
     {
@@ -194,7 +194,7 @@ Use the exact historical term.
               'Indian Ocean trade relied on barter without credit, while European trade introduced the first bills of exchange'
             ],
             correctAnswer: 0,
-            explanation: 'Pre-1500 Indian Ocean trade was characterized by voluntary exchange, multiple participating cultures, and no single dominant power. After 1500, the Portuguese (and later Dutch, British, and French) used naval force to control chokepoints, establish monopolies, and impose colonial rule — fundamentally changing the nature of Indian Ocean commerce.'
+            explanation: 'Pre-1500 Indian Ocean trade was characterized by merchant-driven exchange that no navy controlled, multiple participating cultures, and no single dominant power. After 1500, the Portuguese (and later Dutch, British, and French) used naval force to control chokepoints, establish monopolies, and impose colonial rule — fundamentally changing the nature of Indian Ocean commerce.'
           },
           {
             question: 'An AP essay asks you to compare the effects of trade on TWO regions connected by the Indian Ocean network. The STRONGEST response would note that:',

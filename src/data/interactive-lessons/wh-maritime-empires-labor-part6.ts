@@ -5,11 +5,13 @@ export const whMaritimeEmpiresLaborPart6Data = {
       id: 'whmelf6-intro',
       type: 'text' as const,
       content: `
-# ⚓ Maritime Empires & Labor Systems (c. 1450–1750)
+# ⚓ Maritime Empires & Labor Systems (c. 1750–1888)
 
 **Part 6 of 7 — Resistance, Reform, and the End of the Slave Trade**
 
 ---
+
+> 📅 **Time frame:** Abolition (1807–1888) comes after this unit's 1450–1750 period; it is tested with the revolutions and reform movements of Unit 5.
 
 > 🔑 **Key Concept:** Abolition of the Atlantic slave trade and chattel slavery (c. 1807-1888) resulted from multiple forces: enslaved peoples' resistance, religious and Enlightenment-inspired humanitarian arguments, economic critiques, and changing political conditions. AP questions evaluate the relative importance of these factors and connect abolition to broader 18th-19th century reform movements.
       `

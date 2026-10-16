@@ -94,9 +94,9 @@ export const govCivilRightsPart6Data = {
 
 **STEP 3:** Characteristic = RACE; SFFA argued that Asian American applicants were disadvantaged by the policies.
 
-**STEP 4:** Precedent — Bakke 1978 (race as one factor permissible) → Grutter v. Bollinger 2003 (UPHELD Michigan Law holistic; diversity = compelling interest; race as one factor in individualized review; 25-year sunset prediction) → Fisher I 2013 + Fisher II 2016 (UPHELD UT Austin) → SFFA 2023.
+**STEP 4:** Precedent — Bakke 1978 (race as one factor permissible) → Grutter v. Bollinger 2003 (UPHELD Michigan Law's holistic review; accepted diversity as a goal that could justify considering race as one factor in individualized review; predicted such policies would be unnecessary in 25 years) → Fisher I 2013 + Fisher II 2016 (UPHELD UT Austin) → SFFA 2023.
 
-**STEP 5:** Government interest = diversity in higher education (Grutter recognized as compelling); SFFA majority (Roberts 6-3) held Harvard + UNC violated equal protection (UNC) and Title VI (Harvard) because the programs: (a) lacked SUFFICIENTLY FOCUSED + MEASURABLE OBJECTIVES warranting use of race; (b) used race as 'NEGATIVE' against Asian American applicants; (c) used race as STEREOTYPE; (d) lacked LOGICAL ENDPOINT (rejected O'Connor's 25-year prediction); narrow exceptions for (i) MILITARY SERVICE ACADEMIES + (ii) student essays discussing how race affected applicant individually.
+**STEP 5:** Government interest = diversity in higher education (accepted as a valid goal in Grutter); SFFA majority (Roberts 6-3) held Harvard + UNC violated equal protection (UNC) and Title VI (Harvard) because the programs: (a) lacked SUFFICIENTLY FOCUSED + MEASURABLE OBJECTIVES warranting use of race; (b) used race as 'NEGATIVE' against Asian American applicants; (c) used race as STEREOTYPE; (d) lacked LOGICAL ENDPOINT (rejected O'Connor's 25-year prediction); narrow exceptions for (i) MILITARY SERVICE ACADEMIES + (ii) student essays discussing how race affected applicant individually.
 
 **HOLDING:** Harvard + UNC race-conscious admissions violate EP (UNC) + Title VI (Harvard); effectively OVERRULED Grutter. Sotomayor + Jackson dissents — race-conscious admissions remain necessary for structural inequality; race-blind policies often perpetuate hierarchies.
 

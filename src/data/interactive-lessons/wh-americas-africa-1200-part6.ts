@@ -21,26 +21,26 @@ export const whAmericasAfrica1200Part6Data = {
       exercise: {
         questions: [
           {
-            question: 'What was the primary source of Mali Empire\'s wealth?',
+            question: 'Why were Mali and the Swahili city-states more connected to the wider world than the Aztec and Inca empires c. 1200–1450?',
             options: [
-              'Taxing the trans-Saharan trade that exchanged West African gold for salt from the Sahara and North Africa',
-              'Exporting surplus millet and rice north across the Sahara to feed the cities of Egypt and the Maghreb',
-              'Maritime trade with China and India carried through Mali\'s own ports on the Indian Ocean coast',
-              'Tribute seized through military raids on the Swahili city-states and gold towns of East Africa'
+              'The Aztec and Inca rulers banned all trade, even inside their own empires',
+              'Mali and the Swahili towns were provinces of the Ottoman Empire at the time',
+              'The Aztec and Inca had no cities, so they produced no goods worth trading',
+              'They sat on trans-Saharan and Indian Ocean trade routes'
             ],
-            correctAnswer: 0,
-            explanation: 'The gold-salt trade is the economic foundation of Mali and Songhai: West Africa had gold but needed salt (essential for food preservation); the Sahara had salt but needed gold. Controlling the exchange points made Mali and later Songhai extraordinarily wealthy rulers.'
+            correctAnswer: 3,
+            explanation: 'Mali\'s gold-salt trade crossed the Sahara to North Africa, and the Swahili ports traded across the Indian Ocean, so both were linked to the Islamic world and beyond. The Aztecs ran great markets and the Inca moved goods by redistribution within their own regions, and both had great cities, but the oceans cut them off from Afro-Eurasia; neither African society was under the Ottomans.'
           },
           {
-            question: 'Mansa Musa\'s 1324 hajj (pilgrimage to Mecca) is historically significant for AP because:',
+            question: 'Which feature of the Americas before 1492 best explains the scale of population collapse after contact?',
             options: [
-              'It displayed Mali\'s wealth to the Islamic world and put Mali on European maps as a land of gold',
-              'It was the first hajj ever made by a ruler from sub-Saharan Africa, opening Mecca to West Africans',
-              'It led Mali\'s rulers to abandon Islam after Musa returned disappointed from Cairo',
-              'It triggered a Mamluk invasion of Mali, since Egypt\'s sultan wanted to seize its gold fields'
+              'Their farming systems could not feed large cities, so populations were already falling',
+              'Isolation from Afro-Eurasian diseases left them no immunity to smallpox',
+              'They had immunity to smallpox, so European firearms caused nearly all of the deaths',
+              'Their rulers had already moved most people into remote regions with little food'
             ],
-            correctAnswer: 0,
-            explanation: 'Mansa Musa\'s pilgrimage put West Africa on the global mental map: his gift-giving in Cairo was so lavish it depressed gold prices, and his retinue of 60,000 was unprecedented. European maps began marking Mali as a source of gold after 1324 — stimulating eventual Portuguese interest in finding sea routes to West African gold.'
+            correctAnswer: 1,
+            explanation: 'Because the Americas had been cut off from Afro-Eurasian disease pools, Native Americans had no acquired immunity to smallpox, measles and influenza, and populations fell by 90 percent or more in some regions within a century. Chinampas and terraces fed large cities, epidemics rather than guns caused most deaths, and no such resettlement took place.'
           }
         ]
       }
@@ -81,37 +81,37 @@ The Americas' relative isolation from Old World disease pools had a critical con
       exercise: {
         questions: [
           {
-            question: 'Timbuktu\'s University of Sankore demonstrates which historical principle?',
+            question: 'Which pairing of record-keeping systems is accurate?',
             options: [
-              'That the trans-Saharan routes carrying gold and salt also carried Islamic scholars and books',
-              'That Timbuktu served mainly as a military fortress, with scholars confined to the royal court in Cairo',
-              'That Islamic scholarship flourished only in the Middle East, while West Africa imported finished legal rulings',
-              'That West African rulers ignored learning, leaving schools to be founded by European missionaries'
+              'Aztec: pictographic codices; Inca: knotted-string quipus; Mali: Arabic script',
+              'Aztec: Arabic script; Inca: pictographic codices; Mali: knotted-string quipus',
+              'Aztec: no records of any kind; Inca: the Latin alphabet; Mali: Chinese characters',
+              'All three used one alphabet, which had spread among them across the Atlantic'
             ],
             correctAnswer: 0,
-            explanation: 'Timbuktu shows the dual nature of Islamic trade networks: they transmitted both goods (gold, salt) and ideas (scholarship, religious practice, legal traditions). The University of Sankore\'s 25,000 students and its manuscripts on astronomy, law, and medicine demonstrate that sub-Saharan African Islamic civilization was fully integrated into the broader Islamic intellectual world.'
+            explanation: 'The Aztecs painted pictographic codices, the Inca kept census and tribute records on knotted quipus, and Mali\'s Muslim scholars and officials wrote in Arabic script. Arabic did not reach the Americas, the Latin alphabet arrived only with the Spanish, and there was no contact across the Atlantic in this period.'
           },
           {
-            question: 'Great Zimbabwe\'s most important significance for AP World History is:',
+            question: 'Which statement best describes a continuity in African states c. 1200–1450?',
             options: [
-              'It shows that sub-Saharan Africa had urban states linked to Indian Ocean trade before Europeans arrived',
-              'It was built by Phoenician or Arab colonists, proving that outsiders brought stone building to the region',
-              'It was an isolated hilltop village with no ties to coastal trade or to any wider economic network',
-              'It was the capital of the Mali Empire, which ruled the gold fields of southern Africa'
+              'They cut off all contact with the Islamic world after the Mongols sacked Baghdad in 1258',
+              'They abandoned long-distance trade in favor of farming only for their own needs',
+              'They kept integrating into trans-Saharan and Indian Ocean networks that predated them',
+              'They were conquered by European powers and governed as overseas colonies'
             ],
-            correctAnswer: 0,
-            explanation: 'AP frequently tests the significance of Great Zimbabwe precisely because it challenges Eurocentric narratives. The stone architecture (no mortar, built entirely from stacked granite), the scale (housing 10,000+), and the imported Chinese porcelain (direct evidence of Indian Ocean connections) all demonstrate indigenous African urban and commercial sophistication.'
+            correctAnswer: 2,
+            explanation: 'Mali built on the trans-Saharan trade that had enriched Ghana, and the Swahili coast and Great Zimbabwe grew within Indian Ocean networks that were centuries old. Contact with the Islamic world deepened rather than ended, long-distance trade grew, and European colonial rule came much later.'
           },
           {
-            question: 'The Swahili Coast city-states\' cultural character (blending Bantu African and Arab/Islamic elements) best demonstrates which AP concept?',
+            question: 'Which development is the best example of change in the Americas c. 1200–1450?',
             options: [
-              'Cultural syncretism through trade, as seen in a Bantu-grammar language and Islam mixed with local custom',
-              'Cultural assimilation by conquest, as Arab armies imposed Islam and erased the Bantu languages',
-              'Cultural isolation, as Swahili towns kept Islam and outside customs away from their Bantu communities',
-              'Cultural diffusion from Europe, as Portuguese traders brought the coast its Christian and Latin elements'
+              'European settlers founded colonies in Mexico and Peru during the 1300s',
+              'The Aztec Triple Alliance and Inca conquests built large new empires',
+              'The Maya cities of the Yucatán united all of Mesoamerica under one king',
+              'The Inca adopted an alphabet that they borrowed from the Aztecs'
             ],
-            correctAnswer: 0,
-            explanation: 'Swahili culture is a model AP example of trade-driven cultural synthesis: not "conquered" by Arab/Islamic culture but selectively incorporating Arabic vocabulary, Islamic religious practice, and stone architecture while maintaining Bantu linguistic structures and African communal social practices. This selective syncretism is characteristic of how trade-contact cultural exchange works.'
+            correctAnswer: 1,
+            explanation: 'The Aztec Triple Alliance and the Inca conquests from about 1438 created empires far larger than earlier states in their regions. Europeans did not arrive until after 1492, the Maya never unified Mesoamerica, and the Inca kept records on quipus rather than adopting an alphabet.'
           }
         ]
       }
@@ -123,23 +123,23 @@ The Americas' relative isolation from Old World disease pools had a critical con
       exercise: {
         dropdowns: [
           {
-            label: 'Match Term 1 for Cross-Regional Comparisons and CCOT',
-            options: ['Key Term A', 'Key Term B', 'Key Term C', 'Key Term D']
+            label: 'The Inca economy rested mainly on ___',
+            options: ['Mit\'a labor and redistribution', 'Tribute and markets', 'Gold-salt trade', 'Indian Ocean trade']
           },
           {
-            label: 'Match Term 2 for Cross-Regional Comparisons and CCOT',
-            options: ['Key Term B', 'Key Term A', 'Key Term C', 'Key Term D']
+            label: 'The Aztec economy rested mainly on ___',
+            options: ['Mit\'a labor and redistribution', 'Tribute and markets', 'Gold-salt trade', 'Indian Ocean trade']
           },
           {
-            label: 'Match Term 3 for Cross-Regional Comparisons and CCOT',
-            options: ['Key Term C', 'Key Term A', 'Key Term B', 'Key Term D']
+            label: 'The economy of the Swahili city-states rested mainly on ___',
+            options: ['Mit\'a labor and redistribution', 'Tribute and markets', 'Gold-salt trade', 'Indian Ocean trade']
           }
         ],
-        correctAnswers: ['Key Term A', 'Key Term B', 'Key Term C'],
-        hint1: 'Think about the primary feature of this concept',
-        hint2: 'Consider the governance or economic function',
-        hint3: 'Recall the long-term historical consequence',
-        explanation: 'Review the key terms in the content section above to reinforce these AP vocabulary connections for Americas & Africa (c. 1200–1450) Part 6.'
+        correctAnswers: ['Mit\'a labor and redistribution', 'Tribute and markets', 'Indian Ocean trade'],
+        hint1: 'The Inca had no markets or money on the Aztec scale',
+        hint2: 'Conquered city-states paid the Aztecs in goods, and Tlatelolco held a great market',
+        hint3: 'The Swahili towns faced the sea',
+        explanation: 'The Inca drafted labor through the mit\'a and redistributed goods from state storehouses, the Aztecs collected tribute and ran huge markets, and the Swahili towns lived on Indian Ocean commerce. The gold-salt trade was Mali\'s base.'
       }
     },
     {
@@ -157,7 +157,7 @@ The Americas' relative isolation from Old World disease pools had a critical con
               'Military conquest alone explains change in this period, since trade and religion had no effect on any states'
             ],
             correctAnswer: 0,
-            explanation: 'Strong AP theses acknowledge both change and continuity, explain mechanisms rather than just outcomes, and connect specific evidence to broader historical arguments. Recognizing complexity within apparent simplicity is the hallmark of high-scoring AP responses.'
+            explanation: 'The strongest thesis names a continuity (older tribute systems in Mesoamerica, the gold-salt trade inherited from Ghana) and a change (new states such as the Aztecs and Mali organizing them on a much larger scale). The other choices deny change, deny continuity, or reduce the period to conquest alone.'
           },
           {
             question: 'Which comparison best demonstrates AP historical reasoning about Americas & Africa (c. 1200–1450)?',
@@ -168,7 +168,7 @@ The Americas' relative isolation from Old World disease pools had a critical con
               'Mali and the Inca differed only in religion, so their economies and governments can be treated as the same'
             ],
             correctAnswer: 0,
-            explanation: 'AP comparison questions reward arguments that identify both similarities and differences AND explain why those similarities and differences exist. Using comparison to generate broader principles about human societies — rather than just listing similarities and differences — earns the highest AP scores.'
+            explanation: 'A strong comparison names a similarity (both built large states) and a difference with its cause: Mali grew rich by taxing the gold-salt trade, while the Inca, with no money economy, drew on the mit\'a labor draft and redistributed goods. Societies without contact can still be compared, and their economies were not alike.'
           }
         ]
       }

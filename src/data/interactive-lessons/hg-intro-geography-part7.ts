@@ -14,7 +14,7 @@ export const hgIntroGeographyPart7Data = {
 | Section |
 |---------|
 | 📖 Master Vocabulary Map |
-| 📌 Key People & Models |
+| 📌 Key Concepts & Models |
 | Synthesis Practice |
 | Final Self-Check |
 
@@ -33,12 +33,12 @@ export const hgIntroGeographyPart7Data = {
 | **Relative location** | Position relative to other places |
 | **Site** | Internal physical traits of a place |
 | **Situation** | Position relative to surrounding features (trade routes, neighbors) |
-| **Place** (Yi-Fu Tuan) | Location + meaning + lived experience |
+| **Place** | Location + meaning + lived experience |
 | **Space** | Undifferentiated extent between objects |
 | **Sense of place** | Emotional/cultural attachment |
-| **Placelessness** (Relph) | Homogenized landscape that erases local identity |
-| **Distance decay** | Interaction weakens with distance (Tobler's First Law) |
-| **Time-space convergence** (Janelle 1969) | Effective shrinking of distance via faster transport/communication |
+| **Placelessness** | Homogenized landscape that erases local identity |
+| **Distance decay** | Interaction weakens with distance |
+| **Time-space convergence** | Effective shrinking of distance via faster transport/communication |
 | **Friction of distance** | Cost (time/money/effort) of crossing space |
 | **Arithmetic density** | Population ÷ total land |
 | **Physiological density** | Population ÷ arable land |
@@ -54,7 +54,7 @@ export const hgIntroGeographyPart7Data = {
 | **Diffusion (contagious)** | Person-to-person rapid spread |
 | **Diffusion (hierarchical)** | Spreads top-down through tiers of places |
 | **Diffusion (stimulus)** | Idea spreads, local form modified (McAloo Tikki) |
-| **Cultural hearth** (Sauer) | Place where an innovation originates |
+| **Cultural hearth** | Place where an innovation originates |
 | **GIS / GPS / Remote sensing / VGI** | Data-collection technologies |
 | **Map projection** | Method of flattening the globe (Mercator, Gall-Peters, Robinson, Goode, Polar) |
       `
@@ -96,28 +96,28 @@ export const hgIntroGeographyPart7Data = {
       id: 'hgintrog7-people',
       type: 'text' as const,
       content: `
-## 📌 Key People & Models You Should Be Able to Cite
+## 📌 Key Concepts & Models to Apply
 
-| Figure / Model | Contribution | Why You Cite It |
-|----------------|--------------|-----------------|
-| **Waldo Tobler** (1970) | Tobler's First Law: "Everything is related to everything else, but near things are more related" | Anchors all distance-decay and spatial-autocorrelation arguments |
-| **Yi-Fu Tuan** (1977, *Space and Place*) | Distinction between location, space, and place | "Sense of place" FRQs |
-| **Edward Relph** (1976, *Place and Placelessness*) | Coined "placelessness" | Standardized strip-mall landscapes |
-| **David Harvey** (1989) | Time-space compression in late capitalism | Globalization & culture FRQs |
-| **Donald Janelle** (1969) | Time-space convergence | Transport & communication revolutions |
-| **Carl Sauer** (Berkeley, 1952) | Cultural hearths & agricultural origins | Diffusion + Unit 5 origins of agriculture |
-| **Mercator vs. Gall-Peters** | Conformal vs. equal-area projection trade-offs | Map projection FRQs |
-| **Goode Homolosine** | Equal-area, interrupted | Continental-area visualization |
-| **GIS pioneers (Tomlinson 1968)** | Canada Geographic Information System | First operational GIS |
+The CED asks you to apply geographic concepts, not to cite individual geographers. These are the Unit 1 ideas that recur across the course:
+
+| Concept / Model | What it means | Where it shows up |
+|----------------|---------------|-------------------|
+| **Distance decay** | Interaction between places weakens as distance increases | Diffusion, migration, trade and retail market areas |
+| **Time-space compression** | Faster transport and communication make distant places feel closer | Globalization, the spread of culture and disease |
+| **Place and sense of place** | Location given meaning by the people who live there | Cultural landscape and identity questions (Unit 3) |
+| **Cultural hearth** | The place where an innovation or trait begins | Diffusion of religions and languages (Unit 3); origins of agriculture (Unit 5) |
+| **Mercator vs. Gall-Peters** | Shape-preserving (conformal) vs. equal-area projection trade-offs | Map projection questions |
+| **Goode Homolosine** | Equal-area, interrupted | Comparing the true sizes of continents |
+| **GIS** | Layered digital mapping and analysis | Data and technology questions |
 
 ### Mini Synthesis Map (memorize the connections)
 
-- **Tobler → distance decay → distance-based diffusion → why hierarchical diffusion exists.**
-- **Sauer → cultural hearths → diffusion of agriculture → Unit 5.**
-- **Janelle / Harvey → shrinking distance → globalization → Unit 7.**
-- **Tuan / Relph → place identity → cultural landscape → Unit 3.**
+- **Distance decay → contagious diffusion slows with distance → why hierarchical diffusion can leap across space.**
+- **Cultural hearths → diffusion of agriculture → Unit 5.**
+- **Time-space compression → shrinking distance → globalization → Unit 7.**
+- **Sense of place → place identity → cultural landscape → Unit 3.**
 
-> 🔑 **Why This Matters:** AP graders reward students who *name* the geographer. "As Yi-Fu Tuan argued…" earns more credit than "Some geographers say…"
+> 🔑 **Why This Matters:** AP scorers reward an accurate concept applied to a specific example ("Distance decay explains why most customers live within a few miles of the store"), not the name of the scholar who described it.
       `
     },
     {
@@ -126,47 +126,47 @@ export const hgIntroGeographyPart7Data = {
       content: `
 **Final Recall** ✍️
 
-1) Author of Tobler's First Law (last name only):
+1) The principle that interaction between places weakens as distance increases (two words):
 
-2) Author of *Space and Place* (1977) — the place vs. space distinction (last name only):
+2) The visible imprint of human activity on the physical environment (two words):
 
-3) Berkeley geographer who in 1952 wrote *Agricultural Origins and Dispersals* on cultural hearths (last name only):
+3) A map projection that keeps the relative sizes of areas accurate, such as Gall-Peters (two words, hyphen optional):
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["Tobler", "Tuan", "Sauer"],
-        hint1: "First Law of Geography (1970).",
-        hint2: "Yi-Fu ___",
-        hint3: "Carl ___, Berkeley.",
-        explanation: "Tobler (1970) — distance decay law. Yi-Fu Tuan (1977) — *Space and Place*, the place vs. space distinction. Carl Sauer (1952) — cultural hearths and the Berkeley school of cultural geography."
+        correctAnswers: ["Distance decay", "Cultural landscape", "Equal-area"],
+        hint1: "Most customers of a corner store live within walking distance.",
+        hint2: "Church steeples, field patterns and street signs are all part of it.",
+        hint3: "It distorts shape so that it can keep size true.",
+        explanation: "Distance decay: interaction falls off with distance. Cultural landscape: the visible human imprint on the environment. Equal-area projections, such as Gall-Peters, keep relative size accurate at the cost of shape."
       }
     },
     {
       id: 'hgintrog7-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Match Concept to Geographer** 🔍
+**Match Each Example to Its Concept** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: "'Near things are more related than distant things' — ___",
-            options: ["Tobler", "Tuan", "Relph", "Harvey"]
+            label: "A town's residents trade mostly with nearby towns and rarely with distant ones — ___",
+            options: ["Distance decay", "Time-space compression", "Placelessness", "Sense of place"]
           },
           {
-            label: "Time-space compression in late capitalism (1989) — ___",
-            options: ["Harvey", "Sauer", "Janelle", "Tobler"]
+            label: "Video calls and cheap flights make a family on another continent feel close — ___",
+            options: ["Distance decay", "Time-space compression", "Placelessness", "Sense of place"]
           },
           {
-            label: "'Placelessness' (1976) — ___",
-            options: ["Relph", "Tuan", "Sauer", "Tobler"]
+            label: "Identical strip malls make towns across the country look interchangeable — ___",
+            options: ["Distance decay", "Time-space compression", "Placelessness", "Sense of place"]
           }
         ],
-        correctAnswers: ["Tobler", "Harvey", "Relph"],
-        hint1: "First Law of Geography.",
-        hint2: "Author of *The Condition of Postmodernity* (1989).",
-        hint3: "*Place and Placelessness*, 1976.",
-        explanation: "Tobler — First Law (1970). David Harvey — time-space compression in late capitalism (1989). Edward Relph — placelessness (1976)."
+        correctAnswers: ["Distance decay", "Time-space compression", "Placelessness"],
+        hint1: "Interaction falls off as distance grows.",
+        hint2: "Technology shrinks the effective distance.",
+        hint3: "The opposite of a distinctive sense of place.",
+        explanation: "Trading mostly with nearby places is distance decay. Technology that makes distant places feel close is time-space compression. Interchangeable chain landscapes show placelessness, the opposite of a strong sense of place."
       }
     },
     {
@@ -182,12 +182,12 @@ export const hgIntroGeographyPart7Data = {
 - [ ] Classify regions (formal/functional/perceptual) and give Atlanta as a place that is in all three.
 - [ ] Distinguish all four types of expansion diffusion + relocation diffusion, with a named example for each.
 - [ ] Explain MAUP with an example of how aggregation changes the apparent pattern.
-- [ ] Cite Tobler, Tuan, Sauer, Janelle, Harvey, Relph each in one sentence.
+- [ ] Define distance decay, time-space compression, place, sense of place and cultural hearth, each with one example.
 - [ ] Describe one thematic map type AND its limitation.
 
 ### Top Strategic Reminders
 - Always answer the **verb**: identify / describe / explain / compare ≠ interchangeable.
-- Always **name the place**, **name the geographer**, **name the model**.
+- Always **name the place** and **name the concept or model**.
 - For *every* stimulus question, cite the stimulus by value or feature.
 - For scale questions, name the scale and how patterns differ.
 

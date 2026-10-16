@@ -14,11 +14,11 @@ export const whChallenges21stCenturyPart6Data = {
 | Section |
 |---|
 | HIPP for documents about global challenges |
-| Document bank: the Universal Declaration of Human Rights, Silent Spring, the Brundtland Report, Wangari Maathai's Nobel lecture |
+| Document bank: the Universal Declaration of Human Rights, Silent Spring, the Brundtland Report, the Alma-Ata Declaration |
 | AP SAQ structure for these prompts |
 | Common AP traps to avoid |
 
-> Key idea: Documents about disease, the environment and human rights each come from a position: a government, a scientist, an international commission, an activist. Sourcing that position with HIPP (historical situation, intended audience, purpose, point of view) is the highest-value move on these prompts.
+> Key idea: Documents about disease, the environment and human rights each come from a position: a coalition of governments, a scientist, an international commission, a global health conference. Sourcing that position with HIPP (historical situation, intended audience, purpose, point of view) is the highest-value move on these prompts.
       `
     },
     {
@@ -87,10 +87,10 @@ export const whChallenges21stCenturyPart6Data = {
 
 - **HIPP:** A UN commission chaired by Norwegian prime minister Gro Harlem Brundtland; intended audience is governments and international agencies; purpose is to reconcile economic growth in poorer countries with environmental protection; point of view is a body of officials from both rich and developing countries seeking a compromise. Its idea of "sustainable development" shaped the 1992 Rio Earth Summit.
 
-> **4. Wangari Maathai, Nobel Peace Prize Lecture (Oslo, December 10, 2004)**
-> "In 1977, when we started the Green Belt Movement, I was partly responding to needs identified by rural women, namely lack of firewood, clean drinking water, balanced diets, shelter and income."
+> **4. Declaration of Alma-Ata, Article I (International Conference on Primary Health Care, 1978)**
+> "The Conference strongly reaffirms that health, which is a state of complete physical, mental and social wellbeing, and not merely the absence of disease or infirmity, is a fundamental human right..."
 
-- **HIPP:** Maathai looks back on the movement she founded in 1977, a CED example of an environmental movement (Topic 9.5); intended audience is the Nobel committee, world leaders and the global public; purpose is to link conservation to democracy, peace and women's empowerment; point of view is a Kenyan biologist and activist who had been arrested for opposing President Moi's authoritarian government. The lecture is later than the events it describes, so it is a retrospective account by the movement's founder.
+- **HIPP:** Adopted in 1978 at a conference in Alma-Ata (Soviet Kazakhstan) organized by the World Health Organization and UNICEF, a year after the last naturally occurring case of smallpox; intended audience is the world's governments and health workers; purpose is to commit states to "Health for All by the Year 2000" through basic primary care rather than only big hospitals; point of view is delegations from 134 governments, many of them newly independent states, so the text states broad goals that rich and poor countries alike could sign. Like the Universal Declaration, it set goals but did not bind states or fund them.
 
 ## AP SAQ Structure (3 parts)
 
@@ -154,15 +154,15 @@ export const whChallenges21stCenturyPart6Data = {
       exercise: {
         questions: [
           {
-            question: 'Maathai gave her Nobel lecture in 2004 about a movement she had founded in 1977. How does this situation affect the lecture\'s use as evidence?',
+            question: 'The Alma-Ata Declaration was adopted by delegations from 134 governments at a 1978 conference organized by the WHO and UNICEF. How does this point of view shape the document?',
             options: [
-              'It is a neutral outside report written by someone with no connection to the movement',
-              'It shows her aims well, but it is her own account written decades after the events',
-              'It cannot be used as evidence, because speeches are never reliable historical sources',
-              'It is a colonial government record, so it reflects British policy rather than Kenyan views'
+              'It is one doctor\'s private memoir, so it records her own patients rather than any shared policy',
+              'It sets broad goals like health as a human right that many states could accept',
+              'It is a binding treaty, so it fined any member state that failed to vaccinate its whole population',
+              'It reflects only British colonial health policy, since the delegates met in London under the Crown'
             ],
             correctAnswer: 1,
-            explanation: 'As the founder looking back, Maathai is an excellent source for the movement\'s goals and her own interpretation of them, but a historian would corroborate her account with records from the 1970s and 1980s. She was not a neutral outsider, speeches can be valuable sources when sourced carefully, and the lecture is not a colonial record.'
+            explanation: 'A text negotiated among many governments tends to state broad, widely acceptable principles, such as health as a fundamental human right and the goal of "Health for All by the Year 2000." It was not a personal memoir, it imposed no fines or binding duties, and it was adopted in Alma-Ata in the Soviet Union, not in London.'
           },
           {
             question: 'Which example best shows a global challenge spreading through the links that globalization built?',

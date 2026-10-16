@@ -97,7 +97,7 @@ European colonial economies depended on **coercive labor systems** to extract we
 ### The Atlantic Slave Trade by the Numbers
 - **12.5 million** Africans were forcibly transported to the Americas (1500–1870)
 - **~1.8 million** died during the Middle Passage
-- **~40%** went to Brazil; **~40%** to the Caribbean; **~5%** to North America
+- **~45%** went to Brazil; **~40%** to the Caribbean; only **~4%** to mainland North America; most of the rest to Spanish mainland America
 - West African kingdoms like **Dahomey** and **Asante** participated by capturing and selling rivals
 
 > 🔑 **AP Connection:** The AP exam tests comparisons between labor systems. Be ready to explain how chattel slavery differed from the encomienda, mita, and indentured servitude in terms of **duration, inheritance, and racial basis**.
@@ -129,7 +129,7 @@ European colonial economies depended on **coercive labor systems** to extract we
               'The Atlantic sugar islands of Madeira and São Tomé'
             ],
             correctAnswer: 1,
-            explanation: 'Approximately 40-45% of all enslaved Africans went to Brazil and roughly another 40% to the Caribbean — both driven by the labor demands of sugar production. Only about 4-5% went to North America. Madeira and São Tomé pioneered the sugar plantation model before 1500 but received far fewer captives. Sugar cultivation was extraordinarily labor-intensive and deadly, requiring constant importation of new workers.'
+            explanation: 'About 45% of all enslaved Africans went to Brazil and roughly another 40% to the Caribbean — both driven by the labor demands of sugar production. Only about 4% went to mainland North America. Madeira and São Tomé pioneered the sugar plantation model before 1500 but received far fewer captives. Sugar cultivation was extraordinarily labor-intensive and deadly, requiring constant importation of new workers.'
           }
         ]
       }

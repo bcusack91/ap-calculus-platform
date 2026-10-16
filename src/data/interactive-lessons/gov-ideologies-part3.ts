@@ -165,13 +165,13 @@ Voters tend to elect parties when their OWNED issues become salient — Republic
             hint: 'FDR election; built coalition through Social Security, NLRA, FDIC, SEC, AAA, CCC, WPA programs; coalition lasted 1932-1968.'
           },
           {
-            prompt: "Term for the consistent ~10-point Democratic advantage among WOMEN voters since 1980 — driven by safety net + healthcare + abortion rights preferences.",
+            prompt: "Term for the persistent pattern since 1980 in which WOMEN vote more Democratic than men — linked to views on the safety net, health care and abortion rights.",
             answer: 'gender gap',
             acceptableAnswers: ['gender gap', 'Gender gap', 'Gender Gap', 'the gender gap'],
             hint: 'Largest among young, unmarried, college-educated women; "marriage gap" component — married women trend more Republican than unmarried women.'
           },
           {
-            prompt: "Type of polarization measuring Americans' growing emotional DISLIKE of opposing party (e.g., would be upset if child married someone from other party — 5% in 1960, ~40% in 2020).",
+            prompt: "Type of polarization measuring Americans' growing emotional DISLIKE of opposing party (e.g., would be upset if a child married someone from the other party — about 5% in 1960, a far larger share in recent surveys).",
             answer: 'affective polarization',
             acceptableAnswers: ['affective polarization', 'Affective polarization', 'Affective Polarization'],
             hint: 'Beyond mere policy disagreement; sees opposing partisans as immoral, dangerous, ignorant; drives democratic backsliding concerns; distinct from issue + ideological polarization.'
@@ -190,7 +190,7 @@ Voters tend to elect parties when their OWNED issues become salient — Republic
             options: ['25% Democratic', '50% Democratic', '60% Democratic', '70% Democratic', '85-90% Democratic']
           },
           {
-            label: "WHITE EVANGELICAL PROTESTANTS — most consistently Republican group; abortion + traditional values + Trump 80%+ in 2016/2020/2024: ~___",
+            label: "WHITE EVANGELICAL PROTESTANTS — most consistently Republican group; abortion + traditional values + roughly three-quarters or more for Trump in 2016, 2020 and 2024 exit polls: ~___",
             options: ['25% Democratic', '50% Democratic', '60% Democratic', '70% Democratic', '85-90% Democratic']
           },
           {
@@ -199,9 +199,9 @@ Voters tend to elect parties when their OWNED issues become salient — Republic
           }
         ],
         correctAnswers: ['85-90% Democratic', '25% Democratic', '70% Democratic'],
-        hint1: 'BLACK ~85-90% Dem (some Black male shift toward Trump 2024 ~20% Trump support); largest single Dem voting bloc; concentrated in major cities + South.',
-        hint2: 'WHITE EVANGELICALS ~80% Rep (only ~15-20% Dem); Trump won 81% in 2016, 76% in 2020, 81% in 2024; abortion + religious liberty + Israel + immigration; Southern Baptist Convention + non-denominational megachurches.',
-        hint3: 'JEWISH AMERICANS ~70% Dem; ~3% of electorate but concentrated in NY, FL, NJ, CA; some shift toward GOP among Orthodox; Israel + Gaza tensions tested 2024 but Harris won majority.'
+        hint1: 'BLACK ~85-90% Dem (Trump gained some ground with Black men in 2024, roughly one in five); the most loyal Democratic bloc; concentrated in major cities + the South.',
+        hint2: 'WHITE EVANGELICALS roughly 75-80% or more Rep in exit polls (about a fifth to a quarter Dem); abortion + religious liberty + judicial appointments; Southern Baptist Convention + non-denominational megachurches.',
+        hint3: 'JEWISH AMERICANS roughly 70% Dem; a small share of the electorate but concentrated in NY, FL, NJ, CA; Orthodox Jews lean more Republican.'
       }
     },
     {
@@ -219,7 +219,7 @@ Voters tend to elect parties when their OWNED issues become salient — Republic
               "Issue polarization is emotional dislike of opposing partisans, and affective polarization is policy disagreement that rarely affects democratic norms or elections.",
             ],
             correctAnswer: 0,
-            explanation: 'AFFECTIVE POLARIZATION: (1) emotional dislike beyond policy; child-marrying-opposing-party rose 5% (1960) → ~40% (2020); feeling thermometers ~25/100 for opposing party; (2) DISTINCT from issue/ideological polarization — policy positions only modestly more polarized; emotional hostility much higher; (3) DRIVERS — partisan SORTING; social media echo chambers; partisan media (FOX, MSNBC); elite rhetoric ("enemy of the people"); zero-sum electoral competition; (4) CONSEQUENCES — less compromise; rationalize own-side misconduct; norm violations OK when own side benefits; trust erodes; (5) DEMOCRATIC BACKSLIDING — Levitsky + Ziblatt 2018 — voters view opposing as existential threat; institutional norms dismissed as "enemy tools"; election losses delegitimized (Jan 6 2021); us-vs-them replaces we-the-people; (6) MITIGATION — No Labels, Braver Angels; civic education; RCV + open primaries + nonpartisan redistricting.'
+            explanation: 'AFFECTIVE POLARIZATION: (1) emotional dislike beyond policy; the share upset at a child marrying across party lines rose from about 5% (1960) to a far larger share in recent surveys, and ratings of the other party have fallen sharply; (2) DISTINCT from issue/ideological polarization — policy positions only modestly more polarized; emotional hostility much higher; (3) DRIVERS — partisan SORTING; social media echo chambers; partisan media (FOX, MSNBC); elite rhetoric ("enemy of the people"); zero-sum electoral competition; (4) CONSEQUENCES — less compromise; rationalize own-side misconduct; norm violations OK when own side benefits; trust erodes; (5) DEMOCRATIC BACKSLIDING — Levitsky + Ziblatt 2018 — voters view opposing as existential threat; institutional norms dismissed as "enemy tools"; election losses delegitimized (Jan 6 2021); us-vs-them replaces we-the-people; (6) MITIGATION — No Labels, Braver Angels; civic education; RCV + open primaries + nonpartisan redistricting.'
           }
         ]
       }

@@ -5,11 +5,13 @@ export const whMaritimeEmpiresLaborPart5Data = {
       id: 'whmelf5-intro',
       type: 'text' as const,
       content: `
-# ⚓ Maritime Empires & Labor Systems (c. 1450–1750)
+# ⚓ Maritime Empires & Labor Systems (c. 1600–1900)
 
 **Part 5 of 7 — Labor Systems in Asia and Africa**
 
 ---
+
+> 📅 **Time frame:** This part runs from the VOC in the 1600s to forced cultivation in Java (1830–1870) and Indian indentured migration (1838–1916), so much of it is tested in Units 5 and 6 rather than Unit 4.
 
 > 🔑 **Key Concept:** Colonial labor systems extended beyond the Americas into Asia and Africa: the Dutch used forced cultivation in Java, the British imposed indentured labor across the empire, and various forms of coerced labor existed in Mughal India and Ottoman territories. AP questions compare labor systems across regions and evaluate how different empires extracted value from subject populations.
       `

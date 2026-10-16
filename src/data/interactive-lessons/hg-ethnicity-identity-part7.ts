@@ -32,7 +32,7 @@ export const hgEthnicityIdentityPart7Data = {
 | 1 | What are the key terms? | Ethnicity, race, nationality, nation-state; centripetal and centrifugal forces |
 | 2 | How is identity defined and counted? | Layered, situational identity; census categories over time; gender and the workforce; indigenous lands |
 | 3 | How does ethnicity mark places? | Enclave, ethnoburb, ghetto; Chinatown, Little Havana, Dearborn, San Gabriel Valley; placemaking |
-| 4 | How is segregation measured and built? | Census scales; index of dissimilarity; redlining, covenants, blockbusting, steering |
+| 4 | How is segregation measured and built? | Census scales; reading tract data and maps; redlining, covenants, blockbusting, steering |
 | 5 | When does ethnicity become conflict? | Ethnonationalism, stateless nations, irredentism; ethnic cleansing versus genocide; Bosnia, Rwanda, Rohingya |
 | 6 | How is it tested? | Reading tables and landscapes; explain with evidence |
 
@@ -44,7 +44,7 @@ export const hgEthnicityIdentityPart7Data = {
 | **Landscape** | Chinatown's gate, temples and bilingual signs; ethnoburb plazas | Mosques, Orthodox and Catholic churches; renamed streets after the war |
 | **Clustering** | Exclusion and choice in Chinatown; affluent, voluntary clustering in the San Gabriel Valley | Mixed towns before 1992; forced separation by 1995 |
 | **Process** | Chain migration, exclusion (1882 Act), then ethnoburb formation | Ethnonationalism, ethnic cleansing and genocide at Srebrenica |
-| **Measure or map** | Tract-level census data; Asian–white dissimilarity is generally lower than Black–white | Census of 1991 versus postwar maps; two entities under the Dayton Agreement |
+| **Measure or map** | Tract-level census data; Asian–white segregation is generally lower than Black–white | Census of 1991 versus postwar maps; two entities under the Dayton Agreement |
 | **Scale** | Small share of the state, a majority in some suburbs | A local war with regional refugee flows and a global tribunal |
 
 > 🔑 **AP Connection:** A strong answer moves across lenses: "Bosnia's mixed towns (**identity, local scale**) were split by ethnonationalist forces (**process**) through ethnic cleansing (**conflict**), and the Dayton Agreement froze the result into two entities (**map**)."
@@ -104,10 +104,10 @@ export const hgEthnicityIdentityPart7Data = {
 |---|---|---|
 | Census race and ethnicity categories | Group sizes and change over time | Categories are political choices; they change and hide diversity within groups |
 | Labor force participation rate | Women's role in paid work | Leaves out unpaid care and family farm work |
-| Spatial assimilation model | Groups disperse as income rises | Ethnoburbs show voluntary clustering; discrimination blocks moves |
-| Place stratification | Groups stay segregated despite income | Can underplay choice and change over time |
+| Dispersal through assimilation | Groups disperse as income rises | Ethnoburbs show voluntary clustering; discrimination blocks moves |
+| Persistent segregation | Groups stay segregated despite income because of discrimination | Can underplay choice and change over time |
 | Invasion and succession | One group replaces another | Ecological metaphor hides policy and real estate practices |
-| Index of dissimilarity | Evenness of two groups across tracts | Two groups only; ignores arrangement; depends on unit size |
+| Census tract percentages | Where groups cluster at the neighborhood scale | Depends on unit size; ignores arrangement; shows where, not why |
 | Choropleth map | Rates by area | Large, thinly settled areas dominate; class breaks shape the story |
 
 ### Five Distinctions to Know Cold
@@ -129,27 +129,27 @@ Choose the best tool or concept for each task.
       exercise: {
         dropdowns: [
           {
-            label: 'Measure how unevenly two groups are spread across a city\'s tracts: ___',
-            options: ['index of dissimilarity', 'dot density map', 'labor force participation rate', 'spatial assimilation model']
+            label: 'Compare a group\'s share of each neighborhood with its share of the whole city: ___',
+            options: ['census tract percentages', 'dot density map', 'labor force participation rate', 'assimilation and dispersal']
           },
           {
             label: 'Show exactly where members of each group live and where sharp edges between groups fall: ___',
-            options: ['index of dissimilarity', 'dot density map', 'labor force participation rate', 'spatial assimilation model']
+            options: ['census tract percentages', 'dot density map', 'labor force participation rate', 'assimilation and dispersal']
           },
           {
             label: 'Predict what happens to an enclave as its residents gain income and education: ___',
-            options: ['index of dissimilarity', 'dot density map', 'labor force participation rate', 'spatial assimilation model']
+            options: ['census tract percentages', 'dot density map', 'labor force participation rate', 'assimilation and dispersal']
           },
           {
             label: 'Compare how much women take part in paid work in two regions: ___',
-            options: ['index of dissimilarity', 'dot density map', 'labor force participation rate', 'spatial assimilation model']
+            options: ['census tract percentages', 'dot density map', 'labor force participation rate', 'assimilation and dispersal']
           }
         ],
-        correctAnswers: ['index of dissimilarity', 'dot density map', 'spatial assimilation model', 'labor force participation rate'],
-        hint1: 'A single number from 0 to 100.',
+        correctAnswers: ['census tract percentages', 'dot density map', 'assimilation and dispersal', 'labor force participation rate'],
+        hint1: 'Neighborhood-scale shares from the census.',
         hint2: 'One dot per person, colored by group.',
-        hint3: 'A model that expects dispersal with success.',
-        explanation: 'The index of dissimilarity measures evenness. A dot density map shows where people live. The spatial assimilation model predicts dispersal as income rises. The labor force participation rate measures paid work.'
+        hint3: 'Success often brings a move out of the enclave.',
+        explanation: 'Census tract percentages compare neighborhood shares with the city-wide share. A dot density map shows where people live. Assimilation is usually expected to bring dispersal as income rises. The labor force participation rate measures paid work.'
       }
     },
     {
@@ -161,15 +161,15 @@ Choose the best tool or concept for each task.
       exercise: {
         questions: [
           {
-            question: 'Which situation best supports the place stratification model rather than the spatial assimilation model?',
+            question: 'Which situation best supports the view that discrimination keeps some groups segregated regardless of income, rather than the expectation that groups disperse as they assimilate?',
             options: [
               'Second-generation Italian Americans moving to the suburbs',
-              'High-income Black families remaining highly segregated',
+              'High-income Black families still concentrated in mostly Black areas',
               'New Yemeni arrivals renting near relatives in Dearborn',
               'Cuban Americans leaving Little Havana as incomes rose'
             ],
             correctAnswer: 1,
-            explanation: 'Place stratification holds that discrimination keeps some groups segregated whatever their income, which fits high-income Black families who remain segregated. The Italian and Cuban moves fit spatial assimilation, and newcomers near relatives are the enclave stage both models expect.'
+            explanation: 'Discrimination that keeps a group segregated whatever its income fits high-income Black families who remain segregated. The Italian and Cuban moves fit dispersal through assimilation, and newcomers near relatives are the enclave stage both views expect.'
           },
           {
             question: 'Why do geographers describe race as a social construct?',

@@ -40,7 +40,7 @@ export const hgPopulationGrowthPart7Data = {
 ### How the Links Cause Each Other
 
 1. **Falling mortality** (ETM Stage 2) opens the gap that makes **DTM Stage 2** grow fast.
-2. That rapid growth is what worried **Malthus** and the **neo-Malthusians**, and what **Boserup** said would drive innovation.
+2. That rapid growth is what worried **Malthus** and the **neo-Malthusians**, and what the **intensification critique** says would drive innovation.
 3. Some governments answered with **anti-natalist** policies; but urbanization and **women's education** lowered fertility in many countries without them.
 4. Fertility that falls far below replacement leads to **DTM Stage 5** and **aging**.
 5. Aging pushes governments toward **pro-natalist** and **immigration** policies, bringing the chain back to the measures: births and migration.
@@ -66,15 +66,15 @@ export const hgPopulationGrowthPart7Data = {
             explanation: "Natural increase is +4 per 1,000, but net migration is −6 per 1,000, so total change is −2 per 1,000 and the population shrinks. RNI here is positive, and the two components do not cancel out."
           },
           {
-            question: "Which pairing of a thinker and a claim is correct?",
+            question: "Which pairing of a population theory and its claim is correct?",
             options: [
-              "Boserup: population pressure leads farmers to intensify",
-              "Malthus: food production grows geometrically as people multiply",
-              "Simon: resource limits make famine nearly unavoidable",
-              "Ehrlich: human ingenuity is the ultimate resource"
+              "Intensification critique: population pressure leads farmers to intensify",
+              "Malthusian theory: food production grows geometrically as population multiplies",
+              "Cornucopian view: resource limits make famine nearly unavoidable",
+              "Neo-Malthusian view: human ingenuity always overcomes scarcity"
             ],
             correctAnswer: 0,
-            explanation: "Boserup argued that population growth drives agricultural intensification. Malthus said food grows arithmetically, and the claims about ingenuity and resource limits belong to Simon and Ehrlich respectively, the reverse of the pairings shown."
+            explanation: "The intensification critique holds that population growth drives agricultural intensification. Malthus said food grows only arithmetically, and the last two pairings are reversed: cornucopians stress ingenuity, while neo-Malthusians stress resource limits."
           },
           {
             question: "Which country would be most likely to adopt a pro-natalist policy?",
@@ -102,7 +102,7 @@ export const hgPopulationGrowthPart7Data = {
 | Migration rate given as well | **Population growth rate** | RNI plus net migration |
 | "Why did the death rate fall?" | **DTM Stage 2 + ETM Stage 2** | Sanitation, vaccines and nutrition reduce infectious disease |
 | "Why did the birth rate fall?" | **DTM Stage 3 + women's roles** | Urbanization, education, paid work, contraception |
-| Farmers terracing or shortening fallow as density rises | **Boserup** | Population pressure drives intensification |
+| Farmers terracing or shortening fallow as density rises | **Intensification critique** | Population pressure drives intensification |
 | "Can food supply keep up?" | **Malthus and critics** | Evaluate with data and name the scale |
 | Cash for babies, tax breaks, parental leave | **Pro-natalist policy** | Usually small or temporary effects |
 | Birth limits, sterilization drives | **Anti-natalist policy** | Lower births, with side effects such as sex-ratio imbalance and aging |
@@ -122,26 +122,26 @@ Choose the concept that each situation best illustrates.
         dropdowns: [
           {
             label: 'Farmers terrace hillsides and plant two crops a year as rural density rises: ___',
-            options: ['Boserup\'s intensification', 'Epidemiological transition', 'Demographic transition', 'Old-age dependency']
+            options: ['Agricultural intensification', 'Epidemiological transition', 'Demographic transition', 'Old-age dependency']
           },
           {
             label: 'Heart disease replaces cholera as a leading cause of death: ___',
-            options: ['Boserup\'s intensification', 'Epidemiological transition', 'Demographic transition', 'Old-age dependency']
+            options: ['Agricultural intensification', 'Epidemiological transition', 'Demographic transition', 'Old-age dependency']
           },
           {
             label: 'The crude birth rate falls from 40 to 15 per 1,000 as a country urbanizes: ___',
-            options: ['Boserup\'s intensification', 'Epidemiological transition', 'Demographic transition', 'Old-age dependency']
+            options: ['Agricultural intensification', 'Epidemiological transition', 'Demographic transition', 'Old-age dependency']
           },
           {
             label: 'Each retiree\'s pension is funded by fewer and fewer workers: ___',
-            options: ['Boserup\'s intensification', 'Epidemiological transition', 'Demographic transition', 'Old-age dependency']
+            options: ['Agricultural intensification', 'Epidemiological transition', 'Demographic transition', 'Old-age dependency']
           }
         ],
-        correctAnswers: ['Boserup\'s intensification', 'Epidemiological transition', 'Demographic transition', 'Old-age dependency'],
+        correctAnswers: ['Agricultural intensification', 'Epidemiological transition', 'Demographic transition', 'Old-age dependency'],
         hint1: 'Population pressure leads to more labor and output per hectare.',
         hint2: 'The causes of death are changing, not just the number of deaths.',
         hint3: 'A falling birth rate as a society urbanizes is the DTM\'s Stage 3.',
-        explanation: 'Terracing and double-cropping under population pressure is Boserup\'s intensification. A shift from infectious to chronic causes of death is the epidemiological transition. A falling CBR during urbanization is the demographic transition. Fewer workers supporting each retiree is a rising old-age dependency ratio.'
+        explanation: 'Terracing and double-cropping under population pressure is agricultural intensification, the critique of Malthus. A shift from infectious to chronic causes of death is the epidemiological transition. A falling CBR during urbanization is the demographic transition. Fewer workers supporting each retiree is a rising old-age dependency ratio.'
       }
     },
     {
@@ -167,7 +167,7 @@ Choose the concept that each situation best illustrates.
 | Reading a high CDR as poor health care | Check the age structure first |
 | Using a stage number as an explanation | A stage describes a pattern; explain the mechanism behind it |
 | Saying Malthus was simply "wrong" | Globally his prediction failed; regionally, pressures he described still appear |
-| Treating Boserup as a Malthus supporter | She reversed his causation: growth drives food innovation |
+| Treating the intensification critique as support for Malthus | It reverses his causation: growth drives food innovation |
 | Assuming policies work exactly as intended | China's policy also skewed sex ratios and sped aging; pro-natalist cash often has small effects |
 | Forgetting Stage 5 is an addition | Classic versions of the DTM had four stages; Stage 5 was added later |
 

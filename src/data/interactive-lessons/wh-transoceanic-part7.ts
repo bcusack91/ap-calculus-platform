@@ -186,7 +186,7 @@ export const whTransoceanicPart7Data = {
             explanation: 'Environmental cost displacement across space and time is AP\'s sustainability framework: when British textile workers bought cheap cotton shirts, the environmental costs (Egyptian soil depletion; Indian water use; American soil exhaustion) were experienced in other places. When Victorian coal was burned, the atmospheric CO2 consequences were experienced globally and in the future. This displacement of environmental costs — to colonial territories, to future generations, to global commons (atmosphere, oceans) — is what made industrial development appear more profitable than it actually was when full environmental costs are included. AP requires understanding that seemingly separate economic and environmental histories are connected through this mechanism of cost displacement.'
           },
           {
-            question: 'For AP synthesis, what does transoceanic interconnections history from c. 1800 to the present demonstrate about the relationship between technology, economics, and power?',
+            question: 'For AP synthesis, what does transoceanic interconnections history from c. 1800 to 2001 demonstrate about the relationship between technology, economics, and power?',
             options: [
               'Technologies reflected imperial power yet also carried the networks that anticolonial movements later used to resist it',
               'Technology is neutral, and its effects were set entirely by individual choices about how to use each invention',

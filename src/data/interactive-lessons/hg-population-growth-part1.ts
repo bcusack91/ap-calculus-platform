@@ -164,7 +164,7 @@ The dependency ratio measures the proportion of non-working-age population (unde
 | Thinker | Argument |
 |---------|---------|
 | **Thomas Malthus** (1798) | Population grows geometrically; food grows arithmetically → inevitable famine |
-| **Ester Boserup** | Necessity is the mother of invention — population pressure drives agricultural innovation |
+| **Intensification critique** | Necessity is the mother of invention — population pressure drives agricultural innovation |
 | **Neo-Malthusians** | Earth has carrying capacity limits (resources, climate, water) |
 | **Cornucopians** | Technology and human ingenuity will always find solutions |
 
@@ -197,7 +197,7 @@ The dependency ratio measures the proportion of non-working-age population (unde
             explanation: 'Natural change = CBR minus CDR = 12 minus 14 = negative 2 per 1,000. But net immigration = +5 per 1,000. Total change = negative 2 + 5 = +3 per 1,000. Population is increasing.'
           },
           {
-            question: 'Ester Boserup would most likely respond to Malthus by arguing that:',
+            question: 'A critic of Malthus who studied agriculture in crowded rural regions would most likely argue that:',
             options: [
               'Population growth will inevitably outpace food production',
               'Population pressure pushes farmers to innovate and intensify farming',
@@ -205,7 +205,7 @@ The dependency ratio measures the proportion of non-working-age population (unde
               'Resource depletion is unavoidable regardless of technology'
             ],
             correctAnswer: 1,
-            explanation: 'Boserup argued that population growth DRIVES agricultural innovation — people find new techniques (irrigation, terracing, fertilizers) when they need to feed more people.'
+            explanation: 'The intensification critique holds that population growth DRIVES agricultural innovation — people find new techniques (irrigation, terracing, fertilizers) when they need to feed more people.'
           }
         ]
       }

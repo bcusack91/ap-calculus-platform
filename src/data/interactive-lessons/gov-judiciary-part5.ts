@@ -160,15 +160,15 @@ export const govJudiciaryPart5Data = {
       exercise: {
         questions: [
           {
-            question: "How did the Roberts Court's overruling of Roe in Dobbs (2022) compare with the Warren Court's rejection of Plessy's 'separate but equal' doctrine in Brown (1954)?",
+            question: "How did the Roberts Court's overruling of its 1973 abortion precedent in Dobbs (2022) compare with the Warren Court's rejection of Plessy's 'separate but equal' doctrine in Brown (1954)?",
             options: [
               "Both overturned long-standing precedent, but Brown expanded a constitutional right while Dobbs held one did not exist",
               "Both were decided unanimously, showing that overruling a precedent rarely divides the justices along ideological lines",
-              "Only Brown overturned precedent, since Dobbs merely clarified the standard Roe had set",
+              "Only Brown overturned precedent, since Dobbs merely clarified the abortion standard already in place",
               "Both expanded federal power by requiring every state to adopt one uniform national policy"
             ],
             correctAnswer: 0,
-            explanation: 'Both decisions rejected long-standing precedent (Plessy stood 58 years, Roe 49 years) — the EK 2.9.A.2 pattern of a changed Court establishing new or rejecting existing precedents. DIFFERENCE: Brown (required case) extended equal protection to strike down school segregation, while Dobbs held that the Constitution does not confer a right to abortion and returned the issue to legislatures (EK 3.9.A.2). Brown was 9-0, but Dobbs split the Court along ideological lines; neither imposed one uniform national policy in the way described.'
+            explanation: 'Both decisions rejected long-standing precedent (Plessy stood 58 years, the abortion precedent 49 years) — the EK 2.9.A.2 pattern of a changed Court establishing new or rejecting existing precedents. DIFFERENCE: Brown (required case) extended equal protection to strike down school segregation, while Dobbs held that the Constitution does not confer a right to abortion and returned the issue to legislatures (EK 3.9.A.2). Brown was 9-0, but Dobbs split the Court along ideological lines; neither imposed one uniform national policy in the way described.'
           },
           {
             question: "Which best explains the historical development of the incorporation doctrine through the 14th Amendment?",

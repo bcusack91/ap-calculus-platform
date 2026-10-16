@@ -150,7 +150,7 @@ In the United States, House seats are apportioned by population after every cens
 
 | Limitation | Explanation |
 |---|---|
-| **Not fixed** | Irrigation, fertilizer and new crop varieties raise the population land can support; this is the core of Boserup's argument (Population Growth topic) |
+| **Not fixed** | Irrigation, fertilizer and new crop varieties raise the population land can support; this is the core of the intensification critique of Malthus (Population Growth topic) |
 | **Depends on consumption** | A million people with high consumption may strain resources more than several million with low consumption |
 | **Trade changes it** | Singapore and the Netherlands support dense populations partly with imported food |
 | **Scale matters** | A region can exceed its local carrying capacity even while the world as a whole produces enough food |

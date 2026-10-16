@@ -180,7 +180,7 @@ Chinese merchants and state-sponsored expeditions participated in Indian Ocean c
           {
             question: 'For AP, the most significant feature of the pre-European Indian Ocean trade network was:',
             options: [
-              'Its polycentric and voluntary character, with many civilizations trading as rough equals',
+              'Its polycentric character, with merchants of many civilizations trading as rough equals',
               'Its domination by a single Arab caliphate that set prices and licensed every merchant in the ocean',
               'Its reliance on Chinese naval patrols, which kept pirates away from the major ports of the region',
               'Its dependence on barter alone, since merchants there had developed no credit or banking tools'

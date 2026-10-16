@@ -79,7 +79,7 @@ Almost every Supreme Court case arrives on APPEAL from a federal court of appeal
       exercise: {
         questions: [
           {
-            question: "Three new justices joined the Supreme Court between 2017 and 2020, and in 2022 the Court overturned *Roe v. Wade* in *Dobbs v. Jackson Women's Health Organization*. Which concept does this sequence best illustrate?",
+            question: "Three new justices joined the Supreme Court between 2017 and 2020, and in 2022, in *Dobbs v. Jackson Women's Health Organization*, the Court overruled its 1973 precedent recognizing a constitutional right to abortion. Which concept does this sequence best illustrate?",
             options: [
               "Ideological changes in the Court's membership through presidential appointments can lead it to reject existing precedents",
               "Congress can pass legislation that modifies the impact of a prior Supreme Court decision",
@@ -87,18 +87,18 @@ Almost every Supreme Court case arrives on APPEAL from a federal court of appeal
               "Life tenure keeps the Court's ideological balance the same from one decade to the next"
             ],
             correctAnswer: 0,
-            explanation: 'EK 2.9.A.2: ideological changes in the composition of the Court due to presidential appointments have led it to establish new precedents or reject existing ones. Dobbs (2022) overruled Roe (1973) after appointments created a 6-3 majority. Congress did not pass a law here; restraint favors keeping precedent but does not require it; and life tenure is exactly why each new appointment can shift the Court for decades (EK 2.5.A.2).'
+            explanation: 'EK 2.9.A.2: ideological changes in the composition of the Court due to presidential appointments have led it to establish new precedents or reject existing ones. Dobbs (2022) overruled a 1973 precedent after appointments created a 6-3 majority. Congress did not pass a law here; restraint favors keeping precedent but does not require it; and life tenure is exactly why each new appointment can shift the Court for decades (EK 2.5.A.2).'
           },
           {
             question: "Which best describes the doctrine of stare decisis and recent SCOTUS practice?",
             options: [
-              "Courts follow precedent for stability, yet the Roberts Court has overruled long-standing decisions such as Roe",
+              "Courts follow precedent for stability, yet the Court has overruled long-standing decisions as in Dobbs",
               "Courts must follow every precedent forever, so the Roberts Court has never overruled a prior constitutional decision",
               "Precedents bind only when set by unanimous votes, so the Roberts Court has overruled every split decision since 2020",
               "Stare decisis binds Congress to its past statutes, so the Roberts Court has struck down laws that conflict with older acts"
             ],
             correctAnswer: 0,
-            explanation: 'STARE DECISIS = "stand by what is decided" → PREDICTABILITY + STABILITY. Courts usually follow precedent (EK 2.9.A.1), but appointments that change the Court\'s ideology can lead it to reject precedent (EK 2.9.A.2): Dobbs (2022) overruled Roe + Casey; Brown (1954) rejected Plessy\'s separate-but-equal doctrine. Significant debate whether stare decisis remains a meaningful constraint.'
+            explanation: 'STARE DECISIS = "stand by what is decided" → PREDICTABILITY + STABILITY. Courts usually follow precedent (EK 2.9.A.1), but appointments that change the Court\'s ideology can lead it to reject precedent (EK 2.9.A.2): Dobbs (2022) overruled nearly 50 years of abortion precedent; Brown (1954) rejected Plessy\'s separate-but-equal doctrine. Significant debate whether stare decisis remains a meaningful constraint.'
           }
         ]
       }

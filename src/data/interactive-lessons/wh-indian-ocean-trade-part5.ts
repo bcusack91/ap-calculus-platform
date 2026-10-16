@@ -29,7 +29,7 @@ export const whIndianOceanTradePart5Data = {
               'It was a customs tariff the Portuguese copied from Mughal ports and charged at the same rates'
             ],
             correctAnswer: 0,
-            explanation: 'The cartaz is the moment when the Indian Ocean\'s voluntary commercial character changes: before Portuguese arrival, merchants paid for goods, services, and harbor fees in a commercial relationship; after Portuguese arrival, merchants paid for permission to continue trading they had done freely before — backed by violence if they refused. This transformation of commercial relationship into protection racket is the defining feature of early European involvement in Asian commerce.'
+            explanation: 'The cartaz is the moment when the Indian Ocean\'s open commercial character changes: before Portuguese arrival, merchants paid for goods, services, and harbor fees in a commercial relationship; after Portuguese arrival, merchants paid for permission to continue trading they had done freely before — backed by violence if they refused. This transformation of commercial relationship into protection racket is the defining feature of early European involvement in Asian commerce.'
           },
           {
             question: 'Portuguese conquest of Malacca (1511) was strategically significant because:',

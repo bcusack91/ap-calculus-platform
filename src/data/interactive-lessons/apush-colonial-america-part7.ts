@@ -68,7 +68,7 @@ export const apushColonialAmericaPart7Data = {
 - **Indentured servitude** — Multi-year labor contract in exchange for passage; declining after 1676
 - **Royal African Company (1672)** — English monopoly that expanded the Atlantic slave trade
 - **Slave codes** — 1660s+ colonial laws codifying lifetime racial slavery
-- **Salutary neglect** — British policy of loosely enforcing trade laws on colonies
+- **Salutary neglect** — Britain's loose enforcement of trade laws and light oversight of colonial politics (c. 1689–1763, especially under Walpole); a pattern, not an official policy, named by Edmund Burke in 1775
 - **Mercantilism** — Economic system in which colonies serve mother country's wealth
 - **Navigation Acts (1651+)** — Required colonial trade to use English or colonial ships and sent enumerated goods such as tobacco only to England or its colonies
 - **House of Burgesses (1619)** — First representative assembly in English colonies
@@ -120,7 +120,7 @@ export const apushColonialAmericaPart7Data = {
             hint: 'Led by Nathaniel Bacon against Governor Berkeley.'
           },
           {
-            question: "The British policy of loosely enforcing trade laws on the colonies before the 1760s.",
+            question: "Edmund Burke's later name for Britain's pattern of loosely enforcing trade laws on the colonies before the 1760s.",
             answer: 'salutary neglect',
             acceptableAnswers: ['salutary neglect', 'Salutary Neglect'],
             hint: 'Allowed colonial assemblies to develop their own political traditions.'

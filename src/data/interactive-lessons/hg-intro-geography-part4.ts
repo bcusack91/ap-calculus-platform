@@ -86,9 +86,9 @@ Two settlements can have **the same density** but **different concentrations** �
       id: 'hgintrog4-place',
       type: 'text' as const,
       content: `
-## 📌 Place, Location, and Space (Yi-Fu Tuan)
+## 📌 Place, Location, and Space
 
-Geographer **Yi-Fu Tuan (1977, _Space and Place_)** drew the formal distinction:
+Geographers distinguish these terms:
 
 | Term | Meaning | Example |
 |------|---------|---------|
@@ -96,7 +96,7 @@ Geographer **Yi-Fu Tuan (1977, _Space and Place_)** drew the formal distinction:
 | **Place** | Location + meaning, identity, lived experience | "The White House" — symbol of U.S. executive power |
 | **Space** | The undifferentiated extent between objects | Open prairie before settlement; an empty parking lot |
 | **Sense of place** | Emotional & cultural attachment to a place | New Orleans residents' identification with the Lower 9th Ward post-Katrina |
-| **Placelessness** (Edward Relph, 1976) | Standardized landscapes that erase local identity | A generic highway interchange with the same Walmart, McDonald's, and Holiday Inn anywhere in the U.S. |
+| **Placelessness** (the opposite of a strong sense of place) | Standardized landscapes that erase local identity | A generic highway interchange with the same Walmart, McDonald's, and Holiday Inn anywhere in the U.S. |
 
 ### Connectivity, Accessibility, Network Density
 
@@ -118,17 +118,17 @@ Geographer **Yi-Fu Tuan (1977, _Space and Place_)** drew the formal distinction:
 
 1) Population divided by **arable** land area gives what density measure? (one word)
 
-2) Yi-Fu Tuan's term for *location + meaning + lived experience* (one word)
+2) The term for *location + meaning + lived experience* (one word)
 
-3) Edward Relph's 1976 term for the homogenization of landscapes (e.g., interchangeable highway interchanges) (one word)
+3) The term for the homogenization of landscapes (e.g., interchangeable highway interchanges) (one word)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ["Physiological", "Place", "Placelessness"],
         hint1: "Egypt's Nile-valley density.",
         hint2: "Not 'space' — it's the meaningful version.",
-        hint3: "Relph's critique of generic landscapes.",
-        explanation: "Physiological density (pop ÷ arable land), Place (Yi-Fu Tuan's meaningful location), Placelessness (Relph 1976 — standardized landscapes erasing local identity)."
+        hint3: "The opposite of a distinctive sense of place.",
+        explanation: "Physiological density (pop ÷ arable land), Place (a location given meaning by people), Placelessness (standardized landscapes erasing local identity)."
       }
     },
     {
@@ -173,8 +173,7 @@ Geographer **Yi-Fu Tuan (1977, _Space and Place_)** drew the formal distinction:
 
 ### AP Strategy Moves
 - For "describe spatial pattern" prompts, give **two** descriptors: *concentration* (clustered/dispersed) AND *pattern* (linear/geometric/centralized).
-- Cite **Yi-Fu Tuan** by name when an FRQ asks about "sense of place."
-- Cite **Edward Relph** for placelessness / homogenized strip-mall landscapes.
+- Use the CED's own vocabulary (*place*, *sense of place*, *cultural landscape*) and a specific example; the exam rewards accurate concepts, not the names of individual geographers.
 - For density questions, choose the most-relevant of the three densities and **explain why** that one matches the question.
 - For interchange / hub questions, link **accessibility + low friction of distance + connectivity**.
       `
@@ -199,15 +198,15 @@ Geographer **Yi-Fu Tuan (1977, _Space and Place_)** drew the formal distinction:
             explanation: "Identical population and area means identical arithmetic density. The difference — packed vs. spread — is concentration (clustered vs. dispersed)."
           },
           {
-            question: "Travelers note that a McDonald's at a Kansas highway interchange looks identical to one in Florida or Oregon. The geographer who first labeled this homogenization of landscapes was:",
+            question: "Travelers note that a McDonald's at a Kansas highway interchange looks identical to one in Florida or Oregon. Which concept best describes this homogenization of landscapes?",
             options: [
-              "Yi-Fu Tuan",
-              "Edward Relph (placelessness)",
-              "David Harvey (time-space compression)",
-              "Walter Christaller"
+              "Possibilism",
+              "Placelessness",
+              "Time-space compression",
+              "Central place theory"
             ],
             correctAnswer: 1,
-            explanation: "Edward Relph's 1976 _Place and Placelessness_ named the loss of distinctive local landscape character that comes with chain-store homogenization."
+            explanation: "Placelessness describes the loss of distinctive local character as identical chain stores and buildings spread from place to place. Possibilism concerns human choices within environmental limits, time-space compression is the shrinking of travel and communication time, and central place theory explains the size and spacing of settlements."
           }
         ]
       }

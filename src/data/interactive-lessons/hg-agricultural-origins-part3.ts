@@ -105,7 +105,7 @@ In all three cases, a **language family** spread with the farmers: Indo-European
       content: `
 ## The Axis Idea and Its Limits
 
-In *Guns, Germs, and Steel* (1997), Jared Diamond argued that **the direction of a continent's main axis** shaped how fast crops spread.
+A popular argument holds that **the direction of a continent's main axis** shaped how fast crops spread. It is worth knowing because it shows both the pull and the danger of **environmental determinism**.
 
 | Continent | Main axis | Argument |
 |---|---|---|
@@ -141,7 +141,7 @@ In *Guns, Germs, and Steel* (1997), Jared Diamond argued that **the direction of
             explanation: 'When a language family and a set of crops share the same map, the most likely explanation is that the same migrating people carried both, which is relocation diffusion. Copying by neighbors or separate domestication would not spread one language family that far.'
           },
           {
-            question: 'Which fact is the strongest challenge to Diamond\'s axis argument?',
+            question: 'Which fact is the strongest challenge to the axis argument described above?',
             options: [
               'Wheat spread from the Fertile Crescent to China',
               'Fertile Crescent crops did not cross the Sahara',

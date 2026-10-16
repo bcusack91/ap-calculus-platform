@@ -23,26 +23,26 @@ export const whLandBasedEmpiresPart5Data = {
       exercise: {
         questions: [
           {
-            question: 'Which best describes the Manchu (Qing) approach to governing Han Chinese majority?',
+            question: 'Ottoman sultans claimed the title of caliph, the Safavid shahs promoted Shia Islam, and Qing emperors patronized Tibetan Buddhism. These policies all show rulers using',
             options: [
-              'Restoring the Confucian exams and bureaucracy but enforcing the queue and paired Manchu-Han posts',
-              'Abolishing Confucian exams and Chinese customs in favor of Manchu law and the Manchu language',
-              'Merging fully into Han society, so that Manchu identity and banner privileges vanished early on',
-              'Ruling through steppe tribal councils and leaving the old Ming bureaucracy entirely dismantled'
+              'religious courts in place of bureaucracies and standing armies',
+              'one shared faith imposed on the subjects of every Asian empire',
+              'religion to justify their rule and to build loyalty among subjects',
+              'religion to end all political and trade rivalry with European states'
             ],
-            correctAnswer: 0,
-            explanation: 'The Qing governance model is a model AP example of conquerors adapting to the conquered: they adopted Chinese bureaucracy, language, and culture in public while maintaining ethnic privilege (dual appointments, marriage restrictions) in political structures. This combination of adaptation and dominance enabled a 2% ethnic minority to govern a massive empire for 268 years.'
+            correctAnswer: 2,
+            explanation: 'Each dynasty used religion as a source of legitimacy: the Ottomans as protectors of Sunni Islam and its holy cities, the Safavids as champions of Shia Islam, and the Qing as patrons of the lamas in Mongolia and Tibet. None of them replaced bureaucracies with religious courts, they promoted different faiths, and religion did not end their rivalries with Europe.'
           },
           {
-            question: 'The "military revolution" in European states c. 1500-1700 gave European armies an advantage over Asian land-based empires because:',
+            question: 'Why did gunpowder weapons help the rulers of land-based empires centralize power?',
             options: [
-              'Wars among rival European states drove innovations that centralized empires resisted',
-              'European states always fielded far larger armies than the Asian empires could raise or supply',
-              'Asian land-based empires never adopted gunpowder, leaving their armies with bows and cavalry alone',
-              'Asian rulers rejected military change on religious grounds, while European states embraced it'
+              'Gunpowder made cavalry useless almost overnight, so nomadic peoples vanished from Asian politics by 1500',
+              'Cannon could breach the walls of regional lords, and costly firearms favored rulers who could pay for them',
+              'Firearms were cheap enough for every village to own, which spread military power evenly across society',
+              'Asian rulers bought all their guns from Portugal, which turned them into loyal allies of the Portuguese'
             ],
-            correctAnswer: 0,
-            explanation: 'This explanation is central to AP Unit 3-4 analysis: Europe\'s fragmentation into competing states created evolutionary pressure for military innovation, while the Ottoman janissaries and Mughal mansabdars were institutional vested interests resistant to reform. The result was an accelerating gap in military effectiveness by the 18th century.'
+            correctAnswer: 1,
+            explanation: 'Siege cannon broke the fortresses of rival nobles and cities, as at Constantinople in 1453, and artillery and trained musket infantry were expensive, so they favored central treasuries over local lords. Cavalry stayed important, guns were not evenly spread, and these empires cast their own cannon rather than depending on Portugal.'
           }
         ]
       }
@@ -91,15 +91,15 @@ Akbar created the mansabdar system to govern the Mughal empire:
       exercise: {
         questions: [
           {
-            question: 'The Qing Dynasty\'s requirement that Han Chinese men wear the Manchu queue (shaved head, braid) was primarily:',
+            question: 'In this lesson\'s comparison of land-based empires, the "diversity problem" refers to the challenge of',
             options: [
-              'A political sign of submission that made any refusal to obey Manchu rule visible',
-              'A hygiene rule copied from Manchu military camps with no real political meaning',
-              'A Buddhist devotional custom the Qing emperors urged on all of their Han subjects',
-              'A temporary wartime order that the Qing quietly dropped within one generation'
+              'finding enough soldiers to defend coastlines against European navies',
+              'ruling peoples of many religions and ethnicities under one dynasty',
+              'choosing one official language for trade with European merchants',
+              'dividing conquered land equally among all of a ruler\'s many sons'
             ],
-            correctAnswer: 0,
-            explanation: 'The queue requirement was political theater: "shave or die" made visible submission to Manchu authority a daily act. It was deeply humiliating to Han Chinese (Confucian tradition held the body sacred). The thousands who died rather than comply, and the long-term Han resentment of the queue requirement, demonstrate how even symbolic acts of political submission carry enormous emotional weight.'
+            correctAnswer: 1,
+            explanation: 'Each empire ruled subjects who did not share the dynasty\'s religion or ethnicity, and each found its own answer: the Ottoman millet system, Mughal policy that swung between Akbar\'s tolerance and Aurangzeb\'s orthodoxy, and Qing dual appointments. Coastal defense, trade languages and inheritance were real issues, but they are not what the term describes.'
           },
           {
             question: 'The Mughal mansabdar system differed most importantly from European feudalism in that:',
@@ -113,15 +113,15 @@ Akbar created the mansabdar system to govern the Mughal empire:
             explanation: 'The non-hereditary nature of mansabdar positions is the key AP distinction from European feudalism: European noble titles and land were inherited, creating permanent power centers independent of the king. Mansabdars had to earn their positions in each generation, keeping them dependent on the emperor. This was analogous to (though independent of) the Chinese civil service system\'s meritocratic principle.'
           },
           {
-            question: 'Ottoman decline after 1700 was most directly caused by:',
+            question: 'Which comparison of the Mughal mansabdar system and the Ottoman devshirme is most accurate?',
             options: [
-              'Janissary resistance to military reform as European armies kept improving through rivalry',
-              'A collapse of Ottoman trade after Portugal seized the major ports of the eastern Mediterranean',
-              'Mass conversion of Ottoman subjects to Christianity, which drained the army of recruits',
-              'Voluntary surrender of Balkan provinces to Austria in exchange for loans to the treasury'
+              'Both passed offices from father to son, creating hereditary noble houses like those of European feudalism',
+              'Both recruited officials only through written exams on the Confucian classics and on Islamic law',
+              'Both were abolished by Akbar, who replaced them with tax farms run by European trading companies',
+              'Both made officials depend on the ruler, but only one took enslaved Christian boys as its recruits'
             ],
-            correctAnswer: 0,
-            explanation: 'The janissary paradox: created to be a loyal, professional force, by the 17th-18th century they had become a political institution resisting any reform that threatened their privileges. Ottoman sultans who tried to modernize the military faced janissary revolts. This institutional resistance to change, combined with European military superiority, created the "sick man of Europe" dynamic of the 19th century.'
+            correctAnswer: 3,
+            explanation: 'Both systems created officials whose position came from the ruler rather than from inherited land; the difference is that the devshirme took Christian boys from Balkan families as slaves of the sultan, while mansabdars were free men granted ranks. Neither was hereditary, neither used Confucian exams, and Akbar created the mansabdar system rather than abolishing it.'
           }
         ]
       }
@@ -176,15 +176,15 @@ Match each empire\'s governance feature to its correct description.
             explanation: 'This thesis is strongest because it acknowledges variation (different tools) while arguing for convergence: the Ottoman, Mughal, Safavid and Qing empires all paired gunpowder conquest with centralized administration that bypassed traditional aristocracy and with religious or ideological legitimation. That structural claim sets up a cross-empire comparison essay that earns the highest AP rubric scores.'
           },
           {
-            question: 'What is the most historically accurate AP comparison between the Qing Dynasty\'s treatment of ethnic diversity and the Ottoman millet system?',
+            question: 'What is the most accurate AP comparison between the Ottoman millet system and Mughal religious policy?',
             options: [
-              'Both accommodated subject groups, the Qing via shared Han-Manchu posts and the Ottomans via religious self-rule',
-              'Both used identical policies, ranking all subjects by religion and giving each faith a separate imperial legal court',
-              'The Qing denied Han Chinese any official posts, unlike the Ottomans, who shared power with Christians',
-              'The Ottoman millets denied non-Muslims any self-rule, unlike the Qing, who let Han provinces govern themselves'
+              'Both forced non-Muslims to convert, so neither empire still had large Christian or Hindu populations by 1700',
+              'The Ottomans banned Christianity and Judaism, while the Mughals made Hinduism the official state religion',
+              'Both let non-Muslims keep their faiths, but Mughal rule swung from Akbar\'s tolerance to Aurangzeb\'s orthodoxy',
+              'Both handed their religious courts to European missionaries, who governed non-Muslim subjects for the rulers'
             ],
-            correctAnswer: 0,
-            explanation: 'Comparing Qing and Ottoman approaches to diversity demonstrates AP analytical depth: both solved the same problem (diverse empire governance) through different institutional designs. The Qing integrated Han officials while maintaining ethnic oversight; the Ottomans segregated religious communities while allowing internal autonomy. Same problem, different solutions — exactly the kind of comparison AP LEQ rewards.'
+            correctAnswer: 2,
+            explanation: 'The Ottomans let Christian and Jewish communities run their own religious and legal affairs through millets, while the Mughal Muslim minority ruled a Hindu majority: Akbar abolished the jizya and courted Hindu elites, and Aurangzeb reimposed it in 1679. Neither empire forced mass conversion, neither banned these faiths, and neither handed courts to missionaries.'
           }
         ]
       }

@@ -107,15 +107,15 @@ For any AP Gov foundational-document scenario, ask:
             explanation: 'Federalist No. 51 strongest against unilateral executive treaty: "ambition must be made to counteract ambition" + bicameralism/federalism/checks = "double security" → Senate advice and consent (2/3) on treaties is exactly the structural check Madison defends. Modern executive agreement workaround (~90% intl agreements vs treaties) = exactly the erosion Madison warned of.'
           },
           {
-            question: 'AP scenario: A federal statute requires state law-enforcement officers to perform background checks on prospective handgun purchasers, with no federal funding to support the requirement. Which AP-required foundational document provides the strongest argument AGAINST this statute?',
+            question: 'AP scenario: A federal statute requires state and local governments to make all of their public buildings accessible to people with disabilities, with no federal funding to pay for the changes. Which AP-required foundational document provides the strongest argument AGAINST this statute?',
             options: [
               "Brutus No. 1, which warns that the Necessary and Proper and Supremacy Clauses would let the national government absorb the states' own powers",
-              "Federalist No. 78, which argues that courts must defer to Congress whenever a federal statute imposes duties on state officers",
-              "Federalist No. 51, which argues that federalism lets the national government direct state officers to carry out federal law",
-              "The Articles of Confederation, which allowed Congress to direct state officers to enforce national laws and so offer a precedent for the statute's requirements"
+              "Federalist No. 78, which argues that courts must defer to Congress whenever a federal statute imposes duties on the states",
+              "Federalist No. 51, which argues that federalism lets the national government require the states to carry out its policies",
+              "The Articles of Confederation, which let Congress order state officials to carry out national laws and so offer a precedent for the statute's requirements"
             ],
             correctAnswer: 0,
-            explanation: 'Brutus No. 1 strongest against federal commandeering: warns federal authority will absorb state sovereignty + Necessary and Proper + Supremacy → no genuine state authority. The statute is an unfunded federal MANDATE (EK 1.7.A.5.iv) — the kind of national requirement on the states that Anti-Federalists feared.'
+            explanation: 'Brutus No. 1 is the strongest argument against the statute: it warns that the Necessary and Proper and Supremacy Clauses would let national authority absorb the states\' own powers. The statute is an unfunded federal MANDATE (EK 1.7.A.5.iv), a national requirement placed on the states, exactly the kind of national power Anti-Federalists feared. Federalist 78 defends judicial independence rather than deference, Federalist 51 describes federalism as a check on power, and the Articles gave Congress no power to compel the states or their officials.'
           }
         ]
       }

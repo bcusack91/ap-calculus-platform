@@ -40,7 +40,7 @@ export const whAmericasAfrica1200Part4Data = {
               'It triggered a Mamluk invasion of Mali, since Egypt\'s sultan wanted to seize its gold fields'
             ],
             correctAnswer: 0,
-            explanation: 'Mansa Musa\'s pilgrimage put West Africa on the global mental map: his gift-giving in Cairo was so lavish it depressed gold prices, and his retinue of 60,000 was unprecedented. European maps began marking Mali as a source of gold after 1324 — stimulating eventual Portuguese interest in finding sea routes to West African gold.'
+            explanation: 'Mansa Musa\'s pilgrimage put West Africa on the global mental map: his spending and gift-giving in Cairo were so lavish that the value of gold there stayed depressed for years. European maps began marking Mali as a source of gold after 1324 — stimulating eventual Portuguese interest in finding sea routes to West African gold.'
           }
         ]
       }
@@ -64,14 +64,14 @@ export const whAmericasAfrica1200Part4Data = {
 
 Mansa Musa's pilgrimage to Mecca is one of history\'s most spectacular demonstrations of wealth:
 
-- Traveled with 60,000+ person entourage; 500 slaves each carrying gold staff; 80-100 camels each carrying 300 pounds of gold
-- Distributed so much gold in Cairo that it depressed Egyptian gold prices for years
+- Arab writers described an enormous caravan of attendants, enslaved servants and camels loaded with gold (the often-repeated figure of 60,000 people comes from much later retellings and should be treated as an exaggeration)
+- Spent and gave away so much gold in Cairo that, according to the Egyptian official al-Umari, its value there was still depressed about twelve years later
 - European maps began marking Mali's location after this pilgrimage
 - Built mosques in Timbuktu and Djenné on return; patronized Islamic scholarship
 
 > **Timbuktu: Center of Islamic Scholarship**
 
-- University of Sankore — up to 25,000 students at peak; manuscripts on astronomy, law, mathematics, medicine
+- Sankore Mosque (often called the "University of Sankore") — one of Timbuktu's centers of learning, where scholars taught Islamic law, theology, grammar, astronomy and mathematics; the city's private libraries preserved thousands of manuscripts
 - Example of how West African Islamic rulers patronized the same intellectual traditions as Middle Eastern Islamic rulers
 - Trans-Saharan trade brought Islamic scholars, books, and ideas to sub-Saharan Africa
 
@@ -104,29 +104,29 @@ Successor to Mali; even larger and wealthier:
               'That West African rulers ignored learning, leaving schools to be founded by European missionaries'
             ],
             correctAnswer: 0,
-            explanation: 'Timbuktu shows the dual nature of Islamic trade networks: they transmitted both goods (gold, salt) and ideas (scholarship, religious practice, legal traditions). The University of Sankore\'s 25,000 students and its manuscripts on astronomy, law, and medicine demonstrate that sub-Saharan African Islamic civilization was fully integrated into the broader Islamic intellectual world.'
+            explanation: 'Timbuktu shows the dual nature of Islamic trade networks: they transmitted both goods (gold, salt) and ideas (scholarship, religious practice, legal traditions). Sankore\'s scholars and Timbuktu\'s manuscripts on law, theology, astronomy and mathematics demonstrate that sub-Saharan African Islamic civilization was fully integrated into the broader Islamic intellectual world.'
           },
           {
-            question: 'Great Zimbabwe\'s most important significance for AP World History is:',
+            question: 'Why did the Songhai Empire fall in 1591?',
             options: [
-              'It shows that sub-Saharan Africa had urban states linked to Indian Ocean trade before Europeans arrived',
-              'It was built by Phoenician or Arab colonists, proving that outsiders brought stone building to the region',
-              'It was an isolated hilltop village with no ties to coastal trade or to any wider economic network',
-              'It was the capital of the Mali Empire, which ruled the gold fields of southern Africa'
+              'A Portuguese fleet sailed up the Niger and captured Timbuktu',
+              'Mali rebuilt its army and reconquered the Songhai heartland',
+              'A Moroccan army armed with firearms defeated Songhai forces',
+              'A drought emptied its cities, and the people moved to the coast'
             ],
-            correctAnswer: 0,
-            explanation: 'AP frequently tests the significance of Great Zimbabwe precisely because it challenges Eurocentric narratives. The stone architecture (no mortar, built entirely from stacked granite), the scale (housing 10,000+), and the imported Chinese porcelain (direct evidence of Indian Ocean connections) all demonstrate indigenous African urban and commercial sophistication.'
+            correctAnswer: 2,
+            explanation: 'In 1591 a Moroccan army that crossed the Sahara with muskets and cannon defeated the larger Songhai army at Tondibi, and the empire broke apart. The Portuguese traded on the coast but never took Timbuktu, Mali had long since declined, and no drought ended the state.'
           },
           {
-            question: 'The Swahili Coast city-states\' cultural character (blending Bantu African and Arab/Islamic elements) best demonstrates which AP concept?',
+            question: 'Askia Muhammad\'s rule in Songhai (1493–1528) is best known for',
             options: [
-              'Cultural syncretism through trade, as seen in a Bantu-grammar language and Islam mixed with local custom',
-              'Cultural assimilation by conquest, as Arab armies imposed Islam and erased the Bantu languages',
-              'Cultural isolation, as Swahili towns kept Islam and outside customs away from their Bantu communities',
-              'Cultural diffusion from Europe, as Portuguese traders brought the coast its Christian and Latin elements'
+              'rejecting Islam and restoring the traditional religion of the Songhai court',
+              'strengthening Islamic law and scholarship and building ties with North Africa',
+              'shifting the empire\'s main trade from the Sahara to the ports of the Indian Ocean',
+              'inviting Portuguese missionaries to run the schools and courts of Timbuktu'
             ],
-            correctAnswer: 0,
-            explanation: 'Swahili culture is a model AP example of trade-driven cultural synthesis: not "conquered" by Arab/Islamic culture but selectively incorporating Arabic vocabulary, Islamic religious practice, and stone architecture while maintaining Bantu linguistic structures and African communal social practices. This selective syncretism is characteristic of how trade-contact cultural exchange works.'
+            correctAnswer: 1,
+            explanation: 'Askia Muhammad made his own hajj, ruled with advice from Muslim scholars, supported Timbuktu\'s learning, and strengthened links with North Africa. He did not reject Islam, Songhai\'s trade stayed tied to the trans-Saharan routes, and Portuguese missionaries had no role in Timbuktu.'
           }
         ]
       }
@@ -138,23 +138,23 @@ Successor to Mali; even larger and wealthier:
       exercise: {
         dropdowns: [
           {
-            label: 'Match Term 1 for Mali and Songhai Empires',
-            options: ['Key Term A', 'Key Term B', 'Key Term C', 'Key Term D']
+            label: 'The ruler who unified the Malinke people and founded the Mali Empire around 1235 was ___',
+            options: ['Sundiata Keita', 'Mansa Musa', 'Askia Muhammad', 'Sunni Ali']
           },
           {
-            label: 'Match Term 2 for Mali and Songhai Empires',
-            options: ['Key Term B', 'Key Term A', 'Key Term C', 'Key Term D']
+            label: 'The Mali ruler whose 1324 pilgrimage to Mecca displayed West African gold to the Islamic world was ___',
+            options: ['Sundiata Keita', 'Mansa Musa', 'Askia Muhammad', 'Sunni Ali']
           },
           {
-            label: 'Match Term 3 for Mali and Songhai Empires',
-            options: ['Key Term C', 'Key Term A', 'Key Term B', 'Key Term D']
+            label: 'The Songhai ruler (r. 1493–1528) known for Islamic governance and support for scholarship was ___',
+            options: ['Sundiata Keita', 'Mansa Musa', 'Askia Muhammad', 'Sunni Ali']
           }
         ],
-        correctAnswers: ['Key Term A', 'Key Term B', 'Key Term C'],
-        hint1: 'Think about the primary feature of this concept',
-        hint2: 'Consider the governance or economic function',
-        hint3: 'Recall the long-term historical consequence',
-        explanation: 'Review the key terms in the content section above to reinforce these AP vocabulary connections for Americas & Africa (c. 1200–1450) Part 4.'
+        correctAnswers: ['Sundiata Keita', 'Mansa Musa', 'Askia Muhammad'],
+        hint1: 'The founder of Mali, c. 1235',
+        hint2: 'The ruler famous for the hajj of 1324',
+        hint3: 'Not Sunni Ali, the conqueror who came just before him',
+        explanation: 'Sundiata founded Mali, Mansa Musa carried it to its peak and made it famous across the Islamic world, and Askia Muhammad ruled Songhai at its height. Sunni Ali (r. 1464–1492) built Songhai through conquest just before Askia Muhammad.'
       }
     },
     {
@@ -172,18 +172,18 @@ Successor to Mali; even larger and wealthier:
               'Military conquest alone explains Mali and Songhai, as trade and religion played no part in their rise'
             ],
             correctAnswer: 0,
-            explanation: 'Strong AP theses acknowledge both change and continuity, explain mechanisms rather than just outcomes, and connect specific evidence to broader historical arguments. Recognizing complexity within apparent simplicity is the hallmark of high-scoring AP responses.'
+            explanation: 'The strongest thesis pairs continuity (the gold-salt trade that had already enriched Ghana) with change (Islam, Mansa Musa\'s hajj and Timbuktu\'s scholars linking West Africa to the wider Muslim world). Trans-Saharan trade continued long after the Portuguese arrived, these states grew out of earlier ones, and trade and Islam were central to their rise.'
           },
           {
-            question: 'Which comparison best demonstrates AP historical reasoning about Americas & Africa (c. 1200–1450)?',
+            question: 'Which comparison best fits Timbuktu under Mali and Songhai and the House of Wisdom in Abbasid Baghdad?',
             options: [
-              'Mali and the Inca both built vast states, but Mali taxed trade while the Inca drafted labor',
-              'Mali and the Inca were identical states, since both depended on gold mined by drafted village laborers',
-              'Comparing Mali and the Inca is not useful, because societies with no contact share no common patterns at all',
-              'Mali and the Inca differed only in religion, so their economies and governments can be treated as the same'
+              'Both were Christian centers that trained priests for missions to West Africa',
+              'Both were funded by European rulers who wanted Arabic texts for their universities',
+              'Both show wealthy Islamic states that supported scholars, books and learning',
+              'Both closed their schools after Mongol armies captured Timbuktu in 1258'
             ],
-            correctAnswer: 0,
-            explanation: 'AP comparison questions reward arguments that identify both similarities and differences AND explain why those similarities and differences exist. Using comparison to generate broader principles about human societies — rather than just listing similarities and differences — earns the highest AP scores.'
+            correctAnswer: 2,
+            explanation: 'Like Baghdad\'s House of Wisdom, Timbuktu\'s centers of learning depended on the wealth and patronage of a trade-rich Muslim state. Neither was Christian or European-funded, and the Mongols sacked Baghdad in 1258 but never reached Timbuktu.'
           }
         ]
       }

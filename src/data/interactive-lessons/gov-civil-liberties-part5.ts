@@ -186,14 +186,14 @@ export const govCivilLibertiesPart5Data = {
             options: ['Founding-Reconstruction (1791-1868)', 'Warren-Burger Revolution (1925-1972)', 'Roberts Court (2005-present)', 'Limited Incorporation (1868-1925)']
           },
           {
-            label: "Heller 2008 + McDonald 2010 (2nd Am); Hobby Lobby 2014 (religious liberty); Citizens United 2010; Obergefell 2015; Dobbs 2022 OVERRULED Roe: ___",
+            label: "Heller 2008 + McDonald 2010 (2nd Am); Hobby Lobby 2014 (religious liberty); Citizens United 2010; Obergefell 2015; Dobbs 2022 left abortion to legislatures: ___",
             options: ['Founding-Reconstruction (1791-1868)', 'Warren-Burger Revolution (1925-1972)', 'Roberts Court (2005-present)', 'Limited Incorporation (1868-1925)']
           }
         ],
         correctAnswers: ['Founding-Reconstruction (1791-1868)', 'Warren-Burger Revolution (1925-1972)', 'Roberts Court (2005-present)'],
         hint1: 'Founding era — Bill of Rights ratified Dec 15, 1791; Barron v. Baltimore 1833 (Marshall) limited to federal; Alien and Sedition Acts 1798; Dred Scott 1857; era ended with 13th + 14th Am 1865-68.',
         hint2: 'Warren-Burger Revolution — Gitlow v. New York 1925 first incorporation; explosion of incorporation 1961-1969 (Mapp + Gideon + Malloy + Duncan + Benton); Engel + Tinker + Brandenburg + Griswold + Yoder defining cases.',
-        hint3: 'Roberts Court — EXPANSION of 2nd Am (Heller/McDonald) + religious liberty (Hobby Lobby/Trinity/Espinoza/Carson/303 Creative) + corporate speech (Citizens United); Obergefell 2015; Dobbs 2022 overruled Roe.'
+        hint3: 'Roberts Court — EXPANSION of 2nd Am (Heller/McDonald) + religious liberty (Hobby Lobby/Trinity/Espinoza/Carson/303 Creative) + corporate speech (Citizens United); Obergefell 2015; Dobbs 2022 ended the constitutional abortion right.'
       }
     },
     {
@@ -205,13 +205,13 @@ export const govCivilLibertiesPart5Data = {
           {
             question: "Which development best illustrates how changes in the Court's membership can lead it to reject an existing precedent?",
             options: [
-              "Dobbs v. Jackson (2022) overturning Roe v. Wade (1973) and returning abortion regulation to legislatures",
+              "Dobbs v. Jackson (2022) overturning a 1973 abortion ruling and returning abortion regulation to legislatures",
               "Gideon v. Wainwright (1963) reaffirming that states need not provide lawyers in felony trials",
               "Engel v. Vitale (1962) overturning Schenck's clear-and-present-danger test for wartime speech",
               "McDonald v. Chicago (2010) overturning Tinker v. Des Moines and ending protection for student armbands in public schools"
             ],
             correctAnswer: 0,
-            explanation: 'EK 2.9.A.2: ideological changes in the Court\'s composition due to presidential appointments have led it to establish new precedents or reject existing ones. After several new appointments, the Court in DOBBS (2022) overruled ROE (1973) and left abortion regulation to legislatures (EK 3.9.A.2) — a sharp departure from stare decisis. Gideon required, rather than rejected, counsel for poor felony defendants; Engel was an establishment-clause case that did not touch Schenck; McDonald incorporated the Second Amendment and left Tinker in place.'
+            explanation: 'EK 2.9.A.2: ideological changes in the Court\'s composition due to presidential appointments have led it to establish new precedents or reject existing ones. After several new appointments, the Court in DOBBS (2022) overruled its 1973 abortion precedent and left abortion regulation to legislatures (EK 3.9.A.2) — a sharp departure from stare decisis. Gideon required, rather than rejected, counsel for poor felony defendants; Engel was an establishment-clause case that did not touch Schenck; McDonald incorporated the Second Amendment and left Tinker in place.'
           },
           {
             question: "How do *Engel v. Vitale* (1962) and *Wisconsin v. Yoder* (1972) reflect the two religion clauses of the First Amendment?",

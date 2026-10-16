@@ -161,7 +161,7 @@ Use Stimulus 1.
 
 ### How Women's Roles Differ and Change
 - **By place:** women grow much of the household food in sub-Saharan Africa and run many of West Africa's food markets; in Latin America, more farm work is done by men, while women are often counted as unpaid family labor.
-- **Over time:** economist Ester Boserup argued in 1970 that colonial and commercial farming often shifted land, training and machinery to men. More recently, export industries such as Kenya's cut-flower farms have hired many women as wage workers.
+- **Over time:** colonial and commercial farming often shifted land, training and machinery to men. More recently, export industries such as Kenya's cut-flower farms have hired many women as wage workers.
 - **In the data:** unpaid work on family plots is often **undercounted**, so official figures can understate women's role.
 
 ## FRQ Practice with Model Answers

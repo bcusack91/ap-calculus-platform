@@ -58,7 +58,7 @@ export const whSilkRoadsMongolsPart1Data = {
 |---------|---------|
 | **Unification** | United Mongol tribes through military genius, meritocracy, and the *Yasa* (legal code) |
 | **Military** | Horse archers; psychological warfare; feigned retreats; siege warfare learned from Chinese and Persian engineers |
-| **Conquests** | Conquered northern China, Central Asia, Persia; destroyed Khwarazm Empire; estimated 40 million deaths |
+| **Conquests** | Conquered northern China, Central Asia, Persia; destroyed Khwarazm Empire; an estimated 30–40 million deaths across the conquests (estimates vary widely) |
 | **Administration** | Meritocracy over aristocracy; religious tolerance; integrated conquered peoples into military/administration |
 
 ### The Four Khanates (after 1260)
@@ -121,7 +121,7 @@ export const whSilkRoadsMongolsPart1Data = {
 
 ### Negative Effects
 
-- **Massive death toll:** Mongol conquests killed an estimated 5–10% of the world's population
+- **Massive death toll:** Mongol conquests killed an estimated 30–40 million people, very roughly a tenth of the world's population (estimates vary widely)
 - **City destruction:** Baghdad, Kiev, and countless cities razed; centuries of cultural heritage destroyed
 - **Black Death:** The plague (*Yersinia pestis*) traveled along Mongol trade routes from Central Asia to Europe (1346–1353); killed roughly a third of Europe's population (about 25 million in Europe; estimates vary)
 - **Long-term political disruption:** Collapse of Mongol states led to new empires (Ming China, Ottoman, Timurid)

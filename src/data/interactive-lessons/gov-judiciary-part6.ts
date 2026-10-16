@@ -80,13 +80,13 @@ export const govJudiciaryPart6Data = {
           {
             question: "Which best applies the 5-step framework to analyze *Dobbs v. Jackson Women's Health Organization* (2022)?",
             options: [
-              "Under the 14th Amendment, the majority found abortion not deeply rooted in history and tradition and overruled Roe and Casey",
-              "Under the 9th Amendment, the majority found abortion a right reserved to the people and reaffirmed Roe and Casey",
+              "Under the 14th Amendment, the majority found abortion not deeply rooted in history and tradition and overruled earlier precedents",
+              "Under the 9th Amendment, the majority found abortion a right reserved to the people and reaffirmed earlier precedents",
               "Under the Commerce Clause, the majority found abortion regulation a federal power and imposed a national ban",
               "Under the 1st Amendment, the majority found abortion protected as religious liberty and struck state limits"
             ],
             correctAnswer: 0,
-            explanation: '5-step Dobbs analysis: (1) PROVISION — 14th Am DPC; abortion right "deeply rooted in history and tradition"? (2) PRECEDENT — Roe 1973 + Casey 1992 recognized constitutional abortion right; debated 50 yrs; (3) JUDICIAL APPROACH — history-and-tradition reasoning (Alito), criticized as activism, defended as returning the issue to voters; abortion criminalized most states founding through 1973 → NOT deeply rooted; (4) HOLDING — no constitutional right; Roe + Casey OVERRULED; rationale: text silent, historically not protected, substantive due process suspect, abortion = moral question for the people; (5) IMPACT — abortion to states; ~13-14 near-total bans; 2022 midterms ballot initiatives win even red states; legal battles over interstate travel + medication abortion + EMTALA emergency care.'
+            explanation: '5-step Dobbs analysis: (1) PROVISION — 14th Am DPC; abortion right "deeply rooted in history and tradition"? (2) PRECEDENT — the Court\'s 1973 and 1992 abortion decisions had recognized a constitutional abortion right, debated for nearly 50 years; (3) JUDICIAL APPROACH — history-and-tradition reasoning (Alito), criticized as activism, defended as returning the issue to voters; abortion criminalized most states founding through 1973 → NOT deeply rooted; (4) HOLDING — no constitutional right; those precedents OVERRULED; rationale: text silent, historically not protected, substantive due process suspect, abortion = moral question for the people; (5) IMPACT — abortion returned to the states; more than a dozen states enforced near-total bans, while others added protections, and in 2022 voters in some Republican-leaning states, such as Kansas, rejected anti-abortion ballot measures.'
           },
           {
             question: "Which best demonstrates how Federalist 78 supports the legitimacy of judicial review even when overturning long-standing precedents?",
@@ -109,13 +109,13 @@ export const govJudiciaryPart6Data = {
       exercise: {
         questions: [
           {
-            prompt: "Year *Dobbs v. Jackson Women's Health Organization* overruled *Roe* and *Casey*.",
+            prompt: "Year the Supreme Court decided *Dobbs v. Jackson Women's Health Organization*, holding that the Constitution does not confer a right to abortion.",
             answer: '2022',
             acceptableAnswers: ['2022'],
             hint: 'Same year as Russia invading Ukraine; Biden 2nd year.'
           },
           {
-            prompt: "Number of the amendment whose Due Process Clause was at issue in *Dobbs* (and in *Griswold* and *Roe*).",
+            prompt: "Number of the amendment whose Due Process Clause was at issue in *Dobbs* (and in *Griswold*, the 1965 privacy case).",
             answer: '14',
             acceptableAnswers: ['14', '14th', 'fourteenth', 'Fourteenth', 'Fourteenth Amendment', '14th Amendment'],
             hint: 'The due process clause that applies to the states (EK 3.8.A.1).'
@@ -140,11 +140,11 @@ export const govJudiciaryPart6Data = {
             options: ['Provision', 'Precedent', 'Holding + reasoning', 'Practical impact']
           },
           {
-            label: "Roe v. Wade (1973) and Planned Parenthood v. Casey (1992): ___",
+            label: "The Court's 1973 and 1992 decisions recognizing a constitutional right to abortion: ___",
             options: ['Provision', 'Precedent', 'Holding + reasoning', 'Practical impact']
           },
           {
-            label: "About 13-14 states adopt near-total bans, and abortion-rights ballot measures follow: ___",
+            label: "More than a dozen states enforce near-total bans, and abortion ballot measures follow: ___",
             options: ['Provision', 'Precedent', 'Holding + reasoning', 'Practical impact']
           }
         ],
@@ -161,15 +161,15 @@ export const govJudiciaryPart6Data = {
       exercise: {
         questions: [
           {
-            question: "AP comprehensive prompt: 'Develop an argument explaining whether the modern Roberts Court's overruling of Roe in Dobbs reflects a LEGITIMATE EXERCISE of judicial review or an INAPPROPRIATE DEPARTURE from stare decisis.' What is the strongest argument for LEGITIMATE EXERCISE?",
+            question: "AP comprehensive prompt: 'Develop an argument explaining whether the modern Roberts Court's overruling of its abortion precedents in Dobbs reflects a LEGITIMATE EXERCISE of judicial review or an INAPPROPRIATE DEPARTURE from stare decisis.' What is the strongest argument for LEGITIMATE EXERCISE?",
             options: [
               "Precedents that misread the Constitution deserve no deference, and Marbury makes saying what the law is the Court's duty",
-              "Stare decisis is a constitutional command, so the Court must keep both Roe and Casey in place no matter how flawed they are",
+              "Stare decisis is a constitutional command, so the Court must keep every earlier precedent in place no matter how flawed it is",
               "Congress approved the overruling in advance, so the Court was merely carrying out the legislature's will",
               "Public opinion polls favored overruling, so the Court simply followed the majority"
             ],
             correctAnswer: 0,
-            explanation: 'Strongest LEGITIMATE EXERCISE: (1) HAMILTON FEDERALIST 78 — "no legislative act...contrary to the Constitution, can be valid" → applies to PRIOR JUDICIAL DECISIONS misinterpreting Constitution; if Roe lacked constitutional foundation, maintaining it would violate Hamilton\'s principle; (2) MARBURY DUTY ONGOING — "say what the law is" not satisfied by deference to incorrect prior decisions; (3) HISTORICAL PRECEDENT — Brown rejected Plessy after 58 years and is now seen as a legitimate correction; (4) EK 2.9.A.2 — new majorities have always established new or rejected existing precedents; (5) DEMOCRATIC ACCOUNTABILITY — Dobbs returned abortion to political process consistent with Federalist 78 democratic legitimacy emphasis.'
+            explanation: 'Strongest LEGITIMATE EXERCISE: (1) HAMILTON FEDERALIST 78 — "no legislative act...contrary to the Constitution, can be valid" → applies to PRIOR JUDICIAL DECISIONS misinterpreting Constitution; if the 1973 precedent lacked constitutional foundation, maintaining it would violate Hamilton\'s principle; (2) MARBURY DUTY ONGOING — "say what the law is" not satisfied by deference to incorrect prior decisions; (3) HISTORICAL PRECEDENT — Brown rejected Plessy after 58 years and is now seen as a legitimate correction; (4) EK 2.9.A.2 — new majorities have always established new or rejected existing precedents; (5) DEMOCRATIC ACCOUNTABILITY — Dobbs returned abortion to political process consistent with Federalist 78 democratic legitimacy emphasis.'
           },
           {
             question: "What is the strongest argument that the recent overrulings represent an INAPPROPRIATE DEPARTURE from stare decisis?",
@@ -180,7 +180,7 @@ export const govJudiciaryPart6Data = {
               "The Court lacks power to hear abortion cases, so the overruling exceeded its jurisdiction"
             ],
             correctAnswer: 0,
-            explanation: 'Counter (INAPPROPRIATE DEPARTURE): (1) STARE DECISIS LEGITIMACY — Court depends on perceived legitimacy; respect for precedent → PREDICTABILITY + STABILITY; rapid overruling (Roe stood 49 years) erodes legitimacy; Gallup ~40-45% post-2020 (down from ~58% 2000s); (2) PARTISAN PATTERN — 5-4/6-3 splits suggest RESULT-DRIVEN (vs Brown 9-0 unanimous); (3) RELIANCE INTERESTS UNDERWEIGHTED — millions of women had relied on Roe for decades; (4) DEMOCRATIC ILLEGITIMACY — 6-3 unelected life-tenured judges; 5 appointed by popular-vote losers (Bush 2000 → Roberts + Alito; Trump → Gorsuch + Kavanaugh + Barrett); (5) BRUTUS 1 WARNING — Anti-Federalist warned EXACTLY this — life-tenured judges with no accountability radically reshaping constitutional law against majority preference.'
+            explanation: 'Counter (INAPPROPRIATE DEPARTURE): (1) STARE DECISIS LEGITIMACY — the Court depends on perceived legitimacy, and respect for precedent gives PREDICTABILITY + STABILITY; overruling a precedent that had stood for nearly 50 years can erode that legitimacy, and the Court\'s public approval fell after the decision; (2) PARTISAN PATTERN — an ideologically split vote suggests a result-driven change (contrast Brown, 9-0); (3) RELIANCE INTERESTS — people had organized their lives around the old rule for decades; (4) ACCOUNTABILITY — life-tenured, unelected judges reversed a long-settled rule (EK 2.11.A.1 activism debate); (5) BRUTUS 1 WARNING — the Anti-Federalist feared life-tenured judges with no accountability reshaping constitutional law. The other choices misstate the vote, invent an age limit on precedent, or deny the Court\'s jurisdiction.'
           }
         ]
       }

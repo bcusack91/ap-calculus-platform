@@ -76,7 +76,7 @@ export const hgCultureDiffusionPart1Data = {
       content: `
 ## Cultural Landscape
 
-The **cultural landscape** (coined by Carl Sauer) is the visible imprint of human activity on the physical environment:
+The **cultural landscape** is the visible imprint of human activity on the physical environment:
 
 | Element | Examples |
 |---------|---------|

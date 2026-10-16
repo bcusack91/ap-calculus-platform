@@ -16,7 +16,7 @@ export const hgAgriculturalOriginsPart2Data = {
 | 📖 What Domestication Changes |
 | Why Farming Began When It Did |
 | The Hearths, One by One |
-| Sauer's Two Kinds of Hearth, and the Limits of the Model |
+| Root Crops, Seed Crops, and the Limits of the Evidence |
 
 > 🔑 **Key Concept:** Part 1 listed the hearths. This part explains **what** was domesticated, **when**, and **why there**. The CED's claim is that early hearths of plant and animal domestication arose in the **Fertile Crescent** and several other regions, including the **Indus River Valley**, **Southeast Asia** and **Central America** (CED Topic 5.3). The scale here is **global**: several regions, each inventing farming on its own.
 `
@@ -180,21 +180,19 @@ Dates are rounded and come from archaeology; new finds often push them earlier. 
       id: 'hgagricu2-sauer',
       type: 'text' as const,
       content: `
-## Sauer's Two Kinds of Hearth, and the Limits of the Model
+## Root Crops, Seed Crops, and the Limits of the Evidence
 
-The geographer **Carl Sauer**, in *Agricultural Origins and Dispersals* (1952), divided early farming into two kinds:
+Early farmers reproduced plants in two broad ways, and the difference helps explain what each hearth grew:
 
-| Type | How it works | Typical crops | Where Sauer placed it |
+| Type | How it works | Typical crops | Hearths where it dominated |
 |---|---|---|---|
-| **Vegetative planting** | Reproducing plants by cutting a piece of an existing plant (a root, tuber or stem) and planting it | Taro, yams, bananas, cassava | **Southeast Asia** first, plus West Africa and northwestern South America |
-| **Seed agriculture** | Reproducing plants by saving and sowing seeds | Wheat, barley, millet, maize | The Fertile Crescent, northern China, Mesoamerica and others |
+| **Vegetative planting** | Reproducing plants by cutting a piece of an existing plant (a root, tuber or stem) and planting it | Taro, yams, bananas | **Southeast Asia**, plus West Africa and northwestern South America |
+| **Seed agriculture** | Reproducing plants by saving and sowing seeds | Wheat, barley, millet, maize | The **Fertile Crescent**, the **Indus River Valley**, northern China and **Central America** |
 
-Sauer argued that vegetative planting came **first**, in Southeast Asia, among settled fishing communities that had spare time to experiment.
-
-### Limits of the Model
-- **Hard to test.** Roots and tubers rot and leave little evidence, while seeds survive for thousands of years. Sauer's Southeast Asia priority has never been confirmed.
-- **The best-dated evidence points elsewhere.** The oldest securely dated crops are seed crops in the Fertile Crescent.
-- **Still useful.** The split explains why tropical hearths grew root crops and drier hearths grew grains, and why the CED lists Southeast Asia as a hearth at all.
+### Limits of the Evidence
+- **Roots rot; seeds survive.** Roots and tubers leave little archaeological trace, while grains survive for thousands of years, so early root-crop farming in Southeast Asia is hard to date.
+- **The best-dated evidence** is seed crops in the Fertile Crescent.
+- **Climate fit.** Wet tropical hearths grew root crops; drier, seasonal hearths grew grains.
 
 ### Scale Check
 - **Global scale:** many independent hearths, which is **independent invention**.
@@ -210,7 +208,7 @@ Sauer argued that vegetative planting came **first**, in Southeast Asia, among s
       exercise: {
         dropdowns: [
           {
-            label: 'Farmers cut pieces from yam tubers and plant them. Sauer called this ___',
+            label: 'Farmers cut pieces from yam tubers and plant them. This method is called ___',
             options: ['vegetative planting', 'seed agriculture', 'shifting cultivation', 'pastoral nomadism']
           },
           {
@@ -218,7 +216,7 @@ Sauer argued that vegetative planting came **first**, in Southeast Asia, among s
             options: ['southern Mexico', 'the central Andes', 'the Fertile Crescent', 'the Yellow River valley']
           },
           {
-            label: 'Sauer\'s claim that root crops came first is hard to test because roots ___',
+            label: 'Early root-crop farming in Southeast Asia is hard to date because roots ___',
             options: ['rot and leave few remains', 'spread too fast to date', 'were never grown in Asia', 'grew only on islands']
           }
         ],
@@ -226,7 +224,7 @@ Sauer argued that vegetative planting came **first**, in Southeast Asia, among s
         hint1: 'No seeds are involved.',
         hint2: 'The Balsas River valley is in this country.',
         hint3: 'Compare how well a tuber and a grain survive in the ground.',
-        explanation: 'Planting cut tubers is vegetative planting. Maize comes from teosinte in southern Mexico. Roots and tubers decay and leave little archaeological evidence, which is why Sauer\'s Southeast Asia priority is hard to confirm.'
+        explanation: 'Planting cut tubers is vegetative planting. Maize comes from teosinte in southern Mexico. Roots and tubers decay and leave little archaeological evidence, which is why early root-crop farming in Southeast Asia is hard to date.'
       }
     }
   ]

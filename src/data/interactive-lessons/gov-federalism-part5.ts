@@ -187,11 +187,11 @@ export const govFederalismPart5Data = {
             options: [
               "Plausible but contestable, since Dobbs returned abortion policy to the states, yet NFIB v. Sebelius and the COVID-19 response also reshaped federalism",
               "Strongly supported, since Dobbs made abortion a federal statutory matter and ended state authority over health regulation",
-              "Unsupported, since Dobbs affirmed Roe v. Wade and left the federal constitutional rule on abortion unchanged for every state in the nation",
+              "Unsupported, since Dobbs upheld a national constitutional right to abortion and left the rule unchanged for every state in the nation",
               "Strongly supported, since Dobbs was the only Supreme Court ruling affecting state power between 2000 and 2022, and it applied the commerce power to medical care"
             ],
             correctAnswer: 0,
-            explanation: 'Dobbs (2022) thesis plausible but contestable: returned abortion from Roe/Casey federal rule to state legislative/constitutional authority → ~14 near-total bans + ~22 explicit protections + interstate travel + medication-abortion disputes + state constitutional campaigns. Competing candidates: NFIB v. Sebelius 2012 (Medicaid expansion made optional); continued administrative-state growth; COVID-19 pandemic federalism stress-test 2020-22. Dobbs plausibly most contested but "most significant" contested.'
+            explanation: 'The thesis is plausible but contestable. Dobbs held that the Constitution does not confer a right to abortion and left regulation to legislatures (EK 3.9.A.2), so state policies quickly diverged, from near-total bans to new legal protections. But other events also reshaped federal-state relations, such as the fight over making the ACA\'s Medicaid expansion optional for states and the pandemic response of 2020–22, in which governors and federal officials clashed over who set the rules. Dobbs did not create a federal statute, did not uphold a national right, and was not the only ruling on state power.'
           }
         ]
       }

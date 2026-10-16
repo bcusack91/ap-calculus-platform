@@ -77,10 +77,10 @@ export const whIndianOceanTradePart7Data = {
 | Feature | Indian Ocean (pre-1500) | Silk Road | Atlantic (post-1492) |
 |---------|------------------------|-----------|---------------------|
 | Participants | Arab, Indian, Malay, Chinese, Swahili | Chinese, Central Asian, Persian, European | European, African, American |
-| Organization | Polycentric; voluntary | Multiple intermediaries | European-dominated; coercive |
+| Organization | Polycentric; no dominant navy | Multiple intermediaries | European-dominated; coercive |
 | Primary goods | Cotton, spices, gold, porcelain | Silk, horses, glassware | Silver, sugar, enslaved people |
 | Cultural transmission | Islam, Hinduism, Buddhism, languages | Buddhism, Islam, technology | Christianity (forced), crop exchange |
-| Labor character | Free merchant sailors | Caravan traders | Enslaved laborers (Atlantic) |
+| Labor character | Mostly free merchants and sailors; some trade in enslaved East Africans | Caravan traders | Enslaved laborers (Atlantic) |
       `
     },
     {
@@ -103,13 +103,13 @@ export const whIndianOceanTradePart7Data = {
           {
             question: 'For AP analysis, the most significant comparison between Indian Ocean trade and Atlantic trade is:',
             options: [
-              'Indian Ocean trade rested on voluntary exchange among many partners, while Atlantic trade relied on coercion and enslaved labor',
+              'Indian Ocean trade ran among many partners with no dominant navy, while Atlantic trade relied on coercion and enslaved labor',
               'Enslaved labor built the Indian Ocean network, while the Atlantic system relied mostly on free migrants and paid wage workers instead',
               'Both networks were equally coercive, since European powers controlled each of them from the start',
               'The Atlantic trade was more voluntary, while the Indian Ocean was dominated by a single naval empire'
             ],
             correctAnswer: 0,
-            explanation: 'This comparison is AP\'s most important point about the two trade networks: they were not just "big" and "bigger" versions of the same thing but fundamentally different organizational structures. Indian Ocean: polycentric, voluntary, multiple participants. Atlantic: European-dominated, coercive, built on forced labor. The comparison demonstrates that "trade" and "exchange" are not inherently exploitative — the Atlantic trade\'s exploitation was a specific historical construction, not an inevitable feature of commerce.'
+            explanation: 'This comparison is AP\'s most important point about the two trade networks: they were not just "big" and "bigger" versions of the same thing but fundamentally different organizational structures. Indian Ocean: polycentric, merchant-driven, multiple participants, with enslaved people a smaller part of the trade. Atlantic: European-dominated, coercive, built on forced labor. The comparison demonstrates that "trade" and "exchange" are not inherently exploitative — the Atlantic trade\'s exploitation was a specific historical construction, not an inevitable feature of commerce.'
           },
           {
             question: 'What does Zheng He\'s withdrawal combined with Portuguese expansion during the same period (1430s-1490s) demonstrate for AP?',
@@ -160,13 +160,13 @@ export const whIndianOceanTradePart7Data = {
           {
             question: 'An AP CCOT on Indian Ocean trade c. 1450-1750 should identify which as the most significant change?',
             options: [
-              'European armed coercion entered a voluntary network, though Asian merchants and demand persisted',
+              'European armed coercion entered an open network, though Asian merchants and demand persisted',
               'Indian Ocean trade ended entirely once European fleets arrived and seized the major ports',
               'The main change was the arrival of new goods the network had never carried, such as cotton cloth',
               'Nothing significant changed, since the network kept the same partners, goods and routes throughout'
             ],
             correctAnswer: 0,
-            explanation: 'CCOT analysis requires identifying the most historically significant change (not just any change): the insertion of coercive European commercial power into an existing voluntary network is the transformative change because it established the model for colonial commercial empire that would intensify over the next three centuries. The continuity — Asian merchants, monsoon navigation, same commodities — is also important: European coercion was imposed on top of existing networks, not instead of them.'
+            explanation: 'CCOT analysis requires identifying the most historically significant change (not just any change): the insertion of coercive European commercial power into an existing open network is the transformative change because it established the model for colonial commercial empire that would intensify over the next three centuries. The continuity — Asian merchants, monsoon navigation, same commodities — is also important: European coercion was imposed on top of existing networks, not instead of them.'
           },
           {
             question: 'Which AP principle is most powerfully demonstrated by studying Indian Ocean trade networks from c. 1000-1750?',

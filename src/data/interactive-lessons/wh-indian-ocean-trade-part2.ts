@@ -83,7 +83,7 @@ The Indian Ocean was a multi-civilizational commercial space before European arr
 > **AP Comparison Anchor**
 
 - **Indian Ocean vs. Silk Road:** Both were multi-civilizational trade networks; Indian Ocean carried bulkier, higher-volume goods (cotton, spices); Silk Road carried luxury overland goods; both transmitted religion, technology, culture alongside commodities
-- **Indian Ocean vs. Atlantic trade:** Indian Ocean was voluntary commercial exchange among roughly equal participants; Atlantic trade involved European military coercion and forced labor — fundamentally different commercial character
+- **Indian Ocean vs. Atlantic trade:** Indian Ocean exchange was commercial, among roughly equal participants with no dominant navy (though it included a smaller trade in enslaved East Africans); Atlantic trade involved European military coercion and forced labor — fundamentally different commercial character
       `
     },
     {
@@ -163,13 +163,13 @@ The Indian Ocean was a multi-civilizational commercial space before European arr
           {
             question: 'An AP comparison of Indian Ocean trade and Atlantic triangle trade reveals which fundamental difference?',
             options: [
-              'Indian Ocean exchange was polycentric and voluntary, while the Atlantic system rested on coercion and enslaved labor',
+              'Indian Ocean exchange was polycentric with no dominant navy, while the Atlantic system rested on coercion and enslaved labor',
               'Indian Ocean trade relied on enslaved labor, while the Atlantic system was run by free wage workers',
               'Atlantic trade involved many equal partners, while the Indian Ocean was ruled by a single empire',
               'Indian Ocean trade moved only luxury goods, while the Atlantic trade moved only raw materials and food'
             ],
             correctAnswer: 0,
-            explanation: 'This comparison is AP-important because it challenges the assumption that "global trade" always involves European dominance. The pre-European Indian Ocean was genuinely polycentric — no single power dominated — and organized around roughly voluntary commercial relationships. European arrival (Portuguese cartaz system) introduced coercive elements into an existing voluntary system. The Atlantic trade was coercive from its origins. These different organizational principles produced different consequences for the peoples involved.'
+            explanation: 'This comparison is AP-important because it challenges the assumption that "global trade" always involves European dominance. The pre-European Indian Ocean was genuinely polycentric — no single power dominated — and organized around commercial relationships rather than naval force, although enslaved East Africans were among the goods traded. European arrival (Portuguese cartaz system) introduced armed coercion of merchants into an existing open system. The Atlantic trade was coercive from its origins. These different organizational principles produced different consequences for the peoples involved.'
           },
           {
             question: 'The geographic distribution of Indian Ocean trade participants (Arab, Indian, Malay, Chinese, Swahili) demonstrates which AP principle?',

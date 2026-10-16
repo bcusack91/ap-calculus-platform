@@ -188,7 +188,7 @@ The telegraph was the first technology where information itself (not goods) was 
       exercise: {
         questions: [
           {
-            question: 'The comparison between the telegraph network (1850s-1900s) and the internet (1990s-present) reveals:',
+            question: 'The comparison between the telegraph network (1850s-1900s) and the internet as it spread in the 1990s reveals:',
             options: [
               'Each moved from state funding to cheap mass use, and in each case control of network hubs gave states an intelligence edge',
               'The two share no meaningful pattern, because their technologies and social effects were entirely different',
@@ -196,7 +196,7 @@ The telegraph was the first technology where information itself (not goods) was 
               'The internet\'s design eliminated the chokepoint control that cable networks gave Britain in the 1800s',
             ],
             correctAnswer: 0,
-            explanation: 'Historical pattern recognition across different technologies is AP\'s synthesis: the telegraph\'s development arc — government-funded R&D (Morse received US government support); commercial adoption (Western Union); cost reduction (prices fell 90% 1844-1870); mass use (thousands of offices); economic transformation (commodity markets, news agencies); surveillance concerns (governments monitored telegraph traffic) — was reproduced by the internet 150 years later. The geopolitical dynamics were also similar: just as Britain\'s cable control gave it intelligence advantages, the USA\'s dominance of internet infrastructure (root servers, major platforms, undersea cables) creates similar advantages. AP rewards this kind of cross-period pattern recognition.'
+            explanation: 'Historical pattern recognition across different technologies is AP\'s synthesis: the telegraph\'s development arc — government-funded R&D (Morse received US government support); commercial adoption (Western Union); cost reduction (prices fell 90% 1844-1870); mass use (thousands of offices); economic transformation (commodity markets, news agencies); surveillance concerns (governments monitored telegraph traffic) — was repeated by the internet, which grew from the U.S. government-funded ARPANET (1969) into a mass commercial network in the 1990s. The geopolitical dynamics were also similar: just as Britain\'s cable control gave it intelligence advantages, by the late 1990s the United States hosted much of the internet\'s core infrastructure, which gave it a comparable edge. AP rewards this kind of cross-period pattern recognition.'
           },
           {
             question: 'For AP, the telegraph\'s most significant contribution to global history was:',

@@ -16,7 +16,7 @@ export const whMassAtrocitiesPart4Data = {
 | Resistance: armed, spiritual, cultural, and rescue networks |
 | Bystanders, perpetrators, and the role of ordinary people |
 | The development of human rights law (UDHR, Genocide Convention, Refugee Convention) |
-| Postwar tribunals: Nuremberg, Tokyo, ICTR, ICTY, ICC |
+| Postwar tribunals: Nuremberg, Tokyo, ICTY, ICTR, and the 1998 Rome Statute |
 
 > Key idea: Atrocities did not happen in a vacuum. They prompted resistance from the targeted (Warsaw Ghetto Uprising, Sobibor revolt, Tutsi self-defense), action from rescuers (Raoul Wallenberg, Chiune Sugihara, the village of Le Chambon), and a postwar legal architecture intended to make accountability possible. The AP exam expects you to connect mass violence to the human-rights regime that emerged in response.
       `
@@ -51,15 +51,15 @@ export const whMassAtrocitiesPart4Data = {
 | 1948 | Universal Declaration of Human Rights (UDHR) | Drafted under Eleanor Roosevelt; declared inherent rights of all persons |
 | 1948 | Convention on the Prevention and Punishment of the Crime of Genocide | Created the legal definition still in use today |
 | 1951 | Convention Relating to the Status of Refugees | Defined "refugee" and prohibited refoulement (forced return to danger) |
-| 1993 | International Criminal Tribunal for the former Yugoslavia (ICTY) | Tried Bosnian and Serbian leaders; convicted Karadžić, Mladić |
+| 1993 | International Criminal Tribunal for the former Yugoslavia (ICTY) | First international war-crimes court since Nuremberg and Tokyo; indicted Bosnian Serb leaders Karadžić and Mladić (1995) and Serbia's Milošević (1999) |
 | 1994 | International Criminal Tribunal for Rwanda (ICTR) | Convicted senior officials including PM Jean Kambanda |
-| 1998 | Rome Statute → 2002 International Criminal Court (ICC) | Permanent court for genocide, crimes against humanity, war crimes |
+| 1998 | Rome Statute | Treaty to create a permanent international criminal court for genocide, crimes against humanity, and war crimes |
 
 > **Where Connections Live**
 
-- Postwar law (Nuremberg → ICC) directly built on the Holocaust experience.
+- Postwar law (Nuremberg → ICTY and ICTR → the 1998 Rome Statute) built directly on the Holocaust experience.
 - The Refugee Convention emerged from the displacement of millions in WWII and immediate postwar Europe.
-- The doctrine of "Responsibility to Protect" (R2P, adopted by UN summit 2005) was a direct response to Rwanda and Srebrenica.
+- Rwanda and Srebrenica set off a 1990s debate over "humanitarian intervention": should state sovereignty shield a government that slaughters its own people? NATO's 1999 bombing campaign over Kosovo, launched without UN Security Council approval, put that question to the test.
       `
     },
     {
@@ -88,7 +88,7 @@ export const whMassAtrocitiesPart4Data = {
               'The 1948 Universal Declaration of Human Rights, a nonbinding list of rights adopted by the UN'
             ],
             correctAnswer: 1,
-            explanation: 'Nuremberg established that individuals — not just states — could be prosecuted for crimes against humanity; the 1945 London Charter set out the legal framework, and its principles still inform the ICC\'s 1998 Rome Statute. The Kaiser was never tried under Versailles, the International Court of Justice hears disputes between states, and the Universal Declaration is not a criminal statute.'
+            explanation: 'Nuremberg established that individuals — not just states — could be prosecuted for crimes against humanity; the 1945 London Charter set out the legal framework, and its principles still inform the 1998 Rome Statute. The Kaiser was never tried under Versailles, the International Court of Justice hears disputes between states, and the Universal Declaration is not a criminal statute.'
           }
         ]
       }
@@ -112,10 +112,10 @@ export const whMassAtrocitiesPart4Data = {
             hint: 'Issued the famous "Schutzpass" documents.'
           },
           {
-            prompt: 'The 2002 permanent international court created by the Rome Statute to prosecute genocide, crimes against humanity, and war crimes.',
-            answer: 'International Criminal Court',
-            acceptableAnswers: ['ICC', 'International Criminal Court'],
-            hint: 'Three-letter acronym; based in The Hague.'
+            prompt: 'The 1998 treaty that set out a permanent international criminal court to prosecute genocide, crimes against humanity, and war crimes.',
+            answer: 'Rome Statute',
+            acceptableAnswers: ['Rome Statute', 'the Rome Statute', 'Statute of Rome', 'Rome Treaty'],
+            hint: 'Named for the Italian capital where diplomats adopted it.'
           }
         ]
       }
@@ -128,21 +128,21 @@ export const whMassAtrocitiesPart4Data = {
         dropdowns: [
           {
             label: 'Postwar accountability for senior Nazi leaders was pursued through: ___',
-            options: ['the Nuremberg Trials and Principles', 'the 1951 Refugee Convention', 'the doctrine of Responsibility to Protect (R2P)', 'the Rome Statute and the permanent ICC']
+            options: ['the Nuremberg Trials and Principles', 'the 1951 Refugee Convention', 'the UN tribunal for Rwanda (ICTR)', 'the 1998 Rome Statute']
           },
           {
             label: 'The protection of stateless people fleeing persecution after WWII was codified in: ___',
-            options: ['the Nuremberg Trials and Principles', 'the 1951 Refugee Convention', 'the doctrine of Responsibility to Protect (R2P)', 'the Rome Statute and the permanent ICC']
+            options: ['the Nuremberg Trials and Principles', 'the 1951 Refugee Convention', 'the UN tribunal for Rwanda (ICTR)', 'the 1998 Rome Statute']
           },
           {
-            label: 'The post-Rwanda commitment to international intervention against ongoing atrocities was articulated as: ___',
-            options: ['the Nuremberg Trials and Principles', 'the 1951 Refugee Convention', 'the doctrine of Responsibility to Protect (R2P)', 'the Rome Statute and the permanent ICC']
+            label: 'In the 1990s, the organizers of the Rwandan genocide were put on trial before: ___',
+            options: ['the Nuremberg Trials and Principles', 'the 1951 Refugee Convention', 'the UN tribunal for Rwanda (ICTR)', 'the 1998 Rome Statute']
           }
         ],
-        correctAnswers: ['the Nuremberg Trials and Principles', 'the 1951 Refugee Convention', 'the doctrine of Responsibility to Protect (R2P)'],
+        correctAnswers: ['the Nuremberg Trials and Principles', 'the 1951 Refugee Convention', 'the UN tribunal for Rwanda (ICTR)'],
         hint1: 'Each human-rights instrument was a response to a specific 20th-century crisis.',
-        hint2: 'The Rome Statute is the distractor here; it created the permanent ICC, which is broader than any one of the three rows above.',
-        hint3: 'Match the response to the cause: Holocaust → Nuremberg, displaced WWII Europeans → Refugee Convention, Rwanda/Srebrenica → R2P.',
+        hint2: 'The Rome Statute is the distractor here; it planned a permanent court for future crimes, so it could not try the organizers of the 1994 killings.',
+        hint3: 'Match the response to the cause: Holocaust → Nuremberg, displaced WWII Europeans → Refugee Convention, Rwanda → the ICTR, set up by the UN Security Council in 1994.',
         explanation: 'The post-1945 human-rights architecture is best understood as a chain of responses to specific atrocities. Naming this causal chain is exactly the kind of "connections" reasoning AP graders reward.'
       }
     },
@@ -156,12 +156,12 @@ export const whMassAtrocitiesPart4Data = {
             question: 'Which AP-style claim best explains the historical relationship between mass atrocities and the postwar human-rights regime?',
             options: [
               'The human-rights regime grew from Enlightenment philosophy alone, as postwar drafters relied on 18th-century texts rather than recent events',
-              'Atrocities shaped human-rights law, from Nuremberg (1945) and the Genocide Convention (1948) to the ICC (2002)',
+              'Atrocities shaped human-rights law, from Nuremberg (1945) and the Genocide Convention (1948) to the Rome Statute (1998)',
               'The human-rights regime was built by the League of Nations after the Armenian atrocities (1915–1923) and dissolved along with the League in 1946',
               'The human-rights regime rested on informal moral pressure, since no binding treaty on genocide or refugees was adopted before the 1990s'
             ],
             correctAnswer: 1,
-            explanation: 'The chain Holocaust → Nuremberg → UDHR → Genocide Convention → Refugee Convention → ICTR/ICTY → ICC is one of the clearest connection-and-causation arguments in 20th-century history. Use it on the AP.'
+            explanation: 'The chain Holocaust → Nuremberg → UDHR → Genocide Convention → Refugee Convention → ICTY/ICTR → Rome Statute is one of the clearest connection-and-causation arguments in 20th-century history. Use it on the AP.'
           },
           {
             question: 'Which evidence best supports the claim that the Holocaust depended on participation beyond the Nazi leadership?',

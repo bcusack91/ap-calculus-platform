@@ -118,7 +118,7 @@ The Constitution does NOT explicitly mention 'privacy' but the Court has recogni
       exercise: {
         questions: [
           {
-            prompt: "Year *DOBBS v. JACKSON WOMEN'S HEALTH ORGANIZATION* OVERRULED Roe v. Wade.",
+            prompt: "Year *DOBBS v. JACKSON WOMEN'S HEALTH ORGANIZATION* held that the Constitution does not confer a right to abortion.",
             answer: '2022',
             acceptableAnswers: ['2022'],
             hint: 'Alito majority; returned abortion regulation to legislatures (EK 3.9.A.2).'
@@ -181,15 +181,15 @@ The Constitution does NOT explicitly mention 'privacy' but the Court has recogni
             explanation: 'EK 3.2.A.1: the free exercise and establishment clauses reflect an ongoing tension between government power to make law and an individual\'s right to religious freedom. In YODER (1972, a required case) the Court held that Wisconsin\'s compulsory-attendance law, as applied to Amish children past eighth grade, burdened the parents\' FREE EXERCISE of religion more than the state\'s interest in two more years of schooling could justify — so the religious claim won, not the state. The establishment clause and freedom of the press were not the issue.'
           },
           {
-            question: "How did *Griswold v. Connecticut* (1965), *Roe v. Wade* (1973) and *Dobbs v. Jackson Women's Health Organization* (2022) shape the right to privacy?",
+            question: "How did *Griswold v. Connecticut* (1965), the Court's 1973 abortion ruling and *Dobbs v. Jackson Women's Health Organization* (2022) shape the right to privacy?",
             options: [
-              "Griswold found a privacy right, Roe extended it to abortion, and Dobbs overruled Roe and left abortion to legislatures",
-              "Griswold rejected a privacy right, Roe created one for contraception, and Dobbs restored it",
-              "Griswold located privacy in the Commerce Clause, Roe limited it to marriage, and Dobbs extended it nationwide to every state",
-              "Griswold, Roe and Dobbs each expanded privacy step by step, with Dobbs adding protection for abortion"
+              "Griswold found a privacy right, the 1973 ruling extended it to abortion, and Dobbs overruled that ruling",
+              "Griswold rejected a privacy right, the 1973 ruling created one for contraception, and Dobbs restored it",
+              "Griswold located privacy in the Commerce Clause, the 1973 ruling limited it to marriage, and Dobbs extended it nationwide",
+              "All three rulings expanded privacy step by step, with Dobbs adding protection for abortion"
             ],
             correctAnswer: 0,
-            explanation: 'EK 3.9.A.2 names these three cases (they are not on the list of 14 required cases, but their holdings are tested): GRISWOLD (1965) interpreted the due process clause to protect a right of PRIVACY from government infringement (a ban on contraceptives); ROE (1973) used substantive due process to extend that privacy right to ABORTION; DOBBS (2022) OVERRULED Roe, holding that the Constitution does not confer a right to abortion and leaving its regulation to LEGISLATURES. Which actions the privacy right protects continues to be debated.'
+            explanation: 'EK 3.9.A.2 traces this sequence (none of these cases is on the list of 14 required cases, but the holdings are tested): GRISWOLD (1965) interpreted the due process clause to protect a right of PRIVACY from government infringement (a ban on contraceptives); in 1973 the Court used substantive due process to extend that privacy right to ABORTION; DOBBS (2022) OVERRULED that 1973 decision, holding that the Constitution does not confer a right to abortion and leaving its regulation to LEGISLATURES. Which actions the privacy right protects continues to be debated.'
           }
         ]
       }

@@ -172,7 +172,7 @@ Use the exact term from the lesson.
 - For "Why is X located at Y?" → write **two sentences**: one for site, one for situation.
 - For diffusion questions → identify the **hearth**, the **mechanism** (relocation vs. expansion), and the **type** (contagious / hierarchical / stimulus).
 - On stimulus-based MCQs, scan the map for the **scale** (local, regional, global) before reading options — wrong scale = wrong answer.
-- Memorize Tobler's exact wording — it appears verbatim in MCQ stems.
+- Know the idea behind the quotation: interaction and similarity decline with distance (**distance decay**, the CED's term).
       `
     },
     {

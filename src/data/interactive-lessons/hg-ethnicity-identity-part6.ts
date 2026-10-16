@@ -26,9 +26,9 @@ export const hgEthnicityIdentityPart6Data = {
       content: `
 ## 📖 Stimulus 1: Segregation in Four Metro Areas
 
-The table shows four **hypothetical** US metropolitan areas. D is the Black–white **index of dissimilarity** calculated from census tracts.
+The table shows four **hypothetical** US metropolitan areas. The middle columns give the **percent of Black residents who live in majority-Black census tracts**, a simple measure of residential segregation.
 
-| Metro area | D in 1980 | D in 2020 | Black share of population, 2020 |
+| Metro area | % in majority-Black tracts, 1980 | % in majority-Black tracts, 2020 | Black share of population, 2020 |
 |---|---|---|---|
 | **Ardon** | 85 | 76 | 22% |
 | **Eastvale** | 72 | 58 | 14% |
@@ -36,9 +36,9 @@ The table shows four **hypothetical** US metropolitan areas. D is the Black–wh
 | **Lakeview** | 64 | 61 | 30% |
 
 ### Reading the Table Before the Questions
-- **Direction:** D fell in all four metros, so segregation declined everywhere.
-- **Amount:** the declines were 9 (Ardon), 14 (Eastvale), 17 (Sunmesa) and only 3 (Lakeview).
-- **Level in 2020:** Ardon and Lakeview remain in the **high** range (above 60); Eastvale and Sunmesa are **moderate**.
+- **Direction:** the measure fell in all four metros, so segregation declined everywhere.
+- **Amount:** the declines were 9 percentage points (Ardon), 14 (Eastvale), 17 (Sunmesa) and only 3 (Lakeview).
+- **Level in 2020:** Ardon and Lakeview remain **high** (above 60 percent); Eastvale and Sunmesa are lower.
 - **Pattern to test:** the metros with larger Black shares changed least. The table cannot say why; that needs other data, such as lending records or the age of housing.
 
 > 🔑 **AP Connection:** Describe a trend with **direction and size** ("fell by 17 points, from 55 to 38"), and never claim a cause the data do not show.
@@ -63,7 +63,7 @@ Use Stimulus 1.
               'Eastvale'
             ],
             correctAnswer: 0,
-            explanation: 'Ardon\'s index of 76 is the highest in 2020, so 76 percent of either group would have to move to even out the spreads. Lakeview, at 61, is also high but lower.'
+            explanation: 'Ardon\'s 76 percent is the highest in 2020: about three in four Black residents live in majority-Black tracts. Lakeview, at 61 percent, is also high but lower.'
           },
           {
             question: 'Which statement best describes the change shown in Stimulus 1?',
@@ -71,13 +71,13 @@ Use Stimulus 1.
               'Segregation fell in each metro, but by very different amounts',
               'Segregation rose in each metro area between 1980 and 2020',
               'Segregation fell most in the metro with the largest Black share',
-              'Segregation fell to the low range in every metro by 2020'
+              'Segregation fell below 30 percent in every metro by 2020'
             ],
             correctAnswer: 0,
-            explanation: 'Every index fell, by between 3 and 17 points. Lakeview, with the largest Black share, fell least, and no metro reached the low range below 30.'
+            explanation: 'Every value fell, by between 3 and 17 percentage points. Lakeview, with the largest Black share, fell least, and no metro dropped below 30 percent.'
           },
           {
-            question: 'Which additional data would best help explain why Lakeview\'s index barely changed?',
+            question: 'Which additional data would best help explain why Lakeview\'s figure barely changed?',
             options: [
               'Mortgage lending and home prices by tract over time',
               'The total land area of the metropolitan region',
@@ -98,9 +98,9 @@ Use Stimulus 1.
 
 Use Stimulus 1.
 
-**1)** By how many points did Sunmesa's index fall from 1980 to 2020?
+**1)** By how many percentage points did Sunmesa's figure fall from 1980 to 2020?
 
-**2)** In Ardon in 2020, what percent of Black residents would have to move to another tract to match the white population's spread?
+**2)** In Ardon in 2020, what percent of Black residents lived in majority-Black tracts?
 
 **3)** Ardon has 2,000,000 residents. Using the table, about how many Black residents live there?
       `,
@@ -108,9 +108,9 @@ Use Stimulus 1.
         boxes: 3,
         correctAnswers: ['17', '76', '440000'],
         hint1: 'Subtract the 2020 value from the 1980 value.',
-        hint2: 'D is read directly as a percent of either group.',
+        hint2: 'Read it directly from the 2020 column.',
         hint3: 'Black residents are 22 percent of the total: 0.22 × 2,000,000.',
-        explanation: '1) 55 − 38 = 17 points. 2) D = 76, so 76 percent. 3) 0.22 × 2,000,000 = 440,000 Black residents.'
+        explanation: '1) 55 − 38 = 17 percentage points. 2) The 2020 column shows 76 percent. 3) 0.22 × 2,000,000 = 440,000 Black residents.'
       }
     },
     {
@@ -188,23 +188,23 @@ Use Stimulus 2.
 
 Try each part before reading the model.
 
-**A. Using Stimulus 1, identify the metro area whose index of dissimilarity fell the most between 1980 and 2020.**
+**A. Using Stimulus 1, identify the metro area whose segregation measure fell the most between 1980 and 2020.**
 > *Model:* Sunmesa, which fell by 17 points, from 55 to 38.
 
 **B. Describe the overall pattern of residential segregation shown in Stimulus 1.**
-> *Model:* Segregation fell in all four metros between 1980 and 2020, but unevenly; Ardon and Lakeview remained highly segregated, with indexes above 60, while Eastvale and Sunmesa fell into the moderate range.
+> *Model:* Segregation fell in all four metros between 1980 and 2020, but unevenly; Ardon and Lakeview remained highly segregated, with values above 60 percent, while Eastvale (58 percent) and Sunmesa (38 percent) fell below that.
 
 **C. Explain one historical practice that contributed to the high segregation in metros such as Ardon.**
 > *Model:* Redlining in the 1930s graded Black neighborhoods as "hazardous," so lenders and the Federal Housing Administration avoided mortgages there; Black families could not easily buy homes in other areas, and white families moved to newly built suburbs, which concentrated each group in separate tracts.
 
-**D. Explain one limitation of the index of dissimilarity for comparing the four metro areas.**
-> *Model:* The index ignores how tracts are arranged, so a metro with one large block of segregated tracts and a metro with scattered segregated tracts can have the same value even though residents' daily contact differs greatly.
+**D. Explain one limitation of using this measure to compare the four metro areas.**
+> *Model:* The measure depends on each metro's overall Black share: majority-Black tracts are far more likely where Black residents are 30 percent of the population, as in Lakeview, than where they are 6 percent, as in Sunmesa, so part of the difference reflects population size rather than segregation alone.
 
 **E. Using Stimulus 2, identify the type of ethnic neighborhood shown and give two pieces of evidence.**
 > *Model:* An ethnoburb: it is suburban, with detached homes and car-oriented plazas, and it shows global economic ties, such as the branch of a Taiwan-based bank.
 
-**F. Explain how the neighborhood in Stimulus 2 challenges the spatial assimilation model.**
-> *Model:* The spatial assimilation model predicts that groups disperse as their income rises, but this neighborhood shows middle-class and affluent Chinese and Taiwanese residents choosing to cluster in a suburb, so success has not led to dispersal.
+**F. Explain how the neighborhood in Stimulus 2 challenges the idea that groups disperse as they assimilate.**
+> *Model:* That idea predicts that groups disperse as their income rises, but this neighborhood shows middle-class and affluent Chinese and Taiwanese residents choosing to cluster in a suburb, so success has not led to dispersal.
 
 **G. Explain the difference between ethnic cleansing and genocide, using one specific example.**
 > *Model:* Ethnic cleansing uses force to remove a group from a territory, while genocide is carried out with intent to destroy the group; in Rwanda in 1994, about 800,000 people, mostly Tutsi, were killed in about 100 days with the aim of destroying the Tutsi, which makes it genocide.

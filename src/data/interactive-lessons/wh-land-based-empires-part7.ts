@@ -78,7 +78,7 @@ export const whLandBasedEmpiresPart7Data = {
 - **Comparison LEQ:** Compare two land-based empires\' governance methods c. 1450-1750
 - **Evaluation LEQ:** Evaluate the extent to which religion was used to consolidate power
 - **CCOT:** How did land-based empire power change between 1450 and 1750?
-- **Causation:** Why did land-based empires decline c. 1700-1800?
+- **Causation:** Why did the Islamic land-based empires decline c. 1700-1750?
 
 > **AP Comparison Anchor**
 
@@ -89,7 +89,7 @@ export const whLandBasedEmpiresPart7Data = {
 | Ottoman | Devshirme/Millet | Sunni tolerance | Janissary conservatism |
 | Mughal | Mansabdar | Tolerance→Orthodoxy | Aurangzeb\'s policies |
 | Safavid | Shah/Clergy alliance | Forced Shia | Afghan invasion 1722 |
-| Qing | Dual appointments | Buddhist patronage | Opium Wars/rebellions |
+| Qing | Dual appointments | Confucian rites; Buddhist patronage in Inner Asia | Still at its height in 1750 (crises came after 1800) |
       `
     },
     {

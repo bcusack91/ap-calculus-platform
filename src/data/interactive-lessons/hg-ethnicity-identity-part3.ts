@@ -161,22 +161,22 @@ Choose the process each situation shows.
       content: `
 ## How Ethnic Neighborhoods Form and Change
 
-### Model 1: Spatial Assimilation
-Developed by sociologist Douglas Massey in the 1980s. Immigrants first cluster in an enclave; as they gain **income, education and English**, they move to more mixed neighborhoods, often suburbs. (Assimilation and acculturation as cultural processes are covered in the culture and diffusion lesson.)
+### Path 1: Dispersal as Groups Assimilate
+Immigrants often first cluster in an enclave; as they gain **income, education and English**, many move to more mixed neighborhoods, often suburbs. This is the geographic side of **assimilation** (assimilation and acculturation as cultural processes are covered in the culture and diffusion lesson).
 - **Fits:** Italian, Irish and Polish Americans who left older city enclaves for suburbs after 1945.
 - **Limitations:** it assumes dispersal follows success. **Ethnoburbs** show affluent groups choosing to cluster. It also assumes every group is free to move, which **discrimination** has often prevented.
 
-### Model 2: Place Stratification
-Some groups stay segregated **regardless of income** because of discrimination by lenders, landlords and neighbors. US data support this for Black Americans: their segregation from white Americans changes little as household income rises (Massey and Denton, *American Apartheid*, 1993). Part 4 shows how this is measured.
+### Path 2: Segregation That Persists
+Some groups stay segregated **regardless of income** because of discrimination by lenders, landlords and neighbors. US data support this for Black Americans: research has found that their segregation from white Americans changes little as household income rises. Part 4 shows how segregation is mapped and how it was built.
 
-### Model 3: Invasion and Succession
+### Path 3: Invasion and Succession
 From the Chicago school of urban sociology in the 1920s: a new group enters a neighborhood and gradually replaces the old one. Manhattan's **Lower East Side** passed from Irish and German, to Jewish and Italian, to Puerto Rican and Chinese residents. **Limitation:** it borrows an ecological metaphor and can make the change sound natural, hiding the role of real estate practices and policy.
 
 ### Two More Paths of Change
 - **Gentrification:** higher-income newcomers raise rents and can displace long-time residents, as in parts of Chinatowns in Boston, Philadelphia and Washington, D.C.
 - **Symbolic ethnic landscapes:** some neighborhoods keep their ethnic look after most of the group has left. Manhattan's **Little Italy** keeps flags, restaurants and the yearly Feast of San Gennaro, though few Italian Americans live there now. The landscape serves **heritage and tourism**.
 
-> 🔑 **AP Connection:** If a question asks why an ethnic neighborhood changed, name the process (succession, spatial assimilation, gentrification) and give a cause (rising income, new migration, rising rents).
+> 🔑 **AP Connection:** If a question asks why an ethnic neighborhood changed, name the process (succession, dispersal through assimilation, gentrification) and give a cause (rising income, new migration, rising rents).
 `
     },
     {
@@ -188,7 +188,7 @@ From the Chicago school of urban sociology in the 1920s: a new group enters a ne
       exercise: {
         questions: [
           {
-            question: 'According to the spatial assimilation model, what happens as an immigrant group gains income, education and English?',
+            question: 'As an immigrant group gains income, education and English, which residential pattern does assimilation usually predict?',
             options: [
               'Its members concentrate more tightly in the original enclave',
               'Its members disperse into more mixed neighborhoods over time',
@@ -196,10 +196,10 @@ From the Chicago school of urban sociology in the 1920s: a new group enters a ne
               'Its members found a new enclave in the central business district'
             ],
             correctAnswer: 1,
-            explanation: 'The model predicts that rising income and acculturation let group members leave the enclave for more mixed areas, often suburbs. It does not predict tighter clustering, return migration or a new downtown enclave.'
+            explanation: 'Assimilation usually means that rising income and acculturation let group members leave the enclave for more mixed areas, often suburbs. It does not predict tighter clustering, return migration or a new downtown enclave.'
           },
           {
-            question: 'Which observation most directly challenges the spatial assimilation model?',
+            question: 'Which observation most directly challenges the idea that rising income leads ethnic groups to disperse?',
             options: [
               'Second-generation Italian Americans leaving Little Italy for the suburbs',
               'Affluent Chinese Americans choosing to cluster in San Gabriel Valley suburbs',
@@ -207,7 +207,7 @@ From the Chicago school of urban sociology in the 1920s: a new group enters a ne
               'Cuban Americans moving from Little Havana to Hialeah as incomes rose'
             ],
             correctAnswer: 1,
-            explanation: 'The model expects success to bring dispersal, but affluent Chinese Americans in the San Gabriel Valley cluster by choice. Italian Americans and Cuban Americans moving out as incomes rose fit the model, and newcomers settling near relatives is the enclave stage it expects.'
+            explanation: 'The idea expects success to bring dispersal, but affluent Chinese Americans in the San Gabriel Valley cluster by choice. Italian Americans and Cuban Americans moving out as incomes rose fit the idea, and newcomers settling near relatives is the enclave stage it expects.'
           },
           {
             question: 'Manhattan\'s Little Italy keeps Italian flags, restaurants and a yearly festival, but few Italian Americans live there. This landscape is best described as:',

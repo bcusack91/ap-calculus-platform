@@ -90,7 +90,7 @@ Within 50 years of Genghis Khan's 1206 coronation, the Mongols had:
 - Invaded Poland and Hungary (1241) — stopped only by Ögedei Khan's death
 - Conquered most of Persia, Central Asia, and Korea
 
-The human cost was staggering: estimates suggest the Mongol conquests killed 30–40 million people (10%+ of global population), with some regions of Persia and China losing 50–75% of their populations.
+The human cost was staggering: estimates suggest the Mongol conquests killed 30–40 million people, very roughly a tenth of the world's population (estimates vary widely), with some regions of Persia and northern China losing a large share of their people.
 
 > **AP Comparison Anchor**
 
@@ -189,7 +189,7 @@ Match each Mongol concept to its correct description.
               'Argue that psychological terror, not weapons or tactics, was the only real cause of Mongol success'
             ],
             correctAnswer: 0,
-            explanation: 'Effective historical argument requires engaging with partial truths: the composite bow WAS an advantage, but it alone cannot explain conquests across 20+ million square miles. Organizational factors — unity, coordination, adaptability — explain the broader success. AP rewards "while [X is true], [Y provides a more complete explanation" argument structures.'
+            explanation: 'Effective historical argument requires engaging with partial truths: the composite bow WAS an advantage, but it alone cannot explain conquests across roughly 9 million square miles. Organizational factors — unity, coordination, adaptability — explain the broader success. AP rewards "while [X is true], [Y provides a more complete explanation" argument structures.'
           },
           {
             question: 'What does the Mongols\' adoption of Chinese administrative systems in the Yuan Dynasty best illustrate?',

@@ -116,9 +116,9 @@ Use the Mexico table.
 | Idea | What it explains | Its limit |
 |---|---|---|
 | **Independent hearths** | Why different crops come from different regions | Some "hearths" mixed local and diffused domesticates, as at Mehrgarh |
-| **Sauer's vegetative vs. seed hearths** | Why tropical hearths grew roots and drier ones grew grains | Root crops leave little evidence, so his Southeast Asia priority is untested |
+| **Vegetative vs. seed planting** | Why tropical hearths grew roots and drier ones grew grains | Root crops leave little evidence, so early Southeast Asian farming is hard to date |
 | **Wave of advance** | The steady speed of farming's spread across Europe | The speed alone cannot separate relocation from contagious diffusion |
-| **Diamond's east–west axis** | Why crops spread easily across Eurasia | Exceptions such as maize in North America; risks environmental determinism |
+| **East–west axis argument** | Why crops spread easily across Eurasia | Exceptions such as maize in North America; risks environmental determinism |
 | **"Revolution" labels** | Clear stages for comparing change | The Second took about 200 years and the Green Revolution reached some regions much more than others |
 
 ### Five Errors to Avoid

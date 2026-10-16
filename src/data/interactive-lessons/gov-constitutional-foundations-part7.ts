@@ -80,7 +80,7 @@ export const govConstitutionalFoundationsPart7Data = {
 | ***Tinker v. Des Moines*** | 1969 | Student speech protection | 1st Amendment |
 | ***New York Times v. United States*** | 1971 | Prior restraint disfavored (Pentagon Papers) | 1st Amendment |
 | ***Wisconsin v. Yoder*** | 1972 | Free Exercise Clause exemption from compulsory schooling | 1st Amendment |
-| ***Shaw v. Reno*** | 1993 | Racial gerrymandering subject to strict scrutiny | 14th Amendment Equal Protection |
+| ***Shaw v. Reno*** | 1993 | Districts drawn mainly by race can be challenged under the Equal Protection Clause | 14th Amendment Equal Protection |
 | ***United States v. Lopez*** | 1995 | First commerce-clause limit since 1937 | Article I, § 8 commerce clause |
 | ***McDonald v. City of Chicago*** | 2010 | 2nd Amendment incorporated against states | 14th Amendment Due Process |
 | ***Citizens United v. FEC*** | 2010 | Corporate independent political expenditures protected | 1st Amendment |
@@ -238,7 +238,7 @@ export const govConstitutionalFoundationsPart7Data = {
               "Article V is too difficult, because the President can veto any proposed amendment that passes both houses of Congress"
             ],
             correctAnswer: 0,
-            explanation: 'Defensible thesis: Article V too difficult — 2/3 propose + 3/4 ratify → only 27 amendments in 230+ years; only 1 since 1971 → harmful consequences: (1) shift to judicial reinterpretation (Warren incorporation; Roe 1973; Citizens United 2010; Dobbs 2022) → 9 unelected justices vs. people; (2) failed widely-supported reforms (ERA 1972-82; Balanced Budget; Electoral College reform; campaign finance) — structurally resistant to democratic updating; founders coordinating 13 states vs. 50 today.'
+            explanation: 'Defensible thesis: Article V too difficult — 2/3 propose + 3/4 ratify → only 27 amendments in 230+ years; only 1 since 1971 → harmful consequences: (1) shift to judicial reinterpretation (Warren incorporation; the 1973 abortion ruling; Citizens United 2010; Dobbs 2022) → 9 unelected justices vs. people; (2) failed widely-supported reforms (ERA 1972-82; Balanced Budget; Electoral College reform; campaign finance) — structurally resistant to democratic updating; founders coordinating 13 states vs. 50 today.'
           },
           {
             question: 'Which response best demonstrates the AP "alternative perspective" point for the same prompt?',

@@ -34,13 +34,13 @@ export const whTransoceanicPart4Data = {
           {
             question: 'The French Panama Canal failure (1881-1889) and American success (1904-1914) demonstrates:',
             options: [
-              'Disease control was decisive, and the Americans succeeded by first wiping out malaria and yellow fever mosquitoes',
+              'Disease control was decisive, and the Americans succeeded by first attacking the mosquitoes that spread malaria and yellow fever',
               'The French failed mainly because de Lesseps picked a poor route across the isthmus, and the Americans succeeded by choosing a new one',
               'Disease was a minor issue, and the French collapse came mostly from fraud and financial mismanagement',
               'Both projects faced the same disease toll, and the Americans succeeded only by using better machinery',
             ],
             correctAnswer: 0,
-            explanation: 'Disease control as prerequisite for engineering achievement is AP\'s scientific-historical analysis: de Lesseps had succeeded at Suez (a desert canal with minimal disease) and attempted to use the same sea-level design in Panama. The Isthmus of Panama was one of the world\'s most disease-endemic environments. Workers died at rates of 200+ per month from malaria and yellow fever. De Lesseps refused to believe disease was the main obstacle until the project collapsed financially. The USA (having experienced Cuba\'s disease problems in the Spanish-American War) required Walter Reed\'s 1900 yellow fever research → Gorgas\'s mosquito eradication program → two years of disease control before construction began in earnest. Medical science enabled engineering.'
+            explanation: 'Disease control as prerequisite for engineering achievement is AP\'s scientific-historical analysis: de Lesseps had succeeded at Suez (a desert canal with minimal disease) and attempted to use the same sea-level design in Panama. The Isthmus of Panama was one of the world\'s most disease-endemic environments. Workers died at rates of 200+ per month from malaria and yellow fever. De Lesseps refused to believe disease was the main obstacle until the project collapsed financially. The USA (having experienced Cuba\'s disease problems in the Spanish-American War) required Walter Reed\'s 1900 yellow fever research → Gorgas\'s mosquito-control program, which ended yellow fever in the Canal Zone by 1906 and sharply reduced (but never eliminated) malaria, before construction began in earnest. Medical science enabled engineering.'
           }
         ]
       }
@@ -57,7 +57,7 @@ export const whTransoceanicPart4Data = {
 |--------|---------|
 | **Builder** | Ferdinand de Lesseps (Compagnie Universelle du Canal Maritime de Suez) |
 | **Length** | 193 km (120 miles) connecting Mediterranean to Red Sea |
-| **Labor** | Initially forced Egyptian labor (corvée); later paid workers; ~30,000 workers; ~120,000 died from disease and accidents |
+| **Labor** | Forced Egyptian peasant labor (corvée), roughly 20,000 men at a time in rotating shifts, until the corvée was abolished in 1864; then paid workers and steam dredges. Deaths ran into the thousands, many in an 1865 cholera outbreak; the often-quoted figure of 120,000 deaths is disputed, and most historians estimate far fewer |
 | **Cost** | 433 million francs; Egyptian government heavily indebted |
 | **Opened** | November 17, 1869 |
 | **Effect** | Cut the Britain-India sea voyage by roughly 7,000 km (about 40%) compared with the route around Africa |
@@ -74,7 +74,7 @@ export const whTransoceanicPart4Data = {
 | Aspect | French Attempt (1881-1889) | American Construction (1904-1914) |
 |--------|--------------------------|----------------------------------|
 | **Leadership** | Ferdinand de Lesseps | Colonel George Goethals |
-| **Key challenge** | Underestimated engineering; disease (malaria, yellow fever) | Disease control (Gorgas eliminated malaria/yellow fever first) |
+| **Key challenge** | Underestimated engineering; disease (malaria, yellow fever) | Disease control (Gorgas wiped out yellow fever in the Canal Zone by 1906 and sharply cut malaria) |
 | **Deaths** | ~22,000 | ~5,600 (mostly disease) |
 | **Outcome** | Failure; bankruptcy | Success; opened August 1914 |
 | **Method** | Sea-level canal (like Suez) | Lock system (elevation change required) |
@@ -145,7 +145,7 @@ export const whTransoceanicPart4Data = {
             ]
           },
           {
-            label: 'The American medical officer whose mosquito eradication campaign made Panama Canal construction possible was ___',
+            label: 'The American medical officer whose mosquito-control campaign made Panama Canal construction possible was ___',
             options: [
             'William Gorgas',
             'Walter Reed',
@@ -169,7 +169,7 @@ export const whTransoceanicPart4Data = {
           'Gamal Abdel Nasser',
         ],
         hint1: 'De Lesseps — Suez 1869 success — then Panama 1881-1889 failure — disease underestimated — French bankruptcy — Compagnie Universelle',
-        hint2: 'Gorgas — US Army surgeon — applied Reed yellow fever research — mosquito eradication Panama Zone — disease eliminated before major construction — 1904-1906',
+        hint2: 'Gorgas — US Army surgeon — applied Reed yellow fever research — mosquito control in the Canal Zone — yellow fever gone by 1906, malaria sharply reduced',
         hint3: 'Nasser Egypt 1956 — nationalized Suez Canal — fund Aswan Dam — British French invasion — USA forced withdrawal — Eisenhower — British imperial decline marker',
         explanation: 'De Lesseps connects Suez success to Panama failure and demonstrates the human agency dimension of canal history; Gorgas demonstrates how medical science was the prerequisite for tropical engineering success; and Nasser demonstrates how the canal\'s geopolitical significance outlasted British imperialism and became the site of the definitive test of post-WWII power relationships — together they show the full historical arc of canal history from construction to decolonization.'
       }

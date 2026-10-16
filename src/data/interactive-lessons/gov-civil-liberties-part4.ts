@@ -91,10 +91,10 @@ export const govCivilLibertiesPart4Data = {
               "Abortion rights now vary by state, with bans in some and new protections in others via laws and ballot measures",
               "Abortion rights are now set by Congress alone, which passed a national standard that overrides all state protections after Dobbs",
               "Abortion rights are now fixed nationwide by Dobbs, which required every state to adopt the same trimester framework",
-              "Abortion rights are now decided by federal courts case by case under strict scrutiny, which states cannot alter by law"
+              "Abortion rights are now decided by federal courts case by case under one national test, which states cannot alter by law"
             ],
             correctAnswer: 0,
-            explanation: 'POST-DOBBS FEDERALISM: (1) DOBBS — Alito overruled Roe 1973 + Casey 1992; returned to DEMOCRATIC POLITICAL PROCESSES; (2) STATE BANS — ~14 states near-total via TRIGGER LAWS (TX, MO, AR, MS, AL, KY, TN, LA, ID, OK, ND, SD, WV, WI initially); pre-Roe revivals (AZ later struck); exceptions vary; (3) STATE EXPANSIONS — ~18 states + DC (CA, NY, IL, MA, NJ); (4) BALLOT INITIATIVES — KANSAS Aug 2022 rejected restriction 59-41; MI/CA/VT Nov 2022 added protection; KY Nov 2022 rejected restriction; OH Aug + Nov 2023 added protection; MD/NY/NV/CO/AZ/MO Nov 2024 added; FL Nov 2024 failed 60% supermajority; SD/NE Nov 2024 rejected; (5) STATE COURTS applied STATE CONSTITUTIONAL protections (KS 2019, FL pre-DeSantis 2023, OK 2023); (6) Biden EOs; FDA v. AHM 2024 (standing); ongoing fed v. state v. ballot.'
+            explanation: 'POST-DOBBS FEDERALISM: Dobbs held that the Constitution does not confer a right to abortion and left its regulation to legislatures (EK 3.9.A.2). State policy then diverged: more than a dozen states enforced near-total bans, several through "trigger laws" written to take effect once the Court changed course, while other states added protections by statute, by state constitutional amendment, or through ballot measures (Kansas voters, for example, rejected an anti-abortion amendment in August 2022). State constitutions and courts can protect rights beyond the federal floor, which gives advocates on both sides state-level access points (EK 1.9.A.1). Congress passed no national standard, Dobbs imposed no national framework, and federal courts do not decide each case under a national abortion right.'
           }
         ]
       }
@@ -141,14 +141,14 @@ export const govCivilLibertiesPart4Data = {
             options: ['RFRA 1993', 'USA Freedom Act (2015)', 'Section 230 (1996)', 'State trigger laws post-Dobbs']
           },
           {
-            label: "Post-Dobbs federalism — ~14 states enacted near-total abortion restrictions effective immediately: ___",
+            label: "Post-Dobbs federalism — more than a dozen states put near-total abortion restrictions into effect almost immediately: ___",
             options: ['RFRA 1993', 'USA Freedom Act (2015)', 'Section 230 (1996)', 'State trigger laws post-Dobbs']
           }
         ],
         correctAnswers: ['RFRA 1993', 'USA Freedom Act (2015)', 'State trigger laws post-Dobbs'],
         hint1: 'RFRA 1993 — Clinton signed; restored compelling-interest + least-restrictive-means test for religious exemptions; congressional response to Employment Division v. Smith 1990.',
         hint2: 'USA Freedom Act 2015 — ended NSA bulk storage of phone records under the Patriot Act; one of the limits on metadata collection named in EK 3.8.A.3.',
-        hint3: 'Trigger laws — pre-existing state laws designed to take effect immediately upon overruling of Roe; ~14 states implemented near-total bans within days/weeks of Dobbs June 2022.'
+        hint3: 'Trigger laws — state laws written in advance to take effect if the Supreme Court ended the constitutional abortion right; several took effect within days or weeks of Dobbs (June 2022).'
       }
     },
     {

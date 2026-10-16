@@ -38,8 +38,8 @@ export const govConstitutionalFoundationsPart2Data = {
 | Branch Acted Upon | Branch Acting | Mechanism |
 |---|---|---|
 | Executive | Legislative | Senate advice and consent on appointments and treaties; veto override (2/3 each chamber); impeachment (House) and removal (Senate, 2/3); funding control; declaration of war; oversight investigations |
-| Executive | Judicial | Judicial review of executive actions (e.g., *Youngstown Sheet & Tube v. Sawyer*, 1952; *United States v. Nixon*, 1974) |
-| Legislative | Executive | Veto; recess appointments (limited by *NLRB v. Noel Canning*, 2014); use of executive orders, signing statements, and prosecutorial discretion |
+| Executive | Judicial | Judicial review of executive actions (courts can rule that a president acted beyond the authority the Constitution or Congress granted) |
+| Legislative | Executive | Veto; use of executive orders, signing statements, and discretion in how laws are enforced |
 | Legislative | Judicial | Judicial review of statutes (*Marbury v. Madison*, 1803); narrow interpretation of statutes; constitutional avoidance doctrine |
 | Judicial | Legislative | Senate confirmation of judges (advice and consent); jurisdiction stripping (Article III, § 2: appellate jurisdiction "with such Exceptions"); constitutional amendment to overturn rulings (e.g., 11th Amendment overturned *Chisholm v. Georgia*, 1793; 16th Amendment overturned *Pollock v. Farmers\' Loan*, 1895; 26th Amendment overturned part of *Oregon v. Mitchell*, 1970); statutory revision; impeachment of judges (1 Supreme Court justice impeached: Samuel Chase 1804, acquitted; 8 federal judges removed in U.S. history) |
 | Judicial | Executive | Appointment of judges (with Senate advice and consent); pardons (cannot pardon impeachment but otherwise plenary; *Ex parte Garland*, 1867); Article III judges have life tenure once appointed |
@@ -166,15 +166,15 @@ Any proposal route can be paired with either ratification route; Congress choose
       exercise: {
         questions: [
           {
-            question: 'AP SCOTUS comparison prompt: In a non-required case (Youngstown Sheet & Tube v. Sawyer, 1952), the Supreme Court ruled that President Truman could not seize private steel mills during the Korean War without authorization from Congress. Which REQUIRED case shares the principle the Court applied?',
+            question: 'AP SCOTUS comparison prompt: In a hypothetical non-required case, a federal court rules that a president\'s executive order violates the Constitution\'s separation of powers and declares the order void. Which REQUIRED case is the source of the authority the court used?',
             options: [
-              "Marbury v. Madison (1803), which established the judiciary's power to declare actions of the other branches unconstitutional",
+              "Marbury v. Madison (1803), which established the judiciary's power to strike down actions of the other branches as unconstitutional",
               "Schenck v. United States (1919), which upheld limits on speech that created a clear and present danger in wartime",
               "McCulloch v. Maryland (1819), which held that a state may not tax a bank created under Congress's implied powers",
               "Engel v. Vitale (1962), which held that school-sponsored prayer in public schools violates the establishment clause"
             ],
             correctAnswer: 0,
-            explanation: 'The SCOTUS comparison question always pairs a non-required case with a REQUIRED one. Youngstown applied JUDICIAL REVIEW to strike down an executive action that lacked constitutional or statutory authority — the power Marbury v. Madison (1803) established. Schenck upheld government power in wartime; McCulloch concerned federal-state relations; Engel concerned the establishment clause.'
+            explanation: 'The SCOTUS comparison question always pairs a non-required case with a REQUIRED one. Striking down an executive action that lacks constitutional or statutory authority is an exercise of JUDICIAL REVIEW, the power Marbury v. Madison (1803) established. Schenck upheld government power in wartime; McCulloch concerned federal-state relations; Engel concerned the establishment clause.'
           },
           {
             question: 'Which best demonstrates AP "complexity" by analyzing the limits of formal checks and balances?',

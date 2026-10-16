@@ -19,7 +19,7 @@ export const govMediaTechnologyPart6Data = {
 | Worked example 3: TikTok PAFACAA + foreign ownership + national security |
 | Foundational documents (Federalist 10 + 51 + 78 + Brutus 1) |
 
-> 🔑 Key idea: AP GOVERNMENT MEDIA + TECHNOLOGY FRQs require SYSTEMATIC ANALYSIS using 5-STEP FRAMEWORK — (1) IDENTIFY the CONSTITUTIONAL/POLICY ISSUE (1st Amendment + speech regulation + foreign interference + national security + privacy + algorithmic accountability + market regulation); (2) ANALYZE PRECEDENTS + FOUNDATIONAL DOCUMENTS (Federalist 10/51/78/Brutus 1; key cases NYT v. Sullivan 1964 actual malice + Pentagon Papers 1971 prior restraint + Branzburg v. Hayes 1972 reporter's privilege + Reno v. ACLU 1997 internet 1st Amendment + Citizens United 2010 corporate independent expenditures + Moody v. NetChoice 2024 + NetChoice v. Paxton 2024 platform content moderation); (3) APPLY PRINCIPLES (1st Amendment fundamental + content-neutral preferred + viewpoint discrimination disfavored + strict scrutiny for content-based + intermediate for content-neutral + commercial speech less protected + national security balanced + foreign interference compelling interest); (4) CONSIDER COUNTERARGUMENTS (1st Amendment absolutism vs reasonable regulation + government power vs private platform power + foreign vs domestic distinction + adult vs minor protection + national security vs civil liberties + market vs regulation); (5) CONCLUDE with IMPLICATIONS (institutional design + democratic values + balancing competing interests + future challenges + comparative perspectives EU DSA 2022); 3 WORKED EXAMPLES walk through Section 230 reform + AI deepfakes + TikTok PAFACAA; FOUNDATIONAL DOCUMENTS — Federalist 10 (Madison faction control extended republic) + Federalist 51 (Madison separated powers + checks balances) + Federalist 78 (Hamilton judicial review least dangerous branch) + Brutus 1 (Anti-Federalist concerns about federal power + judicial overreach + standing army). Each example demonstrates SCAR template (Situation + Constitutional/Statutory framework + Application/Analysis + Resolution/Implications).
+> 🔑 Key idea: AP GOVERNMENT MEDIA + TECHNOLOGY FRQs require SYSTEMATIC ANALYSIS using 5-STEP FRAMEWORK — (1) IDENTIFY the CONSTITUTIONAL/POLICY ISSUE (1st Amendment + speech regulation + foreign interference + national security + privacy + algorithmic accountability + market regulation); (2) ANALYZE PRECEDENTS + FOUNDATIONAL DOCUMENTS (Federalist 10/51/78/Brutus 1; key cases NYT v. Sullivan 1964 actual malice + Pentagon Papers 1971 prior restraint + Branzburg v. Hayes 1972 reporter's privilege + Reno v. ACLU 1997 internet 1st Amendment + Citizens United 2010 corporate independent expenditures + Moody v. NetChoice 2024 + NetChoice v. Paxton 2024 platform content moderation); (3) APPLY PRINCIPLES (First Amendment protection is strong; rules aimed at the content or viewpoint of speech are the hardest to defend, while content-neutral rules get more leeway; national security and protection against foreign interference are weighed against speech rights); (4) CONSIDER COUNTERARGUMENTS (1st Amendment absolutism vs reasonable regulation + government power vs private platform power + foreign vs domestic distinction + adult vs minor protection + national security vs civil liberties + market vs regulation); (5) CONCLUDE with IMPLICATIONS (institutional design + democratic values + balancing competing interests + future challenges + comparative perspectives EU DSA 2022); 3 WORKED EXAMPLES walk through Section 230 reform + AI deepfakes + TikTok PAFACAA; FOUNDATIONAL DOCUMENTS — Federalist 10 (Madison faction control extended republic) + Federalist 51 (Madison separated powers + checks balances) + Federalist 78 (Hamilton judicial review least dangerous branch) + Brutus 1 (Anti-Federalist concerns about federal power + judicial overreach + standing army). Each example demonstrates SCAR template (Situation + Constitutional/Statutory framework + Application/Analysis + Resolution/Implications).
       `
     },
     {
@@ -32,7 +32,7 @@ export const govMediaTechnologyPart6Data = {
 |---|---|
 | **1. IDENTIFY** | What is the CONSTITUTIONAL/POLICY ISSUE? (1st Am + speech + foreign interference + national security + privacy + algorithms + market) |
 | **2. ANALYZE PRECEDENTS** | Apply foundational documents (Fed 10/51/78/Brutus 1) + key cases (Sullivan 1964 + Pentagon Papers 1971 + Branzburg 1972 + Reno 1997 + Citizens United 2010 + Moody 2024) |
-| **3. APPLY PRINCIPLES** | 1st Am fundamental; content-neutral preferred; viewpoint discrimination disfavored; strict scrutiny content-based; intermediate content-neutral |
+| **3. APPLY PRINCIPLES** | 1st Am protection is strong; rules aimed at the content or viewpoint of speech are the hardest to defend; content-neutral rules (such as time, place and manner limits) get more leeway |
 | **4. COUNTERARGUMENTS** | Consider opposing views (1st Am absolutism vs reasonable regulation; government vs private power; foreign vs domestic; minor vs adult protection) |
 | **5. CONCLUDE** | Implications for institutional design + democratic values + balancing interests + future challenges + comparative perspectives |
 
@@ -60,20 +60,20 @@ A 1996 federal law, **Section 230** of the Communications Decency Act, generally
 ### Constitutional/Statutory Framework
 - **1st AMENDMENT** — protects political speech as core; satire + parody historically protected
 - **NYT v. SULLIVAN 1964** — actual malice standard for public officials; difficult to apply to AI
-- **STATE LAWS** — TX (2019 first state) + CA + MN + WA + others banned election deepfakes; ~20 states have deepfake laws
+- **STATE LAWS** — Texas (2019) was the first state to ban deceptive election deepfakes, and a growing number of states followed
 - **FCC** — declared AI voice robocalls illegal under Telephone Consumer Protection Act 1991 (Feb 2024)
-- **FEC** — divided on regulating AI political ads; July 2024 declined to pursue rulemaking
+- **FEC** — divided on regulating AI political ads; in 2024 it declined to write new AI-specific rules
 - **EU AI ACT 2024** — comprehensive AI regulation; deepfake disclosure requirements
 
 ### Application/Analysis
-- **REGULATION PROPONENTS** — election integrity + voter manipulation + foreign interference (Russia/China/Iran 2024); compelling interest in fair elections; deepfakes are FALSE FACTUAL STATEMENTS not protected opinion
+- **REGULATION PROPONENTS** — election integrity + voter manipulation + foreign interference (Russia/China/Iran 2024); strong government interest in fair elections; deepfakes are FALSE FACTUAL STATEMENTS, not protected opinion
 - **REGULATION OPPONENTS** — chilling political speech + satire + parody (SNL deepfakes for comedy); enforcement challenges + viewpoint discrimination concerns; difficult line-drawing
 - **NARROW APPROACH** — disclosure requirements + harm-based actions (defamation + impersonation + fraud) rather than content bans
-- **FOREIGN INTERFERENCE** — special compelling interest; foreign actors lack 1st Amendment protections (Bluman v. FEC 2012)
+- **FOREIGN INTERFERENCE** — an especially strong government interest; federal law bars foreign nationals from spending money in U.S. elections, and courts have upheld that ban
 
 ### Resolution/Implications
 - **BALANCING** — narrow content-neutral disclosure requirements + harm-based enforcement + foreign interference focus + voter education
-- **CONSTITUTIONAL CONCERNS** — content-based bans face strict scrutiny; satire + parody must be protected
+- **CONSTITUTIONAL CONCERNS** — bans aimed at content are the hardest to defend in court; satire + parody must be protected
 - **INSTITUTIONAL** — federal preemption questions; FCC + FEC + state coordination; civil + criminal enforcement
 - **FOUNDATIONAL DOCUMENTS** — FEDERALIST 78 (Hamilton) judicial review will protect 1st Amendment from regulatory overreach + BRUTUS 1 (Anti-Federalist) skepticism of federal power; democratic accountability requires informed electorate (which AI deepfakes undermine)
 
@@ -83,23 +83,22 @@ A 1996 federal law, **Section 230** of the Communications Decency Act, generally
 **PROTECTING AMERICANS FROM FOREIGN ADVERSARY CONTROLLED APPLICATIONS ACT (PAFACAA)** — signed by President Biden April 24, 2024; requires ByteDance (Chinese parent) to DIVEST TikTok within ~270 days (Jan 19, 2025) or face US BAN. Is this constitutional + appropriate?
 
 ### Constitutional/Statutory Framework
-- **1st AMENDMENT** — 170M American TikTok users have free speech + association interests
+- **1st AMENDMENT** — TikTok's American users (about 170 million, by the company's count) have free speech + association interests
 - **NATIONAL SECURITY** — Chinese government data access concerns + algorithm manipulation potential
 - **CFIUS** (Committee on Foreign Investment in the United States) — historical foreign investment review
 - **MONTANA TIKTOK BAN 2023** — Federal court enjoined as 1st Amendment violation (preliminary injunction Nov 2023)
-- **TIKTOK v. GARLAND** — TikTok sued PAFACAA; DC Circuit upheld Dec 6 2024; SCOTUS expedited review
-- **BLUMAN v. FEC 2012** — foreign nationals lack 1st Amendment electoral participation rights
+- **COURT CHALLENGE** — TikTok sued; a federal appeals court upheld the law in December 2024, and the Supreme Court unanimously upheld it in January 2025
 
 ### Application/Analysis
-- **GOVERNMENT POSITION** — compelling national security interest in foreign adversary control of major communication platform + data access + algorithmic manipulation; narrow targeting of foreign ownership not content
+- **GOVERNMENT POSITION** — strong national security interest in preventing foreign adversary control of major communication platform + data access + algorithmic manipulation; narrow targeting of foreign ownership not content
 - **TIKTOK + USERS POSITION** — content-based effect (170M users' speech); foreign ownership inadequate basis under 1st Amendment; less restrictive alternatives available (data localization + algorithm transparency)
-- **PRECEDENT** — Bluman v. FEC 2012 distinguishes foreign electoral participation; PAFACAA targets ownership not content
+- **FOREIGN VS DOMESTIC** — U.S. law has long treated foreign participation in American politics differently from domestic speech; the law targets ownership, not content
 - **NATIONAL SECURITY DEFERENCE** — courts traditionally defer to political branches on national security (Korematsu 1944 historical lesson) but balance with civil liberties
 - **TECHNOLOGY ALTERNATIVES** — data localization + algorithm audit + content moderation requirements as less restrictive
 
 ### Resolution/Implications
-- **BALANCING TEST** — compelling national security interest + narrow tailoring (ownership not content) + intermediate scrutiny appropriate
-- **JANUARY 19 2025 DEADLINE** — Trump 2nd term will determine enforcement (Trump previously sought TikTok ban 2020 then later opposed PAFACAA citing campaign reach)
+- **BALANCING** — national security weighed against users' speech; because the law targets ownership rather than what users say, the Court treated it differently from a content ban
+- **ENFORCEMENT** — after the January 2025 ruling, the executive branch repeatedly delayed enforcement, a reminder that presidents have discretion in how laws are carried out (EK 2.7)
 - **PRECEDENT IMPLICATIONS** — opens door to similar foreign adversary regulations; could affect other Chinese apps + Russian + Iranian
 - **FOUNDATIONAL DOCUMENTS** — FEDERALIST 51 (Madison) checks + balances apply between branches in national security; FEDERALIST 78 (Hamilton) judicial review must balance individual rights with national security; BRUTUS 1 (Anti-Federalist) warned against unchecked federal power including national security overreach
 
@@ -109,10 +108,10 @@ A 1996 federal law, **Section 230** of the Communications Decency Act, generally
 |---|---|
 | **FEDERALIST 10 (Madison)** | Faction control through extended republic + structural mechanisms; modern application — fragmented media ecosystem + filter bubbles undermine extended republic logic by allowing factions to never encounter opposing views |
 | **FEDERALIST 51 (Madison)** | Separation of powers + checks + balances; modern application — congressional + executive + judicial roles in media regulation; balance between branches |
-| **FEDERALIST 78 (Hamilton)** | Judicial review as "least dangerous branch"; modern application — SCOTUS protection of 1st Amendment from regulatory overreach (Moody/Paxton 2024) but also enforcement of compelling interests (PAFACAA/TikTok) |
+| **FEDERALIST 78 (Hamilton)** | Judicial review as "least dangerous branch"; modern application — SCOTUS protection of 1st Amendment from regulatory overreach (Moody/Paxton 2024) but also upholding laws that serve strong national interests (the 2025 TikTok ruling) |
 | **BRUTUS 1 (Anti-Federalist)** | Skepticism of federal power + judicial overreach + standing army; modern application — concerns about federal regulation of media + platforms + national security overreach + state vs federal preemption |
 
-> 🔑 Key takeaway: AP MEDIA + TECHNOLOGY FRQs require SYSTEMATIC 5-STEP FRAMEWORK — (1) IDENTIFY constitutional/policy issue + (2) ANALYZE precedents + foundational documents + (3) APPLY principles + (4) CONSIDER counterarguments + (5) CONCLUDE with implications; 3 WORKED EXAMPLES — (1) REGULATING ONLINE PLATFORMS under the 1st Amendment (Section 230 as the example; balance preserve 1st Am + address algorithmic amplification + foreign interference + minor protection); (2) AI DEEPFAKES (NH Biden robocalls Jan 2024 + Taylor Swift Jan 2024; ~20 state laws; FCC Feb 2024 illegal under TCPA 1991; FEC declined July 2024; EU AI Act 2024; balance content-neutral disclosure + harm-based enforcement + foreign interference Bluman v. FEC 2012); (3) TIKTOK PAFACAA April 24 2024 (170M users + ByteDance Chinese; Montana 2023 federal court enjoined; TikTok v. Garland DC Circuit upheld Dec 6 2024; Bluman v. FEC 2012 foreign distinction; intermediate scrutiny + Jan 19 2025 deadline + Trump 2nd term enforcement); FOUNDATIONAL DOCUMENTS — Federalist 10 (Madison faction extended republic; modern fragmented media undermines) + Federalist 51 (Madison separation/checks; branches in regulation) + Federalist 78 (Hamilton judicial review least dangerous; SCOTUS balance 1st Am + compelling interests) + Brutus 1 (Anti-Federalist federal power skepticism; concerns federal regulation + state preemption + national security overreach); SCAR template — Situation + Constitutional/Statutory + Application/Analysis + Resolution/Implications.
+> 🔑 Key takeaway: AP MEDIA + TECHNOLOGY FRQs require a SYSTEMATIC 5-STEP FRAMEWORK — (1) IDENTIFY the constitutional/policy issue + (2) ANALYZE precedents + foundational documents + (3) APPLY principles + (4) CONSIDER counterarguments + (5) CONCLUDE with implications. 3 WORKED EXAMPLES — (1) REGULATING ONLINE PLATFORMS under the 1st Amendment (Section 230 as the example; free speech vs accountability for harmful content); (2) AI DEEPFAKES (the 2024 New Hampshire robocalls; state laws and disclosure rules vs protection for satire and parody; foreign interference); (3) the TIKTOK DIVESTMENT LAW (national security vs users' speech; upheld by the Supreme Court in January 2025). FOUNDATIONAL DOCUMENTS — Federalist 10 (faction; a fragmented media ecosystem lets factions avoid opposing views) + Federalist 51 (separation of powers and checks in regulation) + Federalist 78 (judicial review as the least dangerous branch) + Brutus 1 (skepticism of federal power). SCAR template — Situation + Constitutional/Statutory framework + Application/Analysis + Resolution/Implications.
       `
     },
     {

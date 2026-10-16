@@ -100,13 +100,13 @@ EK 2.9.A.2 and EK 2.11.A.1 explain WHY the Court's direction changes: presidents
           {
             question: "Which best describes the modern Roberts Court since the Trump appointees solidified the 6-3 conservative majority?",
             options: [
-              "Its conservative majority overruled Roe in Dobbs, returning abortion policy to the states",
-              "Its six conservatives reaffirmed Roe and Casey, keeping a national right to abortion in place",
+              "Its conservative majority held in Dobbs that the Constitution confers no abortion right, returning the issue to the states",
+              "Its six conservatives reaffirmed a national right to abortion, keeping the 1973 rule in place for every state",
               "Its liberal majority expanded abortion rights in Dobbs and upheld strict state limits on handguns",
               "Its moderate majority avoided major rulings, declining to hear any abortion or gun cases at all"
             ],
             correctAnswer: 0,
-            explanation: 'MODERN ROBERTS COURT — Trump\'s three appointments (2017-2020) produced a 6-3 conservative majority, and in Dobbs (2022) the Court overruled Roe (1973) and Casey (1992), holding that the Constitution does not confer a right to abortion and leaving regulation to legislatures (EK 3.9.A.2). This is the EK 2.9.A.2 pattern: ideological change through appointments leads the Court to reject existing precedent. The Court did not reaffirm Roe, does not have a liberal majority, and has taken major abortion and gun cases.'
+            explanation: 'MODERN ROBERTS COURT — Trump\'s three appointments (2017-2020) produced a 6-3 conservative majority, and in Dobbs (2022) the Court overruled its 1973 abortion precedent, holding that the Constitution does not confer a right to abortion and leaving regulation to legislatures (EK 3.9.A.2). This is the EK 2.9.A.2 pattern: ideological change through appointments leads the Court to reject existing precedent. The Court did not reaffirm a national abortion right, does not have a liberal majority, and has taken major abortion and gun cases.'
           }
         ]
       }

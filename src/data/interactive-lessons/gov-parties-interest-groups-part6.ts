@@ -149,7 +149,7 @@ CITIZENS UNITED v. FEC (2010) — 5-4 Kennedy; held CORPORATIONS have 1st Amendm
 ### Step 5 — Consequences
 
 - INTEREST GROUP INFLUENCE EXPANDED dramatically
-- SUPER PACS proliferated (American Bridge + American Crossroads + Senate Majority + Senate Leadership + Future Forward + MAGA Inc. + America PAC ~\\$260M)
+- SUPER PACS proliferated (American Bridge + American Crossroads + Senate Majority + Senate Leadership + Future Forward + MAGA Inc. + America PAC (about \\$240M from Musk))
 - DARK MONEY 501(c)(4)s explosion (Crossroads GPS + CAP + AFP + One Nation)
 - MEGA-DONOR ERA (Adelson + Soros + Mercer + Koch + Bloomberg + Musk)
 - ~\\$16B 2024 cycle record; 0.01% give ~25-40%

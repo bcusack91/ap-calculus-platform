@@ -34,15 +34,15 @@ export const whLandBasedEmpiresPart4Data = {
             explanation: 'The Qing governance model is a model AP example of conquerors adapting to the conquered: they adopted Chinese bureaucracy, language, and culture in public while maintaining ethnic privilege (dual appointments, marriage restrictions) in political structures. This combination of adaptation and dominance enabled a 2% ethnic minority to govern a massive empire for 268 years.'
           },
           {
-            question: 'The "military revolution" in European states c. 1500-1700 gave European armies an advantage over Asian land-based empires because:',
+            question: 'Which statement best describes the territorial results of Qing expansion between 1644 and the 1750s?',
             options: [
-              'Wars among rival European states drove innovations that centralized empires resisted',
-              'European states always fielded far larger armies than the Asian empires could raise or supply',
-              'Asian land-based empires never adopted gunpowder, leaving their armies with bows and cavalry alone',
-              'Asian rulers rejected military change on religious grounds, while European states embraced it'
+              'The Qing lost Taiwan and Mongolia to European navies, shrinking China well below its old Ming borders',
+              'The Qing conquered Taiwan and much of Inner Asia, building the largest Chinese state up to that time',
+              'The Qing stayed inside the Great Wall and refused to send its armies into Inner Asia or across the sea',
+              'The Qing traded Xinjiang and Tibet to the Safavids in return for Persian silver and cavalry horses'
             ],
-            correctAnswer: 0,
-            explanation: 'This explanation is central to AP Unit 3-4 analysis: Europe\'s fragmentation into competing states created evolutionary pressure for military innovation, while the Ottoman janissaries and Mughal mansabdars were institutional vested interests resistant to reform. The result was an accelerating gap in military effectiveness by the 18th century.'
+            correctAnswer: 1,
+            explanation: 'Under emperors such as Kangxi and Qianlong, the Qing took Taiwan (1683) and brought Mongol lands, Tibet and Xinjiang under its rule, leaving borders close to those of modern China. It did not lose these lands to Europeans in this era, it campaigned far beyond the Great Wall, and it made no such trade with the Safavids.'
           }
         ]
       }
@@ -105,26 +105,26 @@ The Qing dramatically expanded Chinese territory:
             explanation: 'The queue requirement was political theater: "shave or die" made visible submission to Manchu authority a daily act. It was deeply humiliating to Han Chinese (Confucian tradition held the body sacred). The thousands who died rather than comply, and the long-term Han resentment of the queue requirement, demonstrate how even symbolic acts of political submission carry enormous emotional weight.'
           },
           {
-            question: 'The Mughal mansabdar system differed most importantly from European feudalism in that:',
+            question: 'Compared with the Mongol Yuan dynasty, the Manchu Qing dynasty governed China mainly by',
             options: [
-              'Mansabdar ranks were not hereditary, keeping officials dependent on imperial favor',
-              'Mansabdars had no military duties and served purely as civilian tax clerks for the court',
-              'Mansabdar posts were awarded on religious grounds rather than by appointment from the emperor',
-              'Only non-Muslims could hold a mansab, keeping Muslim nobles out of the imperial service'
+              'abolishing the Confucian exams and barring Han Chinese from every post in the central government',
+              'ruling through Mongol khans, since Manchu emperors refused to take part in Chinese court ritual',
+              'keeping Confucian exams and Han officials while guarding Manchu power',
+              'moving the capital to the steppe and leaving daily government to Persian and Central Asian advisers'
             ],
-            correctAnswer: 0,
-            explanation: 'The non-hereditary nature of mansabdar positions is the key AP distinction from European feudalism: European noble titles and land were inherited, creating permanent power centers independent of the king. Mansabdars had to earn their positions in each generation, keeping them dependent on the emperor. This was analogous to (though independent of) the Chinese civil service system\'s meritocratic principle.'
+            correctAnswer: 2,
+            explanation: 'The Qing adapted more fully to Chinese governance than the Yuan had: they kept the Confucian examinations and staffed the bureaucracy with Han scholar-officials, while dual appointments and the queue protected Manchu dominance. The Yuan, by contrast, suspended the exams for decades and favored Mongols and Central Asians over Han Chinese.'
           },
           {
-            question: 'Ottoman decline after 1700 was most directly caused by:',
+            question: 'In Mongolia and Tibet, Qing emperors supported Tibetan Buddhism and its lamas. This policy is best understood as',
             options: [
-              'Janissary resistance to military reform as European armies kept improving through rivalry',
-              'A collapse of Ottoman trade after Portugal seized the major ports of the eastern Mediterranean',
-              'Mass conversion of Ottoman subjects to Christianity, which drained the army of recruits',
-              'Voluntary surrender of Balkan provinces to Austria in exchange for loans to the treasury'
+              'a sign that the Qing had given up Confucian ritual in China itself',
+              'an attempt to convert Han Chinese peasants from Confucianism to Buddhism',
+              'a reaction to Jesuit missionaries, who had converted most of the Mongol nobility',
+              'a way to win loyalty in non-Chinese regions on terms that local elites respected'
             ],
-            correctAnswer: 0,
-            explanation: 'The janissary paradox: created to be a loyal, professional force, by the 17th-18th century they had become a political institution resisting any reform that threatened their privileges. Ottoman sultans who tried to modernize the military faced janissary revolts. This institutional resistance to change, combined with European military superiority, created the "sick man of Europe" dynamic of the 19th century.'
+            correctAnswer: 3,
+            explanation: 'The Qing presented themselves differently to different subjects: Confucian Sons of Heaven to Han Chinese, patrons of Tibetan Buddhism to Mongols and Tibetans. Supporting the lamas gave the dynasty legitimacy in Inner Asia. The Qing kept Confucian ritual in China, did not try to convert Han peasants, and Jesuits had little influence among the Mongols.'
           }
         ]
       }
@@ -135,28 +135,28 @@ The Qing dramatically expanded Chinese territory:
       content: `
 **Match the Idea: Evidence to Claim**
 
-Match each empire\'s governance feature to its correct description.
+Match each Qing policy to its correct name.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The Mughal system of non-hereditary official ranks determining salary and military service was the ___',
-            options: ['Mansabdar system', 'Devshirme system', 'Millet system', 'Zamindar system']
+            label: 'The Qing order that Han men shave the front of the head and wear a Manchu braid was the ___',
+            options: ['Queue order', 'Dual appointments', 'Civil service exams', 'Millet system']
           },
           {
             label: 'The Qing (Manchu) practice of placing both a Manchu and a Han official in each major administrative position was ___',
             options: ['Dual appointments', 'Civil service exams', 'Banner system only', 'Millet system']
           },
           {
-            label: 'The Ottoman military corps that eventually blocked imperial military reform through political resistance was the ___',
-            options: ['Janissary corps', 'Sipahi cavalry', 'Mansabdar system', 'Ghulam infantry']
+            label: 'The Qing system that recruited Han scholar-officials through tests on the Confucian classics was the ___',
+            options: ['Civil service exams', 'Queue order', 'Dual appointments', 'Devshirme system']
           }
         ],
-        correctAnswers: ['Mansabdar system', 'Dual appointments', 'Janissary corps'],
-        hint1: 'Mughal non-hereditary official ranks — Akbar\'s innovation',
+        correctAnswers: ['Queue order', 'Dual appointments', 'Civil service exams'],
+        hint1: 'A hairstyle imposed as a visible sign of submission',
         hint2: 'Qing oversight system — Manchu + Han together in each post',
-        hint3: 'Ottoman elite infantry — became political obstacle to reform',
-        explanation: 'The mansabdar system kept Mughal officials dependent on imperial favor by making positions non-hereditary. Qing dual appointments maintained Manchu oversight without excluding essential Han administrative expertise. The janissary corps\' evolution from loyal imperial force to conservative political institution blocking modernization illustrates how institutions created to serve rulers can become obstacles to change.'
+        hint3: 'The Ming-era route into government that the Qing restored',
+        explanation: 'The queue order made submission to Manchu rule visible on every Han man. Dual appointments kept Manchu oversight without losing Han administrative skill. Restoring the Confucian civil service exams won over the Han scholar-gentry, the class the Qing needed to run the empire. Coercion and accommodation worked together.'
       }
     },
     {
@@ -168,15 +168,15 @@ Match each empire\'s governance feature to its correct description.
       exercise: {
         questions: [
           {
-            question: 'An AP LEQ asks: "Evaluate the extent to which land-based empires used similar methods to consolidate power c. 1450-1750." Which thesis is strongest?',
+            question: 'An AP LEQ asks how the Qing kept power over a Han Chinese majority c. 1644–1750. Which thesis is strongest?',
             options: [
-              'The four great land empires used different tools but shared gunpowder conquest, centralized rule and religious legitimation',
-              'The four great land empires used such different tools that no meaningful comparison among them is possible',
-              'The four great land empires relied on military force alone, while only European states built real bureaucracies',
-              'Religious legitimation played no part in any land empire, which ruled through cavalry and tribute alone'
+              'The Qing relied on force alone, ruling through Manchu soldiers and banning Han Chinese from any government role',
+              'The Qing paired accommodation such as Confucian exams with coercion such as the queue order',
+              'The Qing relied on persuasion alone, adopting Chinese culture so fully that Manchu power soon disappeared',
+              'The Qing held power mainly through European advisers, who ran the army and collected taxes for the court'
             ],
-            correctAnswer: 0,
-            explanation: 'This thesis is strongest because it acknowledges variation (different tools) while arguing for convergence: the Ottoman, Mughal, Safavid and Qing empires all paired gunpowder conquest with centralized administration that bypassed traditional aristocracy and with religious or ideological legitimation. That structural claim sets up a cross-empire comparison essay that earns the highest AP rubric scores.'
+            correctAnswer: 1,
+            explanation: 'The strongest thesis names both halves of Qing strategy: accommodation (restored exams, Han officials, Confucian ritual) and coercion (the queue order, dual appointments, early limits on Manchu-Han intermarriage). Han officials held many posts, Manchu identity and privilege survived, and European advisers such as the Jesuits served at court but did not run the state.'
           },
           {
             question: 'What is the most historically accurate AP comparison between the Qing Dynasty\'s treatment of ethnic diversity and the Ottoman millet system?',

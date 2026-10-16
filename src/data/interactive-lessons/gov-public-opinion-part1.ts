@@ -166,7 +166,7 @@ MOE = statistical range around poll result reflecting RANDOM SAMPLING ERROR; typ
               "It is the opinion of elected officials and journalists, varying mainly in partisanship, region and age, and it fails only when pollsters rely on small samples.",
             ],
             correctAnswer: 0,
-            explanation: 'PUBLIC OPINION = aggregate of individual attitudes about politics; DISTRIBUTION not single view. THREE DIMENSIONS: (1) SALIENCE — importance (inflation/immigration/abortion 2024 high; foreign aid small countries low); (2) INTENSITY — strength (pro-life/pro-choice activists very intense; tenured judges weak); (3) STABILITY — durability (party ID + religion stable; presidential approval + economy volatile). INFLUENCES POLICY via elections + reps + presidents + judicial confirmation + agenda-setting. FAILS via: (1) MAJORITY LOSES — universal background checks 80% failed, M4A majority stalled, assault weapons ban majority; (2) INTENSITY BEATS NUMBERS — small intense (NRA/evangelicals/AIPAC) beat lukewarm majorities; (3) INSTITUTIONAL FILTERS — filibuster (60-vote), EC (2000 Bush + 2016 Trump), gerrymandering, judicial independence (Dobbs reversed Roe despite ~60% support), federalism; (4) Madisonian design (F10 + F51) explicitly filters opinion via representation + bicameralism + indirect election + separation + federalism + judicial review.'
+            explanation: 'PUBLIC OPINION = aggregate of individual attitudes about politics; DISTRIBUTION not single view. THREE DIMENSIONS: (1) SALIENCE — importance (inflation/immigration/abortion 2024 high; foreign aid small countries low); (2) INTENSITY — strength (pro-life/pro-choice activists very intense; tenured judges weak); (3) STABILITY — durability (party ID + religion stable; presidential approval + economy volatile). INFLUENCES POLICY via elections + reps + presidents + judicial confirmation + agenda-setting. FAILS via: (1) MAJORITY LOSES — universal background checks 80% failed, M4A majority stalled, assault weapons ban majority; (2) INTENSITY BEATS NUMBERS — small intense (NRA/evangelicals/AIPAC) beat lukewarm majorities; (3) INSTITUTIONAL FILTERS — filibuster (60-vote), EC (2000 Bush + 2016 Trump), gerrymandering, judicial independence (Dobbs ended a national abortion right that polls showed most Americans supported), federalism; (4) Madisonian design (F10 + F51) explicitly filters opinion via representation + bicameralism + indirect election + separation + federalism + judicial review.'
           }
         ]
       }
@@ -178,7 +178,7 @@ MOE = statistical range around poll result reflecting RANDOM SAMPLING ERROR; typ
       exercise: {
         questions: [
           {
-            prompt: "Strongest agent of POLITICAL SOCIALIZATION — accounting for ~70% of children sharing parents' party identification.",
+            prompt: "Strongest agent of POLITICAL SOCIALIZATION — the main reason many children grow up sharing their parents' party identification.",
             answer: 'family',
             acceptableAnswers: ['family', 'Family', 'parents', 'Parents'],
             hint: 'First + most enduring agent; transmits party identification + ideology + religious affiliation; explains why children typically inherit parents\' partisanship; weakened by college experience + generational events + new media environments.'

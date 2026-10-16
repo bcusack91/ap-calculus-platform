@@ -42,8 +42,8 @@ export const whMassAtrocitiesPart7Data = {
 | 1975–79 | Cambodian Genocide; Khmer Rouge | "Year Zero"; ~1.7 million dead |
 | 1992–95 | Bosnian War; Srebrenica (1995) | Ethnic cleansing; ICTY established 1993 |
 | 1994 | Rwandan Genocide (Apr–Jul) | ~800,000 dead in 100 days; ICTR established |
-| 2002 | International Criminal Court begins | Permanent international prosecution body |
-| 2005 | UN World Summit endorses R2P | Doctrine of international responsibility |
+| 1998 | Rome Statute adopted | Treaty for a permanent international criminal court |
+| 1999 | NATO intervention in Kosovo | "Humanitarian intervention" without UN Security Council approval |
 
 > **Comparison Framework (use on every comparison prompt)**
 
@@ -52,7 +52,7 @@ For each case, identify:
 2. Targeted group and how it was constructed (Jews as racial enemy, Tutsi as "cockroaches," urban "new people")
 3. Crisis context (WWII, post-Habyarimana plane crash, Vietnam-supported civil war)
 4. Method (industrial camps, machetes + radio, evacuation + labor camps)
-5. International response (Nuremberg, ICTR, ECCC tribunal in Cambodia)
+5. International response (Nuremberg, ICTY, ICTR; for Cambodia, no international trial of Khmer Rouge leaders before 2001)
 
 > **CCOT Framework (use on every change-over-time prompt)**
 
@@ -64,8 +64,8 @@ Continuities:
 Changes:
 - Method: deportation → industrial → media-mobilized
 - Media: telegrams → film/print → radio → satellite TV
-- Law: impunity → Nuremberg → ad-hoc tribunals → permanent ICC
-- Norms: state sovereignty absolute → R2P doctrine
+- Law: impunity → Nuremberg → ad-hoc tribunals (ICTY, ICTR) → Rome Statute (1998)
+- Norms: state sovereignty absolute → 1990s debate over "humanitarian intervention" (Kosovo, 1999)
 
 > **AP Skills Vocabulary**
 
@@ -85,9 +85,9 @@ Changes:
           {
             question: 'Which combination correctly pairs a 20th-century atrocity with the international legal body created to prosecute it?',
             options: [
-              'The Holocaust → International Criminal Tribunal for Rwanda (ICTR); the Armenian Genocide → International Criminal Court (ICC)',
+              'The Holocaust → International Criminal Tribunal for Rwanda (ICTR); the Armenian Genocide → the Nuremberg Trials (1945–46)',
               'The Rwandan Genocide → International Criminal Tribunal for Rwanda (ICTR); the Bosnian War → International Criminal Tribunal for the former Yugoslavia (ICTY)',
-              'The Armenian Genocide → International Criminal Court (ICC), founded in 2002 by the Rome Statute for general international prosecution of genocide and war crimes',
+              'The Armenian Genocide → a permanent international criminal court, created in 1923 by the Treaty of Lausanne to prosecute genocide, war crimes and aggression',
               'The Cambodian Genocide → Nuremberg Trials, held in 1945 and 1946 in postwar Germany to prosecute the senior leadership of the Khmer Rouge under Pol Pot'
             ],
             correctAnswer: 1,
@@ -120,7 +120,7 @@ Changes:
             hint: 'Same year as the UDHR.'
           },
           {
-            prompt: 'The Bosnian Serb general convicted in 2017 by the ICTY for the Srebrenica genocide and other atrocities.',
+            prompt: 'The Bosnian Serb general, indicted by the ICTY in 1995, whose forces carried out the Srebrenica massacre.',
             answer: 'Ratko Mladić',
             acceptableAnswers: ['Mladić', 'Mladic', 'Ratko Mladić', 'Ratko Mladic'],
             hint: 'Commander of the Army of Republika Srpska during the Bosnian War.'
@@ -169,13 +169,13 @@ Changes:
           {
             question: 'Which thesis would most likely earn the complexity point on a long-essay prompt about the relationship between mass atrocities and the development of international law in the 20th century?',
             options: [
-              'International law owed nothing to mass atrocities and developed from Enlightenment philosophy alone, without any reference to the actual state violence of the 20th century',
-              'Armenia drew little legal response, but the Holocaust produced Nuremberg and the Genocide Convention, then the ICTY, ICTR, and ICC, though enforcement stayed selective',
+              'International law owed nothing to mass atrocities and developed from Enlightenment philosophy alone, without any reference at all to the actual state violence of the 20th century',
+              'Armenia drew little legal response, but the Holocaust produced Nuremberg and the Genocide Convention, then the ICTY, ICTR, and Rome Statute, though enforcement stayed selective',
               'International law was fully formed before 1900, and a single permanent court tried every senior perpetrator of genocide in Armenia, Cambodia, and Rwanda',
               'International law has never responded to mass atrocity effectively, since no postwar tribunal or treaty has ever led to the conviction of any senior official for genocide'
             ],
             correctAnswer: 1,
-            explanation: 'Complexity is earned by acknowledging both the institutional achievement (Nuremberg → ICC chain) AND the continuing tension (selective enforcement, sovereignty vs. accountability). This is the AP "qualified" thesis.'
+            explanation: 'Complexity is earned by acknowledging both the institutional achievement (Nuremberg → ICTY/ICTR → Rome Statute chain) AND the continuing tension (selective enforcement, sovereignty vs. accountability). This is the AP "qualified" thesis.'
           },
           {
             question: 'A student writes: "The Rwandan Genocide proves that low-tech killing can be as devastating as industrial killing." Which evidence MOST DIRECTLY supports the claim?',

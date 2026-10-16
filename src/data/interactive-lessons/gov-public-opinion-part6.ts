@@ -259,7 +259,7 @@ Climate is a leading example of PARTISAN POLARIZATION (EK 2.3.A.1) — once bipa
             prompt: "Cognitive psychology framework by Kunda 1990 + Lodge + Taber 2000 — TENDENCY TO PROCESS INFORMATION in ways that confirm prior BELIEFS or IDENTITIES.",
             answer: 'motivated reasoning',
             acceptableAnswers: ['motivated reasoning', 'Motivated reasoning', 'Motivated Reasoning'],
-            hint: 'Differential standards for accepting vs rejecting information; central to political psychology; explains why partisans see same data differently (economic perceptions through partisan lens); explains why ~2/3 of Reps still doubt 2020 election; explains climate denial concentrated among Reps; explains COVID vaccine refusal correlated with Rep ID; explains hostile media perception (both sides see media as biased against them).'
+            hint: 'Differential standards for accepting vs rejecting information; central to political psychology; explains why partisans see same data differently (economic perceptions through partisan lens); explains why many Republicans told pollsters they doubted the 2020 result; explains climate denial concentrated among Reps; explains COVID vaccine refusal correlated with Rep ID; explains hostile media perception (both sides see media as biased against them).'
           }
         ]
       }

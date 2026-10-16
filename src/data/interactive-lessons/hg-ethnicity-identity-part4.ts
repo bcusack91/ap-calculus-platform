@@ -14,11 +14,11 @@ export const hgEthnicityIdentityPart4Data = {
 | Section |
 |---------|
 | 📖 Census Data at Different Scales |
-| The Index of Dissimilarity: A Worked Calculation |
+| Reading Tract Data: A Worked Example |
 | How Segregation Was Built: Redlining, Covenants and Blockbusting |
-| Limits of the Index and of the Map |
+| Limits of Census Data and of the Map |
 
-> 🔑 **Key Concept:** **Residential segregation** is the uneven spread of groups across the neighborhoods of a city. Geographers measure it with census data and the **index of dissimilarity**, map it with choropleth and dot maps, and explain it with history: in the United States, **redlining, racial covenants and blockbusting** built patterns that still show on today's maps. (This links to urban challenges in CED Topic 6.10.)
+> 🔑 **Key Concept:** **Residential segregation** is the uneven spread of groups across the neighborhoods of a city. Geographers measure it with census data at different scales, map it with choropleth and dot maps, and explain it with history: in the United States, **redlining, racial covenants and blockbusting** built patterns that still show on today's maps. (This links to urban challenges in CED Topic 6.10.)
 `
     },
     {
@@ -48,43 +48,30 @@ A group that is **5 percent** of a metropolitan area's population might be **20 
       id: 'hgethnic4-index',
       type: 'text' as const,
       content: `
-## The Index of Dissimilarity: A Worked Calculation
+## Reading Tract Data: A Worked Example
 
-The **index of dissimilarity (D)** compares how two groups are spread across the tracts of a city:
-
-$$D = \\frac{1}{2} \\sum \\left| \\frac{a_i}{A} - \\frac{b_i}{B} \\right| \\times 100$$
-
-Here $a_i$ and $b_i$ are each group's count in tract $i$, and $A$ and $B$ are each group's city-wide totals.
-
-**Meaning:** D is the **percentage of either group that would have to move to another tract** for both groups to be spread in the same proportions. It runs from **0** (identical spreads) to **100** (the groups never share a tract).
-
-| Value of D | Usual reading |
-|---|---|
-| Below 30 | Low segregation |
-| 30 to 60 | Moderate |
-| Above 60 | High |
+Segregation shows up when you compare a group's share of the whole city with its share of each tract.
 
 ### Worked Example: A City of Four Tracts
 
-Group A totals 1,000 people and Group B totals 4,000.
+Group A totals 1,000 people and Group B totals 4,000, so Group A is **20 percent** of the city.
 
-| Tract | Group A | Share of A | Group B | Share of B | Difference |
-|---|---|---|---|---|---|
-| 1 | 500 | 0.50 | 400 | 0.10 | 0.40 |
-| 2 | 300 | 0.30 | 800 | 0.20 | 0.10 |
-| 3 | 150 | 0.15 | 1,200 | 0.30 | 0.15 |
-| 4 | 50 | 0.05 | 1,600 | 0.40 | 0.35 |
-| **Total** | 1,000 | 1.00 | 4,000 | 1.00 | **1.00** |
+| Tract | Group A | Group B | Tract total | Group A's share of the tract |
+|---|---|---|---|---|
+| 1 | 500 | 400 | 900 | 56% |
+| 2 | 300 | 800 | 1,100 | 27% |
+| 3 | 150 | 1,200 | 1,350 | 11% |
+| 4 | 50 | 1,600 | 1,650 | 3% |
+| **Total** | 1,000 | 4,000 | 5,000 | **20%** |
 
-1. Find each group's **share** in each tract (500 ÷ 1,000 = 0.50; 400 ÷ 4,000 = 0.10).
-2. Take the **absolute difference** in each tract (0.50 − 0.10 = 0.40).
-3. Add the differences: 0.40 + 0.10 + 0.15 + 0.35 = **1.00**.
-4. Halve and convert to a percent: ½ × 1.00 × 100 = **D = 50**.
+1. Find each tract's share: 500 ÷ 900 ≈ 56 percent in tract 1, and so on down the table.
+2. Compare each tract with the city-wide **20 percent**. Tract 1 is far above it; tract 4 is far below.
+3. Find where the group lives: half of Group A (500 of 1,000) lives in tract 1 alone.
 
-**Interpretation:** moderate segregation. Half of Group A, **500 people**, would have to move to other tracts for Group A to be spread like Group B.
+**Interpretation:** Group A is **clustered**, with half its members in one tract, a pattern the city-wide 20 percent hides. This is the scale lesson from the section above, applied to real numbers.
 
-### Real Values
-For Black and white residents of large US metropolitan areas, D has **fallen slowly since about 1970**, but in **2020** it remained **above 60**, the high range, in metros such as Milwaukee, New York, Chicago and Detroit. Hispanic–white and Asian–white values are generally lower.
+### Real Patterns
+For Black and white residents of large US metropolitan areas, segregation has **declined slowly since about 1970**, but in 2020 it remained high in metros such as Milwaukee, New York, Chicago and Detroit. Hispanic–white and Asian–white segregation is generally lower.
 `
     },
     {
@@ -97,24 +84,24 @@ A second city has three tracts.
 
 | Tract | Group A | Group B |
 |---|---|---|
-| 1 | 600 | 100 |
+| 1 | 600 | 150 |
 | 2 | 300 | 900 |
-| 3 | 100 | 1,000 |
+| 3 | 100 | 950 |
 | **Total** | 1,000 | 2,000 |
 
 **1)** What percent of Group A lives in tract 1?
 
-**2)** What is the index of dissimilarity, D?
+**2)** What percent of tract 1's residents belong to Group A?
 
-**3)** How many members of Group A would have to move to other tracts to match Group B's spread?
+**3)** Group A is one-third of the city. In how many of the three tracts is Group A's share **higher** than its city-wide share?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['60', '55', '550'],
+        correctAnswers: ['60', '80', '1'],
         hint1: 'Divide 600 by Group A\'s total of 1,000.',
-        hint2: 'Group B\'s shares are 0.05, 0.45 and 0.50. Add the three absolute differences, halve, then multiply by 100.',
-        hint3: 'D is the percent of Group A that must move. Take that percent of 1,000.',
-        explanation: '1) 600 ÷ 1,000 = 60 percent. 2) A\'s shares are 0.60, 0.30 and 0.10; B\'s are 0.05, 0.45 and 0.50. The differences are 0.55, 0.15 and 0.40, which sum to 1.10; half of that is 0.55, so D = 55. 3) 55 percent of 1,000 is 550 people.'
+        hint2: 'Tract 1 has 600 + 150 = 750 residents. Divide 600 by 750.',
+        hint3: 'Work out Group A\'s share of each tract and compare it with one-third (about 33 percent).',
+        explanation: '1) 600 ÷ 1,000 = 60 percent. 2) 600 ÷ 750 = 80 percent. 3) Group A\'s shares are 80 percent in tract 1, 25 percent in tract 2 (300 ÷ 1,200) and about 10 percent in tract 3 (100 ÷ 1,050), so only tract 1 is above the city-wide one-third: Group A is clustered in one tract.'
       }
     },
     {
@@ -188,15 +175,15 @@ A 2018 study by the National Community Reinvestment Coalition found that about *
       id: 'hgethnic4-limits',
       type: 'text' as const,
       content: `
-## Limits of the Index and of the Map
+## Limits of Census Data and of the Map
 
-### Limitations of the Index of Dissimilarity
+### Limitations of Tract Data
 | Limitation | Why it matters |
 |---|---|
-| **Two groups at a time** | A city with four large groups needs six separate indexes |
-| **Ignores arrangement** | Minority tracts clustered in one large block and minority tracts scattered like a checkerboard can give the **same D**, though residents' experiences differ greatly |
-| **Depends on the unit** | D is usually **higher** with small units (blocks) than with large ones (tracts). This is the **modifiable areal unit problem** |
-| **Measures evenness only** | It does not say how often groups meet (exposure) or **why** they are separated |
+| **Depends on the unit** | The same city usually looks **more** segregated with small units (blocks) than with large ones (tracts). This is the **modifiable areal unit problem**, a scale-of-analysis issue |
+| **Ignores arrangement** | Tract percentages alone do not show whether minority tracts form one large block or are scattered like a checkerboard, though residents' experiences differ greatly |
+| **Shows where, not why** | The data show where groups live, not whether choice, income or discrimination produced the pattern |
+| **Categories change** | Race and ethnicity are self-reported, and census categories have changed over time, which complicates comparisons across decades |
 
 ### Limitations of Choropleth Maps
 - **Area bias:** big, thinly settled tracts at the city's edge take up much of the map, while dense inner tracts look tiny.
@@ -215,26 +202,26 @@ A 2018 study by the National Community Reinvestment Coalition found that about *
       exercise: {
         questions: [
           {
-            question: 'A metropolitan area has a Black–white index of dissimilarity of 75. What does this mean?',
+            question: 'In a metropolitan area, Group A is 20 percent of the population but more than 80 percent of the residents in a handful of tracts. What does this show?',
             options: [
-              '75 percent of residents in the area are Black',
-              '75 percent of either group would need to relocate',
-              '75 percent of tracts contain members of only one group',
-              '75 percent of Black residents live in high-poverty tracts'
+              'Group A is spread evenly across the whole metropolitan area',
+              'Group A is clustered, a pattern the metro-wide figure hides',
+              'The census undercounted Group A in all the other tracts',
+              'Group A makes up a majority of the metropolitan population'
             ],
             correctAnswer: 1,
-            explanation: 'D is the share of either group that would have to move to another tract to even out the two spreads, so 75 means high segregation. It is not a population share, a count of one-group tracts or a poverty rate.'
+            explanation: 'A group that is a small share of the metro but a large majority in a few tracts is clustered, and the metro-wide 20 percent hides that pattern, which is why the scale of analysis matters. The figures show the opposite of an even spread, give no sign of an undercount, and 20 percent is not a majority.'
           },
           {
-            question: 'Two cities have the same index of dissimilarity. In one, minority neighborhoods form a single large block; in the other, they are scattered like a checkerboard. Which limitation does this show?',
+            question: 'Two cities each have a few tracts where a minority group is the majority. In one city those tracts form a single large block; in the other they are scattered like a checkerboard. Which limitation of tract percentages does this show?',
             options: [
-              'It compares only two cities at a time',
-              'It ignores where tracts lie',
-              'It counts only residents who own homes',
-              'It changes every time a city grows'
+              'They compare only two cities at a time',
+              'They ignore how neighborhoods are arranged',
+              'They count only residents who own homes',
+              'They change every time a city grows'
             ],
             correctAnswer: 1,
-            explanation: 'The index treats tracts as separate boxes and ignores their arrangement, so very different patterns can share one value. It compares two groups, not two cities, counts all residents, and does not shift just because a city grows.'
+            explanation: 'Tract percentages treat each tract as a separate box and ignore how tracts are arranged, so very different patterns can look alike in a table. They are not limited to two cities, they count all residents, and they do not shift just because a city grows.'
           },
           {
             question: 'Why can a choropleth map of census tracts give a misleading picture of where a group lives?',

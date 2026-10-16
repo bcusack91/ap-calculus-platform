@@ -40,7 +40,7 @@ export const whMassAtrocitiesPart3Data = {
 
 - **Background:** Yugoslavia's collapse after 1991. Bosnian Serb forces under Radovan Karadžić and Ratko Mladić sought a "Greater Serbia" carved from Bosnia.
 - **Method:** "Ethnic cleansing" — forced expulsion of Bosniak (Bosnian Muslim) and Croat populations, mass rape used as a weapon, siege of Sarajevo (1992–96, the longest in modern history).
-- **Srebrenica massacre (July 1995):** ~8,000 Bosniak men and boys killed by Bosnian Serb forces in a UN-declared "safe area" — judicially recognized as genocide by the ICTY (2004) and ICJ (2007).
+- **Srebrenica massacre (July 1995):** ~8,000 Bosniak men and boys killed by Bosnian Serb forces in a UN-declared "safe area." The UN's Yugoslavia tribunal (ICTY) indicted Karadžić and Mladić for genocide in 1995, and in 2001 it convicted the Bosnian Serb general Radislav Krstić of genocide for Srebrenica.
 - **Aftermath:** NATO airstrikes (1995); the Dayton Accords ended the war but froze ethnic divisions into the Bosnian state structure.
 
 > **Comparable State Violence: Soviet and Maoist Cases**
@@ -81,12 +81,12 @@ export const whMassAtrocitiesPart3Data = {
             question: 'The Srebrenica massacre is significant as a legal precedent because:',
             options: [
               'It was the first atrocity prosecuted in the national courts of a state involved in the underlying conflict',
-              'International courts (the ICTY in 2004 and the ICJ in 2007) ruled it genocide under the 1948 Convention, expanding postwar accountability',
+              'The UN\'s Yugoslavia tribunal (ICTY) ruled it genocide under the 1948 Convention in 2001, extending postwar accountability',
               'It was the first atrocity ever tried by an international tribunal (the ICTY), since no such court had existed before the 1990s',
               'It showed UN safe areas worked, since Dutch peacekeepers protected the town\'s Bosniak men and boys until NATO airstrikes finally ended the siege'
             ],
             correctAnswer: 1,
-            explanation: 'Srebrenica forced international tribunals to apply the strict UN genocide definition to a European event in the 1990s, and produced major war-crimes convictions including Mladić (2017) and Karadžić (2016). Nuremberg had tried individuals internationally fifty years earlier, and the Dutch peacekeepers did not prevent the killing of about 8,000 Bosniak men and boys.'
+            explanation: 'Srebrenica forced an international tribunal to apply the strict UN genocide definition to a European event: the ICTY indicted Karadžić and Mladić in 1995 and in 2001 convicted the Bosnian Serb general Radislav Krstić of genocide. Nuremberg had tried individuals internationally fifty years earlier, and the Dutch peacekeepers did not prevent the killing of about 8,000 Bosniak men and boys.'
           }
         ]
       }
@@ -167,10 +167,10 @@ export const whMassAtrocitiesPart3Data = {
               'The UN cut its peacekeeping mission in Rwanda as the killings began, and U.S. officials avoided the word "genocide" for weeks',
               'The UN Security Council quickly expanded its Rwanda force to several thousand troops in April 1994, and the killing ended within days',
               'International observers knew nothing of the genocide until it ended, because militias had cut all outside communications',
-              'The African Union\'s standing intervention force deployed to Kigali as the killings began, under a charter adopted years earlier'
+              'The Organization of African Unity\'s standing intervention force deployed to Kigali as the killings began, under a charter adopted years earlier'
             ],
             correctAnswer: 0,
-            explanation: 'The UNAMIR drawdown (Security Council Resolution 912, April 1994) and the U.S. delay until June in using the legal term "genocide" are the canonical examples of international failure in 1994. The African Union was not founded until 2002, and the ICTR (November 1994) was created after the fact.'
+            explanation: 'The UNAMIR drawdown (Security Council Resolution 912, April 1994) and the U.S. delay until June in using the legal term "genocide" are the canonical examples of international failure in 1994. Africa had no standing intervention force in 1994 (the Organization of African Unity had no army of its own), and the ICTR (November 1994) was created after the fact.'
           }
         ]
       }

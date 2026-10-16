@@ -72,7 +72,7 @@ export const govMediaTechnologyPart7Data = {
 |---|---|
 | **S — SITUATION** | Identify the SITUATION + STAKEHOLDERS + CONTEXT (e.g., "TikTok PAFACAA requires ByteDance to divest within 270 days") |
 | **C — CONSTITUTIONAL/STATUTORY FRAMEWORK** | Apply 1st Am + relevant statutes (Section 230 of CDA 1996 + PAFACAA April 24 2024) + relevant precedents (Reno 1997 + Citizens United 2010 + Bluman v. FEC 2012 + Moody v. NetChoice 2024) + foundational documents (Federalist 10/51/78 + Brutus 1) |
-| **A — APPLICATION/ANALYSIS** | Apply principles (content-neutral + viewpoint discrimination + strict/intermediate scrutiny + foreign distinction Bluman 2012); consider counterarguments (1st Am absolutism vs reasonable regulation; government vs private power; foreign vs domestic) |
+| **A — APPLICATION/ANALYSIS** | Apply principles (content-neutral rules vs rules aimed at content or viewpoint; foreign vs domestic speakers); consider counterarguments (1st Am absolutism vs reasonable regulation; government vs private power; foreign vs domestic) |
 | **R — RESOLUTION/IMPLICATIONS** | Conclude with implications (institutional design + democratic values + balancing competing interests + future challenges + comparative perspectives EU DSA 2022/EU AI Act 2024) |
 
 ## Sprint Terms — 50+ Vocabulary

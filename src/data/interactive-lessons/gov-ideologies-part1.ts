@@ -159,7 +159,7 @@ Americans acquire political ideology through **POLITICAL SOCIALIZATION** — the
       exercise: {
         dropdowns: [
           {
-            label: "STRONGEST predictor of party identification — children inherit ~60% retention rate from this agent: ___",
+            label: "STRONGEST early influence on party identification — many children grow up to share their parents' party: ___",
             options: ['Family', 'Education', 'Religion', 'Peers', 'Media', 'Generational events']
           },
           {

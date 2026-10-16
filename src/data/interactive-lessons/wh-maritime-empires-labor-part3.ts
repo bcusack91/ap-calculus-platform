@@ -5,11 +5,13 @@ export const whMaritimeEmpiresLaborPart3Data = {
       id: 'whmelf3-intro',
       type: 'text' as const,
       content: `
-# ⚓ Maritime Empires & Labor Systems (c. 1450–1750)
+# ⚓ Maritime Empires & Labor Systems (c. 1450–1750, and after 1833)
 
 **Part 3 of 7 — Colonial Labor Systems: Coercion and Exploitation**
 
 ---
+
+> 📅 **Time frame:** Encomienda, mita and chattel slavery belong to c. 1450–1750. The indentured labor at the end of this part came after British emancipation (1833) and is tested with Unit 6 migration.
 
 > 🔑 **Key Concept:** Colonial labor systems — encomienda, mita, debt peonage, chattel slavery, and indentured servitude — were the mechanisms through which colonial economies extracted value from human bodies. AP questions compare these systems, evaluate their racial and legal dimensions, and connect labor coercion to global commodity production.
       `

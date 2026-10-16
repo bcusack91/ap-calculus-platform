@@ -32,10 +32,10 @@ export const whNewlyIndependentStatesPart4Data = {
 | Origin | Destination | Period | Significance |
 |---|---|---|---|
 | Caribbean (Jamaica, Trinidad) | United Kingdom | 1948–1971 (Windrush generation) | Reshaped British race relations; Notting Hill Carnival |
-| North Africa (Algeria, Morocco) | France | 1950s–1970s | Largest postcolonial migration to Europe; tensions evident in 2005 banlieue riots |
+| North Africa (Algeria, Morocco) | France | 1950s–1970s | Largest postcolonial migration to Europe; tensions over racism and integration surfaced in the 1983 March for Equality and the National Front's rise in the 1980s |
 | South Asia (India, Pakistan) | UK; Persian Gulf states | 1947 onward | Built Indian/Pakistani diasporas; Gulf labor remittances became major economic flow |
 | Vietnam | U.S., France, Australia | 1975 onward (post-fall of Saigon) | "Boat people"; created Vietnamese-American diaspora |
-| Mexico, Central America | United States | 1965 onward (after Hart-Celler immigration reform) | Hispanic population became largest U.S. minority by 2003 |
+| Mexico, Central America | United States | 1965 onward (after Hart-Celler immigration reform) | Mexico became the largest source of U.S. immigrants; the 1986 Immigration Reform and Control Act legalized about 2.7 million people |
 
 > **Key Migration Concepts**
 
@@ -50,8 +50,8 @@ export const whNewlyIndependentStatesPart4Data = {
 | Country | Religious Movement | Outcome |
 |---|---|---|
 | Iran | Shia Islamism under Khomeini | 1979 Islamic Revolution overthrew the Shah |
-| Egypt | Muslim Brotherhood (founded 1928) | Banned by Nasser; emerged as opposition; briefly governed 2012–13 |
-| India | Hindu nationalism (RSS, BJP) | Grew from a small movement in 1947 to electoral majority by 2014 |
+| Egypt | Muslim Brotherhood (founded 1928) | Banned by Nasser in 1954; ideologue Sayyid Qutb executed 1966; grew into Egypt's main opposition movement by the 1980s–90s |
+| India | Hindu nationalism (RSS, BJP) | Grew from a small movement in 1947 to national power: campaign that ended in the 1992 Ayodhya mosque demolition; BJP-led government from 1998 |
 | Latin America | Liberation theology (Catholic) | Combined Christian doctrine with social justice; targeted by U.S.-backed regimes in El Salvador, Nicaragua |
 | Israel | Religious Zionism | Influenced settler movements after 1967 |
 

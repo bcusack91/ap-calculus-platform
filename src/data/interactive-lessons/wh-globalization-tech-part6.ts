@@ -87,10 +87,10 @@ export const whGlobalizationTechPart6Data = {
 
 - **HIPP:** Issued as indigenous rebels seized towns in Chiapas, Mexico, on the day NAFTA took effect (the declaration itself focuses on land, poverty and the Mexican government rather than on NAFTA by name); intended audience is the Mexican public and, through the press, the world; purpose is to win support for indigenous rights and against the government's free-market policies; point of view is that of poor indigenous farmers in southern Mexico.
 
-> **4. Joseph Stiglitz, "Globalization and Its Discontents" (2002), a secondary source on the 1990s**
+> **4. Joseph Stiglitz, "Globalization and Its Discontents" (2002), a later account of the 1990s**
 > "Decisions were made on the basis of what seemed a curious blend of ideology and bad economics..."
 
-- **HIPP:** Written by a Nobel Prize–winning economist who had been the World Bank's chief economist (1997–2000) during the Asian financial crisis; intended audience is policymakers and the informed public; purpose is to criticize IMF conditions imposed on developing countries in the 1990s; point of view is that of an insider critic of the institutions he had served.
+- **HIPP:** Written by a Nobel Prize–winning economist who had been the World Bank's chief economist (1997–2000) during the Asian financial crisis; intended audience is policymakers and the informed public; purpose is to criticize IMF conditions imposed on developing countries in the 1990s; point of view is that of an insider critic of the institutions he had served. Published just after the course's 2001 endpoint, it is a secondary account: use it as an interpretation of 1990s events, the way you would use a historian's argument, not as evidence of anything that happened after 2001.
 
 ## AP SAQ Structure (3 parts)
 

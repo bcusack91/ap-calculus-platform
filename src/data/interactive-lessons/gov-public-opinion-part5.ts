@@ -224,7 +224,7 @@ DRAMATIC DECLINE since 1960s — driven by:
 - IRAN-CONTRA 1986-87
 - BUSH I broken "no new taxes" 1990
 - CLINTON IMPEACHMENT 1998-99
-- IRAQ WAR + WMD lies 2003+
+- IRAQ WAR + faulty WMD claims 2003+
 - FINANCIAL CRISIS 2008-09 + bank bailouts
 - COVID + ECONOMIC + GOVERNMENT DYSFUNCTION 2020+
 - TRUMP-ERA polarization + January 6 + election denial
@@ -317,7 +317,7 @@ CIVIC ENGAGEMENT (Putnam BOWLING ALONE 2000) declined alongside trust — fewer 
         correctAnswers: ['1964 — 77% (peak)', '1976 — 33% (Watergate aftermath)', '2001 — 60% (post-9/11 spike)'],
         hint1: '1964 PEAK — 77% trusted federal government always or most of the time; reflected post-WWII consensus + Eisenhower-Kennedy era + Civil Rights Act 1964 + Great Society programs; high faith in institutions; before Vietnam credibility gap (CIA Pentagon Papers 1971; LBJ Tonkin Resolution exaggeration revealed); subsequent decline almost continuous (with rare upticks).',
         hint2: '1976 WATERGATE AFTERMATH — 33% trusted federal government; collapsed from 77% in 1964 to 33% within 12 years; Nixon Watergate scandal 1972-74 + resignation August 1974; Vietnam War end 1975 (Saigon falls); economic stagflation 1973-75 oil shock + 1979 Iran shock; 1976 Carter elected on outsider/honest message; never recovered to mid-60s levels.',
-        hint3: '2001 POST-9/11 SPIKE — 60% briefly recovered after September 11 2001 attacks (rally-around-the-flag effect); Bush approval reached 90%+; major bipartisan legislation (PATRIOT Act, Iraq Authorization, NCLB); but quickly declined as Iraq War + WMD lies + Hurricane Katrina + financial crisis tanked trust again; 2008 trust at 17% during financial crisis; never returned to post-9/11 levels; mostly ~15-25% range since 2008.'
+        hint3: '2001 POST-9/11 SPIKE — 60% briefly recovered after September 11 2001 attacks (rally-around-the-flag effect); Bush approval reached 90%+; major bipartisan legislation (PATRIOT Act, Iraq Authorization, NCLB); but quickly declined as Iraq War + faulty WMD claims + Hurricane Katrina + financial crisis tanked trust again; 2008 trust at 17% during financial crisis; never returned to post-9/11 levels; mostly ~15-25% range since 2008.'
       }
     },
     {

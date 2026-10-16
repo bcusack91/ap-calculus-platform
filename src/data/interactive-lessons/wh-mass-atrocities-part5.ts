@@ -41,7 +41,7 @@ export const whMassAtrocitiesPart5Data = {
 |---|---|---|---|
 | Method | Deportation, paramilitary massacres | Industrial death camps, gas chambers, rail logistics | Machetes + radio mobilization; siege warfare + ethnic cleansing |
 | Media | State telegraphs, deportation orders | Films, posters, Der Stürmer | Mass radio (RTLM); satellite TV reporting |
-| International law | None | Nuremberg principles emerge after the fact | ICTY (1993), ICTR (1994), ICC (2002) operate during/after |
+| International law | None | Nuremberg principles emerge after the fact | ICTY (1993) and ICTR (1994) operate during/after; the 1998 Rome Statute plans a permanent court |
 | Scale of awareness | Limited; suppressed by Allied caution | Wartime intelligence; postwar full disclosure | Real-time global news coverage |
 | Justice | Perpetrators largely unpunished | Senior leaders prosecuted | Heads of state and ministers prosecuted |
 
@@ -54,8 +54,9 @@ export const whMassAtrocitiesPart5Data = {
 > **The Post-Cold-War Hinge**
 
 - The end of the Cold War (1989–91) opened space for ad-hoc tribunals (ICTY 1993, ICTR 1994).
-- Rwanda and Srebrenica produced the doctrine of Responsibility to Protect (R2P), endorsed at the 2005 UN World Summit.
-- But intervention remained selective: Kosovo (1999) yes; Darfur (2003–) limited; Syria (2011–) blocked at the UN Security Council.
+- Rwanda and Srebrenica fueled a debate over "humanitarian intervention": should sovereignty protect a government that massacres its own people?
+- But intervention remained selective: no forceful action in Rwanda (1994); a sustained NATO air campaign in Bosnia (1995) only after Srebrenica; NATO bombing over Kosovo (1999) without UN Security Council approval.
+- The debate continued after 2001, beyond the course's endpoint; for the exam, stop at the 1990s tribunals and Kosovo.
       `
     },
     {
@@ -102,10 +103,10 @@ export const whMassAtrocitiesPart5Data = {
             hint: 'Named for the Swiss city where it was negotiated.'
           },
           {
-            prompt: 'The doctrine, endorsed at the 2005 UN World Summit, that the international community has a duty to intervene against mass atrocities when sovereign states fail to protect their populations.',
-            answer: 'Responsibility to Protect',
-            acceptableAnswers: ['R2P', 'Responsibility to Protect', 'RtoP'],
-            hint: 'Three-letter acronym beginning with R.'
+            prompt: 'The UN court set up in The Hague in 1993 to try genocide and war crimes committed during the breakup of Yugoslavia.',
+            answer: 'International Criminal Tribunal for the former Yugoslavia',
+            acceptableAnswers: ['ICTY', 'International Criminal Tribunal for the former Yugoslavia', 'Yugoslavia tribunal', 'International Criminal Tribunal for Yugoslavia'],
+            hint: 'Four-letter acronym beginning with I and ending with Y.'
           },
           {
             prompt: 'The 1999 NATO intervention in the Federal Republic of Yugoslavia in response to ethnic cleansing of ethnic Albanians by Serb forces.',
@@ -131,7 +132,7 @@ export const whMassAtrocitiesPart5Data = {
             options: ['continuity across the century', 'major change from early to late century', 'discontinuity that reversed the early pattern']
           },
           {
-            label: 'The development of permanent international tribunals (ICTY, ICTR, ICC) compared to interwar impunity represents: ___',
+            label: 'The creation of international criminal tribunals (ICTY, ICTR) compared to interwar impunity represents: ___',
             options: ['continuity across the century', 'major change from early to late century', 'discontinuity that reversed the early pattern']
           }
         ],

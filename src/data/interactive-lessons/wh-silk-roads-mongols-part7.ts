@@ -49,7 +49,7 @@ export const whSilkRoadsMongolsPart7Data = {
               'Leave out the Black Death so that the essay\'s argument stays simple and easy to follow'
             ],
             correctAnswer: 0,
-            explanation: 'The Mongol paradox IS the complexity point: destruction (Baghdad, 40 million dead) AND connection (Pax Mongolica, technology transfer, Marco Polo). Any essay that treats the Mongols as simply "destructive" or simply "connecting" fails the complexity standard. The AP exam specifically rewards students who can hold contradictory truths about the same historical phenomenon.'
+            explanation: 'The Mongol paradox IS the complexity point: destruction (Baghdad, an estimated 30–40 million dead) AND connection (Pax Mongolica, technology transfer, Marco Polo). Any essay that treats the Mongols as simply "destructive" or simply "connecting" fails the complexity standard. The AP exam specifically rewards students who can hold contradictory truths about the same historical phenomenon.'
           }
         ]
       }

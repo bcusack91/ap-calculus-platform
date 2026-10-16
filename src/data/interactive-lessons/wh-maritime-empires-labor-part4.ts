@@ -58,7 +58,7 @@ export const whMaritimeEmpiresLaborPart4Data = {
 | **Total enslaved** | ~12.5 million transported, 1500-1900 |
 | **Deaths in transit** | ~1.8 million (roughly 12-15% Middle Passage mortality, higher in the early centuries) |
 | **Peak period** | 18th century; ~6 million transported in 1700s |
-| **Destinations** | Brazil 46%, Caribbean 43%, North America 4%, other 7% |
+| **Destinations** | Brazil ~45%, Caribbean ~40%, mainland North America ~4%, most of the rest to Spanish mainland America |
 | **Origins** | West Africa (Senegambia, Gold Coast, Bight of Benin, Bight of Biafra), Central Africa (Kongo) |
 
 > **Causes and African Dimensions**

@@ -41,7 +41,7 @@ CED Topic 9.4 names Nestlé (Switzerland), Nissan (Japan) and Mahindra and Mahin
 |---|---|---|---|
 | European Economic Community / EU single market | 1957 / 1993 | Western European states | Customs union, then a single market with free movement of goods, capital and labor |
 | ASEAN | 1967 | Southeast Asian states | Founded partly as an anti-communist grouping; later focused on economic cooperation |
-| Maastricht Treaty | 1992 | EU members | Created the European Union and planned the euro (introduced 1999, with notes and coins in 2002) |
+| Maastricht Treaty | 1992 | EU members | Created the European Union and planned the euro (launched in 1999 for banking and financial markets) |
 | NAFTA | 1994 | United States, Canada, Mexico | Trilateral free trade in North America |
 | WTO | 1995 | Founding agreement concluded by the 123 governments of the Uruguay Round in 1994 | Binding global trade rules; China joined in 2001 |
       `
