@@ -78,7 +78,7 @@ This same packing logic also determines membrane fluidity (covered in part 3).
         questions: [
           {
             question: 'Which type of fatty acid is solid at room temperature?',
-            options: ['Saturated', 'Monounsaturated', 'Polyunsaturated', 'Trans-unsaturated only'],
+            options: ['Saturated', 'Monounsaturated', 'Polyunsaturated', 'Kinked unsaturated'],
             correctAnswer: 0,
             explanation: 'Saturated chains are straight and pack tightly, giving high melting points → solid at room temperature (e.g., butter).'
           }

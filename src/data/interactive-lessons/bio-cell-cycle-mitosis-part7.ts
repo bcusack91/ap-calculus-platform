@@ -46,9 +46,9 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
             explanation: 'In G2, each chromosome has been replicated and consists of 2 sister chromatids, each containing one DNA molecule. With 8 chromosomes, there are 8 x 2 = 16 DNA molecules. Note: the chromosome count is still 8 (counted by centromeres).'
           },
           {
-            question: 'A virus makes a protein that disables Rb, the tumor suppressor that acts as a brake at the G1/S checkpoint. How could this contribute to cancer?',
+            question: 'A virus makes a protein that disables a tumor-suppressor protein, one that normally holds cells at the G1/S checkpoint until growth signals arrive. How could this contribute to cancer?',
             options: [
-              'Infected cells could enter S phase and divide without growth signals',
+              'Infected cells could enter S phase and divide when they should not',
               'Infected cells could no longer replicate their DNA during S phase',
               'Infected cells would undergo apoptosis as soon as the virus entered',
               'Infected cells would stop at the G2/M checkpoint and never divide'
@@ -90,15 +90,15 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
             explanation: 'Both daughter cells receive identical chromosomes through mitosis. Asymmetric division depends on the unequal distribution of cell-fate determinants (transcription factors, mRNAs, signaling molecules) during cytokinesis. The daughter that inherits "stemness" factors remains a stem cell; the other differentiates.'
           },
           {
-            question: 'The unicellular organism Caulobacter crescentus divides asymmetrically into a stalked cell and a swarmer cell, despite having identical DNA. This best illustrates:',
+            question: 'Most liver cells in an adult do not divide, but after part of the liver is surgically removed, many of the remaining cells begin dividing again until the liver regrows. Before the surgery these cells were best described as:',
             options: [
-              'Mutation during division that alters one daughter\'s genome',
-              'Differential gene expression from one genome in two cell types',
-              'Different DNA sequences being passed to the two daughter cells',
-              'Random variation in cell shape with no regulatory basis'
+              'Resting in G0, out of the cycle but able to reenter it',
+              'Permanently stuck in S phase, unable to finish copying DNA',
+              'Held in metaphase, waiting for a spindle checkpoint signal',
+              'Missing the genes needed to build a mitotic spindle'
             ],
-            correctAnswer: 1,
-            explanation: 'Both daughter cells have identical genomes, but asymmetric distribution of regulatory proteins during division causes different sets of genes to be expressed in each cell. This is a fundamental principle of developmental biology — identical genomes, different gene expression.'
+            correctAnswer: 0,
+            explanation: 'Cells can leave the cell cycle for G0, a nondividing state, and reenter the cycle in response to appropriate cues; loss of liver tissue supplies those cues. Cells stuck in S phase or held in metaphase would be stopped at a checkpoint or removed by apoptosis rather than working normally for years, and cells missing spindle genes could never divide again, yet these cells do.'
           },
           {
             question: 'After mitosis, each daughter cell has 46 chromosomes. If a cell undergoes mitosis without cytokinesis, and then undergoes a second round of mitosis WITH cytokinesis, how many chromosomes will each final daughter cell have?',
@@ -138,9 +138,9 @@ Comprehensive AP-exam-style questions integrating all cell cycle and mitosis con
             correctAnswer: 'M phase'
           },
           {
-            question: 'The Rb protein acts as a brake that prevents progression into:',
+            question: 'A checkpoint that stops cells with damaged DNA from starting to copy their DNA acts at the end of:',
             options: ['G1 phase', 'S phase', 'G2 phase', 'M phase', 'Cytokinesis'],
-            correctAnswer: 'S phase'
+            correctAnswer: 'G1 phase'
           },
           {
             question: 'A cleavage furrow pinches an animal cell in two during:',

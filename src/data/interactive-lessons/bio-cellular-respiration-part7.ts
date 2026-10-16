@@ -38,15 +38,15 @@ $$\\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2 + \\sim30\\text{ADP} + \\s
       exercise: {
         questions: [
           {
-            question: 'A researcher feeds cells glucose labeled with a heavy isotope of oxygen (18-O). In which product will the 18-O label appear?',
+            question: 'A researcher feeds cells glucose labeled with a heavy isotope of oxygen (18-O). In which product of cellular respiration will most of the 18-O label end up?',
             options: [
-              'H2O only',
-              'CO2 only',
-              'Both CO2 and H2O',
-              'Both O2 and ATP'
+              'H2O made by the electron transport chain',
+              'CO2 given off as the sugar is broken down',
+              'O2 released by the mitochondria into the cell',
+              'Phosphate groups added to ATP'
             ],
-            correctAnswer: 2,
-            explanation: 'The oxygen atoms from glucose (C6H12O6) end up mostly in CO2, released during the decarboxylation steps, and some end up in H2O removed from intermediates during glycolysis. If the 18-O were in the O2 breathed in instead, it would appear in the H2O formed at the end of the electron transport chain.'
+            correctAnswer: 1,
+            explanation: 'As glucose (C6H12O6) is broken down, its carbon atoms leave with its oxygen atoms as CO2, released in pyruvate oxidation and the Krebs cycle. The water made at the end of the electron transport chain gets its oxygen from O2, the final electron acceptor, so an 18-O label in inhaled O2 would show up in that water instead. Respiration uses O2 rather than releasing it, and the phosphate added to ADP comes from inorganic phosphate.'
           },
           {
             question: 'Brown adipose tissue in hibernating mammals contains high concentrations of a protein called thermogenin (UCP1). This protein creates a proton channel in the inner mitochondrial membrane that bypasses ATP synthase. What is the physiological purpose of thermogenin?',

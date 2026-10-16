@@ -21,13 +21,12 @@ Simple sugars with the general formula $(CH_2O)_n$:
 
 ### Disaccharides
 
-Two monosaccharides linked by a **glycosidic bond**:
+A **disaccharide** is two monosaccharides joined by a covalent bond (a **glycosidic bond**). Table sugar is a familiar example.
 
-| Disaccharide | Components | Source |
-|-------------|------------|--------|
-| **Sucrose** | Glucose + Fructose | Table sugar |
-| **Lactose** | Glucose + Galactose | Milk |
-| **Maltose** | Glucose + Glucose | Germinating seeds |
+- **Building it:** dehydration synthesis removes one water molecule as the bond forms.
+- **Breaking it:** hydrolysis adds one water molecule back, splitting the disaccharide into its two monosaccharides.
+
+The same two reactions build and break every longer carbohydrate chain, one bond at a time. (Which particular sugars make up each disaccharide is not tested on the AP exam.)
       `
     },
     {
@@ -39,7 +38,7 @@ Two monosaccharides linked by a **glycosidic bond**:
       exercise: {
         questions: [
           {
-            question: 'During digestion, sucrose is split into glucose and fructose. Which reaction does this, and what happens to water?',
+            question: 'During digestion, a disaccharide is split into its two monosaccharides. Which reaction does this, and what happens to water?',
             options: [
               'It is hydrolysis, and one water molecule is used up',
               'It is dehydration synthesis, and one water molecule is released',
@@ -103,7 +102,7 @@ Two monosaccharides linked by a **glycosidic bond**:
             options: ['nucleotide', 'amino acid', 'monosaccharide', 'fatty acid']
           },
           {
-            label: 'Sucrose is a ___ made of glucose and fructose',
+            label: 'A sugar made of two linked monosaccharides is a ___',
             options: ['monosaccharide', 'disaccharide', 'polysaccharide', 'lipid']
           },
           {
@@ -115,7 +114,7 @@ Two monosaccharides linked by a **glycosidic bond**:
         hint1: 'Mono = one, saccharide = sugar.',
         hint2: 'Di = two sugars linked together.',
         hint3: 'Cellulose is the main component of cell walls.',
-        explanation: 'Monosaccharides are carbohydrate monomers. Sucrose is a disaccharide. Cellulose provides structural support in plant cell walls.'
+        explanation: 'Monosaccharides are carbohydrate monomers. Two linked monosaccharides form a disaccharide. Cellulose provides structural support in plant cell walls.'
       }
     }
   ]

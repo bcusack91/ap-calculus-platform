@@ -15,7 +15,8 @@ Triglyceride = **glycerol** + **3 fatty acids** (linked by ester bonds)
 |------|-----------|-------------|----------|
 | **Saturated fat** | No C=C double bonds | Solid | Butter, lard |
 | **Unsaturated fat** | One or more C=C | Liquid (oil) | Olive oil |
-| **Trans fat** | Artificially hydrogenated | Solid | Margarine |
+
+The more C=C double bonds in the tails, the more kinked the chains, the more unsaturated the fat, and the more liquid it is at room temperature.
 
 Fats store **2× more energy per gram** than carbohydrates (9 kcal/g vs 4 kcal/g).
 

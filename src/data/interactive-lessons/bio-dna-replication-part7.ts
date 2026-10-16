@@ -22,7 +22,7 @@ Comprehensive AP-exam-style questions integrating all DNA replication concepts.
 2. Replication is **bidirectional** from origins and proceeds in the **5' → 3' direction** only
 3. The **leading strand** is continuous; the **lagging strand** is discontinuous (Okazaki fragments)
 4. **Helicase** unwinds; **topoisomerase** relieves overwinding ahead of the fork; **DNA polymerase** extends RNA primers 5' → 3'; **ligase** joins the lagging-strand fragments
-5. Three layers of fidelity: base selection, proofreading by DNA polymerase, and mismatch repair
+5. Three layers of fidelity: base selection, proofreading by DNA polymerase, and repair of mismatches after replication
 6. Errors that escape repair, and damage from radiation and reactive chemicals, become **mutations**, the source of new alleles
       `
     },

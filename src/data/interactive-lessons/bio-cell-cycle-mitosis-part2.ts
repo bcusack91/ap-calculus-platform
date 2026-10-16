@@ -27,7 +27,7 @@ G$_1$ is typically the longest and most variable phase of interphase:
 - Centriole duplication begins (in animal cells)
 - Gene expression patterns establish the functional identity of the cell
 
-**G$_1$/S Checkpoint (Restriction Point):**
+**G$_1$/S Checkpoint:**
 - The most important checkpoint in the cell cycle
 - The cell "decides" whether to commit to division
 - Checks: adequate cell size, sufficient nutrients, growth factor signals, and intact DNA
@@ -93,7 +93,7 @@ G$_2$ is the final preparation period before mitosis:
               'It regulates the contractile ring that pinches the cell in two at cytokinesis'
             ],
             correctAnswer: 1,
-            explanation: 'The G1/S checkpoint (also called the restriction point in mammalian cells) is the commitment point. Before it, the cell can pause or exit the cycle. After it, the cell proceeds through S, G2, and M without needing further external signals. This is why it is a frequent target of mutations in cancer.'
+            explanation: 'The G1/S checkpoint is the commitment point. Before it, the cell can pause or exit the cycle. After it, the cell proceeds through S, G2, and M without needing further external signals. This is why it is a frequent target of mutations in cancer.'
           },
           {
             question: 'After S phase, a cell has the same number of chromosomes as before S phase. How is this possible if all the DNA was replicated?',
@@ -138,7 +138,7 @@ G$_2$ is the final preparation period before mitosis:
             question: 'The tumor suppressor protein that halts the cycle when DNA damage is detected:',
             answer: 'p53',
             acceptableAnswers: ['p53', 'P53', 'TP53', 'tp53'],
-            placeholder: 'e.g. Rb'
+            placeholder: 'e.g. cyclin'
           },
           {
             question: 'The DNA content abbreviation for a cell after completing S phase:',

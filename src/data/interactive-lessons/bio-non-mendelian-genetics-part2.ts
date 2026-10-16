@@ -37,7 +37,7 @@ $I^{A}$ and $I^{B}$ are **codominant** with each other, and both are **completel
 | $I^{A}I^{B}$ | AB | Both A and B |
 | $ii$ | O | Neither |
 
-Three alleles give **six genotypes but only four phenotypes**. In general, $n$ alleles give $\\frac{n(n+1)}{2}$ possible genotypes.
+Three alleles give **six genotypes but only four phenotypes**, because the dominance relationships hide some genotypes behind the same phenotype.
       `
     },
     {
@@ -74,7 +74,7 @@ $C$ (full color) > $c^{ch}$ (chinchilla, silver-gray) > $c^{h}$ (Himalayan, whit
 | Himalayan | $c^{h}c^{h}$, $c^{h}c$ |
 | Albino | $cc$ |
 
-Four alleles give $\\frac{4 \\times 5}{2} = 10$ genotypes and 4 phenotypes. To solve any cross, write each parent's two alleles, form the four offspring combinations, and then ask which allele in each pair is higher in the series. (The Himalayan allele returns in Part 5, because its enzyme works only at cool temperatures.)
+The table lists all 10 genotypes, which produce only 4 phenotypes. To solve any cross, write each parent's two alleles, form the four offspring combinations, and then ask which allele in each pair is higher in the series. (The Himalayan allele returns in Part 5, because its enzyme works only at cool temperatures.)
       `
     },
     {
@@ -143,15 +143,15 @@ With $n$ genes there are $2n$ allele copies, and an individual can have anywhere
 |---|---|---|---|
 | 1 | 2 | 3 | 1 : 2 : 1 |
 | 2 | 4 | 5 | 1 : 4 : 6 : 4 : 1 (out of 16) |
-| 3 | 6 | 7 | 1 : 6 : 15 : 20 : 15 : 6 : 1 (out of 64) |
+| 3 | 6 | 7 | Middle class most common; each extreme 1 out of 64 |
 
 ### Worked Example 2: Three Additive Genes
 
-**Problem.** Kernel color in a plant is controlled by three unlinked genes with additive alleles. Two plants that are $AaBbCc$ are crossed. What fraction of offspring are as dark as the darkest possible plant, and what fraction have exactly three contributing alleles?
+**Problem.** Kernel color in a plant is controlled by three unlinked genes with additive alleles. Two plants that are $AaBbCc$ are crossed. What fraction of offspring are as dark as the darkest possible plant, and what fraction have the same genotype as their parents?
 
 **Step 1 — Darkest class.** The darkest plant is $AABBCC$. Each gene independently gives $AA$ with probability $\\frac{1}{4}$, so P = $\\frac{1}{4} \\times \\frac{1}{4} \\times \\frac{1}{4} = \\frac{1}{64}$.
 
-**Step 2 — Exactly three.** Each of the 6 allele copies a child receives is contributing with probability $\\frac{1}{2}$. The number of ways to choose 3 contributing copies out of 6 is 20, so P = $\\frac{20}{64} = \\frac{5}{16}$.
+**Step 2 — Same genotype as the parents.** Each gene independently gives a heterozygote ($Aa$, $Bb$ or $Cc$) with probability $\\frac{1}{2}$, so by the product rule P($AaBbCc$) = $\\frac{1}{2} \\times \\frac{1}{2} \\times \\frac{1}{2} = \\frac{1}{8}$. These offspring have three contributing alleles, the middle class, but other genotypes such as $AABbcc$ land in that class too, which is why the middle class is the largest.
 
 **Step 3 — Picture it.** The middle class is the most common and the extremes are rare. Plotting the 7 classes already gives a rough bell shape.
       `

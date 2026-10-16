@@ -7,7 +7,7 @@ export const bioProteinsPart3Data = {
       content: `
 ## Functions Driven by Shape
 
-Protein **function** depends on **3D shape**, which depends on **amino acid sequence**. Even one wrong amino acid can change the shape and break function — as in **sickle cell anemia**, where a single Glu→Val swap in hemoglobin's β-chain causes red blood cells to deform.
+Protein **function** depends on **3D shape**, which depends on **amino acid sequence**. Even one wrong amino acid can change the shape and break function — as in **sickle cell anemia**, where one point mutation replaces a charged, hydrophilic amino acid in hemoglobin with a nonpolar, hydrophobic one. The altered hemoglobin molecules stick together, and red blood cells deform.
 
 ### Major functional categories
 

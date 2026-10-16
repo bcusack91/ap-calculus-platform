@@ -85,15 +85,11 @@ $0.0392 \\times 50{,}000 = 1960 \\text{ carriers}$
 
 $q' = \\frac{480}{1680} \\approx 0.286 \\qquad p' = \\frac{1200}{1680} \\approx 0.714$
 
-**Shortcut formula (worth knowing).** For complete selection against a lethal recessive ($w_{aa}=0$), the recessive allele frequency after one generation is
-
-$q' = \\frac{q}{1 + q}$
-
-Check: $q' = \\frac{0.4}{1 + 0.4} = \\frac{0.4}{1.4} \\approx 0.286$. ✓ — matches the long calculation.
+**Check:** $p' + q' = 0.714 + 0.286 = 1.000$. ✓ Always count alleles among the **survivors**, not the original population; the 160 aa individuals contribute no alleles to the next generation.
 
 **Answer:** $q$ falls from 0.40 to about **0.286** in one generation, $\\Delta q \\approx -0.114$.
 
-> **Why selection against a recessive is SLOW at low $q$:** the heterozygous Aa survivors still carry and transmit a alleles, "hiding" them from selection. Using $q' = \\frac{q}{1+q}$: starting at $q = 0.01$ gives $q' \\approx 0.0099$ — an almost imperceptible drop. This is precisely why deleterious recessive alleles persist in populations for many generations and can never be fully eliminated by selection against the homozygote alone.
+> **Why selection against a recessive is SLOW at low $q$:** the heterozygous Aa survivors still carry and transmit a alleles, "hiding" them from selection. At $q = 0.01$, a population of 10,000 has only 1 aa individual but about 198 Aa carriers, so removing the aa individual takes away just 2 of the 200 a alleles and $q$ barely moves (to about 0.0099). This is precisely why deleterious recessive alleles persist in populations for many generations and can never be fully eliminated by selection against the homozygote alone.
       `
     },
     {
@@ -116,7 +112,7 @@ Check: $q' = \\frac{0.4}{1 + 0.4} = \\frac{0.4}{1.4} \\approx 0.286$. ✓ — ma
             explanation: '$q^{2}$ = 1/10,000 = 0.0001, so q = 0.01 and p = 0.99. Carrier frequency = 2pq = 2(0.99)(0.01) = 0.0198 (about 2%). The 0.01 option is the trap — that is the ALLELE frequency q, not the carrier (heterozygote) frequency 2pq. The 0.0001 option is $q^{2}$ (the affected frequency). The carrier frequency (~1 in 50) is far larger than the affected frequency (1 in 10,000).'
           },
           {
-            question: 'A population has q = 0.5 for a recessive allele, and the recessive homozygote is lethal before reproduction (w = 0). Using q\' = q/(1 + q), what is q after one generation of selection?',
+            question: 'A population of 100 is in Hardy-Weinberg proportions for a gene with q = 0.5 (25 AA, 50 Aa, 25 aa). Every aa individual dies before reproducing. Counting alleles among the survivors, what is q in the next generation?',
             options: [
               '0.25',
               '0.33',
@@ -124,7 +120,7 @@ Check: $q' = \\frac{0.4}{1 + 0.4} = \\frac{0.4}{1.4} \\approx 0.286$. ✓ — ma
               '0.00'
             ],
             correctAnswer: 1,
-            explanation: 'q\' = q/(1 + q) = 0.5/(1 + 0.5) = 0.5/1.5 ≈ 0.33. The 0.00 option is the trap: even though every aa individual dies, the recessive allele is NOT eliminated in one generation because surviving heterozygotes (Aa) still carry it. Complete selection against the recessive homozygote reduces q but cannot drive it to zero in a single generation — heterozygotes shelter the allele.'
+            explanation: 'The 75 survivors (25 AA and 50 Aa) carry 150 alleles, and only the 50 heterozygotes carry a, one each, so q = 50/150 ≈ 0.33. The 0.00 option is the trap: even though every aa individual dies, the recessive allele is NOT eliminated in one generation because surviving heterozygotes (Aa) still carry it. Complete selection against the recessive homozygote reduces q but cannot drive it to zero in a single generation — heterozygotes shelter the allele.'
           }
         ]
       }

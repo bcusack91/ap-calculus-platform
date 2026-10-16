@@ -194,7 +194,7 @@ Every pattern in this topic keeps Mendel's core mechanism, the segregation of al
 Before the exam, make sure you can:
 
 - Explain why incomplete dominance and codominance give 1 : 2 : 1 and tell them apart from the heterozygote.
-- Solve ABO and dominance-series crosses, and count genotypes for $n$ alleles as $\\frac{n(n+1)}{2}$.
+- Solve ABO and dominance-series crosses, and explain why an individual carries at most two of the alleles in a population.
 - Count polygenic classes as $2n + 1$ and explain why polygenic traits form a bell curve.
 - Recognize 9 : 3 : 4, 9 : 7 and 12 : 3 : 1 as two interacting genes, and contrast epistasis with pleiotropy.
 - Predict X-linked crosses from the sex of the parent carrying the allele, and use reciprocal crosses as evidence.

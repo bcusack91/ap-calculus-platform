@@ -123,26 +123,22 @@ True exponential growth occurs only in bursts: a colonizing species entering a n
       content: `
 ### Doubling Time — How Fast Is "Fast"?
 
-A vivid way to feel the power of exponential growth is the **doubling time**: how long it takes a population to double in size. Under exponential growth the doubling time depends only on the per-capita rate $r_{max}$, not on the current population size — a population of 100 and a population of 100,000 with the same $r_{max}$ take the *same* time to double. A widely used approximation is the **rule of 70**:
+A vivid way to feel the power of exponential growth is the **doubling time**: how long it takes a population to double in size. Under exponential growth the doubling time depends only on the per-capita rate $r_{max}$, not on the current population size — a population of 100 and a population of 100,000 with the same $r_{max}$ take the *same* time to double. A higher $r_{max}$ means a shorter doubling time.
 
-$\\text{doubling time} \\approx \\frac{70}{100 \\times r_{max}}$
+#### Worked example — recognizing exponential growth in data
 
-where $r_{max}$ is expressed as a decimal rate (the denominator $100 \\times r_{max}$ converts it to a percent).
+A biologist counts yeast cells in a flask of fresh medium every 2 hours:
 
-#### Worked example
+| Time (hr) | 0 | 2 | 4 | 6 | 8 |
+|---|---|---|---|---|---|
+| Cells (thousands) | 5 | 10 | 20 | 40 | 80 |
+| Cells added (thousands) | — | 5 | 10 | 20 | 40 |
 
-A population grows exponentially with $r_{max} = 0.07\\,\\text{yr}^{-1}$ (a 7% per-year growth rate). Its approximate doubling time is:
+**Step 1 — Look at the change, not just the totals.** The number of cells added in each 2-hour interval keeps growing (5, 10, 20, 40), so $\\frac{dN}{dt}$ is rising as N rises.
 
-$\\text{doubling time} \\approx \\frac{70}{7} = 10 \\text{ years}$
+**Step 2 — Check the doubling.** The population doubles every 2 hours no matter whether it starts at 5,000 or 40,000 cells. A constant doubling time is the signature of a constant per-capita rate, so this is exponential growth: $\\frac{dN}{dt} = r_{max}N$.
 
-So the population doubles roughly every 10 years. If it instead grew at $r_{max} = 0.02\\,\\text{yr}^{-1}$ (2%), the doubling time would stretch to $\\frac{70}{2} = 35$ years. Halving the growth rate roughly *triples-and-a-half* the wait to double — small changes in $r_{max}$ translate into large changes in how quickly a population expands.
-
-| $r_{max}$ (per year) | Growth as percent | Approx. doubling time |
-|---|---|---|
-| 0.01 | 1% | 70 years |
-| 0.02 | 2% | 35 years |
-| 0.07 | 7% | 10 years |
-| 0.14 | 14% | 5 years |
+**Step 3 — Predict.** If the pattern continued, the flask would hold 160,000 cells at 10 hours. In a real flask, sugar runs out and waste builds up, so the counts will soon fall below this prediction and the curve will start to level off.
 
 > **Why doubling time is independent of N:** because $\\frac{dN}{dt} = r_{max}N$ scales with N, a larger population adds more individuals per unit time, but it also needs more individuals to double. The two effects cancel, leaving the doubling time a function of $r_{max}$ alone. This is a hallmark of true exponential growth — and another reminder that it cannot persist once resources become limiting.
       `

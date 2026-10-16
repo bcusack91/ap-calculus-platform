@@ -59,7 +59,7 @@ A typical AP graph plots cyclin concentration and Cdk activity over two or three
 
 Checkpoints work by controlling cyclin-Cdk activity. When DNA is damaged, the tumor suppressor protein **p53** builds up. It halts the cycle by blocking the cyclin-Cdk activity needed to move forward, giving time for repair. If the damage cannot be repaired, p53 triggers **apoptosis** (programmed cell death), so the damaged cell does not divide.
 
-Another tumor suppressor, **Rb**, acts as a brake at the G$_1$/S checkpoint: it blocks the genes needed for S phase until growth-factor signals, acting through cyclin-Cdk complexes, switch the brake off.
+Other tumor suppressors act as brakes at the G$_1$/S checkpoint: they hold the cell in G$_1$ until growth-factor signals, acting through cyclin-Cdk complexes, release the brake.
       `
     },
     {
@@ -114,7 +114,7 @@ Cancer results from the accumulation of mutations in genes that regulate the cel
 - BOTH alleles usually must be inactivated (recessive — the "two-hit" hypothesis)
 - Examples:
   - **p53** — "guardian of the genome"; halts the cycle for DNA repair or triggers apoptosis; mutated in about half of human cancers
-  - **Rb** — the G$_1$/S brake; when it is lost, cells enter S phase without growth signals
+  - G$_1$/S brakes — when both copies are lost, cells enter S phase without growth signals
 
 > **Why cancer takes several mutations:** a cell usually needs both an accelerator stuck "on" (an oncogene) and lost brakes (both copies of a tumor suppressor) before it divides without control. That is one reason cancer risk rises with age.
       `
@@ -164,7 +164,7 @@ Cancer results from the accumulation of mutations in genes that regulate the cel
             question: 'The tumor suppressor known as the "guardian of the genome":',
             answer: 'p53',
             acceptableAnswers: ['p53', 'P53', 'TP53'],
-            placeholder: 'e.g. Rb'
+            placeholder: 'e.g. cyclin'
           },
           {
             question: 'The general term for a gene whose normal product slows cell division or triggers apoptosis (two words):',

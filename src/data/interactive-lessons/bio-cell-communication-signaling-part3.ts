@@ -32,7 +32,7 @@ The plasma membrane has a hydrophobic interior. That single fact predicts where 
 
 **1. G protein-coupled receptors (GPCRs)**
 
-- A single protein that crosses the membrane seven times.
+- A membrane protein with its ligand-binding domain facing outside the cell.
 - Inside the cell it works with a **G protein**, a switch protein that is **off when GDP is bound** and **on when GTP is bound**.
 - Ligand binding changes the receptor's shape, so the receptor makes the G protein swap GDP for GTP. The active G protein then moves along the membrane and activates an enzyme (for example, the enzyme that makes cAMP).
 - The G protein turns itself off by hydrolyzing its GTP back to GDP, so the signal is temporary.

@@ -9,7 +9,7 @@ export const bioDnaReplicationPart4Data = {
 
 **Part 4 of 7**
 
-DNA replication must be extraordinarily accurate — the error rate is approximately **1 mistake per 10$^{10}$ base pairs** in E. coli.  This remarkable fidelity is achieved through three layers of error correction.
+DNA replication must be extraordinarily accurate: a cell copies billions of bases and makes only a handful of permanent mistakes. This fidelity comes from three layers of error correction.
       `
     },
     {
@@ -21,17 +21,16 @@ DNA replication must be extraordinarily accurate — the error rate is approxima
 **Layer 1: Base selection by DNA polymerase**
 - DNA polymerase has a tight active site that favors correct base pairs (A-T, G-C)
 - Incorrect bases fit poorly and are usually rejected before they are added
-- Error rate at this stage: roughly 1 in 100,000 bases
 
 **Layer 2: Proofreading by DNA polymerase**
 - If a wrong nucleotide is added anyway, the mismatched pair distorts the helix
 - DNA polymerase detects the distortion, backs up, removes the incorrect nucleotide and inserts the correct one
-- Proofreading improves accuracy about a hundredfold
+- Proofreading removes most of the errors that slip past base selection
 
-**Layer 3: Mismatch repair after replication**
+**Layer 3: Repair after replication**
 - Repair proteins scan the newly made DNA for mismatched bases that escaped proofreading
 - They cut out a short stretch of the new strand containing the error; DNA polymerase fills the gap using the old strand as a template, and **ligase** seals the backbone
-- Combined final error rate: about 1 in 10$^{10}$
+- Together, the three layers leave very few errors uncorrected
 
 > **Why this matters for the AP exam:** The CED states that errors in DNA replication or in DNA repair mechanisms can cause random **mutations**. An error that escapes all three layers is copied into both daughter molecules at the next replication and becomes a permanent change in sequence.
       `
@@ -47,16 +46,16 @@ DNA replication must be extraordinarily accurate — the error rate is approxima
           {
             question: 'A mutant DNA polymerase has lost its proofreading activity but still adds nucleotides normally. What is the predicted effect on mutation rates?',
             options: [
-              'No change in mutation rate, as mismatch repair corrects every slip',
+              'No change in mutation rate, as later repair corrects every slip',
               'Mutation rate rises sharply, since misincorporated bases are no longer removed',
               'Replication halts, since polymerase cannot extend a strand without proofreading',
               'The error rate falls, because the polymerase now adds bases more slowly'
             ],
             correctAnswer: 1,
-            explanation: 'Proofreading typically improves accuracy about 100-fold. Losing it means more wrong bases are left in the new strand; mismatch repair catches many but not all of them, so the mutation rate rises. Polymerase can still build DNA without proofreading, and nothing about the change makes it more accurate.'
+            explanation: 'Proofreading removes most of the errors that slip past base selection. Losing it means more wrong bases are left in the new strand; repair after replication catches many but not all of them, so the mutation rate rises. Polymerase can still build DNA without proofreading, and nothing about the change makes it more accurate.'
           },
           {
-            question: 'A mismatched base pair escapes both proofreading and mismatch repair. Why does the error become a permanent mutation after the next round of replication?',
+            question: 'A mismatched base pair escapes both proofreading and repair after replication. Why does the error become a permanent mutation after the next round of replication?',
             options: [
               'The wrong base acts as a template for a matching partner, leaving no mismatch',
               'The mismatch is copied exactly into both daughter molecules as the same mismatch',
@@ -144,7 +143,7 @@ Beyond replication errors, the CED names **external factors, including radiation
       exercise: {
         questions: [
           {
-            question: 'A bacterial strain lacking mismatch repair is grown for many generations alongside a normal strain. Which prediction is best supported?',
+            question: 'A bacterial strain whose proteins for repairing mismatches after replication are defective is grown for many generations alongside a normal strain. Which prediction is best supported?',
             options: [
               'The repair-deficient strain stops dividing because replication cannot occur',
               'The repair-deficient strain gains more mutations, so it becomes more varied',
@@ -152,7 +151,7 @@ Beyond replication errors, the CED names **external factors, including radiation
               'The repair-deficient strain gains only beneficial mutations over time'
             ],
             correctAnswer: 1,
-            explanation: 'Without mismatch repair, errors that escape proofreading become permanent, so mutations accumulate faster and the population becomes more genetically varied. Replication still occurs, proofreading alone does not make the rates equal, and mutations arise at random: most are neutral or harmful, and whether any is beneficial depends on the environment.'
+            explanation: 'Without that repair system, errors that escape proofreading become permanent, so mutations accumulate faster and the population becomes more genetically varied. Replication still occurs, proofreading alone does not make the rates equal, and mutations arise at random: most are neutral or harmful, and whether any is beneficial depends on the environment.'
           }
         ]
       }

@@ -49,7 +49,7 @@ This experiment demonstrated that:
               'Boiling alters DCPIP so it can no longer accept electrons'
             ],
             correctAnswer: 1,
-            explanation: 'Boiling denatures proteins, including the photosystem complexes, electron transport chain components, and the oxygen-evolving complex. Without functional proteins, the light reactions cannot proceed, even though chlorophyll pigments may still be present.'
+            explanation: 'Boiling denatures proteins, including the photosystem complexes, the electron transport chain proteins, and the proteins that split water at photosystem II. Without functional proteins, the light reactions cannot proceed, even though chlorophyll pigments may still be present.'
           },
           {
             question: 'The Hill reaction showed that O2 production does not require CO2. What does this tell us about the source of O2 in photosynthesis?',

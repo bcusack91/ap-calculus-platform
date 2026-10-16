@@ -79,7 +79,7 @@ On the AP exam you must read a short scenario and instantly name the right mecha
 - "____% show the recessive phenotype" → that percent **= $q^2$**; take $q = \\sqrt{q^2}$, then $p = 1 - q$.
 - "How many carriers?" → **$2pq \\times N$** (heterozygotes only).
 - "Is it in equilibrium?" → compute actual $p, q$ by **allele-counting**, predict $p^2, 2pq, q^2$ counts, compare (chi-square if needed).
-- "Recessive homozygote is lethal; find next-gen $q$" → **$q' = \\frac{q}{1+q}$**.
+- "Recessive homozygote is lethal; find next-gen $q$" → remove the aa individuals, then **count alleles among the survivors**: $q' = \\frac{\\text{a alleles in survivors}}{2 \\times \\text{number of survivors}}$.
 
 > **FRQ tip:** When a free-response question asks you to "explain how the population evolved," structure your answer as: (1) source of variation → (2) the specific force acting → (3) differential reproduction / chance change → (4) resulting shift in **allele frequencies** across **generations**. Name the population, never the individual, as the unit that evolves.
       `

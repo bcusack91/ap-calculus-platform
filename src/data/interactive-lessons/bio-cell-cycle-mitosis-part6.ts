@@ -163,7 +163,7 @@ Researchers fuse cells in different phases and observe the results:
           {
             question: 'A researcher treats cells with a drug that prevents the cyclin that peaks at the G2/M transition from being broken down. In what stage will the cells arrest?',
             options: [
-              'G1 — the cells cannot pass the restriction point into S phase',
+              'G1 — the cells cannot pass the G1/S checkpoint into S phase',
               'S phase — the cells cannot finish replicating their DNA',
               'Mitosis — persistent Cdk activity keeps the cell from finishing',
               'Cytokinesis — the contractile ring forms but cannot constrict'

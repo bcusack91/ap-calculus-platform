@@ -118,7 +118,7 @@ In real ecosystems, multiple factors interact:
 | Cloudy day, warm temperature | Light intensity | Temperature and CO$_2$ are adequate but insufficient light limits the light reactions |
 | Greenhouse with supplemental CO$_2$ and lighting | Temperature or enzyme capacity | Once light and CO$_2$ are optimized, the biochemical machinery reaches its maximum capacity |
 
-**Liebig's Law of the Minimum** applies: the rate of photosynthesis is determined by whichever factor is most limiting, regardless of the abundance of other factors.
+The rule in every row is the same: the rate of photosynthesis is set by whichever factor is in shortest supply. Adding more of a factor that is already plentiful does not raise the rate; only increasing the limiting factor does.
       `
     },
     {
@@ -136,10 +136,10 @@ In real ecosystems, multiple factors interact:
             placeholder: 'e.g. saturation point'
           },
           {
-            question: 'The principle stating that the rate is controlled by the most limiting factor:',
+            question: 'The term for the factor in shortest supply, which sets the rate of photosynthesis (two words):',
             answer: 'limiting factor',
-            acceptableAnswers: ['limiting factor', 'Limiting factor', 'law of the minimum', 'law of minimum'],
-            placeholder: 'e.g. rate law'
+            acceptableAnswers: ['limiting factor', 'Limiting factor', 'the limiting factor', 'limiting factors'],
+            placeholder: 'e.g. carrying capacity'
           },
           {
             question: 'The light intensity above which more light no longer raises the photosynthetic rate:',

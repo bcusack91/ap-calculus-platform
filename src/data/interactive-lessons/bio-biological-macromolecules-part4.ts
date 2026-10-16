@@ -75,7 +75,7 @@ Amino acids link via **peptide bonds** (dehydration synthesis between $-COOH$ an
 - **Hydrogen bonds** between R groups
 - **Ionic bonds** between charged R groups
 - **Hydrophobic interactions** (nonpolar R groups cluster inside)
-- **Disulfide bridges** (covalent bonds between cysteine residues)
+- **Disulfide bridges** (covalent bonds between sulfur-containing R groups)
 
 ### Denaturation
 Changes in **pH, temperature, or salt concentration** can disrupt these bonds and unfold the protein — this is **denaturation**. The primary structure remains intact but the protein loses its function.

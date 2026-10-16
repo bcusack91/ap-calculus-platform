@@ -71,7 +71,7 @@ Two monosaccharides join through a **glycosidic linkage** formed by **dehydratio
       exercise: {
         questions: [
           {
-            question: 'Two glucose molecules join to form maltose. What else is produced?',
+            question: 'Two glucose molecules join to form a disaccharide. What else is produced?',
             options: ['A molecule of ATP', 'A water molecule', 'A hydrogen ion', 'A carbon dioxide molecule'],
             correctAnswer: 1,
             explanation: 'A glycosidic bond forms by dehydration synthesis, removing one water molecule per bond formed.'
