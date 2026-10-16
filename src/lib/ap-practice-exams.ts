@@ -53,7 +53,7 @@ export const AP_PRACTICE_EXAMS: Record<string, ApPracticeExam> = {
   'ap-bio': { courseSlug: 'ap-biology', path: '/ap-bio-practice', load: () => import('@/data/ap-bio-practice/config').then((m) => m.config) },
   'ap-calcab': { courseSlug: 'ap-calculus-ab', path: '/ap-calcab-practice', load: () => import('@/data/ap-calcab-practice/config').then((m) => m.config) },
   'ap-calcbc': { courseSlug: 'ap-calculus-bc', path: '/ap-calcbc-practice', load: () => import('@/data/ap-calcbc-practice/config').then((m) => m.config) },
-  'ap-chem': { courseSlug: 'ap-chemistry', path: '/ap-chem-practice', load: () => import('@/data/ap-chem-practice/config').then((m) => m.config) },
+  'ap-chem': { courseSlug: 'ap-chemistry', path: '/ap-chem-practice', load: () => import('@/data/ap-chem-practice/config').then((m) => m.config), moreForms: [() => import('@/data/ap-chem-practice/form-2/config').then((m) => m.config), () => import('@/data/ap-chem-practice/form-3/config').then((m) => m.config)] },
   'ap-csa': { courseSlug: 'ap-computer-science-a', path: '/ap-csa-practice', load: () => import('@/data/ap-csa-practice/config').then((m) => m.config) },
   'ap-csp': { courseSlug: 'ap-computer-science-principles', path: '/ap-csp-practice', load: () => import('@/data/ap-csp-practice/config').then((m) => m.config) },
   'ap-english-lang': { courseSlug: 'ap-english-language', path: '/ap-english-lang-practice', load: () => import('@/data/ap-english-lang-practice/config').then((m) => m.config) },

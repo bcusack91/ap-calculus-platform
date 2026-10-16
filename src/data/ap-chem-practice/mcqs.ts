@@ -16,6 +16,21 @@ import type { MCQItem } from '@/components/FullLengthPracticeExam'
  * Calculator allowed throughout (per CB rules for AP Chem).
  */
 
+const GAS_N2_O2 =
+  'A rigid 10.0 L container holds 0.60 mol of $\\text{N}_2(g)$ and 0.20 mol of $\\text{O}_2(g)$ at 27°C. Use $R = 0.0821$ L·atm/(mol·K).'
+
+const BEER_DYE =
+  'A student prepares standard solutions of a colored dye and measures their absorbance at the same wavelength in the same 1.00 cm cuvette.\n\n| Concentration (M) | 0.010 | 0.020 | 0.030 | 0.040 |\n|---|---|---|---|---|\n| Absorbance | 0.20 | 0.40 | 0.60 | 0.80 |\n\nThe student then measures a solution of the same dye whose concentration is unknown.'
+
+const ACETATE_BUFFER =
+  'A buffer solution contains 0.20 M acetic acid, $\\text{CH}_3\\text{COOH}$ ($\\text{p}K_a = 4.74$), and 0.20 M sodium acetate, $\\text{NaCH}_3\\text{COO}$.'
+
+const HA_TITRATION =
+  'A 30.0 mL sample of 0.10 M weak monoprotic acid HA is titrated with 0.10 M NaOH. The equivalence point is reached after 30.0 mL of NaOH has been added. After 15.0 mL of NaOH has been added, the pH is 4.20.'
+
+const ZN_CU_CELL =
+  'A galvanic cell is built from a zinc electrode in 1.0 M $\\text{Zn}^{2+}(aq)$ and a copper electrode in 1.0 M $\\text{Cu}^{2+}(aq)$.\n\n| Half-reaction | $E°$ (V) |\n|---|---|\n| $\\text{Cu}^{2+}(aq) + 2e^- \\to \\text{Cu}(s)$ | +0.34 |\n| $\\text{Zn}^{2+}(aq) + 2e^- \\to \\text{Zn}(s)$ | −0.76 |'
+
 export const MCQS: MCQItem[] = [
   /* ---- U1 Atomic Structure & Properties (5) ---- */
   {
@@ -84,10 +99,16 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-2-molecular-ionic-structure',
-    question: 'Which of the following molecules is polar?',
-    options: ['$\\text{CO}_2$', '$\\text{CCl}_4$', '$\\text{H}_2\\text{O}$', '$\\text{BF}_3$'],
-    correctAnswer: 2,
-    explanation: 'Water is bent because of the two lone pairs on O, so its bond dipoles do not cancel and the molecule is polar. $\\text{CO}_2$, $\\text{CCl}_4$, and $\\text{BF}_3$ each contain polar bonds, but their linear, tetrahedral, and trigonal planar symmetry makes the bond dipoles cancel.',
+    stimulus: '| Molecule | Carbon–carbon bonds | C–C bond length (pm) |\n|---|---|---|\n| ethane, $\\text{C}_2\\text{H}_6$ | one single bond | 154 |\n| ethene, $\\text{C}_2\\text{H}_4$ | one double bond | 134 |\n| benzene, $\\text{C}_6\\text{H}_6$ | six bonds in a ring, all identical | 140 |',
+    question: 'Which statement best explains the carbon–carbon bond length in benzene?',
+    options: [
+      'Benzene has two equivalent resonance structures, so each C–C bond is intermediate between a single and a double bond.',
+      'Benzene has three single and three double bonds that switch places so quickly that their lengths average to 140 pm.',
+      'Benzene has six C–C double bonds, and repulsion among its six H atoms stretches each bond beyond 134 pm.',
+      'Benzene has six C–C single bonds, and the strain of the ring squeezes each of them to less than 154 pm.',
+    ],
+    correctAnswer: 0,
+    explanation: 'Benzene is described by two equivalent resonance structures with alternating single and double bonds, and the real molecule is a blend of them: each C–C bond has a bond order of 1.5, so its length (140 pm) lies between those of a single bond (154 pm) and a double bond (134 pm). The molecule does not flip back and forth between the two structures, and six double bonds or six single bonds would give lengths near 134 pm or 154 pm rather than an intermediate value.',
   },
   {
     type: 'mcq',
@@ -132,10 +153,34 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-3-intermolecular-forces',
-    question: 'A 0.250 mol sample of an ideal gas occupies 5.00 L at 27°C. The pressure is (use $R = 0.0821$ L·atm/(mol·K))',
-    options: ['0.111 atm', '1.23 atm', '2.46 atm', '6.15 atm'],
-    correctAnswer: 1,
-    explanation: 'With $T=300$ K, $P=\\frac{nRT}{V}=\\frac{(0.250)(0.0821)(300)}{5.00}=1.23$ atm. Using 27 instead of the Kelvin temperature gives 0.111 atm; gas-law temperatures must always be absolute.',
+    stimulus: GAS_N2_O2,
+    question: 'What is the total pressure of the gas mixture?',
+    options: ['0.177 atm', '1.48 atm', '1.97 atm', '19.7 atm'],
+    correctAnswer: 2,
+    explanation: 'The container holds 0.80 mol of gas in all, and with $T = 300$ K, $P = \\frac{nRT}{V} = \\frac{(0.80)(0.0821)(300)}{10.0} = 1.97$ atm. Using 27 instead of the Kelvin temperature gives 0.177 atm, counting only the $\\text{N}_2$ gives 1.48 atm, and 19.7 atm divides by 1.00 L instead of 10.0 L.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-3-intermolecular-forces',
+    stimulus: GAS_N2_O2,
+    question: 'What is the partial pressure of $\\text{O}_2$ in the container?',
+    options: ['0.49 atm', '0.66 atm', '0.99 atm', '1.48 atm'],
+    correctAnswer: 0,
+    explanation: 'The mole fraction of $\\text{O}_2$ is $\\frac{0.20}{0.80} = 0.25$, so $P_{\\text{O}_2} = 0.25(1.97\\text{ atm}) = 0.49$ atm. Splitting the pressure equally between the two gases (0.99 atm) ignores that partial pressure is proportional to the number of moles, 0.66 atm divides the moles of $\\text{O}_2$ by the moles of $\\text{N}_2$ instead of the total, and 1.48 atm is the partial pressure of $\\text{N}_2$.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-3-intermolecular-forces',
+    stimulus: GAS_N2_O2,
+    question: 'How do the $\\text{N}_2$ molecules (28 g/mol) and the $\\text{O}_2$ molecules (32 g/mol) in the container compare?',
+    options: [
+      'The average kinetic energies are the same, and the $\\text{N}_2$ molecules have the higher average speed',
+      'The $\\text{O}_2$ molecules have the higher average kinetic energy and the lower average speed',
+      'The $\\text{N}_2$ molecules have the higher average kinetic energy and the higher average speed',
+      'Both gases have the same average speed and the same average kinetic energy',
+    ],
+    correctAnswer: 0,
+    explanation: 'Both gases are at the same temperature, and average kinetic energy depends only on temperature, so the two match. Since $KE=\\frac{1}{2}mv^2$, the lighter $\\text{N}_2$ molecules must move faster on average. Equal temperature means equal kinetic energy, not equal speed, and neither gas has the greater kinetic energy.',
   },
   {
     type: 'mcq',
@@ -161,19 +206,6 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-3-intermolecular-forces',
-    question: 'Equal moles of He (4 g/mol) and $\\text{CH}_4$ (16 g/mol) are held in separate containers at the same temperature. Which statement is correct?',
-    options: [
-      'The average kinetic energies are the same, and the He atoms have the higher average speed',
-      'The $\\text{CH}_4$ molecules have the higher average kinetic energy and the lower average speed',
-      'The He atoms have the higher average kinetic energy and the higher average speed',
-      'Both gases have the same average speed and the same average kinetic energy',
-    ],
-    correctAnswer: 0,
-    explanation: 'Average kinetic energy depends only on temperature, so the two gases match. Since $KE=\\frac{1}{2}mv^2$, the lighter He atoms must move faster on average. Equal temperature means equal kinetic energy, not equal speed.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-3-intermolecular-forces',
     stimulus: '| Compound | Formula | Structure | Boiling point |\n|---|---|---|---|\n| n-pentane | $\\text{C}_5\\text{H}_{12}$ | unbranched chain | 36°C |\n| neopentane | $\\text{C}_5\\text{H}_{12}$ | highly branched, nearly spherical | 10°C |',
     question: 'Which of the following best explains the difference in boiling points shown in the table?',
     options: [
@@ -188,8 +220,8 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-3-intermolecular-forces',
-    stimulus: 'A student prepares standard solutions of a colored dye and measures their absorbance at the same wavelength in the same 1.00 cm cuvette.\n\n| Concentration (M) | 0.010 | 0.020 | 0.030 | 0.040 |\n|---|---|---|---|---|\n| Absorbance | 0.20 | 0.40 | 0.60 | 0.80 |',
-    question: 'A solution of the same dye with unknown concentration has an absorbance of 0.50 under the same conditions. Its concentration is closest to',
+    stimulus: BEER_DYE,
+    question: 'The unknown solution has an absorbance of 0.50 under the same conditions. Its concentration is closest to',
     options: ['0.020 M', '0.025 M', '0.030 M', '0.050 M'],
     correctAnswer: 1,
     explanation: 'The data follow Beer\'s law, $A=\\varepsilon bc$, with absorbance rising 0.20 for every 0.010 M, so $A=0.50$ corresponds to 0.025 M. The value 0.050 M treats the absorbance as if it were ten times the concentration, a relationship the standards do not support.',
@@ -197,8 +229,8 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-3-intermolecular-forces',
-    stimulus: 'A student uses a spectrophotometer and a Beer\'s law calibration curve to find the concentration of a dye solution. Without noticing, the student leaves a fingerprint smudge that absorbs some light on the cuvette holding the unknown sample.',
-    question: 'How does the smudge affect the calculated concentration of the unknown?',
+    stimulus: BEER_DYE,
+    question: 'Without noticing, the student leaves a fingerprint smudge that absorbs some light on the cuvette holding the unknown sample. How does the smudge affect the concentration calculated for the unknown?',
     options: [
       'It is too high, because the smudge absorbs light and raises the measured absorbance',
       'It is too low, because less light reaches the solution, so fewer dye particles absorb',
@@ -228,15 +260,6 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'The ideal gas model ignores particle volume and intermolecular attractions. At high pressure the particles are close together, so their volume is a significant fraction of the container, and at low temperature they move slowly enough for attractions to matter. At low pressure and high temperature particles are far apart and fast, which is where gases behave most ideally.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-3-intermolecular-forces',
-    stimulus: 'A rigid 10.0 L container holds 0.60 mol of $\\text{N}_2(g)$ and 0.20 mol of $\\text{O}_2(g)$ at a total pressure of 2.0 atm.',
-    question: 'What is the partial pressure of $\\text{O}_2$ in the container?',
-    options: ['0.50 atm', '0.40 atm', '1.0 atm', '1.5 atm'],
-    correctAnswer: 0,
-    explanation: 'The mole fraction of $\\text{O}_2$ is $\\frac{0.20}{0.80}=0.25$, so $P_{\\text{O}_2}=0.25(2.0\\text{ atm})=0.50$ atm. Splitting the pressure equally between the two gases (1.0 atm each) ignores that partial pressure is proportional to the number of moles.',
   },
   {
     type: 'mcq',
@@ -513,67 +536,17 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-8-acids-bases',
-    question: 'A buffer made from a weak acid and its conjugate base has its greatest buffer capacity at a pH',
-    options: [
-      'equal to 7, whichever acid is used',
-      'equal to the $\\text{p}K_a$ of the weak acid',
-      'one unit above the $\\text{p}K_a$ of the acid',
-      'equal to the pH at the equivalence point',
-    ],
-    correctAnswer: 1,
-    explanation: 'By the Henderson–Hasselbalch equation, pH $=\\text{p}K_a$ when $[\\text{A}^-]=[\\text{HA}]$, and equal amounts of acid and conjugate base let the buffer absorb added acid or base equally well. One unit above the $\\text{p}K_a$ the base form outnumbers the acid ten to one, so the buffer resists added base poorly.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-acids-bases',
-    question: 'A buffer contains 0.20 M acetic acid ($\\text{p}K_a = 4.74$) and 0.20 M sodium acetate. The pH is',
+    stimulus: ACETATE_BUFFER,
+    question: 'What is the pH of the buffer?',
     options: ['3.74', '4.74', '5.74', '7.00'],
     correctAnswer: 1,
-    explanation: 'Henderson–Hasselbalch gives pH $=\\text{p}K_a+\\log\\frac{[\\text{A}^-]}{[\\text{HA}]}=4.74+\\log(1)=4.74$. A pH of 7.00 assumes equal concentrations of acid and base make the solution neutral, but the acid here is weak with its own $\\text{p}K_a$.',
+    explanation: 'Henderson–Hasselbalch gives pH $=\\text{p}K_a+\\log\\frac{[\\text{A}^-]}{[\\text{HA}]}=4.74+\\log(1)=4.74$. A pH of 7.00 assumes equal concentrations of acid and base make the solution neutral, but the acid here is weak with its own $\\text{p}K_a$, and 3.74 and 5.74 would require a tenfold excess of the acid or the base.',
   },
   {
     type: 'mcq',
     topic: 'unit-8-acids-bases',
-    question: 'At the equivalence point of a titration of a weak acid with a strong base, the pH is',
-    options: ['less than 7', 'equal to 7', 'greater than 7', 'equal to the $\\text{p}K_a$'],
-    correctAnswer: 2,
-    explanation: 'At equivalence the solution contains the conjugate base of the weak acid, such as acetate, which reacts with water to produce $\\text{OH}^-$, so pH $>7$. The pH equals the $\\text{p}K_a$ at the half-equivalence point, not at equivalence.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-acids-bases',
-    stimulus: 'A 30.0 mL sample of 0.10 M weak monoprotic acid HA is titrated with 0.10 M NaOH. The equivalence point is reached after 30.0 mL of NaOH has been added. After 15.0 mL of NaOH has been added, the pH is 4.20.',
-    question: 'What is the value of $K_a$ for HA?',
-    options: ['$6.3 \\times 10^{-5}$', '$1.6 \\times 10^{-10}$', '$1.6 \\times 10^{4}$', '$1.0 \\times 10^{-7}$'],
-    correctAnswer: 0,
-    explanation: 'After 15.0 mL, half the acid has been converted to $\\text{A}^-$, so $[\\text{HA}]=[\\text{A}^-]$ and pH $=\\text{p}K_a=4.20$; then $K_a=10^{-4.20}=6.3\\times10^{-5}$. The value $1.6\\times10^{-10}$ is $K_b$ of the conjugate base, $\\frac{K_w}{K_a}$.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-acids-bases',
-    question: 'A weak acid HA has $\\text{p}K_a = 4.0$. In a solution buffered at pH 6.0, how do the concentrations of HA and $\\text{A}^-$ compare?',
-    options: [
-      '$[\\text{A}^-]$ is about 100 times $[\\text{HA}]$',
-      '$[\\text{HA}]$ is about 100 times $[\\text{A}^-]$',
-      '$[\\text{A}^-]$ is about 2 times $[\\text{HA}]$',
-      '$[\\text{HA}]$ and $[\\text{A}^-]$ are about equal',
-    ],
-    correctAnswer: 0,
-    explanation: 'From pH $=\\text{p}K_a+\\log\\frac{[\\text{A}^-]}{[\\text{HA}]}$, $\\log\\frac{[\\text{A}^-]}{[\\text{HA}]}=2$, so the base form is about $10^2=100$ times more concentrated. When the pH is above the $\\text{p}K_a$ the deprotonated form predominates; a factor of 2 mistakes the logarithmic difference for a linear one.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-acids-bases',
-    question: 'What is the pH of a 0.0010 M solution of the strong base $\\text{Ba(OH)}_2$ at 25°C?',
-    options: ['11.30', '11.00', '2.70', '3.00'],
-    correctAnswer: 0,
-    explanation: 'Each formula unit releases two hydroxide ions, so $[\\text{OH}^-]=0.0020$ M, pOH $=2.70$, and pH $=14.00-2.70=11.30$. The value 11.00 ignores the second hydroxide ion, and 2.70 is the pOH rather than the pH.',
-  },
-  {
-    type: 'mcq',
-    topic: 'unit-8-acids-bases',
-    stimulus: 'A buffer solution contains equal concentrations of acetic acid, $\\text{CH}_3\\text{COOH}$, and sodium acetate, $\\text{NaCH}_3\\text{COO}$. A small amount of HCl(aq) is added.',
-    question: 'Which equation represents the reaction that keeps the pH nearly constant?',
+    stimulus: ACETATE_BUFFER,
+    question: 'A small amount of HCl(aq) is added to the buffer. Which equation represents the reaction that keeps the pH nearly constant?',
     options: [
       '$\\text{CH}_3\\text{COO}^- + \\text{H}_3\\text{O}^+ \\to \\text{CH}_3\\text{COOH} + \\text{H}_2\\text{O}$',
       '$\\text{CH}_3\\text{COOH} + \\text{OH}^- \\to \\text{CH}_3\\text{COO}^- + \\text{H}_2\\text{O}$',
@@ -582,6 +555,60 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'The added $\\text{H}_3\\text{O}^+$ is consumed by the conjugate base, acetate, converting it to the weak acid, so few free hydronium ions remain. The reaction of acetic acid with $\\text{OH}^-$ is how the buffer responds to added base, and the ionization of acetic acid would add more hydronium rather than remove it.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-8-acids-bases',
+    stimulus: ACETATE_BUFFER,
+    question: 'Which statement explains why this buffer resists added acid and added base about equally well?',
+    options: [
+      'It holds equal amounts of the weak acid and acetate ion, so it consumes added acid or base equally.',
+      'It contains equal amounts of an acid and a base, so its pH is 7 and the two neutralize each other.',
+      'Its pH is one unit above the $\\text{p}K_a$, so it holds an extra reserve of base to react with added acid.',
+      'It is at the equivalence point of a titration of acetic acid with sodium hydroxide.',
+    ],
+    correctAnswer: 0,
+    explanation: 'With equal concentrations of acetic acid and acetate, pH $=\\text{p}K_a = 4.74$, and the buffer holds equal reserves of the weak acid (which consumes added $\\text{OH}^-$) and its conjugate base (which consumes added $\\text{H}_3\\text{O}^+$). Equal amounts of a weak acid and its conjugate base do not give pH 7; a pH one unit above the $\\text{p}K_a$ would mean ten times as much base as acid, so the buffer would resist added base poorly; and at the equivalence point essentially no weak acid remains.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-8-acids-bases',
+    stimulus: HA_TITRATION,
+    question: 'What is the value of $K_a$ for HA?',
+    options: ['$6.3 \\times 10^{-5}$', '$1.6 \\times 10^{-10}$', '$4.0 \\times 10^{-8}$', '$1.0 \\times 10^{-7}$'],
+    correctAnswer: 0,
+    explanation: 'After 15.0 mL, half the acid has been converted to $\\text{A}^-$, so $[\\text{HA}]=[\\text{A}^-]$ and pH $=\\text{p}K_a=4.20$; then $K_a=10^{-4.20}=6.3\\times10^{-5}$. The value $1.6\\times10^{-10}$ is $K_b$ of the conjugate base, $\\frac{K_w}{K_a}$; $4.0\\times10^{-8}$ treats the half-equivalence solution as if it were 0.10 M HA alone ($[\\text{H}^+]^2/0.10$); and $1.0\\times10^{-7}$ is the $[\\text{H}^+]$ of pure water.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-8-acids-bases',
+    stimulus: HA_TITRATION,
+    question: 'At the equivalence point of this titration, the pH is',
+    options: ['less than 7', 'equal to 7', 'greater than 7', 'equal to 4.20'],
+    correctAnswer: 2,
+    explanation: 'At equivalence the solution contains $\\text{A}^-$, the conjugate base of the weak acid, which reacts with water to produce $\\text{OH}^-$, so pH $>7$. The pH equals the $\\text{p}K_a$ (4.20) at the half-equivalence point, after 15.0 mL, not at equivalence, and a pH of exactly 7 would require that neither product ion react with water, as in a strong acid–strong base titration.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-8-acids-bases',
+    stimulus: HA_TITRATION,
+    question: 'At one point during the titration the pH is 6.20. How do the concentrations of HA and $\\text{A}^-$ compare at that point?',
+    options: [
+      '$[\\text{A}^-]$ is about 100 times $[\\text{HA}]$',
+      '$[\\text{HA}]$ is about 100 times $[\\text{A}^-]$',
+      '$[\\text{A}^-]$ is about 2 times $[\\text{HA}]$',
+      '$[\\text{HA}]$ and $[\\text{A}^-]$ are about equal',
+    ],
+    correctAnswer: 0,
+    explanation: 'The half-equivalence pH gives $\\text{p}K_a = 4.20$, and from pH $=\\text{p}K_a+\\log\\frac{[\\text{A}^-]}{[\\text{HA}]}$, $\\log\\frac{[\\text{A}^-]}{[\\text{HA}]}=6.20-4.20=2$, so the base form is about $10^2=100$ times more concentrated. When the pH is above the $\\text{p}K_a$ the deprotonated form predominates; a factor of 2 mistakes the logarithmic difference for a linear one.',
+  },
+  {
+    type: 'mcq',
+    topic: 'unit-8-acids-bases',
+    question: 'What is the pH of a 0.0010 M solution of the strong base $\\text{Ba(OH)}_2$ at 25°C?',
+    options: ['11.30', '11.00', '2.70', '3.00'],
+    correctAnswer: 0,
+    explanation: 'Each formula unit releases two hydroxide ions, so $[\\text{OH}^-]=0.0020$ M, pOH $=2.70$, and pH $=14.00-2.70=11.30$. The value 11.00 ignores the second hydroxide ion, and 2.70 is the pOH rather than the pH.',
   },
 
   /* ---- U9 Applications of Thermodynamics (5) ---- */
@@ -601,7 +628,8 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-9-applications-thermodynamics',
-    question: 'For $\\text{Cu}^{2+}(aq) + 2e^- \\to \\text{Cu}(s)$, $E° = +0.34$ V. For $\\text{Zn}^{2+}(aq) + 2e^- \\to \\text{Zn}(s)$, $E° = -0.76$ V. The standard cell potential for $\\text{Zn} + \\text{Cu}^{2+} \\to \\text{Zn}^{2+} + \\text{Cu}$ is',
+    stimulus: ZN_CU_CELL,
+    question: 'The standard cell potential for the cell reaction $\\text{Zn} + \\text{Cu}^{2+} \\to \\text{Zn}^{2+} + \\text{Cu}$ is',
     options: ['$+0.42$ V', '$+1.10$ V', '$-1.10$ V', '$-0.42$ V'],
     correctAnswer: 1,
     explanation: 'Cu is reduced at the cathode and Zn oxidized at the anode, so $E°_{cell}=E°_{cathode}-E°_{anode}=0.34-(-0.76)=+1.10$ V. The value $+0.42$ V adds the two reduction potentials without reversing the sign for the oxidation half-reaction.',
@@ -609,10 +637,11 @@ export const MCQS: MCQItem[] = [
   {
     type: 'mcq',
     topic: 'unit-9-applications-thermodynamics',
-    question: 'For a galvanic cell at standard conditions with $E°_{cell} = +1.10$ V and $n = 2$, $\\Delta G°$ equals (use $F = 96{,}485$ C/mol)',
+    stimulus: ZN_CU_CELL,
+    question: 'Using the standard cell potential, $\\Delta G°$ for the cell reaction equals (use $F = 96{,}485$ C/mol)',
     options: ['$-2.12 \\times 10^5$ J', '$-1.06 \\times 10^5$ J', '$+1.06 \\times 10^5$ J', '$+2.12 \\times 10^5$ J'],
     correctAnswer: 0,
-    explanation: 'Using $\\Delta G°=-nFE°=-(2)(96{,}485)(1.10)\\approx-2.12\\times10^5$ J; the negative sign matches a positive cell potential and a thermodynamically favorable cell. Leaving out $n=2$ gives $-1.06\\times10^5$ J.',
+    explanation: 'From the table, $E°_{cell} = 0.34 - (-0.76) = +1.10$ V, and two electrons are transferred ($n = 2$), so $\\Delta G°=-nFE°=-(2)(96{,}485)(1.10)\\approx-2.12\\times10^5$ J; the negative sign matches a positive cell potential and a thermodynamically favorable cell. Leaving out $n=2$ gives $-1.06\\times10^5$ J.',
   },
   {
     type: 'mcq',
