@@ -599,7 +599,7 @@ $$z = 2\\left(\\cos \\frac{\\pi}{3} + i\\sin \\frac{\\pi}{3}\\right)$$
         },
       },
       {
-        id: 'cn5-multiply-polar',
+        id: 'cn5-arg-radians',
         type: 'text' as const,
         content: `## Polar Form in Radians (How the AP Exam Writes It)
 
