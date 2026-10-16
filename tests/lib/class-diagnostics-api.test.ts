@@ -77,7 +77,8 @@ beforeEach(() => {
   mockFindMany.mockResolvedValue([])
 })
 
-describe('POST — no repeats across successive diagnostics', () => {
+// Builds full MCAT sittings; slow under a loaded full-suite run.
+describe('POST — no repeats across successive diagnostics', { timeout: 30_000 }, () => {
   it('excludes every question id already served to this class (MCAT)', async () => {
     mockFindMany.mockResolvedValueOnce([
       { title: 'Diagnostic 1', testData: { questions: [{ id: 'cars-authored-cars-hum-01-q0' }, { id: 'bio-bank-17' }] } },

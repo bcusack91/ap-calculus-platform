@@ -65,7 +65,8 @@ beforeEach(() => {
   }))
 })
 
-describe('POST /api/mcat-unit-test/start', () => {
+// Builds full MCAT sittings; slow under a loaded full-suite run.
+describe('POST /api/mcat-unit-test/start', { timeout: 30_000 }, () => {
   it('is closed while a plan topic is still pending', async () => {
     mockPlan.mockResolvedValue(plan({ pending: 2 }))
     const { POST } = await import('@/app/api/mcat-unit-test/start/route')
