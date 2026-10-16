@@ -5,61 +5,33 @@ export const precalcRationalPart6Data = {
       id: 'p6-intro',
       type: 'text' as const,
       content: `
-# ⚖️ Rational Equations & Inequalities
+# ⚖️ Rational Zeros & Inequalities
 
-**Part 6 of 7 — Solving Rational Equations, Checking for Extraneous Solutions, and Rational Inequalities**
+**Part 6 of 7 — Zeros of Rational Functions and Rational Inequalities**
 
-Up to now we have analyzed rational functions. This part shifts to **solving** — finding $x$-values that satisfy rational equations and inequalities. The critical new skill is checking for **extraneous solutions** introduced when you multiply both sides by an expression containing the variable.
+Up to now we have analyzed rational functions. This part shifts to **solving**: finding where a rational function equals zero and where it is positive or negative. The critical skill is telling a real zero apart from a hole, because a value can make the numerator zero without being a zero of the function.
       `
     },
     {
-      id: 'p6-equations',
+      id: 'p6-zeros',
       type: 'text' as const,
       content: `
-## 📖 Solving Rational Equations
+## 📖 Zeros of a Rational Function
 
-### The LCD Method
+A rational function $r(x) = \\frac{p(x)}{q(x)}$ equals $0$ exactly where the **numerator** is $0$ and the **denominator is not**.
 
-| Step | Action | Example: $\\frac{3}{x} + \\frac{1}{x+2} = 1$ |
+| Step | Action | Example: $r(x) = \\frac{x^2 - 9}{x^2 - 3x}$ |
 |:----:|--------|----------------------------------------------|
-| 1 | Find the LCD | $\\text{LCD} = x(x+2)$ |
-| 2 | Multiply every term by the LCD | $3(x+2) + x = x(x+2)$ |
-| 3 | Expand and simplify | $3x + 6 + x = x^2 + 2x$ |
-| 4 | Collect to one side | $x^2 - 2x - 6 = 0$ |
-| 5 | Solve (quadratic formula) | $x = \\frac{2 \\pm \\sqrt{4 + 24}}{2} = 1 \\pm \\sqrt{7}$ |
-| 6 | **Check for extraneous solutions** | Neither value makes $x = 0$ or $x = -2$ ✔ |
+| 1 | Factor both parts | $\\frac{(x-3)(x+3)}{x(x-3)}$ |
+| 2 | Zeros of the numerator | $x = 3$ and $x = -3$ |
+| 3 | Discard any that also zero the denominator | $x = 3$ makes $x(x-3) = 0$: hole, not a zero |
+| 4 | The real zeros of $r$ | $x = -3$ only |
 
-> ⚠️ **Step 6 is mandatory.** Multiplying by the LCD can introduce false solutions that make the original denominator zero.
-      `
-    },
-    {
-      id: 'p6-extraneous',
-      type: 'text' as const,
-      content: `
-## 🚨 Extraneous Solutions
+> ⚠️ **Step 3 is mandatory.** At $x = 3$ the function is undefined, so it cannot equal $0$ there. The graph has a hole at $x = 3$ instead.
 
-### What Are They?
+### Reading Zeros from a Model
 
-An **extraneous solution** is a value that satisfies the transformed equation but makes a denominator in the original equation equal to zero.
-
-### Example: Extraneous Solution in Action
-
-> **Solve $\\frac{x}{x - 3} = \\frac{3}{x - 3} + 2$**
-
-**Step 1:** LCD $= (x - 3)$. Multiply through:
-$$x = 3 + 2(x - 3)$$
-
-**Step 2:** Simplify:
-$$x = 3 + 2x - 6 = 2x - 3$$
-$$-x = -3 \\implies x = 3$$
-
-**Step 3: CHECK.** The original equation has $x - 3$ in the denominator.
-
-At $x = 3$: denominator $= 3 - 3 = 0$ ❌ **Undefined!**
-
-$$\\boxed{\\text{No solution (the only candidate is extraneous)}}$$
-
-> 💡 Always check your answers against the **original** equation's domain restrictions.
+If $C(t) = \\frac{50(t - 4)}{t + 2}$ gives a quantity for $t \\ge 0$, then $C(t) = 0$ only at $t = 4$: the numerator is $0$ there and the denominator is $6$, not $0$.
       `
     },
     {
@@ -72,7 +44,7 @@ For inequalities like $\\frac{p(x)}{q(x)} > 0$ or $\\frac{p(x)}{q(x)} \\leq 0$, 
 
 | Step | Action |
 |:----:|--------|
-| 1 | Move everything to one side: $\\frac{p(x)}{q(x)} - k \\geq 0$ → combine into single fraction |
+| 1 | Write the inequality as $r(x)$ compared with $0$ (for example $r(x) \\geq 0$) |
 | 2 | Factor numerator and denominator completely |
 | 3 | Find all zeros of numerator (= 0) and denominator (undefined) |
 | 4 | Place these critical values on a number line |
@@ -105,26 +77,26 @@ $$\\boxed{(-\\infty, -3) \\cup [1, \\infty)}$$
       exercise: {
         questions: [
           {
-            question: 'When solving $\\frac{5}{x-1} = \\frac{5}{x-1}$, which is true?',
+            question: 'What are the real zeros of $r(x) = \\frac{x^2 - 4}{x^2 + x - 2}$?',
             options: [
-              'Every real number is a solution',
-              'All reals except $x = 1$',
-              '$x = 1$ is the only solution',
-              'No solution'
+              '$x = 2$ only',
+              '$x = 2$ and $x = -2$',
+              '$x = -2$ and $x = 1$',
+              '$x = -2$ only'
             ],
-            correctAnswer: 1,
-            explanation: 'The equation is an identity — true for every $x$ where both sides are defined. But $x = 1$ makes both denominators zero, so the solution set is all reals except $x = 1$.'
+            correctAnswer: 0,
+            explanation: 'Factor: $\\frac{(x-2)(x+2)}{(x+2)(x-1)}$. The numerator is $0$ at $x = 2$ and $x = -2$, but $x = -2$ also makes the denominator $0$, so it is a hole. The only zero is $x = 2$. Keeping $x = -2$ counts the hole as a zero, and $x = 1$ comes from the denominator.'
           },
           {
-            question: 'Solving $\\frac{x+2}{x} = 1 + \\frac{2}{x}$ gives $x + 2 = x + 2$. How many solutions are there?',
+            question: 'Solve $\\frac{(x+1)(x-4)}{x-2} \\geq 0$.',
             options: [
-              'No solution — it is an identity, but we need to check domain',
-              'All real numbers',
-              'All real numbers except $x = 0$',
-              'Only $x = 2$'
+              '$[-1, 2) \\cup [4, \\infty)$',
+              '$[-1, 2] \\cup [4, \\infty)$',
+              '$(-\\infty, -1] \\cup (2, 4]$',
+              '$(-1, 2) \\cup (4, \\infty)$'
             ],
-            correctAnswer: 2,
-            explanation: 'The equation simplifies to an identity (always true). But the original has $x$ in a denominator, so $x \\neq 0$. Solution: all reals except $0$.'
+            correctAnswer: 0,
+            explanation: 'Critical values: $-1$ and $4$ (numerator zeros, included by $\\geq$) and $2$ (denominator zero, always excluded). Signs: $-$ for $x < -1$, $+$ on $(-1, 2)$, $-$ on $(2, 4)$, $+$ for $x > 4$. A bracket at $2$ includes an undefined point, the third choice keeps the negative intervals, and open endpoints at $-1$ and $4$ drop the zeros.'
           },
           {
             question: 'For the inequality $\\frac{x}{x-2} < 0$, the solution is:',
@@ -146,19 +118,19 @@ $$\\boxed{(-\\infty, -3) \\cup [1, \\infty)}$$
       content: `
 **Solving Drill** 🧮
 
-**1)** Solve: $\\frac{6}{x} = 2$. What is $x$? (e.g., $\\frac{10}{x} = 5$ → $x = \\frac{10}{5} = 2$)
+**1)** What is the zero of $r(x) = \\frac{2x - 6}{x + 1}$? (e.g., $\\frac{3x - 12}{x + 5}$ is zero where $3x - 12 = 0$, so at $x = 4$)
 
-**2)** How many extraneous solutions arise when solving $\\frac{x^2 - 4}{x - 2} = x + 2$? (e.g., if the only solution makes a denominator zero, that is $1$ extraneous solution)
+**2)** How many real zeros does $r(x) = \\frac{x^2 - 4}{x - 2}$ have? (e.g., $\\frac{x^2 - 1}{x - 1}$ has $1$ zero, $x = -1$, because $x = 1$ is a hole)
 
 **3)** For $\\frac{x+1}{x-3} > 0$, how many intervals are in the solution set? (e.g., $\\frac{x}{x-1} > 0$ has solution $(-\\infty, 0) \\cup (1, \\infty)$ — that is $2$ intervals)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['3', '0', '2'],
-        hint1: 'Multiply both sides by $x$: $6 = 2x$.',
-        hint2: 'Simplify the left side: $\\frac{(x-2)(x+2)}{x-2} = x + 2$ for $x \\neq 2$. This is an identity. Does $x = 2$ solve the transformed equation?',
+        correctAnswers: ['3', '1', '2'],
+        hint1: 'Set the numerator equal to $0$: $2x - 6 = 0$. Check that the denominator is not $0$ there.',
+        hint2: 'The numerator is $0$ at $x = 2$ and $x = -2$. Which of these also makes the denominator $0$?',
         hint3: 'Critical values: $x = -1$ and $x = 3$. Test signs in three intervals: $(-\\infty, -1)$, $(-1, 3)$, $(3, \\infty)$.',
-        explanation: '1) $x = 3$. 2) The equation simplifies to the identity $x + 2 = x + 2$ (for $x \\neq 2$). All reals except $2$ are solutions. The transformed equation has no spurious roots, so $0$ extraneous. 3) Positive on $(-\\infty, -1)$ and $(3, \\infty)$ — two intervals.'
+        explanation: '1) $x = 3$, where the denominator is $4 \\ne 0$. 2) $x = 2$ is a hole because it also zeros the denominator, so the only zero is $x = -2$: $1$ zero. 3) Positive on $(-\\infty, -1)$ and $(3, \\infty)$ — two intervals.'
       }
     },
     {
@@ -170,12 +142,12 @@ $$\\boxed{(-\\infty, -3) \\cup [1, \\infty)}$$
       exercise: {
         dropdowns: [
           {
-            label: 'After multiplying both sides by the LCD, you must always',
-            options: ['factor the result', 'check for extraneous solutions', 'graph the equation', 'use the quadratic formula']
+            label: 'If $x = c$ makes both the numerator and the denominator zero, then $x = c$ is',
+            options: ['a zero of $r$', 'not a zero of $r$', 'always an asymptote', 'always an $x$-intercept']
           },
           {
-            label: 'An extraneous solution makes a _____ in the original equation equal to zero',
-            options: ['numerator', 'denominator', 'coefficient', 'exponent']
+            label: 'The real zeros of $r$ are the zeros of the _____ that do not zero the denominator',
+            options: ['numerator', 'denominator', 'leading term', 'constant term']
           },
           {
             label: 'For a rational inequality, you should never include $x$-values where the',
@@ -186,42 +158,42 @@ $$\\boxed{(-\\infty, -3) \\cup [1, \\infty)}$$
             options: ['integer value of $x$', 'odd-multiplicity zero of numerator or denominator', 'even-multiplicity zero', 'horizontal asymptote']
           }
         ],
-        correctAnswers: ['check for extraneous solutions', 'denominator', 'denominator is zero', 'odd-multiplicity zero of numerator or denominator'],
-        hint1: 'The LCD multiplication step is what can introduce false solutions.',
-        hint2: 'Extraneous solutions cause division by zero in the original.',
+        correctAnswers: ['not a zero of $r$', 'numerator', 'denominator is zero', 'odd-multiplicity zero of numerator or denominator'],
+        hint1: 'A function cannot equal $0$ where it is undefined.',
+        hint2: 'A fraction is $0$ only when its top is $0$.',
         hint3: 'The function is undefined where the denominator is zero — never valid.',
-        explanation: 'Always check for extraneous solutions. They make denominators zero. Never include denominator zeros in inequality solutions. Sign changes occur at odd-multiplicity zeros (even-multiplicity zeros cause a touch, not a sign change).'
+        explanation: 'A shared zero of the numerator and denominator is not a zero of $r$ (it is usually a hole). Zeros of $r$ come from the numerator. Never include denominator zeros in inequality solutions. Sign changes occur at odd-multiplicity zeros (even-multiplicity zeros cause a touch, not a sign change).'
       }
     },
     {
       id: 'p6-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Rational Equations & Inequalities** ✅
+**Exit Quiz — Rational Zeros & Inequalities** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'Solve: $\\frac{1}{x+1} + \\frac{1}{x-1} = \\frac{2}{x^2-1}$. The solution is:',
+            question: 'Solve $\\frac{x - 3}{(x + 1)^2} < 0$.',
             options: [
-              '$x = 1$',
-              '$x = -1$',
-              'No solution',
-              '$x = 0$'
+              '$(-\\infty, -1) \\cup (-1, 3)$',
+              '$(-1, 3)$',
+              '$(-\\infty, 3]$',
+              '$(-\\infty, -1) \\cup (3, \\infty)$'
             ],
-            correctAnswer: 2,
-            explanation: 'LCD $= (x+1)(x-1) = x^2-1$. Multiply through: $(x-1) + (x+1) = 2$. Simplify: $2x = 2$, so $x = 1$. But $x = 1$ makes the original denominators $x - 1$ and $x^2 - 1$ equal to zero. The only candidate is extraneous → **no solution**.'
+            correctAnswer: 0,
+            explanation: 'The denominator $(x + 1)^2$ is positive for every $x \\neq -1$, so the sign matches $x - 3$: negative for $x < 3$. Exclude $x = -1$ (undefined). The even multiplicity means no sign change at $-1$, so the interval $(-1, 3)$ alone misses $x < -1$, and a bracket at $3$ includes a zero that a strict inequality leaves out.'
           },
           {
             question: 'Solve $\\frac{x^2 - 1}{x + 1} \\leq 0$. After simplification (with hole noted), the solution is:',
             options: [
               '$(-\\infty, 1]$',
               '$(-\\infty, -1) \\cup (-1, 1]$',
-              '$(-\\infty, 1]$ but $x \\neq -1$',
+              '$(-\\infty, -1) \\cup (-1, 1)$',
               '$[1, \\infty)$'
             ],
-            correctAnswer: 2,
-            explanation: '$\\frac{(x-1)(x+1)}{x+1} = x - 1$ for $x \\neq -1$. Solve $x - 1 \\leq 0$: $x \\leq 1$. But $x = -1$ must be excluded (original denominator is zero). Solution: $(-\\infty, 1]$ with $x \\neq -1$.'
+            correctAnswer: 1,
+            explanation: '$\\frac{(x-1)(x+1)}{x+1} = x - 1$ for $x \\neq -1$. Solve $x - 1 \\leq 0$: $x \\leq 1$. But $x = -1$ must be excluded (original denominator is zero), so the solution is $(-\\infty, -1) \\cup (-1, 1]$. Writing $(-\\infty, 1]$ keeps the hole, and an open endpoint at $1$ drops a zero that $\\leq$ includes.'
           }
         ]
       }

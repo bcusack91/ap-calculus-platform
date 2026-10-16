@@ -431,7 +431,7 @@ This links three ideas that AP Precalculus treats as interchangeable:
 |-----------|---------------|
 | $p(c) = 0$ | $c$ is a **zero** (root) of $p$ |
 | $(x - c)$ is a **factor** | division leaves remainder $0$ |
-| $(c, 0)$ is an **$x$-intercept** | the graph crosses at $x = c$ |
+| $(c, 0)$ is an **$x$-intercept** | the graph meets the $x$-axis at $x = c$ (it crosses at an odd-multiplicity zero and touches without crossing at an even one) |
 
 > 💡 So "find the zeros," "factor the polynomial," and "find the $x$-intercepts" are three phrasings of the *same* task.`,
       },
@@ -459,9 +459,9 @@ This links three ideas that AP Precalculus treats as interchangeable:
       {
         id: 'pdr4-worked',
         type: 'text' as const,
-        content: `## Using It to Test Candidates
+        content: `## Using It to Confirm a Zero You Are Given
 
-**Is $x - 1$ a factor of $p(x) = x^3 - 7x + 6$?** Test $p(1)$:
+**A graph of $p(x) = x^3 - 7x + 6$ appears to cross the $x$-axis at $x = 1$. Is $x - 1$ a factor?** Check $p(1)$:
 $$p(1) = 1 - 7 + 6 = 0 \\;✓$$
 Yes — so $(x-1)$ is a factor. Synthetic-dividing by $x - 1$ peels it off:
 
@@ -500,7 +500,7 @@ So $p(x) = (x-1)(x^2 + x - 6) = (x-1)(x+3)(x-2)$, since $x^2 + x - 6 = (x+3)(x-2
         type: 'input-boxes' as const,
         content: `**Factor Theorem Drill** 🧮
 
-For $p(x) = x^3 - 7x + 6$, evaluate to test each candidate. Enter the value.
+A graph of $p(x) = x^3 - 7x + 6$ shows three $x$-intercepts, at $x = -3$, $x = 1$, and $x = 2$. Evaluate $p$ to confirm two of them, then check the $y$-intercept.
 
 **1)** $p(1) = \\,?$  (Is $x-1$ a factor?)
 **2)** $p(-3) = \\,?$  (Is $x+3$ a factor?)
@@ -530,7 +530,7 @@ For $p(x) = x^3 - 7x + 6$, evaluate to test each candidate. Enter the value.
 
 ---
 
-> 🔑 **The Strategy:** Find one zero, **divide it out**, and repeat on the smaller quotient until you reach a quadratic you can factor or solve. This "depress-and-conquer" loop finds every real zero of a polynomial.`,
+> 🔑 **The Strategy:** Start from a zero you are **given** (by a graph, a table, a known factor, or the problem statement), **divide it out**, and repeat on the smaller quotient until you reach a quadratic you can factor or solve.`,
       },
       {
         id: 'pdr5-strategy',
@@ -539,13 +539,13 @@ For $p(x) = x^3 - 7x + 6$, evaluate to test each candidate. Enter the value.
 
 To find all zeros of a polynomial $p(x)$:
 
-1. **Get one zero** $c$ — from a graph, a table, a given factor, or a value the problem asks you to check. Confirm it with $p(c) = 0$.
+1. **Get one zero** $c$ — from a graph, a table, a given factor, or a value the problem gives you. Confirm it with $p(c) = 0$.
 2. **Divide** $p(x)$ by $(x - c)$ using synthetic division. The quotient has degree one lower.
 3. **Repeat** on the quotient. Once it's a quadratic, factor it or use the quadratic formula.
 
 ### Example: $p(x) = x^3 - 4x^2 + x + 6$
 
-Test $x = -1$: $\\;p(-1) = -1 - 4 - 1 + 6 = 0$ ✓. Divide by $x + 1$:
+A table of values shows $p(-1) = 0$. Confirm: $\\;p(-1) = -1 - 4 - 1 + 6 = 0$ ✓. Divide by $x + 1$:
 
 $$
 \\begin{array}{c|cccc}
@@ -586,9 +586,9 @@ So $p(x) = (x+1)(x^2 - 5x + 6) = (x+1)(x-2)(x-3)$.
         type: 'text' as const,
         content: `## A Cubic with a Fractional Zero
 
-Find all zeros of $p(x) = 2x^3 + x^2 - 13x + 6$.
+Find all zeros of $p(x) = 2x^3 + x^2 - 13x + 6$, given that $x = 2$ is a zero.
 
-Test $x = 2$: $\\;p(2) = 16 + 4 - 26 + 6 = 0$ ✓. Divide by $x - 2$:
+Confirm: $\\;p(2) = 16 + 4 - 26 + 6 = 0$ ✓. Divide by $x - 2$:
 
 $$
 \\begin{array}{c|cccc}
@@ -604,7 +604,7 @@ $$2x - 1 = 0 \\Rightarrow x = \\tfrac{1}{2}, \\qquad x + 3 = 0 \\Rightarrow x = 
 
 **The zeros are $x = 2,\\; \\tfrac{1}{2},\\; -3$.**
 
-> 💡 Not every zero is an integer. The factor $(2x - 1)$ produces the fractional zero $x = \\tfrac{1}{2}$, which you only see after dividing out the zero you were given.`,
+> 💡 Not every zero is an integer. The factor $(2x - 1)$ produces the fractional zero $x = \\tfrac{1}{2}$, which you only see after dividing out the zero you were given. You never need to guess candidate zeros on the AP exam: hand factoring is limited to common factors and quadratics, and any other zero is supplied.`,
       },
       {
         id: 'pdr5-zeros-dropdown',

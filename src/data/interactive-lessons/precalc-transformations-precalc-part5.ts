@@ -145,7 +145,7 @@ $$f(x) = \\begin{cases} x^2 & x < 0 \\\\ 2x+1 & x \\geq 0 \\end{cases}$$
         dropdowns: [
           {
             label: 'V-shaped graph:',
-            options: ['$y = x^2$', '$y = |x|$', '$y = 1/x$', '$y = \\sqrt{x}$'],
+            options: ['$y = -x^2$', '$y = |x|$', '$y = \\frac{1}{x}$', '$y = \\sqrt{x}$'],
             correctAnswer: 1
           },
           {
@@ -186,10 +186,10 @@ $$f(x) = \\begin{cases} x^2 & x < 0 \\\\ 2x+1 & x \\geq 0 \\end{cases}$$
             explanation: 'The parent is $y = \\sqrt[3]{x}$, then reflected, shifted right 2, up 4.'
           },
           {
-            question: 'Which parent function passes through all four quadrants?',
-            options: ['$y = x^2$', '$y = |x|$', '$y = x^3$', '$y = \\sqrt{x}$'],
+            question: 'Apart from the origin, which parent function\'s graph lies only in Quadrants I and III?',
+            options: ['$y = -x^2$', '$y = -|x|$', '$y = x^3$', '$y = \\sqrt{x}$'],
             correctAnswer: 2,
-            explanation: '$y=x^3$: negative outputs for negative inputs, positive for positive → quadrants I and III.'
+            explanation: '$y=x^3$ gives negative outputs for negative inputs and positive outputs for positive inputs, so its graph lies in Quadrants I and III. $y = -x^2$ and $y = -|x|$ are never positive, so they lie in Quadrants III and IV, and $y = \\sqrt{x}$ lies only in Quadrant I.'
           }
         ]
       }

@@ -52,7 +52,7 @@ This gives us two useful rearrangements:
 
 $$\\sin\\theta = \\cos\\left(\\frac{\\pi}{2} - \\theta\\right) \\qquad \\cos\\theta = \\sin\\left(\\frac{\\pi}{2} - \\theta\\right)$$
 
-> **Cofunctions of complementary angles are equal.** For example: $\\sin 30° = \\cos 60° = \\frac{1}{2}$.
+> **Cofunctions of complementary angles are equal.** For example: $\\sin \\frac{\\pi}{6} = \\cos \\frac{\\pi}{3} = \\frac{1}{2}$.
 
 ### Worked Example: Using the Pythagorean Identity
 
@@ -78,15 +78,15 @@ In Q II, cosine is **negative**: $\\boxed{\\cos\\theta = -\\frac{4}{5}}$
 3. **Look up** $\\sin\\theta_R$ and $\\cos\\theta_R$ from the first-quadrant table
 4. **Apply the correct sign** based on the quadrant
 
-### Example: Evaluate $\\sin 300°$
+### Example: Evaluate $\\sin \\frac{5\\pi}{3}$
 
 | Step | Work |
 |:-----|:-----|
-| 1. Quadrant | $300°$ is in Q IV ($270° < 300° < 360°$) |
-| 2. Reference angle | $360° - 300° = 60°$ |
-| 3. First-quadrant value | $\\sin 60° = \\frac{\\sqrt{3}}{2}$ |
+| 1. Quadrant | $\\frac{5\\pi}{3}$ is in Q IV ($\\frac{3\\pi}{2} < \\frac{5\\pi}{3} < 2\\pi$) |
+| 2. Reference angle | $2\\pi - \\frac{5\\pi}{3} = \\frac{\\pi}{3}$ |
+| 3. First-quadrant value | $\\sin \\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$ |
 | 4. Sign in Q IV | Sine is **negative** |
-| **Result** | $\\sin 300° = -\\frac{\\sqrt{3}}{2}$ |
+| **Result** | $\\sin \\frac{5\\pi}{3} = -\\frac{\\sqrt{3}}{2}$ |
 
 ### Example: Evaluate $\\cos(-\\frac{\\pi}{4})$
 
@@ -147,7 +147,7 @@ No need to find reference angles — the even/odd properties are a shortcut!
 
 **1)** Given $\\sin\\theta = \\frac{8}{17}$ and $\\theta$ is in Q I, find $\\cos\\theta$. Write as a fraction (e.g., $3/5$). (e.g., $\\sin\\alpha = 5/13$ in Q I: $\\cos\\alpha = \\sqrt{1 - 25/169} = \\sqrt{144/169} = 12/13$)
 
-**2)** Evaluate $\\cos 240°$. Write as a fraction (e.g., $-1/2$). (e.g., $\\cos 120°$: Q II, ref $60°$, $\\cos 60° = 1/2$, negative in Q II → $-1/2$)
+**2)** Evaluate $\\cos \\frac{4\\pi}{3}$. Write as a fraction (e.g., $-1/2$). (e.g., $\\cos \\frac{2\\pi}{3}$: Q II, ref $\\frac{\\pi}{3}$, $\\cos \\frac{\\pi}{3} = 1/2$, negative in Q II → $-1/2$)
 
 **3)** If $\\cos\\theta = \\frac{\\sqrt{3}}{2}$, find $\\sin(\\frac{\\pi}{2} - \\theta)$ using the cofunction identity. Write as a simplified expression. (e.g., $\\sin\\alpha = 0.6$: $\\cos(\\frac{\\pi}{2} - \\alpha) = \\sin\\alpha = 0.6$)
       `,
@@ -155,9 +155,9 @@ No need to find reference angles — the even/odd properties are a shortcut!
         boxes: 3,
         correctAnswers: ['15/17', '-1/2', 'sqrt(3)/2'],
         hint1: '$\\cos^2\\theta = 1 - (8/17)^2 = 1 - 64/289 = 225/289$. Take the positive root (Q I).',
-        hint2: '$240°$ is in Q III. Reference angle $= 240° - 180° = 60°$. Cosine is negative in Q III.',
+        hint2: '$\\frac{4\\pi}{3}$ is in Q III. Reference angle $= \\frac{4\\pi}{3} - \\pi = \\frac{\\pi}{3}$. Cosine is negative in Q III.',
         hint3: 'The cofunction identity says $\\sin(\\frac{\\pi}{2} - \\theta) = \\cos\\theta$.',
-        explanation: '1) $\\cos\\theta = \\sqrt{225/289} = 15/17$. 2) $\\cos 240° = -\\cos 60° = -1/2$. 3) By cofunction identity: $\\sin(\\frac{\\pi}{2} - \\theta) = \\cos\\theta = \\sqrt{3}/2$.'
+        explanation: '1) $\\cos\\theta = \\sqrt{225/289} = 15/17$. 2) $\\cos \\frac{4\\pi}{3} = -\\cos \\frac{\\pi}{3} = -1/2$. 3) By cofunction identity: $\\sin(\\frac{\\pi}{2} - \\theta) = \\cos\\theta = \\sqrt{3}/2$.'
       }
     },
     {

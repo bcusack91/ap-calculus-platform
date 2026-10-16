@@ -99,8 +99,11 @@ Different polynomials require different factoring strategies:
 | **Trinomial** ($x^2 + bx + c$) | Leading coefficient is 1 | $x^2 - 7x + 12 = (x-3)(x-4)$ |
 | **AC method** ($ax^2 + bx + c$) | Leading coefficient $\\neq 1$ | $2x^2 + 7x + 3 = (2x+1)(x+3)$ |
 | **Difference of squares** | $a^2 - b^2$ | $x^2 - 9 = (x-3)(x+3)$ |
-| **Sum/difference of cubes** | $a^3 \\pm b^3$ | $x^3 - 8 = (x-2)(x^2 + 2x + 4)$ |
-| **Grouping** | 4+ terms with pairwise common factors | $x^3 + x^2 - 4x - 4 = (x+1)(x-2)(x+2)$ |
+| **Quadratic formula** | A quadratic factor that will not factor nicely | $x^2 - 2x - 1 = 0 \\Rightarrow x = 1 \\pm \\sqrt{2}$ |
+
+Combine them: a common factor often leaves a quadratic. For example, $2x^3 - 8x = 2x(x^2 - 4) = 2x(x - 2)(x + 2)$.
+
+> 📌 **Exam scope:** without technology, AP Precalculus factoring is limited to common factors and the rules for quadratics. For higher-degree polynomials, the other zeros are given to you or read from a graph or table.
 
 
 ---
@@ -136,7 +139,7 @@ This means: if you can verify that $p(c) = 0$ by substitution, then you know $(x
           {
             question: 'Which factoring technique would you use first on $3x^4 - 12x^2$?',
             options: [
-              'Difference of cubes',
+              'Quadratic formula',
               'AC method',
               'Factor out the GCF, then difference of squares',
               'Trinomial factoring'
@@ -193,7 +196,7 @@ This means: if you can verify that $p(c) = 0$ by substitution, then you know $(x
           },
           {
             label: 'The expression $x^2 - 25$ is an example of',
-            options: ['perfect square trinomial', 'sum of cubes', 'difference of squares', 'grouping pattern']
+            options: ['perfect square trinomial', 'common factor only', 'difference of squares', 'AC method trinomial']
           },
           {
             label: 'To find the $y$-intercept of a polynomial, evaluate $p$ at',

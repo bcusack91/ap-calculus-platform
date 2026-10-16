@@ -123,29 +123,29 @@ $$0, \\frac{1}{2}, \\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{3}}{2}, 1$$
       content: `
 **🎉 You Did It!**
 
-> **These are the SINE values for 0°, 30°, 45°, 60°, and 90°!**
+> **These are the SINE values for the angles $0$, $\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, and $\\frac{\\pi}{2}$ (in radians)!**
 
-$$\\sin(0°) = 0$$
+$$\\sin(0) = 0$$
 
-$$\\sin(30°) = \\frac{1}{2}$$
+$$\\sin\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}$$
 
-$$\\sin(45°) = \\frac{\\sqrt{2}}{2}$$
+$$\\sin\\left(\\frac{\\pi}{4}\\right) = \\frac{\\sqrt{2}}{2}$$
 
-$$\\sin(60°) = \\frac{\\sqrt{3}}{2}$$
+$$\\sin\\left(\\frac{\\pi}{3}\\right) = \\frac{\\sqrt{3}}{2}$$
 
-$$\\sin(90°) = 1$$
+$$\\sin\\left(\\frac{\\pi}{2}\\right) = 1$$
 
 **BONUS TIP:** For cosine values, just reverse the order!
 
-$$\\cos(0°) = 1$$
+$$\\cos(0) = 1$$
 
-$$\\cos(30°) = \\frac{\\sqrt{3}}{2}$$
+$$\\cos\\left(\\frac{\\pi}{6}\\right) = \\frac{\\sqrt{3}}{2}$$
 
-$$\\cos(45°) = \\frac{\\sqrt{2}}{2}$$
+$$\\cos\\left(\\frac{\\pi}{4}\\right) = \\frac{\\sqrt{2}}{2}$$
 
-$$\\cos(60°) = \\frac{1}{2}$$
+$$\\cos\\left(\\frac{\\pi}{3}\\right) = \\frac{1}{2}$$
 
-$$\\cos(90°) = 0$$
+$$\\cos\\left(\\frac{\\pi}{2}\\right) = 0$$
       `
     },
     {
@@ -171,11 +171,13 @@ export const unitCircleAnglesLessonData = {
       content: `
 **Now Let's Learn the Angles!**
 
-The first quadrant of the unit circle has five key angles:
+The first quadrant of the unit circle has five key angles, measured in **radians**:
 
-**0°, 30°, 45°, 60°, and 90°**
+$$0, \\quad \\frac{\\pi}{6}, \\quad \\frac{\\pi}{4}, \\quad \\frac{\\pi}{3}, \\quad \\frac{\\pi}{2}$$
 
 These correspond to the values we just calculated!
+
+> 📏 **Degrees ↔ radians bridge:** a full turn is $2\\pi$ radians ($360°$), so $\\pi$ radians $= 180°$. If you learned these angles as $30°, 45°, 60°, 90°$, they are $\\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{\\pi}{2}$. The AP exam uses radians only, so we will too.
 
 Let's practice identifying these angles.
       `
@@ -186,14 +188,14 @@ Let's practice identifying these angles.
       content: `
 **Practice: Fill in the First Quadrant Angles**
 
-Enter the five key angles in the first quadrant in order:
+Enter the five key angles of the first quadrant in order, from $0$ up to $\\frac{\\pi}{2}$, including both axis angles $0$ and $\\frac{\\pi}{2}$. Write each one as a multiple of $\\pi$ and type the **coefficient** (type \`1/6\` for $\\frac{\\pi}{6}$, and \`0\` for the angle $0$):
       `,
       exercise: {
         boxes: 5,
-        correctAnswers: ['0', '30', '45', '60', '90'],
-        hint1: 'Remember: Start at 0° and go up to 90°',
-        hint2: 'The angles are: 0, 30, 45, 60, and 90 degrees',
-        explanation: 'The five key angles in the first quadrant are 0°, 30°, 45°, 60°, and 90°'
+        correctAnswers: ['0', '1/6', '1/4', '1/3', '1/2'],
+        hint1: 'Remember: start at $0$ and go up to $\\frac{\\pi}{2}$, a quarter turn.',
+        hint2: 'The angles are $0$, $\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, and $\\frac{\\pi}{2}$, so the coefficients are $0$, $\\frac{1}{6}$, $\\frac{1}{4}$, $\\frac{1}{3}$, $\\frac{1}{2}$.',
+        explanation: 'The five key angles in the first quadrant are $0$, $\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, and $\\frac{\\pi}{2}$ radians.'
       }
     },
     {
@@ -202,13 +204,13 @@ Enter the five key angles in the first quadrant in order:
       content: `
 **Understanding "Sin UP"** 📈
 
-Look at how sine values change as we go from 0° to 90°:
+Look at how sine values change as the angle goes from $0$ to $\\frac{\\pi}{2}$:
 
 [SINE_TABLE]
 
 **Sin goes UP!** ⬆️ The values increase from 0 to 1 as the angle increases.
 
-Remember: **"Sin UP"** - Sine values go UP from 0° to 90°!
+Remember: **"Sin UP"** - Sine values go UP from $0$ to $\\frac{\\pi}{2}$!
       `
     },
     {
@@ -223,7 +225,7 @@ Now look at how **CO**sine values change (remember: **CO**SINE → **CO**AST):
 
 **Cosine goes DOWN!** ⬇️ The values decrease from 1 to 0 as the angle increases.
 
-Remember: **"COAST DOWN"** - COsine values go DOWN from 90° to 0°!
+Remember: **"COAST DOWN"** - COsine values go DOWN as the angle goes from $0$ to $\\frac{\\pi}{2}$!
 
 **Even better:** Cosine values are just the sine values in reverse order!
       `
@@ -268,11 +270,11 @@ Now see how these values become sine and cosine:
 
 | Angle | sin (UP ⬆️) | cos (DOWN ⬇️) |
 |-------|------------|---------------|
-| **0°** | $0$ | $1$ |
-| **30°** | $\\frac{1}{2}$ | $\\frac{\\sqrt{3}}{2}$ |
-| **45°** | $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\sqrt{2}}{2}$ |
-| **60°** | $\\frac{\\sqrt{3}}{2}$ | $\\frac{1}{2}$ |
-| **90°** | $1$ | $0$ |
+| $0$ | $0$ | $1$ |
+| $\\frac{\\pi}{6}$ | $\\frac{1}{2}$ | $\\frac{\\sqrt{3}}{2}$ |
+| $\\frac{\\pi}{4}$ | $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\sqrt{2}}{2}$ |
+| $\\frac{\\pi}{3}$ | $\\frac{\\sqrt{3}}{2}$ | $\\frac{1}{2}$ |
+| $\\frac{\\pi}{2}$ | $1$ | $0$ |
 
 ---
 
@@ -310,19 +312,19 @@ Congratulations! You've mastered the essential skills for memorizing the unit ci
 
 **2. The Five Key Angles**
 
-$$0°, \\quad 30°, \\quad 45°, \\quad 60°, \\quad 90°$$
+$$0, \\quad \\frac{\\pi}{6}, \\quad \\frac{\\pi}{4}, \\quad \\frac{\\pi}{3}, \\quad \\frac{\\pi}{2}$$
 
 ---
 
 **3. The Sin UP Pattern** ⬆️
 
-Sine values **increase** from $0$ to $1$ as angles go from $0°$ to $90°$
+Sine values **increase** from $0$ to $1$ as angles go from $0$ to $\\frac{\\pi}{2}$
 
 ---
 
 **4. The COAST DOWN Pattern** ⬇️
 
-Cosine values **decrease** from $1$ to $0$ as angles go from $0°$ to $90°$
+Cosine values **decrease** from $1$ to $0$ as angles go from $0$ to $\\frac{\\pi}{2}$
 
 ---
 
@@ -369,9 +371,9 @@ Here's the KEY concept that connects everything:
 > - **x = cos(θ)** (the cosine of the angle)
 > - **y = sin(θ)** (the sine of the angle)
 
-So when we write a point like $(\\frac{\\sqrt{3}}{2}, \\frac{1}{2})$ on the unit circle at 30°:
-- The **x-coordinate** $\\frac{\\sqrt{3}}{2}$ is $\\cos(30°)$
-- The **y-coordinate** $\\frac{1}{2}$ is $\\sin(30°)$
+So when we write a point like $(\\frac{\\sqrt{3}}{2}, \\frac{1}{2})$ on the unit circle at the angle $\\frac{\\pi}{6}$:
+- The **x-coordinate** $\\frac{\\sqrt{3}}{2}$ is $\\cos\\left(\\frac{\\pi}{6}\\right)$
+- The **y-coordinate** $\\frac{1}{2}$ is $\\sin\\left(\\frac{\\pi}{6}\\right)$
 
 **Think of it this way:** The angle tells you where to go, and the coordinates tell you the sine and cosine values!
       `
@@ -384,14 +386,14 @@ So when we write a point like $(\\frac{\\sqrt{3}}{2}, \\frac{1}{2})$ on the unit
 
 The unit circle values come from two special right triangles that you may already know:
 
-**30-60-90 Triangle:**
-- Angles: 30°, 60°, 90°
+**The $\\frac{\\pi}{6}$, $\\frac{\\pi}{3}$, $\\frac{\\pi}{2}$ Triangle** (often called the 30-60-90 triangle):
+- Angles: $\\frac{\\pi}{6}$, $\\frac{\\pi}{3}$, $\\frac{\\pi}{2}$
 - Side ratio: $1 : \\sqrt{3} : 2$
 - When we scale to fit the unit circle (radius = 1), we divide by 2
 - This gives us: $\\frac{1}{2} : \\frac{\\sqrt{3}}{2} : 1$
 
-**45-45-90 Triangle:**
-- Angles: 45°, 45°, 90°
+**The $\\frac{\\pi}{4}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{2}$ Triangle** (often called the 45-45-90 triangle):
+- Angles: $\\frac{\\pi}{4}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{2}$
 - Side ratio: $1 : 1 : \\sqrt{2}$
 - When we scale to fit the unit circle, we divide by $\\sqrt{2}$
 - This gives us: $\\frac{1}{\\sqrt{2}} : \\frac{1}{\\sqrt{2}} : 1$ (which simplifies to $\\frac{\\sqrt{2}}{2} : \\frac{\\sqrt{2}}{2} : 1$)
@@ -403,16 +405,16 @@ The unit circle values come from two special right triangles that you may alread
       id: 'first-quadrant-visual',
       type: 'text' as const,
       content: `
-**The First Quadrant (0° to 90°)** 🎯
+**The First Quadrant ($0$ to $\\frac{\\pi}{2}$)** 🎯
 
 Now it's your turn! Let's see if you can fill in the first quadrant of the unit circle.
 
 [UNIT_CIRCLE_GAME]
 
 Fill in all the angles and coordinates to complete the game. Remember:
-- **Angles:** 0°, 30°, 45°, 60°, 90°
+- **Angles (radians):** $0$, $\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, $\\frac{\\pi}{2}$ (type π/6 or pi/6)
 - **Key coordinates:** (1, 0), (0, 1), and the three special triangle points
-- **Tip:** Use the patterns from 30-60-90 and 45-45-90 triangles!
+- **Tip:** Use the patterns from the two special right triangles!
       `
     },
     {
@@ -423,7 +425,7 @@ Fill in all the angles and coordinates to complete the game. Remember:
 
 When you draw a radius from the origin to any point on the unit circle:
 
-1. **The angle** is measured from the positive x-axis (going counterclockwise)
+1. **The angle** is measured from the positive x-axis (going counterclockwise), in radians
 2. **The horizontal distance** from the origin is the cosine (x-coordinate)
 3. **The vertical distance** from the origin is the sine (y-coordinate)
 
@@ -450,11 +452,11 @@ Congratulations! You now know:
 
 ✅ What the unit circle is (a circle with radius 1)
 ✅ How coordinates relate to sine and cosine
-✅ Why the special triangles (30-60-90 and 45-45-90) give us our values
+✅ Why the two special right triangles give us our values
 ✅ How to read any point on the unit circle
 ✅ The connection between geometry and trigonometry
 
-**Up Next:** You'll learn how to extend this to all four quadrants and work with angles beyond 90°!
+**Up Next:** You'll learn how to extend this to all four quadrants and work with angles beyond $\\frac{\\pi}{2}$!
 
 You've mastered the foundation of the unit circle! 🎉
       `

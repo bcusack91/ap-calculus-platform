@@ -125,7 +125,7 @@ $$\\frac{1}{\\cos\\theta} - \\cos\\theta = \\frac{1 - \\cos^2\\theta}{\\cos\\the
 
 **2)** Simplify $\\cot\\theta \\cdot \\sin\\theta$. Write as a single trig function. (e.g., $\\tan\\theta \\cdot \\cos\\theta = \\frac{\\sin\\theta}{\\cos\\theta} \\cdot \\cos\\theta = \\sin\\theta$)
 
-**3)** Evaluate $\\tan 60° \\cdot \\cot 60°$. Write as an integer. (e.g., $\\sin 45° \\cdot \\csc 45° = 1$ since they are reciprocals)
+**3)** Evaluate $\\tan \\frac{\\pi}{3} \\cdot \\cot \\frac{\\pi}{3}$. Write as an integer. (e.g., $\\sin \\frac{\\pi}{4} \\cdot \\csc \\frac{\\pi}{4} = 1$ since they are reciprocals)
       `,
       exercise: {
         boxes: 3,

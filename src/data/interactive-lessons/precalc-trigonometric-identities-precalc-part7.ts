@@ -19,7 +19,7 @@ This final part combines **every identity type** from Parts 1–6 into mixed pro
 | **Reciprocal** | $\\csc\\theta = \\frac{1}{\\sin\\theta}$, $\\sec\\theta = \\frac{1}{\\cos\\theta}$, $\\cot\\theta = \\frac{1}{\\tan\\theta}$ |
 | **Quotient** | $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$, $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$ |
 | **Even-Odd** | $\\cos(-\\theta) = \\cos\\theta$, $\\sin(-\\theta) = -\\sin\\theta$, $\\tan(-\\theta) = -\\tan\\theta$ |
-| **Cofunction** | $\\sin\\theta = \\cos(90°-\\theta)$, $\\tan\\theta = \\cot(90°-\\theta)$, etc. |
+| **Cofunction** | $\\sin\\theta = \\cos(\\frac{\\pi}{2}-\\theta)$, $\\tan\\theta = \\cot(\\frac{\\pi}{2}-\\theta)$, etc. |
 | **Sum/Difference** | $\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B$, $\\cos(A \\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B$ |
 | **Double-Angle** | $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$, $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta = 2\\cos^2\\theta - 1 = 1 - 2\\sin^2\\theta$ |
 | **$\\cos 2\\theta$ rearranged** | $\\sin^2\\theta = \\frac{1-\\cos 2\\theta}{2}$, $\\cos^2\\theta = \\frac{1+\\cos 2\\theta}{2}$ |
@@ -38,8 +38,8 @@ This final part combines **every identity type** from Parts 1–6 into mixed pro
 | $\\sin^2$ or $\\cos^2$ alone | Pythagorean → replace with $1 - \\text{other}^2$ |
 | $\\sec, \\csc, \\tan, \\cot$ mixed | Reciprocal/Quotient → convert to sin/cos |
 | Negative angle $(-\\theta)$ | Even-odd |
-| $90° - \\theta$ or $\\frac{\\pi}{2} - \\theta$ | Cofunction |
-| Non-standard angle ($15°, 75°, 105°$…) | Sum/Difference formulas |
+| $\\frac{\\pi}{2} - \\theta$ | Cofunction |
+| Non-standard angle ($\\frac{\\pi}{12}, \\frac{5\\pi}{12}, \\frac{7\\pi}{12}$…) | Sum/Difference formulas |
 | $\\sin\\theta\\cos\\theta$ product | Double-angle: $= \\frac{1}{2}\\sin 2\\theta$ |
 | $\\cos^2\\theta - \\sin^2\\theta$ | Recognize $= \\cos 2\\theta$ |
 | $1 \\pm \\cos\\theta$ in denominator | Multiply by the conjugate, then use Pythagorean |
@@ -68,17 +68,17 @@ Use double-angle expansions:
 
 $$\\frac{2\\sin\\theta\\cos\\theta}{2\\cos^2\\theta} = \\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$$
 
-### Example 2: Find $\\sin 75°\\cos 15° + \\cos 75°\\sin 15°$
+### Example 2: Find $\\sin \\frac{5\\pi}{12}\\cos \\frac{\\pi}{12} + \\cos \\frac{5\\pi}{12}\\sin \\frac{\\pi}{12}$
 
 Recognize the sum pattern: $\\sin A\\cos B + \\cos A\\sin B = \\sin(A + B)$
 
-$$= \\sin(75° + 15°) = \\sin 90° = 1$$
+$$= \\sin(\\frac{5\\pi}{12} + \\frac{\\pi}{12}) = \\sin \\frac{\\pi}{2} = 1$$
 
-### Example 3: Simplify $\\frac{\\sec(-\\theta)}{\\csc(90° - \\theta)}$
+### Example 3: Simplify $\\frac{\\sec(-\\theta)}{\\csc(\\frac{\\pi}{2} - \\theta)}$
 
 Apply even-odd: $\\sec(-\\theta) = \\sec\\theta$ (even).
 
-Apply cofunction: $\\csc(90° - \\theta) = \\sec\\theta$.
+Apply cofunction: $\\csc(\\frac{\\pi}{2} - \\theta) = \\sec\\theta$.
 
 $$\\frac{\\sec\\theta}{\\sec\\theta} = 1$$
 
@@ -100,15 +100,15 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
       exercise: {
         questions: [
           {
-            question: '$\\cos 20°\\cos 40° - \\sin 20°\\sin 40°$ equals:',
+            question: '$\\cos \\frac{\\pi}{9}\\cos \\frac{2\\pi}{9} - \\sin \\frac{\\pi}{9}\\sin \\frac{2\\pi}{9}$ equals:',
             options: [
-              '$\\cos 60°$',
-              '$\\cos(-20°)$',
-              '$\\cos 800°$',
-              '$\\sin(-20°)$'
+              '$\\cos \\frac{\\pi}{3}$',
+              '$\\cos(-\\frac{\\pi}{9})$',
+              '$\\sin \\frac{\\pi}{3}$',
+              '$\\sin(-\\frac{\\pi}{9})$'
             ],
             correctAnswer: 0,
-            explanation: 'This matches $\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$ with $A=20°, B=40°$. So $\\cos(20°+40°) = \\cos 60° = \\frac{1}{2}$.'
+            explanation: 'This matches $\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$ with $A=\\frac{\\pi}{9}, B=\\frac{2\\pi}{9}$. So $\\cos(\\frac{\\pi}{9}+\\frac{2\\pi}{9}) = \\cos \\frac{\\pi}{3} = \\frac{1}{2}$.'
           },
           {
             question: 'Simplify: $\\frac{1 - \\cos 2\\theta}{\\sin 2\\theta}$',
@@ -141,18 +141,18 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
       content: `
 **Cross-Topic Computation** 🧮
 
-**1)** $\\cos^2 15° + \\sin^2 15°$ = ? Write as an integer. (e.g., $\\cos^2 73° + \\sin^2 73° = 1$ by Pythagorean identity)
+**1)** $\\cos^2 \\frac{\\pi}{12} + \\sin^2 \\frac{\\pi}{12}$ = ? Write as an integer. (e.g., $\\cos^2 1.3 + \\sin^2 1.3 = 1$ by Pythagorean identity)
 
 **2)** Simplify $\\frac{\\sin 2\\theta}{2\\sin\\theta}$ to a single trig function. Write the function name. (e.g., $\\frac{\\cos 2\\theta + 1}{2\\cos\\theta}$ simplifies by expanding $\\cos 2\\theta$)
 
-**3)** $\\sin(-30°)\\sec(-30°)$ = ? Write as a fraction. (e.g., $\\cos(-60°)\\csc(-60°) = \\cos 60° \\cdot (-\\csc 60°) = \\frac{1}{2} \\cdot (-\\frac{2\\sqrt{3}}{3})$)
+**3)** $\\sin(-\\frac{\\pi}{6})\\sec(-\\frac{\\pi}{6})$ = ? Write as a fraction. (e.g., $\\cos(-\\frac{\\pi}{3})\\csc(-\\frac{\\pi}{3}) = \\cos \\frac{\\pi}{3} \\cdot (-\\csc \\frac{\\pi}{3}) = \\frac{1}{2} \\cdot (-\\frac{2\\sqrt{3}}{3})$)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['1', 'cos', '-sqrt(3)/3'],
         hint1: 'This is the Pythagorean identity $\\sin^2\\theta + \\cos^2\\theta = 1$ — works for any angle.',
         hint2: '$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$, so $\\frac{2\\sin\\theta\\cos\\theta}{2\\sin\\theta} = ?$',
-        hint3: '$\\sin(-30°) = -\\sin 30° = -1/2$ (odd). $\\sec(-30°) = \\sec 30° = \\frac{2}{\\sqrt{3}}$ (even). Multiply them.',
+        hint3: '$\\sin(-\\frac{\\pi}{6}) = -\\sin \\frac{\\pi}{6} = -1/2$ (odd). $\\sec(-\\frac{\\pi}{6}) = \\sec \\frac{\\pi}{6} = \\frac{2}{\\sqrt{3}}$ (even). Multiply them.',
         explanation: '1) $\\cos^2\\theta + \\sin^2\\theta = 1$ always. 2) $\\frac{2\\sin\\theta\\cos\\theta}{2\\sin\\theta} = \\cos\\theta$. 3) $(-1/2)(2/\\sqrt{3}) = -1/\\sqrt{3} = -\\sqrt{3}/3$.'
       }
     },
@@ -169,7 +169,7 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
             options: ['Pythagorean identity', 'Double-angle: $\\frac{1}{2}\\sin 2\\theta$', 'Sum formula', 'Even-odd identity']
           },
           {
-            label: 'To find the exact value of $\\cos 15°$, use',
+            label: 'To find the exact value of $\\cos \\frac{\\pi}{12}$, use',
             options: ['Pythagorean identity', 'Double-angle formula', 'Sum/Difference formula', 'Cofunction identity']
           },
           {
@@ -177,15 +177,15 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
             options: ['Sum formulas', 'Even-odd identities', 'Double-angle formulas', 'Power-reduction']
           },
           {
-            label: '$\\sin 50°$ can be rewritten as $\\cos\\_\\_°$ using',
+            label: '$\\sin \\frac{2\\pi}{5}$ can be rewritten as $\\cos \\frac{\\pi}{10}$ using',
             options: ['Even-odd identity', 'Pythagorean identity', 'Cofunction identity', 'Double-angle identity']
           }
         ],
         correctAnswers: ['Double-angle: $\\frac{1}{2}\\sin 2\\theta$', 'Sum/Difference formula', 'Even-odd identities', 'Cofunction identity'],
         hint1: '$\\sin\\theta\\cos\\theta = \\frac{1}{2}(2\\sin\\theta\\cos\\theta) = \\frac{1}{2}\\sin 2\\theta$.',
-        hint2: '$15° = 45° - 30°$, so use the difference formula for cosine.',
+        hint2: '$\\frac{\\pi}{12} = \\frac{\\pi}{4} - \\frac{\\pi}{6}$, so use the difference formula for cosine.',
         hint3: 'Cosine is even, cosecant is odd — determine the signs first.',
-        explanation: '$\\sin\\theta\\cos\\theta \\to$ double-angle. $\\cos 15° \\to$ difference formula. Negative angles $\\to$ even-odd. $\\sin 50° = \\cos 40° \\to$ cofunction.'
+        explanation: '$\\sin\\theta\\cos\\theta \\to$ double-angle. $\\cos \\frac{\\pi}{12} \\to$ difference formula. Negative angles $\\to$ even-odd. $\\sin \\frac{2\\pi}{5} = \\cos \\frac{\\pi}{10} \\to$ cofunction.'
       }
     },
     {

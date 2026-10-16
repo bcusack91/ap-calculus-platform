@@ -14,8 +14,8 @@ Compare degrees of numerator ($n$) and denominator ($d$):
 | Condition | HA |
 |-----------|----|
 | $n < d$ | $y = 0$ |
-| $n = d$ | $y = \\frac{\\text{leading coefficients}}{\\text{ratio}}$ |
-| $n > d$ | No HA (oblique asymptote) |
+| $n = d$ | $y = \\dfrac{a}{b}$, the ratio of the leading coefficients ($a$ on top, $b$ on the bottom) |
+| $n > d$ | No HA (a slant asymptote when $n = d + 1$) |
     
     `
     },
@@ -40,15 +40,15 @@ Degrees equal (both 2). HA: $y = \\frac{3}{1} = 3$ ✅
       exercise: {
         questions: [
           {
-                    "question": "HA of 1/(x+1)?",
+                    "question": "What is the horizontal asymptote of $y = \\dfrac{1}{x+1}$?",
                     "options": [
-                              "y = 0",
-                              "y = 1",
-                              "y = −1",
-                              "No HA"
+                              "$y = 0$",
+                              "$y = 1$",
+                              "$y = -1$",
+                              "No horizontal asymptote"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Degree num (0) < degree den (1) → y=0."
+                    "explanation": "The numerator has degree $0$ and the denominator has degree $1$. A smaller degree on top means $y \\to 0$ as $x \\to \\pm\\infty$, so the asymptote is $y = 0$."
           }
 ]
       }
@@ -97,9 +97,9 @@ Degrees equal (both 2). HA: $y = \\frac{3}{1} = 3$ ✅
 
 | # | Function | HA |
 |---|---------|----|
-| 1 | $\\frac{1}{x+1}$ | y = 0 |
-| 2 | $\\frac{2x}{x-3}$ | y = 2 |
-| 3 | $\\frac{4x^2}{2x^2+1}$ | y = 2 |
+| 1 | $\\frac{1}{x+1}$ | $y = 0$ |
+| 2 | $\\frac{2x}{x-3}$ | $y = 2$ |
+| 3 | $\\frac{4x^2}{2x^2+1}$ | $y = 2$ |
     
     `
     },
@@ -112,15 +112,15 @@ Degrees equal (both 2). HA: $y = \\frac{3}{1} = 3$ ✅
       exercise: {
         questions: [
           {
-                    "question": "HA of 2x/(x−3)?",
+                    "question": "What is the horizontal asymptote of $y = \\dfrac{2x}{x-3}$?",
                     "options": [
-                              "y = 2",
-                              "y = 0",
-                              "y = −3",
-                              "No HA"
+                              "$y = 2$",
+                              "$y = 0$",
+                              "$y = -3$",
+                              "$y = 3$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Equal degrees → ratio of LCs: 2/1=2."
+                    "explanation": "The degrees are equal (both $1$), so the asymptote is the ratio of leading coefficients: $y = \\dfrac{2}{1} = 2$. The value $3$ comes from the denominator's zero, which gives the vertical asymptote $x = 3$, not a horizontal one."
           }
 ]
       }

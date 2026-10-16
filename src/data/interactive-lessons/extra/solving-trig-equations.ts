@@ -130,18 +130,18 @@ Use A·S·T·C to decide the sign of each value.`,
         type: 'input-boxes' as const,
         content: `**Reference Angles** 🧮
 
-The reference angle is the acute angle to the nearest $x$-axis. Enter each reference angle **in degrees**.
+The reference angle is the acute angle to the nearest $x$-axis. Write each reference angle as a multiple of $\\pi$ and enter the **coefficient** (type \`1/6\` for $\\frac{\\pi}{6}$).
 
-**1)** A terminal angle of $150^\\circ$ → reference angle $= \\,?$
-**2)** A terminal angle of $210^\\circ$ → reference angle $= \\,?$
-**3)** A terminal angle of $300^\\circ$ → reference angle $= \\,?$`,
+**1)** A terminal angle of $\\frac{5\\pi}{6}$ → reference angle $= \\,?\\cdot\\pi$
+**2)** A terminal angle of $\\frac{7\\pi}{6}$ → reference angle $= \\,?\\cdot\\pi$
+**3)** A terminal angle of $\\frac{5\\pi}{3}$ → reference angle $= \\,?\\cdot\\pi$`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['30', '30', '60'],
-          hint1: 'In QII the reference angle is $180^\\circ - \\theta$: $180 - 150 = 30$.',
-          hint2: 'In QIII the reference angle is $\\theta - 180^\\circ$: $210 - 180 = 30$.',
-          hint3: 'In QIV the reference angle is $360^\\circ - \\theta$: $360 - 300 = 60$.',
-          explanation: '1) $180-150 = 30^\\circ$.  2) $210-180 = 30^\\circ$.  3) $360-300 = 60^\\circ$. The reference angle is always between $0^\\circ$ and $90^\\circ$.',
+          correctAnswers: ['1/6', '1/6', '1/3'],
+          hint1: 'In QII the reference angle is $\\pi - \\theta$: $\\frac{6\\pi}{6} - \\frac{5\\pi}{6} = \\frac{\\pi}{6}$.',
+          hint2: 'In QIII the reference angle is $\\theta - \\pi$: $\\frac{7\\pi}{6} - \\frac{6\\pi}{6} = \\frac{\\pi}{6}$.',
+          hint3: 'In QIV the reference angle is $2\\pi - \\theta$: $\\frac{6\\pi}{3} - \\frac{5\\pi}{3} = \\frac{\\pi}{3}$.',
+          explanation: '1) $\\pi - \\frac{5\\pi}{6} = \\frac{\\pi}{6}$.  2) $\\frac{7\\pi}{6} - \\pi = \\frac{\\pi}{6}$.  3) $2\\pi - \\frac{5\\pi}{3} = \\frac{\\pi}{3}$. The reference angle is always between $0$ and $\\frac{\\pi}{2}$.',
         },
       },
     ],
@@ -160,7 +160,7 @@ The reference angle is the acute angle to the nearest $x$-axis. Enter each refer
 
 ---
 
-> 🔑 **The Plan:** To solve $\\sin\\theta = k$ (or $\\cos$, or $\\tan$) on one full turn $[0, 2\\pi)$: find the **reference angle** from the unit circle, then use A·S·T·C to place a solution in **each** quadrant where the sign is correct.`,
+> 🔑 **The Plan:** To solve $\\sin\\theta = k$ (or $\\cos$, or $\\tan$) on one full turn $[0, 2\\pi)$: find the **reference angle** from the unit circle, then use A·S·T·C to place a solution in **each** quadrant where the sign is correct. The same solutions are the boundaries for trig **inequalities**.`,
       },
       {
         id: 'ste2-sine',
@@ -233,6 +233,31 @@ $$\\boxed{\\theta = \\frac{\\pi}{4}, \\; \\frac{5\\pi}{4}}$$
 > 💡 Notice the two solutions differ by exactly $\\pi$ — that's the signature of tangent.`,
       },
       {
+        id: 'ste2-inequalities',
+        type: 'text' as const,
+        content: `## From Equations to Inequalities
+
+To solve an inequality such as $\\sin\\theta \\ge k$ on $[0, 2\\pi)$, solve the **equation** first. Its solutions are the boundary angles that split $[0, 2\\pi)$ into intervals.
+
+1. **Boundaries:** solve $\\sin\\theta = k$.
+2. **Test:** pick one angle inside each interval and check the inequality (or read the unit circle: $\\sin\\theta$ is the $y$-coordinate, $\\cos\\theta$ is the $x$-coordinate).
+3. **Write the answer:** keep the intervals that work. Include the boundary angles only for $\\le$ or $\\ge$.
+
+### Example 1: $\\sin\\theta \\ge \\dfrac{1}{2}$ on $[0, 2\\pi)$
+
+Boundaries: $\\dfrac{\\pi}{6}$ and $\\dfrac{5\\pi}{6}$. Test $\\dfrac{\\pi}{2}$: $\\sin\\dfrac{\\pi}{2} = 1 \\ge \\dfrac12$ ✓. Test $\\pi$: $\\sin\\pi = 0$ ✗.
+
+$$\\boxed{\\frac{\\pi}{6} \\le \\theta \\le \\frac{5\\pi}{6}}$$
+
+### Example 2: $\\cos\\theta < -\\dfrac{1}{2}$ on $[0, 2\\pi)$
+
+Boundaries: $\\dfrac{2\\pi}{3}$ and $\\dfrac{4\\pi}{3}$. Test $\\pi$: $\\cos\\pi = -1 < -\\dfrac12$ ✓. The inequality is strict, so the boundaries are excluded.
+
+$$\\boxed{\\frac{2\\pi}{3} < \\theta < \\frac{4\\pi}{3}}$$
+
+> ⚠️ **Tangent:** the angles where $\\tan\\theta$ is undefined ($\\dfrac{\\pi}{2}$ and $\\dfrac{3\\pi}{2}$) also split the circle. For $\\tan\\theta > 1$ on $[0, 2\\pi)$ the answer is $\\dfrac{\\pi}{4} < \\theta < \\dfrac{\\pi}{2}$ or $\\dfrac{5\\pi}{4} < \\theta < \\dfrac{3\\pi}{2}$.`,
+      },
+      {
         id: 'ste2-mc',
         type: 'multiple-choice' as const,
         content: `**Concept Check** 🎯`,
@@ -249,6 +274,12 @@ $$\\boxed{\\theta = \\frac{\\pi}{4}, \\; \\frac{5\\pi}{4}}$$
               options: ['$\\dfrac{2\\pi}{3}, \\dfrac{5\\pi}{3}$', '$\\dfrac{\\pi}{3}, \\dfrac{4\\pi}{3}$', '$\\dfrac{\\pi}{6}, \\dfrac{7\\pi}{6}$', '$\\dfrac{2\\pi}{3}, \\dfrac{4\\pi}{3}$'],
               correctAnswer: 0,
               explanation: 'Reference angle $\\tan^{-1}\\sqrt3 = \\dfrac{\\pi}{3}$; tangent negative in QII and QIV. QII: $\\pi - \\dfrac{\\pi}{3} = \\dfrac{2\\pi}{3}$; QIV: $2\\pi - \\dfrac{\\pi}{3} = \\dfrac{5\\pi}{3}$.',
+            },
+            {
+              question: 'Solve $\\cos\\theta \\ge \\dfrac{\\sqrt{2}}{2}$ on $[0, 2\\pi)$.',
+              options: ['$\\left[0, \\dfrac{\\pi}{4}\\right] \\cup \\left[\\dfrac{7\\pi}{4}, 2\\pi\\right)$', '$\\left[\\dfrac{\\pi}{4}, \\dfrac{7\\pi}{4}\\right]$', '$\\left[\\dfrac{\\pi}{4}, \\dfrac{3\\pi}{4}\\right]$', '$\\left(0, \\dfrac{\\pi}{4}\\right) \\cup \\left(\\dfrac{7\\pi}{4}, 2\\pi\\right)$'],
+              correctAnswer: 0,
+              explanation: 'The boundaries are $\\dfrac{\\pi}{4}$ and $\\dfrac{7\\pi}{4}$. The $x$-coordinate is at least $\\dfrac{\\sqrt2}{2}$ near $\\theta = 0$, so keep $\\left[0, \\dfrac{\\pi}{4}\\right]$ and $\\left[\\dfrac{7\\pi}{4}, 2\\pi\\right)$, with the boundaries included for $\\ge$. The middle interval is where $\\cos\\theta \\le \\dfrac{\\sqrt2}{2}$, $\\left[\\dfrac{\\pi}{4}, \\dfrac{3\\pi}{4}\\right]$ treats it like a sine inequality, and open intervals drop the boundary angles and $\\theta = 0$.',
             },
           ],
         },
@@ -320,7 +351,7 @@ $$\\tan\\theta = 1 \\;\\Rightarrow\\; \\theta = \\frac{\\pi}{4} + \\pi k, \\quad
               question: 'What do you add to a base cosine solution to get ALL solutions?',
               options: ['$+\\,2\\pi k$', '$+\\,\\pi k$', '$+\\,\\dfrac{\\pi}{2} k$', '$+\\,360 k$'],
               correctAnswer: 0,
-              explanation: 'Cosine has period $2\\pi$, so all solutions repeat every $2\\pi$: add $2\\pi k$ for integer $k$. (In degrees you would add $360^\\circ k$ — but here angles are in radians.)',
+              explanation: 'Cosine has period $2\\pi$, so all solutions repeat every $2\\pi$: add $2\\pi k$ for integer $k$. (The AP exam measures angles in radians, so the period is $2\\pi$, not $360$.)',
             },
             {
               question: 'The general solution of $\\tan\\theta = 0$ is:',
@@ -701,6 +732,12 @@ A rider's height is $h(t) = 25\\sin\\big(\\tfrac{\\pi}{15}(t - 7.5)\\big) + 30$ 
               correctAnswer: 0,
               explanation: 'Period $= \\dfrac{2\\pi}{B} = \\dfrac{2\\pi}{\\pi/6} = 2\\pi \\cdot \\dfrac{6}{\\pi} = 12$.',
             },
+            {
+              question: 'The depth of water at a dock is $D(t) = 4\\sin\\big(\\tfrac{\\pi}{6}t\\big) + 9$ feet for $0 \\le t < 12$ hours. When is the depth at least $11$ feet?',
+              options: ['$1 \\le t \\le 5$', '$7 \\le t \\le 11$', '$\\tfrac{\\pi}{6} \\le t \\le \\tfrac{5\\pi}{6}$', '$2 \\le t \\le 10$'],
+              correctAnswer: 0,
+              explanation: 'Isolate: $\\sin\\big(\\tfrac{\\pi}{6}t\\big) \\ge \\dfrac12$, so the inner angle lies in $\\left[\\dfrac{\\pi}{6}, \\dfrac{5\\pi}{6}\\right]$. Multiply by $\\dfrac{6}{\\pi}$: $1 \\le t \\le 5$. The interval $[7, 11]$ is where the depth is at most $7$ feet, $\\tfrac{\\pi}{6}$ to $\\tfrac{5\\pi}{6}$ forgets to undo the inner angle, and $[2, 10]$ uses $\\tfrac{\\pi}{12}$ in place of $\\tfrac{\\pi}{6}$.',
+            },
           ],
         },
       },
@@ -718,7 +755,11 @@ A rider's height is $h(t) = 25\\sin\\big(\\tfrac{\\pi}{15}(t - 7.5)\\big) + 30$ 
 
 $$\\boxed{t = 2 \\text{ hours}}$$
 
-> ⚠️ **Substitution is key:** solve for the *inside* angle first ($u = \\tfrac{\\pi}{12}t$), then undo it to find $t$.`,
+> ⚠️ **Substitution is key:** solve for the *inside* angle first ($u = \\tfrac{\\pi}{12}t$), then undo it to find $t$.
+
+### Inequalities in context: when is $T(t) > 65$ during the first day ($0 \\le t < 24$)?
+
+The context restricts the domain to one day. Then $\\sin u > \\dfrac12$ with $u = \\tfrac{\\pi}{12}t$ in $[0, 2\\pi)$ means $\\dfrac{\\pi}{6} < u < \\dfrac{5\\pi}{6}$. Undo the inner angle: $\\dfrac{\\pi}{6}\\cdot\\dfrac{12}{\\pi} = 2$ and $\\dfrac{5\\pi}{6}\\cdot\\dfrac{12}{\\pi} = 10$, so the temperature is above $65$ for $2 < t < 10$ hours.`,
       },
       {
         id: 'ste6-dropdown',

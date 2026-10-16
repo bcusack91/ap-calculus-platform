@@ -187,13 +187,13 @@ $$ab^t = c \\implies b^t = \\frac{c}{a} \\implies t = \\frac{\\ln(c/a)}{\\ln b}$
           {
             question: 'A town\'s population is modeled by $P(t) = 8000(1.03)^t$. Using logs, find when the population first exceeds $15{,}000$.',
             options: [
-              '$t = \\frac{\\log(15000/8000)}{\\log(1.03)} \\approx 21.1$ years',
+              '$t = \\frac{\\log(15000/8000)}{\\log(1.03)} \\approx 21.27$ years',
               '$t = \\frac{\\log(15000)}{\\log(8000)} \\approx 1.07$ years',
               '$t = \\frac{15000}{8000 \\cdot 1.03} \\approx 1.82$ years',
               '$t = \\frac{\\ln(1.03)}{\\ln(15000/8000)} \\approx 0.047$ years'
             ],
             correctAnswer: 0,
-            explanation: '$8000(1.03)^t = 15000 \\implies (1.03)^t = 1.875 \\implies t = \\frac{\\log 1.875}{\\log 1.03} = \\frac{0.273}{0.01284} \\approx 21.3$ years.'
+            explanation: '$8000(1.03)^t = 15000 \\implies (1.03)^t = 1.875 \\implies t = \\frac{\\log 1.875}{\\log 1.03} = \\frac{0.2730}{0.01284} \\approx 21.27$ years.'
           },
           {
             question: 'Solve $\\log_2(x^2 - 4) = 3$ for all valid solutions.',

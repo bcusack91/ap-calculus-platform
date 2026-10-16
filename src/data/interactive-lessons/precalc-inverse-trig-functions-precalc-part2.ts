@@ -144,21 +144,21 @@ We used the odd-function property: $\\arctan(-x) = -\\arctan x$.
       content: `
 **Using Graphing Properties** 🧮
 
-All answers in degrees.
+Write each answer as a multiple of $\\pi$ and enter the **coefficient** (type \`-1/4\` for $-\\frac{\\pi}{4}$).
 
-**1)** If $\\arcsin(\\frac{\\sqrt{3}}{2}) = 60°$, then $\\arccos(\\frac{\\sqrt{3}}{2})$ = ? (e.g., $\\arcsin(\\frac{1}{2}) = 30°$ gives $\\arccos(\\frac{1}{2}) = 90° - 30° = 60°$)
+**1)** If $\\arcsin(\\frac{\\sqrt{3}}{2}) = \\frac{\\pi}{3}$, then $\\arccos(\\frac{\\sqrt{3}}{2}) = \\,?\\cdot\\pi$ (e.g., $\\arcsin(\\frac{1}{2}) = \\frac{\\pi}{6}$ gives $\\arccos(\\frac{1}{2}) = \\frac{\\pi}{2} - \\frac{\\pi}{6} = \\frac{\\pi}{3}$)
 
-**2)** $\\arctan(-1)$ = ? (e.g., $\\arctan(-\\sqrt{3}) = -60°$ by the odd-function property)
+**2)** $\\arctan(-1) = \\,?\\cdot\\pi$ (e.g., $\\arctan(-\\sqrt{3}) = -\\frac{\\pi}{3}$ by the odd-function property)
 
-**3)** $\\arcsin(-\\frac{1}{2})$ = ? (e.g., $\\arcsin(-\\frac{\\sqrt{2}}{2}) = -45°$ by the odd-function property)
+**3)** $\\arcsin(-\\frac{1}{2}) = \\,?\\cdot\\pi$ (e.g., $\\arcsin(-\\frac{\\sqrt{2}}{2}) = -\\frac{\\pi}{4}$ by the odd-function property)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['30', '-45', '-30'],
-        hint1: '$\\arccos x = 90° - \\arcsin x$. So $90° - 60° = ?$',
-        hint2: '$\\arctan$ is odd: $\\arctan(-1) = -\\arctan(1) = -45°$.',
-        hint3: '$\\arcsin(-\\frac{1}{2}) = -\\arcsin(\\frac{1}{2}) = -30°$.',
-        explanation: '1) $90° - 60° = 30°$. 2) $-\\arctan(1) = -45°$. 3) $-\\arcsin(\\frac{1}{2}) = -30°$.'
+        correctAnswers: ['1/6', '-1/4', '-1/6'],
+        hint1: '$\\arccos x = \\frac{\\pi}{2} - \\arcsin x$. So $\\frac{\\pi}{2} - \\frac{\\pi}{3} = ?$',
+        hint2: '$\\arctan$ is odd: $\\arctan(-1) = -\\arctan(1) = -\\frac{\\pi}{4}$.',
+        hint3: '$\\arcsin(-\\frac{1}{2}) = -\\arcsin(\\frac{1}{2}) = -\\frac{\\pi}{6}$.',
+        explanation: '1) $\\frac{\\pi}{2} - \\frac{\\pi}{3} = \\frac{\\pi}{6}$. 2) $-\\arctan(1) = -\\frac{\\pi}{4}$. 3) $-\\arcsin(\\frac{1}{2}) = -\\frac{\\pi}{6}$.'
       }
     },
     {

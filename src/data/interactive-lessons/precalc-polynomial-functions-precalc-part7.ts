@@ -44,22 +44,30 @@ When given a graph or description and asked to find the equation, follow this sy
 
 ### Worked Example: Full Analysis
 
-> **A polynomial graph falls to the left, rises to the right, crosses at $x = -3$, bounces at $x = 1$, crosses at $x = 4$, and has $y$-intercept $-24$.**
+> **A polynomial of least degree falls to the left, rises to the right, crosses the $x$-axis at $x = -3$, bounces at $x = 1$, and has $y$-intercept $6$.**
 
-**Step 1:** Zeros: $x = -3$ (cross, mult 1), $x = 1$ (bounce, mult 2), $x = 4$ (cross, mult 1)
+**Step 1:** Zeros: $x = -3$ (cross, mult 1), $x = 1$ (bounce, mult 2)
 
 **Step 2:** Falls left, rises right → odd degree, positive leading coefficient
 
-**Step 3:** Degree $= 1 + 2 + 1 = 4$. But odd degree needed! So one zero must have higher multiplicity. Since it falls left and rises right with degree 4 — wait, even degree with positive lead means both tails rise. Re-read: falls left, rises right → **odd degree, positive lead**. Need degree $\\geq 5$. Increase one multiplicity: $x = -3$ mult 1, $x = 1$ mult 3 (still bounces with odd $\\geq 3$? No — odd multiplicity crosses). Let's try: $x = 1$ mult 2, add a hidden zero or adjust. Actually, bouncing at $x=1$ means **even** multiplicity. For odd degree with positive lead: mult sum must be odd. Use $x = -3$ (mult 1) + $x = 1$ (mult 2) + $x = 4$ (mult 2) = 5. But "crosses at $x = 4$" means odd mult. So: 1 + 2 + 1 = 4 and we need odd → bump one crossing zero: $x = -3$ (mult 1), $x = 1$ (mult 2), $x = 4$ (mult 1) = 4 (even). For falls-left/rises-right we need odd degree. The simplest fix: **there must be another zero** we haven't identified, or one multiplicity is higher. Since bouncing requires even multiplicity $\\geq 2$, and the described behavior is consistent with degree 5 if there's one more hidden zero.
+**Step 3:** Degree $= 1 + 2 = 3$, which is odd ✔ (matches the end behavior)
 
-> **This shows why careful analysis matters!** In practice, exam problems are designed so the pieces fit cleanly. The key is: always verify that the multiplicity sum matches the degree implied by end behavior.
+**Step 4:** Skeleton: $p(x) = a(x + 3)(x - 1)^2$
+
+**Step 5:** $p(0) = a(3)(1) = 3a = 6$, so $a = 2$
+
+**Step 6:** $a = 2 > 0$, so the graph rises to the right ✔
+
+$$p(x) = 2(x + 3)(x - 1)^2$$
+
+> **Parity check:** the multiplicity sum must agree with the end behavior. A graph that bounces at one zero and crosses at two others has multiplicities $2 + 1 + 1 = 4$ (even degree), so both tails point the same way. If a description gives opposite tails for that pattern, there must be another zero you have not been told about.
       `
     },
     {
       id: 'p7-clean-worked',
       type: 'text' as const,
       content: `
-## ✏️ Clean Worked Example
+## ✏️ Second Worked Example
 
 > **A degree-4 polynomial has a positive leading coefficient, bounces at $x = -2$, crosses at $x = 1$ and $x = 3$, and passes through $(0, 24)$. Find the equation.**
 

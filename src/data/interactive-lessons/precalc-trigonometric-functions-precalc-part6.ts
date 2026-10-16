@@ -99,11 +99,11 @@ $$\\boxed{h(t) = -20\\cos\\left(\\frac{2\\pi}{3}t\\right) + 25}$$
             options: [
               '$\\frac{\\pi}{8}$',
               '$\\frac{\\pi}{4}$',
-              '$\\frac{2\\pi}{8} = \\frac{\\pi}{4}$',
-              '$8\\pi$'
+              '$\\frac{4}{\\pi}$',
+              '$16\\pi$'
             ],
-            correctAnswer: 2,
-            explanation: '$b = \\frac{2\\pi}{T} = \\frac{2\\pi}{8} = \\frac{\\pi}{4}$.'
+            correctAnswer: 1,
+            explanation: '$b = \\frac{2\\pi}{T} = \\frac{2\\pi}{8} = \\frac{\\pi}{4}$. Using $\\frac{\\pi}{T}$ gives $\\frac{\\pi}{8}$, flipping the ratio to $\\frac{T}{2\\pi}$ gives $\\frac{4}{\\pi}$, and multiplying $2\\pi$ by the period gives $16\\pi$.'
           },
           {
             question: 'You want a cosine model that starts at a minimum. You should use:',

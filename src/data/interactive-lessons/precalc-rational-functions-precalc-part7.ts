@@ -18,9 +18,9 @@ This final part integrates every concept: domain, asymptotes, holes, simplificat
 | Domain & Excluded Values (1) | Where is the denominator zero? |
 | Vertical & Horizontal Asymptotes (2) | What happens near excluded values and at $\\pm\\infty$? |
 | Holes (3) | Do any factors cancel? |
-| Simplification (4) | Can we factor, combine, or divide? |
+| Simplification (4) | Can we factor, cancel, or divide? |
 | Graphing (5) | What does the complete picture look like? |
-| Equations & Inequalities (6) | What $x$-values satisfy the condition? |
+| Zeros & Inequalities (6) | What $x$-values satisfy the condition? |
       `
     },
     {
@@ -166,19 +166,19 @@ $$f(x) = \\frac{3(x - 1)}{x + 2}$$
             options: ['slant asymptote', 'domain restrictions (VAs and holes)', '$y$-intercept', 'end behavior']
           },
           {
-            label: 'When solving a rational equation, the LCD method can introduce',
-            options: ['complex numbers', 'extraneous solutions', 'new asymptotes', 'imaginary roots']
+            label: 'A numerator zero that also zeros the denominator is a',
+            options: ['zero of the function', 'hole, not a zero', 'horizontal asymptote', 'turning point']
           },
           {
             label: 'The $y$-intercept of ANY function is found by evaluating at',
             options: ['$x = 1$', '$x = -1$', '$x = 0$', 'the VA']
           }
         ],
-        correctAnswers: ['cancels between numerator and denominator', 'domain restrictions (VAs and holes)', 'extraneous solutions', '$x = 0$'],
+        correctAnswers: ['cancels between numerator and denominator', 'domain restrictions (VAs and holes)', 'hole, not a zero', '$x = 0$'],
         hint1: 'Hole = canceled factor. VA = uncanceled factor in denominator.',
         hint2: 'Asymptotes and holes define the skeleton of the graph.',
-        hint3: 'LCD multiplication can make denominators disappear, masking division-by-zero issues.',
-        explanation: 'Cancel → hole; no cancel → VA. Read VAs/holes from a graph first. LCD method risks extraneous solutions. $y$-intercept is always $f(0)$.'
+        hint3: 'A function cannot equal $0$ at an $x$-value where it is undefined.',
+        explanation: 'Cancel → hole; no cancel → VA. Read VAs/holes from a graph first. A shared numerator/denominator zero is a hole, not a zero. $y$-intercept is always $f(0)$.'
       }
     },
     {

@@ -920,7 +920,7 @@ For $f(x) = \\dfrac{2x^2 + 3}{x^2 - 9}$:
 
 The trickiest functions look like they have an asymptote where they actually have a **hole**. The only way to be sure is to **factor the numerator too** and check for a common factor before you classify anything.
 
-> ⚠️ If a denominator factor cancels, that location is a **hole**, not a vertical asymptote — and the leftover quotient may itself be the asymptote line.`,
+> ⚠️ If a denominator factor cancels, that location is a **hole**, not a vertical asymptote. If everything in the denominator cancels, the graph **is** the leftover polynomial with one point removed, so it has no asymptotes at all.`,
       },
       {
         id: 'rfa7-dropdown',
@@ -931,14 +931,14 @@ For $f(x) = \\dfrac{x^2 - x - 6}{x + 2}$, work out each feature. *(Hint: factor 
         exercise: {
           dropdowns: [
             { label: 'At $x = -2$ there is a:', options: ['hole', 'vertical asymptote', 'horizontal asymptote', '$x$-intercept'] },
-            { label: 'End-behavior asymptote:', options: ['slant $y = x - 3$', 'horizontal $y = 1$', 'horizontal $y = 0$', 'slant $y = x + 3$'] },
+            { label: 'Away from $x = -2$, the graph is:', options: ['the line $y = x - 3$', 'asymptotic to $y = x - 3$', 'asymptotic to $y = 1$', 'the line $y = x + 3$'] },
             { label: 'Simplified form of $f$:', options: ['$x - 3$', '$x + 3$', '$x - 2$', '$x + 2$'] },
           ],
-          correctAnswers: ['hole', 'slant $y = x - 3$', '$x - 3$'],
+          correctAnswers: ['hole', 'the line $y = x - 3$', '$x - 3$'],
           hint1: 'Factor the numerator: $x^2 - x - 6 = (x-3)(x+2)$.',
           hint2: 'The $(x+2)$ cancels with the denominator, so $f(x) = x - 3$ (for $x \\neq -2$) — that is the line it follows.',
-          hint3: 'Since $f$ simplifies to the line $x - 3$ with a single point removed, $x = -2$ is a hole and the "slant asymptote" is the line $y = x - 3$ itself.',
-          explanation: '$f(x) = \\frac{(x-3)(x+2)}{x+2} = x - 3$ for $x \\neq -2$. So there is a hole at $x = -2$, the simplified function is $x - 3$, and the graph is the line $y = x - 3$ (a slant) with one point removed.',
+          hint3: 'Since $f$ simplifies to the line $x - 3$ with a single point removed, $x = -2$ is a hole and the graph lies ON the line $y = x - 3$; it does not approach it as an asymptote.',
+          explanation: '$f(x) = \\frac{(x-3)(x+2)}{x+2} = x - 3$ for $x \\neq -2$. So there is a hole at $(-2, -5)$, the simplified function is $x - 3$, and the graph is the line $y = x - 3$ with one point removed. It has no slant asymptote: a slant asymptote needs a nonzero remainder after division.',
         },
       },
       {

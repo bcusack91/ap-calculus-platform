@@ -38,7 +38,7 @@ Degree = 3, Leading coefficient = 5 ✅
       exercise: {
         questions: [
           {
-                    "question": "Degree of $7x^{4}$ − 3x + 2?",
+                    "question": "What is the degree of $7x^{4} - 3x + 2$?",
                     "options": [
                               "4",
                               "7",
@@ -46,7 +46,7 @@ Degree = 3, Leading coefficient = 5 ✅
                               "1"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Highest power is 4."
+                    "explanation": "The highest power of $x$ is $x^{4}$, so the degree is 4. The coefficient $7$ is the leading coefficient, not the degree."
           }
 ]
       }
@@ -96,7 +96,7 @@ Degree = 3, Leading coefficient = 5 ✅
 | # | Polynomial | Degree | Leading Coeff |
 |---|-----------|--------|---------------|
 | 1 | $2x^5 - x$ | 5 | 2 |
-| 2 | $-x^2 + 3x + 1$ | 2 | −1 |
+| 2 | $-x^2 + 3x + 1$ | 2 | $-1$ |
 | 3 | $4x^3 + x^2$ | 3 | 4 |
     
     `
@@ -110,15 +110,15 @@ Degree = 3, Leading coefficient = 5 ✅
       exercise: {
         questions: [
           {
-                    "question": "Leading coefficient of $-2x^{3}$ + 5x?",
+                    "question": "What is the leading coefficient of $-2x^{3} + 5x$?",
                     "options": [
-                              "−2",
-                              "5",
-                              "3",
-                              "−3"
+                              "$-2$",
+                              "$5$",
+                              "$3$",
+                              "$-3$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Coefficient of $x^{3}$ term."
+                    "explanation": "The leading coefficient is the coefficient of the highest-degree term, $-2x^{3}$, so it is $-2$. The exponent $3$ is the degree, and $5$ belongs to the lower-degree term $5x$."
           }
 ]
       }

@@ -150,17 +150,17 @@ Write answers as simplified fractions or integers.
 
 **1)** $\\tan(\\arccos \\frac{3}{5})$ = ? (e.g., $\\sin(\\arccos \\frac{4}{5}) = \\frac{3}{5}$ using a 3-4-5 triangle)
 
-**2)** $\\arcsin(\\sin 210°)$ in degrees = ? (e.g., $\\arcsin(\\sin 150°) = 30°$ since $\\sin 150° = \\frac{1}{2}$ and $\\arcsin \\frac{1}{2} = 30°$)
+**2)** $\\arcsin(\\sin \\frac{7\\pi}{6}) = \\,?\\cdot\\pi$. Enter the coefficient of $\\pi$ (e.g., $\\arcsin(\\sin \\frac{5\\pi}{6}) = \\frac{\\pi}{6}$, coefficient \`1/6\`, since $\\sin \\frac{5\\pi}{6} = \\frac{1}{2}$)
 
 **3)** $\\cos(\\arctan \\frac{3}{4})$ = ? Write as a decimal like 0.8 (e.g., $\\cos(\\arctan 1) = \\frac{\\sqrt{2}}{2} \\approx 0.707$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4/3', '-30', '0.8'],
+        correctAnswers: ['4/3', '-1/6', '0.8'],
         hint1: 'Triangle: adj = 3, hyp = 5, opp = 4. $\\tan\\theta = \\frac{\\text{opp}}{\\text{adj}}$.',
-        hint2: '$\\sin 210° = -\\frac{1}{2}$. $\\arcsin(-\\frac{1}{2}) = -30°$.',
+        hint2: '$\\sin \\frac{7\\pi}{6} = -\\frac{1}{2}$. $\\arcsin(-\\frac{1}{2}) = -\\frac{\\pi}{6}$.',
         hint3: 'Triangle: opp = 3, adj = 4, hyp = 5. $\\cos\\theta = \\frac{4}{5} = 0.8$.',
-        explanation: '1) $\\frac{4}{3}$. 2) $\\sin 210° = -\\frac{1}{2}$, $\\arcsin(-\\frac{1}{2}) = -30°$. 3) 3-4-5 triangle: $\\frac{4}{5} = 0.8$.'
+        explanation: '1) $\\frac{4}{3}$. 2) $\\sin \\frac{7\\pi}{6} = -\\frac{1}{2}$, $\\arcsin(-\\frac{1}{2}) = -\\frac{\\pi}{6}$. 3) 3-4-5 triangle: $\\frac{4}{5} = 0.8$.'
       }
     },
     {

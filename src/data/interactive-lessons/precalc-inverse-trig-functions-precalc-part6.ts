@@ -21,46 +21,42 @@ A 6-foot person looks up at the top of a 50-foot building from 80 feet away. Wha
 
 Vertical distance = $50 - 6 = 44$ ft, horizontal distance = $80$ ft.
 
-$$\\theta = \\arctan\\!\\left(\\frac{44}{80}\\right) = \\arctan(0.55) \\approx 28.8°$$
+$$\\theta = \\arctan\\!\\left(\\frac{44}{80}\\right) = \\arctan(0.55) \\approx 0.503 \\text{ radians}$$
 
 ### Example 2: Angle of Depression
 
 A drone at 200 feet altitude spots a target 500 feet away horizontally. The angle of depression is:
 
-$$\\theta = \\arctan\\!\\left(\\frac{200}{500}\\right) = \\arctan(0.4) \\approx 21.8°$$
+$$\\theta = \\arctan\\!\\left(\\frac{200}{500}\\right) = \\arctan(0.4) \\approx 0.381 \\text{ radians}$$
       `
     },
     {
-      id: 'p6-bearings',
+      id: 'p6-periodic',
       type: 'text' as const,
       content: `
-## 🧭 Navigation & Bearings
+## 🎡 Inverse Trig in Periodic Models
 
-### Example 3: Finding Direction
+A rider's height on a Ferris wheel is $h(t) = 10\\sin\\!\\left(\\frac{\\pi}{20}t\\right) + 12$ meters, $t$ in seconds, for one 40-second turn ($0 \\le t \\le 40$).
 
-A ship sails 15 km east and 8 km north. What bearing has it traveled?
+### Example 3: A special value
 
-$$\\theta = \\arctan\\!\\left(\\frac{15}{8}\\right) \\approx 61.9°$$
+When is the rider first $17$ m high?
 
-Bearing: approximately $\\text{N } 62° \\text{ E}$ (or $062°$ in compass notation).
+$$10\\sin\\!\\left(\\frac{\\pi}{20}t\\right) + 12 = 17 \\implies \\sin\\!\\left(\\frac{\\pi}{20}t\\right) = 0.5$$
 
-### Example 4: Surveying
+$$\\frac{\\pi}{20}t = \\arcsin(0.5) = \\frac{\\pi}{6} \\implies t = \\frac{20}{6} = \\frac{10}{3} \\approx 3.33 \\text{ s}$$
 
-A surveyor stands at point A and measures:
-- Distance to point B: 120 meters
-- Height difference: 35 meters
+### Example 4: A calculator value, and the second solution
 
-Angle: $\\theta = \\arcsin\\!\\left(\\frac{35}{120}\\right) \\approx 17.0°$
+When is the rider $15$ m high?
 
-### Example 5: Physics — Launch Angle
+$$\\sin\\!\\left(\\frac{\\pi}{20}t\\right) = 0.3 \\implies \\frac{\\pi}{20}t = \\arcsin(0.3) \\approx 0.3047 \\implies t \\approx 1.94 \\text{ s}$$
 
-A projectile needs to reach a target at the same height, 200 m away, with initial speed 50 m/s.
+$\\arcsin$ only returns the angle in $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$. Sine is also $0.3$ at $\\pi - 0.3047$, which gives the second time in the turn:
 
-The range formula gives: $R = \\frac{v^2 \\sin(2\\theta)}{g}$
+$$\\frac{\\pi}{20}t = \\pi - 0.3047 \\implies t \\approx 20 - 1.94 = 18.06 \\text{ s}$$
 
-$$200 = \\frac{2500 \\sin(2\\theta)}{9.8} \\implies \\sin(2\\theta) = 0.784$$
-
-$$2\\theta = \\arcsin(0.784) \\approx 51.6° \\implies \\theta \\approx 25.8°$$
+> ⚠️ An inverse trig function gives **one** angle. In a context, check whether the domain allows other solutions, and adjust the calculator's answer to find them.
       `
     },
     {
@@ -107,7 +103,7 @@ If $\\arctan(\\text{expr}) = \\theta$, then $\\text{expr} = \\tan\\theta$.
               '$\\arctan(\\frac{20}{15})$'
             ],
             correctAnswer: 1,
-            explanation: 'Opposite = flagpole height = 15, adjacent = shadow = 20. Angle = $\\arctan(\\frac{15}{20}) \\approx 36.9°$.'
+            explanation: 'Opposite = flagpole height = 15, adjacent = shadow = 20. Angle = $\\arctan(\\frac{15}{20}) \\approx 0.644$ radians.'
           },
           {
             question: 'Solve: $\\arccos(x) = \\frac{\\pi}{3}$',
@@ -121,7 +117,7 @@ If $\\arctan(\\text{expr}) = \\theta$, then $\\text{expr} = \\tan\\theta$.
             explanation: '$x = \\cos(\\frac{\\pi}{3}) = \\frac{1}{2}$.'
           },
           {
-            question: 'From a 100-meter cliff, an object on the ground is seen at a 30° angle of depression. The horizontal distance is approximately:',
+            question: 'From a 100-meter cliff, an object on the ground is seen at an angle of depression of $\\frac{\\pi}{6}$. The horizontal distance is approximately:',
             options: [
               '$100\\sqrt{3} \\approx 173$ m',
               '$\\frac{100}{\\sqrt{3}} \\approx 58$ m',
@@ -129,7 +125,7 @@ If $\\arctan(\\text{expr}) = \\theta$, then $\\text{expr} = \\tan\\theta$.
               '$200$ m'
             ],
             correctAnswer: 0,
-            explanation: '$\\tan(30°) = \\frac{100}{d}$, so $d = \\frac{100}{\\tan 30°} = \\frac{100}{\\frac{1}{\\sqrt{3}}} = 100\\sqrt{3} \\approx 173$ m.'
+            explanation: '$\\tan\\frac{\\pi}{6} = \\frac{100}{d}$, so $d = \\frac{100}{\\tan(\\pi/6)} = \\frac{100}{\\frac{1}{\\sqrt{3}}} = 100\\sqrt{3} \\approx 173$ m. Multiplying by $\\tan\\frac{\\pi}{6}$ instead gives $58$ m.'
           }
         ]
       }
@@ -144,15 +140,15 @@ If $\\arctan(\\text{expr}) = \\theta$, then $\\text{expr} = \\tan\\theta$.
 
 **2)** Solve $\\arctan(x) = \\frac{\\pi}{4}$. What is $x$? (e.g., If $\\arctan(x) = 0$, then $x = \\tan(0) = 0$)
 
-**3)** A tree casts a 40-foot shadow when the sun's elevation is 50°. Tree height = $40\\tan(50°) \\approx$ ? feet. Round to nearest integer. (e.g., $40\\tan(45°) = 40$ since $\\tan 45° = 1$)
+**3)** A tree casts a 40-foot shadow when the sun's angle of elevation is $0.9$ radians. Tree height = $40\\tan(0.9) \\approx$ ? feet. Round to nearest integer, calculator in radian mode. (e.g., $40\\tan(\\frac{\\pi}{4}) = 40$ since $\\tan \\frac{\\pi}{4} = 1$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.5', '1', '48'],
+        correctAnswers: ['0.5', '1', '50'],
         hint1: '$x = \\sin(\\frac{\\pi}{6}) = \\frac{1}{2} = 0.5$.',
         hint2: '$x = \\tan(\\frac{\\pi}{4}) = 1$.',
-        hint3: '$40 \\times \\tan(50°) = 40 \\times 1.19 \\approx 47.7 \\approx 48$.',
-        explanation: '1) $\\sin(\\frac{\\pi}{6}) = 0.5$. 2) $\\tan(\\frac{\\pi}{4}) = 1$. 3) $40\\tan(50°) \\approx 47.7 \\approx 48$ ft.'
+        hint3: '$40 \\times \\tan(0.9) = 40 \\times 1.260 \\approx 50.4$. In degree mode you would get a wrong answer.',
+        explanation: '1) $\\sin(\\frac{\\pi}{6}) = 0.5$. 2) $\\tan(\\frac{\\pi}{4}) = 1$. 3) $40\\tan(0.9) \\approx 50.4 \\approx 50$ ft.'
       }
     },
     {
@@ -196,15 +192,15 @@ If $\\arctan(\\text{expr}) = \\theta$, then $\\text{expr} = \\tan\\theta$.
       exercise: {
         questions: [
           {
-            question: 'A cable makes a 55° angle with the ground and attaches to a tower 80 feet up. The cable length is:',
+            question: 'A cable makes an angle of $1$ radian with the ground and attaches to a tower 80 feet up. The cable length is:',
             options: [
-              '$\\frac{80}{\\sin 55°} \\approx 97.6$ ft',
-              '$\\frac{80}{\\cos 55°} \\approx 139.5$ ft',
-              '$\\frac{80}{\\tan 55°} \\approx 56.0$ ft',
-              '$80\\sin 55° \\approx 65.5$ ft'
+              '$\\frac{80}{\\sin 1} \\approx 95.1$ ft',
+              '$\\frac{80}{\\cos 1} \\approx 148.1$ ft',
+              '$\\frac{80}{\\tan 1} \\approx 51.4$ ft',
+              '$80\\sin 1 \\approx 67.3$ ft'
             ],
             correctAnswer: 0,
-            explanation: '$\\sin 55° = \\frac{80}{\\text{cable}}$. Cable $= \\frac{80}{\\sin 55°} \\approx \\frac{80}{0.819} \\approx 97.6$ ft.'
+            explanation: 'The tower height is opposite the angle and the cable is the hypotenuse, so $\\sin 1 = \\frac{80}{\\text{cable}}$. Cable $= \\frac{80}{\\sin 1} \\approx \\frac{80}{0.841} \\approx 95.1$ ft. Cosine would need the ground distance, tangent gives the ground distance, and $80\\sin 1$ multiplies instead of dividing.'
           },
           {
             question: 'Solve: $3\\arctan(x) = \\pi$',

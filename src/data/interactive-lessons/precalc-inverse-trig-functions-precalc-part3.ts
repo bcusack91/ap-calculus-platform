@@ -75,18 +75,16 @@ $\\arctan(100)$ IS defined — tangent can take any real value, so arctan accept
       content: `
 ## 📝 More Practice
 
-### Example 4: Converting Between Degrees and Radians
+### Example 4: Answers Are in Radians
 
-$\\arcsin(\\frac{1}{2}) = 30° = \\frac{\\pi}{6}$ rad
-
-Always be aware of whether the problem asks for degrees or radians!
+$\\arcsin(\\frac{1}{2}) = \\frac{\\pi}{6}$. If you first think "$30°$", convert with $30 \\cdot \\frac{\\pi}{180} = \\frac{\\pi}{6}$ before you answer: the AP exam (and a calculator in radian mode) gives every angle in radians.
 
 ### Example 5: Tricky Negative Values
 
 $\\arccos(-\\frac{\\sqrt{3}}{2})$:
-- We know $\\cos 30° = \\frac{\\sqrt{3}}{2}$
-- For the negative input, the angle must be in Quadrant II: $180° - 30° = 150°$
-- $\\arccos(-\\frac{\\sqrt{3}}{2}) = 150° = \\frac{5\\pi}{6}$
+- We know $\\cos \\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$
+- For the negative input, the angle must be in Quadrant II: $\\pi - \\frac{\\pi}{6} = \\frac{5\\pi}{6}$
+- $\\arccos(-\\frac{\\sqrt{3}}{2}) = \\frac{5\\pi}{6}$
 
 ### Pattern for Negative Inputs
 
@@ -147,21 +145,21 @@ $\\arccos(-\\frac{\\sqrt{3}}{2})$:
       content: `
 **Compute Exact Values** 🧮
 
-Give answers in degrees.
+Write each answer as a multiple of $\\pi$ and enter the **coefficient** (type \`2/3\` for $\\frac{2\\pi}{3}$).
 
-**1)** $\\arcsin(-1)$ = ? (e.g., $\\arcsin(1) = 90$ since $\\sin 90° = 1$)
+**1)** $\\arcsin(-1) = \\,?\\cdot\\pi$ (e.g., $\\arcsin(1) = \\frac{\\pi}{2}$ since $\\sin \\frac{\\pi}{2} = 1$)
 
-**2)** $\\arccos(-\\frac{1}{2})$ = ? (e.g., $\\arccos(\\frac{1}{2}) = 60$ since $\\cos 60° = \\frac{1}{2}$)
+**2)** $\\arccos(-\\frac{1}{2}) = \\,?\\cdot\\pi$ (e.g., $\\arccos(\\frac{1}{2}) = \\frac{\\pi}{3}$ since $\\cos \\frac{\\pi}{3} = \\frac{1}{2}$)
 
-**3)** $\\arctan(-\\sqrt{3})$ = ? (e.g., $\\arctan(\\sqrt{3}) = 60$ since $\\tan 60° = \\sqrt{3}$)
+**3)** $\\arctan(-\\sqrt{3}) = \\,?\\cdot\\pi$ (e.g., $\\arctan(\\sqrt{3}) = \\frac{\\pi}{3}$ since $\\tan \\frac{\\pi}{3} = \\sqrt{3}$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-90', '120', '-60'],
-        hint1: '$\\sin(-90°) = -1$ and $-90° \\in [-90°, 90°]$.',
-        hint2: 'For negative input to $\\arccos$: angle is in QII. $180° - 60° = 120°$.',
-        hint3: '$\\arctan(-\\sqrt{3}) = -\\arctan(\\sqrt{3}) = -60°$.',
-        explanation: '1) $\\arcsin(-1) = -90°$. 2) $\\arccos(-\\frac{1}{2}) = 120°$. 3) $\\arctan(-\\sqrt{3}) = -60°$.'
+        correctAnswers: ['-1/2', '2/3', '-1/3'],
+        hint1: '$\\sin(-\\frac{\\pi}{2}) = -1$ and $-\\frac{\\pi}{2} \\in [-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$.',
+        hint2: 'For negative input to $\\arccos$: angle is in QII. $\\pi - \\frac{\\pi}{3} = \\frac{2\\pi}{3}$.',
+        hint3: '$\\arctan(-\\sqrt{3}) = -\\arctan(\\sqrt{3}) = -\\frac{\\pi}{3}$.',
+        explanation: '1) $\\arcsin(-1) = -\\frac{\\pi}{2}$. 2) $\\arccos(-\\frac{1}{2}) = \\frac{2\\pi}{3}$. 3) $\\arctan(-\\sqrt{3}) = -\\frac{\\pi}{3}$.'
       }
     },
     {

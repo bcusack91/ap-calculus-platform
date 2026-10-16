@@ -9,7 +9,7 @@ export const precalcInverseTrigPart5Data = {
 
 **Part 5 of 7**
 
-Inverse trig functions let us **find angles** in right triangles when we know the sides.
+Inverse trig functions let us **find angles** in right triangles when we know the sides. As everywhere in AP Precalculus, the angles come out in **radians** (calculator in radian mode). A right angle is $\\frac{\\pi}{2} \\approx 1.571$, so the two acute angles of a right triangle add to $\\frac{\\pi}{2}$.
 
 ### The Setup
 
@@ -21,13 +21,13 @@ $$\\boxed{\\theta = \\arctan\\!\\left(\\frac{\\text{opposite}}{\\text{adjacent}}
 
 For the angle opposite the side of length 5:
 
-$$\\theta = \\arcsin\\!\\left(\\frac{5}{13}\\right) = \\arctan\\!\\left(\\frac{5}{12}\\right) \\approx 22.6°$$
+$$\\theta = \\arcsin\\!\\left(\\frac{5}{13}\\right) = \\arctan\\!\\left(\\frac{5}{12}\\right) \\approx 0.395$$
 
 For the angle opposite the side of length 12:
 
-$$\\alpha = \\arcsin\\!\\left(\\frac{12}{13}\\right) = \\arctan\\!\\left(\\frac{12}{5}\\right) \\approx 67.4°$$
+$$\\alpha = \\arcsin\\!\\left(\\frac{12}{13}\\right) = \\arctan\\!\\left(\\frac{12}{5}\\right) \\approx 1.176$$
 
-Verify: $22.6° + 67.4° + 90° = 180°$ ✓
+Verify: $0.395 + 1.176 = 1.571 \\approx \\frac{\\pi}{2}$ ✓
       `
     },
     {
@@ -71,24 +71,24 @@ A 20-foot ladder leans against a wall with its base 8 feet from the wall. Find t
 
 Adjacent = $8$, hypotenuse = $20$.
 
-$$\\theta = \\arccos\\!\\left(\\frac{8}{20}\\right) = \\arccos(0.4) \\approx 66.4°$$
+$$\\theta = \\arccos\\!\\left(\\frac{8}{20}\\right) = \\arccos(0.4) \\approx 1.159$$
 
 ### Example 2: Finding Both Acute Angles
 
 In a right triangle with legs $a = 7$ and $b = 24$:
 
-$$\\alpha = \\arctan\\!\\left(\\frac{7}{24}\\right) \\approx 16.3°$$
-$$\\beta = \\arctan\\!\\left(\\frac{24}{7}\\right) \\approx 73.7°$$
+$$\\alpha = \\arctan\\!\\left(\\frac{7}{24}\\right) \\approx 0.284$$
+$$\\beta = \\arctan\\!\\left(\\frac{24}{7}\\right) \\approx 1.287$$
 
-Check: $16.3° + 73.7° = 90°$ ✓ (The acute angles in a right triangle sum to $90°$.)
+Check: $0.284 + 1.287 = 1.571 \\approx \\frac{\\pi}{2}$ ✓ (The acute angles in a right triangle sum to $\\frac{\\pi}{2}$.)
 
 ### Example 3: Using a Known Hypotenuse
 
 Right triangle with opposite $= 6$, hypotenuse $= 10$.
 
-$$\\theta = \\arcsin\\!\\left(\\frac{6}{10}\\right) = \\arcsin(0.6) \\approx 36.9°$$
+$$\\theta = \\arcsin\\!\\left(\\frac{6}{10}\\right) = \\arcsin(0.6) \\approx 0.644$$
 
-This is a 3-4-5 triangle scaled by 2 (sides 6, 8, 10), and $\\arcsin(0.6) = 36.87°$.
+This is a 3-4-5 triangle scaled by 2 (sides 6, 8, 10), so the same angle is also $\\arctan\\!\\left(\\frac{6}{8}\\right) \\approx 0.644$.
       `
     },
     {
@@ -141,21 +141,21 @@ This is a 3-4-5 triangle scaled by 2 (sides 6, 8, 10), and $\\arcsin(0.6) = 36.8
       content: `
 **Solving Triangles** 🧮
 
-Round to the nearest degree.
+Give each angle in radians, rounded to two decimal places.
 
-**1)** Right triangle: opposite = 3, adjacent = 4. Find angle $\\theta$ in degrees. (e.g., if opposite = 5, adjacent = 12, then $\\theta = \\arctan(\\frac{5}{12}) \\approx 23°$)
+**1)** Right triangle: opposite = 3, adjacent = 4. Find angle $\\theta$. (e.g., if opposite = 5, adjacent = 12, then $\\theta = \\arctan(\\frac{5}{12}) \\approx 0.39$)
 
-**2)** Right triangle: opposite = 7, hypotenuse = 25. Find angle $\\theta$ in degrees. (e.g., if opp = 5, hyp = 13, then $\\theta = \\arcsin(\\frac{5}{13}) \\approx 23°$)
+**2)** Right triangle: opposite = 7, hypotenuse = 25. Find angle $\\theta$. (e.g., if opp = 5, hyp = 13, then $\\theta = \\arcsin(\\frac{5}{13}) \\approx 0.39$)
 
-**3)** Right triangle: adjacent = 9, hypotenuse = 15. Find angle $\\theta$ in degrees. (e.g., if adj = 4, hyp = 5, then $\\theta = \\arccos(\\frac{4}{5}) \\approx 37°$)
+**3)** Right triangle: adjacent = 9, hypotenuse = 15. Find angle $\\theta$. (e.g., if adj = 12, hyp = 13, then $\\theta = \\arccos(\\frac{12}{13}) \\approx 0.39$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['37', '16', '53'],
-        hint1: '$\\arctan(\\frac{3}{4}) = \\arctan(0.75) \\approx 36.87°$.',
-        hint2: '$\\arcsin(\\frac{7}{25}) = \\arcsin(0.28) \\approx 16.26°$.',
-        hint3: '$\\arccos(\\frac{9}{15}) = \\arccos(0.6) \\approx 53.13°$.',
-        explanation: '1) $\\arctan(0.75) \\approx 37°$. 2) $\\arcsin(0.28) \\approx 16°$. 3) $\\arccos(0.6) \\approx 53°$.'
+        correctAnswers: ['0.64', '0.28', '0.93'],
+        hint1: '$\\arctan(\\frac{3}{4}) = \\arctan(0.75) \\approx 0.6435$.',
+        hint2: '$\\arcsin(\\frac{7}{25}) = \\arcsin(0.28) \\approx 0.2838$.',
+        hint3: '$\\arccos(\\frac{9}{15}) = \\arccos(0.6) \\approx 0.9273$.',
+        explanation: '1) $\\arctan(0.75) \\approx 0.64$. 2) $\\arcsin(0.28) \\approx 0.28$. 3) $\\arccos(0.6) \\approx 0.93$. Check 1 and 3: $0.64 + 0.93 \\approx 1.57 = \\frac{\\pi}{2}$, as expected for the two acute angles of a 3-4-5 triangle.'
       }
     },
     {
@@ -207,7 +207,7 @@ Round to the nearest degree.
               '$\\arctan(\\frac{12}{3})$'
             ],
             correctAnswer: 1,
-            explanation: 'Rise = opposite = 3, run = adjacent = 12. Angle = $\\arctan(\\frac{\\text{opp}}{\\text{adj}}) = \\arctan(\\frac{3}{12}) \\approx 14°$.'
+            explanation: 'Rise = opposite = 3, run = adjacent = 12. Angle = $\\arctan(\\frac{\\text{opp}}{\\text{adj}}) = \\arctan(\\frac{3}{12}) \\approx 0.245$ radians.'
           },
           {
             question: '$\\sec(\\arctan x)$ simplifies to:',

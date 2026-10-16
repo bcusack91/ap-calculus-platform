@@ -38,23 +38,23 @@ $\\arcsin\\!\\left(\\frac{1}{2}\\right) = \\frac{\\pi}{6}$ means "the angle (in 
 
 Ask: "What angle $\\theta \\in [-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ has $\\sin\\theta = \\frac{\\sqrt{3}}{2}$?"
 
-$$\\theta = \\frac{\\pi}{3} = 60°$$
+$$\\theta = \\frac{\\pi}{3}$$
 
 ### Example 2: Evaluate $\\arccos(-1)$
 
 Ask: "What angle $\\theta \\in [0, \\pi]$ has $\\cos\\theta = -1$?"
 
-$$\\theta = \\pi = 180°$$
+$$\\theta = \\pi$$
 
 ### Example 3: Evaluate $\\arctan(-1)$
 
 Ask: "What angle $\\theta \\in (-\\frac{\\pi}{2}, \\frac{\\pi}{2})$ has $\\tan\\theta = -1$?"
 
-$$\\theta = -\\frac{\\pi}{4} = -45°$$
+$$\\theta = -\\frac{\\pi}{4}$$
 
-### Example 4: Why $\\arcsin(\\sin 240°) \\neq 240°$
+### Example 4: Why $\\arcsin\\!\\left(\\sin \\frac{4\\pi}{3}\\right) \\neq \\frac{4\\pi}{3}$
 
-$\\sin 240° = -\\frac{\\sqrt{3}}{2}$. The principal value of $\\arcsin(-\\frac{\\sqrt{3}}{2})$ is $-60°$, not $240°$, because $\\arcsin$ outputs must be in $[-90°, 90°]$.
+$\\sin \\frac{4\\pi}{3} = -\\frac{\\sqrt{3}}{2}$. The principal value of $\\arcsin(-\\frac{\\sqrt{3}}{2})$ is $-\\frac{\\pi}{3}$, not $\\frac{4\\pi}{3}$, because $\\arcsin$ outputs must be in $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$.
       `
     },
     {
@@ -65,7 +65,7 @@ $\\sin 240° = -\\frac{\\sqrt{3}}{2}$. The principal value of $\\arcsin(-\\frac{
 
 ### Without Restriction: Infinitely Many Answers
 
-$\\sin\\theta = \\frac{1}{2}$ has solutions $\\theta = 30°, 150°, 390°, 510°, \\ldots$ and also $-210°, -330°, \\ldots$
+$\\sin\\theta = \\frac{1}{2}$ has solutions $\\theta = \\frac{\\pi}{6}, \\frac{5\\pi}{6}, \\frac{13\\pi}{6}, \\frac{17\\pi}{6}, \\ldots$ and also $-\\frac{7\\pi}{6}, -\\frac{11\\pi}{6}, \\ldots$
 
 A function can only return **one** output. So we pick the interval where each trig function is one-to-one:
 
@@ -79,11 +79,13 @@ A function can only return **one** output. So we pick the interval where each tr
 
 | Input $x$ | $\\arcsin x$ | $\\arccos x$ |
 |:----------|:------------|:------------|
-| $0$ | $0°$ | $90°$ |
-| $\\frac{1}{2}$ | $30°$ | $60°$ |
-| $\\frac{\\sqrt{2}}{2}$ | $45°$ | $45°$ |
-| $\\frac{\\sqrt{3}}{2}$ | $60°$ | $30°$ |
-| $1$ | $90°$ | $0°$ |
+| $0$ | $0$ | $\\frac{\\pi}{2}$ |
+| $\\frac{1}{2}$ | $\\frac{\\pi}{6}$ | $\\frac{\\pi}{3}$ |
+| $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\pi}{4}$ | $\\frac{\\pi}{4}$ |
+| $\\frac{\\sqrt{3}}{2}$ | $\\frac{\\pi}{3}$ | $\\frac{\\pi}{6}$ |
+| $1$ | $\\frac{\\pi}{2}$ | $0$ |
+
+> 📏 **Radians only.** The AP exam measures every angle in radians, so inverse trig answers are written as $\\frac{\\pi}{6}$, not $30°$.
       `
     },
     {
@@ -97,35 +99,35 @@ A function can only return **one** output. So we pick the interval where each tr
           {
             question: '$\\arccos\\!\\left(\\frac{1}{2}\\right)$ equals:',
             options: [
-              '$30°$',
-              '$60°$',
-              '$120°$',
-              '$-60°$'
+              '$\\frac{5\\pi}{3}$',
+              '$\\frac{\\pi}{3}$',
+              '$\\frac{2\\pi}{3}$',
+              '$-\\frac{\\pi}{3}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\cos 60° = \\frac{1}{2}$ and $60° \\in [0°, 180°]$, so $\\arccos(\\frac{1}{2}) = 60°$.'
+            explanation: '$\\cos \\frac{\\pi}{3} = \\frac{1}{2}$ and $\\frac{\\pi}{3} \\in [0, \\pi]$, so $\\arccos(\\frac{1}{2}) = \\frac{\\pi}{3}$. $\\frac{5\\pi}{3}$ also has cosine $\\frac{1}{2}$ but lies outside $[0, \\pi]$, $\\frac{2\\pi}{3}$ is $\\arccos(-\\frac{1}{2})$, and $\\arccos$ never outputs a negative angle.'
           },
           {
             question: 'The range of $\\arctan x$ is:',
             options: [
-              '$[-90°, 90°]$',
-              '$(-90°, 90°)$',
-              '$[0°, 180°]$',
-              '$(-180°, 180°)$'
+              '$\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$',
+              '$\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$',
+              '$[0, \\pi]$',
+              '$(-\\pi, \\pi)$'
             ],
             correctAnswer: 1,
-            explanation: '$\\arctan$ has range $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$ or $(-90°, 90°)$ — open interval (never reaches $\\pm 90°$).'
+            explanation: '$\\arctan$ has range $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$, an open interval: $\\tan$ is undefined at $\\pm\\frac{\\pi}{2}$, so those endpoints are never reached. The closed interval is the range of $\\arcsin$, and $[0, \\pi]$ is the range of $\\arccos$.'
           },
           {
-            question: '$\\arcsin(\\sin 150°)$ equals:',
+            question: '$\\arcsin\\!\\left(\\sin \\frac{5\\pi}{6}\\right)$ equals:',
             options: [
-              '$150°$',
-              '$30°$',
-              '$-30°$',
-              '$-150°$'
+              '$\\frac{5\\pi}{6}$',
+              '$\\frac{\\pi}{6}$',
+              '$-\\frac{\\pi}{6}$',
+              '$-\\frac{5\\pi}{6}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\sin 150° = \\frac{1}{2}$. Then $\\arcsin(\\frac{1}{2}) = 30°$ (principal value in $[-90°, 90°]$).'
+            explanation: '$\\sin \\frac{5\\pi}{6} = \\frac{1}{2}$. Then $\\arcsin(\\frac{1}{2}) = \\frac{\\pi}{6}$ (principal value in $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$). $\\frac{5\\pi}{6}$ is outside the range, and the negative angles have sine $-\\frac{1}{2}$.'
           }
         ]
       }
@@ -136,19 +138,21 @@ A function can only return **one** output. So we pick the interval where each tr
       content: `
 **Inverse Trig Evaluation** 🧮
 
-**1)** $\\arcsin\\!\\left(\\frac{\\sqrt{2}}{2}\\right)$ in degrees = ? (e.g., $\\arcsin(\\frac{\\sqrt{3}}{2}) = 60$ since $\\sin 60° = \\frac{\\sqrt{3}}{2}$)
+Write each answer as a multiple of $\\pi$ and enter the **coefficient** (type \`1/6\` for $\\frac{\\pi}{6}$).
 
-**2)** $\\arccos(0)$ in degrees = ? (e.g., $\\arccos(1) = 0$ since $\\cos 0° = 1$)
+**1)** $\\arcsin\\!\\left(\\frac{\\sqrt{2}}{2}\\right) = \\,?\\cdot\\pi$ (e.g., $\\arcsin(\\frac{\\sqrt{3}}{2}) = \\frac{\\pi}{3}$, coefficient \`1/3\`)
 
-**3)** $\\arctan(\\sqrt{3})$ in degrees = ? (e.g., $\\arctan(1) = 45$ since $\\tan 45° = 1$)
+**2)** $\\arccos(0) = \\,?\\cdot\\pi$ (e.g., $\\arccos(-1) = \\pi$, coefficient \`1\`)
+
+**3)** $\\arctan(\\sqrt{3}) = \\,?\\cdot\\pi$ (e.g., $\\arctan(1) = \\frac{\\pi}{4}$, coefficient \`1/4\`)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['45', '90', '60'],
-        hint1: '$\\sin 45° = \\frac{\\sqrt{2}}{2}$ and $45° \\in [-90°, 90°]$.',
-        hint2: '$\\cos 90° = 0$ and $90° \\in [0°, 180°]$.',
-        hint3: '$\\tan 60° = \\sqrt{3}$ and $60° \\in (-90°, 90°)$.',
-        explanation: '1) $\\arcsin(\\frac{\\sqrt{2}}{2}) = 45°$. 2) $\\arccos(0) = 90°$. 3) $\\arctan(\\sqrt{3}) = 60°$.'
+        correctAnswers: ['1/4', '1/2', '1/3'],
+        hint1: '$\\sin \\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$ and $\\frac{\\pi}{4} \\in [-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$.',
+        hint2: '$\\cos \\frac{\\pi}{2} = 0$ and $\\frac{\\pi}{2} \\in [0, \\pi]$.',
+        hint3: '$\\tan \\frac{\\pi}{3} = \\sqrt{3}$ and $\\frac{\\pi}{3} \\in (-\\frac{\\pi}{2}, \\frac{\\pi}{2})$.',
+        explanation: '1) $\\arcsin(\\frac{\\sqrt{2}}{2}) = \\frac{\\pi}{4}$. 2) $\\arccos(0) = \\frac{\\pi}{2}$. 3) $\\arctan(\\sqrt{3}) = \\frac{\\pi}{3}$.'
       }
     },
     {
@@ -192,26 +196,26 @@ A function can only return **one** output. So we pick the interval where each tr
       exercise: {
         questions: [
           {
-            question: 'Why does $\\arcsin(\\sin 200°)$ NOT equal $200°$?',
+            question: 'Why does $\\arcsin(\\sin 3)$ NOT equal $3$?',
             options: [
-              'Because $\\sin 200°$ is undefined',
-              'Because $200°$ is outside the range $[-90°, 90°]$ of $\\arcsin$',
+              'Because $\\sin 3$ is undefined',
+              'Because $3$ is outside the range $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ of $\\arcsin$',
               'Because $\\arcsin$ only accepts positive inputs',
-              'Because $200°$ is not a special angle'
+              'Because $3$ is not a multiple of $\\pi$'
             ],
             correctAnswer: 1,
-            explanation: '$\\arcsin$ can only output angles in $[-90°, 90°]$. Since $200°$ is outside this range, the output is a different angle with the same sine value.'
+            explanation: '$\\arcsin$ can only output angles in $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}] \\approx [-1.57, 1.57]$. Since $3$ radians is outside this range, the output is a different angle with the same sine value (it is $\\pi - 3 \\approx 0.14$).'
           },
           {
             question: '$\\arccos(-\\frac{\\sqrt{3}}{2})$ equals:',
             options: [
-              '$-30°$',
-              '$150°$',
-              '$210°$',
-              '$-150°$'
+              '$-\\frac{\\pi}{6}$',
+              '$\\frac{5\\pi}{6}$',
+              '$\\frac{7\\pi}{6}$',
+              '$-\\frac{5\\pi}{6}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\cos 150° = -\\frac{\\sqrt{3}}{2}$ and $150° \\in [0°, 180°]$. So $\\arccos(-\\frac{\\sqrt{3}}{2}) = 150°$.'
+            explanation: '$\\cos \\frac{5\\pi}{6} = -\\frac{\\sqrt{3}}{2}$ and $\\frac{5\\pi}{6} \\in [0, \\pi]$. So $\\arccos(-\\frac{\\sqrt{3}}{2}) = \\frac{5\\pi}{6}$. $\\frac{7\\pi}{6}$ has the same cosine but lies outside $[0, \\pi]$, and $\\arccos$ never outputs a negative angle.'
           }
         ]
       }

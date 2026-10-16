@@ -71,7 +71,7 @@ $$\\cos(2\\theta) = \\cos(\\theta + \\theta) = \\cos\\theta\\cos\\theta - \\sin\
               question: 'Using $\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$, what is $\\sin(2\\theta)$ when $\\sin\\theta = \\tfrac{1}{2}$ and $\\cos\\theta = \\tfrac{\\sqrt{3}}{2}$?',
               options: ['$\\frac{\\sqrt{3}}{2}$', '$\\frac{1}{2}$', '$\\sqrt{3}$', '$\\frac{\\sqrt{3}}{4}$'],
               correctAnswer: 0,
-              explanation: '$2\\cdot\\tfrac{1}{2}\\cdot\\tfrac{\\sqrt{3}}{2} = \\tfrac{\\sqrt{3}}{2}$. (These are $\\sin 30^\\circ,\\cos 30^\\circ$, so $2\\theta = 60^\\circ$ and indeed $\\sin 60^\\circ = \\tfrac{\\sqrt{3}}{2}$.)',
+              explanation: '$2\\cdot\\tfrac{1}{2}\\cdot\\tfrac{\\sqrt{3}}{2} = \\tfrac{\\sqrt{3}}{2}$. (These are $\\sin \\frac{\\pi}{6},\\cos \\frac{\\pi}{6}$, so $2\\theta = \\frac{\\pi}{3}$ and indeed $\\sin \\frac{\\pi}{3} = \\tfrac{\\sqrt{3}}{2}$.)',
             },
           ],
         },
@@ -219,7 +219,7 @@ $$\\cos\\theta = \\sqrt{1 - \\left(\\tfrac{3}{5}\\right)^2} = \\sqrt{1 - \\tfrac
 $$\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta = 2\\cdot\\tfrac{3}{5}\\cdot\\tfrac{4}{5} = \\frac{24}{25}$$
 $$\\cos(2\\theta) = 1 - 2\\sin^2\\theta = 1 - 2\\cdot\\tfrac{9}{25} = 1 - \\tfrac{18}{25} = \\frac{7}{25}$$
 
-**Step 3 — Locate $2\\theta$.** Both values are positive, so $2\\theta$ is in Quadrant I. (Check: $\\theta \\approx 36.9^\\circ$, so $2\\theta \\approx 73.7^\\circ$.)
+**Step 3 — Locate $2\\theta$.** Both values are positive, so $2\\theta$ is in Quadrant I. (Check: $\\theta \\approx 0.644$, so $2\\theta \\approx 1.287$, which is less than $\\frac{\\pi}{2} \\approx 1.571$.)
 
 > ✅ **Sanity check:** $\\left(\\tfrac{24}{25}\\right)^2 + \\left(\\tfrac{7}{25}\\right)^2 = \\tfrac{576 + 49}{625} = \\tfrac{625}{625} = 1$ ✓`,
       },
@@ -494,7 +494,7 @@ Replace $\\cos^2\\theta$ with $1 - \\sin^2\\theta$:
 
 $$= 2\\sin\\theta - 2\\sin^3\\theta + \\sin\\theta - 2\\sin^3\\theta = 3\\sin\\theta - 4\\sin^3\\theta \\;\\checkmark$$
 
-> 💡 **Check with a value:** at $\\theta = 30^\\circ$, the left side is $\\sin 90^\\circ = 1$ and the right side is $3\\cdot\\tfrac{1}{2} - 4\\cdot\\tfrac{1}{8} = 1$. A numerical check cannot prove an identity, but it catches sign errors fast.`,
+> 💡 **Check with a value:** at $\\theta = \\frac{\\pi}{6}$, the left side is $\\sin \\frac{\\pi}{2} = 1$ and the right side is $3\\cdot\\tfrac{1}{2} - 4\\cdot\\tfrac{1}{8} = 1$. A numerical check cannot prove an identity, but it catches sign errors fast.`,
       },
       {
         id: 'dha4-steps-dropdown',
@@ -743,8 +743,8 @@ The horizontal range of a projectile launched at speed $v$ and angle $\\theta$ i
 $$R(\\theta) = \\frac{v^2 \\sin(2\\theta)}{g}$$
 
 The double angle $\\sin(2\\theta)$ is the whole story:
-- $\\sin(2\\theta)$ is **largest when $2\\theta = 90^\\circ$**, i.e. $\\theta = 45^\\circ$. That's why $45^\\circ$ gives maximum range.
-- Two angles that add to $90^\\circ$ (like $30^\\circ$ and $60^\\circ$) give the **same range**, because $\\sin(2\\cdot 30^\\circ) = \\sin 60^\\circ = \\sin 120^\\circ = \\sin(2\\cdot 60^\\circ)$.
+- $\\sin(2\\theta)$ is **largest when $2\\theta = \\frac{\\pi}{2}$**, i.e. $\\theta = \\frac{\\pi}{4}$. That's why $\\frac{\\pi}{4}$ gives maximum range.
+- Two angles that add to $\\frac{\\pi}{2}$ (like $\\frac{\\pi}{6}$ and $\\frac{\\pi}{3}$) give the **same range**, because $\\sin(2\\cdot \\frac{\\pi}{6}) = \\sin \\frac{\\pi}{3} = \\sin \\frac{2\\pi}{3} = \\sin(2\\cdot \\frac{\\pi}{3})$.
 
 > 💡 The double-angle identity isn't just algebra — it *explains a physical fact* you may have seen in physics class.`,
       },
@@ -756,15 +756,15 @@ The double angle $\\sin(2\\theta)$ is the whole story:
 Reason about the range model $R(\\theta) = \\dfrac{v^2\\sin(2\\theta)}{g}$ and the equation work above.`,
         exercise: {
           dropdowns: [
-            { label: 'The launch angle giving maximum range:', options: ['$45^\\circ$', '$30^\\circ$', '$60^\\circ$', '$90^\\circ$'] },
-            { label: 'An angle giving the SAME range as $25^\\circ$:', options: ['$65^\\circ$', '$50^\\circ$', '$45^\\circ$', '$75^\\circ$'] },
+            { label: 'The launch angle giving maximum range:', options: ['$\\frac{\\pi}{4}$', '$\\frac{\\pi}{6}$', '$\\frac{\\pi}{3}$', '$\\frac{\\pi}{2}$'] },
+            { label: 'An angle giving the SAME range as $\\frac{\\pi}{12}$:', options: ['$\\frac{5\\pi}{12}$', '$\\frac{\\pi}{6}$', '$\\frac{\\pi}{4}$', '$\\frac{11\\pi}{12}$'] },
             { label: 'First algebra step in solving $\\sin(2x) = \\cos x$:', options: ['Replace $\\sin(2x)$ with $2\\sin x\\cos x$', 'Divide both sides by $\\cos x$', 'Replace $\\cos x$ with $1 - \\sin x$', 'Square both sides'] },
           ],
-          correctAnswers: ['$45^\\circ$', '$65^\\circ$', 'Replace $\\sin(2x)$ with $2\\sin x\\cos x$'],
-          hint1: '$\\sin(2\\theta)$ peaks at $2\\theta = 90^\\circ$.',
-          hint2: 'Equal ranges come from angles that sum to $90^\\circ$: $25^\\circ + 65^\\circ = 90^\\circ$.',
+          correctAnswers: ['$\\frac{\\pi}{4}$', '$\\frac{5\\pi}{12}$', 'Replace $\\sin(2x)$ with $2\\sin x\\cos x$'],
+          hint1: '$\\sin(2\\theta)$ peaks at $2\\theta = \\frac{\\pi}{2}$.',
+          hint2: 'Equal ranges come from angles that sum to $\\frac{\\pi}{2}$: $\\frac{\\pi}{12} + \\frac{5\\pi}{12} = \\frac{6\\pi}{12} = \\frac{\\pi}{2}$.',
           hint3: 'Expand the double angle first so every term shares the angle $x$, then factor — don\'t divide.',
-          explanation: 'Max range at $45^\\circ$; complementary angles ($25^\\circ$ and $65^\\circ$) share a range; and you always expand $\\sin(2x) = 2\\sin x\\cos x$ before factoring.',
+          explanation: 'Max range at $\\frac{\\pi}{4}$; complementary angles ($\\frac{\\pi}{12}$ and $\\frac{5\\pi}{12}$) share a range; and you always expand $\\sin(2x) = 2\\sin x\\cos x$ before factoring.',
         },
       },
       {

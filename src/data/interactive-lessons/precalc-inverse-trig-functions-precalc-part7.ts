@@ -15,7 +15,7 @@ This part brings together everything from Parts 1–6: domains & ranges, graphs,
 
 | Property | $\\arcsin x$ | $\\arccos x$ | $\\arctan x$ |
 |:---------|:------------|:------------|:------------|
-| Domain | $[-1, 1]$ | $[-1, 1]$ | $(-\\infty=, \\infty)$ |
+| Domain | $[-1, 1]$ | $[-1, 1]$ | $(-\\infty, \\infty)$ |
 | Range | $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ | $[0, \\pi]$ | $(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$ |
 | At $x=0$ | $0$ | $\\frac{\\pi}{2}$ | $0$ |
 | Monotone | Increasing | Decreasing | Increasing |
@@ -53,7 +53,7 @@ $$2x = \\frac{1}{2} \\implies x = \\frac{1}{4}$$
 
 ### Problem 5: Application
 Lighthouse 150 ft tall, boat 400 ft away. Angle of depression:
-$$\\arctan\\!\\left(\\frac{150}{400}\\right) = \\arctan(0.375) \\approx 20.6°$$
+$$\\arctan\\!\\left(\\frac{150}{400}\\right) = \\arctan(0.375) \\approx 0.359 \\text{ radians}$$
       `
     },
     {
@@ -64,9 +64,10 @@ $$\\arctan\\!\\left(\\frac{150}{400}\\right) = \\arctan(0.375) \\approx 20.6°$$
 
 | Mistake | Why It's Wrong | Correct |
 |:--------|:---------------|:--------|
-| $\\arcsin(\\sin 200°) = 200°$ | $200°$ not in $[-90°, 90°]$ | Find equivalent angle in range |
-| $\\sin^{-1}(0.5) = \\frac{1}{\\sin(0.5)}$ | $\\sin^{-1}$ means inverse, not reciprocal | $\\sin^{-1}(0.5) = 30°$ |
-| $\\arccos(-0.5) = -60°$ | $\\arccos$ range is $[0°, 180°]$, never negative | $\\arccos(-0.5) = 120°$ |
+| $\\arcsin(\\sin \\frac{5\\pi}{4}) = \\frac{5\\pi}{4}$ | $\\frac{5\\pi}{4}$ not in $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ | Find the angle in range with the same sine: $-\\frac{\\pi}{4}$ |
+| $\\sin^{-1}(0.5) = \\frac{1}{\\sin(0.5)}$ | $\\sin^{-1}$ means inverse, not reciprocal | $\\sin^{-1}(0.5) = \\frac{\\pi}{6}$ |
+| $\\arccos(-0.5) = -\\frac{\\pi}{3}$ | $\\arccos$ range is $[0, \\pi]$, never negative | $\\arccos(-0.5) = \\frac{2\\pi}{3}$ |
+| Answering $30°$ | The exam measures angles in radians | Write $\\frac{\\pi}{6}$; use radian mode |
 | Forgetting to rationalize | $\\frac{1}{\\sqrt{5}}$ should be $\\frac{\\sqrt{5}}{5}$ | Rationalize the denominator |
 | Using wrong triangle sides | Confusing which sides are opp/adj/hyp | Always label relative to the angle |
       `
@@ -125,15 +126,15 @@ $$\\arctan\\!\\left(\\frac{150}{400}\\right) = \\arctan(0.375) \\approx 20.6°$$
 
 **2)** Solve $\\arccos(x) = \\frac{2\\pi}{3}$. What is $x$? Write as a decimal. (e.g., $\\arccos(x) = \\frac{\\pi}{3}$ gives $x = \\cos\\frac{\\pi}{3} = 0.5$)
 
-**3)** $\\arcsin(\\frac{\\sqrt{3}}{2}) + \\arccos(\\frac{\\sqrt{3}}{2})$ in degrees = ? (e.g., $\\arcsin(\\frac{1}{2}) + \\arccos(\\frac{1}{2}) = 30° + 60° = 90°$)
+**3)** $\\arcsin(\\frac{\\sqrt{3}}{2}) + \\arccos(\\frac{\\sqrt{3}}{2}) = \\,?\\cdot\\pi$. Enter the coefficient of $\\pi$. (e.g., $\\arcsin(\\frac{1}{2}) + \\arccos(\\frac{1}{2}) = \\frac{\\pi}{6} + \\frac{\\pi}{3} = \\frac{\\pi}{2}$, coefficient \`1/2\`)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['8/15', '-0.5', '90'],
+        correctAnswers: ['8/15', '-0.5', '1/2'],
         hint1: 'Triangle: opp = 8, hyp = 17, adj = $\\sqrt{289-64} = 15$. $\\tan\\theta = \\frac{8}{15}$.',
         hint2: '$x = \\cos(\\frac{2\\pi}{3}) = -\\frac{1}{2} = -0.5$.',
-        hint3: '$\\arcsin x + \\arccos x = \\frac{\\pi}{2} = 90°$ for any valid $x$.',
-        explanation: '1) 8-15-17 triangle: $\\frac{8}{15}$. 2) $\\cos(\\frac{2\\pi}{3}) = -0.5$. 3) Complementary identity: always $90°$.'
+        hint3: '$\\arcsin x + \\arccos x = \\frac{\\pi}{2}$ for any valid $x$.',
+        explanation: '1) 8-15-17 triangle: $\\frac{8}{15}$. 2) $\\cos(\\frac{2\\pi}{3}) = -0.5$. 3) Complementary identity: $\\frac{\\pi}{3} + \\frac{\\pi}{6} = \\frac{\\pi}{2}$ always.'
       }
     },
     {
@@ -177,15 +178,15 @@ $$\\arctan\\!\\left(\\frac{150}{400}\\right) = \\arctan(0.375) \\approx 20.6°$$
       exercise: {
         questions: [
           {
-            question: 'A roof makes a 35° angle with the horizontal. If the horizontal span is 24 feet, the rise (height) is:',
+            question: 'A roof makes an angle of $0.6$ radians with the horizontal. If the horizontal run is 24 feet, the rise (height) is:',
             options: [
-              '$24\\cos 35° \\approx 19.7$ ft',
-              '$24\\sin 35° \\approx 13.8$ ft',
-              '$24\\tan 35° \\approx 16.8$ ft',
-              '$\\frac{24}{\\tan 35°} \\approx 34.3$ ft'
+              '$24\\cos 0.6 \\approx 19.8$ ft',
+              '$24\\sin 0.6 \\approx 13.6$ ft',
+              '$24\\tan 0.6 \\approx 16.4$ ft',
+              '$\\frac{24}{\\tan 0.6} \\approx 35.1$ ft'
             ],
             correctAnswer: 2,
-            explanation: '$\\tan 35° = \\frac{\\text{rise}}{24}$, so rise $= 24\\tan 35° \\approx 16.8$ ft.'
+            explanation: 'The rise is opposite the angle and the horizontal run is adjacent, so $\\tan 0.6 = \\frac{\\text{rise}}{24}$ and rise $= 24\\tan 0.6 \\approx 16.4$ ft. Sine and cosine would need the sloped length as the hypotenuse, and dividing by $\\tan 0.6$ inverts the ratio.'
           },
           {
             question: 'How many values of $x$ in $[0, 2\\pi]$ satisfy $\\sin x = \\frac{1}{2}$?',

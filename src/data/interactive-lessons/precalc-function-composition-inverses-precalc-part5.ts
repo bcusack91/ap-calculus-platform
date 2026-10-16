@@ -29,33 +29,31 @@ These are different! For $f(x) = x - 3$:
       `
     },
     {
-      id: 'p5-operations',
+      id: 'p5-transformations',
       type: 'text' as const,
       content: `
-## 📝 Function Operations Review
+## 📝 Transformations Are Compositions
 
-### Arithmetic Operations
+Every transformation from earlier in the course is a composition with a simple linear function.
 
-- $(f+g)(x) = f(x)+g(x)$
-- $(f-g)(x) = f(x)-g(x)$
-- $(fg)(x) = f(x) \\cdot g(x)$
-- $(f/g)(x) = f(x)/g(x), \\quad g(x) \\neq 0$
+| Transformation | As a composition | Inner or outer? |
+|:---------------|:-----------------|:----------------|
+| $f(x) + k$ (vertical shift) | $g(f(x))$ with $g(x) = x + k$ | $g$ is outer |
+| $f(x + h)$ (horizontal shift) | $f(g(x))$ with $g(x) = x + h$ | $g$ is inner |
+| $k \\cdot f(x)$ (vertical dilation) | $g(f(x))$ with $g(x) = kx$ | $g$ is outer |
+| $f(kx)$ (horizontal dilation) | $f(g(x))$ with $g(x) = kx$ | $g$ is inner |
 
-### Example
+**Outer = vertical, inner = horizontal.** That is the same inside/outside rule you used for transformations.
 
-$f(x) = x^2, g(x) = 2x+1$
+### Order Matters
 
-$(f+g)(x) = x^2+2x+1 = (x+1)^2$
+Composition is **not** commutative. With $f(x) = x^2$ and $g(x) = x + 3$:
+- $f(g(x)) = (x + 3)^2$, a horizontal shift left $3$
+- $g(f(x)) = x^2 + 3$, a vertical shift up $3$
 
-$(fg)(x) = x^2(2x+1) = 2x^3+x^2$
+### The Identity Function
 
-$(f/g)(x) = \\frac{x^2}{2x+1}, \\quad x \\neq -\\frac{1}{2}$
-
-### Domains of Combined Functions
-
-$\\text{dom}(f+g) = \\text{dom}(f) \\cap \\text{dom}(g)$
-
-$\\text{dom}(f/g) = \\text{dom}(f) \\cap \\text{dom}(g) \\setminus \\{x: g(x)=0\\}$
+The function $i(x) = x$ changes nothing: $f(i(x)) = i(f(x)) = f(x)$. It plays the role for composition that $0$ plays for addition and $1$ plays for multiplication.
       `
     },
     {
@@ -83,15 +81,15 @@ Breaking a complex function into simpler pieces:
       id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Operations & Decomposition Quiz** 🎯
+**Transformations & Decomposition Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'If $f(x)=\\sqrt{x}$ and $g(x)=x-4$, find $(fg)(8)$:',
-            options: ['$2\\sqrt{2} + 4$', '$8\\sqrt{2}$', '$2\\sqrt{2} - 4$', '$-4\\sqrt{8}$'],
-            correctAnswer: 1,
-            explanation: '$(fg)(8) = f(8) \\cdot g(8) = \\sqrt{8} \\cdot 4 = 2\\sqrt{2} \\cdot 4 = 8\\sqrt{2}$.'
+            question: 'Which composition produces $y = f(x - 4)$?',
+            options: ['$f(g(x))$ with $g(x) = x - 4$', '$g(f(x))$ with $g(x) = x - 4$', '$f(g(x))$ with $g(x) = x + 4$', '$g(f(x))$ with $g(x) = x + 4$'],
+            correctAnswer: 0,
+            explanation: 'The $-4$ acts on the input, so $g(x) = x - 4$ goes inside: $f(g(x)) = f(x - 4)$. Putting $g$ outside gives $f(x) - 4$, a vertical shift, and $g(x) = x + 4$ shifts the wrong way.'
           },
           {
             question: 'Decompose $h(x) = \\frac{1}{(x+2)^3}$. If $g(x) = x+2$, then $f(u) =$',
@@ -112,23 +110,23 @@ Breaking a complex function into simpler pieces:
       id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-**Operations Practice** 🧮
+**Composition Practice** 🧮
 
 $f(x) = x+3, g(x) = 2x$
 
-**1)** $(f+g)(4)$ = ?
+**1)** $f(g(4))$ = ?
 
-**2)** $(f \\cdot g)(2)$ = ?
+**2)** $g(f(4))$ = ?
 
-**3)** $(f/g)(6)$ = ? (Enter as a fraction like "3/4")
+**3)** $g(f(x)) = 2x + k$. What is $k$?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15', '20', '3/4'],
-        hint1: '$f(4)+g(4) = 7+8 = 15$.',
-        hint2: '$f(2) \\cdot g(2) = 5 \\cdot 4 = 20$.',
-        hint3: '$f(6)/g(6) = 9/12 = 3/4$.',
-        explanation: '1) $15$. 2) $20$. 3) $3/4$.'
+        correctAnswers: ['11', '14', '6'],
+        hint1: '$g(4) = 8$, then $f(8) = 8 + 3$.',
+        hint2: '$f(4) = 7$, then $g(7) = 2 \\cdot 7$.',
+        hint3: '$g(f(x)) = 2(x + 3)$. Distribute.',
+        explanation: '1) $f(8) = 11$. 2) $g(7) = 14$, a different value, because composition is not commutative. 3) $2(x+3) = 2x + 6$, so $k = 6$.'
       }
     },
     {
@@ -150,21 +148,21 @@ $f(x) = x+3, g(x) = 2x$
             correctAnswer: 1
           },
           {
-            label: 'The domain of $f/g$ excludes:',
-            options: ['Where $f(x)=0$', 'Where $g(x)=0$', 'Where both are 0'],
-            correctAnswer: 1
+            label: 'Composing any $f$ with the identity $i(x) = x$ gives:',
+            options: ['$f(x)$', '$x$', '$0$'],
+            correctAnswer: 0
           },
           {
-            label: '$(f+g)(x) = (g+f)(x)$:',
+            label: '$f(g(x)) = g(f(x))$:',
             options: ['Always true', 'Sometimes true', 'Never true'],
-            correctAnswer: 0
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['$3x+1$', '$\\sin x$', 'Where $g(x)=0$', 'Always true'],
+        correctAnswers: ['$3x+1$', '$\\sin x$', '$f(x)$', 'Sometimes true'],
         hint1: 'Inner function is what you substitute.',
         hint2: 'The exponent is the inner function.',
-        hint3: 'Division by zero is forbidden.',
-        explanation: 'Inner: $3x+1$/$\\sin x$. Division excludes $g(x)=0$. Addition is commutative.'
+        hint3: 'The identity function changes nothing. For the last one, compare $(x+3)^2$ with $x^2 + 3$, then think of inverse functions.',
+        explanation: 'Inner: $3x+1$/$\\sin x$. The identity leaves $f$ unchanged. Composition is not commutative in general, but it can match for special pairs such as inverse functions.'
       }
     },
     {
@@ -182,10 +180,10 @@ $f(x) = x+3, g(x) = 2x$
             explanation: 'Outer: $\\sqrt{u}$, inner: $\\ln x$.'
           },
           {
-            question: 'If $f(x) = x^2-1$ and $g(x) = \\sqrt{x}$, the domain of $f/g$ is:',
-            options: ['$x > 0$', '$x \\geq 0$', 'All reals', '$x \\geq 1$'],
+            question: 'If $f(x) = \\sqrt{x}$ and $g(x) = x - 5$, the domain of $f(g(x))$ is:',
+            options: ['$x \\geq 5$', '$x \\geq 0$', 'All reals', '$x \\geq -5$'],
             correctAnswer: 0,
-            explanation: 'Need $x$ in domain of $g$ ($x \\geq 0$) and $g(x) \\neq 0$ ($x \\neq 0$). So $x > 0$.'
+            explanation: 'The output of $g$ must be a legal input for $f$: $x - 5 \\geq 0$, so $x \\geq 5$. Using the domain of $f$ alone gives $x \\geq 0$, and $x \\geq -5$ solves the inequality with the wrong sign.'
           }
         ]
       }

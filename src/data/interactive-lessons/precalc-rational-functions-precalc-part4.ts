@@ -7,9 +7,9 @@ export const precalcRationalPart4Data = {
       content: `
 # ✂️ Simplifying Rational Expressions
 
-**Part 4 of 7 — Algebraic Simplification, Addition, & Division**
+**Part 4 of 7 — Simplifying & Rewriting Rational Functions**
 
-Before you can graph or analyze a rational function, you often need to simplify it first. This part covers the algebraic mechanics: factoring and canceling, adding/subtracting with common denominators, multiplying/dividing rational expressions, and rewriting via polynomial long division.
+Before you can graph or analyze a rational function, you often need to rewrite it first. This part covers factoring and canceling (and what canceling does to the domain), choosing the equivalent form that shows the feature you need, and rewriting via polynomial long division.
       `
     },
     {
@@ -35,31 +35,22 @@ $$\\boxed{\\frac{A \\cdot C}{B \\cdot C} = \\frac{A}{B}, \\quad C \\neq 0}$$
       `
     },
     {
-      id: 'p4-operations',
+      id: 'p4-forms',
       type: 'text' as const,
       content: `
-## 🔧 Operations with Rational Expressions
+## 🔧 Choosing an Equivalent Form
 
-### Adding & Subtracting (LCD Method)
+The same rational function can be written several ways, and each form shows different features of the graph.
 
-$$\\frac{A}{B} + \\frac{C}{D} = \\frac{AD + BC}{BD}$$
+| Form | Example | What it reveals |
+|:-----|:--------|:----------------|
+| Factored | $\\frac{(x-1)(x+3)}{(x-1)(x-2)}$ | Zeros, vertical asymptotes, holes |
+| Simplified + restriction | $\\frac{x+3}{x-2}, \\; x \\neq 1$ | The hole's height: at $x = 1$, $\\frac{1+3}{1-2} = -4$, so the hole is at $(1, -4)$ |
+| Quotient + remainder | $1 + \\frac{5}{x-2}$ | End behavior: $\\frac{5}{x-2} \\to 0$, so the horizontal asymptote is $y = 1$ |
 
-**Example:** $\\frac{2}{x-1} + \\frac{3}{x+4}$
+**Check the last form:** $1 + \\frac{5}{x-2} = \\frac{(x-2) + 5}{x-2} = \\frac{x+3}{x-2}$ ✔
 
-LCD $= (x-1)(x+4)$
-
-$$= \\frac{2(x+4) + 3(x-1)}{(x-1)(x+4)} = \\frac{2x + 8 + 3x - 3}{(x-1)(x+4)} = \\frac{5x + 5}{(x-1)(x+4)} = \\frac{5(x+1)}{(x-1)(x+4)}$$
-
----
-
-### Multiplying & Dividing
-
-| Operation | Rule | Example |
-|:----------|:-----|:--------|
-| Multiply | $\\frac{A}{B} \\cdot \\frac{C}{D} = \\frac{AC}{BD}$ | $\\frac{x}{x+1} \\cdot \\frac{x+1}{x^2} = \\frac{1}{x}$ |
-| Divide | $\\frac{A}{B} \\div \\frac{C}{D} = \\frac{A}{B} \\cdot \\frac{D}{C}$ | $\\frac{x}{3} \\div \\frac{x}{6} = \\frac{x}{3} \\cdot \\frac{6}{x} = 2$ |
-
-> 💡 **Always factor before multiplying** — it makes cancellation much easier.
+> 💡 **Canceling changes the formula, not the function's domain.** The simplified formula $\\frac{x+3}{x-2}$ is defined at $x = 1$, but the original function is not, which is exactly why the graph has a hole there.
       `
     },
     {
@@ -98,24 +89,24 @@ As $x \\to \\pm\\infty$, $\\frac{-3}{x+2} \\to 0$, so the **slant asymptote** is
           {
             question: 'Simplify: $\\frac{x^2 - 16}{x^2 - x - 12}$',
             options: [
-              '$\\frac{x + 4}{x + 3}$',
-              '$\\frac{x - 4}{x - 3}$',
-              '$\\frac{x + 4}{x - 3}$  (hole at $x = 4$)',
-              '$\\frac{x + 4}{x + 3}$  (hole at $x = 4$)'
+              '$\\frac{x + 4}{x + 3}$, hole at $x = 4$',
+              '$\\frac{x - 4}{x - 3}$, hole at $x = -4$',
+              '$\\frac{x + 4}{x - 3}$, hole at $x = 4$',
+              '$\\frac{x + 4}{x + 3}$, hole at $x = -3$'
             ],
             correctAnswer: 0,
-            explanation: 'Numerator: $(x-4)(x+4)$. Denominator: $(x-4)(x+3)$. Cancel $(x-4)$: $\\frac{x+4}{x+3}$ for $x \\neq 4$.'
+            explanation: 'Numerator: $(x-4)(x+4)$. Denominator: $(x-4)(x+3)$. Cancel $(x-4)$: $\\frac{x+4}{x+3}$ for $x \\neq 4$, so the hole is at $x = 4$. The factor $(x + 3)$ does not cancel, so $x = -3$ is a vertical asymptote, not a hole.'
           },
           {
-            question: 'What is $\\frac{1}{x} + \\frac{1}{x+1}$?',
+            question: 'Which expression is equal to $\\frac{x+4}{x-1}$ for $x \\neq 1$?',
             options: [
-              '$\\frac{2}{2x + 1}$',
-              '$\\frac{2x + 1}{x(x+1)}$',
-              '$\\frac{2x + 1}{x^2 + 1}$',
-              '$\\frac{1}{x^2 + x}$'
+              '$1 + \\frac{3}{x-1}$',
+              '$1 + \\frac{5}{x-1}$',
+              '$x + \\frac{5}{x-1}$',
+              '$1 - \\frac{5}{x-1}$'
             ],
             correctAnswer: 1,
-            explanation: 'LCD $= x(x+1)$. $\\frac{x+1}{x(x+1)} + \\frac{x}{x(x+1)} = \\frac{2x+1}{x(x+1)}$.'
+            explanation: 'Write the numerator as $(x - 1) + 5$, so $\\frac{x+4}{x-1} = 1 + \\frac{5}{x-1}$. Check: $\\frac{(x-1)+5}{x-1} = \\frac{x+4}{x-1}$. Using $3$ subtracts $1$ instead of adding it, a quotient of $x$ forgets that the degrees are equal, and $-5$ flips the remainder\'s sign.'
           },
           {
             question: 'When you rewrite $\\frac{x^2 + 1}{x - 3}$ via long division, the quotient is $x + 3$ with remainder $10$. The slant asymptote is:',
@@ -139,17 +130,17 @@ As $x \\to \\pm\\infty$, $\\frac{-3}{x+2} \\to 0$, so the **slant asymptote** is
 
 **1)** Simplify $\\frac{x^2 - 25}{x + 5}$ and evaluate at $x = 3$. (e.g., $\\frac{x^2-4}{x+2} = x - 2$, so at $x = 3$: $3 - 2 = 1$)
 
-**2)** What is $\\frac{2}{x} + \\frac{3}{x}$? Evaluate at $x = 5$. (e.g., $\\frac{1}{x} + \\frac{4}{x} = \\frac{5}{x}$, so at $x = 5$: $\\frac{5}{5} = 1$)
+**2)** Rewrite $\\frac{x+3}{x-2}$ as $1 + \\frac{k}{x-2}$. What is $k$? (e.g., $\\frac{x+1}{x-3} = 1 + \\frac{4}{x-3}$, so $k = 4$)
 
 **3)** Divide: $\\frac{x^2 + 2x + 1}{x + 1}$. Evaluate at $x = 4$. (e.g., $\\frac{x^2+6x+9}{x+3} = x + 3$, so at $x = 4$: $7$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-2', '1', '5'],
+        correctAnswers: ['-2', '5', '5'],
         hint1: '$x^2 - 25 = (x-5)(x+5)$. Cancel $(x+5)$. Then evaluate $x - 5$ at $x = 3$.',
-        hint2: 'Same denominator: $\\frac{2+3}{x} = \\frac{5}{x}$. Then $\\frac{5}{5}$.',
+        hint2: 'Write the numerator as $(x - 2) + k$. What must $k$ be so that $(x - 2) + k = x + 3$?',
         hint3: '$x^2 + 2x + 1 = (x+1)^2$. Cancel one $(x+1)$. Then $4 + 1 = 5$.',
-        explanation: '1) $(x-5)(x+5)/(x+5) = x - 5$. At $x=3$: $-2$. 2) $\\frac{5}{x}$. At $x=5$: $1$. 3) $(x+1)^2/(x+1) = x+1$. At $x=4$: $5$.'
+        explanation: '1) $(x-5)(x+5)/(x+5) = x - 5$. At $x=3$: $-2$. 2) $x + 3 = (x - 2) + 5$, so $k = 5$. 3) $(x+1)^2/(x+1) = x+1$. At $x=4$: $5$.'
       }
     },
     {
@@ -165,23 +156,23 @@ As $x \\to \\pm\\infty$, $\\frac{-3}{x+2} \\to 0$, so the **slant asymptote** is
             options: ['term (added/subtracted)', 'factor (multiplied)', 'coefficient', 'constant']
           },
           {
-            label: 'To add $\\frac{A}{B} + \\frac{C}{D}$, you first need the',
-            options: ['GCF of A and C', 'LCD (least common denominator)', 'sum $B + D$', 'product of numerators']
+            label: 'After canceling a common factor $(x - c)$, the original function has a',
+            options: ['vertical asymptote at $x = c$', 'hole at $x = c$', 'zero at $x = c$', 'horizontal asymptote']
           },
           {
-            label: 'To divide by a fraction, you multiply by its',
-            options: ['numerator', 'denominator', 'reciprocal', 'square']
+            label: 'The quotient-plus-remainder form $Q(x) + \\frac{r(x)}{q(x)}$ shows the graph\'s',
+            options: ['holes', 'end behavior', '$y$-intercept', 'zeros']
           },
           {
             label: 'Polynomial long division rewrites $\\frac{p(x)}{q(x)}$ as $Q(x) +$',
             options: ['$\\frac{q(x)}{r(x)}$', '$\\frac{r(x)}{q(x)}$', '$r(x) \\cdot q(x)$', '$p(x) - Q(x)$']
           }
         ],
-        correctAnswers: ['factor (multiplied)', 'LCD (least common denominator)', 'reciprocal', '$\\frac{r(x)}{q(x)}$'],
+        correctAnswers: ['factor (multiplied)', 'hole at $x = c$', 'end behavior', '$\\frac{r(x)}{q(x)}$'],
         hint1: 'You can only cancel things connected by multiplication.',
-        hint2: 'You need a common denominator before adding fractions.',
-        hint3: '"Invert and multiply" — dividing by a fraction means multiplying by its flip.',
-        explanation: 'Cancel factors only (not terms). Use LCD for addition. Divide by multiplying by the reciprocal. Long division gives quotient + remainder/divisor.'
+        hint2: 'The canceled value is still excluded from the domain of the original function.',
+        hint3: 'As $x \\to \\pm\\infty$ the remainder term $\\frac{r(x)}{q(x)}$ shrinks to $0$.',
+        explanation: 'Cancel factors only (not terms). A canceled factor leaves a hole. The quotient $Q(x)$ describes the end behavior because the remainder term goes to $0$. Long division gives quotient + remainder/divisor.'
       }
     },
     {
@@ -193,15 +184,15 @@ As $x \\to \\pm\\infty$, $\\frac{-3}{x+2} \\to 0$, so the **slant asymptote** is
       exercise: {
         questions: [
           {
-            question: 'Simplify: $\\frac{x^2 - 4x + 3}{x^2 - 1} \\cdot \\frac{x + 1}{x - 3}$',
+            question: 'Simplify $f(x) = \\frac{x^2 - 4x + 3}{x^2 - 1}$. Which describes the graph at $x = 1$?',
             options: [
-              '$1$',
-              '$\\frac{x-1}{x+1}$',
-              '$\\frac{1}{x+1}$',
-              '$\\frac{x-3}{x+1}$'
+              'A hole at $(1, -1)$',
+              'A hole at $(1, 0)$',
+              'A zero at $x = 1$',
+              'An asymptote at $x = 1$'
             ],
             correctAnswer: 0,
-            explanation: 'Factor: $\\frac{(x-1)(x-3)}{(x-1)(x+1)} \\cdot \\frac{x+1}{x-3}$. Cancel $(x-1)$, $(x+1)$, and $(x-3)$: result is $1$ (with restrictions $x \\neq 1, -1, 3$).'
+            explanation: 'Factor: $\\frac{(x-1)(x-3)}{(x-1)(x+1)} = \\frac{x-3}{x+1}$ for $x \\neq 1$. The canceled factor gives a hole, and its height is $\\frac{1-3}{1+1} = -1$. The point $(1, 0)$ uses the canceled numerator factor, and $x = 1$ is neither a zero nor an asymptote because the factor cancels.'
           },
           {
             question: 'A student simplifies $\\frac{x + 3}{x + 5}$ by canceling the $x$\'s to get $\\frac{3}{5}$. What is wrong?',

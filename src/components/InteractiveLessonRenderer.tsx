@@ -1919,8 +1919,38 @@ function SectionRenderer({
 }
 
 // Reference Angle Quiz Component
+// Angles are stored in twelfths of π so every special angle is an integer.
+const REFERENCE_ANGLE_TWELFTHS = [2, 3, 4, 8, 9, 10, 14, 15, 16, 20, 21, 22]
+
+function formatTwelfthsOfPi(k: number): string {
+  if (k === 0) return '0'
+  let num = k
+  let den = 12
+  const gcd = (a: number, b: number): number => (b === 0 ? a : gcd(b, a % b))
+  const g = gcd(num, den)
+  num /= g
+  den /= g
+  const top = num === 1 ? 'π' : `${num}π`
+  return den === 1 ? top : `${top}/${den}`
+}
+
+// Accepts "π/6", "pi/6", "5pi/6", "0", or a decimal number of radians.
+function parseRadianInput(text: string): number {
+  const t = text.trim().toLowerCase().replace(/\s+/g, '').replace(/°/g, '').replace(/pi/g, 'π')
+  if (t === '') return NaN
+  const m = t.match(/^(\d*)π(?:\/(\d+))?$/)
+  if (m) {
+    const n = m[1] === '' ? 1 : Number(m[1])
+    const d = m[2] ? Number(m[2]) : 1
+    return d === 0 ? NaN : (n / d) * Math.PI
+  }
+  if (/^\d*\.?\d+$/.test(t)) return Number(t)
+  return NaN
+}
+
 function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Section, onComplete: (score?: number, total?: number) => void, isComplete: boolean }) {
-  const [currentAngle, setCurrentAngle] = useState<number>(() => Math.floor(Math.random() * 361))
+  const pickAngle = () => REFERENCE_ANGLE_TWELFTHS[Math.floor(Math.random() * REFERENCE_ANGLE_TWELFTHS.length)]
+  const [currentAngle, setCurrentAngle] = useState<number>(pickAngle)
   const [userAnswer, setUserAnswer] = useState<string>('')
   const [correctStreak, setCorrectStreak] = useState<number>(0)
   const [attemptCount, setAttemptCount] = useState<number>(0)
@@ -1931,8 +1961,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
   const [showingAnswer, setShowingAnswer] = useState<boolean>(false)
 
   const generateNewAngle = () => {
-    const angle = Math.floor(Math.random() * 361) // 0 to 360 inclusive
-    setCurrentAngle(angle)
+    setCurrentAngle(pickAngle())
     setUserAnswer('')
     setAttemptCount(0)
     setFeedback('')
@@ -1942,40 +1971,41 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
     setShowingAnswer(false)
   }
 
-  const getQuadrant = (angle: number): number => {
-    if (angle >= 0 && angle <= 90) return 1
-    if (angle > 90 && angle <= 180) return 2
-    if (angle > 180 && angle <= 270) return 3
+  // currentAngle is in twelfths of π (12 = π, 24 = 2π).
+  const getQuadrant = (k: number): number => {
+    if (k >= 0 && k <= 6) return 1
+    if (k > 6 && k <= 12) return 2
+    if (k > 12 && k <= 18) return 3
     return 4
   }
 
-  const calculateReferenceAngle = (angle: number): number => {
-    const quadrant = getQuadrant(angle)
-    if (quadrant === 1) return angle
-    if (quadrant === 2) return 180 - angle
-    if (quadrant === 3) return angle - 180
-    return 360 - angle
+  const calculateReferenceAngle = (k: number): number => {
+    const quadrant = getQuadrant(k)
+    if (quadrant === 1) return k
+    if (quadrant === 2) return 12 - k
+    if (quadrant === 3) return k - 12
+    return 24 - k
   }
 
-  const getQuadrantFormula = (angle: number): string => {
-    const quadrant = getQuadrant(angle)
+  const getQuadrantFormula = (k: number): string => {
+    const quadrant = getQuadrant(k)
     if (quadrant === 1) return 'the angle itself'
-    if (quadrant === 2) return '180° - angle'
-    if (quadrant === 3) return 'angle - 180°'
-    return '360° - angle'
+    if (quadrant === 2) return 'π − angle'
+    if (quadrant === 3) return 'angle − π'
+    return '2π − angle'
   }
 
   const handleSubmit = () => {
     const correctAnswer = calculateReferenceAngle(currentAngle)
-    const userNum = parseFloat(userAnswer)
+    const userNum = parseRadianInput(userAnswer)
 
     if (isNaN(userNum)) {
-      setFeedback('Please enter a valid number')
+      setFeedback('Enter the angle in radians, such as π/6 or pi/6')
       setFeedbackType('incorrect')
       return
     }
 
-    if (Math.abs(userNum - correctAnswer) < 0.01) {
+    if (Math.abs(userNum - (correctAnswer * Math.PI) / 12) < 0.01) {
       // Correct!
       // Only reset streak if hint 2 was used OR hint 1 was used more than once
       const shouldResetStreak = hint2Used || hint1UsedCount > 1
@@ -2020,7 +2050,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
         // First incorrect attempt - show Hint 1
         setHint1UsedCount(prev => prev + 1)
         const quadrant = getQuadrant(currentAngle)
-        setFeedback(`❌ Incorrect. Hint: ${currentAngle}° is in Quadrant ${quadrant === 1 ? 'I' : quadrant === 2 ? 'II' : quadrant === 3 ? 'III' : 'IV'}. Try again!`)
+        setFeedback(`❌ Incorrect. Hint: ${formatTwelfthsOfPi(currentAngle)} is in Quadrant ${quadrant === 1 ? 'I' : quadrant === 2 ? 'II' : quadrant === 3 ? 'III' : 'IV'}. Try again!`)
         setFeedbackType('hint')
         setUserAnswer('')
       } else if (newAttemptCount === 2) {
@@ -2033,7 +2063,7 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
       } else {
         // Third incorrect attempt - show answer and move to next
         setHint2Used(true)
-        setFeedback(`❌ The correct answer is ${correctAnswer}°. Let's try another one.`)
+        setFeedback(`❌ The correct answer is ${formatTwelfthsOfPi(correctAnswer)}. Let's try another one.`)
         setFeedbackType('incorrect')
         setCorrectStreak(0)
         setShowingAnswer(true)
@@ -2080,21 +2110,21 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
             What is the reference angle for:
           </p>
           <div className="text-4xl sm:text-6xl font-bold text-accent-hover dark:text-accent-muted mb-6">
-            {currentAngle}°
+            {formatTwelfthsOfPi(currentAngle)}
           </div>
 
           {/* Answer Input */}
           <div className="flex items-center justify-center gap-4 mb-6">
             <input
-              type="number"
+              type="text"
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSubmit()}
               className="w-32 h-16 text-center text-2xl font-bold border-2 border-accent rounded-lg bg-white text-gray-900 dark:bg-gray-800 dark:text-white focus:ring-2 focus:ring-accent focus:outline-none"
-              placeholder="?"
+              placeholder="π/6"
+              aria-label="Reference angle in radians"
               disabled={feedbackType === 'correct'}
             />
-            <span className="text-2xl font-bold text-gray-600 dark:text-gray-400">°</span>
           </div>
 
           {/* Submit Button */}
@@ -2142,11 +2172,11 @@ function ReferenceAngleQuiz({ section, onComplete, isComplete }: { section: Sect
 // Sine Table Component
 function SineTable() {
   const data = [
-    { angle: '0°', value: '0' },
-    { angle: '30°', value: '\\frac{1}{2}' },
-    { angle: '45°', value: '\\frac{\\sqrt{2}}{2}' },
-    { angle: '60°', value: '\\frac{\\sqrt{3}}{2}' },
-    { angle: '90°', value: '1' },
+    { angle: '0', value: '0' },
+    { angle: 'π/6', value: '\\frac{1}{2}' },
+    { angle: 'π/4', value: '\\frac{\\sqrt{2}}{2}' },
+    { angle: 'π/3', value: '\\frac{\\sqrt{3}}{2}' },
+    { angle: 'π/2', value: '1' },
   ]
 
   return (
@@ -2194,11 +2224,11 @@ function SineTable() {
 // Cosine Table Component
 function CosineTable() {
   const data = [
-    { angle: '0°', value: '1' },
-    { angle: '30°', value: '\\frac{\\sqrt{3}}{2}' },
-    { angle: '45°', value: '\\frac{\\sqrt{2}}{2}' },
-    { angle: '60°', value: '\\frac{1}{2}' },
-    { angle: '90°', value: '0' },
+    { angle: '0', value: '1' },
+    { angle: 'π/6', value: '\\frac{\\sqrt{3}}{2}' },
+    { angle: 'π/4', value: '\\frac{\\sqrt{2}}{2}' },
+    { angle: 'π/3', value: '\\frac{1}{2}' },
+    { angle: 'π/2', value: '0' },
   ]
 
   return (
@@ -2292,24 +2322,24 @@ function UnitCircleDiagram() {
           {/* 0° - (1, 0) */}
           <circle cx="200" cy="0" r="6" fill="#10b981" />
           <text x="210" y="5" fill="#10b981" fontSize="14" fontWeight="bold">(1, 0)</text>
-          <text x="210" y="20" fill="#10b981" fontSize="12">0°</text>
+          <text x="210" y="20" fill="#10b981" fontSize="12">0</text>
           
           {/* 30° */}
           <circle cx="173" cy="-100" r="6" fill="#10b981" />
-          <text x="180" y="-95" fill="#10b981" fontSize="12" fontWeight="bold">30°</text>
+          <text x="180" y="-95" fill="#10b981" fontSize="12" fontWeight="bold">π/6</text>
           
           {/* 45° */}
           <circle cx="141" cy="-141" r="6" fill="#10b981" />
-          <text x="150" y="-145" fill="#10b981" fontSize="12" fontWeight="bold">45°</text>
+          <text x="150" y="-145" fill="#10b981" fontSize="12" fontWeight="bold">π/4</text>
           
           {/* 60° */}
           <circle cx="100" cy="-173" r="6" fill="#10b981" />
-          <text x="105" y="-175" fill="#10b981" fontSize="12" fontWeight="bold">60°</text>
+          <text x="105" y="-175" fill="#10b981" fontSize="12" fontWeight="bold">π/3</text>
           
           {/* 90° - (0, 1) */}
           <circle cx="0" cy="-200" r="6" fill="#10b981" />
           <text x="10" y="-195" fill="#10b981" fontSize="14" fontWeight="bold">(0, 1)</text>
-          <text x="10" y="-180" fill="#10b981" fontSize="12">90°</text>
+          <text x="10" y="-180" fill="#10b981" fontSize="12">π/2</text>
           
           {/* Quadrant labels */}
           <text x="120" y="-120" fill="#8b5cf6" fontSize="20" fontWeight="bold" opacity="0.5">Q1</text>
@@ -2326,7 +2356,7 @@ function UnitCircleDiagram() {
         
         <div className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
           <p className="font-semibold">The Unit Circle: A circle with radius = 1 centered at the origin</p>
-          <p className="mt-2">First quadrant (Q1) highlighted with key angles: 0°, 30°, 45°, 60°, 90°</p>
+          <p className="mt-2">First quadrant (Q1) highlighted with key angles: 0, π/6, π/4, π/3, π/2 (radians)</p>
         </div>
       </div>
     </div>
@@ -2380,10 +2410,10 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
   const correctAnswers: Record<string, string[]> = {
     angle0: ['0'],
-    angle30: ['30'],
-    angle45: ['45'],
-    angle60: ['60'],
-    angle90: ['90'],
+    angle30: ['π/6', 'pi/6'],
+    angle45: ['π/4', 'pi/4'],
+    angle60: ['π/3', 'pi/3'],
+    angle90: ['π/2', 'pi/2'],
     x0: ['1'],
     y0: ['0'],
     x30: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'],
@@ -2461,6 +2491,7 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
     // Convert common patterns to LaTeX
     let latex = value
+      .replace(/pi/gi, '\\pi ')
       .replace(/sqrt\((\d+)\)\/(\d+)/gi, '\\frac{\\sqrt{$1}}{$2}')
       .replace(/sqrt(\d+)\/(\d+)/gi, '\\frac{\\sqrt{$1}}{$2}')
       .replace(/sqrt\((\d+)\)/gi, '\\sqrt{$1}')
@@ -2563,7 +2594,7 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
         <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900 rounded-lg">
           <p className="text-sm text-blue-800 dark:text-blue-200 text-center">
-            <strong>💡 Instructions:</strong> Fill in the angles and x, y coordinates. Use √ or sqrt for square roots (e.g., √2/2 or sqrt(2)/2).
+            <strong>💡 Instructions:</strong> Fill in each angle in radians (type π/6 or pi/6) and the x, y coordinates. Use √ or sqrt for square roots (e.g., √2/2 or sqrt(2)/2).
           </p>
         </div>
 
@@ -2727,24 +2758,24 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
   const correctAnswers: Record<string, string[]> = {
     // Quadrant I (0° to 90°)
     angle0: ['0'], x0: ['1'], y0: ['0'],
-    angle30: ['30'], x30: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'], y30: ['1/2'],
-    angle45: ['45'], x45: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'], y45: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'],
-    angle60: ['60'], x60: ['1/2'], y60: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'],
-    angle90: ['90'], x90: ['0'], y90: ['1'],
+    angle30: ['π/6', 'pi/6'], x30: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'], y30: ['1/2'],
+    angle45: ['π/4', 'pi/4'], x45: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'], y45: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'],
+    angle60: ['π/3', 'pi/3'], x60: ['1/2'], y60: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'],
+    angle90: ['π/2', 'pi/2'], x90: ['0'], y90: ['1'],
     // Quadrant II (90° to 180°)
-    angle120: ['120'], x120: ['-1/2'], y120: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'],
-    angle135: ['135'], x135: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'], y135: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'],
-    angle150: ['150'], x150: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'], y150: ['1/2'],
-    angle180: ['180'], x180: ['-1'], y180: ['0'],
+    angle120: ['2π/3', '2pi/3'], x120: ['-1/2'], y120: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'],
+    angle135: ['3π/4', '3pi/4'], x135: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'], y135: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'],
+    angle150: ['5π/6', '5pi/6'], x150: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'], y150: ['1/2'],
+    angle180: ['π', 'pi'], x180: ['-1'], y180: ['0'],
     // Quadrant III (180° to 270°)
-    angle210: ['210'], x210: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'], y210: ['-1/2'],
-    angle225: ['225'], x225: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'], y225: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'],
-    angle240: ['240'], x240: ['-1/2'], y240: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'],
-    angle270: ['270'], x270: ['0'], y270: ['-1'],
+    angle210: ['7π/6', '7pi/6'], x210: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'], y210: ['-1/2'],
+    angle225: ['5π/4', '5pi/4'], x225: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'], y225: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'],
+    angle240: ['4π/3', '4pi/3'], x240: ['-1/2'], y240: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'],
+    angle270: ['3π/2', '3pi/2'], x270: ['0'], y270: ['-1'],
     // Quadrant IV (270° to 360°)
-    angle300: ['300'], x300: ['1/2'], y300: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'],
-    angle315: ['315'], x315: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'], y315: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'],
-    angle330: ['330'], x330: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'], y330: ['-1/2'],
+    angle300: ['5π/3', '5pi/3'], x300: ['1/2'], y300: ['-√3/2', '-sqrt3/2', '-sqrt(3)/2'],
+    angle315: ['7π/4', '7pi/4'], x315: ['√2/2', 'sqrt2/2', 'sqrt(2)/2'], y315: ['-√2/2', '-sqrt2/2', '-sqrt(2)/2'],
+    angle330: ['11π/6', '11pi/6'], x330: ['√3/2', 'sqrt3/2', 'sqrt(3)/2'], y330: ['-1/2'],
   }
 
   const handleInputChange = (key: string, value: string) => {
@@ -2790,6 +2821,8 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
     if (!value) return ''
     
     let formatted = value
+    // Typed "pi" in a radian angle renders as the symbol
+    formatted = formatted.replace(/pi/gi, '\\pi ')
     // Handle negative sqrt patterns
     formatted = formatted.replace(/-sqrt\((\d+)\)\/(\d+)/gi, '-\\frac{\\sqrt{$1}}{$2}')
     formatted = formatted.replace(/-sqrt(\d+)\/(\d+)/gi, '-\\frac{\\sqrt{$1}}{$2}')
@@ -3144,6 +3177,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
 
         <div className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
           <p>Boxes turn <span className="text-green-600 font-bold">green ✓</span> when correct, <span className="text-red-600 font-bold">red ✗</span> when incorrect</p>
+          <p className="mt-2">Enter each angle in radians, from 0 up to 2π: type π/6 or pi/6, 5π/4 or 5pi/4, and so on.</p>
           <p className="mt-2">Total: 16 angles + 32 coordinates = <strong>48 inputs</strong></p>
         </div>
       </div>
@@ -5502,7 +5536,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
   const sineRefs = useRef<(HTMLInputElement | null)[]>([])
   const cosineRefs = useRef<(HTMLInputElement | null)[]>([])
 
-  const thetaCorrect = ['0', '30', '45', '60', '90']
+  const thetaCorrect = ['0', 'π/6', 'π/4', 'π/3', 'π/2']
   const sineCorrect = ['0', '1/2', '√2/2', '√3/2', '1']
   const cosineCorrect = ['1', '√3/2', '√2/2', '1/2', '0']
 
@@ -5513,8 +5547,8 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
     normalized = normalized.replace(/sqrt(\d+)/g, '√$1')
     // Remove spaces
     normalized = normalized.replace(/\s/g, '')
-    // Handle degree symbol
-    normalized = normalized.replace(/°/g, '')
+    // Handle degree symbol, and let students type "pi" for π
+    normalized = normalized.replace(/°/g, '').replace(/pi/g, 'π')
     return normalized
   }
 
@@ -5591,12 +5625,10 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
     newAnswers[index] = value
     setThetaAnswers(newAnswers)
     
-    // Auto-advance for single or double digit numbers
-    if (value.length >= 1 && index < 4) {
-      // For 0, 30, 45, 60, 90 - advance after 1-2 digits
-      if (value.length === 2 || (value === '0' && index === 0)) {
-        thetaRefs.current[index + 1]?.focus()
-      }
+    // Auto-advance only after the first angle, 0; radian answers such as
+    // pi/6 have no fixed length, so the student moves on with Tab or a tap.
+    if (value === '0' && index === 0) {
+      thetaRefs.current[index + 1]?.focus()
     }
   }
 
@@ -5661,7 +5693,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
             Complete the Unit Circle Table
           </h1>
           <p className="text-xl text-foreground">
-            Fill in each row of the table for the first quadrant angles
+            Fill in each row of the table for the first quadrant angles (angles in radians: type π/6 or pi/6)
           </p>
           <p className="mt-2 text-sm text-muted-foreground">
             Tip: tap the <span className="font-semibold text-accent-hover dark:text-accent-muted">√</span> button to enter a square root — e.g. <span className="font-mono">√2/2</span>.
@@ -5708,7 +5740,7 @@ function Part2PracticeMode({ onBack, onComplete }: { onBack: () => void, onCompl
                       />
                     ) : (
                       <div className="w-20 h-16 mx-auto flex items-center justify-center text-xl font-bold text-green-700 dark:text-green-400 bg-green-100 dark:bg-green-900/30 rounded-lg border-2 border-green-500">
-                        {thetaCorrect[i]}°
+                        {thetaCorrect[i]}
                       </div>
                     )}
                   </td>

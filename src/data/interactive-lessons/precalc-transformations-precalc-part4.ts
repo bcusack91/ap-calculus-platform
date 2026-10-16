@@ -15,14 +15,25 @@ $$y = a \\cdot f(b(x - h)) + k$$
 
 ### Order of Operations
 
-**Apply in this order:**
-1. Horizontal shift (inside): $x - h$
-2. Horizontal stretch/reflect (inside): multiply by $b$
-3. Vertical stretch/reflect (outside): multiply by $a$
+Build the function from $f(x)$ one step at a time. Each step replaces the input or the output:
+
+1. Horizontal dilation/reflection (inside): replace $x$ with $bx$ to get $f(bx)$
+2. Horizontal shift (inside): replace $x$ with $x - h$ to get $f(b(x - h))$
+3. Vertical dilation/reflection (outside): multiply by $a$
 4. Vertical shift (outside): add $k$
+
+So a point $(x, y)$ on the graph of $f$ is **first** divided by $b$ horizontally, **then** shifted by $h$. The vertical steps work the same way: multiply by $a$, then add $k$.
 
 > 💡 **Inside** transformations affect $x$ (horizontal, reversed).
 > **Outside** transformations affect $y$ (vertical, as expected).
+
+### Why the order matters: $y = f(2(x - 3))$
+
+The point $(4, 5)$ is on the graph of $f$.
+- **Dilate, then shift:** $4 \div 2 = 2$, then $2 + 3 = 5$. Image: $(5, 5)$. ✅ Check: $f(2(5 - 3)) = f(4) = 5$.
+- **Shift, then dilate:** $(4 + 3) \div 2 = 3.5$. ❌ Check: $f(2(3.5 - 3)) = f(1)$, not $f(4)$.
+
+Watch for the factored form: $y = f(2x - 6)$ is the same function as $f(2(x - 3))$, so its horizontal shift is $3$, not $6$.
 
 ### Example: $y = -2(x+3)^2 + 5$
 
@@ -103,10 +114,10 @@ $$y = -2(x-2)^2-1$$
             explanation: '$x \\to x+4 = 6$. $y \\to -y+1 = -3+1 = -2$. Point: $(6,-2)$.'
           },
           {
-            question: 'Which transformation is applied FIRST (innermost)?',
-            options: ['Vertical shift', 'Vertical stretch', 'Horizontal shift', 'Horizontal stretch'],
-            correctAnswer: 2,
-            explanation: 'Horizontal shift (inside the function) is applied first.'
+            question: 'The point $(6, 1)$ is on the graph of $f$. Where does it map on the graph of $y = f(3(x - 2))$?',
+            options: ['$(4, 1)$', '$(\\tfrac{4}{3}, 1)$', '$(\\tfrac{8}{3}, 1)$', '$(20, 1)$'],
+            correctAnswer: 0,
+            explanation: 'Dilate first, then shift: $6 \\div 3 = 2$, then $2 + 2 = 4$. Check: $f(3(4 - 2)) = f(6) = 1$. Adding $2$ before dividing gives $\\tfrac{8}{3}$, subtracting $2$ before dividing gives $\\tfrac{4}{3}$, and multiplying by $3$ instead of dividing gives $20$.'
           }
         ]
       }

@@ -44,12 +44,12 @@ $$\\sin(A + B) \\;\\overset{?}{=}\\; \\sin A + \\sin B \\quad \\color{red}{\\tex
 
 ### A Quick Counterexample
 
-Let $A = B = 30^\\circ$, so $A + B = 60^\\circ$.
+Let $A = B = \\frac{\\pi}{6}$, so $A + B = \\frac{\\pi}{3}$.
 
 | Quantity | Exact value |
 |----------|-------------|
-| $\\sin(30^\\circ + 30^\\circ) = \\sin 60^\\circ$ | $\\dfrac{\\sqrt{3}}{2} \\approx 0.866$ |
-| $\\sin 30^\\circ + \\sin 30^\\circ$ | $\\dfrac{1}{2} + \\dfrac{1}{2} = 1$ |
+| $\\sin(\\frac{\\pi}{6} + \\frac{\\pi}{6}) = \\sin \\frac{\\pi}{3}$ | $\\dfrac{\\sqrt{3}}{2} \\approx 0.866$ |
+| $\\sin \\frac{\\pi}{6} + \\sin \\frac{\\pi}{6}$ | $\\dfrac{1}{2} + \\dfrac{1}{2} = 1$ |
 
 The two columns disagree ($0.866 \\ne 1$), so the "distribute" rule is false.
 
@@ -70,13 +70,13 @@ The two columns disagree ($0.866 \\ne 1$), so the "distribute" rule is false.
                 'It is true only for acute angles',
               ],
               correctAnswer: 0,
-              explanation: 'Try $A = B = 60^\\circ$: $\\cos 120^\\circ = -\\tfrac12$, but $\\cos 60^\\circ + \\cos 60^\\circ = 1$. They disagree, so the rule is false. Trig functions are not linear.',
+              explanation: 'Try $A = B = \\frac{\\pi}{3}$: $\\cos \\frac{2\\pi}{3} = -\\tfrac12$, but $\\cos \\frac{\\pi}{3} + \\cos \\frac{\\pi}{3} = 1$. They disagree, so the rule is false. Trig functions are not linear.',
             },
             {
-              question: 'Using $A = B = 45^\\circ$, which equals $\\sin(45^\\circ + 45^\\circ)$?',
+              question: 'Using $A = B = \\frac{\\pi}{4}$, which equals $\\sin(\\frac{\\pi}{4} + \\frac{\\pi}{4})$?',
               options: ['$1$', '$\\sqrt{2}$', '$\\dfrac{\\sqrt{2}}{2}$', '$\\dfrac{1}{2}$'],
               correctAnswer: 0,
-              explanation: '$\\sin(45^\\circ+45^\\circ) = \\sin 90^\\circ = 1$. Note $\\sin 45^\\circ + \\sin 45^\\circ = \\tfrac{\\sqrt2}{2}+\\tfrac{\\sqrt2}{2} = \\sqrt2 \\approx 1.414$ — a different (wrong) answer.',
+              explanation: '$\\sin(\\frac{\\pi}{4}+\\frac{\\pi}{4}) = \\sin \\frac{\\pi}{2} = 1$. Note $\\sin \\frac{\\pi}{4} + \\sin \\frac{\\pi}{4} = \\tfrac{\\sqrt2}{2}+\\tfrac{\\sqrt2}{2} = \\sqrt2 \\approx 1.414$ — a different (wrong) answer.',
             },
           ],
         },
@@ -88,17 +88,17 @@ The two columns disagree ($0.866 \\ne 1$), so the "distribute" rule is false.
 
 From the unit circle you already know the **special angles** exactly:
 
-| Angle | $0^\\circ$ | $30^\\circ$ | $45^\\circ$ | $60^\\circ$ | $90^\\circ$ |
+| Angle | $0$ | $\\frac{\\pi}{6}$ | $\\frac{\\pi}{4}$ | $\\frac{\\pi}{3}$ | $\\frac{\\pi}{2}$ |
 |-------|-----------|------------|------------|------------|------------|
 | $\\sin$ | $0$ | $\\dfrac12$ | $\\dfrac{\\sqrt2}{2}$ | $\\dfrac{\\sqrt3}{2}$ | $1$ |
 | $\\cos$ | $1$ | $\\dfrac{\\sqrt3}{2}$ | $\\dfrac{\\sqrt2}{2}$ | $\\dfrac12$ | $0$ |
 
-But what about $15^\\circ$, $75^\\circ$, or $105^\\circ$? These aren't on the unit circle — **yet**.
+But what about $\\frac{\\pi}{12}$, $\\frac{5\\pi}{12}$, or $\\frac{7\\pi}{12}$? These aren't on the unit circle — **yet**.
 
 > 💡 **The trick:** any of these can be built by **adding or subtracting** special angles:
-> - $15^\\circ = 45^\\circ - 30^\\circ$
-> - $75^\\circ = 45^\\circ + 30^\\circ$
-> - $105^\\circ = 60^\\circ + 45^\\circ$
+> - $\\frac{\\pi}{12} = \\frac{\\pi}{4} - \\frac{\\pi}{6}$
+> - $\\frac{5\\pi}{12} = \\frac{\\pi}{4} + \\frac{\\pi}{6}$
+> - $\\frac{7\\pi}{12} = \\frac{\\pi}{3} + \\frac{\\pi}{4}$
 >
 > The sum and difference identities turn that decomposition into an **exact** answer.`,
       },
@@ -107,18 +107,18 @@ But what about $15^\\circ$, $75^\\circ$, or $105^\\circ$? These aren't on the un
         type: 'dropdown-select' as const,
         content: `**Decompose the Angle** 🔽
 
-Express each angle as a **sum or difference of two special angles** ($30^\\circ, 45^\\circ, 60^\\circ$).`,
+Express each angle as a **sum or difference of two special angles** ($\\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}$).`,
         exercise: {
           dropdowns: [
-            { label: '$15^\\circ = $', options: ['$45^\\circ - 30^\\circ$', '$45^\\circ + 30^\\circ$', '$60^\\circ - 30^\\circ$', '$30^\\circ - 45^\\circ$'] },
-            { label: '$75^\\circ = $', options: ['$45^\\circ + 30^\\circ$', '$45^\\circ - 30^\\circ$', '$90^\\circ - 30^\\circ$', '$60^\\circ + 30^\\circ$'] },
-            { label: '$105^\\circ = $', options: ['$60^\\circ + 45^\\circ$', '$60^\\circ - 45^\\circ$', '$45^\\circ + 45^\\circ$', '$90^\\circ + 30^\\circ$'] },
+            { label: '$\\frac{\\pi}{12} = $', options: ['$\\frac{\\pi}{4} - \\frac{\\pi}{6}$', '$\\frac{\\pi}{4} + \\frac{\\pi}{6}$', '$\\frac{\\pi}{3} - \\frac{\\pi}{6}$', '$\\frac{\\pi}{6} - \\frac{\\pi}{4}$'] },
+            { label: '$\\frac{5\\pi}{12} = $', options: ['$\\frac{\\pi}{4} + \\frac{\\pi}{6}$', '$\\frac{\\pi}{4} - \\frac{\\pi}{6}$', '$\\frac{\\pi}{2} - \\frac{\\pi}{6}$', '$\\frac{\\pi}{3} + \\frac{\\pi}{6}$'] },
+            { label: '$\\frac{7\\pi}{12} = $', options: ['$\\frac{\\pi}{3} + \\frac{\\pi}{4}$', '$\\frac{\\pi}{3} - \\frac{\\pi}{4}$', '$\\frac{\\pi}{4} + \\frac{\\pi}{4}$', '$\\frac{\\pi}{2} + \\frac{\\pi}{6}$'] },
           ],
-          correctAnswers: ['$45^\\circ - 30^\\circ$', '$45^\\circ + 30^\\circ$', '$60^\\circ + 45^\\circ$'],
-          hint1: 'You want two angles from $\\{30^\\circ, 45^\\circ, 60^\\circ\\}$ that add or subtract to the target.',
-          hint2: '$45 - 30 = 15$, and $45 + 30 = 75$.',
-          hint3: '$60 + 45 = 105$, so $105^\\circ = 60^\\circ + 45^\\circ$. Here we build every target from the $30/45/60$ pieces.',
-          explanation: '$15^\\circ = 45^\\circ - 30^\\circ$, $\\;75^\\circ = 45^\\circ + 30^\\circ$, $\\;105^\\circ = 60^\\circ + 45^\\circ$. Each target is built from two unit-circle angles.',
+          correctAnswers: ['$\\frac{\\pi}{4} - \\frac{\\pi}{6}$', '$\\frac{\\pi}{4} + \\frac{\\pi}{6}$', '$\\frac{\\pi}{3} + \\frac{\\pi}{4}$'],
+          hint1: 'You want two angles from $\\{\\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}\\}$ that add or subtract to the target.',
+          hint2: 'Write everything in twelfths: $\\frac{\\pi}{6} = \\frac{2\\pi}{12}$, $\\frac{\\pi}{4} = \\frac{3\\pi}{12}$, $\\frac{\\pi}{3} = \\frac{4\\pi}{12}$. Then $3 - 2 = 1$ and $3 + 2 = 5$.',
+          hint3: '$4 + 3 = 7$ twelfths, so $\\frac{7\\pi}{12} = \\frac{\\pi}{3} + \\frac{\\pi}{4}$. Here we build every target from the $\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$ pieces.',
+          explanation: '$\\frac{\\pi}{12} = \\frac{\\pi}{4} - \\frac{\\pi}{6}$, $\\;\\frac{5\\pi}{12} = \\frac{\\pi}{4} + \\frac{\\pi}{6}$, $\\;\\frac{7\\pi}{12} = \\frac{\\pi}{3} + \\frac{\\pi}{4}$. Each target is built from two unit-circle angles.',
         },
       },
       {
@@ -128,7 +128,7 @@ Express each angle as a **sum or difference of two special angles** ($30^\\circ,
 
 By the end of this lesson you'll be able to:
 
-1. Find **exact values** like $\\cos 15^\\circ$ and $\\sin 75^\\circ$ (no calculator).
+1. Find **exact values** like $\\cos \\frac{\\pi}{12}$ and $\\sin \\frac{5\\pi}{12}$ (no calculator).
 2. **Simplify** messy expressions such as $\\sin x \\cos 2x + \\cos x \\sin 2x$ into a single term.
 3. **Prove** new identities and evaluate composite expressions like $\\sin(\\arcsin a + \\arccos b)$.
 
@@ -143,26 +143,26 @@ There are four core formulas — two each for cosine and sine. We'll build them 
         exercise: {
           questions: [
             {
-              question: 'Why can we find $\\cos 15^\\circ$ exactly with these identities, but $\\cos 13^\\circ$ is left to a calculator?',
+              question: 'Why can we find $\\cos \\frac{\\pi}{12}$ exactly with these identities, but $\\cos 0.2$ is left to a calculator?',
               options: [
-                'Only $15^\\circ$ is a sum or difference of special angles',
-                '$15^\\circ$ is smaller than $13^\\circ$',
-                '$13^\\circ$ is negative on the unit circle',
-                'Cosine is undefined at $13^\\circ$',
+                'Only $\\frac{\\pi}{12}$ is a sum or difference of special angles',
+                '$\\frac{\\pi}{12}$ is smaller than $0.2$',
+                '$0.2$ is negative on the unit circle',
+                'Cosine is undefined at $0.2$',
               ],
               correctAnswer: 0,
-              explanation: 'The identities only help when the angle decomposes into angles whose sine and cosine we already know exactly. $13^\\circ$ is not a sum or difference of unit-circle angles, so no exact radical form falls out.',
+              explanation: 'The identities only help when the angle decomposes into angles whose sine and cosine we already know exactly. $0.2$ radians is not a sum or difference of unit-circle angles, so no exact radical form falls out.',
             },
             {
               question: 'Which task will the sum and difference identities NOT directly help with?',
               options: [
-                'Approximating $\\sin 41.7^\\circ$ to 6 decimals by hand',
-                'Finding the exact value of $\\sin 75^\\circ$',
+                'Approximating $\\sin 0.73$ to 6 decimals by hand',
+                'Finding the exact value of $\\sin \\frac{5\\pi}{12}$',
                 'Simplifying $\\sin x\\cos 2x + \\cos x\\sin 2x$',
                 'Proving $\\sin\\!\\left(x + \\tfrac{\\pi}{2}\\right) = \\cos x$',
               ],
               correctAnswer: 0,
-              explanation: '$41.7^\\circ$ does not decompose into special angles, so the identities give no exact form. The other three are all standard uses: exact values, simplifying, and proving identities.',
+              explanation: '$0.73$ radians does not decompose into special angles, so the identities give no exact form. The other three are all standard uses: exact values, simplifying, and proving identities.',
             },
           ],
         },
@@ -263,34 +263,34 @@ $$\\cos(A - B) = \\cos A\\cos B + \\sin A\\sin B$$
         type: 'input-boxes' as const,
         content: `**Substitute the Values** 🧮
 
-You're expanding $\\cos 75^\\circ = \\cos(45^\\circ + 30^\\circ) = \\cos 45^\\circ\\cos 30^\\circ - \\sin 45^\\circ\\sin 30^\\circ$. Enter each special value **as a decimal rounded to 3 places**.
+You're expanding $\\cos \\frac{5\\pi}{12} = \\cos(\\frac{\\pi}{4} + \\frac{\\pi}{6}) = \\cos \\frac{\\pi}{4}\\cos \\frac{\\pi}{6} - \\sin \\frac{\\pi}{4}\\sin \\frac{\\pi}{6}$. Enter each special value **as a decimal rounded to 3 places**.
 
-**1)** $\\cos 30^\\circ = \\,?$
-**2)** $\\sin 30^\\circ = \\,?$
-**3)** $\\cos 75^\\circ$ overall $= \\,?$  *(3 decimals)*`,
+**1)** $\\cos \\frac{\\pi}{6} = \\,?$
+**2)** $\\sin \\frac{\\pi}{6} = \\,?$
+**3)** $\\cos \\frac{5\\pi}{12}$ overall $= \\,?$  *(3 decimals)*`,
         exercise: {
           boxes: 3,
           correctAnswers: ['0.866', '0.5', '0.259'],
-          hint1: '$\\cos 30^\\circ = \\frac{\\sqrt3}{2} \\approx 0.866$ and $\\sin 30^\\circ = \\frac12 = 0.5$.',
-          hint2: '$\\cos 45^\\circ = \\sin 45^\\circ = \\frac{\\sqrt2}{2} \\approx 0.707$.',
-          hint3: '$\\cos 75^\\circ = (0.707)(0.866) - (0.707)(0.5) \\approx 0.612 - 0.354 = 0.259$.',
-          explanation: '$\\cos 30^\\circ \\approx 0.866$, $\\sin 30^\\circ = 0.5$, and $\\cos 75^\\circ = \\frac{\\sqrt6 - \\sqrt2}{4} \\approx 0.259$. (Plus inside → minus in the formula → the smaller value.)',
+          hint1: '$\\cos \\frac{\\pi}{6} = \\frac{\\sqrt3}{2} \\approx 0.866$ and $\\sin \\frac{\\pi}{6} = \\frac12 = 0.5$.',
+          hint2: '$\\cos \\frac{\\pi}{4} = \\sin \\frac{\\pi}{4} = \\frac{\\sqrt2}{2} \\approx 0.707$.',
+          hint3: '$\\cos \\frac{5\\pi}{12} = (0.707)(0.866) - (0.707)(0.5) \\approx 0.612 - 0.354 = 0.259$.',
+          explanation: '$\\cos \\frac{\\pi}{6} \\approx 0.866$, $\\sin \\frac{\\pi}{6} = 0.5$, and $\\cos \\frac{5\\pi}{12} = \\frac{\\sqrt6 - \\sqrt2}{4} \\approx 0.259$. (Plus inside → minus in the formula → the smaller value.)',
         },
       },
       {
         id: 'sdi2-first-value',
         type: 'text' as const,
-        content: `## First Exact Value: $\\cos 15^\\circ$
+        content: `## First Exact Value: $\\cos \\frac{\\pi}{12}$
 
-Write $15^\\circ = 45^\\circ - 30^\\circ$ and use the **difference** formula:
+Write $\\frac{\\pi}{12} = \\frac{\\pi}{4} - \\frac{\\pi}{6}$ and use the **difference** formula:
 
-$$\\cos 15^\\circ = \\cos(45^\\circ - 30^\\circ) = \\cos 45^\\circ\\cos 30^\\circ + \\sin 45^\\circ\\sin 30^\\circ$$
+$$\\cos \\frac{\\pi}{12} = \\cos(\\frac{\\pi}{4} - \\frac{\\pi}{6}) = \\cos \\frac{\\pi}{4}\\cos \\frac{\\pi}{6} + \\sin \\frac{\\pi}{4}\\sin \\frac{\\pi}{6}$$
 
 Substitute special values:
 
 $$= \\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2} + \\frac{\\sqrt2}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt6}{4} + \\frac{\\sqrt2}{4} = \\frac{\\sqrt6 + \\sqrt2}{4}$$
 
-> ✅ **Check:** $\\dfrac{\\sqrt6 + \\sqrt2}{4} \\approx \\dfrac{2.449 + 1.414}{4} \\approx 0.966$, and a calculator gives $\\cos 15^\\circ \\approx 0.966$. ✓`,
+> ✅ **Check:** $\\dfrac{\\sqrt6 + \\sqrt2}{4} \\approx \\dfrac{2.449 + 1.414}{4} \\approx 0.966$, and a calculator gives $\\cos \\frac{\\pi}{12} \\approx 0.966$. ✓`,
       },
       {
         id: 'sdi2-expand-drill',
@@ -386,15 +386,15 @@ Sine is the "**mixed**, **same-sign**" formula:
       {
         id: 'sdi3-worked-sin75',
         type: 'text' as const,
-        content: `## Worked Example: $\\sin 75^\\circ$
+        content: `## Worked Example: $\\sin \\frac{5\\pi}{12}$
 
-Write $75^\\circ = 45^\\circ + 30^\\circ$ and use the **sum** formula:
+Write $\\frac{5\\pi}{12} = \\frac{\\pi}{4} + \\frac{\\pi}{6}$ and use the **sum** formula:
 
-$$\\sin 75^\\circ = \\sin 45^\\circ\\cos 30^\\circ + \\cos 45^\\circ\\sin 30^\\circ$$
+$$\\sin \\frac{5\\pi}{12} = \\sin \\frac{\\pi}{4}\\cos \\frac{\\pi}{6} + \\cos \\frac{\\pi}{4}\\sin \\frac{\\pi}{6}$$
 
 $$= \\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2} + \\frac{\\sqrt2}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt6}{4} + \\frac{\\sqrt2}{4} = \\frac{\\sqrt6 + \\sqrt2}{4}$$
 
-> 💡 **Cofunction sanity check:** $\\sin 75^\\circ = \\cos 15^\\circ$ because $75^\\circ$ and $15^\\circ$ are complementary. We got the same value $\\frac{\\sqrt6+\\sqrt2}{4}$ in Part 2 — consistent! ✓`,
+> 💡 **Cofunction sanity check:** $\\sin \\frac{5\\pi}{12} = \\cos \\frac{\\pi}{12}$ because $\\frac{5\\pi}{12}$ and $\\frac{\\pi}{12}$ are complementary. We got the same value $\\frac{\\sqrt6+\\sqrt2}{4}$ in Part 2 — consistent! ✓`,
       },
       {
         id: 'sdi3-expand-dropdown',
@@ -417,15 +417,15 @@ Match each sine expression to its expansion.`,
       {
         id: 'sdi3-worked-sin15',
         type: 'text' as const,
-        content: `## Worked Example: $\\sin 15^\\circ$
+        content: `## Worked Example: $\\sin \\frac{\\pi}{12}$
 
-Write $15^\\circ = 45^\\circ - 30^\\circ$ and use the **difference** formula:
+Write $\\frac{\\pi}{12} = \\frac{\\pi}{4} - \\frac{\\pi}{6}$ and use the **difference** formula:
 
-$$\\sin 15^\\circ = \\sin 45^\\circ\\cos 30^\\circ - \\cos 45^\\circ\\sin 30^\\circ$$
+$$\\sin \\frac{\\pi}{12} = \\sin \\frac{\\pi}{4}\\cos \\frac{\\pi}{6} - \\cos \\frac{\\pi}{4}\\sin \\frac{\\pi}{6}$$
 
 $$= \\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2} - \\frac{\\sqrt2}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt6}{4} - \\frac{\\sqrt2}{4} = \\frac{\\sqrt6 - \\sqrt2}{4}$$
 
-> ✅ **Check:** $\\dfrac{\\sqrt6 - \\sqrt2}{4} \\approx \\dfrac{2.449 - 1.414}{4} \\approx 0.259$, and $\\sin 15^\\circ \\approx 0.259$. ✓`,
+> ✅ **Check:** $\\dfrac{\\sqrt6 - \\sqrt2}{4} \\approx \\dfrac{2.449 - 1.414}{4} \\approx 0.259$, and $\\sin \\frac{\\pi}{12} \\approx 0.259$. ✓`,
       },
       {
         id: 'sdi3-fill-drill',
@@ -434,16 +434,16 @@ $$= \\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2} - \\frac{\\sqrt2}{2}\\cdot\\frac{
 
 Each exact value has the form $\\dfrac{\\sqrt6 \\;\\square\\; \\sqrt2}{4}$. Enter **+** or **-** for the box (type a plus or minus sign).
 
-**1)** $\\sin 75^\\circ = \\dfrac{\\sqrt6 \\;?\\; \\sqrt2}{4}$
-**2)** $\\sin 15^\\circ = \\dfrac{\\sqrt6 \\;?\\; \\sqrt2}{4}$
-**3)** $\\cos 15^\\circ = \\dfrac{\\sqrt6 \\;?\\; \\sqrt2}{4}$`,
+**1)** $\\sin \\frac{5\\pi}{12} = \\dfrac{\\sqrt6 \\;?\\; \\sqrt2}{4}$
+**2)** $\\sin \\frac{\\pi}{12} = \\dfrac{\\sqrt6 \\;?\\; \\sqrt2}{4}$
+**3)** $\\cos \\frac{\\pi}{12} = \\dfrac{\\sqrt6 \\;?\\; \\sqrt2}{4}$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['+', '-', '+'],
           hint1: 'Expand each with the right identity, then keep the sign that survives.',
-          hint2: '$\\sin 75^\\circ = \\sin(45+30)$ uses the sum formula → both terms add → "+".',
-          hint3: '$\\sin 15^\\circ = \\sin(45-30)$ subtracts → "-". $\\cos 15^\\circ = \\cos(45-30)$ → cosine flips the minus to a "+".',
-          explanation: '$\\sin 75^\\circ = \\frac{\\sqrt6+\\sqrt2}{4}$ (+). $\\sin 15^\\circ = \\frac{\\sqrt6-\\sqrt2}{4}$ (-). $\\cos 15^\\circ = \\frac{\\sqrt6+\\sqrt2}{4}$ (+, because cosine of a difference adds).',
+          hint2: '$\\sin \\frac{5\\pi}{12} = \\sin(\\frac{\\pi}{4}+\\frac{\\pi}{6})$ uses the sum formula → both terms add → "+".',
+          hint3: '$\\sin \\frac{\\pi}{12} = \\sin(\\frac{\\pi}{4}-\\frac{\\pi}{6})$ subtracts → "-". $\\cos \\frac{\\pi}{12} = \\cos(\\frac{\\pi}{4}-\\frac{\\pi}{6})$ → cosine flips the minus to a "+".',
+          explanation: '$\\sin \\frac{5\\pi}{12} = \\frac{\\sqrt6+\\sqrt2}{4}$ (+). $\\sin \\frac{\\pi}{12} = \\frac{\\sqrt6-\\sqrt2}{4}$ (-). $\\cos \\frac{\\pi}{12} = \\frac{\\sqrt6+\\sqrt2}{4}$ (+, because cosine of a difference adds).',
         },
       },
     ],
@@ -608,20 +608,20 @@ Write $\\sqrt3\\sin x - \\cos x$ as $R\\sin(x + C)$.
       {
         id: 'sdi5-cos105',
         type: 'text' as const,
-        content: `## Worked Example: $\\cos 105^\\circ$
+        content: `## Worked Example: $\\cos \\frac{7\\pi}{12}$
 
-**Step 1 — Decompose:** $105^\\circ = 60^\\circ + 45^\\circ$.
+**Step 1 — Decompose:** $\\frac{7\\pi}{12} = \\frac{\\pi}{3} + \\frac{\\pi}{4}$.
 
 **Step 2 — Formula:** cosine of a **sum** flips the sign:
-$$\\cos 105^\\circ = \\cos 60^\\circ\\cos 45^\\circ - \\sin 60^\\circ\\sin 45^\\circ$$
+$$\\cos \\frac{7\\pi}{12} = \\cos \\frac{\\pi}{3}\\cos \\frac{\\pi}{4} - \\sin \\frac{\\pi}{3}\\sin \\frac{\\pi}{4}$$
 
 **Step 3 — Substitute:**
 $$= \\frac{1}{2}\\cdot\\frac{\\sqrt2}{2} - \\frac{\\sqrt3}{2}\\cdot\\frac{\\sqrt2}{2} = \\frac{\\sqrt2}{4} - \\frac{\\sqrt6}{4}$$
 
 **Step 4 — Simplify:**
-$$\\cos 105^\\circ = \\frac{\\sqrt2 - \\sqrt6}{4}$$
+$$\\cos \\frac{7\\pi}{12} = \\frac{\\sqrt2 - \\sqrt6}{4}$$
 
-> ✅ **Check:** $\\dfrac{\\sqrt2 - \\sqrt6}{4} \\approx \\dfrac{1.414 - 2.449}{4} \\approx -0.259$. Since $105^\\circ$ is in Quadrant II, cosine is **negative** — consistent. ✓`,
+> ✅ **Check:** $\\dfrac{\\sqrt2 - \\sqrt6}{4} \\approx \\dfrac{1.414 - 2.449}{4} \\approx -0.259$. Since $\\frac{7\\pi}{12}$ is in Quadrant II, cosine is **negative** — consistent. ✓`,
       },
       {
         id: 'sdi5-exact-mc',
@@ -630,18 +630,18 @@ $$\\cos 105^\\circ = \\frac{\\sqrt2 - \\sqrt6}{4}$$
         exercise: {
           questions: [
             {
-              question: 'Which decomposition is best for finding $\\cos 75^\\circ$ exactly?',
+              question: 'Which decomposition is best for finding $\\cos \\frac{5\\pi}{12}$ exactly?',
               options: [
-                '$\\cos(45^\\circ + 30^\\circ)$',
-                '$\\cos(70^\\circ + 5^\\circ)$',
-                '$\\cos(72^\\circ + 3^\\circ)$',
-                '$\\cos(80^\\circ - 5^\\circ)$',
+                '$\\cos(\\frac{\\pi}{4} + \\frac{\\pi}{6})$',
+                '$\\cos(\\frac{7\\pi}{18} + \\frac{\\pi}{36})$',
+                '$\\cos(\\frac{2\\pi}{5} + \\frac{\\pi}{60})$',
+                '$\\cos(\\frac{4\\pi}{9} - \\frac{\\pi}{36})$',
               ],
               correctAnswer: 0,
-              explanation: 'Only $45^\\circ$ and $30^\\circ$ are special angles with known exact values. Angles such as $5^\\circ$, $3^\\circ$, and $72^\\circ$ are not special angles, so the unit circle does not supply their sines and cosines.',
+              explanation: 'Only $\\frac{\\pi}{4}$ and $\\frac{\\pi}{6}$ are special angles with known exact values. Angles such as $\\frac{\\pi}{36}$, $\\frac{\\pi}{60}$, and $\\frac{2\\pi}{5}$ are not special angles, so the unit circle does not supply their sines and cosines.',
             },
             {
-              question: 'After expanding, $\\cos 75^\\circ = \\cos 45^\\circ\\cos 30^\\circ - \\sin 45^\\circ\\sin 30^\\circ$ equals:',
+              question: 'After expanding, $\\cos \\frac{5\\pi}{12} = \\cos \\frac{\\pi}{4}\\cos \\frac{\\pi}{6} - \\sin \\frac{\\pi}{4}\\sin \\frac{\\pi}{6}$ equals:',
               options: [
                 '$\\dfrac{\\sqrt6 - \\sqrt2}{4}$',
                 '$\\dfrac{\\sqrt6 + \\sqrt2}{4}$',
@@ -649,7 +649,7 @@ $$\\cos 105^\\circ = \\frac{\\sqrt2 - \\sqrt6}{4}$$
                 '$\\dfrac{\\sqrt3 - 1}{2}$',
               ],
               correctAnswer: 0,
-              explanation: '$\\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2} - \\frac{\\sqrt2}{2}\\cdot\\frac12 = \\frac{\\sqrt6}{4} - \\frac{\\sqrt2}{4} = \\frac{\\sqrt6 - \\sqrt2}{4} \\approx 0.259$, which matches $\\cos 75^\\circ$.',
+              explanation: '$\\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2} - \\frac{\\sqrt2}{2}\\cdot\\frac12 = \\frac{\\sqrt6}{4} - \\frac{\\sqrt2}{4} = \\frac{\\sqrt6 - \\sqrt2}{4} \\approx 0.259$, which matches $\\cos \\frac{5\\pi}{12}$.',
             },
           ],
         },
@@ -657,15 +657,15 @@ $$\\cos 105^\\circ = \\frac{\\sqrt2 - \\sqrt6}{4}$$
       {
         id: 'sdi5-sin105',
         type: 'text' as const,
-        content: `## Worked Example: $\\sin 105^\\circ$
+        content: `## Worked Example: $\\sin \\frac{7\\pi}{12}$
 
-**Decompose:** $105^\\circ = 60^\\circ + 45^\\circ$. Use the sine **sum** formula (sine keeps its sign):
+**Decompose:** $\\frac{7\\pi}{12} = \\frac{\\pi}{3} + \\frac{\\pi}{4}$. Use the sine **sum** formula (sine keeps its sign):
 
-$$\\sin 105^\\circ = \\sin 60^\\circ\\cos 45^\\circ + \\cos 60^\\circ\\sin 45^\\circ$$
+$$\\sin \\frac{7\\pi}{12} = \\sin \\frac{\\pi}{3}\\cos \\frac{\\pi}{4} + \\cos \\frac{\\pi}{3}\\sin \\frac{\\pi}{4}$$
 
 $$= \\frac{\\sqrt3}{2}\\cdot\\frac{\\sqrt2}{2} + \\frac{1}{2}\\cdot\\frac{\\sqrt2}{2} = \\frac{\\sqrt6}{4} + \\frac{\\sqrt2}{4} = \\frac{\\sqrt6 + \\sqrt2}{4}$$
 
-> 💡 **Notice:** $\\sin 105^\\circ = \\frac{\\sqrt6+\\sqrt2}{4} = \\sin 75^\\circ$. That's because $\\sin(180^\\circ - \\theta) = \\sin\\theta$, and $105^\\circ = 180^\\circ - 75^\\circ$. A nice built-in check.`,
+> 💡 **Notice:** $\\sin \\frac{7\\pi}{12} = \\frac{\\sqrt6+\\sqrt2}{4} = \\sin \\frac{5\\pi}{12}$. That's because $\\sin(\\pi - \\theta) = \\sin\\theta$, and $\\frac{7\\pi}{12} = \\pi - \\frac{5\\pi}{12}$. A nice built-in check.`,
       },
       {
         id: 'sdi5-exact-drill',
@@ -674,15 +674,15 @@ $$= \\frac{\\sqrt3}{2}\\cdot\\frac{\\sqrt2}{2} + \\frac{1}{2}\\cdot\\frac{\\sqrt
 
 Compute each exact value, then enter its **decimal** rounded to **3 decimal places**. (Use a calculator to confirm after you set up the exact form.)
 
-**1)** $\\cos 105^\\circ = \\dfrac{\\sqrt2 - \\sqrt6}{4} = \\,?$
-**2)** $\\sin 15^\\circ = \\dfrac{\\sqrt6 - \\sqrt2}{4} = \\,?$
-**3)** $\\cos 15^\\circ = \\dfrac{\\sqrt6 + \\sqrt2}{4} = \\,?$`,
+**1)** $\\cos \\frac{7\\pi}{12} = \\dfrac{\\sqrt2 - \\sqrt6}{4} = \\,?$
+**2)** $\\sin \\frac{\\pi}{12} = \\dfrac{\\sqrt6 - \\sqrt2}{4} = \\,?$
+**3)** $\\cos \\frac{\\pi}{12} = \\dfrac{\\sqrt6 + \\sqrt2}{4} = \\,?$`,
         exercise: {
           boxes: 3,
           correctAnswers: ['-0.259', '0.259', '0.966'],
           hint1: '$\\sqrt2 \\approx 1.414$, $\\sqrt3 \\approx 1.732$, $\\sqrt6 \\approx 2.449$.',
-          hint2: '$\\cos 105^\\circ = \\frac{1.414 - 2.449}{4} = \\frac{-1.035}{4}$. Quadrant II → negative.',
-          hint3: '$\\sin 15^\\circ = \\frac{2.449 - 1.414}{4} = \\frac{1.035}{4} \\approx 0.259$. $\\;\\cos 15^\\circ = \\frac{2.449 + 1.414}{4} = \\frac{3.863}{4}$.',
+          hint2: '$\\cos \\frac{7\\pi}{12} = \\frac{1.414 - 2.449}{4} = \\frac{-1.035}{4}$. Quadrant II → negative.',
+          hint3: '$\\sin \\frac{\\pi}{12} = \\frac{2.449 - 1.414}{4} = \\frac{1.035}{4} \\approx 0.259$. $\\;\\cos \\frac{\\pi}{12} = \\frac{2.449 + 1.414}{4} = \\frac{3.863}{4}$.',
           explanation: '1) $\\frac{1.414-2.449}{4} \\approx -0.259$.  2) $\\frac{2.449-1.414}{4} \\approx 0.259$.  3) $\\frac{2.449+1.414}{4} \\approx 0.966$.',
         },
       },
@@ -691,13 +691,13 @@ Compute each exact value, then enter its **decimal** rounded to **3 decimal plac
         type: 'text' as const,
         content: `## Don't Forget the Quadrant
 
-Angles like $105^\\circ$, $165^\\circ$, and $195^\\circ$ live **outside** Quadrant I, so the sign of your answer matters. After you decompose and expand, sanity-check the sign against the quadrant.
+Angles like $\\frac{7\\pi}{12}$, $\\frac{11\\pi}{12}$, and $\\frac{13\\pi}{12}$ live **outside** Quadrant I, so the sign of your answer matters. After you decompose and expand, sanity-check the sign against the quadrant.
 
 | Angle | Quadrant | $\\sin$ | $\\cos$ |
 |-------|----------|--------|--------|
-| $105^\\circ$ | II | $+$ | $-$ |
-| $195^\\circ$ | III | $-$ | $-$ |
-| $285^\\circ$ | IV | $-$ | $+$ |
+| $\\frac{7\\pi}{12}$ | II | $+$ | $-$ |
+| $\\frac{13\\pi}{12}$ | III | $-$ | $-$ |
+| $\\frac{19\\pi}{12}$ | IV | $-$ | $+$ |
 
 > ⚠️ A correct expansion with a sign that **contradicts** the quadrant means an arithmetic slip — go back and check.`,
       },
@@ -706,18 +706,18 @@ Angles like $105^\\circ$, $165^\\circ$, and $195^\\circ$ live **outside** Quadra
         type: 'dropdown-select' as const,
         content: `**Set Up the Right Expansion** 🔽
 
-You want the **exact value of $\\sin 165^\\circ$**. Choose the best setup.`,
+You want the **exact value of $\\sin \\frac{11\\pi}{12}$**. Choose the best setup.`,
         exercise: {
           dropdowns: [
-            { label: 'Decompose $165^\\circ$ as:', options: ['$120^\\circ + 45^\\circ$', '$160^\\circ + 5^\\circ$', '$100^\\circ + 65^\\circ$', '$83^\\circ + 82^\\circ$'] },
+            { label: 'Decompose $\\frac{11\\pi}{12}$ as:', options: ['$\\frac{2\\pi}{3} + \\frac{\\pi}{4}$', '$\\frac{8\\pi}{9} + \\frac{\\pi}{36}$', '$\\frac{5\\pi}{9} + \\frac{13\\pi}{36}$', '$\\frac{3\\pi}{5} + \\frac{19\\pi}{60}$'] },
             { label: 'Use the formula:', options: ['$\\sin A\\cos B + \\cos A\\sin B$', '$\\cos A\\cos B - \\sin A\\sin B$', '$\\sin A\\cos B - \\cos A\\sin B$', '$\\sin A + \\sin B$'] },
             { label: 'Sign of the result (QII):', options: ['positive', 'negative', 'zero', 'undefined'] },
           ],
-          correctAnswers: ['$120^\\circ + 45^\\circ$', '$\\sin A\\cos B + \\cos A\\sin B$', 'positive'],
-          hint1: 'You need two angles with known exact values; $120^\\circ$ and $45^\\circ$ both qualify.',
+          correctAnswers: ['$\\frac{2\\pi}{3} + \\frac{\\pi}{4}$', '$\\sin A\\cos B + \\cos A\\sin B$', 'positive'],
+          hint1: 'You need two angles with known exact values; $\\frac{2\\pi}{3}$ and $\\frac{\\pi}{4}$ both qualify.',
           hint2: 'A SUM of angles uses the sine SUM formula (sine keeps its sign): $\\sin A\\cos B + \\cos A\\sin B$.',
-          hint3: '$165^\\circ$ is in Quadrant II, where sine is positive (it equals $\\sin 15^\\circ \\approx 0.259$).',
-          explanation: '$\\sin 165^\\circ = \\sin(120^\\circ + 45^\\circ)$ uses the sine sum formula and is positive in QII. In fact $\\sin 165^\\circ = \\sin(180^\\circ - 15^\\circ) = \\sin 15^\\circ = \\frac{\\sqrt6 - \\sqrt2}{4}$.',
+          hint3: '$\\frac{11\\pi}{12}$ is in Quadrant II, where sine is positive (it equals $\\sin \\frac{\\pi}{12} \\approx 0.259$).',
+          explanation: '$\\sin \\frac{11\\pi}{12} = \\sin(\\frac{2\\pi}{3} + \\frac{\\pi}{4})$ uses the sine sum formula and is positive in QII. In fact $\\sin \\frac{11\\pi}{12} = \\sin(\\pi - \\frac{\\pi}{12}) = \\sin \\frac{\\pi}{12} = \\frac{\\sqrt6 - \\sqrt2}{4}$.',
         },
       },
     ],
@@ -754,7 +754,7 @@ The formulas run **both directions**. Reading them right-to-left lets you **coll
 
 ### Example
 
-$$\\sin 50^\\circ\\cos 20^\\circ - \\cos 50^\\circ\\sin 20^\\circ = \\sin(50^\\circ - 20^\\circ) = \\sin 30^\\circ = \\frac{1}{2}$$
+$$\\sin \\frac{5\\pi}{18}\\cos \\frac{\\pi}{9} - \\cos \\frac{5\\pi}{18}\\sin \\frac{\\pi}{9} = \\sin(\\frac{5\\pi}{18} - \\frac{\\pi}{9}) = \\sin \\frac{\\pi}{6} = \\frac{1}{2}$$
 
 > 💡 This is how a "scary" expression becomes a single known value. Look for the **mixed-product, opposite-order** pattern that signals sine, or the **matched-product** pattern that signals cosine.`,
       },
@@ -765,10 +765,10 @@ $$\\sin 50^\\circ\\cos 20^\\circ - \\cos 50^\\circ\\sin 20^\\circ = \\sin(50^\\c
         exercise: {
           questions: [
             {
-              question: '$\\cos 40^\\circ\\cos 10^\\circ + \\sin 40^\\circ\\sin 10^\\circ$ simplifies to:',
-              options: ['$\\cos 30^\\circ$', '$\\cos 50^\\circ$', '$\\sin 30^\\circ$', '$\\cos 400^\\circ$'],
+              question: '$\\cos \\frac{2\\pi}{9}\\cos \\frac{\\pi}{18} + \\sin \\frac{2\\pi}{9}\\sin \\frac{\\pi}{18}$ simplifies to:',
+              options: ['$\\cos \\frac{\\pi}{6}$', '$\\cos \\frac{5\\pi}{18}$', '$\\sin \\frac{\\pi}{6}$', '$\\cos \\frac{20\\pi}{9}$'],
               correctAnswer: 0,
-              explanation: 'Matched products with a PLUS is the $\\cos(A-B)$ pattern: $\\cos(40^\\circ - 10^\\circ) = \\cos 30^\\circ = \\frac{\\sqrt3}{2}$.',
+              explanation: 'Matched products with a PLUS is the $\\cos(A-B)$ pattern: $\\cos(\\frac{2\\pi}{9} - \\frac{\\pi}{18}) = \\cos \\frac{\\pi}{6} = \\frac{\\sqrt3}{2}$.',
             },
             {
               question: '$\\sin 3x\\cos x + \\cos 3x\\sin x$ simplifies to:',
@@ -810,7 +810,7 @@ Prove that $\\cos(\\pi - x) = -\\cos x$. Fill each step.`,
           ],
           correctAnswers: ['$\\cos\\pi\\cos x + \\sin\\pi\\sin x$', '$-1$', '$0$'],
           hint1: 'This is a cosine of a DIFFERENCE, so the matched products are joined with a PLUS.',
-          hint2: 'On the unit circle, $\\pi$ radians ($180^\\circ$) sits at the point $(-1, 0)$.',
+          hint2: 'On the unit circle, the angle $\\pi$ (a half turn) sits at the point $(-1, 0)$.',
           hint3: 'So $\\cos\\pi = -1$ and $\\sin\\pi = 0$, giving $(-1)\\cos x + (0)\\sin x = -\\cos x$.',
           explanation: '$\\cos(\\pi - x) = \\cos\\pi\\cos x + \\sin\\pi\\sin x = (-1)\\cos x + (0)\\sin x = -\\cos x$. $\\;\\blacksquare$',
         },
@@ -834,16 +834,16 @@ Then read off the two inner angles and combine them. The whole expression collap
 
 Each expression collapses to a single trig value. Enter the **exact value** (use a/b for fractions; a decimal is fine where noted).
 
-**1)** $\\sin 70^\\circ\\cos 25^\\circ - \\cos 70^\\circ\\sin 25^\\circ = \\sin(\\,?^\\circ)$ — enter the **angle in degrees**.
-**2)** That value $\\sin 45^\\circ = \\,?$  *(3 decimals)*
-**3)** $\\cos 100^\\circ\\cos 40^\\circ + \\sin 100^\\circ\\sin 40^\\circ = \\cos(\\,?^\\circ)$ — enter the **angle in degrees**.`,
+**1)** $\\sin \\frac{5\\pi}{12}\\cos \\frac{\\pi}{6} - \\cos \\frac{5\\pi}{12}\\sin \\frac{\\pi}{6} = \\sin(\\,?\\cdot\\pi)$, where the angle is the difference of the two given angles (between $0$ and $\\frac{\\pi}{2}$) — enter the **coefficient of $\\pi$** (e.g. \`1/6\`).
+**2)** That value $= \\,?$  *(3 decimals)*
+**3)** $\\cos \\frac{7\\pi}{12}\\cos \\frac{\\pi}{4} + \\sin \\frac{7\\pi}{12}\\sin \\frac{\\pi}{4} = \\cos(\\,?\\cdot\\pi)$, again with the angle between $0$ and $\\frac{\\pi}{2}$ — enter the **coefficient of $\\pi$**.`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['45', '0.707', '60'],
-          hint1: 'Mixed products with a minus is $\\sin(A-B)$: $\\sin(70^\\circ - 25^\\circ)$.',
-          hint2: '$\\sin 45^\\circ = \\frac{\\sqrt2}{2} \\approx 0.707$.',
-          hint3: 'Matched products with a plus is $\\cos(A-B)$: $\\cos(100^\\circ - 40^\\circ) = \\cos 60^\\circ$.',
-          explanation: '1) $\\sin(70^\\circ - 25^\\circ) = \\sin 45^\\circ$, so the angle is $45^\\circ$.  2) $\\sin 45^\\circ \\approx 0.707$.  3) $\\cos(100^\\circ - 40^\\circ) = \\cos 60^\\circ$, so the angle is $60^\\circ$ (value $\\frac12$).',
+          correctAnswers: ['1/4', '0.707', '1/3'],
+          hint1: 'Mixed products with a minus is $\\sin(A-B)$: $\\sin(\\frac{5\\pi}{12} - \\frac{2\\pi}{12})$.',
+          hint2: '$\\sin \\frac{\\pi}{4} = \\frac{\\sqrt2}{2} \\approx 0.707$.',
+          hint3: 'Matched products with a plus is $\\cos(A-B)$: $\\cos(\\frac{7\\pi}{12} - \\frac{3\\pi}{12}) = \\cos \\frac{\\pi}{3}$.',
+          explanation: '1) $\\sin(\\frac{5\\pi}{12} - \\frac{\\pi}{6}) = \\sin \\frac{3\\pi}{12} = \\sin \\frac{\\pi}{4}$, so the coefficient is $\\frac14$.  2) $\\sin \\frac{\\pi}{4} \\approx 0.707$.  3) $\\cos(\\frac{7\\pi}{12} - \\frac{\\pi}{4}) = \\cos \\frac{\\pi}{3}$, so the coefficient is $\\frac13$ (value $\\frac12$).',
         },
       },
     ],
@@ -959,7 +959,7 @@ Answer all three to finish the lesson.`,
               explanation: 'Cosine flips the sign: a PLUS inside becomes a MINUS. Matched products give $\\cos A\\cos B - \\sin A\\sin B$.',
             },
             {
-              question: 'What is the exact value of $\\cos 15^\\circ$?',
+              question: 'What is the exact value of $\\cos \\frac{\\pi}{12}$?',
               options: [
                 '$\\dfrac{\\sqrt6 + \\sqrt2}{4}$',
                 '$\\dfrac{\\sqrt6 - \\sqrt2}{4}$',
@@ -967,13 +967,13 @@ Answer all three to finish the lesson.`,
                 '$\\dfrac{\\sqrt3 + 1}{2}$',
               ],
               correctAnswer: 0,
-              explanation: '$\\cos 15^\\circ = \\cos(45^\\circ - 30^\\circ) = \\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2} + \\frac{\\sqrt2}{2}\\cdot\\frac12 = \\frac{\\sqrt6 + \\sqrt2}{4} \\approx 0.966$.',
+              explanation: '$\\cos \\frac{\\pi}{12} = \\cos(\\frac{\\pi}{4} - \\frac{\\pi}{6}) = \\frac{\\sqrt2}{2}\\cdot\\frac{\\sqrt3}{2} + \\frac{\\sqrt2}{2}\\cdot\\frac12 = \\frac{\\sqrt6 + \\sqrt2}{4} \\approx 0.966$.',
             },
             {
-              question: '$\\sin 80^\\circ\\cos 20^\\circ - \\cos 80^\\circ\\sin 20^\\circ$ equals:',
-              options: ['$\\dfrac{\\sqrt3}{2}$', '$\\dfrac12$', '$\\sin 100^\\circ$', '$1$'],
+              question: '$\\sin \\frac{4\\pi}{9}\\cos \\frac{\\pi}{9} - \\cos \\frac{4\\pi}{9}\\sin \\frac{\\pi}{9}$ equals:',
+              options: ['$\\dfrac{\\sqrt3}{2}$', '$\\dfrac12$', '$\\sin \\frac{5\\pi}{9}$', '$1$'],
               correctAnswer: 0,
-              explanation: 'This is the $\\sin(A-B)$ pattern: $\\sin(80^\\circ - 20^\\circ) = \\sin 60^\\circ = \\frac{\\sqrt3}{2}$.',
+              explanation: 'This is the $\\sin(A-B)$ pattern: $\\sin(\\frac{4\\pi}{9} - \\frac{\\pi}{9}) = \\sin \\frac{\\pi}{3} = \\frac{\\sqrt3}{2}$.',
             },
           ],
         },

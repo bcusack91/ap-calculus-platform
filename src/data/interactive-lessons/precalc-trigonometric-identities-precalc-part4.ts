@@ -37,19 +37,19 @@ The difference identities are the sum identities in disguise: replace $B$ with $
       content: `
 ## 📝 Worked Examples
 
-### Example 1: Find the exact value of $\\cos 75°$
+### Example 1: Find the exact value of $\\cos \\frac{5\\pi}{12}$
 
-Split: $75° = 45° + 30°$
+Split: $\\frac{5\\pi}{12} = \\frac{\\pi}{4} + \\frac{\\pi}{6}$
 
-$$\\cos 75° = \\cos 45°\\cos 30° - \\sin 45°\\sin 30°$$
+$$\\cos \\frac{5\\pi}{12} = \\cos \\frac{\\pi}{4}\\cos \\frac{\\pi}{6} - \\sin \\frac{\\pi}{4}\\sin \\frac{\\pi}{6}$$
 
 $$= \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2} \\cdot \\frac{1}{2} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$$
 
-### Example 2: Find the exact value of $\\sin 15°$
+### Example 2: Find the exact value of $\\sin \\frac{\\pi}{12}$
 
-Split: $15° = 45° - 30°$
+Split: $\\frac{\\pi}{12} = \\frac{\\pi}{4} - \\frac{\\pi}{6}$
 
-$$\\sin 15° = \\sin 45°\\cos 30° - \\cos 45°\\sin 30°$$
+$$\\sin \\frac{\\pi}{12} = \\sin \\frac{\\pi}{4}\\cos \\frac{\\pi}{6} - \\cos \\frac{\\pi}{4}\\sin \\frac{\\pi}{6}$$
 
 $$= \\frac{\\sqrt{2}}{2} \\cdot \\frac{\\sqrt{3}}{2} - \\frac{\\sqrt{2}}{2} \\cdot \\frac{1}{2} = \\frac{\\sqrt{6} - \\sqrt{2}}{4}$$
 
@@ -78,10 +78,10 @@ $$\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta = 
 
 | Target Angle | Split As | Using |
 |:------------|:---------|:------|
-| $15°$ | $45° - 30°$ | Difference |
-| $75°$ | $45° + 30°$ | Sum |
-| $105°$ | $60° + 45°$ | Sum |
-| $165°$ | $180° - 15°$ | or $120° + 45°$ |
+| $\\frac{\\pi}{12}$ | $\\frac{\\pi}{4} - \\frac{\\pi}{6}$ | Difference |
+| $\\frac{5\\pi}{12}$ | $\\frac{\\pi}{4} + \\frac{\\pi}{6}$ | Sum |
+| $\\frac{7\\pi}{12}$ | $\\frac{\\pi}{3} + \\frac{\\pi}{4}$ | Sum |
+| $\\frac{11\\pi}{12}$ | $\\pi - \\frac{\\pi}{12}$ | or $\\frac{2\\pi}{3} + \\frac{\\pi}{4}$ |
 | $\\frac{\\pi}{12}$ | $\\frac{\\pi}{4} - \\frac{\\pi}{6}$ | Difference |
 | $\\frac{5\\pi}{12}$ | $\\frac{\\pi}{4} + \\frac{\\pi}{6}$ | Sum |
 | $\\frac{7\\pi}{12}$ | $\\frac{\\pi}{3} + \\frac{\\pi}{4}$ | Sum |
@@ -90,7 +90,7 @@ $$\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta = 
 
 | Situation | Example |
 |:----------|:--------|
-| Exact value of a non-standard angle | $\\sin 75°$, $\\cos 15°$ |
+| Exact value of a non-standard angle | $\\sin \\frac{5\\pi}{12}$, $\\cos \\frac{\\pi}{12}$ |
 | Expression has $\\sin A\\cos B \\pm \\cos A\\sin B$ | Condense to $\\sin(A \\pm B)$ |
 | Proving an identity | Expand one side, simplify to match the other |
 | Deriving double-angle formulas | Set $B = A$ in the sum formulas |
@@ -146,19 +146,19 @@ $$\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta = 
       content: `
 **Exact Value Computation** 🧮
 
-**1)** Find the exact value of $\\cos 15°$. The answer has the form $\\frac{\\sqrt{a}+\\sqrt{b}}{4}$. What is $a + b$? (e.g., if the answer were $\\frac{\\sqrt{5}+\\sqrt{3}}{4}$, you'd enter $8$)
+**1)** Find the exact value of $\\cos \\frac{\\pi}{12}$. The answer has the form $\\frac{\\sqrt{a}+\\sqrt{b}}{4}$. What is $a + b$? (e.g., if the answer were $\\frac{\\sqrt{5}+\\sqrt{3}}{4}$, you'd enter $8$)
 
 **2)** Simplify $\\cos(x + 2\\pi)$. Write as a single trig function of $x$ (e.g., sin, cos, tan). (e.g., $\\sin(x + 2\\pi) = \\sin x$ by periodicity)
 
-**3)** Evaluate $\\sin 45°\\cos 15° + \\cos 45°\\sin 15°$. This matches $\\sin(A+B)$; enter the result as a fraction. (e.g., $\\sin 30° = 1/2$)
+**3)** Evaluate $\\sin \\frac{\\pi}{4}\\cos \\frac{\\pi}{12} + \\cos \\frac{\\pi}{4}\\sin \\frac{\\pi}{12}$. This matches $\\sin(A+B)$; enter the result as a fraction. (e.g., $\\sin \\frac{\\pi}{6} = 1/2$)
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['8', 'cos', 'sqrt(3)/2'],
-        hint1: '$\\cos 15° = \\cos(45°-30°)$. Expand and combine. You get $\\frac{\\sqrt{6}+\\sqrt{2}}{4}$, so $a=6, b=2$.',
+        hint1: '$\\cos \\frac{\\pi}{12} = \\cos(\\frac{\\pi}{4}-\\frac{\\pi}{6})$. Expand and combine. You get $\\frac{\\sqrt{6}+\\sqrt{2}}{4}$, so $a=6, b=2$.',
         hint2: 'Since $\\cos$ has period $2\\pi$, adding $2\\pi$ to the argument changes nothing.',
-        hint3: 'Recognize the pattern: $\\sin A\\cos B + \\cos A\\sin B = \\sin(A+B)$. What is $45° + 15°$?',
-        explanation: '1) $\\cos 15° = \\frac{\\sqrt{6}+\\sqrt{2}}{4}$, so $a+b=6+2=8$. 2) $\\cos(x+2\\pi) = \\cos x$. 3) $\\sin(45°+15°) = \\sin 60° = \\frac{\\sqrt{3}}{2}$.'
+        hint3: 'Recognize the pattern: $\\sin A\\cos B + \\cos A\\sin B = \\sin(A+B)$. What is $\\frac{\\pi}{4} + \\frac{\\pi}{12}$?',
+        explanation: '1) $\\cos \\frac{\\pi}{12} = \\frac{\\sqrt{6}+\\sqrt{2}}{4}$, so $a+b=6+2=8$. 2) $\\cos(x+2\\pi) = \\cos x$. 3) $\\sin(\\frac{\\pi}{4}+\\frac{\\pi}{12}) = \\sin \\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$.'
       }
     },
     {
@@ -178,19 +178,19 @@ $$\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta = 
             options: ['$\\cos(A+B)$', '$\\cos(A-B)$', '$\\sin(A+B)$', '$\\sin(A-B)$']
           },
           {
-            label: 'To find an exact value of $\\sin 105°$, split as',
-            options: ['$60° + 45°$', '$90° + 15°$', '$120° - 15°$', '$180° - 75°$']
+            label: 'To find an exact value of $\\sin \\frac{7\\pi}{12}$, split it into two special angles as',
+            options: ['$\\frac{\\pi}{3} + \\frac{\\pi}{4}$', '$\\frac{\\pi}{2} + \\frac{\\pi}{12}$', '$\\frac{2\\pi}{3} - \\frac{\\pi}{12}$', '$\\pi - \\frac{5\\pi}{12}$']
           },
           {
             label: 'In $\\cos(A+B)$, the sign between the two terms is',
             options: ['Plus ($+$)', 'Minus ($-$)', 'Depends on the quadrant', 'Undefined']
           }
         ],
-        correctAnswers: ['$\\sin(A-B)$', '$\\cos(A-B)$', '$60° + 45°$', 'Minus ($-$)'],
+        correctAnswers: ['$\\sin(A-B)$', '$\\cos(A-B)$', '$\\frac{\\pi}{3} + \\frac{\\pi}{4}$', 'Minus ($-$)'],
         hint1: 'The minus between the two products signals the difference formula for sine.',
         hint2: 'Plus between the products is the cosine difference formula (signs are flipped).',
-        hint3: 'Both 60° and 45° have known exact values; their sum is 105°.',
-        explanation: '$\\sin A\\cos B - \\cos A\\sin B = \\sin(A-B)$. $\\cos A\\cos B + \\sin A\\sin B = \\cos(A-B)$. $105° = 60°+45°$ uses standard angles. Cosine sum has a minus sign.'
+        hint3: 'Both $\\frac{\\pi}{3}$ and $\\frac{\\pi}{4}$ have known exact values; their sum is $\\frac{7\\pi}{12}$.',
+        explanation: '$\\sin A\\cos B - \\cos A\\sin B = \\sin(A-B)$. $\\cos A\\cos B + \\sin A\\sin B = \\cos(A-B)$. $\\frac{7\\pi}{12} = \\frac{\\pi}{3}+\\frac{\\pi}{4}$ uses standard angles. Cosine sum has a minus sign.'
       }
     },
     {
@@ -202,18 +202,18 @@ $$\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta = 
       exercise: {
         questions: [
           {
-            question: '$\\cos 40°\\cos 50° - \\sin 40°\\sin 50°$ equals:',
+            question: '$\\cos \\frac{\\pi}{5}\\cos \\frac{3\\pi}{10} - \\sin \\frac{\\pi}{5}\\sin \\frac{3\\pi}{10}$ equals:',
             options: [
-              '$\\cos(-10°)$',
-              '$\\cos 90°$',
-              '$\\cos 2000°$',
-              '$\\sin(-10°)$'
+              '$\\cos(-\\frac{\\pi}{10})$',
+              '$\\cos \\frac{\\pi}{2}$',
+              '$\\sin \\frac{\\pi}{2}$',
+              '$\\sin(-\\frac{\\pi}{10})$'
             ],
             correctAnswer: 1,
-            explanation: 'This matches $\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$ with $A=40°, B=50°$. So $\\cos(40°+50°) = \\cos 90° = 0$.'
+            explanation: 'This matches $\\cos(A+B) = \\cos A\\cos B - \\sin A\\sin B$ with $A=\\frac{\\pi}{5}, B=\\frac{3\\pi}{10}$. So $\\cos(\\frac{2\\pi}{10}+\\frac{3\\pi}{10}) = \\cos \\frac{\\pi}{2} = 0$. The difference $A - B$ belongs to the plus sign, and the sine options use the wrong function for matched products.'
           },
           {
-            question: 'The exact value of $\\sin 75°$ is:',
+            question: 'The exact value of $\\sin \\frac{5\\pi}{12}$ is:',
             options: [
               '$\\frac{\\sqrt{6}+\\sqrt{2}}{4}$',
               '$\\frac{\\sqrt{6}-\\sqrt{2}}{4}$',
@@ -221,7 +221,7 @@ $$\\sin(\\alpha + \\beta) = \\sin\\alpha\\cos\\beta + \\cos\\alpha\\sin\\beta = 
               '$\\frac{\\sqrt{3}}{2}$'
             ],
             correctAnswer: 0,
-            explanation: '$\\sin 75° = \\sin(45°+30°) = \\sin 45°\\cos 30° + \\cos 45°\\sin 30° = \\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt{6}+\\sqrt{2}}{4}$.'
+            explanation: '$\\sin \\frac{5\\pi}{12} = \\sin(\\frac{\\pi}{4}+\\frac{\\pi}{6}) = \\sin \\frac{\\pi}{4}\\cos \\frac{\\pi}{6} + \\cos \\frac{\\pi}{4}\\sin \\frac{\\pi}{6} = \\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2} + \\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2} = \\frac{\\sqrt{6}+\\sqrt{2}}{4}$.'
           }
         ]
       }

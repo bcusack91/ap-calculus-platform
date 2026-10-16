@@ -16,7 +16,7 @@ This final part combines all polar coordinate skills:
 | Skill | Key Formula / Concept |
 |:------|:---------------------|
 | Conversions | $x = r\\cos\\theta, \\; y = r\\sin\\theta, \\; r^2 = x^2+y^2$ |
-| Polar curves | Roses, cardioids, limaçons, lemniscates, spirals |
+| Polar curves | Circles, roses, cardioids, limaçons |
 | Symmetry | Test $-\\theta$ (polar axis), $\\pi-\\theta$ (vertical), $-r$ (origin) |
 | Reading $r = f(\\theta)$ | $r > 0$: on the ray of $\\theta$; $r < 0$: on the opposite ray; $r = 0$: at the pole |
 | Domain restriction | Choose $\\alpha \\le \\theta \\le \\beta$ so the curve starts and ends where you want |
@@ -42,7 +42,6 @@ Flowchart:
 4. **$r = a\\cos(n\\theta)$ or $r = a\\sin(n\\theta)$** → Rose
    - $n$ odd: $n$ petals
    - $n$ even: $2n$ petals
-5. **$r^2 = a^2\\cos(2\\theta)$ or $r^2 = a^2\\sin(2\\theta)$** → Lemniscate (figure-8)
 
 ### Describing How a Polar Graph Behaves
 
@@ -155,9 +154,9 @@ Flowchart:
         questions: [
           {
             question: 'The intersection(s) of $r = 2$ and $r = 4\\cos\\theta$ occur at:',
-            options: ['$\\theta = \\frac{\\pi}{6}$ and $\\theta = \\frac{5\\pi}{6}$', '$\\theta = \\frac{\\pi}{3}$ and $\\theta = \\frac{5\\pi}{3}$', '$\\theta = \\frac{\\pi}{4}$ and $\\theta = \\frac{7\\pi}{4}$', '$\\theta = \\frac{\\pi}{3}$ and $\\theta = -\\frac{\\pi}{3}$'],
+            options: ['$\\theta = \\frac{\\pi}{6}$ and $\\theta = \\frac{5\\pi}{6}$', '$\\theta = \\frac{2\\pi}{3}$ and $\\theta = \\frac{4\\pi}{3}$', '$\\theta = \\frac{\\pi}{4}$ and $\\theta = \\frac{7\\pi}{4}$', '$\\theta = \\frac{\\pi}{3}$ and $\\theta = -\\frac{\\pi}{3}$'],
             correctAnswer: 3,
-            explanation: '$2 = 4\\cos\\theta \\implies \\cos\\theta = \\frac{1}{2} \\implies \\theta = \\pm\\frac{\\pi}{3}$.'
+            explanation: '$2 = 4\\cos\\theta \\implies \\cos\\theta = \\frac{1}{2} \\implies \\theta = \\pm\\frac{\\pi}{3}$. The angles $\\frac{2\\pi}{3}$ and $\\frac{4\\pi}{3}$ solve $\\cos\\theta = -\\frac{1}{2}$, and $\\frac{\\pi}{6}$ and $\\frac{5\\pi}{6}$ solve $\\sin\\theta = \\frac{1}{2}$ instead.'
           },
           {
             question: 'A polar function has $f(0) = 1$ and $f\\left(\\frac{\\pi}{2}\\right) = 4$. Using the average rate of change on $\\left[0, \\frac{\\pi}{2}\\right]$, what is the estimate of $f\\left(\\frac{\\pi}{6}\\right)$?',

@@ -45,19 +45,21 @@ $$\\sin(-\\theta)\\cos(-\\theta) = (-\\sin\\theta)(\\cos\\theta) = -\\sin\\theta
 
 Sine is odd (picks up a negative), cosine is even (stays the same).
 
-### Example 2: Evaluate $\\cos(-60°)$ without a calculator
+### Example 2: Evaluate $\\cos(-\\frac{\\pi}{3})$ without a calculator
 
-$\\cos$ is even, so $\\cos(-60°) = \\cos 60° = \\frac{1}{2}$.
+$\\cos$ is even, so $\\cos(-\\frac{\\pi}{3}) = \\cos \\frac{\\pi}{3} = \\frac{1}{2}$.
 
-### Example 3: Rewrite $\\sin 70°$ as a cosine
+### Example 3: Rewrite $\\sin \\frac{2\\pi}{5}$ as a cosine
 
-$$\\sin 70° = \\cos(90° - 70°) = \\cos 20°$$
+$$\\sin \\frac{2\\pi}{5} = \\cos\\!\\left(\\frac{\\pi}{2} - \\frac{2\\pi}{5}\\right) = \\cos \\frac{\\pi}{10}$$
 
-### Example 4: Show that $\\tan(-\\theta) + \\cot(90° - \\theta)$ simplifies to $0$
+(Work in tenths: $\\frac{\\pi}{2} = \\frac{5\\pi}{10}$ and $\\frac{2\\pi}{5} = \\frac{4\\pi}{10}$.)
 
-$$\\tan(-\\theta) + \\cot(90° - \\theta) = -\\tan\\theta + \\tan\\theta = 0$$
+### Example 4: Show that $\\tan(-\\theta) + \\cot(\\frac{\\pi}{2} - \\theta)$ simplifies to $0$
 
-The cofunction identity gives $\\cot(90° - \\theta) = \\tan\\theta$, and the even-odd identity gives $\\tan(-\\theta) = -\\tan\\theta$.
+$$\\tan(-\\theta) + \\cot(\\frac{\\pi}{2} - \\theta) = -\\tan\\theta + \\tan\\theta = 0$$
+
+The cofunction identity gives $\\cot(\\frac{\\pi}{2} - \\theta) = \\tan\\theta$, and the even-odd identity gives $\\tan(-\\theta) = -\\tan\\theta$.
       `
     },
     {
@@ -75,13 +77,13 @@ Negating $\\theta$ reflects the point $(\\cos\\theta,\\,\\sin\\theta)$ to $(\\co
 | $x$-coordinate ($\\cos$) | Unchanged | $\\cos(-\\theta) = \\cos\\theta$ — **even** |
 | $y$-coordinate ($\\sin$) | Flipped sign | $\\sin(-\\theta) = -\\sin\\theta$ — **odd** |
 
-### Cofunction: $90°$ Rotation
+### Cofunction: $\\frac{\\pi}{2}$ Rotation
 
 The point at angle $\\theta$ has coordinates $(\\cos\\theta, \\sin\\theta)$.
 
 The point at angle $\\frac{\\pi}{2} - \\theta$ has coordinates $(\\sin\\theta, \\cos\\theta)$ — the $x$ and $y$ swap!
 
-This swap is exactly why $\\sin\\theta = \\cos(90° - \\theta)$.
+This swap is exactly why $\\sin\\theta = \\cos(\\frac{\\pi}{2} - \\theta)$.
 
 ### Quick Decision Table
 
@@ -105,28 +107,28 @@ This swap is exactly why $\\sin\\theta = \\cos(90° - \\theta)$.
             options: [
               '$1$',
               '$-1$',
-              '$0$',
+              '$\\cos^2\\theta$',
               '$\\sin^2\\theta$'
             ],
             correctAnswer: 0,
             explanation: '$\\sin(-\\theta) = -\\sin\\theta$ and $\\csc(-\\theta) = -\\csc\\theta$. So $(-\\sin\\theta)(-\\csc\\theta) = \\sin\\theta \\cdot \\csc\\theta = 1$.'
           },
           {
-            question: 'Which equals $\\cos 35°$?',
+            question: 'Which equals $\\cos \\frac{\\pi}{5}$?',
             options: [
-              '$\\sin 35°$',
-              '$\\sin 55°$',
-              '$-\\cos 35°$',
-              '$\\cos 55°$'
+              '$\\sin \\frac{\\pi}{5}$',
+              '$\\sin \\frac{3\\pi}{10}$',
+              '$-\\cos \\frac{\\pi}{5}$',
+              '$\\cos \\frac{3\\pi}{10}$'
             ],
             correctAnswer: 1,
-            explanation: 'Cofunction: $\\cos 35° = \\sin(90° - 35°) = \\sin 55°$.'
+            explanation: 'Cofunction: $\\cos \\frac{\\pi}{5} = \\sin(\\frac{\\pi}{2} - \\frac{\\pi}{5}) = \\sin \\frac{3\\pi}{10}$. Changing only the function without changing the angle, or changing only the angle without changing the function, breaks the identity.'
           },
           {
             question: '$\\tan(-\\theta)\\cot(-\\theta)$ equals:',
             options: [
               '$-1$',
-              '$0$',
+              '$\\sec^2\\theta$',
               '$1$',
               '$\\tan^2\\theta$'
             ],
@@ -142,19 +144,19 @@ This swap is exactly why $\\sin\\theta = \\cos(90° - \\theta)$.
       content: `
 **Even-Odd & Cofunction Practice** 🧮
 
-**1)** $\\cos(-120°) = \\cos\\,\\_\\_°$. Write the positive angle in degrees. (e.g., $\\cos(-45°) = \\cos 45°$ since cosine is even)
+**1)** $\\cos(-\\frac{2\\pi}{3}) = \\cos(\\,?\\cdot\\pi)$ with the angle in $[0, \\pi]$. Enter its coefficient of $\\pi$ (type \`2/3\` for $\\frac{2\\pi}{3}$). (e.g., $\\cos(-\\frac{\\pi}{4}) = \\cos \\frac{\\pi}{4}$ since cosine is even)
 
-**2)** $\\sin 25° = \\cos\\,\\_\\_°$. Write the complementary angle in degrees. (e.g., $\\sin 40° = \\cos 50°$ since $40 + 50 = 90$)
+**2)** $\\sin \\frac{\\pi}{12} = \\cos(\\,?\\cdot\\pi)$ with the angle in $[0, \\pi]$. Enter the coefficient of that angle (the complementary angle). (e.g., $\\sin \\frac{\\pi}{6} = \\cos \\frac{\\pi}{3}$ since $\\frac{\\pi}{6} + \\frac{\\pi}{3} = \\frac{\\pi}{2}$)
 
-**3)** Evaluate $\\tan(-45°)$. Write as an integer. (e.g., $\\sin(-30°) = -\\sin 30° = -1/2$ since sine is odd)
+**3)** Evaluate $\\tan(-\\frac{\\pi}{4})$. Write as an integer. (e.g., $\\sin(-\\frac{\\pi}{6}) = -\\sin \\frac{\\pi}{6} = -1/2$ since sine is odd)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['120', '65', '-1'],
+        correctAnswers: ['2/3', '5/12', '-1'],
         hint1: 'Cosine is an even function: $\\cos(-\\theta) = \\cos\\theta$.',
-        hint2: 'Cofunction: $\\sin\\theta = \\cos(90° - \\theta)$. What is $90 - 25$?',
-        hint3: 'Tangent is odd: $\\tan(-45°) = -\\tan 45°$. And $\\tan 45° = 1$.',
-        explanation: '1) $\\cos(-120°) = \\cos 120°$ (even). 2) $\\sin 25° = \\cos(90° - 25°) = \\cos 65°$. 3) $\\tan(-45°) = -\\tan 45° = -1$ (odd).'
+        hint2: 'Cofunction: $\\sin\\theta = \\cos(\\frac{\\pi}{2} - \\theta)$. What is $\\frac{\\pi}{2} - \\frac{\\pi}{12} = \\frac{6\\pi}{12} - \\frac{\\pi}{12}$?',
+        hint3: 'Tangent is odd: $\\tan(-\\frac{\\pi}{4}) = -\\tan \\frac{\\pi}{4}$. And $\\tan \\frac{\\pi}{4} = 1$.',
+        explanation: '1) $\\cos(-\\frac{2\\pi}{3}) = \\cos \\frac{2\\pi}{3}$ (even). 2) $\\sin \\frac{\\pi}{12} = \\cos(\\frac{\\pi}{2} - \\frac{\\pi}{12}) = \\cos \\frac{5\\pi}{12}$. 3) $\\tan(-\\frac{\\pi}{4}) = -\\tan \\frac{\\pi}{4} = -1$ (odd).'
       }
     },
     {
@@ -174,19 +176,19 @@ This swap is exactly why $\\sin\\theta = \\cos(90° - \\theta)$.
             options: ['$\\csc\\theta$', '$-\\csc\\theta$', '$\\sec\\theta$', '$-\\sec\\theta$']
           },
           {
-            label: '$\\tan 50°$ equals',
-            options: ['$\\cot 50°$', '$\\cot 40°$', '$\\tan 40°$', '$-\\tan 50°$']
+            label: '$\\tan \\frac{3\\pi}{10}$ equals',
+            options: ['$\\cot \\frac{3\\pi}{10}$', '$\\cot \\frac{\\pi}{5}$', '$\\tan \\frac{\\pi}{5}$', '$-\\tan \\frac{3\\pi}{10}$']
           },
           {
             label: 'Cosine and secant are classified as',
             options: ['Odd functions', 'Even functions', 'Neither even nor odd', 'Cofunctions']
           }
         ],
-        correctAnswers: ['$\\sec\\theta$', '$-\\csc\\theta$', '$\\cot 40°$', 'Even functions'],
+        correctAnswers: ['$\\sec\\theta$', '$-\\csc\\theta$', '$\\cot \\frac{\\pi}{5}$', 'Even functions'],
         hint1: 'Secant inherits the even/odd property of cosine.',
         hint2: 'Cosecant inherits the even/odd property of sine.',
-        hint3: '$\\tan\\theta = \\cot(90° - \\theta)$. What is $90 - 50$?',
-        explanation: '$\\sec(-\\theta) = \\sec\\theta$ (even). $\\csc(-\\theta) = -\\csc\\theta$ (odd). $\\tan 50° = \\cot(90°-50°) = \\cot 40°$ (cofunction). Cosine and secant are even.'
+        hint3: '$\\tan\\theta = \\cot(\\frac{\\pi}{2} - \\theta)$. What is $\\frac{5\\pi}{10} - \\frac{3\\pi}{10}$?',
+        explanation: '$\\sec(-\\theta) = \\sec\\theta$ (even). $\\csc(-\\theta) = -\\csc\\theta$ (odd). $\\tan \\frac{3\\pi}{10} = \\cot(\\frac{\\pi}{2}-\\frac{3\\pi}{10}) = \\cot \\frac{\\pi}{5}$ (cofunction). Cosine and secant are even.'
       }
     },
     {
@@ -209,7 +211,7 @@ This swap is exactly why $\\sin\\theta = \\cos(90° - \\theta)$.
             explanation: '$\\sin(-\\theta) = -\\sin\\theta$ (odd). $\\sec(-\\theta) = \\sec\\theta$ (even). Product: $-\\sin\\theta \\cdot \\sec\\theta = -\\sin\\theta/\\cos\\theta = -\\tan\\theta$.'
           },
           {
-            question: 'If $\\cos\\alpha = 0.6$ and $\\alpha + \\beta = 90°$, what is $\\sin\\beta$?',
+            question: 'If $\\cos\\alpha = 0.6$ and $\\alpha + \\beta = \\frac{\\pi}{2}$, what is $\\sin\\beta$?',
             options: [
               '$0.8$',
               '$0.6$',
@@ -217,7 +219,7 @@ This swap is exactly why $\\sin\\theta = \\cos(90° - \\theta)$.
               'Cannot determine'
             ],
             correctAnswer: 1,
-            explanation: 'Cofunction: $\\sin\\beta = \\sin(90° - \\alpha) = \\cos\\alpha = 0.6$.'
+            explanation: 'Cofunction: $\\sin\\beta = \\sin(\\frac{\\pi}{2} - \\alpha) = \\cos\\alpha = 0.6$.'
           }
         ]
       }

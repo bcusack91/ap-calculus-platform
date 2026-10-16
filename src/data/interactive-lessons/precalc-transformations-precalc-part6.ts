@@ -62,30 +62,38 @@ $$y = 2\\sqrt{x+1}+3$$
       `
     },
     {
-      id: 'p6-trig',
+      id: 'p6-asymptotes',
       type: 'text' as const,
       content: `
-## 🌊 Writing Trig Equations from Graphs
+## 📏 Reciprocal & Exponential Graphs: Read the Asymptotes
 
-### $y = A\\sin(B(x-C))+D$ or $y = A\\cos(B(x-C))+D$
+When the parent has asymptotes, the asymptotes of the image give you $h$ and $k$ directly.
 
-| Parameter | From Graph |
-|:----------|:-----------|
-| $A$ (amplitude) | $\\frac{\\text{max} - \\text{min}}{2}$ |
-| $D$ (midline) | $\\frac{\\text{max} + \\text{min}}{2}$ |
-| Period $= \\frac{2\\pi}{B}$ | Distance for one full cycle |
-| $C$ (phase shift) | Horizontal offset from standard start |
+### Reciprocal: $y = \\dfrac{a}{x-h}+k$
 
-### Example
+- Vertical asymptote $x = h$, horizontal asymptote $y = k$
+- One more point gives $a$
 
-Graph: max = 5, min = 1, period = $\\pi$, starts at max when $x = \\pi/4$.
+**Example**: Asymptotes $x = 2$ and $y = -1$, passes through $(3, 3)$.
 
-- $A = \\frac{5-1}{2} = 2$
-- $D = \\frac{5+1}{2} = 3$
-- $B = \\frac{2\\pi}{\\pi} = 2$
-- Starts at max → use cosine. Phase shift: $C = \\pi/4$
+$3 = \\dfrac{a}{3-2}-1 \\implies a = 4$
 
-$$y = 2\\cos\\!\\left(2\\!\\left(x-\\frac{\\pi}{4}\\right)\\right)+3$$
+$$y = \\dfrac{4}{x-2}-1$$
+
+### Exponential: $y = a \\cdot 2^{x}+k$
+
+- Horizontal asymptote $y = k$
+- The $y$-intercept is $a + k$
+
+**Example**: Asymptote $y = 3$, $y$-intercept $5$. Then $a + 3 = 5$, so $a = 2$.
+
+$$y = 2 \\cdot 2^{x}+3$$
+
+Check with a second point: at $x = 1$, $y = 2(2) + 3 = 7$.
+
+### Spotting a Horizontal Dilation
+
+If $f$ has $x$-intercepts $-4$ and $8$ and a graph of the same shape has $x$-intercepts $-2$ and $4$, every $x$-value was halved. That is $y = f(2x)$, a horizontal dilation by a factor of $\\frac{1}{2}$.
       `
     },
     {
@@ -109,10 +117,10 @@ $$y = 2\\cos\\!\\left(2\\!\\left(x-\\frac{\\pi}{4}\\right)\\right)+3$$
             explanation: '$-1 = a|2|+3 \\implies -4 = 2a \\implies a=-2$. $y = -2|x|+3$.'
           },
           {
-            question: 'Sine wave with amplitude 3, period $4\\pi$, midline $y=2$:',
-            options: ['$y = 3\\sin(2x)+2$', '$y = 3\\sin(x/2)+2$', '$y = 2\\sin(3x)+2$', '$y = 3\\sin(\\pi x)+2$'],
-            correctAnswer: 1,
-            explanation: '$B = 2\\pi/(4\\pi) = 1/2$. $y = 3\\sin(x/2)+2$.'
+            question: 'A transformed graph of $y = \\dfrac{1}{x}$ has asymptotes $x = -1$ and $y = 2$ and passes through $(0, 5)$. Which equation fits?',
+            options: ['$y = \\dfrac{3}{x+1}+2$', '$y = \\dfrac{3}{x-1}+2$', '$y = \\dfrac{5}{x+1}+2$', '$y = \\dfrac{3}{x+1}-2$'],
+            correctAnswer: 0,
+            explanation: 'The asymptotes give $h = -1$ and $k = 2$. Then $5 = \\dfrac{a}{0+1}+2$, so $a = 3$. Using $x - 1$ puts the asymptote at $x = 1$, $a = 5$ forgets to subtract $k$, and $-2$ moves the horizontal asymptote to $y = -2$.'
           }
         ]
       }
@@ -127,15 +135,15 @@ $$y = 2\\cos\\!\\left(2\\!\\left(x-\\frac{\\pi}{4}\\right)\\right)+3$$
 
 **2)** $y = a\\sqrt{x+4}+1$, passes through $(0, 5)$. $a$ = ?
 
-**3)** Trig: max = 7, min = 1. Amplitude $A$ = ?
+**3)** $y = a \\cdot 2^{x}+1$, passes through $(2, 13)$. $a$ = ?
       `,
       exercise: {
         boxes: 3,
         correctAnswers: ['2', '2', '3'],
         hint1: '$6 = a(4)-2 \\implies a = 2$.',
         hint2: '$5 = a\\sqrt{4}+1 \\implies 4 = 2a$.',
-        hint3: '$A = (7-1)/2 = 3$.',
-        explanation: '1) $a = 8/4 = 2$. 2) $a = 4/2 = 2$. 3) $A = 3$.'
+        hint3: '$13 = a(4)+1 \\implies 12 = 4a$.',
+        explanation: '1) $a = 8/4 = 2$. 2) $a = 4/2 = 2$. 3) $a = 12/4 = 3$.'
       }
     },
     {
@@ -162,16 +170,16 @@ $$y = 2\\cos\\!\\left(2\\!\\left(x-\\frac{\\pi}{4}\\right)\\right)+3$$
             correctAnswer: 1
           },
           {
-            label: 'To find the period of a trig graph, measure:',
-            options: ['Peak to trough', 'One full cycle length', 'Amplitude × 2', 'Midline to peak'],
-            correctAnswer: 1
+            label: 'Same shape as $y = f(x)$, but every $x$-value is halved:',
+            options: ['$y = f(2x)$', '$y = f(x/2)$', '$y = 2f(x)$', '$y = \\frac{1}{2}f(x)$'],
+            correctAnswer: 0
           }
         ],
-        correctAnswers: ['$y = (x-3)^3-1$', 'Identify the parent function', '$y = \\frac{1}{3}x^2-4$', 'One full cycle length'],
+        correctAnswers: ['$y = (x-3)^3-1$', 'Identify the parent function', '$y = \\frac{1}{3}x^2-4$', '$y = f(2x)$'],
         hint1: 'An S-curve is a shifted cubic: $y = (x-h)^3 + k$ has its inflection point at $(h, k)$.',
         hint2: 'Always start by recognizing the shape.',
         hint3: '"Very wide" means $|a| < 1$.',
-        explanation: 'S-curve at $(3,-1)$: the cubic shifted right 3 and down 1. First step: identify parent. Wide parabola: $|a|<1$. Period = one full cycle.'
+        explanation: 'S-curve at $(3,-1)$: the cubic shifted right 3 and down 1. First step: identify parent. Wide parabola: $|a|<1$. Halving every $x$-value is a horizontal dilation by $\\frac{1}{2}$: $f(2x)$.'
       }
     },
     {
@@ -189,10 +197,10 @@ $$y = 2\\cos\\!\\left(2\\!\\left(x-\\frac{\\pi}{4}\\right)\\right)+3$$
             explanation: '$4 = a|3|-2 \\implies 6 = 3a \\implies a = 2$.'
           },
           {
-            question: 'Cosine wave: max 4 at $x=0$, min $-2$ at $x=\\pi$. The equation is:',
-            options: ['$y = 3\\cos(x)+1$', '$y = 4\\cos(x)-2$', '$y = 3\\cos(2x)+1$', '$y = 6\\cos(x)+1$'],
+            question: 'The graph of $y = \\dfrac{a}{x-h}+k$ has asymptotes $x = 3$ and $y = -2$ and passes through $(4, 1)$. What is $a$?',
+            options: ['$3$', '$-1$', '$1$', '$21$'],
             correctAnswer: 0,
-            explanation: '$A = 3$, $D = 1$, period $= 2\\pi \\implies B = 1$. Max at $x=0$: cosine with no shift.'
+            explanation: 'The asymptotes give $h = 3$ and $k = -2$, so $1 = \\dfrac{a}{4-3}-2$ and $a = 3$. Using $k = +2$ gives $-1$, ignoring $k$ gives $1$, and using $x + 3$ in the denominator gives $21$.'
           }
         ]
       }

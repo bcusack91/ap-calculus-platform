@@ -128,7 +128,7 @@ $$\\boxed{\\sec\\theta = -\\frac{5}{4}}$$
       content: `
 **Trig Function Computations** 🧮
 
-**1)** Evaluate $\\tan\\frac{5\\pi}{3}$. Write as a simplified expression using sqrt if needed. (e.g., $\\tan\\frac{2\\pi}{3}$: Q II, ref $\\frac{\\pi}{3}$, $\\tan 60° = \\sqrt{3}$, negative in Q II → $-\\sqrt{3}$)
+**1)** Evaluate $\\tan\\frac{5\\pi}{3}$. Write as a simplified expression using sqrt if needed. (e.g., $\\tan\\frac{2\\pi}{3}$: Q II, ref $\\frac{\\pi}{3}$, $\\tan \\frac{\\pi}{3} = \\sqrt{3}$, negative in Q II → $-\\sqrt{3}$)
 
 **2)** Given $\\cot\\theta = \\frac{5}{12}$ and $\\theta$ in Q III, find $\\csc\\theta$. Write as a fraction with sign. (e.g., $\\cot\\alpha = 3/4$ in Q I: $\\csc^2\\alpha = 1 + 9/16 = 25/16$, so $\\csc\\alpha = 5/4$)
 
@@ -137,7 +137,7 @@ $$\\boxed{\\sec\\theta = -\\frac{5}{4}}$$
       exercise: {
         boxes: 3,
         correctAnswers: ['-sqrt(3)', '-13/12', '2'],
-        hint1: '$\\frac{5\\pi}{3}$ is in Q IV, ref angle $\\frac{\\pi}{3}$. $\\tan 60° = \\sqrt{3}$. Tangent is negative in Q IV.',
+        hint1: '$\\frac{5\\pi}{3}$ is in Q IV, ref angle $\\frac{\\pi}{3}$. $\\tan \\frac{\\pi}{3} = \\sqrt{3}$. Tangent is negative in Q IV.',
         hint2: 'Use $\\csc^2\\theta = 1 + \\cot^2\\theta = 1 + 25/144 = 169/144$. In Q III, sine (and thus cosecant) is negative.',
         hint3: '$\\sec\\frac{\\pi}{3} = \\frac{1}{\\cos\\frac{\\pi}{3}} = \\frac{1}{1/2}$.',
         explanation: '1) $\\tan\\frac{5\\pi}{3} = -\\tan\\frac{\\pi}{3} = -\\sqrt{3}$. 2) $\\csc^2\\theta = 1 + (5/12)^2 = 169/144$, so $\\csc\\theta = \\pm 13/12$. Q III → $-13/12$. 3) $\\sec(\\pi/3) = 1/(1/2) = 2$.'

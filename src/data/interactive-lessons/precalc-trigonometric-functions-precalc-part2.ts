@@ -141,7 +141,7 @@ All answers should be exact. Use sqrt for square roots and fractions (e.g., $\\s
 
 **2)** $\\sin\\frac{11\\pi}{6} = \\;?$ Write as a fraction. (e.g., $\\sin\\frac{7\\pi}{4}$: Q IV, ref angle $\\frac{\\pi}{4}$, $\\sin\\frac{\\pi}{4} = \\sqrt{2}/2$, negative in Q IV → answer: $-\\sqrt{2}/2$)
 
-**3)** What is the reference angle of $\\frac{5\\pi}{4}$? Express as a fraction of $\\pi$ — write just the fraction (e.g., for $210°$ the ref angle is $30° = \\pi/6$, answer: $1/6$). (e.g., $\\frac{2\\pi}{3}$ is in Q II: $\\pi - \\frac{2\\pi}{3} = \\frac{\\pi}{3}$, answer: $1/3$)
+**3)** What is the reference angle of $\\frac{5\\pi}{4}$? Express as a fraction of $\\pi$ — write just the fraction (e.g., for $\\frac{7\\pi}{6}$ the ref angle is $\\frac{\\pi}{6}$, answer: $1/6$). (e.g., $\\frac{2\\pi}{3}$ is in Q II: $\\pi - \\frac{2\\pi}{3} = \\frac{\\pi}{3}$, answer: $1/3$)
       `,
       exercise: {
         boxes: 3,
@@ -179,9 +179,9 @@ All answers should be exact. Use sqrt for square roots and fractions (e.g., $\\s
         ],
         correctAnswers: ['negative', '$\\frac{1}{2}$', '$\\cos^2\\theta + \\sin^2\\theta = 1$', '$-1$'],
         hint1: 'Cosine represents the x-coordinate; what sign does x have in Q II?',
-        hint2: '$\\frac{\\pi}{3} = 60°$. The cosine values for $30°, 45°, 60°$ use the "descending" pattern.',
+        hint2: 'The cosine values for $\\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}$ use the "descending" pattern.',
         hint3: 'The unit circle equation $x^2 + y^2 = 1$ with $x = \\cos\\theta, y = \\sin\\theta$ gives the identity.',
-        explanation: 'Q II has negative $x$-values, so cosine is negative. $\\cos 60° = \\frac{1}{2}$. The Pythagorean identity $\\cos^2\\theta + \\sin^2\\theta = 1$ comes directly from $x^2+y^2=1$. At $\\frac{3\\pi}{2}$ (bottom of circle), the point is $(0,-1)$, so $\\sin = -1$.'
+        explanation: 'Q II has negative $x$-values, so cosine is negative. $\\cos \\frac{\\pi}{3} = \\frac{1}{2}$. The Pythagorean identity $\\cos^2\\theta + \\sin^2\\theta = 1$ comes directly from $x^2+y^2=1$. At $\\frac{3\\pi}{2}$ (bottom of circle), the point is $(0,-1)$, so $\\sin = -1$.'
       }
     },
     {

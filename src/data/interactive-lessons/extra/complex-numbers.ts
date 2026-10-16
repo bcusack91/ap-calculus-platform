@@ -543,7 +543,7 @@ Here $r$ is the **modulus** and $\\theta$ is the **argument** (the angle).
 
 $$\\tan\\theta = \\frac{b}{a}$$
 
-…but you must check the **quadrant** of $(a, b)$ to pick the correct angle, because $\\tan$ repeats every $180^\\circ$.
+…but you must check the **quadrant** of $(a, b)$ to pick the correct angle, because $\\tan$ repeats every $\\pi$ radians.
 
 > 💡 The reference angle from $\\tan^{-1}\\left\\lvert\\frac{b}{a}\\right\\rvert$ tells you the size; the quadrant tells you the true direction.`,
       },
@@ -556,32 +556,32 @@ $$\\tan\\theta = \\frac{b}{a}$$
 $$r = \\sqrt{1^2 + (\\sqrt{3})^2} = \\sqrt{1 + 3} = \\sqrt{4} = 2$$
 
 **Step 2 — argument.** The point $(1, \\sqrt{3})$ is in Quadrant I:
-$$\\tan\\theta = \\frac{\\sqrt{3}}{1} = \\sqrt{3} \\;\\Rightarrow\\; \\theta = 60^\\circ$$
+$$\\tan\\theta = \\frac{\\sqrt{3}}{1} = \\sqrt{3} \\;\\Rightarrow\\; \\theta = \\frac{\\pi}{3}$$
 
 **Step 3 — write it:**
-$$z = 2\\left(\\cos 60^\\circ + i\\sin 60^\\circ\\right)$$
+$$z = 2\\left(\\cos \\frac{\\pi}{3} + i\\sin \\frac{\\pi}{3}\\right)$$
 
-> ✅ **Check** by going back: $2\\cos 60^\\circ = 2\\cdot\\tfrac{1}{2} = 1$ and $2\\sin 60^\\circ = 2\\cdot\\tfrac{\\sqrt{3}}{2} = \\sqrt{3}$ ✓`,
+> ✅ **Check** by going back: $2\\cos \\frac{\\pi}{3} = 2\\cdot\\tfrac{1}{2} = 1$ and $2\\sin \\frac{\\pi}{3} = 2\\cdot\\tfrac{\\sqrt{3}}{2} = \\sqrt{3}$ ✓`,
       },
       {
         id: 'cn5-polar-to-rect-mc',
         type: 'multiple-choice' as const,
         content: `**Concept Check** 🎯
 
-*Reminder:* $\\cos 90^\\circ = 0,\\ \\sin 90^\\circ = 1,\\ \\cos 180^\\circ = -1,\\ \\sin 180^\\circ = 0$, and $\\cos 45^\\circ = \\sin 45^\\circ = \\dfrac{\\sqrt{2}}{2}$.`,
+*Reminder:* $\\cos \\frac{\\pi}{2} = 0,\\ \\sin \\frac{\\pi}{2} = 1,\\ \\cos \\pi = -1,\\ \\sin \\pi = 0$, and $\\cos \\frac{\\pi}{4} = \\sin \\frac{\\pi}{4} = \\dfrac{\\sqrt{2}}{2}$.`,
         exercise: {
           questions: [
             {
-              question: 'Convert $4(\\cos 90^\\circ + i\\sin 90^\\circ)$ to rectangular form $a + bi$.',
+              question: 'Convert $4(\\cos \\frac{\\pi}{2} + i\\sin \\frac{\\pi}{2})$ to rectangular form $a + bi$.',
               options: ['$4i$', '$4$', '$-4$', '$4 + 4i$'],
               correctAnswer: 0,
-              explanation: '$a = 4\\cos 90^\\circ = 4\\cdot 0 = 0$ and $b = 4\\sin 90^\\circ = 4\\cdot 1 = 4$, so $z = 0 + 4i = 4i$.',
+              explanation: '$a = 4\\cos \\frac{\\pi}{2} = 4\\cdot 0 = 0$ and $b = 4\\sin \\frac{\\pi}{2} = 4\\cdot 1 = 4$, so $z = 0 + 4i = 4i$.',
             },
             {
               question: 'What is the modulus $r$ of $z = -3 + 0i$?',
-              options: ['$3$', '$-3$', '$0$', '$9$'],
+              options: ['$3$', '$-3$', '$\\sqrt{3}$', '$\\pm 3$'],
               correctAnswer: 0,
-              explanation: '$r = \\sqrt{(-3)^2 + 0^2} = \\sqrt{9} = 3$. The modulus is the (non-negative) distance; the negative sign is captured by the angle $\\theta = 180^\\circ$.',
+              explanation: '$r = \\sqrt{(-3)^2 + 0^2} = \\sqrt{9} = 3$. The modulus is the (non-negative) distance; the negative sign is captured by the angle $\\theta = \\pi$.',
             },
           ],
         },
