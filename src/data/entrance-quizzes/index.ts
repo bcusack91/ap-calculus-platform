@@ -643,12 +643,11 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'lipids': () => import('./lipids'),
   'proteins': () => import('./proteins'),
   'carbohydrates': () => import('./carbohydrates'),
-  'enzyme-kinetics': () => import('./enzyme-kinetics'),
-  'prokaryotic-eukaryotic-cells': () => import('./prokaryotic-eukaryotic-cells'),
+  'enzyme-kinetics': () => import('./enzyme-structure-function'),
+  'prokaryotic-eukaryotic-cells': () => import('./cell-structure-organelles'),
   'chromosomal-inheritance': () => import('./chromosomal-inheritance'),
-  'phylogeny-classification': () => import('./phylogeny-classification'),
-  'population-dynamics': () => import('./population-dynamics'),
-
+  'phylogeny-classification': () => import('./phylogenetics-cladistics'),
+  'population-dynamics': () => import('./population-community-ecology'),
   // ===== AP Statistics DB-slug aliases =====
   'scatterplots-correlation-stats': () => import('./scatterplots-correlation'),
   'tests-means-stats': () => import('./tests-means'),
@@ -764,6 +763,13 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'two-sample-means': () => import('./paired-data'),
   'chi-square-independence-homogeneity': () => import('./chi-square-tests'),
   'power-physics': () => import('./power-physics'),
+  'apes-geology-soil': () => import('./apes-geology-soil'),
+  'apes-air-pollution': () => import('./apes-air-pollution'),
+  'apes-ozone-indoor-air': () => import('./apes-ozone-indoor-air'),
+  'apes-water-pollution': () => import('./apes-water-pollution'),
+  'apes-solid-hazardous-waste': () => import('./apes-solid-hazardous-waste'),
+  'apes-climate-change': () => import('./apes-climate-change'),
+  'apes-sustainability': () => import('./apes-sustainability'),
 }
 
 /**

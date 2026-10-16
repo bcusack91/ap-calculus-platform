@@ -1,48 +1,257 @@
 /**
  * Entrance Quiz — Natural Selection & Adaptation (AP Biology)
- * 14 questions · 7 parts (2 per part)
+ *
+ * 14 questions covering all 7 lesson parts (2 per part).
+ * Each question is tagged with the part number it covers,
+ * so we can determine which parts a student already knows.
+ *
+ * Part mapping:
+ *  1 — Darwin's Theory (relative fitness, vestigial structures)
+ *  2 — Types of Selection (allele frequency after selection, reading a mean shift)
+ *  3 — Sexual Selection (survival-mating trade-off, intra- vs intersexual selection)
+ *  4 — Adaptation Mechanisms (gene flow calculation, mutation as the source of new alleles)
+ *  5 — Hardy-Weinberg (back-calculating genotypes, equilibrium conditions)
+ *  6 — Problem-Solving Workshop (carrier counts, chi-square for equilibrium)
+ *  7 — AP Review (Lamarck vs Darwin, why recessive alleles persist)
  */
 
-import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
+import type { EntranceQuizQuestion } from './moles-molar-mass'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1
-  { id: 'nsa-ent-1a', question: 'Which of the following is NOT one of Darwin\'s four postulates for natural selection?', options: ['Variation exists within populations', 'Some variation is heritable', 'Organisms acquire traits during their lifetime that they pass to offspring', 'Individuals with favorable traits have higher reproductive success'], correctIndex: 2, explanation: 'Darwin\'s four postulates are: variation exists, some variation is heritable, there is differential survival, and individuals with favorable traits reproduce more. Lamarck—not Darwin—proposed that acquired traits are inherited.', partNumber: 1, partTitle: "Darwin's Theory" },
-  { id: 'nsa-ent-1b', question: 'Natural selection acts directly on _____, while evolution is measured as a change in _____.', options: ['Genotypes; phenotypes', 'Phenotypes; allele frequencies', 'Allele frequencies; genotypes', 'Mutations; population size'], correctIndex: 1, explanation: 'Natural selection acts on phenotypes (the observable traits), but evolution is defined as a change in allele frequencies in a population over time.', partNumber: 1, partTitle: "Darwin's Theory" },
+  // Part 1: Darwin's Theory
+  {
+    id: 'bnsa-ent-1a',
+    question:
+      'In a beetle population, AA and Aa individuals each leave an average of 12 surviving offspring, while aa individuals leave 9. What is the relative fitness of aa?',
+    options: [
+      '0.25',
+      '1.33',
+      '0.75',
+      '9',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Relative fitness compares each genotype with the most successful one: $w = 9 \\div 12 = 0.75$. 1.33 inverts the comparison ($12 \\div 9$), 0.25 is the shortfall rather than the fitness itself, and 9 is a raw offspring count.',
+    partNumber: 1,
+    partTitle: 'Darwin\'s Theory',
+  },
+  {
+    id: 'bnsa-ent-1b',
+    question:
+      'Modern whales have small pelvic bones embedded in their bodies that are not attached to any legs. Which kind of evidence for evolution does this provide?',
+    options: [
+      'Analogous structures, which show convergent evolution with fish',
+      'A vestigial structure from ancestors that had legs',
+      'An acquired trait, produced as whales stopped using their legs',
+      'Biogeography, since whales are found in every one of the oceans',
+    ],
+    correctIndex: 1,
+    explanation:
+      'Vestigial structures are reduced remnants of features that were functional in ancestors, here the hind limbs of land-dwelling ancestors of whales. Disuse during a lifetime does not change what offspring inherit.',
+    partNumber: 1,
+    partTitle: 'Darwin\'s Theory',
+  },
 
-  // Part 2
-  { id: 'nsa-ent-2a', question: 'A population of mice living on dark soil increasingly has darker fur over many generations. This is an example of:', options: ['Stabilizing selection', 'Disruptive selection', 'Directional selection', 'Sexual selection'], correctIndex: 2, explanation: 'Directional selection favors one extreme phenotype (dark fur), shifting the distribution in one direction over time.', partNumber: 2, partTitle: 'Types of Selection' },
-  { id: 'nsa-ent-2b', question: 'Human birth weight is subject to selection where very small and very large babies have lower survival. This is an example of:', options: ['Directional selection', 'Stabilizing selection', 'Disruptive selection', 'Artificial selection'], correctIndex: 1, explanation: 'Stabilizing selection favors the average phenotype (intermediate birth weight) and selects against both extremes. Disruptive selection favors both extremes.', partNumber: 2, partTitle: 'Types of Selection' },
+  // Part 2: Types of Selection
+  {
+    id: 'bnsa-ent-2a',
+    question:
+      'A population of 100 has 49 AA, 42 Aa and 9 aa individuals. All aa individuals die before reproducing, while AA and Aa reproduce normally. What is the frequency of allele a among the survivors?',
+    options: ['0.21', '0.30', '0.23', '0.46'],
+    correctIndex: 2,
+    explanation:
+      'The 91 survivors carry $2 \\times 91 = 182$ alleles, and only the 42 Aa individuals carry a, so $q = 42 \\div 182 \\approx 0.23$. 0.30 is the starting value, 0.21 divides by the original 200 alleles, and 0.46 forgets that each survivor has two alleles.',
+    partNumber: 2,
+    partTitle: 'Types of Selection',
+  },
+  {
+    id: 'bnsa-ent-2b',
+    question:
+      'Over ten generations, the mean body mass in a population of field mice rises from 20 g to 26 g, while the spread of body masses narrows slightly. Which process best fits these data?',
+    options: [
+      'Stabilizing selection favoring mice of intermediate mass',
+      'Disruptive selection favoring both very light and very heavy mice',
+      'Each mouse growing heavier and passing that gain to its young',
+      'Directional selection favoring heavier mice',
+    ],
+    correctIndex: 3,
+    explanation:
+      'A shift in the mean toward one extreme is the signature of directional selection, which often trims variance slightly as the disfavored tail is removed. Stabilizing selection leaves the mean unchanged, and disruptive selection increases variance.',
+    partNumber: 2,
+    partTitle: 'Types of Selection',
+  },
 
-  // Part 3
-  { id: 'nsa-ent-3a', question: 'A male peacock\'s elaborate tail increases mating success but makes him more visible to predators. This is best explained by:', options: ['Stabilizing selection', 'Artificial selection', 'Sexual selection', 'Genetic drift'], correctIndex: 2, explanation: 'Sexual selection explains traits that increase mating success even if they decrease survival, such as the peacock\'s tail attracting mates despite being costly.', partNumber: 3, partTitle: 'Sexual Selection' },
-  { id: 'nsa-ent-3b', question: 'Male elephant seals fight each other for access to females. This is an example of:', options: ['Intersexual selection', 'Intrasexual selection', 'Stabilizing selection', 'Disruptive selection'], correctIndex: 1, explanation: 'Intrasexual selection involves competition within one sex (male-male combat). Intersexual selection involves mate choice by the other sex.', partNumber: 3, partTitle: 'Sexual Selection' },
+  // Part 3: Sexual Selection
+  {
+    id: 'bnsa-ent-3a',
+    question:
+      'Dull-colored males survive a breeding season with probability 0.7 and average 1.0 mates. Brightly colored males survive with probability 0.4 but average 2.0 mates if they survive. Which allele is expected to spread?',
+    options: [
+      'The bright allele, since 0.4 × 2.0 = 0.8 exceeds 0.7 × 1.0 = 0.7',
+      'The dull allele, since its 0.7 survival beats the bright males\' 0.4',
+      'Neither allele, since the survival and mating effects cancel exactly',
+      'The dull allele, since 0.7 × 1.0 is larger than 0.4 × 2.0',
+    ],
+    correctIndex: 0,
+    explanation:
+      'Fitness is total reproductive output: survival × mates. Bright males average $0.4 \\times 2.0 = 0.8$ matings versus $0.7 \\times 1.0 = 0.7$ for dull males, so the mating gain outweighs the survival cost and the bright allele spreads.',
+    partNumber: 3,
+    partTitle: 'Sexual Selection',
+  },
+  {
+    id: 'bnsa-ent-3b',
+    question:
+      'In species A, males are much larger than females and have tusks used in fights with other males. In species B, males and females are the same size, but males have bright plumage that females inspect before mating. Which forms of sexual selection are shown?',
+    options: [
+      'Intersexual in A and intrasexual in B',
+      'Intrasexual in A and intersexual in B',
+      'Intrasexual selection in both species',
+      'Survival selection, not sexual selection, in both',
+    ],
+    correctIndex: 1,
+    explanation:
+      'Male-male combat favors size and weapons (intrasexual selection), while female choice favors ornaments such as bright plumage (intersexual selection). Both forms produce sexual dimorphism.',
+    partNumber: 3,
+    partTitle: 'Sexual Selection',
+  },
 
-  // Part 4
-  { id: 'nsa-ent-4a', question: 'Which best describes an adaptation?', options: ['Any trait an organism possesses', 'A learned behavior that improves survival', 'An inherited trait that increases fitness in a specific environment', 'A mutation that occurs in response to environmental pressure'], correctIndex: 2, explanation: 'Adaptations are inherited traits shaped by natural selection that improve an organism\'s fitness (survival and reproduction) in its specific environment.', partNumber: 4, partTitle: 'Adaptation Mechanisms' },
-  { id: 'nsa-ent-4b', question: 'Besides natural selection, which of the following can also change allele frequencies in a population?', options: ['Gene flow, genetic drift, and mutation', 'Mitosis, meiosis, and binary fission', 'Predation, competition, and symbiosis', 'Photosynthesis, respiration, and fermentation'], correctIndex: 0, explanation: 'Gene flow (migration), genetic drift (random changes), and mutation all change allele frequencies and are mechanisms of evolution alongside natural selection.', partNumber: 4, partTitle: 'Adaptation Mechanisms' },
+  // Part 4: Adaptation Mechanisms
+  {
+    id: 'bnsa-ent-4a',
+    question:
+      'On an island, allele A has frequency p = 0.10. After a migration event, the island population is 90% long-time residents and 10% migrants from a mainland population with p = 0.60. What is the island\'s new p?',
+    options: ['0.06', '0.35', '0.15', '0.55'],
+    correctIndex: 2,
+    explanation:
+      'Take the weighted average: $p = (0.90)(0.10) + (0.10)(0.60) = 0.09 + 0.06 = 0.15$. A simple average gives 0.35, and swapping the weights gives 0.55. Gene flow moves the island toward the mainland value.',
+    partNumber: 4,
+    partTitle: 'Adaptation Mechanisms',
+  },
+  {
+    id: 'bnsa-ent-4b',
+    question:
+      'A beetle population carries a new color allele that has never been found in any other population. Which process most likely produced this allele?',
+    options: [
+      'Gene flow from a neighboring beetle population',
+      'Crossing over between homologous chromosomes',
+      'Genetic drift in a small, isolated population',
+      'A mutation in an ancestor\'s germ line',
+    ],
+    correctIndex: 3,
+    explanation:
+      'Mutation is the only source of brand-new alleles. Gene flow imports alleles that exist elsewhere, crossing over reshuffles existing alleles, and drift changes the frequencies of alleles already present.',
+    partNumber: 4,
+    partTitle: 'Adaptation Mechanisms',
+  },
 
-  // Part 5
-  { id: 'nsa-ent-5a', question: 'Which is NOT a condition required for Hardy-Weinberg equilibrium?', options: ['Large population size', 'Random mating', 'Natural selection acting on traits', 'No migration into or out of the population'], correctIndex: 2, explanation: 'Hardy-Weinberg requires: large population, random mating, no selection, no mutation, and no migration. If natural selection is acting, the population is evolving.', partNumber: 5, partTitle: 'Hardy-Weinberg' },
-  { id: 'nsa-ent-5b', question: 'In Hardy-Weinberg equations, what does 2pq represent?', options: ['Frequency of homozygous dominant individuals', 'Frequency of homozygous recessive individuals', 'Frequency of heterozygous individuals', 'Total number of alleles in the population'], correctIndex: 2, explanation: 'In the Hardy-Weinberg equation $p^{2}$ + 2pq + $q^{2}$ = 1, $p^{2}$ = homozygous dominant, 2pq = heterozygous, and $q^{2}$ = homozygous recessive.', partNumber: 5, partTitle: 'Hardy-Weinberg' },
+  // Part 5: Hardy-Weinberg
+  {
+    id: 'bnsa-ent-5a',
+    question:
+      'In a population in Hardy-Weinberg equilibrium, 36% of individuals show the recessive phenotype. What fraction of the population is homozygous dominant?',
+    options: ['0.16', '0.40', '0.48', '0.64'],
+    correctIndex: 0,
+    explanation:
+      '$q^2 = 0.36$, so $q = 0.6$ and $p = 0.4$, giving $p^2 = 0.16$. 0.64 is the whole dominant phenotype ($p^2 + 2pq$), 0.48 is the heterozygote share, and 0.40 is p itself.',
+    partNumber: 5,
+    partTitle: 'Hardy-Weinberg',
+  },
+  {
+    id: 'bnsa-ent-5b',
+    question:
+      'Which population is most likely to stay in Hardy-Weinberg equilibrium at a particular locus over many generations?',
+    options: [
+      'A small island population founded by a few colonists',
+      'A large population that regularly receives migrants',
+      'A very large isolated population that mates at random and faces no selection',
+      'A large population in which individuals choose mates with the same phenotype',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Equilibrium requires no selection, no drift (a very large population), no gene flow, no mutation and random mating. Small founding populations drift, migrants bring gene flow, and choosing similar mates is non-random mating.',
+    partNumber: 5,
+    partTitle: 'Hardy-Weinberg',
+  },
 
-  // Part 6
-  { id: 'nsa-ent-6a', question: 'In a population in Hardy-Weinberg equilibrium, $q^{2}$ = 0.09. What is the frequency of the dominant allele (p)?', options: ['0.09', '0.3', '0.7', '0.91'], correctIndex: 2, explanation: 'If $q^{2}$ = 0.09, then q = $\\sqrt{0.09}$ = 0.3. Since p + q = 1, p = 1 − 0.3 = 0.7.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'nsa-ent-6b', question: 'Using the same population (p = 0.7, q = 0.3), what is the frequency of heterozygous carriers (2pq)?', options: ['0.21', '0.42', '0.49', '0.09'], correctIndex: 1, explanation: '2pq = 2 × 0.7 × 0.3 = 0.42. So 42% of the population are heterozygous carriers.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  // Part 6: Problem-Solving Workshop
+  {
+    id: 'bnsa-ent-6a',
+    question:
+      'An autosomal recessive condition affects 1 in 900 people in a population in Hardy-Weinberg equilibrium. About how many carriers are expected in a town of 9,000 people?',
+    options: ['About 10', 'About 300', 'About 1,160', 'About 580'],
+    correctIndex: 3,
+    explanation:
+      '$q^2 = 1/900$, so $q = 1/30 \\approx 0.033$ and $p \\approx 0.967$. Carriers $= 2pq \\approx 0.064$, and $0.064 \\times 9{,}000 \\approx 580$. 10 is the number affected, and 300 uses q instead of $2pq$.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  {
+    id: 'bnsa-ent-6b',
+    question:
+      'A sample of 200 plants contains 72 AA, 96 Aa and 32 aa. Using p and q calculated from this sample, what is the chi-square value for a test of Hardy-Weinberg equilibrium, and what does it suggest?',
+    options: [
+      '$\\chi^2 = 24$; the population is far from equilibrium',
+      '$\\chi^2 = 0$; the data fit equilibrium',
+      '$\\chi^2 = 0$; the population must be evolving rapidly',
+      '$\\chi^2 = 5.99$; the population is exactly at the cutoff',
+    ],
+    correctIndex: 1,
+    explanation:
+      '$p = (2 \\times 72 + 96) \\div 400 = 0.6$ and $q = 0.4$. Expected counts are $0.36 \\times 200 = 72$, $0.48 \\times 200 = 96$ and $0.16 \\times 200 = 32$, exactly matching the observed counts, so $\\chi^2 = 0$ and the data are consistent with equilibrium.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
 
-  // Part 7
-  { id: 'nsa-ent-7a', question: 'Genetic drift has the greatest effect on:', options: ['Large populations with high genetic diversity', 'Small populations where random events change allele frequencies', 'Populations undergoing strong natural selection', 'Populations with high migration rates'], correctIndex: 1, explanation: 'Genetic drift has the largest effect on small populations. Bottleneck and founder effects are examples of genetic drift reducing genetic variation.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'nsa-ent-7b', question: 'A population of beetles has allele frequencies of A = 0.6 and a = 0.4 in one generation, and A = 0.62 and a = 0.38 in the next. Is this population evolving?', options: ['No, because the change is too small to matter', 'No, because both alleles are still present', 'Yes, because allele frequencies changed between generations', 'Yes, but only if natural selection caused the change'], correctIndex: 2, explanation: 'Evolution is defined as any change in allele frequencies over time. The cause (drift, selection, etc.) does not determine whether evolution occurred—only whether frequencies changed.', partNumber: 7, partTitle: 'AP Review' },
+  // Part 7: AP Review
+  {
+    id: 'bnsa-ent-7a',
+    question:
+      'A student writes: "Giraffes stretched their necks to reach high leaves, and their offspring were born with longer necks." Which revision is consistent with natural selection?',
+    options: [
+      'Neck length varied heritably, and longer-necked giraffes left more offspring',
+      'Each giraffe grew a longer neck because the population needed one',
+      'Stretching changed the neck genes, which were then passed to offspring',
+      'All giraffes gained longer necks at the same rate across generations',
+    ],
+    correctIndex: 0,
+    explanation:
+      'Natural selection needs heritable variation already present in the population; individuals with longer necks reached more food and left more offspring, so long-neck alleles became more common. Traits acquired during life are not inherited, and evolution has no goal.',
+    partNumber: 7,
+    partTitle: 'AP Review',
+  },
+  {
+    id: 'bnsa-ent-7b',
+    question:
+      'A recessive allele that is lethal in homozygotes stays at a frequency of about 0.01 in a large population for many generations. Carriers (Aa) survive and reproduce exactly as well as AA individuals. Why does selection remove the allele so slowly?',
+    options: [
+      'Lethal alleles mutate back to the normal form in each generation',
+      'Selection acts on aa, and aa individuals are common when q = 0.01',
+      'Genetic drift is strongest in large populations and keeps it common',
+      'Nearly all copies sit in heterozygotes, hidden from selection',
+    ],
+    correctIndex: 3,
+    explanation:
+      'When q = 0.01, aa individuals are only $q^2 = 0.0001$ of the population, while about 2% are Aa carriers with the dominant phenotype, so almost every copy is hidden from selection. Carriers have no advantage here, and drift is weakest in large populations.',
+    partNumber: 7,
+    partTitle: 'AP Review',
+  },
 ]
 
+/**
+ * Generate an entrance quiz for the natural-selection-adaptation topic.
+ * Returns all 14 questions in shuffled order.
+ */
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
   return shuffleArray(questions)
 }
 
+/**
+ * Get the list of part numbers and titles covered by this entrance quiz.
+ */
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: "Darwin's Theory" },
+    { partNumber: 1, partTitle: 'Darwin\'s Theory' },
     { partNumber: 2, partTitle: 'Types of Selection' },
     { partNumber: 3, partTitle: 'Sexual Selection' },
     { partNumber: 4, partTitle: 'Adaptation Mechanisms' },

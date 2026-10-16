@@ -1,38 +1,164 @@
 /**
  * Entrance Quiz — Nucleic Acids (AP Biology)
- * 8 questions · 4 parts (2 per part)
+ *
+ * 8 questions covering all 4 lesson parts (2 per part).
+ * Each question is tagged with the part number it covers,
+ * so we can determine which parts a student already knows.
+ *
+ * Part mapping:
+ *  1 — Introduction to Nucleic Acids (DNA vs RNA, base pairing)
+ *  2 — Structure: Nucleotides & Helix (Chargaff, backbone vs base pairs)
+ *  3 — Function & Central Dogma (ATP, transcription)
+ *  4 — AP Review (DNA vs RNA traps, structure-function)
  */
 
-import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
+import type { EntranceQuizQuestion } from './moles-molar-mass'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1
-  { id: 'nucl-eq-1a', question: 'What are the three main components of a nucleotide?', options: ['Phosphate group, nitrogenous base, and pentose sugar', 'Nitrogen, hydrogen, and oxygen atoms', 'Amino acid, phosphate, and carbohydrate', 'Ribose, deoxyribose, and glucose'], correctIndex: 0, explanation: 'A nucleotide consists of three components: a phosphate group $(PO_{4}^{3-})$, a nitrogenous base (purine or pyrimidine), and a pentose sugar (ribose in RNA, deoxyribose in DNA).', partNumber: 1, partTitle: 'Nucleotide Structure' },
-  { id: 'nucl-eq-1b', question: 'Which sugar is found in DNA, and which in RNA?', options: ['Glucose in both; no difference', 'Deoxyribose in DNA; ribose in RNA', 'Ribose in DNA; deoxyribose in RNA', 'Maltose in DNA; sucrose in RNA'], correctIndex: 1, explanation: 'DNA contains deoxyribose (lacks one oxygen atom at the 2\' carbon), while RNA contains ribose. This difference contributes to RNA\'s greater chemical reactivity.', partNumber: 1, partTitle: 'Nucleotide Structure' },
+  // Part 1: Introduction to Nucleic Acids
+  {
+    id: 'bnuc-ent-1a',
+    question:
+      'A nucleic acid sample is single-stranded and its sugar is ribose. Which pair of bases would a researcher expect to find present and absent?',
+    options: [
+      'Uracil present, thymine absent',
+      'Thymine present, uracil absent',
+      'Thymine and uracil both present',
+      'Thymine and uracil both absent',
+    ],
+    correctIndex: 0,
+    explanation:
+      'Ribose and a single strand identify RNA, which uses uracil in place of thymine. Thymine is found in DNA.',
+    partNumber: 1,
+    partTitle: 'Introduction to Nucleic Acids',
+  },
+  {
+    id: 'bnuc-ent-1b',
+    question:
+      'A double-stranded DNA segment has 10 base pairs: 6 are G–C pairs and 4 are A–T pairs. How many hydrogen bonds hold its two strands together?',
+    options: ['20', '24', '26', '30'],
+    correctIndex: 2,
+    explanation:
+      'Each G–C pair has 3 hydrogen bonds and each A–T pair has 2: $6 \\times 3 + 4 \\times 2 = 26$. Using 2 per pair gives 20, swapping the values gives 24, and 3 per pair gives 30.',
+    partNumber: 1,
+    partTitle: 'Introduction to Nucleic Acids',
+  },
 
-  // Part 2
-  { id: 'nucl-eq-2a', question: 'What are the two types of nitrogenous bases, and which are examples of each?', options: ['Hydrophobic and hydrophilic; no examples needed', 'Purines (adenine, guanine) and pyrimidines (cytosine, thymine, uracil)', 'Single-ring and double-ring; adenine and cytosine', 'Dominant and recessive; A and T'], correctIndex: 1, explanation: 'Purines are large bases with two rings (adenine and guanine). Pyrimidines are smaller bases with one ring (cytosine, thymine in DNA, and uracil in RNA).', partNumber: 2, partTitle: 'Bases and Base Pairing' },
-  { id: 'nucl-eq-2b', question: 'Which base pairs form in DNA through hydrogen bonding?', options: ['Adenine with guanine; cytosine with thymine', 'Adenine with thymine; guanine with cytosine', 'Adenine with cytosine; guanine with uracil', 'All bases pair equally with each other'], correctIndex: 1, explanation: 'In DNA, adenine (A) pairs with thymine (T) via two hydrogen bonds, and guanine (G) pairs with cytosine (C) via three hydrogen bonds. This is Chargaff\'s rule.', partNumber: 2, partTitle: 'Bases and Base Pairing' },
+  // Part 2: Structure: Nucleotides & Helix
+  {
+    id: 'bnuc-ent-2a',
+    question:
+      'In a sample of double-stranded DNA, adenine and thymine together make up 46% of the bases. What percentage of the bases are guanine?',
+    options: ['23%', '27%', '46%', '54%'],
+    correctIndex: 1,
+    explanation:
+      'G + C make up $100\\% - 46\\% = 54\\%$, and Chargaff\'s rule says %G = %C, so guanine is $54\\% \\div 2 = 27\\%$. 54% is G and C together, and 23% is the value for adenine.',
+    partNumber: 2,
+    partTitle: 'Structure: Nucleotides & Helix',
+  },
+  {
+    id: 'bnuc-ent-2b',
+    question:
+      'Which description correctly places the two main kinds of bonds in a DNA double helix?',
+    options: [
+      'Hydrogen bonds in the backbone, phosphodiester bonds between paired bases',
+      'Peptide bonds in the backbone, hydrogen bonds between paired bases',
+      'Ionic bonds in the backbone, phosphodiester bonds between paired bases',
+      'Phosphodiester bonds in the backbone, hydrogen bonds between paired bases',
+    ],
+    correctIndex: 3,
+    explanation:
+      'Covalent phosphodiester bonds link the 3\' carbon of one sugar to the 5\' carbon of the next through a phosphate, forming the outer backbone; weaker hydrogen bonds hold complementary bases together in the middle, which lets the strands separate.',
+    partNumber: 2,
+    partTitle: 'Structure: Nucleotides & Helix',
+  },
 
-  // Part 3
-  { id: 'nucl-eq-3a', question: 'What does the 5\' to 3\' directionality of DNA refer to?', options: ['The age of the DNA molecule from oldest to newest', 'The numbering of carbons on the sugar, indicating the direction of the backbone orientation', 'The size of the nitrogenous bases from largest to smallest', 'The order of genes from the start to end of a chromosome'], correctIndex: 1, explanation: 'The 5\' and 3\' refer to the carbon atoms on the deoxyribose sugar. DNA strands have a direction: the 5\' end has a free phosphate group, the 3\' end has a free hydroxyl group. Complementary strands run antiparallel.', partNumber: 3, partTitle: 'DNA Directionality' },
-  { id: 'nucl-eq-3b', question: 'In the DNA double helix, how are the two strands oriented relative to each other?', options: ['Both strands run in the same 5\' to 3\' direction', 'Strands run antiparallel: one is 5\' to 3\', the other is 3\' to 5\'', 'One strand is linear, the other is circular', 'Strands are parallel but separated by multiple layers'], correctIndex: 1, explanation: 'The two DNA strands are antiparallel: if one strand reads 5\' to 3\' left to right, its complement reads 3\' to 5\' left to right. This orientation allows base pairing and DNA replication.', partNumber: 3, partTitle: 'DNA Directionality' },
+  // Part 3: Function & Central Dogma
+  {
+    id: 'bnuc-ent-3a',
+    question:
+      'A muscle cell needs energy to contract. Which reaction directly releases the energy it uses?',
+    options: [
+      'Splitting the outer phosphate off ATP to make ADP',
+      'Joining a phosphate to ADP to form ATP',
+      'Linking nucleotides into a new strand of DNA',
+      'Separating the two strands of a DNA double helix',
+    ],
+    correctIndex: 0,
+    explanation:
+      'ATP is a nucleotide with three phosphates; breaking off the outer phosphate ($ATP \\rightarrow ADP + P_i$) releases energy that drives cellular work. Forming ATP from ADP stores energy rather than releasing it.',
+    partNumber: 3,
+    partTitle: 'Function & Central Dogma',
+  },
+  {
+    id: 'bnuc-ent-3b',
+    question:
+      'A drug blocks transcription in a cell but does not affect DNA replication. Which molecules will the cell soon run short of first?',
+    options: [
+      'New DNA strands copied from DNA templates',
+      'Free amino acids for building polypeptides',
+      'The cell\'s supply of nucleotides',
+      'mRNA copies of genes needed by ribosomes',
+    ],
+    correctIndex: 3,
+    explanation:
+      'Transcription copies a gene into mRNA (DNA → mRNA), so blocking it stops new mRNA from reaching ribosomes; protein production falls afterward. DNA replication is unaffected, and amino acids and nucleotides are not made by transcription.',
+    partNumber: 3,
+    partTitle: 'Function & Central Dogma',
+  },
 
-  // Part 4
-  { id: 'nucl-eq-4a', question: 'How are adjacent nucleotides connected in a DNA strand?', options: ['By peptide bonds between amino acids', 'By hydrogen bonds between any available atoms', 'By phosphodiester bonds linking the phosphate of one nucleotide to the sugar of the next', 'By hydrophobic interactions between bases'], correctIndex: 2, explanation: 'Nucleotides form a sugar-phosphate backbone through phosphodiester bonds: the phosphate group of one nucleotide bonds covalently to the 3\'-hydroxyl carbon of the previous sugar.', partNumber: 4, partTitle: 'Backbone and Polymers' },
-  { id: 'nucl-eq-4b', question: 'Nucleic acids are polymers formed by dehydration synthesis. What is removed during this process?', options: ['Nitrogen atoms from the bases', 'Water molecules $(H_{2}O)$ between nucleotides', 'Phosphate groups from the sugar backbone', 'Hydrogen atoms only'], correctIndex: 1, explanation: 'During dehydration synthesis, a water molecule $(H_{2}O)$ is released when nucleotides link via phosphodiester bonds. This condensation reaction polymerizes nucleotides into DNA or RNA.', partNumber: 4, partTitle: 'Backbone and Polymers' },
+  // Part 4: AP Review
+  {
+    id: 'bnuc-ent-4a',
+    question:
+      'A student writes that DNA can be told apart from RNA because only DNA contains phosphate groups. Which correction is accurate?',
+    options: [
+      'Phosphate is only in RNA; DNA has nitrogen-rich bases in its place',
+      'Phosphate is in both; DNA differs in its sugar and in having T',
+      'Phosphate is in neither; both backbones are built from sugars alone',
+      'Phosphate is only in DNA, though RNA gains extra phosphate from ATP',
+    ],
+    correctIndex: 1,
+    explanation:
+      'Every nucleotide has a phosphate group, so DNA and RNA both contain phosphate. DNA differs by having deoxyribose instead of ribose and thymine instead of uracil.',
+    partNumber: 4,
+    partTitle: 'AP Review',
+  },
+  {
+    id: 'bnuc-ent-4b',
+    question:
+      'Which statement correctly links a structural feature of DNA to its role?',
+    options: [
+      'A single strand lets DNA leave the nucleus and reach the ribosomes',
+      'Its uracil bases make DNA more stable than RNA for long-term storage',
+      'Complementary strands let each strand serve as a template for a new copy',
+      'Peptide bonds in the backbone keep DNA from breaking down quickly',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Because the strands are complementary and antiparallel, each one carries the information to rebuild the other, which makes accurate replication possible. DNA is double-stranded, contains thymine rather than uracil, and has a sugar-phosphate backbone.',
+    partNumber: 4,
+    partTitle: 'AP Review',
+  },
 ]
 
+/**
+ * Generate an entrance quiz for the nucleic-acids topic.
+ * Returns all 8 questions in shuffled order.
+ */
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
   return shuffleArray(questions)
 }
 
+/**
+ * Get the list of part numbers and titles covered by this entrance quiz.
+ */
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Nucleotide Structure' },
-    { partNumber: 2, partTitle: 'Bases and Base Pairing' },
-    { partNumber: 3, partTitle: 'DNA Directionality' },
-    { partNumber: 4, partTitle: 'Backbone and Polymers' },
+    { partNumber: 1, partTitle: 'Introduction to Nucleic Acids' },
+    { partNumber: 2, partTitle: 'Structure: Nucleotides & Helix' },
+    { partNumber: 3, partTitle: 'Function & Central Dogma' },
+    { partNumber: 4, partTitle: 'AP Review' },
   ]
 }

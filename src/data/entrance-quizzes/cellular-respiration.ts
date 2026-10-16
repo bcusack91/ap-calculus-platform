@@ -1,45 +1,269 @@
 /**
  * Entrance Quiz — Cellular Respiration (AP Biology)
- * 14 questions · 7 parts (2 per part)
+ *
+ * 14 questions covering all 7 lesson parts (2 per part).
+ * Each question is tagged with the part number it covers,
+ * so we can determine which parts a student already knows.
+ *
+ * Part mapping:
+ *  1 — Overview of Cell Respiration (redox, why cells need constant energy)
+ *  2 — Glycolysis (carbon and energy accounting)
+ *  3 — Pyruvate Oxidation (fermentation types and ATP yield)
+ *  4 — Citric Acid Cycle (regenerating the acceptor, fats as fuel)
+ *  5 — Oxidative Phosphorylation (chemiosmosis, ATP from carriers)
+ *  6 — Problem-Solving Workshop (respirometer controls, metabolic poisons)
+ *  7 — AP Review (energy flow sequence, cells without mitochondria)
  */
 
-import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
+import type { EntranceQuizQuestion } from './moles-molar-mass'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1
-  { id: 'cr-ent-1a', question: 'Which equation correctly summarizes aerobic cellular respiration?', options: ['$C_{6}H_{12}O_{6}$ + $6O_{2}$ → $6CO_{2}$ + $6H_{2}O$ + ATP', '$6CO_{2}$ + $6H_{2}O$ → $C_{6}H_{12}O_{6}$ + $6O_{2}$', '$C_{6}H_{12}O_{6}$ → $2C_{2}H_{5}OH$ + $2CO_{2}$', '$2H_{2}O$ → $2H_{2}$ + $O_{2}$'], correctIndex: 0, explanation: 'Aerobic cellular respiration breaks down glucose $(C_{6}H_{12}O_{6})$ using oxygen $(6O_{2})$ to produce carbon dioxide $(6CO_{2})$, water $(6H_{2}O)$, and ATP energy. The equation $6CO_{2}$ + $6H_{2}O$ → $C_{6}H_{12}O_{6}$ + $6O_{2}$ is photosynthesis, the reverse process.', partNumber: 1, partTitle: 'Overview of Cell Respiration' },
-  { id: 'cr-ent-1b', question: 'Cellular respiration is classified as which type of metabolic process?', options: ['Anabolic — it builds complex molecules from simpler ones', 'Catabolic — it breaks down glucose to release energy', 'Photosynthetic — it uses light energy to make glucose', 'Chemosynthetic — it uses inorganic chemicals as energy'], correctIndex: 1, explanation: 'Cellular respiration is catabolic because it breaks down the complex molecule glucose into simpler products $(CO_{2} and H_{2}O)$, releasing the stored energy as ATP in the process.', partNumber: 1, partTitle: 'Overview of Cell Respiration' },
+  // Part 1: Overview of Cell Respiration
+  {
+    id: 'bcr-ent-1a',
+    question:
+      'In one step of a metabolic pathway, an enzyme removes two hydrogen atoms, along with their electrons, from molecule X and transfers them to $NAD^+$. Which statement describes this step?',
+    options: [
+      'X is reduced, and $NAD^+$ is oxidized',
+      'X is oxidized, and $NAD^+$ is reduced',
+      'X and $NAD^+$ are both oxidized',
+      'X and $NAD^+$ are both reduced',
+    ],
+    correctIndex: 1,
+    explanation:
+      'Losing electrons (often as hydrogen atoms) is oxidation, and gaining them is reduction, so X is oxidized while $NAD^+$ is reduced to NADH. In a redox reaction one partner is always oxidized as the other is reduced.',
+    partNumber: 1,
+    partTitle: 'Overview of Cell Respiration',
+  },
+  {
+    id: 'bcr-ent-1b',
+    question:
+      'A mature cell that is no longer growing or dividing still carries out cellular respiration all the time. Which explanation is best supported?',
+    options: [
+      'ATP is a structural molecule the cell stockpiles as it ages',
+      'ATP made earlier is broken down by oxygen within a few seconds',
+      'Keeping its ordered structure requires a constant input of energy',
+      'Cells that are not growing use ATP only to make new glucose',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Living systems are highly ordered, and maintaining that order (pumping ions, repairing molecules, moving materials) takes a continuous energy input; ATP is constantly used and remade. ATP is not a structural material, and oxygen does not destroy it.',
+    partNumber: 1,
+    partTitle: 'Overview of Cell Respiration',
+  },
 
-  // Part 2
-  { id: 'cr-ent-2a', question: 'Where does glycolysis occur, and what is its net ATP yield per glucose molecule?', options: ['Mitochondrial matrix; 36 ATP', 'Cytoplasm; 2 ATP and 2 NADH', 'Inner mitochondrial membrane; 4 ATP', 'Nucleus; 2 ATP'], correctIndex: 1, explanation: 'Glycolysis takes place in the cytoplasm and produces a net yield of 2 ATP and 2 NADH per glucose molecule. It splits one 6-carbon glucose into two 3-carbon pyruvate molecules.', partNumber: 2, partTitle: 'Glycolysis' },
-  { id: 'cr-ent-2b', question: 'Why is glycolysis considered an anaerobic process?', options: ['It produces oxygen as a byproduct', 'It requires carbon dioxide to proceed', 'It does not require oxygen to occur', 'It can only happen in the absence of glucose'], correctIndex: 2, explanation: 'Glycolysis is anaerobic because it does not require oxygen. It can proceed whether oxygen is present or absent, which is why it occurs in both aerobic respiration and fermentation.', partNumber: 2, partTitle: 'Glycolysis' },
+  // Part 2: Glycolysis
+  {
+    id: 'bcr-ent-2a',
+    question:
+      'During glycolysis of one glucose molecule, how many molecules of $CO_2$ are released?',
+    options: [
+      'None, as all 6 carbons stay in pyruvate',
+      'Two, one from each 3-carbon half of the glucose',
+      'Four, since glucose is partly oxidized in this stage',
+      'Six, since glucose is fully oxidized in this stage',
+    ],
+    correctIndex: 0,
+    explanation:
+      'Glycolysis splits the 6-carbon glucose into two 3-carbon pyruvates, so all six carbons remain in pyruvate. The first $CO_2$ is released later, during pyruvate oxidation.',
+    partNumber: 2,
+    partTitle: 'Glycolysis',
+  },
+  {
+    id: 'bcr-ent-2b',
+    question:
+      'When glycolysis is complete, where is most of the chemical energy that was in the original glucose molecule?',
+    options: [
+      'In the two pyruvates and the two NADH',
+      'In the 2 net ATP that glycolysis has made',
+      'Released as heat during the investment phase',
+      'In the $CO_2$ given off when glucose is split',
+    ],
+    correctIndex: 0,
+    explanation:
+      'Glycolysis captures only a small fraction of glucose\'s energy as 2 net ATP. Most of it is still held in the two pyruvates and in the electrons carried by NADH, which the later stages harvest. Glycolysis releases no $CO_2$.',
+    partNumber: 2,
+    partTitle: 'Glycolysis',
+  },
 
-  // Part 3
-  { id: 'cr-ent-3a', question: 'What happens during pyruvate oxidation?', options: ['Glucose is split into two pyruvate molecules', 'Pyruvate is converted to acetyl-CoA, releasing $CO_{2}$ and producing NADH', 'Pyruvate is converted directly to ATP', 'Pyruvate is transported to the thylakoid membrane'], correctIndex: 1, explanation: 'In the mitochondrial matrix, each pyruvate is oxidized: it loses a carbon as $CO_{2}$, is reduced to form NADH, and the remaining 2-carbon fragment joins coenzyme A to form acetyl-CoA.', partNumber: 3, partTitle: 'Pyruvate Oxidation' },
-  { id: 'cr-ent-3b', question: 'Pyruvate oxidation serves as a critical link between which two stages of cellular respiration?', options: ['Light reactions and Calvin cycle', 'Glycolysis and the citric acid (Krebs) cycle', 'Oxidative phosphorylation and fermentation', 'The citric acid cycle and the electron transport chain'], correctIndex: 1, explanation: 'Pyruvate oxidation connects glycolysis (which produces pyruvate in the cytoplasm) to the Krebs cycle (which uses acetyl-CoA in the mitochondrial matrix), bridging the anaerobic and aerobic stages.', partNumber: 3, partTitle: 'Pyruvate Oxidation' },
+  // Part 3: Pyruvate Oxidation
+  {
+    id: 'bcr-ent-3a',
+    question:
+      'In sealed flasks without oxygen, yeast cells given sugar produce gas bubbles, but muscle tissue given sugar does not. Which explanation is best supported?',
+    options: [
+      'Yeast fermentation releases $CO_2$, but lactic acid fermentation does not',
+      'Yeast carries out aerobic respiration, while muscle cells cannot use sugar at all',
+      'Muscle cells release $CO_2$ too, but they absorb it again faster than yeast does',
+      'Yeast makes oxygen gas by fermentation, while muscle makes no gas of any kind',
+    ],
+    correctIndex: 0,
+    explanation:
+      'Both regenerate $NAD^+$ by fermentation, but alcoholic fermentation in yeast releases $CO_2$, while lactic acid fermentation in muscle produces lactate and no $CO_2$. There is no oxygen for aerobic respiration in either flask.',
+    partNumber: 3,
+    partTitle: 'Pyruvate Oxidation',
+  },
+  {
+    id: 'bcr-ent-3b',
+    question:
+      'Yeast cells are switched from aerobic conditions to fermentation. To make ATP at the same rate as before, about how much faster must they break down glucose?',
+    options: [
+      'About 2 times faster',
+      'At the same rate',
+      'About 15 times faster',
+      'About 30 times faster',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Aerobic respiration yields about 30-32 ATP per glucose, while fermentation yields only the 2 ATP from glycolysis, so the cell needs about $30 \\div 2 = 15$ times as much glucose for the same ATP.',
+    partNumber: 3,
+    partTitle: 'Pyruvate Oxidation',
+  },
 
-  // Part 4
-  { id: 'cr-ent-4a', question: 'What are the primary products of the citric acid (Krebs) cycle?', options: ['Glucose and oxygen', 'Mostly electron carriers: NADH and $FADH_{2}$', 'Large quantities of ATP only', 'Pyruvate and acetyl-CoA'], correctIndex: 1, explanation: 'The Krebs cycle primarily generates electron carriers (NADH and $FADH_{2}$) that will donate electrons to the ETC. While it does produce some ATP (GTP), its main role is to harvest high-energy electrons.', partNumber: 4, partTitle: 'Citric Acid Cycle' },
-  { id: 'cr-ent-4b', question: 'Per single turn of the citric acid cycle, what is produced?', options: ['3 NADH, 1 $FADH_{2}$, 1 ATP (or GTP), and 2 $CO_{2}$', '1 NADH, 3 $FADH_{2}$, 2 ATP, and 1 $CO_{2}$', '6 NADH, 2 $FADH_{2}$, 4 ATP, and 6 $CO_{2}$', '2 NADH, 2 $FADH_{2}$, 2 ATP, and 4 $CO_{2}$'], correctIndex: 0, explanation: 'Each turn of the Krebs cycle produces 3 NADH, 1 $FADH_{2}$, 1 ATP (via GTP), and releases 2 $CO_{2}$. Since each glucose yields 2 acetyl-CoA, the cycle turns twice per glucose.', partNumber: 4, partTitle: 'Citric Acid Cycle' },
+  // Part 4: Citric Acid Cycle
+  {
+    id: 'bcr-ent-4a',
+    question:
+      'Suppose a mutation prevented the citric acid cycle from regenerating its 4-carbon acceptor molecule at the end of each turn. What would happen?',
+    options: [
+      'Each turn of the cycle would release extra $CO_2$ instead',
+      'The cycle would stop as soon as the small existing supply ran out',
+      'Acetyl groups would be sent back into glycolysis instead',
+      'Nothing would change, since acetyl-CoA can enter by itself',
+    ],
+    correctIndex: 1,
+    explanation:
+      'Each acetyl group enters by joining the 4-carbon acceptor, and the acceptor is remade at the end of the turn. If it were not regenerated, the small existing supply would be used up and the cycle would stop.',
+    partNumber: 4,
+    partTitle: 'Citric Acid Cycle',
+  },
+  {
+    id: 'bcr-ent-4b',
+    question:
+      'A 16-carbon fatty acid is broken down completely into 2-carbon acetyl units that enter the citric acid cycle. How many turns of the cycle result, and how many $CO_2$ do those turns release?',
+    options: [
+      '16 turns, releasing 32 $CO_2$',
+      '8 turns, releasing 8 $CO_2$',
+      '4 turns, releasing 8 $CO_2$',
+      '8 turns, releasing 16 $CO_2$',
+    ],
+    correctIndex: 3,
+    explanation:
+      '16 carbons ÷ 2 = 8 acetyl-CoA, and each acetyl-CoA drives one turn that releases 2 $CO_2$, so 8 turns release 16 $CO_2$, accounting for all 16 carbons.',
+    partNumber: 4,
+    partTitle: 'Citric Acid Cycle',
+  },
 
-  // Part 5
-  { id: 'cr-ent-5a', question: 'Where does the electron transport chain (ETC) occur, and what is the final electron acceptor?', options: ['Outer mitochondrial membrane; NADH is the final acceptor', 'Inner mitochondrial membrane; oxygen $(O_{2})$ is the final electron acceptor', 'Cytoplasm; carbon dioxide is the final acceptor', 'Thylakoid membrane; water is the final acceptor'], correctIndex: 1, explanation: 'The ETC is embedded in the inner mitochondrial membrane. Electrons pass through protein complexes and ultimately reduce $O_{2}$ to form $H_{2}O$. Without oxygen, the chain cannot function.', partNumber: 5, partTitle: 'Oxidative Phosphorylation' },
-  { id: 'cr-ent-5b', question: 'How does chemiosmosis generate ATP during oxidative phosphorylation?', options: ['ATP synthase pumps protons out of the matrix', '$H^{+}$ ions flow down their concentration gradient through ATP synthase, driving ATP production', 'Electrons directly bond to ADP to form ATP', 'Oxygen molecules provide energy to phosphorylate ADP'], correctIndex: 1, explanation: 'The ETC pumps $H^{+}$ ions into the intermembrane space, creating a proton gradient. $H^{+}$ flows back into the matrix through ATP synthase, and this flow (chemiosmosis) provides the energy to phosphorylate ADP into ATP (~26–28 ATP per glucose).', partNumber: 5, partTitle: 'Oxidative Phosphorylation' },
+  // Part 5: Oxidative Phosphorylation
+  {
+    id: 'bcr-ent-5a',
+    question:
+      'Isolated mitochondria with no fuel and no oxygen are soaked so that their matrix is at pH 8, then quickly moved into a pH 4 buffer containing ADP and phosphate. ATP is made for a short time. Which explanation is best supported?',
+    options: [
+      'Electron transport restarted, since low pH supplies electrons',
+      'ATP synthase used $H^+$ flowing into the matrix to make ATP',
+      'The acid broke down stored glucose by glycolysis in the matrix',
+      'The buffer\'s phosphate attached to ADP without any enzyme',
+    ],
+    correctIndex: 1,
+    explanation:
+      'pH 4 has far more $H^+$ than pH 8, so an artificial proton gradient formed. Protons flowing down it through ATP synthase powered ATP synthesis even with no electron transport, showing that the gradient itself drives chemiosmosis.',
+    partNumber: 5,
+    partTitle: 'Oxidative Phosphorylation',
+  },
+  {
+    id: 'bcr-ent-5b',
+    question:
+      'Using about 2.5 ATP per NADH and 1.5 ATP per $FADH_2$, how many ATP can oxidative phosphorylation make from 4 NADH and 2 $FADH_2$?',
+    options: ['9', '12', '13', '15'],
+    correctIndex: 2,
+    explanation:
+      '$4 \\times 2.5 + 2 \\times 1.5 = 10 + 3 = 13$ ATP. Treating all six carriers as NADH gives 15, as 2 ATP each gives 12, and as $FADH_2$ gives 9.',
+    partNumber: 5,
+    partTitle: 'Oxidative Phosphorylation',
+  },
 
-  // Part 6
-  { id: 'cr-ent-6a', question: 'Approximately how many total ATP molecules are produced from the complete oxidation of one glucose molecule?', options: ['2 ATP', '4 ATP', '30–32 ATP', '100 ATP'], correctIndex: 2, explanation: 'Complete aerobic respiration of one glucose yields approximately 30–32 ATP total: 2 from glycolysis, 2 from the Krebs cycle, and ~26–28 from oxidative phosphorylation.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'cr-ent-6b', question: 'Cyanide blocks Complex IV of the electron transport chain. What is the predicted effect?', options: ['Glycolysis speeds up to compensate', 'Electrons cannot flow through the ETC, the proton gradient collapses, and ATP production by ATP synthase stops', 'The Krebs cycle runs in reverse', 'Oxygen production increases dramatically'], correctIndex: 1, explanation: 'Blocking Complex IV prevents electrons from reaching $O_{2}$, halting electron flow entirely. Without electron flow, protons are not pumped, the gradient dissipates, and ATP synthase cannot produce ATP via chemiosmosis.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+  // Part 6: Problem-Solving Workshop
+  {
+    id: 'bcr-ent-6a',
+    question:
+      'In a respirometer experiment, students set up one vial of germinating peas and a second vial of glass beads with the same total volume. Why is the glass-bead vial included?',
+    options: [
+      'Beads respire slowly, giving a low rate to compare with the seeds',
+      'Beads absorb the $CO_2$, so it is not counted as oxygen uptake',
+      'Beads show gas changes from temperature or pressure, not respiration',
+      'Beads supply extra oxygen so the seeds do not run short during the test',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Glass beads do not respire, so any volume change in their vial reflects shifts in temperature or air pressure. Subtracting that change isolates the oxygen uptake caused by the seeds. KOH, not the beads, absorbs $CO_2$.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  {
+    id: 'bcr-ent-6b',
+    question:
+      'A poison blocks the first carrier that accepts electrons from NADH, while $FADH_2$ can still hand electrons to a later point in the chain. Which result is expected?',
+    options: [
+      'ATP output stops completely, since no electrons can reach oxygen',
+      'ATP output rises, since electrons now skip a step and lose less energy',
+      'ATP output is unchanged, since glycolysis makes most of the cell\'s ATP',
+      'ATP output drops sharply but not to zero, as some electrons keep flowing',
+    ],
+    correctIndex: 3,
+    explanation:
+      'Electrons from NADH, the main carrier, can no longer enter, so far fewer protons are pumped and ATP output falls sharply. $FADH_2$ electrons still enter downstream and reach oxygen, so some chemiosmosis continues.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
 
-  // Part 7
-  { id: 'cr-ent-7a', question: 'What is the purpose of fermentation when oxygen is unavailable?', options: ['To produce large amounts of ATP', 'To regenerate $NAD^{+}$ so glycolysis can continue', 'To completely oxidize glucose', 'To convert ADP to ATP using the ETC'], correctIndex: 1, explanation: 'Fermentation (lactic acid or alcoholic) does not produce additional ATP. Its key function is regenerating $NAD^{+}$ from NADH so that glycolysis—the only ATP-producing pathway available without $O_{2}$—can continue.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cr-ent-7b', question: 'Which stage of cellular respiration produces the most ATP?', options: ['Glycolysis', 'Pyruvate oxidation', 'The citric acid cycle', 'Oxidative phosphorylation'], correctIndex: 3, explanation: 'Oxidative phosphorylation (ETC + chemiosmosis) produces approximately 26–28 of the 30–32 total ATP per glucose, far more than substrate-level phosphorylation in glycolysis or the Krebs cycle.', partNumber: 7, partTitle: 'AP Review' },
+  // Part 7: AP Review
+  {
+    id: 'bcr-ent-7a',
+    question:
+      'Which sequence correctly traces the flow of energy in aerobic respiration?',
+    options: [
+      'Glucose → ATP → NADH → proton gradient',
+      'Glucose → proton gradient → NADH → ATP',
+      'Glucose → $O_2$ → NADH → proton gradient → ATP',
+      'Glucose → NADH → proton gradient → ATP',
+    ],
+    correctIndex: 3,
+    explanation:
+      'Electrons removed from glucose are carried by NADH (and $FADH_2$) to the electron transport chain, which uses their energy to build a proton gradient; ATP synthase then uses the gradient to make ATP. Oxygen only accepts electrons at the end.',
+    partNumber: 7,
+    partTitle: 'AP Review',
+  },
+  {
+    id: 'bcr-ent-7b',
+    question:
+      'A mutant yeast strain has no functional mitochondria. It is grown on glucose with plenty of oxygen. What will the yeast most likely do?',
+    options: [
+      'Ferment the sugar for 2 ATP each, releasing ethanol and $CO_2$',
+      'Respire aerobically in its cytoplasm, making about 30 ATP',
+      'Stop all ATP production, since glycolysis needs mitochondria',
+      'Use oxygen as the electron acceptor for glycolysis in the cytosol',
+    ],
+    correctIndex: 0,
+    explanation:
+      'Pyruvate oxidation, the citric acid cycle and the electron transport chain all need mitochondria, so oxygen is useless to this strain. Glycolysis runs in the cytoplasm, and fermentation regenerates $NAD^+$, yielding 2 ATP per glucose.',
+    partNumber: 7,
+    partTitle: 'AP Review',
+  },
 ]
 
+/**
+ * Generate an entrance quiz for the cellular-respiration topic.
+ * Returns all 14 questions in shuffled order.
+ */
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
   return shuffleArray(questions)
 }
 
+/**
+ * Get the list of part numbers and titles covered by this entrance quiz.
+ */
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Overview of Cell Respiration' },

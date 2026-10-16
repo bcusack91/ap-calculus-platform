@@ -1,39 +1,269 @@
 /**
  * Entrance Quiz — Cell Structure & Organelles (AP Biology)
- * 14 questions · 7 parts (2 per part)
+ *
+ * 14 questions covering all 7 lesson parts (2 per part).
+ * Each question is tagged with the part number it covers,
+ * so we can determine which parts a student already knows.
+ *
+ * Part mapping:
+ *  1 — Cell Theory (SA:V calculation, size limits)
+ *  2 — Prokaryotes vs Eukaryotes (shared vs distinguishing features)
+ *  3 — Membrane-Bound Organelles (nucleolus, free vs bound ribosomes)
+ *  4 — Endomembrane System (Golgi products, lysosomes and autophagy)
+ *  5 — Energy Organelles (mitochondria, endosymbiosis evidence)
+ *  6 — Problem-Solving Workshop (cell specialization, plant vs animal)
+ *  7 — AP Review (SA:V comparison, secretory pathway)
  */
 
-import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
+import type { EntranceQuizQuestion } from './moles-molar-mass'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1
-  { id: 'cso-ent-1a', question: 'Which of the following is NOT one of the three tenets of cell theory?', options: ['All living things are composed of cells', 'The cell is the basic unit of structure and function in life', 'All cells arise from preexisting cells', 'All cells contain a membrane-bound nucleus'], correctIndex: 3, explanation: 'The three tenets of cell theory are: (1) all living things are composed of one or more cells, (2) the cell is the basic unit of life, and (3) all cells come from preexisting cells. Having a membrane-bound nucleus is a feature of eukaryotes only, not a tenet of cell theory.', partNumber: 1, partTitle: 'Cell Theory' },
-  { id: 'cso-ent-1b', question: 'Why is the cell considered the basic unit of life?', options: ['Because cells are the smallest things visible under a microscope', 'Because the cell is the simplest structure that can perform all activities necessary for life', 'Because all cells are identical in structure', 'Because cells cannot be broken down further by any means'], correctIndex: 1, explanation: 'The cell is the basic unit of life because it is the smallest entity that can independently carry out all life functions — metabolism, reproduction, response to stimuli, and homeostasis.', partNumber: 1, partTitle: 'Cell Theory' },
-  // Part 2
-  { id: 'cso-ent-2a', question: 'What is the key structural difference between prokaryotic and eukaryotic cells?', options: ['Prokaryotes are larger than eukaryotes', 'Prokaryotes lack a membrane-bound nucleus', 'Eukaryotes lack ribosomes', 'Prokaryotes have mitochondria but eukaryotes do not'], correctIndex: 1, explanation: 'The defining difference is that prokaryotes lack a membrane-bound nucleus — their DNA is located in a nucleoid region. Eukaryotic cells have a true nucleus enclosed by a nuclear envelope, plus other membrane-bound organelles.', partNumber: 2, partTitle: 'Prokaryotes vs Eukaryotes' },
-  { id: 'cso-ent-2b', question: 'Which structure is found in BOTH prokaryotic and eukaryotic cells?', options: ['Nucleus', 'Mitochondria', 'Ribosomes', 'Endoplasmic reticulum'], correctIndex: 2, explanation: 'Ribosomes are universal — both prokaryotes and eukaryotes require them for protein synthesis. Prokaryotic ribosomes (70S) are smaller than eukaryotic ribosomes (80S), but both perform the same fundamental function of translating mRNA into protein.', partNumber: 2, partTitle: 'Prokaryotes vs Eukaryotes' },
-  // Part 3
-  { id: 'cso-ent-3a', question: 'What is the function of the nuclear envelope and nuclear pores?', options: ['The nuclear envelope produces ribosomes; nuclear pores produce mRNA', 'The nuclear envelope encloses and protects DNA; nuclear pores regulate the transport of molecules in and out of the nucleus', 'The nuclear envelope digests worn-out organelles; pores release the products', 'The nuclear envelope synthesizes proteins; pores export lipids'], correctIndex: 1, explanation: 'The nuclear envelope is a double membrane that separates the nucleus from the cytoplasm, protecting DNA. Nuclear pores are selective channels that regulate the passage of mRNA, ribosomal subunits, proteins, and other molecules between the nucleus and cytoplasm.', partNumber: 3, partTitle: 'Membrane-Bound Organelles' },
-  { id: 'cso-ent-3b', question: 'What is the primary function of the central vacuole in plant cells?', options: ['Protein synthesis', 'Photosynthesis', 'Maintaining turgor pressure and storing water, ions, and waste products', 'Cellular respiration'], correctIndex: 2, explanation: 'The central vacuole in plant cells fills with water to maintain turgor pressure, which supports the cell and keeps the plant upright. It also stores nutrients, pigments, and waste products.', partNumber: 3, partTitle: 'Membrane-Bound Organelles' },
-  // Part 4
-  { id: 'cso-ent-4a', question: 'Which pathway correctly describes the flow of materials through the endomembrane system?', options: ['Golgi → ER → plasma membrane', 'Ribosome → mitochondria → nucleus', 'Rough ER → Golgi apparatus → vesicles → plasma membrane', 'Nucleus → lysosome → smooth ER'], correctIndex: 2, explanation: 'In the endomembrane system, proteins are synthesized on ribosomes of the rough ER, then transported in vesicles to the Golgi apparatus for modification, sorting, and packaging. Vesicles from the Golgi carry finished products to the plasma membrane or other destinations.', partNumber: 4, partTitle: 'Endomembrane System' },
-  { id: 'cso-ent-4b', question: 'What is the function of lysosomes?', options: ['Energy production through oxidative phosphorylation', 'Intracellular digestion using hydrolytic enzymes', 'Protein synthesis and folding', 'DNA replication and repair'], correctIndex: 1, explanation: 'Lysosomes are membrane-bound organelles containing hydrolytic (digestive) enzymes that break down macromolecules, damaged organelles, and engulfed pathogens. They maintain an acidic internal pH (~5) optimal for their enzymes.', partNumber: 4, partTitle: 'Endomembrane System' },
-  // Part 5
-  { id: 'cso-ent-5a', question: 'Which statement best describes the structure and function of mitochondria?', options: ['Single membrane; site of photosynthesis', 'Double membrane with cristae; site of cellular respiration and ATP production', 'No membrane; site of protein synthesis', 'Double membrane with thylakoids; site of fermentation'], correctIndex: 1, explanation: 'Mitochondria have a double membrane — the inner membrane folds into cristae to increase surface area for the electron transport chain. The matrix (inner compartment) hosts the citric acid cycle. Together, these processes drive aerobic cellular respiration and ATP synthesis.', partNumber: 5, partTitle: 'Energy Organelles' },
-  { id: 'cso-ent-5b', question: 'In chloroplasts, where do the light reactions and Calvin cycle occur, respectively?', options: ['Both occur in the stroma', 'Light reactions in the stroma; Calvin cycle in the thylakoid membrane', 'Light reactions in the thylakoid membranes; Calvin cycle in the stroma', 'Both occur in the thylakoid membranes'], correctIndex: 2, explanation: 'The light reactions take place in/on the thylakoid membranes, where chlorophyll absorbs light energy to produce ATP and NADPH. The Calvin cycle occurs in the stroma, using that ATP and NADPH to fix $CO_{2}$ into G3P (a sugar precursor).', partNumber: 5, partTitle: 'Energy Organelles' },
-  // Part 6
-  { id: 'cso-ent-6a', question: 'A cell is observed to contain an unusually large number of mitochondria. What can you infer about this cell?', options: ['It is likely a plant cell performing photosynthesis', 'It is likely specialized for high energy demands, such as a muscle cell', 'It is a prokaryotic cell', 'It is about to undergo apoptosis'], correctIndex: 1, explanation: 'Cells with high energy requirements — such as muscle cells, cardiac cells, and active transport cells — contain many mitochondria to produce the large amounts of ATP needed for their functions.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'cso-ent-6b', question: 'A cell organelle has a single membrane, contains digestive enzymes, and maintains an acidic internal pH. Which organelle is it?', options: ['Ribosome', 'Mitochondrion', 'Lysosome', 'Smooth ER'], correctIndex: 2, explanation: 'The description matches a lysosome: single membrane, contains hydrolytic enzymes, and maintains an acidic pH (~5) to optimize enzyme activity for intracellular digestion of macromolecules and debris.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  // Part 7
-  { id: 'cso-ent-7a', question: 'The endosymbiotic theory proposes that mitochondria and chloroplasts were once:', options: ['Parts of the nucleus that budded off', 'Viruses that infected early eukaryotes', 'Free-living prokaryotes engulfed by ancestral eukaryotic cells', 'Infoldings of the plasma membrane'], correctIndex: 2, explanation: 'The endosymbiotic theory states that mitochondria and chloroplasts originated as free-living prokaryotes (aerobic bacteria and photosynthetic cyanobacteria, respectively) that were engulfed by an ancestral eukaryote. Evidence includes their double membranes, own circular DNA, and 70S ribosomes.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cso-ent-7b', question: 'As a cell increases in size, what happens to its surface area-to-volume (SA:V) ratio?', options: ['SA:V ratio increases', 'SA:V ratio stays the same', 'SA:V ratio decreases', 'SA:V ratio first increases then decreases'], correctIndex: 2, explanation: 'As a cell grows, volume increases faster than surface area (volume scales as $r^{3}$, surface area as $r^{2}$). This decreasing SA:V ratio limits the cell\'s ability to exchange materials efficiently, which is why cells remain small or develop adaptations to increase surface area.', partNumber: 7, partTitle: 'AP Review' },
+  // Part 1: Cell Theory
+  {
+    id: 'bcso-ent-1a',
+    question:
+      'A cube-shaped cell measures 6 μm on each side. What is its surface area-to-volume ratio?',
+    options: ['6:1', '1:1', '1:6', '36:1'],
+    correctIndex: 1,
+    explanation:
+      'Surface area = $6 \\times 6^2 = 216 \\text{ μm}^2$ and volume = $6^3 = 216 \\text{ μm}^3$, so SA:V = 1:1 (the shortcut $6/s$ gives the same). 6:1 is the ratio for a 1 μm cube, and 36:1 comes from dividing the area by the side length instead of by the volume.',
+    partNumber: 1,
+    partTitle: 'Cell Theory',
+  },
+  {
+    id: 'bcso-ent-1b',
+    question:
+      'A skeletal muscle fiber is a single, very large cell that contains hundreds of nuclei. How does having many nuclei help such a large cell function?',
+    options: [
+      'Many nuclei raise the cell\'s surface area-to-volume ratio',
+      'Many nuclei can make enough mRNA to serve all of the cytoplasm',
+      'Many nuclei store the glucose that powers the cell\'s contraction',
+      'Many nuclei let the fiber split quickly by binary fission',
+    ],
+    correctIndex: 1,
+    explanation:
+      'A single nucleus could not produce enough mRNA for a huge volume of cytoplasm (a DNA bottleneck), so multiple nuclei share the work. Nuclei do not change the cell\'s outer surface, store glucose or drive binary fission, which is how prokaryotes divide.',
+    partNumber: 1,
+    partTitle: 'Cell Theory',
+  },
+
+  // Part 2: Prokaryotes vs Eukaryotes
+  {
+    id: 'bcso-ent-2a',
+    question:
+      'A drug blocks the synthesis of peptidoglycan. Which cells would be harmed by this drug?',
+    options: [
+      'Bacteria, but not archaea or human cells',
+      'Archaea and bacteria, but not human cells',
+      'Human cells, as their membranes contain peptidoglycan',
+      'Every cell, as all cells are surrounded by a cell wall',
+    ],
+    correctIndex: 0,
+    explanation:
+      'Peptidoglycan is found in bacterial cell walls. Archaeal walls lack it, and animal cells have no cell wall at all, so only bacteria depend on it.',
+    partNumber: 2,
+    partTitle: 'Prokaryotes vs Eukaryotes',
+  },
+  {
+    id: 'bcso-ent-2b',
+    question:
+      'An unknown single-celled organism is examined with an electron microscope. Which observation would show that it is eukaryotic rather than prokaryotic?',
+    options: [
+      'It has ribosomes that carry out translation',
+      'It has a cell wall outside its plasma membrane',
+      'Its DNA is enclosed in a membrane-bound nucleus',
+      'It has a phospholipid bilayer as its outer membrane',
+    ],
+    correctIndex: 2,
+    explanation:
+      'A membrane-bound nucleus (and other membrane-bound organelles) is what defines a eukaryote. Ribosomes and a plasma membrane are found in all cells, and both prokaryotes and many eukaryotes have cell walls.',
+    partNumber: 2,
+    partTitle: 'Prokaryotes vs Eukaryotes',
+  },
+
+  // Part 3: Membrane-Bound Organelles
+  {
+    id: 'bcso-ent-3a',
+    question:
+      'A laser destroys the nucleolus of a cell but leaves the rest of the nucleus intact. Which problem would the cell develop first?',
+    options: [
+      'It could no longer copy its DNA before dividing',
+      'It could no longer assemble new ribosomes, so protein output would fall',
+      'It could no longer make phospholipids for new membranes',
+      'It could no longer package proteins into secretory vesicles',
+    ],
+    correctIndex: 1,
+    explanation:
+      'The nucleolus makes rRNA and assembles ribosomal subunits, so without it the cell cannot replace its ribosomes and protein synthesis declines. Lipids are made in the smooth ER, packaging happens in the Golgi, and DNA replication does not need the nucleolus.',
+    partNumber: 3,
+    partTitle: 'Membrane-Bound Organelles',
+  },
+  {
+    id: 'bcso-ent-3b',
+    question:
+      'A ribosome finishes translating a secreted protein while attached to the rough ER and is released. It then starts translating an mRNA for an enzyme that works in the cytosol. What will happen?',
+    options: [
+      'It cannot do this, since bound ribosomes only make proteins for export',
+      'It sends the enzyme into the ER, since it was attached there before',
+      'It makes the enzyme as a free ribosome, since both types are the same',
+      'It must first travel to the nucleolus to be rebuilt as a free ribosome',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Free and bound ribosomes are structurally identical; a ribosome becomes bound only when the protein it is making has a signal peptide that directs it to the ER. Without a signal peptide, it translates the enzyme free in the cytosol.',
+    partNumber: 3,
+    partTitle: 'Membrane-Bound Organelles',
+  },
+
+  // Part 4: Endomembrane System
+  {
+    id: 'bcso-ent-4a',
+    question:
+      'A drug that blocks Golgi function is applied to a plant cell that is dividing. Which step would be most directly affected?',
+    options: [
+      'Pinching the cell in two with a ring of microfilaments',
+      'Separating the chromosomes on the mitotic spindle',
+      'Copying the chromosomes before division begins',
+      'Building the cell plate from wall material in vesicles',
+    ],
+    correctIndex: 3,
+    explanation:
+      'The Golgi makes cell wall polysaccharides and packages them into vesicles, which fuse to form the cell plate during plant cytokinesis. Plant cells do not use a pinching ring (their wall prevents it), and spindle movement and DNA copying do not depend on the Golgi.',
+    partNumber: 4,
+    partTitle: 'Endomembrane System',
+  },
+  {
+    id: 'bcso-ent-4b',
+    question:
+      'When nutrients run low, liver cells enclose some of their own older mitochondria in membranes and break them down. Which organelle does the breaking down, and what is the benefit?',
+    options: [
+      'Lysosomes, which free the molecules to be reused',
+      'The Golgi, which ships the old mitochondria out of the cell by exocytosis',
+      'Ribosomes, which rebuild the mitochondria from newly made amino acids',
+      'Smooth ER, which detoxifies the mitochondria and stores them as lipid',
+    ],
+    correctIndex: 0,
+    explanation:
+      'In autophagy, lysosomes fuse with the enclosed organelles and their hydrolytic enzymes break them into building blocks the cell can reuse, which is valuable during starvation. The Golgi, ribosomes and smooth ER do not digest organelles.',
+    partNumber: 4,
+    partTitle: 'Endomembrane System',
+  },
+
+  // Part 5: Energy Organelles
+  {
+    id: 'bcso-ent-5a',
+    question:
+      'Heart muscle cells contain far more mitochondria per cell than skin cells do. Which explanation is best supported?',
+    options: [
+      'Heart cells make proteins for export and need more mitochondria to do so',
+      'Heart cells photosynthesize and need mitochondria to store the sugar',
+      'Heart cells contract nonstop and need a large, steady supply of ATP',
+      'Heart cells cannot divide, so mitochondria take over the role of nuclei',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Mitochondria make ATP by aerobic respiration, and their number matches a cell\'s energy demand; constantly contracting heart muscle needs a great deal of ATP. Mitochondria do not replace nuclei, and animal cells do not photosynthesize.',
+    partNumber: 5,
+    partTitle: 'Energy Organelles',
+  },
+  {
+    id: 'bcso-ent-5b',
+    question:
+      'Which finding, if it were true, would most weaken the hypothesis that mitochondria descend from bacteria engulfed by an ancestral cell?',
+    options: [
+      'Mitochondrial DNA is circular, like a bacterial chromosome',
+      'Mitochondria divide by fission on their own schedule',
+      'Mitochondrial ribosomes match the ribosomes of the host cytoplasm',
+      'Mitochondria are about the same size as many bacteria',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Endosymbiosis predicts that mitochondrial ribosomes resemble bacterial ribosomes; if they matched the host\'s cytoplasmic ribosomes instead, that evidence would point the other way. Circular DNA, independent fission and bacterial size all support the hypothesis.',
+    partNumber: 5,
+    partTitle: 'Energy Organelles',
+  },
+
+  // Part 6: Problem-Solving Workshop
+  {
+    id: 'bcso-ent-6a',
+    question:
+      'Cells of an adrenal gland secrete large amounts of a steroid hormone. Which organelle would you expect to be unusually abundant in these cells?',
+    options: [
+      'Rough ER, where secreted proteins are made',
+      'Smooth ER, where lipids are made',
+      'Lysosomes, where engulfed molecules are digested',
+      'Nucleoli, where ribosomal subunits are assembled',
+    ],
+    correctIndex: 1,
+    explanation:
+      'Smooth ER carries out lipid synthesis, so a cell that secretes a steroid hormone (a lipid) needs extensive smooth ER. Abundant rough ER marks cells that secrete proteins.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  {
+    id: 'bcso-ent-6b',
+    question:
+      'Cells from a multicellular organism have cell walls and plasmodesmata but no chloroplasts. Which identification is best supported?',
+    options: [
+      'Animal cells, since chloroplasts are absent',
+      'Prokaryotic cells, since they have a cell wall',
+      'Fungal cells, since every plant cell has chloroplasts',
+      'Plant cells from an unlit part, such as a root',
+    ],
+    correctIndex: 3,
+    explanation:
+      'Plasmodesmata are channels through plant cell walls, so these are plant cells; chloroplasts occur only in photosynthetic plant cells, not in roots. Animal cells have no walls, prokaryotes are not multicellular tissues with plasmodesmata, and many plant cells lack chloroplasts.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+
+  // Part 7: AP Review
+  {
+    id: 'bcso-ent-7a',
+    question:
+      'Cell A is a cube 2 μm on a side, and cell B is a cube 4 μm on a side. Which statement correctly compares their ability to exchange materials?',
+    options: [
+      'A has SA:V of 3:1 and B has 1.5:1, so A exchanges materials more readily',
+      'A has SA:V of 1.5:1 and B has 3:1, so B exchanges materials more readily',
+      'A has SA:V of 3:1 and B has 1.5:1, so B exchanges materials more readily',
+      'Both have SA:V of 6:1, so they exchange materials equally well',
+    ],
+    correctIndex: 0,
+    explanation:
+      'For a cube SA:V = $6/s$: $6/2 = 3$ for A and $6/4 = 1.5$ for B. The smaller cell has more membrane per unit of volume, so it exchanges materials more readily.',
+    partNumber: 7,
+    partTitle: 'AP Review',
+  },
+  {
+    id: 'bcso-ent-7b',
+    question:
+      'In a pancreatic cell, a drug blocks the final fusion of vesicles with the plasma membrane but does not affect any earlier step. Where would newly made digestive-enzyme protein accumulate?',
+    options: [
+      'In the lumen of the rough ER, where it was made',
+      'In the nucleus, where its mRNA was transcribed',
+      'In lysosomes, the vesicles where it would be digested',
+      'In vesicles that collect beneath the cell surface',
+    ],
+    correctIndex: 3,
+    explanation:
+      'The secretory pathway runs rough ER → Golgi → secretory vesicles → exocytosis. If only the last step is blocked, proteins still pass through the ER and Golgi and pile up in secretory vesicles near the cell surface.',
+    partNumber: 7,
+    partTitle: 'AP Review',
+  },
 ]
 
+/**
+ * Generate an entrance quiz for the cell-structure-organelles topic.
+ * Returns all 14 questions in shuffled order.
+ */
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
   return shuffleArray(questions)
 }
 
+/**
+ * Get the list of part numbers and titles covered by this entrance quiz.
+ */
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Cell Theory' },

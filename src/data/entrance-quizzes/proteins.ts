@@ -1,38 +1,174 @@
 /**
  * Entrance Quiz — Proteins (AP Biology)
- * 8 questions · 4 parts (2 per part)
+ *
+ * 8 questions covering all 4 lesson parts (2 per part).
+ * Each question is tagged with the part number it covers,
+ * so we can determine which parts a student already knows.
+ *
+ * Part mapping:
+ *  1 — Introduction to Proteins (R-group classes, peptide bond formation)
+ *  2 — Structure: Four Levels (bonds at each level, sequence determines fold)
+ *  3 — Function & Enzymes (shape-function, activation energy)
+ *  4 — AP Review (active-site mutation, recognizing quaternary structure)
  */
 
-import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
+import type { EntranceQuizQuestion } from './moles-molar-mass'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1
-  { id: 'pro-eq-1a', question: 'What are the three key features of an amino acid structure?', options: ['A hydrogen atom, a carbon atom, and a phosphate group', 'An amino group $(NH_{2})$, a carboxyl group (COOH), and an R group attached to a central carbon', 'A nitrogenous base, a sugar, and a phosphate group', 'A fatty acid chain, a glycerol backbone, and a hydroxyl group'], correctIndex: 1, explanation: 'All amino acids have an amino group $(-NH_{2})$, a carboxyl group (-COOH), and a distinctive R group (side chain) bonded to the same central carbon atom.', partNumber: 1, partTitle: 'Amino Acid Structure' },
-  { id: 'pro-eq-1b', question: 'What is the R group in an amino acid, and why is it important?', options: ['It is a phosphate group that provides energy', 'It is the unique side chain that determines the amino acid\'s identity and chemical properties', 'It is a sugar that links amino acids together', 'It is an atomic bond that holds the protein together'], correctIndex: 1, explanation: 'The R group (side chain) is unique to each amino acid. Its chemical properties—polar, nonpolar, acidic, or basic—determine how the amino acid behaves and how the protein folds.', partNumber: 1, partTitle: 'Amino Acid Structure' },
+  // Part 1: Introduction to Proteins
+  {
+    id: 'bprot-ent-1a',
+    question:
+      'An amino acid has an uncharged R group that ends in an –OH group. Which interaction is this R group best suited to form with water or with other polar R groups?',
+    options: [
+      'Disulfide bridges, as the R group contains oxygen',
+      'Hydrophobic interactions, as the R group is uncharged',
+      'Peptide bonds, as these bonds link side chains together',
+      'Hydrogen bonds, as the –OH group is hydrophilic',
+    ],
+    correctIndex: 3,
+    explanation:
+      'An –OH group is polar, so this R group is hydrophilic and forms hydrogen bonds with water or other polar groups. Disulfide bridges need sulfur, uncharged does not mean nonpolar, and peptide bonds join the backbone, not side chains.',
+    partNumber: 1,
+    partTitle: 'Introduction to Proteins',
+  },
+  {
+    id: 'bprot-ent-1b',
+    question:
+      'When two amino acids are joined by a peptide bond, one water molecule is released. Where do the atoms of that water come from?',
+    options: [
+      'An H atom from each of the two R groups',
+      'An –OH from the carboxyl of one and an H from the amino group of the other',
+      'An –OH from the amino group of each amino acid',
+      'An O from one R group and two H atoms from the central carbon',
+    ],
+    correctIndex: 1,
+    explanation:
+      'In dehydration synthesis, the carboxyl group of one amino acid gives up –OH and the amino group of the next gives up H, forming the –CO–NH– peptide bond. R groups are not involved in forming the backbone.',
+    partNumber: 1,
+    partTitle: 'Introduction to Proteins',
+  },
 
-  // Part 2
-  { id: 'pro-eq-2a', question: 'How are amino acids linked together to form a protein?', options: ['Via hydrogen bonds between the nitrogenous bases', 'Via peptide bonds formed by dehydration synthesis between the carboxyl group of one amino acid and the amino group of the next', 'Via phosphodiester bonds between the sugar backbones', 'Via hydrophobic interactions between the R groups'], correctIndex: 1, explanation: 'Peptide bonds link amino acids: the carboxyl group of one amino acid reacts with the amino group of another, releasing water (dehydration synthesis) and forming a covalent bond.', partNumber: 2, partTitle: 'Peptide Bonds' },
-  { id: 'pro-eq-2b', question: 'A chain of amino acids linked by peptide bonds is called:', options: ['A polysaccharide', 'A nucleic acid', 'A polypeptide', 'A triglyceride'], correctIndex: 2, explanation: 'A polypeptide is a chain of amino acids linked by peptide bonds. When properly folded, a polypeptide (or combination of polypeptides) forms a functional protein.', partNumber: 2, partTitle: 'Peptide Bonds' },
+  // Part 2: Structure: Four Levels
+  {
+    id: 'bprot-ent-2a',
+    question:
+      'A protein made of a single polypeptide is treated with a chemical that breaks only its disulfide bridges. Which level of structure is most directly disrupted?',
+    options: [
+      'Primary, since the bridges are covalent like peptide bonds',
+      'Secondary, since the bridges form between backbone atoms',
+      'Tertiary, since the bridges join R groups within the chain',
+      'Quaternary, since the bridges link separate subunits',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Disulfide bridges are covalent bonds between sulfur-containing R groups that lock a single chain\'s 3D fold, so they are part of tertiary structure. Primary structure is the peptide-bonded sequence, secondary structure uses backbone hydrogen bonds, and this protein has only one chain.',
+    partNumber: 2,
+    partTitle: 'Structure: Four Levels',
+  },
+  {
+    id: 'bprot-ent-2b',
+    question:
+      'Two different proteins contain exactly the same number of each kind of amino acid, yet they fold into very different shapes. Which explanation is best supported?',
+    options: [
+      'The same building blocks are linked in a different order',
+      'Each protein uses a different kind of peptide bond',
+      'One of them contains nucleotides that alter how it folds',
+      'Folding depends only on temperature, not on the chain itself',
+    ],
+    correctIndex: 0,
+    explanation:
+      'Primary structure is the order of amino acids, and that order determines which R groups end up near each other and therefore how the chain folds. Every peptide bond is the same kind of bond, and proteins do not contain nucleotides.',
+    partNumber: 2,
+    partTitle: 'Structure: Four Levels',
+  },
 
-  // Part 3
-  { id: 'pro-eq-3a', question: 'What are the four levels of protein structure, in order from simplest to most complex?', options: ['Tertiary, secondary, primary, quaternary', 'Primary (amino acid sequence), secondary (α-helices and β-sheets), tertiary (3D folding), quaternary (multiple polypeptides)', 'Quaternary, tertiary, primary, secondary', 'Linear, coiled, folded, bonded'], correctIndex: 1, explanation: 'Primary structure is the amino acid sequence. Secondary structure includes α-helices and β-sheets formed by hydrogen bonding. Tertiary structure is the overall 3D shape. Quaternary structure involves multiple polypeptide chains.', partNumber: 3, partTitle: 'Protein Structure Levels' },
-  { id: 'pro-eq-3b', question: 'Which level of protein structure can an R group polarity disruption directly affect?', options: ['Only primary structure', 'Only secondary and tertiary structure', 'Primary, secondary, and tertiary structure', 'All four levels equally'], correctIndex: 2, explanation: 'R group polarity influences how amino acids interact: polar R groups form hydrogen bonds (secondary and tertiary), affecting folding. The sequence is primary structure; the resulting shape is secondary and tertiary.', partNumber: 3, partTitle: 'Protein Structure Levels' },
+  // Part 3: Function & Enzymes
+  {
+    id: 'bprot-ent-3a',
+    question:
+      'An antibody binds one specific antigen at the tips of its arms. A mutation replaces a charged amino acid at one tip with an amino acid that has a nonpolar R group. Which outcome is most likely?',
+    options: [
+      'It binds the antigen more tightly, since nonpolar groups attract it',
+      'Nothing changes, since the rest of the antibody keeps its shape',
+      'The other tip changes too, since both arms share one chain',
+      'The tip\'s shape and chemistry change, weakening binding to that antigen',
+    ],
+    correctIndex: 3,
+    explanation:
+      'Function depends on shape, and binding depends on matching shape and charges, so one changed amino acid in the binding site can stop the antibody from recognizing its antigen, just as one substitution alters hemoglobin in sickle cell anemia.',
+    partNumber: 3,
+    partTitle: 'Function & Enzymes',
+  },
+  {
+    id: 'bprot-ent-3b',
+    question:
+      'Adding an enzyme makes a reaction in a test tube run thousands of times faster. Which statement describes what the enzyme does?',
+    options: [
+      'It supplies energy so that the reaction releases more energy',
+      'It lowers the energy barrier without changing energy released',
+      'It warms the solution so that molecules collide more often',
+      'It is used up and must be replaced after each reaction',
+    ],
+    correctIndex: 1,
+    explanation:
+      'Enzymes lower activation energy, so more molecules can react at the same temperature; the overall energy change of the reaction stays the same. Enzymes do not heat the solution and are not consumed.',
+    partNumber: 3,
+    partTitle: 'Function & Enzymes',
+  },
 
-  // Part 4
-  { id: 'pro-eq-4a', question: 'What is denaturation of a protein?', options: ['The breaking of all peptide bonds and separation of amino acids', 'The loss of the protein\'s native 3D structure while peptide bonds remain intact', 'The formation of new disulfide bridges between R groups', 'The addition of new amino acids to the polypeptide chain'], correctIndex: 1, explanation: 'Denaturation is the unfolding of a protein\'s tertiary and quaternary structure caused by heat, pH, or other factors. Peptide bonds (primary structure) are not broken; the protein loses its functional shape.', partNumber: 4, partTitle: 'Denaturation' },
-  { id: 'pro-eq-4b', question: 'Which factors can cause protein denaturation?', options: ['Light and carbon dioxide only', 'High temperature, extreme pH, heavy metals, and organic solvents', 'Only very high temperatures above 500°C', 'Neutral pH and moderate temperatures'], correctIndex: 1, explanation: 'Denaturation can be triggered by high temperature (breaking hydrogen bonds), extreme pH (disrupting ionic interactions), heavy metals (binding to side chains), and organic solvents (altering the hydrophobic environment).', partNumber: 4, partTitle: 'Denaturation' },
+  // Part 4: AP Review
+  {
+    id: 'bprot-ent-4a',
+    question:
+      'A mutation replaces one amino acid in an enzyme\'s active site. Tests show that the enzyme\'s overall fold is unchanged, but its activity drops by 95%. Which explanation is best supported?',
+    options: [
+      'The new R group interacts with the substrate differently',
+      'The enzyme is denatured, since any change unfolds a protein',
+      'The enzyme can no longer form peptide bonds in its backbone',
+      'The mutation changed which nucleotides make up the enzyme',
+    ],
+    correctIndex: 0,
+    explanation:
+      'The active site works through R groups that bind and act on the substrate, so swapping one can weaken binding or catalysis even when the overall shape stays the same. The stem rules out denaturation, and enzymes are made of amino acids, not nucleotides.',
+    partNumber: 4,
+    partTitle: 'AP Review',
+  },
+  {
+    id: 'bprot-ent-4b',
+    question:
+      'Which observation would show that a protein has quaternary structure?',
+    options: [
+      'It contains α-helices and β-sheets within one chain',
+      'It stops working after being heated above 60°C',
+      'Gentle treatment splits it into two folded chains',
+      'It has several disulfide bridges within one chain',
+    ],
+    correctIndex: 2,
+    explanation:
+      'Quaternary structure exists only when two or more polypeptide chains assemble, so separating the protein into distinct folded chains shows it. Helices, sheets and disulfide bridges within one chain are secondary and tertiary features, and heat sensitivity applies to all proteins.',
+    partNumber: 4,
+    partTitle: 'AP Review',
+  },
 ]
 
+/**
+ * Generate an entrance quiz for the proteins topic.
+ * Returns all 8 questions in shuffled order.
+ */
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
   return shuffleArray(questions)
 }
 
+/**
+ * Get the list of part numbers and titles covered by this entrance quiz.
+ */
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Amino Acid Structure' },
-    { partNumber: 2, partTitle: 'Peptide Bonds' },
-    { partNumber: 3, partTitle: 'Protein Structure Levels' },
-    { partNumber: 4, partTitle: 'Denaturation' },
+    { partNumber: 1, partTitle: 'Introduction to Proteins' },
+    { partNumber: 2, partTitle: 'Structure: Four Levels' },
+    { partNumber: 3, partTitle: 'Function & Enzymes' },
+    { partNumber: 4, partTitle: 'AP Review' },
   ]
 }
