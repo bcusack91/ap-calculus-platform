@@ -1,26 +1,146 @@
 /**
- * Entrance Quiz — The Industrial Revolution (AP World History)
- * 14 questions · 7 parts (2 per part)
+ * Entrance Quiz — The Industrial Revolution (AP World History: Modern)
+ * 14 questions · 7 parts (2 per part). Rebuilt Oct 2026 from the Phase 1 lesson.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'whin-ent-1a', question: 'Which of the following best describes the main focus of The Industrial Revolution?', options: ['An unrelated topic', 'The core principles and patterns within The Industrial Revolution', 'A mathematical formula', 'A literary technique'], correctIndex: 1, explanation: 'The Industrial Revolution focuses on understanding key principles and patterns within AP World History.', partNumber: 1, partTitle: 'Core Concepts' },
-  { id: 'whin-ent-1b', question: 'Why is The Industrial Revolution important in AP World History?', options: ['It is not important', 'It connects to multiple units and is frequently tested on the AP exam', 'It is only relevant to one question', 'It has been removed from the curriculum'], correctIndex: 1, explanation: 'The Industrial Revolution is a key topic in AP World History that connects to multiple course themes.', partNumber: 1, partTitle: 'Core Concepts' },
-  { id: 'whin-ent-2a', question: 'Which best describes a key process in The Industrial Revolution?', options: ['A random event', 'A systematic mechanism that produces predictable patterns', 'An unexplainable phenomenon', 'A one-time occurrence'], correctIndex: 1, explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.', partNumber: 2, partTitle: 'Key Processes' },
-  { id: 'whin-ent-2b', question: 'Understanding cause and effect in The Industrial Revolution helps students:', options: ['Memorize dates', 'Explain why patterns exist rather than just describing them', 'Avoid analysis', 'Skip exam questions'], correctIndex: 1, explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.', partNumber: 2, partTitle: 'Key Processes' },
-  { id: 'whin-ent-3a', question: 'Why do geographers/analysts use case studies?', options: ['They are easier than analysis', 'They provide concrete examples that illustrate abstract concepts', 'They replace all other methods', 'They are required by law'], correctIndex: 1, explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.', partNumber: 3, partTitle: 'Patterns & Examples' },
-  { id: 'whin-ent-3b', question: 'Comparing examples of The Industrial Revolution across regions helps:', options: ['Nothing', 'Identify universal patterns and unique local variations', 'Confuse students', 'Waste time'], correctIndex: 1, explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).', partNumber: 3, partTitle: 'Patterns & Examples' },
-  { id: 'whin-ent-4a', question: 'The Industrial Revolution connects to other course topics through:', options: ['No connections exist', 'Shared processes, causes, and outcomes', 'Random coincidence', 'Administrative categories only'], correctIndex: 1, explanation: 'Topics in AP World History are interconnected through shared processes, causes, and outcomes.', partNumber: 4, partTitle: 'Connections & Interactions' },
-  { id: 'whin-ent-4b', question: 'A feedback loop in The Industrial Revolution means:', options: ['The process stops', 'Outcomes reinforce or modify the original process', 'Nothing changes', 'The exam skips this topic'], correctIndex: 1, explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.', partNumber: 4, partTitle: 'Connections & Interactions' },
-  { id: 'whin-ent-5a', question: 'Studying change over time in The Industrial Revolution helps:', options: ['Only with history classes', 'Explain current patterns and predict future developments', 'Nothing', 'Memorize dates'], correctIndex: 1, explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.', partNumber: 5, partTitle: 'Change Over Time' },
-  { id: 'whin-ent-5b', question: 'Continuity in The Industrial Revolution means:', options: ['Everything changes', 'Some aspects have remained stable despite other changes', 'Nothing ever happened', 'The topic is boring'], correctIndex: 1, explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.', partNumber: 5, partTitle: 'Change Over Time' },
-  { id: 'whin-ent-6a', question: 'When interpreting data about The Industrial Revolution, the first step is:', options: ['Jump to conclusions', 'Identify what the data shows and note any patterns or trends', 'Ignore the data', 'Only look at the title'], correctIndex: 0, explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'whin-ent-6b', question: 'An evidence-based argument about The Industrial Revolution requires:', options: ['Just opinions', 'A clear claim supported by specific evidence and reasoning', 'No evidence', 'Only emotional appeals'], correctIndex: 1, explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'whin-ent-7a', question: 'The most important exam strategy for The Industrial Revolution is:', options: ['Guess randomly', 'Know key terms, use specific examples, and connect to course themes', 'Skip these questions', 'Only memorize definitions'], correctIndex: 1, explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'whin-ent-7b', question: 'AP multiple-choice questions about The Industrial Revolution often test:', options: ['Random trivia', 'Application of concepts to new scenarios', 'Spelling', 'Personal opinions'], correctIndex: 1, explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.', partNumber: 7, partTitle: 'AP Review' }
+  // Part 1: Core Concepts
+  {
+    id: 'whir-ent-1a',
+    question: 'Which pairing of an invention with its main effect is most accurate?',
+    options: ['Bessemer\'s process mechanized the weaving of cotton cloth', 'Cartwright\'s power loom made cheap mass-produced steel possible', 'Watt\'s improved steam engine freed factories from riverside sites', 'Hargreaves\'s spinning jenny cut the cost of pumping water from mines'],
+    correctIndex: 2,
+    explanation: 'Steam power let mills and factories locate near coal, labor, and markets instead of beside fast-flowing water. The Bessemer process made steel, the power loom wove cloth, and the spinning jenny spun thread.',
+    partNumber: 1,
+    partTitle: 'Core Concepts',
+  },
+  {
+    id: 'whir-ent-1b',
+    question: 'Manchester grew from about 25,000 people in 1770 to more than 300,000 by 1850. Which development most directly drove this growth?',
+    options: ['Factory jobs that drew migrants from the countryside', 'A rising birth rate among the families of the landed aristocracy', 'Refugees who fled to England from the French Revolution', 'The transfer of the royal court and Parliament from London'],
+    correctIndex: 0,
+    explanation: 'Cotton mills offered steady wages that pulled displaced rural workers into the city. The aristocracy was tiny, revolutionary refugees were few, and the capital never moved from London.',
+    partNumber: 1,
+    partTitle: 'Core Concepts',
+  },
+  // Part 2: Key Processes
+  {
+    id: 'whir-ent-2a',
+    question: 'No place in Britain lies more than about 70 miles from navigable water. This fact helps explain Britain\'s early industrialization mainly because',
+    options: ['coastal towns could escape the taxes paid by inland towns', 'bulk goods such as coal could be moved cheaply', 'sea breezes cooled steam engines and kept them running', 'rivers supplied all the power that factories ever needed'],
+    correctIndex: 1,
+    explanation: 'Rivers, canals, and the coast let heavy, low-value goods like coal and iron ore reach factories and ports at low cost. There was no such tax break, engines did not depend on breezes, and steam soon replaced waterpower.',
+    partNumber: 2,
+    partTitle: 'Key Processes',
+  },
+  {
+    id: 'whir-ent-2b',
+    question: 'Which advantage that helped Britain industrialize first is best classified as institutional rather than geographic?',
+    options: ['Deposits of coal lying close to deposits of iron ore', 'Deep-water harbors such as Liverpool and Bristol', 'Rivers linked to one another by a network of new canals', 'Laws that protected property and inventors\' profits'],
+    correctIndex: 3,
+    explanation: 'Patent law and secure property rights were human-made rules that rewarded investment and invention. Coal, harbors, and rivers were natural features, even though canals extended them.',
+    partNumber: 2,
+    partTitle: 'Key Processes',
+  },
+  // Part 3: Patterns & Examples
+  // source: original
+  {
+    id: 'whir-ent-3a',
+    question: 'The following summary was written for this question.\n\nIn many early textile mills, the gates were locked when the bell rang at dawn. Workers who arrived late were shut out or fined part of a day\'s wages, and further fines punished talking or leaving a machine.\n\nThese rules best illustrate which change?',
+    options: ['Guild masters regaining control over the training of apprentices', 'Clock-based discipline replacing the task rhythms of farm and craft', 'Workers owning their tools and selling the goods they produced', 'Families working together at home on orders from merchants'],
+    correctIndex: 1,
+    explanation: 'Factories required workers to keep the employer\'s hours under close supervision, unlike seasonal farm work or artisan labor paced by the task. Guild control, ownership of tools, and home production all describe the older system the factory replaced.',
+    partNumber: 3,
+    partTitle: 'Patterns & Examples',
+  },
+  {
+    id: 'whir-ent-3b',
+    question: 'Which group was most likely to take part in the Luddite machine-breaking of 1811–1816?',
+    options: ['Factory owners hoping to drive rival mills out of business', 'Skilled cloth workers whose wages new frames had undercut', 'Children employed to tend spinning frames in cotton mills', 'Landowning aristocrats who resented new industrial wealth'],
+    correctIndex: 1,
+    explanation: 'The Luddites were skilled textile workers who smashed machinery they blamed for cutting their pay and status. Owners installed the machines, children had no means to organize such raids, and aristocrats used Parliament, not hammers.',
+    partNumber: 3,
+    partTitle: 'Patterns & Examples',
+  },
+  // Part 4: Connections & Interactions
+  {
+    id: 'whir-ent-4a',
+    question: 'Which feature did German and Meiji Japanese industrialization share that set both apart from Britain\'s earlier path?',
+    options: ['Factories built and run mainly by foreign colonial governments', 'Textiles leading the way, with heavy industry following a century later', 'Growth with almost no tariffs or government involvement at all', 'A strong state role in building railways and training engineers'],
+    correctIndex: 3,
+    explanation: 'Prussia and the German states backed railways, tariffs, and technical universities, and the Meiji state built model factories before selling them to private firms. Britain\'s market-driven, textile-first path was the one that relied least on the state, and neither later case was a colony.',
+    partNumber: 4,
+    partTitle: 'Connections & Interactions',
+  },
+  {
+    id: 'whir-ent-4b',
+    question: 'Belgium was the first country on the European continent to industrialize, in the 1820s–1840s. Which factor best explains this?',
+    options: ['Cotton supplied by its colony in the Congo basin', 'Abundant cheap land that drew millions of immigrants', 'Coalfields near Liège and the arrival of British technicians', 'A customs union that joined it to the Zollverein in 1834'],
+    correctIndex: 2,
+    explanation: 'Belgium combined rich coal deposits with skills and machines brought by British workers and engineers. The Congo came under Belgian control only in the 1880s, cheap land and immigration describe the United States, and Belgium stayed outside the German Zollverein.',
+    partNumber: 4,
+    partTitle: 'Connections & Interactions',
+  },
+  // Part 5: Change Over Time
+  {
+    id: 'whir-ent-5a',
+    question: 'Approximate share of the population of England and Wales living in towns of more than 10,000 people: 1750, 17 percent; 1800, 20 percent; 1850, 41 percent; 1890, 62 percent.\n\nWhich conclusion do these figures best support?',
+    options: ['Britain was already mostly urban before factories were built', 'Urban growth in Britain stalled once railways were built after 1850', 'Most of the change came before 1800, during early mechanization', 'Most Britons came to live in cities during the late 1800s'],
+    correctIndex: 3,
+    explanation: 'The urban share passed half between 1850 and 1890, and it rose fastest in those decades. Britain was mostly rural in 1750, growth sped up rather than stalled after 1850, and only a small rise came before 1800.',
+    partNumber: 5,
+    partTitle: 'Change Over Time',
+  },
+  {
+    id: 'whir-ent-5b',
+    question: 'The People\'s Charter of 1838 demanded votes for all adult men, a secret ballot, and salaries for members of Parliament. Why did many industrial workers support it?',
+    options: ['They hoped the vote would let them change laws on work and wages', 'They wanted to restore the guild rules that limited factory output', 'They planned to seize the factories in an immediate armed revolution', 'They aimed to move into Owen\'s cooperative villages in America'],
+    correctIndex: 0,
+    explanation: 'Chartists believed that political power through the ballot would give workers a voice over the conditions of industrial life. They sought reform through Parliament, not guild restoration, armed revolution, or utopian communities.',
+    partNumber: 5,
+    partTitle: 'Change Over Time',
+  },
+  // Part 6: Problem-Solving Workshop
+  {
+    id: 'whir-ent-6a',
+    question: 'Which development best illustrates the division of the nineteenth-century world economy into an industrial core and a periphery?',
+    options: ['Germany\'s Zollverein uniting the markets of the German states', 'Chartists in Britain demanding the vote for working men', 'Egypt growing cotton for export to the mills of Lancashire', 'London building sewers after the Great Stink of 1858'],
+    correctIndex: 2,
+    explanation: 'Egypt specialized in a raw material for British factories and became dependent on world cotton prices, the periphery\'s role. The Zollverein, Chartism, and London\'s sewers were developments within industrial societies.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  {
+    id: 'whir-ent-6b',
+    question: 'After the Great Stink of 1858, Parliament funded a vast new sewer system for London. This response best illustrates',
+    options: ['the end of coal burning in British cities', 'governments taking on public health duties', 'a return of manufacturing to rural cottages', 'Britain\'s refusal to regulate industrial cities'],
+    correctIndex: 1,
+    explanation: 'The crisis pushed the state to build sanitation for the industrial city, part of a wider growth of public health measures. Coal burning continued for another century, industry did not return to cottages, and the sewers were themselves regulation and investment.',
+    partNumber: 6,
+    partTitle: 'Problem-Solving Workshop',
+  },
+  // Part 7: AP Review
+  {
+    id: 'whir-ent-7a',
+    question: 'An essay prompt asks: "Evaluate the extent to which industrialization changed the role of the British state, 1830–1900." Which thesis best responds?',
+    options: ['Industrialization was a period of great change in Britain from 1830 to 1900', 'The British state changed a great deal, since many things happened in the 1800s', 'It changed greatly, as factory laws, sewers, and voting reform drew the state into daily life', 'Industrialization began in Britain because of coal, capital, colonies, and patent laws'],
+    correctIndex: 2,
+    explanation: 'This thesis makes a claim about extent and names a line of reasoning across labor, health, and politics. The others restate the prompt, offer no real reasoning, or answer a different question about causes.',
+    partNumber: 7,
+    partTitle: 'AP Review',
+  },
+  {
+    id: 'whir-ent-7b',
+    question: 'A student writing about Robert Owen\'s model mill community at New Lanark would best contextualize it by referring to',
+    options: ['widespread alarm over child labor and factory conditions', 'Japan\'s state-built model factories of the 1870s', 'the Zollverein\'s removal of tariffs among German states', 'the Bessemer process for making cheap steel after 1856'],
+    correctIndex: 0,
+    explanation: 'Owen limited child labor and improved housing and schooling at New Lanark in response to the harsh conditions of early mills, the same concerns that produced the Factory Acts. The other choices are later or unrelated developments.',
+    partNumber: 7,
+    partTitle: 'AP Review',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -35,6 +155,6 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 4, partTitle: 'Connections & Interactions' },
     { partNumber: 5, partTitle: 'Change Over Time' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

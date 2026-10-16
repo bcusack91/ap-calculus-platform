@@ -1,203 +1,148 @@
 /**
- * Entrance Quiz — Democracy & Expansion (APUSH 1800–1848)
- * 14 questions · 7 parts (2 per part)
+ * Entrance Quiz — Democracy & Expansion (AP US History)
+ * 14 questions · 7 parts (2 per part). Rebuilt Oct 2026 from the Phase 1 lesson.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
+  // Part 1: Core Concepts
   {
     id: 'apushdem-ent-1a',
-    question: 'Which best describes the political and social structure of the United States from 1800 to 1848?',
-    options: [
-      'Mass democratic politics expanded white male suffrage by eliminating most property requirements (universal white male suffrage by 1828); a market revolution transformed the economy through canals, railroads, telegraphs, and factories; the Marshall Court (1801–35) expanded federal power; territorial expansion through the Louisiana Purchase (1803) and Mexican Cession (1848) doubled and then doubled again; and Indigenous dispossession (Indian Removal Act 1830, Trail of Tears 1838–39) accompanied this expansion',
-      'The United States from 1800 to 1848 had no expansion of suffrage of any kind, no market revolution, no Marshall Court, no territorial expansion, and no Indigenous dispossession of any kind during the entire period in any region of the United States',
-      'The United States from 1800 to 1848 was governed by the British Crown with no American political parties, no market revolution, no Marshall Court, no territorial expansion, and no Indigenous dispossession of any kind during the entire period in any region',
-      'The United States from 1800 to 1848 had no political parties, no Supreme Court, no presidential elections, and no constitutional government of any kind during the entire period in any region of the United States during the period in any region of the country'
-    ],
-    correctIndex: 0,
-    explanation: 'Period 4: mass democracy (white male suffrage) + market revolution + Marshall Court + territorial expansion + Indigenous dispossession.',
+    question: 'Andrew Jackson\'s supporters defended his practice of rewarding loyal followers with government jobs as',
+    options: ['a merit system that hired officials through competitive exams', 'a means of keeping Federalist officials in office for life', 'a plan to give the Supreme Court control over federal hiring', 'a way to take office away from an entrenched elite'],
+    correctIndex: 3,
+    explanation: 'Jacksonians argued that rotation in office broke the hold of a privileged class of officeholders and that any capable citizen could serve. Competitive exams came only with civil service reform in the 1880s, the Court had no role in hiring, and the system removed rather than protected long-serving officials.',
     partNumber: 1,
-    partTitle: 'Core Concepts'
+    partTitle: 'Core Concepts',
   },
   {
     id: 'apushdem-ent-1b',
-    question: 'Which best describes the Jacksonian Democrat-Whig division (1834–48)?',
-    options: [
-      "Jacksonian Democrats favored strict construction (selectively), opposed the National Bank, opposed federally funded internal improvements, supported low tariffs, and drew their voter base from southern and western farmers, urban workers, and new immigrants; Whigs favored loose construction, supported the National Bank, supported federally funded internal improvements (Clay's American System), supported high protective tariffs, and drew their voter base from northern industrialists, southern planters, and reform-minded evangelicals",
-      "Jacksonian Democrats and Whigs were entirely identical in constitutional construction, banking policy, internal improvements, tariff policy, and voter base with no meaningful differences of any kind during the entire period from 1834 through 1848 in any region",
-      "Jacksonian Democrats supported the National Bank and high tariffs while Whigs opposed the Bank and supported low tariffs and strict construction during the entire period from 1834 through 1848 in any region of the United States during the period",
-      "There were no Jacksonian Democrats or Whigs during the entire period from 1834 through 1848 in any region of the United States with no party system of any kind during the entire period in any region of the United States during the period"
-    ],
-    correctIndex: 0,
-    explanation: 'Democrats: strict + no Bank + no internal improvements + low tariff + farmers/workers/immigrants. Whigs: loose + Bank + American System + high tariff + industrialists/planters/evangelicals.',
+    question: 'The market revolution of the early 1800s affected the South mainly by',
+    options: ['replacing plantation agriculture with textile factories', 'ending the domestic trade in enslaved people', 'deepening its reliance on cotton and enslaved labor', 'cutting its trade ties with British and northern mills'],
+    correctIndex: 2,
+    explanation: 'Demand from British and New England mills made cotton the nation\'s leading export and drew slavery deeper into the Deep South. Factories stayed rare in the South, the domestic slave trade grew, and southern ties to northern and British buyers strengthened.',
     partNumber: 1,
-    partTitle: 'Core Concepts'
+    partTitle: 'Core Concepts',
   },
+  // Part 2: The Jeffersonian Republic and the Rise of Nationalism, 1800–1824
   {
     id: 'apushdem-ent-2a',
-    question: 'Which best describes the Marshall Court (1801–35)?',
-    options: [
-      "Under Federalist Chief Justice John Marshall, the Supreme Court established judicial review (Marbury v. Madison 1803), upheld implied federal powers and federal supremacy over state taxation (McCulloch v. Maryland 1819), upheld the contracts clause to protect corporate charters (Dartmouth College v. Woodward 1819), expanded federal commerce-clause power (Gibbons v. Ogden 1824), and recognized Cherokee national sovereignty (Worcester v. Georgia 1832) — all expanding federal authority and embedding Federalist constitutional principles in case law",
-      "The Marshall Court established no judicial review, no implied federal powers, no federal supremacy, no commerce-clause expansion, and no recognition of Cherokee sovereignty of any kind during the entire period from 1801 through 1835 in any region",
-      "The Marshall Court existed but had no significant decisions of any kind during the entire period from 1801 through 1835 in any region of the United States during the period in any region of the United States during the period in any region",
-      "The Marshall Court restricted federal power in every decision and ruled against the federal government in every case during the entire period from 1801 through 1835 in any region of the United States during the period in any region of the country"
-    ],
+    question: 'In June 1812 the House voted 79–49 to declare war on Britain, with New England and most Federalists voting no. Which conclusion does this vote best support?',
+    options: ['The coastal regions hurt most by impressment were least eager for war', 'Every region agreed that impressment alone justified a war with Britain', 'Western members opposed war because they feared British Canada', 'Federalists led the call for war to protect New England shipping'],
     correctIndex: 0,
-    explanation: 'Marshall Court (1801-35): Marbury 1803 (judicial review) + McCulloch 1819 (implied powers + supremacy) + Dartmouth 1819 (contracts) + Gibbons 1824 (commerce) + Worcester 1832 (Cherokee).',
+    explanation: 'New England shipping suffered most from impressment, yet its members voted against war, while western and southern War Hawks, worried about British-backed Native resistance, voted for it. The vote was divided, westerners favored war, and Federalists opposed it.',
     partNumber: 2,
-    partTitle: 'Key Processes'
+    partTitle: 'The Jeffersonian Republic and the Rise of Nationalism, 1800–1824',
   },
   {
     id: 'apushdem-ent-2b',
-    question: 'Which best describes the Bank War (1832–36)?',
-    options: [
-      "President Andrew Jackson vetoed the recharter of the Second Bank of the United States in 1832, framing the Bank as an unconstitutional tool of 'rich and powerful' elites; after his 1832 reelection, Jackson removed federal deposits from the Bank and placed them in state 'pet banks'; the Bank's charter expired in 1836; the Specie Circular (1836) requiring gold/silver for federal land purchases helped trigger the Panic of 1837 under Jackson's successor Van Buren",
-      "Jackson defended and recharted the Second Bank of the United States in 1832 with no veto, no removal of deposits, no pet banks, no Specie Circular, and no Panic of 1837 of any kind during the entire period from 1832 through 1837 in any region",
-      "There was no Second Bank of the United States during the entire period from 1816 through 1836 in any region of the United States with no Bank War, no Bank Veto, and no Specie Circular of any kind during the entire period in any region",
-      "Jackson supported the National Bank and opposed only the Bill of Rights during the entire period from 1832 through 1836 in any region of the United States with no Bank Veto and no Bank War of any kind during the period in any region"
-    ],
-    correctIndex: 0,
-    explanation: 'Bank War (1832-36): Jackson Veto 1832 + reelection 1832 + deposits removed → "pet banks" + charter expires 1836 + Specie Circular 1836 → Panic 1837.',
+    question: 'The Hartford Convention of 1814–1815 contributed most directly to',
+    options: ['the election of Andrew Jackson as president in 1828', 'the adoption of the Monroe Doctrine in 1823', 'the collapse of the Federalist Party as a national force', 'the passage of the Missouri Compromise in 1820'],
+    correctIndex: 2,
+    explanation: 'New England Federalists proposed constitutional changes just as news of the Treaty of Ghent and the victory at New Orleans arrived, making them look disloyal, and the party faded. Jackson\'s election, the Monroe Doctrine, and the Missouri Compromise had other causes.',
     partNumber: 2,
-    partTitle: 'Key Processes'
+    partTitle: 'The Jeffersonian Republic and the Rise of Nationalism, 1800–1824',
   },
+  // Part 3: Jackson and Federal Power: Removal and Nullification in Their Own Words
   {
     id: 'apushdem-ent-3a',
-    question: 'Which best describes Indian Removal under Jackson (1830–39)?',
-    options: [
-      "Congress passed the Indian Removal Act in 1830 authorizing the president to negotiate (or coerce) treaties exchanging Indigenous lands east of the Mississippi for lands in Indian Territory (modern Oklahoma); the Cherokee won at the Supreme Court in Worcester v. Georgia (1832), but Jackson defied the decision; the Treaty of New Echota (1835) signed by an unauthorized minority of Cherokee was used to justify removal; the Trail of Tears (1838–39) forced approximately 16,000 Cherokee west, with approximately 4,000 dying en route",
-      "There was no Indian Removal Act, no Worcester v. Georgia, no Treaty of New Echota, and no Trail of Tears of any kind during the entire period from 1830 through 1840 in any region of the United States during the period in any region",
-      "Indian Removal was a peaceful voluntary migration of Cherokee with no federal coercion, no Supreme Court involvement, no New Echota Treaty, and no deaths of any kind during the entire period from 1830 through 1840 in any region of the United States",
-      "Indian Removal applied only to non-Indigenous British settlers and the Cherokee remained on their treaty-defined territory throughout the entire period from 1830 through 1860 in any region of the United States during the period in any region"
-    ],
-    correctIndex: 0,
-    explanation: 'Indian Removal: Removal Act 1830 + Worcester 1832 (Cherokee won, Jackson defied) + Treaty of New Echota 1835 + Trail of Tears 1838-39 (~16K removed, ~4K died).',
+    question: 'Which best explains why Andrew Jackson sided with Georgia against the Cherokee but opposed South Carolina during the Nullification Crisis?',
+    options: ['He held a consistent belief that any state could override federal law', 'He sought Native land for settlers but saw a defiant state as a peril to the Union', 'He followed Supreme Court rulings in both cases as his oath required of him', 'He depended on New England votes and acted mainly to please northern voters'],
+    correctIndex: 1,
+    explanation: 'Jackson used state power where it served removal and federal power where a state\'s defiance endangered the Union and his authority. He was not consistent about state sovereignty, he declined to enforce Worcester v. Georgia, and his base was southern and western.',
     partNumber: 3,
-    partTitle: 'Patterns & Examples'
+    partTitle: 'Jackson and Federal Power: Removal and Nullification in Their Own Words',
   },
   {
     id: 'apushdem-ent-3b',
-    question: 'Which best describes the Mexican-American War (1846–48)?',
-    options: [
-      "President Polk, elected in 1844 on an expansion platform, sent troops into disputed Texas-Mexico border territory after Texas annexation in 1845; war was declared in 1846; the U.S. won, and the Treaty of Guadalupe Hidalgo (1848) ceded approximately one-third of Mexico (modern California, Nevada, Utah, Arizona, New Mexico, and parts of Colorado) to the U.S. for $15 million; the Wilmot Proviso (proposed 1846) tried unsuccessfully to ban slavery in any acquired territory, sharpening sectional crisis",
-      "There was no Mexican-American War during the entire period from 1846 through 1848 in any region of the United States with no Texas annexation, no Treaty of Guadalupe Hidalgo, and no Mexican Cession of any kind during the entire period in any region",
-      "The Mexican-American War was won by Mexico and the United States ceded California, Texas, and Florida to Mexico under the Treaty of Guadalupe Hidalgo in 1848 in any region of the United States during the period in any region",
-      "The Mexican-American War involved no territorial transfer of any kind and the United States acquired no Mexican territory during the entire period from 1846 through 1848 in any region of the United States during the period in any region"
-    ],
-    correctIndex: 0,
-    explanation: 'Mexican-American War (1846-48): Polk 1844 expansion + Texas annexation 1845 + war 1846 → Treaty Guadalupe Hidalgo 1848 (~1/3 of Mexico for $15M) + Wilmot Proviso (failed ban on slavery in cession).',
+    question: 'The Treaty of New Echota (1835) is best described as',
+    options: ['a Supreme Court ruling that upheld Cherokee sovereignty', 'an agreement that let the Cherokee keep their lands in Georgia', 'a law passed by Georgia granting the Cherokee citizenship', 'a removal pact signed by a faction most of the nation rejected'],
+    correctIndex: 3,
+    explanation: 'Members of the "Treaty Party" agreed to removal, while Principal Chief John Ross and about 15,000 Cherokee protested; the Senate ratified it by one vote, giving legal cover for the Trail of Tears. It was not a court ruling, a Georgia law, or a guarantee of Cherokee land.',
     partNumber: 3,
-    partTitle: 'Patterns & Examples'
+    partTitle: 'Jackson and Federal Power: Removal and Nullification in Their Own Words',
   },
+  // Part 4: The Market Revolution and the Second Party System: Data and Causation
+  // source: Andrew Jackson, Veto Message on the Bank of the United States, July 10, 1832; verbatim
   {
     id: 'apushdem-ent-4a',
-    question: 'Which best describes the connection between the market revolution and antebellum reform movements?',
-    options: [
-      'The market revolution (canals, railroads, telegraphs, factories, urbanization) created social dislocations, new urban poverty, and growing immigrant populations that fueled reform movements: temperance (responding to working-class drinking), abolitionism (responding to slavery in the cotton economy), public education (Horace Mann), women\'s rights (Seneca Falls 1848 organized women alienated from politics), prison and asylum reform (Dorothea Dix), and utopian communities — all rooted in the Second Great Awakening\'s evangelical perfectionism',
-      'The market revolution had no connection to antebellum reform movements of any kind with no temperance, no abolitionism, no public education, no women\'s rights, no prison reform, and no Second Great Awakening of any kind during the entire period in any region',
-      'The market revolution and antebellum reform movements existed entirely separately during the entire period from 1820 through 1860 with no Second Great Awakening connection of any kind in any region of the United States during the period in any region',
-      'There was no market revolution and no antebellum reform movements of any kind during the entire period from 1820 through 1860 in any region of the United States with no canals, no railroads, no telegraphs, and no factories of any kind in any region'
-    ],
-    correctIndex: 0,
-    explanation: 'Market revolution → social dislocations → reform movements (temperance, abolition, education, women\'s rights, prison/asylum, utopian) rooted in Second Great Awakening.',
+    question: '"...when the laws undertake to add to these natural and just advantages artificial distinctions, to grant titles, gratuities, and exclusive privileges, to make the rich richer and the potent more powerful, the humble members of society—the farmers, mechanics, and laborers—who have neither the time nor the means of securing like favors to themselves, have a right to complain of the injustice of their Government."\n— Andrew Jackson, Bank Veto Message, 1832\n\nWhich group in the 1830s was most likely to support the position in the excerpt?',
+    options: ['Whigs who followed Henry Clay and Daniel Webster', 'Northern manufacturers who wanted a national bank', 'Democrats, many of them western growers and urban artisans', 'Investors who held stock in the Second Bank'],
+    correctIndex: 2,
+    explanation: 'Jackson\'s attack on privilege appealed to the Democratic coalition of farmers, workers, and others suspicious of banks. Whigs, manufacturers, and Bank stockholders supported the Bank that Jackson vetoed.',
     partNumber: 4,
-    partTitle: 'Connections & Interactions'
+    partTitle: 'The Market Revolution and the Second Party System: Data and Causation',
   },
   {
     id: 'apushdem-ent-4b',
-    question: 'Which best describes the connection between the Mexican Cession (1848) and sectional crisis?',
-    options: [
-      "The Mexican Cession (CA, NM, AZ, UT, NV, CO) reopened the slavery-in-territories question that the Missouri Compromise had supposedly settled; the Wilmot Proviso (1846) tried to ban slavery in any acquired territory and was repeatedly defeated in the Senate; California's request for free-state admission triggered the Compromise of 1850; sectional disputes over the cession's organization sharpened into the Kansas-Nebraska Act (1854) and Bleeding Kansas, leading directly toward the Civil War",
-      "The Mexican Cession had no connection to sectional crisis of any kind with no Wilmot Proviso, no Compromise of 1850, no Kansas-Nebraska Act, and no Bleeding Kansas of any kind during the entire period in any region of the United States",
-      "The Mexican Cession resolved all sectional crisis permanently with no further sectional disputes of any kind during the entire period from 1848 through the Civil War in any region of the United States during the period in any region",
-      "There was no Mexican Cession in 1848 and no sectional crisis of any kind during the entire period from 1846 through 1860 in any region of the United States during the period in any region of the United States during the period"
-    ],
-    correctIndex: 0,
-    explanation: 'Mexican Cession 1848 reopened slavery question → Wilmot Proviso 1846 → Compromise of 1850 → Kansas-Nebraska 1854 → Bleeding Kansas → Civil War.',
+    question: 'Approximate figures: cotton production rose from 335,000 bales in 1820 to 1.35 million in 1840, and the enslaved population grew from 1.5 million to 2.5 million. With the international slave trade banned since 1808, how did the enslaved population grow?',
+    options: ['Through illegal shipments that supplied most of the increase', 'Through births and forced sales out of the Upper South', 'Through Mexico\'s transfer of enslaved people to Texas planters', 'Through state laws that enslaved free Black northerners'],
+    correctIndex: 1,
+    explanation: 'Growth came mostly from births and from a huge internal slave trade that forced hundreds of thousands from Virginia and Maryland to the cotton lands of the Deep South. Smuggling was small, Mexico abolished slavery, and northern states did not enslave free Black residents.',
     partNumber: 4,
-    partTitle: 'Connections & Interactions'
+    partTitle: 'The Market Revolution and the Second Party System: Data and Causation',
   },
+  // Part 5: Manifest Destiny and the Mexican-American War: Connections and Misconceptions
+  // source: Ulysses S. Grant, Personal Memoirs of U. S. Grant, vol. 1, 1885; verbatim
   {
     id: 'apushdem-ent-5a',
-    question: 'Which best describes the change in American voter participation between the 1824 election and the 1840 election?',
-    options: [
-      'Voter turnout among eligible voters increased dramatically from approximately 25 percent in 1824 (when most states still had property requirements and chose presidential electors via state legislatures) to approximately 80 percent in 1840 (after most property requirements had been eliminated and state legislatures had moved to popular election of presidential electors); the rise reflected mass party mobilization, the spread of newspapers, and the development of competitive two-party politics',
-      'Voter turnout remained constant or declined between 1824 and 1840 with no expansion of suffrage, no elimination of property requirements, and no mass party mobilization of any kind during the entire period in any region of the United States',
-      'Voter turnout decreased from approximately 80 percent in 1824 to approximately 25 percent in 1840 due to mass disfranchisement of white male voters during the entire period in any region of the United States during the period in any region',
-      'There were no presidential elections in 1824 or 1840 and no voter turnout data of any kind during the entire period from 1820 through 1840 in any region of the United States during the period in any region of the United States during the period'
-    ],
-    correctIndex: 0,
-    explanation: 'Turnout 1824 (~25%) → 1840 (~80%): elimination of property requirements + popular election of electors + mass party mobilization + newspapers + two-party competition.',
+    question: '"For myself, I was bitterly opposed to the measure, and to this day regard the war, which resulted, as one of the most unjust ever waged by a stronger against a weaker nation."\n— Ulysses S. Grant, a junior officer in the war, writing in his memoirs, 1885\n\nGrant\'s view of the Mexican-American War most closely matches that of',
+    options: ['Democrats who saw the war as fulfilling Manifest Destiny', 'Whigs who charged that Polk had provoked the war', 'Texans who insisted the Nueces River was the true border', 'Planters who hoped the war would add new slave states'],
+    correctIndex: 1,
+    explanation: 'Like Lincoln and other Whigs, Grant judged the war an unjust act of aggression begun by the United States. Democrats and expansionist planters supported it, and Texans claimed the Rio Grande, not the Nueces, as the border.',
     partNumber: 5,
-    partTitle: 'Change Over Time'
+    partTitle: 'Manifest Destiny and the Mexican-American War: Connections and Misconceptions',
   },
   {
     id: 'apushdem-ent-5b',
-    question: 'Which best describes a major continuity from the colonial period through the early republic regarding Indigenous policy?',
-    options: [
-      'Continuous Indigenous dispossession through treaty-making, military force, and settler expansion: from colonial-era treaties (e.g., Pequot War 1637, King Philip\'s War 1675) through the Northwest Indian War (1785–95) and the Treaty of Greenville (1795), through Tecumseh\'s confederacy and the War of 1812, through the Indian Removal Act (1830) and Trail of Tears (1838–39); the methods (treaty/war/forced removal) and the underlying logic (settler land hunger backed by federal power) showed deep continuity',
-      'Indigenous policy from the colonial period through the early republic was characterized by complete recognition of Indigenous sovereignty with no dispossession of any kind during the entire period from 1607 through 1840 in any region of the United States',
-      'Indigenous policy was discontinuous between the colonial period and the early republic with no treaty-making, no military force, and no settler expansion of any kind during the entire period in any region of the United States',
-      'There were no Indigenous peoples in North America during the entire period from 1607 through 1840 in any region of the United States with no dispossession, no treaty-making, and no military force of any kind in any region'
-    ],
-    correctIndex: 0,
-    explanation: 'Continuity: Indigenous dispossession via treaty/war/forced removal from Pequot 1637 → King Philip\'s 1675 → NW Indian War 1785-95 → War of 1812 → Removal 1830 → Trail of Tears 1838-39.',
+    question: 'Congress annexed Texas in 1845 by joint resolution rather than by treaty mainly because',
+    options: ['Mexico had asked Congress to approve the annexation quickly', 'Britain demanded that Texas join the Union before the Oregon talks', 'the Constitution forbids the president to sign treaties with republics', 'a treaty needed a two-thirds Senate vote that annexation lacked'],
+    correctIndex: 3,
+    explanation: 'The Senate had rejected an annexation treaty in 1844, so supporters used a joint resolution that needed only simple majorities in both houses. Mexico opposed annexation, the Constitution has no such rule, and Britain made no such demand.',
     partNumber: 5,
-    partTitle: 'Change Over Time'
+    partTitle: 'Manifest Destiny and the Mexican-American War: Connections and Misconceptions',
   },
+  // Part 6: Problem-Solving Workshop
+  // source: James Monroe, Seventh Annual Message to Congress, December 2, 1823; verbatim
   {
     id: 'apushdem-ent-6a',
-    question: "Which historical context is most essential for sourcing Jackson's Bank Veto Message (1832)?",
-    options: [
-      "The veto was issued in July 1832 in response to Congress's recharter of the Second Bank of the United States; Henry Clay had pushed early recharter as a 1832 election issue, hoping to make the Bank a wedge against Jackson; instead, Jackson's veto rallied a populist coalition; the message framed the Bank as an unconstitutional tool of 'rich and powerful' elites and helped Jackson decisively win the 1832 election against Clay",
-      "The veto was issued in 1816 by James Madison to charter the Second Bank with no Henry Clay involvement, no 1832 election, and no Jackson of any kind during the entire period from 1816 through 1832 in any region of the United States",
-      "The veto was issued in 1841 by John Tyler against a Whig-proposed third bank with no Jackson involvement, no Clay election strategy, and no Second Bank of any kind during the entire period from 1832 through 1841 in any region",
-      "There was no Bank Veto in 1832 and no Bank War of any kind during the entire period from 1830 through 1840 in any region of the United States during the period in any region of the United States during the period in any region"
-    ],
+    question: '"In the wars of the European powers in matters relating to themselves we have never taken any part, nor does it comport with our policy to do so."\n— President James Monroe, annual message to Congress, 1823\n\nWhich fact best explains why the United States could announce its policy toward Europe and the Americas in 1823 despite having a small navy?',
+    options: ['Britain\'s fleet also stood against any recolonization of Latin America', 'Spain had already given up all claims to its former colonies by treaty', 'The Holy Alliance had agreed to let the United States govern Latin America', 'The United States had just defeated Britain decisively in the War of 1812'],
     correctIndex: 0,
-    explanation: 'Bank Veto context: Clay\'s early recharter as 1832 election wedge → Jackson Veto rallied populist coalition → Jackson won 1832 election decisively over Clay.',
+    explanation: 'Britain, eager to trade with the new Latin American republics, opposed any European attempt to retake them, and its navy gave the doctrine force. Spain had not yet recognized its colonies\' independence, the Holy Alliance made no such agreement, and the War of 1812 ended in a draw.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: 'Problem-Solving Workshop',
   },
   {
     id: 'apushdem-ent-6b',
-    question: "Which best identifies the point of view of Marshall's Worcester v. Georgia (1832) opinion?",
-    options: [
-      "Federalist-tradition Chief Justice asserting judicial supremacy over state actions and recognizing Cherokee national sovereignty within their treaty-defined territory; the opinion drew on Marshall's broader Federalist project of constraining state power and elevating federal (and treaty-based) authority — but was famously ignored by Jackson, exposing the Court's dependence on executive enforcement",
-      "Jacksonian Democratic Chief Justice supporting Georgia's seizure of Cherokee territory with no recognition of Cherokee sovereignty and no Federalist tradition of any kind during the entire period in any region of the United States",
-      "British Crown loyalist asserting British sovereignty over both Georgia and the Cherokee Nation with no relationship to American constitutional law of any kind during the entire period in any region of the United States",
-      "Cherokee Nation chief asserting Cherokee sovereignty with no Supreme Court opinion of any kind during the entire period from 1831 through 1832 in any region of the United States during the period in any region"
-    ],
+    question: 'Alexis de Tocqueville published Democracy in America in 1835 after touring the United States. A historian using it as evidence should consider that Tocqueville',
+    options: ['wrote for French readers who were debating democracy at home', 'was an American Democrat campaigning for Jackson\'s reelection', 'never visited the United States and relied on secondhand reports', 'was hired by Congress to write an official history of the nation'],
     correctIndex: 0,
-    explanation: 'Worcester POV: Federalist-tradition Marshall, judicial supremacy over states + Cherokee sovereignty; ignored by Jackson → exposed Court\'s dependence on executive enforcement.',
+    explanation: 'A French aristocrat writing for Europeans, Tocqueville used America to weigh the promise and dangers of democracy for France, which shapes what he stressed. He was not an American partisan, he toured the country in 1831–1832, and his work was not commissioned by Congress.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: 'Problem-Solving Workshop',
   },
+  // Part 7: AP Review
   {
     id: 'apushdem-ent-7a',
-    question: 'In which year was the Indian Removal Act passed?',
-    options: ['1820', '1828', '1830', '1838'],
+    question: 'Madison\'s veto of the Bonus Bill (1817) and Jackson\'s veto of the Maysville Road bill (1830) both reflected',
+    options: ['support for Henry Clay\'s American System', 'opposition to any tariff on imported goods', 'doubts about federal funding of local roads', 'a plan to give road building to the Supreme Court'],
     correctIndex: 2,
-    explanation: '1830 (Indian Removal Act). 1820 = Missouri Compromise; 1828 = Jackson elected; 1838 = Trail of Tears begins.',
+    explanation: 'Both presidents questioned whether the Constitution allowed federal money for internal improvements within a state. Clay\'s American System called for such spending, the vetoes concerned roads and canals rather than tariffs, and the Court had no role in road building.',
     partNumber: 7,
-    partTitle: 'AP Review'
+    partTitle: 'AP Review',
   },
   {
     id: 'apushdem-ent-7b',
-    question: 'Which best demonstrates AP comparison skill across early-19th-century party systems?',
-    options: [
-      "Jacksonian Democrats and Whigs both organized as competitive mass parties with newspapers, conventions, and voter mobilization, but Democrats favored strict construction, opposed the National Bank, opposed federally funded internal improvements, supported low tariffs, and drew their base from southern/western farmers, urban workers, and new immigrants; Whigs favored loose construction, supported the Bank, supported the American System (internal improvements + protective tariffs + national bank), and drew their base from northern industrialists, southern planters, and reform-minded evangelicals",
-      "Jacksonian Democrats and Whigs were entirely identical in party organization, constitutional construction, banking policy, internal improvements, tariffs, and voter base with no meaningful differences of any kind during the entire period from 1834 through 1856 in any region",
-      "Jacksonian Democrats and Whigs had no shared themes of any kind and cannot be compared in any meaningful way during the entire period from 1834 through 1856 in any region of the United States during the period",
-      "Neither Jacksonian Democrats nor Whigs existed during the early 19th century and there was no party system of any kind during the entire period from 1828 through 1854 in any region of the United States during the period in any region"
-    ],
+    question: 'Which statement describes a continuity in American politics from 1800 to 1848?',
+    options: ['Each new territorial gain reopened the question of slavery\'s expansion', 'The Federalist Party remained a major force in every presidential election', 'Property requirements for white male voters stayed in place in most states', 'The federal government kept the Bank of the United States throughout'],
     correctIndex: 0,
-    explanation: 'AP comparison: name shared theme (mass party organization, mobilization) AND specific differences (Democrats: strict + no Bank + no improvements + low tariff + farmers/workers; Whigs: loose + Bank + American System + industrialists/planters/evangelicals).',
+    explanation: 'From Louisiana and Missouri to Texas and the Mexican Cession, every addition raised the question of whether slavery would spread. The Federalists collapsed after 1815, most states dropped property requirements, and the national bank ended in 1811 and again in 1836.',
     partNumber: 7,
-    partTitle: 'AP Review'
-  }
+    partTitle: 'AP Review',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -207,11 +152,11 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Core Concepts' },
-    { partNumber: 2, partTitle: 'Key Processes' },
-    { partNumber: 3, partTitle: 'Patterns & Examples' },
-    { partNumber: 4, partTitle: 'Connections & Interactions' },
-    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 2, partTitle: 'The Jeffersonian Republic and the Rise of Nationalism, 1800–1824' },
+    { partNumber: 3, partTitle: 'Jackson and Federal Power: Removal and Nullification in Their Own Words' },
+    { partNumber: 4, partTitle: 'The Market Revolution and the Second Party System: Data and Causation' },
+    { partNumber: 5, partTitle: 'Manifest Destiny and the Mexican-American War: Connections and Misconceptions' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

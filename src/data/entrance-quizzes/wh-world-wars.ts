@@ -1,153 +1,149 @@
 /**
- * Entrance Quiz - Causes & Conduct of the World Wars (c. 1900-1945) (AP World History)
- * 14 questions - 7 parts (2 per part)
+ * Entrance Quiz — Causes & Conduct of the World Wars (AP World History: Modern)
+ * 14 questions · 7 parts (2 per part). Rebuilt Oct 2026 from the Phase 1 lesson.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
+  // Part 1: Core Concepts
   {
     id: 'whww-ent-1a',
-    question: 'What does the AP "MAIN" framework summarize?',
-    options: ['Long-term causes of WWI: Militarism, Alliances, Imperialism, Nationalism', 'Postwar U.S. naval strategy in the Pacific theater after 1945', 'The four Soviet five-year plans of the 1930s under Stalin', 'British colonial economic policy across the African dependencies'],
-    correctIndex: 0,
-    explanation: 'MAIN is the standard AP shorthand for the long-term structural causes of WWI.',
+    question: 'In an essay on the causes of World War I, which of the following is best classified as an immediate trigger rather than a long-term cause?',
+    options: ['The Anglo-German naval race that began after 1906', 'The rival blocs of the Triple Entente and Triple Alliance', 'Austria-Hungary\'s ultimatum to Serbia in July 1914', 'Pan-Slavic nationalism spreading through the Balkans'],
+    correctIndex: 2,
+    explanation: 'The ultimatum followed the Sarajevo assassination by a few weeks and set the alliance commitments in motion. The naval race, the alliance blocs, and Balkan nationalism built up over years and are background causes.',
     partNumber: 1,
-    partTitle: 'Core Concepts'
+    partTitle: 'Core Concepts',
   },
   {
     id: 'whww-ent-1b',
-    question: 'Which immediate event triggered the outbreak of WWI in 1914?',
-    options: ['Pearl Harbor attack', 'Assassination of Archduke Franz Ferdinand in Sarajevo', 'German invasion of Poland', 'Russian Revolution'],
+    question: 'Germany\'s Schlieffen Plan called for a rapid attack on France through Belgium if war with Russia began. The plan helps explain the spread of the war in 1914 mainly because it',
+    options: ['guaranteed that Belgium would remain neutral throughout the conflict', 'turned an eastern crisis into fighting in the west', 'ensured that Britain would stay out of a continental war', 'placed Italy at the center of the fighting from the start'],
     correctIndex: 1,
-    explanation: "The Sarajevo assassination (June 28, 1914) activated alliance commitments and triggered general war within six weeks.",
+    explanation: 'Once Russia mobilized, the plan required Germany to strike France first, and the invasion of Belgium brought Britain into the war. It violated Belgian neutrality, drew Britain in, and had nothing to do with Italy, which stayed neutral in 1914.',
     partNumber: 1,
-    partTitle: 'Core Concepts'
+    partTitle: 'Core Concepts',
   },
+  // Part 2: Key Processes
+  // source: original
   {
     id: 'whww-ent-2a',
-    question: 'Which best defines total war?',
-    options: ['Mobilization of entire societies, economies, and colonial empires for sustained industrial conflict', 'A limited dynastic war fought primarily by mercenaries under aristocratic command', 'A war fought entirely by small professional armies without civilian involvement', 'A naval blockade campaign limited to the open ocean and coastal trade routes'],
+    question: 'Described image: a British poster from World War II shows a family dinner table with modest portions and urges citizens to grow their own vegetables and waste nothing.\n\nThe poster is best understood as evidence of',
+    options: ['a government managing civilian consumption during total war', 'a private company advertising a new line of canned foods', 'a protest against the government\'s decision to go to war', 'the return of free markets to Britain once fighting began'],
     correctIndex: 0,
-    explanation: 'Total war involves whole-society mobilization: economy, civilians, propaganda, and colonial labor.',
+    explanation: 'Rationing and grow-your-own campaigns extended state control into the household so that food and shipping could serve the war effort. The poster is official, supports rather than protests the war, and reflects state control rather than free markets.',
     partNumber: 2,
-    partTitle: 'Key Processes'
+    partTitle: 'Key Processes',
   },
   {
     id: 'whww-ent-2b',
-    question: 'Which colonial force served Britain in large numbers in both world wars?',
-    options: ['French Foreign Legion', 'Indian Army', 'Russian Imperial Guard', 'Australian First Fleet'],
-    correctIndex: 1,
-    explanation: "The Indian Army contributed roughly 1.3M soldiers in WWI and 2.5M in WWII (the largest volunteer force in history).",
+    question: 'Korean and Taiwanese conscripts served Japan in World War II, much as the Indian Army served Britain. Which conclusion does this comparison best support?',
+    options: ['Only European empires relied on soldiers from their colonies', 'Britain stopped recruiting colonial soldiers after World War I', 'Japan\'s colonial soldiers were volunteers who chose to fight', 'Asian and European empires alike drew colonial subjects into war'],
+    correctIndex: 3,
+    explanation: 'Japan, like Britain and France, mobilized colonial populations for its war effort. Conscription was not limited to European empires, it was compulsory, and India supplied about 2.5 million soldiers to Britain in World War II.',
     partNumber: 2,
-    partTitle: 'Key Processes'
+    partTitle: 'Key Processes',
   },
+  // Part 3: Patterns & Examples
   {
     id: 'whww-ent-3a',
-    question: 'Which two 1916 battles are classic examples of WWI attritional warfare?',
-    options: ['Somme and Verdun', 'Stalingrad and Kursk', 'Tsushima and Mukden', 'Marne and Tannenberg'],
+    question: 'The Battle of the Somme (1916) produced about one million casualties, and Verdun (1916) about 700,000, while front lines moved only a few miles. Which best explains this pattern?',
+    options: ['Defensive firepower outmatched the tactics used to attack', 'Armies lacked enough soldiers to mount large offensives', 'Generals avoided major battles to save their troops\' lives', 'Tanks and aircraft had already made infantry useless by 1916'],
     correctIndex: 0,
-    explanation: 'The Somme and Verdun together produced more than 1.5 million casualties for minimal territorial change.',
+    explanation: 'Machine guns, artillery, and barbed wire let defenders cut down attackers, producing attrition without breakthroughs. Both sides had millions of soldiers, generals launched huge offensives, and tanks first appeared only late in the Somme.',
     partNumber: 3,
-    partTitle: 'Patterns & Examples'
+    partTitle: 'Patterns & Examples',
   },
   {
     id: 'whww-ent-3b',
-    question: 'Which Nazi concept justified eastward expansion and ethnic cleansing?',
-    options: ['Manifest Destiny', 'Lebensraum', 'Bushido', 'Mandate of Heaven'],
-    correctIndex: 1,
-    explanation: 'Lebensraum ("living space") was the Nazi ideological justification for invasion and ethnic cleansing in Eastern Europe.',
+    question: 'Which statement best describes how the world wars affected women\'s work?',
+    options: ['Women were barred from factory jobs to protect them from danger', 'Women\'s roles stayed largely unchanged in every country at war', 'Labor shortages opened industrial and military roles to women', 'Only Soviet women entered paid work during the two world wars'],
+    correctIndex: 2,
+    explanation: 'With men at the front, women filled munitions factories in Britain, war plants in the United States, and combat roles in the Soviet Union. Their roles changed sharply, and the shift was not limited to one country.',
     partNumber: 3,
-    partTitle: 'Patterns & Examples'
+    partTitle: 'Patterns & Examples',
   },
+  // Part 4: Connections & Interactions
+  // source: Atlantic Charter, August 14, 1941; verbatim
   {
     id: 'whww-ent-4a',
-    question: 'Which 1917 revolution was made possible by WWI exhaustion?',
-    options: ['French Revolution', 'Bolshevik Revolution', 'Cuban Revolution', 'Iranian Revolution'],
+    question: '"...they respect the right of all peoples to choose the form of government under which they will live..."\n— Atlantic Charter, issued by Franklin Roosevelt and Winston Churchill, 1941\n\nColonized peoples such as Indian nationalists could most effectively use this statement to',
+    options: ['justify Japan\'s expansion across East and Southeast Asia', 'argue that self-determination should apply to them', 'defend the Treaty of Versailles against German critics', 'support the return of colonies taken from Germany in 1919'],
     correctIndex: 1,
-    explanation: 'The Bolshevik Revolution (October 1917) emerged from collapse on the Eastern Front and food shortages.',
+    explanation: 'Nationalists seized on the Allies\' own language to demand independence, even though Churchill said the clause was meant for Nazi-occupied Europe. The statement did not support Japanese expansion, Versailles, or restoring German colonies.',
     partNumber: 4,
-    partTitle: 'Connections & Interactions'
+    partTitle: 'Connections & Interactions',
   },
   {
     id: 'whww-ent-4b',
-    question: 'Which contradictory British wartime pledges shaped the modern Middle East?',
-    options: ['Sykes-Picot Agreement and the Treaty of Sevres', 'Hussein-McMahon Correspondence and the Balfour Declaration', 'Atlantic Charter and the Marshall Plan', 'Twelve Points and the Locarno Treaties'],
-    correctIndex: 1,
-    explanation: 'Hussein-McMahon (1915) promised Arab independence; the Balfour Declaration (1917) promised a Jewish homeland in Palestine.',
+    question: 'Which best explains why the Bolsheviks were able to seize power in Russia in 1917?',
+    options: ['A German invasion had already removed the tsar from his throne', 'The Western Allies sent troops to install Lenin in Petrograd', 'Russia had won the war and its soldiers demanded rewards', 'War losses and food shortages had discredited the old order'],
+    correctIndex: 3,
+    explanation: 'Military defeats, mass casualties, and hunger brought down the tsar in February 1917 and undermined the provisional government that followed, opening the way for the October Revolution. The tsar fell to revolution at home, Russia was losing, and the Allies opposed the Bolsheviks.',
     partNumber: 4,
-    partTitle: 'Connections & Interactions'
+    partTitle: 'Connections & Interactions',
   },
+  // Part 5: Change Over Time
+  // source: Treaty of Versailles, Article 231, 1919; verbatim
   {
     id: 'whww-ent-5a',
-    question: 'Which is the strongest example of change from WWI to WWII combat?',
-    options: ['Both wars relied on horse cavalry charges as the dominant arm in major land engagements throughout the conflict', 'Shift from trench stalemate to mobile warfare, strategic bombing, and atomic weapons', 'Total avoidance of mechanization, armored vehicles, and aircraft in WWII combat operations', 'Both wars were limited to naval blockades without significant ground combat in any theater'],
-    correctIndex: 1,
-    explanation: 'AP CCOT rewards specific contrasts: trench warfare vs. blitzkrieg, strategic bombing, and atomic weapons.',
+    question: '"The Allied and Associated Governments affirm and Germany accepts the responsibility of Germany and her allies for causing all the loss and damage to which the Allied and Associated Governments and their nationals have been subjected as a consequence of the war..."\n— Treaty of Versailles, Article 231, 1919\n\nGerman resentment of this clause is best used as evidence for which argument?',
+    options: ['The settlement made a second world war certain on its own', 'Germans accepted the settlement as fair once reparations began', 'The postwar settlement left grievances that nationalists exploited', 'The League of Nations was created mainly to collect reparations'],
+    correctIndex: 2,
+    explanation: 'The war-guilt clause fed a lasting grievance that Hitler and other nationalists used, though the Depression and the failure of collective security were also needed to produce war. The treaty alone did not make war certain, Germans bitterly rejected it, and the League was not a collection agency.',
     partNumber: 5,
-    partTitle: 'Change Over Time'
+    partTitle: 'Change Over Time',
   },
   {
     id: 'whww-ent-5b',
-    question: 'Which 1938 agreement is the textbook example of appeasement?',
-    options: ['Treaty of Versailles', 'Munich Agreement', 'Yalta Conference', 'Locarno Treaties'],
-    correctIndex: 1,
-    explanation: "The Munich Agreement ceded the Sudetenland to Hitler without resistance, encouraging further expansion.",
+    question: 'Which statement best describes a change from the peace settlement after World War I to the settlement after World War II?',
+    options: ['Victors moved from punishing the defeated to rebuilding them', 'Victors dropped the idea of an international peace organization', 'Victors imposed heavier reparations after 1945 than in 1919', 'Victors returned all conquered land to Germany and Japan'],
+    correctIndex: 0,
+    explanation: 'Versailles imposed reparations and blame, while after 1945 the United States funded reconstruction through the Marshall Plan and helped found the United Nations. The U.N. continued the idea of the League, and the defeated powers lost territory.',
     partNumber: 5,
-    partTitle: 'Change Over Time'
+    partTitle: 'Change Over Time',
   },
+  // Part 6: Problem-Solving Workshop
   {
     id: 'whww-ent-6a',
-    question: 'For an SAQ on WWII causation, which response move is strongest?',
-    options: [
-      'Make a generic claim that "Versailles alone caused WWII" without supporting qualification or named events',
-      'Identify multiple causes (Versailles grievances, the Depression, appeasement, Axis expansion) and name a specific event for each',
-      'List as many participating countries and military leaders as possible without explaining causal mechanisms',
-      'Avoid discussing causation entirely and focus on a chronological narrative of major battles and dates'
-    ],
-    correctIndex: 1,
-    explanation: 'AP scoring rewards multi-causal reasoning supported by named events.',
+    question: 'Which evidence best supports the claim that the failure of collective security contributed to World War II?',
+    options: ['Gavrilo Princip assassinated Franz Ferdinand in Sarajevo', 'The United States dropped atomic bombs on two Japanese cities', 'The League did not stop Italy\'s invasion of Ethiopia in 1935', 'Britain placed private factories under state control in 1915'],
+    correctIndex: 2,
+    explanation: 'The League\'s weak response to Italy, like its failure over Manchuria and the Rhineland, showed aggressors that they would face little resistance. The assassination began World War I, the atomic bombs ended World War II, and the 1915 act concerned war production.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: 'Problem-Solving Workshop',
   },
   {
     id: 'whww-ent-6b',
-    question: 'Which sentence best demonstrates AP-level historical reasoning?',
-    options: [
-      'WWII involved a great many countries and ideologies fighting across multiple theaters of operation around the world',
-      'The Munich Agreement (1938) shows that appeasement, by rewarding aggression, encouraged further German expansion and is a key cause of WWII',
-      'The world wars were complicated events shaped by many different factors that historians continue to study and debate today',
-      'WWII began in 1914 with the assassination of Archduke Franz Ferdinand by a Bosnian-Serb nationalist in the city of Sarajevo'
-    ],
+    question: 'A former British officer\'s memoir, published in 1929, describes the Battle of the Somme as pointless slaughter. When using it as evidence, a historian should first consider that the author',
+    options: ['could not have seen any fighting because officers stayed far behind the lines', 'wrote a decade later, amid widespread postwar disillusion', 'must be accurate because published memoirs are checked for errors', 'wrote too long after the war for the memoir to have any value'],
     correctIndex: 1,
-    explanation: 'A strong AP reasoning sentence ties a specific source to causation and broader consequence.',
+    explanation: 'Writing in the late 1920s, the author was shaped by a growing mood of disillusion, which affects how he remembered and framed events. Junior officers fought at the front, publication does not guarantee accuracy, and a later memoir still has value.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: 'Problem-Solving Workshop',
   },
+  // Part 7: AP Review
+  // source: Woodrow Wilson, Fourteen Points address to Congress, January 8, 1918; verbatim
   {
     id: 'whww-ent-7a',
-    question: 'Which thesis is strongest for a comparison prompt on WWI and WWII?',
-    options: [
-      'The two wars were identical in their causes, technologies, ideological framing, and ultimate political consequences for the international order',
-      'Both were total wars that mobilized industrial economies and colonial empires, but WWII was more ideologically polarized, more destructive to civilians, and produced a more constructive postwar order',
-      'WWII was less destructive than WWI in casualties, geographic scope, ideological intensity, and the scale of postwar political change',
-      'Neither war involved colonial troops, strategic bombing of civilian targets, or the creation of any major postwar international institution'
-    ],
-    correctIndex: 1,
-    explanation: 'A strong AP comparison thesis names a similarity and a meaningful difference.',
+    question: '"A general association of nations must be formed under specific covenants for the purpose of affording mutual guarantees of political independence and territorial integrity to great and small states alike."\n— Woodrow Wilson, address to Congress, 1918\n\nWhich comparison of the organization that grew from this proposal and the United Nations founded in 1945 is most accurate?',
+    options: ['Each was designed mainly to punish Germany for starting a world war', 'The first included the United States, while the second excluded it', 'The first covered only Europe, while the second covered the world', 'Each sought collective security, but the U.S. joined only the second'],
+    correctIndex: 3,
+    explanation: 'The League of Nations and the United Nations both aimed to keep peace through collective security, but the Senate kept the United States out of the League. Neither existed to punish Germany, and the League had members from Asia, Africa, and Latin America.',
     partNumber: 7,
-    partTitle: 'AP Review'
+    partTitle: 'AP Review',
   },
   {
     id: 'whww-ent-7b',
-    question: 'Which postwar institution succeeded the League of Nations after WWII?',
-    options: ['NATO', 'United Nations', 'European Union', 'Warsaw Pact'],
-    correctIndex: 1,
-    explanation: 'The United Nations (1945) replaced the League of Nations as the primary postwar collective-security institution.',
+    question: 'An essay on decolonization after 1945 would be best contextualized by noting that',
+    options: ['the world wars drained European empires and weakened their legitimacy', 'European empires reached their greatest strength in the late 1940s', 'colonial troops took no part in either of the two world wars', 'the Atlantic Charter promised to keep all colonies under European rule'],
+    correctIndex: 0,
+    explanation: 'Two wars exhausted Britain and France, colonial soldiers and laborers expected rewards, and Allied rhetoric about self-determination undercut imperial claims. Empires were weakened, not strengthened, colonial troops fought in both wars, and the Charter spoke of self-government.',
     partNumber: 7,
-    partTitle: 'AP Review'
-  }
+    partTitle: 'AP Review',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -162,6 +158,6 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 4, partTitle: 'Connections & Interactions' },
     { partNumber: 5, partTitle: 'Change Over Time' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

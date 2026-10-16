@@ -1,26 +1,152 @@
 /**
- * Entrance Quiz — Islamic Empires (1450–1750) (AP World History)
- * 14 questions · 7 parts (2 per part)
+ * Entrance Quiz — Islamic Empires, 1450–1750 (AP World History: Modern)
+ * 14 questions · 7 parts (2 per part). Rebuilt Oct 2026 from the Phase 1 lesson.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'whis-ent-1a', question: 'Which of the following best describes the main focus of Islamic Empires (1450–1750)?', options: ['An unrelated topic', 'The core principles and patterns within Islamic Empires (1450–1750)', 'A mathematical formula', 'A literary technique'], correctIndex: 1, explanation: 'Islamic Empires (1450–1750) focuses on understanding key principles and patterns within AP World History.', partNumber: 1, partTitle: 'Core Concepts' },
-  { id: 'whis-ent-1b', question: 'Why is Islamic Empires (1450–1750) important in AP World History?', options: ['It is not important', 'It connects to multiple units and is frequently tested on the AP exam', 'It is only relevant to one question', 'It has been removed from the curriculum'], correctIndex: 1, explanation: 'Islamic Empires (1450–1750) is a key topic in AP World History that connects to multiple course themes.', partNumber: 1, partTitle: 'Core Concepts' },
-  { id: 'whis-ent-2a', question: 'Which best describes a key process in Islamic Empires (1450–1750)?', options: ['A random event', 'A systematic mechanism that produces predictable patterns', 'An unexplainable phenomenon', 'A one-time occurrence'], correctIndex: 1, explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.', partNumber: 2, partTitle: 'Key Processes' },
-  { id: 'whis-ent-2b', question: 'Understanding cause and effect in Islamic Empires (1450–1750) helps students:', options: ['Memorize dates', 'Explain why patterns exist rather than just describing them', 'Avoid analysis', 'Skip exam questions'], correctIndex: 1, explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.', partNumber: 2, partTitle: 'Key Processes' },
-  { id: 'whis-ent-3a', question: 'Why do geographers/analysts use case studies?', options: ['They are easier than analysis', 'They provide concrete examples that illustrate abstract concepts', 'They replace all other methods', 'They are required by law'], correctIndex: 1, explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.', partNumber: 3, partTitle: 'Patterns & Examples' },
-  { id: 'whis-ent-3b', question: 'Comparing examples of Islamic Empires (1450–1750) across regions helps:', options: ['Nothing', 'Identify universal patterns and unique local variations', 'Confuse students', 'Waste time'], correctIndex: 1, explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).', partNumber: 3, partTitle: 'Patterns & Examples' },
-  { id: 'whis-ent-4a', question: 'Islamic Empires (1450–1750) connects to other course topics through:', options: ['No connections exist', 'Shared processes, causes, and outcomes', 'Random coincidence', 'Administrative categories only'], correctIndex: 1, explanation: 'Topics in AP World History are interconnected through shared processes, causes, and outcomes.', partNumber: 4, partTitle: 'Connections & Interactions' },
-  { id: 'whis-ent-4b', question: 'A feedback loop in Islamic Empires (1450–1750) means:', options: ['The process stops', 'Outcomes reinforce or modify the original process', 'Nothing changes', 'The exam skips this topic'], correctIndex: 1, explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.', partNumber: 4, partTitle: 'Connections & Interactions' },
-  { id: 'whis-ent-5a', question: 'Studying change over time in Islamic Empires (1450–1750) helps:', options: ['Only with history classes', 'Explain current patterns and predict future developments', 'Nothing', 'Memorize dates'], correctIndex: 1, explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.', partNumber: 5, partTitle: 'Change Over Time' },
-  { id: 'whis-ent-5b', question: 'Continuity in Islamic Empires (1450–1750) means:', options: ['Everything changes', 'Some aspects have remained stable despite other changes', 'Nothing ever happened', 'The topic is boring'], correctIndex: 1, explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.', partNumber: 5, partTitle: 'Change Over Time' },
-  { id: 'whis-ent-6a', question: 'When interpreting data about Islamic Empires (1450–1750), the first step is:', options: ['Jump to conclusions', 'Identify what the data shows and note any patterns or trends', 'Ignore the data', 'Only look at the title'], correctIndex: 0, explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'whis-ent-6b', question: 'An evidence-based argument about Islamic Empires (1450–1750) requires:', options: ['Just opinions', 'A clear claim supported by specific evidence and reasoning', 'No evidence', 'Only emotional appeals'], correctIndex: 1, explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'whis-ent-7a', question: 'The most important exam strategy for Islamic Empires (1450–1750) is:', options: ['Guess randomly', 'Know key terms, use specific examples, and connect to course themes', 'Skip these questions', 'Only memorize definitions'], correctIndex: 1, explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'whis-ent-7b', question: 'AP multiple-choice questions about Islamic Empires (1450–1750) often test:', options: ['Random trivia', 'Application of concepts to new scenarios', 'Spelling', 'Personal opinions'], correctIndex: 1, explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.', partNumber: 7, partTitle: 'AP Review' }
+  // Part 1: Core Concepts
+  {
+    id: 'whis-ent-1a',
+    question: 'Which development best explains why the Ottoman sultan gained new religious prestige after 1517?',
+    options: ['Shi\'a scholars in Iran elected him caliph of all Muslims', 'His conquest of Egypt gave him Mecca and Medina', 'He persuaded the Safavid shah to accept Sunni Islam', 'His armies recaptured Jerusalem from the Crusader states'],
+    correctIndex: 1,
+    explanation: 'Selim I\'s conquest of Mamluk Syria and Egypt (1516–1517) placed the holy cities of Mecca and Medina under Ottoman protection. The Crusader states had vanished centuries earlier, and the Safavids remained Shi\'a rivals.',
+    partNumber: 1,
+    partTitle: 'Core Concepts',
+  },
+  {
+    id: 'whis-ent-1b',
+    question: 'Which statement best describes the Mughal Empire\'s part in Indian Ocean trade?',
+    options: ['It built Asia\'s largest navy and controlled the main sea lanes', 'It banned every export in order to protect Indian weavers', 'It ruled the Swahili coast through governors from Gujarat', 'It exported cotton cloth through Surat but had little navy'],
+    correctIndex: 3,
+    explanation: 'Mughal India was a major exporter of textiles and indigo, but the state was land-based, and Indian, Arab and later European merchants carried the sea trade. It never ruled East Africa.',
+    partNumber: 1,
+    partTitle: 'Core Concepts',
+  },
+
+  // Part 2: Expansion: Gunpowder, Steppe Heritage & Conquest
+  {
+    id: 'whis-ent-2a',
+    question: 'Which evidence would best challenge the claim that gunpowder weapons alone explain the expansion of the Islamic empires?',
+    options: ['Akbar\'s alliances with Rajput chiefs who led armies', 'Ottoman cannons breaching the walls of Constantinople in 1453', 'Janissary muskets defeating Qizilbash cavalry at Chaldiran', 'Babur\'s matchlockmen behind chained carts at Panipat in 1526'],
+    correctIndex: 0,
+    explanation: 'Alliances, marriage politics and administration mattered as much as firearms, and Akbar\'s Rajput partnerships are a clear example. The other options show gunpowder at work, so they support the claim instead of challenging it.',
+    partNumber: 2,
+    partTitle: 'Expansion: Gunpowder, Steppe Heritage & Conquest',
+  },
+  {
+    id: 'whis-ent-2b',
+    question: 'Which statement best explains how one Ottoman conquest helped pay for the next in the 1500s?',
+    options: ['Tribute sent from Ming China financed the building of Ottoman fleets', 'European bankers lent the sultans unlimited sums at no interest', 'Revenue from conquered provinces paid salaried troops and gunners', 'Conquered peoples served in the army without pay in return for land'],
+    correctIndex: 2,
+    explanation: 'Taxes from newly conquered provinces funded the Janissaries, artillery and navy that made further campaigns possible, so expansion fed itself. China paid no tribute to the Ottomans.',
+    partNumber: 2,
+    partTitle: 'Expansion: Gunpowder, Steppe Heritage & Conquest',
+  },
+
+  // Part 3: Ruling an Empire: Legitimacy and Administration
+  {
+    id: 'whis-ent-3a',
+    question: 'Which comparison of Mughal mansabdars and zamindars is most accurate?',
+    options: ['Mansabdars were Hindu priests, while zamindars were Muslim judges in the cities', 'Mansabdars held ranks from the emperor, while zamindars inherited their land', 'Both were Safavid titles that the Mughals borrowed for their tribal cavalry leaders', 'Both were elected by village councils and could be removed by a popular vote'],
+    correctIndex: 1,
+    explanation: 'A mansabdar\'s numbered rank came from the emperor and was not hereditary, while zamindars inherited local landholdings and collected land revenue for the state. Both Muslims and Hindus served as mansabdars.',
+    partNumber: 3,
+    partTitle: 'Ruling an Empire: Legitimacy and Administration',
+  },
+  {
+    id: 'whis-ent-3b',
+    question: 'Akbar\'s new capital at Fatehpur Sikri, built in the 1570s, blended Persian, Islamic and Indian building styles. A historian would most likely read this design as',
+    options: ['a sign that Akbar had converted to Hinduism and given up Islam', 'proof that the Mughals copied Ottoman architecture without change', 'evidence that Akbar wished to cut his court off from Indian culture', 'a picture of a court that drew on many traditions under one ruler'],
+    correctIndex: 3,
+    explanation: 'Monuments made claims about their builders, and Fatehpur Sikri\'s mixed styles presented Akbar\'s court as uniting diverse peoples. Akbar did not abandon Islam, and the design embraced Indian elements rather than rejecting them.',
+    partNumber: 3,
+    partTitle: 'Ruling an Empire: Legitimacy and Administration',
+  },
+
+  // Part 4: Religion, Rivalry and New Faiths
+  {
+    id: 'whis-ent-4a',
+    question: 'Which comparison of religious change in Safavid Iran and in Reformation Europe is most accurate?',
+    options: ['Safavid rulers imposed a new state faith from the top, while Protestantism began as a movement from below', 'Protestant princes imposed Shi\'a Islam, while Safavid shahs encouraged reform movements from below', 'Both changes were ordered by the pope and enforced by armies sent out from Rome', 'Both changes happened peacefully and caused no wars between rival states'],
+    correctIndex: 0,
+    explanation: 'Ismail I declared Twelver Shi\'ism the religion of a mostly Sunni Iran in 1501, while Luther\'s challenge spread among believers before some rulers adopted it. Both changes fed long wars, Ottoman–Safavid and European.',
+    partNumber: 4,
+    partTitle: 'Religion, Rivalry and New Faiths',
+  },
+  {
+    id: 'whis-ent-4b',
+    question: 'Sikh gurus set up the langar, a free kitchen where people of every caste sat and ate together. This practice most directly expressed',
+    options: ['a Mughal law requiring all subjects to share their meals', 'the Safavid policy of converting subjects by force', 'the Sikh rejection of caste distinctions in worship', 'Hindu caste rules that barred shared meals'],
+    correctIndex: 2,
+    explanation: 'Guru Nanak and his successors taught equality before one God, and the langar put that teaching into practice by seating everyone together. It challenged caste rules rather than following them.',
+    partNumber: 4,
+    partTitle: 'Religion, Rivalry and New Faiths',
+  },
+
+  // Part 5: Challenges and Change, c. 1600–1750
+  {
+    id: 'whis-ent-5a',
+    question: 'Which comparison of the three empires\' situations by 1750 is most accurate?',
+    options: ['The Safavids survived by adapting, the Ottomans had fallen, and the Mughals had expanded', 'The Ottomans survived by adapting, the Safavids had fallen, and Mughal power had gone regional', 'The Mughals survived by adapting, the Ottomans had expanded, and the Safavids had reunited', 'All three had collapsed, been conquered, and been divided among European trading companies'],
+    correctIndex: 1,
+    explanation: 'The Ottomans reorganized and lasted until 1922, the last Safavid was deposed in 1736, and after 1707 Mughal governors in Hyderabad, Bengal and Awadh ruled in all but name. European rule over most of India came only after 1750.',
+    partNumber: 5,
+    partTitle: 'Challenges and Change, c. 1600–1750',
+  },
+  {
+    id: 'whis-ent-5b',
+    question: 'Which development best explains why Aurangzeb\'s Deccan conquests strained Mughal finances?',
+    options: ['They ended the land tax that had supported the empire', 'They cut India off from the silver of the Americas', 'They forced the emperor to abolish the jizya once more', 'They made more mansabdars than there were jagirs'],
+    correctIndex: 3,
+    explanation: 'Conquest enlarged the officer corps faster than it produced well-paying revenue assignments, so officers went underpaid and loyalty weakened. Aurangzeb reimposed the jizya in 1679 rather than abolishing it.',
+    partNumber: 5,
+    partTitle: 'Challenges and Change, c. 1600–1750',
+  },
+
+  // Part 6: Exam Workshop: Sources, SAQs and the LEQ
+  {
+    // source: original
+    id: 'whis-ent-6a',
+    question: 'A court painting, described here for this question: a sultan sits enthroned in the center, drawn far larger than anyone else, while foreign envoys bow and offer gifts. The picture was kept in a palace album viewed by the ruler and his courtiers. Which point best explains the painting\'s purpose?',
+    options: ['It was meant to glorify the monarch', 'It was a neutral record of how envoys usually behaved', 'It was made to persuade the envoys\' own kings to rebel', 'It was produced for sale to ordinary people in the bazaar'],
+    correctIndex: 0,
+    explanation: 'A painting made for the ruler\'s own court and showing him towering over bowing foreigners was meant to proclaim his greatness, a claim to legitimacy. Its audience and purpose make it unreliable as a neutral record of diplomacy.',
+    partNumber: 6,
+    partTitle: 'Exam Workshop: Sources, SAQs and the LEQ',
+  },
+  {
+    id: 'whis-ent-6b',
+    question: 'An SAQ asks you to explain one way Ottoman methods of legitimizing rule differed from Akbar\'s. Which response earns the point?',
+    options: ['Both the Ottomans and Mughals used religion to make their rule look legitimate', 'The Ottoman Empire stayed strong longer, while the Mughal state weakened sooner', 'The Ottomans stressed their role as Sunni guardians of Mecca and Medina, while Akbar promoted peace among all faiths', 'Akbar built the new capital of Fatehpur Sikri during the 1570s'],
+    correctIndex: 2,
+    explanation: 'This response names a specific contrast in how each ruler claimed legitimacy and supports both sides. The first option states a similarity, and the others do not compare methods of legitimacy.',
+    partNumber: 6,
+    partTitle: 'Exam Workshop: Sources, SAQs and the LEQ',
+  },
+
+  // Part 7: Synthesis: Comparing the Three Empires
+  {
+    id: 'whis-ent-7a',
+    question: 'Which statement corrects a common misconception about the Ottoman, Safavid and Mughal empires?',
+    options: ['They were Arab empires governed from Mecca in the Arabic language', 'Their founders spoke Turkic, and Persian was a key court language', 'They had no contact of any kind with European states', 'They gave non-Muslims full legal equality with Muslims'],
+    correctIndex: 1,
+    explanation: 'All three founding dynasties spoke Turkic languages (Babur and Shah Ismail even wrote Turkic verse), and Persian was a language of government and high culture, above all at the Safavid and Mughal courts. The empires traded, fought and allied with Europeans, and non-Muslims were protected but unequal.',
+    partNumber: 7,
+    partTitle: 'Synthesis: Comparing the Three Empires',
+  },
+  {
+    id: 'whis-ent-7b',
+    question: 'Why do historians often close this period of the land-based empires at about 1750?',
+    options: ['Industrial Europe\'s growing power soon changed the balance they faced', 'All three Islamic empires had collapsed completely by about that year', 'Gunpowder weapons were first invented around that time', 'Islam stopped spreading to new regions after that year'],
+    correctIndex: 0,
+    explanation: 'After 1750, industrial Europe\'s growing economic and military power forced these empires to respond to a new kind of challenge. The Ottomans survived well past 1750, and gunpowder was centuries older.',
+    partNumber: 7,
+    partTitle: 'Synthesis: Comparing the Three Empires',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,11 +156,11 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Core Concepts' },
-    { partNumber: 2, partTitle: 'Key Processes' },
-    { partNumber: 3, partTitle: 'Patterns & Examples' },
-    { partNumber: 4, partTitle: 'Connections & Interactions' },
-    { partNumber: 5, partTitle: 'Change Over Time' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 2, partTitle: 'Expansion: Gunpowder, Steppe Heritage & Conquest' },
+    { partNumber: 3, partTitle: 'Ruling an Empire: Legitimacy and Administration' },
+    { partNumber: 4, partTitle: 'Religion, Rivalry and New Faiths' },
+    { partNumber: 5, partTitle: 'Challenges and Change, c. 1600–1750' },
+    { partNumber: 6, partTitle: 'Exam Workshop: Sources, SAQs and the LEQ' },
+    { partNumber: 7, partTitle: 'Synthesis: Comparing the Three Empires' },
   ]
 }

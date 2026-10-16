@@ -770,6 +770,9 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'apes-solid-hazardous-waste': () => import('./apes-solid-hazardous-waste'),
   'apes-climate-change': () => import('./apes-climate-change'),
   'apes-sustainability': () => import('./apes-sustainability'),
+  'apush-cold-war-civil-rights': () => import('./apush-cold-war-civil-rights'),
+  'apush-vietnam-social-change': () => import('./apush-vietnam-social-change'),
+  'apush-reagan-to-present': () => import('./apush-reagan-to-present'),
 }
 
 /**

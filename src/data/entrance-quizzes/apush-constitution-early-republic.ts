@@ -1,203 +1,150 @@
 /**
- * Entrance Quiz — Constitution & Early Republic (APUSH 1787–1800)
- * 14 questions · 7 parts (2 per part)
+ * Entrance Quiz — The Constitution & Early Republic (AP US History)
+ * 14 questions · 7 parts (2 per part). Rebuilt Oct 2026 from the Phase 1 lesson.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
+  // Part 1: Core Concepts
+  // source: U.S. Constitution, Article I, Section 9, 1787; verbatim
   {
     id: 'apushcon-ent-1a',
-    question: 'Which best describes the structure of the U.S. Constitution as drafted in 1787?',
-    options: [
-      'A federal government divided into three branches (legislative, executive, judicial), with a bicameral Congress (Senate by state, House by population), separation of powers and checks and balances, federalism dividing power between national and state governments, and constitutional protection of slavery via the Three-Fifths Compromise and the Fugitive Slave Clause',
-      'A unitary national government with no separation of powers, no bicameral legislature, no federalism, and no constitutional protection of slavery of any kind during the entire period from 1787 through the Civil War in any region of the United States',
-      'A confederation with no federal government, no executive, no judiciary, and no taxing power of any kind drafted in 1787 with no Three-Fifths Compromise and no Fugitive Slave Clause of any kind during the entire period in any region',
-      'A constitutional monarchy with a hereditary king, an aristocratic Senate, and no House of Representatives of any kind drafted in 1787 with no Three-Fifths Compromise and no Fugitive Slave Clause of any kind during the entire period in any region'
-    ],
-    correctIndex: 0,
-    explanation: 'Constitution: 3 branches + bicameral Congress + separation of powers + federalism + 3/5 Compromise + Fugitive Slave Clause.',
+    question: '"The Migration or Importation of such Persons as any of the States now existing shall think proper to admit, shall not be prohibited by the Congress prior to the Year one thousand eight hundred and eight."\n— U.S. Constitution, Article I, Section 9\n\nThis clause is best understood as',
+    options: ['a ban on immigration from Europe until the year 1808', 'a grant of power to the states to tax goods imported from abroad', 'an immediate end to the slave trade demanded by southern delegates', 'a deal that shielded the slave trade from federal bans until 1808'],
+    correctIndex: 3,
+    explanation: 'Deep South delegates threatened to leave the Convention unless the slave trade was protected, so Congress was barred from banning it before 1808. "Such Persons" refers to enslaved Africans, not European immigrants, the clause delayed rather than ended the trade, and it says nothing about state import taxes.',
     partNumber: 1,
-    partTitle: 'Core Concepts'
+    partTitle: 'Core Concepts',
   },
   {
     id: 'apushcon-ent-1b',
-    question: 'Which best describes the Federalist-Democratic-Republican division of the 1790s?',
-    options: [
-      'Federalists (Hamilton, Adams) favored loose constitutional construction, a national bank, industry and commerce, high tariffs, pro-British foreign policy, and a stronger federal government; Democratic-Republicans (Jefferson, Madison) favored strict construction, no national bank, agrarian republic, low tariffs, pro-French foreign policy, and stronger states',
-      'Federalists and Democratic-Republicans were entirely identical in constitutional construction, economic policy, foreign policy, and federal-state authority with no meaningful differences of any kind during the entire 1790s in any region',
-      'There was no Federalist-Republican division during the 1790s and the political parties did not exist until the Civil War period during the entire decade from 1790 through 1800 in any region of the United States during the period',
-      'Federalists supported strict construction, no bank, agrarian republic, and pro-French foreign policy while Democratic-Republicans supported loose construction, the bank, industry, and pro-British foreign policy in any region during the 1790s'
-    ],
+    question: 'The Electoral College emerged at the Constitutional Convention as a compromise between delegates who wanted',
+    options: ['Congress to pick the president and those who wanted a popular vote', 'a king for life and those who wanted no executive at all', 'state governors to share power and those who wanted a single executive', 'the Supreme Court to choose the president and those who wanted Congress to'],
     correctIndex: 0,
-    explanation: 'Federalists: loose, bank, industry, high tariff, pro-British, strong federal. Democratic-Republicans: strict, no bank, agrarian, low tariff, pro-French, strong state.',
+    explanation: 'Some delegates wanted Congress to choose the president, others favored direct election, and electors chosen by the states split the difference. Few seriously proposed a king, the plural-executive debate was separate, and no one proposed selection by the Court.',
     partNumber: 1,
-    partTitle: 'Core Concepts'
+    partTitle: 'Core Concepts',
   },
+  // Part 2: Launching the Federal Government: The Hamilton Program and the First Parties
   {
     id: 'apushcon-ent-2a',
-    question: 'Which best describes the constitutional ratification process (1787–88)?',
-    options: [
-      'The Constitution required ratification by nine of thirteen states through state-level ratifying conventions, not state legislatures; the campaign was contested by Federalist defenders (publishing the Federalist Papers) and Anti-Federalist opponents (publishing essays such as Brutus); ratification succeeded only after Federalists agreed to add a Bill of Rights, ratified in 1791',
-      'The Constitution was ratified by direct popular vote of all American citizens in 1787 with no state ratifying conventions, no Federalist Papers, no Anti-Federalist opposition, and no Bill of Rights of any kind during the entire period in any region',
-      'The Constitution was ratified by the British Parliament in 1787 with no state ratifying conventions, no Federalist Papers, no Anti-Federalist opposition, and no Bill of Rights of any kind during the entire period in any region of the United States',
-      'The Constitution was never ratified in 1787 or 1788 and the United States continued under the Articles of Confederation through the Civil War period with no Constitution and no Bill of Rights of any kind during the entire period in any region'
-    ],
+    question: 'Virginia\'s leaders objected to Hamilton\'s plan for the federal government to assume the states\' war debts mainly because',
+    options: ['Virginia had already paid much of its debt', 'the plan required Virginia to sell its western land claims', 'the plan would move the national capital to New York', 'Virginia wanted Britain to pay the debts instead'],
     correctIndex: 0,
-    explanation: 'Ratification: 9 of 13 state conventions; Federalist Papers vs. Brutus; Bill of Rights as concession; ratified 1791.',
+    explanation: 'Having repaid much of its debt, Virginia would now help pay other states\' debts through federal taxes. The plan said nothing about land claims, the Compromise of 1790 placed the capital on the Potomac, and no one expected Britain to pay.',
     partNumber: 2,
-    partTitle: 'Key Processes'
+    partTitle: 'Launching the Federal Government: The Hamilton Program and the First Parties',
   },
   {
     id: 'apushcon-ent-2b',
-    question: "Which best describes Hamilton's financial program (1790–91)?",
-    options: [
-      "Funding the national debt at par (paying full face value to current bondholders), assumption of state Revolutionary War debts by the federal government, chartering of the First Bank of the United States (1791), and an excise tax on whiskey to generate revenue — all designed to bind creditors to the federal government and stimulate commerce and credit",
-      "Refusal to pay the national debt at all, refusal to assume state debts, refusal to charter a national bank, and refusal to impose any excise tax of any kind during the entire period from 1790 through 1791 in any region of the United States during the period in any region",
-      "Funding the national debt at par, assumption of state debts, chartering of a national bank, and excise tax on whiskey — but all proposed by Jefferson and Madison rather than Hamilton during the entire period from 1790 through 1791 in any region of the United States during the period",
-      "Hamilton proposed no financial program of any kind during the entire period from 1790 through 1791 and the federal government had no debt management, no bank, and no excise tax of any kind during the entire period in any region of the United States"
-    ],
-    correctIndex: 0,
-    explanation: 'Hamilton 1790-91: funding at par + assumption of state debts + Bank of US (1791) + whiskey excise = bind creditors to federal government + stimulate commerce.',
+    question: 'Which comparison of Shays\' Rebellion (1786–1787) and the Whiskey Rebellion (1794) is most accurate?',
+    options: ['Congress put down Shays\' Rebellion, while Massachusetts alone ended the Whiskey Rebellion', 'The national government could not act in 1786, but in 1794 it raised a large militia army', 'Both rebellions forced Congress to repeal the taxes the rebels protested', 'Both rebellions ended in battles that killed hundreds of rebels'],
+    correctIndex: 1,
+    explanation: 'Massachusetts relied on a privately funded militia against Shays, while Washington called up about 13,000 militiamen, showing the new government could enforce its laws. The reversed pairing is wrong, the whiskey tax stayed, and the 1794 rebellion collapsed without a battle.',
     partNumber: 2,
-    partTitle: 'Key Processes'
+    partTitle: 'Launching the Federal Government: The Hamilton Program and the First Parties',
   },
+  // Part 3: Two Visions in Their Own Words: Hamilton and Jefferson
+  // source: Thomas Jefferson, First Inaugural Address, March 4, 1801; verbatim
   {
     id: 'apushcon-ent-3a',
-    question: 'Which best describes the Whiskey Rebellion (1794)?',
-    options: [
-      "An armed uprising of western Pennsylvania farmers against Hamilton's federal excise tax on whiskey; President Washington personally led federalized state militias to suppress the rebellion, establishing the federal government's authority to enforce its laws and tax its citizens",
-      "An armed uprising of British soldiers in western Pennsylvania against an American federal tax on whiskey, suppressed by Indigenous militias led by President Washington in 1794 with no participation by federalized state militias of any kind during the period",
-      "A peaceful agricultural festival in western Pennsylvania in 1794 with no rebellion, no excise tax dispute, and no federal militia response of any kind during the entire period from 1791 through 1794 in any region of the United States during the period",
-      "An armed uprising of southern enslaved Africans against an American federal tax on whiskey, suppressed by Indigenous militias led by President Washington in 1794 with no participation by federalized state militias of any kind during the period"
-    ],
-    correctIndex: 0,
-    explanation: 'Whiskey Rebellion 1794: western PA farmers vs. Hamilton excise; Washington led federalized militia; established federal taxing/enforcement authority.',
+    question: '"...a wise and frugal Government, which shall restrain men from injuring one another, shall leave them otherwise free to regulate their own pursuits of industry and improvement..."\n— Thomas Jefferson, First Inaugural Address, 1801\n\nThe passage most directly reflects which vision of government?',
+    options: ['An active government that charters banks and promotes factories', 'A government that sets wages and prices to protect workers', 'A strong executive that directs the economy through tariffs and bounties', 'A limited government that allows citizens to manage their own affairs'],
+    correctIndex: 3,
+    explanation: 'Jefferson wanted government to keep order and otherwise leave people free, the Republican ideal of limited government. Banks, factories, tariffs, and bounties describe Hamilton\'s program, and wage and price controls were no one\'s program in 1801.',
     partNumber: 3,
-    partTitle: 'Patterns & Examples'
+    partTitle: 'Two Visions in Their Own Words: Hamilton and Jefferson',
   },
   {
     id: 'apushcon-ent-3b',
-    question: 'Which best describes the XYZ Affair and Quasi-War (1798)?',
-    options: [
-      "French foreign minister Talleyrand's agents (referred to as 'X, Y, Z' in published documents) demanded a bribe before negotiating with American envoys sent by President Adams; the resulting public outrage led to an undeclared naval Quasi-War with France (1798–1800), Federalist passage of the Alien and Sedition Acts, and a temporary spike in Federalist popularity",
-      "British foreign minister William Pitt demanded a bribe from American envoys in 1798 with no French involvement of any kind, no Quasi-War, no Alien and Sedition Acts, and no Federalist popularity spike of any kind during the entire period in any region",
-      "There was no XYZ Affair in 1798 and the United States had no diplomatic crisis with France during the entire period from 1797 through 1800 in any region of the United States during the period in any region of the United States during the period",
-      "The XYZ Affair was a peaceful diplomatic resolution between France and the United States in 1798 that produced no Quasi-War, no Alien and Sedition Acts, and no Federalist popularity spike of any kind during the entire period in any region of the United States"
-    ],
-    correctIndex: 0,
-    explanation: 'XYZ Affair 1798: Talleyrand\'s agents demanded bribe → public outrage → Quasi-War + Alien and Sedition Acts + Federalist popularity spike.',
+    question: 'One argument in Hamilton\'s 1791 case for government encouragement of manufacturing appealed to',
+    options: ['the moral virtue of independent farmers who owned their land', 'a promise to keep the federal government small and frugal', 'national security, given shortages of supplies in the late war', 'the demand of southern planters for cheap European goods'],
+    correctIndex: 2,
+    explanation: 'Alongside his economic arguments, Hamilton recalled the army\'s lack of uniforms, arms, and powder during the Revolution and argued that home industry secured the nation\'s independence. Farmer virtue and frugal government were Jefferson\'s themes, and planters opposed protective tariffs.',
     partNumber: 3,
-    partTitle: 'Patterns & Examples'
+    partTitle: 'Two Visions in Their Own Words: Hamilton and Jefferson',
   },
+  // Part 4: A Republic in a World at War: Causation and the Crisis of 1798–1800
+  // source: George Washington, Farewell Address, 1796; verbatim
   {
     id: 'apushcon-ent-4a',
-    question: 'Which best describes the connection between the French Revolution and American politics in the 1790s?',
-    options: [
-      'The French Revolution polarized American politics: Federalists (Hamilton, Adams) saw the French Revolution as dangerous mob rule and favored Britain; Democratic-Republicans (Jefferson, Madison) saw it as a sister republican revolution and favored France; this division shaped the 1793 Proclamation of Neutrality, the 1794 Jay Treaty, and the 1798 Quasi-War',
-      'The French Revolution had no impact on American politics in the 1790s of any kind with no Federalist/Democratic-Republican division, no Proclamation of Neutrality, no Jay Treaty, and no Quasi-War of any kind during the period in any region',
-      'The French Revolution united all Americans behind a single foreign policy with no Federalist/Democratic-Republican division of any kind during the entire period from 1789 through 1800 in any region of the United States during the period',
-      'The French Revolution caused all American leaders to favor Britain unanimously with no Democratic-Republican support for France of any kind during the entire period from 1789 through 1800 in any region of the United States during the period'
-    ],
-    correctIndex: 0,
-    explanation: 'French Rev polarized US politics; led to Proclamation of Neutrality (1793), Jay Treaty (1794), Quasi-War (1798).',
+    question: '"It is our true policy to steer clear of permanent alliances with any portion of the foreign world."\n— George Washington, Farewell Address, 1796\n\nThis advice is best understood in the context of',
+    options: ['the British invasion of Washington, D.C., during the War of 1812', 'the alliance with France that won the Seven Years\' War', 'the wars between revolutionary France and Britain that divided Americans', 'the Monroe Doctrine\'s warning to Europe about Latin America'],
+    correctIndex: 2,
+    explanation: 'The 1778 French alliance, the French Revolution\'s wars, and the Jay Treaty had split Americans into pro-French Republicans and pro-British Federalists. The War of 1812 and the Monroe Doctrine came later, and the colonists fought France in the Seven Years\' War.',
     partNumber: 4,
-    partTitle: 'Connections & Interactions'
+    partTitle: 'A Republic in a World at War: Causation and the Crisis of 1798–1800',
   },
   {
     id: 'apushcon-ent-4b',
-    question: 'Which best describes the connection between the Bill of Rights (1791) and the Anti-Federalist movement?',
-    options: [
-      'The Bill of Rights was a direct concession by the Federalists to the Anti-Federalists, who had argued during ratification that the Constitution lacked explicit protections for individual rights and threatened consolidated federal power; ratification succeeded in several states only on the promise of subsequent amendments, fulfilled in the first ten amendments ratified in 1791',
-      'The Bill of Rights had no connection to the Anti-Federalist movement of any kind and was a Federalist-only initiative with no Anti-Federalist demand of any kind during the entire ratification debate from 1787 through 1791 in any region',
-      'The Bill of Rights was opposed unanimously by the Anti-Federalists and supported only by Hamilton and the Federalists with no Anti-Federalist demand of any kind during the entire ratification debate from 1787 through 1791 in any region',
-      'There was no Bill of Rights ratified in 1791 and the U.S. Constitution had no individual-rights amendments of any kind until the post-Civil-War Reconstruction Amendments in the 1860s in any region of the United States during the period'
-    ],
+    question: 'In the election of 1800, Thomas Jefferson and Aaron Burr each received 73 electoral votes. Which change most directly resulted from this outcome?',
+    options: ['The Twelfth Amendment\'s separate ballots for president and vice president', 'The repeal of the three-fifths clause for counting electoral votes', 'The direct popular election of senators by the voters of each state', 'The end of the Electoral College and the start of a national popular vote'],
     correctIndex: 0,
-    explanation: 'Bill of Rights (1791) = Federalist concession to Anti-Federalists, who demanded explicit individual-rights protections during ratification. Promise fulfilled.',
+    explanation: 'Because electors cast two undifferentiated votes, the running mates tied and the House needed 36 ballots; the Twelfth Amendment (1804) fixed the flaw. The three-fifths clause remained until 1868, senators were elected directly only after 1913, and the Electoral College still exists.',
     partNumber: 4,
-    partTitle: 'Connections & Interactions'
+    partTitle: 'A Republic in a World at War: Causation and the Crisis of 1798–1800',
   },
+  // Part 5: The West, Slavery, and the Limits of the Founding
   {
     id: 'apushcon-ent-5a',
-    question: 'Which best describes the change in American national government between the Articles of Confederation (1781) and the Constitution (1788)?',
-    options: [
-      'The Articles created a weak national government with no power to tax, no executive, and no national judiciary; the Constitution created a stronger federal government with the power to tax, regulate interstate commerce, an executive, and a federal judiciary, while preserving substantial state authority through federalism — establishing the federal-state framework that has shaped American governance since',
-      'The Articles and the Constitution were identical in every respect with no change in taxation, executive, judiciary, or federal-state authority of any kind during the entire transition from the Articles to the Constitution in any region of the United States during the period',
-      'The Articles of Confederation never existed and the Constitution was the first American national government, drafted in 1781 immediately after Yorktown with no prior weak government of any kind during the entire period from 1781 through 1791 in any region',
-      'The Constitution created a weaker federal government than the Articles, removing the federal power to tax, the executive, and the judiciary that had existed under the Articles during the entire period from 1781 through 1791 in any region of the United States'
-    ],
-    correctIndex: 0,
-    explanation: 'Articles → Constitution: from no taxation/no executive/no judiciary to federal taxation + executive + judiciary + interstate commerce + preserved state authority.',
+    question: 'U.S. census figures, approximate: enslaved people, 698,000 (1790) and 894,000 (1800); free Black people, 59,000 (1790) and 108,000 (1800). Cotton grown rose from about 3,000 bales to about 73,000.\n\nWhich conclusion do these figures best support?',
+    options: ['Slavery was withering away in every state after the Revolution', 'The free Black population shrank as the cotton boom began', 'Slavery grew even as the free Black population expanded', 'Cotton output fell after the invention of the cotton gin'],
+    correctIndex: 2,
+    explanation: 'The enslaved population grew by about 28 percent while the free Black population nearly doubled through northern emancipation and manumission, and cotton surged after 1793. Slavery was not dying, the free Black population grew, and cotton output rose.',
     partNumber: 5,
-    partTitle: 'Change Over Time'
+    partTitle: 'The West, Slavery, and the Limits of the Founding',
   },
+  // source: U.S. Constitution, Article IV, Section 2, 1787; verbatim
   {
     id: 'apushcon-ent-5b',
-    question: 'Which describes a major continuity of American government from the colonial period through the early republic?',
-    options: [
-      'Representative legislative government continued from colonial assemblies (House of Burgesses 1619, town meetings) through the Continental Congress to the U.S. Congress; town and county-level political traditions also persisted, providing the institutional substrate for the new federal system established in 1788',
-      'Representative legislative government was eliminated entirely between the colonial period and the early republic with no House of Burgesses, no Continental Congress, and no U.S. Congress of any kind during the entire transition in any region of the United States',
-      'Representative legislative government was invented entirely in 1787 with no prior colonial assemblies of any kind during the entire colonial period from 1607 through 1787 in any region of British North America during the period in any region',
-      'There were no continuities of any kind between the colonial period and the early republic in any region of the United States with no shared institutions, no shared legal traditions, and no shared political culture of any kind in any region during the period'
-    ],
-    correctIndex: 0,
-    explanation: 'Continuity: representative legislative government from colonial assemblies → Continental Congress → U.S. Congress; town/county traditions provide federal substrate.',
+    question: '"No Person held to Service or Labour in one State, under the Laws thereof, escaping into another, shall, in Consequence of any Law or Regulation therein, be discharged from such Service or Labour, but shall be delivered up on Claim of the Party to whom such Service or Labour may be due."\n— U.S. Constitution, Article IV, Section 2\n\nThis clause best illustrates',
+    options: ['the framers\' decision to abolish slavery in all new territories', 'how the framers protected slavery without naming it', 'a guarantee of jury trials for people accused of escaping', 'the power of free states to refuse slaveholders\' claims'],
+    correctIndex: 1,
+    explanation: 'The Fugitive Slave Clause required free states to return people escaping slavery, using the phrase "held to Service or Labour" rather than the word slavery. It abolished nothing, promised no jury trial, and denied free states the power to free escapees.',
     partNumber: 5,
-    partTitle: 'Change Over Time'
+    partTitle: 'The West, Slavery, and the Limits of the Founding',
   },
+  // Part 6: Problem-Solving Workshop
+  // source: James Madison, The Federalist No. 51, 1788; verbatim
   {
     id: 'apushcon-ent-6a',
-    question: "Which historical context is most essential for sourcing Madison's *Federalist No. 10* (1787)?",
-    options: [
-      "The essay was published in New York newspapers in 1787 as part of the Federalist campaign to ratify the proposed Constitution; Madison wrote under the pseudonym 'Publius' (with Hamilton and Jay) to refute Anti-Federalist arguments that a large republic could not survive, arguing instead that an extended republic better controls factionalism",
-      "The essay was published in London in 1776 as part of the British Crown's campaign against the Declaration of Independence with no connection to the proposed U.S. Constitution of any kind during the entire period from 1776 through 1791 in any region",
-      "The essay was published in Paris in 1791 as part of the French Revolutionary government's campaign for the rights of man with no connection to the proposed U.S. Constitution of any kind during the entire period from 1787 through 1791 in any region",
-      "The essay was published in Boston in 1820 as part of the abolitionist campaign against the three-fifths compromise with no connection to the proposed U.S. Constitution ratification debate of any kind during the period in any region"
-    ],
-    correctIndex: 0,
-    explanation: 'Federalist 10: NY newspapers 1787, Federalist ratification campaign, Madison as "Publius," refuting Anti-Federalist objections.',
+    question: '"In framing a government which is to be administered by men over men, the great difficulty lies in this: you must first enable the government to control the governed; and in the next place oblige it to control itself."\n— James Madison, Federalist No. 51, 1788\n\nMadison\'s purpose in this passage was most likely to persuade readers that',
+    options: ['the Articles of Confederation should be kept with minor changes', 'the states should keep the power to nullify federal laws they disliked', 'a bill of rights was unnecessary because the people were virtuous', 'checks and balances would keep the new federal system from abusing power'],
+    correctIndex: 3,
+    explanation: 'Writing to win ratification in New York, Madison argued that the Constitution\'s divided powers would restrain the stronger government it created. He sought to replace the Articles, did not rest his case on popular virtue, and did not endorse nullification.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: 'Problem-Solving Workshop',
   },
   {
     id: 'apushcon-ent-6b',
-    question: "Which best identifies the point of view of *Brutus No. 1* (1787)?",
-    options: [
-      "An Anti-Federalist (likely Robert Yates) drawing on the classical republican and Whig tradition that republics must remain small to allow for similar 'manners, sentiments, and interests' — directly opposing the Federalist case that an extended republic could control factionalism better than a small one",
-      "A Federalist drawing on the modern commercial-republic tradition supporting a large extended republic with no opposition to the Federalist case for the proposed Constitution of any kind during the entire ratification debate in any region of the United States in the period",
-      "A British Crown loyalist drawing on absolutist monarchical theory with no relationship to the American constitutional ratification debate of any kind during the entire period from 1787 through 1791 in any region of the United States in the period",
-      "A French revolutionary drawing on Enlightenment universalist theory with no relationship to the American constitutional ratification debate of any kind during the entire period from 1787 through 1791 in any region of the United States during the period"
-    ],
-    correctIndex: 0,
-    explanation: 'Brutus 1: Anti-Federalist (likely Yates), classical republican + Whig tradition, direct counter to Federalist position.',
+    question: 'A student writes that "the Founders" shared one vision for the new nation. Which evidence best corrects this claim?',
+    options: ['Washington was elected president without opposition in 1789', 'The Constitution was ratified by the required nine states in 1788', 'Hamilton and Jefferson gave Washington opposite opinions on the Bank', 'Congress created the departments of State, Treasury and War in 1789'],
+    correctIndex: 2,
+    explanation: 'The cabinet split over whether the Bank was constitutional shows deep disagreement among leading founders, which grew into the first party system. The other choices describe moments of agreement or routine institution-building.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: 'Problem-Solving Workshop',
   },
+  // Part 7: AP Review
   {
     id: 'apushcon-ent-7a',
-    question: 'In which year was the First Bank of the United States chartered?',
-    options: ['1781', '1787', '1791', '1798'],
-    correctIndex: 2,
-    explanation: '1791 (Hamilton\'s Bank chartered + Bill of Rights ratified). 1781 = Articles ratified; 1787 = Convention; 1798 = Alien/Sedition Acts.',
+    question: 'Which pairing of a party with its position in the 1790s is most accurate?',
+    options: ['Federalists sided with France in its war against Britain', 'Democratic-Republicans favored a loose reading of the Constitution', 'Democratic-Republicans championed Hamilton\'s national bank', 'Federalists drew support from New England merchants and creditors'],
+    correctIndex: 3,
+    explanation: 'Federalist strength lay in New England and the seaport commercial class. Federalists leaned toward Britain, Republicans read the Constitution strictly, and Republicans opposed the Bank.',
     partNumber: 7,
-    partTitle: 'AP Review'
+    partTitle: 'AP Review',
   },
   {
     id: 'apushcon-ent-7b',
-    question: 'Which best demonstrates AP comparison skill across early-republic political visions?',
-    options: [
-      "Hamilton and Jefferson both embraced republican government, but Hamilton favored a commercial republic with strong federal power, loose constitutional construction, a national bank, high tariffs, and pro-British foreign policy; Jefferson favored an agrarian republic with strong states, strict construction, no national bank, low tariffs, and pro-French foreign policy",
-      "Hamilton and Jefferson were entirely identical in political vision, constitutional construction, economic policy, and foreign policy with no meaningful differences of any kind during the entire 1790s in any region of the United States during the period in any region",
-      "Hamilton and Jefferson had no shared themes of any kind and cannot be compared in any meaningful way during the entire 1790s in any region of the United States during the period in any region of the United States during the period",
-      "Neither Hamilton nor Jefferson existed during the early republic and there was no political vision of any kind during the entire period from 1790 through 1800 in any region of the United States during the period in any region"
-    ],
-    correctIndex: 0,
-    explanation: 'AP comparison: name shared theme (republican government) AND specific differences (Hamilton: commercial + strong federal + loose + bank + high tariff + pro-British; Jefferson: agrarian + strong state + strict + no bank + low tariff + pro-French).',
+    question: 'Why is the election of 1800 often described as a turning point?',
+    options: ['It was the first election in which all adult men could vote', 'Power passed peacefully from one party to its rival', 'It ended the two-party system for the rest of the century', 'Congress chose the president without any electoral votes'],
+    correctIndex: 1,
+    explanation: 'Adams handed the presidency to his opponent, the first transfer of power between parties under the Constitution. Property and race limits on voting remained, parties continued, and the House chose between candidates who had won electoral votes.',
     partNumber: 7,
-    partTitle: 'AP Review'
-  }
+    partTitle: 'AP Review',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -207,11 +154,11 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Core Concepts' },
-    { partNumber: 2, partTitle: 'Key Processes' },
-    { partNumber: 3, partTitle: 'Patterns & Examples' },
-    { partNumber: 4, partTitle: 'Connections & Interactions' },
-    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 2, partTitle: 'Launching the Federal Government: The Hamilton Program and the First Parties' },
+    { partNumber: 3, partTitle: 'Two Visions in Their Own Words: Hamilton and Jefferson' },
+    { partNumber: 4, partTitle: 'A Republic in a World at War: Causation and the Crisis of 1798–1800' },
+    { partNumber: 5, partTitle: 'The West, Slavery, and the Limits of the Founding' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

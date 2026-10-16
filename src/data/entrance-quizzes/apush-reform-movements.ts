@@ -1,203 +1,149 @@
 /**
- * Entrance Quiz — Antebellum Reform Movements (1820–1860)
- * 14 questions · 7 parts (2 per part)
+ * Entrance Quiz — Reform Movements (AP US History)
+ * 14 questions · 7 parts (2 per part). Rebuilt Oct 2026 from the Phase 1 lesson.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
+  // Part 1: Core Concepts
   {
     id: 'apushref-ent-1a',
-    question: 'Which best describes the structure of antebellum reform movements (1820–1860)?',
-    options: [
-      'A constellation of overlapping movements rooted in Second Great Awakening perfectionism — abolitionism (Garrison, Douglass, Truth), women\'s rights (Stanton, Mott, Anthony), temperance (American Temperance Society 1826), education (Horace Mann), asylum/prison reform (Dorothea Dix), and utopian communities (Brook Farm, Oneida, Shakers, LDS) — drawing on revivalist networks (especially in upstate New York\'s burned-over district), market-revolution social dislocations, and sectional crisis politics',
-      'There were no antebellum reform movements of any kind during the entire period from 1820 through 1860 in any region of the United States with no abolitionism, no women\'s rights, no temperance, and no Second Great Awakening of any kind during the entire period',
-      'Antebellum reform movements existed only in southern slave states and were led entirely by enslaved people during the entire period from 1820 through 1860 with no Garrison, no Douglass, no Stanton, and no Mott of any kind during the entire period in any region',
-      'Antebellum reform movements were entirely secular with no religious revivalism, no Finney perfectionism, and no Second Great Awakening of any kind during the entire period from 1820 through 1860 in any region of the United States during the period'
-    ],
+    question: 'An abolitionist of the 1840s argued that slavery would end only when the public was persuaded of its sinfulness, and refused to vote under a Constitution he called proslavery. His approach most closely matched that of',
+    options: ['William Lloyd Garrison', 'James G. Birney', 'John Brown', 'Henry Clay'],
     correctIndex: 0,
-    explanation: 'Antebellum reform: abolition + women\'s rights + temperance + education + asylum/prison + utopian — rooted in Second Great Awakening perfectionism + market revolution + sectional crisis.',
+    explanation: 'Garrison relied on moral suasion and rejected electoral politics, calling the Constitution a "covenant with death." Birney ran as the Liberty Party\'s candidate, Brown turned to armed raids, and Clay backed colonization.',
     partNumber: 1,
-    partTitle: 'Core Concepts'
+    partTitle: 'Core Concepts',
   },
   {
     id: 'apushref-ent-1b',
-    question: 'Which best describes the strands of abolitionism (1820–1860)?',
-    options: [
-      'Five overlapping strands: gradualist colonization (American Colonization Society 1817, founded Liberia 1822); Garrisonian moral suasion (immediatist, anti-political, anti-Constitution); political abolitionism (Liberty Party 1840 → Free Soil 1848 → Republicans 1854); Black abolitionism (Walker, Douglass, Truth, Tubman, AME Church); and armed abolitionism (Walker 1829, Nat Turner 1831, John Brown 1859)',
-      'Abolitionism was a single unified movement with no Garrisonian/political/Black/colonization/armed strands of any kind during the entire period from 1820 through 1860 in any region of the United States during the period in any region',
-      'Abolitionism was led entirely by colonization advocates with no Garrisonian, political, Black, or armed strands of any kind during the entire period from 1820 through 1860 in any region of the United States during the period in any region',
-      'There was no abolitionist movement of any kind during the entire period from 1820 through 1860 in any region of the United States with no Garrison, no Douglass, no Walker, no Truth, no Tubman, and no John Brown of any kind in any region'
-    ],
-    correctIndex: 0,
-    explanation: '5 strands: colonization (ACS 1817 → Liberia 1822) + Garrisonian moral suasion + political (Liberty 1840 → Free Soil 1848 → Republicans 1854) + Black + armed (Walker 1829, Turner 1831, Brown 1859).',
+    question: 'Temperance workers, prison reformers and abolitionists of the 1830s most often shared which belief drawn from the Second Great Awakening?',
+    options: ['Sin was permanent, so reform should aim only at limiting its damage', 'People and society could be freed from sin through human effort', 'Social problems would be solved by Christ\'s return, not by reform', 'Only the federal government had the power to improve moral life'],
+    correctIndex: 1,
+    explanation: 'Revival preaching taught perfectionism: if individuals could turn from sin, so could whole institutions, which gave reform a religious mission. Postmillennialists expected reform to prepare for Christ\'s return rather than wait for it, and most reformers worked through voluntary societies and states, not federal power.',
     partNumber: 1,
-    partTitle: 'Core Concepts'
+    partTitle: 'Core Concepts',
   },
+  // Part 2: Revival, Markets and the Reform Impulse
   {
     id: 'apushref-ent-2a',
-    question: 'Which best describes the Second Great Awakening (1790s–1840s)?',
-    options: [
-      'A wave of evangelical religious revivals (especially Methodist, Baptist, and Presbyterian-Congregational) led by figures such as Charles Grandison Finney; centered in upstate New York\'s "burned-over district"; theologically marked by perfectionism (the belief that humans, with divine grace, can perfect both individual souls and society); organizationally innovative (anxious bench, protracted meetings, women praying in public); and socially generative of abolitionism, temperance, women\'s rights, education reform, and utopian communities',
-      'The Second Great Awakening had no Methodist, Baptist, or Presbyterian-Congregational involvement, no Finney, no burned-over district, no perfectionism, and no social reform output of any kind during the entire period in any region',
-      'The Second Great Awakening was a Roman Catholic revival with no Protestant involvement of any kind during the entire period from 1790 through 1840 in any region of the United States during the period in any region',
-      'There was no Second Great Awakening of any kind during the entire period from 1790 through 1840 in any region of the United States with no religious revivals, no perfectionism, and no Finney of any kind during the entire period in any region'
-    ],
-    correctIndex: 0,
-    explanation: '2nd Great Awakening: Methodist/Baptist/Presbyterian revivals + Finney + burned-over district + perfectionism + new measures + social reform output.',
+    question: 'Historians who connect the Second Great Awakening to the market revolution most often argue that revivals',
+    options: ['spread because canals carried Catholic missionaries to the West', 'began when factory owners made church attendance a condition of work', 'steadied people uprooted by fast economic change', 'faded quickly as wage labor replaced farm work across the North'],
+    correctIndex: 2,
+    explanation: 'Canals, factories and wage work broke up older communities, and revival offered converts discipline and purpose amid the upheaval, as in the canal boomtown of Rochester. The revival was Protestant, attendance was voluntary, and revivals grew rather than faded with the market economy.',
     partNumber: 2,
-    partTitle: 'Key Processes'
+    partTitle: 'Revival, Markets and the Reform Impulse',
   },
   {
     id: 'apushref-ent-2b',
-    question: 'Which best describes the organization of antebellum abolitionism (1820s–1860)?',
-    options: [
-      'Organizing infrastructure included antislavery newspapers (Garrison\'s *Liberator* 1831, Douglass\'s *North Star* 1847), national societies (American Anti-Slavery Society 1833, founded by Garrison and the Tappan brothers), women\'s antislavery societies (Philadelphia Female Anti-Slavery Society 1833), the Underground Railroad (Tubman, Vigilance Committees), and political parties (Liberty 1840, Free Soil 1848, Republican 1854); the AAS split in 1840 over women\'s leadership and electoral strategy',
-      'Antebellum abolitionism had no newspapers, no national societies, no women\'s antislavery societies, no Underground Railroad, and no political parties of any kind during the entire period from 1820 through 1860 in any region',
-      'Antebellum abolitionism was organized entirely by southern slaveholders with no Garrison, no Tappan brothers, no AAS, and no Underground Railroad of any kind during the entire period from 1820 through 1860 in any region',
-      'There was no organized abolitionism of any kind during the entire period from 1820 through 1860 in any region of the United States with no newspapers, no societies, no Underground Railroad, and no political parties of any kind during the entire period'
-    ],
-    correctIndex: 0,
-    explanation: 'Abolitionist organization: newspapers (Liberator 1831, North Star 1847) + national societies (AAS 1833) + women\'s societies + Underground Railroad + political parties (Liberty 1840 → Free Soil 1848 → Republicans 1854) + 1840 AAS split.',
+    question: 'Compared with older Calvinist teaching, the preaching of revivalists such as Charles Finney did more to encourage social reform because it held that',
+    options: ['the world would end soon, so earthly improvements were pointless', 'only an elect few were saved, and they were meant to rule the rest', 'anyone could choose salvation and should show it by serving others', 'churches must leave all questions of public morality to the state'],
+    correctIndex: 2,
+    explanation: 'Finney\'s free-will theology made salvation a choice and asked converts to prove it through disinterested benevolence, which sent them into reform societies. Predestination, withdrawal from public life and an imminent end of the world all point away from reform.',
     partNumber: 2,
-    partTitle: 'Key Processes'
+    partTitle: 'Revival, Markets and the Reform Impulse',
   },
+  // Part 3: Abolitionism, Read Closely (1829–1852)
+  // source: William Lloyd Garrison, "To the Public," The Liberator, January 1, 1831; verbatim
   {
     id: 'apushref-ent-3a',
-    question: 'Which best describes the relationship between Nat Turner\'s Rebellion (August 1831) and antebellum slave laws?',
-    options: [
-      'Nat Turner\'s Rebellion in Southampton County, Virginia (August 1831) killed approximately 60 white people and was the largest slave rebellion in U.S. history; in retaliatory violence, hundreds of Black people (mostly uninvolved) were killed; in response, Southern states passed harsh new laws restricting Black assembly, education, religious meetings, and movement, criminalizing the teaching of literacy to enslaved people, and tightening patrols — entrenching the slave regime and intensifying Southern hostility to abolitionist agitation',
-      'Nat Turner\'s Rebellion had no impact on Southern slave laws of any kind with no restrictions on Black assembly, education, or movement during the entire period from 1831 through 1860 in any region of the United States during the period',
-      'There was no Nat Turner\'s Rebellion in 1831 and no Southern slave law restrictions of any kind during the entire period from 1820 through 1860 in any region of the United States during the period in any region of the United States during the period',
-      'Nat Turner\'s Rebellion led to the immediate abolition of slavery in Virginia in 1831 with no retaliatory violence and no harsher slave laws of any kind during the entire period from 1831 through 1860 in any region of the United States'
-    ],
+    question: '"I am aware, that many object to the severity of my language; but is there not cause for severity? I will be as harsh as truth, and as uncompromising as justice. On this subject, I do not wish to think, or speak, or write, with moderation."\n— William Lloyd Garrison, The Liberator, January 1, 1831\n\nGarrison\'s position in the excerpt most directly rejected which earlier antislavery approach?',
+    options: ['Gradual emancipation tied to colonization abroad', 'Political action through a third party pledged against slavery', 'Armed slave revolts of the kind Denmark Vesey had planned', 'Abolition by act of Parliament with payment to slaveholders'],
     correctIndex: 0,
-    explanation: 'Nat Turner Aug 1831 (Southampton VA, ~60 white killed, largest US slave rebellion) → retaliatory violence (hundreds of Black killed) → harsher slave codes + literacy criminalized + tightened patrols + Southern hostility to abolitionism.',
+    explanation: 'Garrison\'s refusal to speak "with moderation" announced immediatism, a break with the gradual emancipation and colonization that most white antislavery Northerners still favored. The Liberty Party came later, Garrison was a pacifist, and British compensated emancipation was not the American approach he was answering.',
     partNumber: 3,
-    partTitle: 'Patterns & Examples'
+    partTitle: 'Abolitionism, Read Closely (1829–1852)',
   },
   {
     id: 'apushref-ent-3b',
-    question: 'Which best describes the temperance movement?',
-    options: [
-      'The largest antebellum reform movement; began with the American Temperance Society (1826), which grew to over a million members by the early 1830s; drew on Second Great Awakening perfectionism (alcohol as both individual sin and social cause of family poverty); produced the Washingtonian movement (1840, working-class self-help), state Maine laws (Maine 1851 = first statewide prohibition), and contributed to anti-Catholic and anti-immigrant nativism by associating Irish and German immigrants with drinking',
-      'The temperance movement had no organizational structure, no state laws, no Washingtonian movement, and no anti-immigrant dimension of any kind during the entire period from 1820 through 1860 in any region of the United States',
-      'The temperance movement was the smallest antebellum reform movement with no American Temperance Society, no Maine laws, and no anti-immigrant dimension of any kind during the entire period from 1820 through 1860 in any region',
-      'There was no temperance movement of any kind during the entire period from 1820 through 1860 in any region of the United States with no American Temperance Society and no Maine laws of any kind during the entire period in any region'
-    ],
-    correctIndex: 0,
-    explanation: 'Temperance: largest antebellum reform; ATS 1826 (>1M by 1830s); Awakening perfectionism; Washingtonians 1840; Maine Law 1851 (first state prohibition); anti-Irish/German nativist edge.',
+    question: 'In the late 1830s, abolitionists won sympathy from many Northerners who were not yet opposed to slavery itself, mainly because',
+    options: ['Southern states had begun freeing enslaved people who joined Northern churches', 'the Supreme Court had ruled that slavery was illegal in every federal territory', 'Congress had voted to make Liberia a territory of the United States', 'the gag rule and mob attacks seemed to threaten white Northerners\' civil liberties'],
+    correctIndex: 3,
+    explanation: 'Tabling petitions, burning mailed pamphlets and killing Elijah Lovejoy let abolitionists argue that defending slavery meant silencing free speech, petition and press. No Southern state freed people for church membership, the Court ruled the opposite way in 1857, and Liberia was never a U.S. territory.',
     partNumber: 3,
-    partTitle: 'Patterns & Examples'
+    partTitle: 'Abolitionism, Read Closely (1829–1852)',
   },
+  // Part 4: Remaking Institutions: Schools, Asylums, Prisons and Utopias
+  // source: Horace Mann, Twelfth Annual Report of the Massachusetts Board of Education, 1848; verbatim
   {
     id: 'apushref-ent-4a',
-    question: 'Which best describes the connection between the market revolution and antebellum reform movements?',
-    options: [
-      'The market revolution (canals, railroads, telegraphs, factories, urbanization, immigration) created the social dislocations (working-class poverty, urban disorder, family disruption, immigrant communities) that reformers tried to address; temperance responded to working-class drinking, public education to factory child labor and immigrant assimilation, asylum reform to urban poverty\'s mental-health visibility, and abolitionism to slavery\'s integration with northern textile manufacturing — making reform a response to market-revolution social transformation',
-      'The market revolution had no connection to antebellum reform movements of any kind with no temperance, no public education, no asylum reform, and no abolitionism of any kind during the entire period in any region',
-      'The market revolution had no impact on the United States during the entire period from 1820 through 1860 in any region with no canals, no railroads, no telegraphs, no factories, no urbanization, and no immigration of any kind in any region',
-      'The market revolution and antebellum reform existed entirely separately during the entire period from 1820 through 1860 with no shared social dislocations and no shared causation of any kind during the entire period in any region of the United States'
-    ],
-    correctIndex: 0,
-    explanation: 'Market revolution → social dislocations (working-class poverty, urban disorder, immigration) → reform responses (temperance, education, asylum, abolitionism). Reform is a response to market transformation.',
+    question: '"Education then, beyond all other devices of human origin, is the great equalizer of the conditions of men,—the balance-wheel of the social machinery."\n— Horace Mann, Twelfth Annual Report, 1848\n\nMann\'s claim is best understood in the context of',
+    options: ['Southern demands that states fund schools for enslaved children', 'a federal law that required every state to open free high schools', 'the closing of most church schools after disestablishment in 1833', 'a widening gap between rich and poor in Northern industrial towns'],
+    correctIndex: 3,
+    explanation: 'Mann argued that free common schools would let poor children rise and keep industrial inequality from hardening into fixed classes. Teaching enslaved people to read was illegal in the South, there was no federal school law, and church schools did not close after disestablishment.',
     partNumber: 4,
-    partTitle: 'Connections & Interactions'
+    partTitle: 'Remaking Institutions: Schools, Asylums, Prisons and Utopias',
   },
   {
     id: 'apushref-ent-4b',
-    question: 'Which best describes the connection between abolitionism and the women\'s rights movement?',
-    options: [
-      'Many leaders of the early women\'s rights movement (Stanton, Mott, the Grimké sisters) came from the abolitionist movement; the 1840 World Anti-Slavery Convention\'s exclusion of women delegates directly motivated Stanton and Mott to organize what became Seneca Falls (1848); Sojourner Truth and Frances Harper insisted on linking race and gender; the two movements split during Reconstruction (1869) over whether the 15th Amendment (Black male suffrage) should be opposed if it did not include women\'s suffrage',
-      'The abolitionist movement and the women\'s rights movement had no connection of any kind with no shared leaders, no shared organizing experiences, and no Reconstruction split of any kind during the entire period in any region',
-      'The women\'s rights movement was entirely separate from abolitionism with no Stanton, no Mott, no Grimké sisters, and no 1840 World Anti-Slavery Convention exclusion of any kind during the entire period in any region',
-      'Both movements were entirely identical with the same leaders, the same demands, and the same outcomes during the entire period from 1820 through 1869 in any region of the United States during the period in any region'
-    ],
-    correctIndex: 0,
-    explanation: 'Abolitionism + women\'s rights: shared leaders (Stanton, Mott, Grimkés) + 1840 London exclusion → Seneca Falls 1848 + Truth/Harper race-gender link + 1869 split over 15th Amendment.',
+    question: 'A historian comparing Dorothea Dix\'s asylum campaign with the Oneida Community would most likely conclude that',
+    options: ['both groups rejected the idea that surroundings could shape character', 'Dix used state power to reform people, while Oneida withdrew to model a new order', 'Dix withdrew from public life, while Oneida lobbied lawmakers for state funds', 'both were led by Catholic clergy who distrusted Protestant revivalism'],
+    correctIndex: 1,
+    explanation: 'Dix petitioned legislatures to build humane state hospitals, while Oneida\'s members left mainstream society to live out a perfectionist model community. Both actually assumed that environment shapes character, and both drew on Protestant perfectionism rather than Catholic leadership.',
     partNumber: 4,
-    partTitle: 'Connections & Interactions'
+    partTitle: 'Remaking Institutions: Schools, Asylums, Prisons and Utopias',
   },
+  // Part 5: Women's Rights, Backlash and the Limits of Reform
+  // source: Sarah M. Grimké, Letters on the Equality of the Sexes, Letter II, 1838; verbatim
   {
     id: 'apushref-ent-5a',
-    question: 'Which best describes the change in American antislavery from 1817 (founding of the American Colonization Society) to 1854 (founding of the Republican Party)?',
-    options: [
-      'The dominant antislavery framework moved from gradualist colonization (ACS 1817, voluntary "return" of free Black Americans to Africa, founded Liberia 1822) → through Garrisonian immediatism and moral suasion (*Liberator* 1831, AAS 1833) → through political abolitionism (Liberty Party 1840, Free Soil Party 1848, "Free Soil, Free Labor, Free Men") → to mass-party Republicanism (1854), which made stopping slavery\'s expansion a major-party platform; the trajectory shows moral persuasion translating into electoral power over four decades',
-      'American antislavery underwent no change between 1817 and 1854 with no movement from colonization to immediatism to political abolitionism of any kind during the entire period in any region of the United States',
-      'American antislavery moved in the opposite direction, from political party action to colonization, with no Liberty Party, no Free Soil Party, and no Republican Party of any kind during the entire period from 1817 through 1854 in any region',
-      'There was no American antislavery activity of any kind during the entire period from 1817 through 1854 in any region of the United States with no ACS, no Garrison, no Liberty Party, and no Republican Party of any kind during the period'
-    ],
+    question: '"I ask no favors for my sex. I surrender not our claim to equality. All I ask of our brethren is, that they will take their feet from off our necks, and permit us to stand upright on that ground which God designed us to occupy."\n— Sarah Grimké, Letters on the Equality of the Sexes, 1838\n\nGrimké\'s argument was most directly a response to',
+    options: ['criticism of women who spoke against slavery', 'state laws that barred women from textile mill work', 'the refusal of Congress to fund colleges for women', 'the decision of the Supreme Court in Dred Scott'],
     correctIndex: 0,
-    explanation: 'Antislavery 1817 → 1854: colonization (ACS 1817, Liberia 1822) → Garrisonian immediatism (Liberator 1831, AAS 1833) → political (Liberty 1840, Free Soil 1848) → Republican Party 1854. Moral persuasion → electoral power.',
+    explanation: 'After the Grimké sisters lectured to audiences of men and women, Massachusetts ministers condemned women who spoke in public, and Sarah answered by claiming equality as God\'s design. Women worked in the mills, Congress funded no colleges, and Dred Scott came in 1857.',
     partNumber: 5,
-    partTitle: 'Change Over Time'
+    partTitle: 'Women\'s Rights, Backlash and the Limits of Reform',
   },
   {
     id: 'apushref-ent-5b',
-    question: 'Which best describes a major continuity in American religious life from the colonial period through the antebellum era?',
-    options: [
-      'Periodic waves of evangelical revival (First Great Awakening 1730s–40s under Whitefield and Edwards; Second Great Awakening 1790s–1840s under Finney and others) repeatedly transformed American religious life, fueled new denominations (Baptists, Methodists), generated democratic and emotional styles of worship, and connected religious enthusiasm to social reform — showing a recurring American pattern of revival as engine of religious and social change',
-      'American religious life had no revivalism of any kind during the entire colonial and antebellum periods with no First Great Awakening, no Second Great Awakening, no Whitefield, no Edwards, and no Finney of any kind during the entire period in any region',
-      'American religious life was entirely Roman Catholic during the entire colonial and antebellum periods with no Protestant revivalism of any kind during the period from 1607 through 1860 in any region of the United States',
-      'There were no continuities of any kind in American religious life between the colonial and antebellum eras in any region of the United States with no shared revivalist tradition of any kind during the entire period in any region'
-    ],
-    correctIndex: 0,
-    explanation: 'Continuity: revival waves (1st Awakening 1730s-40s Whitefield/Edwards; 2nd Awakening 1790s-1840s Finney) → new denominations (Baptist, Methodist) + democratic/emotional worship + religion → social reform. Revival as recurring engine.',
+    question: 'Many temperance and common-school reformers supported nativist causes in the 1850s because they',
+    options: ['feared immigrants would vote to end slavery faster than the South could accept', 'wanted to keep all immigrants from settling in the western territories', 'expected immigrants to fill the utopian communities and outvote members', 'saw Catholic newcomers as threats to sobriety and to Protestant education'],
+    correctIndex: 3,
+    explanation: 'Native-born Protestant reformers linked Irish and German Catholic immigrants to drinking and to challenges over the Bible in public schools, which fed support for the Know-Nothings. The other choices do not describe what drove reform-minded nativism.',
     partNumber: 5,
-    partTitle: 'Change Over Time'
+    partTitle: 'Women\'s Rights, Backlash and the Limits of Reform',
   },
+  // Part 6: Problem-Solving Workshop
+  // source: Henry David Thoreau, "Resistance to Civil Government" (later titled "Civil Disobedience"), 1849; verbatim
   {
     id: 'apushref-ent-6a',
-    question: 'Which historical context is most essential for sourcing Frederick Douglass\'s *Narrative* (1845)?',
-    options: [
-      'Published in 1845, seven years after Douglass escaped from slavery in Maryland; Douglass had been speaking on the Garrisonian abolitionist circuit since 1841, and the *Narrative* was partly written to refute skeptics who doubted that a man so eloquent could really have been enslaved; the level of detail (including names of slaveholders) made Douglass legally vulnerable to recapture under the Fugitive Slave Act, prompting his temporary exile to Britain and Ireland',
-      'Published in 1700 by an unknown author with no relationship to Garrisonian abolitionism, no skeptics about authenticity, no Fugitive Slave Act vulnerability, and no British exile of any kind during the entire period in any region',
-      'Published in 1880 after the Civil War with no Maryland origin, no Garrisonian circuit, no skeptic refutation, no Fugitive Slave Act, and no British exile of any kind during the entire period in any region of the United States',
-      'There was no Douglass *Narrative* of any kind published during the entire period from 1840 through 1860 in any region of the United States with no Maryland escape and no Garrisonian circuit of any kind during the entire period in any region'
-    ],
-    correctIndex: 0,
-    explanation: 'Douglass *Narrative* 1845 context: 7 yrs after MD escape + Garrisonian circuit since 1841 + refutation of authenticity skeptics + Fugitive Slave vulnerability → exile to Britain/Ireland.',
+    question: '"Under a government which imprisons any unjustly, the true place for a just man is also a prison."\n— Henry David Thoreau, "Resistance to Civil Government," 1849\n\nWhich of the following provides the most relevant historical context for Thoreau\'s statement?',
+    options: ['His arrest for helping plan John Brown\'s raid on Harpers Ferry', 'His jailing for refusing a tax that supported slavery and war', 'His time in prison under the Fugitive Slave Act of 1850', 'His campaign against the silent-labor rules of Auburn prison'],
+    correctIndex: 1,
+    explanation: 'Thoreau spent a night in jail in 1846 for refusing to pay his poll tax in protest against slavery and the war with Mexico. The Harpers Ferry raid came in 1859 and the Fugitive Slave Act in 1850, both after the essay, and he did not campaign about prisons.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: 'Problem-Solving Workshop',
   },
   {
     id: 'apushref-ent-6b',
-    question: 'Which best identifies the point of view of Sojourner Truth\'s "Ain\'t I a Woman?" (delivered 1851 at Akron Women\'s Rights Convention)?',
-    options: [
-      'A formerly enslaved Black woman whose lived experience (manual labor, separation from her children) destabilizes white-middle-class definitions of womanhood; Truth speaks from within both the abolitionist and women\'s-rights movements, refuting "delicate woman" arguments used by anti-suffrage opponents and insisting that the category "woman" be expanded to include enslaved and laboring Black women',
-      'A wealthy white plantation mistress with no enslaved background, no manual labor experience, no children-separation experience, and no relationship to the abolitionist or women\'s-rights movements of any kind during the entire period in any region',
-      'A British noblewoman with no relationship to American abolitionism, women\'s rights, or the 1851 Akron convention of any kind during the entire period from 1840 through 1860 in any region of the United States',
-      'A Cherokee leader with no relationship to abolitionism, women\'s rights, or the 1851 Akron convention of any kind during the entire period from 1840 through 1860 in any region of the United States during the period'
-    ],
-    correctIndex: 0,
-    explanation: '"Ain\'t I a Woman?" POV: formerly enslaved Black woman, manual labor + separation from children → destabilizes white-middle-class womanhood; refutes "delicate woman" anti-suffrage argument.',
+    question: 'An SAQ asks for one piece of evidence that antebellum reform widened women\'s role in public life. Which response would best earn the point?',
+    options: ['Women gained the vote in New York soon after the Seneca Falls Convention of 1848', 'Women led the Know-Nothing campaign against Catholic immigrants in Massachusetts', 'Women gathered antislavery petitions for Congress even though they could not vote', 'Women were expected to stay home under separate spheres, and most of them did so'],
+    correctIndex: 2,
+    explanation: 'Petitioning Congress was a political act that took women into public life despite their exclusion from voting. No state let women vote in 1848, women did not lead the Know-Nothings, and the separate-spheres answer describes the limit, not the change.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: 'Problem-Solving Workshop',
   },
+  // Part 7: AP Review
   {
     id: 'apushref-ent-7a',
-    question: 'In which year was the Seneca Falls Convention held?',
-    options: ['1831', '1840', '1848', '1854'],
-    correctIndex: 2,
-    explanation: '1848 (Seneca Falls Declaration of Sentiments). 1831 = *Liberator*; 1840 = London exclusion of women delegates; 1854 = Republican Party + Kansas-Nebraska.',
+    question: 'Which claim best describes continuity and change in American reform between the 1830s and the 1850s?',
+    options: ['Reform began in party politics but turned to private moral persuasion after the 1840 split', 'Reform kept its religious roots but moved from persuasion to laws and parties', 'Reform began as a Southern movement but became Northern once the Compromise of 1850 passed', 'Reform stayed focused on temperance alone, but its leaders shifted from women to ministers'],
+    correctIndex: 1,
+    explanation: 'Religious motives persisted while reformers moved from pledges and sermons to the Maine Law, the Liberty and Free Soil parties, and the Republicans. The party-politics answer reverses the direction of change, organized reform was always mainly Northern, and reform was never limited to temperance.',
     partNumber: 7,
-    partTitle: 'AP Review'
+    partTitle: 'AP Review',
   },
   {
     id: 'apushref-ent-7b',
-    question: 'Which best demonstrates AP comparison skill across antebellum reform movements?',
-    options: [
-      'Abolitionism and the temperance movement both drew on Second Great Awakening perfectionism, used moral suasion as a strategy, and built national organizational infrastructure (AAS 1833, ATS 1826), but abolitionism became the central trigger of sectional crisis (Bleeding Kansas, Dred Scott, John Brown\'s raid), while temperance produced state-level statutory victories (Maine Law 1851 and similar laws elsewhere) and gradually shifted into early-20th-century constitutional prohibition',
-      'Abolitionism and the temperance movement were entirely identical in religious roots, strategy, organizational form, and political trajectory with no meaningful differences of any kind during the entire period from 1820 through 1860 in any region',
-      'Abolitionism and the temperance movement had no shared themes of any kind and cannot be compared in any meaningful way during the entire period from 1820 through 1860 in any region of the United States during the period',
-      'Neither abolitionism nor the temperance movement existed during the entire period from 1820 through 1860 in any region of the United States with no AAS, no ATS, and no reform movements of any kind during the entire period in any region'
-    ],
-    correctIndex: 0,
-    explanation: 'AP comparison: name shared themes (Awakening perfectionism + moral suasion + national infrastructure) AND specific differences (abolition → sectional crisis trigger; temperance → state laws → 20th-century Prohibition).',
+    question: 'Which evidence would best support the argument that abolitionism deepened sectional conflict before 1860?',
+    options: ['The opening of the first state normal school in Massachusetts in 1839', 'The breakup of New Harmony over disputes about work and property', 'The rapid spread of the Washingtonian temperance societies in 1840', 'The shift of Southern leaders to defending slavery as a positive good'],
+    correctIndex: 3,
+    explanation: 'Immediatist attacks provoked Southern leaders such as Calhoun to defend slavery as a positive good, hardening the divide between the sections. The other choices are real reform events with no direct link to sectional conflict.',
     partNumber: 7,
-    partTitle: 'AP Review'
-  }
+    partTitle: 'AP Review',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -207,11 +153,11 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Core Concepts' },
-    { partNumber: 2, partTitle: 'Key Processes' },
-    { partNumber: 3, partTitle: 'Patterns & Examples' },
-    { partNumber: 4, partTitle: 'Connections & Interactions' },
-    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 2, partTitle: 'Revival, Markets and the Reform Impulse' },
+    { partNumber: 3, partTitle: 'Abolitionism, Read Closely (1829–1852)' },
+    { partNumber: 4, partTitle: 'Remaking Institutions: Schools, Asylums, Prisons and Utopias' },
+    { partNumber: 5, partTitle: 'Women\'s Rights, Backlash and the Limits of Reform' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }
