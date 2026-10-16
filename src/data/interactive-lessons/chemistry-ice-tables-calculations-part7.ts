@@ -96,13 +96,13 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\% \\quad \\text{(vali
           {
             question: 'For $\\text{PCl}_5(g) \\rightleftharpoons \\text{PCl}_3(g) + \\text{Cl}_2(g)$, $K_c = 0.042$. If 1.00 mol $PCl_{5}$ is placed in a 10.0 L flask, what approach is best?',
             options: [
-              'Use the 5% approximation ($[\\text{init}]/K = 0.10/0.042 = 2.4 < 100$)',
-              'Use the quadratic formula ($[\\text{init}]/K = 2.4 < 100$)',
-              'Plug directly into K (all eq. conc. are known)',
-              'No calculation needed'
+              'Apply the small-x approximation, since x stays below 5% of 0.10 M',
+              'Solve the quadratic, since small-x gives an x far above 5% of 0.10 M',
+              'Plug directly into K, since all the equilibrium concentrations are known',
+              'Skip the calculation, since a K below 1 means almost no reaction'
             ],
             correctAnswer: 1,
-            explanation: '$[\\text{PCl}_5]_0 = 1.00/10.0 = 0.10$ M. $0.10/0.042 = 2.4 < 100$. The ratio is too small for the approximation, so the quadratic formula is needed.'
+            explanation: '$[\\text{PCl}_5]_0 = 1.00/10.0 = 0.10$ M. The small-x estimate is $x \\approx \\sqrt{(0.042)(0.10)} = 0.065$ M, which is 65% of 0.10 M, far above the 5% limit, so the quadratic formula is needed. No equilibrium concentrations are given, and a K below 1 does not by itself make the change negligible.'
           },
           {
             question: 'In an ICE table for $\\text{A} \\rightleftharpoons \\text{B} + \\text{C}$, the change row shows $-x$, $+x$, $+x$. This assumes the reaction shifts:',

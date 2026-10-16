@@ -5,24 +5,24 @@ export const chemTypesIntermolecularForcesPart6Data = {
       id: 'if-prop-intro',
       type: 'text',
       title: 'IMFs and Physical Properties',
-      content: `Intermolecular forces directly determine a substance\'s **physical properties**. Stronger IMFs mean molecules are held together more tightly, which affects how the substance behaves.\n\nThe key physical properties influenced by IMF strength:\n\n| Property | Stronger IMFs $\\rightarrow$ | Why |\n|----------|--------------------------|-----|\n| Boiling point | Higher | More energy needed to separate molecules into gas phase |\n| Melting point | Higher | More energy needed to disrupt the solid structure |\n| Surface tension | Higher | Stronger cohesive forces at the surface |\n| Viscosity | Higher | Molecules resist flowing past each other |\n| Vapor pressure | **Lower** | Fewer molecules have enough energy to escape to gas phase |\n\n> ⚠️ **Warning:** Vapor pressure is the **opposite** — stronger IMFs mean LOWER vapor pressure. This is the one property that goes in the inverse direction!
+      content: `**Part 6 of 7 — IMFs and Physical Properties**
 
-**Part 6 of 7 — Problem-Solving Workshop**
+### From Forces to Properties
 
----
+Parts 1–5 identified which intermolecular forces a substance has. This part uses those forces to explain properties you can measure: boiling point, vapor pressure, surface tension and viscosity.
 
-### Practice Makes Perfect
-
-This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
-
-> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+> 🔑 **Why this matters:** AP free-response questions often ask you to rank or explain a property, and full credit requires naming the specific intermolecular force.
 
 ---
 
 ### What You'll Master in Part 6
-- Working through complete multi-step problems from start to finish
-- Building problem-solving strategies you can apply on the AP exam
-- Identifying which concepts to apply and in what order`
+- Predicting boiling-point order from IMF strength
+- Explaining why stronger IMFs mean lower vapor pressure
+- Linking surface tension and viscosity to IMF strength
+
+---
+
+Intermolecular forces directly determine a substance\'s **physical properties**. Stronger IMFs mean molecules are held together more tightly, which affects how the substance behaves.\n\nThe key physical properties influenced by IMF strength:\n\n| Property | Stronger IMFs $\\rightarrow$ | Why |\n|----------|--------------------------|-----|\n| Boiling point | Higher | More energy needed to separate molecules into gas phase |\n| Melting point | Higher | More energy needed to disrupt the solid structure |\n| Surface tension | Higher | Stronger cohesive forces at the surface |\n| Viscosity | Higher | Molecules resist flowing past each other |\n| Vapor pressure | **Lower** | Fewer molecules have enough energy to escape to gas phase |\n\n> ⚠️ **Warning:** Vapor pressure is the **opposite** — stronger IMFs mean LOWER vapor pressure. This is the one property that goes in the inverse direction!`
     },
     {
       id: 'if-prop-bp',

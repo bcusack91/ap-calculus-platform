@@ -6,8 +6,8 @@
  *   1 Acid-Base Definitions               — strong acids, neutralization net ionic equation
  *   2 Conjugate Acid-Base Pairs           — Brønsted-Lowry pairs, amphiprotic species
  *   3 Molecular Structure & Acid Strength — oxyacids and inductive effects
- *   4 Strong Acids & Bases                — pH/pOH conversions and the logarithmic scale
- *   5 Calculating pH & pOH                — strong base pH, strong acid + strong base mixtures
+ *   4 The pH Scale                — pH/pOH conversions and the logarithmic scale
+ *   5 Strong Acids and Bases — pH Calculations                — strong base pH, strong acid + strong base mixtures
  *   6 Problem-Solving Workshop            — neutrality when Kw changes, multi-step dilution and mixing
  *   7 Synthesis & AP Review               — sulfuric acid vs other acids, [H+] and [OH−] together
  */
@@ -95,7 +95,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Molecular Structure & Acid Strength',
   },
 
-  // Part 4: Strong Acids & Bases
+  // Part 4: The pH Scale
   {
     id: 'abt-ent-4a',
     question: 'A solution at 25 °C has $[\\text{OH}^-] = 3.0 \\times 10^{-5}$ M. What is its pH?',
@@ -103,7 +103,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'pOH $= -\\log(3.0 \\times 10^{-5}) = 4.52$, so pH $= 14.00 - 4.52 = 9.48$. Stopping at 4.52 reports the pOH, not the pH.',
     partNumber: 4,
-    partTitle: 'Strong Acids & Bases',
+    partTitle: 'The pH Scale',
   },
   {
     id: 'abt-ent-4b',
@@ -117,10 +117,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'Each pH unit is a factor of 10, so a difference of 2 units is a factor of 100, and the lower pH (X) has the higher concentration. Subtracting or dividing the pH values gives 2 or 1.6, which ignores the logarithmic scale.',
     partNumber: 4,
-    partTitle: 'Strong Acids & Bases',
+    partTitle: 'The pH Scale',
   },
 
-  // Part 5: Calculating pH & pOH
+  // Part 5: Strong Acids and Bases — pH Calculations
   {
     id: 'abt-ent-5a',
     question: 'What is the pH of 0.0025 M $\\text{Sr(OH)}_2$ at 25 °C?',
@@ -128,7 +128,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Each formula unit releases two $\\text{OH}^-$, so $[\\text{OH}^-] = 0.0050$ M, pOH = 2.30 and pH = 11.70. Forgetting the factor of 2 gives 11.40, and 2.30 is the pOH.',
     partNumber: 5,
-    partTitle: 'Calculating pH & pOH',
+    partTitle: 'Strong Acids and Bases — pH Calculations',
   },
   {
     id: 'abt-ent-5b',
@@ -137,7 +137,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'HCl supplies 3.0 mmol $\\text{H}^+$ and $\\text{Ba(OH)}_2$ supplies 4.0 mmol $\\text{OH}^-$, leaving 1.0 mmol $\\text{OH}^-$ in 50.0 mL (0.020 M): pOH = 1.70 and pH = 12.30. Forgetting the 2 hydroxides per formula unit makes the mixture look acidic (1.70).',
     partNumber: 5,
-    partTitle: 'Calculating pH & pOH',
+    partTitle: 'Strong Acids and Bases — pH Calculations',
   },
 
   // Part 6: Problem-Solving Workshop
@@ -200,8 +200,8 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 1, partTitle: 'Acid-Base Definitions' },
     { partNumber: 2, partTitle: 'Conjugate Acid-Base Pairs' },
     { partNumber: 3, partTitle: 'Molecular Structure & Acid Strength' },
-    { partNumber: 4, partTitle: 'Strong Acids & Bases' },
-    { partNumber: 5, partTitle: 'Calculating pH & pOH' },
+    { partNumber: 4, partTitle: 'The pH Scale' },
+    { partNumber: 5, partTitle: 'Strong Acids and Bases — pH Calculations' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]

@@ -8,9 +8,9 @@
  *
  * Part mapping (registry title — what the part teaches):
  *  1 — Introduction to Gibbs Free Energy (ΔG = ΔH − TΔS; crossover temperature)
- *  2 — ΔG = ΔH − TΔS (the four ΔH/ΔS sign cases)
- *  3 — Spontaneity & Temperature (ΔG° from ΔG°f tables)
- *  4 — Standard Free Energy of Formation (ΔG° = −RT ln K)
+ *  2 — Four ΔH/ΔS Combinations (the four ΔH/ΔS sign cases)
+ *  3 — Standard Free Energy of Formation (ΔG° from ΔG°f tables)
+ *  4 — ΔG and Equilibrium (ΔG° = −RT ln K)
  *  5 — Free Energy, K & Coupled Reactions (coupling; Q vs. K)
  *  6 — Problem-Solving Workshop (multi-step ΔG and K problems)
  *  7 — Synthesis & AP Review (K across temperatures; driving unfavorable reactions)
@@ -40,7 +40,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Introduction to Gibbs Free Energy',
   },
 
-  // Part 2: ΔG = ΔH − TΔS (the four sign cases)
+  // Part 2: Four ΔH/ΔS Combinations (the four sign cases)
   {
     id: 'gfe-ent-2a',
     question: 'A reaction is thermodynamically favored only above 600 K. What are the signs of $\\Delta H$ and $\\Delta S$?',
@@ -53,7 +53,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'Being favored only at high temperature means the $-T\\Delta S$ term must eventually beat an unfavorable $\\Delta H$, so $\\Delta H > 0$ and $\\Delta S > 0$. Both negative gives a low-temperature reaction, and the mixed-sign cases are favored always or never.',
     partNumber: 2,
-    partTitle: 'ΔG = ΔH − TΔS',
+    partTitle: 'Four ΔH/ΔS Combinations',
   },
   {
     id: 'gfe-ent-2b',
@@ -67,10 +67,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Two moles of gas become one, so $\\Delta S < 0$; with $\\Delta H < 0$ as well, the favorable enthalpy wins only when $T$ is small. Being exothermic is not enough to guarantee favorability at every temperature.',
     partNumber: 2,
-    partTitle: 'ΔG = ΔH − TΔS',
+    partTitle: 'Four ΔH/ΔS Combinations',
   },
 
-  // Part 3: Spontaneity & Temperature (ΔG° from formation values)
+  // Part 3: Standard Free Energy of Formation (ΔG° from formation values)
   {
     id: 'gfe-ent-3a',
     question: 'Using $\\Delta G^\\circ_f$ values $\\text{CO}_2(g) = -394.4$, $\\text{H}_2\\text{O}(l) = -237.1$, and $\\text{C}_2\\text{H}_5\\text{OH}(l) = -174.8$ kJ/mol, find $\\Delta G^\\circ$ for $\\text{C}_2\\text{H}_5\\text{OH}(l) + 3\\text{O}_2(g) \\rightarrow 2\\text{CO}_2(g) + 3\\text{H}_2\\text{O}(l)$.',
@@ -78,7 +78,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'Products: $2(-394.4) + 3(-237.1) = -1500.1$ kJ; reactants: $-174.8 + 0 = -174.8$ kJ; so $\\Delta G^\\circ = -1500.1 + 174.8 = -1325.3$ kJ. Reactants minus products gives the positive value, adding the ethanol term gives $-1674.9$ kJ, and ignoring the coefficients gives $-456.7$ kJ.',
     partNumber: 3,
-    partTitle: 'Spontaneity & Temperature',
+    partTitle: 'Standard Free Energy of Formation',
   },
   {
     id: 'gfe-ent-3b',
@@ -92,10 +92,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'Forming NO from its elements has $\\Delta G^\\circ > 0$, so the reverse, decomposition into $\\text{N}_2$ and $\\text{O}_2$, has $\\Delta G^\\circ < 0$ and is favored. Favorability says nothing about speed, and only elements in their standard states have $\\Delta G^\\circ_f = 0$.',
     partNumber: 3,
-    partTitle: 'Spontaneity & Temperature',
+    partTitle: 'Standard Free Energy of Formation',
   },
 
-  // Part 4: Standard Free Energy of Formation (ΔG° = −RT ln K)
+  // Part 4: ΔG and Equilibrium (ΔG° = −RT ln K)
   {
     id: 'gfe-ent-4a',
     question: 'At 298 K, a reaction has $K = 4.5 \\times 10^3$. What is $\\Delta G^\\circ$? ($R = 8.314$ J/(mol·K))',
@@ -103,7 +103,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: '$\\Delta G^\\circ = -RT\\ln K = -(8.314)(298)\\ln(4500) = -20{,}800$ J/mol $= -20.8$ kJ/mol, negative because $K > 1$. Dropping the minus sign gives +20.8, using $\\log$ instead of $\\ln$ gives $-9.05$, and reporting joules as kilojoules gives $-20{,}800$.',
     partNumber: 4,
-    partTitle: 'Standard Free Energy of Formation',
+    partTitle: 'ΔG and Equilibrium',
   },
   {
     id: 'gfe-ent-4b',
@@ -112,7 +112,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: '$K = e^{-\\Delta G^\\circ/RT} = e^{-8000/2478} = e^{-3.23} = 0.040$, less than 1 because $\\Delta G^\\circ > 0$. Flipping the sign gives 25, leaving $\\Delta G^\\circ$ in kJ gives about 1.00, and $-3.2$ is $\\ln K$, not $K$.',
     partNumber: 4,
-    partTitle: 'Standard Free Energy of Formation',
+    partTitle: 'ΔG and Equilibrium',
   },
 
   // Part 5: Free Energy, K & Coupled Reactions
@@ -210,9 +210,9 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Introduction to Gibbs Free Energy' },
-    { partNumber: 2, partTitle: 'ΔG = ΔH − TΔS' },
-    { partNumber: 3, partTitle: 'Spontaneity & Temperature' },
-    { partNumber: 4, partTitle: 'Standard Free Energy of Formation' },
+    { partNumber: 2, partTitle: 'Four ΔH/ΔS Combinations' },
+    { partNumber: 3, partTitle: 'Standard Free Energy of Formation' },
+    { partNumber: 4, partTitle: 'ΔG and Equilibrium' },
     { partNumber: 5, partTitle: 'Free Energy, K & Coupled Reactions' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },

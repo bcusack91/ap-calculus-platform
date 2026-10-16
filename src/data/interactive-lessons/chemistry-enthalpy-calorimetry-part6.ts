@@ -10,18 +10,18 @@ export const chemEnthalpyCalorimetryPart6Data = {
 
 ---
 
-### Practice Makes Perfect
+### A Table Instead of a Calorimeter
 
-This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+Hess's law (Part 5) lets you add known reactions. Standard enthalpies of formation make that systematic: one table of $\\Delta H°_f$ values gives $\\Delta H°_{rxn}$ for almost any reaction without running it.
 
-> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+> 🔑 **Why this matters:** AP questions often supply a short $\\Delta H°_f$ table and ask for $\\Delta H°_{rxn}$; the most common errors are forgetting the coefficients and giving elements a nonzero value.
 
 ---
 
 ### What You'll Master in Part 6
-- Working through complete multi-step problems from start to finish
-- Building problem-solving strategies you can apply on the AP exam
-- Identifying which concepts to apply and in what order`
+- Defining the standard enthalpy of formation and writing formation reactions
+- Recognizing that elements in their standard states have $\\Delta H°_f = 0$
+- Calculating $\\Delta H°_{rxn}$ as products minus reactants, weighted by coefficients`
     },
     {
       id: 'eh6-definition',

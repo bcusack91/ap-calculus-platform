@@ -223,15 +223,15 @@ Because each step is so much weaker than the one before, a solution of a weak di
       exercise: {
         questions: [
           {
-            question: 'At what concentration does the 5% approximation begin to fail for acetic acid ($K_a = 1.8 \\times 10^{-5}$)?',
+            question: 'For 0.0010 M acetic acid ($K_a = 1.8 \\times 10^{-5}$), the small-x approximation gives $[H^+] = \\sqrt{K_a C} = 1.3 \\times 10^{-4}$ M. What does the 5% check show?',
             options: [
-              'Below about 0.0072 M',
-              'Above about 0.0072 M',
-              'Below about 0.00036 M',
-              'It never fails'
+              'x is 13% of 0.0010 M, so the quadratic is needed',
+              'x is 1.3% of 0.0010 M, so the approximation holds',
+              'x is less than 0.0010 M, so the approximation holds',
+              'x is 0.13% of 0.0010 M, so the approximation holds'
             ],
             correctAnswer: 0,
-            explanation: 'The approximation fails when $C/K_a < 400$: $C < 400 \\times 1.8 \\times 10^{-5} = 0.0072$ M. Below this concentration, use the quadratic formula. "Above" reverses the direction (more concentrated solutions ionize less, so the approximation improves), and 0.00036 M comes from using $C/K_a > 20$ — forgetting to square 0.05.'
+            explanation: '$(1.3 \\times 10^{-4} / 0.0010) \\times 100\\% = 13\\%$, well above 5%, so subtracting x from 0.0010 M cannot be ignored and the quadratic must be solved. Dilute weak acids ionize more, which is why the approximation fails here. 1.3% and 0.13% misplace the decimal point, and x being smaller than C only guarantees a positive concentration, not a valid approximation.'
           },
           {
             question: 'In a 0.10 M solution of the weak diprotic acid $H_2CO_3$, which species is present in the LOWEST concentration?',

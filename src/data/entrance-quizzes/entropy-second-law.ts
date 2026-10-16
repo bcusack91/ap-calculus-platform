@@ -11,7 +11,7 @@
  *  2 — More Gas, More Entropy (predicting the sign of ΔS from moles of gas and phases)
  *  3 — Entropy & Thermodynamic Favorability (signs of ΔH and ΔS; favored is not fast)
  *  4 — Standard Entropy Changes (standard molar entropy patterns)
- *  5 — Predicting Entropy Changes (ΔS° from tabulated S° values)
+ *  5 — Calculating ΔS°rxn from Standard Entropies (ΔS° from tabulated S° values)
  *  6 — Problem-Solving Workshop (crossover temperature; ΔG with unit conversion)
  *  7 — Synthesis & AP Review (justifying favorability; full ΔS° calculation)
  */
@@ -140,7 +140,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Standard Entropy Changes',
   },
 
-  // Part 5: Predicting Entropy Changes (calculating ΔS°)
+  // Part 5: Calculating ΔS°rxn from Standard Entropies (calculating ΔS°)
   {
     id: 'esl-ent-5a',
     question: 'Using $S^\\circ$ values CO(g) = 197.7, $\\text{O}_2(g)$ = 205.1, and $\\text{CO}_2(g)$ = 213.7 J/(mol·K), find $\\Delta S^\\circ$ for $2\\text{CO}(g) + \\text{O}_2(g) \\rightarrow 2\\text{CO}_2(g)$.',
@@ -148,7 +148,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: '$\\Delta S^\\circ = 2(213.7) - [2(197.7) + 205.1] = 427.4 - 600.5 = -173.1$ J/K, negative as expected since 3 mol of gas become 2. Ignoring the coefficients gives $-189.1$, and treating the $S^\\circ$ of $\\text{O}_2$ as zero gives +32.0.',
     partNumber: 5,
-    partTitle: 'Predicting Entropy Changes',
+    partTitle: 'Calculating ΔS°rxn from Standard Entropies',
   },
   {
     id: 'esl-ent-5b',
@@ -157,7 +157,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: '$\\Delta S^\\circ = 2(210.8) - (191.6 + 205.1) = 421.6 - 396.7 = +24.9$ J/K, small because the moles of gas do not change. Dropping the coefficient on NO gives $-185.9$, and treating the elements as zero entropy gives +421.6.',
     partNumber: 5,
-    partTitle: 'Predicting Entropy Changes',
+    partTitle: 'Calculating ΔS°rxn from Standard Entropies',
   },
 
   // Part 6: Problem-Solving Workshop
@@ -228,7 +228,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 2, partTitle: 'More Gas, More Entropy' },
     { partNumber: 3, partTitle: 'Entropy & Thermodynamic Favorability' },
     { partNumber: 4, partTitle: 'Standard Entropy Changes' },
-    { partNumber: 5, partTitle: 'Predicting Entropy Changes' },
+    { partNumber: 5, partTitle: 'Calculating ΔS°rxn from Standard Entropies' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]

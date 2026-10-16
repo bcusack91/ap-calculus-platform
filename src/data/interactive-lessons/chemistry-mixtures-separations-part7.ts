@@ -77,7 +77,7 @@ AP free-response questions often ask how errors affect results:
 | Some precipitate passes through filter | Mass too low → % too low |
 | Overshoot endpoint in titration | Volume too high → calculated concentration too high |
 | Cuvette has fingerprints (spectroscopy) | Absorbance too high → calculated concentration too high |
-| Air bubbles in buret during titration | Volume reading too low → calculated concentration too low |
+| Air bubble in the buret tip escapes during titration | Volume reading too high → calculated analyte concentration too high |
 | Forget to subtract water vapor pressure | Gas pressure too high → calculated moles too high |
 
 > ⚠️ **Warning:** On the AP exam, the most common error analysis mistake is not tracing through the full chain of logic. Always connect the experimental error to the **final calculated result**.

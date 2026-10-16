@@ -37,19 +37,19 @@ PES spectrum (left to right):
 
 | Peak | Height | Subshell | Type | Binding Energy |
 |------|--------|----------|------|---------------|
-| 1 | 2 | $1s^{2}$ | Core | ~189 MJ/mol |
-| 2 | 2 | $2s^{2}$ | Core | ~17 MJ/mol |
-| 3 | 6 | $2p^{6}$ | Core | ~13 MJ/mol |
-| 4 | 2 | $3s^{2}$ | Valence | ~1.1 MJ/mol |
-| 5 | 2 | $3p^{2}$ | Valence | ~0.8 MJ/mol |
+| 1 | 2 | $1s^{2}$ | Core | ~178 MJ/mol |
+| 2 | 2 | $2s^{2}$ | Core | ~15.1 MJ/mol |
+| 3 | 6 | $2p^{6}$ | Core | ~10.3 MJ/mol |
+| 4 | 2 | $3s^{2}$ | Valence | ~1.46 MJ/mol |
+| 5 | 2 | $3p^{2}$ | Valence | ~0.79 MJ/mol |
 
 **Key observations:**
-- The **core electrons** (1s, 2s, 2p) have binding energies ranging from ~13 to ~189 MJ/mol
-- The **valence electrons** (3s, 3p) have binding energies around ~0.8–1.1 MJ/mol
-- There is a **huge gap** between the 2p peak (~13 MJ/mol) and the 3s peak (~1.1 MJ/mol)
-- This gap clearly separates core from valence electrons
+- The **core electrons** (1s, 2s, 2p) have binding energies ranging from ~10 to ~178 MJ/mol
+- The **valence electrons** (3s, 3p) have binding energies of only ~0.8–1.5 MJ/mol
+- There is a **large drop** between the 2p peak (~10.3 MJ/mol) and the 3s peak (~1.46 MJ/mol)
+- This drop separates core from valence electrons
 
-> 💡 **Tip:** Look for the largest gap between adjacent peaks — everything to the left of that gap is core, everything to the right is valence.`
+> 💡 **Tip:** Don't just hunt for the largest gap. In silicon, the 1s → 2s drop (178 → 15.1 MJ/mol) is far bigger than the 2p → 3s drop. Instead, find the outermost shell (the highest n): its peaks are the valence electrons, and every peak to their left is core.`
     },
     {
       id: 'ps4-quiz1',
@@ -191,7 +191,7 @@ Consider the PES spectrum of oxygen (O, Z = 8) with configuration $1s^{2}$ $2s^{
 | 3 | $1s^{2}$ $2s^{2}$ $2p^{6}$ | 10 |
 | 4 | $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{2}$ $3p^{6}$ | 18 |
 
-> 💡 A **large gap** in binding energy on the spectrum often marks the boundary between core and valence electrons.
+> 💡 The core/valence boundary is the drop just before the first peak of the outermost shell — not necessarily the largest gap, since the 1s → 2s gap is usually bigger.
 
 ---
 
@@ -200,7 +200,7 @@ Consider the PES spectrum of oxygen (O, Z = 8) with configuration $1s^{2}$ $2s^{
 - ☐ I can identify core vs. valence peaks on a PES spectrum
 - ☐ I know that the # of valence electrons determines chemical properties
 - ☐ I understand why core electrons stay constant across a period
-- ☐ I can spot the BE gap that separates core from valence
+- ☐ I can find the core/valence boundary from the outermost shell, not just the biggest gap
 
 ---
 

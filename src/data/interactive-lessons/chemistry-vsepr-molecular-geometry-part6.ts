@@ -11,18 +11,18 @@ export const chemVseprMolecularGeometryPart6Data = {
 
 ---
 
-### Practice Makes Perfect
+### From Shape to Polarity
 
-This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+A polar bond is not enough to make a polar molecule. Whether the bond dipoles add up or cancel depends on the molecular geometry you learned to predict in Parts 1–5.
 
-> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+> 🔑 **Why this matters:** Polarity decides which intermolecular forces a substance has, so AP questions on boiling point and solubility usually start with "Is this molecule polar?"
 
 ---
 
 ### What You'll Master in Part 6
-- Working through complete multi-step problems from start to finish
-- Building problem-solving strategies you can apply on the AP exam
-- Identifying which concepts to apply and in what order`
+- Deciding whether bond dipoles cancel from the molecular geometry
+- Explaining how lone pairs on the central atom affect polarity
+- Connecting molecular polarity to boiling point and solubility`
     },
     {
       id: 'vg-6-2',
@@ -110,11 +110,11 @@ If either condition fails, the molecule is polar.
       id: 'vg-6-4',
       type: 'text',
       title: 'Lone Pairs and Polarity',
-      content: `## Lone Pairs Guarantee Asymmetry
+      content: `## Lone Pairs Usually Create Asymmetry
 
-> 🔑 **Key Concept:** Any molecule with lone pairs on the central atom and polar bonds will be polar — the lone pairs create an asymmetric electron density distribution with no opposing dipole.
+> 🔑 **Key Concept:** A molecule with polar bonds and lone pairs on the central atom is usually polar, because the lone pairs leave the bond dipoles unbalanced. The exception is when the lone pairs themselves sit symmetrically, as in $XeF_{2}$ and $XeF_{4}$.
 
-Any molecule with **lone pairs on the central atom** and **polar bonds** will be polar, because the lone pairs create an asymmetric distribution of electron density.
+Most molecules with **lone pairs on the central atom** and **polar bonds** are polar, because the lone pairs push the bonded atoms into an asymmetric arrangement.
 
 ### Why?
 

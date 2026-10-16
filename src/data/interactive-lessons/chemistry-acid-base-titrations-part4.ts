@@ -76,7 +76,7 @@ $$NH_3(aq) + HCl(aq) \\rightarrow NH_4Cl(aq)$$
 
 - **Initial pH**: High (basic — weak base)
 - **Buffer region**: Both $NH_3$ and $NH_4^+$ present (pH decreases)
-- **Half-equivalence**: $pH = pK_a(NH_4^+) = 14 - pK_b = 14 - 4.74 = 9.25$
+- **Half-equivalence**: $pH = pK_a(NH_4^+) = 9.25$ (from $K_a = K_w/K_b = 5.6 \\times 10^{-10}$)
 - **Equivalence point**: Only $NH_4^+$ (a weak acid) → $pH < 7$
 - **After equivalence**: Excess $HCl$ → strongly acidic
 
@@ -129,7 +129,7 @@ The curve goes from **high pH to low pH** — a mirror image of the weak acid cu
               'The initial pH of the $NH_3$'
             ],
             correctAnswer: 1,
-            explanation: 'At the half-equivalence point of a weak base titration: $[B] = [BH^+]$, and $pH = pK_a$ of the conjugate acid. For $NH_4^+$: $pK_a = 14 - 4.74 = 9.26$ (9.25 with the unrounded $pK_b = 4.745$). $pK_b$ (4.74) gives the pOH there, not the pH, and the initial pH of 0.10 M $NH_3$ is about 11.1.'
+            explanation: 'At the half-equivalence point of a weak base titration: $[B] = [BH^+]$, and $pH = pK_a$ of the conjugate acid. For $NH_4^+$: $K_a = K_w/K_b = 5.6 \\times 10^{-10}$, so $pK_a = 9.25$. $pK_b$ (4.74) gives the pOH there, not the pH, and the initial pH of 0.10 M $NH_3$ is about 11.1.'
           }
         ]
       }
@@ -182,7 +182,7 @@ Three equivalence points (three protons):
       content: `
 **Critical Point Calculations** 🧮
 
-50.0 mL of 0.100 M $NH_3$ ($K_b = 1.8 \\times 10^{-5}$, $pK_b = 4.74$) is titrated with 0.100 M $HCl$:
+50.0 mL of 0.100 M $NH_3$ ($K_b = 1.8 \\times 10^{-5}$, so $K_a$ of $NH_4^+$ $= 5.6 \\times 10^{-10}$) is titrated with 0.100 M $HCl$:
 
 **1)** What volume of $HCl$ is needed for the equivalence point? (1 decimal place, mL)
 
@@ -192,11 +192,11 @@ Three equivalence points (three protons):
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['50.0', '9.26', '9.26'],
+        correctAnswers: ['50.0', '9.25', '9.25'],
         hint1: 'Equal concentrations → equal volumes.',
-        hint2: 'At half-equivalence: $pH = pK_a(NH_4^+) = 14 - pK_b$.',
-        hint3: '$pK_a + pK_b = 14$.',
-        explanation: '1) $V = (0.100 \\times 50.0)/0.100 = 50.0$ mL. 2) $pH = pK_a(NH_4^+) = 14 - 4.74 = 9.26$. 3) $pK_a(NH_4^+) = 14 - 4.74 = 9.26$.'
+        hint2: 'At half-equivalence: $pH = pK_a(NH_4^+) = -\\log K_a$.',
+        hint3: '$pK_a = -\\log(5.6 \\times 10^{-10})$.',
+        explanation: '1) $V = (0.100 \\times 50.0)/0.100 = 50.0$ mL. 2) $pH = pK_a(NH_4^+) = -\\log(5.6 \\times 10^{-10}) = 9.25$. 3) $pK_a(NH_4^+) = 9.25$, the same value, which is why pH = $pK_a$ at half-equivalence.'
       }
     },
     {

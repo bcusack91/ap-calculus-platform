@@ -10,18 +10,18 @@ export const chemEquilibriumConstantsPart6Data = {
 
 ---
 
-### Practice Makes Perfect
+### Is the System at Equilibrium Yet?
 
-This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+$K$ describes the equilibrium mixture. The reaction quotient $Q$ uses the same expression with the concentrations or pressures present **right now**, so comparing $Q$ with $K$ tells you which way a reaction must go to reach equilibrium.
 
-> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+> 🔑 **Why this matters:** "Calculate $Q$, compare it with $K$, and predict the direction" is one of the most frequent equilibrium tasks on the AP exam.
 
 ---
 
 ### What You'll Master in Part 6
-- Working through complete multi-step problems from start to finish
-- Building problem-solving strategies you can apply on the AP exam
-- Identifying which concepts to apply and in what order`
+- Writing and calculating $Q$ from current concentrations or pressures
+- Comparing $Q$ with $K$ to decide whether a mixture is at equilibrium
+- Predicting the direction of net reaction when $Q < K$ or $Q > K$`
     },
     {
       id: 'ece6-q-definition',

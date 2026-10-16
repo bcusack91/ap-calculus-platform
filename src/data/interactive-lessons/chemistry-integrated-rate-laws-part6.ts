@@ -56,7 +56,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 Use the appropriate integrated rate law to find:
 - Concentration at any time
 - Time to reach a certain concentration
-- Half-life
+- Half-life ($t_{1/2} = 0.693/k$), for first-order reactions only
 
 > ⚠️ **Always check the units of $k$** to confirm the order you identified. Wrong units = wrong order!
       `
@@ -127,15 +127,15 @@ Use the appropriate integrated rate law to find:
             explanation: 'Slope = Δ(1/[B])/Δt = 1.00/50 = 0.020 $M^{-1}s^{-1}$. For second-order, slope = +k, and the units of k are $M^{-1}s^{-1}$. M/s belongs to zero-order, $s^{-1}$ to first-order and $M^{-2}s^{-1}$ to third-order.'
           },
           {
-            question: 'What is the half-life (from the initial concentration)?',
+            question: 'Using the integrated rate law, at what time will [B] reach 0.100 M?',
             options: [
-              '25 s',
-              '50 s',
-              '100 s',
-              '200 s'
+              '232 s',
+              '500 s',
+              '400 s',
+              '300 s'
             ],
             correctAnswer: 2,
-            explanation: '$t_{1}/_{2}$ = 1/(k[B]$ {}_{0}$) = 1/(0.020 × 0.500) = 1/0.010 = 100 s. Verify: at t = 100 s, [B] = 0.250 = 0.500/2 ✓.'
+            explanation: '1/[B] = kt + 1/[B]$ {}_{0}$, so 10.0 = 0.020t + 2.00, giving 0.020t = 8.00 and t = 400 s. Dividing 10.0 by k without subtracting 1/[B]$ {}_{0}$ gives 500 s, 232 s treats the reaction as first-order with a constant 100 s half-life, and 300 s is when [B] reaches 0.125 M.'
           }
         ]
       }
@@ -203,19 +203,19 @@ A first-order reaction has a half-life of 25.0 minutes. The initial concentratio
 
 A certain reaction is second-order with $k = 0.10$ $M^{-1}s^{-1}$ and $[A]_0 = 2.0$ M.
 
-**1)** What is the first half-life? (in seconds, to 3 significant figures)
+**1)** What is [A] at t = 5.0 s? (in M, to 3 significant figures)
 
 **2)** How long total until 87.5% of A has reacted? (in seconds, to 3 significant figures)
 
-**3)** What is [A] at t = 35 s? (in M, to 3 significant figures)
+**3)** How many seconds does it take [A] to fall from 1.00 M to 0.500 M? (to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5.0', '35.0', '0.250'],
-        hint1: '$t_{1}/_{2}$ = 1/(k[A]$ {}_{0}$) = 1/(0.10 × 2.0) = 5.0 s.',
+        correctAnswers: ['1.00', '35.0', '10.0'],
+        hint1: '1/[A] = kt + 1/[A]$ {}_{0}$ = 0.10(5.0) + 1/2.0 = 0.50 + 0.50 = 1.00, so [A] = 1.00 M.',
         hint2: '87.5% reacted → 12.5% remains → [A] = 0.25 M. 1/[A] = kt + 1/[A]$ {}_{0}$. 1/0.25 = 0.10t + 1/2.0. 4.0 = 0.10t + 0.50. 0.10t = 3.5. t = 35.0 s.',
-        hint3: '1/[A] = kt + 1/[A]$ {}_{0}$ = 0.10(35) + 1/2.0 = 3.5 + 0.50 = 4.0. [A] = 1/4.0 = 0.250 M. (Same time as part 2, so the same concentration.)',
-        explanation: '1) $t_{1}/_{2}$ = 1/(0.10 × 2.0) = 5.0 s. 2) [A] = 0.25 M: 1/0.25 = 0.10t + 0.50 → 4.0 = 0.10t + 0.50 → t = 35.0 s. 3) 1/[A] = 0.10(35) + 0.50 = 4.0 → [A] = 0.25 M.'
+        hint3: '[A] = 0.500 M when 1/[A] = 2.00: 2.00 = 0.10t + 0.50, so t = 15.0 s. It reached 1.00 M at 5.0 s.',
+        explanation: '1) 1/[A] = 0.10(5.0) + 0.50 = 1.00 → [A] = 1.00 M. 2) [A] = 0.25 M: 1/0.25 = 0.10t + 0.50 → 4.0 = 0.10t + 0.50 → t = 35.0 s. 3) [A] = 0.500 M at t = (2.00 − 0.50)/0.10 = 15.0 s, so falling from 1.00 M (at 5.0 s) to 0.500 M takes 15.0 − 5.0 = 10.0 s. The first halving took 5.0 s and the second took 10.0 s, which is why half-life is used only for first-order reactions.'
       }
     },
     {

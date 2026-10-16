@@ -160,7 +160,7 @@ This is a critically important result: **the pH of a buffer with equal concentra
         hint1: '$pH = 3.17 + \\log(0.60/0.40)$.',
         hint2: 'For $NH_3/NH_4^+$ buffer: $pH = pK_a(NH_4^+) + \\log([NH_3]/[NH_4^+])$.',
         hint3: '$5.50 = 4.74 + \\log(x)$; solve for $x = 10^{0.76}$.',
-        explanation: '1) $pH = 3.17 + \\log(1.50) = 3.17 + 0.18 = 3.35$. 2) $pH = 9.25 + \\log(0.50) = 9.25 + (-0.30) = 8.95$. Note: $pK_a$ of $NH_4^+$ = $14 - pK_b$ = $14 - 4.74 = 9.25$. 3) $\\log(x) = 5.50 - 4.74 = 0.76$; $x = 10^{0.76} = 5.75 \\approx 5.8$.'
+        explanation: '1) $pH = 3.17 + \\log(1.50) = 3.17 + 0.18 = 3.35$. 2) $pH = 9.25 + \\log(0.50) = 9.25 + (-0.30) = 8.95$. Note: $pK_a$ of $NH_4^+$ = $-\\log(5.6 \\times 10^{-10}) = 9.25$. 3) $\\log(x) = 5.50 - 4.74 = 0.76$; $x = 10^{0.76} = 5.75 \\approx 5.8$.'
       }
     },
     {
@@ -175,7 +175,7 @@ For a buffer made from a weak base ($NH_3$) and its conjugate acid ($NH_4^+$):
 
 $$pH = pK_a(NH_4^+) + \\log\\frac{[NH_3]}{[NH_4^+]}$$
 
-where $pK_a(NH_4^+) = 14 - pK_b(NH_3) = 14 - 4.74 = 9.25$
+where $pK_a(NH_4^+) = -\\log\\frac{K_w}{K_b} = -\\log(5.6 \\times 10^{-10}) = 9.25$
 
 **Method 2: Use $pOH$ form**
 
@@ -225,15 +225,15 @@ Both methods give the same answer. Method 1 is usually preferred for consistency
       exercise: {
         questions: [
           {
-            question: 'A buffer is made by mixing 0.20 mol $NH_3$ and 0.30 mol $NH_4Cl$ in 1.0 L. ($pK_b = 4.74$) The pH is:',
+            question: 'A buffer is made by mixing 0.20 mol $NH_3$ and 0.30 mol $NH_4Cl$ in 1.0 L. ($pK_a$ of $NH_4^+$ = 9.25) The pH is:',
             options: [
-              '4.56',
+              '4.93',
               '9.07',
               '9.25',
               '9.43'
             ],
             correctAnswer: 1,
-            explanation: '$pK_a(NH_4^+) = 14 - pK_b = 9.25$ ($K_b = 1.8 \\times 10^{-5}$ gives $pK_b = 4.745$, shown rounded as 4.74). $pH = 9.25 + \\log(0.20/0.30) = 9.25 + \\log(0.667) = 9.25 + (-0.18) = 9.07$. Using $pK_b$ in place of $pK_a$ gives 4.56, ignoring the ratio gives 9.25, and inverting the ratio ($\\log(0.30/0.20) = +0.18$) gives 9.43.'
+            explanation: '$pH = pK_a + \\log([NH_3]/[NH_4^+]) = 9.25 + \\log(0.20/0.30) = 9.25 + \\log(0.667) = 9.25 + (-0.18) = 9.07$. 4.93 is the pOH ($14 - 9.07$), not the pH, ignoring the ratio gives 9.25, and inverting the ratio ($\\log(0.30/0.20) = +0.18$) gives 9.43.'
           },
           {
             question: 'For an acetic acid buffer ($pK_a = 4.74$) to have pH = 4.74, you need:',

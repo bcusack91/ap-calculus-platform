@@ -10,18 +10,18 @@ export const chemPeriodicTrendsPart6Data = {
 
 ---
 
-### Practice Makes Perfect
+### Atoms Change Size When They Become Ions
 
-This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
+Parts 1–5 compared neutral atoms. Removing or adding electrons changes electron-electron repulsion and shielding while the nuclear charge stays the same, so an ion is a different size from its parent atom.
 
-> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+> 🔑 **Why this matters:** AP questions ask you to rank ion sizes and to explain the ranking with Coulomb's law, nuclear charge and electron count.
 
 ---
 
 ### What You'll Master in Part 6
-- Working through complete multi-step problems from start to finish
-- Building problem-solving strategies you can apply on the AP exam
-- Identifying which concepts to apply and in what order`
+- Explaining why cations are smaller than their parent atoms
+- Explaining why anions are larger than their parent atoms
+- Ranking isoelectronic ions by nuclear charge`
     },
     {
       id: 'pt6-cations',

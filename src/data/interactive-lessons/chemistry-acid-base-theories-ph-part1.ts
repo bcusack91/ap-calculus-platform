@@ -4,70 +4,68 @@ export const chemAcidBaseTheoriesPhPart1Data = {
     {
       id: 'ab1-intro',
       type: 'text' as const,
-      content: `# 🧪 Arrhenius Acids and Bases
+      content: `# 🧪 Acids and Bases in Water
 
-**Part 1 of 7 — The First Modern Definition**
+**Part 1 of 7 — Acid-Base Definitions**
 
 ---
 
-### Two Acid-Base Models — Where We're Headed
+### The Model the AP Exam Uses
 
-| Model | Acid Is... | Base Is... | This Part |
+| Model | Acid Is... | Base Is... | Used On the AP Exam? |
 |-------|-----------|-----------|-----------|
-| **Arrhenius** | Produces $H^+$ in water | Produces $OH^-$ in water | ✅ Part 1 |
-| Brønsted-Lowry | Proton donor | Proton acceptor | Part 2 |
+| **Brønsted-Lowry** | Proton ($H^+$) donor | Proton ($H^+$) acceptor | ✅ Yes (CED 4.8) |
+| Arrhenius (older) | Produces $H^+$ in water | Produces $OH^-$ in water | Background only |
 
-> 🔑 **Why this matters:** The Arrhenius model is the starting point; the AP exam uses the Brønsted-Lowry model (CED 4.8.A), which builds on these ideas. Part 3 then connects acid strength to molecular structure.
+> 🔑 **Why this matters:** Every AP acid-base question is about a proton moving from one species to another in aqueous solution. This part sets up that proton-transfer view; Part 2 adds conjugate pairs, and Part 3 connects acid strength to molecular structure.
 
 ---
 
 ### What You'll Master in Part 1
-- Defining Arrhenius acids and bases by what they produce in water
-- Identifying limitations of the Arrhenius model
-- Recognizing strong acids and the hydronium ion concept`
+- Identifying the proton donor and proton acceptor in an aqueous reaction
+- Recognizing the strong acids and strong bases and what "strong" means
+- Using hydronium, $K_w$ and the strong acid–strong base net ionic equation`
     },
     {
       id: 'ab1-arrhenius-definition',
       type: 'text' as const,
       content: `
-## 📖 The Arrhenius Definition
+## 📖 Acids Donate Protons, Bases Accept Them
 
-In 1884, Svante Arrhenius proposed a simple classification:
+In the **Brønsted-Lowry** model, an acid-base reaction is a **proton transfer**:
 
-| Type | Definition | Example |
+| Type | Definition | Example in Water |
 |------|-----------|---------|
-| **Arrhenius Acid** | Produces $H^+$ ions in aqueous solution | $HCl(aq) \\rightarrow H^+(aq) + Cl^-(aq)$ |
-| **Arrhenius Base** | Produces $OH^-$ ions in aqueous solution | $NaOH(aq) \\rightarrow Na^+(aq) + OH^-(aq)$ |
+| **Acid** | Donates $H^+$ | $HCl(aq) + H_2O(l) \\rightarrow H_3O^+(aq) + Cl^-(aq)$ |
+| **Base** | Accepts $H^+$ | $NH_3(aq) + H_2O(l) \\rightleftharpoons NH_4^+(aq) + OH^-(aq)$ |
 
 
 ---
 
 ### Key Features
 
-- Acids increase $[H^+]$ in water
-- Bases increase $[OH^-]$ in water
-- Neutralization produces water: $H^+(aq) + OH^-(aq) \\rightarrow H_2O(l)$
-> 🔑 **Key idea:** Arrhenius acids add $H^+$ to solution; Arrhenius bases add $OH^-$.
+- An acid in water transfers a proton to $H_2O$, raising $[H_3O^+]$
+- A base in water takes a proton from $H_2O$ (or supplies $OH^-$ directly, as $NaOH$ does), raising $[OH^-]$
+- Water can play either role: it accepts a proton from $HCl$ but donates one to $NH_3$
+
+> 🔑 **Key idea:** Identify the acid and base by following the proton: the species that loses $H^+$ is the acid, and the species that gains it is the base.
 
 ---
 
-### Limitations
+### Why Not the Older Arrhenius Model?
 
-The Arrhenius model only works in **aqueous solutions** and cannot explain:
-- Why $NH_3$ acts as a base (it doesn\'t contain $OH^-$)
-- Acid-base behavior in non-aqueous solvents
-- Reactions between gases that show acid-base character
+The older Arrhenius model called a base anything that **produces $OH^-$**. It cannot explain why $NH_3$, which contains no $OH^-$, is a base. In the proton-transfer view the answer is simple: $NH_3$ accepts a proton from water, and the $OH^-$ that remains makes the solution basic.
 
-> ⚠️ These limitations led to the broader Brønsted-Lowry definition (Part 2), the model used on the AP exam.
+> ⚠️ Use the Brønsted-Lowry (proton-transfer) language on the AP exam.
       `
     },
     {
       id: 'ab1-common-acids',
       type: 'text' as const,
       content: `
-## 🧪 Common Arrhenius Acids
+## 🧪 Strong Acids and Strong Bases
 
-### Strong Acids (Complete Dissociation)
+### Strong Acids (Complete Proton Transfer to Water)
 
 | Formula | Name | Dissociation |
 |---------|------|-------------|
@@ -132,31 +130,31 @@ $$\\boxed{K_w = [H^+][OH^-] = 1.0 \\times 10^{-14} \\text{ at 25°C}}$$
       id: 'ab1-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Arrhenius Concept Check** 🎯
+**Acid-Base Concept Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'According to the Arrhenius definition, which substance is a base?',
+            question: 'In the reaction $NH_3(aq) + H_2O(l) \\rightleftharpoons NH_4^+(aq) + OH^-(aq)$, which species acts as the Brønsted-Lowry acid?',
             options: [
-              '$HCl$ — produces $H^+$ in water',
-              '$NaOH$ — produces $OH^-$ in water',
-              '$NaCl$ — produces ions in water',
-              '$NH_3$ — accepts protons'
+              '$NH_3$, because it gains a hydrogen',
+              '$H_2O$, because it donates a proton',
+              '$NH_4^+$, because it holds the proton',
+              '$OH^-$, because it forms in solution'
             ],
             correctAnswer: 1,
-            explanation: 'An Arrhenius base produces $OH^-$ ions in aqueous solution. $NaOH$ dissociates to give $Na^+$ and $OH^-$. $NH_3$ does act as a base, but this is explained by the Brønsted-Lowry definition, not Arrhenius.'
+            explanation: 'Follow the proton: $H_2O$ loses $H^+$ (becoming $OH^-$), so water is the acid, and $NH_3$ gains $H^+$ (becoming $NH_4^+$), so ammonia is the base. $NH_4^+$ and $OH^-$ are products, not the species that donated the proton in this reaction.'
           },
           {
-            question: 'The Arrhenius model is limited because it:',
+            question: 'Ammonia, $NH_3$, contains no $OH^-$. Why is it classified as a base?',
             options: [
-              'Cannot explain neutralization',
-              'Only applies to aqueous solutions',
-              'Does not recognize strong acids',
-              'Cannot predict pH values'
+              'It releases its own $OH^-$ ions once it melts',
+              'It accepts a proton from water, leaving $OH^-$',
+              'It donates a proton to water, forming $H_3O^+$',
+              'It is a gas, and all gases dissolve as bases'
             ],
             correctAnswer: 1,
-            explanation: 'The Arrhenius definition requires water as the solvent. It cannot explain acid-base behavior in non-aqueous solvents or why substances like $NH_3$ act as bases without containing $OH^-$.'
+            explanation: 'A Brønsted-Lowry base is a proton acceptor: $NH_3 + H_2O \\rightleftharpoons NH_4^+ + OH^-$, so the $OH^-$ comes from the water molecule that lost a proton. Ammonia contains no $OH^-$ to release, donating a proton would make it an acid, and being a gas says nothing about acid-base behavior.'
           },
           {
             question: 'In pure water at 25°C, $[H^+]$ equals:',
@@ -176,9 +174,9 @@ $$\\boxed{K_w = [H^+][OH^-] = 1.0 \\times 10^{-14} \\text{ at 25°C}}$$
       id: 'ab1-neutralization',
       type: 'text' as const,
       content: `
-## 📌 Arrhenius Neutralization
+## 📌 Strong Acid–Strong Base Neutralization
 
-When an Arrhenius acid reacts with an Arrhenius base, they undergo **neutralization**:
+When a strong acid reacts with a strong base, they undergo **neutralization**:
 
 $$\\text{Acid} + \\text{Base} \\rightarrow \\text{Salt} + \\text{Water}$$
 
@@ -209,12 +207,12 @@ $$H_2SO_4(aq) + 2KOH(aq) \\rightarrow K_2SO_4(aq) + 2H_2O(l)$$
       id: 'ab1-dropdown-check',
       type: 'dropdown-select' as const,
       content: `
-**Arrhenius Classification** 🔍
+**Acid-Base Classification** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: '$HNO_3$ is classified as an Arrhenius',
+            label: 'In water, $HNO_3$ acts as a Brønsted-Lowry',
             options: ['acid', 'base', 'salt', 'neutral substance']
           },
           {
@@ -231,17 +229,17 @@ $$H_2SO_4(aq) + 2KOH(aq) \\rightarrow K_2SO_4(aq) + 2H_2O(l)$$
           }
         ],
         correctAnswers: ['acid', '2', '$H^{+}$ + $OH^{-}$ \→ $H_{2}O$', '1.0 \× $10^{-14}$'],
-        hint1: '$HNO_3$ produces $H^+$ in water.',
+        hint1: '$HNO_3$ donates a proton to water.',
         hint2: '$Ba(OH)_2 \\rightarrow Ba^{2+} + 2OH^-$.',
         hint3: 'Remove spectator ions from any strong acid–strong base reaction.',
-        explanation: '$HNO_3$ is an acid (produces $H^+$). $Ba(OH)_2$ gives 2 $OH^-$ ions. The net ionic equation is always $H^+ + OH^- \\rightarrow H_2O$. $K_w = 1.0 \\times 10^{-14}$ at 25°C.'
+        explanation: '$HNO_3$ is an acid (it donates a proton to water). $Ba(OH)_2$ gives 2 $OH^-$ ions. The net ionic equation is always $H^+ + OH^- \\rightarrow H_2O$. $K_w = 1.0 \\times 10^{-14}$ at 25°C.'
       }
     },
     {
       id: 'ab1-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Arrhenius Acids & Bases** ✅
+**Exit Quiz — Acid-Base Definitions** ✅
       `,
       exercise: {
         questions: [

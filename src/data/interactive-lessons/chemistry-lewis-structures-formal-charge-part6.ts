@@ -5,24 +5,24 @@ export const chemLewisStructuresFormalChargePart6Data = {
       id: 'ls-6-1',
       type: 'text',
       title: '⚠️ Exceptions to the Octet Rule',
-      content: `While the octet rule works for most molecules, there are three important categories of exceptions:\n\n**1. Incomplete Octets** — fewer than 8 electrons around the central atom\n- Elements: Be $(4 e^{-})$, B $(6 e^{-})$, Al $(6 e^{-})$\n- Example: $BF_{3}$ — boron has only 6 electrons\n\n**2. Expanded Octets** — more than 8 electrons around the central atom\n- Only elements in **Period 3 and beyond** (larger central atoms with room for more bonded atoms)\n- Examples: $PCl_{5}$ $(10 e^{-})$, $SF_{6}$ $(12 e^{-})$, $XeF_{2}$ $(10 e^{-})$\n- Elements from Period 2 (C, N, O, F) can **NEVER** exceed 8\n\n**3. Odd-Electron Species** — molecules with an odd number of total electrons\n- At least one atom cannot have an octet\n- Examples: NO $(11 e^{-})$, $NO_{2}$ $(17 e^{-})$\n- These are called **free radicals**\n\nRecognizing which exception applies is a critical AP Chemistry skill.\n\n> 🔑 **Key Concept:** The three octet rule exceptions are: incomplete octets (Be, B, Al), expanded octets (Period 3+ elements), and odd-electron species (free radicals).
+      content: `**Part 6 of 7 — Exceptions to the Octet Rule**
 
-**Part 6 of 7 — Exceptions to the Octet Rule**
+### When the Octet Rule Bends
 
----
+The octet rule from Parts 1–5 describes most molecules, but some central atoms end up with fewer than eight electrons, more than eight, or an odd number.
 
-### Practice Makes Perfect
-
-This workshop features multi-step problems that mirror the AP Chemistry exam format. Each problem requires you to combine concepts from previous parts and show your work clearly.
-
-> 🔑 **Why this matters:** The AP Chemistry exam rewards students who can apply concepts to unfamiliar problems — structured practice is the best preparation.
+> 🔑 **Why this matters:** AP questions use $BF_{3}$, $PCl_{5}$, $SF_{6}$ and $NO_{2}$ to check that you can draw valid Lewis structures when the octet rule does not hold.
 
 ---
 
 ### What You'll Master in Part 6
-- Working through complete multi-step problems from start to finish
-- Building problem-solving strategies you can apply on the AP exam
-- Identifying which concepts to apply and in what order`
+- Recognizing incomplete octets on Be, B and Al
+- Drawing expanded octets for central atoms in Period 3 and beyond
+- Identifying odd-electron species (free radicals)
+
+---
+
+While the octet rule works for most molecules, there are three important categories of exceptions:\n\n**1. Incomplete Octets** — fewer than 8 electrons around the central atom\n- Elements: Be $(4 e^{-})$, B $(6 e^{-})$, Al $(6 e^{-})$\n- Example: $BF_{3}$ — boron has only 6 electrons\n\n**2. Expanded Octets** — more than 8 electrons around the central atom\n- Only elements in **Period 3 and beyond** (larger central atoms with room for more bonded atoms)\n- Examples: $PCl_{5}$ $(10 e^{-})$, $SF_{6}$ $(12 e^{-})$, $XeF_{2}$ $(10 e^{-})$\n- Elements from Period 2 (C, N, O, F) can **NEVER** exceed 8\n\n**3. Odd-Electron Species** — molecules with an odd number of total electrons\n- At least one atom cannot have an octet\n- Examples: NO $(11 e^{-})$, $NO_{2}$ $(17 e^{-})$\n- These are called **free radicals**\n\nRecognizing which exception applies is a critical AP Chemistry skill.\n\n> 🔑 **Key Concept:** The three octet rule exceptions are: incomplete octets (Be, B, Al), expanded octets (Period 3+ elements), and odd-electron species (free radicals).`
     },
     {
       id: 'ls-6-2',

@@ -40,7 +40,7 @@ To identify an element from its PES spectrum:
 
 **Step 2:** Read the relative height of each peak — this tells you how many electrons are in each subshell.
 
-**Step 3:** Assign subshells in order (1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, ...).
+**Step 3:** Assign subshells in order of decreasing binding energy (1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, ...). Once an atom has 3d electrons, its 3d peak sits to the left of its 4s peak.
 
 **Step 4:** Write the electron configuration.
 
@@ -120,7 +120,7 @@ The binding energies of subshells follow predictable patterns:
 - There is typically a **large gap** between peaks from different principal energy levels (e.g., 1s vs 2s)
 - There is a **smaller gap** between subshells within the same principal level (e.g., 2s vs 2p)
 
-> 🔑 **Key Concept:** Within the same atom, binding energy follows the order: 1s > 2s > 2p > 3s > 3p > 4s > 3d. Large gaps between peaks indicate different principal energy levels.`
+> 🔑 **Key Concept:** Within the same atom, binding energy follows the order: 1s > 2s > 2p > 3s > 3p > 3d > 4s > 4p. The 4s subshell fills before 3d, but 3d electrons (n = 3) are held more tightly, so the 3d peak appears at higher binding energy than the 4s peak. Large gaps between peaks indicate different principal energy levels.`
     },
     {
       id: 'ps3-quiz2',
@@ -214,9 +214,9 @@ An atom has the PES peaks: 2, 2, 6, 2, 6, 1, 2 (from highest to lowest binding e
 
 ### 📌 Binding Energy Order
 
-$$1s > 2s > 2p > 3s > 3p > 4s > 3d > 4p > \\dots$$
+$$1s > 2s > 2p > 3s > 3p > 3d > 4s > 4p > \\dots$$
 
-> ⚠️ For transition metals, the 3d peak may appear with **higher BE** than 4s on PES spectra.
+> ⚠️ Filling order is not binding-energy order: 4s fills before 3d, but in any atom with 3d electrons the 3d peak has **higher BE** than the 4s peak, and the 4s electrons are removed first.
 
 ---
 

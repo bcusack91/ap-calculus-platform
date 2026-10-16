@@ -9,7 +9,7 @@
  *  3 — Hydrogen Bonding
  *  4 — Ion-Dipole Interactions
  *  5 — Comparing IMF Strengths
- *  6 — Problem-Solving Workshop
+ *  6 — IMFs and Physical Properties
  *  7 — Synthesis & AP Review
  */
 
@@ -162,7 +162,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Comparing IMF Strengths',
   },
 
-  // Part 6: Problem-Solving Workshop
+  // Part 6: IMFs and Physical Properties
   {
     id: 'imf-ent-6a',
     question: 'Which liquid has the highest vapor pressure at 20 °C?',
@@ -170,7 +170,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Vapor pressure is highest where intermolecular forces are weakest. Pentane has only dispersion forces and fewer electrons than hexane, while water and 1-pentanol are held back by hydrogen bonding.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
+    partTitle: 'IMFs and Physical Properties',
   },
   {
     id: 'imf-ent-6b',
@@ -184,7 +184,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'Each ethylene glycol molecule has two O–H groups and can form more hydrogen bonds than ethanol, so the cohesive forces at its surface are stronger. Having the same kinds of forces does not mean having the same amount of them.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
+    partTitle: 'IMFs and Physical Properties',
   },
 
   // Part 7: Synthesis & AP Review
@@ -229,7 +229,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 3, partTitle: 'Hydrogen Bonding' },
     { partNumber: 4, partTitle: 'Ion-Dipole Interactions' },
     { partNumber: 5, partTitle: 'Comparing IMF Strengths' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 6, partTitle: 'IMFs and Physical Properties' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }

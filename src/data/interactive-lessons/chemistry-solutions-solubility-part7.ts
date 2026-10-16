@@ -122,26 +122,26 @@ $$\\text{Does it dissolve? (IMFs)} \\rightarrow \\text{How much? (Molarity)} \\r
             explanation: 'Glucose stays as molecules (0.10 M of particles), NaCl gives 2 ions per formula unit (0.20 M), and $CaCl_{2}$ gives 3 (0.30 M). From lowest to highest: I < II < III.'
           },
           {
-            question: '250.0 mL of 0.400 M HCl is diluted to 1.000 L. What is the pH of the resulting solution?',
+            question: '250.0 mL of 0.400 M $Na_{2}SO_{4}$ is diluted to 1.000 L. What is $[Na^{+}]$ in the diluted solution?',
             options: [
-              '0.40',
-              '1.00',
-              '2.00',
-              '0.10'
+              '0.800 M',
+              '0.200 M',
+              '0.100 M',
+              '0.0500 M'
             ],
             correctAnswer: 1,
-            explanation: '$M_2 = M_1V_1/V_2 = (0.400)(0.250)/(1.000) = 0.100$ M. HCl is a strong acid, so $[\\text{H}^+] = 0.100$ M. $\\text{pH} = -\\log(0.100) = 1.00$.'
+            explanation: '$M_2 = M_1V_1/V_2 = (0.400)(0.250)/(1.000) = 0.100$ M $Na_{2}SO_{4}$, and each formula unit releases two $Na^{+}$, so $[Na^{+}] = 2 \\times 0.100 = 0.200$ M. 0.100 M is the salt concentration, not the ion concentration; 0.800 M doubles the undiluted 0.400 M; and 0.0500 M halves instead of doubling.'
           },
           {
-            question: 'A lab determines that an unknown nonelectrolyte has a molar mass of 180 g/mol and the empirical formula $CH_{2}O$. The molecular formula is:',
+            question: 'A solution is made by mixing 0.50 mol of ethanol with 4.50 mol of water. What is the mole fraction of ethanol?',
             options: [
-              '$CH_{2}O$',
-              '$C_{2}H_{4}O_{2}$',
-              '$C_{6}H_{12}O_{6}$',
-              '$C_{3}H_{6}O_{3}$'
+              '0.11',
+              '0.50',
+              '0.10',
+              '0.90'
             ],
             correctAnswer: 2,
-            explanation: 'Empirical formula mass of $CH_{2}O$: $12 + 2(1) + 16 = 30$ g/mol. Ratio: $180/30 = 6$. Molecular formula: $6 \\times$ $CH_{2}O$ = $C_{6}H_{12}O_{6}$ (glucose).'
+            explanation: '$\\chi_{\\text{ethanol}} = \\frac{n_{\\text{ethanol}}}{n_{\\text{total}}} = \\frac{0.50}{0.50 + 4.50} = \\frac{0.50}{5.00} = 0.10$. Dividing by the moles of water alone gives 0.11, 0.90 is the mole fraction of water, and 0.50 is the moles of ethanol, not a fraction.'
           }
         ]
       }

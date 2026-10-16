@@ -4,7 +4,7 @@
  * Part mapping (lesson parts chemistry-weak-acids-bases-ka-kb-part1..7). Items follow what each
  * part file actually teaches:
  *   1 Weak Acid Equilibria           — ranking by Ka and pKa, weak vs strong at equal concentration
- *   2 Ka & Percent Ionization        — weak-acid pH from an ICE table, Ka and % ionization from pH
+ *   2 ICE Tables for Weak Acids        — weak-acid pH from an ICE table, Ka and % ionization from pH
  *   3 Weak Base Equilibria & Kb      — weak-base pH, acidic and basic salts
  *   4 Relationship Between Ka & Kb   — Ka·Kb = Kw, conjugate-base strength and salt pH
  *   5 Polyprotic Acids               — percent ionization on dilution, first ionization dominates
@@ -40,7 +40,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Weak Acid Equilibria',
   },
 
-  // Part 2: Ka & Percent Ionization
+  // Part 2: ICE Tables for Weak Acids
   {
     id: 'wakb-ent-2a',
     question: 'What is the pH of 0.20 M HOCl ($K_a = 3.5 \\times 10^{-8}$)?',
@@ -48,7 +48,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: '$[\\text{H}^+] = \\sqrt{(3.5 \\times 10^{-8})(0.20)} = 8.4 \\times 10^{-5}$ M (0.04% ionized), so pH = 4.08. Treating HOCl as strong gives 0.70, 7.46 is the $pK_a$, and 8.15 skips the square root.',
     partNumber: 2,
-    partTitle: 'Ka & Percent Ionization',
+    partTitle: 'ICE Tables for Weak Acids',
   },
   {
     id: 'wakb-ent-2b',
@@ -62,16 +62,16 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: '$[\\text{H}^+] = 1.0 \\times 10^{-3}$ M, which is 2.0% of 0.050 M, and $K_a = (1.0 \\times 10^{-3})^2/0.049 = 2.0 \\times 10^{-5}$. Leaving out the division by concentration gives $1.0 \\times 10^{-6}$, and $1.0 \\times 10^{-3}$ is just $[\\text{H}^+]$.',
     partNumber: 2,
-    partTitle: 'Ka & Percent Ionization',
+    partTitle: 'ICE Tables for Weak Acids',
   },
 
   // Part 3: Weak Base Equilibria & Kb
   {
     id: 'wakb-ent-3a',
     question: 'What is the pH of 0.050 M $\\text{NH}_3$ ($K_b = 1.8 \\times 10^{-5}$) at 25 °C?',
-    options: ['10.98', '3.02', '12.70', '9.26'],
+    options: ['10.98', '3.02', '12.70', '9.25'],
     correctIndex: 0,
-    explanation: '$[\\text{OH}^-] = \\sqrt{(1.8 \\times 10^{-5})(0.050)} = 9.5 \\times 10^{-4}$ M, so pOH = 3.02 and pH = 10.98. Reporting 3.02 stops at the pOH, and 12.70 treats ammonia as a strong base.',
+    explanation: '$[\\text{OH}^-] = \\sqrt{(1.8 \\times 10^{-5})(0.050)} = 9.5 \\times 10^{-4}$ M, so pOH = 3.02 and pH = 10.98. Reporting 3.02 stops at the pOH, 12.70 treats ammonia as a strong base, and 9.25 is the $pK_a$ of $\\text{NH}_4^+$, not the pH of this solution.',
     partNumber: 3,
     partTitle: 'Weak Base Equilibria & Kb',
   },
@@ -188,7 +188,7 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Weak Acid Equilibria' },
-    { partNumber: 2, partTitle: 'Ka & Percent Ionization' },
+    { partNumber: 2, partTitle: 'ICE Tables for Weak Acids' },
     { partNumber: 3, partTitle: 'Weak Base Equilibria & Kb' },
     { partNumber: 4, partTitle: 'Relationship Between Ka & Kb' },
     { partNumber: 5, partTitle: 'Polyprotic Acids' },

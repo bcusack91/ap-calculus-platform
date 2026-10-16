@@ -4,10 +4,10 @@
  * Part mapping (lesson parts chemistry-intro-equilibrium-part1..7). Items follow what each
  * part file actually teaches:
  *   1 Dynamic Equilibrium               — both directions continue, closed-system requirement
- *   2 Equilibrium Constant (Keq)        — calculating Kp and Kc from equilibrium data
- *   3 Writing Equilibrium Expressions   — heterogeneous expressions (solids and liquids left out)
+ *   2 Equilibrium Expressions: Kc and Kp        — calculating Kp and Kc from equilibrium data
+ *   3 Heterogeneous Equilibrium   — heterogeneous expressions (solids and liquids left out)
  *   4 Manipulating K                    — reversing, scaling and adding reactions
- *   5 Heterogeneous Equilibria          — magnitude of K and its temperature dependence
+ *   5 Magnitude of K and Extent of Reaction          — magnitude of K and its temperature dependence
  *   6 Problem-Solving Workshop          — solving K expressions for an unknown, combining K values
  *   7 Synthesis & AP Review             — K is fixed at fixed T, finding an equilibrium concentration
  */
@@ -45,7 +45,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Dynamic Equilibrium',
   },
 
-  // Part 2: Equilibrium Constant (Keq)
+  // Part 2: Equilibrium Expressions: Kc and Kp
   {
     id: 'ieq-ent-2a',
     question: 'For $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightleftharpoons 2\\text{NH}_3(g)$, the equilibrium partial pressures are $P_{\\text{N}_2} = 0.80$ atm, $P_{\\text{H}_2} = 0.50$ atm and $P_{\\text{NH}_3} = 0.20$ atm. What is $K_p$?',
@@ -53,7 +53,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: '$K_p = (0.20)^2/[(0.80)(0.50)^3] = 0.040/0.10 = 0.40$. Ignoring the exponents gives 0.50, inverting gives 2.5, and squaring only $P_{\\text{NH}_3}$ gives 0.10.',
     partNumber: 2,
-    partTitle: 'Equilibrium Constant (Keq)',
+    partTitle: 'Equilibrium Expressions: Kc and Kp',
   },
   {
     id: 'ieq-ent-2b',
@@ -62,10 +62,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: '$K_c = [\\text{H}_2][\\text{I}_2]/[\\text{HI}]^2 = (0.10)(0.10)/(0.50)^2 = 0.040$. Forgetting to square [HI] gives 0.020, and inverting the expression gives 25.',
     partNumber: 2,
-    partTitle: 'Equilibrium Constant (Keq)',
+    partTitle: 'Equilibrium Expressions: Kc and Kp',
   },
 
-  // Part 3: Writing Equilibrium Expressions
+  // Part 3: Heterogeneous Equilibrium
   {
     id: 'ieq-ent-3a',
     question: 'Solid $\\text{NH}_4\\text{HS}$ is placed in an evacuated flask at 25 °C, where $\\text{NH}_4\\text{HS}(s) \\rightleftharpoons \\text{NH}_3(g) + \\text{H}_2\\text{S}(g)$ has $K_p = 0.110$. Some solid remains at equilibrium. What is $P_{\\text{NH}_3}$?',
@@ -73,7 +73,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'The solid is left out, so $K_p = P_{\\text{NH}_3}P_{\\text{H}_2\\text{S}}$; the two gases form in a 1:1 ratio, so $P^2 = 0.110$ and $P = 0.332$ atm. Setting $P_{\\text{NH}_3}$ equal to $K_p$ ignores the second gas.',
     partNumber: 3,
-    partTitle: 'Writing Equilibrium Expressions',
+    partTitle: 'Heterogeneous Equilibrium',
   },
   {
     id: 'ieq-ent-3b',
@@ -87,7 +87,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'The two metals are pure solids and drop out, leaving the aqueous product ion over the aqueous reactant ion. The flipped fraction belongs to the reverse reaction.',
     partNumber: 3,
-    partTitle: 'Writing Equilibrium Expressions',
+    partTitle: 'Heterogeneous Equilibrium',
   },
 
   // Part 4: Manipulating K
@@ -110,7 +110,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Manipulating K',
   },
 
-  // Part 5: Heterogeneous Equilibria
+  // Part 5: Magnitude of K and Extent of Reaction
   {
     id: 'ieq-ent-5a',
     question: 'An exothermic reaction has K = 50 at 300 K. Which value of K is most plausible for the same reaction at 400 K?',
@@ -118,7 +118,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'For an exothermic reaction, heat acts like a product, so raising the temperature shifts the equilibrium left and K decreases. K is constant only at a fixed temperature, and it is never negative.',
     partNumber: 5,
-    partTitle: 'Heterogeneous Equilibria',
+    partTitle: 'Magnitude of K and Extent of Reaction',
   },
   {
     id: 'ieq-ent-5b',
@@ -132,7 +132,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'A very small K means the reactants dominate at equilibrium, so the mixture is almost all $\\text{N}_2$ and $\\text{O}_2$. A tiny but nonzero amount of NO is present, because K is small, not zero.',
     partNumber: 5,
-    partTitle: 'Heterogeneous Equilibria',
+    partTitle: 'Magnitude of K and Extent of Reaction',
   },
 
   // Part 6: Problem-Solving Workshop
@@ -188,10 +188,10 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Dynamic Equilibrium' },
-    { partNumber: 2, partTitle: 'Equilibrium Constant (Keq)' },
-    { partNumber: 3, partTitle: 'Writing Equilibrium Expressions' },
+    { partNumber: 2, partTitle: 'Equilibrium Expressions: Kc and Kp' },
+    { partNumber: 3, partTitle: 'Heterogeneous Equilibrium' },
     { partNumber: 4, partTitle: 'Manipulating K' },
-    { partNumber: 5, partTitle: 'Heterogeneous Equilibria' },
+    { partNumber: 5, partTitle: 'Magnitude of K and Extent of Reaction' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]

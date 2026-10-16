@@ -40,7 +40,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 | Determine concentration using known reagent | **Titration** |
 | Separate using magnetism | **Magnetic separation** (e.g., iron filings from sand) |
 
-> 💡 **Tip:** When choosing a method, identify the **key physical property** that differs between components: particle size → filtration, boiling point → distillation, solubility → crystallization, color → spectroscopy.
+> 💡 **Tip:** When choosing a method, identify the **key physical property** that differs between components: particle size → filtration, boiling point → distillation, strength of attraction to the stationary phase → chromatography, color → spectroscopy.
 
 
 ---
@@ -106,15 +106,15 @@ $$\\boxed{c_{\\text{original}} = c_{\\text{measured}} \\times \\frac{V_{\\text{t
       exercise: {
         questions: [
           {
-            question: 'A mixture contains dissolved NaCl and dissolved $KNO_{3}$ in water. Which method is BEST for separating them?',
+            question: 'A solution contains two dissolved dyes that differ in polarity. Which method is BEST for separating the two dyes from each other?',
             options: [
               'Filtration',
               'Simple distillation',
-              'Fractional crystallization',
-              'Paper chromatography'
+              'Paper chromatography',
+              'Evaporation to dryness'
             ],
             correctAnswer: 2,
-            explanation: 'Both salts are dissolved (filtration won\'t work) and both are non-volatile (distillation gives only water). Paper chromatography separates tiny amounts for identification, not bulk salts. Fractional crystallization exploits differences in solubility at different temperatures to crystallize one salt at a time.'
+            explanation: 'Both dyes are dissolved, so they pass through a filter together, and both are non-volatile, so distillation or evaporation removes only the solvent and leaves the dyes mixed. Paper chromatography separates them because the more polar dye is attracted more strongly to the polar paper and travels a shorter distance.'
           },
           {
             question: 'A student needs to determine the concentration of $Cu^{2+}$ ions in a blue solution. The best method is:',

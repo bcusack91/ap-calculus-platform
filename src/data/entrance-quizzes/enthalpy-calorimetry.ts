@@ -11,7 +11,7 @@
  *  3 — Coffee Cup Calorimetry (q = mcΔT; q_rxn = −q_solution)
  *  4 — Bond Enthalpies (bonds broken minus bonds formed)
  *  5 — Hess's Law (reverse, scale, add)
- *  6 — Problem-Solving Workshop (standard enthalpies of formation)
+ *  6 — Standard Enthalpies of Formation (standard enthalpies of formation)
  *  7 — Synthesis & AP Review (calorimetry to ΔH per mole; bond-energy reasoning)
  */
 
@@ -134,7 +134,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: "Hess's Law",
   },
 
-  // Part 6: Problem-Solving Workshop (standard enthalpies of formation)
+  // Part 6: Standard Enthalpies of Formation (standard enthalpies of formation)
   {
     id: 'ec-ent-6a',
     question: 'Using $\\Delta H^\\circ_f$ values $\\text{NH}_3(g) = -46$, $\\text{NO}(g) = +90$, and $\\text{H}_2\\text{O}(g) = -242$ kJ/mol, find $\\Delta H^\\circ$ for $4\\text{NH}_3(g) + 5\\text{O}_2(g) \\rightarrow 4\\text{NO}(g) + 6\\text{H}_2\\text{O}(g)$.',
@@ -142,7 +142,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Products: $4(90) + 6(-242) = -1092$ kJ; reactants: $4(-46) + 5(0) = -184$ kJ; so $\\Delta H^\\circ = -1092 - (-184) = -908$ kJ. Reactants minus products gives +908 kJ, leaving out the reactants gives $-1092$ kJ, and adding them instead of subtracting gives $-1276$ kJ.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
+    partTitle: 'Standard Enthalpies of Formation',
   },
   {
     id: 'ec-ent-6b',
@@ -156,7 +156,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'A formation reaction makes exactly one mole of compound from its elements in their standard states, and carbon\'s standard state is graphite. Starting from compounds, making two moles, or using diamond each breaks one of those conditions.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
+    partTitle: 'Standard Enthalpies of Formation',
   },
 
   // Part 7: Synthesis & AP Review
@@ -203,7 +203,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 3, partTitle: 'Coffee Cup Calorimetry' },
     { partNumber: 4, partTitle: 'Bond Enthalpies' },
     { partNumber: 5, partTitle: "Hess's Law" },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 6, partTitle: 'Standard Enthalpies of Formation' },
     { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }

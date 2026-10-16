@@ -185,7 +185,7 @@ At equilibrium: $[\\text{NO}_2] = 0.40$ M
             options: ['0.70', '0.30', '1.70', '1.00']
           }
         ],
-        correctAnswers: ['plug them into the K expression', 'the relationship E = I + C', '0.30', '0.300', '0.3'],
+        correctAnswers: ['plug them into the K expression', 'the relationship E = I + C', '0.30'],
         hint1: 'All equilibrium values known → just substitute.',
         hint2: 'E = I + C allows you to find x from one known equilibrium value.',
         hint3: '$x = [\\text{A}]_0 - [\\text{A}]_{eq} = 1.00 - 0.70 = 0.30$.',

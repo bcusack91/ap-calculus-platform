@@ -32,7 +32,7 @@ When given PES data and asked to identify an element, follow this systematic app
 
 **Step 1:** List the peak heights from left to right (highest to lowest BE).
 
-**Step 2:** Assign subshells in order: 1s, 2s, 2p, 3s, 3p, 4s, 3d, 4p, ...
+**Step 2:** Assign subshells in order of decreasing binding energy: 1s, 2s, 2p, 3s, 3p, 3d, 4s, 4p, ... (a 3d peak, when present, sits just left of the 4s peak).
 
 **Step 3:** Check that each peak height does not exceed the maximum for that subshell:
 - s subshells: max 2
@@ -57,12 +57,12 @@ When given PES data and asked to identify an element, follow this systematic app
 >
 > | Peak | Relative Height | Binding Energy (MJ/mol) |
 > |------|----------------|------------------------|
-> | 1 | 2 | 151 |
-> | 2 | 2 | 17.4 |
-> | 3 | 6 | 13.5 |
-> | 4 | 2 | 1.95 |
-> | 5 | 6 | 1.01 |
-> | 6 | 1 | 0.58 |
+> | 1 | 2 | 347 |
+> | 2 | 2 | 37.1 |
+> | 3 | 6 | 29.1 |
+> | 4 | 2 | 3.93 |
+> | 5 | 6 | 2.38 |
+> | 6 | 1 | 0.42 |
 >
 > What element is this?`,
       exercise: {
@@ -215,7 +215,7 @@ Write the expected PES peak heights (from highest to lowest binding energy) for 
 | Mistake | Correct Approach |
 |---------|------------------|
 | Forgetting 3d for Z > 20 | Always include 3d subshell for transition metals |
-| Writing 2, 2, 6, 2, 6, 2, 6 for TMs | Must show 3d peak (up to height 10) between 3p and 4p |
+| Writing 2, 2, 6, 2, 6, 2, 6 for Z > 30 | Must show the 3d peak (height 10) between the 3p and 4s peaks |
 | Not verifying total | Always sum peak heights = atomic number |
 
 ---

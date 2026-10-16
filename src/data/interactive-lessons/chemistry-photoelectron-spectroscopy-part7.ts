@@ -138,9 +138,9 @@ PES data can also help explain **successive ionization energies**. The large jum
       content: `### ✏️ AP Review Question 3
 
 > **Problem:** A student is given PES data for an unknown element:
-> - Peak 1: BE = 76.0 MJ/mol, relative height = 2
-> - Peak 2: BE = 8.8 MJ/mol, relative height = 2
-> - Peak 3: BE = 6.8 MJ/mol, relative height = 3
+> - Peak 1: BE = 39.6 MJ/mol, relative height = 2
+> - Peak 2: BE = 2.45 MJ/mol, relative height = 2
+> - Peak 3: BE = 1.40 MJ/mol, relative height = 3
 >
 > The student is asked to identify the element. Which reasoning is correct?`,
       exercise: {
@@ -169,9 +169,9 @@ PES data can also help explain **successive ionization energies**. The large jum
 > | Peak | Binding Energy (MJ/mol) | Relative Height |
 > |------|------------------------|----------------|
 > | A | 178 | 2 |
-> | B | 15.0 | 2 |
-> | C | 10.1 | 6 |
-> | D | 1.40 | 2 |
+> | B | 15.1 | 2 |
+> | C | 10.3 | 6 |
+> | D | 1.46 | 2 |
 > | E | 0.786 | 2 |
 
 *Round all answers to 3 significant figures.*
