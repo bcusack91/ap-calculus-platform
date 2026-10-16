@@ -3,9 +3,8 @@
  *
  * 15–21 items per routed topic across the 7 diagnostic domains (CED Units 1–7).
  * Feeds topic exit quizzes, the course diagnostic, unit tests, and the daily question.
- * `part` = the lesson part that teaches the item. Only lesson parts with real
- * teaching are used (all seven Intro to Geography parts; part 1 elsewhere —
- * the later parts of most Human Geography lessons are still template text).
+ * `part` = the lesson part that teaches the item (where a student who missed it
+ * should go back to), matched to each lesson as it now stands.
  */
 
 import { relevantPool } from './relevance-fallback'
@@ -287,7 +286,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Which change would alter a port city\'s situation without altering its site?',
@@ -320,7 +319,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'According to the gravity model, which pair of cities would be expected to have the most interaction, such as phone calls and trips between them?',
@@ -328,10 +327,10 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     correctAnswer: 1,
     explanation: 'The gravity model predicts interaction rises with the product of the two populations and falls with the distance between them. The large, close pair maximizes population and minimizes distance; the large distant pair is penalized by distance, and both small pairs have far smaller populations.',
     difficulty: 'medium',
-    domain: 'thinking-geographically',
-    topicSlug: 'hg-spatial-concepts',
+    domain: 'cities-urban',
+    topicSlug: 'hg-urbanization',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A nineteenth-century writer claimed that people in hot tropical climates were naturally less ambitious than people in cool climates. Geographers today reject this claim as an example of',
@@ -342,7 +341,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'The Dutch have reclaimed large areas of farmland and towns from the sea by building dikes, draining the land, and pumping out water. This landscape best supports which view of human-environment interaction?',
@@ -353,7 +352,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'A city planner needs a map that shows individual buildings and sidewalks in one neighborhood. Compared with a 1:1,000,000 map, a 1:5,000 map would be',
@@ -364,7 +363,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A researcher finds that census tracts near major highways have higher childhood asthma rates than tracts far from highways. Which conclusion is most appropriate from this map evidence alone?',
@@ -386,7 +385,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'A Kerala family receives a money transfer from a relative in Dubai within seconds, using a phone app, though the same transfer took weeks by mail a generation ago. Which concept from the AP course framework best describes this change?',
@@ -397,7 +396,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Many people in Europe and North America call China, Japan, and Korea "the Far East," yet these countries lie to the west of the United States across the Pacific. The term reveals that',
@@ -408,7 +407,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A city limits how much groundwater farms and households can pump each year so the aquifer refills at the same rate it is drawn down. This policy is best described as an effort toward',
@@ -419,7 +418,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'A satellite-based navigation app lets a delivery driver find any address in a city, while the company\'s planners stack layers of customer locations, road speeds, and traffic data to redesign delivery routes. Which tools are the driver and the planners using?',
@@ -430,7 +429,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'thinking-geographically',
     topicSlug: 'hg-spatial-concepts',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
 
   // ═══ population-migration ═══
@@ -454,7 +453,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A dot-density map of Australia shows dots crowded along the southeastern and southwestern coasts and very few across the continent\'s center. Which factor best explains this distribution?',
@@ -476,7 +475,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A development agency wants to know how many people must be fed by each square kilometer of land that can grow crops. Which measure should it use?',
@@ -509,7 +508,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A rural region\'s population has grown so large that its soils are being exhausted and its wells are running dry faster than they can recharge. Geographers would say the region has exceeded its',
@@ -520,7 +519,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'A population pyramid has a very wide base that narrows steadily toward the top. What does this shape most likely indicate?',
@@ -531,7 +530,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'The population pyramid of a Persian Gulf state shows a huge bulge of males aged 20 to 45, far larger than the female bars at the same ages. Which process best explains this shape?',
@@ -542,7 +541,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Census data for one country show far more boys than girls among children under age five. Which explanation is most consistent with this sex ratio?',
@@ -553,7 +552,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'A country has 2 million people under age 15, 1 million people over age 64, and 6 million people aged 15 to 64. What is its dependency ratio?',
@@ -564,7 +563,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'A country\'s population pyramid has a narrow base, a wide middle, and unusually wide bars above age 65. Which challenge is this country most likely to face over the next two decades?',
@@ -575,7 +574,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Most Canadians live within a few hundred kilometers of the U.S. border. Which factor best explains this concentration?',
@@ -586,7 +585,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A large, thinly populated rural province struggles to pay for its roads, schools, and clinics. Which consequence of low population density best explains this problem?',
@@ -597,7 +596,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'A country reports a moderate arithmetic density, yet most of its people live crowded along a narrow coastal plain. Why can arithmetic density mislead an observer about this country?',
@@ -608,7 +607,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-distribution',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A country has a crude birth rate of 25 per 1,000 and a crude death rate of 9 per 1,000. What is its rate of natural increase?',
@@ -630,7 +629,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-growth',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'After a country brought piped water and vaccines to its villages in the 1950s, its death rate fell from 30 to 12 per 1,000 within two decades while its birth rate stayed near 45. Which stage of the demographic transition model does this describe?',
@@ -696,7 +695,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-growth',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Which piece of evidence most directly weakens Thomas Malthus\'s prediction about food and population?',
@@ -707,7 +706,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-growth',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'From 1980 to 2015, China limited most urban couples to one child and penalized families who exceeded the limit. This policy is best classified as',
@@ -729,7 +728,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-growth',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'A Stage 2 country wants to lower its total fertility rate without coercive limits on family size. Which policy would most likely have the largest long-term effect?',
@@ -740,7 +739,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-growth',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Over sixty years, the leading causes of death in a country shifted from tuberculosis, measles, and diarrheal disease to heart disease, cancer, and stroke. Which model describes this shift?',
@@ -751,7 +750,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-growth',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Japan\'s share of people over 65 is among the highest in the world. Which economic challenge does this most directly create?',
@@ -762,7 +761,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-growth',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Which measure counts the deaths of babies under one year old per 1,000 live births and is widely used as a sign of a country\'s health care and development?',
@@ -773,7 +772,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-growth',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A country\'s total fertility rate has stayed near 1.4 for twenty years. If no immigration occurs, what will most likely happen to its population over time?',
@@ -784,7 +783,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-population-growth',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A nurse leaves the Philippines to take a hospital job in Canada that pays several times her current salary. The higher salary is an example of',
@@ -806,7 +805,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-migration',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A woman fleeing political persecution arrives in Spain and formally applies for protection, but Spanish officials have not yet ruled on her case. Her current status is best described as',
@@ -817,7 +816,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-migration',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A man leaves his village intending to reach the capital, but he finds steady work in a mid-sized city along the way and settles there. This illustrates',
@@ -872,7 +871,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-migration',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'In several countries, money sent home by citizens working abroad equals a large share of national income. Which effect of migration on the origin country does this show?',
@@ -905,7 +904,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-migration',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Each spring, herders in the Alps drive their cattle up to high mountain pastures, and each autumn they bring the herds back down to the valleys. This movement is called',
@@ -916,7 +915,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-migration',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Which of the following is the clearest example of forced migration?',
@@ -927,7 +926,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-migration',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Between about 1910 and 1970, millions of African Americans moved from the rural South to cities in the North and West. Which pairing of push and pull factors best explains this Great Migration?',
@@ -938,7 +937,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-migration',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A country receives a large, sustained inflow of immigrants who are mostly aged 20 to 35. How will this most likely change the country\'s population pyramid in the short term?',
@@ -949,7 +948,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'population-migration',
     topicSlug: 'hg-migration',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'A family in Honduras plans to move to the United States but cannot pay the cost of the journey and is turned back by immigration laws at the border. These barriers are best described as',
@@ -964,9 +963,9 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
   },
   {
     question: 'A family moves from Detroit, in the Rust Belt, to Phoenix, in the Sun Belt, to take advantage of a growing job market. This move is best classified as',
-    options: ['intraregional migration', 'international migration', 'forced migration', 'interregional migration'],
+    options: ['transnational migration', 'international migration', 'forced migration', 'internal migration'],
     correctAnswer: 3,
-    explanation: 'Interregional migration is movement from one region of a country to another, such as from the Rust Belt to the Sun Belt. Intraregional migration stays within a region, international migration crosses a national border, and the family moved voluntarily rather than by force.',
+    explanation: 'Internal migration is movement within one country, such as from the Rust Belt to the Sun Belt. International migration crosses a national border, transnational migration keeps active ties to two countries at once, and the family moved voluntarily rather than by force.',
     difficulty: 'easy',
     domain: 'population-migration',
     topicSlug: 'hg-migration',
@@ -1006,7 +1005,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'A family that immigrated to Canada speaks English at work and school and follows Canadian sports, but still speaks Tagalog at home and celebrates Filipino holidays. This family is best described as having undergone',
@@ -1017,7 +1016,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'The great-grandchildren of Norwegian immigrants to Minnesota speak only English, no longer follow Norwegian customs, and think of themselves simply as Americans. This outcome is best described as',
@@ -1039,7 +1038,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A dance craze spreads from one neighborhood to the adjacent neighborhoods, then to the ring of neighborhoods beyond those, like ripples in a pond. Which type of diffusion is this?',
@@ -1050,7 +1049,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Banks, pharmacies, and coffee shops adopted the drive-through window, an idea first popularized by fast-food restaurants, but each reshaped it to serve its own kind of business. This is best classified as',
@@ -1072,7 +1071,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Place names such as San Antonio, Sacramento, and Los Angeles reveal the Spanish colonial history of the American Southwest. Geographers call such place names',
@@ -1083,7 +1082,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A song released by a Seoul record label reaches the top of streaming charts in Mexico City, Manila, and Paris within days. Which contemporary factor best explains how quickly it diffused?',
@@ -1094,7 +1093,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'French is an official language in Senegal and Côte d\'Ivoire, while English is an official language in neighboring Gambia and Ghana. Which historical process best explains this pattern?',
@@ -1105,7 +1104,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'France requires radio stations to devote a minimum share of their music airtime to French-language songs. This policy is best understood as an attempt to',
@@ -1116,7 +1115,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Using chopsticks to eat is a single element of a culture. Geographers call such a single element a',
@@ -1138,7 +1137,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Which landscape feature best shows the spread of popular culture rather than folk culture?',
@@ -1149,7 +1148,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-culture-diffusion',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Which pair of languages belongs to the same language family?',
@@ -1226,7 +1225,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-language-religion',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'After the Roman emperor Constantine converted in the 300s, Christianity spread rapidly through imperial officials and the empire\'s major cities before reaching the countryside. This stage of Christianity\'s spread best illustrates',
@@ -1237,7 +1236,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-language-religion',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Indonesia, far from Islam\'s hearth on the Arabian Peninsula, now has the world\'s largest Muslim population. How did Islam mainly reach the islands of Southeast Asia?',
@@ -1248,7 +1247,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-language-religion',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Millions of Hindu pilgrims travel to Varanasi to bathe in the Ganges River, which they regard as sacred. This practice best illustrates that ethnic religions',
@@ -1259,7 +1258,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-language-religion',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Which universalizing religion was founded in the Punjab region of South Asia by Guru Nanak around 1500 and remains concentrated there today?',
@@ -1270,7 +1269,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-language-religion',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'In Belgium, Dutch-speaking Flanders and French-speaking Wallonia have their own regional governments, and disputes between them have threatened national unity. Here language acts as',
@@ -1281,7 +1280,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-language-religion',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'The Welsh government funds Welsh-language schools, television, and road signs after centuries of decline in the number of Welsh speakers. These policies aim mainly to',
@@ -1292,7 +1291,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-language-religion',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'American English and British English differ in some vocabulary, spelling, and pronunciation but are mutually intelligible. They are best described as',
@@ -1325,7 +1324,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-language-religion',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A person identifies with a group through shared ancestry, language, customs, and holidays that she learned growing up. Which concept describes this identity?',
@@ -1358,7 +1357,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-ethnicity-identity',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'The Basques share a distinct language and culture, and their homeland straddles the border of Spain and France, but they have no independent country of their own. The Basques are best described as',
@@ -1391,7 +1390,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-ethnicity-identity',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'From the 1930s through the 1960s, lenders and a federal agency marked many Black and immigrant neighborhoods as "hazardous" and refused to make mortgage loans there. This practice is known as',
@@ -1402,7 +1401,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-ethnicity-identity',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'In 2017, Myanmar\'s army drove more than 700,000 Rohingya Muslims from their villages into neighboring Bangladesh, burning settlements behind them. United Nations officials described this campaign as',
@@ -1413,7 +1412,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-ethnicity-identity',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'In 1977, Somalia invaded Ethiopia\'s Ogaden region to claim it, arguing that the region\'s population was largely ethnic Somali. Somalia\'s claim is an example of',
@@ -1468,7 +1467,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-ethnicity-identity',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'The United Kingdom contains England, Scotland, Wales, and Northern Ireland, each with a distinct national identity and some of its own institutions. The United Kingdom is best described as',
@@ -1479,7 +1478,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-ethnicity-identity',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Colonial powers drew many African borders that split some ethnic groups among several states while placing rival groups inside one state. Why have such borders often contributed to conflict?',
@@ -1501,7 +1500,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cultural-patterns',
     topicSlug: 'hg-ethnicity-identity',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
 
   // ═══ political-patterns ═══
@@ -1514,7 +1513,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-geography',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Koreans share a common language, history, and identity, but since 1948 they have lived in two separate countries, North Korea and South Korea. Koreans are therefore best described as',
@@ -1525,7 +1524,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-geography',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A boundary was surveyed across a forested, almost empty region decades before farmers and towns spread into the area. Which type of boundary is this?',
@@ -1602,7 +1601,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-geography',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Two neighboring countries agree exactly where their border lies, but they argue over how strictly to inspect trucks and whether to allow workers to cross daily. Which type of boundary dispute is this?',
@@ -1613,7 +1612,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-geography',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A treaty says a border follows "the middle of the river," but one country reads this as the deepest navigable channel and the other as the line halfway between the banks. Which type of dispute is this?',
@@ -1657,7 +1656,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-geography',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'During the Cold War, Eastern Europe lay between rival superpowers and contained many ethnic and religious divisions, so the region was repeatedly pulled apart by outside and internal pressures. Such a region is called a',
@@ -1668,7 +1667,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-geography',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Many African colonies won independence in the 1950s and 1960s, as their peoples demanded the right to choose their own governments. Which principle did these movements claim?',
@@ -1679,7 +1678,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-geography',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Greenland governs most of its own internal affairs, has its own parliament, and controls its natural resources, while Denmark still handles its defense and foreign policy. Greenland is best described as',
@@ -1690,7 +1689,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-geography',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'In one country, the national government sets education policy for every region and can abolish regional councils at any time. This country has',
@@ -1701,7 +1700,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-power',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Germany\'s constitution gives its states control over schools and police, and the national government cannot take those powers away on its own. Germany is therefore an example of',
@@ -1712,7 +1711,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-power',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Spain\'s national government has granted its regions, including Catalonia and the Basque Country, their own parliaments and authority over language, schools, and police. This transfer of power is called',
@@ -1723,7 +1722,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-power',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Separatist movements have arisen on islands such as Corsica in France and in other regions separated from the national core by sea or mountains. Which devolutionary factor do these cases best illustrate?',
@@ -1734,7 +1733,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-power',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Residents of a wealthy northern region complain that their taxes are used to support poorer southern regions, and a regional party calls for more autonomy. Which devolutionary factor is most evident?',
@@ -1811,7 +1810,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-power',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Malaysia is divided between the Malay Peninsula and the northern part of the island of Borneo, separated by the South China Sea. Which devolutionary factor could most directly strengthen regional identities on Borneo?',
@@ -1822,7 +1821,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-power',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'A map shows that a minority party\'s voters, who are concentrated in one city, have been split among five districts so that they form less than 40 percent of the voters in every district. This gerrymandering technique is called',
@@ -1877,7 +1876,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'political-patterns',
     topicSlug: 'hg-political-power',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
 
   // ═══ agriculture ═══
@@ -1901,7 +1900,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-origins',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Archaeologists find that squash was domesticated in Mesoamerica and wheat in Southwest Asia within a few thousand years of each other, with no contact between the two regions. This evidence supports the idea that agriculture',
@@ -1956,7 +1955,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-origins',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Horses brought to the Americas by the Spanish transformed the hunting, trade, and warfare of many Great Plains peoples by the 1700s. This change is an example of',
@@ -1967,7 +1966,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-origins',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'In eighteenth-century Britain, enclosure, crop rotation, and new tools such as the seed drill raised farm output while reducing the need for farm labor. How did this Second Agricultural Revolution support industrialization?',
@@ -1978,7 +1977,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-origins',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Which innovation is most closely associated with the Second Agricultural Revolution?',
@@ -2000,7 +1999,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-origins',
     formSet: 'A',
-    part: 1,
+    part: 6,
   },
   {
     question: 'A farmer in the Philippines plants IR8, a high-yield rice variety bred at an international research institute, and applies synthetic fertilizer to her paddies. Her practice is most closely tied to which agricultural revolution?',
@@ -2011,7 +2010,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-origins',
     formSet: 'B',
-    part: 1,
+    part: 6,
   },
   {
     question: 'The Green Revolution raised yields dramatically in much of Asia but had far less effect in sub-Saharan Africa. Which factor best explains the difference?',
@@ -2022,7 +2021,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-origins',
     formSet: 'A',
-    part: 1,
+    part: 6,
   },
   {
     question: 'Decades after adopting Green Revolution methods, farmers in parts of India\'s Punjab face rapidly falling water tables. Which practice most directly contributed to this problem?',
@@ -2033,7 +2032,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-origins',
     formSet: 'B',
-    part: 1,
+    part: 6,
   },
   {
     question: 'Over many centuries, Bantu-speaking farmers migrated across central and southern Africa, bringing their crops and iron-working skills to new lands. This spread of agriculture is an example of',
@@ -2064,9 +2063,9 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     explanation: 'Irrigation water in hot, dry climates evaporates and leaves salts behind, and over centuries salinization reduced yields in southern Mesopotamia. Nomadic herding, slash-and-burn clearing of forests, and terrace erosion do not describe irrigated river-valley fields.',
     difficulty: 'hard',
     domain: 'agriculture',
-    topicSlug: 'hg-agricultural-origins',
+    topicSlug: 'hg-agricultural-practices',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'A family in rural Malawi grows maize, beans, and cassava on a small plot, and nearly all of the harvest is eaten by the household. This is an example of',
@@ -2088,7 +2087,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A cattle station in the Australian outback covers thousands of square kilometers, but only a handful of workers manage the herd. This operation is an example of',
@@ -2099,7 +2098,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Farmers in the Amazon basin clear a forest plot by cutting and burning, grow crops for two or three years, then move on and let the plot regrow. Why do they move after only a few years?',
@@ -2110,7 +2109,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'In the Sahel, herders move camels, goats, and cattle across long distances, following seasonal rains to find water and grazing land. This agricultural practice is',
@@ -2143,7 +2142,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'In von Thünen\'s model, which land use occupies the second ring, just beyond market gardening and dairying?',
@@ -2165,7 +2164,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'According to von Thünen\'s model, why do farmers closest to the city grow vegetables and produce milk rather than raise cattle on open range?',
@@ -2176,7 +2175,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'An aerial photograph of southern Louisiana shows fields shaped like long, narrow strips running back from a bayou, each with a short frontage on the water. Which land survey system produced this pattern?',
@@ -2185,9 +2184,9 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     explanation: 'The long-lot system, brought by French settlers, divided land into narrow strips that each reach a river or road. Township and range creates square grid sections, metes and bounds follows natural features and irregular lines, and the open-field system was a medieval European arrangement of scattered strips.',
     difficulty: 'medium',
     domain: 'agriculture',
-    topicSlug: 'hg-agricultural-practices',
+    topicSlug: 'hg-agricultural-origins',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Flying over Iowa, a passenger sees square fields and straight roads laid out in a north-south and east-west grid, one mile apart. Which survey system created this landscape?',
@@ -2196,9 +2195,9 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     explanation: 'The U.S. Land Ordinance of 1785 established the township-and-range system, which divided land into square-mile sections on a grid. Metes and bounds uses natural landmarks, long lots are narrow strips fronting a river, and the open-field system was medieval European.',
     difficulty: 'easy',
     domain: 'agriculture',
-    topicSlug: 'hg-agricultural-practices',
+    topicSlug: 'hg-agricultural-origins',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'An old deed describes a farm\'s property line as running "from the large white oak, along the creek to the stone wall, then to the corner of the Hale farm." Which survey system does this deed reflect?',
@@ -2207,9 +2206,9 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     explanation: 'Metes and bounds describes property using natural features, landmarks, and distances, which produces irregular parcels common in the original thirteen colonies. Township and range and other geometric grids use straight survey lines, and long lots are narrow strips fronting a river.',
     difficulty: 'hard',
     domain: 'agriculture',
-    topicSlug: 'hg-agricultural-practices',
+    topicSlug: 'hg-agricultural-origins',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'One corporation owns the chicken farms, the feed mills, the slaughterhouses, and the trucks that deliver packaged chicken to supermarkets. This arrangement is best described as',
@@ -2220,7 +2219,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'A low-income urban neighborhood has many convenience stores and fast-food outlets but no full-service grocery store within walking distance. Geographers describe this area as a',
@@ -2231,7 +2230,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'A',
-    part: 1,
+    part: 6,
   },
   {
     question: 'Each summer a large low-oxygen dead zone forms in the Gulf of Mexico near the mouth of the Mississippi River. Which agricultural practice upstream contributes most to it?',
@@ -2242,7 +2241,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'A coffee cooperative in Ethiopia is certified so that buyers pay its growers a guaranteed minimum price and fund community projects. This certification is known as',
@@ -2253,7 +2252,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Cocoa accounts for a large share of one West African country\'s export earnings. Which risk does this dependence on a single export crop create?',
@@ -2264,7 +2263,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'agriculture',
     topicSlug: 'hg-agricultural-practices',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
 
   // ═══ cities-urban ═══
@@ -2288,7 +2287,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'A city\'s high-income neighborhoods extend outward from downtown in a single wedge along a scenic boulevard, while factories and working-class housing form another wedge along a rail line. Which urban model best describes this pattern?',
@@ -2299,7 +2298,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'A metropolitan area has separate centers of activity: a downtown business core, a university district, an industrial area near the airport, and a medical complex, each attracting related businesses. Which model best describes this city?',
@@ -2310,7 +2309,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'A large U.S. metro area has an aging downtown, but most of its jobs and shopping are now spread among office parks and malls clustered near beltway interchanges in the suburbs. Which model best fits this metro area?',
@@ -2321,7 +2320,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'In a South American city, informal housing covers steep hillsides and floodplains close to the center, while a wealthy residential sector follows a commercial spine outward from the CBD. In the Griffin-Ford model, the hillside and floodplain areas are called',
@@ -2332,7 +2331,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Which urban model describes cities with three separate central business districts: a colonial CBD, a traditional market zone, and an area of informal and periodic markets?',
@@ -2343,7 +2342,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'In McGee\'s model of Southeast Asian cities, which feature serves as the main focal point of the city\'s land use?',
@@ -2354,7 +2353,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'A country\'s largest city has 12 million people, while its second-largest city has about 1 million, and the largest city dominates the nation\'s economy, politics, and culture. This country exhibits',
@@ -2365,7 +2364,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A country\'s cities follow the rank-size rule, and its largest city has 8 million people. About how many people would the fourth-largest city be expected to have?',
@@ -2387,7 +2386,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Shoppers will drive up to 90 kilometers to reach a large furniture store but only about 3 kilometers to buy gasoline. In central place theory, these distances describe the',
@@ -2398,7 +2397,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'According to Christaller\'s central place theory, which spatial pattern of settlements would be expected across a uniform plain?',
@@ -2409,7 +2408,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Why are office towers typically tallest in the central business district of a North American city?',
@@ -2420,7 +2419,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Tysons, Virginia, a suburb of Washington, D.C., has millions of square feet of office space, large shopping malls, and more jobs than residents. Tysons is best described as',
@@ -2431,7 +2430,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Lagos, Dhaka, and São Paulo each have more than 10 million residents in their metropolitan areas. Cities of this size are called',
@@ -2442,7 +2441,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'London, New York, and Tokyo host the headquarters of global banks and corporations and stock exchanges whose decisions affect economies across the globe. These cities are best described as',
@@ -2453,7 +2452,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Which set of factors most directly drove the rapid growth of U.S. suburbs after 1945?',
@@ -2464,7 +2463,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urbanization',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'On the edge of a fast-growing city, migrants from the countryside build homes from scrap metal and wood on land they do not own, without permits or city services. These areas are called',
@@ -2486,7 +2485,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Which outcome is most directly associated with low-density suburban sprawl?',
@@ -2497,7 +2496,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A Midwestern city\'s population fell by more than half between 1950 and 2020, leaving thousands of vacant houses and lots. Which process most directly caused this decline?',
@@ -2519,7 +2518,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'A city council debates a plan that would attract upscale housing and shops to a low-income neighborhood. Which statement best summarizes the main benefit and main cost that urban geographers associate with gentrification?',
@@ -2530,7 +2529,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'An abandoned factory site near a river has soil contaminated by decades of industrial chemicals, and developers must clean it before building there. Such a site is called a',
@@ -2563,7 +2562,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A city surrounds itself with a ring of protected farmland and forest where new development is restricted, to limit sprawl. This ring is called a',
@@ -2585,7 +2584,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A city center is several degrees warmer at night than nearby farmland, largely because pavement and buildings absorb heat and there is little vegetation. Which policy would most directly reduce this effect?',
@@ -2596,7 +2595,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'In the 1950s and 1960s, some real estate agents frightened white homeowners into selling cheaply by warning that Black families were moving into the neighborhood, then resold the homes at higher prices. This practice is called',
@@ -2607,18 +2606,18 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
-    question: 'A study finds that a city\'s waste incinerators, freight rail yards, and highway interchanges are concentrated in low-income neighborhoods where most residents are people of color. Which concept does this pattern illustrate?',
-    options: ['Smart growth', 'Environmental injustice', 'Gentrification', 'New Urbanism'],
+    question: 'A study finds that neighborhoods graded "hazardous" on 1930s lending maps still host more highways, rail yards, and industry than the highest-graded areas. This pattern is best explained as',
+    options: ['a result of smart growth', 'a lasting effect of redlining', 'a result of gentrification', 'a feature of New Urbanism'],
     correctAnswer: 1,
-    explanation: 'Environmental injustice is the unequal exposure of poor and minority communities to pollution and hazards. Smart growth and New Urbanism are planning approaches that aim for compact, livable development, and gentrification is the arrival of wealthier residents rather than the siting of hazards.',
+    explanation: 'Redlining steered investment away from neighborhoods graded "hazardous," and highways, rail yards, and industry were later sited there more often, a land-use legacy that persists today. Smart growth and New Urbanism are planning approaches that aim for compact, livable development, and gentrification is the arrival of wealthier residents rather than the siting of hazards.',
     difficulty: 'hard',
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'An affluent suburb requires every new house to sit on a lot of at least one acre and bans apartment buildings. What is the most likely effect of these rules?',
@@ -2629,7 +2628,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'In a rapidly growing city, many neighborhoods on the urban periphery have no sewer lines or piped water. Which problem is most likely to result?',
@@ -2651,7 +2650,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'cities-urban',
     topicSlug: 'hg-urban-challenges',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
 
   // ═══ industrialization-development ═══
@@ -2686,7 +2685,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Which combination of factors best explains why Britain became the hearth of the Industrial Revolution in the mid-1700s?',
@@ -2697,7 +2696,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'How did the Industrial Revolution change where people lived in the countries where it took hold?',
@@ -2708,7 +2707,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'A country\'s investment rate rises sharply, a few manufacturing industries such as textiles grow rapidly, and cities begin to expand. In Rostow\'s model, this country is entering which stage?',
@@ -2741,7 +2740,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'B',
-    part: 1,
+    part: 6,
   },
   {
     question: 'A pulp mill turns heavy logs into much lighter wood pulp. According to Weber\'s least cost theory, where should the mill locate?',
@@ -2752,7 +2751,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'A beverage company ships light syrup concentrate to bottling plants, which add large amounts of water before shipping the drinks to stores. Under Weber\'s least cost theory, where should the bottling plants locate?',
@@ -2763,7 +2762,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Hundreds of software firms have clustered in Bengaluru, India, where they share a pool of skilled engineers, specialized suppliers, and business services. These benefits of clustering are called',
@@ -2774,7 +2773,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'At Rotterdam, cargo from ocean ships is transferred to river barges, trains, and trucks, and refineries and processing plants have grown up around the docks. Which concept best explains why industry locates there?',
@@ -2785,7 +2784,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'B',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Many global clothing brands buy garments sewn in factories in Bangladesh. According to least cost theory, which factor most explains this location?',
@@ -2796,7 +2795,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'How does gross national income (GNI) differ from gross domestic product (GDP)?',
@@ -2807,7 +2806,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Two countries have similar GNI per capita, but Country A scores much worse on the Gender Inequality Index. Which conclusion is best supported?',
@@ -2818,7 +2817,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'A',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Microcredit programs such as Bangladesh\'s Grameen Bank have made small loans, mostly to women in poor rural areas, to start small businesses. Supporters argue these loans promote development mainly by',
@@ -2829,7 +2828,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-industrialization',
     formSet: 'B',
-    part: 1,
+    part: 5,
   },
   {
     question: 'An automaker no longer keeps large warehouses of parts; instead, suppliers deliver components to the plant just hours before they are needed, and production shifts quickly as demand changes. This approach is typical of',
@@ -2906,7 +2905,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-globalization-trade',
     formSet: 'B',
-    part: 1,
+    part: 4,
   },
   {
     question: 'Factories in Ciudad Juárez, Mexico, import parts from the United States without tariffs, assemble them into finished goods, and export the goods back across the border. These factories are called',
@@ -2939,7 +2938,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-globalization-trade',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Which international organization\'s main purpose is to lower tariffs and other barriers to commerce among its members and to settle their disputes?',
@@ -2950,7 +2949,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-globalization-trade',
     formSet: 'B',
-    part: 1,
+    part: 2,
   },
   {
     question: 'In return for emergency loans in the 1980s and 1990s, several indebted countries agreed to sell state-owned companies, cut public spending, and remove trade barriers. Which criticism is most often made of these structural adjustment programs?',
@@ -2961,7 +2960,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-globalization-trade',
     formSet: 'A',
-    part: 1,
+    part: 3,
   },
   {
     question: 'Steel towns in Ohio and Pennsylvania lost tens of thousands of jobs from the 1970s onward as mills closed and production shifted to lower-cost producers abroad. This process is called',
@@ -2983,7 +2982,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-globalization-trade',
     formSet: 'A',
-    part: 1,
+    part: 2,
   },
   {
     question: 'Japan has little oil but a large industrial economy, while Saudi Arabia produces far more oil than it uses and imports manufactured goods. This relationship of mutual supply and demand between two places is called',
@@ -3005,7 +3004,7 @@ export const apHumanGeoQuestionPool: APHumanGeoQuestion[] = [
     domain: 'industrialization-development',
     topicSlug: 'hg-globalization-trade',
     formSet: 'A',
-    part: 1,
+    part: 5,
   },
   {
     question: 'Country X has a higher GNI per capita than Country Y, but Country Y has a higher Human Development Index score. Which explanation best accounts for this difference?',

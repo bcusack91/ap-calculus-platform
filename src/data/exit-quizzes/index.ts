@@ -1091,6 +1091,13 @@ const quizLoaders: Record<string, QuizLoader> = {
   'apes-energy': () => import('./ap-environmental-science'),
   'apes-atmospheric-pollution': () => import('./ap-environmental-science'),
   'apes-atmosphere-climate': () => import('./ap-environmental-science'),
+  'apes-geology-soil': () => import('./ap-environmental-science'),
+  'apes-air-pollution': () => import('./ap-environmental-science'),
+  'apes-ozone-indoor-air': () => import('./ap-environmental-science'),
+  'apes-water-pollution': () => import('./ap-environmental-science'),
+  'apes-solid-hazardous-waste': () => import('./ap-environmental-science'),
+  'apes-climate-change': () => import('./ap-environmental-science'),
+  'apes-sustainability': () => import('./ap-environmental-science'),
 
   // ═══════════════════════════════════════════════════
   // AP Computer Science A Exit Quizzes
@@ -1190,6 +1197,8 @@ export const EXIT_QUIZ_ALIASES: Record<string, string> = {
   'physics-c-position-velocity-acceleration': 'physics-c-1d-kinematics',
   'physics-c-moment-of-inertia': 'physics-c-rotational-kinematics-dynamics',
   'physics-c-faraday-lenz': 'physics-c-faraday-induction',
+  'hg-industrialization-development': 'hg-industrialization',
+  'gov-political-ideology': 'gov-ideologies',
 }
 
 /** The pool slug that holds a topic's exit-quiz items. */
