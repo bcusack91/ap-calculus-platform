@@ -115,7 +115,7 @@ Give the boundary value (the number $x$ is compared to).
             options: ['$-3 < x < 3$', '$x > 3$', '$x < -3$ or $x > 3$', '$x \\geq -3$']
           }
         ],
-        correctAnswers: ['Flip the inequality sign', '-5 < x < 5', 'x < -3 or x > 3'],
+        correctAnswers: ['Flip the inequality sign', '$-5 < x < 5$', '$x < -3$ or $x > 3$'],
         hint1: 'Multiplying or dividing by a negative reverses the direction.',
         hint2: '$|x| < k$ means x is within $k$ units of 0.',
         hint3: '$|x| > k$ means x is more than $k$ units from 0 — two separate regions.',
