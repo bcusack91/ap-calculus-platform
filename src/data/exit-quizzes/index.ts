@@ -907,6 +907,13 @@ const quizLoaders: Record<string, QuizLoader> = {
   'wh-consequences-industrialization': () => import('./ap-world-history'),
   'wh-imperialism': () => import('./ap-world-history'),
   'wh-reform-migration': () => import('./ap-world-history'),
+  'wh-developments-east-asia': () => import('./ap-world-history'),
+  'wh-world-wars': () => import('./ap-world-history'),
+  'wh-mass-atrocities': () => import('./ap-world-history'),
+  'wh-cold-war-decolonization': () => import('./ap-world-history'),
+  'wh-newly-independent-states': () => import('./ap-world-history'),
+  'wh-globalization-tech': () => import('./ap-world-history'),
+  'wh-challenges-21st-century': () => import('./ap-world-history'),
 
   // ═══════════════════════════════════════════════════
   // AP US History Exit Quizzes
@@ -924,6 +931,9 @@ const quizLoaders: Record<string, QuizLoader> = {
   'apush-gilded-age': () => import('./ap-us-history'),
   'apush-progressivism-wwi': () => import('./ap-us-history'),
   'apush-depression-wwii': () => import('./ap-us-history'),
+  'apush-cold-war-civil-rights': () => import('./ap-us-history'),
+  'apush-vietnam-social-change': () => import('./ap-us-history'),
+  'apush-reagan-to-present': () => import('./ap-us-history'),
 
   // ═══════════════════════════════════════════════════
   // AP Macroeconomics Exit Quizzes
@@ -943,6 +953,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   'macro-fiscal-policy-tools': () => import('./ap-macroeconomics'),
   'macro-open-economy': () => import('./ap-macroeconomics'),
   'macro-international-trade-finance': () => import('./ap-macroeconomics'),
+  'macro-aggregate-demand-supply': () => import('./ap-macroeconomics'),
 
   // ═══════════════════════════════════════════════════
   // AP Microeconomics Exit Quizzes
@@ -1006,6 +1017,9 @@ const quizLoaders: Record<string, QuizLoader> = {
   'englit-symbol-motif-fiction': () => import('./ap-english-literature'),
   'englit-plot-conflict-theme': () => import('./ap-english-literature'),
   'englit-social-commentary-drama': () => import('./ap-english-literature'),
+  'englit-prose-style-analysis': () => import('./ap-english-literature'),
+  'englit-complex-poetic-analysis': () => import('./ap-english-literature'),
+  'englit-essay-writing': () => import('./ap-english-literature'),
 
   // ═══════════════════════════════════════════════════
   // AP English Language Exit Quizzes
@@ -1031,6 +1045,8 @@ const quizLoaders: Record<string, QuizLoader> = {
   'englang-synthesis-essay': () => import('./ap-english-language'),
   'englang-developing-arguments': () => import('./ap-english-language'),
   'englang-writing-for-audience': () => import('./ap-english-language'),
+  'englang-rhetorical-analysis-essay': () => import('./ap-english-language'),
+  'englang-rhetorical-devices': () => import('./ap-english-language'),
 
   // ═══════════════════════════════════════════════════
   // AP Environmental Science Exit Quizzes
@@ -1076,6 +1092,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   'csa-2d-arrays': () => import('./ap-computer-science-a'),
   'csa-inheritance': () => import('./ap-computer-science-a'),
   'csa-inheritance-polymorphism': () => import('./ap-computer-science-a'),
+  'csa-recursive-methods': () => import('./ap-computer-science-a'),
 
   // ═══════════════════════════════════════════════════
   // AP CS Principles Exit Quizzes
