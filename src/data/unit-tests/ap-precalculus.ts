@@ -1,5 +1,27 @@
 import { apPrecalcQuestionPool } from '@/data/exit-quizzes/ap-precalculus'
-import type { CourseUnitTestConfig, UnitDef } from '@/lib/unit-tests/engine'
+import { assignUnits, type CourseUnitTestConfig, type UnitAssignment, type UnitDef } from '@/lib/unit-tests/engine'
+
+/**
+ * The three assessed units of the AP Precalculus CED (Unit 4 is not on the
+ * exam). Arithmetic and geometric sequences (Topic 2.1) and composition and
+ * inverses (2.7-2.8) are Unit 2, so they move out of the pool's
+ * polynomial-rational domain. The pool's leftover `params-vectors-matrices`
+ * domain holds only on-exam review items from Units 1-3; each joins its unit
+ * by topic, so there is no separate cumulative test.
+ */
+export const AP_PRECALCULUS_UNIT_ASSIGNMENT: UnitAssignment = {
+  topics: {
+    'sequences-series-precalc': 'exp-log',
+    'sequences-arithmetic-geometric': 'exp-log',
+    'function-composition-inverses-precalc': 'exp-log',
+    'exponential-functions-precalc': 'exp-log',
+    'logarithmic-functions-precalc': 'exp-log',
+    'rational-functions-precalc': 'polynomial-rational',
+    'rates-of-change-precalc': 'polynomial-rational',
+    'polar-coordinates-precalc': 'trig-polar',
+    'trigonometric-functions-precalc': 'trig-polar',
+  },
+}
 
 export const AP_PRECALCULUS_UNITS: UnitDef[] = [
   {
@@ -7,13 +29,11 @@ export const AP_PRECALCULUS_UNITS: UnitDef[] = [
     unitNumber: 1,
     name: 'Unit 1: Polynomial & Rational Functions',
     shortName: 'Polynomial & Rational',
-    description: 'Rates of change, polynomial behavior, rational asymptotes & holes, function composition, transformations, and sequences.',
+    description: 'Rates of change, polynomial behavior and complex zeros, rational asymptotes and holes, transformations, and model selection.',
     topicSlugs: [
       'polynomial-functions-precalc',
       'rational-functions-precalc',
-      'function-composition-inverses-precalc',
       'transformations-precalc',
-      'sequences-series-precalc',
       'rates-of-change-precalc',
     ],
     exam_weight: '30–40%',
@@ -25,8 +45,8 @@ export const AP_PRECALCULUS_UNITS: UnitDef[] = [
     unitNumber: 2,
     name: 'Unit 2: Exponential & Logarithmic Functions',
     shortName: 'Exponential & Logarithmic',
-    description: 'Exponential growth/decay, logarithm properties, equation solving, and continuous-compounding models.',
-    topicSlugs: ['exponential-functions-precalc', 'logarithmic-functions-precalc'],
+    description: 'Arithmetic and geometric sequences, exponential growth and decay, composition and inverses, logarithms, and semi-log models.',
+    topicSlugs: ['sequences-series-precalc', 'exponential-functions-precalc', 'function-composition-inverses-precalc', 'logarithmic-functions-precalc'],
     exam_weight: '27–40%',
     color: 'from-indigo-500 to-purple-500',
     icon: '📊',
@@ -47,25 +67,6 @@ export const AP_PRECALCULUS_UNITS: UnitDef[] = [
     color: 'from-purple-500 to-pink-500',
     icon: '📐',
   },
-  {
-    // The id is the pool's domain key (kept so saved results still match). CED
-    // Unit 4 is not assessed, so its topics retired in Oct 2026; the items left
-    // in this domain are on-exam mixed review (see exit-quizzes/ap-precalculus.ts).
-    id: 'params-vectors-matrices',
-    unitNumber: 4,
-    name: 'Cumulative Review: Units 1–3',
-    shortName: 'Cumulative Review',
-    description: 'Mixed review across the three assessed units: rates of change, rational functions, exponentials and logarithms, sequences, inverses, trig values, and polar functions.',
-    topicSlugs: [
-      'rates-of-change-precalc',
-      'function-composition-inverses-precalc',
-      'sequences-series-precalc',
-      'polar-coordinates-precalc',
-    ],
-    exam_weight: 'Mixed review of Units 1–3',
-    color: 'from-emerald-500 to-green-500',
-    icon: '🧮',
-  },
 ]
 
 export const AP_PRECALCULUS_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
@@ -74,5 +75,5 @@ export const AP_PRECALCULUS_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
   courseTitle: 'AP Precalculus',
   unitTestRoute: '/ap-precalc-unit-tests',
   units: AP_PRECALCULUS_UNITS,
-  pool: apPrecalcQuestionPool,
+  pool: assignUnits(apPrecalcQuestionPool, AP_PRECALCULUS_UNIT_ASSIGNMENT),
 }

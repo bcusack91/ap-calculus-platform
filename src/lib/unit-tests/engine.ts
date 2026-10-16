@@ -122,8 +122,54 @@ export function getUnit(config: CourseUnitTestConfig, unitId: string): UnitDef |
   return config.units.find(u => u.id === unitId)
 }
 
+/**
+ * The questions a unit draws: the pool items whose `domain` is the unit's id,
+ * with repeated stems dropped (a pool can carry one stem under two topics).
+ */
+export function unitPool(config: CourseUnitTestConfig, unitId: string): UnitPoolQuestion[] {
+  const seen = new Set<string>()
+  return config.pool.filter(q => {
+    if (q.domain !== unitId || seen.has(q.question)) return false
+    seen.add(q.question)
+    return true
+  })
+}
+
+/**
+ * How a course maps its exit pool onto its CED units. The engine selects a
+ * unit's questions by `domain === unit.id`, so a course whose pool domains do
+ * not line up one-to-one with its CED units re-tags each item with its unit's
+ * id. Rules apply most specific first: `stems`, then `topics`, then `domains`.
+ * An item no rule matches keeps its domain (the AP unit-test guard test fails
+ * if that domain is not a unit id). A stem mapped to null drops the item: use
+ * it only for items that test no CED content (e.g. questions about exam rules).
+ */
+export interface UnitAssignment {
+  /** Pool domain -> unit id. */
+  domains?: Record<string, string>
+  /** Pool topicSlug -> unit id, for a domain whose topics span CED units. */
+  topics?: Record<string, string>
+  /** Question-stem prefix -> unit id (or null to leave the item out), for a topic whose items span CED units. */
+  stems?: Record<string, string | null>
+}
+
+export function assignUnits<T extends Pick<UnitPoolQuestion, 'domain' | 'topicSlug' | 'question'>>(
+  pool: T[],
+  rules: UnitAssignment,
+): T[] {
+  const stems = Object.entries(rules.stems ?? {})
+  const out: T[] = []
+  for (const q of pool) {
+    const byStem = stems.find(([prefix]) => q.question.startsWith(prefix))
+    if (byStem && byStem[1] === null) continue
+    const unit = byStem?.[1] ?? rules.topics?.[q.topicSlug] ?? rules.domains?.[q.domain]
+    out.push(unit && unit !== q.domain ? { ...q, domain: unit } : q)
+  }
+  return out
+}
+
 export function getUnitPoolSize(config: CourseUnitTestConfig, unitId: string): number {
-  return config.pool.filter(q => q.domain === unitId).length
+  return unitPool(config, unitId).length
 }
 
 export function getQuestionsPerVariant(config: CourseUnitTestConfig, unitId: string): number {
@@ -147,7 +193,7 @@ export function generateUnitTest(
   const variants = variantCountFor(config)
   const v = Math.max(1, Math.min(variants, Math.floor(variant) || 1))
 
-  const pool = config.pool.filter(q => q.domain === unitId)
+  const pool = unitPool(config, unitId)
   if (pool.length === 0) throw new Error(`No question pool for unit: ${unitId}`)
 
   const target = getQuestionsPerVariant(config, unitId)

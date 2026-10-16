@@ -1,13 +1,33 @@
 import { engLitQuestionPool } from '@/data/exit-quizzes/ap-english-literature'
-import type { CourseUnitTestConfig, UnitDef } from '@/lib/unit-tests/engine'
+import { assignUnits, type CourseUnitTestConfig, type UnitAssignment, type UnitDef } from '@/lib/unit-tests/engine'
+
+/**
+ * The AP English Literature CED's nine units are three passes through three
+ * genres: short fiction (Units 1, 4, 7), poetry (2, 5, 8), and longer fiction
+ * or drama (3, 6, 9). The CED weights the multiple-choice section by these
+ * same three groups, so the unit tests follow them, each covering its three
+ * units. The exit pool's skill-based domains (character, figurative
+ * language, argument) are filed by the unit their lessons sit in.
+ */
+export const AP_ENGLISH_LIT_UNIT_ASSIGNMENT: UnitAssignment = {
+  topics: {
+    'englit-character-setting': 'short-fiction',
+    'englit-narration-pov': 'short-fiction',
+    'englit-narrative-perspective': 'short-fiction',
+    'englit-symbol-motif-fiction': 'short-fiction',
+    'englit-figurative-language': 'poetry',
+    'englit-tone-speaker': 'poetry',
+    'englit-narrative-complexity': 'longer-fiction',
+    'englit-plot-conflict-theme': 'longer-fiction',
+    'englit-social-commentary-drama': 'longer-fiction',
+    'englit-essay-writing': 'longer-fiction',
+  },
+}
 
 export const AP_ENGLISH_LIT_UNITS: UnitDef[] = [
-  { id: 'short-fiction', unitNumber: 1, name: 'Unit 1: Short Fiction I', shortName: 'Short Fiction', description: 'Reading short fiction: setting, plot, character, and narrative voice.', topicSlugs: ['short-fiction'], exam_weight: '14–17%', color: 'from-blue-500 to-cyan-500', icon: '📖' },
-  { id: 'poetry', unitNumber: 2, name: 'Unit 2 & 5: Poetry', shortName: 'Poetry', description: 'Reading poetry: form, structure, sound, and figurative language.', topicSlugs: ['poetry'], exam_weight: '20–30%', color: 'from-indigo-500 to-purple-500', icon: '🎼' },
-  { id: 'longer-fiction', unitNumber: 3, name: 'Unit 3 & 6: Longer Fiction & Drama', shortName: 'Longer Fiction', description: 'Novels and plays: structure, theme, and complex characters.', topicSlugs: ['longer-fiction'], exam_weight: '20–30%', color: 'from-purple-500 to-pink-500', icon: '📚' },
-  { id: 'character-narrative', unitNumber: 4, name: 'Unit 4 & 7: Character & Narrative Technique', shortName: 'Character & Narrative', description: 'Character development, narrative perspective, and point of view.', topicSlugs: ['character-narrative'], exam_weight: '14–17%', color: 'from-emerald-500 to-teal-500', icon: '🎭' },
-  { id: 'figurative-language', unitNumber: 5, name: 'Unit 8: Figurative Language', shortName: 'Figurative Language', description: 'Symbol, metaphor, imagery, allusion, and tone.', topicSlugs: ['figurative-language'], exam_weight: '14–17%', color: 'from-amber-500 to-orange-500', icon: '🌈' },
-  { id: 'analysis-argument', unitNumber: 6, name: 'Unit 9: Literary Analysis & Argument', shortName: 'Analysis & Argument', description: 'Constructing literary arguments and writing analytical essays.', topicSlugs: ['analysis-argument'], exam_weight: '14–17%', color: 'from-rose-500 to-pink-500', icon: '✍️' },
+  { id: 'short-fiction', unitNumber: 1, name: 'Short Fiction (Units 1, 4, and 7)', shortName: 'Short Fiction', description: 'Character, setting, plot, narrator and point of view, symbol and motif, and prose style in short stories.', topicSlugs: ['englit-short-fiction-1', 'englit-character-setting', 'englit-narration-pov', 'englit-short-fiction-2', 'englit-short-fiction-3'], exam_weight: '42–49%', color: 'from-blue-500 to-cyan-500', icon: '📖' },
+  { id: 'poetry', unitNumber: 2, name: 'Poetry (Units 2, 5, and 8)', shortName: 'Poetry', description: 'Speaker and tone, structure and form, sound, imagery, and figurative language in poems.', topicSlugs: ['englit-poetry-1', 'englit-poetic-structure-form', 'englit-figurative-language', 'englit-poetry-2', 'englit-complex-poetic-analysis'], exam_weight: '36–45%', color: 'from-indigo-500 to-purple-500', icon: '🎼' },
+  { id: 'longer-fiction', unitNumber: 3, name: 'Longer Fiction or Drama (Units 3, 6, and 9)', shortName: 'Longer Fiction & Drama', description: 'Structure, conflict, theme, complex narration, and social commentary in novels and plays, and literary argument.', topicSlugs: ['englit-longer-fiction', 'englit-dramatic-structure', 'englit-longer-fiction-2', 'englit-narrative-complexity', 'englit-essay-writing'], exam_weight: '15–18%', color: 'from-purple-500 to-pink-500', icon: '📚' },
 ]
 
 export const AP_ENGLISH_LIT_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
@@ -16,5 +36,5 @@ export const AP_ENGLISH_LIT_UNIT_TESTS_CONFIG: CourseUnitTestConfig = {
   courseTitle: 'AP English Literature',
   unitTestRoute: '/ap-english-lit-unit-tests',
   units: AP_ENGLISH_LIT_UNITS,
-  pool: engLitQuestionPool,
+  pool: assignUnits(engLitQuestionPool, AP_ENGLISH_LIT_UNIT_ASSIGNMENT),
 }

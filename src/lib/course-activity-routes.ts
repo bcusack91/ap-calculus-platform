@@ -17,7 +17,7 @@ const UNIT_TEST_ROUTES: Record<string, string> = {
   "ap-calculus-bc": "/ap-calcbc-unit-tests",
   "ap-chemistry": "/ap-chem-unit-tests",
   "ap-computer-science-a": "/ap-csa-unit-tests",
-  "ap-cs-principles": "/ap-csp-unit-tests",
+  "ap-computer-science-principles": "/ap-csp-unit-tests",
   "ap-english-language": "/ap-english-lang-unit-tests",
   "ap-english-literature": "/ap-english-lit-unit-tests",
   "ap-environmental-science": "/ap-enviro-unit-tests",
