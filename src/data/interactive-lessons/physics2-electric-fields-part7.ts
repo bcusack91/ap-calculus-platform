@@ -65,10 +65,6 @@ These three forms are all equivalent (use whichever is most convenient).
 
 The energy is stored **in the electric field** between the plates, not on the plates themselves.
 
-Energy density (energy per unit volume):
-
-$$u = \\frac{1}{2}\\epsilon_0 E^2$$
-
 This is a profound result: **electric fields carry energy**. This concept extends far beyond capacitors — it's the basis for electromagnetic waves carrying energy from the Sun to Earth.
       `
     },

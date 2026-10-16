@@ -170,15 +170,15 @@ A double-slit experiment uses $\\lambda = 550$ nm, slit separation $d = 0.25$ mm
       exercise: {
         questions: [
           {
-            question: 'In a double-slit experiment with $d = 0.10$ mm and $\\lambda = 500$ nm, what is the maximum order $m$ of bright fringes that can be observed?',
+            question: 'In a double-slit experiment with $d = 0.10$ mm and $\\lambda = 600$ nm, what is the maximum order $m$ of bright fringes that can be observed?',
             options: [
-              '100',
-              '200',
-              '500',
-              '1000'
+              '83',
+              '166',
+              '167',
+              '333'
             ],
             correctAnswer: 1,
-            explanation: '$m_{\\max} = d/\\lambda = (0.10 \\times 10^{-3})/(500 \\times 10^{-9}) = 200$. For $m > 200$, $\\sin\\theta > 1$, which is impossible.'
+            explanation: '$d/\\lambda = (0.10 \\times 10^{-3})/(600 \\times 10^{-9}) = 166.7$, and $m$ must be a whole number with $\\sin\\theta = m\\lambda/d \\le 1$, so $m_{\\max} = 166$. Rounding up to 167 would need $\\sin\\theta > 1$, which is impossible.'
           },
           {
             question: 'Moving the double-slit screen closer to the slits will:',

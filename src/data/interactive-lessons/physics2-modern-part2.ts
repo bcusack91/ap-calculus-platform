@@ -95,9 +95,8 @@ When electrons (or even larger particles like neutrons and molecules) pass throu
 
 - **Many particles**: An interference pattern builds up on the detector
 - **One particle at a time**: Each particle lands at a single point, but after many particles, the interference pattern still emerges
-- **Observation**: If you detect which slit the particle goes through, the interference pattern disappears
 
-This demonstrates that each particle interferes **with itself** — it passes through both slits as a wave!
+This shows that a particle's motion is described by a wave that passes through both slits. The wave sets the probability of where each particle lands, so the pattern appears only after many particles have arrived.
 
 ### Compton Scattering
 

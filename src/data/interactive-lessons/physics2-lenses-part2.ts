@@ -18,19 +18,19 @@ Now that you know the two lens types, it's time to calculate exactly **where** i
       content: `
 ## The Thin Lens Equation
 
-$$\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}$$
+$$\\frac{1}{f} = \\frac{1}{s_o} + \\frac{1}{s_i}$$
 
 | Symbol | Meaning |
 |:---:|:---:|
 | $f$ | Focal length |
-| $d_o$ | Object distance (from lens to object) |
-| $d_i$ | Image distance (from lens to image) |
+| $s_o$ | Object distance (from lens to object) |
+| $s_i$ | Image distance (from lens to image) |
 
-### Solving for $d_i$:
+### Solving for $s_i$:
 
-$$\\frac{1}{d_i} = \\frac{1}{f} - \\frac{1}{d_o}$$
+$$\\frac{1}{s_i} = \\frac{1}{f} - \\frac{1}{s_o}$$
 
-$$d_i = \\frac{f \\cdot d_o}{d_o - f}$$
+$$s_i = \\frac{f \\cdot s_o}{s_o - f}$$
 
 This equation works for **both** converging and diverging lenses — the sign of $f$ takes care of everything.
       `
@@ -44,13 +44,15 @@ This equation works for **both** converging and diverging lenses — the sign of
 | Quantity | Positive (+) | Negative (−) |
 |:---:|:---:|:---:|
 | $f$ | Converging lens | Diverging lens |
-| $d_o$ | Object on incoming-light side (real object) | Not used: single-lens problems always have a real object |
-| $d_i$ | Image on opposite side from object (**real**) | Image on same side as object (**virtual**) |
+| $s_o$ | Object on incoming-light side (real object) | Not used: single-lens problems always have a real object |
+| $s_i$ | Image on opposite side from object (**real**) | Image on same side as object (**virtual**) |
 | $m$ | Image is **upright** | Image is **inverted** |
 
 ### Magnification
 
-$$m = -\\frac{d_i}{d_o} = \\frac{h_i}{h_o}$$
+$$m = -\\frac{s_i}{s_o} = \\frac{h_i}{h_o}$$
+
+The AP equation sheet gives the magnitude, $|M| = \\left|\\frac{h_i}{h_o}\\right| = \\left|\\frac{s_i}{s_o}\\right|$; the sign of $m$ adds the orientation (negative = inverted, positive = upright).
 
 | Condition | Image Property |
 |:---:|:---:|
@@ -60,7 +62,7 @@ $$m = -\\frac{d_i}{d_o} = \\frac{h_i}{h_o}$$
 | $m > 0$ | Upright |
 | $m < 0$ | Inverted |
 
-⚠️ The **negative sign** in $m = -d_i/d_o$ is essential. A real image ($d_i > 0$) gives $m < 0$ → inverted. A virtual image ($d_i < 0$) gives $m > 0$ → upright.
+⚠️ The **negative sign** in $m = -s_i/s_o$ is essential. A real image ($s_i > 0$) gives $m < 0$ → inverted. A virtual image ($s_i < 0$) gives $m > 0$ → upright.
       `
     },
     {
@@ -71,17 +73,17 @@ $$m = -\\frac{d_i}{d_o} = \\frac{h_i}{h_o}$$
 
 An object is placed 30 cm from a converging lens with $f = 10$ cm.
 
-**Step 1: Find $d_i$**
+**Step 1: Find $s_i$**
 
-$$\\frac{1}{d_i} = \\frac{1}{f} - \\frac{1}{d_o} = \\frac{1}{10} - \\frac{1}{30} = \\frac{3 - 1}{30} = \\frac{2}{30} = \\frac{1}{15}$$
+$$\\frac{1}{s_i} = \\frac{1}{f} - \\frac{1}{s_o} = \\frac{1}{10} - \\frac{1}{30} = \\frac{3 - 1}{30} = \\frac{2}{30} = \\frac{1}{15}$$
 
-$$d_i = 15 \\text{ cm}$$
+$$s_i = 15 \\text{ cm}$$
 
-Since $d_i > 0$: the image is **real** (on the opposite side from the object).
+Since $s_i > 0$: the image is **real** (on the opposite side from the object).
 
 **Step 2: Find magnification**
 
-$$m = -\\frac{d_i}{d_o} = -\\frac{15}{30} = -0.5$$
+$$m = -\\frac{s_i}{s_o} = -\\frac{15}{30} = -0.5$$
 
 Since $m < 0$: the image is **inverted**.
 
@@ -99,13 +101,13 @@ Since $|m| = 0.5 < 1$: the image is **reduced** (half the object height).
           {
             question: 'An object is 20 cm from a converging lens with $f = 10$ cm. Where does the image form?',
             options: [
-              '$d_i = 20$ cm (real)',
-              '$d_i = 10$ cm (real)',
-              '$d_i = -20$ cm (virtual)',
-              '$d_i = 6.67$ cm (real)'
+              '$s_i = 20$ cm (real)',
+              '$s_i = 10$ cm (real)',
+              '$s_i = -20$ cm (virtual)',
+              '$s_i = 6.67$ cm (real)'
             ],
             correctAnswer: 0,
-            explanation: '$\\frac{1}{d_i} = \\frac{1}{10} - \\frac{1}{20} = \\frac{2-1}{20} = \\frac{1}{20}$, so $d_i = 20$ cm. Positive → real image.'
+            explanation: '$\\frac{1}{s_i} = \\frac{1}{10} - \\frac{1}{20} = \\frac{2-1}{20} = \\frac{1}{20}$, so $s_i = 20$ cm. Positive → real image.'
           },
           {
             question: 'An object is 5 cm from a converging lens with $f = 10$ cm. The image is:',
@@ -116,10 +118,10 @@ Since $|m| = 0.5 < 1$: the image is **reduced** (half the object height).
               'No image forms'
             ],
             correctAnswer: 1,
-            explanation: '$\\frac{1}{d_i} = \\frac{1}{10} - \\frac{1}{5} = \\frac{1-2}{10} = -\\frac{1}{10}$, so $d_i = -10$ cm. Negative → virtual image. $m = -(-10)/5 = +2$ → upright and enlarged.'
+            explanation: '$\\frac{1}{s_i} = \\frac{1}{10} - \\frac{1}{5} = \\frac{1-2}{10} = -\\frac{1}{10}$, so $s_i = -10$ cm. Negative → virtual image. $m = -(-10)/5 = +2$ → upright and enlarged.'
           },
           {
-            question: 'An object is 30 cm from a diverging lens with $f = -15$ cm. What is $d_i$?',
+            question: 'An object is 30 cm from a diverging lens with $f = -15$ cm. What is $s_i$?',
             options: [
               '$+10$ cm',
               '$-10$ cm',
@@ -127,7 +129,7 @@ Since $|m| = 0.5 < 1$: the image is **reduced** (half the object height).
               '$-30$ cm'
             ],
             correctAnswer: 1,
-            explanation: '$\\frac{1}{d_i} = \\frac{1}{-15} - \\frac{1}{30} = \\frac{-2 - 1}{30} = \\frac{-3}{30} = -\\frac{1}{10}$, so $d_i = -10$ cm. Negative → virtual image (as expected for a diverging lens).'
+            explanation: '$\\frac{1}{s_i} = \\frac{1}{-15} - \\frac{1}{30} = \\frac{-2 - 1}{30} = \\frac{-3}{30} = -\\frac{1}{10}$, so $s_i = -10$ cm. Negative → virtual image (as expected for a diverging lens).'
           }
         ]
       }
@@ -140,7 +142,7 @@ Since $|m| = 0.5 < 1$: the image is **reduced** (half the object height).
 
 A converging lens has $f = 12$ cm. An object of height 6.0 cm is placed 18 cm from the lens.
 
-1) Image distance $d_i$ (in cm)
+1) Image distance $s_i$ (in cm)
 
 2) Magnification $m$
 
@@ -149,10 +151,10 @@ A converging lens has $f = 12$ cm. An object of height 6.0 cm is placed 18 cm fr
       exercise: {
         boxes: 3,
         correctAnswers: ['36', '-2', '-12'],
-        hint1: '$\\frac{1}{d_i} = \\frac{1}{12} - \\frac{1}{18}$. Find a common denominator.',
-        hint2: '$m = -d_i / d_o = -36/18$.',
+        hint1: '$\\frac{1}{s_i} = \\frac{1}{12} - \\frac{1}{18}$. Find a common denominator.',
+        hint2: '$m = -s_i / s_o = -36/18$.',
         hint3: '$h_i = m \\times h_o = (-2)(6.0)$. Negative means inverted.',
-        explanation: '$\\frac{1}{d_i} = \\frac{1}{12} - \\frac{1}{18} = \\frac{3-2}{36} = \\frac{1}{36}$, so $d_i = 36$ cm. $m = -36/18 = -2$. $h_i = (-2)(6.0) = -12$ cm (inverted, twice as tall).'
+        explanation: '$\\frac{1}{s_i} = \\frac{1}{12} - \\frac{1}{18} = \\frac{3-2}{36} = \\frac{1}{36}$, so $s_i = 36$ cm. $m = -36/18 = -2$. $h_i = (-2)(6.0) = -12$ cm (inverted, twice as tall).'
       }
     },
     {
@@ -164,7 +166,7 @@ A converging lens has $f = 12$ cm. An object of height 6.0 cm is placed 18 cm fr
       exercise: {
         questions: [
           {
-            question: 'If $d_i$ is negative, the image is:',
+            question: 'If $s_i$ is negative, the image is:',
             options: [
               'Real and inverted',
               'Real and upright',
@@ -172,7 +174,7 @@ A converging lens has $f = 12$ cm. An object of height 6.0 cm is placed 18 cm fr
               'Virtual and upright'
             ],
             correctAnswer: 3,
-            explanation: 'Negative $d_i$ means the image is on the same side as the object → virtual. The magnification $m = -d_i/d_o$ becomes positive when $d_i < 0$ → upright.'
+            explanation: 'Negative $s_i$ means the image is on the same side as the object → virtual. The magnification $m = -s_i/s_o$ becomes positive when $s_i < 0$ → upright.'
           },
           {
             question: 'A magnification of $m = -3$ means the image is:',

@@ -110,7 +110,7 @@ This form describes an ideal **blackbody**, an object that absorbs all radiation
 ### Key Features
 - Radiation intensity depends on $T^4$ — doubling the temperature increases radiated power by $2^4 = 16$ times!
 - All objects above 0 K emit thermal radiation
-- Hotter objects radiate at shorter wavelengths (Wien's law)
+- Hotter objects radiate at shorter wavelengths
       `
     },
     {

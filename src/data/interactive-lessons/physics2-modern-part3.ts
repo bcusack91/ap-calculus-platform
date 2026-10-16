@@ -28,7 +28,7 @@ Niels Bohr (1913) proposed that:
 
 $$E_n = -\\frac{13.6}{n^2} \\text{ eV}$$
 
-where $n = 1, 2, 3, \\ldots$ is the **principal quantum number**.
+where $n = 1, 2, 3, \\ldots$ labels the energy level.
 
 | Level | $n$ | Energy (eV) |
 |-------|-----|-------------|
@@ -45,6 +45,22 @@ where $n = 1, 2, 3, \\ldots$ is the **principal quantum number**.
 - The **ground state** ($n = 1$) is the lowest energy: $-13.6$ eV
 - **Ionization energy** = energy needed to remove the electron from ground state = 13.6 eV
 - As $n \\to \\infty$, levels get closer together and approach 0 eV
+
+### What Holds the Electron in Its Orbit?
+
+The Bohr model is built on classical physics. The electron of charge $-e$ moves in a circle around the nucleus, and the electric force from the nucleus supplies the centripetal force:
+
+$$\\frac{k e^2}{r^2} = \\frac{m v^2}{r}$$
+
+The left side is Coulomb's law for the electron and the proton; the right side is the net force needed for circular motion. A smaller orbit needs a faster electron.
+
+### Why Only Certain Orbits?
+
+de Broglie's idea (Part 2) explains which orbits are allowed. The electron's matter wave must fit around the orbit as a **standing wave**, so the circumference must hold a whole number of de Broglie wavelengths:
+
+$$2\\pi r = n\\lambda, \\quad n = 1, 2, 3, \\ldots$$
+
+An orbit that held, say, $2\\frac{1}{2}$ wavelengths would make the wave interfere with itself destructively. Only the orbits that satisfy this condition are allowed, so only certain energies are allowed, which is why atoms have discrete energy levels.
       `
     },
     {

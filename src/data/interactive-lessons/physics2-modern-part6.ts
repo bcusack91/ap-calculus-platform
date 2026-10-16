@@ -174,6 +174,22 @@ The **activity** (decay rate) also halves every half-life:
 $$A = A_0 \\left(\\frac{1}{2}\\right)^{t/t_{1/2}}$$
 
 Activity is measured in **becquerels** (Bq) = decays per second.
+
+### The Decay Constant
+
+When an individual nucleus will decay cannot be predicted, but every nucleus of an isotope has the same probability of decaying per unit time. That probability per unit time is the **decay constant** $\\lambda$ (units of s$^{-1}$, or per day, per year), related to the half-life by
+
+$$\\lambda = \\frac{\\ln 2}{t_{1/2}}$$
+
+The number of nuclei remaining after a time $t$ is
+
+$$N = N_0 e^{-\\lambda t}$$
+
+This describes the same curve as $N = N_0 (1/2)^{t/t_{1/2}}$: a short half-life means a large decay constant and a fast decay.
+
+**Example:** An isotope has $t_{1/2} = 10$ min, so $\\lambda = 0.693/10 = 0.0693$ min$^{-1}$. After 30 min, $N/N_0 = e^{-(0.0693)(30)} = e^{-2.08} = 0.125 = \\frac{1}{8}$, matching three half-lives.
+
+**Finding an age:** if the initial amount $N_0$ is known and $N$ is measured, solve for the time: $t = \\frac{1}{\\lambda}\\ln\\frac{N_0}{N}$.
       `
     },
     {

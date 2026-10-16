@@ -289,7 +289,7 @@ Now that you understand reflection and refraction, you're ready for:
       id: 'final-transfer-case',
       type: 'multiple-choice' as const,
       content: `
-**Final Real-World Check** — A beam travels from air into a glass block, then from the glass into water, and finally strikes the water–air surface at a steep angle and does not get out.
+**Final Real-World Check** — A beam travels from air into a glass block, then from the glass into water. In the water it reaches a water–air surface that is **tilted** relative to the glass faces, strikes it at an angle beyond the critical angle, and does not get out.
       `,
       exercise: {
         questions: [
@@ -302,7 +302,7 @@ Now that you understand reflection and refraction, you're ready for:
               'Bends toward the normal → no bending in the water → partial reflection'
             ],
             correctAnswer: 0,
-            explanation: 'Air to glass is low $n$ to high $n$, so the beam bends toward the normal; glass ($n = 1.50$) to water ($n = 1.33$) is high to low, so it bends away; and at the water–air surface, beyond the 48.8° critical angle, it is totally internally reflected.'
+            explanation: 'Air to glass is low $n$ to high $n$, so the beam bends toward the normal; glass ($n = 1.50$) to water ($n = 1.33$) is high to low, so it bends away; and at the water–air surface, beyond the 48.8° critical angle, it is totally internally reflected. That last step is possible only because the surface is tilted: if every boundary were parallel, $n\\sin\\theta$ would stay equal to its value in air, and the ray could never exceed the critical angle at the final surface.'
           }
         ]
       }

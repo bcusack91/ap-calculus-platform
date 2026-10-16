@@ -16,7 +16,7 @@ A converging lens produces dramatically different images depending on where you 
       id: 'ln3-case1',
       type: 'text' as const,
       content: `
-## Case 1: Object Beyond $2F$ ($d_o > 2f$)
+## Case 1: Object Beyond $2F$ ($s_o > 2f$)
 
 ### Ray Diagram
 - Parallel ray → refracts through $F$
@@ -40,7 +40,7 @@ The three rays converge **between $F$ and $2F$** on the opposite side.
       id: 'ln3-case2-3',
       type: 'text' as const,
       content: `
-## Case 2: Object at $2F$ ($d_o = 2f$)
+## Case 2: Object at $2F$ ($s_o = 2f$)
 
 ### Image Characteristics
 | Property | Value |
@@ -50,11 +50,11 @@ The three rays converge **between $F$ and $2F$** on the opposite side.
 | Size | **Same size** ($|m| = 1$) |
 | Location | At $2F$ on far side |
 
-**Verification**: $\\frac{1}{d_i} = \\frac{1}{f} - \\frac{1}{2f} = \\frac{2-1}{2f} = \\frac{1}{2f}$, so $d_i = 2f$. $m = -\\frac{2f}{2f} = -1$.
+**Verification**: $\\frac{1}{s_i} = \\frac{1}{f} - \\frac{1}{2f} = \\frac{2-1}{2f} = \\frac{1}{2f}$, so $s_i = 2f$. $m = -\\frac{2f}{2f} = -1$.
 
 ---
 
-## Case 3: Object Between $F$ and $2F$ ($f < d_o < 2f$)
+## Case 3: Object Between $F$ and $2F$ ($f < s_o < 2f$)
 
 ### Image Characteristics
 | Property | Value |
@@ -71,22 +71,22 @@ The three rays converge **between $F$ and $2F$** on the opposite side.
       id: 'ln3-case4-5',
       type: 'text' as const,
       content: `
-## Case 4: Object at $F$ ($d_o = f$)
+## Case 4: Object at $F$ ($s_o = f$)
 
 ### Image Characteristics
 | Property | Value |
 |:---:|:---:|
 | Type | **No image** |
 | Rays | Emerge **parallel** (never converge) |
-| $d_i$ | $\\to \\infty$ |
+| $s_i$ | $\\to \\infty$ |
 
-**Verification**: $\\frac{1}{d_i} = \\frac{1}{f} - \\frac{1}{f} = 0$, so $d_i \\to \\infty$. The refracted rays are parallel — they neither converge nor diverge.
+**Verification**: $\\frac{1}{s_i} = \\frac{1}{f} - \\frac{1}{f} = 0$, so $s_i \\to \\infty$. The refracted rays are parallel — they neither converge nor diverge.
 
 🔦 **Application**: Flashlights and searchlights place the bulb at the focal point to produce a parallel beam.
 
 ---
 
-## Case 5: Object Inside $F$ ($d_o < f$)
+## Case 5: Object Inside $F$ ($s_o < f$)
 
 ### Image Characteristics
 | Property | Value |
@@ -96,7 +96,7 @@ The three rays converge **between $F$ and $2F$** on the opposite side.
 | Size | **Enlarged** ($|m| > 1$) |
 | Location | Same side as object, behind the object |
 
-**Verification** ($d_o = f/2$): $\\frac{1}{d_i} = \\frac{1}{f} - \\frac{2}{f} = -\\frac{1}{f}$, so $d_i = -f$. $m = -(-f)/(f/2) = +2$.
+**Verification** ($s_o = f/2$): $\\frac{1}{s_i} = \\frac{1}{f} - \\frac{2}{f} = -\\frac{1}{f}$, so $s_i = -f$. $m = -(-f)/(f/2) = +2$.
 
 🔎 **Application**: This is how a magnifying glass works — you hold the object inside the focal length to see an enlarged, upright, virtual image.
       `
@@ -107,11 +107,11 @@ The three rays converge **between $F$ and $2F$** on the opposite side.
       content: `
 ## Summary Table: All Five Cases
 
-| Case | $d_o$ | Image Type | Orientation | Size |
+| Case | $s_o$ | Image Type | Orientation | Size |
 |:---:|:---:|:---:|:---:|:---:|
 | 1 | $> 2f$ | Real | Inverted | Reduced |
 | 2 | $= 2f$ | Real | Inverted | Same size |
-| 3 | $f < d_o < 2f$ | Real | Inverted | Enlarged |
+| 3 | $f < s_o < 2f$ | Real | Inverted | Enlarged |
 | 4 | $= f$ | No image | — | — |
 | 5 | $< f$ | Virtual | Upright | Enlarged |
 
@@ -160,7 +160,7 @@ For a converging lens, select the correct image type for each object position:
           'Virtual, upright, enlarged'
         ],
         hint1: 'Beyond $2F$: think of a camera capturing a distant scene.',
-        hint2: 'At $2F$: object and image are symmetric — $d_i = 2f$ and $|m| = 1$.',
+        hint2: 'At $2F$: object and image are symmetric — $s_i = 2f$ and $|m| = 1$.',
         hint3: 'Inside $F$: the lens acts as a magnifying glass — virtual, upright, enlarged.',
         explanation: 'The five cases follow a pattern: as the object approaches $F$, the real image moves farther away and grows. At $F$, no image forms. Inside $F$, the image becomes virtual, upright, and enlarged.'
       }

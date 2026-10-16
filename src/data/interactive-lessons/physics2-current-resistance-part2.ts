@@ -71,14 +71,12 @@ $$R = \\frac{\\rho L}{A}$$
 | Copper | $1.68 \\times 10^{-8}$ | Conductor |
 | Aluminum | $2.65 \\times 10^{-8}$ | Conductor |
 | Nichrome | $1.10 \\times 10^{-6}$ | Alloy (heating elements) |
-| Silicon | $640$ | Semiconductor |
 | Glass | $10^{10}$ – $10^{14}$ | Insulator |
 | Rubber | $\\sim 10^{13}$ | Insulator |
 
-### Conductors vs. Insulators vs. Semiconductors
+### Conductors vs. Insulators
 
 - **Conductors** ($\\rho \\sim 10^{-8}$): many free electrons, very low resistance
-- **Semiconductors** ($\\rho \\sim 10^{-1}$ to $10^{3}$): few free carriers, so resistivity falls between conductors and insulators
 - **Insulators** ($\\rho > 10^{8}$): almost no free carriers, extremely high resistance
       `
     },
@@ -106,7 +104,7 @@ $$R = \\frac{\\rho L}{A}$$
             options: [
               'Nichrome ($\\rho = 1.10 \\times 10^{-6}$ $\\Omega\\cdot$m)',
               'Copper ($\\rho = 1.68 \\times 10^{-8}$ $\\Omega\\cdot$m)',
-              'Silicon ($\\rho = 640$ $\\Omega\\cdot$m)',
+              'Aluminum ($\\rho = 2.65 \\times 10^{-8}$ $\\Omega\\cdot$m)',
               'Glass ($\\rho \\sim 10^{12}$ $\\Omega\\cdot$m)'
             ],
             correctAnswer: 1,

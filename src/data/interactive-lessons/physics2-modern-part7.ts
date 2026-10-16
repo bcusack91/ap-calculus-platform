@@ -27,7 +27,7 @@ $$^{235}_{92}\\text{U} + ^{1}_{0}n \\to ^{141}_{56}\\text{Ba} + ^{92}_{36}\\text
 ### Key Features
 - Triggered by absorbing a slow (thermal) neutron
 - Releases ~200 MeV per fission event
-- Products are medium-mass nuclei, which are more tightly bound → energy released
+- Products are medium-mass nuclei with less total mass than the uranium plus neutron → the mass difference is released as energy
 - Released neutrons can trigger more fissions → **chain reaction**
 
 ### Conservation Check
@@ -52,10 +52,9 @@ $$^{235}_{92}\\text{U} + ^{1}_{0}n \\to ^{141}_{56}\\text{Ba} + ^{92}_{36}\\text
 $$^{2}_{1}\\text{H} + ^{3}_{1}\\text{H} \\to ^{4}_{2}\\text{He} + ^{1}_{0}n + 17.6 \\text{ MeV}$$
 
 ### Key Features
-- Products are more tightly bound than the reactants → energy released
+- Products have less total mass than the reactants → the mass difference is released as energy
 - Requires extremely high temperatures (~$10^7$ K) to overcome Coulomb repulsion between positive nuclei
 - Powers the Sun and all main-sequence stars
-- Releases more energy per nucleon than fission
 - No long-lived radioactive waste (cleaner than fission)
 
 ### Fission vs. Fusion Summary
@@ -65,7 +64,6 @@ $$^{2}_{1}\\text{H} + ^{3}_{1}\\text{H} \\to ^{4}_{2}\\text{He} + ^{1}_{0}n + 17
 | Process | Heavy → lighter nuclei | Light → heavier nucleus |
 | Fuel | Uranium, plutonium | Hydrogen isotopes |
 | Trigger | Neutron absorption | Extreme temperature |
-| Energy per nucleon | ~0.9 MeV | ~3.5 MeV |
 | Waste | Radioactive products | Mostly helium |
 | On Earth | Nuclear reactors | Experimental (tokamaks) |
 | In nature | Rare (spontaneous) | Powers stars |
@@ -82,13 +80,13 @@ $$^{2}_{1}\\text{H} + ^{3}_{1}\\text{H} \\to ^{4}_{2}\\text{He} + ^{1}_{0}n + 17
           {
             question: 'In nuclear fission, energy is released because:',
             options: [
-              'Mass is created from energy',
-              'The products have higher binding energy per nucleon than the original nucleus',
-              'The products have lower binding energy per nucleon than the original nucleus',
+              'Mass is created from energy in the split',
+              'The products have less total mass than the original nucleus and neutron',
+              'The products have more total mass than the original nucleus and neutron',
               'Electrons are released from the atom'
             ],
             correctAnswer: 1,
-            explanation: 'The fission products (medium-mass nuclei) have HIGHER binding energy per nucleon than the heavy parent nucleus. The increase in binding energy is released as kinetic energy of the products.'
+            explanation: 'The fission products have less total mass than the uranium nucleus plus the neutron that triggered the split. That mass difference $\\Delta m$ is released as energy, $E = \\Delta m\\,c^2$, mostly as kinetic energy of the products. Mass is converted to energy, not created, and the energy comes from the nucleus, not the electrons.'
           },
           {
             question: 'Why does nuclear fusion require extremely high temperatures?',

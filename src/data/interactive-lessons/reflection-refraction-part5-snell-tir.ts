@@ -174,7 +174,7 @@ Light travels from air into water at an angle of 45° from the normal. Find the 
     Water ($n_{2}$ = 1.33)
 \`\`\`
 
-Light direction: downward into water (positive direction)
+Light travels downward, from air into water.
 
 **Step 2: Apply Snell's Law**
 
@@ -231,7 +231,7 @@ Light travels from water to air at 30° from the normal. Find the refraction ang
         Air ($n_{2}$ = 1.0)
 \`\`\`
 
-Light direction: upward into air (positive direction)
+Light travels upward, from water into air.
 
 **Step 2: Apply Snell's Law**
 

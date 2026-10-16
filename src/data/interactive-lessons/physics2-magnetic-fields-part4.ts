@@ -37,11 +37,15 @@ where $\\theta$ is the angle between the wire (current direction) and $\\vec{B}$
 
 ### Derivation from Charge Force
 
-Current $I = nqv_dA$ where $n$ = charge density, $v_d$ = drift velocity, $A$ = cross-section area.
+Suppose the moving charge in a length $L$ of wire totals $Q$ and moves along the wire at average speed $v$, perpendicular to $\\vec{B}$. The magnetic force on all of it is $F = QvB$.
 
-Total force on charges in length $L$:
+That charge takes a time $\\Delta t = L/v$ to pass through the length $L$, so the current is
 
-$$F = (nAL)(qv_dB) = (nqv_dA)(LB) = BIL$$
+$$I = \\frac{Q}{\\Delta t} = \\frac{Qv}{L} \\quad\\Rightarrow\\quad Qv = IL$$
+
+Substituting into $F = QvB$:
+
+$$F = BIL$$
 
 The macroscopic wire force follows directly from the microscopic charge force.
       `

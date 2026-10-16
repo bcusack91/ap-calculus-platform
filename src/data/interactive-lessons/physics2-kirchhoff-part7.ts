@@ -193,10 +193,10 @@ A $30\\;\\text{V}$ battery is connected in series with a $200\\;\\Omega$ resisto
           {
             question: 'You traverse a single loop and write: $+12 - 3I - 8 - 5I = 0$. This loop contains:',
             options: [
-              'It has one battery and one resistor',
-              'It has two batteries and two resistors',
-              'It has two batteries and one resistor',
-              'It has one battery and two resistors'
+              'One battery and one resistor',
+              'Two batteries and two resistors',
+              'Two batteries and one resistor',
+              'One battery and two resistors'
             ],
             correctAnswer: 1,
             explanation: 'The $+12$ and $-8$ terms are EMFs (two batteries). The $-3I$ and $-5I$ terms are drops across two resistors that carry the same loop current; the 8 V battery is crossed from + to −, so it opposes the 12 V battery.'

@@ -27,7 +27,6 @@ $$\\sum q_{\\text{before}} = \\sum q_{\\text{after}}$$
 This works at every scale:
 - Rubbing a balloon (electrons transfer, total = 0)
 - Nuclear reactions ($\\beta$ decay: neutron → proton + electron + antineutrino — charge conserved)
-- Pair production ($\\gamma \\to e^+ + e^-$ — charge conserved: 0 → +1 + (−1))
 
 ### Sharing Charge Between Conductors
 

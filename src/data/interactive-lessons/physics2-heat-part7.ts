@@ -82,17 +82,6 @@ Work can also raise a system's internal energy. Compressing a gas in an insulate
             ],
             correctAnswer: 1,
             explanation: 'Dark surfaces absorb most of the sunlight that falls on them, while white surfaces reflect much of it. The asphalt takes in more energy each second, so its temperature rises more; specific heat, conduction and convection do not explain the color difference.'
-          },
-          {
-            question: 'A composite wall has Layer 1 ($R_1 = 0.5$ $m^{2}\\cdot K/W$) and Layer 2 ($R_2 = 2.0$ $m^{2}\\cdot K/W$) in series. If the total temperature difference is 25°C and the wall area is 10 $m^{2}$, the rate of heat flow is:',
-            options: [
-              '50 W',
-              '100 W',
-              '125 W',
-              '500 W'
-            ],
-            correctAnswer: 1,
-            explanation: '$R_{\\text{total}} = R_1 + R_2 = 0.5 + 2.0 = 2.5$ $m^{2}\\cdot K/W$. $Q/t = A\\Delta T / R_{\\text{total}} = (10)(25)/2.5 = 100$ W.'
           }
         ]
       }
@@ -178,17 +167,6 @@ A 0.25 kg iron block ($c = 450$ J/(kg·°C)) at 350°C is dropped into 0.80 kg o
             ],
             correctAnswer: 0,
             explanation: '$c = \\frac{-m_w c_w(T_f - T_{w,i})}{m(T_f - T_i)} = \\frac{-(0.40)(4{,}186)(1)}{(0.10)(-179)} = \\frac{-1{,}674.4}{-17.9} = 93.5$ J/(kg·°C). This is very low — even lower than gold (129) or lead (128), suggesting a dense metal.'
-          },
-          {
-            question: 'A double-pane window has two glass layers ($R_1 = R_3 = 0.005$ $m^{2}\\cdot K/W$) with an air gap ($R_2 = 0.40$ $m^{2}\\cdot K/W$). What percentage of the total thermal resistance is provided by the air gap?',
-            options: [
-              '49%',
-              '80%',
-              '98%',
-              '99.5%'
-            ],
-            correctAnswer: 2,
-            explanation: '$R_{\\text{total}} = 0.005 + 0.40 + 0.005 = 0.41$ $m^{2}\\cdot K/W$. Air gap fraction $= 0.40/0.41 = 0.976 \\approx 98\\%$. The thin air gap provides almost all the insulation.'
           },
           {
             question: 'Which combination correctly ranks substances from highest to lowest specific heat?',

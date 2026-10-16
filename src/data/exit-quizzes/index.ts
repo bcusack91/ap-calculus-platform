@@ -422,6 +422,19 @@ const quizLoaders: Record<string, QuizLoader> = {
   'quantum-mechanics': () => import('./ap-physics-2'),
   'nuclear-physics': () => import('./ap-physics-2'),
   'atomic-structure': () => import('./ap-physics-2'),
+  'temperature-thermal-expansion': () => import('./ap-physics-2'),
+  'heat-specific-heat': () => import('./ap-physics-2'),
+  'laws-of-thermodynamics': () => import('./ap-physics-2'),
+  'electric-charge-coulombs-law': () => import('./ap-physics-2'),
+  'electric-fields-potential': () => import('./ap-physics-2'),
+  'current-resistance-ohms-law': () => import('./ap-physics-2'),
+  'series-parallel-circuits': () => import('./ap-physics-2'),
+  'kirchhoffs-laws': () => import('./ap-physics-2'),
+  'magnetic-fields-forces': () => import('./ap-physics-2'),
+  'reflection-refraction': () => import('./ap-physics-2'),
+  'lenses': () => import('./ap-physics-2'),
+  'interference-diffraction': () => import('./ap-physics-2'),
+  'photons-atomic-nuclear': () => import('./ap-physics-2'),
 
   // ═══════════════════════════════════════════════════
   // AP Physics C: Mechanics Exit Quizzes

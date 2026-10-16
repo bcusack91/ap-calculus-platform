@@ -9,7 +9,7 @@ export const physics2LensesPart5Data = {
 
 **Part 5 of 7 — Choosing Lenses and Solving Symbolically**
 
-So far you have started with a lens and an object and found the image. AP questions often run the other way: given the image you need, choose the lens and the object position; given measured distances, find the focal length; or derive an expression in terms of $f$ and $s_o$. The AP equation sheet writes object and image distances as $s_o$ and $s_i$ (the $d_o$ and $d_i$ of earlier parts) and magnification as $M$.
+So far you have started with a lens and an object and found the image. AP questions often run the other way: given the image you need, choose the lens and the object position; given measured distances, find the focal length; or derive an expression in terms of $f$ and $s_o$. The AP equation sheet writes object and image distances as $s_o$ and $s_i$ (the $s_o$ and $s_i$ of earlier parts) and magnification as $M$.
 
 $$\\frac{1}{s_o} + \\frac{1}{s_i} = \\frac{1}{f} \\qquad M = \\frac{h_i}{h_o} = -\\frac{s_i}{s_o}$$
       `

@@ -89,7 +89,7 @@ The cyclotron period $T = 2\\pi m/(qB)$ is **independent of speed**. Students of
 
 ### Mistake 6: Parallel Wires Direction
 
-Same-direction currents **attract** (not repel). This is counterintuitive — think of it as: the wires' fields reinforce between them, creating a pressure that pushes them together.
+Same-direction currents **attract** (not repel). Don't reason from the field between the wires: there the two fields point in opposite directions and cancel at the midpoint. Instead, find the field that wire 1 makes at wire 2, then apply the right-hand rule for $\\vec{F} = I\\vec{L} \\times \\vec{B}$ to wire 2. The force points toward wire 1, and Newton's third law gives wire 1 an equal force toward wire 2. Opposite currents repel.
       `
     },
     {

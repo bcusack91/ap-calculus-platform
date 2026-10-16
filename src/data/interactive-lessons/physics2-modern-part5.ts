@@ -97,15 +97,12 @@ The mass defect was converted to **binding energy** — the energy holding the n
 
 $$E_b = \\Delta m \\cdot c^2$$
 
-### Binding Energy per Nucleon
+### Energy Released in Nuclear Reactions
 
-$$\\frac{E_b}{A} = \\text{binding energy per nucleon}$$
+The same idea explains why some nuclear reactions release energy. Nucleon number and charge are conserved, but mass is not: if the products have **less total mass** than the reactants, the missing mass $\\Delta m$ is released as energy, $E = \\Delta m\\,c^2$, mostly as kinetic energy of the products.
 
-This tells us how tightly bound each nucleon is:
-
-- Medium-mass nuclei are the most tightly bound (highest binding energy per nucleon); you will not need specific values
-- Light nuclei can **fuse** into more tightly bound nuclei → releases energy
-- Very heavy nuclei can **fission** into more tightly bound medium-mass nuclei → releases energy
+- **Fission:** a very heavy nucleus splits into two smaller nuclei (plus a few neutrons) whose total mass is less than the original
+- **Fusion:** light nuclei combine into a heavier nucleus whose mass is less than the total mass of the nuclei that fused
 
 ### Useful Conversion
 $$1 \\text{ u} = 931.5 \\text{ MeV/c}^2$$
@@ -182,15 +179,15 @@ The mass of $^{4}_{2}\\text{He}$ is 4.0026 u. Use $m_p = 1.0073$ u, $m_n = 1.008
 
 3) Binding energy of $^{4}_{2}\\text{He}$ (in MeV, 3 significant figures)
 
-4) Binding energy per nucleon (in MeV, 3 significant figures)
+4) Binding energy of $^{4}_{2}\\text{He}$ in joules, using 1 MeV = $1.6 \\times 10^{-13}$ J (scientific notation like 4.4e-12, 3 significant figures)
       `,
       exercise: {
         boxes: 4,
-        correctAnswers: ['4.0320', '0.0294', '27.4', '6.85'],
+        correctAnswers: ['4.0320', '0.0294', '27.4', '4.38e-12'],
         hint1: 'Total mass $= 2(1.0073) + 2(1.0087)$.',
         hint2: '$\\Delta m = 4.0320 - 4.0026$.',
-        hint3: '$E_b = \\Delta m \\times 931.5$ MeV. Per nucleon: divide by $A = 4$.',
-        explanation: 'Total mass $= 2(1.0073) + 2(1.0087) = 2.0146 + 2.0174 = 4.0320$ u. $\\Delta m = 4.0320 - 4.0026 = 0.0294$ u. $E_b = 0.0294 \\times 931.5 = 27.39 \\approx 27.4$ MeV. Per nucleon: $27.4/4 = 6.85$ MeV/nucleon.'
+        hint3: '$E_b = \\Delta m \\times 931.5$ MeV. In joules: multiply by $1.6 \\times 10^{-13}$ J/MeV.',
+        explanation: 'Total mass $= 2(1.0073) + 2(1.0087) = 2.0146 + 2.0174 = 4.0320$ u. $\\Delta m = 4.0320 - 4.0026 = 0.0294$ u. $E_b = 0.0294 \\times 931.5 = 27.39 \\approx 27.4$ MeV. In joules: $(27.4)(1.6 \\times 10^{-13}) = 4.38 \\times 10^{-12}$ J.'
       }
     },
     {
@@ -204,13 +201,13 @@ The mass of $^{4}_{2}\\text{He}$ is 4.0026 u. Use $m_p = 1.0073$ u, $m_n = 1.008
           {
             question: 'Splitting a very heavy nucleus into two medium-mass nuclei releases energy because:',
             options: [
-              'They are more tightly bound and have less total mass',
+              'The products have less total mass than the nucleus',
               'The products have more total mass than the original nucleus',
               'Some neutrons are destroyed and turned into energy',
               'The atom\'s electrons are released as photons'
             ],
             correctAnswer: 0,
-            explanation: 'Medium-mass nuclei have more binding energy per nucleon, so the products have less total mass than the original nucleus; that mass difference is released as energy ($E = mc^2$). Nucleon number is conserved, so no neutrons are destroyed.'
+            explanation: 'The two product nuclei (and freed neutrons) have less total mass than the original nucleus; that mass difference is released as energy ($E = mc^2$). Nucleon number is conserved, so no neutrons are destroyed.'
           }
         ]
       }

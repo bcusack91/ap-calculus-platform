@@ -74,7 +74,7 @@ The refracted rays diverge, but their **backward extensions** meet on the same s
 | Location | Opposite side of the lens from the object | Same side as the object |
 | Orientation | **Inverted** | **Upright** |
 | Can be projected? | Yes (onto a screen) | No |
-| Sign of $d_i$ | **Positive** ($d_i > 0$) | **Negative** ($d_i < 0$) |
+| Sign of $s_i$ | **Positive** ($s_i > 0$) | **Negative** ($s_i < 0$) |
 
 ### Quick Rule
 
@@ -192,11 +192,11 @@ The refracted rays diverge, but their **backward extensions** meet on the same s
             options: [
               'They can be projected onto a screen',
               'They are formed by actual convergence of light',
-              'They have a positive image distance ($d_i > 0$)',
-              'They have a negative image distance ($d_i < 0$)'
+              'They have a positive image distance ($s_i > 0$)',
+              'They have a negative image distance ($s_i < 0$)'
             ],
             correctAnswer: 3,
-            explanation: 'Virtual images cannot be projected — they are located where the backward extensions of diverging rays intersect. By sign convention, virtual images have $d_i < 0$.'
+            explanation: 'Virtual images cannot be projected — they are located where the backward extensions of diverging rays intersect. By sign convention, virtual images have $s_i < 0$.'
           }
         ]
       }
