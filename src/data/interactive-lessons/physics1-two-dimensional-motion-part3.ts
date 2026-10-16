@@ -63,12 +63,14 @@ A person walks at 1.5 m/s toward the back of the same train:
 
 $$v_{PG} = -1.5 + 30 = 28.5 \\text{ m/s}$$
 
-### Example 3: River Crossing
+### Example 3: Boat on a River
 
-A boat crosses a river. The boat's speed relative to water is $v_{BW} = 4$ m/s (perpendicular to bank). The river flows at $v_{WG} = 3$ m/s.
+A boat moves at $v_{BW} = 4$ m/s relative to the water. The river flows downstream at $v_{WG} = 3$ m/s.
 
-Boat's speed relative to ground:
-$$v_{BG} = \\sqrt{v_{BW}^2 + v_{WG}^2} = \\sqrt{16 + 9} = 5 \\text{ m/s}$$
+- Heading **downstream**: $v_{BG} = 4 + 3 = 7$ m/s downstream
+- Heading **upstream**: $v_{BG} = 4 - 3 = 1$ m/s upstream
+
+On the AP Physics 1 exam, relative-velocity problems are limited to motion along one dimension, so every case reduces to adding or subtracting signed velocities along a line.
       `
     },
     {
@@ -91,15 +93,15 @@ $$v_{BG} = \\sqrt{v_{BW}^2 + v_{WG}^2} = \\sqrt{16 + 9} = 5 \\text{ m/s}$$
             explanation: '$v_{BA} = v_{BG} - v_{AG} = 80 - 60 = 20$ km/h east. From Car A\'s perspective, Car B is pulling ahead at 20 km/h.'
           },
           {
-            question: 'A boat can travel at 5 m/s in still water. It tries to cross a river flowing at 5 m/s. If the boat aims straight across, the boat\'s speed relative to the ground is:',
+            question: 'A boat moves at 5 m/s relative to the water, heading upstream in a river that flows at 2 m/s. The boat\'s velocity relative to the shore is:',
             options: [
-              '0 m/s',
-              '5.0 m/s',
-              '7.1 m/s',
-              '10 m/s'
+              '7 m/s upstream',
+              '3 m/s upstream',
+              '3 m/s downstream',
+              '5 m/s upstream'
             ],
-            correctAnswer: 2,
-            explanation: 'The boat velocity and river current are perpendicular: $v = \\sqrt{5^2 + 5^2} = \\sqrt{50} = 5\\sqrt{2} \\approx 7.1$ m/s. Adding the speeds (10 m/s) or subtracting them (0 m/s) would be right only if the two velocities were parallel.'
+            correctAnswer: 1,
+            explanation: 'Take upstream as positive: $v_{BG} = v_{BW} + v_{WG} = +5 + (-2) = +3$ m/s, so 3 m/s upstream. Adding the speeds (7 m/s) ignores that the current points the other way.'
           },
           {
             question: 'If $\\vec{v}_{AB} = 3$ m/s east, then $\\vec{v}_{BA}$ is:',
@@ -125,15 +127,15 @@ $$v_{BG} = \\sqrt{v_{BW}^2 + v_{WG}^2} = \\sqrt{16 + 9} = 5 \\text{ m/s}$$
 
 2) The same plane now flies into a 50 m/s headwind. What is the plane's speed relative to the ground? (in m/s)
 
-3) A boat moves at 3 m/s across a river (perpendicular to the bank). The river flows at 4 m/s. What is the boat's speed relative to the ground? (in m/s)
+3) A boat moves at 3 m/s relative to the water, heading downstream in a river that flows at 4 m/s. What is the boat's speed relative to the ground? (in m/s)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['250', '150', '5'],
+        correctAnswers: ['250', '150', '7'],
         hint1: 'Tailwind adds: $v = 200 + 50$',
         hint2: 'Headwind subtracts: $v = 200 - 50$',
-        hint3: 'Perpendicular: $v = \\sqrt{3^2 + 4^2}$',
-        explanation: '1) $200 + 50 = 250$ m/s. 2) $200 - 50 = 150$ m/s. 3) $\\sqrt{9 + 16} = \\sqrt{25} = 5$ m/s.'
+        hint3: 'Same direction: $v = 3 + 4$',
+        explanation: '1) $200 + 50 = 250$ m/s. 2) $200 - 50 = 150$ m/s. 3) $3 + 4 = 7$ m/s downstream, since the boat and current point the same way.'
       }
     },
     {

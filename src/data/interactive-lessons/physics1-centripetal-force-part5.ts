@@ -14,7 +14,7 @@ On a **banked curve**, the road is tilted at an angle so that a component of the
 **In this lesson you will learn:**
 - Why we bank curves
 - The ideal banking angle (no friction needed)
-- Banked curves with friction
+- Which way friction acts above and below the design speed
 - Engineering applications
       `
     },
@@ -103,37 +103,21 @@ $$\\theta = \\tan^{-1}\\left(\\frac{v^2}{rg}\\right)$$
       id: 'cf5-with-friction',
       type: 'text' as const,
       content: `
-## Banked Curves with Friction
+## Banked Curves with Friction (Qualitative)
 
 ### Going Faster Than Design Speed
 
-If $v > v_{design}$, the car tends to slide **up** the bank. Friction acts **down the bank** (and inward).
-
-Both $N\\sin\\theta$ and $f\\cos\\theta$ point toward the center, while the vertical part of friction points down and adds to gravity:
-
-**Radial**: $N\\sin\\theta + f_s\\cos\\theta = mv^2/r$
-
-**Vertical**: $N\\cos\\theta - f_s\\sin\\theta = mg$
+If $v > v_{design}$, $N\\sin\\theta$ alone is too small to supply $mv^2/r$, so the car tends to slide **up** the bank. Static friction acts **down the slope**, and its horizontal component adds to the inward force.
 
 ### Going Slower Than Design Speed
 
-If $v < v_{design}$, the car tends to slide **down** the bank. Friction acts **up the bank**.
+If $v < v_{design}$, $N\\sin\\theta$ supplies more inward force than the turn needs, so the car tends to slide **down** the bank. Static friction acts **up the slope**, and its horizontal component points outward, reducing the net inward force.
 
-**Radial**: $N\\sin\\theta - f_s\\cos\\theta = mv^2/r$
+### A Range of Safe Speeds
 
-**Vertical**: $N\\cos\\theta + f_s\\sin\\theta = mg$
+Because static friction can point either way along the slope (up to its maximum), a banked curve with friction is safe over a **range** of speeds around the design speed. A steeper bank or grippier tires widen that range; ice shrinks it to the design speed alone.
 
-### Maximum Speed on a Banked Curve
-
-Set $f_s = \\mu_s N$ (friction at maximum) in the "going fast" equations:
-
-$$v_{max} = \\sqrt{rg\\frac{\\tan\\theta + \\mu_s}{1 - \\mu_s\\tan\\theta}}$$
-
-### Minimum Speed on a Banked Curve
-
-Set $f_s = \\mu_s N$ in the "going slow" equations:
-
-$$v_{min} = \\sqrt{rg\\frac{\\tan\\theta - \\mu_s}{1 + \\mu_s\\tan\\theta}}$$
+On the AP Physics 1 exam, banked curves that need friction are analyzed qualitatively only (direction of friction, which forces supply the centripetal force); calculations are limited to the frictionless design speed $\\tan\\theta = v^2/(rg)$.
       `
     },
     {
@@ -148,14 +132,14 @@ Use $g = 10$ $m/s^{2}$.
 
 2) A track is banked at $30°$ with radius 100 m. What is the design speed — the speed requiring no friction (in m/s, round to 3 significant figures)?
 
-3) A curve is banked at $20°$ with radius 150 m. What is the maximum speed if $\\mu_s = 0.3$ (in m/s, round to nearest whole number)? Use $v_{max} = \\sqrt{rg(\\tan\\theta + \\mu_s)/(1 - \\mu_s\\tan\\theta)}$.
+3) A 1000 kg car rounds the track in (2) at its design speed. What is the magnitude of the normal force on the car (in N, round to 3 significant figures)?
       `,
       exercise: {
-        questions: [{ question: '1)', answer: '24.2', acceptableAnswers: ['24.2'] }, { question: '2)', answer: '24.0', acceptableAnswers: ['24.0', '24'] }, { question: '3)', answer: '33', acceptableAnswers: ['33', '33.4'] }],
+        questions: [{ question: '1)', answer: '24.2', acceptableAnswers: ['24.2'] }, { question: '2)', answer: '24.0', acceptableAnswers: ['24.0', '24'] }, { question: '3)', answer: '11500', acceptableAnswers: ['11500', '11547', '11550', '1.15e4'] }],
         hint1: '$\\theta = \\tan^{-1}(v^2/(rg))$.',
         hint2: '$v = \\sqrt{rg\\tan\\theta}$.',
-        hint3: 'Plug in: $\\theta = 20°$, $r = 150$, $\\mu_s = 0.3$, $g = 10$.',
-        explanation: '1) $\\tan\\theta = 900/2000 = 0.45$. $\\theta = \\tan^{-1}(0.45) = 24.2°$. 2) $v = \\sqrt{100 \\times 10 \\times \\tan30°} = \\sqrt{1000 \\times 0.577} = \\sqrt{577} = 24.02 \\approx 24.0$ m/s. 3) $\\tan20° = 0.364$. $v_{max} = \\sqrt{150(10)(0.364 + 0.3)/(1 - 0.3 \\times 0.364)} = \\sqrt{1500(0.664)/(1 - 0.109)} = \\sqrt{996/0.891} = \\sqrt{1118} \\approx 33.4 \\approx 33$ m/s.'
+        hint3: 'With no friction, the vertical balance is $N\\cos\\theta = mg$.',
+        explanation: '1) $\\tan\\theta = 900/2000 = 0.45$. $\\theta = \\tan^{-1}(0.45) = 24.2°$. 2) $v = \\sqrt{100 \\times 10 \\times \\tan30°} = \\sqrt{1000 \\times 0.577} = \\sqrt{577} = 24.02 \\approx 24.0$ m/s. 3) $N = mg/\\cos30° = 10\\,000/0.866 \\approx 11\\,500$ N, larger than the car\'s weight because only the vertical component of $N$ balances gravity.'
       }
     },
     {

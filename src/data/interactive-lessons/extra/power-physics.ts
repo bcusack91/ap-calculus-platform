@@ -7,8 +7,9 @@ import type { LessonData } from '../registry'
  * teach (text) → interactive check (multiple-choice / input-boxes / dropdown-select) →
  * worked examples with full step-by-step math → Exit Quiz.
  * Arc: what power is → P = W/t and the watt → P = Fv (instantaneous power) →
- * efficiency & wasted power → kinematics-linked power problems → real-world applications &
- * unit conversions (kW, hp, kWh) → mixed mastery + Exit Quiz.
+ * power and kinematics → energy graphs & negative power → power on inclines and against
+ * friction → mixed mastery + Exit Quiz. (Efficiency and kWh/hp conversions were removed:
+ * not in the AP Physics 1 CED, Topic 3.5.)
  * Uses g = 9.8 m/s^2 throughout (AP Physics 1 convention; values pre-checked).
  * LaTeX uses DOUBLED backslashes (template-literal strings); inline $...$, display $$...$$.
  */
@@ -549,88 +550,104 @@ A $5.0\\ \\text{kg}$ cart starts from rest and reaches $4.0\\ \\text{m/s}$ in $2
         type: 'text' as const,
         content: `# ⚡ Power
 
-**Part 5 of 7 — Efficiency & Wasted Power**
+**Part 5 of 7 — Energy Graphs and Negative Power**
 
 ---
 
-> 🔑 **The Reality:** No real machine turns 100% of its input power into useful output. Some always leaks away as heat, sound, or friction. **Efficiency** measures how much actually makes it through.`,
+> 🔑 **The Big Idea:** Power is the rate at which a system's energy changes (EK 3.5.A.1). That makes it the **slope** of an energy-versus-time graph — and it means power can be **negative** when a force takes energy out of a system.`,
       },
       {
-        id: 'pow5-efficiency',
+        id: 'pow5-graphs',
         type: 'text' as const,
-        content: `## Efficiency
+        content: `## Power as a Slope
 
-Efficiency is the ratio of **useful output power** to **total input power**:
+Because $P = \\dfrac{\\Delta E}{\\Delta t}$, a graph of a system's energy versus time encodes the power:
 
-$$\\boxed{\\text{Efficiency} = \\frac{P_{\\text{useful out}}}{P_{\\text{total in}}}}$$
+| Graph of $E$ vs. $t$ | What it means |
+|------|---------|
+| Straight line rising | Constant positive power (energy added at a steady rate) |
+| Steeper straight line | Greater constant power |
+| Curve getting steeper | Power increasing |
+| Flat line | Zero power — energy not changing |
+| Line falling | Negative power — energy leaving the system |
 
-It's a fraction between $0$ and $1$, usually written as a percentage. Multiply by $100\\%$ to get the percent.
+### Average vs. Instantaneous
 
-### Worked Example: An Electric Motor
+- **Average power** over an interval is the total energy change divided by the time: the slope of the line joining the two endpoints (EK 3.5.A.2).
+- **Instantaneous power** is the slope of the tangent at one instant. For a constant force along the motion it equals $Fv$ (EK 3.5.A.4).
 
-A motor draws $500\\ \\text{W}$ of electrical power but delivers only $400\\ \\text{W}$ of useful mechanical power.
+### Worked Example: Reading a Graph
 
-$$\\text{Efficiency} = \\frac{400}{500} = 0.80 = 80\\%$$
+A cart's kinetic energy rises from $0$ to $90\\ \\text{J}$ in the first $3.0\\ \\text{s}$, then stays at $90\\ \\text{J}$.
 
-The other $100\\ \\text{W}$ is **wasted power** — lost mostly as heat:
-
-$$P_{\\text{wasted}} = P_{\\text{in}} - P_{\\text{out}} = 500 - 400 = 100\\ \\text{W}$$
-
-> 💡 Input always equals useful output plus wasted: $P_{\\text{in}} = P_{\\text{out}} + P_{\\text{wasted}}$. Energy is conserved — the "lost" power isn't destroyed, it just becomes a form you didn't want (usually heat).`,
+- From $0$ to $3.0\\ \\text{s}$: $P_{\\text{avg}} = \\dfrac{90 - 0}{3.0} = 30\\ \\text{W}$.
+- After $3.0\\ \\text{s}$: the graph is flat, so the net power delivered to the cart is $0$ — it moves at constant speed.`,
       },
       {
         id: 'pow5-dropdown',
         type: 'dropdown-select' as const,
-        content: `**Efficiency Logic** 🔽
+        content: `**Read the Graph** 🔽
 
-A machine takes in $1000\\ \\text{W}$ and delivers $750\\ \\text{W}$ of useful power.`,
+A block's kinetic energy is graphed against time. Choose what each feature tells you.`,
         exercise: {
           dropdowns: [
-            { label: 'Efficiency:', options: ['$75\\%$', '$25\\%$', '$133\\%$', '$1.75$'] },
-            { label: 'Wasted power:', options: ['$250\\ \\text{W}$', '$750\\ \\text{W}$', '$1750\\ \\text{W}$', '$0\\ \\text{W}$'] },
-            { label: 'If efficiency rose to $90\\%$ at the same input, useful output would be:', options: ['$900\\ \\text{W}$', '$750\\ \\text{W}$', '$1000\\ \\text{W}$', '$90\\ \\text{W}$'] },
+            { label: 'A straight, rising line:', options: ['constant positive power', 'increasing power', 'zero power', 'negative power'] },
+            { label: 'A horizontal line:', options: ['zero power', 'constant positive power', 'maximum power', 'negative power'] },
+            { label: 'A line that slopes downward:', options: ['negative power', 'zero power', 'increasing power', 'constant positive power'] },
           ],
-          correctAnswers: ['$75\\%$', '$250\\ \\text{W}$', '$900\\ \\text{W}$'],
-          hint1: 'Efficiency $= P_{\\text{out}}/P_{\\text{in}} = 750/1000 = 0.75 = 75\\%$.',
-          hint2: 'Wasted $= P_{\\text{in}} - P_{\\text{out}} = 1000 - 750 = 250\\ \\text{W}$.',
-          hint3: 'At $90\\%$: useful $= 0.90 \\times 1000 = 900\\ \\text{W}$.',
-          explanation: 'Efficiency $= 750/1000 = 75\\%$; wasted $= 1000 - 750 = 250\\ \\text{W}$; at $90\\%$, output $= 0.90(1000) = 900\\ \\text{W}$.',
+          correctAnswers: ['constant positive power', 'zero power', 'negative power'],
+          hint1: 'Power is the slope of energy versus time. A straight line has a constant slope.',
+          hint2: 'A flat line has zero slope: the energy is not changing.',
+          hint3: 'A falling line has a negative slope: energy is leaving the block.',
+          explanation: 'The slope of energy versus time is the power: a constant positive slope is constant positive power, a flat line is zero power, and a downward slope is negative power (energy removed).',
         },
       },
       {
-        id: 'pow5-worked',
+        id: 'pow5-negative',
         type: 'text' as const,
-        content: `## Working Backward From Efficiency
+        content: `## Negative Power
 
-### Worked Example: Sizing a Pump
+Work can be positive, negative or zero (EK 3.2.A.2), so power can be too. The power delivered by a force is
 
-A water pump must deliver $600\\ \\text{W}$ of useful power, but it's only $75\\%$ efficient. How much electrical power must it draw?
+$$P = Fv\\cos\\theta$$
 
-Rearrange the efficiency formula to solve for input:
+where $\\theta$ is the angle between the force and the velocity.
 
-$$P_{\\text{in}} = \\frac{P_{\\text{out}}}{\\text{Efficiency}} = \\frac{600}{0.75} = 800\\ \\text{W}$$
+| Situation | Angle | Power delivered by the force |
+|-----------|-------|------------------------------|
+| Engine force along the motion | $0°$ | positive: adds energy |
+| Friction or brakes on a moving car | $180°$ | negative: removes energy |
+| Normal force on a block sliding on a floor | $90°$ | zero |
 
-So you must supply $800\\ \\text{W}$ to get $600\\ \\text{W}$ of useful work — the extra $200\\ \\text{W}$ is lost to heat and friction.
+### Worked Example: Braking
 
-> ⚠️ **Efficiency is never greater than $100\\%$.** If you ever compute an efficiency above $1$, you've flipped the ratio — useful output goes on **top**, total input on the **bottom**.`,
+A car moves at $20\\ \\text{m/s}$ while its brakes exert a $6000\\ \\text{N}$ friction force backward. At that instant the brakes deliver
+
+$$P = (6000)(20)\\cos 180° = -120{,}000\\ \\text{W}$$
+
+The car's kinetic energy is dropping at $120\\ \\text{kW}$; that energy becomes thermal energy in the brakes.
+
+### Worked Example: Gravity on a Falling Ball
+
+A $0.50\\ \\text{kg}$ ball falls at $6.0\\ \\text{m/s}$. Gravity points along the velocity, so gravity delivers $P = mgv = (0.50)(9.8)(6.0) = 29.4\\ \\text{W}$ at that instant. On the way **up** at the same speed, gravity delivers $-29.4\\ \\text{W}$: kinetic energy is being converted into gravitational potential energy.`,
       },
       {
         id: 'pow5-drill',
         type: 'input-boxes' as const,
-        content: `**Efficiency Drills** 🧮
+        content: `**Signed Power Drills** 🧮
 
-Efficiency $= \\dfrac{P_{\\text{out}}}{P_{\\text{in}}}$, and $P_{\\text{wasted}} = P_{\\text{in}} - P_{\\text{out}}$.
+Use $P = Fv\\cos\\theta$ and $g = 9.8\\ \\text{m/s}^2$. Include a minus sign when the power is negative.
 
-**1)** Input $200\\ \\text{W}$, useful output $150\\ \\text{W}$. Efficiency as a percent $= \\,?$  *(enter just the number)*
-**2)** Same machine: wasted power $= \\,?\\ \\text{W}$
-**3)** A machine is $40\\%$ efficient and delivers $80\\ \\text{W}$ of useful power. Input power $= \\,?\\ \\text{W}$`,
+**1)** Friction of $40\\ \\text{N}$ acts on a crate sliding at $3.0\\ \\text{m/s}$. Power delivered by friction $= \\,?\\ \\text{W}$
+**2)** A $2.0\\ \\text{kg}$ rock falls at $5.0\\ \\text{m/s}$. Power delivered by gravity $= \\,?\\ \\text{W}$
+**3)** A sled's kinetic energy drops from $500\\ \\text{J}$ to $200\\ \\text{J}$ in $6.0\\ \\text{s}$. Average power delivered to the sled $= \\,?\\ \\text{W}$`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['75', '50', '200'],
-          hint1: '$150/200 = 0.75 = 75\\%$.',
-          hint2: 'Wasted $= 200 - 150 = 50\\ \\text{W}$.',
-          hint3: '$P_{\\text{in}} = P_{\\text{out}}/\\text{eff} = 80/0.40 = 200\\ \\text{W}$.',
-          explanation: '1) $150/200 = 75\\%$.  2) $200 - 150 = 50\\ \\text{W}$.  3) $80/0.40 = 200\\ \\text{W}$.',
+          correctAnswers: ['-120', '98', '-50'],
+          hint1: 'Friction points opposite the velocity, so $\\cos 180° = -1$: $P = -(40)(3.0)$.',
+          hint2: 'Gravity points along the falling velocity: $P = mgv = (2.0)(9.8)(5.0)$.',
+          hint3: '$P_{\\text{avg}} = \\Delta K/\\Delta t = (200 - 500)/6.0$.',
+          explanation: '1) $P = (40)(3.0)\\cos 180° = -120\\ \\text{W}$.  2) $P = (2.0)(9.8)(5.0) = 98\\ \\text{W}$.  3) $P = -300/6.0 = -50\\ \\text{W}$; the sled loses energy at $50\\ \\text{J}$ each second.',
         },
       },
       {
@@ -640,21 +657,26 @@ Efficiency $= \\dfrac{P_{\\text{out}}}{P_{\\text{in}}}$, and $P_{\\text{wasted}}
         exercise: {
           questions: [
             {
-              question: 'An engineer computes an efficiency of $1.25$ for a machine. What is the most likely explanation?',
+              question: 'A ball is thrown straight up. While it rises, the power delivered to it by gravity is:',
               options: [
-                'The machine creates energy from nothing.',
-                'The output and input were swapped in the ratio — efficiency cannot exceed $1$ ($100\\%$).',
-                'The machine is exactly $125\\%$ efficient, which is allowed.',
-                'Wasted power was added instead of subtracted.',
+                'positive, because gravity keeps acting on the ball',
+                'negative, because gravity points opposite the velocity',
+                'zero, because gravity is a conservative force',
+                'positive, because the potential energy is increasing',
               ],
               correctAnswer: 1,
-              explanation: 'Real efficiency is useful output over total input, which is always at most $1$. A value above $1$ means the ratio was inverted (input put on top).',
+              explanation: 'Gravity points down while the ball moves up, so $\\theta = 180°$ and $P = mgv\\cos 180° < 0$. Gravity is removing kinetic energy from the ball and storing it as gravitational potential energy of the ball–Earth system.',
             },
             {
-              question: 'A motor draws $800\\ \\text{W}$ and is $25\\%$ efficient. How much useful mechanical power does it deliver?',
-              options: ['$200\\ \\text{W}$', '$600\\ \\text{W}$', '$3200\\ \\text{W}$', '$775\\ \\text{W}$'],
-              correctAnswer: 0,
-              explanation: 'Useful output $= \\text{efficiency} \\times P_{\\text{in}} = 0.25 \\times 800 = 200\\ \\text{W}$.',
+              question: 'A graph of a car\'s kinetic energy versus time is a curve that keeps getting steeper. The power delivered to the car is:',
+              options: [
+                'constant, because the energy keeps rising',
+                'increasing, because the slope keeps growing',
+                'decreasing, because the car is speeding up',
+                'zero, because the curve is not a straight line',
+              ],
+              correctAnswer: 1,
+              explanation: 'Power is the slope of energy versus time. A curve that gets steeper has a growing slope, so the power is increasing — as expected for a constant force, since $P = Fv$ grows with speed.',
             },
           ],
         },
@@ -671,48 +693,56 @@ Efficiency $= \\dfrac{P_{\\text{out}}}{P_{\\text{in}}}$, and $P_{\\text{wasted}}
         type: 'text' as const,
         content: `# ⚡ Power
 
-**Part 6 of 7 — Real-World Power: Units, Horsepower & the Kilowatt-Hour**
+**Part 6 of 7 — Power on Inclines and Against Friction**
 
 ---
 
-> 🔑 **Beyond the Watt:** Real machines and electricity bills use bigger units — the **kilowatt**, the **horsepower**, and the **kilowatt-hour**. Knowing how they relate to the watt and the joule is a classic AP-style skill.`,
+> 🔑 **The Strategy:** For a machine moving something at **constant speed**, the net force is zero. Use a free-body diagram to find the force the machine must supply, then multiply by the speed: $P = Fv$.`,
       },
       {
-        id: 'pow6-units',
+        id: 'pow6-friction',
         type: 'text' as const,
-        content: `## The Power Unit Family
+        content: `## Step 1: Find the Force From Newton's Laws
 
-| Unit | Equals | Notes |
-|------|--------|-------|
-| $1\\ \\text{kW}$ | $1000\\ \\text{W}$ | kilowatt — everyday machines |
-| $1\\ \\text{MW}$ | $10^6\\ \\text{W}$ | megawatt — power plants |
-| $1\\ \\text{hp}$ | $\\approx 746\\ \\text{W}$ | horsepower — engines |
+At constant velocity, the applied force balances everything opposing the motion (EK 2.4.A.3).
 
-### Kilowatt-Hour: a Unit of *Energy*, Not Power
+| Situation (constant speed) | Force the machine supplies |
+|-----------|-------|
+| Dragging a crate on a rough level floor | $F = f_k = \\mu_k mg$ |
+| Lifting straight up | $F = mg$ |
+| Pushing up a frictionless incline | $F = mg\\sin\\theta$ |
+| Pushing up a rough incline | $F = mg\\sin\\theta + \\mu_k mg\\cos\\theta$ |
 
-Your electric bill is in **kilowatt-hours** ($\\text{kWh}$). Don't be fooled — this is **energy**, because it's power × time:
+## Step 2: Multiply by the Speed
 
-$$1\\ \\text{kWh} = (1000\\ \\text{W})(3600\\ \\text{s}) = 3{,}600{,}000\\ \\text{J} = 3.6\\ \\text{MJ}$$
+$$P = Fv$$
 
-> ⚠️ **Trap:** "kilowatt-hour" sounds like a rate, but it's the **total energy** used when you run $1\\ \\text{kW}$ for $1\\ \\text{hour}$. A $2\\ \\text{kW}$ heater run for $3\\ \\text{hours}$ uses $2 \\times 3 = 6\\ \\text{kWh}$ of energy.`,
+### Worked Example: A Winch on a Ramp
+
+A winch pulls a $200\\ \\text{kg}$ crate up a $30°$ ramp at a steady $0.50\\ \\text{m/s}$. The coefficient of kinetic friction is $0.20$. Use $g = 9.8\\ \\text{m/s}^2$.
+
+- Gravity along the ramp: $mg\\sin 30° = (200)(9.8)(0.50) = 980\\ \\text{N}$
+- Friction: $\\mu_k mg\\cos 30° = (0.20)(200)(9.8)(0.866) \\approx 339\\ \\text{N}$
+- Winch force: $F = 980 + 339 = 1319\\ \\text{N}$
+- Power: $P = Fv = (1319)(0.50) \\approx 660\\ \\text{W}$`,
       },
       {
         id: 'pow6-convert',
         type: 'multiple-choice' as const,
-        content: `**Unit Sense** 🎯`,
+        content: `**Force First, Then Power** 🎯`,
         exercise: {
           questions: [
             {
-              question: 'A car is rated at $200\\ \\text{hp}$. Approximately how many watts is that? (Use $1\\ \\text{hp} \\approx 746\\ \\text{W}$.)',
-              options: ['$\\approx 1490\\ \\text{W}$', '$\\approx 14{,}900\\ \\text{W}$', '$\\approx 149{,}000\\ \\text{W}$', '$\\approx 1{,}490{,}000\\ \\text{W}$'],
-              correctAnswer: 2,
-              explanation: '$200 \\times 746 = 149{,}200\\ \\text{W} \\approx 149{,}000\\ \\text{W}$, or about $149\\ \\text{kW}$.',
+              question: 'A worker drags a $50\\ \\text{kg}$ crate across a level floor at a constant $2.0\\ \\text{m/s}$. The coefficient of kinetic friction is $0.30$. What power does the worker deliver? (Use $g = 9.8\\ \\text{m/s}^2$.)',
+              options: ['$\\approx 294\\ \\text{W}$', '$\\approx 147\\ \\text{W}$', '$\\approx 980\\ \\text{W}$', '$\\approx 74\\ \\text{W}$'],
+              correctAnswer: 0,
+              explanation: 'At constant speed the pull equals friction: $F = \\mu_k mg = (0.30)(50)(9.8) = 147\\ \\text{N}$. Then $P = Fv = (147)(2.0) = 294\\ \\text{W}$. Stopping at the force gives 147, and using $mg$ instead of friction gives 980.',
             },
             {
-              question: 'Which of these is a unit of energy, not power?',
-              options: ['watt', 'kilowatt', 'horsepower', 'kilowatt-hour'],
-              correctAnswer: 3,
-              explanation: 'The kilowatt-hour is power × time = energy. The watt, kilowatt, and horsepower are all units of power.',
+              question: 'The same motor pulls a cart up a frictionless ramp at constant speed. If the ramp is made steeper (same speed), the motor\'s power must:',
+              options: ['increase, because $mg\\sin\\theta$ grows', 'decrease, because the ramp is shorter', 'stay the same, since the speed is unchanged', 'drop to zero, because the speed is constant'],
+              correctAnswer: 0,
+              explanation: 'The motor\'s force must balance $mg\\sin\\theta$, which grows with the angle, and $P = Fv$ at fixed $v$. Constant speed means zero net force, not zero applied force.',
             },
           ],
         },
@@ -720,39 +750,36 @@ $$1\\ \\text{kWh} = (1000\\ \\text{W})(3600\\ \\text{s}) = 3{,}600{,}000\\ \\tex
       {
         id: 'pow6-billing',
         type: 'text' as const,
-        content: `## Energy Bills, the Physics Way
+        content: `## Where Does the Power Go?
 
-Energy in kilowatt-hours is simply power (in kW) times time (in hours):
+Energy conservation splits the machine's power into the rates at which each kind of energy changes (EK 3.4.B.2, 3.5.A.1). For the winch on the ramp:
 
-$$E\\,(\\text{kWh}) = P\\,(\\text{kW}) \\times t\\,(\\text{h})$$
+| Destination | Rate |
+|-------------|------|
+| Gravitational potential energy of the crate–Earth system | $mg\\sin\\theta \\cdot v = (980)(0.50) = 490\\ \\text{W}$ |
+| Thermal energy from friction | $f_k v = (339)(0.50) \\approx 170\\ \\text{W}$ |
+| Kinetic energy | $0$ (constant speed) |
+| **Total** | $\\approx 660\\ \\text{W}$ |
 
-### Worked Example: Running a Heater
-
-A $1.5\\ \\text{kW}$ space heater runs for $4\\ \\text{hours}$.
-
-$$E = (1.5\\ \\text{kW})(4\\ \\text{h}) = 6\\ \\text{kWh}$$
-
-In joules, that's $6 \\times 3.6\\ \\text{MJ} = 21.6\\ \\text{MJ}$ — a big number, which is exactly why we use kilowatt-hours for billing instead of joules.
-
-> 💡 To find the **cost**, multiply the energy by the price per kWh. At a rate of \\$0.20 per kWh, those $6\\ \\text{kWh}$ cost $6 \\times 0.20 = 1.20$, i.e. \\$1.20.`,
+> 💡 The rates add up to the winch's power, which is a good check on your arithmetic. If the winch suddenly delivered more power than this, the extra would go into kinetic energy and the crate would speed up.`,
       },
       {
         id: 'pow6-drill',
         type: 'input-boxes' as const,
-        content: `**Unit Conversions** 🧮
+        content: `**Incline Power** 🧮
 
-Use $1\\ \\text{kW} = 1000\\ \\text{W}$, $1\\ \\text{hp} \\approx 746\\ \\text{W}$, and $E(\\text{kWh}) = P(\\text{kW}) \\times t(\\text{h})$.
+Use $g = 9.8\\ \\text{m/s}^2$. A cyclist and bike ($80\\ \\text{kg}$ total) ride up a hill inclined at an angle whose $\\sin\\theta = 0.10$, at a steady $5.0\\ \\text{m/s}$. Ignore friction and air resistance.
 
-**1)** Convert $5\\ \\text{kW}$ to watts. $= \\,?\\ \\text{W}$
-**2)** A $2\\ \\text{kW}$ appliance runs for $5\\ \\text{hours}$. Energy used $= \\,?\\ \\text{kWh}$
-**3)** Convert $100\\ \\text{hp}$ to watts (use $1\\ \\text{hp} \\approx 746\\ \\text{W}$). $= \\,?\\ \\text{W}$`,
+**1)** Force needed along the slope $= \\,?\\ \\text{N}$
+**2)** Power the cyclist must deliver $= \\,?\\ \\text{W}$
+**3)** If the cyclist rides at $2.5\\ \\text{m/s}$ instead, the power needed $= \\,?\\ \\text{W}$`,
         exercise: {
           boxes: 3,
-          correctAnswers: ['5000', '10', '74600'],
-          hint1: '$5\\ \\text{kW} \\times 1000 = 5000\\ \\text{W}$.',
-          hint2: '$E = (2\\ \\text{kW})(5\\ \\text{h}) = 10\\ \\text{kWh}$.',
-          hint3: '$100 \\times 746 = 74{,}600\\ \\text{W}$.',
-          explanation: '1) $5 \\times 1000 = 5000\\ \\text{W}$.  2) $2 \\times 5 = 10\\ \\text{kWh}$.  3) $100 \\times 746 = 74{,}600\\ \\text{W}$.',
+          correctAnswers: ['78.4', '392', '196'],
+          hint1: '$F = mg\\sin\\theta = (80)(9.8)(0.10)$.',
+          hint2: '$P = Fv = (78.4)(5.0)$.',
+          hint3: 'The force is the same at any constant speed; only $v$ changes in $P = Fv$.',
+          explanation: '1) $F = (80)(9.8)(0.10) = 78.4\\ \\text{N}$.  2) $P = (78.4)(5.0) = 392\\ \\text{W}$.  3) $P = (78.4)(2.5) = 196\\ \\text{W}$ — half the speed needs half the power, because the force is unchanged.',
         },
       },
       {
@@ -760,18 +787,18 @@ Use $1\\ \\text{kW} = 1000\\ \\text{W}$, $1\\ \\text{hp} \\approx 746\\ \\text{W
         type: 'dropdown-select' as const,
         content: `**Power or Energy?** 🔽
 
-Classify each quantity. Remember: power is a *rate* (per second/per hour), energy is a *total*.`,
+Classify each quantity. Remember: power is a *rate* (joules per second), energy is a *total* (joules).`,
         exercise: {
           dropdowns: [
             { label: 'A $60\\ \\text{W}$ light bulb rating:', options: ['power', 'energy'] },
-            { label: 'A $6\\ \\text{kWh}$ reading on an electric meter:', options: ['energy', 'power'] },
+            { label: 'The $2400\\ \\text{J}$ of work a winch does lifting a load:', options: ['energy', 'power'] },
             { label: 'A $746\\ \\text{J/s}$ engine output:', options: ['power', 'energy'] },
           ],
           correctAnswers: ['power', 'energy', 'power'],
           hint1: 'Watts are joules per second — a rate — so this is power.',
-          hint2: 'Kilowatt-hours are power × time, which is energy.',
+          hint2: 'Work measured in joules is a total amount of energy transferred.',
           hint3: 'Joules *per second* is a rate of energy transfer — that is power.',
-          explanation: 'Watts (J/s) and joules/second are power; the kilowatt-hour (kW × h) is a total amount of energy.',
+          explanation: 'Watts (J/s) and joules per second are power; work or energy in joules is a total amount, not a rate.',
         },
       },
     ],
@@ -790,7 +817,7 @@ Classify each quantity. Remember: power is a *rate* (per second/per hour), energ
 
 ---
 
-You can now (1) use $P = \\dfrac{W}{t}$, (2) use $P = \\dfrac{Fd}{t}$, (3) use $P = Fv$, (4) get power from $\\Delta KE$, (5) handle efficiency and wasted power, and (6) convert between watts, horsepower, and kilowatt-hours. Time to put it all together.`,
+You can now (1) use $P = \\dfrac{W}{t}$, (2) use $P = \\dfrac{Fd}{t}$, (3) use $P = Fv$, (4) get power from $\\Delta KE$, (5) read power as the slope of an energy–time graph, including negative power, and (6) find the force from Newton's laws before using $P = Fv$. Time to put it all together.`,
       },
       {
         id: 'pow7-summary',
@@ -803,10 +830,10 @@ You can now (1) use $P = \\dfrac{W}{t}$, (2) use $P = \\dfrac{Fd}{t}$, (3) use $
 | Power from force, distance, time | $P = \\dfrac{Fd}{t}$ |
 | Power from force & speed | $P = Fv$ |
 | Average power from speed change | $P_{\\text{avg}} = \\dfrac{\\Delta KE}{t}$ |
-| Efficiency | $\\dfrac{P_{\\text{out}}}{P_{\\text{in}}}$ |
+| Power delivered by one force | $P = Fv\\cos\\theta$ (negative if $F$ opposes $v$) |
 | Energy from power & time | $W = Pt$ |
 
-> ⚠️ **Top traps to avoid:** (1) the watt is power but the joule and kWh are energy; (2) only force *along the motion* gives power; (3) constant force ≠ constant power (since $P = Fv$ grows with speed); (4) efficiency can't exceed $100\\%$.`,
+> ⚠️ **Top traps to avoid:** (1) the watt is power but the joule is energy; (2) only force *along the motion* gives power; (3) constant force ≠ constant power (since $P = Fv$ grows with speed); (4) constant speed means zero *net* force, not zero applied force.`,
       },
       {
         id: 'pow7-mixed',
@@ -827,10 +854,10 @@ You can now (1) use $P = \\dfrac{W}{t}$, (2) use $P = \\dfrac{Fd}{t}$, (3) use $
               explanation: '$F = P/v = 30{,}000/12 = 2500\\ \\text{N}$. The answer is a force (newtons), not watts.',
             },
             {
-              question: 'A machine takes in $500\\ \\text{W}$ and is $60\\%$ efficient. How much power is wasted?',
-              options: ['$200\\ \\text{W}$', '$300\\ \\text{W}$', '$60\\ \\text{W}$', '$833\\ \\text{W}$'],
+              question: 'A $1500\\ \\text{kg}$ car slows while its brakes exert $4000\\ \\text{N}$ backward. At the instant its speed is $15\\ \\text{m/s}$, the power delivered by the brakes is:',
+              options: ['$-60{,}000\\ \\text{W}$', '$+60{,}000\\ \\text{W}$', '$-267\\ \\text{W}$', '$-22{,}500\\ \\text{W}$'],
               correctAnswer: 0,
-              explanation: 'Useful output $= 0.60 \\times 500 = 300\\ \\text{W}$, so wasted $= 500 - 300 = 200\\ \\text{W}$.',
+              explanation: 'The brake force points opposite the velocity, so $P = Fv\\cos 180° = -(4000)(15) = -60{,}000\\ \\text{W}$: kinetic energy leaves the car at $60\\ \\text{kJ}$ per second. Dividing instead of multiplying gives 267 W, and $-22{,}500$ uses the mass in place of the force.',
             },
           ],
         },

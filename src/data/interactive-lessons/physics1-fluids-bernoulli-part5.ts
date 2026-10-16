@@ -15,7 +15,7 @@ Bernoulli isn't just an exam formula — it explains lift, plumbing, weather, sp
 - Airfoil lift (qualitative + estimate)
 - Venturi meters and flow measurement
 - Pitot tubes (airplane airspeed)
-- Atomizers, chimneys, and Magnus effect
+- Atomizers and chimneys
       `
     },
     {
@@ -46,9 +46,6 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
 
 ### 5. Chimney Effect
 - Wind across a chimney top → low $P$ at top → draws smoke up.
-
-### 6. Magnus Force (curveballs)
-- Spinning ball drags air around it; one side speeds up, the other slows down → pressure differential → side force.
       `
     },
     {
@@ -131,10 +128,10 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
             explanation: 'Bernoulli: the fast-moving air outside has LOWER pressure than the still air inside. The higher indoor pressure pushes the door outward, the same effect that lifts roofs and blows windows out in storms. Wind streaming parallel to the wall does not push the door in.'
           },
           {
-            label: 'A spinning baseball curves because of:',
-            options: ['Gravity pulling unevenly on the spinning ball', 'The Coriolis force from Earth\'s rotation', 'The Magnus effect', 'Uneven weight from the raised stitching'],
-            correctIndex: 2,
-            explanation: 'Magnus effect: the spin drags air faster past one side of the ball than the other, so the pressure is lower on the fast side and the ball is pushed sideways. (Bernoulli-style reasoning; the Magnus effect itself is not named in the AP Physics 1 CED.)'
+            label: 'Water flows horizontally from a wide section of pipe into a narrow section. The pressure in the narrow section is:',
+            options: ['lower, since the water moves faster', 'higher, because the water is squeezed', 'the same, because the pipe is level', 'zero, since all of it became speed'],
+            correctIndex: 0,
+            explanation: 'Continuity makes the water speed up in the narrow section, and Bernoulli at constant height then requires the pressure to drop there. The pressure falls but stays well above zero.'
           },
           {
             label: 'A chimney pulls smoke upward more strongly on a windy day because:',

@@ -32,12 +32,11 @@ Time to integrate all collision concepts! In this workshop, we\'ll solve AP-leve
 |---------------|-------------------|
 | All types | $m_1 v_{1i} + m_2 v_{2i} = m_1 v_{1f} + m_2 v_{2f}$ |
 | Elastic only | $\\frac{1}{2}m_1 v_{1i}^2 + \\frac{1}{2}m_2 v_{2i}^2 = \\frac{1}{2}m_1 v_{1f}^2 + \\frac{1}{2}m_2 v_{2f}^2$ |
-| Elastic (shortcut) | $v_{1i} - v_{2i} = -(v_{1f} - v_{2f})$ |
 
 ### Step 3: Solve
 
 - Perfectly inelastic: 1 unknown, 1 equation → direct solution
-- Elastic: 2 unknowns, 2 equations → use formulas or solve simultaneously
+- Elastic: AP Physics 1 gives you one final velocity; find the other from momentum, then confirm $KE_f = KE_i$
 - Inelastic: Need additional information (e.g., one final velocity)
       `
     },
@@ -95,20 +94,20 @@ A 0.015 kg bullet at 600 m/s embeds in a 3.0 kg block at rest.
       content: `
 **Problem 3: Elastic Collision** 💎
 
-A 4 kg ball at +6 m/s collides elastically with a 2 kg ball at rest.
+A 4 kg ball at +6 m/s collides with a 2 kg ball at rest. Afterward the 4 kg ball moves at +2 m/s.
       `,
       exercise: {
         questions: [
           {
-            question: 'What is the velocity of the 4 kg ball after the collision?',
+            question: 'What is the change in momentum of the 4 kg ball?',
             options: [
-              '+1 m/s',
-              '+2 m/s',
-              '+3 m/s',
-              '+4 m/s'
+              '$-16$ kg·m/s',
+              '$+16$ kg·m/s',
+              '$-8$ kg·m/s',
+              '$-24$ kg·m/s'
             ],
-            correctAnswer: 1,
-            explanation: '$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2}v_{1i} = \\frac{4-2}{6}(6) = \\frac{2}{6}(6) = +2$ m/s.'
+            correctAnswer: 0,
+            explanation: '$\\Delta p = m(v_f - v_i) = 4(2 - 6) = -16$ kg·m/s. The ball slows, so its momentum change points backward; $-24$ uses only the initial momentum.'
           },
           {
             question: 'What is the velocity of the 2 kg ball after the collision?',
@@ -119,7 +118,7 @@ A 4 kg ball at +6 m/s collides elastically with a 2 kg ball at rest.
               '+10 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$v_{2f} = \\frac{2m_1}{m_1 + m_2}v_{1i} = \\frac{2(4)}{6}(6) = \\frac{8}{6}(6) = 8$ m/s.'
+            explanation: 'Momentum: $(4)(6) = (4)(2) + (2)v_2$, so $2v_2 = 16$ and $v_2 = +8$ m/s. Equivalently, the 2 kg ball gains the $+16$ kg·m/s the 4 kg ball lost.'
           },
           {
             question: 'Verify: Is kinetic energy conserved?',

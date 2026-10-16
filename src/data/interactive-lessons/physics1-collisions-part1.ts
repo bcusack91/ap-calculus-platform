@@ -77,7 +77,7 @@ Think of a tennis ball bouncing off a bowling ball.
 - **Billiard balls** — very hard, minimal deformation
 - **Atomic collisions** — ideal gas molecules
 - **Newton\'s cradle** — steel balls transfer energy with minimal loss
-- **Superball bouncing** — coefficient of restitution near 1
+- **Superball bouncing** — rebounds to nearly its full drop height
 
 ### NOT Elastic
 
@@ -179,7 +179,7 @@ A 2 kg ball at +6 m/s hits a 2 kg ball at rest. After collision: Ball 1 stops, B
           },
           {
             label: 'A collision between two billiard balls is best classified as:',
-            options: ['elastic', 'inelastic', 'perfectly inelastic', 'superelastic'],
+            options: ['elastic', 'inelastic', 'perfectly inelastic', 'an explosion'],
             correctIndex: 0,
             explanation: 'Billiard ball collisions are nearly elastic — very little kinetic energy is lost to heat or sound because the balls are very hard.'
           }

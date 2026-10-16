@@ -80,7 +80,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'Given v(t) = $3t^{2}$ − 12t + 9, at what times is the particle momentarily at rest?',
-    options: ['t = 1 and t = 3', 't = 2 and t = 4', 't = 0 and t = 3', 't = 1 and t = 4'],
+    options: ['t = 1 and t = 3', 't = 0, t = 1 and t = 3', 't = 2 only, at the vertex', 't = 1, t = 2 and t = 3'],
     correctAnswer: 0,
     explanation: '$3t^{2}$ − 12t + 9 = 0 ⟹ $t^{2}$ − 4t + 3 = 0 ⟹ (t−1)(t−3) = 0. t = 1 s and t = 3 s.',
     difficulty: 'medium',
@@ -203,7 +203,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'The velocity of a particle is v(t) = $4t^{3}/^{2}$ (m/s). What is the acceleration at t = 4 s?',
+    question: 'The velocity of a particle is v(t) = $4t^{3/2}$ (m/s). What is the acceleration at t = 4 s?',
     options: ['6 $m/s^{2}$', '12 $m/s^{2}$', '8 $m/s^{2}$', '24 $m/s^{2}$'],
     correctAnswer: 1,
     explanation: 'a = dv/dt = 4 × $(3/2)t^{1/2}$ = $6\\sqrt{t}$. At t = 4: a = 6 × 2 = 12 $m/s^{2}$.',
@@ -233,10 +233,10 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'A drag force produces acceleration a = $-bv^{2}$. Using separation of variables, v(t) =',
-    options: ['$v_{0}/(1 + v_{0}bt)$', '$v_{0}$ $e^{-bt}$', '$v_{0}$ − bt', '$1/(bt + 1/v_{0})$'],
+    question: 'A particle moving through a fluid has acceleration a = −bv (b > 0) and initial speed $v_{0}$. Using separation of variables, v(t) =',
+    options: ['$v_{0}e^{-bt}$', '$v_{0}/(1 + v_{0}bt)$', '$v_{0} - bt$', '$v_{0}e^{bt}$'],
     correctAnswer: 0,
-    explanation: 'dv/dt = $-bv^{2}$ ⟹ $dv/v^{2}$ = −b dt ⟹ −1/v = −bt + C. v(0) = $v_{0}$ ⟹ C = $-1/v_{0}$. v = $v_{0}/(1 + v_{0}bt)$.',
+    explanation: 'dv/v = −b dt, so ln(v/$v_{0}$) = −bt and v = $v_{0}e^{-bt}$. Writing $v_{0}$ − bt treats the acceleration as constant, and the growing exponential has the wrong sign for a resistive force.',
     difficulty: 'hard',
     domain: 'kinematics',
     topicSlug: 'physics-c-variable-acceleration',
@@ -264,7 +264,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'If a = v(dv/dx) = 4x, and v = 0 when x = 0, what is v as a function of x?',
-    options: ['v = 2x', 'v = 4x', 'v = $2\\sqrt{x^{2}}$', 'v = $\\sqrt{4x^{2}}$'],
+    options: ['v = 2x', 'v = $2x^{2}$', 'v = $4x^{2}$', 'v = $\\sqrt{2}\\,x$'],
     correctAnswer: 0,
     explanation: 'v dv = 4x dx ⟹ $v^{2}/2$ = $2x^{2}$ ⟹ $v^{2}$ = $4x^{2}$ ⟹ v = 2x (taking positive root).',
     difficulty: 'hard',
@@ -410,7 +410,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'Newton\'s second law in its most general form is:',
-    options: ['F = ma', 'F = dp/dt', 'F = mv', 'F = m dv/dx'],
+    options: ['F = ma, for any system', 'F = dp/dt', 'F = mv for any object', 'F = m dv/dx in general'],
     correctAnswer: 1,
     explanation: 'The general form is F = dp/dt, which reduces to F = ma only when mass is constant.',
     difficulty: 'easy',
@@ -472,7 +472,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A 5 kg block is pushed against a vertical wall with a horizontal force of 100 N. μ_s = 0.6. Does the block slide?',
-    options: ['Yes, friction is too small', 'No, friction is sufficient', 'Yes, the block accelerates down at 2 $m/s^{2}$', 'Cannot determine without μ_k'],
+    options: ['Yes, the friction force is too small', 'No, friction is sufficient', 'Yes, the block accelerates down at 2 $m/s^{2}$', 'Cannot determine without μ_k'],
     correctAnswer: 1,
     explanation: 'N = 100 N. f_s(max) = 0.6 × 100 = 60 N. Weight = 50 N. Since 60 > 50, friction holds the block.',
     difficulty: 'medium',
@@ -554,7 +554,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A puck of mass m moves in uniform circular motion on a frictionless table, connected to a string through a hole in the table. If the radius is slowly decreased from R to R/2, the speed:',
-    options: ['Doubles', 'Halves', 'Quadruples', 'Stays the same'],
+    options: ['Doubles', 'Is cut in half', 'Becomes four times larger', 'Stays the same as before'],
     correctAnswer: 0,
     explanation: 'Angular momentum is conserved: mvR = mv\'(R/2) ⟹ v\' = 2v. Speed doubles.',
     difficulty: 'hard',
@@ -662,7 +662,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'Which of the following is true for a conservative force?',
-    options: ['The work it does depends on the path taken between two points', 'The net work it does around any closed path is zero', 'It always acts opposite to the object\'s velocity', 'It cannot vary with position'],
+    options: ['The work it does depends on the path taken between two points', 'The net work it does around any closed path is zero', 'It always acts opposite to the direction of the velocity', 'Its magnitude cannot vary with the object\'s position'],
     correctAnswer: 1,
     explanation: 'A conservative force does path-independent work, so the net work around any closed loop is zero — this is what allows a potential energy function U to be defined.',
     difficulty: 'medium',
@@ -734,7 +734,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   // --- physics-c-potential-energy-curves ---
   {
     question: 'On a U(x) vs x graph, a stable equilibrium point corresponds to:',
-    options: ['A local maximum', 'A local minimum', 'An inflection point', 'A zero crossing'],
+    options: ['A local maximum of U', 'A local minimum', 'An inflection point', 'A point where U crosses zero'],
     correctAnswer: 1,
     explanation: 'Stable equilibrium occurs at a local minimum of U(x), where restoring forces push back toward equilibrium.',
     difficulty: 'easy',
@@ -794,7 +794,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'For U(x) = $-\\tfrac{1}{2} kx^{2}$, at x = 0 the equilibrium is:',
-    options: ['Stable', 'Unstable', 'Neutral', 'No equilibrium exists'],
+    options: ['Stable, since U = 0 there', 'Unstable', 'Neutral, with no force nearby', 'No equilibrium exists'],
     correctAnswer: 1,
     explanation: 'dU/dx = −kx = 0 at x = 0. $d^{2}U/dx^{2}$ = −k < 0, a local maximum, so unstable equilibrium.',
     difficulty: 'easy',
@@ -810,7 +810,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   // --- physics-c-momentum-collisions ---
   {
     question: 'A 2 kg ball moving at 3 m/s collides head-on elastically with a 2 kg ball at rest. After collision, the first ball:',
-    options: ['Moves at 3 m/s', 'Stops completely', 'Bounces back at 3 m/s', 'Moves at 1.5 m/s'],
+    options: ['Moves on at 3 m/s', 'Stops completely', 'Bounces back at 3 m/s', 'Moves on at 1.5 m/s'],
     correctAnswer: 1,
     explanation: 'In an elastic head-on collision between equal masses, the first ball stops and the second moves at the first\'s initial velocity.',
     difficulty: 'easy',
@@ -830,7 +830,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'The impulse-momentum theorem states:',
-    options: ['F = ma', 'J = Δp', 'W = ΔKE', 'p = $mv^{2}$'],
+    options: ['F = ma for the system', 'J = Δp', 'W = ΔKE for the object', 'p = $mv^{2}$ for any object'],
     correctAnswer: 1,
     explanation: 'The impulse-momentum theorem: J = ∫F dt = Δp = p_f − p_i.',
     difficulty: 'easy',
@@ -993,10 +993,10 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'A rocket of instantaneous mass m ejects exhaust at speed $v_{e}$ relative to the rocket at a constant rate |dm/dt| = α, far from any gravitational field. The magnitude of the rocket\'s instantaneous acceleration is:',
-    options: ['$v_{e}\\alpha$', '$v_{e}\\alpha /m$', 'α/m', '$v_{e}/(\\alpha m)$'],
-    correctAnswer: 1,
-    explanation: 'By F = dp/dt, the thrust is $v_{e}\\alpha$. Newton\'s second law gives a = thrust/m = $v_{e}\\alpha /m$. Note that a increases with time as m decreases.',
+    question: 'Coal drops vertically at 50 kg/s onto a conveyor belt moving horizontally at a constant 2.0 m/s. What horizontal force must the motor apply to keep the belt\'s speed constant?',
+    options: ['100 N', '25 N', '50 N', '200 N'],
+    correctAnswer: 0,
+    explanation: 'The coal arrives with no horizontal velocity and must be brought up to 2.0 m/s, so F = v dm/dt = (2.0)(50) = 100 N. Dividing gives 25 N, and 200 N doubles the momentum flux.',
     difficulty: 'medium',
     domain: 'momentum',
     topicSlug: 'physics-c-variable-mass',
@@ -1023,10 +1023,10 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'For a rocket in a gravitational field g, the equation of motion is:',
-    options: ['m dv/dt = v_e |dm/dt|', 'm dv/dt = v_e |dm/dt| − mg', 'm dv/dt = −mg', 'dv/dt = v_e/m'],
-    correctAnswer: 1,
-    explanation: 'The net force is thrust minus weight: m dv/dt = v_e |dm/dt| − mg.',
+    question: 'A cart rolling at a constant 3.0 m/s on a frictionless track collects rain falling vertically at 0.20 kg/s. What horizontal force keeps its speed constant?',
+    options: ['0.60 N', '0 N', '15 N', '0.067 N'],
+    correctAnswer: 0,
+    explanation: 'The rain has no horizontal velocity, so each kilogram collected must be accelerated to 3.0 m/s: F = v dm/dt = (3.0)(0.20) = 0.60 N. Zero force would let the growing mass slow the cart down.',
     difficulty: 'medium',
     domain: 'momentum',
     topicSlug: 'physics-c-variable-mass',
@@ -1090,7 +1090,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'By the parallel axis theorem, the moment of inertia about a parallel axis a distance d from the CM is:',
-    options: ['I_cm − $Md^{2}$', 'I_cm + $Md^{2}$', 'I_cm + Md', '$Md^{2}$'],
+    options: ['I_cm − Md', 'I_cm + $Md^{2}$', 'I_cm + Md', '$Md^{2}$'],
     correctAnswer: 1,
     explanation: 'Parallel axis theorem: I = I_cm + $Md^{2}$.',
     difficulty: 'easy',
@@ -1170,7 +1170,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A solid cylinder and a hollow cylinder of the same mass and radius roll down an incline. Which reaches the bottom first?',
-    options: ['Hollow cylinder', 'Solid cylinder', 'They tie', 'Depends on the angle'],
+    options: ['Hollow cylinder', 'Solid cylinder', 'They tie at the bottom', 'Depends on the angle'],
     correctAnswer: 1,
     explanation: 'The solid cylinder has smaller I $(\\tfrac{1}{2} MR^{2} vs MR^{2})$, so more energy goes to translational KE and it accelerates faster.',
     difficulty: 'medium',
@@ -1182,7 +1182,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   // --- physics-c-angular-momentum ---
   {
     question: 'Angular momentum of a particle about a point is defined as:',
-    options: ['L = mvr', 'L = r × p', 'L = Iω only', 'L = $mr^{2}\\alpha$'],
+    options: ['L = mvr in every case', 'L = r × p', 'L = Iω only', 'L = $mr^{2}\\alpha$'],
     correctAnswer: 1,
     explanation: 'L = r × p is the general definition. For a rigid body about a fixed axis, this simplifies to L = Iω.',
     difficulty: 'easy',
@@ -1192,7 +1192,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A figure skater pulls her arms in, reducing her moment of inertia from 4 to 2 $kg\\cdot m^{2}$. Her angular velocity:',
-    options: ['Halves', 'Doubles', 'Stays the same', 'Quadruples'],
+    options: ['Is cut in half', 'Doubles', 'Stays the same', 'Quadruples'],
     correctAnswer: 1,
     explanation: 'L = Iω = constant (no external torque). I decreases by half ⟹ ω doubles.',
     difficulty: 'easy',
@@ -1212,7 +1212,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'The torque on a system equals:',
-    options: ['dL/dt', 'dK/dt', 'dp/dt', 'dU/dt'],
+    options: ['dL/dt', 'dK/dt of the system', 'dp/dt of the system', 'dU/dt of the system'],
     correctAnswer: 0,
     explanation: 'τ_net = dL/dt, the rotational analog of F = dp/dt.',
     difficulty: 'easy',
@@ -1232,7 +1232,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A student sits on a rotating stool holding a spinning wheel with angular momentum L pointing upward. She flips the wheel so L points downward. The stool:',
-    options: ['Does not change', 'Spins with angular momentum 2L upward', 'Spins with angular momentum L upward', 'Spins with angular momentum L downward'],
+    options: ['Stays at rest, since no torque acts on her', 'Spins with angular momentum 2L upward', 'Spins with angular momentum L, pointing upward', 'Spins with angular momentum L, pointing downward'],
     correctAnswer: 1,
     explanation: 'Total L is conserved. Initially L_total = L (up). After flip, wheel has −L. Stool must have +2L to conserve total angular momentum.',
     difficulty: 'hard',
@@ -1264,7 +1264,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   // --- physics-c-simple-harmonic-motion ---
   {
     question: 'The general solution to $d^{2}x/dt^{2}$ = $-\\omega^{2}x$ is:',
-    options: ['x = A $e^{-\\omega t}$', 'x = A cos(ωt + φ)', 'x = At + B', 'x = A $\\sin (\\omega^{2}t)$'],
+    options: ['x = A $e^{-\\omega t}$', 'x = A cos(ωt + φ)', 'x = At + B, a straight line', 'x = A $\\sin (\\omega^{2}t)$'],
     correctAnswer: 1,
     explanation: 'The SHM differential equation $d^{2}x/dt^{2}$ + $\\omega^{2}x$ = 0 has the general solution x = A cos(ωt + φ).',
     difficulty: 'easy',
@@ -1284,7 +1284,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A pendulum of length L has a period T = $2\\pi \\sqrt{L/g}$. If length is quadrupled, the period:',
-    options: ['Doubles', 'Quadruples', 'Halves', 'Stays the same'],
+    options: ['Doubles', 'Quadruples', 'Is cut in half', 'Stays the same'],
     correctAnswer: 0,
     explanation: 'T ∝ $\\sqrt{L}$. If L → 4L, T → 2T. The period doubles.',
     difficulty: 'easy',
@@ -1535,10 +1535,10 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
 
   // --- Additional momentum ---
   {
-    question: 'The coefficient of restitution for a perfectly elastic collision is:',
-    options: ['0', '1', '0.5', 'Infinity'],
-    correctAnswer: 1,
-    explanation: 'e = 1 for perfectly elastic, e = 0 for perfectly inelastic collisions.',
+    question: 'A 2 kg cart at 3 m/s strikes a 1 kg cart at rest head-on; afterward the 2 kg cart moves at 1 m/s in the same direction. Is the collision elastic?',
+    options: ['Yes, since K stays 9 J', 'No, since 3 J of K is lost to heat', 'No, since K rises by 3 J in the collision', 'Cannot tell without the collision time'],
+    correctAnswer: 0,
+    explanation: 'Momentum gives the 1 kg cart (6 − 2)/1 = 4 m/s. Then $K_{i}$ = ½(2)(9) = 9 J and $K_{f}$ = ½(2)(1) + ½(1)(16) = 1 + 8 = 9 J, so kinetic energy is unchanged and the collision is elastic.',
     difficulty: 'easy',
     domain: 'momentum',
     topicSlug: 'physics-c-momentum-collisions',
@@ -1627,10 +1627,10 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
     formSet: 'A',
   },
   {
-    question: 'A damped harmonic oscillator has the solution x(t) = $Ae^{-\\gamma t}\\cos (\\omega t + \\varphi )$. What does γ represent?',
-    options: ['Angular frequency', 'Damping coefficient (b/2m)', 'Spring constant', 'Phase angle'],
-    correctAnswer: 1,
-    explanation: 'γ = b/(2m) is the damping parameter that governs the exponential decay of amplitude.',
+    question: 'A block on a spring obeys $d^{2}x/dt^{2}$ = −(k/m)x with k = 50 N/m and m = 2.0 kg. What is the period of its motion?',
+    options: ['1.26 s', '0.80 s', '5.0 s', '31.4 s'],
+    correctAnswer: 0,
+    explanation: 'ω = $\\sqrt{k/m}$ = $\\sqrt{25}$ = 5.0 rad/s, so T = 2π/ω = 1.26 s. 0.80 is the frequency in hertz, 5.0 is ω itself, and 31.4 multiplies by ω instead of dividing.',
     difficulty: 'medium',
     domain: 'rotation-oscillation',
     topicSlug: 'physics-c-simple-harmonic-motion',
@@ -1648,7 +1648,7 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
   },
   {
     question: 'A pendulum clock runs perfectly at sea level. At high altitude where g is slightly smaller, the clock:',
-    options: ['Runs fast', 'Runs slow', 'Is unaffected', 'Stops'],
+    options: ['Runs fast instead', 'Runs slow', 'Keeps perfect time', 'Stops swinging'],
     correctAnswer: 1,
     explanation: 'T = $2\\pi \\sqrt{L/g}$. Smaller g ⟹ larger T ⟹ each swing takes longer ⟹ clock runs slow.',
     difficulty: 'easy',
@@ -1809,10 +1809,10 @@ export const apPhysicsCMechQuestionPool: APPhysicsCMechExitQuestion[] = [
     formSet: 'B',
   },
   {
-    question: 'The moment of inertia of a uniform disk about an axis through its edge (in the plane of the disk) is:',
-    options: ['$MR^{2}/4$', '$3MR^{2}/4$', '$5MR^{2}/4$', '$3MR^{2}/2$'],
+    question: 'A uniform disk of mass M and radius R rotates about an axis perpendicular to the disk through a point on its rim. Its rotational inertia about that axis is:',
+    options: ['$MR^{2}/2$', '$MR^{2}$', '$3MR^{2}/2$', '$2MR^{2}$'],
     correctAnswer: 2,
-    explanation: 'I_cm about a diameter = $MR^{2}/4$. By parallel axis theorem: I = $MR^{2}/4$ + $MR^{2}$ = $5MR^{2}/4$.',
+    explanation: 'I_cm = $MR^{2}$/2 about the central perpendicular axis, and the rim axis is a distance R away, so the parallel-axis theorem gives $MR^{2}$/2 + $MR^{2}$ = $3MR^{2}$/2. $MR^{2}$/2 forgets to shift the axis, and $MR^{2}$ adds only the shift.',
     difficulty: 'hard',
     domain: 'rotation-oscillation',
     topicSlug: 'physics-c-rotational-kinematics-dynamics',

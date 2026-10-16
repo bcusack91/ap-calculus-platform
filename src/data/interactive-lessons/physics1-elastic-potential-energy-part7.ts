@@ -65,7 +65,7 @@ This final lesson integrates Hooke\'s Law, elastic PE, spring work, spring-mass 
               'Quadruple'
             ],
             correctAnswer: 2,
-            explanation: 'Springs in parallel: $k_{\\text{eff}} = k_1 + k_2 = 2k$. Each spring provides its own restoring force, and they add up.'
+            explanation: 'Both springs stretch by the same $x$ and each pulls with $kx$, so the total restoring force is $2kx$, the same as one spring of constant $2k$.'
           },
           {
             question: 'A ball is launched by a compressed spring. If you want the ball to go twice as fast, you must compress the spring:',

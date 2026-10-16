@@ -9,13 +9,13 @@ export const physics1FluidsContinuityPart5Data = {
 
 **Part 5 of 7 — Fluids: Continuity**
 
-Volume flow rate $Q = Av$ assumes incompressible flow. For gases or any case where density may vary, we use **mass flow rate** $\\dot m = \\rho A v$, which is conserved more generally.
+Volume flow rate $Q = Av$ tells you how many cubic meters pass each second. Multiplying by the density turns it into **mass flow rate** $\\dot m = \\rho A v$: how many kilograms pass each second. Continuity is really a statement that mass is conserved (EK 8.4.A.1–8.4.A.2).
 
 **In this lesson you will learn:**
-- The definition $\\dot m = \\rho A v$
-- When to use mass vs volume flow rate
-- The general continuity statement $\\rho_1 A_1 v_1 = \\rho_2 A_2 v_2$
-- AP-style problems mixing density and area changes
+- The definition $\\dot m = \\rho A v = \\rho Q$
+- Why conserving mass and conserving volume say the same thing for an incompressible fluid
+- How to convert between mass and volume flow rates
+- AP-style problems with different fluids
       `
     },
     {
@@ -31,17 +31,19 @@ $$\\dot m = \\rho\\, A\\, v$$
 - $A$: cross-sectional area $(m^{2})$
 - $v$: speed (m/s)
 
-### General Continuity (covers compressible flow too)
+### Continuity as Conservation of Mass
 
-$$\\boxed{\\rho_1 A_1 v_1 = \\rho_2 A_2 v_2}$$
+Matter cannot pile up inside a completely filled pipe, so the mass entering each second equals the mass leaving each second:
 
-For incompressible fluids ($\\rho_1 = \\rho_2$), $\\rho$ cancels and we recover $A_1 v_1 = A_2 v_2$.
+$$\\rho A_1 v_1 = \\rho A_2 v_2$$
+
+An ideal fluid is incompressible (EK 8.1.A.4), so $\\rho$ is the same everywhere and cancels, giving $A_1 v_1 = A_2 v_2$. Conserving mass flow rate and conserving volume flow rate are the same statement.
 
 ### Why It Matters
 
-- **Liquids** (water, oil, blood): nearly incompressible → use $Q = Av$.
-- **Gases**: compressible → use $\\dot m = \\rho Av$ when density varies.
-- **AP Physics 1**: usually focused on incompressible fluids; mass flow rate appears in conceptual or unit problems.
+- Mass flow rate answers "how many kilograms per second?", which is what you need for questions about delivered mass or momentum carried by a stream.
+- Two different fluids with the same $Q$ carry different mass flow rates: oil ($\\rho = 850$) carries less mass per second than water at the same $Q$.
+- AP Physics 1 treats every fluid as ideal and incompressible, including slowly moving air in a duct.
 
 ### Quick Conversions
 
@@ -125,10 +127,10 @@ For water ($\\rho = 1000$): $\\dot m = 1000\\, Q$.
             explanation: 'Volume conservation + constant density → mass flow rate is conserved everywhere.'
           },
           {
-            label: 'A gas accelerates through a nozzle and its density DROPS by half. To keep $\\dot m$ constant with same area, $v$ must:',
-            options: ['Halve', 'Stay same', 'Double', 'Quadruple'],
-            correctIndex: 2,
-            explanation: '$\\dot m = \\rho A v$ constant. $\\rho$ × ½ → $v$ × 2.'
+            label: 'Water flows from a wide pipe into a pipe with half the cross-sectional area. The mass flow rate in the narrow pipe is:',
+            options: ['half as large', 'the same', 'twice as large', 'four times as large'],
+            correctIndex: 1,
+            explanation: 'Mass cannot pile up in a filled pipe, so $\\dot m$ is the same in both sections. The speed doubles in the narrow pipe, but $\\rho A v$ does not change.'
           },
           {
             label: 'For water flowing in a pipe network, conservation of mass flow rate is equivalent to:',

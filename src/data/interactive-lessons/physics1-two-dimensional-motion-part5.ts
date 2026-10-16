@@ -74,7 +74,7 @@ A basketball is thrown horizontally at 8 m/s from a window 5 m above the ground.
       exercise: {
         questions: [
           {
-            question: 'A boat moves at 5 m/s north while a river current pushes it 3 m/s east. What is the magnitude of the boat\'s resultant velocity?',
+            question: 'A puck\'s velocity has a northward component of 5 m/s and an eastward component of 3 m/s. What is the puck\'s speed?',
             options: [
               '2.0 m/s',
               '4.0 m/s',
@@ -82,7 +82,7 @@ A basketball is thrown horizontally at 8 m/s from a window 5 m above the ground.
               '8.0 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$v = \\sqrt{5^2 + 3^2} = \\sqrt{25 + 9} = \\sqrt{34} \\approx 5.8$ m/s. Since the velocities are perpendicular, we use the Pythagorean theorem. Subtracting or adding the speeds (2.0 or 8.0 m/s) treats them as parallel, and $\\sqrt{5^2 - 3^2} = 4.0$ m/s subtracts the squares.'
+            explanation: '$v = \\sqrt{5^2 + 3^2} = \\sqrt{25 + 9} = \\sqrt{34} \\approx 5.8$ m/s. Since the components are perpendicular, we use the Pythagorean theorem. Subtracting or adding them (2.0 or 8.0 m/s) treats them as parallel, and $\\sqrt{5^2 - 3^2} = 4.0$ m/s subtracts the squares.'
           },
           {
             question: 'A ball is launched at 30° above the horizontal with speed 20 m/s. What is $v_{0x}$? (Use $\\cos 30° \\approx 0.866$)',
@@ -125,21 +125,21 @@ Use $\\cos 53° \\approx 0.6$ and $\\sin 53° \\approx 0.8$.
       id: 'td5-problem4',
       type: 'dropdown-select' as const,
       content: `
-**Problem 4 — Relative Motion** 🚗
+**Problem 4 — Relative Motion (One Dimension)** 🚆
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'A car drives east at 20 m/s while rain falls vertically at 10 m/s. To a passenger in the car, the rain appears to come from:',
-            options: ['directly above the car', 'from behind, at an angle', 'straight ahead, horizontally', 'above and in front'],
-            correctIndex: 3,
-            explanation: 'Relative to the car, the rain has a horizontal component directed toward the back of the car (because the car moves forward into it) and a vertical component downward. So it appears to come from above and in front, at an angle.'
+            label: 'Train A moves east at 25 m/s and train B moves east at 15 m/s. To a passenger on train B, train A moves:',
+            options: ['10 m/s east', '10 m/s west', '40 m/s east', '25 m/s east'],
+            correctIndex: 0,
+            explanation: '$v_{AB} = v_{AG} - v_{BG} = 25 - 15 = +10$ m/s, so train A pulls ahead at 10 m/s east. Adding the speeds (40 m/s) would apply only if the trains moved in opposite directions.'
           },
           {
-            label: 'The apparent speed of the rain to the car passenger is:',
-            options: ['10.0 m/s', '17.3 m/s', '22.4 m/s', '30.0 m/s'],
-            correctIndex: 2,
-            explanation: 'The apparent velocity combines the vertical rain speed and the car\'s horizontal speed: $v = \\sqrt{20^2 + 10^2} = \\sqrt{500} \\approx 22.4$ m/s. Adding the speeds gives 30.0 m/s, and $\\sqrt{20^2 - 10^2} \\approx 17.3$ m/s subtracts the squares.'
+            label: 'A passenger walks west at 2 m/s relative to train B. Relative to the ground, the passenger moves:',
+            options: ['17 m/s east', '13 m/s east', '13 m/s west', '2 m/s west'],
+            correctIndex: 1,
+            explanation: 'Take east as positive: $v_{PG} = v_{PB} + v_{BG} = -2 + 15 = +13$ m/s, so 13 m/s east. The train\'s motion still carries the passenger eastward.'
           }
         ]
       }

@@ -44,13 +44,9 @@ $$\\frac{T_1^2}{T_2^2} = \\frac{r_1^3}{r_2^3}$$
 
 This ratio form is incredibly useful — you don't even need to know $G$ or $M$!
 
-### Kepler's Three Laws Summary
+### What About Kepler's Other Laws?
 
-| Law | Statement |
-|-----|-----------|
-| 1st (Ellipses) | Planets orbit in ellipses with the Sun at one focus |
-| 2nd (Equal Areas) | A line from the Sun sweeps equal areas in equal times |
-| 3rd (Harmonics) | $T^2 \\propto r^3$ for all objects orbiting the same body |
+Kepler's first and second laws (elliptical orbits, equal areas in equal times) are not tested on AP Physics 1. For an elliptical orbit you only need the conservation ideas from Unit 6: the system's total mechanical energy and the satellite's angular momentum stay constant, so the satellite moves fastest when it is closest to the central body.
 
 ### Important: Same Central Body Only!
 

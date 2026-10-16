@@ -60,12 +60,9 @@ The **period is the same** as the horizontal case: $T = 2\\pi\\sqrt{m/k}$
 
 The equilibrium point just shifts downward by $x_0$. The oscillation about this new equilibrium is still SHM with the same $T$.
 
-### Springs in Combination
+### Two Springs Side by Side
 
-| Configuration | Effective $k$ |
-|--------------|---------------|
-| Parallel | $k_{\\text{eff}} = k_1 + k_2$ |
-| Series | $\\frac{1}{k_{\\text{eff}}} = \\frac{1}{k_1} + \\frac{1}{k_2}$ |
+If two springs are attached side by side to the same block, both stretch by the same $x$ and each pulls back with its own Hooke's-law force. The net restoring force is $(k_1 + k_2)x$, so the pair acts like one spring of constant $k_1 + k_2$. Reason from the forces on the block rather than memorizing combination formulas.
       `
     },
     {
@@ -129,7 +126,7 @@ The equilibrium point just shifts downward by $x_0$. The oscillation about this 
         correctAnswers: ['0.314', '0.811', '0.444'],
         hint1: '$T = 2\\pi\\sqrt{m/k} = 2\\pi\\sqrt{0.5/200}$',
         hint2: '$T = 2\\pi\\sqrt{m/k} \\Rightarrow m = kT^2/(4\\pi^2)$',
-        hint3: '$k_{\\text{eff}} = k_1 + k_2 = 400$ N/m. $T = 2\\pi\\sqrt{2/400}$',
+        hint3: 'Both springs stretch by $x$, so the net restoring force is $(100 + 300)x$: the pair acts like one spring of 400 N/m. $T = 2\\pi\\sqrt{2/400}$',
         explanation: '1) $T = 2\\pi\\sqrt{0.5/200} = 2\\pi\\sqrt{0.0025} = 2\\pi(0.05) = 0.314$ s. 2) $m = 50(0.64)/(4\\pi^2) = 32/39.48 = 0.811$ kg. 3) $k_{\\text{eff}} = 400$. $T = 2\\pi\\sqrt{2/400} = 2\\pi\\sqrt{0.005} = 2\\pi(0.0707) = 0.444$ s.'
       }
     },
@@ -157,7 +154,7 @@ The equilibrium point just shifts downward by $x_0$. The oscillation about this 
             label: 'The effective spring constant for two springs in parallel is:',
             options: ['$k_{1}$ + $k_{2}$', '$1/(1/k_{1} + 1/k_{2})$', '$k_{1}k_{2}$', '$k_{1}$ - $k_{2}$'],
             correctIndex: 0,
-            explanation: 'Springs in parallel: $k_{\\text{eff}} = k_1 + k_2$. They share the displacement.'
+            explanation: 'Side by side, both springs stretch by the same $x$, so their forces add: $(k_1 + k_2)x$. The pair acts like one spring of constant $k_1 + k_2$.'
           }
         ]
       }

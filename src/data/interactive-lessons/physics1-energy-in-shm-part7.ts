@@ -9,7 +9,7 @@ export const physics1EnergyInShmPart7Data = {
 
 **Part 7 of 7 — Energy in Simple Harmonic Motion**
 
-This final part brings together all energy concepts in SHM — KE/PE exchange, total energy, speed at any position, maximum velocity, and damping — for a comprehensive AP exam review.
+This final part brings together all energy concepts in SHM — KE/PE exchange, total energy, speed at any position, maximum velocity, and vertical springs — for a comprehensive AP exam review.
       `
     },
     {
@@ -57,9 +57,9 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
 
 ❌ **"Total energy depends on mass"** — $E = \\frac{1}{2}kA^2$ has no mass! (Mass affects $v_{\\text{max}}$, not $E$.)
 
-❌ **"Damping changes the period"** — Light damping barely affects the period; it mainly reduces amplitude.
+❌ **"Gravity changes the period of a vertical spring"** — Gravity only shifts the equilibrium position to $mg/k$ below the relaxed length; $T = 2\\pi\\sqrt{m/k}$ is unchanged.
 
-❌ **"Energy is lost in damped motion"** — Total energy is conserved; mechanical energy converts to thermal energy.
+❌ **"The amplitude of a hanging spring is measured from its relaxed length"** — Measure it from the new equilibrium position.
       `
     },
     {
@@ -116,7 +116,7 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
 
 2) A 0.20 kg block oscillates with $k = 80$ N/m and $A = 0.05$ m. What is the speed at $x = 0.03$ m? (in m/s)
 
-3) A damped oscillator starts with $A_0 = 0.30$ m and amplitude decreases to $0.15$ m. What fraction of the original energy remains? (as a decimal)
+3) An oscillator is restarted with its amplitude reduced from $0.30$ m to $0.15$ m. What fraction of the original total energy does it now have? (as a decimal)
 
 *Round all answers to 3 significant figures.*
       `,
@@ -150,10 +150,10 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
             explanation: 'KE = PE at $x = A/\\sqrt{2}$, where $PE = \\frac{1}{2}k(A/\\sqrt{2})^2 = \\frac{1}{4}kA^2 = E/2$.'
           },
           {
-            label: 'In damped oscillations, mechanical energy is primarily converted to:',
-            options: ['thermal energy', 'gravitational potential energy', 'elastic potential energy of the spring', 'rotational kinetic energy'],
+            label: 'Hanging the same spring and block vertically instead of horizontally makes the period:',
+            options: ['the same', 'longer', 'shorter', 'longer by a factor of $\\sqrt{2}$'],
             correctIndex: 0,
-            explanation: 'In damped oscillations, mechanical energy is converted to thermal energy through friction and air resistance.'
+            explanation: 'Gravity only shifts the equilibrium position down by $mg/k$; measured from there the net force is still $-ky$, so $T = 2\\pi\\sqrt{m/k}$ is unchanged.'
           },
           {
             label: 'When the amplitude of SHM is doubled, the total energy:',
@@ -184,26 +184,26 @@ $$v = \\omega\\sqrt{A^2 - x^2} \\qquad v_{\\text{max}} = A\\omega$$
             explanation: '$\\omega = 2\\pi/T = 2\\pi/0.50 = 4\\pi$ rad/s. The oscillation energy about equilibrium is $E = \\frac{1}{2}m\\omega^2 A^2 = \\frac{1}{2}(0.50)(4\\pi)^2(0.10)^2 = \\frac{1}{2}(0.50)(157.9)(0.010) \\approx 0.39$ J. Dropping the $\\frac{1}{2}$ gives 0.79 J, forgetting to square $A$ gives 3.95 J, and using $f = 2$ Hz in place of $\\omega$ gives 0.010 J.'
           },
           {
-            question: 'Two identical springs are connected in parallel to a mass. Compared to a single spring with the same amplitude, the total energy is:',
+            question: 'The block on a horizontal spring is replaced by one of twice the mass and released from the same amplitude. Compared with before, the total energy is:',
             options: [
               'The same',
               'Doubled',
               'Halved',
               'Quadrupled'
             ],
-            correctAnswer: 1,
-            explanation: 'Parallel springs: $k_{\\text{eff}} = 2k$. $E = \\frac{1}{2}(2k)A^2 = 2 \\times \\frac{1}{2}kA^2$. The energy is doubled.'
+            correctAnswer: 0,
+            explanation: 'At the turning points all the energy is spring potential energy, $E = \\frac{1}{2}kA^2$, which does not depend on mass. The heavier block simply moves more slowly and has a longer period.'
           },
           {
-            question: 'Which graph correctly shows the total mechanical energy of an underdamped oscillator over time?',
+            question: 'Which graph correctly shows the total mechanical energy of an ideal spring–block oscillator over time?',
             options: [
-              'Constant horizontal line',
-              'Decreasing curve approaching zero',
-              'Steady oscillation',
-              'Increasing curve'
+              'A constant horizontal line',
+              'A curve decreasing toward zero',
+              'A steady oscillation between 0 and $E$',
+              'An increasing curve'
             ],
-            correctAnswer: 1,
-            explanation: 'In an underdamped system, total mechanical energy gradually decreases due to friction, approaching zero as the oscillator comes to rest.'
+            correctAnswer: 0,
+            explanation: 'With no dissipative forces, kinetic and potential energy trade back and forth but their sum stays constant, so total energy is a horizontal line. A steady oscillation between 0 and $E$ is what the kinetic energy (or potential energy) alone looks like.'
           }
         ]
       }

@@ -39,8 +39,10 @@ $$v_x = v\\cos\\theta, \\quad v_y = v\\sin\\theta$$
 1. Set up a coordinate system ($x$ and $y$ axes)
 2. Break all velocities into components
 3. Apply conservation of momentum in $x$ and $y$ separately
-4. Solve the two equations (may need both simultaneously)
-5. Find magnitude and direction of the final velocity if needed
+4. Solve each component equation on its own; each one is a one-dimensional momentum problem
+5. Combine the components into a magnitude and direction only if a question asks for it
+
+On the AP Physics 1 exam, 2D momentum is treated semiquantitatively: you set up the $x$ and $y$ equations correctly and reason about how a change in mass, speed or angle affects the outcome. You will not have to solve two equations simultaneously.
       `
     },
     {

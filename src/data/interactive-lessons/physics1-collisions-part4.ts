@@ -5,184 +5,161 @@ export const physics1CollisionsPart4Data = {
       id: 'co4-intro',
       type: 'text' as const,
       content: `
-# 📐 1D Elastic Collision Formulas
+# 📐 Collisions Through the Center of Mass and Impulse Pairs
 
 **Part 4 of 7 — Collisions**
 
-For elastic collisions in one dimension, we can derive **exact formulas** for the final velocities by solving the conservation of momentum and conservation of kinetic energy equations simultaneously. These formulas are powerful and save significant computation time.
+During a collision the two objects push on each other hard for a very short time. Two powerful ideas let you reason about that moment without knowing the messy details of the force: the system's **center of mass keeps moving steadily**, and the two objects receive **equal and opposite impulses**.
+
+**In this lesson you will learn:**
+- How to find the center-of-mass velocity of a colliding system
+- Why that velocity does not change during the collision
+- Why the impulses on the two objects are equal and opposite
+- How to read momentum–time graphs of a collision
       `
     },
     {
-      id: 'co4-derivation',
+      id: 'co4-center-of-mass',
       type: 'text' as const,
       content: `
-## The Two Equations
+## The Center of Mass Keeps Moving
 
-For a 1D elastic collision:
+A system of colliding objects can be described by one center-of-mass velocity (EK 4.3.A.1):
 
-**Momentum:** $m_1 v_{1i} + m_2 v_{2i} = m_1 v_{1f} + m_2 v_{2f}$ ... (1)
+$$v_{cm} = \\frac{m_1 v_1 + m_2 v_2}{m_1 + m_2} = \\frac{p_{\\text{total}}}{m_{\\text{total}}}$$
 
-**KE:** $\\frac{1}{2}m_1 v_{1i}^2 + \\frac{1}{2}m_2 v_{2i}^2 = \\frac{1}{2}m_1 v_{1f}^2 + \\frac{1}{2}m_2 v_{2f}^2$ ... (2)
+Because the forces between the objects are internal, they cannot change the total momentum. With no net external force, $v_{cm}$ is the **same before, during and after** the collision (EK 4.3.A.1.ii) — whether the collision is elastic, inelastic or perfectly inelastic.
 
-### A Useful Trick
+### A Shortcut for Perfectly Inelastic Collisions
 
-Rearranging equation (2):
+When the objects stick together, they move as one object, so their common final velocity simply **is** $v_{cm}$:
 
-$$m_1(v_{1i}^2 - v_{1f}^2) = m_2(v_{2f}^2 - v_{2i}^2)$$
+$$v_f = v_{cm} = \\frac{m_1 v_{1i} + m_2 v_{2i}}{m_1 + m_2}$$
 
-$$m_1(v_{1i} - v_{1f})(v_{1i} + v_{1f}) = m_2(v_{2f} - v_{2i})(v_{2f} + v_{2i})$$
+### Example
 
-Dividing by the rearranged equation (1): $m_1(v_{1i} - v_{1f}) = m_2(v_{2f} - v_{2i})$:
+A 3 kg cart at $+6$ m/s approaches a 1 kg cart at $-2$ m/s.
 
-$$v_{1i} + v_{1f} = v_{2f} + v_{2i}$$
+$$v_{cm} = \\frac{(3)(6) + (1)(-2)}{4} = \\frac{16}{4} = +4 \\text{ m/s}$$
 
-This simplifies to:
-
-$$v_{1i} - v_{2i} = -(v_{1f} - v_{2f})$$
-
-> **The relative velocity of approach equals the relative velocity of separation** (with opposite sign). This is the hallmark of elastic collisions!
-      `
-    },
-    {
-      id: 'co4-formulas',
-      type: 'text' as const,
-      content: `
-## The General Formulas
-
-Solving equations (1) and the relative velocity equation simultaneously:
-
-$$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2} v_{1i} + \\frac{2m_2}{m_1 + m_2} v_{2i}$$
-
-$$v_{2f} = \\frac{2m_1}{m_1 + m_2} v_{1i} + \\frac{m_2 - m_1}{m_1 + m_2} v_{2i}$$
-
-### Special Case: $v_{2i} = 0$ (Target at Rest)
-
-$$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2} v_{1i}$$
-
-$$v_{2f} = \\frac{2m_1}{m_1 + m_2} v_{1i}$$
-
-### Verification of Special Cases
-
-| Condition | $v_{1f}$ | $v_{2f}$ | Interpretation |
-|-----------|---------|---------|---------------|
-| $m_1 = m_2$ | $0$ | $v_{1i}$ | Objects swap velocities |
-| $m_1 \\gg m_2$ | $\\approx v_{1i}$ | $\\approx 2v_{1i}$ | Heavy barely slows; light flies off at 2× |
-| $m_1 \\ll m_2$ | $\\approx -v_{1i}$ | $\\approx 0$ | Light bounces back; heavy barely moves |
-      `
-    },
-    {
-      id: 'co4-worked-example',
-      type: 'text' as const,
-      content: `
-## Worked Example
-
-A 6 kg ball at $+4$ m/s collides elastically with a 2 kg ball at rest.
-
-$$v_{1f} = \\frac{6 - 2}{6 + 2}(4) = \\frac{4}{8}(4) = 2 \\text{ m/s}$$
-
-$$v_{2f} = \\frac{2(6)}{6 + 2}(4) = \\frac{12}{8}(4) = 6 \\text{ m/s}$$
-
-### Verification
-
-**Momentum:** $(6)(4) = (6)(2) + (2)(6) = 12 + 12 = 24$ ✅
-
-**KE:** $\\frac{1}{2}(6)(16) = 48$ J. $\\frac{1}{2}(6)(4) + \\frac{1}{2}(2)(36) = 12 + 36 = 48$ J ✅
-
-**Relative velocity:** $4 - 0 = 4$. $-(2 - 6) = 4$ ✅
+If they stick, they move off at $+4$ m/s. If they bounce apart instead, they still have a center of mass moving at $+4$ m/s: one cart ends up faster than 4 m/s and the other slower.
       `
     },
     {
       id: 'co4-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Concept Check — Elastic Collision Formulas** 🎯
+**Concept Check — Center of Mass in Collisions** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In a 1D elastic collision, the relative speed of approach equals:',
+            question: 'A 2 kg cart moving at $+5$ m/s collides with a 3 kg cart at rest on a frictionless track. The velocity of the system\'s center of mass after the collision is:',
             options: [
-              'The relative speed of separation',
-              'Twice the relative speed of separation',
-              'Half the relative speed of separation',
-              'The final speed of the faster object'
+              '$+2.0$ m/s',
+              '$+2.5$ m/s',
+              '$+3.3$ m/s',
+              '$+5.0$ m/s'
             ],
             correctAnswer: 0,
-            explanation: 'For elastic collisions: $|v_{1i} - v_{2i}| = |v_{1f} - v_{2f}|$. The relative speed of approach equals the relative speed of separation. This is equivalent to $e = 1$.'
+            explanation: '$v_{cm} = (2)(5)/(2 + 3) = +2.0$ m/s, and it stays that value because the collision forces are internal. Averaging the two speeds gives 2.5 m/s, and dividing by the 3 kg cart\'s mass alone gives 3.3 m/s.'
           },
           {
-            question: 'A 3 kg ball at +10 m/s hits a 3 kg ball at rest elastically. After collision:',
+            question: 'Two carts collide on a frictionless track. Which statement about the system\'s center of mass is correct for every type of collision?',
             options: [
-              'Both move at 5 m/s',
-              'Ball 1 stops, Ball 2 moves at 10 m/s',
-              'Ball 1 moves at −10 m/s, Ball 2 stays at rest',
-              'Both move at 10 m/s'
+              'Its velocity drops to zero at the instant of greatest compression',
+              'Its velocity is constant before, during and after the collision',
+              'Its velocity is constant only if the collision is elastic',
+              'It moves with the heavier cart throughout the collision'
             ],
             correctAnswer: 1,
-            explanation: 'Equal masses swap velocities in elastic collisions: $v_{1f} = \\frac{3-3}{6}(10) = 0$ m/s. $v_{2f} = \\frac{2(3)}{6}(10) = 10$ m/s.'
+            explanation: 'With no net external force the total momentum is constant, so $v_{cm} = p_{\\text{total}}/m_{\\text{total}}$ is constant. That holds for elastic and inelastic collisions alike; only the kinetic energy bookkeeping differs.'
           },
           {
-            question: 'A 1 kg ball at +8 m/s hits a 3 kg ball at rest elastically. What is $v_{1f}$?',
+            question: 'Two identical carts approach each other with equal speeds and collide. The center of mass of the two-cart system:',
             options: [
-              '+2 m/s',
-              '−4 m/s',
-              '+4 m/s',
-              '−2 m/s'
+              'Moves in the direction of the cart that pushes harder',
+              'Stays at rest the whole time',
+              'Moves only after the carts bounce apart',
+              'Is at rest only if the carts stick together'
             ],
             correctAnswer: 1,
-            explanation: '$v_{1f} = \\frac{1-3}{1+3}(8) = \\frac{-2}{4}(8) = -4$ m/s. The lighter ball bounces back.'
+            explanation: 'The momenta are equal and opposite, so the total momentum and $v_{cm}$ are zero throughout. Whether the carts stick or bounce, the center of mass stays put.'
           }
         ]
       }
     },
     {
+      id: 'co4-impulse-pairs',
+      type: 'text' as const,
+      content: `
+## Equal and Opposite Impulses
+
+By Newton's third law, the force cart A exerts on cart B is equal and opposite to the force B exerts on A at every instant. Both forces act for the same time interval, so the impulses are equal and opposite (EK 4.3.A.3.i):
+
+$$J_{A \\text{ on } B} = -J_{B \\text{ on } A} \\quad\\Rightarrow\\quad \\Delta p_B = -\\Delta p_A$$
+
+### What This Means
+
+- The **changes in momentum** of the two objects are equal in size and opposite in direction — even if one object is a truck and the other a fly.
+- The **changes in velocity** are not equal: $\\Delta v = \\Delta p/m$, so the lighter object's velocity changes more.
+- In an elastic collision the total kinetic energy is unchanged, but each object's kinetic energy can change (EK 4.4.A.2): one gains exactly what the other loses.
+
+### Reading Momentum–Time Graphs
+
+On a graph of each object's momentum versus time during a collision:
+- The two curves are mirror images: whatever one gains, the other loses, so their sum is a flat line.
+- The **slope** of each curve at any instant equals the net force on that object (EK 4.2.A.5). The slopes are equal in size and opposite in sign at every instant.
+      `
+    },
+    {
       id: 'co4-calculations',
       type: 'input-boxes' as const,
       content: `
-**Elastic Collision Formula Practice** 🧮
+**Impulse Pair Practice** 🧮
 
-Use the elastic collision formulas with $v_{2i} = 0$:
+A 1500 kg car moving at $+20$ m/s rear-ends a 1000 kg car moving at $+10$ m/s. Right after the collision the 1500 kg car moves at $+14$ m/s.
 
-1) A 4 kg ball at +10 m/s hits a 1 kg ball at rest elastically. What is $v_{1f}$? (in m/s)
+1) What is the change in momentum of the 1500 kg car? (in kg·m/s, include sign)
 
-2) What is $v_{2f}$? (in m/s)
+2) What is the change in momentum of the 1000 kg car? (in kg·m/s, include sign)
 
-3) A 2 kg ball at +9 m/s hits a 4 kg ball at rest elastically. What is $v_{1f}$? (in m/s, include sign)
+3) What is the 1000 kg car's velocity just after the collision? (in m/s)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['6', '16', '-3'],
-        hint1: '$v_{1f} = \\frac{4-1}{4+1}(10) = \\frac{3}{5}(10)$',
-        hint2: '$v_{2f} = \\frac{2(4)}{4+1}(10) = \\frac{8}{5}(10)$',
-        hint3: '$v_{1f} = \\frac{2-4}{2+4}(9) = \\frac{-2}{6}(9)$',
-        explanation: '1) $v_{1f} = (3/5)(10) = 6$ m/s. 2) $v_{2f} = (8/5)(10) = 16$ m/s. 3) $v_{1f} = (-2/6)(9) = -3$ m/s (bounces back).'
+        correctAnswers: ['-9000', '9000', '19'],
+        hint1: '$\\Delta p = m(v_f - v_i) = 1500(14 - 20)$',
+        hint2: 'The impulses are equal and opposite, so $\\Delta p_{1000} = -\\Delta p_{1500}$.',
+        hint3: '$v_f = v_i + \\Delta p/m = 10 + 9000/1000$',
+        explanation: '1) $\\Delta p = 1500(14 - 20) = -9000$ kg·m/s. 2) By Newton\'s third law the 1000 kg car gains $+9000$ kg·m/s. 3) $v_f = 10 + 9000/1000 = 19$ m/s. Check: total momentum is $30\\,000 + 10\\,000 = 40\\,000$ before and $21\\,000 + 19\\,000 = 40\\,000$ after.'
       }
     },
     {
       id: 'co4-dropdown-review',
       type: 'dropdown-select' as const,
       content: `
-**Formula Applications** 🔍
+**Impulse and Center of Mass Review** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'When two equal masses collide elastically, they:',
-            options: ['swap velocities', 'both stop at the point of contact', 'both continue at half speed', 'share the momentum equally'],
-            correctIndex: 0,
-            explanation: 'When equal masses collide elastically, they swap velocities. This follows directly from the formulas with $m_1 = m_2$.'
-          },
-          {
-            label: 'When a light object hits a much heavier stationary object elastically, the light object:',
-            options: ['continues forward at a reduced speed', 'slows down slightly but keeps going', 'stops dead, giving all its KE away', 'bounces back with nearly the same speed'],
-            correctIndex: 3,
-            explanation: 'When a light object hits a heavy stationary one elastically, $v_{1f} = \\frac{m_1-m_2}{m_1+m_2}v_{1i} < 0$ (since $m_1 < m_2$). The light object bounces back.'
-          },
-          {
-            label: 'When a very heavy object hits a light stationary target elastically, the target flies off at approximately:',
-            options: ['$v_{1i}$', '$2v_{1i}$', '$v_{1i}/2$', '0'],
+            label: 'A truck collides head-on with a small car. Compared with the car, the truck\'s change in momentum is:',
+            options: ['larger', 'equal in size, opposite in direction', 'smaller', 'zero, because it barely slows'],
             correctIndex: 1,
-            explanation: 'When $m_1 \\gg m_2$ and $v_{2i} = 0$: $v_{2f} = \\frac{2m_1}{m_1+m_2}v_{1i} \\approx 2v_{1i}$. The light target flies off at nearly twice the incoming speed!'
+            explanation: 'The forces are a Newton\'s third law pair acting for the same time, so the impulses, and therefore the momentum changes, are equal and opposite. The car\'s velocity changes more because its mass is smaller.'
+          },
+          {
+            label: 'On a momentum–time graph of one cart during a collision, the slope at an instant equals:',
+            options: ['the cart\'s velocity', 'the net force on the cart', 'the impulse on the cart', 'the cart\'s kinetic energy'],
+            correctIndex: 1,
+            explanation: 'Net force is the rate of change of momentum, $F = \\Delta p/\\Delta t$, so the slope of $p$ versus $t$ is the net force. The impulse is the total change in $p$, not the slope.'
+          },
+          {
+            label: 'Two carts stick together after colliding. Their common final velocity equals:',
+            options: ['the average of their speeds', 'the center-of-mass velocity', 'the heavier cart\'s initial speed', 'zero'],
+            correctIndex: 1,
+            explanation: 'Stuck together, they move as one object whose velocity is the center-of-mass velocity, $p_{\\text{total}}/m_{\\text{total}}$, which never changed during the collision.'
           }
         ]
       }
@@ -191,31 +168,31 @@ Use the elastic collision formulas with $v_{2i} = 0$:
       id: 'co4-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — 1D Elastic Formulas** ✅
+**Exit Quiz — Center of Mass and Impulse Pairs** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A proton ($m$) collides elastically with a stationary carbon nucleus ($12m$). The fraction of kinetic energy transferred to the carbon is:',
+            question: 'A 4 kg cart at $+3$ m/s and a 2 kg cart at $-3$ m/s collide on a frictionless track. Whatever kind of collision occurs, the center-of-mass velocity afterward is:',
             options: [
-              '12/169 ≈ 7%',
-              '48/169 ≈ 28%',
-              '1/13 ≈ 8%',
-              '24/169 ≈ 14%'
+              '$+1$ m/s',
+              '$0$ m/s',
+              '$+2$ m/s',
+              '$+3$ m/s'
             ],
-            correctAnswer: 1,
-            explanation: '$v_{2f} = \\frac{2m}{13m}v_{1i} = \\frac{2}{13}v_{1i}$. $KE_2 = \\frac{1}{2}(12m)(\\frac{2}{13}v_{1i})^2 = \\frac{1}{2}(12m)(\\frac{4}{169})v_{1i}^2 = \\frac{48}{2 \\times 169}mv_{1i}^2$. Fraction = $KE_2/KE_1 = \\frac{48}{169} \\approx 28\\%$.'
+            correctAnswer: 0,
+            explanation: '$v_{cm} = [(4)(3) + (2)(-3)]/6 = 6/6 = +1$ m/s, and internal forces cannot change it. Averaging the velocities gives 0, which ignores the unequal masses.'
           },
           {
-            question: 'In a 1D elastic collision between a moving object and a stationary one, which case transfers the MOST kinetic energy to the target?',
+            question: 'In an elastic collision, cart A loses 6 J of kinetic energy. Cart B\'s kinetic energy:',
             options: [
-              '$m_1 \\gg m_2$',
-              '$m_1 \\ll m_2$',
-              '$m_1 = m_2$',
-              'It doesn\'t depend on mass'
+              'Increases by 6 J',
+              'Decreases by 6 J',
+              'Stays the same, because the collision is elastic',
+              'Increases by an amount set by the mass ratio'
             ],
-            correctAnswer: 2,
-            explanation: 'When $m_1 = m_2$, the first object stops and transfers ALL (100%) of its KE to the second. This is the maximum possible energy transfer in an elastic collision.'
+            correctAnswer: 0,
+            explanation: 'Elastic means the total kinetic energy of the system is unchanged, so the 6 J cart A loses must appear as cart B\'s gain. Individual kinetic energies can change in an elastic collision; only their sum is fixed.'
           }
         ]
       }

@@ -179,15 +179,15 @@ The period goes from ~30 days to **milliseconds**! This explains why pulsars (ro
             explanation: '$L_i = (5)(10) = 50$ $kg\\cdot m^{2}/s$. $L_f = (5 + 1)\\omega_f$, so $\\omega_f = 50/6 = 8.33$ rad/s. Subtracting the clay\'s inertia gives $50/4 = 12.5$ rad/s, and assuming kinetic energy is conserved gives $10\\sqrt{5/6} \\approx 9.1$ rad/s.'
           },
           {
-            question: 'A gyroscope maintains its orientation in space because:',
+            question: 'A student on a freely rotating stool pulls two dumbbells in from arm\'s length. Her rotational kinetic energy:',
             options: [
-              'Its spin cancels gravity\'s torque, leaving zero net torque on it',
-              'Its large angular momentum resists changes in direction',
-              'Gravity cannot exert a force on an object that is spinning rapidly',
-              'A large rotational inertia keeps its center of mass from moving'
+              'Increases, because her arms do work on the weights',
+              'Stays constant, because her angular momentum is conserved',
+              'Decreases, because her rotational inertia gets smaller',
+              'Stays constant, because no external torque acts on her'
             ],
-            correctAnswer: 1,
-            explanation: 'A spinning gyroscope has large $L$. Changing the direction of $L$ requires a large torque. This resistance to direction change is the basis of gyroscopic stability.'
+            correctAnswer: 0,
+            explanation: 'Angular momentum $L = I\\omega$ stays constant, so $K = L^2/(2I)$ grows as $I$ shrinks. The extra kinetic energy comes from the work her arms do pulling the dumbbells inward; conserved angular momentum does not mean conserved kinetic energy.'
           }
         ]
       }

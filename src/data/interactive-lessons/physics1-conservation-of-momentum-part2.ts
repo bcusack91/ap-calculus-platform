@@ -158,7 +158,7 @@ In a perfectly inelastic collision, kinetic energy is **always** lost (converted
         dropdowns: [
           {
             label: 'When two objects stick together after colliding, it is a:',
-            options: ['elastic collision', 'perfectly inelastic collision', 'recoil (explosion)', 'superelastic collision'],
+            options: ['elastic collision', 'perfectly inelastic collision', 'recoil (explosion)', 'glancing collision'],
             correctIndex: 1,
             explanation: 'When objects stick together after colliding, it is a perfectly inelastic collision — the maximum kinetic energy is lost.'
           },

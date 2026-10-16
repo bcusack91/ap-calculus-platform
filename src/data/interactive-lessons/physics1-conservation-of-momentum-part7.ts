@@ -158,7 +158,7 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
           },
           {
             label: 'Maximum kinetic energy loss occurs in a:',
-            options: ['elastic collision', 'perfectly inelastic collision', 'inelastic collision', 'superelastic collision'],
+            options: ['elastic collision', 'perfectly inelastic collision', 'inelastic collision', 'recoil (explosion)'],
             correctIndex: 1,
             explanation: 'Maximum kinetic energy loss occurs in a perfectly inelastic collision (objects stick together). An elastic collision loses NO kinetic energy.'
           }

@@ -39,40 +39,26 @@ $$m_1 v_{1f}\\sin\\theta_1 = m_2 v_{2f}\\sin\\theta_2$$
 1. Choose $x$-axis along the initial velocity
 2. Write conservation in $x$ and $y$
 3. If elastic: add the KE conservation equation
-4. You have 2 (or 3) equations for the unknowns
+4. Use the equations to reason about directions and how masses, speeds and angles trade off
       `
     },
     {
-      id: 'co5-equal-mass-elastic',
+      id: 'co5-reasoning',
       type: 'text' as const,
       content: `
-## Special Case: Equal Masses, Elastic, Target at Rest
+## Reasoning Without Solving
 
-This is a famous result in physics:
+AP Physics 1 treats 2D momentum **semiquantitatively** (CED Topic 4.3): you must set up the $x$ and $y$ equations correctly and reason about them, but you will not be asked to solve simultaneous equations for unknown angles and speeds.
 
-> In a 2D elastic collision between equal masses (one at rest), the two objects always move at **90° to each other** after the collision.
+### What the Equations Tell You at a Glance
 
-### Proof (Summary)
+- **The $y$-momenta must cancel.** If the incoming object moves along $x$, any $y$-momentum one object gains after the collision is matched by equal and opposite $y$-momentum of the other. One object goes above the axis, the other below.
+- **Changing a mass changes the balance.** From $m_1 v_{1f}\\sin\\theta_1 = m_2 v_{2f}\\sin\\theta_2$: if the target is heavier but leaves with the same speed and angle, the incoming object must carry more $y$-momentum away.
+- **Momentum is a vector, kinetic energy is not.** Adding momenta means adding components; adding kinetic energies is ordinary addition. Only an elastic collision lets you also write $K_i = K_f$.
 
-From momentum conservation (vectors):
-$$m\\vec{v}_{1i} = m\\vec{v}_{1f} + m\\vec{v}_{2f}$$
-$$\\vec{v}_{1i} = \\vec{v}_{1f} + \\vec{v}_{2f}$$
+### A Quick Check
 
-Squaring both sides:
-$$v_{1i}^2 = v_{1f}^2 + v_{2f}^2 + 2\\vec{v}_{1f} \\cdot \\vec{v}_{2f}$$
-
-From KE conservation:
-$$v_{1i}^2 = v_{1f}^2 + v_{2f}^2$$
-
-Comparing: $2\\vec{v}_{1f} \\cdot \\vec{v}_{2f} = 0$
-
-Since neither velocity is zero, $\\vec{v}_{1f} \\perp \\vec{v}_{2f}$ — they move at right angles!
-
-### Applications
-
-This is seen in:
-- Billiards: cue ball and target ball go at 90° (if equal mass and elastic)
-- Nuclear physics: proton-proton scattering at 90°
+Two pucks moving at right angles collide and stick. Their combined momentum is the vector sum of the two initial momenta, so the wreck moves **between** the two original directions, tilted toward the puck that had more momentum.
       `
     },
     {
@@ -109,15 +95,15 @@ above the $x$-axis.
       exercise: {
         questions: [
           {
-            question: 'In a 2D elastic collision between equal masses (target at rest), the angle between the final velocity vectors is:',
+            question: 'Ball 1 moving in $+x$ hits ball 2 at rest; ball 2 leaves at $30°$ below the $x$-axis. If ball 2 were more massive but left with the same speed and angle, ball 1\'s final $y$-momentum would be:',
             options: [
-              '0° (same direction)',
-              '45°',
-              '90°',
-              '180° (opposite directions)'
+              'Larger, pointing above the $x$-axis',
+              'Smaller, pointing above the $x$-axis',
+              'Larger, pointing below the $x$-axis',
+              'Unchanged, since only the angle matters'
             ],
-            correctAnswer: 2,
-            explanation: 'For equal masses in an elastic collision (target at rest), the two objects always move at 90° to each other after the collision. This is a fundamental result proved using both momentum and KE conservation.'
+            correctAnswer: 0,
+            explanation: 'The $y$-momenta must cancel: $p_{1y} = m_2 v_{2f}\\sin30°$ upward. A larger $m_2$ with the same speed and angle means ball 2 carries more downward $y$-momentum, so ball 1 must carry more upward $y$-momentum.'
           },
           {
             question: 'A ball moving in the +x direction hits a stationary ball in a glancing collision. The stationary ball deflects at 30° below the x-axis. The first ball must deflect:',
@@ -182,10 +168,10 @@ A 5 kg ball at 6 m/s ($+x$) and a 3 kg ball at 4 m/s ($+y$) collide and stick to
             explanation: 'In 2D collisions, momentum conservation applies independently in the x and y directions, giving two separate equations.'
           },
           {
-            label: 'In a 2D elastic collision between equal masses (one initially at rest), the angle between the outgoing velocities is:',
-            options: ['30°', '60°', '90°', '120°'],
-            correctIndex: 2,
-            explanation: 'In a 2D elastic collision between equal masses (one at rest), the angle between the outgoing velocity vectors is always 90°.'
+            label: 'Two pucks moving at right angles collide and stick. The wreck moves:',
+            options: ['between the two initial directions', 'along the faster puck\'s path', 'along the heavier puck\'s path', 'perpendicular to both paths'],
+            correctIndex: 0,
+            explanation: 'The total momentum is the vector sum of two perpendicular momenta, so it points between the two original directions, tilted toward whichever puck had more momentum.'
           },
           {
             label: 'Momentum conservation applies in 2D:',
@@ -205,15 +191,15 @@ A 5 kg ball at 6 m/s ($+x$) and a 3 kg ball at 4 m/s ($+y$) collide and stick to
       exercise: {
         questions: [
           {
-            question: 'Two billiard balls (equal mass) undergo an elastic glancing collision. Ball 1 deflects at 25° above the x-axis. Ball 2 deflects at:',
+            question: 'A 2 kg puck moving at 3 m/s in $+x$ strikes a 1 kg puck at rest. Afterward the 1 kg puck has $y$-momentum $-1.2$ kg·m/s. The 2 kg puck\'s $y$-momentum afterward is:',
             options: [
-              '25° below the x-axis',
-              '90° below the x-axis',
-              '65° below the x-axis',
-              '45° below the x-axis'
+              '$+1.2$ kg·m/s',
+              '$-1.2$ kg·m/s',
+              '$+0.6$ kg·m/s',
+              '$+2.4$ kg·m/s'
             ],
-            correctAnswer: 2,
-            explanation: 'For equal-mass elastic collisions: the angle between the two outgoing velocities is 90°. If Ball 1 goes at 25° above, Ball 2 goes at $90° - 25° = 65°$ below the x-axis.'
+            correctAnswer: 0,
+            explanation: 'The initial $y$-momentum is zero, so the final $y$-momenta must cancel: the 2 kg puck has $+1.2$ kg·m/s. Dividing by the mass ratio gives 0.6, which is a velocity mistake, not a momentum one.'
           },
           {
             question: 'A 4 kg ball at 5 m/s (+x) hits a 4 kg ball at rest in a 2D elastic collision. After collision, Ball 1 moves at 3 m/s at some angle. What is the speed of Ball 2?',

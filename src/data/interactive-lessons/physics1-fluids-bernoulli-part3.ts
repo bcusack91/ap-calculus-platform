@@ -14,7 +14,7 @@ The most famous Bernoulli result: **fast-moving fluid has lower pressure**. This
 **In this lesson you will learn:**
 - The Bernoulli effect at constant elevation
 - Why "lift" and "suction" happen
-- Real-world examples: airplane wings, chimneys, curveballs
+- Real-world examples: airplane wings, chimneys, shower curtains
 - How to predict pressure direction from speed change
       `
     },
@@ -40,7 +40,6 @@ So $\\Delta P = \\tfrac{1}{2}\\rho (v_1^2 - v_2^2)$.
 | Atomizer/perfume spray | Fast air over a tube tip → low $P$ at top → liquid pushed up by atmospheric pressure |
 | Shower curtain pulled in | Falling water drags air faster on inside → lower $P$ → curtain pushed in |
 | Wind blowing roof off | Fast wind over roof → low $P$ above → high $P$ below pushes roof up |
-| Curveball / Magnus effect | Spinning ball makes air speed asymmetric → pressure difference deflects ball |
 
 ### A Common Misconception
 

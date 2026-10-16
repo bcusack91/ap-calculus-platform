@@ -9,7 +9,7 @@ export const physics1EnergyInShmPart6Data = {
 
 **Part 6 of 7 — Energy in Simple Harmonic Motion**
 
-Time to tackle comprehensive energy problems that combine everything: $E = \\frac{1}{2}kA^2$, speed at any position, $v_{\\text{max}} = A\\omega$, and damping concepts.
+Time to tackle comprehensive energy problems that combine everything: $E = \\frac{1}{2}kA^2$, speed at any position, $v_{\\text{max}} = A\\omega$, and vertical springs.
       `
     },
     {

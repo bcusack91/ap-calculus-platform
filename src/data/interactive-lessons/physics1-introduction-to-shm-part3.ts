@@ -61,13 +61,9 @@ The effective spring constant is $k_{\\text{eff}} = mg/L$. Period: $T = 2\\pi\\s
 
 The independence of period from mass and (small) amplitude is what makes pendulums excellent timekeeping devices. Galileo first noticed this property!
 
-### Physical Pendulum
+### Why Only Small Angles?
 
-For an extended object (not a point mass on a string):
-
-$$T = 2\\pi\\sqrt{\\frac{I}{mgd}}$$
-
-where $I$ is the rotational inertia about the pivot and $d$ is the distance from the pivot to the center of mass.
+The restoring torque on a pendulum is proportional to $\\sin\\theta$, which is close to $\\theta$ itself only for small angles. That near-proportionality is what makes a small-angle pendulum simple harmonic (EK 7.1.A.2.iii). At large amplitudes the period grows slightly, and $T = 2\\pi\\sqrt{L/g}$ no longer applies.
       `
     },
     {

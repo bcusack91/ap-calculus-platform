@@ -136,10 +136,10 @@ Use $G = 6.67 \\times 10^{-11}$ $N\\cdot m^{2}/kg^{2}$, $g_E = 10$ $m/s^{2}$, $R
       exercise: {
         dropdowns: [
           {
-            label: 'The gravitational field inside a uniform spherical shell is:',
-            options: ['Equal to surface gravity', 'Half of surface gravity', 'Zero', 'Greatest just inside the shell wall'],
-            correctIndex: 2,
-            explanation: 'Inside a uniform spherical shell, the gravitational field is exactly zero (Shell Theorem). All the gravitational pulls from different parts of the shell cancel.'
+            label: 'Where the gravitational field strength is 4 N/kg, the gravitational force on a 2 kg object is:',
+            options: ['2 N', '8 N', '0.5 N', '20 N'],
+            correctIndex: 1,
+            explanation: 'Field strength is force per unit mass, so $F_g = mg = (2)(4) = 8$ N. Dividing instead of multiplying gives 0.5 N or 2 N, and 20 N uses Earth\'s surface value instead of the given field.'
           },
           {
             label: 'The units N/kg and $m/s^{2}$ are:',

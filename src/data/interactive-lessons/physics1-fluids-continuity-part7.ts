@@ -31,7 +31,7 @@ You've mastered volume flow rate, single-pipe continuity, branching, and mass fl
 | Speed ratio (circular pipe) | $v_2/v_1 = (r_1/r_2)^2$ |
 | Junction conservation | $\\sum Q_{in} = \\sum Q_{out}$ |
 | Mass flow rate | $\\dot m = \\rho Q = \\rho A v$ |
-| Compressible continuity | $\\rho_1 A_1 v_1 = \\rho_2 A_2 v_2$ |
+| Mass flow rate | $\\dot m = \\rho A v = \\rho Q$ |
 
 ### Common AP Question Stems
 

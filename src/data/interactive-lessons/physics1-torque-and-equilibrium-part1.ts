@@ -57,7 +57,7 @@ By convention:
 | **Counterclockwise (CCW)** | **Positive** (+) |
 | **Clockwise (CW)** | **Negative** (−) |
 
-This follows the right-hand rule: curl the fingers of your right hand in the direction of rotation — your thumb points in the direction of the torque vector (out of the page for CCW, into the page for CW).
+On the AP Physics 1 exam, torque direction is described only as clockwise or counterclockwise about the chosen axis; the vector direction of torque (the right-hand rule) is beyond the scope of the course.
 
 ### Example
 

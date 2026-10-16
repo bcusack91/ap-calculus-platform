@@ -20,11 +20,11 @@ This final lesson brings together all collision concepts: elastic, inelastic, pe
 
 ### Conservation Laws by Collision Type
 
-| Type | Momentum | Kinetic Energy | $e$ |
-|------|----------|---------------|-----|
-| Elastic | ✅ Conserved | ✅ Conserved | 1 |
-| Inelastic | ✅ Conserved | ❌ Partially lost | $0 < e < 1$ |
-| Perfectly inelastic | ✅ Conserved | ❌ Maximum loss | 0 |
+| Type | Momentum | Kinetic Energy | Objects After |
+|------|----------|---------------|---------------|
+| Elastic | ✅ Conserved | ✅ Conserved | Separate |
+| Inelastic | ✅ Conserved | ❌ Partially lost | Separate |
+| Perfectly inelastic | ✅ Conserved | ❌ Maximum loss | Stick together |
 
 ### Key Formulas
 
@@ -32,17 +32,16 @@ This final lesson brings together all collision concepts: elastic, inelastic, pe
 
 **Perfectly inelastic:** $v_f = \\frac{m_1 v_{1i} + m_2 v_{2i}}{m_1 + m_2}$
 
-**Elastic (target at rest):**
-$$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2}v_{1i}, \\quad v_{2f} = \\frac{2m_1}{m_1 + m_2}v_{1i}$$
+**Elastic check:** $\\frac{1}{2}m_1 v_{1i}^2 + \\frac{1}{2}m_2 v_{2i}^2 = \\frac{1}{2}m_1 v_{1f}^2 + \\frac{1}{2}m_2 v_{2f}^2$
 
-**Elastic relative velocity:** $v_{1i} - v_{2i} = -(v_{1f} - v_{2f})$
+**Center of mass:** $v_{cm} = \\dfrac{m_1 v_1 + m_2 v_2}{m_1 + m_2}$ is the same before and after every collision
 
 ### Key Conceptual Points
 
 1. Momentum is **always** conserved (no net external force)
 2. KE is conserved **only** in elastic collisions
 3. Perfectly inelastic = max KE loss (objects stick)
-4. Equal masses elastic: velocity swap (1D) or 90° deflection (2D)
+4. Equal masses elastic, target at rest (1D): the velocities swap
 5. Light hits heavy: bounces back. Heavy hits light: plows through.
       `
     },
@@ -99,7 +98,7 @@ $$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2}v_{1i}, \\quad v_{2f} = \\frac{2m_1}{m_1 
       exercise: {
         questions: [
           {
-            question: 'A 5 kg ball at +6 m/s collides elastically with a 1 kg ball at rest. What is the speed of the 1 kg ball after?',
+            question: 'A 5 kg ball at +6 m/s collides with a 1 kg ball at rest. Afterward the 5 kg ball moves at +4 m/s. What is the speed of the 1 kg ball?',
             options: [
               '5 m/s',
               '8 m/s',
@@ -107,7 +106,7 @@ $$v_{1f} = \\frac{m_1 - m_2}{m_1 + m_2}v_{1i}, \\quad v_{2f} = \\frac{2m_1}{m_1 
               '12 m/s'
             ],
             correctAnswer: 2,
-            explanation: '$v_{2f} = \\frac{2m_1}{m_1+m_2}v_{1i} = \\frac{2(5)}{6}(6) = \\frac{10}{6}(6) = 10$ m/s.'
+            explanation: 'Momentum: $(5)(6) = (5)(4) + (1)v_2$, so $v_2 = 30 - 20 = 10$ m/s. Check: $K_i = 90$ J and $K_f = 40 + 50 = 90$ J, so this collision happens to be elastic.'
           },
           {
             question: 'A 0.5 kg ball at 8 m/s collides perfectly inelastically with a 1.5 kg ball at rest. What percentage of KE is lost?',

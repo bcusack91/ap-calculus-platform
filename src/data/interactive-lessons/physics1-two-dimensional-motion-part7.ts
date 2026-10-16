@@ -151,26 +151,26 @@ A cannon fires a shell at 50 m/s at 53° above horizontal from ground level. Use
       exercise: {
         questions: [
           {
-            question: 'A boat aims directly north at 4 m/s in a river flowing east at 3 m/s. The boat\'s speed relative to the ground is:',
+            question: 'A boat heads upstream at 4 m/s relative to the water in a river flowing at 3 m/s. The boat\'s speed relative to the ground is:',
             options: [
               '1 m/s',
               '5 m/s',
               '7 m/s',
               '3.5 m/s'
             ],
-            correctAnswer: 1,
-            explanation: 'The velocities are perpendicular: $v = \\sqrt{4^2 + 3^2} = \\sqrt{25} = 5$ m/s. This is a classic 3-4-5 right triangle.'
+            correctAnswer: 0,
+            explanation: 'The current points opposite the boat\'s heading, so $v = 4 - 3 = 1$ m/s upstream. 7 m/s adds the speeds as if both pointed the same way, and 5 m/s treats them as perpendicular.'
           },
           {
-            question: 'An airplane flies at 300 km/h heading north. A wind blows from the west at 100 km/h (i.e., toward the east). The plane\'s actual direction of travel is:',
+            question: 'An airplane flies north at 300 km/h relative to the air into a 100 km/h headwind blowing toward the south. The plane\'s velocity relative to the ground is:',
             options: [
-              'Due north',
-              'North of east',
-              'East of north',
-              'Due east'
+              '200 km/h north',
+              '400 km/h north',
+              '200 km/h south',
+              '300 km/h north'
             ],
-            correctAnswer: 2,
-            explanation: 'The wind pushes the plane eastward while it aims north. The resultant velocity points east of north (between north and east, but closer to north since the northward component is larger).'
+            correctAnswer: 0,
+            explanation: 'Take north as positive: $v = +300 + (-100) = +200$ km/h, so 200 km/h north. A headwind slows the plane relative to the ground; it does not reverse its direction.'
           }
         ]
       }

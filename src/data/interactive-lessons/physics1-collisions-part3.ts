@@ -28,17 +28,15 @@ Most real-world collisions are neither perfectly elastic nor perfectly inelastic
 
 **Momentum is ALWAYS conserved** (if no net external force), regardless of collision type. The distinction between collision types is about **kinetic energy**.
 
-### Coefficient of Restitution
+### Reading a Bounce
 
-The **coefficient of restitution** ($e$) quantifies how "bouncy" a collision is:
+A ball bouncing off the floor is a collision with Earth. Because the ball is momentarily at rest at the top of each bounce, its kinetic energy just before and just after impact equals $mgh$ for the drop and rebound heights:
 
-$$e = \\frac{|v_{2f} - v_{1f}|}{|v_{1i} - v_{2i}|} = \\frac{\\text{relative speed after}}{\\text{relative speed before}}$$
+- Rebounds to the **same height** → no kinetic energy lost → elastic
+- Rebounds **lower** → some kinetic energy became thermal energy and sound → inelastic
+- **No rebound** (it sticks or splats) → perfectly inelastic
 
-| Value of $e$ | Collision Type |
-|--------------|---------------|
-| $e = 1$ | Perfectly elastic |
-| $0 < e < 1$ | Inelastic |
-| $e = 0$ | Perfectly inelastic |
+The fraction of kinetic energy lost in the bounce is $1 - \\dfrac{h_{\\text{rebound}}}{h_{\\text{drop}}}$.
       `
     },
     {
@@ -116,26 +114,26 @@ Always verify that:
             explanation: 'In an inelastic collision, momentum is conserved but kinetic energy is NOT. Some KE is converted to heat, sound, and deformation.'
           },
           {
-            question: 'The coefficient of restitution $e$ for a ball that bounces to 75% of its drop height is closest to:',
+            question: 'A ball dropped from 2.0 m rebounds to 1.5 m. What fraction of its kinetic energy was converted to other forms during the bounce?',
             options: [
-              '0.75',
-              '0.87',
-              '0.50',
-              '0.25'
+              '75%',
+              '25%',
+              '13%',
+              '50%'
             ],
             correctAnswer: 1,
-            explanation: 'The speed ratio is $\\sqrt{h_f/h_i} = \\sqrt{0.75} \\approx 0.866$. Since $e$ = relative speed after / relative speed before, $e \\approx 0.87$.'
+            explanation: 'Kinetic energy at impact is $mg(2.0)$ and just after the bounce it is $mg(1.5)$, so $1.5/2.0 = 75\\%$ remains and $25\\%$ was converted to thermal energy and sound. 13% comes from comparing speeds instead of energies.'
           },
           {
-            question: 'A collision is found where $KE_f > KE_i$. This collision is:',
+            question: 'Two carts at rest are pushed apart when a compressed spring between them is released. Compared with before, the total kinetic energy of the two carts afterward is:',
             options: [
-              'Superelastic, possible if stored energy is released',
-              'Impossible, since total energy can never increase',
-              'Perfectly elastic, since KE is not lost',
-              'Perfectly inelastic, since the objects deform'
+              'Greater, because stored energy turns into motion',
+              'The same, because total momentum is still zero',
+              'Smaller, because some energy becomes thermal energy',
+              'Zero, because the two momenta cancel each other'
             ],
             correctAnswer: 0,
-            explanation: 'A collision where $KE_f > KE_i$ is called **superelastic**. It is possible if internal stored energy (chemical, nuclear) is released during the collision. However, these are not standard in AP Physics 1.'
+            explanation: 'This is an explosion: internal forces push the carts apart and the spring\'s stored potential energy becomes kinetic energy, so kinetic energy increases while total momentum stays zero. Zero total momentum does not mean zero kinetic energy, because kinetic energy is a scalar that never cancels.'
           }
         ]
       }
@@ -184,10 +182,10 @@ A 4 kg ball at +5 m/s hits a 2 kg ball at rest. After collision, the 4 kg ball m
             explanation: 'The "lost" kinetic energy is converted to thermal energy, sound, and permanent deformation. Total energy is always conserved.'
           },
           {
-            label: 'The coefficient of restitution for a general inelastic collision is:',
-            options: ['exactly 0', 'between 0 and 1', 'exactly 1', 'greater than 1'],
+            label: 'A ball rebounds to 60% of its drop height. The bounce is:',
+            options: ['elastic', 'inelastic', 'perfectly inelastic', 'impossible'],
             correctIndex: 1,
-            explanation: 'A general inelastic collision has $0 < e < 1$. The value $e = 0$ is perfectly inelastic, and $e = 1$ is perfectly elastic.'
+            explanation: 'The ball separates from the floor but leaves with only 60% of its impact kinetic energy, so the bounce is inelastic. A perfectly inelastic bounce would have no rebound at all.'
           }
         ]
       }

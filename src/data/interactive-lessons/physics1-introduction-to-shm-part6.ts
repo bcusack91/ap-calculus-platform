@@ -150,7 +150,7 @@ Two identical springs each have spring constant $k$. A mass $m$ is attached.
             label: 'When two identical springs (each with constant k) are connected in parallel, the effective spring constant is:',
             options: ['$2k$', '$k/2$', '$k$', '$4k$'],
             correctIndex: 0,
-            explanation: 'Springs in parallel: $k_{\\text{eff}} = k_1 + k_2 = k + k = 2k$. Both springs pull together.'
+            explanation: 'Side by side, each spring stretches by $x$ and pulls with $kx$, so the net restoring force is $2kx$: the pair acts like one spring of constant $2k$.'
           },
           {
             label: 'If a single spring gives period T, the period with two identical springs in parallel is:',
@@ -159,10 +159,10 @@ Two identical springs each have spring constant $k$. A mass $m$ is attached.
             explanation: '$T_{\\text{parallel}} = 2\\pi\\sqrt{m/(2k)} = (1/\\sqrt{2}) \\times 2\\pi\\sqrt{m/k} = T/\\sqrt{2}$.'
           },
           {
-            label: 'When two identical springs (each with constant k) are connected in series, the effective spring constant is:',
-            options: ['$2k$', '$k/2$', '$k$', '$4k$'],
-            correctIndex: 1,
-            explanation: 'Springs in series: $1/k_{\\text{eff}} = 1/k + 1/k = 2/k$, so $k_{\\text{eff}} = k/2$.'
+            label: 'With the two springs side by side and the same amplitude, the maximum speed compared with one spring is:',
+            options: ['$\\sqrt{2}$ times as large', 'twice as large', 'the same', 'half as large'],
+            correctIndex: 0,
+            explanation: 'Energy gives $\\frac{1}{2}(2k)A^2 = \\frac{1}{2}mv_{\\max}^2$, so $v_{\\max} = A\\sqrt{2k/m}$, which is $\\sqrt{2}$ times the single-spring value. Doubling $k$ doubles the energy, not the speed.'
           }
         ]
       }

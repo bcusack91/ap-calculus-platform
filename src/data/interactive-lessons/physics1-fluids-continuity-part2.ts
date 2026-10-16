@@ -46,7 +46,7 @@ Water falling from a faucet accelerates due to gravity. Continuity then forces t
 
 ### Common Pitfall
 
-Continuity is about **volume** flow rate. If density changes (e.g., compressible gas at high speed), use **mass** flow rate instead — covered in Part 5.
+Continuity compares the **same** pipe at two places; it says nothing about how fast fluid enters a different, unconnected pipe. The same idea written in kilograms per second is the **mass** flow rate $\\rho A v$ — covered in Part 5.
       `
     },
     {

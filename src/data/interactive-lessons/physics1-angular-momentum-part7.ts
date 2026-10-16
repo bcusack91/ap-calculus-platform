@@ -67,15 +67,15 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
             explanation: 'Even for linear motion, the angular momentum about any point is $L = mvr_{\\perp} = mvd$, where $d$ is the perpendicular distance from the path to the point.'
           },
           {
-            question: 'A spinning top gradually slows down and eventually falls over. This is because:',
+            question: 'A top spinning upright on a table gradually slows down. Its angular momentum decreases because:',
             options: [
-              'Angular momentum is not conserved',
-              'Gravity exerts a torque that reduces the spin',
-              'Friction at the tip exerts a torque that reduces angular momentum',
-              'Its rotational inertia grows as it tilts'
+              'Angular momentum is never conserved for spinning objects',
+              'Gravity on its center of mass exerts a torque about its axis',
+              'Friction at the tip exerts a torque that opposes the spin',
+              'Its rotational inertia grows as its spin slows'
             ],
             correctAnswer: 2,
-            explanation: 'Friction at the tip exerts a torque that gradually reduces the spin angular momentum. When $L$ becomes too small, gravity\'s torque causes the top to precess and eventually fall.'
+            explanation: 'Friction at the tip exerts a torque opposite the spin, and that angular impulse reduces $L$. Gravity on an upright top acts along the spin axis, so it exerts no torque about that axis, and the top\'s rotational inertia does not change as it slows.'
           }
         ]
       }

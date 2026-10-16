@@ -5,190 +5,184 @@ export const physics1EnergyInShmPart5Data = {
       id: 'se5-intro',
       type: 'text' as const,
       content: `
-# 🌊 Damped Oscillations (Conceptual)
+# 🪀 Vertical Springs and Choosing the System
 
 **Part 5 of 7 — Energy in Simple Harmonic Motion**
 
-Real oscillating systems always lose energy to friction, air resistance, or other dissipative forces. This causes the amplitude to decrease over time — a process called **damping**.
+A block hanging on a vertical spring oscillates just like a block on a horizontal spring, but now gravity is part of the story. In this part you will find the new equilibrium position, see why the period does not change, and track three kinds of energy at once.
+
+**In this lesson you will learn:**
+- Where the equilibrium position of a hanging spring–block system is
+- Why $T = 2\\pi\\sqrt{m/k}$ still holds for a vertical spring
+- How kinetic, spring potential and gravitational potential energy trade off
+- How the choice of system decides which energies you count
       `
     },
     {
-      id: 'se5-damping-basics',
+      id: 'se5-equilibrium',
       type: 'text' as const,
       content: `
-## What Is Damping?
+## The New Equilibrium Position
 
-Damping is the gradual loss of mechanical energy from an oscillating system, typically due to:
-- **Friction** (surface contact)
-- **Air resistance** (drag)
-- **Internal friction** (deformation of materials)
+Hang a block of mass $m$ on a spring of constant $k$. The block settles where the net force is zero (EK 7.1.A.2.ii):
 
-### Effect on Motion
+$$k\\,d = mg \\quad\\Rightarrow\\quad d = \\frac{mg}{k}$$
 
-With damping:
-- **Amplitude decreases** with each cycle
-- **Period stays approximately the same** (for light damping)
-- **Total energy decreases** over time
-- The object eventually comes to rest at the equilibrium position
+Here $d$ is how far the spring has stretched from its relaxed length. This stretched position is the **equilibrium position** for the oscillation.
 
-### Energy Perspective
+### Oscillating About the New Equilibrium
 
-Without damping: $E = \\frac{1}{2}kA^2 = \\text{constant}$
+Pull the block a further distance $A$ below equilibrium and release it. Measured from the **new** equilibrium:
 
-With damping: $E$ decreases over time. Since $E \\propto A^2$, the amplitude also decreases. The "lost" mechanical energy is converted to thermal energy (heat).
-      `
-    },
-    {
-      id: 'se5-types',
-      type: 'text' as const,
-      content: `
-## Types of Damping
+- The net force is restoring and proportional to the displacement: if the block is a distance $y$ below equilibrium, the spring pulls up with $k(d + y)$ and gravity pulls down with $mg = kd$, so the net force is $ky$ upward.
+- That is exactly the condition for SHM, so the block oscillates with amplitude $A$ about the new equilibrium.
+- The period is $T = 2\\pi\\sqrt{m/k}$, the same as for a horizontal spring. Gravity shifts **where** the block oscillates, not **how fast**.
 
-### 1. Underdamped
-- The system **oscillates** with decreasing amplitude
-- Most common in AP problems
-- Example: a pendulum in air
+### Common Mistake
 
-### 2. Critically Damped
-- The system returns to equilibrium as **quickly as possible without oscillating**
-- Example: car shock absorbers (ideally)
-
-### 3. Overdamped
-- The system returns to equilibrium **slowly without oscillating**
-- Takes longer than critical damping
-- Example: a door closer set too tight
-
-### What the Graphs Look Like
-
-| Type | Motion |
-|------|--------|
-| Underdamped | Oscillations with decaying envelope |
-| Critically damped | Smooth exponential return (fastest) |
-| Overdamped | Slow exponential return (no oscillation) |
-
-On the AP exam, you mostly need to recognize underdamped motion and understand that energy is gradually converted to thermal energy.
+The amplitude is measured from the equilibrium position, not from the spring's relaxed length. A block hanging 0.10 m below the relaxed length and pulled down another 0.06 m has amplitude 0.06 m.
       `
     },
     {
       id: 'se5-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Damping Concepts Quiz** 🎯
+**Vertical Spring Concepts** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'In an underdamped oscillation, the amplitude:',
+            question: 'A 0.40 kg block hangs at rest from a spring with $k = 80$ N/m. How far is the spring stretched from its relaxed length? ($g = 10$ $m/s^{2}$)',
             options: [
-              'Grows each cycle',
-              'Stays constant',
-              'Decreases with each cycle',
-              'Rises, then falls'
+              '0.0050 m',
+              '0.050 m',
+              '0.50 m',
+              '20 m'
             ],
-            correctAnswer: 2,
-            explanation: 'Underdamped means the system oscillates, but friction causes the amplitude to decrease with each successive cycle.'
+            correctAnswer: 1,
+            explanation: 'At equilibrium $kd = mg$, so $d = (0.40)(10)/80 = 0.050$ m. Leaving out $g$ gives 0.0050 m, and dividing $k$ by $mg$ gives 20 m; check units, since N divided by N/m gives meters.'
           },
           {
-            question: 'When a real pendulum gradually comes to rest, the total mechanical energy has been converted to:',
+            question: 'The same spring and block are moved from a horizontal frictionless table to hang vertically. Compared with the horizontal system, the period of the vertical system is:',
             options: [
-              'Gravitational potential energy',
-              'Kinetic energy of the swinging bob',
-              'Thermal energy',
-              'Elastic energy stored in the string'
+              'Longer, because gravity adds to the restoring force',
+              'Shorter, because gravity speeds up the block',
+              'The same, because it depends only on $m$ and $k$',
+              'Longer, because the spring starts out stretched'
             ],
             correctAnswer: 2,
-            explanation: 'Friction and air resistance convert mechanical energy into thermal energy. The total energy is conserved, but it is no longer in a useful mechanical form.'
+            explanation: 'The net force measured from the new equilibrium is still $-ky$, so $T = 2\\pi\\sqrt{m/k}$ is unchanged. Gravity only moves the equilibrium position down by $mg/k$.'
           },
           {
-            question: 'For lightly damped oscillations, the period:',
+            question: 'At the lowest point of a vertical spring–block oscillation, which statement is correct?',
             options: [
-              'Increases steadily as the swings shrink',
-              'Decreases steadily as the amplitude drops',
-              'Remains approximately the same',
-              'Drops to zero once the motion fades'
+              'The net force is zero because the block is momentarily at rest',
+              'The spring force is greater than the block\'s weight',
+              'The spring force equals the block\'s weight',
+              'The spring force is less than the block\'s weight'
             ],
-            correctAnswer: 2,
-            explanation: 'Light damping reduces the amplitude but has very little effect on the period. The frequency is still approximately $\\omega = \\sqrt{k/m}$.'
+            correctAnswer: 1,
+            explanation: 'At the lowest point the block is below equilibrium, so the spring is stretched more than $mg/k$ and pulls up harder than gravity pulls down. The net force is upward and maximal even though the speed is momentarily zero.'
           }
         ]
       }
     },
     {
-      id: 'se5-energy-loss',
+      id: 'se5-energy-tracking',
       type: 'text' as const,
       content: `
-## Energy Loss in Damped Systems
+## Tracking Three Energies
 
-### After Each Cycle
+Choose the system **block + spring + Earth**. No external work is done on it (ignore air resistance), so its total mechanical energy is constant (EK 3.4.C.2, 7.4.A.2):
 
-If a damped oscillator loses a fraction $f$ of its energy each cycle:
-- After 1 cycle: $E_1 = (1-f)E_0$
-- After 2 cycles: $E_2 = (1-f)^2 E_0$
-- After $n$ cycles: $E_n = (1-f)^n E_0$
+$$K + U_s + U_g = \\text{constant}$$
 
-### Amplitude Decay
+The total potential energy of a system with more than two objects is the sum over each interacting pair (EK 3.3.A.5): $U_s$ for the spring–block pair and $U_g$ for the Earth–block pair.
 
-Since $E \\propto A^2$:
+### Worked Example
 
-$$A_n = A_0(1-f)^{n/2}$$
+A 0.50 kg block hangs from a spring with $k = 50$ N/m, so the equilibrium stretch is $d = (0.50)(10)/50 = 0.10$ m. The block is pulled down 0.06 m more and released. Find its speed as it passes equilibrium. Set $U_g = 0$ at the lowest point.
 
-### Quality Factor (Conceptual)
+| Position | Stretch | $U_s = \\frac{1}{2}kx^2$ | $U_g$ | $K$ |
+|----------|---------|--------------------------|-------|-----|
+| Lowest point | 0.16 m | 0.64 J | 0 | 0 |
+| Equilibrium | 0.10 m | 0.25 J | $mg(0.06) = 0.30$ J | ? |
 
-The **Q-factor** measures how "good" an oscillator is at maintaining its energy:
-- High Q → low damping → many oscillations before stopping
-- Low Q → high damping → few oscillations before stopping
+Energy conservation: $0.64 = 0.25 + 0.30 + K$, so $K = 0.09$ J and $v = \\sqrt{2(0.09)/0.50} = 0.60$ m/s.
 
-Examples: tuning fork (high Q), pendulum in honey (low Q)
+### A Useful Check
+
+The same speed comes from treating the motion as SHM about the new equilibrium: $\\frac{1}{2}kA^2 = \\frac{1}{2}(50)(0.06)^2 = 0.09$ J of oscillation energy, all kinetic at equilibrium. Both routes agree, which is a good way to catch arithmetic slips.
       `
     },
     {
       id: 'se5-energy-quiz',
       type: 'input-boxes' as const,
       content: `
-**Damped Energy Calculations** 🧮
+**Vertical Spring Energy Calculations** 🧮
 
-A damped oscillator starts with amplitude $A_0 = 0.20$ m and loses 10% of its energy each cycle.
+Use $g = 10$ $m/s^{2}$. A 0.20 kg block hangs from a spring with $k = 20$ N/m. It is pulled 0.05 m below its equilibrium position and released.
 
-1) What fraction of the original energy remains after 3 cycles? (as a decimal, round to 3 significant figures)
+1) How far is the spring stretched from its relaxed length when the block is at equilibrium? (in m)
 
-2) What is the amplitude after 3 cycles? (in m, round to 3 significant figures)
+2) What is the period of the oscillation? (in s, round to 3 significant figures)
 
-3) After how many complete cycles is the energy reduced to less than half? (give the smallest integer)
+3) What is the block's maximum speed? (in m/s)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.729', '0.171', '7'],
-        hint1: '$E_3 = (0.90)^3 E_0$',
-        hint2: '$A_3 = A_0 \\sqrt{E_3/E_0} = 0.20\\sqrt{0.729}$',
-        hint3: '$(0.90)^n < 0.50$. Try $n = 6$: $(0.90)^6 = 0.531$. Try $n = 7$: $(0.90)^7 = 0.478$',
-        explanation: '1) $(0.90)^3 = 0.729$. 2) $A = 0.20\\sqrt{0.729} = 0.20(0.854) = 0.171$ m. 3) $(0.90)^6 = 0.531 > 0.5$, $(0.90)^7 = 0.478 < 0.5$. Answer: 7 cycles.'
+        correctAnswers: ['0.1', '0.628', '0.5'],
+        hint1: 'At equilibrium $kd = mg$.',
+        hint2: '$T = 2\\pi\\sqrt{m/k}$, the same as for a horizontal spring.',
+        hint3: 'The amplitude is 0.05 m, measured from equilibrium. Set $\\frac{1}{2}kA^2 = \\frac{1}{2}mv_{\\max}^2$.',
+        explanation: '1) $d = (0.20)(10)/20 = 0.10$ m. 2) $T = 2\\pi\\sqrt{0.20/20} = 2\\pi(0.10) = 0.628$ s. 3) $\\frac{1}{2}(20)(0.05)^2 = 0.025$ J $= \\frac{1}{2}(0.20)v^2$, so $v^2 = 0.25$ and $v_{\\max} = 0.50$ m/s.'
       }
+    },
+    {
+      id: 'se5-system-choice',
+      type: 'text' as const,
+      content: `
+## How the System Choice Changes the Energy Story
+
+Which energies you count depends on what is inside your system (EK 3.4.A, 3.4.C):
+
+| System | Energies inside | Outside forces that do work |
+|--------|-----------------|-----------------------------|
+| Block + spring + Earth | $K$, $U_s$, $U_g$ | none, so total energy is constant |
+| Block + spring | $K$, $U_s$ | gravity (Earth does work on the block) |
+| Block alone | $K$ only | spring force and gravity |
+
+- A system containing only a single object can have only kinetic energy (EK 3.4.A.1). The spring and Earth then do **work** on the block instead of storing potential energy inside the system.
+- Every choice gives the same answer for the block's speed; the bigger system simply turns "work done by outside forces" into "change in potential energy inside."
+
+AP Physics 1 treats oscillators as ideal, so the total mechanical energy of the block–spring–Earth system stays constant. Real oscillators slowly lose energy to air resistance and internal friction, but that loss is not modeled on the exam.
+      `
     },
     {
       id: 'se5-dropdown-review',
       type: 'dropdown-select' as const,
       content: `
-**Damping Review** 🔍
+**System and Energy Review** 🔍
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'The type of damping that returns a system to equilibrium fastest without oscillating is:',
-            options: ['underdamped', 'critically damped', 'overdamped', 'undamped'],
-            correctIndex: 1,
-            explanation: 'Critically damped systems return to equilibrium in the shortest time without oscillating — ideal for shock absorbers.'
-          },
-          {
-            label: 'In a damped oscillating system, the total mechanical energy over time:',
-            options: ['increases', 'decreases', 'stays constant', 'oscillates'],
-            correctIndex: 1,
-            explanation: 'In any damped system, total mechanical energy decreases over time as it is converted to thermal energy.'
-          },
-          {
-            label: 'The total energy of an SHM system is proportional to:',
-            options: ['the square of the amplitude', 'the amplitude itself', 'the reciprocal of the amplitude', 'half the amplitude'],
+            label: 'For the system of the block alone, the energy the system can have is:',
+            options: ['kinetic only', 'kinetic and spring potential', 'kinetic and gravitational potential', 'all three kinds'],
             correctIndex: 0,
-            explanation: 'Energy is proportional to amplitude squared: $E = \\frac{1}{2}kA^2$. So if $A$ halves, $E$ drops to one quarter.'
+            explanation: 'A single-object system can only have kinetic energy. The spring and Earth are outside it, so they do work on the block rather than storing potential energy in the system.'
+          },
+          {
+            label: 'As the block rises from its lowest point to equilibrium, the gravitational potential energy of the block–Earth system:',
+            options: ['decreases', 'increases', 'stays constant', 'drops to zero'],
+            correctIndex: 1,
+            explanation: 'The block gains height, so $U_g = mgh$ increases. At the same time the spring\'s stretch shrinks, so $U_s$ decreases by even more, and the difference becomes kinetic energy.'
+          },
+          {
+            label: 'Doubling the mass on a vertical spring (same $k$) makes the equilibrium stretch:',
+            options: ['half as large', 'twice as large', 'four times as large', 'unchanged'],
+            correctIndex: 1,
+            explanation: 'The equilibrium stretch is $d = mg/k$, which is proportional to $m$, so doubling the mass doubles it. The period grows by only $\\sqrt{2}$.'
           }
         ]
       }
@@ -197,31 +191,31 @@ A damped oscillator starts with amplitude $A_0 = 0.20$ m and loses 10% of its en
       id: 'se5-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Damped Oscillations** ✅
+**Exit Quiz — Vertical Springs** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'A damped oscillator has its amplitude reduced to half the initial value. What fraction of the original energy remains?',
+            question: 'A block on a vertical spring oscillates with amplitude $A$. If it is instead released from a point $2A$ below equilibrium, the oscillation energy $\\frac{1}{2}kA^2$ becomes:',
             options: [
-              '$1/2$',
-              '$1/4$',
-              '$1/\\sqrt{2}$',
-              '$3/4$'
+              'Twice as large',
+              'Four times as large',
+              'Unchanged',
+              'Half as large'
             ],
             correctAnswer: 1,
-            explanation: '$E \\propto A^2$. If $A \\to A/2$: $E \\to (A/2)^2/(A^2) \\times E_0 = E_0/4$. One quarter remains.'
+            explanation: 'The oscillation energy is proportional to the square of the amplitude, so doubling $A$ multiplies it by 4. The period stays the same because it depends only on $m$ and $k$.'
           },
           {
-            question: 'Which of the following would increase the rate of energy loss in a pendulum?',
+            question: 'A student treats the block, spring and Earth as one system while the block oscillates. Ignoring air resistance, the student should expect the total mechanical energy of that system to:',
             options: [
-              'Reducing the mass of the bob',
-              'Swinging it in a vacuum',
-              'Increasing air resistance',
-              'Making the string longer'
+              'Increase as the block speeds up toward equilibrium',
+              'Stay constant throughout the motion',
+              'Decrease each time the block passes equilibrium',
+              'Equal zero, since the forces inside cancel'
             ],
-            correctAnswer: 2,
-            explanation: 'Greater air resistance means more friction, which increases the rate at which mechanical energy is converted to thermal energy.'
+            correctAnswer: 1,
+            explanation: 'No external force does work on the block–spring–Earth system, so $K + U_s + U_g$ is constant. Energy only changes form inside the system.'
           }
         ]
       }

@@ -104,15 +104,15 @@ An astronaut (80 kg) floating at rest in space fires a thruster that ejects 0.50
             explanation: 'Initial momentum is zero. After ejection the astronaut has mass $80 - 0.50 = 79.5$ kg and velocity $v_a$; the gas leaves at 2000 m/s backward relative to the astronaut, so its ground velocity is $v_a - 2000$. Then $0 = 79.5 v_a + 0.50(v_a - 2000)$, so $80 v_a = 1000$ and $v_a = 12.5$ m/s. Treating 2000 m/s as the gas\'s ground speed gives $1000/79.5 \\approx 12.6$ m/s, and setting the kinetic energies equal (energy is not conserved here) gives about 159 m/s.'
           },
           {
-            question: 'If the astronaut performs 3 such burns (each ejecting 0.50 kg), the speed after the third burn is:',
+            question: 'If the same 0.50 kg of gas were instead ejected at 1000 m/s relative to the astronaut, the astronaut\'s final speed would be:',
             options: [
-              'Exactly $3 \\times 12.5$ m/s',
-              'Less than $3 \\times 12.5$ m/s',
-              'Greater than $3 \\times 12.5$ m/s',
-              'Exactly $\\sqrt{3} \\times 12.5$ m/s (energies add)'
+              '25.0 m/s',
+              '12.5 m/s',
+              '6.25 m/s',
+              '3.13 m/s'
             ],
             correctAnswer: 2,
-            explanation: 'Each burn ejects 0.50 kg at 2000 m/s relative to the astronaut, but from a lighter astronaut, so each $\\Delta v$ is slightly larger: $1000/80 = 12.5$, $1000/79.5 \\approx 12.58$ and $1000/79 \\approx 12.66$ m/s. The total, about 37.7 m/s, is slightly more than $3 \\times 12.5$ m/s. This is the idea behind the rocket equation.'
+            explanation: 'The astronaut\'s momentum must equal the gas\'s momentum, which is proportional to the ejection speed. Halving the ejection speed halves the recoil: $80 v_a = 0.50(1000)$, so $v_a = 6.25$ m/s.'
           }
         ]
       }

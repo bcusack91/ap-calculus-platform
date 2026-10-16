@@ -37,10 +37,9 @@ $$1 \\text{ Watt} = 1 \\text{ J/s} = 1 \\text{ kg}\\cdot\\text{m}^2/\\text{s}^3$
 |------|-------|
 | 1 Watt (W) | 1 J/s |
 | 1 kilowatt (kW) | 1,000 W |
-| 1 horsepower (hp) | 746 W |
-| 1 kilowatt-hour (kWh) | $3.6 \\times 10^6$ J (energy, not power!) |
+| 1 megawatt (MW) | 1,000,000 W |
 
-Note: A kilowatt-hour is a unit of **energy** (power × time), not power.
+Note: the watt measures a **rate**. Energy and work are measured in joules, and $W = Pt$ converts between them.
       `
     },
     {
@@ -74,22 +73,16 @@ This is why cars have a **maximum speed** — as speed increases, the engine for
       id: 'wk5-efficiency',
       type: 'text' as const,
       content: `
-## Power and Efficiency
+## Average, Instantaneous and Negative Power
 
 ### Average vs. Instantaneous Power
 
 - **Average power**: $P_{\\text{avg}} = W_{\\text{total}} / t_{\\text{total}}$
 - **Instantaneous power**: $P = Fv$ at a specific moment
 
-### Efficiency
+### Power Can Be Negative
 
-In real systems, not all energy goes where we want. **Efficiency** measures this:
-
-$$\\text{efficiency} = \\frac{P_{\\text{useful}}}{P_{\\text{total}}} \\times 100\\%$$
-
-For example, if a motor uses 1000 W but only 800 W goes to lifting a load:
-
-$$\\text{efficiency} = \\frac{800}{1000} \\times 100\\% = 80\\%$$
+Work can be negative, so power can be too. A force that points **opposite** the velocity ($\\theta = 180°$) removes energy: kinetic friction on a sliding box delivers $P = -f_k v$. A motor lifting a load at constant speed delivers $P = mgv$ while gravity delivers $-mgv$ to the load, so the net power on the load is zero and its kinetic energy stays constant.
       `
     },
     {
@@ -131,7 +124,7 @@ $$\\text{efficiency} = \\frac{800}{1000} \\times 100\\% = 80\\%$$
               '$3.6 \\times 10^{5}$ J'
             ],
             correctAnswer: 2,
-            explanation: 'Convert the time to seconds: 1 hour = 3600 s. Then $W = Pt = (1000\\text{ W})(3600\\text{ s}) = 3.6 \\times 10^{6}$ J, which is also 1 kWh. Using 1 s gives $1.0 \\times 10^{3}$ J, treating an hour as 60 s gives $6.0 \\times 10^{4}$ J, and $3.6 \\times 10^{5}$ J is off by a factor of ten.'
+            explanation: 'Convert the time to seconds: 1 hour = 3600 s. Then $W = Pt = (1000\\text{ W})(3600\\text{ s}) = 3.6 \\times 10^{6}$ J. Using 1 s gives $1.0 \\times 10^{3}$ J, treating an hour as 60 s gives $6.0 \\times 10^{4}$ J, and $3.6 \\times 10^{5}$ J is off by a factor of ten.'
           }
         ]
       }
@@ -148,15 +141,15 @@ Use $g = 10$ $m/s^{2}$.
 
 2) A car engine provides 5000 W. If the car moves at a constant 25 m/s against friction, what is the friction force (in N)?
 
-3) An elevator motor has an efficiency of 80%. To lift a 600 kg load at 2 m/s, what total (input) power is needed (in W)?
+3) A motor lifts a 600 kg load straight up at a constant 2 m/s. What power does the motor deliver to the load (in W)?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4000', '200', '15000'],
+        correctAnswers: ['4000', '200', '12000'],
         hint1: '$W = mgh = 500(10)(20) = 100{,}000$ J. $P = W/t = 100{,}000/25$.',
         hint2: 'At constant velocity: engine force = friction force. $P = Fv \\Rightarrow F = P/v = 5000/25$.',
-        hint3: 'Useful power: $P_{\\text{useful}} = Fv = mgv = 600(10)(2) = 12{,}000$ W. $P_{\\text{total}} = P_{\\text{useful}} / 0.80$.',
-        explanation: '1) $P = 100{,}000/25 = 4000$ W. 2) $F = 5000/25 = 200$ N. 3) $P_{\\text{total}} = 12{,}000/0.80 = 15{,}000$ W.'
+        hint3: 'At constant speed the motor\'s force equals the weight: $P = Fv = mgv = 600(10)(2)$.',
+        explanation: '1) $P = 100{,}000/25 = 4000$ W. 2) $F = 5000/25 = 200$ N. 3) $P = mgv = 600(10)(2) = 12{,}000$ W.'
       }
     },
     {
@@ -174,10 +167,10 @@ Use $g = 10$ $m/s^{2}$.
             explanation: '$P = mgh/t$. Doubling $h$, halving $t$, or doubling $m$ each doubles $P$, but doubling $h$ and $t$ together leaves $P$ unchanged.'
           },
           {
-            label: 'Unit of energy commonly used in electricity bills:',
-            options: ['Watt', 'Kilowatt', 'Kilowatt-hour', 'Megawatt'],
-            correctIndex: 2,
-            explanation: 'kWh = power × time = energy. 1 kWh = $3.6 \\times 10^{6}$ J. Watts and kilowatts are units of power.'
+            label: 'The power delivered by kinetic friction on a sliding box is:',
+            options: ['positive, adding energy', 'negative, removing energy', 'zero, since friction is internal', 'equal to the box\'s kinetic energy'],
+            correctIndex: 1,
+            explanation: 'Kinetic friction points opposite the box\'s velocity, so $P = f_k v\\cos 180° < 0$: it removes kinetic energy and turns it into thermal energy.'
           },
           {
             label: 'At constant power, as a car accelerates, the force from the engine:',
@@ -186,10 +179,10 @@ Use $g = 10$ $m/s^{2}$.
             explanation: '$P = Fv \\Rightarrow F = P/v$. As $v$ increases at constant $P$, $F$ must decrease.'
           },
           {
-            label: '1 horsepower equals approximately:',
-            options: ['100 W', '500 W', '746 W', '1000 W'],
-            correctIndex: 2,
-            explanation: '1 hp = 746 W, approximately 3/4 of a kilowatt.'
+            label: 'A force does 600 J of work in 3.0 s. The average power is:',
+            options: ['200 W', '1800 W', '600 W', '0.005 W'],
+            correctIndex: 0,
+            explanation: '$P = W/t = 600/3.0 = 200$ W. Multiplying instead gives 1800 W, and $t/W$ gives 0.005 W.'
           }
         ]
       }
