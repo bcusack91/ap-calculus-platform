@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Algorithms & Programming (AP CS Principles)
+ * Entrance Quiz — Algorithms & Programming (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 3: control flow, expressions, Boolean logic, debugging — with AP CSP pseudocode tracing.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'cspa-ent-1a', question: 'A program is BEST described as:', options: ['A single line of code that runs once and cannot use any control flow such as branching or looping', 'A collection of code that, when executed, performs a task by sequencing, selecting, and iterating over instructions', 'Only the visual layout of an app, with no instructions for the processor to actually execute at runtime', 'A piece of hardware soldered onto a circuit board that physically stores instructions but cannot run them'], correctIndex: 1, explanation: 'A program executes instructions using sequencing (one after another), selection (if/else), and iteration (loops).', partNumber: 1, partTitle: 'Programs & Sequencing' },
-  { id: 'cspa-ent-1b', question: 'In a program, sequencing means:', options: ['Skipping instructions in random order chosen by the processor at runtime to balance the workload across cores', 'Executing statements in the order they appear unless control flow changes the order', 'Sorting numbers in a list before any other code is allowed to run on those values', 'Encrypting the code so that the processor must decode each statement before executing it'], correctIndex: 1, explanation: 'Sequencing is the default execution order: top to bottom. Selection (if) and iteration (loops) are how you deviate from pure sequence.', partNumber: 1, partTitle: 'Programs & Sequencing' },
-  { id: 'cspa-ent-2a', question: 'Trace the AP CSP pseudocode below.\n  x ← 5\n  y ← 3\n  IF (x > y)\n  {\n    z ← x - y\n  }\n  ELSE\n  {\n    z ← y - x\n  }\n  DISPLAY(z)', options: ['2', '-2', '8', '5'], correctIndex: 0, explanation: 'x = 5 > y = 3, so the IF branch runs: z = x - y = 5 - 3 = 2.', partNumber: 2, partTitle: 'Selection (if/else)' },
-  { id: 'cspa-ent-2b', question: 'A program selects between two branches with IF / ELSE. The condition controlling the choice MUST evaluate to:', options: ['A number that the processor rounds to the nearest integer before deciding which branch to take', 'A Boolean value (true or false)', 'A list of values that the IF statement compares against in the order they appear', 'A string of characters that the program prints out before choosing one of the branches'], correctIndex: 1, explanation: 'IF / ELSE selection is driven by a Boolean expression. It directs the program to one branch or the other.', partNumber: 2, partTitle: 'Selection (if/else)' },
-  { id: 'cspa-ent-3a', question: 'Trace the AP CSP pseudocode below.\n  total ← 0\n  i ← 1\n  REPEAT UNTIL (i > 4)\n  {\n    total ← total + i\n    i ← i + 1\n  }\n  DISPLAY(total)', options: ['6', '10', '15', '4'], correctIndex: 1, explanation: 'Loop runs while i ≤ 4. Add i = 1, 2, 3, 4 to total: 1+2+3+4 = 10.', partNumber: 3, partTitle: 'Iteration (loops)' },
-  { id: 'cspa-ent-3b', question: 'A loop that NEVER stops is called:', options: ['An infinite loop', 'A binary loop', 'A nested loop', 'A logical loop'], correctIndex: 0, explanation: 'An infinite loop fails to make progress toward its termination condition. It is a common bug — e.g., forgetting to update the counter.', partNumber: 3, partTitle: 'Iteration (loops)' },
-  { id: 'cspa-ent-4a', question: 'In Boolean logic, the expression (NOT (a AND b)) is equivalent to:', options: ['(NOT a AND NOT b)', '(NOT a OR NOT b)', '(a AND b)', '(a OR b)'], correctIndex: 1, explanation: 'De Morgan’s law: NOT (a AND b) is equivalent to (NOT a) OR (NOT b).', partNumber: 4, partTitle: 'Boolean Logic' },
-  { id: 'cspa-ent-4b', question: 'Given a = true, b = false, what is the value of (a OR b) AND (NOT b)?', options: ['true', 'false', 'cannot be determined', 'always false'], correctIndex: 0, explanation: '(true OR false) = true. (NOT false) = true. true AND true = true.', partNumber: 4, partTitle: 'Boolean Logic' },
-  { id: 'cspa-ent-5a', question: 'A program prints "-3" when given input 0, but the developer expected "0". The bug is MOST likely a:', options: ['Syntax error — the program would not run at all', 'Logic error — the algorithm gives the wrong result for some input', 'Hardware error caused by a faulty chip flipping bits while a calculation was running', 'Network error that interrupted the program while it was fetching the input from a server'], correctIndex: 1, explanation: 'The program runs but produces incorrect output — a logic error. Syntax errors prevent the program from running.', partNumber: 5, partTitle: 'Errors & Debugging' },
-  { id: 'cspa-ent-5b', question: 'Which debugging strategy is MOST efficient for a function that returns the wrong value only for negative inputs?', options: ['Rewrite the entire program from scratch in a different language and hope the new version handles negative inputs correctly without any further investigation', 'Test specifically with a negative input, then trace the code step-by-step for that case to find where the result diverges from expected', 'Delete every reference to negative numbers from the program so that the failing case can no longer occur during testing in the future', 'Add more features to the function so that the negative-input branch is hidden behind newer logic that masks the bad output from users'], correctIndex: 1, explanation: 'Reproduce the failing case, then trace through the code for that input to localize the divergence — a fundamental debugging technique.', partNumber: 5, partTitle: 'Errors & Debugging' },
-  { id: 'cspa-ent-6a', question: 'Trace the AP CSP pseudocode below.\n  count ← 0\n  FOR EACH n IN [2, 4, 6, 8, 10]\n  {\n    IF (n MOD 4 = 0)\n    {\n      count ← count + 1\n    }\n  }\n  DISPLAY(count)', options: ['1', '2', '3', '5'], correctIndex: 1, explanation: 'Multiples of 4 in the list are 4 and 8 — two values. count = 2.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspa-ent-6b', question: 'A function checks whether a number n is a leap year. Which Boolean condition is correct?', options: ['(n MOD 4 = 0) AND ((n MOD 100 ≠ 0) OR (n MOD 400 = 0))', '(n MOD 4 = 0) OR (n MOD 100 = 0)', '(n MOD 100 = 0)', '(n MOD 400 = 0) AND (n MOD 4 ≠ 0)'], correctIndex: 0, explanation: 'A year is a leap year if divisible by 4, EXCEPT century years (mod 100 = 0) that are NOT divisible by 400. The condition (n MOD 4 = 0) AND ((n MOD 100 ≠ 0) OR (n MOD 400 = 0)) captures this.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspa-ent-7a', question: 'A small change in code completely changes a program’s output. The MOST likely lesson is:', options: ['Programming is fundamentally unpredictable, so the same code can produce different results on identical inputs from one run to the next', 'Programs are precise: small details (operators, conditions, indexing) matter, and careful testing is essential', 'Bugs of this kind cannot be fixed and developers simply have to live with the inconsistent output that the program produces', 'The hardware is broken in a subtle way, and any small code change exposes a different defective region of the device’s memory'], correctIndex: 1, explanation: 'Programs follow exact rules. Small details are significant, which is why incremental development and testing are important practices.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cspa-ent-7b', question: 'Which of the following BEST describes the relationship between abstraction and a programming language?', options: ['A high-level language abstracts away hardware-level details, letting programmers express solutions closer to the problem', 'High-level languages always run faster than low-level languages because their abstractions are completely optimized away by every modern compiler', 'Abstraction usually makes programs longer because each new layer adds extra wrapper code that the programmer must write out by hand', 'There is no real relationship between abstraction and a programming language, since abstraction is a concept used only inside pure mathematics'], correctIndex: 0, explanation: 'High-level languages provide abstractions (e.g., variables, lists, procedures) so programmers focus on the problem instead of the underlying hardware.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'cap-ent-1a', partNumber: 1, partTitle: 'Abstraction, Procedures, and Modularity',
+    question: 'What is displayed when this code runs?\n\nPROCEDURE f(a, b) {\nRETURN(a * 2 + b)\n}\nx ← f(3, 4)\nDISPLAY(f(x, 1))',
+    options: ['21', '10', '11', '20'],
+    correctIndex: 0,
+    explanation: 'The first call returns 3 × 2 + 4 = 10, which is stored in x. The second call returns 10 × 2 + 1 = 21, and that value is displayed.',
+  },
+  {
+    id: 'cap-ent-1b', partNumber: 1, partTitle: 'Abstraction, Procedures, and Modularity',
+    question: 'A game repeats the same 12 lines of score-updating code in five places. A student moves those lines into PROCEDURE updateScore(points) and calls it in each place. What is the main benefit?',
+    options: ['The program now runs in far fewer steps', 'A scoring fix now has to be made in just one place', 'The score can no longer be changed elsewhere', 'Each place can now award a different score'],
+    correctIndex: 1,
+    explanation: 'Procedural abstraction gives the task one definition, so a change to the scoring logic is made once and every call uses it. Moving code into a procedure does not reduce the steps the computer runs.',
+  },
+  {
+    id: 'cap-ent-2a', partNumber: 2, partTitle: 'Key Processes',
+    question: 'What is displayed when this code runs?\n\nPROCEDURE addTen(n) {\nn ← n + 10\nRETURN(n)\n}\nx ← 5\ny ← addTen(x)\nDISPLAY(x)\nDISPLAY(y)',
+    options: ['15 15', '5 5', '15 5', '5 15'],
+    correctIndex: 3,
+    explanation: 'The parameter n is local to the procedure, so adding 10 to it does not change x, which stays 5. The returned value 15 is stored in y.',
+  },
+  {
+    id: 'cap-ent-2b', partNumber: 2, partTitle: 'Key Processes',
+    question: 'What is displayed when this code runs?\n\nPROCEDURE m(n) {\nRETURN(n * 2)\nDISPLAY(n)\n}\nDISPLAY(m(m(3)))',
+    options: ['12', '3 6 12', '6 12', '3 12'],
+    correctIndex: 0,
+    explanation: 'RETURN ends the procedure immediately, so the DISPLAY inside it never runs. The inner call returns 6, the outer call returns 12, and only 12 is displayed.',
+  },
+  {
+    id: 'cap-ent-3a', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'What does this procedure return?\n\nPROCEDURE check(list) {\nFOR EACH n IN list {\nIF (n MOD 2 = 0) {\nRETURN(true)\n}\n}\nRETURN(false)\n}',
+    options: ['true only if every element is even', 'true if the last element is even', 'the number of even elements', 'true if at least one element is even'],
+    correctIndex: 3,
+    explanation: 'The procedure returns true as soon as it finds one even element and returns false only after checking them all. That is the "exists" pattern, not a "for-all" check or a count.',
+  },
+  {
+    id: 'cap-ent-3b', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'This procedure is meant to return true when every element of the list is positive. For which list does it return the wrong result?\n\nPROCEDURE allPos(list) {\nFOR EACH n IN list {\nIF (n > 0) {\nRETURN(true)\n}\n}\nRETURN(false)\n}',
+    options: ['[-1, -3]', '[2, 5, 9]', '[4, -2, 7]', '[-6]'],
+    correctIndex: 2,
+    explanation: 'It returns true at the first positive value, 4, without ever seeing the -2, so it wrongly reports that every element is positive. A correct for-all check returns false on the first counter-example.',
+  },
+  {
+    id: 'cap-ent-4a', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'A program keeps 30 quiz scores in separate variables s1 through s30. A student rewrites it to keep them in one list named scores. What is the main advantage?',
+    options: ['The same code works for any number of scores', 'Each score now uses less memory to store', 'The scores can no longer be changed by mistake', 'The program can now hold decimal scores'],
+    correctIndex: 0,
+    explanation: 'A list is a data abstraction: one name manages all the values, so loops over it do not change when the number of scores changes. It does not save memory or protect the values.',
+  },
+  {
+    id: 'cap-ent-4b', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'A loan app breaks ties between equally qualified applicants by favoring certain ZIP codes. Used by millions of people, what is the main concern with this design choice?',
+    options: ['It makes the program run more slowly at scale', 'It makes the results change on every run', 'It could treat whole neighborhoods differently', 'It removes human judgment from the decision'],
+    correctIndex: 2,
+    explanation: 'One condition in the code can systematically disadvantage people by where they live, and at scale that affects many users. That is a question of bias and impact, not of speed.',
+  },
+  {
+    id: 'cap-ent-5a', partNumber: 5, partTitle: 'Libraries, APIs, and Random Values',
+    question: 'The expression RANDOM(1, 4) + RANDOM(1, 4) is evaluated. Which statement about its possible results is correct?',
+    options: ['8 values; all are equally likely', '7 values; all are equally likely', '7 values; 5 is the most likely', '16 values; 5 is the most likely'],
+    correctIndex: 2,
+    explanation: 'The sum ranges from 2 to 8, which is 7 values. More of the 16 equally likely pairs add to 5 (four of them) than to any other total.',
+  },
+  {
+    id: 'cap-ent-5b', partNumber: 5, partTitle: 'Libraries, APIs, and Random Values',
+    question: 'About what percent of runs of this code display "win"?\n\nIF (RANDOM(1, 20) ≤ 6) {\nDISPLAY("win")\n}\nELSE {\nDISPLAY("lose")\n}',
+    options: ['25%', '6%', '70%', '30%'],
+    correctIndex: 3,
+    explanation: 'RANDOM(1, 20) returns 20 equally likely integers, and 6 of them (1 through 6) make the condition true. That is 6 ÷ 20 = 30% of runs.',
+  },
+  {
+    id: 'cap-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'What is displayed when this code runs?\n\nPROCEDURE find(list, t) {\ni ← 1\nREPEAT UNTIL (i > LENGTH(list)) {\nIF (list[i] ≥ t) {\nRETURN(i)\n}\ni ← i + 1\n}\nRETURN(-1)\n}\nDISPLAY(find([4, 9, 2, 9, 12], 9))',
+    options: ['2', '5', '4', '1'],
+    correctIndex: 0,
+    explanation: 'Lists start at index 1, and the first element at least 9 is the 9 at index 2. The procedure returns as soon as it finds that first match.',
+  },
+  {
+    id: 'cap-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'For which input does this procedure cause an error?\n\nPROCEDURE avg(list) {\ntotal ← 0\nFOR EACH x IN list {\ntotal ← total + x\n}\nRETURN(total / LENGTH(list))\n}',
+    options: ['A list holding only negative numbers', 'A list with just one element', 'A list whose elements sum to zero', 'A list containing no elements'],
+    correctIndex: 3,
+    explanation: 'A list with no elements has length 0, so the procedure divides by zero. Negative values, a single element and a zero total all give a valid average.',
+  },
+  {
+    id: 'cap-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'Two procedures give the same result on a list of n elements. Procedure A checks each element once. Procedure B compares every pair of elements, about n × n ÷ 2 comparisons. For a list of 1,000 elements, which is true?',
+    options: ['A takes about 1,000 steps and B about 2,000', 'A takes about 1,000 steps, and B about 500,000', 'Both take about 1,000 steps', 'A takes about 500 steps and B about 1,000,000'],
+    correctIndex: 1,
+    explanation: 'One pass over 1,000 elements takes about 1,000 steps, and 1,000 × 1,000 ÷ 2 = 500,000. Both are polynomial and run in reasonable time, but A is the better choice.',
+  },
+  {
+    id: 'cap-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'This code is meant to display every element of list. What does it display when list is [5, 8, 3]?\n\ni ← 1\nREPEAT UNTIL (i = LENGTH(list)) {\nDISPLAY(list[i])\ni ← i + 1\n}',
+    options: ['5 8 3', '5 8', '8 3', 'Nothing, because of an error'],
+    correctIndex: 1,
+    explanation: 'The loop stops as soon as i equals 3, before the third element is displayed. This off-by-one bug needs the condition i > LENGTH(list).',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Programs & Sequencing' },
-    { partNumber: 2, partTitle: 'Selection (if/else)' },
-    { partNumber: 3, partTitle: 'Iteration (loops)' },
-    { partNumber: 4, partTitle: 'Boolean Logic' },
-    { partNumber: 5, partTitle: 'Errors & Debugging' },
-    { partNumber: 6, partTitle: 'Applied Practice' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Abstraction, Procedures, and Modularity' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Libraries, APIs, and Random Values' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

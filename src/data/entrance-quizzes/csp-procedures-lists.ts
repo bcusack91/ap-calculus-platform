@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Procedures & Lists (AP CS Principles)
+ * Entrance Quiz — Procedures & Lists (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 3: procedures (functions), parameters, return values, abstraction, lists.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'cspp-ent-1a', question: 'A procedure (function) is BEST described as:', options: ['A single variable that stores one value and cannot be reused with different inputs in the program', 'A named, reusable block of code that performs a specific task and may take parameters and return a value', 'A type of list that holds multiple ordered values referenced by the same overall name', 'A built-in keyword in pseudocode that controls the order in which assignment statements are evaluated'], correctIndex: 1, explanation: 'A procedure encapsulates a sequence of steps under a name. Calling it executes the body — a key tool for abstraction and reuse.', partNumber: 1, partTitle: 'Procedures & Abstraction' },
-  { id: 'cspp-ent-1b', question: 'Defining a procedure for a task you do MANY times in different parts of a program MAINLY helps with:', options: ['Reducing duplication and making changes easier to apply consistently', 'Making the program run on more devices and operating systems without further code changes', 'Encrypting the program so its source code is hidden from anyone who reads the file', 'Doubling the file size since each call site stores its own copy of the body'], correctIndex: 0, explanation: 'Procedures eliminate duplication. A bug fix or improvement in one place applies everywhere the procedure is called.', partNumber: 1, partTitle: 'Procedures & Abstraction' },
-  { id: 'cspp-ent-2a', question: 'In the call double(7), the value 7 is BEST described as:', options: ['A return value', 'An argument (the value passed in)', 'A variable defined inside double', 'The procedure name'], correctIndex: 1, explanation: 'Values passed into a procedure call are arguments. Inside the procedure, they bind to parameters.', partNumber: 2, partTitle: 'Parameters & Arguments' },
-  { id: 'cspp-ent-2b', question: 'PROCEDURE area(width, height) { RETURN width * height }. The names width and height are BEST described as:', options: ['Global variables that are visible to every procedure in the program and persist after the call ends', 'Parameters — named placeholders that receive arguments when the procedure is called', 'Return values that the procedure produces and sends back to the caller once the body finishes', 'Comments that document the body of the procedure but do not affect what any call computes'], correctIndex: 1, explanation: 'Parameters are the named slots a procedure accepts; they get bound to the caller’s argument values.', partNumber: 2, partTitle: 'Parameters & Arguments' },
-  { id: 'cspp-ent-3a', question: 'Trace the AP CSP pseudocode below.\n  PROCEDURE addOne(n)\n  {\n    RETURN n + 1\n  }\n  x ← addOne(addOne(5))\n  DISPLAY(x)', options: ['5', '6', '7', '8'], correctIndex: 2, explanation: 'Inner call addOne(5) returns 6. Outer call addOne(6) returns 7. x = 7.', partNumber: 3, partTitle: 'Calling Procedures' },
-  { id: 'cspp-ent-3b', question: 'When a procedure RETURNs a value, the procedure call:', options: ['Always prints the value to the screen automatically without needing a separate DISPLAY statement after the call', 'Evaluates to that value, which can be assigned, printed, or used in an expression', 'Stops the entire program immediately, returning control to the operating system before any later code can run', 'Becomes a new global variable named after the procedure that any later code in the program can use'], correctIndex: 1, explanation: 'A return value makes the procedure call act like an expression: the call site receives the value to use.', partNumber: 3, partTitle: 'Calling Procedures' },
-  { id: 'cspp-ent-4a', question: 'A list in AP CSP pseudocode (e.g., scores ← [82, 91, 77, 95]) is:', options: ['An ordered collection of items, accessed by 1-based index', 'A collection of items that is always sorted in ascending order automatically as values are added', 'A storage form limited to exactly 4 items regardless of how many values you assign to it', 'Identical to a single variable, just with a longer name and the same one-value capacity'], correctIndex: 0, explanation: 'AP CSP lists are ordered collections of items, indexed starting at 1 (e.g., scores[1] = 82).', partNumber: 4, partTitle: 'Lists Basics' },
-  { id: 'cspp-ent-4b', question: 'For scores ← [82, 91, 77, 95], what is scores[3] in AP CSP pseudocode?', options: ['82', '91', '77', '95'], correctIndex: 2, explanation: 'AP CSP uses 1-based indexing: scores[1] = 82, scores[2] = 91, scores[3] = 77, scores[4] = 95.', partNumber: 4, partTitle: 'Lists Basics' },
-  { id: 'cspp-ent-5a', question: 'Trace the AP CSP pseudocode below.\n  scores ← [82, 91, 77, 95]\n  total ← 0\n  FOR EACH s IN scores\n  {\n    total ← total + s\n  }\n  DISPLAY(total / 4)', options: ['77', '82', '86.25', '95'], correctIndex: 2, explanation: 'Sum = 82 + 91 + 77 + 95 = 345. Average = 345 / 4 = 86.25.', partNumber: 5, partTitle: 'Iterating over Lists' },
-  { id: 'cspp-ent-5b', question: 'Which AP CSP pseudocode counts the number of items in numbers that are greater than 10?', options: ['count ← LENGTH(numbers); the built-in length call returns only the items whose value exceeds 10 in the list', 'count ← 0; FOR EACH n IN numbers { IF (n > 10) { count ← count + 1 } }', 'count ← numbers > 10; the comparison is applied to the whole list and stores how many entries passed', 'count ← numbers[10]; reading position 10 of the list directly returns the count of items above 10'], correctIndex: 1, explanation: 'Initialize a counter, iterate through the list, and increment the counter when the condition is met.', partNumber: 5, partTitle: 'Iterating over Lists' },
-  { id: 'cspp-ent-6a', question: 'A procedure max3(a, b, c) returns the largest of three numbers. Which call returns 9?', options: ['max3(2, 9, 5)', 'max3(0, -1, -2)', 'max3(1, 1, 1)', 'max3(8, 8, 8)'], correctIndex: 0, explanation: 'max3(2, 9, 5) = 9. The other options return -1, 1, and 8 respectively.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspp-ent-6b', question: 'A team writes the same 8 lines of input-validation code in three different procedures. The MOST appropriate refactor is to:', options: ['Copy the eight-line block into a fourth procedure too, so all four locations stay perfectly consistent over time', 'Extract the validation into a single procedure and call it from each of the three places', 'Delete the validation entirely from all three places, since the duplicated checks slow the program down measurably', 'Move the eight lines into a long comment block above each procedure so the team can re-add them later'], correctIndex: 1, explanation: 'Extracting common code into a single procedure removes duplication and makes future changes consistent across all call sites.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspp-ent-7a', question: 'Which of the following BEST describes procedural abstraction?', options: ['Hiding implementation details behind a named procedure so callers focus on WHAT it does, not HOW', 'Mixing implementation and use together so callers must understand every internal detail before any call works correctly', 'A type of network protocol used to negotiate which procedure each remote machine should run next during a session', 'A way to make programs slower by forcing every call to re-derive the procedure body from scratch each time'], correctIndex: 0, explanation: 'Procedural abstraction lets the caller think in terms of behavior (sortList, computeTax) without worrying about the implementation details inside.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cspp-ent-7b', question: 'Trace the AP CSP pseudocode below.\n  PROCEDURE secondLargest(list)\n  {\n    sortedDesc ← sort list in descending order\n    RETURN sortedDesc[2]\n  }\n  DISPLAY(secondLargest([3, 7, 1, 9, 5]))', options: ['9', '7', '5', '3'], correctIndex: 1, explanation: 'Descending sort: [9, 7, 5, 3, 1]. Second item (1-based index 2) is 7.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'cpl-ent-1a', partNumber: 1, partTitle: 'List Operations, Traversals, and Procedure Design',
+    question: 'What is displayed when this code runs?\n\nnums ← [10, 20, 30, 40]\nREMOVE(nums, 2)\nINSERT(nums, 1, 5)\nAPPEND(nums, 50)\nDISPLAY(nums[3])',
+    options: ['10', '20', '30', '40'],
+    correctIndex: 2,
+    explanation: 'Removing index 2 gives [10, 30, 40], inserting 5 at index 1 gives [5, 10, 30, 40], and appending gives [5, 10, 30, 40, 50]. The element at index 3 is 30.',
+  },
+  {
+    id: 'cpl-ent-1b', partNumber: 1, partTitle: 'List Operations, Traversals, and Procedure Design',
+    question: 'What is displayed when this code runs?\n\nlist ← [1, 2, 3]\nFOR EACH item IN list {\nitem ← item * 10\n}\nDISPLAY(list)',
+    options: ['[1, 2, 3]', '[10, 20, 30]', '[10, 2, 3]', '[1, 2, 30]'],
+    correctIndex: 0,
+    explanation: 'FOR EACH gives item a copy of each value, so changing item never changes the list. To change the elements, the loop would need to assign to list[i].',
+  },
+  {
+    id: 'cpl-ent-2a', partNumber: 2, partTitle: 'Key Processes',
+    question: 'What is displayed when this code runs?\n\nPROCEDURE scale(list, factor) {\nresult ← []\nFOR EACH x IN list {\nAPPEND(result, x * factor)\n}\nRETURN(result)\n}\nnums ← [2, 5]\nDISPLAY(scale(nums, 3))\nDISPLAY(nums)',
+    options: ['[6, 15] [6, 15]', '[2, 5] [6, 15]', '[5, 8] [2, 5]', '[6, 15] [2, 5]'],
+    correctIndex: 3,
+    explanation: 'The procedure builds and returns a new list of tripled values, [6, 15]. It never changes the list passed in, so nums is still [2, 5].',
+  },
+  {
+    id: 'cpl-ent-2b', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A program defines PROCEDURE average(scores) and later runs the call average(myScores). Which statement is correct?',
+    options: ['scores is the parameter and myScores is the argument', 'myScores is the parameter and scores is the argument', 'both scores and myScores are arguments', 'both scores and myScores are parameters'],
+    correctIndex: 0,
+    explanation: 'A parameter is the variable named in the procedure definition, here scores. The argument is the value supplied in the call, here myScores.',
+  },
+  {
+    id: 'cpl-ent-3a', partNumber: 3, partTitle: 'List Traversal Algorithms',
+    question: 'Which procedure performs a partial traversal of its list?',
+    options: ['One that adds every element to a running total', 'One that returns the index of the first match it finds', 'One that appends every even element to a new list', 'One that tracks the smallest element seen so far'],
+    correctIndex: 1,
+    explanation: 'Returning at the first match stops the loop early, so some elements may never be accessed. A total, a filter and a minimum all need to look at every element.',
+  },
+  {
+    id: 'cpl-ent-3b', partNumber: 3, partTitle: 'List Traversal Algorithms',
+    question: 'What is displayed when this code runs?\n\nPROCEDURE f(nums, k) {\ncount ← 0\nFOR EACH n IN nums {\nIF (n MOD k = 0) {\ncount ← count + 1\n}\n}\nRETURN(count)\n}\nDISPLAY(f([12, 7, 9, 30, 4], 3))',
+    options: ['2', '4', '51', '3'],
+    correctIndex: 3,
+    explanation: 'The procedure counts the elements divisible by 3: 12, 9 and 30. It returns the count, 3, not their sum of 51.',
+  },
+  {
+    id: 'cpl-ent-4a', partNumber: 4, partTitle: 'Data Abstraction and Procedural Abstraction',
+    question: 'What is displayed when this code runs?\n\naList ← [1, 2, 3]\nbList ← aList\nAPPEND(bList, 4)\nDISPLAY(LENGTH(aList))',
+    options: ['3', '4', '0', '2'],
+    correctIndex: 0,
+    explanation: 'On the exam reference sheet, bList ← aList assigns a copy of aList. Appending to the copy leaves aList with its original 3 elements.',
+  },
+  {
+    id: 'cpl-ent-4b', partNumber: 4, partTitle: 'Data Abstraction and Procedural Abstraction',
+    question: 'PROCEDURE countAbove(nums, cutoff) is meant to count the elements strictly greater than cutoff. Which single test is most likely to catch a bug that uses ≥ instead of >?',
+    options: ['countAbove([10, 20, 30], 50), expecting 0', 'countAbove([50, 50, 51], 50), expecting 1', 'countAbove([60, 70, 80], 50), expecting 3', 'countAbove([90, 95, 99], 50), expecting 3'],
+    correctIndex: 1,
+    explanation: 'Only a test with values equal to the cutoff tells > apart from ≥: the buggy version would return 3 instead of 1. Values far from the cutoff give the same answer either way.',
+  },
+  {
+    id: 'cpl-ent-5a', partNumber: 5, partTitle: 'Inserting, Removing, and Updating Elements',
+    question: 'This code is meant to remove every negative value from nums. What is nums afterward if it starts as [-1, -2, 4, -3, -5]?\n\ni ← 1\nREPEAT UNTIL (i > LENGTH(nums)) {\nIF (nums[i] < 0) {\nREMOVE(nums, i)\n}\ni ← i + 1\n}',
+    options: ['[4]', '[-2, 4]', '[-2, 4, -5]', '[-2, 4, -3]'],
+    correctIndex: 2,
+    explanation: 'Each REMOVE shifts the next element into position i, but i still increases, so that element is skipped. Removing -1 skips -2, and removing -3 skips -5, leaving [-2, 4, -5].',
+  },
+  {
+    id: 'cpl-ent-5b', partNumber: 5, partTitle: 'Inserting, Removing, and Updating Elements',
+    question: 'What is displayed when this code runs?\n\nlist ← [3, 6, 9, 12]\nREMOVE(list, 2)\nlist[2] ← 0\nINSERT(list, 2, 5)\nDISPLAY(list)',
+    options: ['[3, 5, 9, 12]', '[3, 0, 5, 12]', '[5, 3, 0, 12]', '[3, 5, 0, 12]'],
+    correctIndex: 3,
+    explanation: 'REMOVE gives [3, 9, 12], assigning index 2 replaces 9 to give [3, 0, 12], and INSERT puts 5 at index 2 and shifts the rest right: [3, 5, 0, 12].',
+  },
+  {
+    id: 'cpl-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'What is the value of total after this code runs with nums ← [1, 2, 3, 4, 5]?\n\ntotal ← 0\nFOR EACH n IN nums {\nIF (n MOD 2 = 1) {\ntotal ← total + n * n\n}\n}',
+    options: ['35', '20', '55', '9'],
+    correctIndex: 0,
+    explanation: 'The IF keeps the odd values 1, 3 and 5, and the accumulator adds their squares: 1 + 9 + 25 = 35.',
+  },
+  {
+    id: 'cpl-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'For which call does this procedure cause an error?\n\nPROCEDURE firstK(list, k) {\nresult ← []\ni ← 1\nREPEAT k TIMES {\nAPPEND(result, list[i])\ni ← i + 1\n}\nRETURN(result)\n}',
+    options: ['firstK([4, 7], 2)', 'firstK([4, 7], 3)', 'firstK([4, 7], 0)', 'firstK([4, 7, 1], 1)'],
+    correctIndex: 1,
+    explanation: 'With k = 3 the loop reaches list[3], but the list has only 2 elements, so the index is out of range. With k = 0 the loop simply runs zero times and returns an empty list.',
+  },
+  {
+    id: 'cpl-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'A student writes PROCEDURE average and PROCEDURE highest, then writes PROCEDURE report, which calls both to print a class summary. This design is an example of',
+    options: ['storing many related values under a single list name', 'reading every element of a list from first to last', 'solving subproblems with separate procedures', 'testing a procedure with values at the boundaries'],
+    correctIndex: 2,
+    explanation: 'Building report from smaller procedures that each solve one subproblem is modularity, a form of procedural abstraction. The other choices describe data abstraction, traversal and testing.',
+  },
+  {
+    id: 'cpl-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'What is displayed when this code runs?\n\nlist ← [4, 8, 15]\nAPPEND(list, LENGTH(list))\nDISPLAY(list[LENGTH(list)] + list[1])',
+    options: ['19', '12', '7', '6'],
+    correctIndex: 2,
+    explanation: 'LENGTH(list) is 3 when it is appended, giving [4, 8, 15, 3]. The last element is now 3, and 3 + 4 = 7.',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Procedures & Abstraction' },
-    { partNumber: 2, partTitle: 'Parameters & Arguments' },
-    { partNumber: 3, partTitle: 'Calling Procedures' },
-    { partNumber: 4, partTitle: 'Lists Basics' },
-    { partNumber: 5, partTitle: 'Iterating over Lists' },
-    { partNumber: 6, partTitle: 'Applied Practice' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'List Operations, Traversals, and Procedure Design' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'List Traversal Algorithms' },
+    { partNumber: 4, partTitle: 'Data Abstraction and Procedural Abstraction' },
+    { partNumber: 5, partTitle: 'Inserting, Removing, and Updating Elements' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

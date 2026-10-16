@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Social & Ethical Impacts (AP CS Principles)
+ * Entrance Quiz — Social & Ethical Impacts (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 5: algorithmic bias, surveillance, ethics, equity, computing as power.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'csps-ent-1a', question: 'Algorithmic bias MOST commonly arises from:', options: ['Algorithms that secretly know the developer’s personal opinions and silently apply them when scoring inputs at run time', 'Training data that under-represents certain groups, or design choices that encode existing inequalities', 'Random hardware errors during training that flip a small fraction of bits and bias the resulting model weights', 'Use of open-source software, since publicly visible code is more often modified by malicious contributors than proprietary code'], correctIndex: 1, explanation: 'Bias usually enters through skewed training data, biased labels, or design choices that reflect historical inequalities — not through random errors.', partNumber: 1, partTitle: 'Algorithmic Bias' },
-  { id: 'csps-ent-1b', question: 'A face-recognition system performs much worse on women with darker skin than on men with lighter skin. The MOST likely explanation is:', options: ['Cameras refuse to capture certain faces because their built-in sensors automatically discard images that fail an internal symmetry check', 'The training data over-represented certain demographic groups, so the model generalizes poorly to under-represented ones', 'The algorithm is intentionally turned off for some users by region, so it produces low-confidence guesses for those queries', 'Networks block certain faces by IP address so the recognition request never reaches the central server during peak load times'], correctIndex: 1, explanation: 'A real, documented pattern: under-representation in training data leads to higher error rates for under-represented groups.', partNumber: 1, partTitle: 'Algorithmic Bias' },
-  { id: 'csps-ent-2a', question: 'Surveillance through computing technologies (cameras, location data, sensors) raises ethical concerns PRIMARILY because:', options: ['It always uses too much electricity, requiring new power plants in any city that adopts large-scale public sensor networks', 'Continuous data collection can chill free expression, enable abuse of power, and disproportionately harm vulnerable groups', 'It cannot store more than 1 GB of data per camera, forcing constant overwriting that loses important footage every night', 'It only works on weekends because most surveillance systems are calibrated against business-day traffic patterns and pedestrian flows'], correctIndex: 1, explanation: 'Surveillance shifts power asymmetrically and can disproportionately harm marginalized communities, even when intended for safety.', partNumber: 2, partTitle: 'Surveillance & Power' },
-  { id: 'csps-ent-2b', question: 'A school deploys keystroke-logging software on every student laptop. A reasonable ethical concern is:', options: ['It uses too much CPU on each laptop, slowing classroom apps and shortening battery life enough to disrupt full days of student work consistently', 'It collects sensitive personal data (passwords, private messages) far beyond what is needed for any legitimate educational purpose', 'It improves keyboard durability slightly, but the wear-leveling logic is poorly designed and tends to fail on shared classroom devices first instead', 'It increases internet bandwidth use because every keystroke is uploaded to a central server before being processed by the school\'s analytics tool'], correctIndex: 1, explanation: 'Even with educational intent, keystroke logging captures highly sensitive content disproportionate to its purpose — a clear data-minimization and consent issue.', partNumber: 2, partTitle: 'Surveillance & Power' },
-  { id: 'csps-ent-3a', question: 'A free social-media app is described as “if you’re not paying for the product, you ARE the product.” This is BEST interpreted to mean:', options: ['Users are physically owned by the company under the terms of service they agree to when they sign up for the app', 'The business model relies on collecting user data and attention to sell to advertisers', 'The app does nothing useful and exists mainly to inflate download statistics for the parent company’s investors before the next funding round', 'No money is involved at all in the operation, since servers, staff, and bandwidth are donated by volunteers around the world'], correctIndex: 1, explanation: 'Free services often monetize through targeted advertising, where user data and engagement (attention) are the product sold to advertisers.', partNumber: 3, partTitle: 'Data Economy & Consent' },
-  { id: 'csps-ent-3b', question: 'Meaningful informed consent for data collection requires that users:', options: ['Click “Agree” on a 30-page privacy policy without reading it, since dense legal language is the standard format that courts and regulators expect', 'Be told clearly what data is collected, how it will be used and shared, and have a real choice without being coerced', 'Pay a small recurring fee that covers the legal cost of generating a personalized contract for each new user during account creation', 'Use only the latest hardware so the consent screens display correctly and the user\'s acceptance is recorded with full cryptographic provenance later'], correctIndex: 1, explanation: 'Real informed consent needs clarity, specificity, and a non-coerced choice — not buried legalese forced as a take-it-or-leave-it click.', partNumber: 3, partTitle: 'Data Economy & Consent' },
-  { id: 'csps-ent-4a', question: 'Equitable access to computing matters for democracy PRIMARILY because:', options: ['Computing has no effect on civic life because elections, courts, and public meetings still rely entirely on paper records and in-person attendance', 'Many essential services, jobs, and information now flow through digital platforms; people without access are excluded from full participation', 'Voting requires a smartphone in every country, so anyone without a personal mobile device is automatically prevented from registering or casting a ballot', 'Networks operate only in capital cities, so rural residents must travel long distances to access any government service that has gone fully online'], correctIndex: 1, explanation: 'When essential services (jobs, healthcare, education, government) move online, the digital divide becomes an equity-of-participation issue.', partNumber: 4, partTitle: 'Equity & Access' },
-  { id: 'csps-ent-4b', question: 'A new AI-driven hiring tool screens résumés. Audits show it consistently downranks applicants from certain ZIP codes. The MOST appropriate response is to:', options: ['Deploy it widely without further review — the algorithm is objective and any complaints can be addressed later through an internal appeals process', 'Pause use, audit the training data and features for proxies of protected attributes, and involve affected communities before redeployment', 'Use it only on weekends, when fewer applications arrive, so the affected ZIP codes are screened during lower-volume periods of the recruiting cycle', 'Add more applicants from the underrepresented ZIP codes to the training data so the model learns to weight all neighborhoods equally over time'], correctIndex: 1, explanation: 'ZIP code can act as a proxy for race or class. Responsible use requires audit, transparency, and stakeholder engagement before deployment.', partNumber: 4, partTitle: 'Equity & Access' },
-  { id: 'csps-ent-5a', question: 'When evaluating an ethical question about a computing innovation, AP CSP students should:', options: ['Decide based purely on personal opinion, since ethical questions about new computing tools have no objectively right or wrong answers in any context', 'Consider stakeholders, intended and unintended consequences, distribution of benefits and harms, and reversibility', 'Only consider the developer’s profit, because long-term company success funds the most beneficial future innovations for everyone in the wider society', 'Refuse to think about it at all and let regulators handle every concern that arises after the product ships to actual users in the market'], correctIndex: 1, explanation: 'Ethical analysis is multidimensional: stakeholders, consequences (intended/unintended), equity of impact, and whether harms are reversible.', partNumber: 5, partTitle: 'Ethical Reasoning' },
-  { id: 'csps-ent-5b', question: 'A predictive policing system directs more patrols to neighborhoods where past arrests were higher. A core ethical risk is:', options: ['It runs too slowly during peak hours, missing real-time alerts that officers depend on when responding to active in-progress incidents downtown', 'A feedback loop: more patrols → more arrests → more data “justifying” more patrols, regardless of actual crime rates', 'It uses too little electricity to keep the central server warm enough, causing intermittent dropouts in the predictive model output during overnight runs', 'It cannot store dates beyond 2038, so historical patrol data older than that horizon is silently truncated and skews the predictions in noticeable ways'], correctIndex: 1, explanation: 'Self-reinforcing feedback loops can entrench historical bias, making the system look “objective” while amplifying inequity.', partNumber: 5, partTitle: 'Ethical Reasoning' },
-  { id: 'csps-ent-6a', question: 'A streaming service’s recommender pushes increasingly extreme content because extreme content drives more watch time. Which BEST describes this dynamic?', options: ['A neutral, value-free outcome of the recommender simply showing each user the content most similar to what they have already watched', 'A misalignment between the optimization target (engagement) and broader user wellbeing or societal health', 'A hardware fault on the recommender\'s GPU cluster that nudges the model toward higher predicted-watch-time scores than it would otherwise produce', 'A protocol error in the streaming server that promotes whichever videos happened to be cached closest to the affected user during peak hours'], correctIndex: 1, explanation: 'Optimizing for engagement can produce socially harmful outcomes when engagement is not aligned with user welfare or civic goods.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'csps-ent-6b', question: 'Which is the BEST example of an ethically responsible deployment of a face-recognition system?', options: ['Quietly deploying it citywide with no public notice, on the grounds that announcements would tip off the criminals it is meant to catch downtown', 'Limiting use to narrow, opt-in scenarios with audit, oversight, transparent reporting, and an appeals process', 'Using it without testing on diverse demographic groups, since real-world deployment will surface any error patterns faster than lab benchmarks ever could', 'Selling all collected images to third parties so independent researchers can study bias and improve the underlying model for the whole industry over time'], correctIndex: 1, explanation: 'Responsible deployment combines purpose limitation, transparency, equity testing, oversight, and remedy mechanisms.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'csps-ent-7a', question: 'A core AP CSP idea about computing innovations is that they:', options: ['Always benefit everyone equally, because they are designed by engineers using objective math that treats every user the same way every time', 'Reflect the values and choices of their designers and operate within social systems — they are not neutral', 'Have no relationship to society, since computing artifacts are abstract mathematical objects that exist outside any cultural or historical context whatsoever', 'Are independent of human values, since once an algorithm is published it behaves identically regardless of who deploys or maintains it later'], correctIndex: 1, explanation: 'Computing systems embed design choices and operate in social contexts. They are not value-neutral.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'csps-ent-7b', question: 'Which of the following BEST balances innovation and ethical responsibility?', options: ['Build first and ignore consequences forever, since trying to anticipate every harm would slow innovation and let competitors win the market first', 'Anticipate impacts during design, involve affected communities, monitor outcomes after deployment, and be willing to change course', 'Refuse to build any new technology until every conceivable risk has been formally proven impossible by an independent third-party review board first', 'Hide all design decisions from the public so that potential bad actors cannot exploit knowledge of how the system works internally during operation'], correctIndex: 1, explanation: 'Responsible innovation is iterative: anticipate, include stakeholders, monitor, and revise. Neither blind acceleration nor blanket refusal.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'cse-ent-1a', partNumber: 1, partTitle: 'Privacy, Surveillance, Intellectual Property, and Responsibility',
+    question: 'A free fitness app earns most of its money by selling users\' activity data to advertisers. Which describes the tradeoff its users are making?',
+    options: ['They hand over personal data in return for a free service', 'They pay a fee in return for stronger privacy', 'They accept less accurate data in return for faster syncing', 'They give up battery life in return for free music'],
+    correctIndex: 0,
+    explanation: 'Free services are often paid for with the data users generate. The convenience comes at a cost to privacy, often without users fully understanding what they agreed to.',
+  },
+  {
+    id: 'cse-ent-1b', partNumber: 1, partTitle: 'Privacy, Surveillance, Intellectual Property, and Responsibility',
+    question: 'A company releases its app as proprietary software. Which statement is true?',
+    options: ['Anyone may modify and redistribute its code', 'Others need permission to view, change or share its code', 'Anyone may reuse it freely as long as they give credit', 'Its source code must be posted openly online'],
+    correctIndex: 1,
+    explanation: 'Proprietary software keeps all rights reserved. Open source and Creative Commons are the arrangements that let others reuse or modify work.',
+  },
+  {
+    id: 'cse-ent-2a', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A meal-delivery app launches in a city. Which group is an indirect stakeholder rather than a direct user?',
+    options: ['Grocers that lose dinner sales', 'Customers who order meals through it', 'Restaurants that list their menus on it', 'Diners who rate their orders in the app'],
+    correctIndex: 0,
+    explanation: 'Grocers never use the app, yet its success changes their business. Customers, listed restaurants and reviewers all use the app directly.',
+  },
+  {
+    id: 'cse-ent-2b', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A company\'s résumé screener turns out to reject women more often than men, and the company says the bias was never intended. What is the most responsible next step?',
+    options: ['Keep using it, since no one meant any harm', 'Train it on more of the same past hiring data', 'Measure its results by group and fix the cause', 'Lower the passing score for every applicant'],
+    correctIndex: 2,
+    explanation: 'Bias causes real harm whether or not it was intended. Testing results for each group and correcting the data or design addresses it; more of the same biased data would not.',
+  },
+  {
+    id: 'cse-ent-3a', partNumber: 3, partTitle: 'Patterns & Examples: Crowdsourcing and Unintended Uses',
+    question: 'An inventor raises money online from 5,000 people who each give a small amount to help build a new product. This is an example of',
+    options: ['crowdfunding', 'citizen science', 'open access', 'data mining'],
+    correctIndex: 0,
+    explanation: 'Crowdfunding connects a business or cause with funding from many people over the Internet. It is one form of crowdsourcing.',
+  },
+  {
+    id: 'cse-ent-3b', partNumber: 3, partTitle: 'Patterns & Examples: Crowdsourcing and Unintended Uses',
+    question: 'An online encyclopedia lets anyone edit its articles, and a vandal adds false facts to several pages. Which safeguard keeps the benefits of many contributors?',
+    options: ['Letting only one person write every article', 'Hiding the history of edits from readers', 'Clear editing rules and a review of all changes', 'Turning off the search feature for visitors'],
+    correctIndex: 2,
+    explanation: 'Projects that rely on many contributors need rules and review to catch misuse. Limiting writing to one person would throw away the scale that makes crowdsourcing useful.',
+  },
+  {
+    id: 'cse-ent-4a', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'A student shares a post with 50 friends. One friend screenshots it, it spreads widely, and a future employer sees it. What does this show?',
+    options: ['Privacy settings make every post completely private', 'Online information can be used in unintended ways', 'Deleting the original removes every copy', 'Posts shared with friends cannot be reshared'],
+    correctIndex: 1,
+    explanation: 'Information placed online can be forwarded, reshared and seen by people it was never meant for. Once shared, it is hard to control or remove.',
+  },
+  {
+    id: 'cse-ent-4b', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'A hospital uses an algorithm to decide which patients get follow-up calls. Which step best checks whether bias is built into it?',
+    options: ['Run it on faster hardware', 'Train it on a much bigger copy of the same old data', 'Keep its rules secret from the doctors', 'Compare error rates across groups of people'],
+    correctIndex: 3,
+    explanation: 'Bias shows up as some groups faring worse, so results must be measured for each group. Faster hardware or more of the same data does not reveal or fix it.',
+  },
+  {
+    id: 'cse-ent-5a', partNumber: 5, partTitle: 'Legal and Ethical Concerns',
+    question: 'Which use of someone else\'s work is both legal and ethical?',
+    options: ['Downloading a paid movie that someone posted without permission', 'Changing and sharing an open-source program under its license', 'Turning in a classmate\'s code as your own work', 'Copying a purchased game\'s files for friends'],
+    correctIndex: 1,
+    explanation: 'Open-source licenses allow programs to be modified and redistributed. The other choices violate the creator\'s intellectual property or are plagiarism.',
+  },
+  {
+    id: 'cse-ent-5b', partNumber: 5, partTitle: 'Legal and Ethical Concerns',
+    question: 'A smart speaker in a living room is always listening for its wake word. Which concern does the AP framework link most directly to devices like this?',
+    options: ['Privacy, from nonstop data collection', 'Intellectual property, from copied music', 'Bias, from unequal loan decisions', 'Fault tolerance, from relying on one server'],
+    correctIndex: 0,
+    explanation: 'Devices that continuously monitor activities and collect data raise privacy concerns, because that data can be analyzed and used in ways owners never expected.',
+  },
+  {
+    id: 'cse-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'A team measures its face-unlock feature separately for each group of users and finds it fails far more often for one group. What should the team do next?',
+    options: ['Release it now, since the average result is fine', 'Gather more photos of groups it already handles well', 'Stop measuring, since results always vary by group', 'Look for the cause in the data and the design'],
+    correctIndex: 3,
+    explanation: 'Once a gap is found, the next step is to trace it to the training data or the algorithm, fix it, and check again. An acceptable average can hide harm to one group.',
+  },
+  {
+    id: 'cse-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'A city installs cameras that cut speeding but also log every car\'s license plate. Which statement best fits this effect?',
+    options: ['The cameras have no effect beyond fewer tickets', 'The cameras help drivers but harm no one', 'Some value safety and others fear tracking', 'The cameras harm drivers but help no one'],
+    correctIndex: 2,
+    explanation: 'One effect of an innovation can be beneficial to some people and harmful to others. Asking who benefits and who could be harmed is the core of impact analysis.',
+  },
+  {
+    id: 'cse-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'Which reasoning about an algorithm that treats some groups unfairly is correct?',
+    options: ['Its output is objective because a computer made it', 'Adding more of the same data will remove the bias', 'Bias only matters when it is written in on purpose', 'Its harm is real even if no one intended it'],
+    correctIndex: 3,
+    explanation: 'Bias can enter through data or design without anyone meaning it, and the people affected are harmed either way. Algorithm output is not automatically objective.',
+  },
+  {
+    id: 'cse-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'A student uses a paragraph from an open-access research article in an essay. What must the student do?',
+    options: ['Nothing, since open access means no credit is needed', 'Pay the journal before using any of the text', 'Credit the authors as the source', 'Reword it so no one can trace it'],
+    correctIndex: 2,
+    explanation: 'Open access removes barriers to reading research, but material created by someone else should always be cited. Presenting it as your own is plagiarism.',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Algorithmic Bias' },
-    { partNumber: 2, partTitle: 'Surveillance & Power' },
-    { partNumber: 3, partTitle: 'Data Economy & Consent' },
-    { partNumber: 4, partTitle: 'Equity & Access' },
-    { partNumber: 5, partTitle: 'Ethical Reasoning' },
-    { partNumber: 6, partTitle: 'Applied Practice' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Privacy, Surveillance, Intellectual Property, and Responsibility' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples: Crowdsourcing and Unintended Uses' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Legal and Ethical Concerns' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

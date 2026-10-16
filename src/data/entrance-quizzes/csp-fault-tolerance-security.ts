@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Fault Tolerance & Security (AP CS Principles)
+ * Entrance Quiz — Fault Tolerance & Security (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 4: redundancy, encryption, authentication, malware, phishing.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'cspf-ent-1a', question: 'Fault tolerance is BEST defined as:', options: ['The total absence of any failures in a system, achieved through perfectly engineered hardware that never breaks', 'The ability of a system to continue functioning, perhaps with reduced capacity, when some components fail', 'A type of encryption used to protect a system from unauthorized access by outside attackers on the network', 'A measure of internet bandwidth indicating how much data the system can process per second on average'], correctIndex: 1, explanation: 'A fault-tolerant system continues operating when components fail — it does not require zero failures, just graceful handling of them.', partNumber: 1, partTitle: 'Fault Tolerance' },
-  { id: 'cspf-ent-1b', question: 'Adding redundant network paths between two data centers MAINLY:', options: ['Improves fault tolerance by allowing rerouting if one path fails', 'Reduces the total available bandwidth between the two centers by splitting traffic across paths', 'Eliminates the need for routing protocols because each path can be used independently', 'Encrypts user data automatically as soon as it travels along any of the redundant network paths'], correctIndex: 0, explanation: 'Redundancy is a key technique for fault tolerance: if one path fails, traffic uses an alternate path.', partNumber: 1, partTitle: 'Fault Tolerance' },
-  { id: 'cspf-ent-2a', question: 'Symmetric encryption uses:', options: ['One key to encrypt and a DIFFERENT key to decrypt, kept by sender and receiver respectively', 'The SAME shared key for both encrypting and decrypting messages', 'No keys at all because the algorithm itself scrambles data using a fixed secret method', 'A public username only, with no key material exchanged between the sender and the receiver'], correctIndex: 1, explanation: 'Symmetric encryption uses one shared secret key for both directions. The challenge is securely sharing the key in advance.', partNumber: 2, partTitle: 'Encryption' },
-  { id: 'cspf-ent-2b', question: 'Public-key (asymmetric) encryption uses a public key and a private key. A message encrypted with someone’s PUBLIC key:', options: ['Can be decrypted by anyone who knows the public key that was used to encrypt the message', 'Can only be decrypted by the holder of the matching PRIVATE key', 'Cannot be decrypted at all because the public key destroys the original message contents permanently', 'Is automatically sent to all users on the network as part of the public encryption process'], correctIndex: 1, explanation: 'Public-key encryption allows anyone to encrypt with the public key, but only the holder of the corresponding private key can decrypt.', partNumber: 2, partTitle: 'Encryption' },
-  { id: 'cspf-ent-3a', question: 'Multi-factor authentication (MFA) improves security PRIMARILY because it:', options: ['Eliminates the need for any passwords entirely by replacing them with a single hardware token that the user must always carry along', 'Requires combining two or more independent factors (e.g., something you know AND something you have), so a stolen password alone is not enough', 'Encrypts the user’s files at rest so that even an attacker who steals the device cannot read the underlying data without the key', 'Forces the user to use a specific browser that has been hardened with extra security features approved by the organization’s IT department'], correctIndex: 1, explanation: 'MFA combines independent factors (knowledge, possession, inherence). Compromising one factor (e.g., a password) is not enough to gain access.', partNumber: 3, partTitle: 'Authentication' },
-  { id: 'cspf-ent-3b', question: 'A strong password is BEST characterized by:', options: ['Being exactly 4 characters long so the user can remember and type it quickly on every login', 'High length and high entropy (random mix of characters), and not reused across accounts', 'Being the user’s birthday or another easily memorable personal date that they will not forget over time', 'Being a single common dictionary word that is short, easy to type, and easy to recall every day'], correctIndex: 1, explanation: 'Long, high-entropy, unique passwords resist brute-force and credential-stuffing attacks much better than short, common, or reused ones.', partNumber: 3, partTitle: 'Authentication' },
-  { id: 'cspf-ent-4a', question: 'A phishing attack typically tries to:', options: ['Physically destroy computer hardware by overheating components or cutting through the device’s power supply', 'Trick a user into revealing credentials or installing malware via a deceptive message that appears legitimate', 'Increase a network’s bandwidth temporarily so that legitimate traffic can be routed through alternative paths', 'Add redundancy to a system by replicating servers and rerouting around any failed components quickly'], correctIndex: 1, explanation: 'Phishing exploits human trust — a fake email, text, or site impersonates a legitimate party to steal credentials or push malware.', partNumber: 4, partTitle: 'Threats & Malware' },
-  { id: 'cspf-ent-4b', question: 'Malware is BEST defined as:', options: ['Any legitimate program that is widely distributed by reputable software vendors for general use', 'Software intentionally designed to harm a system, steal data, or perform unauthorized actions', 'A type of strong password generated by combining random words with numbers and special characters', 'A network protocol used to coordinate communication between firewalls and intrusion-detection sensors'], correctIndex: 1, explanation: 'Malware (viruses, worms, ransomware, spyware, etc.) is software written to damage, disrupt, or gain unauthorized access.', partNumber: 4, partTitle: 'Threats & Malware' },
-  { id: 'cspf-ent-5a', question: 'A company stores backups of customer data in three geographically separate data centers. The MAIN purpose is to:', options: ['Make the data faster to download for users who happen to live close to one of the data centers', 'Protect against data loss from a single regional disaster (fire, flood, power outage)', 'Encrypt the data automatically by storing different ciphertext copies in each separate data center', 'Reduce the cost of storage by spreading the same files across cheaper hardware in multiple regions'], correctIndex: 1, explanation: 'Geographic redundancy protects against localized failures. If one data center is destroyed, the others still have the data.', partNumber: 5, partTitle: 'Resilience in Practice' },
-  { id: 'cspf-ent-5b', question: 'A user receives an email warning their bank account will be closed unless they click a link and “verify” their password. The MOST appropriate response is to:', options: ['Click the link immediately to keep the account open and update the password through the page that loads, before the deadline given in the warning email', 'Treat it as a probable phishing attempt; do not click; verify by visiting the bank’s website directly or calling a known number', 'Forward the email to all their contacts so that other bank customers are also warned about the supposed account-closure problem in time', 'Reply with their full password to confirm their identity, since the bank already knows the password and is just verifying the rightful owner'], correctIndex: 1, explanation: 'Urgency + a link asking for credentials is a classic phishing pattern. Verify out-of-band using a trusted channel.', partNumber: 5, partTitle: 'Resilience in Practice' },
-  { id: 'cspf-ent-6a', question: 'A web service is hit by a Distributed Denial-of-Service (DDoS) attack. The PRIMARY harm is that:', options: ['User data is stolen from the database and posted publicly on the open internet for anyone to read', 'Legitimate users cannot reach the service because it is overwhelmed by malicious traffic', 'All user passwords are cracked by brute force in a matter of seconds during the course of the attack', 'The service’s underlying servers are permanently destroyed by the malicious traffic and have to be physically replaced'], correctIndex: 1, explanation: 'DDoS attacks aim at availability — they flood the target with so much traffic that legitimate requests cannot be served.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspf-ent-6b', question: 'A messaging app uses end-to-end encryption. This means that:', options: ['The app provider can read all messages in plain text on its servers and may share them with advertisers or governments', 'Messages are encrypted on the sender’s device and only decrypted on the recipient’s device; intermediaries (including the provider) cannot read them', 'The messages are not encrypted at all, only labeled as private so the provider knows it should refrain from reading them', 'The recipient cannot read the messages either, because end-to-end encryption only encrypts the sender’s local copy of the data'], correctIndex: 1, explanation: 'End-to-end encryption keeps the keys on the endpoints, so even the service provider sees only ciphertext in transit.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspf-ent-7a', question: 'Security is BEST described as a:', options: ['A single tool you install once and then never have to update or configure again for the rest of its lifetime', 'Layered, ongoing process combining technical controls, processes, and user behavior', 'A property only relevant to large companies, governments, or other organizations with valuable data worth attacking', 'A physical lock on hardware only, with no role for software controls, monitoring, or any user training'], correctIndex: 1, explanation: 'Security is defense-in-depth: encryption, authentication, monitoring, training, patching, and physical controls all work together over time.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cspf-ent-7b', question: 'Which of the following is the BEST example of fault tolerance?', options: ['A web service that crashes completely whenever any single server in its data center fails for any reason', 'A web service that automatically routes user requests to backup servers when one server becomes unavailable', 'A personal computer that has no antivirus software installed and runs everything as the system administrator user', 'A small office network with only one network cable connecting it to the rest of the public internet'], correctIndex: 1, explanation: 'Automatic failover to backup servers is a textbook example of fault tolerance: the system stays up despite component failure.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'cfts-ent-1a', partNumber: 1, partTitle: 'Redundancy, Encryption, and Network Security',
+    question: 'Maya wants to send Leo a message using public key encryption so that only Leo can read it. Which key does Maya use to encrypt the message?',
+    options: ['Leo\'s public key', 'Leo\'s private key', 'Maya\'s private key', 'Maya\'s public key'],
+    correctIndex: 0,
+    explanation: 'In public key encryption, anyone can encrypt with the receiver\'s public key, but only the receiver\'s private key can decrypt. Maya never needs Leo\'s private key.',
+  },
+  {
+    id: 'cfts-ent-1b', partNumber: 1, partTitle: 'Redundancy, Encryption, and Network Security',
+    question: 'An attacker sets up a wireless network named like a café\'s real one, and reads the data of everyone who joins it. What is this?',
+    options: ['A keylogger', 'A computer virus', 'A rogue access point', 'A phishing email'],
+    correctIndex: 2,
+    explanation: 'A rogue access point is a wireless access point that gives unauthorized access to a network, so data sent through it can be intercepted.',
+  },
+  {
+    id: 'cfts-ent-2a', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A school network has these links: Lab–Hub, Office–Hub, Gym–Hub, Hub–Router and Router–Internet. Which added link lets the Gym keep reaching the Internet if the Hub fails?',
+    options: ['A link from Gym to Router', 'A second link from Gym to Hub', 'A link from Lab to Router', 'A link from Hub to Office'],
+    correctIndex: 0,
+    explanation: 'A Gym–Router link gives the Gym a path that does not pass through the Hub. A second Gym–Hub link still depends on the Hub working.',
+  },
+  {
+    id: 'cfts-ent-2b', partNumber: 2, partTitle: 'Key Processes',
+    question: 'Why do the designers of the Internet accept the extra cost of building redundant paths?',
+    options: ['So each packet always takes the single shortest path', 'So routers no longer need backup power', 'So no encryption is needed on any link', 'So data can keep flowing when some parts fail'],
+    correctIndex: 3,
+    explanation: 'Parts of complex systems fail at unexpected times, often several at once. Redundant paths let data be rerouted, which is fault tolerance.',
+  },
+  {
+    id: 'cfts-ent-3a', partNumber: 3, partTitle: 'Patterns & Examples: Authentication and Encryption',
+    question: 'Which login process is an example of multifactor authentication?',
+    options: ['A password plus a code texted to the user\'s own phone', 'A password plus a second, different password', 'A password plus the answer to a security question', 'A long password made of four random words'],
+    correctIndex: 0,
+    explanation: 'Multifactor authentication needs evidence from at least two categories. The texted code is something the user has, while a second password or a security answer is just more of what the user knows.',
+  },
+  {
+    id: 'cfts-ent-3b', partNumber: 3, partTitle: 'Patterns & Examples: Authentication and Encryption',
+    question: 'Two offices lock and unlock their shared files with the same secret key. Which statement is correct?',
+    options: ['This is public key encryption, so only one office can decrypt', 'This is symmetric encryption, so anyone with that key can decrypt', 'This is symmetric encryption, so a certificate authority must issue the key', 'This is public key encryption, so the key may be posted openly'],
+    correctIndex: 1,
+    explanation: 'One shared key for both encryption and decryption is symmetric encryption. Its weakness is that anyone who obtains the key can read the files.',
+  },
+  {
+    id: 'cfts-ent-4a', partNumber: 4, partTitle: 'Connections: Parallel and Distributed Computing',
+    question: 'A grading program first loads data for 3 minutes, a step that cannot be split. It then grades four sections that take 6, 2, 5 and 4 minutes. With four processors, one section each, how long does it take?',
+    options: ['20 minutes', '9 minutes', '6 minutes', '5 minutes'],
+    correctIndex: 1,
+    explanation: 'A parallel solution takes its sequential part plus its longest parallel task: 3 + 6 = 9 minutes. Run sequentially, it would take 3 + 6 + 2 + 5 + 4 = 20 minutes.',
+  },
+  {
+    id: 'cfts-ent-4b', partNumber: 4, partTitle: 'Connections: Parallel and Distributed Computing',
+    question: 'Which task most clearly calls for distributed computing?',
+    options: ['Adding up the prices on a short grocery list', 'Checking one password against a stored one', 'Sorting 20 names into alphabetical order', 'Analyzing data too big for one machine to store'],
+    correctIndex: 3,
+    explanation: 'Distributed computing spreads work across many devices, which allows problems too large or too slow for a single computer. The other tasks are small enough for one machine.',
+  },
+  {
+    id: 'cfts-ent-5a', partNumber: 5, partTitle: 'Speedup and the Limits of Parallelism',
+    question: 'A program has a 20-second sequential portion and 80 seconds of work that splits evenly across processors. What is the speedup with 4 processors?',
+    options: ['4', '5', '1.25', '2.5'],
+    correctIndex: 3,
+    explanation: 'Sequentially it takes 100 seconds. With 4 processors it takes 20 + 80 ÷ 4 = 40 seconds, so the speedup is 100 ÷ 40 = 2.5.',
+  },
+  {
+    id: 'cfts-ent-5b', partNumber: 5, partTitle: 'Speedup and the Limits of Parallelism',
+    question: 'The same program has a 20-second sequential portion and 80 seconds of evenly splittable work. What happens to its speedup as more and more processors are added?',
+    options: ['It gets close to 5 but cannot reach it', 'It keeps growing with every processor added', 'It can never exceed 2.5', 'It reaches 100 with 100 processors'],
+    correctIndex: 0,
+    explanation: 'The run can never take less than the 20-second sequential portion, so the speedup stays below 100 ÷ 20 = 5. The sequential part limits the benefit of adding processors.',
+  },
+  {
+    id: 'cfts-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'An email that looks like it is from your bank says your account is locked and links to a page that asks for your password. What is the best first response?',
+    options: ['Click the link but type a fake password first', 'Forward the email to friends to warn them', 'Reply to the email asking if it is real', 'Contact the bank through a number you trust'],
+    correctIndex: 3,
+    explanation: 'This is a typical phishing attempt. Checking with the bank through a phone number or website you already trust avoids the disguised link entirely.',
+  },
+  {
+    id: 'cfts-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'A store\'s sales records live on one server, and the nightly backup is saved on that same server. Which change removes the single point of failure for the records?',
+    options: ['Buy a faster processor for the server', 'Encrypt the backup on the same server', 'Back up to a separate device', 'Run the backup every hour instead'],
+    correctIndex: 2,
+    explanation: 'If the server fails, a backup stored on it is lost too. A copy on a different device survives, which is data redundancy.',
+  },
+  {
+    id: 'cfts-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'Which statement about keeping systems running and secure is accurate?',
+    options: ['A sender needs the receiver\'s private key to encrypt', 'Redundancy adds fault tolerance but costs extra resources', 'Two different passwords count as a multifactor login', 'Adding processors removes the sequential portion\'s time'],
+    correctIndex: 1,
+    explanation: 'Extra components let a system survive failures, but they cost more devices and money. The other statements describe common misconceptions.',
+  },
+  {
+    id: 'cfts-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'Malware on a laptop quietly records every key the user presses and sends the record to an attacker. What is the attacker most likely trying to get?',
+    options: ['The paths the laptop\'s packets take', 'The speed of the user\'s connection', 'Passwords and other typed secrets', 'A list of the laptop\'s installed apps'],
+    correctIndex: 2,
+    explanation: 'Keylogging captures what the user types, including passwords and account numbers, which the attacker can use to gain unauthorized access.',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Fault Tolerance' },
-    { partNumber: 2, partTitle: 'Encryption' },
-    { partNumber: 3, partTitle: 'Authentication' },
-    { partNumber: 4, partTitle: 'Threats & Malware' },
-    { partNumber: 5, partTitle: 'Resilience in Practice' },
-    { partNumber: 6, partTitle: 'Applied Practice' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Redundancy, Encryption, and Network Security' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples: Authentication and Encryption' },
+    { partNumber: 4, partTitle: 'Connections: Parallel and Distributed Computing' },
+    { partNumber: 5, partTitle: 'Speedup and the Limits of Parallelism' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

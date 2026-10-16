@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Safe Computing Practices (AP CS Principles)
+ * Entrance Quiz — Safe Computing (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 5: privacy, PII, secure passwords, suspicious links, software updates, backups.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'csps-ent-1a', question: 'Personally Identifiable Information (PII) is BEST defined as:', options: ['Any data on the Internet, including public news articles and weather updates available on any open website', 'Information that can be used (alone or in combination) to identify a specific individual', 'Only encrypted data such as password hashes and credit-card numbers stored inside a secure database', 'A type of computer hardware used to read identification cards and biometric scans inside government facilities'], correctIndex: 1, explanation: 'PII includes obvious identifiers (name, SSN) AND combinations (birthdate + ZIP + gender) that can re-identify a person.', partNumber: 1, partTitle: 'PII & Privacy' },
-  { id: 'csps-ent-1b', question: 'Posting your full birthdate, hometown, and current school publicly on social media is risky MAINLY because:', options: ['Such information is heavily compressed and quickly fills the storage space allocated to your social account', 'Combined data points can be used for identity theft, password recovery attacks, or stalking', 'It uses too much bandwidth on the social network and slows the site for everyone else nearby', 'It violates network protocols that require posts to contain only encrypted, machine-readable text strings'], correctIndex: 1, explanation: 'Each fact alone seems harmless, but combinations enable security-question attacks, identity theft, and physical-safety risks.', partNumber: 1, partTitle: 'PII & Privacy' },
-  { id: 'csps-ent-2a', question: 'A strong, secure password should be:', options: ['Short and easy to guess so you can remember it without writing it down or using any extra tool', 'Long, high-entropy, unique per account, and ideally stored in a password manager', 'The same password reused across many sites so you only need to memorize one strong phrase total', 'Your username spelled backwards with one digit appended, giving a unique pattern for every site you visit'], correctIndex: 1, explanation: 'Length + entropy + uniqueness defeats brute-force AND credential stuffing if one site is breached.', partNumber: 2, partTitle: 'Passwords & Authentication' },
-  { id: 'csps-ent-2b', question: 'Two-factor authentication (2FA) using an authenticator app is MORE secure than 2FA via SMS PRIMARILY because:', options: ['SMS messages cannot be sent over modern cellular networks once a phone has any banking app installed on it', 'SMS is vulnerable to SIM-swap and interception attacks; authenticator apps generate codes locally on the device', 'Authenticator apps require no setup or shared secrets, so the codes always work without the server knowing them', 'SMS is encrypted end-to-end by default on every U.S. carrier, but the codes still reach the wrong phone'], correctIndex: 1, explanation: 'SMS-based 2FA can be intercepted via SIM swaps, while TOTP authenticator apps generate codes offline on the device.', partNumber: 2, partTitle: 'Passwords & Authentication' },
-  { id: 'csps-ent-3a', question: 'A phishing email typically uses which combination of techniques?', options: ['A polite tone with no links and no urgency, written like a personal letter from a known coworker', 'Urgency + an emotional hook + a link or attachment that requests credentials or runs malware', 'Only mathematical equations and harmless logic puzzles meant to test the recipient\'s problem-solving skills before hiring them', 'Only weather updates and travel advisories sent automatically each morning by a national news service partner'], correctIndex: 1, explanation: 'Phishing exploits urgency (“your account will be closed!”) plus a social hook plus a malicious link or attachment.', partNumber: 3, partTitle: 'Recognizing Threats' },
-  { id: 'csps-ent-3b', question: 'Before clicking a link in a suspicious email, the SAFEST first step is to:', options: ['Click the link in a private browser window to see where it actually goes before deciding whether to enter any details', 'Hover over the link to inspect the actual URL, and verify the sender out-of-band by visiting the official site directly', 'Forward the email to ten friends and ask whether they have received the same urgent message from the same sender today', 'Reply with your password and a screenshot of your inbox so the sender can confirm the request is legitimate first'], correctIndex: 1, explanation: 'Hover-to-inspect catches many phishing attempts. Out-of-band verification (typing the official URL yourself) avoids spoofed links entirely.', partNumber: 3, partTitle: 'Recognizing Threats' },
-  { id: 'csps-ent-4a', question: 'Installing software updates promptly is important PRIMARILY because:', options: ['Updates always make programs faster by rewriting them in lower-level machine code optimized for new chips', 'Updates often patch known security vulnerabilities that attackers actively exploit', 'Updates change the operating system’s color scheme and improve readability for users with vision impairments', 'Updates are required by every Internet provider before any device can connect to a public network'], correctIndex: 1, explanation: 'Most successful attacks exploit known, already-patched vulnerabilities. Prompt updates close those windows.', partNumber: 4, partTitle: 'Updates & Backups' },
-  { id: 'csps-ent-4b', question: 'A reasonable backup strategy follows the “3-2-1” rule. This means:', options: ['Three antivirus programs running together, two layered firewalls at the edge, and one home router with strong rules', 'Three copies of important data, on two different media, with one copy off-site', 'Three unique passwords across two enrolled devices for one primary user, all rotated together every six months', 'Only one cloud backup is needed if it runs continuously and replicates between two nearby data centers automatically'], correctIndex: 1, explanation: '3-2-1 protects against device failure, local disasters, and ransomware: 3 copies, 2 media types, 1 off-site copy.', partNumber: 4, partTitle: 'Updates & Backups' },
-  { id: 'csps-ent-5a', question: 'When using public Wi-Fi (e.g., a coffee shop), the SAFEST practice is to:', options: ['Send sensitive data freely; public Wi-Fi networks are encrypted by default whenever a captive portal page appears', 'Prefer HTTPS sites and a VPN, and avoid sensitive transactions when possible', 'Disable all security software so the connection is faster and the captive portal can finish loading quickly', 'Tell other users your password so the network can give your traffic priority over their slower devices'], correctIndex: 1, explanation: 'Public Wi-Fi is often unencrypted and shared. HTTPS protects content; a VPN tunnels traffic safely past hostile networks.', partNumber: 5, partTitle: 'Safe Online Behavior' },
-  { id: 'csps-ent-5b', question: 'A free “premium feature” browser extension asks for permission to “read and modify all data on the websites you visit.” The MOST appropriate response is to:', options: ['Install it immediately — the permission is standard and harmless because the browser strips dangerous data before sending it to any extension', 'Be cautious: that permission lets the extension read passwords, financial data, and inject content; install only from trusted sources', 'Tell everyone the extension is safe to use and post the install link in every group chat to help your friends save time', 'Disable HTTPS in the browser so the extension can read the unencrypted page text more easily and run its premium features faster'], correctIndex: 1, explanation: 'Broad browser permissions can be abused to harvest credentials or inject ads/malware. Vet extensions carefully.', partNumber: 5, partTitle: 'Safe Online Behavior' },
-  { id: 'csps-ent-6a', question: 'A user clicks a link, lands on a page that looks identical to their bank’s login, and enters their credentials. Which type of attack succeeded?', options: ['SQL injection delivered through the bank\'s normal login form', 'Phishing (specifically, a credential-harvesting page)', 'A hardware failure on one of the bank\'s authentication servers', 'A compression error in the locally cached copy of the page'], correctIndex: 1, explanation: 'A look-alike login page that captures credentials is a classic phishing attack.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'csps-ent-6b', question: 'A user’s files are suddenly encrypted and a message demands payment to recover them. This is a:', options: ['A compression error in the file system that scrambled the file contents while reorganizing free space on the disk overnight', 'Ransomware attack — a form of malware that encrypts data and demands payment for the key', 'A routine system update applying overnight that temporarily renamed files and asked for a fee to confirm the changes', 'A backup running normally that locked each file briefly and asked the user to confirm the operation before continuing'], correctIndex: 1, explanation: 'Ransomware is malware that encrypts files and demands payment. Recent backups are the most reliable defense.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'csps-ent-7a', question: 'Which of the following is the BEST general principle for sharing personal information online?', options: ['Share everything publicly so search engines can find you and reputable companies can verify your identity quickly when needed', 'Share the minimum information necessary for the purpose at hand, and consider how that information might be combined or persist over time', 'Always share your home address with apps so location-based services can deliver more accurate recommendations and emergency alerts immediately', 'Never share any information of any kind, ever, even when a service legitimately needs an email address to send a receipt'], correctIndex: 1, explanation: 'Data minimization + thinking about aggregation and persistence is a core safe-computing practice.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'csps-ent-7b', question: 'Which choice represents the BEST overall approach to staying safe online?', options: ['Trust every email and link from senders whose addresses look familiar, since most modern email services pre-screen incoming messages', 'Combine multiple practices: strong unique passwords + 2FA + updated software + backups + skeptical link handling', 'Rely on a single antivirus product as the only defense, since modern suites already include firewall, VPN, and backup features', 'Disable all browser security features so legitimate sites load reliably without warning prompts that confuse less technical household members'], correctIndex: 1, explanation: 'Defense-in-depth: no single control is sufficient. Layered habits and tools together provide robust protection.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'csc-ent-1a', partNumber: 1, partTitle: 'Privacy, Authentication, and Online Safety',
+    question: 'Dana was born in 2009 and has a dog named Biscuit. Which of these is the strongest password for her?',
+    options: ['Biscuit2009Dana', 'DanaAndBiscuit2009forever', 'maple-orbit-gravel', 'qwerty123456789'],
+    correctIndex: 2,
+    explanation: 'A strong password is easy for Dana to remember but hard for others to guess. Names, birth years and keyboard patterns are easy to guess, however long the result.',
+  },
+  {
+    id: 'csc-ent-1b', partNumber: 1, partTitle: 'Privacy, Authentication, and Online Safety',
+    question: 'A student deletes an embarrassing post an hour after putting it online. Which statement is most accurate?',
+    options: ['Deleting it erases every copy everywhere', 'Copies may still exist in screenshots or in backups', 'Only the student could ever have seen it', 'Deleted posts become illegal for anyone to share'],
+    correctIndex: 1,
+    explanation: 'A digital footprint is largely permanent: others may have saved, shared or cached the post before it was deleted.',
+  },
+  {
+    id: 'csc-ent-2a', partNumber: 2, partTitle: 'Key Processes',
+    question: 'One website\'s password database is stolen. Which habit most limits the damage to the user\'s other accounts?',
+    options: ['Using the same strong password everywhere', 'Writing passwords on a note by the computer', 'Using a unique password on every site', 'Turning off updates to avoid any changes'],
+    correctIndex: 2,
+    explanation: 'With unique passwords, the stolen one opens only that single account. A reused password, however strong, opens every account that shares it.',
+  },
+  {
+    id: 'csc-ent-2b', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A text says: "Your package is on hold. Pay a small fee within 1 hour at this link or it will be returned." Which feature is the strongest sign of phishing?',
+    options: ['It mentions a package delivery', 'It was sent during the daytime', 'It arrived as a short text message', 'It demands fast payment through a link'],
+    correctIndex: 3,
+    explanation: 'Urgency combined with a request for money through a link is a classic phishing pattern. Legitimate messages can also be short or mention deliveries.',
+  },
+  {
+    id: 'csc-ent-3a', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'A new home security camera comes set up with the login admin/admin. What should its owner do first?',
+    options: ['Keep it, since the camera is on a home network', 'Change it to a strong, unique password', 'Change it to the owner\'s birth date', 'Leave it until the camera has been hacked'],
+    correctIndex: 1,
+    explanation: 'Default device passwords are widely known, so attackers scan for devices that still use them. Replacing it with a strong, unique password closes that hole.',
+  },
+  {
+    id: 'csc-ent-3b', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'On a café\'s free Wi-Fi, a browser warns that the bank site\'s certificate is not valid. What is the best action?',
+    options: ['Click past the warning to finish quickly', 'Turn off the browser\'s warnings for good', 'Stop and avoid entering anything on the site', 'Try logging in again with a different password'],
+    correctIndex: 2,
+    explanation: 'A bad certificate on public Wi-Fi can mean a rogue access point is pretending to be the bank. Entering a password there could hand it to an attacker.',
+  },
+  {
+    id: 'csc-ent-4a', partNumber: 4, partTitle: 'Connections & Interactions: Viruses, Malware, and Keyloggers',
+    question: 'A program attaches itself to a legitimate game file, copies itself into other files, and runs without the user\'s permission. What is it?',
+    options: ['A phishing email', 'A certificate authority', 'A rogue access point', 'A virus'],
+    correctIndex: 3,
+    explanation: 'A virus is a malicious program that can copy itself and gain unauthorized access, often by attaching to legitimate programs.',
+  },
+  {
+    id: 'csc-ent-4b', partNumber: 4, partTitle: 'Connections & Interactions: Viruses, Malware, and Keyloggers',
+    question: 'A keylogger hidden in a free download records a user\'s bank password and sends it to an attacker. Which protection would most likely stop the attacker from logging in?',
+    options: ['A longer password with more symbols', 'Clearing the browser history daily', 'Multifactor login on the account', 'Visiting the bank only through HTTPS'],
+    correctIndex: 2,
+    explanation: 'With multifactor authentication, the stolen password alone is not enough; the attacker would also need the user\'s second factor. A longer password is captured just as easily.',
+  },
+  {
+    id: 'csc-ent-5a', partNumber: 5, partTitle: 'Encryption, Certificates, and Data Collection',
+    question: 'Two friends encrypt their messages with one shared secret key. An eavesdropper learns that key. What can the eavesdropper do?',
+    options: ['Decode everything sent with that key', 'Nothing without a matching private key', 'Read only the messages sent after today', 'Nothing until a certificate authority approves'],
+    correctIndex: 0,
+    explanation: 'In symmetric encryption, the same key encrypts and decrypts, so anyone who has it can decrypt all the messages.',
+  },
+  {
+    id: 'csc-ent-5b', partNumber: 5, partTitle: 'Encryption, Certificates, and Data Collection',
+    question: 'A person regularly posts public photos tagged at the gym every weekday at 6 p.m. How could this information be misused?',
+    options: ['Someone could learn when their home is empty', 'The gym could raise the person\'s membership fee', 'The posts could slow down the person\'s phone', 'The posts could weaken the person\'s password'],
+    correctIndex: 0,
+    explanation: 'Posts that others can see may be combined with other information to deduce private details, such as when someone is away from home.',
+  },
+  {
+    id: 'csc-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'A student\'s account was taken over and used to send malicious links. The student has already changed to a new strong password. What is the best next step?',
+    options: ['Delete the posts made in the last week', 'Change the password again next month', 'Log out of the account on this device', 'Turn on or reset multifactor authentication'],
+    correctIndex: 3,
+    explanation: 'Turning on multifactor authentication means a stolen password alone can no longer open the account. Reviewing app permissions, scanning for malware and warning contacts come next.',
+  },
+  {
+    id: 'csc-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'Which message should be treated as phishing until it is verified another way?',
+    options: ['A receipt for an order you just placed', 'A reminder from your own calendar app', 'A school newsletter that contains no links', 'An email from "Paypa1" asking you to confirm your login'],
+    correctIndex: 3,
+    explanation: 'A look-alike sender name combined with a request for login details matches the phishing warning signs. Verify by going to the real site yourself, not through the email.',
+  },
+  {
+    id: 'csc-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'Someone claiming to be from your email provider asks you to read back the login code just texted to your phone. Why should you refuse?',
+    options: ['Codes expire, so sharing one wastes it', 'The code would let them pass your second factor', 'Sharing a code changes your password', 'It would reveal your home address'],
+    correctIndex: 1,
+    explanation: 'The texted code is your second authentication factor. Combined with a stolen password, it gives the requester full access, and legitimate services never ask for it.',
+  },
+  {
+    id: 'csc-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'Why can one person\'s unsafe computing habits harm other people too?',
+    options: ['A hacked account can send malicious links to contacts', 'Passwords are shared automatically with friends', 'Updates on one device install on every device', 'Encryption keys are identical for all users'],
+    correctIndex: 0,
+    explanation: 'Messages from a compromised account look trustworthy to the owner\'s contacts, so attackers use them to spread malware and phishing links.',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'PII & Privacy' },
-    { partNumber: 2, partTitle: 'Passwords & Authentication' },
-    { partNumber: 3, partTitle: 'Recognizing Threats' },
-    { partNumber: 4, partTitle: 'Updates & Backups' },
-    { partNumber: 5, partTitle: 'Safe Online Behavior' },
-    { partNumber: 6, partTitle: 'Applied Practice' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Privacy, Authentication, and Online Safety' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions: Viruses, Malware, and Keyloggers' },
+    { partNumber: 5, partTitle: 'Encryption, Certificates, and Data Collection' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

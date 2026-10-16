@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Algorithms (AP CS Principles)
+ * Entrance Quiz — Algorithms (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 3: algorithm definition, efficiency, search, sort, undecidability — with code-tracing in AP CSP pseudocode.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'cspa-ent-1a', question: 'An algorithm is BEST defined as:', options: ['A specific programming language that a computer must use in order to carry out any kind of step-by-step solution', 'A finite sequence of well-defined steps that solves a problem or performs a task', 'A computer chip on the motherboard that physically stores the steps used to solve any given problem', 'Any random list of instructions, even ones that contradict each other or never reach a final stopping point'], correctIndex: 1, explanation: 'An algorithm is a finite, well-defined procedure for solving a problem. It exists independently of any programming language.', partNumber: 1, partTitle: 'What Is an Algorithm' },
-  { id: 'cspa-ent-1b', question: 'Two algorithms produce identical outputs for every possible input. Which statement is MOST accurate?', options: ['They must use the same code written in the same programming language to be considered correct implementations', 'They are equivalent in terms of behavior, even if their internal steps differ', 'One of them must be wrong, because two different procedures cannot produce the same output for every possible input', 'Both must run in exactly the same amount of time on every possible input that they are given by the user'], correctIndex: 1, explanation: 'Algorithms can be implemented many ways yet still be behaviorally equivalent (same output for every input). Implementation details and speed may differ.', partNumber: 1, partTitle: 'What Is an Algorithm' },
-  { id: 'cspa-ent-2a', question: 'Consider the AP CSP pseudocode below.\n  count ← 0\n  FOR EACH n IN [3, 5, 8, 4, 9]\n  {\n    IF (n MOD 2 = 1)\n    {\n      count ← count + 1\n    }\n  }\n  DISPLAY(count)\nWhat is displayed?', options: ['2', '3', '4', '5'], correctIndex: 1, explanation: 'The loop counts odd numbers (n MOD 2 = 1). The list [3, 5, 8, 4, 9] has three odd values: 3, 5, 9. So count = 3.', partNumber: 2, partTitle: 'Code Tracing' },
-  { id: 'cspa-ent-2b', question: 'Trace the AP CSP pseudocode below.\n  x ← 10\n  REPEAT 3 TIMES\n  {\n    x ← x + x\n  }\n  DISPLAY(x)\nWhat value is displayed?', options: ['30', '40', '60', '80'], correctIndex: 3, explanation: 'Iteration 1: x = 10 + 10 = 20. Iteration 2: x = 20 + 20 = 40. Iteration 3: x = 40 + 40 = 80.', partNumber: 2, partTitle: 'Code Tracing' },
-  { id: 'cspa-ent-3a', question: 'Which factor is NOT typically used to compare the efficiency of two algorithms?', options: ['Number of operations they perform', 'Memory usage', 'How they grow as the input size grows', 'The font in which the code is written'], correctIndex: 3, explanation: 'Efficiency is about resources (time, memory) and how they scale with input size — not about presentation choices like font.', partNumber: 3, partTitle: 'Algorithm Efficiency' },
-  { id: 'cspa-ent-3b', question: 'Algorithm A takes a number of steps proportional to the size of the input. Algorithm B takes a number of steps proportional to the SQUARE of the input size. For very large inputs, which is generally faster?', options: ['Algorithm A', 'Algorithm B', 'They are always equal', 'Cannot be determined'], correctIndex: 0, explanation: 'Linear (proportional to n) grows much more slowly than quadratic (proportional to $n^{2}$) for large inputs. Algorithm A is more efficient at scale.', partNumber: 3, partTitle: 'Algorithm Efficiency' },
-  { id: 'cspa-ent-4a', question: 'Linear search is BEST described as:', options: ['Repeatedly cutting the search range in half by jumping to the middle of the remaining elements until the target is located', 'Checking each element of a list one at a time until the target is found or the list ends', 'A search that requires the list to be sorted in ascending order before any of its elements can be examined', 'A randomized search that picks list positions uniformly at random until the target value happens to appear in the chosen slot'], correctIndex: 1, explanation: 'Linear (sequential) search inspects each element in order. It works on any list — sorted or not.', partNumber: 4, partTitle: 'Search Algorithms' },
-  { id: 'cspa-ent-4b', question: 'Binary search requires that:', options: ['The list be in random order', 'The list be sorted', 'The list contain only numbers', 'The list be empty'], correctIndex: 1, explanation: 'Binary search works by repeatedly halving the range, which only works if the data is sorted so the algorithm knows which half to keep.', partNumber: 4, partTitle: 'Search Algorithms' },
-  { id: 'cspa-ent-5a', question: 'For a sorted list of 1,000,000 items, a binary search examines AT MOST about how many items?', options: ['1,000,000', '1,000', '20', '100,000'], correctIndex: 2, explanation: 'Binary search performs about $\\log_{2}(n)$ comparisons. $\\log_{2}$(1,000,000) ≈ 20. This is dramatically faster than linear search.', partNumber: 5, partTitle: 'Comparing Searches' },
-  { id: 'cspa-ent-5b', question: 'Linear search and binary search are both run on the same sorted list of 10,000 items, looking for the LAST element. Which finishes faster?', options: ['Linear search, by a wide margin, because it can stop as soon as it stumbles onto the target near the end of the list', 'Binary search, because it halves the range each step regardless of where the target is', 'They run at exactly the same speed because both algorithms have to inspect every element of the list at least once', 'It depends on the operating system that the program is running on, since search performance is mostly controlled by the OS'], correctIndex: 1, explanation: 'Binary search’s $\\log_{2}$(10,000) ≈ 14 comparisons beats linear search’s 10,000 worst-case comparisons.', partNumber: 5, partTitle: 'Comparing Searches' },
-  { id: 'cspa-ent-6a', question: 'A sorting algorithm rearranges items into:', options: ['Random order that is chosen anew each time the algorithm is executed on a list of items', 'A defined order (e.g., ascending or descending) according to a comparison rule', 'Encrypted form so the items cannot be read back without first running a matching decryption algorithm', 'Smaller files by removing duplicate items and compressing repeated values into shorter binary representations'], correctIndex: 1, explanation: 'Sorting puts items into a defined order using a comparison (e.g., numeric ascending, alphabetical).', partNumber: 6, partTitle: 'Sorting & Decidability' },
-  { id: 'cspa-ent-6b', question: 'Some computational problems are UNDECIDABLE, meaning:', options: ['No algorithm can solve every instance of the problem', 'They are easy to solve as long as you run them on a sufficiently fast modern computer', 'They have several different correct answers, and the algorithm has to return all of them at once', 'They are not really computational problems but instead just poorly worded mathematical questions in disguise'], correctIndex: 0, explanation: 'An undecidable problem (e.g., the Halting Problem) provably cannot be solved by ANY algorithm for every possible input — a fundamental limit of computation.', partNumber: 6, partTitle: 'Sorting & Decidability' },
-  { id: 'cspa-ent-7a', question: 'A heuristic is BEST described as:', options: ['A guaranteed-optimal algorithm that always returns the single best possible answer for every valid input it receives', 'An approach that uses reasonable rules to find a good-enough solution when an optimal one is too costly to compute', 'A type of compression that shrinks the size of input data so that any algorithm can finish working on it more quickly', 'A network protocol used to coordinate routing decisions between devices when several possible paths to the destination exist'], correctIndex: 1, explanation: 'Heuristics trade optimality for practicality. They are used when finding the best solution would take too long (e.g., GPS route suggestions).', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cspa-ent-7b', question: 'Trace the AP CSP pseudocode below.\n  total ← 0\n  FOR EACH n IN [4, 7, 2, 9, 5]\n  {\n    IF (n > 4)\n    {\n      total ← total + n\n    }\n  }\n  DISPLAY(total)\nWhat is displayed?', options: ['9', '14', '16', '21'], correctIndex: 3, explanation: 'Values greater than 4: 7, 9, 5. Sum = 7 + 9 + 5 = 21.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'calg-ent-1a', partNumber: 1, partTitle: 'Sequencing, Selection, Iteration, and Algorithm Analysis',
+    question: 'A sorted list has 500 elements. What is the greatest number of elements a binary search might need to check to find a value or decide it is missing?',
+    options: ['250', '500', '9', '25'],
+    correctIndex: 2,
+    explanation: 'Each check halves what remains: 500, 250, 125, 63, 32, 16, 8, 4, 2, 1. That is at most 9 checks, far fewer than the 500 a linear search could need.',
+  },
+  {
+    id: 'calg-ent-1b', partNumber: 1, partTitle: 'Sequencing, Selection, Iteration, and Algorithm Analysis',
+    question: 'Which algorithm runs in an unreasonable amount of time as the number of items n grows?',
+    options: ['Checking every possible subset of n items for the best one', 'Comparing every pair among n items', 'Searching n unsorted items one at a time', 'Sorting n items by repeatedly finding the smallest one'],
+    correctIndex: 0,
+    explanation: 'There are 2 multiplied by itself n times possible subsets, an exponential count, so the work becomes impossible for large n. Pair comparisons, linear search and that sort all grow polynomially, which is reasonable.',
+  },
+  {
+    id: 'calg-ent-2a', partNumber: 2, partTitle: 'Key Processes',
+    question: 'What is displayed when this code runs?\n\nn ← 3\ntotal ← 1\nREPEAT n TIMES {\ntotal ← total * 2\nn ← n + 1\n}\nDISPLAY(total)',
+    options: ['16', '8', '6', '4'],
+    correctIndex: 1,
+    explanation: 'The number of passes for REPEAT n TIMES is fixed at 3 when the loop starts, so changing n inside does not add passes. Doubling 1 three times gives 8.',
+  },
+  {
+    id: 'calg-ent-2b', partNumber: 2, partTitle: 'Key Processes',
+    question: 'What is the value of grade after this code runs with score ← 92, late ← true and extra ← false?\n\nIF ((score ≥ 90) AND (late = false)) {\ngrade ← "A"\n}\nELSE {\nIF ((score ≥ 80) OR extra) {\ngrade ← "B"\n}\nELSE {\ngrade ← "C"\n}\n}',
+    options: ['"A"', '"C"', '"B"', 'no grade is set'],
+    correctIndex: 2,
+    explanation: 'The AND fails because late is true, so control goes to the ELSE. There, score ≥ 80 is true, and OR needs only one true part, so grade becomes "B".',
+  },
+  {
+    id: 'calg-ent-3a', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'What is displayed when this code runs?\n\nnums ← [5, 1, 7, 1, 3]\nidx ← 1\ni ← 2\nREPEAT UNTIL (i > LENGTH(nums)) {\nIF (nums[i] ≤ nums[idx]) {\nidx ← i\n}\ni ← i + 1\n}\nDISPLAY(idx)',
+    options: ['2', '1', '5', '4'],
+    correctIndex: 3,
+    explanation: 'The code tracks the position of the smallest value. Because the test is ≤, the second 1 at index 4 replaces the first one at index 2, so 4 is displayed.',
+  },
+  {
+    id: 'calg-ent-3b', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'This code is meant to find the product of the values in nums, which is [2, 3, 4]. What does it display, and why?\n\nproduct ← 0\nFOR EACH n IN nums {\nproduct ← product * n\n}\nDISPLAY(product)',
+    options: ['0, because the accumulator starts at 0', '24, because each element is multiplied in', '9, because the elements are added instead', '4, because only the last element is kept'],
+    correctIndex: 0,
+    explanation: 'Multiplying anything by 0 gives 0, so product never changes. A product accumulator must start at 1, its identity value.',
+  },
+  {
+    id: 'calg-ent-4a', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'A sorted list holds 1,000,000 records. In the worst case, about how many comparisons do linear search and binary search need?',
+    options: ['About 1,000,000 for linear and about 20 for binary', 'About 20 for linear and about 1,000,000 for binary', 'About 1,000,000 for linear and about 500,000 for binary', 'About 1,000 for each search on a sorted list'],
+    correctIndex: 0,
+    explanation: 'Linear search may check every record, while binary search halves the remaining records with each comparison: 2 doubled 20 times is about 1,000,000, so about 20 checks.',
+  },
+  {
+    id: 'calg-ent-4b', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'Many parts of a program call find(list, target). A developer replaces the linear search inside find with a binary search, and the list is always kept sorted. What must change in the code that calls find?',
+    options: ['Every caller must be rewritten, since the algorithm changed', 'Callers must now sort the list before every call', 'Nothing, since only the body of the procedure changed', 'Callers must now expect different results than before'],
+    correctIndex: 2,
+    explanation: 'Procedural abstraction lets callers rely on what find does, not how it does it. A faster implementation that returns the same results needs no changes elsewhere.',
+  },
+  {
+    id: 'calg-ent-5a', partNumber: 5, partTitle: 'Change Over Time',
+    question: 'An algorithm\'s number of steps grows like n × n. It takes 2 seconds on 1,000 items. About how long should it take on 10,000 items?',
+    options: ['200 seconds', '20 seconds', '22 seconds', '2,000 seconds'],
+    correctIndex: 0,
+    explanation: 'Ten times the input means 10 × 10 = 100 times the steps for an n × n algorithm, so 2 seconds becomes about 200 seconds.',
+  },
+  {
+    id: 'calg-ent-5b', partNumber: 5, partTitle: 'Change Over Time',
+    question: 'A delivery company must plan a route through 60 stops every morning. Checking every possible order of stops would take far too long. What is the most sensible approach?',
+    options: ['Check every possible order, since only that is correct', 'Use a heuristic that finds a good order quickly', 'Stop trying, since the problem is undecidable', 'Run a binary search on the list of stops'],
+    correctIndex: 1,
+    explanation: 'Trying every order is unreasonable, but the problem is still decidable. A heuristic gives up the guarantee of the best order in exchange for a good one found in reasonable time.',
+  },
+  {
+    id: 'calg-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'What is displayed when this code runs?\n\nPROCEDURE avgPos(list) {\ntotal ← 0\ncount ← 0\nFOR EACH x IN list {\nIF (x > 0) {\ntotal ← total + x\ncount ← count + 1\n}\n}\nIF (count = 0) {\nRETURN(0)\n}\nRETURN(total / count)\n}\nDISPLAY(avgPos([6, -3, 0, 12]))',
+    options: ['3.75', '6', '4.5', '9'],
+    correctIndex: 3,
+    explanation: 'Only 6 and 12 are greater than 0, so total is 18 and count is 2. The average of the positive values is 18 ÷ 2 = 9.',
+  },
+  {
+    id: 'calg-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'This procedure is meant to report whether a list has two equal neighbors. What happens when it is called with [3, 5, 7]?\n\nPROCEDURE hasRun(list) {\ni ← 1\nREPEAT UNTIL (i > LENGTH(list)) {\nIF (list[i] = list[i + 1]) {\nRETURN(true)\n}\ni ← i + 1\n}\nRETURN(false)\n}',
+    options: ['It returns false after checking every pair', 'It returns true, because the values increase', 'An error occurs reading past the end', 'It returns false without checking any pair'],
+    correctIndex: 2,
+    explanation: 'When i reaches 3, the code reads list[4], which does not exist, so the program stops with an error. The loop should start at 2 and compare list[i] with list[i - 1].',
+  },
+  {
+    id: 'calg-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'The input to two algorithms doubles in size. One makes about n × n comparisons; the other is a binary search. About how much work does each now need?',
+    options: ['about 2 times as many; about 2 times as many', 'about 4 times as many; about 1 more', 'about 4 times as many; about 4 times as many', 'about the same number; about 4 times as many'],
+    correctIndex: 1,
+    explanation: 'Doubling n multiplies n × n by 4. Binary search halves the list each step, so a list twice as long needs only one extra check.',
+  },
+  {
+    id: 'calg-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'Which problem is undecidable?',
+    options: ['Deciding whether a list of a million numbers is in sorted order', 'Finding the shortest route that visits each of 60 cities', 'Deciding whether a whole number entered by a user is even', 'Deciding whether any given program halts on any given input'],
+    correctIndex: 3,
+    explanation: 'No algorithm can correctly answer the halting question for every program and input. The shortest-route problem is slow to solve exactly, but an algorithm for it does exist.',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'What Is an Algorithm' },
-    { partNumber: 2, partTitle: 'Code Tracing' },
-    { partNumber: 3, partTitle: 'Algorithm Efficiency' },
-    { partNumber: 4, partTitle: 'Search Algorithms' },
-    { partNumber: 5, partTitle: 'Comparing Searches' },
-    { partNumber: 6, partTitle: 'Sorting & Decidability' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Sequencing, Selection, Iteration, and Algorithm Analysis' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

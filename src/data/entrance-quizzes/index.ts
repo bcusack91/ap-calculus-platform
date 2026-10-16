@@ -807,6 +807,8 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'inverse-trig-functions': () => import('./inverse-trig-functions-precalc'),
   'hg-industrialization-development': () => import('./hg-industrialization'),
   'gov-political-ideology': () => import('./gov-ideologies'),
+  'macro-aggregate-demand-supply': () => import('./macro-aggregate-demand-supply'),
+  'csa-recursive-methods': () => import('./csa-recursive-methods'),
 }
 
 /**

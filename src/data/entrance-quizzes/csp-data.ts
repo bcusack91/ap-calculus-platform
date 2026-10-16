@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Data & Information (AP CS Principles)
+ * Entrance Quiz — Data (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 2: data abstraction, metadata, filtering, classification, transformation, bias.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'cspd-ent-1a', question: 'Which of the following BEST distinguishes “data” from “information”?', options: ['They are identical concepts that always refer to the same thing in any computing or analytics context', 'Data are raw values; information is data that has been processed or interpreted to be useful', 'Information is always numeric while data is always text, and the two never appear together in a dataset', 'Data is what users see on the screen, while information is the hidden internal state of the program'], correctIndex: 1, explanation: 'Data are raw, unprocessed values. Information is what you get when you organize, filter, or interpret data so it answers a question.', partNumber: 1, partTitle: 'Data vs. Information' },
-  { id: 'cspd-ent-1b', question: 'A weather station logs the temperature every minute. The numbers themselves are BEST described as:', options: ['Information', 'Data', 'Metadata', 'A program'], correctIndex: 1, explanation: 'The raw temperature readings are data. They become information when summarized (e.g., “The high today was 72°F”) or used to answer questions.', partNumber: 1, partTitle: 'Data vs. Information' },
-  { id: 'cspd-ent-2a', question: 'Metadata is BEST defined as:', options: ['The largest file in a dataset, used as a reference point for comparing the other related files', 'Data ABOUT data — information that describes or contextualizes a dataset (e.g., timestamp, format, source)', 'Encrypted data that has been scrambled with a key so that only authorized users can read its contents', 'A type of compression that shrinks files by removing repeated patterns from the underlying byte stream'], correctIndex: 1, explanation: 'Metadata describes other data. Examples include the timestamp on a photo, the file format, the resolution, or the author.', partNumber: 2, partTitle: 'Metadata' },
-  { id: 'cspd-ent-2b', question: 'A digital photo file includes the date taken, GPS location, and camera model in addition to the pixel data. The date, location, and camera model are:', options: ['The pixel data', 'Metadata about the photo', 'Compressed binary noise', 'Encryption keys'], correctIndex: 1, explanation: 'Information that describes the photo (when, where, with what device) is metadata. The pixels themselves are the primary data.', partNumber: 2, partTitle: 'Metadata' },
-  { id: 'cspd-ent-3a', question: 'A spreadsheet stores the test scores of every student in a school. To find the AVERAGE score for 10th graders only, the analyst should FIRST:', options: ['Average all scores across the entire school and then label the result the 10th-grade average', 'Filter the rows to only those where Grade = 10, then compute the average', 'Sort the spreadsheet by student name and then take the average of the top section', 'Delete the data for grades other than 10 from the original file before averaging anything'], correctIndex: 1, explanation: 'Filtering selects the rows of interest. Then aggregation (average) is computed on the filtered subset.', partNumber: 3, partTitle: 'Filtering & Sorting' },
-  { id: 'cspd-ent-3b', question: 'Sorting a dataset of customer orders by Order Date in DESCENDING order is MOST useful for:', options: ['Computing the total revenue from every row in the dataset', 'Quickly identifying the most recent orders', 'Encrypting the dataset for secure long-term archive storage', 'Removing duplicate rows caused by accidental double-entry errors'], correctIndex: 1, explanation: 'Descending sort by date puts the most recent orders first — useful for inspection or for summarizing recent activity.', partNumber: 3, partTitle: 'Filtering & Sorting' },
-  { id: 'cspd-ent-4a', question: 'A streaming service groups songs into categories like “Chill”, “Workout”, and “Focus” based on tempo and energy features. This process is BEST described as:', options: ['Encryption that scrambles each song using a shared secret key', 'Classification of data into categories using features', 'Random shuffling that completely ignores tempo and energy features', 'Sampling a small random subset of songs from the catalog'], correctIndex: 1, explanation: 'Classification assigns items to categories based on features. Here the features are tempo and energy; the categories are listening moods.', partNumber: 4, partTitle: 'Classification & Patterns' },
-  { id: 'cspd-ent-4b', question: 'A grocery chain notices that customers who buy chips also tend to buy salsa. This pattern in transaction data MOST directly supports:', options: ['Random product placement throughout the entire store', 'Targeted recommendations and product placement decisions', 'Deleting all transaction records from the database permanently', 'Refusing to stock or sell salsa in any store'], correctIndex: 1, explanation: 'Patterns and correlations in data drive recommendations and business decisions — a classic application of data analysis.', partNumber: 4, partTitle: 'Classification & Patterns' },
-  { id: 'cspd-ent-5a', question: 'A column lists temperatures in Celsius. To use the data with a tool that requires Fahrenheit, the analyst computes a new column F = C * 9/5 + 32. This step is an example of:', options: ['Data filtering', 'Data transformation (cleaning/conversion)', 'Encryption', 'Random sampling'], correctIndex: 1, explanation: 'Transformation modifies data into a different but equivalent form (units, structure, format) so it can be used by other tools or analyses.', partNumber: 5, partTitle: 'Cleaning & Transformation' },
-  { id: 'cspd-ent-5b', question: 'A dataset of survey responses contains some rows where the age field is blank. The MOST appropriate first step in data cleaning is to:', options: ['Delete the entire dataset because the missing age values make every analysis from that file unreliable', 'Decide on a clear strategy (drop the rows, fill with a default, or impute) and document the choice', 'Replace all ages with 0 silently and then proceed with the rest of the planned analysis as usual', 'Encrypt the dataset so the missing age fields are no longer visible to any of the downstream analysts'], correctIndex: 1, explanation: 'Cleaning missing data requires a deliberate, documented strategy so the analysis remains transparent and reproducible.', partNumber: 5, partTitle: 'Cleaning & Transformation' },
-  { id: 'cspd-ent-6a', question: 'A music app finds that users in Country A listen to more rock than users in Country B. Before publishing the headline “Country A loves rock more,” the analyst should consider that:', options: ['The conclusion is automatically valid because the dataset is large enough to represent every music listener in both countries', 'The dataset may be biased: it only contains users of THIS app, not all music listeners in either country', 'There is no possible bias because the app collects user listening data the same way in both of the countries', 'The app should stop logging any listening data so that misleading conclusions like this can never be published anywhere'], correctIndex: 1, explanation: 'A dataset that excludes part of the population (non-users of the app) cannot support a claim about the whole population. This is selection bias.', partNumber: 6, partTitle: 'Bias in Data' },
-  { id: 'cspd-ent-6b', question: 'A facial-recognition system performs much worse on people with darker skin tones. The MOST likely cause is:', options: ['The math itself prefers lighter colors because pixel values for darker skin are mathematically harder to process', 'The training data was not representative of the population it would be used on', 'Cameras refuse to record dark colors and so the recognition system has nothing reliable to analyze later', 'It is impossible to fix at all because face recognition fundamentally cannot work across all skin tones'], correctIndex: 1, explanation: 'Models reflect their training data. If certain groups are underrepresented, the model performs worse on them — a well-documented form of dataset bias.', partNumber: 6, partTitle: 'Bias in Data' },
-  { id: 'cspd-ent-7a', question: 'Which of the following is NOT a benefit of digital data storage compared to paper records?', options: ['Easy to filter, sort, and search', 'Easy to share with users far away', 'Always more accurate than the source itself', 'Easy to back up'], correctIndex: 2, explanation: 'Digital storage is searchable, shareable, and backup-friendly, but it is only as accurate as the data entered. Digitization does not magically improve accuracy.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cspd-ent-7b', question: 'An analyst must summarize a dataset of 1,000,000 sales transactions for a one-page report. Which approach BEST conveys useful information?', options: ['Print all 1,000,000 rows in the report so every single transaction is visible to the reader', 'Compute summary statistics (totals, averages, top categories) and show a few well-chosen visualizations', 'Show only the first 10 rows of the dataset and treat them as representative of the entire year', 'Show only the last row of the dataset because it captures the latest state of the business overall'], correctIndex: 1, explanation: 'Useful information comes from summarization and visualization, not from dumping raw data. Statistics + visuals condense large datasets into actionable insights.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'cpdt-ent-1a', partNumber: 1, partTitle: 'Collection, Processing, and Extracting Information',
+    question: 'A sharing app stores each picture along with the time it was taken and the GPS coordinates of the camera. Which of these is metadata?',
+    options: ['The location of the shot', 'The colors of the pixels in the picture', 'The people shown in the picture', 'The scene that the picture captures'],
+    correctIndex: 0,
+    explanation: 'Metadata is data about the data: the GPS coordinates describe the picture without being part of the image. The pixels, the people and the scene are the content itself.',
+  },
+  {
+    id: 'cpdt-ent-1b', partNumber: 1, partTitle: 'Collection, Processing, and Extracting Information',
+    question: 'Data show that towns with more libraries tend to have lower crime rates. Which conclusion is best supported?',
+    options: ['Building more libraries will reduce crime', 'High crime causes towns to close libraries', 'They are linked, but the data alone do not show a cause', 'The data must contain a recording error'],
+    correctIndex: 2,
+    explanation: 'A correlation shows that two measures change together, not that one causes the other. A third factor, such as town funding, could explain both.',
+  },
+  {
+    id: 'cpdt-ent-2a', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A fitness app\'s data set includes one heart-rate reading of 650 beats per minute. What is the best way to handle that reading before analysis?',
+    options: ['Keep it, since all data should be kept as recorded', 'Average it in with the other readings as usual', 'Flag or remove it as an invalid value', 'Change it to 65 because that looks reasonable'],
+    correctIndex: 2,
+    explanation: 'A human heart rate of 650 is outside any valid range, so it should be flagged or removed during cleaning. Guessing a replacement or averaging it in would distort the results.',
+  },
+  {
+    id: 'cpdt-ent-2b', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A messaging company stores only who messaged whom and when, never the text of the messages. Why can this still raise privacy concerns?',
+    options: ['The text can be rebuilt from the times sent', 'Metadata is encrypted, so no one can ever read it', 'Storing times uses more space than storing text', 'Metadata like contacts and times can reveal a lot about a person'],
+    correctIndex: 3,
+    explanation: 'Metadata can be as revealing as the data itself: patterns of who someone contacts and when can expose relationships and routines. The message text is not needed for that.',
+  },
+  {
+    id: 'cpdt-ent-3a', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'A school wants to show how the number of library visits changed from month to month over two years. Which kind of chart fits this question best?',
+    options: ['A line chart', 'A pie chart', 'A scatter plot', 'A histogram'],
+    correctIndex: 0,
+    explanation: 'A line chart shows how one value changes over time. A pie chart shows shares of a whole, a scatter plot shows the relationship between two variables, and a histogram shows a distribution.',
+  },
+  {
+    id: 'cpdt-ent-3b', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'One data set pairs student IDs with names, and another pairs the same IDs with test scores. What is needed to produce a list of each student\'s name with that student\'s score?',
+    options: ['Match the records on the shared ID', 'Average the two lists together', 'Sort both lists alphabetically by name', 'Delete the IDs from both lists first'],
+    correctIndex: 0,
+    explanation: 'Combining two sources on a shared key lets each name be joined to the right score. Neither data set alone contains both pieces of information.',
+  },
+  {
+    id: 'cpdt-ent-4a', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'scores is the list [80, 92, 74, 90]. What is the value of average after this code runs?\ntotal ← 0\nFOR EACH s IN scores\n{\ntotal ← total + s\n}\naverage ← total / LENGTH(scores)',
+    options: ['336', '84', '90', '83'],
+    correctIndex: 1,
+    explanation: 'The loop adds every element, 80 + 92 + 74 + 90 = 336, and LENGTH(scores) is 4. Dividing gives 84; 336 is the total before the division.',
+  },
+  {
+    id: 'cpdt-ent-4b', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'Which of these is personally identifiable information?',
+    options: ['The average score of a whole class', 'Someone\'s phone number', 'The number of visitors to a website', 'The weather forecast for a city'],
+    correctIndex: 1,
+    explanation: 'A phone number links directly to one individual. The class average, the visitor count and the forecast describe groups or conditions, not a specific person.',
+  },
+  {
+    id: 'cpdt-ent-5a', partNumber: 5, partTitle: 'Large Data Sets, Scalability, and Bias',
+    question: 'A face-recognition system trained mostly on photos of adults works poorly for children. The team plans to fix it by adding millions more photos gathered the same way. Why might this not help?',
+    options: ['Bigger data sets make programs less accurate', 'Children\'s photos cannot be stored as data', 'The system cannot learn from more photos', 'Extra data of the same kind repeats the imbalance'],
+    correctIndex: 3,
+    explanation: 'Bias often comes from the type or source of the data, and more data collected the same way keeps it. The team needs more photos of children, not just more photos.',
+  },
+  {
+    id: 'cpdt-ent-5b', partNumber: 5, partTitle: 'Large Data Sets, Scalability, and Bias',
+    question: 'A city\'s traffic sensors produce more data each day than one computer can process in time. Which approach is reasonable?',
+    options: ['Delete half the readings before any processing', 'Wait for one computer to catch up each night', 'Use many computers in parallel', 'Stop collecting data until the backlog clears'],
+    correctIndex: 2,
+    explanation: 'Large data sets can be too much for a single computer, and parallel systems split the work among many processors at once. Scalability is the system\'s ability to grow to meet that demand.',
+  },
+  {
+    id: 'cpdt-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'The state column of a survey contains "NY", "New York" and "new york". What should be done before counting the responses by state?',
+    options: ['Rewrite them all in one standard form', 'Delete all three kinds of entries', 'Count each spelling as a separate state', 'Keep only the rows with the most common spelling'],
+    correctIndex: 0,
+    explanation: 'Cleaning makes the data uniform without changing its meaning, so all three spellings count as the same state. Deleting or splitting them would give wrong totals.',
+  },
+  {
+    id: 'cpdt-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'A table has one row per student with a class period and a grade. Which sequence of steps finds the average grade for each period?',
+    options: ['Total every grade, then divide by the periods, then group', 'Sort by grade, then pick the middle, then group', 'Divide each grade by its period, then add, then group', 'Group by period, then total and count, then divide'],
+    correctIndex: 3,
+    explanation: 'Grouping first separates the rows by period. Within each group the grades are totaled and counted, and dividing gives that period\'s average.',
+  },
+  {
+    id: 'cpdt-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'A company removes names from users\' location histories before sharing them and calls the data anonymous. Why can people still be identified?',
+    options: ['Every location record still contains a name', 'Removing names makes data impossible to share', 'Location data cannot be stored without names', 'Patterns such as where a person sleeps can single them out'],
+    correctIndex: 3,
+    explanation: 'A location history shows where someone spends nights and days, which can point to one individual, especially when combined with other data. Removing names does not make combined personal data anonymous.',
+  },
+  {
+    id: 'cpdt-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'A program keeps only the rows where the temperature is above 30 and then counts those rows. Which two operations does it use?',
+    options: ['Sorting, then visualization', 'Filtering, then aggregation', 'Combining, then sorting', 'Cleaning, then combining'],
+    correctIndex: 1,
+    explanation: 'Keeping the rows that match a condition is filtering, and reducing many values to one summary such as a count is aggregation.',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Data vs. Information' },
-    { partNumber: 2, partTitle: 'Metadata' },
-    { partNumber: 3, partTitle: 'Filtering & Sorting' },
-    { partNumber: 4, partTitle: 'Classification & Patterns' },
-    { partNumber: 5, partTitle: 'Cleaning & Transformation' },
-    { partNumber: 6, partTitle: 'Bias in Data' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Collection, Processing, and Extracting Information' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Large Data Sets, Scalability, and Bias' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

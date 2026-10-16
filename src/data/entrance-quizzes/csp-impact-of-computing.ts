@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Impact of Computing (AP CS Principles)
+ * Entrance Quiz — Impact of Computing (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 5: beneficial/harmful effects, digital divide, crowdsourcing, citizen science, IP.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'cspi-ent-1a', question: 'Innovations in computing typically produce:', options: ['Only beneficial effects, with no negative consequences for any group of users at all', 'Only harmful effects, with no positive contributions for any group of users at all', 'BOTH beneficial AND harmful effects — often unintended', 'No effects at all on people’s lives, on businesses, or on the broader society'], correctIndex: 2, explanation: 'AP CSP emphasizes that computing innovations have BOTH beneficial AND harmful effects, often impacting different groups differently and sometimes unintentionally.', partNumber: 1, partTitle: 'Beneficial & Harmful Effects' },
-  { id: 'cspi-ent-1b', question: 'A new social-media feature MOST likely produces unintended consequences because:', options: ['Designers can perfectly predict how every user will use the feature, so no surprise outcomes ever occur in production', 'Users adapt technology in ways developers did not anticipate, and effects ripple across many groups', 'Computing systems have no real-world consequences once they are released to the general public for everyday use', 'Only the originally intended users ever interact with the feature, since other groups have no incentive to try it'], correctIndex: 1, explanation: 'Real-world use rarely matches design assumptions. New features create emergent behaviors and second-order effects developers did not foresee.', partNumber: 1, partTitle: 'Beneficial & Harmful Effects' },
-  { id: 'cspi-ent-2a', question: 'The digital divide refers to:', options: ['Differences in access to computing technology and internet between groups (by income, geography, age, etc.)', 'A method of dividing two binary numbers using a specialized hardware unit inside the processor chip', 'A specific computer protocol used to share files between connected devices on a local network reliably', 'A type of malware that secretly divides storage on a victim’s device for use by the attacker remotely'], correctIndex: 0, explanation: 'The digital divide is unequal access to computing devices, broadband, and digital literacy across demographics.', partNumber: 2, partTitle: 'Digital Divide & Access' },
-  { id: 'cspi-ent-2b', question: 'A school district provides laptops only to students whose families can afford internet access at home. The MOST likely effect on the digital divide is:', options: ['It eliminates the digital divide because every student in the district now owns the same model of laptop', 'It widens the divide — students without home internet still cannot use the devices outside school', 'It has no effect on overall access since the devices are already provided by the school for classroom use', 'It increases broadband speeds nationally as more households purchase home internet plans for their students'], correctIndex: 1, explanation: 'Devices alone do not solve the divide. Without home connectivity, the policy reinforces existing inequities.', partNumber: 2, partTitle: 'Digital Divide & Access' },
-  { id: 'cspi-ent-3a', question: 'Crowdsourcing in computing is BEST described as:', options: ['Hiring a single expert to solve a problem in private and then publishing only the final result of the work', 'Soliciting input, content, or labor from a large, distributed group of people — often via the Internet', 'A type of network protocol that allows large groups of devices to coordinate their traffic on the Internet reliably', 'A way to encrypt data so it can be shared with a large group of recipients at the same time securely'], correctIndex: 1, explanation: 'Crowdsourcing aggregates contributions from many people. Examples: Wikipedia articles, OpenStreetMap data, captcha-based image labeling.', partNumber: 3, partTitle: 'Crowdsourcing & Citizen Science' },
-  { id: 'cspi-ent-3b', question: 'Citizen-science projects (e.g., users classify galaxy images or report bird sightings) MAINLY benefit research by:', options: ['Replacing scientific peer review entirely with informal volunteer evaluations of every published research paper', 'Scaling data collection and labeling far beyond what professional researchers could do alone', 'Eliminating the need for any data analysis since the volunteers themselves draw all of the conclusions directly', 'Restricting research to one country at a time so that the volunteer pool stays small enough to manage easily'], correctIndex: 1, explanation: 'Citizen science leverages a large volunteer pool to collect or label data at a scale impossible with only professional researchers.', partNumber: 3, partTitle: 'Crowdsourcing & Citizen Science' },
-  { id: 'cspi-ent-4a', question: 'Open-source software is BEST described as software whose:', options: ['Source code is hidden and proprietary, and only paying customers may access compiled binary executables', 'Source code is freely available for inspection, modification, and redistribution under a license', 'Source code is published publicly but can never be modified, redistributed, or used in any new derivative project', 'Use of the program is strictly illegal in any context, even for academic study or personal evaluation purposes'], correctIndex: 1, explanation: 'Open-source software (e.g., Linux, Firefox, Python) makes its source code available under licenses that permit study, change, and redistribution.', partNumber: 4, partTitle: 'Intellectual Property & Licensing' },
-  { id: 'cspi-ent-4b', question: 'A Creative Commons license is MOSTLY used to:', options: ['Hide all uses of a work entirely from the public so that no one can reuse it under any circumstances at all', 'Let creators specify which uses (sharing, adaptation, commercial use) others may make of their work without seeking individual permission', 'Make a work copyright-free in all countries automatically and remove every restriction on commercial reuse forever from the moment of publication', 'Sell user data collected from people who view the work, with proceeds going back to the original creator of the licensed material'], correctIndex: 1, explanation: 'Creative Commons licenses give creators standardized ways to permit certain uses while reserving others (e.g., CC-BY, CC-BY-NC, CC-BY-SA).', partNumber: 4, partTitle: 'Intellectual Property & Licensing' },
-  { id: 'cspi-ent-5a', question: 'Which is the BEST example of a computing innovation creating a NEW job category that did not previously exist?', options: ['Telephone operator', 'Search-engine optimization (SEO) specialist', 'Carriage driver', 'Chimney sweep'], correctIndex: 1, explanation: 'SEO specialist exists ONLY because of search engines — a job category created by a computing innovation.', partNumber: 5, partTitle: 'Effects on Society' },
-  { id: 'cspi-ent-5b', question: 'Algorithmic recommendation systems can produce “filter bubbles”. The MAIN concern is:', options: ['Users see only content similar to what they already engage with, limiting exposure to differing viewpoints', 'Users are forced to read content they strongly disagree with, regardless of their previous engagement history on the platform', 'Networks become physically slower because personalized recommendations require additional processing on every single page load for the user', 'Recommendations always show the most accurate, balanced, and well-sourced information available on each topic across the entire web'], correctIndex: 0, explanation: 'Personalization optimizes engagement, which can narrow the information a user encounters — a known unintended consequence with civic implications.', partNumber: 5, partTitle: 'Effects on Society' },
-  { id: 'cspi-ent-6a', question: 'Wikipedia is a famous example of:', options: ['Closed-source software with paid editors only, with no contributions accepted from the general public anywhere', 'Crowdsourced content created and maintained by many distributed contributors', 'A search engine that indexes encyclopedia content from many different sites and ranks them for general user queries', 'A type of computer hardware optimized for storing and serving large reference texts to many readers at once'], correctIndex: 1, explanation: 'Wikipedia’s articles are written and edited by a large, distributed community of volunteers — a flagship example of crowdsourcing.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspi-ent-6b', question: 'A free messaging app collects detailed metadata about who messages whom and when. A reasonable concern is that this data:', options: ['Has no value to anyone, since metadata without message contents cannot reveal anything useful or sensitive', 'Could be sold, leaked, or subpoenaed and reveal sensitive social relationships even without message content', 'Is impossible to store at scale because metadata grows much faster than the actual message contents do over time', 'Cannot be analyzed by anyone outside the messaging app, since metadata fields are encrypted automatically by default'], correctIndex: 1, explanation: 'Even without message content, metadata (graph + timing) reveals who knows whom, when, and how intensely — a major privacy concern.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspi-ent-7a', question: 'When evaluating a computing innovation, AP CSP students should consider:', options: ['Only its technical features, such as the algorithms used and the underlying hardware design choices', 'Its effects on different groups, including beneficial, harmful, intended, and unintended consequences', 'Only the developer’s opinion of how successful the project has been since its initial public release', 'Only its commercial profit, including total revenue, market share, and projected growth over the next decade'], correctIndex: 1, explanation: 'AP CSP requires multidimensional analysis: economic, social, ethical, environmental — across groups and over time.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cspi-ent-7b', question: 'A computing innovation reduces a task from 8 hours of human labor to 2 minutes of machine processing. A LIKELY mixed effect is:', options: ['Productivity rises while certain jobs are displaced and may require workers to retrain', 'Productivity falls and unemployment is unaffected because workers immediately move to identical jobs in other industries', 'No one is affected at all because automation only reshapes the work itself, not the labor market or wages', 'The innovation is automatically banned worldwide by labor regulators in order to protect the displaced workers from harm'], correctIndex: 0, explanation: 'Automation increases productivity but reshapes labor demand, often displacing some workers and creating demand for new skills.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'cimp-ent-1a', partNumber: 1, partTitle: 'Digital Divide, Bias, and Beneficial/Harmful Effects',
+    question: 'A voice assistant understands people with some accents far less accurately than others. What is the most likely cause?',
+    options: ['Its servers respond more slowly in some regions', 'It learned from too few kinds of speakers', 'Some users speak too quietly into the device', 'The Internet routes some voices more slowly'],
+    correctIndex: 1,
+    explanation: 'A system trained on data that underrepresents some groups reproduces that gap, which is algorithmic bias. Network speed and volume do not explain a pattern tied to accent.',
+  },
+  {
+    id: 'cimp-ent-1b', partNumber: 1, partTitle: 'Digital Divide, Bias, and Beneficial/Harmful Effects',
+    question: 'A student wants to use someone else\'s photo in a class website without asking the photographer for permission. Which choice is legal?',
+    options: ['Use any photo that a search engine shows', 'Use a photo after slightly changing its colors', 'Use a Creative Commons photo whose terms allow reuse', 'Use a photo as long as the site earns no money'],
+    correctIndex: 2,
+    explanation: 'A Creative Commons license is the creator\'s public permission to share or reuse the work under stated terms. Editing a photo or not charging money does not remove the creator\'s rights.',
+  },
+  {
+    id: 'cimp-ent-2a', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A ride app shares a driver\'s location so riders can find their car. Later, some people use the same feature to track others without permission. This effect is best described as',
+    options: ['harm that the designers intended', 'benefit the designers never intended', 'benefit that the designers intended', 'harm the designers never intended'],
+    correctIndex: 3,
+    explanation: 'The designers built location sharing to help riders, not to enable tracking, so this harm was not planned. Unintended harmful effects are the kind exam scenarios focus on most.',
+  },
+  {
+    id: 'cimp-ent-2b', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A city moves all of its permit applications online and stops accepting paper forms. Which group is most likely to be harmed?',
+    options: ['Residents with no home Internet access', 'Residents who already apply online', 'Residents who want faster approvals', 'Stores that sell computer equipment'],
+    correctIndex: 0,
+    explanation: 'People without devices or Internet access lose their way to apply, which is the digital divide in action. The other groups either benefit or are unaffected.',
+  },
+  {
+    id: 'cimp-ent-3a', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'A released dataset lists each person\'s ZIP code, birth date and gender but no names. Why is it still a privacy risk?',
+    options: ['Combined, those fields can identify many people', 'Birth dates are protected by copyright', 'ZIP codes are encrypted and cannot be read', 'Without names the data has no use at all'],
+    correctIndex: 0,
+    explanation: 'Separate pieces of personal data can be aggregated to identify individuals. Few people share the same ZIP code, birth date and gender, so the records can often be traced to real people.',
+  },
+  {
+    id: 'cimp-ent-3b', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'A developer puts code from an open-source library into her app. What should she do?',
+    options: ['Nothing, since open source has no conditions', 'Pay the authors before using any of the code', 'Rewrite it so no one can tell where it came from', 'Follow the license and credit the authors'],
+    correctIndex: 3,
+    explanation: 'Open-source code may be reused and modified, but under the terms of its license, and work created by others should be credited. Hiding its origin would be plagiarism.',
+  },
+  {
+    id: 'cimp-ent-4a', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'A bank\'s algorithm denies loan applications without telling applicants why. Which concern does this raise most directly?',
+    options: ['Bandwidth, because the model needs a fast connection', 'Redundancy, because the model runs on one server', 'Transparency, because people cannot see the reasons', 'Encryption, because the decisions are not secret'],
+    correctIndex: 2,
+    explanation: 'When an algorithm makes high-stakes decisions about people, they should be able to understand and appeal the result. Hidden reasons make errors and bias hard to detect.',
+  },
+  {
+    id: 'cimp-ent-4b', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'A store\'s free loyalty card gives shoppers discounts. What does the store most likely gain in exchange?',
+    options: ['A detailed record of what each shopper buys', 'Faster checkout lines at all of its stores', 'Free Internet service for its customers', 'Protection for shoppers against identity theft'],
+    correctIndex: 0,
+    explanation: 'The convenience of discounts is traded for a fine-grained purchase history. That data can be analyzed, combined or shared, which is the surveillance side of the trade.',
+  },
+  {
+    id: 'cimp-ent-5a', partNumber: 5, partTitle: 'Change Over Time',
+    question: 'The World Wide Web was first created so scientists could share research quickly. Its later use for shopping and entertainment is an example of',
+    options: ['the digital divide closing for rural users', 'algorithmic bias in how search results rank', 'uses its inventors did not plan for at all', 'open protocols keeping personal data private'],
+    correctIndex: 2,
+    explanation: 'Computing innovations are often used in ways their creators did not intend, and people change how they do everyday tasks to include them.',
+  },
+  {
+    id: 'cimp-ent-5b', partNumber: 5, partTitle: 'Change Over Time',
+    question: 'Which job task is most likely to be automated first?',
+    options: ['Comforting a patient before surgery', 'Typing data from paper forms into a spreadsheet', 'Negotiating a contract between two companies', 'Judging which design a client will love'],
+    correctIndex: 1,
+    explanation: 'Routine, rule-based tasks such as data entry are the easiest to automate. Work that depends on judgment or human interaction is more often assisted by computing than replaced.',
+  },
+  {
+    id: 'cimp-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'A public-health app collects users\' locations to find disease hotspots. Which change best reduces the privacy harm while keeping the health benefit?',
+    options: ['Release only area totals, never individual routes', 'Sell the data to help pay for the app', 'Collect locations every second instead of hourly', 'Also require users to share their contact lists'],
+    correctIndex: 0,
+    explanation: 'Releasing only group totals still shows where outbreaks are, while making it much harder to trace any one person. The other changes collect or expose more personal data.',
+  },
+  {
+    id: 'cimp-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'Which effect of home video doorbells is an unintended harm?',
+    options: ['Owners can see who is at the door', 'Porch thieves are discouraged', 'Police use footage to solve a crime', 'Passersby are filmed unknowingly'],
+    correctIndex: 3,
+    explanation: 'Doorbells are built to show visitors and deter theft, so constant recording of passersby is an unplanned privacy harm. Helping police is an unintended benefit.',
+  },
+  {
+    id: 'cimp-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'Which statement about the effects of computing is accurate?',
+    options: ['Anonymous data can never identify a person', 'A change can help some people, harm others', 'If a use is legal, it must also be ethical', 'Automation removes jobs without creating any'],
+    correctIndex: 1,
+    explanation: 'The same effect can be beneficial to one group and harmful to another, so impact questions ask who is affected and how. The other statements are common misconceptions.',
+  },
+  {
+    id: 'cimp-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'Volunteers use their own phones to photograph and report birds for a university research project. This is an example of',
+    options: ['the digital divide', 'citizen science', 'algorithmic bias', 'a phishing attack'],
+    correctIndex: 1,
+    explanation: 'Citizen science is research done partly by volunteers who contribute data, often with their own devices. It is a form of crowdsourcing.',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Beneficial & Harmful Effects' },
-    { partNumber: 2, partTitle: 'Digital Divide & Access' },
-    { partNumber: 3, partTitle: 'Crowdsourcing & Citizen Science' },
-    { partNumber: 4, partTitle: 'Intellectual Property & Licensing' },
-    { partNumber: 5, partTitle: 'Effects on Society' },
-    { partNumber: 6, partTitle: 'Applied Practice' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Digital Divide, Bias, and Beneficial/Harmful Effects' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Change Over Time' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Computing Systems & Networks (AP CS Principles)
+ * Entrance Quiz — Computing Systems & Networks (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 4: computing devices, networks, packets, routing, bandwidth, latency.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'cspc-ent-1a', question: 'A computing device is BEST described as:', options: ['Only a desktop computer that sits on a table and is plugged into both wall power and a wired network connection', 'Any physical artifact that can run a program (computer, phone, smart sensor, embedded controller, etc.)', 'A type of network cable used to connect two physical machines so they can pass packets of data between them', 'A printed book of step-by-step instructions that a human reads aloud so a machine can carry out a task'], correctIndex: 1, explanation: 'Computing devices include any hardware that executes programs — from servers and laptops to phones, watches, and embedded sensors.', partNumber: 1, partTitle: 'Computing Devices' },
-  { id: 'cspc-ent-1b', question: 'A computing system typically combines:', options: ['Only the physical hardware components, such as the processor, memory, and storage installed inside the device', 'Hardware AND software, working together to perform tasks', 'Only the software programs that are installed on the device, separate from any of its physical components', 'Only the data files that the device stores, regardless of any code or hardware that processes them'], correctIndex: 1, explanation: 'A computing system is the combination of hardware (the device) and software (the programs) that together perform a task.', partNumber: 1, partTitle: 'Computing Devices' },
-  { id: 'cspc-ent-2a', question: 'A computer network is BEST described as:', options: ['A single computer with no internet access that has been configured to share its files with other nearby users', 'Two or more computing devices connected together to share resources or communicate', 'A type of programming language used specifically to write software that runs on connected computing devices', 'A photo storage format used to compress images before they are sent between two connected computers'], correctIndex: 1, explanation: 'A network is two or more devices connected so they can exchange data or share resources.', partNumber: 2, partTitle: 'Networks' },
-  { id: 'cspc-ent-2b', question: 'On a network, a path between any two given devices:', options: ['Always uses the exact same wires every single time the two devices exchange any kind of data on the network', 'Can typically be one of MANY possible routes — networks are designed with redundancy', 'Is fixed by the manufacturer of the device at the factory and cannot be changed by network administrators later', 'Cannot exist at all if the two devices were made by different brands or are running different operating systems'], correctIndex: 1, explanation: 'Networks (and the Internet) typically have many redundant paths between any two devices, which improves resilience and load balancing.', partNumber: 2, partTitle: 'Networks' },
-  { id: 'cspc-ent-3a', question: 'When a large file is sent across the Internet, it is typically:', options: ['Sent as one giant continuous stream of bytes that cannot be paused or interrupted at any point along the way', 'Broken into smaller PACKETS that travel independently and are reassembled at the destination', 'Sent as a single email attachment regardless of the file’s actual size, even when the file is many gigabytes long', 'Encrypted and then compressed into a single bit that travels alone across the network to the destination device'], correctIndex: 1, explanation: 'Data is split into packets. Each packet may take a different route. The destination reassembles them in order.', partNumber: 3, partTitle: 'Packets & Routing' },
-  { id: 'cspc-ent-3b', question: 'If a single packet is lost in transit, the MOST common response of a reliable transport protocol is to:', options: ['Discard the entire file that was being sent and require the sender to start the whole transfer over from scratch', 'Detect the loss and retransmit the missing packet', 'Crash the receiving device because losing a packet permanently corrupts whatever data has already been delivered to it', 'Convert the file into a different programming language so that the missing piece can be reconstructed from context'], correctIndex: 1, explanation: 'Reliable protocols (e.g., TCP) detect lost packets and retransmit them, ensuring complete and ordered delivery.', partNumber: 3, partTitle: 'Packets & Routing' },
-  { id: 'cspc-ent-4a', question: 'Bandwidth is BEST described as:', options: ['The cumulative total amount of data that has ever been transmitted across the network since it was first installed', 'The amount of data that can be transmitted per unit time (e.g., bits per second)', 'The physical length of the network cable measured in meters between any two connected devices on the network', 'The total number of devices currently powered on and connected to the network at any given moment in time'], correctIndex: 1, explanation: 'Bandwidth measures throughput: how much data per unit of time. Higher bandwidth = more data in less time.', partNumber: 4, partTitle: 'Bandwidth & Latency' },
-  { id: 'cspc-ent-4b', question: 'Latency is BEST described as:', options: ['The time delay between sending a piece of data and it arriving at the destination', 'The total amount of data that can be sent across the network in a fixed period of time, such as a second', 'The total number of users who are currently connected to the network and exchanging packets at the same time', 'The wattage of the router measured in watts of electrical power consumed while it is forwarding network traffic'], correctIndex: 0, explanation: 'Latency measures delay (how long until data arrives). High bandwidth with high latency feels “slow to respond” in interactive applications.', partNumber: 4, partTitle: 'Bandwidth & Latency' },
-  { id: 'cspc-ent-5a', question: 'A streaming service buffers a few seconds of video before playing it. The MAIN purpose of buffering is to:', options: ['Encrypt the video stream so that no one else on the local network can intercept the frames and watch them', 'Smooth playback through brief network slowdowns or jitter', 'Reduce the resolution of the video so that lower-bandwidth users can still load each frame quickly enough', 'Remove copyright protection from the video so that it can be replayed offline by the viewer at a later time'], correctIndex: 1, explanation: 'Buffering lets the player keep going during short network hiccups by always having upcoming content ready.', partNumber: 5, partTitle: 'Real-World Networking' },
-  { id: 'cspc-ent-5b', question: 'A user reports that their video calls are choppy even though file downloads are fast. The MOST likely network issue is:', options: ['Low storage available on the device, which forces the calling app to drop frames so it can save space on disk', 'High latency or jitter, even though bandwidth is sufficient', 'A logic error inside the calling app’s color picker that interferes with how it renders incoming video frames on screen', 'The device is too new and uses a video codec that older network routers cannot forward correctly to other participants'], correctIndex: 1, explanation: 'Real-time interaction (calls, games) is sensitive to latency and jitter, while bulk file downloads benefit mainly from bandwidth. The two are different metrics.', partNumber: 5, partTitle: 'Real-World Networking' },
-  { id: 'cspc-ent-6a', question: 'A school connects 30 classrooms with networking equipment so they can share files and a printer. This is an example of a:', options: ['Local Area Network (LAN)', 'Cellular tower', 'Single-device system', 'Hard drive'], correctIndex: 0, explanation: 'A network of devices in a small geographic area (a building or campus) is a LAN. The Internet is a network of networks.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspc-ent-6b', question: 'Two routes between two cities have different speeds. Adding a third, redundant cable that connects them MAINLY:', options: ['Reduces the total available bandwidth between the two cities because the new cable competes with the existing routes', 'Improves fault tolerance — traffic can be rerouted if one path fails', 'Eliminates all latency between the two cities so that messages arrive at the destination with no delay at all', 'Decreases the overall security of the link because each additional cable creates one more place that can be tapped'], correctIndex: 1, explanation: 'Redundant paths improve fault tolerance: if one fails, traffic uses the others. This is a fundamental design principle of the Internet.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspc-ent-7a', question: 'Which of the following BEST describes the Internet?', options: ['A single, central computer in one country that stores every website and serves them to all users worldwide', 'A global network of networks that uses agreed-upon protocols to exchange data', 'A type of programming language used to build websites and the network software that runs on top of them', 'A specific company’s product that is sold to households as a service for connecting their devices to one another'], correctIndex: 1, explanation: 'The Internet is a global, decentralized network of networks. Devices communicate using shared protocols (e.g., TCP/IP).', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cspc-ent-7b', question: 'A high-bandwidth, high-latency satellite link would be MOST suitable for:', options: ['Real-time online gaming where every player action must be reflected on the other players’ screens almost immediately', 'Bulk file transfers where total throughput matters more than instant responsiveness', 'Live video conferencing where each participant expects to hear and see the others with no perceptible delay between them', 'Stock-market trading systems where decisions to buy or sell must be transmitted in fractions of a millisecond to win'], correctIndex: 1, explanation: 'High bandwidth + high latency = good for moving lots of data overall, but bad for interactive uses where every round-trip delay matters.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'ccsn-ent-1a', partNumber: 1, partTitle: 'Devices, Networks, and the Internet',
+    question: 'A large video file is sent from one computer to another across the Internet. Which statement about its packets is correct?',
+    options: ['Packets may take different paths and arrive out of order', 'Every packet must follow the same path and arrive in order', 'Packets carry only data, with no extra information', 'One lost packet shuts down the whole connection'],
+    correctIndex: 0,
+    explanation: 'Each packet holds a chunk of data plus metadata for routing and reassembly, and the network routes each one on its own. They can arrive in order, out of order, or not at all.',
+  },
+  {
+    id: 'ccsn-ent-1b', partNumber: 1, partTitle: 'Devices, Networks, and the Internet',
+    question: 'A school\'s grading program runs on two servers and on every teacher\'s laptop, and they all work together to record and report grades. Which term best describes this whole setup?',
+    options: ['A single computing device', 'A computing system', 'A communication protocol', 'A data stream'],
+    correctIndex: 1,
+    explanation: 'A computing system is a group of computing devices and programs working together for a common purpose. Each laptop or server alone is a computing device.',
+  },
+  {
+    id: 'ccsn-ent-2a', partNumber: 2, partTitle: 'Key Processes: Paths and Routing',
+    question: 'A network has these direct connections: P–Q, P–R, Q–S, R–S, S–T, S–U and T–U. Which single device\'s failure would stop all communication between P and U?',
+    options: ['S', 'R', 'Q', 'T'],
+    correctIndex: 0,
+    explanation: 'Every path from P passes through Q or R and then must go through S to reach U or T. Losing Q, R or T still leaves another path, so S is the single point of failure.',
+  },
+  {
+    id: 'ccsn-ent-2b', partNumber: 2, partTitle: 'Key Processes: Paths and Routing',
+    question: 'About how long does it take to send a 300-megabyte file over a connection with a bandwidth of 60 megabits per second?',
+    options: ['5 seconds', '80 seconds', '40 seconds', '2,400 seconds'],
+    correctIndex: 2,
+    explanation: 'The file is 300 × 8 = 2,400 megabits, and 2,400 ÷ 60 = 40 seconds. Forgetting to convert bytes to bits gives the 5-second answer.',
+  },
+  {
+    id: 'ccsn-ent-3a', partNumber: 3, partTitle: 'Patterns & Examples: Packets and Protocols',
+    question: 'A live video-call app would rather lose a few packets than wait for missing ones to be resent. Which protocol best fits that choice?',
+    options: ['UDP, which skips checking that packets arrive', 'HTTP, which requests and delivers Web pages', 'TCP, which resends any packet that goes missing', 'IP, which only addresses packets'],
+    correctIndex: 0,
+    explanation: 'UDP sends packets without confirming delivery or order, so it is quicker but may lose data. TCP guarantees delivery by resending, which adds delay.',
+  },
+  {
+    id: 'ccsn-ent-3b', partNumber: 3, partTitle: 'Patterns & Examples: Packets and Protocols',
+    question: 'Which statement correctly describes how the Internet and the World Wide Web are related?',
+    options: ['The Internet is a part of the Web that handles email', 'The Web is a service that runs on the Internet', 'The Web and the Internet are two names for one network', 'The Web uses TCP, while the Internet uses only HTTP'],
+    correctIndex: 1,
+    explanation: 'The Internet is the network of networks; the Web is one service that runs on it, using HTTP. The Internet also carries many other kinds of traffic.',
+  },
+  {
+    id: 'ccsn-ent-4a', partNumber: 4, partTitle: 'Connections & Interactions: Fault Tolerance and Access',
+    question: 'A company adds a second, separate connection between each pair of its office networks. What is the main tradeoff?',
+    options: ['Faster single packets in return for weaker security', 'Lower cost in return for reduced reliability', 'More cost in return for fault tolerance', 'Open protocols in return for slower routing'],
+    correctIndex: 2,
+    explanation: 'Redundant connections cost extra resources, but if one link fails, data can travel the other, so the system keeps working.',
+  },
+  {
+    id: 'ccsn-ent-4b', partNumber: 4, partTitle: 'Connections & Interactions: Fault Tolerance and Access',
+    question: 'Which situation is an example of the digital divide?',
+    options: ['Rural students lack home broadband for class', 'A website loads slowly because its server is overloaded', 'A school blocks certain websites on its own network', 'A user forgets a password and is locked out'],
+    correctIndex: 0,
+    explanation: 'The digital divide is unequal access to devices and the Internet based on factors such as geography or income. The other situations are technical or account problems.',
+  },
+  {
+    id: 'ccsn-ent-5a', partNumber: 5, partTitle: 'Parallel and Distributed Computing',
+    question: 'A program runs a 15-second setup step that cannot be split, then six independent tasks of 5 seconds each. With 3 processors, how long does it take, and what is the speedup?',
+    options: ['15 seconds, speedup 3', '25 seconds, speedup 3', '10 seconds, speedup 4.5', '25 seconds, speedup 1.8'],
+    correctIndex: 3,
+    explanation: 'Sequentially it takes 15 + 30 = 45 seconds. With 3 processors each runs two tasks, so it takes 15 + 10 = 25 seconds, and the speedup is 45 ÷ 25 = 1.8.',
+  },
+  {
+    id: 'ccsn-ent-5b', partNumber: 5, partTitle: 'Parallel and Distributed Computing',
+    question: 'A program has a sequential setup step followed by four independent tasks. What happens as the number of processors grows from 4 to 16?',
+    options: ['Time keeps falling in proportion to the processors added', 'Time rises because each processor reruns the setup', 'Time stops falling once every job has a processor of its own', 'Time falls to zero with enough processors'],
+    correctIndex: 2,
+    explanation: 'With four tasks, a fifth processor has nothing to do, and the setup step can never be split. The sequential portion limits how much faster the program can get.',
+  },
+  {
+    id: 'ccsn-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'Four independent tasks take 9, 7, 5 and 3 seconds. With 2 processors and the best possible split, how long does the whole job take?',
+    options: ['9 seconds', '12 seconds', '15 seconds', '24 seconds'],
+    correctIndex: 1,
+    explanation: 'Splitting the tasks as 9 + 3 and 7 + 5 gives each processor 12 seconds, and the job ends when the busier processor finishes. Any other split leaves one processor with more than 12 seconds.',
+  },
+  {
+    id: 'ccsn-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop',
+    question: 'A network has these direct connections: A–B, B–C, B–D, C–E and D–E. Adding which one connection removes the single point of failure between A and E?',
+    options: ['C–D', 'B–E', 'B–C', 'A–C'],
+    correctIndex: 3,
+    explanation: 'A connects only to B, so B is on every path to E. A new A–C link gives a path that bypasses B; the other choices still route everything through B.',
+  },
+  {
+    id: 'ccsn-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'Which statement about bandwidth is correct?',
+    options: ['It is the time one packet takes to arrive', 'It is the number of devices on a path', 'It is the most data sent per unit of time', 'It is the number of bytes stored on a server'],
+    correctIndex: 2,
+    explanation: 'Bandwidth is the maximum amount of data that can be sent in a fixed amount of time, usually measured in bits per second.',
+  },
+  {
+    id: 'ccsn-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'A task takes 80 seconds when run sequentially and 32 seconds when run in parallel. What is the speedup?',
+    options: ['0.4', '48', '3.2', '2.5'],
+    correctIndex: 3,
+    explanation: 'Speedup is the sequential time divided by the parallel time: 80 ÷ 32 = 2.5.',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Computing Devices' },
-    { partNumber: 2, partTitle: 'Networks' },
-    { partNumber: 3, partTitle: 'Packets & Routing' },
-    { partNumber: 4, partTitle: 'Bandwidth & Latency' },
-    { partNumber: 5, partTitle: 'Real-World Networking' },
-    { partNumber: 6, partTitle: 'Applied Practice' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Devices, Networks, and the Internet' },
+    { partNumber: 2, partTitle: 'Key Processes: Paths and Routing' },
+    { partNumber: 3, partTitle: 'Patterns & Examples: Packets and Protocols' },
+    { partNumber: 4, partTitle: 'Connections & Interactions: Fault Tolerance and Access' },
+    { partNumber: 5, partTitle: 'Parallel and Distributed Computing' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

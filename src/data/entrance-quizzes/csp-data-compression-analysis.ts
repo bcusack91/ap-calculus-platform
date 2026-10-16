@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Data Compression & Analysis (AP CS Principles)
+ * Entrance Quiz — Data Compression & Analysis (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 2: lossy vs lossless compression, trade-offs, visualization, summarization, AP-style scenarios.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'cspd-ent-1a', question: 'Data compression is a process that:', options: ['Permanently destroys data and overwrites the original with random noise that cannot be reversed', 'Reduces the number of bits needed to store or transmit data', 'Always increases file size by adding redundancy and extra metadata for higher quality', 'Encrypts data so it cannot be read without the correct decryption key'], correctIndex: 1, explanation: 'Compression reduces the bits required to represent data — either by removing redundancy (lossless) or by discarding less-important detail (lossy).', partNumber: 1, partTitle: 'Compression Basics' },
-  { id: 'cspd-ent-1b', question: 'Lossless compression is BEST described as:', options: ['Compression that always reduces any file size to zero, regardless of the data inside', 'Compression from which the ORIGINAL data can be perfectly reconstructed', 'Compression that throws away detail to save more space', 'A type of encryption that scrambles data using a shared secret key'], correctIndex: 1, explanation: 'Lossless compression preserves all of the original data; the compressed version can be decompressed back to the exact original.', partNumber: 1, partTitle: 'Compression Basics' },
-  { id: 'cspd-ent-2a', question: 'Lossy compression is BEST described as:', options: ['Compression that loses the ENTIRE file and produces an empty placeholder once decompression begins', 'Compression that achieves smaller files by discarding some information that is judged less important', 'Compression that doubles the file size while adding redundant copies for safe transmission', 'Compression that requires a password before the file can be opened or read again'], correctIndex: 1, explanation: 'Lossy compression discards some data (often imperceptible detail) so the file is smaller. The original cannot be exactly reconstructed.', partNumber: 2, partTitle: 'Lossy vs. Lossless' },
-  { id: 'cspd-ent-2b', question: 'Which file type is MOST commonly stored using LOSSY compression?', options: ['A plain text source-code file', 'A JPEG photo from a phone camera', 'A ZIP archive of legal documents', 'A spreadsheet of grades'], correctIndex: 1, explanation: 'JPEG is a common lossy image format — it discards visual detail the human eye is less sensitive to. Source code, ZIP archives, and spreadsheets need lossless storage.', partNumber: 2, partTitle: 'Lossy vs. Lossless' },
-  { id: 'cspd-ent-3a', question: 'A scientific lab needs to share raw experiment measurements that will be re-analyzed for years. The MOST appropriate compression choice is:', options: ['Lossy compression to save space because long-term lab storage capacity is tight', 'Lossless compression so the data can be reconstructed exactly', 'No storage at all, simply re-running each experiment whenever the data is needed again', 'Encryption only, with no compression applied to the raw measurement files'], correctIndex: 1, explanation: 'When the original data must be reproducible (scientific records, source code, financial records), lossless compression is required.', partNumber: 3, partTitle: 'Choosing a Strategy' },
-  { id: 'cspd-ent-3b', question: 'A streaming service wants to deliver high-resolution video over a slow network. They will MOST likely use:', options: ['Lossless compression so every pixel of the original frames is preserved exactly', 'Lossy compression to dramatically reduce bandwidth at acceptable quality loss', 'No compression at all, since modern broadband can easily handle full-quality video', 'Encryption only, sending the raw uncompressed video over a secure channel'], correctIndex: 1, explanation: 'Streaming optimizes for bandwidth and uses lossy compression so that small visual losses are traded for much smaller files.', partNumber: 3, partTitle: 'Choosing a Strategy' },
-  { id: 'cspd-ent-4a', question: 'A 10 MB photo is compressed to 2 MB using lossless compression. Which statement MUST be true?', options: ['The decompressed photo will be exactly identical to the original 10 MB photo', 'The decompressed photo will look slightly different from the original because some pixels were dropped', 'The decompressed photo cannot be opened by any standard image viewer after compression', 'The original photo is now permanently deleted from the device once compression finishes'], correctIndex: 0, explanation: 'Lossless compression guarantees the decompressed file is bit-for-bit identical to the original.', partNumber: 4, partTitle: 'Trade-offs' },
-  { id: 'cspd-ent-4b', question: 'Repeatedly saving a JPEG photo — each time editing slightly and re-saving — leads to noticeable quality loss because:', options: ['JPEG files double in size each save', 'Each save applies lossy compression again, accumulating small losses', 'JPEG files automatically encrypt themselves', 'All image formats behave this way'], correctIndex: 1, explanation: 'Each lossy save discards more detail; repeated lossy compression accumulates degradation. Lossless formats (e.g., PNG) do not have this issue.', partNumber: 4, partTitle: 'Trade-offs' },
-  { id: 'cspd-ent-5a', question: 'An analyst wants to show how monthly sales changed over a year. The MOST appropriate visualization is a:', options: ['Pie chart of one randomly chosen month showing the share of each product category', 'Line chart with months on the x-axis and sales on the y-axis', 'A single number with no chart, listing the average monthly figure for the whole year', 'A scatter plot of unrelated variables such as employee count versus warehouse square footage'], correctIndex: 1, explanation: 'A line chart over time is the standard way to show how a value changes — it makes trends and seasonality easy to see.', partNumber: 5, partTitle: 'Visualizing Data' },
-  { id: 'cspd-ent-5b', question: 'A bar chart shows that one category appears MUCH larger than others, mostly because the y-axis starts at 1,000 instead of 0. This is an example of:', options: ['An honest, well-designed visualization that follows charting best practices', 'A potentially misleading visualization that exaggerates differences', 'A required statistical method recommended whenever using bar charts', 'A type of compression applied to chart files to reduce storage size'], correctIndex: 1, explanation: 'Truncated y-axes can exaggerate differences. Honest visualizations either start at zero or clearly indicate the truncation.', partNumber: 5, partTitle: 'Visualizing Data' },
-  { id: 'cspd-ent-6a', question: 'A dataset has columns Order_ID, Customer_ID, Date, Total. To find the total revenue per customer, the analyst should:', options: ['Sort by Order_ID and read the top row as the customer total for each buyer', 'Group rows by Customer_ID and sum the Total within each group', 'Delete the Customer_ID column entirely and then sum the Total column for the remaining data', 'Compress the dataset first so per-customer aggregation runs faster on the compressed data'], correctIndex: 1, explanation: 'Aggregation by group (here Customer_ID) followed by a sum is the standard pattern for per-group totals — the same idea as a SQL GROUP BY or a pivot table.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspd-ent-6b', question: 'A company collects 1 GB of clickstream data per day. After 30 days, applying a lossless compression that achieves a 4:1 ratio reduces the storage to approximately:', options: ['About 30 GB (no change)', 'About 7.5 GB', 'About 0 GB', 'About 120 GB'], correctIndex: 1, explanation: '30 days * 1 GB = 30 GB. A 4:1 lossless compression makes it about 30 / 4 = 7.5 GB. The original data can still be reconstructed.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspd-ent-7a', question: 'Which statement about compression is TRUE?', options: ['Lossless compression can compress ANY file to be arbitrarily small, no matter what data the file originally contained or how random it is', 'There is a theoretical limit to how much a given file can be losslessly compressed; some files cannot be made smaller', 'Lossy compression always reconstructs the original exactly bit-for-bit, which is the main reason it is preferred for photos and music', 'Compression and encryption are the same thing — both shrink the data and protect it from being read by anyone without the key'], correctIndex: 1, explanation: 'Information theory shows there is a limit to lossless compression for a given file. Some files (e.g., already-compressed or random data) cannot be losslessly compressed further.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cspd-ent-7b', question: 'Which BEST describes the trade-off between lossy and lossless compression?', options: ['Lossless is always strictly better than lossy in every situation, regardless of file type, available bandwidth, or required output quality', 'Lossy can achieve smaller files but discards some information; lossless preserves all information but typically achieves less reduction', 'Lossy is always strictly better than lossless in every situation, regardless of whether the original data must be reproduced exactly later', 'They have identical performance in all cases, so the choice between them never affects file size, fidelity, or processing speed'], correctIndex: 1, explanation: 'The trade-off: lossy = smaller files at the cost of some information loss; lossless = exact reconstruction but typically less compression.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'cpdc-ent-1a', partNumber: 1, partTitle: 'Lossless vs Lossy, Compression Techniques, and Data Analysis',
+    question: 'A compression scheme writes each run of a repeated letter as a count followed by the letter, so aaab becomes 3a1b. How is wwwwwbbwww encoded?',
+    options: ['5w2b', '5w2b3w', 'w5b2w3', '8w2b'],
+    correctIndex: 1,
+    explanation: 'The text has three runs: five w, two b, then three w. Each run is written in order as count then letter, and the separate runs of w stay separate, giving 5w2b3w.',
+  },
+  {
+    id: 'cpdc-ent-1b', partNumber: 1, partTitle: 'Lossless vs Lossy, Compression Techniques, and Data Analysis',
+    question: 'A hospital sends X-ray images that doctors use for diagnosis, and a news site sends small thumbnail photos to phones on slow connections. Which choice of compression fits best?',
+    options: ['X-rays lossy, thumbnails lossless', 'X-rays lossless, thumbnails lossy', 'X-rays and thumbnails both lossy', 'X-rays and thumbnails both lossless'],
+    correctIndex: 1,
+    explanation: 'A diagnostic image must be rebuilt exactly, so it needs lossless compression. For the thumbnails, size and transfer time matter more than tiny details, so lossy compression fits.',
+  },
+  {
+    id: 'cpdc-ent-2a', partNumber: 2, partTitle: 'Key Processes',
+    question: 'Which file would lossless compression be able to shrink the most?',
+    options: ['A long string of randomly chosen characters', 'A file that was already compressed losslessly', 'A long text that repeats one word over and over', 'A five-letter word with no repeated letters'],
+    correctIndex: 2,
+    explanation: 'Lossless compression saves space by replacing redundancy, such as repeated patterns, with shorter codes. Random or already compressed data has little redundancy left to remove.',
+  },
+  {
+    id: 'cpdc-ent-2b', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A text file is compressed losslessly from 80 KB to 30 KB. Which statement about the compressed file is true?',
+    options: ['It holds less than half of the original text', 'It can be decoded only to an approximation', 'Decoding it gives back the exact original', 'It dropped words that readers would not notice'],
+    correctIndex: 2,
+    explanation: 'Lossless compression stores exactly the same information in fewer bits, and decoding rebuilds the original exactly. Fewer bits does not necessarily mean less information.',
+  },
+  {
+    id: 'cpdc-ent-3a', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'The text banana bandana has 14 characters, counting the space. Using the key # = "an", every "an" is replaced by #. How many characters long is the compressed text?',
+    options: ['12', '10', '8', '14'],
+    correctIndex: 1,
+    explanation: 'The text contains "an" four times, two in each word, so the result is b##a b#d#a. Each replacement turns two characters into one, saving 4, so the length is 10.',
+  },
+  {
+    id: 'cpdc-ent-3b', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'Which situation is the best fit for lossy compression?',
+    options: ['Streaming a movie to a phone on a slow network', 'Storing signed contracts for a law firm', 'Backing up a spreadsheet of bank balances', 'Archiving the source code of a program'],
+    correctIndex: 0,
+    explanation: 'Lossy compression fits when minimizing size or transmission time matters most and small losses in detail are acceptable. Code, contracts and financial records must be rebuilt exactly, so they need lossless compression.',
+  },
+  {
+    id: 'cpdc-ent-4a', partNumber: 4, partTitle: 'Extracting Information and Metadata',
+    question: 'A photographer corrects the date stored in a photo\'s metadata. What happens to the image itself?',
+    options: ['It is recompressed with lower quality', 'Its colors shift to match the new date', 'The pixels are unchanged', 'It is deleted and saved again as new data'],
+    correctIndex: 2,
+    explanation: 'Metadata describe the data but are separate from it, so editing them does not change the primary data. Every pixel stays exactly as it was.',
+  },
+  {
+    id: 'cpdc-ent-4b', partNumber: 4, partTitle: 'Extracting Information and Metadata',
+    question: 'A researcher has a data set of students\' test scores and wants to know whether hours of sleep affect those scores. What is the main limitation of this data set?',
+    options: ['Programs cannot analyze test scores', 'The data must be compressed first', 'Scores are metadata about students', 'It needs another source with those habits'],
+    correctIndex: 3,
+    explanation: 'A single data source often lacks what is needed to draw a conclusion. Sleep information must be combined with the scores, and even then a correlation would not prove that one causes the other.',
+  },
+  {
+    id: 'cpdc-ent-5a', partNumber: 5, partTitle: 'Challenges of Processing Data',
+    question: 'Which challenge does each example show? Example 1: a school roster lists a student\'s age as 150. Example 2: some survey takers left the age field blank.',
+    options: ['1 is incomplete data, 2 is invalid data', '1 is invalid data, 2 is incomplete data', '1 is invalid data, 2 needs cleaning', '1 needs combining, 2 is incomplete data'],
+    correctIndex: 1,
+    explanation: 'An age of 150 is a value that cannot be correct, which makes it invalid data. A field left blank is missing a value, which makes the data incomplete.',
+  },
+  {
+    id: 'cpdc-ent-5b', partNumber: 5, partTitle: 'Challenges of Processing Data',
+    question: 'A restaurant collects reviews only from customers who have joined its rewards program and then uses them to judge what all diners think. What is the main concern?',
+    options: ['Enough reviews will cancel out any bias', 'The data are too small to store', 'Reviews cannot contain any bias', 'The results may lean toward its regular guests'],
+    correctIndex: 3,
+    explanation: 'Bias often comes from the source of the data: rewards members are not typical of all diners. Collecting more reviews from the same group does not remove that bias.',
+  },
+  {
+    id: 'cpdc-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop: Using Programs With Data',
+    question: 'What is displayed?\nnums ← [12, 7, 30, 18, 5]\nkept ← []\nFOR EACH n IN nums\n{\nIF (n MOD 3 = 0)\n{\nAPPEND(kept, n)\n}\n}\nDISPLAY(kept)',
+    options: ['[12, 30, 18]', '[7, 5]', '[12, 18]', '[12, 30, 18, 5]'],
+    correctIndex: 0,
+    explanation: 'The program filters the list, keeping each value that leaves remainder 0 when divided by 3. 12, 30 and 18 qualify and are appended in order; 7 and 5 do not.',
+  },
+  {
+    id: 'cpdc-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop: Using Programs With Data',
+    question: 'gpas is the list [3.2, 3.9, 2.8, 3.5]. What is displayed?\nbest ← gpas[1]\nFOR EACH g IN gpas\n{\nIF (g < best)\n{\nbest ← g\n}\n}\nDISPLAY(best)',
+    options: ['3.9', '3.2', '2.8', '3.5'],
+    correctIndex: 2,
+    explanation: 'Lists start at index 1, so best begins as 3.2. The test g < best replaces it with any smaller value, so the program finds the minimum, 2.8.',
+  },
+  {
+    id: 'cpdc-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'Which statement about compression is accurate?',
+    options: ['Lossless compression shrinks every file to half its size', 'Lossy files can be rebuilt exactly with a key', 'Compressed files always hold less information', 'Lossy compression can shrink data more than lossless'],
+    correctIndex: 3,
+    explanation: 'Lossy compression keeps only an approximation, so it can usually remove more bits than lossless compression. Lossless savings depend on the data, and they never lose information.',
+  },
+  {
+    id: 'cpdc-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'A scheme that writes each run of a repeated letter as a count followed by the letter is applied to the text abcdef. What happens to its length?',
+    options: ['It grows longer', 'It cannot be encoded at all', 'It keeps exactly the same length', 'It shrinks to half its length'],
+    correctIndex: 0,
+    explanation: 'Each letter is a run of one, so the encoding is 1a1b1c1d1e1f, which has 12 characters instead of 6. Compression depends on the data, and data without repeats can get bigger.',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Compression Basics' },
-    { partNumber: 2, partTitle: 'Lossy vs. Lossless' },
-    { partNumber: 3, partTitle: 'Choosing a Strategy' },
-    { partNumber: 4, partTitle: 'Trade-offs' },
-    { partNumber: 5, partTitle: 'Visualizing Data' },
-    { partNumber: 6, partTitle: 'Applied Practice' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Lossless vs Lossy, Compression Techniques, and Data Analysis' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Extracting Information and Metadata' },
+    { partNumber: 5, partTitle: 'Challenges of Processing Data' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop: Using Programs With Data' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }

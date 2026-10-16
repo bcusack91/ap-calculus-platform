@@ -1,27 +1,110 @@
 /**
- * Entrance Quiz — Creative Development (AP CS Principles)
+ * Entrance Quiz — Creative Development (AP Computer Science Principles)
  * 14 questions · 7 parts (2 per part)
- * Big Idea 1: program purpose, design, iterative development, debugging, documentation.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'cspc-ent-1a', question: 'A team is starting work on a fitness-tracking app. Which question is MOST important to answer FIRST when defining the program purpose?', options: ['Which specific programming language and framework should the team use to build the very first prototype version of the app?', 'Who are the users and what problem will the program solve for them?', 'What font and color scheme should the buttons in the user interface use throughout the application from launch onward?', 'How many total lines of code should the finished program have once development of the application is fully complete?'], correctIndex: 1, explanation: 'Program purpose starts with identifying users and the problem being solved. Tools, styling, and length follow from purpose.', partNumber: 1, partTitle: 'Program Function & Purpose' },
-  { id: 'cspc-ent-1b', question: 'Which BEST describes program inputs and outputs?', options: ['Inputs are always typed by a user; outputs are always shown on the screen as text or images at the end', 'Inputs are data the program receives (sensors, files, users); outputs are data it produces (display, sound, files)', 'Inputs and outputs are essentially the same thing because the program processes both as identical streams of bytes inside memory', 'Inputs are only valid for game programs, while business and utility programs rely entirely on hard-coded values written into the source'], correctIndex: 1, explanation: 'Inputs are anything the program receives from outside (user, sensor, file, network). Outputs are anything it produces.', partNumber: 1, partTitle: 'Program Function & Purpose' },
-  { id: 'cspc-ent-2a', question: 'Program requirements describe:', options: ['The exact lines of code to write, line by line, in the chosen programming language for each feature', 'WHAT the program must do, not HOW it will do it', 'The marketing plan for the program, including its target audience and the channels used to reach those users', 'Only the visual color palette and font choices used throughout the program’s user interface from launch onward'], correctIndex: 1, explanation: 'Requirements specify behavior — what the program must accomplish. Implementation choices come later in design and development.', partNumber: 2, partTitle: 'Program Design & Specifications' },
-  { id: 'cspc-ent-2b', question: 'A team writes the requirement: "When the user enters a number, the program shall display whether it is positive, negative, or zero." This requirement is GOOD because it is:', options: ['Vague — it does not specify a programming language', 'Specific, testable, and describes observable behavior', 'Too long to be useful', 'Focused on implementation details'], correctIndex: 1, explanation: 'Good requirements are specific (clear inputs/outputs) and testable (you can write a test that confirms the behavior).', partNumber: 2, partTitle: 'Program Design & Specifications' },
-  { id: 'cspc-ent-3a', question: 'Iterative development MOST accurately means:', options: ['Writing the entire program once at the start and never revisiting or changing any part of it after that', 'Repeatedly designing, coding, and testing in cycles, refining the program over time', 'Skipping the testing phase entirely in order to save time and ship the program out to users sooner', 'Letting the compiler write most of the code automatically while the developer reviews each line that comes out'], correctIndex: 1, explanation: 'Iterative development cycles through design, code, test, and revise, with each iteration improving the program.', partNumber: 3, partTitle: 'Iterative Development' },
-  { id: 'cspc-ent-3b', question: 'Incremental development is BEST described as:', options: ['Building a program by writing and integrating one small piece at a time', 'Writing all the code for the program before testing any of the individual features once during development', 'Hiring small increments of new developers each week as the project grows in scope and overall complexity', 'Adding new features to the program only after the initial release has already gone out to end users'], correctIndex: 0, explanation: 'Incremental development builds the program in small, working pieces. Each increment is integrated and tested before moving on.', partNumber: 3, partTitle: 'Iterative Development' },
-  { id: 'cspc-ent-4a', question: 'A program that compiles successfully but produces the WRONG output for some inputs contains a:', options: ['Syntax error', 'Logic error', 'Hardware failure', 'Network error'], correctIndex: 1, explanation: 'Syntax errors prevent compilation. A program that runs but gives wrong results has a logic error — the algorithm is incorrect.', partNumber: 4, partTitle: 'Debugging Techniques' },
-  { id: 'cspc-ent-4b', question: 'A developer adds DISPLAY statements throughout a function to print the values of variables at different points. This debugging technique is BEST described as:', options: ['Using a stack trace produced automatically by the runtime when an exception is thrown by the program', 'Using print/trace statements to inspect program state', 'Refactoring the function into smaller helper procedures that are easier to read and test individually', 'Encryption of the function’s variables so that intermediate values cannot be observed by other parts of the code'], correctIndex: 1, explanation: 'Adding print statements to inspect variable values at runtime reveals what the program is actually doing vs. what was expected.', partNumber: 4, partTitle: 'Debugging Techniques' },
-  { id: 'cspc-ent-5a', question: 'A code comment states: "// Convert temperature from Celsius to Fahrenheit". The PRIMARY purpose of this comment is to:', options: ['Make the program run faster because comments are interpreted as performance hints by the compiler at build time', 'Document intent so future readers can understand the code', 'Hide the actual code from other developers who might try to read or modify the function in the future', 'Replace the function name during compilation so that the program uses the comment text as the identifier'], correctIndex: 1, explanation: 'Comments document intent and reasoning. They help readers understand what the code is for, without changing how it runs.', partNumber: 5, partTitle: 'Documentation' },
-  { id: 'cspc-ent-5b', question: 'Which of the following is the STRONGEST sign of a well-documented program?', options: ['Every single line of the program has a comment attached to it, even on lines whose meaning is completely obvious to any reader', 'Function and variable names are descriptive, and comments explain WHY non-obvious choices were made', 'Comments are written in a different natural language than the rest of the documentation, so each reader sees something different', 'There is one single giant comment block at the top of the file that summarizes everything the program does in one place'], correctIndex: 1, explanation: 'Strong documentation combines self-describing names with comments that explain WHY for non-obvious parts.', partNumber: 5, partTitle: 'Documentation' },
-  { id: 'cspc-ent-6a', question: 'A team builds a To-Do app. After the first iteration, users complain that adding a task takes too many clicks. The MOST appropriate next step in iterative development is to:', options: ['Ignore the user feedback entirely and continue adding new features that were already on the original product roadmap', 'Redesign the add-task interaction, implement the change, and test it with users again', 'Rewrite the entire app in a completely different programming language to address the click-count complaint quickly', 'Stop all further development on the project because the early user feedback indicates the app cannot be salvaged'], correctIndex: 1, explanation: 'Iterative development uses user feedback to drive the next cycle: revise the design, implement, test, and repeat.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspc-ent-6b', question: 'A function returns the wrong value only when the input is 0. The MOST efficient debugging strategy is to:', options: ['Rewrite the entire program from scratch in a different language and hope that the new version handles input 0 correctly without any further debugging', 'Test with input 0 specifically, then trace the function step-by-step for that case to find where it diverges from expected', 'Delete the function entirely from the program so that the failing case can no longer be reached during normal use of the application', 'Add hundreds of brand-new features first so that the function with input 0 becomes a smaller part of the overall program behavior'], correctIndex: 1, explanation: 'Debugging is most efficient when you reproduce the failing case and trace through the code to find exactly where actual diverges from expected.', partNumber: 6, partTitle: 'Applied Practice' },
-  { id: 'cspc-ent-7a', question: 'Which of the following BEST describes the iterative software development cycle?', options: ['Investigate, Design, Prototype, Test, Release — performed exactly ONCE without any further iteration over the program’s lifetime', 'Investigate, Design, Implement, Test, Reflect — then repeat, refining the program each cycle', 'Code, Ship, Forget — write the code, ship it to users immediately, and then never revisit any part of it again', 'Test, Test, Test — repeat only the testing step many times without ever investigating, designing, or implementing changes'], correctIndex: 1, explanation: 'The iterative cycle includes investigating the problem, designing, implementing, testing, and reflecting — then repeating with the lessons learned.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'cspc-ent-7b', question: 'A developer has a syntax error in their code. The program will:', options: ['Run normally to completion but produce wrong output for some of the inputs that the program is given by the user', 'Fail to compile or run, because the code is not valid in the language', 'Run faster than usual because the syntax error tells the compiler to skip safety checks during program execution', 'Be stored on disk as binary 1s and 0s, but the operating system will refuse to load the file into memory at all'], correctIndex: 1, explanation: 'A syntax error means the code violates the language grammar rules. The compiler/interpreter cannot parse it, so the program does not run at all.', partNumber: 7, partTitle: 'AP Review' }
+  {
+    id: 'cpcd-ent-1a', partNumber: 1, partTitle: 'Program Design, Collaboration, and Development Process',
+    question: 'A student\'s app lets users log each glass of water they drink and shows a running daily total. Which statement describes the program\'s purpose rather than its function?',
+    options: ['Adding each logged amount to a running total', 'Helping people stay hydrated', 'Displaying the daily total on the screen', 'Accepting amounts typed in by the user'],
+    correctIndex: 1,
+    explanation: 'Purpose is why the program exists, the problem it addresses. Adding to a total, displaying it and accepting input describe what the program does, which is its function.',
+  },
+  {
+    id: 'cpcd-ent-1b', partNumber: 1, partTitle: 'Program Design, Collaboration, and Development Process',
+    question: 'A team builds the login screen and tests it fully, then builds the search feature and tests it on its own before adding it to the working login code. Which kind of process is this?',
+    options: ['Iterative development', 'Event-driven programming', 'Incremental development', 'Sequential design'],
+    correctIndex: 2,
+    explanation: 'Building and testing small pieces, then adding each working piece to the whole, is incremental development. Iterative development means repeatedly revising based on feedback and revisiting earlier phases.',
+  },
+  {
+    id: 'cpcd-ent-2a', partNumber: 2, partTitle: 'Key Processes',
+    question: 'A team\'s prototype worked well when the developers tried it, but students in a pilot class could not find the submit button. What should the team do next?',
+    options: ['Release it, since the developers found no bugs', 'Add more features before any further testing', 'Write the documentation and stop work', 'Revise the design, then retest it with those users'],
+    correctIndex: 3,
+    explanation: 'Iterative development uses feedback from real users to refine the design and test again. Testing only with the developers missed a problem that the target users found right away.',
+  },
+  {
+    id: 'cpcd-ent-2b', partNumber: 2, partTitle: 'Key Processes',
+    question: 'Which statement about the comments in a program is accurate?',
+    options: ['They let the computer skip lines that have errors', 'They do not affect how it runs', 'They are needed for the program to compile', 'They should be written only once coding is done'],
+    correctIndex: 1,
+    explanation: 'Comments are written for people and are ignored when the program runs. They are written throughout development, not only at the end, and a program can run without any.',
+  },
+  {
+    id: 'cpcd-ent-3a', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'A game must play a sound whenever the player presses the space bar, no matter what else the program is doing. Which approach fits this requirement?',
+    options: ['Event-driven code that responds to the key', 'A loop that repeats the sound forever', 'A long sequence of statements in fixed order', 'Selection that checks the score after each level'],
+    correctIndex: 0,
+    explanation: 'In event-driven programming, a statement runs when an event such as a key press triggers it, not through the normal sequential flow. The other designs would play the sound at the wrong times or not at all.',
+  },
+  {
+    id: 'cpcd-ent-3b', partNumber: 3, partTitle: 'Patterns & Examples',
+    question: 'A quiz app calls the procedure gradeAnswer(answer, key) in five places. A teammate rewrites the steps inside gradeAnswer to make it faster, and it still returns the same results. What must change in the five calls?',
+    options: ['Each call must repeat the new steps itself', 'Each call needs an extra parameter', 'None of the five calls needs editing', 'The calls must move inside the procedure'],
+    correctIndex: 2,
+    explanation: 'Procedural abstraction lets callers depend only on what a procedure does, not how it does it. As long as the name, parameters and results stay the same, the calls need no change.',
+  },
+  {
+    id: 'cpcd-ent-4a', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'A program that should display the average of a list runs without stopping, but for [2, 4, 9] it displays 4 instead of 5. What kind of error is this?',
+    options: ['A syntax error', 'A run-time error', 'An overflow error', 'A logic error'],
+    correctIndex: 3,
+    explanation: 'The program follows the language rules and runs to completion, but its output is wrong, which is a logic error. Only testing reveals errors like this.',
+  },
+  {
+    id: 'cpcd-ent-4b', partNumber: 4, partTitle: 'Connections & Interactions',
+    question: 'Which activity belongs to the design phase of development rather than to investigation?',
+    options: ['Surveying users about the features they want', 'Observing users as they do the task by hand', 'Diagramming the user interface and planning the tests', 'Interviewing teachers about their class needs'],
+    correctIndex: 2,
+    explanation: 'Investigation gathers requirements through surveys, observation and interviews. The design phase outlines how to meet the specification, including diagramming the interface and planning how to test.',
+  },
+  {
+    id: 'cpcd-ent-5a', partNumber: 5, partTitle: 'Documentation and Acknowledging Code',
+    question: 'A student\'s program uses a procedure that a generative AI tool wrote. What should the student do?',
+    options: ['Nothing, since AI output belongs to the user', 'Rename its variables to make it original', 'Credit the AI tool and test and understand the code', 'Remove its comments so it looks hand-written'],
+    correctIndex: 2,
+    explanation: 'Code from another source, including an AI tool, should be acknowledged in the documentation. AI code can contain errors, so the student is also responsible for testing it and being able to explain it.',
+  },
+  {
+    id: 'cpcd-ent-5b', partNumber: 5, partTitle: 'Documentation and Acknowledging Code',
+    question: 'A programming environment does not support comments. Where can the program documentation go?',
+    options: ['In the program\'s variable names only', 'In a separate written document', 'Documentation is then not needed', 'In the program\'s output to the user'],
+    correctIndex: 1,
+    explanation: 'Documentation describes what the code does and how it was developed, and it can be kept outside the program when comments are not available. It is still needed for developing and maintaining correct programs.',
+  },
+  {
+    id: 'cpcd-ent-6a', partNumber: 6, partTitle: 'Problem-Solving Workshop: Finding and Fixing Errors',
+    question: 'This procedure should count the values from 10 to 20, inclusive. Which test input reveals its error?\nPROCEDURE countInRange(nums)\n{\ncount ← 0\nFOR EACH n IN nums\n{\nIF ((n > 10) AND (n ≤ 20))\n{\ncount ← count + 1\n}\n}\nRETURN(count)\n}',
+    options: ['[15, 18]', '[5, 25]', '[20, 21]', '[10, 15]'],
+    correctIndex: 3,
+    explanation: 'The value 10 should be counted, but n > 10 is false for it, so [10, 15] returns 1 instead of 2. The other inputs give the expected counts, because they avoid the lower boundary.',
+  },
+  {
+    id: 'cpcd-ent-6b', partNumber: 6, partTitle: 'Problem-Solving Workshop: Finding and Fixing Errors',
+    question: 'A procedure should accept ages from 13 to 19, inclusive, and reject all others. Which set of test inputs best checks its boundaries?',
+    options: ['12, 13, 19, 20', '14, 15, 16, 17', '1, 50, 100, 200', '13, 14, 15, 16'],
+    correctIndex: 0,
+    explanation: 'Good tests include the values at each boundary and just beyond them, so 12, 13, 19 and 20 check that both ends are handled. The other sets never test the upper boundary, or never test a value just outside the range.',
+  },
+  {
+    id: 'cpcd-ent-7a', partNumber: 7, partTitle: 'AP Review',
+    question: 'A language stores integers in a fixed number of bits. Adding two very large positive values produces a result outside the range it can represent. What kind of error is this?',
+    options: ['An overflow error', 'A syntax error', 'A logic error', 'A run-time error'],
+    correctIndex: 0,
+    explanation: 'An overflow error occurs when a computed number falls outside the range of values the fixed number of bits can represent. The code itself may be written correctly.',
+  },
+  {
+    id: 'cpcd-ent-7b', partNumber: 7, partTitle: 'AP Review',
+    question: 'After release, users report that an app stops working whenever they upload a photo larger than 10 MB. Which is the best next step for the team?',
+    options: ['Tell users to upload only small photos', 'Lower the upload limit to 5 MB for safety', 'Rewrite the upload code without testing it', 'Reproduce the bug with a big photo and fix it'],
+    correctIndex: 3,
+    explanation: 'The development cycle continues after release: investigate the reported problem, correct it and test again. The other choices dodge the bug or change code without testing the change.',
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -30,12 +113,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Program Function & Purpose' },
-    { partNumber: 2, partTitle: 'Program Design & Specifications' },
-    { partNumber: 3, partTitle: 'Iterative Development' },
-    { partNumber: 4, partTitle: 'Debugging Techniques' },
-    { partNumber: 5, partTitle: 'Documentation' },
-    { partNumber: 6, partTitle: 'Applied Practice' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: 'Program Design, Collaboration, and Development Process' },
+    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 3, partTitle: 'Patterns & Examples' },
+    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 5, partTitle: 'Documentation and Acknowledging Code' },
+    { partNumber: 6, partTitle: 'Problem-Solving Workshop: Finding and Fixing Errors' },
+    { partNumber: 7, partTitle: 'AP Review' },
   ]
 }
