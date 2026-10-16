@@ -9,7 +9,7 @@ export const aasOriginsDiasporaPart4Data = {
     {
       id: "aasod4-religion",
       type: 'text' as const,
-      content: "## Religion: orishas, saints and the ring shout\n\n| Tradition | Where | African roots | How it adapted |\n|---|---|---|---|\n| **Vodou** | Haiti (Saint-Domingue) | Fon *vodun* spirits from the Bight of Benin; Kongo spiritual practices | Spirits (*lwa*) associated with Catholic saints |\n| **Lucumí (Santería)** | Cuba | Yoruba orishas | Each orisha paired with a saint: Changó with Saint Barbara, Yemayá with Our Lady of Regla |\n| **Candomblé** | Bahia, Brazil | Yoruba, Fon and Central African traditions, organized in \"nations\" | Orisha worship kept largely in African languages for ritual |\n| **The ring shout** | Georgia and South Carolina Lowcountry, later across the South | West and Central African counterclockwise circle dances with call-and-response | Became a form of Christian worship in Black churches and praise houses |\n\nThe **Kongo cosmogram** is a cross inside a circle that represents the boundary between the world of the living and the world of the dead, and the cycle of life. Archaeologists have found marks resembling it scratched into the bases of clay bowls in South Carolina and on objects buried under the floors of quarters in Maryland and Virginia, evidence of Kongo beliefs practiced in secret."
+      content: "## Religion: syncretism and survival\n\nMany Africans did not first meet Christianity or Islam in the Americas. Before the Atlantic crossing, Africans had already blended local spiritual practices with Christianity and Islam, and they brought these **syncretic** practices with them. About **one-quarter** of the enslaved Africans who arrived in North America came from Christian societies in Africa, such as the Kingdom of Kongo, whose royal court had adopted Catholicism in the 1490s. About another **one-quarter** came from Muslim societies, many of them in Senegambia.\n\n| Practice traced to West and West Central Africa | What it involved | How it continued in the Americas |\n|---|---|---|\n| **Veneration of the ancestors** | Honoring the dead as members of the family who still watch over the living | Grave offerings and rituals honoring the dead |\n| **Divination** | Seeking guidance from the spirit world through trained specialists | Kept by ritual specialists in syncretic faiths |\n| **Healing practices** | Herbal and spiritual medicine | Herbalists and healers in enslaved communities |\n| **Collective singing and dancing** | Worship through music, movement and call-and-response | Carried into Black Christian worship and the spirituals |\n\nThese practices survived in **African diasporic religions** such as **Louisiana Voodoo**, which blended West and West Central African beliefs with Catholicism. Syncretism often worked by pairing: in Cuba, for example, Yoruba worshippers associated each orisha (deity) with a Catholic saint, so they could keep honoring African deities within, or behind, Catholic forms.\n\nReligion was also a source of resistance. Africans and their descendants who were enslaved in the Americas often performed spiritual ceremonies of these syncretic faiths to strengthen themselves before leading revolts. The best-known example is the **Bois Caïman** ceremony of August 1791, which helped launch the Haitian Revolution (Part 5).\n\nArchaeology adds evidence from North America. The **Kongo cosmogram**, a cross inside a circle representing the boundary between the world of the living and the world of the dead, has been found scratched into the bases of clay bowls in South Carolina, evidence of Kongo beliefs practiced there in secret."
     },
     {
       id: "aasod4-check",
@@ -29,7 +29,7 @@ export const aasOriginsDiasporaPart4Data = {
             "explanation": "Haitian Kreyòl is a new language that combined French vocabulary with grammatical patterns from West African languages, which is creolization. The day name and the Yoruba song are retentions, and the Latin mass is a European practice."
           },
           {
-            "question": "In Cuban Lucumí, the orisha Changó is associated with Saint Barbara. This pairing best shows",
+            "question": "In Cuba, Yoruba worshippers associated the orisha Changó with the Catholic Saint Barbara. This pairing best shows",
             "options": [
               "Spanish priests requiring enslaved Africans to worship the Yoruba orishas.",
               "Africans adapting Catholic saints so they could keep honoring Yoruba orishas.",
@@ -71,24 +71,26 @@ export const aasOriginsDiasporaPart4Data = {
             ]
           },
           {
-            "question": "Religion of Bahia, Brazil, organized in \"nations\" that honor the orishas",
-            "answer": "Candomblé",
+            "question": "Diasporic religion of Louisiana that blended African beliefs with Catholicism",
+            "answer": "Voodoo",
             "acceptableAnswers": [
-              "Candomblé",
-              "Candomble"
+              "Voodoo",
+              "Louisiana Voodoo",
+              "Vodou",
+              "Voudou"
             ]
           }
         ],
         "hint1": "Lorenzo Dow Turner studied it in 1949.",
         "hint2": "Five strings; central to early American folk music.",
-        "hint3": "Its name begins with C.",
-        "explanation": "Gullah Geechee, the banjo and Candomblé are three of the clearest examples of African cultures carried into and remade in the Americas."
+        "hint3": "Its name begins with V.",
+        "explanation": "Gullah Geechee, the banjo and Louisiana Voodoo are three of the clearest examples of African cultures carried into and remade in the Americas."
       }
     },
     {
       id: "aasod4-material",
       type: 'text' as const,
-      content: "## Music, food and craft\n\n| Area | Example | African connection |\n|---|---|---|\n| **Instruments** | The **banjo** | Gourd-bodied lutes of West Africa, such as the Jola *akonting* |\n| **Musical form** | Call-and-response; polyrhythm | West and Central African song and drumming; later spirituals, blues and gospel |\n| **Food** | Okra, black-eyed peas, sesame (*benne*), rice dishes such as Lowcountry red rice | Crops and cooking methods from West Africa; rice dishes related to jollof rice |\n| **Craft** | Coiled **sweetgrass baskets** of the Lowcountry | Coiled \"fanner\" baskets used to winnow rice in Senegambia and Sierra Leone |\n| **Burial customs** | Graves decorated with shells, glass and broken dishes | Kongo beliefs linking water, the dead and the spirit world |\n\n### Worked example: explaining a difference between regions\n\n*Prompt:* Explain why African religious traditions remained more visible in Bahia, Brazil, than in Virginia by the 1800s.\n\n1. **Claim:** Demography made the difference.\n2. **Evidence:** Bahia kept receiving large numbers of captives from the Bight of Benin into the 1800s, many of them Yoruba and Fon. Virginia's enslaved population was overwhelmingly American-born by the late 1700s because it grew through natural increase (Part 3).\n3. **Reasoning:** In Bahia, new arrivals who spoke the same languages and knew the same rituals could rebuild religious communities such as Candomblé houses. In Virginia, African traditions passed through generations of American-born people and blended into Black Christianity, surviving in forms such as the ring shout and call-and-response rather than as separate African religions."
+      content: "## Music, food and craft\n\n| Area | Example | African connection |\n|---|---|---|\n| **Instruments** | The **banjo** | Gourd-bodied lutes of West Africa, such as the Jola *akonting* |\n| **Musical form** | Call-and-response; polyrhythm | West and Central African song and drumming; later spirituals, blues and gospel |\n| **Food** | Okra, black-eyed peas, sesame (*benne*), rice dishes such as Lowcountry red rice | Crops and cooking methods from West Africa; rice dishes related to jollof rice |\n| **Craft** | Coiled **sweetgrass baskets** of the Lowcountry | Coiled \"fanner\" baskets used to winnow rice in Senegambia and Sierra Leone |\n| **Burial customs** | Graves decorated with shells, glass and broken dishes | Kongo beliefs linking water, the dead and the spirit world |\n\n### Worked example: explaining a difference between regions\n\n*Prompt:* Explain why African religious traditions remained more visible in Bahia, Brazil, than in Virginia by the 1800s.\n\n1. **Claim:** Demography made the difference.\n2. **Evidence:** Bahia kept receiving large numbers of captives from the Bight of Benin into the 1800s, many of them Yoruba and Fon. Virginia's enslaved population was overwhelmingly American-born by the late 1700s because it grew through natural increase (Part 3).\n3. **Reasoning:** In Bahia, new arrivals who spoke the same languages and knew the same rituals could rebuild religious communities devoted to the orishas. In Virginia, African traditions passed through generations of American-born people and blended into Black Christianity, surviving in forms such as collective singing, dancing and call-and-response rather than as separate African religions."
     },
     {
       id: "aasod4-match",
@@ -106,7 +108,7 @@ export const aasOriginsDiasporaPart4Data = {
             ]
           },
           {
-            "label": "Honoring the orisha Yemayá as Our Lady of Regla: ___",
+            "label": "Honoring a Yoruba orisha through the image of a Catholic saint: ___",
             "options": [
               "Assimilation",
               "Creolization",
@@ -132,7 +134,7 @@ export const aasOriginsDiasporaPart4Data = {
         "hint1": "Which example changes the least?",
         "hint2": "Which example pairs two religions?",
         "hint3": "Which example created something new?",
-        "explanation": "A day name carried over intact is retention, pairing an orisha with a Catholic Marian title is syncretism, and a new creole language is creolization. Assimilation, the abandonment of African ways for European ones, fits none of the three."
+        "explanation": "A day name carried over intact is retention, pairing an orisha with a Catholic saint is syncretism, and a new creole language is creolization. Assimilation, the abandonment of African ways for European ones, fits none of the three."
       }
     },
     {

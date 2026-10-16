@@ -138,41 +138,32 @@ Choose the best explanation for each behavior.
       }
     },
     {
-      id: 'motivation-theories-p4-s5-overjustification',
+      id: 'motivation-theories-p4-s5-study',
       type: 'text' as const,
       content: `
-### 🔬 When Rewards Backfire: The Overjustification Effect
+### 🔬 Research Spotlight: Testing Choice Against Points
 
-If extrinsic rewards pull behavior, can they ever **reduce** motivation? A classic experiment says yes, under specific conditions.
-
-### The Study: Lepper, Greene and Nisbett (1973)
+How would a psychologist test whether intrinsic and extrinsic motivation really behave differently? Here is a practice study designed the way an AAQ or EBQ source might be (practice study, not a real citation).
 
 | Design element | What the researchers did |
 |------|-----------|
-| **Participants** | Preschool children who had already shown interest in drawing with special markers during free play |
-| **Conditions** | Children were randomly assigned to one of three groups: **expected award** (told in advance they would get a "Good Player" certificate for drawing), **unexpected award** (got the same certificate as a surprise afterward) or **no award** |
-| **Independent variable** | Whether and how a reward was given for drawing |
-| **Dependent variable** | Time each child later spent drawing with the markers during free play, recorded by observers behind a one-way mirror |
-| **Result** | The expected-award group later spent about half as much free-play time drawing as the other two groups, and less than they had before the study; the unexpected-award and no-award groups did not show this drop |
+| **Participants** | 90 sixth graders at one school |
+| **Conditions** | Students were randomly assigned to one of three groups for a six-week reading program: **choice** (picked their own books from the library, no rewards), **points** (read from an assigned list and earned 10 points per book toward a prize) or **control** (read from the assigned list, no points) |
+| **Independent variable** | The type of reading program |
+| **Dependent variables** | Books finished during the program, and books checked out voluntarily in the four weeks after it ended |
+| **Results** | During the program: points 7.0, choice 5.5, control 4.0 books on average. After the program: choice 3.6, points 2.1, control 2.0 |
 
-### Why It Happened
+### Reading the Results
 
-This is the **overjustification effect**: promising an extrinsic reward for an activity a person already enjoys can **decrease** intrinsic motivation for it. The children who drew *in order to* get a certificate seem to have reinterpreted their reason for drawing: from "I draw because I like it" to "I draw to get a prize." Once the prize was gone, so was much of the reason.
+- **During the program**, the points group read the most. That fits **incentive theory**: the prize was an outside reward that pulled behavior.
+- **After the program**, the points group fell back to about the control group's level once the points stopped. That is the typical pattern for **extrinsic motivation**: when the reward ends, so does much of the reason to keep going.
+- **The choice group** kept checking out books on its own after the program ended. That fits **self-determination theory**: choosing their own books supported autonomy, and behavior that feels self-chosen tends to be driven by intrinsic motivation, which persists without outside rewards.
 
-### Why the Unexpected-Award Group Matters
+### Why the Control Group Matters
 
-The unexpected-award group received **exactly the same certificate** as the expected-award group. If merely receiving a reward lowered interest, both groups should have dropped. Only the group that **expected** the reward while drawing dropped, which points to the **expectation of working for a reward** as the cause, not the certificate itself. This is a strong example of a well-chosen comparison group ruling out an alternative explanation.
+Without a control group, the researchers could not tell whether the points or the choice made any difference at all. Any group of sixth graders might read more in a six-week program simply because a program exists, or less in the weeks after because the school year got busier. The control group experienced those same conditions, so comparing each program to it isolates the effect of the program type. **Random assignment** makes the three groups similar at the start, which is what lets the researchers draw a **causal** conclusion.
 
-### Nuance: Not All Rewards Undermine Motivation
-
-| Situation | Typical effect |
-|------|-----------|
-| An expected, tangible reward for a task the person **already enjoys** | Risk of lowering intrinsic motivation |
-| A reward for a task with **little initial interest** | Can increase engagement; there is little intrinsic motivation to lose |
-| Specific praise or feedback that signals **competence** | Can support intrinsic motivation |
-| Rewards that feel **controlling** ("do this or no recess") | Tend to weaken intrinsic motivation |
-
-> **AP Connection:** The overjustification effect also appears in the Thinking topic as a reason extrinsic rewards can reduce creativity. Here, focus on the motivation theory and the experimental design: IV, DV, random assignment and the purpose of each comparison group.
+> **AP Connection:** On the exam, a source like this one asks you to name the design (an experiment, because the IV was manipulated and students were randomly assigned), identify the IV and DV, and explain a result with a CED concept. Use **incentive theory** for behavior pulled by a reward and **intrinsic motivation** for behavior that continues because the activity is its own reward.
       `
     },
     {
@@ -184,26 +175,26 @@ The unexpected-award group received **exactly the same certificate** as the expe
       exercise: {
         questions: [
           {
-            question: 'In the marker-drawing experiment, why did the researchers include an unexpected-award group?',
+            question: 'In the reading study, why did the researchers include a control group that read from the assigned list without points?',
             options: [
-              'To test whether merely getting a certificate without expecting it beforehand lowered later interest in drawing',
-              'To make sure that every child in the study received some kind of prize so that no one felt left out',
-              'To measure how much the children enjoyed drawing before any of the conditions were introduced',
-              'To increase the sample size so that the expected-award group would have more valid comparisons'
+              'To show how much students read with neither feature, so the effect of each program could be isolated',
+              'To make sure that every student in the study received a reward so that no group felt left out',
+              'To measure how much the students enjoyed reading before any of the conditions were introduced',
+              'To increase the sample size so that the points group would have more valid comparisons'
             ],
             correctAnswer: 0,
-            explanation: 'The unexpected-award group got the same certificate without expecting it, so it separates the effect of receiving a reward from the effect of working for an expected one. Baseline interest was measured before the conditions, and the group was not added for fairness or sample size.'
+            explanation: 'The control group went through the same weeks of school without either program feature, so differences from it can be traced to the points or the choice. The control group got no reward, its reading during the program is not a pre-study baseline and it was not added for sample size.'
           },
           {
-            question: 'A town library starts paying children \\$1 for every book they read. Lila, who already read for fun every night, earns money for a month. When the program ends, she reads far less than before. Which concept best explains this?',
+            question: 'A gym pays members \\$2 for every visit for three months. Visits rise sharply during the program, then fall back to their old level when the payments end. Which concept best explains why the visits rose?',
             options: [
               'Drive reduction',
-              'Overjustification',
+              'Intrinsic motivation',
               'Positive incentive',
               'Boredom susceptibility'
             ],
-            correctAnswer: 1,
-            explanation: 'An expected reward for an activity Lila already enjoyed shifted her reason for reading from interest to payment, so her reading fell once the payments stopped. That is the overjustification effect. A positive incentive explains why reading rose during the program but not why it fell below her starting level.'
+            correctAnswer: 2,
+            explanation: 'The payment is an outside reward that pulled members to the gym, which is a positive incentive. Their return to old levels when the money stopped shows the visits depended on that extrinsic reward, not on intrinsic enjoyment. No physical need was reduced, and boredom susceptibility is a type of sensation seeking.'
           },
           {
             question: 'Which statement best contrasts incentive theory with drive-reduction theory?',
@@ -229,12 +220,12 @@ The unexpected-award group received **exactly the same certificate** as the expe
 
 - The activity is its own reward → **intrinsic motivation**
 - A grade, pay, prize, praise or penalty drives the behavior → **extrinsic motivation**; if the question asks for a theory of rewards, use **incentive theory**
-- Interest **drops** after an expected reward is introduced and then removed → **overjustification effect**
+- Behavior rises while a reward is offered and falls back when it ends → the behavior depended on **extrinsic motivation**
 - A setting gives choice, builds skill and offers connection → **self-determination theory** predicts stronger intrinsic motivation
 
 | Trap | Fix |
 |------|-----------|
-| "All rewards destroy intrinsic motivation" | The risk is greatest for expected, tangible rewards for tasks people already enjoy |
+| Calling an enjoyable activity an incentive | Incentives are outside rewards; doing an activity because it is enjoyable in itself is **intrinsic motivation** |
 | "Extrinsic motivation is always bad" | Extrinsic rewards can start behavior that later becomes enjoyable, and they work well for dull tasks |
 | Calling an incentive a drive | Drives come from inside (needs); incentives are outside stimuli |
 | Bringing in Maslow's hierarchy | It is outside the scope of the AP exam; use the CED theories instead |

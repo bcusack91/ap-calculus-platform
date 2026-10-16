@@ -26,7 +26,7 @@ const questions: EntranceQuizQuestion[] = [
     partNumber: 1,
     partTitle: 'Core Concepts',
   },
-  // Part 2: Key Processes
+  // Part 2: Law and Resistance: From Brown to Little Rock (1950–1957)
   // source: Brown v. Board of Education, 347 U.S. 483 (1954), opinion of Chief Justice Earl Warren (National Archives transcript); verbatim
   {
     id: 'aascrm-ent-2a',
@@ -35,7 +35,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'By ruling that segregation harms children even when tangible factors are equal, the Court held that "separate but equal" has no place in public education, overturning Plessy\'s logic for schools. The other holdings concerned citizenship, state action and private businesses.',
     partNumber: 2,
-    partTitle: 'Key Processes',
+    partTitle: 'Law and Resistance: From Brown to Little Rock (1950–1957)',
   },
   {
     id: 'aascrm-ent-2b',
@@ -44,7 +44,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Members of Congress, governors, school boards and Citizens\' Councils used pledges, school closings, pupil placement laws and economic pressure to delay Brown. Prince Edward\'s schools stayed closed until Griffin v. County School Board (1964), long after Little Rock.',
     partNumber: 2,
-    partTitle: 'Key Processes',
+    partTitle: 'Law and Resistance: From Brown to Little Rock (1950–1957)',
   },
   // Part 3: Mass Nonviolence Takes Shape: Montgomery, the Sit-ins and the Freedom Rides (1955–1962)
   {
@@ -152,7 +152,7 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Core Concepts' },
-    { partNumber: 2, partTitle: 'Key Processes' },
+    { partNumber: 2, partTitle: 'Law and Resistance: From Brown to Little Rock (1950–1957)' },
     { partNumber: 3, partTitle: 'Mass Nonviolence Takes Shape: Montgomery, the Sit-ins and the Freedom Rides (1955–1962)' },
     { partNumber: 4, partTitle: '1963–1964: Birmingham, the March on Washington and the Civil Rights Act' },
     { partNumber: 5, partTitle: 'Voting Rights and the Limits of Victory (1965–1968)' },

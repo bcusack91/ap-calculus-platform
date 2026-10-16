@@ -26,9 +26,9 @@ We judge how common or likely something is by how EASILY we can think of example
 
 | Judgment | Availability Leads To... | Reality |
 |----------|------------------------|---------|
-| "Shark attacks are common" | YES — vivid, memorable media coverage makes examples easy to recall | Far more people die from falling coconuts, vending machines, or cows |
+| "Shark attacks are common" | YES — vivid, memorable media coverage makes examples easy to recall | Sharks kill only a handful of people worldwide in a typical year, while car crashes kill about 40,000 people a year in the United States alone |
 | "Flying is dangerous" | YES — plane crashes are dramatic and extensively covered | Driving is statistically MUCH more dangerous per mile |
-| "Crime is increasing" | YES — local news emphasizes violent crime | Crime has been declining for decades in most countries |
+| "Crime is increasing" | YES — local news emphasizes violent crime | U.S. violent crime has fallen substantially since the early 1990s, yet in most years a majority of Americans tell pollsters crime is rising |
 
 > **Key insight:** The availability heuristic is biased by VIVIDNESS, RECENCY, and EMOTIONAL IMPACT — not by actual frequency. If something is dramatic (shark attack) or recent (yesterday's news), it seems more common than it actually is.
 

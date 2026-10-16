@@ -50,7 +50,7 @@ export const aasFreedomEnslavementPart1Data = {
     {
       id: "aasfe1-input",
       type: 'input-boxes' as const,
-      content: "**Applied Recall** ✍️\n\nUse the exact historical term:\n\n1) An enslaver's legal act freeing a particular enslaved person, by will or deed\n\n2) Northern state laws, such as Ohio's of 1804 and 1807, that made free Black settlers post bonds and barred their testimony against white people\n\n3) The white-led plan, launched in 1816, to resettle free Black Americans in West Africa\n",
+      content: "**Applied Recall** ✍️\n\nUse the exact historical term:\n\n1) An enslaver's legal act freeing a particular enslaved person, by will or deed\n\n2) Northern state laws, such as Ohio's 1804 law requiring Black settlers to prove their freedom and its 1807 law requiring bonds and barring Black testimony against white people\n\n3) The white-led plan, launched in 1816, to resettle free Black Americans in West Africa\n",
       exercise: {
         "boxes": 3,
         "correctAnswers": [

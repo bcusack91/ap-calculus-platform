@@ -7,7 +7,7 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Conformity & Obedience
+  // Part 1: Social Psychology Introduction
   {
     id: 'sic-ent-1a',
     question: 'When Jordan misses a deadline, he blames an overloaded week. When his coworker misses the same deadline, Jordan decides she is simply disorganized. Which bias does Jordan show?',
@@ -15,7 +15,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Jordan explains his own behavior by the situation but the same behavior in someone else by disposition. Comparing self and other this way is the actor-observer bias; the self-serving bias contrasts one\'s own successes and failures.',
     partNumber: 1,
-    partTitle: 'Conformity & Obedience',
+    partTitle: 'Social Psychology Introduction',
   },
   {
     id: 'sic-ent-1b',
@@ -24,10 +24,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'The fundamental attribution error is weaker in collectivist cultures such as China, which emphasize context and relationships, so those readers tend to point more to situational causes than readers in the individualist United States.',
     partNumber: 1,
-    partTitle: 'Conformity & Obedience',
+    partTitle: 'Social Psychology Introduction',
   },
 
-  // Part 2: Asch & Milgram
+  // Part 2: Conformity
   {
     id: 'sic-ent-2a',
     question: 'Students estimate how many beans are in a large jar, first alone and then after hearing each other\'s guesses. Their estimates move close together, and a week later, writing new estimates in private, they still give the group\'s figure. Which description fits?',
@@ -35,7 +35,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'With no clear right answer, the students used one another\'s guesses as information, which is informational influence. Because their private estimates stayed changed, the result is acceptance rather than mere public compliance.',
     partNumber: 2,
-    partTitle: 'Asch & Milgram',
+    partTitle: 'Conformity',
   },
   {
     id: 'sic-ent-2b',
@@ -44,10 +44,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Conformity depends heavily on unanimity. A single dissenter breaks the group\'s united front and cuts conformity dramatically.',
     partNumber: 2,
-    partTitle: 'Asch & Milgram',
+    partTitle: 'Conformity',
   },
 
-  // Part 3: Group Influence
+  // Part 3: Obedience
   {
     id: 'sic-ent-3a',
     question: 'By modern standards, which ethical guideline did Milgram\'s obedience procedure most clearly fall short on?',
@@ -55,7 +55,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'The experimenter\'s prods, such as "The experiment requires that you continue," pressured distressed participants not to stop, straining the right to withdraw. Deception and stress also raised concerns that led to stricter review of research.',
     partNumber: 3,
-    partTitle: 'Group Influence',
+    partTitle: 'Obedience',
   },
   {
     id: 'sic-ent-3b',
@@ -64,10 +64,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'Demand characteristics are cues that tell participants what the researcher expects, which can shape their behavior. Zimbardo\'s dual role as researcher and "warden" made this concern stronger.',
     partNumber: 3,
-    partTitle: 'Group Influence',
+    partTitle: 'Obedience',
   },
 
-  // Part 4: Social Facilitation
+  // Part 4: Group Behavior
   {
     id: 'sic-ent-4a',
     question: 'In a rope-pulling task, each person pulls less hard as more teammates join. When each person\'s pull is measured and posted separately, effort rises again. Which concept explains the drop in effort?',
@@ -75,7 +75,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'People put in less effort when contributions are pooled and cannot be identified. Making each person\'s contribution identifiable reduces social loafing.',
     partNumber: 4,
-    partTitle: 'Social Facilitation',
+    partTitle: 'Group Behavior',
   },
   {
     id: 'sic-ent-4b',
@@ -84,10 +84,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Discussion pushed the group further in the direction it already leaned, which is group polarization. Groupthink would involve suppressed dissent and pressure for harmony.',
     partNumber: 4,
-    partTitle: 'Social Facilitation',
+    partTitle: 'Group Behavior',
   },
 
-  // Part 5: Deindividuation
+  // Part 5: Persuasion & Attitude Change
   {
     id: 'sic-ent-5a',
     question: 'Students are paid either \\$2 or \\$50 to write an essay supporting a campus policy they oppose. According to cognitive dissonance research, which group will later report the more favorable attitude toward the policy?',
@@ -95,7 +95,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'With little outside justification for arguing against their views, the \\$2 group feels more dissonance and reduces it by shifting their attitude. The \\$50 group can explain the essay by the money.',
     partNumber: 5,
-    partTitle: 'Deindividuation',
+    partTitle: 'Persuasion & Attitude Change',
   },
   {
     id: 'sic-ent-5b',
@@ -104,7 +104,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'A large request that is refused, followed by a smaller one, is the door-in-the-face technique. The smaller request feels like a concession, so people return the favor by agreeing.',
     partNumber: 5,
-    partTitle: 'Deindividuation',
+    partTitle: 'Persuasion & Attitude Change',
   },
 
   // Part 6: Problem-Solving Workshop
@@ -127,7 +127,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Problem-Solving Workshop',
   },
 
-  // Part 7: AP Review
+  // Part 7: Synthesis & AP Review
   {
     id: 'sic-ent-7a',
     question: 'In a practice study, students rated a new cafeteria dish either privately on paper or aloud right after five classmates, secretly working with the researcher, all praised it. Ratings were much higher in the aloud condition. Which interpretation fits best?',
@@ -135,7 +135,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Ratings rose only when students answered in front of the group, which points to a wish to fit in rather than a change in private judgment: normative influence.',
     partNumber: 7,
-    partTitle: 'AP Review',
+    partTitle: 'Synthesis & AP Review',
   },
   {
     id: 'sic-ent-7b',
@@ -144,7 +144,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Anonymity in a crowd lowered self-awareness and restraint, which is deindividuation. Afterward, recasting the damage as harmless reduces the discomfort of acting against her own values, which is cognitive dissonance reduction.',
     partNumber: 7,
-    partTitle: 'AP Review',
+    partTitle: 'Synthesis & AP Review',
   },
 ]
 
@@ -154,12 +154,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Conformity & Obedience' },
-    { partNumber: 2, partTitle: 'Asch & Milgram' },
-    { partNumber: 3, partTitle: 'Group Influence' },
-    { partNumber: 4, partTitle: 'Social Facilitation' },
-    { partNumber: 5, partTitle: 'Deindividuation' },
+    { partNumber: 1, partTitle: 'Social Psychology Introduction' },
+    { partNumber: 2, partTitle: 'Conformity' },
+    { partNumber: 3, partTitle: 'Obedience' },
+    { partNumber: 4, partTitle: 'Group Behavior' },
+    { partNumber: 5, partTitle: 'Persuasion & Attitude Change' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' },
+    { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }

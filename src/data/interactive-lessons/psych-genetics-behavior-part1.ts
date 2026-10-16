@@ -105,8 +105,6 @@ There is no single gene for intelligence, extraversion, or depression. Complex p
 - **Interaction:** the inherited condition produces intellectual disability **only** with a typical diet. Change the environment and the outcome changes.
 
 > 🔑 **Key Idea:** Even a condition that is entirely inherited has an outcome that depends on the environment. "Genetic" does **not** mean "unchangeable."
-
-*Going further (not tested on the AP exam):* biologists have found that experiences such as severe stress can influence how active certain genes are, which is one more way the environment and heredity interact.
       `
     },
     {

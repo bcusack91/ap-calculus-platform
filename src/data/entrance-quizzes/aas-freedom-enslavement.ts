@@ -64,7 +64,7 @@ const questions: EntranceQuizQuestion[] = [
     partNumber: 3,
     partTitle: 'Building Free Communities: Churches, Societies, Schools and the Press',
   },
-  // Part 4: Connections & Interactions
+  // Part 4: The Limits of Freedom: Black Laws, Disfranchisement, Kidnapping and Dred Scott
   {
     id: 'aasfre-ent-4a',
     question: 'Why did the Fugitive Slave Act of 1793 endanger free Black people living in the North, not only those who had escaped?',
@@ -72,7 +72,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'The 1793 act let a claimant win a certificate from a local official on little proof, and the accused had few ways to show they were free, which left free Black northerners exposed to false claims and kidnapping. It created no registry, property ban or militia searches.',
     partNumber: 4,
-    partTitle: 'Connections & Interactions',
+    partTitle: 'The Limits of Freedom: Black Laws, Disfranchisement, Kidnapping and Dred Scott',
   },
   {
     id: 'aasfre-ent-4b',
@@ -81,7 +81,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Slaveholders saw free Black people, especially sailors who traveled widely, as carriers of news and ideas that could inspire revolt, so they confined them on arrival. The law was a state measure that restricted, rather than protected, Black seamen.',
     partNumber: 4,
-    partTitle: 'Connections & Interactions',
+    partTitle: 'The Limits of Freedom: Black Laws, Disfranchisement, Kidnapping and Dred Scott',
   },
   // Part 5: Debating the Future: Colonization, Emigration and Citizenship (1816–1863)
   // source: David Walker, Appeal to the Coloured Citizens of the World, 1829 (3rd ed. 1830, Article IV); verbatim
@@ -153,7 +153,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 1, partTitle: 'Core Concepts' },
     { partNumber: 2, partTitle: 'Revolution and the Uneven Road to Northern Freedom (1770s–1830s)' },
     { partNumber: 3, partTitle: 'Building Free Communities: Churches, Societies, Schools and the Press' },
-    { partNumber: 4, partTitle: 'Connections & Interactions' },
+    { partNumber: 4, partTitle: 'The Limits of Freedom: Black Laws, Disfranchisement, Kidnapping and Dred Scott' },
     { partNumber: 5, partTitle: 'Debating the Future: Colonization, Emigration and Citizenship (1816–1863)' },
     { partNumber: 6, partTitle: 'Source Workshop: Free Black Voices in Print' },
     { partNumber: 7, partTitle: 'Synthesis and AP Review' },

@@ -40,7 +40,7 @@ Obedience is changing behavior in response to a direct command from an authority
 | **Learner in SAME room** | 40% | Harder to harm someone you can see |
 | **Participant TOUCHES learner** (forces hand on shock plate) | 30% | Direct physical contact increases awareness of harm |
 | **Ordinary building** (not Yale lab) | 48% | Less perceived legitimacy of authority |
-| **Dissenting "teachers"** (other "teachers" refuse) | 10% | Social support for disobedience — peers modelo resistance |
+| **Dissenting "teachers"** (other "teachers" refuse) | 10% | Social support for disobedience — peers model resistance |
 
 > **The lesson:** Obedience is NOT about "bad people." Ordinary people obey destructive commands because of situational pressures — authority, legitimacy, gradual escalation, and diffusion of responsibility.
       `

@@ -50,7 +50,7 @@ export const aasOriginsDiasporaPart1Data = {
     {
       id: "aasod1-input",
       type: 'input-boxes' as const,
-      content: "**Applied Recall** ✍️\n\nUse the exact historical term:\n\n1) A person who escaped slavery to live in a self-governing community beyond planters' control, as in Jamaica's Blue Mountains\n\n2) Born in the Americas rather than in Africa or Europe; also the label for new languages blending African and European elements\n\n3) West African people of the Bight of Benin whose orisha worship shaped Candomblé and Lucumí (Santería)\n",
+      content: "**Applied Recall** ✍️\n\nUse the exact historical term:\n\n1) A person who escaped slavery to live in a self-governing community beyond planters' control, as in Jamaica's Blue Mountains\n\n2) Born in the Americas rather than in Africa or Europe; also the label for new languages blending African and European elements\n\n3) West African people of the Bight of Benin whose orisha worship took root in Bahia, Brazil, and in Cuba\n",
       exercise: {
         "boxes": 3,
         "correctAnswers": [
@@ -61,7 +61,7 @@ export const aasOriginsDiasporaPart1Data = {
         "hint1": "The English word comes from the Spanish *cimarrón*; in Brazil such a community was called a quilombo.",
         "hint2": "The process of making these new cultures has the same root, with '-ization' added.",
         "hint3": "Their homeland lies in today's southwestern Nigeria and Benin.",
-        "explanation": "Maroons built free communities from Palmares to Jamaica's mountains. Creole describes people and cultures born in the Americas, such as Haitian Kreyòl and Gullah Geechee. Yoruba captives, many landed in Bahia and Cuba, carried the orisha traditions behind Candomblé and Lucumí."
+        "explanation": "Maroons built free communities from Palmares to Jamaica's mountains. Creole describes people and cultures born in the Americas, such as Haitian Kreyòl and Gullah Geechee. Yoruba captives, many landed in Bahia and Cuba, carried orisha traditions that survived there."
       }
     },
     {

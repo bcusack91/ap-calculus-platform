@@ -47,7 +47,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Problem-Solving Strategies',
   },
 
-  // Part 3: Heuristics & Biases
+  // Part 3: Decision Making
   {
     id: 'tps-ent-3a',
     question: 'A man refuses to play the numbers that won last week\'s lottery, explaining that "those numbers won\'t come up again so soon." Each drawing is random and independent. Which error does his reasoning show?',
@@ -55,7 +55,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'He treats independent random drawings as if they kept score, so a recent outcome seems less likely. That is the gambler\'s fallacy.',
     partNumber: 3,
-    partTitle: 'Heuristics & Biases',
+    partTitle: 'Decision Making',
   },
   {
     id: 'tps-ent-3b',
@@ -64,10 +64,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'An earlier, separate stimulus (the health survey) activated related ideas that tilted the later judgment. That is priming; framing would require the same information worded differently at the moment of choice.',
     partNumber: 3,
-    partTitle: 'Heuristics & Biases',
+    partTitle: 'Decision Making',
   },
 
-  // Part 4: Decision Making
+  // Part 4: Judgment & Heuristics
   {
     id: 'tps-ent-4a',
     question: 'After a local news story about a neighbor who won the lottery, a woman estimates her own chances of winning as far higher than they really are. Which heuristic best explains her estimate?',
@@ -75,7 +75,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'A vivid, recent example comes easily to mind, so she judges winning as more common than it is. Judging likelihood by ease of recall is the availability heuristic.',
     partNumber: 4,
-    partTitle: 'Decision Making',
+    partTitle: 'Judgment & Heuristics',
   },
   {
     id: 'tps-ent-4b',
@@ -84,7 +84,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'People judge by how well the description matches their prototype of a teacher and ignore the base rate: lawyers outnumber teachers more than two to one.',
     partNumber: 4,
-    partTitle: 'Decision Making',
+    partTitle: 'Judgment & Heuristics',
   },
 
   // Part 5: Creativity
@@ -156,8 +156,8 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
   return [
     { partNumber: 1, partTitle: 'Concepts & Prototypes' },
     { partNumber: 2, partTitle: 'Problem-Solving Strategies' },
-    { partNumber: 3, partTitle: 'Heuristics & Biases' },
-    { partNumber: 4, partTitle: 'Decision Making' },
+    { partNumber: 3, partTitle: 'Decision Making' },
+    { partNumber: 4, partTitle: 'Judgment & Heuristics' },
     { partNumber: 5, partTitle: 'Creativity' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'AP Review' },

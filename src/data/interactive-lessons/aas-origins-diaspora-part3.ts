@@ -87,7 +87,7 @@ export const aasOriginsDiasporaPart3Data = {
     {
       id: "aasod3-growth",
       type: 'text' as const,
-      content: "## A puzzle in the numbers: why did North America's Black population grow?\n\nMainland North America received fewer than 400,000 Africans. Yet by **1860** the United States had about **4.4 million** people of African descent (about 3.95 million enslaved and about 488,000 free).\n\nCompare **Jamaica**, which received close to a million Africans but held only about 310,000 enslaved people when British emancipation began in 1834.\n\n| Factor | Sugar colonies (Caribbean, northeast Brazil) | Mainland North America |\n|---|---|---|\n| **Work regime** | Sugar: deadly cane fields and boiling houses | Tobacco, rice and later cotton; also deadly, but less so than sugar |\n| **Disease environment** | Yellow fever and malaria killed many | Healthier in the Upper South |\n| **Sex ratio of imports** | Heavily male, so fewer families formed | Became more balanced as American-born generations grew |\n| **Planter strategy** | Often cheaper to buy new captives than sustain lives | After the 1808 import ban, enslavers profited from enslaved people's children |\n\n**Result:** births outpaced deaths in North America by the mid-1700s, a pattern called **natural increase**. In most sugar colonies deaths outpaced births, so populations were sustained only by new imports.\n\n> **AP Connection:** This contrast explains a key feature of African American history: by 1860, nearly all enslaved people in the United States were born in America, while Brazil and Cuba still had large African-born populations. That difference shaped culture, language and religion.\n\n## Regions of origin and diaspora destinations\n\nCaptives from particular regions often clustered in particular places, which shaped which African traditions survived where.\n\n| African region | A destination where many were taken | A cultural trace |\n|---|---|---|\n| **Bight of Benin** (Yoruba, Fon) | Bahia, Brazil; Saint-Domingue; Cuba | Candomblé; Vodou; Lucumí (Santería) |\n| **West Central Africa** (Kongo, Mbundu) | Brazil; Saint-Domingue; South Carolina | Kongo cosmograms; Kongolese Catholicism |\n| **Gold Coast** (Akan) | Jamaica | Akan day names; Maroon leadership |\n| **Bight of Biafra** (Igbo) | Virginia and the Chesapeake; Jamaica | Igbo identity in Equiano's narrative |\n| **Sierra Leone and Windward Coast** (rice-growing regions) | South Carolina and Georgia Lowcountry | Rice knowledge; Gullah Geechee language |\n\n### Limits of the data\n\n- Ports and coastal regions are not homelands: many captives were marched from far inland.\n- Trade labels such as \"Coromantee\" (from the Gold Coast fort at Kormantse) were European categories, not always identities captives used themselves.\n- Illegal voyages after 1807 left fewer records, so those figures rest more on estimates."
+      content: "## A puzzle in the numbers: why did North America's Black population grow?\n\nMainland North America received fewer than 400,000 Africans. Yet by **1860** the United States had about **4.4 million** people of African descent (about 3.95 million enslaved and about 488,000 free).\n\nCompare **Jamaica**, which received close to a million Africans but held only about 310,000 enslaved people when British emancipation began in 1834.\n\n| Factor | Sugar colonies (Caribbean, northeast Brazil) | Mainland North America |\n|---|---|---|\n| **Work regime** | Sugar: deadly cane fields and boiling houses | Tobacco, rice and later cotton; also deadly, but less so than sugar |\n| **Disease environment** | Yellow fever and malaria killed many | Healthier in the Upper South |\n| **Sex ratio of imports** | Heavily male, so fewer families formed | Became more balanced as American-born generations grew |\n| **Planter strategy** | Often cheaper to buy new captives than sustain lives | After the 1808 import ban, enslavers profited from enslaved people's children |\n\n**Result:** births outpaced deaths in North America by the mid-1700s, a pattern called **natural increase**. In most sugar colonies deaths outpaced births, so populations were sustained only by new imports.\n\n> **AP Connection:** This contrast explains a key feature of African American history: by 1860, nearly all enslaved people in the United States were born in America, while Brazil and Cuba still had large African-born populations. That difference shaped culture, language and religion.\n\n## Regions of origin and diaspora destinations\n\nCaptives from particular regions often clustered in particular places, which shaped which African traditions survived where.\n\n| African region | A destination where many were taken | A cultural trace |\n|---|---|---|\n| **Bight of Benin** (Yoruba, Fon) | Bahia, Brazil; Saint-Domingue; Cuba | Orisha worship in Bahia and Cuba; Vodou in Haiti |\n| **West Central Africa** (Kongo, Mbundu) | Brazil; Saint-Domingue; South Carolina | Kongo cosmograms; Kongolese Catholicism |\n| **Gold Coast** (Akan) | Jamaica | Akan day names; Maroon leadership |\n| **Bight of Biafra** (Igbo) | Virginia and the Chesapeake; Jamaica | Igbo identity in Equiano's narrative |\n| **Sierra Leone and Windward Coast** (rice-growing regions) | South Carolina and Georgia Lowcountry | Rice knowledge; Gullah Geechee language |\n\n### Limits of the data\n\n- Ports and coastal regions are not homelands: many captives were marched from far inland.\n- Trade labels such as \"Coromantee\" (from the Gold Coast fort at Kormantse) were European categories, not always identities captives used themselves.\n- Illegal voyages after 1807 left fewer records, so those figures rest more on estimates."
     },
     {
       id: "aasod3-match",
@@ -99,7 +99,7 @@ export const aasOriginsDiasporaPart3Data = {
             "label": "Bight of Benin (Yoruba, Fon): ___",
             "options": [
               "Virginia, where many Igbo captives landed",
-              "Bahia, Brazil, where Candomblé took shape",
+              "Bahia, Brazil, where orisha worship endured",
               "Jamaica, where Akan leaders led Maroons",
               "Lowcountry Carolina, a center of rice skills"
             ]
@@ -109,14 +109,14 @@ export const aasOriginsDiasporaPart3Data = {
             "options": [
               "Virginia, where many Igbo captives landed",
               "Lowcountry Carolina, a center of rice skills",
-              "Bahia, Brazil, where Candomblé took shape",
+              "Bahia, Brazil, where orisha worship endured",
               "Jamaica, where Akan leaders led Maroons"
             ]
           },
           {
             "label": "Sierra Leone and Windward Coast: ___",
             "options": [
-              "Bahia, Brazil, where Candomblé took shape",
+              "Bahia, Brazil, where orisha worship endured",
               "Lowcountry Carolina, a center of rice skills",
               "Virginia, where many Igbo captives landed",
               "Jamaica, where Akan leaders led Maroons"
@@ -124,14 +124,14 @@ export const aasOriginsDiasporaPart3Data = {
           }
         ],
         "correctAnswers": [
-          "Bahia, Brazil, where Candomblé took shape",
+          "Bahia, Brazil, where orisha worship endured",
           "Jamaica, where Akan leaders led Maroons",
           "Lowcountry Carolina, a center of rice skills"
         ],
-        "hint1": "Candomblé honors the Yoruba orishas.",
+        "hint1": "The orishas are Yoruba deities.",
         "hint2": "Nanny of the Maroons was of Akan descent.",
         "hint3": "Think about which crop the Lowcountry grew.",
-        "explanation": "Yoruba and Fon captives from the Bight of Benin shaped Candomblé in Bahia; Akan captives from the Gold Coast were prominent among Jamaica's Maroons; captives from the rice-growing Upper Guinea coast were sought for Lowcountry rice plantations. Virginia's Igbo link runs through the Bight of Biafra."
+        "explanation": "Yoruba and Fon captives from the Bight of Benin rebuilt orisha worship in Bahia; Akan captives from the Gold Coast were prominent among Jamaica's Maroons; captives from the rice-growing Upper Guinea coast were sought for Lowcountry rice plantations. Virginia's Igbo link runs through the Bight of Biafra."
       }
     },
     {

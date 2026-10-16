@@ -7,7 +7,7 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Origins of Psychology
+  // Part 1: Psychology as a Science
   {
     id: 'hap-ent-1a',
     question: 'A teacher tells half of her class that a study found time apart weakens couples ("out of sight, out of mind") and the other half that it strengthens them ("absence makes the heart grow fonder"). Most students in both halves say the result they heard is what they would have guessed. What does this demonstration show most directly?',
@@ -15,7 +15,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Students rated opposite results as equally predictable once they knew them, which is hindsight bias. Because every outcome feels obvious after the fact, intuition cannot decide which finding is true.',
     partNumber: 1,
-    partTitle: 'Origins of Psychology',
+    partTitle: 'Psychology as a Science',
   },
   {
     id: 'hap-ent-1b',
@@ -24,10 +24,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'He explains away every failed test, so no result could ever show the claim wrong. A scientific hypothesis must be falsifiable.',
     partNumber: 1,
-    partTitle: 'Origins of Psychology',
+    partTitle: 'Psychology as a Science',
   },
 
-  // Part 2: Major Perspectives
+  // Part 2: Psychological Perspectives and the Biopsychosocial Approach
   {
     id: 'hap-ent-2a',
     question: 'Two psychologists explain why a teenager overeats. One points to the praise and dessert his parents gave him for cleaning his plate as a child. The other points to his belief that he "has no willpower," which leads him to give up on a diet after a single cookie. Which perspectives are they using, in order?',
@@ -35,7 +35,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'Praise and dessert are consequences that reinforced eating, a behavioral explanation. A self-defeating belief that shapes his choices is a cognitive explanation.',
     partNumber: 2,
-    partTitle: 'Major Perspectives',
+    partTitle: 'Psychological Perspectives and the Biopsychosocial Approach',
   },
   {
     id: 'hap-ent-2b',
@@ -44,7 +44,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'The evolutionary perspective explains why a tendency may once have aided survival; it does not mean the behavior is good or justified today. Using it to justify discrimination is a misapplication of the idea.',
     partNumber: 2,
-    partTitle: 'Major Perspectives',
+    partTitle: 'Psychological Perspectives and the Biopsychosocial Approach',
   },
 
   // Part 3: Research Methods
@@ -67,7 +67,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Research Methods',
   },
 
-  // Part 4: Ethics in Research
+  // Part 4: Statistics
   {
     id: 'hap-ent-4a',
     question: 'On a very easy 10-point quiz, most students score 9 or 10, but a few score 2 or 3. Which description of the score distribution is correct?',
@@ -75,7 +75,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Most scores are high with a tail toward low scores, so the distribution is negatively skewed. The few low scores pull the mean down below the median.',
     partNumber: 4,
-    partTitle: 'Ethics in Research',
+    partTitle: 'Statistics',
   },
   {
     id: 'hap-ent-4b',
@@ -84,10 +84,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'A score of 70 is 2 standard deviations above the mean. About 95% of scores lie within 2 SD, so about 2.5% lie above it, putting her near the 98th percentile.',
     partNumber: 4,
-    partTitle: 'Ethics in Research',
+    partTitle: 'Statistics',
   },
 
-  // Part 5: Statistics in Psychology
+  // Part 5: Research Ethics
   {
     id: 'hap-ent-5a',
     question: 'An online survey about cheating in school never records names, email addresses or any other information that could link a response to the person who gave it. Which ethical protection does this provide?',
@@ -95,7 +95,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Because no identifying information is ever collected, no answer can be traced to anyone, which is anonymity. Confidentiality means identities are known to researchers but kept private.',
     partNumber: 5,
-    partTitle: 'Statistics in Psychology',
+    partTitle: 'Research Ethics',
   },
   {
     id: 'hap-ent-5b',
@@ -104,10 +104,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'Deception can be justified, but participants must be debriefed afterward so they learn the true purpose and that the puzzle was impossible. Consent and assent were already obtained.',
     partNumber: 5,
-    partTitle: 'Statistics in Psychology',
+    partTitle: 'Research Ethics',
   },
 
-  // Part 6: Problem-Solving Workshop
+  // Part 6: AP Exam Practice: The Article Analysis Question (AAQ)
   {
     id: 'hap-ent-6a',
     question: 'In a study, 60 seventh graders were randomly assigned to learn a list of 20 new words either by taking practice quizzes or by copying each word five times. One week afterward, each student wrote as many of the words as possible from dictation. Learning was scored as the number of words spelled correctly. What is the operational definition of the dependent variable?',
@@ -115,7 +115,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'The dependent variable, learning, was measured as how many of the 20 words were spelled correctly a week later. The study method is the independent variable, and "understanding spelling" is a dictionary definition, not a measure.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
+    partTitle: 'AP Exam Practice: The Article Analysis Question (AAQ)',
   },
   {
     id: 'hap-ent-6b',
@@ -124,10 +124,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Statistical significance means the difference is unlikely to be due to chance, and an effect size near 0.6 is usually read as medium. Significance alone does not make an effect large, and one clinic sample cannot prove the effect for everyone.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
+    partTitle: 'AP Exam Practice: The Article Analysis Question (AAQ)',
   },
 
-  // Part 7: AP Review
+  // Part 7: Synthesis & AP Review
   {
     id: 'hap-ent-7a',
     question: 'A student building an argument about sleep has three sources. Source 1: adults randomly assigned to sleep 8 hours recalled more words than those assigned 5 hours (d = 0.7). Source 2: a survey of 2,000 teens found r = +.30 between nightly sleep and GPA. Source 3: a case study of one student whose grades rose after she began sleeping more. Which claim do the sources best support?',
@@ -135,7 +135,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Only the experiment supports a causal claim, and it concerns memory. The survey shows a moderate positive link with grades but cannot establish cause, and a single case cannot be generalized.',
     partNumber: 7,
-    partTitle: 'AP Review',
+    partTitle: 'Synthesis & AP Review',
   },
   {
     id: 'hap-ent-7b',
@@ -144,7 +144,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Explaining behavior through peer norms is the sociocultural perspective. The study is correlational, so teens who like speed may simply choose fast-driving friends, or a third variable may explain both.',
     partNumber: 7,
-    partTitle: 'AP Review',
+    partTitle: 'Synthesis & AP Review',
   },
 ]
 
@@ -154,12 +154,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Origins of Psychology' },
-    { partNumber: 2, partTitle: 'Major Perspectives' },
+    { partNumber: 1, partTitle: 'Psychology as a Science' },
+    { partNumber: 2, partTitle: 'Psychological Perspectives and the Biopsychosocial Approach' },
     { partNumber: 3, partTitle: 'Research Methods' },
-    { partNumber: 4, partTitle: 'Ethics in Research' },
-    { partNumber: 5, partTitle: 'Statistics in Psychology' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' },
+    { partNumber: 4, partTitle: 'Statistics' },
+    { partNumber: 5, partTitle: 'Research Ethics' },
+    { partNumber: 6, partTitle: 'AP Exam Practice: The Article Analysis Question (AAQ)' },
+    { partNumber: 7, partTitle: 'Synthesis & AP Review' },
   ]
 }

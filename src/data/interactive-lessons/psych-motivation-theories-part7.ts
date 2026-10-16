@@ -19,7 +19,7 @@ No single theory explains everything a person does in a day. This part ties the 
 | **Drive-reduction theory** | Needs create drives; behavior restores homeostasis | **Hypothalamus** monitors hunger, thirst, temperature | Eating to end hunger, drinking to end thirst |
 | **Arousal theory** | Seek an optimal arousal level; Yerkes-Dodson inverted U | **Reticular activating system**, **adrenaline** | **Social facilitation**: others raise arousal |
 | **Sensation-seeking theory** | People differ in need for varied, novel experiences | Linked to the **dopamine** reward system | Risky choices with friends; healthy thrill outlets |
-| **Self-determination theory** | Intrinsic vs. extrinsic motivation; autonomy, competence, relatedness | | Overjustification: expected rewards can lower interest |
+| **Self-determination theory** | Intrinsic vs. extrinsic motivation; autonomy, competence, relatedness | | Choice and feedback in school support intrinsic motivation |
 | **Incentive theory** | Outside rewards pull behavior | | **Reinforcers** in operant conditioning |
 | **Lewin's motivational conflicts** | Approach-approach, approach-avoidance, avoidance-avoidance | | Conflicts are a source of stress |
 | **Eating** | Physical and mental processes interact | **Ghrelin** (hunger), **leptin** (satiety), hypothalamus via the pituitary | Presence of food, time of day, social gatherings |
@@ -81,7 +81,7 @@ An **Evidence-Based Question** gives you three short sources. You must (A) propo
 
 **Prompt:** Develop and justify an argument about whether offering rewards is an effective way to motivate students.
 
-**Source A** *(practice source, not a real citation).* Researchers randomly assigned 120 middle school students who said they enjoyed reading to one of two groups for a four-week program. One group was promised a \\$5 gift card for each book they finished; the other was promised nothing. During the program, the reward group finished more books on average (6.1 vs. 4.0). In the four weeks after the program ended, the reward group finished fewer books on average than the no-reward group (2.2 vs. 3.9).
+**Source A** *(practice source, not a real citation).* Researchers randomly assigned 120 high school students to solve a set of difficult logic puzzles. One group was told that the top scorers would win \\$100; the other group was told the puzzles were an ungraded warm-up. The high-stakes group reported more anxiety and solved fewer puzzles on average (5.2 vs. 7.4).
 
 **Source B** *(practice source, not a real citation).* A survey of 500 high school students found that students who rated their classes as giving them more choice in assignments also reported higher interest in their schoolwork (r = +0.38).
 
@@ -91,21 +91,21 @@ An **Evidence-Based Question** gives you three short sources. You must (A) propo
 
 **Step 1: A defensible claim** takes a position that the sources can support, and is specific enough to argue:
 
-> Rewards can increase effort on tasks people do not already enjoy, but promising rewards for activities students already enjoy can weaken their motivation once the rewards stop.
+> Rewards can increase effort on simple, dull tasks, but large rewards for difficult tasks can backfire by raising students' arousal too high.
 
 **Step 2: Evidence from one source, with a concept.**
 
 | Part | Example answer |
 |------|-----------|
 | **Evidence (cite it)** | In Source C, adults paid per page completed more pages of a dull task (42 vs. 30) than adults paid a flat fee. |
-| **Explanation using a concept** | **Incentive theory** says outside rewards pull behavior. Pay for each page was a positive incentive, and because the task was dull, there was little intrinsic motivation to undermine, so effort rose. |
+| **Explanation using a concept** | **Incentive theory** says outside rewards pull behavior. Pay for each page was a positive incentive, and because the task was dull and had little intrinsic appeal, the outside reward was what drove the extra effort. |
 
 **Step 3: Evidence from a different source, with a different concept.**
 
 | Part | Example answer |
 |------|-----------|
-| **Evidence (cite it)** | In Source A, students who already enjoyed reading and were promised gift cards read fewer books after the program ended than students who were not promised a reward (2.2 vs. 3.9). |
-| **Explanation using a concept** | The **overjustification effect**: an expected reward for an activity students already enjoyed shifted their reason for reading from interest to payment, so their **intrinsic motivation** dropped once the payments stopped. |
+| **Evidence (cite it)** | In Source A, students offered a \\$100 prize for difficult puzzles reported more anxiety and solved fewer puzzles than students told it was a warm-up (5.2 vs. 7.4). |
+| **Explanation using a concept** | The **Yerkes-Dodson law** (arousal theory): performance peaks at a moderate level of arousal, and the peak is lower for complex tasks. The big prize pushed arousal past that lower peak, so performance on the hard puzzles fell. |
 
 **What not to do:** Do not use the same concept twice, do not just restate the source without explaining it and do not claim a correlational source such as Source B proves causation.
       `
@@ -124,12 +124,12 @@ Use Sources A, B and C above.
             question: 'Which claim is the most defensible response to the prompt, based on the three sources?',
             options: [
               'Rewards always destroy student motivation and should never be used in any school',
-              'Rewards can raise effort on dull tasks but can undercut interest in tasks students enjoy',
+              'Rewards can raise effort on simple tasks but can hurt performance on difficult ones',
               'Rewards have no measurable effect on how much effort or interest students show',
               'Rewards are the single most effective motivator for every kind of school task'
             ],
             correctAnswer: 1,
-            explanation: 'This claim takes a clear position that the sources support: Source C shows rewards raising effort on a dull task, and Source A shows an expected reward undercutting later reading by students who enjoyed it. The other claims are contradicted by at least one source.'
+            explanation: 'This claim takes a clear position that the sources support: Source C shows rewards raising effort on a dull task, and Source A shows a large reward lowering performance on difficult puzzles. The other claims are contradicted by at least one source.'
           },
           {
             question: 'A student uses Source B as evidence. Which explanation uses a psychological concept most accurately?',
@@ -166,15 +166,15 @@ Each source should be explained with a different concept.
       `,
       exercise: {
         dropdowns: [
-          { label: 'Source A: promised gift cards, then less reading after the program ended', options: ['Overjustification effect', 'Incentive theory', 'Self-determination theory', 'Drive-reduction theory'] },
-          { label: 'Source B: more choice in assignments, higher interest in schoolwork', options: ['Overjustification effect', 'Incentive theory', 'Self-determination theory', 'Drive-reduction theory'] },
-          { label: 'Source C: pay per page, more pages completed on a dull task', options: ['Overjustification effect', 'Incentive theory', 'Self-determination theory', 'Drive-reduction theory'] }
+          { label: 'Source A: a big prize for hard puzzles, more anxiety and fewer puzzles solved', options: ['Yerkes-Dodson law', 'Incentive theory', 'Self-determination theory', 'Drive-reduction theory'] },
+          { label: 'Source B: more choice in assignments, higher interest in schoolwork', options: ['Yerkes-Dodson law', 'Incentive theory', 'Self-determination theory', 'Drive-reduction theory'] },
+          { label: 'Source C: pay per page, more pages completed on a dull task', options: ['Yerkes-Dodson law', 'Incentive theory', 'Self-determination theory', 'Drive-reduction theory'] }
         ],
-        correctAnswers: ['Overjustification effect', 'Self-determination theory', 'Incentive theory'],
-        hint1: 'Source A: an expected reward for something students already enjoyed lowered later interest.',
+        correctAnswers: ['Yerkes-Dodson law', 'Self-determination theory', 'Incentive theory'],
+        hint1: 'Source A: high stakes raised arousal on a difficult task.',
         hint2: 'Source B: choice supports autonomy.',
         hint3: 'Source C: an outside reward pulled more effort on a task with little intrinsic appeal.',
-        explanation: 'Source A fits the overjustification effect, Source B fits self-determination theory\'s claim that autonomy supports intrinsic motivation, and Source C fits incentive theory, since pay per page pulled extra effort on a dull task. None of the sources involves a physical need, so drive-reduction theory does not fit.'
+        explanation: 'Source A fits the Yerkes-Dodson law, because high arousal hurts performance on complex tasks, Source B fits self-determination theory\'s claim that autonomy supports intrinsic motivation, and Source C fits incentive theory, since pay per page pulled extra effort on a dull task. None of the sources involves a physical need, so drive-reduction theory does not fit.'
       }
     },
     {
@@ -189,7 +189,7 @@ Each source should be explained with a different concept.
 2. **Drive-reduction theory**: needs create drives, and behavior restores **homeostasis**.
 3. **Arousal theory**: people seek an optimal level of arousal; the **Yerkes-Dodson law** shows performance peaks at moderate arousal, lower for hard tasks.
 4. **Sensation-seeking theory**: people differ in their need for novelty, in four types: thrill or adventure seeking, experience seeking, disinhibition, boredom susceptibility.
-5. **Self-determination theory** separates intrinsic and extrinsic motivation; **incentive theory** explains how rewards pull behavior; expected rewards can backfire (**overjustification**).
+5. **Self-determination theory** separates intrinsic and extrinsic motivation; **incentive theory** explains how rewards pull behavior, and behavior that depends on a reward tends to fade when the reward ends.
 6. **Lewin's motivational conflicts**: approach-approach, approach-avoidance (one goal, both features), avoidance-avoidance.
 7. **Eating** combines ghrelin, leptin and the hypothalamus with external cues; **belongingness** is a powerful social motive.
 
@@ -221,7 +221,7 @@ Each source should be explained with a different concept.
               'Offer students two unpleasant options so that they must choose one of them to finish'
             ],
             correctAnswer: 1,
-            explanation: 'Choice and competence-building feedback support intrinsic motivation, which tends to last after outside rewards end. Prizes that stop risk the overjustification effect, very high arousal hurts complex learning and two unpleasant options create an avoidance-avoidance conflict.'
+            explanation: 'Choice and competence-building feedback support intrinsic motivation, which tends to last after outside rewards end. Reading that depends on prizes tends to fade once they stop, very high arousal hurts complex learning and two unpleasant options create an avoidance-avoidance conflict.'
           },
           {
             question: 'A researcher randomly assigns participants to eat a meal with a large serving bowl or a small serving bowl and measures how many calories they eat. Which motivation idea is the study testing?',

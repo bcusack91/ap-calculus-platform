@@ -47,7 +47,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Depth Perception',
   },
 
-  // Part 3: Visual Illusions
+  // Part 3: Perceptual Constancies & Illusions
   {
     id: 'pa-ent-3a',
     question: 'As a friend walks away down a long hallway, her image on your retina shrinks to a fraction of its original size, yet she does not seem to be getting smaller. Which concept explains this?',
@@ -55,7 +55,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Perceiving an object\'s size as stable despite a changing retinal image is size constancy. Relative size is a depth cue used to judge how far away something is.',
     partNumber: 3,
-    partTitle: 'Visual Illusions',
+    partTitle: 'Perceptual Constancies & Illusions',
   },
   {
     id: 'pa-ent-3b',
@@ -64,7 +64,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'The converging lines act as linear perspective, so the upper bar seems farther away. Because it casts the same retinal image, size constancy makes it look larger.',
     partNumber: 3,
-    partTitle: 'Visual Illusions',
+    partTitle: 'Perceptual Constancies & Illusions',
   },
 
   // Part 4: Attention
@@ -87,7 +87,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Attention',
   },
 
-  // Part 5: Selective Attention
+  // Part 5: Perceptual Set & Context
   {
     id: 'pa-ent-5a',
     question: 'Before hearing a song played backward, one group is told it contains a hidden message and is shown the supposed words. That group reports hearing the words clearly; a group told nothing hears only gibberish. Which concept explains this?',
@@ -95,7 +95,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Being told what to expect created a mental predisposition to hear particular words in ambiguous sounds, which is a perceptual set.',
     partNumber: 5,
-    partTitle: 'Selective Attention',
+    partTitle: 'Perceptual Set & Context',
   },
   {
     id: 'pa-ent-5b',
@@ -104,7 +104,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'The surrounding characters in the current display determine how the shape is read, which is a context effect. A perceptual set comes from earlier experience or expectations.',
     partNumber: 5,
-    partTitle: 'Selective Attention',
+    partTitle: 'Perceptual Set & Context',
   },
 
   // Part 6: Problem-Solving Workshop
@@ -156,9 +156,9 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
   return [
     { partNumber: 1, partTitle: 'Perceptual Organization' },
     { partNumber: 2, partTitle: 'Depth Perception' },
-    { partNumber: 3, partTitle: 'Visual Illusions' },
+    { partNumber: 3, partTitle: 'Perceptual Constancies & Illusions' },
     { partNumber: 4, partTitle: 'Attention' },
-    { partNumber: 5, partTitle: 'Selective Attention' },
+    { partNumber: 5, partTitle: 'Perceptual Set & Context' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'AP Review' },
   ]

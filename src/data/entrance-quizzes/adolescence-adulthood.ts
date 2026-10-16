@@ -47,7 +47,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Identity Formation',
   },
 
-  // Part 3: Adulthood & Aging
+  // Part 3: Peers, Identity Domains, and Gender Socialization
   {
     id: 'aa-ent-3a',
     question: 'For two years, a 17-year-old has read family letters, interviewed her grandparents and joined cultural events, and she now feels settled and proud of her Korean American heritage. She also plans to take over her parents\' dry-cleaning business, a path she has never questioned or compared with any other. How is her identity best described?',
@@ -55,7 +55,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Identity statuses apply domain by domain. She explored and then committed in the racial/ethnic domain (achievement), but committed to a career without exploring alternatives (foreclosure).',
     partNumber: 3,
-    partTitle: 'Adulthood & Aging',
+    partTitle: 'Peers, Identity Domains, and Gender Socialization',
   },
   {
     id: 'aa-ent-3b',
@@ -64,10 +64,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'Every adult saw the same infant, so the different labels came from the adults\' gender expectations. Expectations like these shape how adults respond to children, one route of gender socialization.',
     partNumber: 3,
-    partTitle: 'Adulthood & Aging',
+    partTitle: 'Peers, Identity Domains, and Gender Socialization',
   },
 
-  // Part 4: Cognitive Changes
+  // Part 4: Physical and Cognitive Change in Adulthood
   {
     id: 'aa-ent-4a',
     question: 'Early cross-sectional studies suggested that intelligence falls steadily after young adulthood. Later longitudinal studies of the same adults found vocabulary and knowledge holding steady into their 60s. What best explains the difference?',
@@ -75,7 +75,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'Comparing different age groups at one time mixes age with generation. Older cohorts had received less education, so part of the apparent decline was a cohort effect rather than aging.',
     partNumber: 4,
-    partTitle: 'Cognitive Changes',
+    partTitle: 'Physical and Cognitive Change in Adulthood',
   },
   {
     id: 'aa-ent-4b',
@@ -84,7 +84,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Losing a long-familiar routine is a decline that disrupts daily life, a sign of dementia. Slower learning of new technology, brief name lapses and hearing loss in noise are typical of normal aging.',
     partNumber: 4,
-    partTitle: 'Cognitive Changes',
+    partTitle: 'Physical and Cognitive Change in Adulthood',
   },
 
   // Part 5: Social Development
@@ -156,8 +156,8 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
   return [
     { partNumber: 1, partTitle: 'Adolescent Development' },
     { partNumber: 2, partTitle: 'Identity Formation' },
-    { partNumber: 3, partTitle: 'Adulthood & Aging' },
-    { partNumber: 4, partTitle: 'Cognitive Changes' },
+    { partNumber: 3, partTitle: 'Peers, Identity Domains, and Gender Socialization' },
+    { partNumber: 4, partTitle: 'Physical and Cognitive Change in Adulthood' },
     { partNumber: 5, partTitle: 'Social Development' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'AP Review' },

@@ -158,7 +158,7 @@ You now know every motivation theory in CED Topic 4.6.A. Each answers a differen
 | "A need and a drive are the same thing" | A need is the biological deprivation; a drive is the tension it produces |
 | "More arousal always means better performance" | Performance peaks at a moderate level, and the peak is lower for complex tasks |
 | "Sensation seekers are just reckless" | High sensation seekers also choose healthy outlets such as travel, creative work and demanding careers |
-| "Any reward kills intrinsic motivation" | The overjustification effect mainly occurs with expected, tangible rewards for tasks already enjoyed |
+| "Intrinsic and extrinsic motivation cannot both be present" | Most behavior mixes both; the exam asks which one **best explains** the behavior described |
 | "Approach-avoidance means choosing between a good and a bad option" | Approach-avoidance is **one** goal with both good and bad features |
 | "Avoidance-avoidance is the same as having no choice" | The person must choose, but both options are unpleasant |
       `

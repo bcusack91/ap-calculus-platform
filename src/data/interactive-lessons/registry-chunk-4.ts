@@ -417,7 +417,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
       { title: 'Core Concepts', loader: () => import('./aas-freedom-enslavement-part1').then(m => m.aasFreedomEnslavementPart1Data) },
       { title: 'Revolution and the Uneven Road to Northern Freedom (1770s–1830s)', loader: () => import('./aas-freedom-enslavement-part2').then(m => m.aasFreedomEnslavementPart2Data) },
       { title: 'Building Free Communities: Churches, Societies, Schools and the Press', loader: () => import('./aas-freedom-enslavement-part3').then(m => m.aasFreedomEnslavementPart3Data) },
-      { title: 'Connections & Interactions', loader: () => import('./aas-freedom-enslavement-part4').then(m => m.aasFreedomEnslavementPart4Data) },
+      { title: 'The Limits of Freedom: Black Laws, Disfranchisement, Kidnapping and Dred Scott', loader: () => import('./aas-freedom-enslavement-part4').then(m => m.aasFreedomEnslavementPart4Data) },
       { title: 'Debating the Future: Colonization, Emigration and Citizenship (1816–1863)', loader: () => import('./aas-freedom-enslavement-part5').then(m => m.aasFreedomEnslavementPart5Data) },
       { title: 'Source Workshop: Free Black Voices in Print', loader: () => import('./aas-freedom-enslavement-part6').then(m => m.aasFreedomEnslavementPart6Data) },
       { title: 'Synthesis and AP Review', loader: () => import('./aas-freedom-enslavement-part7').then(m => m.aasFreedomEnslavementPart7Data) }
@@ -475,7 +475,7 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
     completionDestination: 'complete',
     parts: [
       { title: 'Core Concepts', loader: () => import('./aas-civil-rights-movement-part1').then(m => m.aasCivilRightsMovementPart1Data) },
-      { title: 'Key Processes', loader: () => import('./aas-civil-rights-movement-part2').then(m => m.aasCivilRightsMovementPart2Data) },
+      { title: 'Law and Resistance: From Brown to Little Rock (1950–1957)', loader: () => import('./aas-civil-rights-movement-part2').then(m => m.aasCivilRightsMovementPart2Data) },
       { title: 'Mass Nonviolence Takes Shape: Montgomery, the Sit-ins and the Freedom Rides (1955–1962)', loader: () => import('./aas-civil-rights-movement-part3').then(m => m.aasCivilRightsMovementPart3Data) },
       { title: '1963–1964: Birmingham, the March on Washington and the Civil Rights Act', loader: () => import('./aas-civil-rights-movement-part4').then(m => m.aasCivilRightsMovementPart4Data) },
       { title: 'Voting Rights and the Limits of Victory (1965–1968)', loader: () => import('./aas-civil-rights-movement-part5').then(m => m.aasCivilRightsMovementPart5Data) },

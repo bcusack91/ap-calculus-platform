@@ -27,7 +27,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Bandura\'s Bobo Doll',
   },
 
-  // Part 2: Mirror Neurons
+  // Part 2: Models, Similarity, and Vicarious Conditioning
   {
     id: 'olc-ent-2a',
     question: 'A school wants to reduce vaping among its 10th graders. According to social learning theory, which message is most likely to work?',
@@ -35,7 +35,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'A similar model (a same-grade student) who receives a consequence (suspension) combines model similarity with vicarious punishment, both of which make imitation, or avoidance, more likely.',
     partNumber: 2,
-    partTitle: 'Mirror Neurons',
+    partTitle: 'Models, Similarity, and Vicarious Conditioning',
   },
   {
     id: 'olc-ent-2b',
@@ -44,10 +44,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'The dependent variable is what researchers measure: toys put away. Whether the puppet was rewarded is the manipulated independent variable.',
     partNumber: 2,
-    partTitle: 'Mirror Neurons',
+    partTitle: 'Models, Similarity, and Vicarious Conditioning',
   },
 
-  // Part 3: Cognitive Maps
+  // Part 3: Cognitive Factors in Learning
   {
     id: 'olc-ent-3a',
     question: 'Maya aced three practice tests, says "I can handle this," and studies extra for a hard final. Leo failed several tests despite studying and has stopped studying, saying nothing he does matters. Which concepts describe Maya and Leo, in order?',
@@ -55,7 +55,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'Maya\'s confidence from past success is high self-efficacy. Leo\'s belief that his efforts have no effect, after uncontrollable failure, is learned helplessness.',
     partNumber: 3,
-    partTitle: 'Cognitive Maps',
+    partTitle: 'Cognitive Factors in Learning',
   },
   {
     id: 'olc-ent-3b',
@@ -64,10 +64,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'Mastery experiences, actual past successes, are the strongest source of self-efficacy. Watching others, encouragement and reading one\'s arousal are weaker sources.',
     partNumber: 3,
-    partTitle: 'Cognitive Maps',
+    partTitle: 'Cognitive Factors in Learning',
   },
 
-  // Part 4: Latent Learning
+  // Part 4: Insight Learning vs. Trial and Error
   {
     id: 'olc-ent-4a',
     question: 'A participant\'s times to solve a puzzle on six trials are 300, 290, 310, 20, 18 and 19 seconds. No feedback or rewards were given between trials. Which kind of learning do these data suggest?',
@@ -75,7 +75,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Performance stays flat and then improves suddenly and stays improved, a step-shaped curve that signals insight. Trial and error would show gradual improvement.',
     partNumber: 4,
-    partTitle: 'Latent Learning',
+    partTitle: 'Insight Learning vs. Trial and Error',
   },
   {
     id: 'olc-ent-4b',
@@ -84,10 +84,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'Insight is a sudden solution that appears without a model to copy, reinforcement for partial attempts or a paired stimulus. The other options describe observational learning, trial and error and classical conditioning.',
     partNumber: 4,
-    partTitle: 'Latent Learning',
+    partTitle: 'Insight Learning vs. Trial and Error',
   },
 
-  // Part 5: Insight Learning
+  // Part 5: Biological Constraints on Learning
   {
     id: 'olc-ent-5a',
     question: 'Rats and quail drink water that is both sour-tasting and dyed blue, and then are made mildly ill. Later, the rats avoid sour water of any color, while the quail avoid blue water of any taste. Which conclusion is best supported?',
@@ -95,7 +95,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'Rats find food mainly by taste and quail mainly by sight, and each linked illness to that cue. Some pairings are learned more readily than others, depending on what a species evolved to rely on, which is biological preparedness.',
     partNumber: 5,
-    partTitle: 'Insight Learning',
+    partTitle: 'Biological Constraints on Learning',
   },
   {
     id: 'olc-ent-5b',
@@ -104,7 +104,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'Humans are predisposed to learn fears of threats that endangered our ancestors, so those fears are acquired more easily than fears of modern dangers.',
     partNumber: 5,
-    partTitle: 'Insight Learning',
+    partTitle: 'Biological Constraints on Learning',
   },
 
   // Part 6: Problem-Solving Workshop
@@ -155,10 +155,10 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Bandura\'s Bobo Doll' },
-    { partNumber: 2, partTitle: 'Mirror Neurons' },
-    { partNumber: 3, partTitle: 'Cognitive Maps' },
-    { partNumber: 4, partTitle: 'Latent Learning' },
-    { partNumber: 5, partTitle: 'Insight Learning' },
+    { partNumber: 2, partTitle: 'Models, Similarity, and Vicarious Conditioning' },
+    { partNumber: 3, partTitle: 'Cognitive Factors in Learning' },
+    { partNumber: 4, partTitle: 'Insight Learning vs. Trial and Error' },
+    { partNumber: 5, partTitle: 'Biological Constraints on Learning' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'AP Review' },
   ]

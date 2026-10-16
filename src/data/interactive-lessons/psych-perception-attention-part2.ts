@@ -34,7 +34,7 @@ How do we perceive a 3D world from 2D images on our retinas? The answer involves
 | **Interposition** (overlap) | Objects that block others appear closer | Overlap figures to show depth |
 | **Linear perspective** | Parallel lines converge in the distance | Railroad tracks meeting at horizon |
 | **Texture gradient** | Texture becomes finer and denser with distance | Detailed grass in foreground, smooth in background |
-| **Relative clarity** | Hazy, blurry objects appear farther; sharp, clear objects appear closer | Paint distant mountains pale and fuzzy |
+| **Relative clarity** | Hazy, blurry objects appear farther; sharp, clear objects appear closer | Paint distant mountains hazy and less detailed |
 
 > **Why this matters for the AP exam:** You must distinguish binocular from monocular cues and identify specific cues from scenario descriptions. The exam addresses only these five monocular cues: relative clarity, relative size, texture gradient, linear perspective, and interposition (CED 2.1.B.2).
       `

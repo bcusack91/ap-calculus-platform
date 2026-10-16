@@ -27,7 +27,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Pavlov\'s Experiments',
   },
 
-  // Part 2: Acquisition & Extinction
+  // Part 2: Key Terminology: UCS, UCR, CS, CR
   {
     id: 'cc-ent-2a',
     question: 'Whenever a toddler\'s older brother pops a balloon, the bang makes her startle and cry. He always says "Watch this!" right before popping it. Now she cries as soon as she hears "Watch this!" Her crying at the words is the',
@@ -35,7 +35,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'The words were neutral until they were paired with the bang, so crying at the words is a learned response to a conditioned stimulus: a conditioned response. Crying at the bang itself is the unconditioned response.',
     partNumber: 2,
-    partTitle: 'Acquisition & Extinction',
+    partTitle: 'Key Terminology: UCS, UCR, CS, CR',
   },
   {
     id: 'cc-ent-2b',
@@ -44,10 +44,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'The sprint naturally produces a pounding heart without any learning, so it is the unconditioned stimulus. The whistle became the conditioned stimulus through pairing.',
     partNumber: 2,
-    partTitle: 'Acquisition & Extinction',
+    partTitle: 'Key Terminology: UCS, UCR, CS, CR',
   },
 
-  // Part 3: Generalization & Discrimination
+  // Part 3: Acquisition & Extinction
   {
     id: 'cc-ent-3a',
     question: 'Practice data: a rat\'s freezing to a tone rose over 10 pairings of the tone with a mild shock, then fell to near zero over 15 tone-alone trials. After a 24-hour rest, the first tone produced moderate freezing again. Which conclusion is best supported?',
@@ -55,7 +55,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'The return of freezing after rest is spontaneous recovery, which shows that extinction suppressed the conditioned response rather than erasing the association.',
     partNumber: 3,
-    partTitle: 'Generalization & Discrimination',
+    partTitle: 'Acquisition & Extinction',
   },
   {
     id: 'cc-ent-3b',
@@ -64,10 +64,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'A new neutral stimulus (the phrase) was paired with an existing conditioned stimulus (the drill sound) rather than with pain itself. That is higher-order conditioning.',
     partNumber: 3,
-    partTitle: 'Generalization & Discrimination',
+    partTitle: 'Acquisition & Extinction',
   },
 
-  // Part 4: Higher-Order Conditioning
+  // Part 4: Generalization & Discrimination
   {
     id: 'cc-ent-4a',
     question: 'A dog conditioned to salivate to a 1,000 Hz tone is tested with other tones. It salivates most to 1,000 Hz, less to 900 Hz and least to 600 Hz. What does this pattern show?',
@@ -75,7 +75,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'The response spreads to similar tones but weakens as they become less like the original conditioned stimulus, a generalization gradient.',
     partNumber: 4,
-    partTitle: 'Higher-Order Conditioning',
+    partTitle: 'Generalization & Discrimination',
   },
   {
     id: 'cc-ent-4b',
@@ -84,7 +84,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'She now responds with fear to stimuli like the original (large dogs) but not to different ones (small dogs). Learning to tell them apart is stimulus discrimination.',
     partNumber: 4,
-    partTitle: 'Higher-Order Conditioning',
+    partTitle: 'Generalization & Discrimination',
   },
 
   // Part 5: Applications
@@ -155,9 +155,9 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
     { partNumber: 1, partTitle: 'Pavlov\'s Experiments' },
-    { partNumber: 2, partTitle: 'Acquisition & Extinction' },
-    { partNumber: 3, partTitle: 'Generalization & Discrimination' },
-    { partNumber: 4, partTitle: 'Higher-Order Conditioning' },
+    { partNumber: 2, partTitle: 'Key Terminology: UCS, UCR, CS, CR' },
+    { partNumber: 3, partTitle: 'Acquisition & Extinction' },
+    { partNumber: 4, partTitle: 'Generalization & Discrimination' },
     { partNumber: 5, partTitle: 'Applications' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'AP Review' },

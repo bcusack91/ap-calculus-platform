@@ -7,7 +7,7 @@ import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Language Development
+  // Part 1: The Building Blocks of Language
   {
     id: 'li-ent-1a',
     question: 'How many morphemes are in the word "unhelpfulness"?',
@@ -15,7 +15,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'The word combines four units of meaning: un- + help + -ful + -ness. Morphemes are counted by meaning, not by syllables or letters.',
     partNumber: 1,
-    partTitle: 'Language Development',
+    partTitle: 'The Building Blocks of Language',
   },
   {
     id: 'li-ent-1b',
@@ -24,10 +24,10 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'A limited set of words and rules lets speakers produce endless new sentences they have never heard, which is what it means for language to be generative.',
     partNumber: 1,
-    partTitle: 'Language Development',
+    partTitle: 'The Building Blocks of Language',
   },
 
-  // Part 2: Language Theories
+  // Part 2: How Language Develops
   {
     id: 'li-ent-2a',
     question: 'A 10-month-old repeats strings such as "ma-ma-ma" and "ga-ga-ga," using mostly the sounds of the language spoken at home, though she is not yet using any words. Which stage is she in?',
@@ -35,7 +35,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Repeated consonant-vowel syllables are babbling, which by about 10 months narrows to the sounds of the home language. Cooing is vowel-like, and the one-word stage begins around the first birthday.',
     partNumber: 2,
-    partTitle: 'Language Theories',
+    partTitle: 'How Language Develops',
   },
   {
     id: 'li-ent-2b',
@@ -44,7 +44,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'Scores decline steadily as age of arrival rises, the classic sensitive-period pattern. Late learners still score well above zero, so learning remains possible, just harder and less complete.',
     partNumber: 2,
-    partTitle: 'Language Theories',
+    partTitle: 'How Language Develops',
   },
 
   // Part 3: Intelligence Theories
@@ -87,7 +87,7 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'IQ Testing',
   },
 
-  // Part 5: Nature vs Nurture in Intelligence
+  // Part 5: Intelligence Controversies
   {
     id: 'li-ent-5a',
     question: 'Average scores on the same intelligence tests rose by roughly 3 points per decade in many countries during the 20th century. Which explanation fits this rise best?',
@@ -95,7 +95,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 3,
     explanation: 'The Flynn effect happened too quickly for genetic change to explain it. Societal factors such as better nutrition, health care and education are the likely causes.',
     partNumber: 5,
-    partTitle: 'Nature vs Nurture in Intelligence',
+    partTitle: 'Intelligence Controversies',
   },
   {
     id: 'li-ent-5b',
@@ -104,7 +104,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'A boost in performance from awareness that another group is negatively stereotyped is stereotype lift. The women\'s lower scores reflect stereotype threat.',
     partNumber: 5,
-    partTitle: 'Nature vs Nurture in Intelligence',
+    partTitle: 'Intelligence Controversies',
   },
 
   // Part 6: Problem-Solving Workshop
@@ -154,11 +154,11 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Language Development' },
-    { partNumber: 2, partTitle: 'Language Theories' },
+    { partNumber: 1, partTitle: 'The Building Blocks of Language' },
+    { partNumber: 2, partTitle: 'How Language Develops' },
     { partNumber: 3, partTitle: 'Intelligence Theories' },
     { partNumber: 4, partTitle: 'IQ Testing' },
-    { partNumber: 5, partTitle: 'Nature vs Nurture in Intelligence' },
+    { partNumber: 5, partTitle: 'Intelligence Controversies' },
     { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
     { partNumber: 7, partTitle: 'AP Review' },
   ]
