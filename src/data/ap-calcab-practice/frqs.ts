@@ -48,6 +48,8 @@ Water is flowing into a tank at the rate $R(t) = 8 + 5\\sin\\left(\\dfrac{t}{2}\
         ],
       },
     ],
+    sampleResponse:
+      '(a) ∫₀¹² R(t) dt = ∫₀¹² (8 + 5 sin(t/2)) dt ≈ 96.398 gallons. (b) A(t) = 50 + ∫₀ᵗ (R(x) − W(x)) dx. (c) A′(t) = R(t) − W(t) = 5 + 5 sin(t/2) − 0.4t = 0 at t ≈ 7.165. A(0) = 50, A(7.165) ≈ 94.601, A(12) ≈ 81.598, so the amount of water is greatest at t ≈ 7.165 hours. (d) A′(4) = R(4) − W(4) ≈ 7.946 gallons per hour.',
   },
 
   /* ============== Q2 — CALCULATOR ALLOWED ============== */
@@ -88,6 +90,8 @@ A particle moves along the $x$-axis with velocity $v(t) = t^2 - 6t + 5$ for $0 \
         ],
       },
     ],
+    sampleResponse:
+      '(a) v(t) = (t − 1)(t − 5) = 0 at t = 1 and t = 5. (b) x(6) = 2 + ∫₀⁶ (t² − 6t + 5) dt = 2 + (72 − 108 + 30) = −4. (c) v > 0 on (0, 1), v < 0 on (1, 5), v > 0 on (5, 6), so the distance is 7/3 + 32/3 + 7/3 = 46/3 ≈ 15.333. (d) v(2) = −3 and a(t) = 2t − 6 gives a(2) = −2; velocity and acceleration are both negative, so the particle is speeding up.',
   },
 
   /* ============== Q3 — NO CALCULATOR ============== */
@@ -96,38 +100,40 @@ A particle moves along the $x$-axis with velocity $v(t) = t^2 - 6t + 5$ for $0 \
     topic: 'frq-area-volume',
     stimulus: `**Q3 (No calculator) — Area and Volume (9 points)**
 
-Let $R$ be the region in the first quadrant bounded by $y = x^2$ and $y = 2x$.`,
+Let $R$ be the region in the first quadrant bounded by the graphs of $y = 4x - x^2$ and $y = x$.`,
     parts: [
       {
-        prompt: '**(a)** Find the points of intersection and sketch the region $R$.',
+        prompt: '**(a)** Find the $x$-coordinates of the points where the two graphs intersect, and state which graph is on top on the interval between them.',
         rubric: [
-          { id: 'a1', label: '1 pt — Intersection points', description: '$x^2 = 2x \\Rightarrow x = 0$ or $x = 2$, giving $(0, 0)$ and $(2, 4)$; on $[0, 2]$ the line $y = 2x$ is above $y = x^2$.' },
+          { id: 'a1', label: '1 pt — Intersection points', description: '$4x - x^2 = x \\Rightarrow x(3 - x) = 0$, so $x = 0$ and $x = 3$, giving $(0, 0)$ and $(3, 3)$; on $[0, 3]$ the parabola $y = 4x - x^2$ is above the line $y = x$. Both the intersections and the top curve are required for the point.' },
         ],
       },
       {
         prompt: '**(b)** Find the area of region $R$.',
         rubric: [
-          { id: 'b1', label: '1 pt — Integral with correct integrand and limits', description: '$A = \\int_0^2 (2x - x^2)\\,dx$.' },
-          { id: 'b2', label: '1 pt — Answer', description: '$[x^2 - x^3/3]_0^2 = 4 - 8/3 = \\dfrac{4}{3}$.' },
+          { id: 'b1', label: '1 pt — Integral with correct integrand and limits', description: '$A = \\int_0^3 \\left[(4x - x^2) - x\\right]dx = \\int_0^3 (3x - x^2)\\,dx$.' },
+          { id: 'b2', label: '1 pt — Answer', description: '$\\left[\\frac{3x^2}{2} - \\frac{x^3}{3}\\right]_0^3 = \\frac{27}{2} - 9 = \\dfrac{9}{2}$.' },
         ],
       },
       {
-        prompt: '**(c)** Find the volume of the solid generated when $R$ is rotated about the $x$-axis.',
+        prompt: '**(c)** Find the volume of the solid generated when $R$ is revolved about the $x$-axis.',
         rubric: [
-          { id: 'c1', label: '1 pt — Washer integrand', description: '$\\pi\\left[(2x)^2 - (x^2)^2\\right] = \\pi(4x^2 - x^4)$ (outer radius $2x$, inner radius $x^2$).' },
-          { id: 'c2', label: '1 pt — Antiderivative', description: '$\\pi\\left[\\dfrac{4x^3}{3} - \\dfrac{x^5}{5}\\right]_0^2$.' },
-          { id: 'c3', label: '1 pt — Answer', description: '$\\pi(32/3 - 32/5) = \\dfrac{64\\pi}{15}$.' },
+          { id: 'c1', label: '1 pt — Washer integrand', description: '$\\pi\\left[(4x - x^2)^2 - x^2\\right] = \\pi\\left(15x^2 - 8x^3 + x^4\\right)$ (outer radius $4x - x^2$, inner radius $x$).' },
+          { id: 'c2', label: '1 pt — Antiderivative', description: '$\\pi\\left[5x^3 - 2x^4 + \\dfrac{x^5}{5}\\right]_0^3$.' },
+          { id: 'c3', label: '1 pt — Answer', description: '$\\pi\\left(135 - 162 + \\dfrac{243}{5}\\right) = \\dfrac{108\\pi}{5}$.' },
         ],
       },
       {
         prompt: '**(d)** The region $R$ is the base of a solid whose cross sections perpendicular to the $x$-axis are squares. Find the volume of this solid.',
         rubric: [
-          { id: 'd1', label: '1 pt — Area of a cross section', description: 'Side $= 2x - x^2$, so the area is $(2x - x^2)^2$.' },
-          { id: 'd2', label: '1 pt — Definite integral with limits', description: '$V = \\int_0^2 (2x - x^2)^2\\,dx = \\int_0^2 (4x^2 - 4x^3 + x^4)\\,dx$.' },
-          { id: 'd3', label: '1 pt — Answer', description: '$[4x^3/3 - x^4 + x^5/5]_0^2 = 32/3 - 16 + 32/5 = \\dfrac{16}{15}$.' },
+          { id: 'd1', label: '1 pt — Area of a cross section', description: 'Side $= (4x - x^2) - x = 3x - x^2$, so the area is $(3x - x^2)^2$.' },
+          { id: 'd2', label: '1 pt — Definite integral with limits', description: '$V = \\int_0^3 (3x - x^2)^2\\,dx = \\int_0^3 \\left(9x^2 - 6x^3 + x^4\\right)dx$.' },
+          { id: 'd3', label: '1 pt — Answer', description: '$\\left[3x^3 - \\dfrac{3x^4}{2} + \\dfrac{x^5}{5}\\right]_0^3 = 81 - \\dfrac{243}{2} + \\dfrac{243}{5} = \\dfrac{81}{10}$.' },
         ],
       },
     ],
+    sampleResponse:
+      '(a) 4x − x² = x gives x(3 − x) = 0, so x = 0 and x = 3; on [0, 3] the parabola is above the line. (b) A = ∫₀³ (3x − x²) dx = 27/2 − 9 = 9/2. (c) V = π∫₀³ [(4x − x²)² − x²] dx = π∫₀³ (15x² − 8x³ + x⁴) dx = π(135 − 162 + 243/5) = 108π/5. (d) Side = 3x − x², so V = ∫₀³ (3x − x²)² dx = ∫₀³ (9x² − 6x³ + x⁴) dx = 81 − 243/2 + 243/5 = 81/10.',
   },
 
   /* ============== Q4 — NO CALCULATOR (Table-based) ============== */
@@ -174,6 +180,8 @@ The function $f$ is continuous and differentiable on $[0, 8]$.`,
         ],
       },
     ],
+    sampleResponse:
+      '(a) Left sum = 2[f(0) + f(2) + f(4) + f(6)] = 2(5 + 9 + 12 + 14) = 80. (b) Trapezoidal sum = (2/2)[5 + 2(9) + 2(12) + 2(14) + 11] = 86. (c) (f(6) − f(2))/(6 − 2) = (14 − 9)/4 = 5/4. f is twice differentiable, so it is continuous on [2, 6] and differentiable on (2, 6); by the Mean Value Theorem there is a c in (2, 6) with f′(c) = 5/4. (d) f′(4) ≈ (f(6) − f(2))/(6 − 2) = 5/4.',
   },
 
   /* ============== Q5 — NO CALCULATOR (Differential Equation) ============== */
@@ -209,6 +217,8 @@ Consider the differential equation $\\dfrac{dy}{dx} = \\dfrac{y}{x^2}$, with $y 
         ],
       },
     ],
+    sampleResponse:
+      '(a) dy/dx = y/x². At x = 1 the slopes are 1, 2, 3; at x = 2 they are 1/4, 1/2, 3/4; at x = 3 they are 1/9, 2/9, 1/3 (for y = 1, 2, 3). (b) dy/y = dx/x², so ln|y| = −1/x + C. At (1, 2): ln 2 = −1 + C, so C = 1 + ln 2 and y = 2e^(1 − 1/x). (c) As x → ∞, 1 − 1/x → 1, so lim f(x) = 2e.',
   },
 
   /* ============== Q6 — NO CALCULATOR (Function Analysis) ============== */
@@ -217,37 +227,39 @@ Consider the differential equation $\\dfrac{dy}{dx} = \\dfrac{y}{x^2}$, with $y 
     topic: 'frq-function-analysis',
     stimulus: `**Q6 (No calculator) — Function Analysis (9 points)**
 
-Let $f(x) = x^3 - 6x^2 + 9x + 1$.`,
+Let $f(x) = \\dfrac{x^3}{3} - x^2 - 8x + 4$.`,
     parts: [
       {
         prompt: '**(a)** Find the critical numbers of $f$.',
         rubric: [
-          { id: 'a1', label: '1 pt — Derivative', description: '$f\'(x) = 3x^2 - 12x + 9 = 3(x-1)(x-3)$.' },
-          { id: 'a2', label: '1 pt — Critical numbers', description: '$x = 1$ and $x = 3$.' },
+          { id: 'a1', label: '1 pt — Derivative', description: '$f\'(x) = x^2 - 2x - 8 = (x - 4)(x + 2)$.' },
+          { id: 'a2', label: '1 pt — Critical numbers', description: '$x = -2$ and $x = 4$.' },
         ],
       },
       {
         prompt: '**(b)** Determine the open intervals on which $f$ is increasing or decreasing. Justify your answer.',
         rubric: [
-          { id: 'b1', label: '1 pt — Intervals', description: 'Increasing on $(-\\infty, 1)$ and $(3, \\infty)$; decreasing on $(1, 3)$.' },
-          { id: 'b2', label: '1 pt — Justification using the sign of $f\'$', description: '$f\' > 0$ on $(-\\infty, 1)$ and $(3, \\infty)$; $f\' < 0$ on $(1, 3)$.' },
+          { id: 'b1', label: '1 pt — Intervals', description: 'Increasing on $(-\\infty, -2)$ and $(4, \\infty)$; decreasing on $(-2, 4)$.' },
+          { id: 'b2', label: '1 pt — Justification using the sign of $f\'$', description: '$f\' > 0$ on $(-\\infty, -2)$ and $(4, \\infty)$; $f\' < 0$ on $(-2, 4)$.' },
         ],
       },
       {
         prompt: '**(c)** Identify the $x$-coordinates of any local extrema of $f$ and classify each. Justify.',
         rubric: [
-          { id: 'c1', label: '1 pt — Local maximum at $x = 1$, with reason', description: '$f\'$ changes from positive to negative at $x = 1$ ($f(1) = 5$).' },
-          { id: 'c2', label: '1 pt — Local minimum at $x = 3$, with reason', description: '$f\'$ changes from negative to positive at $x = 3$ ($f(3) = 1$).' },
+          { id: 'c1', label: '1 pt — Local maximum at $x = -2$, with reason', description: '$f\'$ changes from positive to negative at $x = -2$ ($f(-2) = \\frac{40}{3}$).' },
+          { id: 'c2', label: '1 pt — Local minimum at $x = 4$, with reason', description: '$f\'$ changes from negative to positive at $x = 4$ ($f(4) = -\\frac{68}{3}$).' },
         ],
       },
       {
-        prompt: '**(d)** Find the $x$-coordinate of the inflection point of $f$ and the open intervals where $f$ is concave up.',
+        prompt: '**(d)** Find the $x$-coordinate of the inflection point of $f$ and the open interval on which $f$ is concave up. Justify your answers.',
         rubric: [
-          { id: 'd1', label: '1 pt — Second derivative', description: '$f\'\'(x) = 6x - 12$.' },
-          { id: 'd2', label: '1 pt — Inflection point at $x = 2$, with reason', description: '$f\'\'$ changes sign at $x = 2$ (negative to positive).' },
-          { id: 'd3', label: '1 pt — Concave up interval', description: '$(2, \\infty)$, because $f\'\'(x) > 0$ there (concave down on $(-\\infty, 2)$).' },
+          { id: 'd1', label: '1 pt — Second derivative', description: '$f\'\'(x) = 2x - 2$.' },
+          { id: 'd2', label: '1 pt — Inflection point at $x = 1$, with reason', description: '$f\'\'$ changes sign at $x = 1$ (negative to positive).' },
+          { id: 'd3', label: '1 pt — Concave up interval', description: '$(1, \\infty)$, because $f\'\'(x) > 0$ there (concave down on $(-\\infty, 1)$).' },
         ],
       },
     ],
+    sampleResponse:
+      '(a) f′(x) = x² − 2x − 8 = (x − 4)(x + 2), so the critical numbers are x = −2 and x = 4. (b) f′ > 0 on (−∞, −2) and (4, ∞), so f is increasing there; f′ < 0 on (−2, 4), so f is decreasing there. (c) f′ changes from positive to negative at x = −2, a local maximum (f(−2) = 40/3); f′ changes from negative to positive at x = 4, a local minimum (f(4) = −68/3). (d) f″(x) = 2x − 2 changes from negative to positive at x = 1, so the inflection point is at x = 1, and f is concave up on (1, ∞).',
   },
 ]
