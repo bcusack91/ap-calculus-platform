@@ -773,6 +773,11 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'apush-cold-war-civil-rights': () => import('./apush-cold-war-civil-rights'),
   'apush-vietnam-social-change': () => import('./apush-vietnam-social-change'),
   'apush-reagan-to-present': () => import('./apush-reagan-to-present'),
+  'englit-prose-style-analysis': () => import('./englit-prose-style-analysis'),
+  'englit-complex-poetic-analysis': () => import('./englit-complex-poetic-analysis'),
+  'englit-essay-writing': () => import('./englit-essay-writing'),
+  'englang-rhetorical-analysis-essay': () => import('./englang-rhetorical-analysis-essay'),
+  'englang-rhetorical-devices': () => import('./englang-rhetorical-devices'),
 }
 
 /**

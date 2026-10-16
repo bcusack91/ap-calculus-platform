@@ -1,26 +1,220 @@
 /**
- * Entrance Quiz — Social Commentary in Drama (AP English Literature)
- * 14 questions · 7 parts (2 per part)
+ * Entrance Quiz — Social Commentary in Drama (AP English Literature) — 14 questions (2 per lesson part, 7 parts).
+ * Each item is tagged with the lesson part it certifies; both right = part skipped.
  */
-
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
 const questions: EntranceQuizQuestion[] = [
-  { id: 'engl-ent-1a', question: 'Which of the following best describes the main focus of Social Commentary in Drama?', options: ['An unrelated topic', 'The core principles and patterns within Social Commentary in Drama', 'A mathematical formula', 'A literary technique'], correctIndex: 1, explanation: 'Social Commentary in Drama focuses on understanding key principles and patterns within AP English Literature.', partNumber: 1, partTitle: 'Core Concepts' },
-  { id: 'engl-ent-1b', question: 'Why is Social Commentary in Drama important in AP English Literature?', options: ['It is not important', 'It connects to multiple units and is frequently tested on the AP exam', 'It is only relevant to one question', 'It has been removed from the curriculum'], correctIndex: 1, explanation: 'Social Commentary in Drama is a key topic in AP English Literature that connects to multiple course themes.', partNumber: 1, partTitle: 'Core Concepts' },
-  { id: 'engl-ent-2a', question: 'Which best describes a key process in Social Commentary in Drama?', options: ['A random event', 'A systematic mechanism that produces predictable patterns', 'An unexplainable phenomenon', 'A one-time occurrence'], correctIndex: 1, explanation: 'Key processes are systematic mechanisms that produce identifiable, often predictable patterns.', partNumber: 2, partTitle: 'Key Processes' },
-  { id: 'engl-ent-2b', question: 'Understanding cause and effect in Social Commentary in Drama helps students:', options: ['Memorize dates', 'Explain why patterns exist rather than just describing them', 'Avoid analysis', 'Skip exam questions'], correctIndex: 1, explanation: 'Cause-and-effect reasoning helps explain WHY patterns exist — a higher-order skill tested on the AP exam.', partNumber: 2, partTitle: 'Key Processes' },
-  { id: 'engl-ent-3a', question: 'Why do geographers/analysts use case studies?', options: ['They are easier than analysis', 'They provide concrete examples that illustrate abstract concepts', 'They replace all other methods', 'They are required by law'], correctIndex: 1, explanation: 'Case studies ground abstract concepts in specific, real-world examples that are easier to understand and remember.', partNumber: 3, partTitle: 'Patterns & Examples' },
-  { id: 'engl-ent-3b', question: 'Comparing examples of Social Commentary in Drama across regions helps:', options: ['Nothing', 'Identify universal patterns and unique local variations', 'Confuse students', 'Waste time'], correctIndex: 1, explanation: 'Comparison reveals both common patterns (generalizable) and unique local factors (context-dependent).', partNumber: 3, partTitle: 'Patterns & Examples' },
-  { id: 'engl-ent-4a', question: 'Social Commentary in Drama connects to other course topics through:', options: ['No connections exist', 'Shared processes, causes, and outcomes', 'Random coincidence', 'Administrative categories only'], correctIndex: 1, explanation: 'Topics in AP English Literature are interconnected through shared processes, causes, and outcomes.', partNumber: 4, partTitle: 'Connections & Interactions' },
-  { id: 'engl-ent-4b', question: 'A feedback loop in Social Commentary in Drama means:', options: ['The process stops', 'Outcomes reinforce or modify the original process', 'Nothing changes', 'The exam skips this topic'], correctIndex: 1, explanation: 'Feedback loops occur when outcomes influence the conditions that created them — either reinforcing or moderating the original process.', partNumber: 4, partTitle: 'Connections & Interactions' },
-  { id: 'engl-ent-5a', question: 'Studying change over time in Social Commentary in Drama helps:', options: ['Only with history classes', 'Explain current patterns and predict future developments', 'Nothing', 'Memorize dates'], correctIndex: 1, explanation: 'Understanding how things have changed reveals the forces shaping current conditions and likely future trends.', partNumber: 5, partTitle: 'Change Over Time' },
-  { id: 'engl-ent-5b', question: 'Continuity in Social Commentary in Drama means:', options: ['Everything changes', 'Some aspects have remained stable despite other changes', 'Nothing ever happened', 'The topic is boring'], correctIndex: 1, explanation: 'Continuity refers to elements that persist even as other aspects change — an important analytical concept.', partNumber: 5, partTitle: 'Change Over Time' },
-  { id: 'engl-ent-6a', question: 'When interpreting data about Social Commentary in Drama, the first step is:', options: ['Jump to conclusions', 'Identify what the data shows and note any patterns or trends', 'Ignore the data', 'Only look at the title'], correctIndex: 0, explanation: 'Data interpretation should begin with identifying what is shown and noting visible patterns before drawing conclusions.', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'engl-ent-6b', question: 'An evidence-based argument about Social Commentary in Drama requires:', options: ['Just opinions', 'A clear claim supported by specific evidence and reasoning', 'No evidence', 'Only emotional appeals'], correctIndex: 1, explanation: 'Evidence-based arguments need a claim (thesis), supporting evidence (data, examples), and reasoning (explanation).', partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-  { id: 'engl-ent-7a', question: 'The most important exam strategy for Social Commentary in Drama is:', options: ['Guess randomly', 'Know key terms, use specific examples, and connect to course themes', 'Skip these questions', 'Only memorize definitions'], correctIndex: 1, explanation: 'Effective exam strategy combines vocabulary knowledge, specific examples, and connections to broader themes.', partNumber: 7, partTitle: 'AP Review' },
-  { id: 'engl-ent-7b', question: 'AP multiple-choice questions about Social Commentary in Drama often test:', options: ['Random trivia', 'Application of concepts to new scenarios', 'Spelling', 'Personal opinions'], correctIndex: 1, explanation: 'AP multiple-choice questions typically present a new scenario and ask students to apply concepts rather than just recall facts.', partNumber: 7, partTitle: 'AP Review' }
+  // Part 1 — Core Concepts
+  {
+    id: 'englit-social-commentary-drama-ent-1a',
+    question: "Read the exchange below, from a play set in a large house.\n\n**Mrs. Vane.** Sit down, Ellen. No, not there. There.\n**Ellen.** Yes, ma'am.\n**Mrs. Vane.** You may pour. Not too much for Mr. Vane; he's watching his health. And none for yourself, of course.\n\nThe exchange chiefly reveals",
+    options: [
+      "a warm friendship between two social equals",
+      "a mistress ruling her servant's place and speech",
+      "Ellen's secret control over the whole household",
+      "Mrs. Vane's concern for Ellen's health and comfort",
+    ],
+    correctIndex: 1,
+    explanation: "Mrs. Vane decides where Ellen sits, what she does and what she may not have, while Ellen's only words are \"Yes, ma'am.\" Who controls speech, space and goods is how drama shows power.",
+    partNumber: 1,
+    partTitle: "Core Concepts",
+  },
+  {
+    id: 'englit-social-commentary-drama-ent-1b',
+    question: "In Act 1 of a play, a headmistress tells parents at prize day that her school treats its scholarship girls \"exactly like every other pupil.\" In Act 2, alone with a teacher, she orders the scholarship girls moved to the back row for the school photograph.\n\nThe contrast between the two scenes chiefly serves to",
+    options: [
+      "show that she has sincerely changed her mind",
+      "prove that the teacher secretly runs the school",
+      "provide comic relief before the play's climax",
+      "expose the gap between her public image and her practice",
+    ],
+    correctIndex: 3,
+    explanation: "The play sets the public speech against a private order, so the audience sees what the parents cannot: her fairness is a performance. Public versus private is a core way drama stages social critique.",
+    partNumber: 1,
+    partTitle: "Core Concepts",
+  },
+
+  // Part 2 — How a Play Argues: The Problem Play and Social Realism
+  {
+    id: 'englit-social-commentary-drama-ent-2a',
+    question: "A realist play opens with this stage direction:\n\n*[A narrow kitchen in a mill town. A calendar from the mill hangs over the stove. On the table, a stack of unpaid bills is held down by a pay envelope. It is Friday.]*\n\nThe stage direction chiefly serves to",
+    options: [
+      "establish a carefree, comic mood for the family",
+      "tell the actors exactly where they should stand",
+      "show the family's reliance on the mill at once",
+      "suggest that the family is wealthy and secure",
+    ],
+    correctIndex: 2,
+    explanation: "The mill's calendar, the bills and the pay envelope set out the household's economics in objects, so the room itself states the problem the play will explore. Realist settings carry social meaning.",
+    partNumber: 2,
+    partTitle: "How a Play Argues: The Problem Play and Social Realism",
+  },
+  {
+    id: 'englit-social-commentary-drama-ent-2b',
+    question: "A play ends with a widow refusing to sign her late husband's land over to a railway company. The final stage direction reads:\n\n*[She tears the contract in half. Outside, the whistle of the first train. Curtain.]*\n\nThe final stage direction most likely serves to",
+    options: [
+      "show that the railway company has given up its plans",
+      "leave the audience to judge if her stand can last",
+      "resolve the play's conflict wholly in the widow's favor",
+      "indicate that the widow will soon leave town by train",
+    ],
+    correctIndex: 1,
+    explanation: "Her defiant gesture is answered at once by the sound of the train already running, so the ending poses a question rather than a verdict. A problem play typically leaves its social question for the audience.",
+    partNumber: 2,
+    partTitle: "How a Play Argues: The Problem Play and Social Realism",
+  },
+
+  // Part 3 — Patterns & Examples
+  {
+    id: 'englit-social-commentary-drama-ent-3a',
+    question: "Read the exchange below.\n\n**Clerk.** The will is unsigned, madam. It has no force.\n**Widow.** He wrote every word of it himself. He meant it.\n**Clerk.** What he meant is not my concern. What he signed is.\n\nThe exchange chiefly stages a conflict between",
+    options: [
+      "legal form and private intention",
+      "two heirs competing for one estate",
+      "a clerk's honesty and a widow's greed",
+      "old church law and new civil law",
+    ],
+    correctIndex: 0,
+    explanation: "The clerk speaks for a public system that sees only signatures; the widow speaks for a private world where meaning lies in intention. Like the clash between law and motive in social drama, neither side is simply a villain.",
+    partNumber: 3,
+    partTitle: "Patterns & Examples",
+  },
+  {
+    id: 'englit-social-commentary-drama-ent-3b',
+    question: "Read the speech below. A father has just learned that his son was expelled from university for organizing a strike on behalf of the college servants.\n\n**Father.** I don't doubt your reasons, Edward. Your reasons do you credit. But the Fortescues dine with us on Thursday. You will tell them you are resting after an illness, and you will tell it well.\n\nThe father's response chiefly reveals that",
+    options: [
+      "he admires his son's stand and plans to defend it publicly",
+      "he fears above all that his son has fallen seriously ill",
+      "he blames the Fortescues for the expulsion",
+      "for him appearances outweigh his son's principles",
+    ],
+    correctIndex: 3,
+    explanation: "He grants the son's reasons in two short sentences and then turns to the dinner guests and a cover story, so reputation governs the family's response. The illness is the lie he orders, not a fear.",
+    partNumber: 3,
+    partTitle: "Patterns & Examples",
+  },
+
+  // Part 4 — Satire on Stage: Target, Norm and Method
+  {
+    id: 'englit-social-commentary-drama-ent-4a',
+    question: "Read the speech below, from a comedy about a town council.\n\n**Alderman.** I take a little from the poor-box, yes. But only on Tuesdays, and never more than I can carry. A man must have standards.\n\nThe satire in this speech works chiefly through",
+    options: [
+      "deflation, as a grand speech ends in a stumble",
+      "mistaken identity, as he is taken for another man",
+      "inversion, treating rules for stealing as virtues",
+      "understatement of the town's wealth and comfort",
+    ],
+    correctIndex: 2,
+    explanation: "The alderman presents rules about when and how much he steals as if they were principles, turning vice into a kind of virtue. The implied norm is honesty, which his \"standards\" mock.",
+    partNumber: 4,
+    partTitle: "Satire on Stage: Target, Norm and Method",
+  },
+  {
+    id: 'englit-social-commentary-drama-ent-4b',
+    question: "A comedy mocks a family of social climbers who rename their dog \"Viscount\" and practice fainting before parties. No one is harmed, and the play ends with the family happily married off.\n\nThe satire is best described as",
+    options: [
+      "Horatian, genially mocking folly",
+      "Juvenalian, bitterly exposing vice",
+      "a tragedy disguised as a light comedy",
+      "a problem play with an unsettled ending",
+    ],
+    correctIndex: 0,
+    explanation: "The targets are vanity and pretension, treated with amused laughter and a happy ending, the marks of Horatian satire. Nothing in the play aims at cruelty or corruption with anger.",
+    partNumber: 4,
+    partTitle: "Satire on Stage: Target, Norm and Method",
+  },
+
+  // Part 5 — Indirect Commentary: Subtext, Chekhov and Common Misconceptions
+  {
+    id: 'englit-social-commentary-drama-ent-5a',
+    question: "Read the exchange below.\n\n**Mother.** You'll write, of course. They say the post from the coast is very slow.\n**Son.** The boat sails at six.\n**Mother.** Your father always wrote on Sundays. Every Sunday, for forty years.\n**Son.** I should see to the trunk.\n\nThe exchange chiefly suggests",
+    options: [
+      "a cheerful farewell between two eager travelers",
+      "the son's secret plan to cancel his voyage",
+      "a mother holding on to her son and a son already gone",
+      "the mother's anger that her husband never wrote",
+    ],
+    correctIndex: 2,
+    explanation: "The two speakers talk past each other: she answers in letters and memory, he in departure times and luggage. The feeling lies in the gap between their replies, not in any stated emotion.",
+    partNumber: 5,
+    partTitle: "Indirect Commentary: Subtext, Chekhov and Common Misconceptions",
+  },
+  {
+    id: 'englit-social-commentary-drama-ent-5b',
+    question: "In a play about a corrupt town, a young teacher delivers eloquent speeches against greed. Later scenes show him borrowing money he never repays and flattering the mayor in hope of a promotion.\n\nThe later scenes chiefly serve to",
+    options: [
+      "prove that his speeches state the playwright's own view",
+      "qualify his speeches as one voice the play tests",
+      "show that the mayor is the true hero of the play",
+      "reveal that the town is not corrupt after all",
+    ],
+    correctIndex: 1,
+    explanation: "By undercutting the most eloquent speaker, the play refuses to let any one character serve as its mouthpiece. His ideas may still matter, but the play weighs them against his conduct.",
+    partNumber: 5,
+    partTitle: "Indirect Commentary: Subtext, Chekhov and Common Misconceptions",
+  },
+
+  // Part 6 — Social Commentary on the Exam
+  {
+    id: 'englit-social-commentary-drama-ent-6a',
+    question: "Read the scene below.\n\n**Maid.** *(setting down the tray)* Will that be all, sir?\n**Gentleman.** Yes, yes. *(He does not look up from his paper.)*\n**Maid.** *(pausing at the door)* The young lady upstairs is asking for you, sir. She's been asking since noon.\n**Gentleman.** *(turning a page)* Tell her I'm occupied.\n\nThe stage directions chiefly reveal",
+    options: [
+      "his indifference, shown by his refusal to look up",
+      "his deep concern for the young lady waiting upstairs",
+      "the maid's rudeness toward her employer",
+      "a comic misunderstanding about the tray",
+    ],
+    correctIndex: 0,
+    explanation: "He never looks up and keeps turning pages while a servant and a woman upstairs wait on him, so gesture shows a power that withholds attention. On the page, stage directions are evidence.",
+    partNumber: 6,
+    partTitle: "Social Commentary on the Exam",
+  },
+  {
+    id: 'englit-social-commentary-drama-ent-6b',
+    question: "A student is writing a Question 3 essay on a play in which a wife leaves her husband.\n\nWhich sentence uses context most responsibly?",
+    options: [
+      "The playwright supported women's rights, which proves the heroine is right to leave.",
+      "Back then, all women everywhere were completely powerless in every way.",
+      "Because the play's lawyer says a wife's property is not her own, her leaving refuses the one rule her world gives her.",
+      "The play was written more than a century ago, so its ideas are now out of date.",
+    ],
+    correctIndex: 2,
+    explanation: "This sentence builds its context from the play itself and uses it to sharpen a claim. The others treat biography as proof, generalize sweepingly, or dismiss the play without analysis.",
+    partNumber: 6,
+    partTitle: "Social Commentary on the Exam",
+  },
+
+  // Part 7 — AP Review
+  {
+    id: 'englit-social-commentary-drama-ent-7a',
+    question: "Read the end of a scene below.\n\n**Chairwoman.** The committee has reviewed the complaint that the orphanage roof leaks. By a show of hands, the roof is declared sound. *(All hands rise. Rain drips onto the table.)*\n**Clerk.** Shall I fetch a bucket?\n**Chairwoman.** Minute that the roof is sound.\n\nThe scene chiefly satirizes",
+    options: [
+      "the clerk's failure to keep the minutes in order",
+      "the orphans' ingratitude toward the committee",
+      "the town's generous funding of the orphanage",
+      "a body of officials that votes away a fact anyone can see",
+    ],
+    correctIndex: 3,
+    explanation: "A question of fact is settled by a show of hands while rain falls on the committee's own table, and the chairwoman answers the drip by recording the vote. The target is officials who prefer procedure to evidence.",
+    partNumber: 7,
+    partTitle: "AP Review",
+  },
+  {
+    id: 'englit-social-commentary-drama-ent-7b',
+    question: "In the final scene of a play, a reformer who has exposed the town council's corruption declares that he will leave \"this town of cowards\" forever. As he packs, the council clerk who first leaked him the documents, and who has lost her job for it, comes to say goodbye; he does not recognize her.\n\nPlacing these actions side by side chiefly serves to",
+    options: [
+      "confirm that the townspeople are all cowards",
+      "show the clerk seeking revenge on the reformer",
+      "complicate his victory by showing whom his contempt overlooks",
+      "reveal that the council has finally been replaced",
+    ],
+    correctIndex: 2,
+    explanation: "The clerk's sacrifice made his exposé possible, yet he lumps the whole town together and does not know her, so the play qualifies the hero who has been right about the council. The juxtaposition tests him rather than endorsing him.",
+    partNumber: 7,
+    partTitle: "AP Review",
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -29,12 +223,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Core Concepts' },
-    { partNumber: 2, partTitle: 'Key Processes' },
-    { partNumber: 3, partTitle: 'Patterns & Examples' },
-    { partNumber: 4, partTitle: 'Connections & Interactions' },
-    { partNumber: 5, partTitle: 'Change Over Time' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review' }
+    { partNumber: 1, partTitle: "Core Concepts" },
+    { partNumber: 2, partTitle: "How a Play Argues: The Problem Play and Social Realism" },
+    { partNumber: 3, partTitle: "Patterns & Examples" },
+    { partNumber: 4, partTitle: "Satire on Stage: Target, Norm and Method" },
+    { partNumber: 5, partTitle: "Indirect Commentary: Subtext, Chekhov and Common Misconceptions" },
+    { partNumber: 6, partTitle: "Social Commentary on the Exam" },
+    { partNumber: 7, partTitle: "AP Review" },
   ]
 }
