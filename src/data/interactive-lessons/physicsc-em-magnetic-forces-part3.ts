@@ -98,15 +98,15 @@ $$\\frac{q}{m} = \\frac{2yv^2}{EL^2} = \\frac{2yE}{B^2L^2}$$`
       id: 'magf3-mcq3',
       type: 'mcq' as const,
       question: 'Two singly-charged ions enter a mass spectrometer after acceleration through $V_0 = 1000$ V into $B = 0.2$ T. Ion A has $r_A = 10$ cm. What is the mass of ion A?',
-      options: ['$m_A = qB^2r_A^2/(2V_0)$, approximately $3.2 \\times 10^{-25}$ kg', '$6.4 \\times 10^{-25}$ kg', '$1.6 \\times 10^{-25}$ kg', '$3.2 \\times 10^{-26}$ kg'],
+      options: ['$3.2 \\times 10^{-26}$ kg', '$6.4 \\times 10^{-26}$ kg', '$1.6 \\times 10^{-26}$ kg', '$3.2 \\times 10^{-25}$ kg'],
       correctAnswer: 0,
-      explanation: '$r = \\frac{1}{B}\\sqrt{2mV_0/q}$ → $m = qB^2r^2/(2V_0) = (1.6 \\times 10^{-19})(0.04)(0.01)/(2000) = 6.4 \\times 10^{-23}/2000 = 3.2 \\times 10^{-26}$ kg.'
+      explanation: '$r = \\frac{1}{B}\\sqrt{2mV_0/q}$ → $m = qB^2r^2/(2V_0) = (1.6 \\times 10^{-19})(0.04)(0.01)/(2000) = 6.4 \\times 10^{-23}/2000 = 3.2 \\times 10^{-26}$ kg. Dropping the factor of 2 in $2V_0$ gives the $6.4 \\times 10^{-26}$ kg distractor.'
     },
     {
       id: 'magf3-mcq4',
       type: 'mcq' as const,
       question: 'In a mass spectrometer using a velocity selector, if the magnetic field in the deflection region is increased, the separation between two isotopes:',
-      options: ['Decreases', 'Increases', 'Stays the same', 'Depends on the masses'],
+      options: ['Decreases', 'Increases in proportion to $B_2$', 'Is unchanged by $B_2$', 'Depends only on the masses'],
       correctAnswer: 0,
       explanation: '$d = 2mE/(qB_1B_2)$. Since $d \\propto 1/B_2$ (deflection field), increasing $B_2$ decreases the radius and the separation.'
     },

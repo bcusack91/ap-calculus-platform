@@ -14,7 +14,7 @@ export const physCEMMagForcePart6Data = {
 2. **Write** the appropriate force law:
    - Particle: $\\vec{F} = q\\vec{v} \\times \\vec{B}$
    - Wire: $\\vec{F} = I\\vec{L} \\times \\vec{B}$ or $d\\vec{F} = Id\\vec{\\ell} \\times \\vec{B}$
-   - Dipole: $\\vec{\\tau} = \\vec{\\mu} \\times \\vec{B}$
+   - Both fields present: $\\vec{F} = q\\vec{E} + q\\vec{v} \\times \\vec{B}$
 3. **Evaluate** cross products carefully using the determinant method.
 4. **Apply** Newton's second law or energy methods as needed.`
     },
@@ -47,9 +47,9 @@ $$V_H = E_H w = v_d B w$$
 
 Since $I = nev_d(wt)$, we get $v_d = I/(newt)$:
 
-$$V_H = \\frac{IB}{net} = \\frac{R_H IB}{t}$$
+$$V_H = \\frac{IB}{net}$$
 
-where $R_H = 1/(ne)$ is the **Hall coefficient**.`
+A thinner slab or fewer charge carriers gives a larger Hall voltage, and the sign of $V_H$ reveals the sign of the carriers.`
     },
     {
       id: 'magf6-mcq2',
@@ -63,23 +63,23 @@ where $R_H = 1/(ne)$ is the **Hall coefficient**.`
       id: 'magf6-mcq3',
       type: 'mcq' as const,
       question: 'An electron moves in a circle of radius $R$ in a magnetic field $B$. Its angular momentum is:',
-      options: ['$L = qBR^2$', '$L = qBR$', '$L = mvR = qBR^2/2$', '$L = 2qBR^2$'],
+      options: ['$L = qBR^2$', '$L = qBR$', '$L = qBR^2/2$', '$L = 2qBR^2$'],
       correctAnswer: 0,
       explanation: '$r = mv/(qB)$ gives $mv = qBR$. $L = mvR = qBR \\cdot R = qBR^2$.'
     },
     {
       id: 'magf6-mcq4',
       type: 'mcq' as const,
-      question: 'A current loop has $\\vec{\\mu} = 0.1\\hat{x}$ $A\\cdot m^{2}$ in a field $\\vec{B} = 0.5\\hat{x} + 0.3\\hat{y}$ T. The torque on the loop is:',
-      options: ['$0.03\\hat{z}$ N·m', '$-0.03\\hat{z}$ N·m', '$0.05\\hat{z}$ N·m', '$0$'],
+      question: 'A $0.50$ m wire along the $+x$ axis carries $4.0$ A in a uniform field $\\vec{B} = 0.2\\hat{x} + 0.3\\hat{y}$ T. The force on the wire is:',
+      options: ['$0.6\\hat{z}$ N', '$-0.6\\hat{z}$ N', '$0.4\\hat{z}$ N', '$0$'],
       correctAnswer: 0,
-      explanation: '$\\vec{\\tau} = \\vec{\\mu} \\times \\vec{B} = 0.1\\hat{x} \\times (0.5\\hat{x} + 0.3\\hat{y}) = 0.1(0.5)(\\hat{x}\\times\\hat{x}) + 0.1(0.3)(\\hat{x}\\times\\hat{y}) = 0 + 0.03\\hat{z}$.'
+      explanation: '$\\vec{F} = I\\vec{L} \\times \\vec{B} = (4.0)(0.50\\hat{x}) \\times (0.2\\hat{x} + 0.3\\hat{y}) = 2.0(0.3)(\\hat{x} \\times \\hat{y}) = 0.6\\hat{z}$ N. The $x$-component of $\\vec{B}$ is parallel to the wire and exerts no force.'
     },
     {
       id: 'magf6-mcq5',
       type: 'mcq' as const,
       question: 'A wire carries current $I$ along a parabolic path $y = x^2$ from $(0,0)$ to $(1,1)$ in a uniform field $\\vec{B} = B\\hat{z}$. The net force on the wire is the same as on a straight wire from $(0,0)$ to $(1,1)$. That force magnitude is:',
-      options: ['$IB\\sqrt{2}$', '$IB$', '$2IB$', '$IB/\\sqrt{2}$'],
+      options: ['$IB\\sqrt{2}$', '$IB$', '$2IB$', '$IB/2$'],
       correctAnswer: 0,
       explanation: 'In uniform $\\vec{B}$, $\\vec{F} = I\\vec{L}_{\\text{net}} \\times \\vec{B}$ where $\\vec{L}_{\\text{net}} = \\hat{x} + \\hat{y}$. $|\\vec{L}| = \\sqrt{2}$. $F = IB\\sqrt{2}\\sin 90° = IB\\sqrt{2}$.'
     },

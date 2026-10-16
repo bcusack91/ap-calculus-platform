@@ -4,55 +4,28 @@ export const physCEMMaxwellPart3Data = {
     {
       id: 'physicsc-maxwell-equations-em-p3-intro',
       type: 'text' as const,
-      content: `# 🌊 Electromagnetic Waves
+      content: `# ⚡ Faraday's Law and Induced Electric Fields
 
-**Part 3 of 7 — Light as an EM Wave**
-
----
-
-### EM Wave Properties
-
-$c = \\frac{1}{\\sqrt{\\mu_0 \\varepsilon_0}} = 3.0 \\times 10^8 \\text{ m/s}$
-
-| Property | Value |
-|----------|-------|
-| Speed | $c = 3 \\times 10^8$ m/s (in vacuum) |
-| $\\vec{E} \\perp \\vec{B}$ | E and B are perpendicular |
-| $\\vec{E} \\perp \\vec{v}$ | Transverse wave |
-| $E/B = c$ | Ratio of field amplitudes |
+**Part 3 of 7 — Faraday's Law as an Induced Electric Field**
 
 ---
 
-### Energy in EM Waves
+### Maxwell's Third Equation
+$$\\oint \\vec{E} \\cdot d\\vec{l} = -\\frac{d\\Phi_B}{dt}$$
 
-Energy density: $u = \\varepsilon_0 E^2 = \\frac{B^2}{\\mu_0}$
+A changing magnetic flux creates an **electric field** that circulates around the region where the flux is changing. The field exists whether or not a wire is there; a conducting loop simply lets it push charges around, and the EMF in the loop is $\\mathcal{E} = \\oint \\vec{E} \\cdot d\\vec{l}$. For a coil of $N$ turns, $\\mathcal{E} = -N\\frac{d\\Phi_B}{dt}$, and Lenz's law gives the direction.
 
-Intensity: $I = \\frac{1}{2}c\\varepsilon_0 E_0^2$
+---
 
-Poynting vector: $\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$
+### Two Kinds of Electric Field
 
-> 🔑 Light is an electromagnetic wave — predicted by Maxwell's equations before being experimentally confirmed by Hertz.`
-    },
-    {
-      id: 'physicsc-maxwell-equations-em-p3-worked',
-      type: 'text' as const,
-      content: `### 📝 Worked Example — Speed from $\\mu_0$ and $\\varepsilon_0$
+| | Electrostatic field (from charges) | Induced field (from changing $\\vec{B}$) |
+|---|---|---|
+| Field lines | Start and end on charges | Form **closed loops** |
+| $\\oint \\vec{E} \\cdot d\\vec{l}$ around a loop | $0$ (conservative) | $-d\\Phi_B/dt$ (non-conservative) |
+| Electric potential | Well defined | Cannot be defined around the loop |
 
-Maxwell's equations predict that a plane wave $E(x,t) = E_0 \\sin(kx - \\omega t)$ must satisfy the wave equation $\\frac{\\partial^2 E}{\\partial x^2} = \\mu_0\\varepsilon_0 \\frac{\\partial^2 E}{\\partial t^2}$. Show the propagation speed and evaluate it.
-
-**Step 1 — Take the spatial derivatives.** Differentiating twice in $x$ pulls down $k^2$:
-
-$\\frac{\\partial^2 E}{\\partial x^2} = -k^2 E_0 \\sin(kx - \\omega t)$
-
-**Step 2 — Take the time derivatives.** Differentiating twice in $t$ pulls down $\\omega^2$:
-
-$\\frac{\\partial^2 E}{\\partial t^2} = -\\omega^2 E_0 \\sin(kx - \\omega t)$
-
-**Step 3 — Match coefficients.** Substituting into the wave equation gives $k^2 = \\mu_0\\varepsilon_0\\,\\omega^2$, so the speed is
-
-$v = \\frac{\\omega}{k} = \\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}} = \\frac{1}{\\sqrt{(4\\pi \\times 10^{-7})(8.85 \\times 10^{-12})}} \\approx 3.0 \\times 10^8 \\text{ m/s}$
-
-> 🔑 The wave speed contains only the universal constants $\\mu_0$ and $\\varepsilon_0$ — so every EM wave in vacuum travels at $c$, independent of frequency.`
+Both kinds exert the same force $\\vec{F} = q\\vec{E}$ on a charge.`
     },
     {
       id: 'physicsc-maxwell-equations-em-p3-mcq1',
@@ -63,40 +36,65 @@ $v = \\frac{\\omega}{k} = \\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}} = \\frac{1}{\\
       exercise: {
         questions: [
           {
-            question: 'The speed of light in vacuum equals:',
-            options: ['$\\sqrt{\\mu_0 \\varepsilon_0}$', '$\\frac{\\mu_0}{\\varepsilon_0}$', '$\\frac{1}{\\sqrt{\\mu_0 \\varepsilon_0}}$', '$\\frac{\\varepsilon_0}{\\mu_0}$'],
-            correctAnswer: 2,
-            explanation: '$c = \\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$. This was Maxwell\'s great prediction, matching the measured speed of light.'
-          },
-          {
-            question: 'In a vacuum EM wave, the ratio of the field amplitudes $E_0/B_0$ equals:',
-            options: ['$1$', '$c$', '$c^2$', '$1/c$'],
-            correctAnswer: 1,
-            explanation: 'At every instant $E = cB$, so the amplitude ratio is $E_0/B_0 = c \\approx 3 \\times 10^8$ m/s.'
-          },
-          {
-            question: 'An EM wave has $E_0 = 600 \\text{ N/C}$. Its magnetic field amplitude $B_0$ is approximately:',
-            options: ['$2.0 \\times 10^{-6}$ T', '$1.8 \\times 10^{11}$ T', '$600$ T', '$5.0 \\times 10^{-3}$ T'],
+            question: 'An electric field produced by a changing magnetic field differs from an electrostatic field because its field lines:',
+            options: ['Form closed loops', 'Start on positive charges', 'Point straight out from an axis', 'Always point toward lower potential'],
             correctAnswer: 0,
-            explanation: '$B_0 = E_0/c = 600 / (3.0 \\times 10^8) = 2.0 \\times 10^{-6}$ T.'
+            explanation: 'Induced field lines circulate around the changing flux and close on themselves; starting on charges and pointing toward lower potential describe electrostatic fields.'
           },
           {
-            question: 'The two equal expressions for the energy density of an EM wave are:',
-            options: ['$u = \\varepsilon_0 E^2$ and $u = \\frac{B^2}{\\mu_0}$', '$u = E^2$ and $u = B^2$', '$u = \\frac{1}{2}\\mu_0 E$ and $u = \\varepsilon_0 B$', '$u = c E$ and $u = c B$'],
+            question: 'Around any closed path, the line integral $\\oint \\vec{E} \\cdot d\\vec{l}$ of an electrostatic field (one produced only by stationary charges) is:',
+            options: ['Zero', 'Equal to $-d\\Phi_B/dt$', 'Equal to $Q_{enc}/\\varepsilon_0$', 'Always positive'],
             correctAnswer: 0,
-            explanation: 'The instantaneous energy is shared equally between fields; using $E = cB$ and $c^2 = 1/(\\mu_0\\varepsilon_0)$ shows $\\varepsilon_0 E^2 = B^2/\\mu_0$.'
+            explanation: 'Electrostatic fields are conservative, so the work per unit charge around a closed path is zero. Only a changing magnetic flux makes the loop integral nonzero.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'physicsc-maxwell-equations-em-p3-worked',
+      type: 'text' as const,
+      content: `### 📝 Worked Example — Induced Field In and Around a Solenoid
+
+A long solenoid of radius $R = 0.020 \\text{ m}$ has $n = 1000$ turns per meter. Its current increases at $\\frac{dI}{dt} = 50 \\text{ A/s}$. Find the induced electric field at (a) $r = 0.010 \\text{ m}$ (inside) and (b) $r = 0.040 \\text{ m}$ (outside).
+
+**Step 1 — Rate of change of $B$ inside.** From Ampère's law, $B = \\mu_0 n I$, so
+$\\frac{dB}{dt} = \\mu_0 n \\frac{dI}{dt} = (4\\pi \\times 10^{-7})(1000)(50) = 6.28 \\times 10^{-2} \\text{ T/s}$
+
+**Step 2 — Use symmetry.** On a circle of radius $r$ centered on the axis, $\\vec{E}$ is tangent to the circle with constant magnitude, so $\\oint \\vec{E} \\cdot d\\vec{l} = E(2\\pi r)$.
+
+**Step 3 — Inside ($r < R$).** The circle encloses flux $B\\pi r^2$:
+$E(2\\pi r) = \\pi r^2 \\frac{dB}{dt} \;\\Rightarrow\; E = \\frac{r}{2}\\frac{dB}{dt} = \\frac{0.010}{2}(6.28 \\times 10^{-2}) = 3.1 \\times 10^{-4} \\text{ V/m}$
+
+**Step 4 — Outside ($r > R$).** $B \\approx 0$ outside, but the circle still encloses the solenoid's flux $B\\pi R^2$:
+$E(2\\pi r) = \\pi R^2 \\frac{dB}{dt} \;\\Rightarrow\; E = \\frac{R^2}{2r}\\frac{dB}{dt} = \\frac{(0.020)^2}{2(0.040)}(6.28 \\times 10^{-2}) = 3.1 \\times 10^{-4} \\text{ V/m}$
+
+> 🔑 Inside, $E$ grows linearly with $r$; outside, it falls as $1/r$. There is an induced electric field outside the solenoid even though the magnetic field there is essentially zero.`
+    },
+    {
+      id: 'physicsc-maxwell-equations-em-p3-mcq2',
+      type: 'multiple-choice' as const,
+      content: `
+**Check Your Understanding** 🔍
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Inside a long solenoid whose current is increasing steadily, the induced electric field at distance $r$ from the axis is proportional to:',
+            options: ['$r$', '$1/r$', '$r^2$', '$1/r^2$'],
+            correctAnswer: 0,
+            explanation: '$E(2\\pi r) = \\pi r^2\\,dB/dt$ gives $E = (r/2)\\,dB/dt$, which grows linearly with $r$. The $1/r$ dependence applies outside the solenoid.'
           },
           {
-            question: 'In a plane EM wave traveling in the $+x$ direction, $\\vec{E}$ and $\\vec{B}$ are oriented so that:',
-            options: ['Both point along $+x$', '$\\vec{E} \\times \\vec{B}$ points along $+x$', '$\\vec{E} \\times \\vec{B}$ points along $-x$', 'They are parallel to each other'],
-            correctAnswer: 1,
-            explanation: 'The Poynting vector $\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$ gives the propagation direction, so $\\vec{E} \\times \\vec{B}$ points along $+x$ for a wave moving in $+x$.'
+            question: 'For the solenoid in the worked example, the induced electric field at $r = 0.040$ m (outside the windings) is:',
+            options: ['$3.1 \\times 10^{-4}$ V/m', '$1.3 \\times 10^{-3}$ V/m', '$6.3 \\times 10^{-4}$ V/m', '$0$'],
+            correctAnswer: 0,
+            explanation: 'Outside, the enclosed flux is $B\\pi R^2$, so $E = (R^2/2r)\\,dB/dt = 3.1 \\times 10^{-4}$ V/m. Using the inside formula $(r/2)\\,dB/dt$ gives $1.3 \\times 10^{-3}$ V/m, and $B \\approx 0$ outside does not make $E$ zero.'
           },
           {
-            question: 'A red light wave and a gamma ray both travel through vacuum. Which travels faster?',
-            options: ['Red light', 'The gamma ray', 'They travel at the same speed $c$', 'It depends on intensity'],
-            correctAnswer: 2,
-            explanation: 'All EM waves in vacuum travel at $c = 1/\\sqrt{\\mu_0\\varepsilon_0}$ regardless of frequency or wavelength.'
+            question: 'A wire ring encircles a long solenoid, outside its windings where $B \\approx 0$. When the solenoid\'s current increases, a current is induced in the ring because:',
+            options: ['The flux through the ring changes', 'A magnetic force acts on charges in the ring', 'Charge leaks from the solenoid into the ring', 'The ring sits in a strong magnetic field'],
+            correctAnswer: 0,
+            explanation: 'The ring encloses the solenoid\'s changing flux, so Faraday\'s law gives a circulating induced electric field along the ring that drives the current, even though $B$ at the wire itself is about zero.'
           }
         ]
       }

@@ -86,24 +86,24 @@ Choose $R$ and $C$ such that $RC = 1.66$ s. For example: $R = 166$ kΩ, $C = 10$
 
 ### Multiple RC stages
 
-For circuits with multiple R's and C's, find the **Thévenin equivalent** seen by each capacitor:
+For a circuit with several resistors and one capacitor, use the **equivalent resistance seen by the capacitor**:
 
-$$\\tau = R_{\\text{Th}} \\cdot C$$
+$$\\tau = R_{\\text{eq}} \\cdot C$$
 
-where $R_{\\text{Th}}$ is the Thévenin resistance seen from the capacitor terminals (with $\\mathcal{E}$ shorted and $C$ removed).`
+where $R_{\\text{eq}}$ is the resistance between the capacitor's terminals with the ideal battery replaced by a wire and $C$ removed.`
     },
     {
       id: 'rc3-mcq3',
       type: 'mcq' as const,
       question: 'A circuit has $R_1 = 10$ kΩ in series with a parallel combination of $R_2 = 20$ kΩ and $C = 5$ μF. What is $\\tau$?',
       options: [
+        '$0.033$ s',
         '$0.1$ s',
         '$0.15$ s',
-        '$0.05$ s',
-        '$0.3$ s'
+        '$0.05$ s'
       ],
       correctAnswer: 0,
-      explanation: 'From $C$\'s perspective, $R_{\\text{Th}} = R_1 + R_2 = 30$ kΩ? No — $R_2$ is in parallel with $C$, so the Thévenin resistance seen by $C$ is $R_1 \\| R_2$? We need the circuit topology. If $R_1$ is in series with ($R_2 \\| C$), then from $C$: $R_{\\text{Th}} = R_2 \\| R_1$... Actually for a series $R_1$ with $R_2 \\| C$: $\\tau = (R_1 \\| R_2)C$? No, zero the source, remove $C$: resistance seen = $R_1 + R_2$ in this series topology... Actually $R_2$ is across $C$, so $R_{\\text{Th}} = R_1 + R_2 = 30$ kΩ only if source is zeroed... Let me just use: $\\tau = R_2(R_1 + 0)$... The standard result for this topology is $\\tau = (R_1 \\| R_2)C$ when source is zeroed. $R_1 \\| R_2 = 200/30 \\approx 6.67$ kΩ... Hmm, but the answer says $0.1$ s which is $20 \\text{k} \\times 5\\mu = 0.1$ s. Right: when the source is zeroed, $R_1$ is shorted (connected to ground on both sides), and $C$ sees only $R_2 = 20$ kΩ. $\\tau = R_2 C = 20000 \\times 5 \\times 10^{-6} = 0.1$ s.'
+      explanation: 'Replace the battery with a wire and remove $C$: $R_1$ then connects the top of $C$ to the bottom, so $R_1$ and $R_2$ are in parallel across $C$. $R_{\\text{eq}} = (10)(20)/30 \\approx 6.67$ kΩ, and $\\tau = (6.67 \\times 10^3)(5 \\times 10^{-6}) \\approx 0.033$ s.'
     },
     {
       id: 'rc3-mcq4',
@@ -144,7 +144,7 @@ where $R_{\\text{Th}}$ is the Thévenin resistance seen from the capacitor termi
 | At $t = \\tau$ (discharging) | $36.8\\%$ remaining |
 | Time to reach fraction $f$ | $t = -\\tau\\ln(1-f)$ (charging) |
 | Half-life | $t_{1/2} = \\tau\\ln 2 \\approx 0.693\\tau$ |
-| Thévenin method | $\\tau = R_{\\text{Th}} C$ |
+| Several resistors | $\\tau = R_{\\text{eq}} C$ (resistance seen by $C$) |
 
 > **Key insight:** $\\tau = RC$ controls everything. On the AP exam, if they give you $R$ and $C$, compute $\\tau$ immediately — it's almost certainly needed.`
     }

@@ -14,7 +14,7 @@ For a spherically symmetric charge distribution:
 **Outside** ($r > R$): $E = \\frac{kQ}{r^2}$ (as if all charge at center)
 
 **Inside a uniformly charged sphere** ($r < R$):
-$E = \\frac{kQr}{R^3} = \\frac{\\rho r}{3\epsilon_0}$
+$E = \\frac{kQr}{R^3} = \\frac{\\rho r}{3\\epsilon_0}$
 
 **Inside a conducting sphere**: $E = 0$
     
@@ -45,13 +45,13 @@ Inside the conductor: $E = 0$.
           {
                     "question": "A uniformly charged sphere looks like a point charge when viewed from:",
                     "options": [
-                              "Outside the sphere",
-                              "Inside the sphere",
-                              "The surface",
-                              "The center"
+                              "Every point outside it",
+                              "Any point inside it",
+                              "Only very far away",
+                              "Only near its center"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "By Gauss's law with spherical symmetry, $E = kQ/r^2$ outside — same as a point charge."
+                    "explanation": "By Gauss's law with spherical symmetry, $E = kQ/r^2$ exactly at every point outside, not just far away; inside, only the enclosed part of the charge counts."
           }
 ]
       }
@@ -85,11 +85,11 @@ Inside the conductor: $E = 0$.
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"For a Gaussian sphere inside a conducting shell, the enclosed charge is","options":["Zero (charge resides on surface)","$Q$","$Q/2$","$Q/r$"]},{"label":"The electric field just outside a conducting sphere is","options":["$\\sigma / \\\\epsilon_0$","Zero","$\\sigma \\\\epsilon_0$","$kQ^2/r^2$"]}],
-        correctAnswers: ["Zero (charge resides on surface)","$\\sigma / \\\\epsilon_0$"],
+        dropdowns: [{"label":"For a Gaussian sphere inside a conducting shell, the enclosed charge is","options":["Zero","$Q$","$Q/2$","$Q/r$"]},{"label":"The electric field just outside a conducting sphere is","options":["$\\sigma / \\epsilon_0$","$\\sigma / (2\\epsilon_0)$","$\\sigma \\epsilon_0$","$kQ^2/r^2$"]}],
+        correctAnswers: ["Zero","$\\sigma / \\epsilon_0$"],
         hint1: "Charge in a conductor is on the surface.",
         hint2: "Apply Gauss's law to a thin pillbox at the surface.",
-        explanation: "No charge inside conductor → $Q_{enc} = 0$. At the surface: $E = \\sigma/\\epsilon_0$."
+        explanation: "The excess charge sits on the outer surface, so a Gaussian sphere inside the conductor encloses $Q_{enc} = 0$. Just outside: $E = \\sigma/\\epsilon_0$, twice the field of an isolated sheet, because all the field lines leave on one side."
       }
     },
     {
@@ -117,13 +117,13 @@ Inside the conductor: $E = 0$.
           {
                     "question": "Inside a uniformly charged insulating sphere, $E$:",
                     "options": [
-                              "Increases linearly with $r$",
-                              "Decreases with $r$",
-                              "Is constant",
-                              "Is zero"
+                              "Is proportional to $r$",
+                              "Falls off as $1/r^2$",
+                              "Is the same at all $r$",
+                              "Is zero at every $r$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$E = kQr/R^3 \\\\propto r$ inside a uniform sphere."
+                    "explanation": "Enclosed charge grows as $r^3$ while the Gaussian area grows as $r^2$, so $E = kQr/R^3 \\propto r$; zero field inside applies to a conductor, not an insulator."
           }
 ]
       }

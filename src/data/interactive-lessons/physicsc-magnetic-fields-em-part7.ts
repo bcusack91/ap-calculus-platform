@@ -36,7 +36,7 @@ export const physCEMMagFieldsPart7Data = {
 - $\\oint\\vec{B}\\cdot d\\vec{A} = 0$ (Gauss for magnetism — no monopoles).
 - $\\oint\\vec{B}\\cdot d\\vec{l} = \\mu_0 I_{\\text{enc}}$ (Ampère, magnetostatic form).
 
-> Together with the two electric Maxwell equations and Faraday's law from the induction unit, these complete the electromagnetic picture.`
+> Together with Gauss's law for electric fields and Faraday's law from the induction unit, these make up Maxwell's four equations (Ampère's law gains Maxwell's addition, a changing electric field, which you need only qualitatively).`
     },
     {
       id: 'physicsc-magnetic-fields-em-p7-worked',
@@ -89,13 +89,13 @@ This pair of ideas — a velocity selector feeding a momentum analyzer — is ex
           },
           {
             question: 'Which statement about the magnetic force on a moving charge is TRUE?',
-            options: ['It can change the particle’s speed', 'It is always parallel to the velocity', 'It does no work and changes only direction', 'It is independent of the angle between $\\vec{v}$ and $\\vec{B}$'],
+            options: ['It can change the particle’s speed', 'It is always parallel to the velocity', 'It does no work and changes only direction', 'It is the same at every angle'],
             correctAnswer: 2,
             explanation: 'Because $\\vec{F}\\perp\\vec{v}$, the magnetic force does no work; it changes the direction of motion (curving the path) but not the speed.'
           },
           {
             question: 'Gauss’s law for magnetism, $\\oint \\vec{B}\\cdot d\\vec{A} = 0$, is a direct consequence of:',
-            options: ['Conservation of charge', 'The absence of magnetic monopoles', 'Faraday’s law', 'Ohm’s law'],
+            options: ['Conservation of charge', 'The absence of monopoles', 'Faraday’s law', 'Ohm’s law'],
             correctAnswer: 1,
             explanation: 'Zero net magnetic flux through any closed surface reflects that there are no isolated magnetic charges; field lines always close on themselves.'
           }

@@ -26,7 +26,7 @@ export const physCEMInductionPart7Data = {
       type: 'text' as const,
       content: `### Threads That Tie the Unit Together
 
-**Everything starts with flux.** $\\Phi_B = \\int \\vec{B}\\cdot d\\vec{A}$, and an EMF appears only when that flux *changes in time*. Faraday's law $\\mathcal{E} = -\\frac{d\\Phi_B}{dt}$ is the master equation; motional EMF ($BLv$) and the generator EMF ($NBA\\omega\\sin\\omega t$) are just special cases you get by computing $\\frac{d\\Phi_B}{dt}$ for a particular geometry.
+**Everything starts with flux.** $\\Phi_B = \\int \\vec{B}\\cdot d\\vec{A}$, and an EMF appears only when that flux *changes in time*. Faraday's law $\\mathcal{E} = -\\frac{d\\Phi_B}{dt}$ is the master equation; motional EMF ($BLv$) and the EMF from a changing field ($A\\,dB/dt$) are just special cases you get by computing $\\frac{d\\Phi_B}{dt}$ for a particular situation.
 
 **Inductance packages self-flux.** Defining $L = N\\Phi_B/I$ lets us write the back-EMF as $\\mathcal{E} = -L\\frac{dI}{dt}$ and the stored energy as $U = \\frac{1}{2}LI^2$, both obtained by calculus.
 
@@ -61,7 +61,7 @@ $\\mathcal{E} = -\\frac{d\\Phi_B}{dt} = -0.024\\left(-\\tfrac{1}{2.0}\\right)e^{
         questions: [
           {
             question: 'Faraday’s law says EMF is proportional to:',
-            options: ['Magnetic flux', 'Rate of change of magnetic flux', 'Magnetic field strength', 'Current'],
+            options: ['The magnetic flux through the loop', 'The rate of change of flux', 'The magnetic field strength at the loop', 'The current already in the loop'],
             correctAnswer: 1,
             explanation: '$\\mathcal{E} = -d\\Phi_B/dt$ — EMF is induced by the rate of change of flux, not the flux itself.'
           },

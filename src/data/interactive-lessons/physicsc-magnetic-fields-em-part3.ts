@@ -12,7 +12,7 @@ export const physCEMMagFieldsPart3Data = {
 
 ### The Biot-Savart Law
 
-$$d\\vec{B} = \\frac{\\mu_0}{4\\pi} \\frac{I \, d\\vec{l} \\times \\hat{r}}{r^2}$$
+$$d\\vec{B} = \\frac{\\mu_0}{4\\pi} \\frac{I \\, d\\vec{l} \\times \\hat{r}}{r^2}$$
 
 ---
 
@@ -40,13 +40,13 @@ The law $d\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec{l}\\times\\hat{r}}{r
 3. **Exploit symmetry** to cancel components before integrating. (On a loop's axis, only the axial component survives.)
 4. **Integrate** what is left, pulling constants outside.
 
-**Finite straight wire.** Integrating for a straight segment subtending angles $\\theta_1$ and $\\theta_2$ at perpendicular distance $d$ gives
+**Finite straight wire (perpendicular bisector).** For a segment of length $L$ and a point a distance $d$ from its midpoint, each end is seen at angle $\\theta$ from the perpendicular, with $\\sin\\theta = \\frac{L/2}{\\sqrt{d^2 + L^2/4}}$. Integrating gives
 
-$B = \\frac{\\mu_0 I}{4\\pi d}\\left(\\sin\\theta_1 + \\sin\\theta_2\\right).$
+$B = \\frac{\\mu_0 I}{4\\pi d}\\left(2\\sin\\theta\\right) = \\frac{\\mu_0 I}{2\\pi d}\\sin\\theta.$
 
-For an *infinite* wire both angles approach $90^\\circ$, so $\\sin\\theta_1 + \\sin\\theta_2 \\to 2$ and $B \\to \\frac{\\mu_0 I}{2\\pi d}$ — recovering the familiar result.
+For a very long wire $\\theta \\to 90^\\circ$, so $\\sin\\theta \\to 1$ and $B \\to \\frac{\\mu_0 I}{2\\pi d}$ — recovering the familiar result.
 
-> Use Biot-Savart when symmetry is **too low** for Ampère's law (finite segments, arcs, off-axis points). Use Ampère when symmetry is high.`
+> Use Biot-Savart for the cases Ampère's law cannot handle: a straight segment (on its perpendicular bisector), an arc (at its center), and a loop (on its axis). Use Ampère when symmetry is high.`
     },
     {
       id: 'physicsc-magnetic-fields-em-p3-worked',
@@ -91,7 +91,7 @@ $B_x = \\frac{\\mu_0 I R}{4\\pi (R^2+x^2)^{3/2}}(2\\pi R) = \\frac{\\mu_0 I R^2}
             question: 'Far on the axis of a loop ($x \\gg R$), the field falls off as:',
             options: ['$1/x$', '$1/x^2$', '$1/x^3$', 'Constant'],
             correctAnswer: 2,
-            explanation: 'For $x \\gg R$, $(R^2+x^2)^{3/2} \\approx x^3$, so $B \\approx \\frac{\\mu_0 I R^2}{2x^3}$ — the dipole $1/x^3$ behavior.'
+            explanation: 'For $x \\gg R$, $(R^2+x^2)^{3/2} \\approx x^3$, so $B \\approx \\frac{\\mu_0 I R^2}{2x^3}$, falling off as $1/x^3$.'
           },
           {
             question: 'A long straight wire carries $I = 10\\text{ A}$. The field at $r = 0.05\\text{ m}$ is (use $\\mu_0 = 4\\pi\\times10^{-7}$):',
@@ -101,13 +101,13 @@ $B_x = \\frac{\\mu_0 I R}{4\\pi (R^2+x^2)^{3/2}}(2\\pi R) = \\frac{\\mu_0 I R^2}
           },
           {
             question: 'In the Biot-Savart law $d\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{I\\,d\\vec{l}\\times\\hat{r}}{r^2}$, the contribution $dB$ is zero when $d\\vec{l}$ is:',
-            options: ['Perpendicular to $\\hat{r}$', 'Parallel (or antiparallel) to $\\hat{r}$', 'At 45° to $\\hat{r}$', 'Of maximum length'],
+            options: ['Perpendicular to $\\hat{r}$', 'Parallel to $\\hat{r}$', 'At $45°$ to $\\hat{r}$', 'At $60°$ to $\\hat{r}$'],
             correctAnswer: 1,
-            explanation: 'The cross product $d\\vec{l}\\times\\hat{r}$ vanishes when $d\\vec{l}\\parallel\\hat{r}$ (i.e., looking along the wire toward the point).'
+            explanation: 'The cross product $d\\vec{l}\\times\\hat{r}$ has magnitude $dl\\sin\\theta$, which vanishes when $d\\vec{l}$ is parallel or antiparallel to $\\hat{r}$ (looking along the wire toward the point) and is largest when they are perpendicular.'
           },
           {
             question: 'Two long parallel wires carry current in the SAME direction. They:',
-            options: ['Attract each other', 'Repel each other', 'Exert no force', 'Twist but feel no net force'],
+            options: ['Attract each other', 'Repel each other', 'Exert no force', 'Only twist'],
             correctAnswer: 0,
             explanation: 'Each wire sits in the other’s field; using $\\vec{F} = I\\vec{L}\\times\\vec{B}$, parallel currents attract (antiparallel currents repel).'
           }

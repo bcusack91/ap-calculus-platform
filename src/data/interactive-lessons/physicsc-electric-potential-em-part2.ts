@@ -110,7 +110,7 @@ The potential $V$ exists at a point in space *whether or not* a charge is placed
             explanation: 'The external work equals $q\\Delta V = (3\\,\\mu\\text{C})(80 - 20\\,\\text{V}) = (3)(60) = 180\\,\\mu\\text{J}$.'
           },
           {
-            question: 'At a point exactly midway between $+Q$ and $-Q$ (a dipole), the electric potential is:',
+            question: 'At a point exactly midway between charges $+Q$ and $-Q$, the electric potential is:',
             options: ['Maximum', 'Zero', 'Equal to $kQ/r$', 'Undefined'],
             correctAnswer: 1,
             explanation: 'The scalar potentials cancel: $V = kQ/r + k(-Q)/r = 0$. (Note the field there is not zero, but the potential is.)'
@@ -118,12 +118,12 @@ The potential $V$ exists at a point in space *whether or not* a charge is placed
           {
             question: 'Two equipotential surfaces near a point charge are close together where the field is strong and far apart where it is weak because:',
             options: [
-              'Potential is constant in space',
-              'The field magnitude equals the rate of change of potential with distance',
-              'Equipotentials are always evenly spaced',
-              'The field is independent of potential'
+              'The field magnitude equals $|dV/dr|$',
+              'Potential is the same at every point in space',
+              'Equipotentials around any charge are evenly spaced',
+              'The field magnitude is independent of potential'
             ],
-            correctAnswer: 1,
+            correctAnswer: 0,
             explanation: 'Since $E = |dV/dr|$, a fixed potential step $\\Delta V$ corresponds to a small spacing where $E$ is large and a large spacing where $E$ is small.'
           }
         ]

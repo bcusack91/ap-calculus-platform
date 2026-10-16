@@ -25,10 +25,10 @@ Understanding the shapes of RC circuit graphs is essential for the AP exam. Ever
       type: 'mcq' as const,
       question: 'During **charging**, the capacitor voltage $V_C(t)$ graph is:',
       options: [
-        'Starts at $0$, rises with decreasing slope toward $\\mathcal{E}$ (concave down)',
-        'Starts at $\\mathcal{E}$, falls exponentially toward $0$ (concave up)',
-        'Linear increase from $0$ to $\\mathcal{E}$',
-        'Starts at $\\mathcal{E}/2$ and remains constant'
+        'Rises from $0$ toward $\\mathcal{E}$, concave down',
+        'Falls from $\\mathcal{E}$ toward $0$, concave up',
+        'Rises linearly from $0$ to $\\mathcal{E}$',
+        'Rises from $0$ toward $\\mathcal{E}$, concave up'
       ],
       correctAnswer: 0,
       explanation: '$V_C = \\mathcal{E}(1 - e^{-t/\\tau})$: starts at $0$, asymptotes to $\\mathcal{E}$, concave down (slope $= (\\mathcal{E}/\\tau)e^{-t/\\tau}$ is decreasing).'
@@ -141,10 +141,10 @@ The graph shows a kink at the switching time — the voltage is continuous but t
       type: 'mcq' as const,
       question: 'When a charging RC circuit is suddenly switched to discharge through a larger resistor, $V_C$ at the switching instant:',
       options: [
-        'Is continuous (same value) but the rate of change decreases in magnitude',
-        'Jumps discontinuously',
-        'Is continuous and the rate of change stays the same',
-        'Drops to zero immediately'
+        'Stays the same but then changes more slowly',
+        'Jumps to a lower value at that instant',
+        'Keeps its value and its slope',
+        'Drops to zero at that instant'
       ],
       correctAnswer: 0,
       explanation: 'Voltage across a capacitor cannot change instantaneously (that would require infinite current). The voltage is continuous. But $dV/dt = -V/(R_2 C)$ with larger $R_2$ means the decay is slower — smaller $|dV/dt|$.'

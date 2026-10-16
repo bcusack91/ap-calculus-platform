@@ -55,7 +55,7 @@ When you pull the rod at constant speed, you supply mechanical power $P_{\\text{
       type: 'text' as const,
       content: `### Worked Example — Terminal Velocity of a Sliding Rod
 
-A conducting rod of mass $m = 0.10\\text{ kg}$ and length $L = 0.50\\text{ m}$ slides on frictionless rails of resistance-equivalent $R = 2.0\\,\\Omega$ inside a vertical field $B = 0.80\\text{ T}$. It is released from rest and falls under gravity while staying horizontal. Find its terminal velocity.
+A conducting rod of mass $m = 0.10\\text{ kg}$ and length $L = 0.50\\text{ m}$ slides on frictionless **vertical** rails joined by a resistor $R = 2.0\\,\\Omega$, in a uniform **horizontal** field $B = 0.80\\text{ T}$ perpendicular to the plane of the rails. It is released from rest and falls under gravity while staying horizontal. Find its terminal velocity.
 
 **Step 1 — Equation of motion.** As the rod falls at speed $v$, the motional EMF is $\\mathcal{E} = BLv$, driving current $I = \\frac{BLv}{R}$. The magnetic force on this current opposes motion (Lenz), with magnitude $F_B = BIL = \\frac{B^2L^2v}{R}$. Newton's second law gives
 
@@ -95,7 +95,7 @@ $m\\frac{dv}{dt} = mg - \\frac{B^2L^2}{R}v.$
           },
           {
             question: 'A rod is pulled at constant speed $v$. The power delivered by the external agent equals:',
-            options: ['Zero, since magnetic force does no work', 'The electrical power $I^2R$ dissipated in the resistor', 'The kinetic energy of the rod', 'Half the dissipated power'],
+            options: ['Zero, since magnetic forces do no work', 'The power $I^2R$ dissipated in the resistor', 'The rate the rod gains kinetic energy', 'Half of the power dissipated in $R$'],
             correctAnswer: 1,
             explanation: 'At constant $v$ the net force is zero, so the applied force balances the braking force. The mechanical power input $Fv$ equals $\\frac{B^2L^2v^2}{R} = I^2R$ — energy is conserved, converted to heat.'
           },

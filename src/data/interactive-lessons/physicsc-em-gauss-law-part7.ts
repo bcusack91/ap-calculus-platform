@@ -15,7 +15,7 @@ export const physCEMGaussPart7Data = {
 | Spherical | Point/$Q$ outside | $kQ/r^2$ |
 | Spherical | Inside conductor | $0$ |
 | Cylindrical | Line charge | $2k\\lambda/r$ |
-| Planar | Infinite sheet | $\\sigma/(2\epsilon_0)$ |
+| Planar | Infinite sheet | $\\sigma/(2\\epsilon_0)$ |
     
     `
     },
@@ -46,13 +46,13 @@ The line charge field is stronger at this distance because it falls off as $1/r$
           {
                     "question": "Which field drops off fastest with distance?",
                     "options": [
-                              "Point charge ($1/r^2$)",
-                              "Line charge ($1/r$)",
-                              "Sheet charge (constant)",
-                              "They all drop equally"
+                              "A point charge",
+                              "A long line charge",
+                              "A large sheet of charge",
+                              "All drop at the same rate"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Point: $1/r^2$, Line: $1/r$, Sheet: constant. Point charge drops fastest."
+                    "explanation": "Point charge: $1/r^2$; line charge: $1/r$; infinite sheet: constant. The point charge's field drops fastest."
           }
 ]
       }
@@ -86,11 +86,11 @@ The line charge field is stronger at this distance because it falls off as $1/r$
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Gauss's law in differential form is","options":["$\\\\nabla \\cdot \\\\vec{E} = \\rho/\\\\epsilon_0$","$\\\\nabla \\times \\\\vec{E} = 0$","$\\\\nabla \\cdot \\\\vec{B} = 0$","$F = qE$"]},{"label":"The total flux through a closed surface surrounding no charge is","options":["Zero","$\\\\epsilon_0$","$Q_{enc}$","Infinite"]}],
-        correctAnswers: ["$\\\\nabla \\cdot \\\\vec{E} = \\rho/\\\\epsilon_0$","Zero"],
-        hint1: "This is the first of Maxwell's equations.",
+        dropdowns: [{"label":"Gauss's law, Maxwell's first equation, is written","options":["$\\oint \\vec{E} \\cdot d\\vec{A} = Q_{enc}/\\epsilon_0$","$\\oint \\vec{B} \\cdot d\\vec{A} = 0$","$\\oint \\vec{E} \\cdot d\\vec{A} = Q_{enc}\\epsilon_0$","$\\oint \\vec{E} \\cdot d\\vec{l} = Q_{enc}/\\epsilon_0$"]},{"label":"The total flux through a closed surface surrounding no charge is","options":["Zero","$\\epsilon_0$","$Q_{enc}$","Infinite"]}],
+        correctAnswers: ["$\\oint \\vec{E} \\cdot d\\vec{A} = Q_{enc}/\\epsilon_0$","Zero"],
+        hint1: "Electric flux through a closed surface on the left, enclosed charge over $\\epsilon_0$ on the right.",
         hint2: "$Q_{enc} = 0 \\implies \\Phi = 0$.",
-        explanation: "Gauss's law in differential form: $\\nabla \\cdot \\vec{E} = \\rho/\\epsilon_0$. No enclosed charge means zero net flux."
+        explanation: "Gauss's law: $\\oint \\vec{E} \\cdot d\\vec{A} = Q_{enc}/\\epsilon_0$ (the zero-on-the-right version for $\\vec{B}$ is Gauss's law for magnetism). No enclosed charge means zero net flux."
       }
     },
     {
@@ -103,7 +103,7 @@ The line charge field is stronger at this distance because it falls off as $1/r$
 |---|-------|---------|
 | 1 | Point charge | $E = kQ/r^2$ |
 | 2 | Line charge | $E = 2k\\lambda/r$ |
-| 3 | Sheet charge | $E = \\sigma/(2\epsilon_0)$ |
+| 3 | Sheet charge | $E = \\sigma/(2\\epsilon_0)$ |
     
     `
     },
@@ -118,13 +118,13 @@ The line charge field is stronger at this distance because it falls off as $1/r$
           {
                     "question": "Gauss's law is one of Maxwell's equations. It replaces:",
                     "options": [
-                              "Coulomb's law (in a more general form)",
-                              "Faraday's law",
-                              "Ampère's law",
-                              "Ohm's law"
+                              "Coulomb's law for static charges",
+                              "Faraday's law for changing flux",
+                              "Ampère's law for currents",
+                              "Ohm's law for resistors"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Gauss's law is the integral form of $\\\\nabla \\cdot \\\\vec{E} = \\rho/\\\\epsilon_0$, which generalizes Coulomb's law."
+                    "explanation": "Gauss's law, Maxwell's first equation, contains Coulomb's law: applied to a sphere around a point charge it gives $E(4\\pi r^2) = q/\\epsilon_0$, so $E = kq/r^2$."
           }
 ]
       }

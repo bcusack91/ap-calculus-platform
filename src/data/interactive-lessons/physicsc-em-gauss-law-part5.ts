@@ -11,11 +11,11 @@ export const physCEMGaussPart5Data = {
 
 For an infinite plane of surface charge density $\\sigma$ $(C/m^{2})$:
 
-$E = \\frac{\\sigma}{2\epsilon_0}$
+$E = \\frac{\\sigma}{2\\epsilon_0}$
 
 - The field is **uniform** (independent of distance!)
 - Points away from a positive sheet on both sides
-- For a conductor's surface: $E = \\sigma/\epsilon_0$ (charge on one side only)
+- For a conductor's surface: $E = \\sigma/\\epsilon_0$ (charge on one side only)
     
     `
     },
@@ -27,7 +27,7 @@ $E = \\frac{\\sigma}{2\epsilon_0}$
 
 **An infinite sheet has $\\sigma = 4 \\times 10^{-9}$ $C/m^{2}$. Find $E$.**
 
-$E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12}) \\approx 226$ N/C ✅
+$E = \\sigma/(2\\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12}) \\approx 226$ N/C ✅
     
     `
     },
@@ -42,13 +42,13 @@ $E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12})
           {
                     "question": "The electric field of an infinite sheet of charge is:",
                     "options": [
-                              "Uniform (constant with distance)",
-                              "Inverse-square",
-                              "Inversely proportional to distance",
-                              "Zero"
+                              "Independent of distance",
+                              "Inverse-square in $r$",
+                              "Proportional to $1/r$",
+                              "Zero on both sides"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$E = \\sigma/(2\\\\epsilon_0)$ — independent of distance from the sheet."
+                    "explanation": "$E = \\sigma/(2\\epsilon_0)$ — independent of distance from the sheet."
           }
 ]
       }
@@ -59,9 +59,9 @@ $E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12})
       content: `
 **Planar Symmetry** 🧮
 
-1) $\\sigma = 4 \\times 10^{-9}$ $C/m^{2}$. $E$ (N/C)? (round to nearest integer, $\epsilon_0 \\approx 8.85 \\times 10^{-12}$)
+1) $\\sigma = 4 \\times 10^{-9}$ $C/m^{2}$. $E$ (N/C)? (round to nearest integer, $\\epsilon_0 \\approx 8.85 \\times 10^{-12}$)
 
-2) A conducting surface has $E = \\sigma/\epsilon_0$. This is ___ times the field of a single sheet. (Give as integer.)
+2) A conducting surface has $E = \\sigma/\\epsilon_0$. This is ___ times the field of a single sheet. (Give as integer.)
 
 3) Two infinite sheets $+\\sigma$ and $-\\sigma$: field outside (N/C)?
     
@@ -97,8 +97,8 @@ $E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12})
 
 | # | Configuration | Field |
 |---|--------------|-------|
-| 1 | Single infinite sheet | $\\sigma/(2\epsilon_0)$ |
-| 2 | Conducting surface | $\\sigma/\epsilon_0$ |
+| 1 | Single infinite sheet | $\\sigma/(2\\epsilon_0)$ |
+| 2 | Conducting surface | $\\sigma/\\epsilon_0$ |
 | 3 | Two parallel sheets | Superposition |
     
     `
@@ -114,13 +114,13 @@ $E = \\sigma/(2\epsilon_0) = 4 \\times 10^{-9}/(2 \\times 8.85 \\times 10^{-12})
           {
                     "question": "Between two parallel plates with equal and opposite charge densities $\\pm\\sigma$:",
                     "options": [
-                              "$E = \\sigma/\\\\epsilon_0$ between, $0$ outside",
-                              "$E = 0$ everywhere",
-                              "$E = \\sigma/(2\\\\epsilon_0)$ everywhere",
-                              "$E$ varies with distance"
+                              "$E = \\sigma/\\epsilon_0$ between, $0$ outside",
+                              "$E = \\sigma/(2\\epsilon_0)$ between, $0$ outside",
+                              "$E = 0$ between, $\\sigma/\\epsilon_0$ outside",
+                              "$E = \\sigma/\\epsilon_0$ between and outside"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Fields add between the plates and cancel outside."
+                    "explanation": "Each sheet makes $\\sigma/(2\\epsilon_0)$; the two fields point the same way between the plates (adding to $\\sigma/\\epsilon_0$) and opposite ways outside (canceling)."
           }
 ]
       }

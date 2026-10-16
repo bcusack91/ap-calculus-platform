@@ -50,9 +50,7 @@ $$\\vec{v} = v_\\parallel \\hat{b} + v_\\perp \\hat{n}$$
 - $v_\\parallel$ is unchanged (no force along $\\vec{B}$)
 - $v_\\perp$ produces circular motion with $r = mv_\\perp/(qB)$
 
-The result is a **helix** with:
-
-$$\\text{pitch} = v_\\parallel T = \\frac{2\\pi m v_\\parallel}{qB}$$
+The result is a **helix**: the particle circles around the field direction while drifting steadily along it.
 
 ### Decomposition
 
@@ -60,7 +58,9 @@ If the initial velocity makes angle $\\alpha$ with $\\vec{B}$:
 
 $$v_\\parallel = v\\cos\\alpha, \\qquad v_\\perp = v\\sin\\alpha$$
 
-$$r = \\frac{mv\\sin\\alpha}{qB}, \\qquad \\text{pitch} = \\frac{2\\pi m v\\cos\\alpha}{qB}$$`
+$$r = \\frac{mv\\sin\\alpha}{qB}$$
+
+Only the perpendicular component sets the radius.`
     },
     {
       id: 'magf2-mcq2',
@@ -121,7 +121,6 @@ $$K = \\frac{1}{2}mv^2 = \\frac{q^2B^2R^2}{2m}$$`
 | Cyclotron radius | $r = mv/(qB)$ |
 | Period | $T = 2\\pi m/(qB)$ |
 | Cyclotron frequency | $\\omega = qB/m$ |
-| Helical pitch | $v_\\parallel \\cdot T$ |
 | Max cyclotron KE | $K = q^2B^2R^2/(2m)$ |
 
 > **Next up:** The mass spectrometer — Part 3.`

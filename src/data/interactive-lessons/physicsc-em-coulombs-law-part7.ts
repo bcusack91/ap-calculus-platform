@@ -83,7 +83,7 @@ $a = F/m = 1.6 \\times 10^{-17} / 9.1 \\times 10^{-31} \\approx 1.76 \\times 10^
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The gravitational and Coulomb forces both obey","options":["Inverse-square law","Inverse-cube law","Linear law","Hooke's law"]},{"label":"Electric field lines are tangent to","options":["The direction of the electric field","The direction of the magnetic field","The velocity of charges","The acceleration of charges"]}],
+        dropdowns: [{"label":"The gravitational and Coulomb forces both obey","options":["Inverse-square law","Inverse-cube law","Linear law","Hooke's law"]},{"label":"Electric field lines are tangent to","options":["The direction of the electric field","The direction of the magnetic field","The velocity of a moving charge","The path a released charge follows"]}],
         correctAnswers: ["Inverse-square law","The direction of the electric field"],
         hint1: "Both $\\propto 1/r^2$.",
         hint2: "Field lines show the direction of the field at each point.",
@@ -115,13 +115,13 @@ $a = F/m = 1.6 \\times 10^{-17} / 9.1 \\times 10^{-31} \\approx 1.76 \\times 10^
           {
                     "question": "Coulomb's constant $k$ equals:",
                     "options": [
-                              "$1/(4\\pi\\\\epsilon_0)$",
-                              "$4\\pi\\\\epsilon_0$",
-                              "$\\\\epsilon_0$",
-                              "$1/\\\\epsilon_0$"
+                              "$1/(4\\pi\\epsilon_0)$",
+                              "$4\\pi\\epsilon_0$",
+                              "$1/(2\\pi\\epsilon_0)$",
+                              "$1/\\epsilon_0$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$k = 1/(4\\pi\\\\epsilon_0) \\approx 9 \\times 10^9$ $N\\cdot m^{2}/C^{2}$."
+                    "explanation": "$k = 1/(4\\pi\\epsilon_0) \\approx 9 \\times 10^9$ $N\\cdot m^{2}/C^{2}$; the $4\\pi$ comes from the area $4\\pi r^2$ of a sphere around a point charge."
           }
 ]
       }

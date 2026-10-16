@@ -11,7 +11,7 @@ export const physCEMIndRLPart6Data = {
 ### Strategy for RL Circuit Problems
 
 1. **Identify** the circuit phase: charging or discharging.
-2. **Determine** the time constant $\\tau = L/R_{\\text{Th}}$.
+2. **Determine** the time constant $\\tau = L/R_{\\text{eq}}$, using the resistance the inductor drives current through.
 3. **Find** initial and final conditions:
    - Charging: $I(0) = 0$, $I(\\infty) = \\mathcal{E}/R$
    - Discharging: $I(0) = I_0$, $I(\\infty) = 0$
@@ -37,14 +37,9 @@ A circuit has $\\mathcal{E} = 30$ V, $R_1 = 10\\,\\Omega$ (in series with $L = 0
 
 **Steady State ($t \\to \\infty$):**
 
-Inductor acts as short circuit: $V_L = 0$, so $V_{R_1} = IR_1$.
-$$I_L = \\frac{\\mathcal{E}}{R_1} \\cdot \\frac{R_2}{R_1 + R_2}$$
+The $R_1$–$L$ branch is in parallel with $R_2$, so the battery holds each branch at $\\mathcal{E} = 30$ V.
 
-Wait — let's be careful. At steady state, $L$ is a wire. The parallel combination is $R_1 \\| R_2 = 10 \\times 15/25 = 6\\,\\Omega$... but this depends on the exact topology.
-
-If $R_1$ and $L$ are in the **same branch** (series), and that branch is in parallel with $R_2$:
-
-At steady state: voltage across each branch $= \\mathcal{E} = 30$ V.
+At steady state the inductor acts as a plain wire:
 - $I_{\\text{branch 1}} = 30/R_1 = 30/10 = 3$ A (since $L$ is a short)
 - $I_{\\text{branch 2}} = 30/R_2 = 30/15 = 2$ A
 - $I_{\\text{total}} = 5$ A
@@ -63,9 +58,9 @@ At steady state: voltage across each branch $= \\mathcal{E} = 30$ V.
       id: 'indrl6-mcq3',
       type: 'mcq' as const,
       question: 'In an RL circuit, the current is growing as $I(t) = 5(1-e^{-100t})$ A. The voltage across the inductor at $t = 0.01$ s is:',
-      options: ['$500Le^{-1}$ V, i.e., $V_L = L \\cdot 500e^{-1}$', '$500L$ V', '$0$', '$5LR$ V'],
+      options: ['$500L\\,e^{-1}$ V', '$500L$ V', '$0$', '$5L\\,e^{-1}$ V'],
       correctAnswer: 0,
-      explanation: '$dI/dt = 500e^{-100t}$. At $t = 0.01$: $dI/dt = 500e^{-1}$. $V_L = L \\cdot 500e^{-1}$.'
+      explanation: '$dI/dt = 500e^{-100t}$ (the chain rule brings down the 100). At $t = 0.01$ s: $dI/dt = 500e^{-1}$, so $V_L = L\\,dI/dt = 500L\\,e^{-1}$ V. Forgetting the factor of 100 gives $5L\\,e^{-1}$.'
     },
     {
       id: 'indrl6-energy',
@@ -98,7 +93,7 @@ This equals the initial magnetic energy stored — **energy is conserved**.`
 | Problem Type | Key Formula |
 |:---:|:---:|
 | General RL transient | $I(t) = I_f + (I_i - I_f)e^{-t/\\tau}$ |
-| Multiple resistors | $\\tau = L/R_{\\text{Th}}$ |
+| Multiple resistors | $\\tau = L/R_{\\text{eq}}$ (resistance the inductor drives) |
 | Time to reach target | $t = -\\tau\\ln[(I_f - I_{\\text{target}})/(I_f - I_i)]$ |
 | Energy verification | $\\int P_R\\,dt = \\frac{1}{2}LI_0^2$ |
 

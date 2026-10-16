@@ -39,7 +39,7 @@ $$\\omega = \\frac{qB}{m}$$ (cyclotron frequency)
       type: 'text' as const,
       content: `### Helical Motion and Crossed Fields
 
-**Why a helix?** Split the velocity into components parallel and perpendicular to $\\vec{B}$. The perpendicular part $v_\\perp$ feels the force and circles with radius $r = \\frac{mv_\\perp}{qB}$; the parallel part $v_\\parallel$ feels no force ($\\sin\\theta = 0$) and drifts at constant speed. Together they trace a helix whose **pitch** (advance per turn) is $p = v_\\parallel T = v_\\parallel\\frac{2\\pi m}{qB}$.
+**Why a helix?** Split the velocity into components parallel and perpendicular to $\\vec{B}$. The perpendicular part $v_\\perp$ feels the force and circles with radius $r = \\frac{mv_\\perp}{qB}$; the parallel part $v_\\parallel$ feels no force ($\\sin\\theta = 0$) and drifts at constant speed. Together they trace a helix around the field direction.
 
 **The velocity selector.** Cross an electric field with a magnetic field so their forces oppose. A charge goes straight only when they cancel:
 

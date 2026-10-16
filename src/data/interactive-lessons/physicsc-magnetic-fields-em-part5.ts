@@ -80,19 +80,19 @@ $\\Phi_B = \\frac{\\mu_0 I \\ell}{2\\pi}\\int_a^{a+b}\\frac{dr}{r} = \\frac{\\mu
           },
           {
             question: 'A flat 0.020 $m^{2}$ coil is in a 0.50 T uniform field. The flux is maximum when the coil’s plane is:',
-            options: ['Parallel to $\\vec{B}$', 'Perpendicular to $\\vec{B}$ (normal along $\\vec{B}$)', 'At 45° to $\\vec{B}$', 'Irrelevant — flux is constant'],
+            options: ['Parallel to $\\vec{B}$', 'Perpendicular to $\\vec{B}$', 'At $45°$ to $\\vec{B}$', 'At $30°$ to $\\vec{B}$'],
             correctAnswer: 1,
             explanation: '$\\Phi_B = BA\\cos\\theta$ where $\\theta$ is between the normal and $\\vec{B}$. Flux is maximal when the normal is along $\\vec{B}$ — i.e., the plane is perpendicular to $\\vec{B}$ — giving $\\Phi_B = (0.50)(0.020) = 0.010$ Wb.'
           },
           {
             question: 'The fact that $\\oint \\vec{B}\\cdot d\\vec{A} = 0$ for every closed surface implies:',
-            options: ['Magnetic field lines start on north poles and end on south poles, terminating in space', 'Magnetic monopoles do not exist; field lines form closed loops', 'Magnetic fields cannot pass through surfaces', 'Magnetic charge is quantized'],
+            options: ['Lines can end in empty space', 'No monopoles exist, so lines form loops', 'Magnetic fields cannot pass through surfaces', 'Magnetic charge comes in discrete units'],
             correctAnswer: 1,
             explanation: 'Zero net flux through any closed surface means there are no magnetic charges (monopoles); $\\vec{B}$ lines have no sources or sinks and close on themselves.'
           },
           {
             question: 'The flux through the rectangular loop next to a long wire depends on the distance $a$ as:',
-            options: ['Linearly in $a$', 'Logarithmically (through $\\ln\\frac{a+b}{a}$)', 'As $1/a^2$', 'Independent of $a$'],
+            options: ['Linearly in $a$', 'Through $\\ln\\frac{a+b}{a}$', 'As $1/a^2$', 'Not at all'],
             correctAnswer: 1,
             explanation: 'Integrating the $1/r$ field gives $\\Phi_B = \\frac{\\mu_0 I\\ell}{2\\pi}\\ln\\frac{a+b}{a}$ — a logarithmic dependence on the geometry.'
           }

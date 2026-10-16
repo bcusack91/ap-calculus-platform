@@ -11,7 +11,7 @@ These problems cover the full range of RC circuit analysis expected on the AP Ph
 ### Problem-solving checklist
 
 1. Identify charging or discharging
-2. Compute $\\tau = RC$ (or $R_{\\text{Th}}C$ for complex circuits)
+2. Compute $\\tau = RC$ (or $R_{\\text{eq}}C$, using the resistance seen by the capacitor)
 3. Write the appropriate equation ($Q$, $I$, or $V$)
 4. Apply initial and boundary conditions
 5. Integrate if energy/charge questions arise`
@@ -21,7 +21,7 @@ These problems cover the full range of RC circuit analysis expected on the AP Ph
       type: 'mcq' as const,
       question: 'A $200$ μF capacitor charges through $R = 5$ kΩ from $\\mathcal{E} = 24$ V. What is the current after $2$ s?',
       options: [
-        '$4.8e^{-2} \\approx 0.65$ mA',
+        '$0.65$ mA',
         '$4.8$ mA',
         '$2.4$ mA',
         '$0.48$ mA'
@@ -74,7 +74,7 @@ A circuit has $\\mathcal{E} = 20$ V, $R_1 = 4$ kΩ (in series), and $R_2 = 6$ k�
 
 When fully charged, $I_C = 0$. All current flows through $R_1$ and $R_2$:
 
-$$I_{\\infty} = \\frac{\\mathcal{E}}{R_1 + R_2} = \\frac{20}{10{,}000} = 2 \\text{ mA}$$
+$$I_{\\infty} = \\frac{\\mathcal{E}}{R_1 + R_2} = \\frac{20}{10\\,000} = 2 \\text{ mA}$$
 
 $$V_C = I_{\\infty} R_2 = 2 \\times 6 = 12 \\text{ V}$$
 
@@ -82,9 +82,9 @@ $$V_C = I_{\\infty} R_2 = 2 \\times 6 = 12 \\text{ V}$$
 
 Zero the source, remove $C$: from $C$'s terminals, $R_1$ and $R_2$ are in parallel:
 
-$$R_{\\text{Th}} = R_1 \\| R_2 = \\frac{4 \\times 6}{10} = 2.4 \\text{ kΩ}$$
+$$R_{\\text{eq}} = R_1 \\| R_2 = \\frac{4 \\times 6}{10} = 2.4 \\text{ kΩ}$$
 
-$$\\tau = R_{\\text{Th}} C = 2400 \\times 50 \\times 10^{-6} = 0.12 \\text{ s}$$
+$$\\tau = R_{\\text{eq}} C = 2400 \\times 50 \\times 10^{-6} = 0.12 \\text{ s}$$
 
 ### (c) Capacitor voltage
 
@@ -163,7 +163,7 @@ Final voltages: $V_f = Q_{1,0}/(C_1 + C_2) = 10^{-3}/(50 \\times 10^{-6}) = 20$ 
 |:---|:---|
 | Basic charging/discharging | $Q(t)$, $I(t)$, $V(t)$ formulas |
 | Find $R$ or $C$ from data | Solve $V = V_0 e^{-t/\\tau}$ for $\\tau$, then $R = \\tau/C$ |
-| Multi-resistor circuits | Find $R_{\\text{Th}}$, then $\\tau = R_{\\text{Th}}C$ |
+| Multi-resistor circuits | Find $R_{\\text{eq}}$ seen by $C$, then $\\tau = R_{\\text{eq}}C$ |
 | Capacitor-to-capacitor | Use charge conservation + series $C$ time constant |
 | Energy problems | Integrate $P_R = I^2R$ or use energy conservation |
 

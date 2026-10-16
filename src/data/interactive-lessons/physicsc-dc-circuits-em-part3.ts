@@ -99,15 +99,15 @@ $q(t) = C\\mathcal{E}\\left(1 - e^{-t/RC}\\right)$
       type: 'text' as const,
       content: `### A Reliable Recipe for Multi-Loop Circuits
 
-When the network won't reduce by simple series/parallel collapsing (e.g. a Wheatstone-bridge layout), fall back on the full Kirchhoff procedure:
+When a single-battery network won't reduce by simple series/parallel collapsing, fall back on the full Kirchhoff procedure. (AP Physics C circuits never put batteries of different emf in parallel.)
 
 1. **Assign a current** (with an assumed direction) to every branch. If there are $b$ branches with unknown currents, you need $b$ independent equations.
 2. **Junction equations.** With $n$ nodes, exactly $n - 1$ of the junction equations are independent.
 3. **Loop equations.** Make up the remaining $b - (n - 1)$ equations from independent loops, applying the sign conventions consistently.
-4. **Solve the linear system** (substitution or matrices).
+4. **Solve the equations** by substitution.
 5. **Interpret signs.** A negative current just means the true direction is opposite your guess.
 
-**Energy bookkeeping.** Once all currents are known, the power delivered by each EMF, $P = \\mathcal{E} I$, must equal the total dissipated, $\\sum I^2 R$ — a built-in check on your algebra.
+**Energy bookkeeping.** Once all currents are known, the power delivered by the battery, $P = \\mathcal{E} I$, must equal the total dissipated, $\\sum I^2 R$ — a built-in check on your algebra.
 
 > Count branches and nodes first; that tells you exactly how many equations to write — no more, no less.`
     },
@@ -152,10 +152,10 @@ When the network won't reduce by simple series/parallel collapsing (e.g. a Wheat
           {
             question: 'If a current variable solved from Kirchhoff equations comes out negative, it means:',
             options: [
-              'You made an arithmetic error',
-              'The actual current flows opposite to the assumed direction',
-              'The current is imaginary',
-              'The circuit is open'
+              'An arithmetic error was made',
+              'The true current runs opposite to the guess',
+              'The current in that branch is zero',
+              'That branch must be an open circuit'
             ],
             correctAnswer: 1,
             explanation: 'A negative result simply means the true direction is opposite to the one you assumed; the magnitude is still correct.'

@@ -11,7 +11,7 @@ export const physCEMCoulombPart3Data = {
 
 The net force on a charge is the **vector sum** of all individual Coulomb forces:
 
-$\\vec{F}_{net} = \sum_i \\vec{F}_i = \sum_i k\\frac{q q_i}{r_i^2}\\hat{r}_i$
+$\\vec{F}_{net} = \\sum_i \\vec{F}_i = \\sum_i k\\frac{q q_i}{r_i^2}\\hat{r}_i$
 
 Each force is calculated independently, then added as vectors.
     
@@ -44,13 +44,13 @@ $F_{net} = 2kq^2/d^2$ (rightward) ✅
           {
                     "question": "The superposition principle states that electromagnetic forces:",
                     "options": [
-                              "Add as vectors independently",
-                              "Only act one at a time",
-                              "Cancel out completely",
-                              "Are always perpendicular"
+                              "Add as independent vectors",
+                              "Add as scalars, ignoring their directions",
+                              "Act only between the two nearest charges",
+                              "Weaken each other when several are present"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Forces add as vectors — each pair interaction is independent."
+                    "explanation": "Each pair force is found as if the other charges were absent, and the results add as vectors; other charges neither block nor weaken a pair force."
           }
 ]
       }
@@ -65,7 +65,7 @@ $F_{net} = 2kq^2/d^2$ (rightward) ✅
 
 2) A charge at the origin feels $F_1 = +3$ N and $F_2 = -1$ N along the x-axis. Net force (N)?
 
-3) Three charges in a row: $+q$ at 0, $+q$ at $d$. Force from left on right = $kq^2/d^2$. If a third $+q$ is at $2d$, force from it on the middle charge = $kq^2/d^2$. But wait, that force is attractive or repulsive? It's repulsive... Hmm. Simply: how many charges are present?
+3) A charge $+q$ is at $x = 0$ and a charge $+4q$ is at $x = 3d$. At what position between them is the net force on a small test charge zero? (Give $x$ as a multiple of $d$.)
     
     `,
       exercise: {
@@ -73,8 +73,8 @@ $F_{net} = 2kq^2/d^2$ (rightward) ✅
         correctAnswers: ["0","2","3"],
         hint1: "Symmetry: equal forces from each side cancel.",
         hint2: "Add the forces: $3 + (-1)$.",
-        hint3: "Count the charges.",
-        explanation: "1) Symmetric forces cancel → net force = 0. 2) $3 - 1 = 2$ N. 3) Three charges."
+        hint3: "Set $kq/x^2 = k(4q)/(3d - x)^2$ and take square roots.",
+        explanation: "1) Symmetric forces cancel → net force = 0. 2) $3 - 1 = 2$ N. 3) $3d - x = 2x$, so $x = d$: the zero-force point sits closer to the smaller charge."
       }
     },
     {
@@ -84,7 +84,7 @@ $F_{net} = 2kq^2/d^2$ (rightward) ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"When using superposition, each force is calculated","options":["Independently of the others","Using the net charge","Only for the nearest neighbor","In the center-of-charge frame"]},{"label":"Vector addition requires considering","options":["Both magnitude and direction","Only magnitude","Only direction","Neither"]}],
+        dropdowns: [{"label":"When using superposition, each force is calculated","options":["Independently of the others","From the total charge only","For the nearest charge only","After the charges move apart"]},{"label":"Vector addition requires considering","options":["Magnitude and direction","Magnitude alone","Direction alone","The sign of the charge alone"]}],
         correctAnswers: ["Independently of the others","Both magnitude and direction"],
         hint1: "Each pair interaction is separate.",
         hint2: "Vectors have magnitude and direction.",
@@ -116,13 +116,13 @@ $F_{net} = 2kq^2/d^2$ (rightward) ✅
           {
                     "question": "For three collinear charges, the net force on the middle one depends on:",
                     "options": [
-                              "The magnitudes and signs of all charges and distances",
-                              "Only the nearest charge",
-                              "Only the largest charge",
-                              "Only the distance"
+                              "Every charge's sign, magnitude and distance",
+                              "Only the magnitudes of the charges",
+                              "Only the charge nearest to it",
+                              "Only the largest charge and its distance"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Superposition requires considering all charges, their signs, and distances."
+                    "explanation": "Superposition adds a force from every other charge; each one's size depends on its magnitude and distance, and its direction depends on its sign."
           }
 ]
       }

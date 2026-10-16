@@ -10,11 +10,12 @@ export const physCEMCapacitorsPart7Data = {
 **Part 7 of 7 — Review & Applications**
 
 ### Key Formulas
-- $C = Q/V$, $C = \epsilon_0 A/d$, $C = \\kappa C_0$
+- $C = Q/V$, $C = \\epsilon_0 A/d$, $C = \\kappa C_0$
 - Series: $1/C_{eq} = \\sum 1/C_i$
 - Parallel: $C_{eq} = \\sum C_i$
 - Energy: $U = \\frac{1}{2}CV^2 = Q^2/(2C)$
-- Energy density: $u = \\frac{1}{2}\epsilon_0 E^2$
+- Concentric spherical (radii $a < b$): $C = 4\\pi\\epsilon_0 \\dfrac{ab}{b - a}$
+- Coaxial cylindrical (radii $a < b$, length $L$): $C = \\dfrac{2\\pi\\epsilon_0 L}{\\ln(b/a)}$
     
     `
     },
@@ -41,7 +42,7 @@ $U = \\frac{1}{2}CV^2 = \\frac{1}{2}(100 \\times 10^{-6})(2500) = 0.125$ J ✅
       exercise: {
         questions: [
           {
-                    "question": "A parallel-plate capacitor has $C = 100$ pF. Inserting a dielectric with $\\\\kappa = 4$ gives:",
+                    "question": "A parallel-plate capacitor has $C = 100$ pF. Inserting a dielectric with $\\kappa = 4$ gives:",
                     "options": [
                               "$C = 400$ pF",
                               "$C = 25$ pF",
@@ -49,7 +50,7 @@ $U = \\frac{1}{2}CV^2 = \\frac{1}{2}(100 \\times 10^{-6})(2500) = 0.125$ J ✅
                               "$C = 50$ pF"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$C = \\\\kappa C_0 = 4(100) = 400$ pF."
+                    "explanation": "$C = \\kappa C_0 = 4(100) = 400$ pF."
           }
 ]
       }
@@ -83,8 +84,8 @@ $U = \\frac{1}{2}CV^2 = \\frac{1}{2}(100 \\times 10^{-6})(2500) = 0.125$ J ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Capacitors store energy in","options":["Electric fields","Magnetic fields","Gravitational fields","Nuclear forces"]},{"label":"The time constant of an RC circuit is","options":["$\\\\tau = RC$","$\\\\tau = R/C$","$\\\\tau = C/R$","$\\\\tau = R^2C$"]}],
-        correctAnswers: ["Electric fields","$\\\\tau = RC$"],
+        dropdowns: [{"label":"Capacitors store energy in","options":["Electric fields","Magnetic fields","Gravitational fields","Nuclear forces"]},{"label":"The time constant of an RC circuit is","options":["$\\tau = RC$","$\\tau = R/C$","$\\tau = C/R$","$\\tau = R^2C$"]}],
+        correctAnswers: ["Electric fields","$\\tau = RC$"],
         hint1: "Capacitors deal with electric charges and fields.",
         hint2: "The RC time constant.",
         explanation: "Capacitors store energy in electric fields. The RC time constant is $\\tau = RC$."
@@ -99,7 +100,7 @@ $U = \\frac{1}{2}CV^2 = \\frac{1}{2}(100 \\times 10^{-6})(2500) = 0.125$ J ✅
 | # | Topic | Formula |
 |---|-------|---------|
 | 1 | Capacitance | $C = Q/V$ |
-| 2 | Parallel plate | $C = \epsilon_0 A/d$ |
+| 2 | Parallel plate | $C = \\epsilon_0 A/d$ |
 | 3 | Energy storage | $U = \\frac{1}{2}CV^2$ |
     
     `
@@ -113,15 +114,15 @@ $U = \\frac{1}{2}CV^2 = \\frac{1}{2}(100 \\times 10^{-6})(2500) = 0.125$ J ✅
       exercise: {
         questions: [
           {
-                    "question": "Capacitors are used in electronic circuits to:",
+                    "question": "A charged parallel-plate capacitor is disconnected from its battery, and then its plate separation is doubled. The stored energy:",
                     "options": [
-                              "Store energy and filter signals",
-                              "Generate current",
-                              "Create resistance",
-                              "Produce magnetic fields"
+                              "Doubles",
+                              "Halves",
+                              "Quadruples",
+                              "Stays the same"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Capacitors store energy and are essential in filter circuits, timing circuits, and power supplies."
+                    "explanation": "Disconnected means $Q$ is fixed; doubling $d$ halves $C$, so $U = Q^2/(2C)$ doubles. The extra energy comes from the work done pulling the attracting plates apart."
           }
 ]
       }

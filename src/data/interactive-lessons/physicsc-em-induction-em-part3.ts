@@ -6,7 +6,7 @@ export const physCEMInductionPart3Data = {
       type: 'text' as const,
       content: `# 🔗 Inductance
 
-**Part 3 of 7 — Self and Mutual Inductance**
+**Part 3 of 7 — Self-Inductance**
 
 ---
 
@@ -16,23 +16,19 @@ $$\\mathcal{E} = -L\\frac{dI}{dt}$$
 
 where $L$ is the inductance. Units: Henry (H)
 
-For a solenoid: $L = \\mu_0 n^2 Al$
+For a solenoid: $L = \\mu_0 n^2 Al = \\dfrac{\\mu_0 N^2 A}{l}$
 
 ---
 
-### Mutual Inductance
+### What Sets $L$?
 
-$$\\mathcal{E}_2 = -M\\frac{dI_1}{dt}$$
-
-Two coils that share magnetic flux have mutual inductance $M$.
+Inductance depends only on the conductor's physical properties: the number of turns, the length, the cross-sectional area, and the **permeability of the core**. Replacing an air core with iron (much larger permeability, $\\mu_{\\text{core}} \\gg \\mu_0$) raises $L$ dramatically. A straight connecting wire is modeled as having essentially **zero** inductance; a coil such as a solenoid is the circuit element that has significant inductance.
 
 ---
 
 ### Energy in an Inductor
 
 $$U = \\frac{1}{2}LI^2$$
-
-Energy density: $u = \\frac{B^2}{2\\mu_0}$
 
 > 🔑 An inductor stores energy in its magnetic field, just as a capacitor stores energy in its electric field.`
     },
@@ -57,7 +53,7 @@ The $n^2$ appears because *each* of the $\\sim n$ turns both produces flux and l
 | $U = \\frac{1}{2}\\frac{q^2}{C}$ | $U = \\frac{1}{2}LI^2$ |
 | Resists change in **voltage** | Resists change in **current** |
 | $I = C\\frac{dV}{dt}$ | $V = L\\frac{dI}{dt}$ |
-| $u = \\frac{1}{2}\\varepsilon_0 E^2$ | $u = \\frac{B^2}{2\\mu_0}$ |
+| Long time in DC: acts as an **open** switch | Long time in DC: acts as a **wire** |
 
 This duality is why RL and RC circuits share the same exponential mathematics — and why LC circuits oscillate.`
     },
@@ -105,16 +101,16 @@ $U = \\tfrac{1}{2}(4.0\\times10^{-3})(10)^2 = \\tfrac{1}{2}(4.0\\times10^{-3})(1
             explanation: '$L = \\mu_0 n^2 A l$. The $n^2$ arises because flux per turn scales with $n$ and is linked by $nl$ turns.'
           },
           {
-            question: 'The energy density stored in a magnetic field is:',
-            options: ['$\\frac{B^2}{2\\mu_0}$', '$\\frac{\\mu_0 B^2}{2}$', '$\\frac{1}{2}\\mu_0 B$', '$\\frac{B}{2\\mu_0}$'],
+            question: 'An air-core solenoid has $N = 200$ turns, length $0.10$ m, and cross-sectional area $1.0\\times10^{-4}\\text{ m}^2$. Its inductance is:',
+            options: ['$5.0\\times10^{-5}$ H', '$2.5\\times10^{-7}$ H', '$5.0\\times10^{-7}$ H', '$5.0\\times10^{-3}$ H'],
             correctAnswer: 0,
-            explanation: '$u = \\frac{B^2}{2\\mu_0}$, the magnetic analog of the electric energy density $u = \\frac{1}{2}\\varepsilon_0 E^2$.'
+            explanation: '$L = \\mu_0 N^2 A/l = (4\\pi\\times10^{-7})(200)^2(1.0\\times10^{-4})/0.10 \\approx 5.0\\times10^{-5}$ H. Using $N$ instead of $N^2$ gives $2.5\\times10^{-7}$ H, and multiplying by $l$ instead of dividing gives $5.0\\times10^{-7}$ H.'
           },
           {
-            question: 'Two coils have mutual inductance $M = 0.30\\text{ H}$. If the current in coil 1 changes at $2.0\\text{ A/s}$, the EMF induced in coil 2 has magnitude:',
-            options: ['$0.15$ V', '$0.60$ V', '$0.30$ V', '$6.0$ V'],
-            correctAnswer: 1,
-            explanation: '$|\\mathcal{E}_2| = M\\left|\\frac{dI_1}{dt}\\right| = (0.30)(2.0) = 0.60$ V.'
+            question: 'Which circuit element is normally modeled as having zero inductance?',
+            options: ['A straight connecting wire', 'A long air-core solenoid', 'An iron-core coil', 'A many-turn circular coil'],
+            correctAnswer: 0,
+            explanation: 'Inductance comes from a conductor linking its own magnetic flux, which a coil does strongly and a straight wire does only negligibly; an iron core increases it further.'
           },
           {
             question: 'If the current in an inductor is tripled, the stored energy:',

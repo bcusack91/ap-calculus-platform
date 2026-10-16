@@ -75,7 +75,7 @@ Notice the EMF grows **linearly** in time even though the field grows quadratica
         questions: [
           {
             question: 'Lenz’s law ensures that the induced EMF:',
-            options: ['Enhances the flux change', 'Opposes the flux change', 'Is always zero', 'Is always positive'],
+            options: ['Reinforces the flux change', 'Opposes the flux change', 'Is zero unless $B$ itself changes', 'Always points the same way around'],
             correctAnswer: 1,
             explanation: 'Lenz’s law: induced EMF opposes the change that produced it (conservation of energy).'
           },
@@ -99,7 +99,7 @@ Notice the EMF grows **linearly** in time even though the field grows quadratica
           },
           {
             question: 'A bar magnet is pushed north-pole-first toward a conducting loop. The induced current in the loop, viewed from the magnet, flows so as to:',
-            options: ['Create a north pole facing the magnet (repel it)', 'Create a south pole facing the magnet (attract it)', 'Produce no magnetic pole', 'Reverse direction continuously'],
+            options: ['Create a north pole facing the magnet (repel it)', 'Create a south pole (attract it)', 'Produce no magnetic pole', 'Reverse direction continuously'],
             correctAnswer: 0,
             explanation: 'By Lenz’s law the loop opposes the increasing flux, so it presents a north pole to the incoming north pole, repelling the magnet.'
           },

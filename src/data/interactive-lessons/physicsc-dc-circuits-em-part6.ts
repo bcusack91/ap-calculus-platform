@@ -98,17 +98,17 @@ For the *initial* instant ($t = 0^+$) instead, replace an uncharged capacitor wi
           {
             question: 'For the loop rule, the correct unit-consistent statement is that the sum around a closed loop of:',
             options: [
-              'currents is zero',
+              'currents around the loop is zero',
               'potential differences is zero',
-              'resistances is zero',
-              'powers is zero'
+              'resistances around the loop is zero',
+              'powers around the loop is zero'
             ],
             correctAnswer: 1,
             explanation: 'The loop rule sums potential differences (volts) to zero, reflecting energy conservation. Currents summing to zero is the junction rule.'
           },
           {
             question: 'In DC steady state, to find the voltage across a capacitor in a resistor network you should treat the capacitor as:',
-            options: ['A wire (short)', 'An open circuit', 'A resistor equal to $R$', 'A battery of EMF $\\mathcal{E}$'],
+            options: ['A plain wire', 'An open circuit', 'A resistor $R$', 'A battery'],
             correctAnswer: 1,
             explanation: 'At steady state no current flows into the capacitor, so it behaves as an open circuit; its voltage equals the voltage across the element it parallels in the resistive solution.'
           }

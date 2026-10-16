@@ -28,9 +28,9 @@ export const physCEMCoulombPart6Data = {
 
 Both fields point from $+$ to $-$ (same direction at midpoint).
 
-$E_{each} = k(3 \\times 10^{-6})/(0.2)^2 = 675{,}000$ N/C
+$E_{each} = k(3 \\times 10^{-6})/(0.2)^2 = 675\\,000$ N/C
 
-$E_{total} = 2 \\times 675{,}000 = 1{,}350{,}000$ N/C (toward $-$ charge) ✅
+$E_{total} = 2 \\times 675\\,000 = 1\\,350\\,000$ N/C (toward $-$ charge) ✅
     
     `
     },
@@ -43,15 +43,15 @@ $E_{total} = 2 \\times 675{,}000 = 1{,}350{,}000$ N/C (toward $-$ charge) ✅
       exercise: {
         questions: [
           {
-                    "question": "At the midpoint of a dipole ($+q$ and $-q$), the electric field:",
+                    "question": "At the midpoint between equal and opposite charges $+q$ and $-q$, the electric field:",
                     "options": [
-                              "Points from $+q$ to $-q$ (nonzero)",
-                              "Is zero",
-                              "Points from $-q$ to $+q$",
-                              "Depends on the distance"
+                              "Points toward $-q$",
+                              "Points toward $+q$",
+                              "Is zero by symmetry",
+                              "Is perpendicular to the line"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Both fields point from $+$ toward $-$ at the midpoint, so they add up."
+                    "explanation": "The field of $+q$ points away from it and the field of $-q$ points toward it, so at the midpoint both point toward $-q$ and add; they cancel only for two like charges."
           }
 ]
       }
@@ -85,8 +85,8 @@ $E_{total} = 2 \\times 675{,}000 = 1{,}350{,}000$ N/C (toward $-$ charge) ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"When solving for the equilibrium position of a test charge, you set","options":["Net force equal to zero","Net force equal to $mg$","Velocity equal to zero","Energy equal to zero"]},{"label":"Symmetry in charge distributions helps by","options":["Canceling certain force components","Eliminating all forces","Making all charges equal","Removing electric fields"]}],
-        correctAnswers: ["Net force equal to zero","Canceling certain force components"],
+        dropdowns: [{"label":"When solving for the equilibrium position of a test charge, you set","options":["Net force equal to zero","Net force equal to $mg$","Velocity equal to zero","Energy equal to zero"]},{"label":"Symmetry in charge distributions helps by","options":["Canceling some field components","Canceling every field component","Making the charges equal","Making the distances equal"]}],
+        correctAnswers: ["Net force equal to zero","Canceling some field components"],
         hint1: "Equilibrium = zero net force.",
         hint2: "Symmetric arrangements often cancel certain vector components.",
         explanation: "Equilibrium: net force = 0. Symmetry can cancel components, simplifying calculations."
@@ -100,7 +100,7 @@ $E_{total} = 2 \\times 675{,}000 = 1{,}350{,}000$ N/C (toward $-$ charge) ✅
 
 | # | Problem Type | Strategy |
 |---|-------------|----------|
-| 1 | Midpoint field (dipole) | Fields add (both point same way) |
+| 1 | Midpoint field (opposite charges) | Fields add (both point same way) |
 | 2 | Equilibrium position | Set $F_1 = F_2$, solve for $r$ |
 | 3 | Force between three charges | Superposition |
     
@@ -115,15 +115,15 @@ $E_{total} = 2 \\times 675{,}000 = 1{,}350{,}000$ N/C (toward $-$ charge) ✅
       exercise: {
         questions: [
           {
-                    "question": "For a charge to be in equilibrium between two positive charges, it must be:",
+                    "question": "A small charge sits on the line between two equal positive charges. Where on that segment is the net electric force on it zero?",
                     "options": [
-                              "At the midpoint (if charges are equal)",
-                              "Closer to the larger charge",
-                              "Outside the two charges",
-                              "At infinity"
+                              "At the midpoint",
+                              "Closer to either charge",
+                              "Only outside the pair of charges",
+                              "At no point on the segment"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "By symmetry, equal charges create zero net force at the midpoint."
+                    "explanation": "Equal charges at equal distances exert equal and opposite forces, so the net force is zero exactly at the midpoint and nowhere else between them."
           }
 ]
       }

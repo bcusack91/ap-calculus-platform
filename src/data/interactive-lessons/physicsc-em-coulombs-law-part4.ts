@@ -25,7 +25,7 @@ $\\vec{E} = \\frac{\\vec{F}}{q_0} = k\\frac{q}{r^2}\\hat{r}$
 
 **Find $E$ at 0.5 m from a $+4$ μC charge.**
 
-$E = kq/r^2 = (9 \\times 10^9)(4 \\times 10^{-6}) / (0.25) = 144{,}000$ N/C ✅
+$E = kq/r^2 = (9 \\times 10^9)(4 \\times 10^{-6}) / (0.25) = 144\\,000$ N/C ✅
     
     `
     },
@@ -43,10 +43,10 @@ $E = kq/r^2 = (9 \\times 10^9)(4 \\times 10^{-6}) / (0.25) = 144{,}000$ N/C ✅
                               "Away from positive charges",
                               "Toward positive charges",
                               "In circles around charges",
-                              "Randomly"
+                              "Along equipotential lines"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Field lines radiate outward from positive charges and inward toward negative charges."
+                    "explanation": "Field lines radiate outward from positive charges and inward toward negative charges; they cross equipotentials at right angles rather than running along them."
           }
 ]
       }
@@ -80,8 +80,8 @@ $E = kq/r^2 = (9 \\times 10^9)(4 \\times 10^{-6}) / (0.25) = 144{,}000$ N/C ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The SI unit of electric field is","options":["N/C","C/m","J/C","A/m"]},{"label":"A negative charge placed in an electric field moves","options":["Opposite to the field direction","In the field direction","Perpendicular to the field","In a circle"]}],
-        correctAnswers: ["N/C","Opposite to the field direction"],
+        dropdowns: [{"label":"The SI unit of electric field is","options":["N/C","C/m","J/C","A/m"]},{"label":"A negative charge placed in an electric field moves","options":["Opposite to the field","Along the field","Perpendicular to the field","Along an equipotential"]}],
+        correctAnswers: ["N/C","Opposite to the field"],
         hint1: "$E = F/q$, so units are N/C.",
         hint2: "$F = qE$. If $q < 0$...",
         explanation: "Electric field units: N/C. Negative charges experience force opposite to $\\vec{E}$."
@@ -112,13 +112,13 @@ $E = kq/r^2 = (9 \\times 10^9)(4 \\times 10^{-6}) / (0.25) = 144{,}000$ N/C ✅
           {
                     "question": "If the distance from a point charge triples, the electric field:",
                     "options": [
-                              "Decreases to 1/9",
-                              "Decreases to 1/3",
-                              "Triples",
-                              "Increases by 9"
+                              "$E/9$",
+                              "$E/3$",
+                              "$3E$",
+                              "$9E$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$E \\\\propto 1/r^2$. If $r \\to 3r$, $E \\to E/9$."
+                    "explanation": "$E \\propto 1/r^2$, so tripling $r$ divides the field by $3^2 = 9$."
           }
 ]
       }

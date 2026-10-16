@@ -4,128 +4,121 @@ export const physCEMMagForcePart5Data = {
     {
       id: 'magf5-intro',
       type: 'text' as const,
-      content: `# Torque on Current Loops
+      content: `# Moving Charges as Field Sources
+**Part 5 of 7 — Moving Charges as Field Sources; Combined Fields**
 
-**Part 5 of 7 — Magnetic Dipole Moment**
+### A Moving Charge Makes a Magnetic Field
+Parts 1–4 treated $\\vec{B}$ as given. But every moving charge is also a **source** of magnetic field. For a point charge $q$ moving with velocity $\\vec{v}$, the field at a point a distance $r$ away is
 
-### Torque on a Rectangular Loop
+$$\\vec{B} = \\frac{\\mu_0}{4\\pi}\\frac{q\\,\\vec{v} \\times \\hat{r}}{r^2}, \\qquad B = \\frac{\\mu_0}{4\\pi}\\frac{|q| v \\sin\\theta}{r^2}$$
 
-Consider a rectangular loop (sides $a$ and $b$) carrying current $I$ in a uniform field $\\vec{B}$.
+where $\\hat{r}$ points **from the charge to the field point** and $\\theta$ is the angle between $\\vec{v}$ and $\\hat{r}$.
 
-Forces on the sides of length $a$ (perpendicular to $\\vec{B}$):
-$$F = BIa$$
+Key properties:
+- The field grows with the charge's **speed** and falls off with **distance** as $1/r^2$
+- $\\vec{B}$ is **perpendicular to both** $\\vec{v}$ and $\\hat{r}$ (right-hand rule: fingers along $\\vec{v}$, curl toward $\\hat{r}$; flip the result for a negative charge)
+- $B$ is **maximum** when $\\vec{v} \\perp \\hat{r}$ ($\\theta = 90°$)
+- $B = 0$ at points directly ahead of or behind the charge ($\\theta = 0°$ or $180°$)
 
-These forces form a **couple** with moment arm $b\\sin\\theta$:
-
-$$\\tau = BIa \\cdot b\\sin\\theta = BIA\\sin\\theta$$
-
-where $A = ab$ is the area of the loop and $\\theta$ is the angle between $\\vec{B}$ and the normal to the loop.
-
-### The Magnetic Dipole Moment
-
-$$\\vec{\\mu} = NIA\\hat{n}$$
-
-where $N$ is the number of turns and $\\hat{n}$ is the unit normal (right-hand rule with current direction).
-
-$$\\boxed{\\vec{\\tau} = \\vec{\\mu} \\times \\vec{B}}$$
-
-$$\\tau = \\mu B\\sin\\theta = NIAB\\sin\\theta$$`
+A current is just a stream of moving charges, so adding up these contributions along a wire gives the Biot–Savart law for currents.`
     },
     {
       id: 'magf5-mcq1',
       type: 'mcq' as const,
-      question: 'A circular coil of 100 turns, radius 5 cm, carries 2 A in a 0.4 T field. The maximum torque on the coil is:',
-      options: ['$0.628$ N·m', '$0.314$ N·m', '$1.257$ N·m', '$6.28$ N·m'],
+      question: 'A proton at the origin moves in the $+x$ direction. What is the direction of its magnetic field at a point on the $+y$ axis?',
+      options: ['$+\\hat{z}$', '$-\\hat{z}$', '$+\\hat{y}$', '$-\\hat{x}$'],
       correctAnswer: 0,
-      explanation: '$\\mu = NIA = 100 \\times 2 \\times \\pi(0.05)^2 = 200\\pi(0.0025) = 0.5\\pi$ $A\\cdot m^{2}$. $\\tau_{\\max} = \\mu B = 0.5\\pi(0.4) = 0.2\\pi \\approx 0.628$ N·m.'
+      explanation: '$\\hat{r}$ points from the proton to the field point, so $\\hat{r} = \\hat{y}$ and $\\vec{v} \\times \\hat{r} \\propto \\hat{x} \\times \\hat{y} = +\\hat{z}$. The field must be perpendicular to both $\\vec{v}$ and $\\hat{r}$, which rules out $\\pm\\hat{x}$ and $\\pm\\hat{y}$.'
     },
     {
-      id: 'magf5-energy',
+      id: 'magf5-worked',
       type: 'text' as const,
-      content: `### Potential Energy of a Dipole
+      content: `### Worked Example: Field of a Fast Proton
+A proton ($q = 1.6 \\times 10^{-19}$ C) moves at $v = 2.0 \\times 10^6$ m/s. Find $B$ at a distance $r = 1.0 \\times 10^{-10}$ m when the line to the field point makes (a) $90°$, (b) $30°$, (c) $0°$ with $\\vec{v}$. Use $\\mu_0/4\\pi = 10^{-7}$ T·m/A.
 
-The potential energy of a magnetic dipole in a field is:
+**(a) $\\theta = 90°$:**
+$$B = (10^{-7})\\frac{(1.6 \\times 10^{-19})(2.0 \\times 10^6)(1)}{(1.0 \\times 10^{-10})^2} = (10^{-7})\\frac{3.2 \\times 10^{-13}}{10^{-20}} = 3.2 \\text{ T}$$
 
-$$U = -\\vec{\\mu} \\cdot \\vec{B} = -\\mu B\\cos\\theta$$
+**(b) $\\theta = 30°$:** $\\sin 30° = 0.5$, so $B = 1.6$ T.
 
-| Orientation | $\\theta$ | $U$ | Stability |
-|:---:|:---:|:---:|:---:|
-| $\\vec{\\mu} \\parallel \\vec{B}$ | $0$ | $-\\mu B$ | Stable equilibrium |
-| $\\vec{\\mu} \\perp \\vec{B}$ | $90°$ | $0$ | — |
-| $\\vec{\\mu}$ antiparallel $\\vec{B}$ | $180°$ | $+\\mu B$ | Unstable equilibrium |
+**(c) $\\theta = 0°$:** $\\sin 0° = 0$, so $B = 0$ — no field directly ahead of the charge.
 
-### Work to Rotate
-
-Work done by external agent to rotate from $\\theta_1$ to $\\theta_2$:
-
-$$W = \\Delta U = -\\mu B(\\cos\\theta_2 - \\cos\\theta_1) = \\mu B(\\cos\\theta_1 - \\cos\\theta_2)$$
-
-### Connection to Torque
-
-$$\\tau = -\\frac{dU}{d\\theta} = -\\frac{d}{d\\theta}(-\\mu B\\cos\\theta) = -\\mu B\\sin\\theta$$
-
-The negative sign confirms torque rotates toward $\\theta = 0$ (stable equilibrium).`
+**Takeaway.** At atomic distances a single fast charge makes a strong field; the $\\sin\\theta$ factor makes the field strongest to the side of the motion and zero along it.`
     },
     {
       id: 'magf5-mcq2',
       type: 'mcq' as const,
-      question: 'A magnetic dipole with $\\mu = 0.5$ $A\\cdot m^{2}$ is initially aligned with a 2 T field. The work required by an external agent to rotate it $180°$ is:',
-      options: ['2 J', '1 J', '0.5 J', '4 J'],
+      question: 'A positive charge moves along the $+x$ axis. At which of these points, all the same distance from it, is the charge’s magnetic field zero?',
+      options: [
+        'Directly ahead of it',
+        'Directly beside it, along $y$',
+        'Directly above it, along $z$',
+        'At $45°$ from its path'
+      ],
       correctAnswer: 0,
-      explanation: '$W = \\mu B(\\cos 0° - \\cos 180°) = 0.5 \\times 2 \\times (1 - (-1)) = 0.5 \\times 2 \\times 2 = 2$ J.'
+      explanation: 'The field is proportional to $\\sin\\theta$, where $\\theta$ is the angle between $\\vec{v}$ and the line to the point. Directly ahead $\\theta = 0°$, so $B = 0$; the side points ($\\theta = 90°$) have the maximum field and the $45°$ point has a smaller but nonzero field.'
     },
     {
-      id: 'magf5-general',
+      id: 'magf5-combined',
       type: 'text' as const,
-      content: `### General Loop Shape
+      content: `### Combined Electric and Magnetic Fields
+In a region with both fields, a moving charge feels **independent** forces from each, and they simply add:
 
-The torque formula $\\vec{\\tau} = \\vec{\\mu} \\times \\vec{B}$ works for **any** flat loop shape (not just rectangular):
+$$\\vec{F} = q\\vec{E} + q\\vec{v} \\times \\vec{B}$$
 
-$$\\vec{\\mu} = NIA\\hat{n}$$
+What each force can do:
+| Force | Direction | Can it change the speed? |
+|:---|:---|:---:|
+| Electric, $q\\vec{E}$ | Along $\\vec{E}$ (opposite for $q < 0$) | Yes — it can do work |
+| Magnetic, $q\\vec{v} \\times \\vec{B}$ | Perpendicular to $\\vec{v}$ | No — it does no work |
 
-For a non-planar loop, the dipole moment is:
+So any change in kinetic energy comes from the electric field alone: $\\Delta K = -q\\Delta V$.
 
-$$\\vec{\\mu} = \\frac{I}{2}\\oint \\vec{r} \\times d\\vec{\\ell}$$
+### Crossed Fields When $v \\neq E/B$
+In a velocity selector (Part 1), only $v = E/B$ passes straight through. Otherwise:
+- If $v > E/B$, the **magnetic** force is larger and the particle bends toward the magnetic-force side.
+- If $v < E/B$, the **electric** force is larger and the particle bends toward the electric-force side.
 
-### Force on a Dipole in a Non-Uniform Field
-
-In a non-uniform field, there **is** a net force:
-
-$$\\vec{F} = \\nabla(\\vec{\\mu} \\cdot \\vec{B})$$
-
-For a dipole aligned along $z$ in a field with gradient $\\partial B/\\partial z$:
-
-$$F_z = \\mu \\frac{\\partial B}{\\partial z}$$
-
-> This is how the Stern-Gerlach experiment separates magnetic moments.`
+As it bends, the electric field does work on it, so its speed is no longer constant.`
     },
     {
       id: 'magf5-mcq3',
       type: 'mcq' as const,
-      question: 'A dipole $\\vec{\\mu} = \\mu\\hat{z}$ in a field $\\vec{B} = B_0(1 + \\alpha z)\\hat{z}$ experiences a force:',
-      options: ['$F_z = \\mu B_0\\alpha$', '$F_z = \\mu B_0$', '$F_z = 0$', '$F_z = \\mu \\alpha$'],
+      question: 'A proton enters a velocity selector set for $v = E/B$, but it moves faster than $E/B$. Just after entering, the proton:',
+      options: [
+        'Bends toward the side the magnetic force points',
+        'Bends toward the electric force’s side',
+        'Goes straight, since the fields cancel',
+        'Slows to $E/B$, then goes straight'
+      ],
       correctAnswer: 0,
-      explanation: '$F_z = \\mu(\\partial B_z/\\partial z) = \\mu \\cdot B_0\\alpha$.'
+      explanation: 'The electric force $qE$ does not depend on speed, but the magnetic force $qvB$ grows with $v$. For $v > E/B$, $qvB > qE$, so the net force points the way the magnetic force does.'
     },
     {
       id: 'magf5-mcq4',
       type: 'mcq' as const,
-      question: 'A square loop of side $a$ carries current $I$ and has its normal at $60°$ to $\\vec{B}$. The torque on the loop is:',
-      options: ['$\\frac{\\sqrt{3}}{2}Ia^2B$', '$\\frac{1}{2}Ia^2B$', '$Ia^2B$', '$2Ia^2B$'],
+      question: 'A proton moves in the $+x$ direction at $3.0 \\times 10^4$ m/s through a region with $\\vec{E} = 2000\\hat{y}$ V/m and $\\vec{B} = 0.10\\hat{z}$ T. The net force on it is:',
+      options: [
+        '$1.6 \\times 10^{-16}$ N along $-\\hat{y}$',
+        '$1.6 \\times 10^{-16}$ N along $+\\hat{y}$',
+        '$8.0 \\times 10^{-16}$ N along $-\\hat{y}$',
+        '$4.8 \\times 10^{-16}$ N along $-\\hat{y}$'
+      ],
       correctAnswer: 0,
-      explanation: '$\\tau = \\mu B\\sin\\theta = Ia^2 B \\sin 60° = \\frac{\\sqrt{3}}{2}Ia^2B$.'
+      explanation: '$\\vec{F}_E = eE\\hat{y} = 3.2 \\times 10^{-16}\\hat{y}$ N. $\\vec{F}_B = e v B(\\hat{x} \\times \\hat{z}) = -(1.6 \\times 10^{-19})(3.0 \\times 10^4)(0.10)\\hat{y} = -4.8 \\times 10^{-16}\\hat{y}$ N. The forces are independent and add: $-1.6 \\times 10^{-16}\\hat{y}$ N.'
     },
     {
       id: 'magf5-summary',
       type: 'text' as const,
       content: `### Summary — Part 5
-
-| Quantity | Formula |
+| Idea | Formula / Rule |
 |:---:|:---:|
-| Magnetic moment | $\\vec{\\mu} = NIA\\hat{n}$ |
-| Torque | $\\vec{\\tau} = \\vec{\\mu} \\times \\vec{B}$ |
-| Potential energy | $U = -\\vec{\\mu} \\cdot \\vec{B}$ |
-| Force (non-uniform $\\vec{B}$) | $\\vec{F} = \\nabla(\\vec{\\mu} \\cdot \\vec{B})$ |
+| Field of a moving charge | $B = \\dfrac{\\mu_0}{4\\pi}\\dfrac{|q| v\\sin\\theta}{r^2}$ |
+| Direction | Perpendicular to $\\vec{v}$ and $\\hat{r}$ (right-hand rule) |
+| Maximum / zero | $\\theta = 90°$ / directly ahead or behind |
+| Combined fields | $\\vec{F} = q\\vec{E} + q\\vec{v} \\times \\vec{B}$ (independent forces) |
+| Work | Only $q\\vec{E}$ changes the kinetic energy |
+| Crossed fields | $v > E/B$: magnetic side; $v < E/B$: electric side |
 
 > **Next up:** Problem-solving workshop — Part 6.`
     }

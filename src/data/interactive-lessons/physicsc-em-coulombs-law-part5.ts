@@ -45,12 +45,12 @@ Rules for electric field lines:
                     "question": "Electric field lines never:",
                     "options": [
                               "Cross each other",
-                              "Curve",
+                              "Bend between two charges",
                               "Start on positive charges",
                               "End on negative charges"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "If lines crossed, the field would have two directions at one point, which is impossible."
+                    "explanation": "If lines crossed, the field would have two directions at one point, which is impossible; lines do curve, and they start on positive and end on negative charges."
           }
 ]
       }
@@ -61,7 +61,7 @@ Rules for electric field lines:
       content: `
 **Field Lines** 🧮
 
-1) A charge of $+2q$ has twice as many field lines as a charge of $+q$. If $+q$ has 4 lines, how many does $+2q$ have? Give answer divided by 4.
+1) The number of lines is proportional to charge. If $+q$ is drawn with 4 lines, how many lines should $+2q$ have?
 
 2) At a point where field lines are absent, the field strength is ___ N/C.
 
@@ -70,11 +70,11 @@ Rules for electric field lines:
     `,
       exercise: {
         boxes: 3,
-        correctAnswers: ["2","0","8"],
-        hint1: "Proportional to charge: $2q$ has $2 \\times 4 = 8$ lines. $8/4 = ?$.",
+        correctAnswers: ["8","0","4"],
+        hint1: "Proportional to charge: $2 \\times 4$.",
         hint2: "No field lines means no field.",
         hint3: "8 leave, 4 end on $-q$, so $8 - 4 = ?$ escape.",
-        explanation: "1) $8/4 = 2$. 2) 0 N/C. 3) $8 - 4 = 4$... but I wrote 8 as the answer. Should be 4."
+        explanation: "1) $2 \\times 4 = 8$ lines. 2) 0 N/C. 3) 8 lines leave $+2q$ and 4 end on $-q$, so $8 - 4 = 4$ lines escape to infinity."
       }
     },
     {
@@ -84,7 +84,7 @@ Rules for electric field lines:
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Field lines are perpendicular to","options":["Conducting surfaces at equilibrium","All surfaces","Insulating surfaces","Nothing in particular"]},{"label":"Inside a conductor at electrostatic equilibrium, the field is","options":["Zero","Maximum","Constant nonzero","Undefined"]}],
+        dropdowns: [{"label":"Field lines are perpendicular to","options":["Conducting surfaces at equilibrium","Insulating surfaces at equilibrium","Every surface near a charge","The force on a moving charge"]},{"label":"Inside a conductor at electrostatic equilibrium, the field is","options":["Zero","Maximum","Constant nonzero","Undefined"]}],
         correctAnswers: ["Conducting surfaces at equilibrium","Zero"],
         hint1: "Charges on conductors rearrange until...",
         hint2: "If $E \\neq 0$ inside, charges would move.",
@@ -116,13 +116,13 @@ Rules for electric field lines:
           {
                     "question": "More densely packed field lines indicate:",
                     "options": [
-                              "Stronger electric field",
-                              "Weaker electric field",
-                              "No field",
-                              "Constant field"
+                              "A stronger field",
+                              "A weaker field",
+                              "A higher potential",
+                              "A larger test charge"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Field line density is proportional to field strength."
+                    "explanation": "Field line density is proportional to field strength; potential is set by position along the lines, not by how closely they are packed."
           }
 ]
       }

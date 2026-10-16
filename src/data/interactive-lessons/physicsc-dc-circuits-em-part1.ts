@@ -20,7 +20,7 @@ If the current is not constant, the total charge that passes a point between tim
 
 $Q = \\int_{t_1}^{t_2} I\\,dt$
 
-Units: Amperes (A) = Coulombs/second.
+Units: amperes (A, coulombs per second).
 
 ---
 
@@ -39,7 +39,7 @@ $V = IR$
 | Quantity | Symbol | Unit |
 |----------|--------|------|
 | Voltage | $V$ | Volts (V) |
-| Current | $I$ | Amperes (A) |
+| Current | $I$ | Amperes, A |
 | Resistance | $R$ | Ohms ($\\Omega$) |
 
 ---
@@ -93,11 +93,7 @@ A common AP trap is treating **resistivity** $\\rho$ and **resistance** $R$ as i
 - **Resistivity** $\\rho$ is an *intrinsic material property* (units $\\Omega\\cdot\\text{m}$). Copper has $\\rho \\approx 1.7\\times10^{-8}\\,\\Omega\\cdot\\text{m}$ no matter how the wire is shaped.
 - **Resistance** $R = \\rho L/A$ depends on *geometry* — stretch the wire or change its cross-section and $R$ changes even though $\\rho$ does not.
 
-**Temperature dependence.** For many conductors, resistivity rises roughly linearly with temperature:
-
-$\\rho(T) = \\rho_0\\left[1 + \\alpha(T - T_0)\\right]$
-
-where $\\alpha$ is the temperature coefficient of resistivity. This is why a light-bulb filament has a much larger resistance when hot than when cold.
+**Temperature dependence.** The resistivity of a conductor typically increases with temperature, which is why a light-bulb filament has a much larger resistance when hot than when cold. An *ohmic* material is modeled as having constant resistivity, so its $I$–$V$ graph is a straight line whose slope is $1/R$.
 
 > Think "$\\rho$ = the material, $R$ = the material *plus* the shape."`
     },
@@ -147,9 +143,9 @@ where $\\alpha$ is the temperature coefficient of resistivity. This is why a lig
           },
           {
             question: 'A copper wire is heated. Assuming its dimensions barely change, its resistance:',
-            options: ['Decreases', 'Increases', 'Stays exactly the same', 'Drops to zero'],
+            options: ['Decreases slightly', 'Increases', 'Stays exactly the same', 'Drops to zero'],
             correctAnswer: 1,
-            explanation: 'For a metal, resistivity rises with temperature, $\\rho(T) = \\rho_0[1 + \\alpha(T - T_0)]$ with $\\alpha > 0$. Since $R = \\rho L/A$, the resistance increases as the wire heats up.'
+            explanation: 'The resistivity of a conductor typically increases with temperature. Since $R = \\rho L/A$ and the dimensions barely change, the resistance increases as the wire heats up.'
           }
         ]
       }

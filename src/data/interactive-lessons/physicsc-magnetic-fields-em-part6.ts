@@ -18,7 +18,7 @@ export const physCEMMagFieldsPart6Data = {
 | Field with high symmetry | Ampere’s law |
 | Force on a moving charge | $\\vec{F} = q\\vec{v} \\times \\vec{B}$ |
 | Force on a current-carrying wire | $\\vec{F} = I\\vec{L} \\times \\vec{B}$ |
-| Torque on a loop | $\\tau = NIAB\\sin\\theta$ |`
+| Charge in both $\\vec{E}$ and $\\vec{B}$ | $\\vec{F} = q\\vec{E} + q\\vec{v} \\times \\vec{B}$ |`
     },
     {
       id: 'physicsc-magnetic-fields-em-p6-decision',
@@ -28,13 +28,13 @@ export const physCEMMagFieldsPart6Data = {
 Magnetic problems split into two families. Identify which you are in **first**:
 
 **Family A — Find the FIELD a current creates.**
-- High symmetry (infinite wire, solenoid, toroid, thick wire) → **Ampère's law**.
-- Low symmetry (finite segment, arc, off-axis point) → **Biot-Savart integral**.
+- High symmetry (long wire, solenoid, slab, thick wire with current density) → **Ampère's law**.
+- Low symmetry (finite segment on its perpendicular bisector, arc at its center, loop on its axis) → **Biot-Savart integral**.
 
-**Family B — Find the FORCE/TORQUE on something in a known field.**
+**Family B — Find the FORCE on something in a known field.**
 - Point charge → $\\vec{F} = q\\vec{v}\\times\\vec{B}$.
 - Current-carrying wire → $\\vec{F} = I\\vec{L}\\times\\vec{B}$.
-- Current loop → torque $\\vec{\\tau} = \\vec{\\mu}\\times\\vec{B}$, with $\\vec{\\mu} = NI A\\hat{n}$.
+- Closed loop → add the forces on its sides (zero net force in a uniform field).
 
 **Two-step problems** (like parallel wires) chain them: use Family A to get one wire's field, then Family B to get the force on the other. The force per length between long parallel wires, $\\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$, is the canonical example — same direction currents attract, opposite repel.`
     },
@@ -81,13 +81,13 @@ A long straight wire carries $I_1 = 6.0\\text{ A}$. A second long parallel wire,
           },
           {
             question: 'To find the force on a single point charge moving through a known field, use:',
-            options: ['$\\vec{F} = I\\vec{L}\\times\\vec{B}$', '$\\vec{F} = q\\vec{v}\\times\\vec{B}$', '$\\tau = NIAB\\sin\\theta$', '$\\mathcal{E} = -d\\Phi_B/dt$'],
+            options: ['$\\vec{F} = I\\vec{L}\\times\\vec{B}$', '$\\vec{F} = q\\vec{v}\\times\\vec{B}$', '$\\vec{F} = q\\vec{E}$', '$\\mathcal{E} = -d\\Phi_B/dt$'],
             correctAnswer: 1,
             explanation: 'The magnetic force on a moving point charge is $\\vec{F} = q\\vec{v}\\times\\vec{B}$; the $I\\vec{L}\\times\\vec{B}$ form is its continuum (current) version.'
           },
           {
             question: 'Which law would you use FIRST to get the field of an infinitely long solenoid?',
-            options: ['Biot-Savart integral', 'Ampère’s law (rectangular loop)', 'Gauss’s law for magnetism', 'Faraday’s law'],
+            options: ['Biot-Savart integral', 'Ampère’s law', 'Gauss’s law for magnetism', 'Faraday’s law'],
             correctAnswer: 1,
             explanation: 'The high symmetry of an ideal solenoid makes Ampère’s law with a rectangular loop the efficient choice, giving $B = \\mu_0 nI$.'
           }

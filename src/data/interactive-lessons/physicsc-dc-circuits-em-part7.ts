@@ -45,13 +45,13 @@ $I_\\infty = \\frac{20}{10 + 20} = \\frac{20}{30} \\approx 0.67\\,\\text{A}$
 
 $V_C = I_\\infty (20) = \\left(\\frac{2}{3}\\right)(20) \\approx 13.3\\,\\text{V}$
 
-**Step 4 — Time constant.** For charging, the capacitor "sees" the Thévenin resistance: the $20\\,\\Omega$ in parallel with the $10\\,\\Omega$ (the battery is an ideal short for this purpose):
+**Step 4 — Time constant.** For charging, the capacitor "sees" the $20\\,\\Omega$ in parallel with the $10\\,\\Omega$ (replace the ideal battery with a wire to find the resistance connected across the capacitor):
 
-$R_{\\text{Th}} = \\frac{(10)(20)}{10 + 20} = \\frac{200}{30} \\approx 6.7\\,\\Omega$
+$R_{\\text{eff}} = \\frac{(10)(20)}{10 + 20} = \\frac{200}{30} \\approx 6.7\\,\\Omega$
 
-$\\tau = R_{\\text{Th}}\\,C = (6.7)(5\\times10^{-6}) \\approx 3.3\\times10^{-5}\\,\\text{s}$
+$\\tau = R_{\\text{eff}}\\,C = (6.7)(5\\times10^{-6}) \\approx 3.3\\times10^{-5}\\,\\text{s}$
 
-**Takeaway.** Use the $t=0^+$ and $t\\to\\infty$ limits for the endpoints, and the Thévenin resistance seen by the capacitor for $\\tau$.`
+**Takeaway.** Use the $t=0^+$ and $t\\to\\infty$ limits for the endpoints, and the resistance connected across the capacitor for $\\tau$.`
     },
     {
       id: 'physicsc-dc-circuits-em-p7-deepen',
@@ -66,7 +66,7 @@ On a timed exam, a few quick checks save you from sign and factor mistakes:
 | Parallel $R_{eq}$ is **smaller** than the smallest resistor | Sign/reciprocal slips |
 | Series $R_{eq}$ is **larger** than the largest resistor | Same |
 | Power $P = I^2R = V^2/R$ is always positive for a resistor | Wrong branch voltage |
-| Energy balance: $\\sum \\mathcal{E} I = \\sum I^2 R$ (+ capacitor storage) | Arithmetic in Kirchhoff systems |
+| Energy balance: $\\mathcal{E} I = \\sum I^2 R$ (+ capacitor storage) | Arithmetic in Kirchhoff systems |
 
 **Limiting cases** are the most powerful check of all: let $R \\to 0$, $R \\to \\infty$, $t \\to 0$, or $t \\to \\infty$ and confirm your formula reduces to something obvious (a short, an open, the full EMF, or zero current).
 
@@ -89,10 +89,10 @@ On a timed exam, a few quick checks save you from sign and factor mistakes:
           {
             question: 'In the capstone network above, the current immediately after the switch closes is larger than the steady-state current because:',
             options: [
-              'The capacitor adds EMF',
-              'The uncharged capacitor initially shorts out the parallel resistor',
-              'Resistance increases over time',
-              'The battery voltage rises'
+              'The capacitor supplies an extra EMF at first',
+              'At first the capacitor shorts the parallel resistor',
+              'The resistors’ resistance rises as they heat up',
+              'The battery’s voltage drops as it warms up'
             ],
             correctAnswer: 1,
             explanation: 'At $t = 0^+$ the uncharged capacitor acts as a wire, bypassing the $20\\,\\Omega$ resistor, so the total resistance is smaller and the current larger.'
@@ -106,10 +106,10 @@ On a timed exam, a few quick checks save you from sign and factor mistakes:
           {
             question: 'The current $I(t) = (\\mathcal{E}/R)e^{-t/RC}$ in a charging RC circuit. The charge that has accumulated on the capacitor by time $t$ equals $\\int_0^t I\\,dt$, which gives:',
             options: [
-              '$C\\mathcal{E}\\,e^{-t/RC}$',
+              '$C\\mathcal{E}(1 + e^{-t/RC})$',
               '$C\\mathcal{E}(1 - e^{-t/RC})$',
               '$\\mathcal{E}/R$',
-              '$C\\mathcal{E}\\,t/RC$'
+              '$C\\mathcal{E}(1 - t/RC)$'
             ],
             correctAnswer: 1,
             explanation: 'Integrating the current: $\\int_0^t (\\mathcal{E}/R)e^{-t\'/RC}dt\' = C\\mathcal{E}(1 - e^{-t/RC})$, the standard charging expression for $q(t)$.'
@@ -123,10 +123,10 @@ On a timed exam, a few quick checks save you from sign and factor mistakes:
           {
             question: 'A symbolic answer for current is $I = \\mathcal{E}/(R + r)$. Letting $R \\to 0$ (a short across the terminals) gives $I \\to \\mathcal{E}/r$, which is a good sign because:',
             options: [
-              'The current should become infinite for a short',
-              'Internal resistance correctly limits the short-circuit current to a finite value',
-              'The current should go to zero',
-              'The EMF should vanish'
+              'A short should give infinite current',
+              'The internal resistance keeps it finite',
+              'A short should give zero current',
+              'The EMF should drop to zero in a short'
             ],
             correctAnswer: 1,
             explanation: 'A real source cannot deliver infinite current; the internal resistance $r$ caps the short-circuit current at $\\mathcal{E}/r$. Passing this limiting-case check builds confidence in the formula.'

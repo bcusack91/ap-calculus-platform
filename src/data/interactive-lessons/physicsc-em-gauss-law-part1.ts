@@ -9,10 +9,10 @@ export const physCEMGaussPart1Data = {
 
 **Part 1 of 7 — Electric Flux**
 
-$\Phi_E = \\oint \\vec{E} \\cdot d\\vec{A} = \\int E\\cos\\theta\,dA$
+$\\Phi_E = \\oint \\vec{E} \\cdot d\\vec{A} = \\int E\\cos\\theta\\,dA$
 
 For a uniform field through a flat surface:
-$\Phi_E = EA\\cos\\theta$
+$\\Phi_E = EA\\cos\\theta$
 
 - $\\theta$ is the angle between $\\vec{E}$ and the outward normal $\\hat{n}$
 - SI unit: $N\\cdot m^{2}/C$ (or V·m)
@@ -48,7 +48,7 @@ $\\Phi = EA\\cos 0° = 500(0.2)(1) = 100$ $N\\cdot m^{2}/C$ ✅
                               "Infinite"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\theta = 90°$, so $\\cos 90° = 0$ and $\\\\Phi = 0$."
+                    "explanation": "The area vector is perpendicular to the surface, so it makes $\\theta = 90°$ with $\\vec{E}$; $\\cos 90° = 0$ and $\\Phi = 0$."
           }
 ]
       }
@@ -82,8 +82,8 @@ $\\Phi = EA\\cos 0° = 500(0.2)(1) = 100$ $N\\cdot m^{2}/C$ ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The SI unit of electric flux is","options":["$N\\cdot m^{2}/C$","N/C","$C/m^{2}$","$V/m^{2}$"]},{"label":"Electric flux depends on the angle between $\\\\vec{E}$ and","options":["The outward area normal $\\hat{n}$","The surface edge","The charge","The wire"]}],
-        correctAnswers: ["$N\\cdot m^{2}/C$","The outward area normal $\\hat{n}$"],
+        dropdowns: [{"label":"The SI unit of electric flux is","options":["$N\\cdot m^{2}/C$","N/C","$C/m^{2}$","$V/m^{2}$"]},{"label":"Electric flux depends on the angle between $\\vec{E}$ and","options":["The outward normal $\\hat{n}$","An edge of the surface","The line to the source charge","The force on a test charge"]}],
+        correctAnswers: ["$N\\cdot m^{2}/C$","The outward normal $\\hat{n}$"],
         hint1: "$\\Phi = EA$ has units $(N/C)(m^{2})$.",
         hint2: "$\\Phi = \\vec{E} \\cdot d\\vec{A}$, where $d\\vec{A} = \\hat{n}\\,dA$.",
         explanation: "Flux units: $N\\cdot m^{2}/C$. It depends on the angle between $\\vec{E}$ and the surface normal $\\hat{n}$."
@@ -114,13 +114,13 @@ $\\Phi = EA\\cos 0° = 500(0.2)(1) = 100$ $N\\cdot m^{2}/C$ ✅
           {
                     "question": "Electric flux is a measure of:",
                     "options": [
-                              "Field lines passing through a surface",
-                              "Electric field strength",
-                              "Charge density",
-                              "Current flow"
+                              "The field lines passing through a surface",
+                              "The strength of the field at one point",
+                              "The charge per unit area on a surface",
+                              "The charge crossing a surface per second"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Flux counts the net number of field lines through a surface."
+                    "explanation": "Flux counts the net number of field lines through a surface ($\\int \\vec{E} \\cdot d\\vec{A}$); charge per area is surface charge density and charge per second is current."
           }
 ]
       }

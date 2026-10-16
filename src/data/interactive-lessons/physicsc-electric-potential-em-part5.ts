@@ -118,13 +118,13 @@ Knowing the *shapes* of these graphs is a frequent AP free-response expectation.
           {
             question: 'Why does charge accumulate near sharp points on a conductor?',
             options: [
-              'Sharp points have larger surface area',
-              'A smaller radius of curvature supports a higher surface charge density at the same potential',
-              'Charge is repelled from flat regions only',
-              'Sharp points have lower potential'
+              'Sharp points have more surface area',
+              'Keeping one potential needs higher $\\sigma$ there',
+              'Flat regions repel charge outward',
+              'Sharp points sit at lower potential'
             ],
             correctAnswer: 1,
-            explanation: 'To keep the whole surface at one potential, regions of small radius of curvature carry higher $\\sigma$ and thus stronger local fields — the basis of lightning rods.'
+            explanation: 'The whole surface is one equipotential, and for a small radius of curvature that same potential requires a higher surface charge density $\\sigma$, giving stronger local fields — the basis of lightning rods.'
           },
           {
             question: 'A point charge is placed inside a hollow, uncharged conducting shell. The field in the conducting material of the shell is:',

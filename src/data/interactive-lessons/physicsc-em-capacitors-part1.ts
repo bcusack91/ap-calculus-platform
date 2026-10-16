@@ -81,7 +81,7 @@ $C = Q/V = 6 \\times 10^{-6} / 3 = 2 \\times 10^{-6}$ F $= 2$ μF ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"A larger capacitance stores","options":["More charge at the same voltage","Less charge at the same voltage","No charge","Infinite charge"]},{"label":"1 Farad equals","options":["1 Coulomb per Volt","1 Volt per Coulomb","1 Ampere per Volt","1 Joule per Coulomb"]}],
+        dropdowns: [{"label":"A larger capacitance stores","options":["More charge at the same voltage","Less charge at the same voltage","The same charge at a higher voltage","The same charge at a lower voltage"]},{"label":"1 Farad equals","options":["1 Coulomb per Volt","1 Volt per Coulomb","1 Ampere per Volt","1 Joule per Coulomb"]}],
         correctAnswers: ["More charge at the same voltage","1 Coulomb per Volt"],
         hint1: "$Q = CV$. Larger $C$ means...",
         hint2: "$C = Q/V$, so Farads = ...",
@@ -113,13 +113,13 @@ $C = Q/V = 6 \\times 10^{-6} / 3 = 2 \\times 10^{-6}$ F $= 2$ μF ✅
           {
                     "question": "Capacitance depends on:",
                     "options": [
-                              "Geometry (plate area, separation, dielectric)",
-                              "Applied voltage",
-                              "Stored charge",
-                              "Current flow"
+                              "Plate geometry and the dielectric",
+                              "The voltage applied across it",
+                              "The charge stored on its plates",
+                              "The current flowing into it"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Capacitance is a geometric property — it depends on plate area, separation, and dielectric material."
+                    "explanation": "Capacitance depends only on the capacitor's physical properties: plate area, separation, and the dielectric. Changing $V$ changes $Q$ in proportion, so $C = Q/V$ stays fixed."
           }
 ]
       }

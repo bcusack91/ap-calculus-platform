@@ -102,7 +102,7 @@ $$V_L(t) = L\\frac{dI}{dt} = \\mathcal{E}\\,e^{-Rt/L}$$
       id: 'indrl2-mcq3',
       type: 'mcq' as const,
       question: 'In an RL circuit, at $t = 0$ just after the switch closes, the inductor behaves like:',
-      options: ['An open circuit (no current flows)', 'A short circuit (zero voltage across it)', 'A resistor with value $R$', 'A capacitor'],
+      options: ['A broken connection', 'A plain, ideal wire', 'A resistor equal to $R$', 'An ideal battery'],
       correctAnswer: 0,
       explanation: 'At $t = 0$: $I = 0$ and $V_L = \\mathcal{E}$ (entire voltage across inductor). The inductor initially blocks all current, like an open circuit.'
     },
@@ -110,7 +110,7 @@ $$V_L(t) = L\\frac{dI}{dt} = \\mathcal{E}\\,e^{-Rt/L}$$
       id: 'indrl2-mcq4',
       type: 'mcq' as const,
       question: 'At $t \\to \\infty$ in an RL circuit, the inductor behaves like:',
-      options: ['A short circuit (wire with zero resistance)', 'An open circuit', 'A battery', 'A capacitor'],
+      options: ['A zero-resistance wire', 'An open switch', 'An ideal battery', 'A charged capacitor'],
       correctAnswer: 0,
       explanation: 'At steady state: $dI/dt = 0$, so $V_L = L(dI/dt) = 0$. Zero voltage across it with current flowing through — it behaves like a short circuit (ideal wire).'
     },

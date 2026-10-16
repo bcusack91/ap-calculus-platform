@@ -94,21 +94,21 @@ $\\vec{E} \\;\\text{(vector, superpose with components)} \\quad\\text{vs.}\\quad
           },
           {
             question: 'Gauss’s law, $\\oint \\vec{E}\\cdot d\\vec{A} = Q_{\\text{enc}}/\\epsilon_0$, is most directly useful for finding the field when the charge distribution has:',
-            options: ['No symmetry', 'High symmetry (spherical, cylindrical, or planar)', 'Only negative charge', 'A finite size'],
+            options: ['No particular symmetry', 'High symmetry', 'Only negative charge', 'A finite, irregular size'],
             correctAnswer: 1,
-            explanation: 'A symmetric distribution lets you pull $E$ out of the flux integral over a well-chosen Gaussian surface, making the field easy to solve for.'
+            explanation: 'Spherical, cylindrical, or planar symmetry lets you pull $E$ out of the flux integral over a well-chosen Gaussian surface, making the field easy to solve for.'
           },
           {
             question: 'Which quantity is a scalar (no direction)?',
-            options: ['Electric field $\\vec{E}$', 'Electric potential $V$', 'Force $\\vec{F}$', 'Acceleration'],
+            options: ['Field $\\vec{E}$', 'Electric potential $V$', 'Force $\\vec{F}$', 'Acceleration $\\vec{a}$'],
             correctAnswer: 1,
             explanation: 'Electric potential is a scalar; the field, force, and acceleration are all vectors. This is why superposing potentials is just addition.'
           },
           {
             question: 'If the potential is known everywhere as a function of position, the electric field is found by:',
-            options: ['Integrating $V$', 'Taking the negative gradient, $\\vec{E} = -\\nabla V$', 'Dividing $V$ by charge', 'Multiplying $V$ by $r$'],
+            options: ['Integrating $V$ over distance', 'Taking $-dV/dx$ for each component', 'Dividing $V$ by the charge', 'Multiplying $V$ by the distance'],
             correctAnswer: 1,
-            explanation: 'The field is the negative gradient of the potential: $E_x = -\\partial V/\\partial x$, and similarly for $y$ and $z$.'
+            explanation: 'The field is the negative gradient of the potential, $\\vec{E} = -\\nabla V$: $E_x = -\\partial V/\\partial x$, and similarly for $y$ and $z$. Integrating goes the other way, from $\\vec{E}$ to $V$.'
           }
         ]
       }

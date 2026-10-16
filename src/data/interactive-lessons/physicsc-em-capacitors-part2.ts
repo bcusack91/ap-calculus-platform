@@ -9,11 +9,11 @@ export const physCEMCapacitorsPart2Data = {
 
 **Part 2 of 7 — Parallel-Plate Capacitors**
 
-$C = \\frac{\epsilon_0 A}{d}$
+$C = \\frac{\\epsilon_0 A}{d}$
 
 where $A$ = plate area, $d$ = plate separation.
 
-- Electric field between plates: $E = V/d = \\sigma/\epsilon_0$
+- Electric field between plates: $E = V/d = \\sigma/\\epsilon_0$
 - Field is uniform between the plates
 - Increasing $A$ or decreasing $d$ increases $C$
     
@@ -27,7 +27,7 @@ where $A$ = plate area, $d$ = plate separation.
 
 **Plates: $A = 0.01$ m², $d = 0.001$ m. Find $C$.**
 
-$C = \epsilon_0 A/d = 8.85 \\times 10^{-12} \\times 0.01 / 0.001 = 88.5$ pF ✅
+$C = \\epsilon_0 A/d = 8.85 \\times 10^{-12} \\times 0.01 / 0.001 = 88.5$ pF ✅
     
     `
     },
@@ -48,7 +48,7 @@ $C = \epsilon_0 A/d = 8.85 \\times 10^{-12} \\times 0.01 / 0.001 = 88.5$ pF ✅
                               "Stays the same"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$C = \\\\epsilon_0 A/d$. If $d \\to 2d$, then $C \\to C/2$."
+                    "explanation": "$C = \\epsilon_0 A/d$ is inversely proportional to $d$, so doubling the separation halves $C$."
           }
 ]
       }
@@ -82,8 +82,8 @@ $C = \epsilon_0 A/d = 8.85 \\times 10^{-12} \\times 0.01 / 0.001 = 88.5$ pF ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"The formula for a parallel-plate capacitor is","options":["$C = \\\\epsilon_0 A / d$","$C = \\\\epsilon_0 d / A$","$C = A d / \\\\epsilon_0$","$C = Q^2 / (2\\\\epsilon_0)$"]},{"label":"To maximize capacitance, use","options":["Large area, small separation","Small area, large separation","Small area, small separation","Large area, large separation"]}],
-        correctAnswers: ["$C = \\\\epsilon_0 A / d$","Large area, small separation"],
+        dropdowns: [{"label":"The formula for a parallel-plate capacitor is","options":["$C = \\epsilon_0 A / d$","$C = \\epsilon_0 d / A$","$C = A d / \\epsilon_0$","$C = Q^2 / (2\\epsilon_0)$"]},{"label":"To maximize capacitance, use","options":["Large area, small separation","Small area, large separation","Small area, small separation","Large area, large separation"]}],
+        correctAnswers: ["$C = \\epsilon_0 A / d$","Large area, small separation"],
         hint1: "$C$ increases with $A$ and decreases with $d$.",
         hint2: "$C = \\epsilon_0 A/d$: maximize $A$, minimize $d$.",
         explanation: "$C = \\epsilon_0 A/d$. Maximize: large $A$, small $d$."
@@ -120,7 +120,7 @@ $C = \epsilon_0 A/d = 8.85 \\times 10^{-12} \\times 0.01 / 0.001 = 88.5$ pF ✅
                               "Zero"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Between parallel plates, $E = V/d$ is uniform (constant everywhere between the plates)."
+                    "explanation": "Between large parallel plates, $E = \\sigma/\\epsilon_0 = V/d$ is uniform in magnitude and direction except near the edges."
           }
 ]
       }

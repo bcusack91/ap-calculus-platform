@@ -49,7 +49,7 @@ The LC loop equation $L\\frac{d^2q}{dt^2} + \\frac{q}{C} = 0$ is *identical in f
 
 ### Energy Timing
 
-The energy sloshes between capacitor and inductor at **twice** the charge frequency (because energy $\\propto q^2$ and $\\propto I^2$). When $q$ is maximum, all energy is electric and $I = 0$; a quarter-period later $q = 0$, $I$ is maximum, and all energy is magnetic. With no resistance the total $U = \\frac{Q_0^2}{2C}$ never changes — a real circuit's resistance slowly damps the oscillation (an RLC circuit).`
+The energy sloshes between capacitor and inductor at **twice** the charge frequency (because energy $\\propto q^2$ and $\\propto I^2$). When $q$ is maximum, all energy is electric and $I = 0$; a quarter-period later $q = 0$, $I$ is maximum, and all energy is magnetic. With no resistance the total $U = \\frac{Q_0^2}{2C}$ never changes, and the maximum current follows from energy conservation: $\\frac{1}{2}LI_{\\max}^2 = \\frac{Q_0^2}{2C}$.`
     },
     {
       id: 'physicsc-em-induction-em-p5-worked',
@@ -77,14 +77,14 @@ This is the simple-harmonic equation $\\frac{d^2q}{dt^2} = -\\omega^2 q$ with $\
       exercise: {
         questions: [
           {
-            question: 'The resonant frequency of an LC circuit is:',
+            question: 'The angular frequency of an ideal LC circuit’s oscillation is:',
             options: ['$\\omega = LC$', '$\\omega = 1/\\sqrt{LC}$', '$\\omega = \\sqrt{L/C}$', '$\\omega = 1/(LC)$'],
             correctAnswer: 1,
             explanation: '$\\omega = 1/\\sqrt{LC}$ — the natural frequency of LC oscillation.'
           },
           {
             question: 'In the mechanical analogy for an LC circuit, the inductance $L$ plays the role of:',
-            options: ['The spring constant', 'The mass', 'The damping coefficient', 'The displacement'],
+            options: ['The spring constant', 'The mass', 'The velocity', 'The displacement'],
             correctAnswer: 1,
             explanation: 'Comparing $L\\ddot{q} + q/C = 0$ with $m\\ddot{x} + kx = 0$: $L \\leftrightarrow m$, $1/C \\leftrightarrow k$, $q \\leftrightarrow x$, $I \\leftrightarrow v$.'
           },
@@ -96,7 +96,7 @@ This is the simple-harmonic equation $\\frac{d^2q}{dt^2} = -\\omega^2 q$ with $\
           },
           {
             question: 'The total energy in an ideal (lossless) LC circuit:',
-            options: ['Oscillates between zero and a maximum', 'Decreases exponentially', 'Stays constant, swapping between capacitor and inductor', 'Increases linearly'],
+            options: ['Oscillates between zero and a maximum', 'Decreases exponentially with time', 'Stays constant as it shifts between $C$ and $L$', 'Increases linearly with time'],
             correctAnswer: 2,
             explanation: '$U_{\\text{total}} = U_C + U_L = \\frac{Q_0^2}{2C}$ is constant; energy shuttles between electric and magnetic forms.'
           },

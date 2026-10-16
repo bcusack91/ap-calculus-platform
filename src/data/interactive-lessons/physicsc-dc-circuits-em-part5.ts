@@ -63,7 +63,7 @@ Because $dP/dR > 0$ for $R < r$ and $dP/dR < 0$ for $R > r$, this critical point
 
 $P_{\\max} = \\frac{\\mathcal{E}^2\\,r}{(2r)^2} = \\frac{\\mathcal{E}^2}{4r}$
 
-**Takeaway.** Impedance matching ($R = r$) is a genuine calculus optimization, and at the optimum exactly half the total power is delivered to the load (the other half is lost in $r$).`
+**Takeaway.** Matching the load to the internal resistance ($R = r$) is a genuine calculus optimization, and at the optimum exactly half the total power is delivered to the load (the other half is lost in $r$).`
     },
     {
       id: 'physicsc-dc-circuits-em-p5-deepen',
@@ -107,7 +107,7 @@ This is why power utilities use very low source resistance and high load resista
             question: 'For a battery of EMF $\\mathcal{E}$ and internal resistance $r$, maximum power is delivered to an external load when:',
             options: ['$R \\to 0$', '$R \\to \\infty$', '$R = r$', '$R = 2r$'],
             correctAnswer: 2,
-            explanation: 'Maximizing $P = \\mathcal{E}^2 R/(R+r)^2$ gives $dP/dR = 0$ at $R = r$ (the impedance-matching condition).'
+            explanation: 'Maximizing $P = \\mathcal{E}^2 R/(R+r)^2$ gives $dP/dR = 0$ at $R = r$ (load resistance matched to the internal resistance).'
           },
           {
             question: 'At the maximum-power-transfer condition $R = r$, the power delivered to the load is:',

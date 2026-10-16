@@ -49,13 +49,11 @@ $$t = \\frac{\\mathcal{E}/R}{\\mathcal{E}/L} = \\frac{L}{R} = \\tau$$
 
 ### Multiple Resistors
 
-For complex circuits, the time constant uses the **Thévenin resistance** seen by the inductor:
+With several resistors and one inductor, use the resistance the inductor actually drives current through:
 
-$$\\tau = \\frac{L}{R_{\\text{Th}}}$$
+$$\\tau = \\frac{L}{R_{\\text{eq}}}$$
 
-**Example:** If $L$ is in series with $R_1$ and both are in parallel with $R_2$:
-
-When the source is removed (for decay), $R_{\\text{Th}} = R_1 + R_2$ (series from L's perspective) → **No!** Actually from the inductor's terminals: $R_{\\text{Th}} = R_1 + R_2$ if they're in series, or compute properly using Thévenin.`
+**Example:** $L$ is in series with $R_1$, and that branch is in parallel with $R_2$ across a battery. While the switch is closed, the battery holds the voltage across the $R_1$–$L$ branch fixed, so the inductor's current grows with $\\tau = L/R_1$. When the battery is then disconnected, the inductor's current must flow through $R_1$ **and** $R_2$ in series, so the decay has $\\tau = L/(R_1 + R_2)$ — a faster decay.`
     },
     {
       id: 'indrl4-mcq2',
@@ -113,7 +111,7 @@ $$RL: \\quad \\frac{dI}{dt} + \\frac{R}{L}I = \\frac{\\mathcal{E}}{L}$$`
 |:---:|:---:|
 | Time constant | $\\tau = L/R$ |
 | Initial slope | $dI/dt|_0 = \\mathcal{E}/L$ |
-| Thévenin approach | $\\tau = L/R_{\\text{Th}}$ |
+| Several resistors | $\\tau = L/R_{\\text{eq}}$ (resistance the inductor drives) |
 | RL ↔ RC analogy | $L/R \\leftrightarrow RC$ |
 | After $5\\tau$ | Transient < 1% |
 

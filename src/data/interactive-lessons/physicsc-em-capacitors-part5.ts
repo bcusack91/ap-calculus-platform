@@ -11,7 +11,7 @@ export const physCEMCapacitorsPart5Data = {
 
 Inserting a dielectric (insulating material) between plates:
 
-$C = \\kappa C_0 = \\frac{\\kappa \epsilon_0 A}{d}$
+$C = \\kappa C_0 = \\frac{\\kappa \\epsilon_0 A}{d}$
 
 where $\\kappa$ (kappa) is the **dielectric constant** ($\\kappa > 1$).
 
@@ -47,12 +47,12 @@ $C = \\kappa C_0 = 3 \\times 5 = 15$ μF ✅
                     "question": "A dielectric always:",
                     "options": [
                               "Increases the capacitance",
-                              "Decreases the capacitance",
+                              "Lowers the capacitance",
                               "Has no effect",
                               "Makes $C = 0$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\kappa > 1$, so $C = \\\\kappa C_0 > C_0$. Capacitance always increases."
+                    "explanation": "$\\kappa > 1$, so $C = \\kappa C_0 > C_0$. Capacitance always increases."
           }
 ]
       }
@@ -86,8 +86,8 @@ $C = \\kappa C_0 = 3 \\times 5 = 15$ μF ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Common dielectric materials include","options":["Glass, paper, plastic","Metal, copper, iron","Air only","Water only"]},{"label":"The dielectric constant $\\\\kappa$ is always","options":["Greater than or equal to 1","Less than 1","Negative","Zero"]}],
-        correctAnswers: ["Glass, paper, plastic","Greater than or equal to 1"],
+        dropdowns: [{"label":"Common dielectric materials include","options":["Glass, paper, plastic","Copper, iron, aluminum","Mercury, silver, gold","Graphite, steel, brass"]},{"label":"The dielectric constant $\\kappa$ is always","options":["At least 1","Less than 1","Negative","Exactly zero"]}],
+        correctAnswers: ["Glass, paper, plastic","At least 1"],
         hint1: "Dielectrics are insulators.",
         hint2: "$\\kappa = 1$ for vacuum (minimum value).",
         explanation: "Dielectrics are insulators like glass, paper, plastic. $\\kappa \\geq 1$ always (vacuum = 1)."
@@ -118,13 +118,13 @@ $C = \\kappa C_0 = 3 \\times 5 = 15$ μF ✅
           {
                     "question": "With a dielectric inserted (battery disconnected), the electric field:",
                     "options": [
-                              "Decreases",
-                              "Increases",
-                              "Stays the same",
-                              "Becomes zero"
+                              "Decreases to $E_0/\\kappa$",
+                              "Rises to $\\kappa E_0$",
+                              "Stays at $E_0$",
+                              "Drops to zero"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "The dielectric polarizes and opposes the applied field, reducing $E$ by factor $\\\\kappa$."
+                    "explanation": "The polarized dielectric makes a field opposite to the applied one, so with $Q$ fixed the field falls to $E_0/\\kappa$ but not to zero (that happens only inside a conductor)."
           }
 ]
       }

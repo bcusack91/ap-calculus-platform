@@ -48,7 +48,7 @@ $E = 2k\\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1 = 900$ N/C ✅
                               "Constant"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$E = 2k\\lambda/r \\\\propto 1/r$, not $1/r^2$."
+                    "explanation": "The Gaussian cylinder's curved area $2\\pi rL$ grows as $r$, so $E = 2k\\lambda/r \\propto 1/r$, not $1/r^2$."
           }
 ]
       }
@@ -82,8 +82,8 @@ $E = 2k\\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1 = 900$ N/C ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"A cylindrical Gaussian surface is used for","options":["Charges with cylindrical symmetry","Point charges","Planar charges","Any charge distribution"]},{"label":"For an infinite line charge, the field is directed","options":["Radially outward (if $\\lambda > 0$)","Along the wire","Both radially and along the wire","In circles around the wire"]}],
-        correctAnswers: ["Charges with cylindrical symmetry","Radially outward (if $\\lambda > 0$)"],
+        dropdowns: [{"label":"A cylindrical Gaussian surface is used for","options":["Long lines or cylinders of charge","Isolated point charges","Large flat sheets of charge","Any charge distribution"]},{"label":"For an infinite positive line charge, the field is directed","options":["Radially away from the wire","Parallel to the wire","Radially and along the wire","In circles around the wire"]}],
+        correctAnswers: ["Long lines or cylinders of charge","Radially away from the wire"],
         hint1: "Match the Gaussian surface to the symmetry.",
         hint2: "The field points away from a positive line charge.",
         explanation: "Cylindrical surfaces match cylindrical symmetry. Field is radially outward for positive $\\lambda$."
@@ -116,11 +116,11 @@ $E = 2k\\lambda/r = 2(9 \\times 10^9)(5 \\times 10^{-9})/0.1 = 900$ N/C ✅
                     "options": [
                               "Zero",
                               "$EA$",
-                              "$\\\\Phi/2$",
+                              "$\\Phi/2$",
                               "Maximum"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "The field is radial (perpendicular to the cylinder axis), so no flux passes through the end caps."
+                    "explanation": "The field is radial, perpendicular to the cylinder axis, so it runs parallel to the end caps and no flux passes through them."
           }
 ]
       }

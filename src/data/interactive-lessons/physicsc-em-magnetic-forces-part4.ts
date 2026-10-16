@@ -55,7 +55,7 @@ $$\\vec{F} = I\\left(\\int d\\vec{\\ell}\\right) \\times \\vec{B} = I\\vec{L}_{\
 
 where $\\vec{L}_{\\text{net}}$ is the displacement vector from start to end.
 
-> **Consequence:** A closed loop in a uniform field feels **zero net force** (but generally nonzero torque).
+> **Consequence:** A closed loop in a uniform field feels **zero net force**.
 
 ### Example: Semicircular Wire
 
@@ -119,7 +119,7 @@ $$\\frac{F}{L} = I_2 B_1 = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$$
 | $F/L = \\mu_0 I_1 I_2/(2\\pi d)$ | Parallel wires |
 | Closed loop, uniform $\\vec{B}$ | $\\vec{F}_{\\text{net}} = 0$ |
 
-> **Next up:** Torque on current loops and magnetic dipoles — Part 5.`
+> **Next up:** Moving charges as field sources, and combined fields — Part 5.`
     }
   ]
 };

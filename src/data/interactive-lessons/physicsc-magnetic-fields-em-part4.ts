@@ -24,7 +24,7 @@ Use when there is sufficient symmetry to simplify $\\oint \\vec{B} \\cdot d\\vec
 |--------------|---------------|--------|
 | Long straight wire | Circular loop (radius $r$) | $B = \\mu_0 I/(2\\pi r)$ |
 | Solenoid | Rectangle (length $L$) | $B = \\mu_0 n I$ |
-| Toroid | Circular loop inside | $B = \\mu_0 NI/(2\\pi r)$ |
+| Thick wire, uniform $J$ (inside) | Circle of radius $r < a$ | $B = \\mu_0 I r/(2\\pi a^2)$ |
 
 > 🔑 Ampere's law is the magnetic analog of Gauss's law — use symmetry!`
     },
@@ -38,8 +38,8 @@ Ampère's law $\\oint \\vec{B}\\cdot d\\vec{l} = \\mu_0 I_{\\text{enc}}$ is *alw
 | Symmetry | Good Amperian loop |
 |----------|--------------------|
 | Long straight wire (cylindrical) | Circle centered on the wire |
-| Solenoid / infinite sheet (planar) | Rectangle |
-| Toroid | Circle threading the windings |
+| Solenoid / conducting slab (planar) | Rectangle |
+| Cylindrical conductor with current density $J(r)$ | Circle; find $I_{\\text{enc}} = \\int J\\,dA$ |
 
 **The full field of a thick wire** (radius $a$, uniform current) has two regimes:
 
@@ -79,15 +79,15 @@ Inside the wire $B$ grows **linearly** with $r$ (unlike the $1/r$ falloff outsid
         questions: [
           {
             question: 'Inside an ideal solenoid, the magnetic field is:',
-            options: ['Zero', 'Uniform ($B = \\mu_0 nI$)', 'Depends on position', 'Infinite'],
+            options: ['Zero', 'Uniform, $\\mu_0 nI$', 'Strongest near the windings', 'Infinite'],
             correctAnswer: 1,
             explanation: 'Inside an ideal solenoid, $B = \\mu_0 nI$ — uniform and parallel to the axis.'
           },
           {
             question: 'Ampere’s law is most useful when:',
-            options: ['No current flows', 'Current distribution has high symmetry', 'The field is zero', 'Charges are stationary'],
+            options: ['No current is enclosed', 'The current has high symmetry', 'The magnetic field is zero', 'The charges are stationary'],
             correctAnswer: 1,
-            explanation: 'Like Gauss’s law, Ampere’s law is most useful with high symmetry (infinite wire, solenoid, toroid).'
+            explanation: 'Like Gauss’s law, Ampere’s law always holds but is useful for finding $B$ only with high symmetry (long wire, solenoid, slab, cylindrical conductor).'
           },
           {
             question: 'Inside a uniformly-conducting cylindrical wire of radius $a$, the field at radius $r < a$ varies as:',
@@ -108,10 +108,10 @@ Inside the wire $B$ grows **linearly** with $r$ (unlike the $1/r$ falloff outsid
             explanation: 'Ampère’s law gives $\\oint \\vec{B}\\cdot d\\vec{l} = \\mu_0 I_{\\text{enc}} = 0$ when no net current is enclosed (though $\\vec{B}$ itself need not be zero everywhere on the loop).'
           },
           {
-            question: 'Inside the hole of a toroid (the central axis region where no windings are present), the magnetic field is:',
-            options: ['$\\mu_0 NI/(2\\pi r)$', 'Zero', 'Uniform and equal to $\\mu_0 nI$', 'Infinite'],
-            correctAnswer: 1,
-            explanation: 'An Amperian loop on the central axis encloses no current, so $B = 0$ there. The field is confined within the windings.'
+            question: 'A long cylindrical conductor of radius $a$ carries a nonuniform current density $J(r) = br$. Inside it ($r < a$), the field magnitude is:',
+            options: ['$\\mu_0 b r^2/3$', '$\\mu_0 b r^2/2$', '$\\mu_0 b r/3$', '$\\mu_0 b r^3/3$'],
+            correctAnswer: 0,
+            explanation: '$I_{\\text{enc}} = \\int_0^r (br\')(2\\pi r\'\\,dr\') = \\frac{2\\pi b r^3}{3}$. Ampère: $B(2\\pi r) = \\mu_0 \\frac{2\\pi b r^3}{3}$, so $B = \\mu_0 b r^2/3$.'
           }
         ]
       }

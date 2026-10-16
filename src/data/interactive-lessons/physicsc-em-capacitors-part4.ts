@@ -13,7 +13,9 @@ $U = \\frac{1}{2}CV^2 = \\frac{Q^2}{2C} = \\frac{1}{2}QV$
 
 The energy is stored in the **electric field** between the plates.
 
-Energy density: $u = \\frac{1}{2}\epsilon_0 E^2$ $(J/m^{3})$
+**Why the $\\frac{1}{2}$?** The stored energy equals the work done to separate the charge. Moving a small charge $dq$ across a capacitor already at $V = q/C$ takes $dW = (q/C)\\,dq$, so
+$U = \\int_0^Q \\frac{q}{C}\\,dq = \\frac{Q^2}{2C}$
+The battery delivers $QV$, but early charge crosses a small potential difference, so only half of $QV$ ends up stored.
     
     `
     },
@@ -80,11 +82,11 @@ $U = \\frac{1}{2}CV^2 = \\frac{1}{2}(10 \\times 10^{-6})(10000) = 0.05$ J ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Energy density of the electric field is","options":["$\\frac{1}{2}\\\\epsilon_0 E^2$","$\\\\epsilon_0 E$","$\\frac{1}{2}\\\\epsilon_0 E$","$\\\\epsilon_0 E^2$"]},{"label":"Three equivalent formulas for capacitor energy use","options":["$C$ and $V$; $Q$ and $C$; $Q$ and $V$","Only $C$ and $V$","Only $Q$ and $V$","Only $Q$ and $C$"]}],
-        correctAnswers: ["$\\frac{1}{2}\\\\epsilon_0 E^2$","$C$ and $V$; $Q$ and $C$; $Q$ and $V$"],
-        hint1: "Energy per unit volume in an E field.",
+        dropdowns: [{"label":"The energy stored in a capacitor equals","options":["The work done to separate its charges","The charge times the full battery voltage","The heat produced while it charges","The power delivered by the battery"]},{"label":"Three equivalent formulas for capacitor energy use","options":["$C$ and $V$; $Q$ and $C$; $Q$ and $V$","$C$ and $V$ only; the others are not equivalent","$Q$ and $V$ only; the others are not equivalent","$Q$ and $C$ only; the others are not equivalent"]}],
+        correctAnswers: ["The work done to separate its charges","$C$ and $V$; $Q$ and $C$; $Q$ and $V$"],
+        hint1: "$U = \\int_0^Q (q/C)\\,dq$.",
         hint2: "$U = \\frac{1}{2}CV^2 = Q^2/(2C) = \\frac{1}{2}QV$.",
-        explanation: "Energy density: $u = \\frac{1}{2}\\epsilon_0 E^2$. Three forms: $\\frac{1}{2}CV^2$, $Q^2/(2C)$, $\\frac{1}{2}QV$."
+        explanation: "The stored energy is the work done to separate the charge, $\\int_0^Q (q/C)\\,dq$, which is half of $QV$. Three forms: $\\frac{1}{2}CV^2$, $Q^2/(2C)$, $\\frac{1}{2}QV$."
       }
     },
     {
@@ -113,12 +115,12 @@ $U = \\frac{1}{2}CV^2 = \\frac{1}{2}(10 \\times 10^{-6})(10000) = 0.05$ J ✅
                     "question": "The energy in a capacitor is stored in:",
                     "options": [
                               "The electric field between the plates",
-                              "The plates themselves",
-                              "The wires",
-                              "The battery"
+                              "The moving charges on the plates",
+                              "The current in the wires",
+                              "The battery's chemical bonds"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Energy is stored in the electric field: $u = \\frac{1}{2}\\\\epsilon_0 E^2$ per unit volume."
+                    "explanation": "Separating the charge builds up the electric field between the plates, and the stored energy $U = \\frac{1}{2}QV$ is held there; the charges are at rest and no current flows once charged."
           }
 ]
       }

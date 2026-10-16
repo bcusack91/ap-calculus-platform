@@ -86,13 +86,13 @@ Separating variables and integrating from $I=0$ gives $I(t) = \\frac{\\mathcal{E
           },
           {
             question: 'Immediately after the switch closes in an RL circuit (current was zero), the inductor behaves like:',
-            options: ['A short circuit (zero resistance)', 'An open circuit (no current flows)', 'An ideal battery', 'A pure resistor equal to R'],
+            options: ['A plain wire', 'A broken connection', 'An ideal battery', 'A resistor equal to $R$'],
             correctAnswer: 1,
             explanation: 'At $t = 0^+$ the inductor opposes any sudden change in current, so $I = 0$ — it acts momentarily as an open circuit.'
           },
           {
             question: 'A long time after the switch closes, the inductor behaves like:',
-            options: ['An open circuit', 'A short circuit (the current is steady at $\\mathcal{E}/R$)', 'A capacitor', 'A source of EMF'],
+            options: ['An open switch', 'A plain wire', 'A charged capacitor', 'A second battery'],
             correctAnswer: 1,
             explanation: 'As $t\\to\\infty$, $\\frac{dI}{dt}\\to 0$ so the back-EMF vanishes; the inductor acts as a plain wire and $I \\to \\mathcal{E}/R$.'
           },

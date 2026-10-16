@@ -100,7 +100,7 @@ Only particles with speed $v = E/B$ pass through, regardless of charge or mass.`
       id: 'magf1-mcq4',
       type: 'mcq' as const,
       question: 'The magnetic force on a charged particle can:',
-      options: ['Change the direction but not the speed of the particle', 'Change the speed but not the direction', 'Change both speed and direction', 'Change the kinetic energy of the particle'],
+      options: ['Change its direction but not its speed', 'Change its speed but not direction', 'Change its speed and direction', 'Do positive work on the charge'],
       correctAnswer: 0,
       explanation: 'Since $\\vec{F} \\perp \\vec{v}$, the force does no work: $dK/dt = \\vec{F} \\cdot \\vec{v} = 0$. Speed (and KE) remain constant; only direction changes.'
     },

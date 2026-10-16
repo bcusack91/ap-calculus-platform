@@ -40,12 +40,12 @@ $n = \\frac{q}{e} = \\frac{3.2 \\times 10^{-19}}{1.6 \\times 10^{-19}} = 2$ elec
                     "question": "The smallest unit of free charge is:",
                     "options": [
                               "$1.6 \\times 10^{-19}$ C",
-                              "$1$ C",
+                              "$3.2 \\times 10^{-19}$ C",
                               "$1.6 \\times 10^{-9}$ C",
                               "$9.1 \\times 10^{-31}$ C"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "The elementary charge $e = 1.6 \\times 10^{-19}$ C."
+                    "explanation": "The elementary charge $e = 1.6 \\times 10^{-19}$ C is the smallest free charge; $3.2 \\times 10^{-19}$ C is $2e$, and $9.1 \\times 10^{-31}$ is the electron's mass in kg, not a charge."
           }
 ]
       }
@@ -79,11 +79,11 @@ $n = \\frac{q}{e} = \\frac{3.2 \\times 10^{-19}}{1.6 \\times 10^{-19}} = 2$ elec
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Protons have charge","options":["$+e$","$-e$","$0$","$+2e$"]},{"label":"Charge is conserved means","options":["Total charge in a closed system never changes","Charge can be created","Charge can be destroyed","Charge always increases"]}],
-        correctAnswers: ["$+e$","Total charge in a closed system never changes"],
+        dropdowns: [{"label":"Protons have charge","options":["$+e$","$-e$","$0$","$+2e$"]},{"label":"Charge is conserved means","options":["The net charge of an isolated system stays constant","Each object in a system keeps its own original charge","Rubbing two neutral objects creates new net charge","Charge spreads out equally over every object it touches"]}],
+        correctAnswers: ["$+e$","The net charge of an isolated system stays constant"],
         hint1: "Protons are positive.",
         hint2: "Conservation law definition.",
-        explanation: "Protons have charge $+e$. Charge conservation: total charge in a closed system is constant."
+        explanation: "Protons have charge $+e$. Charge conservation means the net charge of an isolated system is constant; charge can move between objects (so individual objects change), but rubbing only transfers electrons and never creates net charge."
       }
     },
     {

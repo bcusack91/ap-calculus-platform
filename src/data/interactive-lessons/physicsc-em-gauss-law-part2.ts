@@ -9,11 +9,11 @@ export const physCEMGaussPart2Data = {
 
 **Part 2 of 7 — Gauss's Law Statement**
 
-$\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{enc}}{\epsilon_0}$
+$\\oint \\vec{E} \\cdot d\\vec{A} = \\frac{Q_{enc}}{\\epsilon_0}$
 
-The total electric flux through any closed surface equals the enclosed charge divided by $\epsilon_0$.
+The total electric flux through any closed surface equals the enclosed charge divided by $\\epsilon_0$.
 
-- $\epsilon_0 = 8.85 \\times 10^{-12}$ $C^{2}/(N\\cdot m^{2})$
+- $\\epsilon_0 = 8.85 \\times 10^{-12}$ $C^{2}/(N\\cdot m^{2})$
 - The surface is called a **Gaussian surface**
 - It is most useful when the charge distribution has symmetry
     
@@ -27,7 +27,7 @@ The total electric flux through any closed surface equals the enclosed charge di
 
 **A Gaussian surface encloses $Q = 5 \\times 10^{-9}$ C. Find the total flux.**
 
-$\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ $N\\cdot m^{2}/C$ ✅
+$\\Phi = Q/\\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ $N\\cdot m^{2}/C$ ✅
     
     `
     },
@@ -43,12 +43,12 @@ $\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ 
                     "question": "Gauss's law relates electric flux to:",
                     "options": [
                               "Enclosed charge",
-                              "Total charge in the universe",
+                              "All charge, inside or outside",
                               "Electric field strength",
-                              "Magnetic flux"
+                              "Rate of change of magnetic flux"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$\\\\Phi = Q_{enc}/\\\\epsilon_0$. Only the enclosed charge matters."
+                    "explanation": "$\\Phi = Q_{enc}/\\epsilon_0$: charges outside the surface add zero net flux, and changing magnetic flux belongs to Faraday's law."
           }
 ]
       }
@@ -61,7 +61,7 @@ $\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ 
 
 1) A Gaussian surface encloses no charge. Net flux $(N\\cdot m^{2}/C)$?
 
-2) A Gaussian surface encloses $Q = 5$ nC. $\\Phi \\approx ?$ $N\\cdot m^{2}/C$. (Use $\epsilon_0 \\approx 8.85 \\times 10^{-12}$. Round to nearest integer.)
+2) A Gaussian surface encloses $Q = 5$ nC. $\\Phi \\approx ?$ $N\\cdot m^{2}/C$. (Use $\\epsilon_0 \\approx 8.85 \\times 10^{-12}$. Round to nearest integer.)
 
 3) Charges of $+3q$ and $-q$ are inside a Gaussian surface. The net enclosed charge is ___ $q$.
     
@@ -82,7 +82,7 @@ $\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ 
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"A Gaussian surface is","options":["An imaginary closed surface","A physical boundary","A conducting shell","A charged sphere"]},{"label":"Gauss's law is most useful when there is","options":["High symmetry","No symmetry","Only one charge","Zero enclosed charge"]}],
+        dropdowns: [{"label":"A Gaussian surface is","options":["An imaginary closed surface","A real conducting shell","Any open flat surface","The surface of the charge"]},{"label":"Gauss's law is most useful when there is","options":["High symmetry","No symmetry","Only one charge","Zero enclosed charge"]}],
         correctAnswers: ["An imaginary closed surface","High symmetry"],
         hint1: "Gaussian surfaces are mathematical constructs.",
         hint2: "Symmetry allows us to take $E$ out of the integral.",
@@ -97,7 +97,7 @@ $\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ 
 
 | # | Concept | Key Fact |
 |---|---------|----------|
-| 1 | Gauss's law | $\\Phi = Q_{enc}/\epsilon_0$ |
+| 1 | Gauss's law | $\\Phi = Q_{enc}/\\epsilon_0$ |
 | 2 | No enclosed charge | $\\Phi = 0$ |
 | 3 | Symmetry types | Spherical, cylindrical, planar |
     
@@ -115,12 +115,12 @@ $\\Phi = Q/\epsilon_0 = 5 \\times 10^{-9} / 8.85 \\times 10^{-12} \\approx 565$ 
                     "question": "If no charge is enclosed by a Gaussian surface, the net flux is:",
                     "options": [
                               "Zero",
-                              "$\\\\epsilon_0$",
+                              "$\\epsilon_0$",
                               "Infinite",
                               "Depends on the surface"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$Q_{enc} = 0 \\\\implies \\\\Phi = 0$. Field lines that enter must also exit."
+                    "explanation": "$Q_{enc} = 0 \\implies \\Phi = 0$. Field lines that enter must also exit."
           }
 ]
       }

@@ -30,7 +30,8 @@ Common results:
 | Point charge | $V = kQ/r$ |
 | Conducting sphere | $V = kQ/R$ (surface), $V = kQ/r$ (outside) |
 | Ring (on axis) | $V = kQ/\\sqrt{R^2 + x^2}$ |
-| Disk (on axis) | $V = \\dfrac{\\sigma}{2\\epsilon_0}\\left(\\sqrt{R^2+x^2} - x\\right)$ |
+| Semicircular arc (at its center) | $V = kQ/R$ |
+| Uniform rod, length $L$ (collinear point a distance $d$ past one end) | $V = k\\lambda \\ln\\left(\\dfrac{L+d}{d}\\right)$ |
 
 > Set up $dq = \\lambda\\,dl$ (line), $\\sigma\\,dA$ (surface), or $\\rho\\,dV$ (volume), then integrate $k\\,dq/r$.`
     },
@@ -80,7 +81,7 @@ Then express the distance $r$ from that element to the field point **in the same
 
 $V = \\int \\frac{k\\,dq}{r}$
 
-**When is the potential integral easy?** If every $dq$ is the *same* distance from the field point (like the ring's axis), $r$ is constant and pulls out of the integral, leaving just $\\int dq = Q$. If $r$ varies, you get a genuine single-variable integral — often a logarithm (rod) or a square root (disk).
+**When is the potential integral easy?** If every $dq$ is the *same* distance from the field point (like the ring's axis), $r$ is constant and pulls out of the integral, leaving just $\\int dq = Q$. If $r$ varies, you get a genuine single-variable integral — for a finite rod it gives a logarithm.
 
 **Symmetry shortcut.** For an axial field, once $V(x)$ is known you can get the on-axis field from $E_x = -dV/dx$ instead of doing a separate vector integral.
 
@@ -96,9 +97,9 @@ $V = \\int \\frac{k\\,dq}{r}$
         questions: [
           {
             question: 'The advantage of using potential (vs. field) for multiple charges is:',
-            options: ['Potential is always positive', 'Potential is a scalar (no vectors to add)', 'Potential is always zero', 'No calculation is needed'],
+            options: ['Potentials are always positive numbers', 'Potentials add as plain numbers', 'Potentials ignore the signs of charges', 'Potentials fall off faster than fields'],
             correctAnswer: 1,
-            explanation: 'Potential is a scalar — you add numbers, not vectors. This is much simpler for complex configurations.'
+            explanation: 'Potential is a scalar, so you add signed numbers instead of vector components. Potentials keep the signs of the charges, and they fall off as $1/r$, more slowly than the $1/r^2$ field.'
           },
           {
             question: 'On the axis of a uniformly charged ring (radius $R$, charge $Q$), the potential at the center ($x = 0$) is:',
@@ -109,10 +110,10 @@ $V = \\int \\frac{k\\,dq}{r}$
           {
             question: 'On the axis of a charged ring, the field at the center is zero even though the potential is nonzero because:',
             options: [
-              'The potential is also zero there',
-              'By symmetry the field contributions cancel, while the scalar potentials simply add',
-              'The charge is zero',
-              'The field is always zero on any axis'
+              'The potential is also zero at the center',
+              'Opposite field contributions cancel, but potentials add',
+              'The ring carries no net charge overall',
+              'The field is zero everywhere on the axis'
             ],
             correctAnswer: 1,
             explanation: 'Field contributions from opposite arcs cancel as vectors at the center, but potentials (scalars) add constructively, giving $V = kQ/R \\ne 0$ with $E = 0$.'

@@ -128,7 +128,7 @@ $t_{1/2} = RC\\ln 2 \\approx 0.693\\,RC$
           },
           {
             question: 'In a charging RC circuit, immediately after the switch closes ($t = 0^+$), an initially uncharged capacitor behaves like:',
-            options: ['An open circuit', 'A wire (short)', 'A battery', 'A second resistor equal to $R$'],
+            options: ['An open switch', 'A plain connecting wire', 'A battery', 'A second resistor $R$'],
             correctAnswer: 1,
             explanation: 'At $t=0^+$ the capacitor has zero voltage, so it acts like a short; the current is maximal, $I_0 = \\mathcal{E}/R$.'
           },
@@ -146,9 +146,9 @@ $t_{1/2} = RC\\ln 2 \\approx 0.693\\,RC$
           },
           {
             question: 'A discharging capacitor falls to half its initial charge after a time equal to:',
-            options: ['$RC$', '$RC\\ln 2 \\approx 0.69\\,RC$', '$2RC$', '$RC/2$'],
+            options: ['$RC$', '$RC\\ln 2$', '$RC/\\ln 2$', '$RC/2$'],
             correctAnswer: 1,
-            explanation: 'Set $\\tfrac12 = e^{-t/RC}$, so $t_{1/2} = RC\\ln 2 \\approx 0.693\\,RC$. The half-life is a bit less than one time constant.'
+            explanation: 'Set $\\tfrac12 = e^{-t/RC}$, so $t_{1/2} = RC\\ln 2 \\approx 0.693\\,RC$, a bit less than one time constant (at $t = RC$ only 37% remains).'
           }
         ]
       }

@@ -14,7 +14,7 @@ export const physCEMCapacitorsPart6Data = {
 2. Determine if a battery is connected or disconnected
 3. Apply $Q = CV$ and energy formulas
 4. For dielectrics, multiply $C$ by $\\kappa$
-5. Use energy density $u = \\frac{1}{2}\epsilon_0 E^2$ for field energy problems
+5. Battery connected: $V$ stays fixed. Battery disconnected: $Q$ stays fixed
     
     `
     },
@@ -48,7 +48,7 @@ $Q = C_{eq}V = 6.2 \\times 12 = 74.4$ μC ✅
                               "Conserved",
                               "Doubled",
                               "Halved",
-                              "Lost"
+                              "Zero"
                     ],
                     "correctAnswer": 0,
                     "explanation": "Charge is always conserved. When capacitors are connected, charge redistributes but the total stays the same."
@@ -85,8 +85,8 @@ $Q = C_{eq}V = 6.2 \\times 12 = 74.4$ μC ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"In a series combination, the capacitor with the smallest $C$","options":["Has the largest voltage","Has the smallest voltage","Has the most charge","Has no voltage"]},{"label":"When two capacitors are connected together (no battery), energy is","options":["Generally lost (to heat)","Conserved exactly","Doubled","Created"]}],
-        correctAnswers: ["Has the largest voltage","Generally lost (to heat)"],
+        dropdowns: [{"label":"In a series combination, the capacitor with the smallest $C$","options":["Has the largest voltage","Has the smallest voltage","Has the most charge","Has no voltage"]},{"label":"When two capacitors are connected together (no battery), energy is","options":["Partly converted to thermal energy","Exactly conserved in the capacitors","Doubled by the redistribution","Unchanged, like the total charge"]}],
+        correctAnswers: ["Has the largest voltage","Partly converted to thermal energy"],
         hint1: "Same $Q$ in series, $V = Q/C$.",
         hint2: "Charge is conserved, but some energy becomes heat.",
         explanation: "In series, same $Q$ everywhere, so smallest $C$ has largest $V = Q/C$. Energy is generally lost when capacitors share charge."
@@ -117,13 +117,13 @@ $Q = C_{eq}V = 6.2 \\times 12 = 74.4$ μC ✅
           {
                     "question": "When simplifying a circuit with series and parallel capacitors, start by:",
                     "options": [
-                              "Identifying which caps are in series or parallel",
-                              "Adding all capacitances",
-                              "Ignoring the smallest capacitor",
-                              "Removing the battery"
+                              "Spotting the basic two-element groups",
+                              "Adding every capacitance directly",
+                              "Dropping the smallest capacitor",
+                              "Disconnecting the battery first"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "First identify series and parallel groupings, then simplify step by step."
+                    "explanation": "First identify series and parallel groupings, then replace each with its equivalent and repeat; capacitances add directly only in parallel."
           }
 ]
       }

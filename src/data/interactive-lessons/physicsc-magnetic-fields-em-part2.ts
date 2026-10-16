@@ -16,24 +16,22 @@ $$\\vec{F} = I\\vec{L} \\times \\vec{B}$$
 
 Magnitude: $F = BIL\\sin\\theta$
 
-where $L$ is the length of wire in the field.
+where $L$ is the length of wire in the field and $\\vec{L}$ points along the conventional current.
 
 ---
 
-### Torque on a Current Loop
+### Force Between Parallel Wires
 
-$$\\vec{\\tau} = \\vec{\\mu} \\times \\vec{B}$$
+Wire 1 makes a field $B_1 = \\mu_0 I_1/(2\\pi d)$ at wire 2, so the force per unit length on wire 2 is
 
-where $\\vec{\\mu} = NIA\\hat{n}$ is the magnetic dipole moment.
+$$\\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$$
 
-$|\\tau| = NIAB\\sin\\theta$
-
-> 🔑 This is the principle behind electric motors — a current loop in a magnetic field experiences a torque.`
+> 🔑 Currents in the same direction attract; currents in opposite directions repel.`
     },
     {
       id: 'physicsc-magnetic-fields-em-p2-motor',
       type: 'text' as const,
-      content: `### Force on a Bent Wire, and the Motor Principle
+      content: `### Force on a Bent Wire, and a Loop Near a Long Wire
 
 For a wire of arbitrary shape, sum the force on each element: $\\vec{F} = I\\int d\\vec{l}\\times\\vec{B}$. In a **uniform** field, $\\vec{B}$ factors out and the integral reduces to the straight-line displacement between endpoints:
 
@@ -41,22 +39,30 @@ $\\vec{F} = I\\,\\vec{L}_{\\text{net}}\\times\\vec{B},$
 
 where $\\vec{L}_{\\text{net}}$ points from start to finish. A semicircle of radius $R$ therefore feels the same force as a straight wire of length $2R$ joining its ends.
 
-**Closed loop ⇒ zero net force.** For any closed loop $\\oint d\\vec{l} = 0$, so the net force vanishes in a uniform field — yet the loop still feels a **torque** $\\tau = \\mu B\\sin\\theta$ that twists it to align $\\vec{\\mu}$ with $\\vec{B}$.
+**Closed loop in a uniform field ⇒ zero net force.** For any closed loop $\\oint d\\vec{l} = 0$, so the net force vanishes.
 
-**The motor.** A DC motor uses a commutator to flip the current direction every half-turn, so the torque always pushes the loop the same way around. The magnetic potential energy $U = -\\vec{\\mu}\\cdot\\vec{B} = -\\mu B\\cos\\theta$ is lowest when aligned — the loop "wants" to rotate toward that configuration.`
+**Closed loop in a NONuniform field ⇒ net force.** Put a rectangular loop beside a long straight wire, in the same plane. The field $B = \\mu_0 I_1/(2\\pi r)$ is stronger at the near side than at the far side. The two sides perpendicular to the wire feel equal and opposite forces that cancel, but the two sides parallel to the wire do not:
+
+$F_{\\text{net}} = \\frac{\\mu_0 I_1 I_2 L}{2\\pi}\\left(\\frac{1}{a} - \\frac{1}{a + w}\\right)$
+
+where $L$ is the length of the parallel sides, $a$ the distance to the near side, and $w$ the loop's width. The near side wins, so the loop is pulled **toward** the wire when its near-side current is parallel to $I_1$.`
     },
     {
       id: 'physicsc-magnetic-fields-em-p2-worked',
       type: 'text' as const,
-      content: `### Worked Example — Torque on a Loop and Integrating Force
+      content: `### Worked Example — Net Force on a Loop Beside a Long Wire
 
-A rectangular coil of $N = 50$ turns, width $w = 0.10\\text{ m}$ and height $h = 0.20\\text{ m}$, carries $I = 2.0\\text{ A}$ in a uniform field $B = 0.30\\text{ T}$. The coil's normal makes $\\theta = 30^\\circ$ with $\\vec{B}$. Find the torque.
+A long straight wire carries $I_1 = 20\\text{ A}$. A rectangular loop in the same plane carries $I_2 = 5.0\\text{ A}$; its sides parallel to the wire have length $L = 0.30\\text{ m}$, the near side is $a = 0.050\\text{ m}$ from the wire, and the far side is $0.15\\text{ m}$ from it. The near-side current runs parallel to $I_1$. Find the net force on the loop.
 
-**Step 1 — Magnetic moment.** $\\mu = NIA = NI(wh) = (50)(2.0)(0.10\\times0.20) = (50)(2.0)(0.020) = 2.0\\ \\text{A}\\cdot\\text{m}^2$.
+**Step 1 — Near side.** $F_{\\text{near}} = \\frac{\\mu_0 I_1 I_2 L}{2\\pi a} = \\frac{(2\\times10^{-7})(20)(5.0)(0.30)}{0.050} = \\frac{6.0\\times10^{-6}}{0.050} = 1.2\\times10^{-4}\\text{ N}$, toward the wire (parallel currents attract).
 
-**Step 2 — Apply the torque law.** $\\tau = \\mu B\\sin\\theta = (2.0)(0.30)\\sin30^\\circ = (0.60)(0.50) = 0.30\\ \\text{N}\\cdot\\text{m}$.
+**Step 2 — Far side.** $F_{\\text{far}} = \\frac{6.0\\times10^{-6}}{0.15} = 4.0\\times10^{-5}\\text{ N}$, away from the wire (its current is antiparallel to $I_1$).
 
-**Why the cross product? (calculus view).** For a curved or angled wire, the total force is the line integral $\\vec{F} = I\\int d\\vec{l}\\times\\vec{B}$. In a *uniform* field $\\vec{B}$ can come outside the integral: $\\vec{F} = I\\left(\\int d\\vec{l}\\right)\\times\\vec{B}$. For a **closed loop**, $\\int d\\vec{l} = 0$, so the **net force is zero** — but the torque is generally nonzero, which is exactly what spins a motor. The two horizontal sides of our coil carry opposite-direction currents, producing forces that form a couple of magnitude $\\tau = \\mu B\\sin\\theta$.`
+**Step 3 — The perpendicular sides.** Each element of the top side has a partner on the bottom side at the same distance carrying current the opposite way, so their forces cancel.
+
+**Step 4 — Net force.** $F_{\\text{net}} = 1.2\\times10^{-4} - 4.0\\times10^{-5} = 8.0\\times10^{-5}\\text{ N}$, toward the wire.
+
+**Takeaway.** "Closed loop ⇒ zero force" holds only in a **uniform** field. In a field that varies with position, add the force on each side separately.`
     },
     {
       id: 'physicsc-magnetic-fields-em-p2-mcq1',
@@ -74,21 +80,21 @@ A rectangular coil of $N = 50$ turns, width $w = 0.10\\text{ m}$ and height $h =
           },
           {
             question: 'The net magnetic force on a closed current loop in a UNIFORM field is:',
-            options: ['Always zero', 'Equal to $BIL$', 'Equal to $\\mu B$', 'Maximum when $\\theta = 0$'],
+            options: ['Always zero', 'Equal to $BIL$', 'Equal to $4BIL$', 'Maximum when $\\theta = 0$'],
             correctAnswer: 0,
-            explanation: 'Since $\\oint d\\vec{l} = 0$, $\\vec{F} = I(\\oint d\\vec{l})\\times\\vec{B} = 0$. The loop can still feel a net torque, however.'
+            explanation: 'Since $\\oint d\\vec{l} = 0$, $\\vec{F} = I(\\oint d\\vec{l})\\times\\vec{B} = 0$: the forces on opposite sides cancel. This holds only when the field is uniform.'
           },
           {
-            question: 'A current loop experiences MAXIMUM torque when its magnetic moment $\\vec{\\mu}$ is oriented:',
-            options: ['Parallel to $\\vec{B}$', 'Antiparallel to $\\vec{B}$', 'Perpendicular to $\\vec{B}$', 'At 45° to $\\vec{B}$'],
-            correctAnswer: 2,
-            explanation: '$\\tau = \\mu B\\sin\\theta$ is maximum at $\\theta = 90^\\circ$ (moment perpendicular to the field) and zero when aligned.'
+            question: 'A rectangular loop lies beside a long straight wire, in the same plane. The loop’s near side carries current parallel to the wire’s current. The net magnetic force on the loop points:',
+            options: ['Toward the wire', 'Away from it', 'Nowhere (zero)', 'Along the wire'],
+            correctAnswer: 0,
+            explanation: 'The near side (parallel current) is attracted and the far side (antiparallel) is repelled, but the field is stronger at the near side, so attraction wins. The zero-force rule applies only in a uniform field.'
           },
           {
-            question: 'The magnetic dipole moment of an $N$-turn loop of area $A$ carrying current $I$ is:',
-            options: ['$IA$', '$NIA$', '$NI/A$', '$NA/I$'],
-            correctAnswer: 1,
-            explanation: '$\\mu = NIA$, directed along the loop normal by the right-hand rule.'
+            question: 'Two long parallel wires $0.20$ m apart each carry $10$ A. The force per meter of length between them is:',
+            options: ['$1.0\\times10^{-4}$ N/m', '$2.0\\times10^{-4}$ N/m', '$5.0\\times10^{-5}$ N/m', '$6.3\\times10^{-4}$ N/m'],
+            correctAnswer: 0,
+            explanation: '$F/L = \\mu_0 I_1 I_2/(2\\pi d) = (2\\times10^{-7})(10)(10)/0.20 = 1.0\\times10^{-4}$ N/m. Leaving out the $2\\pi$ gives $6.3\\times10^{-4}$ N/m.'
           },
           {
             question: 'A wire makes a 30° angle with a 0.40 T field and carries 5.0 A over a length of 0.50 m. The force on it is:',
@@ -97,10 +103,10 @@ A rectangular coil of $N = 50$ turns, width $w = 0.10\\text{ m}$ and height $h =
             explanation: '$F = BIL\\sin\\theta = (0.40)(5.0)(0.50)\\sin30^\\circ = (1.0)(0.50) = 0.50$ N.'
           },
           {
-            question: 'The potential energy of a magnetic dipole in a field is $U = -\\vec{\\mu}\\cdot\\vec{B}$. The orientation of lowest energy (most stable) is when $\\vec{\\mu}$ is:',
-            options: ['Perpendicular to $\\vec{B}$', 'Parallel to $\\vec{B}$', 'Antiparallel to $\\vec{B}$', 'At 60° to $\\vec{B}$'],
-            correctAnswer: 1,
-            explanation: '$U = -\\mu B\\cos\\theta$ is minimized at $\\theta = 0$ (parallel), just as a compass needle settles aligned with the field.'
+            question: 'A horizontal wire of mass $0.020$ kg and length $0.50$ m lies perpendicular to a horizontal $0.40$ T field. What current makes the magnetic force hold it up against gravity ($g = 9.8$ m/s²)?',
+            options: ['$0.98$ A', '$0.49$ A', '$2.0$ A', '$0.098$ A'],
+            correctAnswer: 0,
+            explanation: 'Set $BIL = mg$: $I = mg/(BL) = (0.020)(9.8)/((0.40)(0.50)) = 0.196/0.20 = 0.98$ A, with the current directed so that $I\\vec{L}\\times\\vec{B}$ points up.'
           }
         ]
       }

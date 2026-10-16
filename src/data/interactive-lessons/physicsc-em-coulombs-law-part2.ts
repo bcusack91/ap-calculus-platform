@@ -43,13 +43,13 @@ $= (9 \\times 10^9)\\frac{4 \\times 10^{-12}}{0.09} = 0.4$ N (repulsive) ✅
           {
                     "question": "If the distance between two charges doubles, the force:",
                     "options": [
-                              "Decreases to 1/4",
-                              "Decreases to 1/2",
-                              "Doubles",
-                              "Quadruples"
+                              "One-fourth as large",
+                              "Half as large",
+                              "Twice as large",
+                              "Four times larger"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "$F \\\\propto 1/r^2$. If $r \\to 2r$, $F \\to F/4$."
+                    "explanation": "$F \\propto 1/r^2$, so doubling $r$ divides the force by $2^2 = 4$; halving or doubling the force would mean a $1/r$ or $r$ dependence."
           }
 ]
       }
@@ -83,11 +83,11 @@ $= (9 \\times 10^9)\\frac{4 \\times 10^{-12}}{0.09} = 0.4$ N (repulsive) ✅
 **Concept Check** 🔍
     `,
       exercise: {
-        dropdowns: [{"label":"Two positive charges experience a force that is","options":["Repulsive","Attractive","Zero","Perpendicular"]},{"label":"Coulomb's law applies to","options":["Point charges","Extended objects only","Magnetic poles","Gravitational fields"]}],
+        dropdowns: [{"label":"Two positive charges experience a force that is","options":["Repulsive","Attractive","Zero","Perpendicular"]},{"label":"Coulomb's law applies directly to","options":["Point charges","Magnetic poles","Moving currents","Neutral masses"]}],
         correctAnswers: ["Repulsive","Point charges"],
         hint1: "Like charges...",
         hint2: "The law is derived for point charges.",
-        explanation: "Like charges repel. Coulomb's law is strictly for point charges (or can be applied to spherical charge distributions)."
+        explanation: "Like charges repel. Coulomb's law is written for point charges; outside a spherically symmetric charge it still works with $r$ measured from the center."
       }
     },
     {
@@ -115,13 +115,13 @@ $= (9 \\times 10^9)\\frac{4 \\times 10^{-12}}{0.09} = 0.4$ N (repulsive) ✅
           {
                     "question": "Coulomb's law has the same mathematical form as:",
                     "options": [
-                              "Newton's Law of Gravitation",
-                              "Newton's Second Law",
-                              "Ohm's Law",
-                              "Hooke's Law"
+                              "Newton's law of gravitation",
+                              "Hooke's law for an ideal spring",
+                              "Newton's second law of motion",
+                              "Ohm's law for an ohmic resistor"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Both are inverse-square laws: $F \\\\propto 1/r^2$."
+                    "explanation": "Both are inverse-square laws in the product of two source quantities: $F \\propto q_1q_2/r^2$ and $F \\propto m_1m_2/r^2$."
           }
 ]
       }

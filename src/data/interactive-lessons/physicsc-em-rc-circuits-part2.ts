@@ -125,7 +125,7 @@ After $5\\tau$, less than $1\\%$ remains — the discharge is essentially comple
       question: 'During discharge, which graph correctly shows $V_C$ vs. $t$?',
       options: [
         'Exponential decay from $V_0$ to $0$',
-        'Exponential growth from $0$ to $V_0$',
+        'Exponential growth to $V_0$',
         'Linear decrease from $V_0$ to $0$',
         'Constant at $V_0$'
       ],

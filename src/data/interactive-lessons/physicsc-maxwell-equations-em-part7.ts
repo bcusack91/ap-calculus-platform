@@ -11,38 +11,20 @@ export const physCEMMaxwellPart7Data = {
 ---
 
 ### The Big Picture
-
 Maxwell's four equations describe ALL of classical electromagnetism:
 
-1. **Gauss (E):** Charges → E fields
-2. **Gauss (B):** No magnetic monopoles
-3. **Faraday:** Changing B → E
-4. **Ampere-Maxwell:** Currents + changing E → B
+1. **Gauss for E:** $\\oint \\vec{E} \\cdot d\\vec{A} = Q_{enc}/\\varepsilon_0$ — charges create electric fields
+2. **Gauss for B:** $\\oint \\vec{B} \\cdot d\\vec{A} = 0$ — no magnetic monopoles; field lines close
+3. **Faraday:** $\\oint \\vec{E} \\cdot d\\vec{l} = -d\\Phi_B/dt$ — changing magnetic flux creates a circulating electric field
+4. **Ampère + Maxwell's addition:** currents create magnetic fields (quantitative), and so does a changing electric field (qualitative only)
 
-Together they predict EM waves traveling at $c = \\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$.
+| Skill | Where you used it |
+|---|---|
+| Choose a Gaussian surface or Amperian loop | Spheres, coaxial cylinders, pillboxes, circles, rectangles |
+| Integrate a density | $Q_{enc} = \\int \\rho\\,dV$, $I_{enc} = \\int J\\,dA$, $\\Phi_B = \\int B\\,dA$ |
+| Differentiate a flux | EMF and induced $\\vec{E}$ from Faraday's law |
 
 > 🔑 "Maxwell's equations are the most beautiful equations in physics." — Richard Feynman`
-    },
-    {
-      id: 'physicsc-maxwell-equations-em-p7-worked',
-      type: 'text' as const,
-      content: `### 📝 Worked Example — Synthesis: From Fields to Power
-
-A laser beam in vacuum has peak electric field $E_0 = 2.0 \\times 10^3 \\text{ N/C}$ and a circular cross-section of radius $r = 1.0 \\text{ mm}$. Find its average intensity and total power.
-
-**Step 1 — Average intensity from $E_0$.** Using the Poynting time-average,
-
-$I = \\frac{1}{2}c\\varepsilon_0 E_0^2 = \\frac{1}{2}(3.0 \\times 10^8)(8.85 \\times 10^{-12})(2.0 \\times 10^3)^2 \\approx 5.3 \\times 10^3 \\text{ W/m}^2$
-
-**Step 2 — Beam cross-sectional area.** A circle of radius $r$:
-
-$A = \\pi r^2 = \\pi (1.0 \\times 10^{-3})^2 \\approx 3.14 \\times 10^{-6} \\text{ m}^2$
-
-**Step 3 — Power = intensity × area.**
-
-$\\mathcal{P} = I A = (5.3 \\times 10^3)(3.14 \\times 10^{-6}) \\approx 1.7 \\times 10^{-2} \\text{ W}$
-
-> 🔑 This single chain — $E_0 \\to I \\to \\mathcal{P}$ — ties together the field, energy-density, and Poynting-vector ideas from the whole unit.`
     },
     {
       id: 'physicsc-maxwell-equations-em-p7-mcq1',
@@ -59,28 +41,58 @@ $\\mathcal{P} = I A = (5.3 \\times 10^3)(3.14 \\times 10^{-6}) \\approx 1.7 \\ti
             explanation: 'There are exactly four Maxwell\'s equations, together covering all of classical electromagnetism.'
           },
           {
-            question: 'Which pair of equations together imply that a changing field of one type regenerates the other, sustaining an EM wave?',
-            options: ['The two Gauss laws', 'Faraday and Ampere-Maxwell', 'Gauss (E) and Faraday', 'Gauss (B) and Ampere-Maxwell'],
-            correctAnswer: 1,
-            explanation: 'Faraday (changing $\\vec{B} \\to \\vec{E}$) and Ampere-Maxwell (changing $\\vec{E} \\to \\vec{B}$) feed each other, producing a self-propagating wave.'
+            question: 'Which equation states that a changing magnetic flux produces an induced electric field?',
+            options: ['Faraday\'s law', 'Gauss\'s law', 'Ampère\'s law', 'Gauss\'s law for magnetism'],
+            correctAnswer: 0,
+            explanation: 'Faraday\'s law, $\\oint \\vec{E} \\cdot d\\vec{l} = -d\\Phi_B/dt$, links a changing magnetic flux to a circulating electric field. Ampère\'s law goes the other way, from currents to magnetic fields.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'physicsc-maxwell-equations-em-p7-worked',
+      type: 'text' as const,
+      content: `### 📝 Worked Example — Synthesis: Wire Field → Flux → EMF
+
+A long straight wire carries a current that increases as $I(t) = (2.0 \\text{ A/s})\\,t$. A square loop of side $\\ell = 0.10 \\text{ m}$ lies in the same plane, with its near side $a = 0.050 \\text{ m}$ from the wire and its far side at $0.15 \\text{ m}$. Find the EMF induced in the loop.
+
+**Step 1 — Field of the wire (Ampère's law).** $B(r) = \\dfrac{\\mu_0 I}{2\\pi r}$, perpendicular to the loop's plane.
+
+**Step 2 — Flux by integration.** Strips of width $dr$ and length $\\ell$:
+$\\Phi_B = \\int_{a}^{3a} \\frac{\\mu_0 I}{2\\pi r}\\,\\ell\\,dr = \\frac{\\mu_0 I \\ell}{2\\pi}\\ln 3 = (2 \\times 10^{-7})(0.10)(1.10)\\,I = (2.2 \\times 10^{-8})\\,I$
+
+**Step 3 — EMF (Faraday's law).**
+$|\\mathcal{E}| = \\frac{d\\Phi_B}{dt} = (2.2 \\times 10^{-8})\\frac{dI}{dt} = (2.2 \\times 10^{-8})(2.0) = 4.4 \\times 10^{-8} \\text{ V}$
+
+**Step 4 — Direction (Lenz's law).** The flux into the loop is increasing, so the induced current circulates to make a field opposite to the wire's field inside the loop.
+
+> 🔑 One problem, three laws: Ampère gives $B$, integration gives $\\Phi_B$, Faraday gives $\\mathcal{E}$.`
+    },
+    {
+      id: 'physicsc-maxwell-equations-em-p7-mcq2',
+      type: 'multiple-choice' as const,
+      content: `
+**Check Your Understanding** 🔍
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'In the worked example, the magnitude of the EMF induced in the square loop is:',
+            options: ['$4.4 \\times 10^{-8}$ V', '$2.2 \\times 10^{-8}$ V', '$8.8 \\times 10^{-8}$ V', '$4.0 \\times 10^{-8}$ V'],
+            correctAnswer: 0,
+            explanation: '$|\\mathcal{E}| = (\\mu_0 \\ell/2\\pi)\\ln 3\\,(dI/dt) = (2 \\times 10^{-7})(0.10)(1.10)(2.0) = 4.4 \\times 10^{-8}$ V. Forgetting $dI/dt$ gives $2.2 \\times 10^{-8}$; replacing $\\ln 3$ by 1 gives $4.0 \\times 10^{-8}$.'
           },
           {
-            question: 'The quantity $\\frac{1}{\\sqrt{\\mu_0\\varepsilon_0}}$ evaluates to approximately:',
-            options: ['$9 \\times 10^9$', '$3 \\times 10^8$', '$6.67 \\times 10^{-11}$', '$1.6 \\times 10^{-19}$'],
-            correctAnswer: 1,
-            explanation: 'It equals the speed of light, $c \\approx 3 \\times 10^8$ m/s — Maxwell\'s landmark prediction.'
+            question: 'Besides currents, which of these also produces a magnetic field, according to Maxwell\'s addition?',
+            options: ['A changing electric field', 'A static charge', 'A steady field', 'A magnetic monopole'],
+            correctAnswer: 0,
+            explanation: 'Maxwell\'s addition to Ampère\'s law: a changing electric field creates a magnetic field. Static charges and constant electric fields do not, and monopoles do not exist.'
           },
           {
-            question: 'A wave\'s average intensity is $I = \\frac{1}{2}c\\varepsilon_0 E_0^2$. The total power through an area $A$ is:',
-            options: ['$I/A$', '$IA$', '$I + A$', '$Ic$'],
-            correctAnswer: 1,
-            explanation: 'Power equals intensity (power per area) times the area: $\\mathcal{P} = IA$.'
-          },
-          {
-            question: 'Which statement best summarizes Maxwell\'s contribution beyond the earlier laws?',
-            options: ['He proved gravity is electromagnetic', 'He added displacement current, unifying the laws and predicting light as an EM wave', 'He discovered the electron', 'He measured $G$'],
-            correctAnswer: 1,
-            explanation: 'Adding the displacement-current term made the equations self-consistent and revealed that oscillating fields propagate as light at speed $c$.'
+            question: 'Which statement best summarizes Maxwell\'s own contribution to these laws?',
+            options: ['He showed a changing $\\vec{E}$ field also creates $\\vec{B}$', 'He proved that gravity is electromagnetic', 'He discovered the electron and its charge', 'He measured the gravitational constant $G$'],
+            correctAnswer: 0,
+            explanation: 'Gauss, Faraday, and Ampère supplied the earlier laws; Maxwell added the changing-electric-field term to Ampère\'s law, completing the set of four equations.'
           }
         ]
       }

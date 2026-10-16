@@ -120,7 +120,7 @@ $C_{eq} = 2$ μF ✅
                               "$4C$"
                     ],
                     "correctAnswer": 0,
-                    "explanation": "Series: $1/C_{eq} = 1/C + 1/C = 2/C$, so $C_{eq} = C/2$."
+                    "explanation": "Series: $1/C_{eq} = 1/C + 1/C = 2/C$, so $C_{eq} = C/2$, less than either capacitor."
           }
 ]
       }

@@ -70,33 +70,25 @@ $P_{6} = \\frac{V_{\\text{par}}^2}{R} = \\frac{(4)^2}{6} = \\frac{16}{6} \\appro
     {
       id: 'physicsc-dc-circuits-em-p2-worked2',
       type: 'text' as const,
-      content: `### Worked Example (Calculus) — Resistance of a Tapered Conductor
+      content: `### Worked Example (Calculus) — Resistivity That Varies Along a Resistor
 
-**Problem.** A conductor of resistivity $\\rho$ and length $L$ is shaped so its circular cross-section grows linearly: the radius is $a$ at one end and $b$ at the other. Find its total resistance by treating it as infinitely many thin disks **in series**.
+**Problem.** A resistor of length $L$ and uniform cross-sectional area $A$ is made of a material whose resistivity increases along its length: $\\rho(x) = \\rho_0\\left(1 + \\dfrac{x}{L}\\right)$. Find its total resistance by treating it as infinitely many thin slices **in series**.
 
-**Step 1 — Slice it.** A disk of thickness $dx$ at position $x$ (from the small end) behaves like a tiny series resistor:
+**Step 1 — Slice it.** A slice of thickness $dx$ at position $x$ behaves like a tiny series resistor:
 
-$dR = \\frac{\\rho\\,dx}{A(x)} = \\frac{\\rho\\,dx}{\\pi r(x)^2}$
+$dR = \\frac{\\rho(x)\\,dx}{A}$
 
-**Step 2 — Express the radius as a function of $x$.** Linear taper from $a$ to $b$ over length $L$:
+**Step 2 — Add the slices by integrating.** Slices in series add, so
 
-$r(x) = a + \\frac{(b - a)}{L}\\,x$
+$R = \\int_0^{L}\\frac{\\rho_0}{A}\\left(1 + \\frac{x}{L}\\right)dx$
 
-**Step 3 — Sum the series of slices by integrating.**
+**Step 3 — Evaluate.**
 
-$R = \\int_0^{L}\\frac{\\rho\\,dx}{\\pi\\,r(x)^2} = \\frac{\\rho}{\\pi}\\int_0^{L}\\frac{dx}{\\left(a + \\frac{b-a}{L}x\\right)^2}$
+$R = \\frac{\\rho_0}{A}\\left[x + \\frac{x^2}{2L}\\right]_0^{L} = \\frac{\\rho_0}{A}\\left(L + \\frac{L}{2}\\right) = \\frac{3\\rho_0 L}{2A}$
 
-**Step 4 — Substitute** $u = a + \\frac{b-a}{L}x$, so $du = \\frac{b-a}{L}\\,dx$:
+**Check.** The resistivity runs from $\\rho_0$ to $2\\rho_0$ and grows linearly, so its average is $1.5\\rho_0$; a uniform resistor of resistivity $1.5\\rho_0$ gives the same $R = 1.5\\rho_0 L/A$.
 
-$R = \\frac{\\rho}{\\pi}\\cdot\\frac{L}{b-a}\\int_{a}^{b}\\frac{du}{u^2} = \\frac{\\rho L}{\\pi(b-a)}\\left[-\\frac{1}{u}\\right]_{a}^{b}$
-
-**Step 5 — Evaluate.**
-
-$R = \\frac{\\rho L}{\\pi(b-a)}\\left(\\frac{1}{a} - \\frac{1}{b}\\right) = \\frac{\\rho L}{\\pi(b-a)}\\cdot\\frac{b-a}{ab} = \\frac{\\rho L}{\\pi a b}$
-
-**Check.** If $a = b = r$ (a uniform cylinder), this reduces to $R = \\rho L/(\\pi r^2) = \\rho L/A$, the familiar formula.
-
-**Takeaway.** When the cross-section varies, slice the conductor into series disks and *integrate* $dR = \\rho\\,dx/A(x)$ — series combination becomes a definite integral.`
+**Takeaway.** When the resistivity changes along the length, slice the resistor into series pieces and *integrate* $dR = \\rho(x)\\,dx/A$ — series combination becomes a definite integral.`
     },
     {
       id: 'physicsc-dc-circuits-em-p2-deepen',
@@ -133,7 +125,7 @@ Notice the "opposite" resistor appears in the numerator of the current divider �
           },
           {
             question: 'In a series circuit, if one resistor is removed (open):',
-            options: ['Current increases', 'Current stops', 'Nothing changes', 'Voltage drops'],
+            options: ['Current increases', 'Current stops', 'Nothing changes', 'Current decreases slightly'],
             correctAnswer: 1,
             explanation: 'A series circuit is a single path. Removing a resistor breaks the loop, so the current stops.'
           },
@@ -146,8 +138,8 @@ Notice the "opposite" resistor appears in the numerator of the current divider �
           {
             question: 'Two resistors carry the same current. This tells you they are connected in:',
             options: ['Parallel', 'Series', 'A short circuit', 'Cannot be determined'],
-            correctAnswer: 1,
-            explanation: 'Identical current through both elements (with no junction between them) is the defining property of a series connection.'
+            correctAnswer: 3,
+            explanation: 'Series elements always share one current, but two equal resistors in parallel also carry equal currents, so equal currents alone do not tell you the connection.'
           },
           {
             question: 'A $3\\,\\Omega$ and a $6\\,\\Omega$ resistor are in parallel across a $12\\,\\text{V}$ source. The ratio of current in the $3\\,\\Omega$ resistor to that in the $6\\,\\Omega$ resistor is:',

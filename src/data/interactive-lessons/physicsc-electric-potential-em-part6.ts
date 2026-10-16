@@ -115,10 +115,10 @@ Faced with an unfamiliar configuration, route yourself quickly:
           {
             question: 'A charge is moved between two fixed points along two different paths in an electrostatic field. The work done by the field is:',
             options: [
-              'Larger on the longer path',
-              'The same on both paths',
+              'Larger on the long path',
+              'Equal for the two routes',
               'Zero on any path',
-              'Dependent on the speed'
+              'Set by the speed'
             ],
             correctAnswer: 1,
             explanation: 'The electrostatic force is conservative, so $W_{\\text{field}} = q(V_i - V_f)$ depends only on the endpoints, not on the path taken.'

@@ -93,10 +93,10 @@ Note: $P_{\\text{batt}}$ decays as $e^{-t/\\tau}$ while $P_R$ decays as $e^{-2t/
       type: 'mcq' as const,
       question: 'Why is exactly $50\\%$ of the battery\'s energy dissipated as heat during RC charging, regardless of $R$?',
       options: [
-        'Because the integral $\\int_0^\\infty I^2 R\\,dt = \\frac{1}{2}Q_{\\max}\\mathcal{E}$ always equals $\\frac{1}{2}C\\mathcal{E}^2$, which is independent of $R$',
-        'Because $R$ cancels out when $\\tau = RC$ is substituted',
-        'This is an approximation that only works for small $R$',
-        'It depends on $R$; the 50% result is a coincidence'
+        'The source gives $Q\\mathcal{E}$; the capacitor stores half',
+        'The capacitor always draws exactly half the current',
+        'It holds only approximately, for very small $R$',
+        'It is a coincidence; the fraction depends on $R$'
       ],
       correctAnswer: 0,
       explanation: 'The total charge delivered is $Q_{\\max} = C\\mathcal{E}$, so the battery does $W = Q_{\\max}\\mathcal{E} = C\\mathcal{E}^2$. The capacitor stores $\\frac{1}{2}C\\mathcal{E}^2$. The difference is $\\frac{1}{2}C\\mathcal{E}^2$ dissipated in $R$ — always half, regardless of $R$.'
@@ -147,7 +147,7 @@ This rate is zero at $t = 0$ (no charge stored yet) and at $t = \\infty$ (curren
 | Efficiency | $50\\%$ (always, regardless of $R$!) |
 | Max $dU_C/dt$ | at $t = \\tau\\ln 2$ |
 
-> **Key insight:** During charging, exactly half the battery's energy is dissipated as heat, regardless of resistance. This "50% rule" is a consequence of the linear relationship $V = Q/C$ and is unique to RC circuits.`
+> **Key insight:** During charging, exactly half the battery's energy is dissipated as heat, regardless of resistance. This "50% rule" is a consequence of charging a capacitor ($V = Q/C$) from a constant-emf battery.`
     }
   ]
 };

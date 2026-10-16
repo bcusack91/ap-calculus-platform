@@ -4,50 +4,34 @@ export const physCEMMaxwellPart2Data = {
     {
       id: 'physicsc-maxwell-equations-em-p2-intro',
       type: 'text' as const,
-      content: `# 🔄 Displacement Current
+      content: `# 🧲 Gauss's Law for Magnetism
 
-**Part 2 of 7 — Maxwell's Key Insight**
-
----
-
-### The Problem with Ampere's Law
-
-Consider a charging capacitor — current flows in the wire but not between the plates. Ampere's law gives different answers depending on which surface you choose!
+**Part 2 of 7 — Gauss's Law for Magnetism and Closed Field Lines**
 
 ---
 
-### Maxwell's Fix: Displacement Current
+### Maxwell's Second Equation
+$$\\oint \\vec{B} \\cdot d\\vec{A} = 0$$
 
-$I_d = \\varepsilon_0 \\frac{d\\Phi_E}{dt}$
+The net magnetic flux through **any** closed surface is zero: every magnetic field line that enters a closed surface also leaves it. The reason is that magnetic fields come from **dipoles** — current loops, moving charges, and aligned atomic dipoles — never from isolated poles (monopoles).
 
-This changing electric flux acts like a current for purposes of producing a magnetic field.
+| | Gauss's law for $\\vec{E}$ | Gauss's law for $\\vec{B}$ |
+|---|---|---|
+| Right-hand side | $Q_{enc}/\\varepsilon_0$ | $0$ |
+| Field lines | Start on $+$ charges, end on $-$ charges | Form **closed loops** |
+| Sources | Charges | Dipoles only |
 
-$\\oint \\vec{B} \\cdot d\\vec{l} = \\mu_0(I + I_d)$
+---
 
-> 🔑 Between capacitor plates, there is no real current — but the changing $\\vec{E}$ creates a magnetic field just as if there were current.`
-    },
-    {
-      id: 'physicsc-maxwell-equations-em-p2-worked',
-      type: 'text' as const,
-      content: `### 📝 Worked Example — Displacement Current in a Capacitor
+### Bar Magnets and Earth
+- Outside a bar magnet the field points from the north pole to the south pole; **inside** it runs from south back to north, closing each loop.
+- Cut a magnet in half and you get **two complete dipoles** — no lone north or south pole ever appears.
+- Earth's field is approximately that of a dipole. A compass's north end points toward geographic north, so the pole near geographic north is a magnetic **south** pole.
 
-A parallel-plate capacitor with circular plates of radius $R = 5.0 \\text{ cm}$ is charged so the electric field between the plates increases at $\\frac{dE}{dt} = 2.0 \\times 10^{12} \\text{ V/m per s}$. Find the displacement current.
+---
 
-**Step 1 — Write the electric flux.** For a uniform field perpendicular to plates of area $A = \\pi R^2$:
-
-$\\Phi_E = E A = E\\,\\pi R^2$
-
-**Step 2 — Differentiate with respect to time.** Since $A$ is constant, the derivative passes through:
-
-$\\frac{d\\Phi_E}{dt} = \\pi R^2 \\frac{dE}{dt}$
-
-**Step 3 — Multiply by $\\varepsilon_0$.** The displacement current is
-
-$I_d = \\varepsilon_0 \\frac{d\\Phi_E}{dt} = \\varepsilon_0 \\pi R^2 \\frac{dE}{dt}$
-
-$I_d = (8.85 \\times 10^{-12})\\,\\pi (0.050)^2 (2.0 \\times 10^{12}) \\approx 0.14 \\text{ A}$
-
-> 🔑 The displacement current between the plates exactly equals the conduction current in the wire — that is what makes Ampere-Maxwell consistent for any surface.`
+### Sign Convention for Closed Surfaces
+Area vectors on a closed surface point **outward**: flux leaving the surface counts as positive, flux entering counts as negative. Gauss's law for magnetism says these always cancel.`
     },
     {
       id: 'physicsc-maxwell-equations-em-p2-mcq1',
@@ -58,34 +42,68 @@ $I_d = (8.85 \\times 10^{-12})\\,\\pi (0.050)^2 (2.0 \\times 10^{12}) \\approx 0
       exercise: {
         questions: [
           {
-            question: 'Displacement current is proportional to:',
-            options: ['Electric field', 'Rate of change of electric flux', 'Magnetic flux', 'Charge density'],
-            correctAnswer: 1,
-            explanation: '$I_d = \\varepsilon_0 \\frac{d\\Phi_E}{dt}$ — it is the rate of change of electric flux times $\\varepsilon_0$.'
+            question: 'A closed surface surrounds only the north-pole end of a bar magnet. The net magnetic flux through the surface is:',
+            options: ['Zero', 'Positive, as lines leave the north pole', 'Negative, as lines enter the surface', 'Positive and equal to $BA$'],
+            correctAnswer: 0,
+            explanation: 'Field lines leaving the north pole outside the magnet are matched by lines running back through the magnet\'s interior into the surface, so the net flux is zero, as $\\oint \\vec{B} \\cdot d\\vec{A} = 0$ requires.'
           },
           {
-            question: 'While a capacitor charges, the displacement current between the plates compared to the conduction current in the wire is:',
-            options: ['Zero', 'Half as large', 'Exactly equal', 'Twice as large'],
-            correctAnswer: 2,
-            explanation: 'Charge conservation forces $I_d$ between the plates to equal the conduction current $I$ in the wire, so Ampere-Maxwell gives the same $\\vec{B}$ for any surface spanning the loop.'
+            question: 'A bar magnet is cut in half. Each half:',
+            options: ['Has both a north and a south pole', 'Is a single isolated pole', 'Loses its magnetism entirely', 'Is magnetic only near the cut'],
+            correctAnswer: 0,
+            explanation: 'Magnetism comes from aligned atomic dipoles throughout the material, so each piece is still a complete dipole with two poles.'
           },
           {
-            question: 'A capacitor is fully charged and connected to a steady DC source (no further charging). The displacement current between the plates is:',
-            options: ['Maximum', 'Zero, because $\\frac{d\\Phi_E}{dt} = 0$', 'Equal to the leakage current', 'Negative'],
-            correctAnswer: 1,
-            explanation: 'Once $\\vec{E}$ is constant, $\\frac{d\\Phi_E}{dt} = 0$, so $I_d = \\varepsilon_0 \\frac{d\\Phi_E}{dt} = 0$.'
+            question: 'Inside a bar magnet, its magnetic field points:',
+            options: ['From its south pole to its north pole', 'From its north pole to its south pole', 'Nowhere, since $B = 0$ inside', 'Toward its center from both ends'],
+            correctAnswer: 0,
+            explanation: 'Outside, the field runs north to south; inside it runs south to north, so each field line closes on itself.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'physicsc-maxwell-equations-em-p2-worked',
+      type: 'text' as const,
+      content: `### 📝 Worked Example — Flux Through Closed Surfaces
+
+**(a) Uniform field.** A closed cylinder of radius $0.050 \\text{ m}$ has its axis along a uniform field $B = 0.40 \\text{ T}$. Find the flux through each part.
+
+- Cap where the field leaves: $\\Phi = +BA = (0.40)\\pi(0.050)^2 = +3.14 \\times 10^{-3} \\text{ Wb}$
+- Cap where the field enters: $\\Phi = -3.14 \\times 10^{-3} \\text{ Wb}$
+- Curved side: $\\vec{B}$ runs along the surface, so $\\vec{B} \\cdot d\\vec{A} = 0$
+
+Total: $0$, as Gauss's law for magnetism demands.
+
+**(b) Nonuniform field.** A closed surface is made of a flat disk and a dome. $2.5 \\times 10^{-4} \\text{ Wb}$ of magnetic flux **enters** through the disk. Without knowing anything else about the field, the dome must carry exactly $2.5 \\times 10^{-4} \\text{ Wb}$ **outward**, because the total must be zero.
+
+> 🔑 For any open surface, the magnetic flux depends only on its boundary: any two surfaces sharing the same edge carry the same flux. That is why "the flux through a loop" is well defined in Faraday's law.`
+    },
+    {
+      id: 'physicsc-maxwell-equations-em-p2-mcq2',
+      type: 'multiple-choice' as const,
+      content: `
+**Check Your Understanding** 🔍
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A closed surface is a flat disk plus a dome. If $2.5 \\times 10^{-4}$ Wb of magnetic flux enters through the disk, the flux through the dome is:',
+            options: ['$2.5 \\times 10^{-4}$ Wb outward', '$2.5 \\times 10^{-4}$ Wb inward', 'Zero', '$5.0 \\times 10^{-4}$ Wb outward'],
+            correctAnswer: 0,
+            explanation: 'The net flux through the closed surface must be zero, so the $2.5 \\times 10^{-4}$ Wb that enters through the disk must leave through the dome.'
           },
           {
-            question: 'For circular capacitor plates, the magnetic field between them at radius $r < R$ is found by applying Ampere-Maxwell to a circle of radius $r$. The enclosed displacement current scales as:',
-            options: ['$r^0$ (constant)', '$r$', '$r^2$', '$1/r$'],
-            correctAnswer: 2,
-            explanation: 'The enclosed flux is $\\Phi_E = E\\,\\pi r^2$, so $I_{d,enc} \\propto r^2$. (The resulting field $B \\propto r$ inside the plates.)'
+            question: 'A compass needle\'s north end points toward geographic north. The magnetic pole located near Earth\'s geographic north pole is:',
+            options: ['A magnetic south pole', 'A magnetic north pole', 'Not a pole at all', 'Both poles at once'],
+            correctAnswer: 0,
+            explanation: 'Opposite poles attract, so the north end of the compass is pulled toward a magnetic south pole, which lies near geographic north.'
           },
           {
-            question: 'Why did Ampere\'s original law need correcting?',
-            options: ['It violated energy conservation', 'It gave different $\\vec{B}$ for different surfaces bounded by the same loop', 'It predicted monopoles', 'It only worked for DC'],
-            correctAnswer: 1,
-            explanation: 'For a charging capacitor, one surface threads conduction current while a bulging surface between the plates threads none — Ampere\'s law was ambiguous until the displacement-current term fixed it.'
+            question: 'Electric field lines can begin and end on charges, but magnetic field lines cannot, because:',
+            options: ['Monopoles do not exist', 'Magnetic fields are always uniform', 'Magnetic fields are always weaker', 'Magnetic field lines never curve'],
+            correctAnswer: 0,
+            explanation: 'A field line could end only on a magnetic "charge", and none exists ($\\oint \\vec{B} \\cdot d\\vec{A} = 0$), so magnetic field lines close on themselves.'
           }
         ]
       }

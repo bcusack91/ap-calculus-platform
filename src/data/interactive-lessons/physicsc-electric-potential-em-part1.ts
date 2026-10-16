@@ -120,13 +120,13 @@ $F = -\\frac{dU}{dr} = \\frac{kq_1q_2}{r^2}$
           {
             question: 'The work required to assemble a configuration of charges equals:',
             options: [
-              'The total kinetic energy of the charges',
-              'The total electric potential energy of the configuration',
-              'Always zero for a stable configuration',
-              'The sum of the charges'
+              'The total kinetic energy the charges end up with',
+              'The system’s total electric potential energy',
+              'Zero whenever the final arrangement is in equilibrium',
+              'The sum of the pairwise forces times the spacing'
             ],
             correctAnswer: 1,
-            explanation: 'The external work to bring charges from infinity to their positions equals the configuration’s total potential energy $U$.'
+            explanation: 'The external work to bring charges slowly from infinity to their positions equals the configuration’s total potential energy $U$; the forces change with distance, so force times spacing does not give it.'
           },
           {
             question: 'If every charge in a configuration is doubled, the total potential energy of the configuration:',

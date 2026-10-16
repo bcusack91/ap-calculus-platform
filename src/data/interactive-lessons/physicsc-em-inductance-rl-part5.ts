@@ -40,66 +40,45 @@ The energy is stored in the **magnetic field** created by the current flowing th
     {
       id: 'indrl5-density',
       type: 'text' as const,
-      content: `### Magnetic Energy Density
+      content: `### Where the Stored Energy Goes
+The energy $\\frac{1}{2}LI^2$ in an inductor's magnetic field can be dissipated in a resistor or used to charge a capacitor, and the transfer obeys energy conservation.
 
-For a solenoid: $B = \\mu_0 nI$ and $L = \\mu_0 n^2 A\\ell$.
+**Into a resistor:** when the source is removed, the decaying current heats $R$ until all of $\\frac{1}{2}LI_0^2$ is gone (shown in Part 6).
 
-$$U = \\frac{1}{2}LI^2 = \\frac{1}{2}(\\mu_0 n^2 A\\ell)I^2 = \\frac{(\\mu_0 nI)^2}{2\\mu_0}(A\\ell) = \\frac{B^2}{2\\mu_0} \\cdot (\\text{volume})$$
-
-The **magnetic energy density** is:
-
-$$\\boxed{u_B = \\frac{B^2}{2\\mu_0}}$$
-
-This is a general result valid for **any** magnetic field, not just solenoids.
+**Into a capacitor:** connect an inductor carrying current $I$ across an uncharged capacitor (ideal wires). The capacitor charges until the current stops, so
+$$\\frac{1}{2}LI^2 = \\frac{Q_{\\max}^2}{2C} = \\frac{1}{2}CV_{\\max}^2$$
 
 ### Example Calculation
-
-A 1 T field stores:
-
-$$u_B = \\frac{(1)^2}{2(4\\pi \\times 10^{-7})} = \\frac{1}{8\\pi \\times 10^{-7}} \\approx 4 \\times 10^5 \\text{ J/m}^3$$
-
-> For comparison, the electric energy density $u_E = \\frac{1}{2}\\epsilon_0 E^2$: a field of $3 \\times 10^6$ V/m (near breakdown) stores only $\\sim 40$ $J/m^{3}$.`
+A 2.0 H inductor carrying 3.0 A stores $U = \\frac{1}{2}(2.0)(3.0)^2 = 9.0$ J. Transferred to a $50\\,\\mu$F capacitor:
+$$V_{\\max} = \\sqrt{\\frac{2U}{C}} = \\sqrt{\\frac{2(9.0)}{50 \\times 10^{-6}}} = \\sqrt{3.6 \\times 10^5} = 600 \\text{ V}$$
+> A modest current in a large inductor can push a small capacitor to a high voltage.`
     },
     {
       id: 'indrl5-mcq2',
       type: 'mcq' as const,
-      question: 'The magnetic energy density in a region where $B = 0.02$ T is:',
-      options: ['$\\approx 159$ $J/m^{3}$', '$\\approx 1590$ $J/m^{3}$', '$\\approx 15.9$ $J/m^{3}$', '$\\approx 1.59$ $J/m^{3}$'],
+      question: 'An ideal $0.50$ H inductor carrying $2.0$ A is connected across an uncharged $20\\,\\mu$F capacitor. The maximum capacitor voltage is:',
+      options: ['$316$ V', '$158$ V', '$447$ V', '$632$ V'],
       correctAnswer: 0,
-      explanation: '$u_B = B^2/(2\\mu_0) = (4 \\times 10^{-4})/(2 \\times 4\\pi \\times 10^{-7}) = (4 \\times 10^{-4})/(8\\pi \\times 10^{-7}) \\approx 4 \\times 10^{-4}/(2.51 \\times 10^{-6}) \\approx 159$ $J/m^{3}$.'
+      explanation: '$\\frac{1}{2}LI^2 = \\frac{1}{2}CV^2$, so $V = I\\sqrt{L/C} = 2.0\\sqrt{0.50/(20 \\times 10^{-6})} = 2.0(158) \\approx 316$ V. Leaving out $I$ gives 158 V; using $I^2$ instead of $I$ gives 632 V.'
     },
     {
       id: 'indrl5-energy-budget',
       type: 'text' as const,
       content: `### Energy Budget During RL Charging
-
-As current grows from 0 to $I_f = \\mathcal{E}/R$:
-
-**Energy from the source:**
-
-$$U_{\\text{source}} = \\int_0^\\infty \\mathcal{E} I\\,dt = \\mathcal{E}\\int_0^\\infty \\frac{\\mathcal{E}}{R}(1-e^{-t/\\tau})\\,dt$$
-
-$$= \\frac{\\mathcal{E}^2}{R}\\left[t + \\tau e^{-t/\\tau}\\right]_0^\\infty$$
-
-This integral diverges! But during the transient (finite time), we can compute:
-
-$$U_{\\text{source}}(\\text{transient only}) = \\frac{\\mathcal{E}^2\\tau}{R} = \\frac{L\\mathcal{E}^2}{R^2}$$
-
-Actually, the steady-state power $\\mathcal{E}^2/R$ continues forever. The finite transient energy is:
-
-$$U_{\\text{stored}} = \\frac{1}{2}LI_f^2 = \\frac{L\\mathcal{E}^2}{2R^2}$$
-
-$$U_{\\text{dissipated in transient}} = \\frac{L\\mathcal{E}^2}{2R^2}$$
-
-> Like RC circuits: during the transient, equal energy is stored and dissipated.`
+Multiply the loop equation $\\mathcal{E} = IR + L\\frac{dI}{dt}$ by $I$:
+$$\\underbrace{\\mathcal{E}I}_{\\text{battery power}} = \\underbrace{I^2R}_{\\text{heating}} + \\underbrace{LI\\frac{dI}{dt}}_{\\text{rate of storage}}$$
+- **Just after closing:** $I$ is small, so the battery's (small) power output goes mostly into building the magnetic field.
+- **As $t \\to \\infty$:** $dI/dt \\to 0$, so all of the battery's power heats the resistor, and the inductor holds a fixed $\\frac{1}{2}LI_f^2 = \\frac{L\\mathcal{E}^2}{2R^2}$.
+- **At any instant:** the rate of storage is $\\frac{dU}{dt} = LI\\frac{dI}{dt} = \\mathcal{E}I - I^2R$.
+> Energy conservation at every instant: what the battery supplies either heats $R$ or is stored in $L$.`
     },
     {
       id: 'indrl5-mcq3',
       type: 'mcq' as const,
-      question: 'An RL circuit with $\\mathcal{E} = 12$ V, $R = 4\\,\\Omega$, $L = 2$ H. The total energy dissipated in $R$ during the transient (from $I = 0$ to $I \\approx I_f$) is:',
-      options: ['9 J', '18 J', '4.5 J', '36 J'],
+      question: 'An RL circuit has $\\mathcal{E} = 12$ V, $R = 4\\,\\Omega$, $L = 2$ H. At the instant the current is $1.5$ A, the rate at which energy is being stored in the inductor is:',
+      options: ['9 W', '18 W', '4.5 W', '36 W'],
       correctAnswer: 0,
-      explanation: '$I_f = 12/4 = 3$ A. $U_{\\text{stored}} = \\frac{1}{2}(2)(9) = 9$ J. By the equal-energy result, $U_{\\text{dissipated}} = 9$ J also.'
+      explanation: 'Battery power $\\mathcal{E}I = 18$ W; resistor heating $I^2R = 9$ W; the rest, $18 - 9 = 9$ W, is stored. Check: $dI/dt = (12 - 6)/2 = 3$ A/s and $LI\\,dI/dt = (2)(1.5)(3) = 9$ W.'
     },
     {
       id: 'indrl5-mcq4',
@@ -113,7 +92,7 @@ $$U_{\\text{dissipated in transient}} = \\frac{L\\mathcal{E}^2}{2R^2}$$
       id: 'indrl5-mcq5',
       type: 'mcq' as const,
       question: 'When an RL circuit is disconnected from its source and discharges through $R$, all the inductor energy is:',
-      options: ['Dissipated as heat in the resistor', 'Radiated as electromagnetic waves', 'Stored in the electric field', 'Returned to the source'],
+      options: ['Dissipated as heat in the resistor', 'Kept in the magnetic field', 'Stored in an electric field', 'Returned to the battery as charge'],
       correctAnswer: 0,
       explanation: 'During discharge, $L dI/dt + IR = 0$. All magnetic energy $\\frac{1}{2}LI_0^2$ is converted to thermal energy $\\int I^2R\\,dt$ in the resistor.'
     },
@@ -125,9 +104,9 @@ $$U_{\\text{dissipated in transient}} = \\frac{L\\mathcal{E}^2}{2R^2}$$
 | Formula | Expression |
 |:---:|:---:|
 | Stored energy | $U = \\frac{1}{2}LI^2$ |
-| Energy density | $u_B = B^2/(2\\mu_0)$ |
+| Inductor → capacitor | $\\frac{1}{2}LI^2 = \\frac{Q_{\\max}^2}{2C}$ |
 | Rate of energy storage | $dU/dt = LI\\,dI/dt$ |
-| RL charging energy split | $U_R = U_L = L\\mathcal{E}^2/(2R^2)$ |
+| Power balance (charging) | $\\mathcal{E}I = I^2R + LI\\,dI/dt$ |
 
 > **Next up:** Problem-solving workshop — Part 6.`
     }

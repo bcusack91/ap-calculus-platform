@@ -4,53 +4,34 @@ export const physCEMMaxwellPart5Data = {
     {
       id: 'physicsc-maxwell-equations-em-p5-intro',
       type: 'text' as const,
-      content: `# 💡 Energy and Momentum of EM Waves
+      content: `# 🧭 Gaussian Surfaces vs. Amperian Loops
 
-**Part 5 of 7 — Poynting Vector and Radiation Pressure**
-
----
-
-### Poynting Vector
-
-$\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$
-
-$|\\vec{S}|$ = power per unit area $(W/m^{2})$
-
-Average intensity: $I = \\frac{1}{2}c\\varepsilon_0 E_0^2 = \\frac{E_0 B_0}{2\\mu_0}$
+**Part 5 of 7 — Choosing Gaussian Surfaces and Amperian Loops**
 
 ---
 
-### Radiation Pressure
+### The Same Strategy, Two Laws
 
-| Surface | Pressure |
-|---------|----------|
-| Perfect absorber | $P = \\frac{I}{c}$ |
-| Perfect reflector | $P = \\frac{2I}{c}$ |
+| | Gauss's law | Ampère's law |
+|---|---|---|
+| Integral | $\\oint \\vec{E} \\cdot d\\vec{A}$ over a **closed surface** | $\\oint \\vec{B} \\cdot d\\vec{l}$ around a **closed path** |
+| Counts | Enclosed charge $Q_{enc}$ | Enclosed current $I_{enc}$ |
+| Goal | $\\vec{E}$ perpendicular to the surface (constant) or parallel to it | $\\vec{B}$ along the path (constant) or perpendicular to it |
 
-EM waves carry momentum: $p = \\frac{U}{c}$ (for absorbed radiation)
+### Matching the Symmetry
 
-> 🔑 Light exerts pressure — this is the basis of solar sails and laser propulsion.`
-    },
-    {
-      id: 'physicsc-maxwell-equations-em-p5-worked',
-      type: 'text' as const,
-      content: `### 📝 Worked Example — Intensity and Radiation Force on a Solar Sail
+| Source | Gaussian surface (for $\\vec{E}$) | Amperian loop (for $\\vec{B}$) |
+|---|---|---|
+| Point charge / sphere | Concentric sphere | — |
+| Long line or cylinder | Coaxial cylinder | Circle around the axis |
+| Large plane or slab | Pillbox through the plane | Rectangle through the slab |
+| Long solenoid | — | Rectangle, one side inside |
 
-Sunlight near Earth has intensity $I = 1.36 \\times 10^3 \\text{ W/m}^2$. A reflective solar sail of area $A = 100 \\text{ m}^2$ faces the Sun. Find the force on it and the peak electric field of the sunlight.
-
-**Step 1 — Radiation pressure on a reflector.** A perfect reflector reverses the photon momentum, so
-
-$P = \\frac{2I}{c} = \\frac{2(1.36 \\times 10^3)}{3.0 \\times 10^8} \\approx 9.1 \\times 10^{-6} \\text{ Pa}$
-
-**Step 2 — Force from pressure.** Multiply by the sail area:
-
-$F = P A = (9.1 \\times 10^{-6})(100) \\approx 9.1 \\times 10^{-4} \\text{ N}$
-
-**Step 3 — Peak field from intensity.** Invert $I = \\frac{1}{2}c\\varepsilon_0 E_0^2$:
-
-$E_0 = \\sqrt{\\frac{2I}{c\\varepsilon_0}} = \\sqrt{\\frac{2(1.36 \\times 10^3)}{(3.0 \\times 10^8)(8.85 \\times 10^{-12})}} \\approx 1.0 \\times 10^3 \\text{ N/C}$
-
-> 🔑 Radiation force is tiny but continuous; over months it can meaningfully accelerate a low-mass spacecraft.`
+### When Symmetry Fails
+Both laws are always **true**, but they give a field only with spherical, cylindrical, or planar symmetry (for $\\vec{E}$) or the long-wire, solenoid, slab, and cylinder shapes (for $\\vec{B}$). Otherwise:
+- Few point charges → superpose Coulomb fields.
+- Ring, arc, or finite line of charge → integrate $dE = k\\,dq/r^2$.
+- Current segment, arc, or single loop → use the Biot–Savart law.`
     },
     {
       id: 'physicsc-maxwell-equations-em-p5-mcq1',
@@ -61,40 +42,62 @@ $E_0 = \\sqrt{\\frac{2I}{c\\varepsilon_0}} = \\sqrt{\\frac{2(1.36 \\times 10^3)}
       exercise: {
         questions: [
           {
-            question: 'EM radiation pressure on a perfect reflector is:',
-            options: ['$\\frac{I}{c}$', '$\\frac{2I}{c}$', '$\\frac{I}{c^2}$', 'Zero'],
-            correctAnswer: 1,
-            explanation: 'Reflected light reverses its momentum, transferring twice as much to the surface → pressure $= \\frac{2I}{c}$.'
+            question: 'To find $E$ outside a long, uniformly charged cylinder, the most useful Gaussian surface is:',
+            options: ['A coaxial cylinder', 'A sphere centered on the axis', 'A cube around the cylinder', 'A flat disk across the axis'],
+            correctAnswer: 0,
+            explanation: 'On a coaxial cylinder the radial field is constant and perpendicular to the curved side and parallel to the end caps, so $\\oint \\vec{E} \\cdot d\\vec{A} = E(2\\pi r L)$.'
           },
           {
-            question: 'The Poynting vector $\\vec{S} = \\frac{1}{\\mu_0}\\vec{E} \\times \\vec{B}$ physically represents:',
-            options: ['Energy stored per volume', 'Power transported per unit area', 'Force per unit charge', 'Magnetic flux'],
-            correctAnswer: 1,
-            explanation: '$|\\vec{S}|$ is the instantaneous power per unit area $(W/m^{2})$, and its direction is the direction of energy flow.'
+            question: 'A Gaussian surface must be a ____, while an Amperian loop must be a ____.',
+            options: ['Closed surface; closed path', 'Open surface; closed path', 'Closed path; closed surface', 'Open surface; open path'],
+            correctAnswer: 0,
+            explanation: 'Gauss\'s law integrates flux over a closed surface; Ampère\'s law integrates $\\vec{B} \\cdot d\\vec{l}$ around a closed path.'
           },
           {
-            question: 'If the amplitude $E_0$ of an EM wave is doubled, its intensity $I = \\frac{1}{2}c\\varepsilon_0 E_0^2$ becomes:',
-            options: ['Doubled', 'Halved', 'Four times larger', 'Unchanged'],
-            correctAnswer: 2,
-            explanation: 'Intensity is proportional to $E_0^2$, so doubling the field amplitude multiplies the intensity by $2^2 = 4$.'
+            question: 'Why can\'t Ampère\'s law by itself give the field at the center of a single circular current loop?',
+            options: ['No simple path has $B$ constant along it', 'The loop encloses no current at all', 'Ampère\'s law holds only for solenoids', 'The field at the center is zero'],
+            correctAnswer: 0,
+            explanation: 'Ampère\'s law is still true, but no Amperian path has a constant $B$ along it, so $B$ cannot be pulled out of the integral. Use the Biot–Savart law: $B = \\mu_0 I/(2R)$.'
+          }
+        ]
+      }
+    },
+    {
+      id: 'physicsc-maxwell-equations-em-p5-worked',
+      type: 'text' as const,
+      content: `### 📝 Worked Example — Two Coaxial Problems Side by Side
+
+**(a) Concentric charged cylinders (Gauss).** A long inner cylinder carries charge $+\\lambda$ per length; a thin outer coaxial shell carries $-\\lambda$ per length.
+- Between them: a coaxial Gaussian cylinder encloses $+\\lambda L$, so $E(2\\pi rL) = \\lambda L/\\varepsilon_0$ and $E = \\dfrac{\\lambda}{2\\pi\\varepsilon_0 r}$.
+- Outside both: the enclosed charge is $\\lambda L - \\lambda L = 0$, so $E = 0$.
+
+**(b) Coaxial cable (Ampère).** An inner wire carries current $I$ one way; the outer conducting shell carries $I$ back.
+- Between them: a circular Amperian loop encloses $I$, so $B(2\\pi r) = \\mu_0 I$ and $B = \\dfrac{\\mu_0 I}{2\\pi r}$.
+- Outside both: the net enclosed current is $I - I = 0$, so $B = 0$.
+
+**Numbers for (b):** with $I = 5.0 \\text{ A}$ at $r = 2.0 \\text{ mm}$: $B = \\dfrac{(2 \\times 10^{-7})(5.0)}{2.0 \\times 10^{-3}} = 5.0 \\times 10^{-4} \\text{ T}$.
+
+> 🔑 Same symmetry, same steps: pick the surface or loop, find what it encloses, pull the field out of the integral.`
+    },
+    {
+      id: 'physicsc-maxwell-equations-em-p5-mcq2',
+      type: 'multiple-choice' as const,
+      content: `
+**Check Your Understanding** 🔍
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'A coaxial cable carries current $I$ out along its inner wire and back along its outer shell. Outside the cable, the magnetic field is:',
+            options: ['Zero', '$\\mu_0 I/(2\\pi r)$', '$\\mu_0 I/(\\pi r)$', '$\\mu_0 I/(4\\pi r)$'],
+            correctAnswer: 0,
+            explanation: 'An Amperian circle outside the cable encloses $I - I = 0$, and by symmetry $B$ is constant around it, so $B = 0$. Adding the two currents instead of canceling them gives the $\\mu_0 I/(\\pi r)$ distractor.'
           },
           {
-            question: 'A perfectly absorbing black panel and a perfectly reflecting mirror receive the same intensity. The mirror feels:',
-            options: ['Half the force', 'The same force', 'Twice the force', 'No force'],
-            correctAnswer: 2,
-            explanation: 'An absorber feels $P = I/c$; a reflector feels $P = 2I/c$. The mirror feels twice the radiation force.'
-          },
-          {
-            question: 'EM waves carry momentum. For energy $U$ absorbed by a surface, the momentum delivered is:',
-            options: ['$p = Uc$', '$p = \\frac{U}{c}$', '$p = \\frac{U}{c^2}$', '$p = U$'],
-            correctAnswer: 1,
-            explanation: 'For absorbed radiation, $p = U/c$. This relation underlies radiation pressure and solar-sail propulsion.'
-          },
-          {
-            question: 'The average intensity can be written as $I = \\frac{E_0 B_0}{2\\mu_0}$. This follows from time-averaging $\\vec{S}$, which introduces a factor of:',
-            options: ['$1$', '$\\frac{1}{2}$', '$2$', '$\\pi$'],
-            correctAnswer: 1,
-            explanation: 'Averaging $\\sin^2$ over a cycle gives $\\tfrac{1}{2}$, so the time-averaged Poynting magnitude is $\\frac{E_0 B_0}{2\\mu_0}$.'
+            question: 'In the worked example, the field between the conductors at $r = 2.0$ mm with $I = 5.0$ A is:',
+            options: ['$5.0 \\times 10^{-4}$ T', '$1.0 \\times 10^{-3}$ T', '$2.5 \\times 10^{-4}$ T', '$1.6 \\times 10^{-4}$ T'],
+            correctAnswer: 0,
+            explanation: '$B = \\mu_0 I/(2\\pi r) = (2 \\times 10^{-7})(5.0)/(2.0 \\times 10^{-3}) = 5.0 \\times 10^{-4}$ T; only the inner current is enclosed.'
           }
         ]
       }

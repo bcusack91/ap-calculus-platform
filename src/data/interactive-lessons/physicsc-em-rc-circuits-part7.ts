@@ -55,18 +55,8 @@ A camera flash uses an RC charging circuit. The capacitor charges slowly from a 
 ### Heart defibrillator
 A defibrillator charges a large capacitor ($C \\sim 30{-}70$ μF) to high voltage ($V \\sim 1000{-}5000$ V), then discharges through the patient's chest ($R \\sim 50$ Ω). Time constant $\\sim 2{-}4$ ms matches the needed pulse duration.
 
-### RC filters (frequency domain)
-
-The RC circuit acts as a **low-pass filter**. For an AC input $V_{\\text{in}} = V_0 \\cos(\\omega t)$:
-
-$$\\frac{V_{\\text{out}}}{V_{\\text{in}}} = \\frac{1}{\\sqrt{1 + (\\omega RC)^2}}$$
-
-- $\\omega \\ll 1/\\tau$: output $\\approx$ input (low frequencies pass)
-- $\\omega \\gg 1/\\tau$: output $\\to 0$ (high frequencies blocked)
-- Cutoff frequency: $f_c = 1/(2\\pi RC)$
-
-### Touchscreen debouncing
-RC circuits filter out rapid mechanical switch bouncing. $\\tau \\sim 10$ ms smooths out the contact noise.`
+### Reading a discharge from data
+If a capacitor's voltage falls from $V_0$ to $V$ in time $t$, then $t/\\tau = \\ln(V_0/V)$, so $R = t/\\big(C\\ln(V_0/V)\\big)$. Plotting $\\ln V$ against $t$ gives a straight line of slope $-1/\\tau$ — a standard way to find $RC$ from lab data.`
     },
     {
       id: 'rc7-mcq2',
@@ -90,7 +80,7 @@ RC circuits filter out rapid mechanical switch bouncing. $\\tau \\sim 10$ ms smo
 |:---|:---|
 | Using $V_C = \\mathcal{E}e^{-t/\\tau}$ for charging | That's discharging! Charging: $V_C = \\mathcal{E}(1 - e^{-t/\\tau})$ |
 | Forgetting $V_C$ can't jump | Capacitor voltage is always continuous |
-| Using wrong $R$ for $\\tau$ | In complex circuits, use $R_{\\text{Th}}$ seen by $C$ |
+| Using wrong $R$ for $\\tau$ | In complex circuits, use the equivalent resistance seen by $C$ |
 | Confusing $e^{-t/\\tau}$ with $e^{-2t/\\tau}$ | Power goes as $I^2$, so $P \\propto e^{-2t/\\tau}$ |
 | Not setting up the ODE | On free response, always write KVL → ODE → solution |
 | Wrong sign on $I = dQ/dt$ | Define $I$ direction clearly; $I = +dQ/dt$ for charging |
@@ -120,25 +110,25 @@ RC circuits filter out rapid mechanical switch bouncing. $\\tau \\sim 10$ ms smo
     {
       id: 'rc7-mcq4',
       type: 'mcq' as const,
-      question: 'An RC low-pass filter has $R = 10$ kΩ, $C = 1$ nF. The cutoff frequency $f_c$ is:',
+      question: 'A capacitor charges through $R = 3$ kΩ from a $12$ V battery. At the instant the capacitor voltage is $8$ V, the current in the circuit is:',
       options: [
-        '$\\approx 15.9$ kHz',
-        '$\\approx 159$ kHz',
-        '$\\approx 1.59$ kHz',
-        '$\\approx 100$ kHz'
+        '$1.33$ mA',
+        '$2.67$ mA',
+        '$4.00$ mA',
+        '$0.67$ mA'
       ],
       correctAnswer: 0,
-      explanation: '$f_c = 1/(2\\pi RC) = 1/(2\\pi \\times 10^4 \\times 10^{-9}) = 1/(2\\pi \\times 10^{-5}) = 10^5/(2\\pi) \\approx 15{,}915$ Hz $\\approx 15.9$ kHz.'
+      explanation: 'Loop rule: $\\mathcal{E} - IR - V_C = 0$, so $I = (12 - 8)/3000 \\approx 1.33$ mA. Dividing $V_C$ or the full emf by $R$ ignores the other element in the loop.'
     },
     {
       id: 'rc7-mcq5',
       type: 'mcq' as const,
       question: 'Which best describes what happens to the total charge that passes through $R$ during complete discharge of a capacitor?',
       options: [
-        'Total charge through $R$ equals $Q_0$: $\\int_0^\\infty I\\,dt = Q_0$',
-        'Total charge is $Q_0/e$',
-        'Total charge is $Q_0/2$',
-        'Total charge is infinite'
+        'It equals $Q_0$',
+        'It equals $Q_0/e$',
+        'It equals $Q_0/2$',
+        'It grows without limit'
       ],
       correctAnswer: 0,
       explanation: '$\\int_0^\\infty I\\,dt = \\int_0^\\infty \\frac{Q_0}{\\tau}e^{-t/\\tau}dt = Q_0[-e^{-t/\\tau}]_0^\\infty = Q_0(0-(-1)) = Q_0$. All charge flows through $R$.'
