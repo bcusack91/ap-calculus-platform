@@ -85,7 +85,7 @@ $F_{net} = 2kq^2/d^2$ (rightward) ✅
     `,
       exercise: {
         dropdowns: [{"label":"When using superposition, each force is calculated","options":["Independently of the others","From the total charge only","For the nearest charge only","After the charges move apart"]},{"label":"Vector addition requires considering","options":["Magnitude and direction","Magnitude alone","Direction alone","The sign of the charge alone"]}],
-        correctAnswers: ["Independently of the others","Both magnitude and direction"],
+        correctAnswers: ["Independently of the others","Magnitude and direction"],
         hint1: "Each pair interaction is separate.",
         hint2: "Vectors have magnitude and direction.",
         explanation: "Superposition: calculate each force independently. Vectors require both magnitude and direction."
