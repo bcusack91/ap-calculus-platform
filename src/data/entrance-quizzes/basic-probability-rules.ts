@@ -1,195 +1,146 @@
 /**
- * Entrance Quiz — Basic Probability Rules (AP Statistics)
+ * Entrance Quiz — Probability Rules (AP Statistics)
+ * Lesson: probability-rules-apstats (also rendered by conditional-probability, independence).
  * 14 questions · 7 parts (2 per part)
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Basic Probability'
+const P2 = 'Addition Rule'
+const P3 = 'Multiplication Rule'
+const P4 = 'Conditional Probability'
+const P5 = 'Independence'
+const P6 = 'Problem-Solving Workshop'
+const P7 = 'Review & Applications'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Basic Probability
   {
-    id: 'bpr-ent-1a',
-    question: 'What is the range of possible values for the probability of any event?',
-    options: ['−1 to 1', '0 to 1', '0 to 100', '0 to infinity'],
-    correctIndex: 1,
-    explanation: 'By definition, the probability of any event must be between 0 and 1 inclusive. P(sample space) = 1 and P(impossible event) = 0.',
+    id: 'pr-ent-1a',
+    question: 'Two fair six-sided dice are rolled. What is the probability that the sum is at most 10?',
+    options: ['$\\frac{11}{12}$', '$\\frac{1}{12}$', '$\\frac{5}{6}$', '$\\frac{8}{9}$'],
+    correctIndex: 0,
+    explanation: 'Use the complement: a sum of 11 or 12 happens in 3 of the 36 equally likely outcomes (5-6, 6-5, 6-6), so $P = 1 - 3/36 = 33/36 = 11/12$. The value $1/12$ is the complement itself.',
     partNumber: 1,
-    partTitle: 'Basic Probability',
+    partTitle: P1,
   },
   {
-    id: 'bpr-ent-1b',
-    question: 'If P(A) = 0.65, what is $P(A^{c})$?',
-    options: ['0.65', '0.35', '1.65', '−0.65'],
-    correctIndex: 1,
-    explanation: 'By the complement rule, $P(A^{c})$ = 1 − P(A) = 1 − 0.65 = 0.35.',
-    partNumber: 1,
-    partTitle: 'Basic Probability',
-  },
-
-  // Part 2: Addition Rule
-  {
-    id: 'bpr-ent-2a',
-    question: 'For any two events A and B, P(A or B) equals:',
-    options: [
-      'P(A) + P(B)',
-      'P(A) × P(B)',
-      'P(A) + P(B) − P(A and B)',
-      'P(A) − P(B) + P(A and B)',
-    ],
+    id: 'pr-ent-1b',
+    question: 'A basketball player makes 70% of her free throws in the long run. Which statement is correct?',
+    options: ['She will make exactly 7 of her next 10 free throws', 'After 3 misses in a row she is due to make the next', 'Over 1,000 shots her rate will likely be near 70%', 'Her rate over 10 shots will be closer to 70% than over 1,000'],
     correctIndex: 2,
-    explanation: 'The general addition rule states P(A or B) = P(A) + P(B) − P(A and B) to avoid double-counting the overlap.',
-    partNumber: 2,
-    partTitle: 'Addition Rule',
+    explanation: 'By the law of large numbers, the proportion of makes settles near 70% over many shots. Short runs vary a lot, so 7 of 10 is not guaranteed, and past misses do not change the chance on the next shot.',
+    partNumber: 1,
+    partTitle: P1,
   },
   {
-    id: 'bpr-ent-2b',
-    question: 'If A and B are mutually exclusive events, what is P(A and B)?',
-    options: ['P(A) × P(B)', 'P(A) + P(B)', '1', '0'],
+    id: 'pr-ent-2a',
+    question: 'At a school, 45% of students take Spanish, 30% take art, and 12% take both. What percent of students take neither Spanish nor art?',
+    options: ['25%', '37%', '63%', '13%'],
+    correctIndex: 1,
+    explanation: '$P(\\text{Spanish or art}) = 0.45 + 0.30 - 0.12 = 0.63$, so 37% take neither. Getting 25% forgets to add back the overlap that was subtracted twice, and 63% is the union itself.',
+    partNumber: 2,
+    partTitle: P2,
+  },
+  {
+    id: 'pr-ent-2b',
+    question: 'Events $A$ and $B$ have $P(A \\cup B) = 0.70$ and $P(A) = 0.45$. What is the probability that $B$ occurs but $A$ does not?',
+    options: ['0.25', '0.30', '0.55', '0.70'],
+    correctIndex: 0,
+    explanation: 'The union is everything in $A$ plus the part of $B$ outside $A$, so $P(B \\text{ and not } A) = 0.70 - 0.45 = 0.25$. The value 0.55 is $P(\\text{not } A)$ and 0.30 is $P(\\text{neither})$.',
+    partNumber: 2,
+    partTitle: P2,
+  },
+  {
+    id: 'pr-ent-3a',
+    question: 'A box holds 5 good fuses and 3 defective fuses. Two fuses are drawn at random without replacement. What is the probability that both are defective?',
+    options: ['$\\frac{9}{64}$', '$\\frac{3}{28}$', '$\\frac{15}{56}$', '$\\frac{5}{14}$'],
+    correctIndex: 1,
+    explanation: '$P = \\frac{3}{8} \\cdot \\frac{2}{7} = \\frac{6}{56} = \\frac{3}{28}$, because after one defective fuse is removed only 2 of the 7 remaining are defective. $\\frac{9}{64}$ treats the draws as independent, and $\\frac{5}{14}$ is the chance both are good.',
+    partNumber: 3,
+    partTitle: P3,
+  },
+  {
+    id: 'pr-ent-3b',
+    question: 'Each smoke detector in a building works independently with probability 0.80. What is the smallest number of detectors needed so that the probability at least one works is at least 0.99?',
+    options: ['2', '5', '4', '3'],
     correctIndex: 3,
-    explanation: 'Mutually exclusive events cannot occur at the same time, so P(A and B) = 0. Therefore P(A or B) = P(A) + P(B).',
-    partNumber: 2,
-    partTitle: 'Addition Rule',
-  },
-
-  // Part 3: Multiplication Rule
-  {
-    id: 'bpr-ent-3a',
-    question: 'The general multiplication rule states that P(A and B) equals:',
-    options: [
-      'P(A) + P(B|A)',
-      'P(A) × P(B|A)',
-      'P(A) × P(B) + P(A|B)',
-      'P(A or B) × P(B)',
-    ],
-    correctIndex: 1,
-    explanation: 'The general multiplication rule is P(A and B) = P(A) × P(B|A). This works for any two events, whether independent or not.',
+    explanation: '$P(\\text{at least one works}) = 1 - 0.2^n$. Two detectors give $1 - 0.04 = 0.96$, and three give $1 - 0.008 = 0.992$, the first value at or above 0.99.',
     partNumber: 3,
-    partTitle: 'Multiplication Rule',
+    partTitle: P3,
   },
   {
-    id: 'bpr-ent-3b',
-    question: 'If A and B are independent, P(A and B) simplifies to:',
-    options: [
-      'P(A) + P(B)',
-      'P(A) − P(B)',
-      'P(A) × P(B)',
-      'P(A) / P(B)',
-    ],
+    id: 'pr-ent-4a',
+    question: 'A survey of 250 commuters: drives and late 30, drives and on time 120, transit and late 40, transit and on time 60. A commuter is chosen at random. What is $P(\\text{drives} \\mid \\text{late})$?',
+    options: ['0.200', '0.120', '0.429', '0.280'],
     correctIndex: 2,
-    explanation: 'When A and B are independent, P(B|A) = P(B), so the multiplication rule simplifies to P(A and B) = P(A) × P(B).',
-    partNumber: 3,
-    partTitle: 'Multiplication Rule',
-  },
-
-  // Part 4: Conditional Probability
-  {
-    id: 'bpr-ent-4a',
-    question: 'Which formula correctly defines P(B|A)?',
-    options: [
-      'P(A) / P(B)',
-      'P(A and B) / P(B)',
-      'P(A and B) / P(A)',
-      'P(A or B) / P(A)',
-    ],
-    correctIndex: 2,
-    explanation: 'Conditional probability is defined as P(B|A) = P(A and B) / P(A), where P(A) ≠ 0.',
+    explanation: 'Given late restricts attention to the $30 + 40 = 70$ late commuters, and 30 of them drive: $30/70 \\approx 0.429$. The value 0.200 is $P(\\text{late} \\mid \\text{drives}) = 30/150$, and 0.120 is $P(\\text{drives and late})$.',
     partNumber: 4,
-    partTitle: 'Conditional Probability',
+    partTitle: P4,
   },
   {
-    id: 'bpr-ent-4b',
-    question: 'A two-way table shows 40 seniors who play sports and 60 seniors who do not, out of 200 total seniors. What is P(plays sports | senior)?',
-    options: ['40/200 = 0.20', '40/100 = 0.40', '60/200 = 0.30', '40/60 = 0.67'],
-    correctIndex: 1,
-    explanation: 'P(plays sports | senior) restricts to the 100 seniors (40 + 60) and finds the proportion who play sports: 40/100 = 0.40.',
+    id: 'pr-ent-4b',
+    question: 'Of the laptops a factory makes, 3% are defective. An inspection flags 90% of defective laptops and 5% of good ones. A laptop is flagged. About what is the probability it is defective?',
+    options: ['0.358', '0.900', '0.027', '0.076'],
+    correctIndex: 0,
+    explanation: 'Flagged and defective is $0.03(0.90) = 0.027$; flagged and good is $0.97(0.05) = 0.0485$, so $P(\\text{flagged}) = 0.0755$ and $P(\\text{defective} \\mid \\text{flagged}) = 0.027/0.0755 \\approx 0.358$. The value 0.900 reverses the condition.',
     partNumber: 4,
-    partTitle: 'Conditional Probability',
-  },
-
-  // Part 5: Independence
-  {
-    id: 'bpr-ent-5a',
-    question: 'Events A and B are independent if and only if:',
-    options: [
-      'P(A and B) = 0',
-      'P(A|B) = P(A)',
-      'P(A or B) = P(A) + P(B)',
-      'P(A) + P(B) = 1',
-    ],
-    correctIndex: 1,
-    explanation: 'Independence means knowing B occurred does not change the probability of A: P(A|B) = P(A). Equivalently, P(A and B) = P(A)·P(B).',
-    partNumber: 5,
-    partTitle: 'Independence',
+    partTitle: P4,
   },
   {
-    id: 'bpr-ent-5b',
-    question: 'Which scenario involves independent events?',
-    options: [
-      'Drawing two cards without replacement from a standard deck',
-      'Rolling a die and then flipping a coin',
-      'Selecting two students from the same class without replacement',
-      'Drawing marbles from a bag without replacement',
-    ],
-    correctIndex: 1,
-    explanation: 'Rolling a die and flipping a coin are independent because the outcome of one does not affect the other. Drawing without replacement creates dependent events.',
-    partNumber: 5,
-    partTitle: 'Independence',
-  },
-
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'bpr-ent-6a',
-    question: 'P(A) = 0.3 and P(B) = 0.5. If A and B are independent, what is P(A and B)?',
-    options: ['0.80', '0.15', '0.50', '0.20'],
-    correctIndex: 1,
-    explanation: 'For independent events, P(A and B) = P(A) × P(B) = 0.3 × 0.5 = 0.15.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
-  },
-  {
-    id: 'bpr-ent-6b',
-    question: 'If two events are mutually exclusive (with nonzero probabilities), can they also be independent?',
-    options: [
-      'Yes, always',
-      'Only if P(A) = P(B)',
-      'No, never',
-      'Only if P(A) + P(B) = 1',
-    ],
+    id: 'pr-ent-5a',
+    question: 'Among 400 voters: under 40 and in favor 90, under 40 and opposed 60, 40 or older and in favor 150, 40 or older and opposed 100. Are age group and opinion independent?',
+    options: ['They are independent, since most voters favor it', 'Dependent, because more voters aged 40+ favor it', 'Independent, as 60% of each group is in favor', 'They are dependent, since the groups differ in size'],
     correctIndex: 2,
-    explanation: 'If A and B are mutually exclusive and both have nonzero probability, then P(A and B) = 0 ≠ P(A)·P(B), so they cannot be independent.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop',
+    explanation: '$P(\\text{favor} \\mid \\text{under 40}) = 90/150 = 0.6$ and $P(\\text{favor} \\mid \\text{40+}) = 150/250 = 0.6$; equal conditional proportions mean independence. Raw counts and group sizes do not decide it.',
+    partNumber: 5,
+    partTitle: P5,
   },
-
-  // Part 7: Review & Applications
   {
-    id: 'bpr-ent-7a',
-    question: 'The law of large numbers states that as the number of trials increases:',
-    options: [
-      'The probability of each outcome increases',
-      'The observed proportion approaches the true probability',
-      'Every possible outcome will eventually occur',
-      'The variance of the outcomes doubles',
-    ],
+    id: 'pr-ent-5b',
+    question: 'Events $A$ and $B$ have $P(A) = 0.3$ and $P(B) = 0.4$. Which value of $P(A \\cap B)$ would make them independent, and which would make them mutually exclusive?',
+    options: ['Independent if 0; mutually exclusive if 0.12', 'Independent if 0.12; mutually exclusive if 0', 'Independent if 0.7; mutually exclusive if 0', 'Independent if 0.12; mutually exclusive if 0.7'],
     correctIndex: 1,
-    explanation: 'The law of large numbers says that as the number of trials grows, the observed relative frequency of an event approaches its true probability.',
-    partNumber: 7,
-    partTitle: 'Review & Applications',
+    explanation: 'Independence requires $P(A \\cap B) = P(A)P(B) = 0.12$; mutually exclusive events cannot occur together, so $P(A \\cap B) = 0$. The value 0.7 is $P(A) + P(B)$, which is never an intersection here.',
+    partNumber: 5,
+    partTitle: P5,
   },
   {
-    id: 'bpr-ent-7b',
-    question: 'On the AP Statistics exam, when solving a probability problem you should:',
-    options: [
-      'Only write the final numerical answer',
-      'Skip showing formulas if the answer is obvious',
-      'Show probability rules, formulas, and calculations, not just the final answer',
-      'Only define your events without calculating',
-    ],
+    id: 'pr-ent-6a',
+    question: 'At a company, 60% of employees work on site. Of on-site employees, 25% use the gym app; of remote employees, 40% use it. An employee is chosen at random. What is the probability the employee uses the app?',
+    options: ['0.65', '0.325', '0.31', '0.15'],
     correctIndex: 2,
-    explanation: 'The AP exam requires you to show your work: define events, state rules/formulas used, and show calculations to earn full credit.',
+    explanation: 'Add the two branches: $0.60(0.25) + 0.40(0.40) = 0.15 + 0.16 = 0.31$. The value 0.325 averages the two rates without weighting by group size, and 0.15 is only the on-site branch.',
+    partNumber: 6,
+    partTitle: P6,
+  },
+  {
+    id: 'pr-ent-6b',
+    question: 'A bag holds 4 red and 6 blue marbles. Two marbles are drawn at random without replacement. What is the probability that they are different colors?',
+    options: ['0.267', '0.480', '0.240', '0.533'],
+    correctIndex: 3,
+    explanation: 'Red then blue is $\\frac{4}{10} \\cdot \\frac{6}{9}$ and blue then red is $\\frac{6}{10} \\cdot \\frac{4}{9}$, so the total is $\\frac{48}{90} \\approx 0.533$. The value 0.267 counts only one order, and 0.480 treats the draws as independent.',
+    partNumber: 6,
+    partTitle: P6,
+  },
+  {
+    id: 'pr-ent-7a',
+    question: 'A survey of 200 students: 9th graders with a pet 48, 9th graders without a pet 32, 10th graders with a pet 72, 10th graders without a pet 48. A student is chosen at random. What is $P(\\text{9th grader or has a pet})$?',
+    options: ['1.00', '0.24', '0.60', '0.76'],
+    correctIndex: 3,
+    explanation: '$P(\\text{9th}) = 80/200 = 0.40$ and $P(\\text{pet}) = 120/200 = 0.60$, with $48/200 = 0.24$ in both, so $P = 0.40 + 0.60 - 0.24 = 0.76$. Adding without subtracting the overlap gives 1.00.',
     partNumber: 7,
-    partTitle: 'Review & Applications',
+    partTitle: P7,
+  },
+  {
+    id: 'pr-ent-7b',
+    question: 'For events $A$ and $B$, $P(A) = 0.5$ and $P(A \\mid B) = 0.2$. Which statement must be true?',
+    options: ['A and B are independent events', 'A and B are dependent events', 'A and B are mutually exclusive', 'P(B | A) must equal 0.2 as well'],
+    correctIndex: 1,
+    explanation: 'Knowing $B$ occurred changes the chance of $A$ from 0.5 to 0.2, so the events are dependent. Mutually exclusive would require $P(A \\mid B) = 0$, and $P(B \\mid A)$ generally differs from $P(A \\mid B)$.',
+    partNumber: 7,
+    partTitle: P7,
   },
 ]
 
@@ -198,13 +149,5 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
-  return [
-    { partNumber: 1, partTitle: 'Basic Probability' },
-    { partNumber: 2, partTitle: 'Addition Rule' },
-    { partNumber: 3, partTitle: 'Multiplication Rule' },
-    { partNumber: 4, partTitle: 'Conditional Probability' },
-    { partNumber: 5, partTitle: 'Independence' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' },
-  ]
+  return [P1, P2, P3, P4, P5, P6, P7].map((partTitle, i) => ({ partNumber: i + 1, partTitle }))
 }

@@ -1,215 +1,148 @@
 /**
- * Entrance Quiz — Scatterplots & Correlation (AP Statistics)
+ * Entrance Quiz — Linear Regression (AP Statistics)
+ * Lesson: linear-regression-apstats (also rendered by least-squares-regression,
+ * residuals-residual-plots, coefficient-determination).
  * 14 questions · 7 parts (2 per part)
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Scatterplots and Correlation'
+const P2 = 'Least-Squares Regression Line'
+const P3 = 'Residuals and Residual Plots'
+const P4 = 'Coefficient of Determination'
+const P5 = 'Unusual Points, Extrapolation and Interpreting the Line'
+const P6 = 'Problem-Solving Workshop'
+const P7 = 'Review & Applications'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Creating Scatterplots
   {
-    id: 'sc-ent-1a',
-    question: 'When creating a scatterplot, which variable goes on the x-axis?',
-    options: [
-      'The response variable',
-      'The explanatory (independent) variable',
-      'The variable with the larger range',
-      'Either variable — it does not matter'
-    ],
+    id: 'lr-ent-1a',
+    question: 'A scatterplot of a car\'s fuel efficiency against its speed rises smoothly from 20 to 50 mph and then falls smoothly from 50 to 80 mph, with little scatter; $r = 0.05$. Which conclusion is correct?',
+    options: ['Speed has almost no effect on fuel efficiency', 'The variables are strongly related, but not linearly', 'There is a weak positive linear relationship', 'The data must contain a recording error'],
     correctIndex: 1,
-    explanation: 'In a scatterplot, the explanatory variable is placed on the x-axis and the response variable on the y-axis. The scatterplot displays the relationship between two quantitative variables.',
+    explanation: 'The correlation measures only linear association. A tight arch is a strong curved relationship that still gives $r$ near 0, so a near-zero $r$ does not mean speed has little effect.',
     partNumber: 1,
-    partTitle: 'Creating Scatterplots'
+    partTitle: P1,
   },
   {
-    id: 'sc-ent-1b',
-    question: 'Each point on a scatterplot represents:',
-    options: [
-      'The mean of one variable',
-      'One observation\'s pair of values for the two variables',
-      'The difference between two observations',
-      'A category of data'
-    ],
-    correctIndex: 1,
-    explanation: 'Each point on a scatterplot represents a single observation\'s pair of values — one value for the explanatory variable and one for the response variable.',
+    id: 'lr-ent-1b',
+    question: 'For 30 students, the correlation between hours of sleep and number of caffeinated drinks per day is $r = -0.74$, and the scatterplot is linear with no unusual points. Which statement is correct?',
+    options: ['A moderately strong negative linear association', 'A strong positive linear association', 'Proof that caffeine reduces students\' sleep', 'A weak association, since r is negative'],
+    correctIndex: 0,
+    explanation: 'The sign of $r$ gives the direction and its size gives the strength, so $-0.74$ is a moderately strong negative linear association. A negative $r$ is not weak, and correlation from observational data cannot prove causation.',
     partNumber: 1,
-    partTitle: 'Creating Scatterplots'
+    partTitle: P1,
   },
-  // Part 2: Interpreting Patterns
   {
-    id: 'sc-ent-2a',
-    question: 'When describing a scatterplot, which characteristics should you address?',
-    options: [
-      'Mean, median, mode, and range',
-      'Direction, form, strength, and unusual features',
-      'Slope, intercept, and $r^{2}$',
-      'Hypotheses and p-value'
-    ],
-    correctIndex: 1,
-    explanation: 'Describe a scatterplot using direction (positive/negative), form (linear/curved), strength (strong/moderate/weak), and any unusual features (outliers, clusters).',
+    id: 'lr-ent-2a',
+    question: 'Technology gives the slope of the least-squares line for predicting $y$ from $x$ as $b = 2.4$. The means are $\\bar{x} = 15$ and $\\bar{y} = 50$. What is the predicted $y$ when $x = 20$?',
+    options: ['98', '134', '62', '48'],
+    correctIndex: 2,
+    explanation: 'The line passes through $(\\bar{x}, \\bar{y})$, so $a = 50 - 2.4(15) = 14$ and $\\hat{y} = 14 + 2.4(20) = 62$. Equivalently, $x$ is 5 above its mean, so $\\hat{y}$ is $2.4(5) = 12$ above 50.',
     partNumber: 2,
-    partTitle: 'Interpreting Patterns'
+    partTitle: P2,
   },
   {
-    id: 'sc-ent-2b',
-    question: 'A scatterplot shows that as the number of hours studied increases, test scores tend to increase. This is an example of:',
-    options: [
-      'Negative association',
-      'No association',
-      'Positive association',
-      'A lurking variable'
-    ],
+    id: 'lr-ent-2b',
+    question: 'A regression of monthly electricity cost (dollars) on home size (hundreds of square feet) gives $\\hat{y} = 18 + 6.5x$. Which is the correct interpretation of 6.5?',
+    options: ['Each extra 100 sq ft adds \\$6.50 to every home\'s cost', 'Each extra square foot adds \\$6.50 to the predicted cost', 'Each extra 100 sq ft adds \\$6.50 to the predicted cost', 'Each extra 100 sq ft adds \\$18 to the predicted cost'],
     correctIndex: 2,
-    explanation: 'Positive association means that as x increases, y tends to increase. Here, more hours studied is associated with higher test scores.',
+    explanation: 'Because $x$ is measured in hundreds of square feet, the slope is the predicted increase in monthly cost per extra 100 square feet. It describes predicted values, not a guaranteed change for every home, and \\$18 is the intercept.',
     partNumber: 2,
-    partTitle: 'Interpreting Patterns'
+    partTitle: P2,
   },
-  // Part 3: Correlation Coefficient r
   {
-    id: 'sc-ent-3a',
-    question: 'The correlation coefficient r measures:',
-    options: [
-      'The slope of the best-fit line',
-      'The strength and direction of a linear relationship between two quantitative variables',
-      'Whether one variable causes the other',
-      'The percentage of data that falls on the line'
-    ],
-    correctIndex: 1,
-    explanation: 'r measures the strength and direction of a LINEAR relationship. Its value ranges from −1 to 1, where values near ±1 indicate strong linear relationships.',
+    id: 'lr-ent-3a',
+    question: 'The line $\\hat{y} = 4.2 + 0.9x$ predicts a plant\'s height (cm) from days of growth. On day 20, one plant is 20.5 cm tall. What is its residual, and what does it say?',
+    options: ['1.7 cm; the line underpredicts its height', '-1.7 cm; the line underpredicts its height', '1.7 cm; the line overpredicts its height', '-1.7 cm; the line overpredicts its height'],
+    correctIndex: 3,
+    explanation: 'The prediction is $4.2 + 0.9(20) = 22.2$ cm, so the residual is $20.5 - 22.2 = -1.7$ cm. A negative residual means the point lies below the line: the model predicted more than the plant actually grew.',
     partNumber: 3,
-    partTitle: 'Correlation Coefficient r'
+    partTitle: P3,
   },
   {
-    id: 'sc-ent-3b',
-    question: 'If r = −1, what does the scatterplot look like?',
-    options: [
-      'Points scattered randomly with no pattern',
-      'All points fall exactly on a line with negative slope',
-      'All points fall exactly on a line with positive slope',
-      'A strong curved pattern'
-    ],
-    correctIndex: 1,
-    explanation: 'r = −1 indicates a perfect negative linear relationship — all points fall exactly on a straight line with a negative (downward) slope.',
+    id: 'lr-ent-3b',
+    question: 'A line is fit to a drug\'s blood concentration over time, and $r = 0.93$. The residual plot shows positive residuals at small and large times and negative residuals in the middle. What is the best conclusion?',
+    options: ['The linear model fits well because r is close to 1', 'The positive residuals mean the slope should be larger', 'A linear model is not appropriate despite the high r', 'The data have no unusual points, so the line works'],
+    correctIndex: 2,
+    explanation: 'A curved pattern in the residual plot shows the relationship is not linear, so a linear model is not the most appropriate one even though $r$ is high. A large $r$ never overrides a curved residual plot.',
     partNumber: 3,
-    partTitle: 'Correlation Coefficient r'
+    partTitle: P3,
   },
-  // Part 4: Properties of r
   {
-    id: 'sc-ent-4a',
-    question: 'Which statement about the correlation coefficient r is TRUE?',
-    options: [
-      'r has the same units as the variables',
-      'r changes if you switch which variable is x and which is y',
-      'r has no units and is not affected by changes in units of measurement',
-      'r is always positive for real-world data'
-    ],
-    correctIndex: 2,
-    explanation: 'r is unitless and is not affected by adding, multiplying, or swapping x and y. It is a purely numerical measure of linear association.',
+    id: 'lr-ent-4a',
+    question: 'A regression of used-car price on mileage has $r = -0.9$. Which interpretation of $r^2$ is correct?',
+    options: ['About 81% of the cars have prices that fall on the regression line', 'About 90% of the variation in price is explained by the linear model with mileage', 'About 81% of the variation in price is caused by differences in mileage', 'About 81% of the variation in price is explained by the linear model with mileage'],
+    correctIndex: 3,
+    explanation: '$r^2 = (-0.9)^2 = 0.81$, the proportion of variation in price explained by the linear relationship with mileage. It is not the share of points on the line, 90% is $|r|$ rather than $r^2$, and association does not show causation.',
     partNumber: 4,
-    partTitle: 'Properties of r'
+    partTitle: P4,
   },
   {
-    id: 'sc-ent-4b',
-    question: 'Data follow a perfect parabolic (U-shaped) curve. The correlation r is closest to:',
-    options: [
-      'r = 1',
-      'r = −1',
-      'r ≈ 0',
-      'r = 0.5'
-    ],
-    correctIndex: 2,
-    explanation: 'r only measures LINEAR association. A strong curved (parabolic) relationship can have r ≈ 0 because the positive and negative portions of the curve cancel out.',
+    id: 'lr-ent-4b',
+    question: 'Data set 1 has $r = 0.5$ and data set 2 has $r = -0.7$, each fit with a least-squares line. Which statement is correct?',
+    options: ['The second line explains less because r is negative', 'The second line explains 70% of the variation in y', 'The two lines explain the same share of variation', 'The second line explains nearly twice as much'],
+    correctIndex: 3,
+    explanation: 'The shares explained are the $r^2$ values: $0.5^2 = 0.25$ and $(-0.7)^2 = 0.49$, so the second line explains about twice as much. The sign of $r$ does not matter for $r^2$, and 70% confuses $|r|$ with $r^2$.',
     partNumber: 4,
-    partTitle: 'Properties of r'
+    partTitle: P4,
   },
-  // Part 5: Correlation ≠ Causation
   {
-    id: 'sc-ent-5a',
-    question: 'A study finds r = 0.92 between ice cream sales and drowning deaths. Can we conclude that ice cream causes drowning?',
-    options: [
-      'Yes — r is very strong, so causation is established',
-      'Yes — the positive association proves a causal link',
-      'No — correlation does not imply causation; a lurking variable (temperature) likely explains both',
-      'No — we can only conclude causation if r = 1.0'
-    ],
-    correctIndex: 2,
-    explanation: 'Correlation does NOT imply causation. Lurking variables (like hot weather) or coincidence may explain the association. Only controlled experiments can establish causation.',
+    id: 'lr-ent-5a',
+    question: 'A model fit to children aged 2 to 10 years predicts shoe size from age: $\\hat{y} = 3.1 + 0.95x$. Which use of the model is most trustworthy?',
+    options: ['Predicting the shoe size of a 6-year-old', 'Predicting the shoe size of a 16-year-old', 'Reading 3.1 as the shoe size of a newborn', 'Predicting the shoe size of a 30-year-old'],
+    correctIndex: 0,
+    explanation: 'Age 6 lies inside the 2-to-10 range of the data, so that prediction is an interpolation. Ages 16 and 30, and age 0 for the intercept, are all outside the data, so those uses are extrapolations.',
     partNumber: 5,
-    partTitle: 'Correlation ≠ Causation'
+    partTitle: P5,
   },
   {
-    id: 'sc-ent-5b',
-    question: 'Even if r = 0.95 between two variables, what is required to prove causation?',
-    options: [
-      'A larger sample size',
-      'A well-designed controlled experiment',
-      'A regression analysis with $r^{2}$ > 0.90',
-      'Replication of the correlation study'
-    ],
+    id: 'lr-ent-5b',
+    question: 'A scatterplot of hours studied versus exam score for 25 students shows a strong upward linear pattern, except for one student who studied 2 hours and scored 95. Which statement about that student is correct?',
+    options: ['The student has a large negative residual', 'The student has a large positive residual', 'The student makes r closer to 1', 'The student shows the pattern is curved'],
     correctIndex: 1,
-    explanation: 'Even a very high correlation does not prove x causes y. Establishing causation requires a well-designed controlled experiment, not just an observational study.',
+    explanation: 'With only 2 hours studied, the line predicts a low score, so the actual 95 lies far above the line and the residual is large and positive. A point far off the pattern weakens $r$; it does not show curvature.',
     partNumber: 5,
-    partTitle: 'Correlation ≠ Causation'
-  },
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'sc-ent-6a',
-    question: 'A dataset has r = 0.85, but one point is far from the rest of the data. If that point is removed, r jumps to 0.96. What does this illustrate?',
-    options: [
-      'Outliers have no effect on r',
-      'Outliers can drastically affect r — always look at the scatterplot before interpreting r',
-      'The outlier should always be removed',
-      'r = 0.85 is more accurate than r = 0.96'
-    ],
-    correctIndex: 1,
-    explanation: 'Outliers can substantially change the value of r. Always examine the scatterplot before interpreting correlation to identify influential points.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: P5,
   },
   {
-    id: 'sc-ent-6b',
-    question: 'If $r^{2}$ = 0.81, how do you interpret this value?',
-    options: [
-      '81% of the data points fall on the regression line',
-      'The correlation is 0.81',
-      'Approximately 81% of the variability in y is explained by the linear relationship with x',
-      'The slope of the regression line is 0.81'
-    ],
+    id: 'lr-ent-6a',
+    question: 'Technology output for predicting resting heart rate (beats/min) from weekly hours of exercise: Constant 78.4, Exercise $-1.6$, R-sq 52%. A student who exercises 6 hours a week has a resting rate of 70. What is the residual?',
+    options: ['8.4 beats/min', '-17.4 beats/min', '1.2 beats/min', '-1.2 beats/min'],
     correctIndex: 2,
-    explanation: '$r^{2}$ = 0.81 means approximately 81% of the variability in the response variable y is accounted for by the linear relationship with the explanatory variable x.',
+    explanation: 'The prediction is $78.4 - 1.6(6) = 68.8$, so the residual is $70 - 68.8 = 1.2$ beats/min. Reversing the subtraction gives $-1.2$, and $-17.4$ comes from adding $1.6(6)$ instead of subtracting.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  // Part 7: AP Review & Applications
-  {
-    id: 'sc-ent-7a',
-    question: 'On the AP exam, what acronym helps you remember how to describe a scatterplot?',
-    options: [
-      'SOCS (Shape, Outliers, Center, Spread)',
-      'DFSU (Direction, Form, Strength, Unusual features)',
-      'ANOVA (Analysis of Variance)',
-      'CLT (Central Limit Theorem)'
-    ],
-    correctIndex: 1,
-    explanation: 'Use DFSU to describe scatterplots: Direction (positive/negative), Form (linear/curved), Strength (strong/moderate/weak), and Unusual features (outliers/clusters).',
-    partNumber: 7,
-    partTitle: 'AP Review & Applications'
+    partTitle: P6,
   },
   {
-    id: 'sc-ent-7b',
-    question: 'Which is the best interpretation of r = −0.73 in context?',
-    options: [
-      '"73% of the variability is explained by x."',
-      '"There is a strong negative linear relationship between hours of TV watched and GPA."',
-      '"Watching TV causes lower GPA."',
-      '"The slope of the regression line is −0.73."'
-    ],
+    id: 'lr-ent-6b',
+    question: 'In the same output (Constant 78.4, Exercise $-1.6$), the students in the data exercised between 0 and 12 hours per week. Which statement about the intercept 78.4 is correct?',
+    options: ['It is the predicted rate for a student who never works out', 'It is meaningless, since a heart rate cannot be 78.4', 'It is the mean heart rate of all the students sampled', 'It is an extrapolation, so it should not be interpreted'],
+    correctIndex: 0,
+    explanation: 'Zero hours is inside the 0-to-12 range of the data, so the intercept is a reasonable prediction: about 78.4 beats/min for a student who does not exercise. The line passes through the mean heart rate at the mean exercise time, not at $x = 0$.',
+    partNumber: 6,
+    partTitle: P6,
+  },
+  {
+    id: 'lr-ent-7a',
+    question: 'Technology gives the slope of the least-squares line as $b = -0.8$. The means are $\\bar{x} = 40$ and $\\bar{y} = 30$. Which is the equation of the line?',
+    options: ['$\\hat{y} = -2 - 0.8x$', '$\\hat{y} = 62 - 0.8x$', '$\\hat{y} = 30 - 0.8x$', '$\\hat{y} = 70 - 0.8x$'],
     correctIndex: 1,
-    explanation: 'Always interpret r in context: "There is a [strong/moderate/weak] [positive/negative] linear relationship between [x variable] and [y variable]."',
+    explanation: 'The line passes through $(\\bar{x}, \\bar{y})$, so $a = \\bar{y} - b\\bar{x} = 30 - (-0.8)(40) = 30 + 32 = 62$. Getting $-2$ drops the negative sign on the slope.',
     partNumber: 7,
-    partTitle: 'AP Review & Applications'
-  }
+    partTitle: P7,
+  },
+  {
+    id: 'lr-ent-7b',
+    question: 'Across 50 cities, the correlation between the number of hospitals and the number of deaths per year is $r = 0.88$. Which explanation is best?',
+    options: ['Hospitals cause deaths, since r is close to 1', 'Deaths cause new hospitals to be built in a city', 'The data must contain an error, since r is so high', 'Larger populations lead to more of both'],
+    correctIndex: 3,
+    explanation: 'Population size is a confounding variable: bigger cities have both more hospitals and more deaths. A strong correlation alone does not show that either variable causes the other.',
+    partNumber: 7,
+    partTitle: P7,
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -217,13 +150,5 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
-  return [
-    { partNumber: 1, partTitle: 'Creating Scatterplots' },
-    { partNumber: 2, partTitle: 'Interpreting Patterns' },
-    { partNumber: 3, partTitle: 'Correlation Coefficient r' },
-    { partNumber: 4, partTitle: 'Properties of r' },
-    { partNumber: 5, partTitle: 'Correlation ≠ Causation' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review & Applications' }
-  ]
+  return [P1, P2, P3, P4, P5, P6, P7].map((partTitle, i) => ({ partNumber: i + 1, partTitle }))
 }

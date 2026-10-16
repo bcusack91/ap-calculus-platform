@@ -1,221 +1,147 @@
 /**
- * Entrance Quiz — Confidence Intervals for Means (AP Statistics)
+ * Entrance Quiz — Inference for Means (AP Statistics)
+ * Lesson: means-inference-apstats (also rendered by tests-means).
  * 14 questions · 7 parts (2 per part)
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Inference for Means Basics'
+const P2 = 'T-Distribution'
+const P3 = 'Confidence Intervals for Means'
+const P4 = 'Hypothesis Tests for Means'
+const P5 = 'Matched Pairs'
+const P6 = 'Problem-Solving Workshop'
+const P7 = 'Mixed Review'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Estimating Population Means
   {
-    id: 'cim-ent-1a',
-    question: 'What does x̄ represent in the context of estimating a population mean?',
-    options: [
-      'A point estimate of the population mean μ',
-      'The exact value of the population mean μ',
-      'The margin of error for the confidence interval',
-      'The standard deviation of the population'
-    ],
+    id: 'mi-ent-1a',
+    question: 'Compared with the standard normal curve, how does a t-distribution with 5 degrees of freedom differ?',
+    options: ['It has heavier tails', 'It is skewed to the right', 'It is taller at the center', 'It is centered at 5, not 0'],
     correctIndex: 0,
-    explanation: 'x̄ (the sample mean) is a point estimate of the population mean μ. We build a confidence interval around x̄ to capture μ with a given confidence level.',
+    explanation: 'A t-distribution is symmetric about 0 like the standard normal, but it puts more area in the tails (and less at the center) to account for estimating $\\sigma$ with $s$. It is not skewed and is not centered at its degrees of freedom.',
     partNumber: 1,
-    partTitle: 'Estimating Population Means'
+    partTitle: P1,
   },
   {
-    id: 'cim-ent-1b',
-    question: 'Why do we use t-procedures instead of z-procedures when constructing a confidence interval for a population mean?',
-    options: [
-      'Because the sample size is always small',
-      'Because the population standard deviation σ is unknown and must be estimated by s',
-      'Because the population is always non-normal',
-      'Because z-procedures only work for proportions'
-    ],
-    correctIndex: 1,
-    explanation: 'We use t-procedures when σ is unknown, which is almost always in practice. The sample standard deviation s is used in place of σ, introducing extra variability accounted for by the t-distribution.',
+    id: 'mi-ent-1b',
+    question: 'For 95% confidence, which critical value is largest?',
+    options: ['t* for df = 20', 't* for df = 100', 'z* for a normal model', 't* for df = 4'],
+    correctIndex: 3,
+    explanation: 'Fewer degrees of freedom mean heavier tails, so the cutoff for the middle 95% sits farther out: about 2.776 for 4 df, 2.086 for 20 df, 1.984 for 100 df and 1.960 for $z$.',
     partNumber: 1,
-    partTitle: 'Estimating Population Means'
+    partTitle: P1,
   },
-
-  // Part 2: t-Distribution
   {
-    id: 'cim-ent-2a',
-    question: 'Which of the following best describes the t-distribution?',
-    options: [
-      'Skewed right with light tails',
-      'Symmetric and bell-shaped with heavier tails than the standard normal',
-      'Uniform across all values',
-      'Identical to the standard normal regardless of sample size'
-    ],
+    id: 'mi-ent-2a',
+    question: 'A random sample of 16 values has $\\bar{x} = 72$ and $s = 8$, and a dotplot shows no strong skew or outliers. Using $t^* = 2.131$ (15 df), what is the 95% confidence interval for $\\mu$?',
+    options: ['68.08 to 75.92', '67.74 to 76.26', '70.00 to 74.00', '54.95 to 89.05'],
     correctIndex: 1,
-    explanation: 'The t-distribution is symmetric and bell-shaped like the normal distribution but has heavier tails, reflecting the extra uncertainty from estimating σ with s. Its shape depends on degrees of freedom (df = n − 1).',
+    explanation: '$SE = 8/\\sqrt{16} = 2$, so the margin of error is $2.131(2) \\approx 4.26$ and the interval is 67.74 to 76.26. 68.08 to 75.92 uses $z^* = 1.96$, and 54.95 to 89.05 multiplies $t^*$ by $s$ instead of the SE.',
     partNumber: 2,
-    partTitle: 't-Distribution'
+    partTitle: P2,
   },
   {
-    id: 'cim-ent-2b',
-    question: 'What happens to the t-distribution as the degrees of freedom increase?',
-    options: [
-      'It becomes more skewed',
-      'Its tails become heavier',
-      'It approaches the standard normal (z) distribution',
-      'It becomes a uniform distribution'
-    ],
-    correctIndex: 2,
-    explanation: 'As degrees of freedom increase, the t-distribution approaches the standard normal (z) distribution because the estimate s becomes more precise with larger samples.',
+    id: 'mi-ent-2b',
+    question: 'A 95% t-interval for the mean commute time of a city\'s workers is 24.1 to 28.7 minutes. Which interpretation is correct?',
+    options: ['We are 95% confident it contains the true mean', '95% of the city\'s workers commute 24.1 to 28.7 minutes', '95% of samples will have a mean from 24.1 to 28.7', 'The sample mean is in this range with probability 0.95'],
+    correctIndex: 0,
+    explanation: 'The interval estimates the population mean commute, and the 95% describes how often the method captures that mean. It is not about individual workers, and the sample mean is the center of the interval, not a random quantity inside it.',
     partNumber: 2,
-    partTitle: 't-Distribution'
-  },
-
-  // Part 3: One-Sample t-Interval
-  {
-    id: 'cim-ent-3a',
-    question: 'The formula for a one-sample t-interval for a population mean is:',
-    options: [
-      'x̄ ± z* · $(\\sigma /\\sqrt{n})$',
-      'x̄ ± t* · $(s/\\sqrt{n})$',
-      'p̂ ± z* · √[p̂(1−p̂)/n]',
-      's ± t* · (x̄/$\\sqrt{n}$)'
-    ],
-    correctIndex: 1,
-    explanation: 'The one-sample t-interval is x̄ ± t* · $(s/\\sqrt{n})$. Conditions required: random sample, independence (10% condition), and approximately normal population or large n.',
-    partNumber: 3,
-    partTitle: 'One-Sample t-Interval'
+    partTitle: P2,
   },
   {
-    id: 'cim-ent-3b',
-    question: 'Which is the correct interpretation of a 95% confidence interval (42, 58) for μ?',
-    options: [
-      '95% of all data values fall between 42 and 58',
-      'There is a 95% probability that μ is between 42 and 58',
-      'We are 95% confident that the true population mean is between 42 and 58',
-      'The sample mean is 95% likely to be 50'
-    ],
+    id: 'mi-ent-3a',
+    question: 'For $H_0: \\mu = 8$ versus $H_a: \\mu < 8$, a random sample of 25 gives $t = -2.0$ with 24 df, and $P(t < -2.0) = 0.028$. What is the conclusion at $\\alpha = 0.05$?',
+    options: ['Fail to reject $H_0$, since t is negative', 'Reject $H_0$: convincing evidence that μ ≠ 8', 'Reject $H_0$: convincing evidence that μ < 8', 'Fail to reject $H_0$, since 0.028 < 0.05'],
     correctIndex: 2,
-    explanation: 'The correct interpretation is: "We are 95% confident that the true mean is between 42 and 58." The interval is about the parameter μ, not about individual data values or probability statements about μ.',
+    explanation: 'The one-sided p-value 0.028 is less than 0.05, so reject $H_0$; the evidence supports the stated alternative, $\\mu < 8$. A p-value below $\\alpha$ leads to rejection, not failure to reject.',
     partNumber: 3,
-    partTitle: 'One-Sample t-Interval'
-  },
-
-  // Part 4: Two-Sample t-Interval
-  {
-    id: 'cim-ent-4a',
-    question: 'The two-sample t-interval for $(\\mu_{1} - \\mu_{2})$ is:',
-    options: [
-      'x̄$ {}_{1}$ ± t* · $(s_{1}/\\sqrt{n}_{1})$',
-      '(x̄$ {}_{1}$ − x̄$ {}_{2}$) ± t* · $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$',
-      '(x̄$ {}_{1}$ + x̄$ {}_{2}$) ± z* · $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$',
-      'x̄$ {}_{1}$ − x̄$ {}_{2}$ ± t* · $(s_{pooled}/\\sqrt{n})$'
-    ],
-    correctIndex: 1,
-    explanation: 'The two-sample t-interval is (x̄$ {}_{1}$ − x̄$ {}_{2}$) ± t* · $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$. This estimates the difference between two population means.',
-    partNumber: 4,
-    partTitle: 'Two-Sample t-Interval'
+    partTitle: P3,
   },
   {
-    id: 'cim-ent-4b',
-    question: 'When should you use a two-sample t-interval rather than a paired t-interval?',
-    options: [
-      'When data come from the same subjects measured twice',
-      'When comparing means of two independent groups',
-      'When the population standard deviation is known',
-      'When the sample sizes must be equal'
-    ],
-    correctIndex: 1,
-    explanation: 'A two-sample t-interval is appropriate when comparing means of two independent groups. A paired design is used when observations are naturally matched (e.g., before/after on the same subjects).',
-    partNumber: 4,
-    partTitle: 'Two-Sample t-Interval'
-  },
-
-  // Part 5: Paired t-Interval
-  {
-    id: 'cim-ent-5a',
-    question: 'In a paired t-interval, what is the first step in the analysis?',
-    options: [
-      'Pool the two sample standard deviations',
-      'Compute differences d = $x_{1}$ − $x_{2}$ for each pair, then perform a one-sample t-procedure on the differences',
-      'Calculate separate confidence intervals for each sample',
-      'Use a z-procedure because paired data are always normal'
-    ],
-    correctIndex: 1,
-    explanation: 'For a paired t-interval, compute the differences d = $x_{1}$ − $x_{2}$ for each pair, then treat them as a single sample and apply a one-sample t-procedure to the differences.',
-    partNumber: 5,
-    partTitle: 'Paired t-Interval'
-  },
-  {
-    id: 'cim-ent-5b',
-    question: 'Why are paired designs often preferred over independent two-sample designs?',
-    options: [
-      'Paired designs always use larger samples',
-      'Paired designs reduce variability by controlling for individual differences',
-      'Paired designs do not require checking conditions',
-      'Paired designs always produce narrower confidence intervals regardless of context'
-    ],
-    correctIndex: 1,
-    explanation: 'Paired designs reduce variability by controlling for individual differences — each subject serves as their own control, removing subject-to-subject variation from the comparison.',
-    partNumber: 5,
-    partTitle: 'Paired t-Interval'
-  },
-
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'cim-ent-6a',
-    question: 'A random sample of 25 students has x̄ = 72 and s = 10. What is the 95% t-interval for the population mean? (t* = 2.064 for df = 24)',
-    options: [
-      '(68.00, 76.00)',
-      '(67.87, 76.13)',
-      '(70.00, 74.00)',
-      '(62.00, 82.00)'
-    ],
-    correctIndex: 1,
-    explanation: '72 ± 2.064 × $(10/\\sqrt{25})$ = 72 ± 2.064 × 2 = 72 ± 4.128 = (67.87, 76.13).',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  {
-    id: 'cim-ent-6b',
-    question: 'Why is the t* critical value for 95% confidence with df = 24 larger than z* = 1.96?',
-    options: [
-      'Because the sample mean is biased',
-      'Because df = 24 gives a narrower distribution',
-      'Because the t-distribution has heavier tails than the standard normal, requiring a larger critical value',
-      'Because the confidence level is actually higher than 95%'
-    ],
+    id: 'mi-ent-3b',
+    question: 'For $H_0: \\mu = 100$, a random sample of 16 gives $\\bar{x} = 103.2$ and $s = 8$. What is the t statistic?',
+    options: ['0.4', '6.4', '1.6', '3.2'],
     correctIndex: 2,
-    explanation: 'The t-distribution has heavier tails than the standard normal, so a larger critical value is needed to capture the same central area (95%). As df increases, t* approaches z*.',
+    explanation: '$SE = 8/\\sqrt{16} = 2$, so $t = (103.2 - 100)/2 = 1.6$. 0.4 divides by $s$, 6.4 divides $s$ by $n$, and 3.2 is the raw difference.',
+    partNumber: 3,
+    partTitle: P3,
+  },
+  {
+    id: 'mi-ent-4a',
+    question: 'Two independent random samples: $s_1 = 6$ with $n_1 = 9$, and $s_2 = 8$ with $n_2 = 16$. What is the standard error of $\\bar{x}_1 - \\bar{x}_2$?',
+    options: ['2.83', '4.00', '8.00', '2.00'],
+    correctIndex: 0,
+    explanation: '$SE = \\sqrt{6^2/9 + 8^2/16} = \\sqrt{4 + 4} = \\sqrt{8} \\approx 2.83$. Adding the two separate standard errors gives 4.00, and 8.00 forgets the square root.',
+    partNumber: 4,
+    partTitle: P4,
+  },
+  {
+    id: 'mi-ent-4b',
+    question: 'How do AP two-sample t procedures handle the two sample standard deviations?',
+    options: ['They pool them into one common value', 'They keep each group\'s own s in the SE', 'They use only the larger of the two', 'They require the two to be equal'],
+    correctIndex: 1,
+    explanation: 'The standard error $\\sqrt{s_1^2/n_1 + s_2^2/n_2}$ uses each sample\'s own standard deviation, so the spreads may differ. AP procedures never pool for means.',
+    partNumber: 4,
+    partTitle: P4,
+  },
+  {
+    id: 'mi-ent-5a',
+    question: 'The gas mileage of 10 cars is measured once with regular fuel and once with premium fuel (every car uses both). Which analysis compares the fuels correctly?',
+    options: ['A two-sample t-test on two groups of 10', 'A t-test treating them as 20 separate cars', 'A two-proportion z-test on the cars', 'A one-sample t-test on the 10 differences'],
+    correctIndex: 3,
+    explanation: 'Each car gives a pair of measurements, so compute the 10 differences and run a one-sample t procedure on them. A two-sample test would ignore the pairing and let car-to-car variation hide the fuel effect.',
+    partNumber: 5,
+    partTitle: P5,
+  },
+  {
+    id: 'mi-ent-5b',
+    question: 'For 8 matched pairs, the differences have $\\bar{d} = 2.5$ and $s_d = 2.0$. What are the paired t statistic and degrees of freedom?',
+    options: ['t = 3.54, df = 8', 't = 1.25, df = 7', 't = 3.54, df = 7', 't = 10.00, df = 7'],
+    correctIndex: 2,
+    explanation: '$SE = 2.0/\\sqrt{8} \\approx 0.707$, so $t = 2.5/0.707 \\approx 3.54$, with $df = 8 - 1 = 7$ (one less than the number of pairs). 1.25 divides by $s_d$ alone.',
+    partNumber: 5,
+    partTitle: P5,
+  },
+  {
+    id: 'mi-ent-6a',
+    question: 'A school uses random samples to compare the percent of 9th graders and the percent of 12th graders who own a car. Which procedure fits?',
+    options: ['Two-sample t-test for means', 'Two-proportion z-test', 'Matched pairs t-test', 'One-sample t-test'],
+    correctIndex: 1,
+    explanation: 'Owning a car is a categorical (yes/no) variable measured in two independent groups, so the comparison is a two-proportion z-test. t procedures are for means of quantitative variables.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-
-  // Part 7: AP Review & Applications
-  {
-    id: 'cim-ent-7a',
-    question: 'On the AP exam, which conditions must be verified before constructing a t-interval for a mean?',
-    options: [
-      'Large population and known σ',
-      'Random sample, independence (10% condition), and approximately normal population or large sample',
-      'Equal sample sizes and equal variances',
-      'Simple random sample and σ known'
-    ],
-    correctIndex: 1,
-    explanation: 'Always check: (1) random sample, (2) independent observations (10% condition: n < 10% of population), and (3) approximately normal population or large sample size (n ≥ 30).',
-    partNumber: 7,
-    partTitle: 'AP Review & Applications'
+    partTitle: P6,
   },
   {
-    id: 'cim-ent-7b',
-    question: 'The t-procedure is described as "robust." What does this mean?',
-    options: [
-      'It always gives exact results',
-      'It works reasonably well even for non-normal populations when the sample size is large',
-      'It can be used without checking any conditions',
-      'It is unaffected by outliers regardless of sample size'
-    ],
+    id: 'mi-ent-6b',
+    question: 'A lab wants to estimate the mean caffeine content of a brand\'s 12-ounce cans from a random sample of 20 cans. Which procedure fits?',
+    options: ['Two-sample t-interval', 'One-proportion z-interval', 'Matched pairs t-test', 'One-sample t-interval'],
+    correctIndex: 3,
+    explanation: 'One quantitative variable, one population and a goal of estimating the mean call for a one-sample t-interval. There is no second group, no pairing and no proportion.',
+    partNumber: 6,
+    partTitle: P6,
+  },
+  {
+    id: 'mi-ent-7a',
+    question: 'Which change makes a one-sample t-interval for a mean wider, all else equal?',
+    options: ['Increasing the sample size', 'Using a smaller sample', 'Lowering the confidence level', 'Sampling data with less spread'],
     correctIndex: 1,
-    explanation: 'Robust means the t-procedure gives reasonably accurate results even when the population is not perfectly normal, especially with larger sample sizes. However, strong skewness or outliers with small n can be problematic.',
+    explanation: 'A smaller sample increases $s/\\sqrt{n}$ and also uses a larger $t^*$ (fewer df), so the interval widens. The other three changes all make the interval narrower.',
     partNumber: 7,
-    partTitle: 'AP Review & Applications'
-  }
+    partTitle: P7,
+  },
+  {
+    id: 'mi-ent-7b',
+    question: 'A 95% confidence interval for $\\mu$ is $(12.4, 15.8)$. Which null value would a two-sided test at $\\alpha = 0.05$ reject?',
+    options: ['$\\mu_0 = 13$', '$\\mu_0 = 15$', '$\\mu_0 = 12.5$', '$\\mu_0 = 16$'],
+    correctIndex: 3,
+    explanation: 'A two-sided test at $\\alpha = 0.05$ rejects exactly the null values outside the 95% interval. Only 16 lies outside 12.4 to 15.8.',
+    partNumber: 7,
+    partTitle: P7,
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -223,13 +149,5 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
-  return [
-    { partNumber: 1, partTitle: 'Estimating Population Means' },
-    { partNumber: 2, partTitle: 't-Distribution' },
-    { partNumber: 3, partTitle: 'One-Sample t-Interval' },
-    { partNumber: 4, partTitle: 'Two-Sample t-Interval' },
-    { partNumber: 5, partTitle: 'Paired t-Interval' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review & Applications' }
-  ]
+  return [P1, P2, P3, P4, P5, P6, P7].map((partTitle, i) => ({ partNumber: i + 1, partTitle }))
 }

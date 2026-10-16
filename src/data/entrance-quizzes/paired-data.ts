@@ -1,215 +1,148 @@
 /**
- * Entrance Quiz — Paired Data (AP Statistics)
+ * Entrance Quiz — Comparing Two Populations (AP Statistics)
+ * Lesson: comparing-populations-apstats (rendered by two-sample-proportions,
+ * paired-data, two-sample-means).
  * 14 questions · 7 parts (2 per part)
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Two-Sample Z-Test for Proportions'
+const P2 = 'Two-Sample T-Test for Means'
+const P3 = 'Paired T-Test'
+const P4 = 'Confidence Intervals for Differences'
+const P5 = 'Power and Sample Size'
+const P6 = 'Problem-Solving Workshop'
+const P7 = 'Review & Applications'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Paired vs Independent Samples
   {
-    id: 'pd-ent-1a',
-    question: 'A study measures students\' test scores before and after a tutoring program. What type of data is this?',
-    options: [
-      'Independent samples — different students in each group',
-      'Paired data — each student is measured twice',
-      'Observational — no treatment is applied',
-      'Categorical — scores are categories'
-    ],
-    correctIndex: 1,
-    explanation: 'Before-and-after measurements on the same subjects create paired data because each observation in one group has a natural match in the other.',
+    id: 'cp-ent-1a',
+    question: 'In random samples, 120 of 300 teens and 90 of 300 adults use a certain app daily. For a test of $H_0: p_1 = p_2$, what is the z statistic (rounded)?',
+    options: ['2.57', '3.63', '5.14', '0.10'],
+    correctIndex: 0,
+    explanation: 'The pooled proportion is $210/600 = 0.35$, so $SE = \\sqrt{0.35(0.65)(\\frac{1}{300} + \\frac{1}{300})} \\approx 0.0389$ and $z = (0.40 - 0.30)/0.0389 \\approx 2.57$. 3.63 uses only one $\\frac{1}{300}$ term, and 0.10 is the difference itself.',
     partNumber: 1,
-    partTitle: 'Paired vs Independent Samples'
+    partTitle: P1,
   },
   {
-    id: 'pd-ent-1b',
-    question: 'Researchers compare the mean SAT scores of students from School A with students from School B. This design uses:',
-    options: [
-      'Paired data — one score from each school per student',
-      'Independent samples — no pairing between the two groups',
-      'Matched pairs — students are paired across schools',
-      'A one-sample t-test on the differences'
-    ],
-    correctIndex: 1,
-    explanation: 'When there is no natural pairing between observations in the two groups, the data are independent samples, not paired.',
+    id: 'cp-ent-1b',
+    question: 'A researcher suspects that students who sleep at least 8 hours get sick less often than students who sleep less. Let $p_1$ be the proportion who get sick among students who sleep 8+ hours and $p_2$ the proportion among the others. Which hypotheses fit?',
+    options: ['$H_0: p_1 - p_2 = 0$, $H_a: p_1 - p_2 < 0$', '$H_0: p_1 - p_2 = 0$, $H_a: p_1 - p_2 > 0$', '$H_0: p_1 - p_2 = 0$, $H_a: p_1 - p_2 \\neq 0$', '$H_0: \\hat{p}_1 = \\hat{p}_2$, $H_a: \\hat{p}_1 < \\hat{p}_2$'],
+    correctIndex: 0,
+    explanation: 'The suspicion is that the 8+ hour group has a lower sick proportion, so $p_1 < p_2$, which is $p_1 - p_2 < 0$. Hypotheses are written about parameters, never sample proportions.',
     partNumber: 1,
-    partTitle: 'Paired vs Independent Samples'
+    partTitle: P1,
   },
-  // Part 2: Paired t-Test
   {
-    id: 'pd-ent-2a',
-    question: 'In a paired t-test, what is the first step after collecting paired observations?',
-    options: [
-      'Pool the two sample standard deviations',
-      'Compute the difference d = $x_{1}$ − $x_{2}$ for each pair, then perform a one-sample t-test on the d values',
-      'Compare the sample means directly using a two-sample t-test',
-      'Check whether σ is known for both populations'
-    ],
-    correctIndex: 1,
-    explanation: 'A paired t-test reduces to a one-sample t-test on the differences: compute d for each pair, then test whether the mean difference μ_d equals the hypothesized value.',
+    id: 'cp-ent-2a',
+    question: 'Group 1: $\\bar{x}_1 = 82$, $s_1 = 9$, $n_1 = 36$. Group 2: $\\bar{x}_2 = 78$, $s_2 = 12$, $n_2 = 36$. What is the two-sample t statistic?',
+    options: ['$t = 9.60$', '$t = 1.14$', '$t = 1.60$', '$t = 5.24$'],
+    correctIndex: 2,
+    explanation: '$SE = \\sqrt{9^2/36 + 12^2/36} = \\sqrt{225/36} = 2.5$, so $t = (82 - 78)/2.5 = 1.60$. 5.24 uses $s$ instead of $s^2$ in the SE, and 1.14 adds the SDs instead of the variances.',
     partNumber: 2,
-    partTitle: 'Paired t-Test'
+    partTitle: P2,
   },
   {
-    id: 'pd-ent-2b',
-    question: 'The test statistic for a paired t-test is given by:',
-    options: [
-      't = (x̄$ {}_{1}$ − x̄$ {}_{2}$) / $\\sqrt{s_{1}^{2}/n_{1} + s_{2}^{2}/n_{2}}$',
-      't = d̄ / $(s_{d} / \\sqrt{n})$, where n = number of pairs',
-      't = d̄ / σ_d',
-      't = (x̄$ {}_{1}$ − x̄$ {}_{2}$) / s_pooled'
-    ],
+    id: 'cp-ent-2b',
+    question: 'Random samples of 12 and 15 commute times come from two cities. A dotplot of the 15-value sample is strongly skewed with a far outlier. Is a two-sample t-test appropriate?',
+    options: ['Yes, because the samples are random', 'No, the second sample fails the Normal condition', 'Yes, because together n = 27 is close to 30', 'No, the samples must be the same size'],
     correctIndex: 1,
-    explanation: 'The paired t-statistic is t = d̄ / $(s_{d} / \\sqrt{n})$, where d̄ is the mean of the differences, s_d is the standard deviation of the differences, and n is the number of pairs.',
+    explanation: 'Each sample is under 30, so each must be free from strong skewness and outliers; the second is not. Sample sizes are not combined to meet the guideline, and two-sample procedures allow unequal sizes.',
     partNumber: 2,
-    partTitle: 'Paired t-Test'
+    partTitle: P2,
   },
-  // Part 3: Calculating Differences
   {
-    id: 'pd-ent-3a',
-    question: 'In a paired study, you compute d = Before − After for each subject. If you reverse the order to d = After − Before, what changes?',
-    options: [
-      'The p-value changes for a two-sided test',
-      'The sign of d̄ reverses, but the p-value for a two-sided test stays the same',
-      'The test statistic is unchanged',
-      'The degrees of freedom change'
-    ],
+    id: 'cp-ent-3a',
+    question: 'Which study calls for a paired t-procedure?',
+    options: ['25 runners use old shoes and 25 other runners use new shoes', 'Each of 25 runners is timed in both shoe types', 'Shoe preference proportions are compared in two cities', '50 runners are timed once, half randomly given new shoes'],
     correctIndex: 1,
-    explanation: 'The order of subtraction affects the sign of d̄ (and therefore the sign of t), but in a two-sided test the p-value remains the same because it considers both tails.',
+    explanation: 'Timing the same runner in both pairs of shoes produces a natural pair of measurements, so the analysis uses the differences. Two separate groups, even randomly assigned ones, call for a two-sample procedure, and preference proportions need a proportion test.',
     partNumber: 3,
-    partTitle: 'Calculating Differences'
+    partTitle: P3,
   },
   {
-    id: 'pd-ent-3b',
-    question: 'For 8 pairs, the differences are: 3, 5, −1, 4, 2, 6, 1, 4. Since most differences are positive, what does this suggest?',
-    options: [
-      'The second measurement tends to be larger',
-      'There is no difference between the two measurements',
-      'The first measurement tends to be larger (mean difference d̄ > 0)',
-      'The sample size is too small to draw conclusions'
-    ],
-    correctIndex: 2,
-    explanation: 'If differences (first − second) are mostly positive, then d̄ > 0, suggesting the first measurement tends to be larger than the second.',
+    id: 'cp-ent-3b',
+    question: 'For 16 matched pairs, the differences have mean $\\bar{d} = 4.2$ and standard deviation $s_d = 6.0$. What is the paired t statistic?',
+    options: ['$t = 0.70$', '$t = 11.20$', '$t = 1.40$', '$t = 2.80$'],
+    correctIndex: 3,
+    explanation: '$SE = s_d/\\sqrt{n} = 6.0/\\sqrt{16} = 1.5$, so $t = 4.2/1.5 = 2.80$ with 15 degrees of freedom. 0.70 divides by $s_d$ alone, and 11.20 divides $s_d$ by $n$ instead of $\\sqrt{n}$.',
     partNumber: 3,
-    partTitle: 'Calculating Differences'
-  },
-  // Part 4: Conditions for Pairing
-  {
-    id: 'pd-ent-4a',
-    question: 'Which conditions must be satisfied before performing a paired t-test?',
-    options: [
-      'Equal sample sizes, equal variances, normal populations',
-      'Pairs selected randomly, differences are independent, differences approximately normal or n ≥ 30',
-      'Random samples, σ known, large samples only',
-      'Independent groups, 10% condition on each group separately'
-    ],
-    correctIndex: 1,
-    explanation: 'The conditions are: (1) pairs selected randomly, (2) differences are independent of each other, and (3) the distribution of differences is approximately normal or the number of pairs n ≥ 30.',
-    partNumber: 4,
-    partTitle: 'Conditions for Pairing'
+    partTitle: P3,
   },
   {
-    id: 'pd-ent-4b',
-    question: 'A researcher has paired data but mistakenly uses a two-sample t-test. What is the consequence?',
-    options: [
-      'The test becomes more powerful',
-      'The p-value decreases, making rejection more likely',
-      'The test loses the benefit of pairing and typically has less power',
-      'The results are identical either way'
-    ],
+    id: 'cp-ent-4a',
+    question: 'A 99% confidence interval for $\\mu_d$, the mean of (after − before) test scores, is $(0.8, 5.6)$ points. Which statement is correct?',
+    options: ['No change is plausible, since the interval is wide', 'Every student\'s score rose by 0.8 to 5.6 points', 'Scores rose on average by 0.8 to 5.6 points', 'Scores fell on average by 0.8 to 5.6 points'],
     correctIndex: 2,
-    explanation: 'Treating paired data as two independent samples ignores the pairing, which typically increases variability in the analysis and reduces the power to detect a real difference.',
+    explanation: 'The whole interval is above 0, so a mean change of 0 is not plausible at the 99% level: scores rose on average by about 0.8 to 5.6 points. The interval describes the mean change, not every student, and after minus before being positive means a rise.',
     partNumber: 4,
-    partTitle: 'Conditions for Pairing'
-  },
-  // Part 5: Applications
-  {
-    id: 'pd-ent-5a',
-    question: 'Which scenario is a classic application of a paired t-procedure?',
-    options: [
-      'Comparing average income between two different cities',
-      'A pre-test/post-test study measuring the same students before and after instruction',
-      'Comparing proportions of voters in two states',
-      'Testing whether a single population proportion equals 0.5'
-    ],
-    correctIndex: 1,
-    explanation: 'Before-and-after studies on the same subjects (pre-test/post-test) are classic applications of paired t-procedures because each subject serves as their own control.',
-    partNumber: 5,
-    partTitle: 'Applications'
+    partTitle: P4,
   },
   {
-    id: 'pd-ent-5b',
-    question: 'In a matched-pairs experiment, how are treatments assigned?',
-    options: [
-      'Each subject receives both treatments in the same order',
-      'Subjects are paired by similarity, then treatments are randomly assigned within each pair',
-      'All subjects in one group get Treatment A, all in the other get Treatment B',
-      'Treatments are assigned alphabetically by subject name'
-    ],
-    correctIndex: 1,
-    explanation: 'In a matched-pairs design, subjects are paired based on similar characteristics, and then within each pair, one is randomly assigned to each treatment.',
-    partNumber: 5,
-    partTitle: 'Applications'
+    id: 'cp-ent-4b',
+    question: 'For a two-sample interval, $\\bar{x}_1 - \\bar{x}_2 = 6$, the standard error is 2.2 and $t^* = 2.03$. What is the confidence interval for $\\mu_1 - \\mu_2$?',
+    options: ['3.80 to 8.20', '1.53 to 6.00', '3.97 to 8.03', '1.53 to 10.47'],
+    correctIndex: 3,
+    explanation: 'The margin of error is $t^* \\cdot SE = 2.03(2.2) \\approx 4.47$, so the interval is $6 \\pm 4.47$, or 1.53 to 10.47. Using $\\pm SE$ alone gives 3.80 to 8.20, and $\\pm t^*$ alone gives 3.97 to 8.03.',
+    partNumber: 4,
+    partTitle: P4,
   },
-  // Part 6: Problem-Solving Workshop
   {
-    id: 'pd-ent-6a',
-    question: '15 patients have blood pressure measured before and after a medication. Which procedure should be used?',
-    options: [
-      'Two-sample t-test comparing the two groups',
-      'One-sample z-test on the after measurements',
-      'Paired t-test: compute differences, then one-sample t-test on the differences',
-      'Chi-square test for independence'
-    ],
+    id: 'cp-ent-5a',
+    question: 'A planned two-sample study has low power. Which change raises the power without raising the chance of a Type I error?',
+    options: ['Lower α from 0.05 to 0.01', 'Raise α from 0.05 to 0.10', 'Use larger groups', 'Use more variable subjects'],
     correctIndex: 2,
-    explanation: 'Since each patient is measured twice (before and after), the data are paired. Compute differences for each patient, then perform a one-sample t-test on those differences.',
+    explanation: 'Larger samples shrink the standard error, so a real difference is easier to detect while $\\alpha$ stays the same. Raising $\\alpha$ adds power only by allowing more Type I errors, lowering it reduces power, and more variability reduces power.',
+    partNumber: 5,
+    partTitle: P5,
+  },
+  {
+    id: 'cp-ent-5b',
+    question: 'A test at $\\alpha = 0.05$ has power 0.75 to detect a true difference of 5 points. If the true difference is 5 points, what is the probability of a Type II error?',
+    options: ['0.25', '0.05', '0.75', '0.95'],
+    correctIndex: 0,
+    explanation: 'A Type II error is failing to reject a false $H_0$, and its probability is $1 - \\text{power} = 1 - 0.75 = 0.25$. 0.05 is $\\alpha$, the Type I error probability.',
+    partNumber: 5,
+    partTitle: P5,
+  },
+  {
+    id: 'cp-ent-6a',
+    question: 'Sixty patients are randomly assigned, 30 to Drug A and 30 to Drug B, and their cholesterol is measured after 3 months. Which procedure compares the mean cholesterol for the two drugs?',
+    options: ['Paired t-test on 30 differences', 'Two-sample t-test', 'Two-proportion z-test', 'One-sample t-test on all 60'],
+    correctIndex: 1,
+    explanation: 'The two groups contain different, randomly assigned patients, so they are independent, and the response is quantitative: a two-sample t procedure fits. Nothing pairs a Drug A patient with a Drug B patient.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
+    partTitle: P6,
   },
   {
-    id: 'pd-ent-6b',
-    question: 'Why does pairing often result in a more powerful test than using independent samples?',
-    options: [
-      'Pairing increases the sample size',
-      'Pairing reduces variability by eliminating subject-to-subject differences from the analysis',
-      'Pairing allows the use of a z-distribution instead of t',
-      'Pairing removes the need to check conditions'
-    ],
-    correctIndex: 1,
-    explanation: 'Pairing controls for individual variation — each subject acts as their own control, so subject-to-subject differences are removed, reducing the variability in the differences.',
+    id: 'cp-ent-6b',
+    question: 'Program A: $n = 25$, $\\bar{x} = 12.4$, $s = 4$. Program B: $n = 25$, $\\bar{x} = 9.4$, $s = 3$. Using the conservative degrees of freedom, what are the two-sample t statistic and df?',
+    options: ['t = 3.0, df = 48', 't = 0.6, df = 24', 't = 15.0, df = 24', 't = 3.0, df = 24'],
+    correctIndex: 3,
+    explanation: '$SE = \\sqrt{16/25 + 9/25} = 1$, so $t = (12.4 - 9.4)/1 = 3.0$, and the conservative df is the smaller of $25 - 1$ and $25 - 1$, which is 24. A df of 48 is $n_1 + n_2 - 2$, the upper bound rather than the conservative value.',
     partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  // Part 7: AP Review & Applications
-  {
-    id: 'pd-ent-7a',
-    question: 'On the AP Statistics exam, what must you clearly state when choosing a test procedure?',
-    options: [
-      'Only the formula you plan to use',
-      'Whether the data are paired or independent, since the choice determines the procedure',
-      'The software package you would use',
-      'The exact p-value to three decimal places'
-    ],
-    correctIndex: 1,
-    explanation: 'On the AP exam, you must clearly identify whether data are paired or independent because this determines whether you use a paired t-test or a two-sample t-test.',
-    partNumber: 7,
-    partTitle: 'AP Review & Applications'
+    partTitle: P6,
   },
   {
-    id: 'pd-ent-7b',
-    question: 'After a paired t-test finds a significant mean difference, which interpretation is best?',
-    options: [
-      '"The means of the two groups are different."',
-      '"The mean change in blood pressure after medication is significantly different from zero."',
-      '"Every patient experienced a decrease in blood pressure."',
-      '"The medication definitely works for all patients."'
-    ],
+    id: 'cp-ent-7a',
+    question: 'A 95% confidence interval for $p_1 - p_2$ is $(-0.03, 0.11)$. What can be concluded at $\\alpha = 0.05$?',
+    options: ['Group 1 has the higher proportion', 'There is no convincing evidence of a difference', 'Group 2 has the higher proportion', 'The two proportions must be equal'],
     correctIndex: 1,
-    explanation: 'Interpret paired results by referencing the mean difference in context: "The mean change/difference in [variable] is [significantly different from zero / significantly positive/negative]."',
+    explanation: 'Zero is inside the interval, so "no difference" is plausible and a two-sided test at $\\alpha = 0.05$ would fail to reject $H_0$. That is not proof the proportions are equal.',
     partNumber: 7,
-    partTitle: 'AP Review & Applications'
-  }
+    partTitle: P7,
+  },
+  {
+    id: 'cp-ent-7b',
+    question: 'A two-sample t-test of $H_0: \\mu_1 = \\mu_2$ versus $H_a: \\mu_1 > \\mu_2$ gives a p-value of 0.21. Which conclusion is correct at $\\alpha = 0.05$?',
+    options: ['Reject $H_0$; there is evidence that μ1 > μ2', 'Accept $H_0$; the two means are equal', 'Fail to reject $H_0$; no convincing evidence μ1 > μ2', 'Reject $H_0$; there is a 21% chance μ1 = μ2'],
+    correctIndex: 2,
+    explanation: 'Since $0.21 > 0.05$, fail to reject $H_0$: the data do not give convincing evidence that $\\mu_1 > \\mu_2$. A p-value is not the probability that $H_0$ is true, and $H_0$ is never accepted.',
+    partNumber: 7,
+    partTitle: P7,
+  },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -217,13 +150,5 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 }
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
-  return [
-    { partNumber: 1, partTitle: 'Paired vs Independent Samples' },
-    { partNumber: 2, partTitle: 'Paired t-Test' },
-    { partNumber: 3, partTitle: 'Calculating Differences' },
-    { partNumber: 4, partTitle: 'Conditions for Pairing' },
-    { partNumber: 5, partTitle: 'Applications' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'AP Review & Applications' }
-  ]
+  return [P1, P2, P3, P4, P5, P6, P7].map((partTitle, i) => ({ partNumber: i + 1, partTitle }))
 }
