@@ -11,6 +11,7 @@
 import { apBioQuestionPool } from './exit-quizzes/ap-biology'
 import { mulberry32 } from './_shared/prng'
 import { estimateApScore } from '@/lib/ap-scoring'
+import { diagnosticItemTopic, isServedItem } from '@/lib/ap-topic-canonical'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -982,6 +983,105 @@ function seededShuffle<T>(arr: T[], rng: () => number): T[] {
 }
 
 /* ------------------------------------------------------------------ */
+/*  Per-item topic exceptions                                          */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Exit-pool items whose legacy `ap-bio-*` slug spans several lessons, keyed
+ * by diagnosticItemKey(question): the production topic whose lesson teaches
+ * the item, or null for an item the diagnostic no longer serves. Every other
+ * legacy slug maps through AP_LEGACY_TOPIC_SLUGS['ap-biology'].
+ * Phase 2 (Oct 2026). The 10 items once tagged immune / nervous / endocrine /
+ * viral were checked against the CED: all test on-exam content (signaling,
+ * feedback, membrane gradients, reverse transcriptase 6.4.A.4) and are retagged
+ * to those lessons, not removed.
+ */
+export const BIO_ITEM_TOPIC_EXCEPTIONS: Record<string, string | null> = {
+  'c9828c5a': 'dna-replication', // PCR is used to:
+  '9c019fd1': 'dna-replication', // Gel electrophoresis separates DNA fragments by:
+  '8fd42592': 'dna-replication', // DNA fingerprinting is used in forensics because:
+  '19881399': 'transcription-rna-processing', // Reverse transcriptase creates:
+  '26c4f28f': 'cell-membrane-transport', // The fluid mosaic model describes the membrane as:
+  'fc5497f8': 'cell-membrane-transport', // The selectivity of membrane transport is primarily due to:
+  'fc74c72e': 'cell-membrane-transport', // Cholesterol in the cell membrane:
+  '143a77f3': 'cell-signaling', // Gap junctions allow:
+  '42f9f90a': 'prokaryotic-eukaryotic-cells', // Prokaryotic cells lack:
+  '9af140f8': 'prokaryotic-eukaryotic-cells', // Structures found in both prokaryotic and eukaryotic cells include:
+  '4a002570': 'prokaryotic-eukaryotic-cells', // Plant cells, unlike animal cells, have:
+  'f652bd0c': 'enzyme-kinetics', // Feedback inhibition occurs when:
+  '75fd53b0': 'carbohydrates', // In dehydration synthesis, a water molecule is released as the reaction
+  '38168a3f': 'carbohydrates', // What type of reaction breaks polymers into monomers?
+  '14d2fe70': 'carbohydrates', // Starch, glycogen, and cellulose are all polymers of glucose. Which sta
+  '12366146': 'carbohydrates', // A disaccharide is formed by joining:
+  'b28a7f97': 'carbohydrates', // Glycogen is the storage polysaccharide in:
+  '7224f30e': 'enzyme-kinetics', // Enzymes lower the:
+  '57e99926': 'enzyme-kinetics', // Competitive inhibitors bind to the:
+  'b9da5848': 'enzyme-kinetics', // The induced fit model of enzyme action states that:
+  'c8898af5': 'enzyme-kinetics', // An allosteric activator:
+  '848b33cf': 'enzyme-kinetics', // At high temperatures, enzymes typically:
+  '08baa745': 'enzyme-kinetics', // Noncompetitive inhibitors bind to the:
+  'e4a408a0': 'lipids', // Saturated fats have:
+  'd6b564c1': 'lipids', // Phospholipids are amphipathic because they have:
+  '737e57c6': 'nucleic-acids', // Which macromolecule stores genetic information?
+  'deae033c': 'nucleic-acids', // Which bond holds the two strands of DNA together?
+  '2ee4d542': 'nucleic-acids', // Nucleotides within a single strand of DNA are linked by:
+  'bf204d49': 'proteins', // Which functional group is found in all amino acids?
+  'cf0f5c3d': 'proteins', // A peptide bond forms between:
+  'd0c54e06': 'proteins', // Which element is found in proteins but NOT in carbohydrates?
+  'a31b3b6c': 'proteins', // The primary structure of a protein is its:
+  '193e448e': 'proteins', // The R-group (side chain) of an amino acid determines its:
+  '44260d15': 'ecosystems-energy', // Biological magnification refers to:
+  '2eb7ac3b': 'cell-organelles', // Endosymbiotic theory explains the origin of:
+  'f3dd6d2a': 'natural-selection', // Hardy-Weinberg equilibrium assumes all EXCEPT:
+  '15ba6ed8': 'speciation', // Speciation requires:
+  'a96fa68a': 'speciation', // Allopatric speciation occurs when:
+  'b75e107b': 'speciation', // Sympatric speciation can occur through:
+  'd78ab822': 'speciation', // Adaptive radiation is:
+  'b1f45ca0': 'speciation', // Punctuated equilibrium proposes that:
+  '7fece230': 'chromosomal-inheritance', // X-linked recessive traits are more common in males because:
+  '8f911510': 'chromosomal-inheritance', // Linked genes:
+  '4f0f7c30': 'chromosomal-inheritance', // Maternal inheritance patterns suggest the trait is encoded by:
+  'b7066d9d': 'chromosomal-inheritance', // Recombination frequencies are: genes A and B, 12%; genes B and C, 5%;
+  '28aee559': 'natural-selection', // The Hardy-Weinberg equation $p^{2}$ + 2pq + $q^{2}$ = 1 represents:
+  '97cc3a8f': 'non-mendelian-genetics', // Codominance means:
+  'eb80cf97': 'non-mendelian-genetics', // Incomplete dominance results in a _____ phenotype in heterozygotes:
+  '60a2ef8b': 'non-mendelian-genetics', // Epistasis occurs when:
+  'd92be179': 'non-mendelian-genetics', // Polygenic traits are controlled by:
+  '027822c8': 'non-mendelian-genetics', // Pleiotropy means:
+  'ff356058': 'non-mendelian-genetics', // Multiple alleles in a population means:
+  'dc3da142': 'dna-replication', // DNA replication is described as semiconservative because:
+  '97d17834': 'dna-replication', // Okazaki fragments are found on the:
+  '67e81be1': 'dna-replication', // RNA polymerase:
+  '46e8e354': 'dna-replication', // DNA polymerase can add nucleotides only to an existing strand. How doe
+  'd4a45dad': 'dna-replication', // DNA ligase functions to:
+  '4f0ee244': 'translation', // The codon AUG typically codes for:
+  '2623871a': 'translation', // A nonsense mutation usually results in:
+  '84974c7c': 'translation', // A missense mutation:
+  'a108c4d4': 'translation', // Frameshift mutations are caused by:
+  'bf28cb00': 'translation', // Translation occurs on:
+  '29556319': 'translation', // tRNA carries:
+  '653cc87d': 'translation', // A point mutation that does not change the amino acid is called:
+  '308906e6': 'translation', // The genetic code is described as redundant because:
+  'd309f2ad': 'translation', // The anticodon of a tRNA pairs with:
+  '73ece284': 'cell-membrane-transport', // The Na+/K+ pump and ion channels establish an electrochemical gradient
+  'b7081631': 'cell-organelles', // Evidence for the endosymbiotic theory includes:
+  '619630e6': 'photosynthesis', // Guard cells regulate:
+  'b7d0ba29': 'community-ecology', // Interspecific competition is competition between:
+  '63d607e2': 'community-ecology', // The competitive exclusion principle states that:
+  '62615502': 'community-ecology', // Resource partitioning allows competing species to coexist by:
+  'd50b0246': null, // Moths flying straight toward a light at night is an example of: [specific behavioral mechanism, excluded by CED 8.1]
+  'da92c91c': null, // Gene therapy aims to: [gene therapy is not in CED 6.8]
+  '0eabe08f': null, // The dependent variable is the variable that is: [research-methods vocabulary; no production lesson teaches it]
+  '0274505b': null, // A valid control group helps researchers: [research-methods vocabulary; no production lesson teaches it]
+  'e16a205e': null, // Replication in experiments: [research-methods vocabulary; no production lesson teaches it]
+  '8ae4f727': null, // A large sample size is important because it: [research-methods vocabulary; no production lesson teaches it]
+  '443ad231': null, // The independent variable in an experiment is: [research-methods vocabulary; no production lesson teaches it]
+  'b6ef941f': null, // Standard error measures: [research-methods vocabulary; no production lesson teaches it]
+  '6cae9a33': null, // A control group in an experiment: [research-methods vocabulary; no production lesson teaches it]
+  '4b39d092': null, // Correlation does not imply: [research-methods vocabulary; no production lesson teaches it]
+}
+
+/* ------------------------------------------------------------------ */
 /*  Generator                                                          */
 /* ------------------------------------------------------------------ */
 
@@ -995,7 +1095,7 @@ export function generateAPBioDiagnosticTest(form: number): APBioDiagnosticTestDa
 
   // Merge embedded pool + exit-quiz pool, dedupe by question text
   const seen = new Set<string>()
-  const combined: APBioDiagnosticQuestion[] = []
+  const combined: (Omit<APBioDiagnosticQuestion, 'topicSlug'> & { topicSlug: string | null })[] = []
   for (const q of [...apBioQuestionPool, ...apBioEmbeddedPool]) {
     if (!seen.has(q.question)) {
       seen.add(q.question)
@@ -1005,17 +1105,25 @@ export function generateAPBioDiagnosticTest(form: number): APBioDiagnosticTestDa
         correctAnswer: q.correctAnswer,
         explanation: q.explanation,
         domain: q.domain,
-        topicSlug: q.topicSlug,
+        // The production topic that teaches the item; null = not served.
+        topicSlug: diagnosticItemTopic('ap-biology', q, BIO_ITEM_TOPIC_EXCEPTIONS),
       })
     }
   }
 
+  const inlineStems = new Set(apBioEmbeddedPool.map(q => q.question))
   const questions: APBioDiagnosticQuestion[] = []
 
   for (const domain of AP_BIO_DOMAINS) {
     const pool = combined.filter(q => q.domain === domain.id)
     const shuffled = seededShuffle(pool, rng)
-    const selected = shuffled.slice(0, domain.questionTarget)
+    // A dropped item's slot goes to the next served item in the shuffle,
+    // diagnostic-only (inline) items before exit-pool ones, so the rest of the
+    // form does not move.
+    const kept = shuffled.slice(0, domain.questionTarget).filter(isServedItem)
+    const spare = shuffled.slice(domain.questionTarget).filter(isServedItem)
+    const fill = [...spare.filter(q => inlineStems.has(q.question)), ...spare.filter(q => !inlineStems.has(q.question))]
+    const selected = [...kept, ...fill.slice(0, domain.questionTarget - kept.length)]
 
     for (const q of selected) {
       questions.push(q)
@@ -1173,56 +1281,38 @@ export function pickNextForm(previousForms: number[]): number {
   return last >= TOTAL_FORMS ? 1 : last + 1
 }
 
+/** Production Topic titles, so a recommendation reads like the topic page it links to. */
 const SLUG_LABELS: Record<string, string> = {
-  // Embedded-pool slugs
-  'water-properties': 'Water & Macromolecules',
-  'carbohydrates': 'Cell Chemistry Basics',
-  'prokaryotic-eukaryotic-cells': 'Cell Structure & Function',
-  'cell-membrane-transport': 'Membrane Transport',
-  'enzyme-kinetics': 'Enzyme Catalysis',
-  'cellular-respiration': 'Photosynthesis & Cellular Respiration',
-  'cell-signaling': 'Cell Signaling',
-  'cell-cycle-mitosis': 'Cell Cycle, Mitosis & Meiosis',
+  'carbohydrates': 'Carbohydrates',
+  'cell-cycle-mitosis': 'Cell Cycle and Mitosis',
+  'cell-membrane-transport': 'Cell Membrane and Transport',
+  'cell-organelles': 'Cell Organelles',
+  'cell-signaling': 'Cell Signaling and Signal Transduction',
+  'cellular-respiration': 'Cellular Respiration',
+  'chromosomal-inheritance': 'Chromosomal Basis of Inheritance',
+  'community-ecology': 'Community Ecology and Interactions',
+  'dna-replication': 'DNA Structure and Replication',
+  'ecosystems-energy': 'Ecosystems and Energy Flow',
+  'enzyme-kinetics': 'Enzyme Kinetics',
+  'enzymes-metabolism': 'Enzymes and Metabolism',
+  'gene-regulation': 'Gene Regulation',
+  'lipids': 'Lipids',
+  'meiosis': 'Meiosis and Sexual Reproduction',
   'mendelian-genetics': 'Mendelian Genetics',
+  'natural-selection': 'Natural Selection and Evolution',
+  'natural-selection-adaptation': 'Natural Selection and Adaptation',
   'non-mendelian-genetics': 'Non-Mendelian Inheritance',
-  'dna-replication': 'DNA Replication & Transcription',
-  'gene-regulation': 'Translation & Gene Regulation',
-  'natural-selection': 'Natural Selection',
-  'speciation': 'Speciation & Phylogeny',
+  'nucleic-acids': 'Nucleic Acids',
+  'photosynthesis': 'Photosynthesis',
+  'phylogeny-classification': 'Phylogeny and Classification',
+  'population-dynamics': 'Population Dynamics',
   'population-ecology': 'Population Ecology',
-  'community-ecology': 'Community & Ecosystem Ecology',
-  // Exit-quiz pool slugs (ap-bio-* prefix)
-  'ap-bio-chemistry-of-life': 'Chemistry of Life',
-  'ap-bio-cell-structure-function': 'Cell Structure & Function',
-  'ap-bio-membrane-transport': 'Membrane Transport',
-  'ap-bio-cellular-energetics': 'Cellular Energetics',
-  'ap-bio-photosynthesis': 'Photosynthesis',
-  'ap-bio-cell-communication': 'Cell Communication',
-  'ap-bio-cell-cycle-mitosis': 'Cell Cycle & Mitosis',
-  'ap-bio-meiosis': 'Meiosis',
-  'ap-bio-mendelian-genetics': 'Mendelian Genetics',
-  'ap-bio-chromosomal-inheritance': 'Chromosomal Inheritance',
-  'ap-bio-molecular-genetics': 'Molecular Genetics',
-  'ap-bio-dna-technology': 'DNA Technology',
-  'ap-bio-biotechnology': 'Biotechnology',
-  'ap-bio-gene-regulation': 'Gene Regulation',
-  'ap-bio-natural-selection': 'Natural Selection',
-  'ap-bio-evolution-evidence': 'Evidence for Evolution',
-  'ap-bio-hardy-weinberg': 'Hardy-Weinberg Equilibrium',
-  'ap-bio-phylogenetics': 'Phylogenetics',
-  'ap-bio-origins-of-life': 'Origins of Life',
-  'ap-bio-population-ecology': 'Population Ecology',
-  'ap-bio-ecology-interactions': 'Ecological Interactions',
-  'ap-bio-ecology-energy-flow': 'Ecology & Energy Flow',
-  'ap-bio-biodiversity': 'Biodiversity',
-  'ap-bio-biogeochemical-cycles': 'Biogeochemical Cycles',
-  'ap-bio-plant-structure': 'Plant Structure & Function',
-  'ap-bio-nervous-system': 'Nervous System',
-  'ap-bio-immune-system': 'Immune System',
-  'ap-bio-endocrine-system': 'Endocrine System',
-  'ap-bio-animal-behavior': 'Animal Behavior',
-  'ap-bio-experimental-design': 'Experimental Design',
-  'ap-bio-viral-biology': 'Viral Biology',
+  'prokaryotic-eukaryotic-cells': 'Prokaryotic vs. Eukaryotic Cells',
+  'proteins': 'Proteins',
+  'speciation': 'Speciation',
+  'transcription-rna-processing': 'Transcription and RNA Processing',
+  'translation': 'Translation and Protein Synthesis',
+  'water-properties': 'Water and Its Properties',
 }
 
 function slugToReadableName(slug: string): string {

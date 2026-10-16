@@ -14,6 +14,7 @@ import { calcABQuestionPool, type CalcABQuestion } from './exit-quizzes/ap-calcu
 import { mulberry32 } from './_shared/prng'
 import { calcBCQuestionPool, type CalcBCQuestion } from './exit-quizzes/ap-calculus-bc'
 import { estimateApScore } from '@/lib/ap-scoring'
+import { canonicalApTopicSlug } from '@/lib/ap-topic-canonical'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -238,7 +239,8 @@ export function generateCalcBCDiagnosticTest(form: number): CalcBCDiagnosticTest
         correctAnswer: q.correctAnswer,
         explanation: q.explanation,
         domain: domain.id,
-        topicSlug: q.topicSlug,
+        // Lesson-key slugs (implicit-differentiation-calcab, …) have no Topic row.
+        topicSlug: canonicalApTopicSlug('ap-calculus-bc', q.topicSlug),
       })
     }
   }

@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { diagnosticQuestionRows } from '@/lib/question-activity-rows'
 import { recordQuestions } from '@/lib/study-tracking'
+import { canonicalizeDiagnosticResults, diagnosticCourseSlug } from '@/lib/ap-topic-canonical'
 import { Prisma } from '@prisma/client'
 
 export async function POST(req: Request) {
@@ -42,6 +43,9 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Invalid results format' }, { status: 400 })
     }
 
+    // A client built before the Oct 2026 slug fix can still send legacy topic slugs.
+    parsedResults = canonicalizeDiagnosticResults(category, parsedResults)
+
     const diagnostic = await prisma.diagnosticTest.create({
       data: {
         userId: session.user.id,
@@ -52,8 +56,17 @@ export async function POST(req: Request) {
       },
     })
 
-    // Teacher report: per-question DIAGNOSTIC rows graded from the stored key.
-    await recordQuestions(session.user.id, diagnosticQuestionRows(parsedResults, { category }))
+    // Teacher report + answer log: per-question DIAGNOSTIC rows graded from
+    // the stored key, tied to the stored attempt (as the SAT/MCAT routes do).
+    await recordQuestions(
+      session.user.id,
+      diagnosticQuestionRows(parsedResults, {
+        category,
+        courseSlug: diagnosticCourseSlug(category) ?? undefined,
+        attemptKind: 'diagnostic',
+        attemptId: diagnostic.id,
+      }),
+    )
 
     return NextResponse.json({ success: true, id: diagnostic.id })
   } catch (error) {

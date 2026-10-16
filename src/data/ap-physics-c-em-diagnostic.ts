@@ -9,6 +9,7 @@
 import { apPhysicsCEMQuestionPool } from './exit-quizzes/ap-physics-c-em'
 import { mulberry32 } from './_shared/prng'
 import { estimateApScore } from '@/lib/ap-scoring'
+import { AP_CANONICAL_TOPIC_NAMES, diagnosticItemTopic, isServedItem } from '@/lib/ap-topic-canonical'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -69,11 +70,11 @@ export interface APPhysicsCEMResults {
 /* ------------------------------------------------------------------ */
 
 const AP_PHYSICS_C_EM_DOMAINS: APPhysicsCEMDomain[] = [
-  { id: 'electrostatics', name: 'Electrostatics', topicSlugs: ['physics-c-coulomb-law', 'physics-c-electric-fields', 'physics-c-gauss-law'], questionTarget: 6 },
-  { id: 'electric-potential', name: 'Electric Potential', topicSlugs: ['physics-c-electric-potential', 'physics-c-conductors-equilibrium', 'physics-c-potential-energy'], questionTarget: 6 },
-  { id: 'capacitors-dielectrics', name: 'Capacitors & Dielectrics', topicSlugs: ['physics-c-capacitors', 'physics-c-dielectrics', 'physics-c-energy-density'], questionTarget: 6 },
-  { id: 'circuits', name: 'Electric Circuits', topicSlugs: ['physics-c-dc-circuits', 'physics-c-rc-circuits', 'physics-c-power-circuits'], questionTarget: 6 },
-  { id: 'magnetism-em-induction', name: 'Magnetism & EM Induction', topicSlugs: ['physics-c-magnetic-forces', 'physics-c-magnetic-field-sources', 'physics-c-faraday-induction', 'physics-c-inductance-rl', 'physics-c-maxwell-equations'], questionTarget: 6 },
+  { id: 'electrostatics', name: 'Electrostatics', topicSlugs: ['physics-c-electric-field-coulomb', 'physics-c-gauss-law'], questionTarget: 6 },
+  { id: 'electric-potential', name: 'Electric Potential', topicSlugs: ['physics-c-electric-potential', 'physics-c-gauss-law'], questionTarget: 6 },
+  { id: 'capacitors-dielectrics', name: 'Capacitors & Dielectrics', topicSlugs: ['physics-c-capacitors-dielectrics'], questionTarget: 6 },
+  { id: 'circuits', name: 'Electric Circuits', topicSlugs: ['physics-c-dc-circuits', 'physics-c-rc-circuits'], questionTarget: 6 },
+  { id: 'magnetism-em-induction', name: 'Magnetism & EM Induction', topicSlugs: ['physics-c-magnetic-forces', 'physics-c-magnetic-field-sources', 'physics-c-faraday-lenz', 'physics-c-inductance-rl-circuits', 'physics-c-maxwell-equations'], questionTarget: 6 },
 ]
 
 export { AP_PHYSICS_C_EM_DOMAINS }
@@ -92,6 +93,38 @@ function seededShuffle<T>(arr: T[], rng: () => number): T[] {
 }
 
 /* ------------------------------------------------------------------ */
+/*  Served pool: production topic slugs only                           */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Legacy sub-slugs (physics-c-faraday-induction, physics-c-conductors-equilibrium, …) have no Topic row, so they map through AP_LEGACY_TOPIC_SLUGS['ap-physics-c-em'];
+ * these items, keyed by diagnosticItemKey(question), go to a different lesson
+ * than their slug's default (null = not served). Phase 2 (Oct 2026).
+ */
+export const PCEM_ITEM_TOPIC_EXCEPTIONS: Record<string, string | null> = {
+  '1bc76c6b': 'physics-c-electric-potential', // Charge on an irregularly shaped conductor in equilibrium is distribute
+  '3d245a42': 'physics-c-electric-potential', // A grounded conducting sphere of radius R is placed in a uniform electr
+  '5677a610': 'physics-c-electric-potential', // A conducting ellipsoid is charged. Compared to a region of smaller cur
+  '979efb86': 'physics-c-electric-potential', // A charge Q is distributed uniformly along a thin ring of radius R. The
+  'acbb8dad': 'physics-c-gauss-law', // The electric field at distance r from an infinitely long line charge w
+  'e70cc09a': 'physics-c-gauss-law', // An infinitely long line of charge has uniform linear charge density λ.
+  '7cdb18f1': 'physics-c-gauss-law', // The electric field inside a uniformly charged insulating sphere of rad
+  '30149a8a': 'physics-c-gauss-law', // The electric field at the surface of a uniformly charged solid sphere
+  '58a747b4': 'physics-c-inductance-rl-circuits', // The current in an inductor falls steadily from 3.0 A to 1.0 A in 0.50
+  '7f95997d': 'physics-c-inductance-rl-circuits', // The current in a 0.30 H inductor drops steadily from 4.0 A to zero in
+  '05c07b09': 'physics-c-inductance-rl-circuits', // A 9.0 V battery is connected in series with a 3.0 Ω resistor and a 0.6
+  '5eb5be4b': 'physics-c-inductance-rl-circuits', // Immediately after the switch closes in a series circuit of an ideal ba
+  'd874dc20': 'physics-c-maxwell-equations', // In a region where B is changing at rate dB/dt, the induced electric fi
+  'c0ffbeaf': 'physics-c-maxwell-equations', // For the same cylindrical region with uniform dB/dt, the induced electr
+}
+
+/**
+ * The exit pool tagged with the production topic that teaches each item
+ * (null = not served; skipped at selection so other items keep their slots).
+ */
+const TAGGED_POOL = apPhysicsCEMQuestionPool.map((q) => ({ ...q, topicSlug: diagnosticItemTopic('ap-physics-c-em', q, PCEM_ITEM_TOPIC_EXCEPTIONS) }))
+
+/* ------------------------------------------------------------------ */
 /*  Generator                                                          */
 /* ------------------------------------------------------------------ */
 
@@ -100,8 +133,9 @@ export function generateAPPhysicsCEMTest(form: number): APPhysicsCEMTestData {
   const questions: APPhysicsCEMQuestion[] = []
 
   for (const domain of AP_PHYSICS_C_EM_DOMAINS) {
-    const pool = apPhysicsCEMQuestionPool.filter(q => q.domain === domain.id)
-    const shuffled = seededShuffle(pool, rng)
+    const pool = TAGGED_POOL.filter(q => q.domain === domain.id)
+    // Dropped items keep their place in the shuffle; the next served item takes the slot.
+    const shuffled = seededShuffle(pool, rng).filter(isServedItem)
     const selected = shuffled.slice(0, domain.questionTarget)
 
     for (const q of selected) {
@@ -247,26 +281,21 @@ export function pickNextForm(previousForms: number[]): number {
   return last >= TOTAL_FORMS ? 1 : last + 1
 }
 
+/** Production Topic titles, so a recommendation reads like the topic page it links to. */
 const SLUG_LABELS: Record<string, string> = {
-  'physics-c-coulomb-law': "Coulomb's Law & Superposition",
-  'physics-c-electric-fields': 'Electric Field Calculations',
-  'physics-c-gauss-law': "Gauss's Law",
+  'physics-c-capacitors-dielectrics': 'Capacitors and Dielectrics',
+  'physics-c-dc-circuits': 'Current, Resistance, and DC Circuits',
+  'physics-c-electric-field-coulomb': 'Electric Field and Coulomb\'s Law',
   'physics-c-electric-potential': 'Electric Potential',
-  'physics-c-conductors-equilibrium': 'Conductors in Equilibrium',
-  'physics-c-potential-energy': 'Electric Potential Energy',
-  'physics-c-capacitors': 'Capacitors',
-  'physics-c-dielectrics': 'Dielectrics',
-  'physics-c-energy-density': 'Energy Density',
-  'physics-c-dc-circuits': 'DC Circuits',
+  'physics-c-faraday-lenz': 'Faraday\'s Law and Lenz\'s Law',
+  'physics-c-gauss-law': 'Gauss\'s Law',
+  'physics-c-inductance-rl-circuits': 'Inductance and RL Circuits',
+  'physics-c-magnetic-field-sources': 'Sources of Magnetic Fields',
+  'physics-c-magnetic-forces': 'Magnetic Fields and Forces',
+  'physics-c-maxwell-equations': 'Maxwell\'s Equations',
   'physics-c-rc-circuits': 'RC Circuits',
-  'physics-c-power-circuits': 'Power in Circuits',
-  'physics-c-magnetic-forces': 'Magnetic Forces',
-  'physics-c-magnetic-field-sources': 'Magnetic Field Sources',
-  'physics-c-faraday-induction': "Faraday's Law & Induction",
-  'physics-c-inductance-rl': 'Inductance & RL Circuits',
-  'physics-c-maxwell-equations': "Maxwell's Equations",
 }
 
 function slugToReadableName(slug: string): string {
-  return SLUG_LABELS[slug] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  return SLUG_LABELS[slug] ?? AP_CANONICAL_TOPIC_NAMES[slug] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }

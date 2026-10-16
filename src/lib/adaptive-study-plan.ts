@@ -19,6 +19,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
+import { canonicalizeRecommendedTopics, diagnosticCourseSlug } from '@/lib/ap-topic-canonical'
 
 export interface RecommendedTopic {
   slug: string
@@ -99,7 +100,7 @@ export async function getDiagnosticFocus(
       prisma.diagnosticTest.findFirst({
         where: { userId, category: { startsWith: prefix } },
         orderBy: { createdAt: 'desc' },
-        select: { results: true, weakAreas: true, createdAt: true },
+        select: { category: true, results: true, weakAreas: true, createdAt: true },
       }),
     ),
   )
@@ -112,7 +113,8 @@ export async function getDiagnosticFocus(
     if (!row) continue
     // Higher-priority entry for a slug wins if the same topic appears twice.
     const rank = (p?: string) => (p === 'high' ? 0 : p === 'medium' ? 1 : 2)
-    for (const t of parseRecommendedTopics(row.results)) {
+    // Legacy AP slugs on older attempts map to the production topic (ap-topic-canonical).
+    for (const t of canonicalizeRecommendedTopics(diagnosticCourseSlug(row.category), parseRecommendedTopics(row.results))) {
       const existing = topicBySlug.get(t.slug)
       if (!existing || rank(t.priority) < rank(existing.priority)) topicBySlug.set(t.slug, t)
     }

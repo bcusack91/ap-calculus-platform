@@ -9,6 +9,7 @@
 import { apPhysics2QuestionPool } from './exit-quizzes/ap-physics-2'
 import { mulberry32 } from './_shared/prng'
 import { estimateApScore } from '@/lib/ap-scoring'
+import { AP_CANONICAL_TOPIC_NAMES, diagnosticItemTopic, isServedItem } from '@/lib/ap-topic-canonical'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -75,13 +76,13 @@ export interface APPhysics2DiagnosticResults {
 
 const AP_PHYSICS2_DOMAINS: APPhysics2Domain[] = [
   // 2024-25 CED: fluids moved to Physics 1; waves & sound moved INTO Physics 2.
-  { id: 'waves-sound', name: 'Waves, Sound & Physical Optics', topicSlugs: ['wave-properties', 'sound-waves', 'standing-waves', 'physical-optics'], questionTarget: 5 },
-  { id: 'thermodynamics', name: 'Thermodynamics', topicSlugs: ['temperature-and-heat', 'kinetic-theory', 'thermodynamic-laws'], questionTarget: 5 },
-  { id: 'electricity', name: 'Electric Force, Field & Potential', topicSlugs: ['electric-charge-and-force', 'electric-fields', 'electric-potential', 'capacitance'], questionTarget: 5 },
-  { id: 'circuits', name: 'Electric Circuits', topicSlugs: ['dc-circuits', 'rc-circuits'], questionTarget: 5 },
-  { id: 'magnetism', name: 'Magnetism & Electromagnetic Induction', topicSlugs: ['magnetic-fields', 'electromagnetic-induction'], questionTarget: 5 },
-  { id: 'optics', name: 'Geometric & Physical Optics', topicSlugs: ['geometric-optics', 'wave-optics'], questionTarget: 4 },
-  { id: 'modern-physics', name: 'Quantum, Atomic & Nuclear Physics', topicSlugs: ['atomic-structure', 'nuclear-physics', 'quantum-mechanics'], questionTarget: 4 },
+  { id: 'waves-sound', name: 'Waves, Sound & Physical Optics', topicSlugs: ['interference-diffraction'], questionTarget: 5 },
+  { id: 'thermodynamics', name: 'Thermodynamics', topicSlugs: ['temperature-thermal-expansion', 'heat-specific-heat', 'laws-of-thermodynamics'], questionTarget: 5 },
+  { id: 'electricity', name: 'Electric Force, Field & Potential', topicSlugs: ['electric-charge-coulombs-law', 'electric-fields-potential'], questionTarget: 5 },
+  { id: 'circuits', name: 'Electric Circuits', topicSlugs: ['current-resistance-ohms-law', 'series-parallel-circuits', 'kirchhoffs-laws'], questionTarget: 5 },
+  { id: 'magnetism', name: 'Magnetism & Electromagnetic Induction', topicSlugs: ['magnetic-fields-forces', 'electromagnetic-induction'], questionTarget: 5 },
+  { id: 'optics', name: 'Geometric & Physical Optics', topicSlugs: ['reflection-refraction', 'lenses', 'interference-diffraction'], questionTarget: 4 },
+  { id: 'modern-physics', name: 'Quantum, Atomic & Nuclear Physics', topicSlugs: ['photons-atomic-nuclear'], questionTarget: 4 },
 ]
 
 export { AP_PHYSICS2_DOMAINS }
@@ -100,6 +101,50 @@ function seededShuffle<T>(arr: T[], rng: () => number): T[] {
 }
 
 /* ------------------------------------------------------------------ */
+/*  Served pool: production topic slugs only                           */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Pre-2024 unit slugs (wave-properties, kinetic-theory, dc-circuits, …) have no Topic row, so they map through AP_LEGACY_TOPIC_SLUGS['ap-physics-2'];
+ * these items, keyed by diagnosticItemKey(question), go to a different lesson
+ * than their slug's default (null = not served). Phase 2 (Oct 2026).
+ */
+export const PHYSICS2_ITEM_TOPIC_EXCEPTIONS: Record<string, string | null> = {
+  '13a483d9': 'series-parallel-circuits', // Two capacitors in parallel: $C_{total} =$
+  '1e3f3a6f': 'series-parallel-circuits', // Capacitors in parallel: $C_{total} =$
+  '8ed141d2': 'series-parallel-circuits', // Two 6 μF capacitors in series have equivalent capacitance:
+  '5f50f60a': 'series-parallel-circuits', // Two capacitors $C_{1}$ = 4 μF and $C_{2}$ = 6 μF in series have equiva
+  '9fe5d01f': 'series-parallel-circuits', // Two capacitors $C_{1}$ = 3 μF and $C_{2}$ = 6 μF in parallel have equi
+  '59cc2179': 'kirchhoffs-laws', // Kirchhoff's junction rule is based on conservation of:
+  '80f8d1e6': 'kirchhoffs-laws', // Kirchhoff's current law states that total current entering a junction
+  '75cd8447': 'kirchhoffs-laws', // Kirchhoff's loop rule is based on conservation of:
+  'aa6332fc': 'series-parallel-circuits', // Three 6 Ω resistors in series: total resistance?
+  '732b7132': 'series-parallel-circuits', // Three 6 Ω resistors in parallel: total resistance?
+  'c55c486c': 'series-parallel-circuits', // Two 10 Ω resistors in parallel have equivalent resistance:
+  'dd780b58': 'series-parallel-circuits', // In a series circuit, ___ is the same through each resistor.
+  'd04a9583': 'series-parallel-circuits', // Adding resistors in parallel to a circuit ___ total resistance.
+  '7fb67805': 'series-parallel-circuits', // Three resistors of 6 Ω each in parallel have an equivalent resistance
+  'ff0e0064': 'series-parallel-circuits', // In a series circuit, the current through each component is:
+  'add30a66': 'series-parallel-circuits', // In parallel, the voltage across each branch is:
+  '7f72406a': 'lenses', // The thin lens equation: $1/f =$
+  '8a464e05': 'lenses', // A converging (convex) lens has a focal length that is:
+  '7b30c317': 'lenses', // A converging (convex) lens has a ___ focal length.
+  '44ee228a': 'lenses', // Magnification $m = -d_i/d_o$. If $m = -2$:
+  '67243c42': 'lenses', // For a thin converging lens, if the object is at 2f, the image is:
+  '5261c080': 'lenses', // A virtual image:
+  '0f83681b': 'lenses', // The magnification equation for a mirror/lens is m = −d_i/d_o. If m = −
+  'a8ba4270': 'temperature-thermal-expansion', // Temperature measures:
+  '789b0765': 'temperature-thermal-expansion', // 0 K (absolute zero) corresponds to:
+  'beb6ea3c': 'temperature-thermal-expansion', // Two blocks of different materials, one at 20°C and one at 80°C, are pl
+}
+
+/**
+ * The exit pool tagged with the production topic that teaches each item
+ * (null = not served; skipped at selection so other items keep their slots).
+ */
+const TAGGED_POOL = apPhysics2QuestionPool.map((q) => ({ ...q, topicSlug: diagnosticItemTopic('ap-physics-2', q, PHYSICS2_ITEM_TOPIC_EXCEPTIONS) }))
+
+/* ------------------------------------------------------------------ */
 /*  Generator                                                          */
 /* ------------------------------------------------------------------ */
 
@@ -108,8 +153,8 @@ export function generateAPPhysics2DiagnosticTest(form: number): APPhysics2Diagno
   const questions: APPhysics2DiagnosticQuestion[] = []
 
   for (const domain of AP_PHYSICS2_DOMAINS) {
-    const pool = apPhysics2QuestionPool.filter(q => q.domain === domain.id)
-    const shuffled = seededShuffle(pool, rng)
+    const pool = TAGGED_POOL.filter(q => q.domain === domain.id)
+    const shuffled = seededShuffle(pool, rng).filter(isServedItem)
     // The pool deliberately holds near-duplicate variants of some stems (for
     // cross-form variety), so select with distinct stems — otherwise a form
     // can ask the same question twice.
@@ -277,29 +322,24 @@ export function pickNextForm(previousForms: number[]): number {
   return last >= TOTAL_FORMS ? 1 : last + 1
 }
 
+/** Production Topic titles, so a recommendation reads like the topic page it links to. */
 const SLUG_LABELS: Record<string, string> = {
-  'wave-properties': 'Wave Properties',
-  'sound-waves': 'Sound & Doppler',
-  'standing-waves': 'Standing Waves & Harmonics',
-  'physical-optics': 'Interference & Diffraction',
-  'temperature-and-heat': 'Temperature & Heat Transfer',
-  'kinetic-theory': 'Kinetic Theory of Gases',
-  'thermodynamic-laws': 'Laws of Thermodynamics',
-  'electric-charge-and-force': 'Electric Charge & Coulomb\'s Law',
-  'electric-fields': 'Electric Fields',
-  'electric-potential': 'Electric Potential & Energy',
-  'capacitance': 'Capacitance',
-  'dc-circuits': 'DC Circuits',
-  'rc-circuits': 'RC Circuits',
-  'magnetic-fields': 'Magnetic Fields & Forces',
+  'current-resistance-ohms-law': 'Current, Resistance, and Ohm\'s Law',
+  'electric-charge-coulombs-law': 'Electric Charge and Coulomb\'s Law',
+  'electric-fields-potential': 'Electric Fields and Electric Potential',
   'electromagnetic-induction': 'Electromagnetic Induction',
-  'geometric-optics': 'Reflection, Refraction & Lenses',
-  'wave-optics': 'Interference & Diffraction',
-  'atomic-structure': 'Atomic Structure & Photoelectric Effect',
-  'nuclear-physics': 'Nuclear Physics & Radioactivity',
-  'quantum-mechanics': 'Quantum Mechanics & Wave-Particle Duality',
+  'heat-specific-heat': 'Heat and Specific Heat',
+  'interference-diffraction': 'Interference and Diffraction',
+  'kirchhoffs-laws': 'Kirchhoff\'s Laws',
+  'laws-of-thermodynamics': 'Laws of Thermodynamics',
+  'lenses': 'Lenses',
+  'magnetic-fields-forces': 'Magnetic Fields and Forces',
+  'photons-atomic-nuclear': 'Photons and Atomic Physics',
+  'reflection-refraction': 'Reflection and Refraction',
+  'series-parallel-circuits': 'Series and Parallel Circuits',
+  'temperature-thermal-expansion': 'Temperature and Thermal Expansion',
 }
 
 function slugToReadableName(slug: string): string {
-  return SLUG_LABELS[slug] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  return SLUG_LABELS[slug] ?? AP_CANONICAL_TOPIC_NAMES[slug] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }

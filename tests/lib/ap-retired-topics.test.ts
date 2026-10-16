@@ -40,6 +40,8 @@ const ALLOWED: Record<string, string[]> = {
   // 'advanced-integration' is also the AP Calculus BC diagnostic's DOMAIN id
   // (BC Units 6-8 techniques). Only the AB Category with that slug retired.
   'src/data/ap-calculus-bc-diagnostic.ts': ['advanced-integration'],
+  // The BC unit tests file that same exit-pool DOMAIN under CED Unit 6.
+  'src/data/unit-tests/ap-calculus-bc.ts': ['advanced-integration'],
   // 'parametric-equations' is a competitive CATEGORY id backed by the BC Unit 9
   // parametric bank (parametric-equations-bank.ts), not the retired precalc topic.
   'src/lib/competitive-utils.ts': ['parametric-equations'],

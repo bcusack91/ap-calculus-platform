@@ -11,6 +11,7 @@ import { unitTestStatusFor } from '@/lib/mcat-unit-test-server'
 import { fullLengthReadiness } from '@/lib/full-length-progress-server'
 import { FULL_LENGTH_COURSES, type FullLengthCourse } from '@/lib/full-length-progress'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { canonicalizeRecommendedTopics } from '@/lib/ap-topic-canonical'
 
 /**
  * Every course's diagnostic study plan, with per-topic done/pending state.
@@ -101,7 +102,9 @@ export async function GET() {
       if (course.key === 'sat') continue
       const latest = attempts.find((a) => a.category.startsWith(course.categoryPrefix))
       if (!latest) continue
-      const topics = parseRecommended(latest.results)
+      // Attempts stored before the Oct 2026 fix can carry legacy AP slugs with
+      // no Topic row (ap-bio-*, *-calcab lesson keys); map them to real topics.
+      const topics = canonicalizeRecommendedTopics(course.courseSlug, parseRecommended(latest.results))
       if (topics.length === 0) continue
       perCourse.set(course.key, { takenAt: latest.createdAt, topics })
     }

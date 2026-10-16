@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { canonicalizeDiagnosticResults } from '@/lib/ap-topic-canonical'
 
 export async function GET(_req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
@@ -30,7 +31,8 @@ export async function GET(_req: Request, { params }: { params: Promise<{ id: str
       return NextResponse.json({ error: 'Not found' }, { status: 404 })
     }
 
-    return NextResponse.json({ attempt })
+    // Older AP attempts can carry legacy topic slugs with no Topic row.
+    return NextResponse.json({ attempt: { ...attempt, results: canonicalizeDiagnosticResults(attempt.category, attempt.results) } })
   } catch (error) {
     console.error('Diagnostic attempt fetch error:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

@@ -11,6 +11,7 @@
 import { calcABQuestionPool, type CalcABQuestion } from './exit-quizzes/ap-calculus-ab'
 import { mulberry32 } from './_shared/prng'
 import { estimateApScore } from '@/lib/ap-scoring'
+import { canonicalApTopicSlug } from '@/lib/ap-topic-canonical'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -186,7 +187,8 @@ export function generateCalcABDiagnosticTest(form: DiagnosticForm): CalcABDiagno
         correctAnswer: q.correctAnswer,
         explanation: q.explanation,
         domain: domain.id,
-        topicSlug: q.topicSlug,
+        // Lesson-key slugs (implicit-differentiation-calcab, …) have no Topic row.
+        topicSlug: canonicalApTopicSlug('ap-calculus-ab', q.topicSlug),
       })
     }
   }

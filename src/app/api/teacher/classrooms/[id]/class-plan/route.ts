@@ -4,6 +4,7 @@ import { requireClassroomAccess } from '@/lib/teacher-auth'
 import { classPlanCourse, courseForCategory, scoreLabelFromResults, CLASS_PLAN_COURSES } from '@/lib/class-plan-config'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { canonicalizeRecommendedTopics } from '@/lib/ap-topic-canonical'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { passedUnitTestCycles } from '@/lib/mcat-unit-test-server'
 import { buildSatPlan, satPlacementsFor, type SatPlacement, type SatPlan } from '@/lib/sat-plan'
@@ -125,7 +126,8 @@ export async function GET(req: NextRequest, { params }: Ctx) {
   const recsByUser = new Map<string, RecommendedTopic[]>()
   for (const a of attempts) {
     const deduped = new Map<string, RecommendedTopic>()
-    for (const t of parseRecommendedTopics(a.results)) {
+    // Older attempts can carry legacy AP slugs with no Topic row; map them.
+    for (const t of canonicalizeRecommendedTopics(course.courseSlug, parseRecommendedTopics(a.results))) {
       const cur = deduped.get(t.slug)
       const rank = (p: RecommendedTopic['priority']) => (p === 'high' ? 0 : p === 'medium' ? 1 : 2)
       if (!cur || rank(t.priority) < rank(cur.priority)) deduped.set(t.slug, t)

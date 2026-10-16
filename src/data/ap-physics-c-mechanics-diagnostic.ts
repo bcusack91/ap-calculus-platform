@@ -9,6 +9,7 @@
 import { apPhysicsCMechQuestionPool } from './exit-quizzes/ap-physics-c-mechanics'
 import { mulberry32 } from './_shared/prng'
 import { estimateApScore } from '@/lib/ap-scoring'
+import { AP_CANONICAL_TOPIC_NAMES, diagnosticItemTopic, isServedItem } from '@/lib/ap-topic-canonical'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -69,10 +70,10 @@ export interface APPhysicsCMechResults {
 /* ------------------------------------------------------------------ */
 
 const AP_PHYSICS_C_MECH_DOMAINS: APPhysicsCMechDomain[] = [
-  { id: 'kinematics', name: 'Kinematics', topicSlugs: ['physics-c-1d-kinematics', 'physics-c-2d-kinematics', 'physics-c-variable-acceleration'], questionTarget: 6 },
+  { id: 'kinematics', name: 'Kinematics', topicSlugs: ['physics-c-position-velocity-acceleration', 'physics-c-variable-acceleration'], questionTarget: 6 },
   { id: 'newtons-laws', name: "Newton's Laws of Motion", topicSlugs: ['physics-c-newtons-laws-calculus', 'physics-c-friction-inclines', 'physics-c-circular-motion'], questionTarget: 6 },
-  { id: 'work-energy-power', name: 'Work, Energy & Power', topicSlugs: ['physics-c-work-power', 'physics-c-conservative-forces', 'physics-c-potential-energy-curves'], questionTarget: 6 },
-  { id: 'momentum', name: 'Systems of Particles & Momentum', topicSlugs: ['physics-c-momentum-collisions', 'physics-c-center-of-mass', 'physics-c-variable-mass'], questionTarget: 6 },
+  { id: 'work-energy-power', name: 'Work, Energy & Power', topicSlugs: ['physics-c-work-power', 'physics-c-conservative-forces'], questionTarget: 6 },
+  { id: 'momentum', name: 'Systems of Particles & Momentum', topicSlugs: ['physics-c-momentum-collisions', 'physics-c-center-of-mass'], questionTarget: 6 },
   { id: 'rotation-oscillation', name: 'Rotation & Oscillation', topicSlugs: ['physics-c-rotational-kinematics-dynamics', 'physics-c-angular-momentum', 'physics-c-simple-harmonic-motion'], questionTarget: 6 },
 ]
 
@@ -92,6 +93,33 @@ function seededShuffle<T>(arr: T[], rng: () => number): T[] {
 }
 
 /* ------------------------------------------------------------------ */
+/*  Served pool: production topic slugs only                           */
+/* ------------------------------------------------------------------ */
+
+/**
+ * Legacy sub-slugs (physics-c-1d-kinematics, physics-c-variable-mass, …) have no Topic row, so they map through AP_LEGACY_TOPIC_SLUGS['ap-physics-c-mechanics'];
+ * these items, keyed by diagnosticItemKey(question), go to a different lesson
+ * than their slug's default (null = not served). Phase 2 (Oct 2026).
+ */
+export const PCMECH_ITEM_TOPIC_EXCEPTIONS: Record<string, string | null> = {
+  'c7819760': 'physics-c-variable-acceleration', // The acceleration of a particle is a(t) = 4t. If v(0) = 2 m/s, what is
+  '57aa1b0c': 'physics-c-variable-acceleration', // A car accelerates from rest with a(t) = 6 − 2t $(m/s^{2})$. What is th
+  '1eab6b4d': 'physics-c-variable-acceleration', // The acceleration of a particle is a = 4 − 2t $m/s^{2}$. With v(0) = 0,
+  '75cb894c': 'physics-c-circular-motion', // A particle moves in a circle of radius 2 m. Its angular position is θ(
+  'fa9ecd6a': 'physics-c-circular-motion', // A particle has position r(t) = (R cos ωt)î + (R sin ωt)ĵ. What is the
+  '150d4f20': null, // The thrust of a rocket is given by: [rockets / falling chain: off the CED (4.2.B.2.iii covers only constant velocity with changing mass)]
+  'c2c10da1': null, // A chain of linear density λ hangs vertically. If it falls under gravit [rockets / falling chain: off the CED (4.2.B.2.iii covers only constant velocity with changing mass)]
+  'a51824ea': null, // A rocket has initial mass 1000 kg and burns fuel at 10 kg/s with exhau [rockets / falling chain: off the CED (4.2.B.2.iii covers only constant velocity with changing mass)]
+  '8ddd055e': null, // A 400 kg rocket hovers motionless just above the ground (g = 10 $m/s^{ [rockets / falling chain: off the CED (4.2.B.2.iii covers only constant velocity with changing mass)]
+}
+
+/**
+ * The exit pool tagged with the production topic that teaches each item
+ * (null = not served; skipped at selection so other items keep their slots).
+ */
+const TAGGED_POOL = apPhysicsCMechQuestionPool.map((q) => ({ ...q, topicSlug: diagnosticItemTopic('ap-physics-c-mechanics', q, PCMECH_ITEM_TOPIC_EXCEPTIONS) }))
+
+/* ------------------------------------------------------------------ */
 /*  Generator                                                          */
 /* ------------------------------------------------------------------ */
 
@@ -100,8 +128,9 @@ export function generateAPPhysicsCMechTest(form: number): APPhysicsCMechTestData
   const questions: APPhysicsCMechQuestion[] = []
 
   for (const domain of AP_PHYSICS_C_MECH_DOMAINS) {
-    const pool = apPhysicsCMechQuestionPool.filter(q => q.domain === domain.id)
-    const shuffled = seededShuffle(pool, rng)
+    const pool = TAGGED_POOL.filter(q => q.domain === domain.id)
+    // Dropped items keep their place in the shuffle; the next served item takes the slot.
+    const shuffled = seededShuffle(pool, rng).filter(isServedItem)
     const selected = shuffled.slice(0, domain.questionTarget)
 
     for (const q of selected) {
@@ -241,24 +270,24 @@ export function pickNextForm(previousForms: number[]): number {
   return last >= TOTAL_FORMS ? 1 : last + 1
 }
 
+/** Production Topic titles, so a recommendation reads like the topic page it links to. */
 const SLUG_LABELS: Record<string, string> = {
-  'physics-c-1d-kinematics': '1D Kinematics (Calculus)',
-  'physics-c-2d-kinematics': '2D Kinematics & Projectiles',
-  'physics-c-variable-acceleration': 'Variable Acceleration',
-  'physics-c-newtons-laws-calculus': "Newton's Laws (Calculus)",
-  'physics-c-friction-inclines': 'Friction & Inclines',
-  'physics-c-circular-motion': 'Circular Motion',
-  'physics-c-work-power': 'Work & Power',
-  'physics-c-conservative-forces': 'Conservative Forces & PE',
-  'physics-c-potential-energy-curves': 'Potential Energy Curves',
-  'physics-c-momentum-collisions': 'Momentum & Collisions',
-  'physics-c-center-of-mass': 'Center of Mass',
-  'physics-c-variable-mass': 'Variable Mass Systems',
-  'physics-c-rotational-kinematics-dynamics': 'Rotational Dynamics',
   'physics-c-angular-momentum': 'Angular Momentum',
+  'physics-c-center-of-mass': 'Center of Mass',
+  'physics-c-circular-motion': 'Circular Motion and Polar Coordinates',
+  'physics-c-conservative-forces': 'Conservative Forces and Potential Energy',
+  'physics-c-friction-inclines': 'Friction and Inclined Planes',
+  'physics-c-moment-of-inertia': 'Moment of Inertia',
+  'physics-c-momentum-collisions': 'Momentum and Collisions',
+  'physics-c-newtons-laws-calculus': 'Newton\'s Laws with Calculus',
+  'physics-c-position-velocity-acceleration': 'Position, Velocity, and Acceleration',
+  'physics-c-rotational-kinematics-dynamics': 'Rotational Kinematics and Dynamics',
   'physics-c-simple-harmonic-motion': 'Simple Harmonic Motion',
+  'physics-c-universal-gravitation': 'Universal Gravitation and Orbits',
+  'physics-c-variable-acceleration': 'Motion with Variable Acceleration',
+  'physics-c-work-power': 'Work and Power',
 }
 
 function slugToReadableName(slug: string): string {
-  return SLUG_LABELS[slug] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  return SLUG_LABELS[slug] ?? AP_CANONICAL_TOPIC_NAMES[slug] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
 }

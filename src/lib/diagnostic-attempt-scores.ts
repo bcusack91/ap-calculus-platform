@@ -180,3 +180,16 @@ export function attemptScoreLine(category: string, results: unknown): string {
   const parts = [s.overall?.value, ...s.sections.map((x) => `${x.key} ${x.value}`)].filter(Boolean)
   return parts.join(' · ')
 }
+
+/**
+ * Where a past diagnostic attempt opens from its course page. Attempts that
+ * stored their questions (`results.review`, saved by every AP diagnostic page)
+ * open the permanent review, /review/diagnostic/<id>: per-question stats,
+ * the AI explanation and "Make a flashcard". Older attempts without that
+ * copy keep the legacy summary page, which says why there is no question list.
+ */
+export function pastAttemptReviewHref(attempt: { id: string; results?: unknown }): string {
+  const r = attempt.results && typeof attempt.results === 'object' ? (attempt.results as { review?: { questions?: unknown; answers?: unknown } }) : null
+  const stored = Array.isArray(r?.review?.questions) && r.review.questions.length > 0 && Array.isArray(r.review.answers)
+  return stored ? `/review/diagnostic/${attempt.id}` : `/diagnostic-review/${attempt.id}`
+}
