@@ -8,7 +8,7 @@ import { formatTimeUntil } from '@/lib/format-due-time'
 import { studyPlanTopicHref } from '@/lib/dashboard-next-step'
 import { courseDiagnosticForKey } from '@/lib/student-courses'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
-import { unitTestIsNextStep } from '@/lib/unit-test-courses'
+import { AP_CYCLE_TEST_NAME, unitTestIsNextStep, unitTestName } from '@/lib/unit-test-courses'
 import type { PlanTopic } from '@/components/StudyPlanNextUp'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 import FullLengthProgress from '@/components/FullLengthProgress'
@@ -30,7 +30,7 @@ export type PlanStatus = {
   /** 'hard' when the plan comes from a hard-track module (SAT 700-800 path). */
   planSource?: 'regular' | 'hard' | 'core-skills'
   /** The cycle's unit test (src/lib/unit-test-courses.ts). */
-  unitTest?: { available?: boolean; passed: boolean; path: string; questionCount: number; passPercent: number; attempts: number; inProgressId?: string | null; locksDiagnostic?: boolean } | null
+  unitTest?: { available?: boolean; passed: boolean; path: string; questionCount: number; passPercent: number; attempts: number; inProgressId?: string | null; locksDiagnostic?: boolean; testName?: string } | null
 }
 
 type FlashcardStats = {
@@ -205,9 +205,10 @@ export default function CourseStudyPlan({
             </>
           ) : allDone && plan?.unitTest && unitTestIsNextStep(plan.unitTest, plan.canRetakeDiagnostic, { requireAvailable: false }) ? (
             <>
-              <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white">📝 Every topic cleared — take your unit test</h2>
+              <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white">📝 Every topic cleared — take your {unitTestName(plan.unitTest)}</h2>
               <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
                 A {plan.unitTest.questionCount}-question test on your study-plan topics.{' '}
+                {plan.unitTest.testName === AP_CYCLE_TEST_NAME && 'It mixes every topic your diagnostic recommended (not one course unit, like the unit tests). '}
                 {plan.unitTest.locksDiagnostic !== false
                   ? `Score ${plan.unitTest.passPercent}% or better to unlock your next ${label} diagnostic.`
                   : `Score ${plan.unitTest.passPercent}% or better to finish this cycle, then retake the ${label} diagnostic to see your growth.`}
@@ -216,7 +217,7 @@ export default function CourseStudyPlan({
                 href={plan.unitTest.path}
                 className={`mt-4 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition ${a.cta}`}
               >
-                {plan.unitTest.inProgressId ? 'Resume the unit test' : plan.unitTest.attempts > 0 ? 'Retake the unit test' : 'Take the unit test'} <ArrowRight className="h-4 w-4" aria-hidden />
+                {plan.unitTest.inProgressId ? 'Resume' : plan.unitTest.attempts > 0 ? 'Retake' : 'Take'} the {unitTestName(plan.unitTest)} <ArrowRight className="h-4 w-4" aria-hidden />
               </Link>
             </>
           ) : allDone ? (
@@ -366,10 +367,10 @@ export default function CourseStudyPlan({
                 Clear a topic by scoring {clearPercent}% or better on its exit quiz (or by testing out on its entrance quiz).{' '}
                 {gated
                   ? plan?.unitTest
-                    ? `Clear them all, then pass a ${plan.unitTest.questionCount}-question unit test on them, to unlock your next diagnostic.`
+                    ? `Clear them all, then pass a ${plan.unitTest.questionCount}-question ${unitTestName(plan.unitTest)} on them, to unlock your next diagnostic.`
                     : 'Clear them all to unlock your next diagnostic.'
                   : plan?.unitTest
-                  ? `When you've cleared them all, take a ${plan.unitTest.questionCount}-question unit test on them, then retake the diagnostic to see your growth and get a new plan.`
+                  ? `When you've cleared them all, take a ${plan.unitTest.questionCount}-question ${unitTestName(plan.unitTest)} on them, then retake the diagnostic to see your growth and get a new plan.`
                   : "When you've cleared them all, retake the diagnostic to see your growth and get a new plan."}
               </p>
             )}

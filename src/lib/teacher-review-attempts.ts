@@ -9,7 +9,8 @@
  * answers (saved since the answer log, Oct 2026).
  */
 import { prisma } from '@/lib/prisma'
-import { scoreLabelFromResults } from '@/lib/class-plan-config'
+import { courseForCategory, scoreLabelFromResults } from '@/lib/class-plan-config'
+import { UNIT_TEST_COURSES, isUnitTestCourse } from '@/lib/unit-test-courses'
 import { diagnosticPathForCategory } from '@/lib/diagnostic-attempt-scores'
 import { ACT_FL_CATEGORY } from '@/lib/act-full-length-server'
 import { isPsatAttemptFormat } from '@/lib/sat-attempt-format'
@@ -132,10 +133,15 @@ export async function listReviewableAttempts(studentId: string, classroomId: str
       select: { id: true, category: true },
     })
     const courseOf = new Map(cycles.map((c) => [c.id, diagnosticTitle(c.category).replace(/ diagnostic$/, '')]))
+    // AP calls it the "cycle test" (AP also has per-unit unit tests).
+    const nameOf = new Map(cycles.map((c) => {
+      const key = courseForCategory(c.category)?.key ?? ''
+      return [c.id, isUnitTestCourse(key) ? UNIT_TEST_COURSES[key].testName : 'unit test']
+    }))
     for (const u of unitTests) {
       out.push({
         kind: 'unit-test', id: u.id, takenAt: (u.completedAt ?? new Date(0)).toISOString(),
-        title: `${courseOf.get(u.diagnosticId) ?? 'Cycle'} unit test`,
+        title: `${courseOf.get(u.diagnosticId) ?? 'Cycle'} ${nameOf.get(u.diagnosticId) ?? 'unit test'}`,
         score: `${u.percentage ?? 0}% (${u.correct ?? 0}/${u.total})${u.passed ? ' · passed' : ''}`,
         href: href('unit-test', u.id),
       })

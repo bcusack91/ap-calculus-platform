@@ -1,14 +1,15 @@
 /**
  * The cycle unit test's three endpoints (status, start, submit), shared by
  * every course in unit-test-courses.ts. Each course's route files are thin
- * wrappers: /api/mcat-unit-test, /api/sat-unit-test, /api/act-unit-test.
+ * wrappers: /api/mcat-unit-test, /api/sat-unit-test, /api/act-unit-test, and
+ * one dynamic /api/cycle-test/[course] for every AP course.
  */
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { buildMcatPlanStatus } from '@/lib/mcat-plan'
 import { buildSatPlan } from '@/lib/sat-plan'
-import { buildActPlanStatus } from '@/lib/act-plan'
+import { buildActPlanStatus, buildGenericPlanStatus } from '@/lib/act-plan'
 import { createUnitTest, publicQuestions, unitTestStatusFor, type McatUnitTestStatus } from '@/lib/mcat-unit-test-server'
 import { gradeUnitTest, MCAT_UNIT_TEST_PASS_PERCENT, type UnitTestQuestion } from '@/lib/mcat-unit-test'
 import { UNIT_TEST_COURSES, cycleUnitId, type UnitTestCourse } from '@/lib/unit-test-courses'
@@ -37,7 +38,9 @@ export async function loadCyclePlan(course: UnitTestCourse, userId: string): Pro
     const unitTest = await unitTestStatusFor(userId, p.diagnosticId, p.pendingTopics.length === 0, 'sat')
     return { diagnosticId: p.diagnosticId, topics: p.recommendedTopics.map(pick), canRetakeDiagnostic: true, unitTest }
   }
-  const p = await buildActPlanStatus(userId)
+  // ACT and every AP course: the generic class-plan builder (AP topics come
+  // back canonicalized to production slugs). Neither locks the diagnostic.
+  const p = course === 'act' ? await buildActPlanStatus(userId) : await buildGenericPlanStatus(userId, course)
   if (!p.hasDiagnostic || !p.diagnosticId || !p.unitTest) return null
   return { diagnosticId: p.diagnosticId, topics: p.recommendedTopics.map(pick), canRetakeDiagnostic: true, unitTest: p.unitTest }
 }
@@ -104,7 +107,7 @@ export async function unitTestStartResponse(course: UnitTestCourse) {
       )
     }
     if (plan.unitTest.passed) {
-      return NextResponse.json({ error: 'You already passed this unit test.' }, { status: 409 })
+      return NextResponse.json({ error: `You already passed this ${UNIT_TEST_COURSES[course].testName}.` }, { status: 409 })
     }
 
     if (plan.unitTest.inProgressId) {
@@ -183,7 +186,7 @@ export async function unitTestSubmitResponse(course: UnitTestCourse, req: Reques
           userId,
           courseSlug: cfg.courseSlug,
           unitId,
-          unitTitle: `${cfg.label} unit test (recommended topics)`,
+          unitTitle: `${cfg.label} ${cfg.testName} (recommended topics)`,
           correct: graded.correct,
           total: graded.total,
           percentage: graded.percentage,

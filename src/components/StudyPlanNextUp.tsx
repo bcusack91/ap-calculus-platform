@@ -34,7 +34,7 @@
 
 import { useEffect, useState, type ReactNode } from 'react'
 import Link from 'next/link'
-import { unitTestIsNextStep } from '@/lib/unit-test-courses'
+import { unitTestIsNextStep, unitTestName } from '@/lib/unit-test-courses'
 import { ArrowRight, BookOpen, ClipboardList, Layers } from 'lucide-react'
 import { topicFlashcardBrowseHref, topicFlashcardReviewHref } from '@/lib/flashcard-links'
 
@@ -63,7 +63,7 @@ interface PlanPayload {
   diagnosticRoute?: string
   gated?: boolean
   canRetakeDiagnostic?: boolean
-  unitTest?: { passed: boolean; path: string; questionCount: number; passPercent: number; locksDiagnostic?: boolean } | null
+  unitTest?: { passed: boolean; path: string; questionCount: number; passPercent: number; locksDiagnostic?: boolean; testName?: string } | null
 }
 
 interface PanelData {
@@ -72,7 +72,7 @@ interface PanelData {
   diagnosticRoute: string
   gated: boolean
   /** The cycle's unit test still to pass (null when none / passed / waived). */
-  unitTest: { path: string; questionCount: number; passPercent: number; locks: boolean } | null
+  unitTest: { path: string; questionCount: number; passPercent: number; locks: boolean; name: string } | null
 }
 
 /**
@@ -176,6 +176,7 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, fal
                       questionCount: match.unitTest.questionCount,
                       passPercent: match.unitTest.passPercent,
                       locks: match.unitTest.locksDiagnostic !== false,
+                      name: unitTestName(match.unitTest),
                     }
                   : null,
             },
@@ -388,7 +389,7 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, fal
           </p>
         </div>
       ) : data.unitTest ? (
-        /* Every topic cleared — the MCAT cycle's unit test is the last step */
+        /* Every topic cleared — the cycle's unit test (AP: cycle test) is the last step */
         <div className="rounded-2xl border-2 border-green-200 dark:border-green-800 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 p-6 text-center">
           <div className="text-4xl mb-2">📝</div>
           <p className="text-lg font-bold text-green-800 dark:text-green-300">
@@ -396,14 +397,14 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, fal
           </p>
           <p className="mt-1 text-sm text-green-700 dark:text-green-400">
             {data.unitTest.locks
-              ? `Pass the ${data.unitTest.questionCount}-question unit test on these topics (${data.unitTest.passPercent}% or better) to unlock your next diagnostic.`
-              : `Finish the cycle with a ${data.unitTest.questionCount}-question unit test on these topics (${data.unitTest.passPercent}% to pass), then retake the diagnostic to see your growth.`}
+              ? `Pass the ${data.unitTest.questionCount}-question ${data.unitTest.name} on these topics (${data.unitTest.passPercent}% or better) to unlock your next diagnostic.`
+              : `Finish the cycle with a ${data.unitTest.questionCount}-question ${data.unitTest.name} on these topics (${data.unitTest.passPercent}% to pass), then retake the diagnostic to see your growth.`}
           </p>
           <Link
             href={data.unitTest.path}
             className="mt-4 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:from-green-700 hover:to-emerald-700 shadow-lg transition-colors"
           >
-            Take the unit test
+            Take the {data.unitTest.name}
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
         </div>

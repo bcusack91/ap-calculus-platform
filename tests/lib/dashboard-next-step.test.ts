@@ -139,7 +139,7 @@ describe('resolveNextStep — plans and fallbacks', () => {
       unitTest: { available: true, passed: false, attempts: 1, path: '/mcat-unit-test', inProgressId: null },
     }
     const step = resolveNextStep({ ...base, plans: [mcat] })
-    expect(step).toEqual({ kind: 'unit-test', planLabel: 'MCAT', href: '/mcat-unit-test', attempts: 1, resume: false, locks: true })
+    expect(step).toEqual({ kind: 'unit-test', planLabel: 'MCAT', href: '/mcat-unit-test', attempts: 1, resume: false, locks: true, name: 'unit test' })
     expect(describeNextStep(step as Exclude<typeof step, { kind: 'loading' }>).cta).toBe('Retake the unit test')
     // Passed (or a teacher waiver opened the gate): the retake is next.
     expect(resolveNextStep({ ...base, plans: [{ ...mcat, unitTest: { ...mcat.unitTest, passed: true }, canRetakeDiagnostic: true }] }).kind).toBe('retake-diagnostic')

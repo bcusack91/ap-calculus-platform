@@ -36,6 +36,7 @@ import { StudyHeatmap } from '@/components/StudyHeatmap'
 import { PaidAnalyticsGate } from '@/components/PaidAnalyticsGate'
 import SixSigmaDashboard from '@/components/SixSigmaDashboard'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import { unitTestName } from '@/lib/unit-test-courses'
 import NextStepCard from '@/components/dashboard/NextStepCard'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 import { deckDisplayName, type ContextOption } from '@/components/StudyModeSwitcher'
@@ -195,7 +196,7 @@ function DashboardContent() {
     }[]
     summary: { total: number; completed: number; pending: number }
     /** The cycle's unit test (MCAT requires it; SAT/ACT recommend it). */
-    unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; passPercent: number; questionCount: number; inProgressId?: string | null; locksDiagnostic?: boolean } | null
+    unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; passPercent: number; questionCount: number; inProgressId?: string | null; locksDiagnostic?: boolean; testName?: string } | null
   }[]>([])
 
   useEffect(() => {
@@ -753,9 +754,9 @@ function DashboardContent() {
                     <p className="mb-3 text-xs text-gray-600 dark:text-gray-400">
                       Clear a topic by scoring {TOPIC_CLEAR_PERCENT}% or better on its exit quiz (or by testing out on its entrance quiz).{' '}
                       {plan.unitTest && plan.unitTest.locksDiagnostic !== false
-                        ? `Clear every topic, then pass a ${plan.unitTest.questionCount}-question unit test on them (${plan.unitTest.passPercent}%), to unlock your diagnostic retake.`
+                        ? `Clear every topic, then pass a ${plan.unitTest.questionCount}-question ${unitTestName(plan.unitTest)} on them (${plan.unitTest.passPercent}%), to unlock your diagnostic retake.`
                         : plan.unitTest
-                        ? `When every topic is cleared, take a ${plan.unitTest.questionCount}-question unit test on them, then retake the diagnostic to see your growth and get a new plan.`
+                        ? `When every topic is cleared, take a ${plan.unitTest.questionCount}-question ${unitTestName(plan.unitTest)} on them, then retake the diagnostic to see your growth and get a new plan.`
                         : plan.gated
                         ? 'Clear every topic to unlock your diagnostic retake.'
                         : 'When every topic is cleared, retake the diagnostic to see your growth and get a new plan.'}

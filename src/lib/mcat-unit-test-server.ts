@@ -1,6 +1,6 @@
 /**
  * Database side of the cycle unit test (see mcat-unit-test.ts) for every
- * course in unit-test-courses.ts (MCAT, SAT, ACT).
+ * course in unit-test-courses.ts (MCAT, SAT, ACT and every AP course).
  *
  * A cycle is identified by the diagnostic attempt that produced its plan, so a
  * new diagnostic starts a new cycle with no unit test yet — nothing to clean up.
@@ -35,6 +35,8 @@ export interface McatUnitTestStatus {
   passPercent: number
   questionCount: number
   path: string
+  /** Student-facing name: "unit test", or "cycle test" for AP (which also has per-unit tests). */
+  testName: string
 }
 
 /** A cycle's unit-test state for one student. */
@@ -64,6 +66,7 @@ export async function unitTestStatusFor(
     passPercent: MCAT_UNIT_TEST_PASS_PERCENT,
     questionCount: MCAT_UNIT_TEST_QUESTIONS,
     path: cfg.path,
+    testName: cfg.testName,
   }
 }
 

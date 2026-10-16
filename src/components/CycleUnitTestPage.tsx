@@ -10,15 +10,16 @@ import { renderRichText } from '@/lib/render-rich-text'
 import { signUpUrl } from '@/lib/auth-redirect'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
 import type { McatUnitTestStatus } from '@/lib/mcat-unit-test-server'
-import { UNIT_TEST_COURSES, type UnitTestCourse, type UnitTestCourseConfig } from '@/lib/unit-test-courses'
+import { AP_CYCLE_TEST_NAME, UNIT_TEST_COURSES, type UnitTestCourse, type UnitTestCourseConfig } from '@/lib/unit-test-courses'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 
 /**
  * The cycle unit test page, shared by every course in unit-test-courses.ts:
  * 25 questions on the topics the student's latest diagnostic recommended.
- * On the MCAT passing it unlocks the next diagnostic; on SAT/ACT it is the
- * recommended last step of the cycle. Failing offers a retake with fresh
- * questions (see src/lib/mcat-unit-test.ts).
+ * On the MCAT passing it unlocks the next diagnostic; on SAT/ACT and AP it
+ * is the recommended last step of the cycle. AP courses call it the "cycle
+ * test" (cfg.testName), since they also have per-unit unit tests. Failing
+ * offers a retake with fresh questions (see src/lib/mcat-unit-test.ts).
  */
 
 interface PlanTopic { slug: string; name: string; isSatisfied: boolean }
@@ -64,7 +65,8 @@ function Rich({ text, className }: { text: string; className?: string }) {
 
 export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }) {
   const cfg = UNIT_TEST_COURSES[course]
-  const api = `/api/${course}-unit-test`
+  const api = cfg.apiPath
+  const name = cfg.testName
   const { status } = useSession()
   const router = useRouter()
   const [data, setData] = useState<StatusResponse | null>(null)
@@ -91,12 +93,12 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
     setError(null)
     try {
       const r = await fetch(api, { cache: 'no-store' })
-      if (!r.ok) throw new Error('Could not load your unit test. Refresh to try again.')
+      if (!r.ok) throw new Error(`Could not load your ${name}. Refresh to try again.`)
       setData(await r.json())
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Could not load your unit test.')
+      setError(e instanceof Error ? e.message : `Could not load your ${name}.`)
     }
-  }, [api])
+  }, [api, name])
 
   useEffect(() => { if (status === 'authenticated') load() }, [status, load])
 
@@ -122,14 +124,14 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
     try {
       const r = await fetch(`${api}/start`, { method: 'POST' })
       const body = await r.json().catch(() => ({}))
-      if (!r.ok) throw new Error(body.error || 'Could not start the unit test.')
+      if (!r.ok) throw new Error(body.error || `Could not start the ${name}.`)
       openSitting(body as Sitting)
     } catch (e) {
-      setError(e instanceof Error ? e.message : 'Could not start the unit test.')
+      setError(e instanceof Error ? e.message : `Could not start the ${name}.`)
     } finally {
       setBusy(false)
     }
-  }, [api, openSitting])
+  }, [api, name, openSitting])
 
   const submit = useCallback(async () => {
     if (!sitting) return
@@ -160,7 +162,7 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
   }, [data])
 
   if (status === 'loading' || (status === 'authenticated' && !data && !error)) {
-    return <Shell cfg={cfg}><p className="text-sm text-gray-500 dark:text-gray-400">Loading your unit test…</p></Shell>
+    return <Shell cfg={cfg}><p className="text-sm text-gray-500 dark:text-gray-400">Loading your {name}…</p></Shell>
   }
 
   // ---- Results ----
@@ -169,7 +171,7 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
     return (
       <Shell cfg={cfg}>
         <div className={`rounded-2xl border p-6 ${result.passed ? 'border-green-300 bg-green-50 dark:border-green-800 dark:bg-green-900/20' : 'border-amber-300 bg-amber-50 dark:border-amber-800 dark:bg-amber-900/20'}`}>
-          <p className="text-sm font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-300">Unit test result</p>
+          <p className="text-sm font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-300">{name} result</p>
           <p className="mt-1 text-3xl font-bold tabular-nums text-gray-900 dark:text-white">
             {result.correct}/{result.total} · {result.percentage}%
           </p>
@@ -330,7 +332,7 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
     return (
       <Shell cfg={cfg}>
         <p className="text-gray-700 dark:text-gray-200">
-          The unit test covers the topics your {cfg.label} diagnostic recommends. Take the diagnostic first to get your plan.
+          The {name} covers the topics your {cfg.label} diagnostic recommends. Take the diagnostic first to get your plan.
         </p>
         <Link href={cfg.diagnosticPath} className="mt-4 inline-block rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-white shadow transition hover:opacity-90">
           Go to the {cfg.label} diagnostic
@@ -348,9 +350,14 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
         about {Math.round(ut.questionCount / Math.max(1, topics.length))} from each.{' '}
         {cfg.locksDiagnostic
           ? `Score ${ut.passPercent}% or better to unlock your next diagnostic.`
-          : `Score ${ut.passPercent}% or better to finish this study cycle before your next diagnostic.`}
+          : `Score ${ut.passPercent}% or better to finish this study cycle before your next diagnostic.`}{' '}
         If you don&apos;t pass, review and retake it — each retake uses questions you haven&apos;t seen whenever possible.
       </p>
+      {name === AP_CYCLE_TEST_NAME && (
+        <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">
+          This is not one of the course&apos;s unit tests: those each cover one course unit. The cycle test mixes the topics from your latest diagnostic, and you take it once per study cycle.
+        </p>
+      )}
 
       <ul className="mt-5 divide-y divide-gray-200 rounded-xl border border-gray-200 dark:divide-gray-700 dark:border-gray-700">
         {topics.map((t) => (
@@ -379,16 +386,16 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
           <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-900/20">
             <p className="text-sm font-semibold text-amber-900 dark:text-amber-200">Clear every topic above first.</p>
             <p className="mt-1 text-xs text-amber-800 dark:text-amber-300">
-              A topic clears when you score at least {TOPIC_CLEAR_PERCENT}% on its exit quiz (or test out on its entrance quiz). The unit test opens once all of them are cleared.
+              A topic clears when you score at least {TOPIC_CLEAR_PERCENT}% on its exit quiz (or test out on its entrance quiz). The {name} opens once all of them are cleared.
             </p>
           </div>
         ) : data.inProgress ? (
           <button onClick={() => openSitting(data.inProgress!)} className="rounded-xl bg-accent px-6 py-3 font-semibold text-white shadow transition hover:opacity-90">
-            Resume your unit test
+            Resume your {name}
           </button>
         ) : (
           <button onClick={start} disabled={busy} className="rounded-xl bg-accent px-6 py-3 font-semibold text-white shadow transition hover:opacity-90 disabled:opacity-50">
-            {busy ? 'Building your test…' : ut.attempts > 0 ? 'Retake with new questions' : 'Start the unit test'}
+            {busy ? 'Building your test…' : ut.attempts > 0 ? 'Retake with new questions' : `Start the ${name}`}
           </button>
         )}
         {error && <p className="mt-3 text-sm text-red-600 dark:text-red-400">{error}</p>}
@@ -417,7 +424,7 @@ function Shell({ cfg, children }: { cfg: UnitTestCourseConfig; children: React.R
   return (
     <main className="mx-auto max-w-2xl px-4 py-10">
       <Link href={cfg.diagnosticPath} className="text-sm text-accent hover:underline">← {cfg.label} diagnostic</Link>
-      <h1 className="mt-3 text-2xl font-bold text-gray-900 dark:text-white">{cfg.label} unit test</h1>
+      <h1 className="mt-3 text-2xl font-bold text-gray-900 dark:text-white">{cfg.label} {cfg.testName}</h1>
       <div className="mt-4">{children}</div>
     </main>
   )

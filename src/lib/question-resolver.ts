@@ -14,6 +14,7 @@ import { ACT_FL_CATEGORY } from '@/lib/act-full-length-server'
 import { AP_PRACTICE_CATEGORY_PREFIX, AP_PRACTICE_EXAMS, apPracticeKeyOfCategory } from '@/lib/ap-practice-exams'
 import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanations'
 import { courseForCategory, diagnosticRouteForKey } from '@/lib/class-plan-config'
+import { UNIT_TEST_COURSES, isApUnitTestCourse } from '@/lib/unit-test-courses'
 import { canonicalizeDiagnosticResults } from '@/lib/ap-topic-canonical'
 
 /**
@@ -116,12 +117,29 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
       const u = await prisma.mcatUnitTest.findFirst({ where: { id, userId, completedAt: { not: null } } })
       if (!u) return null
       const items = unitTestReviewItems(u.questions, u.answers)
+      const score = { correct: u.correct ?? 0, total: u.total, label: u.percentage != null ? `${u.percentage}%` : undefined }
+      // AP cycle tests: the course comes from the cycle's diagnostic (AP topic
+      // slugs carry no course prefix).
+      const cycle = u.diagnosticId
+        ? await prisma.diagnosticTest.findUnique({ where: { id: u.diagnosticId }, select: { category: true } })
+        : null
+      const apKey = cycle ? courseForCategory(cycle.category)?.key ?? '' : ''
+      if (isApUnitTestCourse(apKey)) {
+        const cfg = UNIT_TEST_COURSES[apKey]
+        return {
+          kind, id, course: cfg.courseSlug, takenAt: iso(u.completedAt ?? u.startedAt),
+          title: `${cfg.label} ${cfg.testName}`,
+          score,
+          backHref: cfg.path,
+          items,
+        }
+      }
       const slug = items[0]?.topicSlug ?? ''
       const course = courseOfSlug(slug) === 'other' ? 'mcat' : courseOfSlug(slug)
       return {
         kind, id, course, takenAt: iso(u.completedAt ?? u.startedAt),
         title: `${course.toUpperCase()} unit test`,
-        score: { correct: u.correct ?? 0, total: u.total, label: u.percentage != null ? `${u.percentage}%` : undefined },
+        score,
         backHref: `/${course}-unit-test`,
         items,
       }

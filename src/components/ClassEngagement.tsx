@@ -238,7 +238,7 @@ export function ClassUnitTests({ classroomId }: { classroomId: string }) {
       <p className="mb-4 text-sm text-gray-500 dark:text-gray-400">
         The 25-question test each student takes after finishing the lessons from their latest diagnostic. Pass mark:{' '}
         <span className="font-medium text-green-600 dark:text-green-400">{pass}%</span>. Click a student for every sitting and
-        their score on each lesson.
+        their score on each lesson. AP courses call it the cycle test; it is separate from the per-unit unit tests.
       </p>
       {error ? (
         <p className="text-sm text-red-600 dark:text-red-400">{error}</p>

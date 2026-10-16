@@ -7,7 +7,8 @@ import { CLASS_PLAN_COURSES, diagnosticRouteForKey } from '@/lib/class-plan-conf
 import { buildSatPlan } from '@/lib/sat-plan'
 import { buildMcatPlanStatus } from '@/lib/mcat-plan'
 import { buildActPlanStatus } from '@/lib/act-plan'
-import { unitTestStatusFor } from '@/lib/mcat-unit-test-server'
+import { unitTestStatusFor, type McatUnitTestStatus } from '@/lib/mcat-unit-test-server'
+import { UNIT_TEST_COURSES, isApUnitTestCourse } from '@/lib/unit-test-courses'
 import { fullLengthReadiness } from '@/lib/full-length-progress-server'
 import { FULL_LENGTH_COURSES, type FullLengthCourse } from '@/lib/full-length-progress'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
@@ -81,7 +82,7 @@ export async function GET() {
     const attempts = await prisma.diagnosticTest.findMany({
       where: { userId },
       orderBy: { createdAt: 'desc' },
-      select: { category: true, results: true, createdAt: true },
+      select: { id: true, category: true, results: true, createdAt: true },
       take: 200,
     })
     if (attempts.length === 0) return NextResponse.json({ plans: [] })
@@ -97,7 +98,7 @@ export async function GET() {
     const satPlan = satCourse && hasSatAttempt ? await buildSatPlan(userId) : null
 
     // Latest attempt per course, plus the topics it recommended.
-    const perCourse = new Map<string, { takenAt: Date; topics: RecommendedTopic[] }>()
+    const perCourse = new Map<string, { diagnosticId: string; takenAt: Date; topics: RecommendedTopic[] }>()
     for (const course of CLASS_PLAN_COURSES) {
       if (course.key === 'sat') continue
       const latest = attempts.find((a) => a.category.startsWith(course.categoryPrefix))
@@ -106,7 +107,7 @@ export async function GET() {
       // no Topic row (ap-bio-*, *-calcab lesson keys); map them to real topics.
       const topics = canonicalizeRecommendedTopics(course.courseSlug, parseRecommended(latest.results))
       if (topics.length === 0) continue
-      perCourse.set(course.key, { takenAt: latest.createdAt, topics })
+      perCourse.set(course.key, { diagnosticId: latest.id, takenAt: latest.createdAt, topics })
     }
     const satEntry =
       satCourse && satPlan?.hasDiagnostic && satPlan.recommendedTopics.length > 0
@@ -265,8 +266,23 @@ export async function GET() {
         topics,
         summary: { total: topics.length, completed: topics.length - pending, pending },
         canRetakeDiagnostic: course.gated === true ? pending === 0 : true,
+        unitTest: null as McatUnitTestStatus | null,
       }]
     })
+
+    // AP courses end the cycle with the recommended cycle test (never a lock:
+    // canRetakeDiagnostic stays true). Same topics and clear rule as the
+    // test's own API (buildGenericPlanStatus), from the rows loaded above.
+    await Promise.all(plans.map(async (p) => {
+      const diagnosticId = perCourse.get(p.courseKey)?.diagnosticId
+      if (!diagnosticId || !isApUnitTestCourse(p.courseKey) || !UNIT_TEST_COURSES[p.courseKey].enabled) return
+      try {
+        p.unitTest = await unitTestStatusFor(userId, diagnosticId, p.summary.pending === 0, p.courseKey)
+      } catch (err) {
+        // A nudge, not the plan: never let it take the study plan down.
+        console.error('[plan-status] cycle test status failed (ignored):', err)
+      }
+    }))
 
     plans.push(...(extraEntries as typeof plans))
 

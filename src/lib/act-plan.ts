@@ -2,8 +2,10 @@ import { prisma } from '@/lib/prisma'
 import { isEntranceMastery } from '@/lib/flashcard-unlock'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
-import { UNIT_TEST_COURSES } from '@/lib/unit-test-courses'
+import { UNIT_TEST_COURSES, isUnitTestCourse } from '@/lib/unit-test-courses'
 import { unitTestStatusFor, type McatUnitTestStatus } from '@/lib/mcat-unit-test-server'
+import { classPlanCourse } from '@/lib/class-plan-config'
+import { AP_CANONICAL_TOPIC_NAMES, canonicalApTopicSlug } from '@/lib/ap-topic-canonical'
 
 type RecommendedTopic = {
   slug: string
@@ -33,7 +35,7 @@ function priorityValue(p: 'high' | 'medium'): number {
   return p === 'high' ? 0 : 1
 }
 
-export interface ActPlanStatus {
+export interface GenericPlanStatus {
   hasDiagnostic: boolean
   diagnosticId?: string
   diagnosticCreatedAt?: Date
@@ -45,32 +47,51 @@ export interface ActPlanStatus {
   summary?: { totalRecommended: number; completed: number; pending: number }
 }
 
+export type ActPlanStatus = GenericPlanStatus
+
+const noDiagnostic = (): GenericPlanStatus => ({
+  hasDiagnostic: false,
+  canRetakeDiagnostic: true,
+  requiredScorePercent: TOPIC_CLEAR_PERCENT,
+  recommendedTopics: [],
+  pendingTopics: [],
+  unitTest: null,
+})
+
 /**
  * The student's current ACT study cycle: the latest diagnostic's recommended
  * topics with done/pending state, and the cycle's unit test once it is on.
  * Shared by /api/act-diagnostic/plan-status, the dashboard's plan-status and
  * the unit-test API, so all three show the same topics.
  */
-export async function buildActPlanStatus(userId: string): Promise<ActPlanStatus> {
+export function buildActPlanStatus(userId: string): Promise<ActPlanStatus> {
+  return buildGenericPlanStatus(userId, 'act')
+}
+
+/**
+ * Any class-plan course's current study cycle (ACT and every AP course): the
+ * latest diagnostic in that course (CLASS_PLAN_COURSES categoryPrefix), its
+ * recommended topics canonicalized to production slugs (stored AP attempts
+ * can carry legacy slugs, see ap-topic-canonical.ts; a no-op elsewhere), each
+ * with done/pending state, and the cycle's unit test when the course has one.
+ */
+export async function buildGenericPlanStatus(userId: string, courseKey: string): Promise<GenericPlanStatus> {
+  const course = classPlanCourse(courseKey)
+  if (!course) return noDiagnostic()
   const latestDiagnostic = await prisma.diagnosticTest.findFirst({
-    where: { userId: userId, category: { startsWith: 'act-diagnostic' } },
+    where: { userId: userId, category: { startsWith: course.categoryPrefix } },
     orderBy: { createdAt: 'desc' },
     select: { id: true, createdAt: true, results: true },
   })
 
-  if (!latestDiagnostic) {
-    return {
-      hasDiagnostic: false,
-      canRetakeDiagnostic: true,
-      requiredScorePercent: TOPIC_CLEAR_PERCENT,
-      recommendedTopics: [],
-      pendingTopics: [],
-      unitTest: null,
-    }
-  }
+  if (!latestDiagnostic) return noDiagnostic()
 
   const dedupedMap = new Map<string, RecommendedTopic>()
-  parseRecommendedTopics(latestDiagnostic.results).forEach((topic) => {
+  parseRecommendedTopics(latestDiagnostic.results).forEach((raw) => {
+    // Legacy AP slug -> production topic (and its title); two legacy slugs
+    // landing on one topic keep the higher priority below.
+    const slug = canonicalApTopicSlug(course.courseSlug, raw.slug)
+    const topic = slug === raw.slug ? raw : { ...raw, slug, name: AP_CANONICAL_TOPIC_NAMES[slug] ?? raw.name }
     const existing = dedupedMap.get(topic.slug)
     if (!existing || priorityValue(topic.priority) < priorityValue(existing.priority)) {
       dedupedMap.set(topic.slug, topic)
@@ -165,10 +186,10 @@ export async function buildActPlanStatus(userId: string): Promise<ActPlanStatus>
   })
 
   const pendingTopics = recommendedWithStatus.filter((t) => !t.isSatisfied)
-  // The cycle's recommended last step (does not lock the diagnostic); off
-  // until ACT's exit pools are large enough (unit-test-courses.ts).
-  const unitTest = UNIT_TEST_COURSES.act.enabled
-    ? await unitTestStatusFor(userId, latestDiagnostic.id, pendingTopics.length === 0, 'act')
+  // The cycle's recommended last step (does not lock the diagnostic); only
+  // for courses with an enabled unit test (unit-test-courses.ts).
+  const unitTest = isUnitTestCourse(course.key) && UNIT_TEST_COURSES[course.key].enabled
+    ? await unitTestStatusFor(userId, latestDiagnostic.id, pendingTopics.length === 0, course.key)
     : null
 
   return {

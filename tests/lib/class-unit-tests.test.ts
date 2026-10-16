@@ -48,6 +48,21 @@ describe('loadClassUnitTests', () => {
     expect(out.has('c')).toBe(false)
   })
 
+  it('includes AP cycle tests, numbered among that course\'s diagnostics only', async () => {
+    mockUnitTests.mockResolvedValue([
+      { id: 'p1', userId: 'a', diagnosticId: 'chem2', topicSlugs: ['gibbs-free-energy', 'periodic-trends'], correct: 18, total: 25, percentage: 72, passed: false, completedAt: at('06') },
+      { id: 'p2', userId: 'a', diagnosticId: 'calc1', topicSlugs: ['related-rates'], correct: 21, total: 25, percentage: 84, passed: true, completedAt: at('07') },
+    ])
+    mockDiagnostics.mockResolvedValue([
+      { id: 'chem1', userId: 'a', category: 'ap-chem-diagnostic-1' },
+      { id: 'calc1', userId: 'a', category: 'calcab-diagnostic-1' },
+      { id: 'chem2', userId: 'a', category: 'ap-chem-diagnostic-2' },
+    ])
+    const a = (await loadClassUnitTests(['a'])).get('a')!
+    expect(a.map((c) => [c.course, c.cycle, c.lessons])).toEqual([['AP Calculus AB', 1, 1], ['AP Chemistry', 2, 2]])
+    expect(a[0].attempts[0]).toMatchObject({ percentage: 84, passed: true })
+  })
+
   it('skips the diagnostic lookup when nobody has a unit test', async () => {
     mockUnitTests.mockResolvedValue([])
     expect((await loadClassUnitTests(['a'])).size).toBe(0)

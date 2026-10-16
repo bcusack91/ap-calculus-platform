@@ -19,7 +19,7 @@
 
 import { pickNextPendingTopic, planTopicHref, type PlanTopic } from '@/components/StudyPlanNextUp'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
-import { unitTestIsNextStep } from '@/lib/unit-test-courses'
+import { unitTestIsNextStep, unitTestName } from '@/lib/unit-test-courses'
 
 /** The rated review session — the one flashcard destination on the dashboard. */
 export const FLASHCARD_REVIEW_HREF = '/flashcards/review'
@@ -31,8 +31,8 @@ export interface NextStepPlan {
   gated?: boolean
   canRetakeDiagnostic?: boolean
   topics: PlanTopic[]
-  /** The cycle's unit test (src/lib/unit-test-courses.ts); MCAT, SAT (and ACT once enabled). */
-  unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; inProgressId?: string | null; locksDiagnostic?: boolean } | null
+  /** The cycle's unit test (src/lib/unit-test-courses.ts): MCAT, SAT, ACT, and every AP course (its "cycle test"). */
+  unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; inProgressId?: string | null; locksDiagnostic?: boolean; testName?: string } | null
   /** Full-length readiness (MCAT, SAT): level 10 = enough cycles done to sit a full-length. */
   fullLength?: { ready: boolean; level: number; href: string; label: string; externalLabel: string; coursePage: string } | null
 }
@@ -72,7 +72,7 @@ export type NextStep =
   | { kind: 'class-diagnostic'; diagnostic: NextStepClassDiagnostic; count: number }
   | { kind: 'flashcards'; count: number }
   | { kind: 'plan-topic'; topic: PlanTopic; courseKey: string; planLabel: string; done: number; total: number }
-  | { kind: 'unit-test'; planLabel: string; href: string; attempts: number; resume: boolean; locks: boolean }
+  | { kind: 'unit-test'; planLabel: string; href: string; attempts: number; resume: boolean; locks: boolean; name: string }
   | { kind: 'full-length'; planLabel: string; href: string; label: string; externalLabel: string; coursePage: string }
   | { kind: 'retake-diagnostic'; planLabel: string; href: string }
   | { kind: 'take-diagnostic'; courseLabel: string; href: string }
@@ -126,6 +126,7 @@ export function resolveNextStep(input: NextStepInput): NextStep {
         attempts: unitTest.attempts,
         resume: !!unitTest.inProgressId,
         locks: unitTest.locksDiagnostic !== false,
+        name: unitTestName(unitTest),
       }
     }
     return { kind: 'retake-diagnostic', planLabel: plan.label, href: plan.diagnosticRoute }
@@ -195,15 +196,15 @@ export function describeNextStep(step: Exclude<NextStep, { kind: 'loading' }>): 
       }
     case 'unit-test':
       return {
-        title: `Pass your ${step.planLabel} unit test`,
+        title: `Pass your ${step.planLabel} ${step.name}`,
         reason: step.locks
           ? step.attempts > 0
-            ? 'One step left: pass the unit test on your study-plan topics to unlock your next diagnostic. Retakes use new questions.'
+            ? `One step left: pass the ${step.name} on your study-plan topics to unlock your next diagnostic. Retakes use new questions.`
             : 'You cleared every topic in your study plan. Pass a 25-question test on them to unlock your next diagnostic.'
           : step.attempts > 0
-            ? 'Finish this study cycle: pass the unit test on your study-plan topics. Retakes use new questions.'
+            ? `Finish this study cycle: pass the ${step.name} on your study-plan topics. Retakes use new questions.`
             : 'You cleared every topic in your study plan. A 25-question test on them shows what stuck before your next diagnostic.',
-        cta: step.resume ? 'Resume the unit test' : step.attempts > 0 ? 'Retake the unit test' : 'Take the unit test',
+        cta: `${step.resume ? 'Resume' : step.attempts > 0 ? 'Retake' : 'Take'} the ${step.name}`,
         href: step.href,
       }
     case 'full-length':
