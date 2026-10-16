@@ -36,6 +36,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The velocity reaches $2.0(3.0) = 6.0$ m/s at $t = 3.0$ s, stays at 6.0 m/s until $t = 6.0$ s, and then drops by $1.5(2.0) = 3.0$ m/s, leaving 3.0 m/s. The value 6.0 m/s ignores the braking interval, 9.0 m/s adds the braking change instead of subtracting it, and 0 m/s assumes the braking stops the cyclist, which would take 4.0 s at this rate.',
+    optionExplanations: [
+      '0 m/s assumes the braking stops the cyclist, but at 1.5 m/s² it would take 4.0 s to lose 6.0 m/s, and the braking interval lasts only 2.0 s.',
+      'The velocity reaches $2.0(3.0) = 6.0$ m/s at $t = 3.0$ s, stays constant until 6.0 s, and then drops by $1.5(2.0) = 3.0$ m/s, leaving 3.0 m/s.',
+      '6.0 m/s is the velocity during the cruising interval; it ignores the 2.0 s of braking at $-1.5$ m/s² that removes 3.0 m/s.',
+      '9.0 m/s adds the braking change instead of subtracting it. The negative acceleration means the cyclist is slowing down from 6.0 m/s.',
+    ],
   },
   {
     type: 'mcq',
@@ -46,6 +52,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The distances are $\\tfrac{1}{2}(2.0)(3.0)^2 = 9$ m, then $6.0(3.0) = 18$ m, then $6.0(2.0) - \\tfrac{1}{2}(1.5)(2.0)^2 = 9$ m, for 36 m in all. Leaving out the braking interval gives 27 m, treating the last 2.0 s as constant speed gives 39 m, and 48 m assumes 6.0 m/s for the whole 8.0 s.',
+    optionExplanations: [
+      '27 m covers only the first 6.0 s, 9 m speeding up plus 18 m cruising, and leaves out the 9 m covered while braking.',
+      'The distances are $\\tfrac{1}{2}(2.0)(3.0)^2 = 9$ m speeding up, $6.0(3.0) = 18$ m cruising and $6.0(2.0) - \\tfrac{1}{2}(1.5)(2.0)^2 = 9$ m braking, for 36 m in all.',
+      '39 m treats the last 2.0 s as constant speed at 6.0 m/s, or 12 m, ignoring that braking cuts the distance covered in that interval to 9 m.',
+      '48 m assumes 6.0 m/s for the whole 8.0 s, ignoring that the cyclist starts from rest and slows down at the end.',
+    ],
   },
   {
     type: 'mcq',
@@ -56,6 +68,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The sandbag leaves with the balloon\'s upward velocity of 5.0 m/s, so $-30 = 5.0t - 5t^2$, which gives $t = 3.0$ s. Dropping it from rest gives $\\sqrt{2(30)/10} \\approx 2.4$ s, taking the 5.0 m/s as downward gives 2.0 s, and 3.5 s adds the 0.5 s rise to a total that already includes it.',
+    optionExplanations: [
+      '2.0 s takes the sandbag\'s initial 5.0 m/s as downward, solving $30 = 5.0t + 5t^2$. At release the sandbag shares the balloon\'s upward velocity.',
+      '2.4 s, from $\\sqrt{2(30)/10}$, drops the sandbag from rest. It actually leaves moving upward at 5.0 m/s, so it rises briefly before falling, which takes longer.',
+      'The sandbag leaves with the balloon\'s upward velocity of 5.0 m/s, so with up positive $-30 = 5.0t - 5t^2$, which gives $t = 3.0$ s.',
+      '3.5 s adds the 0.5 s the sandbag spends rising to a total that already includes it; solving $-30 = 5.0t - 5t^2$ accounts for the rise automatically.',
+    ],
   },
   {
     type: 'mcq',
@@ -66,6 +84,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The height changes by 8.75, 6.25, 3.75 and 1.25 m in successive intervals, dropping by 2.5 m each time, so the vertical velocity falls from 20 m/s to zero at $t = 2.00$ s, the top of the path. Only the constant horizontal velocity, $4.0/0.50 = 8.0$ m/s, remains. The value 0 m/s forgets the horizontal motion, 10 m/s is the average vertical velocity over the rise, and 20 m/s is the vertical component of the launch velocity, which is zero by the top.',
+    optionExplanations: [
+      '0 m/s is the vertical velocity at the top of the path, but the ball still moves horizontally at a constant $4.0/0.50 = 8.0$ m/s.',
+      'The height gains shrink by 2.5 m per interval, so the vertical velocity reaches zero at $t = 2.00$ s, the top of the path. Only the constant horizontal velocity, $4.0/0.50 = 8.0$ m/s, remains.',
+      '10 m/s is the average vertical velocity over the rise, 20 m in 2.00 s; at the top the vertical velocity is zero and only the 8.0 m/s horizontal component is left.',
+      '20 m/s is the vertical component of the launch velocity, which gravity has reduced to zero by $t = 2.00$ s; this answer also ignores the horizontal motion.',
+    ],
   },
   {
     type: 'mcq',
@@ -76,6 +100,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The rise takes 2.00 s, so the flight over level ground takes 4.00 s, and the ball moves $8.0(4.00) = 32$ m horizontally. The value 16 m is the horizontal position at the top of the path, 20 m is the maximum height, and 64 m wrongly scales the distance with the square of the time, although the horizontal velocity is constant.',
+    optionExplanations: [
+      '16 m is the horizontal position at $t = 2.00$ s, the top of the path; the ball takes another 2.00 s to come down and covers another 16 m.',
+      '20 m is the ball\'s maximum height, read from the $y$ column, not a horizontal distance.',
+      'The rise takes 2.00 s, so over level ground the full flight takes 4.00 s, and at a constant 8.0 m/s horizontally the ball lands $8.0(4.00) = 32$ m away.',
+      '64 m scales the 16 m at the top with the square of the time, but the horizontal velocity is constant, so the horizontal distance grows linearly with time.',
+    ],
   },
 
   /* ---- U2 Force & Translational Dynamics (8) ---- */
@@ -89,6 +119,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Only the vertical components hold the sign up: $2T\\sin 30° = 200$ N, so $T = 200$ N. The value 100 N splits the weight between the cables and ignores the angle, 115 N uses $\\cos 30°$ for the vertical component, and 400 N lets one cable carry the whole weight.',
+    optionExplanations: [
+      '100 N splits the weight equally between the cables but ignores the angle; each cable\'s vertical component is only $T\\sin 30° = T/2$, so the tension must be larger.',
+      '115 N uses $\\cos 30°$ for the vertical component, $100/0.87$. With each cable at 30° to the horizontal ceiling, the vertical component is $T\\sin 30°$.',
+      'Only the vertical components hold the sign up: $2T\\sin 30° = 200$ N, so $T = 200$ N; the shallow 30° angle makes each tension as large as the whole weight.',
+      '400 N lets one cable carry the whole weight with only its vertical component, $T\\sin 30° = 200$ N, ignoring the second cable.',
+    ],
   },
   {
     type: 'mcq',
@@ -100,6 +136,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Along the ramp the spring force balances the gravitational component: $kx = mg\\sin 30° = 10$ N, so $x = 10/200 = 0.050$ m. Using $\\cos 30°$ gives 0.087 m, using the full weight gives 0.10 m, and 0.0050 m leaves $g$ out of the weight.',
+    optionExplanations: [
+      '0.0050 m leaves $g$ out of the weight, using $m\\sin 30° = 1.0$ instead of $mg\\sin 30° = 10$ N for the spring force.',
+      'Along the ramp the spring force balances the gravitational component: $kx = mg\\sin 30° = 10$ N, so $x = 10/200 = 0.050$ m.',
+      '0.087 m uses $mg\\cos 30°$, the component perpendicular to the ramp, which the normal force balances, not the spring.',
+      '0.10 m sets the spring force equal to the full 20 N weight, as for a vertical spring; on the ramp the spring balances only $mg\\sin 30°$.',
+    ],
   },
   {
     type: 'mcq',
@@ -115,6 +157,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'A light rope has the same tension at both ends, so it pulls each student with the same magnitude of force no matter who pulls. With equal forces, $a = F/m$ gives the 50 kg student $75/50 = 1.5$ times the acceleration of the 75 kg student. Who does the pulling does not change the forces, and equal forces on unequal masses cannot give equal accelerations.',
+    optionExplanations: [
+      'A light rope has the same tension at both ends, so it pulls each student with equal force no matter who pulls. Then $a = F/m$ gives the 50 kg student $75/50 = 1.5$ times the 75 kg student\'s acceleration.',
+      'The forces are equal, but equal forces on unequal masses give unequal accelerations: the lighter 50 kg student accelerates 1.5 times as much.',
+      'Who does the pulling does not matter; the rope exerts forces of equal magnitude on both students. And with equal forces the lighter student, not the 75 kg one, accelerates more.',
+      'The forces are equal in magnitude, as a light rope\'s uniform tension requires. Unequal forces chosen to make the accelerations match are not what the rope provides.',
+    ],
   },
   {
     type: 'mcq',
@@ -126,6 +174,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Surface field strength is proportional to $M/R^2$, which gives 0.50, 0.44, 2.0 and 0.50 times Earth\'s value for planets A, B, C and D. Planet C has the least mass but by far the smallest radius, so its surface field is strongest. Choosing planet D or B ranks by mass alone, and planet A ignores that its doubled radius cuts the field by a factor of 4.',
+    optionExplanations: [
+      'Planet A doubles Earth\'s mass but also doubles its radius, which cuts the field by a factor of 4, giving $2.0/2.0^2 = 0.50$ times Earth\'s field.',
+      'Planet B has four times Earth\'s mass, but its radius is three times as large, so its surface field is only $4.0/3.0^2 = 0.44$ times Earth\'s, the weakest of the four.',
+      'Surface field strength is proportional to $M/R^2$: 0.50, 0.44, 2.0 and 0.50 times Earth\'s for A, B, C and D. Planet C has the least mass but by far the smallest radius, so its field is strongest.',
+      'Planet D has the most mass, but its radius is four times Earth\'s, so its surface field is $8.0/4.0^2 = 0.50$ times Earth\'s. Ranking by mass alone misses the $1/R^2$ dependence.',
+    ],
   },
   {
     type: 'mcq',
@@ -136,6 +190,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Static friction from the road is the only horizontal force, so the largest acceleration is $\\mu_s g = 8.0$ m/s², and $t = 24/8.0 = 3.0$ s. The value 2.4 s assumes an acceleration of $g$, 6.0 s puts only half the car\'s weight on driving wheels, which applies to a two-wheel-drive car, and 30 s uses 0.80 m/s² as the acceleration.',
+    optionExplanations: [
+      '2.4 s assumes an acceleration of $g = 10$ m/s², leaving out the coefficient of friction; the road\'s grip limits the acceleration to $\\mu_s g = 8.0$ m/s².',
+      'Static friction from the road is the only horizontal force, so the largest acceleration is $\\mu_s g = 8.0$ m/s², and $t = 24/8.0 = 3.0$ s.',
+      '6.0 s halves the acceleration, as if only half the car\'s weight pressed on driving wheels. In an all-wheel-drive car every tire is driven, so friction can act on the full weight.',
+      '30 s uses 0.80 m/s² as the acceleration, forgetting to multiply the coefficient of friction by $g$.',
+    ],
   },
   {
     type: 'mcq',
@@ -147,6 +207,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The tension supplies the centripetal force $m(2\\pi/T)^2 r$, which is proportional to $r/T^2$: 0.50, 0.25, 1.2 and 0.80 m/s² (before the factor $4\\pi^2 m$) for trials 1 to 4. Trial 3 has the smallest radius but the shortest period, and the period enters squared. Trial 2 has the largest radius but the slowest rotation, and trial 4 is second.',
+    optionExplanations: [
+      'Trial 1 gives $r/T^2 = 0.50/1.0^2 = 0.50$, less than trial 3\'s $0.30/0.50^2 = 1.2$. The same puck needs more tension when the period is short.',
+      'Trial 2 has the largest radius, but its 2.0 s period is the slowest, giving $r/T^2 = 1.00/4.0 = 0.25$, the smallest tension of the four trials.',
+      'The tension supplies the centripetal force $m(2\\pi/T)^2 r$, proportional to $r/T^2$: 0.50, 0.25, 1.2 and 0.80 for trials 1 to 4. Trial 3\'s short period, which enters squared, outweighs its small radius.',
+      'Trial 4 gives $r/T^2 = 0.80/1.0^2 = 0.80$, the second largest; trial 3\'s half-second period makes its value, 1.2, larger despite its smaller radius.',
+    ],
   },
   {
     type: 'mcq',
@@ -157,6 +223,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'At the top both the seat force and the weight point down, toward the center: $N + mg = mv^2/r = 50(225)/10 = 1125$ N, so $N = 625$ N. The value 1125 N leaves out the weight, 1625 N adds the weight as at the bottom of a loop, and 500 N is just the rider\'s weight.',
+    optionExplanations: [
+      '500 N is just the rider\'s weight. At the top of the loop the seat force is whatever is needed, together with the weight, to supply the 1125 N centripetal force.',
+      'At the top both the seat force and the weight point down, toward the center: $N + mg = mv^2/r = 50(225)/10 = 1125$ N, so $N = 625$ N.',
+      '1125 N is the total centripetal force, $mv^2/r$; it leaves out that the 500 N weight also points toward the center and supplies part of it.',
+      '1625 N adds the weight to the centripetal force, which is correct at the bottom of a loop, where the seat pushes up against gravity, not at the top.',
+    ],
   },
   {
     type: 'mcq',
@@ -168,6 +240,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The vertical tension component balances the weight, $T\\cos 37° = mg$, and the horizontal component gives the ball the car\'s acceleration, $T\\sin 37° = ma$, so $a = g\\tan 37° = 7.5$ m/s². The values 6.0 and 8.0 m/s² use $g\\sin 37°$ and $g\\cos 37°$, and 13.3 m/s² inverts the tangent.',
+    optionExplanations: [
+      '6.0 m/s² uses $g\\sin 37°$. Dividing the horizontal tension equation by the vertical one gives $\\tan 37° = a/g$, so the sine is the wrong ratio.',
+      'The vertical tension component balances the weight, $T\\cos 37° = mg$, and the horizontal component accelerates the ball with the car, $T\\sin 37° = ma$, so $a = g\\tan 37° = 7.5$ m/s².',
+      '8.0 m/s² uses $g\\cos 37°$. The acceleration is set by the ratio of the horizontal to the vertical tension component, which is the tangent, not the cosine.',
+      '13.3 m/s² inverts the tangent, computing $g/\\tan 37°$. A string tilted less than 45° from the vertical means the acceleration is less than $g$.',
+    ],
   },
 
   /* ---- U3 Work, Energy, Power (8) ---- */
@@ -182,6 +260,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The mechanical energy $K + U_g$ is 12,000, 11,000, 10,000 and 6,000 J at A, B, C and D, so the losses are 1,000 J, 1,000 J and 4,000 J, and the largest is between C and D. Choosing A to B confuses the large drop in potential energy with energy lost, and choosing B to C confuses the drop in kinetic energy (converted to potential energy on the bump) with energy lost.',
+    optionExplanations: [
+      'From A to B the mechanical energy falls from 12,000 J to 11,000 J, a loss of only 1,000 J. The large drop in potential energy mostly became kinetic energy, not internal energy.',
+      'From B to C the mechanical energy falls from 11,000 J to 10,000 J, a loss of 1,000 J. The drop in kinetic energy mostly became potential energy on the bump.',
+      'The mechanical energy $K + U_g$ is 12,000, 11,000, 10,000 and 6,000 J at A, B, C and D, so the losses are 1,000, 1,000 and 4,000 J; the largest is from C to D.',
+      'The losses are not equal: the mechanical energy drops by 1,000 J on each of the first two segments but by 4,000 J between C and D.',
+    ],
   },
   {
     type: 'mcq',
@@ -198,6 +282,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Static friction on the box points up the belt, along the box\'s displacement, so it does positive work; gravity has a component opposite the displacement, so it does negative work; and the normal force is perpendicular to the motion, so it does no work. These cancel, consistent with the constant speed. No slipping means no motion relative to the belt, but the box still moves relative to the ground, so static friction does work on it: static friction can do work whenever the contact surface moves along with the object.',
+    optionExplanations: [
+      'Static friction points up the belt, along the box\'s displacement, so it does positive work; gravity opposes the upward displacement, so its work is negative; the normal force is perpendicular to the motion, so it does no work.',
+      'Not slipping means no motion relative to the belt, but the box still moves relative to the ground, so static friction does positive work. If only gravity did work, the box would slow down.',
+      'Friction on the box points up the belt, along its motion, so its work is positive, and the normal force is perpendicular to the ramp and to the motion, so it does no work.',
+      'The normal force is perpendicular to the box\'s displacement along the ramp, so it does zero work, not negative work. The works of friction and gravity cancel, keeping the speed constant.',
+    ],
   },
   {
     type: 'mcq',
@@ -208,6 +298,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The medicine ball has $\\tfrac{1}{2}(6.0)(2.0)^2 = 12$ J, so $\\tfrac{1}{2}(0.15)v^2 = 12$ J and $v = \\sqrt{160} \\approx 12.6$ m/s. The value 80 m/s gives the baseball equal momentum instead of equal kinetic energy, 8.9 m/s drops the factor of one-half on the baseball side only, and 6.3 m/s leaves out the medicine ball\'s 2.0 m/s.',
+    optionExplanations: [
+      '6.3 m/s leaves the medicine ball\'s speed out of its kinetic energy, using $\\tfrac{1}{2}(6.0) = 3.0$ J instead of $\\tfrac{1}{2}(6.0)(2.0)^2 = 12$ J.',
+      '8.9 m/s drops the one-half on the baseball side only, solving $(0.15)v^2 = 12$ J; the factor belongs on both sides of the equation.',
+      'The medicine ball has $\\tfrac{1}{2}(6.0)(2.0)^2 = 12$ J, so $\\tfrac{1}{2}(0.15)v^2 = 12$ J and $v = \\sqrt{160} \\approx 12.6$ m/s.',
+      '80 m/s gives the baseball the same momentum, $6.0(2.0) = 12$ kg·m/s, rather than the same kinetic energy. Equal kinetic energy depends on $v^2$, so the speed ratio is the square root of the mass ratio.',
+    ],
   },
   {
     type: 'mcq',
@@ -218,6 +314,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The stored energy is the area under the force–stretch graph: $0.10 + 0.30 + 0.45 + 0.55 = 1.4$ J for the four trapezoids. The value 1.2 J treats the band as an ideal spring, $\\tfrac{1}{2}(12)(0.20)$, although the force does not grow linearly, 2.4 J multiplies the final force by the stretch, and 0.55 J is only the last segment.',
+    optionExplanations: [
+      '0.55 J is only the last trapezoid, from 0.15 m to 0.20 m. The stored energy is the whole area under the force–stretch graph, starting from zero stretch.',
+      '1.2 J treats the band as an ideal spring, $\\tfrac{1}{2}(12)(0.20)$, but the measured forces lie above that straight line, so the true area is larger.',
+      'The stored energy is the area under the force–stretch graph, which is made of four trapezoids: $0.10 + 0.30 + 0.45 + 0.55 = 1.4$ J.',
+      '2.4 J multiplies the final 12 N force by the 0.20 m stretch, as if the band exerted 12 N throughout, but the force builds up from zero.',
+    ],
   },
   {
     type: 'mcq',
@@ -229,6 +331,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'With 1.4 J stored, $\\tfrac{1}{2}(0.050)v^2 = 1.4$ J gives $v = \\sqrt{56} \\approx 7.5$ m/s. The value 5.3 m/s drops the factor of one-half in the kinetic energy, and 6.9 m/s and 9.8 m/s start from the incorrect stored energies of 1.2 J and 2.4 J.',
+    optionExplanations: [
+      '5.3 m/s drops the one-half from the kinetic energy, solving $(0.050)v^2 = 1.4$ J, which gives too low a speed.',
+      '6.9 m/s starts from 1.2 J, the ideal-spring estimate $\\tfrac{1}{2}(12)(0.20)$, instead of the 1.4 J actually stored according to the measured force data.',
+      'All 1.4 J of stored energy becomes kinetic energy: $\\tfrac{1}{2}(0.050)v^2 = 1.4$ J, so $v = \\sqrt{56} \\approx 7.5$ m/s.',
+      '9.8 m/s starts from 2.4 J, the final force times the stretch, which overstates the stored energy because the band\'s force builds up from zero.',
+    ],
   },
   {
     type: 'mcq',
@@ -239,6 +347,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'As the car rises the counterweight descends at the same speed, so the system\'s gravitational energy increases at $(1200 - 1000)(10)(2.0) = 4.0$ kW, which the motor must supply. The value 24 kW ignores the counterweight, 44 kW adds the counterweight as a second load, and 20 kW uses the counterweight\'s weight instead of the difference.',
+    optionExplanations: [
+      'As the car rises the counterweight descends at the same speed, so the system\'s gravitational energy increases at $(1200 - 1000)(10)(2.0) = 4.0$ kW, which the motor must supply.',
+      '20 kW is the rate at which the counterweight loses gravitational energy, $1000(10)(2.0)$; that energy helps lift the car, so the motor supplies only the difference.',
+      '24 kW is the power needed to lift the 1200 kg car alone, ignoring that the descending counterweight supplies 20 kW of it.',
+      '44 kW treats the counterweight as a second load to be lifted, but it moves down, releasing gravitational energy rather than requiring it.',
+    ],
   },
   {
     type: 'mcq',
@@ -249,6 +363,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Newton\'s second law gives $mg - T = ma$, so $T = 200(10 - 2.0) = 1600$ N upward, and the work is $-1600(5.0) = -8000$ J because the tension opposes the downward displacement. Setting the tension equal to the weight gives −10,000 J, using $m(g + a)$ gives −12,000 J, and +10,000 J is the work done by gravity, not by the cable.',
+    optionExplanations: [
+      'Newton\'s second law gives $mg - T = ma$, so $T = 200(10 - 2.0) = 1600$ N upward; the tension opposes the 5.0 m downward displacement, so its work is $-1600(5.0) = -8000$ J.',
+      '−10,000 J sets the tension equal to the 2000 N weight, which holds only at constant velocity. The crate accelerates downward, so the tension is less than its weight.',
+      '−12,000 J uses $T = m(g + a)$, the tension for a crate accelerating upward. Here the acceleration is downward, so $T = m(g - a)$.',
+      '+10,000 J is the work done by gravity, $mgd$, not by the cable. The cable pulls up while the crate moves down, so the cable\'s work must be negative.',
+    ],
   },
   {
     type: 'mcq',
@@ -259,6 +379,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Each minute the pump raises 500 kg through 12 m, which takes $500(10)(12) = 60{,}000$ J, so the power is $60{,}000/60 = 1.0$ kW. The value 60 kW treats the energy per minute as energy per second, 100 W leaves out $g$, and 1.0 W treats the 0.50 m³ as 0.50 kg.',
+    optionExplanations: [
+      '1.0 W treats the 0.50 m³ of water as 0.50 kg; with water\'s density of 1000 kg/m³, that volume has a mass of 500 kg.',
+      '100 W leaves $g$ out, computing $500(12)/60$; the energy needed to raise the water is $mgh$, not $mh$.',
+      'Each minute the pump raises 500 kg through 12 m, which takes $500(10)(12) = 60{,}000$ J, so the minimum power is $60{,}000/60 = 1.0$ kW.',
+      '60 kW treats the 60,000 J per minute as 60,000 J per second, forgetting to divide by the 60 s in a minute.',
+    ],
   },
 
   /* ---- U4 Linear Momentum (5) ---- */
@@ -272,6 +398,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Weighting each position by mass gives $x = 1.0(4.0)/6.0 = 0.67$ m and $y = 3.0(3.0)/6.0 = 1.5$ m. The point (1.3 m, 1.0 m) averages the positions without weighting by mass, (2.0 m, 1.5 m) is the midpoint of the frame\'s extent, and (1.5 m, 0.67 m) swaps the coordinates.',
+    optionExplanations: [
+      'Weighting each position by its mass gives $x = 1.0(4.0)/6.0 = 0.67$ m and $y = 3.0(3.0)/6.0 = 1.5$ m; the heavy ball on the $y$-axis pulls the center toward it.',
+      '(1.3 m, 1.0 m) averages the three positions without weighting by mass, which would be correct only if all three balls had equal masses.',
+      '(2.0 m, 1.5 m) is the midpoint of the frame\'s extent, halfway along each arm, which ignores both the masses and the ball at the origin.',
+      '(1.5 m, 0.67 m) swaps the coordinates. The 3.0 kg ball sits on the $y$-axis, so the center of mass is pulled farther along $y$ than along $x$.',
+    ],
   },
   {
     type: 'mcq',
@@ -282,6 +414,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'With no external horizontal force the center of mass stays put, so $60\\,x_p = 120\\,x_b$ while $x_p + x_b = 4.0$ m; the boat moves $4.0(60)/180 \\approx 1.3$ m backward. The value 2.0 m uses the mass ratio 60/120 on the whole 4.0 m, and 2.7 m is the person\'s displacement relative to the water. The boat must move opposite the person, not forward.',
+    optionExplanations: [
+      'With no external horizontal force the center of mass stays fixed, so $60x_p = 120x_b$ with $x_p + x_b = 4.0$ m; the boat moves $4.0(60/180) \\approx 1.3$ m backward.',
+      '2.0 m applies the mass ratio 60/120 to the whole 4.0 m, but the 4.0 m is the person\'s motion relative to the boat, shared between person and boat moving in opposite directions.',
+      '2.7 m is the person\'s forward displacement relative to the water, $4.0 - 1.3$, not the boat\'s backward displacement.',
+      'The boat must move opposite the person to keep the system\'s center of mass fixed; moving forward with the person would shift the center of mass with no external force.',
+    ],
   },
   {
     type: 'mcq',
@@ -293,6 +431,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The net impulse is $(4.0)(2.0) + (-2.0)(3.0) = +2.0$ N·s, which changes the velocity by $2.0/0.50 = +4.0$ m/s, from +1.0 to +5.0 m/s. The value +4.0 m/s is the change alone, +3.0 m/s adds the impulse to the velocity without dividing by the mass, and +29 m/s adds the magnitudes of the two impulses.',
+    optionExplanations: [
+      '+3.0 m/s adds the 2.0 N·s net impulse straight to the velocity without dividing by the 0.50 kg mass.',
+      '+4.0 m/s is the change in velocity, $2.0/0.50$; the cart started at +1.0 m/s, so its final velocity is +5.0 m/s.',
+      'The net impulse is $(4.0)(2.0) + (-2.0)(3.0) = +2.0$ N·s, which changes the velocity by $2.0/0.50 = +4.0$ m/s, from +1.0 to +5.0 m/s.',
+      '+29 m/s adds the magnitudes of the two impulses, 8.0 and 6.0 N·s, but the second force points backward, so its impulse subtracts.',
+    ],
   },
   {
     type: 'mcq',
@@ -303,6 +447,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'Each second the wall stops 2.0 kg of water moving at 10 m/s, removing 20 kg·m/s of horizontal momentum, so the force is 20 N. The value 40 N would apply if the water rebounded at the same speed, 100 N is the rate of kinetic energy delivered ($\\tfrac{1}{2}\\dot{m}v^2$, in watts), and 2.0 N leaves out the speed.',
+    optionExplanations: [
+      '2.0 N is the mass flow rate in kg/s reported as a force; it leaves out the 10 m/s of speed that each kilogram of water loses.',
+      'Each second the wall stops 2.0 kg of water moving at 10 m/s, removing 20 kg·m/s of horizontal momentum, so the average force is 20 N.',
+      '40 N would apply if the water bounced straight back at 10 m/s, doubling the momentum change; here it runs down the wall and loses only its forward momentum.',
+      '100 is the rate of kinetic energy delivered, $\\tfrac{1}{2}(2.0)(10)^2$, in watts. Force equals the rate of change of momentum, not of energy.',
+    ],
   },
   {
     type: 'mcq',
@@ -314,6 +464,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The total momentum is $2.0(3.0) - 1.0(3.0) = 3.0$ kg·m/s, so the joined carts move at 1.0 m/s to the right with $\\tfrac{1}{2}(3.0)(1.0)^2 = 1.5$ J; the initial kinetic energy was $9.0 + 4.5 = 13.5$ J, so 12 J is transformed. The value 13.5 J assumes the carts stop, 1.5 J is the energy that remains, and 4.5 J is cart Q\'s initial kinetic energy.',
+    optionExplanations: [
+      '1.5 J is the kinetic energy that remains after the collision, $\\tfrac{1}{2}(3.0)(1.0)^2$, not the amount transformed.',
+      '4.5 J is cart Q\'s initial kinetic energy, $\\tfrac{1}{2}(1.0)(3.0)^2$, which ignores cart P\'s 9.0 J and the 1.5 J left after the collision.',
+      'The total momentum, $2.0(3.0) - 1.0(3.0) = 3.0$ kg·m/s, leaves the joined carts at 1.0 m/s with 1.5 J; from the initial $9.0 + 4.5 = 13.5$ J, 12 J is transformed.',
+      '13.5 J assumes the carts stop dead, but the system has a net 3.0 kg·m/s of momentum, so the joined carts must keep moving and keep 1.5 J.',
+    ],
   },
 
   /* ---- U5 Torque & Rotational Dynamics (5) ---- */
@@ -327,6 +483,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The torque magnitude is $rF\\sin\\theta$: 16, 16, 18 and 15.2 N·m for forces 1 to 4, so force 3 is greatest. Force 4 is the largest force but acts closest to the hinge and at an angle, and forces 1 and 2 act farthest out but are smaller or angled.',
+    optionExplanations: [
+      'Force 1 is perpendicular to the door at 0.80 m, giving $0.80(20) = 16$ N·m, less than force 3\'s $0.60(30) = 18$ N·m.',
+      'Force 2 is 40 N at 0.80 m, but at 30° to the door only $\\sin 30°$ of it counts: $0.80(40)(0.50) = 16$ N·m.',
+      'Torque magnitude is $rF\\sin\\theta$: 16, 16, 18 and 15.2 N·m for forces 1 to 4, so force 3, 30 N applied perpendicular to the door at 0.60 m, gives the greatest torque.',
+      'Force 4 is the largest force, but it acts only 0.35 m from the hinge and at 60°: $0.35(50)(0.87) \\approx 15.2$ N·m, the smallest torque.',
+    ],
   },
   {
     type: 'mcq',
@@ -338,6 +500,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'Taking torques about the elbow, $F(0.040) = 50(0.32) + 15(0.15) = 18.25$ N·m, so $F \\approx 456$ N. Leaving out the forearm\'s weight gives 400 N, placing the forearm\'s weight at the hand gives 520 N, and 65 N is the total weight, which ignores how much shorter the biceps\' lever arm is.',
+    optionExplanations: [
+      '65 N is the total weight of the ball and forearm, which ignores the lever arms. The biceps attaches only 0.040 m from the elbow, so it must pull far harder.',
+      '400 N leaves out the forearm\'s own 15 N weight, which adds $15(0.15) = 2.25$ N·m of torque about the elbow.',
+      'Taking torques about the elbow, $F(0.040) = 50(0.32) + 15(0.15) = 18.25$ N·m, so $F \\approx 456$ N.',
+      '520 N places the forearm\'s weight at the hand, 0.32 m from the elbow, instead of at its own center of mass 0.15 m from the elbow.',
+    ],
   },
   {
     type: 'mcq',
@@ -349,6 +517,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Summing $mr^2$ gives 0.32, 0.32, 0.18 and 0.36 kg·m² for P, Q, R and S. Arrangement S has the least mass but the largest distance, and the distance enters squared. P and Q tie because the same 2.0 kg sits at the same 0.40 m, and R has the most spheres but the smallest radius.',
+    optionExplanations: [
+      'Arrangement P gives $2(1.0)(0.40)^2 = 0.32$ kg·m², tied with Q and less than S\'s $1.0(0.60)^2 = 0.36$ kg·m².',
+      'Arrangement Q puts the same 2.0 kg at the same 0.40 m as P, so it also gives 0.32 kg·m², less than S\'s 0.36 kg·m².',
+      'Arrangement R has the most spheres, but they total only 2.0 kg at the smallest radius, giving $2.0(0.30)^2 = 0.18$ kg·m², the least of the four.',
+      'Summing $mr^2$ gives 0.32, 0.32, 0.18 and 0.36 kg·m² for P, Q, R and S. Arrangement S has the least mass but the largest distance, and distance enters squared.',
+    ],
   },
   {
     type: 'mcq',
@@ -359,6 +533,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'The friction force is $0.40(20) = 8.0$ N, its torque is $8.0(0.25) = 2.0$ N·m, so $\\alpha = 2.0/0.80 = 2.5$ rad/s² and $t = 10/2.5 = 4.0$ s. Leaving out the radius gives 1.0 s, using the 20 N normal force as the friction force gives 1.6 s, and 0.25 s divides the angular acceleration by the angular speed.',
+    optionExplanations: [
+      '0.25 s divides the angular acceleration by the angular speed, $2.5/10$; the stopping time is the angular speed divided by the angular acceleration.',
+      '1.0 s leaves out the 0.25 m radius, treating the 8.0 N friction force as an 8.0 N·m torque.',
+      '1.6 s uses the 20 N normal force as the friction force; the kinetic friction is only $\\mu_k N = 0.40(20) = 8.0$ N.',
+      'Friction is $0.40(20) = 8.0$ N, its torque is $8.0(0.25) = 2.0$ N·m, so $\\alpha = 2.0/0.80 = 2.5$ rad/s² and $t = 10/2.5 = 4.0$ s.',
+    ],
   },
   {
     type: 'mcq',
@@ -369,6 +549,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Doubling the radius of a disk of the same thickness quadruples its area and so its mass, and $I = \\tfrac{1}{2}MR^2$ then grows by $4 \\times 2^2 = 16$. Four times accounts only for the larger radius or only for the larger mass, and two or eight times scale one factor linearly.',
+    optionExplanations: [
+      'Two times treats the rotational inertia as growing linearly with the radius alone; it misses both the squared radius and the larger mass.',
+      'Four times accounts for only one change, either the squared radius or the fourfold mass. Disk 2 has both, because it is cut from the same sheet.',
+      'Eight times includes the fourfold mass but scales the radius linearly; $I$ depends on $R^2$, so doubling the radius contributes another factor of 4, not 2.',
+      'Doubling the radius of a disk of the same thickness quadruples its area and so its mass, and $I = \\tfrac{1}{2}MR^2$ then grows by $4 \\times 2^2 = 16$.',
+    ],
   },
 
   /* ---- U6 Energy & Momentum of Rotating Systems (3) ---- */
@@ -381,6 +567,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 2,
     explanation:
       'The work done is the area under the torque–angle graph, $4.0(5.0) + \\tfrac{1}{2}(4.0)(5.0) = 30$ J, so $\\tfrac{1}{2}(0.50)\\omega^2 = 30$ J and $\\omega \\approx 11$ rad/s. Counting only the first 5.0 rad (20 J) gives 8.9 rad/s, treating the torque as 4.0 N·m for all 10 rad (40 J) gives 12.6 rad/s, and 7.7 rad/s drops the factor of one-half from the kinetic energy.',
+    optionExplanations: [
+      '7.7 rad/s drops the one-half from the rotational kinetic energy, solving $(0.50)\\omega^2 = 30$ J.',
+      '8.9 rad/s counts only the work in the first 5.0 rad, 20 J, leaving out the 10 J done while the torque decreases to zero.',
+      'The work is the area under the torque–angle graph, $4.0(5.0) + \\tfrac{1}{2}(4.0)(5.0) = 30$ J, so $\\tfrac{1}{2}(0.50)\\omega^2 = 30$ J and $\\omega \\approx 11$ rad/s.',
+      '12.6 rad/s treats the torque as 4.0 N·m for all 10 rad, giving 40 J, which overcounts the second 5.0 rad, where the torque shrinks.',
+    ],
   },
   {
     type: 'mcq',
@@ -392,6 +584,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'No external torque acts about the axle, so angular momentum is conserved: $(320 + 40 \\cdot 2.0^2)(1.0) = (320 + 40 \\cdot 1.0^2)\\omega$, giving $\\omega = 480/360 \\approx 1.3$ rad/s. The value 0.75 rad/s inverts the ratio, 2.0 rad/s scales by the ratio of the child\'s radii, and 4.0 rad/s scales by its square, both ignoring the merry-go-round\'s own large rotational inertia.',
+    optionExplanations: [
+      '0.75 rad/s inverts the ratio of rotational inertias, $360/480$. Moving the child inward reduces the total rotational inertia, so the angular speed must increase.',
+      'No external torque acts about the axle, so angular momentum is conserved: $(320 + 40 \\cdot 2.0^2)(1.0) = (320 + 40 \\cdot 1.0^2)\\omega$, giving $\\omega = 480/360 \\approx 1.3$ rad/s.',
+      '2.0 rad/s scales by the ratio of the child\'s radii, ignoring the merry-go-round\'s own 320 kg·m², which does not change when the child moves.',
+      '4.0 rad/s scales by the square of the child\'s radius ratio, which would hold only if the child were the whole system; it ignores the merry-go-round\'s 320 kg·m².',
+    ],
   },
   {
     type: 'mcq',
@@ -402,6 +600,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'A rolling hoop has $K = \\tfrac{1}{2}Mv^2 + \\tfrac{1}{2}(MR^2)(v/R)^2 = Mv^2$, and all of it becomes $Mgh$, so $h = v^2/g = 0.90$ m. The value 0.45 m counts only translational energy, as for a sliding block, and 0.63 m and 0.68 m are the heights for a rolling solid sphere and solid disk, which store less energy in rotation.',
+    optionExplanations: [
+      '0.45 m counts only translational energy, $v^2/(2g)$, as for a sliding block; a rolling hoop carries an equal amount of rotational energy that also becomes height.',
+      '0.63 m is the height for a rolling solid sphere, which has only $\\tfrac{7}{10}Mv^2$ of kinetic energy; a hoop\'s mass is all at the rim, so it stores more.',
+      '0.68 m is the height for a rolling solid disk, $\\tfrac{3}{4}v^2/g$; a hoop has a larger rotational inertia, $MR^2$, so it climbs higher.',
+      'A rolling hoop has $K = \\tfrac{1}{2}Mv^2 + \\tfrac{1}{2}(MR^2)(v/R)^2 = Mv^2$, and all of it becomes $Mgh$, so $h = v^2/g = 0.90$ m.',
+    ],
   },
 
   /* ---- U7 Oscillations (3) ---- */
@@ -419,6 +623,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'The acceleration always points toward equilibrium, so it points along the velocity whenever the block moves toward equilibrium and is speeding up. Moving away from equilibrium the two are opposite and the block slows; at the turning points the velocity is zero, so it has no direction; and on the stretched side the block moves away from equilibrium for half the time, when the two point opposite ways.',
+    optionExplanations: [
+      'The acceleration always points toward equilibrium, so it points along the velocity whenever the block moves toward equilibrium, the part of the cycle in which it speeds up.',
+      'Moving away from equilibrium, the block\'s velocity points outward while the restoring acceleration points back toward equilibrium, so the two are opposite and the block slows.',
+      'At a turning point the velocity is momentarily zero, so it has no direction to share with the acceleration, which is at its largest there.',
+      'On the stretched side the acceleration always points back toward equilibrium, but the block moves away from equilibrium during half that time, when velocity and acceleration are opposite.',
+    ],
   },
   {
     type: 'mcq',
@@ -429,7 +639,13 @@ export const MCQS: MCQItem[] = [
     options: ['Equal to cart A\'s', 'Half of cart A\'s', 'Twice cart A\'s', 'Four times cart A\'s'],
     correctAnswer: 3,
     explanation:
-      'The maximum speed is $A\\omega = 2\\pi A/T$, so it doubles with B\'s doubled amplitude and doubles again with B\'s halved period: $0.20/1.0$ versus $0.10/2.0$, a factor of 4. Twice accounts for only one of the two changes, equal treats them as canceling, and half multiplies the amplitude by the period instead of dividing.',
+      'The maximum speed is $A\\omega = 2\\pi A/T$, so it doubles with B\'s doubled amplitude and doubles again with B\'s halved period: $0.20/1.0$ versus $0.10/2.0$, a factor of 4. Twice accounts for only one of the two changes, equal treats them as canceling, and half would follow only if the maximum speed grew with the period, although a shorter period means faster motion.',
+    optionExplanations: [
+      'Equal treats the doubled amplitude and halved period as canceling, but both changes increase the maximum speed $2\\pi A/T$, so their effects multiply rather than cancel.',
+      'Half would follow only if the maximum speed grew with the period, but a shorter period means faster motion; with $v_{max} = 2\\pi A/T$, cart B\'s larger amplitude and shorter period both raise its speed.',
+      'Twice accounts for only one of the two changes, the doubled amplitude or the halved period; $2\\pi A/T$ includes both, for a factor of 4.',
+      'The maximum speed is $A\\omega = 2\\pi A/T$, so B\'s doubled amplitude and halved period each double it: $0.20/1.0$ versus $0.10/2.0$, a factor of 4.',
+    ],
   },
   {
     type: 'mcq',
@@ -440,6 +656,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'From $T = 2\\pi\\sqrt{L/g}$, $L = gT^2/(4\\pi^2) = 9.8(4.0)/39.5 \\approx 0.99$ m. The value 3.1 m is $gT/(2\\pi)$, which forgets to square, 6.2 m uses $2\\pi$ instead of $4\\pi^2$, and 4.0 m comes from $T = \\pi\\sqrt{L/g}$, which drops the factor of 2.',
+    optionExplanations: [
+      'From $T = 2\\pi\\sqrt{L/g}$, $L = gT^2/(4\\pi^2) = 9.8(4.0)/39.5 \\approx 0.99$ m, which is why a two-second pendulum is about one meter long.',
+      '3.1 m is $gT/(2\\pi)$, which forgets to square both the period and the $2\\pi$ when solving $T = 2\\pi\\sqrt{L/g}$ for $L$.',
+      '4.0 m comes from $T = \\pi\\sqrt{L/g}$, dropping the factor of 2 from the period formula, which makes the computed length four times too long.',
+      '6.2 m squares the period but divides by $2\\pi$ instead of $4\\pi^2$; squaring both sides of $T = 2\\pi\\sqrt{L/g}$ squares the $2\\pi$ as well.',
+    ],
   },
 
   /* ---- U8 Fluids (5) ---- */
@@ -453,6 +675,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'At the level of the boundary the pressures in the two arms are equal, so $\\rho_{oil}(0.16) = 1000(0.12)$ and $\\rho_{oil} = 750$ kg/m³. The value 1330 kg/m³ inverts the height ratio, 1000 kg/m³ assumes the columns balance only if the liquids match, and 1780 kg/m³ squares the inverted ratio.',
+    optionExplanations: [
+      '1780 kg/m³ squares the inverted height ratio, $1000(0.16/0.12)^2$; pressure grows linearly with column height, so no square belongs in the comparison.',
+      'At the level of the boundary the pressures in the two arms are equal, so $\\rho_{oil}g(0.16) = \\rho_w g(0.12)$ and $\\rho_{oil} = 750$ kg/m³; the less dense oil needs the taller column.',
+      '1000 kg/m³ would make the two columns equally tall above the boundary; the taller oil column shows that the oil is less dense than water.',
+      '1330 kg/m³ inverts the height ratio, $1000(0.16/0.12)$. A liquid denser than water would need a shorter column than the water, not a taller one.',
+    ],
   },
   {
     type: 'mcq',
@@ -464,6 +692,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 0,
     explanation:
       'Atmospheric pressure acts on both faces and cancels, so the net force is the average gauge pressure, at the window\'s center, times the area: $(1000)(10)(2.0)(0.25) = 5000$ N. Reporting the gauge pressure of 20,000 Pa as a force gives 20,000 N, multiplying by the 0.50 m side instead of the area gives 10,000 N, and 30,000 N uses the absolute pressure and forgets the air on the other side.',
+    optionExplanations: [
+      'Atmospheric pressure acts on both faces and cancels, and gauge pressure grows linearly with depth, so the net force is the gauge pressure at the center times the area: $(1000)(10)(2.0)(0.25) = 5000$ N.',
+      '10,000 N multiplies the 20,000 Pa gauge pressure by the 0.50 m side length instead of by the 0.25 m² area, which does not give a force.',
+      '20,000 N is the 20,000 Pa gauge pressure at the window\'s center reported as a force, without multiplying by the window\'s 0.25 m² area.',
+      '30,000 N uses the absolute pressure on the water side, about 121,000 Pa, times the area, and forgets that the air on the other face pushes back with atmospheric pressure.',
+    ],
   },
   {
     type: 'mcq',
@@ -475,6 +709,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 1,
     explanation:
       'The cube\'s weight equals the weight of the fluid it displaces in both layers: $\\rho(0.10) = 1000(0.040) + 800(0.060)$, so $\\rho = 880$ kg/m³. The value 400 kg/m³ counts only the water, 900 kg/m³ simply averages the two densities, and 920 kg/m³ swaps the two depths.',
+    optionExplanations: [
+      '400 kg/m³ counts only the water\'s buoyant force, $1000(0.040)/0.10$, ignoring that the oil around the top 0.060 m of the cube also pushes up on it.',
+      'The cube\'s weight equals the weight of fluid it displaces in both layers: $\\rho(0.10) = 1000(0.040) + 800(0.060)$, so $\\rho = 880$ kg/m³.',
+      '900 kg/m³ simply averages the two fluid densities, which would be right only if the cube were half in each layer; it is 0.040 m in water and 0.060 m in oil.',
+      '920 kg/m³ swaps the depths, putting 0.060 m in the water and 0.040 m in the oil; the stimulus places the bottom 0.040 m in the water.',
+    ],
   },
   {
     type: 'mcq',
@@ -485,6 +725,12 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Continuity requires $A_1v_1 = A_2v_2$, so $v_2 = 0.50(2.0)/0.010 = 100$ cm/s. The value 0.50 cm/s assumes the speed is the same everywhere, 7.07 cm/s scales by the square root of the area ratio as if speed depended on the diameter ratio, and 0.0025 cm/s inverts the area ratio.',
+    optionExplanations: [
+      '0.0025 cm/s inverts the area ratio, slowing the liquid in the narrow needle; continuity requires faster flow where the cross-section is smaller.',
+      '0.50 cm/s assumes the speed is the same everywhere, but the same volume per second must pass through a needle with 1/200 of the barrel\'s area.',
+      '7.07 cm/s scales the speed by the square root of the area ratio, which is the diameter ratio, as if speed varied inversely with diameter; continuity uses the area ratio itself, 200.',
+      'Continuity requires $A_1v_1 = A_2v_2$, so $v_2 = 0.50(2.0)/0.010 = 100$ cm/s; the liquid moves much faster in the narrow needle.',
+    ],
   },
   {
     type: 'mcq',
@@ -496,5 +742,11 @@ export const MCQS: MCQItem[] = [
     correctAnswer: 3,
     explanation:
       'Continuity gives 3.0 m/s at point 2, and Bernoulli\'s equation gives $P_1 - P_2 = \\rho g h + \\tfrac{1}{2}\\rho(v_2^2 - v_1^2) = 20{,}000 + 4{,}000$ Pa $= 24$ kPa. The value 20 kPa includes only the height, 4.0 kPa only the speed change, and 16 kPa subtracts the speed term as if the water slowed down.',
+    optionExplanations: [
+      '4.0 kPa includes only the speed change, $\\tfrac{1}{2}\\rho(v_2^2 - v_1^2)$, and leaves out the 20 kPa needed to raise the water 2.0 m.',
+      '16 kPa subtracts the 4.0 kPa speed term, as if the water slowed down. Continuity makes it speed up to 3.0 m/s in the narrower pipe, which lowers its pressure further.',
+      '20 kPa includes only the height term, $\\rho g h$, and leaves out the 4.0 kPa needed to speed the water up from 1.0 to 3.0 m/s.',
+      'Continuity gives 3.0 m/s at point 2, and Bernoulli\'s equation gives $P_1 - P_2 = \\rho g h + \\tfrac{1}{2}\\rho(v_2^2 - v_1^2) = 20{,}000 + 4{,}000$ Pa, or 24 kPa.',
+    ],
   },
 ]
