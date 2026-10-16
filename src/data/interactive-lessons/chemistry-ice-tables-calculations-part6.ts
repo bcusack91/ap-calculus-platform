@@ -36,8 +36,8 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 ---
 
-> 💡 **Step 2 — Can you use the approximation?** Check: $\\frac{[\\text{initial}]}{K} > 100$?
-> - **Yes** → Approximate: $[\\text{initial}] - x \\approx [\\text{initial}]$
+> 💡 **Step 2 — Can you use the approximation?** Is $K$ very small compared with $[\\text{initial}]$?
+> - **Yes** → Approximate $[\\text{initial}] - x \\approx [\\text{initial}]$, then confirm that $x$ is under 5% of $[\\text{initial}]$
 > - **No** → Full quadratic required
 
 
@@ -124,15 +124,15 @@ Using the approximation $0.50 - x \\approx 0.50$:
       exercise: {
         questions: [
           {
-            question: '$K_c = 0.25$, $[\\text{A}]_0 = 0.10$ M. $[\\text{initial}]/K = 0.10/0.25 = 0.40$. Which method should you use?',
+            question: 'For $\\text{A} \\rightleftharpoons \\text{B} + \\text{C}$, $K_c = 0.25$ and $[\\text{A}]_0 = 0.10$ M. Assuming x is small gives $x = \\sqrt{(0.25)(0.10)} = 0.16$ M. Which method should you use?',
             options: [
-              'Small-x approximation (ratio > 100)',
-              'Quadratic formula (ratio < 100)',
+              'Keep the small-x answer, since x is positive',
+              'Quadratic formula, since x is far over 5% of 0.10 M',
               'Either method works, since both give the same x',
               'Neither; x cannot be found when K > $[\\text{A}]_0$'
             ],
             correctAnswer: 1,
-            explanation: '$[\\text{initial}]/K = 0.40 \\ll 100$. The ratio is far below 100, so the approximation is NOT valid and would give a noticeably different x. Use the quadratic formula, which works for any K.'
+            explanation: 'The approximate x (0.16 M) is 160% of the 0.10 M starting concentration, far over 5% and more than the whole starting amount, so the approximation fails. Use the quadratic formula, which works for any K. A positive x does not make the approximation valid, the two methods give very different x here, and the quadratic finds x whatever the size of K.'
           },
           {
             question: '$K_c = 1.8 \\times 10^{-5}$, $[\\text{HA}]_0 = 0.50$ M. Which method?',
@@ -143,7 +143,7 @@ Using the approximation $0.50 - x \\approx 0.50$:
               'Need more information'
             ],
             correctAnswer: 1,
-            explanation: '$0.50/(1.8 \\times 10^{-5}) = 27{,}778 \\gg 100$. The approximation is valid.'
+            explanation: '$K_c$ is tiny compared with 0.50 M, so assume x is small: $x = \\sqrt{(1.8 \\times 10^{-5})(0.50)} = 3.0 \\times 10^{-3}$ M, which is 0.6% of 0.50 M. That is under 5%, so the approximation is valid and no quadratic is needed.'
           }
         ]
       }

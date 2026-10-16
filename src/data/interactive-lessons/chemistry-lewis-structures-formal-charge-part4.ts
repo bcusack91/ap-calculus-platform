@@ -7,7 +7,7 @@ export const chemLewisStructuresFormalChargePart4Data = {
       title: '⚡ What Is Formal Charge?',
       content: `**Formal charge (FC)** is a bookkeeping tool that helps us determine which Lewis structure is the most reasonable when multiple structures are possible.\n\nFormal charge tells us the hypothetical charge on each atom if all bonding electrons were shared **perfectly equally** between bonded atoms.\n\n$$\\boxed{FC = V - N - \\frac{B}{2}}$$\n\nWhere:\n- **V** = number of valence electrons (from the periodic table)\n- **N** = number of nonbonding (lone pair) electrons on the atom\n- **B** = number of bonding electrons around the atom\n\nAlternatively, since $\\frac{B}{2}$ equals the number of bonds:\n\n$$\\boxed{FC = V - N - \\text{(number of bonds)}}$$\n\n**Important:** The sum of all formal charges in a molecule must equal the overall charge of the molecule or ion.
 
-**Part 4 of 7 — Resonance Structures**
+**Part 4 of 7 — Formal Charge**
 
 ---
 

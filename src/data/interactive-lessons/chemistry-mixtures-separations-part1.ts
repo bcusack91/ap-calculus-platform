@@ -108,7 +108,9 @@ A **heterogeneous mixture** has a **non-uniform composition**: its macroscopic p
 | Sand in water | Sand grains sit in some places and not others |
 | Oil and vinegar | Two separate liquid layers |
 | Granite | Visible grains of different minerals |
-| Ice cubes in water | Two phases of the same substance in different regions |
+| Iron filings in sulfur powder | Grains of two different solids sit side by side |
+
+> ⚠️ **Watch out:** Ice cubes floating in water look like two regions, but they are **not a mixture**. Both are H₂O, so the sample is one pure substance present in two phases.
 
 
 ---

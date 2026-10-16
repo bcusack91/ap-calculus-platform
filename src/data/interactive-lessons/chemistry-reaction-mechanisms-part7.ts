@@ -59,7 +59,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 |------|--------|
 | 1 | Identify the **RDS** (slowest step = highest $E_a$) |
 | 2 | Write its elementary rate law |
-| 3 | Eliminate intermediates using **pre-equilibrium** or steady-state |
+| 3 | Eliminate intermediates using the **pre-equilibrium** approximation |
 
 $$\\text{Overall Rate} \\approx \\text{Rate of the slowest step (RDS)}$$
 

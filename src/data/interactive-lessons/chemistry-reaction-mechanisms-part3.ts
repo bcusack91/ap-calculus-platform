@@ -166,11 +166,6 @@ Substitute:
 $$\\boxed{\\text{Rate} = k_2 K_{eq}[\\text{A}][\\text{B}][\\text{D}] = k_{\\text{obs}}[\\text{A}][\\text{B}][\\text{D}]}$$
 
 where $k_{\\text{obs}} = k_2 K_{eq}$.
-
-
----
-
-> 💡 **Tip:** An alternative to pre-equilibrium is the **steady-state approximation**, which assumes $d[\\text{intermediate}]/dt \\approx 0$. Both methods eliminate intermediates, but steady-state is more general and works even when the fast step is not fully reversible.
       `
     },
     {

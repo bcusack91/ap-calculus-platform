@@ -96,7 +96,7 @@ When comparing PES spectra of adjacent elements in the same period, you should n
 ---
 
 ### Sodium (Na, Z = 11): $1s^{2}$ $2s^{2}$ $2p^{6}$ $3s^{1}$
-- Five peaks with heights: 2, 2, 6, 1 (but 2s and 2p show as separate peaks)
+- Four peaks (1s, 2s, 2p, 3s) with relative heights 2, 2, 6, 1
 - Rightmost peak $(3s^{1})$: height 1, lowest BE
 
 

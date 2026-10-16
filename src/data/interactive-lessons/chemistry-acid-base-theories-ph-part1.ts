@@ -73,7 +73,7 @@ The Arrhenius model only works in **aqueous solutions** and cannot explain:
 |---------|------|-------------|
 | $HCl$ | Hydrochloric acid | $HCl \\rightarrow H^+ + Cl^-$ |
 | $HNO_3$ | Nitric acid | $HNO_3 \\rightarrow H^+ + NO_3^-$ |
-| $H_2SO_4$ | Sulfuric acid | $H_2SO_4 \\rightarrow 2H^+ + SO_4^{2-}$ |
+| $H_2SO_4$ | Sulfuric acid | $H_2SO_4 \\rightarrow H^+ + HSO_4^-$ (first step only) |
 | $HBr$ | Hydrobromic acid | $HBr \\rightarrow H^+ + Br^-$ |
 | $HI$ | Hydroiodic acid | $HI \\rightarrow H^+ + I^-$ |
 | $HClO_4$ | Perchloric acid | $HClO_4 \\rightarrow H^+ + ClO_4^-$ |
@@ -89,6 +89,8 @@ The Arrhenius model only works in **aqueous solutions** and cannot explain:
 | $KOH$ | Potassium hydroxide | $KOH \\rightarrow K^+ + OH^-$ |
 | $Ca(OH)_2$ | Calcium hydroxide | $Ca(OH)_2 \\rightarrow Ca^{2+} + 2OH^-$ |
 | $Ba(OH)_2$ | Barium hydroxide | $Ba(OH)_2 \\rightarrow Ba^{2+} + 2OH^-$ |
+
+> ⚠️ Only the **first** ionization of $H_2SO_4$ is complete. The second step, $HSO_4^- \\rightleftharpoons H^+ + SO_4^{2-}$, is a weak-acid equilibrium.
 
 > 💡 **Memorize the 6 strong acids and 4 strong bases** — everything else is weak!
       `

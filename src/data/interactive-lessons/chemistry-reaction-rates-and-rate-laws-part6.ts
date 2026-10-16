@@ -46,9 +46,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 ### Tip for the AP Exam
 
-> 💡 **Tip:** When the rate ratio is not a clean power, use logarithms:
-
-$$\\boxed{m = \\frac{\\log(\\text{Rate ratio})}{\\log(\\text{Concentration ratio})}}$$
+> 💡 **Tip:** AP rate-law data always give whole-number orders. When a concentration doubles, a rate ratio of 1, 2 or 4 means order 0, 1 or 2; when it triples, look for 1, 3 or 9.
       `
     },
     {

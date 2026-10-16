@@ -100,7 +100,6 @@ The amount of solute that dissolves depends on the **solubility** of that solute
 
 - **Most solid solutes**: solubility **increases** with temperature
 - **Gases**: solubility **decreases** with temperature (think of a warm soda going flat)
-- Raising the pressure of a gas above a liquid increases how much of that gas dissolves (this is why soda is bottled under pressure); pressure has a negligible effect on dissolving solids and liquids
       `
     },
     {
@@ -139,7 +138,7 @@ The amount of solute that dissolves depends on the **solubility** of that solute
               'Gas solubility rises with increasing temperature',
               'Gas solubility decreases with increasing temperature',
               'Gas solubility is not affected by temperature',
-              'Gas solubility increases with decreasing pressure'
+              'Gas solubility is greatest in water near its boiling point'
             ],
             correctAnswer: 1,
             explanation: 'Gas solubility in liquids decreases as temperature increases. This is why hot water holds less dissolved oxygen than cold water, and why a warm soda loses its fizz faster.'

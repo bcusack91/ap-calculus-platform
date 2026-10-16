@@ -9,34 +9,23 @@ export const chemEntropySecondLawV2Part4Data = {
 
 **Part 4 of 7 — Measuring and Using $S°$ Values**
 
-Unlike enthalpy where we only measure **changes** ($\\Delta H$), entropy has **absolute values**. Every substance has a standard molar entropy $S°$ at 298 K and 1 atm. This is thanks to the **Third Law of Thermodynamics**.
+Unlike enthalpy where we only measure **changes** ($\\Delta H$), entropy has **absolute values**. Every substance has a standard molar entropy $S°$ at 298 K and 1 atm.
       `
     },
     {
       id: 'en4v2-third-law',
       type: 'text' as const,
       content: `
-## 📏 The Third Law of Thermodynamics
+## 📏 Absolute Entropies
 
-> A perfect crystal at absolute zero (0 K) has an entropy of exactly zero.
-
-$$S_{\\text{perfect crystal at 0 K}} = 0 \\text{ J/(mol}\\cdot\\text{K)}$$
-
-This gives us a **starting point** for measuring entropy — unlike enthalpy, where we can only measure differences.
+A table of $S°$ values lists each substance's entropy **itself**, not a change from a chosen reference. That is the key difference from enthalpy, where we can only work with differences such as $\\Delta H°_f$.
 
 
 ---
 
-### Why Perfect Crystal?
+### What a Tabulated $S°$ Reflects
 
-At 0 K, every particle in a perfect crystal sits in a fixed position with minimal motion, so there is no dispersal of matter or energy left to remove.
-
-
----
-
-### Building Up from Zero
-
-Starting from zero at 0 K, a substance's entropy rises as it is warmed (energy disperses), with large jumps when it melts and especially when it boils (matter disperses). The tabulated value $S°$ is the total at 298 K and 1 atm. You never need to calculate an absolute entropy on the AP exam; you use tabulated $S°$ values (CED 9.2).
+A substance's entropy rises as it is warmed (energy disperses), with large jumps when it melts and especially when it boils (matter disperses). The tabulated value $S°$ is the total at 298 K and 1 atm, and it is positive for every substance, elements included. You never need to calculate an absolute entropy on the AP exam; you use tabulated $S°$ values (CED 9.2).
       `
     },
     {
@@ -127,8 +116,8 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
       exercise: {
         dropdowns: [
           {
-            label: 'At 0 K, a perfect crystal has entropy of',
-            options: ['infinity', 'zero', 'one', 'negative']
+            label: 'Increasing the volume of a gas at constant temperature makes its entropy',
+            options: ['decrease', 'increase', 'stay the same', 'drop to zero']
           },
           {
             label: 'Between $H_{2}O(l)$ and $H_{2}O(g)$, which has higher $S°$?',
@@ -143,11 +132,11 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
             options: ['always zero', 'always positive', 'always negative', 'zero only for gases']
           }
         ],
-        correctAnswers: ['zero', '$H_{2}O(g)$', 'positive', 'always positive'],
-        hint1: 'A perfect crystal at 0 K has no dispersal left.',
+        correctAnswers: ['increase', '$H_{2}O(g)$', 'positive', 'always positive'],
+        hint1: 'A larger volume lets the gas particles spread out more.',
         hint2: 'Gas molecules are far more dispersed.',
         hint3: 'More gas molecules = more dispersal of matter.',
-        explanation: 'Third Law gives S = 0 at 0 K. Gas has higher S° than liquid. More gas → positive ΔS°. Unlike $\\Delta H_f°$ (zero for elements), $S°$ is measured from absolute zero and is always positive above 0 K.'
+        explanation: 'A larger volume disperses the gas, so S increases. Gas has higher S° than liquid. More gas → positive ΔS°. Unlike $\\Delta H_f°$ (zero for elements), $S°$ is measured from absolute zero and is always positive above 0 K.'
       }
     },
     {
@@ -159,15 +148,15 @@ Given: $S°$(CaCO₃) = 92.9, $S°$(CaO) = 39.7, $S°$(CO₂) = 213.7 J/(mol·K)
       exercise: {
         questions: [
           {
-            question: 'Why can we assign absolute entropy values but not absolute enthalpy values?',
+            question: 'Which substance has the greatest standard molar entropy at 298 K?',
             options: [
-              'Enthalpy is always negative, so it has no zero point',
-              'The Third Law fixes S = 0 for a perfect crystal at 0 K',
-              'Enthalpy cannot be measured, only estimated from bond energies',
-              'Entropy is always positive, so it needs no reference state'
+              '$CaCO_{3}(s)$',
+              'Ar(g)',
+              '$C_{2}H_{6}(g)$',
+              '$C_{2}H_{5}OH(l)$'
             ],
-            correctAnswer: 1,
-            explanation: 'The Third Law provides an absolute reference: S = 0 for a perfect crystal at 0 K. No such zero point exists for enthalpy, so we use formation values (ΔH°f) measured relative to the elements instead.'
+            correctAnswer: 2,
+            explanation: 'Gases are far more dispersed than solids or liquids, so the answer is one of the two gases; of those, $C_{2}H_{6}$ has many atoms that can vibrate and rotate, while Ar is a single atom. (S°: $C_{2}H_{6}$ 229.6, Ar 154.8, $C_{2}H_{5}OH(l)$ 160.7, $CaCO_{3}$ 92.9 J/(mol·K).)'
           }
         ]
       }

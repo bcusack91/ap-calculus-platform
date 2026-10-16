@@ -7,7 +7,7 @@ export const chemLewisStructuresFormalChargePart2Data = {
       title: '📋 The Step-by-Step Algorithm for Drawing Lewis Structures',
       content: `Drawing Lewis structures follows a systematic algorithm. Master these steps and you can draw the structure for any molecule or ion.\n\n**Step 1:** Count the **total valence electrons**\n- Sum valence $e^{-}$ for all atoms\n- Add $e^{-}$ for negative charges, subtract for positive charges\n\n**Step 2:** Identify the **central atom**\n- Usually the least electronegative atom (not H or F)\n- H and F are always terminal (outer) atoms\n\n**Step 3:** Draw **single bonds** from the central atom to each surrounding atom\n- Each single bond uses 2 electrons\n\n**Step 4:** Distribute **remaining electrons** as lone pairs\n- Fill octets on outer atoms first\n- Place any leftover electrons on the central atom\n\n**Step 5:** Check — does every atom have an octet?\n- If the central atom lacks an octet, convert lone pairs on outer atoms into multiple bonds\n\n> 💡 **Tip:** The central atom is usually the least electronegative atom. H and F are *always* terminal atoms.
 
-**Part 2 of 7 — Octet Rule & Exceptions**
+**Part 2 of 7 — Drawing Lewis Structures**
 
 ---
 

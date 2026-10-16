@@ -43,7 +43,6 @@ $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$
 
 | Test | Condition | Action |
 |------|-----------|--------|
-| Ratio check | $\\frac{[\\text{initial}]}{K} < 100$ | Must use quadratic |
 | 5% rule | Approximation yields > 5% change | Must use quadratic |
 | $K$ relative to $[C]_0$ | $K$ is not very small vs. initial conc. | Must use quadratic |
 
@@ -68,7 +67,7 @@ $$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$
 
 > **Problem:** For $\\text{A}(g) \\rightleftharpoons \\text{B}(g) + \\text{C}(g)$ with $K_c = 0.50$, find the equilibrium concentrations given $[\\text{A}] = 1.00$ M, $[\\text{B}] = [\\text{C}] = 0$.
 
-> **Solution:** **Check approximation:** $1.00/0.50 = 2.0 < 100$ → approximation NOT valid
+> **Solution:** **Can x be ignored?** $K_c = 0.50$ is not small compared with 1.00 M. Assuming $x \\ll 1.00$ would give $x = \\sqrt{0.50} = 0.71$ M, which is 71% of 1.00 M, far over 5%. Use the quadratic.
 
 |  | A | B | C |
 |--|---|---|---|
@@ -201,7 +200,7 @@ Using the quadratic formula:
           'gives positive concentrations',
           'you must use the quadratic'
         ],
-        hint1: 'When $[\\text{initial}]/K < 100$, the approximation isn\'t reliable.',
+        hint1: 'When K is not much smaller than the initial concentration, x comes out above 5% of it.',
         hint2: 'All concentrations must be ≥ 0.',
         hint3: 'A failed 5% test means the approximation introduced too much error.',
         explanation: 'Quadratic needed when K isn\'t small enough. Keep the physically meaningful root. Failed 5% test → must use quadratic for accuracy.'

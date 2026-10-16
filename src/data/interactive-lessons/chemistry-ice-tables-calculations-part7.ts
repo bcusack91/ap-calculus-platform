@@ -56,8 +56,8 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 | Condition | Strategy |
 |-----------|----------|
 | Perfect square | Take square root |
-| $[\\text{init}]/K > 100$ | Small-x approximation |
-| $[\\text{init}]/K < 100$ | Full quadratic |
+| $K$ very small vs. $[\\text{init}]$ | Small-x approximation, then check $x < 5\\%$ of $[\\text{init}]$ |
+| $K$ not small vs. $[\\text{init}]$ | Full quadratic |
 | Approx gives > 5% | Switch to quadratic |
 
 

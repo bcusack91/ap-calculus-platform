@@ -15,7 +15,6 @@ export const chemHybridizationSigmaPiBondsPart3Data = {
 
 | Section |
 |---------|
-| Types of Sigma Bond Overlap |
 | Key Properties of Sigma Bonds |
 | Key Properties of Pi Bonds |
 | Why Pi Bonds Prevent Rotation |
@@ -38,16 +37,6 @@ export const chemHybridizationSigmaPiBondsPart3Data = {
 
 A **sigma bond** forms when two orbitals overlap **end-to-end** (head-on), with electron density concentrated **along the bond axis** (the line connecting the two nuclei).
 
-### Types of Sigma Bond Overlap
-
-| Overlap Type | Example |
-|-------------|---------|
-| s–s | H–H in $H_{2}$ |
-| s–$sp^{3}$ | H–C in $CH_{4}$ |
-| $sp^{3}$–$sp^{3}$ | C–C in ethane |
-| $sp^{2}$–$sp^{2}$ | C–C sigma in ethene |
-| sp–sp | C–C sigma in acetylene |
-
 ### Key Properties of Sigma Bonds
 
 1. **Every single bond is a sigma bond**
@@ -63,12 +52,12 @@ A **sigma bond** forms when two orbitals overlap **end-to-end** (head-on), with 
       title: 'Pi (π) Bonds',
       content: `## Pi Bonds — Lateral Overlap
 
-A **pi bond** forms when two **unhybridized p orbitals** overlap **side-by-side** (laterally), with electron density concentrated **above and below** (or in front and behind) the bond axis.
+A **pi bond** forms when orbitals overlap **side-by-side** (laterally), with electron density concentrated **above and below** (or in front and behind) the bond axis.
 
 ### Key Properties of Pi Bonds
 
-1. Pi bonds form from **unhybridized p orbitals** only
-2. Electron density is in two lobes — one above and one below the internuclear axis
+1. Pi bonds never occur alone: they are added on top of a sigma bond
+2. Electron density lies above and below the internuclear axis, not on it
 3. Pi bonds **prevent rotation** around the bond axis (rotating would break the side-by-side overlap)
 4. Pi bonds are **weaker** than sigma bonds (less overlap)
 5. Pi bonds are always the **second and third** bonds between two atoms

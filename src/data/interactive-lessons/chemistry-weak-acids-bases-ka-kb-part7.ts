@@ -38,7 +38,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 | Conjugate pair link | $K_a \\times K_b = K_w = 1.0 \\times 10^{-14}$ |
 | p-notation link | $pK_a + pK_b = 14$ |
 | Percent ionization | $\\% = ([H^+]/C) \\times 100$ |
-| 5% rule threshold | $C/K_a > 400$ |
+| 5% rule | Approximation valid if $x < 5\\%$ of $C$ |
 
 $$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \\qquad \\boxed{pK_a + pK_b = 14}$$
 
@@ -54,7 +54,7 @@ $$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \
 4. **Salt?** → Identify hydrolyzable ion, use $K_b = K_w/K_a$ or $K_a = K_w/K_b$
 5. **Always check** the 5% approximation!
 
-> ⚠️ **Warning:** Forgetting the 5% check is a common AP exam mistake. If $C/K_a < 400$, use the quadratic formula!
+> ⚠️ **Warning:** Forgetting the 5% check is a common AP exam mistake. If $x$ is more than 5% of $C$, use the quadratic formula!
       `
     },
     {
@@ -74,7 +74,7 @@ $$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \
               '$2.8 \\times 10^{-4}$ M'
             ],
             correctAnswer: 2,
-            explanation: '$[H^+] = \\sqrt{K_a \\cdot C} = \\sqrt{(1.4 \\times 10^{-3})(0.20)} = \\sqrt{2.8 \\times 10^{-4}} = 1.67 \\times 10^{-2} \\approx 1.7 \\times 10^{-2}$ M. Note: $C/K_a = 143 < 400$, so the quadratic would give a more exact answer.'
+            explanation: '$[H^+] = \\sqrt{K_a \\cdot C} = \\sqrt{(1.4 \\times 10^{-3})(0.20)} = \\sqrt{2.8 \\times 10^{-4}} = 1.67 \\times 10^{-2} \\approx 1.7 \\times 10^{-2}$ M. Note: $x/C = 0.0167/0.20 = 8.4\\%$, over 5%, so the quadratic gives a more exact answer ($1.6 \\times 10^{-2}$ M), which is still closest to this choice.'
           },
           {
             question: 'A 0.50 M $KCH_3COO$ solution has pH > 7 because:',
@@ -172,19 +172,19 @@ $$\\boxed{[H^+] = \\sqrt{K_a \\cdot C}} \\qquad \\boxed{K_a \\times K_b = K_w} \
             options: ['lower pH', 'higher pH', 'same pH', 'pH = 7']
           },
           {
-            label: 'The 5% approximation is invalid when $C/K_a$ is',
-            options: ['greater than 400', 'less than 400', 'less than 0.05', 'greater than 0.05']
+            label: 'The small-x approximation is invalid when $x$ is',
+            options: ['under 5% of $C$', 'over 5% of $C$', 'equal to $K_a$', 'equal to $\\sqrt{K_a}$']
           },
           {
             label: 'For $Na_2SO_4$ in water, the pH is approximately',
             options: ['acidic', 'basic', 'neutral', 'cannot determine']
           }
         ],
-        correctAnswers: ['temperature', 'higher pH', 'less than 400', 'neutral'],
+        correctAnswers: ['temperature', 'higher pH', 'over 5% of $C$', 'neutral'],
         hint1: '$K_a$ is an equilibrium constant — only temperature changes it.',
         hint2: 'Less dissociation = less $[H^+]$ = higher pH.',
-        hint3: 'Below 400, the approximation error exceeds 5%.',
-        explanation: '$K_a$ only changes with temperature. Weaker acid = higher pH. $C/K_a < 400$ means the approximation fails. $Na_2SO_4$ is the salt of strong acid ($H_2SO_4$) + strong base ($NaOH$) → neutral pH.'
+        hint3: 'Compare $x$ with the starting concentration $C$.',
+        explanation: '$K_a$ only changes with temperature. Weaker acid = higher pH. An $x$ above 5% of $C$ means the approximation fails. In $Na_2SO_4$, $Na^+$ does not react with water and $SO_4^{2-}$ is an extremely weak base ($K_b \\approx 8 \\times 10^{-13}$), so the pH is essentially neutral.'
       }
     },
     {

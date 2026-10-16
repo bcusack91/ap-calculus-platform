@@ -17,8 +17,8 @@ export const chemIntegratedRateLawsPart1Data = {
 | 📏 Derivation of the Zero-Order Integrated Rate Law |
 | This is the equation of a straight line! |
 | Plot: $[A]$ vs $t$ → straight line for zero-order |
-| 📌 Zero-Order Half-Life |
-| Successive Half-Lives |
+| ⏳ Zero-Order Reactions Run Out |
+| 🔧 How to Identify Zero-Order from Data |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -121,38 +121,31 @@ $$y = mx + b$$
       id: 'ir1-half-life',
       type: 'text' as const,
       content: `
-## 📌 Zero-Order Half-Life
+## ⏳ Zero-Order Reactions Run Out
 
-The **half-life** ($t_{1/2}$) is the time for the concentration to drop to half its initial value.
+Because the rate is constant, a zero-order reaction removes the **same amount** of reactant in every equal time interval. The line keeps its slope until $[A]$ reaches zero.
 
-Set $[A] = [A]_0/2$ in the integrated rate law:
+Set $[A] = 0$ in the integrated rate law:
 
-$$\\frac{[A]_0}{2} = -kt_{1/2} + [A]_0$$
-
-$$kt_{1/2} = [A]_0 - \\frac{[A]_0}{2} = \\frac{[A]_0}{2}$$
-
-$$\\boxed{t_{1/2} = \\frac{[A]_0}{2k}}$$
+$$0 = -kt + [A]_0 \\quad\\Rightarrow\\quad \\boxed{t_{\\text{complete}} = \\frac{[A]_0}{k}}$$
 
 
 ---
 
-> 🔑 **Key Concept:** The zero-order half-life **depends on** $[A]_0$:
-> - Higher initial concentration → longer half-life
-> - Each successive half-life is **shorter** than the previous one
-> - The reaction reaches [A] = 0 in a finite time: $t_{\\text{complete}} = [A]_0/k$
+### Example
+
+> **Problem:** A zero-order reaction has $k = 0.010$ M/s and $[A]_0 = 0.50$ M. How long until $[A] = 0.20$ M, and when is A used up?
+
+**Solution:**
+
+$$t = \\frac{[A]_0 - [A]}{k} = \\frac{0.50 - 0.20}{0.010} = 30 \\text{ s}$$
+
+$$t_{\\text{complete}} = \\frac{0.50}{0.010} = 50 \\text{ s}$$
 
 
 ---
 
-### Successive Half-Lives
-
-| Half-life | [A] at start | [A] at end | Duration |
-|-----------|-------------|-----------|----------|
-| 1st | $[A]_0$ | $[A]_0/2$ | $[A]_0/(2k)$ |
-| 2nd | $[A]_0/2$ | $[A]_0/4$ | $[A]_0/(4k)$ |
-| 3rd | $[A]_0/4$ | $[A]_0/8$ | $[A]_0/(8k)$ |
-
-Each successive half-life is exactly **half** the duration of the previous one.
+> 🔑 **Key Concept:** Zero order loses the same **amount** per second; first order (Part 2) loses the same **fraction** per unit time. Only first-order reactions have a constant half-life, and the AP exam uses half-life only for first-order reactions.
 
 > ⚠️ **Warning:** Zero-order is the only order where the reaction reaches $[A] = 0$ in finite time. Don't assume all reactions behave this way!
       `
@@ -161,32 +154,32 @@ Each successive half-life is exactly **half** the duration of the previous one.
       id: 'ir1-half-life-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Zero-Order Half-Life Concepts** 🔍
+**Zero-Order Concepts** 🔍
       `,
       exercise: {
         dropdowns: [
           {
             label: 'For a zero-order reaction, doubling the initial concentration',
-            options: ['doubles the half-life', 'halves the half-life', 'does not change the half-life', 'quadruples the half-life']
+            options: ['doubles the rate', 'halves the rate', 'does not change the rate', 'quadruples the rate']
           },
           {
-            label: 'Each successive half-life for a zero-order reaction is',
-            options: ['the same', 'longer', 'shorter', 'impossible to predict']
+            label: 'In each 10 s interval, a zero-order reaction uses up',
+            options: ['the same fraction of A', 'the same amount of A', 'more A than before', 'less A than before']
           },
           {
             label: 'A zero-order reaction with [A]$ {}_{0}$ = 1.0 M and k = 0.10 M/s reaches [A] = 0 at',
             options: ['t = 5 s', 't = 10 s', 't = 20 s', 'never']
           },
           {
-            label: 'Zero-order kinetics often arise when',
-            options: ['concentrations are very low', 'a catalyst surface is saturated', 'temperature is constant', 'the reaction is reversible']
+            label: 'The units of k for a zero-order reaction are',
+            options: ['M/s', '$s^{-1}$', '$M^{-1}s^{-1}$', 'unitless']
           }
         ],
-        correctAnswers: ['doubles the half-life', 'shorter', 't = 10 s', 'a catalyst surface is saturated'],
-        hint1: '$t_{1}/_{2}$ = [A]$ {}_{0}/(2k)$ — directly proportional to [A]$ {}_{0}$.',
-        hint2: 'Each successive half-life starts with half the concentration.',
+        correctAnswers: ['does not change the rate', 'the same amount of A', 't = 10 s', 'M/s'],
+        hint1: 'Rate = k, with no concentration term.',
+        hint2: 'The slope of [A] vs t is the same everywhere on the line.',
         hint3: 't = [A]$ {}_{0}/k$ = 1.0/0.10 = 10 s.',
-        explanation: 'Zero-order: $t_{1}/_{2}$ ∝ [A]$ {}_{0}$, so doubling [A]$ {}_{0}$ doubles $t_{1}/_{2}$. Each successive half-life is shorter. Complete consumption: t = [A]$ {}_{0}/k$ = 10 s. Zero-order occurs when enzyme/catalyst sites are saturated.'
+        explanation: 'Zero-order: rate = k, so changing [A] does not change the rate, and [A] falls by the same amount (k × 10 s) in every 10 s interval. Complete consumption: t = [A]$ {}_{0}/k$ = 10 s. Since rate = k, k has the units of a rate, M/s.'
       }
     },
     {
@@ -199,7 +192,7 @@ A zero-order reaction has $k = 5.0 \\times 10^{-3}$ M/s and $[A]_0 = 0.60$ M.
 
 **1)** What is [A] after 40 s? (in M, 3 significant figures)
 
-**2)** What is the half-life? (in seconds, whole number)
+**2)** How long until [A] falls to 0.30 M? (in seconds, whole number)
 
 **3)** How long until the reaction is complete ([A] = 0)? (in seconds, whole number)
       `,
@@ -207,9 +200,9 @@ A zero-order reaction has $k = 5.0 \\times 10^{-3}$ M/s and $[A]_0 = 0.60$ M.
         boxes: 3,
         correctAnswers: ['0.40', '60', '120'],
         hint1: '[A] = −kt + [A]$ {}_{0}$ = −(5.0e-3)(40) + 0.60 = −0.20 + 0.60 = 0.40.',
-        hint2: '$t_{1}/_{2}$ = [A]$ {}_{0}/(2k)$ = 0.60/(2 × 5.0e-3) = 0.60/0.010 = 60 s.',
+        hint2: 't = ([A]$ {}_{0}$ − [A])/k = (0.60 − 0.30)/5.0e-3 = 60 s.',
         hint3: 't = [A]$ {}_{0}/k$ = 0.60/5.0e-3 = 120 s.',
-        explanation: '1) [A] = −(0.005)(40) + 0.60 = 0.40 M. 2) $t_{1}/_{2}$ = 0.60/(2 × 0.005) = 60 s. 3) t = 0.60/0.005 = 120 s.'
+        explanation: '1) [A] = −(0.005)(40) + 0.60 = 0.40 M. 2) t = (0.60 − 0.30)/0.005 = 60 s. 3) t = 0.60/0.005 = 120 s.'
       }
     },
     {
@@ -275,7 +268,7 @@ $k = 0.050/10 = 0.005$ M/s
               'Rate increases as concentration decreases'
             ],
             correctAnswer: 2,
-            explanation: 'Zero-order: [A] decreases linearly until it hits zero at t = [A]$ {}_{0}/k$. This is unique — first and second-order reactions theoretically never reach [A] = 0. A zero-order half-life, [A]$ {}_{0}/2k$, depends on [A]$ {}_{0}$; ln[A] vs t is linear for first-order; and a zero-order rate stays constant as concentration falls.'
+            explanation: 'Zero-order: [A] decreases linearly until it hits zero at t = [A]$ {}_{0}/k$. This is unique — first and second-order reactions theoretically never reach [A] = 0. A half-life that does not depend on [A]$ {}_{0}$ is the mark of first order; ln[A] vs t is linear for first-order; and a zero-order rate stays constant as concentration falls.'
           }
         ]
       }

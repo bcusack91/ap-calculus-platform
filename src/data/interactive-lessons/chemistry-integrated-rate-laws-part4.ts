@@ -258,7 +258,7 @@ A student collects concentration-time data and plots all three standard graphs. 
               'Cannot determine'
             ],
             correctAnswer: 1,
-            explanation: 'Constant half-lives → first-order. Zero-order half-lives decrease; second-order half-lives increase.'
+            explanation: 'Constant half-lives → first-order. Zero- and second-order reactions do not have a constant half-life.'
           },
           {
             question: 'A plot of 1/[A] vs t is linear with y-intercept 4.0 $M^{-1}$. What is [A]$ {}_{0}$?',

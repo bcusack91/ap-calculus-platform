@@ -33,7 +33,7 @@ export const chemIceTablesCalculationsPart4Data = {
       content: `
 ## 📌 When Can You Use the Approximation?
 
-> 💡 **Tip — Rule of Thumb:** If $\\frac{[\\text{initial}]}{K} > 100$ (or equivalently, $K < 0.01 \\times [\\text{initial}]$), then $x$ is small enough to approximate:
+> 💡 **Tip:** When $K$ is very small compared with the initial concentration, assume $x$ is small enough to approximate:
 
 $$\\boxed{[\\text{initial}] - x \\approx [\\text{initial}]}$$
 
@@ -67,7 +67,7 @@ $$\\boxed{\\frac{x}{[\\text{initial}]} \\times 100\\% < 5\\%}$$
 
 > **Problem:** For $\\text{N}_2(g) + \\text{O}_2(g) \\rightleftharpoons 2\\,\\text{NO}(g)$ with $K_c = 4.0 \\times 10^{-4}$, find the equilibrium concentrations given $[\\text{N}_2] = 0.80$ M, $[\\text{O}_2] = 0.20$ M, $[\\text{NO}] = 0$.
 
-> **Solution:** **Check:** $0.20 / (4.0 \\times 10^{-4}) = 500 > 100$ ✓ → approximation valid
+> **Solution:** $K_c$ is far smaller than 0.20 M, so assume $x \\ll 0.20$ and confirm with the 5% check at the end.
 
 |  | $N_{2}$ | $O_{2}$ | NO |
 |--|-----|-----|-----|
@@ -211,18 +211,7 @@ $$1.0 \\times 10^{-6} = \\frac{x^2}{0.50}$$
       exercise: {
         questions: [
           {
-            question: 'For $\\text{HA}(aq) \\rightleftharpoons \\text{H}^+(aq) + \\text{A}^-(aq)$, $K_a = 1.8 \\times 10^{-5}$, $[\\text{HA}]_0 = 0.10$ M. Is the approximation likely valid?',
-            options: [
-              'Yes — $0.10 / (1.8 \\times 10^{-5}) = 5556 > 100$',
-              'No — $1.8 \\times 10^{-5} / 0.10 = 1.8 \\times 10^{-4} < 100$',
-              'No — 0.10 M is too dilute for x to be considered negligible',
-              'Cannot determine without first solving the quadratic'
-            ],
-            correctAnswer: 0,
-            explanation: '$[\\text{initial}]/K = 0.10/(1.8 \\times 10^{-5}) = 5556 \\gg 100$. The ratio is far greater than 100, so the approximation will be valid. Dividing K by the concentration (instead of the concentration by K) flips the ratio and the conclusion. No quadratic is needed to make this check — that is the point of it.'
-          },
-          {
-            question: 'Using the approximation for the problem above, $x \\approx$:',
+            question: 'For $\\text{HA}(aq) \\rightleftharpoons \\text{H}^+(aq) + \\text{A}^-(aq)$, $K_a = 1.8 \\times 10^{-5}$ and $[\\text{HA}]_0 = 0.10$ M. Using the small-x approximation, $x \\approx$:',
             options: [
               '$1.8 \\times 10^{-5}$',
               '$1.3 \\times 10^{-3}$',
@@ -230,7 +219,18 @@ $$1.0 \\times 10^{-6} = \\frac{x^2}{0.50}$$
               '$0.10$'
             ],
             correctAnswer: 1,
-            explanation: '$K_a = x^2/0.10 \\implies x^2 = (1.8 \\times 10^{-5})(0.10) = 1.8 \\times 10^{-6} \\implies x = \\sqrt{1.8 \\times 10^{-6}} = 1.34 \\times 10^{-3} \\approx 1.3 \\times 10^{-3}$.'
+            explanation: '$K_a = x^2/0.10 \\implies x^2 = (1.8 \\times 10^{-5})(0.10) = 1.8 \\times 10^{-6} \\implies x = \\sqrt{1.8 \\times 10^{-6}} = 1.34 \\times 10^{-3} \\approx 1.3 \\times 10^{-3}$. The value $1.8 \\times 10^{-5}$ is just $K_a$, $4.2 \\times 10^{-3}$ is $\\sqrt{K_a}$, and 0.10 is the starting concentration.'
+          },
+          {
+            question: 'For the problem above, the approximation gives $x = 1.3 \\times 10^{-3}$ M. Is the approximation valid?',
+            options: [
+              'Yes, because $x$ is 1.3% of 0.10 M, under 5%',
+              'No, because $x$ is 13% of 0.10 M, over 5%',
+              'No, because 0.10 M is too dilute for x to be negligible',
+              'Cannot tell without first solving the quadratic'
+            ],
+            correctAnswer: 0,
+            explanation: '$x/[\\text{HA}]_0 = (1.3 \\times 10^{-3}/0.10) \\times 100\\% = 1.3\\%$, under 5%, so the approximation is valid. The 13% figure comes from a misplaced decimal, 0.10 M is far from dilute next to such a small $K_a$, and the 5% check needs only the approximate x, not the quadratic.'
           }
         ]
       }

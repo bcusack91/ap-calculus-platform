@@ -35,9 +35,9 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 ---
 
-### Step 1: Check the approximation
+### Step 1: Assume the approximation works
 
-$C/K_a = 0.20/(6.3 \\times 10^{-5}) = 3175 > 400$ ✓
+$K_a$ is tiny compared with 0.20 M, so assume $x \\ll 0.20$. Step 4 checks it.
 
 
 ---

@@ -4,9 +4,9 @@ export const chemEntropySecondLawPart4Data = {
     {
       id: 'en4-intro',
       type: 'text' as const,
-      content: `# ❄️ The Third Law and Standard Molar Entropy
+      content: `# 🌡️ Standard Molar Entropy
 
-**Part 4 of 7 — S = 0 at Absolute Zero**
+**Part 4 of 7 — Absolute Entropies and How They Change**
 
 ---
 
@@ -14,11 +14,11 @@ export const chemEntropySecondLawPart4Data = {
 
 | Section |
 |---------|
-| 📏 The Third Law of Thermodynamics |
-| Why Zero? |
-| Consequences |
 | 🌡️ Standard Molar Entropy ($S°$) |
 | Key Values to Know |
+| Patterns in Standard Entropy |
+| 🔧 How Entropy Varies with Temperature |
+| 🧮 $\\Delta S°$ from Standard Entropies |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -30,42 +30,14 @@ export const chemEntropySecondLawPart4Data = {
 - Building toward AP exam readiness for this topic`
     },
     {
-      id: 'en4-third-law',
-      type: 'text' as const,
-      content: `
-## 📏 The Third Law of Thermodynamics
-
-**The entropy of a perfect crystal at absolute zero (0 K) is exactly zero.**
-
-$$\\boxed{S = 0 \\quad \\text{at } T = 0 \\text{ K (perfect crystal)}}$$
-
-
----
-
-### Why Zero?
-
-At absolute zero:
-- Molecular motion is at its minimum
-- Every particle in a perfect crystal is locked in a fixed, identical position
-- There is no dispersal of matter or energy left to remove, so the entropy is zero
-
-
----
-
-### Consequences
-
-1. **Absolute entropy values** can be determined (unlike enthalpy)
-2. All substances at $T > 0$ K have $S > 0$
-3. Absolute zero can never actually be reached (it would require an infinite number of cooling steps)
-      `
-    },
-    {
       id: 'en4-standard-molar',
       type: 'text' as const,
       content: `
 ## 🌡️ Standard Molar Entropy ($S°$)
 
 The entropy of **one mole** of a substance at **standard conditions** (1 atm, usually 25°C).
+
+Unlike enthalpy, entropy has **absolute** values: a table lists $S°$ itself, not a change from some reference (CED 9.2).
 
 
 ---
@@ -127,31 +99,37 @@ As temperature increases from 0 K, entropy increases through several stages:
 
 ---
 
-### Phase Transition Entropy
+### 🧮 $\\Delta S°$ from Standard Entropies
 
-$$\\boxed{\\Delta S_{\\text{transition}} = \\frac{\\Delta H_{\\text{transition}}}{T_{\\text{transition}}}}$$
+Any entropy change is products minus reactants (CED 9.2):
 
-This formula applies at the **equilibrium** transition temperature, where the process is reversible.
+$$\\boxed{\\Delta S° = \\sum S°_{\\text{products}} - \\sum S°_{\\text{reactants}}}$$
+
+> **Example:** Vaporizing water, $\\text{H}_2\\text{O}(l) \\rightarrow \\text{H}_2\\text{O}(g)$:
+>
+> $\\Delta S° = 188.8 - 69.9 = +118.9$ J/(mol·K)
+
+The large positive value is the "big jump at the boiling point" from the list above, in numbers.
       `
     },
     {
       id: 'en4-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Third Law Concept Quiz** 🎯
+**Standard Entropy Check** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'According to the Third Law, S = 0 when:',
+            question: 'Using the table, what is ΔS° for C(s, graphite) + $O_{2}(g)$ → $CO_{2}(g)$?',
             options: [
-              'The substance is a pure crystalline solid at 0°C',
-              'The substance is a perfect crystal at 0 K',
-              'The substance is in its standard state at 298 K',
-              'The substance is an element, as with ΔH°f = 0'
+              '+2.9 J/K',
+              '−2.9 J/K',
+              '+424.5 J/K',
+              '+208.0 J/K'
             ],
-            correctAnswer: 1,
-            explanation: 'The Third Law states that the entropy of a perfect crystal at absolute zero (0 K = −273.15°C) is zero. At that point the particles are fixed in a perfectly ordered lattice with no dispersal of matter or energy.'
+            correctAnswer: 0,
+            explanation: 'ΔS° = 213.7 − (5.7 + 205.1) = 213.7 − 210.8 = +2.9 J/K. The value is small because one mole of gas becomes one mole of gas. Subtracting the other way gives −2.9, adding all three values gives 424.5, and leaving out $O_{2}$ gives 208.0.'
           },
           {
             question: 'Which has a higher standard molar entropy: $H_{2}O(l)$ or $H_{2}O(g)$?',
@@ -173,7 +151,7 @@ This formula applies at the **equilibrium** transition temperature, where the pr
               'Sometimes zero, sometimes positive'
             ],
             correctAnswer: 2,
-            explanation: '$\\Delta H°_f = 0$ for elements in their standard states (by convention), but $S°$ is an absolute value measured up from 0 K, and every substance has $S° > 0$ at temperatures above 0 K (Third Law). The "zero for elements in their most stable form" convention applies to $\\Delta H°_f$, never to $S°$. These are different concepts!'
+            explanation: '$\\Delta H°_f = 0$ for elements in their standard states (by convention), but $S°$ is an absolute value measured up from 0 K, and every substance has $S° > 0$ at temperatures above 0 K. The "zero for elements in their most stable form" convention applies to $\\Delta H°_f$, never to $S°$. These are different concepts!'
           }
         ]
       }
@@ -204,13 +182,13 @@ Which substance has the HIGHER standard molar entropy? Type the chemical formula
       id: 'en4-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
-**Third Law and Standard Entropy** 🔽
+**Standard Entropy Patterns** 🔽
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'At absolute zero, a perfect crystal has exactly',
-            options: ['zero entropy', 'maximum entropy', 'infinite entropy', 'undefined entropy']
+            label: 'Expanding a gas into a larger volume at constant temperature makes its entropy',
+            options: ['increase', 'decrease', 'stay the same', 'drop to zero']
           },
           {
             label: 'The largest entropy jump when heating a substance from 0 K occurs at the',
@@ -225,31 +203,31 @@ Which substance has the HIGHER standard molar entropy? Type the chemical formula
             options: ['lower S° than a simpler one', 'the same S° as a simpler one', 'higher S° than a simpler one', 'zero S°']
           }
         ],
-        correctAnswers: ['zero entropy', 'boiling point', 'J/(mol·K)', 'higher S° than a simpler one'],
-        hint1: 'In a perfect crystal at 0 K every particle is fixed in place, with no dispersal left.',
+        correctAnswers: ['increase', 'boiling point', 'J/(mol·K)', 'higher S° than a simpler one'],
+        hint1: 'In a larger volume the gas particles are more dispersed.',
         hint2: 'Liquid → gas involves a much greater increase in freedom than solid → liquid.',
         hint3: 'Entropy uses joules (not kilojoules) and includes temperature.',
-        explanation: 'Third Law: S = 0 at 0 K (perfect crystal). The vaporization entropy jump is larger than fusion. S° is in J/(mol·K). Complex molecules have more vibrational modes → higher entropy.'
+        explanation: 'A larger volume disperses the gas, so S increases. The vaporization entropy jump is larger than fusion. S° is in J/(mol·K). Complex molecules have more vibrational modes → higher entropy.'
       }
     },
     {
       id: 'en4-exit-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Exit Quiz — Third Law & Standard Entropy** ✅
+**Exit Quiz — Standard Molar Entropy** ✅
       `,
       exercise: {
         questions: [
           {
-            question: 'At the boiling point, the entropy change for vaporization can be calculated as:',
+            question: 'Using S° = 69.9 J/(mol·K) for $H_{2}O(l)$ and 188.8 J/(mol·K) for $H_{2}O(g)$, what is ΔS° when 1 mol of water vapor condenses?',
             options: [
-              'ΔS = ΔH_vap × T',
-              'ΔS = ΔH_vap / T',
-              'ΔS = T / ΔH_vap',
-              'ΔS = ΔH_vap / $T^{2}$'
+              '−118.9 J/K',
+              '+118.9 J/K',
+              '+258.7 J/K',
+              '−258.7 J/K'
             ],
-            correctAnswer: 1,
-            explanation: 'At the equilibrium phase transition temperature: $\\Delta S = \\Delta H / T$. This applies because the transition is reversible at the boiling point.'
+            correctAnswer: 0,
+            explanation: 'Condensation is $H_{2}O(g)$ → $H_{2}O(l)$, so ΔS° = 69.9 − 188.8 = −118.9 J/K: negative, because the gas becomes a far less dispersed liquid. +118.9 is the value for vaporization, and ±258.7 comes from adding the two entropies instead of subtracting.'
           },
           {
             question: 'Rank in order of increasing S°: Ne(g), $N_{2}(g)$, $CO_{2}(g)$',

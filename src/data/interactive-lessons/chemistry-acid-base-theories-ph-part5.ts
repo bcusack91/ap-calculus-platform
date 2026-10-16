@@ -15,7 +15,7 @@ export const chemAcidBaseTheoriesPhPart5Data = {
 | Type | Example | Key Calculation |
 |------|---------|-----------------|
 | Strong monoprotic acid | 0.025 M HCl | $[H^+] = 0.025$ M, pH = 1.60 |
-| Strong diprotic acid | 0.010 M $H_2SO_4$ | $[H^+] \\approx 0.020$ M |
+| Sulfuric acid | 0.010 M $H_2SO_4$ | First $H^+$ complete: $[H^+]$ is between 0.010 and 0.020 M |
 | Strong base (Group 1) | 0.010 M NaOH | $[OH^-] = 0.010$ M, pOH = 2.00 |
 | Strong base (Group 2) | 0.005 M $Ba(OH)_2$ | $[OH^-] = 0.010$ M |
 
@@ -24,7 +24,7 @@ export const chemAcidBaseTheoriesPhPart5Data = {
 ---
 
 ### What You'll Master in Part 5
-- Calculating pH of strong monoprotic and diprotic acids
+- Calculating pH of strong monoprotic acids, and why $H_2SO_4$ is not simply "2C"
 - Calculating pOH and pH of strong bases (Group 1 and Group 2)
 - Handling dilution before calculating pH`
     },
@@ -71,13 +71,17 @@ $$pH = -\\log(0.0040) = 2.40$$
 
 ### Diprotic Strong Acid ($H_2SO_4$)
 
-For the first dissociation (strong): $H_2SO_4 \\rightarrow H^+ + HSO_4^-$
+Only the **first** ionization is complete:
 
-For dilute solutions, each mole of $H_2SO_4$ produces approximately **2 moles** of $H^+$:
+$$H_2SO_4 \\rightarrow H^+ + HSO_4^- \\quad \\text{(100\\%)}$$
 
-$$[H^+] \\approx 2C \\text{ (for dilute solutions)}$$
+The second ionization is a **weak-acid equilibrium**:
 
-> ⚠️ The second dissociation of $H_2SO_4$ ($HSO_4^-$) is weak ($K_a = 0.012$), so at higher concentrations the approximation $[H^+] = 2C$ may not hold exactly.
+$$HSO_4^- \\rightleftharpoons H^+ + SO_4^{2-} \\quad (K_a = 0.012)$$
+
+So a solution of $H_2SO_4$ at concentration $C$ has $[H^+]$ **at least** $C$ (from the first step) but **less than** $2C$, because only part of the $HSO_4^-$ ionizes. For 0.010 M $H_2SO_4$, $[H^+]$ is about 0.015 M, not 0.020 M.
+
+> ⚠️ Do not write $[H^+] = 2C$ for sulfuric acid. In a **neutralization**, though, both protons do react with a strong base, so 1 mol $H_2SO_4$ needs 2 mol $NaOH$.
       `
     },
     {

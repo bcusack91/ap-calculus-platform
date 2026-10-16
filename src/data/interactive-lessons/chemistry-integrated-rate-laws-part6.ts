@@ -36,7 +36,7 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 | Method | How It Works | Result |
 |--------|-------------|--------|
 | **Graphical** | Plot [A], ln[A], and 1/[A] vs. $t$ | The **linear** plot reveals the order |
-| **Successive half-lives** | Compare $t_{1/2}$ values | Equal = 1st; Decreasing = 0th; Doubling = 2nd |
+| **Successive half-lives** | Compare $t_{1/2}$ values | Equal = 1st order; unequal = not 1st order |
 | **Initial rates** | Compare experiments (covered earlier) | Change [A], observe rate change |
 
 ---
@@ -180,19 +180,19 @@ A first-order reaction has a half-life of 25.0 minutes. The initial concentratio
             options: ['zero-order', 'first-order', 'second-order', 'all orders']
           },
           {
-            label: 'A catalyst-saturated enzyme reaction shows',
+            label: 'A straight-line plot of 1/[A] vs t shows',
             options: ['zero-order kinetics', 'first-order kinetics', 'second-order kinetics', 'no kinetics']
           },
           {
-            label: 'If $t_{1}/_{2}$ = 50 s, then 2nd $t_{1}/_{2}$ = 100 s. The order is',
+            label: 'Successive half-lives of 50 s, 50 s and 50 s mean the order is',
             options: ['zero', 'first', 'second', 'third']
           }
         ],
-        correctAnswers: ['zero-order in A', 'first-order', 'zero-order kinetics', 'second'],
+        correctAnswers: ['zero-order in A', 'first-order', 'second-order kinetics', 'first'],
         hint1: 'Rate = k[A]$ {}^{0}$ = k, independent of [A].',
         hint2: 'Exponential decay: [A] = [A]$ {}_{0}e^{-kt}$ → first-order.',
-        hint3: 'Saturated enzyme → rate doesn\'t change with substrate concentration.',
-        explanation: 'Zero-order in A: rate independent of [A]. First-order: exponential decay. Saturated enzymes: zero-order. Doubling successive half-lives → second-order.'
+        hint3: 'Only one order has a constant half-life.',
+        explanation: 'Zero-order in A: rate independent of [A]. First-order: exponential decay. Linear 1/[A] vs t: second-order. Constant half-lives → first-order.'
       }
     },
     {

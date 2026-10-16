@@ -7,7 +7,7 @@ export const chemLewisStructuresFormalChargePart5Data = {
       title: '💡 What Are Resonance Structures?',
       content: `Sometimes, a single Lewis structure is **not sufficient** to describe the actual electron distribution in a molecule. When electrons can be delocalized (spread out) across multiple positions, we draw **resonance structures**.\n\n**Resonance structures** are two or more valid Lewis structures for the same molecule that differ only in the **placement of electrons** (not atoms).\n\n**Key points:**\n- The atoms stay in the same positions\n- Only electrons (bonds and lone pairs) move\n- We connect resonance structures with a double-headed arrow (↔)\n- The actual molecule is a **resonance hybrid** — an average of all resonance structures\n- No single resonance structure is "correct" on its own\n\n> 💡 **Tip:** Resonance structures differ only in electron placement — the atoms never move. The real molecule is a blend (hybrid) of all structures.\n\n**The resonance hybrid** has characteristics intermediate between all contributing structures. For example, bonds that are single in one structure and double in another are actually intermediate (bond order between 1 and 2).
 
-**Part 5 of 7 — Expanded & Incomplete Octets**
+**Part 5 of 7 — Resonance Structures**
 
 ---
 

@@ -48,7 +48,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 
 **Cathode:** Metal deposits if $E°_{\\text{metal}} > -0.83$ V; otherwise $H_{2}$
 
-**Anode:** $Br^{-}$ or $I^{-}$ → halogen (couples below +1.23 V); oxyanions ($SO_{4}^{2-}$, $NO_{3}^{-}$) → $O_{2}$
+**Anode:** $Br^{-}$ or $I^{-}$ → halogen (couples below +1.23 V); oxyanions ($SO_{4}^{2-}$, $NO_{3}^{-}$) → $O_{2}$; aqueous $Cl^{-}$ → the question tells you the product
 
 > 🔑 **AP Quick Check:** Ions of very reactive metals such as $Na^{+}$, $K^{+}$ and $Al^{3+}$ have reduction potentials far below −0.83 V, so $H_{2}$ forms at the cathode instead of the metal.
 
@@ -81,15 +81,15 @@ $$q = It \\quad \\text{mol } e^- = \\frac{q}{F} \\quad \\text{mol substance} = \
       exercise: {
         questions: [
           {
-            question: 'A student electrolyzes aqueous $CuCl_{2}$. At which electrode does each product form?',
+            question: 'A student electrolyzes aqueous $CuBr_{2}$. At which electrode does each product form?',
             options: [
               'Cathode: $H_{2}$, Anode: $O_{2}$',
-              'Cathode: Cu, Anode: $Cl_{2}$',
+              'Cathode: Cu, Anode: $Br_{2}$',
               'Cathode: Cu, Anode: $O_{2}$',
-              'Cathode: $H_{2}$, Anode: $Cl_{2}$'
+              'Cathode: $H_{2}$, Anode: $Br_{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$Cu^{2+}$ has $E° = +0.34$ V (more positive than water), so Cu deposits at the cathode. $Cl^{-}$ is a simple halide, so $Cl_{2}$ forms at the anode.'
+            explanation: '$Cu^{2+}$ has $E° = +0.34$ V (more positive than water), so Cu deposits at the cathode. The $Br_{2}/Br^{-}$ couple (+1.07 V) is below water\'s +1.23 V, so $Br^{-}$ is oxidized and $Br_{2}$ forms at the anode.'
           },
           {
             question: 'In ALL electrochemical cells, reduction occurs at the:',

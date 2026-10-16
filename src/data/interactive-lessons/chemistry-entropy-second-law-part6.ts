@@ -84,15 +84,15 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             explanation: 'At the switchover: $\\Delta G = 0$, so $\\Delta H = T\\Delta S$. $T = \\Delta H/\\Delta S = -80{,}000/-200 = 400$ K. Below 400 K: spontaneous. Above 400 K: nonspontaneous. Leaving ΔH in kJ gives 0.4 K, dividing ΔS by ΔH gives 2.5 K, and multiplying (80 × 200) instead of dividing gives 16,000 K.'
           },
           {
-            question: 'The vaporization of water at 100°C and 1 atm has ΔH_vap = 40.7 kJ/mol. What is ΔS_vap?',
+            question: 'For $2H_{2}(g) + O_{2}(g) \\rightarrow 2H_{2}O(l)$, use S°: $H_{2}$ = 130.7, $O_{2}$ = 205.1, $H_{2}O(l)$ = 69.9 J/(mol·K). What is ΔS°?',
             options: [
-              '407 J/(mol·K)',
-              '109 J/(mol·K)',
-              '0.109 J/(mol·K)',
-              '−109 J/(mol·K)'
+              '−265.9 J/K',
+              '−326.7 J/K',
+              '+326.7 J/K',
+              '−396.6 J/K'
             ],
             correctAnswer: 1,
-            explanation: '$\\Delta S = \\Delta H/T = 40{,}700/(373) = 109$ J/(mol·K). At the boiling point, the process is reversible so this formula applies directly. Using 100 (°C) instead of 373 K gives 407, leaving ΔH in kJ gives 0.109, and vaporization absorbs heat, so ΔS is positive, not −109.'
+            explanation: 'ΔS° = 2(69.9) − [2(130.7) + 205.1] = 139.8 − 466.5 = −326.7 J/K, negative because three moles of gas become a liquid. Ignoring all the coefficients gives −265.9, leaving the 2 off water only gives −396.6, and +326.7 subtracts in the wrong order.'
           }
         ]
       }
@@ -105,17 +105,17 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 **1)** For $\\text{N}_2(g) + 3\\text{H}_2(g) \\rightarrow 2\\text{NH}_3(g)$, use $S°$: $\\text{N}_2$ = 191.6, $\\text{H}_2$ = 130.7, $\\text{NH}_3$ = 192.5 J/(mol·K) to find $\\Delta S°$. (in J/K, to 4 significant figures)
 
-**2)** The melting of ice at 0°C (273 K) has $\\Delta H_{\\text{fus}} = 6.01$ kJ/mol. What is $\\Delta S_{\\text{fus}}$? (in J/(mol·K), to 3 significant figures)
+**2)** For $2\\text{SO}_2(g) + \\text{O}_2(g) \\rightarrow 2\\text{SO}_3(g)$, use $S°$: $\\text{SO}_2$ = 248.2, $\\text{O}_2$ = 205.1, $\\text{SO}_3$ = 256.8 J/(mol·K) to find $\\Delta S°$. (in J/K, to 4 significant figures)
 
 **3)** A reaction has $\\Delta H° = -92$ kJ and $\\Delta S° = -199$ J/K. Below what temperature is it thermodynamically favored? (in K, to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-198.7', '22.0', '462'],
+        correctAnswers: ['-198.7', '-187.9', '462'],
         hint1: '$\\Delta S° = 2(192.5) - [191.6 + 3(130.7)]$',
-        hint2: '$\\Delta S = \\Delta H/T = 6010/273$',
+        hint2: '$\\Delta S° = 2(256.8) - [2(248.2) + 205.1]$',
         hint3: 'Set $\\Delta G = 0$: $T = \\Delta H/\\Delta S = -92{,}000/-199$.',
-        explanation: '1) $\\Delta S° = 385.0 - (191.6 + 392.1) = 385.0 - 583.7 = -198.7$ J/K (fewer moles of gas, so negative). 2) At the melting point ΔG = 0, so $\\Delta S_{\\text{fus}} = \\Delta H/T = 6010/273 = 22.0$ J/(mol·K). 3) $T = -92{,}000/-199 = 462$ K; below this temperature the favorable ΔH outweighs the unfavorable $-T\\Delta S$ term.'
+        explanation: '1) $\\Delta S° = 385.0 - (191.6 + 392.1) = 385.0 - 583.7 = -198.7$ J/K (fewer moles of gas, so negative). 2) $\\Delta S° = 513.6 - (496.4 + 205.1) = 513.6 - 701.5 = -187.9$ J/K (three moles of gas become two). 3) $T = -92{,}000/-199 = 462$ K; below this temperature the favorable ΔH outweighs the unfavorable $-T\\Delta S$ term.'
       }
     },
     {
@@ -127,8 +127,8 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
       exercise: {
         dropdowns: [
           {
-            label: 'The formula ΔS = ΔH/T applies specifically at',
-            options: ['any temperature, for any process', 'the phase-transition temperature', 'absolute zero, where S = 0', '298 K, the standard temperature']
+            label: 'At the crossover temperature T = ΔH/ΔS, the value of ΔG is',
+            options: ['zero', 'equal to ΔH', 'equal to −TΔS', 'equal to ΔS']
           },
           {
             label: 'For ΔG = ΔH − TΔS, if ΔH < 0 and ΔS > 0, the reaction is',
@@ -143,11 +143,11 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
             options: ['low temperatures', 'high temperatures', 'all temperatures', 'no temperature']
           }
         ],
-        correctAnswers: ['the phase-transition temperature', 'always spontaneous', 'convert ΔS to kJ/K by dividing by 1000', 'high temperatures'],
-        hint1: 'At the phase transition, the process is reversible and ΔG = 0.',
+        correctAnswers: ['zero', 'always spontaneous', 'convert ΔS to kJ/K by dividing by 1000', 'high temperatures'],
+        hint1: 'The crossover temperature comes from setting ΔH − TΔS equal to zero.',
         hint2: 'Both terms in ΔG = ΔH − TΔS favor spontaneity.',
         hint3: 'Units must match before you can subtract.',
-        explanation: 'ΔS = ΔH/T works at reversible phase transitions. ΔH < 0 and ΔS > 0 make ΔG negative at ALL temperatures. Convert units before combining. ΔH > 0, ΔS > 0: the TΔS term wins at high T, making ΔG < 0.'
+        explanation: 'T = ΔH/ΔS is found by setting ΔG = 0, so ΔG is zero there. ΔH < 0 and ΔS > 0 make ΔG negative at ALL temperatures. Convert units before combining. ΔH > 0, ΔS > 0: the TΔS term wins at high T, making ΔG < 0.'
       }
     },
     {

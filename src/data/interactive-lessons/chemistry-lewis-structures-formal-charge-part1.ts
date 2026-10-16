@@ -7,7 +7,7 @@ export const chemLewisStructuresFormalChargePart1Data = {
       title: '⚛️ What Are Valence Electrons?',
       content: `Valence electrons are the electrons in the outermost energy level (shell) of an atom. These are the electrons that participate in chemical bonding and determine an element\'s chemical properties.\n\nFor **main group elements** (Groups 1, 2, and 13–18), the number of valence electrons equals the group number:\n\n| Group | Valence $e^{-}$ | Examples |\n|-------|-----------|----------|\n| 1 | 1 | H, Li, Na |\n| 2 | 2 | Be, Mg, Ca |\n| 13 | 3 | B, Al |\n| 14 | 4 | C, Si |\n| 15 | 5 | N, P |\n| 16 | 6 | O, S |\n| 17 | 7 | F, Cl, Br |\n| 18 | 8 | Ne, Ar (except He = 2) |\n\nKnowing the number of valence electrons is the **first step** in drawing any Lewis structure.
 
-**Part 1 of 7 — Drawing Lewis Structures**
+**Part 1 of 7 — Valence Electrons & the Octet Rule**
 
 ---
 

@@ -18,7 +18,7 @@ export const chemReactionRatesAndRateLawsPart5Data = {
 | Summary Table |
 | The Pattern |
 | ⚗️ Zero-Order Reactions |
-| When Do Zero-Order Reactions Occur? |
+| Recognizing Zero Order in Data |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -125,24 +125,24 @@ $$\\boxed{\\text{Rate} = k}$$
 
 - Rate is **constant** — independent of concentration
 - Units of $k$: **M/s**
-- Half-life: $t_{1/2} = \\frac{[A]_0}{2k}$ (depends on initial concentration)
 
 
 ---
 
-### When Do Zero-Order Reactions Occur?
+### Recognizing Zero Order in Data
 
-Zero-order kinetics often occur when:
-- A **catalyst or enzyme is saturated** — every active site is occupied
-- A reaction occurs on a **surface** that is fully covered
-- **Photochemical** reactions where rate depends on light intensity, not concentration
+| Kind of data | Zero-order signature |
+|--------------|----------------------|
+| Initial rates | Changing $[A]$ leaves the rate **unchanged** |
+| Concentration vs. time | $[A]$ vs $t$ is a **straight line** with slope $-k$ |
+| Units | $k$ has the same units as rate, **M/s** |
 
 
 ---
 
 ### Example
 
-Decomposition of $NH_{3}$ on a hot tungsten surface: Rate = k. The tungsten surface is saturated with $NH_{3}$, so adding more does not increase the rate.
+> In two experiments, $[A]$ is 0.10 M and 0.20 M with everything else the same, and both initial rates are $3.0 \\times 10^{-4}$ M/s. Doubling $[A]$ changed nothing, so the reaction is zero order in A and $k = 3.0 \\times 10^{-4}$ M/s.
       `
     },
     {
@@ -169,19 +169,14 @@ $$\\boxed{\\text{Rate} = k[A]}$$
 $$\\boxed{\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]}$$
 
 - Units of $k$: **$M^{-1}s^{-1}$** (for both cases)
-- Half-life: $t_{1/2} = \\frac{1}{k[A]_0}$ (depends on concentration)
 - Example: $2\\text{NO}_2 \\rightarrow 2\\text{NO} + \\text{O}_2$
 
 
 ---
 
-### Comparing Half-Lives
+### Half-Life
 
-| Order | $t_{1/2}$ | Dependence on $[A]_0$ |
-|-------|----------|---------------------|
-| 0 | $[A]_0/(2k)$ | Proportional to $[A]_0$ |
-| 1 | $0.693/k$ | **Independent** of $[A]_0$ |
-| 2 | $1/(k[A]_0)$ | Inversely proportional to $[A]_0$ |
+> 🔑 **Key Concept:** Only a **first-order** reaction has a constant half-life, $t_{1/2} = 0.693/k$. The AP exam uses half-life only for first-order reactions.
       `
     },
     {
@@ -194,7 +189,7 @@ $$\\boxed{\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]}
         dropdowns: [
           {
             label: 'For a first-order reaction, the half-life',
-            options: ['depends on [A]$ {}_{0}$', 'is independent of [A]$ {}_{0}$', 'increases with [A]$ {}_{0}$', 'equals [A]$ {}_{0}/2k$']
+            options: ['depends on [A]$ {}_{0}$', 'is independent of [A]$ {}_{0}$', 'increases with [A]$ {}_{0}$', 'halves as [A]$ {}_{0}$ doubles']
           },
           {
             label: 'The units $M^{-1}s^{-1}$ correspond to overall order',
@@ -226,15 +221,15 @@ $$\\boxed{\\text{Rate} = k[A]^2 \\quad \\text{or} \\quad \\text{Rate} = k[A][B]}
 
 **2)** A first-order reaction has k = 0.0250 $s^{-1}$. What is the half-life in seconds? (3 significant figures)
 
-**3)** A zero-order reaction has k = 0.0040 M/s and [A]$ {}_{0}$ = 0.80 M. What is the half-life in seconds? (whole number)
+**3)** A zero-order reaction has k = 0.0040 M/s and [A]$ {}_{0}$ = 0.80 M. How many seconds until A is used up? (whole number)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-2', '27.7', '100'],
+        correctAnswers: ['-2', '27.7', '200'],
         hint1: 'Units of k = $M^{1-n}s^{-1}$. For n = 3: 1 − 3 = −2.',
         hint2: '$t_{1}/_{2}$ = 0.693/k = 0.693/0.0250.',
-        hint3: '$t_{1}/_{2}$ = [A]$ {}_{0}/(2k)$ = 0.80/(2 × 0.0040).',
-        explanation: '1) $M^{1-3}$ = $M^{-2}$, power is −2. 2) $t_{1}/_{2}$ = 0.693/0.0250 = 27.72 ≈ 27.7 s. 3) $t_{1}/_{2}$ = 0.80/(2 × 0.0040) = 0.80/0.008 = 100 s.'
+        hint3: '[A] = −kt + [A]$ {}_{0}$; set [A] = 0, so t = [A]$ {}_{0}/k$.',
+        explanation: '1) $M^{1-3}$ = $M^{-2}$, power is −2. 2) $t_{1}/_{2}$ = 0.693/0.0250 = 27.72 ≈ 27.7 s. 3) t = [A]$ {}_{0}/k$ = 0.80/0.0040 = 200 s.'
       }
     },
     {

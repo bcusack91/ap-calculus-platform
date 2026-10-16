@@ -37,9 +37,8 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 | **Integrated** | $[A] = -kt + [A]_0$ | $\\ln[A] = -kt + \\ln[A]_0$ | $\\frac{1}{[A]} = kt + \\frac{1}{[A]_0}$ |
 | **Linear plot** | $[A]$ vs $t$ | $\\ln[A]$ vs $t$ | $\\frac{1}{[A]}$ vs $t$ |
 | **Slope** | $-k$ | $-k$ | $+k$ |
-| **$t_{1/2}$** | $\\frac{[A]_0}{2k}$ | $\\frac{0.693}{k}$ | $\\frac{1}{k[A]_0}$ |
+| **Half-life** | Not constant | Constant: $\\frac{0.693}{k}$ | Not constant |
 | **Units of $k$** | M/s | $s^{-1}$ | $M^{-1}s^{-1}$ |
-| **Successive $t_{1/2}$** | Decrease (halve) | Constant | Increase (double) |
 
 > ⚠️ **Warning:** On the AP exam, always write the correct units of $k$ with your answer. M/s (zero), $s^{-1}$ (first), $M^{-1}s^{-1}$ (second) — getting units wrong can cost points!
       `
@@ -174,7 +173,7 @@ A wooden artifact is found to have 12.5% of the $^{14}$C content of living wood.
             options: ['zero-order', 'first-order', 'second-order', 'non-standard']
           },
           {
-            label: 'An enzyme is fully saturated with substrate. The kinetics appear',
+            label: 'A plot of [A] vs t is a straight line. The reaction is',
             options: ['zero-order', 'first-order', 'second-order', 'third-order']
           },
           {
@@ -188,9 +187,9 @@ A wooden artifact is found to have 12.5% of the $^{14}$C content of living wood.
         ],
         correctAnswers: ['first-order', 'zero-order', 'second-order', 'first-order'],
         hint1: 'Exponential decay is the hallmark of first-order.',
-        hint2: 'When enzyme is saturated, rate is independent of [substrate].',
+        hint2: 'Which integrated rate law is linear in [A] itself?',
         hint3: 'Best linear fit in 1/[A] vs t → second-order.',
-        explanation: 'Exponential decay → first-order. Saturated enzyme → zero-order. Linear 1/[A] vs t → second-order. All radioactive decay → first-order.'
+        explanation: 'Exponential decay → first-order. Linear [A] vs t → zero-order. Linear 1/[A] vs t → second-order. All radioactive decay → first-order.'
       }
     },
     {
@@ -236,15 +235,15 @@ A first-order reaction has $k = 3.46 \\times 10^{-2}$ $s^{-1}$.
             explanation: 'Linear ln[A] vs t → first-order. k = 0.020 $s^{-1}$. $t_{1}/_{2}$ = 0.693/0.020 = 34.65 ≈ 34.7 s.'
           },
           {
-            question: 'Which quantity is unique to each reaction order?',
+            question: 'Which observation about concentration–time data shows that a reaction is first order?',
             options: [
-              'The numerical value of the rate constant',
-              'The initial concentration of the reactant',
-              'The pattern of successive half-lives',
-              'The size of the activation energy barrier'
+              'A rate constant with units of M/s',
+              'A straight line for [A] versus t',
+              'A half-life that stays the same throughout',
+              'A positive slope in its linear plot'
             ],
             correctAnswer: 2,
-            explanation: 'Each order has a distinctive half-life pattern: zero (decreasing), first (constant), second (increasing). This is one of the best ways to identify order from experimental data. The value of k, the starting concentration and the activation energy vary from reaction to reaction regardless of order.'
+            explanation: 'Only a first-order reaction has a constant half-life ($t_{1/2}$ = 0.693/k), so equal half-lives identify first order. Units of M/s and a linear [A] vs t plot point to zero order, and a positive slope (in 1/[A] vs t) points to second order.'
           }
         ]
       }

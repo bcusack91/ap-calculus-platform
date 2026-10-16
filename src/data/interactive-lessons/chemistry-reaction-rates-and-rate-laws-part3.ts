@@ -57,7 +57,7 @@ $$\\boxed{\\text{Rate} = k[A]^m[B]^n}$$
 
 > ⚠️ **Warning:** You **cannot** read rate law exponents off the balanced equation! Orders must be determined from experimental data. They only equal coefficients for elementary (single-step) reactions.
 
-- Orders can be 0, 1, 2, or even fractional
+- Each order is a whole number, usually 0, 1 or 2
 - The rate constant $k$ depends on **temperature** but NOT on concentration
 
 

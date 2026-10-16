@@ -17,7 +17,7 @@ export const chemReactionRatesAndRateLawsPart4Data = {
 | 📋 Step-by-Step Method |
 | Given Data Table Format |
 | The Algorithm |
-| Using Logarithms for Non-Integer Orders |
+| Reading the Rate Ratio |
 | 🧪 Worked Example 1 |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
@@ -55,8 +55,7 @@ export const chemReactionRatesAndRateLawsPart4Data = {
 **Step 3:** Take the ratio:
 $$\\frac{\\text{Rate}_2}{\\text{Rate}_1} = \\left(\\frac{[A]_2}{[A]_1}\\right)^m$$
 
-**Step 4:** Solve for $m$ using logarithms if needed:
-$$\\boxed{m = \\frac{\\ln(\\text{Rate}_2/\\text{Rate}_1)}{\\ln([A]_2/[A]_1)}}$$
+**Step 4:** Solve for $m$: find the whole-number power that turns the concentration ratio into the rate ratio.
 
 **Step 5:** Repeat for each reactant
 
@@ -65,14 +64,19 @@ $$\\boxed{m = \\frac{\\ln(\\text{Rate}_2/\\text{Rate}_1)}{\\ln([A]_2/[A]_1)}}$$
 
 ---
 
-### Using Logarithms for Non-Integer Orders
+### Reading the Rate Ratio
 
-If $\\frac{\\text{Rate}_2}{\\text{Rate}_1} = 2.83$ and $\\frac{[A]_2}{[A]_1} = 2$:
+| Concentration ratio | Rate ratio | Order |
+|:-------------------:|:----------:|:-----:|
+| ×2 | ×1 (no change) | 0 |
+| ×2 | ×2 | 1 |
+| ×2 | ×4 | 2 |
+| ×3 | ×1 (no change) | 0 |
+| ×3 | ×3 | 1 |
+| ×3 | ×9 | 2 |
 
-$$m = \\frac{\\ln(2.83)}{\\ln(2)} = \\frac{1.04}{0.693} = 1.5$$
-
-So the order is $\\frac{3}{2}$ (fractional order).
-> 💡 **Tip:** When the rate ratio isn\'t a clean power of the concentration ratio, use logarithms to find the order. Fractional orders are common for multi-step mechanisms.      `
+> 💡 **Tip:** If neither concentration ratio is a simple 2 or 3, write $\\text{rate ratio} = (\\text{concentration ratio})^m$ and test $m = 0, 1, 2$. AP rate-law data always give whole-number orders.
+      `
     },
     {
       id: 'rr4-worked-example-1',
@@ -194,15 +198,15 @@ $$\\boxed{k = 180 \\; \\text{M}^{-2}\\text{s}^{-1}}$$
             explanation: 'Doubling [A]: rate unchanged → order in A = 0. Doubling [B]: rate × 4 → order in B = 2. Rate = k[A]$ {}^{0}$[B]$ {}^{2}$ = k[B]$ {}^{2}$.'
           },
           {
-            question: 'If the rate ratio is 5.66 when the concentration ratio is 4.00, the order is closest to:',
+            question: 'With [B] held constant, raising [A] from 0.10 M to 0.30 M raises the initial rate from $2.0 \\times 10^{-3}$ to $1.8 \\times 10^{-2}$ M/s. What is the order with respect to A?',
             options: [
-              '1.00',
-              '1.25',
-              '1.41',
-              '0.80'
+              '1',
+              '2',
+              '3',
+              '9'
             ],
             correctAnswer: 1,
-            explanation: '$m = \\ln(5.66)/\\ln(4.00) = 1.733/1.386 = 1.25$, a non-integer (fractional) order; check: $4^{1.25} = 5.66$. Dividing the ratios directly (5.66/4.00) gives 1.41, inverting the logarithms gives 0.80, and rounding to the nearest whole number gives 1.00.'
+            explanation: 'The rate ratio is $(1.8 \\times 10^{-2})/(2.0 \\times 10^{-3}) = 9$ and the concentration ratio is 0.30/0.10 = 3. Since $3^{m} = 9$, m = 2. Using the rate ratio itself gives 9, using the concentration ratio gives 3, and an order of 1 would make the rate only triple.'
           }
         ]
       }

@@ -49,14 +49,14 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 
 > 🔑 **Key Concept:** Recognizing these common species and their typical products speeds up balancing. On the AP exam the products of a redox reaction are normally given in the question.
 
-| Species | Typical Behavior | Product |
-|---------|-----------------|---------|
-| $MnO_{4}^{-}$ (acidic) | Strong oxidizer | $Mn^{2+}$ |
-| $MnO_{4}^{-}$ (basic) | Moderate oxidizer | $MnO_{2}$ |
-| $Cr_{2}O_{7}^{2-}$ (acidic) | Strong oxidizer | $Cr^{3+}$ |
-| $NO_{3}^{-}$ (acidic, dilute) | Oxidizer | NO |
-| $NO_{3}^{-}$ (acidic, conc.) | Oxidizer | $NO_{2}$ |
-| $H_{2}O_{2}$ | Can oxidize or reduce | $O_{2}$ or $H_{2}O$ |
+| Species | Oxidation-State Change | Product |
+|---------|------------------------|---------|
+| $MnO_{4}^{-}$ (acidic) | Mn: +7 → +2 (reduced) | $Mn^{2+}$ |
+| $MnO_{4}^{-}$ (basic) | Mn: +7 → +4 (reduced) | $MnO_{2}$ |
+| $Cr_{2}O_{7}^{2-}$ (acidic) | Cr: +6 → +3 (reduced) | $Cr^{3+}$ |
+| $NO_{3}^{-}$ (acidic, dilute) | N: +5 → +2 (reduced) | NO |
+| $NO_{3}^{-}$ (acidic, conc.) | N: +5 → +4 (reduced) | $NO_{2}$ |
+| $H_{2}O_{2}$ | O: −1 → 0 (oxidized) or −1 → −2 (reduced) | $O_{2}$ or $H_{2}O$ |
       `
     },
     {

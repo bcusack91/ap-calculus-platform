@@ -50,10 +50,12 @@ This workshop features multi-step problems that mirror the AP Chemistry exam for
 | Molten salt | Metal | Nonmetal ($Cl_{2}$, $O_{2}$, $Br_{2}$) |
 | Aqueous, active metal | $H_{2}$ | Depends on anion |
 | Aqueous, less active metal | Metal deposits | Depends on anion |
-| Aqueous, halide anion | — | Halogen ($Cl_{2}$, $Br_{2}$, $I_{2}$) |
+| Aqueous, $Br^{-}$ or $I^{-}$ | — | $Br_{2}$ or $I_{2}$ (couple below +1.23 V) |
 | Aqueous, $oxyanion/F^{-}$ | — | $O_{2}$ |
 
 > 🔑 **Quick Rule:** Active metals (Na, K, Ca, Al) can’t be deposited from aqueous solution—you get $H_{2}$ instead. Use molten salts for these metals.
+
+> 📝 Aqueous $Cl^{-}$ is the exception at the anode: its $E°$ is too close to water's for a simple comparison, so an AP question that uses it tells you which product forms.
 
 
 ---
@@ -93,7 +95,7 @@ This combines all steps into one equation.
               'Cathode: K metal, Anode: $O_{2}$'
             ],
             correctAnswer: 1,
-            explanation: '$K^{+}$ is too reactive to deposit from water → $H_{2}$ at cathode. $Br^{-}$ is a simple halide → $Br_{2}$ at anode. Products: $H_{2}$ and $Br_{2}$.'
+            explanation: '$K^{+}$ is too reactive to deposit from water → $H_{2}$ at cathode. The $Br_{2}/Br^{-}$ couple (+1.07 V) is below water\'s +1.23 V, so $Br^{-}$ is oxidized → $Br_{2}$ at anode. Products: $H_{2}$ and $Br_{2}$.'
           },
           {
             question: 'How long (in minutes) must a 5.00 A current flow to deposit 10.0 g of Ag? ($Ag^{+}$ + $e^{-}$ → Ag, M = 107.87 g/mol)',

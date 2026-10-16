@@ -79,18 +79,18 @@ $$pH = -\\log(\\sqrt{K_a \\cdot C})$$
 
 ### When Does the Approximation Work?
 
-The approximation is valid when:
+Assume $x$ is small, solve, and then **check**. The approximation is valid when $x$ is under 5% of the initial concentration:
 
-$$\\boxed{\\frac{C}{K_a} > 400 \\quad \\text{(conservative rule)}}$$
+$$\\boxed{\\frac{x}{C} \\times 100\\% < 5\\%}$$
 
-Or equivalently, when $\\frac{x}{C} \\times 100\\% < 5\\%$.
+It usually passes when $K_a$ is very small compared with $C$, but the 5% check is the test that decides.
 
 
 ---
 
 ### If the Approximation Fails
 
-> ⚠️ **Warning:** When $C/K_a < 400$, the 5% approximation is invalid. You **must** use the quadratic formula.
+> ⚠️ **Warning:** When $x$ comes out at more than 5% of $C$, the approximation is invalid. You **must** use the quadratic formula.
 
 $$x^2 + K_a x - K_a C = 0$$
 
@@ -111,9 +111,9 @@ $$\\boxed{x = \\frac{-K_a + \\sqrt{K_a^2 + 4K_a C}}{2}}$$
 
 ---
 
-### Step 1: Check if approximation works
+### Step 1: Assume the approximation works
 
-$$\\frac{C}{K_a} = \\frac{0.10}{1.8 \\times 10^{-5}} = 5556 > 400 \\quad \\checkmark$$
+$K_a = 1.8 \\times 10^{-5}$ is tiny compared with 0.10 M, so assume $x \\ll 0.10$ and write $0.10 - x \\approx 0.10$. Step 3 confirms it.
 
 
 ---
@@ -164,12 +164,12 @@ Compare: 0.10 M $HCl$ has $pH = 1.00$. Same concentration, but the weak acid has
             question: 'The 5% approximation is valid when:',
             options: [
               '$K_a$ is very large',
-              '$C/K_a > 400$',
+              '$x$ is less than $0.05C$',
               'The acid is strong',
               '$x$ is more than $0.05C$'
             ],
             correctAnswer: 1,
-            explanation: 'When $C/K_a > 400$, the percent dissociation is less than 5%, and we can approximate $C - x \\approx C$. This works when the acid is weak and/or the concentration is not too dilute.'
+            explanation: 'The approximation $C - x \\approx C$ holds when $x$ is under 5% of the initial concentration, that is, $x < 0.05C$. A very large $K_a$ or a strong acid makes $x$ large, and an $x$ above $0.05C$ means the approximation has failed.'
           },
           {
             question: 'For 0.10 M $CH_3COOH$ ($K_a = 1.8 \\times 10^{-5}$), $[H^+]$ is closest to:',

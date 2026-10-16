@@ -4,9 +4,9 @@ export const chemIntegratedRateLawsPart5Data = {
     {
       id: 'ir5-intro',
       type: 'text' as const,
-      content: `# ⏱️ Half-Life Problems
+      content: `# ⏱️ First-Order Half-Life and Radioactive Decay
 
-**Part 5 of 7 — Calculations for Each Order and Radioactive Decay**
+**Part 5 of 7 — Half-Life Calculations**
 
 ---
 
@@ -14,7 +14,7 @@ export const chemIntegratedRateLawsPart5Data = {
 
 | Section |
 |---------|
-| 📋 Half-Life Formulas Summary |
+| 📋 First-Order Half-Life Toolkit |
 | 📌 Radioactive Decay: Always First-Order |
 | Carbon-14 Dating |
 | Example |
@@ -32,50 +32,34 @@ export const chemIntegratedRateLawsPart5Data = {
       id: 'ir5-summary',
       type: 'text' as const,
       content: `
-## 📋 Half-Life Formulas Summary
+## 📋 First-Order Half-Life Toolkit
 
-| Order | Half-Life Formula | Dependence on $[A]_0$ |
-|-------|------------------|---------------------|
-| Zero | $t_{1/2} = \\frac{[A]_0}{2k}$ | Proportional — higher [A]$ {}_{0}$ → longer $t_{1}/_{2}$ |
-| First | $t_{1/2} = \\frac{0.693}{k}$ | **Independent** — $t_{1}/_{2}$ is always the same |
-| Second | $t_{1/2} = \\frac{1}{k[A]_0}$ | Inversely proportional — higher [A]$ {}_{0}$ → shorter $t_{1}/_{2}$ |
+| Quantity | Relationship |
+|----------|--------------|
+| Half-life | $t_{1/2} = \\frac{0.693}{k}$ (independent of $[A]_0$) |
+| Rate constant | $k = \\frac{0.693}{t_{1/2}}$ |
+| Half-lives elapsed | $n = t / t_{1/2}$ |
+| Fraction remaining | $\\frac{[A]}{[A]_0} = \\left(\\frac{1}{2}\\right)^n$ |
 
-> ⚠️ **Warning:** For zero and second-order, "$n$ half-lives" does NOT mean $n \\times t_{1/2}$ total time, because each successive half-life has a different duration!
+> ⚠️ **Warning:** Counting half-lives works only for **first-order** reactions, because only their half-life is constant. The AP exam uses half-life only for first-order reactions.
 
 
 ---
 
-> 🔑 **Key Concept:** The pattern of successive half-lives uniquely identifies reaction order:
+### When the Time Is Not a Whole Number of Half-Lives
 
-| Order | 1st $t_{1}/_{2}$ | 2nd $t_{1}/_{2}$ | 3rd $t_{1}/_{2}$ | Pattern |
-|-------|----------|----------|----------|---------|
-| Zero | $T$ | $T/2$ | $T/4$ | Each is **half** the previous |
-| First | $T$ | $T$ | $T$ | All **equal** |
-| Second | $T$ | $2T$ | $4T$ | Each is **double** the previous |
+Use the integrated rate law instead of counting halvings.
+
+> **Problem:** A first-order reaction has $t_{1/2} = 10.0$ min. What fraction of the reactant remains after 15.0 min?
+
+**Solution:**
+
+$$k = \\frac{0.693}{10.0} = 0.0693 \\text{ min}^{-1}$$
+
+$$\\ln\\frac{[A]}{[A]_0} = -kt = -(0.0693)(15.0) = -1.04 \\quad\\Rightarrow\\quad \\frac{[A]}{[A]_0} = e^{-1.04} = 0.354$$
+
+Check: 15.0 min is 1.5 half-lives, so the fraction should fall between 1/2 (one half-life) and 1/4 (two). It does.
       `
-    },
-    {
-      id: 'ir5-zero-order-practice',
-      type: 'input-boxes' as const,
-      content: `
-**Zero-Order Half-Life Problems** 🧮
-
-A zero-order reaction has $k = 0.0020$ M/s.
-
-**1)** If [A]$ {}_{0}$ = 0.100 M, what is the half-life? (in seconds)
-
-**2)** If [A]$ {}_{0}$ = 0.200 M, what is the half-life? (in seconds)
-
-**3)** For [A]$ {}_{0}$ = 0.100 M, how long until 75% has reacted (only 25% remains)? Note: this is NOT simply 2 half-lives for zero-order! Use the integrated rate law. (in seconds, to 3 significant figures)
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['25', '50', '37.5'],
-        hint1: '$t_{1}/_{2}$ = [A]$ {}_{0}/(2k)$ = 0.100/(2 × 0.0020) = 0.100/0.0040 = 25 s.',
-        hint2: '$t_{1}/_{2}$ = 0.200/(2 × 0.0020) = 50 s. Double [A]$ {}_{0}$ → double $t_{1}/_{2}$.',
-        hint3: '25% remains: [A] = 0.025 M. [A] = −kt + [A]$ {}_{0}$. 0.025 = −0.0020t + 0.100. t = (0.100 − 0.025)/0.0020 = 0.075/0.0020 = 37.5 s.',
-        explanation: '1) 25 s. 2) 50 s (proportional to [A]$ {}_{0}$). 3) [A] = 0.025 M: t = (0.100 − 0.025)/0.0020 = 37.5 s. Note: for zero-order, 2 half-lives ≠ 75% consumed because half-lives get shorter.'
-      }
     },
     {
       id: 'ir5-first-order-practice',
@@ -95,29 +79,6 @@ A zero-order reaction has $k = 0.0020$ M/s.
         hint2: '93.75% decomposed → 6.25% remains = 1/16 = $(1/2)^{n}$. n = 4.',
         hint3: '24.06/8.02 = 3 half-lives. Fraction = $(1/2)^{3}$ = 1/8.',
         explanation: '1) 0.693/0.0462 = 15.0 s. 2) 6.25% = 0.0625 = $(1/2)^{4}$, so 4 half-lives. 3) 24.06/8.02 = 3 half-lives → $(1/2)^{3}$ = 1/8.'
-      }
-    },
-    {
-      id: 'ir5-second-order-practice',
-      type: 'input-boxes' as const,
-      content: `
-**Second-Order Half-Life Problems** 🧮
-
-A second-order reaction has $k = 0.40$ $M^{-1}s^{-1}$ and $[A]_0 = 0.50$ M.
-
-**1)** What is the first half-life? (in seconds, to 3 significant figures)
-
-**2)** What is the second half-life? (in seconds, to 3 significant figures)
-
-**3)** What is [A] after 15 s? (in M, to 3 significant figures)
-      `,
-      exercise: {
-        boxes: 3,
-        correctAnswers: ['5.0', '10.0', '0.125'],
-        hint1: '$t_{1}/_{2}$ = 1/(k[A]$ {}_{0}$) = 1/(0.40 × 0.50) = 1/0.20 = 5.0 s.',
-        hint2: 'After 1st half-life, [A] = 0.25 M. 2nd $t_{1}/_{2}$ = 1/(0.40 × 0.25) = 10.0 s. It doubled!',
-        hint3: '1/[A] = 0.40(15) + 1/0.50 = 6.0 + 2.0 = 8.0. [A] = 1/8.0 = 0.125 M.',
-        explanation: '1) $t_{1}/_{2}$ = 1/(0.40 × 0.50) = 5.0 s. 2) $t_{1}/_{2}$ = 1/(0.40 × 0.25) = 10.0 s. 3) 1/[A] = 6.0 + 2.0 = 8.0 → [A] = 0.125 M.'
       }
     },
     {
@@ -208,23 +169,23 @@ $$\\text{Age} = 2 \\times 5{,}730 = 11{,}460 \\text{ years}$$
             options: ['1/5', '1/16', '1/32', '1/64']
           },
           {
-            label: 'If a zero-order reaction has $t_{1}/_{2}$ = 60 s, the second half-life is',
-            options: ['60 s', '30 s', '120 s', '90 s']
+            label: 'A first-order reaction has $t_{1}/_{2}$ = 60 s. The time for [A] to fall from 0.40 M to 0.10 M is',
+            options: ['60 s', '30 s', '120 s', '240 s']
           },
           {
             label: 'Carbon-14 dating works because $ {}^{14}C$ decay is',
             options: ['zero-order', 'first-order', 'second-order', 'catalyzed']
           },
           {
-            label: 'For which order does the half-life increase with time?',
+            label: 'For which order is the half-life constant?',
             options: ['zero', 'first', 'second', 'none']
           }
         ],
-        correctAnswers: ['1/32', '30 s', 'first-order', 'second'],
+        correctAnswers: ['1/32', '120 s', 'first-order', 'first'],
         hint1: '$(1/2)^{5}$ = 1/32.',
-        hint2: 'Zero-order: each successive half-life is half the previous.',
+        hint2: '0.40 → 0.20 → 0.10 M is two half-lives.',
         hint3: 'All radioactive decay is first-order.',
-        explanation: '$(1/2)^{5}$ = 1/32. Zero-order successive half-lives: 60, 30, 15... Second half-life = 30 s. $ {}^{14}C$ decay is first-order. Second-order half-lives increase (double each time).'
+        explanation: '$(1/2)^{5}$ = 1/32. Falling from 0.40 to 0.10 M is two halvings, so 2 × 60 = 120 s. $ {}^{14}C$ decay is first-order. Only first-order reactions have a constant half-life.'
       }
     },
     {
@@ -247,15 +208,15 @@ $$\\text{Age} = 2 \\times 5{,}730 = 11{,}460 \\text{ years}$$
             explanation: '42.9/14.3 = 3 half-lives. Activity = 8000 × $(1/2)^{3}$ = 8000/8 = 1000 counts/min.'
           },
           {
-            question: 'A reaction\'s half-lives are measured as: 120 s, 60 s, 30 s. The reaction order is:',
+            question: 'A first-order reaction has a half-life of 120 s. How long does it take for 87.5% of the reactant to be consumed?',
             options: [
-              'Zero-order',
-              'First-order',
-              'Second-order',
-              'Third-order'
+              '240 s',
+              '360 s',
+              '105 s',
+              '960 s'
             ],
-            correctAnswer: 0,
-            explanation: 'Each half-life is half the previous → zero-order. First-order would give equal half-lives. Second-order would give doubling half-lives.'
+            correctAnswer: 1,
+            explanation: '87.5% consumed leaves 12.5% = 1/8 = $(1/2)^{3}$, so three half-lives pass: 3 × 120 = 360 s. Two half-lives (240 s) leave 25%, 0.875 × 120 = 105 s treats the fraction as a fraction of one half-life, and 960 s multiplies 120 s by 8 instead of counting half-lives.'
           }
         ]
       }

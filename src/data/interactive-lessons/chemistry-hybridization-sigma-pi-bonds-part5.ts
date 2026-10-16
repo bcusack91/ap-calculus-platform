@@ -7,7 +7,7 @@ export const chemHybridizationSigmaPiBondsPart5Data = {
       title: 'Multiple Bonds and Hybridization',
       content: `# 🔗 Multiple Bonds and Hybridization
 
-**Part 5 of 7 — Double Bonds, Triple Bonds, and Orbital Pictures**
+**Part 5 of 7 — Double Bonds, Triple Bonds, and Bond Strength**
 
 ---
 
@@ -15,11 +15,11 @@ export const chemHybridizationSigmaPiBondsPart5Data = {
 
 | Section |
 |---------|
-| Orbital Picture of Ethene $(C_{2}H_{4})$ |
+| Ethene $(C_{2}H_{4})$ |
 | Why Ethene Is Planar |
-| Orbital Picture of Acetylene $(C_{2}H_{2})$ |
-| Orbital Picture of HCN |
-| Key Observations |
+| Acetylene $(C_{2}H_{2})$ |
+| HCN |
+| Bond Strength and Length Trends |
 
 > 🔑 **Key Concept:** Mastering this material will strengthen your foundation for both the AP Chemistry exam and more advanced chemistry topics.
 
@@ -38,16 +38,13 @@ export const chemHybridizationSigmaPiBondsPart5Data = {
 
 Every double bond consists of exactly **one sigma bond** and **one pi bond**.
 
-### Orbital Picture of Ethene $(C_{2}H_{4})$
+### Ethene $(C_{2}H_{4})$
 
 **Each carbon** in ethene:
 - Has 3 electron domains (2 C–H + 1 C=C) → **$sp^{2}$ hybridized**
-- Uses 3 $sp^{2}$ orbitals for sigma bonds
-- Has 1 unhybridized p orbital perpendicular to the molecular plane
+- Trigonal planar arrangement, bond angles about 120°
 
-**The C=C double bond:**
-- The sigma bond forms from **$sp^{2}$–$sp^{2}$** head-on overlap
-- The pi bond forms from **p–p** lateral overlap (unhybridized p orbitals)
+**The C=C double bond:** 1 sigma bond + 1 pi bond
 
 **Bond count for $C_{2}H_{4}$:**
 - 4 C–H bonds → 4σ
@@ -56,7 +53,7 @@ Every double bond consists of exactly **one sigma bond** and **one pi bond**.
 
 ### Why Ethene Is Planar
 
-> 🔑 **Key Concept:** The pi bond requires the unhybridized p orbitals to be parallel (side-by-side). This forces all 6 atoms into the same plane. Rotation around the C=C bond would break the pi bond — this is why double bonds are **rigid**.`
+> 🔑 **Key Concept:** Each $sp^{2}$ carbon holds its three neighbors in a flat, trigonal planar arrangement, and the pi bond **prevents rotation** around the C=C bond. That locks both ends into one shared plane, so all 6 atoms lie flat. Double bonds are **rigid**, which is also why geometric isomers exist (CED 2.7.A.4).`
     },
     {
       id: 'hy-5-3',
@@ -66,24 +63,20 @@ Every double bond consists of exactly **one sigma bond** and **one pi bond**.
 
 Every triple bond consists of **one sigma bond** and **two pi bonds**.
 
-### Orbital Picture of Acetylene $(C_{2}H_{2})$
+### Acetylene $(C_{2}H_{2})$
 
 **Each carbon** in acetylene:
 - Has 2 electron domains (1 C–H + 1 C≡C) → **sp hybridized**
-- Uses 2 sp orbitals for sigma bonds (pointing 180° apart)
-- Has 2 unhybridized p orbitals, perpendicular to each other
+- Linear arrangement, bond angle 180°, so the whole molecule is linear
 
-**The C≡C triple bond:**
-- 1 sigma bond: sp–sp head-on overlap
-- 1 pi bond: p–p lateral overlap in one plane
-- 1 pi bond: p–p lateral overlap in the perpendicular plane
+**The C≡C triple bond:** 1 sigma bond + 2 pi bonds
 
 **Bond count for $C_{2}H_{2}$:**
 - 2 C–H bonds → 2σ
 - 1 C≡C bond → 1σ + 2π
 - **Total: 3σ + 2π = 5 bonds total**
 
-### Orbital Picture of HCN
+### HCN
 
 **Carbon** in HCN:
 - Has 2 electron domains (1 C–H + 1 C≡N) → **sp hybridized**
@@ -96,7 +89,7 @@ Every triple bond consists of **one sigma bond** and **two pi bonds**.
 
 **Nitrogen** in HCN:
 - Has 2 electron domains (1 triple bond + 1 lone pair) → **sp hybridized**
-- The lone pair occupies an sp orbital`
+- A lone pair counts as an electron domain, just like a bond`
     },
     {
       id: 'hy-5-4',
@@ -121,12 +114,12 @@ Every triple bond consists of **one sigma bond** and **two pi bonds**.
             question: 'Why is ethene $(C_{2}H_{4})$ a flat, planar molecule?',
             options: [
               'Every carbon is $sp^{3}$, which is a planar shape',
-              'Its pi bond needs parallel p orbitals on both carbons',
+              'Each carbon is $sp^{2}$, and its pi bond blocks rotation',
               'It is too small a molecule to bend out of a plane',
               'Its H atoms repel equally, pushing them into a plane'
             ],
             correctAnswer: 1,
-            explanation: 'The pi bond in $C_{2}H_{4}$ forms from side-by-side overlap of unhybridized p orbitals on the two carbons. These must remain parallel, which forces all 6 atoms into the same plane. Each carbon is $sp^{2}$; an $sp^{3}$ carbon is tetrahedral, not planar.'
+            explanation: 'Each carbon has 3 electron domains, so it is $sp^{2}$ with a trigonal planar arrangement (120°). The pi bond prevents rotation about the C=C bond, which locks both planar ends into one shared plane. An $sp^{3}$ carbon is tetrahedral, not planar; small size does not make a molecule flat; and H–H repulsion alone does not fix the geometry.'
           }
         ]
       }

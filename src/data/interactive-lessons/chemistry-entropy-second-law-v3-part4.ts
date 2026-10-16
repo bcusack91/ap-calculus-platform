@@ -11,9 +11,9 @@ This section focuses on building calculation fluency with standard entropy value
     { id: 'en4v3-review', type: 'text' as const, content: `
 ## Quick Reference
 
-### Third Law
+### Absolute Values
 
-A perfect crystal at 0 K has $S = 0$. This gives us absolute entropy values.
+A table lists $S°$ itself, not a change, and every substance has $S° > 0$, elements included.
 
 ### The Calculation Formula
 
@@ -66,7 +66,7 @@ Using: $S°$(graphite) = 5.7, $S°$(O₂) = 205.0, $S°$(CO₂) = 213.7
     { id: 'en4v3-quiz', type: 'multiple-choice' as const, content: `
 **Trends Check** 🎯
     `, exercise: { questions: [
-          { question: 'Why is $S°$ for elements NOT zero (unlike $\\Delta H_f°$)?', options: ['It should be zero; nonzero tabulated values are rounding errors', 'The Third Law assigns every element a nonzero reference value', 'S° is measured from zero at 0 K, and warming adds entropy', 'S° is relative, like ΔH°f, but uses a different reference state'], correctAnswer: 2, explanation: '$\\Delta H_f°$ for elements is zero by convention (chosen reference). But $S°$ is measured absolutely from 0 K (Third Law), and warming from 0 K to 298 K adds entropy.' },
+          { question: 'Why is $S°$ for elements NOT zero (unlike $\\Delta H_f°$)?', options: ['It should be zero; nonzero tabulated values are rounding errors', 'Each element is assigned a nonzero reference value by convention', 'S° is measured from zero at 0 K, and warming adds entropy', 'S° is relative, like ΔH°f, but uses a different reference state'], correctAnswer: 2, explanation: '$\\Delta H_f°$ for elements is zero by convention (chosen reference). But $S°$ is an absolute quantity measured up from 0 K, and warming from 0 K to 298 K adds entropy. No convention assigns elements a value, and tabulated values are not rounding errors.' },
           { question: 'Between Ne(g) and Xe(g) at 298 K, which has higher $S°$?', options: ['Ne — lighter atoms move faster, so they have more entropy', 'Xe — heavier, more closely spaced energy levels', 'Equal — both are monatomic gases at the same T', 'Cannot determine without tabulated S° values'], correctAnswer: 1, explanation: 'Heavier atoms have more closely spaced energy levels, meaning more energy microstates are accessible at the same temperature. $S°$(Xe) > $S°$(Ne).' }
         ] } },
     { id: 'en4v3-dropdown', type: 'dropdown-select' as const, content: `
@@ -78,7 +78,7 @@ Using: $S°$(graphite) = 5.7, $S°$(O₂) = 205.0, $S°$(CO₂) = 213.7
         ], correctAnswers: ['much larger', 'J/(mol·K)', 'positive above 0 K'],
         hint1: 'Gas vs liquid — an enormous difference in dispersal.',
         hint2: 'Watch: J not kJ!',
-        hint3: 'Third Law: only a perfect crystal at 0 K has S = 0.',
+        hint3: 'Any substance above 0 K has energy spread among its particles.',
         explanation: 'Gas has much higher S° than liquid (188.7 vs 69.9 for water). Units are J/(mol·K). S° is always positive above 0 K.' } },
     { id: 'en4v3-exit', type: 'multiple-choice' as const, content: `
 **Exit Check** ✅

@@ -36,7 +36,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 | Dispersal of matter | Phase change to a freer state, larger gas volume, more moles of gas → higher S |
 | Dispersal of energy | Higher temperature → broader energy distribution → higher S |
 | Phase order | $S_{\\text{solid}} < S_{\\text{liquid}} \\ll S_{\\text{gas}}$ |
-| Third Law | $S = 0$ for perfect crystal at 0 K |
+| Absolute entropy | $S° > 0$ for every substance above 0 K, elements included |
 
 
 ---
@@ -47,7 +47,6 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
 |--------|----------|
 | Qualitative | Count $\\Delta n_{\\text{gas}}$; more gas → higher S |
 | Quantitative | $\\Delta S° = \\sum n S°(\\text{prod}) - \\sum m S°(\\text{react})$ |
-| Phase transition | $\\Delta S = \\Delta H_{\\text{trans}}/T_{\\text{trans}}$ |
 
 
 ---
@@ -97,7 +96,7 @@ This comprehensive review connects every concept from Parts 1–6 with AP-style 
               'Only isolated atoms, not molecules, have S° = 0'
             ],
             correctAnswer: 2,
-            explanation: 'By the Third Law, S = 0 only at 0 K for a perfect crystal. At any temperature above 0 K (including standard 298 K), all substances have positive entropy. This is true for elements AND compounds alike.'
+            explanation: 'Entropy values are absolute, and at any temperature above 0 K (including standard 298 K) the particles of every substance move and store energy, so S° is positive. This is true for elements AND compounds alike, unlike $\\Delta H°_f$, which is zero for elements by convention.'
           },
           {
             question: 'A reaction has ΔH° = −40 kJ and ΔS° = −120 J/K. At 500 K, ΔG° is:',
