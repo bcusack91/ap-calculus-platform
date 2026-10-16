@@ -7,12 +7,11 @@ import Link from 'next/link'
 import { ArrowLeft, Eye, ListChecks } from 'lucide-react'
 import AttemptReview, { type AttemptReviewData } from '@/components/AttemptReview'
 import { signInUrl } from '@/lib/auth-redirect'
-
-const MISTAKE_LOG_COURSES = new Set(['mcat', 'sat', 'act'])
+import { isToolCourse, mistakesHref, toolCourseLabel } from '@/lib/question-tool-courses'
 
 /**
  * Permanent review of one attempt: /review/<kind>/<id>, where kind is exit |
- * diagnostic | unit-test | sat-practice | mcat-fl | mcat-practice | qbank | act-fl. Owner-only
+ * diagnostic | unit-test | sat-practice | mcat-fl | mcat-practice | qbank | act-fl | ap-practice. Owner-only
  * (the API scopes every lookup to the signed-in student), except
  * ?class=<classroomId>&student=<userId>: a teacher of that class reviewing the
  * student's attempt, read-only (the API checks the teacher's access).
@@ -111,7 +110,8 @@ function AttemptReviewView() {
 
   const studentName = student ? student.name?.trim() || 'Student' : undefined
   const firstName = studentName?.split(/\s+/)[0]
-  const hasLog = !student && MISTAKE_LOG_COURSES.has(attempt.course)
+  // Courses with a mistake log: test prep and every AP course (src/lib/question-tool-courses.ts).
+  const logCourse = !student && isToolCourse(attempt.course) ? attempt.course : null
   const backHref = student && teacherView
     ? `/teacher/classroom/${teacherView.classroomId}/student/${teacherView.studentId}`
     : attempt.backHref
@@ -126,12 +126,12 @@ function AttemptReviewView() {
           >
             <ArrowLeft className="h-4 w-4" aria-hidden /> {student ? `Back to ${firstName}'s report` : 'Back'}
           </Link>
-          {hasLog && (
+          {logCourse && (
             <Link
-              href={`/${attempt.course}/mistakes`}
+              href={mistakesHref(logCourse)}
               className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:border-accent-muted hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-600 dark:bg-gray-800 dark:text-gray-200"
             >
-              <ListChecks className="h-4 w-4" aria-hidden /> Your {attempt.course.toUpperCase()} mistake log
+              <ListChecks className="h-4 w-4" aria-hidden /> Your {toolCourseLabel(logCourse)} mistake log
             </Link>
           )}
         </div>
@@ -145,7 +145,7 @@ function AttemptReviewView() {
           </p>
         )}
         <AttemptReview attempt={attempt} studentName={firstName} />
-        {hasLog && (
+        {logCourse && (
           <p className="mt-6 text-xs text-gray-500 dark:text-gray-400">
             Questions you missed or flagged here go to your mistake log. Answer one correctly twice and it retires.
           </p>

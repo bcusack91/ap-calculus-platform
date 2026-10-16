@@ -53,8 +53,8 @@ export const MAX_ITEM_SECONDS = 60 * 60
 export async function studentStateFor(userId: string, course: QbankCourse): Promise<QbankStudentState> {
   const [log, user] = await Promise.all([
     answerLogFor(userId, course),
-    // MCAT and ACT pools are lesson-built and yield-tagged; SAT's are not.
-    course !== 'sat' ? prisma.user.findUnique({ where: { id: userId }, select: { lessonIncludeLowYield: true } }) : null,
+    // MCAT and ACT pools are lesson-built and yield-tagged; SAT's and AP's are not.
+    course === 'mcat' || course === 'act' ? prisma.user.findUnique({ where: { id: userId }, select: { lessonIncludeLowYield: true } }) : null,
   ])
   const active = computeMistakes(log).filter((m) => !m.retired)
   return {

@@ -1,14 +1,17 @@
 /**
  * Shared shapes and constants for the custom question bank (/mcat/qbank,
- * /sat/qbank, /act/qbank). Pure — safe to import from client components. The pools live
- * in qbank-pools.ts (server), sessions in qbank-server.ts (server).
+ * /sat/qbank, /act/qbank, and /<ap-course-slug>/qbank). Pure — safe to import
+ * from client components. The pools live in qbank-pools.ts (server), sessions
+ * in qbank-server.ts (server).
  */
+import { AP_SECONDS_PER_QUESTION, AP_TOOL_COURSES, TOOL_COURSES, isToolCourse, type ApToolCourse, type ToolCourse } from '@/lib/question-tool-courses'
+import { unitsForCourse } from '@/lib/unit-tests/course-units'
 
-export const QBANK_COURSES = ['mcat', 'sat', 'act'] as const
-export type QbankCourse = (typeof QBANK_COURSES)[number]
+export const QBANK_COURSES = TOOL_COURSES
+export type QbankCourse = ToolCourse
 
 export function isQbankCourse(c: unknown): c is QbankCourse {
-  return c === 'mcat' || c === 'sat' || c === 'act'
+  return isToolCourse(c)
 }
 
 export type QbankDifficulty = 'easy' | 'medium' | 'hard'
@@ -41,6 +44,13 @@ export const QBANK_SECTIONS: Record<QbankCourse, { id: string; label: string; se
     { id: 'reading', label: 'Reading', secondsPerQuestion: 67 },
     { id: 'science', label: 'Science', secondsPerQuestion: 60 },
   ],
+  // AP: the CED units (as the unit tests file the exit pools), at exam pace.
+  ...(Object.fromEntries(
+    AP_TOOL_COURSES.map((c) => [
+      c,
+      unitsForCourse(c).map((u) => ({ id: u.id, label: u.name, secondsPerQuestion: AP_SECONDS_PER_QUESTION[c] })),
+    ]),
+  ) as Record<ApToolCourse, { id: string; label: string; secondsPerQuestion: number }[]>),
 }
 
 export function sectionLabelFor(course: QbankCourse, section: string): string {

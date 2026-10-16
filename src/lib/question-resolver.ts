@@ -18,6 +18,9 @@ import { canonicalizeDiagnosticResults } from '@/lib/ap-topic-canonical'
 import { apDiagV2CourseOfCategory, apDiagV2Stimulus } from '@/lib/ap-diagnostic-v2/banks'
 import type { ApDiagV2Course } from '@/lib/ap-diagnostic-v2/types'
 import { UNIT_TEST_COURSES, isApUnitTestCourse } from '@/lib/unit-test-courses'
+import { isApToolCourse, isToolCourse, toolCourseLabel } from '@/lib/question-tool-courses'
+import { loadApUnitTestCourse } from '@/lib/unit-tests/ap-unit-test-registry'
+import { apUnitTestReviewItems } from '@/lib/question-sources/ap-unit-test'
 
 /**
  * Rebuilds any stored attempt into review items — the permanent review page
@@ -102,9 +105,16 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
     case 'exit': {
       const a = await prisma.exitQuizAttempt.findFirst({ where: { id, userId } })
       if (!a) return null
-      const topic = await prisma.topic.findUnique({ where: { slug: a.topicSlug }, select: { title: true } })
+      const topic = await prisma.topic.findUnique({
+        where: { slug: a.topicSlug },
+        select: { title: true, category: { select: { course: { select: { slug: true } } } } },
+      })
+      // AP topic slugs carry no course prefix: the topic's own course says (so
+      // the review links to that course's mistake log).
+      const ownCourse = topic?.category?.course?.slug
+      const course = courseOfSlug(a.topicSlug) === 'other' && isApToolCourse(ownCourse) ? ownCourse : courseOfSlug(a.topicSlug)
       return {
-        kind, id, course: courseOfSlug(a.topicSlug), takenAt: iso(a.completedAt),
+        kind, id, course, takenAt: iso(a.completedAt),
         title: `Exit quiz · ${topic?.title ?? a.topicSlug}`,
         score: { correct: a.score, total: a.totalQuestions },
         backHref: `/topics/${a.topicSlug}/interactive`,
@@ -142,7 +152,8 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
     }
     case 'unit-test': {
       const u = await prisma.mcatUnitTest.findFirst({ where: { id, userId, completedAt: { not: null } } })
-      if (!u) return null
+      // Not a cycle test: an AP per-unit test (UnitTestAttempt), rebuilt from its answer log.
+      if (!u) return apUnitAttempt(id, userId)
       const items = unitTestReviewItems(u.questions, u.answers)
       const score = { correct: u.correct ?? 0, total: u.total, label: u.percentage != null ? `${u.percentage}%` : undefined }
       // AP cycle tests: the course comes from the cycle's diagnostic (AP topic
@@ -237,7 +248,7 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
       // origin before the set is finished); only graded questions come back.
       const q = await prisma.qbankSession.findFirst({ where: { id, userId } })
       if (!q) return null
-      const course = q.course === 'sat' ? 'sat' : q.course === 'act' ? 'act' : 'mcat'
+      const course = isToolCourse(q.course) ? q.course : 'mcat'
       // CARS questions carry their reasoning skill for the Report tab; SAT
       // questions carry authored per-option notes when the item has them.
       const items = qbankReviewItems(q).map((i) => {
@@ -246,19 +257,47 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
           const skill = carsSkillForKey(i.questionKey)
           return skill ? { ...i, skill } : i
         }
-        if (course === 'act') return i
+        if (course !== 'sat') return i
         const optionExplanations = i.gridIn ? undefined : satOptionExplanationsFor(i.questionKey, i.options)
         return optionExplanations ? { ...i, optionExplanations } : i
       })
       const correct = q.correct ?? items.filter((i) => i && (i.gridIn ? i.correct : i.chosenIndex === i.correctIndex)).length
       return {
         kind, id, course, takenAt: iso(q.completedAt ?? q.startedAt),
-        title: `${course.toUpperCase()} practice set · ${q.mode === 'timed' ? 'Timed' : 'Tutor'}${q.completedAt ? '' : ' (in progress)'}`,
+        title: `${toolCourseLabel(course)} practice set · ${q.mode === 'timed' ? 'Timed' : 'Tutor'}${q.completedAt ? '' : ' (in progress)'}`,
         score: { correct, total: q.total },
         backHref: `/${course}/qbank`,
         items,
       }
     }
+  }
+}
+
+/**
+ * An AP per-unit test (UnitTestAttempt). Its questions aren't stored: the
+ * attempt keeps unit and variant, the answer log keeps each question's key and
+ * choice, and the source re-derives the shown questions from the pool.
+ * Attempts from before answer logging (no rows) don't resolve.
+ */
+async function apUnitAttempt(id: string, userId: string): Promise<Omit<ResolvedAttempt, 'items'> & { items: (ReviewItem | null)[] } | null> {
+  const a = await prisma.unitTestAttempt.findFirst({ where: { id, userId } })
+  if (!a) return null
+  const loading = loadApUnitTestCourse(a.courseSlug)
+  if (!loading) return null
+  const rows = await prisma.questionActivity.findMany({
+    where: { userId, attemptId: id, attemptKind: 'unit-test' },
+    select: { itemIndex: true, questionKey: true, chosenIndex: true, flagged: true, durationMs: true },
+    orderBy: { itemIndex: 'asc' },
+  })
+  if (!rows.length) return null
+  const course = await loading
+  const items = apUnitTestReviewItems(course, { unitId: a.unitId, variant: a.variant }, rows)
+  return {
+    kind: 'unit-test', id, course: course.courseSlug, takenAt: iso(a.completedAt),
+    title: `${course.config.courseTitle} unit test · ${a.unitTitle}${a.variant > 1 ? ` (version ${a.variant})` : ''}`,
+    score: { correct: a.correct, total: a.total, label: `${a.percentage}%` },
+    backHref: course.config.unitTestRoute,
+    items,
   }
 }
 

@@ -2,13 +2,20 @@ import { prisma } from '@/lib/prisma'
 import { activeMistakes, computeMistakes, type AnswerLogRow, type MistakeItem } from '@/lib/mistake-log'
 import { QUESTION_KEY_PREFIX } from '@/lib/question-key'
 import { actSectionLabelForTopic } from '@/lib/act-topic-sections'
+import { canonicalApTopicSlug } from '@/lib/ap-topic-canonical'
+import { TOOL_COURSES, isApToolCourse, isToolCourse, toolCourseSlug, type ToolCourse } from '@/lib/question-tool-courses'
+import { loadApUnitTestCourse } from '@/lib/unit-tests/ap-unit-test-registry'
 
-/** The mistake log's courses and the DB course slug each one's answers are logged under. */
-export const MISTAKE_COURSES = { mcat: 'mcat-prep', sat: 'sat-prep', act: 'act-prep' } as const
-export type MistakeCourse = keyof typeof MISTAKE_COURSES
+/**
+ * The mistake log's courses and the DB course slug each one's answers are
+ * logged under: test prep ('mcat' -> 'mcat-prep', …) and every AP course
+ * (keyed by its own slug, src/lib/question-tool-courses.ts).
+ */
+export type MistakeCourse = ToolCourse
+export const MISTAKE_COURSES = Object.fromEntries(TOOL_COURSES.map((c) => [c, toolCourseSlug(c)])) as Record<MistakeCourse, string>
 
 export function isMistakeCourse(c: unknown): c is MistakeCourse {
-  return c === 'mcat' || c === 'sat' || c === 'act'
+  return isToolCourse(c)
 }
 
 const SELECT = {
@@ -40,6 +47,22 @@ export async function answerLogFor(userId: string, course: MistakeCourse, questi
     orderBy: { answeredAt: 'asc' },
     take: 20_000,
   })
+  if (isApToolCourse(course)) {
+    // AP rows come from five surfaces that each name the "discipline"
+    // differently (diagnostic domain, quiz category, unit…). File every row
+    // under its topic's CED unit instead, and older rows' legacy topic slugs
+    // under the production topic, so the unit and topic filters line up.
+    let unitOf: Map<string, string> = new Map()
+    try {
+      unitOf = (await loadApUnitTestCourse(course))?.unitLabelOfTopic ?? unitOf
+    } catch (err) {
+      console.warn(`[mistakes] ${course} units unavailable:`, err)
+    }
+    return rows.map((r) => {
+      const topicSlug = canonicalApTopicSlug(course, r.topicSlug)
+      return { ...r, source: String(r.source), topicSlug, discipline: unitOf.get(topicSlug) ?? r.discipline }
+    })
+  }
   return rows.map((r) => ({
     ...r,
     source: String(r.source),

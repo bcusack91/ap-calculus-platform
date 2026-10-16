@@ -1,7 +1,8 @@
 'use client'
 
 /**
- * The student's mistake log for one course (/mcat/mistakes, /sat/mistakes, /act/mistakes):
+ * The student's mistake log for one course (/mcat/mistakes, /sat/mistakes, /act/mistakes,
+ * /<ap-course>/mistakes, where the section filter is the CED unit):
  * every question they missed, skipped or flagged that they haven't yet
  * answered correctly twice since. Rows link back to the attempt the miss
  * came from; the primary button re-quizzes the filtered set (MistakeQuiz).
@@ -12,6 +13,7 @@ import Link from 'next/link'
 import { ExternalLink, Flag, MinusCircle, RotateCcw, XCircle } from 'lucide-react'
 import MistakeQuiz, { type MistakeCourse } from '@/components/MistakeQuiz'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
+import { isApToolCourse, toolCourseLabel } from '@/lib/question-tool-courses'
 import { countBySkill } from '@/lib/cars-skills'
 
 interface MistakeRow {
@@ -97,7 +99,6 @@ const REASON_META = {
 } as const
 
 const SESSION_MAX = 20
-const COURSE_LABEL: Record<MistakeCourse, string> = { mcat: 'MCAT', sat: 'SAT', act: 'ACT' }
 
 interface Filters {
   source: string
@@ -163,7 +164,7 @@ export default function MistakeLog({ course }: { course: MistakeCourse }) {
     <div className="space-y-5">
       <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6 dark:border-gray-700 dark:bg-gray-800">
         <p className="text-sm text-gray-600 dark:text-gray-300">
-          Every {COURSE_LABEL[course]} question you missed, skipped or flagged lands here. Answer it correctly {retireAfter} times in a row, anywhere on the site, and it retires.
+          Every {toolCourseLabel(course)} question you missed, skipped or flagged lands here. Answer it correctly {retireAfter} times in a row, anywhere on the site, and it retires.
           <HelpLink article={HELP_ARTICLES.reviewAndMistakeLog} label="How the mistake log works" className="ml-1" />
         </p>
         <div className="mt-4 flex flex-wrap items-center gap-3">
@@ -194,9 +195,9 @@ export default function MistakeLog({ course }: { course: MistakeCourse }) {
             </select>
           </label>
           <label className="text-xs font-medium text-gray-600 dark:text-gray-300">
-            Section
+            {isApToolCourse(course) ? 'Unit' : 'Section'}
             <select value={filters.section} onChange={set('section')} className={selectCls}>
-              <option value="">All sections</option>
+              <option value="">{isApToolCourse(course) ? 'All units' : 'All sections'}</option>
               {data.filters.sections.map((s) => (
                 <option key={s} value={s}>{s}</option>
               ))}

@@ -9,12 +9,12 @@ import QbankBuilder from '@/components/QbankBuilder'
 import QbankRunner from '@/components/QbankRunner'
 import type { QbankCourse, QbankSessionView } from '@/lib/qbank-types'
 import { signInUrl } from '@/lib/auth-redirect'
-
-const LABEL: Record<QbankCourse, string> = { mcat: 'MCAT', sat: 'SAT', act: 'ACT' }
+import { qbankHref, toolCourseHubHref, toolCourseHubLabel, toolCourseLabel } from '@/lib/question-tool-courses'
 
 /**
- * /mcat/qbank and /sat/qbank: build a practice set, then take it. Signed-in
- * only: /mcat and /sat aren't behind the middleware, so this redirects itself.
+ * /mcat/qbank, /sat/qbank, /act/qbank and /<ap-course>/qbank: build a practice
+ * set, then take it. Signed-in only: the hubs aren't behind the middleware,
+ * so this redirects itself.
  */
 export default function QbankPage({ course }: { course: QbankCourse }) {
   const { status } = useSession()
@@ -22,7 +22,7 @@ export default function QbankPage({ course }: { course: QbankCourse }) {
   const [active, setActive] = useState<QbankSessionView | null>(null)
   useEffect(() => {
     // Keep the query: deep links (?domain=…) preset the builder after sign-in.
-    if (status === 'unauthenticated') router.push(signInUrl({ callbackUrl: `/${course}/qbank${window.location.search}` }))
+    if (status === 'unauthenticated') router.push(signInUrl({ callbackUrl: `${qbankHref(course)}${window.location.search}` }))
   }, [status, router, course])
 
   const start = (s: QbankSessionView) => {
@@ -35,10 +35,10 @@ export default function QbankPage({ course }: { course: QbankCourse }) {
       <div className={`container px-4 ${active?.items.some((i) => i.passage) ? 'max-w-6xl' : 'max-w-3xl'}`}>
         <div className="flex flex-wrap items-center justify-between gap-2">
           <Link
-            href={`/${course}`}
+            href={toolCourseHubHref(course)}
             className="inline-flex items-center gap-1 rounded text-sm font-medium text-accent hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-accent-muted"
           >
-            <ArrowLeft className="h-4 w-4" aria-hidden /> {LABEL[course]} Prep
+            <ArrowLeft className="h-4 w-4" aria-hidden /> {toolCourseHubLabel(course)}
           </Link>
           {active && !active.completedAt && (
             <button
@@ -51,7 +51,7 @@ export default function QbankPage({ course }: { course: QbankCourse }) {
           )}
         </div>
         <h1 className="mb-4 mt-3 text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white">
-          {active ? `${LABEL[course]} practice set` : `Build an ${LABEL[course]} practice set`}
+          {active ? `${toolCourseLabel(course)} practice set` : `Build an ${toolCourseLabel(course)} practice set`}
         </h1>
         {status !== 'authenticated' ? (
           <div className="h-40 animate-pulse rounded-2xl bg-gray-200 dark:bg-gray-800" aria-busy="true" />

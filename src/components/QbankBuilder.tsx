@@ -1,7 +1,7 @@
 'use client'
 
 /**
- * Builds a custom practice set (/mcat/qbank, /sat/qbank): sections and
+ * Builds a custom practice set (/mcat/qbank, /sat/qbank, /act/qbank, /<ap-course>/qbank): sections and
  * disciplines, topics (searchable), difficulty, which questions (all, never
  * answered, incorrect, flagged — counted live by GET /api/qbank/counts), how
  * many, and timed vs tutor mode. Also offers to resume an unfinished set and
@@ -26,6 +26,7 @@ import {
   type QbankSessionView,
 } from '@/lib/qbank-types'
 import { hasQbankPreset, parseQbankUrlParams } from '@/lib/qbank-url'
+import { AP_SECONDS_PER_QUESTION, isApToolCourse } from '@/lib/question-tool-courses'
 
 const POOL_META: Record<QbankPoolKind, { label: string; hint: string }> = {
   all: { label: 'All questions', hint: 'Everything that matches your filters' },
@@ -191,6 +192,8 @@ export default function QbankBuilder({ course, onStart }: { course: QbankCourse;
 
   const inProgress = history?.inProgressId ? history.sessions.find((s) => s.id === history.inProgressId) : null
   const disciplineWord = course === 'mcat' ? 'Disciplines' : 'Content domains'
+  // AP sections are the CED units.
+  const ap = isApToolCourse(course)
 
   return (
     <div className="space-y-5">
@@ -225,7 +228,7 @@ export default function QbankBuilder({ course, onStart }: { course: QbankCourse;
 
         {/* Sections */}
         <fieldset>
-          <legend className={legendCls}>Sections</legend>
+          <legend className={legendCls}>{ap ? 'Units' : 'Sections'}</legend>
           <div className="flex flex-wrap gap-2">
             {QBANK_SECTIONS[course].map((s) => {
               const n = counts?.sections.find((c) => c.id === s.id)?.count
@@ -239,12 +242,12 @@ export default function QbankBuilder({ course, onStart }: { course: QbankCourse;
               )
             })}
           </div>
-          <p className="mt-1.5 text-xs text-gray-500 dark:text-gray-400">None selected = every section.</p>
+          <p className="mt-1.5 text-xs text-gray-500 dark:text-gray-400">None selected = every {ap ? 'unit' : 'section'}.</p>
         </fieldset>
 
         {/* Disciplines / domains */}
-        {/* ACT disciplines are the sections themselves: no second row. */}
-        {disciplineList.length > 0 && course !== 'act' && (
+        {/* ACT and AP disciplines are the sections (units) themselves: no second row. */}
+        {disciplineList.length > 0 && course !== 'act' && !ap && (
           <fieldset>
             <legend className={legendCls}>{disciplineWord}</legend>
             <div className="flex flex-wrap gap-2">
@@ -414,9 +417,11 @@ export default function QbankBuilder({ course, onStart }: { course: QbankCourse;
                 <span className="block text-xs text-gray-500 dark:text-gray-400">
                   {course === 'mcat'
                     ? 'Exam pace: 95 s per question.'
-                    : course === 'act'
-                      ? 'Exam pace: 42 s per English, 67 s per Math or Reading, 60 s per Science question.'
-                      : 'Exam pace: 71 s per Reading and Writing question, 95 s per Math question.'}{' '}
+                    : ap
+                      ? `Exam pace: ${AP_SECONDS_PER_QUESTION[course]} s per question.`
+                      : course === 'act'
+                        ? 'Exam pace: 42 s per English, 67 s per Math or Reading, 60 s per Science question.'
+                        : 'Exam pace: 71 s per Reading and Writing question, 95 s per Math question.'}{' '}
                   Answers at the end.
                 </span>
               </span>

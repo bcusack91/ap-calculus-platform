@@ -14,8 +14,9 @@ import { renderRichText } from '@/lib/render-rich-text'
 import { Explanation, OptionList, PassageDisclosure, type ReviewPassageView } from '@/components/AttemptReview'
 import { AnswerStatsSummary, sharesOf, useQuestionStat } from '@/components/AnswerStats'
 import AskAboutQuestion from '@/components/AskAboutQuestion'
+import type { ToolCourse } from '@/lib/question-tool-courses'
 
-export type MistakeCourse = 'mcat' | 'sat' | 'act'
+export type MistakeCourse = ToolCourse
 
 export interface MistakeQuizFilters {
   from?: string

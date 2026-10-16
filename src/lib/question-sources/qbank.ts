@@ -1,5 +1,5 @@
 import { gradeGridIn } from '@/data/sat-grid-in'
-import { sectionLabelFor, type QbankCourse, type QbankItem } from '@/lib/qbank-types'
+import { isQbankCourse, sectionLabelFor, type QbankCourse, type QbankItem } from '@/lib/qbank-types'
 import type { ReviewItem } from './types'
 
 /**
@@ -30,7 +30,7 @@ export function qbankReviewItems(s: QbankSessionLike): (ReviewItem | null)[] {
   const flags = Array.isArray(s.flags) ? s.flags : []
   const timings = Array.isArray(s.timings) ? s.timings : []
   const done = s.completedAt !== null && s.completedAt !== undefined
-  const course = (s.course === 'sat' ? 'sat' : s.course === 'act' ? 'act' : 'mcat') as QbankCourse
+  const course: QbankCourse = isQbankCourse(s.course) ? s.course : 'mcat'
   return items.map((it, i) => {
     const a = asRec(answers[i])
     if (!done && !(s.mode === 'tutor' && a)) return null

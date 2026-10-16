@@ -39,6 +39,7 @@ import {
   type QbankFeedback,
   type QbankSessionView,
 } from '@/lib/qbank-types'
+import { mistakesHref } from '@/lib/question-tool-courses'
 
 const letter = (i: number) => String.fromCharCode(65 + i)
 
@@ -301,7 +302,8 @@ export default function QbankRunner({
           Question {idx + 1} of {n}
         </h2>
         <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-300">
-          {sectionLabelFor(view.course, item.section)} · {item.discipline}
+          {/* ACT and AP file the discipline as the section itself: say it once. */}
+          {[sectionLabelFor(view.course, item.section), item.discipline].filter((x, i, all) => x && all.indexOf(x) === i).join(' · ')}
         </span>
         <div className="ml-auto flex items-center gap-2">
           {timed && remaining !== null && !done && (
@@ -622,7 +624,7 @@ function QbankResults({
         <Link href={`/review/qbank/${view.id}`} className={primaryBtn}>
           Review every question <ArrowRight className="h-4 w-4" aria-hidden />
         </Link>
-        <Link href={`/${view.course}/mistakes`} className={secondaryBtn}>
+        <Link href={mistakesHref(view.course)} className={secondaryBtn}>
           <ListChecks className="h-4 w-4" aria-hidden /> Your mistake log
         </Link>
         <button type="button" onClick={onNew} className={secondaryBtn}>

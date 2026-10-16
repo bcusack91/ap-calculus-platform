@@ -18,6 +18,12 @@
  * student's setting as on MCAT. Full-length form items are never in it: the
  * full-lengths stay unseen practice tests (they are not imported here).
  *
+ * AP (every course in AP_TOOL_COURSES): the course's EXIT-QUIZ pool only, filed
+ * under its CED units exactly as its unit tests file it (the unit-test
+ * config's assignment rules), with each item's legacy topic slug mapped to the
+ * production topic. Authored unit-test supplement items, items the diagnostic
+ * drops as testing no lesson, and the competitive banks are never in it.
+ *
  * A passage is one UNIT: it is selected, filtered and served whole, its
  * questions in authored order, never split. A discrete question is a unit of
  * one. Items are deduplicated by questionKey; when several topic slugs share
@@ -41,6 +47,8 @@ import { SAT_DOMAIN_LABELS, type MathDomain, type RWDomain } from '@/data/sat-pr
 import { canonicalizeSlug, craftStructureTopicFor } from '@/data/sat-practice/diagnostic-generator'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { actMixedItemSection, actTopicSection } from '@/lib/act-topic-sections'
+import { isApToolCourse, type ApToolCourse } from '@/lib/question-tool-courses'
+import { loadApUnitTestCourse } from '@/lib/unit-tests/ap-unit-test-registry'
 import type {
   GridInKey,
   QbankCourse,
@@ -513,6 +521,42 @@ export async function buildActPool(): Promise<QbankPool> {
 }
 
 /* ------------------------------------------------------------------ */
+/*  AP                                                                 */
+/* ------------------------------------------------------------------ */
+
+export async function buildApPool(course: ApToolCourse): Promise<QbankPool> {
+  const ap = await loadApUnitTestCourse(course)!
+  const units: QbankUnit[] = []
+  for (const it of ap.items) {
+    if (!it.exitPool || !it.served) continue
+    const section = it.unitId
+    const discipline = it.unitLabel
+    units.push({
+      id: it.key,
+      passageId: null,
+      section,
+      discipline,
+      topicSlug: it.topicSlug,
+      items: [{
+        questionKey: it.key,
+        section,
+        discipline,
+        topicSlug: it.topicSlug,
+        difficulty: asDifficulty(it.q.difficulty),
+        lowYield: false,
+        passageId: null,
+        question: it.q.question,
+        options: [...it.q.options],
+        correctIndex: it.q.correctAnswer,
+        explanation: it.q.explanation ?? '',
+        passage: null,
+      }],
+    })
+  }
+  return { course, units }
+}
+
+/* ------------------------------------------------------------------ */
 /*  Cache                                                              */
 /* ------------------------------------------------------------------ */
 
@@ -522,7 +566,10 @@ const poolCache = new Map<QbankCourse, Promise<QbankPool>>()
 export function getQbankPool(course: QbankCourse): Promise<QbankPool> {
   let p = poolCache.get(course)
   if (!p) {
-    p = (course === 'mcat' ? buildMcatPool() : course === 'act' ? buildActPool() : buildSatPool()).catch((err) => {
+    const build = isApToolCourse(course)
+      ? buildApPool(course)
+      : course === 'mcat' ? buildMcatPool() : course === 'act' ? buildActPool() : buildSatPool()
+    p = build.catch((err) => {
       poolCache.delete(course)
       throw err
     })

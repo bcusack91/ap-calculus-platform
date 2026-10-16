@@ -42,6 +42,7 @@ import MakeFlashcardButton from '@/components/MakeFlashcardButton'
 import ReviewReport from '@/components/ReviewReport'
 import FrqReviewList, { frqTotals, type AttemptReviewFrqItem } from '@/components/FrqReview'
 import { buildReviewReport } from '@/lib/review-report'
+import { isToolCourse, toolCourseSlug } from '@/lib/question-tool-courses'
 
 export interface ReviewPassageView {
   id: string
@@ -293,8 +294,12 @@ type Filter = 'missed' | 'flagged' | 'all' | 'report' | 'frq'
 const REPORT_KINDS = new Set(['mcat-fl', 'mcat-practice', 'qbank', 'sat-practice', 'diagnostic', 'act-fl'])
 /** Kinds whose per-question times are averages (per passage / per attempt). */
 const APPROX_TIMING_KINDS = new Set(['mcat-fl', 'mcat-practice'])
-/** Mistake-log / flashcard course slugs per review course (fallback when the API sent no flashcardCourseSlug). */
-const COURSE_SLUGS: Record<string, string> = { mcat: 'mcat-prep', sat: 'sat-prep', act: 'act-prep' }
+/**
+ * Mistake-log / flashcard course slug of a review course (fallback when the
+ * API sent no flashcardCourseSlug): 'mcat-prep' for 'mcat', and an AP
+ * course's own slug ('ap-chemistry'), which is also its review course key.
+ */
+const courseSlugOf = (course: string): string | undefined => (isToolCourse(course) ? toolCourseSlug(course) : undefined)
 
 /** Prefilled card for "Make a flashcard": the stem on the front, the answer (and why) on the back. */
 function flashcardFor(item: AttemptReviewItem): { front: string; back: string } {
@@ -428,7 +433,7 @@ function QuestionCard({
               <div className="mt-3">
                 <MakeFlashcardButton
                   {...flashcardFor(item)}
-                  courseSlug={ctx.flashcardCourseSlug ?? COURSE_SLUGS[ctx.course]}
+                  courseSlug={ctx.flashcardCourseSlug ?? courseSlugOf(ctx.course)}
                   topicSlug={item.topicSlug}
                   origin="mistake"
                 />

@@ -6,6 +6,7 @@
  * deterministic test variations so a student can retake the same unit
  * several times without the exact same set of questions.
  */
+import { shuffleOptions } from '@/lib/shuffle-options'
 
 export interface UnitPoolQuestion {
   question: string
@@ -244,6 +245,36 @@ export function generateUnitTest(
     questions,
     totalQuestions: questions.length,
     timeLimitMinutes,
+  }
+}
+
+/**
+ * Seed for a unit-test question's option order. The page shuffles with it,
+ * and the server recomputes it to log and rebuild an attempt, so the two must
+ * never drift: always go through this helper.
+ */
+export function unitTestOptionSeed(courseSlug: string, unitId: string, variant: number, question: string): string {
+  return `${courseSlug}-${unitId}-${variant}-${question}`
+}
+
+/** One question with its options in the order the unit-test page shows them. */
+export function shownUnitTestQuestion<T extends { question: string; options: string[]; correctAnswer: number }>(
+  courseSlug: string,
+  unitId: string,
+  variant: number,
+  q: T,
+): T {
+  const s = shuffleOptions(q.options, q.correctAnswer, unitTestOptionSeed(courseSlug, unitId, variant, q.question))
+  return { ...q, options: s.options, correctAnswer: s.correctIndex }
+}
+
+/** generateUnitTest with every question's options in the shown (shuffled) order. */
+export function generateShownUnitTest(config: CourseUnitTestConfig, unitId: string, variant: number): UnitTestData {
+  const data = generateUnitTest(config, unitId, variant)
+  return {
+    ...data,
+    // Seeded with the variant as requested (what the page passes and the attempt stores).
+    questions: data.questions.map((q) => shownUnitTestQuestion(config.courseSlug, unitId, variant, q)),
   }
 }
 

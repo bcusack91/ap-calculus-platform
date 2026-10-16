@@ -14,6 +14,11 @@ import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
 import FullLengthProgress from '@/components/FullLengthProgress'
 import ExamGoalCard from '@/components/ExamGoalCard'
 import { isFullLengthCourse } from '@/lib/full-length-progress'
+import { mistakesHref, qbankHref, toolCourseFor, type ToolCourse } from '@/lib/question-tool-courses'
+
+/** The hub's mistake-log / question-bank course: MCAT, SAT or an AP course (ACT links them from its own page). */
+const hubToolCourse = (courseKey: string, courseSlug?: string): ToolCourse | null =>
+  courseKey === 'act' ? null : toolCourseFor(courseKey, courseSlug)
 
 type PlanTopicStatus = PlanTopic & {
   priority?: 'high' | 'medium' | 'low'
@@ -282,20 +287,21 @@ export default function CourseStudyPlan({
           </div>
         )}
 
-        {/* How close they are to their next full-length (MCAT 4 cycles, SAT 2) */}
+        {/* How close they are to their next full-length (MCAT 4 cycles, SAT and every AP course 2;
+            isFullLengthCourse covers the AP class-plan keys, full-length = the AP practice exam) */}
         {status === 'authenticated' && loaded && isFullLengthCourse(courseKey) && (
           <FullLengthProgress course={courseKey} />
         )}
 
-        {/* Target score (and schools) against the latest full-length score */}
+        {/* Target score (and schools) against the latest full-length score (AP: a 1–5 goal, no schools) */}
         {status === 'authenticated' && loaded && isFullLengthCourse(courseKey) && (
           <ExamGoalCard course={courseKey} />
         )}
 
-        {/* Missed and flagged questions, until answered correctly twice (MCAT, SAT) */}
-        {status === 'authenticated' && loaded && (courseKey === 'mcat' || courseKey === 'sat') && (
+        {/* Missed and flagged questions, until answered correctly twice (MCAT, SAT, every AP course) */}
+        {status === 'authenticated' && loaded && hubToolCourse(courseKey, courseSlug) && (
           <Link
-            href={`/${courseKey}/mistakes`}
+            href={mistakesHref(hubToolCourse(courseKey, courseSlug)!)}
             className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 transition hover:border-accent-muted hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
           >
             <ListChecks className="h-4 w-4 shrink-0 text-accent" aria-hidden />
@@ -305,10 +311,10 @@ export default function CourseStudyPlan({
           </Link>
         )}
 
-        {/* Custom question bank: pick sections, topics, difficulty, timed or tutor (MCAT, SAT) */}
-        {status === 'authenticated' && loaded && (courseKey === 'mcat' || courseKey === 'sat') && (
+        {/* Custom question bank: pick sections (AP: units), topics, difficulty, timed or tutor (MCAT, SAT, every AP course) */}
+        {status === 'authenticated' && loaded && hubToolCourse(courseKey, courseSlug) && (
           <Link
-            href={`/${courseKey}/qbank`}
+            href={qbankHref(hubToolCourse(courseKey, courseSlug)!)}
             className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 transition hover:border-accent-muted hover:text-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200"
           >
             <SlidersHorizontal className="h-4 w-4 shrink-0 text-accent" aria-hidden />

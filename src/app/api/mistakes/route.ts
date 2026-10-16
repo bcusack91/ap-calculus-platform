@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic'
 const day = (s: string | null, end = false) => (s && /^\d{4}-\d{2}-\d{2}$/.test(s) ? new Date(`${s}T${end ? '23:59:59.999' : '00:00:00'}Z`) : undefined)
 
 /**
- * GET /api/mistakes?course=mcat|sat|act[&source&topic&section&from&to] — the
+ * GET /api/mistakes?course=mcat|sat|act|<ap-course-slug>[&source&topic&section&from&to] — the
  * student's active mistakes (missed or flagged, not yet answered correctly
  * twice since), newest first, plus the filter options present in the log.
  */
@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
   if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   const sp = req.nextUrl.searchParams
   const course = sp.get('course')
-  if (!isMistakeCourse(course)) return NextResponse.json({ error: 'course must be mcat, sat or act' }, { status: 400 })
+  if (!isMistakeCourse(course)) return NextResponse.json({ error: 'course must be mcat, sat, act or an AP course slug' }, { status: 400 })
   try {
     const all = await activeMistakesFor(userId, course)
     const items = filterMistakes(all, {
@@ -56,7 +56,8 @@ export async function GET(req: NextRequest) {
         })),
         filters: {
           sources: [...new Set(all.map((m) => m.origin.source))].sort(),
-          sections: [...new Set(all.map((m) => m.discipline).filter(Boolean))].sort(),
+          // Numeric order, so AP's "Unit 10" comes after "Unit 9".
+          sections: [...new Set(all.map((m) => m.discipline).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'en', { numeric: true })),
           topics: slugs.map((s) => ({ slug: s, title: titleOf.get(s) ?? s })).sort((a, b) => a.title.localeCompare(b.title)),
         },
       },

@@ -5,7 +5,7 @@ import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import { isSatMathDomain } from '@/lib/sat-math-topics'
 import Link from 'next/link'
 import {
-  generateUnitTest,
+  generateShownUnitTest,
   scoreUnitTest,
   variantCountFor,
   getQuestionsPerVariant,
@@ -15,7 +15,7 @@ import {
   type UnitTestData,
   type UnitTestResults,
 } from '@/lib/unit-tests/engine'
-import { shuffleOptions } from '@/lib/shuffle-options'
+import { diagnosticItemKey } from '@/lib/ap-topic-canonical'
 import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { InArticleAd } from '@/components/ad-banner'
@@ -135,12 +135,9 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
 
   const startTest = useCallback(
     (unit: UnitDef, variant: number) => {
-      const data = generateUnitTest(config, unit.id, variant)
-      data.questions.forEach(q => {
-        const s = shuffleOptions(q.options, q.correctAnswer, `${config.courseSlug}-${unit.id}-${variant}-${q.question}`)
-        q.options = s.options
-        q.correctAnswer = s.correctIndex
-      })
+      // Options in the shown order; the server recomputes the same order to
+      // log each answer (and to rebuild the attempt for review).
+      const data = generateShownUnitTest(config, unit.id, variant)
       setActiveUnit(unit)
       setActiveVariant(variant)
       setTestData(data)
@@ -185,6 +182,11 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
           correct: r.totalCorrect,
           total: r.totalQuestions,
           timeSpent: spent,
+          // Per-question answer log (AP courses): the choice in the shown
+          // order, and a fingerprint of each stem so the server can check it
+          // is grading the questions this page showed.
+          answers,
+          stems: testData.questions.map(q => diagnosticItemKey(q.question)),
         }),
       }).catch(() => {})
     }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { QBANK_DIFFICULTIES, QBANK_MAX_COUNT, QBANK_MIN_COUNT, type QbankDifficulty, type QbankFilters } from '@/lib/qbank-types'
+import { QBANK_DIFFICULTIES, QBANK_MAX_COUNT, QBANK_MIN_COUNT, isQbankCourse, type QbankDifficulty, type QbankFilters } from '@/lib/qbank-types'
 
 /**
  * Request parsing shared by the question-bank routes: the filter lists come
@@ -15,7 +15,7 @@ export const qbankFilterSchema = z.object({
 })
 
 export const qbankCreateSchema = qbankFilterSchema.extend({
-  course: z.enum(['mcat', 'sat', 'act']),
+  course: z.string().refine(isQbankCourse, 'Invalid course'),
   count: z.number().int().min(QBANK_MIN_COUNT).max(QBANK_MAX_COUNT),
   mode: z.enum(['timed', 'tutor']),
   pool: z.enum(['all', 'unused', 'incorrect', 'flagged']).default('all'),
