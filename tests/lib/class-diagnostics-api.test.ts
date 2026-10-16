@@ -267,6 +267,41 @@ describe('open class diagnostics (courses without a class test generator)', () =
   })
 })
 
+describe('GET — AP open diagnostics show the 1-5 score and retake deltas', () => {
+  it('reads estimatedAPScore for the score, the class average and the retake delta, without a growth band', async () => {
+    const { prisma } = await import('@/lib/prisma')
+    const assigned = new Date('2026-09-20T12:00:00.000Z')
+    mockFindMany.mockResolvedValueOnce([
+      { id: 'o1', courseKey: 'ap-chem', title: 'Diagnostic 1', dueDate: null, createdAt: assigned, testData: { mode: 'course-diagnostic' }, attempts: [] },
+    ])
+    vi.mocked(prisma.classroomMember.findMany).mockResolvedValueOnce([
+      { userId: 'u1', nickname: null, user: { name: 'Ava' } },
+      { userId: 'u2', nickname: null, user: { name: 'Ben' } },
+    ] as never)
+    vi.mocked(prisma.diagnosticTest.findMany).mockResolvedValueOnce([
+      { id: 'a1', userId: 'u1', createdAt: new Date('2026-09-21T09:00:00.000Z'), results: { percentage: 48, estimatedAPScore: 2 } },
+      { id: 'a2', userId: 'u1', createdAt: new Date('2026-09-28T09:00:00.000Z'), results: { percentage: 66, estimatedAPScore: 4 } },
+      { id: 'b1', userId: 'u2', createdAt: new Date('2026-09-22T09:00:00.000Z'), results: { percentage: 60, estimatedAPScore: 3 } },
+    ] as never)
+    const { GET } = await import(ROUTE)
+    const body = await (await GET(new Request('http://localhost/x') as never, ctx as never)).json()
+    const d = body.diagnostics[0]
+    const ava = d.students.find((s: { userId: string }) => s.userId === 'u1')
+    // First sitting is the counted score; the retake shows as a delta.
+    expect(ava.estimatedScore).toBe(2)
+    expect(ava.latestEstimatedScore).toBe(4)
+    expect(ava.scoreDelta).toBe(2)
+    expect(ava.attemptCount).toBe(2)
+    const ben = d.students.find((s: { userId: string }) => s.userId === 'u2')
+    expect(ben.estimatedScore).toBe(3)
+    expect(ben.scoreDelta).toBeNull()
+    // AP averages keep one decimal: (2 + 3) / 2.
+    expect(d.scoreAverages.overall).toBe(2.5)
+    // No calibrated sd for AP yet, so no growth band.
+    expect(d.growth).toBeNull()
+  })
+})
+
 describe('GET — growth across successive diagnostics', () => {
   const D1 = new Date('2026-09-01T12:00:00.000Z')
   const D2 = new Date('2026-09-08T12:00:00.000Z')

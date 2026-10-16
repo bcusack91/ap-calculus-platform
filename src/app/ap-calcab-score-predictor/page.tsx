@@ -11,7 +11,7 @@ export default function Page() {
       maxScore={5}
       scoreLabel="out of 5"
       accent="blue"
-      practiceLink={{ href: '/calcab-practice', label: 'Take Practice Exam' }}
+      practiceLink={{ href: '/ap-calcab-practice', label: 'Take Practice Exam' }}
       diagnosticLink={{ href: '/ap-calcab-diagnostic', label: 'Take Diagnostic' }}
     />
   )

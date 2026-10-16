@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { isReviewKind, resolveAttempt } from '@/lib/question-resolver'
 import { requireStudentInClassroom } from '@/lib/teacher-auth'
+import { courseSlugsForTopics } from '@/lib/study-tracking'
+import { reviewFlashcardCourse, reviewTopicSlugs } from '@/lib/review-flashcard-course'
 
 export const dynamic = 'force-dynamic'
 
@@ -36,5 +38,16 @@ export async function GET(req: Request, { params }: { params: Promise<{ kind: st
 
   const attempt = await resolveAttempt(kind, id, ownerId)
   if (!attempt) return NextResponse.json({ error: 'Attempt not found' }, { status: 404 })
-  return NextResponse.json({ attempt, student }, { headers: { 'Cache-Control': 'private, no-store' } })
+  // The DB course deck "Make a flashcard" files into (AP exit quizzes and
+  // practice exams included). Topic lookup only when the attempt's own course
+  // key can't answer it.
+  let flashcardCourseSlug = reviewFlashcardCourse(attempt)
+  if (!flashcardCourseSlug) {
+    const slugs = reviewTopicSlugs(attempt)
+    if (slugs.length) flashcardCourseSlug = reviewFlashcardCourse(attempt, await courseSlugsForTopics(slugs))
+  }
+  return NextResponse.json(
+    { attempt: { ...attempt, flashcardCourseSlug }, student },
+    { headers: { 'Cache-Control': 'private, no-store' } },
+  )
 }

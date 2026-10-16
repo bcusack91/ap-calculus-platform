@@ -6,10 +6,10 @@ export default function Page() {
   return (
     <ScorePredictor
       subject="AP Precalculus"
-      description="Your projected AP Precalculus readiness score based on quiz performance and topic mastery."
+      description="Your projected AP Precalculus exam score based on quiz performance and topic mastery."
       apiEndpoint="/api/ap-precalculus-score-predictor"
-      maxScore={100}
-      scoreLabel="out of 100"
+      maxScore={5}
+      scoreLabel="out of 5"
       accent="cyan"
       practiceLink={{ href: '/courses/ap-precalculus', label: 'Practice Topics' }}
       diagnosticLink={{ href: '/ap-precalculus-diagnostic', label: 'Take Diagnostic' }}

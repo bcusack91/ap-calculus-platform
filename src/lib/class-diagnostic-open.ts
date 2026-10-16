@@ -34,3 +34,17 @@ export function defaultDiagnosticCourseKey(pinnedCourseSlugs: string[]): string 
   }
   return null
 }
+
+/**
+ * A diagnostic sitting's score on the course's own scale. MCAT, SAT and ACT
+ * store `estimatedScore`; every AP diagnostic stores `estimatedAPScore` (1–5)
+ * instead, so reading only `estimatedScore` hid the AP score, the class
+ * average and the retake deltas on every AP class diagnostic.
+ */
+export function estimatedScoreOf(results: unknown): number | null {
+  if (!results || typeof results !== 'object') return null
+  const r = results as { estimatedScore?: unknown; estimatedAPScore?: unknown }
+  if (typeof r.estimatedScore === 'number' && Number.isFinite(r.estimatedScore)) return r.estimatedScore
+  if (typeof r.estimatedAPScore === 'number' && Number.isFinite(r.estimatedAPScore)) return r.estimatedAPScore
+  return null
+}

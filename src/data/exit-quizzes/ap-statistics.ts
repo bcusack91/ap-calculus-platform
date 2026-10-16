@@ -6286,7 +6286,7 @@ export const apStatsQuestionPool: APStatsQuestion[] = [
   },
 ]
 
-export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug: string }[] {
+export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; question: string; options: string[]; correctIndex: number; explanation: string; category: string; topicSlug: string; partNumber?: number }[] {
   let pool = apStatsQuestionPool
   if (topicSlug) pool = relevantPool(pool, topicSlug)
   return shuffleArray(pool).slice(0, count).map((q, i) => ({
@@ -6297,5 +6297,8 @@ export function generateExitQuiz(count = 10, topicSlug?: string): { id: string; 
     explanation: q.explanation,
     category: q.domain,
     topicSlug: q.topicSlug,
+    // The lesson part the item tests, so a failed quiz sends the student
+    // back to that part instead of the whole lesson.
+    partNumber: q.part,
   }))
 }

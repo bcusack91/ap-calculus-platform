@@ -27,7 +27,7 @@ export const AP_PRACTICE_EXAMS: Record<string, ApPracticeExam> = {
   'ap-calcbc': { courseSlug: 'ap-calculus-bc', path: '/ap-calcbc-practice', load: () => import('@/data/ap-calcbc-practice/config').then((m) => m.config) },
   'ap-chem': { courseSlug: 'ap-chemistry', path: '/ap-chem-practice', load: () => import('@/data/ap-chem-practice/config').then((m) => m.config) },
   'ap-csa': { courseSlug: 'ap-computer-science-a', path: '/ap-csa-practice', load: () => import('@/data/ap-csa-practice/config').then((m) => m.config) },
-  'ap-csp': { courseSlug: 'ap-cs-principles', path: '/ap-csp-practice', load: () => import('@/data/ap-csp-practice/config').then((m) => m.config) },
+  'ap-csp': { courseSlug: 'ap-computer-science-principles', path: '/ap-csp-practice', load: () => import('@/data/ap-csp-practice/config').then((m) => m.config) },
   'ap-english-lang': { courseSlug: 'ap-english-language', path: '/ap-english-lang-practice', load: () => import('@/data/ap-english-lang-practice/config').then((m) => m.config) },
   'ap-english-lit': { courseSlug: 'ap-english-literature', path: '/ap-english-lit-practice', load: () => import('@/data/ap-english-lit-practice/config').then((m) => m.config) },
   'ap-enviro': { courseSlug: 'ap-environmental-science', path: '/ap-enviro-practice', load: () => import('@/data/ap-enviro-practice/config').then((m) => m.config) },

@@ -39,6 +39,7 @@ import { AnswerStatsSummary, formatShare, sharesOf, useAnswerStats, type Questio
 import AskAboutQuestion from '@/components/AskAboutQuestion'
 import MakeFlashcardButton from '@/components/MakeFlashcardButton'
 import ReviewReport from '@/components/ReviewReport'
+import FrqReviewList, { frqTotals, type AttemptReviewFrqItem } from '@/components/FrqReview'
 import { buildReviewReport } from '@/lib/review-report'
 
 export interface ReviewPassageView {
@@ -82,10 +83,14 @@ export interface AttemptReviewData {
   id: string
   title: string
   course: string
+  /** DB Course.slug for "Make a flashcard" (src/lib/review-flashcard-course.ts); covers AP, which `course` does not. */
+  flashcardCourseSlug?: string
   takenAt: string
   score: { correct: number; total: number; label?: string } | null
   backHref: string
   items: (AttemptReviewItem | null)[]
+  /** Free-response items with the student's responses and rubric (AP practice exams). */
+  frq?: AttemptReviewFrqItem[]
 }
 
 export type ItemStatus = 'correct' | 'wrong' | 'skipped' | 'typed'
@@ -280,13 +285,13 @@ export function Explanation({ text, ready, item }: { text: string; ready?: boole
   )
 }
 
-type Filter = 'missed' | 'flagged' | 'all' | 'report'
+type Filter = 'missed' | 'flagged' | 'all' | 'report' | 'frq'
 
 /** Attempts long enough for a Report tab: full-lengths, practice tests, question-bank sets, SAT tests and diagnostics. */
 const REPORT_KINDS = new Set(['mcat-fl', 'mcat-practice', 'qbank', 'sat-practice', 'diagnostic', 'act-fl'])
 /** Kinds whose per-question times are averages (per passage / per attempt). */
 const APPROX_TIMING_KINDS = new Set(['mcat-fl', 'mcat-practice'])
-/** Mistake-log / flashcard course slugs per review course. */
+/** Mistake-log / flashcard course slugs per review course (fallback when the API sent no flashcardCourseSlug). */
 const COURSE_SLUGS: Record<string, string> = { mcat: 'mcat-prep', sat: 'sat-prep', act: 'act-prep' }
 
 /** Prefilled card for "Make a flashcard": the stem on the front, the answer (and why) on the back. */
@@ -308,6 +313,7 @@ interface CardContext {
   kind: string
   attemptId: string
   course: string
+  flashcardCourseSlug?: string
 }
 
 function QuestionCard({
@@ -420,7 +426,7 @@ function QuestionCard({
               <div className="mt-3">
                 <MakeFlashcardButton
                   {...flashcardFor(item)}
-                  courseSlug={COURSE_SLUGS[ctx.course]}
+                  courseSlug={ctx.flashcardCourseSlug ?? COURSE_SLUGS[ctx.course]}
                   topicSlug={item.topicSlug}
                   origin="mistake"
                 />
@@ -451,7 +457,9 @@ export default function AttemptReview({ attempt, studentName }: { attempt: Attem
   const rows: Row[] = useMemo(() => attempt.items.map((item, pos) => ({ pos, item })), [attempt.items])
   const missed = useMemo(() => rows.filter((r) => r.item && (itemStatus(r.item) === 'wrong' || itemStatus(r.item) === 'skipped')), [rows])
   const flagged = useMemo(() => rows.filter((r) => r.item?.flagged), [rows])
-  const [filter, setFilter] = useState<Filter>(() => (missed.length > 0 ? 'missed' : 'all'))
+  const frq = attempt.frq ?? []
+  const frqScore = frq.length ? frqTotals(frq) : null
+  const [filter, setFilter] = useState<Filter>(() => (missed.length > 0 ? 'missed' : rows.length === 0 && frq.length > 0 ? 'frq' : 'all'))
   // Missed questions start open; everything else is one click away.
   const [open, setOpen] = useState<Set<number>>(() => new Set(missed.map((r) => r.pos)))
   const toggle = (pos: number) =>
@@ -462,7 +470,7 @@ export default function AttemptReview({ attempt, studentName }: { attempt: Attem
       return next
     })
 
-  const visible = filter === 'missed' ? missed : filter === 'flagged' ? flagged : filter === 'report' ? NO_ROWS : rows
+  const visible = filter === 'missed' ? missed : filter === 'flagged' ? flagged : filter === 'report' || filter === 'frq' ? NO_ROWS : rows
 
   // How others answered: one batched request for the whole attempt (it is
   // already submitted, so every question has been answered).
@@ -471,7 +479,10 @@ export default function AttemptReview({ attempt, studentName }: { attempt: Attem
     [attempt.items],
   )
   const stats = useAnswerStats(statRequests)
-  const ctx: CardContext = useMemo(() => ({ kind: attempt.kind, attemptId: attempt.id, course: attempt.course }), [attempt.kind, attempt.id, attempt.course])
+  const ctx: CardContext = useMemo(
+    () => ({ kind: attempt.kind, attemptId: attempt.id, course: attempt.course, flashcardCourseSlug: attempt.flashcardCourseSlug }),
+    [attempt.kind, attempt.id, attempt.course, attempt.flashcardCourseSlug],
+  )
 
   const hasReport = REPORT_KINDS.has(attempt.kind) && attempt.items.some(Boolean)
   const report = useMemo(() => {
@@ -520,7 +531,8 @@ export default function AttemptReview({ attempt, studentName }: { attempt: Attem
   const tabs: { key: Filter; label: string; count?: number }[] = [
     { key: 'missed', label: 'Missed', count: missed.length },
     { key: 'flagged', label: 'Flagged', count: flagged.length },
-    { key: 'all', label: 'All', count: rows.length },
+    { key: 'all', label: frq.length ? 'All multiple choice' : 'All', count: rows.length },
+    ...(frq.length ? [{ key: 'frq' as const, label: 'Free response', count: frq.length }] : []),
     ...(hasReport ? [{ key: 'report' as const, label: 'Report' }] : []),
   ]
 
@@ -540,8 +552,13 @@ export default function AttemptReview({ attempt, studentName }: { attempt: Attem
               </span>
             )}
             <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
-              {attempt.score.correct} of {attempt.score.total} correct
+              {attempt.score.correct} of {attempt.score.total} {frqScore ? 'multiple-choice ' : ''}correct
             </span>
+            {frqScore && (
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
+                · Free response {frqScore.earned} of {frqScore.possible} points (self-scored)
+              </span>
+            )}
           </p>
         )}
       </header>
@@ -576,7 +593,9 @@ export default function AttemptReview({ attempt, studentName }: { attempt: Attem
         </p>
       )}
 
-      {filter === 'report' && report ? (
+      {filter === 'frq' ? (
+        <FrqReviewList items={frq} studentName={studentName} />
+      ) : filter === 'report' && report ? (
         <ReviewReport
           report={report}
           approximateTiming={APPROX_TIMING_KINDS.has(attempt.kind)}

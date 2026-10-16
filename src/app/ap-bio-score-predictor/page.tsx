@@ -12,7 +12,7 @@ export default function Page() {
       scoreLabel="out of 5"
       accent="green"
       practiceLink={{ href: '/ap-bio-practice', label: 'Take Practice Exam' }}
-      diagnosticLink={{ href: '/bio-diagnostic', label: 'Take Diagnostic' }}
+      diagnosticLink={{ href: '/ap-bio-diagnostic', label: 'Take Diagnostic' }}
     />
   )
 }

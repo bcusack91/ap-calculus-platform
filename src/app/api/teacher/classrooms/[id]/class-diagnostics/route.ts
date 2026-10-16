@@ -3,7 +3,7 @@ import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
 import { scheduleClassroom } from '@/lib/cycle-scheduler-server'
 import { CLASS_PLAN_COURSES, classPlanCourse, scoreLabelFromResults } from '@/lib/class-plan-config'
-import { isOpenClassDiagnostic, OPEN_DIAGNOSTIC_TEST_DATA, defaultDiagnosticCourseKey } from '@/lib/class-diagnostic-open'
+import { isOpenClassDiagnostic, OPEN_DIAGNOSTIC_TEST_DATA, defaultDiagnosticCourseKey, estimatedScoreOf } from '@/lib/class-diagnostic-open'
 import { SAT_DIAGNOSTIC_SCORE_SD } from '@/lib/sat-scoring'
 import { hasStoredReview, teacherReviewHref } from '@/lib/teacher-review-attempts'
 
@@ -220,11 +220,6 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
     for (const l of latestMcat) if (l._max.createdAt) latestMcatByUser.set(l.userId, l._max.createdAt)
   }
 
-  const estimatedScoreOf = (results: unknown): number | null => {
-    const v = (results as { estimatedScore?: unknown } | null | undefined)?.estimatedScore
-    return typeof v === 'number' ? v : null
-  }
-
   // Growth needs each student's FIRST-sitting score on every earlier
   // diagnostic of the same course, so it is built once up front (oldest
   // first) rather than per-row.
@@ -269,7 +264,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       const priorDiagnostics = earlierSameCourse.get(d.id) ?? []
       const students = members.map(m => {
         const attempt = firstByUser.get(m.userId)
-        const results = attempt?.results as { percentage?: unknown; estimatedScore?: unknown; mathScore?: unknown; rwScore?: unknown } | undefined
+        const results = attempt?.results as { percentage?: unknown; mathScore?: unknown; rwScore?: unknown } | undefined
         // Retake delta: latest attempt vs the one before it (both need a
         // real-scale estimatedScore for the difference to mean anything).
         const all = attemptsByUser.get(m.userId) ?? []
@@ -305,7 +300,8 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
           reviewHref: attempt && hasStoredReview(attempt.results) ? teacherReviewHref('diagnostic', attempt.id, id, m.userId) : null,
           scoreLabel: attempt ? scoreLabelFromResults(attempt.results) : null,
           percentage: typeof results?.percentage === 'number' ? results.percentage : null,
-          estimatedScore: typeof results?.estimatedScore === 'number' ? results.estimatedScore : null,
+          // MCAT/SAT/ACT `estimatedScore`, or the AP 1-5 `estimatedAPScore`.
+          estimatedScore: attempt ? estimatedScoreOf(attempt.results) : null,
           mathScore: typeof results?.mathScore === 'number' ? results.mathScore : null,
           rwScore: typeof results?.rwScore === 'number' ? results.rwScore : null,
           // MCAT: the four 118-132 section scaled scores of the first sitting.
@@ -344,10 +340,14 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
       // Real test-scale averages (owner request): SAT reports 400–1600 with
       // Math and R&W section scores; MCAT reports 472–528. Averages only over
       // attempts that actually carry the field.
-      const avgOf = (vals: (number | null)[]) => {
+      const avgOf = (vals: (number | null)[], decimals = 0) => {
         const nums = vals.filter((v): v is number => typeof v === 'number')
-        return nums.length > 0 ? Math.round(nums.reduce((a, b) => a + b, 0) / nums.length) : null
+        const f = 10 ** decimals
+        return nums.length > 0 ? Math.round((nums.reduce((a, b) => a + b, 0) / nums.length) * f) / f : null
       }
+      // AP scores run 1-5, where a whole-number class average (3.4 -> 3) hides
+      // most of the spread, so AP averages keep one decimal.
+      const isAp = classPlanCourse(d.courseKey)?.courseSlug?.startsWith('ap-') ?? false
       // MCAT: per-section (118-132) class averages, in C/P·CARS·B/B·P/S order,
       // over attempts that carry all four section scores.
       const sectionAverages = d.courseKey === 'mcat'
@@ -357,7 +357,7 @@ export async function GET(_req: NextRequest, { params }: Ctx) {
           })).filter((s): s is { short: string; avg: number } => s.avg !== null)
         : []
       const scoreAverages = {
-        overall: avgOf(taken.map(x => x.estimatedScore)),
+        overall: avgOf(taken.map(x => x.estimatedScore), isAp ? 1 : 0),
         math: avgOf(taken.map(x => x.mathScore)),
         rw: avgOf(taken.map(x => x.rwScore)),
         sections: sectionAverages.length === MCAT_SECTIONS.length ? sectionAverages : null,

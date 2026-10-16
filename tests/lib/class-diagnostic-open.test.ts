@@ -6,7 +6,7 @@
  * assigned — an older sitting doesn't count.
  */
 import { describe, it, expect, vi, beforeEach } from 'vitest'
-import { defaultDiagnosticCourseKey, isOpenClassDiagnostic, OPEN_DIAGNOSTIC_TEST_DATA } from '@/lib/class-diagnostic-open'
+import { defaultDiagnosticCourseKey, estimatedScoreOf, isOpenClassDiagnostic, OPEN_DIAGNOSTIC_TEST_DATA } from '@/lib/class-diagnostic-open'
 
 const mockAuth = vi.fn()
 const mockMembers = vi.fn()
@@ -85,5 +85,13 @@ describe('class-diagnostic-open helpers', () => {
     expect(defaultDiagnosticCourseKey(['mcat-competitive', 'ap-biology', 'sat-prep'])).toBe('ap-bio')
     expect(defaultDiagnosticCourseKey(['mcat-prep'])).toBe('mcat')
     expect(defaultDiagnosticCourseKey([])).toBeNull()
+  })
+
+  it('reads the AP 1-5 score as well as the MCAT/SAT/ACT scaled score', () => {
+    expect(estimatedScoreOf({ estimatedScore: 1210 })).toBe(1210)
+    expect(estimatedScoreOf({ estimatedAPScore: 3, percentage: 55 })).toBe(3)
+    expect(estimatedScoreOf({ percentage: 55 })).toBeNull()
+    expect(estimatedScoreOf(null)).toBeNull()
+    expect(estimatedScoreOf({ estimatedAPScore: '3' })).toBeNull()
   })
 })
