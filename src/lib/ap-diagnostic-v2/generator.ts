@@ -112,23 +112,30 @@ export function generateApDiagnosticV2(bank: ApDiagV2Bank, opts: GenerateOptions
 
   // 1. Stimulus sets: never-seen sets first, then partly seen, then fully seen;
   //    a set only goes where its unit still has room for all of it.
+  //    Up to setsPerSitting sets always; beyond that, a fully unseen set is
+  //    also taken when its unit has too few unseen standalone items left to
+  //    fill its quota. Otherwise a set-heavy bank repeats standalone items from
+  //    the second sitting while unseen sets sit unused.
+  const standalone = bank.items.filter((i) => !i.stimulusId)
+  const unseenStandaloneLeft: Record<string, number> = {}
+  for (const i of standalone) if (!isSeen(i)) unseenStandaloneLeft[i.unit] = (unseenStandaloneLeft[i.unit] ?? 0) + 1
   const sets = stimulusSets(bank).filter((s) => s.items.every((i) => i.unit === s.items[0].unit && i.unit in quotas))
   const seenCount = (s: (typeof sets)[number]) => s.items.filter(isSeen).length
   const orderedSets = shuffle(sets, rng)
     .map((s) => ({ s, rank: seenCount(s) === 0 ? 0 : seenCount(s) < s.items.length ? 1 : 2 }))
     .sort((a, b) => a.rank - b.rank)
-    .map((x) => x.s)
   let setsServed = 0
-  for (const set of orderedSets) {
-    if (setsServed >= bp.setsPerSitting) break
+  for (const { s: set, rank } of orderedSets) {
     const unit = set.items[0].unit
     if (remaining[unit] < set.items.length) continue
+    const underCap = setsServed < bp.setsPerSitting
+    const freshNeeded = rank === 0 && (unseenStandaloneLeft[unit] ?? 0) < remaining[unit]
+    if (!underCap && !freshNeeded) continue
     set.items.forEach(take)
     setsServed++
   }
 
   // 2. Standalone items per unit, matching that unit's difficulty targets.
-  const standalone = bank.items.filter((i) => !i.stimulusId)
   for (const u of bp.units) {
     const pool = shuffle(standalone.filter((i) => i.unit === u.id), rng)
     const unseen = pool.filter((i) => !isSeen(i))

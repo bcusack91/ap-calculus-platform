@@ -198,19 +198,35 @@ describe('generator (synthetic bank at the switch minimum)', () => {
   })
 })
 
-describe('sample banks (end to end)', () => {
-  it.each(AP_DIAG_V2_COURSES)('%s: passes the bank checks and serves its stimulus set whole', (course) => {
+describe('course banks (end to end)', () => {
+  const sittingLength = (course: (typeof AP_DIAG_V2_COURSES)[number]) =>
+    Object.values(unitQuotas(AP_DIAG_V2_BLUEPRINTS[course])).reduce((a, b) => a + b, 0)
+
+  it.each(AP_DIAG_V2_COURSES)('%s: passes the bank checks and serves every stimulus set whole, in authored order', (course) => {
     const bank = AP_DIAG_V2_BANKS[course]
     const report = validateBank(bank, { productionTopics: new Set(FIXTURE[course]) })
     expect(report.errors).toEqual([])
-    expect(bank.items.length).toBeGreaterThanOrEqual(8)
     expect(bank.stimuli.length).toBeGreaterThanOrEqual(1)
     const t = generateApDiagnosticV2(bank, { rng: mulberry32(7) })
-    expect(t.questions).toHaveLength(bank.items.length)
-    const sid = bank.stimuli[0].id
-    const pos = t.questions.map((q, i) => (q.passage?.id === sid ? i : -1)).filter((i) => i >= 0)
-    expect(pos.map((p) => t.questions[p].id)).toEqual(bank.items.filter((i) => i.stimulusId === sid).map((i) => i.id))
-    expect(pos[pos.length - 1] - pos[0]).toBe(pos.length - 1)
+    expect(t.questions).toHaveLength(Math.min(bank.items.length, sittingLength(course)))
+    const served = [...new Set(t.questions.map((q) => q.passage?.id).filter((x): x is string => !!x))]
+    for (const sid of served) {
+      const pos = t.questions.map((q, i) => (q.passage?.id === sid ? i : -1)).filter((i) => i >= 0)
+      expect(pos.map((p) => t.questions[p].id)).toEqual(bank.items.filter((i) => i.stimulusId === sid).map((i) => i.id))
+      expect(pos[pos.length - 1] - pos[0]).toBe(pos.length - 1)
+    }
+  })
+
+  it.each(AP_DIAG_V2_COURSES)('%s: a ready bank gives at least two fully fresh sittings in a row', (course) => {
+    const bank = AP_DIAG_V2_BANKS[course]
+    if (!bankReadiness(bank).ready) return
+    const seen = new Set<string>()
+    for (let n = 0; n < 2; n++) {
+      const t = generateApDiagnosticV2(bank, { seen, rng: mulberry32(100 + n) })
+      const repeats = t.questions.filter((q) => seenKeysForServed(q).some((k) => seen.has(k)))
+      expect(repeats.map((q) => q.id), `${course} sitting ${n + 1}`).toEqual([])
+      t.questions.flatMap(seenKeysForServed).forEach((k) => seen.add(k))
+    }
   })
 
   it('the figure stimulus diagram is safe to inject; unsafe markup is refused', () => {
@@ -233,7 +249,9 @@ describe('switch minimum (versioning guard)', () => {
   })
 
   it('a sample bank is below the minimum, a minimum-stocked bank meets it, one item short fails', () => {
-    expect(bankReadiness(AP_DIAG_V2_BANKS['ap-chemistry']).ready).toBe(false)
+    const full = AP_DIAG_V2_BANKS['ap-chemistry']
+    const sampleSized = { ...full, items: full.items.slice(0, 8) }
+    expect(bankReadiness(sampleSized).ready).toBe(false)
     const bank = syntheticBank('ap-chemistry')
     expect(bankReadiness(bank).ready).toBe(true)
     const short = { ...bank, items: bank.items.filter((i) => i.id !== bank.items.find((x) => x.unit === 'unit-6' && !x.stimulusId)!.id) }
@@ -295,9 +313,11 @@ describe('stored attempts (history, review, seen route)', () => {
   it('the review layer rebuilds every question with its stimulus', () => {
     const items = diagnosticReviewItems(stored)
     expect(items).toHaveLength(t.questions.length)
-    const setItems = items.filter((i) => i.passage?.id === 'phys1-s001')
-    expect(setItems).toHaveLength(3)
-    expect(setItems[0].passage?.body).toContain('Block X')
+    const sid = t.questions.find((q) => q.passage)?.passage?.id
+    expect(sid).toBeTruthy()
+    const setItems = items.filter((i) => i.passage?.id === sid)
+    expect(setItems).toHaveLength(t.questions.filter((q) => q.passage?.id === sid).length)
+    expect(setItems[0].passage?.body).toBe(bank.stimuli.find((x) => x.id === sid)?.content)
     expect(items.every((i) => i.topicSlug && FIXTURE['ap-physics-1'].includes(i.topicSlug))).toBe(true)
   })
 
