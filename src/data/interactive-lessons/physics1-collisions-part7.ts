@@ -128,19 +128,19 @@ This final lesson brings together all collision concepts: elastic, inelastic, pe
       content: `
 **AP Calculation Practice** 🧮
 
-1) A 3 kg ball at +10 m/s collides elastically with a 1 kg ball at rest. What is $v_{1f}$? (in m/s)
+1) A 3 kg ball at +10 m/s collides head-on with a 1 kg ball at rest. Afterward the 3 kg ball moves at +5 m/s. What is the velocity of the 1 kg ball? (in m/s)
 
-2) What is $v_{2f}$? (in m/s)
+2) What is the total kinetic energy of the two balls after the collision? (in J)
 
 3) A 2 kg ball at +6 m/s and a 4 kg ball at −3 m/s collide and stick. What is the final velocity? (in m/s)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['5', '15', '0'],
-        hint1: '$v_{1f} = \\frac{3-1}{3+1}(10) = \\frac{2}{4}(10)$',
-        hint2: '$v_{2f} = \\frac{2(3)}{3+1}(10) = \\frac{6}{4}(10)$',
+        correctAnswers: ['15', '150', '0'],
+        hint1: 'Momentum: $(3)(10) = (3)(5) + (1)v_2$',
+        hint2: '$KE_f = \\frac{1}{2}(3)(5)^2 + \\frac{1}{2}(1)v_2^2$, using $v_2$ from part 1',
         hint3: '$v_f = [(2)(6) + (4)(-3)]/(2+4) = (12-12)/6$',
-        explanation: '1) $v_{1f} = (2/4)(10) = 5$ m/s. 2) $v_{2f} = (6/4)(10) = 15$ m/s. 3) $v_f = 0/6 = 0$ m/s — the combined object is at rest!'
+        explanation: '1) $30 = 15 + v_2$, so $v_2 = +15$ m/s. 2) $KE_f = 37.5 + 112.5 = 150$ J. The initial KE was $\\frac{1}{2}(3)(10)^2 = 150$ J, so this collision is elastic. 3) $v_f = 0/6 = 0$ m/s — the combined object is at rest!'
       }
     },
     {
@@ -192,15 +192,15 @@ This final lesson brings together all collision concepts: elastic, inelastic, pe
             explanation: 'Equal masses at equal but opposite speeds in a perfectly inelastic collision: $v_f = 0$, so ALL kinetic energy is lost. $KE_f = 0$. This is the absolute maximum KE loss scenario.'
           },
           {
-            question: 'A neutron (mass $m$) collides elastically with a stationary carbon-12 nucleus (mass $12m$). What fraction of the neutron\'s kinetic energy is transferred to the carbon?',
+            question: 'A 1 kg cart moving at 6 m/s strikes a 2 kg cart at rest on a level frictionless track. The 1 kg cart rebounds at 2 m/s. What fraction of the 1 kg cart\'s initial kinetic energy is transferred to the 2 kg cart?',
             options: [
-              '$2/13$',
-              '$12/13$',
-              '$48/169$',
-              '$144/169$'
+              '$1/9$',
+              '$4/9$',
+              '$8/9$',
+              '$2/3$'
             ],
             correctAnswer: 2,
-            explanation: '$v_{2f} = \\frac{2m}{13m}v_{1i} = \\frac{2}{13}v_{1i}$. $KE_{\\text{carbon}} = \\frac{1}{2}(12m)(\\frac{2}{13}v_{1i})^2 = \\frac{48}{338}mv_{1i}^2 = \\frac{48}{169} \\times \\frac{1}{2}mv_{1i}^2$. Fraction = $48/169 \\approx 28.4\\%$.'
+            explanation: 'Momentum: $(1)(6) = (1)(-2) + (2)v_2$, so $v_2 = 4$ m/s. $KE_i = \\frac{1}{2}(1)(6)^2 = 18$ J and the 2 kg cart gets $\\frac{1}{2}(2)(4)^2 = 16$ J, so the fraction is $16/18 = 8/9$. (The 1 kg cart keeps 2 J, so no energy is lost: the collision is elastic.) $1/9$ is the fraction the 1 kg cart keeps, $4/9$ compares only the squared speeds, and $2/3$ compares the speeds themselves.'
           }
         ]
       }

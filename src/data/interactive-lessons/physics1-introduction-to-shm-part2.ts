@@ -60,9 +60,13 @@ The **period is the same** as the horizontal case: $T = 2\\pi\\sqrt{m/k}$
 
 The equilibrium point just shifts downward by $x_0$. The oscillation about this new equilibrium is still SHM with the same $T$.
 
-### Two Springs Side by Side
+### Finding $T$ from the Static Stretch
 
-If two springs are attached side by side to the same block, both stretch by the same $x$ and each pulls back with its own Hooke's-law force. The net restoring force is $(k_1 + k_2)x$, so the pair acts like one spring of constant $k_1 + k_2$. Reason from the forces on the block rather than memorizing combination formulas.
+If a hanging mass stretches a vertical spring by $x_0$ at equilibrium, then $k = mg/x_0$, so
+
+$$T = 2\\pi\\sqrt{\\frac{m}{k}} = 2\\pi\\sqrt{\\frac{x_0}{g}}$$
+
+A spring that sags 0.10 m under its load oscillates with $T = 2\\pi\\sqrt{0.10/10} \\approx 0.63$ s, whatever the mass. This does not make the period depend on $g$: a different $g$ changes $x_0$ in the same proportion, so $x_0/g = m/k$ stays fixed. AP Physics 1 problems use one spring at a time; combining springs into an equivalent spring constant is not on the exam.
       `
     },
     {
@@ -119,15 +123,15 @@ If two springs are attached side by side to the same block, both stretch by the 
 
 2) A mass-spring system has $T = 0.8$ s and $k = 50$ N/m. What is the mass? (in kg, round to 3 significant figures)
 
-3) Two springs ($k_1 = 100$ N/m, $k_2 = 300$ N/m) are connected in parallel to a 2 kg mass. What is the period? (in seconds, round to 3 significant figures)
+3) A 0.50 kg mass hangs at rest from a vertical spring and stretches it 0.20 m. It is pulled down slightly and released. What is the period? (use $g = 10$ $m/s^{2}$; in seconds, round to 3 significant figures)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.314', '0.811', '0.444'],
+        correctAnswers: ['0.314', '0.811', '0.889'],
         hint1: '$T = 2\\pi\\sqrt{m/k} = 2\\pi\\sqrt{0.5/200}$',
         hint2: '$T = 2\\pi\\sqrt{m/k} \\Rightarrow m = kT^2/(4\\pi^2)$',
-        hint3: 'Both springs stretch by $x$, so the net restoring force is $(100 + 300)x$: the pair acts like one spring of 400 N/m. $T = 2\\pi\\sqrt{2/400}$',
-        explanation: '1) $T = 2\\pi\\sqrt{0.5/200} = 2\\pi\\sqrt{0.0025} = 2\\pi(0.05) = 0.314$ s. 2) $m = 50(0.64)/(4\\pi^2) = 32/39.48 = 0.811$ kg. 3) $k_{\\text{eff}} = 400$. $T = 2\\pi\\sqrt{2/400} = 2\\pi\\sqrt{0.005} = 2\\pi(0.0707) = 0.444$ s.'
+        hint3: 'At equilibrium $kx_0 = mg$, so $k = (0.50)(10)/0.20 = 25$ N/m. Then $T = 2\\pi\\sqrt{0.50/25}$',
+        explanation: '1) $T = 2\\pi\\sqrt{0.5/200} = 2\\pi\\sqrt{0.0025} = 2\\pi(0.05) = 0.314$ s. 2) $m = 50(0.64)/(4\\pi^2) = 32/39.48 = 0.811$ kg. 3) $k = mg/x_0 = 5.0/0.20 = 25$ N/m. $T = 2\\pi\\sqrt{0.50/25} = 2\\pi\\sqrt{0.02} = 2\\pi(0.1414) = 0.889$ s.'
       }
     },
     {
@@ -151,10 +155,10 @@ If two springs are attached side by side to the same block, both stretch by the 
             explanation: 'A stiffer spring (larger $k$) decreases the period: $T \\propto 1/\\sqrt{k}$. Stiffer → faster oscillation.'
           },
           {
-            label: 'The effective spring constant for two springs in parallel is:',
-            options: ['$k_{1}$ + $k_{2}$', '$1/(1/k_{1} + 1/k_{2})$', '$k_{1}k_{2}$', '$k_{1}$ - $k_{2}$'],
+            label: 'On the same planet, if a hanging mass makes its spring sag farther at equilibrium (larger $x_0$), the period:',
+            options: ['increases', 'decreases', 'stays the same', 'depends only on the amplitude'],
             correctIndex: 0,
-            explanation: 'Side by side, both springs stretch by the same $x$, so their forces add: $(k_1 + k_2)x$. The pair acts like one spring of constant $k_1 + k_2$.'
+            explanation: 'At equilibrium $k = mg/x_0$, so $T = 2\\pi\\sqrt{m/k} = 2\\pi\\sqrt{x_0/g}$. A larger sag means a softer spring for that mass, and the period increases.'
           }
         ]
       }
@@ -168,15 +172,15 @@ If two springs are attached side by side to the same block, both stretch by the 
       exercise: {
         questions: [
           {
-            question: 'A spring-mass system oscillates with period $T$. If the spring is cut in half and the same mass is attached to one piece, the new period is:',
+            question: 'A student wants to double the period of a block-spring oscillator. She should:',
             options: [
-              '$T/\\sqrt{2}$',
-              '$T/2$',
-              '$\\sqrt{2}T$',
-              '$2T$'
+              'Double the amplitude of the motion',
+              'Double the mass of the block',
+              'Replace the block with one 4 times as massive',
+              'Use a spring that is twice as stiff'
             ],
-            correctAnswer: 0,
-            explanation: 'Cutting a spring in half doubles its spring constant ($k\' = 2k$). $T\' = 2\\pi\\sqrt{m/(2k)} = T/\\sqrt{2}$.'
+            correctAnswer: 2,
+            explanation: '$T = 2\\pi\\sqrt{m/k}$, so $T \\propto \\sqrt{m}$. Doubling $T$ needs $\\sqrt{m}$ to double, which takes four times the mass. Doubling the mass only multiplies $T$ by $\\sqrt{2}$, a stiffer spring shortens the period, and the amplitude has no effect.'
           },
           {
             question: 'On the Moon ($g_{\\text{Moon}} = g/6$), a mass-spring system will oscillate with a period that is:',

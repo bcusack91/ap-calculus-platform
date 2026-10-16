@@ -75,41 +75,43 @@ $$f_k = \\mu_k N = \\mu_k(mg + F\\sin\\theta)$$
 
 ### Comparing Pull vs. Push
 
-For the same force magnitude and angle, pulling upward is always more efficient:
+For the same force magnitude and angle, pulling upward on a sliding box always gives more acceleration than pushing downward:
 
 | Method | Normal Force | Friction | Horizontal Acceleration |
 |--------|-------------|---------|------------------------|
 | Pull up at $\\theta$ | $mg - F\\sin\\theta$ | Lower | Higher |
 | Push down at $\\theta$ | $mg + F\\sin\\theta$ | Higher | Lower |
-| Horizontal push | $mg$ | Middle | Middle |
+| Horizontal push | $mg$ | Middle | Middle at small angles |
       `
     },
     {
       id: 'fr4-optimal-angle',
       type: 'text' as const,
       content: `
-## The Optimal Pulling Angle
+## Constant Velocity with an Angled Pull
 
-There\'s actually an **optimal angle** that maximizes acceleration (or minimizes the force needed to move at constant velocity).
-
-### For Constant Velocity ($a = 0$):
+To keep a box sliding at constant velocity, set $a = 0$ in the x-equation:
 
 $$F\\cos\\theta = \\mu_k(mg - F\\sin\\theta)$$
 
-Solving for $F$:
-$$F = \\frac{\\mu_k mg}{\\cos\\theta + \\mu_k \\sin\\theta}$$
+Collect the $F$ terms on one side and solve:
 
-To minimize $F$, take $dF/d\\theta = 0$:
-
-$$\\theta_{\\text{optimal}} = \\tan^{-1}(\\mu_k)$$
+$$F(\\cos\\theta + \\mu_k \\sin\\theta) = \\mu_k mg \\quad \\Rightarrow \\quad F = \\frac{\\mu_k mg}{\\cos\\theta + \\mu_k \\sin\\theta}$$
 
 ### Example
 
-For $\\mu_k = 0.40$: $\\theta_{\\text{opt}} = \\tan^{-1}(0.40) = 21.8°$
+A 20 kg box slides at constant velocity ($\\mu_k = 0.50$, $g = 10$ $m/s^{2}$).
 
-This means pulling at about 22° above horizontal requires the **least force** to keep the object moving at constant velocity.
+- Pulled horizontally: $F = \\mu_k mg = 0.50 \\times 200 = 100$ N
+- Pulled at 37° ($\\sin 37° = 0.60$, $\\cos 37° = 0.80$): $F = \\frac{0.50 \\times 200}{0.80 + 0.50(0.60)} = \\frac{100}{1.10} \\approx 91$ N
 
-> This explains why suitcase handles are angled — it\'s not just for comfort; it\'s physics!
+### Two Competing Effects
+
+Tilting the rope upward does two things at once:
+- It **reduces the normal force**, so friction is smaller (this helps).
+- It **reduces the horizontal component** $F\\cos\\theta$ (this hurts).
+
+At small angles the friction saving wins, which is why the 37° pull above needs less force. At steep angles the lost horizontal pull wins: near 90° you are mostly lifting. For any given angle, write Newton's second law in both directions and solve; you will not be asked to find the best angle.
       `
     },
     {
@@ -202,10 +204,10 @@ A 10 kg block on a rough surface ($\\mu_k = 0.40$) is pulled with 50 N. Use $g =
             explanation: 'The downward component of the push adds to the weight, increasing the normal force.'
           },
           {
-            label: 'To minimize the force needed to pull a box at constant velocity, pull at:',
-            options: ['0°, pulling straight along the floor', '$\\tan^{-1}(\\mu_k)$', '45°, splitting the pull evenly', '$\\tan^{-1}(1/\\mu_k)$ above horizontal'],
+            label: 'Keeping the same pulling force but tilting the rope to a larger angle above horizontal _____ the horizontal component of the pull.',
+            options: ['Increases', 'Decreases', 'Doesn\'t change', 'Doubles'],
             correctIndex: 1,
-            explanation: 'The optimal angle above horizontal is $\\theta = \\tan^{-1}(\\mu_k)$, which balances the benefit of a reduced normal force against the cost of a smaller horizontal component. A steeper angle such as $\\tan^{-1}(1/\\mu_k)$ gives up too much horizontal pull.'
+            explanation: 'The horizontal component is $F\\cos\\theta$, and $\\cos\\theta$ gets smaller as $\\theta$ grows. That is the cost of pulling upward; the benefit is the smaller normal force and friction.'
           }
         ]
       }

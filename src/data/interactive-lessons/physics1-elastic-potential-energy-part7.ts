@@ -57,15 +57,15 @@ This final lesson integrates Hooke\'s Law, elastic PE, spring work, spring-mass 
             explanation: '$v_{\\max} = A\\sqrt{k/m}$. Halving $A$ halves $v_{\\max}$. Maximum speed is proportional to amplitude.'
           },
           {
-            question: 'A block on a frictionless surface is attached to two identical springs in parallel (side by side). Compared to a single spring, the effective spring constant is:',
+            question: 'Two blocks of different mass oscillate on identical horizontal springs with the same amplitude, on a frictionless surface. Compared with the lighter block, the heavier block has:',
             options: [
-              'Half',
-              'The same',
-              'Double',
-              'Quadruple'
+              'More total energy and an equal maximum speed',
+              'Equal total energy but a smaller maximum speed',
+              'Less total energy and a smaller maximum speed',
+              'Equal energy and an equal maximum speed'
             ],
-            correctAnswer: 2,
-            explanation: 'Both springs stretch by the same $x$ and each pulls with $kx$, so the total restoring force is $2kx$, the same as one spring of constant $2k$.'
+            correctAnswer: 1,
+            explanation: 'Total energy is $\\frac{1}{2}kA^2$, which depends only on $k$ and $A$, so both blocks have the same energy. At equilibrium all of it is kinetic: $\\frac{1}{2}mv_{\\max}^2 = \\frac{1}{2}kA^2$, so the heavier block reaches a smaller maximum speed.'
           },
           {
             question: 'A ball is launched by a compressed spring. If you want the ball to go twice as fast, you must compress the spring:',

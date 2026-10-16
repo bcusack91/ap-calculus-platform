@@ -88,31 +88,31 @@ Car A (1500 kg) travels east at 20 m/s. Car B (2000 kg) travels west at 15 m/s. 
       content: `
 **Problem 3: Recoil in Space** 🚀
 
-An astronaut (80 kg) floating at rest in space fires a thruster that ejects 0.50 kg of gas at 2000 m/s relative to the astronaut.
+An astronaut (80 kg) floats at rest in space holding a 4.0 kg oxygen tank. She throws the tank straight away from her at 5.0 m/s, measured by an observer at rest.
       `,
       exercise: {
         questions: [
           {
-            question: 'What is the astronaut\'s speed after the gas is ejected?',
+            question: 'What is the astronaut\'s speed after the throw?',
             options: [
-              '159 m/s',
-              '12.6 m/s',
-              '12.5 m/s',
-              '1.25 m/s'
+              '0.24 m/s',
+              '0.25 m/s',
+              '1.1 m/s',
+              '5.0 m/s'
             ],
-            correctAnswer: 2,
-            explanation: 'Initial momentum is zero. After ejection the astronaut has mass $80 - 0.50 = 79.5$ kg and velocity $v_a$; the gas leaves at 2000 m/s backward relative to the astronaut, so its ground velocity is $v_a - 2000$. Then $0 = 79.5 v_a + 0.50(v_a - 2000)$, so $80 v_a = 1000$ and $v_a = 12.5$ m/s. Treating 2000 m/s as the gas\'s ground speed gives $1000/79.5 \\approx 12.6$ m/s, and setting the kinetic energies equal (energy is not conserved here) gives about 159 m/s.'
+            correctAnswer: 1,
+            explanation: 'The astronaut and tank start at rest, so the total momentum stays zero: $0 = (80)v_a + (4.0)(5.0)$, giving $v_a = -20/80 = -0.25$ m/s, a speed of 0.25 m/s opposite the tank. Dividing by 84 kg (astronaut plus tank) gives 0.24 m/s, setting the two kinetic energies equal (energy is not conserved in a throw) gives about 1.1 m/s, and 5.0 m/s assumes both move equally fast.'
           },
           {
-            question: 'If the same 0.50 kg of gas were instead ejected at 1000 m/s relative to the astronaut, the astronaut\'s final speed would be:',
+            question: 'Compared with the tank, the astronaut\'s kinetic energy just after the throw is:',
             options: [
-              '25.0 m/s',
-              '12.5 m/s',
-              '6.25 m/s',
-              '3.13 m/s'
+              '1/20 as large',
+              '20 times as large',
+              'the same',
+              '1/400 as large'
             ],
-            correctAnswer: 2,
-            explanation: 'The astronaut\'s momentum must equal the gas\'s momentum, which is proportional to the ejection speed. Halving the ejection speed halves the recoil: $80 v_a = 0.50(1000)$, so $v_a = 6.25$ m/s.'
+            correctAnswer: 0,
+            explanation: 'Both have momentum of magnitude $p = 20$ kg·m/s. Since $KE = p^2/(2m)$, the kinetic energies are inversely proportional to the masses: $KE_a/KE_{\\text{tank}} = 4.0/80 = 1/20$. Check: $\\frac{1}{2}(80)(0.25)^2 = 2.5$ J and $\\frac{1}{2}(4.0)(5.0)^2 = 50$ J.'
           }
         ]
       }

@@ -45,15 +45,15 @@ $$\\text{If } \\tau_{\\text{net, ext}} = 0: \\quad I_i\\omega_i = I_f\\omega_f$$
       exercise: {
         questions: [
           {
-            question: 'A student sits on a freely rotating stool holding a spinning bicycle wheel with its angular momentum pointing up. She flips the wheel so its angular momentum points down. The student and stool will:',
+            question: 'A disk spins freely on a frictionless axle. A second disk, initially not rotating, is dropped onto it along the same axis, and friction between them soon makes the two spin together. Compared with just before the drop, the two-disk system has:',
             options: [
-              'Not rotate, since no external torque acts',
-              'Rotate in the direction the wheel originally spun',
-              'Rotate opposite to the wheel\'s original spin',
-              'Oscillate back and forth'
+              'Angular momentum and kinetic energy both unchanged',
+              'The same angular momentum but a smaller kinetic energy',
+              'Less angular momentum and unchanged kinetic energy',
+              'Less of both, because friction acts between disks'
             ],
             correctAnswer: 1,
-            explanation: 'Initial $L$ points up (from wheel). After flipping, the wheel has $L$ pointing down. To conserve total $L$, the student + stool must gain upward $L$, meaning they rotate in the same direction the wheel originally spun, and with twice the wheel\'s angular momentum change.'
+            explanation: 'The friction torques between the disks are internal to the two-disk system and the axle exerts no torque, so the total angular momentum is conserved. Like a perfectly inelastic collision, the disks end up turning together, so kinetic energy decreases: friction converts part of it to thermal energy.'
           },
           {
             question: 'A point mass $m$ moves in a straight line with velocity $v$ at a perpendicular distance $d$ from a point P. Its angular momentum about P is:',

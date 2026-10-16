@@ -176,26 +176,26 @@ On the AP Physics 1 exam, relative-velocity problems are limited to motion along
       exercise: {
         questions: [
           {
-            question: 'A swimmer can swim at 2 m/s in still water. She swims directly across a 40 m wide river that flows at 1.5 m/s. How long does it take her to cross?',
+            question: 'A passenger walks toward the back of a train at 1.5 m/s relative to the train. The train moves east at 20 m/s relative to the ground. What is the passenger\'s velocity relative to the ground?',
             options: [
-              '16 s',
-              '20 s',
-              '26.7 s',
-              '40 s'
+              '21.5 m/s east',
+              '18.5 m/s east',
+              '18.5 m/s west',
+              '1.5 m/s west'
             ],
             correctAnswer: 1,
-            explanation: 'The time to cross depends only on the component of velocity perpendicular to the bank: $t = d/v_{\\perp} = 40/2 = 20$ s. The river current carries her downstream but doesn\'t affect the crossing time.'
+            explanation: 'Take east as positive. The passenger\'s velocity relative to the train is $-1.5$ m/s, so $v_{PG} = v_{PT} + v_{TG} = -1.5 + 20 = +18.5$ m/s, which is 18.5 m/s east. Adding the speeds gives 21.5 m/s, and 1.5 m/s west is her velocity relative to the train, not the ground.'
           },
           {
-            question: 'A train moves east at 25 m/s. Rain falls vertically at 10 m/s. To a passenger on the train, the rain appears to fall at an angle. What angle from vertical does the rain appear to make?',
+            question: 'A moving walkway carries people at 1.2 m/s. A traveler walks against the walkway\'s motion at 1.5 m/s relative to the walkway. Relative to the ground, she moves at:',
             options: [
-              '$\\tan^{-1}(10/25) = 21.8°$',
-              '$\\tan^{-1}(25/10) = 68.2°$',
-              '$45°$',
-              '$\\tan^{-1}(25/35) = 35.5°$'
+              '0.3 m/s in her walking direction',
+              '0.3 m/s in the walkway direction',
+              '2.7 m/s in her walking direction',
+              '1.5 m/s in her walking direction'
             ],
-            correctAnswer: 1,
-            explanation: 'Relative to the train, the rain has a horizontal component of 25 m/s (backward) and a vertical component of 10 m/s (downward). The angle from vertical: $\\theta = \\tan^{-1}(25/10) = 68.2°$.'
+            correctAnswer: 0,
+            explanation: 'Take her walking direction as positive: $v = +1.5 + (-1.2) = +0.3$ m/s, so she moves forward slowly at 0.3 m/s. Her walking speed is larger than the walkway speed, so she still makes progress; 2.7 m/s adds the speeds, and 1.5 m/s ignores the walkway.'
           }
         ]
       }

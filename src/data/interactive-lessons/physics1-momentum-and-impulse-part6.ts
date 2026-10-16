@@ -200,7 +200,7 @@ A 0.60 kg ball is dropped from a height and hits the floor at 8.0 m/s (downward)
             explanation: 'Bouncing ball: $|\\Delta p| = |0.5(-8-10)| = 9$ N·s. Sticking ball: $|\\Delta p| = |0.5(0-10)| = 5$ N·s. The bouncing ball delivers greater impulse because it reverses direction. Contact time affects the average force, not the impulse, so it is not needed here.'
           },
           {
-            question: 'A rocket in deep space fires its engines, ejecting 10 kg of fuel backward at 3000 m/s (as measured by an observer at rest). If the rocket has mass 990 kg after the burn, what is its change in speed?',
+            question: 'A 1000 kg space probe floats at rest in deep space. A spring-loaded latch releases a 10 kg instrument pod, which moves backward at 3000 m/s as measured by an observer at rest. The rest of the probe (990 kg) moves forward. What is its speed?',
             options: [
               '30.0 m/s',
               '30.3 m/s',
@@ -208,7 +208,7 @@ A 0.60 kg ball is dropped from a height and hits the floor at 8.0 m/s (downward)
               '3000 m/s'
             ],
             correctAnswer: 1,
-            explanation: 'By momentum conservation (initial momentum = 0): $0 = (990)(v) + (10)(-3000)$. So $v = 30{,}000/990 \\approx 30.3$ m/s. Dividing by 1000 kg (the mass before the burn) gives 30.0 m/s, which is the most common slip.'
+            explanation: 'This is a single separation, like an explosion, so the probe-pod system keeps its zero total momentum: $0 = (990)(v) + (10)(-3000)$. So $v = 30{,}000/990 \\approx 30.3$ m/s. Dividing by 1000 kg (the mass before the separation) gives 30.0 m/s, which is the most common slip.'
           }
         ]
       }

@@ -9,51 +9,47 @@ export const physics1UniformCircularMotionPart4Data = {
 
 **Part 4 of 7 — Uniform Circular Motion**
 
-To fully describe circular motion, we need to track how the position, velocity, and acceleration vectors change over time. This vector description is essential for AP Physics problems involving circular motion in two dimensions.
+To describe circular motion, track three arrows at every instant: the position (from the center to the object), the velocity, and the acceleration. AP Physics 1 questions ask you to draw or identify these directions and to connect angular and linear quantities.
 
 **In this lesson you will learn:**
-- Position vectors for circular motion
-- Velocity and acceleration vector components
-- How to decompose circular motion into x and y components
-- The relationship between angular position and linear quantities
+- The direction of the velocity and acceleration at any point on the circle
+- How those directions change as the object goes around
+- The relationship between angular velocity and linear speed
+- How to compare points at different radii on a rotating object
       `
     },
     {
       id: 'uc4-position-vector',
       type: 'text' as const,
       content: `
-## Position Vector
+## Three Arrows at Every Instant
 
-For an object moving counterclockwise starting from the positive x-axis:
+For an object moving in a circle of radius $r$ at constant speed $v$:
 
-$$\\vec{r}(t) = r\\cos\\theta \\hat{x} + r\\sin\\theta \\hat{y}$$
+| Arrow | Direction | Magnitude |
+|-------|-----------|-----------|
+| Position (center → object) | Outward along the radius | $r$ |
+| Velocity | Tangent to the circle, perpendicular to the radius | $v$ (constant) |
+| Acceleration | Inward along the radius, toward the center | $a_c = v^2/r$ (constant) |
 
-where $\\theta = \\omega t$ and $\\omega = 2\\pi/T = 2\\pi f$ is the **angular velocity** (rad/s).
+The acceleration always points **opposite** the position arrow, toward the center, and it is always perpendicular to the velocity. Because it has no component along the velocity, it changes only the **direction** of motion, never the speed.
 
-$$\\vec{r}(t) = r\\cos(\\omega t) \\hat{x} + r\\sin(\\omega t) \\hat{y}$$
+### Following the Arrows Around the Circle
 
-## Velocity Vector
+Picture an object moving **counterclockwise**, with the circle's center at the origin:
 
-Taking the derivative:
+| Position on circle | Velocity points | Acceleration points |
+|--------------------|-----------------|---------------------|
+| Rightmost point (+x axis) | Up (+y) | Left (−x), toward center |
+| Top (+y axis) | Left (−x) | Down (−y), toward center |
+| Leftmost point (−x axis) | Down (−y) | Right (+x), toward center |
+| Bottom (−y axis) | Right (+x) | Up (+y), toward center |
 
-$$\\vec{v}(t) = -r\\omega\\sin(\\omega t) \\hat{x} + r\\omega\\cos(\\omega t) \\hat{y}$$
+The magnitudes never change, but the directions rotate with the object. That is why uniform circular motion is accelerated motion even though the speed is constant.
 
-The magnitude: $|\\vec{v}| = r\\omega = v$ ✓
+### If the String Breaks
 
-## Acceleration Vector
-
-Taking another derivative:
-
-$$\\vec{a}(t) = -r\\omega^2\\cos(\\omega t) \\hat{x} - r\\omega^2\\sin(\\omega t) \\hat{y}$$
-
-This can be rewritten as:
-
-$$\\vec{a}(t) = -\\omega^2 \\vec{r}(t)$$
-
-### Key Insight
-$\\vec{a} = -\\omega^2 \\vec{r}$ means the acceleration is **opposite** to the position vector — it points **toward the center** (since $\\vec{r}$ points from center to object).
-
-The magnitude: $|\\vec{a}| = r\\omega^2 = v^2/r$ ✓
+The moment the inward force disappears, there is no more centripetal acceleration, so the object moves off in a straight line along the velocity it had at that instant: tangent to the circle, not outward along the radius.
       `
     },
     {
@@ -93,15 +89,15 @@ For a rotating solid object (like a wheel):
       exercise: {
         questions: [
           {
-            question: 'The fact that $\\vec{a} = -\\omega^2 \\vec{r}$ tells us that acceleration:',
+            question: 'For an object in uniform circular motion, how does the acceleration compare with the position arrow drawn from the center to the object?',
             options: [
-              'Points along the position vector (away from center)',
-              'Is perpendicular to the position vector (tangent)',
-              'Points opposite to the position vector (toward center)',
-              'Has zero magnitude (speed is constant)'
+              'It points the same way, away from the center',
+              'It is perpendicular to it, tangent to the circle',
+              'Opposite to it, pointing inward toward the center',
+              'There is none, because the speed is constant'
             ],
             correctAnswer: 2,
-            explanation: 'The negative sign means $\\vec{a}$ is anti-parallel to $\\vec{r}$. Since $\\vec{r}$ points from center to object, $\\vec{a}$ points from object to center — centripetal!'
+            explanation: 'Centripetal acceleration points from the object toward the center, which is opposite the position arrow from the center to the object. The tangent direction belongs to the velocity, and the acceleration is not zero because the direction of the velocity keeps changing.'
           },
           {
             question: 'A wheel rotates at $\\omega = 10$ rad/s. A point 0.3 m from the center has speed:',
@@ -187,15 +183,15 @@ For a rotating solid object (like a wheel):
       exercise: {
         questions: [
           {
-            question: 'At time $t$, an object at position $\\vec{r} = r\\hat{x}$ (on the positive x-axis) moves counterclockwise. Its velocity is:',
+            question: 'An object moves counterclockwise around a circle centered at the origin. At the instant it crosses the positive x-axis, its velocity points:',
             options: [
-              '$v\\hat{x}$ (positive x-direction)',
-              '$-v\\hat{x}$ (negative x-direction)',
-              '$v\\hat{y}$ (positive y-direction)',
-              '$-v\\hat{y}$ (negative y-direction)'
+              'In the +x direction (to the right)',
+              'In the −x direction (to the left)',
+              'In the +y direction (straight up)',
+              'In the −y direction (straight down)'
             ],
             correctAnswer: 2,
-            explanation: 'For counterclockwise motion, when the object is on the positive x-axis, it moves upward — in the $+\\hat{y}$ direction. The velocity is tangent to the circle, perpendicular to the radius.'
+            explanation: 'For counterclockwise motion, when the object is on the positive x-axis, it moves upward, in the +y direction. The velocity is tangent to the circle, perpendicular to the radius. The −x direction (toward the center) is the acceleration, not the velocity.'
           },
           {
             question: 'A flywheel spins at 600 RPM. Its angular velocity is:',

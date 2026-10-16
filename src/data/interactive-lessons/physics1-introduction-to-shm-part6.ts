@@ -142,27 +142,27 @@ An object in SHM has a position given by $x(t) = 0.15\\cos(10t)$ (in meters, wit
       content: `
 **Problem 4 — Conceptual Reasoning** 🔍
 
-Two identical springs each have spring constant $k$. A mass $m$ is attached.
+A block of mass $m$ on a spring of constant $k$ oscillates with period $T$ and amplitude $A$. The block is moved to a different spring with constant $2k$ and set oscillating with the same amplitude $A$.
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'When two identical springs (each with constant k) are connected in parallel, the effective spring constant is:',
-            options: ['$2k$', '$k/2$', '$k$', '$4k$'],
-            correctIndex: 0,
-            explanation: 'Side by side, each spring stretches by $x$ and pulls with $kx$, so the net restoring force is $2kx$: the pair acts like one spring of constant $2k$.'
-          },
-          {
-            label: 'If a single spring gives period T, the period with two identical springs in parallel is:',
+            label: 'With the stiffer spring, the period is:',
             options: ['$T\\sqrt{2}$', '$T/\\sqrt{2}$', '$2T$', '$T/2$'],
             correctIndex: 1,
-            explanation: '$T_{\\text{parallel}} = 2\\pi\\sqrt{m/(2k)} = (1/\\sqrt{2}) \\times 2\\pi\\sqrt{m/k} = T/\\sqrt{2}$.'
+            explanation: '$T_{\\text{new}} = 2\\pi\\sqrt{m/(2k)} = (1/\\sqrt{2}) \\times 2\\pi\\sqrt{m/k} = T/\\sqrt{2}$. A stiffer spring gives a shorter period.'
           },
           {
-            label: 'With the two springs side by side and the same amplitude, the maximum speed compared with one spring is:',
+            label: 'Compared with the original spring, the total mechanical energy of the oscillation is:',
+            options: ['twice as large', '$\\sqrt{2}$ times as large', 'the same', 'half as large'],
+            correctIndex: 0,
+            explanation: 'Total energy is $\\frac{1}{2}kA^2$. With $2k$ and the same $A$, the energy is $\\frac{1}{2}(2k)A^2$, twice the original.'
+          },
+          {
+            label: 'Compared with the original spring, the maximum speed of the block is:',
             options: ['$\\sqrt{2}$ times as large', 'twice as large', 'the same', 'half as large'],
             correctIndex: 0,
-            explanation: 'Energy gives $\\frac{1}{2}(2k)A^2 = \\frac{1}{2}mv_{\\max}^2$, so $v_{\\max} = A\\sqrt{2k/m}$, which is $\\sqrt{2}$ times the single-spring value. Doubling $k$ doubles the energy, not the speed.'
+            explanation: 'Energy gives $\\frac{1}{2}(2k)A^2 = \\frac{1}{2}mv_{\\max}^2$, so $v_{\\max} = A\\sqrt{2k/m}$, which is $\\sqrt{2}$ times the original value. Doubling the energy doubles $v_{\\max}^2$, not $v_{\\max}$.'
           }
         ]
       }
