@@ -22,11 +22,45 @@
  * change).
  */
 
-export type DiagnosticCourse = 'mcat' | 'sat'
+/**
+ * Courses with seen tracking. AP diagnostic v2 courses use their existing API
+ * base (`/api/ap-chem-diagnostic/seen`, `/api/calcab-diagnostic/seen`, …) and
+ * the same id + text fingerprints as the SAT (`apSeenKeysForQuestion`).
+ */
+export type DiagnosticCourse = 'mcat' | 'sat' | 'ap-chem' | 'ap-bio' | 'ap-physics1' | 'calcab'
 
 const STORAGE_KEY: Record<DiagnosticCourse, string> = {
   mcat: 'mcat-diagnostic-seen-v1',
   sat: 'sat-diagnostic-seen-v1',
+  'ap-chem': 'ap-chem-diagnostic-v2-seen-v1',
+  'ap-bio': 'ap-bio-diagnostic-v2-seen-v1',
+  'ap-physics1': 'ap-physics1-diagnostic-v2-seen-v1',
+  calcab: 'calcab-diagnostic-v2-seen-v1',
+}
+
+/**
+ * Short, stable fingerprint of a question's text: FNV-1a over the
+ * whitespace-collapsed, lower-cased text, base 36 — the same function as the
+ * SAT's `stemKey`, so the two never drift apart in meaning.
+ */
+export function textFingerprint(text: string): string {
+  const s = text.replace(/\s+/g, ' ').trim().toLowerCase()
+  let h = 2166136261
+  for (let i = 0; i < s.length; i++) {
+    h ^= s.charCodeAt(i)
+    h = Math.imul(h, 16777619)
+  }
+  return `stem:${(h >>> 0).toString(36)}`
+}
+
+/**
+ * Seen keys for an AP diagnostic v2 question: its id plus a fingerprint of
+ * its text. A stimulus-set question's fingerprint includes the stimulus text,
+ * because set questions can share a generic stem ("Which claim do the data
+ * support?") across different stimuli.
+ */
+export function apSeenKeysForQuestion(q: { id?: string; question: string; passageBody?: string }): string[] {
+  return [...(q.id ? [q.id] : []), textFingerprint(q.passageBody ? `${q.passageBody}|${q.question}` : q.question)]
 }
 
 /** localStorage holds at most this many keys per course (newest kept). */
@@ -43,6 +77,8 @@ export interface StoredReviewQuestion {
   id?: string
   question?: string
   passage?: string
+  /** Body of an object-shaped passage (MCAT, AP v2 stimulus); `passage` stays string-only for the SAT route. */
+  passageBody?: string
 }
 
 /**
@@ -70,10 +106,12 @@ export function reviewQuestionsFromResults(results: unknown): StoredReviewQuesti
   for (const q of questions) {
     if (!q || typeof q !== 'object') continue
     const { id, question, passage } = q as Record<string, unknown>
+    const body = passage && typeof passage === 'object' ? (passage as { body?: unknown }).body : undefined
     out.push({
       id: typeof id === 'string' && id.length > 0 ? id : undefined,
       question: typeof question === 'string' ? question : undefined,
       passage: typeof passage === 'string' ? passage : undefined,
+      ...(typeof body === 'string' && body ? { passageBody: body } : {}),
     })
   }
   return out

@@ -44,7 +44,7 @@ export function diagnosticPathForCategory(category: string): string {
   const family = diagnosticFamily(category)
   if (family === 'sat') return '/sat-diagnostic' // sat-full-diagnostic, sat-hard-module-N, …
   if (family === 'mcat') return '/mcat-diagnostic' // mcat-full-diagnostic
-  const slug = category.replace(/-\d+$/, '') // strip trailing -<form>
+  const slug = category.replace(/-(?:v)?\d+$/, '') // strip trailing -<form> or -v<version> (AP diagnostic v2)
   if (slug === 'ap-aas-diagnostic') return '/ap-african-american-studies-diagnostic'
   return `/${slug}`
 }
@@ -160,10 +160,17 @@ export function summarizeAttemptScores(category: string, rawResults: unknown): A
       const ab = num(results.abSubscore)
       if (ab != null && ab >= 1 && ab <= 5) sections.push({ key: 'AB', label: 'AB subscore', value: ab, outOf: 5 })
     }
+    // AP diagnostic v2 stores a ± band on the estimate (results.scoreRange).
+    const band = family === 'ap' ? storedRange(results.scoreRange, 1, 5) : null
+    const banded = band != null && score != null && band.low !== band.high
     return {
       family,
       overall: score != null && score >= 1 && score <= 5
-        ? { label: family === 'ochem' ? 'Estimated score' : family === 'calcbc' ? 'Estimated AP score (BC)' : 'Estimated AP score', value: `${score}/5` }
+        ? {
+            label: family === 'ochem' ? 'Estimated score' : family === 'calcbc' ? 'Estimated AP score (BC)' : 'Estimated AP score',
+            value: banded ? `${band.low}–${band.high}/5` : `${score}/5`,
+            ...(banded ? { detail: `most likely ${score} · estimate, not yet calibrated to real AP results` } : {}),
+          }
         : null,
       sections,
       domains,

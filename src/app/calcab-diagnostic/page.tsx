@@ -1,5 +1,6 @@
 'use client'
 
+import ApDiagnosticVersionSwitch from '@/components/ap-diagnostic-v2/ApDiagnosticVersionSwitch'
 import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
@@ -54,7 +55,7 @@ interface HistoryEntry {
   createdAt: string
 }
 
-export default function CalcABDiagnosticPage() {
+function CalcABDiagnosticPageV1() {
   const planAccess = useDiagnosticPlanAccess()
   const { status } = useSession()
   const router = useRouter()
@@ -570,4 +571,12 @@ export default function CalcABDiagnosticPage() {
       </div>
     </div>
   )
+}
+
+/**
+ * v1 (10 fixed forms) until this course's diagnostic v2 bank is live; v2 is
+ * previewable with ?diagV2=1 outside production. See src/lib/ap-diagnostic-v2.
+ */
+export default function CalcABDiagnosticPage() {
+  return <ApDiagnosticVersionSwitch course="ap-calculus-ab" v1={<CalcABDiagnosticPageV1 />} />
 }

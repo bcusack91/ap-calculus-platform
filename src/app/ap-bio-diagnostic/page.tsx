@@ -1,5 +1,6 @@
 'use client'
 
+import ApDiagnosticVersionSwitch from '@/components/ap-diagnostic-v2/ApDiagnosticVersionSwitch'
 import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
@@ -49,7 +50,7 @@ interface HistoryEntry {
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
 
-export default function APBioDiagnosticPage() {
+function APBioDiagnosticPageV1() {
   const planAccess = useDiagnosticPlanAccess()
   const { status } = useSession()
   const router = useRouter()
@@ -791,4 +792,12 @@ export default function APBioDiagnosticPage() {
       </div>
     </div>
   )
+}
+
+/**
+ * v1 (10 fixed forms) until this course's diagnostic v2 bank is live; v2 is
+ * previewable with ?diagV2=1 outside production. See src/lib/ap-diagnostic-v2.
+ */
+export default function APBioDiagnosticPage() {
+  return <ApDiagnosticVersionSwitch course="ap-biology" v1={<APBioDiagnosticPageV1 />} />
 }

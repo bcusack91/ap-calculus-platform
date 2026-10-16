@@ -11,6 +11,9 @@
 import { useEffect, useMemo, useState } from 'react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
+import { isSafeSvg } from '@/lib/safe-svg'
+import MCATFigure from '@/components/MCATFigure'
+import type { MCATFigureSpec } from '@/data/mcat/types'
 
 type Series = { label: string; yValues: number[] }
 
@@ -47,6 +50,21 @@ export interface DiagnosticPassage {
   figureMarkdown?: string
   dataTable?: DiagnosticDataTable
   figure?: DiagnosticFigure
+  /** Plotted graph (line / scatter / bar, x placed by value) — AP diagnostic v2 `graph` stimuli. */
+  chart?: MCATFigureSpec
+  /** Authored inline SVG diagram — AP diagnostic v2 `figure` stimuli; drawn only if isSafeSvg. */
+  svg?: string
+}
+
+/** An authored SVG diagram, drawn in the text colour so it reads in light and dark mode. */
+export function SafeSvgFigure({ svg, className }: { svg: unknown; className?: string }) {
+  if (!isSafeSvg(svg)) return null
+  return (
+    <div
+      className={className ?? 'mt-4 overflow-x-auto rounded-xl border border-gray-200 bg-white p-3 text-gray-800 dark:border-gray-700 dark:bg-gray-900/40 dark:text-gray-100 [&>svg]:mx-auto [&>svg]:h-auto [&>svg]:w-full [&>svg]:max-w-xl'}
+      dangerouslySetInnerHTML={{ __html: svg }}
+    />
+  )
 }
 
 /** Rich text (KaTeX + markdown tables); re-renders once KaTeX has loaded. */
@@ -74,13 +92,19 @@ export function DiagnosticPassageContent({ passage }: { passage: DiagnosticPassa
     <>
       <RichTextBlock
         text={passage.body}
-        className="mt-3 text-sm leading-relaxed text-gray-800 dark:text-gray-200"
+        className="mt-3 overflow-x-auto text-sm leading-relaxed text-gray-800 dark:text-gray-200"
       />
       {passage.figureMarkdown && (
         <RichTextBlock
           text={passage.figureMarkdown}
           className="mt-4 overflow-x-auto text-sm leading-relaxed text-gray-800 dark:text-gray-200"
         />
+      )}
+      {passage.svg && <SafeSvgFigure svg={passage.svg} />}
+      {passage.chart && (
+        <div className="mt-4">
+          <MCATFigure spec={passage.chart} />
+        </div>
       )}
       <DataVisual data={passage} />
     </>

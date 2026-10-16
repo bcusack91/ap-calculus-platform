@@ -33,6 +33,11 @@ import { apBioQuestionPool } from '@/data/exit-quizzes/ap-biology'
 import { apPhysics2QuestionPool } from '@/data/exit-quizzes/ap-physics-2'
 import { apPhysicsCEMQuestionPool } from '@/data/exit-quizzes/ap-physics-c-em'
 import { apPhysicsCMechQuestionPool } from '@/data/exit-quizzes/ap-physics-c-mechanics'
+import { AP_DIAG_V2_BLUEPRINTS, AP_DIAG_V2_COURSES } from '@/lib/ap-diagnostic-v2/blueprints'
+import { AP_DIAG_V2_BANKS } from '@/lib/ap-diagnostic-v2/banks'
+import { generateApDiagnosticV2 } from '@/lib/ap-diagnostic-v2/generator'
+import { scoreApDiagnosticV2 } from '@/lib/ap-diagnostic-v2/scoring'
+import { mulberry32 } from '@/data/_shared/prng'
 
 const FIXTURE = slugsByCourse as Record<string, string[]>
 /** Courses whose pages also render another course's units. */
@@ -210,5 +215,48 @@ describe('per-item exceptions', () => {
   it('the item key ignores case and whitespace', () => {
     expect(diagnosticItemKey('  Which  organelle\nmakes ATP? ')).toBe(diagnosticItemKey('which organelle makes atp?'))
     expect(diagnosticItemKey('a')).not.toBe(diagnosticItemKey('b'))
+  })
+})
+
+/*
+ * AP diagnostic v2 (src/lib/ap-diagnostic-v2): the same rule for the v2 banks.
+ * Every bank item, every unit fallback and every recommendation the v2 scorer
+ * produces is a production topic, canonical as stored, capped at 5.
+ */
+describe('AP diagnostic v2 recommendations resolve to production topics', () => {
+  describe.each(AP_DIAG_V2_COURSES.map((c) => [c] as const))('%s', (course) => {
+    const ok = allowed(course)
+    const bp = AP_DIAG_V2_BLUEPRINTS[course]
+    const bank = AP_DIAG_V2_BANKS[course]
+
+    it('every bank item and every unit fallback is a production topic', () => {
+      expect(bank.items.filter((i) => !ok.has(i.topicSlug)).map((i) => `${i.id}: ${i.topicSlug}`)).toEqual([])
+      expect(bp.units.flatMap((u) => u.topicSlugs.filter((s) => !ok.has(s)).map((s) => `${u.id}: ${s}`))).toEqual([])
+    })
+
+    it('every recommendation is a production topic, canonical, deduplicated and capped at 5', () => {
+      const t = generateApDiagnosticV2(bank, { rng: mulberry32(11) })
+      for (const answers of answerPatterns(t.questions, bp.units.map((u) => u.id))) {
+        const recs = scoreApDiagnosticV2(course, t.questions, answers).recommendedTopics
+        expect(recs.length).toBeLessThanOrEqual(5)
+        expect(new Set(recs.map((r) => r.slug)).size).toBe(recs.length)
+        for (const r of recs) {
+          expect(ok.has(r.slug), r.slug).toBe(true)
+          expect(r.slug).toBe(canonicalApTopicSlug(course, r.slug))
+          expect(r.name).toBe(bp.topicNames[r.slug])
+        }
+      }
+      // A weak unit the sitting did not miss anything in falls back to the unit's first topics.
+      const allWrong = Object.fromEntries(t.questions.map((q, i) => [i, (q.correctAnswer + 1) % 4]))
+      const weakUnits = new Set(t.questions.map((q) => q.domain))
+      expect(scoreApDiagnosticV2(course, t.questions, allWrong).recommendedTopics.every((r) => weakUnits.has(r.domainId))).toBe(true)
+    })
+
+    it('stored v2 attempts canonicalize as themselves (already production slugs)', () => {
+      const t = generateApDiagnosticV2(bank, { rng: mulberry32(5) })
+      const r = scoreApDiagnosticV2(course, t.questions, t.questions.map(() => null))
+      const out = canonicalizeDiagnosticResults(`${bp.categoryPrefix}-v2`, { ...r, review: { questions: t.questions, answers: [] } })
+      expect(out.recommendedTopics).toEqual(r.recommendedTopics)
+    })
   })
 })

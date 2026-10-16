@@ -31,6 +31,7 @@ import MCATFigure from '@/components/MCATFigure'
 import {
   DataVisual,
   RichTextBlock,
+  SafeSvgFigure,
   type DiagnosticDataTable,
   type DiagnosticFigure,
 } from '@/components/MCATDiagnosticVisuals'
@@ -142,6 +143,7 @@ function PassageFigure({ figure }: { figure: unknown }) {
   const fig = hasSeries(f.figure) ? (f.figure as DiagnosticFigure) : undefined
   return (
     <>
+      {f.svg != null && <SafeSvgFigure svg={f.svg} />}
       {markdown && (
         <RichTextBlock text={markdown} className="mt-4 overflow-x-auto text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
       )}
@@ -159,7 +161,7 @@ export function PassageContent({ passage }: { passage: ReviewPassageView }) {
   return (
     <>
       {passage.body && (
-        <RichTextBlock text={passage.body} className="mt-3 text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
+        <RichTextBlock text={passage.body} className="mt-3 overflow-x-auto text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
       )}
       {passage.figure != null && <PassageFigure figure={passage.figure} />}
     </>

@@ -55,3 +55,40 @@ export function apCompositePercent(sections: ApSectionScore[]): number {
   const possible = sections.reduce((n, s) => n + s.possible, 0)
   return possible ? Math.round((earned / possible) * 100) : 0
 }
+
+/**
+ * The ± band on a diagnostic's 1–5 estimate, from the binomial standard
+ * error of the percent correct at this test length, mapped through the same
+ * cutoffs.
+ *
+ * A sitting of n questions estimates the student's true percent correct p
+ * with standard error √(p(1−p)/n): at n = 33 and 60% that is about ±8.5
+ * points, which spans the 57% cutoff — the honest reading is "3–4", not "4".
+ * p is taken as (correct + 1) / (n + 2) so a perfect or empty sheet still has
+ * a band (a plain p = 1 has zero error, which 33 questions cannot justify).
+ * The band is ±1 SE (about 68% coverage), the width MCAT and SAT display.
+ * The cutoffs themselves are uncalibrated estimates (see the header), so
+ * every page labels the result an estimate.
+ */
+export function apScoreRange(
+  correct: number,
+  total: number,
+  z = 1,
+): { score: ApScore; low: ApScore; high: ApScore; percentLow: number; percentHigh: number; standardError: number } {
+  const n = Math.max(0, Math.floor(total))
+  const c = Math.min(Math.max(0, Math.floor(correct)), n)
+  const percent = n ? (c / n) * 100 : 0
+  const pTilde = (c + 1) / (n + 2)
+  const se = n ? Math.sqrt((pTilde * (1 - pTilde)) / n) * 100 : 0
+  const percentLow = Math.max(0, Math.round(percent - z * se))
+  const percentHigh = Math.min(100, Math.round(percent + z * se))
+  const score = estimateApScore(Math.round(percent))
+  return {
+    score,
+    low: estimateApScore(percentLow),
+    high: estimateApScore(percentHigh),
+    percentLow,
+    percentHigh,
+    standardError: Math.round(se * 10) / 10,
+  }
+}

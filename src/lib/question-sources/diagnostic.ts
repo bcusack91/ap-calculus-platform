@@ -5,7 +5,10 @@ import type { ReviewItem } from './types'
  * Review items for a non-SAT diagnostic (MCAT, ACT, …) from the copy every
  * diagnostic page stores at submit: `results.review = { questions, answers,
  * domainNames }`. MCAT passage questions carry their passage object, and
- * figure questions their chart/table, which the review renders.
+ * figure questions their chart/table, which the review renders. AP
+ * diagnostic v2 stimuli store the same passage shape (plus `chart`); their SVG
+ * diagrams are re-attached from the bank by the resolver, never read back
+ * from the stored copy.
  */
 
 type Rec = Record<string, unknown>
@@ -48,7 +51,7 @@ export function diagnosticReviewItems(results: unknown): ReviewItem[] {
       correctIndex,
       explanation: str(q.explanation),
       passage: p
-        ? { id: passageId, title: str(p.title), body: str(p.body), figure: { figureMarkdown: p.figureMarkdown, dataTable: p.dataTable, figure: p.figure } }
+        ? { id: passageId, title: str(p.title), body: str(p.body), figure: { figureMarkdown: p.figureMarkdown, dataTable: p.dataTable, figure: p.figure, chart: p.chart } }
         : visual
           ? { id: '', title: str(asRecord(visual.study)?.title), body: str(asRecord(visual.study)?.body), figure: { dataTable: visual.dataTable, figure: visual.figure } }
           : str(q.passage)

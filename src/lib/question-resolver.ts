@@ -16,6 +16,8 @@ import { satOptionExplanationsFor } from '@/data/sat-practice/option-explanation
 import { courseForCategory, diagnosticRouteForKey } from '@/lib/class-plan-config'
 import { UNIT_TEST_COURSES, isApUnitTestCourse } from '@/lib/unit-test-courses'
 import { canonicalizeDiagnosticResults } from '@/lib/ap-topic-canonical'
+import { apDiagV2CourseOfCategory, apDiagV2Stimulus } from '@/lib/ap-diagnostic-v2/banks'
+import type { ApDiagV2Course } from '@/lib/ap-diagnostic-v2/types'
 
 /**
  * Rebuilds any stored attempt into review items — the permanent review page
@@ -70,6 +72,29 @@ export function apDiagnosticCourse(category: string): { courseSlug: string; labe
   if (!c?.courseSlug?.startsWith('ap-')) return null
   return { courseSlug: c.courseSlug, label: c.label, backHref: diagnosticRouteForKey(c.key) }
 }
+/**
+ * AP diagnostic v2 figure stimuli are SVG diagrams. The stored review copy is
+ * client-submitted, so the diagram is re-attached from the bank by stimulus
+ * id instead of being read back from the attempt.
+ */
+function withV2Diagrams(course: ApDiagV2Course, items: (ReviewItem | null)[]): (ReviewItem | null)[] {
+  return items.map((item) => {
+    if (!item?.passage?.id) return item
+    const svg = apDiagV2Stimulus(course, item.passage.id)?.svg
+    if (!svg) return item
+    const figure = item.passage.figure && typeof item.passage.figure === 'object' ? (item.passage.figure as Record<string, unknown>) : {}
+    return { ...item, passage: { ...item.passage, figure: { ...figure, svg } } }
+  })
+}
+
+/** "3–4/5" when a v2 attempt stored a ± band, else "3/5". */
+function apScoreLabel(r: Record<string, unknown>): string | undefined {
+  if (typeof r.estimatedAPScore !== 'number') return undefined
+  const range = r.scoreRange && typeof r.scoreRange === 'object' ? (r.scoreRange as { low?: unknown; high?: unknown }) : null
+  if (range && typeof range.low === 'number' && typeof range.high === 'number' && range.low !== range.high) return `${range.low}–${range.high}/5`
+  return `${r.estimatedAPScore}/5`
+}
+
 const courseOfSlug = (slug: string) => (slug.startsWith('mcat') ? 'mcat' : slug.startsWith('sat') ? 'sat' : slug.startsWith('act') ? 'act' : 'other')
 
 async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit<ResolvedAttempt, 'items'> & { items: (ReviewItem | null)[] } | null> {
@@ -99,7 +124,9 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
       const course = ap?.courseSlug ?? courseOfCategory(d.category)
       // Older AP attempts carry legacy topic slugs; review them under the production topic.
       const results = ap ? canonicalizeDiagnosticResults(d.category, d.results) : d.results
-      const items = isFl ? fullLengthReviewItems(results) ?? [] : course === 'sat' ? satDiagnosticReviewItems(results) : diagnosticReviewItems(results)
+      const v2 = apDiagV2CourseOfCategory(d.category)
+      const rawItems = isFl ? fullLengthReviewItems(results) ?? [] : course === 'sat' ? satDiagnosticReviewItems(results) : diagnosticReviewItems(results)
+      const items = v2 ? withV2Diagrams(v2, rawItems) : rawItems
       const correct = items.filter((i) => i && i.chosenIndex === i.correctIndex).length
       return {
         kind, id, course, takenAt: iso(d.createdAt),
@@ -107,7 +134,7 @@ async function build(kind: ReviewKind, id: string, userId: string): Promise<Omit
         score: {
           correct,
           total: items.length,
-          label: typeof r.total === 'number' ? `${r.total}` : typeof r.estimatedScore === 'number' ? `${r.estimatedScore}` : typeof r.estimatedAPScore === 'number' ? `${r.estimatedAPScore}/5` : undefined,
+          label: typeof r.total === 'number' ? `${r.total}` : typeof r.estimatedScore === 'number' ? `${r.estimatedScore}` : apScoreLabel(r),
         },
         backHref: isFl ? '/mcat-full-length' : ap ? ap.backHref : `/${course}-diagnostic`,
         items,
