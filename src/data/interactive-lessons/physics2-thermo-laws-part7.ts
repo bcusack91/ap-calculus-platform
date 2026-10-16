@@ -106,7 +106,7 @@ That rule is for **isolated** systems. A closed system that loses energy to its 
       exercise: {
         questions: [
           {
-            question: 'An ideal gas undergoes a cycle: isobaric expansion (A→B), isochoric cooling (B→C), isobaric compression (C→D), isochoric heating (D→A). The PV diagram forms a rectangle traced clockwise. Which statement about the net work done BY the gas is correct?',
+            question: 'An ideal gas undergoes a cycle: isobaric expansion (A→B), isochoric cooling (B→C), isobaric compression (C→D), isochoric heating (D→A). The PV diagram forms a rectangle traced clockwise. Which statement about the net work done by the gas is correct?',
             options: [
               'Net work is zero because expansion and compression cancel',
               'Net work equals the area of the rectangle and is positive (engine)',
@@ -114,7 +114,7 @@ That rule is for **isolated** systems. A closed system that loses energy to its 
               'Net work cannot be determined without knowing temperatures'
             ],
             correctAnswer: 1,
-            explanation: 'In a clockwise rectangular cycle the net work done by the gas = enclosed area = $\\Delta P \\times \\Delta V > 0$ (so the net work done ON the gas, $W_{\\text{net}}$, is negative). This is a heat engine. The expansion occurs at higher pressure than the compression, so expansion work exceeds compression work.'
+            explanation: 'In a clockwise rectangular cycle the net work done by the gas = enclosed area = $\\Delta P \\times \\Delta V > 0$ (so the net work done on the gas, $W_{\\text{net}}$, is negative). This is a heat engine. The expansion occurs at higher pressure than the compression, so expansion work exceeds compression work.'
           },
           {
             question: 'A monatomic ideal gas expands at a constant pressure of 200 kPa from 3.0 L to 5.0 L. How much energy is transferred to the gas by heating?',

@@ -86,7 +86,7 @@ A tire gauge reads zero when tire pressure equals atmospheric pressure (a flat t
             explanation: '$P_{abs} = P_{atm} + P_{gauge}$. With $P_{atm}$ ≈ 14.7 psi, $P_{abs} \\approx 30 + 15 = 45$ psi.'
           },
           {
-            question: 'If a problem asks for the NET force atmospheric pressure exerts on an open beaker\'s sides, the answer is:',
+            question: 'If a problem asks for the net force atmospheric pressure exerts on an open beaker\'s sides, the answer is:',
             options: [
               'Very large, equal to the weight of the air above it',
               'Half of atmospheric pressure times the wall area',
@@ -107,7 +107,7 @@ A tire gauge reads zero when tire pressure equals atmospheric pressure (a flat t
 
 1) An open pool is 5 m deep. Absolute pressure at the bottom (Pa)?
 
-2) Same pool — what is the GAUGE pressure at the bottom (Pa)?
+2) Same pool — what is the gauge pressure at the bottom (Pa)?
 
 3) A vacuum chamber is at $1.0\\times10^{4}$ Pa absolute. Its gauge pressure (Pa) is — give the signed answer.
       `,
@@ -115,7 +115,7 @@ A tire gauge reads zero when tire pressure equals atmospheric pressure (a flat t
         boxes: 3,
         correctAnswers: ['150000', '50000', '-90000'],
         hint1: '$P_{abs} = P_{atm} + \\rho g h$.',
-        hint2: 'Just $\\rho g h$ — atmospheric NOT included.',
+        hint2: 'Just $\\rho g h$ — atmospheric not included.',
         hint3: '$P_{gauge} = P_{abs} - P_{atm}$. Sign matters.',
         explanation: '1) $P_{abs} = 10^{5} + 1000(10)(5) = 1.5\\times10^{5}$ Pa. 2) $P_{gauge} = 1000(10)(5) = 50{,}000$ Pa. 3) $P_{gauge} = 10^{4} - 10^{5} = -90{,}000$ Pa (below atmospheric).'
       }

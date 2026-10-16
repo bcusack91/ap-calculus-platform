@@ -97,15 +97,14 @@ $$U''(x) = 10 - 12x^2$$
 
 **For a particle with $E = 4$ J, starting at $x = 0$:**
 - It oscillates in the potential well around $x = 0$
-- Turning points: $5x^2 - x^4 = 4$ → solve for $x$
+- Turning points: $5x^2 - x^4 = 4$. Let $u = x^2$: $u^2 - 5u + 4 = 0$, so $u = 1$ or $u = 4$. Inside the well ($|x| < 1.58$) the root is $u = 1$, so the turning points are $x = \\pm 1$ m
 - Cannot escape since $E = 4 < 6.25$ (the barrier height)
 
 **For $E = 7$ J:**
 - The particle has enough energy to overcome the barriers at $x = \\pm 1.58$
 - Motion is unbounded — the particle escapes
 
-**Small oscillation frequency about $x = 0$:**
-$$\\omega = \\sqrt{\\frac{U''(0)}{m}} = \\sqrt{\\frac{10}{1}} = \\sqrt{10} \\approx 3.16 \\text{ rad/s}$$`
+**Speed at the bottom of the well (for $E = 4$ J):** at $x = 0$, $U = 0$, so $K = 4$ J and $v = \\sqrt{2K/m} = \\sqrt{8} \\approx 2.8$ m/s. The particle oscillates back and forth between $x = -1$ m and $x = +1$ m, but the motion is not simple harmonic, because the force $-(10x - 4x^3)$ is not proportional to $x$.`
     },
     {
       id: 'cf6-mcq3',
@@ -136,7 +135,7 @@ $$\\omega = \\sqrt{\\frac{U''(0)}{m}} = \\sqrt{\\frac{10}{1}} = \\sqrt{10} \\app
     {
       id: 'cf6-mcq5',
       type: 'mcq' as const,
-      question: 'A particle of mass $m$ is in the potential $U(x) = U_0(x/a)^2$ near $x = 0$, where $U_0$ and $a$ are constants. Its period of small oscillation is:',
+      question: 'A particle of mass $m$ moves in the potential $U(x) = U_0(x/a)^2$, where $U_0$ and $a$ are positive constants. What is its period of oscillation?',
       options: [
         '$T = 2\\pi a\\sqrt{m/(2U_0)}$',
         '$T = 2\\pi\\sqrt{U_0/(ma^2)}$',
@@ -144,7 +143,7 @@ $$\\omega = \\sqrt{\\frac{U''(0)}{m}} = \\sqrt{\\frac{10}{1}} = \\sqrt{10} \\app
         '$T = 2\\pi a/\\sqrt{U_0}$'
       ],
       correctAnswer: 0,
-      explanation: '$U = U_0 x^2/a^2$. This is like $\\frac{1}{2}kx^2$ with $k = 2U_0/a^2$. $\\omega = \\sqrt{k/m} = \\sqrt{2U_0/(ma^2)}$. $T = 2\\pi/\\omega = 2\\pi\\sqrt{ma^2/(2U_0)} = 2\\pi a\\sqrt{m/(2U_0)}$.'
+      explanation: '$U = U_0 x^2/a^2$ has exactly the form of spring potential energy $\\frac{1}{2}kx^2$ with $k = 2U_0/a^2$, so the force is $F = -kx$ and the motion is SHM. $\\omega = \\sqrt{k/m} = \\sqrt{2U_0/(ma^2)}$. $T = 2\\pi/\\omega = 2\\pi\\sqrt{ma^2/(2U_0)} = 2\\pi a\\sqrt{m/(2U_0)}$.'
     },
     {
       id: 'cf6-summary',
@@ -159,7 +158,7 @@ $$\\omega = \\sqrt{\\frac{U''(0)}{m}} = \\sqrt{\\frac{10}{1}} = \\sqrt{10} \\app
 | "Find the force from $U(x)$" | $F = -dU/dx$ |
 | "Find equilibria and stability" | Set $dU/dx = 0$; check sign of $d^2U/dx^2$ |
 | "Is the motion bounded?" | Compare $E$ to the barrier heights in $U(x)$ |
-| "Period of small oscillations" | $T = 2\\pi\\sqrt{m/k_{\\text{eff}}}$ with $k_{\\text{eff}} = U''(x_0)$ |
+| "Is the motion simple harmonic?" | Only if $F = -kx$, i.e. $U$ has the form $\\frac{1}{2}kx^2$; then $T = 2\\pi\\sqrt{m/k}$ |
 | "Is the force conservative?" | Check whether its work around a closed path is zero |
 
 > **Next up:** Part 7 — Review & Applications, tying everything together.`

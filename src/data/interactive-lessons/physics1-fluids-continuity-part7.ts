@@ -122,7 +122,7 @@ You've mastered volume flow rate, single-pipe continuity, branching, and mass fl
             explanation: 'Constant $Q = Av$ — area ÷ 3 means speed × 3.'
           },
           {
-            label: 'In a venturi tube (a constriction in a horizontal pipe), the water moves FASTEST in the:',
+            label: 'In a venturi tube (a constriction in a horizontal pipe), the water moves fastest in the:',
             options: ['Wide section, where there is more water', 'Narrow section, where the area is smallest', 'Same speed in every section', 'Exit, after the narrow section'],
             correctIndex: 1,
             explanation: 'Continuity: smallest area ⇒ fastest speed.'

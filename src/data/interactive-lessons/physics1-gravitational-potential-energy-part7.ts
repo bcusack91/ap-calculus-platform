@@ -75,7 +75,7 @@ This final lesson integrates all gravitational PE concepts: reference levels, co
               'Stays the same'
             ],
             correctAnswer: 2,
-            explanation: 'Height: $h = L(1 - \\cos\\theta)$. Speed: $v = \\sqrt{2gL(1-\\cos\\theta)}$. Doubling $\\theta$ does NOT double $(1-\\cos\\theta)$, so the speed less than doubles. (Cosine is nonlinear.)'
+            explanation: 'Height: $h = L(1 - \\cos\\theta)$. Speed: $v = \\sqrt{2gL(1-\\cos\\theta)}$. Doubling $\\theta$ does not double $(1-\\cos\\theta)$, so the speed less than doubles. (Cosine is nonlinear.)'
           }
         ]
       }
@@ -115,7 +115,7 @@ Use $g = 10$ $m/s^{2}$.
         dropdowns: [
           {
             label: 'An object\'s PE depends on the reference level. Its change in PE:',
-            options: ['Also depends on reference level', 'Does NOT depend on reference level', 'Is always positive', 'Is always negative'],
+            options: ['Also depends on reference level', 'Does not depend on reference level', 'Is always positive', 'Is always negative'],
             correctIndex: 1,
             explanation: '$\\Delta PE = mg(h_f - h_i)$. The reference level shifts both $h_f$ and $h_i$ by the same amount, so $\\Delta h$ (and $\\Delta PE$) is unchanged.'
           },

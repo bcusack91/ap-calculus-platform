@@ -87,7 +87,7 @@ This is the hallmark of uniform circular motion!
             explanation: 'Velocity is tangent and acceleration points toward the center (radially inward). Tangent and radius are always perpendicular — $90°$.'
           },
           {
-            question: 'If the acceleration were NOT perpendicular to the velocity, the object would:',
+            question: 'If the acceleration were not perpendicular to the velocity, the object would:',
             options: [
               'Still move in a perfect circle at constant speed',
               'Speed up or slow down',

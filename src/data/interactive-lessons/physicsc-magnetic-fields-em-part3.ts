@@ -106,7 +106,7 @@ $B_x = \\frac{\\mu_0 I R}{4\\pi (R^2+x^2)^{3/2}}(2\\pi R) = \\frac{\\mu_0 I R^2}
             explanation: 'The cross product $d\\vec{l}\\times\\hat{r}$ has magnitude $dl\\sin\\theta$, which vanishes when $d\\vec{l}$ is parallel or antiparallel to $\\hat{r}$ (looking along the wire toward the point) and is largest when they are perpendicular.'
           },
           {
-            question: 'Two long parallel wires carry current in the SAME direction. They:',
+            question: 'Two long parallel wires carry current in the same direction. They:',
             options: ['Attract each other', 'Repel each other', 'Exert no force', 'Only twist'],
             correctAnswer: 0,
             explanation: 'Each wire sits in the other’s field; using $\\vec{F} = I\\vec{L}\\times\\vec{B}$, parallel currents attract (antiparallel currents repel).'

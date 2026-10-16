@@ -174,7 +174,7 @@ A total current of 10 A enters a node and splits between $R_1 = 6 \\; \\Omega$ a
             explanation: '$V_{\\text{out}} = 15 \\times 4/(1+4) = 15 \\times 4/5 = 12$ V. 3 V is the drop across $R_1$, 15 V is the whole supply, and 3.75 V uses $R_1/R_2$ instead of $R_2/(R_1 + R_2)$.'
           },
           {
-            question: 'In a current divider with two parallel resistors, the branch with the SMALLER resistance carries:',
+            question: 'In a current divider with two parallel resistors, the branch with the smaller resistance carries:',
             options: [
               'Less current, since its voltage is lower',
               'More current, since it offers the easier path',

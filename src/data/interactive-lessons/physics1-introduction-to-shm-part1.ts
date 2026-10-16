@@ -102,7 +102,7 @@ The acceleration is **proportional to displacement** and always directed toward 
             explanation: 'At equilibrium ($x = 0$): $F = -k(0) = 0$ and the object moves fastest (all PE converted to KE).'
           },
           {
-            question: 'Which of the following is NOT an example of SHM?',
+            question: 'Which of the following is not an example of SHM?',
             options: [
               'A mass bouncing up and down on a spring',
               'A pendulum swinging at small angles',

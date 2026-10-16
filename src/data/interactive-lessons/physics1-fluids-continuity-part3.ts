@@ -64,7 +64,7 @@ A 25× speed boost from a 5× radius reduction. (We've ignored Bernoulli effects
             explanation: '$A \\propto r^2$ → halving $r$ quarters $A$ → speed × 4.'
           },
           {
-            question: 'A pipe\'s DIAMETER increases by a factor of 10. Speed in the wider section:',
+            question: 'A pipe\'s diameter increases by a factor of 10. Speed in the wider section:',
             options: [
               '× 100',
               '× 10',

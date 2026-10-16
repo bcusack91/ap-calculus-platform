@@ -193,7 +193,7 @@ A mass oscillates with amplitude $A = 0.20$ m and period $T = 4.0$ s.
               'A constant'
             ],
             correctAnswer: 1,
-            explanation: 'If $x = A\\cos(\\omega t)$, then $v = dx/dt = -A\\omega\\sin(\\omega t)$, which is a negative sine function.'
+            explanation: 'Velocity is the slope of the position-time graph. A cosine graph starts at its peak, where the slope is zero, then slopes downward, so the velocity starts at zero and goes negative. It is most negative where the cosine crosses zero going down, and it returns to zero at the trough. That pattern is a negative sine function.'
           }
         ]
       }

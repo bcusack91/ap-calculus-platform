@@ -156,7 +156,7 @@ Use $g = 10$ $m/s^{2}$.
         hint1: '$W_g = -mg\\Delta h = -3(10)(5)$. Path doesn\'t matter for gravity!',
         hint2: 'Round trip: $h_f = h_i$, so $W_g = -mg(0) = 0$. Conservative force!',
         hint3: '$f_k = \\mu_k mg = 0.2(4)(10) = 8$ N. Each leg: $W_f = -8(10) = -80$ J. Total: $-80 + (-80)$.',
-        explanation: '1) $W_g = -3(10)(5) = -150$ J (negative because ball goes up). 2) $W_g = 0$ J (round trip, conservative force). 3) $W_f = -160$ J. Friction does negative work on BOTH legs — it\'s non-conservative!'
+        explanation: '1) $W_g = -3(10)(5) = -150$ J (negative because ball goes up). 2) $W_g = 0$ J (round trip, conservative force). 3) $W_f = -160$ J. Friction does negative work on both legs — it\'s non-conservative!'
       }
     },
     {

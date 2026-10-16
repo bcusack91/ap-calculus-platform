@@ -196,7 +196,7 @@ Consider a 5 kg block resting on a horizontal surface.
             label: 'On an FBD, you should draw forces that act:',
             options: ['On the object by other objects', 'By the object on everything it touches', 'Both on the object and by the object', 'Internal forces between the object\'s parts'],
             correctIndex: 0,
-            explanation: 'An FBD shows only the forces that act ON the object you\'re analyzing, not forces the object exerts on others.'
+            explanation: 'An FBD shows only the forces that act on the object you\'re analyzing, not forces the object exerts on others.'
           }
         ]
       }

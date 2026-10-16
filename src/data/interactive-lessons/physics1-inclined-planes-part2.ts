@@ -112,7 +112,7 @@ $$\\Delta x = 36/10 = 3.6 \\text{ m}$$
               'Changing direction'
             ],
             correctAnswer: 2,
-            explanation: 'The acceleration is always $g\\sin\\theta$ down the slope, regardless of whether the object is moving up, momentarily stopped, or moving down. Velocity is zero at the top, but acceleration is NOT zero.'
+            explanation: 'The acceleration is always $g\\sin\\theta$ down the slope, regardless of whether the object is moving up, momentarily stopped, or moving down. Velocity is zero at the top, but acceleration is not zero.'
           }
         ]
       }

@@ -45,7 +45,9 @@ $$a = \\frac{16 - 4}{6 - 0} = \\frac{12}{6} = 2 \\text{ m/s}^2$$
 
 The area between the $v$-$t$ curve and the time axis gives the **displacement**:
 
-$$\\Delta x = \\int v \\, dt = \\text{area under } v\\text{-}t \\text{ graph}$$
+$$\\Delta x = \\text{area under the } v\\text{-}t \\text{ graph}$$
+
+Why? Over any short time interval $\\Delta t$, the displacement is about $v\\,\\Delta t$, which is the area of a thin rectangle of height $v$ and width $\\Delta t$. Adding up all the thin rectangles gives the total area under the curve.
 
 ### Sign Convention
 

@@ -205,7 +205,7 @@ A rescue helicopter hovers at 80 m altitude. It drops a supply package while a p
       exercise: {
         questions: [
           {
-            question: 'Which of the following is NOT a vector quantity?',
+            question: 'Which of the following is not a vector quantity?',
             options: [
               'Velocity',
               'Displacement',

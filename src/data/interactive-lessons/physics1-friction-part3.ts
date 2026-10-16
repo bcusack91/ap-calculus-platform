@@ -208,7 +208,7 @@ $$\\Delta x = 144/5.88 = 24.5 \\text{ m}$$
             explanation: 'Kinetic friction opposes motion, causing deceleration ($a = -\\mu_k g$). The object gradually slows and stops.'
           },
           {
-            label: 'Deceleration due to friction on a horizontal surface is $\\mu_k g$, which means it does NOT depend on:',
+            label: 'Deceleration due to friction on a horizontal surface is $\\mu_k g$, which means it does not depend on:',
             options: ['The coefficient of friction', 'Gravitational acceleration', 'The mass of the object', 'The materials of the two surfaces'],
             correctIndex: 2,
             explanation: '$a = \\mu_k g$ — mass cancels out! A heavy object and a light object on the same surface decelerate at the same rate.'

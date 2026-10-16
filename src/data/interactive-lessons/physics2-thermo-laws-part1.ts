@@ -80,7 +80,7 @@ On a **Pressure vs. Volume** (PV) diagram, the **magnitude of the work equals th
       exercise: {
         questions: [
           {
-            question: 'A gas expands from 2.0 L to 5.0 L at a constant pressure of 200 kPa. The work done BY the gas is:',
+            question: 'A gas expands from 2.0 L to 5.0 L at a constant pressure of 200 kPa. The work done by the gas is:',
             options: [
               '−600 J',
               '600 J',
@@ -88,10 +88,10 @@ On a **Pressure vs. Volume** (PV) diagram, the **magnitude of the work equals th
               '−1000 J'
             ],
             correctAnswer: 1,
-            explanation: 'Work done by the gas $= P\\Delta V = (200{,}000)(5.0 - 2.0) \\times 10^{-3} = (200{,}000)(0.003) = 600$ J, positive because the gas expanded. The work done ON the gas is the opposite: $W = -P\\Delta V = -600$ J.'
+            explanation: 'Work done by the gas $= P\\Delta V = (200{,}000)(5.0 - 2.0) \\times 10^{-3} = (200{,}000)(0.003) = 600$ J, positive because the gas expanded. The work done on the gas is the opposite: $W = -P\\Delta V = -600$ J.'
           },
           {
-            question: 'A gas is compressed at constant pressure. Taking $W$ as the work done ON the gas (the AP convention), which statement is correct?',
+            question: 'A gas is compressed at constant pressure. Taking $W$ as the work done on the gas (the AP convention), which statement is correct?',
             options: [
               '$W < 0$ because the volume of the gas decreases during compression',
               '$W > 0$ because the surroundings do positive work on the gas',
@@ -99,7 +99,7 @@ On a **Pressure vs. Volume** (PV) diagram, the **magnitude of the work equals th
               '$W < 0$ because the gas pressure is always positive'
             ],
             correctAnswer: 1,
-            explanation: 'During compression $\\Delta V < 0$, so $W = -P\\Delta V$ is positive: the surroundings do positive work on the gas. The work done BY the gas, $P\\Delta V$, is negative. Same physics, seen from the other side.'
+            explanation: 'During compression $\\Delta V < 0$, so $W = -P\\Delta V$ is positive: the surroundings do positive work on the gas. The work done by the gas, $P\\Delta V$, is negative. Same physics, seen from the other side.'
           }
         ]
       }
@@ -121,10 +121,10 @@ On a **Pressure vs. Volume** (PV) diagram, the **magnitude of the work equals th
               'The length of the curve'
             ],
             correctAnswer: 1,
-            explanation: 'The work done by the gas is $\\int P\\,dV$, which is the area under the P vs. V curve between the initial and final volumes. The work done ON the gas, $W$, has the same magnitude and the opposite sign.'
+            explanation: 'The work done by the gas is $\\int P\\,dV$, which is the area under the P vs. V curve between the initial and final volumes. The work done on the gas, $W$, has the same magnitude and the opposite sign.'
           },
           {
-            question: 'A gas undergoes a process that moves LEFT on a PV diagram. This means:',
+            question: 'A gas undergoes a process that moves left on a PV diagram. This means:',
             options: [
               'The gas expands and does positive work',
               'The gas is at constant volume',
@@ -143,7 +143,7 @@ On a **Pressure vs. Volume** (PV) diagram, the **magnitude of the work equals th
       content: `
 **Work Calculation Drill** 🔧
 
-All processes are isobaric (constant pressure). $W$ is the work done ON the gas (AP convention). Give magnitude and correct sign.
+All processes are isobaric (constant pressure). $W$ is the work done on the gas (AP convention). Give magnitude and correct sign.
 
 1) $P = 100$ kPa, gas expands from 3.0 L to 8.0 L. Work done on the gas, $W$ (in J)?
 

@@ -68,7 +68,7 @@ A long straight wire carries $I_1 = 6.0\\text{ A}$. A second long parallel wire,
             explanation: 'Biot-Savart works for any current configuration. Ampere’s law needs symmetry.'
           },
           {
-            question: 'Two long parallel wires carry currents in OPPOSITE directions. They:',
+            question: 'Two long parallel wires carry currents in opposite directions. They:',
             options: ['Attract', 'Repel', 'Feel no force', 'Rotate without translating'],
             correctAnswer: 1,
             explanation: 'Antiparallel currents repel; only same-direction (parallel) currents attract.'
@@ -86,7 +86,7 @@ A long straight wire carries $I_1 = 6.0\\text{ A}$. A second long parallel wire,
             explanation: 'The magnetic force on a moving point charge is $\\vec{F} = q\\vec{v}\\times\\vec{B}$; the $I\\vec{L}\\times\\vec{B}$ form is its continuum (current) version.'
           },
           {
-            question: 'Which law would you use FIRST to get the field of an infinitely long solenoid?',
+            question: 'Which law would you use first to get the field of an infinitely long solenoid?',
             options: ['Biot-Savart integral', 'Ampère’s law', 'Gauss’s law for magnetism', 'Faraday’s law'],
             correctAnswer: 1,
             explanation: 'The high symmetry of an ideal solenoid makes Ampère’s law with a rectangular loop the efficient choice, giving $B = \\mu_0 nI$.'

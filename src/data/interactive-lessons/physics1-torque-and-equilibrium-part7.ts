@@ -120,7 +120,7 @@ $$\\sum F_x = 0, \\quad \\sum F_y = 0, \\quad \\sum \\tau = 0$$
             label: 'If you choose a different pivot point, the result of an equilibrium analysis:',
             options: ['increases if the new pivot is farther out', 'decreases if the new pivot is closer in', 'stays the same', 'changes, since every lever arm changes'],
             correctIndex: 2,
-            explanation: 'Since $\\sum \\tau = 0$ is valid for ANY choice of pivot, the physical result is the same regardless of which pivot you choose.'
+            explanation: 'Since $\\sum \\tau = 0$ is valid for any choice of pivot, the physical result is the same regardless of which pivot you choose.'
           },
           {
             label: 'Complete static equilibrium requires:',

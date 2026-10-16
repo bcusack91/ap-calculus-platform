@@ -66,7 +66,7 @@ Sometimes **two or more forces** combine to provide centripetal force:
       exercise: {
         questions: [
           {
-            question: 'A roller coaster car goes around the inside of a vertical loop. At the TOP of the loop, which force(s) point toward the center?',
+            question: 'A roller coaster car goes around the inside of a vertical loop. At the top of the loop, which force(s) point toward the center?',
             options: [
               'Normal force only',
               'Gravity only',
@@ -133,7 +133,7 @@ Use $g = 10$ $m/s^{2}$.
       exercise: {
         dropdowns: [
           {
-            label: 'A bucket of water swung in a vertical circle at the TOP: the water stays in because:',
+            label: 'A bucket of water swung in a vertical circle at the top: the water stays in because:',
             options: ['Centrifugal force pushes it in', 'The bucket accelerates inward faster than free-fall', 'Surface tension holds it in', 'Air pressure pushes it in'],
             correctIndex: 1,
             explanation: 'If $v^2/r \\geq g$, the bucket "falls" toward the center faster than the water falls due to gravity. The bucket stays under the water, keeping it in.'
@@ -148,7 +148,7 @@ Use $g = 10$ $m/s^{2}$.
             label: 'The maximum speed for a car on a flat curve depends on:',
             options: ['Mass and radius only', 'Friction and mass only', 'Mass, friction, and radius', 'Friction, radius, and gravity'],
             correctIndex: 3,
-            explanation: '$v_{max} = \\sqrt{\\mu_s g r}$. It depends on $\\mu_s$, $g$, and $r$ — but NOT mass! Mass cancels out.'
+            explanation: '$v_{max} = \\sqrt{\\mu_s g r}$. It depends on $\\mu_s$, $g$, and $r$ — but not mass! Mass cancels out.'
           }
         ]
       }

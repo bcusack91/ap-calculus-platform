@@ -202,31 +202,31 @@ Two identical spheres, each with charge $+6\\ \\mu\\text{C}$, are 0.20 m apart.
       id: 'ec7-common-mistakes-final',
       type: 'multiple-choice' as const,
       content: `
-**Final Check** — The two mistakes that cost the most points on the AP exam.
+**Final Check** — Two calculation errors to catch before you finish.
       `,
       exercise: {
         questions: [
           {
-            question: 'Rank these errors by how many points they typically cost on an AP free-response question:',
+            question: 'A student finds the force between two charges of $3.0\\ \\mu\\text{C}$ each, 0.10 m apart, but enters each charge as 3.0 C instead of $3.0 \\times 10^{-6}$ C. By what factor is the calculated force too large?',
             options: [
-              'Arithmetic slip late in the work → minor deduction',
-              'Wrong sign on the direction → moderate deduction',
-              'μC not converted to C → every later value wrong, major',
-              'Every error costs the same number of points'
-            ],
-            correctAnswer: 2,
-            explanation: 'Unit conversion errors cascade through the entire calculation, making every subsequent number wrong. The AP rubric often awards partial credit for correct method even with arithmetic errors, but a unit conversion error makes the whole answer unreasonable.'
-          },
-          {
-            question: 'On a conceptual AP question, a student explains Coulomb\'s Law but forgets to mention it gives magnitude only. This matters because:',
-            options: [
-              'It doesn\'t matter — the grader will assume they know',
-              'The direction must be stated separately from the magnitude',
-              'It doesn\'t matter — the equation already gives direction',
-              'AP rubrics score only magnitude, never the direction'
+              '$10^{6}$',
+              '$10^{12}$',
+              '$10^{3}$',
+              '$2 \\times 10^{6}$'
             ],
             correctAnswer: 1,
-            explanation: 'AP rubrics specifically look for: (1) correct equation, (2) correct substitution, (3) correct magnitude, AND (4) correct direction with reasoning. Missing the direction discussion can cost 1-2 points.'
+            explanation: 'Each charge is too large by a factor of $10^{6}$, and the force is proportional to the product $q_1 q_2$, so the force is too large by $10^{6} \\times 10^{6} = 10^{12}$. The correct force is $kq^2/r^2 = (9.0 \\times 10^{9})(3.0 \\times 10^{-6})^2/(0.10)^2 = 8.1$ N; the mistake gives about $8 \\times 10^{12}$ N, an impossible value for two small charged objects. Correcting only one charge gives $10^{6}$.'
+          },
+          {
+            question: 'A student uses $F = k|q_1 q_2|/r^2$ to find the force that a $+4\\ \\mu\\text{C}$ charge exerts on a $-2\\ \\mu\\text{C}$ charge located to its right. How should the student find the direction of that force?',
+            options: [
+              'Opposite charges attract, so the force points left',
+              'From the formula, since a positive result means rightward',
+              'From the formula, since the negative charge makes it point right',
+              'Direction is not needed, because force is a scalar'
+            ],
+            correctAnswer: 0,
+            explanation: 'With absolute values the formula gives only the magnitude. The direction comes from the physics: opposite charges attract, so the force on the $-2\\ \\mu\\text{C}$ charge points toward the $+4\\ \\mu\\text{C}$ charge, to the left. Force is a vector, so a complete answer states both magnitude and direction.'
           }
         ]
       }

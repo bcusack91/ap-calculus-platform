@@ -78,7 +78,7 @@ Escape velocity = $\\sqrt{2}$ × orbital velocity at the same radius. A satellit
               'Both speed and total energy decrease together'
             ],
             correctAnswer: 2,
-            explanation: 'Higher orbit: $v = \\sqrt{GM/r}$ decreases. Total energy $E = -GMm/(2r)$ becomes less negative (increases). You need to ADD energy to move to a higher orbit, even though you slow down!'
+            explanation: 'Higher orbit: $v = \\sqrt{GM/r}$ decreases. Total energy $E = -GMm/(2r)$ becomes less negative (increases). You need to add energy to move to a higher orbit, even though you slow down!'
           },
           {
             question: 'If Earth\'s radius were halved (same mass), the escape velocity from the surface would:',

@@ -58,8 +58,8 @@ $$[L] = \\text{kg}\\cdot\\text{m}^2\\text{/s}$$
 | Velocity $v$ | Angular velocity $\\omega$ |
 | Momentum $p = mv$ | Angular momentum $L = I\\omega$ |
 | Force $F$ | Torque $\\tau$ |
-| $F = ma$ | $\\tau = I\\alpha$ |
-| $F = dp/dt$ | $\\tau = dL/dt$ |
+| $F_{\\text{net}} = ma$ | $\\tau_{\\text{net}} = I\\alpha$ |
+| $F_{\\text{net}} = \\Delta p/\\Delta t$ | $\\tau_{\\text{net}} = \\Delta L/\\Delta t$ |
 
 ### Key Insight
 

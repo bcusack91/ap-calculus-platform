@@ -17,7 +17,8 @@ When acceleration depends on **velocity** — $a = a(v)$ — we can no longer si
 | Linear drag (low speed) | $a = -bv$ |
 | Falling with linear drag | $a = g - (k/m)v$ |
 | Constant applied force minus linear drag | $a = F_0/m - bv$ |
-| Other power laws (math practice) | $a = -cv^2$, $a = -c\\sqrt{v}$ |
+
+The AP Physics C course models resistive forces as $F = -kv$ (linear drag), so every $a(v)$ in this lesson is linear in $v$.
 
 ### The Technique
 
@@ -146,15 +147,15 @@ As $v \\to 0$: $x \\to v_0/b$ ✓ (matches our earlier result).`
     {
       id: 'varaccel4-mcq4',
       type: 'mcq' as const,
-      question: 'A particle has $a = -v^2$ with $v(0) = 5$ m/s. Using $dv/dt = -v^2$, find $v(t)$.',
+      question: 'A block sliding on an oil film has $a = -0.40v$ (SI units). Using $x - x_0 = (v_0 - v)/b$, how far does it travel while slowing from $10$ m/s to $2.0$ m/s?',
       options: [
-        '$v = \\frac{5}{1 + 5t}$',
-        '$v = 5e^{-t}$',
-        '$v = 5 - t^2$',
-        '$v = \\frac{1}{5+t}$'
+        '$20$ m',
+        '$25$ m',
+        '$8.0$ m',
+        '$3.2$ m'
       ],
       correctAnswer: 0,
-      explanation: '$dv/v^2 = -dt \\implies -1/v = -t + C$. At $t = 0$: $-1/5 = C$. So $-1/v = -t - 1/5 \\implies 1/v = t + 1/5 = (5t+1)/5 \\implies v = 5/(1+5t)$.'
+      explanation: 'Here $b = 0.40$ s$^{-1}$, so $x - x_0 = (10 - 2.0)/0.40 = 20$ m. $25$ m is the total coasting distance $v_0/b$ to a full stop, $8.0$ m forgets to divide by $b$, and $3.2$ m multiplies by $b$ instead.'
     }
   ]
 };

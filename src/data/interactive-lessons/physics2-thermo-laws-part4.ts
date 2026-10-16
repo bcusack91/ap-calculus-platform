@@ -118,7 +118,7 @@ Since $T \\propto PV$ for a fixed amount of gas, the hottest state is the one wi
 
 A monatomic ideal gas goes from state A ($1.0$ L, $200$ kPa) to state B ($4.0$ L, $200$ kPa) at constant pressure.
 
-1) Work done ON the gas during A→B (in J, with sign)
+1) Work done on the gas during A→B (in J, with sign)
 
 2) Change in internal energy during A→B (in J)
 

@@ -113,7 +113,7 @@ The key insight: **the field is a property of the source charge**. It doesn't de
             explanation: '$E \\propto 1/r^2$. Doubling the distance: $E_{new} = E/(2^2) = E/4$.'
           },
           {
-            question: 'Which statement about the electric field is FALSE?',
+            question: 'Which statement about the electric field is false?',
             options: [
               'It can be expressed in N/C or in V/m',
               'It is a vector with magnitude and direction',

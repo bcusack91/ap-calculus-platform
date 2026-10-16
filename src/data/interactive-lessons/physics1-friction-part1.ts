@@ -196,7 +196,7 @@ A 20 kg box sits on a horizontal surface. $\\mu_s = 0.50$, $\\mu_k = 0.40$, $g =
             label: 'Generally, $\\mu_s$ compared to $\\mu_k$ is:',
             options: ['Smaller', 'Equal to it', 'Larger', 'Unrelated'],
             correctIndex: 2,
-            explanation: '$\\mu_s > \\mu_k$ for the same pair of surfaces. It takes more force to START an object sliding than to KEEP it sliding.'
+            explanation: '$\\mu_s > \\mu_k$ for the same pair of surfaces. It takes more force to start an object sliding than to keep it sliding.'
           }
         ]
       }

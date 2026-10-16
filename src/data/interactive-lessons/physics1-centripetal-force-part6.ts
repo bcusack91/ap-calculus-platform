@@ -131,7 +131,7 @@ Use $g = 10$ $m/s^{2}$.
               'Tension is the same everywhere'
             ],
             correctAnswer: 1,
-            explanation: 'At the bottom: $T = mg + mv^2/r$. At the top: $T = mv^2/r - mg$. The bottom has the largest tension because gravity adds to the required centripetal force, AND the speed is greatest there.'
+            explanation: 'At the bottom: $T = mg + mv^2/r$. At the top: $T = mv^2/r - mg$. The bottom has the largest tension because gravity adds to the required centripetal force, and the speed is greatest there.'
           },
           {
             question: 'A water bucket is swung in a vertical circle of radius 1 m. The minimum speed at the top to keep the water in is:',
@@ -198,7 +198,7 @@ Use $g = 10$ $m/s^{2}$.
               'Select it along with the real force'
             ],
             correctAnswer: 1,
-            explanation: 'Centripetal force is NOT a separate force — it\'s a label for the net radial force. Always identify the real force providing the centripetal acceleration.'
+            explanation: 'Centripetal force is not a separate force — it\'s a label for the net radial force. Always identify the real force providing the centripetal acceleration.'
           }
         ]
       }

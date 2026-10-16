@@ -116,7 +116,7 @@ You've worked through density, pressure definitions, hydrostatic depth dependenc
       exercise: {
         dropdowns: [
           {
-            label: 'Which property of a fluid is INTENSIVE (does not depend on amount)?',
+            label: 'Which property of a fluid is intensive (does not depend on amount)?',
             options: ['Mass', 'Volume', 'Density', 'Weight'],
             correctIndex: 2,
             explanation: 'Density is mass per unit volume — independent of how much you have.'

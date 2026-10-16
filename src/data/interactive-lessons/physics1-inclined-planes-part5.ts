@@ -92,7 +92,7 @@ $$t = v_0/a = 10/7.17 = 1.39 \\text{ s}$$
               'Half the launch speed, whatever the friction'
             ],
             correctAnswer: 2,
-            explanation: 'Friction removes kinetic energy on both the way up AND the way down. The block returns with less speed than it started with.'
+            explanation: 'Friction removes kinetic energy on both the way up and the way down. The block returns with less speed than it started with.'
           },
           {
             question: 'A block slides from rest down a frictionless 30° incline for 2 seconds ($g = 10$ $m/s^{2}$). How far does it travel?',

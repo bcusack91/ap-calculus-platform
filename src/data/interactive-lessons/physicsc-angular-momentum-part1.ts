@@ -62,7 +62,7 @@ This remains constant because $\\vec{\\tau} = \\vec{r} \\times \\vec{F} = 0$ (no
     {
       id: 'am1-mcq2',
       type: 'mcq' as const,
-      question: 'A particle moves in a straight line with constant velocity. Its angular momentum about a point NOT on the line is:',
+      question: 'A particle moves in a straight line with constant velocity. Its angular momentum about a point not on the line is:',
       options: ['Constant and nonzero', 'Zero, since the path is straight', 'Largest at closest approach', 'Decreasing as it moves away'],
       correctAnswer: 0,
       explanation: '$L = mvd$ where $d$ is the perpendicular distance from the point to the line. Since $v$ is constant and $d$ is a geometric constant, $L$ is constant and nonzero (as long as the point is not on the line).'

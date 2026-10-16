@@ -65,7 +65,7 @@ The same test works for rotation: a restoring **torque** $\\tau = -\\kappa\\thet
             explanation: 'Writing $F = -3(x - 4)$ gives $k_{\\text{eff}} = 3$ N/m, so $\\omega = \\sqrt{3/0.75} = \\sqrt{4} = 2\\,\\text{rad/s}$. The constant 12 only sets the equilibrium.'
           },
           {
-            question: 'Which net force does NOT produce simple harmonic motion?',
+            question: 'Which net force does not produce simple harmonic motion?',
             options: ['$F = -2x^3$', '$F = -5(x - 1)$', '$F = 8 - 4x$', '$F = -9x$'],
             correctAnswer: 0,
             explanation: 'A cubic force is not proportional to displacement, so the motion is periodic but not SHM. The other three are each a constant times the displacement from an equilibrium point.'

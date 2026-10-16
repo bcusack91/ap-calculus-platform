@@ -131,7 +131,7 @@ where $V_{hull}$ is the hull's displaceable internal volume.
             explanation: 'The ice was displacing exactly its mass of water. When melted, that same mass occupies the same volume → no change in level.'
           },
           {
-            label: 'A boat with cargo on top sinks lower. If cargo is then thrown OVERBOARD into the water:',
+            label: 'A boat with cargo on top sinks lower. If cargo is then thrown overboard into the water:',
             options: ['The boat sinks lower, since the water rises', 'The boat rises, since it now carries less mass', 'The boat stays at the same level', 'The boat tips toward the thrown side'],
             correctIndex: 1,
             explanation: 'The boat now has less mass to support, so it needs less $V_{sub}$ and floats higher. (Whether the pond\'s water level rises or falls depends on whether the cargo floats or sinks.)'

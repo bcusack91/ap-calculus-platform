@@ -52,7 +52,7 @@ Let\'s bring together all the key ideas from this topic and practice AP-style qu
               'Cannot be determined without contact time'
             ],
             correctAnswer: 3,
-            explanation: 'The rubber ball delivers a greater impulse (it bounces, reversing direction). However, the average force depends on both impulse AND contact time: $F = \\Delta p / \\Delta t$. Without knowing the contact times, we cannot determine which has a greater force.'
+            explanation: 'The rubber ball delivers a greater impulse (it bounces, reversing direction). However, the average force depends on both impulse and contact time: $F = \\Delta p / \\Delta t$. Without knowing the contact times, we cannot determine which has a greater force.'
           },
           {
             question: 'An object of mass $m$ has momentum $p$. Its kinetic energy is:',
@@ -153,7 +153,7 @@ Let\'s bring together all the key ideas from this topic and practice AP-style qu
             label: 'Graphically, impulse is determined by:',
             options: ['the slope of the F-t curve', 'the area under the F-t curve', 'the maximum force reached on the F-t curve', 'the force at the midpoint'],
             correctIndex: 1,
-            explanation: 'Impulse is always the area under the force-time curve: $J = \\int F \\, dt$.'
+            explanation: 'Impulse is always the area under the force-time curve; for a constant force that area is just $F\\Delta t$.'
           },
           {
             label: 'When stopping time is increased for the same change in momentum:',

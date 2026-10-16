@@ -114,7 +114,7 @@ This is the principle behind thermometers! The thermometer (C) reaches equilibri
               'It depends on the specific heat of the container'
             ],
             correctAnswer: 1,
-            explanation: 'Total thermal energy depends on both temperature AND the amount of substance. The pool has enormously more molecules, so despite its lower temperature, it has far more total thermal energy.'
+            explanation: 'Total thermal energy depends on both temperature and the amount of substance. The pool has enormously more molecules, so despite its lower temperature, it has far more total thermal energy.'
           },
           {
             question: 'If $Q = -500$ J for a system, this means:',
@@ -125,7 +125,7 @@ This is the principle behind thermometers! The thermometer (C) reaches equilibri
               'The system did 500 J of work on its surroundings'
             ],
             correctAnswer: 1,
-            explanation: 'Negative $Q$ means energy flows OUT of the system by heating. The system lost (released) 500 J of thermal energy to its surroundings. $Q$ is an energy in joules, not a temperature change, and work is counted separately from heat.'
+            explanation: 'Negative $Q$ means energy flows out of the system by heating. The system lost (released) 500 J of thermal energy to its surroundings. $Q$ is an energy in joules, not a temperature change, and work is counted separately from heat.'
           }
         ]
       }

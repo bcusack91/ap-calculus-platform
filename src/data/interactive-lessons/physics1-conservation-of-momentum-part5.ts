@@ -22,7 +22,7 @@ The answer comes down to one thing: **external forces**.
 
 The complete version of Newton\'s Second Law for a system:
 
-$$\\vec{F}_{\\text{net, external}} = \\frac{d\\vec{p}_{\\text{total}}}{dt}$$
+$$\\vec{F}_{\\text{net, external}} = \\frac{\\Delta\\vec{p}_{\\text{total}}}{\\Delta t}$$
 
 - If $\\vec{F}_{\\text{net, ext}} = 0$: momentum **is conserved** ✅
 - If $\\vec{F}_{\\text{net, ext}} \\neq 0$: momentum is **NOT conserved** ❌
@@ -107,7 +107,7 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
             explanation: 'On frictionless ice, the only forces are internal (between the pucks). Gravity and normal forces cancel vertically. The net external horizontal force is zero, so momentum is conserved.'
           },
           {
-            question: 'A block sliding on a rough surface collides with a stationary block. Is the total momentum of the two blocks conserved DURING the collision?',
+            question: 'A block sliding on a rough surface collides with a stationary block. Is the total momentum of the two blocks conserved during the collision?',
             options: [
               'No, friction is external, so momentum is never conserved',
               'Approximately, since friction\'s impulse is tiny over the brief contact',
@@ -118,7 +118,7 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
             explanation: 'During the very brief collision instant ($\\Delta t \\approx$ ms), the friction force has negligible impulse: $J_{\\text{friction}} = f \\cdot \\Delta t \\approx 0$. So momentum is approximately conserved during the collision, even with friction.'
           },
           {
-            question: 'A ball in free fall is NOT part of an isolated system (considering only the ball). Its momentum:',
+            question: 'A ball in free fall is not part of an isolated system (considering only the ball). Its momentum:',
             options: [
               'Is conserved',
               'Increases at a constant rate',
@@ -126,7 +126,7 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
               'Stays constant, then jumps'
             ],
             correctAnswer: 1,
-            explanation: '$dp/dt = F_{\\text{ext}} = mg$ (constant downward). The ball gains downward momentum at a constant rate of $mg$ per second. This is just another way of saying it accelerates at $g$.'
+            explanation: '$\\Delta p/\\Delta t = F_{\\text{ext}} = mg$ (constant downward). The ball gains downward momentum at a constant rate of $mg$ per second. This is just another way of saying it accelerates at $g$.'
           }
         ]
       }
@@ -151,7 +151,7 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
         hint1: '$J = mg\\Delta t = (5)(10)(4)$',
         hint2: '$f = \\mu_k m_{\\text{total}} g = (0.2)(6)(10) = 12$ N. $J = f \\times 0.005$',
         hint3: '$J = f \\times \\Delta t = (12)(2)$',
-        explanation: '1) $J = (5)(10)(4) = 200$ kg·m/s. 2) $f = (0.2)(6)(10) = 12$ N. $J = (12)(0.005) = 0.06$ N·s — negligible during the collision! 3) $J = (12)(2) = 24$ N·s — significant over 2 seconds. This is why momentum is approximately conserved DURING the collision but not after.'
+        explanation: '1) $J = (5)(10)(4) = 200$ kg·m/s. 2) $f = (0.2)(6)(10) = 12$ N. $J = (12)(0.005) = 0.06$ N·s — negligible during the collision! 3) $J = (12)(2) = 24$ N·s — significant over 2 seconds. This is why momentum is approximately conserved during the collision but not after.'
       }
     },
     {
@@ -178,7 +178,7 @@ The impulse from gravity: $J_y = mg\\Delta t = (2)(10)(3) = 60$ kg·m/s — exac
             label: 'When a net external force acts in one direction, momentum is still conserved:',
             options: ['in every direction, if the force is constant', 'only in the direction of the external force', 'in no direction once any external force acts', 'in the direction perpendicular to the external force'],
             correctIndex: 3,
-            explanation: 'If a net external force acts in one direction, momentum is not conserved in that direction. But it IS conserved in the perpendicular direction (where the force has no component).'
+            explanation: 'If a net external force acts in one direction, momentum is not conserved in that direction. But it is conserved in the perpendicular direction (where the force has no component).'
           }
         ]
       }

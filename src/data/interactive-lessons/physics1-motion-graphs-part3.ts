@@ -30,7 +30,9 @@ On an acceleration-time graph:
 
 ### Area Under the Curve
 
-$$\\text{Area under } a\\text{-}t \\text{ graph} = \\int a \\, dt = \\Delta v$$
+$$\\text{Area under the } a\\text{-}t \\text{ graph} = \\Delta v$$
+
+This works for the same reason as on a $v$-$t$ graph: over a short interval $\\Delta t$, the velocity changes by about $a\\,\\Delta t$, the area of a thin rectangle.
 
 The area under the $a$-$t$ graph gives the **change in velocity**, NOT the velocity itself.
 
@@ -75,7 +77,7 @@ For an object in free fall (taking up as positive):
 When acceleration changes with time:
 
 - The $a$-$t$ graph is no longer a horizontal line
-- The area under the curve must be calculated using geometry (triangles, trapezoids) or calculus
+- The area under the curve is found by splitting it into simple shapes (rectangles, triangles, trapezoids)
 - The kinematic equations ($v = v_0 + at$, etc.) **no longer apply** because they assume constant $a$
 
 ### Example
@@ -203,7 +205,7 @@ An $a$-$t$ graph shows acceleration increasing linearly from $a = 0$ at $t = 0$ 
             explanation: '$\\Delta v_1 = (4)(3) = 12$ m/s. $\\Delta v_2 = (-2)(3) = -6$ m/s. $v(6) = 0 + 12 - 6 = 6$ m/s.'
           },
           {
-            question: 'What information can you NOT directly read from an $a$-$t$ graph?',
+            question: 'What information can you not directly read from an $a$-$t$ graph?',
             options: [
               'Acceleration at a specific time',
               'Change in velocity over an interval',

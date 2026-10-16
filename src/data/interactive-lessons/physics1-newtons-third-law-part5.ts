@@ -198,7 +198,7 @@ Two blocks are in contact on a frictionless surface: $m_1 = 4$ kg and $m_2 = 6$ 
             label: 'In a two-block push problem, switching which block you push changes:',
             options: ['The acceleration', 'The contact force', 'Both', 'Neither'],
             correctIndex: 1,
-            explanation: 'The acceleration stays the same (same total force and total mass), but the contact force changes — it\'s always proportional to the mass of the block NOT being pushed.'
+            explanation: 'The acceleration stays the same (same total force and total mass), but the contact force changes — it\'s always proportional to the mass of the block not being pushed.'
           },
           {
             label: 'For stacked blocks, the force that accelerates the top block horizontally is:',

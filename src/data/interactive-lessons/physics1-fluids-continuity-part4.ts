@@ -82,10 +82,10 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
               'Blood thickens in narrow vessels'
             ],
             correctAnswer: 2,
-            explanation: 'One capillary is narrow, but there are billions of them: their COMBINED cross-section is roughly 1000× the aorta\'s, so the same $Q$ moves about 1000× slower. (A single narrow tube alone would make the blood faster, not slower.)'
+            explanation: 'One capillary is narrow, but there are billions of them: their combined cross-section is roughly 1000× the aorta\'s, so the same $Q$ moves about 1000× slower. (A single narrow tube alone would make the blood faster, not slower.)'
           },
           {
-            question: 'A pipe splits into two equal branches. If main speed is $v$ and branches have HALF the main\'s area, branch speed is:',
+            question: 'A pipe splits into two equal branches. If main speed is $v$ and branches have half the main\'s area, branch speed is:',
             options: ['$v/4$', '$v/2$', '$v$', '$2v$'],
             correctAnswer: 2,
             explanation: '$Q_{main} = A v$. Each branch: $Q/2 = (A/2) v_b$ → $v_b = v$. Same speed!'
@@ -123,7 +123,7 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
       exercise: {
         dropdowns: [
           {
-            label: 'Closing one of two equal output branches forces the SAME total $Q$ through one branch. Speed in the open branch:',
+            label: 'Closing one of two equal output branches forces the same total $Q$ through one branch. Speed in the open branch:',
             options: ['Halves', 'Stays the same', 'Doubles', 'Quadruples'],
             correctIndex: 2,
             explanation: 'Same $Q$, half the path → speed doubles in the open branch.'
@@ -135,7 +135,7 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
             explanation: 'Conservation: $Q_{river} = Q_1 + Q_2 = 2 Q$.'
           },
           {
-            label: 'Blood travels through capillaries SLOWLY because the COMBINED capillary area is:',
+            label: 'Blood travels through capillaries slowly because the combined capillary area is:',
             options: ['Smaller than the aorta', 'Equal to the aorta', 'Much larger than the aorta', 'Slightly smaller than the aorta'],
             correctIndex: 2,
             explanation: 'Same Q, much larger $A_{total}$ → much smaller $v$.'
@@ -169,7 +169,7 @@ The huge total capillary area means very slow flow — perfect for nutrient/gas 
             explanation: '$Q_a = 0.005(4) = 0.020$ $m^{3}/s$. $Q_b = 0.060 - 0.020 = 0.040$ $m^{3}/s$. $v_b = 0.040/0.010 = 4$ m/s. Forgetting to subtract $Q_a$ gives 6 m/s; 3 m/s is the main-pipe speed; 2 m/s divides branch a\'s flow by branch b\'s area.'
           },
           {
-            question: 'In the human cardiovascular system, the speed of blood in the AORTA vs the COMBINED capillary network is approximately:',
+            question: 'In the human cardiovascular system, the speed of blood in the aorta vs the combined capillary network is approximately:',
             options: [
               '1000× slower in aorta',
               'Same speed',

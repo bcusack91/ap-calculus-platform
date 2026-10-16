@@ -137,7 +137,7 @@ You trade distance for force, exactly like a lever or pulley system.
             label: 'A car lift has equal-area pistons. To lift the car 1 m, the input piston must move:',
             options: ['1 m', '2 m', '0.5 m', 'Cannot determine'],
             correctIndex: 0,
-            explanation: 'Equal areas → 1:1 force AND distance ratio. No multiplication, just transmission.'
+            explanation: 'Equal areas → 1:1 force and distance ratio. No multiplication, just transmission.'
           }
         ]
       }

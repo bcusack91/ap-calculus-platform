@@ -80,7 +80,7 @@ $T = \\frac{2\\pi}{\\omega} = 2\\pi\\sqrt{\\frac{L}{g}}$
             explanation: '$T = 2\\pi\\sqrt{L/g}$. Doubling $L$ multiplies $T$ by $\\sqrt{2}$.'
           },
           {
-            question: 'A simple pendulum’s period does NOT depend on:',
+            question: 'A simple pendulum’s period does not depend on:',
             options: ['Length', 'Gravity', 'Mass', 'The ratio $L/g$'],
             correctAnswer: 2,
             explanation: '$T = 2\\pi\\sqrt{L/g}$ contains no mass term — the period depends only on $L$ and $g$.'

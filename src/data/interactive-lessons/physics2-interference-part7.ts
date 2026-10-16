@@ -88,11 +88,11 @@ Match each situation to the correct formula or result:
       exercise: {
         dropdowns: [
           {
-            label: 'dsinθ = mλ in a DOUBLE-SLIT experiment gives',
+            label: 'dsinθ = mλ in a double-slit experiment gives',
             options: ['positions of bright fringes', 'positions of dark fringes', 'positions of minima', 'width of central max']
           },
           {
-            label: 'asinθ = mλ in a SINGLE-SLIT experiment gives',
+            label: 'asinθ = mλ in a single-slit experiment gives',
             options: ['positions of bright fringes', 'positions of dark fringes', 'grating maxima', 'fringe spacing']
           },
           {

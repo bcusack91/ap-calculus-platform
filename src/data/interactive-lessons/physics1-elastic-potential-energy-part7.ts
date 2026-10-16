@@ -124,7 +124,7 @@ Use $g = 10$ $m/s^{2}$.
             label: 'The spring force provides constant acceleration.',
             options: ['True', 'False'],
             correctIndex: 1,
-            explanation: '$F = -kx$ varies with position, so $a = -kx/m$ also varies. Acceleration is NOT constant.'
+            explanation: '$F = -kx$ varies with position, so $a = -kx/m$ also varies. Acceleration is not constant.'
           },
           {
             label: 'In a spring-mass oscillation (no friction), the total energy changes with time.',

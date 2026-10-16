@@ -20,11 +20,9 @@ The key insight: **the area under a force-time graph equals the impulse**.
       content: `
 ## Area Under the Curve = Impulse
 
-Since impulse is $J = F\\Delta t$ for constant force, and more generally:
+For a constant force, impulse is $J = F\\Delta t$, which is the area of a rectangle of height $F$ and width $\\Delta t$ on the $F$-vs-$t$ graph. When the force changes, the same idea applies to each short slice of time, so in general:
 
-$$J = \\int_{t_i}^{t_f} F \\, dt$$
-
-This integral is the **area** under the $F$-vs-$t$ graph.
+$$J = \\text{area under the } F\\text{-vs-}t \\text{ graph}$$
 
 ### Common Graph Shapes
 
@@ -123,7 +121,7 @@ This is why peak forces in collisions can be enormous even though the average fo
               'Change in F between $t = 0$ and $t = 4$ s'
             ],
             correctAnswer: 2,
-            explanation: 'Impulse is always the area under the force-time graph. This is because $J = \\int F \\, dt$, and integrals represent areas.'
+            explanation: 'Impulse is always the area under the force-time graph. Over each short slice of time the impulse is $F\\,\\Delta t$, a thin rectangle of area, and the slices add up to the whole area.'
           },
           {
             question: 'A force-time graph shows +20 N for 3 s, then −10 N for 2 s. What is the total impulse?',
@@ -172,7 +170,7 @@ This is why peak forces in collisions can be enormous even though the average fo
             label: 'On a force-time graph, the impulse is represented by the:',
             options: ['slope of the curve', 'area under the curve', 'maximum height of the curve', 'x-intercept of the curve'],
             correctIndex: 1,
-            explanation: 'The impulse is the area under the F-t curve. This comes from $J = \\int F \\, dt$.'
+            explanation: 'The impulse is the area under the F-t curve, because each short slice contributes $F\\,\\Delta t$, the area of a thin rectangle.'
           },
           {
             label: 'The average force during a collision is:',

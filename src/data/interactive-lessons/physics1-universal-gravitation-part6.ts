@@ -153,7 +153,7 @@ Use $G = 6.67 \\times 10^{-11}$.
             label: 'When solving gravitation problems, the most common error is:',
             options: ['Using the wrong value of $G$', 'Using altitude where center-to-center $r$ belongs', 'Forgetting to square the speed', 'Mixing up degrees and radians'],
             correctIndex: 1,
-            explanation: '$r$ in all gravitation formulas is measured from the CENTER of the planet/star, not from the surface. Always add the radius: $r = R + h$.'
+            explanation: '$r$ in all gravitation formulas is measured from the center of the planet/star, not from the surface. Always add the radius: $r = R + h$.'
           },
           {
             label: 'Dimensional analysis can help verify: $v = \\sqrt{GM/r}$ gives units of:',

@@ -131,7 +131,7 @@ When someone says "a 9-volt battery," they mean $\\Delta V = 9$ V between the te
               'It stays the same at every distance'
             ],
             correctAnswer: 2,
-            explanation: 'Scalar = no direction. We just add numbers (with signs): $V_{\\text{net}} = V_1 + V_2 + \\cdots$, with no vector components. Potential can be negative (a negative source charge gives negative V) and it changes with distance. This makes potential calculations MUCH simpler than field calculations in multi-charge problems.'
+            explanation: 'Scalar = no direction. We just add numbers (with signs): $V_{\\text{net}} = V_1 + V_2 + \\cdots$, with no vector components. Potential can be negative (a negative source charge gives negative V) and it changes with distance. This makes potential calculations much simpler than field calculations in multi-charge problems.'
           }
         ]
       }

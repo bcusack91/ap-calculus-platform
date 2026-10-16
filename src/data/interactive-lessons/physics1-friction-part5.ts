@@ -142,7 +142,7 @@ Plot $a$ vs. $F/m$:
             explanation: 'Since $f_k = \\mu_k N$, the slope of the $f$ vs. $N$ graph is $\\mu_k = 0.35$. Halving or doubling the slope has no basis, and 2.86 is $1/0.35$, the result of reading the axes the wrong way round.'
           },
           {
-            question: 'Which method of measuring $\\mu_s$ does NOT require knowing the mass of the object?',
+            question: 'Which method of measuring $\\mu_s$ does not require knowing the mass of the object?',
             options: [
               'Horizontal pull with spring scale',
               'Incline method (critical angle)',

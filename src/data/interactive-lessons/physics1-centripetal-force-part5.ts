@@ -151,7 +151,7 @@ Use $g = 10$ $m/s^{2}$.
       exercise: {
         dropdowns: [
           {
-            label: 'If you drive SLOWER than the design speed on a banked curve with no friction, you will:',
+            label: 'If you drive slower than the design speed on a banked curve with no friction, you will:',
             options: ['Slide up the bank', 'Slide down the bank', 'Stay perfectly in lane', 'Flip over'],
             correctIndex: 1,
             explanation: 'Below design speed, the centripetal force needed is less than $N\\sin\\theta$ provides. The excess inward force pushes you down the slope — you slide toward the inside of the curve.'

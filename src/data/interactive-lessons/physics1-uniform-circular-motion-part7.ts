@@ -172,7 +172,7 @@ This final lesson brings together all circular motion concepts for AP exam prepa
       exercise: {
         questions: [
           {
-            question: 'Which statement about uniform circular motion is INCORRECT?',
+            question: 'Which statement about uniform circular motion is incorrect?',
             options: [
               'Speed is constant',
               'Acceleration is constant in magnitude',
@@ -180,7 +180,7 @@ This final lesson brings together all circular motion concepts for AP exam prepa
               'The net force points toward the center'
             ],
             correctAnswer: 2,
-            explanation: 'Velocity is NOT constant — its direction continuously changes. Speed (magnitude of velocity) is constant, and the acceleration magnitude is constant, but the acceleration direction also changes (always toward center).'
+            explanation: 'Velocity is not constant — its direction continuously changes. Speed (magnitude of velocity) is constant, and the acceleration magnitude is constant, but the acceleration direction also changes (always toward center).'
           },
           {
             question: 'A planet orbits a star. If the orbital radius increases by a factor of 4 while the orbital speed decreases by half, the period:',

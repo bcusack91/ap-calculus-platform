@@ -111,7 +111,7 @@ Ball A (2 kg) moves at 4 m/s in the $+x$ direction. Ball B (3 kg) moves at 3 m/s
               'Only if kinetic energy is conserved'
             ],
             correctAnswer: 2,
-            explanation: 'Momentum conservation is a vector equation. It applies independently in each direction: $p_{ix} = p_{fx}$ AND $p_{iy} = p_{fy}$.'
+            explanation: 'Momentum conservation is a vector equation. It applies independently in each direction: $p_{ix} = p_{fx}$ and $p_{iy} = p_{fy}$.'
           },
           {
             question: 'A ball moving in the +x direction collides with a stationary ball. After collision, one ball moves at 30° above the x-axis. The other ball must move:',
@@ -196,15 +196,15 @@ Ball A (2 kg) moves at 4 m/s in the $+x$ direction. Ball B (3 kg) moves at 3 m/s
       exercise: {
         questions: [
           {
-            question: 'Two objects of equal mass collide elastically. Object 1 was moving in the +x direction; Object 2 was at rest. After collision, Object 1 moves at 45° above the x-axis. At what angle does Object 2 move?',
+            question: 'On frictionless ice, a 2.0 kg puck moving at 3.0 m/s in the +x direction strikes a 1.0 kg puck at rest. Afterward, the 2.0 kg puck\'s velocity has components 2.0 m/s along +x and 0.50 m/s along +y. What is the y-component of the 1.0 kg puck\'s velocity afterward?',
             options: [
-              '45° above the x-axis, alongside Object 1',
-              '90° below the x-axis (straight down)',
-              '45° below the x-axis',
-              'Straight along the +x direction'
+              '$-1.0$ m/s',
+              '$-0.50$ m/s',
+              '$-0.25$ m/s',
+              '$+1.0$ m/s'
             ],
-            correctAnswer: 2,
-            explanation: 'The total $y$-momentum was zero, so if Object 1 gains positive $y$-momentum, Object 2 must gain equal negative $y$-momentum and move below the x-axis. For an elastic collision of equal masses with the target at rest, the two outgoing velocities are 90° apart, so Object 2 moves at $90° - 45° = 45°$ below the x-axis.'
+            correctAnswer: 0,
+            explanation: 'Total $y$-momentum starts at zero, so it must still be zero: $(2.0)(0.50) + (1.0)v_y = 0$, giving $v_y = -1.0$ m/s. The lighter puck needs twice the $y$-velocity to carry the same size of $y$-momentum. $-0.50$ m/s ignores the mass difference, $-0.25$ m/s divides the masses the wrong way, and $+1.0$ m/s drops the sign, which would give the system net upward momentum from nothing.'
           },
           {
             question: 'A firework at rest explodes into 3 equal pieces. Two pieces fly off at 90° to each other at equal speeds $v$. The third piece moves at speed:',

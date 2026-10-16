@@ -70,7 +70,7 @@ $$F_c = \\frac{mv^2}{r} = m\\omega^2 r = \\frac{4\\pi^2 mr}{T^2}$$
               'The normal force'
             ],
             correctAnswer: 1,
-            explanation: 'The string tension pulls the ball toward the center of the circle. Tension IS the centripetal force in this case — "centripetal force" just describes what the tension is doing.'
+            explanation: 'The string tension pulls the ball toward the center of the circle. Tension is the centripetal force in this case — "centripetal force" just describes what the tension is doing.'
           },
           {
             question: 'On a free body diagram of an object in circular motion, you should:',

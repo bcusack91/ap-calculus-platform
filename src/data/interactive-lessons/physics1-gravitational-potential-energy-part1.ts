@@ -181,7 +181,7 @@ Use $g = 10$ $m/s^{2}$.
             label: 'Changing the reference level changes:',
             options: ['The value of PE at each point', 'The change in PE between two points', 'Both the PE values and the PE change', 'Neither the PE values nor the PE change'],
             correctIndex: 0,
-            explanation: 'Changing the reference level changes the PE value at each point, but the CHANGE in PE ($\\Delta PE$) between two points stays the same.'
+            explanation: 'Changing the reference level changes the PE value at each point, but the change in PE ($\\Delta PE$) between two points stays the same.'
           },
           {
             label: 'For a problem involving a ball thrown upward and caught at the same height, the best reference level is:',

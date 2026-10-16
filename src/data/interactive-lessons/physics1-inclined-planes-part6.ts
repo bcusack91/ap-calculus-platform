@@ -88,7 +88,7 @@ $$a = 1.6 \\text{ m/s}^2$$
               'Equals $(m_1 + m_2)g\\sin 30°$'
             ],
             correctAnswer: 1,
-            explanation: 'The string must accelerate $m_1$ AND support its weight component along the slope: $T = m_1 g\\sin 30° + m_1 a = m_1(g\\sin 30° + a)$. The pull on $m_2$ is a separate force, so the tension depends only on what the string has to do to $m_1$.'
+            explanation: 'The string must accelerate $m_1$ and support its weight component along the slope: $T = m_1 g\\sin 30° + m_1 a = m_1(g\\sin 30° + a)$. The pull on $m_2$ is a separate force, so the tension depends only on what the string has to do to $m_1$.'
           }
         ]
       }

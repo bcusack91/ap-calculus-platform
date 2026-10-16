@@ -114,7 +114,7 @@ On the AP exam, most circular motion problems assume **uniform** circular motion
             explanation: 'Tangential acceleration opposes velocity when the object slows down (like brakes on a car — deceleration is tangential and backward).'
           },
           {
-            question: 'At what point in a vertical circular loop (ball on a string) does gravity provide ONLY tangential acceleration?',
+            question: 'At what point in a vertical circular loop (ball on a string) does gravity provide only tangential acceleration?',
             options: [
               'At the top of the circle (12 o\'clock)',
               'At the bottom of the circle (6 o\'clock)',

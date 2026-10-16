@@ -114,7 +114,7 @@ Let's apply all the rotational kinematics tools to solve challenging problems sy
             label: 'Which equation connects translational and rotational motion for rolling without slipping?',
             options: ['v = Rω', 'v = Rα', 'ω = R/v', 'a = Rω'],
             correctIndex: 0,
-            explanation: 'The rolling-without-slipping condition connects translational and rotational motion: $v_{\\text{cm}} = R\\omega$. ($a = R\\alpha$ is its derivative; $v = R\\alpha$ and $a = R\\omega$ mix up the quantities.)'
+            explanation: 'The rolling-without-slipping condition connects translational and rotational motion: $v_{\\text{cm}} = R\\omega$. ($a = R\\alpha$ is the matching relation for accelerations; $v = R\\alpha$ and $a = R\\omega$ mix up the quantities.)'
           },
           {
             label: 'Which type of acceleration is always present in circular motion and points toward the center?',

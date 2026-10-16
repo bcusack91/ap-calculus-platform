@@ -57,7 +57,7 @@ This is Hooke's law — a restoring force proportional to displacement.
 
 ### Example 2: Lennard-Jones Potential
 
-A model for intermolecular forces:
+A model for the force between two neutral molecules. An exam would give you a function like this; you are not expected to know it, only to work with it:
 
 $$U(r) = \\epsilon\\left[\\left(\\frac{r_0}{r}\\right)^{12} - 2\\left(\\frac{r_0}{r}\\right)^6\\right]$$
 
@@ -65,7 +65,7 @@ $$F(r) = -\\frac{dU}{dr} = \\epsilon\\left[\\frac{12r_0^{12}}{r^{13}} - \\frac{1
 
 **Equilibrium:** $F = 0$ at $r = r_0$. Check: $\\frac{r_0^{12}}{r_0^{13}} = \\frac{r_0^6}{r_0^7}$ ✓
 
-**Stability:** $U''(r_0) > 0$ (minimum of $U$) → stable equilibrium at $r = r_0$.
+**Stability:** for $r < r_0$ the $r^{-13}$ term wins and $F > 0$ (pushed outward, back toward $r_0$); for $r > r_0$, $F < 0$ (pulled inward, back toward $r_0$). Either small displacement is opposed, so $r = r_0$ is a stable equilibrium, the minimum of $U$.
 
 ### Example 3: Gravitational Potential
 
@@ -99,53 +99,49 @@ This describes an asymmetric spring — stiffer on one side than the other.`
     {
       id: 'cf3-higher',
       type: 'text' as const,
-      content: `## Higher-Order Analysis
+      content: `## Equilibrium, Stability and Strongest Force
 
-### Finding Force Extrema
+### Classifying an Equilibrium
 
-The force has maximum magnitude where $dF/dx = 0$, or equivalently $d^2U/dx^2 = 0$ (inflection point of $U$).
+At an equilibrium $x_0$, $dU/dx = 0$. To decide whether it is stable, use either test:
 
-### Taylor Expansion Near Equilibrium
+- **Force test:** displace slightly to each side. If the force points back toward $x_0$ on both sides, the equilibrium is stable; if it points away, unstable.
+- **Shape test:** a local minimum of $U$ ($d^2U/dx^2 > 0$) is stable; a local maximum ($d^2U/dx^2 < 0$) is unstable.
 
-Near a stable equilibrium at $x_0$ (where $U'(x_0) = 0$):
+### Where Is the Force Strongest?
 
-$$U(x) \\approx U(x_0) + \\frac{1}{2}U''(x_0)(x - x_0)^2 + \\frac{1}{6}U'''(x_0)(x - x_0)^3 + \\cdots$$
-
-The leading term gives:
-$$F \\approx -U''(x_0)(x - x_0)$$
-
-This is a **harmonic restoring force** with effective spring constant:
-
-$$k_{\\text{eff}} = U''(x_0) = \\frac{d^2U}{dx^2}\\bigg|_{x_0}$$
-
-### Angular Frequency of Small Oscillations
-
-$$\\omega = \\sqrt{\\frac{k_{\\text{eff}}}{m}} = \\sqrt{\\frac{U''(x_0)}{m}}$$
+Because $|F| = |dU/dx|$, the force is largest where the $U(x)$ curve is steepest. Between a minimum and a maximum, that is where the slope stops increasing and starts decreasing (an inflection point, where $d^2U/dx^2 = 0$).
 
 ### Worked Example
 
+For $x > 0$, a particle has
+
 $$U(x) = U_0\\left(\\frac{a^2}{x^2} - \\frac{a}{x}\\right)$$
 
-**Equilibrium:** $F = -U' = 0$ → $U_0\\left(-\\frac{2a^2}{x^3} + \\frac{a}{x^2}\\right) = 0$ → $x_0 = 2a$
+**Force:** $F = -\\dfrac{dU}{dx} = U_0\\left(\\dfrac{2a^2}{x^3} - \\dfrac{a}{x^2}\\right)$
 
-**Small oscillation frequency:**
-$$U''(x) = U_0\\left(\\frac{6a^2}{x^4} - \\frac{2a}{x^3}\\right)$$
-$$U''(2a) = U_0\\left(\\frac{6a^2}{16a^4} - \\frac{2a}{8a^3}\\right) = U_0\\left(\\frac{6}{16a^2} - \\frac{2}{8a^2}\\right) = \\frac{U_0}{8a^2}$$
+**Equilibrium:** $F = 0 \\implies 2a^2 = ax \\implies x_0 = 2a$
 
-$$\\omega = \\sqrt{\\frac{U_0}{8ma^2}}$$`
+**Force test:**
+- At $x = a$: $F = U_0\\left(\\dfrac{2}{a} - \\dfrac{1}{a}\\right) = +\\dfrac{U_0}{a}$, pushing toward larger $x$, back toward $2a$.
+- At $x = 4a$: $F = U_0\\left(\\dfrac{2}{64a} - \\dfrac{1}{16a}\\right) = -\\dfrac{U_0}{32a}$, pulling back toward $2a$.
+
+So $x_0 = 2a$ is **stable**, and $U(2a) = U_0\\left(\\frac{1}{4} - \\frac{1}{2}\\right) = -\\frac{U_0}{4}$ is the bottom of the well.
+
+**Bound or free?** As $x \\to \\infty$, $U \\to 0$. A particle with total energy between $-U_0/4$ and $0$ is trapped between two turning points; with $E \\geq 0$ it can escape to large $x$.`
     },
     {
       id: 'cf3-mcq3',
       type: 'mcq' as const,
-      question: 'Near a stable equilibrium, any potential energy looks approximately like:',
+      question: 'In the worked example, $U(x) = U_0(a^2/x^2 - a/x)$. A particle is momentarily at $x = a$. The force on it:',
       options: [
-        'A parabola, so small motions are SHM',
-        'A straight line, so the force is constant',
-        'A cubic, so the force is quadratic in $x$',
-        'An exponential, so the force decays smoothly'
+        'Points toward $+x$, toward the equilibrium at $x = 2a$',
+        'Points toward $-x$, away from the equilibrium',
+        'Is zero, because $U = 0$ at $x = a$',
+        'Points toward $-x$, because $U$ is rising'
       ],
       correctAnswer: 0,
-      explanation: 'Taylor expanding around a minimum ($U\' = 0$): the leading nonzero term is $\\frac{1}{2}U\'\'(x_0)(x-x_0)^2$, which is parabolic. This means all small oscillations are simple harmonic.'
+      explanation: 'The force depends on the slope of $U$, not its value: $F = U_0(2a^2/x^3 - a/x^2)$ gives $F = +U_0/a$ at $x = a$. $U$ is falling there (from large positive values toward the well at $2a$), so the force points toward $+x$. $U = 0$ at $x = a$ says nothing about the force.'
     },
     {
       id: 'cf3-mcq4',
@@ -158,7 +154,7 @@ $$\\omega = \\sqrt{\\frac{U_0}{8ma^2}}$$`
         'Neutral, since $U$ is flat at $x = 0$'
       ],
       correctAnswer: 0,
-      explanation: '$U\'(0) = 0$ and $U(x) > 0$ for all $x \\neq 0$ — this is a minimum, hence stable. However, $U\'\'(0) = 12\\beta(0)^2 = 0$, so the harmonic approximation fails. The force $F = -4\\beta x^3$ is restoring but not proportional to $x$ — the oscillation is anharmonic.'
+      explanation: '$U\'(0) = 0$ and $U(x) > 0$ for all $x \\neq 0$, so $x = 0$ is a minimum and the equilibrium is stable. The force $F = -4\\beta x^3$ always points back toward $x = 0$, so the particle oscillates, but SHM requires a restoring force proportional to the displacement, and $x^3$ is not. The motion is periodic but not simple harmonic. A zero second derivative does not make the equilibrium unstable; the force test settles it.'
     },
     {
       id: 'cf3-summary',
@@ -170,9 +166,9 @@ $$\\omega = \\sqrt{\\frac{U_0}{8ma^2}}$$`
 | Force from $U$ | $F = -dU/dx$ |
 | Force = negative slope of $U$ | Points toward lower $U$ |
 | Equilibrium | $F = 0 \\iff dU/dx = 0$ |
-| Stable equilibrium | $d^2U/dx^2 > 0$ (minimum of $U$) |
-| Effective spring constant | $k_{\\text{eff}} = U''(x_0)$ |
-| Small oscillation frequency | $\\omega = \\sqrt{U''(x_0)/m}$ |
+| Stable equilibrium | Minimum of $U$; force points back toward $x_0$ |
+| Unstable equilibrium | Maximum of $U$; force points away from $x_0$ |
+| Strongest force | Where the $U(x)$ curve is steepest |
 
 > **Next up:** Part 4 — Energy Diagrams and Equilibrium, using graphs of $U(x)$ to understand motion qualitatively.`
     }

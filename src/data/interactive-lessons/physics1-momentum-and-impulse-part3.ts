@@ -80,19 +80,19 @@ The bat exerts about **13,000 N** on the ball — roughly the weight of a car!
       content: `
 ## Variable Forces and the Theorem
 
-When force is not constant, the impulse is the **integral** (area under the force-time curve):
+When force is not constant, split the time into many short intervals. During each short interval the force is nearly constant, so the impulse is about $F\\,\\Delta t$, the area of a thin rectangle on the force-time graph. Adding the rectangles gives:
 
-$$\\vec{J} = \\int_{t_i}^{t_f} \\vec{F} \\, dt$$
+$$J = \\text{area under the } F\\text{-}t \\text{ graph}$$
 
-But even with variable forces, the theorem still holds:
+Even with variable forces, the theorem still holds:
 
-$$\\int_{t_i}^{t_f} \\vec{F} \\, dt = \\Delta\\vec{p}$$
+$$\\text{area under the } F\\text{-}t \\text{ graph} = \\Delta p$$
 
-In AP Physics 1, we typically use the **average force** approximation:
+The **average force** is the constant force that would deliver the same impulse in the same time:
 
 $$F_{\\text{avg}} \\Delta t = \\Delta p$$
 
-This is exact for constant forces and a useful approximation for variable forces.
+So the average force is the area under the graph divided by $\\Delta t$. This is exact by definition, which is why it works for both constant and changing forces.
       `
     },
     {

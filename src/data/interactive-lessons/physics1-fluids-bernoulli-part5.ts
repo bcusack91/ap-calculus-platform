@@ -25,9 +25,10 @@ Bernoulli isn't just an exam formula — it explains lift, plumbing, weather, sp
 ## Application Catalog
 
 ### 1. Airfoil / Lift
-- Curved upper surface forces air to travel a longer path → faster speed (in the simple model).
-- Faster speed on top ⇒ lower $P$ on top by Bernoulli.
+- A wing's shape and its tilt (angle of attack) turn the oncoming air downward. In doing so, the air flowing over the top speeds up and the air underneath slows slightly.
+- The speeds are measured or given; Bernoulli then says faster air on top ⇒ lower $P$ on top.
 - Pressure difference × wing area = lift force.
+- A common textbook story says air over the top must travel a longer path and "meet up" with the air underneath at the trailing edge. That is false: nothing forces the two streams to rejoin, and air over the top actually reaches the trailing edge first. Bernoulli explains lift from the speed difference, not from equal travel times.
 
 $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{bot}^2)\\, A$
 
@@ -79,7 +80,7 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
             explanation: 'Bernoulli effect: fast air across the top of the tube lowers the pressure there, and atmospheric pressure on the liquid in the bottle pushes it up the tube into the airstream.'
           },
           {
-            question: 'In a Venturi meter, the location of LOWEST pressure is:',
+            question: 'In a Venturi meter, the location of lowest pressure is:',
             options: [
               'In the wide upstream section',
               'In the narrow throat',
@@ -125,7 +126,7 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
             label: 'In a storm, wind streams rapidly along the outside of a wall that has a closed door, while the air inside the house is still. The door tends to be:',
             options: ['Pushed outward, away from the house', 'Pushed inward by the fast-moving wind', 'Unaffected, since the wind blows parallel to it', 'Pushed inward, since moving air has higher pressure'],
             correctIndex: 0,
-            explanation: 'Bernoulli: the fast-moving air outside has LOWER pressure than the still air inside. The higher indoor pressure pushes the door outward, the same effect that lifts roofs and blows windows out in storms. Wind streaming parallel to the wall does not push the door in.'
+            explanation: 'Bernoulli: the fast-moving air outside has lower pressure than the still air inside. The higher indoor pressure pushes the door outward, the same effect that lifts roofs and blows windows out in storms. Wind streaming parallel to the wall does not push the door in.'
           },
           {
             label: 'Water flows horizontally from a wide section of pipe into a narrow section. The pressure in the narrow section is:',
@@ -140,7 +141,7 @@ $F_{lift} \\approx \\Delta P \\cdot A = \\tfrac{1}{2}\\rho_{air}(v_{top}^2 - v_{
             explanation: 'Bernoulli effect at the chimney top: fast wind lowers the pressure above the flue, so the higher pressure below pushes smoke up and out.'
           },
           {
-            label: 'Which application does NOT depend on the Bernoulli effect?',
+            label: 'Which application does not depend on the Bernoulli effect?',
             options: ['Pitot tube', 'Atomizer', 'Hydraulic press', 'Venturi meter'],
             correctIndex: 2,
             explanation: 'Hydraulic press uses Pascal\'s Principle (static fluid).'

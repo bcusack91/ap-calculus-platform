@@ -115,7 +115,7 @@ Enter the **multiplier** for force in each case:
 
 2) Distance is halved (charges unchanged)
 
-3) One charge is doubled AND distance is doubled
+3) One charge is doubled and distance is doubled
 
 Use fractions like \`1/4\` or whole numbers like \`4\`.
       `,

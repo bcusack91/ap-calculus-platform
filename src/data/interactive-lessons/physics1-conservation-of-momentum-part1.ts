@@ -128,7 +128,7 @@ The lighter skater moves **faster** in the opposite direction — but the total 
               'No energy is lost'
             ],
             correctAnswer: 1,
-            explanation: 'Internal forces (between objects in the system) can be enormous — they cancel by Newton\'s 3rd Law. Only the NET EXTERNAL force must be zero for momentum conservation.'
+            explanation: 'Internal forces (between objects in the system) can be enormous — they cancel by Newton\'s 3rd Law. Only the net external force must be zero for momentum conservation.'
           },
           {
             question: 'A 5 kg cart moving at +4 m/s collides with a 3 kg cart at rest. After the collision they stick together. What is their velocity?',

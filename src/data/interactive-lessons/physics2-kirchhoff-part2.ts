@@ -103,10 +103,10 @@ We return to 0 V — the loop rule is satisfied!
               'Depends on the current'
             ],
             correctAnswer: 1,
-            explanation: 'Going from + to − through a battery is a voltage DROP of $\\varepsilon$. The change is $-9$ V.'
+            explanation: 'Going from + to − through a battery is a voltage drop of $\\varepsilon$. The change is $-9$ V.'
           },
           {
-            question: 'You traverse a 4 Ω resistor AGAINST the direction of the 2 A current. The voltage change is:',
+            question: 'You traverse a 4 Ω resistor against the direction of the 2 A current. The voltage change is:',
             options: [
               '$-8$ V',
               '$+8$ V',
@@ -114,7 +114,7 @@ We return to 0 V — the loop rule is satisfied!
               '$+2$ V'
             ],
             correctAnswer: 1,
-            explanation: 'Traversing a resistor against the current direction gives a voltage RISE: $+IR = +(2)(4) = +8$ V. You are going from low potential to high potential.'
+            explanation: 'Traversing a resistor against the current direction gives a voltage rise: $+IR = +(2)(4) = +8$ V. You are going from low potential to high potential.'
           }
         ]
       }
@@ -205,7 +205,7 @@ The loop rule is the reason parallel branches share the same potential differenc
             explanation: '$I = 6/(2+4) = 1$ A. $V_{4\\Omega} = IR = (1)(4) = 4$ V.'
           },
           {
-            question: 'Which statement is FALSE about Kirchhoff\'s Loop Rule?',
+            question: 'Which statement is false about Kirchhoff\'s Loop Rule?',
             options: [
               'It applies to every closed loop in a circuit',
               'It follows from conservation of energy',
@@ -213,7 +213,7 @@ The loop rule is the reason parallel branches share the same potential differenc
               'Crossing a resistor along the current gives a negative change'
             ],
             correctAnswer: 2,
-            explanation: 'The sum of ALL potential changes around a closed loop, including the battery\'s rise, equals ZERO, not the battery EMF: $\\sum \\Delta V = 0$. It is the drops across the resistors alone that add up to the EMF.'
+            explanation: 'The sum of all potential changes around a closed loop, including the battery\'s rise, equals zero, not the battery EMF: $\\sum \\Delta V = 0$. It is the drops across the resistors alone that add up to the EMF.'
           }
         ]
       }

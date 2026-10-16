@@ -52,7 +52,7 @@ $J_x = m\\,v_{xf} - m\\,v_{xi}\\;\\Rightarrow\\; v_{xf} = v_{xi} + \\frac{J_x}{m
       exercise: {
         questions: [
           {
-            question: 'Which quantity is ALWAYS conserved in collisions (with no external forces)?',
+            question: 'Which quantity is always conserved in collisions (with no external forces)?',
             options: ['Kinetic energy', 'Momentum', 'Speed of each object', 'Mechanical energy'],
             correctAnswer: 1,
             explanation: 'Momentum is always conserved in an isolated system. Kinetic energy is conserved only in elastic collisions.'

@@ -108,7 +108,7 @@ Equal and opposite, as Newton's third law requires. If the coupling took $0.50$ 
       question: 'In the two-disk example, which statement about the angular impulse that disk B exerts on disk A is correct?',
       options: ['It is equal and opposite to the impulse on B', 'It is larger, because A was the one spinning at first', 'It is smaller, because A has less rotational inertia', 'It is zero, because friction is internal to the pair'],
       correctAnswer: 0,
-      explanation: 'The friction torques on the two disks are a Newton\'s-third-law pair, so the angular impulses are equal in size and opposite in direction ($-12$ and $+12$ $kg\\cdot m^{2}/s$). Friction is internal to the pair, which keeps the TOTAL angular momentum fixed, but each disk still receives an impulse.'
+      explanation: 'The friction torques on the two disks are a Newton\'s-third-law pair, so the angular impulses are equal in size and opposite in direction ($-12$ and $+12$ $kg\\cdot m^{2}/s$). Friction is internal to the pair, which keeps the total angular momentum fixed, but each disk still receives an impulse.'
     },
     {
       id: 'am5-mcq5',

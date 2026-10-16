@@ -217,7 +217,7 @@ Use $g = 10$ $m/s^{2}$ where needed.
             explanation: '$W = Fd\\cos\\theta = 100 \\times 5 \\times \\cos(37°) = 500 \\times 0.8 = 400$ J. Using $\\sin 37°$ gives 300 J, leaving out the angle gives 500 J, and dividing by $\\cos 37°$ gives 625 J.'
           },
           {
-            question: 'Which of the following forces NEVER does work on an object?',
+            question: 'Which of the following forces never does work on an object?',
             options: [
               'The normal force',
               'Kinetic friction',

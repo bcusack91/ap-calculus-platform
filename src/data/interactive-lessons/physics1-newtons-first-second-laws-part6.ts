@@ -157,7 +157,7 @@ $$T_1 = T_2 + m_Ag = 19.6 + 3(9.8) = 19.6 + 29.4 = 49 \\text{ N}$$
             explanation: 'After cutting, only gravity acts: $a = g = 9.8$ $m/s^{2}$ downward (free fall).'
           },
           {
-            label: 'Two forces of 5 N and 12 N act on an object. The net force could NOT be:',
+            label: 'Two forces of 5 N and 12 N act on an object. The net force could not be:',
             options: ['7 N', '13 N', '17 N', '18 N'],
             correctIndex: 3,
             explanation: 'The net force ranges from $|12 - 5| = 7$ N to $12 + 5 = 17$ N. 18 N is not possible.'

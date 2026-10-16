@@ -138,7 +138,7 @@ When a single-battery network won't reduce by simple series/parallel collapsing,
             explanation: 'By the junction rule, $I_{in} = I_{out}$. Here $5 + 2 = 7\\,\\text{A}$ enters, so $7\\,\\text{A}$ must leave through the third wire.'
           },
           {
-            question: 'When traversing a resistor in the SAME direction as the assumed current, the potential change to use in the loop rule is:',
+            question: 'When traversing a resistor in the same direction as the assumed current, the potential change to use in the loop rule is:',
             options: ['$+IR$', '$-IR$', '$0$', '$+\\mathcal{E}$'],
             correctAnswer: 1,
             explanation: 'Current flows from high to low potential through a resistor, so traveling with the current you drop in potential: $\\Delta V = -IR$.'

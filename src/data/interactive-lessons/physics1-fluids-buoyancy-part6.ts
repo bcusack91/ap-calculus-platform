@@ -81,7 +81,7 @@ Where $T_{net}$ is positive if the extra force pushes UP, negative if DOWN. In s
 
 1) A 12 kg block of volume $5.0\\times10^{-3}$ $m^{3}$ is fully submerged. Apparent weight on a scale (N)?
 
-2) A 2.0 kg piece of foam (volume 0.020 $m^{3}$) is held UNDER water by a string. String tension (N)?
+2) A 2.0 kg piece of foam (volume 0.020 $m^{3}$) is held under water by a string. String tension (N)?
 
 3) A 1.5 kg wooden block (density 750 $kg/m^{3}$) floats. Volume submerged $(m^{3})$?
       `,
@@ -124,7 +124,7 @@ Where $T_{net}$ is positive if the extra force pushes UP, negative if DOWN. In s
             label: 'A boat carrying a stone is floating in a pond. If the stone is dropped overboard and sinks, the pond level:',
             options: ['Rises, since the stone now adds its volume to the pond', 'Falls', 'Stays the same, since the total mass is unchanged', 'Rises, as the sinking stone pushes water upward'],
             correctIndex: 1,
-            explanation: 'In the boat the stone displaced water equal to its WEIGHT. Once sunk it displaces only its own VOLUME (much less since stone is denser than water) → level falls.'
+            explanation: 'In the boat the stone displaced water equal to its weight. Once sunk it displaces only its own volume (much less since stone is denser than water) → level falls.'
           }
         ]
       }
@@ -149,7 +149,7 @@ Where $T_{net}$ is positive if the extra force pushes UP, negative if DOWN. In s
             explanation: '$F_b = 20$ N → $V = 20/(1000 \\cdot 10) = 2.0\\times10^{-3}$ $m^{3}$. Mass = 20 kg → density = 20/0.002 = 10000 $kg/m^{3}$.'
           },
           {
-            question: 'A buoy floats with 40% above water in fresh water. The MASS of buoy per cubic meter (its avg density) is:',
+            question: 'A buoy floats with 40% above water in fresh water. The mass of buoy per cubic meter (its avg density) is:',
             options: [
               '400 $kg/m^{3}$',
               '600 $kg/m^{3}$',

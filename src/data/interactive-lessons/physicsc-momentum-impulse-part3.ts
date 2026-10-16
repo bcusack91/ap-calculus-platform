@@ -104,7 +104,7 @@ Final KE: $K_f = \\tfrac{1}{2}(6)(1)^2 = 3\\,\\text{J}$.
             explanation: 'For equal masses ($m_1 = m_2$) the coefficients give $v_{1f} = 0$ and $v_{2f} = v_{1i}$ — the velocities swap.'
           },
           {
-            question: 'Which quantity is conserved in ALL collisions in an isolated system?',
+            question: 'Which quantity is conserved in all collisions in an isolated system?',
             options: ['Kinetic energy', 'Momentum', 'Speed of each object', 'Mechanical energy'],
             correctAnswer: 1,
             explanation: 'Momentum is always conserved with no external forces. Kinetic energy is conserved only in elastic collisions.'

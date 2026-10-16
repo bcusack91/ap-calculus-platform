@@ -85,7 +85,7 @@ $G$ is incredibly small: $6.67 \\times 10^{-11}$. Two 100 kg people standing 1 m
             explanation: '$F \\propto 1/r^2$. Triple $r$: $F\' = F/3^2 = F/9$. The force drops to 1/9 of its original value.'
           },
           {
-            question: 'Two objects each have mass $m$ and are separated by distance $d$. If one mass is doubled AND the distance is doubled, the force:',
+            question: 'Two objects each have mass $m$ and are separated by distance $d$. If one mass is doubled and the distance is doubled, the force:',
             options: [
               'Doubles',
               'Halves',

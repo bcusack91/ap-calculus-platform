@@ -133,19 +133,19 @@ For each scenario, determine the direction of the induced current (as viewed fro
       exercise: {
         dropdowns: [
           {
-            label: 'A magnetic field pointing into the page through a loop is INCREASING. The induced current (viewed from front) flows:',
+            label: 'A magnetic field pointing into the page through a loop is increasing. The induced current (viewed from front) flows:',
             options: ['Clockwise', 'Counterclockwise', 'No current flows']
           },
           {
-            label: 'A magnetic field pointing to the right through a coil is DECREASING. The induced field points:',
+            label: 'A magnetic field pointing to the right through a coil is decreasing. The induced field points:',
             options: ['To the left', 'To the right', 'Upward']
           },
           {
-            label: 'A bar magnet with its N pole is pushed INTO a coil from the left. The current in the coil (viewed from the left) flows:',
+            label: 'A bar magnet with its N pole is pushed into a coil from the left. The current in the coil (viewed from the left) flows:',
             options: ['Clockwise', 'Counterclockwise', 'No current flows']
           },
           {
-            label: 'A conducting ring falls through a region where $B$ points to the right. As it EXITS the field region, the induced magnetic field from the ring points:',
+            label: 'A conducting ring falls through a region where $B$ points to the right. As it exits the field region, the induced magnetic field from the ring points:',
             options: ['To the left', 'To the right', 'Downward']
           }
         ],

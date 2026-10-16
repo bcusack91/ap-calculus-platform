@@ -61,7 +61,7 @@ $$R_{\\text{total}} = \\frac{R_1 \\cdot R_2}{R_1 + R_2}$$
       exercise: {
         questions: [
           {
-            question: 'Three resistors ($10 \\; \\Omega$, $20 \\; \\Omega$, $30 \\; \\Omega$) are connected in parallel across a 12 V battery. Which statement is TRUE?',
+            question: 'Three resistors ($10 \\; \\Omega$, $20 \\; \\Omega$, $30 \\; \\Omega$) are connected in parallel across a 12 V battery. Which statement is true?',
             options: [
               'The 10 Ω resistor has the least current',
               'Each resistor sees the same voltage drop',

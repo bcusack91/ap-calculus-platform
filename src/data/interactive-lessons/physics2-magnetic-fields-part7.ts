@@ -243,7 +243,7 @@ An electron ($m = 9.11 \\times 10^{-31}$ kg, $q = 1.6 \\times 10^{-19}$ C) is ac
             explanation: '$v = E/B = (3.0 \\times 10^5)/(0.060) = 5.0 \\times 10^6$ m/s. $1.8 \\times 10^4$ m/s multiplies $E$ by $B$, $2.0 \\times 10^{-7}$ m/s divides $B$ by $E$, and $5.0 \\times 10^5$ m/s misreads 0.060 T as 0.60 T.'
           },
           {
-            question: 'Which statement about the magnetic force is FALSE?',
+            question: 'Which statement about the magnetic force is false?',
             options: [
               'It is always perpendicular to v',
               'It does no work on the particle',
@@ -251,7 +251,7 @@ An electron ($m = 9.11 \\times 10^{-31}$ kg, $q = 1.6 \\times 10^{-19}$ C) is ac
               'It depends on the angle between v and B'
             ],
             correctAnswer: 2,
-            explanation: 'The magnetic force is always perpendicular to velocity, so it does no work and CANNOT change speed — only direction. The claim that it can change speed is the false statement.'
+            explanation: 'The magnetic force is always perpendicular to velocity, so it does no work and cannot change speed — only direction. The claim that it can change speed is the false statement.'
           }
         ]
       }

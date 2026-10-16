@@ -121,13 +121,13 @@ This is **the buoyant force**.
             label: 'A fully submerged object floats up if:',
             options: ['$\\rho_{obj} > \\rho_{fluid}$', '$\\rho_{obj} = \\rho_{fluid}$', '$\\rho_{obj} < \\rho_{fluid}$', '$W_{obj} < W_{fluid\\ in\\ tank}$'],
             correctIndex: 2,
-            explanation: 'Less dense than the fluid → $F_b > W$ → net upward force → it rises. Comparing the object\'s weight with the weight of ALL the fluid in the tank is a common mix-up; only the displaced fluid matters.'
+            explanation: 'Less dense than the fluid → $F_b > W$ → net upward force → it rises. Comparing the object\'s weight with the weight of all the fluid in the tank is a common mix-up; only the displaced fluid matters.'
           },
           {
             label: 'A submerged object\'s buoyant force is independent of:',
             options: ['The density of the fluid', 'The volume of the object', 'The object\'s density', 'The strength of gravity, $g$'],
             correctIndex: 2,
-            explanation: 'Buoyancy depends on fluid density and displaced volume — NOT object density.'
+            explanation: 'Buoyancy depends on fluid density and displaced volume — not object density.'
           },
           {
             label: 'In a vacuum (no fluid around), the buoyant force on an object is:',
@@ -172,7 +172,7 @@ This is **the buoyant force**.
               'Cannot be determined without depth'
             ],
             correctAnswer: 2,
-            explanation: 'Same volume submerged in same fluid → same $F_b = \\rho_{fluid} g V$. Their NET vertical forces (and thus motions) differ, but buoyancy alone is identical.'
+            explanation: 'Same volume submerged in same fluid → same $F_b = \\rho_{fluid} g V$. Their net vertical forces (and thus motions) differ, but buoyancy alone is identical.'
           }
         ]
       }

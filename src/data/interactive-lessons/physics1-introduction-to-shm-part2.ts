@@ -97,7 +97,7 @@ A spring that sags 0.10 m under its load oscillates with $T = 2\\pi\\sqrt{0.10/1
               'Increases the period by a factor of $\\sqrt{2}$'
             ],
             correctAnswer: 2,
-            explanation: 'The period of a mass-spring system depends only on $m$ and $k$, NOT on amplitude. $T = 2\\pi\\sqrt{m/k}$.'
+            explanation: 'The period of a mass-spring system depends only on $m$ and $k$, not on amplitude. $T = 2\\pi\\sqrt{m/k}$.'
           },
           {
             question: 'A vertical spring has a mass hanging from it in equilibrium. The period of oscillation about this equilibrium:',

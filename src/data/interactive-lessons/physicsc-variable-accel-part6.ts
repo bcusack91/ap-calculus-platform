@@ -16,16 +16,15 @@ This workshop brings together all the variable-acceleration techniques. The key 
 |:---|:---|:---:|
 | $t$ only | Direct integration | $v = v_0 + \\int a(t)\\,dt$ |
 | $v$ only | Separation of variables | $\\frac{dv}{a(v)} = dt$ |
-| $x$ only | Energy method | $v\\,dv = a(x)\\,dx$ |
-| $v$ and $x$ | $v\\,dv/dx = a(v,x)$ | Often separable |`
+| $x$ only | Energy method | $v\\,dv = a(x)\\,dx$ |`
     },
     {
       id: 'varaccel6-mcq1',
       type: 'mcq' as const,
-      question: 'A particle has $a = 5\\sqrt{v}$ with $v(0) = 4$ m/s. What is $v$ at $t = 2$ s?',
-      options: ['$49$ m/s', '$36$ m/s', '$25$ m/s', '$16$ m/s'],
+      question: 'A particle has $a = -0.50v$ (SI units) with $v(0) = 8.0$ m/s. What is $v$ at $t = 2.0$ s?',
+      options: ['$2.9$ m/s', '$4.0$ m/s', '$0$ m/s', '$0.37$ m/s'],
       correctAnswer: 0,
-      explanation: '$dv/dt = 5\\sqrt{v} \\implies v^{-1/2}dv = 5\\,dt \\implies 2\\sqrt{v} = 5t + C$. At $t = 0$: $2(2) = C \\implies C = 4$. So $2\\sqrt{v} = 5t + 4$. At $t = 2$: $2\\sqrt{v} = 14 \\implies \\sqrt{v} = 7 \\implies v = 49$ m/s.'
+      explanation: 'Separating variables gives $v = v_0 e^{-bt}$ with $b = 0.50$ s$^{-1}$, so $v = 8.0e^{-(0.50)(2.0)} = 8.0e^{-1} \\approx 2.9$ m/s. Treating the initial acceleration $-4.0$ m/s² as constant gives $0$, $0.37$ m/s leaves out $v_0$, and $4.0$ m/s assumes the speed halves in one time constant.'
     },
     {
       id: 'varaccel6-prob1',
@@ -129,9 +128,10 @@ For $a = -bv$ (linear drag):
 - $[b] = [a/v] = (\\text{m/s}^2)/(\\text{m/s}) = 1/\\text{s}$ ✓
 - $v = v_0 e^{-bt}$: $[bt] = (1/\\text{s})(\\text{s}) = $ dimensionless ✓
 
-For $a = -cv^2$ (quadratic drag):
-- $[c] = [a/v^2] = 1/\\text{m}$ 
-- $v = v_0/(1 + cv_0 t)$: $[cv_0 t] = (1/\\text{m})(\\text{m/s})(\\text{s}) = $ dimensionless ✓
+For a constant force $F_0$ with drag $-bv$:
+- $[b] = [F/v] = (\\text{kg}\\cdot\\text{m/s}^2)/(\\text{m/s}) = \\text{kg/s}$
+- $v_T = F_0/b$: $(\\text{kg}\\cdot\\text{m/s}^2)/(\\text{kg/s}) = \\text{m/s}$ ✓
+- $e^{-bt/m}$: $[bt/m] = (\\text{kg/s})(\\text{s})/\\text{kg} = $ dimensionless ✓
 
 ### Common Dimensional Errors
 
@@ -142,15 +142,15 @@ For $a = -cv^2$ (quadratic drag):
     {
       id: 'varaccel6-mcq4',
       type: 'mcq' as const,
-      question: 'An object with $a = -v^3$ and $v(0) = v_0$ has velocity $v(t) = ?$. (Use separation of variables.)',
+      question: 'A $1.5$ kg object is released from rest and falls with a drag force $-kv$, where $k = 0.30$ kg/s. What is its speed $10$ s after release? (Use $g = 10$ m/s$^2$.)',
       options: [
-        '$v_0/\\sqrt{1 + 2v_0^2 t}$',
-        '$v_0 e^{-t}$',
-        '$v_0/(1+v_0 t)$',
-        '$v_0(1 - v_0^2 t)$'
+        '$43$ m/s',
+        '$50$ m/s',
+        '$32$ m/s',
+        '$6.8$ m/s'
       ],
       correctAnswer: 0,
-      explanation: '$dv/v^3 = -dt \\implies -1/(2v^2) = -t + C$. At $t = 0$: $C = -1/(2v_0^2)$. So $1/(2v^2) = t + 1/(2v_0^2)$, giving $v^2 = v_0^2/(1 + 2v_0^2 t)$, hence $v = v_0/\\sqrt{1 + 2v_0^2 t}$.'
+      explanation: 'Terminal speed is $v_T = mg/k = 15/0.30 = 50$ m/s and the time constant is $m/k = 5.0$ s, so $10$ s is two time constants: $v = 50(1 - e^{-2}) \\approx 43$ m/s. $32$ m/s is the speed after one time constant, $6.8$ m/s is $50e^{-2}$ (the speed still missing, not the speed reached), and $50$ m/s is only approached as $t \\to \\infty$.'
     }
   ]
 };

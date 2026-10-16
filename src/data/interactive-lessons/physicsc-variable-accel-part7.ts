@@ -23,61 +23,62 @@ export const physCVarAccelPart7Data = {
 | Force Model | $v(t)$ |
 |:---|:---:|
 | $a = -bv$ (linear drag) | $v_0 e^{-bt}$ |
-| $a = -cv^2$ (separable power law) | $\\frac{v_0}{1 + cv_0 t}$ |
 | $a = g - (k/m)v$ (falling, linear drag) | $\\frac{mg}{k}\\left(1 - e^{-kt/m}\\right)$ |
 | $a = -\\omega^2 x$ (spring) | $v = \\omega\\sqrt{A^2 - x^2}$ |`
     },
     {
       id: 'varaccel7-mcq1',
       type: 'mcq' as const,
-      question: 'A particle has $a = 3/v$ with $v(0) = 2$ m/s. Find $v$ at $t = 4$ s.',
-      options: ['$\\sqrt{28}$ m/s', '$14$ m/s', '$6$ m/s', '$\\sqrt{16}$ m/s'],
+      question: 'A boat\'s engine shuts off when it is moving at $10$ m/s, and the water then gives it $a = -0.20v$ (SI units). What is its speed $5.0$ s later?',
+      options: ['$3.7$ m/s', '$0$ m/s', '$5.0$ m/s', '$6.3$ m/s'],
       correctAnswer: 0,
-      explanation: '$v\\,dv = 3\\,dt \\implies v^2/2 = 3t + C$. At $t=0$: $C = 2$. So $v^2 = 6t + 4$. At $t = 4$: $v^2 = 28 \\implies v = \\sqrt{28}$.'
+      explanation: '$v = v_0 e^{-bt} = 10e^{-(0.20)(5.0)} = 10e^{-1} \\approx 3.7$ m/s. Treating the initial deceleration of $2.0$ m/s² as constant gives $0$, $5.0$ m/s assumes the speed halves in one time constant, and $6.3$ m/s is $10(1 - e^{-1})$, the speed lost rather than the speed left.'
     },
     {
       id: 'varaccel7-ap-style',
       type: 'text' as const,
       content: `## AP-Style Free Response Problem
 
-**Problem:** A particle of mass $m$ moves along the $x$-axis. At $t = 0$, it is at $x = 0$ with velocity $v_0 > 0$. It experiences a retarding force $F = -\\alpha v^{1/2}$ where $\\alpha > 0$ is a constant.
+**Problem:** A puck of mass $m$ slides along the $x$-axis on a surface coated with a thin layer of oil. At $t = 0$ it is at $x = 0$ with velocity $v_0 > 0$. The only horizontal force on it is a resistive force $F = -bv$, where $b > 0$ is a constant.
 
 **(a)** Show that the velocity as a function of time is:
 
-$$v(t) = \\left(\\sqrt{v_0} - \\frac{\\alpha t}{2m}\\right)^2$$
+$$v(t) = v_0 e^{-bt/m}$$
 
-**Solution:** $m\\frac{dv}{dt} = -\\alpha v^{1/2}$
+**Solution:** Newton's second law gives $m\\frac{dv}{dt} = -bv$. Separate the variables:
 
-$$v^{-1/2}dv = -\\frac{\\alpha}{m}dt$$
+$$\\frac{dv}{v} = -\\frac{b}{m}\\,dt$$
 
-$$2v^{1/2} = -\\frac{\\alpha}{m}t + C$$
+$$\\int_{v_0}^{v} \\frac{dv'}{v'} = -\\frac{b}{m}\\int_0^t dt' \\implies \\ln\\frac{v}{v_0} = -\\frac{bt}{m}$$
 
-At $t = 0$: $C = 2\\sqrt{v_0}$. So $\\sqrt{v} = \\sqrt{v_0} - \\frac{\\alpha t}{2m}$, giving $v = (\\sqrt{v_0} - \\frac{\\alpha t}{2m})^2$. ✓
+So $v = v_0 e^{-bt/m}$. ✓
 
-**(b)** Find the time $T$ when the particle stops.
+**(b)** Find the time $T$ at which the puck's speed has dropped to $v_0/2$.
 
-$$\\sqrt{v_0} - \\frac{\\alpha T}{2m} = 0 \\implies T = \\frac{2m\\sqrt{v_0}}{\\alpha}$$
+$$e^{-bT/m} = \\frac{1}{2} \\implies T = \\frac{m\\ln 2}{b}$$
 
-**(c)** Find the total distance traveled.
+**(c)** Find the total distance the puck travels.
 
-$$x = \\int_0^T v\\,dt = \\int_0^T \\left(\\sqrt{v_0} - \\frac{\\alpha t}{2m}\\right)^2 dt$$
+$$x_{\\text{total}} = \\int_0^{\\infty} v_0 e^{-bt/m}\\,dt = v_0\\left[-\\frac{m}{b}e^{-bt/m}\\right]_0^{\\infty} = \\frac{mv_0}{b}$$
 
-Let $u = \\sqrt{v_0} - \\frac{\\alpha t}{2m}$, $du = -\\frac{\\alpha}{2m}dt$:
+The puck never quite stops, yet it covers only a finite distance.
 
-$$x = -\\frac{2m}{\\alpha}\\int_{\\sqrt{v_0}}^{0} u^2\\,du = \\frac{2m}{\\alpha} \\cdot \\frac{v_0^{3/2}}{3} = \\frac{2mv_0^{3/2}}{3\\alpha}$$`
+**(d)** Check with energy: the work done by the resistive force over the whole motion should equal $\\Delta K = -\\frac{1}{2}mv_0^2$. With $dx = v\\,dt$:
+
+$$W = \\int F\\,dx = \\int_0^{\\infty} (-bv)\\,v\\,dt = -bv_0^2\\int_0^{\\infty} e^{-2bt/m}\\,dt = -bv_0^2 \\cdot \\frac{m}{2b} = -\\frac{1}{2}mv_0^2 \\; ✓$$`
     },
     {
       id: 'varaccel7-mcq2',
       type: 'mcq' as const,
-      question: 'In the problem above, what are the dimensions of $\\alpha$?',
+      question: 'In the problem above, what are the SI units of the constant $b$?',
       options: [
-        'kg$\\cdot$m$^{1/2}\\cdot$s$^{-3/2}$',
-        'N/m',
         'kg/s',
-        'N$\\cdot$s/m'
+        'N/m',
+        'kg$\\cdot$m/s',
+        '1/s'
       ],
       correctAnswer: 0,
-      explanation: 'From $F = -\\alpha v^{1/2}$: $[\\alpha] = [F]/[v^{1/2}] = \\text{N}/(\\text{m/s})^{1/2} = \\text{kg}\\cdot\\text{m/s}^2 \\cdot \\text{s}^{1/2}/\\text{m}^{1/2} = \\text{kg}\\cdot\\text{m}^{1/2}\\cdot\\text{s}^{-3/2}$.'
+      explanation: 'From $F = -bv$: $[b] = [F]/[v] = (\\text{kg}\\cdot\\text{m/s}^2)/(\\text{m/s}) = \\text{kg/s}$. The combination $b/m$ has units of 1/s, which is why $bt/m$ in the exponent is dimensionless. N/m is a spring constant, and kg·m/s is momentum.'
     },
     {
       id: 'varaccel7-connections',

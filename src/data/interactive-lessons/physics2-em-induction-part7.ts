@@ -152,7 +152,7 @@ Test your understanding of the entire electromagnetic induction unit.
       exercise: {
         dropdowns: [
           {
-            label: 'A magnetic field into the page through a loop DECREASES. By Lenz\'s Law, the induced current flows:',
+            label: 'A magnetic field into the page through a loop decreases. By Lenz\'s Law, the induced current flows:',
             options: ['Clockwise (to support the field)', 'Counterclockwise (to oppose the field)', 'No current flows']
           },
           {
@@ -221,7 +221,7 @@ Test your understanding of the entire electromagnetic induction unit.
             explanation: 'The flux goes from $+0.020$ Wb to $-0.020$ Wb, a change of 0.040 Wb, so $|\\varepsilon| = 0.040/0.20 = 0.20$ V. 0.10 V counts only a 0.50 T change, 0 V compares the equal magnitudes and ignores the reversal, and 0.0080 V multiplies by the time instead of dividing.'
           },
           {
-            question: 'Which of the following is NOT a valid way to induce an EMF in a loop?',
+            question: 'Which of the following is not a valid way to induce an EMF in a loop?',
             options: [
               'Moving the loop at constant velocity entirely within a uniform field',
               'Rotating the loop about an axis perpendicular to a uniform field',
@@ -229,7 +229,7 @@ Test your understanding of the entire electromagnetic induction unit.
               'Pulling the loop partway out of the region where the field exists'
             ],
             correctAnswer: 0,
-            explanation: 'Moving a loop through a uniform field without changing $B$, $A$, or $\\theta$ does NOT change the flux — so no EMF is induced. All other options change at least one factor in $\\Phi = BA\\cos\\theta$.'
+            explanation: 'Moving a loop through a uniform field without changing $B$, $A$, or $\\theta$ does not change the flux — so no EMF is induced. All other options change at least one factor in $\\Phi = BA\\cos\\theta$.'
           }
         ]
       }

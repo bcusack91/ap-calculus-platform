@@ -9,7 +9,7 @@ export const physics1ElasticPotentialEnergyPart3Data = {
 
 **Part 3 of 7 — Elastic Potential Energy**
 
-The work done by a spring force is special because the force **varies** with displacement. You can\'t simply multiply force times distance — you need calculus (or the PE formula). The relationship between spring work and elastic PE is central to energy problems.
+The work done by a spring force is special because the force **varies** with displacement. You can\'t simply multiply force times distance; instead, find the area under the force-versus-stretch graph (or use the PE formula). The relationship between spring work and elastic PE is central to energy problems.
       `
     },
     {
@@ -164,7 +164,7 @@ Spring constant $k = 400$ N/m for all problems.
       exercise: {
         dropdowns: [
           {
-            label: 'Stretching a spring from 0.1 m to 0.2 m requires MORE work than from 0 to 0.1 m because:',
+            label: 'Stretching a spring from 0.1 m to 0.2 m requires more work than from 0 to 0.1 m because:',
             options: ['The spring is longer', 'The force is greater at larger x', 'The spring constant increases', 'It doesn\'t — they\'re equal'],
             correctIndex: 1,
             explanation: 'The spring force (and required applied force) is larger at larger $x$. You\'re doing work against a stronger force, so more work is needed.'

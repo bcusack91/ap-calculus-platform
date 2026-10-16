@@ -139,7 +139,7 @@ This workshop combines volume flow rate, pipe narrowing, branching, and mass flo
       exercise: {
         questions: [
           {
-            question: 'A 4 cm diameter horizontal pipe carries water at 3.0 m/s. It splits into TWO equal-area branches, each of 4 cm diameter. Speed in each branch?',
+            question: 'A 4 cm diameter horizontal pipe carries water at 3.0 m/s. It splits into two equal-area branches, each of 4 cm diameter. Speed in each branch?',
             options: [
               '0.75 m/s',
               '1.5 m/s',

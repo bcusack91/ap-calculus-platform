@@ -72,7 +72,7 @@ $$Q = \\frac{\\Delta V}{\\Delta t} = A v$$
             question: 'If you double the cross-sectional area at constant speed:',
             options: ['$Q$ halves', '$Q$ doubles', '$Q$ unchanged', '$Q$ quadruples'],
             correctAnswer: 1,
-            explanation: '$Q = Av$. Doubling $A$ at the same $v$ doubles $Q$. (Quadrupling would apply if the RADIUS doubled, since $A \\propto r^2$.)'
+            explanation: '$Q = Av$. Doubling $A$ at the same $v$ doubles $Q$. (Quadrupling would apply if the radius doubled, since $A \\propto r^2$.)'
           },
           {
             question: 'A pipe carries water at 0.5 $m^{3}/s$ with $A = 0.10$ $m^{2}$. Flow speed?',

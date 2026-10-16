@@ -67,7 +67,7 @@ The points fall on a straight line through the origin with slope $\\approx 0.050
             explanation: 'On an $I$ versus $V$ graph the slope is $1/R$, so $R = 1/0.040 = 25\\;\\Omega$. Reading the slope as $R$ gives $0.040\\;\\Omega$, and 2.5 Ω and 250 Ω misplace the decimal point while inverting.'
           },
           {
-            question: 'Which result would show that a circuit element is NOT ohmic?',
+            question: 'Which result would show that a circuit element is not ohmic?',
             options: [
               'Its $I$-$V$ graph is a straight line with a small slope',
               'Its $I$-$V$ graph is a straight line through the origin',

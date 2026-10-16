@@ -185,7 +185,7 @@ A square coil has 80 turns, each with side length 10 cm. The coil sits in a unif
             explanation: '$|\\varepsilon| = \\frac{|\\Delta\\Phi|}{\\Delta t} = \\frac{0.05}{0.01} = 5$ V.'
           },
           {
-            question: 'A loop is in a uniform magnetic field. Which scenario produces the LARGEST induced EMF?',
+            question: 'A loop is in a uniform magnetic field. Which scenario produces the largest induced EMF?',
             options: [
               'Flux changes by 2.0 Wb in 4.0 s',
               'Flux changes by 1.0 Wb in 0.5 s',

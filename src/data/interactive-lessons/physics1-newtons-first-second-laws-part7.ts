@@ -59,7 +59,7 @@ $$\\vec{F}_{\\text{net}} = m\\vec{a}$$
       exercise: {
         questions: [
           {
-            question: 'A constant net force acts on an object. The object can NOT:',
+            question: 'A constant net force acts on an object. The object cannot:',
             options: [
               'Speed up steadily',
               'Slow down gradually',

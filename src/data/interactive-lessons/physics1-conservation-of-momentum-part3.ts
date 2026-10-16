@@ -132,7 +132,7 @@ Piece 3 moves at $(-2, -2)$ m/s, with speed $|v_3| = \\sqrt{4 + 4} = 2\\sqrt{2} 
               'Equal in size to the total momentum of the pieces'
             ],
             correctAnswer: 2,
-            explanation: 'Zero total momentum does NOT mean zero kinetic energy. KE is $\\frac{1}{2}mv^2$ (always positive for each piece). The energy came from internal stored energy (chemical, elastic, etc.).'
+            explanation: 'Zero total momentum does not mean zero kinetic energy. KE is $\\frac{1}{2}mv^2$ (always positive for each piece). The energy came from internal stored energy (chemical, elastic, etc.).'
           },
           {
             question: 'A 4 kg object at rest explodes into two equal pieces. One piece moves at +10 m/s. The other moves at:',
@@ -228,7 +228,7 @@ Piece 3 moves at $(-2, -2)$ m/s, with speed $|v_3| = \\sqrt{4 + 4} = 2\\sqrt{2} 
               '9:1'
             ],
             correctAnswer: 1,
-            explanation: 'From $mv = $ const: $v_1/v_2 = m_2/m_1 = 3$. $KE_1/KE_2 = (\\frac{1}{2}m_1 v_1^2)/(\\frac{1}{2}m_2 v_2^2) = (m_1/m_2)(v_1/v_2)^2 = (1/3)(9) = 3$. The lighter piece gets MORE KE.'
+            explanation: 'From $mv = $ const: $v_1/v_2 = m_2/m_1 = 3$. $KE_1/KE_2 = (\\frac{1}{2}m_1 v_1^2)/(\\frac{1}{2}m_2 v_2^2) = (m_1/m_2)(v_1/v_2)^2 = (1/3)(9) = 3$. The lighter piece gets more KE.'
           }
         ]
       }

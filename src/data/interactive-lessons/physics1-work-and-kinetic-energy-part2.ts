@@ -120,7 +120,7 @@ The Work-Energy Theorem is especially powerful when you don\'t need to find acce
               'Zero, since the mass is constant'
             ],
             correctAnswer: 1,
-            explanation: 'The Work-Energy Theorem states $W_{\\text{net}} = \\Delta KE = KE_f - KE_i$. It\'s the CHANGE, not the final value.'
+            explanation: 'The Work-Energy Theorem states $W_{\\text{net}} = \\Delta KE = KE_f - KE_i$. It\'s the change, not the final value.'
           },
           {
             question: 'A moving object has zero net work done on it. This means:',

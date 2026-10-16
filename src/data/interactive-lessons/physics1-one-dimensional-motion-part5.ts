@@ -127,7 +127,7 @@ A ball is thrown upward at 19.6 m/s:
               'Reversing direction'
             ],
             correctAnswer: 2,
-            explanation: 'Acceleration due to gravity is ALWAYS 9.8 $m/s^{2}$ downward during free fall — even at the top. The velocity is zero at the top, but the acceleration never changes.'
+            explanation: 'Acceleration due to gravity is always 9.8 $m/s^{2}$ downward during free fall — even at the top. The velocity is zero at the top, but the acceleration never changes.'
           },
           {
             question: 'Two balls are dropped from the same height — one has mass 1 kg, the other 5 kg. Ignoring air resistance, which hits the ground first?',

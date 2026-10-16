@@ -99,7 +99,7 @@ $$P_1 + \\tfrac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2 
               'Drop to zero'
             ],
             correctAnswer: 1,
-            explanation: 'Constant total energy → if KE term goes UP, $P$ must go DOWN to compensate.'
+            explanation: 'Constant total energy → if KE term goes up, $P$ must go down to compensate.'
           }
         ]
       }
@@ -140,7 +140,7 @@ $$P_1 + \\tfrac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2 
             explanation: '$\\tfrac{1}{2}\\rho v^2$ is KE/V — the same form as $\\tfrac{1}{2}mv^2$ divided by $V$ (so $m/V = \\rho$). Dropping the ½ gives $\\rho v^2$; adding $P$ mixes in the pressure-work term.'
           },
           {
-            label: 'For a fluid moving HORIZONTALLY along a streamline, Bernoulli simplifies to:',
+            label: 'For a fluid moving horizontally along a streamline, Bernoulli simplifies to:',
             options: ['$P_1 + \\rho g y_1 = P_2 + \\rho g y_2$', '$P_1 + \\tfrac{1}{2}\\rho v_1^2 = P_2 + \\tfrac{1}{2}\\rho v_2^2$', '$P_1 - \\tfrac{1}{2}\\rho v_1^2 = P_2 - \\tfrac{1}{2}\\rho v_2^2$', '$P_1 + \\rho v_1^2 = P_2 + \\rho v_2^2$'],
             correctIndex: 1,
             explanation: 'No height change → drop the $\\rho g y$ terms and keep pressure and kinetic terms with the same sign: $P_1 + \\tfrac{1}{2}\\rho v_1^2 = P_2 + \\tfrac{1}{2}\\rho v_2^2$.'
@@ -169,7 +169,7 @@ $$P_1 + \\tfrac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2 
       exercise: {
         questions: [
           {
-            question: 'A pipe is HORIZONTAL. At point 1: $P_1 = 200$ kPa, $v_1 = 2$ m/s. At point 2 (narrower): $v_2 = 6$ m/s. $P_2$? ($\\rho_w = 1000$)',
+            question: 'A pipe is horizontal. At point 1: $P_1 = 200$ kPa, $v_1 = 2$ m/s. At point 2 (narrower): $v_2 = 6$ m/s. $P_2$? ($\\rho_w = 1000$)',
             options: [
               '$184$ kPa',
               '$192$ kPa',
@@ -180,7 +180,7 @@ $$P_1 + \\tfrac{1}{2}\\rho v_1^2 + \\rho g y_1 = P_2 + \\tfrac{1}{2}\\rho v_2^2 
             explanation: '$P_2 = P_1 + \\tfrac{1}{2}\\rho(v_1^2 - v_2^2) = 200{,}000 + \\tfrac{1}{2}(1000)(4 - 36) = 200{,}000 - 16{,}000 = 184$ kPa.'
           },
           {
-            question: 'The TOTAL Bernoulli "head" $P + \\tfrac{1}{2}\\rho v^2 + \\rho g y$ along a streamline of an ideal fluid is:',
+            question: 'The total Bernoulli "head" $P + \\tfrac{1}{2}\\rho v^2 + \\rho g y$ along a streamline of an ideal fluid is:',
             options: [
               'Increasing',
               'Decreasing',

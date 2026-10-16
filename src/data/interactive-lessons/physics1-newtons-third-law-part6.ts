@@ -116,7 +116,7 @@ $$T = 3(3.92) = 11.76 \\text{ N}$$
               'Newton\'s Third Law cancels part of $F$'
             ],
             correctAnswer: 2,
-            explanation: 'The applied force must accelerate BOTH blocks. The tension only needs to accelerate block B. Since block A also needs to be accelerated, the tension is less than $F$. The floor is frictionless and an ideal rope does not absorb force.'
+            explanation: 'The applied force must accelerate both blocks. The tension only needs to accelerate block B. Since block A also needs to be accelerated, the tension is less than $F$. The floor is frictionless and an ideal rope does not absorb force.'
           }
         ]
       }

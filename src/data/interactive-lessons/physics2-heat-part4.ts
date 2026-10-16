@@ -122,7 +122,7 @@ This form describes an ideal **blackbody**, an object that absorbs all radiation
       exercise: {
         questions: [
           {
-            question: 'Which heat transfer mechanism does NOT require a medium?',
+            question: 'Which heat transfer mechanism does not require a medium?',
             options: [
               'Conduction',
               'Convection',

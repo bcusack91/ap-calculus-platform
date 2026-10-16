@@ -59,7 +59,7 @@ The total resistance is always **greater than the largest individual resistance*
       exercise: {
         questions: [
           {
-            question: 'Three resistors ($10 \\; \\Omega$, $20 \\; \\Omega$, $30 \\; \\Omega$) are connected in series to a battery. Which statement is TRUE?',
+            question: 'Three resistors ($10 \\; \\Omega$, $20 \\; \\Omega$, $30 \\; \\Omega$) are connected in series to a battery. Which statement is true?',
             options: [
               'The 30 Ω resistor carries the most current',
               'Each resistor carries the same current',

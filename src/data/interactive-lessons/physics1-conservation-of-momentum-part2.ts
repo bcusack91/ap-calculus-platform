@@ -166,7 +166,7 @@ In a perfectly inelastic collision, kinetic energy is **always** lost (converted
             label: 'In collisions, momentum is:',
             options: ['always conserved, even with large external forces', 'never conserved, because some is lost to heat', 'conserved only in elastic, not inelastic, collisions', 'conserved if no net external force acts'],
             correctIndex: 3,
-            explanation: 'Momentum is conserved in ALL collisions (elastic or inelastic) as long as no net external force acts on the system.'
+            explanation: 'Momentum is conserved in all collisions (elastic or inelastic) as long as no net external force acts on the system.'
           },
           {
             label: 'In collisions, kinetic energy:',

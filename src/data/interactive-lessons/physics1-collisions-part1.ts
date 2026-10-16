@@ -108,10 +108,10 @@ If you can calculate $KE_i$ and $KE_f$ and they\'re equal → elastic. If $KE_f 
               'Continues forward at the original speed'
             ],
             correctAnswer: 2,
-            explanation: 'In an elastic collision between equal masses with one at rest, the moving object stops and transfers ALL of its momentum and kinetic energy to the other. This is the Newton\'s cradle effect.'
+            explanation: 'In an elastic collision between equal masses with one at rest, the moving object stops and transfers all of its momentum and kinetic energy to the other. This is the Newton\'s cradle effect.'
           },
           {
-            question: 'Which quantity is conserved in ALL types of collisions (elastic, inelastic, perfectly inelastic)?',
+            question: 'Which quantity is conserved in all types of collisions (elastic, inelastic, perfectly inelastic)?',
             options: [
               'Kinetic energy',
               'Total mechanical energy',
@@ -169,7 +169,7 @@ A 2 kg ball at +6 m/s hits a 2 kg ball at rest. After collision: Ball 1 stops, B
             label: 'In an elastic collision, the conserved quantities are:',
             options: ['momentum only', 'kinetic energy only', 'both momentum and kinetic energy', 'both, but only for equal masses'],
             correctIndex: 2,
-            explanation: 'Elastic collisions conserve BOTH momentum and kinetic energy. This double conservation is what distinguishes them from inelastic collisions.'
+            explanation: 'Elastic collisions conserve both momentum and kinetic energy. This double conservation is what distinguishes them from inelastic collisions.'
           },
           {
             label: 'In a head-on elastic collision between equal masses (one at rest), the moving object:',

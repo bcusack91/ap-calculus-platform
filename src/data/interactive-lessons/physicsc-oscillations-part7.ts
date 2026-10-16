@@ -55,7 +55,7 @@ $\\frac{d}{dt}\\left(\\tfrac{1}{2}mv^2 + \\tfrac{1}{2}kx^2\\right) = 0 \\;\\Righ
       exercise: {
         questions: [
           {
-            question: 'Which is NOT an example of SHM?',
+            question: 'Which is not an example of SHM?',
             options: ['Mass on spring', 'Simple pendulum (small angle)', 'Bouncing ball', 'Torsional oscillator'],
             correctAnswer: 2,
             explanation: 'A bouncing ball lacks a restoring force proportional to displacement, so it is periodic but not simple harmonic.'

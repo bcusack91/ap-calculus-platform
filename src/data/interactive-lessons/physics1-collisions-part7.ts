@@ -54,7 +54,7 @@ This final lesson brings together all collision concepts: elastic, inelastic, pe
       exercise: {
         questions: [
           {
-            question: 'Which type of collision loses the MOST kinetic energy?',
+            question: 'Which type of collision loses the most kinetic energy?',
             options: [
               'Elastic',
               'Inelastic',
@@ -65,7 +65,7 @@ This final lesson brings together all collision concepts: elastic, inelastic, pe
             explanation: 'Perfectly inelastic collisions (objects stick together) produce the maximum kinetic energy loss for given initial conditions. Elastic collisions lose zero KE.'
           },
           {
-            question: 'Ball A bounces off Ball B. Ball C sticks to Ball D. All balls are identical and have the same initial speeds. Which collision has MORE change in momentum for the striking ball?',
+            question: 'Ball A bounces off Ball B. Ball C sticks to Ball D. All balls are identical and have the same initial speeds. Which collision has more change in momentum for the striking ball?',
             options: [
               'The bouncing A-B collision',
               'C-D collision, since the ball stops',
@@ -155,13 +155,13 @@ This final lesson brings together all collision concepts: elastic, inelastic, pe
             label: 'Momentum is conserved in:',
             options: ['elastic only', 'inelastic only', 'all types, but only in 1D', 'all collision types'],
             correctIndex: 3,
-            explanation: 'Momentum is conserved in ALL collision types (elastic, inelastic, and perfectly inelastic) as long as no net external force acts.'
+            explanation: 'Momentum is conserved in all collision types (elastic, inelastic, and perfectly inelastic) as long as no net external force acts.'
           },
           {
             label: 'Kinetic energy is conserved only in:',
             options: ['elastic collisions', 'inelastic collisions', 'perfectly inelastic collisions', 'all collisions'],
             correctIndex: 0,
-            explanation: 'Kinetic energy is conserved ONLY in elastic collisions. In all other types, some KE is converted to other forms of energy.'
+            explanation: 'Kinetic energy is conserved only in elastic collisions. In all other types, some KE is converted to other forms of energy.'
           },
           {
             label: 'When a light ball hits a much heavier stationary wall elastically, the ball:',
@@ -181,7 +181,7 @@ This final lesson brings together all collision concepts: elastic, inelastic, pe
       exercise: {
         questions: [
           {
-            question: 'In which scenario is the MOST kinetic energy converted to other forms?',
+            question: 'In which scenario is the most kinetic energy converted to other forms?',
             options: [
               'Two equal balls in an elastic head-on collision',
               'A ball bouncing elastically off a much heavier wall',
@@ -189,7 +189,7 @@ This final lesson brings together all collision concepts: elastic, inelastic, pe
               'Equal masses at +10 m/s and −10 m/s that stick together'
             ],
             correctAnswer: 3,
-            explanation: 'Equal masses at equal but opposite speeds in a perfectly inelastic collision: $v_f = 0$, so ALL kinetic energy is lost. $KE_f = 0$. This is the absolute maximum KE loss scenario.'
+            explanation: 'Equal masses at equal but opposite speeds in a perfectly inelastic collision: $v_f = 0$, so all kinetic energy is lost. $KE_f = 0$. This is the absolute maximum KE loss scenario.'
           },
           {
             question: 'A 1 kg cart moving at 6 m/s strikes a 2 kg cart at rest on a level frictionless track. The 1 kg cart rebounds at 2 m/s. What fraction of the 1 kg cart\'s initial kinetic energy is transferred to the 2 kg cart?',

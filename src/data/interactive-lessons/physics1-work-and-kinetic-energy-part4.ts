@@ -164,25 +164,25 @@ Use $g = 10$ $m/s^{2}$.
       exercise: {
         dropdowns: [
           {
-            label: 'A block slides UP a rough incline. Work by gravity is:',
+            label: 'A block slides up a rough incline. Work by gravity is:',
             options: ['Positive', 'Negative', 'Zero'],
             correctIndex: 1,
             explanation: 'Gravity has a component down the incline, but motion is up the incline ($\\theta = 180°$ between gravity component and displacement), so work is negative.'
           },
           {
-            label: 'A block slides UP a rough incline. Work by friction is:',
+            label: 'A block slides up a rough incline. Work by friction is:',
             options: ['Positive', 'Negative', 'Zero'],
             correctIndex: 1,
             explanation: 'Friction opposes sliding, pointing down the incline while motion is up. So friction does negative work.'
           },
           {
-            label: 'A block slides DOWN a rough incline. Work by gravity is:',
+            label: 'A block slides down a rough incline. Work by gravity is:',
             options: ['Positive', 'Negative', 'Zero'],
             correctIndex: 0,
             explanation: 'Gravity component is down the incline and motion is also down, so gravity does positive work.'
           },
           {
-            label: 'A block slides DOWN a rough incline. Work by friction is:',
+            label: 'A block slides down a rough incline. Work by friction is:',
             options: ['Positive', 'Negative', 'Zero'],
             correctIndex: 1,
             explanation: 'Friction always opposes sliding. Block moves down, friction points up the incline. Work is negative.'

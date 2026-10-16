@@ -193,7 +193,7 @@ A rectangular loop has dimensions 20 cm × 30 cm and sits in a uniform magnetic 
             explanation: '$\\Phi_{\\text{total}} = NBA\\cos\\theta = (200)(0.4)(0.01)(1) = 0.8$ Wb.'
           },
           {
-            question: 'Which of the following will NOT change the magnetic flux through a loop?',
+            question: 'Which of the following will not change the magnetic flux through a loop?',
             options: [
               'Rotating the loop in the field',
               'Sliding the loop through a uniform field without leaving it',

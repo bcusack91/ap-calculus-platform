@@ -135,7 +135,7 @@ To find the reaction to any force:
               'The weight of the table pushing down'
             ],
             correctAnswer: 1,
-            explanation: 'The reaction to "Earth pulls book down" is "Book pulls Earth up." They are both gravitational forces between the same two objects (Earth and book). The normal force is NOT the reaction — it involves a different object (the table).'
+            explanation: 'The reaction to "Earth pulls book down" is "Book pulls Earth up." They are both gravitational forces between the same two objects (Earth and book). The normal force is not the reaction — it involves a different object (the table).'
           },
           {
             question: 'Which of the following is a valid action-reaction pair?',
@@ -198,7 +198,7 @@ To find the reaction to any force:
             label: 'Can an action-reaction pair ever cancel each other out?',
             options: ['Yes, because the forces are equal', 'Yes, when both objects are at rest', 'No, because they act on different objects', 'No, because they are always unequal'],
             correctIndex: 2,
-            explanation: 'Forces can only cancel when they act on the SAME object. Since action-reaction pairs act on different objects, they never cancel, even though they are always equal in size.'
+            explanation: 'Forces can only cancel when they act on the same object. Since action-reaction pairs act on different objects, they never cancel, even though they are always equal in size.'
           },
           {
             label: 'When you walk, the force that moves you forward is:',
@@ -226,7 +226,7 @@ To find the reaction to any force:
               'Friction on the cart cancels the reaction force on the horse'
             ],
             correctAnswer: 1,
-            explanation: 'The horse\'s pull on the cart and the cart\'s pull on the horse are on DIFFERENT objects. For the cart\'s motion, we only look at forces on the cart. The horse pulls the cart forward, and if that exceeds friction on the cart, the cart accelerates.'
+            explanation: 'The horse\'s pull on the cart and the cart\'s pull on the horse are on different objects. For the cart\'s motion, we only look at forces on the cart. The horse pulls the cart forward, and if that exceeds friction on the cart, the cart accelerates.'
           },
           {
             question: 'Two ice skaters push off each other. Skater A has mass 80 kg and skater B has mass 40 kg. How do their accelerations compare?',

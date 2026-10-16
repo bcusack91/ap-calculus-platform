@@ -178,7 +178,7 @@ $$2T = 200 \\Rightarrow T = 100 \\text{ N}$$
             explanation: 'Take torques about the right end. The painter is 3 m from the right end and the scaffold\'s weight acts at its center, 2 m from the right end: $T_L(4) = 700(3) + 200(2) = 2100 + 400 = 2500$, so $T_L = 625$ N. (275 N is the right cable\'s tension; 525 N ignores the scaffold\'s weight; 900 N is the total load.)'
           },
           {
-            question: 'A system is in translational equilibrium but NOT rotational equilibrium. This means:',
+            question: 'A system is in translational equilibrium but not rotational equilibrium. This means:',
             options: [
               'It must be at rest, since the forces on it balance',
               'Its center of mass accelerates, but it does not spin',

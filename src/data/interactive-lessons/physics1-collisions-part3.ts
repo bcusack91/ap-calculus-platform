@@ -111,7 +111,7 @@ Always verify that:
               'Neither momentum nor kinetic energy'
             ],
             correctAnswer: 1,
-            explanation: 'In an inelastic collision, momentum is conserved but kinetic energy is NOT. Some KE is converted to heat, sound, and deformation.'
+            explanation: 'In an inelastic collision, momentum is conserved but kinetic energy is not. Some KE is converted to heat, sound, and deformation.'
           },
           {
             question: 'A ball dropped from 2.0 m rebounds to 1.5 m. What fraction of its kinetic energy was converted to other forms during the bounce?',
@@ -218,7 +218,7 @@ A 4 kg ball at +5 m/s hits a 2 kg ball at rest. After collision, the 4 kg ball m
               'They all lose the same KE'
             ],
             correctAnswer: 1,
-            explanation: 'Perfectly inelastic collisions lose the most KE (objects stick together). Inelastic collisions lose some KE. Elastic collisions lose NO KE. So PI > I > E in terms of energy lost.'
+            explanation: 'Perfectly inelastic collisions lose the most KE (objects stick together). Inelastic collisions lose some KE. Elastic collisions lose no KE. So PI > I > E in terms of energy lost.'
           }
         ]
       }

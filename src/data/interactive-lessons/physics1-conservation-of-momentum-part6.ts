@@ -184,7 +184,7 @@ An astronaut (80 kg) floats at rest in space holding a 4.0 kg oxygen tank. She t
               'Momentum is not conserved, so energy cannot be conserved either'
             ],
             correctAnswer: 2,
-            explanation: 'The bullet embeds in the block (perfectly inelastic collision). Kinetic energy is NOT conserved — it is converted to heat, sound, and deformation. We use momentum conservation for the collision and energy conservation for the subsequent swing.'
+            explanation: 'The bullet embeds in the block (perfectly inelastic collision). Kinetic energy is not conserved — it is converted to heat, sound, and deformation. We use momentum conservation for the collision and energy conservation for the subsequent swing.'
           },
           {
             question: 'A 3 kg ball at +5 m/s and a 2 kg ball at −5 m/s collide and stick. The final velocity is:',

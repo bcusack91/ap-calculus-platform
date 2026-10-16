@@ -192,7 +192,7 @@ Block A (3 kg) sits on top of Block B (7 kg), which sits on a table. Use $g = 9.
             label: 'Weight of a book and the normal force from the table are:',
             options: ['A Third Law pair in every case', 'Not a Third Law pair', 'A Third Law pair only at rest', 'Always equal, so they form a pair'],
             correctIndex: 1,
-            explanation: 'They involve different objects (Earth-book vs. table-book) and are different types of force (gravitational vs. contact). NOT a Third Law pair. They happen to be equal when the book is in equilibrium, but that\'s Newton\'s Second Law, not Third.'
+            explanation: 'They involve different objects (Earth-book vs. table-book) and are different types of force (gravitational vs. contact). Not a Third Law pair. They happen to be equal when the book is in equilibrium, but that\'s Newton\'s Second Law, not Third.'
           },
           {
             label: 'The reaction to a rope pulling a box forward is:',

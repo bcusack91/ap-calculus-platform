@@ -85,7 +85,7 @@ $$a_{\\text{max}} = A\\omega^2 = 4\\pi^2 f^2 A = \\frac{4\\pi^2 A}{T^2}$$
               '$2\\sqrt{2}$ Hz'
             ],
             correctAnswer: 1,
-            explanation: 'Frequency depends only on $m$ and $k$: $f = (1/2\\pi)\\sqrt{k/m}$. Changing amplitude does NOT change the frequency.'
+            explanation: 'Frequency depends only on $m$ and $k$: $f = (1/2\\pi)\\sqrt{k/m}$. Changing amplitude does not change the frequency.'
           },
           {
             question: 'An oscillator has $T = 0.50$ s. Its angular frequency is:',

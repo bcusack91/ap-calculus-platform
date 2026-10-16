@@ -181,7 +181,7 @@ A circuit has a 36 V battery connected to $R_1 = 12 \\; \\Omega$ in series with 
       exercise: {
         questions: [
           {
-            question: 'Three identical resistors (each $R$) can be combined in different ways. Which arrangement gives the LARGEST total resistance?',
+            question: 'Three identical resistors (each $R$) can be combined in different ways. Which arrangement gives the largest total resistance?',
             options: [
               'All three in parallel',
               'All three in series',

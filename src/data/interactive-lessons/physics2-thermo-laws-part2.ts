@@ -153,7 +153,7 @@ If you add 500 J of heat and the gas does 200 J of work expanding, then $W = -20
               '400 J'
             ],
             correctAnswer: 1,
-            explanation: 'The gas does 400 J of work, so the work done ON the gas is $W = -400$ J. $\\Delta U = Q + W = 600 + (-400) = 200$ J. The gas gets hotter because more energy came in as heat than left as work.'
+            explanation: 'The gas does 400 J of work, so the work done on the gas is $W = -400$ J. $\\Delta U = Q + W = 600 + (-400) = 200$ J. The gas gets hotter because more energy came in as heat than left as work.'
           },
           {
             question: 'During an isothermal expansion, a gas does 350 J of work. How much heat was added?',
@@ -175,7 +175,7 @@ If you add 500 J of heat and the gas does 200 J of work expanding, then $W = -20
       content: `
 **First Law Drill** 🔧
 
-Apply $\\Delta U = Q + W$ ($W$ = work done ON the gas) to each scenario.
+Apply $\\Delta U = Q + W$ ($W$ = work done on the gas) to each scenario.
 
 1) $Q = 1200$ J and $W = -500$ J (the gas expands, doing 500 J of work). Find $\\Delta U$ (in J).
 
@@ -189,7 +189,7 @@ Apply $\\Delta U = Q + W$ ($W$ = work done ON the gas) to each scenario.
         hint1: '$\\Delta U = Q + W = 1200 + (-500)$.',
         hint2: 'The gas does 300 J of work, so $W = -300$ J. $Q = \\Delta U - W = (-100) - (-300) = 200$ J.',
         hint3: 'Adiabatic: $Q = 0$. $\\Delta U = Q + W = 0 + 600 = 600$ J. The gas heats up.',
-        explanation: 'Apply $\\Delta U = Q + W$ carefully with signs. Work done ON the gas is positive ($W > 0$, raising $\\Delta U$); work done BY the gas makes $W$ negative.'
+        explanation: 'Apply $\\Delta U = Q + W$ carefully with signs. Work done on the gas is positive ($W > 0$, raising $\\Delta U$); work done by the gas makes $W$ negative.'
       }
     }
   ]

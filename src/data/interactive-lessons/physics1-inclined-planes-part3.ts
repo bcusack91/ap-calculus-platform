@@ -89,7 +89,7 @@ Friction reduced the acceleration by $\\mu_k g\\cos 37° = 2$ $m/s^{2}$.
             explanation: 'Sliding down: gravity component down the slope minus friction up the slope: $a = g\\sin\\theta - \\mu_k g\\cos\\theta$.'
           },
           {
-            question: 'A block slides UP a rough incline and then slides back DOWN. The magnitude of deceleration going up compared to acceleration going down is:',
+            question: 'A block slides up a rough incline and then slides back down. The magnitude of deceleration going up compared to acceleration going down is:',
             options: [
               'Smaller, since friction helps it going up',
               'Equal, since friction has the same size',
@@ -179,7 +179,7 @@ If $\\mu_s = 0.577$, the critical angle is $\\tan^{-1}(0.577) = 30°$. Any steep
             explanation: 'Constant velocity means $mg\\sin\\theta = \\mu_k mg\\cos\\theta$, so $\\mu_k = \\tan 37° = 0.75$.'
           },
           {
-            question: 'A 4 kg block is launched at 8 m/s UP a 30° rough incline ($\\mu_k = 0.20$, $g = 10$ $m/s^{2}$). What is the deceleration?',
+            question: 'A 4 kg block is launched at 8 m/s up a 30° rough incline ($\\mu_k = 0.20$, $g = 10$ $m/s^{2}$). What is the deceleration?',
             options: [
               '3.3 $m/s^{2}$',
               '5.0 $m/s^{2}$',

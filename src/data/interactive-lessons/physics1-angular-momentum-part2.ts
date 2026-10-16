@@ -29,7 +29,7 @@ This is the most important equation in rotational dynamics. It tells us:
 
 $$\\tau_{\\text{net}} = \\frac{\\Delta L}{\\Delta t}$$
 
-Net torque equals the rate of change of angular momentum — the direct analogue of $F = dp/dt$.
+Net torque equals the rate of change of angular momentum, the direct analogue of $F_{\\text{net}} = \\Delta p/\\Delta t$. Multiplying both sides by $\\Delta t$ gives the angular impulse: $\\tau_{\\text{net}}\\Delta t = \\Delta L$.
 
 ### When $\\tau_{\\text{net}} = 0$:
 
@@ -92,15 +92,15 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
             explanation: '$\\alpha = \\tau/I$. If $I \\to 2I$, then $\\alpha \\to \\tau/(2I) = \\alpha/2$.'
           },
           {
-            question: 'The rotational analogue of $F = dp/dt$ is:',
+            question: 'The rotational analogue of $F_{\\text{net}} = \\Delta p/\\Delta t$ is:',
             options: [
               '$\\tau = I\\omega$',
-              '$\\tau = dL/dt$',
+              '$\\tau = \\Delta L/\\Delta t$',
               '$\\tau = L\\alpha$',
               '$L = \\tau\\theta$'
             ],
             correctAnswer: 1,
-            explanation: '$\\tau = dL/dt$: net torque equals the rate of change of angular momentum, just as net force equals the rate of change of linear momentum.'
+            explanation: '$\\tau_{\\text{net}} = \\Delta L/\\Delta t$: net torque equals the rate of change of angular momentum, just as net force equals the rate of change of linear momentum.'
           }
         ]
       }
@@ -146,7 +146,7 @@ Combined with $mg - T = ma$, you can solve for both $a$ and $T$.
             label: 'When the net external torque on a system is zero:',
             options: ['angular momentum is conserved', 'angular velocity is zero', 'the object is at rest', 'rotational inertia is zero'],
             correctIndex: 0,
-            explanation: 'When $\\tau_{\\text{net}} = 0$, $dL/dt = 0$, meaning angular momentum is conserved.'
+            explanation: 'When $\\tau_{\\text{net}} = 0$, $\\Delta L/\\Delta t = 0$, meaning angular momentum is conserved.'
           },
           {
             label: 'The SI units of angular acceleration α are:',

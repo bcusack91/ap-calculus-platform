@@ -180,7 +180,7 @@ A single loop contains:
       exercise: {
         questions: [
           {
-            question: 'Two identical 10 V batteries are placed in a loop in OPPOSITION with a single 5 Ω resistor. The current is:',
+            question: 'Two identical 10 V batteries are placed in a loop in opposition with a single 5 Ω resistor. The current is:',
             options: [
               '4 A',
               '2 A',

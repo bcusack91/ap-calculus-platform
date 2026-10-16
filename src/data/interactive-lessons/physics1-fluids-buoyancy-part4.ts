@@ -69,7 +69,7 @@ If $W < F_b$ → impossible to rest (would float up).
             question: 'A buoy of density 200 $kg/m^{3}$ is tied to the bottom of a 10 m deep pool. The rope tension points:',
             options: ['Up, since the buoy is trying to rise', 'Down, toward the anchor', 'Sideways, along the pool floor', 'Nowhere; the tension is zero'],
             correctAnswer: 1,
-            explanation: 'The buoy wants to rise (low density). The rope pulls DOWN on the buoy (and up on the bottom anchor) to keep it submerged.'
+            explanation: 'The buoy wants to rise (low density). The rope pulls down on the buoy (and up on the bottom anchor) to keep it submerged.'
           },
           {
             question: 'For a submerged stone resting on a pool bottom, the normal force from the floor is:',
@@ -93,7 +93,7 @@ If $W < F_b$ → impossible to rest (would float up).
 
 1) A solid metal ball of mass 4.0 kg and volume $5.0\\times10^{-4}$ $m^{3}$ is fully submerged. Apparent weight on a spring scale (N)?
 
-2) A foam buoy of mass 2.0 kg and volume 0.020 $m^{3}$ is held UNDER water by a rope. Tension in rope (N)?
+2) A foam buoy of mass 2.0 kg and volume 0.020 $m^{3}$ is held under water by a rope. Tension in rope (N)?
 
 3) A 50 N weight rests on a pool bottom. It displaces $2.0\\times10^{-3}$ $m^{3}$. Normal force from the pool bottom (N)?
       `,
@@ -121,7 +121,7 @@ If $W < F_b$ → impossible to rest (would float up).
             explanation: '$F_b = W_{air} - W_{app} = 50 - 35 = 15$ N. Classic Archimedes "lost weight" calculation.'
           },
           {
-            label: 'Underwater, a steel anchor weighs APPARENTLY:',
+            label: 'Underwater, a steel anchor weighs apparently:',
             options: ['Same as in air', 'Slightly less than in air', 'Slightly more than in air', 'Zero, since the water supports it'],
             correctIndex: 1,
             explanation: 'Buoyancy reduces apparent weight by $\\rho_w g V$ — a small but nonzero amount.'
@@ -130,7 +130,7 @@ If $W < F_b$ → impossible to rest (would float up).
             label: 'A balloon released underwater accelerates upward because:',
             options: ['Water pressure on its top exceeds that on its bottom', '$F_b > W$', '$W > F_b$', 'Surface tension pulls it toward the surface'],
             correctIndex: 1,
-            explanation: 'An air-filled balloon has very low average density → $F_b \\gg W$ → strong net upward force. Pressure is GREATER on its bottom (deeper), which is exactly where the upward buoyant force comes from.'
+            explanation: 'An air-filled balloon has very low average density → $F_b \\gg W$ → strong net upward force. Pressure is greater on its bottom (deeper), which is exactly where the upward buoyant force comes from.'
           },
           {
             label: 'A 1 kg block fully submerged with $V = 0.001$ $m^{3}$ in water — its apparent weight (g = 10):',
@@ -161,7 +161,7 @@ If $W < F_b$ → impossible to rest (would float up).
             explanation: '$T = W - F_b = 60 - 1000(10)(6.7\\times10^{-4}) = 60 - 6.7 = 53.3$ N.'
           },
           {
-            question: 'A 0.50-kg air-filled ball of volume $5.0\\times10^{-3}$ $m^{3}$ is HELD UNDER water by a string anchored to the bottom. Tension in the string (g = 10)?',
+            question: 'A 0.50-kg air-filled ball of volume $5.0\\times10^{-3}$ $m^{3}$ is held under water by a string anchored to the bottom. Tension in the string (g = 10)?',
             options: [
               '5 N',
               '45 N',

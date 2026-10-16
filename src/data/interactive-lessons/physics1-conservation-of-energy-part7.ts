@@ -255,7 +255,7 @@ Use $g = 10$ $m/s^{2}$.
       exercise: {
         questions: [
           {
-            question: 'Which of the following is TRUE about conservation of energy?',
+            question: 'Which of the following is true about conservation of energy?',
             options: [
               'Mechanical energy is always conserved, even when kinetic friction acts',
               'Total energy is always conserved, but mechanical energy only if $W_{nc} = 0$',

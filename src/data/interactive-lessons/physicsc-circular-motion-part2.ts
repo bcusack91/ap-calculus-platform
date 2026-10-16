@@ -124,7 +124,7 @@ At a fixed rotation rate, $a_c \\propto r$: points farther from the axle have la
     {
       id: 'cm2-mcq4',
       type: 'mcq' as const,
-      question: 'Which expression for centripetal acceleration is NOT equivalent to the others?',
+      question: 'Which expression for centripetal acceleration is not equivalent to the others?',
       options: [
         '$v\\omega^2$',
         '$v^2/r$',
@@ -132,7 +132,7 @@ At a fixed rotation rate, $a_c \\propto r$: points farther from the axle have la
         '$4\\pi^2 r/T^2$'
       ],
       correctAnswer: 0,
-      explanation: '$v^2/r = (\\omega r)^2/r = \\omega^2 r$. Also $4\\pi^2 r/T^2 = (2\\pi/T)^2 r = \\omega^2 r$. But $v\\omega^2 = \\omega^2(\\omega r) = \\omega^3 r$, which is NOT the same.'
+      explanation: '$v^2/r = (\\omega r)^2/r = \\omega^2 r$. Also $4\\pi^2 r/T^2 = (2\\pi/T)^2 r = \\omega^2 r$. But $v\\omega^2 = \\omega^2(\\omega r) = \\omega^3 r$, which is not the same.'
     },
     {
       id: 'cm2-mcq5',

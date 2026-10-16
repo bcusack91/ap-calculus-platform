@@ -71,7 +71,7 @@ If the hole is at height $H$ above the ground, the jet exits horizontally at spe
             explanation: '$v = \\sqrt{2gh}$ — the same as an object falling freely from rest through height $h$. ($2\\sqrt{hH}$ is the jet\'s horizontal range, a different formula.)'
           },
           {
-            question: 'The exit speed from a hole in a large open tank does NOT depend on:',
+            question: 'The exit speed from a hole in a large open tank does not depend on:',
             options: [
               'The depth of the hole below the surface',
               'The fluid\'s density',

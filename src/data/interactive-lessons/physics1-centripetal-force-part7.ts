@@ -185,7 +185,7 @@ Use $g = 10$ $m/s^{2}$.
       exercise: {
         questions: [
           {
-            question: 'Which of the following situations does NOT involve centripetal force?',
+            question: 'Which of the following situations does not involve centripetal force?',
             options: [
               'A car driving in a straight line at constant speed',
               'A satellite moving in a circular orbit',
@@ -204,7 +204,7 @@ Use $g = 10$ $m/s^{2}$.
               '$mv^2/R - mg$'
             ],
             correctAnswer: 2,
-            explanation: 'At the bottom: $N - mg = mv^2/R \\Rightarrow N = mg + mv^2/R$. The normal force must support the weight AND provide centripetal force.'
+            explanation: 'At the bottom: $N - mg = mv^2/R \\Rightarrow N = mg + mv^2/R$. The normal force must support the weight and provide centripetal force.'
           }
         ]
       }

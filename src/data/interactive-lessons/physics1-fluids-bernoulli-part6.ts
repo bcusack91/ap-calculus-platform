@@ -59,7 +59,7 @@ A pipe carries water from $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $y_1 = 0$, $P_1 =
       exercise: {
         questions: [
           {
-            question: 'In a horizontal Venturi tube, the pressure drop from the wide section to the narrow throat depends MOST directly on:',
+            question: 'In a horizontal Venturi tube, the pressure drop from the wide section to the narrow throat depends most directly on:',
             options: [
               'The fluid density and the difference in $v^2$',
               'The length of pipe between the sections',
@@ -130,7 +130,7 @@ A pipe carries water from $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $y_1 = 0$, $P_1 =
             explanation: 'Continuity: $v_2 = 2v$. Bernoulli: $\\Delta P = \\tfrac{1}{2}\\rho(v^2 - 4v^2) = -\\tfrac{3}{2}\\rho v^2$. Ignoring the wide-section speed gives $2\\rho v^2$; using $(v_2 - v_1)^2$ gives $\\tfrac{1}{2}\\rho v^2$; flipping the sign makes it an increase.'
           },
           {
-            label: 'A pipe of the same area carries water UP a height $h$. Bernoulli gives the pressure decrease:',
+            label: 'A pipe of the same area carries water up a height $h$. Bernoulli gives the pressure decrease:',
             options: ['$\\tfrac{1}{2}\\rho v^2$', '$\\rho g h$', '$P_{atm}$', 'Zero'],
             correctIndex: 1,
             explanation: 'Same area ⇒ no KE change; only $\\rho g h$ from elevation gain.'
@@ -142,7 +142,7 @@ A pipe carries water from $A_1 = 0.04$ $m^{2}$, $v_1 = 1$ m/s, $y_1 = 0$, $P_1 =
             explanation: 'Pressure drop ∝ $v^2$ ∝ $Q^2$ for given geometry.'
           },
           {
-            label: 'When solving combined problems, the FIRST equation you usually apply is:',
+            label: 'When solving combined problems, the first equation you usually apply is:',
             options: ['Bernoulli, to get the pressure', 'Continuity, to get the unknown speed', 'Newton\'s 2nd law, to get forces', 'Pascal\'s Principle, for pressure'],
             correctIndex: 1,
             explanation: 'Find the unknown speed from continuity first, then plug into Bernoulli.'

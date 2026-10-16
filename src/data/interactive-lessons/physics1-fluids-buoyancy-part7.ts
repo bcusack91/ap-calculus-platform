@@ -97,7 +97,7 @@ You now have the full toolkit: density, displaced volume, equilibrium, free-body
 
 2) A 50-kg log floats with 70% submerged. Volume of the log ($m^{3}$, 4 decimals)?
 
-3) A 4 kg ball with $V = 0.0040$ $m^{3}$ is held by a string at the BOTTOM (submerged). Tension (N)?
+3) A 4 kg ball with $V = 0.0040$ $m^{3}$ is held by a string at the bottom (submerged). Tension (N)?
       `,
       exercise: {
         boxes: 3,
@@ -123,7 +123,7 @@ You now have the full toolkit: density, displaced volume, equilibrium, free-body
             explanation: 'Water pressure decreases as the bubble rises → the gas expands → larger $V$ → larger $F_b = \\rho_w g V$. Bubbles speed up as they rise.'
           },
           {
-            label: 'Two cubes of the SAME size — one steel, one balsa — are each weighted so that both float exactly half submerged. The buoyant forces on them are:',
+            label: 'Two cubes of the same size — one steel, one balsa — are each weighted so that both float exactly half submerged. The buoyant forces on them are:',
             options: ['Same buoyancy', 'Different buoyancy depending on material', 'No buoyancy on balsa', 'Buoyancy proportional to material density'],
             correctIndex: 0,
             explanation: 'Same size and both half submerged ⇒ same $V_{sub}$ ⇒ same $F_b = \\rho_w g V_{sub}$. (Since each floats, $F_b = W$, so their total weights with the added ballast are also equal.)'

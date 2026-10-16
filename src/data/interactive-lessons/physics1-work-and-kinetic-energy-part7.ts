@@ -126,7 +126,7 @@ Use $g = 10$ $m/s^{2}$.
             label: 'The normal force never does work on an object.',
             options: ['True, since it is always perpendicular to the surface', 'False, since in a rising elevator it does work'],
             correctIndex: 1,
-            explanation: 'The normal force CAN do work — for example, in an elevator, the floor\'s normal force pushes you upward as you move upward, doing positive work. It does zero work only when perpendicular to displacement.'
+            explanation: 'The normal force can do work — for example, in an elevator, the floor\'s normal force pushes you upward as you move upward, doing positive work. It does zero work only when perpendicular to displacement.'
           },
           {
             label: 'Kinetic energy can be negative.',

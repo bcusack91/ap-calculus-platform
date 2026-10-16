@@ -79,7 +79,7 @@ A long straight wire carries $I_1 = 20\\text{ A}$. A rectangular loop in the sam
             explanation: '$F = BIL\\sin(90^\\circ) = 0.5(3)(2)(1) = 3$ N.'
           },
           {
-            question: 'The net magnetic force on a closed current loop in a UNIFORM field is:',
+            question: 'The net magnetic force on a closed current loop in a uniform field is:',
             options: ['Always zero', 'Equal to $BIL$', 'Equal to $4BIL$', 'Maximum when $\\theta = 0$'],
             correctAnswer: 0,
             explanation: 'Since $\\oint d\\vec{l} = 0$, $\\vec{F} = I(\\oint d\\vec{l})\\times\\vec{B} = 0$: the forces on opposite sides cancel. This holds only when the field is uniform.'

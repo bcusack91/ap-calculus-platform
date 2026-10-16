@@ -198,7 +198,7 @@ Use $g = 10$ $m/s^{2}$.
             label: 'When a block compresses a spring on a rough surface, friction acts over a distance equal to:',
             options: ['The original distance only', 'The compression distance only', 'The original distance plus compression', 'The original distance plus half the compression'],
             correctIndex: 2,
-            explanation: 'Friction acts the entire time the block is moving, which includes sliding across the floor AND pushing the spring in. Total friction distance = floor distance + compression distance.'
+            explanation: 'Friction acts the entire time the block is moving, which includes sliding across the floor and pushing the spring in. Total friction distance = floor distance + compression distance.'
           },
           {
             label: 'The reference level for gravitational PE should be chosen at:',

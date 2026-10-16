@@ -76,7 +76,7 @@ This pair of ideas — a velocity selector feeding a momentum analyzer — is ex
             explanation: 'Setting $qE = qvB$ gives $v = E/B$, independent of charge and mass.'
           },
           {
-            question: 'The radius of a charged particle’s circular path in a uniform field is $r = mv/(qB)$. Which change INCREASES the radius?',
+            question: 'The radius of a charged particle’s circular path in a uniform field is $r = mv/(qB)$. Which change increases the radius?',
             options: ['Increasing the field $B$', 'Increasing the charge $q$', 'Increasing the momentum $mv$', 'Decreasing the speed $v$'],
             correctAnswer: 2,
             explanation: '$r \\propto mv$ (momentum) and $r \\propto 1/(qB)$. Larger momentum gives a larger radius; larger $q$ or $B$ shrinks it.'
@@ -88,7 +88,7 @@ This pair of ideas — a velocity selector feeding a momentum analyzer — is ex
             explanation: '$B = \\frac{\\mu_0 I}{2\\pi r} = \\frac{(4\\pi\\times10^{-7})(3.0)}{2\\pi(0.02)} = \\frac{(2\\times10^{-7})(3.0)}{0.02} = 3.0\\times10^{-5}$ T.'
           },
           {
-            question: 'Which statement about the magnetic force on a moving charge is TRUE?',
+            question: 'Which statement about the magnetic force on a moving charge is true?',
             options: ['It can change the particle’s speed', 'It is always parallel to the velocity', 'It does no work and changes only direction', 'It is the same at every angle'],
             correctAnswer: 2,
             explanation: 'Because $\\vec{F}\\perp\\vec{v}$, the magnetic force does no work; it changes the direction of motion (curving the path) but not the speed.'

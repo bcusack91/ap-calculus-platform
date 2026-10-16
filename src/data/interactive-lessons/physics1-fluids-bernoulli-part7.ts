@@ -128,16 +128,16 @@ You've completed the full AP Physics 1 fluids progression: density, pressure, bu
       exercise: {
         dropdowns: [
           {
-            label: 'Bernoulli\'s equation does NOT apply when:',
+            label: 'Bernoulli\'s equation does not apply when:',
             options: ['Flow is steady', 'Fluid is incompressible', 'Flow is highly viscous and turbulent', 'Two points are on the same streamline'],
             correctIndex: 2,
             explanation: 'Bernoulli requires non-viscous, steady, incompressible flow.'
           },
           {
-            label: 'A water tower holds water 20 m above a horizontal pipe at ground level. The GAUGE pressure in the pipe (with $v$ small) is approximately ($\\rho_w g h$):',
+            label: 'A water tower holds water 20 m above a horizontal pipe at ground level. The gauge pressure in the pipe (with $v$ small) is approximately ($\\rho_w g h$):',
             options: ['$20$ kPa', '$100$ kPa', '$200$ kPa', '$300$ kPa'],
             correctIndex: 2,
-            explanation: 'Gauge pressure $= \\rho g h = 1000(10)(20) = 200$ kPa. Leaving out $g$ gives 20 kPa; adding $P_{atm}$ gives the ABSOLUTE pressure, 300 kPa; 100 kPa is $P_{atm}$ alone.'
+            explanation: 'Gauge pressure $= \\rho g h = 1000(10)(20) = 200$ kPa. Leaving out $g$ gives 20 kPa; adding $P_{atm}$ gives the absolute pressure, 300 kPa; 100 kPa is $P_{atm}$ alone.'
           },
           {
             label: 'A rooftop air-conditioner exhaust faces the wind (windward). On a windy day, the airflow at the exhaust port has $\\tfrac{1}{2}\\rho v^2$ ≈:',

@@ -36,7 +36,7 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
 
 ### Common AP Combination Problems
 - "Find the force on the bottom of a tank" → $F = P_{gauge} A$
-- "Find force on a side wall (varying depth)" → integrate or use average pressure $P_{avg} = \\rho g (h/2)$, then $F = P_{avg} A$
+- "Find force on a side wall (varying depth)" → gauge pressure grows in proportion to depth, from $0$ at the surface to $\\rho g h$ at the bottom, so use the average gauge pressure $P_{avg} = \\rho g (h/2)$, then $F = P_{avg} A$
 - "Hydraulic lift with depth" → include $\\rho g h$ correction if pistons aren't at the same height
       `
     },
@@ -138,7 +138,7 @@ Time to combine everything: density, hydrostatic pressure, gauge vs absolute, an
       exercise: {
         questions: [
           {
-            question: 'A square hatch (0.5 m × 0.5 m) is in the side of a tank, with its TOP edge 2.0 m below the surface and its BOTTOM 2.5 m below. Average force from water on the hatch (g = 10) is:',
+            question: 'A square hatch (0.5 m × 0.5 m) is in the side of a tank, with its top edge 2.0 m below the surface and its bottom 2.5 m below. Average force from water on the hatch (g = 10) is:',
             options: [
               '~5.6 kN',
               '~2.5 kN',

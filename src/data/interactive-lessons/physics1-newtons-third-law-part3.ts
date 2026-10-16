@@ -123,7 +123,7 @@ In every case, the object accelerates because the **net external force on that o
               'The reaction force acts on the truck after a short delay'
             ],
             correctAnswer: 1,
-            explanation: 'The truck accelerates because the total forces on the TRUCK give a net forward force. The ground\'s friction on the truck\'s tires (forward) exceeds the car\'s pull (backward). The Third Law pair is between truck and car, but the truck also interacts with the ground.'
+            explanation: 'The truck accelerates because the total forces on the truck give a net forward force. The ground\'s friction on the truck\'s tires (forward) exceeds the car\'s pull (backward). The Third Law pair is between truck and car, but the truck also interacts with the ground.'
           },
           {
             question: 'Two astronauts in space push off each other. Astronaut A (90 kg) and Astronaut B (60 kg). Which accelerates more?',
@@ -134,7 +134,7 @@ In every case, the object accelerates because the **net external force on that o
               'Neither accelerates — the forces cancel'
             ],
             correctAnswer: 1,
-            explanation: 'Both experience the same force magnitude (Third Law), but $a = F/m$. B has less mass, so B has a greater acceleration. The forces DON\'T cancel because they act on different astronauts.'
+            explanation: 'Both experience the same force magnitude (Third Law), but $a = F/m$. B has less mass, so B has a greater acceleration. The forces don\'t cancel because they act on different astronauts.'
           },
           {
             question: 'Why don\'t action-reaction forces cancel?',
@@ -145,7 +145,7 @@ In every case, the object accelerates because the **net external force on that o
               'Only the larger force matters'
             ],
             correctAnswer: 2,
-            explanation: 'Forces only cancel (produce zero net force) when they act on the SAME object. Action-reaction pairs always act on DIFFERENT objects, so they never cancel each other.'
+            explanation: 'Forces only cancel (produce zero net force) when they act on the same object. Action-reaction pairs always act on different objects, so they never cancel each other.'
           }
         ]
       }
@@ -185,7 +185,7 @@ A person (80 kg) pushes a cart (40 kg) on a frictionless surface. The system acc
             label: 'To determine if an object accelerates, you should examine:',
             options: ['All forces in the system, internal and external', 'Only forces on that object', 'Only its action-reaction pairs', 'Only the largest single force on it'],
             correctIndex: 1,
-            explanation: 'An object\'s acceleration depends on the net force on THAT object only. Forces on other objects are irrelevant for determining its acceleration.'
+            explanation: 'An object\'s acceleration depends on the net force on that object only. Forces on other objects are irrelevant for determining its acceleration.'
           },
           {
             label: 'Internal forces within a system:',

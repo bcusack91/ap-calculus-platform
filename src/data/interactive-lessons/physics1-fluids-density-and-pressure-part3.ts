@@ -129,7 +129,7 @@ Pressure at depth $h$ is the same whether you're at the bottom of a thin tube or
       exercise: {
         dropdowns: [
           {
-            label: 'Two points in seawater are 4 m and 10 m deep. The pressure DIFFERENCE between them is approximately (g = 10, ρ = 1030):',
+            label: 'Two points in seawater are 4 m and 10 m deep. The pressure difference between them is approximately (g = 10, ρ = 1030):',
             options: ['~6 kPa', '~62 kPa', '~103 kPa', '~620 kPa'],
             correctIndex: 1,
             explanation: '$\\Delta P = \\rho g \\Delta h = 1030(10)(6) = 61{,}800$ Pa ≈ 62 kPa.'

@@ -81,7 +81,7 @@ For rectangular cycles: $|W_{\\text{net}}| = \\Delta P \\times \\Delta V$
       exercise: {
         questions: [
           {
-            question: 'A gas completes a clockwise cycle on a PV diagram. Taking $W_{\\text{net}}$ as the net work done ON the gas, over the full cycle:',
+            question: 'A gas completes a clockwise cycle on a PV diagram. Taking $W_{\\text{net}}$ as the net work done on the gas, over the full cycle:',
             options: [
               '$\\Delta U > 0$ and $W_{\\text{net}} < 0$',
               '$\\Delta U = 0$ and $W_{\\text{net}} < 0$',
@@ -89,7 +89,7 @@ For rectangular cycles: $|W_{\\text{net}}| = \\Delta P \\times \\Delta V$
               '$\\Delta U > 0$ and $W_{\\text{net}} = 0$'
             ],
             correctAnswer: 1,
-            explanation: 'A complete cycle returns to the starting state, so $\\Delta U = 0$. Clockwise means the gas does positive net work on its surroundings, so the net work done ON the gas is negative ($W_{\\text{net}} < 0$). That is the cycle a heat engine runs.'
+            explanation: 'A complete cycle returns to the starting state, so $\\Delta U = 0$. Clockwise means the gas does positive net work on its surroundings, so the net work done on the gas is negative ($W_{\\text{net}} < 0$). That is the cycle a heat engine runs.'
           },
           {
             question: 'A gas is taken once around a counterclockwise cycle on a PV diagram. Over the full cycle, which statement is correct?',
@@ -125,7 +125,7 @@ For rectangular cycles: $|W_{\\text{net}}| = \\Delta P \\times \\Delta V$
             explanation: 'Isochoric means constant volume ($\\Delta V = 0$). On a PV diagram this is a vertical line. There is no area under a vertical line (in the $V$-direction), so $W = 0$.'
           },
           {
-            question: 'A rectangular cycle on a PV diagram has corners at $(2\\text{ L},\\, 100\\text{ kPa})$, $(6\\text{ L},\\, 100\\text{ kPa})$, $(6\\text{ L},\\, 300\\text{ kPa})$, and $(2\\text{ L},\\, 300\\text{ kPa})$, traced clockwise. The net work done BY the gas is:<br/><br/><svg viewBox="0 0 320 220" width="320" height="220" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:12px auto 4px;background:#f9fafb;border-radius:8px;border:1px solid #e5e7eb"><line x1="50" y1="10" x2="50" y2="190" stroke="#374151" stroke-width="1.5"/><line x1="50" y1="190" x2="310" y2="190" stroke="#374151" stroke-width="1.5"/><text x="160" y="212" text-anchor="middle" font-size="13" fill="#374151" font-weight="600">Volume (L)</text><text x="16" y="105" text-anchor="middle" font-size="13" fill="#374151" font-weight="600" transform="rotate(-90,16,105)">Pressure (kPa)</text><text x="50" y="204" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="115" y="204" text-anchor="middle" font-size="11" fill="#6b7280">2</text><text x="245" y="204" text-anchor="middle" font-size="11" fill="#6b7280">6</text><text x="44" y="165" text-anchor="end" font-size="11" fill="#6b7280">100</text><text x="44" y="55" text-anchor="end" font-size="11" fill="#6b7280">300</text><line x1="50" y1="160" x2="300" y2="160" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4"/><line x1="50" y1="50" x2="300" y2="50" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4"/><line x1="115" y1="20" x2="115" y2="190" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4"/><line x1="245" y1="20" x2="245" y2="190" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4"/><rect x="115" y="50" width="130" height="110" fill="rgba(147,51,234,0.12)" stroke="none"/><polygon points="115,160 245,160 245,50 115,50" fill="none" stroke="#7c3aed" stroke-width="2.5"/><polygon points="160,156 155,160 160,164" fill="#7c3aed"/><polygon points="241,125 245,130 249,125" fill="#7c3aed"/><polygon points="200,46 205,50 200,54" fill="#7c3aed"/><polygon points="119,85 115,80 111,85" fill="#7c3aed"/><circle cx="115" cy="160" r="4" fill="#7c3aed"/><circle cx="245" cy="160" r="4" fill="#7c3aed"/><circle cx="245" cy="50" r="4" fill="#7c3aed"/><circle cx="115" cy="50" r="4" fill="#7c3aed"/></svg>',
+            question: 'A rectangular cycle on a PV diagram has corners at $(2\\text{ L},\\, 100\\text{ kPa})$, $(6\\text{ L},\\, 100\\text{ kPa})$, $(6\\text{ L},\\, 300\\text{ kPa})$, and $(2\\text{ L},\\, 300\\text{ kPa})$, traced clockwise. The net work done by the gas is:<br/><br/><svg viewBox="0 0 320 220" width="320" height="220" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:12px auto 4px;background:#f9fafb;border-radius:8px;border:1px solid #e5e7eb"><line x1="50" y1="10" x2="50" y2="190" stroke="#374151" stroke-width="1.5"/><line x1="50" y1="190" x2="310" y2="190" stroke="#374151" stroke-width="1.5"/><text x="160" y="212" text-anchor="middle" font-size="13" fill="#374151" font-weight="600">Volume (L)</text><text x="16" y="105" text-anchor="middle" font-size="13" fill="#374151" font-weight="600" transform="rotate(-90,16,105)">Pressure (kPa)</text><text x="50" y="204" text-anchor="middle" font-size="11" fill="#6b7280">0</text><text x="115" y="204" text-anchor="middle" font-size="11" fill="#6b7280">2</text><text x="245" y="204" text-anchor="middle" font-size="11" fill="#6b7280">6</text><text x="44" y="165" text-anchor="end" font-size="11" fill="#6b7280">100</text><text x="44" y="55" text-anchor="end" font-size="11" fill="#6b7280">300</text><line x1="50" y1="160" x2="300" y2="160" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4"/><line x1="50" y1="50" x2="300" y2="50" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4"/><line x1="115" y1="20" x2="115" y2="190" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4"/><line x1="245" y1="20" x2="245" y2="190" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="4"/><rect x="115" y="50" width="130" height="110" fill="rgba(147,51,234,0.12)" stroke="none"/><polygon points="115,160 245,160 245,50 115,50" fill="none" stroke="#7c3aed" stroke-width="2.5"/><polygon points="160,156 155,160 160,164" fill="#7c3aed"/><polygon points="241,125 245,130 249,125" fill="#7c3aed"/><polygon points="200,46 205,50 200,54" fill="#7c3aed"/><polygon points="119,85 115,80 111,85" fill="#7c3aed"/><circle cx="115" cy="160" r="4" fill="#7c3aed"/><circle cx="245" cy="160" r="4" fill="#7c3aed"/><circle cx="245" cy="50" r="4" fill="#7c3aed"/><circle cx="115" cy="50" r="4" fill="#7c3aed"/></svg>',
             options: [
               '400 J',
               '600 J',
@@ -133,7 +133,7 @@ For rectangular cycles: $|W_{\\text{net}}| = \\Delta P \\times \\Delta V$
               '1200 J'
             ],
             correctAnswer: 2,
-            explanation: 'Enclosed area $= \\Delta P \\times \\Delta V = (300 - 100) \\times 10^3 \\times (6 - 2) \\times 10^{-3} = 200{,}000 \\times 0.004 = 800$ J. Clockwise → the gas does positive net work. (The net work done ON the gas is $W_{\\text{net}} = -800$ J.)'
+            explanation: 'Enclosed area $= \\Delta P \\times \\Delta V = (300 - 100) \\times 10^3 \\times (6 - 2) \\times 10^{-3} = 200{,}000 \\times 0.004 = 800$ J. Clockwise → the gas does positive net work. (The net work done on the gas is $W_{\\text{net}} = -800$ J.)'
           }
         ]
       }
@@ -144,9 +144,9 @@ For rectangular cycles: $|W_{\\text{net}}| = \\Delta P \\times \\Delta V$
       content: `
 **PV Diagram Calculation Drill** 📊
 
-1) An isobaric expansion at $P = 150$ kPa from $V = 2.0$ L to $V = 6.0$ L. Work done ON the gas, $W$ (in J, with sign)?
+1) An isobaric expansion at $P = 150$ kPa from $V = 2.0$ L to $V = 6.0$ L. Work done on the gas, $W$ (in J, with sign)?
 
-2) A rectangular clockwise cycle with $\\Delta P = 100$ kPa and $\\Delta V = 5.0$ L. Net work done BY the gas per cycle (in J)?
+2) A rectangular clockwise cycle with $\\Delta P = 100$ kPa and $\\Delta V = 5.0$ L. Net work done by the gas per cycle (in J)?
 
 3) A gas completes a clockwise cycle in which the gas does 400 J of net work. During some steps it gains 1000 J by heating. How much energy does it lose by heating during the other steps (in J)?
       `,

@@ -173,7 +173,7 @@ If one speaker is wired backward, the waves leave **half a cycle apart**. Every 
         ],
         correctAnswers: ['destructive interference', 'constant phase relationship', 'zero', 'a quiet spot'],
         hint1: '2.5λ = (2 + ½)λ — that is a half-integer multiple.',
-        hint2: 'Coherent sources must have the same frequency AND a fixed phase difference.',
+        hint2: 'Coherent sources must have the same frequency and a fixed phase difference.',
         hint3: 'At the center, both waves travel the same distance. For the speakers, divide the path difference by the wavelength.',
         explanation: '2.5λ is half-integer → destructive. Coherence requires constant phase. Central max: Δr = 0. For the speakers, 2.0 m ÷ 0.80 m = 2.5 wavelengths → destructive → quiet.'
       }

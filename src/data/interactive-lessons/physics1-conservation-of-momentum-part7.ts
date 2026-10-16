@@ -64,7 +64,7 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
               'No — the kinetic energy becomes zero'
             ],
             correctAnswer: 1,
-            explanation: 'The wall is outside the system (box + spring). The wall exerts a force on the spring, making it an external force. The box\'s momentum goes from $mv$ to 0 — it is NOT conserved. To conserve momentum, you\'d need to include the wall+Earth in the system.'
+            explanation: 'The wall is outside the system (box + spring). The wall exerts a force on the spring, making it an external force. The box\'s momentum goes from $mv$ to 0 — it is not conserved. To conserve momentum, you\'d need to include the wall+Earth in the system.'
           },
           {
             question: 'In a perfectly inelastic collision, what is maximized?',
@@ -160,7 +160,7 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
             label: 'Maximum kinetic energy loss occurs in a:',
             options: ['elastic collision', 'perfectly inelastic collision', 'inelastic collision', 'recoil (explosion)'],
             correctIndex: 1,
-            explanation: 'Maximum kinetic energy loss occurs in a perfectly inelastic collision (objects stick together). An elastic collision loses NO kinetic energy.'
+            explanation: 'Maximum kinetic energy loss occurs in a perfectly inelastic collision (objects stick together). An elastic collision loses no kinetic energy.'
           }
         ]
       }
@@ -182,7 +182,7 @@ Let\'s synthesize everything about conservation of momentum: isolated systems, 1
               '1/9'
             ],
             correctAnswer: 1,
-            explanation: 'From $p_A = p_B$ (momentum conservation): $KE = p^2/(2m)$. Since both have the same magnitude of momentum: $KE_A/KE_B = m_B/m_A = 1/3$. The lighter fragment gets MORE kinetic energy.'
+            explanation: 'From $p_A = p_B$ (momentum conservation): $KE = p^2/(2m)$. Since both have the same magnitude of momentum: $KE_A/KE_B = m_B/m_A = 1/3$. The lighter fragment gets more kinetic energy.'
           },
           {
             question: 'Conservation of momentum is fundamentally a consequence of:',

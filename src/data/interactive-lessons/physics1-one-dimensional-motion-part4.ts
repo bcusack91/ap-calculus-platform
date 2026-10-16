@@ -42,7 +42,7 @@ Or equivalently: $v^2 = v_0^2 + 2a\\Delta x$
 | $a$ | Constant acceleration |
 | $t$ | Elapsed time |
 
-> **Important:** These equations work ONLY for constant acceleration. If $a$ changes, you need calculus or break the problem into intervals of constant $a$.
+> **Important:** These equations work ONLY for constant acceleration. If $a$ changes, use the areas and slopes of motion graphs, or break the problem into intervals of constant $a$.
       `
     },
     {
@@ -99,7 +99,7 @@ $24^2 = 0 + 2(3)(96) = 576$ ✓
       exercise: {
         questions: [
           {
-            question: 'Which kinematic equation would you use to find displacement when you know initial velocity, final velocity, and acceleration but NOT time?',
+            question: 'Which kinematic equation would you use to find displacement when you know initial velocity, final velocity, and acceleration but not time?',
             options: ['$v = v_0 + at$', '$x = x_0 + v_0t + \\frac{1}{2}at^2$', '$v^2 = v_0^2 + 2a\\Delta x$', '$x = vt$'],
             correctAnswer: 2,
             explanation: '$v^2 = v_0^2 + 2a\\Delta x$ is the equation that doesn\'t contain time. You can solve for $\\Delta x$ given $v$, $v_0$, and $a$.'
@@ -124,7 +124,7 @@ $24^2 = 0 + 2(3)(96) = 576$ ✓
               'All motion is positive'
             ],
             correctAnswer: 1,
-            explanation: 'The kinematic equations are derived assuming constant (uniform) acceleration. They do NOT require the object to start from rest or to move in the positive direction.'
+            explanation: 'The kinematic equations are derived assuming constant (uniform) acceleration. They do not require the object to start from rest or to move in the positive direction.'
           }
         ]
       }

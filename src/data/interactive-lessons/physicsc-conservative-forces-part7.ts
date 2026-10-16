@@ -20,7 +20,6 @@ export const physCConsForcePart7Data = {
 | Force from PE | $F = -dU/dx$ | 3 |
 | Stable equilibrium | $U'' > 0$ (local min) | 3, 4 |
 | Turning points | $U(x) = E$ | 4 |
-| Small oscillation | $\\omega = \\sqrt{U''(x_0)/m}$ | 3 |
 | Closed loop | $\\oint \\vec{F}\\cdot d\\vec{r} = 0$ | 5 |`
     },
     {
@@ -121,7 +120,7 @@ Both answers come from $K + U_{\\text{grav}} + U_{\\text{spring}} = \\text{const
     {
       id: 'cf7-mcq5',
       type: 'mcq' as const,
-      question: 'A force does zero total work on an object carried around ANY closed path. This tells you the force:',
+      question: 'A force does zero total work on an object carried around any closed path. This tells you the force:',
       options: [
         'Is conservative, so a $U$ function exists',
         'Is perpendicular to the motion',

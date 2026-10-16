@@ -62,7 +62,7 @@ Bernoulli tells you HOW the pressure responds (energy).
       exercise: {
         questions: [
           {
-            question: 'In a horizontal pipe with no height change, where the fluid speed is HIGHEST, the pressure is:',
+            question: 'In a horizontal pipe with no height change, where the fluid speed is highest, the pressure is:',
             options: [
               'Highest',
               'Lowest',
@@ -84,7 +84,7 @@ Bernoulli tells you HOW the pressure responds (energy).
             explanation: 'Faster top-side flow ⇒ lower top pressure ⇒ net upward pressure force.'
           },
           {
-            question: 'A shower curtain is pulled INWARD when the water is on. The reason is:',
+            question: 'A shower curtain is pulled inward when the water is on. The reason is:',
             options: [
               'Water droplets pull it in by adhesion',
               'Moving air inside lowers the pressure there',
@@ -105,7 +105,7 @@ Bernoulli tells you HOW the pressure responds (energy).
 
 1) A horizontal pipe carries water at 2 m/s where $P = 150$ kPa. At a constriction it speeds up to 8 m/s. Pressure at the constriction (kPa)?
 
-2) Air flows over a wing at 50 m/s on top and 40 m/s on bottom. Pressure DIFFERENCE (Pa, top vs bottom: $\\Delta P = P_{bottom} - P_{top}$)?
+2) Air flows over a wing at 50 m/s on top and 40 m/s on bottom. Pressure difference (Pa, top vs bottom: $\\Delta P = P_{bottom} - P_{top}$)?
 
 3) A horizontal water pipe widens. At point 1: $v_1 = 6$ m/s, $P_1 = 100$ kPa. At point 2: $v_2 = 2$ m/s. $P_2$ in kPa?
       `,
@@ -127,13 +127,13 @@ Bernoulli tells you HOW the pressure responds (energy).
       exercise: {
         dropdowns: [
           {
-            label: 'In a horizontal Venturi tube, the pressure is LOWEST in the:',
+            label: 'In a horizontal Venturi tube, the pressure is lowest in the:',
             options: ['Wide section', 'Narrow section', 'Reservoir', 'Outside the tube'],
             correctIndex: 1,
             explanation: 'Narrow ⇒ fast (continuity) ⇒ low pressure (Bernoulli).'
           },
           {
-            label: 'Two boats moving in parallel on a calm river drift TOWARD each other because:',
+            label: 'Two boats moving in parallel on a calm river drift toward each other because:',
             options: ['Surface tension pulls the two hulls together', 'Faster water between them lowers the pressure there', 'Gravitational attraction between the hulls', 'Wind deflected off one hull pushes the other'],
             correctIndex: 1,
             explanation: 'Bernoulli effect: water squeezed between the hulls speeds up, its pressure drops, and the higher pressure of the slower water on the outer sides pushes the boats together.'
@@ -181,7 +181,7 @@ Bernoulli tells you HOW the pressure responds (energy).
               '$-1080$ Pa'
             ],
             correctAnswer: 1,
-            explanation: 'The fast-air face has LOWER $P$. $\\Delta P = -\\tfrac{1}{2}\\rho v^2 = -\\tfrac{1}{2}(1.2)(30^2) = -540$ Pa. Forgetting the ½ gives 1080 Pa; dropping the minus sign gives +540 Pa.'
+            explanation: 'The fast-air face has lower $P$. $\\Delta P = -\\tfrac{1}{2}\\rho v^2 = -\\tfrac{1}{2}(1.2)(30^2) = -540$ Pa. Forgetting the ½ gives 1080 Pa; dropping the minus sign gives +540 Pa.'
           }
         ]
       }

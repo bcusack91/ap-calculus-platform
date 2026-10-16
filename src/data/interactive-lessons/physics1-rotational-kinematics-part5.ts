@@ -146,7 +146,7 @@ This lets you find $I$ about any axis that is parallel to one through the center
             label: 'Rotational inertia depends on:',
             options: ['the total mass only', 'the outer radius only', 'mass and its distribution from the axis', 'how fast it spins'],
             correctIndex: 2,
-            explanation: 'Rotational inertia depends on both the total mass AND how that mass is distributed relative to the rotation axis.'
+            explanation: 'Rotational inertia depends on both the total mass and how that mass is distributed relative to the rotation axis.'
           },
           {
             label: 'The rotational inertia of a solid disk about its central axis is:',

@@ -72,7 +72,7 @@ $$E = \\frac{hc}{\\lambda} = \\frac{1240 \\text{ eV}\\cdot\\text{nm}}{\\lambda \
             explanation: '$E = hf = (6.63 \\times 10^{-34})(5.0 \\times 10^{14}) = 3.315 \\times 10^{-19} \\approx 3.3 \\times 10^{-19}$ J.'
           },
           {
-            question: 'Which photon has MORE energy?',
+            question: 'Which photon has more energy?',
             options: [
               'Red light ($\\lambda = 700$ nm)',
               'Blue light ($\\lambda = 450$ nm)',

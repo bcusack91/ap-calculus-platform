@@ -31,11 +31,13 @@ Where:
 
 The contact point between the rolling object and the surface is **instantaneously at rest** relative to the surface. Think of a tire on dry pavement — the rubber at the bottom isn't sliding.
 
-### Differentiating the Rolling Condition
+### When the Rolling Speeds Up or Slows Down
 
-$$a_{\\text{cm}} = R\\alpha$$
+The condition $v_{\\text{cm}} = R\\omega$ holds at every instant. If the wheel's angular velocity changes by $\\Delta\\omega$, the center's speed must change by $\\Delta v_{\\text{cm}} = R\\,\\Delta\\omega$. Dividing both changes by the same time interval $\\Delta t$:
 
-This connects the linear acceleration of the center of mass to the angular acceleration.
+$$\\frac{\\Delta v_{\\text{cm}}}{\\Delta t} = R\\,\\frac{\\Delta\\omega}{\\Delta t} \\quad\\Rightarrow\\quad a_{\\text{cm}} = R\\alpha$$
+
+This connects the linear acceleration of the center of mass to the angular acceleration. For example, a wheel of radius 0.30 m whose angular velocity rises from 10 rad/s to 20 rad/s in 2.0 s has $\\alpha = 5.0$ rad/s², so its center accelerates at $a_{\\text{cm}} = (0.30)(5.0) = 1.5$ m/s².
 
 ### Distance Traveled
 
@@ -153,10 +155,10 @@ This is why the contact point has zero velocity — it's the condition for no sl
             explanation: 'The contact point is instantaneously at rest (zero velocity) when rolling without slipping.'
           },
           {
-            label: 'Rolling without slipping requires what type of friction?',
-            options: ['static friction', 'kinetic friction', 'no friction is needed', 'air resistance'],
+            label: 'A ball rolls without slipping as it speeds up down a ramp. The friction force at the contact point is:',
+            options: ['static friction', 'kinetic friction', 'zero, since nothing slides', 'air resistance'],
             correctIndex: 0,
-            explanation: 'Rolling without slipping requires static friction (no relative motion at the contact point). Kinetic friction implies slipping.'
+            explanation: 'The contact point is momentarily at rest, so any friction there is static friction; kinetic friction would mean the surfaces slide. Static friction is needed here because the ball\'s spin must increase as it speeds up, and friction supplies that torque.'
           }
         ]
       }
@@ -181,7 +183,7 @@ This is why the contact point has zero velocity — it's the condition for no sl
             explanation: '$d = R\\theta = (0.35)(100 \\times 2\\pi) = (0.35)(200\\pi) = 70\\pi \\approx 220$ m.'
           },
           {
-            question: 'A bowling ball (radius 0.11 m) is thrown with $v = 8$ m/s. Initially it slides without rolling. Once it rolls without slipping, its angular velocity is approximately:',
+            question: 'A bowling ball (radius 0.11 m) rolls without slipping down the lane at a steady 8.0 m/s. Its angular velocity is approximately:',
             options: [
               '8 rad/s',
               '36 rad/s',
@@ -189,7 +191,7 @@ This is why the contact point has zero velocity — it's the condition for no sl
               '88 rad/s'
             ],
             correctAnswer: 2,
-            explanation: 'When rolling without slipping: $\\omega = v/R = 8/0.11 \\approx 72.7 \\approx 73$ rad/s. (The actual final $v$ would be less than 8 m/s due to friction, but this gives the relationship.)'
+            explanation: 'When rolling without slipping: $\\omega = v/R = 8.0/0.11 \\approx 72.7 \\approx 73$ rad/s. Using the diameter (0.22 m) gives about 36 rad/s, 8 rad/s just reuses the speed, and 88 rad/s comes from multiplying 8 by 11 instead of dividing by 0.11.'
           }
         ]
       }

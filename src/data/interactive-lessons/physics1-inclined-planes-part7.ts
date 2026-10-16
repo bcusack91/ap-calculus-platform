@@ -63,7 +63,7 @@ $$a = \\frac{m_{\\text{hang}}g - m_{\\text{incline}}g\\sin\\theta}{m_{\\text{han
               'Halves the time to slide down the incline'
             ],
             correctAnswer: 2,
-            explanation: '$a = g\\sin\\theta$ is independent of mass. Doubling $m$ doubles both the gravitational force AND the inertia — they cancel.'
+            explanation: '$a = g\\sin\\theta$ is independent of mass. Doubling $m$ doubles both the gravitational force and the inertia — they cancel.'
           },
           {
             question: 'A block sits on an incline at angle $\\theta$. Friction prevents it from sliding. If you slowly increase $\\theta$, the static friction force:',

@@ -67,7 +67,7 @@ A coin (solid steel) has no air → density = 7800 → sinks.
       exercise: {
         questions: [
           {
-            question: 'An object floats in water if and only if its AVERAGE density is:',
+            question: 'An object floats in water if and only if its average density is:',
             options: [
               'Greater than water\'s density',
               'Equal to water\'s density',
@@ -130,10 +130,10 @@ A coin (solid steel) has no air → density = 7800 → sinks.
             label: 'A solid steel cube and a steel ship of equal mass — in water:',
             options: ['Both float, since equal masses get equal buoyancy', 'Both sink, since both are made of the same steel', 'Cube sinks; ship floats, since its hull holds air', 'Cube floats; ship sinks under its larger area'],
             correctIndex: 2,
-            explanation: 'A ship\'s hull encloses air, so its AVERAGE density (steel + air) is below water\'s and it can displace its own weight of water. A solid cube has steel\'s full density (about 7800 $kg/m^{3}$), so it sinks.'
+            explanation: 'A ship\'s hull encloses air, so its average density (steel + air) is below water\'s and it can displace its own weight of water. A solid cube has steel\'s full density (about 7800 $kg/m^{3}$), so it sinks.'
           },
           {
-            label: 'When you carry a block from fresh water to denser saltwater, the FRACTION submerged:',
+            label: 'When you carry a block from fresh water to denser saltwater, the fraction submerged:',
             options: ['Increases', 'Stays the same', 'Decreases', 'Becomes zero'],
             correctIndex: 2,
             explanation: 'Same $\\rho_{obj}$, larger $\\rho_{fluid}$ → fraction submerged decreases. Why ships sit higher in the ocean than in lakes.'
@@ -173,7 +173,7 @@ A coin (solid steel) has no air → density = 7800 → sinks.
             explanation: 'Fraction submerged = $\\rho_{obj}/\\rho_{fluid}$ → $\\rho_{obj} = 0.65 \\times 1000 = 650$ $kg/m^{3}$.'
           },
           {
-            question: 'In which fluid will the SAME wooden block (density 700 $kg/m^{3}$) sit highest above the surface?',
+            question: 'In which fluid will the same wooden block (density 700 $kg/m^{3}$) sit highest above the surface?',
             options: [
               'Fresh water (1000 $kg/m^{3}$)',
               'Sea water (1030 $kg/m^{3}$)',

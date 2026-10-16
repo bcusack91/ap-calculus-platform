@@ -89,7 +89,7 @@ directed **opposite** the velocity. To keep $v$ constant, the external force mus
             explanation: '$|\\mathcal{E}| = A\\frac{dB}{dt} = \\pi r^2\\frac{dB}{dt}$. Doubling $r$ quadruples the area and hence the EMF.'
           },
           {
-            question: 'To DECREASE the time constant of an RL circuit (faster response), you could:',
+            question: 'To decrease the time constant of an RL circuit (faster response), you could:',
             options: ['Increase L', 'Decrease R', 'Increase R', 'Increase both L and R equally'],
             correctAnswer: 2,
             explanation: '$\\tau = L/R$. Increasing $R$ decreases $\\tau$, making the current settle faster.'
