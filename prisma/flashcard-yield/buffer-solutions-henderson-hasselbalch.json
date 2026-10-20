@@ -6,12 +6,6 @@
   "why": "CED 8.9 Henderson-Hasselbalch; equation-sheet staple"
  },
  {
-  "front": "How do you calculate pH change when strong acid/base added to buffer?",
-  "fp": "33b9358fd67d",
-  "yield": "LOW",
-  "why": "OFF-EXAM: pH change after adding acid/base to a buffer (8.9 exclusion; R31)"
- },
- {
   "front": "How do you choose the right buffer for a desired pH?",
   "fp": "9b59b178aa70",
   "yield": "HIGH",

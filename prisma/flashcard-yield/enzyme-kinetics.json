@@ -6,28 +6,16 @@
   "why": "CED 3.3 temperature/pH and denaturation"
  },
  {
-  "front": "How does a competitive inhibitor change $K_m$ and $V_{max}$?",
-  "fp": "9c60211fc8b9",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Km/Vmax kinetics removed in the trim (Michaelis-Menten)"
+  "front": "How does a competitive inhibitor reduce enzyme activity, and how can its effect be overcome?",
+  "fp": "e70957e97c3b",
+  "yield": "HIGH",
+  "why": "CED 3.2.B.3 competitive inhibitor at active site, overcome by substrate; Km/Vmax dropped"
  },
  {
-  "front": "How does a noncompetitive inhibitor change kinetics?",
-  "fp": "3fa5a5208481",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Km/Vmax kinetics removed in the trim (Michaelis-Menten)"
- },
- {
-  "front": "What does $K_m$ measure?",
-  "fp": "6e293b122f05",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Km definition removed in the trim (Michaelis-Menten)"
- },
- {
-  "front": "What does $V_{max}$ represent?",
-  "fp": "94f9c6beda7e",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Vmax definition removed in the trim (Michaelis-Menten)"
+  "front": "How does a noncompetitive inhibitor reduce enzyme activity?",
+  "fp": "04fbd7737990",
+  "yield": "HIGH",
+  "why": "CED 3.2.B.3 noncompetitive inhibitor at allosteric site; Km/Vmax dropped"
  },
  {
   "front": "What is the induced fit model?",

@@ -260,11 +260,6 @@
  },
  {
   "topicSlug": "solubility-ksp",
-  "front": "How do complex ions affect solubility?",
-  "back": "Complex ion formation increases solubility. Example: AgCl in NH₃. Ag⁺ + 2NH₃ ⇌ Ag(NH₃)₂⁺ removes Ag⁺ from solution, shifts dissolution right, more AgCl dissolves. Opposite of common ion effect."
- },
- {
-  "topicSlug": "solubility-ksp",
   "front": "How do you calculate molar solubility from K_sp?",
   "back": "1) Write dissolution equation, 2) Express ion concentrations in terms of s (use stoichiometry!), 3) Write K_sp expression, 4) Substitute and solve. Example: Ag₂CrO₄: [Ag⁺]=2s, [CrO₄²⁻]=s, so K_sp=4s³."
  },

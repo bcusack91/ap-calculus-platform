@@ -1,9 +1,9 @@
 [
  {
-  "front": "Down syndrome is caused by trisomy of chromosome:",
-  "fp": "d227805f982e",
-  "yield": "LOW",
-  "why": "OFF-EXAM: named disorders excluded (5.6/6.7); trim de-named aneuploidy cards"
+  "front": "Failure of homologous chromosomes or sister chromatids to separate during meiosis is called:",
+  "fp": "9726f8b585d1",
+  "yield": "HIGH",
+  "why": "CED 5.2/6.7 nondisjunction gives aneuploidy; named disorder dropped"
  },
  {
   "front": "Genetic recombination during meiosis increases:",

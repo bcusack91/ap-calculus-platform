@@ -56,11 +56,6 @@
  },
  {
   "topicSlug": "population-dynamics",
-  "front": "Compare r-selected and K-selected strategies.",
-  "back": "r-selected: many offspring, little care, unstable environments. K-selected: few offspring, high care, stable environments."
- },
- {
-  "topicSlug": "population-dynamics",
   "front": "Contrast exponential and logistic growth models.",
   "back": "Exponential is unlimited J-shaped growth; logistic is S-shaped, leveling at carrying capacity $K$."
  },
@@ -68,11 +63,6 @@
   "topicSlug": "population-dynamics",
   "front": "Distinguish density-dependent and density-independent factors.",
   "back": "Density-dependent intensify with crowding (disease, competition); density-independent do not (weather, fire)."
- },
- {
-  "topicSlug": "population-dynamics",
-  "front": "What do the three survivorship curves show?",
-  "back": "Type I high late-life mortality, Type II constant mortality, Type III high early mortality."
  },
  {
   "topicSlug": "population-dynamics",

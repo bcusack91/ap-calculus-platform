@@ -1,7 +1,7 @@
 [
  {
   "front": "Can a critical point NOT be an extremum?",
-  "fp": "8c1b846c294c",
+  "fp": "87eb73c4587d",
   "yield": "HIGH",
   "why": "CED 5.4 critical point need not be extremum"
  },

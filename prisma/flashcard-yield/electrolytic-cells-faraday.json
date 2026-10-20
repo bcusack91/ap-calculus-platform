@@ -24,12 +24,6 @@
   "why": "CED 9.11 Faraday's law q = It; FRQ staple"
  },
  {
-  "front": "What is metal purification by electrolysis?",
-  "fp": "ae8cdd8c566e",
-  "yield": "LOW",
-  "why": "OFF-EXAM: electrorefining/industrial electrolysis not in CED (R21)"
- },
- {
   "front": "What is the difference between galvanic and electrolytic cells?",
   "fp": "c26644b02abf",
   "yield": "HIGH",

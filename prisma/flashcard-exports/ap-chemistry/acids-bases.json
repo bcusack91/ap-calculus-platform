@@ -12,12 +12,17 @@
  {
   "topicSlug": "acid-base-theories-ph",
   "front": "According to the Brønsted-Lowry definition, an acid is:",
-  "back": "**A proton $(H^{+})$ donor**\n\nBrønsted-Lowry acids DONATE protons $(H^{+})$. Arrhenius acids produce $H^{+}$ in water. Lewis acids accept electron pairs."
+  "back": "**A proton $(H^{+})$ donor**\n\nBrønsted-Lowry acids DONATE protons $(H^{+})$ and Brønsted-Lowry bases ACCEPT them. This is the definition the AP exam uses for acid–base reactions in aqueous solution."
  },
  {
   "topicSlug": "acid-base-theories-ph",
   "front": "Calculate the pH of a 0.025 M HCl solution. Assume HCl is a strong acid that completely dissociates.",
   "back": "**HCl dissociation:**\nHCl → H⁺ + Cl⁻\n\nSince HCl is a strong acid, it completely dissociates:\n[H⁺] = 0.025 M\n\n**Calculate pH:**\npH = -log[H⁺]\npH = -log(0.025)\npH = -log(2.5 × 10⁻²)\npH = **1.60**\n\n**Note:** For strong acids (HCl, HNO₃, H₂SO₄, HBr, HI, HClO₄), pH calculation is straightforward because [H⁺] = initial acid concentration."
+ },
+ {
+  "topicSlug": "acid-base-theories-ph",
+  "front": "In the reaction $HF + H_{2}O \\rightleftharpoons H_{3}O^{+} + F^{-}$, what are the two conjugate acid–base pairs?",
+  "back": "**$HF/F^{-}$ and $H_{3}O^{+}/H_{2}O$**\n\n$HF$ donates a proton (Brønsted-Lowry acid) and becomes its conjugate base $F^{-}$; $H_{2}O$ accepts the proton (Brønsted-Lowry base) and becomes its conjugate acid $H_{3}O^{+}$. The two members of a pair differ by exactly one $H^{+}$."
  },
  {
   "topicSlug": "acid-base-theories-ph",
@@ -35,11 +40,6 @@
   "front": "What is $K_w$ at 25°C?",
   "back": "$K_w = [\\text{H}^+][\\text{OH}^-] = 1.0 \\times 10^{-14}$",
   "hint": "Autoionization constant of water."
- },
- {
-  "topicSlug": "acid-base-theories-ph",
-  "front": "Which of the following is classified as a Lewis acid?",
-  "back": "**$BF_{3}$**\n\n$BF_{3}$ has an empty p orbital and accepts electron pairs — it is a Lewis acid. $NH_{3}$ and $OH^{-}$ donate electron pairs (Lewis bases)."
  },
  {
   "topicSlug": "acid-base-titrations",
@@ -86,11 +86,6 @@
   "front": "Henderson-Hasselbalch equation?",
   "back": "$\\text{pH} = \\text{p}K_a + \\log\\frac{[\\text{A}^-]}{[\\text{HA}]}$, where $\\text{HA}$ is the weak acid and $\\text{A}^-$ its conjugate base. It applies to buffer solutions, where appreciable amounts of both species are present.",
   "hint": "Used for buffer pH calculations."
- },
- {
-  "topicSlug": "buffer-solutions-henderson-hasselbalch",
-  "front": "How do you calculate pH change when strong acid/base added to buffer?",
-  "back": "1) Calculate initial moles (use moles not M!), 2) Neutralization reaction (completion), 3) Calculate new moles after reaction, 4) Find new concentrations (÷volume), 5) Use Henderson-Hasselbalch. Key: strong acid/base reactions go to completion."
  },
  {
   "topicSlug": "buffer-solutions-henderson-hasselbalch",
@@ -145,7 +140,7 @@
  {
   "topicSlug": "weak-acids-bases-ka-kb",
   "front": "What is K_a and what does its magnitude tell you?",
-  "back": "K_a = acid dissociation constant = [H⁺][A⁻]/[HA]. Larger K_a = stronger acid, more ionization. Typical range 10⁻² to 10⁻¹⁴. Strong acids K_a>>1. Use to calculate pH of weak acid solutions."
+  "back": "K_a = acid dissociation constant = [H⁺][A⁻]/[HA]. Larger K_a = stronger acid, more ionization. Weak acids have K_a < 1 (most fall between about 10⁻² and 10⁻¹², i.e. pK_a ≈ 2–12); strong acids have K_a >> 1. Use K_a to calculate the pH of weak acid solutions."
  },
  {
   "topicSlug": "weak-acids-bases-ka-kb",

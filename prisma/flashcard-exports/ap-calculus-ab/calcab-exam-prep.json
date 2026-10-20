@@ -27,8 +27,7 @@
  {
   "topicSlug": "ap-exam-review-calcab",
   "front": "Which parts of the AP Calculus AB exam allow a graphing calculator?",
-  "back": "Section I Part B (15 multiple-choice, 45 min) and Section II Part A (2 free-response, 30 min). Section I Part A (30 MC, 60 min) and Section II Part B (4 FRQ, 60 min) are no-calculator.",
-  "hint": "Think about the key characteristic"
+  "back": "Section I Part B (13 multiple-choice, 38 min) and Section II Part A (2 free-response, 30 min) require a graphing calculator. Section I Part A (29 MC, 62 min) and Section II Part B (4 FRQ, 60 min) are no-calculator. (May 2027 format: 42 MC in 100 min, 6 FRQ in 90 min.)"
  },
  {
   "topicSlug": "free-response-strategies-calcab",

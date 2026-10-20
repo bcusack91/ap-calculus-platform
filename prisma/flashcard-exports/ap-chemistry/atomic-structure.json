@@ -1,15 +1,15 @@
 [
  {
   "topicSlug": "atomic-spectra",
-  "front": "Balmer series — $n_f$ and EM region",
-  "back": "$n_f = 2$; the brightest lines are **visible** (656, 486, 434, 410 nm).",
-  "lessonPart": 4
+  "front": "An electron drops from a higher energy level $E_i$ to a lower level $E_f$. What photon is emitted?",
+  "back": "One photon whose energy equals the gap: $E_{\\text{photon}} = E_i - E_f = h\\nu = hc/\\lambda$. A larger gap gives a higher-frequency, shorter-wavelength photon; absorbing a photon of exactly that energy drives the reverse transition. The AP exam gives the level energies (the Bohr formula is not tested).",
+  "lessonPart": 3
  },
  {
   "topicSlug": "atomic-spectra",
-  "front": "Bohr energy formula for hydrogen",
-  "back": "$E_n = -2.18 \\times 10^{-18}/n^{2}$ J $= -13.6/n^{2}$ eV.",
-  "lessonPart": 3
+  "front": "Balmer series — $n_f$ and EM region",
+  "back": "$n_f = 2$; the brightest lines are **visible** (656, 486, 434, 410 nm).",
+  "lessonPart": 4
  },
  {
   "topicSlug": "atomic-spectra",
@@ -55,12 +55,6 @@
  },
  {
   "topicSlug": "atomic-spectra",
-  "front": "Ionization energy of hydrogen",
-  "back": "$|E_1| = 2.18 \\times 10^{-18}$ J = 13.6 eV per atom = 1310 kJ/mol.",
-  "lessonPart": 3
- },
- {
-  "topicSlug": "atomic-spectra",
   "front": "Lyman series — $n_f$ and EM region",
   "back": "$n_f = 1$; lines fall in the **ultraviolet** (e.g., 121.6 nm Lyα).",
   "lessonPart": 4
@@ -82,12 +76,6 @@
   "front": "Photon energy formula",
   "back": "$E = h\\nu = hc/\\lambda$, with $h = 6.626 \\times 10^{-34}$ J·s.",
   "lessonPart": 1
- },
- {
-  "topicSlug": "atomic-spectra",
-  "front": "Rydberg formula",
-  "back": "$1/\\lambda = R_H\\,(1/n_f^{2} - 1/n_i^{2})$, $R_H = 1.097 \\times 10^{7}$ m⁻¹.",
-  "lessonPart": 4
  },
  {
   "topicSlug": "atomic-spectra",
@@ -179,11 +167,6 @@
   "back": "Electrons are removed from the highest principal energy level (highest $n$) first. For transition metals, remove $s$ electrons before $d$ electrons."
  },
  {
-  "topicSlug": "electron-configuration",
-  "front": "Why do Cr and Cu have anomalous electron configurations?",
-  "back": "Cr: $[Ar] 4s^1 3d^5$ and Cu: $[Ar] 4s^1 3d^{10}$ because half-filled and fully-filled d sublevels are more stable than expected configurations."
- },
- {
   "topicSlug": "moles-molar-mass",
   "front": "A chemist has 45.0 g of hydrated copper(II) sulfate (CuSO₄·5H₂O). (a) Calculate the number of moles of the hydrated compound. (b) How many moles of water molecules are in the sample? (c) What mass of anhydrous CuSO₄ would remain if all the water were removed?",
   "back": "(a) **Moles of hydrated compound:**\n- Molar mass of CuSO₄·5H₂O = 63.55 + 32.07 + 4(16.00) + 5(18.02) = 249.72 g/mol\n- Moles = 45.0 g ÷ 249.72 g/mol = **0.180 mol**\n\n(b) **Moles of water:**\n- Each formula unit has 5 water molecules\n- Moles of H₂O = 0.180 mol × 5 = **0.900 mol**\n\n(c) **Mass of anhydrous CuSO₄:**\n- Molar mass of CuSO₄ = 63.55 + 32.07 + 4(16.00) = 159.62 g/mol\n- Mass = 0.180 mol × 159.62 g/mol = **28.7 g**"
@@ -243,7 +226,7 @@
  {
   "topicSlug": "periodic-trends",
   "front": "What is the trend for atomic radius across a period and down a group?",
-  "back": "Across a period (left to right): DECREASES due to increasing nuclear charge. Down a group: INCREASES due to additional electron shells."
+  "back": "Across a period (left to right): DECREASES — protons are added while the electrons enter the same shell, so the core (shielding) electrons stay the same and the greater effective nuclear charge pulls the valence electrons closer (Coulomb's law). Down a group: INCREASES — the valence electrons occupy a higher shell, farther from the nucleus, and the added core electrons shield the extra nuclear charge."
  },
  {
   "topicSlug": "periodic-trends",

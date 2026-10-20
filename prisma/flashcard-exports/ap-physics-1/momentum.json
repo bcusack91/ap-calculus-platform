@@ -1,15 +1,15 @@
 [
  {
   "topicSlug": "collisions",
-  "front": "Can kinetic energy INCREASE in a collision?",
-  "back": "Yes! In an explosion or if there's an internal energy source (spring, chemical). But momentum is still conserved.",
-  "hint": "Explosions add energy to the system"
+  "front": "A ball dropped from height $h_i$ rebounds to height $h_f$. What does the rebound height tell you about the collision with the floor?",
+  "back": "The fraction of kinetic energy kept through the collision: $\\dfrac{KE_{\\text{after}}}{KE_{\\text{before}}} = \\dfrac{mgh_f}{mgh_i} = \\dfrac{h_f}{h_i}$ (energy is conserved on the way down and back up). $h_f = h_i$ means the collision was elastic; a lower rebound means kinetic energy was converted to thermal energy and deformation (inelastic).",
+  "hint": "Compare KE before and after through mgh"
  },
  {
   "topicSlug": "collisions",
-  "front": "For a ball bouncing, how is coefficient of restitution related to height?",
-  "back": "$e = \\sqrt{\\frac{h_f}{h_i}}$ where $h_i$ is drop height and $h_f$ is bounce height.",
-  "hint": "Square root of height ratio"
+  "front": "Can kinetic energy INCREASE in a collision?",
+  "back": "Yes! In an explosion or if there's an internal energy source (spring, chemical). But momentum is still conserved.",
+  "hint": "Explosions add energy to the system"
  },
  {
   "topicSlug": "collisions",
@@ -40,12 +40,6 @@
   "front": "What is a perfectly inelastic collision?",
   "back": "Objects stick together after collision. Maximum possible KE loss (for given conditions). Momentum still conserved: $(m_1 + m_2)v_f = m_1v_{1i} + m_2v_{2i}$",
   "hint": "Objects stick together"
- },
- {
-  "topicSlug": "collisions",
-  "front": "What is the coefficient of restitution?",
-  "back": "$e = \\frac{v_{separation}}{v_{approach}}$ - measures \"bounciness\". $e=1$ (perfectly elastic), $0<e<1$ (inelastic), $e=0$ (perfectly inelastic)",
-  "hint": "Ratio of relative speeds after/before"
  },
  {
   "topicSlug": "collisions",

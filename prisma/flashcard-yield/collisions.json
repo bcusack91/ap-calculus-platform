@@ -1,15 +1,15 @@
 [
  {
+  "front": "A ball dropped from height $h_i$ rebounds to height $h_f$. What does the rebound height tell you about the collision with the floor?",
+  "fp": "189e53dd01fd",
+  "yield": "MEDIUM",
+  "why": "CED 4.4 rebound height as KE fraction; restitution dropped; secondary application"
+ },
+ {
   "front": "Can kinetic energy INCREASE in a collision?",
   "fp": "b3e8285a03df",
   "yield": "MEDIUM",
   "why": "KE can rise in explosions; secondary"
- },
- {
-  "front": "For a ball bouncing, how is coefficient of restitution related to height?",
-  "fp": "cb5cc4ac74bb",
-  "yield": "LOW",
-  "why": "OFF-EXAM: coefficient of restitution not in the CED"
  },
  {
   "front": "How can you tell from before-and-after data whether a collision was elastic?",
@@ -40,12 +40,6 @@
   "fp": "25177e524d37",
   "yield": "HIGH",
   "why": "CED 4.4 perfectly inelastic collisions"
- },
- {
-  "front": "What is the coefficient of restitution?",
-  "fp": "952621e377ec",
-  "yield": "LOW",
-  "why": "OFF-EXAM: coefficient of restitution not in the CED"
  },
  {
   "front": "What is the difference between elastic and inelastic collisions?",

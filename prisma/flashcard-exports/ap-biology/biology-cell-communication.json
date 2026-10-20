@@ -1,23 +1,8 @@
 [
  {
   "topicSlug": "cell-cycle-mitosis",
-  "front": "Bundle sheath cells in C4 plants are where:",
-  "back": "**The Calvin cycle occurs**\n\nC4 plants shuttle $CO_{2}$ to bundle sheath cells for the Calvin cycle, away from $O_{2}$."
- },
- {
-  "topicSlug": "cell-cycle-mitosis",
   "front": "DNA replication occurs during which phase?",
   "back": "**S**\n\nThe S phase is when DNA is synthesized."
- },
- {
-  "topicSlug": "cell-cycle-mitosis",
-  "front": "How many turns of the Calvin cycle are needed to produce one glucose molecule?",
-  "back": "**6**\n\nEach turn fixes one $CO_{2}$. Six turns produce two G3P molecules → one glucose."
- },
- {
-  "topicSlug": "cell-cycle-mitosis",
-  "front": "The Calvin cycle fixes $CO_{2}$ using the enzyme:",
-  "back": "**RuBisCO**\n\nRuBisCO catalyzes $CO_{2}$ fixation by combining $CO_{2}$ with RuBP."
  },
  {
   "topicSlug": "cell-cycle-mitosis",
@@ -70,8 +55,8 @@
  },
  {
   "topicSlug": "meiosis",
-  "front": "Down syndrome is caused by trisomy of chromosome:",
-  "back": "**21**\n\nThree copies of chromosome 21 cause Down syndrome."
+  "front": "Failure of homologous chromosomes or sister chromatids to separate during meiosis is called:",
+  "back": "**Nondisjunction**\n\nThe resulting gametes are no longer haploid: one gets an extra chromosome and another is missing one. Fertilization then gives a zygote with an abnormal chromosome number (aneuploidy, e.g. a trisomy), which often produces a new phenotype or a developmental disorder."
  },
  {
   "topicSlug": "meiosis",

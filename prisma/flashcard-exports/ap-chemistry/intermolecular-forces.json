@@ -48,11 +48,6 @@
  },
  {
   "topicSlug": "mixtures-separations",
-  "front": "What is an azeotrope and why does it matter for distillation?",
-  "back": "Constant-boiling mixture where liquid and vapor have same composition. Cannot separate further by distillation. Example: ethanol-water at 95.6% ethanol. Need chemical method to break."
- },
- {
-  "topicSlug": "mixtures-separations",
   "front": "What is fractional distillation and when is it better than simple distillation?",
   "back": "Uses fractionating column for multiple vaporization-condensation cycles. Better for liquids with similar BPs (< 25°C difference). Example: separate crude oil fractions."
  },
@@ -110,16 +105,6 @@
   "topicSlug": "solutions-solubility",
   "front": "What does \"like dissolves like\" mean?",
   "back": "Substances with similar intermolecular forces dissolve in each other. Polar solvents (water) dissolve polar solutes and ionic compounds. Nonpolar solvents (hexane) dissolve nonpolar solutes."
- },
- {
-  "topicSlug": "solutions-solubility",
-  "front": "What is Henry's Law and when does it apply?",
-  "back": "C = kH·P. Gas solubility is proportional to partial pressure of gas above solution. Higher pressure → higher solubility. Only applies to GASES, not solids or liquids."
- },
- {
-  "topicSlug": "solutions-solubility",
-  "front": "What is the van't Hoff factor (i) and how do you determine it?",
-  "back": "Number of particles produced per formula unit. Molecular compounds: i = 1. Ionic: i = number of ions (NaCl: 2, CaCl₂: 3). Actual i < ideal due to ion pairing in real solutions."
  },
  {
   "topicSlug": "types-intermolecular-forces",

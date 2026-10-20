@@ -36,23 +36,13 @@
  },
  {
   "topicSlug": "enzyme-kinetics",
-  "front": "How does a competitive inhibitor change $K_m$ and $V_{max}$?",
-  "back": "Raises $K_m$; leaves $V_{max}$ unchanged, since excess substrate can still outcompete it."
+  "front": "How does a competitive inhibitor reduce enzyme activity, and how can its effect be overcome?",
+  "back": "It binds reversibly to the active site, so substrate cannot bind while it is there. Because inhibitor and substrate compete for the same site, raising the substrate concentration outcompetes the inhibitor and restores the reaction rate."
  },
  {
   "topicSlug": "enzyme-kinetics",
-  "front": "How does a noncompetitive inhibitor change kinetics?",
-  "back": "Lowers $V_{max}$; $K_m$ unchanged, because it binds an allosteric site regardless of substrate."
- },
- {
-  "topicSlug": "enzyme-kinetics",
-  "front": "What does $K_m$ measure?",
-  "back": "The substrate concentration at half $V_{max}$; a low $K_m$ indicates high apparent affinity."
- },
- {
-  "topicSlug": "enzyme-kinetics",
-  "front": "What does $V_{max}$ represent?",
-  "back": "Maximum reaction rate when all enzyme active sites are saturated with substrate."
+  "front": "How does a noncompetitive inhibitor reduce enzyme activity?",
+  "back": "It binds to an allosteric site (not the active site), changing the enzyme's shape so the active site works poorly or not at all. Since it does not compete with substrate for the active site, adding more substrate does not overcome it."
  },
  {
   "topicSlug": "enzyme-kinetics",

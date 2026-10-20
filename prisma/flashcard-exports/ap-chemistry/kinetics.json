@@ -1,11 +1,6 @@
 [
  {
   "topicSlug": "activation-energy-arrhenius",
-  "front": "A reaction has $E_a = 50$ kJ/mol. By roughly what factor does $k$ increase when $T$ goes from $300$ K to $310$ K?",
-  "back": "About $1.9\\times$. $\\ln(k_2/k_1) = (E_a/R)(1/T_1 - 1/T_2) = (50000/8.314)(1/300 - 1/310) \\approx 0.65$, so $k_2/k_1 = e^{0.65} \\approx 1.9$ — the source of the 'rate roughly doubles per 10 °C' rule."
- },
- {
-  "topicSlug": "activation-energy-arrhenius",
   "front": "According to collision theory, what two conditions must be met for reaction to occur?",
   "back": "1) Particles must collide with sufficient energy (≥ Ea), 2) Particles must have proper orientation. Not all collisions lead to reaction - most lack energy or wrong orientation."
  },
@@ -13,16 +8,6 @@
   "topicSlug": "activation-energy-arrhenius",
   "front": "Given Ea values, how can you estimate which reaction is more temperature-sensitive?",
   "back": "Higher Ea → greater temperature sensitivity. A small increase in T yields a larger increase in k when Ea is larger."
- },
- {
-  "topicSlug": "activation-energy-arrhenius",
-  "front": "How do A and Ea compete to determine which reaction is faster at a given temperature?",
-  "back": "At low $T$ the smaller $E_a$ usually wins; at high $T$ a larger $A$ can win even with a larger $E_a$. Compare $k = Ae^{-E_a/RT}$ numerically at the temperature of interest."
- },
- {
-  "topicSlug": "activation-energy-arrhenius",
-  "front": "How do you determine Ea graphically using the Arrhenius equation?",
-  "back": "Linear form: ln(k) = ln(A) - Ea/R × (1/T). Plot ln(k) vs 1/T gives straight line with slope = -Ea/R. From slope, Ea = -slope × R."
  },
  {
   "topicSlug": "activation-energy-arrhenius",
@@ -51,16 +36,6 @@
  },
  {
   "topicSlug": "activation-energy-arrhenius",
-  "front": "What are common pitfalls when using the Arrhenius equation in calculations?",
-  "back": "Forgetting to convert kJ→J, using °C instead of K, mixing base-10 and natural logs, and rounding too early when exponentiating."
- },
- {
-  "topicSlug": "activation-energy-arrhenius",
-  "front": "What are the units for Ea and R, and why must temperature be in Kelvin in the Arrhenius equation?",
-  "back": "Ea is typically in J/mol (or kJ/mol, convert to J/mol when using R = 8.314 J/(mol·K)). Temperature must be absolute (Kelvin) so energy ratios and exponential factors are dimensionally consistent."
- },
- {
-  "topicSlug": "activation-energy-arrhenius",
   "front": "What is activation energy (Ea) and how does it affect reaction rate?",
   "back": "Ea is minimum energy needed for reaction to occur. Higher Ea → slower reaction (fewer molecules have enough energy). Lower Ea → faster reaction. Catalysts work by lowering Ea."
  },
@@ -78,11 +53,6 @@
   "topicSlug": "activation-energy-arrhenius",
   "front": "Why does increasing temperature dramatically increase reaction rate?",
   "back": "Exponential effect from Arrhenius equation. Higher T → more molecules have E ≥ Ea. Rule of thumb: rate doubles for every 10°C increase. Effect on energy distribution more important than collision frequency."
- },
- {
-  "topicSlug": "activation-energy-arrhenius",
-  "front": "Why is the \"rate doubles for every 10 °C\" rule only approximate?",
-  "back": "The true factor is $e^{(E_a/R)(1/T - 1/(T+10))}$, so it depends on both $E_a$ and the temperature range. It lands near $2$ only for moderate $E_a$ around room temperature."
  },
  {
   "topicSlug": "integrated-rate-laws",

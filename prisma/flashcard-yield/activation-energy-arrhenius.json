@@ -1,11 +1,5 @@
 [
  {
-  "front": "A reaction has $E_a = 50$ kJ/mol. By roughly what factor does $k$ increase when $T$ goes from $300$ K to $310$ K?",
-  "fp": "04b2098d2ea1",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Arrhenius calculation not assessed (5.6 exclusion; R15)"
- },
- {
   "front": "According to collision theory, what two conditions must be met for reaction to occur?",
   "fp": "66eab1b7fe7a",
   "yield": "ULTRA_HIGH",
@@ -16,18 +10,6 @@
   "fp": "5f8ea6976fda",
   "yield": "MEDIUM",
   "why": "Higher Ea means more T-sensitive; secondary"
- },
- {
-  "front": "How do A and Ea compete to determine which reaction is faster at a given temperature?",
-  "fp": "d3a907e98bf6",
-  "yield": "LOW",
-  "why": "OFF-EXAM: numeric Arrhenius comparison not assessed (R15)"
- },
- {
-  "front": "How do you determine Ea graphically using the Arrhenius equation?",
-  "fp": "2ff1b43bec61",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Ea from ln k vs 1/T slope not assessed (R15)"
  },
  {
   "front": "How does a catalyst affect a reaction and what does it NOT change?",
@@ -60,18 +42,6 @@
   "why": "Pre-exponential factor/intercept; graphical Arrhenius detail"
  },
  {
-  "front": "What are common pitfalls when using the Arrhenius equation in calculations?",
-  "fp": "8848cfb240d7",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Arrhenius calculation pitfalls; calculations not assessed (R15)"
- },
- {
-  "front": "What are the units for Ea and R, and why must temperature be in Kelvin in the Arrhenius equation?",
-  "fp": "81c25d65441b",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Arrhenius calculation units; calculations not assessed (R15)"
- },
- {
   "front": "What is activation energy (Ea) and how does it affect reaction rate?",
   "fp": "1d1f68e8bf5e",
   "yield": "HIGH",
@@ -94,11 +64,5 @@
   "fp": "a20ea4992b30",
   "yield": "HIGH",
   "why": "CED 5.6 why T raises rate"
- },
- {
-  "front": "Why is the \"rate doubles for every 10 °C\" rule only approximate?",
-  "fp": "348c7b94ec42",
-  "yield": "LOW",
-  "why": "OFF-EXAM: quantitative Arrhenius factor not assessed (R15)"
  }
 ]

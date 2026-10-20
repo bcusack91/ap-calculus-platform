@@ -38,7 +38,7 @@
  {
   "topicSlug": "critical-points-and-extrema",
   "front": "Can a critical point NOT be an extremum?",
-  "back": "Yes! A critical point might be an inflection point or saddle point instead of a max or min. You must test using First or Second Derivative Test.",
+  "back": "Yes! A critical point is only a candidate. If $f'$ does not change sign there, the point is neither a max nor a min — e.g. $f(x) = x^3$ at $x = 0$, where $f'(0) = 0$ but $f$ keeps increasing. Confirm with the First Derivative Test (the Second Derivative Test is inconclusive when $f''(c) = 0$, as here).",
   "hint": "Critical points are candidates, not guarantees"
  },
  {

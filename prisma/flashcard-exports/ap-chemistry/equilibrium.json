@@ -20,8 +20,7 @@
  {
   "topicSlug": "equilibrium-constants-expressions",
   "front": "What is $K_c$ vs $K_p$?",
-  "back": "$K_c$ uses equilibrium molar concentrations; $K_p$ uses equilibrium partial pressures of gases. They are related by $K_p = K_c(RT)^{\\Delta n}$, where $\\Delta n$ = moles of gaseous products − moles of gaseous reactants and $R = 0.0821$ L·atm/(mol·K).",
-  "hint": "Think about the key characteristic"
+  "back": "$K_c$ uses equilibrium molar concentrations; $K_p$ uses equilibrium partial pressures of the gases. Both omit pure solids and liquids. Check which one a question uses and keep the units consistent — the AP exam does not ask you to convert between them."
  },
  {
   "topicSlug": "equilibrium-constants-expressions",

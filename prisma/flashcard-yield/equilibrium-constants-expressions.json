@@ -19,9 +19,9 @@
  },
  {
   "front": "What is $K_c$ vs $K_p$?",
-  "fp": "6190bcef490d",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Kp = Kc(RT)^dn conversion excluded (7.3; R29)"
+  "fp": "d28f63e72ef4",
+  "yield": "HIGH",
+  "why": "CED 7.3 Kc vs Kp distinction; conversion dropped (R29)"
  },
  {
   "front": "What is Reaction Quotient ($Q$)?",

@@ -1,27 +1,19 @@
 [
  {
   "topicSlug": "galvanic-cells-thermo-applications",
+  "front": "Given two half-reactions from a table of standard reduction potentials, which one runs as the reduction in a galvanic cell?",
+  "back": "The half-reaction with the more positive $E^\\circ$ is the one reduced (cathode); the other runs in reverse as the oxidation (anode). Then $E^\\circ_{\\text{cell}} = E^\\circ_{\\text{cathode}} - E^\\circ_{\\text{anode}} > 0$, and a positive $E^\\circ_{\\text{cell}}$ means the reaction is thermodynamically favored. The most positive $E^\\circ$ in the table (e.g. $\\text{F}_2$, $+2.87$ V) is the species most easily reduced."
+ },
+ {
+  "topicSlug": "galvanic-cells-thermo-applications",
   "front": "How are $\\Delta G^\\circ$, $K$, and $E^\\circ_{\\text{cell}}$ related?",
   "back": "$\\Delta G^\\circ = -RT\\ln K = -nFE^\\circ_{\\text{cell}}$. So $E^\\circ_{\\text{cell}} > 0 \\iff \\Delta G^\\circ < 0 \\iff K > 1$; at 25 °C this gives $\\log K = nE^\\circ_{\\text{cell}}/0.0592$.",
   "hint": "Think about the key characteristic"
  },
  {
   "topicSlug": "galvanic-cells-thermo-applications",
-  "front": "How does the Nernst equation adjust cell potential for non-standard concentrations?",
-  "back": "$E = E^\\circ - \\frac{RT}{nF}\\ln Q$, which at 25 °C becomes $E = E^\\circ - \\frac{0.0592}{n}\\log Q$. As the cell runs, $Q$ rises and $E$ falls; at equilibrium $Q = K$ and $E = 0$ — a dead battery.",
-  "hint": "Think about the key characteristic"
- },
- {
-  "topicSlug": "galvanic-cells-thermo-applications",
-  "front": "In a table of standard reduction potentials, which species is the strongest oxidizing agent?",
-  "back": "The one with the most positive $E^\\circ$ at the top of the table (e.g. $\\text{F}_2$, $+2.87$ V) — it is reduced most easily. The most negative $E^\\circ$ (e.g. $\\text{Li}^+/\\text{Li}$, $-3.04$ V) identifies the strongest reducing agent.",
-  "hint": "Think about the key characteristic"
- },
- {
-  "topicSlug": "galvanic-cells-thermo-applications",
-  "front": "What are practical applications of galvanic cells?",
-  "back": "Batteries (portable galvanic cells), fuel cells, and corrosion protection (sacrificial anodes that oxidize instead of the protected metal).",
-  "hint": "Think about the key characteristic"
+  "front": "Qualitatively, how does a galvanic cell's potential change under non-standard concentrations?",
+  "back": "$E_{\\text{cell}}$ is the driving force toward equilibrium, so the farther the reaction is from equilibrium, the larger $|E|$. Raising reactant concentrations (or lowering product concentrations) makes $Q$ smaller and $E > E^\\circ$; the reverse gives $E < E^\\circ$. As the cell runs, $Q$ rises toward $K$ and $E$ falls to zero — a dead battery. Reason from $Q$ versus $K$, not from a Nernst calculation."
  },
  {
   "topicSlug": "galvanic-cells-thermo-applications",
@@ -44,12 +36,6 @@
   "topicSlug": "spontaneity-free-energy-applications",
   "front": "How do you calculate $\\Delta G^\\circ_{\\text{rxn}}$ from standard free energies of formation?",
   "back": "$\\Delta G^\\circ_{\\text{rxn}} = \\sum n\\,\\Delta G^\\circ_f(\\text{products}) - \\sum n\\,\\Delta G^\\circ_f(\\text{reactants})$, where each term is multiplied by its coefficient $n$ and $\\Delta G^\\circ_f = 0$ for an element in its standard state.",
-  "hint": "Think about the key characteristic"
- },
- {
-  "topicSlug": "spontaneity-free-energy-applications",
-  "front": "How do you find $\\Delta G$ when a reaction is not at standard conditions?",
-  "back": "$\\Delta G = \\Delta G^\\circ + RT\\ln Q$, where $Q$ is the reaction quotient. At equilibrium $Q = K$ and $\\Delta G = 0$.",
   "hint": "Think about the key characteristic"
  },
  {

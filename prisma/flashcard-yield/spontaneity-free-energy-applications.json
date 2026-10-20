@@ -18,12 +18,6 @@
   "why": "CED 9.3 dG from formation values"
  },
  {
-  "front": "How do you find $\\Delta G$ when a reaction is not at standard conditions?",
-  "fp": "097e6695ba07",
-  "yield": "LOW",
-  "why": "OFF-EXAM: dG = dG + RT ln Q not in CED (R23)"
- },
- {
   "front": "How does reaction coupling drive a process with $\\Delta G > 0$?",
   "fp": "271edb4a8f02",
   "yield": "HIGH",

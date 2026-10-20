@@ -1,15 +1,15 @@
 [
  {
+  "front": "An electron drops from a higher energy level $E_i$ to a lower level $E_f$. What photon is emitted?",
+  "fp": "2fd45afd1fd1",
+  "yield": "HIGH",
+  "why": "CED 3.12 photon energy = gap between given levels (rewritten from Bohr formula, R28)"
+ },
+ {
   "front": "Balmer series — $n_f$ and EM region",
   "fp": "c6fc30302805",
   "yield": "LOW",
   "why": "Balmer series name/wavelengths; series names not in the CED"
- },
- {
-  "front": "Bohr energy formula for hydrogen",
-  "fp": "d9d0eea43a1c",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Bohr energy formula not in CED (ruling R28)"
  },
  {
   "front": "Continuous vs. line spectrum — source?",
@@ -54,12 +54,6 @@
   "why": "CED 1.6 PES peak position = binding energy"
  },
  {
-  "front": "Ionization energy of hydrogen",
-  "fp": "570e07eb7dea",
-  "yield": "LOW",
-  "why": "OFF-EXAM: hydrogen IE from Bohr energies (ruling R28)"
- },
- {
   "front": "Lyman series — $n_f$ and EM region",
   "fp": "30393542d3b8",
   "yield": "LOW",
@@ -82,12 +76,6 @@
   "fp": "80fae8d754c1",
   "yield": "ULTRA_HIGH",
   "why": "CED 3.12 E = hv = hc/lambda; equation-sheet staple"
- },
- {
-  "front": "Rydberg formula",
-  "fp": "2c069c3ef28a",
-  "yield": "LOW",
-  "why": "OFF-EXAM: Rydberg equation not in CED (ruling R28)"
  },
  {
   "front": "Visible-light wavelength range",

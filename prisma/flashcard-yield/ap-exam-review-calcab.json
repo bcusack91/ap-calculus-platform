@@ -31,8 +31,8 @@
  },
  {
   "front": "Which parts of the AP Calculus AB exam allow a graphing calculator?",
-  "fp": "6daeeba22066",
-  "yield": "LOW",
-  "why": "Calculator sections; timings outdated for May 2027 (29/62 and 13/38)"
+  "fp": "eeeab1e72f42",
+  "yield": "MEDIUM",
+  "why": "Calculator sections with May 2027 timings; exam logistics"
  }
 ]

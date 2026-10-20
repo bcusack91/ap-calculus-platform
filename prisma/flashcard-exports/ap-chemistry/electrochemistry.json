@@ -21,11 +21,6 @@
  },
  {
   "topicSlug": "electrolytic-cells-faraday",
-  "front": "What is metal purification by electrolysis?",
-  "back": "Copper purification: Anode=impure Cu→Cu²⁺+2e⁻. Cathode=Cu²⁺+2e⁻→pure Cu. More active impurities (Fe,Zn) stay dissolved. Less active (Ag,Au) fall to bottom as anode sludge (recovered!). Result: 99.99% pure copper."
- },
- {
-  "topicSlug": "electrolytic-cells-faraday",
   "front": "What is the difference between galvanic and electrolytic cells?",
   "back": "Galvanic: spontaneous, chemical→electrical, E°>0, ΔG<0 (batteries). Electrolytic: non-spontaneous forced by external voltage, electrical→chemical, E°<0, ΔG>0 (electroplating, charging). Electrode polarity REVERSED in electrolytic!"
  },

@@ -1,11 +1,5 @@
 [
  {
-  "front": "How do complex ions affect solubility?",
-  "fp": "9ed34f8f4d1f",
-  "yield": "LOW",
-  "why": "OFF-EXAM: complex-ion formation not in the CED"
- },
- {
   "front": "How do you calculate molar solubility from K_sp?",
   "fp": "88f4ae85d12c",
   "yield": "HIGH",

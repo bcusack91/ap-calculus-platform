@@ -55,17 +55,6 @@
  },
  {
   "topicSlug": "entropy-second-law",
-  "front": "How do you compute $\\Delta S_{\\text{universe}}$, and what does its sign tell you?",
-  "back": "$\\Delta S_{\\text{universe}} = \\Delta S_{\\text{system}} + \\Delta S_{\\text{surroundings}}$. Positive means the process is spontaneous, zero means equilibrium, and negative means the reverse process is the spontaneous one."
- },
- {
-  "topicSlug": "entropy-second-law",
-  "front": "How does the enthalpy of a reaction affect the entropy of the surroundings?",
-  "back": "$\\Delta S_{\\text{surroundings}} = -\\frac{\\Delta H_{\\text{system}}}{T}$. An exothermic reaction ($\\Delta H < 0$) releases heat and raises the surroundings' entropy, and that effect is larger at low temperature.",
-  "hint": "Think about the key characteristic"
- },
- {
-  "topicSlug": "entropy-second-law",
   "front": "What does the Second Law of Thermodynamics state?",
   "back": "Every spontaneous process increases the total entropy of the universe, $\\Delta S_{\\text{universe}} > 0$; only an idealized reversible process leaves it unchanged. This is why heat flows from hot to cold on its own but never spontaneously back.",
   "hint": "Think about the key characteristic"

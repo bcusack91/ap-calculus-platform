@@ -12,18 +12,6 @@
   "why": "CED 9.2 dS from standard entropies"
  },
  {
-  "front": "How do you compute $\\Delta S_{\\text{universe}}$, and what does its sign tell you?",
-  "fp": "84cfc2c66747",
-  "yield": "LOW",
-  "why": "OFF-EXAM: dS universe calculations not in CED (R16)"
- },
- {
-  "front": "How does the enthalpy of a reaction affect the entropy of the surroundings?",
-  "fp": "8fe03b668642",
-  "yield": "LOW",
-  "why": "OFF-EXAM: dS surroundings = -dH/T not in CED (R16)"
- },
- {
   "front": "What does the Second Law of Thermodynamics state?",
   "fp": "a5d6fab6ce56",
   "yield": "MEDIUM",
