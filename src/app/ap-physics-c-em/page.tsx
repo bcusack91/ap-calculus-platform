@@ -5,6 +5,7 @@ import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
 import CourseHero from '@/components/CourseHero'
+import { apDiagnosticStats } from '@/lib/ap-diagnostic-courses'
 
 export const metadata: Metadata = {
   title: 'AP Physics C: Electricity & Magnetism | Free Practice & Review',
@@ -41,7 +42,7 @@ const features = [
       </svg>
     ),
     color: 'from-amber-500 to-orange-500',
-    stats: '~35 questions · 30 min',
+    stats: apDiagnosticStats('ap-physics-c-em'),
   },
   {
     title: 'FRQ Practice',

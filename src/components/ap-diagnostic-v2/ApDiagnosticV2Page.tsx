@@ -18,16 +18,19 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { ChevronLeft, Clock, FileText, Info, Layers, Target } from 'lucide-react'
-import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
-import DiagnosticReview from '@/components/DiagnosticReview'
+import { ChevronLeft, Clock, FileText, Info, Layers } from 'lucide-react'
+import { useDiagnosticPlanAccess } from '@/components/DiagnosticPlanLock'
+import ApDiagnosticResults from '@/components/ap-diagnostic/ApDiagnosticResults'
+import { useApDiagnosticStartEvent } from '@/components/ap-diagnostic/useApDiagnosticStartEvent'
+import { apDiagnosticCourse } from '@/lib/ap-diagnostic-courses'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
-import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { DiagnosticPassageContent } from '@/components/MCATDiagnosticVisuals'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { signUpUrl } from '@/lib/auth-redirect'
+import { useDiagnosticResume, sameQuestionSet } from '@/hooks/useDiagnosticResume'
+import { DiagnosticResumePrompt, DiagnosticExitButtons } from '@/components/DiagnosticResumePrompt'
 import { loadSeenKeys, recordSeenKeys } from '@/lib/diagnostic-seen'
 import { attemptScoreLine, pastAttemptReviewHref } from '@/lib/diagnostic-attempt-scores'
 import { AP_DIAG_V2_BLUEPRINTS, unitQuotas } from '@/lib/ap-diagnostic-v2/blueprints'
@@ -84,8 +87,6 @@ interface HistoryEntry {
 }
 
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
-const bandText = (r: { estimatedAPScore: number; scoreRange: { low: number; high: number } }) =>
-  r.scoreRange.low === r.scoreRange.high ? `${r.estimatedAPScore}` : `${r.scoreRange.low}–${r.scoreRange.high}`
 
 function Rich({ text, className, ready }: { text: string; className?: string; ready: boolean }) {
   // `ready` re-renders once KaTeX has loaded.
@@ -108,10 +109,12 @@ export default function ApDiagnosticV2Page({ course, qaPreview = false }: { cour
   const apiBase = `/api/${bp.seenCourse}-diagnostic`
   const category = `${bp.categoryPrefix}-v2`
   const planAccess = useDiagnosticPlanAccess()
-  const { status } = useSession()
+  const { status, data: session } = useSession()
   const router = useRouter()
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
+
+  useApDiagnosticStartEvent(course, phase, 2)
   const [testData, setTestData] = useState<ApDiagV2TestData | null>(null)
   const [results, setResults] = useState<ApDiagV2Results | null>(null)
   const [current, setCurrent] = useState(0)
@@ -125,6 +128,34 @@ export default function ApDiagnosticV2Page({ course, qaPreview = false }: { cour
   const [bank, setBank] = useState<ApDiagV2Bank | null>(null)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const finishedRef = useRef(false)
+
+  // The sitting is mirrored to localStorage on every answer, move and tick
+  // (src/hooks/useDiagnosticResume.ts); the menu offers Resume / Start over.
+  // A saved sitting is validated against the loaded bank by item id, stem
+  // and option text; one that no longer matches is offered as Start over only.
+  const resume = useDiagnosticResume<ApDiagV2TestData>({
+    userId: session?.user?.id,
+    course: bp.seenCourse,
+    version: 2,
+    phase,
+    testData,
+    answers,
+    eliminated,
+    currentIndex: current,
+    timeRemaining: timeLeft,
+    ready: !!bank,
+    validate: (data) => {
+      if (!bank) return false
+      const byId = new Map(bank.items.map((it) => [it.id, it]))
+      return sameQuestionSet(
+        data.questions,
+        data.questions.map((q) => {
+          const it = byId.get(q.id)
+          return it ? { question: it.stem, options: it.options } : { question: '', options: [] }
+        }),
+      )
+    },
+  })
 
   useEffect(() => { preloadKatex().then(() => setKatexReady(true)) }, [])
   useEffect(() => {
@@ -213,6 +244,20 @@ export default function ApDiagnosticV2Page({ course, qaPreview = false }: { cour
     }
   }, [bp, bank])
 
+  const resumeTest = useCallback(() => {
+    const saved = resume.restore()
+    if (!saved) return
+    finishedRef.current = false
+    setTestData(saved.testData)
+    setResults(null)
+    setCurrent(saved.currentIndex)
+    setAnswers(saved.answers)
+    setEliminated(saved.eliminated)
+    setTimeLeft(saved.timeRemaining)
+    setPhase('testing')
+    window.scrollTo?.({ top: 0 })
+  }, [resume])
+
   const setAnswer = (i: number | null) => setAnswers((prev) => prev.map((a, idx) => (idx === current ? i : a)))
   const toggleEliminate = (i: number) => {
     setEliminated((prev) => prev.map((set, idx) => {
@@ -272,17 +317,10 @@ export default function ApDiagnosticV2Page({ course, qaPreview = false }: { cour
                     <FileText className="h-3.5 w-3.5" aria-hidden />Reference
                   </button>
                 )}
-                <button
-                  onClick={() => {
-                    if (!window.confirm('Leave this diagnostic? Your answers so far will be discarded.')) return
-                    if (timerRef.current) clearInterval(timerRef.current)
-                    setPhase('menu')
-                    setTestData(null)
-                  }}
-                  className="text-sm text-gray-500 hover:text-red-600 dark:text-gray-400"
-                >
-                  Exit
-                </button>
+                <DiagnosticExitButtons
+                  onSaveExit={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }}
+                  onDiscard={() => { if (timerRef.current) clearInterval(timerRef.current); resume.discard(); setPhase('menu'); setTestData(null) }}
+                />
               </div>
             </div>
 
@@ -379,82 +417,17 @@ export default function ApDiagnosticV2Page({ course, qaPreview = false }: { cour
   /* ------------------------------ RESULTS ------------------------------ */
   if (phase === 'results' && results && testData) {
     return (
-      <div className={`min-h-screen bg-gradient-to-br ${theme.page} py-8 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900`}>
-        <div className="container">
-          <div className="mx-auto max-w-3xl">
-            {qaBanner}
-            <h1 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">{bp.label} diagnostic results</h1>
-            <div className="mb-6 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Estimated AP score</p>
-                <p className={`text-5xl font-black tabular-nums ${theme.text}`} data-testid="ap-v2-score-band">{bandText(results)}</p>
-                <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">
-                  {results.scoreRange.low === results.scoreRange.high ? 'out of 5' : `most likely ${results.estimatedAPScore} · out of 5`}
-                </p>
-              </div>
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Correct</p>
-                <p className="text-4xl font-black tabular-nums text-gray-800 dark:text-gray-100">{results.totalCorrect}/{results.totalQuestions}</p>
-                <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">{results.percentage}% (likely {results.percentRange.low}–{results.percentRange.high}%)</p>
-              </div>
-            </div>
-            <p className="mb-8 flex items-start gap-2 text-xs text-gray-500 dark:text-gray-400">
-              <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden />
-              The range reflects how much a score from {results.totalQuestions} questions can vary from sitting to sitting. The 1–5 cutoffs are an estimate based on typical AP composite cutoffs; they are not yet calibrated against real AP results.
-            </p>
-
-            <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
-              <h2 className="mb-1 text-lg font-semibold text-gray-800 dark:text-gray-200">Unit breakdown</h2>
-              <p className="mb-4 text-xs text-gray-500 dark:text-gray-400">Each unit is weighted as on the AP exam, so each one has only a few questions. Treat these as starting points and confirm them with the topic quizzes.</p>
-              <div className="space-y-3">
-                {results.domains.map((d) => (
-                  <div key={d.domainId}>
-                    <div className="mb-1 flex items-center justify-between gap-3">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{d.domainName}</span>
-                      <span className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-semibold ${d.level === 'strong' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : d.level === 'moderate' ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400' : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'}`}>
-                        {d.correct}/{d.total}
-                      </span>
-                    </div>
-                    <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
-                      <div className={`h-full rounded-full ${d.level === 'strong' ? 'bg-green-500' : d.level === 'moderate' ? 'bg-amber-500' : 'bg-red-500'}`} style={{ width: `${d.percentage}%` }} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <DiagnosticReview questions={testData.questions} answers={answers} domainNames={Object.fromEntries(testData.domains.map((d) => [d.id, d.name]))} />
-
-            {results.recommendedTopics.length > 0 && !planAccess.loading && !planAccess.canAccess && <DiagnosticPlanPaywall />}
-            {results.recommendedTopics.length > 0 && planAccess.canAccess && (
-              <div className={`mb-8 rounded-2xl border-2 p-6 ${theme.border} ${theme.soft}`}>
-                <h2 className={`mb-1 flex items-center gap-1.5 text-lg font-bold ${theme.text}`}><Target className="h-5 w-5" aria-hidden />Your study plan</h2>
-                <p className="mb-4 text-sm text-gray-600 dark:text-gray-300">Review these {results.recommendedTopics.length} topic{results.recommendedTopics.length > 1 ? 's' : ''}, then come back for another diagnostic. It will serve questions you have not seen.</p>
-                <div className="space-y-2">
-                  {results.recommendedTopics.map((t, i) => (
-                    <Link key={t.slug} href={`/topics/${t.slug}/interactive`} className="flex items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3 hover:shadow-sm dark:border-gray-700 dark:bg-gray-800">
-                      <span className="flex items-center gap-3">
-                        <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${theme.chip}`}>{i + 1}</span>
-                        <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">{t.name}</span>
-                      </span>
-                      <span className={`shrink-0 rounded-full px-2 py-0.5 text-xs ${t.priority === 'high' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' : 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'}`}>
-                        {t.priority === 'high' ? 'High priority' : 'Medium priority'}
-                      </span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <StartStudyPlanButton diagnosticPath={bp.pagePath} className="mb-8" />
-
-            <div className="grid gap-3 sm:grid-cols-2">
-              <button onClick={() => void startTest()} disabled={starting || !bank} className={`rounded-xl border-2 py-3 font-semibold ${theme.border} ${theme.text}`}>Take another diagnostic</button>
-              <Link href={`/courses/${course}`} className={`rounded-xl py-3 text-center font-semibold text-white shadow ${theme.button}`}>Back to {bp.label}</Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      <ApDiagnosticResults
+        course={apDiagnosticCourse(course)}
+        version={2}
+        results={results}
+        planAccess={planAccess}
+        history={history}
+        review={{ questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map((d) => [d.id, d.name])) }}
+        onRetake={() => void startTest()}
+        retakeDisabled={starting || !bank}
+        banner={qaBanner}
+      />
     )
   }
 
@@ -498,6 +471,13 @@ export default function ApDiagnosticV2Page({ course, qaPreview = false }: { cour
               )}
             </div>
           )}
+
+          <DiagnosticResumePrompt
+            label={bp.label}
+            resumable={resume.resumable}
+            onResume={resumeTest}
+            onStartOver={() => { resume.discard(); void startTest() }}
+          />
 
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h2 className="mb-3 text-lg font-semibold text-gray-800 dark:text-gray-200">What to expect</h2>

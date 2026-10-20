@@ -1,6 +1,9 @@
 'use client'
 
-import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
+import { useDiagnosticPlanAccess } from '@/components/DiagnosticPlanLock'
+import ApDiagnosticResults from '@/components/ap-diagnostic/ApDiagnosticResults'
+import { useApDiagnosticStartEvent } from '@/components/ap-diagnostic/useApDiagnosticStartEvent'
+import { apDiagnosticCourse } from '@/lib/ap-diagnostic-courses'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
@@ -14,11 +17,11 @@ import {
   type APPsychDiagnosticTestData,
   type APPsychDiagnosticResults,
 } from '@/data/ap-psychology-diagnostic'
-import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import { shuffleOptions } from '@/lib/shuffle-options'
-import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { signUpUrl } from '@/lib/auth-redirect'
+import { useDiagnosticResume, sameQuestionSet } from '@/hooks/useDiagnosticResume'
+import { DiagnosticResumePrompt, DiagnosticExitButtons } from '@/components/DiagnosticResumePrompt'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -49,7 +52,7 @@ interface HistoryEntry {
 
 export default function APPsychDiagnosticPage() {
   const planAccess = useDiagnosticPlanAccess()
-  const { status } = useSession()
+  const { status, data: session } = useSession()
   const router = useRouter()
   const searchParams = useSearchParams()
   const challengeToken = searchParams.get('challenge')
@@ -59,6 +62,8 @@ export default function APPsychDiagnosticPage() {
     : null
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
+
+  useApDiagnosticStartEvent('ap-psychology', phase)
   const [testData, setTestData] = useState<APPsychDiagnosticTestData | null>(null)
   const [results, setResults] = useState<APPsychDiagnosticResults | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -86,20 +91,37 @@ export default function APPsychDiagnosticPage() {
   }, [status])
 
   // Timer
+  // The sitting is mirrored to localStorage on every answer, move and tick
+  // (src/hooks/useDiagnosticResume.ts); the menu offers Resume / Start over.
+  const resume = useDiagnosticResume<APPsychDiagnosticTestData>({
+    userId: session?.user?.id,
+    course: 'ap-psych',
+    version: 1,
+    phase,
+    testData,
+    answers,
+    eliminated: eliminatedOptions,
+    currentIndex,
+    timeRemaining,
+    validate: (data) => sameQuestionSet(data.questions, generateAPPsychDiagnosticTest(data.form as Parameters<typeof generateAPPsychDiagnosticTest>[0]).questions),
+  })
+  // The clock-expiry auto-submit calls the latest handleFinish (the interval
+  // closure would otherwise score the answers as they were when the clock started).
+  const finishRef = useRef<() => void>(() => {})
+
   useEffect(() => {
     if (phase !== 'testing') return
     timerRef.current = setInterval(() => {
       setTimeRemaining(prev => {
         if (prev <= 1) {
           clearInterval(timerRef.current!)
-          handleFinish()
+          finishRef.current()
           return 0
         }
         return prev - 1
       })
     }, 1000)
     return () => { if (timerRef.current) clearInterval(timerRef.current) }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 
   const startTest = useCallback(() => {
@@ -126,6 +148,17 @@ export default function APPsychDiagnosticPage() {
     setChallengeSubmitted(false)
     setPhase('testing')
   }, [history, challengeForm])
+
+  const resumeTest = useCallback(() => {
+    const saved = resume.restore()
+    if (!saved) return
+    setTestData(saved.testData)
+    setCurrentIndex(saved.currentIndex)
+    setAnswers(saved.answers)
+    setEliminatedOptions(saved.eliminated)
+    setTimeRemaining(saved.timeRemaining)
+    setPhase('testing')
+  }, [resume])
 
   const handleFinish = useCallback(async () => {
     if (!testData) return
@@ -189,6 +222,8 @@ export default function APPsychDiagnosticPage() {
   }, [testData, answers, challengeToken])
 
   // Loading state
+  useEffect(() => { finishRef.current = () => { void handleFinish() } }, [handleFinish])
+
   if (status === 'loading') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -230,12 +265,10 @@ export default function APPsychDiagnosticPage() {
                 <span className={`text-sm font-mono font-bold ${timeRemaining < 300 ? 'text-red-500' : 'text-gray-600 dark:text-gray-400'}`}>
                   ⏱ {formatTime(timeRemaining)}
                 </span>
-                <button
-                  onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }}
-                  className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400"
-                >
-                  Exit
-                </button>
+                <DiagnosticExitButtons
+                  onSaveExit={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }}
+                  onDiscard={() => { if (timerRef.current) clearInterval(timerRef.current); resume.discard(); setPhase('menu'); setTestData(null) }}
+                />
               </div>
             </div>
 
@@ -371,106 +404,15 @@ export default function APPsychDiagnosticPage() {
   /*  RESULTS PHASE                                                    */
   /* ---------------------------------------------------------------- */
   if (phase === 'results' && results) {
-    const apScoreEmoji = results.estimatedAPScore >= 4 ? '🎉' : results.estimatedAPScore >= 3 ? '👍' : '📚'
-    const completedModules = history.length
-
     return (
-      <div className="min-h-screen bg-gradient-to-br from-amber-50 via-white to-purple-50 py-8 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-        <div className="container">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">
-              AP Psychology Diagnostic Results
-            </h2>
-
-            {/* Score summary */}
-            <div className="mb-8 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Estimated AP Score</p>
-                <p className="text-5xl font-black text-purple-600 dark:text-purple-400">
-                  {results.estimatedAPScore}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">out of 5</p>
-              </div>
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Correct</p>
-                <p className="text-4xl font-black text-amber-600 dark:text-amber-400">
-                  {results.totalCorrect}/{results.totalQuestions}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">{results.percentage}%</p>
-              </div>
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Performance</p>
-                <p className="text-4xl">{apScoreEmoji}</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  {results.percentage >= 80 ? 'Excellent' : results.percentage >= 60 ? 'Good' : 'Needs Review'}
-                </p>
-              </div>
-            </div>
-
-            {/* Domain Breakdown */}
-            <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
-              <h3 className="mb-1 text-lg font-semibold text-gray-800 dark:text-gray-200">
-                Unit Breakdown
-              </h3>
-              <p className="mb-4 text-xs text-gray-500 dark:text-gray-400">
-                Each area estimate is based on only a few questions — treat these as starting points and confirm with the topic quizzes.
-              </p>
-              <div className="space-y-3">
-                {results.domains.map(d => (
-                  <div key={d.domainId}>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {d.domainName}
-                      </span>
-                      <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
-                        d.level === 'strong'
-                          ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-                          : d.level === 'moderate'
-                          ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
-                          : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
-                      }`}>
-                        {d.correct}/{d.total} ({d.percentage}%)
-                      </span>
-                    </div>
-                    <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
-                      <div
-                        className={`h-full rounded-full transition-all ${
-                          d.level === 'strong' ? 'bg-green-500' : d.level === 'moderate' ? 'bg-amber-500' : 'bg-red-500'
-                        }`}
-                        style={{ width: `${d.percentage}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Strengths & Weaknesses */}
-            <div className="mb-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-green-200 bg-green-50 p-5 dark:border-green-800 dark:bg-green-900/20">
-                <h4 className="mb-2 font-semibold text-green-800 dark:text-green-300">
-                  💪 Strengths
-                </h4>
-                <ul className="space-y-1 text-sm text-green-700 dark:text-green-400">
-                  {results.strengths.length > 0
-                    ? results.strengths.map(s => <li key={s}>• {s}</li>)
-                    : <li>Complete more questions to identify strengths</li>}
-                </ul>
-              </div>
-              <div className="rounded-2xl border border-red-200 bg-red-50 p-5 dark:border-red-800 dark:bg-red-900/20">
-                <h4 className="mb-2 font-semibold text-red-800 dark:text-red-300">
-                  📚 Areas to Improve
-                </h4>
-                <ul className="space-y-1 text-sm text-red-700 dark:text-red-400">
-                  {results.weakAreas.length > 0
-                    ? results.weakAreas.map(w => <li key={w}>• {w}</li>)
-                    : <li>Great job — no major weak areas!</li>}
-                </ul>
-              </div>
-            </div>
-
-            {/* Review Test */}
-            
+      <ApDiagnosticResults
+        course={apDiagnosticCourse('ap-psychology')}
+        results={results}
+        planAccess={planAccess}
+        history={history}
+        review={testData ? { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) } : null}
+        onRetake={() => { setResults(null); setTestData(null); startTest() }}
+        secondary={(
           <DiagnosticChallengeCard
             category={`ap-psych-diagnostic-${results.form ?? 1}`}
             score={results.percentage}
@@ -480,108 +422,8 @@ export default function APPsychDiagnosticPage() {
             currentChallengeToken={challengeToken}
             challengeSubmitted={challengeSubmitted}
           />
-          {testData && (
-              <DiagnosticReview
-                questions={testData.questions}
-                answers={answers}
-                domainNames={Object.fromEntries(testData.domains.map(d => [d.id, d.name]))}
-              />
-            )}
-
-            {/* ═══════════════════════════════════════════════════════ */}
-            {/*  RECOMMENDED MODULES — the key remediation section     */}
-            {/* ═══════════════════════════════════════════════════════ */}
-            {results.recommendedTopics.length > 0 && !planAccess.loading && !planAccess.canAccess && <DiagnosticPlanPaywall />}
-            {results.recommendedTopics.length > 0 && planAccess.canAccess && (
-              <div className="mb-8 rounded-2xl border-2 border-purple-300 bg-purple-50 p-6 dark:border-purple-700 dark:bg-purple-900/20">
-                <h3 className="mb-1 text-lg font-bold text-purple-800 dark:text-purple-300">
-                  🎯 Your Personalized Study Plan
-                </h3>
-                <p className="mb-4 text-sm text-purple-600 dark:text-purple-400">
-                  Based on your results, we recommend reviewing these {results.recommendedTopics.length} module{results.recommendedTopics.length > 1 ? 's' : ''}. Once you&apos;ve completed them, come back to take another diagnostic test to track your improvement.
-                </p>
-                <div className="space-y-2">
-                  {results.recommendedTopics.map((topic, i) => (
-                    <Link
-                      key={topic.slug}
-                      href={`/topics/${topic.slug}/interactive`}
-                      className="flex items-center justify-between rounded-xl border border-purple-200 bg-white px-4 py-3 transition hover:border-purple-400 hover:shadow-sm dark:border-purple-700 dark:bg-gray-800 dark:hover:border-purple-500 group"
-                    >
-                      <div className="flex items-center gap-3">
-                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-100 text-xs font-bold text-purple-700 dark:bg-purple-900/50 dark:text-purple-300">
-                          {i + 1}
-                        </span>
-                        <div>
-                          <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-purple-700 dark:group-hover:text-purple-400">
-                            {topic.name}
-                          </span>
-                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full ${
-                            topic.priority === 'high'
-                              ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400'
-                              : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'
-                          }`}>
-                            {topic.priority === 'high' ? 'High Priority' : 'Medium Priority'}
-                          </span>
-                        </div>
-                      </div>
-                      <span className="text-purple-500 group-hover:translate-x-1 transition-transform">→</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <StartStudyPlanButton diagnosticPath="/ap-psych-diagnostic" className="mb-8" />
-
-            {/* Next steps explanation */}
-            <div className="mb-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-800 dark:bg-blue-900/20">
-              <h4 className="mb-2 font-semibold text-blue-800 dark:text-blue-300">
-                🔄 How This Cycle Works
-              </h4>
-              <ol className="space-y-2 text-sm text-blue-700 dark:text-blue-400 list-decimal list-inside">
-                <li>Review the {results.recommendedTopics.length} recommended module{results.recommendedTopics.length > 1 ? 's' : ''} above</li>
-                <li>Complete each module&apos;s lessons, practice problems, and flashcards</li>
-                <li>Come back and take the next diagnostic test (Form {results.form >= 10 ? 1 : results.form + 1}) — different questions, same breadth</li>
-                <li>Get a new set of personalized recommendations based on your updated results</li>
-                <li>Repeat until you&apos;re scoring 4+ across all domains!</li>
-              </ol>
-              {completedModules > 0 && (
-                <p className="mt-3 text-xs text-blue-500 dark:text-blue-400">
-                  You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!
-                </p>
-              )}
-            </div>
-
-            {/* Actions */}
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              <button
-                onClick={() => { setResults(null); setTestData(null); startTest() }}
-                className="flex-1 rounded-xl border-2 border-purple-500 py-3 font-semibold text-purple-600 transition hover:bg-purple-50 dark:text-purple-400 dark:hover:bg-purple-900/20"
-              >
-                Take Next Diagnostic
-              </button>
-              <Link
-                href="/courses/ap-psychology"
-                className="flex-1 rounded-xl bg-gradient-to-r from-purple-600 to-amber-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg"
-              >
-                Browse All AP Psych Modules
-              </Link>
-              <Link
-                href="/ap-psych-score-predictor"
-                className="flex-1 rounded-xl border border-purple-300 py-3 text-center font-semibold text-purple-700 transition hover:bg-purple-50 dark:border-purple-700 dark:text-purple-300 dark:hover:bg-purple-900/20"
-              >
-                View Score Predictor
-              </Link>
-              <Link
-                href="/ap-psych-daily-question"
-                className="flex-1 rounded-xl border border-purple-300 py-3 text-center font-semibold text-purple-700 transition hover:bg-purple-50 dark:border-purple-700 dark:text-purple-300 dark:hover:bg-purple-900/20"
-              >
-                Today&apos;s Question
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+        )}
+      />
     )
   }
 
@@ -678,6 +520,13 @@ export default function APPsychDiagnosticPage() {
           )}
 
           {/* Start card */}
+          <DiagnosticResumePrompt
+            label="AP Psychology"
+            resumable={resume.resumable}
+            onResume={resumeTest}
+            onStartOver={() => { resume.discard(); startTest() }}
+          />
+
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
               What to Expect

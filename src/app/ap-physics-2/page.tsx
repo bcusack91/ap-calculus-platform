@@ -5,6 +5,7 @@ import { courseJsonLd } from '@/lib/jsonld'
 import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
 import CourseHero from '@/components/CourseHero'
+import { apDiagnosticStats } from '@/lib/ap-diagnostic-courses'
 
 export const metadata: Metadata = {
   title: 'AP Physics 2 | Free AP Physics 2 Practice & Review',
@@ -41,7 +42,7 @@ const features = [
       </svg>
     ),
     color: 'from-blue-500 to-indigo-500',
-    stats: '~30 questions · 25 min',
+    stats: apDiagnosticStats('ap-physics-2'),
   },
   {
     title: 'Unit Tests',

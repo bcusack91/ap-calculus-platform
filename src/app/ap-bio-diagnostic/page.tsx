@@ -1,7 +1,10 @@
 'use client'
 
 import ApDiagnosticVersionSwitch from '@/components/ap-diagnostic-v2/ApDiagnosticVersionSwitch'
-import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
+import { useDiagnosticPlanAccess } from '@/components/DiagnosticPlanLock'
+import ApDiagnosticResults from '@/components/ap-diagnostic/ApDiagnosticResults'
+import { useApDiagnosticStartEvent } from '@/components/ap-diagnostic/useApDiagnosticStartEvent'
+import { apDiagnosticCourse } from '@/lib/ap-diagnostic-courses'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
@@ -15,13 +18,13 @@ import {
   type APBioDiagnosticTestData,
   type APBioDiagnosticResults,
 } from '@/data/ap-biology-diagnostic'
-import DiagnosticReview from '@/components/DiagnosticReview'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
 import ReferenceSheetModal from '@/components/ReferenceSheetModal'
 import { shuffleOptions } from '@/lib/shuffle-options'
-import StartStudyPlanButton from '@/components/StartStudyPlanButton'
 import { MathText } from '@/components/MathText'
 import { signUpUrl } from '@/lib/auth-redirect'
+import { useDiagnosticResume, sameQuestionSet } from '@/hooks/useDiagnosticResume'
+import { DiagnosticResumePrompt, DiagnosticExitButtons } from '@/components/DiagnosticResumePrompt'
 
 /* ------------------------------------------------------------------ */
 /*  Helpers                                                            */
@@ -52,7 +55,7 @@ interface HistoryEntry {
 
 function APBioDiagnosticPageV1() {
   const planAccess = useDiagnosticPlanAccess()
-  const { status } = useSession()
+  const { status, data: session } = useSession()
   const router = useRouter()
   const searchParams = useSearchParams()
   const challengeToken = searchParams.get('challenge')
@@ -62,6 +65,8 @@ function APBioDiagnosticPageV1() {
     : null
 
   const [phase, setPhase] = useState<'menu' | 'testing' | 'results'>('menu')
+
+  useApDiagnosticStartEvent('ap-biology', phase)
   const [testData, setTestData] = useState<APBioDiagnosticTestData | null>(null)
   const [results, setResults] = useState<APBioDiagnosticResults | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -90,20 +95,37 @@ function APBioDiagnosticPageV1() {
   }, [status])
 
   // Timer
+  // The sitting is mirrored to localStorage on every answer, move and tick
+  // (src/hooks/useDiagnosticResume.ts); the menu offers Resume / Start over.
+  const resume = useDiagnosticResume<APBioDiagnosticTestData>({
+    userId: session?.user?.id,
+    course: 'ap-bio',
+    version: 1,
+    phase,
+    testData,
+    answers,
+    eliminated: eliminatedOptions,
+    currentIndex,
+    timeRemaining,
+    validate: (data) => sameQuestionSet(data.questions, generateAPBioDiagnosticTest(data.form as Parameters<typeof generateAPBioDiagnosticTest>[0]).questions),
+  })
+  // The clock-expiry auto-submit calls the latest handleFinish (the interval
+  // closure would otherwise score the answers as they were when the clock started).
+  const finishRef = useRef<() => void>(() => {})
+
   useEffect(() => {
     if (phase !== 'testing') return
     timerRef.current = setInterval(() => {
       setTimeRemaining(prev => {
         if (prev <= 1) {
           clearInterval(timerRef.current!)
-          handleFinish()
+          finishRef.current()
           return 0
         }
         return prev - 1
       })
     }, 1000)
     return () => { if (timerRef.current) clearInterval(timerRef.current) }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [phase])
 
   const startTest = useCallback(() => {
@@ -130,6 +152,17 @@ function APBioDiagnosticPageV1() {
     setChallengeSubmitted(false)
     setPhase('testing')
   }, [history, challengeForm])
+
+  const resumeTest = useCallback(() => {
+    const saved = resume.restore()
+    if (!saved) return
+    setTestData(saved.testData)
+    setCurrentIndex(saved.currentIndex)
+    setAnswers(saved.answers)
+    setEliminatedOptions(saved.eliminated)
+    setTimeRemaining(saved.timeRemaining)
+    setPhase('testing')
+  }, [resume])
 
   const handleFinish = useCallback(async () => {
     if (!testData) return
@@ -193,6 +226,8 @@ function APBioDiagnosticPageV1() {
   }, [testData, answers, challengeToken])
 
   // Loading state
+  useEffect(() => { finishRef.current = () => { void handleFinish() } }, [handleFinish])
+
   if (status === 'loading') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
@@ -240,12 +275,10 @@ function APBioDiagnosticPageV1() {
                 >
                   📋 Reference Sheet
                 </button>
-                <button
-                  onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }}
-                  className="text-sm text-gray-500 hover:text-red-500 dark:text-gray-400"
-                >
-                  Exit
-                </button>
+                <DiagnosticExitButtons
+                  onSaveExit={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase('menu'); setTestData(null) }}
+                  onDiscard={() => { if (timerRef.current) clearInterval(timerRef.current); resume.discard(); setPhase('menu'); setTestData(null) }}
+                />
               </div>
             </div>
 
@@ -384,103 +417,15 @@ function APBioDiagnosticPageV1() {
   /*  RESULTS PHASE                                                    */
   /* ---------------------------------------------------------------- */
   if (phase === 'results' && results) {
-    const apScoreEmoji = results.estimatedAPScore >= 4 ? '🎉' : results.estimatedAPScore >= 3 ? '👍' : '📚'
-    const completedModules = history.length
-
     return (
-      <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50 py-8 dark:from-gray-900 dark:via-gray-950 dark:to-gray-900">
-        <div className="container">
-          <div className="mx-auto max-w-3xl">
-            <h2 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">
-              AP Biology Diagnostic Results
-            </h2>
-
-            {/* Score summary */}
-            <div className="mb-8 grid gap-4 sm:grid-cols-3">
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Estimated AP Score</p>
-                <p className="text-5xl font-black text-emerald-600 dark:text-emerald-400">
-                  {results.estimatedAPScore}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">out of 5</p>
-              </div>
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Correct</p>
-                <p className="text-4xl font-black text-green-600 dark:text-green-400">
-                  {results.totalCorrect}/{results.totalQuestions}
-                </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">{results.percentage}%</p>
-              </div>
-              <div className="rounded-2xl border border-gray-200 bg-white p-6 text-center dark:border-gray-700 dark:bg-gray-800">
-                <p className="text-sm text-gray-500 dark:text-gray-400">Performance</p>
-                <p className="text-4xl">{apScoreEmoji}</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
-                  {results.percentage >= 80 ? 'Excellent' : results.percentage >= 60 ? 'Good' : 'Needs Review'}
-                </p>
-              </div>
-            </div>
-
-            {/* Domain Breakdown */}
-            <div className="mb-8 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
-              <h3 className="mb-4 text-lg font-semibold text-gray-800 dark:text-gray-200">
-                Unit Breakdown
-              </h3>
-              <div className="space-y-3">
-                {results.domains.map(d => (
-                  <div key={d.domainId}>
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {d.domainName}
-                      </span>
-                      <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${
-                        d.level === 'strong'
-                          ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400'
-                          : d.level === 'moderate'
-                          ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400'
-                          : 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
-                      }`}>
-                        {d.correct}/{d.total} ({d.percentage}%)
-                      </span>
-                    </div>
-                    <div className="h-2 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
-                      <div
-                        className={`h-full rounded-full transition-all ${
-                          d.level === 'strong' ? 'bg-green-500' : d.level === 'moderate' ? 'bg-amber-500' : 'bg-red-500'
-                        }`}
-                        style={{ width: `${d.percentage}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Strengths & Weaknesses */}
-            <div className="mb-8 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-green-200 bg-green-50 p-5 dark:border-green-800 dark:bg-green-900/20">
-                <h4 className="mb-2 font-semibold text-green-800 dark:text-green-300">
-                  💪 Strengths
-                </h4>
-                <ul className="space-y-1 text-sm text-green-700 dark:text-green-400">
-                  {results.strengths.length > 0
-                    ? results.strengths.map(s => <li key={s}>• {s}</li>)
-                    : <li>Complete more questions to identify strengths</li>}
-                </ul>
-              </div>
-              <div className="rounded-2xl border border-red-200 bg-red-50 p-5 dark:border-red-800 dark:bg-red-900/20">
-                <h4 className="mb-2 font-semibold text-red-800 dark:text-red-300">
-                  📚 Areas to Improve
-                </h4>
-                <ul className="space-y-1 text-sm text-red-700 dark:text-red-400">
-                  {results.weakAreas.length > 0
-                    ? results.weakAreas.map(w => <li key={w}>• {w}</li>)
-                    : <li>Great job — no major weak areas!</li>}
-                </ul>
-              </div>
-            </div>
-
-            {/* Review Test */}
-            
+      <ApDiagnosticResults
+        course={apDiagnosticCourse('ap-biology')}
+        results={results}
+        planAccess={planAccess}
+        history={history}
+        review={testData ? { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) } : null}
+        onRetake={() => { setResults(null); setTestData(null); startTest() }}
+        secondary={(
           <DiagnosticChallengeCard
             category={`ap-bio-diagnostic-${results.form ?? 1}`}
             score={results.percentage}
@@ -490,108 +435,8 @@ function APBioDiagnosticPageV1() {
             currentChallengeToken={challengeToken}
             challengeSubmitted={challengeSubmitted}
           />
-          {testData && (
-              <DiagnosticReview
-                questions={testData.questions}
-                answers={answers}
-                domainNames={Object.fromEntries(testData.domains.map(d => [d.id, d.name]))}
-              />
-            )}
-
-            {/* ═══════════════════════════════════════════════════════ */}
-            {/*  RECOMMENDED MODULES — the key remediation section     */}
-            {/* ═══════════════════════════════════════════════════════ */}
-            {results.recommendedTopics.length > 0 && !planAccess.loading && !planAccess.canAccess && <DiagnosticPlanPaywall />}
-            {results.recommendedTopics.length > 0 && planAccess.canAccess && (
-              <div className="mb-8 rounded-2xl border-2 border-emerald-300 bg-emerald-50 p-6 dark:border-emerald-700 dark:bg-emerald-900/20">
-                <h3 className="mb-1 text-lg font-bold text-emerald-800 dark:text-emerald-300">
-                  🎯 Your Personalized Study Plan
-                </h3>
-                <p className="mb-4 text-sm text-emerald-600 dark:text-emerald-400">
-                  Based on your results, we recommend reviewing these {results.recommendedTopics.length} module{results.recommendedTopics.length > 1 ? 's' : ''}. Once you&apos;ve completed them, come back to take another diagnostic test to track your improvement.
-                </p>
-                <div className="space-y-2">
-                  {results.recommendedTopics.map((topic, i) => (
-                    <Link
-                      key={topic.slug}
-                      href={`/topics/${topic.slug}/interactive`}
-                      className="flex items-center justify-between rounded-xl border border-emerald-200 bg-white px-4 py-3 transition hover:border-emerald-400 hover:shadow-sm dark:border-emerald-700 dark:bg-gray-800 dark:hover:border-emerald-500 group"
-                    >
-                      <div className="flex items-center gap-3">
-                        <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-xs font-bold text-emerald-700 dark:bg-emerald-900/50 dark:text-emerald-300">
-                          {i + 1}
-                        </span>
-                        <div>
-                          <span className="text-sm font-semibold text-gray-800 dark:text-gray-200 group-hover:text-emerald-700 dark:group-hover:text-emerald-400">
-                            {topic.name}
-                          </span>
-                          <span className={`ml-2 text-xs px-2 py-0.5 rounded-full ${
-                            topic.priority === 'high'
-                              ? 'bg-red-100 text-red-600 dark:bg-red-900/30 dark:text-red-400'
-                              : 'bg-amber-100 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400'
-                          }`}>
-                            {topic.priority === 'high' ? 'High Priority' : 'Medium Priority'}
-                          </span>
-                        </div>
-                      </div>
-                      <span className="text-emerald-500 group-hover:translate-x-1 transition-transform">→</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <StartStudyPlanButton diagnosticPath="/ap-bio-diagnostic" className="mb-8" />
-
-            {/* Next steps explanation */}
-            <div className="mb-8 rounded-2xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-800 dark:bg-blue-900/20">
-              <h4 className="mb-2 font-semibold text-blue-800 dark:text-blue-300">
-                🔄 How This Cycle Works
-              </h4>
-              <ol className="space-y-2 text-sm text-blue-700 dark:text-blue-400 list-decimal list-inside">
-                <li>Review the {results.recommendedTopics.length} recommended module{results.recommendedTopics.length > 1 ? 's' : ''} above</li>
-                <li>Complete each module&apos;s lessons, practice problems, and flashcards</li>
-                <li>Come back and take the next diagnostic test (Form {results.form + 1 > 10 ? 1 : results.form + 1}) — different questions, same breadth</li>
-                <li>Get a new set of personalized recommendations based on your updated results</li>
-                <li>Repeat until you&apos;re scoring 4+ across all domains!</li>
-              </ol>
-              {completedModules > 0 && (
-                <p className="mt-3 text-xs text-blue-500 dark:text-blue-400">
-                  You&apos;ve taken {completedModules} diagnostic test{completedModules > 1 ? 's' : ''} so far — keep going!
-                </p>
-              )}
-            </div>
-
-            {/* Actions */}
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-              <button
-                onClick={() => { setResults(null); setTestData(null); startTest() }}
-                className="flex-1 rounded-xl border-2 border-emerald-500 py-3 font-semibold text-emerald-600 transition hover:bg-emerald-50 dark:text-emerald-400 dark:hover:bg-emerald-900/20"
-              >
-                Take Next Diagnostic
-              </button>
-              <Link
-                href="/courses/ap-biology"
-                className="flex-1 rounded-xl bg-gradient-to-r from-emerald-600 to-green-600 py-3 text-center font-semibold text-white shadow transition hover:shadow-lg"
-              >
-                Browse All AP Bio Modules
-              </Link>
-              <Link
-                href="/ap-bio-score-predictor"
-                className="flex-1 rounded-xl border border-emerald-300 py-3 text-center font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/20"
-              >
-                View Score Predictor
-              </Link>
-              <Link
-                href="/ap-bio-daily-question"
-                className="flex-1 rounded-xl border border-emerald-300 py-3 text-center font-semibold text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-700 dark:text-emerald-300 dark:hover:bg-emerald-900/20"
-              >
-                Today&apos;s Question
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+        )}
+      />
     )
   }
 
@@ -688,6 +533,13 @@ function APBioDiagnosticPageV1() {
           )}
 
           {/* Start card */}
+          <DiagnosticResumePrompt
+            label="AP Biology"
+            resumable={resume.resumable}
+            onResume={resumeTest}
+            onStartOver={() => { resume.discard(); startTest() }}
+          />
+
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
               What to Expect

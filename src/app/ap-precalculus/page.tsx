@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { CourseHub, type HubFeature, type HubUnit } from '@/components/CourseHub'
 import { InArticleAd } from '@/components/ad-banner'
 import CourseToolGrid from '@/components/CourseToolGrid'
+import { apDiagnosticStats } from '@/lib/ap-diagnostic-courses'
 
 export const metadata: Metadata = {
   title: 'AP Precalculus | Free AP Precalc Practice & Review',
@@ -30,7 +31,7 @@ const features: HubFeature[] = [
     href: '/ap-precalculus-diagnostic',
     icon: 'diagnostic',
     color: 'from-green-500 to-teal-500',
-    stats: '~30 questions · 30 min',
+    stats: apDiagnosticStats('ap-precalculus'),
   },
   {
     title: 'Flashcards',
