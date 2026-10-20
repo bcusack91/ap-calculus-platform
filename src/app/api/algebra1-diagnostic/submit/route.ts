@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { diagnosticQuestionRows } from '@/lib/question-activity-rows'
 import { recordQuestions } from '@/lib/study-tracking'
+import { touchDailyStreak } from '@/lib/streak'
 import { Prisma } from '@prisma/client'
 
 export async function POST(req: Request) {
@@ -42,14 +43,23 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Invalid results format' }, { status: 400 })
     }
 
-    const diagnostic = await prisma.diagnosticTest.create({
-      data: {
-        userId: session.user.id,
-        category,
-        results: parsedResults,
-        weakAreas: parsedWeakAreas,
-        strengths: strengths ? (typeof strengths === 'string' ? strengths : JSON.stringify(strengths)) : null,
-      },
+    // A diagnostic is a study day: the attempt and the daily streak commit
+    // together (src/lib/streak.ts), as lesson and exit-quiz submits do. Until
+    // Oct 2026 nothing here wrote DailyStreak, so the streak reminder could
+    // never reach a student whose only activity was a diagnostic.
+    const studentId = session.user.id
+    const diagnostic = await prisma.$transaction(async (tx) => {
+      const created = await tx.diagnosticTest.create({
+        data: {
+          userId: studentId,
+          category,
+          results: parsedResults,
+          weakAreas: parsedWeakAreas,
+          strengths: strengths ? (typeof strengths === 'string' ? strengths : JSON.stringify(strengths)) : null,
+        },
+      })
+      await touchDailyStreak(tx, studentId)
+      return created
     })
 
     // Teacher report: per-question DIAGNOSTIC rows graded from the stored key.

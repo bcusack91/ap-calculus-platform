@@ -198,6 +198,9 @@ function DashboardContent() {
     /** The cycle's unit test (MCAT requires it; SAT/ACT recommend it). */
     unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; passPercent: number; questionCount: number; inProgressId?: string | null; locksDiagnostic?: boolean; testName?: string } | null
   }[]>([])
+  // A dated study cycle exists (self target or teacher due date): the
+  // next-step card links the calendar.
+  const [hasSchedule, setHasSchedule] = useState(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -313,14 +316,30 @@ function DashboardContent() {
       fetch('/api/study-plan/plan-status'),
       fetch('/api/study-context', { cache: 'no-store' }),
     ])
+    let loadedPlans: { courseKey: string }[] = []
     try {
       if (planRes.status === 'fulfilled' && planRes.value.ok) {
         const d = await planRes.value.json()
+        loadedPlans = Array.isArray(d.plans) ? d.plans : []
         setStudyPlans(Array.isArray(d.plans) ? d.plans : [])
       }
     } catch { /* silent */ }
     // Resolved either way — the next-step card stops waiting on a failure.
     setPlansLoaded(true)
+    // A dated study cycle (the student's target or a teacher due date) means
+    // the calendar has their lessons spaced out: the next-step card offers it.
+    // Only asked when a plan can have one (MCAT, SAT, AP), after first paint.
+    if (loadedPlans.some((p) => isFullLengthCourse(p.courseKey))) {
+      try {
+        const today = new Date().toISOString().slice(0, 10)
+        const calRes = await fetch(`/api/calendar?from=${today}&to=${today}`, { cache: 'no-store' })
+        if (calRes.ok) {
+          const cal = await calRes.json()
+          const cycles: { dueDate: string | null }[] = Array.isArray(cal?.cycles) ? cal.cycles : []
+          setHasSchedule(cycles.some((c) => !!c.dueDate))
+        }
+      } catch { /* silent — the link is a convenience */ }
+    }
     try {
       if (deckRes.status === 'fulfilled' && deckRes.value.ok) {
         const d = await deckRes.value.json()
@@ -559,7 +578,7 @@ function DashboardContent() {
         {/* Live class sessions — shows only while an enrolled class is live */}
         <LiveNowBanner />
 
-        <NextStepCard step={nextStep} />
+        <NextStepCard step={nextStep} hasSchedule={hasSchedule} />
 
         {/* New class announcements — below the one next step, until read or dismissed */}
         <ClassAnnouncementsBanner />

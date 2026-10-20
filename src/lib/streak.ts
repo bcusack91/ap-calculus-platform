@@ -7,8 +7,11 @@ import type { Prisma } from '@prisma/client'
  * Background: every DailyStreak reference in src/ was a READ (streak/status,
  * dashboard, cron/streak-reminder, achievements, weekly digest…) — nothing ever
  * wrote the row, so streaks could never advance. This helper is the single
- * write path, called from study-activity endpoints (progress/save and
- * exit-quiz/submit) inside their transactions.
+ * write path, called from study-activity endpoints (progress/save,
+ * exit-quiz/submit, daily-challenge/answer, and — since Oct 2026 — every
+ * diagnostic submit route, so a diagnostic counts as a study day and the
+ * streak reminder can reach a student whose only activity so far is one)
+ * inside their transactions.
  *
  * Semantics (all date math in UTC, comparing calendar days):
  *   - First ever activity            → row created with currentStreak = 1

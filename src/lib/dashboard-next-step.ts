@@ -17,7 +17,12 @@
  * Pure so it can be unit-tested; the dashboard page feeds it what it fetched.
  */
 
-import { pickNextPendingTopic, planTopicHref, type PlanTopic } from '@/components/StudyPlanNextUp'
+import { pickNextPendingTopic, studyPlanTopicHref, type PlanTopic } from '@/components/StudyPlanNextUp'
+
+// ONE helper links a plan topic everywhere (dashboard, course hub, the
+// post-completion panel): it lives beside the panel; re-exported so existing
+// imports keep working.
+export { studyPlanTopicHref }
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { unitTestIsNextStep, unitTestName } from '@/lib/unit-test-courses'
 import { aOrAn } from '@/lib/full-length-progress'
@@ -140,18 +145,6 @@ export function resolveNextStep(input: NextStepInput): NextStep {
   if (course) return { kind: 'open-course', courseLabel: course.label, href: course.courseHref }
   if (input.firstTopicSlug) return { kind: 'first-topic', href: `/topics/${input.firstTopicSlug}/interactive` }
   return { kind: 'choose-course' }
-}
-
-/**
- * Where a plan topic starts. The interactive lesson is where the loop runs
- * (entrance quiz, lesson parts, exit quiz), so a bare topic page link goes
- * there — except for the MCAT, whose subtopic pages often have no written
- * lesson (its enriched plan carries real lesson/quiz paths instead).
- */
-export function studyPlanTopicHref(topic: PlanTopic, courseKey: string): string {
-  const href = planTopicHref(topic)
-  if (courseKey !== 'mcat' && href === `/topics/${topic.slug}`) return `${href}/interactive`
-  return href
 }
 
 export interface NextStepCopy {

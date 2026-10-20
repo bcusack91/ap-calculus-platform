@@ -10,6 +10,8 @@
  *   - "Welcome back" greeted a brand-new student.
  */
 import { describe, it, expect } from 'vitest'
+import fs from 'node:fs'
+import path from 'node:path'
 import {
   FLASHCARD_REVIEW_HREF,
   describeNextStep,
@@ -218,6 +220,22 @@ describe('resolveNextStep — plans and fallbacks', () => {
       expect(copy.href.startsWith('/')).toBe(true)
       expect(copy.reason.length).toBeGreaterThan(0)
     }
+  })
+})
+
+describe('one helper links a plan topic everywhere', () => {
+  it('planTopicHref is only called inside StudyPlanNextUp (where studyPlanTopicHref wraps it)', () => {
+    const roots = ['src/app', 'src/components', 'src/lib']
+    const offenders: string[] = []
+    const walk = (dir: string) => {
+      for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+        const full = path.join(dir, entry.name)
+        if (entry.isDirectory()) walk(full)
+        else if (/\.(ts|tsx)$/.test(entry.name) && fs.readFileSync(full, 'utf8').includes('planTopicHref(')) offenders.push(full)
+      }
+    }
+    for (const r of roots) walk(path.join(process.cwd(), r))
+    expect(offenders.map((f) => path.relative(process.cwd(), f))).toEqual(['src/components/StudyPlanNextUp.tsx'])
   })
 })
 

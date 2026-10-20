@@ -42,6 +42,31 @@ export interface ResolvedTask {
   topicSlug?: string
   dueDate: Date
   sortOrder: number
+  /** Set at adopt time for work the student has already done (the diagnostic). */
+  completed?: boolean
+  completedAt?: Date
+}
+
+/** A diagnostic taken within this many days of adopting a plan ticks the plan's "Take … Diagnostic" task. */
+export const DIAGNOSTIC_TASK_FRESH_DAYS = 14
+
+/** The template task that tells the student to take the course diagnostic ("Take Diagnostic", "Take AP Chemistry Diagnostic", "Take SAT Diagnostic Test"). */
+export function isDiagnosticTask(task: Pick<ResolvedTask, 'title' | 'topicSlug'>): boolean {
+  return !task.topicSlug && /^take\b.*\bdiagnostic\b/i.test(task.title)
+}
+
+/**
+ * Every template opens with "Take the diagnostic". A student adopting the plan
+ * from their diagnostic RESULTS has just done that, so the plan's first open
+ * task must not be the diagnostic they came from: tick it, dated when they
+ * took it. An old diagnostic (older than DIAGNOSTIC_TASK_FRESH_DAYS at the
+ * plan's start) leaves the task open — a fresh sitting is the right first
+ * step then. Pure.
+ */
+export function markDiagnosticTaskDone(tasks: ResolvedTask[], takenAt: Date, startDate: Date): ResolvedTask[] {
+  const ageDays = (startDate.getTime() - takenAt.getTime()) / 86_400_000
+  if (ageDays > DIAGNOSTIC_TASK_FRESH_DAYS) return tasks
+  return tasks.map((t) => (isDiagnosticTask(t) ? { ...t, completed: true, completedAt: takenAt } : t))
 }
 
 // ── Defensive parsing of the stored diagnostic JSON ──────────────────────────
@@ -193,7 +218,7 @@ export async function applyAdaptivePriority(
     const focus = await getDiagnosticFocus(userId, categoryPrefix)
     if (!focus) return { tasks: resolvedTasks, focus: null }
     const priority = buildPriorityTasks(focus, startDate)
-    return { tasks: prependPriorityTasks(resolvedTasks, priority), focus }
+    return { tasks: prependPriorityTasks(markDiagnosticTaskDone(resolvedTasks, focus.takenAt, startDate), priority), focus }
   } catch (err) {
     console.error('[adaptive-study-plan] failed, using static plan:', err)
     return { tasks: resolvedTasks, focus: null }

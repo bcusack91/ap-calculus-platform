@@ -16,16 +16,20 @@ const mockFindFirst = vi.fn()
 
 vi.mock('@/lib/auth', () => ({ auth: () => mockAuth() }))
 vi.mock('@/lib/study-tracking', () => ({ recordQuestions: (...a: unknown[]) => mockRecord(...a) }))
-vi.mock('@/lib/prisma', () => ({
-  prisma: {
+vi.mock('@/lib/prisma', () => {
+  const prisma = {
     diagnosticTest: {
       create: (...a: unknown[]) => mockCreate(...a),
       findFirst: (...a: unknown[]) => mockFindFirst(...a),
     },
     questionActivity: { findMany: vi.fn().mockResolvedValue([]) },
     topic: { findMany: vi.fn().mockResolvedValue([]) },
-  },
-}))
+    // The attempt and the streak commit together (see diagnostic-submit-streak.test.ts).
+    $transaction: async (fn: (tx: unknown) => unknown) => fn(prisma),
+  }
+  return { prisma }
+})
+vi.mock('@/lib/streak', () => ({ touchDailyStreak: vi.fn() }))
 
 import { CLASS_PLAN_COURSES } from '@/lib/class-plan-config'
 import { apDiagnosticCourse, resolveAttempt } from '@/lib/question-resolver'

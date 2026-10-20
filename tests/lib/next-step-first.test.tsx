@@ -148,7 +148,8 @@ describe('ExitQuiz — next step first', () => {
     renderQuiz()
     passQuiz()
     expect(await screen.findByText('Next up: Gases')).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Go to Topic/ })).toHaveAttribute('href', '/topics/ap-chem-gases')
+    // The lesson, as on the dashboard and hub (one helper: studyPlanTopicHref).
+    expect(screen.getByRole('link', { name: /Go to Topic/ })).toHaveAttribute('href', '/topics/ap-chem-gases/interactive')
     // Nothing left to rate today: the link offers browsing (the rated session
     // would be empty) and says so.
     const cards = screen.getByRole('link', { name: /cards are done for today/ })

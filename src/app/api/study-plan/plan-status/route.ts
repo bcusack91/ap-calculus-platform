@@ -258,6 +258,10 @@ export async function GET() {
           ...t,
           topicPath: `/topics/${t.slug}`,
           topicFound: known.has(t.slug),
+          // Whether a gating exit quiz exists: a finished lesson clears the
+          // topic only when it has none (StudyPlanNextUp leads with the quiz
+          // otherwise).
+          hasExitQuiz: hasExitQuiz(t.slug),
           bestExitScorePercent: bestExit.get(t.slug) ?? null,
           isSatisfied: satisfied,
         }

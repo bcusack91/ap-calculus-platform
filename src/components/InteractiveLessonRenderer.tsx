@@ -1777,6 +1777,10 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
             <StudyPlanNextUp
               topicSlug={topicSlug}
               completion="lesson"
+              // The plan may still show this topic uncleared (its gating quiz
+              // owed, e.g. a pass recorded under an older threshold): the panel
+              // then leads with the exit quiz, opened in place.
+              onTakeExitQuiz={() => { void openExitQuiz() }}
               fallback={({ cardsToReview }) => lessonCompleteFallback(cardsToReview > 0)}
             />
           ) : (

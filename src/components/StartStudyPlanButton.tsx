@@ -23,7 +23,18 @@ import { courseDiagnosticMap, courseStudyPlanMap } from '@/data/course-feature-c
  * The endpoint is derived from the existing feature maps rather than hardcoded:
  * diagnostic href -> course slug -> study-plan href -> /api<that href>. Verified
  * to resolve for all 35 courses.
+ *
+ * After the POST the student lands where the schedule is shown: the
+ * dashboard's Practice tab (StudyPlanner). It used to push /study-plan, a
+ * route that never existed — a 404 after a successful POST. Every path this
+ * component links is checked against src/app by
+ * tests/lib/start-study-plan-button.test.ts. The adopted plan's "Take …
+ * Diagnostic" task is ticked server-side (markDiagnosticTaskDone), since the
+ * student arrives here from that diagnostic's results.
  */
+
+/** Where adopted study schedules are listed (dashboard Practice tab → StudyPlanner). */
+export const STUDY_SCHEDULE_HREF = '/dashboard?tab=practice'
 
 interface Template {
   id: string
@@ -88,7 +99,7 @@ export default function StartStudyPlanButton({
         const j = await res.json().catch(() => ({}))
         throw new Error(j.error || 'Could not create your study schedule')
       }
-      router.push('/study-plan')
+      router.push(STUDY_SCHEDULE_HREF)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Something went wrong')
     } finally {

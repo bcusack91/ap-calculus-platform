@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ArrowRight, BookOpen, ClipboardCheck, ClipboardList, Layers, NotebookPen, RotateCcw, Compass, Trophy } from 'lucide-react'
+import { ArrowRight, BookOpen, CalendarDays, ClipboardCheck, ClipboardList, Layers, NotebookPen, RotateCcw, Compass, Trophy } from 'lucide-react'
 import { describeNextStep, type NextStep } from '@/lib/dashboard-next-step'
 import { dueDeadline, formatDueDate } from '@/components/ClassDiagnosticBanner'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
@@ -36,7 +36,14 @@ const HELP: Partial<Record<NextStep['kind'], { article: (typeof HELP_ARTICLES)[k
  * The dashboard's single "Your next step" card: one sentence of why, one
  * primary button. The only brand-gradient card on the page, so it reads first.
  */
-export default function NextStepCard({ step }: { step: NextStep }) {
+export default function NextStepCard({
+  step,
+  hasSchedule = false,
+}: {
+  step: NextStep
+  /** The student has a dated study cycle (a target or teacher due date): offer the calendar beside the one button. */
+  hasSchedule?: boolean
+}) {
   // Snapshot once — lint forbids impure calls (Date.now) during render.
   const [now] = useState(() => Date.now())
 
@@ -99,13 +106,21 @@ export default function NextStepCard({ step }: { step: NextStep }) {
           {dueLine.text}
         </p>
       )}
-      <Link
-        href={copy.href}
-        className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-accent-hover shadow hover:bg-white/90 transition-colors"
-      >
-        {copy.cta}
-        <ArrowRight className="h-4 w-4" aria-hidden />
-      </Link>
+      <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+        <Link
+          href={copy.href}
+          className="inline-flex items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-accent-hover shadow hover:bg-white/90 transition-colors"
+        >
+          {copy.cta}
+          <ArrowRight className="h-4 w-4" aria-hidden />
+        </Link>
+        {hasSchedule && (
+          <Link href="/calendar" className="inline-flex items-center gap-1.5 text-sm font-medium text-white/90 underline underline-offset-2 hover:text-white">
+            <CalendarDays className="h-4 w-4" aria-hidden />
+            See your study calendar
+          </Link>
+        )}
+      </div>
     </section>
   )
 }

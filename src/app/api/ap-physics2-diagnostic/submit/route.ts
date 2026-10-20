@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { diagnosticQuestionRows } from '@/lib/question-activity-rows'
 import { recordQuestions } from '@/lib/study-tracking'
+import { touchDailyStreak } from '@/lib/streak'
 import { canonicalizeDiagnosticResults, diagnosticCourseSlug } from '@/lib/ap-topic-canonical'
 
 export async function POST(request: Request) {
@@ -21,14 +22,23 @@ export async function POST(request: Request) {
   // A client built before the Oct 2026 slug fix can still send legacy topic slugs.
   const storedResults = canonicalizeDiagnosticResults(category, results)
 
-  const test = await prisma.diagnosticTest.create({
-    data: {
-      userId: session.user.id,
-      category,
-      results: storedResults,
-      weakAreas: weakAreas ?? [],
-      strengths: strengths ?? '',
-    },
+  // A diagnostic is a study day: the attempt and the daily streak commit
+  // together (src/lib/streak.ts), as lesson and exit-quiz submits do. Until
+  // Oct 2026 nothing here wrote DailyStreak, so the streak reminder could
+  // never reach a student whose only activity was a diagnostic.
+  const studentId = session.user.id
+  const test = await prisma.$transaction(async (tx) => {
+    const created = await tx.diagnosticTest.create({
+      data: {
+        userId: studentId,
+        category,
+        results: storedResults,
+        weakAreas: weakAreas ?? [],
+        strengths: strengths ?? '',
+      },
+    })
+    await touchDailyStreak(tx, studentId)
+    return created
   })
 
   // Teacher report + answer log: per-question DIAGNOSTIC rows graded from

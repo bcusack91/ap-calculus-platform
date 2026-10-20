@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { Prisma } from '@prisma/client'
 import { diagnosticQuestionRows } from '@/lib/question-activity-rows'
 import { recordQuestions } from '@/lib/study-tracking'
+import { touchDailyStreak } from '@/lib/streak'
 
 function parseMaybeJsonArray(value: unknown): string | number | boolean | object | undefined {
   if (value == null) return undefined
@@ -75,19 +76,28 @@ export async function POST(req: Request) {
       }
     }
 
-    const diagnostic = await prisma.diagnosticTest.create({
-      data: {
-        userId: session.user.id,
-        category,
-        classDiagnosticId: assignedId,
-        results: parsedResults,
-        weakAreas: parseMaybeJsonArray(weakAreas),
-        strengths: (() => {
-          const parsedStrengths = parseMaybeJsonArray(strengths)
-          if (parsedStrengths == null) return null
-          return typeof parsedStrengths === 'string' ? parsedStrengths : JSON.stringify(parsedStrengths)
-        })(),
-      },
+    // A diagnostic is a study day: the attempt and the daily streak commit
+    // together (src/lib/streak.ts), as lesson and exit-quiz submits do. Until
+    // Oct 2026 nothing here wrote DailyStreak, so the streak reminder could
+    // never reach a student whose only activity was a diagnostic.
+    const studentId = session.user.id
+    const diagnostic = await prisma.$transaction(async (tx) => {
+      const created = await tx.diagnosticTest.create({
+        data: {
+          userId: studentId,
+          category,
+          classDiagnosticId: assignedId,
+          results: parsedResults,
+          weakAreas: parseMaybeJsonArray(weakAreas),
+          strengths: (() => {
+            const parsedStrengths = parseMaybeJsonArray(strengths)
+            if (parsedStrengths == null) return null
+            return typeof parsedStrengths === 'string' ? parsedStrengths : JSON.stringify(parsedStrengths)
+          })(),
+        },
+      })
+      await touchDailyStreak(tx, studentId)
+      return created
     })
 
     // Teacher report + answer log: per-question DIAGNOSTIC rows graded from the
