@@ -73,6 +73,8 @@ model User {
   coTeaching                 ClassroomCoTeacher[]       @relation("CoTeaching")
   attentionDismissals        AttentionDismissal[]       @relation("AttentionDismissedBy")
   attentionDismissedFor      AttentionDismissal[]       @relation("AttentionDismissedFor")
+  apTrackOverrides           ApTrackOverride[]          @relation("ApTrackOverrideStudent")
+  apTrackOverridesSet        ApTrackOverride[]          @relation("ApTrackOverrideSetBy")
   assignmentSubmissions      AssignmentSubmission[]
   createdAssignments         Assignment[]               @relation("AssignmentCreator")
   flashcardSets              FlashcardSet[]             @relation("TeacherFlashcardSets")
@@ -1363,6 +1365,26 @@ model AttentionDismissal {
 
   @@unique([teacherId, studentId, reason])
   @@index([teacherId])
+}
+
+// Teacher placement in an AP difficulty track (src/lib/ap-track.ts), per
+// student and course. Beats the diagnostic-computed track in both directions;
+// no row = automatic placement. Mirrors User.satTrackOverride, but per course
+// because a student can sit several of the four flagship AP courses.
+model ApTrackOverride {
+  id         String   @id @default(cuid())
+  userId     String
+  courseSlug String // 'ap-chemistry' | 'ap-biology' | 'ap-physics-1' | 'ap-calculus-ab'
+  track      String // 'foundation' | 'regular' | 'five'
+  setById    String? // the teacher who pinned it; kept (as null) if that account is deleted
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  user  User  @relation("ApTrackOverrideStudent", fields: [userId], references: [id], onDelete: Cascade)
+  setBy User? @relation("ApTrackOverrideSetBy", fields: [setById], references: [id], onDelete: SetNull)
+
+  @@unique([userId, courseSlug])
+  @@index([setById])
 }
 
 model ClassroomCoTeacher {

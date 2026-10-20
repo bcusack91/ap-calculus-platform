@@ -13,7 +13,8 @@ import { fullLengthReadiness } from '@/lib/full-length-progress-server'
 import { FULL_LENGTH_COURSES, isApFullLengthCourse, type FullLengthCourse } from '@/lib/full-length-progress'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { canonicalizeRecommendedTopics } from '@/lib/ap-topic-canonical'
-import { apTrackFromResults, isApTrackCourse, orderTopicsForTrack, type ApTrackPlacement } from '@/lib/ap-track'
+import { apTrackPlacement, isApTrackCourse, orderTopicsForTrack, type ApTrackPlacement } from '@/lib/ap-track'
+import { apTrackOverridesForUser } from '@/lib/ap-track-server'
 
 /**
  * Every course's diagnostic study plan, with per-topic done/pending state.
@@ -98,6 +99,9 @@ export async function GET() {
     )
     const satPlan = satCourse && hasSatAttempt ? await buildSatPlan(userId) : null
 
+    // AP track courses: the teacher's pinned tracks, if any (one query).
+    const apOverrides = await apTrackOverridesForUser(userId)
+
     // Latest attempt per course, plus the topics it recommended.
     const perCourse = new Map<string, { diagnosticId: string; takenAt: Date; topics: RecommendedTopic[]; apTrack?: ApTrackPlacement }>()
     for (const course of CLASS_PLAN_COURSES) {
@@ -108,9 +112,10 @@ export async function GET() {
       // no Topic row (ap-bio-*, *-calcab lesson keys); map them to real topics.
       const recommended = canonicalizeRecommendedTopics(course.courseSlug, parseRecommended(latest.results))
       if (recommended.length === 0) continue
-      // AP track courses (src/lib/ap-track.ts): the track this diagnostic
-      // places the student in orders the plan, as buildGenericPlanStatus does.
-      const apTrack = isApTrackCourse(course.courseSlug) ? apTrackFromResults(latest.results) : undefined
+      // AP track courses (src/lib/ap-track.ts): the student's track (teacher
+      // override first, else this diagnostic) orders the plan, as
+      // buildGenericPlanStatus does.
+      const apTrack = isApTrackCourse(course.courseSlug) ? apTrackPlacement(latest.results, apOverrides.get(course.courseSlug) ?? null) : undefined
       const topics = apTrack ? orderTopicsForTrack(course.courseSlug, recommended, apTrack.track) : recommended
       perCourse.set(course.key, { diagnosticId: latest.id, takenAt: latest.createdAt, topics, apTrack })
     }

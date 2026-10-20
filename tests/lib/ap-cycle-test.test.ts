@@ -17,6 +17,8 @@ import { AP_DIAGNOSTICS } from './ap-diagnostic-registry'
 
 const db = {
   diagnosticTest: { findFirst: vi.fn(), findMany: vi.fn(), findUnique: vi.fn() },
+  // AP track overrides (src/lib/ap-track-server.ts): none in these tests.
+  apTrackOverride: { findUnique: vi.fn().mockResolvedValue(null), findMany: vi.fn().mockResolvedValue([]) },
   user: { findUnique: vi.fn() },
   topic: { findMany: vi.fn(), findUnique: vi.fn() },
   topicProgress: { findMany: vi.fn() },

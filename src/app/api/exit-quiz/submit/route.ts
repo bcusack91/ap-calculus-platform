@@ -11,6 +11,9 @@ import { MASTERY_LEVEL_ON_EXIT_PASS, EXIT_QUIZ_PASS_FRACTION, EXIT_QUIZ_REDO_FRA
 import { satBankSlugsForCourseTopic } from '@/lib/sat-topic-map'
 import { recordQuestions } from '@/lib/study-tracking'
 import { chosenOptionKey } from '@/lib/question-activity-rows'
+import { isTrackMix } from '@/data/exit-quizzes/track-mix'
+import { compareTrackMixes } from '@/lib/ap-track'
+import { apTrackForUser, courseSlugForTopic } from '@/lib/ap-track-server'
 
 // Bounded payload: quizzes are 10 questions (score = number correct), but allow
 // headroom up to 100. answers mirrors the client shape
@@ -68,6 +71,33 @@ export async function POST(request: Request) {
     }
     const { topicSlug, score: rawScore, totalQuestions, answers, timeSpent, variant, seed, difficulty, includeLowYield } = parsed.data
     const userId = session.user.id
+
+    // AP track mix check (src/lib/ap-track.ts). The client picks the gating
+    // quiz's mix from /api/lessons/settings, but a hand-sent body could ask for
+    // 'foundation-mix' to get an easier quiz past the mastery gate. So when the
+    // body carries a track mix, the student's CURRENT track (teacher override
+    // first, else the latest diagnostic) is computed here and a mix EASIER
+    // than the track's is refused before anything is written: Regular and
+    // 5-track students cannot submit a Foundation mix. A harder mix is fine
+    // (five-mix is accepted for everyone), and a body with no mix or a tiered
+    // 'easy' / 'medium' / 'hard' value is untouched — legacy clients and tiered
+    // practice keep working. The lesson client handles the 409 by re-reading
+    // its settings and redrawing the quiz; the attempt is not recorded.
+    if (isTrackMix(difficulty)) {
+      const courseSlug = await courseSlugForTopic(topicSlug)
+      const placement = courseSlug ? await apTrackForUser(userId, courseSlug) : null
+      if (placement && compareTrackMixes(difficulty, placement.mix) < 0) {
+        return NextResponse.json(
+          {
+            error: `This quiz was drawn for the Foundation track, but your current track is ${placement.label}. Reload the lesson to get a quiz at your track.`,
+            code: 'TRACK_MIX_MISMATCH',
+            track: placement.track,
+            expectedMix: placement.mix ?? null,
+          },
+          { status: 409 },
+        )
+      }
+    }
 
     // Pass/fail and mastery are decided HERE, not by the client. These gate MASTERED
     // status + competitive unlock + assignment auto-grading, so nothing client-sent

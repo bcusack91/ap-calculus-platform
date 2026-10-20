@@ -11,19 +11,22 @@
  * Placement is a property of the STUDENT in a course, read from their latest
  * diagnostic in it (v1 forms and v2 `<prefix>-v2` sittings alike), and
  * computed the same way on every surface — the lesson's exit quiz, the plan,
- * the course hub and the teacher's class plan — so they always agree. There
- * is no stored placement and no teacher override (that would need a User
- * column, i.e. a migration; left for the owner). No diagnostic = Regular.
+ * the course hub and the teacher's class plan — so they always agree. A
+ * teacher can pin a track per course (ApTrackOverride, set from the class
+ * plan); the override beats the diagnostic in both directions and is read in
+ * ap-track-server.ts, which is why every surface goes through apTrackForUser
+ * (or passes the override into apTrackPlacement). No diagnostic = Regular.
  *
  * Thresholds, against the one AP scale in ap-scoring.ts (5 ≥ 70%, 4 ≥ 57%,
  * 3 ≥ 43%, 2 ≥ 30%):
  *  - Foundation: an estimated 1 or 2 (under 43%). Below the pass line, the
  *    job is getting fundamentals to a 3, so the quiz checks the core of the
  *    lesson rather than its hardest items.
- *  - 5-track: an estimated 5 (70% and up). Already scoring at the 5 cutoff on
- *    the diagnostic, the student needs the hard items to keep it on exam day.
- *  - Regular: an estimated 3 or 4. A 4 stays here: they still miss about a
- *    third of the diagnostic, and the regular mix already includes hard items.
+ *  - 5-track: an estimated 4 or 5 (57% and up; owner decision 2026-10-20,
+ *    previously a 5 only). A student already at a 4 is one step from the 5,
+ *    and the hard items are where that step is won or lost.
+ *  - Regular: an estimated 3 (43–56%). At the pass line, the regular mix of
+ *    easy, medium and hard items is the right breadth.
  * The estimate is recomputed from the stored percent with today's cutoffs,
  * not read from `estimatedAPScore`: attempts stored before October 2026 used
  * older cutoffs (80/65/50/35), so the stored number would place them on a
@@ -51,13 +54,30 @@ export function isApTrackCourse(courseSlug: string | null | undefined): courseSl
 
 const cutoff = (score: ApScore) => AP_SCORE_CUTOFFS.find((c) => c.score === score)!.minPercent
 
-/** Percent-correct boundaries, from the shared cutoffs (Foundation below the 3 line, 5-track at the 5 line). */
+/** Percent-correct boundaries, from the shared cutoffs (Foundation below the 3 line, 5-track at the 4 line). */
 export const AP_TRACK_THRESHOLDS = {
   /** Below this = Foundation (an estimated 1 or 2). */
   foundationBelow: cutoff(3),
-  /** At or above this = 5-track (an estimated 5). */
-  fiveAtOrAbove: cutoff(5),
+  /** At or above this = 5-track (an estimated 4 or 5). */
+  fiveAtOrAbove: cutoff(4),
 } as const
+
+const AP_TRACKS: readonly ApTrack[] = ['foundation', 'regular', 'five']
+
+/** An ApTrack from a stored string (ApTrackOverride.track, a request body); null for anything else. */
+export function parseApTrack(value: unknown): ApTrack | null {
+  return typeof value === 'string' && (AP_TRACKS as readonly string[]).includes(value) ? (value as ApTrack) : null
+}
+
+/**
+ * How much harder one gating mix is than another (undefined = Regular's
+ * untracked draw). Positive = `a` is harder than `b`. The submit route uses
+ * it to refuse a quiz drawn at a mix easier than the student's track.
+ */
+const MIX_RANK: Record<ExitQuizTrackMix | 'regular', number> = { 'foundation-mix': 0, regular: 1, 'five-mix': 2 }
+export function compareTrackMixes(a: ExitQuizTrackMix | undefined, b: ExitQuizTrackMix | undefined): number {
+  return MIX_RANK[a ?? 'regular'] - MIX_RANK[b ?? 'regular']
+}
 
 /** The gating exit quiz's difficulty for a track (Regular: none, the untracked draw). */
 export const AP_TRACK_MIX: Record<ApTrack, ExitQuizTrackMix | undefined> = {
@@ -70,6 +90,13 @@ export const AP_TRACK_MIX: Record<ApTrack, ExitQuizTrackMix | undefined> = {
 export const AP_TRACK_LABEL: Record<ApTrack, string> = {
   foundation: 'Foundation track',
   regular: 'Regular track',
+  five: '5-track',
+}
+
+/** Short names, for "set your track to Foundation" and the teacher's select. */
+export const AP_TRACK_SHORT_LABEL: Record<ApTrack, string> = {
+  foundation: 'Foundation',
+  regular: 'Regular',
   five: '5-track',
 }
 
@@ -91,42 +118,67 @@ export function apTrackForPercent(percent: number): ApTrack {
   return 'regular'
 }
 
+export type ApTrackSource = 'teacher' | 'diagnostic' | 'default'
+
 export interface ApTrackPlacement {
+  /** The effective track: the teacher's override when there is one, else the computed one. */
   track: ApTrack
   label: string
   /** The gating exit quiz's difficulty (undefined = untracked). */
   mix: ExitQuizTrackMix | undefined
-  /** 'diagnostic' = placed from the latest diagnostic; 'none' = no readable diagnostic (Regular). */
-  source: 'diagnostic' | 'none'
+  /**
+   * 'teacher' = a teacher pinned this track (ApTrackOverride); 'diagnostic' =
+   * placed from the latest diagnostic; 'default' = no readable diagnostic (Regular).
+   */
+  source: ApTrackSource
+  /** The teacher's pinned track, or null when placement is automatic. */
+  override: ApTrack | null
+  /** The latest diagnostic's percent and estimate (informational when overridden). */
   percent: number | null
   estimatedScore: ApScore | null
   /** One line for the student. */
   explanation: string
 }
 
-function explain(track: ApTrack, score: ApScore | null): string {
-  const est = score === null ? '' : `Your last diagnostic estimated a ${score}, so `
-  const lead = (s: string) => (est ? est + s : s.charAt(0).toUpperCase() + s.slice(1))
+function explain(track: ApTrack, score: ApScore | null, source: ApTrackSource): string {
+  const lead = (s: string) => {
+    if (source === 'teacher') return `Your teacher set your track to ${AP_TRACK_SHORT_LABEL[track]}, so ${s}`
+    if (score !== null) return `Your last diagnostic estimated a ${score}, so ${s}`
+    return s.charAt(0).toUpperCase() + s.slice(1)
+  }
   if (track === 'foundation') return lead('your exit quizzes lean toward easy and medium questions and your plan starts with the earliest units. The pass mark is still 80%.')
   if (track === 'five') return lead('your exit quizzes lean toward medium and hard questions and your plan starts with the units the exam weights most. The pass mark is still 80%.')
-  return score === null
+  return source === 'default'
     ? 'Take the diagnostic to be placed. Until then your exit quizzes use the standard mix of easy, medium and hard questions.'
     : lead('your exit quizzes use the standard mix of easy, medium and hard questions.')
 }
 
 /**
- * A student's track in a course from their latest diagnostic's stored
- * results (null = none). Courses without tracks, and unreadable results, are
- * Regular.
+ * A student's placement in a course: the teacher's override when one is set,
+ * else the track their latest diagnostic's stored results compute (null =
+ * none). Unreadable results, with no override, are Regular.
  */
-export function apTrackFromResults(results: unknown): ApTrackPlacement {
+export function apTrackPlacement(results: unknown, override: ApTrack | null | undefined = null): ApTrackPlacement {
   const percent = apDiagnosticPercent(results)
-  if (percent === null) {
-    return { track: 'regular', label: AP_TRACK_LABEL.regular, mix: undefined, source: 'none', percent: null, estimatedScore: null, explanation: explain('regular', null) }
+  const estimatedScore = percent === null ? null : estimateApScore(percent)
+  const computed = percent === null ? 'regular' : apTrackForPercent(percent)
+  const track = override ?? computed
+  const source: ApTrackSource = override ? 'teacher' : percent === null ? 'default' : 'diagnostic'
+  return {
+    track,
+    label: AP_TRACK_LABEL[track],
+    mix: AP_TRACK_MIX[track],
+    source,
+    override: override ?? null,
+    percent,
+    estimatedScore,
+    explanation: explain(track, estimatedScore, source),
   }
-  const track = apTrackForPercent(percent)
-  const estimatedScore = estimateApScore(percent)
-  return { track, label: AP_TRACK_LABEL[track], mix: AP_TRACK_MIX[track], source: 'diagnostic', percent, estimatedScore, explanation: explain(track, estimatedScore) }
+}
+
+/** The computed (automatic) placement from a diagnostic's stored results, with no override. */
+export function apTrackFromResults(results: unknown): ApTrackPlacement {
+  return apTrackPlacement(results, null)
 }
 
 /* ------------------------------------------------------------------ */

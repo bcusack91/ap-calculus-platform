@@ -12,8 +12,11 @@ import {
   apDiagnosticPercent,
   apTrackForPercent,
   apTrackFromResults,
+  apTrackPlacement,
+  compareTrackMixes,
   isApTrackCourse,
   orderTopicsForTrack,
+  parseApTrack,
 } from '@/lib/ap-track'
 import { AP_SCORE_CUTOFFS, apScoreRange } from '@/lib/ap-scoring'
 import { drawTrackMix, isTrackMix, type ExitQuizTier } from '@/data/exit-quizzes/track-mix'
@@ -32,29 +35,47 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 /* ------------------------------------------------------------------ */
 
 describe('AP track placement', () => {
-  it('takes its thresholds from the shared 1–5 cutoffs (Foundation under the 3 line, 5-track at the 5 line)', () => {
+  it('takes its thresholds from the shared 1–5 cutoffs (Foundation under the 3 line, 5-track at the 4 line)', () => {
     const at = (s: number) => AP_SCORE_CUTOFFS.find((c) => c.score === s)!.minPercent
-    expect(AP_TRACK_THRESHOLDS).toEqual({ foundationBelow: at(3), fiveAtOrAbove: at(5) })
-    expect(AP_TRACK_THRESHOLDS).toEqual({ foundationBelow: 43, fiveAtOrAbove: 70 })
+    expect(AP_TRACK_THRESHOLDS).toEqual({ foundationBelow: at(3), fiveAtOrAbove: at(4) })
+    expect(AP_TRACK_THRESHOLDS).toEqual({ foundationBelow: 43, fiveAtOrAbove: 57 })
   })
 
-  it('places by percent: Foundation below 43, Regular 43–69, 5-track from 70', () => {
+  it('places by percent: Foundation below 43, Regular 43–56, 5-track from 57 (an estimated 4 or 5)', () => {
     expect(apTrackForPercent(0)).toBe('foundation')
     expect(apTrackForPercent(42)).toBe('foundation')
     expect(apTrackForPercent(43)).toBe('regular')
-    expect(apTrackForPercent(57)).toBe('regular')
-    expect(apTrackForPercent(69)).toBe('regular')
+    expect(apTrackForPercent(50)).toBe('regular')
+    expect(apTrackForPercent(56)).toBe('regular')
+    expect(apTrackForPercent(57)).toBe('five')
+    expect(apTrackForPercent(69)).toBe('five')
     expect(apTrackForPercent(70)).toBe('five')
     expect(apTrackForPercent(100)).toBe('five')
   })
 
   it('agrees with the estimate a diagnostic shows at every raw score (33-question sitting)', () => {
+    const seen = new Set<string>()
     for (let c = 0; c <= 33; c++) {
       const shown = apScoreRange(c, 33).score
       const placed = apTrackFromResults({ totalCorrect: c, totalQuestions: 33, percentage: Math.round((c / 33) * 100) })
       expect(placed.estimatedScore).toBe(shown)
-      expect(placed.track).toBe(shown <= 2 ? 'foundation' : shown === 5 ? 'five' : 'regular')
+      expect(placed.track).toBe(shown <= 2 ? 'foundation' : shown >= 4 ? 'five' : 'regular')
+      seen.add(`${shown}:${placed.track}`)
     }
+    // Every estimate occurs in the sweep, and a 4 lands on the 5-track.
+    expect([...seen].sort()).toEqual(['1:foundation', '2:foundation', '3:regular', '4:five', '5:five'])
+  })
+
+  it('a 4 is on the 5-track and the hub line names the estimate it came from', () => {
+    const four = apTrackFromResults({ totalCorrect: 20, totalQuestions: 33, percentage: 61 })
+    expect(four).toMatchObject({ track: 'five', estimatedScore: 4, source: 'diagnostic', override: null })
+    expect(four.explanation).toMatch(/^Your last diagnostic estimated a 4, so your exit quizzes lean toward medium and hard/)
+    const five = apTrackFromResults({ totalCorrect: 25, totalQuestions: 33, percentage: 76 })
+    expect(five.estimatedScore).toBe(5)
+    expect(five.explanation).toMatch(/^Your last diagnostic estimated a 5, so your exit quizzes lean toward medium and hard/)
+    const three = apTrackFromResults({ totalCorrect: 16, totalQuestions: 33, percentage: 48 })
+    expect(three).toMatchObject({ track: 'regular', estimatedScore: 3 })
+    expect(three.explanation).toMatch(/^Your last diagnostic estimated a 3, so your exit quizzes use the standard mix/)
   })
 
   it('reads v1 forms and v2 sittings alike, and re-estimates instead of trusting a stored old-cutoff score', () => {
@@ -70,8 +91,42 @@ describe('AP track placement', () => {
 
   it('is Regular with no readable diagnostic', () => {
     for (const r of [null, undefined, {}, { recommendedTopics: [] }, { percentage: 'high' }, 'x']) {
-      expect(apTrackFromResults(r)).toMatchObject({ track: 'regular', source: 'none', mix: undefined, percent: null })
+      expect(apTrackFromResults(r)).toMatchObject({ track: 'regular', source: 'default', mix: undefined, percent: null, override: null })
     }
+  })
+
+  it('a teacher override beats the diagnostic in both directions, and says so', () => {
+    const fiveResults = { totalCorrect: 28, totalQuestions: 33, percentage: 85 }
+    const down = apTrackPlacement(fiveResults, 'foundation')
+    expect(down).toMatchObject({ track: 'foundation', mix: 'foundation-mix', source: 'teacher', override: 'foundation', percent: 85, estimatedScore: 5 })
+    expect(down.explanation).toMatch(/^Your teacher set your track to Foundation, so your exit quizzes lean toward easy and medium/)
+    const up = apTrackPlacement({ percentage: 20 }, 'five')
+    expect(up).toMatchObject({ track: 'five', mix: 'five-mix', source: 'teacher', override: 'five', estimatedScore: 1 })
+    expect(up.explanation).toMatch(/^Your teacher set your track to 5-track, so/)
+    // Pinned to Regular with no diagnostic: still 'teacher', not the "take the diagnostic" line.
+    const pinnedRegular = apTrackPlacement(null, 'regular')
+    expect(pinnedRegular).toMatchObject({ track: 'regular', mix: undefined, source: 'teacher', override: 'regular', percent: null })
+    expect(pinnedRegular.explanation).toMatch(/^Your teacher set your track to Regular, so your exit quizzes use the standard mix/)
+    // No override = the computed placement, exactly.
+    expect(apTrackPlacement(fiveResults, null)).toEqual(apTrackFromResults(fiveResults))
+    expect(apTrackPlacement(fiveResults, undefined)).toEqual(apTrackFromResults(fiveResults))
+  })
+
+  it('parses stored override strings strictly', () => {
+    expect(parseApTrack('foundation')).toBe('foundation')
+    expect(parseApTrack('regular')).toBe('regular')
+    expect(parseApTrack('five')).toBe('five')
+    for (const bad of ['five-mix', 'Foundation', '', null, undefined, 5, {}]) expect(parseApTrack(bad)).toBeNull()
+  })
+
+  it('ranks the gating mixes: foundation-mix < untracked (Regular) < five-mix', () => {
+    expect(compareTrackMixes('foundation-mix', undefined)).toBeLessThan(0)
+    expect(compareTrackMixes('foundation-mix', 'five-mix')).toBeLessThan(0)
+    expect(compareTrackMixes(undefined, 'five-mix')).toBeLessThan(0)
+    expect(compareTrackMixes('five-mix', undefined)).toBeGreaterThan(0)
+    expect(compareTrackMixes('five-mix', 'foundation-mix')).toBeGreaterThan(0)
+    expect(compareTrackMixes(undefined, undefined)).toBe(0)
+    expect(compareTrackMixes('foundation-mix', 'foundation-mix')).toBe(0)
   })
 
   it('gives Regular the untracked draw and the other two a mix', () => {

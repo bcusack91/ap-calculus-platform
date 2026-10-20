@@ -8,7 +8,8 @@ import { canonicalizeRecommendedTopics } from '@/lib/ap-topic-canonical'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { passedUnitTestCycles } from '@/lib/mcat-unit-test-server'
 import { buildSatPlan, satPlacementsFor, type SatPlacement, type SatPlan } from '@/lib/sat-plan'
-import { apTrackFromResults, isApTrackCourse } from '@/lib/ap-track'
+import { apTrackPlacement, isApTrackCourse } from '@/lib/ap-track'
+import { apTrackOverridesFor } from '@/lib/ap-track-server'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -233,6 +234,9 @@ export async function GET(req: NextRequest, { params }: Ctx) {
       lessonPath: topicFound.has(t.slug) ? `/topics/${t.slug}/interactive` : null,
     }))
 
+  // AP track courses: teacher overrides for the roster (one query; empty elsewhere).
+  const apOverrides = isApTrackCourse(course.courseSlug) ? await apTrackOverridesFor(userIds, course.courseSlug) : new Map<string, never>()
+
   // ---- Per-student roster status ----
   const students = members.map(m => {
     const attempt = byUser.get(m.userId)
@@ -242,12 +246,13 @@ export async function GET(req: NextRequest, { params }: Ctx) {
     const pending = satPlan
       ? satPlan.recommendedTopics.filter(t => !t.isSatisfied).length
       : recs.filter(t => !moduleCleared(m.userId, t.slug)).length
-    // AP track courses: the difficulty track this student's latest diagnostic
-    // places them in (src/lib/ap-track.ts) — the same rule their lessons use.
-    const apTrack = isApTrackCourse(course.courseSlug) ? apTrackFromResults(attempt?.results ?? null) : null
+    // AP track courses: the difficulty track this student is on — the
+    // teacher's override when set, else where the latest diagnostic places
+    // them (src/lib/ap-track.ts) — the same rule their lessons use.
+    const apTrack = isApTrackCourse(course.courseSlug) ? apTrackPlacement(attempt?.results ?? null, apOverrides.get(m.userId) ?? null) : null
     return {
       ...(placement ? { satLane: placement.lane, satOverride: placement.override } : {}),
-      ...(apTrack ? { apTrack: { track: apTrack.track, label: apTrack.label, source: apTrack.source } } : {}),
+      ...(apTrack ? { apTrack: { track: apTrack.track, label: apTrack.label, source: apTrack.source, override: apTrack.override } } : {}),
       userId: m.userId,
       name: nameOf.get(m.userId) ?? 'Student',
       takenAt: attempt?.createdAt ?? null,
@@ -261,7 +266,7 @@ export async function GET(req: NextRequest, { params }: Ctx) {
   }).sort((a, b) => a.name.localeCompare(b.name))
 
   return NextResponse.json({
-    course: { key: course.key, label: course.label, gated: !!course.gated },
+    course: { key: course.key, label: course.label, gated: !!course.gated, courseSlug: course.courseSlug ?? null },
     classTopics,
     students,
     studentsWithAttempts: attempts.length,

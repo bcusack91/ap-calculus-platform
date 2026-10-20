@@ -49,9 +49,16 @@ interface StudentRow {
   /** SAT only: the lane this student studies in, and any teacher override. */
   satLane?: 'core-skills' | 'regular' | 'advanced'
   satOverride?: 'core-skills' | 'regular' | 'advanced' | null
-  /** AP Chemistry / Biology / Physics 1 / Calculus AB: the difficulty track (src/lib/ap-track.ts). */
-  apTrack?: { track: 'foundation' | 'regular' | 'five'; label: string; source: 'diagnostic' | 'none' }
+  /**
+   * AP Chemistry / Biology / Physics 1 / Calculus AB: the EFFECTIVE difficulty
+   * track (src/lib/ap-track.ts) — the teacher's override when set (`source:
+   * 'teacher'`, `override` = the pinned track), else the diagnostic's placement.
+   */
+  apTrack?: { track: ApTrackValue; label: string; source: 'teacher' | 'diagnostic' | 'default'; override: ApTrackValue | null }
 }
+
+type ApTrackValue = 'foundation' | 'regular' | 'five'
+const AP_TRACK_OPTION_LABEL: Record<ApTrackValue, string> = { foundation: 'Foundation', regular: 'Regular', five: '5-track' }
 
 const SAT_LANE_LABEL: Record<NonNullable<StudentRow['satLane']>, string> = {
   'core-skills': 'Core Skills',
@@ -60,7 +67,7 @@ const SAT_LANE_LABEL: Record<NonNullable<StudentRow['satLane']>, string> = {
 }
 
 interface PlanData {
-  course: { key: string; label: string; gated: boolean }
+  course: { key: string; label: string; gated: boolean; courseSlug: string | null }
   classTopics: ClassTopic[]
   students: StudentRow[]
   studentsWithAttempts: number
@@ -122,6 +129,32 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
         return
       }
       loadPlan()
+    } finally {
+      setTrackSaving(null)
+    }
+  }
+
+  // AP track override (the four flagship courses): Auto follows the student's
+  // latest diagnostic; a pinned track beats it in both directions. The pin
+  // changes the mix of their gating exit quizzes and the order of their plan.
+  const setApTrack = async (studentId: string, value: string) => {
+    if (!data?.course.courseSlug) return
+    setTrackSaving(studentId)
+    setTrackError(null)
+    try {
+      const r = await fetch(`/api/teacher/classrooms/${classroomId}/students/${studentId}/ap-track`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ courseSlug: data.course.courseSlug, track: value === 'auto' ? null : value }),
+      })
+      if (!r.ok) {
+        const d = await r.json().catch(() => ({}))
+        setTrackError(d.error || 'Could not change the track')
+        return
+      }
+      loadPlan()
+    } catch {
+      setTrackError('Could not change the track')
     } finally {
       setTrackSaving(null)
     }
@@ -298,7 +331,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
           {data.course.key === 'sat' &&
             ' Each SAT student studies in a track: Core Skills (short lessons, easy items), Standard, or 700-800. Automatic places them from their diagnostics; pick a track to pin it.'}
           {hasApTrack &&
-            ' Each student is placed in a track by their latest diagnostic: Foundation (estimated 1–2: exit quizzes lean easy/medium, earliest units first), Regular (3–4), or 5-track (estimated 5: quizzes lean medium/hard, heaviest-weighted units first). The pass mark is 80% on every track.'}
+            ' Each student is placed in a track by their latest diagnostic: Foundation (estimated 1–2: exit quizzes lean easy/medium, earliest units first), Regular (estimated 3), or 5-track (estimated 4–5: quizzes lean medium/hard, heaviest-weighted units first). Auto follows the diagnostic; pick a track to pin it. The pass mark is 80% on every track.'}
         </p>
         {trackError && <p className="mb-3 text-sm text-red-600 dark:text-red-400">{trackError}</p>}
         <div className="overflow-x-auto">
@@ -332,8 +365,25 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
                     {s.recommendedCount === 0 ? '—' : `${s.recommendedCount - s.pendingCount}/${s.recommendedCount} topics`}
                   </td>
                   {hasApTrack && (
-                    <td className="py-2 pr-4 text-gray-600 dark:text-gray-400">
-                      {s.apTrack && s.apTrack.source === 'diagnostic' ? s.apTrack.label : '—'}
+                    <td className="py-2 pr-4">
+                      {s.apTrack ? (
+                        <>
+                          <label className="sr-only" htmlFor={`ap-track-${s.userId}`}>Track for {s.name}</label>
+                          <select
+                            id={`ap-track-${s.userId}`}
+                            value={s.apTrack.override ?? 'auto'}
+                            disabled={trackSaving === s.userId || !data.course.courseSlug}
+                            onChange={e => void setApTrack(s.userId, e.target.value)}
+                            title={s.apTrack.source === 'teacher' ? `Pinned by a teacher: ${s.apTrack.label}` : s.apTrack.source === 'diagnostic' ? `From their latest diagnostic: ${s.apTrack.label}` : 'No diagnostic yet: Regular until they take one'}
+                            className="max-w-[9rem] rounded-lg border border-gray-300 bg-white px-2 py-1 text-xs dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                          >
+                            <option value="auto">Auto{s.apTrack.override ? '' : ` (${s.apTrack.source === 'default' ? 'no diagnostic' : AP_TRACK_OPTION_LABEL[s.apTrack.track]})`}</option>
+                            <option value="foundation">Foundation</option>
+                            <option value="regular">Regular</option>
+                            <option value="five">5-track</option>
+                          </select>
+                        </>
+                      ) : '—'}
                     </td>
                   )}
                   {data.course.key === 'sat' && (

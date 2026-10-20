@@ -878,19 +878,38 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   }, [topicHasExitQuiz, session?.user, sessionKey, openExitQuiz])
 
   // The student's saved choice (signed out: hidden, toggle lasts the visit),
-  // and their AP difficulty track in this course (src/lib/ap-track.ts).
+  // and their AP difficulty track in this course (src/lib/ap-track.ts). The
+  // fetch is shared with the submit-rejection path below, which re-reads the
+  // track after the server refuses a quiz drawn at a stale mix.
+  const loadLessonSettings = useCallback(
+    (applyLowYield: (v: boolean) => void): Promise<ExitQuizTrackMix | undefined> =>
+      fetch(`/api/lessons/settings${courseSlug ? `?courseSlug=${encodeURIComponent(courseSlug)}` : ''}`)
+        .then((r) => (r.ok ? r.json() : null))
+        .then((d) => {
+          if (typeof d?.includeLowYield === 'boolean') applyLowYield(d.includeLowYield)
+          return isTrackMix(d?.apTrack?.mix) ? d.apTrack.mix : undefined
+        })
+        .catch(() => undefined),
+    [courseSlug],
+  )
   useEffect(() => {
     if (!sessionUserId) return
     let active = true
-    trackMixRef.current = fetch(`/api/lessons/settings${courseSlug ? `?courseSlug=${encodeURIComponent(courseSlug)}` : ''}`)
-      .then((r) => (r.ok ? r.json() : null))
-      .then((d) => {
-        if (active && typeof d?.includeLowYield === 'boolean') setIncludeLowYield(d.includeLowYield)
-        return isTrackMix(d?.apTrack?.mix) ? d.apTrack.mix : undefined
-      })
-      .catch(() => undefined)
+    trackMixRef.current = loadLessonSettings((v) => { if (active) setIncludeLowYield(v) })
     return () => { active = false }
-  }, [sessionUserId, courseSlug])
+  }, [sessionUserId, loadLessonSettings])
+
+  /**
+   * The submit route refused the finished quiz's AP track mix (409): the
+   * student's track changed after the quiz was drawn (a teacher pinned them,
+   * or a new diagnostic moved them). Nothing was recorded, so the attempt is
+   * NOT counted here either; re-read the track and redraw the gating quiz.
+   */
+  const handleTrackMixRejected = useCallback(async () => {
+    trackMixRef.current = loadLessonSettings(() => {})
+    const reopened = await openExitQuiz()
+    if (!reopened) setShowExitQuiz(false)
+  }, [loadLessonSettings, openExitQuiz])
 
   /** Flip the low-yield setting, keeping the student on the same material:
    *  the current section and the completed ones are carried over by id. */
@@ -1391,6 +1410,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
         includeLowYield={exitQuizIncludeLowYield}
         onPracticeAtDifficulty={startExitQuizPractice}
         onRetake={handleExitQuizRetake}
+        onTrackMixRejected={handleTrackMixRejected}
         reviewParts={preloadedParts.length > 1 ? preloadedParts.map((p, i) => ({ partNumber: i + 1, title: p.title })) : undefined}
         onComplete={handleExitQuizComplete}
         onCancel={() => setShowExitQuiz(false)}

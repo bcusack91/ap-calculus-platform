@@ -14,8 +14,10 @@ import { apTrackForUser } from '@/lib/ap-track-server'
  * independent of the flashcard checkbox.
  *
  * apTrack: the student's AP difficulty track in `courseSlug` (src/lib/ap-track.ts)
- * — the lesson draws its gating exit quiz at the track's mix. Left out for a
- * course without tracks. Served here because every lesson already loads this.
+ * — the lesson draws its gating exit quiz at the track's mix. A teacher's
+ * override beats the diagnostic (`source: 'teacher'`). Left out for a course
+ * without tracks. Served here because every lesson already loads this, and
+ * re-read by the lesson when the submit route refuses a stale mix.
  */
 export async function GET(request: Request) {
   const session = await auth()
@@ -31,7 +33,7 @@ export async function GET(request: Request) {
   if (!user) return NextResponse.json({ error: 'Not found' }, { status: 404 })
   return NextResponse.json({
     includeLowYield: user.lessonIncludeLowYield,
-    ...(apTrack ? { apTrack: { track: apTrack.track, label: apTrack.label, mix: apTrack.mix ?? null } } : {}),
+    ...(apTrack ? { apTrack: { track: apTrack.track, label: apTrack.label, mix: apTrack.mix ?? null, source: apTrack.source } } : {}),
   })
 }
 

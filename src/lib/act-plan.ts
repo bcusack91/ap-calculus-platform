@@ -6,7 +6,8 @@ import { UNIT_TEST_COURSES, isUnitTestCourse } from '@/lib/unit-test-courses'
 import { unitTestStatusFor, type McatUnitTestStatus } from '@/lib/mcat-unit-test-server'
 import { classPlanCourse } from '@/lib/class-plan-config'
 import { AP_CANONICAL_TOPIC_NAMES, canonicalApTopicSlug } from '@/lib/ap-topic-canonical'
-import { apTrackFromResults, isApTrackCourse, orderTopicsForTrack, type ApTrackPlacement } from '@/lib/ap-track'
+import { apTrackPlacement, isApTrackCourse, orderTopicsForTrack, type ApTrackPlacement } from '@/lib/ap-track'
+import { apTrackOverrideFor } from '@/lib/ap-track-server'
 
 type RecommendedTopic = {
   slug: string
@@ -101,10 +102,13 @@ export async function buildGenericPlanStatus(userId: string, courseKey: string):
     }
   })
 
-  // AP track courses: the student's track (from this same diagnostic) orders
-  // the plan — Foundation earliest units first, 5-track heaviest units first
-  // (orderTopicsForTrack). Regular, and every other course, keep priority order.
-  const apTrack = isApTrackCourse(course.courseSlug) ? apTrackFromResults(latestDiagnostic.results) : undefined
+  // AP track courses: the student's track (a teacher's override, else this
+  // same diagnostic) orders the plan — Foundation earliest units first,
+  // 5-track heaviest units first (orderTopicsForTrack). Regular, and every
+  // other course, keep priority order.
+  const apTrack = isApTrackCourse(course.courseSlug)
+    ? apTrackPlacement(latestDiagnostic.results, await apTrackOverrideFor(userId, course.courseSlug))
+    : undefined
   const recommendedTopics = orderTopicsForTrack(
     course.courseSlug,
     Array.from(dedupedMap.values()).sort((a, b) => priorityValue(a.priority) - priorityValue(b.priority)),

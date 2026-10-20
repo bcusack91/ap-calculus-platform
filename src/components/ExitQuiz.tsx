@@ -54,6 +54,13 @@ interface ExitQuizProps {
    * and the one action is to review them, then retake — never a bare retry.
    */
   reviewParts?: { partNumber: number; title: string }[]
+  /**
+   * The server refused this quiz's AP track mix (409 TRACK_MIX_MISMATCH: the
+   * student's track changed since the quiz was drawn, e.g. a teacher pinned
+   * them to a harder one). Nothing was recorded. The lesson surface re-reads
+   * its settings and redraws the quiz at the current track.
+   */
+  onTrackMixRejected?: () => void | Promise<void>
 }
 
 // Render text with markdown tables and KaTeX math
@@ -78,6 +85,7 @@ export default function ExitQuiz({
   onPracticeAtDifficulty,
   onRetake,
   reviewParts,
+  onTrackMixRejected,
 }: ExitQuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
@@ -89,6 +97,9 @@ export default function ExitQuiz({
   const [submitSettled, setSubmitSettled] = useState(false)
   // The saved attempt's id, for the permanent "Review this quiz" link.
   const [savedAttemptId, setSavedAttemptId] = useState<string | null>(null)
+  // The submit route refused the quiz's track mix (see onTrackMixRejected):
+  // the results screen gives way to a short notice while the quiz is redrawn.
+  const [trackMixRejected, setTrackMixRejected] = useState(false)
   const [startTime] = useState(Date.now())
   // One submission per mounted quiz, ever.
   const hasSubmittedRef = useRef(false)
@@ -262,13 +273,19 @@ export default function ExitQuiz({
         const data = await res.json().catch(() => null)
         const id = data?.attemptId ?? data?.attempt?.id
         if (typeof id === 'string') setSavedAttemptId(id)
+      } else if (res.status === 409) {
+        const data = await res.json().catch(() => null)
+        if (data?.code === 'TRACK_MIX_MISMATCH' && onTrackMixRejected) {
+          setTrackMixRejected(true)
+          await onTrackMixRejected()
+        }
       }
     } catch (err) {
       console.error('Failed to submit exit quiz:', err)
     } finally {
       setSubmitSettled(true)
     }
-  }, [startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty, includeLowYield])
+  }, [startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty, includeLowYield, onTrackMixRejected])
 
   useEffect(() => {
     if (quizComplete) {
@@ -277,6 +294,19 @@ export default function ExitQuiz({
   }, [quizComplete, submitResults])
 
   // ===== QUIZ COMPLETE SCREEN =====
+  if (quizComplete && trackMixRejected) {
+    return (
+      <div className="max-w-2xl mx-auto p-6">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 text-center" role="status">
+          <h2 className="text-2xl font-bold mb-2">Your track changed</h2>
+          <p className="text-gray-600 dark:text-gray-400">
+            This quiz was drawn for a different difficulty track than the one you are on now, so it was not counted.
+            Drawing a new quiz at your current track…
+          </p>
+        </div>
+      </div>
+    )
+  }
   if (quizComplete) {
     const pct = Math.round((score / totalQuestions) * 100)
     return (
