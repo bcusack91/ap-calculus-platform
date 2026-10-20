@@ -1,6 +1,7 @@
 import { getPublicAppUrl } from '@/lib/public-url'
 import { sendEmail } from '@/lib/email-provider'
 import { makeUnsubscribeToken } from '@/lib/unsubscribe-token'
+import type { ApFollowupEmailContext } from '@/lib/ap-diagnostic-followup'
 
 const FROM_ADDRESS = process.env.SMTP_FROM || 'Study Mondo <noreply@studymondo.com>'
 const APP_URL = getPublicAppUrl()
@@ -614,6 +615,116 @@ ${MAILING_ADDRESS}`,
 
 export async function sendBackToSchoolEmail(email: string, name: string | null, context?: BackToSchoolContext) {
   await sendEmail(buildBackToSchoolEmail(email, name, context))
+}
+
+/**
+ * Follow-up for an AP diagnostic taker who has not opened a lesson (cron
+ * /api/cron/ap-diagnostic-followup, 24–48 h after the sitting). Two bodies:
+ *   next-step  — the score band, topic 1 of the stored plan, one button to
+ *                the interactive lesson, what clears a topic (80% exit quiz).
+ *   exam-week  — when the exam is within AP_FOLLOWUP_EXAM_WEEK_DAYS: three
+ *                things to do instead of starting lessons (weakest unit's
+ *                high-yield flashcards, a practice exam, the mistake log).
+ * No PII beyond the first name. Plain text carries its own unsubscribe link
+ * and postal address; headers carry RFC 8058 one-click unsubscribe.
+ */
+export function buildApDiagnosticFollowupEmail(ctx: ApFollowupEmailContext) {
+  const greeting = ctx.firstName ? `Hi ${ctx.firstName},` : 'Hi there,'
+  const unsubscribeToken = makeUnsubscribeToken(ctx.email)
+  const unsubscribeUrl = unsubscribeToken
+    ? `${APP_URL}/api/unsubscribe?token=${encodeURIComponent(unsubscribeToken)}`
+    : `${APP_URL}/settings`
+  const headers = unsubscribeToken
+    ? { 'List-Unsubscribe': `<${unsubscribeUrl}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' }
+    : undefined
+  const p = 'color: #4b5563; font-size: 16px; line-height: 1.6; margin: 0 0 16px;'
+  const button = 'display: inline-block; background-color: #7c3aed; color: #ffffff; font-weight: 600; font-size: 16px; padding: 12px 28px; border-radius: 8px; text-decoration: none;'
+  const scoreSentence = ctx.scoreLabel
+    ? `Your ${ctx.courseLabel} diagnostic put you at an estimated ${ctx.scoreLabel}.`
+    : `You finished your ${ctx.courseLabel} diagnostic.`
+  const footerText = `\n\n---\nEmail preferences: ${APP_URL}/settings\nUnsubscribe: ${unsubscribeUrl}\n${MAILING_ADDRESS}`
+
+  if (ctx.variant === 'exam-week' && ctx.daysToExam !== null) {
+    const n = ctx.daysToExam
+    const when = n === 1 ? 'tomorrow' : `in ${n} days`
+    const unit = ctx.weakestUnit ? ` for your weakest unit (${ctx.weakestUnit})` : ''
+    const flashcards = `${APP_URL}${ctx.paths.flashcards}`
+    const practice = ctx.paths.practiceExam ? `${APP_URL}${ctx.paths.practiceExam}` : null
+    const mistakes = `${APP_URL}${ctx.paths.mistakes}`
+    const steps = [
+      { text: `Review the high-yield flashcards${unit}`, url: flashcards },
+      { text: practice ? 'Take a timed practice exam' : 'Take a timed practice set', url: practice ?? `${APP_URL}/courses/${ctx.courseSlug}` },
+      { text: 'Review every mistake until you can explain it', url: mistakes },
+    ]
+    return {
+      from: FROM_ADDRESS,
+      to: ctx.email,
+      subject: `${ctx.courseLabel} exam ${when} — do these three things`,
+      headers,
+      text: `${greeting}
+
+${scoreSentence} The exam is ${when}, so skip new lessons and spend the time where it counts:
+
+${steps.map((s, i) => `${i + 1}. ${s.text}: ${s.url}`).join('\n')}
+
+Start with the flashcards: ${flashcards}
+
+Good luck on exam day,
+Brendan
+Study Mondo${footerText}`,
+      html: emailLayout(`
+      <div style="display: none; max-height: 0; overflow: hidden;">Exam ${when}: flashcards, a practice exam, your mistakes.</div>
+      <h1 style="font-size: 22px; font-weight: 700; margin: 0 0 16px; color: #111827;">Exam ${when} &mdash; do these three things</h1>
+      <p style="${p}">${greeting}</p>
+      <p style="${p}">${scoreSentence} The exam is ${when}, so skip new lessons and spend the time where it counts:</p>
+      <ol style="color: #4b5563; font-size: 16px; line-height: 1.7; padding-left: 22px; margin: 0 0 24px;">
+        ${steps.map((s) => `<li><a href="${s.url}" style="color: #7c3aed; font-weight: 600;">${s.text}</a></li>`).join('\n        ')}
+      </ol>
+      <div style="text-align: center; margin: 0 0 24px;">
+        <a href="${flashcards}" style="${button}">Start with the flashcards &rarr;</a>
+      </div>
+      <p style="${p}">Good luck on exam day,<br>Brendan<br>Study Mondo</p>
+    `, ctx.email),
+    }
+  }
+
+  const topic = ctx.topic
+  const lessonUrl = `${APP_URL}${ctx.paths.lesson ?? `/courses/${ctx.courseSlug}`}`
+  const buttonLabel = topic ? `Start ${topic.title}` : `Open your ${ctx.courseLabel} plan`
+  const topicSentence = topic
+    ? `The fastest way to move that number is the first topic on your plan: <strong>${topic.title}</strong>. Give it 15 minutes today.`
+    : `Your plan is waiting on your ${ctx.courseLabel} page. Give it 15 minutes today.`
+  return {
+    from: FROM_ADDRESS,
+    to: ctx.email,
+    subject: `Your ${ctx.courseLabel} next step (15 minutes)`,
+    headers,
+    text: `${greeting}
+
+${scoreSentence} ${topicSentence.replace(/<[^>]+>/g, '')}
+
+${buttonLabel}: ${lessonUrl}
+
+After the lesson, a short exit quiz checks you at 80%. Pass it and your plan moves on to the next topic.
+
+Brendan
+Study Mondo${footerText}`,
+    html: emailLayout(`
+      <div style="display: none; max-height: 0; overflow: hidden;">${topic ? `Topic 1 is ${topic.title}.` : 'Your plan is ready.'} 15 minutes today.</div>
+      <h1 style="font-size: 22px; font-weight: 700; margin: 0 0 16px; color: #111827;">Your ${ctx.courseLabel} next step</h1>
+      <p style="${p}">${greeting}</p>
+      <p style="${p}">${scoreSentence} ${topicSentence}</p>
+      <div style="text-align: center; margin: 24px 0;">
+        <a href="${lessonUrl}" style="${button}">${buttonLabel} &rarr;</a>
+      </div>
+      <p style="${p}">After the lesson, a short exit quiz checks you at 80%. Pass it and your plan moves on to the next topic.</p>
+      <p style="${p}">Brendan<br>Study Mondo</p>
+    `, ctx.email),
+  }
+}
+
+export async function sendApDiagnosticFollowupEmail(ctx: ApFollowupEmailContext) {
+  await sendEmail(buildApDiagnosticFollowupEmail(ctx))
 }
 
 /**
