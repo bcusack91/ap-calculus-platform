@@ -69,15 +69,16 @@ describe('apGrowthBand', () => {
     expect(formatApGrowth(band)).toBe('up about 1, range 0 to +2')
   })
 
-  it('keeps the band around the point even for a big move', () => {
+  it('keeps the band around the point even for a big move, and calls 18 → 25 of 33 real (owner: AP noise rule is 1.5 SE)', () => {
     const band = apGrowthBand(apSittingOf(sitting(18, 33, 3))!, apSittingOf(sitting(25, 33, 5))!)!
     expect(band.delta).toBe(2)
+    expect(band.meaningful).toBe(true)
     expect(band.low).toBeLessThanOrEqual(2)
     expect(band.high).toBeGreaterThanOrEqual(2)
     expect(band.low).toBeGreaterThanOrEqual(1)
   })
 
-  it('calls a move real only past 2 SE of the difference', () => {
+  it('calls a move real only past 1.5 SE of the difference', () => {
     const band = apGrowthBand(apSittingOf(sitting(9, 33, 1))!, apSittingOf(sitting(28, 33, 5))!)!
     expect(band.meaningful).toBe(true)
     expect(band.delta).toBe(4)

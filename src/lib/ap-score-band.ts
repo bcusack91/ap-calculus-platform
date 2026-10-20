@@ -96,9 +96,11 @@ export interface ApGrowthBand {
   low: number
   high: number
   /**
-   * The change clears noise: the percent-correct change is at least 2 SE of a
-   * difference (the same 2·sd·√2 rule the MCAT/SAT growth view uses). Inside
-   * it, the UI must present the change as noise, never as progress.
+   * The change clears noise: the percent-correct change is at least
+   * AP_GROWTH_NOISE_Z SE of a difference. MCAT/SAT use 2 (2·sd·√2); the owner
+   * loosened AP to 1.5 (2026-10-20) so that on a 33-question sitting a move
+   * like 18 → 25 correct (a 3 to a 5) reads as real. Inside it, the UI must
+   * present the change as noise, never as progress.
    */
   meaningful: boolean
 }
@@ -113,6 +115,9 @@ export interface ApGrowthBand {
  * score1. Both sittings must carry question counts; otherwise there is no
  * honest band and this returns null.
  */
+/** How many standard errors of a difference a change must clear to count as real (MCAT/SAT: 2). */
+export const AP_GROWTH_NOISE_Z = 1.5
+
 export function apGrowthBand(first: ApSitting, latest: ApSitting, z = 1): ApGrowthBand | null {
   if (first.percent === null || latest.percent === null || first.standardError === null || latest.standardError === null) return null
   const seD = Math.sqrt(first.standardError ** 2 + latest.standardError ** 2)
@@ -120,7 +125,7 @@ export function apGrowthBand(first: ApSitting, latest: ApSitting, z = 1): ApGrow
   const delta = latest.score - first.score
   const low = Math.min(delta, estimateApScore(clamp(latest.percent - z * seD)) - first.score)
   const high = Math.max(delta, estimateApScore(clamp(latest.percent + z * seD)) - first.score)
-  return { delta, low, high, meaningful: Math.abs(latest.percent - first.percent) >= 2 * seD }
+  return { delta, low, high, meaningful: Math.abs(latest.percent - first.percent) >= AP_GROWTH_NOISE_Z * seD }
 }
 
 const signed = (n: number) => (n > 0 ? `+${n}` : n < 0 ? `−${Math.abs(n)}` : '0')
@@ -151,7 +156,7 @@ export function apClassGrowthBand(bands: ApGrowthBand[]): (ApGrowthBand & { pair
     delta,
     low: Math.min(delta, round1(mean - half)),
     high: Math.max(delta, round1(mean + half)),
-    // The class mean clears noise when its band (2× wider for the 2-SE rule) excludes zero.
-    meaningful: half > 0 ? Math.abs(mean) >= 2 * half : false,
+    // The class mean clears noise when it is at least AP_GROWTH_NOISE_Z of its own SE away from zero.
+    meaningful: half > 0 ? Math.abs(mean) >= AP_GROWTH_NOISE_Z * half : false,
   }
 }
