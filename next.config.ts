@@ -15,6 +15,14 @@ const analyzeBundles = withBundleAnalyzer({
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: __dirname,
+  // Vercel's 16 GB build container is OOM-killed in "Linting and checking
+  // validity of types" (2026-10-20 and -21, with the default and a 12 GB heap
+  // alike), while CI runs tsc, eslint and a full `next build` on every push
+  // and passes the same step in ~8 min. So on Vercel only (VERCEL=1 is set by
+  // its build env, never locally or in CI) skip that one step; CI stays the
+  // gate. Check CI before trusting a deploy.
+  typescript: { ignoreBuildErrors: process.env.VERCEL === '1' },
+  eslint: { ignoreDuringBuilds: process.env.VERCEL === '1' },
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
   experimental: {
     staleTimes: {
