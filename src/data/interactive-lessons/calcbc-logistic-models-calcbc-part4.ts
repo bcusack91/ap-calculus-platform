@@ -23,10 +23,12 @@ The AP exam presents logistic growth in real-world contexts:
 
 **Typical structure:**
 - "A population of fish in a lake grows at a rate modeled by $dP/dt = 0.4P(1 - P/5000)$."
-- Part (a): Find the carrying capacity.
-- Part (b): Find the population when growth is fastest.
-- Part (c): Find the particular solution given $P(0) = 200$.
-- Part (d): When does the population reach 4000?
+- Part (a): Find $\\lim_{t \\to \\infty} P(t)$, the carrying capacity.
+- Part (b): Find the population when it is growing fastest.
+- Part (c): Is the graph of $P$ concave up or concave down when $P = 1000$? Justify.
+- Part (d): Use the tangent line at $t = 0$ (or Euler's method) to approximate $P$ at a later time.
+
+> **Scope:** Logistic models are interpreted without solving the differential equation (CED 7.9). When a question needs an explicit formula for $P(t)$, it supplies one.
 
 ### Example: Complete FRQ
 
@@ -36,7 +38,9 @@ $dP/dt = 0.1P(1 - P/2000)$, $P(0) = 100$.
 
 **(b)** Growth fastest at $P = L/2 = 1000$; rate $= kL/4 = 0.1(2000)/4 = 50$
 
-**(c)** $A = (2000 - 100)/100 = 19$. $P(t) = \\frac{2000}{1 + 19e^{-0.1t}}$
+**(c)** When $P = 500$: since $500 < \\frac{L}{2} = 1000$, $\\frac{d^2P}{dt^2} > 0$, so the graph of $P$ is concave up there.
+
+For part (d), suppose the question gives the solution $P(t) = \\frac{2000}{1 + 19e^{-0.1t}}$. (Check: $P(0) = \\frac{2000}{20} = 100$ ✓.)
 
 **(d)** When does the population reach 1500? (Any target must be below $L = 2000$.) Set $\\frac{2000}{1 + 19e^{-0.1t}} = 1500$:
 $$1 + 19e^{-0.1t} = 2000/1500 = 4/3 \\quad \\Rightarrow \\quad e^{-0.1t} = 1/57 \\quad \\Rightarrow \\quad t = \\frac{\\ln 57}{0.1} \\approx 40.4$$

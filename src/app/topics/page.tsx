@@ -3,6 +3,7 @@ import { COURSE_COUNT } from '@/lib/site-stats'
 import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { courseMeta, defaultCourseMeta, getCourseHref, sectionOrder, sectionAnchor } from '@/data/course-metadata'
+import { courseCategoryLayout } from '@/lib/course-includes'
 
 export const revalidate = 3600 // ISR: revalidate every hour
 
@@ -98,7 +99,13 @@ export default async function TopicsPage() {
                         {info.description}
                       </p>
                       <p className="text-xs text-gray-500 dark:text-gray-400">
-                        {course._count.categories} {course._count.categories === 1 ? 'category' : 'categories'}
+                        {(() => {
+                          // A course laid out by CED unit in code (AP Calculus BC includes
+                          // AB's units) counts its units, not its own DB Categories.
+                          const units = courseCategoryLayout(course.slug)?.length
+                          if (units) return `${units} ${units === 1 ? 'unit' : 'units'}`
+                          return `${course._count.categories} ${course._count.categories === 1 ? 'category' : 'categories'}`
+                        })()}
                       </p>
                       <div className="mt-4 flex items-center text-sm font-semibold">
                         <span className={`bg-gradient-to-r ${info.gradient} gradient-text-accessible`}>

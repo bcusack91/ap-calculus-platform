@@ -6,7 +6,7 @@ export const calcabParticleMotionPart2Data = {
       type: 'text' as const,
       content: `# Particle Motion
 
-**Part 2 of 7 \u2014 Speed & Direction of Motion**
+**Part 2 of 5 \u2014 Speed & Direction of Motion**
 
 ### Speed vs. Velocity
 
@@ -15,7 +15,7 @@ $$\\boxed{\\text{Speed} = |v(t)|}$$
 | Concept | Formula | Always positive? |
 |:---:|:---:|:---:|
 | Velocity | $v(t) = s'(t)$ | No (has sign) |
-| Speed | $|v(t)|$ | Yes |
+| Speed | $\\lvert v(t) \\rvert$ | Yes |
 
 ### Direction of Motion
 

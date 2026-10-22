@@ -27,7 +27,7 @@ and $M = \\max_{t \\in I} |f^{(n+1)}(t)|$ on the interval $I$ between $c$ and $x
 | $n$ | Degree of Taylor polynomial | Given in the problem |
 | $c$ | Center of expansion | Given |
 | $x$ | Point of evaluation | Given |
-| $M$ | Max of $|f^{(n+1)}|$ on $[c, x]$ | **This is the hard part** |
+| $M$ | Max of $\\lvert f^{(n+1)}\\rvert$ on $[c, x]$ | **This is the hard part** |
 | $(n+1)!$ | Factorial in denominator | Compute directly |
 
 > **AP Tip:** Finding $M$ is where most students struggle. You need to bound $|f^{(n+1)}(t)|$ for all $t$ between $c$ and $x$ — not just at the endpoints.`

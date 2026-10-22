@@ -17,7 +17,7 @@ AP problems often combine inverse derivatives with other skills:
 | Inverse + chain rule | $\\frac{d}{dx}[\\arcsin(e^x)]$ |
 | Table + inverse | Given $f$ and $f'$ table, find $(f^{-1})'$ |
 | $\\ln$ + implicit | $\\ln y = x^2$, find $dy/dx$ |
-| Inverse trig + integration | $\\int\\frac{dx}{\\sqrt{1-x^2}}$ |
+| Inverse + polynomial | $(f^{-1})'(3)$ for $f(x) = x^3 + x + 1$ |
 
 ### Worked Example 1: Chain + Inverse Trig
 
@@ -33,11 +33,17 @@ $$\\frac{1}{y}\\cdot y' + y + xy' = 0$$
 $$y'\\left(\\frac{1}{y}+x\\right) = -y$$
 $$y' = \\frac{-y}{\\frac{1}{y}+x} = \\frac{-y^2}{1+xy}$$
 
-### Worked Example 3: Related Antiderivatives
+### Worked Example 3: Inverse at a Point Without Solving
 
-$$\\int\\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C \\qquad \\int\\frac{dx}{1+x^2} = \\arctan x + C$$
+> $f(x) = x^3 + x + 1$ and $g = f^{-1}$. Find $g'(3)$.
 
-> **AP Tip:** These antiderivatives often appear in definite integral MC problems. Evaluate $\\arcsin$ or $\\arctan$ at the limits.`
+Find the input with $f(a) = 3$: $a^3 + a + 1 = 3$ gives $a = 1$. Then $f'(x) = 3x^2 + 1$, so $f'(1) = 4$ and
+
+$$g'(3) = \\frac{1}{f'(1)} = \\frac{1}{4}$$
+
+> **AP Tip:** Evaluate $f'$ at the matching **input** ($x = 1$), never at the given output ($x = 3$).
+
+> **Preview (Unit 6):** reversing the inverse trig derivatives gives the antiderivatives $\\int\\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C$ and $\\int\\frac{dx}{1+x^2} = \\arctan x + C$.`
     },
     {
       id: 'inv5-quiz1',
@@ -52,10 +58,10 @@ $$\\int\\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C \\qquad \\int\\frac{dx}{1+x^2}
             explanation: '$\\frac{1/x}{\\sqrt{1-(\\ln x)^2}}$. At $x=1$: $\\frac{1}{\\sqrt{1-0}} = 1$.'
           },
           {
-            question: '$\\int_0^1\\frac{dx}{1+x^2} = $',
-            options: ['$\\frac{\\pi}{4}$', '$\\frac{\\pi}{2}$', '$1$', '$\\ln 2$'],
+            question: 'Let $f(x) = x^3 + 2x + 2$ and $g = f^{-1}$. What is $g\'(5)$?',
+            options: ['$\\frac{1}{5}$', '$5$', '$\\frac{1}{77}$', '$\\frac{1}{3}$'],
             correctAnswer: 0,
-            explanation: '$[\\arctan x]_0^1 = \\arctan 1 - \\arctan 0 = \\frac{\\pi}{4} - 0 = \\frac{\\pi}{4}$.'
+            explanation: '$f(1) = 5$, so $g(5) = 1$. $f\'(x) = 3x^2 + 2$ gives $f\'(1) = 5$, and $g\'(5) = \\frac{1}{5}$. Evaluating $f\'$ at $5$ instead of $1$ gives $\\frac{1}{77}$, and $5$ forgets the reciprocal.'
           },
           {
             question: 'If $g(x) = \\ln(f(x))$ and $f(2) = e^3$, $f\'(2) = 4$, then $g\'(2) = $',
@@ -73,11 +79,11 @@ $$\\int\\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C \\qquad \\int\\frac{dx}{1+x^2}
       exercise: {
         dropdowns: [
           {
-            label: '$\\int_0^{1/2}\\frac{dx}{\\sqrt{1-x^2}}$ evaluates to:',
-            options: ['$\\frac{\\pi}{6}$', '$\\frac{\\pi}{4}$', '$\\frac{\\pi}{3}$', '$\\frac{\\pi}{2}$'],
-            correctAnswers: ['$\\frac{\\pi}{6}$'],
-            hints: ['$[\\arcsin x]_0^{1/2} = \\arcsin(1/2) - 0$.'],
-            explanation: '$\\arcsin(1/2) = \\pi/6$.'
+            label: '$\\frac{d}{dx}[\\arctan(x^2)]$ at $x = 1$ equals:',
+            options: ['$1$', '$\\frac{1}{2}$', '$2$', '$\\frac{1}{4}$'],
+            correctAnswers: ['$1$'],
+            hints: ['$\\frac{d}{dx}[\\arctan(x^2)] = \\frac{2x}{1 + x^4}$.'],
+            explanation: '$\\frac{2x}{1+x^4}$ at $x = 1$ is $\\frac{2}{2} = 1$. Forgetting the inner derivative $2x$ gives $\\frac{1}{2}$.'
           },
           {
             label: '$\\frac{d}{dx}[e^{\\arctan x}]$ uses:',
@@ -101,15 +107,14 @@ $$\\int\\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C \\qquad \\int\\frac{dx}{1+x^2}
       type: 'input-box' as const,
       content: '**Evaluate.** \u270d\ufe0f',
       exercise: {
-        question: '$\\int_0^{\\sqrt{3}}\\frac{dx}{1+x^2} = \\frac{\\pi}{a}$. Find $a$.\n\n(Enter an integer.)',
-        correctAnswer: '3',
-        acceptableAnswers: ['3'],
+        question: 'Let $f(x) = x^3 + 4x$ and $g = f^{-1}$. Find $g\'(5)$. (Fraction or decimal.)',
+        correctAnswer: '1/7',
+        acceptableAnswers: ['1/7', '0.143', '0.1429'],
         hints: [
-          '$[\\arctan x]_0^{\\sqrt{3}}$.',
-          '$\\arctan(\\sqrt{3}) = \\pi/3$.',
-          'Answer $= \\pi/3$. So $a = 3$.'
+          'Solve $f(a) = 5$: $a^3 + 4a = 5$ gives $a = 1$.',
+          '$f\'(x) = 3x^2 + 4$, so $f\'(1) = 7$.'
         ],
-        explanation: '$\\arctan(\\sqrt{3}) = \\pi/3$. So $a = 3$.'
+        explanation: '$f(1) = 5$, so $g(5) = 1$ and $g\'(5) = \\frac{1}{f\'(1)} = \\frac{1}{7}$.'
       }
     },
     {
@@ -118,9 +123,9 @@ $$\\int\\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C \\qquad \\int\\frac{dx}{1+x^2}
       content: `### Key Takeaways \u2014 Part 5
 
 - Chain rule + inverse trig: outer is $\\arcsin/\\arctan$, inner is $u$
-- $\\int\\frac{dx}{\\sqrt{1-x^2}} = \\arcsin x + C$, $\\int\\frac{dx}{1+x^2} = \\arctan x + C$
+- Inverse at a point: solve $f(a) = b$, then $(f^{-1})'(b) = \\frac{1}{f'(a)}$
 - $\\ln$ + implicit: differentiate both sides, solve for $y'$
-- AP loves definite integrals using $\\arcsin$ and $\\arctan$`
+- Preview (Unit 6): the same formulas reverse into $\\arcsin$ and $\\arctan$ antiderivatives`
     }
   ]
 };

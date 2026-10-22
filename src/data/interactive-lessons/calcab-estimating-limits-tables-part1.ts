@@ -72,7 +72,7 @@ A useful table approaches $a$ from **both sides** with values that get visibly c
 | Situation | Use a table? |
 |-----------|--------------|
 | Direct substitution gives a clear number | No — just substitute |
-| You get $0/0$ or $0 \\cdot \\infty$ (indeterminate form) | Yes — table gives an estimate |
+| You get $0/0$ (indeterminate form) | Yes — table gives an estimate |
 | The function is given by data only | Yes — table is your only tool |
 | Function oscillates wildly (like $\\sin(1/x)$) | ⚠️ Tables can mislead — see Part 4 |
 
@@ -110,14 +110,17 @@ A useful table approaches $a$ from **both sides** with values that get visibly c
       type: 'input-boxes' as const,
       content: `**Pick the closest $x$-values** 🧮
 
-You want to estimate $\\lim_{x \\to 7} f(x)$. Type three values approaching 7 from the LEFT, smallest distance first (use comma separation; for $a = 2$ you would type \`1.999,1.99,1.9\`):
+You want to estimate $\\lim_{x \\to 7} f(x)$ with a table. Fill in the three inputs that approach 7 from the LEFT (for $a = 2$ they would be $1.999$, $1.99$ and $1.9$):
       `,
       exercise: {
-        boxes: 1,
-        correctAnswers: ['6.999,6.99,6.9'],
+        questions: [
+          { question: 'Left-side input at distance $0.001$ from $7$', answer: '6.999', acceptableAnswers: ['6.999'] },
+          { question: 'Left-side input at distance $0.01$ from $7$', answer: '6.99', acceptableAnswers: ['6.99'] },
+          { question: 'Left-side input at distance $0.1$ from $7$', answer: '6.9', acceptableAnswers: ['6.9'] }
+        ],
         hint1: 'Each value should be less than 7.',
-        hint2: 'Use distances $0.001, 0.01, 0.1$.',
-        explanation: '$6.999, 6.99, 6.9$ are the standard left-side approach values for $a = 7$. (The reverse order $6.9, 6.99, 6.999$ also represents the same approach.)'
+        hint2: 'Subtract each distance from 7.',
+        explanation: '$6.999$, $6.99$ and $6.9$ are the standard left-side approach values for $a = 7$; the right side would use $7.001$, $7.01$ and $7.1$.'
       }
     }
   ]

@@ -138,14 +138,14 @@ $$\\boxed{\\lim_{x \\to -\\infty} \\frac{2x+1}{\\sqrt{x^2+3}} = \\frac{-2}{1} = 
 | Problem Type | Key Move | Example |
 |-------------|----------|---------|
 | $\\frac{\\sqrt{\\ldots} - k}{\\text{something}}$ | Conjugate multiplication | $\\frac{\\sqrt{x}-2}{x-4}$ |
-| $\\frac{\\sin(ax)}{bx}$ or $\\frac{\\sin(ax)}{\\sin(bx)}$ | Create $\\frac{\\sin u}{u}$ forms | $\\frac{\\sin 3x}{5x} = \\frac{3}{5}$ |
+| $\\frac{\\sin(ax)}{bx}$ or $\\frac{\\sin(ax)}{\\sin(bx)}$ | Create $\\frac{\\sin u}{u}$ forms | $\\lim_{x \\to 0} \\frac{\\sin 3x}{5x} = \\frac{3}{5}$ |
 | Polynomial $\\frac{0}{0}$ | Factor and cancel | $\\frac{x^2-1}{x-1}$ |
 | $x \\to \\pm\\infty$ rational | Divide by highest power | $\\frac{3x^2+1}{x^2-5} \\to 3$ |
 | $x \\to \\pm\\infty$ with $\\sqrt{\\,}$ | Use $\\sqrt{x^2} = |x|$, mind the sign | See Example 3 |
 | Piecewise or $|\\cdot|$ | Split into one-sided limits | Check $x \\to c^-$ and $x \\to c^+$ |
 | Oscillation | Squeeze Theorem | $x^2\\sin(1/x) \\to 0$ |
 
-> 🔑 **Key Fact:** On the AP exam, about 3–5 questions test limits directly, plus limits appear implicitly in derivative and integral questions.`
+> 🔑 **Key Fact:** On the AP exam, some questions test limits directly, and limits appear implicitly in derivative and integral questions.`
     },
     {
       id: 'limit6-dropdown',
@@ -156,13 +156,13 @@ $$\\boxed{\\lim_{x \\to -\\infty} \\frac{2x+1}{\\sqrt{x^2+3}} = \\frac{-2}{1} = 
           { label: '$\\lim_{x \\to 1} \\frac{x^3-1}{x-1}$', options: ['0', '1', '2', '3'] },
           { label: '$\\lim_{x \\to 0} \\frac{\\tan x}{x}$', options: ['0', '1', '-1', 'DNE'] },
           { label: '$\\lim_{x \\to \\infty} \\frac{2x}{3x-1}$', options: ['0', '2/3', '1', '∞'] },
-          { label: '$\\lim_{x \\to 0} \\frac{1-\\cos x}{x^2}$', options: ['0', '1/2', '1', 'DNE'] }
+          { label: '$\\lim_{x \\to 0} \\frac{\\sin(3x)}{x}$', options: ['0', '1', '3', 'DNE'] }
         ],
-        correctAnswers: ['3', '1', '2/3', '1/2'],
+        correctAnswers: ['3', '1', '2/3', '3'],
         hint1: 'Factor $x^3-1 = (x-1)(x^2+x+1)$ and cancel.',
         hint2: '$\\tan x = \\frac{\\sin x}{\\cos x}$, so $\\frac{\\tan x}{x} = \\frac{\\sin x}{x} \\cdot \\frac{1}{\\cos x}$.',
         hint3: 'Same degree — ratio of leading coefficients.',
-        explanation: '$\\frac{x^3-1}{x-1} = x^2+x+1 \\to 3$. $\\frac{\\tan x}{x} \\to 1$. $\\frac{2x}{3x-1} \\to \\frac{2}{3}$. $\\frac{1-\\cos x}{x^2} \\to \\frac{1}{2}$ (classic result).'
+        explanation: '$\\frac{x^3-1}{x-1} = x^2+x+1 \\to 3$. $\\frac{\\tan x}{x} \\to 1$. $\\frac{2x}{3x-1} \\to \\frac{2}{3}$. $\\frac{\\sin(3x)}{x} = 3 \\cdot \\frac{\\sin(3x)}{3x} \\to 3$.'
       }
     },
     {

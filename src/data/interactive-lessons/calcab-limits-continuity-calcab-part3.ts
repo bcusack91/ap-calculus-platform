@@ -60,7 +60,7 @@ At each **breakpoint** (where the rule changes), check both sides:
 
 ---
 
-### Example 1: Limit Exists
+### Example 1: Limit Does Not Exist
 
 $$g(x) = \\begin{cases} x + 3 & x < 2 \\\\ x^2 & x \\geq 2 \\end{cases}$$
 
@@ -166,7 +166,7 @@ Since $1 \\neq -1$, the two-sided limit **does not exist**.
 
 DNE — same pattern as $\\frac{|x|}{x}$, just shifted.
 
-> 🔑 **Key Fact:** $\\frac{|\\text{expression}|}{\\text{expression}}$ always produces $\\pm 1$ limits from each side, and the two-sided limit will always be DNE.`
+> 🔑 **Key Fact:** At a point where the expression changes sign (such as $x = c$ for $\\frac{|x - c|}{x - c}$), $\\frac{|\\text{expression}|}{\\text{expression}}$ has one-sided limits $-1$ and $+1$, so the two-sided limit does not exist.`
     },
     {
       id: 'limit3-dropdown',

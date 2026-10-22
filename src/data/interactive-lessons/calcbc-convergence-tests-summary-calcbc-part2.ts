@@ -4,55 +4,57 @@ export const calcbcConvergencePart2Data = {
     {
       id: 'ct2-intro',
       type: 'text' as const,
-      content: `# Comparison Tests Deep Dive
+      content: `# Comparison Tests: Choosing and Justifying
 
 **Part 2 of 7 — Direct & Limit Comparison**
 
-### Direct Comparison Test (DCT)
+The Direct Comparison Test (DCT) and the Limit Comparison Test (LCT) are taught in Infinite Series, Part 2. This part is about the two decisions that cost points on the exam: **which series to compare with**, and **what to write** so the comparison earns credit.
 
-For $0 \\le a_n \\le b_n$ for all $n$ (eventually):
+### The Two Tests in One Line Each
 
-$$\\sum b_n \\text{ converges} \\Rightarrow \\sum a_n \\text{ converges}$$
-$$\\sum a_n \\text{ diverges} \\Rightarrow \\sum b_n \\text{ diverges}$$
+- **DCT:** if $0 \\le a_n \\le b_n$ and $\\sum b_n$ converges, then $\\sum a_n$ converges. If $0 \\le b_n \\le a_n$ and $\\sum b_n$ diverges, then $\\sum a_n$ diverges.
+- **LCT:** if $a_n, b_n > 0$ and $\\lim_{n \\to \\infty} a_n/b_n = L$ with $0 < L < \\infty$, then the two series both converge or both diverge.
 
-### Limit Comparison Test (LCT)
+### Choosing the Comparison Series
 
-For $a_n, b_n > 0$: if $\\lim_{n \\to \\infty} a_n/b_n = L$ where $0 < L < \\infty$, then $\\sum a_n$ and $\\sum b_n$ have the **same behavior**.
+| What you see in $a_n$ | Compare with | Usually by |
+|-----------|-----|-----|
+| Polynomials or roots of $n$ | $1/n^p$ built from the dominant terms | LCT |
+| A bounded factor such as $\\sin^2 n$ | $1/n^p$, with the factor replaced by its bound | DCT |
+| $2^n$ or $3^n$ plus extra terms in a denominator | The geometric series | DCT or LCT |
+| A DCT inequality that points the wrong way | The same comparison series | Switch to LCT |
 
-### When to Use Which
+**Dominant-term rule:** keep the highest power of $n$ in the numerator and in the denominator. For $\\frac{n+1}{n^3-5}$ that gives $\\frac{n}{n^3} = \\frac{1}{n^2}$.
 
-| Situation | Use |
-|-----------|-----|
-| Easy to compare term-by-term | DCT |
-| Hard to prove $a_n \\le b_n$ directly | LCT |
-| Series "looks like" a $p$-series | LCT with $1/n^p$ |
-
-> **Key Fact:** LCT is usually easier on the AP exam because you don't need to prove an inequality — just compute a limit.`
+> **Key Fact:** The DCT needs the inequality in the useful direction: smaller than a convergent series, or larger than a divergent one. Smaller than a DIVERGENT series proves nothing. When the inequality is hard to get, use the LCT and compute a limit instead.`
     },
     {
       id: 'ct2-examples',
       type: 'text' as const,
-      content: `### LCT Example: $\\sum \\frac{n+1}{n^3 - 5}$
+      content: `### What a Full-Credit Justification States
 
-Looks like $1/n^2$ for large $n$. Compare with $b_n = 1/n^2$:
+**LCT write-up:** (1) state that the terms are positive, (2) compute the limit and state $0 < L < \\infty$, (3) name the comparison series and why it converges or diverges, (4) conclude and name the test.
 
-$$\\lim \\frac{(n+1)/(n^3-5)}{1/n^2} = \\lim \\frac{n^2(n+1)}{n^3 - 5} = \\lim \\frac{n^3 + n^2}{n^3 - 5} = 1$$
+**Model:** $\\sum_{n=2}^{\\infty} \\frac{n+1}{n^3-5}$. For $n \\ge 2$ the terms are positive. With $b_n = \\frac{1}{n^2}$,
 
-Since $0 < 1 < \\infty$ and $\\sum 1/n^2$ converges ($p = 2$), $\\sum (n+1)/(n^3-5)$ converges.
+$$\\lim_{n \\to \\infty} \\frac{(n+1)/(n^3-5)}{1/n^2} = \\lim_{n \\to \\infty} \\frac{n^3 + n^2}{n^3 - 5} = 1, \\quad 0 < 1 < \\infty.$$
 
-### DCT Example: $\\sum \\frac{\\sin^2 n}{n^2}$
+Since $\\sum \\frac{1}{n^2}$ converges ($p$-series, $p = 2 > 1$), $\\sum \\frac{n+1}{n^3-5}$ converges by the Limit Comparison Test.
 
-$0 \\le \\sin^2 n \\le 1$, so $0 \\le \\sin^2 n/n^2 \\le 1/n^2$.
+**DCT write-up:** state the inequality with both sides nonnegative, name the comparison series and its behavior, and conclude.
 
-$\\sum 1/n^2$ converges → $\\sum \\sin^2 n/n^2$ converges by DCT.
+**Model:** $\\sum \\frac{\\sin^2 n}{n^2}$. For all $n \\ge 1$, $0 \\le \\frac{\\sin^2 n}{n^2} \\le \\frac{1}{n^2}$. Since $\\sum \\frac{1}{n^2}$ converges ($p = 2 > 1$), the series converges by the Direct Comparison Test.
 
-### DCT Example: $\\sum \\frac{1}{n - \\ln n}$
+**Model (divergence):** $\\sum_{n=2}^{\\infty} \\frac{1}{n - \\ln n}$. For $n \\ge 2$, $0 < n - \\ln n < n$, so $\\frac{1}{n - \\ln n} > \\frac{1}{n} > 0$. Since $\\sum \\frac{1}{n}$ diverges (harmonic series), the series diverges by the Direct Comparison Test.
 
-For large $n$: $n - \\ln n < n$, so $1/(n - \\ln n) > 1/n$.
+### Justification Errors That Lose the Point
 
-Since $\\sum 1/n$ diverges and our series is term-by-term larger, $\\sum 1/(n - \\ln n)$ diverges by DCT.
-
-> **AP Tip:** For LCT, pick the comparison series by looking at the **dominant terms** in numerator and denominator.`
+| Error | Fix |
+|-------|-----|
+| "$a_n < \\frac{1}{n}$, so it converges" | Smaller than a divergent series proves nothing; use the LCT |
+| Limit computed, but $0 < L < \\infty$ never stated | Write the inequality explicitly |
+| Comparison series named without its behavior | Give the reason: $p$-value or common ratio |
+| "Behaves like $\\frac{1}{n^2}$" with no test carried out | Do the LCT; "behaves like" earns nothing |`
     },
     {
       id: 'ct2-mc1',
@@ -71,6 +73,12 @@ Since $\\sum 1/n$ diverges and our series is term-by-term larger, $\\sum 1/(n - 
             options: ['$1/n^2$', '$1/n^4$', '$1/n^3$', '$1/n$'],
             correctAnswer: 0,
             explanation: 'Dominant terms: $n^2/n^4 = 1/n^2$. LCT: $\\lim \\frac{n^2+3}{n^4+n+7} \\cdot n^2 = 1$. Since $\\sum 1/n^2$ converges, the series converges.'
+          },
+          {
+            question: 'A student writes: "$0 < \\frac{1}{n^2+5} < \\frac{1}{n^2}$ for all $n \\ge 1$, so $\\sum \\frac{1}{n^2+5}$ converges." What is still missing for full credit?',
+            options: ['A reason for the behavior of $\\sum \\frac{1}{n^2}$, plus the test name', 'A limit $L$ with $0 < L < \\infty$ from the Limit Comparison Test', 'A check that the terms decrease to $0$, as in the AST', 'Nothing more, since the inequality itself is correct'],
+            correctAnswer: 0,
+            explanation: 'A comparison is only as good as what is known about the comparison series: say that $\\sum \\frac{1}{n^2}$ converges because it is a $p$-series with $p = 2 > 1$, then conclude "by the Direct Comparison Test". A limit is needed only for the LCT, and the decreasing check belongs to the AST and the Integral Test.'
           },
           {
             question: 'For positive terms, $\\lim a_n/b_n = 5$ and the partial sums of $\\sum b_n$ grow without bound. By LCT:',
@@ -121,13 +129,13 @@ Since $\\sum 1/n$ diverges and our series is term-by-term larger, $\\sum 1/(n - 
       type: 'text' as const,
       content: `### Summary
 
-- DCT: prove $a_n \\le b_n$ directly; used when comparison is obvious
-- LCT: compute $\\lim a_n/b_n$; easier, more flexible
-- Pick comparison by looking at dominant terms
-- $0 < L < \\infty$: both series have same behavior
-- Limit of $0$ or $\\infty$: the AP form of LCT gives no conclusion, so choose a comparison series that matches the dominant terms
+- Pick the comparison series from the dominant terms; a bounded factor suggests the DCT
+- DCT: positive terms, and the inequality must point the useful way
+- LCT: positive terms, compute $L$, and write $0 < L < \\infty$
+- Always say why the comparison series converges or diverges, and name the test
+- If the limit is $0$ or $\\infty$, choose a comparison series that matches the dominant terms
 
-> **Next:** Part 3 — Integral Test and Unusual Series.`
+> **Next:** Part 3 — The Integral Test: when to use it and what to write.`
     }
   ]
 };

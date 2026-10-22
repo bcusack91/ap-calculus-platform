@@ -16,7 +16,7 @@ export const calcabOptimizationPart7Data = {
 | 2 | Write objective function | What are you optimizing? |
 | 3 | Apply constraint | Down to one variable? |
 | 4 | Find critical points | $f'(x) = 0$ solved? |
-| 5 | Verify max/min | 2nd derivative or endpoints? |
+| 5 | Justify absolute max/min | Only critical point, or candidates? |
 | 6 | Answer the question | Units included? |
 
 ### Common AP Mistakes
@@ -24,7 +24,7 @@ export const calcabOptimizationPart7Data = {
 | Mistake | Fix |
 |:---:|:---:|
 | Not stating the domain | Write $0 < x < \\text{bound}$ |
-| Forgetting to verify max vs min | Always use 2nd derivative test |
+| Justifying only a local max | Add "only critical point" or compare candidates |
 | Wrong constraint | Re-read what's "fixed" or "given" |
 | Ignoring endpoints on $[a,b]$ | Compare $f$ at all candidates |
 | Not labeling units | Include m, cm$^2$, etc. |`
@@ -103,11 +103,11 @@ export const calcabOptimizationPart7Data = {
             explanation: 'Concave up at critical point = local minimum (holds water like a cup).'
           },
           {
-            label: 'For "set up but do not solve," you earn full credit by showing:',
-            options: ['Objective, constraint, $f\'(x) = 0$, domain', 'The final numerical answer, with its units', 'A labeled graph of the objective', 'The objective and constraint only'],
-            correctAnswers: ['Objective, constraint, $f\'(x) = 0$, domain'],
-            hints: ['Show all the calculus setup.'],
-            explanation: 'Full credit requires the objective function, constraint applied, $f\'(x) = 0$ written, and domain stated.'
+            label: 'On a closed interval $[a, b]$, the absolute maximum of a continuous $f$ is found by:',
+            options: ['Comparing $f$ at critical points and at $a$, $b$', 'Using $f\'\'(c) < 0$ at one critical point', 'Evaluating $f$ at the endpoints $a$ and $b$ only', 'Locating where $f\'\'$ changes sign'],
+            correctAnswers: ['Comparing $f$ at critical points and at $a$, $b$'],
+            hints: ['Extreme Value Theorem: the maximum is at a critical point or an endpoint.'],
+            explanation: 'The Candidates Test: evaluate $f$ at every critical point in $(a, b)$ and at both endpoints; the largest value is the absolute maximum. $f\'\'(c) < 0$ gives only a local maximum, and $f\'\'$ changing sign locates inflection points.'
           },
           {
             label: 'An open-top cylinder with fixed volume has optimal ratio:',
@@ -152,7 +152,7 @@ You've mastered **Optimization**:
 | 6 | AP-style workshop | \u2705 |
 | 7 | Comprehensive assessment | \u2705 |
 
-> **Key Fact:** The 5-step optimization strategy (variables \u2192 objective \u2192 constraint \u2192 critical points \u2192 verify) works for every optimization problem. On the AP exam, always justify your answer using the Second Derivative Test or endpoint comparison.`
+> **Key Fact:** The 5-step optimization strategy (variables \u2192 objective \u2192 constraint \u2192 critical points \u2192 verify) works for every optimization problem. On the AP exam, justify the absolute extremum: a sign change of the derivative at the only critical point, or a comparison of all candidates on a closed interval.`
     }
   ]
 };

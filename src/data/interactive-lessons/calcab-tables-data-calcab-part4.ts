@@ -27,7 +27,7 @@ $$\\boxed{\\exists\\, c \\in (a,b) \\text{ such that } f(c) = k}$$
 | MVT | Continuous + differentiable | Guarantees a specific $f'(c)$ |
 | IVT | Continuous only | Guarantees $f$ attains a value $k$ |
 
-> **AP Tip:** You MUST cite the theorem by name and verify all hypotheses for full credit.
+> **AP Tip:** Name the theorem and show that its hypotheses hold (for MVT: continuous on $[a,b]$ and differentiable on $(a,b)$). The hypotheses are part of the justification.
 
 ### Worked Example \u2014 MVT
 
@@ -35,7 +35,7 @@ $$\\boxed{\\exists\\, c \\in (a,b) \\text{ such that } f(c) = k}$$
 |:---:|:---:|:---:|:---:|
 | $f(x)$ | 3 | 12 | 6 |
 
-$f$ is differentiable on $(1,4)$.
+$f$ is continuous on $[1,4]$ and differentiable on $(1,4)$.
 
 By MVT, $\\exists\\, c \\in (1,4)$ such that $f'(c) = \\frac{12 - 3}{4 - 1} = 3$.
 
@@ -51,7 +51,7 @@ If $f'$ values are in a table and $f'$ is differentiable:
 
 $$f''(c) = \\frac{f'(b) - f'(a)}{b - a}$$
 
-This is MVT applied to $f'$ (guarantees $f''(c)$ exists).`
+This is MVT applied to $f'$: it guarantees some $c$ in $(a, b)$ where $f''(c)$ equals that quotient (it needs $f'$ continuous on $[a,b]$ and differentiable on $(a,b)$, true when $f$ is twice-differentiable).`
     },
     {
       id: 'td4-quiz1',
@@ -115,15 +115,14 @@ This is MVT applied to $f'$ (guarantees $f''(c)$ exists).`
       type: 'input-box' as const,
       content: '**Apply MVT.** \u270d\ufe0f\n\n$h$ is differentiable. $h(2) = 7$, $h(8) = 19$.',
       exercise: {
-        question: 'By MVT, there exists $c \\in (2,8)$ where $h\'(c) = a/b$ in lowest terms. Enter **$a + b$**.',
-        correctAnswer: '3',
-        acceptableAnswers: ['3'],
+        question: 'By MVT, there is a $c \\in (2,8)$ where $h\'(c)$ equals what value?',
+        correctAnswer: '2',
+        acceptableAnswers: ['2', '12/6'],
         hints: [
           '$h\'(c) = \\frac{h(8) - h(2)}{8 - 2}$.',
-          '$= \\frac{19 - 7}{6} = \\frac{12}{6} = 2$.',
-          '$2 = 2/1$, so $a + b = 2 + 1 = 3$.'
+          '$= \\frac{19 - 7}{6} = \\frac{12}{6} = 2$.'
         ],
-        explanation: '$h\'(c) = \\frac{12}{6} = 2 = \\frac{2}{1}$. $a + b = 3$.'
+        explanation: '$h$ is differentiable, so MVT applies: $h\'(c) = \\frac{h(8) - h(2)}{8 - 2} = \\frac{19 - 7}{6} = 2$.'
       }
     },
     {

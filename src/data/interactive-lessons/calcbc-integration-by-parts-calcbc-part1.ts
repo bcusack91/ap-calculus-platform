@@ -115,11 +115,11 @@ $$\\boxed{\\int x e^x\\,dx = e^x(x - 1) + C}$$
             explanation: '$\\ln x$ is Logarithmic (L), which beats the Algebraic factor $x$ (the A in LIATE). So $u = \\ln x$, $dv = x\\,dx$.'
           },
           {
-            label: 'For $\\int e^x \\sin x\\,dx$, the LIATE rule suggests $u$ should be:',
-            options: ['$u = e^x$', '$u = \\sin x$', 'Either works'],
+            label: 'For $\\int e^x \\sin x\\,dx$, which $u$ does the LIATE order pick?',
+            options: ['$u = e^x$', '$u = \\sin x$', '$u = e^x \\sin x$'],
             correctAnswers: ['$u = \\sin x$'],
             hints: ['Trigonometric (T) has higher priority than Exponential (E).'],
-            explanation: 'Trig (T) beats Exponential (E) in LIATE. But for cycling problems, either choice works \u2014 you\u2019ll see this in Part 3.'
+            explanation: 'Trig (T) comes before Exponential (E) in LIATE, so LIATE picks $u = \\sin x$. For this cycling integral $u = e^x$ also works, as Part 3 shows, as long as you keep the same type of choice in the second application. Taking the whole integrand as $u$ leaves $dv = dx$, which makes the integral harder.'
           }
         ]
       }
@@ -129,10 +129,10 @@ $$\\boxed{\\int x e^x\\,dx = e^x(x - 1) + C}$$
       type: 'input-box' as const,
       content: '**Compute an IBP Integral**',
       exercise: {
-        question: 'Evaluate $\\int_0^1 xe^x\\,dx$. The formula gives $[xe^x - e^x]_0^1 = (e - e) - (0 - 1)$. What is the exact numerical answer?',
+        question: 'Evaluate $\\int_0^1 xe^x\\,dx$ using integration by parts. Give the exact value.',
         correctAnswer: '1',
         acceptableAnswers: ['1', '1.0'],
-        hints: ['Plug in bounds: at $x=1$, $xe^x - e^x = e - e = 0$. At $x=0$, $0 - 1 = -1$.', 'Result: $0 - (-1) = 1$.'],
+        hints: ['$u = x$, $dv = e^x\\,dx$ gives the antiderivative $xe^x - e^x$.', 'At $x=1$: $e - e = 0$. At $x=0$: $0 - 1 = -1$.'],
         explanation: '$[e^x(x-1)]_0^1 = e^1(1-1) - e^0(0-1) = 0 - (-1) = 1$.'
       }
     },

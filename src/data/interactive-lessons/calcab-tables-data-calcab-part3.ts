@@ -28,8 +28,8 @@ $$\\boxed{\\int_a^b f(x)\\,dx \\approx \\sum_{i=1}^{n} \\frac{\\Delta x_i}{2}\\b
 
 | If $f$ is... | Left sum | Right sum | Trapezoid |
 |:---|:---:|:---:|:---:|
-| Increasing | Under | Over | Exact avg |
-| Decreasing | Over | Under | Exact avg |
+| Increasing | Under | Over | \u2014 |
+| Decreasing | Over | Under | \u2014 |
 | Concave up | \u2014 | \u2014 | Over |
 | Concave down | \u2014 | \u2014 | Under |
 

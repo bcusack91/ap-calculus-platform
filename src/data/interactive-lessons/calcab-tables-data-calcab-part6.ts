@@ -29,9 +29,9 @@ export const calcabTablesDataPart6Data = {
 
 **(a) Estimate $T'(7)$ with units. Explain the meaning.**
 
-$$T'(7) \\approx \\frac{T(12) - T(3)}{12 - 3} = \\frac{120 - 170}{9} = -\\frac{50}{9} \\approx -5.56 \\text{ \u00b0F/min}$$
+$$T'(7) \\approx \\frac{T(12) - T(3)}{12 - 3} = \\frac{120 - 170}{9} = -\\frac{50}{9} \\approx -5.556 \\text{ \u00b0F/min}$$
 
-At $t = 7$ minutes, the temperature is decreasing at approximately $5.56$ \u00b0F per minute.
+At $t = 7$ minutes, the temperature is decreasing at approximately $5.556$ \u00b0F per minute.
 
 **(b) Use trapezoidal rule to approximate $\\int_0^{20} T(t)\\,dt$. Interpret.**
 
@@ -45,9 +45,11 @@ The average temperature is $\\frac{1}{20}\\int_0^{20} T\\,dt \\approx \\frac{270
 
 $\\frac{T(20)-T(0)}{20-0} = \\frac{100-200}{20} = -5$. By MVT, $\\exists\\, c \\in (0,20)$ with $T'(c) = -5$. \u2713
 
-**(d) Is the trapezoidal estimate an over or underestimate?**
+**(d) Given that $T''(t) > 0$ for $0 < t < 20$, is the trapezoidal estimate in (b) an overestimate or an underestimate? Explain.**
 
-First differences: $-30, -30, -20, -20$. The differences are nondecreasing (getting less negative), so $T'' \\ge 0$ (concave up). Trapezoid overestimates for concave up $\\Rightarrow$ **overestimate**.`
+Since $T''(t) > 0$, the graph of $T$ is concave up on $[0, 20]$. The top of each trapezoid is a secant segment, and a secant segment lies above a concave-up graph, so the trapezoidal sum is an **overestimate** of $\\int_0^{20} T(t)\\,dt$.
+
+> **Why the concavity is given:** you cannot read concavity off this table. The widths are unequal ($3, 4, 5, 8$), so the raw differences $-30, -30, -20, -20$ carry no slope information, and even the slopes $-10, -7.5, -4, -2.5$ only describe the data points, not $T$ between them. AP states the concavity whenever an over/under question depends on it.`
     },
     {
       id: 'td6-quiz1',
@@ -128,7 +130,7 @@ First differences: $-30, -30, -20, -20$. The differences are nondecreasing (gett
       content: `### Key Takeaways \u2014 Part 6
 
 - AP FRQs combine derivative estimates, integrals, MVT, and concavity
-- Always include units and contextual interpretation
+- Give units when the question asks for them, and interpret in context
 - Cite MVT/IVT by name and verify hypotheses
 - Concavity determines over/under for trapezoidal estimates`
     }

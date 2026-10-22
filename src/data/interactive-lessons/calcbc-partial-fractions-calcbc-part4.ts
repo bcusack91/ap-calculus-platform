@@ -118,11 +118,11 @@ $$\\boxed{\\int \\frac{1}{x^2-4}\\,dx = \\frac{1}{4}\\ln\\left|\\frac{x-2}{x+2}\
       type: 'input-box' as const,
       content: '**Definite Integral Computation**',
       exercise: {
-        question: 'Evaluate $\\int_3^5 \\frac{1}{x^2-4}\\,dx$. The antiderivative is $\\frac{1}{4}\\ln|x-2| - \\frac{1}{4}\\ln|x+2|$. Compute: $\\frac{1}{4}[\\ln\\frac{3}{7} - \\ln\\frac{1}{5}]$. This simplifies to $\\frac{1}{4}\\ln\\frac{a}{b}$. What is $a + b$ (where $\\frac{a}{b}$ is fully reduced)?',
-        correctAnswer: '22',
-        acceptableAnswers: ['22'],
-        hints: ['$\\frac{1}{4}[\\ln\\frac{3}{7} - \\ln\\frac{1}{5}] = \\frac{1}{4}\\ln\\frac{3/7}{1/5} = \\frac{1}{4}\\ln\\frac{15}{7}$.', '$a = 15$, $b = 7$, $a + b = 22$.'],
-        explanation: '$\\frac{1}{4}\\ln\\frac{15}{7}$. So $a = 15$, $b = 7$, $a + b = 22$.'
+        question: 'Evaluate $\\int_3^5 \\frac{1}{x^2-4}\\,dx$. The antiderivative is $\\frac{1}{4}\\ln|x-2| - \\frac{1}{4}\\ln|x+2|$. Give the value of the definite integral to three decimal places.',
+        correctAnswer: '0.191',
+        acceptableAnswers: ['0.191', '0.1905', '(1/4)ln(15/7)', '1/4 ln(15/7)'],
+        hints: ['$\\frac{1}{4}[\\ln\\frac{3}{7} - \\ln\\frac{1}{5}] = \\frac{1}{4}\\ln\\frac{3/7}{1/5} = \\frac{1}{4}\\ln\\frac{15}{7}$.', '$\\frac{1}{4}\\ln\\frac{15}{7} \\approx \\frac{1}{4}(0.762)$.'],
+        explanation: '$\\frac{1}{4}\\left[\\ln\\frac{3}{7} - \\ln\\frac{1}{5}\\right] = \\frac{1}{4}\\ln\\frac{15}{7} \\approx 0.191$.'
       }
     },
     {

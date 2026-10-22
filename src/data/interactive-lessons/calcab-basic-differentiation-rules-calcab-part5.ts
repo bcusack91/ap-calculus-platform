@@ -50,7 +50,7 @@ $$\\boxed{f''(x) = \\frac{d^2 y}{dx^2} = \\frac{d}{dx}\\left[\\frac{dy}{dx}\\rig
 | $f^{(5)}(x)$ | $120$ | Constant! |
 | $f^{(6)}(x)$ | $0$ | Zero forever |
 
-> **Key Principle:** Any polynomial of degree $n$ has $f^{(n+1)}(x) = 0$. The $n$th derivative of $x^n$ is $n!$ (n factorial).
+> **Key Principle:** Any polynomial of degree $n$ has $f^{(n+1)}(x) = 0$.
 
 ---
 

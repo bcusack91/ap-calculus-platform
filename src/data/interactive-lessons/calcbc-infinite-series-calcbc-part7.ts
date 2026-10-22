@@ -13,12 +13,12 @@ export const calcbcSeriesPart7Data = {
 | Test | Hypotheses | Conclusion |
 |------|-----------|-----------|
 | **Divergence** | $\\lim a_n \\neq 0$ | Diverges |
-| **Geometric** | $\\sum ar^n$ | Converges iff $|r| < 1$, sum $= a/(1-r)$ |
+| **Geometric** | $\\sum ar^n$ | Converges iff $\\lvert r\\rvert < 1$, sum $= a/(1-r)$ |
 | **$p$-Series** | $\\sum 1/n^p$ | Converges iff $p > 1$ |
 | **Integral** | $f$ positive, continuous, decreasing | $\\sum a_n$ and $\\int f$ converge/diverge together |
 | **DCT** | $0 \\le a_n \\le b_n$ | $\\sum b_n$ conv. $\\Rightarrow \\sum a_n$ conv. |
-| **LCT** | $\\lim a_n/b_n = L > 0$ | Both converge or both diverge |
-| **Ratio** | $L = \\lim |a_{n+1}/a_n|$ | $L < 1$: conv; $L > 1$: div; $L = 1$: inconc. |
+| **LCT** | $\\lim a_n/b_n = L$, $0 < L < \\infty$ | Both converge or both diverge |
+| **Ratio** | $L = \\lim \\lvert a_{n+1}/a_n\\rvert$ | $L < 1$: conv; $L > 1$: div; $L = 1$: inconc. |
 | **AST** | $(-1)^n b_n$, $b_n$ decreasing, $b_n \\to 0$ | Converges |
 
 $$\\boxed{\\text{Absolute convergence} \\implies \\text{Convergence} \\implies a_n \\to 0}$$
@@ -126,7 +126,7 @@ You've mastered:
 - **Absolute vs. Conditional Convergence** — fundamental classification
 - **Test Selection Strategy** — choosing the right tool for each series
 
-> **Key Fact:** Series convergence is a major BC topic, typically appearing in both MC and FRQ sections. Unit 10 (series) carries 15–20% of the BC multiple-choice weighting.
+> **Key Fact:** Series convergence is a major BC topic, typically appearing in both MC and FRQ sections. Unit 10 (series) carries 17–18% of the BC exam weighting (CED).
 
 > **Up Next:** Alternating Series — deep dive into the Alternating Series Test, error bounds, and applications.`
     }

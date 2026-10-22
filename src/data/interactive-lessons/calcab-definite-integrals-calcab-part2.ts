@@ -26,6 +26,66 @@ $$\\boxed{\\text{Signed area} = \\int_a^b f(x)\\,dx \\qquad \\text{Total area} =
 > **Key Concept:** The definite integral gives **signed area**, not total area. The AP Exam tests this distinction frequently!`
     },
     {
+      id: 'int2-riemann-limit',
+      type: 'text' as const,
+      content: `### Reading a Riemann-Sum Limit as an Integral
+
+On the AP exam you are often shown a limit of a Riemann sum and asked which definite integral it equals (or the reverse). For a right Riemann sum on $[a, b]$ with $n$ equal subintervals:
+
+$$\\Delta x = \\frac{b-a}{n}, \\qquad x_i = a + i\\,\\Delta x$$
+
+$$\\boxed{\\lim_{n \\to \\infty} \\sum_{i=1}^{n} f\\!\\left(a + \\frac{(b-a)\\,i}{n}\\right)\\frac{b-a}{n} = \\int_a^b f(x)\\,dx}$$
+
+**Three-step recipe**
+
+| Step | Look for | It tells you |
+|:---:|:---:|:---:|
+| 1 | The factor $\\frac{k}{n}$ multiplying everything | $\\Delta x$, so the width is $b - a = k$ |
+| 2 | The constant term inside $f$ (the $a$ in $a + \\frac{ki}{n}$) | The lower limit $a$; then $b = a + k$ |
+| 3 | What is done to $x_i$ | The function $f$ |
+
+**Worked example:** $\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\left(2 + \\frac{3i}{n}\\right)^2 \\frac{3}{n}$
+
+- $\\Delta x = \\frac{3}{n}$, so the width is $3$.
+- $x_i = 2 + \\frac{3i}{n}$ starts at $a = 2$, so $b = 5$.
+- $f(x) = x^2$.
+
+$$\\int_2^5 x^2\\,dx = \\frac{125 - 8}{3} = 39$$
+
+**The reverse:** to write $\\int_1^4 \\sqrt{x}\\,dx$ as a limit, use $\\Delta x = \\frac{3}{n}$ and $x_i = 1 + \\frac{3i}{n}$:
+
+$$\\int_1^4 \\sqrt{x}\\,dx = \\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\sqrt{1 + \\frac{3i}{n}}\\cdot\\frac{3}{n}$$
+
+> **AP Tip:** You never need summation formulas. Convert the limit to an integral, then evaluate it with the Fundamental Theorem. Watch for a shifted form: the same limit can be written $\\int_0^3 (2 + x)^2\\,dx$, which has the same value.`
+    },
+    {
+      id: 'int2-riemann-quiz',
+      type: 'multiple-choice' as const,
+      content: '**Riemann-Sum Limits** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'Which integral equals $\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\left(1 + \\frac{2i}{n}\\right)^3 \\frac{2}{n}$?',
+            options: ['$\\int_1^3 x^3\\,dx$', '$\\int_0^2 x^3\\,dx$', '$\\int_1^2 x^3\\,dx$', '$2\\int_1^3 x^3\\,dx$'],
+            correctAnswer: 0,
+            explanation: '$\\Delta x = \\frac{2}{n}$ gives a width of 2, and $x_i = 1 + \\frac{2i}{n}$ starts at $a = 1$, so $b = 3$ and $f(x) = x^3$. $\\int_0^2 x^3\\,dx$ drops the shift by 1, $\\int_1^2$ uses 2 as the upper limit instead of the width, and the extra factor 2 counts $\\Delta x$ twice.'
+          },
+          {
+            question: 'Which limit equals $\\displaystyle\\int_0^{\\pi} \\sin x\\,dx$?',
+            options: ['$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\sin\\left(\\frac{\\pi i}{n}\\right)\\frac{\\pi}{n}$', '$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\sin\\left(\\frac{i}{n}\\right)\\frac{\\pi}{n}$', '$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\sin\\left(\\frac{\\pi i}{n}\\right)\\frac{1}{n}$', '$\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\pi\\sin\\left(\\frac{\\pi i}{n}\\right)$'],
+            correctAnswer: 0,
+            explanation: 'On $[0, \\pi]$, $\\Delta x = \\frac{\\pi}{n}$ and $x_i = \\frac{\\pi i}{n}$, so each term is $\\sin(x_i)\\Delta x$. $\\sin\\left(\\frac{i}{n}\\right)$ samples only $[0, 1]$, $\\frac{1}{n}$ is the wrong width, and $\\sum \\pi\\sin\\left(\\frac{\\pi i}{n}\\right)$ has no factor $\\frac{1}{n}$ (no $\\Delta x$), so it grows without bound.'
+          },
+          {
+            question: 'What is the value of $\\displaystyle\\lim_{n \\to \\infty} \\sum_{i=1}^{n} \\sqrt{4 + \\frac{5i}{n}}\\cdot\\frac{5}{n}$?',
+            options: ['$\\frac{38}{3}$', '$18$', '$\\frac{16}{3}$', '$\\frac{2}{3}\\cdot 5^{3/2}$'],
+            correctAnswer: 0,
+            explanation: 'Width 5, starting at $a = 4$, so the limit is $\\int_4^9 \\sqrt{x}\\,dx = \\frac{2}{3}\\left(9^{3/2} - 4^{3/2}\\right) = \\frac{2}{3}(27 - 8) = \\frac{38}{3}$. The value 18 is $\\int_0^9 \\sqrt{x}\\,dx$, $\\frac{16}{3}$ is $\\int_0^4 \\sqrt{x}\\,dx$, and $\\frac{2}{3}\\cdot 5^{3/2}$ is $\\int_0^5 \\sqrt{x}\\,dx$, which ignores the shift by 4.'
+          }
+        ]
+      }
+    },
+    {
       id: 'int2-geometric',
       type: 'text' as const,
       content: `### Geometric Evaluation
@@ -177,8 +237,9 @@ $= 2\\int_0^1 x^4\\,dx + 0 = 2 \\cdot \\frac{1}{5} = \\frac{2}{5}$
 | Concept | Key Point |
 |:---:|:---:|
 | Definition | $\\int_a^b f\\,dx = \\lim_{n \\to \\infty} \\sum f(x_i^*)\\Delta x$ |
+| Limit → integral | $\\Delta x = \\frac{b-a}{n}$ gives the width; the constant in $x_i$ gives $a$ |
 | Signed area | Above axis = +, below = − |
-| Total area | $\\int |f(x)|\\,dx$ (absolute value) |
+| Total area | $\\int \\lvert f(x)\\rvert\\,dx$ (absolute value) |
 | Odd functions | Integral = 0 on symmetric intervals |
 | Even functions | $2 \\times$ integral from 0 to $a$ |
 | Geometry | Use triangles, trapezoids, semicircles |

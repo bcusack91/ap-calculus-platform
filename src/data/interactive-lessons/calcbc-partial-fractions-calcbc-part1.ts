@@ -52,7 +52,7 @@ $$\\frac{P(x)}{(x-a)(x-b)} = \\frac{A}{x-a} + \\frac{B}{x-b}$$
 | Multiply through | $1 = A(x+1) + B(x-1)$ |
 | Plug in $x = 1$ | $1 = 2A \\Rightarrow A = \\frac{1}{2}$ |
 | Plug in $x = -1$ | $1 = -2B \\Rightarrow B = -\\frac{1}{2}$ |
-| Integrate | $\\frac{1}{2}\\ln|x-1| - \\frac{1}{2}\\ln|x+1| + C$ |
+| Integrate | $\\frac{1}{2}\\ln\\lvert x-1\\rvert - \\frac{1}{2}\\ln\\lvert x+1\\rvert + C$ |
 
 $$\\boxed{\\int \\frac{1}{x^2-1}\\,dx = \\frac{1}{2}\\ln\\left|\\frac{x-1}{x+1}\\right| + C}$$`
     },
@@ -129,11 +129,11 @@ Multiply through: $x + 7 = A(x-1)(x+3) + B(x+1)(x+3) + C(x+1)(x-1)$
       type: 'input-box' as const,
       content: '**Cover-Up Computation**',
       exercise: {
-        question: 'For $\\frac{x+5}{(x+1)(x-2)}$, use the cover-up method to find $A$ (numerator over $x+1$). Cover $(x+1)$ and plug in $x = -1$: $A = \\frac{-1+5}{-1-2}$. What is $A$ as a fraction (use - for negative)?',
+        question: 'For $\\frac{x+5}{(x+1)(x-2)}$, use the cover-up method to find $A$, the numerator over $x+1$. Enter $A$ as a fraction (use - for negative).',
         correctAnswer: '-4/3',
         acceptableAnswers: ['-4/3', '-1.33', '-1.333'],
-        hints: ['$\\frac{-1+5}{-1-2} = \\frac{4}{-3}$.'],
-        explanation: '$A = \\frac{4}{-3} = -\\frac{4}{3}$.'
+        hints: ['Cover $(x+1)$ and substitute $x = -1$ into what is left: $\\frac{x+5}{x-2}$.'],
+        explanation: '$A = \\frac{-1+5}{-1-2} = \\frac{4}{-3} = -\\frac{4}{3}$.'
       }
     },
     {
@@ -146,7 +146,7 @@ Multiply through: $x + 7 = A(x-1)(x+3) + B(x+1)(x+3) + C(x+1)(x-1)$
 | When to use | Proper rational function with factorable denominator |
 | Distinct linear factors | One constant per factor: $\\frac{A}{x-a} + \\frac{B}{x-b}$ |
 | Finding constants | Plug in roots (cover-up/Heaviside method) |
-| Integration | Each $\\frac{A}{x-a}$ integrates to $A\\ln|x-a| + C$ |
+| Integration | Each $\\frac{A}{x-a}$ integrates to $A\\ln\\lvert x-a\\rvert + C$ |
 
 > **Coming Up:** Part 2 sharpens the **cover-up method** and evaluates definite integrals with logarithm answers.`
     }

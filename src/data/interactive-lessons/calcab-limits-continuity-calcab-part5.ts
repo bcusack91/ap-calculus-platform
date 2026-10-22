@@ -50,7 +50,7 @@ $f$ is discontinuous at $x = 1$, even though $\\lim_{x \\to 1} f(x) = 2$ exists.
 2. $\\lim_{x \\to 3} g(x) = 9$ ✓
 3. $9 \\neq 5$ ❌ (Condition 3 fails)
 
-> **AP Tip:** On free-response questions, always check all three conditions explicitly. Even if the answer seems obvious, showing the systematic check earns full credit.`
+> **AP Tip:** On free-response questions, show explicitly that $\\lim_{x \\to a} f(x)$ exists and equals $f(a)$, even when the answer seems obvious.`
     },
     {
       id: 'limit5-types',

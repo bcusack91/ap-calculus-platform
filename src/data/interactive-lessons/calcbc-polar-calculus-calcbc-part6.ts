@@ -29,7 +29,7 @@ Mixed practice covering polar coordinates, graphing, area, slopes, and rates of 
             explanation: '$r^2 = r\\sin\\theta + r\\cos\\theta \\implies x^2+y^2 = y+x \\implies (x-1/2)^2+(y-1/2)^2 = 1/2$. A circle. Replacing $\\sin\\theta$ and $\\cos\\theta$ by $y$ and $x$ without multiplying by $r$ gives a line, $\\sin^2\\theta + \\cos^2\\theta = 1$ is not the same equation, and $(x-1)^2 + (y-1)^2 = 2$ forgets to halve when completing the square.'
           },
           {
-            question: 'The area shared by $r = \\cos\\theta$ and $r = \\sin\\theta$ intersect at:',
+            question: 'The circles $r = \\cos\\theta$ and $r = \\sin\\theta$ intersect at:',
             options: ['$\\theta = \\pi/4$ and the origin', '$\\theta = \\pi/4$ only', '$\\theta = 0$ and $\\theta = \\pi/2$', 'They do not intersect'],
             correctAnswer: 0,
             explanation: '$\\cos\\theta = \\sin\\theta \\implies \\theta = \\pi/4$. Both circles also pass through the origin (at different $\\theta$-values).'

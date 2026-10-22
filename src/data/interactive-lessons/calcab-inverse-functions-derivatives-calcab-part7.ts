@@ -18,8 +18,6 @@ export const calcabInverseFunctionsPart7Data = {
 | $\\frac{d}{dx}[\\arctan u]$ | $\\frac{u'}{1+u^2}$ |
 | $\\frac{d}{dx}[\\ln u]$ | $\\frac{u'}{u}$ |
 | $\\frac{d}{dx}[\\log_a u]$ | $\\frac{u'}{u\\ln a}$ |
-| $\\int\\frac{dx}{\\sqrt{1-x^2}}$ | $\\arcsin x + C$ |
-| $\\int\\frac{dx}{1+x^2}$ | $\\arctan x + C$ |
 
 ### Common AP Mistakes
 
@@ -28,7 +26,7 @@ export const calcabInverseFunctionsPart7Data = {
 | Using $f'(a)$ instead of $f'(f^{-1}(a))$ | Always find $f^{-1}(a)$ first |
 | Forgetting chain rule on $\\arcsin(u)$ | Multiply by $u'$ |
 | Sign error on $\\arccos$ | $\\arccos$ has a negative: $-u'/\\sqrt{1-u^2}$ |
-| $\\ln(fg) \\neq \\ln f \\cdot \\ln g$ | Use $\\ln(fg) = \\ln f + \\ln g$ |
+| Writing $\\ln(fg) = \\ln f \\cdot \\ln g$ | Use $\\ln(fg) = \\ln f + \\ln g$ |
 | Swapping point and slope | Inverse swaps $x$/$y$: point is $(a, f^{-1}(a))$ |`
     },
     {
@@ -56,10 +54,10 @@ export const calcabInverseFunctionsPart7Data = {
             explanation: '$\\frac{-\\sin x}{\\cos x} = -\\tan x$.'
           },
           {
-            question: '$\\int_0^1\\frac{dx}{1+x^2} =$',
-            options: ['$\\frac{\\pi}{4}$', '$\\frac{\\pi}{2}$', '$1$', '$\\ln 2$'],
+            question: '$\\frac{d}{dx}[\\arcsin(x/2)]$ at $x = 1$ equals:',
+            options: ['$\\frac{1}{\\sqrt{3}}$', '$\\frac{2}{\\sqrt{3}}$', '$\\frac{1}{2}$', '$\\frac{\\pi}{6}$'],
             correctAnswer: 0,
-            explanation: '$[\\arctan x]_0^1 = \\pi/4 - 0 = \\pi/4$.'
+            explanation: '$\\frac{1/2}{\\sqrt{1 - x^2/4}}$ at $x = 1$ is $\\frac{1/2}{\\sqrt{3}/2} = \\frac{1}{\\sqrt{3}}$. Dropping the inner factor $\\frac{1}{2}$ gives $\\frac{2}{\\sqrt{3}}$, and $\\frac{\\pi}{6}$ is the function value $\\arcsin(1/2)$, not the derivative.'
           }
         ]
       }
@@ -112,11 +110,11 @@ export const calcabInverseFunctionsPart7Data = {
             explanation: '$f(5)=10$ means $g(10) = 5$, so the point is $(10,5)$.'
           },
           {
-            label: '$\\int\\frac{3\\,dx}{1+9x^2}$ equals:',
-            options: ['$\\arctan(3x) + C$', '$3\\arctan(x) + C$', '$\\frac{1}{3}\\arctan(3x)+C$', '$\\arctan(x)+C$'],
-            correctAnswers: ['$\\arctan(3x) + C$'],
-            hints: ['Factor: $\\frac{3}{1+(3x)^2}$. This is $\\frac{d}{dx}[\\arctan(3x)]$.'],
-            explanation: '$\\frac{3}{1+9x^2} = \\frac{3}{1+(3x)^2}$. Antiderivative: $\\arctan(3x) + C$.'
+            label: '$\\frac{3}{1+9x^2}$ is the derivative of:',
+            options: ['$\\arctan(3x)$', '$3\\arctan(x)$', '$\\frac{1}{3}\\arctan(3x)$', '$\\arctan(x)$'],
+            correctAnswers: ['$\\arctan(3x)$'],
+            hints: ['Write $\\frac{3}{1+(3x)^2}$ and compare with $\\frac{u\'}{1+u^2}$.'],
+            explanation: '$\\frac{d}{dx}[\\arctan(3x)] = \\frac{3}{1+(3x)^2} = \\frac{3}{1+9x^2}$. The derivative of $3\\arctan x$ is $\\frac{3}{1+x^2}$, and $\\frac{1}{3}\\arctan(3x)$ has derivative $\\frac{1}{1+9x^2}$.'
           }
         ]
       }

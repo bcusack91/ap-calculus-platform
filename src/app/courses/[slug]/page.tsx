@@ -21,6 +21,8 @@ import {
 } from '@/data/course-feature-config'
 import { CRAM_PLANS, isCramPlanCourse } from '@/data/cram-plans'
 import { courseHubPaths } from '@/data/course-metadata'
+import { hasIncludedCourses } from '@/lib/course-includes'
+import { fixedLayoutHubSections, visibleTopics, type HubSection } from '@/lib/course-hub-sections'
 
 // ISR: revalidate content every hour
 export const revalidate = 3600
@@ -123,32 +125,28 @@ export default async function CoursePage({ params }: CoursePageProps) {
     notFound()
   }
 
-  // AP Calculus BC is a superset of AB — include AB categories as foundation
-  let abCategories: typeof course.categories = []
-  if (slug === 'ap-calculus-bc') {
-    const abCourse = await prisma.course.findUnique({
-      where: { slug: 'ap-calculus-ab' },
-      include: {
-        categories: {
-          include: {
-            topics: {
-              where: { parentTopicId: null },
-              orderBy: { order: 'asc' },
-              include: {
-                _count: { select: { subtopics: true } }
-              }
-            }
-          },
-          orderBy: { order: 'asc' }
-        }
-      }
-    })
-    if (abCourse) {
-      abCategories = abCourse.categories
-    }
-  }
-
-  const allCategories = [...abCategories, ...course.categories]
+  // Sections listed on the hub. The calculus courses are laid out by CED unit
+  // (src/lib/course-includes.ts): AP Calculus BC lists every AB topic in the
+  // unit that teaches it, next to the BC-only topics. Every other course lists
+  // its DB Categories. Legacy (308) and retired topic rows are never listed.
+  const includesOtherCourses = hasIncludedCourses(slug)
+  const allCategories: HubSection[] =
+    (await fixedLayoutHubSections(slug)) ??
+    course.categories.map((cat) => ({
+      id: cat.id,
+      name: cat.name,
+      slug: cat.slug,
+      description: cat.description,
+      icon: cat.icon,
+      topics: visibleTopics(cat.topics).map((t) => ({
+        id: t.id,
+        slug: t.slug,
+        title: t.title,
+        description: t.description,
+        subtopicCount: t._count.subtopics,
+        courseSlug: slug,
+      })),
+    }))
   const totalTopics = allCategories.reduce((sum, cat) => sum + cat.topics.length, 0)
   const featuredTopics = allCategories.flatMap((cat) => cat.topics).slice(0, 8)
 
@@ -246,8 +244,8 @@ export default async function CoursePage({ params }: CoursePageProps) {
                   <span className="font-bold text-gray-900 dark:text-white">100%</span>
                   <span className="text-gray-600 dark:text-gray-400">Free</span>
                 </span>
-                {abCategories.length > 0 && (
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-violet-600/10 px-4 py-1.5 text-sm font-medium text-violet-700 dark:text-violet-300 ring-1 ring-violet-600/20">
+                {includesOtherCourses && (
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-accent-subtle px-4 py-1.5 text-sm font-medium text-accent-hover dark:bg-accent-light/30 dark:text-accent-muted ring-1 ring-accent-light">
                     Includes all AB + BC content
                   </span>
                 )}
@@ -276,10 +274,10 @@ export default async function CoursePage({ params }: CoursePageProps) {
               Each topic includes detailed written explanations, worked examples, practice problems with step-by-step solutions, 
               flashcards for review, and interactive lessons to help you master the material.
             </p>
-            {abCategories.length > 0 && (
-              <p className="text-violet-700 dark:text-violet-300 font-medium">
-                Since AP Calculus BC is a superset of AB, this page includes all Calculus AB topics as your foundation, 
-                followed by the BC-exclusive topics.
+            {includesOtherCourses && (
+              <p className="text-accent-hover dark:text-accent-muted font-medium">
+                AP Calculus BC includes all of Calculus AB, so every AB lesson is listed here in the unit that
+                teaches it, next to the BC-only topics. Lessons, quizzes and progress are shared with AB.
               </p>
             )}
             {allCategories.length > 0 && (
@@ -521,7 +519,7 @@ export default async function CoursePage({ params }: CoursePageProps) {
           categories={allCategories.map(cat => ({
             id: cat.id,
             name: cat.name,
-            slug: cat.slug,
+            slug: cat.slug ?? cat.id,
             description: cat.description,
             icon: cat.icon,
             topics: cat.topics.map(t => ({
@@ -529,106 +527,28 @@ export default async function CoursePage({ params }: CoursePageProps) {
               slug: t.slug,
               title: t.title,
               description: t.description,
-              subtopicCount: t._count.subtopics,
+              subtopicCount: t.subtopicCount,
             })),
           }))}
           normalContent={allCategories.length > 0 ? (
           <div className="space-y-12">
-            {/* AB Foundation Section (only shown on BC page) */}
-            {abCategories.length > 0 && (
-              <>
-                <div className="flex items-center gap-4" id="ab-foundation">
-                  <div className="flex items-center gap-3 bg-accent-subtle dark:bg-accent-light/30 rounded-full px-6 py-2 border border-accent-light dark:border-accent-hover">
-                    <span className="text-2xl">∫</span>
-                    <h2 className="text-xl font-bold text-accent-hover dark:text-accent-muted">Calculus AB Foundation</h2>
-                  </div>
-                  <div className="flex-1 h-px bg-accent-light dark:bg-accent-light" />
-                </div>
-                {abCategories.map((category) => (
-                  <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 shadow-sm ring-1 ring-accent-light dark:ring-accent-light/50">
-                    <div className="flex items-center justify-between gap-4 mb-6">
-                      <div className="flex items-center gap-3 min-w-0">
-                        <CategoryGlyph icon={category.icon} name={category.name} gradient={colors.gradient} />
-                        <div className="min-w-0">
-                          <div className="flex flex-wrap items-center gap-2">
-                            <Link
-                              href={`/categories/${category.slug}`}
-                              className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent-muted transition-colors"
-                            >
-                              {category.name}
-                            </Link>
-                            <span className="shrink-0 rounded-full bg-accent-subtle dark:bg-accent-light/30 px-2 py-0.5 text-xs font-medium text-accent dark:text-accent-muted">AB</span>
-                          </div>
-                          {category.description && (
-                            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-1">{category.description}</p>
-                          )}
-                        </div>
-                      </div>
-                      <Link
-                        href={`/categories/${category.slug}`}
-                        className="hidden sm:inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-accent transition hover:border-accent-muted hover:bg-accent-subtle dark:border-gray-700 dark:text-accent-muted dark:hover:bg-accent-light/20"
-                      >
-                        View All →
-                      </Link>
-                    </div>
-
-                    {category.topics.length > 0 ? (
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        {category.topics.map((topic) => (
-                          <Link
-                            key={topic.id}
-                            href={`/topics/${topic.slug}`}
-                            className="group flex h-full flex-col p-4 rounded-xl border border-gray-200 bg-white hover:border-accent-muted hover:shadow-md hover:-translate-y-0.5 transition-all dark:border-gray-700 dark:bg-gray-900 dark:hover:border-accent"
-                          >
-                            <div className="flex items-start justify-between gap-2 mb-2">
-                              <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent-muted transition-colors">
-                                {topic.title}
-                              </h3>
-                              <span aria-hidden="true" className="shrink-0 text-accent-muted opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
-                            </div>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
-                              {topic.description}
-                            </p>
-                            {'_count' in topic && (topic as typeof topic & { _count: { subtopics: number } })._count.subtopics > 0 && (
-                              <span className="inline-block mt-3 text-xs font-medium text-indigo-700 bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-300 px-2 py-0.5 rounded-full">
-                                {(topic as typeof topic & { _count: { subtopics: number } })._count.subtopics} subtopics
-                              </span>
-                            )}
-                          </Link>
-                        ))}
-                      </div>
-                    ) : (
-                      <div className="text-center py-12 text-gray-500">
-                        <p className="text-lg">Topics coming soon for this category!</p>
-                      </div>
-                    )}
-                  </div>
-                ))}
-
-                {/* Divider between AB and BC sections */}
-                <div className="flex items-center gap-4" id="bc-exclusive">
-                  <div className="flex items-center gap-3 bg-violet-50 dark:bg-violet-900/30 rounded-full px-6 py-2 border border-violet-200 dark:border-violet-700">
-                    <span className="text-2xl">∬</span>
-                    <h2 className="text-xl font-bold text-violet-700 dark:text-violet-300">BC-Exclusive Topics</h2>
-                  </div>
-                  <div className="flex-1 h-px bg-violet-200 dark:bg-violet-800" />
-                </div>
-              </>
-            )}
-
-            {course.categories.map((category) => (
-              <div key={category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 shadow-sm">
+            {allCategories.map((category) => (
+              <div key={category.id} id={category.slug ?? category.id} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8 shadow-sm">
                 <div className="flex items-center justify-between gap-4 mb-6">
                   <div className="flex items-center gap-3 min-w-0">
                     <CategoryGlyph icon={category.icon} name={category.name} gradient={colors.gradient} />
                     <div className="min-w-0">
                       <div className="flex flex-wrap items-center gap-2">
-                        <Link
-                          href={`/categories/${category.slug}`}
-                          className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent-muted transition-colors"
-                        >
-                          {category.name}
-                        </Link>
+                        {category.slug ? (
+                          <Link
+                            href={`/categories/${category.slug}`}
+                            className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white hover:text-accent dark:hover:text-accent-muted transition-colors"
+                          >
+                            {category.name}
+                          </Link>
+                        ) : (
+                          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white">{category.name}</h2>
+                        )}
                         <span className="shrink-0 rounded-full bg-gray-100 dark:bg-gray-800 px-2 py-0.5 text-xs font-medium text-gray-600 dark:text-gray-400">
                           {category.topics.length} {category.topics.length === 1 ? 'topic' : 'topics'}
                         </span>
@@ -638,12 +558,14 @@ export default async function CoursePage({ params }: CoursePageProps) {
                       )}
                     </div>
                   </div>
-                  <Link
-                    href={`/categories/${category.slug}`}
-                    className="hidden sm:inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-accent transition hover:border-accent-muted hover:bg-accent-subtle dark:border-gray-700 dark:text-accent-muted dark:hover:bg-accent-light/20"
-                  >
-                    View All →
-                  </Link>
+                  {category.slug && (
+                    <Link
+                      href={`/categories/${category.slug}`}
+                      className="hidden sm:inline-flex shrink-0 items-center gap-1 rounded-full border border-gray-200 px-4 py-2 text-sm font-medium text-accent transition hover:border-accent-muted hover:bg-accent-subtle dark:border-gray-700 dark:text-accent-muted dark:hover:bg-accent-light/20"
+                    >
+                      View All →
+                    </Link>
+                  )}
                 </div>
 
                 {category.topics.length > 0 ? (
@@ -658,14 +580,18 @@ export default async function CoursePage({ params }: CoursePageProps) {
                           <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-accent dark:group-hover:text-accent-muted transition-colors">
                             {topic.title}
                           </h3>
-                          <span aria-hidden="true" className="shrink-0 text-accent-muted opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
+                          {includesOtherCourses && topic.courseSlug === slug ? (
+                            <span className="shrink-0 rounded-full bg-accent-subtle dark:bg-accent-light/30 px-2 py-0.5 text-xs font-medium text-accent dark:text-accent-muted">BC only</span>
+                          ) : (
+                            <span aria-hidden="true" className="shrink-0 text-accent-muted opacity-0 -translate-x-1 transition-all group-hover:opacity-100 group-hover:translate-x-0">→</span>
+                          )}
                         </div>
                         <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
                           {topic.description}
                         </p>
-                        {'_count' in topic && (topic as typeof topic & { _count: { subtopics: number } })._count.subtopics > 0 && (
+                        {topic.subtopicCount > 0 && (
                           <span className="inline-block mt-3 text-xs font-medium text-indigo-700 bg-indigo-100 dark:bg-indigo-900/30 dark:text-indigo-300 px-2 py-0.5 rounded-full">
-                            {(topic as typeof topic & { _count: { subtopics: number } })._count.subtopics} subtopics
+                            {topic.subtopicCount} subtopics
                           </span>
                         )}
                       </Link>

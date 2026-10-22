@@ -13,8 +13,8 @@ export const calcbcReviewPart3Data = {
 | DE type | Form | Solution method | Example |
 |---------|------|----------------|---------|
 | Separable | $dy/dx = g(x)h(y)$ | Separate and integrate both sides | $dy/dx = xy$ |
-| Linear growth/decay | $dy/dt = ky$ | $y = Ce^{kt}$ | Radioactive decay |
-| Logistic | $dP/dt = kP(1-P/L)$ | $P = L/(1+Ae^{-kt})$ | Population models |
+| Exponential growth/decay | $dy/dt = ky$ | $y = Ce^{kt}$ | Radioactive decay |
+| Logistic | $dP/dt = kP(1-P/L)$ | Interpret, no solving: $P \\to L$; fastest growth at $P = L/2$ | Population models |
 | General | $dy/dx = f(x,y)$ | Euler's method (numerical) | Complex models |
 
 > **Key Insight:** Every integral is really solving the DE $dy/dx = f(x)$. Integration IS differential equations.`
@@ -41,16 +41,16 @@ export const calcbcReviewPart3Data = {
       exercise: {
         questions: [
           {
-            question: 'The solution to $dy/dx = 2x$ with $y(0) = 5$ can be found by:',
-            options: ['Any of the three methods listed', 'Separation: $\\int dy = \\int 2x\\,dx$', 'FTC: $y = 5 + \\int_0^x 2t\\,dt$', 'Taylor series: $y(0) = 5$, $y\'(0) = 0$, $y\'\'(0) = 2$'],
+            question: 'Written with the Fundamental Theorem of Calculus, the solution to $dy/dx = 2x$ with $y(0) = 5$ is:',
+            options: ['$y = 5 + \\int_0^x 2t\\,dt$', '$y = \\int_0^x 2t\\,dt$', '$y = 5 + \\int_5^x 2t\\,dt$', '$y = 5 + 2x$'],
             correctAnswer: 0,
-            explanation: 'All methods give $y = x^2 + 5$. Separation: $y = x^2 + C$, $C = 5$. FTC: $y = 5 + x^2$. Taylor: $5 + 0 \\cdot x + (2/2)x^2 = 5 + x^2$.'
+            explanation: '$y(x) = y(0) + \\int_0^x y\'(t)\\,dt = 5 + x^2$, which matches separation of variables ($y = x^2 + C$, $C = 5$). Leaving out the 5 forces $y(0) = 0$, starting the integral at 5 mixes up the initial $y$-value with the initial $x$-value, and $5 + 2x$ uses the value of the derivative instead of accumulating it.'
           },
           {
             question: 'An Euler\'s method approximation with smaller step size $h$ is generally:',
             options: ['More accurate, but it takes more steps', 'Less accurate, because rounding error builds up over more steps', 'Exactly the same, since the slope field does not change', 'Less accurate, because each step uses a smaller slope'],
             correctAnswer: 0,
-            explanation: 'Smaller $h$ means more steps but a better approximation: the error is roughly proportional to $h$. The slope used at each step depends on the point, not on $h$, and rounding error is negligible at AP step sizes.'
+            explanation: 'Smaller $h$ means more steps but a better approximation, because each tangent-line step stays closer to the curve. The slope used at each step depends on the point, not on $h$, and rounding error is negligible at AP step sizes.'
           },
           {
             question: 'The logistic equation $dP/dt = 0.3P(1 - P/500)$ has equilibria at:',

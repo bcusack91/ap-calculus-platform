@@ -141,11 +141,11 @@ Each round of parts lowers the power of $\\ln x$ by one, so $(\\ln x)^2$ needs t
       type: 'input-box' as const,
       content: '**Numerical Evaluation**',
       exercise: {
-        question: 'Evaluate $\\int_0^1 \\arctan x\\,dx$. Using the antiderivative $x\\arctan x - \\frac{1}{2}\\ln(1+x^2)$, compute the exact answer: $\\frac{\\pi}{a} - \\frac{1}{2}\\ln b$. What is $a + b$?',
-        correctAnswer: '6',
-        acceptableAnswers: ['6'],
-        hints: ['At $x=1$: $1 \\cdot \\frac{\\pi}{4} - \\frac{1}{2}\\ln 2$. At $x=0$: $0 - 0 = 0$.', 'So the answer is $\\frac{\\pi}{4} - \\frac{1}{2}\\ln 2$. Thus $a = 4$, $b = 2$.'],
-        explanation: '$[x\\arctan x - \\frac{1}{2}\\ln(1+x^2)]_0^1 = \\frac{\\pi}{4} - \\frac{1}{2}\\ln 2$. So $a = 4$, $b = 2$, and $a + b = 6$.'
+        question: 'Evaluate $\\int_0^1 \\arctan x\\,dx$ using the antiderivative $x\\arctan x - \\frac{1}{2}\\ln(1+x^2)$. Give the value to three decimal places.',
+        correctAnswer: '0.439',
+        acceptableAnswers: ['0.439', '0.4388', 'pi/4-(1/2)ln2', 'pi/4 - (1/2)ln(2)'],
+        hints: ['At $x=1$: $1 \\cdot \\frac{\\pi}{4} - \\frac{1}{2}\\ln 2$. At $x=0$: $0 - 0 = 0$.'],
+        explanation: '$[x\\arctan x - \\frac{1}{2}\\ln(1+x^2)]_0^1 = \\frac{\\pi}{4} - \\frac{1}{2}\\ln 2 \\approx 0.785 - 0.347 = 0.439$.'
       }
     },
     {

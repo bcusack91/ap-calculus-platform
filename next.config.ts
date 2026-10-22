@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import { LEGACY_TOPIC_REDIRECTS } from "./src/lib/legacy-topic-redirects";
 import { RETIRED_AP_UNITS } from "./src/data/retired-ap-topics";
+import { RETIRED_CALC_CATEGORIES } from "./src/lib/course-includes";
 import { withSentryConfig } from "@sentry/nextjs";
 import withBundleAnalyzer from "@next/bundle-analyzer";
 import createMDX from "@next/mdx";
@@ -234,6 +235,11 @@ const nextConfig: NextConfig = {
     )
     // AP units retired because the May 2027 exam does not test them (topics: LEGACY_TOPIC_REDIRECTS).
     for (const [from, { redirect }] of Object.entries(RETIRED_AP_UNITS)) {
+      redirects.push({ source: `/categories/${from}`, destination: `/categories/${redirect}`, permanent: true })
+    }
+    // Legacy AP Calculus units retired by the Oct 2026 CED restructure
+    // (prisma/restructure-calc.ts deletes the Category rows).
+    for (const [from, { redirect }] of Object.entries(RETIRED_CALC_CATEGORIES)) {
       redirects.push({ source: `/categories/${from}`, destination: `/categories/${redirect}`, permanent: true })
     }
 

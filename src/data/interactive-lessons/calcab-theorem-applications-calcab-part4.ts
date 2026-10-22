@@ -104,7 +104,7 @@ If a ball is thrown up and returns to its starting height, at some moment the ve
       type: 'input-box' as const,
       content: '**Apply Rolle\u2019s Theorem.** \u270d\ufe0f',
       exercise: {
-        question: '$f(x) = x^3 - 12x$ satisfies $f(-2\\sqrt{3}) = f(2\\sqrt{3}) = 0$.\n\nFind the positive value of $c$ where $f\'(c) = 0$.\n\nIf $c = a$, enter **$a$** (as an integer if possible, or $a$ if $c = \\sqrt{a}$, enter **$a$**).',
+        question: '$f(x) = x^3 - 12x$ satisfies $f(-2\\sqrt{3}) = f(2\\sqrt{3}) = 0$.\n\nFind the positive value of $c$ where $f\'(c) = 0$.',
         correctAnswer: '2',
         acceptableAnswers: ['2'],
         hints: [

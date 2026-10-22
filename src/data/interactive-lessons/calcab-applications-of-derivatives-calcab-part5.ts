@@ -54,7 +54,7 @@ Average rate on $[0, 12]$: $\\frac{19-1}{12-0} = \\frac{18}{12} = \\frac{3}{2}$.
 
 MVT guarantees $f'(c) = \\frac{3}{2}$ for some $c \\in (0, 12)$.
 
-> **AP Tip:** On free-response with table data, you can also apply MVT to sub-intervals. On $[2, 5]$: $\\frac{7-4}{5-2} = 1$. On $[5, 9]$: $\\frac{13-7}{9-5} = \\frac{3}{2}$. Since $f'$ takes values $1$ and $\\frac{3}{2}$ at different points, by IVT applied to $f'$, $f'$ takes every value between.`
+> **AP Tip:** On free-response with table data, you can also apply MVT to sub-intervals. On $[2, 5]$: $\\frac{7-4}{5-2} = 1$. On $[5, 9]$: $\\frac{13-7}{9-5} = \\frac{3}{2}$. So MVT on each subinterval gives two values: $f'(c_1) = 1$ for some $c_1$ in $(2, 5)$ and $f'(c_2) = \\frac{3}{2}$ for some $c_2$ in $(5, 9)$. (MVT by itself gives only these two values. To argue that $f'$ takes every value between them, an AP justification applies IVT to $f'$, which needs $f'$ to be continuous, for example when $f$ is twice-differentiable.)`
     },
     {
       id: 'apps5-quiz1',
@@ -157,15 +157,15 @@ MVT guarantees $f'(c) = \\frac{3}{2}$ for some $c \\in (0, 12)$.
       type: 'input-box' as const,
       content: '**Apply MVT.** ✍️',
       exercise: {
-        question: 'For $f(x) = \\ln(x)$ on $[1, e^2]$, MVT guarantees $f\'(c) = \\frac{f(e^2)-f(1)}{e^2-1}$.\n\nFind $c$ (express as a fraction: numerator is $e^2 - 1$, denominator is $2$).\n\nHint: $f\'(c) = \\frac{1}{c}$ and $f(e^2) = 2$.',
+        question: 'For $f(x) = \\ln(x)$ on $[1, e^2]$, MVT guarantees $f\'(c) = \\frac{f(e^2)-f(1)}{e^2-1}$.\n\nFind $c$. Give an exact answer, or a decimal correct to three places.',
         correctAnswer: '(e^2-1)/2',
-        acceptableAnswers: ['(e^2-1)/2', '(e^2 - 1)/2', '(e²-1)/2', '3.195'],
+        acceptableAnswers: ['(e^2-1)/2', '(e^2 - 1)/2', '(e²-1)/2', '3.195', '3.194'],
         hints: [
           'Average rate: $\\frac{2-0}{e^2-1} = \\frac{2}{e^2-1}$.',
           'Set $\\frac{1}{c} = \\frac{2}{e^2-1}$.',
           'Solve: $c = \\frac{e^2-1}{2}$.'
         ],
-        explanation: 'Average rate = $\\frac{\\ln(e^2)-\\ln(1)}{e^2-1} = \\frac{2}{e^2-1}$.\\n\\n$f\'(c) = \\frac{1}{c} = \\frac{2}{e^2-1}$, so $c = \\frac{e^2-1}{2} \\approx 3.19$.\\n\\nSince $1 < 3.19 < e^2 \\approx 7.39$: valid. ✓'
+        explanation: 'Average rate = $\\frac{\\ln(e^2)-\\ln(1)}{e^2-1} = \\frac{2}{e^2-1}$.\\n\\n$f\'(c) = \\frac{1}{c} = \\frac{2}{e^2-1}$, so $c = \\frac{e^2-1}{2} \\approx 3.195$.\\n\\nSince $1 < 3.195 < e^2 \\approx 7.39$: valid. ✓'
       }
     },
     {
@@ -183,7 +183,7 @@ $$\\boxed{f'(c) = \\frac{f(b)-f(a)}{b-a} \\quad \\text{(instantaneous = average 
 | AP justification | MUST state both hypotheses before applying |
 | Table data MVT | Compute average rate between table values |
 
-> **Up Next:** Part 6 — L'Hôpital's Rule & Optimization.`
+> **Up Next:** Part 6 — Optimization.`
     }
   ]
 };

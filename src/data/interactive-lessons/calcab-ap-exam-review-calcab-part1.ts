@@ -20,7 +20,7 @@ export const calcabExamReviewPart1Data = {
 | 6 | Differential Equations & Modeling |
 | 7 | Full Practice Exam |
 
-> **Exam Weight:** Units 1\u20132 (Limits & Continuity) = **10\u201312%** of the AP exam.
+> **Exam Weight:** Unit 1 (Limits and Continuity) is **10\u201312%** of the AP exam.
 
 ---
 
@@ -115,15 +115,15 @@ $f$ is continuous at $x = a$ if ALL THREE hold:
       type: 'input-box' as const,
       content: '**Compute the limit.** \u270d\ufe0f',
       exercise: {
-        question: '$\\lim_{x\\to 0}\\frac{\\sin(5x)}{\\sin(2x)} = \\frac{a}{b}$ in lowest terms. Enter **$a + b$**.',
-        correctAnswer: '7',
-        acceptableAnswers: ['7'],
+        question: 'Find $\\lim_{x\\to 0}\\frac{\\sin(5x)}{\\sin(2x)}$.',
+        correctAnswer: '5/2',
+        acceptableAnswers: ['5/2', '2.5'],
         hints: [
           '$\\frac{\\sin(5x)}{\\sin(2x)} = \\frac{\\sin(5x)}{5x}\\cdot\\frac{2x}{\\sin(2x)}\\cdot\\frac{5}{2}$.',
           'Each ratio $\\to 1$.',
-          'Limit $= 5/2$. $a+b = 5+2 = 7$.'
+          'So the limit is $\\frac{5}{2}$.'
         ],
-        explanation: '$\\frac{\\sin(5x)}{\\sin(2x)} \\to \\frac{5}{2}$. $a+b = 7$.'
+        explanation: '$\\frac{\\sin(5x)}{\\sin(2x)} = \\frac{\\sin(5x)}{5x}\\cdot\\frac{2x}{\\sin(2x)}\\cdot\\frac{5}{2} \\to 1 \\cdot 1 \\cdot \\frac{5}{2} = \\frac{5}{2}$.'
       }
     },
     {

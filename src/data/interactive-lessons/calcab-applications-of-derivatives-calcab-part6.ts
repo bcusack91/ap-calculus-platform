@@ -19,7 +19,7 @@ $$\\boxed{\\text{Optimize} \\to \\text{Constraint} \\to \\text{Single Variable} 
 | 3 | **Find constraint** | A second equation relating the variables |
 | 4 | **Eliminate** | Use constraint to get one-variable function |
 | 5 | **Differentiate** | Set $f'(x) = 0$, find critical points |
-| 6 | **Verify** | Confirm it's actually a max/min (not saddle) |
+| 6 | **Verify** | Confirm it is a max/min (not neither) and that it is the absolute one |
 | 7 | **Answer** | State the answer in context with units |
 
 > **AP Tip:** On free-response optimization problems, you MUST justify why your critical point is a maximum or minimum. Use the First or Second Derivative Test, or the Candidates Test on a closed interval.`
@@ -43,7 +43,7 @@ Then $x = 200 - 100 = 100$.
 
 $$\\boxed{A_{\\max} = 100 \\times 50 = 5000 \\text{ m}^2}$$
 
-**Verify:** $A''(y) = -4 < 0$: concave down → confirmed maximum.
+**Justify:** $A'(y) > 0$ for $0 < y < 50$ and $A'(y) < 0$ for $50 < y < 100$, so $A$ increases and then decreases. Since $y = 50$ is the only critical point on $(0, 100)$, it gives the absolute maximum.
 
 ### Classic Example 2: Minimize Material
 
@@ -64,7 +64,9 @@ Make an open-top box with volume $32$ cm$^3$ from a square base. Minimize surfac
 
 Then $h = \\frac{32}{16} = 2$.
 
-$$\\boxed{S_{\\min} = 16 + 32 = 48 \\text{ cm}^2}$$`
+$$\\boxed{S_{\\min} = 16 + 32 = 48 \\text{ cm}^2}$$
+
+**Justify:** $S'(x) = \\frac{2(x^3 - 64)}{x^2}$ is negative for $0 < x < 4$ and positive for $x > 4$. So $S$ decreases and then increases, and $x = 4$, the only critical point on $(0, \\infty)$, gives the absolute minimum.`
     },
     {
       id: 'apps6-quiz1',
@@ -183,16 +185,16 @@ $$\\boxed{\\text{Closest points: } \\left(\\pm\\frac{1}{\\sqrt{2}},\\, \\frac{1}
       type: 'input-box' as const,
       content: '**Solve this optimization problem.** ✍️',
       exercise: {
-        question: 'A farmer wants to enclose a rectangular area of $1800$ m$^2$ using the minimum amount of fencing. What is the minimum perimeter (in meters)?',
+        question: 'A farmer wants to enclose a rectangular area of $1800$ m$^2$ using the minimum amount of fencing. What is the minimum perimeter (in meters)? Give an exact answer, or a decimal correct to three places.',
         correctAnswer: '120sqrt(2)',
-        acceptableAnswers: ['120sqrt(2)', '120*sqrt(2)', '169.7', '170', '60sqrt(8)', '240/sqrt(2)'],
+        acceptableAnswers: ['120sqrt(2)', '120*sqrt(2)', '120√2', '169.706', '169.705', '60sqrt(8)', '240/sqrt(2)'],
         hints: [
           'Let the sides be $x$ and $y$ with $xy = 1800$.',
           'Perimeter $P = 2x + 2y = 2x + \\frac{3600}{x}$.',
           '$P\' = 2 - \\frac{3600}{x^2} = 0$ gives $x^2 = 1800$.',
           '$x = \\sqrt{1800} = 30\\sqrt{2}$, and the perimeter is $P = 4 \\cdot 30\\sqrt{2}$.'
         ],
-        explanation: '$xy = 1800$, $y = 1800/x$. $P = 2x + 3600/x$.\\n$P\' = 2 - 3600/x^2 = 0 \\Rightarrow x^2 = 1800 \\Rightarrow x = 30\\sqrt{2}$.\\nThen $y = 1800/(30\\sqrt{2}) = 30\\sqrt{2}$ (a square!).\\n$P = 4 \\cdot 30\\sqrt{2} = 120\\sqrt{2} \\approx 169.7$ m.'
+        explanation: '$xy = 1800$, $y = 1800/x$. $P = 2x + 3600/x$.\\n$P\' = 2 - 3600/x^2 = 0 \\Rightarrow x^2 = 1800 \\Rightarrow x = 30\\sqrt{2}$.\\nThen $y = 1800/(30\\sqrt{2}) = 30\\sqrt{2}$ (a square!).\\n$P = 4 \\cdot 30\\sqrt{2} = 120\\sqrt{2} \\approx 169.706$ m.'
       }
     },
     {

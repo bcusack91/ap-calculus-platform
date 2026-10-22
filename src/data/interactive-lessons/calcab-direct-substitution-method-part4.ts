@@ -33,8 +33,6 @@ Plugging in $x = a$ can yield:
 | Clean number $L$ | Limit is $L$ ✅ | Done |
 | Nonzero / 0 | Vertical asymptote — limit DNE (or $\\pm\\infty$) | Analyze sign on each side |
 | $0/0$ | **Indeterminate** | Factor, rationalize, L'Hôpital, or known limit |
-| $\\infty - \\infty$ | **Indeterminate** | Combine into a single fraction first |
-| $0 \\cdot \\infty$ | **Indeterminate** | Rewrite as a quotient, then apply techniques |
 | $\\infty / \\infty$ | **Indeterminate** | Compare growth rates / divide by dominant term |
 
 > 💡 "Indeterminate" doesn't mean "no answer." It means "more work needed."
@@ -52,7 +50,6 @@ Plugging in $x = a$ can yield:
 | $0/0$, contains $\\sqrt{}$ | **Rationalize** with the conjugate |
 | $0/0$, contains $\\sin$ or $\\cos$ | Use known special limits like $\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = 1$ |
 | $\\infty / \\infty$ | Divide top and bottom by highest power of $x$ |
-| $\\infty - \\infty$ | Combine into a single fraction |
 
 > 🔑 The next four micro-topics in this unit develop these techniques one at a time.
       `
@@ -112,10 +109,10 @@ Three cleanly different outcomes when you "plug in":
             explanation: 'Direct substitution works precisely when $\\lim = f(a)$ — the definition of continuity at $a$. Many non-polynomials (like $\\sin x$ or $\\sqrt{x}$ on its domain) allow it, a function need only be defined near $a$, and continuity does not require differentiability.'
           },
           {
-            question: 'Which of these is NOT an indeterminate form?',
-            options: ['$0/0$', '$\\infty - \\infty$', '$\\infty + \\infty$', '$0 \\cdot \\infty$'],
-            correctAnswer: 2,
-            explanation: '$\\infty + \\infty = \\infty$ — determinate. The others all hide an unknown true value.'
+            question: 'Direct substitution into $\\lim_{x \\to 2} \\frac{x^2 - 4}{x - 2}$ gives $\\frac{0}{0}$. What does that tell you?',
+            options: ['The limit may still exist after more work', 'The limit is $0$, since the numerator is $0$', 'The limit does not exist, since you cannot divide by $0$', 'The limit is $\\infty$, since the denominator is $0$'],
+            correctAnswer: 0,
+            explanation: '$\\frac{0}{0}$ is indeterminate: it does not decide the limit by itself. Factor and cancel: $\\frac{(x-2)(x+2)}{x-2} = x + 2 \\to 4$. A zero numerator or a zero denominator alone does not settle the value when both are $0$.'
           }
         ]
       }

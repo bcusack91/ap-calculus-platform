@@ -60,7 +60,7 @@ $f'(c) = 2c = 4 \\Rightarrow c = 2 \\in (1,3)$. \u2713
           },
           {
             question: 'MVT cannot be applied to $f(x) = |x|$ on $[-1, 1]$ because:',
-            options: ['$f$ is not differentiable at $x = 0$', '$f$ is not continuous at the corner $x = 0$', '$f(-1) = f(1)$, so Rolle’s applies instead of MVT', 'The secant slope from $-1$ to $1$ is undefined'],
+            options: ['$f$ is not differentiable at the corner $x = 0$', '$f$ is not continuous at the corner $x = 0$', '$f(-1) = f(1)$, so Rolle’s applies instead of MVT', 'The secant slope from $-1$ to $1$ is undefined'],
             correctAnswer: 0,
             explanation: '$|x|$ is continuous but has a corner at $x = 0$, so it is not differentiable on $(-1,1)$. MVT requires differentiability. (Rolle’s needs the same hypothesis, and the secant slope here is $0$.)'
           }

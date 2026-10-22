@@ -72,10 +72,10 @@ Work through these problems combining all Lagrange error bound skills.`
       content: '**Workshop — Computation**',
       exercise: {
         question: 'Compute the Lagrange error bound for $T_3(0.4)$ for $e^x$ at $c = 0$ with $M = 3$. Give answer as a decimal to 5 places.',
-        correctAnswer: '0.0032',
-        acceptableAnswers: ['0.0032', '0.00320', '3.2e-3'],
+        correctAnswer: '0.00320',
+        acceptableAnswers: ['0.00320', '0.0032', '3.2e-3'],
         hints: ['$|R_3| \\le 3(0.4)^4/4!$.', '$(0.4)^4 = 0.0256$. $4! = 24$.'],
-        explanation: '$|R_3(0.4)| \\le 3(0.4)^4/4! = 3(0.0256)/24 = 0.0768/24 = 0.0032$.'
+        explanation: '$|R_3(0.4)| \\le 3(0.4)^4/4! = 3(0.0256)/24 = 0.0768/24 = 0.00320$.'
       }
     },
     {

@@ -10,7 +10,7 @@ export const calcabAntiderivativesPart1Data = {
 
 | Part | Topic |
 |:---:|:---:|
-| **1** | **Power Rule for Integration** |
+| **1** | **What Is an Antiderivative? (Power Rule)** |
 | 2 | Essential Antiderivative Formulas |
 | 3 | Initial Value Problems |
 | 4 | Algebraic Manipulation Before Integrating |

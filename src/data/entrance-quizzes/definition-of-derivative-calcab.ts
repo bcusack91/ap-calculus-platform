@@ -38,7 +38,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'dod-ent-2b',
     question: 'Why is $f(x) = (x - 2)^{1/3}$ not differentiable at $x = 2$?',
-    options: ['Its graph has a corner there', 'Its graph has a cusp there', 'It has a jump discontinuity there', 'Its graph has a vertical tangent there'],
+    options: ['Its graph has a corner there', 'Its graph has a cusp there', 'It has a jump discontinuity at that point', 'Its graph has a vertical tangent there'],
     correctIndex: 3,
     explanation: 'The function is continuous, and $f\'(x) = \\frac{1}{3}(x - 2)^{-2/3}$ grows to $+\\infty$ from both sides of 2. Slopes going to infinity in the same direction mean a vertical tangent (a cusp would need opposite infinities).',
     partNumber: 2,
@@ -76,7 +76,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'dod-ent-4b',
     question: '$T(t)$ is the temperature of a drink, in degrees Fahrenheit, $t$ hours after it is poured, and $T\'(2) = -4$. Which interpretation is correct?',
-    options: ['At $t = 2$ the temperature is $-4$ degrees Fahrenheit', 'Over the first 2 hours the temperature fell 4 degrees', 'At $t = 2$ the temperature is rising 4 degrees per hour', 'At $t = 2$ the temperature is falling 4 degrees per hour'],
+    options: ['At $t = 2$ the temperature is $-4$ degrees Fahrenheit', 'Over the first 2 hours the temperature fell 4 degrees', 'At $t = 2$ the temperature is rising at 4 degrees per hour', 'At $t = 2$ the temperature is falling 4 degrees per hour'],
     correctIndex: 3,
     explanation: 'A derivative is an instantaneous rate: at the moment $t = 2$ hours, the temperature is changing at $-4$ degrees Fahrenheit per hour, so it is decreasing at 4 degrees per hour. It is not the temperature itself or a total change.',
     partNumber: 4,

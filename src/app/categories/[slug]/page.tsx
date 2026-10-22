@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import type { Metadata } from 'next'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
 import { ArticleByline } from '@/components/ArticleByline'
+import { visibleTopics } from '@/lib/course-hub-sections'
 
 // ISR: revalidate content every hour
 export const revalidate = 3600
@@ -99,6 +100,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   if (!category) {
     notFound()
   }
+  // Legacy (308) and retired topic rows are never listed: they bounce to the
+  // canonical topic when clicked (src/lib/legacy-topic-redirects.ts).
+  category.topics = visibleTopics(category.topics)
 
   // Map course colors to Tailwind classes
   const colorMap: Record<string, { bg: string; gradient: string; border: string }> = {

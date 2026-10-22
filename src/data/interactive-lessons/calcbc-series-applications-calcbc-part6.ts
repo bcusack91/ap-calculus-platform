@@ -94,7 +94,7 @@ Let $f(x) = \\ln(1 + x)$.`,
 - Substitution into known series is faster than computing derivatives
 - For integrals, integrate the series and evaluate — simpler than FTC with complex antiderivatives
 - For limits, cancel the leading terms to find the dominant behavior
-- Always simplify fractions on the exam — AP readers check exact answers
+- Answers do not need to be simplified on the exam, but a decimal answer must be correct to three places
 
 **Next: Part 7 — Comprehensive Review**`
     }

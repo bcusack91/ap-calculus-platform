@@ -15,9 +15,9 @@ Series questions appear on **both MC and FRQ** every year. Master this checklist
 | Task | Method |
 |------|--------|
 | Write Taylor polynomial | Derivatives at $a$, or substitute into known series |
-| Find interval of convergence | Ratio test → solve for $|x - a| < R$ → test endpoints |
+| Find interval of convergence | Ratio test → solve for $\\lvert x - a\\rvert < R$ → test endpoints |
 | Approximate integral | Integrate series term by term |
-| Bound error | AST: first omitted term. Lagrange: $\\frac{M|x-a|^{n+1}}{(n+1)!}$ |
+| Bound error | AST: first omitted term. Lagrange: $\\frac{M\\lvert x-a\\rvert^{n+1}}{(n+1)!}$ |
 | Find general term | Identify pattern and write $a_n = f(n)$ |
 
 > **AP Tip:** Memorize these six Maclaurin series cold:
@@ -91,7 +91,7 @@ Series questions appear on **both MC and FRQ** every year. Master this checklist
           },
           {
             label: '$\\sum_{n=1}^\\infty \\frac{1}{n^2 + n}$ — best test:',
-            options: ['Partial fractions → telescoping', 'Ratio Test', 'Root Test', 'Divergence Test — the terms go to 0'],
+            options: ['Partial fractions → telescoping', 'Ratio Test', 'Alternating Series Test', 'Divergence Test — the terms go to 0'],
             correctAnswers: ['Partial fractions → telescoping'],
             hints: ['$1/(n^2+n) = 1/(n(n+1))$.'],
             explanation: '$1/(n(n+1)) = 1/n - 1/(n+1)$. Telescoping series: sum $= 1$.'
@@ -116,11 +116,11 @@ Series questions appear on **both MC and FRQ** every year. Master this checklist
       type: 'text' as const,
       content: `### BC Topic Priority
 
-1. **Series** — appears every year, MC + FRQ
-2. **Parametric/Polar** — 1 FRQ nearly every year
-3. **Integration techniques** — interspersed throughout
+1. **Series** — Unit 10, 17–18% of the exam (CED); MC and FRQ
+2. **Integration** — Unit 6, 17–20% of the exam (CED), including the BC techniques
+3. **Parametric/Polar/Vector** — Unit 9, 11–12% of the exam (CED)
 4. **Differential equations** — Euler's method, logistic models
-5. **Convergence tests** — 3–5 MC questions typical
+5. **Convergence tests** — part of Unit 10; know which test fits which series
 
 **Next: Part 6 — Practice Exam Simulation**`
     }

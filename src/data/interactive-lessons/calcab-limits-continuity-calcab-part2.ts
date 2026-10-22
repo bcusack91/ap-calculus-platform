@@ -19,6 +19,7 @@ export const calcabLimitsPart2Data = {
 | 📌 Limits Involving $e$ |
 | Piecewise Function Limits |
 | One-Sided Limits |
+| Limits of Composite Functions |
 
 > 🔑 **Key Concept:** Beyond factoring and rationalizing, certain *memorized limits* and *comparison strategies* let you evaluate limits quickly on the AP exam.`
     },
@@ -177,7 +178,7 @@ Since both sides agree: $\\lim_{x \\to 1} f(x) = 1$ ✓
 
 ---
 
-### When a Piecewise Limit Fails
+### A Piecewise Limit That Exists (and Is Continuous)
 
 $$g(x) = \\begin{cases} x + 2 & x < 3 \\\\ x^2 - 4 & x \\geq 3 \\end{cases}$$
 
@@ -188,6 +189,8 @@ These agree, so $\\lim_{x \\to 3} g(x) = 5$. But $g(3) = 5$ too, so $g$ is also 
 
 ---
 
+### When a Piecewise Limit Fails
+
 $$h(x) = \\begin{cases} 2x & x < 1 \\\\ x + 3 & x \\geq 1 \\end{cases}$$
 
 - $\\lim_{x \\to 1^-} h(x) = 2$
@@ -196,6 +199,53 @@ $$h(x) = \\begin{cases} 2x & x < 1 \\\\ x + 3 & x \\geq 1 \\end{cases}$$
 Left $\\neq$ right, so $\\lim_{x \\to 1} h(x)$ **does not exist**.
 
 > 🔑 **Key Fact:** A two-sided limit exists if and only if both one-sided limits exist and are equal.`
+    },
+    {
+      id: 'limit2-composite',
+      type: 'text' as const,
+      content: `
+## Limits of Composite Functions
+
+To find $\\lim_{x \\to a} f(g(x))$, first find where the **inside** is heading: $\\lim_{x \\to a} g(x) = L$.
+
+$$\\boxed{\\text{If } \\lim_{x \\to a} g(x) = L \\text{ and } f \\text{ is continuous at } L, \\text{ then } \\lim_{x \\to a} f(g(x)) = f(L)}$$
+
+**Example:** $\\lim_{x \\to 2} \\sqrt{x^2 + 5}$. The inside goes to $9$ and $\\sqrt{u}$ is continuous at $9$, so the limit is $\\sqrt{9} = 3$.
+
+---
+
+### When $f$ Is NOT Continuous at $L$
+
+Then you must know **how** $g(x)$ approaches $L$ — from above or from below.
+
+Suppose $\\lim_{u \\to 2^-} f(u) = 3$, $\\lim_{u \\to 2^+} f(u) = 5$ and $f(2) = 4$ (a jump at $u = 2$), and let $g(x) = 2 + (x - 1)^2$.
+
+- As $x \\to 1$, $g(x) \\to 2$, and $g(x) > 2$ for every $x \\ne 1$: the inside approaches $2$ **from above**.
+- So $f(g(x))$ follows the right-hand behavior of $f$ at $2$: $\\lim_{x \\to 1} f(g(x)) = 5$.
+- The value $f(2) = 4$ plays no role, because a limit never uses the value at the point itself.
+
+> 🔑 **Key Fact:** For $\\lim f(g(x))$, find the inner limit $L$ first. If $f$ is continuous at $L$, the answer is $f(L)$; if not, check which side of $L$ the values of $g(x)$ come from.`
+    },
+    {
+      id: 'limit2-composite-check',
+      type: 'multiple-choice' as const,
+      content: '**Composite Limits** 🎯',
+      exercise: {
+        questions: [
+          {
+            question: 'Suppose $\\lim_{x \\to 3} g(x) = 4$ and $f$ is continuous at $4$ with $f(4) = 7$. What is $\\lim_{x \\to 3} f(g(x))$?',
+            options: ['$7$', '$4$', '$f(3)$', 'It cannot be determined'],
+            correctAnswer: 0,
+            explanation: 'The inside approaches $4$, and $f$ is continuous at $4$, so $f(g(x)) \\to f(4) = 7$. The value $4$ is only the inner limit, and $f(3)$ evaluates $f$ at the wrong input.'
+          },
+          {
+            question: 'Suppose $\\lim_{u \\to 2^-} f(u) = 3$, $\\lim_{u \\to 2^+} f(u) = 5$ and $f(2) = 4$. If $g(x) = 2 - (x - 1)^2$, what is $\\lim_{x \\to 1} f(g(x))$?',
+            options: ['$3$', '$5$', '$4$', 'Does not exist'],
+            correctAnswer: 0,
+            explanation: 'As $x \\to 1$, $g(x) \\to 2$, and $g(x) < 2$ for every $x \\ne 1$, so the inside approaches $2$ from below on both sides of $x = 1$. The composite follows the left-hand limit of $f$ at $2$, which is $3$. The value $f(2) = 4$ is not used, and the limit exists because both sides of $x = 1$ give the same value.'
+          }
+        ]
+      }
     },
     {
       id: 'limit2-dropdown',

@@ -16,7 +16,7 @@ $$\\boxed{\\int \\sum_{n=0}^\\infty a_n x^n\\,dx = \\sum_{n=0}^\\infty \\frac{a_
 
 This is valid within the interval of convergence.
 
-> **Key Fact:** Term-by-term integration is the ONLY way to handle $\\int e^{-x^2}dx$, $\\int \\frac{\\sin x}{x}dx$, etc. on the AP exam.`
+> **Key Fact:** On no-calculator questions, term-by-term integration is the only way to handle $\\int e^{-x^2}dx$, $\\int \\frac{\\sin x}{x}dx$, and similar integrals. (On calculator-active parts, a definite integral can be evaluated numerically.)`
     },
     {
       id: 'sa2-example1',

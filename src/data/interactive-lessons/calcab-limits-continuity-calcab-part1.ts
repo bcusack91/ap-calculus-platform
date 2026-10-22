@@ -54,7 +54,7 @@ Consider a function with a **hole** at $(3, 7)$ and $f(3) = 2$.
 - $\\lim_{x \\to 3} f(x) = 7$ (the function *heads toward* 7)
 - $f(3) = 2$ (the actual function value is 2)
 
-> **AP Tip:** About 15% of AP Calculus MC questions involve limits. Mastering this concept is foundational for derivatives and integrals.`
+> **AP Tip:** Unit 1 (Limits and Continuity) is 10–12% of the AB exam score, and limits underlie every later unit. Mastering this concept is foundational for derivatives and integrals.`
     },
     {
       id: 'limit1-direct-sub',

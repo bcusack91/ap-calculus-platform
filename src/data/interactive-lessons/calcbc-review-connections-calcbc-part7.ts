@@ -8,17 +8,22 @@ export const calcbcReviewPart7Data = {
 
 **Part 7 of 7 — The Complete BC Picture**
 
-### AP Calculus BC — Topic Map
+### AP Calculus BC — Topic Map (CED exam weighting)
 
-| Unit | BC-Only Topics | Weight |
+| Unit | BC-only topics in the unit | BC exam weight |
 |------|---------------|--------|
-| Integration | By parts, partial fractions, improper | ~15% |
-| Parametric/Polar/Vector | Derivatives, area, arc length, motion | ~10% |
-| Differential Equations | Euler's method, logistic models | ~8% |
-| Series | Taylor/Maclaurin, convergence tests, error bounds, applications | ~17% |
-| AB Topics | Limits, derivatives, integrals, FTC, applications | ~50% |
+| 1. Limits and Continuity | None (AB content) | 4–7% |
+| 2. Differentiation: Definition and Properties | None (AB content) | 4–7% |
+| 3. Differentiation: Composite, Implicit, Inverse | None (AB content) | 4–7% |
+| 4. Contextual Applications of Differentiation | None (AB content) | 6–9% |
+| 5. Analytical Applications of Differentiation | None (AB content) | 8–11% |
+| 6. Integration and Accumulation of Change | By parts, partial fractions, improper integrals | 17–20% |
+| 7. Differential Equations | Euler's method, logistic models | 6–9% |
+| 8. Applications of Integration | Arc length | 6–9% |
+| 9. Parametric, Polar, Vector | Whole unit | 11–12% |
+| 10. Infinite Sequences and Series | Whole unit | 17–18% |
 
-> **The AB foundation is essential.** Half the BC exam tests AB material. Strong AB skills make BC manageable.`
+> **The AB foundation is essential.** Units 1–8 make up about 70% of the exam and are mostly AB material: about 60% of the BC exam tests AB topics. Units 9 and 10 alone are 28–30%. Strong AB skills make BC manageable.`
     },
     {
       id: 'rc7-mc',
@@ -36,7 +41,7 @@ export const calcbcReviewPart7Data = {
             question: 'On the BC exam, which formula has a $1/2$ factor that students most often forget?',
             options: ['Polar area', 'Arc length', 'Integration by parts', 'Euler\'s method'],
             correctAnswer: 0,
-            explanation: 'The polar area formula is $A = \\frac{1}{2}\\int_{\\alpha}^{\\beta} r^2\\,d\\theta$. Its $1/2$ is the most commonly forgotten factor on the BC exam.'
+            explanation: 'The polar area formula is $A = \\frac{1}{2}\\int_{\\alpha}^{\\beta} r^2\\,d\\theta$. Its $1/2$ comes from the area of a thin sector, $\\frac{1}{2}r^2\\,d\\theta$, and leaving it out doubles the answer.'
           },
           {
             question: 'The relationship $\\frac{d}{dx}[\\sin x] = \\cos x$ corresponds to the series relationship:',

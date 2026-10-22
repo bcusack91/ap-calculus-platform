@@ -27,7 +27,7 @@ AP questions often describe a rate in words and expect you to write the DE. "Rat
 | $\\frac{dy}{dt} = ky$ | $y$ grows (when $y > 0$) |
 | $\\frac{dy}{dt} = k(A - y)$ | $y$ moves toward $A$ from either side |
 
-> **Key Fact:** The first row is the exponential model (FUN-7.F.2): "the rate of change of a quantity is proportional to the size of the quantity" means $\\frac{dy}{dt} = ky$, with solution $y = y_0e^{kt}$.`
+> **Key Fact:** The first row is the exponential model: "the rate of change of a quantity is proportional to the size of the quantity" means $\\frac{dy}{dt} = ky$, with solution $y = y_0e^{kt}$.`
     },
     {
       id: 'exp5-quiz1',
@@ -142,7 +142,7 @@ Newton's Law of Cooling (Part 2) is this same model with $A$ equal to the room t
       exercise: {
         question: 'Let $y$ satisfy $\\frac{dy}{dt} = 0.5(60 - y)$ with $y(0) = 20$. Find $y(2)$, correct to three decimal places.',
         correctAnswer: '45.285',
-        acceptableAnswers: ['45.285', '45.284', '45.28', '45.3'],
+        acceptableAnswers: ['45.285', '45.284'],
         hints: [
           'Separate: $\\frac{dy}{60 - y} = 0.5\\,dt$, which gives $60 - y = Be^{-0.5t}$.',
           '$y(0) = 20$ gives $B = 40$, so $y = 60 - 40e^{-0.5t}$.',

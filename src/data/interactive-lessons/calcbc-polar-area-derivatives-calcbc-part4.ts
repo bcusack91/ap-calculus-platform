@@ -12,9 +12,9 @@ export const calcbcPolarAreaPart4Data = {
 
 | Condition | Shape | Inner Loop? |
 |-----------|-------|-------------|
-| $|a| = |b|$ | Cardioid | No (cusp at origin) |
-| $|a| > |b|$ | Dimpled or convex | No |
-| $|a| < |b|$ | With inner loop | Yes |
+| $\\lvert a\\rvert = \\lvert b\\rvert$ | Cardioid | No (cusp at origin) |
+| $\\lvert a\\rvert > \\lvert b\\rvert$ | Dimpled or convex | No |
+| $\\lvert a\\rvert < \\lvert b\\rvert$ | With inner loop | Yes |
 
 ### Inner Loop Area
 

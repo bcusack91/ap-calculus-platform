@@ -12,6 +12,7 @@ import { calcABQuestionPool, type CalcABQuestion } from './exit-quizzes/ap-calcu
 import { mulberry32 } from './_shared/prng'
 import { estimateApScore } from '@/lib/ap-scoring'
 import { canonicalApTopicSlug } from '@/lib/ap-topic-canonical'
+import { isCalcAbExamTrivia } from './unit-tests/ap-calculus-ab'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -173,8 +174,10 @@ export function generateCalcABDiagnosticTest(form: DiagnosticForm): CalcABDiagno
   const questions: CalcABDiagnosticQuestion[] = []
 
   for (const domain of CALC_AB_DOMAINS) {
+    // Exam-trivia items (calculator rules, the reference sheet) test no CED
+    // content; the unit tests drop them by the same rule.
     const pool = calcABQuestionPool.filter(
-      (q: CalcABQuestion) => q.domain === domain.id,
+      (q: CalcABQuestion) => q.domain === domain.id && !isCalcAbExamTrivia(q.question),
     )
 
     const shuffled = seededShuffle(pool, rng)
@@ -337,6 +340,7 @@ const SLUG_LABELS: Record<string, string> = {
   'linearization-differentials-calcab': 'Linearization & Differentials',
   'theorem-applications-calcab': 'Theorem Applications (MVT, IVT)',
   'particle-motion-calcab': 'Particle Motion',
+  'lhopitals-rule': 'L\'Hôpital\'s Rule',
   'definite-integrals-calcab': 'Definite Integrals',
   'antiderivatives-indefinite-integrals-calcab': 'Antiderivatives & Indefinite Integrals',
   'u-substitution-calcab': 'u-Substitution',

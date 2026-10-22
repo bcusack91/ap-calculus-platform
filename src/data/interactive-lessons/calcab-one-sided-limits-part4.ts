@@ -16,7 +16,7 @@ export const calcabOneSidedLimitsPart4Data = {
 |---------|
 | Why Only One Side Might Exist |
 | 📝 Square Roots and Endpoints |
-| The Two-Sided Limit at a Domain Endpoint |
+| Limits at a Domain Endpoint |
 
 > 🔑 **Why this matters:** AP loves to ask about $\\sqrt{x}$ at $x = 0$ and similar functions where one side is *undefined*.`
     },
@@ -53,23 +53,23 @@ The expression $\\sqrt{x - 3}$ requires $x \\ge 3$.
       id: 'osl4-endpoint',
       type: 'text' as const,
       content: `
-## ⚖️ The Two-Sided Limit at a Domain Endpoint
+## ⚖️ Limits at a Domain Endpoint
 
-What is $\\lim_{x \\to 3} \\sqrt{x - 3}$?
-
-**AP convention:** a limit is taken over the inputs in the function's domain. At $x = 3$ the only available inputs are $x > 3$, so
-
-$$\\lim_{x \\to 3} \\sqrt{x - 3} = \\lim_{x \\to 3^+} \\sqrt{x - 3} = 0.$$
-
-This is the convention the CED relies on: power functions such as $\\sqrt{x - 3}$ are continuous at every point in their domain (LIM-2.B.2), including the endpoint $x = 3$, and continuity at $x = 3$ requires $\\lim_{x \\to 3} \\sqrt{x - 3}$ to exist and equal $\\sqrt{0} = 0$ (LIM-2.A.2).
+What happens to $f(x) = \\sqrt{x - 3}$ at $x = 3$, the left end of its domain $[3, \\infty)$?
 
 | Statement about $\\sqrt{x - 3}$ at $x = 3$ | Value |
 |----------|-------|
 | $\\lim_{x \\to 3^+} \\sqrt{x - 3}$ | $0$ |
 | $\\lim_{x \\to 3^-} \\sqrt{x - 3}$ | Does not exist (no inputs in the domain to the left) |
-| $\\lim_{x \\to 3} \\sqrt{x - 3}$ | $0$ (only the right side is in the domain) |
+| $f(3)$ | $\\sqrt{0} = 0$ |
 
-> ⚠️ **Contrast:** the "both one-sided limits must agree" test is for a point with domain inputs on **both** sides, like a jump in a piecewise function. It does not make the limit at a domain endpoint fail. AP questions usually write $\\lim_{x \\to 3^+}$ at an endpoint anyway, so the notation itself tells you which side to use.
+At a domain endpoint, use the **one-sided** limit from the side where the function lives:
+
+$$\\lim_{x \\to 3^+} \\sqrt{x - 3} = 0 = f(3),$$
+
+so $f$ is **continuous from the right** at $3$. That is what "continuous on its domain $[3, \\infty)$" means at the endpoint (LIM-2.B.2): power functions such as $\\sqrt{x - 3}$ are continuous at every point of their domains, with one-sided continuity at an endpoint.
+
+> ⚠️ **Contrast:** the "both one-sided limits must exist and agree" test is for a point with domain inputs on **both** sides, like a jump in a piecewise function. At an endpoint, AP questions write the one-sided limit ($\\lim_{x \\to 3^+}$), so the notation tells you which side to use. State the one-sided limit rather than a two-sided one.
       `
     },
     {
@@ -106,15 +106,15 @@ This is the convention the CED relies on: power functions such as $\\sqrt{x - 3}
       exercise: {
         questions: [
           {
-            question: 'Under the AP convention, which statement about $\\lim_{x \\to 0} \\sqrt{x}$ is TRUE?',
+            question: 'Which statement about $f(x) = \\sqrt{x}$ at $x = 0$ is TRUE?',
             options: [
-              'It equals 0, because the value $\\sqrt{0}$ is 0',
-              'It DNE, since the left-hand limit does not exist',
-              'It equals 0, since domain inputs near 0 give outputs near 0',
-              'It DNE, due to an asymptote at 0'
+              '$\\lim_{x \\to 0^+} \\sqrt{x} = f(0)$, so $f$ is continuous from the right at $0$',
+              '$\\lim_{x \\to 0^-} \\sqrt{x} = f(0)$, so $f$ is continuous from the left at $0$',
+              '$f(0)$ is undefined, so $f$ has a removable discontinuity at $0$',
+              '$\\sqrt{x} \\to \\infty$ as $x \\to 0^+$, so $f$ has a vertical asymptote at $0$'
             ],
-            correctAnswer: 2,
-            explanation: 'A limit is taken over inputs in the domain. Near $x = 0$ those inputs are $x > 0$, and $\\sqrt{x} \\to 0$ as $x \\to 0^+$, so the limit is 0; this is why $\\sqrt{x}$ counts as continuous at 0. The missing left side does not make the limit fail at a domain endpoint. The value $\\sqrt{0} = 0$ alone never decides a limit, since a limit is about nearby inputs, and there is no asymptote at 0.'
+            correctAnswer: 0,
+            explanation: 'The domain of $\\sqrt{x}$ is $[0, \\infty)$, so at the endpoint $0$ only the right-hand limit applies: $\\sqrt{x} \\to 0 = f(0)$ as $x \\to 0^+$, and $f$ is continuous from the right at $0$. There are no domain inputs to the left of $0$, $f(0) = \\sqrt{0} = 0$ is defined, and the outputs shrink toward $0$ rather than blowing up.'
           },
           {
             question: 'Two-sided existence theorem in plain English:',

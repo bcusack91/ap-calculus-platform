@@ -1,3 +1,5 @@
+import { elgAsymptote, elgOscillation, elgThreePanels } from '@/data/lesson-figures/calcab'
+
 export const calcabEstimatingLimitsGraphsPart3Data = {
   topicSlug: 'estimating-limits-graphs',
   sections: [
@@ -18,7 +20,7 @@ export const calcabEstimatingLimitsGraphsPart3Data = {
 | Visual Signature: Vertical Asymptote |
 | Visual Signature: Oscillation |
 
-> 🔑 **Why this matters:** On a graph-only AP problem, you must say not just "DNE" but *why*.`
+> 🔑 **Why this matters:** On a graph-only problem, you should say not just "does not exist" but *why*.`
     },
     {
       id: 'elg3-jump',
@@ -26,79 +28,78 @@ export const calcabEstimatingLimitsGraphsPart3Data = {
       content: `
 ## 1️⃣ Visual Signature: Jump
 
-A **step** in the curve. The two arms aim at different finite $y$-values.
+A **step** in the graph: the two arms head to different finite heights.
 
-Think of a staircase, or the floor function $\\lfloor x \\rfloor$:
+In the jump graph from Part 2, the left arm heads to $4$ and the right arm heads to $2$ at $x = 1$, so $\\lim_{x \\to 1} f(x)$ does not exist (a *jump discontinuity*).
 
-- Left arm at $x = 2$ aims at $y = 1$.
-- Right arm at $x = 2$ aims at $y = 2$.
-- Limit DNE — *jump discontinuity*.
-
-> 💡 Drawing tell: a vertical "step" with often a closed dot on one side and an open circle on the other.
+> 💡 Drawing tell: an open circle on one side and a filled dot on the other, at different heights above the same $x$.
       `
     },
     {
       id: 'elg3-asymptote',
       type: 'text' as const,
+      figure: elgAsymptote,
       content: `
 ## 2️⃣ Visual Signature: Vertical Asymptote
 
-The curve **shoots off to $\\pm\\infty$** as $x$ approaches $a$.
+The curve **runs off the graph** next to the dashed line $x = 4$:
 
-Think $1/x$ at $x = 0$:
+- Left arm: $\\lim_{x \\to 4^-} f(x) = -\\infty$ (it falls without bound).
+- Right arm: $\\lim_{x \\to 4^+} f(x) = +\\infty$ (it rises without bound).
+- $\\lim_{x \\to 4} f(x)$ does not exist — the values are unbounded, and the two sides even go opposite ways.
 
-- Left arm dives to $-\\infty$.
-- Right arm shoots to $+\\infty$.
-- Limit DNE — *unbounded blow-up*; vertical asymptote at $x = 0$.
+If **both** arms rise without bound (like $\\frac{1}{x^2}$ at $0$), we write $\\lim = +\\infty$ to *describe* the behavior, but the limit still does not exist as a finite number.
 
-A subtler case is $1/x^2$ at 0: both arms shoot to $+\\infty$. We *describe* the behavior as $\\lim = +\\infty$, but **the limit does not exist as a finite number**.
-
-> 💡 Drawing tell: a dashed vertical line, with the curve hugging it asymptotically.
+> 💡 Drawing tell: a dashed vertical line with the curve hugging it.
       `
     },
     {
       id: 'elg3-oscillation',
       type: 'text' as const,
+      figure: elgOscillation,
       content: `
 ## 3️⃣ Visual Signature: Oscillation
 
-The curve **wiggles infinitely fast** near $a$ — never settling on any value.
-
-Think $\\sin(1/x)$ at $x = 0$: as you slide toward 0, the graph crashes through $-1$ and $+1$ infinitely many times in any tiny window.
-
-- Limit DNE — *oscillation*.
-
-> 💡 Drawing tell: a "fuzzy" or shaded vertical band near $a$ where the curve cycles densely between two horizontal levels.
+As $x \\to 0$, $\\sin(1/x)$ swings between $-1$ and $+1$ infinitely many times in every tiny window around $0$ (the shaded band). It never settles on one height, so $\\lim_{x \\to 0} \\sin(1/x)$ does not exist.
 
 | Failure mode | Visual signature |
 |-------------|------------------|
-| Jump | Step in graph |
-| Vertical asymptote | Curve shoots to $\\pm\\infty$ |
-| Oscillation | Fuzzy/wiggly band |
+| Jump | Arms end at two different heights |
+| Vertical asymptote | Curve runs off along a dashed vertical line |
+| Oscillation | Curve wiggles faster and faster in a band |
       `
     },
     {
       id: 'elg3-mc',
       type: 'multiple-choice' as const,
-      content: `**Diagnose from the Picture** 🎯`,
+      figure: elgAsymptote,
+      content: `**Diagnose from the picture** 🎯
+
+`,
       exercise: {
         questions: [
           {
-            question: 'A graph shows a vertical dashed line at $x = 4$, with the curve diving to $-\\infty$ on the left and shooting to $+\\infty$ on the right. The limit at $x = 4$:',
+            question: 'Use the graph above. Which statement about $\\lim_{x \\to 4} f(x)$ is true?',
             options: [
-              'Equals 0, averaging $-\\infty$ and $+\\infty$',
-              'DNE, it is unbounded',
-              'Equals $+\\infty$, since the curve shoots upward',
-              'Equals $-\\infty$, from the left-hand approach'
+              'It equals $0$, the average of the two sides',
+              'It does not exist, since $f$ is unbounded near $4$',
+              'It equals $+\\infty$, since the right arm rises',
+              'It equals $-\\infty$, from the left-hand approach'
             ],
             correctAnswer: 1,
-            explanation: 'Curve heads to $\\pm\\infty$ from opposite sides → vertical asymptote / blow-up → limit DNE. Neither one side alone nor an "average" of the two infinities gives the two-sided limit; only when both sides head to the same infinity could we write $+\\infty$ or $-\\infty$.'
+            explanation: 'Near $x = 4$ the values are unbounded, falling to $-\\infty$ on the left and rising to $+\\infty$ on the right, so the limit does not exist. One side alone never decides a two-sided limit, and infinities are not averaged.'
           },
           {
-            question: 'A graph near $x = 0$ looks like a fuzzy band oscillating between $-1$ and $+1$. The limit at 0:',
-            options: ['$0$, the middle of the band', '$1$, the top of the band', 'DNE, it never settles', '$-1$, the bottom of the band'],
-            correctAnswer: 2,
-            explanation: 'Infinite oscillation between $-1$ and $+1$ means the curve never settles on a single $y$-value.'
+            question: 'Use the graph above. What is $\\lim_{x \\to 4^+} f(x)$?',
+            options: ['$+\\infty$', '$-\\infty$', '$0$', '$4$'],
+            correctAnswer: 0,
+            explanation: 'Just to the right of the dashed line the curve rises without bound, so the right-hand limit is $+\\infty$. The left arm falls to $-\\infty$, and $4$ is the $x$-value of the asymptote, not a height.'
+          },
+          {
+            question: 'Use the graph above. What is $\\lim_{x \\to 6} f(x)$?',
+            options: ['$1$', '$2$', '$6$', 'Does not exist'],
+            correctAnswer: 0,
+            explanation: 'At $x = 6$ the right branch is unbroken and passes through height $1$, so the limit is $1$. Only $x = 4$ is a problem point; $2$ is the height at $x = 5$.'
           }
         ]
       }
@@ -106,18 +107,21 @@ Think $\\sin(1/x)$ at $x = 0$: as you slide toward 0, the graph crashes through 
     {
       id: 'elg3-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Match the Picture to the Failure Mode** 🔽`,
+      figure: elgThreePanels,
+      content: `**Match each graph to its failure mode** 🔽
+
+`,
       exercise: {
         dropdowns: [
-          { label: 'Curve has a clean step from $y = -2$ to $y = 5$ at $x = 1$', options: ['continuous', 'jump', 'asymptote', 'oscillation'] },
-          { label: 'Curve dives down to $-\\infty$ on both sides of $x = 3$ along a dashed vertical line', options: ['continuous', 'jump', 'asymptote (blow-up)', 'oscillation'] },
-          { label: 'Curve looks like an infinitely-wiggly fuzzy band hugging $x = 0$', options: ['continuous', 'jump', 'asymptote', 'oscillation'] },
+          { label: 'Graph A at $x = 2$', options: ['limit exists', 'jump', 'vertical asymptote', 'oscillation'] },
+          { label: 'Graph B at $x = 3$', options: ['limit exists', 'jump', 'vertical asymptote', 'oscillation'] },
+          { label: 'Graph C at $x = 0$', options: ['limit exists', 'jump', 'vertical asymptote', 'oscillation'] },
         ],
-        correctAnswers: ['jump', 'asymptote (blow-up)', 'oscillation'],
-        hint1: 'A clean step = jump.',
-        hint2: 'Curve hugging a vertical dashed line = asymptote.',
-        hint3: 'Fuzzy band = oscillation.',
-        explanation: 'Each picture maps to one of the three classic failure modes for limits.'
+        correctAnswers: ['jump', 'vertical asymptote', 'oscillation'],
+        hint1: 'In Graph A the two pieces end at different heights.',
+        hint2: 'In Graph B both arms run down along the dashed line.',
+        hint3: 'In Graph C the curve never settles.',
+        explanation: 'Graph A has finite one-sided limits $3.5$ and $1$ that disagree (jump). In Graph B both arms fall without bound, so $\\lim_{x \\to 3} = -\\infty$ describes the behavior, but no finite limit exists (vertical asymptote). Graph C oscillates between $-1$ and $1$ near $0$ (oscillation).'
       }
     }
   ]

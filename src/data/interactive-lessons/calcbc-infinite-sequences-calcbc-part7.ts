@@ -16,10 +16,10 @@ export const calcbcSequencesPart7Data = {
 | Decreasing terms | Show $f'(x) < 0$ (needed for the alternating series and integral tests) |
 | Limits of terms | L'Hospital's Rule on $f(x)$ for $\\frac{\\infty}{\\infty}$ or $\\frac{0}{0}$ |
 | $n$th Term Test | $a_n \\not\\to 0 \\implies \\sum a_n$ diverges |
-| Geometric series | $\\sum ar^n = \\frac{a}{1-r}$ if $|r| < 1$ |
+| Geometric series | $\\sum ar^n = \\frac{a}{1-r}$ if $\\lvert r\\rvert < 1$ |
 | $p$-series | $\\sum 1/n^p$ converges iff $p > 1$ |
 | Telescoping | Use partial fractions, find $\\lim S_N$ |
-| Growth hierarchy | $\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n$ |
+| Growth hierarchy ($p > 0$, $a > 1$) | $\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n$ |
 
 > **AP Tip:** The AP BC exam tests sequences primarily through series. Understanding sequence convergence is the foundation for all series work.`
     },

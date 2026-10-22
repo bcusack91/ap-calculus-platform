@@ -15,9 +15,9 @@ Work through these problems systematically. For each, identify whether to apply 
 | Concept | Formula/Rule |
 |---------|-------------|
 | AST conditions | $b_n > 0$, decreasing, $\\to 0$ |
-| Error bound | $|S - S_N| \\le b_{N+1}$ |
-| Absolute conv. | $\\sum |a_n|$ converges |
-| Conditional conv. | $\\sum a_n$ conv., $\\sum |a_n|$ div. |`
+| Error bound | $\\lvert S - S_N\\rvert \\le b_{N+1}$ |
+| Absolute conv. | $\\sum \\lvert a_n\\rvert$ converges |
+| Conditional conv. | $\\sum a_n$ conv., $\\sum \\lvert a_n\\rvert$ div. |`
     },
     {
       id: 'as6-mc1',

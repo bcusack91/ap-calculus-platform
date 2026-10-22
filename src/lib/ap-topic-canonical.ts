@@ -24,6 +24,7 @@
  */
 
 import { courseForCategory } from '@/lib/class-plan-config'
+import { coursesIn } from '@/lib/course-includes'
 
 export const AP_LEGACY_TOPIC_SLUGS: Record<string, Record<string, string>> = {
   'ap-biology': {
@@ -67,14 +68,8 @@ export const AP_LEGACY_TOPIC_SLUGS: Record<string, Record<string, string>> = {
     'limits-at-infinity-calcab': 'limits-at-infinity',
     'related-rates-calcab': 'related-rates',
   },
-  'ap-calculus-bc': {
-    'concavity-inflection-points-calcab': 'second-derivative-test',
-    'continuity-ivt-calcab': 'continuity-introduction',
-    'derivatives-exp-log-calcab': 'derivatives-of-exponential-functions',
-    'implicit-differentiation-calcab': 'implicit-differentiation',
-    'limits-at-infinity-calcab': 'limits-at-infinity',
-    'related-rates-calcab': 'related-rates',
-  },
+  // ap-calculus-bc has no map of its own: it includes AP Calculus AB
+  // (src/lib/course-includes.ts), so AB's map applies (legacySlugMap).
   'ap-physics-2': {
     'atomic-structure': 'photons-atomic-nuclear',
     'capacitance': 'electric-fields-potential',
@@ -179,10 +174,22 @@ export const AP_CANONICAL_TOPIC_NAMES: Record<string, string> = {
   'water-properties': 'Water and Its Properties',
 }
 
+/**
+ * A course's legacy slug map, merged with the maps of the courses it includes
+ * (AP Calculus BC uses AP Calculus AB's). Undefined when none applies.
+ */
+export function legacySlugMap(courseSlug: string | null | undefined): Record<string, string> | undefined {
+  if (!courseSlug) return undefined
+  const maps = coursesIn(courseSlug)
+    .map((c) => AP_LEGACY_TOPIC_SLUGS[c])
+    .filter((m): m is Record<string, string> => Boolean(m))
+  if (maps.length === 0) return undefined
+  return maps.length === 1 ? maps[0] : Object.assign({}, ...maps.slice().reverse())
+}
+
 /** Production slug for a diagnostic topic slug in an AP course (unchanged when it already is one). */
 export function canonicalApTopicSlug(courseSlug: string | null | undefined, slug: string): string {
-  if (!courseSlug) return slug
-  return AP_LEGACY_TOPIC_SLUGS[courseSlug]?.[slug] ?? slug
+  return legacySlugMap(courseSlug)?.[slug] ?? slug
 }
 
 /**
@@ -231,7 +238,7 @@ type Recommended = { slug: string; name?: string }
  * on the same topic collapse into the first (higher-priority) entry.
  */
 export function canonicalizeRecommendedTopics<T extends Recommended>(courseSlug: string | null | undefined, topics: T[]): T[] {
-  const map = courseSlug ? AP_LEGACY_TOPIC_SLUGS[courseSlug] : undefined
+  const map = legacySlugMap(courseSlug)
   if (!map) return topics
   const seen = new Set<string>()
   const out: T[] = []
@@ -258,7 +265,7 @@ export function diagnosticCourseSlug(category: string | null | undefined): strin
  */
 export function canonicalizeDiagnosticResults<R>(category: string | null | undefined, results: R): R {
   const course = diagnosticCourseSlug(category)
-  const map = course ? AP_LEGACY_TOPIC_SLUGS[course] : undefined
+  const map = legacySlugMap(course)
   if (!map || !results || typeof results !== 'object' || Array.isArray(results)) return results
   const r = results as Record<string, unknown>
   let changed = false

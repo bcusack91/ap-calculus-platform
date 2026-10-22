@@ -27,30 +27,40 @@ Given a graph of $f$ and $g(x) = \\int_a^x f(t)\\,dt$:
     {
       id: 'acc6-worked1',
       type: 'text' as const,
+      figure: {
+        svg: '<svg viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g class="fig-muted" stroke="currentColor" stroke-width="0.75"><line x1="70" y1="50" x2="70" y2="210"/><line x1="100" y1="50" x2="100" y2="210"/><line x1="130" y1="50" x2="130" y2="210"/><line x1="160" y1="50" x2="160" y2="210"/><line x1="190" y1="50" x2="190" y2="210"/><line x1="220" y1="50" x2="220" y2="210"/><line x1="250" y1="50" x2="250" y2="210"/><line x1="280" y1="50" x2="280" y2="210"/><line x1="310" y1="50" x2="310" y2="210"/><line x1="40" y1="210" x2="310" y2="210"/><line x1="40" y1="190" x2="310" y2="190"/><line x1="40" y1="150" x2="310" y2="150"/><line x1="40" y1="130" x2="310" y2="130"/><line x1="40" y1="110" x2="310" y2="110"/><line x1="40" y1="90" x2="310" y2="90"/><line x1="40" y1="70" x2="310" y2="70"/><line x1="40" y1="50" x2="310" y2="50"/></g><g stroke="currentColor" stroke-width="1.5"><line x1="30" y1="170" x2="325" y2="170"/><line x1="40" y1="225" x2="40" y2="30"/></g><text x="322" y="164" font-size="12" fill="currentColor">x</text><text x="46" y="36" font-size="12" fill="currentColor">y</text><text x="130" y="185" font-size="11" fill="currentColor" text-anchor="middle">3</text><text x="220" y="185" font-size="11" fill="currentColor" text-anchor="middle">6</text><text x="310" y="185" font-size="11" fill="currentColor" text-anchor="middle">9</text><text x="254" y="164" font-size="11" fill="currentColor" text-anchor="middle">7</text><text x="32" y="54" font-size="11" fill="currentColor" text-anchor="end">6</text><text x="32" y="94" font-size="11" fill="currentColor" text-anchor="end">4</text><text x="32" y="134" font-size="11" fill="currentColor" text-anchor="end">2</text><text x="32" y="214" font-size="11" fill="currentColor" text-anchor="end">-2</text><g class="fig-accent"><polyline points="40,170 130,50 250,210 310,170" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="40" cy="170" r="3.5" fill="currentColor"/><circle cx="130" cy="50" r="3.5" fill="currentColor"/><circle cx="250" cy="210" r="3.5" fill="currentColor"/><circle cx="310" cy="170" r="3.5" fill="currentColor"/></g><text x="130" y="42" font-size="11" fill="currentColor" text-anchor="middle">(3, 6)</text><text x="250" y="226" font-size="11" fill="currentColor" text-anchor="middle">(7, -2)</text></svg>',
+        alt: 'Graph of y = f(x) on [0, 9]: line segments from (0, 0) up to (3, 6), down through (6, 0) to (7, -2), and back up to (9, 0). The graph is above the x-axis on (0, 6) and below it on (6, 9).',
+        caption: 'The graph of $f$. Its vertices are $(0,0)$, $(3,6)$, $(7,-2)$ and $(9,0)$.',
+      },
       content: `### Worked Example: Piecewise Linear Graph
 
-Suppose $f$ is piecewise linear with vertices at $(0,0)$, $(2,4)$, $(5,4)$, $(7,0)$, $(9,-2)$, and $g(x) = \\int_0^x f(t)\\,dt$.
+Suppose $f$ is piecewise linear on $[0, 9]$ with vertices at $(0,0)$, $(3,6)$, $(7,-2)$ and $(9,0)$, and $g(x) = \\int_0^x f(t)\\,dt$.
+
+The segment from $(3,6)$ to $(7,-2)$ has slope $-2$, so it crosses the axis at $x = 6$: $f(6) = 0$.
 
 **Computing $g$ values using geometric areas:**
 
 | $x$ | Shape from previous to $x$ | Area | $g(x)$ (running total) |
 |:---:|:---:|:---:|:---:|
 | $0$ | — | — | $0$ |
-| $2$ | Triangle: $\\frac{1}{2}(2)(4)$ | $+4$ | $4$ |
-| $5$ | Rectangle: $3 \\times 4$ | $+12$ | $16$ |
-| $7$ | Triangle: $\\frac{1}{2}(2)(4)$ | $+4$ | $20$ |
-| $9$ | Triangle: $\\frac{1}{2}(2)(-2)$ | $-2$ | $18$ |
+| $3$ | Triangle: $\\frac{1}{2}(3)(6)$ | $+9$ | $9$ |
+| $6$ | Triangle: $\\frac{1}{2}(3)(6)$ | $+9$ | $18$ |
+| $7$ | Triangle below the axis: $\\frac{1}{2}(1)(2)$ | $-1$ | $17$ |
+| $9$ | Triangle below the axis: $\\frac{1}{2}(2)(2)$ | $-2$ | $15$ |
 
 **Analysis of $g$:**
 
 | Property | Answer | Reasoning |
 |:---:|:---:|:---:|
-| $g$ increasing | $(0, 7)$ | $f > 0$ on $(0,7)$ |
-| $g$ decreasing | $(7, 9)$ | $f < 0$ on $(7,9)$ |
-| Absolute max of $g$ | $x = 7$, $g(7)=20$ | $f$ changes from $+$ to $-$ |
-| $g$ concave up | $(0, 2)$ | $f$ increasing (slope $> 0$) |
-| $g$ concave down | $(2, 5)$? No, $f$ constant on $(2,5)$ | $f'=0$, so $g$ is linear there |
-| Inflection points | $x=2, 5, 7$ | $f$ changes from increasing to constant, etc. |`
+| $g$ increasing | $(0, 6)$ | $g' = f > 0$ on $(0, 6)$ |
+| $g$ decreasing | $(6, 9)$ | $g' = f < 0$ on $(6, 9)$ |
+| Absolute max of $g$ | $g(6) = 18$ | $f$ changes from $+$ to $-$ at $x = 6$; candidates $g(0) = 0$, $g(9) = 15$ are smaller |
+| Absolute min of $g$ | $g(0) = 0$ | Smallest of the candidates $0$, $18$, $15$ |
+| $g$ concave up | $(0, 3)$ and $(7, 9)$ | $g'' = f'$: $f$ is increasing there |
+| $g$ concave down | $(3, 7)$ | $g'' = f'$: $f$ is decreasing there |
+| Inflection points of $g$ | $x = 3$ and $x = 7$ | $f'$ changes sign: $f$ has a local max at 3 and a local min at 7 |
+
+> **Watch out:** An inflection point of $g$ needs a sign change of $g'' = f'$. If $f$ had a flat (constant) segment, $g$ would be linear there, and the endpoints of that segment would not automatically be inflection points.`
     },
     {
       id: 'acc6-quiz1',

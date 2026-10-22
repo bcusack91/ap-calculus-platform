@@ -108,8 +108,10 @@ is continuous everywhere.
 **2)** For $g(x) = \\begin{cases} ax + 5, & x < 2 \\\\ x^3, & x \\ge 2 \\end{cases}$, find $a$.
       `,
       exercise: {
-        boxes: 2,
-        correctAnswers: ['-5', '3/2'],
+        questions: [
+          { question: '(1)', answer: '-5', acceptableAnswers: ['-5'] },
+          { question: '(2)', answer: '3/2', acceptableAnswers: ['3/2', '1.5'] }
+        ],
         hint1: 'Left at 4: $11$. Right limit: $16 + k$. Set $16 + k = 11$.',
         hint2: 'Left limit: $2a + 5$. Right at 2: $8$. Set $2a + 5 = 8 \\Rightarrow a = 3/2 = 1.5$.',
         explanation: 'Match left limit to right value (or vice versa) at the boundary.'

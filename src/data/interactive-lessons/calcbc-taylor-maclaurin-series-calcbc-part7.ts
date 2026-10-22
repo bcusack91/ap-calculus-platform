@@ -15,14 +15,14 @@ export const calcbcTaylorPart7Data = {
 | Taylor series | $\\sum f^{(n)}(c)(x-c)^n/n!$ |
 | Maclaurin | Taylor at $c = 0$ |
 | $T_n(x)$ | Partial sum through degree $n$ |
-| Lagrange error | $|R_n| \\le M|x-c|^{n+1}/(n+1)!$ |
+| Lagrange error | $\\lvert R_n\\rvert \\le M\\lvert x-c\\rvert^{n+1}/(n+1)!$ |
 | Coefficient ↔ derivative | $a_n = f^{(n)}(c)/n!$ ↔ $f^{(n)}(c) = n! \\cdot a_n$ |
 
 ### The Six Essential Series
 
 $$\\boxed{\\frac{1}{1-x},\\quad e^x,\\quad \\sin x,\\quad \\cos x,\\quad \\ln(1+x),\\quad \\arctan x}$$
 
-> **Key Fact:** Taylor/Maclaurin series is the single most heavily tested BC topic. Expect 4+ MC questions and a full FRQ.`
+> **Key Fact:** Taylor/Maclaurin series sit in Unit 10, which carries 17–18% of the BC exam weighting (CED), and a series free-response question is a regular feature of the exam.`
     },
     {
       id: 'tm7-mc1',

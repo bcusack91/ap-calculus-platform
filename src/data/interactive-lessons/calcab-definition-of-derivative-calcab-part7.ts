@@ -107,7 +107,7 @@ $$s(t) \\xrightarrow{d/dt} v(t) = s'(t) \\xrightarrow{d/dt} a(t) = s''(t)$$
 
 > "At $t = 3$ hours, the temperature is **decreasing** at a rate of **1.5 degrees Celsius per hour**."
 
-> **AP Tip:** You MUST include units, state increasing/decreasing, and use "rate of" language. This is worth 1–2 points on every contextual interpretation question.`
+> **AP Tip:** State increasing/decreasing and use "rate of" language. A complete interpretation names the quantity, the time, the rate's value and its units.`
     },
     {
       id: 'derdef7-quiz2',
@@ -127,7 +127,7 @@ $$s(t) \\xrightarrow{d/dt} v(t) = s'(t) \\xrightarrow{d/dt} a(t) = s''(t)$$
             explanation: 'Tangent slope = $-3$, so normal slope = $-(-1/3) = 1/3$. Normal: $y - 7 = \\frac{1}{3}(x-4)$.'
           },
           {
-            question: 'For $s(t) = t^3 - 6t^2$, the particle is speeding up when:',
+            question: 'A particle is speeding up exactly when:',
             options: [
               '$v(t) > 0$',
               '$a(t) > 0$',

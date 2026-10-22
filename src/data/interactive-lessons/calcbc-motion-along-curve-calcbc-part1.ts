@@ -136,7 +136,7 @@ At $t = 1$: $\\frac{dy}{dx} = \\frac{3}{0}$ → vertical tangent.`
 | Position | $\\vec{r}(t) = \\langle x(t), y(t) \\rangle$ |
 | Velocity | $\\vec{v}(t) = \\langle x'(t), y'(t) \\rangle$ |
 | Acceleration | $\\vec{a}(t) = \\langle x''(t), y''(t) \\rangle$ |
-| Speed | $|\\vec{v}| = \\sqrt{(x')^2 + (y')^2}$ |
+| Speed | $\\lvert \\vec{v}\\rvert = \\sqrt{(x')^2 + (y')^2}$ |
 | Slope | $dy/dx = y'(t)/x'(t)$ |
 
 **Next: Part 2 — Speed, Distance, and Arc Length**`

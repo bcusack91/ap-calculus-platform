@@ -9,6 +9,7 @@
  */
 import { useFirstSession } from '@/hooks/useFirstSession'
 import { firstStepHeadline } from '@/lib/first-session'
+import { useStudyCourse } from '@/lib/use-study-course'
 
 export const DEFAULT_LESSON_SUBTITLE = 'Learn step-by-step with interactive practice!'
 
@@ -16,14 +17,18 @@ interface Props {
   topicSlug: string
   topicTitle: string
   courseName?: string | null
+  /** The topic's own course; a BC student on an AB lesson sees "AP Calculus BC". */
+  courseSlug?: string | null
   className?: string
 }
 
-export default function LessonArrivalSubtitle({ topicSlug, topicTitle, courseName, className }: Props) {
+export default function LessonArrivalSubtitle({ topicSlug, topicTitle, courseName, courseSlug, className }: Props) {
   const first = useFirstSession(topicSlug)
+  const studyCourse = useStudyCourse(courseSlug, courseName)
+  const shownCourseName = studyCourse?.courseName ?? courseName
   return (
     <p className={className} data-testid="lesson-subtitle" data-first-step={first.active ? first.source : undefined}>
-      {first.active ? firstStepHeadline(courseName, topicTitle) : DEFAULT_LESSON_SUBTITLE}
+      {first.active ? firstStepHeadline(shownCourseName, topicTitle) : DEFAULT_LESSON_SUBTITLE}
     </p>
   )
 }

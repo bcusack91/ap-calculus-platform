@@ -104,7 +104,7 @@ $$\\frac{d}{dx}[y^n] = ny^{n-1} \\cdot \\frac{dy}{dx}$$
 | Differentiate | $\\cos(y) \\cdot \\frac{dy}{dx} = 1$ |
 | Solve | $\\frac{dy}{dx} = \\frac{1}{\\cos(y)} = \\sec(y)$ |
 
-> **Key Fact:** This is exactly how we derive the formula $\\frac{d}{dx}[\\arcsin(x)] = \\frac{1}{\\sqrt{1-x^2}}$. Since $\\sin(y) = x$, we know $\\cos(y) = \\sqrt{1-x^2}$.
+> **Key Fact:** This is exactly how we derive the formula $\\frac{d}{dx}[\\arcsin(x)] = \\frac{1}{\\sqrt{1-x^2}}$. Since $\\sin(y) = x$ with $-\\frac{\\pi}{2} \\le y \\le \\frac{\\pi}{2}$, $\\cos(y) = \\sqrt{1-x^2}$.
 
 ### Tangent Line Applications
 
@@ -242,7 +242,7 @@ $$\\boxed{\\text{Every time you differentiate } y, \\text{ attach } \\frac{dy}{d
 **Common Errors:**
 - Forgetting $\\frac{dy}{dx}$ on $y$ terms
 - Missing the product rule on $xy$ terms
-- Plugging in the point too early (always find general $\\frac{dy}{dx}$ first)
+- Substituting values before differentiating
 
 > **Up Next:** Part 4 — Related Rates (using implicit differentiation with respect to time).`
     }

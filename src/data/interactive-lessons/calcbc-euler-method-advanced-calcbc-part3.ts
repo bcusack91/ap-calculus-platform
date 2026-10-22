@@ -27,10 +27,10 @@ Given $dy/dx = f(x, y)$, differentiate the right side with respect to $x$, treat
 
 $$\\frac{d^2y}{dx^2} = 1 + 2y\\frac{dy}{dx} = 1 + 2y(x + y^2)$$
 
-| If $d^2y/dx^2$ | And solution is increasing | Then Euler... |
-|----------------|--------------------------|---------------|
-| $> 0$ (concave up) | — | Underestimates |
-| $< 0$ (concave down) | — | Overestimates |
+| If $d^2y/dx^2$ on the interval | Then Euler... |
+|----------------|---------------|
+| $> 0$ (concave up) | Underestimates |
+| $< 0$ (concave down) | Overestimates |
 
 > **AP Tip:** The AP exam frequently asks "Is your Euler approximation an overestimate or underestimate? Justify." You MUST explain using concavity.`
     },

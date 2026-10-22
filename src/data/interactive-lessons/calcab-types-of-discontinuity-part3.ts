@@ -4,7 +4,7 @@ export const calcabTypesDiscontinuityPart3Data = {
     {
       id: 'td3-intro',
       type: 'text' as const,
-      content: `# ⚡ Infinite (Essential) Discontinuities
+      content: `# ⚡ Infinite Discontinuities (Vertical Asymptotes)
 
 **Part 3 of 4 — Asymptote-style discontinuities**
 
@@ -26,7 +26,7 @@ export const calcabTypesDiscontinuityPart3Data = {
       content: `
 ## 📐 Definition
 
-> A function has an **infinite discontinuity** (also called *essential* discontinuity) at $x = a$ if at least one one-sided limit at $a$ is $\\pm\\infty$.
+> A function has an **infinite discontinuity** at $x = a$ if at least one one-sided limit at $a$ is $\\pm\\infty$.
 
 The function blows up near $a$ — there\'s a vertical asymptote there.
 
@@ -58,7 +58,7 @@ Other common cases: $\\ln x$ at $x = 0$, $\\tan x$ at $x = \\pi/2 + k\\pi$.
       content: `
 ## 🚫 Why They\'re Not Removable
 
-For a discontinuity to be removable, the limit must exist as a *finite* number. With an infinite discontinuity, the function values aren\'t bounded near $a$ — no finite value can "fix" the gap. The discontinuity is **essential**.
+For a discontinuity to be removable, the limit must exist as a *finite* number. With an infinite discontinuity, the function values aren\'t bounded near $a$ — no finite value can "fix" the gap. It is not removable.
 
 | Type | Two-sided limit | Removable? |
 |------|------------------|------------|

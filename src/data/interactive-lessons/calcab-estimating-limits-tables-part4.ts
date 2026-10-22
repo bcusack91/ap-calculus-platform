@@ -28,9 +28,9 @@ export const calcabEstimatingLimitsTablesPart4Data = {
 
 Calculators store finite digits. For $f(x) = \\dfrac{1 - \\cos x}{x^2}$ near 0:
 
-| $x$ | $0.1$ | $0.01$ | $0.001$ | $10^{-6}$ |
+| $x$ | $0.1$ | $0.01$ | $0.001$ | $10^{-8}$ |
 |---|---|---|---|---|
-| $f(x)$ | $0.4996$ | $0.49996$ | $0.499999\\ldots$ | $0$ (!) |
+| $f(x)$ | $0.4996$ | $0.499996$ | $0.49999996$ | $0$ (!) |
 
 For tiny $x$, the numerator $1 - \\cos x$ rounds to **exactly 0** in finite precision — *catastrophic cancellation*. The displayed limit appears to be 0, but the true limit is $\\tfrac{1}{2}$.
 

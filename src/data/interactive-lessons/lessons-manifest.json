@@ -3658,5 +3658,16 @@
       "Cross-Text Traps",
       "Mixed Practice and Test Strategy"
     ]
+  },
+  {
+    "slug": "lhopitals-rule",
+    "importPath": "./calcab-lhopitals-rule",
+    "partTitles": [
+      "Indeterminate Forms and the Rule",
+      "0/0 Limits and Repeated Use",
+      "∞/∞ Limits and Growth Rates",
+      "Tables, Graphs and Justification",
+      "Traps and Final Assessment"
+    ]
   }
 ]

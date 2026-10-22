@@ -31,7 +31,7 @@ Solve $\\frac{dy}{dx} = 2xy$, $y(0) = 3$.
 
 **Step 2:** Integrate: $\\ln|y| = x^2 + C$
 
-**Step 3:** Solve for $y$: $y = Ae^{x^2}$ where $A = e^C$
+**Step 3:** Solve for $y$: $y = Ae^{x^2}$ where $A = \\pm e^C$
 
 **Step 4:** Apply IC: $y(0) = A = 3$
 

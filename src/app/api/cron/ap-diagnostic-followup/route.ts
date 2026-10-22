@@ -1,3 +1,4 @@
+import { coursesTopicWhere } from '@/lib/course-includes'
 import { NextResponse, type NextRequest } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { sendApDiagnosticFollowupEmail } from '@/lib/email'
@@ -82,7 +83,7 @@ export async function GET(request: NextRequest) {
       }),
       // Lesson signals since the window opened — the funnel's definition.
       prisma.topicProgress.findMany({
-        where: { userId: { in: userIds }, lastAccessed: { gte: from }, topic: { category: { course: { slug: { in: courseSlugs } } } } },
+        where: { userId: { in: userIds }, lastAccessed: { gte: from }, topic: coursesTopicWhere(courseSlugs) },
         select: { userId: true, lastAccessed: true, topic: { select: { category: { select: { course: { select: { slug: true } } } } } } },
       }),
       prisma.activeTimeDaily.findMany({

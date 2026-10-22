@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import type { ExitQuizQuestion } from '@/data/exit-quizzes'
-import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
+import { generateCourseQuiz, hasCourseQuiz } from '@/lib/course-quiz'
 
 const ExitQuiz = dynamic(() => import('@/components/ExitQuiz'), { ssr: false })
 
@@ -44,9 +44,10 @@ export default function CourseEntranceQuiz({ courseSlug, courseName, categories 
   // Generate entrance quiz on mount
   useEffect(() => {
     const loadQuiz = async () => {
-      // Try course-level quiz (e.g., 'ap-chemistry')
-      if (hasExitQuiz(courseSlug)) {
-        const questions = await generateExitQuiz(courseSlug, 20)
+      // Try course-level quiz (e.g., 'ap-chemistry'); a course that includes
+      // another (AP Calculus BC) draws from both pools (src/lib/course-quiz.ts).
+      if (hasCourseQuiz(courseSlug)) {
+        const questions = await generateCourseQuiz(courseSlug, 20)
         if (questions.length > 0) {
           setQuizQuestions(questions)
           setPhase('quiz')
@@ -66,8 +67,8 @@ export default function CourseEntranceQuiz({ courseSlug, courseName, categories 
   }
 
   const handleFinalQuizStart = async () => {
-    if (hasExitQuiz(courseSlug)) {
-      const questions = await generateExitQuiz(courseSlug, 20)
+    if (hasCourseQuiz(courseSlug)) {
+      const questions = await generateCourseQuiz(courseSlug, 20)
       setFinalQuizQuestions(questions)
       setShowFinalQuiz(true)
     }

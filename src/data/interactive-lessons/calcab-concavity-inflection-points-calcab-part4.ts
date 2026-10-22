@@ -9,7 +9,7 @@ export const calcabConcavityPart4Data = {
     {
       "id": "c4-reading",
       "type": "text" as const,
-      "content": "## 📖 From $f'$ Graph to $f$ Information\n\nThe graph of $f'$ tells us EVERYTHING about $f$:\n\n| Feature of $f'$ graph | Information about $f$ |\n|-----------------------|---------------------|\n| $f'(x) > 0$ | $f$ is increasing |\n| $f'(x) < 0$ | $f$ is decreasing |\n| $f'(x) = 0$ | $f$ has critical point |\n| $f'$ changes + to - | $f$ has local maximum |\n| $f'$ changes - to + | $f$ has local minimum |\n| $f'$ is increasing | $f$ is concave up |\n| $f'$ is decreasing | $f$ is concave down |\n| $f'$ has a max/min | $f$ has inflection point |\n\n> **Critical Insight:** The concavity of $f$ comes from the *slope* of $f'$, not its sign!"
+      "content": "## 📖 From $f'$ Graph to $f$ Information\n\nThe graph of $f'$ tells us the shape of $f$ (but not its values, which need an initial condition such as $f(0)$):\n\n| Feature of $f'$ graph | Information about $f$ |\n|-----------------------|---------------------|\n| $f'(x) > 0$ | $f$ is increasing |\n| $f'(x) < 0$ | $f$ is decreasing |\n| $f'(x) = 0$ | $f$ has critical point |\n| $f'$ changes + to - | $f$ has local maximum |\n| $f'$ changes - to + | $f$ has local minimum |\n| $f'$ is increasing | $f$ is concave up |\n| $f'$ is decreasing | $f$ is concave down |\n| $f'$ has a max/min | $f$ has inflection point |\n\n> **Critical Insight:** The concavity of $f$ comes from the *slope* of $f'$, not its sign!"
     },
     {
       "id": "c4-f-double-prime",

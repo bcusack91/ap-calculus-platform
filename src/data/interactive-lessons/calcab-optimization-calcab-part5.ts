@@ -105,15 +105,15 @@ $$x = \\frac{20\\pi}{\\pi + 4} \\approx 8.80$$
       type: 'input-box' as const,
       content: '**Solve.** \u270d\ufe0f',
       exercise: {
-        question: 'Find the point on $y = \\sqrt{x}$ closest to $(3, 0)$. If the $x$-coordinate is $\\frac{a}{b}$ in lowest terms, find $a + b$.\n\n(Enter an integer.)',
-        correctAnswer: '7',
-        acceptableAnswers: ['7'],
+        question: 'Find the $x$-coordinate of the point on $y = \\sqrt{x}$ closest to $(3, 0)$.',
+        correctAnswer: '5/2',
+        acceptableAnswers: ['5/2', '2.5'],
         hints: [
           '$D^2 = (x-3)^2 + x$.',
           '$\\frac{d}{dx}D^2 = 2(x-3) + 1 = 2x - 5 = 0$.',
-          '$x = 5/2$. So $a + b = 5 + 2 = 7$.'
+          'Solve $2x - 5 = 0$.'
         ],
-        explanation: '$x = 5/2$. In lowest terms: $a = 5$, $b = 2$. $a + b = 7$.'
+        explanation: 'Minimize $D^2 = (x-3)^2 + x$ for $x \\ge 0$: $\\frac{d}{dx}D^2 = 2x - 5$ is negative for $x < \\frac{5}{2}$ and positive for $x > \\frac{5}{2}$, so the only critical point $x = \\frac{5}{2}$ gives the minimum distance. The point is $\\left(\\frac{5}{2}, \\sqrt{\\frac{5}{2}}\\right)$.'
       }
     },
     {

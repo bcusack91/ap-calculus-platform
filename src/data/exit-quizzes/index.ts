@@ -525,6 +525,7 @@ const quizLoaders: Record<string, QuizLoader> = {
   'linearization-differentials-calcab': () => import('./ap-calculus-ab'),
   'theorem-applications-calcab': () => import('./ap-calculus-ab'),
   'particle-motion-calcab': () => import('./ap-calculus-ab'),
+  'lhopitals-rule': () => import('./ap-calculus-ab'),
   'definite-integrals-calcab': () => import('./ap-calculus-ab'),
   'antiderivatives-indefinite-integrals-calcab': () => import('./ap-calculus-ab'),
   'u-substitution-calcab': () => import('./ap-calculus-ab'),

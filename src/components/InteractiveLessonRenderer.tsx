@@ -6,6 +6,7 @@ import { isSatMathTopic } from '@/lib/sat-math-topics'
 import type { PreloadedLessonPart } from '@/data/interactive-lessons/server-loader'
 import ReactMarkdown from 'react-markdown'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
+import { protectTableMathPipes } from '@/lib/table-math-pipes'
 import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
@@ -35,6 +36,8 @@ import { calculatePartMastery, partFromMastery } from '@/lib/lesson-place'
 import { estimatePartMinutes, isFromDiagnostic, type FirstSessionChoice } from '@/lib/first-session'
 import { useFirstSession } from '@/hooks/useFirstSession'
 import { FirstSessionChoice as FirstSessionChoiceScreen, FirstSessionProgressLine, FirstSessionCheckpoint } from '@/components/lesson/FirstSession'
+import { LessonFigures } from '@/components/lesson/LessonFigure'
+import { sectionFigures, type LessonFigureSpec } from '@/lib/lesson-figure'
 import { trackLessonFirstSessionStart, trackLessonPartComplete } from '@/lib/analytics'
 
 // Lazy-load ExitQuiz since it's only shown after lesson completion
@@ -55,8 +58,10 @@ import MarkForReview from '@/components/MarkForReview'
 import ScratchPad from '@/components/ScratchPad'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
 import { shuffleArray } from '@/lib/shuffle-options'
+import { isAnswerMatch } from '@/lib/lesson-answer-match'
 import { useLessonProgressSaver } from '@/hooks/useLessonProgressSaver'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
+import { useStudyCourse } from '@/lib/use-study-course'
 const ReferenceSheetModal = dynamic(() => import('@/components/ReferenceSheetModal'), { ssr: false })
 
 // Detects a markdown pipe-table (a row containing "|" immediately followed by a
@@ -190,41 +195,17 @@ function FormatElectronConfig({ text }: { text: string }): React.ReactElement {
   return <span className="font-mono text-lg tracking-tight">{parts}</span>
 }
 
-// Smart numeric answer comparison for sig fig tolerance
-// (typed answers treat −, – and — as a hyphen-minus, so "−0.75" matches "-0.75",
-// ignore thousands commas, so "1,800" matches "1800", and hyphens between
-// letters, so "upper middle" matches "upper-middle")
-// Handles trailing zeros, scientific notation, and minor rounding differences
-function isAnswerMatch(studentAnswer: string, correctAnswer: string): boolean {
-  if (!studentAnswer || !correctAnswer) return false
-  const sa = normalizeSuperscripts(studentAnswer).trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1').replace(/([a-z])-(?=[a-z])/g, '$1')
-  const ca = normalizeSuperscripts(correctAnswer).trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1').replace(/([a-z])-(?=[a-z])/g, '$1')
-
-  // Exact string match
-  if (sa === ca) return true
-  if (sa === '' || ca === '') return false
-
-  // Try numeric comparison (handles 2.5 vs 2.50, 3.0e-5 vs 0.00003, etc.)
-  const sNum = Number(sa)
-  const cNum = Number(ca)
-
-  if (!isNaN(sNum) && !isNaN(cNum)) {
-    if (cNum === 0) return Math.abs(sNum) < 0.001
-    // 0.5% relative tolerance — catches sig fig/rounding differences
-    // but NOT wrong calculations (e.g., 2.5 vs 2.6 = 4% → rejected)
-    const relativeDiff = Math.abs(sNum - cNum) / Math.abs(cNum)
-    return relativeDiff < 0.005
-  }
-
-  return false
-}
+// Typed-answer matching (fraction ↔ decimal ↔ π-forms, sig-fig tolerance,
+// normalized strings for words) lives in src/lib/lesson-answer-match.ts.
 
 // Compare arrays of answers using smart numeric matching
 
 interface Section {
   id: string
-  type: 'text' | 'input-boxes' | 'input-box' | 'dropdown-select' | 'multiple-choice' | 'quiz' | 'reference-angle-quiz' | 'factoring-practice' | 'mini-boss'
+  type: 'text' | 'figure' | 'input-boxes' | 'input-box' | 'dropdown-select' | 'multiple-choice' | 'quiz' | 'reference-angle-quiz' | 'factoring-practice' | 'mini-boss'
   content: string
+  /** Authored SVG figure(s), drawn above the section — shape in src/lib/lesson-figure.ts. */
+  figure?: LessonFigureSpec | LessonFigureSpec[]
   exercise?: LessonExercise
   problemType?: 'gcf' | 'gcf-identify' | 'difference-of-squares' | 'simple-trinomials' | 'complex-trinomials' | 'mixed'
   miniBossConfig?: {
@@ -422,6 +403,12 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
   const searchParams = useSearchParams()
   const router = useRouter()
   const { data: session } = useSession()
+  // The course this student studies the topic FOR: AP Calculus BC for an AB
+  // lesson opened by a BC student (src/lib/course-includes.ts). Labels and
+  // links only; the AP track and lesson settings keep the owning course.
+  const studyCourse = useStudyCourse(courseSlug, courseName)
+  const linkCourseSlug = studyCourse?.courseSlug ?? courseSlug
+  const displayCourseName = studyCourse?.courseName ?? courseName
   // Stable session keys for effect deps: every session refetch returns a new
   // object, which re-ran the load effects below (duplicate API calls that
   // count against the per-user rate limit).
@@ -1298,9 +1285,9 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
       if (destination === 'dashboard') {
         router.push('/dashboard')
       } else if (destination === 'course') {
-        router.push(`/courses/${courseSlug || 'ap-chemistry'}`)
+        router.push(`/courses/${linkCourseSlug || 'ap-chemistry'}`)
       } else if (destination === 'competitive') {
-        router.push(competitiveHrefForCourse(courseSlug, topicSlug))
+        router.push(competitiveHrefForCourse(linkCourseSlug, topicSlug))
       }
     } else {
       // Jump to first unmastered part
@@ -1322,7 +1309,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
       }
     }
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [totalParts, topicSlug, courseSlug, router, session?.user, cachedTopicId, sendProgress])
+  }, [totalParts, topicSlug, linkCourseSlug, router, session?.user, cachedTopicId, sendProgress])
 
   const [retryCounts, setRetryCounts] = useState<Record<number, number>>({})
   const isCurrentSectionComplete = completedSections.has(currentSectionIndex)
@@ -1385,7 +1372,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
   const lessonCompleteFallback = (secondary: boolean) => (
     <div className="flex flex-col sm:flex-row gap-3 justify-center">
       <Link
-        href={courseSlug ? `/courses/${courseSlug}` : '/topics'}
+        href={linkCourseSlug ? `/courses/${linkCourseSlug}` : '/topics'}
         className={
           secondary
             ? 'px-6 py-3 rounded-xl font-semibold border-2 border-accent-light dark:border-accent-hover text-accent-hover dark:text-accent-muted hover:bg-accent-subtle dark:hover:bg-accent-light/30 text-center'
@@ -1418,7 +1405,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
         key={exitQuizRun}
         topicSlug={topicSlug}
         topicTitle={lessonTitle}
-        courseSlug={courseSlug}
+        courseSlug={linkCourseSlug}
         questions={exitQuizQuestions}
         seed={exitQuizSeed}
         difficulty={exitQuizDifficulty}
@@ -1455,7 +1442,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
       return (
         <FirstSessionChoiceScreen
           topicTitle={topicTitle}
-          courseName={courseName}
+          courseName={displayCourseName}
           totalParts={totalParts}
           partMinutes={estimatePartMinutes(part1Sections)}
           hasExitQuiz={topicHasExitQuiz && !exitQuizStatus.hasPassed}
@@ -1503,7 +1490,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
       <TopicEntranceQuiz
         topicTitle={topicTitle}
         topicSlug={topicSlug}
-        courseSlug={courseSlug}
+        courseSlug={linkCourseSlug}
         questions={entranceQuizQuestions}
         partTitles={entranceQuizParts}
         onComplete={handleEntranceQuizComplete}
@@ -1599,7 +1586,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
           completedParts={checkpointPart}
           totalParts={totalParts}
           placeSaved={!!session?.user}
-          stopHref={courseSlug ? `/courses/${courseSlug}` : '/dashboard'}
+          stopHref={linkCourseSlug ? `/courses/${linkCourseSlug}` : '/dashboard'}
           onContinue={() => setCheckpointPart(null)}
         />
       )}
@@ -1848,7 +1835,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
           )}
           <div className="mt-4 text-sm">
             <Link
-              href={competitiveHrefForCourse(courseSlug, topicSlug)}
+              href={competitiveHrefForCourse(linkCourseSlug, topicSlug)}
               className="text-gray-600 dark:text-gray-300 hover:underline"
             >
               ⚔️ Try Competitive Mode
@@ -1899,6 +1886,22 @@ function SectionRenderer({
   isLastSection?: boolean
   onStartPractice?: () => void
 }) {
+  // Figures (any section type, or a stand-alone 'figure' step) are drawn above
+  // the section body; a 'figure' section's optional content renders as text.
+  const figures = sectionFigures(section)
+  if (figures.length > 0 || section.type === 'figure') {
+    const body: Section = section.type === 'figure'
+      ? { ...section, type: 'text', figure: undefined }
+      : { ...section, figure: undefined }
+    const hasBody = body.type !== 'text' || !!body.content?.trim()
+    return (
+      <>
+        <LessonFigures figures={figures} />
+        {hasBody && <SectionRenderer section={body} onComplete={onComplete} isComplete={isComplete} />}
+      </>
+    )
+  }
+
   if (section.type === 'text') {
     return (
       <div className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-h1:text-3xl sm:prose-h1:text-5xl prose-h1:mb-8 prose-h1:mt-0 prose-h1:leading-tight prose-h1:text-gray-900 dark:prose-h1:text-white prose-h2:text-3xl prose-h2:mt-10 prose-h2:mb-5 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-lg prose-strong:text-accent-hover dark:prose-strong:text-accent-muted prose-strong:font-semibold prose-a:text-accent dark:prose-a:text-accent-muted prose-a:no-underline hover:prose-a:underline prose-code:text-accent dark:prose-code:text-accent-muted prose-code:bg-accent-subtle dark:prose-code:bg-accent-light/20 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:font-mono prose-code:text-sm prose-ul:my-6 prose-ul:space-y-2 prose-li:my-2 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:text-lg">
@@ -3316,8 +3319,9 @@ function FadeInText({ content, onComplete }: { content: string; onComplete?: () 
     }
   }
   // Escape currency dollar amounts ($5 ... $10) so remark-math does not treat
-  // them as inline-math delimiters and swallow the prose between them.
-  content = escapeCurrencyMath(content)
+  // them as inline-math delimiters and swallow the prose between them; then
+  // keep `|` inside table-cell math ($|x|$) from splitting the cell.
+  content = protectTableMathPipes(escapeCurrencyMath(content))
   const hasLatex = content.includes('$') || content.includes('\\(') || content.includes('\\[')
   const hasSineTable = content.includes('[SINE_TABLE]')
   const hasCosineTable = content.includes('[COSINE_TABLE]')

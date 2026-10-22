@@ -26,8 +26,8 @@ where $M = \\max_{t}|f^{(n+1)}(t)|$ on the interval between $c$ and $x$.
 
 | Bound | When to Use | Formula |
 |-------|------------|---------|
-| **Lagrange** | Any Taylor polynomial | $M|x-c|^{n+1}/(n+1)!$ |
-| **AST** | Alternating Taylor series | $|$first omitted term$|$ |
+| **Lagrange** | Any Taylor polynomial | $M\\lvert x-c\\rvert^{n+1}/(n+1)!$ |
+| **AST** | Alternating Taylor series | Absolute value of the first omitted term |
 
 > **AP Tip:** Use the AST error bound when the series alternates — it's simpler. Use Lagrange when it doesn't alternate or when specifically asked.`
     },
@@ -50,7 +50,7 @@ Actual: $e^{0.5} \\approx 1.6487$, error $\\approx 0.0029$. The bound ($0.0043$)
 
 | Function | $f^{(n+1)}(x)$ | $M$ on $[0, x_0]$ |
 |----------|---------------|-------------------|
-| $e^x$ | $e^x$ | $e^{x_0}$ (or use $e^1 = 3$ as crude bound) |
+| $e^x$ | $e^x$ | $e^{x_0}$ (or use the crude bound $e < 3$) |
 | $\\sin x$ | $\\pm\\sin x$ or $\\pm\\cos x$ | $M = 1$ always! |
 | $\\cos x$ | $\\pm\\sin x$ or $\\pm\\cos x$ | $M = 1$ always! |`
     },
@@ -109,11 +109,11 @@ Actual: $e^{0.5} \\approx 1.6487$, error $\\approx 0.0029$. The bound ($0.0043$)
       type: 'input-box' as const,
       content: '**Lagrange Computation**',
       exercise: {
-        question: 'Find the maximum Lagrange error for $\\sin(0.1) \\approx T_3(0.1)$. Express as a scientific notation: $a \\times 10^{-n}$. Enter just the exponent $n$.',
-        correctAnswer: '6',
-        acceptableAnswers: ['6'],
-        hints: ['$M = 1$ for sine. $|R_3(0.1)| \\le M \\cdot (0.1)^4/4!$; write the result as $a \\times 10^{-n}$ with $1 \\le a < 10$.'],
-        explanation: '$|R_3(0.1)| \\le 1 \\cdot (0.1)^4/4! = 0.0001/24 \\approx 0.00000417 = 4.17 \\times 10^{-6}$. In standard scientific notation the exponent is $n = 6$.'
+        question: 'Find the Lagrange error bound for $\\sin(0.1) \\approx T_3(0.1)$ with $n = 3$ and $M = 1$. Give the value in scientific notation or as a decimal.',
+        correctAnswer: '4.17e-6',
+        acceptableAnswers: ['4.17e-6', '4.17*10^-6', '4.17 x 10^-6', '4.17×10^-6', '4.2e-6', '0.00000417', '0.000004167', '1/240000'],
+        hints: ['$M = 1$ for sine. $|R_3(0.1)| \\le M \\cdot (0.1)^4/4!$.'],
+        explanation: '$|R_3(0.1)| \\le 1 \\cdot (0.1)^4/4! = 0.0001/24 = \\frac{1}{240000} \\approx 4.17 \\times 10^{-6}$.'
       }
     },
     {

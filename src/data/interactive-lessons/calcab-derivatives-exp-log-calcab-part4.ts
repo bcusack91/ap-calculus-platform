@@ -9,7 +9,7 @@ export const calcabDerivExpLogPart4Data = {
     {
       "id": "del4-growth",
       "type": "text" as const,
-      "content": "## 📖 Exponential Growth & Decay\n\nThe model $y = Ce^{kt}$ is the solution to:\n\n$$\\frac{dy}{dt} = ky$$\n\n- $k > 0$: **Growth** (populations, investments)\n- $k < 0$: **Decay** (radioactive, cooling)\n- $C = y(0)$: initial amount\n\n### Verification\n\nIf $y = Ce^{kt}$: $\\frac{dy}{dt} = Cke^{kt} = k \\cdot Ce^{kt} = ky$ ✓\n\n---\n\n### Half-Life\n\nFor decay: $y = Ce^{kt}$ with $k < 0$.\n\nHalf-life $t_{1/2}$: $\\frac{C}{2} = Ce^{kt_{1/2}} \\implies e^{kt_{1/2}} = \\frac{1}{2}$\n\n$$t_{1/2} = \\frac{\\ln(1/2)}{k} = \\frac{-\\ln 2}{k}$$\n\n### Doubling Time\n\nFor growth: $2C = Ce^{kt_d} \\implies t_d = \\frac{\\ln 2}{k}$"
+      "content": "## 📖 Exponential Growth & Decay\n\nThe model $y = Ce^{kt}$ is the solution to:\n\n$$\\frac{dy}{dt} = ky$$\n\n- $k > 0$: **Growth** (populations, investments)\n- $k < 0$: **Decay** (radioactive decay, drug elimination)\n- $C = y(0)$: initial amount\n\n### Verification\n\nIf $y = Ce^{kt}$: $\\frac{dy}{dt} = Cke^{kt} = k \\cdot Ce^{kt} = ky$ ✓\n\n---\n\n### Half-Life\n\nFor decay: $y = Ce^{kt}$ with $k < 0$.\n\nHalf-life $t_{1/2}$: $\\frac{C}{2} = Ce^{kt_{1/2}} \\implies e^{kt_{1/2}} = \\frac{1}{2}$\n\n$$t_{1/2} = \\frac{\\ln(1/2)}{k} = \\frac{-\\ln 2}{k}$$\n\n### Doubling Time\n\nFor growth: $2C = Ce^{kt_d} \\implies t_d = \\frac{\\ln 2}{k}$"
     },
     {
       "id": "del4-compound",

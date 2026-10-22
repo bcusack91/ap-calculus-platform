@@ -119,7 +119,7 @@ export const calcabConcavityPart6Data = {
         ],
         "hint1": "Candidates: critical points + endpoints.",
         "hint2": "Extreme Value Theorem guarantees extrema on closed intervals.",
-        "hint3": "Single critical point with $f'' > 0$ everywhere → absolute min.",
+        "hint3": "The only critical point on the interval, and $f'' > 0$ there → local min → absolute min.",
         "explanation": "EVT guarantees extrema on closed intervals. Check all candidates."
       }
     },

@@ -15,7 +15,7 @@ Parametric, polar, and vector representations all describe curves. The calculus 
 | System | Position | Velocity | Speed |
 |--------|----------|----------|-------|
 | Parametric | $(x(t), y(t))$ | $(x'(t), y'(t))$ | $\\sqrt{(x')^2 + (y')^2}$ |
-| Vector | $\\vec{r}(t) = \\langle x(t), y(t) \\rangle$ | $\\vec{r}'(t) = \\langle x'(t), y'(t) \\rangle$ | $|\\vec{r}'(t)|$ |
+| Vector | $\\vec{r}(t) = \\langle x(t), y(t) \\rangle$ | $\\vec{r}'(t) = \\langle x'(t), y'(t) \\rangle$ | $\\lvert \\vec{r}'(t)\\rvert$ |
 | Polar | $r(\\theta)$ at angle $\\theta$ | Rates $\\frac{dr}{d\\theta}$, $\\frac{dx}{d\\theta}$, $\\frac{dy}{d\\theta}$ | Not used: polar questions ask for slope, rates, and area |
 
 > **Key Insight:** Polar curves ARE parametric curves with $t = \\theta$, $x = r(\\theta)\\cos\\theta$, $y = r(\\theta)\\sin\\theta$. The polar slope formula follows from the parametric one.`

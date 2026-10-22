@@ -24,7 +24,7 @@ export const calcabFactoringMethodPart2Data = {
       id: 'fml2-difsq',
       type: 'text' as const,
       content: `
-## ◯$ {}^{2}$ Difference of Squares
+## Difference of Squares
 
 $$a^2 - b^2 = (a - b)(a + b)$$
 

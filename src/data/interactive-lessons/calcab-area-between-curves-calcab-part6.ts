@@ -17,7 +17,7 @@ Many FRQ problems give you a region $R$ and ask multiple parts about it. Here is
 | (a) | Find the area of $R$ | $\\int_a^b(\\text{top}-\\text{bottom})\\,dx$ |
 | (b) | Volume with known cross-sections | $\\int_a^b A(x)\\,dx$ |
 | (c) | Volume of revolution | $\\pi\\int_a^b R^2\\,dx$ or washer |
-| (d) | Write but do not evaluate | Set up only; simplify nothing |
+| (d) | Write but do not evaluate | Set up only; you need not simplify |
 
 ### Worked AP Problem
 
@@ -37,7 +37,7 @@ $$V = \\int_0^4 x\\,dx = \\left[\\frac{x^2}{2}\\right]_0^4 = 8$$
 
 $$V = \\pi\\int_0^4(\\sqrt{x})^2\\,dx = \\pi\\int_0^4 x\\,dx = \\boxed{8\\pi}$$
 
-> **AP Tip:** For "write but do not evaluate," you earn full credit for a correct integral with correct limits. Do NOT simplify the integrand.`
+> **AP Tip:** For "write but do not evaluate," the points go to a correct integrand and correct limits (and any constant in front). You need not simplify the integrand, and you should not evaluate.`
     },
     {
       id: 'area6-quiz1',
@@ -84,14 +84,14 @@ $$V = \\pi\\int_0^4(\\sqrt{x})^2\\,dx = \\pi\\int_0^4 x\\,dx = \\boxed{8\\pi}$$
             options: ['Set up integral with limits; do not compute', 'Write the antiderivative, skip limits', 'Evaluate, but leave it unsimplified', 'Write the integrand only, without limits'],
             correctAnswers: ['Set up integral with limits; do not compute'],
             hints: ['This is a specific AP instruction. Show the integral but stop there.'],
-            explanation: 'Write the definite integral with correct integrand and limits. Do not simplify or evaluate.'
+            explanation: 'Write the definite integral with the correct integrand and limits, and stop. You need not simplify it, and you do not evaluate it.'
           },
           {
-            label: 'To earn full credit on an area FRQ, you must show:',
-            options: ['Intersection points, integral setup, evaluation', 'Integral setup and a graph of the region', 'Final answer, units, and a sketch', 'Antiderivative, units, and a decimal check'],
-            correctAnswers: ['Intersection points, integral setup, evaluation'],
-            hints: ['Each step earns partial credit.'],
-            explanation: 'AP grading gives points for finding intersections, setting up the integral correctly, and evaluating.'
+            label: 'On a calculator-active area FRQ, the points usually go to:',
+            options: ['The integrand, the limits, and the answer', 'A sketch of the region and the units', 'The algebra used to find each intersection', 'The antiderivative written out by hand'],
+            correctAnswers: ['The integrand, the limits, and the answer'],
+            hints: ['What does the reader need to see to know your integral is right?'],
+            explanation: 'Area FRQs score the integrand, the limits, and the answer. With a calculator you may find the intersection points and evaluate the integral on the calculator; no hand algebra or antiderivative is needed. Report decimals correct to three places.'
           }
         ]
       }

@@ -48,11 +48,11 @@ The BC exam also generates an **AB subscore** from a subset of questions. This s
 
 ### BC-Specific FRQ Topics
 
-The BC exam **always** includes FRQs on:
+Expect BC-only free-response questions on:
 1. **Series** — Taylor/Maclaurin, interval of convergence, error bounds
-2. **Parametric/polar/vector** — motion, area, arc length
+2. **Parametric/polar/vector** — motion, polar area, parametric arc length
 
-These BC-only topics have appeared on nearly every recent BC exam. Prepare them thoroughly.`
+Units 9 and 10 together carry about 30% of the BC exam weighting (CED). Prepare them thoroughly.`
     },
     {
       id: 'es1-mc',
@@ -92,7 +92,7 @@ These BC-only topics have appeared on nearly every recent BC exam. Prepare them 
             options: ['Taylor series', 'Related rates of change', 'Optimization problems', 'Volumes of revolution'],
             correctAnswers: ['Taylor series'],
             hints: ['This BC-only topic appears nearly every year.'],
-            explanation: 'A Taylor/Maclaurin series FRQ appears on almost every BC exam. It typically includes finding terms, determining convergence, and bounding error.'
+            explanation: 'A Taylor/Maclaurin series FRQ is a regular feature of the BC exam. It typically includes finding terms, determining convergence, and bounding error. The other three are AB topics that BC shares.'
           },
           {
             label: 'The BC exam calculator sections allow you to:',

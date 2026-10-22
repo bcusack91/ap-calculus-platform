@@ -42,7 +42,7 @@ If $y = f(u)$ where $u = g(x)$, then:
 
 $$\\boxed{\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}}$$
 
-> **Key Fact:** The Chain Rule is needed whenever you see a function INSIDE another function. It appears in ~80% of all derivative problems on the AP exam.`
+> **Key Fact:** The Chain Rule is needed whenever you see a function INSIDE another function. It appears in most derivative problems on the AP exam.`
     },
     {
       id: 'chain1-examples',

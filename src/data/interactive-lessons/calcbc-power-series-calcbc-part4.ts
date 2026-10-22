@@ -28,7 +28,7 @@ $$\\boxed{\\text{Most AP power series problems reduce to manipulating these six.
     {
       id: 'ps4-techniques',
       type: 'text' as const,
-      content: `### Technique: Partial Fractions + Geometric
+      content: `### Technique: Rewrite as a Geometric Series
 
 **Find the series for** $f(x) = \\frac{3}{2-x}$:
 
@@ -50,7 +50,7 @@ $e^{x^2} = \\sum_{n=0}^\\infty \\frac{x^{2n}}{n!} = 1 + x^2 + \\frac{x^4}{2} + \
 
 $e^{-t^2} = \\sum (-1)^n t^{2n}/n!$. Integrate: $\\int_0^x = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{(2n+1) n!}$
 
-This is related to the error function $\\text{erf}(x)$ — series representation gives exact computation!`
+This is related to the error function $\\text{erf}(x)$ — the series lets you approximate it to any desired accuracy.`
     },
     {
       id: 'ps4-mc1',

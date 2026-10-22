@@ -14,8 +14,8 @@ export const calcabOptimizationPart6Data = {
 |:---:|:---:|:---:|
 | Geometric | "Find dimensions that maximize/minimize..." | Draw diagram, label, constrain |
 | Applied | "At what rate/quantity is profit maximized?" | $P = R - C$, set $P' = 0$ |
-| Justification | "Justify that your answer is a maximum" | Second derivative test or endpoints |
-| Setup only | "Write but do not solve..." | Show objective, constraint, domain |
+| Justification | "Justify that your answer is a maximum" | Sign change of $f'$ at the only critical point |
+| Closed interval | "Find the absolute maximum on $[a,b]$" | Candidates Test: critical points and endpoints |
 
 ### Full Worked AP Problem
 
@@ -32,13 +32,13 @@ $$A(x) = 2x(4-x^2) = 8x - 2x^3, \\quad 0 < x < 2$$
 
 **Solution (b):** $A'(x) = 8 - 6x^2 = 0 \\Rightarrow x^2 = 4/3 \\Rightarrow x = \\frac{2}{\\sqrt{3}} = \\frac{2\\sqrt{3}}{3}$
 
-**Solution (c):** $A''(x) = -12x$. At $x = 2\\sqrt{3}/3$: $A'' = -12 \\cdot \\frac{2\\sqrt{3}}{3} < 0$.
+**Solution (c):** $A'(x) = 8 - 6x^2$ is positive for $0 < x < \\frac{2\\sqrt{3}}{3}$ and negative for $\\frac{2\\sqrt{3}}{3} < x < 2$. So $A$ increases and then decreases, and $x = \\frac{2\\sqrt{3}}{3}$ is the **only** critical point on $(0, 2)$. Therefore it gives the **absolute maximum**.
 
-Since $A'' < 0$ at the critical point, $A$ is concave down there, so this gives a **maximum**.
+(Equivalently: $A''(x) = -12x < 0$ there, so it is a local maximum, and because it is the only critical point on the interval, that local maximum is the absolute maximum.)
 
 $$A_{\\max} = 2 \\cdot \\frac{2\\sqrt{3}}{3}\\left(4 - \\frac{4}{3}\\right) = \\frac{4\\sqrt{3}}{3} \\cdot \\frac{8}{3} = \\frac{32\\sqrt{3}}{9}$$
 
-> **AP Tip:** On justification, you must state the Second Derivative Test result AND explicitly conclude "maximum" or "minimum." Just computing $f''$ is not enough.`
+> **AP Tip:** The Second Derivative Test alone shows only a **local** maximum. For the absolute maximum, add "and it is the only critical point on the interval," or, on a closed interval, compare $f$ at the critical points and the endpoints (Candidates Test). Always state the conclusion in words.`
     },
     {
       id: 'opt6-quiz1',
@@ -59,7 +59,7 @@ $$A_{\\max} = 2 \\cdot \\frac{2\\sqrt{3}}{3}\\left(4 - \\frac{4}{3}\\right) = \\
             explanation: 'Print: $(w-2)(h-2)=24$, $h=24/(w-2)+2$. $A=wh$. Calculus gives $w - 2 = \\sqrt{24} = 2\\sqrt{6}$, so $w=2+2\\sqrt{6}$. Stopping at $2\\sqrt{6}$ gives the print width, adding only one margin gives $1+2\\sqrt{6}$, and adding the margins twice gives $4+2\\sqrt{6}$.'
           },
           {
-            question: 'Which justification is sufficient for "the critical point is a maximum"?',
+            question: 'For a twice-differentiable $f$, which fact shows that a critical point $c$ is a local maximum?',
             options: ['$f\'\'(c) < 0$ at the critical point $c$', '$f\'(c) = 0$ at the critical point $c$', '$f\'\'(c) > 0$ at the critical point $c$', '$f(c) > 0$ at the critical point $c$'],
             correctAnswer: 0,
             explanation: 'Second Derivative Test: $f\'(c)=0$ and $f\'\'(c)<0$ implies a local maximum at $c$. $f\'(c)=0$ alone only locates a candidate, $f\'\'(c) > 0$ indicates a minimum, and the sign of $f(c)$ says nothing about extrema.'
@@ -74,18 +74,18 @@ $$A_{\\max} = 2 \\cdot \\frac{2\\sqrt{3}}{3}\\left(4 - \\frac{4}{3}\\right) = \\
       exercise: {
         dropdowns: [
           {
-            label: 'In "write but do not solve," you should still include:',
-            options: ['The equation $f\'(x) = 0$ and the domain', 'A decimal value for the optimal $x$', 'A sketch of the graph of $f$', 'The second derivative'],
-            correctAnswers: ['The equation $f\'(x) = 0$ and the domain'],
-            hints: ['Show the setup completely.'],
-            explanation: 'Write the objective, apply the constraint, take the derivative, write $f\'(x)=0$, and state the domain. No solving, decimal answer or graph is required.'
+            label: 'On $(0, \\infty)$, $x = c$ is the only critical point of $f$, and $f\'$ changes from $+$ to $-$ there. Then $f(c)$ is:',
+            options: ['The absolute maximum on $(0, \\infty)$', 'A local maximum only; more checks are needed', 'The absolute minimum on $(0, \\infty)$', 'Impossible to classify without $f\'\'(c)$'],
+            correctAnswers: ['The absolute maximum on $(0, \\infty)$'],
+            hints: ['$f$ increases up to $c$ and decreases after it, and there is no other critical point.'],
+            explanation: '$f$ increases on $(0, c)$ and decreases on $(c, \\infty)$, so no other point can give a larger value: $f(c)$ is the absolute maximum. The single-critical-point argument is what upgrades a local maximum to an absolute one.'
           },
           {
-            label: 'For "justify your answer is a maximum," the strongest approach is:',
-            options: ['Second Derivative Test: $f\'\'(c) < 0$', 'Comparing $f$ at two nearby points', 'A calculator graph of $f$ near $c$', 'Showing that $f\'(c) = 0$'],
-            correctAnswers: ['Second Derivative Test: $f\'\'(c) < 0$'],
-            hints: ['AP graders look for a rigorous test.'],
-            explanation: 'The Second Derivative Test or the first derivative sign-change test (candidates test on a closed interval) are accepted justifications. Sample values, a graph, or $f\'(c) = 0$ alone do not justify a maximum.'
+            label: 'To justify that a critical point $c$ on an open interval gives the **absolute** maximum, write:',
+            options: ['$f\'$ goes from $+$ to $-$ at $c$, its only critical point', '$f\'\'(c) < 0$, so $f(c)$ must be the absolute maximum', '$f(c)$ is larger than $f$ at two nearby points', 'A calculator graph of $f$ peaks near $x = c$'],
+            correctAnswers: ['$f\'$ goes from $+$ to $-$ at $c$, its only critical point'],
+            hints: ['A local test needs one more fact to become an absolute statement.'],
+            explanation: 'The sign change shows a local maximum, and "only critical point on the interval" makes it the absolute maximum. $f\'\'(c) < 0$ by itself shows only a local maximum, and sample values or a graph are not a justification.'
           },
           {
             label: 'If the domain is a closed interval $[a,b]$, you should:',
@@ -102,15 +102,15 @@ $$A_{\\max} = 2 \\cdot \\frac{2\\sqrt{3}}{3}\\left(4 - \\frac{4}{3}\\right) = \\
       type: 'input-box' as const,
       content: '**AP Problem.** \u270d\ufe0f',
       exercise: {
-        question: 'A rectangle inscribed under $y = 9 - x^2$ (with base on the $x$-axis) has $A(x) = 2x(9-x^2)$. Find the maximum area.\n\nIf the answer is $a\\sqrt{b}$, find $a + b$.\n\n(Enter an integer.)',
-        correctAnswer: '15',
-        acceptableAnswers: ['15'],
+        question: 'A rectangle inscribed under $y = 9 - x^2$ (with base on the $x$-axis) has $A(x) = 2x(9-x^2)$ for $0 < x < 3$. Find the maximum area. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '12sqrt(3)',
+        acceptableAnswers: ['12sqrt(3)', '12*sqrt(3)', '12√3', '20.785', '20.784'],
         hints: [
           '$A = 18x - 2x^3$. $A\' = 18 - 6x^2 = 0$.',
           '$x^2 = 3$, $x = \\sqrt{3}$.',
-          '$A = 2\\sqrt{3}(9-3) = 12\\sqrt{3}$. So $a = 12$, $b = 3$.'
+          '$A = 2\\sqrt{3}(9-3) = 12\\sqrt{3}$.'
         ],
-        explanation: '$A(\\sqrt{3}) = 2\\sqrt{3} \\cdot 6 = 12\\sqrt{3}$. $a + b = 12 + 3 = 15$.'
+        explanation: '$A\'(x) = 18 - 6x^2$ is positive for $0 < x < \\sqrt{3}$ and negative for $\\sqrt{3} < x < 3$, and $x = \\sqrt{3}$ is the only critical point, so it gives the absolute maximum: $A(\\sqrt{3}) = 2\\sqrt{3} \\cdot 6 = 12\\sqrt{3} \\approx 20.785$.'
       }
     },
     {
@@ -119,8 +119,8 @@ $$A_{\\max} = 2 \\cdot \\frac{2\\sqrt{3}}{3}\\left(4 - \\frac{4}{3}\\right) = \\
       content: `### Key Takeaways \u2014 Part 6
 
 - AP FRQs require complete justification for max/min
-- "Write but do not solve" earns credit for setup
-- Second Derivative Test is the standard justification
+- State the domain of the objective function
+- The Second Derivative Test shows a local extremum; add "only critical point on the interval" for the absolute one
 - On closed intervals, compare all candidates (critical points + endpoints)`
     }
   ]

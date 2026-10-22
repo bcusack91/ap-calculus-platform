@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Prisma } from '@prisma/client'
 import { prisma } from '@/lib/prisma'
+import { coursesTopicWhere } from '@/lib/course-includes'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
 import { loadQuizResults } from '@/lib/quiz-results-server'
 
@@ -60,8 +61,8 @@ export async function GET(
 
   const subject = ('classroom' in result ? result.classroom.subject : null)?.trim().toLowerCase() ?? ''
   if (subject) {
-    const courses = await prisma.course.findMany({ select: { id: true, name: true, slug: true } })
-    const matchedCourseIds = courses
+    const courses = await prisma.course.findMany({ select: { name: true, slug: true } })
+    const matchedCourseSlugs = courses
       .filter((c) => {
         const name = c.name.toLowerCase()
         const slug = c.slug.toLowerCase()
@@ -70,9 +71,11 @@ export async function GET(
           slug.includes(subject) || subject.includes(slug)
         )
       })
-      .map((c) => c.id)
-    if (matchedCourseIds.length > 0) {
-      topicScopeOr.push({ category: { courseId: { in: matchedCourseIds } } })
+      .map((c) => c.slug)
+    if (matchedCourseSlugs.length > 0) {
+      // A course's topics include the courses it contains: a BC class's AB
+      // lesson work counts (src/lib/course-includes.ts).
+      topicScopeOr.push(coursesTopicWhere(matchedCourseSlugs))
     }
   }
 

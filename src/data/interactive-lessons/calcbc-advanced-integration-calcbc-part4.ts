@@ -10,17 +10,17 @@ export const calcbcAdvIntegrationPart4Data = {
 
 ### The Fundamental Theorem — Both Parts
 
-**FTC Part 1 (Evaluation):**
+**FTC (Evaluation):**
 $$\\boxed{\\int_a^b f(x)\\,dx = F(b) - F(a) \\quad \\text{where } F' = f}$$
 
-**FTC Part 2 (Derivative of accumulation):**
+**FTC (Derivative of accumulation):**
 $$\\boxed{\\frac{d}{dx}\\int_a^x f(t)\\,dt = f(x)}$$
 
-### Chain Rule Variation (BC Favorite)
+### Chain Rule Variation
 
 $$\\boxed{\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)}$$
 
-This appears frequently on BC exams and requires careful application of the chain rule.
+This is AB content (CED 6.4) that BC questions build on; apply the chain rule carefully.
 
 > **Key Fact:** If BOTH bounds are functions of $x$: split using additivity of integrals.
 > $\\frac{d}{dx}\\int_{h(x)}^{g(x)} f(t)\\,dt = f(g(x))g'(x) - f(h(x))h'(x)$`

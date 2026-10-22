@@ -6,15 +6,23 @@ import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
 import CourseHero from '@/components/CourseHero'
 import { apDiagnosticStats } from '@/lib/ap-diagnostic-courses'
+import { AP_CALCULUS_AB_UNIT_TESTS_CONFIG } from '@/data/unit-tests/ap-calculus-ab'
+import { variantCountFor } from '@/lib/unit-tests/engine'
+import { apCalcABFRQs } from '@/data/ap-calc-ab-frq/questions'
+
+// Counts come from the data the linked pages serve, so the copy cannot drift.
+const UNIT_COUNT = AP_CALCULUS_AB_UNIT_TESTS_CONFIG.units.length
+const UNIT_TEST_VARIANTS = variantCountFor(AP_CALCULUS_AB_UNIT_TESTS_CONFIG)
+const FRQ_COUNT = apCalcABFRQs.length
 
 export const metadata: Metadata = {
   title: 'AP Calculus AB | Free AP Calc AB Practice & Review',
   description:
-    'Comprehensive AP Calculus AB preparation with 154+ interactive lessons, diagnostic tests, flashcards, daily questions, and competitive challenges. Free for all students.',
+    `Comprehensive AP Calculus AB preparation with interactive lessons for all ${UNIT_COUNT} CED units, diagnostic tests, flashcards, daily questions, and competitive challenges. Free for all students.`,
   alternates: { canonical: 'https://www.studymondo.com/ap-calculus-ab' },
   openGraph: {
     title: 'AP Calculus AB | Free AP Calc AB Practice & Review',
-    description: 'Master AP Calculus AB with 154+ interactive lessons, diagnostics, and daily practice.',
+    description: `Master AP Calculus AB with interactive lessons for all ${UNIT_COUNT} units, diagnostics, and daily practice.`,
     url: 'https://www.studymondo.com/ap-calculus-ab',
   },
 }
@@ -30,7 +38,7 @@ const features = [
       </svg>
     ),
     color: 'from-orange-500 to-amber-500',
-    stats: '154+ lessons · All units',
+    stats: `Every CED topic · ${UNIT_COUNT} units`,
   },
   {
     title: 'Diagnostic Test',
@@ -46,7 +54,7 @@ const features = [
   },
   {
     title: 'Unit Tests',
-    description: 'Drill a single AP unit at a time. 6 units · 4 different variations each — perfect for end-of-unit review.',
+    description: `Drill a single AP unit at a time. ${UNIT_COUNT} units · ${UNIT_TEST_VARIANTS} different variations each — perfect for end-of-unit review.`,
     href: '/ap-calcab-unit-tests',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,7 +62,7 @@ const features = [
       </svg>
     ),
     color: 'from-purple-500 to-pink-500',
-    stats: '6 units · 4 variations',
+    stats: `${UNIT_COUNT} units · ${UNIT_TEST_VARIANTS} variations`,
   },
   {
     title: 'Flashcards',
@@ -114,7 +122,7 @@ const features = [
       </svg>
     ),
     color: 'from-indigo-500 to-violet-500',
-    stats: '9 FRQs · Auto-graded · Timed',
+    stats: `${FRQ_COUNT} FRQs · Auto-graded · Timed`,
   },
   {
     title: 'Full-Length Practice Exam',
@@ -131,10 +139,10 @@ const features = [
 ]
 
 const units = [
-  { title: 'Unit 1–2: Limits & Continuity', topics: ['Limits Graphically & Numerically', 'Algebraic Limit Techniques', 'Squeeze Theorem', 'Continuity & IVT'], color: 'orange' },
-  { title: 'Unit 3–4: Differentiation', topics: ['Definition of Derivative', 'Power, Product & Quotient Rules', 'Chain Rule', 'Implicit Differentiation', 'Related Rates'], color: 'blue' },
-  { title: 'Unit 5: Analytical Applications', topics: ['Mean Value Theorem', 'Increasing/Decreasing Intervals', 'Relative & Absolute Extrema', 'Concavity & Points of Inflection', 'Optimization'], color: 'purple' },
-  { title: 'Unit 6–8: Integration', topics: ['Riemann Sums & Definite Integrals', 'Fundamental Theorem of Calculus', 'U-Substitution', 'Area Between Curves', 'Volumes of Revolution', 'Differential Equations'], color: 'green' },
+  { title: 'Unit 1: Limits and Continuity', topics: ['Limits from Graphs, Tables & Algebra', 'Squeeze Theorem', 'Infinite Limits & Limits at Infinity', 'Continuity & the IVT'], color: 'orange' },
+  { title: 'Units 2–3: Differentiation', topics: ['Definition of the Derivative', 'Power, Product, Quotient & Trig Rules', 'Chain Rule', 'Implicit Differentiation', 'Inverse Function Derivatives'], color: 'blue' },
+  { title: 'Units 4–5: Applications of Derivatives', topics: ['Motion & Related Rates', 'Local Linearity & L’Hospital’s Rule', 'Mean Value & Extreme Value Theorems', 'Extrema, Concavity & Curve Sketching', 'Optimization'], color: 'purple' },
+  { title: 'Units 6–8: Integration, Differential Equations & Applications', topics: ['Riemann Sums & the Fundamental Theorem', 'u-Substitution', 'Slope Fields & Separable Equations', 'Exponential Models', 'Area Between Curves', 'Volumes of Revolution'], color: 'green' },
 ]
 
 const unitColors: Record<string, string> = {
@@ -160,7 +168,7 @@ export default function APCalculusABHub() {
       <CourseUniqueIntro slug="ap-calculus-ab" />
       <CourseHero
         courseName='AP Calculus AB'
-        tagline='154+ interactive lessons, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.'
+        tagline={`Interactive lessons for all ${UNIT_COUNT} units, diagnostic assessments, flashcards, daily questions, and competitive challenges — everything you need to score a 5.`}
         primaryCta={{ href: '/calcab-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-calculus-ab', label: 'Browse Lessons' }}
         accentFrom="orange"

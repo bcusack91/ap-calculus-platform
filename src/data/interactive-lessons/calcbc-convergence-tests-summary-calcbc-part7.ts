@@ -13,12 +13,12 @@ export const calcbcConvergencePart7Data = {
 | Test | Use when... | Conclusion |
 |------|-----------|------------|
 | Divergence | Always first | $\\lim a_n \\neq 0 \\Rightarrow$ diverges |
-| Geometric | $\\sum ar^n$ | $|r| < 1$: conv to $a/(1-r)$ |
+| Geometric | $\\sum ar^n$ | $\\lvert r\\rvert < 1$: conv to $a/(1-r)$ |
 | $p$-Series | $\\sum 1/n^p$ | $p > 1$: conv; $p \\leq 1$: div |
 | AST | $\\sum (-1)^n b_n$ | $b_n \\downarrow 0$: conv |
 | Ratio | Factorials, $n$th powers of constants | $L < 1$: conv; $L > 1$: div |
 | DCT | Can bound $0 \\leq a_n \\leq b_n$ | $\\sum b_n$ conv ⇒ $\\sum a_n$ conv |
-| LCT | Rational-type terms | $\\lim a_n/b_n = L > 0$: same behavior |
+| LCT | Rational-type terms | $\\lim a_n/b_n = L$, $0 < L < \\infty$: same behavior |
 | Integral | Positive, decreasing, continuous | $\\int_1^\\infty f$ and $\\sum a_n$ agree |
 | Telescoping | Partial fractions collapse | Compute $\\lim S_n$ |
 
@@ -107,7 +107,7 @@ $$\\boxed{\\text{Flowchart: Div Test} \\to \\text{Recognizable} \\to \\text{Alte
       type: 'input-box' as const,
       content: '**Final Challenge**',
       exercise: {
-        question: 'How many of these series converge? (1) $\\sum n!/n^n$ (2) $\\sum 1/(n \\ln^2 n)$ (3) $\\sum (-1)^n/\\ln n$ (4) $\\sum n^{10}/10^n$. Enter a number 0–4.',
+        question: 'How many of these series converge? (1) $\\sum_{n=1}^{\\infty} n!/n^n$ (2) $\\sum_{n=2}^{\\infty} 1/(n \\ln^2 n)$ (3) $\\sum_{n=2}^{\\infty} (-1)^n/\\ln n$ (4) $\\sum_{n=1}^{\\infty} n^{10}/10^n$. Enter a number 0–4.',
         correctAnswer: '4',
         acceptableAnswers: ['4', 'four'],
         hints: ['(1) Ratio: $L = 1/e$. (2) Integral Test or log-$p$ with $p=2$. (3) AST. (4) Ratio: $L = 1/10$.'],
@@ -120,7 +120,7 @@ $$\\boxed{\\text{Flowchart: Div Test} \\to \\text{Recognizable} \\to \\text{Alte
       content: `### Convergence Tests Summary — Complete
 
 You've mastered:
-- All 9 convergence tests and when to use each
+- All 8 convergence tests and when to use each
 - Direct and Limit Comparison Tests
 - Integral Test and special series (log-$p$)
 - Absolute vs. conditional convergence

@@ -35,7 +35,7 @@ $$2I = e^x(\\sin x - \\cos x)$$
 
 $$\\boxed{\\int e^x \\sin x\\,dx = \\frac{e^x(\\sin x - \\cos x)}{2} + C}$$
 
-> **Key Fact:** You MUST use the same type of choice for $u$ in both applications (both times pick trig, or both times pick exponential). Mixing causes an infinite loop.`
+> **Key Fact:** You MUST use the same type of choice for $u$ in both applications (both times pick trig, or both times pick exponential). Switching the type of $u$ in the second application undoes the first step and leaves the useless identity $I = I$.`
     },
     {
       id: 'ibp3-general',
@@ -52,7 +52,7 @@ $$\\boxed{\\int e^{ax}\\cos(bx)\\,dx = \\frac{e^{ax}(a\\cos(bx) + b\\sin(bx))}{a
 | $\\int e^{2x} \\cos(3x)\\,dx$ | 2 | 3 | 13 |
 | $\\int e^{-x} \\sin(2x)\\,dx$ | $-1$ | 2 | 5 |
 
-> **AP Tip:** Memorizing the general formula can save 3\u20134 minutes on a free-response question. But you should know how to derive it via IBP cycling.`
+> **AP Tip:** The general formula is a quick check on a multiple-choice answer, but on a free-response question show the two applications of parts and the solve-for-$I$ step.`
     },
     {
       id: 'ibp3-mc1',

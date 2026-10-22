@@ -10,17 +10,17 @@ export const calcbcLogisticPart5Data = {
 
 ### What the AP Tests
 
-| Concept | How it's tested | Point value |
-|---------|----------------|-------------|
-| Identify $L$ | "What is the carrying capacity?" | 1 |
-| Max growth rate | "When is growth fastest?" or "Find max $dP/dt$" | 1–2 |
-| Solve for $P(t)$ | Separation of variables | 3–4 |
-| Concavity / inflection | "$d^2P/dt^2$ analysis" | 2 |
-| Euler + logistic | "Approximate $P(2)$ with 2 steps" | 2–3 |
+| Concept | How it's tested |
+|---------|----------------|
+| Identify $L$ | "What is the carrying capacity?" or "Find $\\lim_{t \\to \\infty} P(t)$" |
+| Max growth rate | "When is growth fastest?" or "Find max $dP/dt$" |
+| Concavity / inflection | "$d^2P/dt^2$ analysis": concave up below $L/2$, down above |
+| Euler + logistic | "Approximate $P(2)$ with 2 steps" |
+| A given explicit solution | Evaluate it or solve $P(t) = c$ with a calculator; no derivation |
 
 ### Quick Facts to Memorize
 
-$$\\boxed{\\begin{aligned} &\\text{Carrying capacity:} \\quad L \\\\ &\\text{Max growth at:} \\quad P = L/2 \\\\ &\\text{Max rate:} \\quad kL/4 \\\\ &\\text{Solution:} \\quad P = \\frac{L}{1 + Ae^{-kt}} \\\\ &\\text{Inflection time:} \\quad t = \\frac{\\ln A}{k} \\end{aligned}}$$
+$$\\boxed{\\begin{aligned} &\\text{Carrying capacity:} \\quad L \\\\ &\\text{Max growth at:} \\quad P = L/2 \\\\ &\\text{Max rate:} \\quad kL/4 \\\\ &\\text{If } P = \\frac{L}{1 + Ae^{-kt}} \\text{ is given:} \\quad \\text{inflection at } t = \\frac{\\ln A}{k} \\end{aligned}}$$
 
 ### Form Recognition
 
@@ -30,7 +30,7 @@ $$\\boxed{\\begin{aligned} &\\text{Carrying capacity:} \\quad L \\\\ &\\text{Max
 | $dP/dt = P(5 - 0.01P)$ | $5$ | $500$ |
 | $dP/dt = 2P - P^2/250$ | $2$ | $500$ |
 
-> **AP Tip:** If asked "for what value of $P$ is $d^2P/dt^2 = 0$?", the answer is always $P = L/2$. Don't waste time computing the second derivative.`
+> **AP Tip:** If asked "for what value of $P$ is $d^2P/dt^2 = 0$?", the answer for $0 < P < L$ is $P = L/2$ (it is also $0$ at the equilibria $P = 0$ and $P = L$). Don't waste time computing the second derivative.`
     },
     {
       id: 'log5-mc1',

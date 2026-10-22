@@ -29,6 +29,7 @@
 
 import { shuffleOptions } from '@/lib/shuffle-options'
 import { questionKey } from '@/lib/question-key'
+import { coursesIn } from '@/lib/course-includes'
 import { generateExitQuiz, hasExitQuiz, isTrackMix, type ExitQuizDifficulty, type ExitQuizTrackMix } from '@/data/exit-quizzes'
 
 export interface SubmittedAnswer {
@@ -209,10 +210,27 @@ async function probeAnswerKey(topicSlug: string): Promise<AnswerKey | null> {
 export function getAnswerKey(topicSlug: string): Promise<AnswerKey | null> {
   let cached = answerKeyCache.get(topicSlug)
   if (!cached) {
-    cached = probeAnswerKey(topicSlug).catch(() => null)
+    cached = keyWithIncludedCourses(topicSlug).catch(() => null)
     answerKeyCache.set(topicSlug, cached)
   }
   return cached
+}
+
+/**
+ * A course slug that includes other courses (AP Calculus BC includes AB) draws
+ * its hub quiz from every included pool (src/lib/course-quiz.ts), whose ids
+ * keep their own pool's prefix, so its key is the union of the pools' keys.
+ */
+async function keyWithIncludedCourses(topicSlug: string): Promise<AnswerKey | null> {
+  const [own, ...included] = coursesIn(topicSlug)
+  const ownKey = await probeAnswerKey(own)
+  if (included.length === 0) return ownKey
+  const merged: AnswerKey = new Map(ownKey ?? [])
+  for (const c of included) {
+    const k = await probeAnswerKey(c).catch(() => null)
+    if (k) for (const [id, entry] of k) if (!merged.has(id)) merged.set(id, entry)
+  }
+  return merged.size > 0 ? merged : null
 }
 
 /**

@@ -9,7 +9,7 @@ export const calcabConcavityPart1Data = {
     {
       "id": "c1-def",
       "type": "text" as const,
-      "content": "## 📖 What Is Concavity?\n\n$$f''(x) > 0 \\implies \\text{concave up (cup shape, ∪)}$$\n$$f''(x) < 0 \\implies \\text{concave down (cap shape, ∩)}$$\n\n### Interpretations\n\n| Concavity | $f''$ | $f'$ | Rate of Change |\n|-----------|--------|------|----------------|\n| Up (∪) | $> 0$ | Increasing | Accelerating |\n| Down (∩) | $< 0$ | Decreasing slope | Decelerating |\n\n### Visual Test\n\n- **Concave up:** Tangent lines lie BELOW the curve\n- **Concave down:** Tangent lines lie ABOVE the curve\n- If you drive along the curve, you'd turn your steering wheel left (concave up) or right (concave down)\n\n---\n\n### Example: $f(x) = x^3$\n\n$f''(x) = 6x$\n\n- $x < 0$: $f'' < 0$ → concave down\n- $x > 0$: $f'' > 0$ → concave up\n- $x = 0$: inflection point (concavity changes!)"
+      "content": "## 📖 What Is Concavity?\n\n$$f''(x) > 0 \\implies \\text{concave up (cup shape, } \\cup \\text{)}$$\n$$f''(x) < 0 \\implies \\text{concave down (cap shape, } \\cap \\text{)}$$\n\n### Interpretations\n\n| Concavity | $f''$ | $f'$ | Rate of Change |\n|-----------|--------|------|----------------|\n| Up ($\\cup$) | $> 0$ | Increasing | Slopes increase |\n| Down ($\\cap$) | $< 0$ | Decreasing | Slopes decrease |\n\n### Visual Test\n\n- **Concave up:** Tangent lines lie BELOW the curve\n- **Concave down:** Tangent lines lie ABOVE the curve\n- If you drive along the curve, you'd turn your steering wheel left (concave up) or right (concave down)\n\n---\n\n### Example: $f(x) = x^3$\n\n$f''(x) = 6x$\n\n- $x < 0$: $f'' < 0$ → concave down\n- $x > 0$: $f'' > 0$ → concave up\n- $x = 0$: inflection point (concavity changes!)"
     },
     {
       "id": "c1-finding",
@@ -85,7 +85,7 @@ export const calcabConcavityPart1Data = {
       "exercise": {
         "dropdowns": [
           {
-            "label": "$f''(x) = 0$ is:",
+            "label": "For a twice-differentiable $f$, the condition $f''(c) = 0$, for an inflection point at $c$, is:",
             "options": [
               "Necessary but not sufficient for inflection",
               "Sufficient but not necessary for inflection",

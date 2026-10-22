@@ -1,12 +1,13 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { courseTopicWhere } from '@/lib/course-includes'
 
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url)
     const course = searchParams.get('course')
 
-    const where = course ? { category: { course: { slug: course } } } : {}
+    const where = course ? courseTopicWhere(course) : {}
 
     const count = await prisma.topic.count({ where })
     if (count === 0) {

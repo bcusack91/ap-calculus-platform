@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { courseTopicWhere } from '@/lib/course-includes'
 import { getActiveStudyContext, isCourseContext, listStudyContexts, validateContext } from '@/lib/study-context'
 import { maybeUnlockFlashcards } from '@/lib/flashcard-unlock'
 
@@ -75,7 +76,7 @@ export async function PUT(req: NextRequest) {
       ])]
       if (slugs.length > 0) {
         const courseTopics = await prisma.topic.findMany({
-          where: { slug: { in: slugs }, category: { course: { slug: courseSlug } } },
+          where: { slug: { in: slugs }, ...courseTopicWhere(courseSlug) },
           select: { slug: true },
           take: 200,
         })

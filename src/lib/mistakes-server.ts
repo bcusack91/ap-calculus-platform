@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { coursesIn } from '@/lib/course-includes'
 import { activeMistakes, computeMistakes, type AnswerLogRow, type MistakeItem } from '@/lib/mistake-log'
 import { QUESTION_KEY_PREFIX } from '@/lib/question-key'
 import { actSectionLabelForTopic } from '@/lib/act-topic-sections'
@@ -34,12 +35,20 @@ export function sectionLabel(discipline: string): string {
   return SECTION_LABELS[discipline] ?? discipline
 }
 
+/** A course slug, or every course it includes (`{ in }` only when there are several). */
+function courseSlugFilter(slug: string): string | { in: string[] } {
+  const courses = coursesIn(slug)
+  return courses.length === 1 ? courses[0] : { in: courses }
+}
+
 /** Every keyed, per-question answer the student has logged in a course. */
 export async function answerLogFor(userId: string, course: MistakeCourse, questionKeys?: string[]): Promise<AnswerLogRow[]> {
   const rows = await prisma.questionActivity.findMany({
     where: {
       userId,
-      courseSlug: MISTAKE_COURSES[course],
+      // A course's log includes the courses it contains: an AP Calculus AB
+      // answer counts for a BC student too (src/lib/course-includes.ts).
+      courseSlug: courseSlugFilter(MISTAKE_COURSES[course]),
       answered: 1,
       ...(questionKeys ? { questionKey: { in: questionKeys } } : { questionKey: { startsWith: QUESTION_KEY_PREFIX } }),
     },

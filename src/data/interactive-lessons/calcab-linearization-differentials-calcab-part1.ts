@@ -108,15 +108,14 @@ Actual: $\\sqrt{4.1} \\approx 2.02485$. Error $\\approx 0.00015$!
       type: 'input-box' as const,
       content: '**Approximate.** \u270d\ufe0f',
       exercise: {
-        question: 'Use linearization of $f(x) = \\sqrt{x}$ at $a = 9$ to approximate $\\sqrt{9.3}$.\n\nIf $L(9.3) = \\frac{a}{b}$ in lowest terms, find $a + b$.\n\n(Enter an integer.)',
-        correctAnswer: '81',
-        acceptableAnswers: ['81'],
+        question: 'Use linearization of $f(x) = \\sqrt{x}$ at $x = 9$ to approximate $\\sqrt{9.3}$. (Decimal or fraction.)',
+        correctAnswer: '3.05',
+        acceptableAnswers: ['3.05', '61/20'],
         hints: [
           '$f(9) = 3$, $f\'(9) = 1/6$.',
-          '$L(9.3) = 3 + \\frac{1}{6}(0.3) = 3 + 0.05 = 3.05$.',
-          '$3.05 = 61/20$. $a + b = 61 + 20 = 81$.'
+          '$L(9.3) = 3 + \\frac{1}{6}(0.3)$.'
         ],
-        explanation: '$L(9.3) = 3 + \\frac{1}{6} \\cdot 0.3 = 3 + \\frac{1}{20} = \\frac{61}{20}$. $a + b = 81$.'
+        explanation: '$L(9.3) = 3 + \\frac{1}{6} \\cdot 0.3 = 3 + 0.05 = 3.05$.'
       }
     },
     {

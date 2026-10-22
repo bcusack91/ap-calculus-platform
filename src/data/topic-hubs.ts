@@ -35,10 +35,10 @@ export const topicHubs: TopicHub[] = [
   },
   {
     slug: 'ap-calculus-ab-derivatives',
-    title: 'AP Calculus AB Unit 2: Derivatives',
+    title: 'AP Calculus AB Units 2–3: Derivatives',
     description: 'Build fluency in derivative rules, interpretation, and real-world rate-of-change modeling for AP Calculus AB.',
     exam: 'AP Calculus',
-    categorySlugs: ['derivatives', 'calcab-differentiation-fundamentals'],
+    categorySlugs: ['calcab-differentiation-fundamentals', 'calcab-differentiation-composite'],
     links: [
       { label: 'AP Calc AB Study Plans', href: '/ap-calcab-study-plans', type: 'study-plan' },
       { label: 'AP Calc AB Score Predictor', href: '/ap-calcab-score-predictor', type: 'practice' },
@@ -50,7 +50,7 @@ export const topicHubs: TopicHub[] = [
     title: 'AP Calculus BC Unit 10: Infinite Sequences and Series',
     description: 'Target the BC-only series unit with convergence tests, Taylor series intuition, and high-yield AP-style review.',
     exam: 'AP Calculus',
-    categorySlugs: ['calcbc-sequences-series', 'calcbc-power-taylor', 'sequences-series', 'power-taylor-series'],
+    categorySlugs: ['calcbc-sequences-series'],
     links: [
       { label: 'Start AP Calc BC Diagnostic', href: '/calcbc-diagnostic', type: 'diagnostic' },
       { label: 'AP Calc BC Daily Question', href: '/ap-calcbc-daily-question', type: 'daily' },

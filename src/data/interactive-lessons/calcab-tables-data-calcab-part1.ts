@@ -36,7 +36,7 @@ $$\\boxed{f'(a) \\approx \\frac{f(b) - f(c)}{b - c}}$$
 | Backward difference | $\\frac{f(a) - f(a-h)}{h}$ | At right endpoints |
 | Symmetric (central) | $\\frac{f(a+h) - f(a-h)}{2h}$ | Interior points (most accurate) |
 
-> **Key Fact:** The symmetric difference quotient averages the forward and backward estimates and gives the best approximation for interior points.
+> **Key Fact:** With equally spaced data, the symmetric difference quotient is the average of the forward and backward estimates, and it usually gives the best approximation at interior points.
 
 ### Worked Example
 
@@ -56,7 +56,7 @@ Forward: $f'(1) \\approx \\frac{f(3) - f(1)}{3 - 1} = \\frac{7 - 2}{2} = 2.5$
 
 Backward: $f'(8) \\approx \\frac{f(8) - f(5)}{8 - 5} = \\frac{20 - 10}{3} = \\frac{10}{3}$
 
-> **AP Tip:** Always state units when they are given. If $x$ is in seconds and $f$ is in meters, then $f'$ is in meters/second.`
+> **AP Tip:** Give units whenever the question asks for them (including them otherwise does no harm). If $x$ is in seconds and $f$ is in meters, then $f'$ is in meters/second.`
     },
     {
       id: 'td1-quiz1',
@@ -137,7 +137,7 @@ Backward: $f'(8) \\approx \\frac{f(8) - f(5)}{8 - 5} = \\frac{20 - 10}{3} = \\fr
 
 - Use symmetric (central) differences for interior points
 - Use forward/backward differences at endpoints
-- Always include units in AP responses
+- Include units whenever the question asks for them
 - Symmetric difference: $\\frac{f(a+h) - f(a-h)}{2h}$ is the most accurate`
     }
   ]

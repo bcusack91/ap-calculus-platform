@@ -70,13 +70,13 @@ export const calcabTheoremsPart7Data = {
         questions: [
           {
             question: '$f$ is twice-differentiable. $f\'(2) = 3$, $f\'(8) = -1$. Must there exist $c$ where $f\'(c) = 0$?',
-            options: ['Yes \u2014 by IVT applied to $f\'$', 'Yes — by MVT applied to $f$ on $[2,8]$', 'No — $f\'$ could skip over $0$', 'Only if $f(2) = f(8)$, by Rolle’s'],
+            options: ['Yes \u2014 by IVT, as $f\'$ is continuous', 'Yes — by MVT applied to $f$ on $[2,8]$', 'No — $f\'$ could skip over $0$', 'Only if $f(2) = f(8)$, by Rolle’s'],
             correctAnswer: 0,
             explanation: '$f\'$ is continuous (since $f$ is twice-differentiable). $f\'(2) = 3 > 0 > -1 = f\'(8)$. By IVT applied to $f\'$, $\\exists\\, c$ with $f\'(c) = 0$. MVT on $f$ would need $f(2)$ and $f(8)$, which are not given.'
           },
           {
             question: '$f(x) = x^{2/3}$ on $[-1, 1]$. Can MVT be applied?',
-            options: ['No \u2014 $f\'(x)$ DNE at $x=0$', 'Yes — $f$ is continuous on $[-1, 1]$', 'Yes — $f(-1) = f(1) = 1$, so it applies', 'No — $f$ is not continuous at $x = 0$'],
+            options: ['No \u2014 $f\'(0)$ does not exist (a cusp)', 'Yes — $f$ is continuous on $[-1, 1]$', 'Yes — $f(-1) = f(1) = 1$, so it applies', 'No — $f$ is not continuous at $x = 0$'],
             correctAnswer: 0,
             explanation: '$f$ is continuous, but $f\'(x) = \\frac{2}{3}x^{-1/3}$ is undefined at $x = 0$. Not differentiable on $(-1,1)$, so MVT fails.'
           },
@@ -124,16 +124,16 @@ export const calcabTheoremsPart7Data = {
       type: 'input-box' as const,
       content: '**Final challenge.** \u270d\ufe0f',
       exercise: {
-        question: '$f(x) = x^3 - 6x$ on $[0, 4]$. By MVT, $f\'(c) = \\frac{f(4)-f(0)}{4}$ for some $c$. Find $c$.\n\nIf $c = \\frac{a}{\\sqrt{b}}$ in simplest form, enter **$a + b$**.',
-        correctAnswer: '7',
-        acceptableAnswers: ['7'],
+        question: '$f(x) = x^3 - 6x$ on $[0, 4]$. By MVT, $f\'(c) = \\frac{f(4)-f(0)}{4}$ for some $c$ in $(0, 4)$. Find $c$. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '4/sqrt(3)',
+        acceptableAnswers: ['4/sqrt(3)', '4/√3', '4sqrt(3)/3', '2.309'],
         hints: [
           '$f(0) = 0$, $f(4) = 64 - 24 = 40$.',
           'Average rate $= 40/4 = 10$.',
           '$f\'(x) = 3x^2 - 6 = 10 \\Rightarrow x^2 = 16/3$.',
-          '$c = 4/\\sqrt{3}$. $a = 4, b = 3$. $a + b = 7$.'
+          'Keep the root in $(0, 4)$.'
         ],
-        explanation: '$3c^2 - 6 = 10 \\Rightarrow c^2 = 16/3 \\Rightarrow c = 4/\\sqrt{3}$. $a + b = 4 + 3 = 7$.'
+        explanation: '$3c^2 - 6 = 10 \\Rightarrow c^2 = 16/3 \\Rightarrow c = \\frac{4}{\\sqrt{3}} \\approx 2.309$, which is in $(0, 4)$ (the root $-\\frac{4}{\\sqrt{3}}$ is not).'
       }
     },
     {

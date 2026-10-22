@@ -164,11 +164,9 @@ export const registryChunk2: Record<string, InteractiveTopicConfig> = {
     parts: [
       { title: 'Position, Velocity, Acceleration', loader: () => import('./calcab-particle-motion-calcab-part1').then(m => m.calcabParticleMotionPart1Data) },
       { title: 'Speed & Direction of Motion', loader: () => import('./calcab-particle-motion-calcab-part2').then(m => m.calcabParticleMotionPart2Data) },
-      { title: 'Displacement vs. Total Distance', loader: () => import('./calcab-particle-motion-calcab-part3').then(m => m.calcabParticleMotionPart3Data) },
-      { title: 'Position from Velocity', loader: () => import('./calcab-particle-motion-calcab-part4').then(m => m.calcabParticleMotionPart4Data) },
-      { title: 'Velocity from Acceleration', loader: () => import('./calcab-particle-motion-calcab-part5').then(m => m.calcabParticleMotionPart5Data) },
-      { title: 'AP-Style Workshop', loader: () => import('./calcab-particle-motion-calcab-part6').then(m => m.calcabParticleMotionPart6Data) },
-      { title: 'Final Assessment', loader: () => import('./calcab-particle-motion-calcab-part7').then(m => m.calcabParticleMotionPart7Data) },
+      { title: 'Motion from Graphs and Tables', loader: () => import('./calcab-particle-motion-calcab-part3').then(m => m.calcabParticleMotionPart3Data) },
+      { title: 'AP-Style Workshop', loader: () => import('./calcab-particle-motion-calcab-part4').then(m => m.calcabParticleMotionPart4Data) },
+      { title: 'Final Assessment', loader: () => import('./calcab-particle-motion-calcab-part5').then(m => m.calcabParticleMotionPart5Data) },
     ],
   },
   'exponential-models-calcab': {
@@ -186,10 +184,10 @@ export const registryChunk2: Record<string, InteractiveTopicConfig> = {
   'integration-applications-calcab': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Area Between Curves (Advanced)', loader: () => import('./calcab-integration-applications-calcab-part1').then(m => m.calcabIntAppsPart1Data) },
-      { title: 'Cross-Sectional Volumes', loader: () => import('./calcab-integration-applications-calcab-part2').then(m => m.calcabIntAppsPart2Data) },
-      { title: 'Volumes: Disk and Washer Methods', loader: () => import('./calcab-integration-applications-calcab-part3').then(m => m.calcabIntAppsPart3Data) },
-      { title: 'Riemann Sums and Trapezoidal Rule', loader: () => import('./calcab-integration-applications-calcab-part4').then(m => m.calcabIntAppsPart4Data) },
+      { title: 'Average Value of a Function', loader: () => import('./calcab-integration-applications-calcab-part1').then(m => m.calcabIntAppsPart1Data) },
+      { title: 'Position, Velocity, and Displacement', loader: () => import('./calcab-integration-applications-calcab-part2').then(m => m.calcabIntAppsPart2Data) },
+      { title: 'Total Distance and Speed', loader: () => import('./calcab-integration-applications-calcab-part3').then(m => m.calcabIntAppsPart3Data) },
+      { title: 'Accumulation in Applied Contexts', loader: () => import('./calcab-integration-applications-calcab-part4').then(m => m.calcabIntAppsPart4Data) },
       { title: 'Rate Problems & Net Change', loader: () => import('./calcab-integration-applications-calcab-part5').then(m => m.calcabIntAppsPart5Data) },
       { title: 'Practice Workshop', loader: () => import('./calcab-integration-applications-calcab-part6').then(m => m.calcabIntAppsPart6Data) },
       { title: 'Final Assessment', loader: () => import('./calcab-integration-applications-calcab-part7').then(m => m.calcabIntAppsPart7Data) },

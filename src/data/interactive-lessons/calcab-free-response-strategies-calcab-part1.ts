@@ -44,16 +44,18 @@ Each FRQ typically has **4 parts** (a\u2013d), each worth 1\u20133 points out of
 | Compute a value | Evaluate integral or derivative | \u201cFind the value of...\u201d |
 | Analyze behavior | Inc/dec, concavity, extrema | \u201cIs the amount increasing or decreasing?\u201d |
 
-### FRQ Presentation Rules
+### How FRQs Are Scored
 
-$$\\boxed{\\text{Show work} \\to \\text{Label with units} \\to \\text{Answer in context}}$$
+$$\\boxed{\\text{Show the setup} \\to \\text{Give the reason} \\to \\text{Answer the question asked}}$$
 
-| Common Deduction | Points Lost |
-|:---|:---:|
-| No work shown | All points |
-| Missing units | 1 point |
-| Not answering in context | 1 point |
-| Decimal rounding errors | 1 point |`
+| Scoring fact | What it means for you |
+|:---|:---|
+| Many points need supporting work | Points are often "answer with supporting work" or "answer with justification", so a bare number can earn nothing for that part. Show the integral, derivative, or theorem you used. |
+| Units count only when asked | A units point exists only when the question says to indicate units of measure. Correct units elsewhere do no harm. |
+| Decimals: three places | Calculator answers must be correct to three decimal places (rounded or truncated). Inappropriate rounding costs at most one point in a question. |
+| Answers need not be simplified | $\\frac{6}{4}$ is as good as $\\frac{3}{2}$, and $e^0 + 3$ is as good as $4$. Simplifying is allowed, not required. |
+| Crossed-out work is not scored | If you change your mind, cross out the work you do not want read. |
+| Interpretations need context | "Explain the meaning" answers name the quantity, the units, and the time or interval. |`
     },
     {
       id: 'frq1-quiz1',
@@ -117,15 +119,14 @@ $$\\boxed{\\text{Show work} \\to \\text{Label with units} \\to \\text{Answer in 
       type: 'input-box' as const,
       content: '**Practice computation.** \u270d\ufe0f',
       exercise: {
-        question: 'The average rate of change of $f(x) = x^3$ on $[1, 3]$ is $\\frac{a}{b}$ in lowest terms. Enter $a + b$.',
-        correctAnswer: '14',
-        acceptableAnswers: ['14'],
+        question: 'Find the average rate of change of $f(x) = x^3$ on $[1, 3]$.',
+        correctAnswer: '13',
+        acceptableAnswers: ['13', '26/2'],
         hints: [
           '$\\frac{f(3)-f(1)}{3-1} = \\frac{27-1}{2}$.',
-          '$= \\frac{26}{2} = 13$.',
-          '$13 = \\frac{13}{1}$. $a+b = 13+1 = 14$.'
+          '$= \\frac{26}{2} = 13$.'
         ],
-        explanation: '$\\frac{27-1}{2} = 13 = \\frac{13}{1}$. $a+b = 14$.'
+        explanation: '$\\frac{f(3)-f(1)}{3-1} = \\frac{27-1}{2} = 13$.'
       }
     },
     {

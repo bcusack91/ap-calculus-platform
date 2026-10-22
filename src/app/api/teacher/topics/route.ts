@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { courseCategoryLayout, coursesIn, excludedTopicsOf } from '@/lib/course-includes'
+import { groupByLayout, visibleTopics } from '@/lib/course-hub-sections'
 import { requireTeacher } from '@/lib/teacher-auth'
 import { MCAT_SECTIONS } from '@/data/competitive-questions/mcat-bank'
 
@@ -32,14 +34,37 @@ export async function GET() {
     //                  quizzes, and competitive play are all valid targets)
     //   'bank'       — competitive-bank-only slugs with NO topic pages; they
     //                  are only assignable as COMPETITIVE_PRACTICE
-    const grouped = courses.map((c) => ({
-      courseSlug: c.slug,
-      courseTitle: c.name,
-      kind: 'curriculum' as const,
-      topics: c.categories.flatMap((cat) =>
-        cat.topics.map((t) => ({ slug: t.slug, title: t.title, category: cat.name }))
-      ),
-    }))
+    //
+    // Legacy (308) and retired rows are never offered. A course laid out by CED
+    // unit in code lists that layout: AP Calculus BC's group carries every AB
+    // topic in the unit that teaches it (src/lib/course-includes.ts), so a BC
+    // class can assign AB lessons without leaving its own course.
+    const topicRows = new Map<string, { slug: string; title: string; categorySlug: string }>()
+    for (const c of courses) {
+      for (const cat of c.categories) {
+        for (const t of cat.topics) topicRows.set(t.slug, { slug: t.slug, title: t.title, categorySlug: cat.slug })
+      }
+    }
+    const grouped = courses.map((c) => {
+      const layout = courseCategoryLayout(c.slug)
+      const included = new Set(coursesIn(c.slug))
+      const pool = courses
+        .filter((x) => included.has(x.slug))
+        .flatMap((x) => x.categories.flatMap((cat) => cat.topics.map((t) => topicRows.get(t.slug)!)))
+        .filter((t) => !excludedTopicsOf(c.slug).includes(t.slug))
+      return {
+        courseSlug: c.slug,
+        courseTitle: c.name,
+        kind: 'curriculum' as const,
+        topics: layout
+          ? groupByLayout(layout, pool, (t) => t.categorySlug).flatMap(({ section, rows }) =>
+              rows.map((t) => ({ slug: t.slug, title: t.title, category: section.name })),
+            )
+          : c.categories.flatMap((cat) =>
+              visibleTopics(cat.topics).map((t) => ({ slug: t.slug, title: t.title, category: cat.name })),
+            ),
+      }
+    })
 
     // MCAT competitive hierarchy. These slugs are bank-backed rather than DB
     // Topic rows, so they don't come out of the query above — but teachers need

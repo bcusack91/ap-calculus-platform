@@ -3346,4 +3346,14 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Mixed Practice and Test Strategy', loader: () => import('./sat-sat-cross-text-connections-sat').then((m) => m.parts[6]) },
     ],
   },
+  'lhopitals-rule': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Indeterminate Forms and the Rule', loader: () => import('./calcab-lhopitals-rule').then((m) => m.parts[0]) },
+      { title: '0/0 Limits and Repeated Use', loader: () => import('./calcab-lhopitals-rule').then((m) => m.parts[1]) },
+      { title: '∞/∞ Limits and Growth Rates', loader: () => import('./calcab-lhopitals-rule').then((m) => m.parts[2]) },
+      { title: 'Tables, Graphs and Justification', loader: () => import('./calcab-lhopitals-rule').then((m) => m.parts[3]) },
+      { title: 'Traps and Final Assessment', loader: () => import('./calcab-lhopitals-rule').then((m) => m.parts[4]) },
+    ],
+  },
 }

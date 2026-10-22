@@ -48,11 +48,9 @@ $$\\int_1^\\infty \\frac{1}{x}\\,dx = \\lim_{b \\to \\infty} \\ln b = \\infty$$
 
 Integral diverges $\\implies$ $\\sum 1/n$ diverges. ✓
 
-### Remainder Estimate
+### The Integral Is Not the Sum
 
-If $\\sum a_n$ converges and $S$ denotes its sum, then:
-
-$$\\int_{N+1}^\\infty f(x)\\,dx \\le S - S_N \\le \\int_N^\\infty f(x)\\,dx$$`
+In Example 1 the integral equals $1$, but $\\sum_{n=1}^\\infty \\frac{1}{n^2} = \\frac{\\pi^2}{6} \\approx 1.645$. The integral test answers only "converges or diverges?" On the AP exam, error estimates for series come from the alternating series error bound and the Lagrange error bound, not from the integral.`
     },
     {
       id: 'is1-mc1',

@@ -26,9 +26,8 @@ $$\\boxed{\\int e^{kx}\\,dx = \\frac{1}{k}e^{kx} + C \\qquad \\int a^x\\,dx = \\
 | $e^{kx}$ | $ke^{kx}$ | $\\frac{1}{k}e^{kx} + C$ |
 | $e^{g(x)}$ | $e^{g(x)} \\cdot g'(x)$ | Use u-sub |
 | $a^x$ | $a^x \\ln a$ | $\\frac{a^x}{\\ln a} + C$ |
-| $\\ln x$ | $\\frac{1}{x}$ | $x\\ln x - x + C$ |
 
-> **Key Fact:** $e^x$ is the only function that is its own derivative AND its own antiderivative.`
+> **Key Fact:** Up to a constant multiple ($Ce^x$), $e^x$ is the only function that is its own derivative, so it is also its own antiderivative (plus $C$).`
     },
     {
       id: 'exp4-worked',
@@ -114,15 +113,15 @@ $$\\boxed{\\int e^{kx}\\,dx = \\frac{1}{k}e^{kx} + C \\qquad \\int a^x\\,dx = \\
       type: 'input-box' as const,
       content: '**Evaluate the integral.** \u270d\ufe0f',
       exercise: {
-        question: '$\\int_0^2 xe^{x^2}\\,dx = \\frac{a}{b}(e^c - 1)$. Find $a + b + c$.\n\n(Enter an integer.)',
-        correctAnswer: '7',
-        acceptableAnswers: ['7'],
+        question: 'Evaluate $\\int_0^2 xe^{x^2}\\,dx$. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '(e^4-1)/2',
+        acceptableAnswers: ['(e^4-1)/2', '(e^4 - 1)/2', '26.799'],
         hints: [
           'Let $u = x^2$, $du = 2x\\,dx$, so $x\\,dx = \\frac{1}{2}du$.',
           'Limits: $x=0 \\Rightarrow u=0$, $x=2 \\Rightarrow u=4$.',
-          '$\\frac{1}{2}\\int_0^4 e^u\\,du = \\frac{1}{2}(e^4-1)$. So $a=1, b=2, c=4$.'
+          '$\\frac{1}{2}\\int_0^4 e^u\\,du = \\frac{1}{2}(e^4-1)$.'
         ],
-        explanation: '$\\frac{1}{2}(e^4-1)$. $a=1, b=2, c=4$. $a+b+c=7$.'
+        explanation: 'With $u = x^2$: $\\frac{1}{2}\\int_0^4 e^u\\,du = \\frac{1}{2}(e^4-1) \\approx 26.799$.'
       }
     },
     {

@@ -13,7 +13,7 @@ export const calcbcExamStrategyPart7Data = {
 | Day | Focus |
 |-----|-------|
 | Day 7 | Series: 6 Maclaurin series, Taylor polynomials, error bounds |
-| Day 6 | Parametric/polar: derivatives, area, arc length |
+| Day 6 | Parametric/polar: derivatives, polar area, parametric arc length |
 | Day 5 | Integration: techniques, improper integrals, applications |
 | Day 4 | Differential equations: separable, Euler's, logistic |
 | Day 3 | Full practice FRQ set (timed) |
@@ -36,7 +36,7 @@ $$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}, \\quad \\sin x = \\sum_{n=0}^\\inft
 
 **Arc Length:** $L = \\int_a^b \\sqrt{(x')^2 + (y')^2}\\,dt$
 
-**Logistic:** $\\frac{dP}{dt} = kP(1 - P/L)$, solution: $P(t) = \\frac{L}{1 + Ae^{-kt}}$
+**Logistic:** $\\frac{dP}{dt} = kP(1 - P/L)$: $P \\to L$ as $t \\to \\infty$ (for $P_0 > 0$), and $P$ grows fastest at $P = L/2$ (interpret; no solving required)
 
 **Euler's Method:** $y_{n+1} = y_n + h \\cdot f(x_n, y_n)$
 
@@ -52,7 +52,7 @@ $$e^x = \\sum_{n=0}^\\infty \\frac{x^n}{n!}, \\quad \\sin x = \\sum_{n=0}^\\inft
             question: 'The polar area formula includes a factor of:',
             options: ['$1/2$', '$2$', '$\\pi$', '$2\\pi$'],
             correctAnswer: 0,
-            explanation: '$A = \\frac{1}{2}\\int_{\\alpha}^{\\beta} r^2\\,d\\theta$. The $1/2$ is the most commonly forgotten element.'
+            explanation: '$A = \\frac{1}{2}\\int_{\\alpha}^{\\beta} r^2\\,d\\theta$. Leaving out the $1/2$ doubles the area.'
           },
           {
             question: 'In Euler\'s method with step size $h$, each step computes:',

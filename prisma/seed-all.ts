@@ -429,9 +429,18 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
       // Also last: older AP seeds (and split-parametric-vectors-polar.ts above)
       // recreate the AP topics and units the May 2027 exams do not test.
       'retire-ap-topics.ts',
+      // After that: the calculus seeds recreate the legacy duplicate topic rows
+      // and Categories; this moves every live topic into its CED unit and
+      // retires them (src/lib/course-includes.ts). Runs with APPLY=1 (FILE_ENV).
+      'restructure-calc.ts',
     ],
   },
 ]
+
+/** Extra env for scripts that dry-run unless told to write. */
+const FILE_ENV: Record<string, Record<string, string>> = {
+  'restructure-calc.ts': { APPLY: '1' },
+}
 
 async function main() {
   const dryRun = process.argv.includes('--dry-run')
@@ -470,6 +479,7 @@ async function main() {
         console.log(`  ▶ Running ${file}...`)
         execSync(`npx tsx "${fullPath}"`, {
           cwd: path.resolve(PRISMA_DIR, '..'),
+          env: { ...process.env, ...FILE_ENV[file] },
           stdio: 'inherit',
           timeout: 120_000,
         })

@@ -6,7 +6,7 @@ export const calcabParticleMotionPart1Data = {
       type: 'text' as const,
       content: `# Particle Motion
 
-**Part 1 of 7 \u2014 Position, Velocity, and Acceleration**
+**Part 1 of 5 \u2014 Position, Velocity, and Acceleration**
 
 ### Topic Overview
 
@@ -14,20 +14,17 @@ export const calcabParticleMotionPart1Data = {
 |:---:|:---:|
 | **1** | **Position, velocity, acceleration** |
 | 2 | Speed & direction of motion |
-| 3 | Displacement vs. total distance |
-| 4 | Position from velocity (integration) |
-| 5 | Acceleration & velocity from integrals |
-| 6 | AP-style workshop |
-| 7 | Comprehensive assessment |
+| 3 | Motion from graphs and tables |
+| 4 | AP-style workshop |
+| 5 | Comprehensive assessment |
 
 ### The Motion Hierarchy
 
 $$\\boxed{s(t) \\xrightarrow{\\text{derivative}} v(t) \\xrightarrow{\\text{derivative}} a(t)}$$
-$$\\boxed{a(t) \\xrightarrow{\\text{integral}} v(t) \\xrightarrow{\\text{integral}} s(t)}$$
 
 | Function | Symbol | Relationship |
 |:---:|:---:|:---:|
-| Position | $s(t)$ or $x(t)$ | Given or found by integrating $v$ |
+| Position | $s(t)$ or $x(t)$ | Where the particle is at time $t$ |
 | Velocity | $v(t) = s'(t)$ | Derivative of position |
 | Acceleration | $a(t) = v'(t) = s''(t)$ | Derivative of velocity |
 
@@ -38,7 +35,11 @@ $$\\boxed{a(t) \\xrightarrow{\\text{integral}} v(t) \\xrightarrow{\\text{integra
 $$v(t) = s'(t) = 3t^2 - 12t + 9 = 3(t-1)(t-3)$$
 $$a(t) = v'(t) = 6t - 12 = 6(t-2)$$
 
-> **Key Fact:** Velocity is signed (direction matters). Speed is $|v(t)|$ (always non-negative).`
+> **Key Fact:** Velocity is signed (direction matters). Speed is $|v(t)|$ (always non-negative).
+
+> **Units:** if $s$ is in meters and $t$ in seconds, then $v$ is in meters per second and $a$ is in meters per second per second.
+
+> **Later (Units 6 and 8):** integrals run this chain backward, recovering $v$ from $a$ and $s$ from $v$, and give displacement and total distance.`
     },
     {
       id: 'pm1-quiz1',

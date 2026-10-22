@@ -51,8 +51,8 @@ $$\\boxed{\\text{The relationship between the function's behavior and the estima
 
 | Function Behavior | Left Sum | Right Sum | Midpoint | Trapezoidal |
 |:---:|:---:|:---:|:---:|:---:|
-| Increasing | Under | Over | — | Over |
-| Decreasing | Over | Under | — | Under |
+| Increasing | Under | Over | — | — |
+| Decreasing | Over | Under | — | — |
 | Concave Up | — | — | Under | Over |
 | Concave Down | — | — | Over | Under |
 

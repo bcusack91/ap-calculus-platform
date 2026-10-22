@@ -53,11 +53,10 @@ $f$ is piecewise linear: $f(0)=2$, $f(2)=2$, $f(4)=-2$, $f(6)=0$.
 |:---:|:---:|:---:|:---:|
 | $[0,2]$ | Rectangle | $2 \\times 2 = +4$ | $F(2) = 4$ |
 | $[2,3]$ | Triangle | $\\frac{1}{2}(1)(2) = +1$ | $F(3) = 5$ |
-| $[3,4]$ | Triangle | $\\frac{1}{2}(1)(-2) = -1$ | Lost: $f=0$ at $x=3$ |
-| $[2,4]$ | Trapezoid | $\\frac{1}{2}(2)(2+(-2)) = 0$ | $F(4) = 4$ |
+| $[3,4]$ | Triangle (below the axis) | $\\frac{1}{2}(1)(-2) = -1$ | $F(4) = 4$ |
 | $[4,6]$ | Triangle | $\\frac{1}{2}(2)(-2) = -2$ | $F(6) = 2$ |
 
-Note: $f$ crosses zero at $x = 3$ (linear from $2$ to $-2$). $F$ has its **maximum** at $x = 3$.`
+Note: $f$ crosses zero at $x = 3$ (linear from $2$ to $-2$), so $[2,4]$ splits into two triangles. Check: over $[2,4]$ the areas $+1$ and $-1$ cancel, so $F(4) = F(2) = 4$. $F$ has its **maximum** at $x = 3$: $F(3) = 5$ is larger than the endpoint values $F(0) = 0$ and $F(6) = 2$.`
     },
     {
       id: 'acc2-quiz1',
@@ -75,7 +74,7 @@ Note: $f$ crosses zero at $x = 3$ (linear from $2$ to $-2$). $F$ has its **maxim
             question: 'At what $x$ does $g$ reach its absolute maximum on $[0, 6]$?',
             options: ['$x = 2$', '$x = 3$', '$x = 4$', '$x = 6$'],
             correctAnswer: 1,
-            explanation: '$g\'(x) = f(x)$. On $[2,4]$, $f$ is linear from $2$ to $-2$, crossing zero at $x = 3$. $f$ changes $+ \\to -$ at $x = 3$: local max.'
+            explanation: '$g\'(x) = f(x)$. On $[2,4]$, $f$ is linear from $2$ to $-2$, crossing zero at $x = 3$, and $f$ changes $+ \\to -$ there, so $x = 3$ is the only candidate inside $(0, 6)$. Compare candidates: $g(0) = 0$, $g(3) = 5$, $g(6) = 4 - 2 = 2$. The largest is $g(3) = 5$, so the absolute maximum is at $x = 3$.'
           },
           {
             question: 'On which interval is $g$ concave down?',

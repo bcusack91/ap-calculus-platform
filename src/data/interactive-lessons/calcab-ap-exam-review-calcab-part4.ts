@@ -131,15 +131,15 @@ $$f_{\\text{avg}} = \\frac{1}{3}\\int_0^3 x^2\\,dx = \\frac{1}{3}\\cdot\\frac{27
       type: 'input-box' as const,
       content: '**Compute the integral.** \u270d\ufe0f',
       exercise: {
-        question: '$\\int_0^4 \\sqrt{x}\\,dx =$ Enter your answer as a fraction $\\frac{a}{b}$ in lowest terms. Give $a + b$.',
-        correctAnswer: '19',
-        acceptableAnswers: ['19'],
+        question: 'Evaluate $\\int_0^4 \\sqrt{x}\\,dx$. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '16/3',
+        acceptableAnswers: ['16/3', '5.333'],
         hints: [
           '$\\sqrt{x} = x^{1/2}$. Antiderivative: $\\frac{x^{3/2}}{3/2} = \\frac{2}{3}x^{3/2}$.',
           '$\\frac{2}{3}(4)^{3/2} - 0 = \\frac{2}{3}\\cdot 8$.',
-          '$= \\frac{16}{3}$. $a+b = 16+3 = 19$.'
+          '$= \\frac{16}{3}$.'
         ],
-        explanation: '$\\frac{2}{3}x^{3/2}\\Big|_0^4 = \\frac{2}{3}(8) = \\frac{16}{3}$. $a+b=19$.'
+        explanation: '$\\frac{2}{3}x^{3/2}\\Big|_0^4 = \\frac{2}{3}(8) = \\frac{16}{3}$.'
       }
     },
     {

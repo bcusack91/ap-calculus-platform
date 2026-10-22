@@ -37,11 +37,11 @@ $$\\boxed{\\text{At each point } (x,y), \\text{ draw a short segment with slope 
 | Step | Action | Example: $\\frac{dy}{dx} = xy$ |
 |:---|:---|:---|
 | 1 | Separate | $\\frac{dy}{y} = x\\,dx$ |
-| 2 | Integrate | $\\ln|y| = \\frac{x^2}{2} + C$ |
+| 2 | Integrate | $\\ln\\lvert y\\rvert = \\frac{x^2}{2} + C$ |
 | 3 | Solve for $y$ | $y = Ae^{x^2/2}$ |
 | 4 | Apply IC | $y(0) = 3 \\implies A = 3$ |
 
-> **Key Fact:** On AP FRQs, always include the constant of integration and solve for it using the initial condition. Forgetting $+C$ loses a point.
+> **Key Fact:** On AP FRQs, always include the constant of integration and solve for it using the initial condition. Forgetting $+C$ costs the point for the constant of integration, and the answer that depends on it is then wrong too, so it usually costs more than one point.
 
 ---
 
@@ -97,8 +97,8 @@ $y^2 = 2x^2 + 16 \\implies y = \\sqrt{2x^2 + 16}$ (positive since $y(0)=4>0$)
 |:---|:---|
 | Forgetting $+C$ | Costs the constant-of-integration point, and the solution that follows is wrong |
 | Not separating correctly | Cannot integrate an unseparated DE |
-| Wrong sign on $\\ln|y|$ | Direction of inequality matters |
-| Not checking domain | $y > 0$ vs $y < 0$ affects $|y|$ removal |
+| Sign errors when solving for $y$ | $e^{\\ln\\lvert y\\rvert} = \\lvert y\\rvert$, so use the initial condition to choose the sign of $y$ |
+| Not checking domain | $y > 0$ vs $y < 0$ affects $\\lvert y\\rvert$ removal |
 | Slope field: wrong direction | Double-check sign at each point |
 
 ### Tangent Line and Concavity Parts (No Calculator)
@@ -152,15 +152,15 @@ At $(1, 3)$: $\\frac{d^2y}{dx^2} = \\frac{6 - \\frac{4}{3}}{9} = \\frac{14}{27} 
       type: 'input-box' as const,
       content: '**Solve the IVP.** \u270d\ufe0f',
       exercise: {
-        question: 'Solve $\\frac{dy}{dx} = 3x^2 y$, $y(0) = 2$. Find $y(1)$. Express as $ae^b$ where $a, b$ are integers. Enter $a + b$.',
-        correctAnswer: '3',
-        acceptableAnswers: ['3'],
+        question: 'Solve $\\frac{dy}{dx} = 3x^2 y$, $y(0) = 2$. Find $y(1)$. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '2e',
+        acceptableAnswers: ['2e', '2*e', '5.437', '5.436'],
         hints: [
           'Separate: $\\frac{dy}{y} = 3x^2\\,dx$.',
           '$\\ln|y| = x^3 + C$. $y(0)=2 \\implies C = \\ln 2$.',
-          '$y = 2e^{x^3}$. $y(1) = 2e^1 = 2e$. $a=2, b=1, a+b=3$.'
+          '$y = 2e^{x^3}$, so $y(1) = 2e$.'
         ],
-        explanation: '$y = 2e^{x^3}$. $y(1) = 2e$. $a+b = 2+1 = 3$.'
+        explanation: '$\\ln|y| = x^3 + C$ and $y(0) = 2$ give $y = 2e^{x^3}$, so $y(1) = 2e \\approx 5.437$.'
       }
     },
     {

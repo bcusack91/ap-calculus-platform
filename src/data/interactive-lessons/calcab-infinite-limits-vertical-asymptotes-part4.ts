@@ -1,3 +1,5 @@
+import { elgAsymptote } from '@/data/lesson-figures/calcab'
+
 export const calcabInfiniteLimitsPart4Data = {
   topicSlug: 'infinite-limits-vertical-asymptotes',
   sections: [
@@ -58,15 +60,18 @@ At each one, the left and right limits go to **opposite** infinities.
     {
       id: 'ilva4-graph',
       type: 'text' as const,
+      figure: elgAsymptote,
       content: `
 ## 👁️ Reading Asymptotes from a Graph
+
+In the graph above, $x = 4$ is a vertical asymptote: $\\lim_{x \\to 4^-} f(x) = -\\infty$ and $\\lim_{x \\to 4^+} f(x) = +\\infty$.
 
 A **vertical asymptote** appears as a vertical "cliff" on the graph: the curve rockets up or down as it approaches a vertical line $x = a$.
 
 Visual signs:
 - The curve rises (or falls) without bound near $x = a$.
 - A vertical dashed line is often drawn at $x = a$ in textbook plots.
-- The function is *undefined* at $x = a$.
+- The function is usually undefined at $x = a$ (a piecewise $f$ may define $f(a)$).
 
 > ⚠️ Don\'t confuse a **hole** (single missing point) with an asymptote (unbounded behavior). Holes look normal locally, just with one point missing; asymptotes show the function blowing up.
       `

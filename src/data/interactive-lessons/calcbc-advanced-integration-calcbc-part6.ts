@@ -40,7 +40,7 @@ Apply the full toolkit: $u$-sub, by parts, partial fractions, completing the squ
     {
       id: 'ai6-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Multi-Step Problem**\n\nEvaluate $\\int \\frac{4x}{x^2 - 1}\\,dx$.',
+      content: '**Multi-Step Problem**\n\nEvaluate $\\int \\frac{4x}{x^2 - 1}\\,dx$ by partial fractions, then compare with the faster $u$-substitution.',
       exercise: {
         dropdowns: [
           {
@@ -62,7 +62,7 @@ Apply the full toolkit: $u$-sub, by parts, partial fractions, completing the squ
             options: ['$2\\ln|x^2-1| + C$', '$2\\ln|x-1| - 2\\ln|x+1| + C$', '$4\\ln|x^2 - 1| + C$', '$\\ln|x-1| + 3\\ln|x+1| + C$'],
             correctAnswers: ['$2\\ln|x^2-1| + C$'],
             hints: ['$B = 2$ also (set $x = -1$). Then integrate each fraction.'],
-            explanation: '$A = 2$, $B = 2$. $\\int 2/(x-1) + 2/(x+1)\\,dx = 2\\ln|x-1| + 2\\ln|x+1| + C = 2\\ln|x^2-1| + C$.'
+            explanation: '$A = 2$, $B = 2$. $\\int 2/(x-1) + 2/(x+1)\\,dx = 2\\ln|x-1| + 2\\ln|x+1| + C = 2\\ln|x^2-1| + C$. Faster: the numerator $4x$ is $2$ times the derivative of $x^2 - 1$, so $u = x^2 - 1$ gives $2\\ln|x^2 - 1| + C$ in one step. Check for that pattern before reaching for partial fractions.'
           }
         ]
       }

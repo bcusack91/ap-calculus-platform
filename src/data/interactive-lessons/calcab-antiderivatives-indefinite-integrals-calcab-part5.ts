@@ -14,7 +14,7 @@ $$\\boxed{\\int \\frac{1}{\\sqrt{a^2 - x^2}}\\,dx = \\arcsin\\left(\\frac{x}{a}\
 
 $$\\boxed{\\int \\frac{1}{a^2 + x^2}\\,dx = \\frac{1}{a}\\arctan\\left(\\frac{x}{a}\\right) + C}$$
 
-> **Key Fact:** The arcsecant formula ($\\int \\frac{1}{x\\sqrt{x^2-a^2}}$) is BC only. AB students need ONLY arcsin and arctan forms.
+> **Key Fact:** The arcsecant formula ($\\int \\frac{1}{x\\sqrt{x^2-a^2}}$) is not in the AP Calculus CED. AB students need ONLY arcsin and arctan forms.
 
 ### How to Recognize Them
 

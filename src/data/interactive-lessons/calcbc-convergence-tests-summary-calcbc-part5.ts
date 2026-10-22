@@ -15,7 +15,7 @@ export const calcbcConvergencePart5Data = {
 | "Determine convergence" | Single series, pick a test | Use the flowchart |
 | "Which test and why?" | Justify your choice | Name the test, verify hypotheses |
 | "Determine interval of convergence" | Power series | Ratio Test for $R$, test endpoints separately |
-| "Absolute or conditional?" | Alternating series | Check $\\sum|a_n|$ then $\\sum a_n$ |
+| "Absolute or conditional?" | Alternating series | Check $\\sum\\lvert a_n\\rvert$ then $\\sum a_n$ |
 | "FRQ series justification" | Part of larger problem | Be precise: state theorem, verify conditions |
 
 ### The 30-Second Flowchart for MC

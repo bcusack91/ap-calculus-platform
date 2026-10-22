@@ -6,8 +6,10 @@
  */
 
 import { generateExitQuiz } from '@/data/exit-quizzes'
+import { TOPIC_SLUGS as AB_TOPIC_SLUGS } from '@/data/ap-calcab-daily-question'
 
-const TOPIC_SLUGS = [
+/** BC-only topics (CED 6.11-6.14, 7.5, 7.9, 8.13, Units 9-10). */
+const BC_TOPIC_SLUGS = [
   'integration-by-parts-calcbc',
   'partial-fractions-calcbc',
   'improper-integrals-calcbc',
@@ -27,6 +29,19 @@ const TOPIC_SLUGS = [
   'euler-method-advanced-calcbc',
   'logistic-models-calcbc',
 ]
+
+/**
+ * BC includes all of AB (src/lib/course-includes.ts), and AB content is most
+ * of the BC exam, so the rotation alternates an AB topic and a BC-only topic.
+ */
+export const TOPIC_SLUGS: string[] = (() => {
+  const out: string[] = []
+  for (let i = 0; i < Math.max(AB_TOPIC_SLUGS.length, BC_TOPIC_SLUGS.length); i++) {
+    if (i < AB_TOPIC_SLUGS.length) out.push(AB_TOPIC_SLUGS[i])
+    if (i < BC_TOPIC_SLUGS.length) out.push(BC_TOPIC_SLUGS[i])
+  }
+  return out
+})()
 
 function dayOfYear(): number {
   const now = new Date()

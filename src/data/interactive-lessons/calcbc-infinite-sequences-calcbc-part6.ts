@@ -99,7 +99,7 @@ $p$-series with $p = \\pi \\approx 3.14 > 1$. **Converges**.`
 
 - $n$th term test: quick divergence check ($a_n \\not\\to 0$)
 - Geometric and $p$-series are the fundamental comparison targets
-- Growth hierarchy for sequence limits: $\\ln n \\ll n^p \\ll a^n \\ll n!$
+- Growth hierarchy for sequence limits ($p > 0$, $a > 1$): $\\ln n \\ll n^p \\ll a^n \\ll n!$
 - Always check convergence before finding a sum
 
 > **Next:** Part 7 — Comprehensive Review.`

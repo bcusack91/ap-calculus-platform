@@ -1,5 +1,7 @@
 import type { ActivitySurface, FlashcardRating, QuestionSource } from '@prisma/client'
 import { prisma } from '@/lib/prisma'
+import { coursesContaining } from '@/lib/course-includes'
+import { studyCourseFor } from '@/lib/study-course-server'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { courseSlugsForTopics } from '@/lib/study-tracking'
 
@@ -482,10 +484,15 @@ export async function loadStudentMetrics(userId: string, opts: LoadOpts): Promis
   // course; else MCAT when the student has MCAT tests.
   const courseSeconds = new Map<string, number>()
   for (const r of timeRows) if (r.courseSlug) courseSeconds.set(r.courseSlug, (courseSeconds.get(r.courseSlug) ?? 0) + r.seconds)
-  const primaryCourseSlug =
+  const rawPrimaryCourseSlug =
     [...courseSeconds.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ??
     progress.find((p) => p.topic.category?.course?.slug)?.topic.category?.course?.slug ??
     (diagnostics.length || practice.length ? 'mcat-prep' : null)
+  // An AP Calculus AB lesson studied by a BC student is BC work (src/lib/course-includes.ts).
+  const primaryCourseSlug =
+    rawPrimaryCourseSlug && coursesContaining(rawPrimaryCourseSlug).length > 1
+      ? await studyCourseFor(userId, rawPrimaryCourseSlug)
+      : rawPrimaryCourseSlug
 
   const inWindow = exitAttempts.filter((a) => !since || a.completedAt >= since)
   const clearedEver = new Set(topicsFirstClearedBetween(exitAttempts, new Date(0), new Date(now.getTime() + 1)))

@@ -15,8 +15,8 @@ export const calcbcMotionPart7Data = {
 | Position | $\\vec{r}(t) = \\langle x(t), y(t) \\rangle$ |
 | Velocity | $\\vec{v}(t) = \\langle x'(t), y'(t) \\rangle$ |
 | Acceleration | $\\vec{a}(t) = \\langle x''(t), y''(t) \\rangle$ |
-| Speed | $|\\vec{v}| = \\sqrt{(x')^2 + (y')^2}$ |
-| Distance | $\\int_a^b |\\vec{v}(t)|\\,dt$ |
+| Speed | $\\lvert \\vec{v}\\rvert = \\sqrt{(x')^2 + (y')^2}$ |
+| Distance | $\\int_a^b \\lvert \\vec{v}(t)\\rvert\\,dt$ |
 | Slope | $dy/dx = y'(t)/x'(t)$ |
 | Second Deriv. | $d^2y/dx^2 = \\frac{(d/dt)(dy/dx)}{dx/dt}$ |
 | Position from $\\vec{v}$ | $\\vec{r}(b) = \\vec{r}(a) + \\int_a^b \\vec{v}\\,dt$ |

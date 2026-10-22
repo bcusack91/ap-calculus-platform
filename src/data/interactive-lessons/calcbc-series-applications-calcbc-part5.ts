@@ -10,7 +10,7 @@ export const calcbcSeriesAppsPart5Data = {
 
 ### Series FRQ Structure
 
-The AP BC exam typically has one full FRQ dedicated to Taylor/Maclaurin series. Common parts:
+A Taylor/Maclaurin series free-response question often has parts like these:
 
 | Part | Typical question |
 |------|-----------------|
@@ -19,7 +19,7 @@ The AP BC exam typically has one full FRQ dedicated to Taylor/Maclaurin series. 
 | (c) | Use the series to approximate an integral |
 | (d) | Bound the error of the approximation |
 
-> **AP Tip:** This FRQ is one of the most predictable on the BC exam. Practice the pattern and you can earn nearly full credit.`
+> **AP Tip:** Series FRQs follow a recognizable pattern. Practice the pattern and you can earn nearly full credit.`
     },
     {
       id: 'sa5-template',
@@ -28,9 +28,9 @@ The AP BC exam typically has one full FRQ dedicated to Taylor/Maclaurin series. 
 
 **"Write the first four nonzero terms of the Taylor series for $f$ about $x = 0$."**
 
-> $f(0) = \\ldots$, $f'(0) = \\ldots$, $f''(0) = \\ldots$, $f'''(0) = \\ldots$
+> $f(0) = \\ldots$, $f'(0) = \\ldots$, $f''(0) = \\ldots$, and so on, until four coefficients are nonzero
 >
-> $P_3(x) = f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3$
+> Each term is $\\frac{f^{(n)}(0)}{n!}x^n$. If no derivative is $0$, the four terms run through $x^3$: $f(0) + f'(0)x + \\frac{f''(0)}{2!}x^2 + \\frac{f'''(0)}{3!}x^3$. If some derivatives are $0$, keep going: for $\\sin x$ the first four nonzero terms are $x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!}$.
 
 OR (if built from known series):
 

@@ -36,16 +36,16 @@ $$\\boxed{\\text{No single test works for all series — practice builds intuiti
 - $a_n \\to 1/3 \\neq 0$ → **Divergence Test** → diverges ✓
 
 **Example 3:** $\\sum_{n=2}^\\infty \\frac{1}{n \\ln n}$
-- Positive, decreasing, integratable → **Integral Test**: $\\int_2^\\infty \\frac{dx}{x\\ln x} = \\ln(\\ln x)\\big|_2^\\infty = \\infty$ → diverges ✓
+- Positive, decreasing, integrable → **Integral Test**: $\\int_2^\\infty \\frac{dx}{x\\ln x} = \\lim_{b \\to \\infty}\\left[\\ln(\\ln x)\\right]_2^b = \\infty$ → diverges ✓
 
 **Example 4:** $\\sum_{n=1}^\\infty \\frac{(-1)^n n}{n+1}$
-- $|a_n| = n/(n+1) \\to 1 \\neq 0$ → **Divergence Test** → diverges ✓ (not alternating — fails hypothesis)
+- $|a_n| = n/(n+1) \\to 1 \\neq 0$ → **Divergence Test** → diverges ✓ (the series does alternate, but $b_n = n/(n+1) \\to 1$, so the AST does not apply)
 
 ### Common Pitfalls
 
 | Mistake | Correction |
 |---------|-----------|
-| AST on $|a_n| \\not\\to 0$ | Must verify $b_n \\to 0$ first |
+| AST on $\\lvert a_n\\rvert \\not\\to 0$ | Must verify $b_n \\to 0$ first |
 | Ratio Test gives $L = 1$ | Test is **inconclusive** — try another |
 | Comparison in wrong direction | $a_n \\le b_n$ and $\\sum b_n$ converges → $\\sum a_n$ converges. NOT the other way for convergence |`
     },
@@ -120,12 +120,12 @@ $$\\boxed{\\text{No single test works for all series — practice builds intuiti
 |-----------|-----------|
 | $a_n \\not\\to 0$ | Divergence Test |
 | Factorials or exponentials | Ratio Test |
-| $n$-th power with a base below $r < 1$ | Compare with geometric $\\sum r^n$ |
+| $n$th powers $r^n$ with $0 < r < 1$ | Compare with geometric $\\sum r^n$ |
 | Polynomial-like terms | Comparison / LCT |
 | Positive, continuous, decreasing | Integral Test |
 | Alternating signs | AST |
 
-> **Key Fact:** On the AP exam, you'll almost never need more than one test per series. The challenge is identifying which one.
+> **Key Fact:** Deciding convergence usually takes one well-chosen test; classifying a series as absolutely or conditionally convergent takes two (one for $\\sum |a_n|$, one for $\\sum a_n$). The challenge is identifying which test fits.
 
 > **Next:** Part 6 — Problem-Solving Workshop.`
     }

@@ -98,7 +98,7 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'tm-ent-4b',
-    question: 'The third-degree Maclaurin polynomial for $e^x$ approximates $e^{0.4}$. Which is a correct Lagrange error bound?',
+    question: 'The third-degree Maclaurin polynomial for $e^x$ approximates $e^{0.4}$. Which is the Lagrange error bound?',
     options: [
       '$\\frac{(0.4)^4}{24}$',
       '$\\frac{e^{0.4}(0.4)^3}{6}$',

@@ -29,7 +29,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'ifd-ent-2a',
     question: 'A table gives $f(0) = 2$, $f\'(0) = 5$, $f(2) = 3$, $f\'(2) = 4$, $f(3) = 6$ and $f\'(3) = -1$. Find $(f^{-1})\'(3)$.',
-    options: ['$-1$', '$4$', '$\\frac{1}{4}$', '$2$'],
+    options: ['$-1$', '$\\frac{1}{5}$', '$\\frac{1}{4}$', '$2$'],
     correctIndex: 2,
     explanation: 'Look for the row where $f(x) = 3$: that is $x = 2$. So $(f^{-1})\'(3) = \\frac{1}{f\'(2)} = \\frac{1}{4}$. Using the row $x = 3$ gives $-1$, and 2 is $f^{-1}(3)$, not its derivative.',
     partNumber: 2,
@@ -85,17 +85,17 @@ const questions: EntranceQuizQuestion[] = [
   // Part 5 — Combining Techniques
   {
     id: 'ifd-ent-5a',
-    question: 'Evaluate $\\displaystyle\\int_{-1}^{1} \\frac{dx}{1 + x^2}$.',
-    options: ['$\\frac{\\pi}{2}$', '$\\frac{\\pi}{4}$', '$0$', '$\\ln 2$'],
+    question: 'Let $f(x) = x^3 + 2x - 1$ and $g = f^{-1}$. What is $g\'(2)$?',
+    options: ['$\\frac{1}{5}$', '$\\frac{1}{14}$', '$5$', '$\\frac{1}{2}$'],
     correctIndex: 0,
-    explanation: 'An antiderivative is $\\arctan x$, so the integral is $\\arctan 1 - \\arctan(-1) = \\frac{\\pi}{4} - \\left(-\\frac{\\pi}{4}\\right) = \\frac{\\pi}{2}$. The integrand is positive, so the answer cannot be 0.',
+    explanation: '$f(1) = 2$, so $g(2) = 1$. Then $f\'(x) = 3x^2 + 2$ gives $f\'(1) = 5$ and $g\'(2) = \\frac{1}{5}$. Evaluating $f\'$ at $2$ instead of $1$ gives $\\frac{1}{14}$, and $5$ forgets the reciprocal.',
     partNumber: 5,
     partTitle: 'Combining Techniques',
   },
   {
     id: 'ifd-ent-5b',
     question: 'The point $(0, 1)$ lies on the curve $\\ln y = x - y + 1$. Find $\\dfrac{dy}{dx}$ there.',
-    options: ['$1$', '$\\frac{1}{2}$', '$2$', '$0$'],
+    options: ['$1$', '$\\frac{1}{2}$', '$\\frac{3}{2}$', '$0$'],
     correctIndex: 1,
     explanation: 'Differentiate: $\\frac{1}{y}\\frac{dy}{dx} = 1 - \\frac{dy}{dx}$. At $y = 1$ this is $\\frac{dy}{dx} = 1 - \\frac{dy}{dx}$, so $\\frac{dy}{dx} = \\frac{1}{2}$.',
     partNumber: 5,

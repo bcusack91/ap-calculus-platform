@@ -20,7 +20,7 @@ $$\\boxed{\\frac{d}{dx}[\\sec x] = \\sec x \\tan x \\qquad \\frac{d}{dx}[\\csc x
 
 ### Pattern Recognition — The Negative Sign Rule
 
-> **Key Fact:** The **co-functions** (cos, cot, csc) ALL have **negative** derivatives. The regular functions (sin, tan, sec) have positive derivatives.
+> **Key Fact:** The derivative **formulas** of the co-functions (cos, cot, csc) all begin with a **minus sign**; those of sin, tan, sec do not.
 
 | Regular Function | Derivative (Positive) | Co-Function | Derivative (Negative) |
 |:---:|:---:|:---:|:---:|
@@ -168,7 +168,7 @@ This relies on the special limits: $\\lim_{h \\to 0}\\frac{\\sin h}{h} = 1$ and 
             label: '$\\frac{d}{dx}[\\csc x] = $',
             options: ['$-\\csc x \\cot x$', '$\\csc x \\cot x$', '$-\\sec x \\tan x$', '$\\sec x \\cot x$'],
             correctAnswers: ['$-\\csc x \\cot x$'],
-            hints: ['Co-functions have negative derivatives. csc is a co-function of sec.'],
+            hints: ['Co-function derivative formulas carry a minus sign. csc is the co-function of sec.'],
             explanation: 'The co-function rule: $\\frac{d}{dx}[\\csc x] = -\\csc x \\cot x$. Note the negative sign.'
           },
           {

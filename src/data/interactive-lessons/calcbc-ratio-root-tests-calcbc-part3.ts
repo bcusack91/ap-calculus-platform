@@ -12,7 +12,7 @@ export const calcbcRatioRootPart3Data = {
 
 | Feature | Ratio Test | Root Test |
 |---------|-----------|----------|
-| Formula | $\\lim |a_{n+1}/a_n|$ | $\\lim |a_n|^{1/n}$ |
+| Formula | $\\lim \\lvert a_{n+1}/a_n\\rvert$ | $\\lim \\lvert a_n\\rvert^{1/n}$ |
 | Best for | Factorials, mixed products | $n$th powers |
 | Weakness | Inconclusive for $p$-series | Inconclusive for $p$-series |
 | AP frequency | **Very common** | Occasional |

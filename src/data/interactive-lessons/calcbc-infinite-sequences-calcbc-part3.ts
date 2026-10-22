@@ -33,11 +33,11 @@ $a_n = \\frac{3^n}{n!}$. The ratio $\\frac{a_{n+1}}{a_n} = \\frac{3}{n+1} \\to 0
 | $\\lim n^{1/n}$ | $1$ | Apply $\\ln$: $\\frac{\\ln n}{n} \\to 0$ |
 | $\\lim \\frac{n!}{n^n}$ | $0$ | $n^n$ beats factorial |
 | $\\lim (1+1/n)^n$ | $e$ | Definition of $e$ |
-| $\\lim r^n$ ($|r|<1$) | $0$ | Geometric decay |
+| $\\lim r^n$ ($\\lvert r\\rvert<1$) | $0$ | Geometric decay |
 
 ### Growth Rate Hierarchy
 
-$$\\boxed{\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n}$$
+$$\\boxed{\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n \\qquad (p > 0,\\ a > 1)}$$
 
 Each function on the left grows **infinitely slower** than the one on its right.`
     },
@@ -109,7 +109,7 @@ Each function on the left grows **infinitely slower** than the one on its right.
       content: `### Summary
 
 - Sequence limits drive the nth term, ratio, and alternating series tests
-- Growth hierarchy: $\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n$
+- Growth hierarchy ($p > 0$, $a > 1$): $\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n$
 - Key limit: $(1 + k/n)^n \\to e^k$
 
 > **Next:** Part 4 — Sequences and series connection.`

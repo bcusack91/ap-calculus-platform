@@ -110,7 +110,7 @@ Estimate $f'(2)$:
 
 $$f'(2) \\approx \\frac{f(3)-f(1)}{3-1} = \\frac{20-8}{2} = 6$$
 
-> **AP Tip:** When estimating derivatives from tables, use the symmetric difference quotient whenever possible. The AP exam scoring guidelines explicitly prefer this method.`
+> **AP Tip:** When estimating derivatives from tables, use the symmetric difference quotient whenever possible. When the table has values on both sides of the point, the difference quotient over that bracketing interval is the usual estimate; show the quotient you used.`
     },
     {
       id: 'derdef3-firstderivtest',

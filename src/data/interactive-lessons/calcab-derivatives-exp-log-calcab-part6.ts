@@ -90,33 +90,33 @@ export const calcabDerivExpLogPart6Data = {
             ]
           },
           {
-            "label": "$\\lim_{x \\to 0^+} x \\ln x = $",
+            "label": "$\\lim_{x \\to \\infty} \\frac{\\ln x}{x} = $",
             "options": [
               "$0$",
-              "$-\\infty$",
+              "$1$",
               "$\\infty$",
               "DNE"
             ]
           },
           {
-            "label": "$e^x$ passes $x^{100}$ at approximately:",
+            "label": "$\\lim_{x \\to \\infty} \\frac{e^x}{x^2} = $",
             "options": [
-              "$x \\approx 650$",
-              "$x \\approx 100$",
-              "$x \\approx 10$",
-              "It never does"
+              "$0$",
+              "$\\infty$",
+              "$1$",
+              "DNE"
             ]
           }
         ],
         "correctAnswers": [
           "$0$",
           "$0$",
-          "$x \\approx 650$"
+          "$\\infty$"
         ],
         "hint1": "Exponential always wins.",
-        "hint2": "$x \\to 0^+$: $x \\to 0$ beats $\\ln x \\to -\\infty$.",
-        "hint3": "It takes a while for $e^x$ to overtake $x^{100}$.",
-        "explanation": "Exponential eventually dominates polynomials, and $x \\to 0$ dominates $\\ln x$."
+        "hint2": "$\\ln x$ grows more slowly than any positive power of $x$.",
+        "hint3": "Now the exponential is on top.",
+        "explanation": "Exponentials eventually dominate powers ($\\frac{x^{10}}{e^x} \\to 0$ and $\\frac{e^x}{x^2} \\to \\infty$), and $x$ dominates $\\ln x$ ($\\frac{\\ln x}{x} \\to 0$)."
       }
     },
     {

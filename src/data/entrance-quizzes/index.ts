@@ -126,6 +126,7 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'linearization-differentials-calcab': () => import('./linearization-differentials-calcab'),
   'theorem-applications-calcab': () => import('./theorem-applications-calcab'),
   'particle-motion-calcab': () => import('./particle-motion-calcab'),
+  'lhopitals-rule': () => import('./lhopitals-rule'),
   'definite-integrals-calcab': () => import('./definite-integrals-calcab'),
   'antiderivatives-indefinite-integrals-calcab': () => import('./antiderivatives-indefinite-integrals-calcab'),
   'u-substitution-calcab': () => import('./u-substitution-calcab'),

@@ -54,7 +54,7 @@ $$= \\frac{e^x(x+1) - e^x(1)}{(x+1)^2} = \\frac{e^x(x+1-1)}{(x+1)^2} = \\frac{xe
 
 $$\\frac{1 \\cdot (x+2) - x \\cdot 1}{(x+2)^2} = \\frac{x + 2 - x}{(x+2)^2} = \\frac{2}{(x+2)^2}$$
 
-> **Key Fact:** When $\\frac{d}{dx}\\frac{x}{x+c}$ yields a **positive constant** over a square, the function is always increasing. This is useful for sign analysis!`
+> **Key Fact:** When the derivative is a positive constant over a square (as for $\\frac{x}{x+c}$ with $c > 0$), the function is increasing on each interval of its domain — not across the asymptote $x = -c$. This is useful for sign analysis!`
     },
     {
       id: 'diff3-quiz1',
@@ -86,10 +86,10 @@ The Quotient Rule is powerful but often **overkill**. Use smarter alternatives w
 
 | Situation | Better Strategy | Example |
 |-----------|----------------|---------|
-| Denominator is a constant | **Constant Multiple Rule** | $\\frac{x^3+2x}{5} = \\frac{1}{5}(3x^2+2)$ |
+| Denominator is a constant | **Constant Multiple Rule** | $\\frac{d}{dx}\\frac{x^3+2x}{5} = \\frac{1}{5}(3x^2+2)$ |
 | Denominator is a power of $x$ | **Rewrite as negative exponent** | $\\frac{3}{x^4} = 3x^{-4} \\to -12x^{-5}$ |
 | Can split the fraction | **Divide term by term** | $\\frac{x^3+x}{x^2} = x + x^{-1}$ |
-| Numerator is a constant | **Rewrite as negative exponent** | $\\frac{5}{x+1}$ — must use Q.R. here |
+| Constant over a non-monomial | **Quotient Rule** | $\\frac{d}{dx}\\frac{5}{x+1} = \\frac{-5}{(x+1)^2}$ |
 
 ### Splitting Fractions — A Powerful Technique
 

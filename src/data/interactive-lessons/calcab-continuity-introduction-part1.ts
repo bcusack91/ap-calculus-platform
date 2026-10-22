@@ -18,7 +18,7 @@ export const calcabContinuityIntroPart1Data = {
 | 🔑 Limit = Value |
 | Continuous vs. Not |
 
-> 🔑 **Why this matters:** Continuity is the bridge from limits to derivatives. It\'s the most heavily tested concept in Unit 1.`
+> 🔑 **Why this matters:** Continuity is the bridge from limits to derivatives.`
     },
     {
       id: 'ci1-intuition',

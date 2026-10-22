@@ -6,78 +6,87 @@ export const calcabIntAppsPart3Data = {
       type: 'text' as const,
       content: `# Integration Applications
 
-**Part 3 of 7 \u2014 Disk & Washer Methods**
+**Part 3 of 7 — Total Distance and Speed**
 
-### Disk Method (Solid with No Hole)
+### Displacement vs. Total Distance
 
-$$\\boxed{V = \\pi\\int_a^b [R(x)]^2\\,dx}$$
+$$\\boxed{\\text{Displacement} = \\int_a^b v(t)\\,dt \\qquad \\text{Total distance} = \\int_a^b \\lvert v(t)\\rvert\\,dt}$$
 
-**Use when:** The region is rotated around an axis and there is no gap between the region and the axis.
+Speed is $\\lvert v(t)\\rvert$, so total distance is the integral of speed. Backward motion subtracts from displacement but **adds** to distance.
 
-### Washer Method (Solid with a Hole)
+### Total Distance by Hand
 
-$$\\boxed{V = \\pi\\int_a^b \\left([R(x)]^2 - [r(x)]^2\\right)dx}$$
+| Step | Action |
+|:---:|:---|
+| 1 | Find where $v(t) = 0$ and $v$ changes sign inside $(a, b)$ |
+| 2 | Integrate $v$ over each piece |
+| 3 | Add the absolute values of the pieces |
 
-| Variable | Meaning |
-|:---:|:---:|
-| $R(x)$ | Outer radius (farther curve from axis) |
-| $r(x)$ | Inner radius (closer curve to axis) |
+On the calculator section, enter $\\int_a^b \\lvert v(t)\\rvert\\,dt$ directly; no splitting is needed.
 
-> **Key Fact:** NEVER subtract the radii first. It\u2019s $R^2 - r^2$, NOT $(R-r)^2$.`
+### Worked Example 1 (continuing Part 2)
+
+$v(t) = t^2 - 4t + 3 = (t-1)(t-3)$ on $[0, 3]$: $v > 0$ on $(0, 1)$ and $v < 0$ on $(1, 3)$.
+
+$$\\int_0^1 v\\,dt = \\frac{4}{3}, \\qquad \\int_1^3 v\\,dt = -\\frac{4}{3}$$
+
+Total distance $= \\frac{4}{3} + \\frac{4}{3} = \\frac{8}{3}$, although the displacement is $0$. The particle went right $\\frac{4}{3}$ units, then came back.`
     },
     {
-      id: 'ia3-rotation',
+      id: 'ia3-extreme',
       type: 'text' as const,
-      content: `### Rotation About Different Lines
+      content: `### Farthest Left or Right: the Candidates Test
 
-| Axis of Rotation | Radius Setup |
+The position $x(t)$ can only reach an extreme value at an endpoint or where $v = x'$ changes sign.
+
+**Worked Example 2.** $v(t) = 2t - 4$ on $[0, 5]$ and $x(0) = 1$. When is the particle farthest left?
+
+$v < 0$ on $(0, 2)$ and $v > 0$ on $(2, 5)$, so the candidates are $t = 0$, $2$ and $5$:
+
+| $t$ | $x(t) = 1 + \\int_0^t (2s - 4)\\,ds = 1 + t^2 - 4t$ |
 |:---:|:---:|
-| $x$-axis ($y=0$) | $R = f(x)$ |
-| $y$-axis ($x=0$) | $R = f(y)$, integrate $dy$ |
-| $y = k$ (horizontal) | $R = |f(x)-k|$ |
-| $x = h$ (vertical) | $R = |f(y)-h|$, integrate $dy$ |
+| $0$ | $1$ |
+| $2$ | $-3$ |
+| $5$ | $6$ |
 
-### Worked Example
+Farthest left at $t = 2$ ($x = -3$). Total distance: $\\lvert -4\\rvert + 9 = 13$, while the displacement is $x(5) - x(0) = 5$.
 
-Rotate $y = x^2$ about the $x$-axis from $x=0$ to $x=2$:
+### Reading a Velocity Graph
 
-| Step | Work |
-|:---:|:---:|
-| Radius | $R = x^2$ |
-| Integral | $V = \\pi\\int_0^2 (x^2)^2 dx = \\pi\\int_0^2 x^4\\,dx$ |
-| Evaluate | $\\pi[\\frac{x^5}{5}]_0^2 = \\frac{32\\pi}{5}$ |
+Signed area under the $v$-graph is displacement; total area (counting every piece as positive) is distance.
 
-### Washer Example
+Example: $v$ is piecewise linear through $(0, 0)$, $(2, 4)$, $(4, 0)$, $(6, -2)$, $(8, 0)$.
 
-Rotate region between $y=x$ and $y=x^2$ about $x$-axis on $[0,1]$:
+- Area above the axis on $[0, 4]$: $\\frac{1}{2}(4)(4) = 8$.
+- Area below the axis on $[4, 8]$: $\\frac{1}{2}(4)(2) = 4$.
 
-$R = x$ (outer), $r = x^2$ (inner).
+Displacement $= 8 - 4 = 4$; total distance $= 8 + 4 = 12$.
 
-$V = \\pi\\int_0^1(x^2-x^4)dx = \\pi[\\frac{x^3}{3}-\\frac{x^5}{5}]_0^1 = \\pi(\\frac{1}{3}-\\frac{1}{5}) = \\frac{2\\pi}{15}$`
+> **AP Tip:** "Total distance" and "position" questions often appear in the same FRQ. Keep two running numbers: the signed sum for position, and the sum of absolute values for distance.`
     },
     {
       id: 'ia3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Disk & Washer** \ud83c\udfaf',
+      content: '**Distance and Speed** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Rotate $y = \\sqrt{x}$ about the $x$-axis from $x=0$ to $x=4$. Volume:',
-            options: ['$8\\pi$', '$\\frac{16\\pi}{3}$', '$\\frac{64\\pi}{3}$', '$16\\pi$'],
+            question: 'A particle has velocity $v(t) = 4 - 2t$. What is the total distance it travels on $[0, 3]$?',
+            options: ['$5$', '$3$', '$4$', '$1$'],
             correctAnswer: 0,
-            explanation: '$V = \\pi\\int_0^4(\\sqrt{x})^2 dx = \\pi\\int_0^4 x\\,dx = \\pi[\\frac{x^2}{2}]_0^4 = 8\\pi$. Forgetting to square the radius gives $\\pi\\int_0^4 \\sqrt{x}\\,dx = \\frac{16\\pi}{3}$, squaring twice ($\\pi\\int_0^4 x^2\\,dx$) gives $\\frac{64\\pi}{3}$, and treating the solid as a cylinder of radius $2$ gives $16\\pi$.'
+            explanation: '$v = 0$ at $t = 2$. $\\int_0^2 (4 - 2t)\\,dt = 4$ and $\\int_2^3 (4 - 2t)\\,dt = -1$, so the distance is $4 + 1 = 5$. The displacement is $4 - 1 = 3$; $4$ and $1$ are the two legs alone.'
           },
           {
-            question: 'Rotate the region between $y = x^2$ and $y = 4$, for $0 \\le x \\le 2$, about $y = 4$. The disk radius is:',
-            options: ['$4-x^2$', '$x^2-4$', '$4$', '$x^2$'],
+            question: 'On $[0, 9]$ a velocity graph has area $10$ above the $t$-axis on $[0, 6]$ and area $4$ below it on $[6, 9]$. If $x(0) = -2$, what are $x(9)$ and the total distance?',
+            options: ['$x(9) = 4$ and the distance is $14$', '$x(9) = 12$ and the distance is $14$', '$x(9) = 4$ and the distance is $6$', '$x(9) = 8$ and the distance is $14$'],
             correctAnswer: 0,
-            explanation: 'The region touches the axis $y = 4$, so each slice is a disk whose radius runs from the curve up to the axis: $R = 4 - x^2$ (axis is above the curve). $x^2 - 4$ reverses the order, and $4$ and $x^2$ measure from the $x$-axis instead of from $y = 4$.'
+            explanation: '$x(9) = -2 + 10 - 4 = 4$ uses signed area; the distance $10 + 4 = 14$ uses total area. $12$ adds the area below the axis, $6$ treats the distance as the displacement, and $8$ ignores the backward motion.'
           },
           {
-            question: 'The washer method is needed instead of disk when:',
-            options: ['There is a gap between the region and the axis', 'The function is negative on part of the interval', 'The region is rotated about the $y$-axis instead', 'The axis is a line other than one of the coordinate axes'],
+            question: 'A particle has $v(t) = t^2 - 1$ and $x(0) = 0$. At what time on $[0, 2]$ is it farthest to the left?',
+            options: ['$t = 1$', '$t = 0$', '$t = 2$', '$t = \\frac{1}{2}$'],
             correctAnswer: 0,
-            explanation: 'A gap creates a hole in the solid, requiring outer minus inner radius: washer method. A negative function, a vertical axis, or an axis like $y = 4$ can still give disks if the region touches the axis.'
+            explanation: '$v < 0$ on $(0, 1)$ and $v > 0$ on $(1, 2)$. Candidates: $x(0) = 0$, $x(1) = \\frac{1}{3} - 1 = -\\frac{2}{3}$, $x(2) = \\frac{8}{3} - 2 = \\frac{2}{3}$. The smallest is at $t = 1$. The start $t = 0$ is not the leftmost point, $t = 2$ is the rightmost, and at $t = \\frac{1}{2}$ the particle is still moving left.'
           }
         ]
       }
@@ -85,29 +94,29 @@ $V = \\pi\\int_0^1(x^2-x^4)dx = \\pi[\\frac{x^3}{3}-\\frac{x^5}{5}]_0^1 = \\pi(\
     {
       id: 'ia3-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Identify the setup.** \ud83d\udd0d',
+      content: '**Distance setups.** 🔍',
       exercise: {
         dropdowns: [
           {
-            label: 'Rotate $y = x^2$ and $y = 4$ about $y = 4$. Method:',
-            options: ['Disk: $R = 4-x^2$', 'Washer: $R = 4, r = x^2$', 'Disk: $R = 4+x^2$', 'Washer: $R = 4-x^2, r = x^2$'],
-            correctAnswers: ['Disk: $R = 4-x^2$'],
-            hints: ['The region touches the axis $y=4$, so no hole: disk method.'],
-            explanation: 'Rotating about $y=4$: radius $= 4-x^2$. No gap: disk method.'
+            label: 'For $v(t) = \\sin t$ on $[0, 2\\pi]$, the total distance is:',
+            options: ['$4$', '$0$', '$2$', '$2\\pi$'],
+            correctAnswers: ['$4$'],
+            hints: ['$\\sin t \\ge 0$ on $[0, \\pi]$ and $\\le 0$ on $[\\pi, 2\\pi]$.'],
+            explanation: '$\\int_0^{\\pi} \\sin t\\,dt = 2$ and $\\int_{\\pi}^{2\\pi} \\sin t\\,dt = -2$, so the distance is $2 + 2 = 4$. The displacement is $0$.'
           },
           {
-            label: 'Rotate $y = x$ and $y = x^2$ about $y = -1$ on $[0,1]$. Outer radius:',
-            options: ['$x-1$', '$x^2+1$', '$x+1$', '$x$'],
-            correctAnswers: ['$x+1$'],
-            hints: ['Outer = farther curve from $y=-1$. On $[0,1]$: $x \\ge x^2$, so $x$ is farther from $y=-1$.'],
-            explanation: '$R = x-(-1) = x+1$. $r = x^2-(-1) = x^2+1$.'
+            label: 'On the calculator section, total distance on $[0, 4]$ is entered as:',
+            options: ['$\\int_0^4 \\lvert v(t)\\rvert\\,dt$', '$\\left\\lvert\\int_0^4 v(t)\\,dt\\right\\rvert$', '$\\int_0^4 v(t)\\,dt$', '$\\lvert v(4) - v(0)\\rvert$'],
+            correctAnswers: ['$\\int_0^4 \\lvert v(t)\\rvert\\,dt$'],
+            hints: ['Take the absolute value before integrating.'],
+            explanation: 'Integrate the speed $\\lvert v\\rvert$. The absolute value of $\\int v$ is the size of the displacement, which is smaller whenever the particle changes direction.'
           },
           {
-            label: 'To rotate about $x = 3$, you should integrate with respect to:',
-            options: ['$x$, with curves as $y = f(x)$', '$y$, with curves as $x = g(y)$', 'Either one gives the same setup', '$x$, after shifting the axis by $3$'],
-            correctAnswers: ['$y$, with curves as $x = g(y)$'],
-            hints: ['Vertical axis of rotation: use horizontal slices ($dy$).'],
-            explanation: 'Rotating about a vertical line: the disks or washers are horizontal, so integrate with respect to $y$, with radii $|g(y)-3|$.'
+            label: 'Speed is:',
+            options: ['$\\lvert v(t)\\rvert$', '$v(t)$', '$\\lvert a(t)\\rvert$', '$\\int v(t)\\,dt$'],
+            correctAnswers: ['$\\lvert v(t)\\rvert$'],
+            hints: ['Speed has no direction.'],
+            explanation: 'Speed is the absolute value of velocity. Velocity carries a sign for direction; speed does not.'
           }
         ]
       }
@@ -115,30 +124,32 @@ $V = \\pi\\int_0^1(x^2-x^4)dx = \\pi[\\frac{x^3}{3}-\\frac{x^5}{5}]_0^1 = \\pi(\
     {
       id: 'ia3-input',
       type: 'input-box' as const,
-      content: '**Compute the volume.** \u270d\ufe0f',
+      content: '**Find a total distance.** ✍️',
       exercise: {
-        question: 'Rotate $y = \\sqrt{x}$ about the $y$-axis from $y=0$ to $y=2$ (disk method in terms of $y$). Express the volume as $\\frac{a\\pi}{b}$. Find $a+b$.\n\n(Enter an integer.)',
-        correctAnswer: '37',
-        acceptableAnswers: ['37'],
+        question: 'A particle moves with velocity $v(t) = 2t - 4$ for $0 \\le t \\le 5$. Find the total distance it travels.',
+        correctAnswer: '13',
+        acceptableAnswers: ['13'],
         hints: [
-          '$x = y^2$. Disk: $R = y^2$.',
-          '$V = \\pi\\int_0^2 (y^2)^2 dy = \\pi\\int_0^2 y^4\\,dy$.',
-          '$= \\pi[\\frac{y^5}{5}]_0^2 = \\frac{32\\pi}{5}$. So $a=32, b=5$.'
+          '$v = 0$ at $t = 2$.',
+          '$\\int_0^2 (2t - 4)\\,dt = -4$ and $\\int_2^5 (2t - 4)\\,dt = 9$.',
+          'Add the absolute values.'
         ],
-        explanation: '$V = \\frac{32\\pi}{5}$. $a+b = 32+5 = 37$.'
+        explanation: 'Distance $= \\lvert -4\\rvert + 9 = 13$ (the displacement is $-4 + 9 = 5$).'
       }
     },
     {
       id: 'ia3-summary',
       type: 'text' as const,
-      content: `### Key Takeaways \u2014 Part 3
+      content: `### Key Takeaways — Part 3
 
-| Method | When to Use | Formula |
-|:---:|:---:|:---:|
-| Disk | No gap from axis | $\\pi\\int R^2\\,dx$ |
-| Washer | Gap creates hole | $\\pi\\int (R^2-r^2)\\,dx$ |
+| Quantity | Formula |
+|:---:|:---:|
+| Speed | $\\lvert v(t)\\rvert$ |
+| Total distance | $\\int_a^b \\lvert v(t)\\rvert\\,dt$ |
+| Displacement | $\\int_a^b v(t)\\,dt$ |
+| Farthest left/right | Compare $x$ at the endpoints and where $v$ changes sign |
 
-> **Up Next:** Part 4 \u2014 Riemann Sums & Trapezoidal Rule.`
+> **Up Next:** Part 4 — Accumulation in Applied Contexts.`
     }
   ]
 };

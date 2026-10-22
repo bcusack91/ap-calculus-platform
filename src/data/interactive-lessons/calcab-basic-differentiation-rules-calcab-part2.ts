@@ -54,7 +54,7 @@ $$\\frac{d}{dx}[x^2 \\sin x] = 2x\\sin x + x^2 \\cos x$$
 
 $$= e^x\\left(\\ln x + \\frac{1}{x}\\right)$$
 
-> **AP Tip:** Factor common terms in your final answer when possible. Graders appreciate clean answers, and factoring helps with sign analysis later.
+> **AP Tip:** Factor common terms in your final answer when possible. Simplifying is not required for credit, but factoring helps with sign analysis later.
 
 ---
 

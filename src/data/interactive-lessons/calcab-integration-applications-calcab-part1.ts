@@ -6,87 +6,103 @@ export const calcabIntAppsPart1Data = {
       type: 'text' as const,
       content: `# Integration Applications
 
-**Part 1 of 7 \u2014 Area Between Curves**
+**Part 1 of 7 — Average Value of a Function**
 
 ### In This Topic
 
 | Part | Topic |
 |:---:|:---:|
-| **1** | **Area Between Curves** |
-| 2 | Cross-Sectional Volumes |
-| 3 | Disk & Washer Methods |
-| 4 | Riemann Sums & Trapezoidal Rule |
+| **1** | **Average Value of a Function** |
+| 2 | Position, Velocity, and Displacement |
+| 3 | Total Distance and Speed |
+| 4 | Accumulation in Applied Contexts |
 | 5 | Rate Problems & Net Change |
-| 6 | Problem-Solving Workshop |
-| 7 | Comprehensive Assessment |
+| 6 | Practice Workshop |
+| 7 | Final Assessment |
 
-### Area Between Two Curves
+This lesson covers the first three topics of Unit 8: average value, motion, and accumulation in context. Area between curves and volumes have their own lessons.
 
-$$\\boxed{A = \\int_a^b [f(x) - g(x)]\\,dx \\quad \\text{where } f(x) \\ge g(x)}$$
+### The Average Value of $f$ on $[a, b]$
 
-| Step | Action |
-|:---:|:---:|
-| 1 | Sketch and identify which curve is on top |
-| 2 | Find intersection points (set $f = g$) |
-| 3 | Set up $\\int [\\text{top} - \\text{bottom}]\\,dx$ |
-| 4 | If curves cross, split at the crossing points |
+$$\\boxed{f_{\\text{avg}} = \\frac{1}{b-a}\\int_a^b f(x)\\,dx}$$
 
-> **Key Fact:** Always subtract bottom from top: $\\int (\\text{top} - \\text{bottom})\\,dx$. If you get a negative area, the curves were swapped.`
+**Why it works:** to average $n$ numbers, add them and divide by $n$. Cut $[a, b]$ into $n$ equal pieces of width $\\Delta x = \\frac{b-a}{n}$ and average one sample value from each piece:
+
+$$\\frac{1}{n}\\sum_{i=1}^{n} f(x_i) = \\frac{1}{b-a}\\sum_{i=1}^{n} f(x_i)\\,\\Delta x \;\\longrightarrow\; \\frac{1}{b-a}\\int_a^b f(x)\\,dx$$
+
+**Picture:** when $f \\ge 0$, $f_{\\text{avg}}$ is the height of the rectangle on $[a, b]$ that has the same area as the region under $f$.
+
+> **Key Fact:** If $f$ is continuous on $[a, b]$, then $f(c) = f_{\\text{avg}}$ for at least one $c$ in $[a, b]$, because the average lies between the minimum and maximum values of $f$.`
     },
     {
-      id: 'ia1-worked',
+      id: 'ia1-value-vs-rate',
       type: 'text' as const,
-      content: `### Worked Examples
+      content: `### Average Value vs. Average Rate of Change
 
-**Example 1:** Area between $y = x^2$ and $y = x$ on $[0,1]$.
+These two phrases sound alike but use different formulas.
 
-| Step | Work |
-|:---:|:---:|
-| Intersections | $x^2 = x \\Rightarrow x=0,1$ |
-| Top curve | $x \\ge x^2$ on $[0,1]$ |
-| Integral | $\\int_0^1 (x-x^2)dx = [\\frac{x^2}{2}-\\frac{x^3}{3}]_0^1$ |
-| Answer | $\\frac{1}{2}-\\frac{1}{3} = \\frac{1}{6}$ |
+| The question asks for | Formula | What it uses |
+|:---:|:---:|:---:|
+| The average **value** of $f$ on $[a, b]$ | $\\frac{1}{b-a}\\int_a^b f(x)\\,dx$ | An integral of $f$ |
+| The average **rate of change** of $f$ on $[a, b]$ | $\\frac{f(b)-f(a)}{b-a}$ | Two values of $f$ |
 
-**Example 2:** Area enclosed by $y = x^2$ and $y = 2x$.
+They connect through rates: if $r(t) = A'(t)$ is a rate, the average value of $r$ is the average rate of change of $A$:
 
-| Step | Work |
-|:---:|:---:|
-| Intersections | $x^2 = 2x \\Rightarrow x=0,2$ |
-| Top curve | $2x \\ge x^2$ on $[0,2]$ |
-| Integral | $\\int_0^2(2x-x^2)dx = [x^2-\\frac{x^3}{3}]_0^2$ |
-| Answer | $4-\\frac{8}{3} = \\frac{4}{3}$ |
+$$\\frac{1}{b-a}\\int_a^b A'(t)\\,dt = \\frac{A(b)-A(a)}{b-a}$$
 
-### Integrating with Respect to $y$
+### Worked Example 1 — From a Formula
 
-$$\\boxed{A = \\int_c^d [\\text{right} - \\text{left}]\\,dy}$$
+Find the average value of $f(x) = \\sqrt{x}$ on $[0, 4]$, and a value $c$ where $f(c)$ equals it.
 
-Use when curves are easier to express as $x = f(y)$.
+$$f_{\\text{avg}} = \\frac{1}{4}\\int_0^4 x^{1/2}\\,dx = \\frac{1}{4}\\cdot\\frac{2}{3}x^{3/2}\\Big|_0^4 = \\frac{1}{4}\\cdot\\frac{16}{3} = \\frac{4}{3}$$
 
-> **AP Tip:** If the region is bounded by $x = y^2$ and $x = 4$, integrate with respect to $y$. It avoids splitting the integral.`
+$\\sqrt{c} = \\frac{4}{3}$ gives $c = \\frac{16}{9}$, which is in $[0, 4]$.
+
+### Worked Example 2 — From a Graph
+
+$f$ is piecewise linear through $(0, 1)$, $(2, 5)$ and $(6, 5)$. Find its average value on $[0, 6]$.
+
+Areas: trapezoid on $[0, 2]$ is $\\frac{1+5}{2}\\cdot 2 = 6$; rectangle on $[2, 6]$ is $5 \\cdot 4 = 20$.
+
+$$f_{\\text{avg}} = \\frac{6 + 20}{6} = \\frac{13}{3}$$
+
+### Worked Example 3 — From a Table
+
+| $t$ (hours) | 0 | 4 | 6 | 10 |
+|:---:|:---:|:---:|:---:|:---:|
+| $T(t)$ (°F) | 60 | 68 | 72 | 66 |
+
+Estimate the average temperature over $0 \\le t \\le 10$ with a trapezoidal sum:
+
+$$\\int_0^{10} T(t)\\,dt \\approx 4\\cdot\\frac{60+68}{2} + 2\\cdot\\frac{68+72}{2} + 4\\cdot\\frac{72+66}{2} = 256 + 140 + 276 = 672$$
+
+Average temperature $\\approx \\frac{672}{10} = 67.2$ °F.
+
+> **AP Tip:** Watch the widths. Unequal subintervals need their own widths, and you divide by the whole interval length $b - a$, not by the number of subintervals.`
     },
     {
       id: 'ia1-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Area Between Curves** \ud83c\udfaf',
+      content: '**Average Value** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Area between $y = \\sqrt{x}$ and $y = x^2$ on $[0,1]$:',
-            options: ['$\\frac{1}{3}$', '$\\frac{1}{6}$', '$\\frac{1}{2}$', '$\\frac{2}{3}$'],
+            question: 'What is the average value of $f(x) = 6x^2$ on $[0, 2]$?',
+            options: ['$8$', '$16$', '$12$', '$4$'],
             correctAnswer: 0,
-            explanation: '$\\sqrt{x} \\ge x^2$ on $[0,1]$. $\\int_0^1(x^{1/2}-x^2)dx = [\\frac{2}{3}x^{3/2}-\\frac{x^3}{3}]_0^1 = \\frac{2}{3}-\\frac{1}{3} = \\frac{1}{3}$.'
+            explanation: '$\\frac{1}{2}\\int_0^2 6x^2\\,dx = \\frac{1}{2}\\left[2x^3\\right]_0^2 = \\frac{16}{2} = 8$. The integral alone is $16$, the average rate of change $\\frac{f(2) - f(0)}{2} = \\frac{24}{2}$ is $12$, and $4$ divides by 2 twice ($\\frac{16}{2}$, then by 2 again).'
           },
           {
-            question: 'Area between $y = x+2$ and $y = x^2$ is:',
-            options: ['$\\frac{9}{2}$', '$\\frac{10}{3}$', '$\\frac{13}{6}$', '$-\\frac{9}{2}$'],
+            question: 'What is the average value of $\\cos x$ on $\\left[0, \\frac{\\pi}{2}\\right]$?',
+            options: ['$\\frac{2}{\\pi}$', '$1$', '$\\frac{\\pi}{2}$', '$\\frac{1}{2}$'],
             correctAnswer: 0,
-            explanation: '$x+2 = x^2 \\Rightarrow x=-1,2$. $\\int_{-1}^2(x+2-x^2)dx = [\\frac{x^2}{2}+2x-\\frac{x^3}{3}]_{-1}^2 = (2+4-\\frac{8}{3})-(\\frac{1}{2}-2+\\frac{1}{3}) = \\frac{10}{3}-(-\\frac{7}{6}) = \\frac{9}{2}$. Dropping the lower limit gives $\\frac{10}{3}$, adding its value $-\\frac{7}{6}$ instead of subtracting gives $\\frac{13}{6}$, and bottom minus top gives $-\\frac{9}{2}$.'
+            explanation: '$\\frac{1}{\\pi/2}\\int_0^{\\pi/2} \\cos x\\,dx = \\frac{2}{\\pi}\\left[\\sin x\\right]_0^{\\pi/2} = \\frac{2}{\\pi}$. The integral alone is $1$, $\\frac{\\pi}{2}$ multiplies by the length instead of dividing, and $\\frac{1}{2}$ averages only the endpoint values $\\cos 0$ and $\\cos\\frac{\\pi}{2}$.'
           },
           {
-            question: 'When should you integrate with respect to $y$?',
-            options: ['When $x = g(y)$ form avoids splitting the region', 'Whenever the region touches the $y$-axis', 'Whenever the region is rotated about the $y$-axis', 'Only when no curve can be written as $y = f(x)$'],
+            question: 'If $\\int_2^8 g(x)\\,dx = 30$, what is the average value of $g$ on $[2, 8]$?',
+            options: ['$5$', '$30$', '$\\frac{15}{4}$', '$3$'],
             correctAnswer: 0,
-            explanation: 'Integrate with respect to $y$ when expressing the curves as $x = g(y)$ gives one right-minus-left integral instead of several pieces. Touching the $y$-axis does not decide it, area problems involve no rotation, and $dy$ is a choice, not a last resort.'
+            explanation: 'Divide by the length of the interval, $8 - 2 = 6$: $\\frac{30}{6} = 5$. Dividing by the right endpoint 8 gives $\\frac{15}{4}$, dividing by $8 + 2 = 10$ gives $3$, and $30$ forgets to divide.'
           }
         ]
       }
@@ -94,29 +110,29 @@ Use when curves are easier to express as $x = f(y)$.
     {
       id: 'ia1-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Set up the integral.** \ud83d\udd0d',
+      content: '**Value or rate?** 🔍',
       exercise: {
         dropdowns: [
           {
-            label: 'Area between $y = 4-x^2$ and $y = 0$:',
-            options: ['$\\int_{-2}^{2}(4-x^2)dx$', '$\\int_0^4(4-x^2)dx$', '$\\int_{-2}^{2}x^2\\,dx$', '$\\int_0^2(4-x^2)dx$'],
-            correctAnswers: ['$\\int_{-2}^{2}(4-x^2)dx$'],
-            hints: ['$4-x^2=0$ at $x=\\pm 2$. Top: $4-x^2$, bottom: $0$.'],
-            explanation: 'Parabola opens down, $x$-intercepts at $\\pm 2$. Area $= \\int_{-2}^2(4-x^2)dx = \\frac{32}{3}$.'
+            label: 'For $f \\ge 0$, the average value of $f$ on $[a, b]$ is the height of:',
+            options: ['The equal-area rectangle on $[a, b]$', 'The highest point of $f$ on $[a, b]$', 'The graph at the midpoint $\\frac{a+b}{2}$', 'The secant line from $a$ to $b$'],
+            correctAnswers: ['The equal-area rectangle on $[a, b]$'],
+            hints: ['Multiply both sides of the formula by $b - a$.'],
+            explanation: '$(b - a)\\,f_{\\text{avg}} = \\int_a^b f(x)\\,dx$: a rectangle of width $b - a$ and height $f_{\\text{avg}}$ has the same area as the region under $f$. The midpoint value matches only for special functions, such as linear ones.'
           },
           {
-            label: 'Area between $x = y^2$ and $x = 4$ should be integrated with respect to:',
-            options: ['$x$ (single integral from $-2$ to $2$)', '$y$ (single integral from $-2$ to $2$)', '$y$ (single integral from $0$ to $4$)', '$x$ (single integral from $0$ to $2$)'],
-            correctAnswers: ['$y$ (single integral from $-2$ to $2$)'],
-            hints: ['$x = y^2$ is not a function of $x$ without splitting.'],
-            explanation: 'With respect to $y$: $\\int_{-2}^{2}(4-y^2)\\,dy$, one integral with $y$-limits from the intersection points $y = \\pm 2$.'
+            label: '$P(t)$ is a population. "Find the average rate of change of $P$ on $[0, 5]$" means:',
+            options: ['$\\frac{P(5)-P(0)}{5}$', '$\\frac{1}{5}\\int_0^5 P(t)\\,dt$', '$P\'(2.5)$', '$\\int_0^5 P\'(t)\\,dt$'],
+            correctAnswers: ['$\\frac{P(5)-P(0)}{5}$'],
+            hints: ['Rate of change of $P$: change in $P$ divided by change in $t$.'],
+            explanation: 'The average rate of change uses two values: $\\frac{P(5) - P(0)}{5 - 0}$. $\\frac{1}{5}\\int_0^5 P(t)\\,dt$ is the average value of $P$ (the average population), and $\\int_0^5 P\'(t)\\,dt$ is the total change, not divided by the time.'
           },
           {
-            label: 'The area between $y = \\sin x$ and $y = \\cos x$ from $0$ to $\\pi/2$ requires:',
-            options: ['No splitting, since both are positive', 'Splitting at $x = \\pi/4$', 'Splitting where $\\cos x = 0$', 'Taking the absolute value at the end'],
-            correctAnswers: ['Splitting at $x = \\pi/4$'],
-            hints: ['$\\sin x = \\cos x$ at $x = \\pi/4$.'],
-            explanation: 'The curves cross at $x = \\pi/4$: $\\cos x \\ge \\sin x$ on $[0,\\pi/4]$, then $\\sin x \\ge \\cos x$ on $[\\pi/4,\\pi/2]$.'
+            label: '$r(t)$ is a rainfall rate in inches per hour. The average value of $r$ on $[0, 6]$ has units:',
+            options: ['inches per hour', 'inches', 'inches per hour per hour', 'hours'],
+            correctAnswers: ['inches per hour'],
+            hints: ['$\\int_0^6 r(t)\\,dt$ is in inches; then divide by hours.'],
+            explanation: 'The integral is in (inches per hour)(hours) = inches, and dividing by 6 hours gives inches per hour. An average value always has the same units as the function being averaged.'
           }
         ]
       }
@@ -124,31 +140,33 @@ Use when curves are easier to express as $x = f(y)$.
     {
       id: 'ia1-input',
       type: 'input-box' as const,
-      content: '**Compute the area.** \u270d\ufe0f',
+      content: '**Compute an average value.** ✍️',
       exercise: {
-        question: 'Find the area enclosed by $y = x^2 - 1$ and $y = 3$.\n\n(Enter a fraction as a/b.)',
-        correctAnswer: '32/3',
-        acceptableAnswers: ['32/3', '10.7', '10.67'],
+        question: 'Find the average value of $f(x) = e^x$ on $[0, \\ln 3]$. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '2/ln(3)',
+        acceptableAnswers: ['2/ln(3)', '2/ln3', '2/ln 3', '1.820', '1.82'],
         hints: [
-          'Find intersections: $x^2-1 = 3 \\Rightarrow x^2 = 4 \\Rightarrow x = \\pm 2$.',
-          'Top: $y=3$, bottom: $y=x^2-1$.',
-          '$\\int_{-2}^{2}(3-(x^2-1))dx = \\int_{-2}^{2}(4-x^2)dx$.'
+          '$\\int_0^{\\ln 3} e^x\\,dx = e^{\\ln 3} - e^0$.',
+          'That is $3 - 1 = 2$.',
+          'Divide by the length of the interval, $\\ln 3$.'
         ],
-        explanation: '$\\int_{-2}^{2}(4-x^2)dx = [4x-\\frac{x^3}{3}]_{-2}^{2} = (8-\\frac{8}{3})-(-8+\\frac{8}{3}) = \\frac{16}{3}+\\frac{16}{3} = \\frac{32}{3}$.'
+        explanation: '$f_{\\text{avg}} = \\frac{1}{\\ln 3}\\int_0^{\\ln 3} e^x\\,dx = \\frac{3 - 1}{\\ln 3} = \\frac{2}{\\ln 3} \\approx 1.820$.'
       }
     },
     {
       id: 'ia1-summary',
       type: 'text' as const,
-      content: `### Key Takeaways \u2014 Part 1
+      content: `### Key Takeaways — Part 1
 
-| Concept | Formula |
+| Concept | Formula or rule |
 |:---:|:---:|
-| Area (horizontal) | $\\int_a^b [\\text{top}-\\text{bottom}]\\,dx$ |
-| Area (vertical) | $\\int_c^d [\\text{right}-\\text{left}]\\,dy$ |
-| Crossing curves | Split at intersection points |
+| Average value | $\\frac{1}{b-a}\\int_a^b f(x)\\,dx$ |
+| Average rate of change | $\\frac{f(b)-f(a)}{b-a}$ |
+| Average of a rate | Net change divided by elapsed time |
+| From a table | Trapezoidal (or Riemann) sum, then divide by $b - a$ |
+| Units | Same as the units of $f$ |
 
-> **Up Next:** Part 2 \u2014 Cross-Sectional Volumes.`
+> **Up Next:** Part 2 — Position, Velocity, and Displacement.`
     }
   ]
 };

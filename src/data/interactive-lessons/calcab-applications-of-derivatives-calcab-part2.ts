@@ -91,7 +91,7 @@ $f(x) = x^3 - 6x^2 + 9x + 1$
 | What you check | Sign change of $f'$ | Sign of $f''$ at critical point |
 | Requires | Sign chart around $c$ | Just $f''(c)$ |
 | Always works? | **Yes** | No ($f''(c) = 0$ is inconclusive) |
-| Finds inflection points? | No | Yes (as a byproduct) |
+| Finds inflection points? | No | No (it classifies critical points; an inflection point needs a sign change of $f''$) |
 | AP recommendation | Use for justifications | Use when $f''$ is easy to compute |
 
 > **AP Tip:** On free-response questions, use the First Derivative Test for justifications — it ALWAYS gives a definitive answer. The Second Derivative Test is faster for multiple-choice when $f''$ is easy to compute.
@@ -105,7 +105,7 @@ $f(x) = x^3 - 6x^2 + 9x + 1$
 | Zero (with sign change) | Has local extremum |
 | Increasing | Concave up ($f'' > 0$) |
 | Decreasing | Concave down ($f'' < 0$) |
-| Has a local extremum | $f$ has an inflection point |`
+| Has a local extremum | Has an inflection point |`
     },
     {
       id: 'apps2-quiz2',

@@ -105,8 +105,11 @@ Given $\\lim_{x \\to a} f = 5$ and $\\lim_{x \\to a} g = 4$:
 **3)** $\\lim_{x \\to a} \\dfrac{f^2}{g} = ?$ (decimal or fraction)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['9', '60', '25/4'],
+        questions: [
+          { question: '(1)', answer: '9', acceptableAnswers: ['9'] },
+          { question: '(2)', answer: '60', acceptableAnswers: ['60'] },
+          { question: '(3)', answer: '25/4', acceptableAnswers: ['25/4', '6.25'] }
+        ],
         hint1: '$5 + 4 = 9$.',
         hint2: '$3 \\cdot 5 \\cdot 4 = 60$.',
         hint3: '$5^2 / 4 = 25/4 = 6.25$.',

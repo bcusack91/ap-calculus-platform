@@ -12,7 +12,7 @@ export const calcbcLagrangePart4Data = {
 
 | Feature | Lagrange Error Bound | AST Error Bound |
 |---------|---------------------|-----------------|
-| Formula | $M|x-c|^{n+1}/(n+1)!$ | $|a_{n+1}|$ |
+| Formula | $M\\lvert x-c\\rvert^{n+1}/(n+1)!$ | $\\lvert a_{n+1}\\rvert$ |
 | Requires | Bound on $(n+1)$st derivative | Alternating, decreasing, $\\to 0$ |
 | Applies to | **Any** Taylor polynomial | **Alternating** series only |
 | Tightness | Often overestimates | Usually tighter |
@@ -43,7 +43,7 @@ $|R_4(0.5)| \\le M(0.5)^5/5! = 1 \\cdot (0.5)^5/120 = 1/3840 \\approx 2.60 \\tim
 
 **Comparison:** AST gives $2.17 \\times 10^{-5}$; Lagrange gives $2.60 \\times 10^{-4}$.
 
-The AST bound is about **12× tighter** because it accounts for the fact that the $x^5$ coefficient is $0$ in the cosine series, while Lagrange does not.
+The AST bound is about **12× tighter** here because it skips the zero $x^5$ coefficient of the cosine series, while Lagrange with $n = 4$ does not. Lagrange can close the gap: since the $x^5$ coefficient is $0$, $T_4 = T_5$, and the Lagrange bound with $n = 5$ is $\\frac{(0.5)^6}{6!} = \\frac{1}{46080} \\approx 2.17 \\times 10^{-5}$, the same as the AST bound.
 
 > **AP Tip:** When both apply, the AST bound is usually better — but read the problem carefully. "Use Lagrange" means Lagrange, even if AST is tighter.`
     },

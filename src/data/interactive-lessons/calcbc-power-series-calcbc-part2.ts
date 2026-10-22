@@ -46,9 +46,9 @@ $$\\boxed{\\text{Interval of convergence: } [-1, 1)}$$
 
 ### Key Insight
 
-At the positive endpoint ($x = c + R$): all terms are positive → test with $p$-series, comparison, etc.
+At the right endpoint ($x = c + R$): if all coefficients are positive, all terms are positive → test with $p$-series, comparison, etc.
 
-At the negative endpoint ($x = c - R$): signs alternate → often use AST.
+At the left endpoint ($x = c - R$): with positive coefficients, the signs alternate → often use AST. (If the coefficients themselves alternate in sign, the roles of the two endpoints switch.)
 
 Common outcome: one endpoint includes (alternating convergence), one excludes (divergence).`
     },

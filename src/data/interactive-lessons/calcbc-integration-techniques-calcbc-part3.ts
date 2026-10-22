@@ -143,9 +143,9 @@ These let you reduce high powers step by step.
 
 | Must-Know | Formula |
 |-----------|---------|
-| $\\int \\tan x\\,dx$ | $\\ln|\\sec x| + C$ |
-| $\\int \\sec x\\,dx$ | $\\ln|\\sec x + \\tan x| + C$ |
-| $\\int \\sec^3 x\\,dx$ | $\\frac{1}{2}(\\sec x\\tan x + \\ln|\\sec x + \\tan x|) + C$ |
+| $\\int \\tan x\\,dx$ | $\\ln\\lvert \\sec x\\rvert + C$ |
+| $\\int \\sec x\\,dx$ | $\\ln\\lvert \\sec x + \\tan x\\rvert + C$ |
+| $\\int \\sec^3 x\\,dx$ | $\\frac{1}{2}(\\sec x\\tan x + \\ln\\lvert \\sec x + \\tan x\\rvert) + C$ |
 | $\\int \\tan^2 x\\,dx$ | $\\tan x - x + C$ |
 
 > **Coming Up:** Part 4 covers **completing the square** for integration \u2014 converting quadratics into forms suitable for trig substitution or arctan.`

@@ -15,7 +15,7 @@ export const calcabFactoringMethodPart3Data = {
 | Section |
 |---------|
 | The 4-Step Workflow |
-| Two-Variable Setting (denominator factors too) |
+| Both Numerator and Denominator Factor |
 | When the Limit Equals 0 vs. a Nonzero Number |
 
 > 🔑 **Why this matters:** AP problems rarely give you a "just factor the numerator" setup. Both top and bottom may need factoring.`
@@ -107,8 +107,10 @@ After cancellation and substitution:
 **2)** $\\lim_{x \\to -3} \\dfrac{x^2 + 5x + 6}{x + 3} = ?$
       `,
       exercise: {
-        boxes: 2,
-        correctAnswers: ['8/5', '-1'],
+        questions: [
+          { question: '(1)', answer: '8/5', acceptableAnswers: ['8/5', '1.6'] },
+          { question: '(2)', answer: '-1', acceptableAnswers: ['-1'] }
+        ],
         hint1: 'Numerator: $(x-4)(x+4)$. Denominator: $(x-4)(x+1)$.',
         hint2: 'Numerator: $(x+2)(x+3)$. Cancel $(x+3)$.',
         explanation: '(1) $\\dfrac{x+4}{x+1} \\to 8/5 = 1.6$. (2) $x + 2 \\to -1$.'

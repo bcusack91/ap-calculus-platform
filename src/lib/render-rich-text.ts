@@ -1,4 +1,5 @@
 import { renderKatexSync } from '@/lib/katex-lazy'
+import { protectTableMathPipes } from '@/lib/table-math-pipes'
 
 /** An emphasis tag this renderer injected in step 1. */
 const EMPHASIS_TAG = /<\/?(?:strong|em)>/
@@ -225,6 +226,10 @@ export function renderRichText(text: string): string {
 }
 
 function renderPipeline(text: string, emphasis: boolean): string {
+  // Step 0: a bare `|` inside table-cell math ($|x|$, $\ln|x| + C$) would be
+  // taken as a cell boundary in step 2; rewrite it to `\vert` first.
+  text = protectTableMathPipes(text)
+
   // Step 1: Markdown emphasis (bold/italic) — on raw text, before any markup
   let result = emphasis ? renderEmphasis(text, TABLE_SEPARATOR.test(text)) : text
 

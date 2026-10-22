@@ -148,7 +148,7 @@ export const calcabExamReviewPart7Data = {
 |:---|:---|
 | Time management | ~2 min/MC question, 15 min/FRQ |
 | MC tips | Eliminate obviously wrong answers first |
-| FRQ tips | Show all work; label answers with units |
+| FRQ tips | Show all work; give units when the question asks for them |
 | Common mistakes | Forgetting $+C$, sign errors, chain rule omission |
 | Calculator section | Use it for graphing and numerical integration |
 
@@ -157,24 +157,26 @@ export const calcabExamReviewPart7Data = {
 | Mistake | Correction |
 |:---|:---|
 | Writing $\\int f(x)$ without $dx$ | Always include $dx$ |
-| Forgetting $+C$ on indefinite integrals | Points deducted every time |
+| Forgetting $+C$ on indefinite integrals | Can cost the antiderivative or answer point, and breaks any initial-value step |
 | Not justifying with theorems | Name the theorem (IVT, MVT, etc.) |
 | Plugging in before differentiating | Differentiate first, THEN substitute |
-| Confusing displacement vs. distance | Distance uses $|v(t)|$ |
+| Confusing displacement vs. distance | Distance uses $\\lvert v(t)\\rvert$ |
 
 ---
 
-### Completion Checklist
+### Completion Checklist: the Eight AB Units
 
-| Unit | Review Topic | Status |
-|:---:|:---|:---:|
-| 1\u20132 | Limits & Continuity | \u2705 |
-| 3\u20134 | Differentiation Rules | \u2705 |
-| 5 | Applications of Derivatives | \u2705 |
-| 6 | Integration Techniques | \u2705 |
-| 7\u20138 | Applications of Integration | \u2705 |
-| 7 | Differential Equations | \u2705 |
-| \u2014 | Full Practice Exam | \u2705 |
+| Unit | CED unit | Exam weight | Reviewed in |
+|:---:|:---|:---:|:---:|
+| 1 | Limits and Continuity | 10\u201312% | Part 1 |
+| 2 | Differentiation: Definition and Fundamental Properties | 10\u201312% | Part 2 |
+| 3 | Differentiation: Composite, Implicit, and Inverse Functions | 9\u201313% | Part 2 |
+| 4 | Contextual Applications of Differentiation | 10\u201315% | Part 3 |
+| 5 | Analytical Applications of Differentiation | 15\u201318% | Part 3 |
+| 6 | Integration and Accumulation of Change | 17\u201320% | Part 4 |
+| 7 | Differential Equations | 6\u201312% | Part 6 |
+| 8 | Applications of Integration | 10\u201315% | Part 5 |
+| \u2014 | Full Practice Exam | \u2014 | Part 7 |
 
 **You\u2019ve completed the AP Calculus AB Exam Review! Good luck on exam day!** \ud83c\udf89`
     }

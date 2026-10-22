@@ -42,8 +42,8 @@ We say $f$ and $g$ grow at the **same rate** if $\\lim_{x \\to \\infty} \\frac{f
 | Limit | Result | Why |
 |-------|--------|-----|
 | $\\frac{e^x}{x^n}$ | $\\infty$ | Exponential beats any polynomial |
-| $\\frac{x^n}{\\ln x}$ | $\\infty$ | Any power beats logarithm |
-| $\\frac{(\\ln x)^k}{x^p}$ | $0$ | Even powers of $\\ln$ lose to $x^p$ |
+| $\\frac{x^n}{\\ln x}$ $(n > 0)$ | $\\infty$ | Any positive power beats a logarithm |
+| $\\frac{(\\ln x)^k}{x^p}$ $(k, p > 0)$ | $0$ | Any power of $\\ln x$ loses to any positive power of $x$ |
 | $\\frac{2^x}{e^x}$ | $0$ | $(2/e)^x \\to 0$ since $2/e < 1$ |
 | $\\frac{e^x}{3^x}$ | $0$ | $(e/3)^x \\to 0$ since $e \\approx 2.718 < 3$ |
 
@@ -109,7 +109,7 @@ $$\\lim_{x \\to \\infty} \\frac{x^3 + 2x}{x^2 + 1} = \\lim_{x \\to \\infty} \\fr
 3. **Use growth rate hierarchy:**
 $$\\lim_{x \\to \\infty} \\frac{e^x + x^3}{3e^x - x} = \\lim_{x \\to \\infty} \\frac{e^x(1 + x^3/e^x)}{e^x(3 - x/e^x)} = \\frac{1+0}{3-0} = \\frac{1}{3}$$
 
-> **AP Tip:** You generally won't need L'Hôpital's Rule on the AB exam. The algebraic techniques above handle all standard $\\frac{\\infty}{\\infty}$ problems.`
+> **AP Tip:** L'Hospital's Rule (Topic 4.7) is also fair game on the AB exam for $\\frac{\\infty}{\\infty}$ forms such as $\\lim_{x \\to \\infty} \\frac{\\ln x}{x}$. For rational and exponential-over-exponential expressions, the algebraic techniques above are usually faster.`
     },
     {
       id: 'lai4-calculation-drill',

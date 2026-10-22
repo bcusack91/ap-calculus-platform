@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import { faqJsonLd } from '@/lib/jsonld'
 import type { TopicHub } from '@/data/topic-hubs'
+import { visibleTopics } from '@/lib/course-hub-sections'
 
 /**
  * The lessons a topic hub actually covers, rendered server-side.
@@ -31,9 +32,12 @@ export default async function HubTopics({ hub }: { hub: TopicHub }) {
     .catch(() => [])
 
   // Keep the authored order so a multi-category unit reads in teaching order.
+  // Legacy (308) and retired topic rows are never listed.
   const ordered = hub.categorySlugs
     .map((slug) => categories.find((c) => c.slug === slug))
-    .filter((c): c is (typeof categories)[number] => Boolean(c) && c!.topics.length > 0)
+    .filter((c): c is (typeof categories)[number] => Boolean(c))
+    .map((c) => ({ ...c, topics: visibleTopics(c.topics) }))
+    .filter((c) => c.topics.length > 0)
 
   if (ordered.length === 0) return null
 

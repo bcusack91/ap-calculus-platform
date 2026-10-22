@@ -12,7 +12,7 @@ export const calcbcMotionPart5Data = {
 
 | Type | What they ask | What you need |
 |------|-------------|---------------|
-| **Velocity/Speed** | "Find the velocity vector" or "speed at $t = 2$" | $\\vec{v} = \\langle x', y' \\rangle$, speed $= |\\vec{v}|$ |
+| **Velocity/Speed** | "Find the velocity vector" or "speed at $t = 2$" | $\\vec{v} = \\langle x', y' \\rangle$, speed $= \\lvert \\vec{v}\\rvert$ |
 | **Distance** | "Total distance traveled on $[a,b]$" | $\\int_a^b \\sqrt{(x')^2 + (y')^2}\\,dt$ |
 | **Position** | "Find position at $t = 5$ given initial position" | $x(5) = x(0) + \\int_0^5 x'\\,dt$ |
 | **Tangent line** | "Equation of tangent at $t = t_0$" | Point + slope $y'/x'$ |

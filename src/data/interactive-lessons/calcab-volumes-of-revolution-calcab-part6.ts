@@ -40,7 +40,7 @@ $R = 3$ (from $y=0$), $r = 3-\\sqrt{x}$.
 
 $$V = \\pi\\int_0^4\\left[9-(3-\\sqrt{x})^2\\right]dx$$
 
-> **AP Tip:** For "write but do not evaluate," show the integral with correct limits and integrand. Do NOT expand or simplify \u2014 this earns full credit and avoids algebra errors.`
+> **AP Tip:** For "write but do not evaluate," show the integral with correct limits and integrand (and the constant $\\pi$ if it belongs). You need not expand or simplify, which also avoids algebra errors.`
     },
     {
       id: 'vol6-quiz1',
@@ -64,7 +64,7 @@ $$V = \\pi\\int_0^4\\left[9-(3-\\sqrt{x})^2\\right]dx$$
             question: '"Write but do not evaluate" on the AP exam means:',
             options: ['A complete definite integral, unevaluated', 'A description of the method in words', 'The final value from a calculator', 'The antiderivative, before the bounds'],
             correctAnswer: 0,
-            explanation: 'Set up the definite integral completely, with integrand and bounds, and stop there. Do not simplify or evaluate. A correct integral earns full credit; a description in words, a number, or an antiderivative alone does not.'
+            explanation: 'Set up the definite integral completely, with integrand and bounds, and stop there. You need not simplify it, and you do not evaluate it. A correct integral earns the credit; a description in words, a number, or an antiderivative alone does not.'
           }
         ]
       }
@@ -90,11 +90,11 @@ $$V = \\pi\\int_0^4\\left[9-(3-\\sqrt{x})^2\\right]dx$$
             explanation: 'Each curve is 1 unit farther from $y=-1$ than from $y=0$.'
           },
           {
-            label: 'On a cross-section FRQ, the most common error is:',
-            options: ['Using the wrong area formula', 'Forgetting to square the side length', 'Using the wrong limits of integration', 'Rounding too early in the calculation'],
-            correctAnswers: ['Using the wrong area formula'],
-            hints: ['Students often confuse semicircle diameter/radius or equilateral triangle height.'],
-            explanation: 'Using the wrong area formula for the cross-section shape is the most common error. Knowing the 5 cross-section formulas cold prevents it.'
+            label: 'Cross sections are semicircles whose diameter, of length $s$, lies in the base. Each slice has area:',
+            options: ['$\\frac{\\pi}{8}s^2$', '$\\frac{\\pi}{2}s^2$', '$\\frac{\\pi}{4}s^2$', '$\\pi s^2$'],
+            correctAnswers: ['$\\frac{\\pi}{8}s^2$'],
+            hints: ['The radius is half the diameter, and a semicircle is half a disk.'],
+            explanation: 'The radius is $\\frac{s}{2}$, so the area is $\\frac{1}{2}\\pi\\left(\\frac{s}{2}\\right)^2 = \\frac{\\pi}{8}s^2$. Using $s$ as the radius gives $\\frac{\\pi}{2}s^2$, $\\frac{\\pi}{4}s^2$ is a full disk of diameter $s$, and $\\pi s^2$ is a full disk of radius $s$.'
           }
         ]
       }
@@ -104,17 +104,16 @@ $$V = \\pi\\int_0^4\\left[9-(3-\\sqrt{x})^2\\right]dx$$
       type: 'input-box' as const,
       content: '**AP Challenge.** \u270d\ufe0f',
       exercise: {
-        question: 'Base: circle $x^2+y^2 = 16$. Squares $\\perp$ to $x$-axis. Volume $= \\frac{a}{b}$ (lowest terms). Find $a+b$.\n\n(Enter an integer.)',
-        correctAnswer: '1027',
-        acceptableAnswers: ['1027'],
+        question: 'The base is the disk $x^2+y^2 \\le 16$. Cross sections perpendicular to the $x$-axis are squares. Find the volume. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '1024/3',
+        acceptableAnswers: ['1024/3', '341.333'],
         hints: [
           'Side $= 2\\sqrt{16-x^2}$.',
           '$A = (2\\sqrt{16-x^2})^2 = 4(16-x^2)$.',
           '$V = \\int_{-4}^4 4(16-x^2)\\,dx = 8\\int_0^4(16-x^2)\\,dx$.',
-          '$= 8[16x-\\frac{x^3}{3}]_0^4 = 8(64-\\frac{64}{3}) = 8 \\cdot \\frac{128}{3} = \\frac{1024}{3}$.',
-          '$a=1024, b=3$.'
+          '$= 8[16x-\\frac{x^3}{3}]_0^4 = 8(64-\\frac{64}{3}) = 8 \\cdot \\frac{128}{3} = \\frac{1024}{3}$.'
         ],
-        explanation: '$V = \\frac{1024}{3}$. $a+b = 1024+3 = 1027$.'
+        explanation: '$A = (2\\sqrt{16-x^2})^2 = 4(16-x^2)$, so $V = \\int_{-4}^4 4(16-x^2)\\,dx = \\frac{1024}{3} \\approx 341.333$.'
       }
     },
     {
@@ -123,7 +122,7 @@ $$V = \\pi\\int_0^4\\left[9-(3-\\sqrt{x})^2\\right]dx$$
       content: `### Key Takeaways \u2014 Part 6
 
 - AP FRQs combine area, cross-section, and revolution in one problem
-- "Write but do not evaluate" = set up only, do not simplify
+- "Write but do not evaluate" = set up only; you need not simplify
 - Know cross-section formulas by heart
 - Check: does region touch the axis? (disk vs washer)`
     }

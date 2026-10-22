@@ -8,7 +8,9 @@ export const calcbcLogisticPart2Data = {
 
 **Part 2 of 7 — Separation of Variables and Partial Fractions**
 
-### Derivation of the Solution
+> **Scope note:** The AP exam asks you to interpret a logistic differential equation (carrying capacity, fastest growth, concavity, limits) **without solving it** (CED 7.9). The derivation below is optional enrichment: it shows where the formula comes from and practices partial fractions. If an AP question needs the explicit solution, it gives it to you.
+
+### Where the Formula Comes From (Optional)
 
 To solve $\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{L}\\right)$:
 
@@ -88,7 +90,7 @@ $$P(t) = \\frac{300}{1 + 5e^{-3t}}$$
     {
       id: 'log2-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Solve the Logistic Equation**\n\n$dP/dt = 2P(1 - P/100)$, $P(0) = 10$',
+      content: '**Optional: Using the Explicit Solution**\n\n$dP/dt = 2P(1 - P/100)$, $P(0) = 10$',
       exercise: {
         dropdowns: [
           {
@@ -125,10 +127,10 @@ $$P(t) = \\frac{300}{1 + 5e^{-3t}}$$
       type: 'text' as const,
       content: `### Summary
 
-- Solve logistic DE via separation of variables + partial fractions
-- Solution: $P(t) = L/(1 + Ae^{-kt})$
 - Recognize non-standard forms: factor to identify $k$ and $L$
 - $dP/dt = aP - bP^2$ → $k = a$, $L = a/b$
+- Optional: separation of variables and partial fractions give $P(t) = L/(1 + Ae^{-kt})$
+- On the AP exam you interpret the logistic equation; you are not asked to derive its solution
 
 > **Next:** Part 3 — Logistic Curve Analysis and Inflection Points.`
     }

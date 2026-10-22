@@ -1,5 +1,5 @@
 import { calcABQuestionPool } from '@/data/exit-quizzes/ap-calculus-ab'
-import { assignUnits, type CourseUnitTestConfig, type UnitAssignment, type UnitDef } from '@/lib/unit-tests/engine'
+import { assignUnits, isDroppedByAssignment, type CourseUnitTestConfig, type UnitAssignment, type UnitDef } from '@/lib/unit-tests/engine'
 
 /**
  * The 8 units of the AP Calculus AB CED.
@@ -24,6 +24,8 @@ export const CALC_AB_UNIT_ASSIGNMENT: UnitAssignment = {
     'related-rates-calcab': 'applications-derivatives',
     'particle-motion-calcab': 'applications-derivatives',
     'linearization-differentials-calcab': 'applications-derivatives',
+    // CED 4.7 L'Hospital's Rule (AB topic, promoted Oct 2026).
+    'lhopitals-rule': 'applications-derivatives',
     'theorem-applications-calcab': 'analytical-applications',
     'concavity-inflection-points-calcab': 'analytical-applications',
     'optimization-calcab': 'analytical-applications',
@@ -73,6 +75,12 @@ export const CALC_AB_UNIT_ASSIGNMENT: UnitAssignment = {
     'An FRQ gives $\\dfrac{dy}{dx} = 2xy$': 'diffeq',
     'Region $R$ is bounded by $y = x^2$ and $y = 2x$': 'applications-integration',
     'For the region between $y = x^2$ and $y = 4$': 'applications-integration',
+    // exam-prep hard items (calc-final wave, Oct 2026)
+    'Water flows into a tank at $R(t)$ and out at $D(t)$ gallons': 'applications-integration',
+    'An FRQ gives a water temperature $W(t)$': 'applications-integration',
+    'If $\\int_1^4 f(x)\\,dx = 6$, what is $\\displaystyle\\int_0^1 f(3x + 1)': 'integration',
+    'What is the particular solution of $\\dfrac{dy}{dx} = \\dfrac{x}{y}$': 'diffeq',
+    'A differentiable function $f$ has $f\'(x) = (x - 1)^2(x - 3)$': 'analytical-applications',
     // exam-prep: ap-exam-review-calcab
     'Which reference material does the AP Calculus exam provide': null,
     'When the AP exam allows a calculator, you may': null,
@@ -92,11 +100,19 @@ export const CALC_AB_UNIT_ASSIGNMENT: UnitAssignment = {
   },
 }
 
+/**
+ * Items about the AP exam itself (null stem rules above). The v1 diagnostic
+ * leaves them out too, so a form never spends a slot on exam trivia.
+ */
+export function isCalcAbExamTrivia(question: string): boolean {
+  return isDroppedByAssignment(question, CALC_AB_UNIT_ASSIGNMENT)
+}
+
 export const AP_CALCULUS_AB_UNITS: UnitDef[] = [
   { id: 'limits', unitNumber: 1, name: 'Unit 1: Limits and Continuity', shortName: 'Limits', description: 'Limits from graphs, tables, and algebra; squeeze theorem; asymptotes; continuity and the IVT.', topicSlugs: ['limits-continuity-calcab', 'what-is-a-limit', 'continuity-introduction'], exam_weight: '10–12%', color: 'from-blue-500 to-cyan-500', icon: '📐' },
   { id: 'differentiation', unitNumber: 2, name: 'Unit 2: Differentiation: Definition and Fundamental Properties', shortName: 'Derivative Basics', description: 'The limit definition, differentiability, and the power, product, quotient, trig, exponential, and log rules.', topicSlugs: ['definition-of-derivative-calcab', 'basic-differentiation-rules-calcab', 'derivatives-exp-log-calcab'], exam_weight: '10–12%', color: 'from-indigo-500 to-purple-500', icon: '∂' },
   { id: 'differentiation-composite', unitNumber: 3, name: 'Unit 3: Differentiation: Composite, Implicit, and Inverse Functions', shortName: 'Chain & Implicit', description: 'The chain rule, implicit differentiation, inverse and inverse trig derivatives, and higher-order derivatives.', topicSlugs: ['chain-rule-calcab', 'implicit-differentiation-calcab', 'inverse-functions-derivatives-calcab'], exam_weight: '9–13%', color: 'from-violet-500 to-fuchsia-500', icon: '🔗' },
-  { id: 'applications-derivatives', unitNumber: 4, name: 'Unit 4: Contextual Applications of Differentiation', shortName: 'Rates in Context', description: 'Derivatives in context, straight-line motion, related rates, local linearity, and L’Hospital’s rule.', topicSlugs: ['related-rates-calcab', 'particle-motion-calcab', 'linearization-differentials-calcab'], exam_weight: '10–15%', color: 'from-purple-500 to-pink-500', icon: '🚗' },
+  { id: 'applications-derivatives', unitNumber: 4, name: 'Unit 4: Contextual Applications of Differentiation', shortName: 'Rates in Context', description: 'Derivatives in context, straight-line motion, related rates, local linearity, and L’Hospital’s rule.', topicSlugs: ['related-rates-calcab', 'particle-motion-calcab', 'linearization-differentials-calcab', 'lhopitals-rule'], exam_weight: '10–15%', color: 'from-purple-500 to-pink-500', icon: '🚗' },
   { id: 'analytical-applications', unitNumber: 5, name: 'Unit 5: Analytical Applications of Differentiation', shortName: 'Curve Analysis', description: 'The MVT and EVT, increasing and decreasing intervals, extrema, concavity, curve sketching, and optimization.', topicSlugs: ['theorem-applications-calcab', 'applications-of-derivatives-calcab', 'concavity-inflection-points-calcab', 'optimization-calcab'], exam_weight: '15–18%', color: 'from-fuchsia-500 to-rose-500', icon: '📈' },
   { id: 'integration', unitNumber: 6, name: 'Unit 6: Integration and Accumulation of Change', shortName: 'Integration', description: 'Riemann and trapezoidal sums, accumulation functions, both parts of the FTC, antiderivatives, and u-substitution.', topicSlugs: ['definite-integrals-calcab', 'accumulation-functions-calcab', 'antiderivatives-indefinite-integrals-calcab', 'u-substitution-calcab'], exam_weight: '17–20%', color: 'from-emerald-500 to-teal-500', icon: '∫' },
   { id: 'diffeq', unitNumber: 7, name: 'Unit 7: Differential Equations', shortName: 'Differential Equations', description: 'Modeling with differential equations, slope fields, separation of variables, and exponential growth and decay.', topicSlugs: ['differential-equations-calcab', 'exponential-models-calcab'], exam_weight: '6–12%', color: 'from-amber-500 to-orange-500', icon: '🌀' },

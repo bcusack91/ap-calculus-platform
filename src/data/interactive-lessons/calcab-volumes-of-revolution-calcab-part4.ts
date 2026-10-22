@@ -102,16 +102,16 @@ $$V = \\int_0^4 x\\,dx = \\left[\\frac{x^2}{2}\\right]_0^4 = \\boxed{8}$$
       type: 'input-box' as const,
       content: '**Calculate.** \u270d\ufe0f',
       exercise: {
-        question: 'Base between $y = 1-x^2$ and $y = 0$. Square cross-sections $\\perp$ to $x$-axis. Volume $= \\frac{a}{b}$ (lowest terms). Find $a+b$.\n\n(Enter an integer.)',
-        correctAnswer: '31',
-        acceptableAnswers: ['31'],
+        question: 'The base is the region between $y = 1-x^2$ and $y = 0$. Cross sections perpendicular to the $x$-axis are squares. Find the volume. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '16/15',
+        acceptableAnswers: ['16/15', '1.067', '1.066'],
         hints: [
           'Intersect: $1-x^2=0$ at $x=\\pm 1$. Side $= 1-x^2$.',
           '$V = \\int_{-1}^1(1-x^2)^2\\,dx = 2\\int_0^1(1-2x^2+x^4)\\,dx$.',
           '$= 2[x-\\frac{2x^3}{3}+\\frac{x^5}{5}]_0^1 = 2(1-\\frac{2}{3}+\\frac{1}{5})$.',
-          '$= 2 \\cdot \\frac{8}{15} = \\frac{16}{15}$. $a=16, b=15$.'
+          '$= 2 \\cdot \\frac{8}{15} = \\frac{16}{15}$.'
         ],
-        explanation: '$V = \\frac{16}{15}$. $a=16$, $b=15$, so $a+b = 31$.'
+        explanation: '$V = \\int_{-1}^1(1-x^2)^2\\,dx = \\frac{16}{15}$.'
       }
     },
     {

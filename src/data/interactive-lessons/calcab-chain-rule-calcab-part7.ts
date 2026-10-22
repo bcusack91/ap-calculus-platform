@@ -18,16 +18,13 @@ $$\\boxed{\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)}$$
 | Nested (3+ layers) | Repeated Chain Rule | Multiply ALL layer derivatives |
 | Implicit ($y$ as fn of $x$) | Implicit Differentiation | Attach $\\frac{dy}{dx}$ to every $y$ term |
 | Rates changing w.r.t. time | Related Rates | Differentiate w.r.t. $t$ |
-| $f(x)^{g(x)}$ | Log Differentiation | $\\ln$ both sides → implicit diff |
 | $\\arcsin(u)$, $\\arctan(u)$ | Inverse Trig + Chain | Standard formula $\\times u'$ |
-| FTC Part 1 | FTC + Chain | $f(g(x)) \\cdot g'(x)$ |
 
 ### AP Exam Frequency
 
-> **Key Fact:** The Chain Rule appears in ~80% of all derivative problems on the AP exam. It is embedded in:
+> **Key Fact:** The Chain Rule appears in most derivative problems on the AP exam. It is embedded in:
 > - All implicit differentiation problems
 > - All related rates problems
-> - FTC Part 1 with variable upper limit
 > - Most trig, exponential, and logarithmic derivatives`
     },
     {
@@ -112,36 +109,17 @@ $$\\boxed{\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)}$$
       }
     },
     {
-      id: 'chain7-ftc',
-      type: 'text' as const,
-      content: `### FTC Part 1 + Chain Rule
-
-This is one of the most important AP Calculus formulas:
-
-$$\\boxed{\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)}$$
-
-**Example 1:** $\\frac{d}{dx}\\int_0^{x^2} \\sin(t)\\,dt = \\sin(x^2) \\cdot 2x = 2x\\sin(x^2)$
-
-**Example 2:** $\\frac{d}{dx}\\int_1^{e^x} \\frac{1}{t}\\,dt = \\frac{1}{e^x} \\cdot e^x = 1$
-
-**Example 3:** Both limits variable:
-
-$$\\frac{d}{dx}\\int_{x}^{x^2} t^3\\,dt = (x^2)^3 \\cdot 2x - x^3 \\cdot 1 = 2x^7 - x^3$$
-
-> **AP Tip:** FTC + Chain Rule appears on nearly every AP exam. The key is: "plug in the upper limit for $t$, then multiply by the derivative of that upper limit."`
-    },
-    {
       id: 'chain7-dropdown',
       type: 'dropdown-select' as const,
       content: '**Final Matching** 🔍\n\nSelect the correct derivative.',
       exercise: {
         dropdowns: [
           {
-            label: '$\\frac{d}{dx}\\int_0^{3x} \\cos(t)\\,dt$',
-            options: ['$\\cos(3x)$', '$3\\cos(3x)$', '$\\sin(3x)$', '$3\\sin(3x)$'],
-            correctAnswers: ['$3\\cos(3x)$'],
-            hints: ['FTC + Chain Rule: plug in $3x$ for $t$, multiply by $(3x)\' = 3$.'],
-            explanation: '$\\cos(3x) \\cdot 3 = 3\\cos(3x)$.'
+            label: '$\\frac{d}{dx}[(3x^2+1)^4]$',
+            options: ['$24x(3x^2+1)^3$', '$4(3x^2+1)^3$', '$6x(3x^2+1)^3$', '$24x^3$'],
+            correctAnswers: ['$24x(3x^2+1)^3$'],
+            hints: ['Outside: $4(\\ldots)^3$. Inside derivative: $(3x^2+1)\' = 6x$.'],
+            explanation: '$4(3x^2+1)^3 \\cdot 6x = 24x(3x^2+1)^3$. Forgetting the inner derivative gives $4(3x^2+1)^3$, and $24x^3$ differentiates each piece separately.'
           },
           {
             label: '$\\frac{d}{dx}[\\arctan(x^2)]$',
@@ -187,9 +165,7 @@ $$\\frac{d}{dx}\\int_{x}^{x^2} t^3\\,dt = (x^2)^3 \\cdot 2x - x^3 \\cdot 1 = 2x^
 | Nested Functions | Multiply all layer derivatives |
 | Implicit Differentiation | Attach $\\frac{dy}{dx}$ to $y$ terms |
 | Related Rates | Differentiate w.r.t. $t$ |
-| Log Differentiation | $\\ln$ both sides for $f(x)^{g(x)}$ |
 | Inverse Trig + Chain | Standard formulas $\\times u'$ |
-| FTC + Chain Rule | $f(g(x)) \\cdot g'(x)$ |
 | Table-Based Problems | Look up $g(a)$, then $f'(g(a))$ |
 
 **The Chain Rule is the single most important differentiation technique. You are now ready to tackle any derivative problem on the AP exam!**`

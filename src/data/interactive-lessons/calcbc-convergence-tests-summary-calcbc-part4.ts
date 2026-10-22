@@ -4,63 +4,52 @@ export const calcbcConvergencePart4Data = {
     {
       id: 'ct4-intro',
       type: 'text' as const,
-      content: `# Absolute vs. Conditional Convergence
+      content: `# Classifying a Series: The Two-Check Write-Up
 
 **Part 4 of 7 — Three Categories**
 
-### Convergence Classification
-
-Every series falls into exactly one category:
+The definitions are taught in Infinite Series, Part 4. This part turns them into a write-up for any "absolutely convergent, conditionally convergent, or divergent?" question.
 
 | Category | Definition | Example |
 |----------|-----------|---------|
-| Absolutely convergent | $\\sum |a_n|$ converges | $\\sum (-1)^n/n^2$ |
-| Conditionally convergent | $\\sum a_n$ converges but $\\sum |a_n|$ diverges | $\\sum (-1)^n/n$ |
+| Absolutely convergent | $\\sum \\lvert a_n\\rvert$ converges | $\\sum (-1)^n/n^2$ |
+| Conditionally convergent | $\\sum a_n$ converges but $\\sum \\lvert a_n\\rvert$ diverges | $\\sum (-1)^n/n$ |
 | Divergent | $\\sum a_n$ diverges | $\\sum 1/n$ |
-
-### The Hierarchy
 
 $$\\boxed{\\text{Absolute convergence} \\Rightarrow \\text{Convergence}}$$
 
-The converse is FALSE: convergence does NOT imply absolute convergence.
+The converse is FALSE: a series can converge without converging absolutely.
 
-### Testing Procedure
+### The Two Checks
 
-**Step 1:** Check $\\sum |a_n|$.
-- If it converges → **absolutely convergent** (done!)
+**Check 1: the absolute-value series.** Test $\\sum |a_n|$ with a $p$-series, comparison, Ratio, or Integral Test.
+- If it converges, the series is **absolutely convergent**. Stop.
 
-**Step 2:** If $\\sum |a_n|$ diverges, check $\\sum a_n$.
-- If $\\sum a_n$ converges (usually by AST) → **conditionally convergent**
-- If $\\sum a_n$ diverges → **divergent**
+**Check 2: the series itself**, usually by the Alternating Series Test. State all three conditions: $b_n > 0$, $b_{n+1} \\le b_n$, and $\\lim b_n = 0$.
+- If it converges, the series is **conditionally convergent**.
+- If $\\lim a_n \\neq 0$, the series **diverges** by the $n$th term test.
 
-> **Key Fact:** "Absolute convergence" means you can rearrange the terms in any order and still get the same sum. Conditionally convergent series can be rearranged to sum to ANY value (Riemann's rearrangement theorem).`
+> **Key Fact:** The AST never proves absolute convergence, and "$\\sum |a_n|$ diverges" never proves divergence. Unless Check 1 already gives absolute convergence, a classification needs both checks.`
     },
     {
       id: 'ct4-examples',
       type: 'text' as const,
-      content: `### Example 1: $\\sum_{n=1}^{\\infty} \\frac{(-1)^n}{n^3}$
+      content: `### Model Write-Up: $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$
 
-$\\sum |a_n| = \\sum 1/n^3$. $p$-Series, $p = 3 > 1$ → converges.
+**Check 1.** $\\sum |a_n| = \\sum \\frac{1}{n}$ is the harmonic series, which diverges, so the series is not absolutely convergent.
 
-**Absolutely convergent.**
+**Check 2.** With $b_n = \\frac{1}{n}$: $b_n > 0$; $b_{n+1} = \\frac{1}{n+1} < \\frac{1}{n} = b_n$; and $\\lim_{n \\to \\infty} b_n = 0$. The series converges by the Alternating Series Test.
 
-### Example 2: $\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$ (alternating harmonic)
+**Conclusion.** The series is **conditionally convergent**.
 
-$\\sum |a_n| = \\sum 1/n$ → diverges (harmonic).
+### Shorter Cases
 
-$\\sum a_n = \\sum (-1)^{n+1}/n$ → converges by AST.
-
-**Conditionally convergent.**
-
-### Example 3: $\\sum_{n=1}^{\\infty} \\frac{(-1)^n n}{n+1}$
-
-$\\lim |a_n| = \\lim n/(n+1) = 1 \\neq 0$.
-
-**Divergent** (by Divergence Test — doesn't even converge).
+- $\\sum \\frac{(-1)^n}{n^3}$: Check 1 gives $\\sum \\frac{1}{n^3}$, a $p$-series with $p = 3 > 1$, which converges. **Absolutely convergent**; no Check 2 needed.
+- $\\sum \\frac{(-1)^n n}{n+1}$: $\\lim |a_n| = \\lim \\frac{n}{n+1} = 1 \\neq 0$. **Divergent** by the $n$th term test.
 
 ### Quick Classification Guide
 
-| Series | $\\sum|a_n|$ | $\\sum a_n$ | Classification |
+| Series | $\\sum\\lvert a_n\\rvert$ | $\\sum a_n$ | Classification |
 |--------|-----------|----------|---------------|
 | $\\sum (-1)^n/n^2$ | Conv ($p = 2$) | Conv | Absolute |
 | $\\sum (-1)^n/n$ | Div (harmonic) | Conv (AST) | Conditional |
@@ -134,12 +123,13 @@ $\\lim |a_n| = \\lim n/(n+1) = 1 \\neq 0$.
       type: 'text' as const,
       content: `### Summary
 
-- Three categories: absolute, conditional, divergent
-- Check $\\sum |a_n|$ first; if it converges, done (absolute)
-- If $\\sum |a_n|$ diverges but $\\sum a_n$ converges → conditional
-- Absolute ⇒ convergent, but not vice versa
+- Check 1: test $\\sum |a_n|$; if it converges, the series is absolutely convergent
+- Check 2: test $\\sum a_n$ itself, usually with all three AST conditions stated
+- Converges but not absolutely → conditionally convergent
+- $\\lim a_n \\neq 0$ → divergent by the $n$th term test
+- Absolute ⇒ convergent, but not the other way around
 
-> **Next:** Part 5 — The Hardest AP Problems.`
+> **Next:** Part 5 — Test Selection Under Pressure.`
     }
   ]
 };

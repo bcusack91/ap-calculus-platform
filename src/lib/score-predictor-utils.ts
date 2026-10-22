@@ -4,6 +4,7 @@
  */
 
 import { prisma } from '@/lib/prisma'
+import { courseTopicWhere } from '@/lib/course-includes'
 import { unstable_cache } from 'next/cache'
 import { sectionScaledScore } from '@/lib/mcat-scoring'
 import { actSectionScaled } from '@/lib/act-scoring'
@@ -145,11 +146,11 @@ export async function gatherSubjectData(
           select: { topicSlug: true, score: true, totalQuestions: true, passed: true, completedAt: true },
         }),
         prisma.topicProgress.findMany({
-          where: { userId, topic: { category: { course: { slug: courseSlugPattern } } } },
+          where: { userId, topic: courseTopicWhere(courseSlugPattern) },
           select: { status: true, topic: { select: { slug: true } } },
         }),
         prisma.topic.findMany({
-          where: { category: { course: { slug: courseSlugPattern } } },
+          where: courseTopicWhere(courseSlugPattern),
           select: { slug: true, category: { select: { slug: true } } },
         }),
         diagnosticCategory

@@ -27,7 +27,7 @@ This appears on virtually EVERY BC exam. The typical structure:
 | A known function ($e^x$, $\\sin x$, etc.) | Write the known series directly |
 | A composition/product | Manipulate known series |
 | An unfamiliar function | Compute derivatives at center |
-| Given as a DE solution | Match coefficients |
+| Given as a DE solution | Compute $f(0), f'(0), f''(0), \\ldots$ from the DE |
 
 > **AP Tip:** "General term" means write $\\sum$ notation with $n$. This is where students lose the most points — verify your general term by checking it produces the first few terms correctly.`
     },

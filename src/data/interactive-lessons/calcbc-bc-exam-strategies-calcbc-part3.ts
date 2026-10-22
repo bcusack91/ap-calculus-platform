@@ -48,7 +48,7 @@ If you show the setup AND get the wrong numerical answer:
 **DON'T:**
 - Write $\\frac{dy}{dx} = \\frac{\\text{top}}{\\text{bottom}}$ — use $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$
 - Use calculator syntax like nDeriv or fnInt
-- Cross out work unless you're replacing it (readers look at crossed-out work)
+- Cross out work you want scored: crossed-out work is not scored
 - Write contradictory statements (you get the WORSE of the two scores)
 
 > **AP Tip:** If you write two different answers for the same part, the reader scores the WORSE one. Cross out work you don't want scored.`

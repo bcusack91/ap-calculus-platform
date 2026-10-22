@@ -78,10 +78,10 @@ $$\\int x^3\\cos x\\,dx = x^3\\sin x + 3x^2\\cos x - 6x\\sin x - 6\\cos x + C$$
             explanation: 'Each integration of $e^{2x}$ divides by 2: $\\frac{e^{2x}}{2}, \\frac{e^{2x}}{4}, \\frac{e^{2x}}{8}, \\frac{e^{2x}}{16}$. Multiplying diagonally with alternating signs: $x^3 \\cdot \\frac{1}{2} - 3x^2 \\cdot \\frac{1}{4} + 6x \\cdot \\frac{1}{8} - 6 \\cdot \\frac{1}{16} = \\frac{x^3}{2} - \\frac{3x^2}{4} + \\frac{3x}{4} - \\frac{3}{8}$. Multiplying by 2 (differentiating $e^{2x}$ instead of integrating), dividing by 2 only once, or treating $e^{2x}$ like $e^x$ gives the other expressions.'
           },
           {
-            question: 'How many rows does the tabular method need for $\\int x^4 \\sin x\\,dx$?',
-            options: ['5 rows', '4 rows', '6 rows', '3 rows'],
+            question: 'In the tabular method for $\\int x^4 \\sin x\\,dx$, how many NONZERO entries are in the differentiate column?',
+            options: ['$5$', '$4$', '$6$', '$3$'],
             correctAnswer: 0,
-            explanation: 'A degree-$n$ polynomial needs $n+1$ rows (differentiating until 0): $x^4, 4x^3, 12x^2, 24x, 24, 0$. That\u2019s 5 differentiation rows plus the terminal 0.'
+            explanation: 'Differentiate until you reach $0$: $x^4, 4x^3, 12x^2, 24x, 24$, then $0$. A degree-$n$ polynomial gives $n + 1 = 5$ nonzero entries, so the answer has 5 terms. Counting the final $0$ gives 6, and stopping at the degree gives 4.'
           }
         ]
       }
@@ -114,11 +114,11 @@ $$\\int x^3\\cos x\\,dx = x^3\\sin x + 3x^2\\cos x - 6x\\sin x - 6\\cos x + C$$
       type: 'input-box' as const,
       content: '**Tabular Computation**',
       exercise: {
-        question: 'Use the tabular method to evaluate $\\int_0^1 x^2 e^x\\,dx$. The antiderivative is $e^x(x^2 - 2x + 2)$. Compute $[e^x(x^2-2x+2)]_0^1$. Give the exact answer in the form $ae - b$ where $a$ and $b$ are integers. What is $a + b$?',
-        correctAnswer: '3',
-        acceptableAnswers: ['3'],
-        hints: ['At $x=1$: $e(1-2+2) = e$. At $x=0$: $1(0-0+2) = 2$. So the answer is $e - 2$.', '$a = 1$, $b = 2$, so $a + b = 3$.'],
-        explanation: '$[e^x(x^2-2x+2)]_0^1 = e(1) - 1(2) = e - 2$. So $a = 1$, $b = 2$, and $a + b = 3$.'
+        question: 'Use the tabular method to evaluate $\\int_0^1 x^2 e^x\\,dx$. The antiderivative is $e^x(x^2 - 2x + 2)$. Give the exact value or a decimal to three places.',
+        correctAnswer: 'e-2',
+        acceptableAnswers: ['e-2', 'e - 2', '0.718', '0.7183'],
+        hints: ['At $x=1$: $e(1-2+2) = e$.', 'At $x=0$: $1(0-0+2) = 2$.'],
+        explanation: '$[e^x(x^2-2x+2)]_0^1 = e(1) - 1(2) = e - 2 \\approx 0.718$.'
       }
     },
     {

@@ -57,13 +57,13 @@ Absolute max $= 3$ (at $x = -1$ and $x = 2$). Absolute min $= -1$ (at $x = -2$ a
           },
           {
             question: 'If $f$ is continuous on $[1, 6]$, EVT guarantees:',
-            options: ['$f$ attains an absolute max and min', '$f\'(c) = 0$ at some point $c$ in $(1, 6)$', '$f$ is differentiable on all of $(1, 6)$', '$f$ is increasing or decreasing on $[1, 6]$'],
+            options: ['$f$ has an absolute max and an absolute min', '$f\'(c) = 0$ at some point $c$ in $(1, 6)$', '$f$ is differentiable on all of $(1, 6)$', '$f$ is increasing or decreasing on $[1, 6]$'],
             correctAnswer: 0,
             explanation: 'EVT: continuous on closed interval $\\Rightarrow$ absolute extrema exist.'
           },
           {
             question: '$g(x) = \\frac{1}{x}$ on $(0, 2)$. Does EVT apply?',
-            options: ['No \u2014 the interval is open', 'Yes \u2014 $g$ is continuous there', 'No — $g$ is not continuous on $(0, 2)$', 'Yes — by the Intermediate Value Theorem'],
+            options: ['No \u2014 $(0, 2)$ is not a closed interval', 'Yes \u2014 $g$ is continuous there', 'No — $g$ is not continuous on $(0, 2)$', 'Yes — by the Intermediate Value Theorem'],
             correctAnswer: 0,
             explanation: 'EVT requires a CLOSED interval $[a,b]$. $g$ is continuous on $(0,2)$, but the interval is open, and in fact $g$ has no maximum there.'
           }

@@ -14,7 +14,7 @@ export const calcbcAlternatingPart5Data = {
 |------|-------------|-----------|
 | AST verification | "Show the series converges" | State and verify all 3 conditions |
 | Error bound | "Approximate with error < ε" | Find $N$ where $b_{N+1} < \\epsilon$ |
-| Classification | "Absolutely, conditionally, or diverges?" | Test $\\sum |a_n|$, then $\\sum a_n$ |
+| Classification | "Absolutely, conditionally, or diverges?" | Test $\\sum \\lvert a_n\\rvert$, then $\\sum a_n$ |
 | Endpoint analysis | "Find interval of convergence" | Test each endpoint separately |
 | Taylor connection | "Use AST error bound for $P_n(x)$" | Identify alternating structure |
 
@@ -51,7 +51,7 @@ Must show $b_{n+1} < b_n$ or use $f'(x) < 0$. Don't just assert it.
 
 | Alternating Error | Lagrange Error |
 |------------------|---------------|
-| $|R| \\le b_{N+1}$ | $|R_n(x)| \\le \\frac{M|x-c|^{n+1}}{(n+1)!}$ |
+| $\\lvert R\\rvert \\le b_{N+1}$ | $\\lvert R_n(x)\\rvert \\le \\frac{M\\lvert x-c\\rvert^{n+1}}{(n+1)!}$ |
 | No $M$ needed | Must bound $f^{(n+1)}$ |
 | Only for alternating series | For any Taylor remainder |`
     },
@@ -62,10 +62,10 @@ Must show $b_{n+1} < b_n$ or use $f'(x) < 0$. Don't just assert it.
       exercise: {
         questions: [
           {
-            question: 'On a BC FRQ, a student writes: "The series $\\sum (-1)^n/\\sqrt{n}$ converges by AST because $1/\\sqrt{n} \\to 0$." What score does this justification earn?',
-            options: ['Partial credit — missing positivity and decreasing checks', 'Full credit — $b_n \\to 0$ is the condition that matters', 'No credit — the series diverges as a $p$-series', 'Full credit — naming the AST is what earns the point'],
+            question: 'On a BC FRQ, a student writes: "The series $\\sum (-1)^n/\\sqrt{n}$ converges by AST because $1/\\sqrt{n} \\to 0$." How is this justification scored?',
+            options: ['Not full credit — the positivity and decreasing checks are missing', 'Full credit — $b_n \\to 0$ is the condition that matters', 'No credit — the series diverges as a $p$-series', 'Full credit — naming the AST is what earns the point'],
             correctAnswer: 0,
-            explanation: 'The conclusion is correct ($\\sum 1/\\sqrt{n}$ diverges, but that only rules out absolute convergence). The student verified $b_n \\to 0$ but didn\'t explicitly state $b_n > 0$ or that $b_n$ is decreasing. Naming the test is not enough on its own. This earns partial credit — typically 1 out of 2 or 3 points.'
+            explanation: 'The conclusion is correct ($\\sum 1/\\sqrt{n}$ diverges, but that only rules out absolute convergence). The student verified $b_n \\to 0$ but didn\'t explicitly state $b_n > 0$ or that $b_n$ is decreasing. Naming the test is not enough on its own, so the justification would not earn full credit.'
           },
           {
             question: '$\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{2n+1}$ is approximated by $S_3 = 1/3 - 1/5 + 1/7$. The error is at most:',
@@ -89,7 +89,7 @@ Must show $b_{n+1} < b_n$ or use $f'(x) < 0$. Don't just assert it.
       exercise: {
         dropdowns: [
           {
-            label: 'Given $S = \\sum_{n=1}^\\infty (-1)^{n+1}/n^4$ and $S_3 \\approx 0.9459$, is $S_3$ an overestimate or underestimate?',
+            label: 'Given $S = \\sum_{n=1}^\\infty (-1)^{n+1}/n^4$ and $S_3 \\approx 0.9498$, is $S_3$ an overestimate or underestimate?',
             options: ['Overestimate', 'Underestimate', 'Exactly equal to $S$', 'Cannot tell without $S$'],
             correctAnswers: ['Overestimate'],
             hints: ['When the first term is positive and you stop after an odd number of terms, you\'ve added more than subtracted.'],

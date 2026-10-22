@@ -23,7 +23,7 @@ export const calcbcRatioRootPart5Data = {
 
 | Mistake | Correction |
 |---------|-----------|
-| Forgetting absolute value in $|a_{n+1}/a_n|$ | Always use $|\\cdot|$ |
+| Forgetting absolute value in $\\lvert a_{n+1}/a_n\\rvert$ | Always use $\\lvert \\cdot\\rvert$ |
 | Concluding convergence when $L = 1$ | $L = 1$ is **inconclusive** |
 | Not checking endpoints | Ratio Test says nothing at $x = a \\pm R$ |
 | Using Ratio Test for $p$-series | Always gives $L = 1$ — use another test |

@@ -35,9 +35,9 @@ If no finite limit exists, the sequence **diverges**.
       type: 'text' as const,
       content: `### Computing Limits of Sequences
 
-**Technique 1: Direct substitution** (polynomial/rational)
+**Technique 1: Divide by the highest power of $n$** (rational expressions)
 
-$a_n = \\frac{3n^2 + 1}{n^2 - 5} \\to \\frac{3}{1} = 3$ (divide by highest power of $n$)
+$a_n = \\frac{3n^2 + 1}{n^2 - 5} = \\frac{3 + 1/n^2}{1 - 5/n^2} \\to \\frac{3}{1} = 3$
 
 **Technique 2: Squeeze Theorem**
 
@@ -123,7 +123,7 @@ $a_n = \\frac{n!}{n^n} = \\frac{1}{n} \\cdot \\frac{2}{n} \\cdots \\frac{n}{n}$.
 - Sequence: ordered list $\\{a_n\\}$
 - Converges if $\\lim_{n \\to \\infty} a_n = L$ (finite)
 - Techniques: divide by the highest power, squeeze theorem, L'Hôpital's, factorials written as products, growth rate ordering
-- Growth rate hierarchy: $\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n$
+- Growth rate hierarchy ($p > 0$, $a > 1$): $\\ln n \\ll n^p \\ll a^n \\ll n! \\ll n^n$
 
 > **Next:** Part 2 — Decreasing terms and limits by L\'Hospital\'s Rule.`
     }

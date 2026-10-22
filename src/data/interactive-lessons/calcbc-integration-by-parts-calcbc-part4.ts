@@ -117,11 +117,11 @@ $$\\boxed{\\int_1^e (\\ln x)^2\\,dx = e - 2}$$`
       type: 'input-box' as const,
       content: '**Exact Computation**',
       exercise: {
-        question: 'Evaluate $\\int_0^{\\pi} x\\sin x\\,dx + \\int_0^1 xe^x\\,dx$. Each integral is an integer. What is the sum?',
-        correctAnswer: '4.14',
-        acceptableAnswers: ['pi + 1', '\u03C0 + 1', 'pi+1'],
+        question: 'Evaluate $\\int_0^{\\pi} x\\sin x\\,dx + \\int_0^1 xe^x\\,dx$. One integral equals $\\pi$ and the other is an integer. Give the sum as a decimal to three places.',
+        correctAnswer: '4.142',
+        acceptableAnswers: ['4.142', '4.14', 'pi + 1', '\u03C0 + 1', 'pi+1', '1 + pi', '1+pi'],
         hints: ['$\\int_0^{\\pi} x\\sin x\\,dx = \\pi$ (computed above).', '$\\int_0^1 xe^x\\,dx = 1$ (computed above).', 'Sum = $\\pi + 1$.'],
-        explanation: '$\\pi + 1 \\approx 4.14$. Both are classic definite IBP results.'
+        explanation: '$\\pi + 1 \\approx 4.142$. Both are classic definite IBP results.'
       }
     },
     {

@@ -159,7 +159,7 @@ $$\\frac{1}{x^n} = x^{-n} \\qquad \\sqrt[n]{x^m} = x^{m/n}$$
       type: 'text' as const,
       content: `### Special Derivatives to Memorize
 
-Beyond the Power Rule, these constants arise frequently:
+Beyond the Power Rule, memorize these derivatives:
 
 $$\\boxed{\\frac{d}{dx}[e^x] = e^x \\qquad \\frac{d}{dx}[\\ln x] = \\frac{1}{x}}$$
 
@@ -167,7 +167,7 @@ $$\\boxed{\\frac{d}{dx}[a^x] = a^x \\ln a \\qquad \\frac{d}{dx}[\\log_a x] = \\f
 
 | Function | Derivative | Note |
 |----------|-----------|------|
-| $e^x$ | $e^x$ | Only function equal to its derivative |
+| $e^x$ | $e^x$ | Equal to its own derivative |
 | $\\ln x$ | $\\frac{1}{x}$ | Domain: $x > 0$ |
 | $2^x$ | $2^x \\ln 2$ | General exponential pattern |
 | $10^x$ | $10^x \\ln 10$ | Common in applications |

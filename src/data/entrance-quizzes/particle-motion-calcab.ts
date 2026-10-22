@@ -1,5 +1,5 @@
 /**
- * Entrance Quiz — Particle Motion (AP Calculus AB) — 14 questions (2 per lesson part, 7 parts).
+ * Entrance Quiz — Particle Motion (AP Calculus AB) — 10 questions (2 per lesson part, 5 parts).
  * Each item is tagged with the lesson part it certifies; both right = part skipped.
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
@@ -44,90 +44,52 @@ const questions: EntranceQuizQuestion[] = [
     partNumber: 2,
     partTitle: 'Speed & Direction of Motion',
   },
-  // Part 3 — Displacement vs. Total Distance
+  // Part 3 — Motion from Graphs and Tables
   {
-    id: 'pmo-ent-3a',
-    question: 'A particle has velocity $v(t) = t^2 - 2t$ on $0 \\le t \\le 3$. What total distance does it travel?',
-    options: ['$\\frac{8}{3}$', '$0$', '$\\frac{4}{3}$', '$4$'],
+    id: 'pmo-ent-3c',
+    question: 'The graph of a particle\'s velocity $v(t)$ is the line segment from $(0, 6)$ to $(4, -2)$. What is the acceleration at $t = 1$?',
+    options: ['$-2$', '$4$', '$2$', '$-8$'],
     correctIndex: 0,
-    explanation: 'The velocity is negative on $(0, 2)$ and positive on $(2, 3)$. The distance is $\\int_0^2 (2t - t^2)\\,dt + \\int_2^3 (t^2 - 2t)\\,dt = \\frac{4}{3} + \\frac{4}{3} = \\frac{8}{3}$. The displacement $\\int_0^3 v\\,dt$ is 0.',
+    explanation: 'Acceleration is the slope of the velocity graph: $\\frac{-2 - 6}{4 - 0} = -2$. The value $4$ is the velocity $v(1)$, and $-8$ is the total change in velocity, not the rate.',
     partNumber: 3,
-    partTitle: 'Displacement vs. Total Distance',
+    partTitle: 'Motion from Graphs and Tables',
   },
   {
-    id: 'pmo-ent-3b',
-    question: 'A particle starts at $s(0) = 5$. Over $0 \\le t \\le 6$, $\\int_0^6 v(t)\\,dt = -2$ and $\\int_0^6 |v(t)|\\,dt = 10$. Where is the particle at $t = 6$?',
-    options: ['$-2$', '$3$', '$15$', '$10$'],
-    correctIndex: 1,
-    explanation: 'Position changes by the displacement, not the distance: $s(6) = 5 + (-2) = 3$. The 10 units of total distance include back-and-forth travel that cancels.',
-    partNumber: 3,
-    partTitle: 'Displacement vs. Total Distance',
-  },
-  // Part 4 — Position from Velocity
-  {
-    id: 'pmo-ent-4a',
-    question: 'A particle has velocity $v(t) = \\sqrt{t}$ and position $s(0) = 2$. Find $s(4)$.',
-    options: ['$\\frac{16}{3}$', '$4$', '$\\frac{22}{3}$', '$\\frac{9}{4}$'],
-    correctIndex: 2,
-    explanation: '$s(4) = s(0) + \\int_0^4 t^{1/2}\\,dt = 2 + \\frac{2}{3}(4)^{3/2} = 2 + \\frac{16}{3} = \\frac{22}{3}$. Leaving out the starting position gives $\\frac{16}{3}$.',
-    partNumber: 4,
-    partTitle: 'Position from Velocity',
-  },
-  {
-    id: 'pmo-ent-4b',
-    question: 'A particle has velocity $v(t) = 6\\sin(2t)$ and position $s(0) = 1$. What is $s(t)$?',
-    options: ['$s(t) = 1 - 3\\cos(2t)$', '$s(t) = 1 + 3\\cos(2t)$', '$s(t) = 12\\cos(2t) - 11$', '$s(t) = 4 - 3\\cos(2t)$'],
-    correctIndex: 3,
-    explanation: 'An antiderivative is $-3\\cos(2t) + C$. Using $s(0) = 1$: $-3 + C = 1$, so $C = 4$ and $s(t) = 4 - 3\\cos(2t)$. Writing $C = 1$ ignores that $\\cos 0 = 1$.',
-    partNumber: 4,
-    partTitle: 'Position from Velocity',
-  },
-  // Part 5 — Velocity from Acceleration
-  {
-    id: 'pmo-ent-5a',
-    question: 'A particle has acceleration $a(t) = 12 - 6t$ and initial velocity $v(0) = -9$. At what times does it change direction?',
-    options: ['$t = 1$ and $t = 3$', '$t = 2$', '$t = 0$ and $t = 4$', '$t = 3$'],
+    id: 'pmo-ent-3d',
+    question: 'A particle\'s position $s(t)$, in meters, is $2$ at $t = 0$, $11$ at $t = 3$ and $7$ at $t = 5$ seconds. Using these values, what is the best estimate of $v(4)$?',
+    options: ['$-2$ m/s', '$2$ m/s', '$1$ m/s', '$-4$ m/s'],
     correctIndex: 0,
-    explanation: '$v(t) = -9 + 12t - 3t^2 = -3(t - 1)(t - 3)$, which changes sign at both $t = 1$ and $t = 3$. The time $t = 2$ is where $a(t) = 0$, not where $v$ changes sign, and $t = 0$ and $t = 4$ come from leaving out the initial velocity $-9$.',
-    partNumber: 5,
-    partTitle: 'Velocity from Acceleration',
+    explanation: 'Use the interval that brackets $t = 4$: $\\frac{s(5) - s(3)}{5 - 3} = \\frac{7 - 11}{2} = -2$ m/s. Forgetting to divide by $2$ gives $-4$, the whole interval $[0, 5]$ gives $1$, and $2$ has the wrong sign.',
+    partNumber: 3,
+    partTitle: 'Motion from Graphs and Tables',
   },
-  {
-    id: 'pmo-ent-5b',
-    question: 'A ball is thrown upward from ground level with $a(t) = -32$ ft/s$^2$ and $v(0) = 48$ ft/s. What is its maximum height?',
-    options: ['$108$ ft', '$36$ ft', '$144$ ft', '$1.5$ ft'],
-    correctIndex: 1,
-    explanation: '$v(t) = 48 - 32t = 0$ at $t = 1.5$ s, and $s(t) = 48t - 16t^2$ gives $s(1.5) = 72 - 36 = 36$ ft. The value 1.5 is the time of the peak, not its height.',
-    partNumber: 5,
-    partTitle: 'Velocity from Acceleration',
-  },
-  // Part 6 — AP-Style Workshop
-  {
-    id: 'pmo-ent-6a',
-    question: 'A particle has velocity $v(t) = (t - 1)(t - 2)$ on $0 \\le t \\le 3$. What total distance does it travel?',
-    options: ['$\\frac{3}{2}$', '$\\frac{5}{3}$', '$\\frac{11}{6}$', '$\\frac{1}{6}$'],
-    correctIndex: 2,
-    explanation: 'Split at the zeros: $\\int_0^1 v\\,dt = \\frac{5}{6}$, $\\int_1^2 v\\,dt = -\\frac{1}{6}$, $\\int_2^3 v\\,dt = \\frac{5}{6}$. The distance is $\\frac{5}{6} + \\frac{1}{6} + \\frac{5}{6} = \\frac{11}{6}$, while the displacement is $\\frac{3}{2}$.',
-    partNumber: 6,
-    partTitle: 'AP-Style Workshop',
-  },
+  // Part 4 — AP-Style Workshop
   {
     id: 'pmo-ent-6b',
     question: 'At $t = 5$, a particle has $v(5) = -2$ and $a(5) = 3$. Which answer correctly states whether its speed is increasing or decreasing, with a valid reason?',
     options: ['Increasing, since $a(5) > 0$ means the velocity is rising', 'Decreasing, since $v(5) < 0$ means the particle moves left', 'Increasing, since $|a(5)|$ is larger than $|v(5)|$ at that time', 'Decreasing, since $v(5)$ and $a(5)$ have opposite signs'],
     correctIndex: 3,
     explanation: 'Speed decreases when velocity and acceleration have opposite signs. A positive acceleration alone does not mean speeding up, and the sign of $v$ alone gives only the direction.',
-    partNumber: 6,
+    partNumber: 4,
     partTitle: 'AP-Style Workshop',
   },
-  // Part 7 — Final Assessment
   {
-    id: 'pmo-ent-7a',
-    question: 'A particle has $a(t) = 6t - 2$, $v(0) = 1$ and $s(0) = 2$. Find $s(2)$.',
-    options: ['$8$', '$6$', '$9$', '$12$'],
+    id: 'pmo-ent-4c',
+    question: 'A particle has position $x(t) = t^3 - 12t + 1$ for $t \\ge 0$. On what interval is it moving left?',
+    options: ['$0 < t < 2$', '$t > 2$', '$-2 < t < 2$', '$0 < t < 12$'],
     correctIndex: 0,
-    explanation: '$v(t) = 3t^2 - 2t + 1$ and $s(t) = t^3 - t^2 + t + 2$, so $s(2) = 8 - 4 + 2 + 2 = 8$. Leaving out $s(0)$ gives 6, and 9 is $v(2)$.',
-    partNumber: 7,
+    explanation: '$v(t) = 3t^2 - 12 = 3(t - 2)(t + 2)$ is negative for $0 < t < 2$, so the particle moves left there. The interval $-2 < t < 2$ ignores the restriction $t \\ge 0$, and $t > 2$ is where it moves right.',
+    partNumber: 4,
+    partTitle: 'AP-Style Workshop',
+  },
+  // Part 5 — Final Assessment
+  {
+    id: 'pmo-ent-5c',
+    question: 'A particle has position $x(t) = t^3 - 3t^2 - 9t$. At $t = 2$, is its speed increasing or decreasing?',
+    options: ['Decreasing, since $v(2) < 0$ and $a(2) > 0$', 'Increasing, since $a(2) > 0$', 'Decreasing, since $v(2) < 0$', 'Increasing, since $v(2)$ and $a(2)$ agree'],
+    correctIndex: 0,
+    explanation: '$v(t) = 3t^2 - 6t - 9$ gives $v(2) = -9$, and $a(t) = 6t - 6$ gives $a(2) = 6$. Opposite signs mean the speed is decreasing. The sign of $a$ or of $v$ alone does not decide it, and the two signs do not agree.',
+    partNumber: 5,
     partTitle: 'Final Assessment',
   },
   {
@@ -136,7 +98,7 @@ const questions: EntranceQuizQuestion[] = [
     options: ['Once, at $t = 2$', 'None', 'Twice, at $t = 0$ and $t = 2$', 'Once, at $t = 5$'],
     correctIndex: 1,
     explanation: 'The particle is momentarily at rest at $t = 2$, but $v(t) \\ge 0$ on both sides, so it keeps moving right. A direction change requires $v$ to change sign.',
-    partNumber: 7,
+    partNumber: 5,
     partTitle: 'Final Assessment',
   },
 ]
@@ -149,10 +111,8 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
   return [
     { partNumber: 1, partTitle: 'Position, Velocity, Acceleration' },
     { partNumber: 2, partTitle: 'Speed & Direction of Motion' },
-    { partNumber: 3, partTitle: 'Displacement vs. Total Distance' },
-    { partNumber: 4, partTitle: 'Position from Velocity' },
-    { partNumber: 5, partTitle: 'Velocity from Acceleration' },
-    { partNumber: 6, partTitle: 'AP-Style Workshop' },
-    { partNumber: 7, partTitle: 'Final Assessment' },
+    { partNumber: 3, partTitle: 'Motion from Graphs and Tables' },
+    { partNumber: 4, partTitle: 'AP-Style Workshop' },
+    { partNumber: 5, partTitle: 'Final Assessment' },
   ]
 }

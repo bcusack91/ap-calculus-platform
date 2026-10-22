@@ -1,3 +1,5 @@
+import { pmVelocity } from '@/data/lesson-figures/calcab'
+
 export const calcabParticleMotionPart3Data = {
   topicSlug: 'particle-motion-calcab',
   sections: [
@@ -6,54 +8,80 @@ export const calcabParticleMotionPart3Data = {
       type: 'text' as const,
       content: `# Particle Motion
 
-**Part 3 of 7 \u2014 Displacement vs. Total Distance**
+**Part 3 of 5 — Motion from Graphs and Tables**
 
-### Two Different Quantities
+AP questions often give the motion as a **graph of velocity** or a **table of positions** instead of a formula. The derivative ideas from Parts 1 and 2 still decide everything.
 
-$$\\boxed{\\text{Displacement} = \\int_a^b v(t)\\,dt = s(b) - s(a)}$$
+The next screen shows the velocity graph used throughout this part.`
+    },
+    {
+      id: 'pm3-graph',
+      type: 'text' as const,
+      figure: pmVelocity,
+      content: `### Reading the Velocity Graph Above
 
-$$\\boxed{\\text{Total Distance} = \\int_a^b |v(t)|\\,dt}$$
+| What you want | What to look at | For this graph |
+|:---|:---|:---|
+| Direction | Is the graph above or below the $t$-axis? | Right on $(0, 2)$ and $(6, 8)$; left on $(2, 6)$ |
+| Direction changes | Where $v$ **changes sign** (crosses the axis) | $t = 2$ and $t = 6$ |
+| Acceleration $a(t) = v'(t)$ | The **slope** of the velocity graph | $a = -2$ on $(0, 3)$, $0$ on $(3, 5)$, $2$ on $(5, 7)$, $0$ on $(7, 8)$ |
+| Speed | The **distance** of the graph from the $t$-axis | Speed $2$ on $(3, 5)$, even though $v = -2$ there |
 
-| Quantity | Formula | Sign | Meaning |
-|:---:|:---:|:---:|:---:|
-| Displacement | $\\int_a^b v(t)\\,dt$ | Can be negative | Net change in position |
-| Total distance | $\\int_a^b |v(t)|\\,dt$ | Always $\\geq 0$ | Odometer reading |
+> **Key Fact:** At the corners $t = 3, 5, 7$ the velocity graph has no single slope, so $a(t)$ does not exist there.`
+    },
+    {
+      id: 'pm3-speed',
+      type: 'text' as const,
+      content: `### Speeding Up and Slowing Down on a Graph
 
-### Worked Example
+Speed is $|v(t)|$, the distance from the graph to the $t$-axis.
 
-> $v(t) = t^2 - 4$ on $[0, 3]$. Find displacement and total distance.
+- **Speeding up** when the graph moves **away** from the axis: on $(2, 3)$ ($v < 0$, $a < 0$) and on $(6, 7)$ ($v > 0$, $a > 0$).
+- **Slowing down** when the graph moves **toward** the axis: on $(0, 2)$ ($v > 0$, $a < 0$) and on $(5, 6)$ ($v < 0$, $a > 0$).
+- **Constant speed** where the graph is flat: $(3, 5)$ and $(7, 8)$.
 
-**Displacement:** $\\int_0^3 (t^2-4)\\,dt = \\left[\\frac{t^3}{3}-4t\\right]_0^3 = (9-12) - 0 = -3$
+This is the same sign rule as Part 2: same signs of $v$ and $a$ means speeding up.
 
-**Total distance:** $v(t) = 0$ at $t = 2$. Split at $t = 2$:
-$$\\int_0^2 |t^2-4|\\,dt + \\int_2^3 |t^2-4|\\,dt = \\int_0^2 (4-t^2)\\,dt + \\int_2^3 (t^2-4)\\,dt$$
-$$= \\left[4t - \\frac{t^3}{3}\\right]_0^2 + \\left[\\frac{t^3}{3} - 4t\\right]_2^3 = \\frac{16}{3} + \\frac{7}{3} = \\frac{23}{3}$$
+### Estimating Velocity from a Table of Positions
 
-> **AP Tip:** Displacement can be negative (particle ends left of start). Total distance is always positive. AP loves asking for both in the same problem.`
+| $t$ (seconds) | $0$ | $2$ | $5$ | $9$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $s(t)$ (meters) | $1$ | $7$ | $10$ | $4$ |
+
+Estimate $v(3.5)$ with the interval that brackets $t = 3.5$:
+
+$$v(3.5) \\approx \\frac{s(5) - s(2)}{5 - 2} = \\frac{10 - 7}{3} = 1 \\text{ meter per second}$$
+
+**Interpretation:** at $t = 3.5$ seconds the particle's position is increasing at about $1$ meter per second.
+
+> **AP Tip:** Name the units in an interpretation: position in meters, velocity in meters per second, acceleration in meters per second per second.`
     },
     {
       id: 'pm3-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Practice \u2014 Displacement & Distance** \ud83c\udfaf',
+      figure: pmVelocity,
+      content: `**Use the velocity graph** 🎯
+
+`,
       exercise: {
         questions: [
           {
-            question: '$v(t) = 3t - 6$ on $[0, 4]$. The displacement is:',
-            options: ['$0$', '$12$', '$-6$', '$24$'],
+            question: 'On which interval is the particle moving left?',
+            options: ['$(2, 6)$', '$(0, 2)$', '$(3, 5)$ only', '$(6, 8)$'],
             correctAnswer: 0,
-            explanation: '$\\int_0^4 (3t-6)dt = [3t^2/2 - 6t]_0^4 = (24-24) - 0 = 0$. The total distance is $12$, stopping at $t = 2$ gives $-6$, and dropping the $\\frac{1}{2}$ in $3t^2/2$ gives $24$.'
+            explanation: 'The particle moves left where $v(t) < 0$, which is where the graph is below the $t$-axis: $(2, 6)$. On $(0, 2)$ and $(6, 8)$ the velocity is positive, and $(3, 5)$ is only part of the leftward interval.'
           },
           {
-            question: 'Same $v(t) = 3t - 6$ on $[0, 4]$. The total distance is:',
-            options: ['$12$', '$0$', '$6$', '$-6$'],
+            question: 'What is the acceleration at $t = 1$?',
+            options: ['$-2$', '$2$', '$4$', '$0$'],
             correctAnswer: 0,
-            explanation: '$v = 0$ at $t = 2$. $\\int_0^2 (6-3t)dt + \\int_2^4 (3t-6)dt = [6t-3t^2/2]_0^2 + [3t^2/2-6t]_2^4 = (12-6) + [(24-24)-(6-12)] = 6 + 6 = 12$. Integrating $v$ without the absolute value gives the displacement $0$, and stopping after the first piece gives $6$ (or $-6$ without the sign flip).'
+            explanation: 'Acceleration is the slope of the velocity graph. On $(0, 3)$ the graph falls from $4$ to $-2$, a slope of $\\frac{-2 - 4}{3} = -2$. The height $v(1) = 2$ is the velocity, not the acceleration.'
           },
           {
-            question: 'If displacement $= 0$, the particle:',
-            options: ['Ended where it started', 'Ended at the origin, $s = 0$', 'Traveled zero total distance', 'Had zero velocity throughout'],
+            question: 'On which interval is the speed increasing?',
+            options: ['$(2, 3)$', '$(0, 2)$', '$(5, 6)$', '$(3, 5)$'],
             correctAnswer: 0,
-            explanation: 'Zero displacement means $s(b) = s(a)$ — the particle ended where it started. It need not be at the origin, and it may have moved (with nonzero velocity and positive distance) in between.'
+            explanation: 'On $(2, 3)$, $v < 0$ and $a < 0$: same signs, so the graph moves away from the axis and the speed increases. On $(0, 2)$ and $(5, 6)$ the signs differ (slowing down), and on $(3, 5)$ the speed is constant.'
           }
         ]
       }
@@ -61,29 +89,32 @@ $$= \\left[4t - \\frac{t^3}{3}\\right]_0^2 + \\left[\\frac{t^3}{3} - 4t\\right]_
     {
       id: 'pm3-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Distinguish displacement and distance.** \ud83d\udd0d',
+      figure: pmVelocity,
+      content: `**Read the same velocity graph** 🔍
+
+`,
       exercise: {
         dropdowns: [
           {
-            label: '$\\int_0^5 v(t)\\,dt = -3$ means the particle moved:',
-            options: ['3 units left of its start', '3 units of total distance traveled', '3 units right of its start', '3 units per second, leftward'],
-            correctAnswers: ['3 units left of its start'],
-            hints: ['Negative displacement = net leftward motion.'],
-            explanation: 'Displacement $= -3$: the particle ends 3 units left of its starting position. Total distance would need $\\int_0^5 |v(t)|\\,dt$.'
+            label: 'At $t = 4$, the acceleration is',
+            options: ['$0$', '$-2$', '$2$', 'undefined'],
+            correctAnswers: ['$0$'],
+            hints: ['On $(3, 5)$ the velocity graph is flat.'],
+            explanation: 'The graph is horizontal on $(3, 5)$, so its slope, the acceleration, is $0$ at $t = 4$. The particle moves left at a constant speed of $2$.'
           },
           {
-            label: 'To find total distance, you must:',
-            options: ['Split the integral where $v(t) = 0$', 'Compute $\\int_a^b v(t)\\,dt$ in one piece', 'Use $s(b) - s(a)$ for the whole interval', 'Drop every piece where $v(t)$ is negative'],
-            correctAnswers: ['Split the integral where $v(t) = 0$'],
-            hints: ['Total distance uses $|v(t)|$.'],
-            explanation: 'Split at zeros of $v(t)$ and take the absolute value of each piece, or integrate $|v(t)|$.'
+            label: 'The particle changes direction at',
+            options: ['$t = 2$ and $t = 6$', '$t = 3$ and $t = 5$', '$t = 2$ only', '$t = 7$ only'],
+            correctAnswers: ['$t = 2$ and $t = 6$'],
+            hints: ['Look for where $v$ changes sign.'],
+            explanation: '$v$ changes from positive to negative at $t = 2$ and from negative to positive at $t = 6$. The corners at $t = 3, 5, 7$ change the acceleration, not the direction.'
           },
           {
-            label: 'Displacement gives the _____, while total distance gives the _____:',
-            options: ['Net change in position; odometer reading', 'Odometer reading; net change in position', 'Final position; starting position', 'Average velocity; maximum speed'],
-            correctAnswers: ['Net change in position; odometer reading'],
-            hints: ['Think of a car trip.'],
-            explanation: 'Displacement is the net change in position (where you end relative to where you started). Total distance is what an odometer reads: every unit traveled counts, in either direction.'
+            label: 'On $(5, 6)$ the particle is',
+            options: ['slowing down', 'speeding up', 'at rest', 'moving right'],
+            correctAnswers: ['slowing down'],
+            hints: ['Compare the signs of $v$ and $a$ on $(5, 6)$.'],
+            explanation: 'On $(5, 6)$, $v < 0$ but the graph rises, so $a = 2 > 0$. Opposite signs mean the particle is slowing down as it heads toward rest at $t = 6$.'
           }
         ]
       }
@@ -91,28 +122,33 @@ $$= \\left[4t - \\frac{t^3}{3}\\right]_0^2 + \\left[\\frac{t^3}{3} - 4t\\right]_
     {
       id: 'pm3-input',
       type: 'input-box' as const,
-      content: '**Calculate total distance.** \u270d\ufe0f',
+      content: `**Estimate from a table.** ✍️
+
+| $t$ (seconds) | $0$ | $2$ | $5$ | $9$ |
+|:---:|:---:|:---:|:---:|:---:|
+| $s(t)$ (meters) | $1$ | $7$ | $10$ | $4$ |`,
       exercise: {
-        question: '$v(t) = t - 3$ on $[0, 5]$. Find the total distance traveled.\n\nIf the answer is $\\frac{a}{b}$ in lowest terms, find $a + b$.\n\n(Enter an integer.)',
-        correctAnswer: '15',
-        acceptableAnswers: ['15'],
+        question: 'Use the table to estimate $v(7)$ in meters per second. (Decimal or fraction.)',
+        correctAnswer: '-1.5',
+        acceptableAnswers: ['-1.5', '-3/2'],
         hints: [
-          '$v = 0$ at $t = 3$. Split: $[0,3]$ and $[3,5]$.',
-          '$\\int_0^3 (3-t)\\,dt = [3t - t^2/2]_0^3 = 9 - 9/2 = 9/2$.',
-          '$\\int_3^5 (t-3)\\,dt = [t^2/2 - 3t]_3^5 = (25/2-15)-(9/2-9) = -5/2+9/2 = 2$. Total $= 9/2 + 2 = 13/2$. $a+b = 15$.'
+          'Use the two table times that bracket $t = 7$: $t = 5$ and $t = 9$.',
+          '$\\frac{s(9) - s(5)}{9 - 5}$.'
         ],
-        explanation: 'Total distance $= 9/2 + 2 = 13/2$. $a + b = 13 + 2 = 15$.'
+        explanation: '$v(7) \\approx \\frac{s(9) - s(5)}{9 - 5} = \\frac{4 - 10}{4} = -1.5$ meters per second: near $t = 7$ the position is decreasing, so the particle is moving left.'
       }
     },
     {
       id: 'pm3-summary',
       type: 'text' as const,
-      content: `### Key Takeaways \u2014 Part 3
+      content: `### Key Takeaways — Part 3
 
-- Displacement $= \\int_a^b v(t)\\,dt$ (net change, can be negative)
-- Total distance $= \\int_a^b |v(t)|\\,dt$ (always positive)
-- Split the integral at points where $v(t) = 0$
-- Displacement $= 0$ means the particle returned to start`
+- On a velocity graph: sign gives direction, slope gives acceleration, distance from the axis gives speed
+- Direction changes only where $v$ changes sign
+- From a position table, estimate $v$ with the difference quotient over the bracketing interval
+- Interpret rates with units: meters per second, meters per second per second
+
+> **Up Next:** Part 4 — AP-Style Workshop.`
     }
   ]
 };

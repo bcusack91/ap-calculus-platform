@@ -89,7 +89,8 @@ describe('POST /api/onboarding — goal routing', () => {
   it('exam prep goes to the course diagnostic', async () => {
     const body = await (await post({ courseSlug: 'ap-calculus-ab', goalType: 'exam-prep' })).json()
     expect(body.destination).toBe('/calcab-diagnostic')
-    expect(body.firstTopic).toBe('limits-intro')
+    // AP Calculus AB's path follows its CED layout (src/lib/course-includes.ts), not the DB Categories.
+    expect(body.firstTopic).toBe('what-is-a-limit')
   })
 
   it('catch-up / get-ahead also start with the diagnostic when there is one', async () => {

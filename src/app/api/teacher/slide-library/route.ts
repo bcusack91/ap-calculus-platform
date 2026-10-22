@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { courseCategoryLayout, coursesIn, excludedTopicsOf } from '@/lib/course-includes'
+import { groupByLayout, visibleTopics } from '@/lib/course-hub-sections'
 import { requireTeacher } from '@/lib/teacher-auth'
 
 /**
@@ -22,29 +24,42 @@ export async function GET(req: NextRequest) {
 
   const courseSlug = req.nextUrl.searchParams.get('course')
   if (courseSlug) {
-    const [course, decks] = await Promise.all([
-      prisma.course.findUnique({
-        where: { slug: courseSlug },
-        select: {
-          name: true,
-          categories: { orderBy: { order: 'asc' }, select: { name: true, topics: { orderBy: { order: 'asc' }, select: { slug: true, title: true } } } },
-        },
+    // A course's catalog includes the courses it contains: a BC class sees the
+    // AB decks too, filed under the CED unit that teaches them
+    // (src/lib/course-includes.ts). Legacy and retired rows never show.
+    const courses = coursesIn(courseSlug)
+    const [course, included, decks] = await Promise.all([
+      prisma.course.findUnique({ where: { slug: courseSlug }, select: { name: true } }),
+      prisma.category.findMany({
+        where: { course: { slug: { in: courses } } },
+        orderBy: { order: 'asc' },
+        select: { name: true, slug: true, course: { select: { slug: true } }, topics: { orderBy: { order: 'asc' }, select: { slug: true, title: true } } },
       }),
       prisma.topicSlideDeck.findMany({
-        where: { courseSlug },
+        where: { courseSlug: { in: courses } },
         select: { topicSlug: true, slideCount: true, pollCount: true, generatedAt: true },
       }),
     ])
     if (!course) return NextResponse.json({ error: 'Course not found' }, { status: 404 })
     const deckBySlug = new Map(decks.map(d => [d.topicSlug, d]))
+    const excluded = excludedTopicsOf(courseSlug)
+    const withDeck = (t: { slug: string }) => deckBySlug.has(t.slug) && !excluded.includes(t.slug)
+    const layout = courseCategoryLayout(courseSlug)
+    const groups = layout
+      ? groupByLayout(
+          layout,
+          included.flatMap(c => c.topics.filter(withDeck).map(t => ({ ...t, categorySlug: c.slug }))),
+          t => t.categorySlug,
+        ).map(({ section, rows }) => ({ name: section.name, topics: rows }))
+      : included
+          .filter(c => c.course.slug === courseSlug)
+          .map(c => ({ name: c.name, topics: visibleTopics(c.topics).filter(withDeck) }))
     return NextResponse.json({
       courseName: course.name,
-      categories: course.categories
+      categories: groups
         .map(c => ({
           name: c.name,
-          topics: c.topics
-            .filter(t => deckBySlug.has(t.slug))
-            .map(t => ({ slug: t.slug, title: t.title, ...deckBySlug.get(t.slug)! })),
+          topics: c.topics.map(t => ({ slug: t.slug, title: t.title, ...deckBySlug.get(t.slug)! })),
         }))
         .filter(c => c.topics.length > 0),
     }, { headers: { 'Cache-Control': 'private, no-store' } })
@@ -58,7 +73,12 @@ export async function GET(req: NextRequest) {
   const nameBySlug = new Map(courses.map(c => [c.slug, c.name]))
   return NextResponse.json({
     courses: grouped
-      .map(g => ({ slug: g.courseSlug, name: nameBySlug.get(g.courseSlug) ?? g.courseSlug, deckCount: g._count._all }))
+      .map(g => ({
+        slug: g.courseSlug,
+        name: nameBySlug.get(g.courseSlug) ?? g.courseSlug,
+        // Included courses' decks are part of this course's catalog (BC lists AB's).
+        deckCount: coursesIn(g.courseSlug).reduce((n, c) => n + (grouped.find(x => x.courseSlug === c)?._count._all ?? 0), 0),
+      }))
       .sort((a, b) => a.name.localeCompare(b.name)),
   }, { headers: { 'Cache-Control': 'private, no-store' } })
 }

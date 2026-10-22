@@ -38,7 +38,7 @@ $$\\boxed{\\text{Trapezoidal: } \\sum \\frac{f(x_i)+f(x_{i+1})}{2}\\Delta x_i}$$
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | $R(t)$ (gal/hr) | $4$ | $7$ | $10$ | $6$ | $3$ |
 
-$R(t)$ is the rate of water flow. $R$ is continuous on $[0,10]$.
+$R(t)$ is the rate of water flow. $R$ is differentiable on $(0,10)$ and continuous on $[0,10]$.
 
 **(a)** Left Riemann sum for $\\int_0^{10} R(t)\\,dt$:
 

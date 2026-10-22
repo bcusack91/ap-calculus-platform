@@ -16,15 +16,16 @@ This section simulates exam conditions with mixed-topic questions covering all m
 
 ### FRQ Scoring Checklist
 
-| Criterion | Points at Stake |
-|:---|:---:|
-| Correct setup/method | 1\u20132 |
-| Correct computation | 1\u20132 |
-| Correct answer with units | 1 |
-| Justification (theorem name + verification) | 1\u20132 |
-| Interpretation in context | 1 |
+| Before you move on, check | Why |
+|:---|:---|
+| The setup is written (integral, derivative, equation) | Many points are "answer with supporting work" |
+| The answer is correct to three decimal places | Inappropriate rounding costs a point (at most one per question) |
+| Units are given if the question asks for them | A units point exists only when the question asks |
+| A justification gives the reason and checks the hypotheses | E.g. "$R$ is continuous on $[0, 10]$ and $R(0) < 5 < R(2)$", not just "by IVT" |
+| An interpretation names the quantity, units and time | "Explain the meaning" points need context |
+| Work you do not want scored is crossed out | Crossed-out work is not read |
 
-### Master Formula Sheet
+### Formulas to Know (no formula sheet is provided)
 
 | Formula | Usage |
 |:---|:---|
@@ -105,11 +106,11 @@ This section simulates exam conditions with mixed-topic questions covering all m
             explanation: 'Net change theorem: $\\int_0^8 r(t)\\,dt$ gives total water.'
           },
           {
-            label: '\u201cExplain why there must be a time $c$ where $v(c) = 0$\u201d:',
+            label: 'Velocity $v$ is continuous, with $v(1) = -2$ and $v(4) = 3$. \u201cExplain why there must be a time $c$ in $(1, 4)$ where $v(c) = 0$\u201d:',
             options: ['IVT applied to $v$', 'MVT applied to $s$', 'EVT on $[a,b]$', 'FTC'],
             correctAnswers: ['IVT applied to $v$'],
             hints: ['If $v$ changes sign, IVT guarantees it passes through 0.'],
-            explanation: 'IVT: if $v$ is continuous and changes sign, then $v(c)=0$ for some $c$.'
+            explanation: '$v$ is continuous on $[1, 4]$ and $v(1) = -2 < 0 < 3 = v(4)$, so by IVT $v(c) = 0$ for some $c$ in $(1, 4)$. MVT would need position values, which are not given.'
           },
           {
             label: '\u201cSet up but do not evaluate an integral for the volume\u201d means:',

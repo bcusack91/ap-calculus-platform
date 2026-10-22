@@ -123,15 +123,14 @@ export const calcabVolumesPart7Data = {
       type: 'input-box' as const,
       content: '**Final Challenge.** \u270d\ufe0f',
       exercise: {
-        question: 'Rotate $y = x^2$ about the $x$-axis from $x=0$ to $x=3$. Volume $= \\frac{a\\pi}{b}$ (lowest terms). Find $a+b$.\n\n(Enter an integer.)',
-        correctAnswer: '248',
-        acceptableAnswers: ['248'],
+        question: 'The region under $y = x^2$ from $x=0$ to $x=3$ is rotated about the $x$-axis. Find the volume. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '243pi/5',
+        acceptableAnswers: ['243pi/5', '243π/5', '(243/5)pi', '152.681', '152.680'],
         hints: [
           '$V = \\pi\\int_0^3 x^4\\,dx$.',
-          '$= \\pi[\\frac{x^5}{5}]_0^3 = \\frac{243\\pi}{5}$.',
-          '$a = 243$, $b = 5$.'
+          '$= \\pi[\\frac{x^5}{5}]_0^3 = \\frac{243\\pi}{5}$.'
         ],
-        explanation: '$V = \\frac{243\\pi}{5}$. $a+b = 243+5 = 248$.'
+        explanation: '$V = \\pi\\int_0^3 x^4\\,dx = \\frac{243\\pi}{5} \\approx 152.681$.'
       }
     },
     {

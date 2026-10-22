@@ -107,7 +107,7 @@ Every form above ($\\ln 2 - \\ln 7 + \\ln 6$, $\\ln\\frac{12}{7}$, ...) is the s
       exercise: {
         question: 'Evaluate $\\int_0^1 \\frac{3}{(x+1)(x+4)}\\,dx$. Give an exact answer as a single logarithm, such as ln(a/b), or a decimal to three places.',
         correctAnswer: 'ln(8/5)',
-        acceptableAnswers: ['ln(8/5)', 'ln8/5', 'ln(1.6)', '0.470'],
+        acceptableAnswers: ['ln(8/5)', 'ln(1.6)', '0.470'],
         hints: ['Cover-up: $A = \\frac{3}{-1 + 4} = 1$ and $B = \\frac{3}{-4 + 1} = -1$.', 'Antiderivative: $\\ln\\lvert x + 1\\rvert - \\ln\\lvert x + 4\\rvert$. Evaluate from $0$ to $1$.'],
         explanation: '$\\left(\\ln 2 - \\ln 5\\right) - \\left(\\ln 1 - \\ln 4\\right) = \\ln\\frac{2 \\cdot 4}{5} = \\ln\\frac{8}{5} \\approx 0.470$.'
       }

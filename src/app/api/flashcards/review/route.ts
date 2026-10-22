@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { Prisma } from '@prisma/client'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { courseTopicWhere } from '@/lib/course-includes'
 import { flashcardReviewSchema, parseBody } from '@/lib/validations'
 import { recordAssignmentCompletion } from '@/lib/assignment-autocomplete'
 import { getActiveStudyContext } from '@/lib/study-context'
@@ -136,7 +137,7 @@ export async function GET(req: NextRequest) {
       ...(topicSlug
         ? { topic: { slug: topicSlug } }
         : courseSlug
-          ? { topic: { category: { course: { slug: courseSlug } } } }
+          ? { topic: courseTopicWhere(courseSlug) }
           : {}),
     }
     const isFiltered = !!(topicId || topicSlug || courseSlug)

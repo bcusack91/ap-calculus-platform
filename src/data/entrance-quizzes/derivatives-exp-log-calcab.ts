@@ -38,7 +38,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'del-ent-2b',
     question: 'Let $f(x) = \\ln|x|$. Find $f\'(-4)$.',
-    options: ['$\\frac{1}{4}$', 'Undefined', '$-4$', '$-\\frac{1}{4}$'],
+    options: ['$\\frac{1}{4}$', 'Undefined', '$-\\frac{1}{16}$', '$-\\frac{1}{4}$'],
     correctIndex: 3,
     explanation: 'For every $x \\ne 0$, $\\frac{d}{dx}\\ln|x| = \\frac{1}{x}$, so $f\'(-4) = -\\frac{1}{4}$. The absolute value makes the function defined at $-4$, and the derivative keeps the sign of $x$.',
     partNumber: 2,
@@ -95,7 +95,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'del-ent-5b',
     question: 'Use $g(x) = \\ln x$ as the inverse of $f(x) = e^x$ and the inverse function theorem to find $g\'(e^2)$.',
-    options: ['$e^2$', '$\\frac{1}{e^2}$', '$\\frac{1}{2}$', '$\\frac{1}{e}$'],
+    options: ['$\\frac{e^2}{2}$', '$\\frac{1}{e^2}$', '$\\frac{1}{2}$', '$\\frac{1}{e}$'],
     correctIndex: 1,
     explanation: 'Since $f(2) = e^2$, $g\'(e^2) = \\frac{1}{f\'(2)} = \\frac{1}{e^2}$. This matches $g\'(x) = \\frac{1}{x}$ at $x = e^2$.',
     partNumber: 5,

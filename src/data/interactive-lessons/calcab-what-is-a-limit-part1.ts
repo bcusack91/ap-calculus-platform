@@ -6,7 +6,7 @@ export const calcabWhatIsALimitPart1Data = {
       type: 'text' as const,
       content: `# 🎯 What Is a Limit?
 
-**Part 1 of 7 — The intuitive idea**
+**Part 1 of 4 — The intuitive idea**
 
 ---
 

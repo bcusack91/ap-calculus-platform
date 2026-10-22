@@ -48,7 +48,7 @@ $$\\boxed{u = \\text{the inner function of a composition}}$$
 | $(\\text{stuff})^n$ with its derivative nearby | $u = \\text{stuff}$ | Power of a function |
 | $e^{\\text{stuff}}$ with derivative of stuff | $u = \\text{stuff}$ | Exponential compound |
 | $\\sin(\\text{stuff})$, $\\cos(\\text{stuff})$ | $u = \\text{stuff}$ | Trig compound |
-| $\\ln(\\text{stuff})$ in denominator | $u = \\text{stuff}$ | Log pattern |
+| $\\text{stuff}$ in the denominator, its derivative on top | $u = \\text{stuff}$ | Gives $\\ln\\lvert\\text{stuff}\\rvert$ |
 
 ### Worked Examples
 

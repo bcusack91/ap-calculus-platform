@@ -49,7 +49,7 @@ $R = \\infty$: converges for all $x$ (this is $e^x$).
 
 ### Summary Table
 
-| Series | $\\lim |c_{n+1}/c_n|$ | $R$ |
+| Series | $\\lim \\lvert c_{n+1}/c_n\\rvert$ | $R$ |
 |--------|---------------------|-----|
 | $\\sum x^n/n!$ | $0$ | $\\infty$ |
 | $\\sum n! x^n$ | $\\infty$ | $0$ |

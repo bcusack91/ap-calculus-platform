@@ -76,7 +76,7 @@ $$y(2) = -2 + \\int_0^2 \\sin(\\pi t)\\,dt = -2 + \\left[-\\tfrac{1}{\\pi}\\cos(
 
 The particle is at $(13, -2)$. Notice that $y$ returns to its starting value: the particle moved up and then down by equal amounts, so the net change in $y$ is $0$ even though it travelled vertically.
 
-> **AP Tip:** On calculator-active parts, write each position as "starting value $+ \\int$ velocity component" and report three decimal places. Writing only the integral without the starting value is the most common lost point.`
+> **AP Tip:** On calculator-active parts, write each position as "starting value $+ \\int$ velocity component" and report three decimal places. Writing only the integral without the starting value gives the change in position, not the position.`
     },
     {
       id: 'par5-dropdown',

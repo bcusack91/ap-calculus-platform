@@ -21,7 +21,7 @@ export const calcbcAdvIntegrationPart5Data = {
 
 $$\\boxed{\\text{Can I use a known formula?} \\to \\text{Is it a } u\\text{-sub?} \\to \\text{By parts?} \\to \\text{Partial fractions?}}$$
 
-> **AP Tip:** On calculator sections, you don't need to find antiderivatives. Use $\\texttt{fnInt}$ for definite integrals. On non-calculator sections, you MUST know the techniques.`
+> **AP Tip:** On calculator sections, you can evaluate definite integrals on the calculator, but write the integral in standard notation first: calculator syntax such as fnInt earns no setup point. On non-calculator sections, you MUST know the techniques.`
     },
     {
       id: 'ai5-common',
@@ -31,7 +31,7 @@ $$\\boxed{\\text{Can I use a known formula?} \\to \\text{Is it a } u\\text{-sub?
 | Integral | Answer |
 |----------|--------|
 | $\\int e^{ax}\\,dx$ | $\\frac{1}{a}e^{ax} + C$ |
-| $\\int \\frac{dx}{x}$ | $\\ln|x| + C$ |
+| $\\int \\frac{dx}{x}$ | $\\ln\\lvert x\\rvert + C$ |
 | $\\int \\frac{dx}{\\sqrt{1-x^2}}$ | $\\arcsin x + C$ |
 | $\\int \\frac{dx}{1+x^2}$ | $\\arctan x + C$ |
 | $\\int \\ln x\\,dx$ | $x\\ln x - x + C$ |

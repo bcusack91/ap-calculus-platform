@@ -127,11 +127,11 @@ $$\\boxed{\\text{Unbounded region} \\to \\text{improper integral} \\to \\text{ev
       type: 'input-box' as const,
       content: '**Integration by Parts with Improper Integral**',
       exercise: {
-        question: 'Compute $\\int_0^{\\infty} xe^{-2x}\\,dx$. Use IBP with $u = x$, $dv = e^{-2x}\\,dx$. The answer is a fraction $\\frac{a}{b}$ in lowest terms. Enter the numerator $a$.',
-        correctAnswer: '1',
-        acceptableAnswers: ['1'],
-        hints: ['$u = x, dv = e^{-2x}dx \\Rightarrow du = dx, v = -\\frac{1}{2}e^{-2x}$.', '$[-\\frac{x}{2}e^{-2x}]_0^{\\infty} + \\frac{1}{2}\\int_0^{\\infty} e^{-2x}\\,dx = 0 + \\frac{1}{2} \\cdot \\frac{1}{2}$.'],
-        explanation: 'IBP: $[-\\frac{x}{2}e^{-2x}]_0^{\\infty} + \\frac{1}{2}\\int_0^{\\infty} e^{-2x}\\,dx = 0 + \\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{4}$. The fraction is $\\frac{1}{4}$, so the numerator is $1$.'
+        question: 'Compute $\\int_0^{\\infty} xe^{-2x}\\,dx$ using integration by parts with $u = x$, $dv = e^{-2x}\\,dx$. Give the exact value.',
+        correctAnswer: '1/4',
+        acceptableAnswers: ['1/4', '0.25'],
+        hints: ['$u = x, dv = e^{-2x}dx \\Rightarrow du = dx, v = -\\frac{1}{2}e^{-2x}$.', '$[-\\frac{x}{2}e^{-2x}]_0^{\\infty} + \\frac{1}{2}\\int_0^{\\infty} e^{-2x}\\,dx$; the boundary term is $0$.'],
+        explanation: 'IBP: $[-\\frac{x}{2}e^{-2x}]_0^{\\infty} + \\frac{1}{2}\\int_0^{\\infty} e^{-2x}\\,dx = 0 + \\frac{1}{2} \\cdot \\frac{1}{2} = \\frac{1}{4}$.'
       }
     },
     {

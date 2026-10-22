@@ -6,70 +6,79 @@ export const calcabIntAppsPart6Data = {
       type: 'text' as const,
       content: `# Integration Applications
 
-**Part 6 of 7 \u2014 Problem-Solving Workshop**
+**Part 6 of 7 — Practice Workshop**
 
-### Integration Application Decision Guide
+### Which Integral Does the Question Want?
 
-| Given | Method |
+| The question says | Use |
 |:---:|:---:|
-| Two curves, find area | $\\int [\\text{top}-\\text{bottom}]dx$ |
-| Region + cross-section shape | $\\int A(x)\\,dx$ with shape formula |
-| Rotation about axis, one boundary | Disk: $\\pi\\int R^2\\,dx$ |
-| Rotation about axis, two boundaries | Washer: $\\pi\\int(R^2-r^2)dx$ |
-| Table of values | Riemann sum or trapezoidal rule |
-| Rate function | Net change: $\\int_a^b f'(t)\\,dt$ |
-| Rate in / rate out | $Q_0 + \\int(R_{in}-R_{out})dt$ |
+| "average value of $f$" | $\\frac{1}{b-a}\\int_a^b f(x)\\,dx$ |
+| "average rate of change of $f$" | $\\frac{f(b)-f(a)}{b-a}$ |
+| "position at $t = b$" | $x(a) + \\int_a^b v(t)\\,dt$ |
+| "displacement" | $\\int_a^b v(t)\\,dt$ |
+| "total distance" | $\\int_a^b \\lvert v(t)\\rvert\\,dt$ |
+| "amount at time $t$" | $A(0) + \\int_0^t (\\text{in} - \\text{out})\\,ds$ |
+| "maximum / minimum amount" | Candidates: endpoints and sign changes of the net rate |
+| "explain the meaning of $\\int_a^b R(t)\\,dt$" | Quantity, units, and interval |
 
-> **Key Fact:** The first step is always identifying the problem type. The correct setup determines 90% of your score.`
+> **Key Fact:** Decide what the integral measures before you compute it. Most lost points in these problems come from answering a different question than the one asked.`
     },
     {
       id: 'ia6-worked',
       type: 'text' as const,
       content: `### AP-Style Worked Problem
 
-Region $R$ is bounded by $y = 4-x^2$ and $y = 0$.
+For $0 \\le t \\le 8$ hours, rain flows into a storage tank at $R(t) = 10 + 3t$ cubic feet per hour, and a pump removes water at a constant $16$ cubic feet per hour. The tank holds $30$ cubic feet at $t = 0$.
 
-**(a) Find the area of $R$.**
+**(a) How much rain enters the tank from $t = 0$ to $t = 4$?**
 
-$A = \\int_{-2}^{2}(4-x^2)dx = [4x-\\frac{x^3}{3}]_{-2}^{2} = \\frac{32}{3}$
+$$\\int_0^4 (10 + 3t)\\,dt = \\left[10t + \\frac{3t^2}{2}\\right]_0^4 = 40 + 24 = 64 \\text{ cubic feet}$$
 
-**(b) Cross sections perpendicular to $x$-axis are squares. Find volume.**
+**(b) Is the amount of water increasing or decreasing at $t = 1$? Explain.**
 
-$s = 4-x^2$. $V = \\int_{-2}^{2}(4-x^2)^2 dx$
+$R(1) - 16 = 13 - 16 = -3 < 0$, so the amount is decreasing at $t = 1$.
 
-$= \\int_{-2}^{2}(16-8x^2+x^4)dx = 2[16x-\\frac{8x^3}{3}+\\frac{x^5}{5}]_0^2$
+**(c) Find the minimum amount of water in the tank on $[0, 8]$. Justify.**
 
-$= 2(32-\\frac{64}{3}+\\frac{32}{5}) = 2 \\cdot \\frac{480-320+96}{15} = \\frac{512}{15}$
+The net rate $R(t) - 16 = 3t - 6$ changes from negative to positive at $t = 2$. Candidates, with $A(t) = 30 + \\int_0^t (3s - 6)\\,ds$:
 
-**(c) Rotate $R$ about the $x$-axis. Find volume.**
+| $t$ | $A(t)$ |
+|:---:|:---:|
+| $0$ | $30$ |
+| $2$ | $30 + (6 - 12) = 24$ |
+| $8$ | $30 + (96 - 48) = 78$ |
 
-$V = \\pi\\int_{-2}^{2}(4-x^2)^2 dx = \\frac{512\\pi}{15}$
+The minimum is 24 cubic feet, at $t = 2$ hours.
 
-> **AP Tip:** Parts (b) and (c) have the same integral! Cross sections \u2192 no $\\pi$. Revolution \u2192 multiply by $\\pi$.`
+**(d) Find the average rate at which rain enters the tank over $[0, 8]$.**
+
+$$\\frac{1}{8}\\int_0^8 (10 + 3t)\\,dt = \\frac{1}{8}(80 + 96) = 22 \\text{ cubic feet per hour}$$
+
+> **AP Tip:** On the real exam this kind of problem is usually calculator-active, with rates you cannot integrate by hand. The setups are exactly the same; only the arithmetic moves to the calculator.`
     },
     {
       id: 'ia6-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Mixed Applications** \ud83c\udfaf',
+      content: '**Mixed Applications** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Region between $y = x$ and $y = x^2$ on $[0,1]$. Semicircular cross sections with diameter from $y=x^2$ to $y=x$. Volume:',
-            options: ['$\\frac{\\pi}{240}$', '$\\frac{\\pi}{120}$', '$\\frac{\\pi}{60}$', '$\\frac{\\pi}{30}$'],
+            question: 'A particle has velocity $v(t) = 6 - 2t$ feet per second. What is its average velocity on $[0, 5]$?',
+            options: ['$1$ ft/s', '$5$ ft/s', '$-2$ ft/s', '$\\frac{13}{5}$ ft/s'],
             correctAnswer: 0,
-            explanation: 'Diameter $= x-x^2$. Semicircle area $= \\frac{\\pi}{8}d^2 = \\frac{\\pi}{8}(x-x^2)^2$. $V = \\frac{\\pi}{8}\\int_0^1 (x-x^2)^2\\,dx = \\frac{\\pi}{8} \\cdot \\frac{1}{30} = \\frac{\\pi}{240}$. A full circle of radius $d/2$ gives $\\frac{\\pi}{120}$, a semicircle with $d$ used as the radius gives $\\frac{\\pi}{60}$, and a full circle of radius $d$ gives $\\frac{\\pi}{30}$.'
+            explanation: 'Average velocity $= \\frac{1}{5}\\int_0^5 (6 - 2t)\\,dt = \\frac{30 - 25}{5} = 1$ ft/s. $5$ forgets to divide, $-2$ is the average acceleration $\\frac{v(5) - v(0)}{5}$, and $\\frac{13}{5}$ divides the total distance (9 + 4 = 13 feet) instead of the displacement.'
           },
           {
-            question: 'For $f(0)=1, f(1)=4, f(2)=3, f(3)=6$, the right Riemann sum with $\\Delta x=1$ is:',
-            options: ['$13$', '$8$', '$14$', '$10$'],
+            question: 'Bacteria grow at $B\'(t) = 40e^{0.5t}$ bacteria per hour, and $B(0) = 100$. How many bacteria are there at $t = 2$?',
+            options: ['$80e + 20$', '$80(e - 1)$', '$40e + 60$', '$100 + 40e$'],
             correctAnswer: 0,
-            explanation: '$R_3 = f(1)+f(2)+f(3) = 4+3+6 = 13$.'
+            explanation: '$B(2) = 100 + \\int_0^2 40e^{0.5t}\\,dt = 100 + 80(e - 1) = 80e + 20$. $80(e - 1)$ is only the growth, $40e + 60$ drops the factor $\\frac{1}{0.5} = 2$ from the antiderivative, and $100 + 40e$ adds the rate $B\'(2) = 40e$ instead of integrating it.'
           },
           {
-            question: 'Rotate $y = 3$ and $y = x^2-1$ about $y = -2$. The outer radius at $x=1$ is:',
-            options: ['$5$', '$3$', '$4$', '$2$'],
+            question: '$T(t)$ is a temperature in °F, with $t$ in hours, and $\\int_0^{24} T(t)\\,dt = 1560$. Which quantity equals $65$?',
+            options: ['The average temperature over the 24 hours', 'The temperature at $t = 12$ hours', 'The change in temperature over 24 hours', 'The average rate of change of the temperature'],
             correctAnswer: 0,
-            explanation: 'Outer: distance from $y=3$ to $y=-2$: $|3-(-2)| = 5$.'
+            explanation: '$\\frac{1}{24}\\int_0^{24} T(t)\\,dt = \\frac{1560}{24} = 65$ °F, the average value of $T$. It is not the value at the midpoint, and changes in temperature come from $T(24) - T(0)$, which the integral of $T$ does not give.'
           }
         ]
       }
@@ -77,29 +86,29 @@ $V = \\pi\\int_{-2}^{2}(4-x^2)^2 dx = \\frac{512\\pi}{15}$
     {
       id: 'ia6-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Choose the right setup.** \ud83d\udd0d',
+      content: '**Choose the right setup.** 🔍',
       exercise: {
         dropdowns: [
           {
-            label: 'The base of a solid is a circle of radius 3. Cross sections perpendicular to a diameter are equilateral triangles. The volume integral is:',
-            options: ['$\\int_{-3}^{3} \\frac{\\sqrt{3}}{4}(2\\sqrt{9-x^2})^2 dx$', '$\\int_{-3}^{3} \\frac{1}{2}(2\\sqrt{9-x^2})^2 dx$', '$\\pi\\int_{-3}^{3} (9-x^2) dx$', '$\\int_{-3}^{3} \\frac{\\sqrt{3}}{4}(\\sqrt{9-x^2})^2 dx$'],
-            correctAnswers: ['$\\int_{-3}^{3} \\frac{\\sqrt{3}}{4}(2\\sqrt{9-x^2})^2 dx$'],
-            hints: ['Side $= 2\\sqrt{9-x^2}$. Equilateral triangle area $= \\frac{\\sqrt{3}}{4}s^2$.'],
-            explanation: '$s = 2\\sqrt{9-x^2}$. $A = \\frac{\\sqrt{3}}{4}\\cdot 4(9-x^2) = \\sqrt{3}(9-x^2)$.'
+            label: '$v(t) < 0$ on $(0, 2)$ and $v(t) > 0$ on $(2, 6)$. The total distance on $[0, 6]$ is:',
+            options: ['$-\\int_0^2 v\\,dt + \\int_2^6 v\\,dt$', '$\\int_0^6 v\\,dt$', '$\\int_0^2 v\\,dt + \\int_2^6 v\\,dt$', '$\\left\\lvert\\int_0^6 v\\,dt\\right\\rvert$'],
+            correctAnswers: ['$-\\int_0^2 v\\,dt + \\int_2^6 v\\,dt$'],
+            hints: ['On $(0, 2)$ the integral is negative; distance needs it positive.'],
+            explanation: 'On $(0, 2)$, $\\lvert v\\rvert = -v$, so that piece is $-\\int_0^2 v\\,dt$. The other choices give the displacement or its size.'
           },
           {
-            label: '$f(0)=2, f(3)=5, f(6)=3$ with $\\Delta x = 3$. Trapezoidal approximation:',
-            options: ['$\\frac{3}{2}(2+2(5)+2(3))$', '$\\frac{3}{2}(2+2(5)+3)$', '$3(2+2(5)+3)$', '$\\frac{3}{2}(2+5+3)$'],
-            correctAnswers: ['$\\frac{3}{2}(2+2(5)+3)$'],
-            hints: ['$T = \\frac{\\Delta x}{2}[f_0+2f_1+f_2] = \\frac{3}{2}(2+10+3)$.'],
-            explanation: '$\\frac{3}{2}(2+2(5)+3) = \\frac{3}{2}(15) = 22.5$. Only the interior value $f(3)$ is doubled.'
+            label: 'An amount satisfies $A\'(t) = R(t) - D(t)$. $A$ has a relative maximum at a time when:',
+            options: ['$R - D$ changes from positive to negative', '$R - D$ changes from negative to positive', '$R(t)$ reaches its own maximum value', '$D(t)$ equals zero'],
+            correctAnswers: ['$R - D$ changes from positive to negative'],
+            hints: ['$A$ increases while $A\' > 0$ and decreases while $A\' < 0$.'],
+            explanation: 'When $A\' = R - D$ goes from positive to negative, $A$ stops rising and starts falling: a relative maximum. The opposite sign change gives a relative minimum.'
           },
           {
-            label: 'A particle\u2019s velocity is always positive on $[0,5]$. Then displacement equals:',
-            options: ['Total distance', 'Average velocity', 'Negative of distance', 'Half the distance'],
-            correctAnswers: ['Total distance'],
-            hints: ['If $v > 0$ always, then $|v| = v$.'],
-            explanation: 'When $v(t) > 0$ throughout, $\\int v\\,dt = \\int|v|\\,dt$: displacement = total distance.'
+            label: '$R(t)$ is in cars per minute. "$\\frac{1}{4}\\int_0^4 R(t)\\,dt = 9$" means:',
+            options: ['Over $[0, 4]$ the average rate was 9 cars per minute', 'Exactly 9 cars passed in the first 4 minutes', 'The rate was 9 cars per minute at $t = 4$', 'The rate grew by 9 cars per minute over $[0, 4]$'],
+            correctAnswers: ['Over $[0, 4]$ the average rate was 9 cars per minute'],
+            hints: ['Dividing an integral by the interval length gives an average value.'],
+            explanation: 'This is the average value of $R$ on $[0, 4]$: 9 cars per minute. The number of cars that passed is $\\int_0^4 R(t)\\,dt = 36$.'
           }
         ]
       }
@@ -107,33 +116,33 @@ $V = \\pi\\int_{-2}^{2}(4-x^2)^2 dx = \\frac{512\\pi}{15}$
     {
       id: 'ia6-input',
       type: 'input-box' as const,
-      content: '**Mixed problem.** \u270d\ufe0f',
+      content: '**Minimum amount.** ✍️',
       exercise: {
-        question: 'Region between $y = x$ and $y = 0$ from $x=0$ to $x=3$. Square cross sections perpendicular to $x$-axis. Volume:\n\n(Enter an integer.)',
-        correctAnswer: '9',
-        acceptableAnswers: ['9'],
+        question: 'Water enters a tank at $R(t) = 4t$ gallons per minute and leaves at a constant 12 gallons per minute. At $t = 0$ the tank holds 50 gallons. What is the minimum amount of water in the tank for $0 \\le t \\le 6$?',
+        correctAnswer: '32',
+        acceptableAnswers: ['32'],
         hints: [
-          'Side $= x$. Area $= x^2$.',
-          '$V = \\int_0^3 x^2\\,dx$.',
-          '$[\\frac{x^3}{3}]_0^3 = 9$.'
+          'The net rate $4t - 12$ changes sign at $t = 3$.',
+          '$A(3) = 50 + \\int_0^3 (4t - 12)\\,dt$.',
+          'Compare $A(0)$, $A(3)$ and $A(6)$.'
         ],
-        explanation: '$V = \\int_0^3 x^2\\,dx = [x^3/3]_0^3 = 9$.'
+        explanation: '$A(t) = 50 + 2t^2 - 12t$. Candidates: $A(0) = 50$, $A(3) = 50 + 18 - 36 = 32$, $A(6) = 50 + 72 - 72 = 50$. The minimum is 32 gallons, at $t = 3$.'
       }
     },
     {
       id: 'ia6-summary',
       type: 'text' as const,
-      content: `### Key Takeaways \u2014 Part 6
+      content: `### Key Takeaways — Part 6
 
-| Problem Type | Key Setup |
+| Problem type | Key setup |
 |:---:|:---:|
-| Area | $\\int(\\text{top}-\\text{bottom})$ |
-| Cross-section | $\\int A(x)\\,dx$ |
-| Revolution | $\\pi\\int R^2$ or $\\pi\\int(R^2-r^2)$ |
-| Table data | Riemann sums or trapezoidal |
-| Rates | $\\int f'(t)\\,dt = f(b)-f(a)$ |
+| Average value | $\\frac{1}{b-a}\\int_a^b f$ |
+| Position | $x(a) + \\int_a^b v$ |
+| Total distance | $\\int_a^b \\lvert v\\rvert$ |
+| Amount | Start $+ \\int$ (in $-$ out) |
+| Max/min amount | Candidates Test |
 
-> **Up Next:** Part 7 \u2014 Comprehensive Assessment.`
+> **Up Next:** Part 7 — Final Assessment.`
     }
   ]
 };

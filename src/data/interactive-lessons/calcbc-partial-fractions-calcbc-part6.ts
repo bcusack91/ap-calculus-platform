@@ -109,11 +109,11 @@ Mixed practice combining all partial fraction techniques. For each problem, deci
       type: 'input-box' as const,
       content: '**Workshop Challenge**',
       exercise: {
-        question: 'For $\\frac{x^2+1}{x^2-1} = 1 + \\frac{2}{(x-1)(x+1)}$, the partial fraction of $\\frac{2}{(x-1)(x+1)}$ gives $A = \\frac{2}{1-(-1)} = 1$ and $B = \\frac{2}{-1-1} = -1$. What is $\\int_2^3 \\frac{x^2+1}{x^2-1}\\,dx$? Using the antiderivative $x + \\ln|x-1| - \\ln|x+1|$, the result is $1 + \\ln\\frac{a}{b}$ where $\\frac{a}{b}$ is fully reduced. What is $a + b$?',
-        correctAnswer: '5',
-        acceptableAnswers: ['5'],
-        hints: ['At $x=3$: $3 + \\ln 2 - \\ln 4$. At $x=2$: $2 + 0 - \\ln 3$.', 'Difference: $1 + \\ln 2 - \\ln 4 + \\ln 3 = 1 + \\ln\\frac{6}{4} = 1 + \\ln\\frac{3}{2}$.', '$a = 3$, $b = 2$, so $a + b = 5$.'],
-        explanation: '$[x + \\ln|x-1| - \\ln|x+1|]_2^3 = (3 + \\ln 2 - \\ln 4) - (2 + 0 - \\ln 3) = 1 + \\ln\\frac{3}{2}$. So $a = 3$, $b = 2$, $a+b = 5$.'
+        question: 'For $\\frac{x^2+1}{x^2-1} = 1 + \\frac{2}{(x-1)(x+1)}$, the partial fraction of $\\frac{2}{(x-1)(x+1)}$ gives $A = \\frac{2}{1-(-1)} = 1$ and $B = \\frac{2}{-1-1} = -1$. What is $\\int_2^3 \\frac{x^2+1}{x^2-1}\\,dx$? Give the value to three decimal places.',
+        correctAnswer: '1.405',
+        acceptableAnswers: ['1.405', '1.4055', '1+ln(3/2)', '1 + ln(3/2)', '1+ln1.5'],
+        hints: ['At $x=3$: $3 + \\ln 2 - \\ln 4$. At $x=2$: $2 + 0 - \\ln 3$.', 'Difference: $1 + \\ln 2 - \\ln 4 + \\ln 3 = 1 + \\ln\\frac{6}{4} = 1 + \\ln\\frac{3}{2}$.', '$\\ln\\frac{3}{2} \\approx 0.405$.'],
+        explanation: '$[x + \\ln|x-1| - \\ln|x+1|]_2^3 = (3 + \\ln 2 - \\ln 4) - (2 + 0 - \\ln 3) = 1 + \\ln\\frac{3}{2} \\approx 1.405$.'
       }
     },
     {
@@ -126,7 +126,7 @@ Mixed practice combining all partial fraction techniques. For each problem, deci
 | Forgetting long division | Always check degrees first |
 | Decomposing when $u$-sub works | Check for $\\frac{f'(x)}{f(x)}$ first |
 | Sign errors in cover-up | Double-check by plugging back in |
-| Missing absolute values | $\\ln|x-a|$, not $\\ln(x-a)$ |
+| Missing absolute values | $\\ln\\lvert x-a\\rvert$, not $\\ln(x-a)$ |
 
 > **Coming Up:** Part 7 is the **comprehensive review and assessment** covering all partial fraction techniques.`
     }

@@ -26,7 +26,7 @@ $$\\boxed{\\text{Draw} \\to \\text{Equation} \\to \\text{Differentiate (w.r.t. }
 | 4 | Substitute known values | Plug in AFTER differentiating, never before! |
 | 5 | Solve for unknown rate | Algebra |
 
-> **AP Tip (Critical):** **NEVER substitute numerical values before differentiating.** This is the #1 related rates mistake.`
+> **AP Tip (Critical):** **Never substitute values of quantities that change before differentiating** (constants such as a ladder's length may be used anytime). This is the #1 related rates mistake.`
     },
     {
       id: 'chain4-examples',

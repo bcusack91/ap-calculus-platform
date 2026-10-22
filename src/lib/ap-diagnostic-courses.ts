@@ -138,8 +138,8 @@ export const AP_DIAGNOSTIC_COURSES: Record<string, ApDiagnosticCourse> = {
     diagnosticPath: '/calcbc-diagnostic',
     scorePredictorPath: '/ap-calcbc-score-predictor',
     dailyQuestionPath: '/ap-calcbc-daily-question',
-    questionCount: 37,
-    timeLimitMinutes: 50,
+    questionCount: 40,
+    timeLimitMinutes: 55,
     theme: {
       page: 'from-violet-50 via-white to-purple-50',
       text: 'text-violet-700 dark:text-violet-300',

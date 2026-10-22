@@ -78,7 +78,7 @@ Find each of the following at $x = 1$:
             question: 'Find $\\frac{d}{dx}(x^2 e^x \\sin x)$ at $x = 0$.',
             options: ['$0$', '$1$', '$2$', 'undefined'],
             correctAnswer: 0,
-            explanation: 'Using triple product rule: $f\'gh + fg\'h + fgh\'$. At $x=0$, $f(0) = 0$ (from $x^2$), and two of the three terms contain the factor $x^2$ evaluated at 0. The full derivative at 0: $2(0)(1)(0) + 0(1)(0) + 0(0)(1) = 0$.'
+            explanation: 'Triple product rule: $f\'gh + fg\'h + fgh\' = 2x e^x \\sin x + x^2 e^x \\sin x + x^2 e^x \\cos x$. Every term has a factor $x$, so the derivative at $x = 0$ is $0$.'
           },
           {
             question: 'If $f(x) = \\frac{x^2+1}{x^2-1}$, where is $f\'(x) = 0$?',
@@ -123,7 +123,7 @@ $$\\boxed{y - f(c) = -\\frac{1}{f'(c)}(x - c)}$$
 | Type | Condition | Meaning |
 |------|-----------|---------|
 | Horizontal tangent | $f'(c) = 0$ | Critical point candidate |
-| Vertical tangent | $f'(c)$ is undefined, $f$ continuous | Cusp or vertical tangent point |
+| Vertical tangent | $f$ continuous at $c$ and $\\lvert f'(x) \\rvert \\to \\infty$ as $x \\to c$ | Vertical tangent (or cusp) |
 
 > **AP Tip:** When asked "for what values of $x$ is the tangent horizontal?", you are being asked to solve $f'(x) = 0$. Always check that $f$ is defined at those points!`
     },

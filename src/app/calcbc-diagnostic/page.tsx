@@ -64,7 +64,7 @@ export default function CalcBCDiagnosticPage() {
   const searchParams = useSearchParams()
   const challengeToken = searchParams.get('challenge')
   const challengeFormRaw = Number(searchParams.get('challengeForm'))
-  const challengeForm = Number.isFinite(challengeFormRaw) && challengeFormRaw >= 1
+  const challengeForm = Number.isFinite(challengeFormRaw) && challengeFormRaw >= 1 && challengeFormRaw <= TOTAL_FORMS
     ? challengeFormRaw
     : null
 

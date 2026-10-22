@@ -26,13 +26,13 @@ export const calcbcExamStrategyPart4Data = {
 
 | # | Mistake | How to avoid |
 |---|---------|-------------|
-| 1 | Forgetting $+C$ on indefinite integrals | Only on FRQs — MC gives specific answers |
-| 2 | Wrong chain rule on parametric: $dy/dx \\neq y'(t)/x'(t)$ when using $d^2y/dx^2$ | $d^2y/dx^2 = \\frac{d}{dt}[dy/dx] \\div \\frac{dx}{dt}$ |
+| 1 | Forgetting $+C$ on indefinite integrals | Always write $+C$; in a separable DE, add it before using the initial condition |
+| 2 | Wrong parametric second derivative: $d^2y/dx^2 \\neq y''(t)/x''(t)$ | $d^2y/dx^2 = \\frac{d}{dt}[dy/dx] \\div \\frac{dx}{dt}$ |
 | 3 | Confusing convergence tests | Use the flowchart: geometric → p-series → ratio → AST |
-| 4 | Wrong radius of convergence | Ratio test gives $|x - a| < R$; check endpoints separately |
+| 4 | Wrong radius of convergence | Ratio test gives $\\lvert x - a\\rvert < R$; check endpoints separately |
 | 5 | Forgetting to check endpoints | Radius ≠ interval; always test $x = a \\pm R$ |
-| 6 | Speed vs. velocity | Speed $= |v|$ (scalar); velocity is signed or vector |
-| 7 | Using wrong error bound | Alternating → AST bound; non-alternating → Lagrange |
+| 6 | Speed vs. velocity | Speed $= \\lvert v\\rvert$ (scalar); velocity is signed or vector |
+| 7 | Using wrong error bound | Use the bound the question names; the AST bound needs the AST conditions, Lagrange works for any Taylor polynomial |
 | 8 | Integration by parts sign error | Use tabular method to reduce mistakes |
 | 9 | Polar area: forgetting $1/2$ | $A = \\frac{1}{2}\\int r^2\\,d\\theta$ |
 | 10 | Simplifying a correct answer into a wrong one | Answers need not be simplified; stop once the answer is correct |`

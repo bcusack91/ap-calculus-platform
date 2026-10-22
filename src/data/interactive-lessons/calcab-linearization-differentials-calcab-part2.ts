@@ -17,9 +17,8 @@ export const calcabLinearizationPart2Data = {
 | $\\tan x$ | $\\approx x$ |
 | $e^x$ | $\\approx 1 + x$ |
 | $\\ln(1+x)$ | $\\approx x$ |
-| $(1+x)^n$ | $\\approx 1 + nx$ |
 
-> **Key Fact:** These linearizations appear frequently on the AP exam, especially $e^x \\approx 1+x$ and $\\sin x \\approx x$ for small $x$.
+> **Key Fact:** The most useful are $e^x \\approx 1+x$ and $\\sin x \\approx x$ for small $x$.
 
 ### Over/Under Estimates from Concavity
 
@@ -89,11 +88,11 @@ Actual: $e^{0.1} \\approx 1.10517$. Indeed $1.1 < 1.10517$.`
             explanation: 'Near $0$, $\\sin x$ is concave down (for $x > 0$), so the tangent line overestimates.'
           },
           {
-            label: '$(1+x)^n \\approx 1 + nx$ for small $x$ is called:',
-            options: ['The binomial approximation', 'The Mean Value Theorem', 'L\'H\\u00f4pital\'s rule', 'The Taylor remainder bound'],
-            correctAnswers: ['The binomial approximation'],
-            hints: ['This is the first-order binomial expansion.'],
-            explanation: 'This is the linearization of $(1+x)^n$ at $x=0$, known as the binomial (or linear) approximation. It is an approximation formula, not a theorem about slopes, a limit rule, or an error bound.'
+            label: '$\\tan x \\approx x$ near $0$ comes from:',
+            options: ['The tangent line at $x = 0$', 'The Mean Value Theorem', 'L\'H\\u00f4pital\'s Rule', 'The Squeeze Theorem'],
+            correctAnswers: ['The tangent line at $x = 0$'],
+            hints: ['$\\tan 0 = 0$ and $\\sec^2 0 = 1$.'],
+            explanation: 'The linearization of $\\tan x$ at $0$ is $L(x) = 0 + 1(x - 0) = x$: it is the tangent line. The other choices are theorems about slopes or limits, not approximation formulas.'
           }
         ]
       }
@@ -103,15 +102,14 @@ Actual: $e^{0.1} \\approx 1.10517$. Indeed $1.1 < 1.10517$.`
       type: 'input-box' as const,
       content: '**Calculate.** \u270d\ufe0f',
       exercise: {
-        question: 'Use the linearization of $f(x) = x^4$ at $a = 3$ to approximate $f(3.02)$.\n\nIf $L(3.02) = \\frac{a}{b}$ in lowest terms, find $a + b$.\n\n(Enter an integer.)',
-        correctAnswer: '2104',
-        acceptableAnswers: ['2104'],
+        question: 'Use the linearization of $f(x) = x^4$ at $x = 3$ to approximate $f(3.02)$. (Decimal or fraction.)',
+        correctAnswer: '83.16',
+        acceptableAnswers: ['83.16', '2079/25'],
         hints: [
           '$f(3) = 81$, $f\'(x) = 4x^3$, $f\'(3) = 108$.',
-          '$L(3.02) = 81 + 108(0.02) = 81 + 2.16 = 83.16$.',
-          '$83.16 = 8316/100 = 2079/25$. $a + b = 2079 + 25 = 2104$.'
+          '$L(3.02) = 81 + 108(0.02)$.'
         ],
-        explanation: '$L(3.02) = 81 + 108(0.02) = 83.16 = 2079/25$. $a + b = 2079 + 25 = 2104$.'
+        explanation: '$L(3.02) = 81 + 108(0.02) = 81 + 2.16 = 83.16$.'
       }
     },
     {

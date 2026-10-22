@@ -59,13 +59,13 @@ Yes. By EVT, since $f$ is continuous on the closed interval $[-2,6]$, $f$ attain
           },
           {
             question: 'Must there exist $c \\in (0,8)$ where $g(c) = 5$?',
-            options: ['Yes \u2014 by IVT on $[0,4]$', 'No', 'Only by MVT', 'Only on $[4,8]$'],
+            options: ['Yes \u2014 by IVT on $[0,4]$', 'No \u2014 $g$ need not equal 5', 'Yes \u2014 by MVT on $[0,8]$', 'Only somewhere in $(4,8)$'],
             correctAnswer: 0,
-            explanation: '$g(0) = 2 < 5 < 10 = g(4)$. By IVT on $[0,4]$, $\\exists\\, c$ with $g(c) = 5$.'
+            explanation: '$g(0) = 2 < 5 < 10 = g(4)$ and $g$ is continuous, so by IVT on $[0,4]$ there is a $c$ in $(0, 4)$ with $g(c) = 5$. MVT is about values of $g\'$, not $g$, and on $[4, 8]$ the values run from 10 to 6, so 5 is not guaranteed there.'
           },
           {
             question: 'Must $g$ attain an absolute maximum on $[0,8]$?',
-            options: ['Yes \u2014 by EVT', 'Only if $g\' = 0$ somewhere', 'No \u2014 interval is too large', 'Only at endpoints'],
+            options: ['Yes \u2014 by EVT on the closed interval $[0, 8]$', 'No \u2014 EVT needs $g\' = 0$ somewhere in $(0, 8)$', 'No \u2014 the interval $[0, 8]$ is too long', 'Only if the maximum is at an endpoint'],
             correctAnswer: 0,
             explanation: '$g$ is continuous on $[0,8]$ (closed interval). By EVT, absolute max and min exist.'
           }
@@ -107,15 +107,14 @@ Yes. By EVT, since $f$ is continuous on the closed interval $[-2,6]$, $f$ attain
       type: 'input-box' as const,
       content: '**MVT calculation.** \u270d\ufe0f',
       exercise: {
-        question: '$f$ is differentiable on $[2, 10]$. $f(2) = 5$, $f(10) = 29$.\n\nBy MVT, $f\'(c) = a/b$ in lowest terms. Enter **$a + b$**.',
-        correctAnswer: '4',
-        acceptableAnswers: ['4'],
+        question: '$f$ is differentiable on $[2, 10]$. $f(2) = 5$, $f(10) = 29$.\n\nBy MVT, there is a $c$ in $(2, 10)$ where $f\'(c)$ equals what value?',
+        correctAnswer: '3',
+        acceptableAnswers: ['3', '24/8'],
         hints: [
           '$f\'(c) = \\frac{f(10)-f(2)}{10-2} = \\frac{24}{8}$.',
-          '$= 3 = 3/1$.',
-          '$a + b = 3 + 1 = 4$.'
+          'Simplify the fraction.'
         ],
-        explanation: '$f\'(c) = \\frac{24}{8} = 3 = 3/1$. $a + b = 4$.'
+        explanation: '$f$ is differentiable on $[2, 10]$, so it is also continuous there, and MVT applies: $f\'(c) = \\frac{29 - 5}{10 - 2} = \\frac{24}{8} = 3$ for some $c$ in $(2, 10)$.'
       }
     },
     {

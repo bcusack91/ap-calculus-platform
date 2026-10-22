@@ -14,7 +14,6 @@ export const calcabLinearizationPart7Data = {
 |:---:|:---:|
 | Linearization | $L(x) = f(a) + f'(a)(x-a)$ |
 | Differential | $dy = f'(x)\\,dx$ |
-| Error estimate | $\\approx \\frac{1}{2}f''(a)(x-a)^2$ |
 | Concave up ($f'' > 0$) | Tangent underestimates |
 | Concave down ($f'' < 0$) | Tangent overestimates |
 
@@ -26,7 +25,6 @@ export const calcabLinearizationPart7Data = {
 | $\\cos x$ | $1$ |
 | $e^x$ | $1 + x$ |
 | $\\ln(1+x)$ | $x$ |
-| $(1+x)^n$ | $1 + nx$ |
 
 ### Common AP Mistakes
 
@@ -77,7 +75,7 @@ export const calcabLinearizationPart7Data = {
       exercise: {
         questions: [
           {
-            question: 'A sphere has $r = 10$ cm, $dr = 0.05$ cm. The approximate error in $V = \\frac{4}{3}\\pi r^3$ is:',
+            question: 'A sphere\'s radius grows from $10$ cm to $10.05$ cm. The differential estimate of the change in $V = \\frac{4}{3}\\pi r^3$ is:',
             options: ['$20\\pi$ cm$^3$', '$200\\pi$ cm$^3$', '$2\\pi$ cm$^3$', '$100\\pi$ cm$^3$'],
             correctAnswer: 0,
             explanation: '$dV = 4\\pi r^2 \\, dr = 4\\pi(100)(0.05) = 20\\pi$.'
@@ -89,10 +87,10 @@ export const calcabLinearizationPart7Data = {
             explanation: '$f(e) = 1$, $f\'(e) = 1/e$. $L(x) = 1 + \\frac{1}{e}(x-e)$ (which simplifies to $x/e$). Using $e$ as the slope gives $1 + e(x-e)$, using slope $1$ gives $1 + (x-e)$, and dropping $f(e)$ gives $\\frac{1}{e}(x-e)$.'
           },
           {
-            question: 'If error $\\propto (x-a)^2$, doubling the distance from $a$ makes the error approximately:',
-            options: ['$4$ times larger', '$2$ times larger', '$8$ times larger', 'The same'],
+            question: 'If $f(1) = 4$, $f\'(1) = -2$ and $f\'\'(x) < 0$ near $x = 1$, the tangent-line estimate of $f(1.1)$ is:',
+            options: ['$3.8$, an overestimate', '$3.8$, an underestimate', '$4.2$, an overestimate', '$4.2$, an underestimate'],
             correctAnswer: 0,
-            explanation: 'Error $\\propto (x-a)^2$. Doubling $(x-a)$: error $\\propto 4(x-a)^2$.'
+            explanation: '$L(1.1) = 4 - 2(0.1) = 3.8$. Concave down means the curve lies below its tangent line, so $3.8$ overestimates $f(1.1)$. Adding $0.2$ instead of subtracting gives $4.2$.'
           }
         ]
       }
@@ -132,15 +130,14 @@ export const calcabLinearizationPart7Data = {
       type: 'input-box' as const,
       content: '**Final Challenge.** \u270d\ufe0f',
       exercise: {
-        question: 'Use the linearization of $f(x) = x^3$ at $a = 2$ to approximate $(2.1)^3$.\n\nIf the answer is $\\frac{a}{b}$ in lowest terms, find $a + b$.\n\n(Enter an integer.)',
-        correctAnswer: '51',
-        acceptableAnswers: ['51'],
+        question: 'Use the linearization of $f(x) = x^3$ at $x = 2$ to approximate $(2.1)^3$. (Decimal or fraction.)',
+        correctAnswer: '9.2',
+        acceptableAnswers: ['9.2', '46/5'],
         hints: [
           '$f(2) = 8$, $f\'(x) = 3x^2$, $f\'(2) = 12$.',
-          '$L(2.1) = 8 + 12(0.1) = 9.2$.',
-          '$9.2 = 46/5$. $a + b = 46 + 5 = 51$.'
+          '$L(2.1) = 8 + 12(0.1)$.'
         ],
-        explanation: '$L(2.1) = 8 + 1.2 = 9.2 = 46/5$. $a + b = 46 + 5 = 51$.'
+        explanation: '$L(2.1) = 8 + 12(0.1) = 8 + 1.2 = 9.2$.'
       }
     },
     {

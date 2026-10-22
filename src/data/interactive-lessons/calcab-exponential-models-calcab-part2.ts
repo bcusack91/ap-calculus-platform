@@ -12,6 +12,8 @@ export const calcabExpModelsPart2Data = {
 
 $$\\boxed{\\frac{dT}{dt} = k(T - T_s)} \\quad \\text{where } k < 0$$
 
+The same law is often written $\\frac{dT}{dt} = -k(T - T_s)$ with $k > 0$ (the Differential Equations lesson uses that form). Both say the same thing; an AP problem always states which form it uses.
+
 ### The Solution
 
 $$\\boxed{T(t) = T_s + (T_0 - T_s)e^{kt}}$$

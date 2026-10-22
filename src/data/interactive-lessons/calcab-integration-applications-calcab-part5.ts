@@ -19,8 +19,8 @@ The integral of a rate of change gives the net change in the quantity.
 | Rate Function | What $\\int$ Gives | Units |
 |:---:|:---:|:---:|
 | $v(t)$ (velocity) | Displacement | distance |
-| $|v(t)|$ (speed) | Total distance | distance |
-| $R(t)$ (flow rate) | Net volume change | volume |
+| $\\lvert v(t)\\rvert$ (speed) | Total distance | distance |
+| $R(t)$ (flow rate) | Volume that flowed in (or out) | volume |
 | $P'(t)$ (pop. rate) | Net population change | count |
 | $C'(x)$ (marginal cost) | Total cost change | dollars |
 
@@ -46,7 +46,7 @@ $$\\boxed{Q(t) = Q_0 + \\int_0^t [R_{in}(s) - R_{out}(s)]\\,ds}$$
 
 "$\\int_a^b R(t)\\,dt = N$ means that $N$ [units] of [quantity] [entered/left] from $t=a$ to $t=b$."
 
-> **AP Tip:** The AP exam almost always asks you to **interpret** the integral in context. Include units and the time interval.`
+> **AP Tip:** The AP exam often asks you to **interpret** an integral in context. Name the quantity, its units, and the time interval.`
     },
     {
       id: 'ia5-quiz1',
@@ -132,7 +132,7 @@ $$\\boxed{Q(t) = Q_0 + \\int_0^t [R_{in}(s) - R_{out}(s)]\\,ds}$$
 | Rate in/out | $Q_0 + \\int_0^t(R_{in}-R_{out})ds$ |
 | Interpretation | Include units and time interval |
 
-> **Up Next:** Part 6 \u2014 Problem-Solving Workshop.`
+> **Up Next:** Part 6 \u2014 Practice Workshop.`
     }
   ]
 };

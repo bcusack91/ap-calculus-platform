@@ -81,7 +81,7 @@ export const calcabDerivExpLogPart7Data = {
       "exercise": {
         "dropdowns": [
           {
-            "label": "$\\frac{d}{dx}[e^x]$ appears on the AP formula sheet:",
+            "label": "Is $\\frac{d}{dx}[e^x]$ given to you on the AP Calculus exam?",
             "options": [
               "No — memorize it",
               "Yes — on the reference page",
@@ -103,7 +103,7 @@ export const calcabDerivExpLogPart7Data = {
           "No — memorize it",
           "Chain rule with $e^{g(x)}$"
         ],
-        "hint1": "The AP formula sheet has very few derivative formulas.",
+        "hint1": "AP Calculus provides no formula sheet.",
         "hint2": "AP loves testing chain rule with exponential and log compositions.",
         "explanation": "Memorize all derivative formulas. The AP primarily tests chain rule combinations."
       }

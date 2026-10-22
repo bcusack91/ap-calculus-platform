@@ -14,9 +14,7 @@ export const calcabLinearizationPart4Data = {
 |:---:|:---:|:---:|
 | Approximate change | $dy$ | $f'(x)\\,dx$ |
 | Exact change | $\\Delta y$ | $f(x+\\Delta x) - f(x)$ |
-| Absolute error | $|\\Delta y - dy|$ | Difference between actual and estimate |
-| Relative error | $\\frac{|\\Delta y - dy|}{|\\Delta y|}$ | Fraction of the actual change |
-| Percent error | $\\frac{|\\Delta y - dy|}{|\\Delta y|} \\times 100\\%$ | Relative error as percent |
+| Error of the estimate | $\\lvert \\Delta y - dy \\rvert$ | Difference between actual and estimate |
 
 ### Over or Under? Let Concavity Decide
 
@@ -82,11 +80,11 @@ Check: $\\sqrt{26} = 5.0990\\ldots$, so the absolute error is $|5.0990 - 5.1| \\
             explanation: '$|2.125 - 2.121| = 0.004$.'
           },
           {
-            label: 'The percent error is approximately:',
-            options: ['$0.19\\%$', '$1.9\\%$', '$19\\%$', '$0.019\\%$'],
-            correctAnswers: ['$0.19\\%$'],
-            hints: ['$0.004/2.121 \\times 100\\%$.'],
-            explanation: '$0.004/2.121 \\approx 0.0019 = 0.19\\%$.'
+            label: 'Is $L(4.5) = 2.125$ an overestimate or an underestimate of $\\sqrt{4.5}$?',
+            options: ['Overestimate, since $f\'\' < 0$', 'Underestimate, since $f\'\' < 0$', 'Overestimate, since $f\' > 0$', 'Underestimate, since $f\' > 0$'],
+            correctAnswers: ['Overestimate, since $f\'\' < 0$'],
+            hints: ['$f\'\'(x) = -\\frac{1}{4}x^{-3/2}$.'],
+            explanation: '$f\'\'(x) = -\\frac{1}{4}x^{-3/2} < 0$, so $\\sqrt{x}$ is concave down and lies below its tangent line: $2.125$ overestimates $\\sqrt{4.5} \\approx 2.121$. The sign of $f\'$ does not decide over or under.'
           },
           {
             label: 'If we used $a = 4$ to approximate $\\sqrt{10}$, the error would be:',
@@ -103,15 +101,14 @@ Check: $\\sqrt{26} = 5.0990\\ldots$, so the absolute error is $|5.0990 - 5.1| \\
       type: 'input-box' as const,
       content: '**Calculate the error.** \u270d\ufe0f',
       exercise: {
-        question: 'Use $L(x)$ for $f(x) = x^2$ at $a = 5$ to estimate $f(5.1)$. Find the absolute error $|\\Delta y - dy|$.\n\nIf the error is $\\frac{a}{b}$ in lowest terms, find $a + b$.\n\n(Enter an integer.)',
-        correctAnswer: '101',
-        acceptableAnswers: ['101'],
+        question: 'Use $L(x)$ for $f(x) = x^2$ at $x = 5$ to estimate $f(5.1)$. Find the error $|\\Delta y - dy|$ of the estimate. (Decimal or fraction.)',
+        correctAnswer: '0.01',
+        acceptableAnswers: ['0.01', '1/100'],
         hints: [
           '$L(5.1) = 25 + 10(0.1) = 26$.',
-          'Actual: $(5.1)^2 = 26.01$.',
-          '$|26.01 - 26| = 0.01 = 1/100$. $a + b = 1 + 100 = 101$.'
+          'Actual: $(5.1)^2 = 26.01$.'
         ],
-        explanation: '$dy = 2(5)(0.1) = 1$. $\\Delta y = 26.01 - 25 = 1.01$. Error $= 0.01 = 1/100$. $a + b = 101$.'
+        explanation: '$dy = 2(5)(0.1) = 1$ and $\\Delta y = 26.01 - 25 = 1.01$, so the error is $1.01 - 1 = 0.01$.'
       }
     },
     {
@@ -121,7 +118,7 @@ Check: $\\sqrt{26} = 5.0990\\ldots$, so the absolute error is $|5.0990 - 5.1| \\
 
 - The closer $x$ is to $a$, the smaller the error
 - Concave up $\\Rightarrow$ underestimate; concave down $\\Rightarrow$ overestimate
-- Absolute error $= |\\Delta y - dy|$; relative error $= |\\Delta y - dy|/|\\Delta y|$
+- Error of the estimate $= |\\Delta y - dy|$
 - Justify over/under with the sign of $f''$ near $a$, not with whether $f$ is increasing`
     }
   ]

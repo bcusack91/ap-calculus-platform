@@ -142,13 +142,7 @@ These look similar but have very different derivatives:
 | $x^5$ | $5x^4$ | Power Rule |
 | $5^3 = 125$ | $0$ | Constant |
 
-> **Key Principle:** Know the difference between: constant exponent (Power Rule), constant base (Exponential Rule), both variable (Log Differentiation).
-
-### FTC Part 1 + Chain Rule
-
-$$\\boxed{\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)}$$
-
-**Example:** $\\frac{d}{dx}\\int_0^{x^2} \\sin(t)\\,dt = \\sin(x^2) \\cdot 2x = 2x\\sin(x^2)$`
+> **Key Principle:** Know the difference between a constant exponent (Power Rule) and a constant base (Exponential Rule).`
     },
     {
       id: 'chain6-dropdown',
@@ -212,9 +206,8 @@ $$\\boxed{\\frac{d}{dx}\\int_a^{g(x)} f(t)\\,dt = f(g(x)) \\cdot g'(x)}$$
 |:---:|:---:|
 | Product Rule + Chain Rule | $x^2\\sin(3x)$ |
 | Quotient Rule + Chain Rule | $\\frac{e^{2x}}{x+1}$ |
-| Chain on logarithms | $\\ln(\\cos x) = -\\tan x$ |
+| Chain on logarithms | $\\frac{d}{dx}\\ln(\\cos x) = -\\tan x$ |
 | Table-based derivatives | $h(x) = f(g(x))$ |
-| FTC + Chain Rule | $\\frac{d}{dx}\\int_0^{g(x)} f(t)\\,dt$ |
 | Subtle distinctions | $(5x)^3$ vs $5x^3$ vs $5^x$ |
 
 > **Up Next:** Part 7 — Comprehensive Review & Final Assessment.`

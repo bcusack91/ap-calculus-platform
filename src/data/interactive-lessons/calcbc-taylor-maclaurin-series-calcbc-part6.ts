@@ -37,9 +37,9 @@ This workshop covers the full range of Taylor series tasks:
           },
           {
             question: '$\\int_0^{0.5} e^{-t^2}\\,dt$ approximated by the first 3 terms of the series equals:',
-            options: ['$0.5 - (0.5)^3/3 + (0.5)^5/10 \\approx 0.4615$', '$0.5 - 0.125/3 + 0.03125/10$', 'Both are equivalent and correct', '$e^{-0.25} - 1$'],
-            correctAnswer: 2,
-            explanation: '$e^{-t^2} = 1 - t^2 + t^4/2 - \\cdots$. $\\int_0^{0.5} = [t - t^3/3 + t^5/10]_0^{0.5} = 0.5 - 0.125/3 + 0.03125/10 = 0.5 - 0.04167 + 0.003125 \\approx 0.4615$. The two written forms are the same expression.'
+            options: ['$0.5 - (0.5)^3/3 + (0.5)^5/10 \\approx 0.4615$', '$0.5 - (0.5)^3 + (0.5)^5/2 \\approx 0.3906$', '$0.5 + (0.5)^3/3 + (0.5)^5/10 \\approx 0.5448$', '$0.5 - (0.5)^3/3 + (0.5)^5/5 \\approx 0.4646$'],
+            correctAnswer: 0,
+            explanation: '$e^{-t^2} = 1 - t^2 + t^4/2 - \\cdots$. $\\int_0^{0.5} = [t - t^3/3 + t^5/10]_0^{0.5} = 0.5 - 0.125/3 + 0.03125/10 = 0.5 - 0.04167 + 0.003125 \\approx 0.4615$. Leaving out the division by the new exponent gives $0.3906$; using $e^{t^2}$ (all plus signs) gives $0.5448$; and dividing $t^5$ by $5$ forgets the $\\frac{1}{2!}$ in the $t^4$ term, giving $0.4646$.'
           }
         ]
       }

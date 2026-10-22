@@ -38,7 +38,7 @@ $$\\dfrac{(x + 4) - 4}{x(\\sqrt{x + 4} + 2)} = \\dfrac{x}{x(\\sqrt{x + 4} + 2)} 
       id: 'rt3-tworad',
       type: 'text' as const,
       content: `
-## 🟰 Two Radicals
+## A Radical Minus a Constant (Written as a Root)
 
 Find $\\lim_{x \\to 3} \\dfrac{\\sqrt{x + 1} - \\sqrt{4}}{x - 3} = \\lim_{x \\to 3} \\dfrac{\\sqrt{x + 1} - 2}{x - 3}$.
 
@@ -97,8 +97,10 @@ $$\\dfrac{1 + x - 1}{x(\\sqrt{1 + x} + 1)} = \\dfrac{x}{x(\\sqrt{1 + x} + 1)} = 
 **2)** $\\lim_{x \\to 7} \\dfrac{\\sqrt{x + 2} - 3}{x - 7} = ?$ (fraction)
       `,
       exercise: {
-        boxes: 2,
-        correctAnswers: ['1/8', '1/6'],
+        questions: [
+          { question: '(1)', answer: '1/8', acceptableAnswers: ['1/8', '0.125'] },
+          { question: '(2)', answer: '1/6', acceptableAnswers: ['1/6', '0.1667', '0.167'] }
+        ],
         hint1: 'Conjugate: $\\sqrt{x + 16} + 4$. Final: $\\dfrac{1}{4 + 4}$.',
         hint2: 'Conjugate: $\\sqrt{x + 2} + 3$. Final: $\\dfrac{1}{3 + 3}$.',
         explanation: 'Both reduce to $\\dfrac{1}{2c}$ where $c$ is the constant after the radical evaluates.'

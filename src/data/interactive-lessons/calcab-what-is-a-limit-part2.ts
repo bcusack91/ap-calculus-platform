@@ -6,7 +6,7 @@ export const calcabWhatIsALimitPart2Data = {
       type: 'text' as const,
       content: `# 📝 Limit Notation
 
-**Part 2 of 7 — Reading and writing limits like a mathematician**
+**Part 2 of 4 — Reading and writing limits like a mathematician**
 
 ---
 

@@ -126,7 +126,7 @@ When in doubt, divide every term by the highest power of $x$ in the **denominato
 
 $$\\lim_{x \\to \\infty} \\frac{4x^2 - 3x + 1}{2x^2 + 5} = \\lim_{x \\to \\infty} \\frac{4 - \\frac{3}{x} + \\frac{1}{x^2}}{2 + \\frac{5}{x^2}} = \\frac{4 - 0 + 0}{2 + 0} = 2$$
 
-> **AP Tip:** This "divide by highest power" technique is the most reliable method and earns full credit on the AP exam.`
+> **AP Tip:** This "divide by highest power" is the most reliable method, and writing the divided form shows your reasoning.`
     },
     {
       id: 'lai1-concept-quiz',

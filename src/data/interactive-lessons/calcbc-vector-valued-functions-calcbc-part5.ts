@@ -36,9 +36,9 @@ $y(t) = \\int e^{-t}\\,dt = -e^{-t} + C_2$, $y(0) = 5 \\implies -1 + C_2 = 5 \\i
 
 $$\\vec{r}(t) = \\langle t^2 - t + 3,\\, -e^{-t} + 6 \\rangle$$
 
-**(b)** Speed at $t = 2$: $\\vec{v}(2) = \\langle 3, e^{-2} \\rangle$. Speed $= \\sqrt{9 + e^{-4}} \\approx 3.002$.
+**(b)** Speed at $t = 2$: $\\vec{v}(2) = \\langle 3, e^{-2} \\rangle$. Speed $= \\sqrt{9 + e^{-4}} \\approx 3.003$.
 
-**(c)** Total distance from $t = 0$ to $t = 3$: $\\int_0^3 \\sqrt{(2t-1)^2 + e^{-2t}}\\,dt \\approx 4.512$ (calculator).
+**(c)** Total distance from $t = 0$ to $t = 3$: $\\int_0^3 \\sqrt{(2t-1)^2 + e^{-2t}}\\,dt \\approx 6.865$ (calculator).
 
 **(d)** $\\vec{a}(t) = \\langle 2, -e^{-t} \\rangle$. At $t = 1$: $\\vec{a}(1) = \\langle 2, -e^{-1} \\rangle$.`
     },
@@ -77,7 +77,7 @@ $$\\vec{r}(t) = \\langle t^2 - t + 3,\\, -e^{-t} + 6 \\rangle$$
             explanation: '$\\vec{v}(t) = \\langle 2t, 3t^2 \\rangle = \\vec{0}$ when $2t = 0$ AND $3t^2 = 0$, so $t = 0$.'
           },
           {
-            label: 'The direction of motion changes when:',
+            label: 'The horizontal (or vertical) direction of motion reverses when:',
             options: ['A component of velocity changes sign', 'The speed reaches a minimum value', 'The acceleration vector is zero', 'The curve crosses over itself'],
             correctAnswers: ['A component of velocity changes sign'],
             hints: ['In 2D, the particle reverses direction along an axis when that velocity component changes sign.'],
@@ -106,7 +106,7 @@ $$\\vec{r}(t) = \\langle t^2 - t + 3,\\, -e^{-t} + 6 \\rangle$$
 - AP FRQs follow a predictable pattern: position → speed → distance → acceleration
 - Always show integral setup before calculator evaluation
 - "At rest" means $\\vec{v} = \\vec{0}$ (both components zero)
-- Direction changes when individual velocity components change sign
+- The horizontal (vertical) direction reverses when $x'(t)$ ($y'(t)$) changes sign
 
 > **Next:** Part 6 — Problem-Solving Workshop.`
     }

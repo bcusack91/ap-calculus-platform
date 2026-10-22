@@ -100,16 +100,16 @@ $$V = \\pi\\int_0^1(x^2 - x^4)\\,dx = \\pi\\left[\\frac{x^3}{3}-\\frac{x^5}{5}\\
       type: 'input-box' as const,
       content: '**Calculate.** \u270d\ufe0f',
       exercise: {
-        question: 'Region between $y=4$ and $y=x^2$ rotated about the $x$-axis. Volume $= \\frac{a\\pi}{b}$. Find $a+b$ where $\\frac{a}{b}$ is in lowest terms.\n\n(Enter an integer.)',
-        correctAnswer: '261',
-        acceptableAnswers: ['261'],
+        question: 'The region between $y=4$ and $y=x^2$ is rotated about the $x$-axis. Find the volume. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '256pi/5',
+        acceptableAnswers: ['256pi/5', '256π/5', '(256/5)pi', '160.850', '160.849'],
         hints: [
           'Intersect at $x = \\pm 2$. $R=4$, $r=x^2$.',
           '$V = \\pi\\int_{-2}^2(16-x^4)\\,dx = 2\\pi\\int_0^2(16-x^4)\\,dx$.',
           '$= 2\\pi[16x-\\frac{x^5}{5}]_0^2 = 2\\pi(32-\\frac{32}{5})$.',
-          '$= 2\\pi \\cdot \\frac{128}{5} = \\frac{256\\pi}{5}$. So $a=256$, $b=5$.'
+          '$= 2\\pi \\cdot \\frac{128}{5} = \\frac{256\\pi}{5}$.'
         ],
-        explanation: '$V = \\frac{256\\pi}{5}$. $a=256$, $b=5$, so $a+b=261$.'
+        explanation: '$V = \\pi\\int_{-2}^2(16-x^4)\\,dx = \\frac{256\\pi}{5} \\approx 160.850$.'
       }
     },
     {

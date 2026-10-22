@@ -55,7 +55,7 @@ Same algebra, but now $x < 0$, so $|x| = -x$:
 
 $$\\frac{x}{-x\\sqrt{1 + 3/x^2}} = \\frac{-1}{\\sqrt{1 + 0}} = -1$$
 
-> ⚠️ **Warning:** The sign of $x$ matters critically when extracting $x$ from $\\sqrt{x^2}$. This is the most common source of errors on the AP exam for this topic.
+> ⚠️ **Warning:** The sign of $x$ matters critically when extracting $x$ from $\\sqrt{x^2}$. This is the most common error on these problems.
 
 ---
 

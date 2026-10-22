@@ -119,11 +119,11 @@ export const calcbcPartialFracPart7Data = {
       type: 'input-box' as const,
       content: '**Final Computation**',
       exercise: {
-        question: 'Evaluate $\\int \\frac{3x+5}{(x+1)(x+2)}\\,dx$ at $x = e - 1$ minus the value at $x = 0$. That is: $\\int_0^{e-1} \\frac{3x+5}{(x+1)(x+2)}\\,dx$. Using $2\\ln|x+1| + \\ln|x+2|$, evaluate: $[2\\ln|x+1| + \\ln|x+2|]_0^{e-1}$. At $x = e-1$: $2\\ln e + \\ln(e+1) = 2 + \\ln(e+1)$. At $x = 0$: $0 + \\ln 2$. The answer is $2 + \\ln\\frac{e+1}{2}$. Approximately, if $e \\approx 2.718$, what integer is closest to this value?',
-        correctAnswer: '3',
-        acceptableAnswers: ['3'],
-        hints: ['$\\ln\\frac{e+1}{2} \\approx \\ln\\frac{3.718}{2} \\approx \\ln(1.859) \\approx 0.62$.', '$2 + 0.62 \\approx 2.62$. Closest integer: $3$.'],
-        explanation: '$2 + \\ln\\frac{e+1}{2} \\approx 2 + 0.62 = 2.62$. The closest integer is $3$.'
+        question: 'Evaluate $\\int_0^{e-1} \\frac{3x+5}{(x+1)(x+2)}\\,dx$ using partial fractions. Give the value to three decimal places.',
+        correctAnswer: '2.620',
+        acceptableAnswers: ['2.620', '2.62', '2+ln((e+1)/2)'],
+        hints: ['Partial fractions: $\\frac{3x+5}{(x+1)(x+2)} = \\frac{2}{x+1} + \\frac{1}{x+2}$.', 'The antiderivative $2\\ln|x+1| + \\ln|x+2|$ equals $2 + \\ln(e+1)$ at $x = e - 1$ and $\\ln 2$ at $x = 0$.'],
+        explanation: 'Cover-up gives $A = \\frac{-3+5}{1} = 2$ and $B = \\frac{-6+5}{-1} = 1$. Then $[2\\ln|x+1| + \\ln|x+2|]_0^{e-1} = 2 + \\ln(e+1) - \\ln 2 = 2 + \\ln\\frac{e+1}{2} \\approx 2.620$.'
       }
     },
     {

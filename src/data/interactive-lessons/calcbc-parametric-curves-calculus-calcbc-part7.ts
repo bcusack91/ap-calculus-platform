@@ -103,11 +103,11 @@ Master all parametric curve concepts: equations, derivatives, concavity, arc len
       type: 'input-box' as const,
       content: '**Final Computation**',
       exercise: {
-        question: 'For $x = t^2$, $y = t^3$, find the arc length from $t = 0$ to $t = 1$. The integral becomes $\\int_0^1 t\\sqrt{4+9t^2}\\,dt$. Using $u = 4+9t^2$: the result is $\\frac{1}{27}(13\\sqrt{13}-8)$. Compute $13\\sqrt{13}$ rounded to 1 decimal place.',
-        correctAnswer: '46.9',
-        acceptableAnswers: ['46.9', '46.87'],
-        hints: ['$13\\sqrt{13} = 13 \\times 3.6056... \\approx 46.87$', 'Round to 1 decimal: $46.9$.'],
-        explanation: '$\\sqrt{13} \\approx 3.6056$. $13 \\times 3.6056 \\approx 46.87$, which rounds to $46.9$. The full arc length is $\\frac{46.87-8}{27} \\approx 1.44$.'
+        question: 'For $x = t^2$, $y = t^3$, find the arc length from $t = 0$ to $t = 1$. Give the value to three decimal places.',
+        correctAnswer: '1.440',
+        acceptableAnswers: ['1.440', '1.44', '(13sqrt(13)-8)/27'],
+        hints: ['$L = \\int_0^1 \\sqrt{(2t)^2 + (3t^2)^2}\\,dt = \\int_0^1 t\\sqrt{4 + 9t^2}\\,dt$ for $t \\ge 0$.', 'With $u = 4 + 9t^2$, $du = 18t\\,dt$: $L = \\frac{1}{27}\\left[u^{3/2}\\right]_4^{13}$.'],
+        explanation: '$L = \\frac{1}{18}\\int_4^{13}\\sqrt{u}\\,du = \\frac{1}{27}(13\\sqrt{13} - 8) \\approx \\frac{46.872 - 8}{27} \\approx 1.440$.'
       }
     },
     {

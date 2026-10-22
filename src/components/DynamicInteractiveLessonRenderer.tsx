@@ -13,6 +13,7 @@ import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import { renderRichText } from '@/lib/render-rich-text'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
+import { protectTableMathPipes } from '@/lib/table-math-pipes'
 import { useLessonProgressSaver } from '@/hooks/useLessonProgressSaver'
 import { postQuestionActivity } from '@/lib/question-activity-client'
 
@@ -736,7 +737,7 @@ export default function DynamicInteractiveLessonRenderer({
             rehypePlugins={[rehypeKatex, rehypeRaw]}
             components={markdownComponents}
           >
-            {escapeCurrencyMath(currentSection.content)}
+            {protectTableMathPipes(escapeCurrencyMath(currentSection.content))}
           </ReactMarkdown>
 
           {/* Inline understanding check */}

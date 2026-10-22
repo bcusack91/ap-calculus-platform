@@ -98,15 +98,14 @@ $dy = 0.12$ vs $\\Delta y \\approx 0.1206$ \u2014 very close!
       type: 'input-box' as const,
       content: '**Compute the differential.** \u270d\ufe0f',
       exercise: {
-        question: '$y = x^3 + 2x$. Find $dy$ when $x = 1$ and $dx = 0.1$.\n\nIf $dy = \\frac{a}{b}$ in lowest terms, find $a + b$.\n\n(Enter an integer.)',
-        correctAnswer: '3',
-        acceptableAnswers: ['3'],
+        question: '$y = x^3 + 2x$. Find $dy$ when $x = 1$ and $dx = 0.1$. (Decimal or fraction.)',
+        correctAnswer: '0.5',
+        acceptableAnswers: ['0.5', '1/2'],
         hints: [
           '$dy = (3x^2 + 2)\\,dx$.',
-          'At $x=1$: $dy = (3 + 2)(0.1) = 5(0.1) = 0.5$.',
-          '$0.5 = 1/2$. $a + b = 1 + 2 = 3$.'
+          'At $x=1$: $dy = (3 + 2)(0.1)$.'
         ],
-        explanation: '$dy = 5(0.1) = 0.5 = 1/2$. $a + b = 1 + 2 = 3$.'
+        explanation: '$dy = (3x^2 + 2)\\,dx = 5(0.1) = 0.5$.'
       }
     },
     {

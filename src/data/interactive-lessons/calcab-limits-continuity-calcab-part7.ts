@@ -24,7 +24,7 @@ export const calcabLimitsPart7Data = {
 | Continuity Check | 3 conditions | $f(c)$ defined, limit exists, they match |
 | IVT | Existence of roots | Continuous + sign change |
 
-> 🔑 **Key Principle:** Mastering limits is the foundation for ALL of calculus — derivatives, integrals, and series all rely on limits.`
+> 🔑 **Key Principle:** Mastering limits is the foundation for ALL of calculus — derivatives and integrals both rely on limits.`
     },
     {
       id: 'limit7-connections',
@@ -50,7 +50,7 @@ $$\\lim_{x \\to c} \\frac{f(x)}{g(x)} = \\lim_{x \\to c} \\frac{f'(x)}{g'(x)} \\
 
 For now, the algebraic techniques from this unit are the foundation.
 
-> **AP Tip:** The AP exam tests limits in multiple-choice (computation), free-response (justification with IVT/continuity), and implicitly through derivative and integral problems. Expect 3–5 direct limit questions plus many indirect ones.`
+> **AP Tip:** The AP exam tests limits in multiple-choice (computation), free-response (justification with IVT/continuity), and implicitly through derivative and integral problems. Expect direct limit questions plus many indirect ones.`
     },
     {
       id: 'limit7-quiz1',
@@ -101,15 +101,15 @@ For now, the algebraic techniques from this unit are the foundation.
 
 ---
 
-### Grading Rubric (How AP Readers Score This)
+### What a Complete IVT Justification Needs
 
-| Point | Requirement |
+| Element | Requirement |
 |-------|------------|
-| 1 | States $f$ is continuous (with reason) |
-| 1 | Computes $f(a)$ and $f(b)$ correctly |
-| 1 | Notes $0$ is between $f(a)$ and $f(b)$, invokes IVT, states conclusion |
+| Continuity | States $f$ is continuous on $[a, b]$ (with a reason) |
+| Endpoint values | Computes $f(a)$ and $f(b)$ correctly |
+| Conclusion | Notes $N$ is between $f(a)$ and $f(b)$, invokes IVT, states the conclusion |
 
-> **AP Tip:** Forgetting to state "$f$ is continuous" costs you a point every time. It's the most common mistake on IVT problems.`
+> **AP Tip:** An IVT conclusion without the statement that $f$ is continuous on $[a, b]$ is incomplete — always state it.`
     },
     {
       id: 'limit7-quiz2',

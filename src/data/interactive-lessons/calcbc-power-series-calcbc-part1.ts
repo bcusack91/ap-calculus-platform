@@ -22,7 +22,7 @@ When $c = 0$, this is a **Maclaurin-type** power series: $\\sum a_n x^n$.
 |------|---------|
 | **Center** $c$ | The point about which the series is expanded |
 | **Coefficients** $a_n$ | The constants multiplying each power |
-| **Radius of convergence** $R$ | Series converges for $|x - c| < R$ |
+| **Radius of convergence** $R$ | Series converges for $\\lvert x - c\\rvert < R$ |
 | **Interval of convergence** | Full interval including endpoint analysis |
 
 ### Three Convergence Possibilities

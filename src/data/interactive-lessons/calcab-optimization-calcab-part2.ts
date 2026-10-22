@@ -30,9 +30,9 @@ $$V'(x) = 12x^2 - 80x + 96 = 4(3x^2 - 20x + 24)$$
 
 $$x = \\frac{20 \\pm \\sqrt{400-288}}{6} = \\frac{20 \\pm \\sqrt{112}}{6}$$
 
-$x \\approx 1.57$ (only solution in domain). $\\boxed{V_{\\max} \\approx 67.6 \\text{ cubic units}}$
+$x = \\frac{20 - \\sqrt{112}}{6} \\approx 1.569$ is the only critical point in $(0, 4)$ (the other root is about $5.10$). $V' > 0$ on $(0, 1.569)$ and $V' < 0$ on $(1.569, 4)$, so it gives the absolute maximum: $\\boxed{V_{\\max} \\approx 67.604 \\text{ cubic units}}$
 
-> **AP Tip:** When asked to "set up but do not solve," write $V(x)$, state the domain, and show $V'(x) = 0$. You earn full credit without solving the quadratic.
+> **AP Tip:** Always state the domain of the objective function. It decides which critical points count, and whether endpoints must be checked.
 
 ### Worked Example: Closest Point
 

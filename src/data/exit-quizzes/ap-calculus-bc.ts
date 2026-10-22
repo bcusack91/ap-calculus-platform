@@ -366,9 +366,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'If $f(x)$ has the Maclaurin series $\\sum a_n x^n$, then $f\'(0)$ equals:',
-    options: ['$a_0$', '$a_1$', '$2a_2$', '$a_1 \\cdot 1!$'],
+    options: ['$a_0$', '$a_1$', '$2a_2$', '$6a_3$'],
     correctAnswer: 1,
-    explanation: 'In a Maclaurin series, $a_{n}$ = $f^{(n)}(0)/n$!. So $a_{1}$ = f\'(0)/1! = f\'(0).',
+    explanation: 'In a Maclaurin series, $a_n = f^{(n)}(0)/n!$, so $a_1 = f\'(0)/1! = f\'(0)$. The other choices are $a_0 = f(0)$, $2a_2 = f\'\'(0)$, and $6a_3 = f\'\'\'(0)$.',
     difficulty: 'easy',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -552,9 +552,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: '$\\displaystyle\\int \\sec^2 x \\tan x\\,dx =$',
-    options: ['$\\frac{\\tan^2 x}{2}+C$', '$\\sec^2 x + C$', '$\\ln|\\sec x|+C$', '$\\frac{\\sec^2 x}{2}+C$'],
+    options: ['$\\frac{\\tan^2 x}{2}+C$', '$\\sec^2 x + C$', '$\\ln|\\sec x|+C$', '$\\frac{\\tan^3 x}{3}+C$'],
     correctAnswer: 0,
-    explanation: 'Let u = tan x, du = $\\sec^{2}x$ dx. $\\int \\sec^{2}x$ tan x dx = ∫u du = $u^{2}/2$ + C = $\\tan^{2}x/2$ + C.',
+    explanation: 'Let $u = \\tan x$, $du = \\sec^2 x\\,dx$. Then $\\int \\sec^2 x \\tan x\\,dx = \\int u\\,du = \\frac{u^2}{2} + C = \\frac{\\tan^2 x}{2} + C$. The derivative of $\\sec^2 x$ is $2\\sec^2 x\\tan x$ (twice the integrand), $\\ln|\\sec x|$ is an antiderivative of $\\tan x$ alone, and $\\frac{\\tan^3 x}{3}$ raises the power without a matching $du$.',
     difficulty: 'easy',
     domain: 'advanced-integration',
     topicSlug: 'advanced-integration-calcbc',
@@ -906,10 +906,10 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     part: 1,
   },
   {
-    question: '$\\displaystyle\\int x\\arcsin x\\,dx$ is best evaluated using:',
-    options: ['A $u$-substitution with $u = x^2$', 'A trigonometric substitution', 'Integration by parts', 'Partial fraction decomposition'],
+    question: '$\\displaystyle\\int x\\arctan x\\,dx$ is best evaluated using:',
+    options: ['A $u$-substitution with $u = x^2$', 'Partial fraction decomposition', 'Integration by parts', 'Long division of $x$ by $1 + x^2$'],
     correctAnswer: 2,
-    explanation: 'The integrand is a polynomial times an inverse trig function, so integration by parts with $u = \\arcsin x$ and $dv = x\\,dx$ is the approach. $u = x^2$ does not produce the needed $du$, there is no radical to substitute away at the start, and the integrand is not a rational function.',
+    explanation: 'The integrand is a polynomial times an inverse trig function, so integrate by parts with $u = \\arctan x$ and $dv = x\\,dx$: the result is $\\frac{x^2}{2}\\arctan x - \\frac{1}{2}\\int \\frac{x^2}{1+x^2}\\,dx$, and the leftover integral is finished with $\\frac{x^2}{1+x^2} = 1 - \\frac{1}{1+x^2}$. $u = x^2$ does not produce the needed $du$, the integrand is not a rational function, and long division only helps after the parts step.',
     difficulty: 'easy',
     domain: 'advanced-integration',
     topicSlug: 'integration-by-parts-calcbc',
@@ -1280,15 +1280,15 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     part: 2,
   },
   {
-    question: '$\\int_0^{2\\pi}\\sqrt{(-2\\sin t)^2 + (3\\cos t)^2}\\,dt$ represents the arc length of which curve?',
+    question: '$\\int_0^{2\\pi}\\sqrt{(-2\\sin t)^2 + (3\\cos t)^2}\\,dt$ is the arc length integral, built from $dx/dt$ and $dy/dt$, of which curve for $0 \\le t \\le 2\\pi$?',
     options: [
       '$x = 2\\cos t$, $y = 3\\sin t$',
-      '$x = 3\\cos t$, $y = 2\\sin t$',
-      '$r = 2\\sin\\theta + 3\\cos\\theta$',
-      '$x = -2\\sin t$, $y = 3\\cos t$'
+      '$x = 2\\cos t$, $y = 3\\cos t$',
+      '$x = 4\\cos t$, $y = 9\\sin t$',
+      '$x = 2\\sin t$, $y = 3\\cos 2t$'
     ],
     correctAnswer: 0,
-    explanation: 'If x = 2cos t, y = 3sin t: dx/dt = −2sin t, dy/dt = 3cos t. That matches the integrand.',
+    explanation: 'For $x = 2\\cos t$, $y = 3\\sin t$: $dx/dt = -2\\sin t$ and $dy/dt = 3\\cos t$, which match the integrand exactly. $x = 2\\cos t$, $y = 3\\cos t$ gives $dy/dt = -3\\sin t$; $x = 4\\cos t$, $y = 9\\sin t$ squares the coefficients that belong inside the square root; and $x = 2\\sin t$, $y = 3\\cos 2t$ gives $dx/dt = 2\\cos t$ and $dy/dt = -6\\sin 2t$.',
     difficulty: 'medium',
     domain: 'parametric-polar-vector',
     topicSlug: 'arc-length-surface-area-calcbc',
@@ -1934,15 +1934,15 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     part: 7,
   },
   {
-    question: 'A rearrangement of a conditionally convergent series:',
+    question: 'The series $\\displaystyle\\sum_{n=2}^{\\infty} \\frac{(-1)^n}{n\\ln n}$:',
     options: [
-      'Always has the same sum',
-      'Can be made to sum to any real number',
-      'Always diverges',
-      'Must also converge conditionally'
+      'Converges absolutely',
+      'Converges conditionally',
+      'Diverges, because $\\sum \\frac{1}{n\\ln n}$ diverges',
+      'Diverges by the $n$th term test'
     ],
     correctAnswer: 1,
-    explanation: 'By the Riemann rearrangement theorem, a conditionally convergent series can be rearranged to converge to any value.',
+    explanation: 'For $\\sum \\frac{1}{n\\ln n}$, the integral test gives $\\int_2^{\\infty} \\frac{dx}{x\\ln x} = \\lim_{b\\to\\infty} \\left[\\ln(\\ln x)\\right]_2^b = \\infty$, so the series does not converge absolutely. But $b_n = \\frac{1}{n\\ln n}$ is positive, decreasing, and tends to $0$, so the alternating series converges by the AST: conditionally convergent. Divergence of $\\sum \\lvert a_n\\rvert$ only rules out absolute convergence, and the terms do go to $0$.',
     difficulty: 'hard',
     domain: 'sequences-series',
     topicSlug: 'infinite-series-calcbc',
@@ -2209,7 +2209,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     question: 'The Maclaurin series for $\\arctan x$ is:',
     options: ['$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n x^{2n+1}}{2n+1}$', '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{x^{2n+1}}{(2n+1)!}$', '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n x^n}{n}$', '$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{(-1)^n x^{2n+1}}{(2n+1)!}$'],
     correctAnswer: 0,
-    explanation: '$\\arctan x = \\int_0^x \\frac{dt}{1+t^2} = \\int_0^x \\sum (-1)^n t^{2n}\\,dt = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$ for $|x| \\le 1$. Factorials in the denominator give $\\sin x$ (alternating) or $\\sinh x$ (not alternating), and odd powers are required because $\\arctan$ is odd.',
+    explanation: '$\\arctan x = \\int_0^x \\frac{dt}{1+t^2} = \\int_0^x \\sum (-1)^n t^{2n}\\,dt = \\sum \\frac{(-1)^n x^{2n+1}}{2n+1}$ for $|x| \\le 1$. Factorials in the denominator give $\\sin x$ (alternating) or the series for $\\frac{e^x - e^{-x}}{2}$ (not alternating), and odd powers are required because $\\arctan$ is odd.',
     difficulty: 'medium',
     domain: 'taylor-series',
     topicSlug: 'taylor-maclaurin-series-calcbc',
@@ -2475,9 +2475,9 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   },
   {
     question: 'The Lagrange Error Bound for the $n$th degree Taylor polynomial uses the $(n+1)$th derivative because:',
-    options: ['The first omitted term controls the remainder', 'The $(n+1)$th derivative is always the largest one', 'It makes the bound easier to compute', 'Higher derivatives are always smaller'],
+    options: ['Its remainder formula involves $f^{(n+1)}$ at some point', 'The $(n+1)$th derivative is always the largest one', 'It makes the bound easier to compute', 'Higher derivatives are always smaller'],
     correctAnswer: 0,
-    explanation: '$P_n$ matches $f$ through the $n$th derivative, so the remainder is governed by the first term it leaves out, which involves $f^{(n+1)}$. The $(n+1)$th derivative need not be the largest or smallest, and the choice follows from Taylor\'s Theorem, not convenience.',
+    explanation: '$P_n$ matches $f$ through the $n$th derivative, and Taylor\'s Theorem expresses the remainder $R_n(x)$ in terms of $f^{(n+1)}$ at some point between the center and $x$. The $(n+1)$th derivative need not be the largest or smallest, and the choice follows from Taylor\'s Theorem, not convenience.',
     difficulty: 'easy',
     domain: 'taylor-series',
     topicSlug: 'lagrange-error-bound-calcbc',
@@ -2485,7 +2485,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     part: 1,
   },
   {
-    question: 'For $f(x) = \\sin x$, the Lagrange error bound for $P_5(x)$ on $|x| \\leq 1$ is at most:',
+    question: 'For $f(x) = \\sin x$, what is the Lagrange error bound for $P_5(x)$ on $|x| \\leq 1$, using $M = 1$?',
     options: ['$\\frac{1}{720}$', '$\\frac{1}{120}$', '$\\frac{1}{6}$', '$\\frac{1}{360}$'],
     correctAnswer: 0,
     explanation: '$|R_5(x)| \\le \\frac{M|x|^6}{6!}$ with $M = \\max|f^{(6)}(c)| = \\max|\\sin c| \\le 1$ and $|x| \\le 1$, so the bound is $\\frac{1}{720}$. Using $5!$ uses the degree instead of degree plus one, $\\frac{1}{6}$ forgets the factorial, and $\\frac{1}{360}$ uses the interval width $2$ instead of $|x - 0| \\le 1$.',
@@ -3086,7 +3086,7 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     part: 2,
   },
   {
-    question: 'The logistic function $P(t) = L/(1+Ce^{-kt})$ has a horizontal asymptote at:',
+    question: 'With $C, k > 0$ and $t$ ranging over all real numbers, the logistic function $P(t) = L/(1+Ce^{-kt})$ has horizontal asymptotes (as $t \\to \\pm\\infty$) at:',
     options: ['$P = L$ and $P = 0$', '$P = L$ only', '$P = k$', '$t = 0$'],
     correctAnswer: 0,
     explanation: 'As t → ∞, P → L (upper asymptote). As t → −∞, P → 0 (lower asymptote). Both are horizontal asymptotes.',
@@ -3507,10 +3507,10 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
     difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 1,
   },
   {
-    question: 'Bound the error in approximating $\\sin(0.1)$ by the Taylor polynomial $T_3(x)$ centered at $0$.',
-    options: ['$\\le \\dfrac{(0.1)^4}{4!}$', '$\\le 0.1$', '$\\le 1$', '$\\le \\dfrac{(0.1)^3}{3!}$'],
+    question: '$\\sin(0.1)$ is approximated by the Taylor polynomial $T_3(x)$ centered at $0$. What is the Lagrange error bound with $n = 3$ and $M = 1$?',
+    options: ['$\\dfrac{(0.1)^4}{4!}$', '$\\dfrac{(0.1)^4}{3!}$', '$\\dfrac{(0.1)^5}{5!}$', '$\\dfrac{(0.1)^3}{3!}$'],
     correctAnswer: 0,
-    explanation: '$|R_3(x)| \\le \\dfrac{M}{4!}|x|^4$ with $M = 1$.',
+    explanation: '$|R_3(x)| \\le \\dfrac{M|x|^4}{4!}$ with $M = 1$ and $x = 0.1$, so the bound is $\\frac{(0.1)^4}{4!}$. Dividing by $3!$ pairs the right power with the wrong factorial, $\\frac{(0.1)^5}{5!}$ is the alternating series bound (the next nonzero term), not the Lagrange bound with $n = 3$, and $\\frac{(0.1)^3}{3!}$ is the last term kept, not the remainder.',
     difficulty: 'medium', domain: 'taylor-series', topicSlug: 'lagrange-error-bound-calcbc', formSet: 'both', part: 6,
   },
   {
@@ -3856,8 +3856,8 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   { question: 'A power series $y = a_0 + a_1 x + a_2 x^2 + \\cdots$ satisfies $y\' = x + 2y$ with $y(0) = 1$. What is $a_2$?', options: ['$2$', '$5$', '$\\dfrac{1}{2}$', '$\\dfrac{5}{2}$'], correctAnswer: 3, explanation: 'Here $a_0 = 1$, and matching coefficients in $a_1 + 2a_2 x + \\cdots = 2a_0 + (1 + 2a_1)x + \\cdots$ gives $a_1 = 2$ and $2a_2 = 1 + 2a_1 = 5$, so $a_2 = \\frac{5}{2}$. Leaving out the $x$ term gives $2a_2 = 4$ and $a_2 = 2$, forgetting to divide by 2 gives 5, and keeping only the $x$ term gives $\\frac{1}{2}$.', difficulty: 'hard', domain: 'taylor-series', topicSlug: 'power-series-calcbc', formSet: 'both', part: 5 },
 
   // -- taylor-maclaurin-series-calcbc --
-  { question: 'The second-degree Maclaurin polynomial for $e^x$ is used to approximate $e^{0.3}$. Which expression is a valid Lagrange error bound?', options: ['$\\dfrac{e^{0.3}(0.3)^2}{2}$', '$\\dfrac{(0.3)^3}{6}$', '$\\dfrac{e^{0.3}(0.3)^3}{6}$', '$\\dfrac{e^{0.3}(0.3)^3}{24}$'], correctAnswer: 2, explanation: 'With $n = 2$, $|R_2(0.3)| \\le \\frac{M(0.3)^3}{3!}$, where $M$ bounds $|f\'\'\'(t)| = e^t$ on $[0, 0.3]$, so $M = e^{0.3}$. Using $(0.3)^2$ and $2!$ uses $n$ instead of $n + 1$, $M = 1$ works for sine and cosine but $e^t$ exceeds 1 on this interval, and dividing by $4!$ uses the factorial for the next degree up.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'taylor-maclaurin-series-calcbc', formSet: 'both', part: 4 },
-  { question: 'The second-degree Taylor polynomial for $f(x) = \\ln x$ about $x = 1$ is used to approximate $\\ln(1.2)$. Since $f\'\'\'(x) = \\dfrac{2}{x^3}$, which is a valid Lagrange error bound?', options: ['$\\dfrac{(0.2)^3}{3(1.2)^3}$', '$\\dfrac{(0.2)^2}{2!}$', '$\\dfrac{2(0.2)^3}{3}$', '$\\dfrac{(0.2)^3}{3}$'], correctAnswer: 3, explanation: 'On $[1, 1.2]$, $|f\'\'\'(t)| = \\frac{2}{t^3}$ is largest at $t = 1$, so $M = 2$ and $|R_2| \\le \\frac{2(0.2)^3}{3!} = \\frac{(0.2)^3}{3}$. Taking $M$ at $t = 1.2$ uses the smallest value instead of the largest, $\\frac{(0.2)^2}{2!}$ uses $n$ instead of $n + 1$, and $\\frac{2(0.2)^3}{3}$ divides by 3 instead of $3! = 6$.', difficulty: 'hard', domain: 'taylor-series', topicSlug: 'taylor-maclaurin-series-calcbc', formSet: 'both', part: 4 },
+  { question: 'The second-degree Maclaurin polynomial for $e^x$ is used to approximate $e^{0.3}$. Which expression is the Lagrange error bound?', options: ['$\\dfrac{e^{0.3}(0.3)^2}{2}$', '$\\dfrac{(0.3)^3}{6}$', '$\\dfrac{e^{0.3}(0.3)^3}{6}$', '$\\dfrac{e^{0.3}(0.3)^3}{24}$'], correctAnswer: 2, explanation: 'With $n = 2$, $|R_2(0.3)| \\le \\frac{M(0.3)^3}{3!}$, where $M$ bounds $|f\'\'\'(t)| = e^t$ on $[0, 0.3]$, so $M = e^{0.3}$. Using $(0.3)^2$ and $2!$ uses $n$ instead of $n + 1$, $M = 1$ works for sine and cosine but $e^t$ exceeds 1 on this interval, and dividing by $4!$ uses the factorial for the next degree up.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'taylor-maclaurin-series-calcbc', formSet: 'both', part: 4 },
+  { question: 'The second-degree Taylor polynomial for $f(x) = \\ln x$ about $x = 1$ is used to approximate $\\ln(1.2)$. Since $f\'\'\'(x) = \\dfrac{2}{x^3}$, which is the Lagrange error bound?', options: ['$\\dfrac{(0.2)^3}{3(1.2)^3}$', '$\\dfrac{(0.2)^2}{2!}$', '$\\dfrac{2(0.2)^3}{3}$', '$\\dfrac{(0.2)^3}{3}$'], correctAnswer: 3, explanation: 'On $[1, 1.2]$, $|f\'\'\'(t)| = \\frac{2}{t^3}$ is largest at $t = 1$, so $M = 2$ and $|R_2| \\le \\frac{2(0.2)^3}{3!} = \\frac{(0.2)^3}{3}$. Taking $M$ at $t = 1.2$ uses the smallest value instead of the largest, $\\frac{(0.2)^2}{2!}$ uses $n$ instead of $n + 1$, and $\\frac{2(0.2)^3}{3}$ divides by 3 instead of $3! = 6$.', difficulty: 'hard', domain: 'taylor-series', topicSlug: 'taylor-maclaurin-series-calcbc', formSet: 'both', part: 4 },
   { question: 'Which is the general term of the Maclaurin series for $\\sin(3x)$?', options: ['$\\dfrac{(-1)^n 3x^{2n+1}}{(2n+1)!}$', '$\\dfrac{(-1)^n 3^{2n+1} x^{2n+1}}{(2n+1)!}$', '$\\dfrac{(-1)^n 3^{2n+1} x^{2n+1}}{2n+1}$', '$\\dfrac{(-1)^n 3^{2n} x^{2n}}{(2n)!}$'], correctAnswer: 1, explanation: 'Substituting $3x$ into $\\sin u = \\sum \\frac{(-1)^n u^{2n+1}}{(2n+1)!}$ gives $\\frac{(-1)^n (3x)^{2n+1}}{(2n+1)!} = \\frac{(-1)^n 3^{2n+1} x^{2n+1}}{(2n+1)!}$. Writing $3x^{2n+1}$ fails to raise the 3 to the power, dividing by $2n + 1$ instead of $(2n+1)!$ is the arctangent pattern, and even powers over $(2n)!$ give $\\cos(3x)$.', difficulty: 'medium', domain: 'taylor-series', topicSlug: 'taylor-maclaurin-series-calcbc', formSet: 'both', part: 5 },
 
   // -- lagrange-error-bound-calcbc --
@@ -3906,6 +3906,18 @@ export const calcBCQuestionPool: CalcBCQuestion[] = [
   { question: 'Which sequence diverges?', options: ['$a_n = \\dfrac{3^n}{n!}$', '$a_n = \\dfrac{n!}{3^n}$', '$a_n = \\dfrac{\\ln n}{n}$', '$a_n = \\dfrac{n^5}{2^n}$'], correctAnswer: 1, explanation: 'Factorials eventually outgrow every exponential, so $\\frac{n!}{3^n} \\to \\infty$ and the sequence diverges, while its reciprocal $\\frac{3^n}{n!} \\to 0$. Exponentials outgrow powers, so $\\frac{n^5}{2^n} \\to 0$, and powers outgrow logarithms, so $\\frac{\\ln n}{n} \\to 0$.', difficulty: 'medium', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 7 },
   { question: 'The sum $S = \\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^3}$ is approximated by its first three terms. What is the alternating series error bound for this approximation?', options: ['$\\frac{1}{27}$', '$\\frac{1}{64}$', '$\\frac{1}{125}$', '$\\frac{1}{16}$'], correctAnswer: 1, explanation: 'For an alternating series with decreasing terms that approach 0, the error after $n$ terms is at most the first omitted term, here $a_4 = \\frac{1}{4^3} = \\frac{1}{64}$. The value $\\frac{1}{27}$ is the last term used, $\\frac{1}{125}$ skips a term, and $\\frac{1}{16}$ squares instead of cubing.', difficulty: 'easy', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both', part: 7 },
 
+  // -- hard items for thin topics (calc-final F4, 2026-10-22) --
+  { question: 'What is the interval of convergence of $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(x+1)^n}{\\sqrt{n}\\,4^n}$?', options: ['$[-5, 3)$', '$(-5, 3]$', '$(-5, 3)$', '$[-3, 5)$'], correctAnswer: 0, explanation: 'The Ratio Test gives $\\lim \\frac{|x+1|}{4}\\sqrt{\\frac{n}{n+1}} = \\frac{|x+1|}{4} < 1$, so $|x + 1| < 4$ and $-5 < x < 3$. At $x = 3$ the series is $\\sum \\frac{1}{\\sqrt{n}}$, a divergent $p$-series ($p = \\frac{1}{2}$). At $x = -5$ it is $\\sum \\frac{(-1)^n}{\\sqrt{n}}$, which converges by the Alternating Series Test. So the interval is $[-5, 3)$. Swapping the endpoint results gives $(-5, 3]$, skipping the endpoint checks gives $(-5, 3)$, and $[-3, 5)$ centers the interval at $x = 1$ instead of $x = -1$.', difficulty: 'hard', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 5 },
+  { question: 'For the parametric curve $x = t^2$, $y = t^3$, what is $\\dfrac{d^2y}{dx^2}$ at $t = 1$?', options: ['$\\dfrac{3}{4}$', '$\\dfrac{3}{2}$', '$3$', '$\\dfrac{1}{2}$'], correctAnswer: 0, explanation: '$\\frac{dy}{dx} = \\frac{3t^2}{2t} = \\frac{3t}{2}$. Then $\\frac{d^2y}{dx^2} = \\frac{\\frac{d}{dt}\\left(\\frac{3t}{2}\\right)}{dx/dt} = \\frac{3/2}{2t} = \\frac{3}{4t}$, which is $\\frac{3}{4}$ at $t = 1$. Stopping at $\\frac{d}{dt}\\left(\\frac{dy}{dx}\\right) = \\frac{3}{2}$ forgets to divide by $\\frac{dx}{dt}$, $\\frac{y\'\'(t)}{x\'\'(t)} = \\frac{6t}{2} = 3$ is the classic wrong shortcut, and dividing by $\\frac{dy}{dt} = 3$ instead of $\\frac{dx}{dt} = 2$ gives $\\frac{1}{2}$.', difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 4 },
+  { question: 'An FRQ asks for a justification that $S_3$ approximates $S = \\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n^4}$ with error less than $0.01$. Which response earns full credit?', options: ['$|S - S_3| \\le \\frac{1}{4^4} = \\frac{1}{256} < 0.01$, since the terms alternate, decrease, and tend to $0$', '$|S - S_3| = \\frac{1}{4^4} = \\frac{1}{256} < 0.01$, since the first omitted term is $\\frac{1}{256}$', '$|S - S_3| \\le \\frac{1}{3^4} = \\frac{1}{81}$, the last term used, which is about $0.01$', '$|S - S_3| \\le \\frac{1}{5^4} = \\frac{1}{625} < 0.01$, using the second omitted term'], correctAnswer: 0, explanation: 'The alternating series error bound says the error is at most the first omitted term, $b_4 = \\frac{1}{256}$, provided the AST conditions hold, and the response must compare the bound with $0.01$. The error is not equal to $\\frac{1}{256}$, the last term used ($\\frac{1}{81} \\approx 0.0123$) is not the bound and is not below $0.01$, and the second omitted term is too small to be a guaranteed bound.', difficulty: 'hard', domain: 'sequences-series', topicSlug: 'bc-exam-strategies-calcbc', formSet: 'both', part: 3 },
+  { question: 'A particle moves in the plane with velocity $\\vec{v}(t) = \\langle 3t^2,\\, 3t \\rangle$. What is the total distance traveled from $t = 0$ to $t = \\sqrt{3}$?', options: ['$7$', '$14$', '$3\\sqrt{3} + \\dfrac{9}{2}$', '$\\dfrac{\\sqrt{189}}{2}$'], correctAnswer: 0, explanation: 'Speed $= \\sqrt{9t^4 + 9t^2} = 3t\\sqrt{t^2 + 1}$ for $t \\ge 0$. With $u = t^2 + 1$, $\\int_0^{\\sqrt{3}} 3t\\sqrt{t^2+1}\\,dt = \\left[(t^2 + 1)^{3/2}\\right]_0^{\\sqrt{3}} = 8 - 1 = 7$. Forgetting the $\\frac{1}{2}$ from $du = 2t\\,dt$ gives 14, adding the horizontal and vertical distances $3\\sqrt{3}$ and $\\frac{9}{2}$ ignores the Pythagorean combination, and $\\frac{\\sqrt{189}}{2}$ is the straight-line displacement.', difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'vector-valued-functions-calcbc', formSet: 'both', part: 3 },
+  { question: 'A particle has velocity $\\vec{v}(t) = \\langle \\cos(\\pi t),\\, 2t - 2 \\rangle$ for $0 \\le t \\le 2$. At what time(s) is the particle at rest?', options: ['Never on $0 \\le t \\le 2$', 'At $t = 1$ only', 'At $t = \\frac{1}{2}$ and $t = \\frac{3}{2}$', 'At $t = \\frac{1}{2}$, $t = 1$, and $t = \\frac{3}{2}$'], correctAnswer: 0, explanation: 'At rest means both components are $0$ at the same time. $\\cos(\\pi t) = 0$ only at $t = \\frac{1}{2}$ and $t = \\frac{3}{2}$, where $2t - 2 = -1$ and $1$, and $2t - 2 = 0$ only at $t = 1$, where $\\cos \\pi = -1$. The components never vanish together, so the particle is never at rest. The other choices treat one zero component as rest.', difficulty: 'hard', domain: 'parametric-polar-vector', topicSlug: 'vector-valued-functions-calcbc', formSet: 'both', part: 5 },
+  { question: 'Using $\\dfrac{1}{1-x} = \\displaystyle\\sum_{n=0}^{\\infty} x^n$ for $|x| < 1$, what is the value of $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{n}{2^n}$?', options: ['$2$', '$4$', '$1$', '$\\dfrac{2}{3}$'], correctAnswer: 0, explanation: 'Differentiate term by term: $\\frac{1}{(1-x)^2} = \\sum_{n=1}^{\\infty} n x^{n-1}$. Multiply by $x$: $\\frac{x}{(1-x)^2} = \\sum_{n=1}^{\\infty} n x^n$. At $x = \\frac{1}{2}$ this is $\\frac{1/2}{1/4} = 2$. Skipping the multiplication by $x$ gives 4, $\\sum \\frac{1}{2^n} = 1$ leaves out the factor $n$, and $\\frac{2}{3}$ comes from writing $(1 - x^2)$ in place of $(1 - x)^2$.', difficulty: 'hard', domain: 'taylor-series', topicSlug: 'review-connections-calcbc', formSet: 'both', part: 6 },
+  { question: 'For $\\dfrac{dy}{dx} = x - y$ with $y(0) = 2$, one step of Euler\'s method with $\\Delta x = 0.5$ approximates $y(0.5)$. Given that $\\dfrac{d^2y}{dx^2} = 1 - x + y$ stays positive for $0 \\le x \\le 0.5$, which describes the approximation?', options: ['It is $1$, an underestimate', 'It is $1$, an overestimate', 'It is $3$, an underestimate', 'It is $3$, an overestimate'], correctAnswer: 0, explanation: 'The slope at $(0, 2)$ is $0 - 2 = -2$, so $y(0.5) \\approx 2 + 0.5(-2) = 1$. Differentiating $\\frac{dy}{dx} = x - y$ gives $\\frac{d^2y}{dx^2} = 1 - \\frac{dy}{dx} = 1 - x + y$, which is $3 > 0$ at $(0, 2)$, so the solution is concave up and the tangent-line step lies below it: an underestimate. The value 3 comes from using slope $+2$, and a negative slope does not make the estimate an overestimate.', difficulty: 'hard', domain: 'advanced-diffeq', topicSlug: 'euler-method-advanced-calcbc', formSet: 'both', part: 3 },
+  { question: 'For which values of $r$ does the sequence $a_n = n\\,r^n$ converge?', options: ['$-1 < r < 1$', '$-1 \\le r \\le 1$', '$-1 < r \\le 1$', '$0 \\le r < 1$'], correctAnswer: 0, explanation: 'For $|r| < 1$, $|a_n| = \\frac{n}{(1/|r|)^n}$ with $\\frac{1}{|r|} > 1$, and exponential growth beats linear growth (L\'Hospital\'s Rule on $\\frac{x}{b^x}$ gives $\\frac{1}{b^x \\ln b} \\to 0$), so $a_n \\to 0$; $r = 0$ gives the zero sequence. At $r = 1$, $a_n = n \\to \\infty$, and at $r = -1$, $a_n = (-1)^n n$ oscillates with growing size. For $|r| > 1$ the terms grow without bound. Negative $r$ with $|r| < 1$ still converges, since $|a_n| \\to 0$.', difficulty: 'hard', domain: 'sequences-series', topicSlug: 'infinite-sequences-calcbc', formSet: 'both', part: 3 },
+  { question: 'Let $S = \\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n \\cdot 2^n}$ and $S_3 = \\frac{1}{2} - \\frac{1}{8} + \\frac{1}{24} = \\frac{5}{12}$. Which statement about $S$ must be true?', options: ['$\\frac{5}{12} - \\frac{1}{64} < S < \\frac{5}{12}$', '$\\frac{5}{12} < S < \\frac{5}{12} + \\frac{1}{64}$', '$\\frac{5}{12} - \\frac{1}{24} < S < \\frac{5}{12} - \\frac{1}{64}$', '$\\frac{5}{12} < S < \\frac{5}{12} + \\frac{1}{24}$'], correctAnswer: 0, explanation: 'The terms $b_n = \\frac{1}{n2^n}$ are positive, decreasing, and tend to $0$, so $|S - S_3| < b_4 = \\frac{1}{4 \\cdot 16} = \\frac{1}{64}$. Stopping after an odd number of terms with a positive first term overshoots, so $S < S_3$. Together, $\\frac{5}{12} - \\frac{1}{64} < S < \\frac{5}{12}$. The intervals above $\\frac{5}{12}$ get the direction backwards, and the interval ending at $\\frac{5}{12} - \\frac{1}{64}$ excludes the values the bound allows.', difficulty: 'hard', domain: 'sequences-series', topicSlug: 'alternating-series-calcbc', formSet: 'both', part: 2 },
+  { question: 'Evaluate $\\displaystyle\\int x^3 e^{x^2}\\,dx$.', options: ['$\\dfrac{1}{2}e^{x^2}(x^2 - 1) + C$', '$\\dfrac{1}{2}e^{x^2}(x^2 + 1) + C$', '$\\dfrac{1}{4}x^4 e^{x^2} + C$', '$e^{x^2}(x^2 - 1) + C$'], correctAnswer: 0, explanation: 'Write $x^3 e^{x^2} = x^2 \\cdot x e^{x^2}$ and use parts with $u = x^2$, $dv = x e^{x^2}\\,dx$, so $du = 2x\\,dx$ and $v = \\frac{1}{2}e^{x^2}$: $\\frac{1}{2}x^2 e^{x^2} - \\int x e^{x^2}\\,dx = \\frac{1}{2}x^2 e^{x^2} - \\frac{1}{2}e^{x^2} + C$. A plus sign forgets the minus in $uv - \\int v\\,du$, $\\frac{1}{4}x^4 e^{x^2}$ integrates the factors separately, and dropping the $\\frac{1}{2}$ in $v$ doubles the answer.', difficulty: 'hard', domain: 'advanced-integration', topicSlug: 'advanced-integration-calcbc', formSet: 'both', part: 2 },
+  { question: 'Which argument correctly shows that $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{1}{n^2 - n + 1}$ converges?', options: ['LCT with $\\frac{1}{n^2}$, since the ratio of terms tends to $1$ and $p = 2 > 1$', 'DCT with $\\frac{1}{n^2}$, since $\\frac{1}{n^2 - n + 1} \\le \\frac{1}{n^2}$ for $n \\ge 1$', 'Ratio Test, since $\\lim \\frac{a_{n+1}}{a_n} = 1$ for these terms', 'DCT with $\\frac{1}{n}$, since $\\frac{1}{n^2 - n + 1} \\le \\frac{1}{n}$ for $n \\ge 1$'], correctAnswer: 0, explanation: 'The terms are positive and $\\lim \\frac{1/(n^2 - n + 1)}{1/n^2} = \\lim \\frac{n^2}{n^2 - n + 1} = 1$, with $0 < 1 < \\infty$; since $\\sum \\frac{1}{n^2}$ converges ($p = 2$), the series converges by the LCT. The inequality with $\\frac{1}{n^2}$ is false (for $n \\ge 2$, $n^2 - n + 1 < n^2$, so the term is larger), a ratio limit of 1 is inconclusive, and being smaller than the divergent $\\sum \\frac{1}{n}$ proves nothing.', difficulty: 'hard', domain: 'sequences-series', topicSlug: 'convergence-tests-summary-calcbc', formSet: 'both', part: 2 },
 ]
 
 /** Generate an exit quiz for a specific BC topic (used by exit quiz system) */

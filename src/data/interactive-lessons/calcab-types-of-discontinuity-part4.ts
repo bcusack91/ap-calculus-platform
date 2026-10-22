@@ -35,9 +35,10 @@ For a discontinuity at $x = a$:
    - Yes → **Jump**.
    - No → continue.
 3. **Is at least one one-sided limit $\\pm\\infty$?**
-   - Yes → **Infinite (essential)**.
+   - Yes → **Infinite**.
+4. **Otherwise** (the function oscillates, like $\\sin(1/x)$ at $0$) → **not removable** (the limit does not exist).
 
-> 💡 Three categories cover essentially every case you\'ll see in AP Calc AB.
+> 💡 Removable, jump, and infinite cover the cases tested on the AP exam.
       `
     },
     {

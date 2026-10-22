@@ -16,8 +16,8 @@ $$\\boxed{\\text{Ratio Test} \\to R \\to \\text{Check endpoints} \\to \\text{Sta
 
 | To find $R$ | Use |
 |-------------|-----|
-| Standard series | $R = 1/\\lim|c_{n+1}/c_n|$ |
-| Even/odd powers $x^{2n}$ | Find $R_u$ in $u = x^2$, then $|x| < \\sqrt{R_u}$ |
+| Standard series | $R = 1/\\lim\\lvert c_{n+1}/c_n\\rvert$ |
+| Even/odd powers $x^{2n}$ | Find $R_u$ in $u = x^2$, then $\\lvert x\\rvert < \\sqrt{R_u}$ |
 | After differentiation/integration | $R$ unchanged, recheck endpoints |
 
 ### Endpoint Test Cheat Sheet

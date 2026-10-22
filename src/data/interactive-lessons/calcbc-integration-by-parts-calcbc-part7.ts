@@ -117,11 +117,11 @@ This final part tests your mastery of all IBP techniques: the basic formula, LIA
       type: 'input-box' as const,
       content: '**Final Calculation**',
       exercise: {
-        question: 'Evaluate $\\int_0^{\\pi/2} x\\cos x\\,dx$. The antiderivative is $x\\sin x + \\cos x$. Compute $[x\\sin x + \\cos x]_0^{\\pi/2}$ exactly. The answer is $\\frac{\\pi}{a} - b$. Find $a + b$.',
-        correctAnswer: '3',
-        acceptableAnswers: ['3'],
-        hints: ['At $x = \\pi/2$: $\\frac{\\pi}{2}(1) + 0 = \\frac{\\pi}{2}$.', 'At $x = 0$: $0 + 1 = 1$.', 'Result: $\\frac{\\pi}{2} - 1$. So $a = 2$, $b = 1$.'],
-        explanation: '$[x\\sin x + \\cos x]_0^{\\pi/2} = (\\frac{\\pi}{2} + 0) - (0 + 1) = \\frac{\\pi}{2} - 1$. Thus $a = 2$, $b = 1$, $a + b = 3$.'
+        question: 'Evaluate $\\int_0^{\\pi/2} x\\cos x\\,dx$. The antiderivative is $x\\sin x + \\cos x$. Give the value to three decimal places.',
+        correctAnswer: '0.571',
+        acceptableAnswers: ['0.571', '0.5708', 'pi/2-1', 'pi/2 - 1'],
+        hints: ['At $x = \\pi/2$: $\\frac{\\pi}{2}(1) + 0 = \\frac{\\pi}{2}$.', 'At $x = 0$: $0 + 1 = 1$.'],
+        explanation: '$[x\\sin x + \\cos x]_0^{\\pi/2} = (\\frac{\\pi}{2} + 0) - (0 + 1) = \\frac{\\pi}{2} - 1 \\approx 0.571$.'
       }
     },
     {
@@ -137,16 +137,16 @@ You\u2019ve mastered:
 5. \u2714 Special cases (inverse trig, logs)
 6. \u2714 Mixed problem identification
 
-### AP Exam Frequency
+### Which Approach Fits
 
-| IBP Type | Likelihood on AP BC Exam |
+| Integrand | Approach |
 |----------|-------------------------|
-| Basic IBP or tabular | Almost certain (MC + FRQ) |
-| Cycling ($e^{ax}$ \u00d7 trig) | Common in MC |
-| Special cases ($\\ln$, inverse trig) | Frequent in FRQ |
-| Definite IBP | Very common |
+| Polynomial \u00d7 $e^{ax}$, $\\sin$, or $\\cos$ | Basic IBP or tabular |
+| $e^{ax}$ \u00d7 trig | Cycling: solve for the integral |
+| $\\ln x$ or an inverse trig function alone | $dv = dx$ |
+| Definite integral | Apply $[uv]_a^b - \\int_a^b v\\,du$ |
 
-> **Key Fact:** Integration by parts appears on every AP Calculus BC exam. Master all five approaches and you\u2019ll handle any IBP problem confidently.`
+> **Key Fact:** Integration by parts (CED 6.11) is a BC-only technique. Master these approaches and you\u2019ll handle any IBP problem confidently.`
     }
   ]
 };

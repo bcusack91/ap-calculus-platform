@@ -54,7 +54,7 @@ $$\\boxed{\\text{Type I: } p > 1 \\text{ converges} \\qquad \\text{Type II: } p 
             question: '$\\int_0^{\\infty} \\frac{x}{(1+x^2)^2}\\,dx = $',
             options: ['$\\frac{1}{2}$', '$1$', '$\\infty$', '$\\frac{1}{4}$'],
             correctAnswer: 0,
-            explanation: 'With $u = 1 + x^2$, an antiderivative is $-\\frac{1}{2(1+x^2)}$, so the limit is $0 - \\left(-\\frac{1}{2}\\right) = \\frac{1}{2}$. Dropping the $\\frac{1}{2}$ from $du = 2x\\,dx$ gives $1$, $\\frac{1}{4}$ halves twice, and the integrand decays like $\\frac{1}{x^3}$, so it converges.'
+            explanation: 'With $u = 1 + x^2$, an antiderivative is $-\\frac{1}{2(1+x^2)}$, so the limit is $0 - \\left(-\\frac{1}{2}\\right) = \\frac{1}{2}$. Dropping the $\\frac{1}{2}$ from $du = 2x\\,dx$ gives $1$, $\\frac{1}{4}$ halves twice, and "diverges" is ruled out because the limit above is finite.'
           }
         ]
       }

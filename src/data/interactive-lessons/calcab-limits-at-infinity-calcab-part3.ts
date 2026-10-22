@@ -64,9 +64,7 @@ Since $-3x^2 \\to -\\infty$ in both directions, $\\lim_{x \\to \\pm\\infty} g(x)
 |-------------------|---------------|---------------|
 | $\\deg(p) < \\deg(q)$ | $0$ | $y = 0$ |
 | $\\deg(p) = \\deg(q)$ | $\\frac{a_n}{b_n}$ | $y = \\frac{a_n}{b_n}$ |
-| $\\deg(p) > \\deg(q)$ | $\\infty$ or $-\\infty$ (leading terms) | None |
-
-Slant (oblique) asymptotes are a precalculus idea; they are not tested on the AP Calculus exam.`
+| $\\deg(p) > \\deg(q)$ | $\\infty$ or $-\\infty$ (leading terms) | None |`
     },
     {
       id: 'lai3-quiz1',

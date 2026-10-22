@@ -33,16 +33,16 @@ $$\\boxed{\\text{Read} \\to \\text{Rewrite (if needed)} \\to \\text{Recognize th
       type: 'text' as const,
       content: `### Top AP Exam Mistakes — Antiderivatives
 
-| # | Mistake | Example | Cost |
+| # | Mistake | Example | Why it matters |
 |:---:|:---:|:---:|:---:|
-| 1 | Forgetting $+C$ | Writing $x^2/2$ instead of $x^2/2 + C$ | 1 pt on FRQ |
-| 2 | Power Rule with $n = -1$ | $\\int x^{-1} \\neq x^0/0$ → it's $\\ln|x|$ | Full credit |
-| 3 | Missing absolute value | $\\ln(x)$ vs $\\ln|x|$ | 1 pt |
-| 4 | Sign errors on trig | $\\int \\sin x = \\cos x$ (forgot negative) | Full credit |
-| 5 | Coefficient errors | $\\int x^{1/2} = x^{3/2}$ (forgot $\\times 2/3$) | Full credit |
-| 6 | Not verifying IVP | Solving for $C$ but plugging into wrong equation | Full credit |
+| 1 | Forgetting $+C$ | Writing $x^2/2$ instead of $x^2/2 + C$ | Without $C$ an initial condition cannot be applied |
+| 2 | Power Rule with $n = -1$ | $\\int x^{-1} \\neq x^0/0$ → it's $\\ln\\lvert x\\rvert$ | The power rule fails for $n = -1$ |
+| 3 | Missing absolute value | $\\ln(x)$ vs $\\ln\\lvert x\\rvert$ | $\\ln x$ is undefined for $x < 0$ |
+| 4 | Sign errors on trig | $\\int \\sin x = \\cos x$ (forgot negative) | Differentiate to check: $(\\cos x)' = -\\sin x$ |
+| 5 | Coefficient errors | $\\int x^{1/2} = x^{3/2}$ (forgot $\\times 2/3$) | Differentiate to check |
+| 6 | Wrong equation for $C$ | Plugging the initial condition into $F'$ instead of $F$ | The particular solution is wrong |
 
-> **Key Fact:** On FRQs, you get a "linkage point" for correctly connecting your antiderivative to the initial condition. Show ALL steps: general solution → plug in IC → solve for $C$ → write particular solution.`
+> **Key Fact:** On initial-value FRQs, show every step: general antiderivative with $+C$ → substitute the initial condition → solve for $C$ → write the particular solution. An error early on (like a missing $+C$) usually makes every later answer wrong.`
     },
     {
       id: 'anti7-quiz1',

@@ -84,10 +84,8 @@ Sometimes you need a trig identity before integrating:
 | Integral | Identity Used | Result |
 |:---:|:---:|:---:|
 | $\\int \\tan^2 x\\,dx$ | $\\tan^2 x = \\sec^2 x - 1$ | $\\tan x - x + C$ |
-| $\\int \\sin^2 x\\,dx$ | $\\sin^2 x = \\frac{1-\\cos 2x}{2}$ | $\\frac{x}{2} - \\frac{\\sin 2x}{4} + C$ |
-| $\\int \\cos^2 x\\,dx$ | $\\cos^2 x = \\frac{1+\\cos 2x}{2}$ | $\\frac{x}{2} + \\frac{\\sin 2x}{4} + C$ |
 
-> **Key Fact:** $\\int \\tan x\\,dx$ and $\\int \\sec x\\,dx$ require techniques you'll see later ($u$-substitution). For now, focus on recognizing when an identity simplifies the integrand.
+> **Key Fact:** $\\int \\tan x\\,dx$ requires a technique you'll see later ($u$-substitution). For now, focus on recognizing when an identity simplifies the integrand.
 
 ### Decision Flowchart
 
@@ -178,7 +176,7 @@ $$\\boxed{\\text{Rewrite} \\to \\text{Integrate term by term} \\to \\text{Simpli
 | Expand products | FOIL or distribute, then integrate each term |
 | Split fractions | Divide each numerator term by denominator |
 | Rewrite radicals | Convert to $x^{m/n}$, apply Power Rule |
-| Trig identities | $\\tan^2 = \\sec^2-1$, double-angle for $\\sin^2, \\cos^2$ |
+| Trig identities | $\\tan^2 x = \\sec^2 x - 1$ |
 | Factor & cancel | $\\frac{x^3-1}{x-1} = x^2+x+1$ |
 
 > **Up Next:** Part 5 — Inverse Trig Antiderivatives.`

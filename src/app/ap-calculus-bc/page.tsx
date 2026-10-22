@@ -6,15 +6,23 @@ import type { Metadata } from 'next'
 import CourseToolGrid from '@/components/CourseToolGrid'
 import CourseHero from '@/components/CourseHero'
 import { apDiagnosticStats } from '@/lib/ap-diagnostic-courses'
+import { AP_CALCULUS_BC_UNIT_TESTS_CONFIG } from '@/data/unit-tests/ap-calculus-bc'
+import { variantCountFor } from '@/lib/unit-tests/engine'
+import { apCalcBCFRQs } from '@/data/ap-calc-bc-frq/questions'
+
+// Counts come from the data the linked pages serve, so the copy cannot drift.
+const UNIT_COUNT = AP_CALCULUS_BC_UNIT_TESTS_CONFIG.units.length
+const UNIT_TEST_VARIANTS = variantCountFor(AP_CALCULUS_BC_UNIT_TESTS_CONFIG)
+const FRQ_COUNT = apCalcBCFRQs.length
 
 export const metadata: Metadata = {
   title: 'AP Calculus BC | Free AP Calc BC Practice & Review',
   description:
-    'Comprehensive AP Calculus BC preparation with 140+ interactive lessons, diagnostic tests, flashcards, daily questions, and competitive challenges. Free for all students.',
+    `Comprehensive AP Calculus BC preparation with interactive lessons for all ${UNIT_COUNT} CED units (every AB topic plus the BC-only content), diagnostic tests, flashcards, daily questions, and competitive challenges. Free for all students.`,
   alternates: { canonical: 'https://www.studymondo.com/ap-calculus-bc' },
   openGraph: {
     title: 'AP Calculus BC | Free AP Calc BC Practice & Review',
-    description: 'Master AP Calculus BC with 140+ interactive lessons, diagnostics, and daily practice.',
+    description: `Master AP Calculus BC with interactive lessons for all ${UNIT_COUNT} units, diagnostics, and daily practice.`,
     url: 'https://www.studymondo.com/ap-calculus-bc',
   },
 }
@@ -30,7 +38,7 @@ const features = [
       </svg>
     ),
     color: 'from-emerald-500 to-teal-500',
-    stats: '140+ lessons · All units',
+    stats: `AB + BC topics · ${UNIT_COUNT} units`,
   },
   {
     title: 'Diagnostic Test',
@@ -46,7 +54,7 @@ const features = [
   },
   {
     title: 'Unit Tests',
-    description: 'Drill a single AP unit at a time. 8 units · 4 different variations each — perfect for end-of-unit review.',
+    description: `Drill a single AP unit at a time. ${UNIT_COUNT} units · ${UNIT_TEST_VARIANTS} different variations each — perfect for end-of-unit review.`,
     href: '/ap-calcbc-unit-tests',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -54,7 +62,7 @@ const features = [
       </svg>
     ),
     color: 'from-fuchsia-500 to-purple-500',
-    stats: '8 units · 4 variations',
+    stats: `${UNIT_COUNT} units · ${UNIT_TEST_VARIANTS} variations`,
   },
   {
     title: 'Flashcards',
@@ -105,6 +113,18 @@ const features = [
     stats: 'Per-topic · Instant feedback',
   },
   {
+    title: 'FRQ Practice',
+    description: 'Practice BC free-response questions (series, parametric and polar, advanced integration, differential equations) with rubrics and timed exam simulation. 50% of the AP exam.',
+    href: '/ap-calc-bc-frq',
+    icon: (
+      <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+      </svg>
+    ),
+    color: 'from-indigo-500 to-violet-500',
+    stats: `${FRQ_COUNT} FRQs · Auto-graded · Timed`,
+  },
+  {
     title: 'Full-Length Practice Exam',
     description: '42 MCQs + 6 FRQs in the May 2027 format, across all 10 units (including parametric/polar and series). Calculator + no-calculator sections, timed, with self-graded rubrics.',
     href: '/ap-calcbc-practice',
@@ -119,8 +139,8 @@ const features = [
 ]
 
 const units = [
-  { title: 'Units 1–5: AB Foundation', topics: ['Limits & Continuity', 'Differentiation Rules', 'Applications of Derivatives', 'Integration Basics', 'Fundamental Theorem'], color: 'emerald' },
-  { title: 'Unit 6: Integration Techniques', topics: ['Integration by Parts', 'Partial Fractions', 'Improper Integrals', 'Logistic Growth'], color: 'blue' },
+  { title: 'Units 1–5: Limits and Derivatives (AB)', topics: ['Limits & Continuity', 'Derivative Rules, Chain Rule & Implicit Differentiation', 'Motion, Related Rates & L’Hospital’s Rule', 'Mean Value Theorem, Extrema & Optimization'], color: 'emerald' },
+  { title: 'Units 6–8: Integration, Differential Equations & Applications', topics: ['Riemann Sums, the FTC & u-Substitution', 'Integration by Parts, Partial Fractions & Improper Integrals (BC)', 'Slope Fields, Euler’s Method & Logistic Growth (BC)', 'Area, Volume & Arc Length (BC)'], color: 'blue' },
   { title: 'Unit 9: Parametric & Polar', topics: ['Parametric Equations', 'Vector-Valued Functions', 'Polar Coordinates', 'Area in Polar'], color: 'purple' },
   { title: 'Unit 10: Infinite Series', topics: ['Convergence Tests', 'Taylor & Maclaurin Series', 'Power Series', 'Radius of Convergence', 'Error Bounds'], color: 'amber' },
 ]
@@ -148,7 +168,7 @@ export default function APCalculusBCHub() {
       <CourseUniqueIntro slug="ap-calculus-bc" />
       <CourseHero
         courseName='AP Calculus BC'
-        tagline='140+ interactive lessons covering all AB content plus series, parametric equations, polar coordinates, and advanced integration — everything you need to score a 5.'
+        tagline={`Interactive lessons for all ${UNIT_COUNT} units: every AB topic plus series, parametric equations, polar coordinates, and advanced integration — everything you need to score a 5.`}
         primaryCta={{ href: '/calcbc-diagnostic', label: 'Start with the free diagnostic' }}
         secondaryCta={{ href: '/courses/ap-calculus-bc', label: 'Browse Lessons' }}
         accentFrom="emerald"

@@ -6,6 +6,8 @@ import { InArticleAd } from '@/components/ad-banner'
 import StudyModeSwitcher from '@/components/StudyModeSwitcher'
 import { Layers, ChevronDown } from 'lucide-react'
 import { FLASHCARD_UNLOCK_RULE, topicFlashcardBrowseHref, topicFlashcardReviewHref } from '@/lib/flashcard-links'
+import { courseCategoryLayout, coursesIn, excludedTopicsOf, INCLUDE_COURSE_NAMES } from '@/lib/course-includes'
+import { groupByLayout, visibleTopics } from '@/lib/course-hub-sections'
 
 export const revalidate = 3600 // ISR: revalidate every hour
 
@@ -24,8 +26,10 @@ export default async function FlashcardsPage({
 }) {
   const { course } = await searchParams
 
-  const categories = await prisma.category.findMany({
-    where: course ? { course: { slug: course } } : undefined,
+  // A course's deck includes the courses it contains (AP Calculus BC lists every
+  // AB topic, by CED unit: src/lib/course-includes.ts).
+  const dbCategories = await prisma.category.findMany({
+    where: course ? { course: { slug: { in: coursesIn(course) } } } : undefined,
     include: {
       course: { select: { name: true, slug: true } },
       topics: {
@@ -43,7 +47,32 @@ export default async function FlashcardsPage({
     return []
   })
 
-  const courseName = course && categories.length > 0 ? categories[0].course.name : null
+  // Legacy (308) and retired rows never show; nor do an included course's
+  // excluded topics (BC leaves out the AB exam review).
+  const excluded = course ? excludedTopicsOf(course) : []
+  const shown = dbCategories.map((c) => ({
+    ...c,
+    topics: visibleTopics(c.topics).filter((t) => !excluded.includes(t.slug)),
+  }))
+  const layout = course ? courseCategoryLayout(course) : null
+  const categories = layout
+    ? (() => {
+        const rows = shown.flatMap((c) => c.topics.map((t) => ({ ...t, categorySlug: c.slug, category: c })))
+        return groupByLayout(layout, rows, (t) => t.categorySlug, (t) => t.order)
+          .filter((g) => g.rows.length > 0)
+          .map(({ section, rows: topics }) => ({
+            id: section.key,
+            name: section.name,
+            icon: topics[0].category.icon,
+            course: topics[0].category.course,
+            topics,
+          }))
+      })()
+    : shown
+
+  const courseName = course
+    ? dbCategories.find((c) => c.course.slug === course)?.course.name ?? INCLUDE_COURSE_NAMES[course] ?? null
+    : null
 
   return (
     <div className="container py-10">

@@ -8,21 +8,22 @@ export const calcbcPowerSeriesPart5Data = {
 
 **Part 5 of 7 — Series Solutions & Exam Techniques**
 
-### Power Series Solutions to DEs
+### Taylor Polynomials from a Differential Equation
 
-Some AP problems ask you to find coefficients of a power series solution to a DE.
-
-**Setup:** Assume $y = \\sum a_n x^n = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + \\cdots$
-
-Then $y' = \\sum_{n=1}^\\infty n a_n x^{n-1} = a_1 + 2a_2 x + 3a_3 x^2 + \\cdots$
+Some AP problems give a differential equation and an initial condition and ask for the first few terms of the Taylor series of the solution. The CED route: compute $y(0)$, $y'(0)$, $y''(0)$, ... from the DE, then use $a_n = \\frac{y^{(n)}(0)}{n!}$.
 
 **Example:** $y' = y$, $y(0) = 1$
 
-Substituting: $a_1 + 2a_2 x + 3a_3 x^2 + \\cdots = a_0 + a_1 x + a_2 x^2 + \\cdots$
+- $y(0) = 1$
+- $y'(0) = y(0) = 1$
+- Differentiate the DE: $y'' = y'$, so $y''(0) = 1$
+- Again: $y''' = y''$, so $y'''(0) = 1$
 
-Matching coefficients: $a_1 = a_0 = 1$, $2a_2 = a_1 \\Rightarrow a_2 = 1/2$, $3a_3 = a_2 \\Rightarrow a_3 = 1/6$
+$$T_3(x) = 1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!}$$
 
-Pattern: $a_n = 1/n!$ → solution is $y = e^x$ ✓
+The pattern $a_n = 1/n!$ gives $y = e^x$ ✓
+
+**Same result, another way (enrichment):** substituting $y = \\sum a_n x^n$ into the DE and matching coefficients gives $a_1 = a_0$, $2a_2 = a_1$, $3a_3 = a_2$, the same numbers. The derivative route above is the one AP questions expect.
 
 > **AP Tip:** These problems typically ask for the first 3 or 4 nonzero terms, not the general pattern.`
     },
@@ -69,7 +70,7 @@ $f^{(n)}(c) = n! \\cdot a_n$`
             question: 'For the DE $y\' = 2xy$ with $y(0) = 1$, if $y = a_0 + a_1 x + a_2 x^2 + \\cdots$, then $a_2 = $',
             options: ['$1$', '$0$', '$2$', '$1/2$'],
             correctAnswer: 0,
-            explanation: '$y(0) = a_0 = 1$. $y\' = a_1 + 2a_2 x + \\cdots$, $2xy = 2a_0 x + 2a_1 x^2 + \\cdots$. Constant terms: $a_1 = 0$. $x$ terms: $2a_2 = 2a_0 = 2$, so $a_2 = 1$.'
+            explanation: '$a_2 = \\frac{y\'\'(0)}{2!}$. Differentiate the DE: $y\'\' = 2y + 2xy\'$, so $y\'\'(0) = 2(1) + 0 = 2$ and $a_2 = \\frac{2}{2} = 1$. (Matching coefficients of $y\' = 2xy$ gives the same: $2a_2 = 2a_0 = 2$.)'
           },
           {
             question: 'If $g(x) = \\sum_{n=0}^\\infty \\frac{x^n}{(n+1)!}$, then $g(x) = $',
@@ -111,8 +112,8 @@ $f^{(n)}(c) = n! \\cdot a_n$`
         question: 'For $y\' = y + 1$ with $y(0) = 0$: if $y = a_0 + a_1 x + a_2 x^2 + \\cdots$, find $a_1$.',
         correctAnswer: '1',
         acceptableAnswers: ['1'],
-        hints: ['$y(0) = a_0 = 0$. Constant terms in $y\' = y + 1$: $a_1 = a_0 + 1$.'],
-        explanation: '$a_0 = y(0) = 0$. From $y\' = y + 1$: constant terms give $a_1 = a_0 + 1 = 0 + 1 = 1$.'
+        hints: ['$a_1 = y\'(0)$, and the DE gives $y\'(0) = y(0) + 1$.'],
+        explanation: '$a_1 = \\frac{y\'(0)}{1!} = y(0) + 1 = 0 + 1 = 1$.'
       }
     },
     {
@@ -120,7 +121,7 @@ $f^{(n)}(c) = n! \\cdot a_n$`
       type: 'text' as const,
       content: `### Summary
 
-- Power series can solve DEs by matching coefficients
+- From a DE, compute $y(0), y'(0), y''(0), \\ldots$ and use $a_n = y^{(n)}(0)/n!$
 - $f^{(n)}(c) = n! \\cdot a_n$ connects series coefficients to derivatives
 - AP FRQ: "first four nonzero terms" is the most common format
 - Build series from known ones rather than computing derivatives

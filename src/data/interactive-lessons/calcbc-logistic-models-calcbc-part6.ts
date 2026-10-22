@@ -29,10 +29,10 @@ Work through these problems applying everything you've learned.`
             explanation: '$f(0, 20) = 6(20) - 0.03(400) = 120 - 12 = 108$. $P(0.5) = 20 + 108(0.5) = 74$. Dropping the $-0.03P^2$ term gives 80, using $k = 6$ as the slope gives 23, and forgetting to square $P$ gives 79.7.'
           },
           {
-            question: 'A logistic model gives $P(5) = 300$ and $P(10) = 450$. If $L = 600$, can you determine $k$?',
+            question: '(Optional, beyond the AP exam: uses the explicit solution.) A logistic model gives $P(5) = 300$ and $P(10) = 450$. If $L = 600$, can you determine $k$?',
             options: ['Yes — use $P(t) = L/(1+Ae^{-kt})$ with both data points', 'No — $P(0)$ is needed before $A$ or $k$ can be found', 'No — a third data point is needed besides $L$', 'Yes — but only by running Euler\'s method on the data'],
             correctAnswer: 0,
-            explanation: 'Two points plus $L$ is enough. From $P(5)$, find $A$. From $P(10)$, confirm or find $k$.'
+            explanation: 'Two points plus $L$ give two equations in the two unknowns $A$ and $k$, solved together: $\\frac{600}{1 + Ae^{-5k}} = 300$ gives $Ae^{-5k} = 1$, and $\\frac{600}{1 + Ae^{-10k}} = 450$ gives $Ae^{-10k} = \\frac{1}{3}$. Dividing, $e^{-5k} = \\frac{1}{3}$, so $k = \\frac{\\ln 3}{5}$ (and $A = 3$). $P(0)$ is not needed, and no third point or Euler step is required.'
           }
         ]
       }

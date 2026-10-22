@@ -56,7 +56,7 @@ Then integrate: $\\arctan x = \\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{2n+1}$
 |-----------|-----------|
 | Differentiation | Same $R$ |
 | Integration | Same $R$ |
-| Substitution $x \\to g(x)$ | Solve $|g(x)| < R$ |
+| Substitution $x \\to g(x)$ | Solve $\\lvert g(x)\\rvert < R$ |
 | Addition | $\\min(R_1, R_2)$ |
 | Multiplication by polynomial | Same $R$ |`
     },

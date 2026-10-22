@@ -7,6 +7,8 @@
  * sitemap built from the Topic table alone listed 104 redirecting URLs —
  * Search Console's "Page with redirect" bucket.
  */
+import { RETIRED_AP_TOPICS } from '../data/retired-ap-topics'
+
 export const LEGACY_TOPIC_REDIRECTS: Record<string, string> = {
       // AB: Limits & Continuity
       // The 11 canonical Limits topics (what-is-a-limit, estimating-limits-tables,
@@ -28,6 +30,7 @@ export const LEGACY_TOPIC_REDIRECTS: Record<string, string> = {
       'derivative-notation': 'definition-of-derivative-calcab',
       'derivative-as-slope': 'definition-of-derivative-calcab',
       'derivative-as-rate-of-change': 'definition-of-derivative-calcab',
+      'power-rule': 'basic-differentiation-rules-calcab',
       'power-rule-basics': 'basic-differentiation-rules-calcab',
       'constant-multiple-sum-rules': 'basic-differentiation-rules-calcab',
       'product-rule': 'basic-differentiation-rules-calcab',
@@ -46,7 +49,8 @@ export const LEGACY_TOPIC_REDIRECTS: Record<string, string> = {
       'critical-points-and-extrema': 'applications-of-derivatives-calcab',
       'first-derivative-test': 'applications-of-derivatives-calcab',
       'curve-sketching': 'applications-of-derivatives-calcab',
-      'lhopitals-rule': 'applications-of-derivatives-calcab',
+      // lhopitals-rule is NOT redirected: it is the live AB topic for CED 4.7
+      // (promoted Oct 2026; its own lesson, exit and entrance quiz).
       'linear-approximation': 'linearization-differentials-calcab',
       'mean-value-theorem': 'theorem-applications-calcab',
       'optimization-problems': 'optimization-calcab',
@@ -124,4 +128,15 @@ export const LEGACY_TOPIC_REDIRECTS: Record<string, string> = {
 
 export function isLegacyTopicSlug(slug: string): boolean {
   return Object.prototype.hasOwnProperty.call(LEGACY_TOPIC_REDIRECTS, slug)
+}
+
+/**
+ * A Topic row that must never be listed (course hub, /categories, BC's AB
+ * units): it 308s to a canonical topic (legacy duplicate) or was retired off
+ * the exam (src/data/retired-ap-topics.ts). Such rows can linger in the DB
+ * until the cleanup scripts run, and listing them shows a duplicate that
+ * bounces when clicked.
+ */
+export function isHiddenTopicSlug(slug: string): boolean {
+  return isLegacyTopicSlug(slug) || Object.prototype.hasOwnProperty.call(RETIRED_AP_TOPICS, slug)
 }

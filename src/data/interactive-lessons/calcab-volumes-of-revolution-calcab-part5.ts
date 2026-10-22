@@ -25,7 +25,7 @@ $$\\boxed{V = \\pi\\int_c^d\\left([R(y)]^2-[r(y)]^2\\right)dy \\quad \\text{(was
 
 ### Worked Example
 
-> $y = x^2$ from $y=0$ to $y=4$, rotated about the $y$-axis.
+> The first-quadrant region between $y = x^2$ and the $y$-axis, from $y=0$ to $y=4$, rotated about the $y$-axis.
 
 Solve for $x$: $x = \\sqrt{y}$. Radius $R(y) = \\sqrt{y}$.
 

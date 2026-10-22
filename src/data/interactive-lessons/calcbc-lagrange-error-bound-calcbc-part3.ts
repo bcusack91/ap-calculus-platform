@@ -22,7 +22,7 @@ This is straightforward for $\\sin, \\cos, e^x$. For other functions, you need *
 |----------|----------------------|-------------------|
 | $\\sin x, \\cos x$ | $\\pm \\sin, \\pm \\cos$ | Always $M = 1$ |
 | $e^x$ | $e^x$ | $M = e^{\\max(c,x)}$ (increasing) |
-| $e^{-x}$ | $\\pm e^{-x}$ | $M = e^{-\\min(c,x)}$ (decreasing $|\\cdot|$) |
+| $e^{-x}$ | $\\pm e^{-x}$ | $M = e^{-\\min(c,x)}$ (decreasing $\\lvert \\cdot\\rvert$) |
 | $\\ln(1+x)$ | $\\pm n!/(1+t)^{n+1}$ | Max at smallest $(1+t)$ |
 | $(1+x)^p$ | Product with decreasing terms | Case-by-case |
 | $\\arctan x$ | Rational functions | Often given on AP |

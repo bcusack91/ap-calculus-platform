@@ -26,8 +26,8 @@ This is also the **arc length** of the parametric curve.
 | Quantity | Formula | Meaning |
 |----------|---------|---------|
 | Displacement (vector) | $\\vec{r}(b) - \\vec{r}(a) = \\langle x(b)-x(a),\\; y(b)-y(a) \\rangle$ | Net change in position |
-| Displacement magnitude | $|\\vec{r}(b) - \\vec{r}(a)|$ | Straight-line distance start→end |
-| Distance traveled | $\\int_a^b |\\vec{v}(t)|\\,dt$ | Total path length |
+| Displacement magnitude | $\\lvert \\vec{r}(b) - \\vec{r}(a)\\rvert$ | Straight-line distance start→end |
+| Distance traveled | $\\int_a^b \\lvert \\vec{v}(t)\\rvert\\,dt$ | Total path length |
 
 > **AP Tip:** The AP exam often asks: *"Find the total distance traveled."* This ALWAYS means integrate speed. It does NOT mean displacement.
 
@@ -128,7 +128,7 @@ $$\\boxed{\\vec{r}(b) = \\vec{r}(a) + \\int_a^b \\vec{v}(t)\\,dt}$$
 
 | Need | Use |
 |------|-----|
-| Total distance | $\\int |\\vec{v}|\\,dt$ |
+| Total distance | $\\int \\lvert \\vec{v}\\rvert\\,dt$ |
 | Net displacement | $\\vec{r}(b) - \\vec{r}(a)$ |
 | Position at time $b$ | $\\vec{r}(a) + \\int_a^b \\vec{v}\\,dt$ |
 

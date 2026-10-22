@@ -43,7 +43,7 @@ $\\frac{dy}{dx} = y^2 - x$, $y(1) = 0$, $\\Delta x = 0.25$. Approximate $y(1.75)
 |-----|--------|--------|-------------------|-----------|-----------|
 | 0 | 1 | 0 | $-1$ | $-0.25$ | $-0.25$ |
 | 1 | 1.25 | $-0.25$ | $-1.1875$ | $-0.2969$ | $-0.5469$ |
-| 2 | 1.5 | $-0.5469$ | $-1.2011$ | $-0.3003$ | $-0.8472$ |
+| 2 | 1.5 | $-0.5469$ | $-1.2009$ | $-0.3002$ | $-0.8471$ |
 
 $$\\boxed{y(1.75) \\approx -0.847}$$
 
@@ -52,7 +52,7 @@ $$\\boxed{y(1.75) \\approx -0.847}$$
 | Mistake | How to avoid |
 |---------|-------------|
 | Using $x_{n+1}$ for slope | Always use the LEFT point $(x_n, y_n)$ |
-| Forgetting to update $y$ | $y_{n+1} = y_n + \\Delta y$, not $y_0 + \\sum \\Delta y$ |
+| Forgetting to update $y$ | $y_{n+1} = y_n + \\Delta y$, not $y_0 + \\Delta y$ (always add to the current $y_n$) |
 | Rounding too early | Keep 3–4 decimal places throughout |
 | Wrong sign on $\\Delta y$ | $\\Delta y$ can be negative (slope is negative) |`
     },

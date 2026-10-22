@@ -54,7 +54,7 @@ $$\\boxed{\\lim_{x \\to c} g(x) = \\lim_{x \\to c} h(x) = L \\quad \\Rightarrow 
 | $-1 \\leq \\cos(\\text{anything}) \\leq 1$ | Oscillating $\\cos$ factor |
 | $0 \\leq |\\sin(\\theta)| \\leq 1$ | Need non-negative bound |
 
-> **AP Tip:** The Squeeze Theorem is the only tool for handling limits with oscillating terms like $\\sin(1/x)$ or $\\cos(1/x^2)$.`
+> **AP Tip:** The Squeeze Theorem is the standard tool for handling limits with oscillating terms like $\\sin(1/x)$ or $\\cos(1/x^2)$.`
     },
     {
       id: 'limit4-examples',

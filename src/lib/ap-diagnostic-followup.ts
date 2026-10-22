@@ -28,6 +28,7 @@
  * Pure: no prisma, no email. Safe to import from tests and client code.
  */
 
+import { coursesIn } from '@/lib/course-includes'
 import { CLASS_PLAN_COURSES, courseForCategory, type ClassPlanCourse } from '@/lib/class-plan-config'
 import { canonicalizeRecommendedTopics } from '@/lib/ap-topic-canonical'
 import { apBandLabel, apSittingOf } from '@/lib/ap-score-band'
@@ -178,8 +179,11 @@ export function selectFollowupRecipients(input: FollowupSelectionInput): Followu
       continue
     }
     const since = d.createdAt.getTime()
+    // A lesson of an included course counts: a BC student studying the AB
+    // lessons their BC diagnostic recommends is active (src/lib/course-includes.ts).
+    const studyCourses = coursesIn(course.courseSlug)
     const opened = input.lessonSignals.some(
-      (s) => s.userId === d.userId && s.courseSlug === course.courseSlug && s.at.getTime() >= since,
+      (s) => s.userId === d.userId && studyCourses.includes(s.courseSlug) && s.at.getTime() >= since,
     )
     if (opened) {
       skip('lesson-opened')

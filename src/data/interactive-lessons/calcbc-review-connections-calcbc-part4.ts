@@ -15,14 +15,14 @@ $$\\text{Given } \\sum a_n: \\text{ Does it converge?}$$
 | Step | Check | Test to use |
 |------|-------|------------|
 | 1 | Is $a_n \\not\\to 0$? | **Divergence Test** → diverges |
-| 2 | Is it geometric? | **Geometric:** converges iff $|r| < 1$ |
+| 2 | Is it geometric? | **Geometric:** converges iff $\\lvert r\\rvert < 1$ |
 | 3 | Is it a p-series? | **p-series:** converges iff $p > 1$ |
-| 4 | Does it alternate? | **AST:** $a_n \\to 0$ decreasingly → converges |
+| 4 | Does it alternate? | **AST:** $\\lvert a_n\\rvert$ decreases to $0$ → converges |
 | 5 | Factorials or exponentials? | **Ratio Test:** $L < 1$ converges, $L > 1$ diverges |
 | 6 | Can you compare? | **Comparison/LCT** with known series |
 | 7 | Decreasing positive terms? | **Integral Test** |
 
-> **AP Tip:** On the exam, 90% of convergence questions are answered by steps 1–5.`
+> **AP Tip:** Work the steps in order: most convergence questions are settled by one of steps 1–5.`
     },
     {
       id: 'rc4-power',

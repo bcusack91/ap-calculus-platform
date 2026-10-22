@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { courseLayoutTopics } from '@/lib/course-includes'
+import { visibleTopics } from '@/lib/course-hub-sections'
 import { courseHubPaths } from '@/data/course-metadata'
 import { ONBOARDING_DB_COURSE_ALIASES, onboardingDestination } from '@/lib/onboarding-destination'
 
@@ -74,9 +76,11 @@ export async function POST(req: Request) {
     }
 
     // Build ordered topic list
-    const topicOrder = course
-      ? course.categories.flatMap((cat) => cat.topics.map((t) => t.slug))
-      : []
+    // A course laid out by CED unit in code (AP Calculus BC: every AB topic in
+    // its unit, then the BC-only ones) follows that layout; others follow their
+    // Categories. Legacy (308) and retired rows are never on the path.
+    const topicOrder = courseLayoutTopics(dbSlug) ??
+      (course ? visibleTopics(course.categories.flatMap((cat) => cat.topics)).map((t) => t.slug) : [])
 
     // Create or update learning path
     await prisma.learningPath.upsert({

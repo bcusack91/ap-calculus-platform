@@ -123,10 +123,10 @@ const questions: EntranceQuizQuestion[] = [
   // Part 7 — Chain Rule Review
   {
     id: 'chr-ent-7a',
-    question: 'Find $\\dfrac{d}{dx}\\displaystyle\\int_2^{x^2} \\ln t \\, dt$ for $x > 0$.',
-    options: ['$2x\\ln(x^2)$', '$\\ln(x^2) - \\ln 2$', '$2x\\ln(x^2) - 2\\ln 2$', '$\\frac{1}{x^2} \\cdot 2x$'],
+    question: 'Let $h(x) = f(g(x))$, where $g(1) = 3$, $g\'(1) = -2$, $f\'(1) = 4$ and $f\'(3) = 5$. What is $h\'(1)$?',
+    options: ['$-10$', '$-8$', '$5$', '$-2$'],
     correctIndex: 0,
-    explanation: 'By the Fundamental Theorem with the chain rule, substitute the upper limit into the integrand and multiply by its derivative: $\\ln(x^2) \\cdot 2x$. The constant lower limit contributes nothing.',
+    explanation: 'Chain rule: $h\'(1) = f\'(g(1)) \\cdot g\'(1) = f\'(3) \\cdot (-2) = -10$. Using $f\'(1)$ instead of $f\'(g(1))$ gives $-8$, and leaving out a factor gives $5$ or $-2$.',
     partNumber: 7,
     partTitle: 'Chain Rule Review',
   },

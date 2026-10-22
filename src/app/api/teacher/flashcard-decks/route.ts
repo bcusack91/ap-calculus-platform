@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { coursesIn, coursesTopicWhere } from '@/lib/course-includes'
+import { isHiddenTopicSlug } from '@/lib/legacy-topic-redirects'
 import { requireTeacher, requireClassroomAccess } from '@/lib/teacher-auth'
 
 /**
@@ -44,7 +46,7 @@ export async function GET(req: NextRequest) {
       where: {
         flashcards: { some: {} },
         ...(courseFilter.length > 0
-          ? { category: { course: { slug: { in: courseFilter } } } }
+          ? coursesTopicWhere(courseFilter)
           : {}),
       },
       select: {
@@ -77,8 +79,21 @@ export async function GET(req: NextRequest) {
         decks: { topicSlug: string; topicTitle: string; category: string; cardCount: number }[]
       }
     >()
+    // A class's course includes the courses it contains (a BC class gets the AB
+    // decks, src/lib/course-includes.ts); file those under the class's course.
+    const containerOf = (slug: string) =>
+      courseFilter.length > 0 && !courseFilter.includes(slug)
+        ? courseFilter.find((f) => coursesIn(f).includes(slug))
+        : undefined
+    const filterCourse = new Map<string, { slug: string; name: string }>()
+    if (courseFilter.length > 0) {
+      const rows = await prisma.course.findMany({ where: { slug: { in: courseFilter } }, select: { slug: true, name: true } })
+      for (const r of rows) filterCourse.set(r.slug, r)
+    }
     for (const t of topics) {
-      const c = t.category.course
+      if (isHiddenTopicSlug(t.slug)) continue
+      const container = containerOf(t.category.course.slug)
+      const c = (container && filterCourse.get(container)) || t.category.course
       const group = byCourse.get(c.slug) ?? { courseSlug: c.slug, courseTitle: c.name, decks: [] }
       group.decks.push({
         topicSlug: t.slug,

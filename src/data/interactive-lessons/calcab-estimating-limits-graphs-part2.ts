@@ -1,3 +1,5 @@
+import { elgJump, elgPiecewise } from '@/data/lesson-figures/calcab'
+
 export const calcabEstimatingLimitsGraphsPart2Data = {
   topicSlug: 'estimating-limits-graphs',
   sections: [
@@ -15,10 +17,10 @@ export const calcabEstimatingLimitsGraphsPart2Data = {
 | Section |
 |---------|
 | Left vs. Right Visually |
-| The Existence Theorem (visual form) |
-| Worked Reading |
+| The Existence Test (visual form) |
+| Worked Reading of a Jump |
 
-> 🔑 **Why this matters:** AP graphs love to show piecewise functions where the two sides do different things.`
+> 🔑 **Why this matters:** AP graphs often show piecewise functions where the two sides of a point do different things.`
     },
     {
       id: 'elg2-leftright',
@@ -28,66 +30,65 @@ export const calcabEstimatingLimitsGraphsPart2Data = {
 
 Two notations on the same graph:
 
-- $\\lim_{x \\to a^-} f(x)$: trace from the **left** toward $a$. Read the $y$-value the curve heads for.
-- $\\lim_{x \\to a^+} f(x)$: trace from the **right** toward $a$. Read the $y$-value the curve heads for.
+- $\\lim_{x \\to a^-} f(x)$: trace from the **left** toward $a$ and read the height the curve heads for.
+- $\\lim_{x \\to a^+} f(x)$: trace from the **right** toward $a$ and read the height the curve heads for.
 
 > 💡 **Tip:** the superscript $-$ means "from values less than $a$" (left). The superscript $+$ means "from values greater than $a$" (right).
-      `
-    },
-    {
-      id: 'elg2-existence',
-      type: 'text' as const,
-      content: `
-## ✅ The Existence Theorem — Visually
 
-Two-sided limit exists $\\iff$ both arms of the graph aim at the same $y$-value at $x = a$.
+### The Existence Test — Visually
 
 | Picture at $x = a$ | What it means |
 |--------------------|---------------|
-| Both arms meet at the same $y$ | $\\lim_{x \\to a} f(x) = $ that $y$-value |
-| Arms aim at different $y$-values (graph "jumps") | $\\lim_{x \\to a} f(x)$ DNE |
-| Either arm shoots up/down to $\\pm\\infty$ | $\\lim_{x \\to a} f(x)$ DNE (vertical asymptote) |
+| Both arms head to the same height | $\\lim_{x \\to a} f(x) = $ that height |
+| Arms head to different heights (the graph "jumps") | $\\lim_{x \\to a} f(x)$ does not exist |
+| Either arm rises or falls without bound | $\\lim_{x \\to a} f(x)$ does not exist |
 
-The value $f(a)$ — drawn as a closed dot, open circle, or missing entirely — does NOT affect the limit.
+The value $f(a)$, drawn as a filled dot (or missing), does NOT affect the limit.
       `
     },
     {
       id: 'elg2-reading',
       type: 'text' as const,
+      figure: elgJump,
       content: `
-## 📖 Worked Reading
+## 📖 Worked Reading of a Jump
 
-A piecewise graph $f$ near $x = 1$ shows:
-- Left arm aiming at $y = 4$ (open circle at $(1, 4)$).
-- Right arm aiming at $y = 2$ (closed dot at $(1, 2)$).
+| Question | Answer | How to see it |
+|----------|--------|---------------|
+| $\\lim_{x \\to 1^-} f(x)$ | $4$ | The left piece rises to the open circle at height $4$ |
+| $\\lim_{x \\to 1^+} f(x)$ | $2$ | The right piece starts at height $2$ |
+| $\\lim_{x \\to 1} f(x)$ | Does not exist | The two sides disagree |
+| $f(1)$ | $2$ | The filled dot is at $(1, 2)$ |
 
-| Question | Answer |
-|----------|--------|
-| $\\lim_{x \\to 1^-} f(x)$ | $4$ |
-| $\\lim_{x \\to 1^+} f(x)$ | $2$ |
-| $\\lim_{x \\to 1} f(x)$ | DNE (the two sides disagree) |
-| $f(1)$ | $2$ (the closed dot) |
-
-> ⚠️ Don't confuse "$f(1)$ exists" with "the limit at 1 exists." They are independent.
+> ⚠️ Don't confuse "$f(1)$ exists" with "the limit at 1 exists." They are separate questions.
       `
     },
     {
       id: 'elg2-mc',
       type: 'multiple-choice' as const,
-      content: `**Read the One-Sided Limits** 🎯`,
+      figure: elgPiecewise,
+      content: `**Use the graph of $g$ above** 🎯
+
+`,
       exercise: {
         questions: [
           {
-            question: 'A graph shows the left arm at $x = 0$ aiming at $y = 2$ and the right arm aiming at $y = 5$. What is $\\lim_{x \\to 0} f(x)$?',
-            options: ['$2$', '$5$', '$3.5$', 'DNE'],
-            correctAnswer: 3,
-            explanation: 'One-sided limits disagree (2 vs 5), so the two-sided limit DNE.'
+            question: 'What is $\\lim_{x \\to 0^-} g(x)$?',
+            options: ['$1$', '$4$', '$0$', 'Does not exist'],
+            correctAnswer: 0,
+            explanation: 'Coming from the left, the segment falls to the open circle at height $1$. The height $4$ belongs to the right piece (and to $g(0)$), and a one-sided limit can exist even when the two-sided limit does not.'
           },
           {
-            question: 'Same graph as above: what is $\\lim_{x \\to 0^+} f(x)$?',
-            options: ['$2$', '$5$', '$0$', 'DNE'],
-            correctAnswer: 1,
-            explanation: 'The right arm aims at 5, so the right-hand limit is 5.'
+            question: 'What is $\\lim_{x \\to 0} g(x)$?',
+            options: ['$1$', '$4$', '$2.5$', 'Does not exist'],
+            correctAnswer: 3,
+            explanation: 'The left-hand limit is $1$ and the right-hand limit is $4$. They disagree, so the two-sided limit does not exist. Averaging the two heights is never how a limit works.'
+          },
+          {
+            question: 'What is $\\lim_{x \\to 2} g(x)$?',
+            options: ['$2$', '$5$', '$3.5$', 'Does not exist'],
+            correctAnswer: 0,
+            explanation: 'Both segments head to the open circle at height $2$, so the limit is $2$. The filled dot at $(2, 5)$ is the value $g(2)$, which does not affect the limit.'
           }
         ]
       }
@@ -95,18 +96,21 @@ A piecewise graph $f$ near $x = 1$ shows:
     {
       id: 'elg2-dropdown',
       type: 'dropdown-select' as const,
-      content: `**Picture Match** 🔽`,
+      figure: elgPiecewise,
+      content: `**Read the same graph of $g$** 🔽
+
+`,
       exercise: {
         dropdowns: [
-          { label: 'Both arms meet at $y = 3$, with a closed dot at $(2, 3)$. $\\lim_{x \\to 2} f(x) = $', options: ['$0$', '$3$', 'DNE', '$2$'] },
-          { label: 'Both arms meet at $y = 3$, but a solid dot is drawn at $(2, 7)$. $\\lim_{x \\to 2} f(x) = $', options: ['$3$', '$7$', '$5$', 'DNE'] },
-          { label: 'Left arm $\\to 1$, right arm $\\to 4$, no dot drawn. $\\lim_{x \\to 2} f(x) = $', options: ['$1$', '$4$', '$2.5$', 'DNE'] },
+          { label: '$\\lim_{x \\to -2} g(x) = $', options: ['$1$', '$3$', '$-2$', 'DNE'] },
+          { label: '$\\lim_{x \\to 0^+} g(x) = $', options: ['$1$', '$4$', '$0$', 'DNE'] },
+          { label: '$g(2) = $', options: ['$2$', '$5$', '$3.5$', 'undefined'] },
         ],
-        correctAnswers: ['$3$', '$3$', 'DNE'],
-        hint1: 'Limit is what the arms aim at, not what dot is drawn.',
-        hint2: 'Even with $f(2) = 7$, both arms still aim at 3.',
-        hint3: 'Disagreeing arms → DNE.',
-        explanation: 'The limit is determined entirely by the arms, not by any dot drawn at $x = a$.'
+        correctAnswers: ['$3$', '$4$', '$5$'],
+        hint1: 'At $x = -2$ the two segments meet at a filled dot.',
+        hint2: 'From the right of $x = 0$, the segment starts at the filled dot.',
+        hint3: 'A value $g(2)$ is read from the filled dot above $x = 2$.',
+        explanation: 'At $x = -2$ both segments meet at height $3$. Just to the right of $0$ the graph starts at height $4$. The filled dot above $x = 2$ is at height $5$, so $g(2) = 5$, even though the limit there is $2$.'
       }
     }
   ]

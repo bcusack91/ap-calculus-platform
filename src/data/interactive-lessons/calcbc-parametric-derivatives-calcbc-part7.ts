@@ -17,7 +17,7 @@ Master all parametric derivative concepts for the AP exam.
 | First derivative | $\\frac{dy}{dx} = \\frac{dy/dt}{dx/dt}$ |
 | Second derivative | $\\frac{d^2y}{dx^2} = \\frac{(d/dt)(dy/dx)}{dx/dt}$ |
 | Speed | $v = \\sqrt{(x')^2+(y')^2}$ |
-| Curvature | $\\kappa = \\frac{|x'y''-y'x''|}{((x')^2+(y')^2)^{3/2}}$ |
+| Curvature | $\\kappa = \\frac{\\lvert x'y''-y'x''\\rvert}{((x')^2+(y')^2)^{3/2}}$ |
 | Tangent line | $y - y_0 = \\frac{dy/dx}(x - x_0)$ |
 | Normal line | slope $= -\\frac{dx/dt}{dy/dt}$ |`
     },

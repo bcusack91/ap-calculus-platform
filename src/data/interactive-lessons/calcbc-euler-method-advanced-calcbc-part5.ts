@@ -37,13 +37,13 @@ $$\\Delta x = \\frac{x_{\\text{target}} - x_0}{\\text{number of steps}}$$
       type: 'text' as const,
       content: `### Common Point-Losing Mistakes
 
-| Mistake | Points lost | How to avoid |
-|---------|------------|-------------|
-| Using slope at wrong point | 1–2 | Always use $(x_n, y_n)$, not $(x_{n+1}, y_{n+1})$ |
-| Wrong $\\Delta x$ | All | Read carefully: "two steps from $x = 0$ to $x = 1$" → $\\Delta x = 0.5$ |
-| Not showing intermediate steps | 1 | Write out each step, don't skip to final |
-| Arithmetic error | 1 | Check: does the sign of $\\Delta y$ match the slope? |
-| No justification for over/under | 1 | Must cite $y'' > 0$ or $y'' < 0$ |
+| Mistake | How to avoid |
+|---------|-------------|
+| Using slope at wrong point | Always use $(x_n, y_n)$, not $(x_{n+1}, y_{n+1})$ |
+| Wrong $\\Delta x$ | Read carefully: "two steps from $x = 0$ to $x = 1$" → $\\Delta x = 0.5$ |
+| Not showing intermediate steps | Write out each step, don't skip to final |
+| Arithmetic error | Check: does the sign of $\\Delta y$ match the slope? |
+| No justification for over/under | Must cite $y'' > 0$ or $y'' < 0$ |
 
 ### The "Separation of Variables + Euler" Combo
 

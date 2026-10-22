@@ -16,7 +16,7 @@ export const calcbcSeriesAppsPart7Data = {
 | Compute $\\int f(x)\\,dx$ | Integrate series term by term |
 | Evaluate $\\lim$ | Expand numerator & denominator, cancel |
 | Differentiate series | Differentiate term by term |
-| Error bound | AST: first omitted term; Lagrange: $M|x-a|^{n+1}/(n+1)!$ |`
+| Error bound | AST: first omitted term; Lagrange: $M\\lvert x-a\\rvert^{n+1}/(n+1)!$ |`
     },
     {
       id: 'sa7-mc',

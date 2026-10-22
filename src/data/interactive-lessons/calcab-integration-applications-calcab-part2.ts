@@ -6,77 +6,75 @@ export const calcabIntAppsPart2Data = {
       type: 'text' as const,
       content: `# Integration Applications
 
-**Part 2 of 7 \u2014 Cross-Sectional Volumes**
+**Part 2 of 7 — Position, Velocity, and Displacement**
 
-### Volume with Known Cross Sections
+### The Motion Chain, Run Backwards
 
-$$\\boxed{V = \\int_a^b A(x)\\,dx}$$
+For a particle moving along a line: $v(t) = x'(t)$ and $a(t) = v'(t)$. Derivatives go down the chain; **integrals come back up**:
 
-where $A(x)$ is the area of the cross section at position $x$.
+$$\\boxed{x(b) = x(a) + \\int_a^b v(t)\\,dt} \\qquad \\boxed{v(b) = v(a) + \\int_a^b a(t)\\,dt}$$
 
-### Cross-Section Area Formulas
-
-If the **side length** (or diameter) of each cross section is $s(x) = f(x) - g(x)$:
-
-| Shape | Area $A(x)$ | Common AP form |
+| Quantity on $[a, b]$ | Formula | Meaning |
 |:---:|:---:|:---:|
-| Square | $s^2$ | $(f(x)-g(x))^2$ |
-| Semicircle | $\\frac{\\pi}{8}s^2$ | $\\frac{\\pi}{8}(f(x)-g(x))^2$ |
-| Equilateral triangle | $\\frac{\\sqrt{3}}{4}s^2$ | $\\frac{\\sqrt{3}}{4}(f(x)-g(x))^2$ |
-| Isosceles right triangle (leg) | $\\frac{1}{2}s^2$ | $\\frac{1}{2}(f(x)-g(x))^2$ |
-| Rectangle ($h = 2s$) | $2s^2$ | $2(f(x)-g(x))^2$ |
+| Displacement | $\\int_a^b v(t)\\,dt = x(b) - x(a)$ | Net change in position (can be negative) |
+| Position at $t = b$ | $x(a) + \\int_a^b v(t)\\,dt$ | Starting position plus displacement |
+| Change in velocity | $\\int_a^b a(t)\\,dt = v(b) - v(a)$ | Net change in velocity |
+| Average velocity | $\\frac{1}{b-a}\\int_a^b v(t)\\,dt$ | Displacement divided by elapsed time |
 
-> **Key Fact:** The shape of the cross section only affects the constant multiplier. The integral setup is always $\\int_a^b (\\text{constant}) \\cdot s^2\\,dx$.`
+> **Key Fact:** You never need a formula for $x(t)$. Position at a later time is the known position plus the definite integral of velocity.`
     },
     {
       id: 'ia2-worked',
       type: 'text' as const,
-      content: `### Worked Example
+      content: `### Worked Example 1 — Position from Velocity
 
-**Base region:** Between $y = \\sqrt{x}$ and $y = 0$ from $x=0$ to $x=4$.
+A particle moves along the $x$-axis with velocity $v(t) = t^2 - 4t + 3$ (units per second), and $x(0) = 2$.
 
-**Cross sections (perpendicular to $x$-axis) are squares.**
+**(a) Displacement on $[0, 3]$:**
 
-| Step | Work |
-|:---:|:---:|
-| Side length | $s(x) = \\sqrt{x} - 0 = \\sqrt{x}$ |
-| Cross-section area | $A(x) = (\\sqrt{x})^2 = x$ |
-| Volume integral | $V = \\int_0^4 x\\,dx$ |
-| Evaluate | $[\\frac{x^2}{2}]_0^4 = 8$ |
+$$\\int_0^3 (t^2 - 4t + 3)\\,dt = \\left[\\frac{t^3}{3} - 2t^2 + 3t\\right]_0^3 = 9 - 18 + 9 = 0$$
 
-**Same base, semicircular cross sections:**
+So $x(3) = 2 + 0 = 2$: the particle ends where it started.
 
-| Step | Work |
-|:---:|:---:|
-| Diameter | $d = \\sqrt{x}$, radius $= \\sqrt{x}/2$ |
-| Area | $\\frac{\\pi}{2}(\\sqrt{x}/2)^2 = \\frac{\\pi x}{8}$ |
-| Volume | $\\int_0^4 \\frac{\\pi x}{8}dx = \\frac{\\pi}{8} \\cdot 8 = \\pi$ |
+**(b) Position at $t = 1$:**
 
-> **AP Tip:** Cross-section volumes are a favorite AP FRQ topic. Make sure you can set up the integral for any shape.`
+$$x(1) = 2 + \\int_0^1 (t^2 - 4t + 3)\\,dt = 2 + \\left(\\frac{1}{3} - 2 + 3\\right) = \\frac{10}{3}$$
+
+**(c) Average velocity on $[0, 3]$:** $\\frac{0}{3} = 0$ units per second, even though the particle did move. (Part 3 measures how far it actually traveled.)
+
+### Worked Example 2 — Starting from Acceleration
+
+$a(t) = 6t - 4$, $v(0) = -3$ and $x(0) = 1$. Find $x(2)$.
+
+Velocity: $v(t) = -3 + \\int_0^t (6s - 4)\\,ds = 3t^2 - 4t - 3$.
+
+Position: $x(2) = 1 + \\int_0^2 (3t^2 - 4t - 3)\\,dt = 1 + (8 - 8 - 6) = -5$.
+
+> **AP Tip:** On the calculator section the velocity is usually something you cannot integrate by hand, such as $v(t) = \\sin(t^2) + 1$. Write the setup, $x(b) = x(a) + \\int_a^b v(t)\\,dt$, then let the calculator evaluate the integral and report three decimal places.`
     },
     {
       id: 'ia2-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Cross-Sectional Volumes** \ud83c\udfaf',
+      content: '**Position and Displacement** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Base between $y = x$ and $y = x^2$ on $[0,1]$. Square cross sections perpendicular to $x$-axis. Volume:',
-            options: ['$\\frac{1}{30}$', '$\\frac{1}{6}$', '$\\frac{1}{3}$', '$\\frac{2}{15}$'],
+            question: 'A particle has velocity $v(t) = 2t - 6$ and position $x(0) = 5$. What is $x(4)$?',
+            options: ['$-3$', '$-8$', '$13$', '$2$'],
             correctAnswer: 0,
-            explanation: '$s = x-x^2$. $V = \\int_0^1(x-x^2)^2 dx = \\int_0^1(x^2-2x^3+x^4)dx = [\\frac{x^3}{3}-\\frac{x^4}{2}+\\frac{x^5}{5}]_0^1 = \\frac{1}{3}-\\frac{1}{2}+\\frac{1}{5} = \\frac{1}{30}$.'
+            explanation: '$x(4) = 5 + \\int_0^4 (2t - 6)\\,dt = 5 + (16 - 24) = -3$. $-8$ is the displacement alone, $13$ adds the size of the displacement instead of its signed value, and $2$ is the velocity $v(4)$.'
           },
           {
-            question: 'Changing the cross section from squares to equilateral triangles multiplies the volume by:',
-            options: ['$\\frac{\\sqrt{3}}{4}$', '$\\frac{\\pi}{4}$', '$\\frac{1}{2}$', '$\\sqrt{3}$'],
+            question: 'Position is in meters and time in seconds, with the positive direction to the right. If $\\int_1^5 v(t)\\,dt = -6$, which statement must be true?',
+            options: ['At $t = 5$ it is 6 m left of its $t = 1$ position', 'Between $t = 1$ and $t = 5$ it traveled exactly 6 m', 'It moved to the left during the whole time', 'Its velocity at $t = 5$ was $-6$ meters per second'],
             correctAnswer: 0,
-            explanation: 'Square area: $s^2$. Equilateral triangle area: $\\frac{\\sqrt{3}}{4}s^2$. Ratio: $\\frac{\\sqrt{3}}{4}$.'
+            explanation: 'The integral of velocity is displacement: $x(5) - x(1) = -6$. The distance traveled could be more than 6 m if the particle changed direction, it may have moved right for part of the time, and the integral says nothing about $v(5)$ itself.'
           },
           {
-            question: 'Cross sections perpendicular to the $y$-axis means you integrate with respect to:',
-            options: ['$y$', '$x$', 'Either', 'Neither'],
+            question: 'A particle has acceleration $a(t) = 4 - 2t$ and $v(0) = 1$. What is $v(3)$?',
+            options: ['$4$', '$3$', '$-2$', '$-5$'],
             correctAnswer: 0,
-            explanation: 'Perpendicular to $y$-axis $\\Rightarrow$ slice at each $y$-value $\\Rightarrow \\int dy$.'
+            explanation: '$v(3) = 1 + \\int_0^3 (4 - 2t)\\,dt = 1 + (12 - 9) = 4$. $3$ is the change in velocity alone, $-2$ is the acceleration $a(3)$, and $-5$ integrates $2t$ as $2t^2$.'
           }
         ]
       }
@@ -84,29 +82,29 @@ If the **side length** (or diameter) of each cross section is $s(x) = f(x) - g(x
     {
       id: 'ia2-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Set up the volume integral.** \ud83d\udd0d',
+      content: '**Read the integral.** 🔍',
       exercise: {
         dropdowns: [
           {
-            label: 'Base between $y=0$ and $y=\\sin x$ on $[0,\\pi]$. Cross sections are squares. Volume integral:',
-            options: ['$\\int_0^{\\pi} \\sin^2 x\\,dx$', '$\\int_0^{\\pi} \\frac{1}{2}\\sin^2 x\\,dx$', '$\\pi \\int_0^{\\pi} \\sin^2 x\\,dx$', '$\\int_0^{\\pi} \\sqrt{\\sin x}\\,dx$'],
-            correctAnswers: ['$\\int_0^{\\pi} \\sin^2 x\\,dx$'],
-            hints: ['$s = \\sin x$, square area $= s^2 = \\sin^2 x$.'],
-            explanation: 'Each square has side $\\sin x$, so its area is $\\sin^2 x$ and $V = \\int_0^{\\pi} \\sin^2 x\\,dx$. No $\\pi$ (that is for circles) and no $\\frac{1}{2}$ (that is for triangles).'
+            label: 'Velocity $v(t)$ is in feet per second. On $[0, 10]$, $\\int_0^{10} v(t)\\,dt$ is the particle’s:',
+            options: ['Displacement, in feet', 'Total distance, in feet', 'Average velocity, in ft/s', 'Acceleration, in ft/s²'],
+            correctAnswers: ['Displacement, in feet'],
+            hints: ['The integral of a rate of change is the net change.'],
+            explanation: '$\\int_0^{10} v(t)\\,dt = x(10) - x(0)$, the displacement, in (ft/s)(s) = ft. Total distance needs $\\lvert v\\rvert$, and average velocity divides by 10.'
           },
           {
-            label: 'For semicircular cross sections, the area formula uses which constant?',
-            options: ['$\\pi/8$', '$\\pi/4$', '$\\pi/2$', '$\\sqrt{3}/4$'],
-            correctAnswers: ['$\\pi/8$'],
-            hints: ['Diameter $= s$, radius $= s/2$. $A = \\frac{1}{2}\\pi(s/2)^2 = \\frac{\\pi s^2}{8}$.'],
-            explanation: '$A = \\frac{\\pi}{8}s^2$ where $s$ is the diameter of the semicircle.'
+            label: 'If $x(2) = 7$ and $\\int_2^6 v(t)\\,dt = -3$, then $x(6)$ is:',
+            options: ['$4$', '$-3$', '$10$', '$-21$'],
+            correctAnswers: ['$4$'],
+            hints: ['Position later = position earlier + displacement.'],
+            explanation: '$x(6) = x(2) + \\int_2^6 v(t)\\,dt = 7 - 3 = 4$.'
           },
           {
-            label: 'Base: circle $x^2+y^2=4$. Square cross sections $\\perp$ to $x$-axis. Side length at position $x$:',
-            options: ['$2\\sqrt{4-x^2}$', '$\\sqrt{4-x^2}$', '$4-x^2$', '$2(4-x^2)$'],
-            correctAnswers: ['$2\\sqrt{4-x^2}$'],
-            hints: ['Top: $y=\\sqrt{4-x^2}$, bottom: $y=-\\sqrt{4-x^2}$. Side = top $-$ bottom.'],
-            explanation: 'Side $= \\sqrt{4-x^2}-(-\\sqrt{4-x^2}) = 2\\sqrt{4-x^2}$.'
+            label: 'The average velocity on $[a, b]$ is:',
+            options: ['$\\frac{1}{b-a}\\int_a^b v(t)\\,dt$', '$\\frac{v(a)+v(b)}{2}$', '$\\frac{v(b)-v(a)}{b-a}$', '$\\int_a^b \\lvert v(t)\\rvert\\,dt$'],
+            correctAnswers: ['$\\frac{1}{b-a}\\int_a^b v(t)\\,dt$'],
+            hints: ['Average velocity is the average value of $v$.'],
+            explanation: 'Average velocity $= \\frac{1}{b-a}\\int_a^b v(t)\\,dt = \\frac{x(b)-x(a)}{b-a}$. $\\frac{v(b)-v(a)}{b-a}$ is the average acceleration, and $\\int \\lvert v\\rvert$ is total distance.'
           }
         ]
       }
@@ -114,32 +112,32 @@ If the **side length** (or diameter) of each cross section is $s(x) = f(x) - g(x
     {
       id: 'ia2-input',
       type: 'input-box' as const,
-      content: '**Compute the volume.** \u270d\ufe0f',
+      content: '**Find a position.** ✍️',
       exercise: {
-        question: 'Base between $y=0$ and $y=1-x^2$ (for $-1 \\le x \\le 1$). Cross sections perpendicular to the $x$-axis are squares. Find the volume.\n\n(Enter a fraction as a/b.)',
-        correctAnswer: '16/15',
-        acceptableAnswers: ['16/15', '1.07', '1.067'],
+        question: 'A particle moves along a line with velocity $v(t) = 3t^2 - 6t$, and $x(1) = 4$. Find $x(3)$.',
+        correctAnswer: '6',
+        acceptableAnswers: ['6'],
         hints: [
-          'Side length $s = 1-x^2$. Area $= (1-x^2)^2$.',
-          '$V = \\int_{-1}^{1}(1-x^2)^2 dx = 2\\int_0^1(1-2x^2+x^4)dx$.',
-          '$= 2[x-\\frac{2x^3}{3}+\\frac{x^5}{5}]_0^1 = 2(1-\\frac{2}{3}+\\frac{1}{5})$.'
+          '$x(3) = x(1) + \\int_1^3 v(t)\\,dt$.',
+          'An antiderivative of $3t^2 - 6t$ is $t^3 - 3t^2$.',
+          '$\\left[t^3 - 3t^2\\right]_1^3 = 0 - (-2) = 2$.'
         ],
-        explanation: '$2(1-\\frac{2}{3}+\\frac{1}{5}) = 2 \\cdot \\frac{15-10+3}{15} = 2 \\cdot \\frac{8}{15} = \\frac{16}{15}$.'
+        explanation: '$x(3) = 4 + \\left[t^3 - 3t^2\\right]_1^3 = 4 + (0 - (-2)) = 6$.'
       }
     },
     {
       id: 'ia2-summary',
       type: 'text' as const,
-      content: `### Key Takeaways \u2014 Part 2
+      content: `### Key Takeaways — Part 2
 
-| Shape | Area multiplier |
+| Want | Use |
 |:---:|:---:|
-| Square | $1 \\cdot s^2$ |
-| Semicircle | $\\frac{\\pi}{8}s^2$ |
-| Equilateral $\\triangle$ | $\\frac{\\sqrt{3}}{4}s^2$ |
-| Isosceles right $\\triangle$ | $\\frac{1}{2}s^2$ |
+| Position at $t = b$ | $x(a) + \\int_a^b v(t)\\,dt$ |
+| Displacement | $\\int_a^b v(t)\\,dt$ |
+| Velocity at $t = b$ | $v(a) + \\int_a^b a(t)\\,dt$ |
+| Average velocity | $\\frac{1}{b-a}\\int_a^b v(t)\\,dt$ |
 
-> **Up Next:** Part 3 \u2014 Disk & Washer Methods.`
+> **Up Next:** Part 3 — Total Distance and Speed.`
     }
   ]
 };

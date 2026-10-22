@@ -129,15 +129,15 @@ $$V = \\int_0^2 (2x - x^2)^2\\,dx$$`
       type: 'input-box' as const,
       content: '**Compute the area.** \u270d\ufe0f',
       exercise: {
-        question: 'Find the area between $y = x^2$ and $y = 4x - x^2$. Express as $\\frac{a}{b}$ in lowest terms. Enter $a + b$.',
-        correctAnswer: '11',
-        acceptableAnswers: ['11'],
+        question: 'Find the area of the region between $y = x^2$ and $y = 4x - x^2$. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '8/3',
+        acceptableAnswers: ['8/3', '2.667', '2.666'],
         hints: [
           'Intersection: $x^2 = 4x - x^2 \\implies 2x^2 - 4x = 0 \\implies x = 0, 2$.',
           '$\\int_0^2 [(4x-x^2)-x^2]\\,dx = \\int_0^2 (4x-2x^2)\\,dx$.',
-          '$= [2x^2 - \\frac{2x^3}{3}]_0^2 = 8 - \\frac{16}{3} = \\frac{8}{3}$. $a+b = 8+3 = 11$.'
+          '$= [2x^2 - \\frac{2x^3}{3}]_0^2 = 8 - \\frac{16}{3} = \\frac{8}{3}$.'
         ],
-        explanation: '$\\int_0^2 (4x-2x^2)\\,dx = 8 - \\frac{16}{3} = \\frac{8}{3}$. $a+b = 11$.'
+        explanation: '$\\int_0^2 (4x-2x^2)\\,dx = 8 - \\frac{16}{3} = \\frac{8}{3}$.'
       }
     },
     {

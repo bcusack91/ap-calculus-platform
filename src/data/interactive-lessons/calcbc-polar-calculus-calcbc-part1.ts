@@ -32,11 +32,11 @@ $$\\boxed{r = \\sqrt{x^2+y^2}, \\quad \\tan\\theta = \\frac{y}{x}}$$
 
 | Equation | Shape |
 |----------|-------|
-| $r = a$ | Circle of radius $|a|$ centered at origin |
+| $r = a$ | Circle of radius $\\lvert a\\rvert$ centered at origin |
 | $\\theta = c$ | Line through origin at angle $c$ |
-| $r = 2a\\cos\\theta$ | Circle of radius $|a|$ centered at $(a, 0)$ |
-| $r = 2a\\sin\\theta$ | Circle of radius $|a|$ centered at $(0, a)$ |
-| $r = a + b\\cos\\theta$ | Limaçon (with loop if $|a| < |b|$) |
+| $r = 2a\\cos\\theta$ | Circle of radius $\\lvert a\\rvert$ centered at $(a, 0)$ |
+| $r = 2a\\sin\\theta$ | Circle of radius $\\lvert a\\rvert$ centered at $(0, a)$ |
+| $r = a + b\\cos\\theta$ | Limaçon (with loop if $\\lvert a\\rvert < \\lvert b\\rvert$) |
 | $r = a\\cos(n\\theta)$ | Rose ($n$ petals if odd, $2n$ if even) |
 
 **Converting equations:**

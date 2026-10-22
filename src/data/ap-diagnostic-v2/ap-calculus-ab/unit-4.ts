@@ -283,7 +283,7 @@ export const ITEMS: ApDiagV2Item[] = [
   {
     id: "calcab-u4-010",
     unit: "unit-4",
-    topicSlug: "limits-at-infinity",
+    topicSlug: "lhopitals-rule",
     difficulty: "medium",
     stem: "What is $\\displaystyle\\lim_{x \\to 1} \\frac{\\ln x}{x^2 - 1}$?",
     options: ["$\\dfrac{1}{2}$", "$2$", "$0$", "$1$"],
@@ -294,7 +294,7 @@ export const ITEMS: ApDiagV2Item[] = [
   {
     id: "calcab-u4-011",
     unit: "unit-4",
-    topicSlug: "limits-at-infinity",
+    topicSlug: "lhopitals-rule",
     difficulty: "hard",
     stem: "What is $\\displaystyle\\lim_{x \\to 0} \\frac{x - \\sin x}{x^3}$?",
     options: ["$\\dfrac{1}{6}$", "$\\dfrac{1}{3}$", "$\\dfrac{1}{2}$", "$0$"],

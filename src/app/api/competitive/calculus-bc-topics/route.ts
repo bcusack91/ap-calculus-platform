@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { visibleTopics } from '@/lib/course-hub-sections'
 import { isCompetitiveFullUnlock } from "@/lib/admin-unlock"
 
 export async function GET() {
@@ -22,6 +23,10 @@ export async function GET() {
       },
     })
     if (!course) return NextResponse.json({ error: 'AP Calculus BC course not found' }, { status: 404 })
+    // BC-only competitive units (the BC bank). Legacy (308) and retired rows never show.
+    course.categories = course.categories
+      .map(c => ({ ...c, topics: visibleTopics(c.topics) }))
+      .filter(c => c.topics.length > 0)
 
     const topicIds = course.categories.flatMap(c => c.topics.map(t => t.id))
     const progress = await prisma.topicProgress.findMany({ where: { userId: user.id, topicId: { in: topicIds } }, select: { topicId: true, status: true, masteryLevel: true } })

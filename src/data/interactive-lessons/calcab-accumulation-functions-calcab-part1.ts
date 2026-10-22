@@ -106,7 +106,7 @@ $$\\text{Local min at } x = 2: \\quad f(2) = 0, \\quad f \\text{ changes } - \\t
             options: ['Increasing, concave up', 'Increasing, concave down', 'Decreasing, concave up', 'Decreasing, concave down'],
             correctAnswers: ['Decreasing, concave up'],
             hints: ['$f < 0$: $F$ decreasing. $f$ increasing: $F\'\' = f\' > 0$: concave up.'],
-            explanation: '$f < 0$ → $F$ decreasing. $f$ increasing → concave up. Think of a parabola opening up but currently below the axis of symmetry.'
+            explanation: '$f < 0$ → $F$ decreasing. $f$ increasing → concave up. Think of a parabola opening up, to the left of its vertex.'
           },
           {
             label: 'An inflection point of $F$ occurs where:',

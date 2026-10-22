@@ -5,9 +5,15 @@
  * This diagnostic pulls questions from BOTH the AB pool (foundational) and the
  * BC pool (BC-exclusive) to give a comprehensive assessment.
  *
- * Produces 10 alternate forms (1–10) each with ~37 questions spanning
+ * Produces 10 alternate forms (1–10) each with 40 questions spanning
  * both AB-foundational and BC-exclusive domains. Each form uses a seeded
  * PRNG to deterministically select a different subset of questions.
+ *
+ * Blueprint (Oct 2026): Units 1–8 are about 55–79% of the BC exam (CED exam
+ * weighting), so 24 of the 40 items (60%) come from the AB pool, including
+ * AB Unit 7 (slope fields, separation of variables, exponential models), and
+ * 16 from the BC-only pool. By CED unit: U1 3, U2–3 4, U4–5 7, U6 5+3,
+ * U7 2+2, U8 3 (+ arc length in the parametric domain), U9 5, U10 6.
  */
 
 import { calcABQuestionPool, type CalcABQuestion } from './exit-quizzes/ap-calculus-ab'
@@ -15,6 +21,7 @@ import { mulberry32 } from './_shared/prng'
 import { calcBCQuestionPool, type CalcBCQuestion } from './exit-quizzes/ap-calculus-bc'
 import { estimateApScore } from '@/lib/ap-scoring'
 import { canonicalApTopicSlug } from '@/lib/ap-topic-canonical'
+import { isCalcBcExamTrivia } from './unit-tests/ap-calculus-bc'
 
 /* ------------------------------------------------------------------ */
 /*  Public types                                                       */
@@ -83,7 +90,7 @@ export interface CalcBCDiagnosticResults {
 /* ------------------------------------------------------------------ */
 
 const CALC_BC_DOMAINS: CalcBCDomain[] = [
-  // AB-foundational (smaller question targets since BC also has exclusive content)
+  // AB-foundational: 24 of 40 items (Units 1-8 are most of the BC exam)
   {
     id: 'limits',
     name: 'Limits & Continuity',
@@ -100,7 +107,7 @@ const CALC_BC_DOMAINS: CalcBCDomain[] = [
       'chain-rule-calcab',
       'inverse-functions-derivatives-calcab',
     ],
-    questionTarget: 3,
+    questionTarget: 4,
     source: 'ab',
   },
   {
@@ -113,7 +120,7 @@ const CALC_BC_DOMAINS: CalcBCDomain[] = [
       'theorem-applications-calcab',
       'particle-motion-calcab',
     ],
-    questionTarget: 3,
+    questionTarget: 7,
     source: 'ab',
   },
   {
@@ -125,7 +132,7 @@ const CALC_BC_DOMAINS: CalcBCDomain[] = [
       'u-substitution-calcab',
       'accumulation-functions-calcab',
     ],
-    questionTarget: 3,
+    questionTarget: 5,
     source: 'ab',
   },
   {
@@ -135,6 +142,16 @@ const CALC_BC_DOMAINS: CalcBCDomain[] = [
       'area-between-curves-calcab',
       'volumes-of-revolution-calcab',
       'integration-applications-calcab',
+    ],
+    questionTarget: 3,
+    source: 'ab',
+  },
+  {
+    id: 'diffeq',
+    name: 'Differential Equations (AB)',
+    topicSlugs: [
+      'differential-equations-calcab',
+      'exponential-models-calcab',
     ],
     questionTarget: 2,
     source: 'ab',
@@ -149,7 +166,7 @@ const CALC_BC_DOMAINS: CalcBCDomain[] = [
       'improper-integrals-calcbc',
       'advanced-integration-calcbc',
     ],
-    questionTarget: 5,
+    questionTarget: 3,
     source: 'bc',
   },
   {
@@ -173,7 +190,7 @@ const CALC_BC_DOMAINS: CalcBCDomain[] = [
       'convergence-tests-summary-calcbc',
       'alternating-series-calcbc',
     ],
-    questionTarget: 5,
+    questionTarget: 3,
     source: 'bc',
   },
   {
@@ -185,7 +202,7 @@ const CALC_BC_DOMAINS: CalcBCDomain[] = [
       'lagrange-error-bound-calcbc',
       'series-applications-calcbc',
     ],
-    questionTarget: 5,
+    questionTarget: 3,
     source: 'bc',
   },
   {
@@ -195,7 +212,7 @@ const CALC_BC_DOMAINS: CalcBCDomain[] = [
       'euler-method-advanced-calcbc',
       'logistic-models-calcbc',
     ],
-    questionTarget: 3,
+    questionTarget: 2,
     source: 'bc',
   },
 ]
@@ -224,10 +241,10 @@ export function generateCalcBCDiagnosticTest(form: number): CalcBCDiagnosticTest
   const questions: CalcBCDiagnosticQuestion[] = []
 
   for (const domain of CALC_BC_DOMAINS) {
-    const pool: (CalcABQuestion | CalcBCQuestion)[] =
-      domain.source === 'ab'
-        ? calcABQuestionPool.filter(q => q.domain === domain.id)
-        : calcBCQuestionPool.filter(q => q.domain === domain.id)
+    const source: (CalcABQuestion | CalcBCQuestion)[] = domain.source === 'ab' ? calcABQuestionPool : calcBCQuestionPool
+    // Exam-trivia items (timing, sub-scores, calculator notation) test no CED
+    // content; the unit tests drop them by the same rule.
+    const pool = source.filter(q => q.domain === domain.id && !isCalcBcExamTrivia(q.question))
 
     const shuffled = seededShuffle(pool, rng)
     const selected = shuffled.slice(0, domain.questionTarget)
@@ -252,7 +269,7 @@ export function generateCalcBCDiagnosticTest(form: number): CalcBCDiagnosticTest
     questions: shuffledQuestions,
     domains: CALC_BC_DOMAINS,
     totalQuestions: shuffledQuestions.length,
-    timeLimitMinutes: 50,
+    timeLimitMinutes: 55,
   }
 }
 
@@ -401,6 +418,7 @@ const SLUG_LABELS: Record<string, string> = {
   'linearization-differentials-calcab': 'Linearization & Differentials',
   'theorem-applications-calcab': 'Theorem Applications (MVT, IVT)',
   'particle-motion-calcab': 'Particle Motion',
+  'lhopitals-rule': 'L\'Hôpital\'s Rule',
   'definite-integrals-calcab': 'Definite Integrals',
   'antiderivatives-indefinite-integrals-calcab': 'Antiderivatives & Indefinite Integrals',
   'u-substitution-calcab': 'u-Substitution',
@@ -408,6 +426,8 @@ const SLUG_LABELS: Record<string, string> = {
   'area-between-curves-calcab': 'Area Between Curves',
   'volumes-of-revolution-calcab': 'Volumes of Revolution',
   'integration-applications-calcab': 'Integration Applications',
+  'differential-equations-calcab': 'Differential Equations',
+  'exponential-models-calcab': 'Exponential Models',
   // BC topics
   'integration-by-parts-calcbc': 'Integration by Parts',
   'partial-fractions-calcbc': 'Partial Fractions',
@@ -416,7 +436,7 @@ const SLUG_LABELS: Record<string, string> = {
   'parametric-curves-calculus-calcbc': 'Parametric Curves & Calculus',
   'polar-calculus-calcbc': 'Polar Calculus',
   'vector-valued-functions-calcbc': 'Vector-Valued Functions',
-  'arc-length-surface-area-calcbc': 'Arc Length & Surface Area',
+  'arc-length-surface-area-calcbc': 'Arc Length',
   'infinite-sequences-calcbc': 'Infinite Sequences',
   'infinite-series-calcbc': 'Infinite Series',
   'convergence-tests-summary-calcbc': 'Convergence Tests',

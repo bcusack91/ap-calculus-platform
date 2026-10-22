@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useMemo, useCallback, useRef, useContext } from 'react'
+import { INCLUDE_COURSE_NAMES } from '@/lib/course-includes'
 import Link from 'next/link'
 import { SessionContext } from 'next-auth/react'
 import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
@@ -548,7 +549,7 @@ export default function TopicEntranceQuiz({
                         : 'w-full py-3 rounded-xl font-semibold text-white bg-accent hover:bg-accent-hover transition-colors shadow-lg'
                     }
                   >
-                    📚 Return to {courseSlug ? courseSlug.replace(/-/g, ' ').replace(/\bap\b/g, 'AP').replace(/\b\w/g, l => l.toUpperCase()) : 'Course'}
+                    📚 Return to {courseSlug ? INCLUDE_COURSE_NAMES[courseSlug] ?? courseSlug.replace(/-/g, ' ').replace(/\bap\b/g, 'AP').replace(/\b\w/g, l => l.toUpperCase()) : 'Course'}
                   </button>
                 )}
               />

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { prisma } from '@/lib/prisma'
 import { faqJsonLd } from '@/lib/jsonld'
 import { DIAGNOSTIC_ABOUT } from '@/lib/diagnostic-about'
+import { courseCategoryLayout } from '@/lib/course-includes'
 
 /**
  * Server-rendered "about this diagnostic" section for the diagnostic routes.
@@ -43,7 +44,12 @@ export default async function DiagnosticAbout({ slug }: { slug: string }) {
   const name = config.displayName ?? ordered[0].name
   // A description only describes one course, so skip it when several are covered.
   const description = ordered.length === 1 ? ordered[0].description : null
-  const units = ordered.flatMap((c) => c.categories.filter((cat) => cat._count.topics > 0))
+  // A course laid out by CED unit in code (AP Calculus BC includes AB's units:
+  // src/lib/course-includes.ts) lists those units, not its own Categories.
+  const layout = ordered.length === 1 ? courseCategoryLayout(ordered[0].slug) : null
+  const units = layout
+    ? layout.filter((u) => u.unitNumber !== null).map((u) => ({ name: u.name, slug: u.categories[0], _count: { topics: u.topics.length } }))
+    : ordered.flatMap((c) => c.categories.filter((cat) => cat._count.topics > 0))
   const topicCount = units.reduce((sum, u) => sum + u._count.topics, 0)
 
   const faqs = [

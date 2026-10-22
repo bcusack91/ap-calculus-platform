@@ -13,6 +13,9 @@ import { hasEntranceQuiz, loadEntranceQuiz } from '@/data/entrance-quizzes'
 import { getInteractiveTopicConfig } from '@/data/interactive-lessons/registry'
 import slugsByCourse from '../fixtures/ap-lesson-topic-slugs.json'
 
+/** AP Calculus AB 4.7, promoted to a live topic in Oct 2026 (lesson + quizzes in progress). */
+const PENDING_TOPICS = new Set<string>() // lhopitals-rule landed 2026-10-22
+
 const entries = Object.entries(slugsByCourse as Record<string, string[]>).flatMap(([course, slugs]) =>
   slugs.map((slug) => [course, slug] as const),
 )
@@ -24,6 +27,9 @@ describe('AP entrance quizzes match the lesson each topic renders', () => {
   })
 
   it.each(entries)('%s / %s', async (_course, slug) => {
+    // A topic whose lesson and entrance quiz are still being authored. Checked
+    // in full as soon as both are registered; drop the entry then.
+    if (PENDING_TOPICS.has(slug) && (!getInteractiveTopicConfig(slug) || !hasEntranceQuiz(slug))) return
     const config = getInteractiveTopicConfig(slug)
     expect(config, `${slug} has no lesson`).not.toBeNull()
     expect(hasEntranceQuiz(slug), `${slug} has no entrance quiz`).toBe(true)

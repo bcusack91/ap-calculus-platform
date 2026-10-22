@@ -7,7 +7,8 @@
 
 import { generateExitQuiz } from '@/data/exit-quizzes'
 
-const TOPIC_SLUGS = [
+/** Also the AB half of the AP Calculus BC rotation (ap-calcbc-daily-question.ts). */
+export const TOPIC_SLUGS = [
   'limits-continuity-calcab',
   'definition-of-derivative-calcab',
   'basic-differentiation-rules-calcab',

@@ -29,9 +29,9 @@ where $y = k$ is the axis of rotation.
 
 > Rotate region between $y = x^2$ and $y = 1$ about $y = -1$ on $[-1,1]$.
 
-$R = 1-(-1) = 2$ (outer: $y=1$ is farther). $r = x^2-(-1) = x^2+1$ (inner: $y=x^2$ is closer).
+Which curve is farther from $y = -1$? On $[-1, 1]$, $x^2 \\le 1$, so the line $y = 1$ is always farther from the axis than the parabola.
 
-Wait \u2014 which is farther from $y = -1$? At $x = 0$: $y=1$ gives distance $2$, $y=0$ gives distance $1$. So $y=1$ is outer.
+$R = 1-(-1) = 2$ (outer: $y=1$). $r = x^2-(-1) = x^2+1$ (inner: $y=x^2$).
 
 $$V = \\pi\\int_{-1}^1[4-(x^2+1)^2]\\,dx = 2\\pi\\int_0^1[4-x^4-2x^2-1]\\,dx = 2\\pi\\int_0^1(3-2x^2-x^4)\\,dx$$
 
@@ -107,7 +107,7 @@ $$V = \\pi\\int_{-1}^1[(3-x^2)^2-4]\\,dx$$`
       type: 'input-box' as const,
       content: '**Calculate.** \u270d\ufe0f',
       exercise: {
-        question: 'Rotate $y = x^2$ about the $y$-axis from $y=0$ to $y=4$ (disk in $y$). Volume $= a\\pi$. Find $a$.\n\n(Enter an integer.)',
+        question: 'The first-quadrant region between $y = x^2$ and the $y$-axis, from $y=0$ to $y=4$, is rotated about the $y$-axis (disks in $y$). The volume is $a\\pi$. Find $a$.\n\n(Enter an integer.)',
         correctAnswer: '8',
         acceptableAnswers: ['8'],
         hints: [

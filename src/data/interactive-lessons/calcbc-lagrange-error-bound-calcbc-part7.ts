@@ -32,7 +32,7 @@ $$\\boxed{|R_n(x)| \\le \\frac{M \\cdot |x - c|^{n+1}}{(n+1)!}, \\quad M = \\max
 | $e^x$ on $[0, a]$ ($a > 0$) | $e^a$ (or use $3$ if $a \\le 1$) |
 | $e^{-x}$ on $[0, a]$ | $1$ |
 | $\\ln(1+x)$, $n$th remainder | $n!$ at $t = 0$ |
-| Given: "$|f^{(k)}| \\le K$" | $K$ |`
+| Given: "$\\lvert f^{(k)}\\rvert \\le K$" | $K$ |`
     },
     {
       id: 'le7-mc1',

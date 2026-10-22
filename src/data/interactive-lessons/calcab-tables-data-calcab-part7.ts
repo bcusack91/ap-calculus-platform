@@ -24,7 +24,7 @@ export const calcabTablesDataPart7Data = {
 | Mistake | Correction |
 |:---|:---|
 | Assuming equal subintervals | Check $\\Delta x_i$ individually |
-| Forgetting units | Always include units with derivatives and integrals |
+| Forgetting units | Include units whenever the question asks for them |
 | Not citing MVT/IVT by name | State the theorem and verify hypotheses |
 | Confusing over/under estimates | Concavity determines trapezoid; monotonicity determines L/R |
 | Using wrong neighbors for $f'$ | Use closest surrounding points for symmetric difference |`

@@ -37,13 +37,17 @@ $$A = \\int_0^1 x\\,dx + \\int_1^2(2-x)\\,dx = \\frac{1}{2} + \\frac{1}{2} = \\b
 
 ### Worked Example 2
 
-> Area enclosed by $y = x^2$, $y = 2x$, and $y = 4$.
+> Find the area of the region bounded by all three curves $y = x^2$, $y = 2x$, and $y = 4$.
 
-**Intersections:** $x^2 = 2x$ at $(0,0)$ and $(2,4)$. $2x = 4$ at $x=2$. $x^2=4$ at $x=2$.
+**Intersections:** $x^2 = 4$ at $(-2,4)$ and $(2,4)$; $2x = 4$ at $(2,4)$; $x^2 = 2x$ at $(0,0)$ and $(2,4)$.
 
-All three curves meet at $(2,4)$. Region: between $y=x^2$ and $y=2x$ from $x=0$ to $x=2$.
+**The region:** its vertices are $(-2,4)$, $(0,0)$ and $(2,4)$. The top is always $y = 4$, but the **bottom changes** at $x = 0$: it is $y = x^2$ on $[-2, 0]$ and $y = 2x$ on $[0, 2]$.
 
-$$A = \\int_0^2(2x-x^2)\\,dx = \\left[x^2 - \\frac{x^3}{3}\\right]_0^2 = 4 - \\frac{8}{3} = \\boxed{\\frac{4}{3}}$$
+$$A = \\int_{-2}^{0}(4-x^2)\\,dx + \\int_0^2(4-2x)\\,dx = \\frac{16}{3} + 4 = \\boxed{\\frac{28}{3}}$$
+
+**Check with one integral in $y$:** the left edge is $x = -\\sqrt{y}$ and the right edge is $x = \\frac{y}{2}$, so $A = \\int_0^4\\left(\\frac{y}{2} + \\sqrt{y}\\right)dy = 4 + \\frac{16}{3} = \\frac{28}{3}$.
+
+(The small sliver between $y = x^2$ and $y = 2x$ on $[0, 2]$, with area $\\frac{4}{3}$, is a different region: $y = 4$ only touches it at the point $(2, 4)$.)
 
 > **AP Tip:** On the AP exam, sketch the region before integrating. Even a rough sketch prevents choosing the wrong boundaries.`
     },
@@ -81,11 +85,11 @@ $$A = \\int_0^2(2x-x^2)\\,dx = \\left[x^2 - \\frac{x^3}{3}\\right]_0^2 = 4 - \\f
       exercise: {
         dropdowns: [
           {
-            label: 'Region between $y=x^2$ and $y=4$ and $y=2x$. Number of integrals needed in $x$:',
+            label: 'The region above both $y=x^2$ and $y=2x$ and below $y=4$. Number of integrals needed in $x$:',
             options: ['2', '1', '3', '4'],
             correctAnswers: ['2'],
-            hints: ['The upper boundary changes from $y=2x$ to $y=4$ at their intersection.'],
-            explanation: 'Split where the upper boundary changes. Need 2 integrals in $x$.'
+            hints: ['The top is always $y = 4$. Which curve is on the bottom for $x < 0$, and which for $x > 0$?'],
+            explanation: 'The top is always $y = 4$, but the bottom changes from $y = x^2$ to $y = 2x$ at $x = 0$, so you need 2 integrals in $x$: $\\int_{-2}^{0}(4 - x^2)\\,dx + \\int_0^2(4 - 2x)\\,dx = \\frac{28}{3}$. (In $y$, one integral is enough.)'
           },
           {
             label: 'Triangle formed by $y=0$, $x=0$, and $y=3-x$. Its area by integration is:',

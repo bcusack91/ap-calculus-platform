@@ -109,11 +109,11 @@ $$\\boxed{\\text{Units of } \\frac{dy}{dx} = \\frac{\\text{units of } y}{\\text{
 |---------|----------|----------|--------------|---------|
 | Position vs time | meters | seconds | m/s | Velocity |
 | Water volume vs time | gallons | minutes | gal/min | Flow rate |
-| Cost vs quantity | dollars | items | $/item | Marginal cost |
+| Cost vs quantity | dollars | items | \\$/item | Marginal cost |
 | Population vs time | people | years | people/yr | Growth rate |
 | Temperature vs position | °C | cm | °C/cm | Temp gradient |
 
-> **AP Tip:** On AP FRQ, you MUST include units when interpreting a derivative in context. "At $t = 5$ hours, the temperature is changing at a rate of $-3$ degrees per hour."`
+> **AP Tip:** When you interpret a derivative in context, name the units; a units point is scored when the question asks for units. "At $t = 5$ hours, the temperature is changing at a rate of $-3$ degrees per hour."`
     },
     {
       id: 'derdef4-quiz2',

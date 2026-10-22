@@ -27,7 +27,7 @@ Taylor and Maclaurin series convert functions into polynomials, making them usef
 | $\\ln(1+x)$ | $\\sum_{n=1}^\\infty \\frac{(-1)^{n+1} x^n}{n}$ | $(-1, 1]$ |
 | $\\arctan x$ | $\\sum_{n=0}^\\infty \\frac{(-1)^n x^{2n+1}}{2n+1}$ | $[-1, 1]$ |
 
-$$\\boxed{\\text{Memorize these six — they appear on every BC exam}}$$`
+$$\\boxed{\\text{Memorize these six — series questions build on them}}$$`
     },
     {
       id: 'sa1-approx',
@@ -40,7 +40,7 @@ $$e^x \\approx 1 + x + \\frac{x^2}{2} + \\frac{x^3}{6}$$
 
 $$e^{0.1} \\approx 1 + 0.1 + 0.005 + 0.000167 = 1.105167$$
 
-Actual value: $e^{0.1} = 1.105171...$  Error $< 0.000004$.
+Actual value: $e^{0.1} = 1.1051709\\ldots$, so the error is about $0.0000043$ (less than $0.000005$).
 
 ### Creating New Series by Substitution
 

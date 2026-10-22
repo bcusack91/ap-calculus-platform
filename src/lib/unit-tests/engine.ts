@@ -154,6 +154,18 @@ export interface UnitAssignment {
   stems?: Record<string, string | null>
 }
 
+/**
+ * True when a stem rule maps the question to null: an item that tests no CED
+ * content (exam rules, timing, calculator notation). Diagnostics that sample
+ * the same exit pool use this to leave those items out too.
+ */
+export function isDroppedByAssignment(question: string, rules: UnitAssignment): boolean {
+  for (const [prefix, unit] of Object.entries(rules.stems ?? {})) {
+    if (unit === null && question.startsWith(prefix)) return true
+  }
+  return false
+}
+
 export function assignUnits<T extends Pick<UnitPoolQuestion, 'domain' | 'topicSlug' | 'question'>>(
   pool: T[],
   rules: UnitAssignment,

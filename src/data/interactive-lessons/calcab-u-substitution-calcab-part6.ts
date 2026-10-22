@@ -66,10 +66,10 @@ $$= \\ln|e^x + e^{-x}| + C = \\ln(e^x + e^{-x}) + C$$
       exercise: {
         questions: [
           {
-            question: '$\\int \\frac{3x+2}{x^2+4}\\,dx$ should be split as:',
+            question: 'Split the fraction first: $\\int \\frac{3x+2}{x^2+4}\\,dx$ equals',
             options: ['$\\frac{3}{2}\\ln(x^2+4) + \\arctan(x/2) + C$', '$3\\ln(x^2+4) + 2\\arctan(x/2) + C$', '$\\frac{3}{2}\\ln(x^2+4) + \\frac{1}{2}\\arctan(x/2) + C$', '$3\\arctan(x/2) + \\ln(x^2+4) + C$'],
             correctAnswer: 0,
-            explanation: 'Split: $\\frac{3x}{x^2+4} + \\frac{2}{x^2+4}$. First: $u=x^2+4 \\to \\frac{3}{2}\\ln(x^2+4)$. Second: $\\frac{2}{x^2+4} = \\frac{1}{2} \\cdot \\frac{2}{x^2+4} \\to \\arctan(x/2)$.'
+            explanation: 'Split: $\\frac{3x}{x^2+4} + \\frac{2}{x^2+4}$. First: $u=x^2+4 \\to \\frac{3}{2}\\ln(x^2+4)$. Second: $\\int \\frac{2}{x^2+4}\\,dx = 2 \\cdot \\frac{1}{2}\\arctan\\frac{x}{2} = \\arctan\\frac{x}{2}$.'
           },
           {
             question: 'Which integral CANNOT be evaluated using AB techniques?',

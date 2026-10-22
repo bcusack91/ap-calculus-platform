@@ -180,6 +180,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
                 topicSlug={topic.slug}
                 topicTitle={topic.title}
                 courseName={topic.category.course.name}
+                courseSlug={topic.category.course.slug}
                 className="text-lg text-accent-light"
               />
             </Suspense>

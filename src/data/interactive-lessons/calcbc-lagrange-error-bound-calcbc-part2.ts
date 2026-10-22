@@ -25,9 +25,9 @@ $$\\frac{(0.5)^{n+1}}{(n+1)!} < 10^{-6}$$
 | 2 | $(0.5)^3/6 = 0.0208$ | No |
 | 4 | $(0.5)^5/120 = 2.60 \\times 10^{-4}$ | No |
 | 6 | $(0.5)^7/5040 = 1.55 \\times 10^{-6}$ | No |
-| 8 | $(0.5)^9/362880 = 5.38 \\times 10^{-9}$ | **Yes** |
+| 7 | $(0.5)^8/40320 = 9.69 \\times 10^{-8}$ | **Yes** |
 
-So we need at least $T_8$ (though for cosine, only even-powered terms are nonzero, so effectively $5$ nonzero terms).
+So $n = 7$ is enough: the bound for $T_7$ is below $10^{-6}$. For cosine the $x^7$ coefficient is $0$, so $T_7 = T_6 = 1 - \\frac{x^2}{2} + \\frac{x^4}{24} - \\frac{x^6}{720}$, which has only $4$ nonzero terms. (Checking only even $n$ would jump from $n = 6$ to $n = 8$ and ask for more terms than you need.)
 
 > **Key Fact:** For trig/exponential functions, the factorial in the denominator eventually dominates any fixed $|x - c|^{n+1}$, guaranteeing convergence.`
     },
@@ -110,11 +110,11 @@ $$|R_n| \\le |a_{n+1}| \\quad \\text{(first omitted term)}$$
       type: 'input-box' as const,
       content: '**Finding n**',
       exercise: {
-        question: 'For $\\sin(0.5)$ (at $c = 0$, $M = 1$), what is the smallest odd $n$ whose Lagrange bound $(0.5)^{n+1}/(n+1)!$ is below $10^{-8}$? Enter just the number.',
-        correctAnswer: '9',
-        acceptableAnswers: ['9'],
-        hints: ['$M = 1$. Check $(0.5)^{n+1}/(n+1)!$ starting from small $n$.', 'Try $n = 7$: $(0.5)^8/8! = (1/256)/40320 \\approx 9.69 \\times 10^{-8}$. Not quite. $n = 9$: $(0.5)^{10}/10!$.'],
-        explanation: '$n=7$: $(0.5)^8/8! \\approx 9.69 \\times 10^{-8} > 10^{-8}$. $n=9$: $(0.5)^{10}/10! = 1/1024/3628800 \\approx 2.69 \\times 10^{-10} < 10^{-8}$. Minimum $n = 9$.'
+        question: 'For $\\sin(0.5)$ (at $c = 0$, $M = 1$), what is the smallest $n$ whose Lagrange bound $(0.5)^{n+1}/(n+1)!$ is below $10^{-8}$? Enter just the number.',
+        correctAnswer: '8',
+        acceptableAnswers: ['8'],
+        hints: ['$M = 1$. Check $(0.5)^{n+1}/(n+1)!$ starting from small $n$.', '$n = 7$: $(0.5)^8/8! \\approx 9.69 \\times 10^{-8}$. Not quite. Try $n = 8$.'],
+        explanation: '$n=7$: $(0.5)^8/8! \\approx 9.69 \\times 10^{-8} > 10^{-8}$. $n=8$: $(0.5)^9/9! = \\frac{1/512}{362880} \\approx 5.38 \\times 10^{-9} < 10^{-8}$. So $n = 8$. Because the $x^8$ coefficient of $\\sin x$ is $0$, $T_8 = T_7$: the degree-7 polynomial $x - \\frac{x^3}{6} + \\frac{x^5}{120} - \\frac{x^7}{5040}$ already has this accuracy.'
       }
     },
     {

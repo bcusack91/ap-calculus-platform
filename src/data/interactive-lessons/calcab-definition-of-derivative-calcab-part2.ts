@@ -42,7 +42,7 @@ $$\\text{Differentiable} \\implies \\text{Continuous} \\implies \\text{Limit Exi
 
 None of these arrows reverse! Each arrow is a one-way implication.
 
-> **AP Tip:** "Differentiable ⟹ Continuous" appears on nearly every AP exam. Know it cold, and remember the converse is false.`
+> **AP Tip:** "Differentiable ⟹ Continuous" is tested often. Know it cold, and remember the converse is false.`
     },
     {
       id: 'derdef2-failures',
@@ -54,7 +54,7 @@ None of these arrows reverse! Each arrow is a one-way implication.
 |------|-------------|---------|-----|
 | **Corner** | Left and right slopes differ | $f(x) = |x|$ | $x = 0$ |
 | **Cusp** | Slopes → $\\pm\\infty$ from opposite sides | $f(x) = x^{2/3}$ | $x = 0$ |
-| **Vertical tangent** | Slope → $\\pm\\infty$ from same side | $f(x) = x^{1/3}$ | $x = 0$ |
+| **Vertical tangent** | Slope → $+\\infty$ from both sides (or $-\\infty$ from both sides) | $f(x) = x^{1/3}$ | $x = 0$ |
 | **Discontinuity** | Function jumps or is undefined | $f(x) = \\lfloor x \\rfloor$ | $x = n$ |
 
 ---

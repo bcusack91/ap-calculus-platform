@@ -9,7 +9,7 @@ export const calcabConcavityPart2Data = {
     {
       "id": "c2-test",
       "type": "text" as const,
-      "content": "## 📖 Second Derivative Test\n\nAt a critical point $c$ where $f'(c) = 0$:\n\n$$\\boxed{f''(c) > 0 \\implies \\text{local minimum at } c}$$\n$$\\boxed{f''(c) < 0 \\implies \\text{local maximum at } c}$$\n$$f''(c) = 0 \\implies \\text{test is inconclusive}$$\n\n### Why It Works\n\n- $f'(c) = 0$ and $f''(c) > 0$: curve is concave up at $c$ → ∪ shape → minimum\n- $f'(c) = 0$ and $f''(c) < 0$: curve is concave down at $c$ → ∩ shape → maximum\n\n### Example: $f(x) = x^3 - 12x + 1$\n\n$f'(x) = 3x^2 - 12 = 3(x^2 - 4) = 0$ → $x = \\pm 2$\n\n$f''(x) = 6x$\n\n- $f''(2) = 12 > 0$ → local min at $x = 2$; $f(2) = 8 - 24 + 1 = -15$\n- $f''(-2) = -12 < 0$ → local max at $x = -2$; $f(-2) = -8 + 24 + 1 = 17$"
+      "content": "## 📖 Second Derivative Test\n\nAt a critical point $c$ where $f'(c) = 0$:\n\n$$\\boxed{f''(c) > 0 \\implies \\text{local minimum at } c}$$\n$$\\boxed{f''(c) < 0 \\implies \\text{local maximum at } c}$$\n$$f''(c) = 0 \\implies \\text{test is inconclusive}$$\n\n### Why It Works\n\n- $f'(c) = 0$ and $f''(c) > 0$: curve is concave up at $c$ → $\\cup$ shape → minimum\n- $f'(c) = 0$ and $f''(c) < 0$: curve is concave down at $c$ → $\\cap$ shape → maximum\n\n### Example: $f(x) = x^3 - 12x + 1$\n\n$f'(x) = 3x^2 - 12 = 3(x^2 - 4) = 0$ → $x = \\pm 2$\n\n$f''(x) = 6x$\n\n- $f''(2) = 12 > 0$ → local min at $x = 2$; $f(2) = 8 - 24 + 1 = -15$\n- $f''(-2) = -12 < 0$ → local max at $x = -2$; $f(-2) = -8 + 24 + 1 = 17$"
     },
     {
       "id": "c2-vs-first",
@@ -132,24 +132,24 @@ export const calcabConcavityPart2Data = {
           {
             "question": "On the AP exam, when asked to \"justify\" a max/min, you should:",
             "options": [
-              "Name the test and show the sign of $f'$ or $f''$",
+              "Give the reason, e.g. $f'$ changes from $+$ to $-$ at $c$",
               "Show that $f'(c) = 0$ and give the value of $f(c)$",
               "Cite a calculator graph showing the turning point",
               "Sketch the graph and point out where it turns around"
             ],
             "correctAnswer": 0,
-            "explanation": "The AP rubric requires naming and applying the specific test: the sign change of $f'$ (First Derivative Test) or the sign of $f''$ at a critical point (Second Derivative Test). $f'(c) = 0$ with a function value, a calculator graph, or a sketch does not earn the justification point."
+            "explanation": "AP scores the reason, not the name of a test: for example, \"$f'$ changes from positive to negative at $x = c$\" or \"$f'(c) = 0$ and $f''(c) < 0$.\" $f'(c) = 0$ with a function value, a calculator graph, or a sketch does not earn the justification point."
           },
           {
-            "question": "$f'(a) = 0$, $f''(a) = 0$, $f'''(a) \\neq 0$. Then $x = a$ is:",
+            "question": "$f'(2) = 0$ and $f''(2) = 0$. What does the Second Derivative Test tell you about $x = 2$?",
             "options": [
-              "An inflection point",
-              "A local max",
-              "A local min",
-              "Cannot determine"
+              "The test is inconclusive at $x = 2$",
+              "$f$ has a local maximum at $x = 2$",
+              "$f$ has a local minimum at $x = 2$",
+              "$x = 2$ must be an inflection point"
             ],
             "correctAnswer": 0,
-            "explanation": "If $f''(a) = 0$ and $f'''(a) \\neq 0$, then $f''$ changes sign at $a$, so $x = a$ is an inflection point, not a max or min. The Second Derivative Test alone is inconclusive here, but the third derivative settles it."
+            "explanation": "When $f''(c) = 0$ the Second Derivative Test gives no conclusion: $x^4$ (minimum), $-x^4$ (maximum) and $x^3$ (neither) all have $f'(0) = f''(0) = 0$. Use the First Derivative Test, the sign of $f'$ on each side of $x = 2$, instead."
           }
         ]
       }

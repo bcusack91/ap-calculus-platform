@@ -59,7 +59,7 @@ $f$ is discontinuous at $x = 2$ (even though $\\lim_{x \\to 2} f(x) = 4$ exists)
 2. $\\lim_{x \\to 3} h(x) = 10$ ✓
 3. $10 = 10$ ✓ Continuous!
 
-> **AP Tip:** On the AP exam, always check all three conditions in order. Even if you can see the answer, showing the systematic check earns full credit.`
+> **AP Tip:** On a free-response continuity justification, show explicitly that the limit exists and equals $f(a)$, even when the answer looks obvious.`
     },
     {
       id: 'ci1-types',
@@ -142,7 +142,7 @@ $f$ is **continuous on a closed interval** $[a,b]$ if:
 
 ---
 
-### Functions That Are Continuous Everywhere
+### Functions That Are Continuous on Their Domains
 
 These function types are continuous on their **entire domains**:
 

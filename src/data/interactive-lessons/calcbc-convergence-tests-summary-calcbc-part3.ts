@@ -4,59 +4,51 @@ export const calcbcConvergencePart3Data = {
     {
       id: 'ct3-intro',
       type: 'text' as const,
-      content: `# Integral Test & Special Series
+      content: `# The Integral Test: When and How to Write It
 
 **Part 3 of 7 — When Other Tests Fail**
 
-### The Integral Test
+The Integral Test itself is taught in Infinite Series, Part 1. Here the focus is recognizing when it is the right tool and writing the justification.
 
-If $f(x)$ is positive, continuous, and decreasing for $x \\ge N$, and $a_n = f(n)$, then:
+### Signals That the Integral Test Is the Tool
 
-$$\\boxed{\\sum_{n=N}^{\\infty} a_n \\text{ and } \\int_N^{\\infty} f(x)\\,dx \\text{ converge or diverge together}}$$
+- $a_n = f(n)$, where $f(x)$ has an antiderivative you can find, usually by $u$-substitution
+- $\\ln n$ in the denominator, as in $\\frac{1}{n\\ln n}$ or $\\frac{1}{n(\\ln n)^2}$: the Ratio Test gives $L = 1$ and comparisons are awkward
+- A numerator that is the derivative of the inside function, as in $n e^{-n^2}$ or $\\frac{n}{n^2+1}$
 
-### When to Use the Integral Test
+### What a Full-Credit Justification States
 
-- $a_n = 1/(n \\ln n)$ → $\\int dx/(x \\ln x)$, easy substitution
-- $a_n = 1/(n(\\ln n)^2)$ → converges
-- $a_n = ne^{-n^2}$ → $\\int xe^{-x^2}\\,dx$, substitution
-- **Any series where you can anti-differentiate $f(x)$ easily**
+1. Define $f(x)$ with $f(n) = a_n$.
+2. State that $f$ is **positive, continuous, and decreasing** on $[N, \\infty)$, with a reason for "decreasing" (for example, $f'(x) < 0$ there).
+3. Evaluate the improper integral **as a limit**.
+4. Conclude that the series converges or diverges **by the Integral Test**.
 
-### Important: The Test Does NOT Give the Sum
-
-The integral gives the same convergence/divergence behavior, but:
-
-$$\\sum a_n \\neq \\int f(x)\\,dx$$
-
-The integral provides bounds, not the exact sum.
-
-> **Key Fact:** The Integral Test is the "test of last resort" for positive series that don't match other patterns. It's also how we PROVE the $p$-Series Test.`
+> **Key Fact:** The Integral Test tells you WHETHER the series converges, not what it converges to. In general $\\sum a_n \\neq \\int f(x)\\,dx$.`
     },
     {
       id: 'ct3-examples',
       type: 'text' as const,
-      content: `### Example 1: $\\sum_{n=2}^{\\infty} \\frac{1}{n \\ln n}$
+      content: `### Model Write-Up: $\\sum_{n=2}^{\\infty} \\frac{1}{n \\ln n}$
 
-$f(x) = 1/(x \\ln x)$: positive, decreasing for $x \\ge 2$.
+Let $f(x) = \\frac{1}{x \\ln x}$. For $x \\ge 2$, $f$ is positive and continuous, and it is decreasing because its denominator $x \\ln x$ is positive and increasing.
 
-$\\int_2^{\\infty} \\frac{dx}{x \\ln x}$: let $u = \\ln x$, $du = dx/x$:
+$$\\int_2^{\\infty} \\frac{dx}{x \\ln x} = \\lim_{b \\to \\infty} \\Big[\\ln(\\ln x)\\Big]_2^b = \\lim_{b \\to \\infty} \\big(\\ln(\\ln b) - \\ln(\\ln 2)\\big) = \\infty$$
 
-$$\\int \\frac{du}{u} = \\ln u \\Big|_{\\ln 2}^{\\infty} = \\infty$$
+The integral diverges, so $\\sum \\frac{1}{n \\ln n}$ **diverges** by the Integral Test.
 
-Diverges. So $\\sum 1/(n \\ln n)$ **diverges**.
+### Same Write-Up, Opposite Conclusion: $\\sum_{n=2}^{\\infty} \\frac{1}{n(\\ln n)^2}$
 
-### Example 2: $\\sum_{n=2}^{\\infty} \\frac{1}{n(\\ln n)^2}$
+$f(x) = \\frac{1}{x(\\ln x)^2}$ is positive, continuous, and decreasing for $x \\ge 2$. With $u = \\ln x$:
 
-$$\\int_2^{\\infty} \\frac{dx}{x(\\ln x)^2}: \\quad \\int \\frac{du}{u^2} = -\\frac{1}{u}\\Big|_{\\ln 2}^{\\infty} = \\frac{1}{\\ln 2}$$
+$$\\int_2^{\\infty} \\frac{dx}{x(\\ln x)^2} = \\lim_{b \\to \\infty} \\Big[-\\frac{1}{\\ln x}\\Big]_2^b = \\frac{1}{\\ln 2}$$
 
-Converges. So $\\sum 1/(n(\\ln n)^2)$ **converges**.
+The integral converges, so the series **converges** by the Integral Test. Its sum is NOT $\\frac{1}{\\ln 2}$.
 
-### General Pattern
+### A Pattern Worth Recognizing
 
 $$\\sum \\frac{1}{n(\\ln n)^p}: \\quad \\begin{cases} \\text{converges} & p > 1 \\\\ \\text{diverges} & p \\le 1 \\end{cases}$$
 
-This is like a "log-$p$-series."
-
-> **AP Tip:** Integral Test problems on the AP exam usually involve $\\ln n$ in the denominator where other tests fail.`
+> **AP Tip:** The pattern tells you which way to argue, but it is not a justification. On a free-response question, show the integral as above.`
     },
     {
       id: 'ct3-mc1',
@@ -125,12 +117,12 @@ This is like a "log-$p$-series."
       type: 'text' as const,
       content: `### Summary
 
-- Integral Test: same convergence behavior as the improper integral
-- Use when other tests fail, especially for series with $\\ln n$
-- Log-$p$-series: $\\sum 1/(n(\\ln n)^p)$ converges iff $p > 1$
-- The integral gives bounds, not the sum
+- Reach for the Integral Test when $f(x)$ has an easy antiderivative, especially with $\\ln n$ in the denominator
+- State positive, continuous, and decreasing, with a reason
+- Evaluate the improper integral with a limit, then conclude "by the Integral Test"
+- The integral's value is not the sum of the series
 
-> **Next:** Part 4 — Absolute vs. Conditional Convergence.`
+> **Next:** Part 4 — Classifying a series as absolutely convergent, conditionally convergent, or divergent.`
     }
   ]
 };

@@ -30,7 +30,7 @@ $$\\boxed{\\text{1. Variables} \\to \\text{2. Objective} \\to \\text{3. Constrai
 | 2. Write objective | Function to max/min | $A = xy$ |
 | 3. Apply constraint | Eliminate one variable | $2x + y = 200 \\Rightarrow y = 200-2x$ |
 | 4. Find critical points | Set $f'(x) = 0$ and solve | $A'(x) = 200-4x = 0$ |
-| 5. Verify max/min | Second derivative or endpoints | $A''(x) = -4 < 0 \\Rightarrow$ max |
+| 5. Justify max/min | Only critical point, or Candidates Test | $A'$: $+$ to $-$ at $x = 50$, the only critical point |
 
 ### Worked Example: Rancher Fencing
 
@@ -44,7 +44,7 @@ Let $x =$ width, $y =$ length along river.
 
 $$A'(x) = 200 - 4x = 0 \\quad \\Rightarrow \\quad x = 50$$
 
-$A''(x) = -4 < 0$ \u2014 concave down \u2014 **maximum**
+$A'(x) > 0$ for $0 < x < 50$ and $A'(x) < 0$ for $50 < x < 100$, and $x = 50$ is the only critical point on $(0, 100)$, so it gives the **absolute maximum**. (Also $A''(x) = -4 < 0$ everywhere: concave down on the whole domain.)
 
 $y = 200-100 = 100$. $\\boxed{A_{\\max} = 50 \\times 100 = 5000 \\text{ m}^2}$
 
@@ -131,7 +131,7 @@ $y = 200-100 = 100$. $\\boxed{A_{\\max} = 50 \\times 100 = 5000 \\text{ m}^2}$
 - Define variables clearly and draw a diagram
 - The **objective** is what you maximize/minimize
 - The **constraint** reduces to one variable
-- Use the Second Derivative Test or endpoint analysis to verify
+- Justify the absolute extremum: a sign change of $f'$ at the only critical point, or the Candidates Test on a closed interval
 - AP Tip: Always state the domain of the objective function`
     }
   ]

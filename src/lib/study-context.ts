@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma'
+import { coursesContaining } from '@/lib/course-includes'
 
 /**
  * Study contexts — independent flashcard decks per "study mode".
@@ -84,17 +85,28 @@ export function courseSlugOfContext(key: string): string | null {
  *   - the topic's OWN course mode, when the student has that mode.
  *   - the active deck when it is a class deck (a classroom may legitimately
  *     span courses) — never a different course's mode.
+ *   - the mode of a course that INCLUDES the topic's course (src/lib/course-includes.ts:
+ *     AP Calculus BC for an AB topic), when the student has that mode or it is
+ *     active: AB lessons are BC lessons too, so a BC student's AB cards belong
+ *     in the BC deck. `containingCourseModes` lists those the student has.
  */
 export function unlockTargetContexts(opts: {
   activeContext: string
   topicCourseSlug?: string | null
   hasTopicCourseMode?: boolean
+  containingCourseModes?: string[]
 }): string[] {
-  const { activeContext, topicCourseSlug, hasTopicCourseMode } = opts
+  const { activeContext, topicCourseSlug, hasTopicCourseMode, containingCourseModes = [] } = opts
   const targets = new Set<string>([PERSONAL_CONTEXT])
   const topicCourseKey = topicCourseSlug ? `course:${topicCourseSlug}` : null
   if (topicCourseKey && (hasTopicCourseMode || activeContext === topicCourseKey)) {
     targets.add(topicCourseKey)
+  }
+  if (topicCourseSlug) {
+    for (const container of coursesContaining(topicCourseSlug).slice(1)) {
+      const key = `course:${container}`
+      if (containingCourseModes.includes(container) || activeContext === key) targets.add(key)
+    }
   }
   if (isClassContext(activeContext)) targets.add(activeContext)
   return [...targets]
@@ -113,15 +125,23 @@ export async function resolveUnlockContexts(
     getActiveStudyContext(userId),
     prisma.user.findUnique({ where: { id: userId }, select: { studyContext: true } }),
   ])
-  let hasTopicCourseMode = false
-  if (topicCourseSlug) {
-    const key = `course:${topicCourseSlug}`
-    hasTopicCourseMode =
+  const hasMode = async (course: string) => {
+    const key = `course:${course}`
+    return (
       user?.studyContext === key ||
       (await prisma.flashcardProgress.findFirst({ where: { userId, context: key }, select: { id: true } })) !== null
+    )
+  }
+  let hasTopicCourseMode = false
+  const containingCourseModes: string[] = []
+  if (topicCourseSlug) {
+    hasTopicCourseMode = await hasMode(topicCourseSlug)
+    for (const container of coursesContaining(topicCourseSlug).slice(1)) {
+      if (await hasMode(container)) containingCourseModes.push(container)
+    }
   }
   return {
-    contexts: unlockTargetContexts({ activeContext, topicCourseSlug, hasTopicCourseMode }),
+    contexts: unlockTargetContexts({ activeContext, topicCourseSlug, hasTopicCourseMode, containingCourseModes }),
     activeContext,
   }
 }

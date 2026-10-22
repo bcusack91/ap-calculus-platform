@@ -49,9 +49,9 @@ $$A = \\int_0^1 (x - x^2)\\,dx = \\left[\\frac{x^2}{2} - \\frac{x^3}{3}\\right]_
           },
           {
             question: 'Which integral gives the volume of the solid formed by rotating $y=\\sqrt{x}$ about the $x$-axis from $x=0$ to $x=4$?',
-            options: ['$\\pi\\int_0^4 x\\,dx$', '$\\pi\\int_0^4 \\sqrt{x}\\,dx$', '$\\pi\\int_0^2 y^4\\,dy$', '$2\\pi\\int_0^4 x\\sqrt{x}\\,dx$'],
+            options: ['$\\pi\\int_0^4 x\\,dx$', '$\\pi\\int_0^4 \\sqrt{x}\\,dx$', '$\\pi\\int_0^2 y^4\\,dy$', '$\\pi\\int_0^4 x^2\\,dx$'],
             correctAnswer: 0,
-            explanation: 'Disk method: $\\pi\\int_0^4 (\\sqrt{x})^2\\,dx = \\pi\\int_0^4 x\\,dx$.'
+            explanation: 'Disk method: $\\pi\\int_0^4 (\\sqrt{x})^2\\,dx = \\pi\\int_0^4 x\\,dx$. Leaving the radius unsquared gives $\\pi\\int_0^4 \\sqrt{x}\\,dx$, $\\pi\\int_0^4 x^2\\,dx$ squares $x$ instead of $\\sqrt{x}$, and $\\pi\\int_0^2 y^4\\,dy$ uses disks of radius $y^2$, which belong to a rotation about the $y$-axis.'
           },
           {
             question: 'If $\\int_0^6 f(x)\\,dx = 18$, the average value of $f$ on $[0,6]$ is:',
@@ -102,7 +102,7 @@ This says: starting value + net accumulation = current value.`
           },
           {
             label: 'Volume when $y=\\sqrt{x}$ is rotated about $x$-axis uses:',
-            options: ['Disk method', 'Washer method', 'Shell method', 'Cross-section method'],
+            options: ['Disk method', 'Washer method', 'Washers in $y$', 'Cross-section method'],
             correctAnswers: ['Disk method'],
             hints: ['Only one curve and the axis \u2014 no hole in the middle.'],
             explanation: 'Single curve rotated about the adjacent axis \u2192 disk. $R = \\sqrt{x}$.'
@@ -122,15 +122,15 @@ This says: starting value + net accumulation = current value.`
       type: 'input-box' as const,
       content: '**Compute the volume.** \u270d\ufe0f',
       exercise: {
-        question: 'Find the volume when $y = x^2$ is rotated about the $x$-axis from $x=0$ to $x=3$. Express as $\\frac{a\\pi}{b}$ in lowest terms. Enter $a + b$.',
-        correctAnswer: '248',
-        acceptableAnswers: ['248'],
+        question: 'Find the volume when the region under $y = x^2$ from $x=0$ to $x=3$ is rotated about the $x$-axis. Give an exact answer, or a decimal correct to three places.',
+        correctAnswer: '243pi/5',
+        acceptableAnswers: ['243pi/5', '243π/5', '(243/5)pi', '152.681', '152.680'],
         hints: [
           'Disk method: $V = \\pi\\int_0^3 (x^2)^2\\,dx = \\pi\\int_0^3 x^4\\,dx$.',
           '$= \\pi\\left[\\frac{x^5}{5}\\right]_0^3 = \\pi\\cdot\\frac{243}{5}$.',
-          '$\\frac{243\\pi}{5}$. $a+b = 243+5 = 248$.'
+          '$\\frac{243\\pi}{5}$.'
         ],
-        explanation: '$V = \\pi\\cdot\\frac{3^5}{5} = \\frac{243\\pi}{5}$. $a+b = 248$.'
+        explanation: '$V = \\pi\\int_0^3 x^4\\,dx = \\pi\\cdot\\frac{3^5}{5} = \\frac{243\\pi}{5} \\approx 152.681$.'
       }
     },
     {

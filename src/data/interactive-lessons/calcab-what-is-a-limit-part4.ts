@@ -6,7 +6,7 @@ export const calcabWhatIsALimitPart4Data = {
       type: 'text' as const,
       content: `# 🚫 Limits That Do NOT Exist
 
-**Part 4 of 7 — The three classic failure modes**
+**Part 4 of 4 — The three classic failure modes**
 
 ---
 
@@ -86,7 +86,7 @@ As $x$ shrinks toward 0, $1/x$ races to $\\infty$, and $\\sin(1/x)$ keeps oscill
 
 | Failure mode | Visual signature | Example | One-sided limits |
 |-------------|------------------|---------|------------------|
-| **Jump** | Step in the graph | $\\|x\\|/x$ at 0 | both exist but unequal |
+| **Jump** | Step in the graph | $\\lvert x\\rvert/x$ at 0 | both exist but unequal |
 | **Unbounded** | Vertical asymptote | $1/x$ at 0; $\\tan x$ at $\\pi/2$ | one or both = $\\pm\\infty$ |
 | **Oscillation** | Infinitely wiggly | $\\sin(1/x)$ at 0 | one or both fail to exist |
 

@@ -8,7 +8,7 @@ export const calcabExpModelsPart3Data = {
 
 **Part 3 of 7 — Finding $k$: Doubling Time and Half-Life**
 
-Every model in this part comes from one differential equation (FUN-7.F.2, FUN-7.G.1):
+Every model in this part comes from one differential equation:
 
 $$\\boxed{\\frac{dy}{dt} = ky, \\quad y(0) = y_0 \\quad\\Longrightarrow\\quad y = y_0 e^{kt}}$$
 
@@ -21,7 +21,7 @@ $$\\boxed{\\frac{dy}{dt} = ky, \\quad y(0) = y_0 \\quad\\Longrightarrow\\quad y 
 | Two data values $y(0) = y_0$, $y(t_1) = y_1$ | $\\frac{y_1}{y_0} = e^{kt_1}$ | $k = \\frac{1}{t_1}\\ln\\frac{y_1}{y_0}$ |
 | Rate stated in words ("grows 3% per year, continuously") | read it off | $k = 0.03$ |
 
-> **Key Fact:** $k$ has units of "per unit of time." $k > 0$ means growth, $k < 0$ means decay, and $|k|$ is the relative rate $\\frac{dy/dt}{y}$.`
+> **Key Fact:** $k$ has units of "per unit of time." $k > 0$ means growth, $k < 0$ means decay, and $k$ itself is the relative rate $\\frac{dy/dt}{y}$ (its size $\\lvert k\\rvert$ is the percent rate as a decimal).`
     },
     {
       id: 'exp3-comparison',

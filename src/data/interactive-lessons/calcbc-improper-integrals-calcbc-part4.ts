@@ -60,7 +60,7 @@ The new integral is a $p$-integral with $p = 2 > 1$, which is why it converges.`
               'It converges to $\\pi$, the same value as for $\\frac{1}{1+x^2}$'
             ],
             correctAnswer: 1,
-            explanation: 'On $[0, t]$ the integral is $\\frac{1}{2}\\ln(1+t^2) \\to \\infty$, so the right half diverges and so does the whole integral. Odd symmetry cannot cancel two infinite halves, $\\ln 2$ comes from stopping the substitution at $t = 1$, and $\\pi$ belongs to $\\frac{1}{1+x^2}$, a different integrand.'
+            explanation: 'On $[0, t]$ the integral is $\\frac{1}{2}\\ln(1+t^2) \\to \\infty$, so the right half diverges and so does the whole integral. Odd symmetry cannot cancel two infinite halves, $\\ln 2$ drops the $\\frac{1}{2}$ and stops at $t = 1$ (that finite piece is $\\frac{1}{2}\\ln 2$), and $\\pi$ belongs to $\\frac{1}{1+x^2}$, a different integrand.'
           },
           {
             question: '$\\int_0^{\\infty} x e^{-x^2}\\,dx = $',

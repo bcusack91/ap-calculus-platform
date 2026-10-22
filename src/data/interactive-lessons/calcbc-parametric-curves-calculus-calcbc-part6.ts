@@ -20,12 +20,12 @@ Mixed practice covering all parametric curve concepts: graphing, derivatives, co
             question: 'A particle moves with $x = \\sin t$, $y = \\cos 2t$. The Cartesian equation is:',
             options: [
               '$y = 1 - 2x^2$',
-              '$y = \\cos(2\\arcsin x)$',
+              '$y = 1 - 2x$',
               '$x^2 + y^2 = 1$',
               '$y = 2x^2 - 1$'
             ],
             correctAnswer: 0,
-            explanation: '$y = \\cos 2t = 1 - 2\\sin^2 t = 1 - 2x^2$. This is a parabola opening downward.'
+            explanation: '$y = \\cos 2t = 1 - 2\\sin^2 t = 1 - 2x^2$, a parabola opening downward (traced for $-1 \\le x \\le 1$). $y = 1 - 2x$ drops the square on $\\sin t$, $y = 2x^2 - 1$ uses the cosine form of the double-angle identity with $\\sin t$, and $x^2 + y^2 = 1$ would need $y = \\cos t$.'
           },
           {
             question: 'For $x = e^t$, $y = e^{-t}$, $\\frac{d^2y}{dx^2}$ is always:',

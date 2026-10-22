@@ -1,3 +1,5 @@
+import { elgDots, elgFourPanels, elgHole5 } from '@/data/lesson-figures/calcab'
+
 export const calcabEstimatingLimitsGraphsPart4Data = {
   topicSlug: 'estimating-limits-graphs',
   sections: [
@@ -15,10 +17,10 @@ export const calcabEstimatingLimitsGraphsPart4Data = {
 | Section |
 |---------|
 | 🔑 Open vs. Closed Dot Convention |
-| Limit vs. Value: A Side-by-Side |
+| Limit vs. Value: Four Pictures |
 | Common AP Graph Setups |
 
-> 🔑 **Why this matters:** Misreading dots is the #1 source of lost points on graph problems.`
+> 🔑 **Why this matters:** Misreading dots is one of the most common errors on graph problems.`
     },
     {
       id: 'elg4-dots',
@@ -28,8 +30,8 @@ export const calcabEstimatingLimitsGraphsPart4Data = {
 
 | Symbol on the graph at $(a, y)$ | Meaning |
 |---------------------------------|---------|
-| **Closed (filled) dot** | $f(a) = y$ — the function takes this value |
-| **Open (hollow) circle** | $f(a) \\ne y$ — the curve approaches $y$ but does NOT take it there |
+| **Closed (filled) dot** | $f(a) = y$: the function takes this value |
+| **Open (hollow) circle** | The curve approaches height $y$ but does NOT take it at $x = a$ |
 | **No mark, just the curve continuing** | Read $f(a)$ from the curve itself |
 
 > 💡 The limit cares only about *where the curve is heading*, never about which dot is filled.
@@ -38,19 +40,18 @@ export const calcabEstimatingLimitsGraphsPart4Data = {
     {
       id: 'elg4-vs',
       type: 'text' as const,
+      figure: elgFourPanels,
       content: `
-## 📊 Limit vs. Value: A Side-by-Side
+## 📊 Limit vs. Value: Four Pictures
 
-For one graph at $x = 3$:
+| Panel | $\\lim_{x \\to 3} f(x)$ | $f(3)$ | Verdict |
+|-------|-----------------------|--------|---------|
+| 1 | $5$ | $5$ | Continuous at $3$ |
+| 2 | $5$ | undefined | Removable hole |
+| 3 | $5$ | $8$ | Limit exists but differs from the value |
+| 4 | does not exist ($2$ from the left, $7$ from the right) | $7$ | Jump |
 
-| Picture detail | $\\lim_{x \\to 3} f(x)$ | $f(3)$ |
-|----------------|-----------------------|--------|
-| Both arms meet at 5; closed dot at $(3, 5)$ | $5$ | $5$ — *continuous!* |
-| Both arms meet at 5; open circle at $(3, 5)$, no other dot | $5$ | undefined — *removable hole* |
-| Both arms meet at 5; open circle at $(3, 5)$ AND closed dot at $(3, 9)$ | $5$ | $9$ — limit ≠ value |
-| Left arm $\\to 2$, right arm $\\to 7$ | DNE | depends on dot |
-
-> 🔑 The four cases above show why we *separate* "the limit at $a$" from "the value $f(a)$" — they are completely different questions.
+> 🔑 The four panels show why "the limit at $a$" and "the value $f(a)$" are separate questions.
       `
     },
     {
@@ -59,32 +60,41 @@ For one graph at $x = 3$:
       content: `
 ## 📝 Common AP Graph Setups
 
-You'll often see piecewise graphs with deliberate "trap" features at one $x$-value:
+AP graphs often place a deliberate "trap" at one $x$-value:
 
-- A removable hole (open circle, no replacement dot).
-- A limit that exists but $f(a)$ is "moved" to a different $y$ via a closed dot elsewhere.
-- A jump where one side has a closed dot and the other an open circle.
+- A removable hole (open circle, no filled dot above it).
+- A limit that exists while $f(a)$ is "moved" to a different height by a filled dot.
+- A jump where one side ends at a filled dot and the other at an open circle.
 
-> 💡 **Strategy:** answer questions in this order: (1) left limit, (2) right limit, (3) two-sided limit, (4) $f(a)$. Doing them separately prevents conflating limit and value.
+> 💡 **Strategy:** answer in this order: (1) left limit, (2) right limit, (3) two-sided limit, (4) $f(a)$. Doing them separately keeps the limit and the value apart.
       `
     },
     {
       id: 'elg4-mc',
       type: 'multiple-choice' as const,
-      content: `**Decode the Dots** 🎯`,
+      figure: elgDots,
+      content: `**Decode the dots** 🎯
+
+`,
       exercise: {
         questions: [
           {
-            question: 'At $x = 0$ a graph has both arms aiming at $y = 6$, an open circle at $(0, 6)$, and a closed dot at $(0, -2)$. What is $\\lim_{x \\to 0} f(x)$?',
-            options: ['$6$', '$-2$', '$2$ (average)', 'DNE'],
+            question: 'Use the graph above. What is $\\lim_{x \\to 0} f(x)$?',
+            options: ['$6$', '$-2$', '$2$', 'Does not exist'],
             correctAnswer: 0,
-            explanation: 'Limit follows the arms, which aim at 6. The closed dot at $-2$ tells us $f(0) = -2$ — irrelevant to the limit.'
+            explanation: 'Both arms head to the open circle at height $6$, so the limit is $6$. The filled dot at $(0, -2)$ gives $f(0) = -2$, which does not affect the limit, and $2$ is just the average of the two heights.'
           },
           {
-            question: 'Same graph as above: what is $f(0)$?',
-            options: ['$6$', '$-2$', 'undefined', '$0$'],
+            question: 'Use the graph above. What is $f(0)$?',
+            options: ['$6$', '$-2$', 'Undefined', '$0$'],
             correctAnswer: 1,
-            explanation: 'The closed dot at $(0, -2)$ defines the function value: $f(0) = -2$.'
+            explanation: 'The filled dot at $(0, -2)$ defines the function value: $f(0) = -2$. The open circle at height $6$ is skipped, so $6$ is the limit, not the value.'
+          },
+          {
+            question: 'Use the graph above. Is $f$ continuous at $x = 0$?',
+            options: ['No, since $\\lim_{x \\to 0} f(x) \\ne f(0)$', 'Yes, since $\\lim_{x \\to 0} f(x)$ exists', 'Yes, since $f(0)$ is defined', 'No, since $\\lim_{x \\to 0} f(x)$ does not exist'],
+            correctAnswer: 0,
+            explanation: 'The limit is $6$ and the value is $-2$. Continuity needs the limit to equal the value, so $f$ is not continuous at $0$ (a removable discontinuity). The limit does exist, and existence of the limit or of $f(0)$ alone is not enough.'
           }
         ]
       }
@@ -92,9 +102,8 @@ You'll often see piecewise graphs with deliberate "trap" features at one $x$-val
     {
       id: 'elg4-input',
       type: 'input-boxes' as const,
-      content: `**Final Reading** 🧮
-
-A graph at $x = 5$ shows: left arm $\\to 3$, right arm $\\to 3$, an OPEN circle at $(5, 3)$, no other dot drawn.
+      figure: elgHole5,
+      content: `**Final reading** 🧮
 
 **1)** $\\lim_{x \\to 5^-} f(x) = ?$
 
@@ -102,43 +111,45 @@ A graph at $x = 5$ shows: left arm $\\to 3$, right arm $\\to 3$, an OPEN circle 
 
 **3)** $\\lim_{x \\to 5} f(x) = ?$
 
-**4)** $f(5) = ?$ (use \`undefined\` if no value is defined)
+**4)** $f(5) = ?$ (type \`undefined\` if no value is defined)
       `,
       exercise: {
-        boxes: 4,
-        correctAnswers: ['3', '3', '3', 'undefined'],
-        hint1: 'Both arms aim at 3.',
-        hint2: 'Open circle with no replacement dot means $f(5)$ has no value.',
-        explanation: 'A removable hole: the limit exists and equals 3, but $f(5)$ is undefined. Limit ≠ value because value isn\'t there.'
+        questions: [
+          { question: '(1)', answer: '3', acceptableAnswers: ['3'] },
+          { question: '(2)', answer: '3', acceptableAnswers: ['3'] },
+          { question: '(3)', answer: '3', acceptableAnswers: ['3'] },
+          { question: '(4)', answer: 'undefined', acceptableAnswers: ['undefined', 'Undefined', 'DNE', 'dne'] }
+        ],
+        hint1: 'Both arms head to the open circle at height 3.',
+        hint2: 'An open circle with no filled dot above it means $f(5)$ has no value.',
+        explanation: 'A removable hole: both one-sided limits are $3$, so the limit exists and equals $3$, but $f(5)$ is undefined.'
       }
     },
     {
       id: 'elg4-exit',
       type: 'multiple-choice' as const,
-      content: `**Exit Check ✅**`,
+      figure: elgFourPanels,
+      content: `**Exit Check ✅**
+
+`,
       exercise: {
         questions: [
           {
-            question: 'When estimating a limit from a graph, the most common mistake is:',
-            options: [
-              'Following where the curve is heading near $x = a$',
-              'Reading a closed dot\'s value as the limit',
-              'Tracing the curve toward $x = a$ from the left',
-              'Checking the left- and right-hand limits separately'
-            ],
-            correctAnswer: 1,
-            explanation: 'A closed dot tells you $f(a)$. The limit is what the *curve* approaches — could be a different number entirely. Following the curve, tracing from each side, and checking one-sided limits are exactly the right habits, not mistakes.'
+            question: 'In which panel does $\\lim_{x \\to 3} f(x)$ fail to exist?',
+            options: ['Panel 4', 'Panel 2', 'Panel 3', 'Panel 1'],
+            correctAnswer: 0,
+            explanation: 'In Panel 4 the left piece heads to $2$ and the right piece to $7$, so the one-sided limits disagree. In Panels 1–3 both arms head to $5$; the dots there change only the value $f(3)$.'
           },
           {
-            question: 'You see both arms of $f$ aiming at $y = 4$ as $x \\to 2$, but $f(2) = 4$ (closed dot). What does this tell you?',
+            question: 'In Panel 3, which statement is true?',
             options: [
-              'The limit is 4 and $f$ is continuous at 2',
-              'The limit is 4, but $f$ has a hole at 2',
-              '$f(2) = 4$, but there is no limit at 2',
-              '$f$ has a jump discontinuity at $x = 2$'
+              '$\\lim_{x \\to 3} f(x) = 5$ and $f(3) = 8$',
+              '$\\lim_{x \\to 3} f(x) = 8$ and $f(3) = 8$',
+              '$\\lim_{x \\to 3} f(x) = 5$ and $f(3)$ is undefined',
+              'The limit does not exist and $f(3) = 8$'
             ],
             correctAnswer: 0,
-            explanation: 'Both arms aim at 4, so $\\lim_{x\\to 2} f(x) = 4$, and the closed dot gives $f(2) = 4$. When limit = value, the function is continuous at that point — the "nicest" case. A hole would need $f(2)$ undefined or different from 4.'
+            explanation: 'Both arms head to the open circle at height $5$, so the limit is $5$; the filled dot sets $f(3) = 8$. Reading the filled dot as the limit is the classic mistake.'
           }
         ]
       }

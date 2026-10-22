@@ -12,8 +12,8 @@ export const calcbcSeriesPart4Data = {
 
 | Type | Definition |
 |------|-----------|
-| **Absolutely convergent** | $\\sum |a_n|$ converges |
-| **Conditionally convergent** | $\\sum a_n$ converges but $\\sum |a_n|$ diverges |
+| **Absolutely convergent** | $\\sum \\lvert a_n\\rvert$ converges |
+| **Conditionally convergent** | $\\sum a_n$ converges but $\\sum \\lvert a_n\\rvert$ diverges |
 | **Divergent** | $\\sum a_n$ does not converge |
 
 ### Key Theorem
@@ -42,11 +42,11 @@ This converges, but $\\sum 1/n$ diverges, so it converges **conditionally**.
 - If $\\sum a_n$ converges → **conditionally convergent**
 - If $\\sum a_n$ diverges → **divergent**
 
-### Why Conditional Convergence Matters
+### Why the Classification Takes Two Checks
 
-Conditionally convergent series have surprising properties:
-- **Riemann Rearrangement Theorem:** By rearranging terms, you can make the series sum to ANY value (or diverge). This is why absolute convergence is "safer."
-- On the AP exam, conditionally convergent series typically appear in the context of interval of convergence endpoints.`
+- The AST proves convergence, never absolute convergence, so $\\sum |a_n|$ must be tested separately.
+- A divergent $\\sum |a_n|$ does not make $\\sum a_n$ diverge: the alternating harmonic series converges even though $\\sum \\frac{1}{n}$ diverges.
+- On the AP exam, conditionally convergent series most often appear at the endpoints of an interval of convergence.`
     },
     {
       id: 'is4-mc1',
@@ -67,10 +67,10 @@ Conditionally convergent series have surprising properties:
             explanation: '$\\sum 1/\\sqrt{n}$ diverges ($p = 1/2 < 1$), so the convergence is not absolute. But $\\sum (-1)^n/\\sqrt{n}$ converges by AST (terms decrease to $0$). Conditional convergence. The $p$-test applies to $\\sum |a_n|$, not to the alternating series, and terms approaching $0$ says nothing about the sum.'
           },
           {
-            question: 'If $\\sum a_n$ converges absolutely, which rearrangement of terms:',
-            options: ['Gives the same sum', 'May give a different sum', 'Always makes the series diverge', 'Is not allowed for infinite sums'],
+            question: 'If $\\sum |a_n|$ converges, what can you conclude about $\\sum a_n$?',
+            options: ['It converges, and absolutely', 'It converges only conditionally', 'It diverges unless signs alternate', 'Nothing until the AST is checked'],
             correctAnswer: 0,
-            explanation: 'Absolutely convergent series have the same sum regardless of the order of terms. Only conditionally convergent series can be rearranged to a different sum (Riemann rearrangement theorem).'
+            explanation: 'Absolute convergence implies convergence: if $\\sum |a_n|$ converges, so does $\\sum a_n$, and the series is called absolutely convergent. "Conditionally" requires $\\sum |a_n|$ to diverge, the signs do not need to alternate, and no AST is needed once the absolute-value series converges.'
           }
         ]
       }

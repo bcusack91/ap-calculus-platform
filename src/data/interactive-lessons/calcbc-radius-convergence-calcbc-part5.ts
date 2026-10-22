@@ -40,8 +40,8 @@ A typical "Find the interval of convergence" FRQ awards points for:
 | Not naming the endpoint test | "By the $p$-Series Test ($p = 2 > 1$), this converges" |
 | Writing IOC without checking endpoints | Must check separately at each endpoint |
 | Using Ratio Test at endpoints | Ratio Test gives $L = 1$ at endpoints (inconclusive) |
-| Forgetting $|x - a|$ (writing $|x|$ when $a \\neq 0$) | Always use $|x - a|$ for general center |
-| Writing "$\\le$" instead of "$<$" after Ratio Test | Ratio Test gives strict inequality $|x - a| < R$ |
+| Forgetting $\\lvert x - a\\rvert$ (writing $\\lvert x\\rvert$ when $a \\neq 0$) | Always use $\\lvert x - a\\rvert$ for general center |
+| Writing "$\\le$" instead of "$<$" after Ratio Test | Ratio Test gives strict inequality $\\lvert x - a\\rvert < R$ |
 
 ### Quick Endpoint Test Reference
 

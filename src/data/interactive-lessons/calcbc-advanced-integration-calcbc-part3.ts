@@ -38,7 +38,7 @@ $$\\int \\frac{dx}{(x+3)^2 + 4} = \\frac{1}{2}\\arctan\\frac{x+3}{2} + C$$
 | Denominator form | Completed form | Integral type |
 |-----------------|---------------|---------------|
 | $x^2 + bx + c$ (no real roots) | $(x + b/2)^2 + (c - b^2/4)$ | $\\arctan$ |
-| $-(x^2 + bx + c)$ under $\\sqrt{}$ | $a^2 - (x + b/2)^2$ | $\\arcsin$ |
+| $k - x^2 - bx$ under $\\sqrt{}$ | $\\left(k + \\frac{b^2}{4}\\right) - \\left(x + \\frac{b}{2}\\right)^2$ | $\\arcsin$ |
 
 > **AP Tip:** If the quadratic in the denominator doesn't factor over the reals, complete the square.`
     },

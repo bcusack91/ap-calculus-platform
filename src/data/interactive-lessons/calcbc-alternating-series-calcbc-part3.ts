@@ -12,8 +12,8 @@ export const calcbcAlternatingPart3Data = {
 
 | Classification | Meaning |
 |---------------|---------|
-| **Absolutely convergent** | $\\sum |a_n|$ converges |
-| **Conditionally convergent** | $\\sum a_n$ converges but $\\sum |a_n|$ diverges |
+| **Absolutely convergent** | $\\sum \\lvert a_n\\rvert$ converges |
+| **Conditionally convergent** | $\\sum a_n$ converges but $\\sum \\lvert a_n\\rvert$ diverges |
 
 ### Classification Procedure for Alternating Series
 
@@ -27,7 +27,7 @@ export const calcbcAlternatingPart3Data = {
 
 ### The Four Essential Examples
 
-| Series | $\\sum |a_n|$ | $\\sum a_n$ | Classification |
+| Series | $\\sum \\lvert a_n\\rvert$ | $\\sum a_n$ | Classification |
 |--------|-------------|-----------|---------------|
 | $\\sum (-1)^n/n^2$ | $\\sum 1/n^2$ conv. ($p=2$) | Converges | **Absolute** |
 | $\\sum (-1)^n/n$ | $\\sum 1/n$ div. | AST works → conv. | **Conditional** |
@@ -72,10 +72,10 @@ $$\\boxed{\\text{At endpoints, alternating series often converge conditionally w
             explanation: '$|a_n| = 1/(n^2+n) < 1/n^2$. Since $\\sum 1/n^2$ converges, $\\sum |a_n|$ converges by DCT. Absolute convergence. (AST alone would only show convergence; being smaller than the divergent $\\sum 1/n$ proves nothing; and an inconclusive Ratio Test just means another test is needed.)'
           },
           {
-            question: 'If a series converges absolutely, which statement is TRUE?',
-            options: ['It converges regardless of rearrangement', 'It might diverge if rearranged', 'It must have alternating signs', 'Its partial sums are monotone'],
+            question: 'Which statement about a series $\\sum a_n$ is always TRUE?',
+            options: ['If $\\sum |a_n|$ converges, then $\\sum a_n$ converges', 'If $\\sum a_n$ converges, then $\\sum |a_n|$ converges', 'If $a_n \\to 0$, then $\\sum a_n$ converges', 'If $\\sum |a_n|$ diverges, then $\\sum a_n$ diverges'],
             correctAnswer: 0,
-            explanation: 'Absolutely convergent series converge to the same sum under any rearrangement (Riemann Rearrangement Theorem doesn\'t apply since it only applies to conditionally convergent series).'
+            explanation: 'Absolute convergence implies convergence. The converse fails: $\\sum (-1)^n/n$ converges while $\\sum 1/n$ diverges, which also shows that a divergent $\\sum |a_n|$ does not force $\\sum a_n$ to diverge. And $a_n \\to 0$ is necessary but not sufficient, as the harmonic series shows.'
           }
         ]
       }

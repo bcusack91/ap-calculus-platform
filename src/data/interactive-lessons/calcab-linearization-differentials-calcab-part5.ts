@@ -8,23 +8,21 @@ export const calcabLinearizationPart5Data = {
 
 **Part 5 of 7 \u2014 Applications**
 
-### Propagation of Error
+### Estimating a Change with Differentials
 
-If a measurement $x$ has uncertainty $dx$, then the uncertainty in $f(x)$ is approximately:
+If $x$ changes by a small amount $dx$, the change in $f(x)$ is approximately:
 
-$$\\boxed{df = |f'(x)|\\,dx}$$
+$$\\boxed{df = f'(x)\\,dx}$$
 
 ### Worked Example: Sphere Volume
 
-> A sphere has radius $r = 5$ cm with measurement error $dr = 0.02$ cm. Estimate the error in the volume.
+> A sphere's radius grows from $r = 5$ cm to $5.02$ cm. Estimate the change in its volume.
 
-$V = \\frac{4}{3}\\pi r^3$, $V'(r) = 4\\pi r^2$
+$V = \\frac{4}{3}\\pi r^3$, $V'(r) = 4\\pi r^2$, and $dr = 0.02$:
 
 $$dV = 4\\pi(25)(0.02) = 2\\pi \\approx 6.28 \\text{ cm}^3$$
 
-Relative error: $\\frac{dV}{V} = \\frac{4\\pi r^2\\,dr}{\\frac{4}{3}\\pi r^3} = \\frac{3\\,dr}{r} = \\frac{3(0.02)}{5} = 0.012 = 1.2\\%$
-
-> **Key Fact:** For $V = \\frac{4}{3}\\pi r^3$, the relative error in volume is 3 times the relative error in radius: $\\frac{dV}{V} = 3\\frac{dr}{r}$.
+> **Key Fact:** $dV$ is the change along the tangent line; it estimates the actual change $\\Delta V$ well when $dr$ is small.
 
 ### Linearization from a Table
 
@@ -46,7 +44,7 @@ Approximate $f(3.9)$: $L(3.9) = f(4) + f'(4)(-0.1) = 11 + (-1)(-0.1) = 11.1$`
       exercise: {
         questions: [
           {
-            question: 'A cube has side $s = 10$ cm with error $ds = 0.05$ cm. The approximate error in surface area ($S = 6s^2$) is:',
+            question: 'A cube\'s side grows from $s = 10$ cm to $10.05$ cm. Use differentials to estimate the change in its surface area ($S = 6s^2$):',
             options: ['$6$ cm$^2$', '$3$ cm$^2$', '$12$ cm$^2$', '$60$ cm$^2$'],
             correctAnswer: 0,
             explanation: '$dS = 12s\\,ds = 12(10)(0.05) = 6$ cm$^2$.'
@@ -58,10 +56,10 @@ Approximate $f(3.9)$: $L(3.9) = f(4) + f'(4)(-0.1) = 11 + (-1)(-0.1) = 11.1$`
             explanation: '$L(3.5) = 7 + (-2)(0.5) = 7 - 1 = 6$.'
           },
           {
-            question: 'For a sphere, the relative error in volume is how many times the relative error in radius?',
-            options: ['$3$', '$2$', '$4$', '$\\frac{4}{3}$'],
+            question: 'A circle\'s radius increases from $3$ to $3.1$. Use the differential $dA$ to estimate the change in its area $A = \\pi r^2$:',
+            options: ['$0.6\\pi$', '$0.06\\pi$', '$0.61\\pi$', '$6\\pi$'],
             correctAnswer: 0,
-            explanation: '$V = \\frac{4}{3}\\pi r^3$. $dV/V = 3\\,dr/r$. The multiplier is the exponent $3$, not the coefficient $\\frac{4}{3}$; the exponent $2$ belongs to area, and $4$ comes from $4\\pi r^2$.'
+            explanation: '$dA = 2\\pi r\\,dr = 2\\pi(3)(0.1) = 0.6\\pi$. The exact change is $\\pi(3.1^2 - 3^2) = 0.61\\pi$, which is $\\Delta A$, not the differential; $0.06\\pi$ and $6\\pi$ misplace the decimal.'
           }
         ]
       }
@@ -99,9 +97,9 @@ Approximate $f(3.9)$: $L(3.9) = f(4) + f'(4)(-0.1) = 11 + (-1)(-0.1) = 11.1$`
     {
       id: 'lin5-input',
       type: 'input-box' as const,
-      content: '**Propagation of error.** \u270d\ufe0f',
+      content: '**Estimate the change.** \u270d\ufe0f',
       exercise: {
-        question: 'A circle has radius $r = 6$ cm with error $dr = 0.1$ cm. The approximate error in the area $A = \\pi r^2$ is $a\\pi$ cm$^2$. Find $a$.\n\n(Enter a decimal.)',
+        question: 'A circle\'s radius increases from $r = 6$ cm by $dr = 0.1$ cm. The differential estimate of the change in area $A = \\pi r^2$ is $a\\pi$ cm$^2$. Find $a$.\n\n(Enter a decimal.)',
         correctAnswer: '1.2',
         acceptableAnswers: ['1.2', '6/5'],
         hints: [
@@ -117,8 +115,7 @@ Approximate $f(3.9)$: $L(3.9) = f(4) + f'(4)(-0.1) = 11 + (-1)(-0.1) = 11.1$`
       type: 'text' as const,
       content: `### Key Takeaways \u2014 Part 5
 
-- Error propagation: $df \\approx |f'(x)|\\,dx$
-- Relative error: $df/f$. For $V = cr^n$: $dV/V = n\\,dr/r$
+- Estimated change: $df = f'(x)\\,dx$ approximates $\\Delta f$
 - Table-based linearization: $L(x) = f(a) + f'(a)(x-a)$ using given values
 - AP loves "approximate $f(2.1)$ given $f(2)$ and $f'(2)$" questions`
     }

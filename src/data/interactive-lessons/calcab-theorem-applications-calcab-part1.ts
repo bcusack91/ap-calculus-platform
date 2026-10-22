@@ -56,19 +56,19 @@ Since $f$ is continuous (polynomial), $f(0) = 1 > 0$ and $f(1) = -2 < 0$. By IVT
         questions: [
           {
             question: '$f$ is continuous on $[0, 4]$, $f(0) = -3$, $f(4) = 5$. Which must be true?',
-            options: ['$f(c) = 0$ for some $c \\in (0, 4)$', '$f(c) = 0$ for exactly one $c \\in (0, 4)$', '$f$ has an absolute maximum value of $5$', '$f\'(c) = 0$ for some $c \\in (0, 4)$'],
+            options: ['$f(c) = 0$ for at least one $c \\in (0, 4)$', '$f(c) = 0$ for exactly one $c \\in (0, 4)$', '$f$ has an absolute maximum value of $5$', '$f\'(c) = 0$ for some $c \\in (0, 4)$'],
             correctAnswer: 0,
             explanation: '$-3 < 0 < 5$. Since $f$ is continuous, IVT guarantees $f(c) = 0$ for some $c \\in (0,4)$. It does not say how many zeros there are, what the maximum is, or anything about $f\'$.'
           },
           {
             question: 'Which hypothesis is needed for IVT?',
-            options: ['Continuity on $[a,b]$', 'Differentiability on $(a,b)$', '$f$ is increasing on $[a,b]$', '$f\'(x) > 0$ on all of $(a,b)$'],
+            options: ['$f$ is continuous on $[a,b]$', 'Differentiability on $(a,b)$', '$f$ is increasing on $[a,b]$', '$f\'(x) > 0$ on all of $(a,b)$'],
             correctAnswer: 0,
             explanation: 'IVT requires only continuity on the closed interval.'
           },
           {
             question: '$g$ is continuous with $g(1) = 7$ and $g(5) = 7$. Can IVT guarantee $g(c) = 10$ for some $c \\in (1,5)$?',
-            options: ['No \u2014 $10$ is not between $7$ and $7$', 'Yes — continuity on $[1,5]$ is enough', 'Only if $g$ is also differentiable on $(1,5)$', 'Yes — by the Mean Value Theorem on $[1,5]$'],
+            options: ['No \u2014 $10$ is not between $g(1)$ and $g(5)$', 'Yes — continuity on $[1,5]$ is enough', 'Only if $g$ is also differentiable on $(1,5)$', 'Yes — by the Mean Value Theorem on $[1,5]$'],
             correctAnswer: 0,
             explanation: '$10$ is not between $g(1) = 7$ and $g(5) = 7$, so IVT does not apply. ($g$ might never reach $10$.)'
           }

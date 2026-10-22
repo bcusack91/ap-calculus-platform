@@ -13,12 +13,12 @@ export const calcbcPowerSeriesPart7Data = {
 | Skill | Key Points |
 |-------|-----------|
 | Definition | $\\sum a_n(x-c)^n$; converges in interval around $c$ |
-| Radius | Ratio Test: $R = 1/\\lim|a_{n+1}/a_n|$ |
+| Radius | Ratio Test: $R = 1/\\lim\\lvert a_{n+1}/a_n\\rvert$ |
 | Endpoints | Test separately; four possible IOC shapes |
 | Operations | Differentiate/integrate term-by-term; same $R$ |
 | Known series | $1/(1-x)$, $e^x$, $\\sin x$, $\\cos x$, $\\ln(1+x)$, $\\arctan x$ |
 | Coefficients | $a_n = f^{(n)}(c)/n!$ |
-| DE solutions | Match coefficients after substituting series |
+| DE solutions | Compute $y^{(n)}(0)$ from the DE, then $a_n = y^{(n)}(0)/n!$ |
 
 $$\\boxed{\\text{Power series = the bridge between algebra and analysis on the AP exam.}}$$`
     },
@@ -101,9 +101,9 @@ You've mastered:
 - **Operations** — differentiate, integrate, substitute term-by-term
 - **Known series** — six essential Maclaurin series
 - **Function representation** — building new series from old
-- **DE connections** — coefficient matching for series solutions
+- **DE connections** — Taylor polynomials from a DE: compute $y(0), y'(0), y''(0), \\ldots$
 
-> **Key Fact:** Power series questions appear in 5+ MC questions and at least 1 FRQ on every BC exam. This is arguably the most important BC-specific topic.
+> **Key Fact:** Power series are central to Unit 10, which carries 17–18% of the BC exam weighting (CED), and a series question is a regular free-response item. This is arguably the most important BC-specific topic.
 
 > **Up Next:** Taylor & Maclaurin Series — the general construction formula.`
     }

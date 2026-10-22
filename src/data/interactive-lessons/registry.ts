@@ -229,7 +229,6 @@ const slugAliases: Record<string, string> = {
   'related-rates': 'related-rates-calcab',
   'derivatives-of-exponential-functions': 'derivatives-exp-log-calcab',
   'second-derivative-test': 'concavity-inflection-points-calcab',
-  'lhopitals-rule': 'lhopitals-advanced-calcbc',
   'mean-value-theorem': 'theorem-applications-calcab',
   'derivatives-of-trig-functions': 'basic-differentiation-rules-calcab',
   'antiderivatives-intro': 'antiderivatives-indefinite-integrals-calcab',

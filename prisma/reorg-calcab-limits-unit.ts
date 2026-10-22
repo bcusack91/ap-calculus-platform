@@ -42,7 +42,7 @@ const HUB_SLUG = 'limits-continuity-calcab'
 const RICH_CATEGORY_NAME = 'Limits and Continuity'
 const COURSE_SLUG = 'ap-calculus-ab'
 
-const HUB_TITLE = 'Limits & Continuity (AP Calculus AB Unit 1)'
+const HUB_TITLE = 'Limits & Continuity: Unit 1 Review'
 
 const HUB_TEXT = `# Limits & Continuity — AP Calculus AB Unit 1
 

@@ -28,11 +28,11 @@ Each new term overshoots and then corrects, so the error is at most the magnitud
 
 $\\sum_{n=1}^\\infty \\frac{(-1)^{n+1}}{n^3}$. Approximate $S$ using 4 terms.
 
-$S_4 = 1 - \\frac{1}{8} + \\frac{1}{27} - \\frac{1}{64} = \\frac{1728 - 216 + 64 - 27}{1728} \\approx 0.8958$
+$S_4 = 1 - \\frac{1}{8} + \\frac{1}{27} - \\frac{1}{64} = \\frac{1728 - 216 + 64 - 27}{1728} = \\frac{1549}{1728} \\approx 0.8964$
 
 Error $\\le b_5 = 1/125 = 0.008$. So $S \\approx 0.896 \\pm 0.008$.
 
-> **AP Tip:** This error bound appears almost every year on the BC exam, often in FRQ. Know it cold.`
+> **AP Tip:** The alternating series error bound (CED 10.10) is a frequent free-response task. Know it cold.`
     },
     {
       id: 'as2-finding-n',
@@ -51,7 +51,7 @@ So **10 terms** give accuracy within $0.01$.
 
 | Feature | Alternating Series Error | Lagrange Error (Taylor) |
 |---------|------------------------|----------------------|
-| Formula | $|R_N| \\le b_{N+1}$ | $|R_n(x)| \\le \\frac{M|x-c|^{n+1}}{(n+1)!}$ |
+| Formula | $\\lvert R_N\\rvert \\le b_{N+1}$ | $\\lvert R_n(x)\\rvert \\le \\frac{M\\lvert x-c\\rvert^{n+1}}{(n+1)!}$ |
 | Applies to | Any alternating series meeting AST | Taylor polynomial remainders |
 | Easy to use? | Very easy | Requires finding $M$ |
 | On AP exam | Very common | Also very common |`

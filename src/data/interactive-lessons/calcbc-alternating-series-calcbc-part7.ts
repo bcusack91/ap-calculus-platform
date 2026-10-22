@@ -13,11 +13,11 @@ export const calcbcAlternatingPart7Data = {
 | Concept | Key Formula/Rule |
 |---------|-----------------|
 | AST | $b_n > 0$, $b_{n+1} \\le b_n$, $b_n \\to 0$ → converges |
-| Error Bound | $|S - S_N| \\le b_{N+1}$ |
+| Error Bound | $\\lvert S - S_N\\rvert \\le b_{N+1}$ |
 | Over/Under | Odd $N$ + positive first → over; Even $N$ → under |
-| Absolute | $\\sum |a_n|$ converges |
-| Conditional | $\\sum a_n$ conv. but $\\sum |a_n|$ div. |
-| Rearrangement | Conditionally conv. → rearrange to any sum |
+| Absolute | $\\sum \\lvert a_n\\rvert$ converges |
+| Conditional | $\\sum a_n$ conv. but $\\sum \\lvert a_n\\rvert$ div. |
+| Abs. ⇒ conv. | If $\\sum \\lvert a_n\\rvert$ converges, so does $\\sum a_n$ |
 
 $$\\boxed{\\text{Alternating series: check conditions, bound the error, classify the convergence.}}$$`
     },
@@ -109,7 +109,7 @@ You've mastered:
 - **Taylor Series Connection** — AST error bound as an alternative to Lagrange
 - **AP Exam Strategies** — full justification requirements
 
-> **Key Fact:** Alternating series and error bounds appear on virtually every BC exam. This is one of the highest-yield topics for your score.
+> **Key Fact:** Alternating series and their error bounds sit in Unit 10, which carries 17–18% of the BC exam weighting (CED). This is one of the highest-yield topics for your score.
 
 > **Up Next:** Power Series — representation, convergence, and manipulation.`
     }

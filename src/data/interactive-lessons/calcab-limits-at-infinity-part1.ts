@@ -101,8 +101,11 @@ A function can have:
 **3)** $\\lim_{x \\to \\infty} \\arctan x = ?$ (use \`pi/2\`)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['0', '0', 'pi/2'],
+        questions: [
+          { question: '(1)', answer: '0', acceptableAnswers: ['0'] },
+          { question: '(2)', answer: '0', acceptableAnswers: ['0'] },
+          { question: '(3)', answer: 'pi/2', acceptableAnswers: ['pi/2', 'π/2', '1.5708', '1.571'] }
+        ],
         hint1: '$5/x \\to 0$ as $x \\to \\infty$ (constant over growing denominator).',
         hint2: '$e^x$ at very negative $x$ is a tiny positive number $\\to 0$.',
         hint3: '$\\arctan$ levels off at $\\pi/2$ on the right.',

@@ -103,8 +103,11 @@ Compute each limit by direct substitution:
 **3)** $\\lim_{x \\to 4} \\dfrac{x + 1}{x - 1} = ?$ (decimal or fraction)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['6', '5', '5/3'],
+        questions: [
+          { question: '(1)', answer: '6', acceptableAnswers: ['6'] },
+          { question: '(2)', answer: '5', acceptableAnswers: ['5'] },
+          { question: '(3)', answer: '5/3', acceptableAnswers: ['5/3', '1.667', '1.67'] }
+        ],
         hint1: '$2^3 - 2 = 8 - 2 = 6$.',
         hint2: '$\\sin 0 = 0$.',
         hint3: '$(4+1)/(4-1) = 5/3 \\approx 1.667$.',

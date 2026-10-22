@@ -13,11 +13,11 @@ export const calcbcConvergencePart1Data = {
 | Test | Applies to | Conclusion |
 |------|-----------|-----------|
 | **Divergence** | Any $\\sum a_n$ | If $\\lim a_n \\neq 0$, diverges |
-| **Geometric** | $\\sum ar^n$ | $|r| < 1$: converges to $a/(1-r)$ |
+| **Geometric** | $\\sum ar^n$ | $\\lvert r\\rvert < 1$: converges to $a/(1-r)$ |
 | **$p$-Series** | $\\sum 1/n^p$ | $p > 1$: converges |
 | **Integral** | $f$ positive, decreasing | $\\sum$ and $\\int$ same behavior |
 | **Comparison** | $0 \\le a_n \\le b_n$ | $\\sum b_n$ conv $\\Rightarrow \\sum a_n$ conv |
-| **Limit Comparison** | $a_n, b_n > 0$ | $\\lim a_n/b_n = L > 0$: same behavior |
+| **Limit Comparison** | $a_n, b_n > 0$ | $\\lim a_n/b_n = L$, $0 < L < \\infty$: same behavior |
 | **AST** | $\\sum (-1)^n b_n$ | $b_n \\downarrow 0$: converges |
 | **Ratio** | Any, best for $n!$ | $L < 1$: abs conv; $L > 1$: div |
 
@@ -120,7 +120,7 @@ $$\\boxed{\\lim_{n \\to \\infty} a_n \\neq 0 \\quad \\Longrightarrow \\quad \\su
       type: 'text' as const,
       content: `### Summary
 
-- 9 convergence tests, each with specific strengths
+- 8 convergence tests, each with specific strengths
 - Always start with Divergence Test, then look for known types
 - The flowchart guides you to the right test quickly
 - Divergence Test proves divergence only, never convergence

@@ -99,8 +99,10 @@ This actually IS the derivative of $\\sqrt{x}$ at $x = a$ — you\'ll meet this 
 **2)** $\\lim_{x \\to 1} \\dfrac{\\sqrt{x} - 1}{x - 1} = ?$ (decimal or fraction)
       `,
       exercise: {
-        boxes: 2,
-        correctAnswers: ['1/10', '1/2'],
+        questions: [
+          { question: '(1)', answer: '1/10', acceptableAnswers: ['1/10', '0.1'] },
+          { question: '(2)', answer: '1/2', acceptableAnswers: ['1/2', '0.5'] }
+        ],
         hint1: '$\\dfrac{1}{2\\sqrt{25}} = 1/10$.',
         hint2: '$\\dfrac{1}{2\\sqrt{1}} = 1/2$.',
         explanation: 'Both use $\\dfrac{1}{2\\sqrt{a}}$ shortcut from the general pattern.'

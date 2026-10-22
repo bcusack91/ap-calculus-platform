@@ -6,81 +6,88 @@ export const calcabIntAppsPart4Data = {
       type: 'text' as const,
       content: `# Integration Applications
 
-**Part 4 of 7 \u2014 Riemann Sums & Trapezoidal Rule**
+**Part 4 of 7 — Accumulation in Applied Contexts**
 
-### Riemann Sum Formulas
+### The Accumulation Equation
 
-$$\\boxed{L_n = \\sum_{i=0}^{n-1} f(x_i)\\Delta x \\qquad R_n = \\sum_{i=1}^{n} f(x_i)\\Delta x \\qquad M_n = \\sum_{i=1}^{n} f(\\bar{x}_i)\\Delta x}$$
+$$\\boxed{A(t) = A(t_0) + \\int_{t_0}^{t} A'(s)\\,ds}$$
 
-### Trapezoidal Rule
+Amount now = amount at the start + net change. When something flows in and out:
 
-$$\\boxed{T_n = \\frac{\\Delta x}{2}[f(x_0) + 2f(x_1) + 2f(x_2) + \\cdots + 2f(x_{n-1}) + f(x_n)]}$$
+$$A(t) = A(0) + \\int_0^t \\left[R_{\\text{in}}(s) - R_{\\text{out}}(s)\\right] ds$$
 
-### Over/Underestimate Guide
+### Units of an Integral
 
-| Method | $f$ Increasing | $f$ Decreasing |
+The integral of a rate has units of (rate units) $\\times$ (time units):
+
+| Rate | Time | $\\int$ rate $dt$ is in |
 |:---:|:---:|:---:|
-| **Left** | Under | Over |
-| **Right** | Over | Under |
-| **Midpoint** | Depends on concavity | Depends on concavity |
+| gallons per hour | hours | gallons |
+| people per minute | minutes | people |
+| tons per day | days | tons |
 
-| Method | $f$ Concave Up | $f$ Concave Down |
-|:---:|:---:|:---:|
-| **Trapezoidal** | Over | Under |
-| **Midpoint** | Under | Over |
+### Interpreting an Integral in Context
 
-> **Key Fact:** Trapezoidal = average of Left and Right: $T_n = \\frac{L_n + R_n}{2}$.`
+Name **the quantity, the units, and the time interval**, not "the area":
+
+> "$\\int_2^5 R(t)\\,dt = 40$ means that 40 gallons of water entered the tank from $t = 2$ to $t = 5$ hours."
+
+### Increasing or Decreasing at $t = c$?
+
+Check the sign of the **net rate** $A'(c) = R_{\\text{in}}(c) - R_{\\text{out}}(c)$. Positive means the amount is increasing at that instant.`
     },
     {
       id: 'ia4-worked',
       type: 'text' as const,
-      content: `### Worked Example from Table
+      content: `### Maximum or Minimum Amount: the Candidates Test
 
-| $x$ | $0$ | $1$ | $2$ | $3$ |
-|:---:|:---:|:---:|:---:|:---:|
-| $f(x)$ | $1$ | $3$ | $2$ | $5$ |
+1. Find the times where the net rate $R_{\\text{in}} - R_{\\text{out}}$ changes sign.
+2. Compute the amount at those times and at both endpoints.
+3. The largest value is the absolute maximum; the smallest is the absolute minimum.
 
-$\\Delta x = 1$, $n = 3$.
+### Worked Example
 
-| Method | Computation | Value |
-|:---:|:---:|:---:|
-| Left sum | $f(0)+f(1)+f(2) = 1+3+2$ | $6$ |
-| Right sum | $f(1)+f(2)+f(3) = 3+2+5$ | $10$ |
-| Trapezoidal | $\\frac{1}{2}(1+2(3)+2(2)+5) = \\frac{16}{2}$ | $8$ |
+For $0 \\le t \\le 6$ hours, water flows into a tank at $8$ gallons per hour and drains at $D(t) = 2t$ gallons per hour. The tank holds $20$ gallons at $t = 0$.
 
-Check: $T = \\frac{L+R}{2} = \\frac{6+10}{2} = 8$ \u2714
+**(a) Is the amount of water increasing at $t = 3$?** $A'(3) = 8 - 2(3) = 2 > 0$, so yes.
 
-### Unequal Subintervals
+**(b) When is the amount greatest?** $A'(t) = 8 - 2t$ is positive for $t < 4$ and negative for $t > 4$. Candidates:
 
-When $\\Delta x$ varies, use individual trapezoids:
+| $t$ | $A(t) = 20 + \\int_0^t (8 - 2s)\\,ds = 20 + 8t - t^2$ |
+|:---:|:---:|
+| $0$ | $20$ |
+| $4$ | $36$ |
+| $6$ | $32$ |
 
-$$T = \\frac{\\Delta x_1}{2}(f_0+f_1) + \\frac{\\Delta x_2}{2}(f_1+f_2) + \\cdots$$
+The amount is greatest at $t = 4$ hours: 36 gallons. (The least is 20 gallons, at $t = 0$.)
 
-> **AP Tip:** Table problems with unequal spacing appear frequently. Apply the trapezoidal formula to each subinterval separately.`
+**(c) Interpret $\\int_0^6 D(t)\\,dt = 36$.** 36 gallons of water drained out of the tank during the first 6 hours.
+
+> **AP Tip:** A justification for a maximum amount names the candidates and compares them, or says the net rate changes from positive to negative at the only critical time on the interval.`
     },
     {
       id: 'ia4-quiz1',
       type: 'multiple-choice' as const,
-      content: '**Riemann Sums** \ud83c\udfaf',
+      content: '**Accumulation in Context** 🎯',
       exercise: {
         questions: [
           {
-            question: 'Using the table above, the left Riemann sum approximation of $\\int_0^3 f(x)\\,dx$ is:',
-            options: ['$6$', '$10$', '$8$', '$11$'],
+            question: 'Oil leaks from a tank at $r(t)$ gallons per hour, with $t$ in hours. What does $\\int_0^3 r(t)\\,dt = 12$ mean?',
+            options: ['12 gallons leaked out during the first 3 hours', 'Oil was leaking at 12 gallons per hour at $t = 3$', 'The tank held 12 gallons of oil at $t = 3$', 'Oil leaked at an average of 12 gallons per hour'],
             correctAnswer: 0,
-            explanation: '$L_3 = f(0)(1)+f(1)(1)+f(2)(1) = 1+3+2 = 6$.'
+            explanation: 'The integral of a leak rate is the amount leaked from $t = 0$ to $t = 3$. It is not a rate at one instant, it is not the amount left in the tank, and the average leak rate would be $\\frac{12}{3} = 4$ gallons per hour.'
           },
           {
-            question: 'If $f$ is increasing and concave up, the trapezoidal rule gives:',
-            options: ['An overestimate', 'An underestimate', 'The exact integral value', 'Cannot determine'],
+            question: 'People enter a park at $E(t)$ and leave at $L(t)$ people per hour. There are 300 people in the park at $t = 0$. Which expression gives the number of people in the park at $t = 4$?',
+            options: ['$300 + \\int_0^4 [E(t) - L(t)]\\,dt$', '$\\int_0^4 [E(t) - L(t)]\\,dt$', '$300 + E(4) - L(4)$', '$300 + \\int_0^4 [L(t) - E(t)]\\,dt$'],
             correctAnswer: 0,
-            explanation: 'Concave up $\\Rightarrow$ secant lines are above the curve $\\Rightarrow$ trapezoidal overestimates.'
+            explanation: 'Start with the 300 people and add the net change, in minus out. Leaving out 300 gives only the change, $E(4) - L(4)$ is a rate at one instant, and $L - E$ has the sign reversed.'
           },
           {
-            question: '$f$ is decreasing on $[a,b]$. Right Riemann sum gives:',
-            options: ['Underestimate', 'Overestimate', 'Exact', 'Cannot tell'],
+            question: 'A reservoir’s volume changes at $V\'(t) = 9 - t^2$ million gallons per day for $0 \\le t \\le 5$. At what time is the volume greatest?',
+            options: ['$t = 3$', '$t = 0$', '$t = 5$', '$t = \\sqrt{3}$'],
             correctAnswer: 0,
-            explanation: 'Decreasing $f$: right endpoints are the minimum on each subinterval $\\Rightarrow$ underestimate.'
+            explanation: '$V\'(t) > 0$ for $t < 3$ and $V\'(t) < 0$ for $t > 3$, so $V$ rises and then falls: $t = 3$, the only critical time, gives the maximum. The volume at $t = 5$ is lower, because $\\int_3^5 (9 - t^2)\\,dt = -\\frac{44}{3} < 0$, and $t = \\sqrt{3}$ does not make $V\'$ zero.'
           }
         ]
       }
@@ -88,29 +95,29 @@ $$T = \\frac{\\Delta x_1}{2}(f_0+f_1) + \\frac{\\Delta x_2}{2}(f_1+f_2) + \\cdot
     {
       id: 'ia4-dropdown',
       type: 'dropdown-select' as const,
-      content: '**Over or under?** \ud83d\udd0d',
+      content: '**Units and justifications.** 🔍',
       exercise: {
         dropdowns: [
           {
-            label: '$f$ is concave down and increasing. Left Riemann sum is:',
-            options: ['Overestimate', 'Underestimate', 'Exact', 'Undetermined'],
-            correctAnswers: ['Underestimate'],
-            hints: ['Increasing $\\Rightarrow$ left sum is under.'],
-            explanation: 'Increasing: left sum underestimates (regardless of concavity).'
+            label: '$R(t)$ is in liters per minute and $t$ is in minutes. The units of $\\int_0^{10} R(t)\\,dt$ are:',
+            options: ['liters', 'liters per minute', 'liters per minute per minute', 'minutes'],
+            correctAnswers: ['liters'],
+            hints: ['(liters per minute) times (minutes).'],
+            explanation: 'Multiplying a rate in liters per minute by a time in minutes leaves liters.'
           },
           {
-            label: '$f$ is concave down. Midpoint rule is:',
-            options: ['Overestimate', 'Underestimate', 'Exact', 'Undetermined'],
-            correctAnswers: ['Overestimate'],
-            hints: ['Midpoint and trapezoidal have opposite errors from concavity.'],
-            explanation: 'Concave down: trapezoidal underestimates, midpoint overestimates.'
+            label: 'Water enters at $8$ gal/hr and leaves at $2t$ gal/hr. At $t = 5$, the amount of water is:',
+            options: ['Decreasing, since $8 - 2(5) < 0$', 'Increasing, since $8 > 0$', 'Decreasing, since $2t$ is increasing', 'Increasing, since water is still in the tank'],
+            correctAnswers: ['Decreasing, since $8 - 2(5) < 0$'],
+            hints: ['Look at the sign of in minus out at $t = 5$.'],
+            explanation: 'The net rate at $t = 5$ is $8 - 10 = -2$ gallons per hour, so the amount is decreasing at that instant. Only the sign of the net rate decides it.'
           },
           {
-            label: 'Trapezoidal with unequal subintervals: $x = 0, 2, 5$ and $f = 3, 7, 4$:',
-            options: ['$\\frac{2}{2}(3+7)+\\frac{3}{2}(7+4) = 26.5$', '$\\frac{5}{2}(3+2(7)+4) = 52.5$', '$\\frac{5}{4}(3+2(7)+4) = 26.25$', '$\\frac{1}{2}(10)+\\frac{1}{2}(11) = 10.5$'],
-            correctAnswers: ['$\\frac{2}{2}(3+7)+\\frac{3}{2}(7+4) = 26.5$'],
-            hints: ['$\\Delta x_1 = 2$, $\\Delta x_2 = 3$. Apply trapezoid to each separately.'],
-            explanation: '$T = \\frac{2}{2}(3+7) + \\frac{3}{2}(7+4) = 10 + 16.5 = 26.5$. Each trapezoid uses its own width.'
+            label: 'To find the absolute maximum amount on $[0, 6]$, compare the amount at:',
+            options: ['$t = 0$, $t = 6$, and where the net rate changes sign', 'Only the times where the net rate equals zero', 'Only the endpoints $t = 0$ and $t = 6$', 'The time where the inflow rate is largest'],
+            correctAnswers: ['$t = 0$, $t = 6$, and where the net rate changes sign'],
+            hints: ['An absolute maximum on a closed interval can be at an endpoint or at a critical time.'],
+            explanation: 'The Candidates Test checks the endpoints and every time where $A\'$ changes sign. The largest inflow rate is not where the amount is largest; the amount keeps growing as long as in exceeds out.'
           }
         ]
       }
@@ -118,32 +125,31 @@ $$T = \\frac{\\Delta x_1}{2}(f_0+f_1) + \\frac{\\Delta x_2}{2}(f_1+f_2) + \\cdot
     {
       id: 'ia4-input',
       type: 'input-box' as const,
-      content: '**Compute from a table.** \u270d\ufe0f',
+      content: '**Find an amount.** ✍️',
       exercise: {
-        question: 'Given $f(0)=2, f(2)=6, f(4)=4, f(6)=8$ with equal subintervals. Find the trapezoidal approximation of $\\int_0^6 f(x)\\,dx$.\n\n(Enter an integer.)',
-        correctAnswer: '30',
-        acceptableAnswers: ['30'],
+        question: 'Using the worked example (20 gallons at $t = 0$, water in at 8 gallons per hour, out at $2t$ gallons per hour), how many gallons are in the tank at $t = 5$?',
+        correctAnswer: '35',
+        acceptableAnswers: ['35'],
         hints: [
-          '$\\Delta x = 2$, $n = 3$.',
-          '$T = \\frac{2}{2}[f(0)+2f(2)+2f(4)+f(6)]$.',
-          '$= 1[2+12+8+8] = 30$.'
+          '$A(5) = 20 + \\int_0^5 (8 - 2t)\\,dt$.',
+          '$\\int_0^5 (8 - 2t)\\,dt = 40 - 25$.'
         ],
-        explanation: '$T = \\frac{2}{2}(2+12+8+8) = 30$.'
+        explanation: '$A(5) = 20 + (40 - 25) = 35$ gallons.'
       }
     },
     {
       id: 'ia4-summary',
       type: 'text' as const,
-      content: `### Key Takeaways \u2014 Part 4
+      content: `### Key Takeaways — Part 4
 
-| Method | Formula |
+| Question | Method |
 |:---:|:---:|
-| Left | $\\sum f(x_i)\\Delta x$ (skip last) |
-| Right | $\\sum f(x_i)\\Delta x$ (skip first) |
-| Trapezoidal | $\\frac{\\Delta x}{2}[f_0+2f_1+\\cdots+2f_{n-1}+f_n]$ |
-| Key relation | $T = (L+R)/2$ |
+| Amount at time $t$ | Starting amount $+ \\int$ (in $-$ out) |
+| Increasing at $t = c$? | Sign of in $-$ out at $c$ |
+| Max or min amount | Candidates: endpoints and sign changes of the net rate |
+| Meaning of $\\int_a^b R(t)\\,dt$ | Quantity, units, and the interval $a$ to $b$ |
 
-> **Up Next:** Part 5 \u2014 Rate Problems & Net Change.`
+> **Up Next:** Part 5 — Rate Problems & Net Change.`
     }
   ]
 };

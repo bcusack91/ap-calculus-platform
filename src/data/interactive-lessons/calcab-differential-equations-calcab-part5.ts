@@ -42,7 +42,9 @@ $y(0) = 4$: $\\frac{2}{3}(8) = C = \\frac{16}{3}$
 
 $$y^{3/2} = \\frac{3x^2}{4} + 8$$
 
-> **AP Tip:** On AP FRQs, it's acceptable to leave the answer in implicit form (not solved for $y$) unless the problem specifically says "solve for $y$".`
+Solving for $y$ (check: $y(0) = 8^{2/3} = 4$): $y = \\left(\\frac{3x^2}{4} + 8\\right)^{2/3}$.
+
+> **AP Tip:** AP FRQs usually ask for "the particular solution $y = f(x)$". When they do, the answer must be solved explicitly for $y$, so finish the algebra.`
     },
     {
       id: 'de5-quiz1',
@@ -82,9 +84,9 @@ When finding a particular solution, always check:
 
 | Issue | Example | Domain Restriction |
 |:---:|:---:|:---:|
-| Division by zero | $y = \\frac{2}{1-2\\ln x}$ | $x \\neq e^{1/2}$ |
-| Square root of negative | $y = \\sqrt{9-x^2}$ | $-3 \\leq x \\leq 3$ |
-| Logarithm of non-positive | $\\ln|y| = f(x)$ | Where $f(x)$ is defined |
+| Division by zero | $y = \\frac{2}{1-2\\ln x}$ with $y(1) = 2$ | $0 < x < \\sqrt{e}$ (the piece containing $x = 1$) |
+| Square root of negative | $y = \\sqrt{9-x^2}$ from $\\frac{dy}{dx} = -\\frac{x}{y}$ | $-3 < x < 3$ (open: $\\frac{dy}{dx}$ is undefined where $y = 0$) |
+| Logarithm of non-positive | $\\ln\\lvert y\\rvert = f(x)$ | Where $f(x)$ is defined |
 | Continuity through IC | Must connect to initial point | Choose interval containing IC |
 
 > **Key Fact:** A particular solution exists on the **largest interval** containing the initial point where the solution is continuous and the DE is defined.`
@@ -146,7 +148,7 @@ When finding a particular solution, always check:
 | $\\sqrt{y}$ DEs | Give $y^{3/2} = F(x) + C$ solutions |
 | Domain restrictions | Check for division by zero, square roots |
 | IC determines branch | Positive IC → positive root |
-| Implicit solutions OK | Don't need to solve for $y$ unless asked |
+| Solve for $y$ | When asked for $y = f(x)$, give $y$ explicitly |
 
 > **Up Next:** Part 6 — Problem-Solving Workshop.`
     }

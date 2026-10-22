@@ -150,7 +150,7 @@ $$\\lim_{u \\to 0}\\frac{\\sin u}{u} = 1 \\qquad \\lim_{u \\to 0}\\frac{1-\\cos 
               'No function can have two different horizontal asymptotes'
             ],
             correctAnswer: 1,
-            explanation: 'Use $\\sqrt{x^2+1} \\approx |x|$. As $x \\to \\infty$, $\\frac{5x}{2\\sqrt{x^2+1}} \\to \\frac{5}{2}$, so $f(x) \\to \\frac{5}{2} - \\frac{1}{2} = 2$. As $x \\to -\\infty$, $\\sqrt{x^2+1} \\approx -x$, so $\\frac{5x}{2\\sqrt{x^2+1}} \\to -\\frac{5}{2}$ and $f(x) \\to -\\frac{5}{2} - \\frac{1}{2} = -3$. A rational function has the same limit in both directions, so $\\frac{2x^2-3x}{x^2+1}$ approaches $2$ both ways. The other square-root function approaches $2 - 3 = -1$ as $x \\to \\infty$ and $-2 + 3 = 1$ as $x \\to -\\infty$, the wrong pair. Functions with two different horizontal asymptotes do exist, as this example shows.'
+            explanation: 'Use $\\sqrt{x^2+1} \\approx |x|$. As $x \\to \\infty$, $\\frac{5x}{2\\sqrt{x^2+1}} \\to \\frac{5}{2}$, so $f(x) \\to \\frac{5}{2} - \\frac{1}{2} = 2$. As $x \\to -\\infty$, $\\sqrt{x^2+1} \\approx -x$, so $\\frac{5x}{2\\sqrt{x^2+1}} \\to -\\frac{5}{2}$ and $f(x) \\to -\\frac{5}{2} - \\frac{1}{2} = -3$. A rational function with a horizontal asymptote approaches the same value in both directions, so $\\frac{2x^2-3x}{x^2+1}$ approaches $2$ both ways. The other square-root function approaches $2 - 3 = -1$ as $x \\to \\infty$ and $-2 + 3 = 1$ as $x \\to -\\infty$, the wrong pair. Functions with two different horizontal asymptotes do exist, as this example shows.'
           },
           {
             question: 'Evaluate $\\lim_{x \\to \\infty} \\frac{2\\sin(x) + 3x^2}{x^2 + \\cos(x)}$.',

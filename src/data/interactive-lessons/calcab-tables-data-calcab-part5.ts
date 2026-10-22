@@ -14,15 +14,17 @@ export const calcabTablesDataPart5Data = {
 |:---|:---|
 | $f$ values increase between entries | $f' > 0$ on that interval |
 | $f$ values decrease between entries | $f' < 0$ on that interval |
-| $f$ values change rapidly | $|f'|$ is large |
-| $f$ values change slowly | $|f'|$ is small |
+| $f$ values change rapidly | $\\lvert f'\\rvert$ is large |
+| $f$ values change slowly | $\\lvert f'\\rvert$ is small |
 
 ### Concavity from First Differences
 
 Compute first differences $\\Delta f_i = f(x_{i+1}) - f(x_i)$:
 
-$$\\boxed{\\text{If } \\Delta f \\text{ is increasing} \\Rightarrow f'' > 0 \\text{ (concave up)}}$$
-$$\\boxed{\\text{If } \\Delta f \\text{ is decreasing} \\Rightarrow f'' < 0 \\text{ (concave down)}}$$
+$$\\boxed{\\text{Equal spacing, } \\Delta f \\text{ increasing} \\Rightarrow \\text{the data suggest concave up}}$$
+$$\\boxed{\\text{Equal spacing, } \\Delta f \\text{ decreasing} \\Rightarrow \\text{the data suggest concave down}}$$
+
+A table only shows values at the data points, so it can **suggest** concavity but cannot prove what $f$ does between them. When an AP question needs concavity (for example, to decide whether a trapezoidal sum over- or underestimates), it states it, such as "$f''(x) > 0$". With unequal spacing, compare slopes $\\frac{\\Delta f}{\\Delta x}$, not raw differences.
 
 ### Worked Example
 
@@ -32,7 +34,7 @@ $$\\boxed{\\text{If } \\Delta f \\text{ is decreasing} \\Rightarrow f'' < 0 \\te
 
 First differences: $\\Delta f = 3, 4, 5, 6$ (increasing)
 
-$\\Rightarrow f' > 0$ (increasing) and $f'' > 0$ (concave up).
+The data suggest $f' > 0$ (increasing) and $f'' > 0$ (concave up).
 
 ### Second Derivative from a Table of $f'$
 
@@ -50,9 +52,9 @@ $$f''(a) \\approx \\frac{f'(b) - f'(c)}{b - c}$$
         questions: [
           {
             question: 'The first differences are $8, 6, 4, 2$. What does this tell us about concavity?',
-            options: ['Concave down, since $f\'$ is decreasing', 'Concave up, since $f$ is increasing', 'Concave down, since $f$ is decreasing', 'Cannot tell, since every difference is positive'],
+            options: ['They suggest concave down: slopes decrease', 'They suggest concave up: $f$ is increasing', 'They prove concave down: $f$ is decreasing', 'Nothing: all differences are positive'],
             correctAnswer: 0,
-            explanation: 'Differences $8, 6, 4, 2$ are decreasing, so $f\'$ is decreasing, meaning $f\'\' < 0$ (concave down). $f$ itself is increasing (all differences are positive), but that describes $f\'$, not $f\'\'$.'
+            explanation: 'The spacing is equal (2), so the slopes $4, 3, 2, 1$ decrease: the data suggest $f\'$ is decreasing, so $f$ is concave down. A table cannot prove it, because it says nothing about $f$ between the points. $f$ itself appears to be increasing (all differences are positive), but that is about $f\'$, not $f\'\'$.'
           },
           {
             question: 'Estimate $f\'(4)$ using symmetric differences.',
@@ -64,7 +66,7 @@ $$f''(a) \\approx \\frac{f'(b) - f'(c)}{b - c}$$
             question: 'Is $f$ increasing or decreasing on $[0,8]$?',
             options: ['Increasing \u2014 all first differences are positive', 'Decreasing \u2014 differences are getting smaller', 'Decreasing — the table shows that $f\'\' < 0$', 'Neither — $f$ peaks and levels off near $x = 8$'],
             correctAnswer: 0,
-            explanation: 'All differences ($8,6,4,2$) are positive, so $f\' > 0$ everywhere. $f$ is increasing (but slowing down because it is concave down). Shrinking differences and $f\'\' < 0$ describe concavity, not direction.'
+            explanation: 'All differences ($8,6,4,2$) are positive, so the data indicate $f$ is increasing (assuming it does not turn around between table points), though more slowly as $x$ grows. Shrinking differences and $f\'\' < 0$ describe concavity, not direction.'
           }
         ]
       }
@@ -76,11 +78,11 @@ $$f''(a) \\approx \\frac{f'(b) - f'(c)}{b - c}$$
       exercise: {
         dropdowns: [
           {
-            label: '$f$ is increasing on which interval(s)?',
+            label: 'Suppose $f\'$ is decreasing on $[1, 7]$. Then $f$ must be increasing on:',
             options: ['$(1, 3)$ where $f\' > 0$', '$(5, 7)$ where $f\' < 0$', 'All of $[1, 7]$', 'Nowhere'],
             correctAnswers: ['$(1, 3)$ where $f\' > 0$'],
             hints: ['$f$ is increasing where $f\' > 0$.'],
-            explanation: '$f\'(1) = 4 > 0$ and $f\'(3) = 1 > 0$, so $f$ is increasing on at least $(1,3)$. Since $f\' = 0$ somewhere between $x=3$ and $x=5$, $f$ increases until that point.'
+            explanation: 'Because $f\'$ is decreasing, $f\'(x) \\ge f\'(3) = 1 > 0$ on $[1, 3]$, so $f$ is increasing there. On $(5, 7)$, $f\' \\le f\'(5) = -2 < 0$, so $f$ is decreasing; $f\'$ crosses zero somewhere between 3 and 5.'
           },
           {
             label: 'Estimate $f\'\'(3)$:',
@@ -104,15 +106,15 @@ $$f''(a) \\approx \\frac{f'(b) - f'(c)}{b - c}$$
       type: 'input-box' as const,
       content: '**Apply MVT to $f\'$.** \u270d\ufe0f\n\n$f$ is twice-differentiable.\n\n| $x$ | 2 | 5 | 9 |\n|:---:|:---:|:---:|:---:|\n| $f\'(x)$ | 8 | 2 | -6 |',
       exercise: {
-        question: 'By MVT applied to $f\'$ on $[2, 9]$, there exists $c$ where $f\'\'(c) = a/b$ in lowest terms (with $a < 0$). Enter **$|a| + b$**.',
-        correctAnswer: '3',
-        acceptableAnswers: ['3'],
+        question: 'By MVT applied to $f\'$ on $[2, 9]$, there is a $c$ in $(2, 9)$ where $f\'\'(c)$ equals what value?',
+        correctAnswer: '-2',
+        acceptableAnswers: ['-2', '−2', '-14/7'],
         hints: [
           '$f\'\'(c) = \\frac{f\'(9) - f\'(2)}{9 - 2}$.',
           '$= \\frac{-6 - 8}{7} = \\frac{-14}{7} = -2$.',
-          '$-2 = -2/1$. $|a| + b = 2 + 1 = 3$.'
+          'MVT needs $f\'$ continuous on $[2, 9]$ and differentiable on $(2, 9)$: true, because $f$ is twice-differentiable.'
         ],
-        explanation: '$f\'\'(c) = \\frac{-14}{7} = -2$. As $-2/1$: $|a| + b = 3$.'
+        explanation: '$f$ is twice-differentiable, so $f\'$ is differentiable (and continuous). By MVT on $[2, 9]$: $f\'\'(c) = \\frac{-6 - 8}{9 - 2} = \\frac{-14}{7} = -2$ for some $c$ in $(2, 9)$.'
       }
     },
     {
@@ -120,8 +122,8 @@ $$f''(a) \\approx \\frac{f'(b) - f'(c)}{b - c}$$
       type: 'text' as const,
       content: `### Key Takeaways \u2014 Part 5
 
-- Increasing first differences $\\Rightarrow$ concave up ($f'' > 0$)
-- Decreasing first differences $\\Rightarrow$ concave down ($f'' < 0$)
+- Equally spaced, increasing first differences suggest concave up; decreasing ones suggest concave down
+- A table cannot prove concavity: AP states it (e.g. "$f'' > 0$") when a question depends on it
 - Estimate $f''$ from $f'$ values using the same techniques
 - MVT on $f'$ guarantees a specific $f''(c)$ value`
     }

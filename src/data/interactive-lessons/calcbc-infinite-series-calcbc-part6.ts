@@ -75,11 +75,11 @@ For each series, think about which test best applies *before* solving.
             explanation: '$\\sum |a_n| = \\sum n/e^n$. Ratio Test: $(n+1)/(en) \\to 1/e < 1$. $\\sum |a_n|$ converges, so the series is absolutely convergent.'
           },
           {
-            label: '$\\sum_{n=1}^\\infty \\frac{(-1)^n (2n)!}{4^n (n!)^2}$:',
+            label: '$\\sum_{n=1}^\\infty \\frac{(-1)^n\\, n}{n^2 + 1}$:',
             options: ['Conditionally convergent', 'Divergent ($a_n \\not\\to 0$)', 'Absolutely convergent'],
             correctAnswers: ['Conditionally convergent'],
-            hints: ['$|a_n| \\sim 1/\\sqrt{\\pi n} \\to 0$, but $\\sum 1/\\sqrt{n}$ diverges.'],
-            explanation: 'Let $b_n = \\frac{(2n)!}{4^n (n!)^2} = \\binom{2n}{n}/4^n$. Then $\\frac{b_{n+1}}{b_n} = \\frac{(2n+2)(2n+1)}{4(n+1)^2} = \\frac{2n+1}{2n+2} < 1$, so $b_n$ decreases, and $b_n \\sim 1/\\sqrt{\\pi n} \\to 0$. The AST gives convergence, so the claim that $a_n \\not\\to 0$ is false. But $\\sum b_n$ diverges by LCT with $\\sum 1/\\sqrt{n}$ ($p = 1/2 \\le 1$); the Ratio Test gives $L = 1$ here, which is inconclusive. Conditionally convergent.'
+            hints: ['Compare $\\sum \\frac{n}{n^2+1}$ with $\\sum \\frac{1}{n}$ by the Limit Comparison Test, then check the AST conditions.'],
+            explanation: '$\\lvert a_n\\rvert = \\frac{n}{n^2+1}$ and $\\lim \\frac{n/(n^2+1)}{1/n} = \\lim \\frac{n^2}{n^2+1} = 1$, which is finite and positive, so $\\sum \\lvert a_n\\rvert$ diverges by the LCT with the harmonic series. For the AST, $b_n = \\frac{n}{n^2+1} > 0$, $b_n \\to 0$, and $b_n$ is decreasing for $n \\ge 1$ because $\\frac{d}{dx}\\frac{x}{x^2+1} = \\frac{1 - x^2}{(x^2+1)^2} \\le 0$ for $x \\ge 1$. The series converges, but only conditionally. Since $a_n \\to 0$, the nth-term option is false.'
           }
         ]
       }

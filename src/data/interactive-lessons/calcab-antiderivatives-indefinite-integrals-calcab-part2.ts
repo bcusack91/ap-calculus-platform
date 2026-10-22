@@ -15,11 +15,11 @@ $$\\boxed{\\text{Memorize these — they are the building blocks of ALL integrat
 | Function $f(x)$ | Antiderivative $\\int f(x)\\,dx$ | Derivative Check |
 |:---:|:---:|:---:|
 | $x^n$ $(n \\neq -1)$ | $\\frac{x^{n+1}}{n+1} + C$ | $\\frac{d}{dx}\\left[\\frac{x^{n+1}}{n+1}\\right] = x^n$ ✓ |
-| $\\frac{1}{x}$ | $\\ln|x| + C$ | $\\frac{d}{dx}[\\ln|x|] = \\frac{1}{x}$ ✓ |
+| $\\frac{1}{x}$ | $\\ln\\lvert x\\rvert + C$ | $\\frac{d}{dx}[\\ln\\lvert x\\rvert] = \\frac{1}{x}$ ✓ |
 | $e^x$ | $e^x + C$ | $\\frac{d}{dx}[e^x] = e^x$ ✓ |
 | $a^x$ | $\\frac{a^x}{\\ln a} + C$ | $\\frac{d}{dx}\\left[\\frac{a^x}{\\ln a}\\right] = a^x$ ✓ |
 
-> **Key Fact:** $e^x$ is its OWN antiderivative — the only function (up to constants) with this property!`
+> **Key Fact:** $e^x$ is its OWN antiderivative. Up to a constant multiple ($Ce^x$), it is the only function with this property!`
     },
     {
       id: 'anti2-trig',
@@ -35,7 +35,7 @@ $$\\boxed{\\text{Memorize these — they are the building blocks of ALL integrat
 | $\\sec x \\tan x$ | $\\sec x + C$ | Reverse of $\\frac{d}{dx}[\\sec x]$ |
 | $\\csc x \\cot x$ | $-\\csc x + C$ | Negative! |
 
-> **Pattern:** The "co-" functions (cosine, cosecant, cotangent) always get a NEGATIVE sign when integrating.
+> **Pattern:** When the ANSWER is a "co-" function ($-\\cos x$, $-\\cot x$, $-\\csc x$), it carries a minus sign, because the derivatives of the co-functions are negative. Integrating a co-function itself can give a positive answer: $\\int \\cos x\\,dx = \\sin x + C$.
 
 ### Inverse Trig Antiderivatives
 
@@ -132,7 +132,7 @@ $= \\tan x - (-\\cot x) + C = \\tan x + \\cot x + C$
             options: ['$e^x + C$', '$xe^{x-1} + C$', '$\\frac{e^{x+1}}{x+1} + C$', '$\\ln(e^x) + C$'],
             correctAnswers: ['$e^x + C$'],
             hints: ['$e^x$ is its own antiderivative.'],
-            explanation: '$e^x$ is the unique function (up to constants) that equals its own derivative.'
+            explanation: 'Up to a constant multiple ($Ce^x$), $e^x$ is the only function that equals its own derivative, so its antiderivative is itself plus $C$.'
           },
           {
             label: '$\\int \\sec x \\tan x\\,dx =$',
@@ -172,12 +172,12 @@ $= \\tan x - (-\\cot x) + C = \\tan x + \\cot x + C$
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-$$\\boxed{\\text{"Co-" functions get a negative: } \\int \\sin x = -\\cos x, \\quad \\int \\csc^2 x = -\\cot x}$$
+$$\\boxed{\\text{A co-function answer carries a minus sign: } \\int \\sin x\\,dx = -\\cos x + C, \\quad \\int \\csc^2 x\\,dx = -\\cot x + C}$$
 
 | Category | Key Formulas |
 |:---:|:---:|
 | Exponential | $\\int e^x\\,dx = e^x + C$; $\\int a^x\\,dx = \\frac{a^x}{\\ln a} + C$ |
-| Trig | Memorize all 6; "co-" functions are negative |
+| Trig | Memorize all 6; a co-function ANSWER ($-\\cos$, $-\\cot$, $-\\csc$) has a minus sign |
 | Inverse trig | $\\int \\frac{1}{\\sqrt{1-x^2}} = \\arcsin$; $\\int \\frac{1}{1+x^2} = \\arctan$ |
 | Linearity | Only sums and constants — NOT products or quotients |
 

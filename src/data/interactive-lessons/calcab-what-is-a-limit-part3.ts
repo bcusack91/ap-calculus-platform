@@ -6,7 +6,7 @@ export const calcabWhatIsALimitPart3Data = {
       type: 'text' as const,
       content: `# ✅ When Does a Limit Exist?
 
-**Part 3 of 7 — The "left = right" rule**
+**Part 3 of 4 — The "left = right" rule**
 
 ---
 
@@ -81,8 +81,8 @@ A limit is a *destination*. If walking toward $a$ from the left lands you at one
 
 When asked **"Does $\\lim_{x \\to a} f(x)$ exist?"** follow this checklist:
 
-1. **Try direct substitution.** If $f(a)$ is defined and the function is "well-behaved" (polynomial, rational with $f(a) \\ne 0/0$, etc.), the limit equals $f(a)$.
-2. **If you get $0/0$,** try algebraic simplification (factor, rationalize, common denominator) — Parts 5–7 cover these.
+1. **Try direct substitution.** If $f(a)$ is defined and the function is "well-behaved" (polynomial, rational with a nonzero denominator at $a$, etc.), the limit equals $f(a)$.
+2. **If you get $0/0$,** try algebraic simplification (factor, rationalize, common denominator) — see the Factoring and Rationalizing topics.
 3. **If the function is piecewise or has an absolute value,** compute both one-sided limits separately and compare.
 4. **If a denominator $\\to 0$ but numerator $\\not\\to 0$,** check the sign on each side — usually a vertical asymptote / DNE.
 

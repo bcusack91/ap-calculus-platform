@@ -40,10 +40,10 @@ The **harmonic series** $\\sum 1/n$ has $a_n = 1/n \\to 0$ but diverges.
 
 $$\\sum_{n=0}^\\infty r^n = \\frac{1}{1-r} \\quad \\text{if } |r| < 1$$
 
-| $|r|$ | Behavior |
+| $\\lvert r\\rvert$ | Behavior |
 |-------|----------|
-| $|r| < 1$ | Converges to $\\frac{1}{1-r}$ |
-| $|r| \\ge 1$ | Diverges |`
+| $\\lvert r\\rvert < 1$ | Converges to $\\frac{1}{1-r}$ |
+| $\\lvert r\\rvert \\ge 1$ | Diverges |`
     },
     {
       id: 'seq4-mc1',

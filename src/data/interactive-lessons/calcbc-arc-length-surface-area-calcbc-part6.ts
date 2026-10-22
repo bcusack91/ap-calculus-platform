@@ -68,7 +68,7 @@ $$L = \\int_1^3 \\left(x^2 + \\frac{1}{4x^2}\\right)dx = \\left[\\frac{x^3}{3} -
             explanation: '$\\sqrt{t^2(4 + 9t^2)} = |t|\\sqrt{4 + 9t^2}$. Writing $t$ makes the integrand negative for $t < 0$, so the two halves would cancel to $0$; the correct length is $2\\int_0^1 t\\sqrt{4 + 9t^2}\\,dt$. The other choices take the root term by term or factor out the wrong power.'
           },
           {
-            label: 'Perfect-square arc length problems always involve functions of the form $y = \\frac{x^n}{n} + \\frac{1}{cx^m}$ because:',
+            label: 'Perfect-square arc length problems often involve functions of the form $y = \\frac{x^n}{n} + \\frac{1}{cx^m}$ because:',
             options: ['$1 + (y\')^2$ becomes a perfect square, so the square root cancels', '$y\'$ itself is a perfect square, so the square root cancels', 'These are the only curves whose arc length integral is finite', '$(y\')^2$ is constant, so the integrand is a constant'],
             correctAnswers: ['$1 + (y\')^2$ becomes a perfect square, so the square root cancels'],
             hints: ['When $y\' = ax^k - bx^{-k}$, $(y\')^2 + 1 = (ax^k + bx^{-k})^2$ if $4ab = 1$.'],
@@ -82,11 +82,11 @@ $$L = \\int_1^3 \\left(x^2 + \\frac{1}{4x^2}\\right)dx = \\left[\\frac{x^3}{3} -
       type: 'input-box' as const,
       content: '**Workshop Computation**',
       exercise: {
-        question: 'From Problem 1, what is the arc length $53/6$ as a decimal (round to 2 places)?',
-        correctAnswer: '8.83',
-        acceptableAnswers: ['8.83', '8.833', '53/6'],
-        hints: ['$53 \\div 6 = 8.8\\overline{3}$.'],
-        explanation: '$53/6 = 8.833\\ldots \\approx 8.83$.'
+        question: 'Find the arc length of $y = \\frac{x^3}{6} + \\frac{1}{2x}$ from $x = 1$ to $x = 3$. Give the exact value as a fraction.',
+        correctAnswer: '14/3',
+        acceptableAnswers: ['14/3', '4.667', '4.67'],
+        hints: ['$y\' = \\frac{x^2}{2} - \\frac{1}{2x^2}$, so $1 + (y\')^2 = \\left(\\frac{x^2}{2} + \\frac{1}{2x^2}\\right)^2$.', '$L = \\int_1^3 \\left(\\frac{x^2}{2} + \\frac{1}{2x^2}\\right)dx = \\left[\\frac{x^3}{6} - \\frac{1}{2x}\\right]_1^3$.'],
+        explanation: '$\\left(\\frac{27}{6} - \\frac{1}{6}\\right) - \\left(\\frac{1}{6} - \\frac{1}{2}\\right) = \\frac{26}{6} + \\frac{2}{6} = \\frac{28}{6} = \\frac{14}{3}$.'
       }
     },
     {

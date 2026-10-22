@@ -72,7 +72,7 @@ Finding $k$: $T_h = \\ln 2 / |k|$ → $k = -\\ln 2 / 10 \\approx -0.0693$`
             explanation: '$P = 500e^{0.02t}$. $P(10) = 500e^{0.02 \\times 10} = 500e^{0.2}$.'
           },
           {
-            question: 'A substance decays with $k = -0.05$. Its half-life is:',
+            question: 'A substance decays according to $\\frac{dy}{dt} = -0.05y$, with $t$ in hours. Its half-life is:',
             options: ['$0.05\\ln 2$ hours', '$\\frac{\\ln 2}{0.05}$ hours', '$\\frac{0.05}{\\ln 2}$ hours', '$\\frac{1}{0.05}$ hours'],
             correctAnswer: 1,
             explanation: '$T_h = \\frac{\\ln 2}{|k|} = \\frac{\\ln 2}{0.05} \\approx 13.86$ hours. Inverting the fraction or multiplying by $0.05$ misplaces $k$, and $\\frac{1}{0.05} = 20$ is the time constant, not the half-life.'
@@ -92,6 +92,8 @@ $$\\boxed{\\frac{dT}{dt} = -k(T - T_{env})}$$
 | $T$ | Temperature of object |
 | $T_{env}$ | Ambient (surrounding) temperature |
 | $k > 0$ | Cooling constant |
+
+(Some books write $\\frac{dT}{dt} = k(T - T_{env})$ with $k < 0$ instead; it is the same law. An AP problem always states its form.)
 
 **Solution:** Let $u = T - T_{env}$, then $\\frac{du}{dt} = -ku$:
 

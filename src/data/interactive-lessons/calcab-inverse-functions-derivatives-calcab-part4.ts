@@ -103,15 +103,14 @@ $$= \\frac{\\cos x}{\\sin x} = \\cot x$$`
       type: 'input-box' as const,
       content: '**Evaluate.** \u270d\ufe0f',
       exercise: {
-        question: 'If $f(x) = \\ln(x^3)$, find $f\'(2)$.\n\nAnswer $= \\frac{a}{b}$ (lowest terms). Enter $a+b$.\n\n(Enter an integer.)',
-        correctAnswer: '5',
-        acceptableAnswers: ['5'],
+        question: 'If $f(x) = \\ln(x^3)$, find $f\'(2)$. (Fraction or decimal.)',
+        correctAnswer: '3/2',
+        acceptableAnswers: ['3/2', '1.5'],
         hints: [
           '$\\ln(x^3) = 3\\ln x$.',
-          '$f\'(x) = 3/x$.',
-          '$f\'(2) = 3/2$. $a=3, b=2, a+b=5$.'
+          '$f\'(x) = 3/x$.'
         ],
-        explanation: '$f\'(2) = \\frac{3}{2}$. $a+b = 3+2 = 5$.'
+        explanation: '$\\ln(x^3) = 3\\ln x$, so $f\'(x) = \\frac{3}{x}$ and $f\'(2) = \\frac{3}{2}$.'
       }
     },
     {

@@ -36,7 +36,7 @@ Solve $\\frac{dy}{dx} = 2xy$, $y(0) = 3$.
 | Step | Work |
 |------|------|
 | Separate | $\\frac{dy}{y} = 2x\\,dx$ |
-| Integrate | $\\ln|y| = x^2 + C$ |
+| Integrate | $\\ln\\lvert y\\rvert = x^2 + C$ |
 | Solve for $y$ | $y = Ae^{x^2}$ where $A = \\pm e^C$ |
 | Apply IC | $3 = Ae^0 = A$ |
 | **Solution** | $y = 3e^{x^2}$ |

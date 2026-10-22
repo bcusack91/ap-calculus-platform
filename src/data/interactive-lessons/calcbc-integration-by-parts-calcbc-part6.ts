@@ -128,11 +128,11 @@ This part is a mixed-practice workshop. Every problem requires identifying the c
       type: 'input-box' as const,
       content: '**Definite Integral Challenge**',
       exercise: {
-        question: 'Evaluate $\\int_0^1 x^3 e^x\\,dx$. Using the tabular antiderivative $e^x(x^3 - 3x^2 + 6x - 6)$, compute $[\\text{antiderivative}]_0^1$. Express as $ae + b$. What is $a + b$?',
-        correctAnswer: '4',
-        acceptableAnswers: ['4'],
-        hints: ['At $x=1$: $e(1-3+6-6) = -2e$.', 'At $x=0$: $1(0-0+0-6) = -6$.', 'Result: $-2e-(-6) = 6 - 2e = -2e + 6$. So $a = -2$, $b = 6$.'],
-        explanation: '$6 - 2e$. Here $a = -2$ and $b = 6$, so $a + b = -2 + 6 = 4$.'
+        question: 'Evaluate $\\int_0^1 x^3 e^x\\,dx$ using the tabular antiderivative $e^x(x^3 - 3x^2 + 6x - 6)$. Give the value to three decimal places.',
+        correctAnswer: '0.563',
+        acceptableAnswers: ['0.563', '0.5634', '6-2e', '6 - 2e', '-2e+6'],
+        hints: ['At $x=1$: $e(1-3+6-6) = -2e$.', 'At $x=0$: $1(0-0+0-6) = -6$.', 'Result: $-2e-(-6) = 6 - 2e$.'],
+        explanation: '$[e^x(x^3 - 3x^2 + 6x - 6)]_0^1 = -2e - (-6) = 6 - 2e \\approx 0.563$.'
       }
     },
     {

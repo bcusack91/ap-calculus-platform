@@ -38,7 +38,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'ilv-ent-2b',
     question: 'Evaluate $\\lim_{x \\to 0^-} \\dfrac{e^x}{x^3}$.',
-    options: ['$\\infty$', '$0$', '$-\\infty$', '$1$'],
+    options: ['$+\\infty$', '$0$', '$-\\infty$', '$1$'],
     correctIndex: 2,
     explanation: 'The numerator approaches $e^0 = 1$, a positive number. For $x$ slightly less than 0, $x^3$ is a small negative number, so the quotient decreases without bound to $-\\infty$.',
     partNumber: 2,
@@ -67,7 +67,7 @@ const questions: EntranceQuizQuestion[] = [
   {
     id: 'ilv-ent-4a',
     question: 'Evaluate $\\lim_{x \\to \\pi^-} \\cot x$.',
-    options: ['$\\infty$', '$0$', '$1$', '$-\\infty$'],
+    options: ['$+\\infty$', '$0$', '$1$', '$-\\infty$'],
     correctIndex: 3,
     explanation: 'Write $\\cot x = \\frac{\\cos x}{\\sin x}$. As $x \\to \\pi^-$, $\\cos x \\to -1$ while $\\sin x$ is a small positive number, so the quotient goes to $-\\infty$.',
     partNumber: 4,
