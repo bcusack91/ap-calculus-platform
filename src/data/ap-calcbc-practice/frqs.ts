@@ -22,10 +22,10 @@ export const FRQS: SAQItem[] = [
 People enter a museum at the rate $E(t) = 0.5t^2(7 - t)^{1/2}$ hundred people per hour and leave at the rate $L(t) = 0.3t^2 + 4$ hundred people per hour, for $0 \\le t \\le 7$ hours. At time $t = 0$, there are 600 people in the museum.`,
     parts: [
       {
-        prompt: '**(a)** How many people enter the museum during the time interval $0 \\le t \\le 7$? Show the integral, then use a calculator. Round to nearest whole hundred.',
+        prompt: '**(a)** How many people enter the museum during the time interval $0 \\le t \\le 7$? Show the integral, then use a calculator. Give your answer in hundreds of people, to three decimal places.',
         rubric: [
           { id: 'a1', label: '1 pt — Definite integral of the entry rate', description: '$\\int_0^7 E(t)\\,dt = \\int_0^7 0.5t^2(7 - t)^{1/2}\\,dt$.' },
-          { id: 'a2', label: '1 pt — Answer', description: '$\\approx 69.142$ hundred people, so about **6900 people** (6914) enter the museum.' },
+          { id: 'a2', label: '1 pt — Answer', description: '$\\approx 69.142$ hundred people (about 6914 people). Accept 69.142 hundred or 6914 people; a value rounded before the third decimal place, such as 69 hundred, does not earn the point.' },
         ],
       },
       {
@@ -51,6 +51,8 @@ People enter a museum at the rate $E(t) = 0.5t^2(7 - t)^{1/2}$ hundred people pe
         ],
       },
     ],
+    sampleResponse:
+      '(a) ∫₀⁷ E(t) dt ≈ 69.142 hundred people, about 6914 people. (b) N(t) = 6 + ∫₀ᵗ (E(x) − L(x)) dx hundred people. (c) N′(t) = E(t) − L(t) = 0 at t ≈ 2.251 and t ≈ 6.364. Candidates: N(0) = 6, N(2.251) ≈ 0.233, N(6.364) ≈ 16.501, N(7) ≈ 12.842 (hundreds). The number of people is greatest at t ≈ 6.364 hours. (d) N′(6) = E(6) − L(6) = 18 − 14.8 = 3.2 hundred people per hour: at t = 6 the number of people in the museum is increasing at 320 people per hour.',
   },
 
   /* ============== Q2 — CALCULATOR (Parametric/Vector) ============== */
@@ -76,21 +78,23 @@ A particle moves in the $xy$-plane with position given by $x(t) = t^3 - 6t^2 + 9
         ],
       },
       {
-        prompt: '**(c)** Find the total distance traveled by the particle on the interval $0 \\le t \\le 3$. Use a calculator.',
+        prompt: '**(c)** Using a calculator, find the length of the path the particle traces from $t = 0$ to $t = 3$.',
         rubric: [
           { id: 'c1', label: '1 pt — Integral of speed', description: '$\\int_0^3 \\sqrt{(x\'(t))^2 + (y\'(t))^2}\\,dt = \\int_0^3 \\sqrt{(3t^2 - 12t + 9)^2 + (4t)^2}\\,dt$.' },
           { id: 'c2', label: '1 pt — Answer', description: '$\\approx 21.637$.' },
         ],
       },
       {
-        prompt: '**(d)** Find the acceleration vector at $t = 2$ and indicate whether the particle is speeding up or slowing down at that instant.',
+        prompt: '**(d)** Find the acceleration vector at $t = 2$, and determine whether the particle\'s speed is increasing or decreasing at that instant. Explain.',
         rubric: [
           { id: 'd1', label: '1 pt — Acceleration vector', description: '$x\'\'(t) = 6t - 12$, $y\'\'(t) = 4$, so $\\vec a(2) = \\langle 0, 4\\rangle$.' },
-          { id: 'd2', label: '1 pt — Compares velocity and acceleration', description: '$\\vec v \\cdot \\vec a = (-3)(0) + (8)(4) = 32$ (or shows $\\frac{d}{dt}(\\text{speed}) > 0$ at $t = 2$).' },
-          { id: 'd3', label: '1 pt — Speeding up, with reason', description: 'The dot product is positive, so the particle is speeding up at $t = 2$.' },
+          { id: 'd2', label: '1 pt — Rate of change of speed', description: 'With speed $s(t) = \\sqrt{(3t^2 - 12t + 9)^2 + 16t^2}$, the calculator gives $s\'(2) \\approx 3.745$ (exactly $\\frac{32}{\\sqrt{73}}$). Also accept $\\vec v(2)\\cdot\\vec a(2) = (-3)(0) + (8)(4) = 32$, or values of $s$ just before and after $t = 2$ that show $s$ increasing.' },
+          { id: 'd3', label: '1 pt — Increasing, with reason', description: '$s\'(2) > 0$ (or $\\vec v\\cdot\\vec a > 0$), so the speed is **increasing** at $t = 2$. Also accept: $x\'\'(2) = 0$, so the horizontal speed is not changing, while $y\'(2) = 8$ and $y\'\'(2) = 4$ have the same sign, so the vertical speed is increasing. A conclusion with no reason does not earn the point.' },
         ],
       },
     ],
+    sampleResponse:
+      '(a) x′(t) = 3t² − 12t + 9 and y′(t) = 4t, so the velocity at t = 2 is ⟨−3, 8⟩ and the speed is √73 ≈ 8.544. (b) y′(t) = 4t = 0 only at t = 0, and x′(0) = 9 ≠ 0, so the particle is never at rest. (c) ∫₀³ √((3t² − 12t + 9)² + (4t)²) dt ≈ 21.637. (d) x″(t) = 6t − 12 and y″(t) = 4, so a(2) = ⟨0, 4⟩. The speed is s(t) = √((3t² − 12t + 9)² + 16t²), and s′(2) ≈ 3.745 > 0, so the speed is increasing at t = 2.',
   },
 
   /* ============== Q3 — NO CALCULATOR (Area/Volume) ============== */
@@ -99,10 +103,10 @@ A particle moves in the $xy$-plane with position given by $x(t) = t^3 - 6t^2 + 9
     topic: 'frq-area-volume',
     stimulus: `**Q3 (No calculator) — Area, Volume, Arc Length (9 points)**
 
-Let $R$ be the region in the first quadrant bounded by $y = \\sqrt x$, $y = x/2$, and the $y$-axis.`,
+Let $R$ be the region in the first quadrant enclosed by the graphs of $y = \\sqrt x$ and $y = x/2$.`,
     parts: [
       {
-        prompt: '**(a)** Find the points of intersection and sketch $R$.',
+        prompt: '**(a)** Find the coordinates of the two points where the graphs of $y = \\sqrt x$ and $y = x/2$ meet. Between them, which graph lies above the other?',
         rubric: [
           { id: 'a1', label: '1 pt — Intersection points', description: '$\\sqrt x = x/2 \\Rightarrow x^2 - 4x = 0 \\Rightarrow x = 0, 4$, giving $(0, 0)$ and $(4, 2)$; on $[0, 4]$, $\\sqrt x \\ge x/2$.' },
         ],
@@ -116,7 +120,7 @@ Let $R$ be the region in the first quadrant bounded by $y = \\sqrt x$, $y = x/2$
         ],
       },
       {
-        prompt: '**(c)** Find the volume of the solid generated when $R$ is revolved about the $x$-axis.',
+        prompt: '**(c)** The region $R$ is rotated about the $x$-axis. Find the volume of the resulting solid.',
         rubric: [
           { id: 'c1', label: '1 pt — Washer integrand', description: '$\\pi\\left[(\\sqrt x)^2 - (x/2)^2\\right] = \\pi(x - x^2/4)$ on $[0, 4]$.' },
           { id: 'c2', label: '1 pt — Antiderivative', description: '$\\pi\\left[\\tfrac{x^2}{2} - \\tfrac{x^3}{12}\\right]_0^4$.' },
@@ -127,10 +131,12 @@ Let $R$ be the region in the first quadrant bounded by $y = \\sqrt x$, $y = x/2$
         prompt: '**(d)** Set up but do not evaluate an integral for the arc length of $y = \\sqrt x$ from $x = 0$ to $x = 4$.',
         rubric: [
           { id: 'd1', label: '1 pt — Derivative', description: '$y\' = \\dfrac{1}{2\\sqrt x}$.' },
-          { id: 'd2', label: '1 pt — Arc length integral', description: '$L = \\int_0^4 \\sqrt{1 + \\dfrac{1}{4x}}\\,dx$ (setup only).' },
+          { id: 'd2', label: '1 pt — Arc length integral', description: '$L = \\int_0^4 \\sqrt{1 + \\dfrac{1}{4x}}\\,dx$ (setup only). Also accept the equivalent form in $y$, with $x = y^2$: $L = \\int_0^2\\sqrt{1 + 4y^2}\\,dy$.' },
         ],
       },
     ],
+    sampleResponse:
+      '(a) √x = x/2 gives x² = 4x, so x = 0 or x = 4: the curves meet at (0, 0) and (4, 2), and √x ≥ x/2 on [0, 4]. (b) A = ∫₀⁴ (√x − x/2) dx = [(2/3)x^(3/2) − x²/4]₀⁴ = 16/3 − 4 = 4/3. (c) V = π∫₀⁴ ((√x)² − (x/2)²) dx = π∫₀⁴ (x − x²/4) dx = π[x²/2 − x³/12]₀⁴ = π(8 − 16/3) = 8π/3. (d) y′ = 1/(2√x), so the length is ∫₀⁴ √(1 + 1/(4x)) dx.',
   },
 
   /* ============== Q4 — NO CALCULATOR (Function defined by integral) ============== */
@@ -173,6 +179,8 @@ $(0, 2)$, $(2, 0)$ as a straight line; $(2, 0)$ to $(4, -2)$ as a straight line;
         ],
       },
     ],
+    sampleResponse:
+      '(a) g(2) = ½(2)(2) = 2. On [2, 4] the triangle below the axis has area 2, so g(4) = 0. On [4, 6], f crosses zero at x = 5 and the areas −1 and +1 cancel, so g(6) = 0. On [6, 8], f = 2, so g(8) = 0 + 4 = 4. (b) g′(x) = f(x) > 0 on (0, 2) and (5, 8), so g is increasing on those intervals. (c) g′ = f = 0 at x = 2 and x = 5. g′ changes from positive to negative at x = 2, a local maximum, and from negative to positive at x = 5, a local minimum. (d) g″(3) = f′(3) = (−2 − 0)/(4 − 2) = −1.',
   },
 
   /* ============== Q5 — NO CALCULATOR (Logistic DE) ============== */
@@ -213,6 +221,8 @@ A population $P(t)$ satisfies $\\dfrac{dP}{dt} = 0.04 P\\left(1 - \\dfrac{P}{500
         ],
       },
     ],
+    sampleResponse:
+      '(a) The equation has the form dP/dt = kP(1 − P/L) with L = 500, so the carrying capacity is 500. Since 0 < P(0) = 100 < 500, P increases toward 500: lim P(t) = 500. (b) dP/dt = 0.04P − 0.04P²/500 is a downward parabola in P with maximum where 0.04 − 0.08P/500 = 0, so the population grows fastest at P = 250. (c) P′(0) = 0.04(100)(0.8) = 3.2, so P(5) ≈ 100 + 5(3.2) = 116. The slope at P = 116 is 0.04(116)(0.768) ≈ 3.564, so P(10) ≈ 116 + 5(3.564) ≈ 133.8. (d) For 100 ≤ P < 250 the solution is concave up, so the tangent-line steps lie below the curve and 133.8 is an underestimate.',
   },
 
   /* ============== Q6 — NO CALCULATOR (Taylor Series) ============== */
@@ -221,37 +231,39 @@ A population $P(t)$ satisfies $\\dfrac{dP}{dt} = 0.04 P\\left(1 - \\dfrac{P}{500
     topic: 'frq-taylor-series',
     stimulus: `**Q6 (No calculator) — Taylor / Maclaurin Series (9 points)**
 
-Let $f(x) = \\ln(1 + x)$.`,
+Let $f(x) = \\ln(1 + 2x)$.`,
     parts: [
       {
         prompt: '**(a)** Find the first four nonzero terms and the general term of the Maclaurin series for $f(x)$.',
         rubric: [
-          { id: 'a1', label: '1 pt — First four nonzero terms', description: '$x - \\dfrac{x^2}{2} + \\dfrac{x^3}{3} - \\dfrac{x^4}{4}$.' },
-          { id: 'a2', label: '1 pt — General term', description: '$\\dfrac{(-1)^{n+1}x^n}{n}$, for $n \\ge 1$.' },
+          { id: 'a1', label: '1 pt — First four nonzero terms', description: '$2x - 2x^2 + \\dfrac{8x^3}{3} - 4x^4$ (from $\\ln(1 + u) = u - \\frac{u^2}{2} + \\frac{u^3}{3} - \\frac{u^4}{4} + \\cdots$ with $u = 2x$).' },
+          { id: 'a2', label: '1 pt — General term', description: '$\\dfrac{(-1)^{n+1}(2x)^n}{n} = \\dfrac{(-1)^{n+1}2^n x^n}{n}$, for $n \\ge 1$.' },
         ],
       },
       {
         prompt: '**(b)** Find the interval of convergence of the Maclaurin series for $f$, including endpoint analysis.',
         rubric: [
-          { id: 'b1', label: '1 pt — Ratio test gives the radius', description: '$\\left|\\dfrac{a_{n+1}}{a_n}\\right| = |x|\\dfrac{n}{n+1} \\to |x|$, so the series converges for $|x| < 1$.' },
-          { id: 'b2', label: '1 pt — Endpoint $x = 1$', description: '$\\sum (-1)^{n+1}/n$ is the alternating harmonic series, which converges (terms decrease to 0).' },
-          { id: 'b3', label: '1 pt — Endpoint $x = -1$ and interval', description: 'The series becomes $-\\sum 1/n$, the harmonic series, which diverges. Interval of convergence: $(-1, 1]$.' },
+          { id: 'b1', label: '1 pt — Ratio test gives the radius', description: '$\\left|\\dfrac{a_{n+1}}{a_n}\\right| = |2x|\\dfrac{n}{n+1} \\to |2x|$, so the series converges for $|x| < \\frac{1}{2}$.' },
+          { id: 'b2', label: '1 pt — Endpoint $x = \\frac{1}{2}$', description: 'The series becomes $\\sum (-1)^{n+1}/n$, the alternating harmonic series, which converges (terms decrease to 0).' },
+          { id: 'b3', label: '1 pt — Endpoint $x = -\\frac{1}{2}$ and interval', description: 'The series becomes $-\\sum 1/n$, the harmonic series, which diverges. Interval of convergence: $-\\frac{1}{2} < x \\le \\frac{1}{2}$.' },
         ],
       },
       {
-        prompt: '**(c)** Use the third-degree Taylor polynomial $P_3(x) = x - x^2/2 + x^3/3$ to approximate $\\ln(1.2)$. Show your arithmetic.',
+        prompt: '**(c)** Use the third-degree Taylor polynomial $P_3(x) = 2x - 2x^2 + \\frac{8}{3}x^3$ to approximate $\\ln(1.2)$. Show your arithmetic.',
         rubric: [
-          { id: 'c1', label: '1 pt — Uses $x = 0.2$', description: '$P_3(0.2) = 0.2 - \\dfrac{(0.2)^2}{2} + \\dfrac{(0.2)^3}{3}$.' },
-          { id: 'c2', label: '1 pt — Answer', description: '$0.2 - 0.02 + 0.00267 \\approx 0.1827$.' },
+          { id: 'c1', label: '1 pt — Uses $x = 0.1$', description: '$\\ln(1.2) = f(0.1) \\approx P_3(0.1) = 0.2 - 2(0.01) + \\dfrac{8}{3}(0.001)$.' },
+          { id: 'c2', label: '1 pt — Answer', description: '$0.2 - 0.02 + 0.00267 \\approx 0.1827$ (exactly $\\frac{137}{750}$).' },
         ],
       },
       {
-        prompt: '**(d)** Use the alternating series error bound to give an upper bound for $|P_3(0.2) - \\ln(1.2)|$.',
+        prompt: '**(d)** Use the alternating series error bound to give an upper bound for $|P_3(0.1) - \\ln(1.2)|$.',
         rubric: [
-          { id: 'd1', label: '1 pt — Uses the first omitted term', description: 'The series at $x = 0.2$ alternates with terms decreasing in magnitude to 0, so the error is at most $|a_4| = \\dfrac{(0.2)^4}{4}$.' },
+          { id: 'd1', label: '1 pt — Uses the first omitted term', description: 'The series at $x = 0.1$ alternates with terms decreasing in magnitude to 0, so the error is at most the magnitude of the first omitted term, $\\dfrac{(0.2)^4}{4} = 4(0.1)^4$.' },
           { id: 'd2', label: '1 pt — Bound', description: '$\\dfrac{0.0016}{4} = 0.0004$.' },
         ],
       },
     ],
+    sampleResponse:
+      '(a) ln(1 + u) = u − u²/2 + u³/3 − u⁴/4 + ⋯, so with u = 2x: f(x) = 2x − 2x² + (8/3)x³ − 4x⁴ + ⋯, with general term (−1)^(n+1)(2x)ⁿ/n. (b) |aₙ₊₁/aₙ| = |2x|·n/(n + 1) → |2x| < 1, so |x| < 1/2. At x = 1/2 the series is Σ(−1)^(n+1)/n, which converges by the alternating series test; at x = −1/2 it is −Σ1/n, which diverges. The interval of convergence is −1/2 < x ≤ 1/2. (c) ln(1.2) = f(0.1) ≈ 0.2 − 0.02 + 0.00267 ≈ 0.1827. (d) The series at x = 0.1 alternates with terms decreasing to 0, so the error is at most the first omitted term: (0.2)⁴/4 = 0.0004.',
   },
 ]

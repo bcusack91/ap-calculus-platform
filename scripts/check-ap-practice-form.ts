@@ -5,7 +5,7 @@
  *   npx tsx scripts/check-ap-practice-form.ts <examKey> <form>
  *   npx tsx scripts/check-ap-practice-form.ts <examKey> --file <path/to/config.ts>
  *
- * examKey: ap-chem | ap-bio | ap-physics1 | ap-calcab (the courses with a
+ * examKey: ap-chem | ap-bio | ap-physics1 | ap-calcab | ap-calcbc (the courses with a
  * blueprint below). --file checks a config that is not registered yet (the
  * module must export `config: FullLengthExamConfig`).
  *
@@ -51,6 +51,8 @@ interface CourseSpec {
   overlap: string[]
   /** Case-insensitive patterns for content the Phase 1 trim removed (WARN). */
   offExam: RegExp[]
+  /** Diagnostic v2 banks (course slugs) to compare against; defaults to the exam's own course. */
+  v2Banks?: string[]
 }
 
 const SPECS: Record<string, CourseSpec> = {
@@ -127,6 +129,43 @@ const SPECS: Record<string, CourseSpec> = {
     stimulusMin: 0.2,
     overlap: ['src/data/exit-quizzes/ap-calculus-ab.ts', 'src/data/ap-calculus-ab-diagnostic.ts', 'src/data/ap-calc-ab-frq/questions.ts'],
     offExam: [/integration by parts/i, /shell method|cylindrical shell/i, /newton'?s method/i, /euler'?s method/i, /logistic/i, /partial fraction/i, /improper integral/i, /\bseries\b|taylor|maclaurin/i, /polar|parametric/i],
+  },
+  'ap-calcbc': {
+    name: 'AP Calculus BC',
+    mcq: { count: 42, minutes: 100, weight: 50 },
+    frq: { count: 6, minutes: 90, weight: 50, points: [9, 9, 9, 9, 9, 9] },
+    // CED exam weighting for BC (Units 1–8 at their BC weights, plus 9 and 10).
+    units: [
+      { slug: 'unit-1-limits-continuity', lo: 0.04, hi: 0.07 },
+      { slug: 'unit-2-differentiation-definition', lo: 0.04, hi: 0.07 },
+      { slug: 'unit-3-composite-implicit-inverse', lo: 0.04, hi: 0.07 },
+      { slug: 'unit-4-contextual-applications-differentiation', lo: 0.06, hi: 0.09 },
+      { slug: 'unit-5-analytical-applications-differentiation', lo: 0.08, hi: 0.11 },
+      { slug: 'unit-6-integration-accumulation', lo: 0.17, hi: 0.2 },
+      { slug: 'unit-7-differential-equations', lo: 0.06, hi: 0.09 },
+      { slug: 'unit-8-applications-integration', lo: 0.06, hi: 0.09 },
+      { slug: 'unit-9-parametric-polar-vector', lo: 0.11, hi: 0.12 },
+      { slug: 'unit-10-infinite-series', lo: 0.17, hi: 0.18 },
+    ],
+    stimulusMin: 0.2,
+    // BC students also see the AB surfaces, so AB forms, pool, diagnostics and FRQ bank count too.
+    overlap: [
+      'src/data/exit-quizzes/ap-calculus-bc.ts',
+      'src/data/ap-calculus-bc-diagnostic.ts',
+      'src/data/ap-calc-bc-frq/questions.ts',
+      'src/data/exit-quizzes/ap-calculus-ab.ts',
+      'src/data/ap-calculus-ab-diagnostic.ts',
+      'src/data/ap-calc-ab-frq/questions.ts',
+      'src/data/ap-calcab-practice/mcqs.ts',
+      'src/data/ap-calcab-practice/frqs.ts',
+      'src/data/ap-calcab-practice/form-2/mcqs.ts',
+      'src/data/ap-calcab-practice/form-2/frqs.ts',
+      'src/data/ap-calcab-practice/form-3/mcqs.ts',
+      'src/data/ap-calcab-practice/form-3/frqs.ts',
+    ],
+    v2Banks: ['ap-calculus-ab'],
+    // BC trim (ap-phase1-pipeline/trim/ap-calculus-bc/TRIM.md): not in the CED.
+    offExam: [/surface area/i, /root test/i, /\b(sinh|cosh|tanh)\b/i, /trig(onometric)? substitution/i, /unit (tangent|normal)|curvature/i, /monotone convergence/i, /epsilon|\\varepsilon/i, /dirichlet/i, /runge|heun/i, /shell method|cylindrical shell/i, /newton'?s method/i],
   },
 }
 
@@ -358,8 +397,9 @@ async function main() {
   }
   if (emptyFiles.length) console.log(`  no literal items in ${emptyFiles.join(', ')} (it draws from a pool already compared)`)
   // Diagnostic v2 bank (items use stem/content, which textsInFile does not read): load it directly.
-  const v2 = (AP_DIAG_V2_BANKS as Record<string, (typeof AP_DIAG_V2_BANKS)[keyof typeof AP_DIAG_V2_BANKS] | undefined>)[AP_PRACTICE_EXAMS[examKey].courseSlug]
-  if (v2) {
+  for (const v2Slug of spec.v2Banks ?? [AP_PRACTICE_EXAMS[examKey].courseSlug]) {
+    const v2 = (AP_DIAG_V2_BANKS as Record<string, (typeof AP_DIAG_V2_BANKS)[keyof typeof AP_DIAG_V2_BANKS] | undefined>)[v2Slug]
+    if (!v2) continue
     const stim = new Map(v2.stimuli.map((x) => [x.id, x.content]))
     for (const it of v2.items) corpus.push({ src: `ap-diagnostic-v2/${v2.course}`, text: `${it.stimulusId ? stim.get(it.stimulusId) ?? '' : ''} ${it.stem}` })
   }

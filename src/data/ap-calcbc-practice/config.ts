@@ -5,7 +5,7 @@ import { FRQS } from './frqs'
 export const config: FullLengthExamConfig = {
   subject: 'AP Calculus BC',
   description:
-    'Full-length practice exam modeled on the official College Board AP Calculus BC exam. 42 multiple-choice questions and 6 free-response questions across all 10 units (including parametric/polar/vector and infinite series). Section I Part A is no-calculator; Part B allows graphing calculator. Section II Part A allows calculator; Part B is no-calculator.',
+    'Full-length practice exam, form 1, modeled on the May 2027 AP Calculus BC exam. 42 multiple-choice questions across all 10 units (Part A no calculator, Part B graphing calculator), including table, graph, power-series, storage-tank and plane-motion sets, plus 6 free-response questions: rates in and out (museum) and parametric motion with a calculator; area, volume and arc length, a function defined by an integral, a logistic differential equation and a Taylor series without one.',
   backLink: { href: '/ap-calculus-bc', label: 'AP Calculus BC' },
   ctaLinks: [
     { href: '/calcbc-diagnostic', label: 'Diagnostic Test' },
