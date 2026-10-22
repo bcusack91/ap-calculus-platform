@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { apSeenKeysForQuestion, reviewQuestionsFromResults, validateSeenKeysBody } from '@/lib/diagnostic-seen'
-import { AP_DIAG_V2_BLUEPRINTS } from './blueprints'
+import { apDiagV2SeenCategories } from './blueprints'
 import type { ApDiagV2Course } from './types'
 
 /**
@@ -10,7 +10,9 @@ import type { ApDiagV2Course } from './types'
  * v2 course — the same contract as the SAT route:
  *
  * GET  -> { keys } for every submitted v2 attempt (category
- *         `<prefix>-v2`): each served question's id AND its text fingerprint
+ *         `<prefix>-v2`, plus the v2 categories of any course the bank
+ *         includes: a BC student who sat the AB v2 is not re-served those AB
+ *         items): each served question's id AND its text fingerprint
  *         (stimulus text included), recomputed from `results.review.questions`
  *         exactly as the page records them locally. v1 attempts drew from the
  *         exit pools, which the v2 bank is disjoint from, so they are skipped.
@@ -20,14 +22,14 @@ import type { ApDiagV2Course } from './types'
 const MAX_ATTEMPTS_SCANNED = 200
 
 export function apDiagnosticSeenHandlers(course: ApDiagV2Course) {
-  const category = `${AP_DIAG_V2_BLUEPRINTS[course].categoryPrefix}-v2`
+  const categories = apDiagV2SeenCategories(course)
 
   async function GET() {
     try {
       const session = await auth()
       if (!session?.user?.id) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
       const attempts = await prisma.diagnosticTest.findMany({
-        where: { userId: session.user.id, category },
+        where: { userId: session.user.id, category: { in: categories } },
         orderBy: { createdAt: 'desc' },
         take: MAX_ATTEMPTS_SCANNED,
         select: { results: true },

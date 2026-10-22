@@ -21,7 +21,7 @@ export type ApDiagV2Difficulty = 'easy' | 'medium' | 'hard'
 export const AP_DIAG_V2_DIFFICULTIES: readonly ApDiagV2Difficulty[] = ['easy', 'medium', 'hard']
 
 /** Course slugs that have a v2 blueprint (DB Course.slug). */
-export type ApDiagV2Course = 'ap-chemistry' | 'ap-biology' | 'ap-physics-1' | 'ap-calculus-ab'
+export type ApDiagV2Course = 'ap-chemistry' | 'ap-biology' | 'ap-physics-1' | 'ap-calculus-ab' | 'ap-calculus-bc'
 
 /**
  * A shared stimulus (AP "question set"). Every item that points at it is
@@ -54,7 +54,7 @@ export interface ApDiagV2Item {
   options: string[]
   correctIndex: number
   explanation: string
-  /** Blueprint unit id (`unit-1` … `unit-9`). */
+  /** Blueprint unit id (`unit-1` … `unit-10`). */
   unit: string
   /** Production Topic slug (tests/fixtures/ap-lesson-topic-slugs.json) whose lesson teaches this item. */
   topicSlug: string
@@ -85,7 +85,13 @@ export interface ApDiagV2Blueprint {
   /** DiagnosticTest.category prefix the course already uses; v2 stores `${categoryPrefix}-v2`. */
   categoryPrefix: string
   /** Seen-tracking key (`/api/<seenCourse>-diagnostic/seen`), also the API route base. */
-  seenCourse: 'ap-chem' | 'ap-bio' | 'ap-physics1' | 'calcab'
+  seenCourse: 'ap-chem' | 'ap-bio' | 'ap-physics1' | 'calcab' | 'calcbc'
+  /**
+   * v2 courses whose bank this course's bank contains (AP Calculus BC = the AB
+   * bank + BC-only items). Seen tracking also reads those courses' attempts,
+   * so a student who sat the included course's v2 is not re-served its items.
+   */
+  includes?: ApDiagV2Course[]
   /** The diagnostic page path. */
   pagePath: string
   /** Questions per sitting. */

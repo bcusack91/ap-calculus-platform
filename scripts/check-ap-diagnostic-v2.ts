@@ -6,7 +6,10 @@
  *       SVG safety, format tells, length balance, disjointness from the exit
  *       pool and the v1 forms, per-unit counts against the switch minimum and
  *       the authoring target, and a 15-sitting no-repeat simulation.
- *       Courses: ap-chemistry ap-biology ap-physics-1 ap-calculus-ab (default: all).
+ *       Courses: ap-chemistry ap-biology ap-physics-1 ap-calculus-ab ap-calculus-bc (default: all).
+ *       ap-calculus-bc is the AB bank plus BC-only items: its topics are the BC
+ *       and AB production topics, and it must be disjoint from both exit pools
+ *       and both v1 diagnostics.
  *       Exit code 1 if any error.
  *
  *   npx tsx scripts/check-ap-diagnostic-v2.ts --export-blind <course> <dir>
@@ -33,13 +36,22 @@ import { apChemQuestionPool } from '../src/data/exit-quizzes/ap-chemistry'
 import { apBioQuestionPool } from '../src/data/exit-quizzes/ap-biology'
 import { apPhysics1QuestionPool } from '../src/data/exit-quizzes/ap-physics-1'
 import { calcABQuestionPool } from '../src/data/exit-quizzes/ap-calculus-ab'
+import { calcBCQuestionPool } from '../src/data/exit-quizzes/ap-calculus-bc'
 import * as chemV1 from '../src/data/ap-chemistry-diagnostic'
 import * as bioV1 from '../src/data/ap-biology-diagnostic'
 import * as phys1V1 from '../src/data/ap-physics-1-diagnostic'
 import * as calcV1 from '../src/data/ap-calculus-ab-diagnostic'
+import * as calcBcV1 from '../src/data/ap-calculus-bc-diagnostic'
+import { coursesIn, excludedTopicsOf } from '../src/lib/course-includes'
 
 const root = path.resolve(__dirname, '..')
 const fixture = JSON.parse(fs.readFileSync(path.join(root, 'tests/fixtures/ap-lesson-topic-slugs.json'), 'utf8')) as Record<string, string[]>
+
+/** Production topics a course's items may carry: its own plus those of every course it includes (BC includes AB). */
+function productionTopics(course: ApDiagV2Course): Set<string> {
+  const excluded = new Set(excludedTopicsOf(course))
+  return new Set(coursesIn(course).flatMap((c) => fixture[c] ?? []).filter((s) => !excluded.has(s)))
+}
 
 /** Stems the v2 bank must not reuse: the exit pool and every v1 form (incl. v1 inline pools). */
 function forbiddenStems(course: ApDiagV2Course): Set<string> {
@@ -67,6 +79,14 @@ function forbiddenStems(course: ApDiagV2Course): Set<string> {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any -- the v1 form type is a literal union
       forms((f) => calcV1.generateCalcABDiagnosticTest(f as any), calcV1.TOTAL_FORMS)
       break
+    case 'ap-calculus-bc':
+      // The BC bank contains the AB bank, so it answers to both courses' pools and v1 forms.
+      add(calcABQuestionPool)
+      add(calcBCQuestionPool)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any -- the v1 form type is a literal union
+      forms((f) => calcV1.generateCalcABDiagnosticTest(f as any), calcV1.TOTAL_FORMS)
+      forms(calcBcV1.generateCalcBCDiagnosticTest, calcBcV1.TOTAL_FORMS)
+      break
   }
   return out
 }
@@ -90,7 +110,7 @@ function simulate(course: ApDiagV2Course, sittings = 15) {
 function check(course: ApDiagV2Course): number {
   const bp = AP_DIAG_V2_BLUEPRINTS[course]
   const bank = AP_DIAG_V2_BANKS[course]
-  const report = validateBank(bank, { productionTopics: new Set(fixture[course] ?? []), forbiddenStems: forbiddenStems(course) })
+  const report = validateBank(bank, { productionTopics: productionTopics(course), forbiddenStems: forbiddenStems(course) })
   const quotas = unitQuotas(bp)
   console.log(`\n=== ${course} (${bp.label}) — ${report.stats.items} items, ${report.stats.stimuli} stimuli (${report.stats.setItems} set items)`)
   console.log(`    blueprint: ${bp.length} q / ${bp.timeLimitMinutes} min, ${bp.setsPerSitting} sets per sitting; weights: ${bp.weightSource}`)
@@ -136,8 +156,20 @@ function shuffled<T>(arr: T[], seed: string): T[] {
   return a
 }
 
-function exportBlind(course: ApDiagV2Course, dir: string) {
+/**
+ * The items a blind solve covers: the course's own items. A bank that includes
+ * another course's bank (BC includes AB) leaves those items out; they were
+ * blind-solved with their own course.
+ */
+function ownBank(course: ApDiagV2Course) {
   const bank = AP_DIAG_V2_BANKS[course]
+  const inherited = new Set((AP_DIAG_V2_BLUEPRINTS[course].includes ?? []).flatMap((c) => AP_DIAG_V2_BANKS[c].items.map((i) => i.id)))
+  const inheritedStimuli = new Set((AP_DIAG_V2_BLUEPRINTS[course].includes ?? []).flatMap((c) => AP_DIAG_V2_BANKS[c].stimuli.map((s) => s.id)))
+  return { ...bank, items: bank.items.filter((i) => !inherited.has(i.id)), stimuli: bank.stimuli.filter((s) => !inheritedStimuli.has(s.id)) }
+}
+
+function exportBlind(course: ApDiagV2Course, dir: string) {
+  const bank = ownBank(course)
   const blindDir = path.join(dir, 'blind')
   const keyDir = path.join(dir, 'key')
   fs.mkdirSync(blindDir, { recursive: true })

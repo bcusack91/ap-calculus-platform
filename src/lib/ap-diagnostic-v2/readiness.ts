@@ -22,6 +22,7 @@ export const AP_DIAG_V2_LIVE: Record<ApDiagV2Course, boolean> = {
   'ap-biology': false,
   'ap-physics-1': false,
   'ap-calculus-ab': false,
+  'ap-calculus-bc': false,
 }
 
 export const AP_DIAG_V2_SWITCH_RULES = {

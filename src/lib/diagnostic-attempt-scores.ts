@@ -160,8 +160,8 @@ export function summarizeAttemptScores(category: string, rawResults: unknown): A
       const ab = num(results.abSubscore)
       if (ab != null && ab >= 1 && ab <= 5) sections.push({ key: 'AB', label: 'AB subscore', value: ab, outOf: 5 })
     }
-    // AP diagnostic v2 stores a ± band on the estimate (results.scoreRange).
-    const band = family === 'ap' ? storedRange(results.scoreRange, 1, 5) : null
+    // AP diagnostic v2 (including Calculus BC) stores a ± band on the estimate (results.scoreRange).
+    const band = family === 'ap' || family === 'calcbc' ? storedRange(results.scoreRange, 1, 5) : null
     const banded = band != null && score != null && band.low !== band.high
     return {
       family,

@@ -12,6 +12,7 @@ import slugsByCourse from '../fixtures/ap-lesson-topic-slugs.json'
 import {
   AP_DIAG_V2_BLUEPRINTS,
   AP_DIAG_V2_COURSES,
+  apDiagV2SeenCategories,
   apportion,
   difficultyTargets,
   unitMidpoint,
@@ -31,8 +32,17 @@ import { diagnosticPathForCategory, summarizeAttemptScores } from '@/lib/diagnos
 import { courseForCategory } from '@/lib/class-plan-config'
 import { isSafeSvg } from '@/lib/safe-svg'
 import { mulberry32 } from '@/data/_shared/prng'
+import { coursesIn, excludedTopicsOf } from '@/lib/course-includes'
+import { bank as calcAbBank } from '@/data/ap-diagnostic-v2/ap-calculus-ab'
+import { BC_ONLY } from '@/data/ap-diagnostic-v2/ap-calculus-bc'
 
 const FIXTURE = slugsByCourse as Record<string, string[]>
+
+/** Production topics a course's items may carry: its own plus those of courses it includes (BC includes AB). */
+const topicsOf = (course: string) => {
+  const excluded = new Set(excludedTopicsOf(course))
+  return new Set(coursesIn(course).flatMap((c) => FIXTURE[c] ?? []).filter((s) => !excluded.has(s)))
+}
 
 /**
  * A bank stocked to the switch minimum: per unit, three sittings' worth of
@@ -81,6 +91,16 @@ const EXPECTED_QUOTAS: Record<ApDiagV2Course, number[]> = {
   'ap-biology': [3, 4, 5, 4, 3, 5, 5, 4],
   'ap-physics-1': [5, 7, 7, 5, 4, 2, 2, 4],
   'ap-calculus-ab': [5, 4, 3, 4, 6, 6, 3, 4],
+  'ap-calculus-bc': [2, 2, 2, 3, 4, 8, 3, 3, 5, 8],
+}
+
+/** Pinned sitting length and clock: the v1 ones (BC keeps its 40 questions / 55 minutes). */
+const EXPECTED_SITTING: Record<ApDiagV2Course, { length: number; minutes: number }> = {
+  'ap-chemistry': { length: 33, minutes: 40 },
+  'ap-biology': { length: 33, minutes: 45 },
+  'ap-physics-1': { length: 36, minutes: 45 },
+  'ap-calculus-ab': { length: 35, minutes: 45 },
+  'ap-calculus-bc': { length: 40, minutes: 55 },
 }
 
 describe('blueprints (CED weightings)', () => {
@@ -89,10 +109,8 @@ describe('blueprints (CED weightings)', () => {
     const q = unitQuotas(bp)
     expect(bp.units.map((u) => q[u.id])).toEqual(EXPECTED_QUOTAS[course])
     expect(Object.values(q).reduce((a, b) => a + b, 0)).toBe(bp.length)
-    expect(bp.length).toBeGreaterThanOrEqual(33)
-    expect(bp.length).toBeLessThanOrEqual(36)
-    expect(bp.timeLimitMinutes).toBeGreaterThanOrEqual(40)
-    expect(bp.timeLimitMinutes).toBeLessThanOrEqual(45)
+    expect(bp.length).toBe(EXPECTED_SITTING[course].length)
+    expect(bp.timeLimitMinutes).toBe(EXPECTED_SITTING[course].minutes)
   })
 
   it.each(AP_DIAG_V2_COURSES)('%s: every unit\'s share is within one question of its normalized CED midpoint', (course) => {
@@ -109,11 +127,15 @@ describe('blueprints (CED weightings)', () => {
     expect(AP_DIAG_V2_BLUEPRINTS['ap-physics-1'].units).toHaveLength(8)
     expect(AP_DIAG_V2_BLUEPRINTS['ap-physics-1'].units[7].name).toBe('Fluids')
     expect(AP_DIAG_V2_BLUEPRINTS['ap-calculus-ab'].units).toHaveLength(8)
+    expect(AP_DIAG_V2_BLUEPRINTS['ap-calculus-bc'].units).toHaveLength(10)
+    expect(AP_DIAG_V2_BLUEPRINTS['ap-calculus-bc'].units.map((u) => u.weight)).toEqual([
+      [4, 7], [4, 7], [4, 7], [6, 9], [8, 11], [17, 20], [6, 9], [6, 9], [11, 12], [17, 18],
+    ])
   })
 
   it.each(AP_DIAG_V2_COURSES)('%s: every unit topic is a production topic with a name, and the category prefix is the v1 one', (course) => {
     const bp = AP_DIAG_V2_BLUEPRINTS[course]
-    const ok = new Set(FIXTURE[course])
+    const ok = topicsOf(course)
     for (const u of bp.units) for (const s of u.topicSlugs) {
       expect(ok.has(s), `${u.id} ${s}`).toBe(true)
       expect(bp.topicNames[s], s).toBeTruthy()
@@ -204,7 +226,7 @@ describe('course banks (end to end)', () => {
 
   it.each(AP_DIAG_V2_COURSES)('%s: passes the bank checks and serves every stimulus set whole, in authored order', (course) => {
     const bank = AP_DIAG_V2_BANKS[course]
-    const report = validateBank(bank, { productionTopics: new Set(FIXTURE[course]) })
+    const report = validateBank(bank, { productionTopics: topicsOf(course) })
     expect(report.errors).toEqual([])
     expect(bank.stimuli.length).toBeGreaterThanOrEqual(1)
     const t = generateApDiagnosticV2(bank, { rng: mulberry32(7) })
@@ -337,5 +359,103 @@ describe('stored attempts (history, review, seen route)', () => {
     expect(s.overall?.value).toBe('2–4/5')
     // v1 attempts are unchanged.
     expect(summarizeAttemptScores('ap-physics1-diagnostic-4', { estimatedAPScore: 3 }).overall?.value).toBe('3/5')
+  })
+})
+
+/*
+ * AP Calculus BC (owner decision 2026-10-22: full parity with AB). The BC bank
+ * is the AB v2 bank, imported whole, plus BC-only items, so Units 1–8 draw AB
+ * items at the BC CED weights and nothing AB is duplicated.
+ */
+describe('AP Calculus BC: combined bank (AB v2 + BC-only)', () => {
+  const bc = AP_DIAG_V2_BANKS['ap-calculus-bc']
+  const bp = AP_DIAG_V2_BLUEPRINTS['ap-calculus-bc']
+
+  it('contains every AB v2 item and stimulus exactly once, plus the BC-only items, with no duplicates', () => {
+    expect(bc.items.length).toBe(calcAbBank.items.length + BC_ONLY.items.length)
+    expect(new Set(bc.items.map((i) => i.id)).size).toBe(bc.items.length)
+    expect(bc.items.slice(0, calcAbBank.items.length)).toEqual(calcAbBank.items)
+    expect(new Set(bc.stimuli.map((s) => s.id)).size).toBe(bc.stimuli.length)
+    expect(BC_ONLY.items.every((i) => i.id.startsWith('calcbc-'))).toBe(true)
+  })
+
+  it('BC-only items cover 6.11–6.13, 7.5, 7.9, 8.13 and Units 9–10 with BC topics, and Units 1–5 come from AB only', () => {
+    const bcTopics = new Set(FIXTURE['ap-calculus-bc'])
+    expect(BC_ONLY.items.every((i) => bcTopics.has(i.topicSlug))).toBe(true)
+    const units = new Set(BC_ONLY.items.map((i) => i.unit))
+    expect([...units].sort()).toEqual(['unit-10', 'unit-6', 'unit-7', 'unit-8', 'unit-9'])
+    for (const slug of [
+      'integration-by-parts-calcbc', 'partial-fractions-calcbc', 'improper-integrals-calcbc', 'euler-method-advanced-calcbc', 'logistic-models-calcbc',
+      'arc-length-surface-area-calcbc', 'parametric-curves-calculus-calcbc', 'vector-valued-functions-calcbc', 'polar-calculus-calcbc',
+      'convergence-tests-summary-calcbc', 'alternating-series-calcbc', 'taylor-maclaurin-series-calcbc', 'lagrange-error-bound-calcbc', 'power-series-calcbc',
+    ]) expect(BC_ONLY.items.some((i) => i.topicSlug === slug), slug).toBe(true)
+    // Units 1–8 keep the AB unit topics; BC appends its own to Units 6–8.
+    const ab = AP_DIAG_V2_BLUEPRINTS['ap-calculus-ab']
+    for (let n = 0; n < 8; n++) expect(bp.units[n].topicSlugs.slice(0, ab.units[n].topicSlugs.length)).toEqual(ab.units[n].topicSlugs)
+  })
+
+  it('meets the switch minimum and gives at least three fully fresh sittings in a 15-sitting run', () => {
+    expect(bankReadiness(bc).problems).toEqual([])
+    const seen = new Set<string>()
+    const rng = mulberry32(20261016)
+    let fresh = 0
+    for (let s = 0; s < 15; s++) {
+      const t = generateApDiagnosticV2(bc, { seen, rng })
+      expect(t.questions).toHaveLength(40)
+      const repeats = t.questions.filter((q) => seenKeysForServed(q).some((k) => seen.has(k))).length
+      if (repeats === 0 && fresh === s) fresh++
+      t.questions.flatMap(seenKeysForServed).forEach((k) => seen.add(k))
+    }
+    expect(fresh).toBeGreaterThanOrEqual(3)
+  })
+
+  it('serves both AB and BC-only items, at the BC quotas, and BC-only content shows up in Units 6–8 over a few sittings', () => {
+    const quotas = unitQuotas(bp)
+    const bcIds = new Set(BC_ONLY.items.map((i) => i.id))
+    const seen = new Set<string>()
+    const bcOnlyIn = new Set<string>()
+    for (let s = 0; s < 4; s++) {
+      const t = generateApDiagnosticV2(bc, { seen, rng: mulberry32(70 + s) })
+      for (const u of bp.units) expect(t.questions.filter((q) => q.domain === u.id)).toHaveLength(quotas[u.id])
+      for (const q of t.questions) {
+        if (bcIds.has(q.id)) bcOnlyIn.add(q.domain)
+        if (['unit-9', 'unit-10'].includes(q.domain)) expect(bcIds.has(q.id)).toBe(true)
+      }
+      t.questions.flatMap(seenKeysForServed).forEach((k) => seen.add(k))
+    }
+    for (const u of ['unit-6', 'unit-7', 'unit-8', 'unit-9', 'unit-10']) expect(bcOnlyIn.has(u), u).toBe(true)
+  })
+
+  it('scores with a band and recommends BC and AB production topics', () => {
+    const t = generateApDiagnosticV2(bc, { rng: mulberry32(12) })
+    const r = scoreApDiagnosticV2('ap-calculus-bc', t.questions, t.questions.map((q) => (q.correctAnswer + 1) % 4))
+    expect(r.totalQuestions).toBe(40)
+    expect(r.domains).toHaveLength(10)
+    expect(r.recommendedTopics.length).toBe(5)
+    const ok = topicsOf('ap-calculus-bc')
+    for (const rec of r.recommendedTopics) {
+      expect(ok.has(rec.slug), rec.slug).toBe(true)
+      expect(bp.topicNames[rec.slug], rec.slug).toBeTruthy()
+    }
+    // Heaviest weak units first: Units 6 and 10 (8 questions each) lead.
+    expect(['unit-6', 'unit-10']).toContain(r.recommendedTopics[0].domainId)
+  })
+
+  it('stores as calcbc-diagnostic-v2: course, retake path, band in history, and seen tracking that also reads AB v2 attempts', () => {
+    const cat = 'calcbc-diagnostic-v2'
+    expect(apDiagV2CourseOfCategory(cat)).toBe('ap-calculus-bc')
+    expect(courseForCategory(cat)?.courseSlug).toBe('ap-calculus-bc')
+    expect(diagnosticPathForCategory(cat)).toBe('/calcbc-diagnostic')
+    expect(summarizeAttemptScores(cat, { estimatedAPScore: 3, scoreRange: { low: 2, high: 4 } }).overall?.value).toBe('2–4/5')
+    expect(summarizeAttemptScores('calcbc-diagnostic-3', { estimatedAPScore: 3 }).overall?.value).toBe('3/5')
+    expect(apDiagV2SeenCategories('ap-calculus-bc')).toEqual(['calcbc-diagnostic-v2', 'calcab-diagnostic-v2'])
+    expect(apDiagV2SeenCategories('ap-calculus-ab')).toEqual(['calcab-diagnostic-v2'])
+  })
+
+  it('the review layer re-attaches the BC polar figure, and the flag stays off until the owner flips it', () => {
+    const fig = bc.stimuli.find((s) => s.id === 'calcbc-s902')
+    expect(isSafeSvg(fig?.svg)).toBe(true)
+    expect(AP_DIAG_V2_LIVE['ap-calculus-bc']).toBe(false)
+    expect(apDiagnosticVersion('ap-calculus-bc', null)).toBe(1)
   })
 })

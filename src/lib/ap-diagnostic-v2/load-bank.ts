@@ -11,5 +11,7 @@ export async function loadApDiagV2Bank(course: ApDiagV2Course): Promise<ApDiagV2
       return (await import('@/data/ap-diagnostic-v2/ap-physics-1')).bank
     case 'ap-calculus-ab':
       return (await import('@/data/ap-diagnostic-v2/ap-calculus-ab')).bank
+    case 'ap-calculus-bc':
+      return (await import('@/data/ap-diagnostic-v2/ap-calculus-bc')).bank
   }
 }

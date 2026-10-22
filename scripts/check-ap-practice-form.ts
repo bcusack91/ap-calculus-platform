@@ -163,7 +163,7 @@ const SPECS: Record<string, CourseSpec> = {
       'src/data/ap-calcab-practice/form-3/mcqs.ts',
       'src/data/ap-calcab-practice/form-3/frqs.ts',
     ],
-    v2Banks: ['ap-calculus-ab'],
+    v2Banks: ['ap-calculus-bc'], // the BC v2 bank contains the AB v2 bank
     // BC trim (ap-phase1-pipeline/trim/ap-calculus-bc/TRIM.md): not in the CED.
     offExam: [/surface area/i, /root test/i, /\b(sinh|cosh|tanh)\b/i, /trig(onometric)? substitution/i, /unit (tangent|normal)|curvature/i, /monotone convergence/i, /epsilon|\\varepsilon/i, /dirichlet/i, /runge|heun/i, /shell method|cylindrical shell/i, /newton'?s method/i],
   },

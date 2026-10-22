@@ -20,6 +20,13 @@
  * - Calculus AB: AP Calculus AB and BC CED (2026–27 with Fall 2026
  *   clarifications), "Exam Weighting (AB)" column (scratchpad ced/calc-ced.txt
  *   l. 717; trim/ap-calculus-ab/CED-NOTES.md).
+ * - Calculus BC: the same CED, "Exam Weighting (BC)" column (Units 1–8 at their
+ *   BC weights, plus Units 9 and 10; the same ranges as the BC practice-form
+ *   spec in scripts/check-ap-practice-form.ts). BC keeps the v1 BC sitting
+ *   (40 questions, 55 minutes). Its bank is the AB v2 bank plus BC-only items
+ *   (src/data/ap-diagnostic-v2/ap-calculus-bc), so Units 1–8 draw AB items at
+ *   BC weights and Units 6–8 also draw the BC-only topics (6.11–6.14, 7.5,
+ *   7.9, 8.13).
  */
 import type { ApDiagV2Blueprint, ApDiagV2Course, ApDiagV2Difficulty, ApDiagV2Unit } from './types'
 
@@ -257,17 +264,94 @@ const CALCULUS_AB: ApDiagV2Blueprint = {
   },
 }
 
+const BC_ONLY_TOPIC_NAMES: Record<string, string> = {
+  'integration-by-parts-calcbc': 'Integration by Parts',
+  'partial-fractions-calcbc': 'Partial Fractions',
+  'improper-integrals-calcbc': 'Improper Integrals',
+  'euler-method-advanced-calcbc': 'Euler\'s Method',
+  'logistic-models-calcbc': 'Logistic Models',
+  'arc-length-surface-area-calcbc': 'Arc Length',
+  'parametric-curves-calculus-calcbc': 'Parametric Curves & Calculus',
+  'vector-valued-functions-calcbc': 'Vector-Valued Functions',
+  'polar-calculus-calcbc': 'Polar Calculus',
+  'infinite-sequences-calcbc': 'Infinite Sequences',
+  'infinite-series-calcbc': 'Infinite Series',
+  'convergence-tests-summary-calcbc': 'Convergence Tests',
+  'alternating-series-calcbc': 'Alternating Series',
+  'taylor-maclaurin-series-calcbc': 'Taylor & Maclaurin Series',
+  'lagrange-error-bound-calcbc': 'Lagrange Error Bound',
+  'power-series-calcbc': 'Power Series',
+  'series-applications-calcbc': 'Series Applications',
+}
+
+/** An AB unit with BC-only topics appended (Units 6–8 of the BC CED). */
+const bcUnit = (n: number, weight: readonly [number, number], extraTopics: string[] = []): ApDiagV2Unit => {
+  const ab = CALCULUS_AB.units[n - 1]
+  return { ...ab, weight, topicSlugs: [...ab.topicSlugs, ...extraTopics] }
+}
+
+const CALCULUS_BC: ApDiagV2Blueprint = {
+  course: 'ap-calculus-bc',
+  label: 'AP Calculus BC',
+  categoryPrefix: 'calcbc-diagnostic',
+  seenCourse: 'calcbc',
+  pagePath: '/calcbc-diagnostic',
+  length: 40,
+  timeLimitMinutes: 55,
+  setsPerSitting: 2,
+  includes: ['ap-calculus-ab'],
+  weightSource: 'AP Calculus AB and BC CED (2026–27), Exam Weighting (BC)',
+  units: [
+    bcUnit(1, [4, 7]),
+    bcUnit(2, [4, 7]),
+    bcUnit(3, [4, 7]),
+    bcUnit(4, [6, 9]),
+    bcUnit(5, [8, 11]),
+    bcUnit(6, [17, 20], ['integration-by-parts-calcbc', 'partial-fractions-calcbc', 'improper-integrals-calcbc']),
+    bcUnit(7, [6, 9], ['euler-method-advanced-calcbc', 'logistic-models-calcbc']),
+    bcUnit(8, [6, 9], ['arc-length-surface-area-calcbc']),
+    { id: 'unit-9', number: 9, name: 'Parametric Equations, Polar Coordinates, and Vector-Valued Functions', weight: [11, 12], topicSlugs: ['parametric-curves-calculus-calcbc', 'vector-valued-functions-calcbc', 'polar-calculus-calcbc'] },
+    {
+      id: 'unit-10',
+      number: 10,
+      name: 'Infinite Sequences and Series',
+      weight: [17, 18],
+      topicSlugs: [
+        'convergence-tests-summary-calcbc',
+        'taylor-maclaurin-series-calcbc',
+        'power-series-calcbc',
+        'infinite-series-calcbc',
+        'alternating-series-calcbc',
+        'lagrange-error-bound-calcbc',
+        'infinite-sequences-calcbc',
+        'series-applications-calcbc',
+      ],
+    },
+  ],
+  topicNames: { ...CALCULUS_AB.topicNames, ...BC_ONLY_TOPIC_NAMES },
+}
+
 export const AP_DIAG_V2_BLUEPRINTS: Record<ApDiagV2Course, ApDiagV2Blueprint> = {
   'ap-chemistry': CHEMISTRY,
   'ap-biology': BIOLOGY,
   'ap-physics-1': PHYSICS_1,
   'ap-calculus-ab': CALCULUS_AB,
+  'ap-calculus-bc': CALCULUS_BC,
 }
 
 export const AP_DIAG_V2_COURSES = Object.keys(AP_DIAG_V2_BLUEPRINTS) as ApDiagV2Course[]
 
 export function isApDiagV2Course(course: string): course is ApDiagV2Course {
   return course in AP_DIAG_V2_BLUEPRINTS
+}
+
+/**
+ * The stored v2 categories whose served items count as seen for a course: its
+ * own plus those of every course its bank includes (BC reads AB v2 attempts).
+ */
+export function apDiagV2SeenCategories(course: ApDiagV2Course): string[] {
+  const bp = AP_DIAG_V2_BLUEPRINTS[course]
+  return [course, ...(bp.includes ?? [])].map((c) => `${AP_DIAG_V2_BLUEPRINTS[c].categoryPrefix}-v2`)
 }
 
 /** Midpoint of a unit's CED weighting range. */

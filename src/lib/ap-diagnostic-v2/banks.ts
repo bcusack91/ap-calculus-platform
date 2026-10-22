@@ -7,6 +7,7 @@ import { bank as chemistry } from '@/data/ap-diagnostic-v2/ap-chemistry'
 import { bank as biology } from '@/data/ap-diagnostic-v2/ap-biology'
 import { bank as physics1 } from '@/data/ap-diagnostic-v2/ap-physics-1'
 import { bank as calculusAb } from '@/data/ap-diagnostic-v2/ap-calculus-ab'
+import { bank as calculusBc } from '@/data/ap-diagnostic-v2/ap-calculus-bc'
 import { AP_DIAG_V2_BLUEPRINTS } from './blueprints'
 import { AP_DIAG_V2_LIVE, bankReadiness } from './readiness'
 import type { ApDiagV2Bank, ApDiagV2Course, ApDiagV2Stimulus } from './types'
@@ -16,6 +17,7 @@ export const AP_DIAG_V2_BANKS: Record<ApDiagV2Course, ApDiagV2Bank> = {
   'ap-biology': biology,
   'ap-physics-1': physics1,
   'ap-calculus-ab': calculusAb,
+  'ap-calculus-bc': calculusBc,
 }
 
 /**

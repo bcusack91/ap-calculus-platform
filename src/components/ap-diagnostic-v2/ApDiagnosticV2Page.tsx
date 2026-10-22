@@ -77,6 +77,15 @@ const THEME: Record<ApDiagV2Course, { page: string; text: string; chip: string; 
     soft: 'bg-purple-50 dark:bg-purple-900/20',
     bar: 'bg-purple-500',
   },
+  'ap-calculus-bc': {
+    page: 'from-violet-50 via-white to-purple-50',
+    text: 'text-violet-700 dark:text-violet-300',
+    chip: 'bg-violet-100 text-violet-700 dark:bg-violet-900/30 dark:text-violet-300',
+    button: 'bg-violet-600 hover:bg-violet-700',
+    border: 'border-violet-300 dark:border-violet-700',
+    soft: 'bg-violet-50 dark:bg-violet-900/20',
+    bar: 'bg-violet-500',
+  },
 }
 
 interface HistoryEntry {
