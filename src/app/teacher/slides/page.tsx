@@ -3,8 +3,7 @@
 import { Suspense, useCallback, useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { MathText } from '@/components/MathText'
-import { deckPalette, SlideMotionStyles, SLIDE_IN, TitleSlideView, ContentSlideView, QuizSlideView, OptionBadge } from '@/components/SlideVisuals'
+import { deckPalette, SlideMotionStyles, SlideStage, TitleSlideView, ContentSlideView, QuizSlideView, PollSlideView } from '@/components/SlideVisuals'
 
 /**
  * Teacher slide library — /teacher/slides[?topic=<slug>].
@@ -13,7 +12,9 @@ import { deckPalette, SlideMotionStyles, SLIDE_IN, TitleSlideView, ContentSlideV
  * curriculum category, and preview any deck slide-by-slide (polls show the
  * correct answer highlighted — this is the teacher's prep view). Deep-linked
  * from Class Plan blocks. To present a deck live: Go Live in your classroom,
- * then pick the topic in the "Present slides" bar.
+ * then pick the topic in the "Present slides" bar. The preview renders on the
+ * same fixed stage as the live presentation, so what you see here is exactly
+ * the layout every student will see.
  */
 
 type Slide =
@@ -149,7 +150,7 @@ function SlideLibrary() {
                   </div>
                 </div>
                 <SlideMotionStyles />
-                <div key={slideIdx} className="min-h-[45vh] px-6 py-8 sm:px-10">
+                <SlideStage key={slideIdx} className="rounded-b-2xl overflow-hidden">
                   {slide?.kind === 'title' && (
                     <TitleSlideView title={slide.title} subtitle={slide.subtitle} palette={palette} />
                   )}
@@ -157,29 +158,20 @@ function SlideLibrary() {
                     <ContentSlideView title={slide.title} blocks={slide.blocks} palette={palette} />
                   )}
                   {slide?.kind === 'poll' && (
-                    <div style={SLIDE_IN}>
-                      <p className={`mb-2 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide ${palette.chip}`}>
-                        📊 Poll · answer shown (prep view)
-                      </p>
-                      <MathText text={slide.question} className="mb-5 text-xl font-semibold text-gray-900 dark:text-white" />
-                      <div className="space-y-2">
-                        {slide.options.map((opt, i) => (
-                          <div key={i} className={`flex items-center gap-2.5 rounded-xl border-2 px-4 py-2.5 text-sm ${i === slide.correctIndex ? 'border-green-500 bg-green-50 dark:bg-green-900/20' : 'border-gray-200 dark:border-gray-600'}`}>
-                            <OptionBadge index={i} active={i === slide.correctIndex} palette={palette} />
-                            <MathText inline text={opt} />
-                            {i === slide.correctIndex && <span className="ml-1 text-xs font-semibold text-green-600 dark:text-green-400">✓ correct</span>}
-                          </div>
-                        ))}
-                      </div>
-                      {slide.explanation && (
-                        <MathText text={slide.explanation} className="mt-4 rounded-xl border border-gray-200 bg-gray-50 p-3 text-sm text-gray-700 dark:border-gray-700 dark:bg-gray-700/40 dark:text-gray-300" />
-                      )}
-                    </div>
+                    <PollSlideView
+                      question={slide.question}
+                      options={slide.options}
+                      palette={palette}
+                      chipText="📊 Poll · answer shown (prep view)"
+                      states={slide.options.map((_, i) => ({ correct: i === slide.correctIndex }))}
+                      showTallies={false}
+                      explanation={slide.explanation || null}
+                    />
                   )}
                   {slide?.kind === 'quiz' && (
                     <QuizSlideView title={slide.title} palette={palette} />
                   )}
-                </div>
+                </SlideStage>
               </div>
             )}
           </div>

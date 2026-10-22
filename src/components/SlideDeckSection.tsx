@@ -4,10 +4,10 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Excalidraw, CaptureUpdateAction } from '@excalidraw/excalidraw'
 import '@excalidraw/excalidraw/index.css'
-import { MathText } from '@/components/MathText'
 import { asScene, sceneVersion, type BoardScene, type BoardElement, mergeScenes, EMPTY_SCENE } from '@/lib/board-merge'
 import { PEN_SIZES, PEN_SIZE_ORDER, loadPenSize, penSizeAppState, savePenSize, type PenSize } from '@/lib/pen-sizes'
-import { deckPalette, SlideMotionStyles, SLIDE_IN, TitleSlideView, ContentSlideView, QuizSlideView, OptionBadge } from '@/components/SlideVisuals'
+import { deckPalette, SlideMotionStyles, SlideStage, TitleSlideView, ContentSlideView, QuizSlideView, PollSlideView, type PollOptionState } from '@/components/SlideVisuals'
+import { lockStageView, needsAnswerStrip, stageView, toLogicalScene } from '@/lib/slide-stage'
 
 declare global {
   interface Window { EXCALIDRAW_ASSET_PATH?: string }
@@ -27,6 +27,11 @@ if (typeof window !== 'undefined') {
  * and then see the class distribution. Deck ends on the exit-quiz handoff
  * slide. Sync = the same 2.5s polling pattern as chat/boards; students never
  * receive answer keys until reveal.
+ *
+ * Every viewer sees the IDENTICAL slide: slides render on a fixed 1280 × 720
+ * logical stage scaled to each screen (SlideStage / src/lib/slide-stage.ts),
+ * and the pen canvas is locked to that stage (zoom = scale, no pan), so the
+ * teacher's strokes land on the same word for everyone — owner, 2026-10-22.
  */
 
 type Slide =
@@ -97,6 +102,21 @@ export default function SlideDeckSection({
   const [annScene, setAnnScene] = useState<{ key: string; rev: number; scene: BoardScene } | null>(null)
   const annRevRef = useRef(-1)
   const annSlideRef = useRef<string>('')
+  // Full screen (whole section, controls included): the teacher projects it;
+  // a phone student gets the slide as big as the screen allows.
+  const rootRef = useRef<HTMLDivElement>(null)
+  const [canFullscreen, setCanFullscreen] = useState(false)
+  const [isFullscreen, setIsFullscreen] = useState(false)
+  useEffect(() => {
+    setCanFullscreen(!!document.fullscreenEnabled)
+    const onChange = () => setIsFullscreen(document.fullscreenElement === rootRef.current && !!rootRef.current)
+    document.addEventListener('fullscreenchange', onChange)
+    return () => document.removeEventListener('fullscreenchange', onChange)
+  }, [])
+  const toggleFullscreen = () => {
+    if (document.fullscreenElement) void document.exitFullscreen().catch(() => {})
+    else void rootRef.current?.requestFullscreen().catch(() => {})
+  }
 
   const control = useCallback(async (payload: Record<string, unknown>) => {
     const r = await fetch(`/api/live-sessions/${sessionId}/deck`, {
@@ -180,8 +200,33 @@ export default function SlideDeckSection({
     finally { setBusy(false) }
   }
 
+  // One option list for everyone; only the marks differ (teacher: tallies,
+  // student: own answer) and those overlay the row without moving anything.
+  const showTallies = (youAreTeacher || isRevealed) && deck.poll?.counts != null
+  const pollStates: PollOptionState[] = slide.kind === 'poll'
+    ? slide.options.map((_, i) => {
+        const count = deck.poll?.counts?.[i] ?? 0
+        const total = deck.poll?.total ?? 0
+        return {
+          mine: deck.poll?.myAnswer === i,
+          correct: !!reveal && isRevealed && reveal.correctIndex === i,
+          count,
+          pct: total > 0 ? Math.round((count / total) * 100) : 0,
+        }
+      })
+    : []
+  const pollChip = `📊 Quick check ${isRevealed ? '· answer revealed' : deck.poll?.total != null ? `· ${deck.poll.total}${deck.poll.classSize != null ? ` of ${deck.poll.classSize}` : ''} answered` : deck.poll?.myAnswer != null ? '· your answer is in' : ''}`
+  const pollStatus = youAreTeacher
+    ? (deck.poll?.total != null && deck.poll.classSize != null
+        ? `${deck.poll.total} of ${deck.poll.classSize} student${deck.poll.classSize === 1 ? '' : 's'} answered`
+        : null)
+    : deck.poll?.myAnswer === null && !isRevealed
+      ? 'Tap an answer — you can change it until your teacher reveals.'
+      : null
+  const canAnswer = !youAreTeacher && !isRevealed && !busy
+
   return (
-    <div className="mb-4 rounded-2xl border-2 border-indigo-300 bg-white shadow-lg dark:border-indigo-700 dark:bg-gray-800">
+    <div ref={rootRef} className={`mb-4 rounded-2xl border-2 border-indigo-300 bg-white shadow-lg dark:border-indigo-700 dark:bg-gray-800 ${isFullscreen ? 'flex flex-col overflow-auto' : ''}`}>
       {/* Header / controls */}
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-gray-100 px-4 py-2.5 dark:border-gray-700">
         <div className="flex items-center gap-2">
@@ -191,57 +236,120 @@ export default function SlideDeckSection({
           <span className="text-sm font-semibold text-gray-800 dark:text-gray-200">{deck.title}</span>
           <span className="text-xs text-gray-400">slide {deck.currentSlide + 1}/{deck.slideCount}</span>
         </div>
-        {youAreTeacher && (
-          <div className="flex flex-wrap items-center gap-1.5">
-            <button
-              onClick={() => void control({ action: 'goto', index: deck.currentSlide - 1 })}
-              disabled={deck.currentSlide === 0}
-              className="rounded-lg border border-gray-300 px-3 py-1 text-sm font-semibold text-gray-700 disabled:opacity-40 dark:border-gray-600 dark:text-gray-300"
-            >◀ Back</button>
-            <button
-              onClick={() => void control({ action: 'goto', index: deck.currentSlide + 1 })}
-              disabled={deck.currentSlide >= deck.slideCount - 1}
-              className="rounded-lg bg-indigo-600 px-4 py-1 text-sm font-semibold text-white disabled:opacity-40"
-            >Next ▶</button>
-            <button
-              onClick={toggleAnnotating}
-              className={`rounded-lg px-3 py-1 text-sm font-semibold ${annotating ? 'bg-amber-500 text-white' : 'border border-gray-300 text-gray-700 dark:border-gray-600 dark:text-gray-300'}`}
-              title={annotating ? 'Stop annotating (buttons become clickable again)' : 'Draw on this slide — students see your strokes live'}
-            >
-              {annotating ? '✅ Done' : '✏️ Annotate'}
-            </button>
-            {annotating && <PenToolbar apiRef={annApiRef} tool={penTool} setTool={setPenTool} size={penSize} setSize={setPenSize} />}
-            {slide.kind === 'poll' && !isRevealed && (
+        <div className="flex flex-wrap items-center gap-1.5">
+          {youAreTeacher && (
+            <>
               <button
-                onClick={() => void control({ action: 'reveal', index: deck.currentSlide })}
-                className="rounded-lg bg-emerald-600 px-3 py-1 text-sm font-semibold text-white"
-              >Reveal answer</button>
-            )}
+                onClick={() => void control({ action: 'goto', index: deck.currentSlide - 1 })}
+                disabled={deck.currentSlide === 0}
+                className="rounded-lg border border-gray-300 px-3 py-1 text-sm font-semibold text-gray-700 disabled:opacity-40 dark:border-gray-600 dark:text-gray-300"
+              >◀ Back</button>
+              <button
+                onClick={() => void control({ action: 'goto', index: deck.currentSlide + 1 })}
+                disabled={deck.currentSlide >= deck.slideCount - 1}
+                className="rounded-lg bg-indigo-600 px-4 py-1 text-sm font-semibold text-white disabled:opacity-40"
+              >Next ▶</button>
+              <button
+                onClick={toggleAnnotating}
+                className={`rounded-lg px-3 py-1 text-sm font-semibold ${annotating ? 'bg-amber-500 text-white' : 'border border-gray-300 text-gray-700 dark:border-gray-600 dark:text-gray-300'}`}
+                title={annotating ? 'Stop annotating (buttons become clickable again)' : 'Draw on this slide — students see your strokes live'}
+              >
+                {annotating ? '✅ Done' : '✏️ Annotate'}
+              </button>
+              {annotating && <PenToolbar apiRef={annApiRef} tool={penTool} setTool={setPenTool} size={penSize} setSize={setPenSize} />}
+              {slide.kind === 'poll' && !isRevealed && (
+                <button
+                  onClick={() => void control({ action: 'reveal', index: deck.currentSlide })}
+                  className="rounded-lg bg-emerald-600 px-3 py-1 text-sm font-semibold text-white"
+                >Reveal answer</button>
+              )}
+            </>
+          )}
+          {canFullscreen && (
+            <button
+              type="button"
+              onClick={toggleFullscreen}
+              className="rounded-lg border border-gray-300 px-2.5 py-1 text-sm font-semibold text-gray-700 dark:border-gray-600 dark:text-gray-300"
+              title={isFullscreen ? 'Exit full screen' : 'Full screen — the slide as big as this screen allows'}
+              aria-label={isFullscreen ? 'Exit full screen' : 'Full screen'}
+            >{isFullscreen ? '🗗' : '⛶'}</button>
+          )}
+          {youAreTeacher && (
             <button
               onClick={() => { if (confirm('End the presentation for everyone?')) void control({ action: 'end' }) }}
               className="rounded-lg border border-red-300 px-3 py-1 text-sm font-semibold text-red-600 dark:border-red-700 dark:text-red-400"
             >End</button>
-          </div>
-        )}
+          )}
+        </div>
       </div>
 
-      {/* Slide body — relative so annotation layers can sit exactly on top */}
       <SlideMotionStyles />
-      {/* Stable wrapper: the lesson recorder crops to this area (the slide body
+      {/* Stable wrapper: the lesson recorder crops to this area (the stage
           itself remounts on every slide). */}
-      <div data-recording-region="slides" className="isolate rounded-b-2xl bg-white dark:bg-gray-800">
-      <div key={deck.currentSlide} className="relative min-h-[45vh] px-6 py-8 sm:px-10">
-        <AnnotationLayer
-          key={`${deck.id}:${deck.currentSlide}:${youAreTeacher && annotating ? 'draw' : `view-${annHasStrokes ? 1 : 0}`}`}
-          sessionId={sessionId}
-          slideIndex={deck.currentSlide}
-          canDraw={youAreTeacher && annotating}
-          remote={annScene && annScene.key === `${deck.id}:${deck.currentSlide}` ? annScene : null}
-          onApi={onAnnApi}
-          onLocalScene={onLocalScene}
-          tool={penTool}
-          size={penSize}
-        />
+      <div data-recording-region="slides" className={`isolate rounded-b-2xl bg-white dark:bg-gray-800 ${isFullscreen ? 'flex flex-1 flex-col justify-center' : ''}`}>
+      {/* The stage: identical 1280 × 720 layout for everyone, scaled to this
+          screen; the pen canvas sits over the stage box in viewer pixels with
+          its zoom locked to the same scale (slide-stage.ts). */}
+      <SlideStage
+        key={deck.currentSlide}
+        overlay={(k) => (
+          <AnnotationLayer
+            key={`${deck.id}:${deck.currentSlide}:${youAreTeacher && annotating ? 'draw' : `view-${annHasStrokes ? 1 : 0}`}`}
+            sessionId={sessionId}
+            slideIndex={deck.currentSlide}
+            canDraw={youAreTeacher && annotating}
+            remote={annScene && annScene.key === `${deck.id}:${deck.currentSlide}` ? annScene : null}
+            onApi={onAnnApi}
+            onLocalScene={onLocalScene}
+            tool={penTool}
+            size={penSize}
+            scale={k}
+          />
+        )}
+        below={(k) => {
+          // On a phone the stage's own buttons are too small to tap, so the
+          // student gets native-size ones under it (the stage itself must stay
+          // identical to the teacher's — the pen layer is anchored to it).
+          if (!needsAnswerStrip(k)) return null
+          if (slide.kind === 'poll' && !youAreTeacher) {
+            return (
+              <div className="flex flex-wrap items-center gap-2 px-4 py-3" role="group" aria-label="Answer">
+                <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">{isRevealed ? 'Answer revealed' : 'Your answer:'}</span>
+                {slide.options.map((_, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => void answer(i)}
+                    disabled={!canAnswer}
+                    aria-pressed={deck.poll?.myAnswer === i}
+                    className={`inline-flex h-11 min-w-11 items-center justify-center rounded-xl border-2 px-3 text-base font-bold ${
+                      pollStates[i]?.correct
+                        ? 'border-green-500 bg-green-50 text-green-700 dark:bg-green-900/20 dark:text-green-300'
+                        : deck.poll?.myAnswer === i
+                        ? palette.ring
+                        : 'border-gray-200 text-gray-700 dark:border-gray-600 dark:text-gray-200'
+                    } disabled:opacity-60`}
+                  >{String.fromCharCode(65 + i)}</button>
+                ))}
+              </div>
+            )
+          }
+          if (slide.kind === 'quiz') {
+            return (
+              <div className="px-4 py-3">
+                <Link
+                  href={`/topics/${slide.topicSlug}/interactive?exitQuiz=1`}
+                  target="_blank"
+                  className="inline-flex h-11 items-center rounded-xl bg-indigo-600 px-5 text-base font-semibold text-white"
+                >
+                  Open the exit quiz →
+                </Link>
+              </div>
+            )
+          }
+          return null
+        }}
+      >
         {slide.kind === 'title' && (
           <TitleSlideView title={slide.title} subtitle={slide.subtitle} palette={palette} />
         )}
@@ -251,67 +359,18 @@ export default function SlideDeckSection({
         )}
 
         {slide.kind === 'poll' && (
-          <div style={SLIDE_IN}>
-            <p className={`mb-1 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide ${palette.chip}`}>
-              📊 Quick check {isRevealed ? '· answer revealed' : deck.poll?.total != null ? `· ${deck.poll.total}${deck.poll.classSize != null ? ` of ${deck.poll.classSize}` : ''} answered` : deck.poll?.myAnswer != null ? '· your answer is in' : ''}
-            </p>
-            <MathText text={slide.question} className="mb-6 text-xl font-semibold leading-relaxed text-gray-900 sm:text-2xl dark:text-white" />
-            <div className="space-y-2.5">
-              {slide.options.map((opt, i) => {
-                const count = deck.poll?.counts?.[i] ?? 0
-                const total = deck.poll?.total ?? 0
-                const pct = total > 0 ? Math.round((count / total) * 100) : 0
-                const mine = deck.poll?.myAnswer === i
-                const isCorrect = reveal && reveal.correctIndex === i
-                // Tallies: teacher always; students only once revealed (the
-                // server sends none before that).
-                const showBars = (youAreTeacher || isRevealed) && deck.poll?.counts != null
-                return (
-                  <button
-                    key={i}
-                    onClick={() => { if (!youAreTeacher) void answer(i) }}
-                    disabled={youAreTeacher || isRevealed || busy}
-                    className={`relative w-full overflow-hidden rounded-xl border-2 px-4 py-3 text-left transition ${
-                      isCorrect
-                        ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
-                        : mine
-                        ? palette.ring
-                        : 'border-gray-200 hover:border-gray-300 dark:border-gray-600'
-                    } ${youAreTeacher ? 'cursor-default' : ''}`}
-                  >
-                    {showBars && (
-                      <div
-                        className={`absolute inset-y-0 left-0 transition-all duration-500 ${isCorrect ? 'bg-green-200/60 dark:bg-green-800/30' : palette.barFill}`}
-                        style={{ width: `${pct}%` }}
-                      />
-                    )}
-                    <span className="relative flex items-center justify-between gap-3">
-                      <span className="flex items-center gap-2.5 text-sm sm:text-base">
-                        <OptionBadge index={i} active={mine || !!isCorrect} palette={palette} />
-                        <MathText inline text={opt} />
-                        {mine && <span className="text-xs font-semibold text-indigo-600 dark:text-indigo-400">(your answer)</span>}
-                        {isCorrect && <span className="text-xs font-semibold text-green-600 dark:text-green-400">✓ correct</span>}
-                      </span>
-                      {showBars && <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">{count} · {pct}%</span>}
-                    </span>
-                  </button>
-                )
-              })}
-            </div>
-            {!youAreTeacher && deck.poll?.myAnswer === null && !isRevealed && (
-              <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">Tap an answer — you can change it until your teacher reveals.</p>
-            )}
-            {reveal && isRevealed && reveal.explanation && (
-              <div className="mt-4 rounded-xl border border-green-200 bg-green-50 p-4 dark:border-green-800 dark:bg-green-900/20">
-                <MathText text={reveal.explanation} className="text-sm leading-relaxed text-gray-800 dark:text-gray-200" />
-              </div>
-            )}
-            {youAreTeacher && deck.poll?.total != null && deck.poll.classSize != null && (
-              <p className="mt-3 text-xs text-gray-500 dark:text-gray-400">
-                {deck.poll.total} of {deck.poll.classSize} student{deck.poll.classSize === 1 ? '' : 's'} answered
-              </p>
-            )}
-          </div>
+          <PollSlideView
+            question={slide.question}
+            options={slide.options}
+            palette={palette}
+            chipText={pollChip}
+            states={pollStates}
+            showTallies={showTallies}
+            statusText={pollStatus}
+            explanation={reveal && isRevealed && reveal.explanation ? reveal.explanation : null}
+            onPick={youAreTeacher ? undefined : (i) => void answer(i)}
+            disabled={!canAnswer}
+          />
         )}
 
         {slide.kind === 'quiz' && (
@@ -319,13 +378,13 @@ export default function SlideDeckSection({
             <Link
               href={`/topics/${slide.topicSlug}/interactive?exitQuiz=1`}
               target="_blank"
-              className="inline-block rounded-xl bg-white px-8 py-3 font-semibold text-gray-900 shadow-lg transition hover:bg-gray-100"
+              className="inline-block rounded-xl bg-white px-10 py-4 text-[1.25em] font-semibold text-gray-900 shadow-lg transition hover:bg-gray-100"
             >
               Open the exit quiz →
             </Link>
           </QuizSlideView>
         )}
-      </div>
+      </SlideStage>
       </div>
     </div>
   )
@@ -440,6 +499,7 @@ interface ExcalApi {
   updateScene: (scene: { elements?: BoardElement[]; appState?: Record<string, unknown>; captureUpdate?: unknown }) => void
   addFiles: (files: unknown[]) => void
   setActiveTool: (tool: { type: 'freedraw' | 'eraser' | 'laser' | 'selection'; locked?: boolean }) => void
+  getAppState: () => { zoom?: { value?: number }; scrollX?: number; scrollY?: number }
   getSceneElementsIncludingDeleted: () => readonly BoardElement[]
   getFiles: () => Record<string, unknown>
 }
@@ -553,9 +613,14 @@ function PenToolbar({
  *  stored strokes as initial data.
  *
  *  view (students + teacher when not annotating) — the same canvas in view
- *  mode with pointer-events disabled: purely visual, coordinates identical to
- *  the teacher's canvas (same size, same origin), updated as the state poll
- *  delivers new revisions. Renders nothing until the slide has strokes.
+ *  mode with pointer-events disabled: purely visual, updated as the state
+ *  poll delivers new revisions. Renders nothing until the slide has strokes.
+ *
+ *  Both sit over the stage box at VIEWER pixels with zoom = `scale` (the
+ *  stage's k) and scroll 0, so one scene unit is one logical stage pixel and
+ *  strokes are stored in logical units (scene.logical). The view is locked:
+ *  wheel/pinch/pan can't move it (re-asserted on every change and on resize),
+ *  so the teacher's zoom can never differ from a student's — slide-stage.ts.
  */
 function AnnotationLayer({
   sessionId,
@@ -566,11 +631,14 @@ function AnnotationLayer({
   tool = 'red',
   size = 'fine',
   onLocalScene,
+  scale,
 }: {
   sessionId: string
   slideIndex: number
   canDraw: boolean
   remote: { rev: number; scene: BoardScene } | null
+  /** The stage's scale k — the one zoom this canvas may have. */
+  scale: number
   /** Hands the canvas API to the presenter bar's pen tools (null on unmount). */
   onApi?: (api: ExcalApi | null) => void
   /** The presenter's current pen tool; re-asserted if a canvas shortcut switches it. */
@@ -594,10 +662,11 @@ function AnnotationLayer({
   const appliedRevRef = useRef(remote?.rev ?? -1)
   // Captured once at mount (the parent remounts this layer per slide/mode via
   // key) — a useState initializer, not a ref, so render never reads a ref.
-  const [initial] = useState<{ elements: BoardElement[]; files: unknown[] }>(() => ({
-    elements: remote?.scene.elements ?? [],
-    files: Object.values(remote?.scene.files ?? {}),
-  }))
+  // Pre-stage scenes (no `logical` flag) are converted on the way in.
+  const [initial] = useState<{ elements: BoardElement[]; files: unknown[] }>(() => {
+    const scene = remote ? toLogicalScene(remote.scene) : null
+    return { elements: scene?.elements ?? [], files: Object.values(scene?.files ?? {}) }
+  })
   // What the server already has: a draw layer re-mounted on a slide with
   // strokes must not re-post the identical scene on Done (each rev bump makes
   // every viewer re-download the whole scene).
@@ -616,14 +685,36 @@ function AnnotationLayer({
   useEffect(() => {
     remoteRef.current = remote
   }, [remote])
+  const scaleRef = useRef(scale)
+  useEffect(() => {
+    scaleRef.current = scale
+  }, [scale])
   const applyRemote = useCallback((api: ExcalApi) => {
     const r = remoteRef.current
     if (!r || r.rev === appliedRevRef.current) return
     appliedRevRef.current = r.rev
-    api.updateScene({ elements: r.scene.elements, captureUpdate: CaptureUpdateAction.NEVER })
-    const files = Object.values(r.scene.files)
+    const scene = toLogicalScene(r.scene)
+    api.updateScene({ elements: scene.elements, captureUpdate: CaptureUpdateAction.NEVER })
+    const files = Object.values(scene.files)
     if (files.length > 0) api.addFiles(files)
   }, [])
+  // The canvas is a different size on every screen; its view must always be
+  // "the stage, whole": re-map when the stage rescales (window resize, full
+  // screen, phone rotation).
+  useEffect(() => {
+    const api = apiRef.current
+    if (api) lockStageView(api, api.getAppState(), scale, CaptureUpdateAction.NEVER)
+  }, [scale])
+  // Nothing may move the canvas under the slide: ctrl+wheel zoom and wheel
+  // pan are swallowed before Excalidraw sees them (passive: false, capture).
+  const wrapRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const el = wrapRef.current
+    if (!el || !canDraw) return
+    const block = (e: WheelEvent) => { e.preventDefault(); e.stopPropagation() }
+    el.addEventListener('wheel', block, { capture: true, passive: false })
+    return () => el.removeEventListener('wheel', block, { capture: true })
+  }, [canDraw])
 
   // Teacher push loop.
   useEffect(() => {
@@ -673,7 +764,7 @@ function AnnotationLayer({
   if (!canDraw && !hasStrokes) return null
 
   return (
-    <div className={`slide-annotations absolute inset-0 z-20 ${canDraw ? '' : 'pointer-events-none'}`}>
+    <div ref={wrapRef} className={`slide-annotations absolute inset-0 z-20 ${canDraw ? '' : 'pointer-events-none'}`}>
       <Excalidraw
         excalidrawAPI={(api) => {
           const a = api as unknown as ExcalApi
@@ -681,8 +772,13 @@ function AnnotationLayer({
           onApi?.(canDraw ? a : null)
           if (initial.files.length > 0) a.addFiles(initial.files)
           // A revision that landed while the canvas was still initialising:
-          // apply it once init has finished (a macrotask later).
-          if (!canDraw) setTimeout(() => { if (apiRef.current === a) applyRemote(a) }, 0)
+          // apply it once init has finished (a macrotask later) — and make
+          // sure init left the stage view in place.
+          setTimeout(() => {
+            if (apiRef.current !== a) return
+            if (!canDraw) applyRemote(a)
+            lockStageView(a, a.getAppState(), scaleRef.current, CaptureUpdateAction.NEVER)
+          }, 0)
         }}
         initialData={{
           elements: initial.elements as never[],
@@ -690,6 +786,9 @@ function AnnotationLayer({
           // presenter starts with the pen in hand, locked so it stays there.
           appState: {
             viewBackgroundColor: 'transparent',
+            // Scene units = logical stage pixels (zoom k, origin at the stage's corner).
+            // (Excalidraw brands its zoom value; ours is a plain number.)
+            ...(stageView(scale) as unknown as Record<string, never>),
             ...(canDraw
               ? { ...penAppState(tool, size), activeTool: { type: toolType(tool), locked: true, customType: null, lastActiveTool: null } }
               : {}),
@@ -698,14 +797,18 @@ function AnnotationLayer({
         onChange={canDraw ? (elements, appState, files) => {
           // Excalidraw hands over every element (deleted ones included) on
           // each change — this is what the push loop and the unmount flush send.
-          latestSceneRef.current = { elements: [...(elements as unknown as BoardElement[])], files: (files ?? {}) as Record<string, unknown> }
+          latestSceneRef.current = { elements: [...(elements as unknown as BoardElement[])], files: (files ?? {}) as Record<string, unknown>, logical: true }
           onLocalScene?.(latestSceneRef.current)
           // A canvas shortcut (V, 1, Escape…) can swap the tool out from under
           // the presenter bar; put the chosen pen back.
           const active = (appState as { activeTool?: { type?: string } }).activeTool?.type
           const wanted = toolType(toolRef.current)
           if (active && active !== wanted && apiRef.current) applyPen(apiRef.current, toolRef.current, sizeRef.current)
-        } : undefined}
+          // A pinch, a two-finger pan or a keyboard zoom: put the stage view back.
+          if (apiRef.current) lockStageView(apiRef.current, appState as Parameters<typeof lockStageView>[1], scaleRef.current, CaptureUpdateAction.NEVER)
+        } : (_elements, appState) => {
+          if (apiRef.current) lockStageView(apiRef.current, appState as Parameters<typeof lockStageView>[1], scaleRef.current, CaptureUpdateAction.NEVER)
+        }}
         viewModeEnabled={!canDraw}
         zenModeEnabled={canDraw}
         UIOptions={{ canvasActions: { toggleTheme: false, changeViewBackgroundColor: false } }}

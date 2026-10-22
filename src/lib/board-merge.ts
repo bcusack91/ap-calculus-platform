@@ -29,6 +29,12 @@ export interface BoardScene {
   elements: BoardElement[]
   /** Excalidraw BinaryFiles — image data keyed by file id. Merged by union. */
   files: Record<string, unknown>
+  /**
+   * Slide annotations only: strokes are in the slide stage's logical pixels
+   * (src/lib/slide-stage.ts). Absent on whiteboards and on slide scenes saved
+   * before the stage existed (those were viewport pixels).
+   */
+  logical?: boolean
 }
 
 export const EMPTY_SCENE: BoardScene = { elements: [], files: {} }
@@ -41,6 +47,7 @@ export function asScene(raw: unknown): BoardScene {
       ? (obj.elements.filter(e => e && typeof e === 'object' && typeof (e as BoardElement).id === 'string') as BoardElement[])
       : [],
     files: obj.files && typeof obj.files === 'object' ? (obj.files as Record<string, unknown>) : {},
+    ...((obj as { logical?: unknown }).logical === true ? { logical: true } : {}),
   }
 }
 
@@ -66,7 +73,12 @@ export function mergeScenes(base: BoardScene, incoming: BoardScene): BoardScene 
     byId.set(el.id, existing ? newer(existing, el) : el)
   }
   // files are content-addressed by id and immutable once created — union.
-  return { elements: [...byId.values()], files: { ...incoming.files, ...base.files } }
+  // A logical (stage-unit) slide scene stays logical once either side is.
+  return {
+    elements: [...byId.values()],
+    files: { ...incoming.files, ...base.files },
+    ...(base.logical || incoming.logical ? { logical: true } : {}),
+  }
 }
 
 /** Compact fingerprint of a scene's element state — cheap "did anything change". */
