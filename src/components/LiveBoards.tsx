@@ -5,6 +5,8 @@ import { Excalidraw, CaptureUpdateAction, exportToSvg } from '@excalidraw/excali
 import '@excalidraw/excalidraw/index.css'
 import { asScene, mergeScenes, sceneVersion, type BoardScene, type BoardElement } from '@/lib/board-merge'
 import { fitView, sameView, viewFromAppState, type BoardViewRect } from '@/lib/board-view'
+import { SlidersHorizontal } from 'lucide-react'
+import { PEN_SIZES, PEN_SIZE_ORDER, loadPenSize, penSizeAppState, savePenSize, type PenSize } from '@/lib/pen-sizes'
 
 /**
  * Whiteboards for live class sessions (see /live/[id]).
@@ -33,7 +35,7 @@ if (typeof window !== 'undefined') {
 }
 
 /* Structural slice of ExcalidrawImperativeAPI — just what the sync loop uses. */
-interface ExcalAppState { scrollX: number; scrollY: number; zoom: { value: number }; width: number; height: number }
+interface ExcalAppState { scrollX: number; scrollY: number; zoom: { value: number }; width: number; height: number; selectedElementIds?: Record<string, boolean> }
 interface ExcalApi {
   updateScene: (scene: { elements?: BoardElement[]; appState?: Record<string, unknown>; captureUpdate?: unknown }) => void
   getAppState: () => ExcalAppState
@@ -52,6 +54,75 @@ function showView(api: ExcalApi, view: BoardViewRect) {
   const fit = fitView(view, width, height)
   api.updateScene({ appState: { scrollX: fit.scrollX, scrollY: fit.scrollY, zoom: { value: fit.zoom } }, captureUpdate: CaptureUpdateAction.NEVER })
   return true
+}
+
+/* ------------------------------------------------------------------ */
+/*  Pen panel (outside the board)                                      */
+/* ------------------------------------------------------------------ */
+
+const BOARD_COLORS: { label: string; color: string; swatch: string }[] = [
+  { label: 'Black', color: '#1e1e1e', swatch: 'bg-[#1e1e1e]' },
+  { label: 'Red', color: '#e03131', swatch: 'bg-[#e03131]' },
+  { label: 'Blue', color: '#1971c2', swatch: 'bg-[#1971c2]' },
+  { label: 'Green', color: '#2f9e44', swatch: 'bg-[#2f9e44]' },
+]
+
+/**
+ * Colour and pen size for the board, beside it instead of on it: Excalidraw's
+ * own settings panel opened inside the board's left edge and covered the
+ * drawing (owner, 2026-10-22). That panel is hidden unless "More options" is
+ * on (fills, fonts, arrows, editing a shape's style). A choice applies to new
+ * strokes and to whatever is selected.
+ */
+function BoardPenPanel({
+  color,
+  size,
+  showNative,
+  onColor,
+  onSize,
+  onToggleNative,
+}: {
+  color: string
+  size: PenSize
+  showNative: boolean
+  onColor: (c: string) => void
+  onSize: (s: PenSize) => void
+  onToggleNative: () => void
+}) {
+  const btn = (active: boolean) =>
+    `inline-flex h-8 w-8 items-center justify-center rounded-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring ${
+      active ? 'bg-accent text-white' : 'border border-gray-200 text-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700'
+    }`
+  return (
+    <div
+      role="toolbar"
+      aria-label="Pen colour and size"
+      className="flex shrink-0 flex-row flex-wrap items-center gap-1 rounded-xl border border-gray-200 bg-white p-1.5 dark:border-gray-700 dark:bg-gray-800 md:flex-col md:flex-nowrap md:self-start"
+    >
+      {BOARD_COLORS.map(c => (
+        <button key={c.color} type="button" onClick={() => onColor(c.color)} aria-pressed={color === c.color} title={`${c.label} pen`} aria-label={`${c.label} pen`} className={btn(color === c.color)}>
+          <span className={`h-4 w-4 rounded-full ${c.swatch} ring-1 ring-white/60`} aria-hidden />
+        </button>
+      ))}
+      <span className="mx-0.5 h-6 w-px bg-gray-200 dark:bg-gray-600 md:mx-0 md:my-0.5 md:h-px md:w-6" aria-hidden />
+      {PEN_SIZE_ORDER.map(s => (
+        <button key={s} type="button" onClick={() => onSize(s)} aria-pressed={size === s} title={`${PEN_SIZES[s].label} pen`} aria-label={`${PEN_SIZES[s].label} pen`} className={btn(size === s)}>
+          <span className={`${PEN_SIZES[s].dot} rounded-full bg-current`} aria-hidden />
+        </button>
+      ))}
+      <span className="mx-0.5 h-6 w-px bg-gray-200 dark:bg-gray-600 md:mx-0 md:my-0.5 md:h-px md:w-6" aria-hidden />
+      <button
+        type="button"
+        onClick={onToggleNative}
+        aria-pressed={showNative}
+        title={showNative ? 'Hide the full style panel' : 'More options: fill, font, arrows, edit a shape'}
+        aria-label="More options"
+        className={btn(showNative)}
+      >
+        <SlidersHorizontal className="h-4 w-4" aria-hidden />
+      </button>
+    </div>
+  )
 }
 
 /* ------------------------------------------------------------------ */
@@ -78,6 +149,35 @@ function SyncedBoard({
   const appliedViewRevRef = useRef(-1)
   const sentViewRef = useRef<BoardViewRect | null>(null)
   const [teacherView, setTeacherView] = useState<ViewPayload | null>(null)
+  // Pen panel beside the board; Excalidraw's own style panel stays hidden
+  // unless "More options" is on.
+  const [penColor, setPenColor] = useState(BOARD_COLORS[0].color)
+  const [penSize, setPenSize] = useState<PenSize>(loadPenSize)
+  const [showNative, setShowNative] = useState(false)
+  const applyPen = useCallback((color: string, size: PenSize) => {
+    const api = apiRef.current
+    if (!api) return
+    const style = penSizeAppState(size)
+    api.updateScene({ appState: { currentItemStrokeColor: color, ...style } })
+    // Restyle the selection too, as Excalidraw's own panel would.
+    const selected = api.getAppState().selectedElementIds ?? {}
+    if (!Object.keys(selected).some(id => selected[id])) return
+    const elements = api.getSceneElementsIncludingDeleted().map(el => {
+      if (!selected[el.id] || el.isDeleted) return el
+      const e = el as BoardElement & { type?: string; fontSize?: number }
+      return {
+        ...el,
+        strokeColor: color,
+        ...(e.type === 'text' ? { fontSize: style.currentItemFontSize } : { strokeWidth: style.currentItemStrokeWidth }),
+        version: (el.version ?? 0) + 1,
+        versionNonce: Math.floor(Math.random() * 2 ** 31),
+        updated: Date.now(),
+      } as BoardElement
+    })
+    api.updateScene({ elements, captureUpdate: CaptureUpdateAction.IMMEDIATELY })
+  }, [])
+  const chooseColor = (c: string) => { setPenColor(c); applyPen(c, penSize) }
+  const chooseSize = (s: PenSize) => { setPenSize(s); savePenSize(s); applyPen(penColor, s) }
   const localScene = useCallback((): BoardScene => {
     const api = apiRef.current
     if (!api) return { elements: [], files: {} }
@@ -173,9 +273,20 @@ function SyncedBoard({
   }, [sessionId, owner, canDraw, localScene])
 
   return (
+    <div className="flex flex-col gap-2 md:flex-row">
+    {canDraw && (
+      <BoardPenPanel
+        color={penColor}
+        size={penSize}
+        showNative={showNative}
+        onColor={chooseColor}
+        onSize={chooseSize}
+        onToggleNative={() => setShowNative(v => !v)}
+      />
+    )}
     <div
       {...(owner === 'class' ? { 'data-recording-region': 'board' } : {})}
-      className="relative isolate h-[60vh] overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700"
+      className={`relative isolate h-[60vh] min-w-0 flex-1 overflow-hidden rounded-xl border border-gray-200 bg-white dark:border-gray-700 ${canDraw && !showNative ? 'board-style-panel-hidden' : ''}`}
     >
       {!canDraw && (
         <span className="absolute right-3 top-3 z-10 rounded-full bg-gray-900/70 px-3 py-1 text-xs font-medium text-white">
@@ -199,9 +310,11 @@ function SyncedBoard({
       )}
       <Excalidraw
         excalidrawAPI={(api) => { apiRef.current = api as unknown as ExcalApi }}
+        initialData={canDraw ? { appState: { currentItemStrokeColor: penColor, ...penSizeAppState(penSize) } } : undefined}
         viewModeEnabled={!canDraw}
         UIOptions={{ canvasActions: { toggleTheme: false } }}
       />
+    </div>
     </div>
   )
 }

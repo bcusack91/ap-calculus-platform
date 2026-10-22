@@ -6,6 +6,7 @@ import { Excalidraw, CaptureUpdateAction } from '@excalidraw/excalidraw'
 import '@excalidraw/excalidraw/index.css'
 import { MathText } from '@/components/MathText'
 import { asScene, sceneVersion, type BoardScene, type BoardElement, mergeScenes, EMPTY_SCENE } from '@/lib/board-merge'
+import { PEN_SIZES, PEN_SIZE_ORDER, loadPenSize, penSizeAppState, savePenSize, type PenSize } from '@/lib/pen-sizes'
 import { deckPalette, SlideMotionStyles, SLIDE_IN, TitleSlideView, ContentSlideView, QuizSlideView, OptionBadge } from '@/components/SlideVisuals'
 
 declare global {
@@ -74,6 +75,10 @@ export default function SlideDeckSection({
   const annApiRef = useRef<ExcalApi | null>(null)
   const onAnnApi = useCallback((api: ExcalApi | null) => { annApiRef.current = api }, [])
   const [penTool, setPenTool] = useState<PenTool>('red')
+  // Pen thickness, remembered on this device (Fine by default: Medium, the old
+  // fixed width, read as too big on a slide).
+  const [penSize, setPenSizeState] = useState<PenSize>(loadPenSize)
+  const setPenSize = useCallback((s: PenSize) => { setPenSizeState(s); savePenSize(s) }, [])
   // The presenter's canvas as last changed, so Done can show it at once: the
   // view layer otherwise mounts from the last POLLED copy, briefly re-showing
   // a stroke undone or cleared in the final seconds (until the poll catches up).
@@ -205,7 +210,7 @@ export default function SlideDeckSection({
             >
               {annotating ? '✅ Done' : '✏️ Annotate'}
             </button>
-            {annotating && <PenToolbar apiRef={annApiRef} tool={penTool} setTool={setPenTool} />}
+            {annotating && <PenToolbar apiRef={annApiRef} tool={penTool} setTool={setPenTool} size={penSize} setSize={setPenSize} />}
             {slide.kind === 'poll' && !isRevealed && (
               <button
                 onClick={() => void control({ action: 'reveal', index: deck.currentSlide })}
@@ -235,6 +240,7 @@ export default function SlideDeckSection({
           onApi={onAnnApi}
           onLocalScene={onLocalScene}
           tool={penTool}
+          size={penSize}
         />
         {slide.kind === 'title' && (
           <TitleSlideView title={slide.title} subtitle={slide.subtitle} palette={palette} />
@@ -439,11 +445,12 @@ interface ExcalApi {
 }
 
 type PenTool = 'red' | 'blue' | 'black' | 'highlighter' | 'eraser' | 'laser'
-const PENS: Record<Exclude<PenTool, 'eraser' | 'laser'>, { label: string; color: string; width: number; opacity: number; swatch: string }> = {
-  red: { label: 'Red pen', color: '#e03131', width: 2, opacity: 100, swatch: 'bg-[#e03131]' },
-  blue: { label: 'Blue pen', color: '#1971c2', width: 2, opacity: 100, swatch: 'bg-[#1971c2]' },
-  black: { label: 'Black pen', color: '#1e1e1e', width: 2, opacity: 100, swatch: 'bg-[#1e1e1e]' },
-  highlighter: { label: 'Highlighter', color: '#ffd43b', width: 5, opacity: 40, swatch: 'bg-[#ffd43b]' },
+// Stroke width comes from the presenter's pen size (src/lib/pen-sizes.ts).
+const PENS: Record<Exclude<PenTool, 'eraser' | 'laser'>, { label: string; color: string; opacity: number; swatch: string }> = {
+  red: { label: 'Red pen', color: '#e03131', opacity: 100, swatch: 'bg-[#e03131]' },
+  blue: { label: 'Blue pen', color: '#1971c2', opacity: 100, swatch: 'bg-[#1971c2]' },
+  black: { label: 'Black pen', color: '#1e1e1e', opacity: 100, swatch: 'bg-[#1e1e1e]' },
+  highlighter: { label: 'Highlighter', color: '#ffd43b', opacity: 40, swatch: 'bg-[#ffd43b]' },
 }
 
 /** Mark a stroke deleted the way Excalidraw does (a higher version), so every viewer's merge drops it too. */
@@ -454,15 +461,15 @@ function softDelete(el: BoardElement): BoardElement {
 const toolType = (tool: PenTool): 'freedraw' | 'eraser' | 'laser' => (tool === 'eraser' || tool === 'laser' ? tool : 'freedraw')
 
 /** The stroke settings a pen tool needs in Excalidraw's appState. */
-function penAppState(tool: PenTool): Record<string, unknown> {
+export function penAppState(tool: PenTool, size: PenSize): Record<string, unknown> {
   if (tool === 'eraser' || tool === 'laser') return {}
   const pen = PENS[tool]
-  return { currentItemStrokeColor: pen.color, currentItemStrokeWidth: pen.width, currentItemOpacity: pen.opacity }
+  return { currentItemStrokeColor: pen.color, currentItemOpacity: pen.opacity, ...penSizeAppState(size, tool === 'highlighter') }
 }
 
 /** Set the canvas up for drawing: pen in hand, stays in hand after each stroke. */
-function applyPen(api: ExcalApi, tool: PenTool) {
-  const appState = penAppState(tool)
+function applyPen(api: ExcalApi, tool: PenTool, size: PenSize) {
+  const appState = penAppState(tool, size)
   if (Object.keys(appState).length) api.updateScene({ appState })
   api.setActiveTool({ type: toolType(tool), locked: true })
 }
@@ -472,10 +479,27 @@ function applyPen(api: ExcalApi, tool: PenTool) {
  * toolbar is hidden — it covered the slide). Undo and Clear soft-delete
  * strokes so students' copies drop them too.
  */
-function PenToolbar({ apiRef, tool, setTool }: { apiRef: React.MutableRefObject<ExcalApi | null>; tool: PenTool; setTool: (t: PenTool) => void }) {
+function PenToolbar({
+  apiRef,
+  tool,
+  setTool,
+  size,
+  setSize,
+}: {
+  apiRef: React.MutableRefObject<ExcalApi | null>
+  tool: PenTool
+  setTool: (t: PenTool) => void
+  size: PenSize
+  setSize: (s: PenSize) => void
+}) {
   const select = (t: PenTool) => {
     setTool(t)
-    if (apiRef.current) applyPen(apiRef.current, t)
+    if (apiRef.current) applyPen(apiRef.current, t, size)
+  }
+  const pickSize = (s: PenSize) => {
+    setSize(s)
+    // Keep the chosen pen in hand at the new size (the eraser/laser just keep going).
+    if (apiRef.current) applyPen(apiRef.current, tool, s)
   }
   const undo = () => {
     const api = apiRef.current
@@ -502,6 +526,15 @@ function PenToolbar({ apiRef, tool, setTool }: { apiRef: React.MutableRefObject<
           <span className={`h-3.5 w-3.5 rounded-full ${PENS[k].swatch} ${k === 'highlighter' ? 'opacity-70' : ''}`} aria-hidden />
         </button>
       ))}
+      <span className="mx-0.5 h-5 w-px bg-gray-200 dark:bg-gray-600" aria-hidden />
+      <div className="flex items-center gap-0.5" role="group" aria-label="Pen size">
+        {PEN_SIZE_ORDER.map(s => (
+          <button key={s} type="button" onClick={() => pickSize(s)} aria-pressed={size === s} title={`${PEN_SIZES[s].label} pen`} aria-label={`${PEN_SIZES[s].label} pen`} className={btn(size === s)}>
+            <span className={`${PEN_SIZES[s].dot} rounded-full bg-current`} aria-hidden />
+          </button>
+        ))}
+      </div>
+      <span className="mx-0.5 h-5 w-px bg-gray-200 dark:bg-gray-600" aria-hidden />
       <button type="button" onClick={() => select('eraser')} aria-pressed={tool === 'eraser'} title="Eraser" className={btn(tool === 'eraser')}>Eraser</button>
       <button type="button" onClick={() => select('laser')} aria-pressed={tool === 'laser'} title="Laser pointer (fades, not saved)" className={btn(tool === 'laser')}>Laser</button>
       <button type="button" onClick={undo} title="Remove the last stroke" className={btn(false)}>Undo</button>
@@ -531,6 +564,7 @@ function AnnotationLayer({
   remote,
   onApi,
   tool = 'red',
+  size = 'fine',
   onLocalScene,
 }: {
   sessionId: string
@@ -541,6 +575,8 @@ function AnnotationLayer({
   onApi?: (api: ExcalApi | null) => void
   /** The presenter's current pen tool; re-asserted if a canvas shortcut switches it. */
   tool?: PenTool
+  /** The presenter's pen size; re-applied with the tool. */
+  size?: PenSize
   /** Every change of the presenter's scene (draw mode), for the parent's Done handoff. */
   onLocalScene?: (scene: BoardScene) => void
 }) {
@@ -572,6 +608,10 @@ function AnnotationLayer({
   useEffect(() => {
     toolRef.current = tool
   }, [tool])
+  const sizeRef = useRef(size)
+  useEffect(() => {
+    sizeRef.current = size
+  }, [size])
   const remoteRef = useRef(remote)
   useEffect(() => {
     remoteRef.current = remote
@@ -651,7 +691,7 @@ function AnnotationLayer({
           appState: {
             viewBackgroundColor: 'transparent',
             ...(canDraw
-              ? { ...penAppState(tool), activeTool: { type: toolType(tool), locked: true, customType: null, lastActiveTool: null } }
+              ? { ...penAppState(tool, size), activeTool: { type: toolType(tool), locked: true, customType: null, lastActiveTool: null } }
               : {}),
           },
         }}
@@ -664,7 +704,7 @@ function AnnotationLayer({
           // the presenter bar; put the chosen pen back.
           const active = (appState as { activeTool?: { type?: string } }).activeTool?.type
           const wanted = toolType(toolRef.current)
-          if (active && active !== wanted && apiRef.current) applyPen(apiRef.current, toolRef.current)
+          if (active && active !== wanted && apiRef.current) applyPen(apiRef.current, toolRef.current, sizeRef.current)
         } : undefined}
         viewModeEnabled={!canDraw}
         zenModeEnabled={canDraw}

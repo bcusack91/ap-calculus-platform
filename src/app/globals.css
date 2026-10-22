@@ -759,3 +759,10 @@ pre {
 .slide-annotations .excalidraw :is(.layer-ui__wrapper, .App-top-bar, .App-bottom-bar, .mobile-misc-tools-container) {
   display: none !important;
 }
+
+/* Live whiteboard (LiveBoards): Excalidraw's style panel (stroke, width,
+   fill…) opens inside the board's left edge and covers the drawing. The pen
+   panel beside the board replaces it; "More options" brings it back. */
+.board-style-panel-hidden .excalidraw .App-menu__left {
+  display: none !important;
+}
