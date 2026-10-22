@@ -452,10 +452,10 @@ describe('AP Calculus BC: combined bank (AB v2 + BC-only)', () => {
     expect(apDiagV2SeenCategories('ap-calculus-ab')).toEqual(['calcab-diagnostic-v2'])
   })
 
-  it('the review layer re-attaches the BC polar figure, and the flag stays off until the owner flips it', () => {
+  it('the review layer re-attaches the BC polar figure, and BC serves v2 now that the owner switched it on (2026-10-22)', () => {
     const fig = bc.stimuli.find((s) => s.id === 'calcbc-s902')
     expect(isSafeSvg(fig?.svg)).toBe(true)
-    expect(AP_DIAG_V2_LIVE['ap-calculus-bc']).toBe(false)
-    expect(apDiagnosticVersion('ap-calculus-bc', null)).toBe(1)
+    expect(AP_DIAG_V2_LIVE['ap-calculus-bc']).toBe(true)
+    expect(apDiagnosticVersion('ap-calculus-bc', null)).toBe(2)
   })
 })

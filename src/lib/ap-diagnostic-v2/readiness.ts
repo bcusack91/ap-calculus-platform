@@ -21,8 +21,8 @@ export const AP_DIAG_V2_LIVE: Record<ApDiagV2Course, boolean> = {
   'ap-chemistry': false,
   'ap-biology': false,
   'ap-physics-1': false,
-  'ap-calculus-ab': false,
-  'ap-calculus-bc': false,
+  'ap-calculus-ab': true, // owner switched on 2026-10-22
+  'ap-calculus-bc': true, // owner switched on 2026-10-22
 }
 
 export const AP_DIAG_V2_SWITCH_RULES = {
