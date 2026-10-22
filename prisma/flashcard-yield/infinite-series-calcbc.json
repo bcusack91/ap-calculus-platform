@@ -1,0 +1,32 @@
+[
+ {
+  "front": "Does the $p$-series $\\sum \\frac{1}{n^p}$ converge?",
+  "fp": "72e5e5a80016",
+  "yield": "MEDIUM",
+  "why": "p-series; duplicates convergence-tests card"
+ },
+ {
+  "front": "Geometric series formula: $\\sum_{n=0}^{\\infty} ar^n = ?$",
+  "fp": "d34f8368e88f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.2 geometric series sum and condition"
+ },
+ {
+  "front": "If $\\lim_{n \\to \\infty} a_n \\neq 0$, what can you say about $\\sum a_n$?",
+  "fp": "63c319664c43",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.3 nth-term test for divergence"
+ },
+ {
+  "front": "Telescoping series: $\\sum_{n=1}^{\\infty}(b_n - b_{n+1}) = ?$",
+  "fp": "632bdf3084ea",
+  "yield": "MEDIUM",
+  "why": "Telescoping series; borderline, not named in CED"
+ },
+ {
+  "front": "What is the difference between a sequence and a series?",
+  "fp": "b2416576dfe9",
+  "yield": "HIGH",
+  "why": "CED 10.1 series as limit of partial sums"
+ }
+]

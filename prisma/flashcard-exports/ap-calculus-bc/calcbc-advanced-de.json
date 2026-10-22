@@ -1,0 +1,64 @@
+[
+ {
+  "topicSlug": "euler-method-advanced-calcbc",
+  "front": "Euler's method for $\\frac{dy}{dx} = -2y$ with step $h = 0.2$ has reached $y(0.2) \\approx 3$. What is the next approximation, $y(0.4)$?",
+  "back": "**$1.8$**\n\ny(0.4) = 3 + 0.2(−2·3) = 3 − 1.2 = 1.8."
+ },
+ {
+  "topicSlug": "euler-method-advanced-calcbc",
+  "front": "Euler's method gives $y(2) = 3.5$ with $h = 0.5$. To improve accuracy, you should:",
+  "back": "**Use a smaller step size like $h = 0.25$**\n\nSmaller step sizes improve accuracy in Euler's method (at the cost of more computations)."
+ },
+ {
+  "topicSlug": "euler-method-advanced-calcbc",
+  "front": "In Euler's method, if the solution is concave up ($\\frac{d^2y}{dx^2} > 0$) on the interval, the approximation will:",
+  "back": "**Underestimate the true solution**\n\nWhen $\\frac{d^2y}{dx^2} > 0$ the solution curve is concave up, so each tangent-line step lies below the curve and Euler's method underestimates."
+ },
+ {
+  "topicSlug": "euler-method-advanced-calcbc",
+  "front": "The solution to $dy/dx = ky$ is:",
+  "back": "**$y = Ce^{kx}$**\n\ndy/dx = ky is the standard exponential growth/decay DE with solution y = $Ce^{kx}$."
+ },
+ {
+  "topicSlug": "euler-method-advanced-calcbc",
+  "front": "Using Euler's method with step size $h = 0.5$, starting at $(0, 1)$ with $\\dfrac{dy}{dx} = y$, the approximate $y(1)$ is:",
+  "back": "**$2.25$**\n\nStep 1: y(0.5) ≈ 1 + 0.5(1) = 1.5. Step 2: y(1) ≈ 1.5 + 0.5(1.5) = 2.25."
+ },
+ {
+  "topicSlug": "euler-method-advanced-calcbc",
+  "front": "What is Euler's method and what is its update formula?",
+  "back": "A numerical method that approximates the solution of $\\frac{dy}{dx} = f(x,y)$ from an initial point by stepping along tangent lines: $y_{n+1} = y_n + h\\,f(x_n, y_n)$ with $x_{n+1} = x_n + h$, where $h$ is the step size.",
+  "hint": "Each step follows the tangent line: new y = old y + step size times slope."
+ },
+ {
+  "topicSlug": "logistic-models-calcbc",
+  "front": "For $P(t) = \\frac{1000}{1 + 9e^{-0.5t}}$, what is the carrying capacity?",
+  "back": "**$1000$**\n\nAs t → ∞, $e^{-0.5t}$ → 0, so P → 1000/1 = 1000. L = 1000."
+ },
+ {
+  "topicSlug": "logistic-models-calcbc",
+  "front": "For $P(t) = \\frac{500}{1 + 4e^{-0.3t}}$, at what time does $P = 250$?",
+  "back": "**$t = \\frac{\\ln 4}{0.3}$**\n\n250 = $500/(1+4e^{-0.3t})$. $1+4e^{-0.3t}$ = 2. $4e^{-0.3t}$ = 1. $e^{-0.3t}$ = 1/4. −0.3t = −ln 4. t = ln 4/0.3."
+ },
+ {
+  "topicSlug": "logistic-models-calcbc",
+  "front": "If a population follows the logistic model with $L = 500$, $k = 0.1$, and $P(0) = 50$, what does $P$ approach as $t \\to \\infty$?",
+  "back": "**$500$**\n\nIn the logistic model, the population approaches the carrying capacity L = 500 as t → ∞."
+ },
+ {
+  "topicSlug": "logistic-models-calcbc",
+  "front": "The graph of $dP/dt$ vs $P$ for the logistic model is:",
+  "back": "**A downward-opening parabola with roots at $P = 0$ and $P = L$**\n\ndP/dt = kP(1−P/L) = kP − $kP^{2}/L$. This is quadratic in P (parabola opening downward) with roots at 0 and L."
+ },
+ {
+  "topicSlug": "logistic-models-calcbc",
+  "front": "The logistic differential equation is $\\dfrac{dP}{dt} = kP\\!\\left(1 - \\dfrac{P}{L}\\right)$. The carrying capacity is:",
+  "back": "**$L$**\n\nIn the logistic model dP/dt = kP(1 − P/L), L is the carrying capacity — the maximum sustainable population."
+ },
+ {
+  "topicSlug": "logistic-models-calcbc",
+  "front": "What is the logistic differential equation, and what does each constant represent?",
+  "back": "$\\frac{dP}{dt} = kP\\left(1 - \\frac{P}{L}\\right)$, where $k$ is the growth constant and $L$ is the carrying capacity. $P \\to L$ as $t \\to \\infty$ (for $P(0) > 0$), and growth is fastest at $P = \\frac{L}{2}$, the inflection point.",
+  "hint": "The rate is 0 at $P = 0$ and at $P = L$."
+ }
+]

@@ -1,0 +1,26 @@
+[
+ {
+  "front": "A function equals its Taylor series on an interval if:",
+  "fp": "a08e8dc9de14",
+  "yield": "LOW",
+  "why": "OFF-EXAM: remainder-to-zero criterion and C-infinity aside; beyond CED"
+ },
+ {
+  "front": "For $f(x) = \\sin x$, $|f^{(n)}(x)| \\le $",
+  "fp": "d62bf901e742",
+  "yield": "MEDIUM",
+  "why": "Bounding sin derivatives by 1; second example"
+ },
+ {
+  "front": "For $f(x) = e^x$ on $[0, 1]$, $M = \\max |f^{(n+1)}(x)|$ on the interval equals:",
+  "fp": "c32af062bc5b",
+  "yield": "HIGH",
+  "why": "CED 10.12 choosing M for Lagrange bound; FRQ step"
+ },
+ {
+  "front": "State the Lagrange Error Bound.",
+  "fp": "2e9f85e44a55",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.12 Lagrange error bound"
+ }
+]

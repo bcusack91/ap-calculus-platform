@@ -1,0 +1,38 @@
+[
+ {
+  "front": "For $P(t) = \\frac{1000}{1 + 9e^{-0.5t}}$, what is the carrying capacity?",
+  "fp": "4a472a47304c",
+  "yield": "MEDIUM",
+  "why": "Carrying capacity from explicit solution; secondary"
+ },
+ {
+  "front": "For $P(t) = \\frac{500}{1 + 4e^{-0.3t}}$, at what time does $P = 250$?",
+  "fp": "2feb38acb34a",
+  "yield": "MEDIUM",
+  "why": "Solving logistic solution for t; algebra practice item"
+ },
+ {
+  "front": "If a population follows the logistic model with $L = 500$, $k = 0.1$, and $P(0) = 50$, what does $P$ approach as $t \\to \\infty$?",
+  "fp": "67b456c59598",
+  "yield": "MEDIUM",
+  "why": "P approaches L; restates carrying-capacity card"
+ },
+ {
+  "front": "The graph of $dP/dt$ vs $P$ for the logistic model is:",
+  "fp": "775743ee40c6",
+  "yield": "MEDIUM",
+  "why": "dP/dt vs P parabola; conceptual aside"
+ },
+ {
+  "front": "The logistic differential equation is $\\dfrac{dP}{dt} = kP\\!\\left(1 - \\dfrac{P}{L}\\right)$. The carrying capacity is:",
+  "fp": "55f4610ca8e7",
+  "yield": "MEDIUM",
+  "why": "Carrying capacity is L; restatement"
+ },
+ {
+  "front": "What is the logistic differential equation, and what does each constant represent?",
+  "fp": "b681febd4c7e",
+  "yield": "HIGH",
+  "why": "CED 7.9 logistic DE, carrying capacity, fastest at L/2"
+ }
+]

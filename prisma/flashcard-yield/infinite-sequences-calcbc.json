@@ -1,0 +1,38 @@
+[
+ {
+  "front": "$\\lim_{n \\to \\infty} \\dfrac{n + 1}{2n + 3} = $",
+  "fp": "547cd2db1992",
+  "yield": "MEDIUM",
+  "why": "Sequence limit by leading coefficients; practice item"
+ },
+ {
+  "front": "Common sequence limits to memorize?",
+  "fp": "2103b81bfaba",
+  "yield": "MEDIUM",
+  "why": "Common sequence limits; survey card"
+ },
+ {
+  "front": "How do you find the limit of a sequence with rational function?",
+  "fp": "c6d2b79d1622",
+  "yield": "MEDIUM",
+  "why": "Rational sequence limits; AB limits restated"
+ },
+ {
+  "front": "If $\\{a_n\\}$ is a sequence with $a_n = \\dfrac{3n^2 + 1}{n^2 - 2}$, then $\\lim_{n \\to \\infty} a_n = $?",
+  "fp": "0138d2a0af5e",
+  "yield": "MEDIUM",
+  "why": "Sequence limit example; second example"
+ },
+ {
+  "front": "The sequence $a_n = \\left(1 + \\frac{1}{n}\\right)^n$ converges to:",
+  "fp": "e63026b4b507",
+  "yield": "MEDIUM",
+  "why": "(1+1/n)^n -> e; secondary limit fact"
+ },
+ {
+  "front": "When does a sequence $\\{a_n\\}$ converge?",
+  "fp": "46133c21c5de",
+  "yield": "MEDIUM",
+  "why": "Convergent sequence definition; secondary"
+ }
+]

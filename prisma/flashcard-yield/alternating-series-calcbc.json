@@ -1,0 +1,44 @@
+[
+ {
+  "front": "$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n^2}$:",
+  "fp": "ef3e59d2552d",
+  "yield": "MEDIUM",
+  "why": "Absolute convergence example; secondary"
+ },
+ {
+  "front": "Alternating Series Error Bound?",
+  "fp": "bfbb4d17d3bb",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.10 alternating series error bound; FRQ staple"
+ },
+ {
+  "front": "If $\\lim_{n \\to \\infty} a_n \\neq 0$, what can you conclude about $\\sum (-1)^n a_n$?",
+  "fp": "4da80749f6a5",
+  "yield": "MEDIUM",
+  "why": "nth-term test on alternating series; restatement"
+ },
+ {
+  "front": "State the Alternating Series Test.",
+  "fp": "80cf6fe1f93f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.7 alternating series test"
+ },
+ {
+  "front": "The alternating series $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$:",
+  "fp": "43b4b39d66d2",
+  "yield": "HIGH",
+  "why": "CED 10.9 alternating harmonic converges conditionally"
+ },
+ {
+  "front": "The error when approximating $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{n^3}$ with first 4 terms is at most:",
+  "fp": "ee6b0eee887f",
+  "yield": "HIGH",
+  "why": "CED 10.10 AS error bound; worked example"
+ },
+ {
+  "front": "What is absolute vs conditional convergence?",
+  "fp": "907492a86492",
+  "yield": "HIGH",
+  "why": "CED 10.9 absolute vs conditional convergence"
+ }
+]

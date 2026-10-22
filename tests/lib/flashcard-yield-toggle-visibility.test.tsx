@@ -1,7 +1,7 @@
 // @vitest-environment jsdom
 /**
  * The medium/low-yield toggles only show for a student with yield-labeled cards
- * (MCAT and the four flagship AP decks) — for everyone else the toggles change
+ * (MCAT and five AP decks) — for everyone else the toggles change
  * nothing and just raise questions. Also guards the
  * brand rule: no third-party flashcard-app name ("Anki-style pacing") in UI.
  */

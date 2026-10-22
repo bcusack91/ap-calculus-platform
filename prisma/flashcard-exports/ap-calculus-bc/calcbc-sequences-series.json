@@ -1,0 +1,324 @@
+[
+ {
+  "topicSlug": "alternating-series-calcbc",
+  "front": "$\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^n}{n^2}$:",
+  "back": "**Converges absolutely**\n\n$\\sum |a_n| = \\sum \\frac{1}{n^2}$ converges ($p$-series, $p = 2 > 1$), so the series converges absolutely."
+ },
+ {
+  "topicSlug": "alternating-series-calcbc",
+  "front": "Alternating Series Error Bound?",
+  "back": "The error $|S - S_N| \\le b_{N+1}$ (the first omitted term).",
+  "hint": "Error is bounded by the next term."
+ },
+ {
+  "topicSlug": "alternating-series-calcbc",
+  "front": "If $\\lim_{n \\to \\infty} a_n \\neq 0$, what can you conclude about $\\sum (-1)^n a_n$?",
+  "back": "It diverges by the $n$th-term test: since $a_n \\not\\to 0$, the terms $(-1)^n a_n$ do not approach 0, so the series cannot converge. The AST does not apply here — it requires $\\lim a_n = 0$ (plus $a_n > 0$ and eventually decreasing). Always run the $n$th-term test first.",
+  "hint": "Check all 3 conditions, drop (-1)^n for absolute test"
+ },
+ {
+  "topicSlug": "alternating-series-calcbc",
+  "front": "State the Alternating Series Test.",
+  "back": "$\\sum (-1)^n b_n$ converges if $b_n > 0$, $b_{n+1} \\le b_n$ for all sufficiently large $n$, and $\\lim_{n\\to\\infty} b_n = 0$.",
+  "hint": "Terms must decrease and approach zero."
+ },
+ {
+  "topicSlug": "alternating-series-calcbc",
+  "front": "The alternating series $\\displaystyle\\sum_{n=1}^{\\infty} \\frac{(-1)^{n+1}}{n}$:",
+  "back": "**Converges conditionally**\n\n$\\Sigma (-1)^{n+1}/n$ is the alternating harmonic series. It converges by the Alternating Series Test, but Σ1/n diverges, so it converges conditionally."
+ },
+ {
+  "topicSlug": "alternating-series-calcbc",
+  "front": "The error when approximating $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}}{n^3}$ with first 4 terms is at most:",
+  "back": "**$\\frac{1}{125}$**\n\nBy the AST estimation theorem, error ≤ |$a_{5}$| = $1/5^{3}$ = 1/125."
+ },
+ {
+  "topicSlug": "alternating-series-calcbc",
+  "front": "What is absolute vs conditional convergence?",
+  "back": "Absolutely convergent: Both $\\sum a_n$ and $\\sum |a_n|$ converge (strongest). Conditionally convergent: $\\sum a_n$ converges but $\\sum |a_n|$ diverges (weaker). Absolute → convergent (but not reverse). Example: $\\sum\\frac{(-1)^n}{n}$ is conditional, $\\sum\\frac{(-1)^n}{n^2}$ is absolute.",
+  "hint": "Absolute: both converge, Conditional: only with signs"
+ },
+ {
+  "topicSlug": "convergence-tests-summary-calcbc",
+  "front": "Common mistakes with Integral Test?",
+  "back": "1) Using when not decreasing (must verify!). 2) Thinking sum equals integral (only convergence is same). 3) Forgetting to use p-series test for $\\frac{1}{n^p}$ (easier!). 4) Wrong integral limits (must match series start). 5) Not checking all three conditions (continuous, positive, decreasing).",
+  "hint": "Must be decreasing, values not equal, use p-series when possible"
+ },
+ {
+  "topicSlug": "convergence-tests-summary-calcbc",
+  "front": "Common mistakes with the Ratio Test?",
+  "back": "1) Wrong direction: use $\\frac{a_{n+1}}{a_n}$, not $\\frac{a_n}{a_{n+1}}$. 2) Factorial errors: $(n+1)! = (n+1)\\,n!$. 3) When $L = 1$ the test is inconclusive, NOT divergent. 4) $L < 1$ means the series converges absolutely; $L > 1$ means it diverges. 5) Useful limits: $(1+\\frac{1}{n})^n \\to e$ and $\\frac{n^k}{a^n} \\to 0$ for $a > 1$.",
+  "hint": "Right direction, L=1 inconclusive, factorial careful"
+ },
+ {
+  "topicSlug": "convergence-tests-summary-calcbc",
+  "front": "How do you choose a comparison series?",
+  "back": "Find dominant terms (highest powers). For $\\frac{n^a + ...}{n^b + ...}$, behaves like $\\frac{n^a}{n^b} = \\frac{1}{n^{b-a}}$ (compare to p-series with $p=b-a$). For exponentials: use geometric series. Ignore lower powers and constants for large $n$!",
+  "hint": "Dominant terms: highest powers only"
+ },
+ {
+  "topicSlug": "convergence-tests-summary-calcbc",
+  "front": "How do you simplify factorial ratios?",
+  "back": "$(n+1)! = (n+1)\\cdot n!$, so $\\frac{(n+1)!}{n!} = n+1$ and $\\frac{n!}{(n+1)!} = \\frac{1}{n+1}$. Expand the larger factorial down to the smaller one the same way: $(2n+2)! = (2n+2)(2n+1)(2n)!$. Careful: $(n+1)! \\neq n! + 1$.",
+  "hint": "(n+1)! = (n+1)·n!, simplify by canceling"
+ },
+ {
+  "topicSlug": "convergence-tests-summary-calcbc",
+  "front": "State the Direct Comparison Test.",
+  "back": "If $0 \\le a_n \\le b_n$: (1) $\\sum b_n$ converges $\\Rightarrow \\sum a_n$ converges. (2) $\\sum a_n$ diverges $\\Rightarrow \\sum b_n$ diverges.",
+  "hint": "Smaller than convergent = convergent."
+ },
+ {
+  "topicSlug": "convergence-tests-summary-calcbc",
+  "front": "State the Integral Test.",
+  "back": "If $f$ is positive, continuous, and decreasing for $x \\ge N$, and $a_n = f(n)$, then $\\sum a_n$ and $\\int_N^{\\infty} f(x)\\,dx$ both converge or both diverge.",
+  "hint": "Compare a series to an improper integral."
+ },
+ {
+  "topicSlug": "convergence-tests-summary-calcbc",
+  "front": "State the Limit Comparison Test.",
+  "back": "If $a_n > 0$ and $b_n > 0$ and $\\lim_{n\\to\\infty} \\frac{a_n}{b_n} = c$ where $0 < c < \\infty$, then $\\sum a_n$ and $\\sum b_n$ both converge or both diverge.",
+  "hint": "If the ratio is finite and positive, they behave the same."
+ },
+ {
+  "topicSlug": "convergence-tests-summary-calcbc",
+  "front": "State the Ratio Test.",
+  "back": "If $L = \\lim_{n\\to\\infty} \\left|\\frac{a_{n+1}}{a_n}\\right|$, then: $L < 1 \\Rightarrow$ converges, $L > 1 \\Rightarrow$ diverges, $L = 1 \\Rightarrow$ inconclusive.",
+  "hint": "Great for factorials and exponentials."
+ },
+ {
+  "topicSlug": "convergence-tests-summary-calcbc",
+  "front": "What is the p-series test?",
+  "back": "$\\sum_{n=1}^{\\infty} \\frac{1}{n^p}$ converges if $p > 1$ and diverges if $p \\leq 1$. Examples: $\\sum\\frac{1}{n^2}$ converges, $\\sum\\frac{1}{n}$ diverges, $\\sum\\frac{1}{\\sqrt{n}}$ diverges. It follows from the Integral Test applied to $\\int_1^{\\infty} x^{-p}\\,dx$.",
+  "hint": "p > 1 converges, p ≤ 1 diverges"
+ },
+ {
+  "topicSlug": "convergence-tests-summary-calcbc",
+  "front": "When should you use DCT vs LCT?",
+  "back": "Use DCT when inequality is obvious/easy to prove. Use LCT when inequality is hard or expressions are complicated (MUCH EASIER usually!). LCT is preferred by most students. The DCT needs $a_n, b_n \\geq 0$; the LCT needs $a_n, b_n > 0$. Always try nth term test ($\\lim a_n \\neq 0$) first!",
+  "hint": "LCT usually easier, no inequality needed"
+ },
+ {
+  "topicSlug": "infinite-sequences-calcbc",
+  "front": "$\\lim_{n \\to \\infty} \\dfrac{n + 1}{2n + 3} = $",
+  "back": "**$1/2$**\n\nSame degree → ratio of leading coeffs."
+ },
+ {
+  "topicSlug": "infinite-sequences-calcbc",
+  "front": "Common sequence limits to memorize?",
+  "back": "$\\frac{1}{n^p} \\to 0$ for $p > 0$; $r^n \\to 0$ for $|r| < 1$ (and $r^n$ diverges for $|r| > 1$, oscillating without a limit when $r < -1$); $\\frac{\\ln n}{n} \\to 0$; $\\left(1 + \\frac{1}{n}\\right)^n \\to e$; $\\frac{n^k}{e^n} \\to 0$ because exponentials beat polynomials.",
+  "hint": "1/n^p → 0, exponentials dominate"
+ },
+ {
+  "topicSlug": "infinite-sequences-calcbc",
+  "front": "How do you find the limit of a sequence with rational function?",
+  "back": "Divide numerator and denominator by highest power of $n$. Example: $\\lim \\frac{2n^2+3}{5n^2-1} = \\lim \\frac{2+3/n^2}{5-1/n^2} = \\frac{2}{5}$. Can also use L'Hôpital's Rule treating $n$ as continuous $x$.",
+  "hint": "Divide by highest power of n"
+ },
+ {
+  "topicSlug": "infinite-sequences-calcbc",
+  "front": "If $\\{a_n\\}$ is a sequence with $a_n = \\dfrac{3n^2 + 1}{n^2 - 2}$, then $\\lim_{n \\to \\infty} a_n = $?",
+  "back": "**$3$**\n\nDivide by $n^{2}$: $(3 + 1/n^{2})/(1 - 2/n^{2})$ → 3/1 = 3 as n → ∞."
+ },
+ {
+  "topicSlug": "infinite-sequences-calcbc",
+  "front": "The sequence $a_n = \\left(1 + \\frac{1}{n}\\right)^n$ converges to:",
+  "back": "**$e$**\n\nThis is the classic definition of e: $lim(1+1/n)^{n}$ = e ≈ 2.71828."
+ },
+ {
+  "topicSlug": "infinite-sequences-calcbc",
+  "front": "When does a sequence $\\{a_n\\}$ converge?",
+  "back": "When $\\lim_{n \\to \\infty} a_n = L$ for some finite $L$.",
+  "hint": "The terms approach a single value."
+ },
+ {
+  "topicSlug": "infinite-series-calcbc",
+  "front": "Does the $p$-series $\\sum \\frac{1}{n^p}$ converge?",
+  "back": "Converges if $p > 1$, diverges if $p \\le 1$.",
+  "hint": "The harmonic series ($p=1$) diverges."
+ },
+ {
+  "topicSlug": "infinite-series-calcbc",
+  "front": "Geometric series formula: $\\sum_{n=0}^{\\infty} ar^n = ?$",
+  "back": "$\\frac{a}{1-r}$, converges when $|r| < 1$.",
+  "hint": "First term over (1 minus ratio)."
+ },
+ {
+  "topicSlug": "infinite-series-calcbc",
+  "front": "If $\\lim_{n \\to \\infty} a_n \\neq 0$, what can you say about $\\sum a_n$?",
+  "back": "The series $\\sum a_n$ diverges by the $n$th-Term Test. The converse is false: $a_n \\to 0$ does NOT guarantee convergence (e.g. $\\sum \\frac{1}{n}$ diverges).",
+  "hint": "Terms must go to zero for any chance of convergence."
+ },
+ {
+  "topicSlug": "infinite-series-calcbc",
+  "front": "Telescoping series: $\\sum_{n=1}^{\\infty}(b_n - b_{n+1}) = ?$",
+  "back": "$b_1 - \\lim_{n\\to\\infty} b_n$ (if the limit exists).",
+  "hint": "Most terms cancel in partial sums."
+ },
+ {
+  "topicSlug": "infinite-series-calcbc",
+  "front": "What is the difference between a sequence and a series?",
+  "back": "A sequence $\\{a_n\\}$ is a list: $a_1, a_2, a_3, \\ldots$ A series $\\sum a_n$ is the SUM: $a_1 + a_2 + a_3 + \\cdots$. Series converges if sequence of partial sums $S_n = a_1 + \\cdots + a_n$ approaches a limit.",
+  "hint": "Sequence: list, Series: sum"
+ },
+ {
+  "topicSlug": "lagrange-error-bound-calcbc",
+  "front": "A function equals its Taylor series on an interval if:",
+  "back": "**The remainder $R_n(x) \\to 0$ as $n \\to \\infty$**\n\nA function equals its Taylor series when the remainder $R_{n}(x)$ → 0. Some $C^{\\infty}$ functions have Taylor series that converge to a different function."
+ },
+ {
+  "topicSlug": "lagrange-error-bound-calcbc",
+  "front": "For $f(x) = \\sin x$, $|f^{(n)}(x)| \\le $",
+  "back": "**$1$ (always)**\n\nAll derivatives of $\\sin x$ are $\\pm \\sin x$ or $\\pm \\cos x$, bounded by $1$."
+ },
+ {
+  "topicSlug": "lagrange-error-bound-calcbc",
+  "front": "For $f(x) = e^x$ on $[0, 1]$, $M = \\max |f^{(n+1)}(x)|$ on the interval equals:",
+  "back": "**$e$**\n\n$f^{(k)}(x) = e^x$ is increasing; max on $[0,1]$ is $e^1 = e$."
+ },
+ {
+  "topicSlug": "lagrange-error-bound-calcbc",
+  "front": "State the Lagrange Error Bound.",
+  "back": "$|R_n(x)| \\le \\frac{M|x-a|^{n+1}}{(n+1)!}$, where $M = \\max|f^{(n+1)}(c)|$ for $c$ between $a$ and $x$.",
+  "hint": "Bounds the remainder of a Taylor polynomial."
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "Can you differentiate and integrate power series term by term?",
+  "back": "Yes. On the open interval of convergence, $\\frac{d}{dx}\\sum c_n x^n = \\sum n c_n x^{n-1}$ and $\\int \\sum c_n x^n\\,dx = \\sum \\frac{c_n x^{n+1}}{n+1} + C$. The radius of convergence stays the same, but convergence at the endpoints can change, so recheck each endpoint.",
+  "hint": "Radius of convergence stays the same."
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "Common mistakes with interval of convergence?",
+  "back": "1) Forgetting to test endpoints (MUST check both!). 2) Wrong endpoint values (use $a \\pm R$ not $\\pm R$ when $a \\neq 0$). 3) Testing wrong series (substitute actual value, not variable). 4) Assuming symmetry (each endpoint independent). Always test both endpoints!",
+  "hint": "Test both endpoints, use a±R, substitute values"
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "From the geometric series, $\\displaystyle\\sum_{n=0}^{\\infty}(-1)^n x^{2n} =$",
+  "back": "**$\\frac{1}{1+x^2}$**\n\n$1/(1+x^{2})$ = $1/(1-(-x^{2}))$ = $\\Sigma (-x^{2})^{n}$ = $\\Sigma (-1)^{n}x^{2n}$ for |x| < 1."
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "How do you find interval of convergence?",
+  "back": "1) Find radius $R$ using Ratio Test. 2) Get interval $(a-R, a+R)$ where $a$ is center. 3) Test BOTH endpoints $x = a \\pm R$ separately (substitute and use AST, p-series, comparison, etc.). 4) Write final interval with correct brackets: $()$ if diverges, $[]$ if converges.",
+  "hint": "Find R, then test both endpoints separately"
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "If $f(x) = \\sum_{n=0}^{\\infty}a_n x^n$, then $\\int_0^x f(t)\\,dt =$",
+  "back": "**$\\displaystyle\\sum_{n=0}^{\\infty}\\frac{a_n x^{n+1}}{n+1}$**\n\nIntegrate term by term: $\\int_{0}^{x}$ $\\Sigma a_{n}t^{n}$ dt = $\\Sigma a_{n}\\cdot x^{n+1}/(n+1)$."
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "The interval of convergence for $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}(x-3)^n}{n\\cdot 2^n}$ has center:",
+  "back": "**$3$**\n\nThe series is in powers of (x−3), so it is centered at c = 3."
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "The Maclaurin series for $\\frac{x}{1+x}$ is:",
+  "back": "**$\\displaystyle\\sum_{n=0}^{\\infty}(-1)^n x^{n+1}$, $|x| < 1$**\n\n1/(1+x) = $\\Sigma (-1)^{n}x^{n}$. Multiply by x: x/(1+x) = $\\Sigma (-1)^{n}x^{n+1}$ for |x| < 1."
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "What are key power series to memorize?",
+  "back": "Geometric: $\\frac{1}{1-x} = \\sum x^n$ ($|x|<1$). Exponential: $e^x = \\sum \\frac{x^n}{n!}$ (all $x$). Natural log: $\\ln(1+x) = \\sum \\frac{(-1)^{n-1}x^n}{n}$ ($-1 < x \\le 1$). Can substitute to get new series: replace $x$ with $-x$, $x^2$, etc.",
+  "hint": "1/(1-x), e^x, ln(1+x) - use substitution"
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "What are the three cases for radius of convergence?",
+  "back": "$R = 0$: converges only at center $x=a$. $0 < R < \\infty$: converges for $|x-a| < R$, diverges for $|x-a| > R$, check endpoints. $R = \\infty$: converges for all $x$. Find $R$ using: $R = \\frac{1}{\\lim|\\frac{c_{n+1}}{c_n}|}$ (if limit is 0, $R=\\infty$; if $\\infty$, $R=0$).",
+  "hint": "R=0 (center only), 0<R<∞ (interval), R=∞ (all x)"
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "What is a power series and what is its general form?",
+  "back": "Power series: $\\sum_{n=0}^{\\infty} c_n(x-a)^n$ where $c_n$ are coefficients, $x$ is variable, $a$ is center. Like infinite polynomial! When $a=0$: Maclaurin series. Example: $\\sum x^n = \\frac{1}{1-x}$ for $|x|<1$. Converges in interval around center.",
+  "hint": "Infinite polynomial centered at a"
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "What is the radius of convergence $R$?",
+  "back": "The value such that $\\sum c_n(x-a)^n$ converges for $|x-a| < R$ and diverges for $|x-a| > R$. Found via Ratio Test.",
+  "hint": "Distance from center where convergence holds."
+ },
+ {
+  "topicSlug": "power-series-calcbc",
+  "front": "What series appear commonly at endpoints?",
+  "back": "At $x = \\pm 1$ (when $R=1, a=0$): Often get $\\sum\\frac{1}{n}$ (harmonic, diverges), $\\sum\\frac{(-1)^n}{n}$ (alt. harmonic, converges), $\\sum\\frac{1}{n^2}$ (p-series, converges). Use AST for alternating, p-series test for positive, comparison when complicated.",
+  "hint": "Harmonic, alternating harmonic, p-series common"
+ },
+ {
+  "topicSlug": "series-applications-calcbc",
+  "front": "How are series used to approximate integrals?",
+  "back": "Replace a non-elementary integrand (like $e^{-x^{2}}$) with its series and integrate term by term."
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "Common Taylor series mistakes to avoid?",
+  "back": "1) Wrong general term for odd/even powers ($\\sin x$ needs $(2n+1)!$ not $n!$). 2) Wrong starting index (check first nonzero term). 3) Forgetting center: use $(x-a)^n$ not $x^n$ when $a\\neq 0$. 4) Computing all derivatives instead of substitution. 5) Wrong signs in alternating series.",
+  "hint": "Check factorials, index, center, use substitution"
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "How do you build new series from known ones?",
+  "back": "Substitution: replace $x$ with $f(x)$ (e.g., $e^{-x^2}$ from $e^x$). Multiply by $x^k$: shift all powers. Differentiate/integrate term by term (same radius $R$). Add/subtract series. Multiply series (tedious, usually first few terms only). Way faster than computing all derivatives!",
+  "hint": "Substitute, multiply, differentiate, integrate"
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "How do you use series to evaluate limits?",
+  "back": "Expand both numerator and denominator using series. Simplify (many terms cancel). Divide by lowest power. Take limit. Example: $\\lim\\frac{e^x-1-x}{x^2} = \\lim\\frac{\\frac{x^2}{2}+\\frac{x^3}{6}+\\cdots}{x^2} = \\frac{1}{2}$. No L'Hôpital's needed!",
+  "hint": "Expand, simplify, divide, take limit"
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "Key series applications for BC Calculus?",
+  "back": "1) Approximating functions (use first few terms). 2) Evaluating limits (expand num/denom). 3) Finding derivatives at 0 (coefficient of $x^n$ is $\\frac{f^{(n)}(0)}{n!}$). 4) Integrating non-elementary functions ($\\int e^{-x^2}$). 5) Representing functions as series (substitution, differentiation, integration).",
+  "hint": "Approximate, limits, derivatives, integrals, representations"
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "Maclaurin series for $\\cos x$?",
+  "back": "$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!} = 1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\cdots$",
+  "hint": "Even powers only, alternating signs."
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "Maclaurin series for $\\frac{1}{1-x}$?",
+  "back": "$\\sum_{n=0}^{\\infty} x^n = 1 + x + x^2 + x^3 + \\cdots$, for $|x| < 1$.",
+  "hint": "This is the geometric series."
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "Maclaurin series for $\\sin x$?",
+  "back": "$\\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!} = x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\cdots$",
+  "hint": "Odd powers only, alternating signs."
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "Maclaurin series for $e^x$?",
+  "back": "$\\sum_{n=0}^{\\infty} \\frac{x^n}{n!} = 1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\cdots$",
+  "hint": "All derivatives of $e^x$ are $e^x$, which equals 1 at $x=0$."
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "Taylor series formula for $f(x)$ centered at $a$?",
+  "back": "$\\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!}(x-a)^n$",
+  "hint": "Each term uses the nth derivative at a."
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "Use a known Maclaurin series to write the series for $e^{-x^2}$.",
+  "back": "Substitute $-x^2$ into $e^x = \\sum \\frac{x^n}{n!}$, substituting the entire expression so $(-x^2)^n = (-1)^n x^{2n}$: $e^{-x^2} = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{n!} = 1 - x^2 + \\frac{x^4}{2!} - \\cdots$, valid for all $x$.",
+  "hint": "Replace every $x$ in the $e^x$ series with $-x^2$."
+ },
+ {
+  "topicSlug": "taylor-maclaurin-series-calcbc",
+  "front": "What are the Big 5 Maclaurin series with intervals?",
+  "back": "$e^x = \\sum\\frac{x^n}{n!}$ (all $x$). $\\sin x = \\sum\\frac{(-1)^n x^{2n+1}}{(2n+1)!}$ (all $x$). $\\cos x = \\sum\\frac{(-1)^n x^{2n}}{(2n)!}$ (all $x$). $\\frac{1}{1-x} = \\sum x^n$ ($|x|<1$). $\\ln(1+x) = \\sum\\frac{(-1)^{n-1}x^n}{n}$ ($-1<x\\leq 1$). First three converge everywhere!",
+  "hint": "e^x, sin, cos (all x); geometric, ln (|x|<1)"
+ }
+]

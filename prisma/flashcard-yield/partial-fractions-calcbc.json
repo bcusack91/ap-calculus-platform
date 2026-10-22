@@ -1,0 +1,32 @@
+[
+ {
+  "front": "$\\displaystyle\\int \\frac{1}{x^2 - 1}\\,dx$ can be evaluated using:",
+  "fp": "946e6a470374",
+  "yield": "HIGH",
+  "why": "CED 6.12 recognize partial fractions"
+ },
+ {
+  "front": "$\\displaystyle\\int \\frac{1}{x^2-9}\\,dx =$",
+  "fp": "d01a9d86903a",
+  "yield": "MEDIUM",
+  "why": "Partial fractions 1/(x^2-9); second example"
+ },
+ {
+  "front": "$\\displaystyle\\int \\frac{5x + 3}{(x+1)(x+2)}\\,dx$ — after partial-fraction decomposition $\\frac{5x+3}{(x+1)(x+2)} = \\frac{A}{x+1}+\\frac{B}{x+2}$, find $A$:",
+  "fp": "74a249d6cbc9",
+  "yield": "MEDIUM",
+  "why": "Partial-fraction constant A; practice item"
+ },
+ {
+  "front": "$\\displaystyle\\int \\frac{x}{(x-1)(x+3)}\\,dx$ — using partial fractions, $\\frac{x}{(x-1)(x+3)} = \\frac{A}{x-1}+\\frac{B}{x+3}$. Find $B$:",
+  "fp": "f8fd54b2c7f2",
+  "yield": "MEDIUM",
+  "why": "Partial-fraction constant B; practice item"
+ },
+ {
+  "front": "Partial fractions: how do you decompose $\\frac{1}{(x-a)(x-b)}$?",
+  "fp": "517d50c60dcf",
+  "yield": "HIGH",
+  "why": "CED 6.12 linear partial-fraction decomposition"
+ }
+]

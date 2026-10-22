@@ -1,0 +1,68 @@
+[
+ {
+  "front": "Common Taylor series mistakes to avoid?",
+  "fp": "0d21d601aa63",
+  "yield": "MEDIUM",
+  "why": "Taylor series mistakes; study tip"
+ },
+ {
+  "front": "How do you build new series from known ones?",
+  "fp": "031ac2644730",
+  "yield": "HIGH",
+  "why": "CED 10.15 build series by substitution and calculus"
+ },
+ {
+  "front": "How do you use series to evaluate limits?",
+  "fp": "44ed4760caf3",
+  "yield": "MEDIUM",
+  "why": "Limits via series; secondary application"
+ },
+ {
+  "front": "Key series applications for BC Calculus?",
+  "fp": "24ad778499e5",
+  "yield": "MEDIUM",
+  "why": "Series applications; survey card"
+ },
+ {
+  "front": "Maclaurin series for $\\cos x$?",
+  "fp": "c54f798450fa",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.14 Maclaurin series for cos x; memorized"
+ },
+ {
+  "front": "Maclaurin series for $\\frac{1}{1-x}$?",
+  "fp": "a116cd9ed89d",
+  "yield": "HIGH",
+  "why": "CED 10.15 geometric series as Maclaurin series"
+ },
+ {
+  "front": "Maclaurin series for $\\sin x$?",
+  "fp": "66ed56e466d1",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.14 Maclaurin series for sin x; memorized"
+ },
+ {
+  "front": "Maclaurin series for $e^x$?",
+  "fp": "b346c0093844",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.14 Maclaurin series for e^x; memorized"
+ },
+ {
+  "front": "Taylor series formula for $f(x)$ centered at $a$?",
+  "fp": "73e3cfe7955f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.11 / 10.14 Taylor coefficient formula"
+ },
+ {
+  "front": "Use a known Maclaurin series to write the series for $e^{-x^2}$.",
+  "fp": "43696fb3cc45",
+  "yield": "HIGH",
+  "why": "CED 10.15 e^{-x^2} by substitution"
+ },
+ {
+  "front": "What are the Big 5 Maclaurin series with intervals?",
+  "fp": "e3150c890760",
+  "yield": "HIGH",
+  "why": "CED 10.14 core Maclaurin series with intervals"
+ }
+]

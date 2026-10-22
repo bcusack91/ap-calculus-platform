@@ -1,0 +1,38 @@
+[
+ {
+  "front": "$\\displaystyle\\int_0^{\\infty} e^{-2x}\\,dx =$",
+  "fp": "f0e1e0ffb227",
+  "yield": "MEDIUM",
+  "why": "Improper integral of e^{-2x}; second example"
+ },
+ {
+  "front": "$\\displaystyle\\int_0^{\\infty}\\frac{dx}{(1+x)^2} =$",
+  "fp": "7e8e671afc82",
+  "yield": "MEDIUM",
+  "why": "Improper integral 1/(1+x)^2; second example"
+ },
+ {
+  "front": "Does $\\displaystyle\\int_1^{\\infty} \\frac{1}{x^2}\\,dx$ converge or diverge? If it converges, what is its value?",
+  "fp": "02aca4a55fb2",
+  "yield": "HIGH",
+  "why": "CED 6.13 convergent improper integral; worked example"
+ },
+ {
+  "front": "Does $\\displaystyle\\int_2^{\\infty}\\frac{1}{x\\ln x}\\,dx$ converge or diverge?",
+  "fp": "4b6874b49700",
+  "yield": "MEDIUM",
+  "why": "Divergent improper integral 1/(x ln x); secondary example"
+ },
+ {
+  "front": "The integral $\\displaystyle\\int_{-\\infty}^{\\infty} \\frac{dx}{1+x^2}$ equals:",
+  "fp": "825aeb5bb71c",
+  "yield": "MEDIUM",
+  "why": "Doubly infinite improper integral; secondary example"
+ },
+ {
+  "front": "What makes an integral improper, and how do you evaluate one?",
+  "fp": "817b74608570",
+  "yield": "HIGH",
+  "why": "CED 6.13 improper integrals as limits"
+ }
+]

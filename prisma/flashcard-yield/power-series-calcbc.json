@@ -1,0 +1,74 @@
+[
+ {
+  "front": "Can you differentiate and integrate power series term by term?",
+  "fp": "dfc407005b1f",
+  "yield": "HIGH",
+  "why": "CED 10.14 term-by-term differentiation and integration"
+ },
+ {
+  "front": "Common mistakes with interval of convergence?",
+  "fp": "db1d9d812690",
+  "yield": "MEDIUM",
+  "why": "Interval-of-convergence mistakes; study tip"
+ },
+ {
+  "front": "From the geometric series, $\\displaystyle\\sum_{n=0}^{\\infty}(-1)^n x^{2n} =$",
+  "fp": "b9cd302f20ba",
+  "yield": "HIGH",
+  "why": "CED 10.15 series from geometric by substitution"
+ },
+ {
+  "front": "How do you find interval of convergence?",
+  "fp": "835701ea7848",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.13 interval of convergence with endpoints; FRQ staple"
+ },
+ {
+  "front": "If $f(x) = \\sum_{n=0}^{\\infty}a_n x^n$, then $\\int_0^x f(t)\\,dt =$",
+  "fp": "a1ccc731576e",
+  "yield": "MEDIUM",
+  "why": "Integrating a power series; restatement"
+ },
+ {
+  "front": "The interval of convergence for $\\displaystyle\\sum_{n=1}^{\\infty}\\frac{(-1)^{n+1}(x-3)^n}{n\\cdot 2^n}$ has center:",
+  "fp": "05bb1ff6cf2f",
+  "yield": "MEDIUM",
+  "why": "Center of a power series; practice item"
+ },
+ {
+  "front": "The Maclaurin series for $\\frac{x}{1+x}$ is:",
+  "fp": "894e8d24e757",
+  "yield": "MEDIUM",
+  "why": "Series for x/(1+x); second example"
+ },
+ {
+  "front": "What are key power series to memorize?",
+  "fp": "37366964b5b0",
+  "yield": "MEDIUM",
+  "why": "Key power series list; restates Maclaurin cards"
+ },
+ {
+  "front": "What are the three cases for radius of convergence?",
+  "fp": "f73f69e92dd5",
+  "yield": "MEDIUM",
+  "why": "Three radius cases; survey card"
+ },
+ {
+  "front": "What is a power series and what is its general form?",
+  "fp": "edc97dc324d7",
+  "yield": "HIGH",
+  "why": "CED 10.13 power series general form"
+ },
+ {
+  "front": "What is the radius of convergence $R$?",
+  "fp": "674f87850fe2",
+  "yield": "HIGH",
+  "why": "CED 10.13 radius of convergence"
+ },
+ {
+  "front": "What series appear commonly at endpoints?",
+  "fp": "5e9d582e26f9",
+  "yield": "MEDIUM",
+  "why": "Common endpoint series; survey card"
+ }
+]

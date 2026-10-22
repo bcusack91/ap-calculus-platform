@@ -239,7 +239,7 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
           'Check that you are signed in. Work done while signed out is not saved.',
           'Check your study mode on the Flashcards page. Cards go to your personal deck, your class deck, and that course’s own deck. See [Study modes and decks](/help/study-modes-and-decks).',
           'New cards join a few at a time, up to your “New cards per day” limit. The rest arrive over the next days.',
-          'MCAT and AP Chemistry, Biology, Physics 1 and Calculus AB: low-yield cards are hidden unless you turn them on.',
+          'MCAT and AP Chemistry, Biology, Physics 1, Calculus AB and Calculus BC: low-yield cards are hidden unless you turn them on.',
         ],
       },
       { type: 'note', tone: 'tip', text: 'Seeing “All caught up”? You have no cards due right now. Finish a topic’s lesson and exit quiz to earn more.' },
@@ -286,7 +286,7 @@ export const HELP_ARTICLE_LIST: HelpArticle[] = [
       },
       { type: 'note', text: 'Your teacher may set limits for your class deck.' },
       { type: 'h2', id: 'mcat-yield', text: 'Exam-yield levels (MCAT and AP)' },
-      { type: 'p', text: 'Every MCAT, AP Chemistry, AP Biology, AP Physics 1 and AP Calculus AB card has a yield level. It says how often the idea shows up on the exam. Cards in other courses have no level and are always in your review.' },
+      { type: 'p', text: 'Every MCAT, AP Chemistry, AP Biology, AP Physics 1, AP Calculus AB and AP Calculus BC card has a yield level. It says how often the idea shows up on the exam. Cards in other courses have no level and are always in your review.' },
       {
         type: 'list',
         items: [

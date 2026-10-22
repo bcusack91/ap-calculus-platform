@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Euler's method for $\\frac{dy}{dx} = -2y$ with step $h = 0.2$ has reached $y(0.2) \\approx 3$. What is the next approximation, $y(0.4)$?",
+  "fp": "c543067e22f9",
+  "yield": "HIGH",
+  "why": "CED 7.5 one Euler step; worked example"
+ },
+ {
+  "front": "Euler's method gives $y(2) = 3.5$ with $h = 0.5$. To improve accuracy, you should:",
+  "fp": "3b0612de08c2",
+  "yield": "MEDIUM",
+  "why": "Smaller step improves Euler; conceptual aside"
+ },
+ {
+  "front": "In Euler's method, if the solution is concave up ($\\frac{d^2y}{dx^2} > 0$) on the interval, the approximation will:",
+  "fp": "a5f16a639a6d",
+  "yield": "HIGH",
+  "why": "CED 7.5 concavity decides Euler over/underestimate; FRQ ask"
+ },
+ {
+  "front": "The solution to $dy/dx = ky$ is:",
+  "fp": "f4de6a356548",
+  "yield": "MEDIUM",
+  "why": "CED 7.8 y = Ce^{kx}; AB content restated in BC deck"
+ },
+ {
+  "front": "Using Euler's method with step size $h = 0.5$, starting at $(0, 1)$ with $\\dfrac{dy}{dx} = y$, the approximate $y(1)$ is:",
+  "fp": "e51b48474dd4",
+  "yield": "MEDIUM",
+  "why": "Two-step Euler; second example of same skill"
+ },
+ {
+  "front": "What is Euler's method and what is its update formula?",
+  "fp": "b564195cc2f1",
+  "yield": "HIGH",
+  "why": "CED 7.5 Euler's method and update formula"
+ }
+]

@@ -17,7 +17,7 @@ import {
  * GET  /api/flashcards/settings — the user's stored prefs (null = unset),
  *      the effective values, the defaults/bounds for the UI, and
  *      `hasYieldCards` (does the student have any card with an exam-yield
- *      tier — MCAT and the four flagship AP decks — so the UI knows whether to offer the
+ *      tier — MCAT and five AP decks — so the UI knows whether to offer the
  *      medium/low-yield toggles).
  * PATCH /api/flashcards/settings — update either or both limits. A field set
  *      to null resets it to the code default; an omitted field is unchanged.

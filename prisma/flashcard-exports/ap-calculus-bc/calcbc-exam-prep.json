@@ -1,0 +1,39 @@
+[
+ {
+  "topicSlug": "bc-exam-strategies-calcbc",
+  "front": "On a BC series free-response question, what must you show to earn credit for a convergence claim?",
+  "back": "Name the test, verify its conditions using the actual terms of the series, then state the conclusion — e.g. 'By the ratio test $\\lim_{n \\to \\infty} |a_{n+1}/a_n| = 1/2 < 1$, so the series converges absolutely.' A bare answer with no named test scores zero.",
+  "hint": "Name the test, check its conditions, state the conclusion."
+ },
+ {
+  "topicSlug": "bc-exam-strategies-calcbc",
+  "front": "On the BC exam, in addition to AB topics, you can expect questions on:",
+  "back": "**Parametric/polar/vector + series + advanced integration + advanced diffeq**\n\nBC adds those four big areas to the AB content."
+ },
+ {
+  "topicSlug": "review-connections-calcbc",
+  "front": "$\\sum_{n=1}^\\infty \\dfrac{(-1)^n}{n}$ converges by:",
+  "back": "**Alternating series test (terms decreasing to 0)**\n\nAlternating, $1/n$ decreases to $0$ — AST applies. (Conditionally convergent.)"
+ },
+ {
+  "topicSlug": "review-connections-calcbc",
+  "front": "A parametric curve has $x(t) = t^2$, $y(t) = t^3$. At $t = 1$, $\\dfrac{dy}{dx} = $",
+  "back": "**$3/2$**\n\n$\\dfrac{dy}{dx} = \\dfrac{y'(t)}{x'(t)} = \\dfrac{3t^2}{2t} = \\dfrac{3t}{2}$, at $t=1$ gives $3/2$."
+ },
+ {
+  "topicSlug": "review-connections-calcbc",
+  "front": "Does $\\sum_{n=1}^\\infty \\dfrac{1}{n^2}$ converge?",
+  "back": "**Yes (p-series with $p = 2 > 1$)**\n\n$p$-series converges iff $p > 1$."
+ },
+ {
+  "topicSlug": "review-connections-calcbc",
+  "front": "For $\\int x e^x dx$ via integration by parts with $u = x$, $dv = e^x dx$, the result is:",
+  "back": "**$x e^x - e^x + C$**\n\n$uv - \\int v du = xe^x - \\int e^x dx = xe^x - e^x + C$."
+ },
+ {
+  "topicSlug": "review-connections-calcbc",
+  "front": "Which topics appear on the AP Calculus BC exam but not on the AB exam?",
+  "back": "Integration by parts and partial fractions, improper integrals, Euler's method and logistic growth, arc length (for y = f(x) and for parametric curves), parametric/vector-valued and polar calculus, and all of sequences and series — convergence tests, alternating series, power series, Taylor/Maclaurin series, and the Lagrange error bound.",
+  "hint": "Units 9 and 10 are BC-only; Units 6 to 8 add a few BC-only topics."
+ }
+]

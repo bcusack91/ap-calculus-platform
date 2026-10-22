@@ -1,0 +1,13 @@
+[
+ {
+  "topicSlug": "arc-length-surface-area-calcbc",
+  "front": "$\\int_0^{2\\pi}\\sqrt{(-2\\sin t)^2 + (3\\cos t)^2}\\,dt$ represents the arc length of which curve?",
+  "back": "**$x = 2\\cos t$, $y = 3\\sin t$**\n\nIf x = 2cos t, y = 3sin t: dx/dt = −2sin t, dy/dt = 3cos t. That matches the integrand."
+ },
+ {
+  "topicSlug": "arc-length-surface-area-calcbc",
+  "front": "What is the arc length formula for $y = f(x)$ on $[a,b]$, and for a parametric curve?",
+  "back": "Rectangular: $L = \\int_a^b \\sqrt{1 + [f'(x)]^2}\\,dx$. Parametric: $L = \\int_{t_1}^{t_2} \\sqrt{\\left(\\frac{dx}{dt}\\right)^2 + \\left(\\frac{dy}{dt}\\right)^2}\\,dt$.",
+  "hint": "Both come from $ds = \\sqrt{dx^2 + dy^2}$."
+ }
+]

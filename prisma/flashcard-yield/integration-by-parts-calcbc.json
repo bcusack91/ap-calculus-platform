@@ -1,0 +1,38 @@
+[
+ {
+  "front": "$\\displaystyle\\int \\arctan x\\,dx =$",
+  "fp": "f1fe6249d9ce",
+  "yield": "MEDIUM",
+  "why": "IBP on arctan x; secondary example"
+ },
+ {
+  "front": "$\\displaystyle\\int \\ln x\\,dx = $?",
+  "fp": "a89138f50d19",
+  "yield": "HIGH",
+  "why": "CED 6.11 IBP on ln x; classic worked example"
+ },
+ {
+  "front": "$\\displaystyle\\int \\sin(\\ln x)\\,dx$ is evaluated using:",
+  "fp": "b0158f0f5452",
+  "yield": "MEDIUM",
+  "why": "Cyclic IBP; rare on exam"
+ },
+ {
+  "front": "$\\displaystyle\\int x \\cdot e^x\\,dx = $?",
+  "fp": "b760c14569c6",
+  "yield": "HIGH",
+  "why": "CED 6.11 IBP on x e^x; worked example"
+ },
+ {
+  "front": "$\\displaystyle\\int_1^e \\ln x\\,dx =$",
+  "fp": "264516f6ae57",
+  "yield": "MEDIUM",
+  "why": "Definite IBP on ln x; second example"
+ },
+ {
+  "front": "Integration by parts formula?",
+  "fp": "60f772c1cc0e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.11 integration by parts formula"
+ }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "front": "$\\int_0^{2\\pi}\\sqrt{(-2\\sin t)^2 + (3\\cos t)^2}\\,dt$ represents the arc length of which curve?",
+  "fp": "b179ecc20814",
+  "yield": "HIGH",
+  "why": "CED 9.3 recognize parametric arc-length integrand"
+ },
+ {
+  "front": "What is the arc length formula for $y = f(x)$ on $[a,b]$, and for a parametric curve?",
+  "fp": "a18d6ee7abc0",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 8.13 / 9.3 arc length formulas"
+ }
+]

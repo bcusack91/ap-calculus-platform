@@ -1,0 +1,62 @@
+[
+ {
+  "front": "Common mistakes with Integral Test?",
+  "fp": "f906c288dcb5",
+  "yield": "MEDIUM",
+  "why": "Integral-test mistakes; study tip"
+ },
+ {
+  "front": "Common mistakes with the Ratio Test?",
+  "fp": "9c4e31932f37",
+  "yield": "MEDIUM",
+  "why": "Ratio-test mistakes; study tip"
+ },
+ {
+  "front": "How do you choose a comparison series?",
+  "fp": "58cb16c5fd8e",
+  "yield": "MEDIUM",
+  "why": "Choosing a comparison series; technique tip"
+ },
+ {
+  "front": "How do you simplify factorial ratios?",
+  "fp": "0e7423560bd1",
+  "yield": "HIGH",
+  "why": "Factorial ratios; needed for ratio test on series"
+ },
+ {
+  "front": "State the Direct Comparison Test.",
+  "fp": "ae12383093fd",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.6 direct comparison test; endpoint and series FRQ staple"
+ },
+ {
+  "front": "State the Integral Test.",
+  "fp": "92d8d1651371",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.4 integral test; convergence tests share a tier"
+ },
+ {
+  "front": "State the Limit Comparison Test.",
+  "fp": "e93e217fb6d3",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.6 limit comparison test; endpoint and series FRQ staple"
+ },
+ {
+  "front": "State the Ratio Test.",
+  "fp": "3cca8702f803",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.8 ratio test conclusions"
+ },
+ {
+  "front": "What is the p-series test?",
+  "fp": "32bc6069ad19",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 10.5 p-series test"
+ },
+ {
+  "front": "When should you use DCT vs LCT?",
+  "fp": "4bd8bcf86dad",
+  "yield": "MEDIUM",
+  "why": "DCT vs LCT choice; study tip"
+ }
+]

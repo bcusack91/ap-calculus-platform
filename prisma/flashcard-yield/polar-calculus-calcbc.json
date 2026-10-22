@@ -1,0 +1,62 @@
+[
+ {
+  "front": "Area enclosed by polar curve $r = f(\\theta)$?",
+  "fp": "f22ca15cfc58",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 9.8 polar area formula"
+ },
+ {
+  "front": "At what point(s) does the cardioid $r = 1 + \\cos\\theta$ have a vertical tangent?",
+  "fp": "706dfc12ad9f",
+  "yield": "HIGH",
+  "why": "CED 9.7 polar vertical tangents; worked example"
+ },
+ {
+  "front": "How do you convert between polar and Cartesian coordinates?",
+  "fp": "6f49e1ba2dbc",
+  "yield": "HIGH",
+  "why": "CED 9.7 x = r cos, y = r sin; needed for polar slope"
+ },
+ {
+  "front": "How do you find all points where two polar curves intersect?",
+  "fp": "0c431a46691e",
+  "yield": "HIGH",
+  "why": "CED 9.9 polar intersections set area bounds"
+ },
+ {
+  "front": "The area inside $r = 3\\sin\\theta$ and outside $r = 1 + \\sin\\theta$ requires:",
+  "fp": "c007fc29ecda",
+  "yield": "HIGH",
+  "why": "CED 9.9 area between polar curves"
+ },
+ {
+  "front": "The polar curve $r = 3\\cos 3\\theta$ has how many petals?",
+  "fp": "04b85291631c",
+  "yield": "LOW",
+  "why": "Rose petal-count rule; precalc recognition"
+ },
+ {
+  "front": "The polar equation $r = \\theta$ for $\\theta \\geq 0$ describes:",
+  "fp": "078ae6232905",
+  "yield": "LOW",
+  "why": "Naming the Archimedean spiral; trivia"
+ },
+ {
+  "front": "What are the main types of polar curves?",
+  "fp": "9b7c715eeb2c",
+  "yield": "MEDIUM",
+  "why": "Polar curve families; survey card"
+ },
+ {
+  "front": "What is the formula for slope dy/dx in polar coordinates?",
+  "fp": "c9199581b202",
+  "yield": "HIGH",
+  "why": "CED 9.7 polar slope dy/dx"
+ },
+ {
+  "front": "Why is a point's polar representation not unique?",
+  "fp": "7d131265f79c",
+  "yield": "MEDIUM",
+  "why": "Polar representation not unique; conceptual aside"
+ }
+]

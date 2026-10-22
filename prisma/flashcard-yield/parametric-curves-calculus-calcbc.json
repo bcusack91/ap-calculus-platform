@@ -1,0 +1,74 @@
+[
+ {
+  "front": "Arc length of parametric curve?",
+  "fp": "7966a3c030fc",
+  "yield": "MEDIUM",
+  "why": "CED 9.3 parametric arc length; restates arc-length card"
+ },
+ {
+  "front": "Derivative of parametric curve $\\frac{dy}{dx}$ given $x(t), y(t)$?",
+  "fp": "e4268228a5f6",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 9.1 parametric dy/dx; every BC exam"
+ },
+ {
+  "front": "Eliminating the parameter from $x = t^2$, $y = t^4$ gives $y = x^2$. Why is that not the whole parabola?",
+  "fp": "9e55f9c7d6cb",
+  "yield": "MEDIUM",
+  "why": "Parameter restrictions after eliminating; precalc aside"
+ },
+ {
+  "front": "For $x = \\sec t$, $y = \\tan t$, eliminating the parameter gives:",
+  "fp": "2f89bd21d28a",
+  "yield": "LOW",
+  "why": "Eliminating parameter to a hyperbola; precalc, not assessed"
+ },
+ {
+  "front": "For $x = 4\\cos t + 2$, $y = 3\\sin t - 1$, the center of the ellipse is:",
+  "fp": "c1fba16392e2",
+  "yield": "LOW",
+  "why": "Ellipse center from parametric form; precalc recognition"
+ },
+ {
+  "front": "For the parametric curve $x = t^2$, $y = t^3$, what is $\\dfrac{dy}{dx}$?",
+  "fp": "658c0b508efe",
+  "yield": "HIGH",
+  "why": "CED 9.1 parametric dy/dx; worked example"
+ },
+ {
+  "front": "How do you determine the direction of a parametric curve?",
+  "fp": "16a8f2cf71b9",
+  "yield": "MEDIUM",
+  "why": "Direction of a parametric curve; secondary"
+ },
+ {
+  "front": "How do you eliminate the parameter from parametric equations?",
+  "fp": "7bac899919a4",
+  "yield": "MEDIUM",
+  "why": "Eliminating the parameter; precalc survey card"
+ },
+ {
+  "front": "How do you find the second derivative d²y/dx² parametrically?",
+  "fp": "dab0cc3f6c05",
+  "yield": "HIGH",
+  "why": "CED 9.2 parametric second derivative; common error"
+ },
+ {
+  "front": "What are parametric equations and why use them?",
+  "fp": "4db97635cbb3",
+  "yield": "MEDIUM",
+  "why": "What parametric equations are; intro survey"
+ },
+ {
+  "front": "What are parametric equations for common curves?",
+  "fp": "9556a7daf1e3",
+  "yield": "MEDIUM",
+  "why": "Common parametric curves; survey card"
+ },
+ {
+  "front": "When does a parametric curve have horizontal or vertical tangents?",
+  "fp": "79a858385cbe",
+  "yield": "HIGH",
+  "why": "CED 9.1 horizontal and vertical tangents"
+ }
+]

@@ -1,0 +1,32 @@
+[
+ {
+  "front": "$\\sum_{n=1}^\\infty \\dfrac{(-1)^n}{n}$ converges by:",
+  "fp": "d147107ca0bb",
+  "yield": "MEDIUM",
+  "why": "AST on alternating harmonic; duplicates series card"
+ },
+ {
+  "front": "A parametric curve has $x(t) = t^2$, $y(t) = t^3$. At $t = 1$, $\\dfrac{dy}{dx} = $",
+  "fp": "e4286881c008",
+  "yield": "MEDIUM",
+  "why": "Parametric dy/dx example; duplicates parametric card"
+ },
+ {
+  "front": "Does $\\sum_{n=1}^\\infty \\dfrac{1}{n^2}$ converge?",
+  "fp": "c30e9aab794c",
+  "yield": "MEDIUM",
+  "why": "p-series 1/n^2; restatement"
+ },
+ {
+  "front": "For $\\int x e^x dx$ via integration by parts with $u = x$, $dv = e^x dx$, the result is:",
+  "fp": "e9447f51716b",
+  "yield": "MEDIUM",
+  "why": "IBP on x e^x; duplicates IBP card"
+ },
+ {
+  "front": "Which topics appear on the AP Calculus BC exam but not on the AB exam?",
+  "fp": "cbcdf7c984ff",
+  "yield": "MEDIUM",
+  "why": "BC-only topic list; study-planning survey card"
+ }
+]

@@ -4,8 +4,8 @@
  * export mirror in prisma/flashcard-exports/<course>/ (written by
  * scripts/export-flashcards.ts, text-identical to prod).
  *
- * Courses in scope: the MCAT deck and the four flagship AP decks (AP
- * Chemistry, AP Biology, AP Physics 1, AP Calculus AB). Topic slugs are
+ * Courses in scope: the MCAT deck and five AP decks (AP Chemistry, AP
+ * Biology, AP Physics 1, AP Calculus AB, AP Calculus BC). Topic slugs are
  * globally unique, so all courses share one flat artifact directory. Every
  * other course stays unlabeled (NULL = always served).
  *
@@ -43,6 +43,7 @@ export const SCOPE: Record<string, readonly string[] | '*'> = {
   'ap-biology': '*',
   'ap-physics-1': '*',
   'ap-calculus-ab': '*',
+  'ap-calculus-bc': '*',
 }
 
 /** The courses whose cards carry yield labels. */

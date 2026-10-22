@@ -3,8 +3,8 @@ import type { ExamYield, Prisma } from '@prisma/client'
 /**
  * Exam-yield filtering for flashcard study queues.
  *
- * MCAT cards and the four flagship AP decks (AP Chemistry, AP Biology, AP
- * Physics 1, AP Calculus AB) carry an `examYield` tier: ULTRA_HIGH, HIGH,
+ * MCAT cards and five AP decks (AP Chemistry, AP Biology, AP Physics 1, AP
+ * Calculus AB, AP Calculus BC) carry an `examYield` tier: ULTRA_HIGH, HIGH,
  * MEDIUM or LOW.
  * ULTRA_HIGH and HIGH are always served. MEDIUM (on by default) and LOW (off
  * by default) are per-student opt-ins on the User row. Every other card on

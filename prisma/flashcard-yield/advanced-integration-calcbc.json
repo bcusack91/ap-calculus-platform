@@ -1,0 +1,32 @@
+[
+ {
+  "front": "$\\displaystyle\\int \\frac{1}{\\sqrt{1-4x^2}}\\,dx =$",
+  "fp": "0e7b97b6c093",
+  "yield": "MEDIUM",
+  "why": "arcsin antiderivative via u-sub; practice item"
+ },
+ {
+  "front": "$\\displaystyle\\int \\frac{dx}{x^2+6x+13}$ is evaluated by completing the square. The denominator becomes:",
+  "fp": "885bb4e3ea32",
+  "yield": "MEDIUM",
+  "why": "CED 6.10 completing the square; secondary example"
+ },
+ {
+  "front": "$\\displaystyle\\int \\frac{e^x}{e^{2x}+1}\\,dx =$",
+  "fp": "ce45387c44db",
+  "yield": "MEDIUM",
+  "why": "arctan(e^x) via u-sub; practice item"
+ },
+ {
+  "front": "$\\displaystyle\\int \\sec^2 x \\tan x\\,dx =$",
+  "fp": "fe1c4c9cd381",
+  "yield": "MEDIUM",
+  "why": "Simple u-substitution; AB-level practice item"
+ },
+ {
+  "front": "Which technique is best for $\\displaystyle\\int \\frac{1}{x^2 + 4}\\,dx$?",
+  "fp": "6b2f175f4c23",
+  "yield": "HIGH",
+  "why": "CED 6.9 arctan antiderivative formula"
+ }
+]

@@ -18,14 +18,14 @@ import {
  * (see flashcard-daily-limits.ts). Reverts and shows an error if the save fails.
  *
  * The exam-yield toggles only appear for a student who has yield-labeled cards
- * (the MCAT deck and the AP Chemistry, AP Biology, AP Physics 1 and AP Calculus
- * AB decks); for everyone else they would change nothing and just raise
- * questions.
+ * (the MCAT deck and the AP Chemistry, AP Biology, AP Physics 1, AP Calculus
+ * AB and AP Calculus BC decks); for everyone else they would change nothing
+ * and just raise questions.
  */
 
 /**
  * Show the medium/low-yield toggles? Only when the student has cards that
- * carry an exam-yield tier (MCAT and the four flagship AP decks). An older API
+ * carry an exam-yield tier (MCAT and five AP decks). An older API
  * response without the flag hides them, the safe default for everyone else.
  */
 export function shouldShowYieldToggles(settings: { hasYieldCards?: unknown } | null | undefined): boolean {
@@ -215,7 +215,7 @@ export default function FlashcardDailyLimits({ onChanged }: FlashcardDailyLimits
       {showYield && (
         <>
           <p className="mt-4 text-xs text-gray-500 dark:text-gray-400">
-            Cards in some courses (MCAT, AP Chemistry, AP Biology, AP Physics 1 and AP Calculus AB)
+            Cards in some courses (MCAT, AP Chemistry, AP Biology, AP Physics 1, AP Calculus AB and AP Calculus BC)
             are labeled by how often their content shows up on the exam. Ultra-high and high-yield
             cards are always in your queue; choose whether to add the rest. Your review history is
             kept either way.
