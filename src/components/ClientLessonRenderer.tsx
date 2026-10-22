@@ -29,6 +29,7 @@ interface ClientLessonRendererProps {
   mode: 'handcrafted' | 'dynamic'
   topicSlug: string
   courseSlug?: string
+  courseName?: string
   // For handcrafted
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   preloadedParts?: any[]
@@ -45,6 +46,7 @@ export default function ClientLessonRenderer({
   mode,
   topicSlug,
   courseSlug,
+  courseName,
   preloadedParts,
   variantParts,
   totalVariants,
@@ -67,6 +69,7 @@ export default function ClientLessonRenderer({
         <InteractiveLessonRenderer
           topicSlug={topicSlug}
           courseSlug={courseSlug}
+          courseName={courseName}
           preloadedParts={preloadedParts}
           variantParts={variantParts}
           totalVariants={totalVariants}

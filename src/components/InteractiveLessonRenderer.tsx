@@ -31,6 +31,11 @@ import type { ExitQuizQuestion } from '@/data/exit-quizzes'
 import LessonProgressBar from '@/components/LessonProgressBar'
 import { postQuestionActivity } from '@/lib/question-activity-client'
 import { filterSectionsForYield, lessonHasLowYield, splitYieldBlocks, stripLowYield, hasLowYieldBlock } from '@/lib/lesson-yield'
+import { calculatePartMastery, partFromMastery } from '@/lib/lesson-place'
+import { estimatePartMinutes, isFromDiagnostic, type FirstSessionChoice } from '@/lib/first-session'
+import { useFirstSession } from '@/hooks/useFirstSession'
+import { FirstSessionChoice as FirstSessionChoiceScreen, FirstSessionProgressLine, FirstSessionCheckpoint } from '@/components/lesson/FirstSession'
+import { trackLessonFirstSessionStart, trackLessonPartComplete } from '@/lib/analytics'
 
 // Lazy-load ExitQuiz since it's only shown after lesson completion
 const ExitQuiz = dynamic(() => import('@/components/ExitQuiz'), { ssr: false })
@@ -334,6 +339,8 @@ function renderMarkdownH3({ children }: { children?: React.ReactNode }) {
 interface InteractiveLessonRendererProps {
   topicSlug: string
   courseSlug?: string
+  /** Display name of the course, for "Your first step in <course>" (Phase 3 W5). */
+  courseName?: string
   preloadedParts: PreloadedLessonPart[]
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   variantParts?: Record<number, any[]>
@@ -411,15 +418,7 @@ function buildFallbackEntranceQuiz(
   return { questions, parts: partMeta }
 }
 
-function calculatePartMastery(lessonPart: number, completedSectionsCount: number, totalSections: number, totalParts: number) {
-  const safeSections = Math.max(totalSections, 1)
-  const progressInPart = completedSectionsCount / safeSections
-  const partWeight = 1.0 / Math.max(totalParts, 1)
-  const baseLevel = (lessonPart - 1) * partWeight
-  return Math.min(1, baseLevel + progressInPart * partWeight)
-}
-
-export default function InteractiveLessonRenderer({ topicSlug, courseSlug, preloadedParts, variantParts, totalVariants: totalVariantsProp, completionDestination, practiceModeParts: practiceModePropParts }: InteractiveLessonRendererProps) {
+export default function InteractiveLessonRenderer({ topicSlug, courseSlug, courseName, preloadedParts, variantParts, totalVariants: totalVariantsProp, completionDestination, practiceModeParts: practiceModePropParts }: InteractiveLessonRendererProps) {
   const searchParams = useSearchParams()
   const router = useRouter()
   const { data: session } = useSession()
@@ -438,6 +437,15 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   
   // Get initial part from URL parameter (e.g., ?part=2)
   const urlPart = searchParams.get('part')
+  // Short first session (Phase 3 W5): the student arrived from a diagnostic's
+  // results page (?from=diagnostic) or opened their current plan topic. The
+  // lesson then leads with "Start with Part 1", shows where the exit quiz is,
+  // and offers a stopping point after Part 1 (src/lib/first-session.ts).
+  const fromDiagnostic = isFromDiagnostic(searchParams)
+  const firstSession = useFirstSession(topicSlug)
+  const [firstSessionChoice, setFirstSessionChoice] = useState<FirstSessionChoice | null>(null)
+  // The part just finished in a first session — shows the keep-going / stop card.
+  const [checkpointPart, setCheckpointPart] = useState<number | null>(null)
   const requestedPart = urlPart ? parseInt(urlPart, 10) : 1
   const initialPart = Math.min(Math.max(Number.isFinite(requestedPart) ? requestedPart : 1, 1), Math.min(totalParts, 8)) as LessonPart
   
@@ -642,13 +650,18 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     try {
       // Calculate mastery level based on overall progress
       const sectionCount = sections.length || 1
-      const masteryLevel = calculatePartMastery(lessonPart, completedSections.size, sectionCount, totalParts)
+      // A part completion means the whole part. The click that finishes the
+      // last section fires this save before React has added that section to
+      // completedSections, and a save one section short reopened the lesson
+      // at the part the student had just finished (partFromMastery).
+      const doneCount = isPartCompletion ? sectionCount : completedSections.size
+      const masteryLevel = calculatePartMastery(lessonPart, doneCount, sectionCount, totalParts)
       
       const response = await sendProgress({
         topicId: forceTopicId || cachedTopicId,
         topicSlug: !forceTopicId && !cachedTopicId ? topicSlug : undefined, // Fallback to slug if no ID cached
         lessonPart,
-        completedSections: Array.from(completedSections),
+        completedSections: isPartCompletion ? Array.from({ length: sectionCount }, (_, i) => i) : Array.from(completedSections),
         masteryLevel,
         isPartCompletion, // Flag to indicate this is a part completion, not just progress save
         variant,
@@ -677,7 +690,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
 
       // Non-logged-in users: offer entrance quiz if available, otherwise proceed
       if (!sessionKey) {
-        if (topicHasEntranceQuiz && !urlPart) {
+        if ((topicHasEntranceQuiz || fromDiagnostic) && !urlPart) {
           setEntranceQuizPhase('choice')
         }
         setProgressLoaded(true)
@@ -720,10 +733,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           }
 
           // Determine lesson part from mastery level
-          const mastery = Number(data.progress.masteryLevel ?? 0)
-          const boundedMastery = Math.min(Math.max(mastery, 0), 0.999999)
-          const partWeight = 1.0 / Math.max(totalParts, 1)
-          let resolvedPart = Math.min(totalParts, Math.max(1, Math.floor(boundedMastery / partWeight) + 1)) as LessonPart
+          let resolvedPart = partFromMastery(Number(data.progress.masteryLevel ?? 0), totalParts) as LessonPart
           const unlocked: Set<LessonPart> = new Set([1]) // Part 1 always unlocked
 
           for (let i = 1; i <= resolvedPart; i++) {
@@ -769,7 +779,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           if (!urlPart) {
             setLessonPart(resolvedPart)
           }
-        } else if (topicHasEntranceQuiz && !urlPart) {
+        } else if ((topicHasEntranceQuiz || fromDiagnostic) && !urlPart) {
           // Restore entrance quiz mastered parts even without DB progress
           try {
             const saved = localStorage.getItem(`entranceQuiz_${topicSlug}`)
@@ -810,7 +820,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
     }
     
     loadProgress()
-  }, [sessionKey, topicSlug, progressLoaded, urlPart, totalParts, topicHasEntranceQuiz])
+  }, [sessionKey, topicSlug, progressLoaded, urlPart, totalParts, topicHasEntranceQuiz, fromDiagnostic])
   
 
   // Smart batched saves: Save every 3 sections for progress tracking
@@ -937,6 +947,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   const progress = sections?.length > 0 ? ((completedSections.size) / sections.length) * 100 : 0
   
   const handleNext = async () => {
+    if (checkpointPart !== null) setCheckpointPart(null)
     // Mark current section as complete when moving to next
     if (!completedSections.has(currentSectionIndex)) {
       setCompletedSections(prev => new Set([...prev, currentSectionIndex]))
@@ -955,6 +966,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       // On final section of a part, save progress and initialize flashcards
       // This triggers flashcard notification BEFORE transitioning to next part
       saveProgress(undefined, true) // Part completion - trigger flashcards
+      trackLessonPartComplete(topicSlug, lessonPart)
       
       // Multi-part lesson navigation
       if (lessonPart === 2 && topicSlug === 'the-unit-circle') {
@@ -985,6 +997,9 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
           updateLessonPart(nextPart)
           setCurrentSectionIndex(0)
           setCompletedSections(new Set())
+          // First session: after Part 1, offer a stopping point (not when the
+          // student asked to read the whole lesson).
+          if (lessonPart === 1 && firstSession.active && firstSessionChoice !== 'full') setCheckpointPart(1)
           window.scrollTo({ top: 0, behavior: 'smooth' })
         } else if (topicHasExitQuiz && !exitQuizStatus.hasPassed) {
           // No more unmastered parts — show exit quiz
@@ -1425,6 +1440,32 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
   // Entrance quiz: show choice or quiz before lesson starts
   if (entranceQuizPhase === 'choice') {
     const topicTitle = preloadedParts[0]?.title || topicSlug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+    if (firstSession.active) {
+      // The short first session leads with Part 1 (~minutes from the part's
+      // section count), with the whole lesson and the exit quiz as the
+      // secondary paths; the entrance quiz stays available as a text link.
+      const part1Sections = filterSectionsForYield(preloadedParts[0]?.data?.sections ?? [], includeLowYield).length
+      const begin = (choice: FirstSessionChoice) => {
+        setFirstSessionChoice(choice)
+        trackLessonFirstSessionStart(topicSlug, courseSlug, choice)
+        setEntranceQuizPhase(null)
+        // No usable quiz pool resolves false and leaves the student at Part 1.
+        if (choice === 'quiz') void openExitQuiz()
+      }
+      return (
+        <FirstSessionChoiceScreen
+          topicTitle={topicTitle}
+          courseName={courseName}
+          totalParts={totalParts}
+          partMinutes={estimatePartMinutes(part1Sections)}
+          hasExitQuiz={topicHasExitQuiz && !exitQuizStatus.hasPassed}
+          hasEntranceQuiz={topicHasEntranceQuiz}
+          entranceQuizLoading={entranceQuizLoading}
+          onChoice={begin}
+          onEntranceQuiz={handleStartEntranceQuiz}
+        />
+      )
+    }
     return (
       <div className="max-w-2xl mx-auto py-12 px-4">
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center">
@@ -1543,6 +1584,25 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, prelo
       />
 
       <div className="space-y-6">
+      {/* Short first session: where this part sits on the way to the exit quiz. */}
+      {firstSession.active && totalParts > 1 && (
+        <FirstSessionProgressLine
+          part={lessonPart}
+          totalParts={totalParts}
+          hasExitQuiz={topicHasExitQuiz}
+          quizPassed={exitQuizStatus.hasPassed}
+        />
+      )}
+      {/* After Part 1 in a first session: keep going, or stop with the place saved. */}
+      {checkpointPart !== null && (
+        <FirstSessionCheckpoint
+          completedParts={checkpointPart}
+          totalParts={totalParts}
+          placeSaved={!!session?.user}
+          stopHref={courseSlug ? `/courses/${courseSlug}` : '/dashboard'}
+          onContinue={() => setCheckpointPart(null)}
+        />
+      )}
       {/* Enrichment notice for topics beyond the current exam's scope */}
       {isBeyondExam(topicSlug) && (
         <div className="rounded-2xl border-2 border-amber-300 bg-amber-50 p-4 dark:border-amber-600/60 dark:bg-amber-900/20">

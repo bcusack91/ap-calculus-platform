@@ -6,6 +6,8 @@ import Script from 'next/script'
 import InteractiveLessonSEO from '@/components/InteractiveLessonSEO'
 import ClientLessonRenderer from '@/components/ClientLessonRenderer'
 import { ErrorBoundary } from '@/components/ErrorBoundary'
+import { Suspense } from 'react'
+import LessonArrivalSubtitle, { DEFAULT_LESSON_SUBTITLE } from '@/components/lesson/LessonArrivalSubtitle'
 import { InArticleAd } from '@/components/ad-banner'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { isDuplicateTopic } from '@/lib/duplicate-topics'
@@ -91,7 +93,8 @@ export default async function InteractivePage(props: InteractivePageProps) {
           slug: true,
           course: {
             select: {
-              slug: true
+              slug: true,
+              name: true
             }
           }
         }
@@ -170,7 +173,16 @@ export default async function InteractivePage(props: InteractivePageProps) {
             </span>
           </div>
             <h1 className="text-4xl font-bold tracking-tight mb-4">{topic.title}</h1>
-            <p className="text-lg text-accent-light">Learn step-by-step with interactive practice!</p>
+            {/* Arrival context is read on the client (this page is ISR-cached):
+                "Your first step in <course>: <topic>" after a diagnostic. */}
+            <Suspense fallback={<p className="text-lg text-accent-light">{DEFAULT_LESSON_SUBTITLE}</p>}>
+              <LessonArrivalSubtitle
+                topicSlug={topic.slug}
+                topicTitle={topic.title}
+                courseName={topic.category.course.name}
+                className="text-lg text-accent-light"
+              />
+            </Suspense>
           </div>
         </div>
 
@@ -187,6 +199,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
             mode="handcrafted"
             topicSlug={topic.slug}
             courseSlug={topic.category.course.slug}
+            courseName={topic.category.course.name}
             preloadedParts={lessonConfig.parts}
             variantParts={lessonConfig.variantParts}
             totalVariants={lessonConfig.totalVariants}
