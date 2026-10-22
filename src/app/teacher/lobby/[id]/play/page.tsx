@@ -152,7 +152,9 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
 
   const [state, setState] = useState<PlayState | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [katexReady, setKatexReady] = useState(false)
+  // Re-render trigger only: renderRichText shows raw TeX until the lazily
+  // loaded KaTeX module resolves (tables and bold render at once).
+  const [, setKatexReady] = useState(false)
   const [questionIndex, setQuestionIndex] = useState(0)
   const [selected, setSelected] = useState<number | null>(null)
   const [feedback, setFeedback] = useState<{ correct: boolean; correctAnswer: number; scoreDelta?: number } | null>(null)
@@ -581,7 +583,7 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
             <div
               className="text-lg sm:text-xl text-gray-900 mb-5"
               dangerouslySetInnerHTML={{
-                __html: katexReady ? renderRichText(currentQuestion.question) : currentQuestion.question,
+                __html: renderRichText(currentQuestion.question),
               }}
             />
             <div className="grid gap-2">
@@ -611,7 +613,7 @@ export default function ClassMatchPlayPage({ params }: { params: Promise<{ id: s
                     <span
                       className="text-gray-900"
                       dangerouslySetInnerHTML={{
-                        __html: katexReady ? renderRichText(opt) : opt,
+                        __html: renderRichText(opt),
                       }}
                     />
                   </button>

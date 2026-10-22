@@ -17,7 +17,7 @@ import AvatarDisplay from '@/components/AvatarDisplay';
 import { CosmeticNameplate } from '@/components/PowerUps';
 import { AvatarData } from '@/types/avatar';
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy';
-import { splitInlineMath } from '@/lib/inline-math-parts';
+import { CompetitiveRichText } from '@/components/competitive/CompetitiveRichText';
 import { POWER_UPS, activeEffects, type ActiveEffect, type PowerUpId, type PowerUpsState } from '@/lib/chaos-powerups';
 import { ingestEffects } from '@/lib/chaos-arrival';
 import {
@@ -433,8 +433,6 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     return () => clearInterval(t);
   }, [chaosBotActive, botIsPlayer1, botIsPlayer2, matchId]);
 
-  // Render math in prompt (for both unit circle and multiple-choice)
-  // Handles both $...$ delimited LaTeX and raw LaTeX with backslashes
   // Reading & Writing items carry a short passage (or notes, or two texts)
   // above the question, separated by a blank line. Rendered inside the bold,
   // centered question heading, the paragraphs and note bullets ran together
@@ -446,7 +444,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     return { passage: text.slice(0, cut).trim(), stem: text.slice(cut + 2).trim() }
   }
 
-  const renderPrompt = (text: string) => {
+  // Stems, options and explanations all render through the shared rich-text
+  // pipeline (CompetitiveRichText → renderRichText): markdown pipe tables,
+  // $…$ KaTeX and **bold** come out the same here as on the async, team-match
+  // and lobby surfaces. `block` picks a <div> wrapper for stems/explanations
+  // (a table is block content) and a <span> for option text.
+  const renderPrompt = (text: string, block = false) => {
     // Unit circle coordinate format: "Click the position for coordinate \left(...)\right)"
     if (text.includes('\\')) {
       try {
@@ -465,46 +468,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           );
         }
       } catch {
-        // fall through to $...$ parsing
+        // fall through to the shared renderer
       }
     }
-
-    // Handle $...$ and $$...$$ delimited LaTeX in mixed text
-    if (text.includes('$')) {
-      try {
-        // The shared splitter honors the `\$` currency escape on both sides
-        // (a literal $ in prose, KaTeX's \$ inside math). A bare split on `$`
-        // turned "$\$20$ sign-up fee plus $\$5$" into a KaTeX error, a stray
-        // "20" and a sentence typeset as math.
-        const parts = splitInlineMath(text);
-        const rendered = parts.map((part, i) => {
-          if (part.type === 'latex') {
-            const html = renderKatexSync(part.content, { throwOnError: false, displayMode: part.display });
-            return <span key={i} dangerouslySetInnerHTML={{ __html: html }} />;
-          }
-          return <span key={i}>{part.content}</span>;
-        });
-        // Plain inline flow (NOT inline-flex): flex items wrap as whole units, so a
-        // long text segment after an inline $number$ would drop to the next line en
-        // masse, stranding the number at the end of the prior line. Normal inline
-        // text wraps word-by-word; inline KaTeX spans flow and break at spaces.
-        return <span>{rendered}</span>;
-      } catch (e) {
-        console.error('KaTeX render error:', e);
-      }
-    }
-
-    // Pure backslash LaTeX without $ delimiters (e.g. \frac{1}{2})
-    if (text.includes('\\')) {
-      try {
-        const html = renderKatexSync(text, { throwOnError: false, displayMode: false });
-        return <span dangerouslySetInnerHTML={{ __html: html }} />;
-      } catch {
-        // fallback to plain text
-      }
-    }
-
-    return <span>{text}</span>;
+    return <CompetitiveRichText text={text} inline={!block} />;
   };
 
   // Auto-schedule AI answers when question changes
@@ -1034,8 +1001,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                                 </span>
                               )}
                             </p>
-                            <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white overflow-x-auto whitespace-pre-line">
-                              {renderPrompt(question.prompt || question.question || '')}
+                            <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white overflow-x-auto">
+                              {renderPrompt(question.prompt || question.question || '', true)}
                             </h3>
                           </div>
                         </div>
@@ -1111,7 +1078,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                               <Lightbulb className="w-4 h-4" aria-hidden="true" /> Explanation
                             </p>
                             <div className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto">
-                              {renderPrompt(question.explanation)}
+                              {renderPrompt(question.explanation, true)}
                             </div>
                           </div>
                         )}
@@ -1322,12 +1289,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
             return (
               <>
                 {passage && (
-                  <div className={`mb-4 whitespace-pre-line rounded-lg bg-gray-50 p-4 text-left text-base leading-relaxed text-gray-800 dark:bg-gray-700/50 dark:text-gray-100 overflow-x-auto transition-all ${fogActive ? 'blur-sm' : ''}`}>
-                    {renderPrompt(passage)}
+                  <div className={`mb-4 rounded-lg bg-gray-50 p-4 text-left text-base leading-relaxed text-gray-800 dark:bg-gray-700/50 dark:text-gray-100 overflow-x-auto transition-all ${fogActive ? 'blur-sm' : ''}`}>
+                    {renderPrompt(passage, true)}
                   </div>
                 )}
-                <h2 className={`text-lg sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 overflow-x-auto whitespace-pre-line transition-all ${fogActive ? 'blur-sm' : ''}`} key={currentQuestion.prompt || currentQuestion.question}>
-                  {renderPrompt(stem)}
+                <h2 className={`text-lg sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 overflow-x-auto transition-all ${fogActive ? 'blur-sm' : ''}`} key={currentQuestion.prompt || currentQuestion.question}>
+                  {renderPrompt(stem, true)}
                 </h2>
               </>
             )
@@ -1456,7 +1423,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                   Explanation
                 </p>
                 <div className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto">
-                  {renderPrompt(currentQuestion.explanation)}
+                  {renderPrompt(currentQuestion.explanation, true)}
                 </div>
                 {showNextButton && (
                   <button

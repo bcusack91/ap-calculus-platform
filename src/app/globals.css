@@ -655,6 +655,21 @@ blockquote h2 {
   background-color: #374151;
 }
 
+/* A table inside a heading (competitive match stems render in an h2/h3):
+   body size and weight, not the heading's. */
+h1 .inline-table,
+h2 .inline-table,
+h3 .inline-table {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Inside a centered card (the live match card) center the table too. */
+.text-center .inline-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ===== Global mobile overflow safeguards =====
    Long math expressions, code blocks, and wide tables are the #1 source of
    horizontal overflow on small screens. Make them scroll within their container

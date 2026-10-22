@@ -4,6 +4,17 @@ import { protectTableMathPipes } from '@/lib/table-math-pipes'
 /** An emphasis tag this renderer injected in step 1. */
 const EMPHASIS_TAG = /<\/?(?:strong|em)>/
 
+/**
+ * Markup steps 2–3 injected (a table or a line break). A `$…$` span that
+ * contains one of these is a bare currency `$` pairing with a real math `$`
+ * further down the text ("revenue (in $1000s) … | Interval $h$ |"): feeding it
+ * to KaTeX escapes the `<table>` opening tags into visible text and the table
+ * never renders. Inline math never crosses a line or a cell boundary, so leave
+ * such a span literal; display math may hold line breaks but never table tags.
+ */
+const INLINE_MARKUP = /<br>|<\/?(?:table|thead|tbody|tr|th|td)\b/
+const TABLE_MARKUP = /<\/?(?:table|thead|tbody|tr|th|td)\b/
+
 /** A markdown table's `| --- | --- |` separator line. */
 const TABLE_SEPARATOR = /^\s*\|?\s*[-:]+[-:|  ]+\s*$/m
 
@@ -215,6 +226,45 @@ function emphasisIntact(html: string): boolean {
   )
 }
 
+const INLINE_MATH = /(?<!\\)\$((?:[^$\\]|\\.)+)\$/g
+
+/**
+ * Step 4b: inline `$…$` spans. A span that is really currency/prose, or that
+ * swallowed an emphasis tag or table/line-break markup, is NOT math and stays
+ * literal — but only its OPENING `$` is skipped; scanning resumes right after
+ * it, so the closing `$` can still open the real math span that follows.
+ * (A regex `replace` that returned the match consumed both dollars, so
+ * "(in $1000s) … | $h$ | $0.05$ |" left every later span paired wrong.)
+ */
+function renderInlineMath(text: string): string {
+  let out = ''
+  let i = 0
+  while (i < text.length) {
+    INLINE_MATH.lastIndex = i
+    const m = INLINE_MATH.exec(text)
+    if (!m) {
+      out += text.slice(i)
+      break
+    }
+    const latex = m[1]
+    // Leave currency/prose ("$2 and a notebook costs $5") literal — not math.
+    // A span that swallowed an emphasis tag is a bare currency `$` pairing with
+    // a real one ("**\$10 million**" … "so $\$1$M"), not math: feeding it to
+    // KaTeX would escape the tag into visible `&lt;strong&gt;` text.
+    if (looksLikeCurrencyProse(latex) || EMPHASIS_TAG.test(latex) || INLINE_MARKUP.test(latex)) {
+      out += text.slice(i, m.index + 1)
+      i = m.index + 1
+      continue
+    }
+    let rendered: string
+    try { rendered = renderKatexSync(latex.trim(), { displayMode: false }) }
+    catch { rendered = latex }
+    out += text.slice(i, m.index) + rendered
+    i = m.index + m[0].length
+  }
+  return out
+}
+
 export function renderRichText(text: string): string {
   const html = renderPipeline(text, true)
   // Safety net: in a handful of authored strings a bare currency `$` pairs with
@@ -244,20 +294,11 @@ function renderPipeline(text: string, emphasis: boolean): string {
   // lookbehind, "fee of \$25 plus \$15 a month" opened a math span at the first
   // `\$` and typeset the whole sentence as KaTeX.
   result = result.replace(/(?<!\\)\$\$((?:[^$\\]|\\.)+)\$\$/g, (match, latex) => {
-    if (EMPHASIS_TAG.test(latex)) return match
+    if (EMPHASIS_TAG.test(latex) || TABLE_MARKUP.test(latex)) return match
     try { return renderKatexSync(latex.trim(), { displayMode: true }) }
     catch { return latex }
   })
-  result = result.replace(/(?<!\\)\$((?:[^$\\]|\\.)+)\$/g, (match, latex) => {
-    // Leave currency/prose ("$2 and a notebook costs $5") literal — not math.
-    if (looksLikeCurrencyProse(latex)) return match
-    // A span that swallowed an emphasis tag is a bare currency `$` pairing with
-    // a real one ("**\$10 million**" … "so $\$1$M"), not math: feeding it to
-    // KaTeX would escape the tag into visible `&lt;strong&gt;` text.
-    if (EMPHASIS_TAG.test(latex)) return match
-    try { return renderKatexSync(latex.trim(), { displayMode: false }) }
-    catch { return latex }
-  })
+  result = renderInlineMath(result)
 
   // Step 5: honor the CommonMark `\$` escape, the way remark does on the
   // ReactMarkdown surfaces. Authors escape prose currency (`\$40,000`) because

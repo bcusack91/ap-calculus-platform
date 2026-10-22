@@ -71,7 +71,9 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
   const [showReview, setShowReview] = useState(false)
   const [submitting, setSubmitting] = useState(false)
   const pollingRef = useRef<ReturnType<typeof setInterval> | null>(null)
-  const [katexLoaded, setKatexLoaded] = useState(false)
+  // Re-render trigger only: renderRichText shows raw TeX until the lazily
+  // loaded KaTeX module resolves (tables and bold render at once).
+  const [, setKatexLoaded] = useState(false)
 
   useEffect(() => {
     preloadKatex().then(() => { setKatexLoaded(true) })
@@ -212,7 +214,6 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
   }
 
   function renderMath(text: string) {
-    if (!katexLoaded) return text
     return renderRichText(text)
   }
 
