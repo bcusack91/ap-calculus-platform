@@ -7,6 +7,12 @@
  * the read path uses (the adopt route's `courseSlug`).
  *
  *   npx tsx prisma/import-study-plan-templates.ts
+ *   npx tsx prisma/import-study-plan-templates.ts --dry-run
+ *   npx tsx prisma/import-study-plan-templates.ts --courses=ap-calculus-ab,ap-calculus-bc
+ *
+ * --courses limits the run to those course slugs. Import a course only once
+ * its template file links to live topics: a template task whose topicSlug no
+ * longer exists becomes an unlinked checkbox in every plan adopted from it.
  */
 import type { Prisma } from '@prisma/client'
 import { prisma } from '../src/lib/prisma'
@@ -75,10 +81,23 @@ const SOURCES: { courseSlug: string; plans: StudyPlanTemplate[] }[] = [
   { courseSlug: 'precalculus', plans: PRECALCULUS_PLANS },
 ]
 
+const DRY_RUN = process.argv.includes('--dry-run')
+const ONLY = (process.argv.find((a) => a.startsWith('--courses='))?.slice('--courses='.length) ?? '')
+  .split(',')
+  .map((c) => c.trim())
+  .filter(Boolean)
+
 async function main() {
   let created = 0
   let updated = 0
-  for (const { courseSlug, plans } of SOURCES) {
+  const unknown = ONLY.filter((c) => !SOURCES.some((s) => s.courseSlug === c))
+  if (unknown.length) throw new Error(`--courses: no templates for ${unknown.join(', ')}`)
+  const sources = ONLY.length ? SOURCES.filter((s) => ONLY.includes(s.courseSlug)) : SOURCES
+  for (const { courseSlug, plans } of sources) {
+    if (DRY_RUN) {
+      console.log(`[dry run] ${courseSlug}: ${plans.length} template(s) — ${plans.map((p) => p.id).join(', ')}`)
+      continue
+    }
     for (const plan of plans) {
       const payload = plan as unknown as Prisma.InputJsonValue
       const res = await prisma.contentItem.upsert({
@@ -99,7 +118,8 @@ async function main() {
       else updated++
     }
   }
-  console.log(`Study-plan templates imported across ${SOURCES.length} courses — created: ${created}, updated: ${updated}`)
+  if (DRY_RUN) { console.log(`[dry run] ${sources.length} course(s); nothing written`); return }
+  console.log(`Study-plan templates imported across ${sources.length} courses — created: ${created}, updated: ${updated}`)
 }
 
 main()

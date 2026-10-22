@@ -29,6 +29,10 @@ jobs:
 
       - name: Typecheck
         run: npm run typecheck
+        # tsc on this repo needs more than Node's default ~4 GB heap (it was
+        # OOM-killed 2026-10-22); the build job already runs with 12 GB.
+        env:
+          NODE_OPTIONS: "--max-old-space-size=12288"
 
   content-audit:
     name: Content Rendering Audit
