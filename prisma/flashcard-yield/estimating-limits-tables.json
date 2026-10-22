@@ -18,12 +18,6 @@
   "why": "Unbounded table values; restatement"
  },
  {
-  "front": "What indicates that a limit exists when using a table of values?",
-  "fp": "fb93bfe86586",
-  "yield": "MEDIUM",
-  "why": "Restates table-limit existence"
- },
- {
   "front": "When using tables to estimate limits, what two directions should you always check?",
   "fp": "e11a8b8098ac",
   "yield": "MEDIUM",

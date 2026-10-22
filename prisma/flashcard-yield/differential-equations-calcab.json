@@ -12,6 +12,12 @@
   "why": "CED 7.3 equilibrium solutions in slope field"
  },
  {
+  "front": "Is $\\dfrac{dy}{dx} = xy + x$ separable? Why?",
+  "fp": "e0d7c77a3423",
+  "yield": "MEDIUM",
+  "why": "Recognizing separable ODEs; secondary"
+ },
+ {
   "front": "Solve $\\dfrac{dy}{dx} = \\dfrac{x}{y}$ with $y(0) = 4$.",
   "fp": "4abe6f02fbd4",
   "yield": "HIGH",
@@ -22,11 +28,5 @@
   "fp": "31da1328f074",
   "yield": "MEDIUM",
   "why": "General solution by integration; basic"
- },
- {
-  "front": "Which ODE is separable?",
-  "fp": "4f4dfd034f02",
-  "yield": "MEDIUM",
-  "why": "Recognizing separable ODEs; secondary"
  }
 ]

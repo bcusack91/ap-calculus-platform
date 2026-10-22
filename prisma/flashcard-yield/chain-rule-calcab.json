@@ -12,6 +12,12 @@
   "why": "CED 3.1 chain rule with e^u"
  },
  {
+  "front": "How do you differentiate a triple composite such as $\\sqrt{\\sin(3x)}$?",
+  "fp": "3109f4483717",
+  "yield": "HIGH",
+  "why": "CED 3.1 triple composite"
+ },
+ {
   "front": "If $h(x) = f(g(x))$, $g(3) = 7$, $g'(3) = 4$, and $f'(7) = -2$, then $h'(3) = $",
   "fp": "b2b7f1981844",
   "yield": "HIGH",
@@ -46,5 +52,23 @@
   "fp": "a3e06aad9335",
   "yield": "MEDIUM",
   "why": "Chain rule example; restatement"
+ },
+ {
+  "front": "What is a common mistake when using the Chain Rule?",
+  "fp": "be3e7ab0b1fd",
+  "yield": "MEDIUM",
+  "why": "Chain rule mistake; study tip"
+ },
+ {
+  "front": "When should you use the Chain Rule?",
+  "fp": "46df07c48ad2",
+  "yield": "MEDIUM",
+  "why": "When to use the chain rule; restatement"
+ },
+ {
+  "front": "Write the Chain Rule in Leibniz notation.",
+  "fp": "abf3eb6335b2",
+  "yield": "HIGH",
+  "why": "CED 3.1 chain rule in Leibniz form"
  }
 ]

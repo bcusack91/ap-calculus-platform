@@ -1,15 +1,15 @@
 [
  {
-  "front": "A linear approximation overestimates $f$ when $f$ is:",
-  "fp": "1fde6be1604d",
-  "yield": "HIGH",
-  "why": "CED 4.6 overestimate when concave down"
+  "front": "Give an important small-angle approximation.",
+  "fp": "231c62f451c4",
+  "yield": "MEDIUM",
+  "why": "CED 4.6 tangent line to sin x at 0"
  },
  {
-  "front": "Linearize $f(x) = \\sqrt{x}$ at $a = 25$. $L(x) = $",
-  "fp": "eaa766d33534",
-  "yield": "MEDIUM",
-  "why": "Linearization example; restatement"
+  "front": "If $f$ is concave up near $x = a$, does the tangent line approximation overestimate or underestimate $f(x)$?",
+  "fp": "476b1d37f172",
+  "yield": "HIGH",
+  "why": "CED 4.6 over/under from concavity"
  },
  {
   "front": "The linearization of $f(x) = \\sqrt{x}$ at $a = 25$ is used to approximate $\\sqrt{26}$. The approximation is:",
@@ -18,15 +18,21 @@
   "why": "Linearization estimate; restatement"
  },
  {
-  "front": "The linearization of $f$ at $x = a$ is:",
-  "fp": "cf8856af2f6a",
-  "yield": "MEDIUM",
-  "why": "Restates linearization formula"
+  "front": "Use linear approximation to estimate $\\sqrt{4.1}$.",
+  "fp": "531a81d9bb6a",
+  "yield": "HIGH",
+  "why": "CED 4.6 linear approximation example"
  },
  {
   "front": "What is the linearization $L(x)$ of $f$ at $x = a$, and what is it used for?",
-  "fp": "b7c81e229b25",
-  "yield": "HIGH",
-  "why": "CED 4.6 linearization and dy"
+  "fp": "4d36c3fa8297",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.6 tangent-line approximation; FRQ staple"
+ },
+ {
+  "front": "Why does linear approximation work?",
+  "fp": "27405acaf6c5",
+  "yield": "MEDIUM",
+  "why": "Why linearization works; conceptual aside"
  }
 ]

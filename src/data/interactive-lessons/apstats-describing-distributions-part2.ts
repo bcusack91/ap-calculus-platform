@@ -62,7 +62,7 @@ Data: 1, 2, 2, 3, 3, 3, 4, 4, 5
 |-----------|------|
 | **Stem** | Leading digit(s) |
 | **Leaf** | Trailing digit |
-| **Key** | Tells how to read the values (e.g., 3|5 = 35) |
+| **Key** | Tells how to read the values (e.g., 3\\|5 = 35) |
 
 **Example:** Ages: 21, 23, 25, 31, 34, 38, 42, 45
 

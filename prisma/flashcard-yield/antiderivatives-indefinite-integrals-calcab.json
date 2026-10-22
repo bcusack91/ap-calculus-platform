@@ -30,9 +30,57 @@
   "why": "CED 6.8 antiderivative with initial condition"
  },
  {
+  "front": "What are the antiderivatives of $\\sin x$ and $\\cos x$?",
+  "fp": "c6e7bb5a71a6",
+  "yield": "HIGH",
+  "why": "CED 6.8 antiderivatives of sin and cos"
+ },
+ {
+  "front": "What are the constant multiple and sum rules for integrals?",
+  "fp": "ccc2b1f0934e",
+  "yield": "HIGH",
+  "why": "CED 6.8 linearity of integrals"
+ },
+ {
+  "front": "What does the notation $\\int f(x)\\,dx$ mean?",
+  "fp": "ca7e793bc95f",
+  "yield": "MEDIUM",
+  "why": "Integral notation; notation"
+ },
+ {
   "front": "What is $\\displaystyle\\int (3x^2 + 2x)\\,dx$?",
   "fp": "37bc05a03306",
   "yield": "MEDIUM",
   "why": "Power rule integral example; restatement"
+ },
+ {
+  "front": "What is an antiderivative?",
+  "fp": "87a4a238067c",
+  "yield": "HIGH",
+  "why": "CED 6.8 antiderivative definition"
+ },
+ {
+  "front": "What is the antiderivative of $\\frac{1}{x}$?",
+  "fp": "056f7dde3bb9",
+  "yield": "HIGH",
+  "why": "CED 6.8 integral of 1/x is ln of abs x"
+ },
+ {
+  "front": "What is the power rule for antiderivatives?",
+  "fp": "6f763b1402c9",
+  "yield": "HIGH",
+  "why": "CED 6.8 power rule for antiderivatives"
+ },
+ {
+  "front": "Why can't we use the product rule backwards for integrals?",
+  "fp": "87c67674f1cd",
+  "yield": "MEDIUM",
+  "why": "No product rule for integrals; aside"
+ },
+ {
+  "front": "Why do we add +C to antiderivatives?",
+  "fp": "c52759e2c96a",
+  "yield": "MEDIUM",
+  "why": "Why +C; restatement"
  }
 ]

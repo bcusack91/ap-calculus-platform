@@ -1,9 +1,39 @@
 [
  {
   "topicSlug": "applications-of-derivatives-calcab",
+  "front": "Can a critical point NOT be an extremum?",
+  "back": "Yes! A critical point is only a candidate. If $f'$ does not change sign there, the point is neither a max nor a min — e.g. $f(x) = x^3$ at $x = 0$, where $f'(0) = 0$ but $f$ keeps increasing. Confirm with the First Derivative Test (the Second Derivative Test is inconclusive when $f''(c) = 0$, as here).",
+  "hint": "Critical points are candidates, not guarantees"
+ },
+ {
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "Can the First Derivative Test be applied at a point where $f'$ is undefined?",
+  "back": "Yes — points where $f'$ is undefined are critical points too, as long as $f$ itself is defined and continuous there. For $f(x) = |x|$, $f'$ jumps from $-1$ to $+1$ at $x = 0$, so $f(0) = 0$ is a local minimum.",
+  "hint": "Find critical points → test signs → check changes"
+ },
+ {
+  "topicSlug": "applications-of-derivatives-calcab",
   "front": "How do you find critical points of $f$?",
   "back": "Solve $f'(x)=0$ and locate where $f'(x)$ is undefined, then keep only the $x$-values that are in the domain of $f$. Example: $f(x)=x^{2/3}$ has a critical point at $x=0$ because $f'(0)$ is undefined but $f(0)=0$ exists.",
   "hint": "Set the first derivative equal to zero."
+ },
+ {
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "How do you find inflection points?",
+  "back": "1) Find $f''(x)$. 2) List candidates where $f''(x) = 0$ OR $f''(x)$ is undefined. 3) Test the sign of $f''$ on both sides of each candidate. An inflection point occurs only where concavity actually changes AND $f$ is defined there — so $x = 0$ for $f(x) = 1/x$ does not count.",
+  "hint": "Must check for sign change in the second derivative"
+ },
+ {
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "How do you find the horizontal asymptote of a rational function?",
+  "back": "Compare degrees: if the numerator's degree is less than the denominator's, $y = 0$; if the degrees are equal, $y$ is the ratio of the leading coefficients; if the numerator's degree is larger, there is no horizontal asymptote. Example: $f(x) = \\frac{3x^2+1}{x^2-4}$ has $y = 3$.",
+  "hint": "Compare the degrees of the numerator and denominator"
+ },
+ {
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "How do you identify a local maximum using the First Derivative Test?",
+  "back": "If $f'$ changes from positive to negative at $c$ (+ → −), then $f(c)$ is a local maximum. The function goes from increasing to decreasing.",
+  "hint": "Positive to negative = peak"
  },
  {
   "topicSlug": "applications-of-derivatives-calcab",
@@ -19,35 +49,33 @@
  },
  {
   "topicSlug": "applications-of-derivatives-calcab",
-  "front": "What is L'Hôpital's Rule?",
-  "back": "If $\\lim \\frac{f(x)}{g(x)}$ has indeterminate form $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$, then $\\lim \\frac{f(x)}{g(x)} = \\lim \\frac{f'(x)}{g'(x)}$, provided that second limit exists. Differentiate numerator and denominator separately — do not use the quotient rule.",
-  "hint": "Take derivatives of top and bottom separately."
+  "front": "Use the First Derivative Test to classify the critical points of $f(x) = x^3 - 3x$.",
+  "back": "$f'(x) = 3x^2 - 3 = 3(x-1)(x+1)$. At $x = -1$, $f'$ goes $+ \\to -$: local maximum, $f(-1) = 2$. At $x = 1$, $f'$ goes $- \\to +$: local minimum, $f(1) = -2$.",
+  "hint": "+ to - = max, - to + = min"
  },
  {
-  "topicSlug": "linearization-differentials-calcab",
-  "front": "A linear approximation overestimates $f$ when $f$ is:",
-  "back": "**Concave down**\n\nTangent lies above a concave-down graph."
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "What are the steps for the First Derivative Test?",
+  "back": "1) Find critical points, 2) Create sign chart for $f'(x)$, 3) Test signs in each interval, 4) Look for sign changes: + to − is max, − to + is min",
+  "hint": "Critical points → sign chart → analyze"
  },
  {
-  "topicSlug": "linearization-differentials-calcab",
-  "front": "Linearize $f(x) = \\sqrt{x}$ at $a = 25$. $L(x) = $",
-  "back": "**$5 + \\tfrac{1}{10}(x - 25)$**\n\n$f(25) = 5$, $f'(25) = 1/(2\\sqrt{25}) = 1/10$."
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "What does the sign of $f'(x)$ tell you when sketching a curve?",
+  "back": "If $f'(x) > 0$, the function is increasing (going up). If $f'(x) < 0$, the function is decreasing (going down). Where $f'(x) = 0$, there's a horizontal tangent.",
+  "hint": "Think about the slope of the tangent line"
  },
  {
-  "topicSlug": "linearization-differentials-calcab",
-  "front": "The linearization of $f(x) = \\sqrt{x}$ at $a = 25$ is used to approximate $\\sqrt{26}$. The approximation is:",
-  "back": "**5.1**\n\nL(x) = f(25) + f'(25)(x − 25) = 5 + 1/(2·5)(26 − 25) = 5 + 0.1 = 5.1."
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "What information do you need for curve sketching?",
+  "back": "Domain, intercepts, asymptotes, critical points (f'=0), increasing/decreasing (f'), inflection points (f''=0), concavity (f''), end behavior.",
+  "hint": "Domain, intercepts, f', f'', asymptotes, behavior"
  },
  {
-  "topicSlug": "linearization-differentials-calcab",
-  "front": "The linearization of $f$ at $x = a$ is:",
-  "back": "**$L(x) = f(a) + f'(a)(x - a)$**\n\nTangent line at $a$."
- },
- {
-  "topicSlug": "linearization-differentials-calcab",
-  "front": "What is the linearization $L(x)$ of $f$ at $x = a$, and what is it used for?",
-  "back": "$L(x) = f(a) + f'(a)(x - a)$ — the tangent line at $a$. For $x$ near $a$, $f(x) \\approx L(x)$; equivalently $dy = f'(a)\\,dx$ estimates the change $\\Delta y = f(x) - f(a)$, which is how tangent-line error estimates are made.",
-  "hint": "Think about the key characteristic"
+  "topicSlug": "applications-of-derivatives-calcab",
+  "front": "Why is $x = 0$ a critical point of $f(x) = |x|$?",
+  "back": "$f'(0)$ does not exist — the graph has a corner there — and $0$ is in the domain, so it qualifies. It is also the absolute minimum.",
+  "hint": "Critical point: $f' = 0$ or $f'$ undefined, in the domain"
  },
  {
   "topicSlug": "optimization-calcab",
@@ -58,6 +86,18 @@
   "topicSlug": "optimization-calcab",
   "front": "A rectangle has its base on the $x$-axis and vertices on $y = 4 - x^2$. The maximum area is:",
   "back": "**$\\dfrac{32\\sqrt{3}}{9}$**\n\nArea $= 2x(4-x^2)$. $A'(x) = 8 - 6x^2 = 0 \\Rightarrow x = \\frac{2}{\\sqrt{3}}$. $A = 2 \\cdot \\frac{2}{\\sqrt{3}} \\cdot \\frac{8}{3} = \\frac{32}{3\\sqrt{3}} = \\frac{32\\sqrt{3}}{9}$."
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "A rectangular pen is built against a barn wall using 100 ft of fence on the other three sides. What dimensions maximize the area?",
+  "back": "Sides $x, x, y$ give constraint $2x + y = 100$, so $A = x(100 - 2x)$. Then $A' = 100 - 4x = 0 \\Rightarrow x = 25$ ft and $y = 50$ ft, for a maximum area of 1250 square feet.",
+  "hint": "Variables → constraint → function → derivative → verify"
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "Find the absolute maximum and minimum of $f(x) = x^3 - 3x$ on $[0, 3]$.",
+  "back": "$f'(x) = 3x^2 - 3 = 0$ gives $x = \\pm 1$, and only $x = 1$ lies in $(0,3)$. Evaluate: $f(0) = 0$, $f(1) = -2$, $f(3) = 18$. Absolute max is $18$ at $x = 3$; absolute min is $-2$ at $x = 1$.",
+  "hint": "Critical points + endpoints, compare values"
  },
  {
   "topicSlug": "optimization-calcab",
@@ -73,7 +113,19 @@
   "topicSlug": "optimization-calcab",
   "front": "In an optimization problem, what is the difference between the primary (objective) equation and the constraint equation?",
   "back": "The primary equation gives the quantity being maximized or minimized (area, cost, volume). The constraint relates the variables (fixed perimeter, fixed budget) and is used to rewrite the primary equation in a single variable before differentiating.",
-  "hint": "Think about the key characteristic"
+  "hint": "What is optimized vs. what is held fixed"
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "In an optimization problem, what should you check to verify you have a maximum or minimum?",
+  "back": "Use the Second Derivative Test (check if $f''(c) > 0$ for min or $f''(c) < 0$ for max), OR check endpoints if the domain is closed, OR use First Derivative Test.",
+  "hint": "Don't forget to verify - critical points aren't always extrema!"
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "State the Extreme Value Theorem.",
+  "back": "If $f$ is continuous on a closed interval $[a,b]$, then $f$ has both an absolute maximum and an absolute minimum on $[a,b]$. These extrema occur at critical points or endpoints.",
+  "hint": "Continuous on closed interval guarantees extrema exist"
  },
  {
   "topicSlug": "optimization-calcab",
@@ -81,35 +133,93 @@
   "back": "**$4$**\n\n$f'(x) = 1 - \\frac{4}{x^2} = 0 \\Rightarrow x^2 = 4 \\Rightarrow x = 2$. $f(2) = 2 + 2 = 4$. $f''(2) = \\frac{8}{8} = 1 > 0$, confirmed min."
  },
  {
-  "topicSlug": "particle-motion-calcab",
-  "front": "A particle moves along the x-axis with position $s(t) = t^3 - 6t^2 + 9t$. At what time(s) is the particle at rest?",
-  "back": "**$t = 1$ and $t = 3$**\n\nVelocity v(t) = s'(t) = $3t^{2}$ − 12t + 9 = 3(t − 1)(t − 3) = 0 → t = 1 and t = 3."
+  "topicSlug": "optimization-calcab",
+  "front": "What are the main steps for solving optimization problems?",
+  "back": "1) Identify what to max/min, 2) Draw diagram, 3) Assign variables, 4) Write primary equation, 5) Find constraints, 6) Reduce to one variable, 7) Find derivative and critical points, 8) Verify max/min, 9) Answer question",
+  "hint": "Think: identify, diagram, equations, reduce, differentiate, verify"
  },
  {
-  "topicSlug": "particle-motion-calcab",
-  "front": "For a particle moving along a line, how do velocity and speed differ?",
-  "back": "Velocity $v(t) = x'(t)$ is signed and tells you direction; speed is $|v(t)|$ and is never negative. Speed is increasing exactly when $v(t)$ and $a(t)$ have the same sign.",
-  "hint": "Think about the key characteristic"
+  "topicSlug": "optimization-calcab",
+  "front": "What is a common mistake when answering optimization problems?",
+  "back": "Not answering the actual question! If asked for dimensions, give ALL dimensions. If asked for maximum value, calculate $f(c)$. Always include units and check if your answer makes physical sense.",
+  "hint": "Read what the question is actually asking for"
  },
  {
-  "topicSlug": "particle-motion-calcab",
-  "front": "If a particle's position is $s(t) = t^3 - 9t^2 + 24t$, when is the particle moving to the left?",
-  "back": "**$2 < t < 4$**\n\n$v(t) = 3t^2 - 18t + 24 = 3(t-2)(t-4)$. $v < 0$ when $2 < t < 4$, so the particle moves left on that interval."
+  "topicSlug": "optimization-calcab",
+  "front": "What is the Closed Interval Method for finding absolute extrema?",
+  "back": "1) Find all critical points in $(a,b)$ where $f'(x)=0$ or undefined. 2) Evaluate $f$ at each critical point and both endpoints. 3) Largest value = absolute max, smallest value = absolute min.",
+  "hint": "Check critical points AND endpoints"
  },
  {
-  "topicSlug": "particle-motion-calcab",
-  "front": "If the velocity of a particle is $v(t) = t^2 - 4t + 3$, the particle changes direction at $t = $",
-  "back": "**$t = 1$ and $t = 3$**\n\n$v(t) = (t-1)(t-3) = 0$ at $t = 1, 3$. $v$ changes sign at both, so direction changes at both."
+  "topicSlug": "optimization-calcab",
+  "front": "What's the difference between local and absolute extrema?",
+  "back": "Local extrema are highest/lowest values in a neighborhood (there can be many). Absolute extrema are the highest/lowest values on the whole interval (one value each, possibly attained at more than one point). An absolute extremum at an interior point is also a local one, but one at an endpoint is not: $f(x) = x$ on $[0, 2]$ has its absolute maximum at the endpoint $x = 2$, which is not a local maximum. A local extremum need not be absolute.",
+  "hint": "Local = neighborhood, absolute = entire interval"
  },
  {
-  "topicSlug": "particle-motion-calcab",
-  "front": "The speed of a particle at time $t$ is $|v(t)|$ where $v(t) = t^2 - 4$. The speed is increasing at $t = 3$ because:",
-  "back": "**$v(3) > 0$ and $a(3) > 0$**\n\n$v(3) = 5 > 0$ and $a(t) = 2t$, $a(3) = 6 > 0$. Same sign means speed is increasing."
+  "topicSlug": "optimization-calcab",
+  "front": "Why might you minimize D² instead of D in distance problems?",
+  "back": "Minimizing D² avoids the square root, making differentiation easier. The minimum of D² occurs at the same x as the minimum of D.",
+  "hint": "Easier calculus, same location"
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "Why must you check endpoints for absolute extrema?",
+  "back": "An endpoint can hold the highest or lowest value without being a critical point, because $f'$ need not be zero there — the function is only approached from one side. Example: $f(x) = x$ on $[0,2]$ has no critical points at all, yet its min is $0$ at $x = 0$ and its max is $2$ at $x = 2$.",
+  "hint": "EVT guarantees existence, can be at endpoints"
+ },
+ {
+  "topicSlug": "optimization-calcab",
+  "front": "Why must you reduce the function to one variable before differentiating?",
+  "back": "You can only take derivatives of single-variable functions. Use constraint equations to express all variables in terms of one variable.",
+  "hint": "Use constraints to eliminate extra variables"
+ },
+ {
+  "topicSlug": "second-derivative-test",
+  "front": "If $f''(c) = 0$ at a critical point, does that mean $f$ has no extremum at $c$?",
+  "back": "No — the test is simply inconclusive. $f(x) = x^4$ has $f''(0) = 0$ but a local minimum at $x = 0$, while $f(x) = x^3$ has $f''(0) = 0$ and no extremum at all.",
+  "hint": "f'' = 0 or undefined"
+ },
+ {
+  "topicSlug": "second-derivative-test",
+  "front": "Use the Second Derivative Test to classify the critical points of $f(x) = x^3 - 3x$.",
+  "back": "$f'(x) = 3x^2 - 3 = 0$ gives $x = \\pm 1$, and $f''(x) = 6x$. Since $f''(1) = 6 > 0$, there is a local minimum at $x = 1$; since $f''(-1) = -6 < 0$, there is a local maximum at $x = -1$.",
+  "hint": "f'' > 0 = min, f'' < 0 = max"
+ },
+ {
+  "topicSlug": "second-derivative-test",
+  "front": "What does $f''(c) > 0$ mean for a critical point?",
+  "back": "Positive second derivative means concave up (∪), so $f(c)$ is a **local minimum**. Think: \"cup holds the minimum\".",
+  "hint": "Concave up is a minimum"
+ },
+ {
+  "topicSlug": "second-derivative-test",
+  "front": "What does the Second Derivative Test tell you?",
+  "back": "At a critical point $c$ where $f'(c) = 0$: If $f''(c) > 0$ → local min (concave up), if $f''(c) < 0$ → local max (concave down), if $f''(c) = 0$ → inconclusive.",
+  "hint": "Uses the second derivative to classify critical points"
+ },
+ {
+  "topicSlug": "second-derivative-test",
+  "front": "When does the Second Derivative Test fail?",
+  "back": "When $f''(c) = 0$ **or** $f''(c)$ does not exist — the test then gives no information either way. Fall back on the First Derivative Test and check the sign change of $f'$ across $c$.",
+  "hint": "Zero second derivative = inconclusive"
+ },
+ {
+  "topicSlug": "second-derivative-test",
+  "front": "Which is faster: First Derivative Test or Second Derivative Test?",
+  "back": "Second Derivative Test is faster (just evaluate at one point), but it can fail when $f''(c) = 0$. First Derivative Test always works but requires checking sign changes.",
+  "hint": "Second is faster but can fail"
  },
  {
   "topicSlug": "theorem-applications-calcab",
   "front": "For $f(x) = x^2$ on $[0, 4]$, find the $c$ guaranteed by MVT.",
   "back": "**$c = 2$**\n\nSecant slope: $(16 - 0)/4 = 4$. Set $f'(c) = 2c = 4 \\Rightarrow c = 2$."
+ },
+ {
+  "topicSlug": "theorem-applications-calcab",
+  "front": "Give a real-world example of the Mean Value Theorem.",
+  "back": "If you drive 120 miles in 2 hours (average 60 mph), at some instant during the trip you were going exactly 60 mph. This is guaranteed by MVT!",
+  "hint": "Think about average speed vs. instantaneous speed"
  },
  {
   "topicSlug": "theorem-applications-calcab",
@@ -135,6 +245,6 @@
   "topicSlug": "theorem-applications-calcab",
   "front": "State the Mean Value Theorem, including its hypotheses.",
   "back": "If $f$ is continuous on $[a, b]$ and differentiable on $(a, b)$, then there is some $c$ in $(a, b)$ with $f'(c) = \\frac{f(b) - f(a)}{b - a}$: at some interior point the instantaneous rate of change equals the average rate of change.",
-  "hint": "Think about the key characteristic"
+  "hint": "Continuous on $[a,b]$, differentiable on $(a,b)$"
  }
 ]

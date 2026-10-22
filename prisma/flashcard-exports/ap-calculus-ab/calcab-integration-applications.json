@@ -1,14 +1,44 @@
 [
  {
   "topicSlug": "area-between-curves-calcab",
+  "front": "How do you find the intersection points of two curves?",
+  "back": "Set the functions equal and solve: $f(x) = g(x)$. These intersection points typically serve as the limits of integration. Always verify which function is on top by testing a point between intersections.",
+  "hint": "Set functions equal to each other"
+ },
+ {
+  "topicSlug": "area-between-curves-calcab",
+  "front": "How does area between curves differ from the net value of $\\int_a^b f(x)\\,dx$?",
+  "back": "Integrating (top $-$ bottom) always yields a non-negative area, while $\\int_a^b f(x)\\,dx$ counts regions below the $x$-axis as negative. For total area under a curve that crosses the axis, split at the zeros and add the absolute values.",
+  "hint": "Area counts every region as positive"
+ },
+ {
+  "topicSlug": "area-between-curves-calcab",
   "front": "Set up and evaluate the integral for the area enclosed by $y = 2x$ and $y = x^2$.",
   "back": "They meet where $2x = x^2$, at $x = 0$ and $x = 2$, with $y = 2x$ on top: $A = \\int_0^2 (2x - x^2)\\,dx = \\left[x^2 - \\frac{x^3}{3}\\right]_0^2 = \\frac{4}{3}$.",
-  "hint": "Think about the key characteristic"
+  "hint": "Top minus bottom between the intersections"
  },
  {
   "topicSlug": "area-between-curves-calcab",
   "front": "The area between $y = x^2$ and $y = x$ from $x = 0$ to $x = 1$ is:",
   "back": "**$\\dfrac{1}{6}$**\n\n$\\int_{0}^{1}$ $(x - x^{2})$ dx = [$x^{2}/2$ − $x^{3}/3$]$ {}_{0}^{1}$ = 1/2 − 1/3 = 1/6."
+ },
+ {
+  "topicSlug": "area-between-curves-calcab",
+  "front": "What is the formula for area between two curves?",
+  "back": "$A = \\int_a^b [\\text{top} - \\text{bottom}]\\,dx$ when integrating with respect to $x$, or $A = \\int_c^d [\\text{right} - \\text{left}]\\,dy$ with respect to $y$. Always subtract the lower/left function from upper/right. Find limits by setting functions equal.",
+  "hint": "Upper minus lower, integrated over interval"
+ },
+ {
+  "topicSlug": "area-between-curves-calcab",
+  "front": "When should you split an area integral into multiple parts?",
+  "back": "Split the integral when curves cross in the middle of the region (top/bottom switch positions). Find crossing point by solving $f(x) = g(x)$, then integrate $(f-g)$ on one piece and $(g-f)$ on the other. Add the absolute values.",
+  "hint": "When the top curve changes"
+ },
+ {
+  "topicSlug": "area-between-curves-calcab",
+  "front": "When should you use dy instead of dx for area between curves?",
+  "back": "Use $dy$ (horizontal slices) when: functions are given as $x = f(y)$, horizontal lines cross each curve once, or vertical slices would require splitting into multiple pieces. Formula: $A = \\int_c^d [\\text{right} - \\text{left}]\\,dy$.",
+  "hint": "When horizontal slices are simpler"
  },
  {
   "topicSlug": "integration-applications-calcab",
@@ -39,13 +69,37 @@
   "topicSlug": "integration-applications-calcab",
   "front": "What is the average value of a continuous function $f$ on $[a,b]$?",
   "back": "$f_{avg} = \\frac{1}{b-a}\\int_a^b f(x)\\,dx$ — the height of the rectangle over $[a,b]$ whose area equals the area under $f$.",
-  "hint": "Think about the key characteristic"
+  "hint": "The integral divided by the length of the interval"
+ },
+ {
+  "topicSlug": "volumes-of-revolution-calcab",
+  "front": "Common mistakes with washer method?",
+  "back": "1) Confusing outer/inner (check which curve is farther from axis). 2) Wrong algebra: $R^2 - r^2 \\neq (R-r)^2$, square separately! 3) Forgetting axis location (radius = distance from axis, not just function value). 4) Sign errors (distance always positive).",
+  "hint": "Square separately, distance from axis"
  },
  {
   "topicSlug": "volumes-of-revolution-calcab",
   "front": "Disk method formula (revolving about x-axis)?",
   "back": "$V = \\pi \\int_a^b [f(x)]^2\\,dx$",
   "hint": "Pi times the integral of radius squared."
+ },
+ {
+  "topicSlug": "volumes-of-revolution-calcab",
+  "front": "How do you find outer and inner radii for washer method?",
+  "back": "Outer radius $R$ = distance from axis to curve farther away. Inner radius $r$ = distance from axis to curve closer. If rotating around $y=k$: radius = $|f(x) - k|$. If rotating around $x=h$: radius = $|g(y) - h|$. Both distances are positive!",
+  "hint": "Distance from axis to each curve"
+ },
+ {
+  "topicSlug": "volumes-of-revolution-calcab",
+  "front": "How do you rotate a region around the y-axis?",
+  "back": "Rewrite function as $x = g(y)$, then use $V = \\pi \\int_c^d [g(y)]^2\\,dy$ where $c$ and $d$ are y-values. The radius is now $g(y)$ (horizontal distance from y-axis to curve). Integrate with respect to $y$.",
+  "hint": "Solve for x in terms of y, integrate dy"
+ },
+ {
+  "topicSlug": "volumes-of-revolution-calcab",
+  "front": "How do you set up the washer method when revolving about the y-axis?",
+  "back": "Solve each curve for $x$ in terms of $y$ and integrate in $y$: $V = \\pi \\int_c^d \\left([R(y)]^2 - [r(y)]^2\\right)dy$, where $R(y)$ is the curve farther from the y-axis and $c, d$ are the $y$-limits.",
+  "hint": "Washer = hole, disk = solid"
  },
  {
   "topicSlug": "volumes-of-revolution-calcab",
@@ -59,6 +113,12 @@
  },
  {
   "topicSlug": "volumes-of-revolution-calcab",
+  "front": "The region between $y = x$ and $y = x^2$ on $[0, 1]$ is revolved about the x-axis. Find the volume.",
+  "back": "$y = x$ is the outer radius, $y = x^2$ the inner: $V = \\pi \\int_0^1 (x^2 - x^4)\\,dx = \\pi\\left[\\frac{x^3}{3} - \\frac{x^5}{5}\\right]_0^1 = \\frac{2\\pi}{15}$.",
+  "hint": "π∫[R² - r²] dx"
+ },
+ {
+  "topicSlug": "volumes-of-revolution-calcab",
   "front": "The volume of the solid generated by revolving $y = x$ from $x = 0$ to $x = 3$ about the $x$-axis is:",
   "back": "**$9\\pi$**\n\n$V = \\pi\\int_0^3 x^2\\,dx = \\pi[\\frac{x^3}{3}]_0^3 = 9\\pi$."
  },
@@ -67,5 +127,23 @@
   "front": "Washer method formula?",
   "back": "$V = \\pi \\int_a^b \\left([R(x)]^2 - [r(x)]^2\\right)dx$, where $R$ = outer radius and $r$ = inner radius.",
   "hint": "Subtract the hole from the full disk."
+ },
+ {
+  "topicSlug": "volumes-of-revolution-calcab",
+  "front": "What are common mistakes with the disk method?",
+  "back": "1) Forgetting to square: use $[f(x)]^2$ not $f(x)$. 2) Forgetting $\\pi$. 3) Using wrong variable (x-axis needs dx, y-axis needs dy). 4) Using diameter instead of radius. Volume should always have $\\pi$ and cubic units.",
+  "hint": "Square the radius, include pi, match variable to axis"
+ },
+ {
+  "topicSlug": "volumes-of-revolution-calcab",
+  "front": "What's the difference between disk and washer methods?",
+  "back": "Disk: one curve, solid (no hole), $V = \\pi \\int [R]^2\\,dx$. Washer: two curves, hollow solid, $V = \\pi \\int [R^2 - r^2]\\,dx$. Disk method is special case of washer where inner radius $r = 0$. Use washer when region is between two curves.",
+  "hint": "Washer has inner and outer radius"
+ },
+ {
+  "topicSlug": "volumes-of-revolution-calcab",
+  "front": "When rotating about a horizontal line y = k, what is the radius?",
+  "back": "R(x) = |f(x) - k|, the vertical distance from the curve to the line y = k.",
+  "hint": "Distance from curve to axis"
  }
 ]

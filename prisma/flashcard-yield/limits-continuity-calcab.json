@@ -66,22 +66,10 @@
   "why": "One-sided limit notation; notation only"
  },
  {
-  "front": "Rational function as $x \\to \\infty$ — degree(num) < degree(den)",
-  "fp": "46f732502a13",
-  "yield": "MEDIUM",
-  "why": "Restates lower-degree rule"
- },
- {
   "front": "Rational function as $x \\to \\infty$ — degree(num) = degree(den)",
   "fp": "800a11cdb5f4",
   "yield": "MEDIUM",
   "why": "Restates equal-degree rule"
- },
- {
-  "front": "Rational function as $x \\to \\infty$ — degree(num) > degree(den)",
-  "fp": "bcda15483649",
-  "yield": "MEDIUM",
-  "why": "Restates higher-degree rule"
  },
  {
   "front": "Removable discontinuity",
@@ -114,28 +102,10 @@
   "why": "Three things a limit can do; survey"
  },
  {
-  "front": "Three-part definition of continuity at $x = a$",
-  "fp": "51afd623547a",
-  "yield": "HIGH",
-  "why": "CED 1.12 three-part continuity definition"
- },
- {
-  "front": "What does L'Hôpital's Rule let you do with a $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$ limit?",
-  "fp": "fe1ff036d618",
-  "yield": "MEDIUM",
-  "why": "Restates L'Hospital's rule"
- },
- {
   "front": "What must you show to prove a piecewise function is continuous at its break point $x = c$?",
   "fp": "c1596d151d76",
   "yield": "ULTRA_HIGH",
   "why": "CED 1.12 piecewise continuity justification; FRQ staple"
- },
- {
-  "front": "When does a limit exist?",
-  "fp": "5cdae6a43e91",
-  "yield": "HIGH",
-  "why": "CED 1.5 limit exists when one-sided limits agree"
  },
  {
   "front": "Why limits matter in the rest of calculus",

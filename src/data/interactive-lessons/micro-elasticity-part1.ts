@@ -22,13 +22,13 @@ export const microElasticityPart1Data = {
 
 **PED = % Change in Quantity Demanded ÷ % Change in Price**
 
-| |Ed| Value | Type | Meaning |
+| \\|Ed\\| Value | Type | Meaning |
 |---|---|---|
-| |Ed| > 1 | **Elastic** | Quantity changes MORE than price (consumers are responsive) |
-| |Ed| < 1 | **Inelastic** | Quantity changes LESS than price (consumers are unresponsive) |
-| |Ed| = 1 | **Unit elastic** | Quantity changes by same % as price |
-| |Ed| = 0 | **Perfectly inelastic** | Vertical demand curve — quantity doesn't change at all |
-| |Ed| = ∞ | **Perfectly elastic** | Horizontal demand curve — consumers buy nothing above a certain price |
+| \\|Ed\\| > 1 | **Elastic** | Quantity changes MORE than price (consumers are responsive) |
+| \\|Ed\\| < 1 | **Inelastic** | Quantity changes LESS than price (consumers are unresponsive) |
+| \\|Ed\\| = 1 | **Unit elastic** | Quantity changes by same % as price |
+| \\|Ed\\| = 0 | **Perfectly inelastic** | Vertical demand curve — quantity doesn't change at all |
+| \\|Ed\\| = ∞ | **Perfectly elastic** | Horizontal demand curve — consumers buy nothing above a certain price |
 
 ### Determinants of Elasticity
 

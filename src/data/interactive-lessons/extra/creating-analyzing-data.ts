@@ -57,10 +57,10 @@ As people answer, we record each answer with a **tally mark** — a single strai
 
 | Tally | Number |
 |-------|--------|
-| | | | 3 |
-| | | | | | 4 |
+| \\| \\| \\| | 3 |
+| \\| \\| \\| \\| | 4 |
 | 卌 (a bundle) | 5 |
-| 卌 | | | 7 |
+| 卌 \\| \\| | 7 |
 | 卌 卌 | 10 |
 
 So a bundle of five plus two more straight lines means $5 + 2 = 7$.
@@ -123,7 +123,7 @@ Once we finish tallying, we copy the totals into a **frequency table**. *Frequen
 
 | Fruit | Tally | Frequency |
 |-------|-------|-----------|
-| Apple | 卌 | | | 8 |
+| Apple | 卌 \\| \\| \\| | 8 |
 | Banana | 卌 | 6 |
 | Grapes | 卌 卌 | 10 |
 

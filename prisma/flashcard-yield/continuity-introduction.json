@@ -6,12 +6,6 @@
   "why": "CED 1.10 limit exists but discontinuous"
  },
  {
-  "front": "Name three types of functions that are continuous everywhere on their domains.",
-  "fp": "26b12668bbf4",
-  "yield": "MEDIUM",
-  "why": "Continuous function families; secondary"
- },
- {
   "front": "What are the three conditions for a function to be continuous at x = a?",
   "fp": "36fb6c83d088",
   "yield": "ULTRA_HIGH",
@@ -30,8 +24,8 @@
   "why": "CED 1.13 rational discontinuities"
  },
  {
-  "front": "Why is $f(x) = \\frac{x^2 - 9}{x - 3}$ discontinuous at $x = 3$?",
-  "fp": "22808495d5f7",
+  "front": "Why is $f(x) = \\frac{x^2 - 16}{x - 4}$ discontinuous at $x = 4$?",
+  "fp": "1950ca6aab21",
   "yield": "HIGH",
   "why": "CED 1.11 removable discontinuity example"
  }

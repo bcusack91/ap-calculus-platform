@@ -6,12 +6,6 @@
   "why": "CED 1.15/4.7 growth rates at infinity"
  },
  {
-  "front": "For a rational function where the degrees of numerator and denominator are equal, what is the limit at infinity?",
-  "fp": "7ab3f354f9ec",
-  "yield": "MEDIUM",
-  "why": "Restates equal-degree rule"
- },
- {
   "front": "How do you find lim(x→∞) of a rational function?",
   "fp": "93612eb3049a",
   "yield": "HIGH",
@@ -19,7 +13,7 @@
  },
  {
   "front": "How does $\\lim_{x \\to \\infty} \\dfrac{p(x)}{q(x)}$ behave when $p$ and $q$ have different degrees?",
-  "fp": "6e92ce7defc7",
+  "fp": "e77ade0efbbe",
   "yield": "HIGH",
   "why": "CED 1.15 unequal degrees at infinity"
  },

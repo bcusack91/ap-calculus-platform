@@ -234,10 +234,10 @@ For the books data $3, 5, 4, 3, 6, 4, 3, 5$:
 
 | Books | Tally | Count |
 |-------|-------|-------|
-| 3 | ||| | 3 |
-| 4 | || | 2 |
-| 5 | || | 2 |
-| 6 | | | 1 |
+| 3 | \\|\\|\\| | 3 |
+| 4 | \\|\\| | 2 |
+| 5 | \\|\\| | 2 |
+| 6 | \\| | 1 |
 
 > 🔑 **Check Your Work:** The counts must add up to the total number of pieces of data. Here $3 + 2 + 2 + 1 = 8$, and there were 8 students. ✓`,
       },

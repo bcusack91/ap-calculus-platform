@@ -16,23 +16,5 @@
   "fp": "ec4f00cc65b7",
   "yield": "HIGH",
   "why": "CED 1.13/1.14 hole vs asymptote"
- },
- {
-  "front": "What characterizes a jump discontinuity?",
-  "fp": "05071fe60897",
-  "yield": "MEDIUM",
-  "why": "Restates jump discontinuity"
- },
- {
-  "front": "What is a removable discontinuity and why is it called \"removable\"?",
-  "fp": "3ec2a09a6b09",
-  "yield": "MEDIUM",
-  "why": "Restates removable discontinuity"
- },
- {
-  "front": "When does an infinite discontinuity occur?",
-  "fp": "0192cd9ff92b",
-  "yield": "MEDIUM",
-  "why": "Restates infinite discontinuity"
  }
 ]

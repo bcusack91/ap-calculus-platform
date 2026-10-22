@@ -1,19 +1,7 @@
 [
  {
-  "front": "Does $\\lim_{x \\to a} f(x) = \\infty$ mean the limit exists?",
-  "fp": "d49595a12fe3",
-  "yield": "MEDIUM",
-  "why": "Infinite limit does not exist; restatement"
- },
- {
-  "front": "How do you determine if an infinite limit is +∞ or -∞?",
-  "fp": "b914a4e72e00",
-  "yield": "HIGH",
-  "why": "CED 1.14 sign of infinite limit"
- },
- {
   "front": "How do you find vertical asymptotes?",
-  "fp": "c1842102eb35",
+  "fp": "aee3cd464069",
   "yield": "HIGH",
   "why": "CED 1.14 finding vertical asymptotes"
  },

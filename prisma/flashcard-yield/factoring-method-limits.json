@@ -24,12 +24,6 @@
   "why": "Substitute after cancelling; restatement"
  },
  {
-  "front": "When you get $\\frac{0}{0}$ from direct substitution, what algebraic technique should you try first?",
-  "fp": "0c189162cada",
-  "yield": "MEDIUM",
-  "why": "Factor first on 0/0; technique tip"
- },
- {
   "front": "Why can we cancel the factor $(x - a)$ when evaluating $\\lim_{x \\to a}$?",
   "fp": "c1190424957e",
   "yield": "MEDIUM",

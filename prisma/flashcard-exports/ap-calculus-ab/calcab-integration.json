@@ -22,13 +22,13 @@
  {
   "topicSlug": "accumulation-functions-calcab",
   "front": "The graph of $f$ is piecewise linear on $[0, 6]$ with $f(0) = 4$, $f(2) = 4$, $f(4) = -2$, $f(6) = -2$. Let $g(x) = \\displaystyle\\int_0^x f(t)\\,dt$. On which interval is $g$ decreasing?",
-  "back": "**$(3, 6)$**\n\n$g'(x) = f(x)$. The function $g$ is decreasing where $f(x) < 0$. The line from $(2,4)$ to $(4,-2)$ crosses zero at $x = \\frac{2(4)+4(2)}{4+2} = \\frac{16}{6}$… actually $f$ goes from $4$ to $-2$ linearly on $[2,4]$, crossing zero at $x = 2 + 2\\cdot\\frac{4}{6} = \\frac{10}{3} \\approx 3.33$. Then $f < 0$ on $(\\frac{10}{3}, 6)$, so $g$ is decreasing on $(3, 6)$ which contains that interval."
+  "back": "**$\\left(\\frac{10}{3},\\, 6\\right)$**\n\n$g'(x) = f(x)$, so $g$ is decreasing where $f(x) < 0$. On $[2, 4]$, $f$ falls linearly from $4$ to $-2$ (slope $-3$): $f(x) = 4 - 3(x - 2)$, which is $0$ at $x = \\frac{10}{3}$. Then $f < 0$ on $\\left(\\frac{10}{3}, 4\\right]$ and $f = -2$ on $[4, 6]$, so $g$ is decreasing on $\\left(\\frac{10}{3}, 6\\right)$."
  },
  {
   "topicSlug": "accumulation-functions-calcab",
   "front": "What does the accumulation function $F(x) = \\int_a^x f(t)\\,dt$ represent, and what is $F'(x)$?",
   "back": "$F(x)$ is the net amount accumulated by the rate $f$ from $a$ to $x$ — the signed area under $f$ on $[a, x]$, with $F(a) = 0$. By the Fundamental Theorem of Calculus, $F'(x) = f(x)$.",
-  "hint": "Think about the key characteristic"
+  "hint": "FTC Part 1: $F' = f$"
  },
  {
   "topicSlug": "antiderivatives-indefinite-integrals-calcab",
@@ -54,12 +54,66 @@
   "topicSlug": "antiderivatives-indefinite-integrals-calcab",
   "front": "If $f'(x) = 6x^2 + \\sec^2 x$ and $f(0) = 4$, find $f(x)$.",
   "back": "Antidifferentiate term by term: $f(x) = 2x^3 + \\tan x + C$. Then $f(0) = 0 + 0 + C = 4$, so $C = 4$ and $f(x) = 2x^3 + \\tan x + 4$.",
-  "hint": "Think about the key characteristic"
+  "hint": "Antidifferentiate, then use $f(0) = 4$ to find $C$"
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "What are the antiderivatives of $\\sin x$ and $\\cos x$?",
+  "back": "$\\int \\cos x\\, dx = \\sin x + C$ and $\\int \\sin x\\, dx = -\\cos x + C$. The minus sign appears because $\\frac{d}{dx}(\\cos x) = -\\sin x$.",
+  "hint": "The derivative of $\\cos x$ is $-\\sin x$"
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "What are the constant multiple and sum rules for integrals?",
+  "back": "Constant Multiple: $\\int k \\cdot f(x)\\,dx = k\\int f(x)\\,dx$. Sum Rule: $\\int [f(x) + g(x)]\\,dx = \\int f(x)\\,dx + \\int g(x)\\,dx$. You can pull out constants and integrate term by term!",
+  "hint": "Linearity properties"
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "What does the notation $\\int f(x)\\,dx$ mean?",
+  "back": "The indefinite integral (antiderivative) of $f(x)$ with respect to $x$. The $\\int$ is the integral symbol, $f(x)$ is the integrand, and $dx$ indicates the variable. Result: $F(x) + C$ where $F'(x) = f(x)$.",
+  "hint": "Antiderivative notation"
  },
  {
   "topicSlug": "antiderivatives-indefinite-integrals-calcab",
   "front": "What is $\\displaystyle\\int (3x^2 + 2x)\\,dx$?",
   "back": "**$x^3 + x^2 + C$**\n\n$\\int 3x^{2}$ dx = $x^{3}$, ∫2x dx = $x^{2}$. So $\\int (3x^{2} + 2x)dx$ = $x^{3}$ + $x^{2}$ + C."
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "What is an antiderivative?",
+  "back": "A function $F(x)$ is an antiderivative of $f(x)$ if $F'(x) = f(x)$. It's the reverse process of differentiation. Example: $F(x) = x^2$ is an antiderivative of $f(x) = 2x$ because $F'(x) = 2x$.",
+  "hint": "The reverse of differentiation"
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "What is the antiderivative of $\\frac{1}{x}$?",
+  "back": "$\\ln|x| + C$. This is a special case because the power rule fails when $n = -1$ (would give division by zero). Must memorize this!",
+  "hint": "Special case - involves natural log"
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "What is the power rule for antiderivatives?",
+  "back": "For $f(x) = x^n$ where $n \\neq -1$: $F(x) = \\frac{x^{n+1}}{n+1} + C$. Add 1 to the exponent, then divide by the new exponent. Don't forget +C!",
+  "hint": "Add 1 to exponent, divide by new exponent"
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "Why can't we use the product rule backwards for integrals?",
+  "back": "There is NO rule like $\\int f(x)g(x)\\,dx = (\\int f(x)\\,dx)(\\int g(x)\\,dx)$. Instead, simplify the product first if possible (like $\\int x \\cdot x^2\\,dx = \\int x^3\\,dx$), or use $u$-substitution when one factor is the derivative of the inside of the other.",
+  "hint": "No product/quotient rules for integrals"
+ },
+ {
+  "topicSlug": "antiderivatives-indefinite-integrals-calcab",
+  "front": "Why do we add +C to antiderivatives?",
+  "back": "Because the derivative of any constant is 0, all functions that differ by a constant have the same derivative. So if $F(x)$ is one antiderivative, then $F(x) + C$ represents ALL antiderivatives (the general solution).",
+  "hint": "Constants disappear when differentiating"
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "Approximate $\\int_0^4 x^2\\,dx$ with a right Riemann sum using $n = 4$.",
+  "back": "$30$. With $\\Delta x = 1$ the right endpoints are $1, 2, 3, 4$, so the sum is $1(1 + 4 + 9 + 16) = 30$ — an overestimate, since the exact value is $\\frac{64}{3} \\approx 21.33$.",
+  "hint": "Sum of rectangle areas"
  },
  {
   "topicSlug": "definite-integrals-calcab",
@@ -81,6 +135,36 @@
  },
  {
   "topicSlug": "definite-integrals-calcab",
+  "front": "How are $\\int_a^b f(x)\\,dx$ and $\\int_b^a f(x)\\,dx$ related?",
+  "back": "$\\int_b^a f(x)\\,dx = -\\int_a^b f(x)\\,dx$ — swapping the limits flips the sign. Related property: $\\int_a^a f(x)\\,dx = 0$.",
+  "hint": "Swapping the limits flips the sign"
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "How does concavity tell you whether the Trapezoidal Rule and Midpoint Rule over- or under-estimate?",
+  "back": "Concave up: the trapezoids lie above the curve, so the Trapezoidal Rule overestimates and the Midpoint Rule underestimates. Concave down: the reverse — trapezoid underestimates, midpoint overestimates.",
+  "hint": "Where you sample in each rectangle"
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "If $g(x) = \\int_a^{u(x)} f(t)\\,dt$, what is $g'(x)$?",
+  "back": "$g'(x) = f(u(x)) \\cdot u'(x)$ — apply the FTC, then the chain rule for the variable upper limit. Example: $\\frac{d}{dx}\\int_0^{x^2} \\sin t\\,dt = 2x\\sin(x^2)$.",
+  "hint": "FTC, then the chain rule on the upper limit"
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "State the Fundamental Theorem of Calculus (Part 1).",
+  "back": "If $f$ is continuous on $[a,b]$ and $F(x) = \\int_a^x f(t)\\,dt$, then $F$ is differentiable and $F'(x) = f(x)$ — differentiating an accumulation function returns the integrand.",
+  "hint": "Differentiating an accumulation function returns the integrand"
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "State the Fundamental Theorem of Calculus (Part 2).",
+  "back": "If $f$ is continuous on $[a,b]$ and $F$ is any antiderivative of $f$, then $\\int_a^b f(x)\\,dx = F(b) - F(a)$: antidifferentiate, evaluate at both limits, and subtract (upper minus lower).",
+  "hint": "Evaluate an antiderivative at both limits and subtract"
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
   "front": "State the Fundamental Theorem of Calculus, Part 1.",
   "back": "If $F(x) = \\int_a^x f(t)\\,dt$, then $F'(x) = f(x)$.",
   "hint": "Derivative of an integral undoes the integral."
@@ -90,6 +174,30 @@
   "front": "State the Fundamental Theorem of Calculus, Part 2.",
   "back": "$\\int_a^b f(x)\\,dx = F(b) - F(a)$, where $F$ is any antiderivative of $f$.",
   "hint": "Evaluate the antiderivative at the bounds."
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "What is a Riemann sum?",
+  "back": "An approximation of the area under a curve using rectangles. Divide $[a,b]$ into $n$ subintervals of width $\\Delta x = \\frac{b-a}{n}$, draw rectangles, and sum their areas. As $n \\to \\infty$, the sum approaches the definite integral.",
+  "hint": "Approximating area with rectangles"
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "What is the Trapezoidal Rule?",
+  "back": "$T_n = \\frac{\\Delta x}{2}[f(x_0) + 2f(x_1) + 2f(x_2) + \\cdots + 2f(x_{n-1}) + f(x_n)]$. Uses trapezoids instead of rectangles. First and last terms get coefficient 1, all middle terms get coefficient 2. Often more accurate than rectangular methods.",
+  "hint": "Trapezoids instead of rectangles"
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "What's the difference between definite and indefinite integrals?",
+  "back": "Indefinite: $\\int f(x)\\,dx = F(x) + C$ (no limits; the result is a family of functions, so $+C$). Definite: $\\int_a^b f(x)\\,dx$ is a number (it has limits and no $+C$): the net signed area between the graph and the $x$-axis, with regions below the axis counted as negative.",
+  "hint": "One has limits and gives a number"
+ },
+ {
+  "topicSlug": "definite-integrals-calcab",
+  "front": "What's the difference between left, right, and midpoint Riemann sums?",
+  "back": "They differ in where the rectangle height is sampled. Left: use $f(x_i)$ at left endpoint. Right: use $f(x_{i+1})$ at right endpoint. Midpoint: use $f(\\frac{x_i+x_{i+1}}{2})$ at midpoint. For increasing functions, left underestimates, right overestimates.",
+  "hint": "Where you sample the height"
  },
  {
   "topicSlug": "u-substitution-calcab",
@@ -111,6 +219,36 @@
   "topicSlug": "u-substitution-calcab",
   "front": "Evaluate $\\displaystyle\\int_0^1 xe^{x^2}\\,dx$.",
   "back": "**$\\dfrac{e-1}{2}$**\n\nLet $u = x^2$, $du = 2x\\,dx$. $\\frac{1}{2}\\int_0^1 e^u\\,du = \\frac{1}{2}[e^u]_0^1 = \\frac{e - 1}{2}$."
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "Evaluate $\\int 2x(x^2+1)^5\\,dx$.",
+  "back": "Let $u = x^2+1$, so $du = 2x\\,dx$. Then $\\int u^5\\,du = \\frac{u^6}{6} + C = \\frac{(x^2+1)^6}{6} + C$.",
+  "hint": "Reverse chain rule"
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "For $\\int \\frac{f'(x)}{f(x)}\\,dx$, what should $u$ be and what's the answer?",
+  "back": "Let $u = f(x)$, then $du = f'(x)dx$. The integral becomes $\\int \\frac{1}{u}du = \\ln|u| + C = \\ln|f(x)| + C$. This is a very common pattern!",
+  "hint": "Derivative over function gives natural log"
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "How do you handle limits with u-substitution in definite integrals?",
+  "back": "Either: 1) Convert limits to u-values and integrate in terms of u, or 2) Integrate in terms of u, substitute back to x, then use original limits.",
+  "hint": "Change limits or substitute back"
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "How do you know when to use u-substitution?",
+  "back": "Look for: 1) A composite function with its derivative present, 2) Fraction where numerator is derivative of denominator, 3) Exponential/trig functions with derivative of exponent/argument. Pattern: $\\int f'(g(x)) \\cdot g'(x)\\,dx$.",
+  "hint": "Composite function plus its derivative"
+ },
+ {
+  "topicSlug": "u-substitution-calcab",
+  "front": "What are the steps for u-substitution?",
+  "back": "1) Choose $u$ (usually inner/composite function), 2) Find $du = u'(x)dx$, 3) Rewrite integral in terms of $u$ and $du$ only, 4) Integrate with respect to $u$, 5) Substitute back to $x$, 6) Add $+C$.",
+  "hint": "Choose u, find du, substitute, integrate, substitute back"
  },
  {
   "topicSlug": "u-substitution-calcab",

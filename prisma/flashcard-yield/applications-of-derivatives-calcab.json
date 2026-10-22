@@ -1,9 +1,39 @@
 [
  {
+  "front": "Can a critical point NOT be an extremum?",
+  "fp": "87eb73c4587d",
+  "yield": "HIGH",
+  "why": "CED 5.4 critical point need not be extremum"
+ },
+ {
+  "front": "Can the First Derivative Test be applied at a point where $f'$ is undefined?",
+  "fp": "4e42e50d9a51",
+  "yield": "MEDIUM",
+  "why": "First derivative test where f' undefined"
+ },
+ {
   "front": "How do you find critical points of $f$?",
   "fp": "e5d81c0c509e",
   "yield": "HIGH",
   "why": "CED 5.4 finding critical points"
+ },
+ {
+  "front": "How do you find inflection points?",
+  "fp": "7850aad76bc0",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.9 inflection points; FRQ justification staple"
+ },
+ {
+  "front": "How do you find the horizontal asymptote of a rational function?",
+  "fp": "c8645889750b",
+  "yield": "HIGH",
+  "why": "CED 1.15 horizontal asymptotes of rationals"
+ },
+ {
+  "front": "How do you identify a local maximum using the First Derivative Test?",
+  "fp": "c499a6405c8c",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 5.4 first derivative test for max"
  },
  {
   "front": "If $f''(x) > 0$ on an interval, $f$ is…",
@@ -18,9 +48,33 @@
   "why": "CED 5.1 MVT statement; FRQ justification"
  },
  {
-  "front": "What is L'Hôpital's Rule?",
-  "fp": "b4df92539ce1",
+  "front": "Use the First Derivative Test to classify the critical points of $f(x) = x^3 - 3x$.",
+  "fp": "afacb75787fd",
   "yield": "HIGH",
-  "why": "CED 4.7 L'Hospital's rule"
+  "why": "CED 5.4 first derivative test example"
+ },
+ {
+  "front": "What are the steps for the First Derivative Test?",
+  "fp": "f6c94d704516",
+  "yield": "HIGH",
+  "why": "CED 5.4 first derivative test steps"
+ },
+ {
+  "front": "What does the sign of $f'(x)$ tell you when sketching a curve?",
+  "fp": "e625c98b4daa",
+  "yield": "HIGH",
+  "why": "CED 5.3 sign of f' and increasing"
+ },
+ {
+  "front": "What information do you need for curve sketching?",
+  "fp": "f06b8951d035",
+  "yield": "MEDIUM",
+  "why": "Curve-sketching checklist; survey card"
+ },
+ {
+  "front": "Why is $x = 0$ a critical point of $f(x) = |x|$?",
+  "fp": "4ce00b39c3d4",
+  "yield": "MEDIUM",
+  "why": "Corner as critical point; secondary example"
  }
 ]

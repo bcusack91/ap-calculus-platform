@@ -119,7 +119,7 @@ If the exam uses one of these, the question supplies the facts and holding.
 | **Devolution** | Transfer of authority from federal to state |
 | **Multiple access points** | Divided power gives stakeholders many places to influence policy (EK 1.9.A.1) |
 | **Federalist No. 39** | Madison: the Constitution is partly national, partly federal — required document (EK 1.7.A.1) |
-| **Conditions of aid** | Federal $ conditioned on state compliance (Dole 1987 — drinking age + highway $) |
+| **Conditions of aid** | Federal \\$ conditioned on state compliance (Dole 1987 — drinking age + highway \\$) |
 | **Crossover sanctions** | Failure to comply in one area triggers loss of funding in different area |
 | **Crosscutting requirements** | Federal regulations across all federal-grant programs (Title VI, Title IX, ADA) |
 

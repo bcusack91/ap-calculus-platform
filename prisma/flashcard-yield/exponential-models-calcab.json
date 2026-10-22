@@ -7,7 +7,7 @@
  },
  {
   "front": "A population $P$ grows at a rate proportional to itself: $\\dfrac{dP}{dt} = kP$. If $P(0) = 100$ and $P(5) = 200$, which equation models $P(t)$?",
-  "fp": "71f0d3e6ace8",
+  "fp": "9191a82c2b27",
   "yield": "HIGH",
   "why": "CED 7.8 exponential model from dP/dt = kP"
  },

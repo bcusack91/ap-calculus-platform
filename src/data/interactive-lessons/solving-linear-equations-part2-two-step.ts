@@ -213,7 +213,7 @@ $$m = 5 \\text{ months}$$
               '$3(n + 2) = 17$'
             ],
             correctAnswer: 1,
-            explanation: '3 notebooks at $n$ each = \\$3n$, plus a \\$2 pen means we add 2. Total is \\$17: \\$3n + 2 = 17$. Solving: \\$3n = 15$, so $n = 5$.'
+            explanation: '3 notebooks at $n$ dollars each cost $3n$ dollars, and the \\$2 pen adds 2. The total is \\$17, so $3n + 2 = 17$. Solving: $3n = 15$, so $n = 5$.'
           },
           {
             question: 'The temperature dropped 3°F per hour from an initial 68°F. After how many hours was it 50°F? Which equation is correct?',

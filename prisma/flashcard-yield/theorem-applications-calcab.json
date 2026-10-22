@@ -6,6 +6,12 @@
   "why": "MVT example; restatement"
  },
  {
+  "front": "Give a real-world example of the Mean Value Theorem.",
+  "fp": "525daa98e57a",
+  "yield": "MEDIUM",
+  "why": "MVT real-world example; restatement"
+ },
+ {
   "front": "If $f$ is continuous on $[0, 4]$, differentiable on $(0, 4)$, and $f(0) = 1$, $f(4) = 9$, the Mean Value Theorem guarantees there is a $c$ in $(0, 4)$ where $f'(c) =$",
   "fp": "bd93c426d205",
   "yield": "HIGH",

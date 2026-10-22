@@ -18,12 +18,6 @@
   "why": "No formula sheet; exam logistics"
  },
  {
-  "front": "The average value of $f$ on $[a,b]$ is:",
-  "fp": "1a57329fd391",
-  "yield": "HIGH",
-  "why": "CED 8.1 average value formula"
- },
- {
   "front": "When the AP exam allows a calculator, you may:",
   "fp": "f3d9e8b0ba8b",
   "yield": "MEDIUM",

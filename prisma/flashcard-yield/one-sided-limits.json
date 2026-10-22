@@ -6,22 +6,16 @@
   "why": "CED 1.5 two-sided limit iff one-sided agree"
  },
  {
+  "front": "For $f(x) = \\frac{|x-2|}{x-2}$: $\\lim_{x \\to 2^-} f(x) = ?$",
+  "fp": "694bcd35f04f",
+  "yield": "MEDIUM",
+  "why": "One-sided limit of |x-2|/(x-2); practice"
+ },
+ {
   "front": "For $f(x) = \\sqrt{x - 3}$: $\\lim_{x \\to 3^+} f(x) = ?$",
   "fp": "6850084645aa",
   "yield": "MEDIUM",
   "why": "One-sided limit of a root; practice"
- },
- {
-  "front": "For a two-sided limit to exist, what must be true about one-sided limits?",
-  "fp": "70125a0c2638",
-  "yield": "MEDIUM",
-  "why": "Restates one-sided agreement"
- },
- {
-  "front": "For the same $f$: $\\lim_{x \\to 2^-} f(x) = ?$",
-  "fp": "bb05ef225725",
-  "yield": "MEDIUM",
-  "why": "One-sided limit of |x-2|/(x-2); practice"
  },
  {
   "front": "Given $f(x) = \\begin{cases} 2x + 1 & \\text{if } x < 3 \\\\ x^2 & \\text{if } x \\geq 3 \\end{cases}$, find the left and right-hand limits as $x \\to 3$.",
@@ -30,21 +24,15 @@
   "why": "CED 1.5 piecewise one-sided limits"
  },
  {
-  "front": "In $\\lim_{x \\to 6^-} f(x)$, the \"$-$\" superscript means:",
-  "fp": "8b209bd73d5e",
-  "yield": "MEDIUM",
-  "why": "Minus superscript meaning; notation"
- },
- {
-  "front": "Same piecewise $f$: $\\lim_{x \\to 2^+} f(x) = ?$",
-  "fp": "851e3352cb00",
+  "front": "Given $f(x) = \\begin{cases} 3x + 1 & \\text{if } x < 2 \\\\ x^2 + 4 & \\text{if } x \\geq 2 \\end{cases}$, find $\\lim_{x \\to 2^+} f(x)$.",
+  "fp": "53beccff05a2",
   "yield": "MEDIUM",
   "why": "Piecewise right-hand limit; practice"
  },
  {
-  "front": "What does the notation $\\lim_{x \\to 5^-} f(x)$ mean?",
-  "fp": "61b3c63024d8",
+  "front": "In $\\lim_{x \\to 6^-} f(x)$, the \"$-$\" superscript means:",
+  "fp": "8b209bd73d5e",
   "yield": "MEDIUM",
-  "why": "Left-hand limit notation; restatement"
+  "why": "Minus superscript meaning; notation"
  }
 ]

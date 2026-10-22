@@ -31,7 +31,7 @@ export const csaBooleanIfPart1Data = {
 | Operator | Name | Behavior | Example |
 |----------|------|----------|---------|
 | \`&&\` | AND | Both must be true | \`age >= 16 && hasLicense\` |
-| \`\|\|\` | OR | At least one must be true | \`day == 6 \|\| day == 7\` |
+| \`\\|\\|\` | OR | At least one must be true | \`day == 6 \\|\\| day == 7\` |
 | \`!\` | NOT | Flips true/false | \`!isRaining\` |
 
 ### Short-Circuit Evaluation
@@ -101,8 +101,8 @@ if (score >= 90) {
 
 | Original | Equivalent |
 |----------|-----------|
-| \`!(A && B)\` | \`!A \|\| !B\` |
-| \`!(A \|\| B)\` | \`!A && !B\` |
+| \`!(A && B)\` | \`!A \\|\\| !B\` |
+| \`!(A \\|\\| B)\` | \`!A && !B\` |
 
 > When you negate a compound boolean: **flip the operator** (AND becomes OR) and **negate each part**.
 

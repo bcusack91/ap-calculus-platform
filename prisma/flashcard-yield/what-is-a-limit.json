@@ -6,24 +6,6 @@
   "why": "CED 1.2 limit independent of f(a)"
  },
  {
-  "front": "True or False: The limit of f(x) as x approaches a must equal f(a).",
-  "fp": "b97b7d7151d2",
-  "yield": "MEDIUM",
-  "why": "Restates limit vs f(a)"
- },
- {
-  "front": "What are limits used for in calculus?",
-  "fp": "a4cd058afc66",
-  "yield": "LOW",
-  "why": "What limits are used for; survey"
- },
- {
-  "front": "What does the notation $\\lim_{x \\to a} f(x) = L$ mean in words?",
-  "fp": "1f803a9c3d3a",
-  "yield": "MEDIUM",
-  "why": "Limit notation in words; basic"
- },
- {
   "front": "When does a limit NOT exist?",
   "fp": "095b5f931750",
   "yield": "HIGH",

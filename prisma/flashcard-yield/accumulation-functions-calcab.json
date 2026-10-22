@@ -25,7 +25,7 @@
  },
  {
   "front": "The graph of $f$ is piecewise linear on $[0, 6]$ with $f(0) = 4$, $f(2) = 4$, $f(4) = -2$, $f(6) = -2$. Let $g(x) = \\displaystyle\\int_0^x f(t)\\,dt$. On which interval is $g$ decreasing?",
-  "fp": "1bf7f420f5bd",
+  "fp": "17cfc2b55673",
   "yield": "ULTRA_HIGH",
   "why": "CED 6.4/5.3 graph of f gives behavior of g = integral"
  },

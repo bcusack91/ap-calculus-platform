@@ -30,6 +30,78 @@
   "why": "CED 2.8 derivative of e^x"
  },
  {
+  "front": "Can you use the sum rule for products like f(x)·g(x)?",
+  "fp": "7293bbee53c8",
+  "yield": "MEDIUM",
+  "why": "Sum rule not for products; study tip"
+ },
+ {
+  "front": "Differentiate $f(x) = \\frac{x^2}{x+1}$.",
+  "fp": "3eb8e10d923a",
+  "yield": "HIGH",
+  "why": "CED 2.9 quotient rule example"
+ },
+ {
+  "front": "Differentiate $f(x) = 5x^4 - 3x^2 + 8$ using the constant multiple and sum rules.",
+  "fp": "ada390443663",
+  "yield": "HIGH",
+  "why": "CED 2.6 term-by-term differentiation"
+ },
+ {
+  "front": "Differentiate $y = x^2 \\sin x$.",
+  "fp": "2c26af4a8787",
+  "yield": "HIGH",
+  "why": "CED 2.9 product rule example"
+ },
+ {
+  "front": "Does the power rule work for negative and fractional exponents?",
+  "fp": "5a659c474b1b",
+  "yield": "HIGH",
+  "why": "CED 2.5 power rule for any real exponent"
+ },
+ {
+  "front": "Does the sum rule also work for differences?",
+  "fp": "9568d96a99f9",
+  "yield": "MEDIUM",
+  "why": "Difference rule; restatement"
+ },
+ {
+  "front": "Find $\\frac{d}{dx}[\\sin(3x)]$",
+  "fp": "47b7f98308d6",
+  "yield": "MEDIUM",
+  "why": "Chain rule with sin(3x); restatement"
+ },
+ {
+  "front": "Find the derivative of $5x^3$",
+  "fp": "31117c4d200f",
+  "yield": "MEDIUM",
+  "why": "Power rule example; basic"
+ },
+ {
+  "front": "How do you write the third derivative and the $n$th derivative?",
+  "fp": "b6ddc759f4c1",
+  "yield": "LOW",
+  "why": "Third/nth derivative notation; trivia"
+ },
+ {
+  "front": "How does the product rule extend to three factors?",
+  "fp": "cc193bfad46f",
+  "yield": "LOW",
+  "why": "Three-factor product rule; rare"
+ },
+ {
+  "front": "If $f'(x) > 0$ and $f''(x) < 0$ on an interval, what is happening to $f$?",
+  "fp": "8137850a2ace",
+  "yield": "HIGH",
+  "why": "CED 5.6 increasing and concave down"
+ },
+ {
+  "front": "If $s(t)$ is position, what are the first and second derivatives?",
+  "fp": "517e7eaf2cdd",
+  "yield": "HIGH",
+  "why": "CED 4.2 s' velocity, s'' acceleration"
+ },
+ {
   "front": "Power Rule: $\\frac{d}{dx}[x^n] = ?$",
   "fp": "2b1418f070b3",
   "yield": "ULTRA_HIGH",
@@ -46,5 +118,95 @@
   "fp": "3b24f3418e0e",
   "yield": "ULTRA_HIGH",
   "why": "CED 2.9 quotient rule"
+ },
+ {
+  "front": "Use the power rule to differentiate $f(x) = \\dfrac{1}{x^3}$.",
+  "fp": "e81ae06fbac4",
+  "yield": "HIGH",
+  "why": "CED 2.5 power rule with negative exponent"
+ },
+ {
+  "front": "Use the power rule to differentiate $f(x) = \\sqrt{x}$.",
+  "fp": "ec2f47c1fd6b",
+  "yield": "HIGH",
+  "why": "CED 2.5 power rule with root"
+ },
+ {
+  "front": "Use the quotient rule to differentiate $y = \\frac{\\sin x}{x}$.",
+  "fp": "4e06a2309267",
+  "yield": "MEDIUM",
+  "why": "Quotient rule example; restatement"
+ },
+ {
+  "front": "What are $\\frac{d}{dx}[\\csc x]$ and $\\frac{d}{dx}[\\cot x]$?",
+  "fp": "a4b1ec1fbde9",
+  "yield": "HIGH",
+  "why": "CED 2.9 derivatives of csc and cot"
+ },
+ {
+  "front": "What are common mistakes with the Quotient Rule?",
+  "fp": "037735adb534",
+  "yield": "MEDIUM",
+  "why": "Quotient rule mistakes; tip"
+ },
+ {
+  "front": "What are d/dx[tan(x)] and d/dx[sec(x)]?",
+  "fp": "961408bddd38",
+  "yield": "HIGH",
+  "why": "CED 2.9 derivatives of tan and sec"
+ },
+ {
+  "front": "What is the Constant Multiple Rule?",
+  "fp": "2b7899029843",
+  "yield": "HIGH",
+  "why": "CED 2.6 constant multiple rule"
+ },
+ {
+  "front": "What is the derivative of a constant?",
+  "fp": "055e990f908a",
+  "yield": "MEDIUM",
+  "why": "Derivative of a constant; basic"
+ },
+ {
+  "front": "What is the notation for the second derivative?",
+  "fp": "12ae7282cf7e",
+  "yield": "MEDIUM",
+  "why": "Second-derivative notation; restatement"
+ },
+ {
+  "front": "What is the Sum Rule for derivatives?",
+  "fp": "cf85cc759774",
+  "yield": "HIGH",
+  "why": "CED 2.6 sum rule"
+ },
+ {
+  "front": "What's a memory trick for the Product Rule?",
+  "fp": "dba20c0a59ab",
+  "yield": "MEDIUM",
+  "why": "Product rule mnemonic; tip"
+ },
+ {
+  "front": "What's the memory trick for the Quotient Rule?",
+  "fp": "13d4fd99dc4b",
+  "yield": "MEDIUM",
+  "why": "Quotient rule mnemonic; tip"
+ },
+ {
+  "front": "When can you avoid using the Quotient Rule?",
+  "fp": "ea29f78a9def",
+  "yield": "MEDIUM",
+  "why": "When to avoid quotient rule; tip"
+ },
+ {
+  "front": "When should you use the Product Rule?",
+  "fp": "5c8ab31fd076",
+  "yield": "MEDIUM",
+  "why": "When to use product rule; restatement"
+ },
+ {
+  "front": "Why can't you just multiply the derivatives: (fg)' = f'·g'?",
+  "fp": "66924a35ed0e",
+  "yield": "MEDIUM",
+  "why": "Why (fg)' is not f'g'; aside"
  }
 ]

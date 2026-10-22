@@ -16,11 +16,6 @@
  },
  {
   "topicSlug": "ap-exam-review-calcab",
-  "front": "The average value of $f$ on $[a,b]$ is:",
-  "back": "**$\\dfrac{1}{b - a} \\int_a^b f(x) dx$**\n\nMean Value Theorem for Integrals."
- },
- {
-  "topicSlug": "ap-exam-review-calcab",
   "front": "When the AP exam allows a calculator, you may:",
   "back": "**Use it for arithmetic, graphing, root-finding, integration, and derivatives at a point**\n\nFour allowed calculator uses: graph, root, derivative-at-a-point, definite integral."
  },
@@ -52,8 +47,8 @@
  {
   "topicSlug": "free-response-strategies-calcab",
   "front": "On an AP Calculus FRQ, what must you write when you use the calculator to evaluate a definite integral?",
-  "back": "Show the setup — the full definite integral with its limits and integrand — and then the numeric value to at least three decimal places. A bare number with no setup earns no points.",
-  "hint": "Think about the key characteristic"
+  "back": "Show the setup (the definite integral with its limits and integrand), then the value correct to three decimal places. A bare number with no setup loses the setup point and risks the answer point.",
+  "hint": "Setup first, then three decimal places"
  },
  {
   "topicSlug": "tables-data-calcab",
@@ -64,7 +59,7 @@
   "topicSlug": "tables-data-calcab",
   "front": "A table gives $f(t)$ at $t = 0, 2, 5, 9$. How do you approximate $\\int_0^9 f(t)\\,dt$ with a trapezoidal sum?",
   "back": "Add one trapezoid per subinterval, each with its own width: $\\frac{2}{2}[f(0)+f(2)] + \\frac{3}{2}[f(2)+f(5)] + \\frac{4}{2}[f(5)+f(9)]$. Never factor out a single $\\frac{\\Delta x}{2}$ when the widths are unequal.",
-  "hint": "Think about the key characteristic"
+  "hint": "Each trapezoid uses its own width"
  },
  {
   "topicSlug": "tables-data-calcab",

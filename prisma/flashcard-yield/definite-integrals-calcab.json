@@ -1,5 +1,11 @@
 [
  {
+  "front": "Approximate $\\int_0^4 x^2\\,dx$ with a right Riemann sum using $n = 4$.",
+  "fp": "522077f4f26c",
+  "yield": "HIGH",
+  "why": "CED 6.2 right Riemann sum example"
+ },
+ {
   "front": "Evaluate $\\int_0^1 e^x\\,dx$.",
   "fp": "2c5e26543041",
   "yield": "MEDIUM",
@@ -18,6 +24,36 @@
   "why": "Definite integral of 1/x; practice"
  },
  {
+  "front": "How are $\\int_a^b f(x)\\,dx$ and $\\int_b^a f(x)\\,dx$ related?",
+  "fp": "e12a11e67494",
+  "yield": "HIGH",
+  "why": "CED 6.6 reversing limits flips sign"
+ },
+ {
+  "front": "How does concavity tell you whether the Trapezoidal Rule and Midpoint Rule over- or under-estimate?",
+  "fp": "6b3d7308b2d1",
+  "yield": "MEDIUM",
+  "why": "Trapezoid/midpoint over/under from concavity; secondary"
+ },
+ {
+  "front": "If $g(x) = \\int_a^{u(x)} f(t)\\,dt$, what is $g'(x)$?",
+  "fp": "633bffe21db8",
+  "yield": "HIGH",
+  "why": "CED 6.4 FTC with variable upper limit"
+ },
+ {
+  "front": "State the Fundamental Theorem of Calculus (Part 1).",
+  "fp": "01306696cc45",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.4 FTC part 1 (core card in this topic)"
+ },
+ {
+  "front": "State the Fundamental Theorem of Calculus (Part 2).",
+  "fp": "bdb9137861c8",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 6.7 FTC part 2 (core card in this topic)"
+ },
+ {
   "front": "State the Fundamental Theorem of Calculus, Part 1.",
   "fp": "d5705e94bc2a",
   "yield": "ULTRA_HIGH",
@@ -28,5 +64,29 @@
   "fp": "cc453f99057a",
   "yield": "ULTRA_HIGH",
   "why": "CED 6.7 FTC part 2"
+ },
+ {
+  "front": "What is a Riemann sum?",
+  "fp": "7623e0a2d39c",
+  "yield": "HIGH",
+  "why": "CED 6.2/6.3 Riemann sum definition"
+ },
+ {
+  "front": "What is the Trapezoidal Rule?",
+  "fp": "130153d885ff",
+  "yield": "HIGH",
+  "why": "CED 6.2 trapezoidal rule"
+ },
+ {
+  "front": "What's the difference between definite and indefinite integrals?",
+  "fp": "55cbc68c6d93",
+  "yield": "MEDIUM",
+  "why": "Definite vs indefinite; restatement"
+ },
+ {
+  "front": "What's the difference between left, right, and midpoint Riemann sums?",
+  "fp": "15bf44499def",
+  "yield": "HIGH",
+  "why": "CED 6.2 left/right/midpoint sums"
  }
 ]

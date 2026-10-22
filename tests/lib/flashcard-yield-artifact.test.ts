@@ -21,7 +21,7 @@ const EXPECTED: Record<string, { topics: number; cards: number }> = {
   'ap-chemistry': { topics: 41, cards: 316 },
   'ap-biology': { topics: 30, cards: 187 },
   'ap-physics-1': { topics: 28, cards: 261 },
-  'ap-calculus-ab': { topics: 67, cards: 408 },
+  'ap-calculus-ab': { topics: 38, cards: 315 },
 }
 
 describe('exam-yield artifact integrity', () => {

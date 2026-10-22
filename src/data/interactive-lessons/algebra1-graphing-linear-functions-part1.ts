@@ -18,7 +18,7 @@ $$m = \\frac{\\text{rise}}{\\text{run}} = \\frac{y_2 - y_1}{x_2 - x_1}$$
 | Positive | / | Line goes up left to right |
 | Negative | \\ | Line goes down left to right |
 | Zero | — | Horizontal line |
-| Undefined | \| | Vertical line |
+| Undefined | \\| | Vertical line |
       `
     },
     {

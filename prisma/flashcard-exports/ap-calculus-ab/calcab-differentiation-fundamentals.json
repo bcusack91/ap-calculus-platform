@@ -31,6 +31,75 @@
  },
  {
   "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Can you use the sum rule for products like f(x)·g(x)?",
+  "back": "No! The sum rule only works for addition and subtraction. Products need the Product Rule"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Differentiate $f(x) = \\frac{x^2}{x+1}$.",
+  "back": "$f'(x) = \\frac{2x(x+1) - x^2(1)}{(x+1)^2} = \\frac{x^2 + 2x}{(x+1)^2}$.",
+  "hint": "(f'g - fg')/g²"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Differentiate $f(x) = 5x^4 - 3x^2 + 8$ using the constant multiple and sum rules.",
+  "back": "$f'(x) = 20x^3 - 6x$. Differentiate term by term, keeping the coefficients out front: $5(4x^3) - 3(2x) + 0$.",
+  "hint": "Pull constant out front"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Differentiate $y = x^2 \\sin x$.",
+  "back": "$y' = 2x\\sin x + x^2\\cos x$, taking $f = x^2$ and $g = \\sin x$ in $f'g + fg'$.",
+  "hint": "f'g + fg'"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Does the power rule work for negative and fractional exponents?",
+  "back": "Yes! The power rule works for any real number exponent: d/dx[xⁿ] = nxⁿ⁻¹"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Does the sum rule also work for differences?",
+  "back": "Yes: $\\frac{d}{dx}[f(x) - g(x)] = f'(x) - g'(x)$, because subtracting is adding $(-1)g(x)$ and the constant multiple rule pulls the $-1$ out.",
+  "hint": "Derivative of sum = sum of derivatives"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Find $\\frac{d}{dx}[\\sin(3x)]$",
+  "back": "$3\\cos(3x)$ - Don't forget the Chain Rule! The derivative of the inside ($3x$) is 3.",
+  "hint": "Use the Chain Rule - multiply by the derivative of the inside"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Find the derivative of $5x^3$",
+  "back": "$15x^2$"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "How do you write the third derivative and the $n$th derivative?",
+  "back": "Third: $f'''(x)$ or $\\frac{d^3y}{dx^3}$. From the fourth on, primes are replaced by a parenthesized superscript: $f^{(4)}(x)$, $f^{(n)}(x)$, or $\\frac{d^ny}{dx^n}$. The parentheses matter — $f^{(4)}(x)$ is the fourth derivative, while $f^4(x)$ means $[f(x)]^4$.",
+  "hint": "Multiple notations: f'', d²y/dx²"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "How does the product rule extend to three factors?",
+  "back": "$(fgh)' = f'gh + fg'h + fgh'$ — differentiate one factor at a time and leave the other two alone.",
+  "hint": "Product of two functions"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "If $f'(x) > 0$ and $f''(x) < 0$ on an interval, what is happening to $f$?",
+  "back": "$f$ is increasing but at a decreasing rate: the graph rises while curving downward (concave down), so it flattens out as it climbs. Sign of $f'$ gives direction; sign of $f''$ gives how that rate is changing.",
+  "hint": "Concavity and acceleration"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "If $s(t)$ is position, what are the first and second derivatives?",
+  "back": "$s'(t) = v(t)$ is velocity (rate of change of position), and $s''(t) = a(t)$ is acceleration (rate of change of velocity).",
+  "hint": "Think about motion: position → velocity → acceleration"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
   "front": "Power Rule: $\\frac{d}{dx}[x^n] = ?$",
   "back": "$nx^{n-1}$",
   "hint": "Bring down the exponent, subtract one."
@@ -48,47 +117,85 @@
   "hint": "Low d-high minus high d-low, over low squared."
  },
  {
-  "topicSlug": "chain-rule-calcab",
-  "front": "$\\frac{d}{dx}[\\ln(g(x))] = ?$",
-  "back": "$\\frac{g'(x)}{g(x)}$",
-  "hint": "Reciprocal of inside times derivative of inside."
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Use the power rule to differentiate $f(x) = \\dfrac{1}{x^3}$.",
+  "back": "Rewrite as $x^{-3}$: $f'(x) = -3x^{-4} = -\\dfrac{3}{x^4}$.",
+  "hint": "Variable→1, constant→0"
  },
  {
-  "topicSlug": "chain-rule-calcab",
-  "front": "$\\frac{d}{dx}[e^{g(x)}] = ?$",
-  "back": "$e^{g(x)} \\cdot g'(x)$",
-  "hint": "Exponential times the derivative of the exponent."
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Use the power rule to differentiate $f(x) = \\sqrt{x}$.",
+  "back": "Rewrite as $x^{1/2}$: $f'(x) = \\tfrac{1}{2}x^{-1/2} = \\dfrac{1}{2\\sqrt{x}}$.",
+  "hint": "Bring down exponent, subtract 1"
  },
  {
-  "topicSlug": "chain-rule-calcab",
-  "front": "If $h(x) = f(g(x))$, $g(3) = 7$, $g'(3) = 4$, and $f'(7) = -2$, then $h'(3) = $",
-  "back": "**$-8$**\n\n$h'(3) = f'(g(3)) \\cdot g'(3) = f'(7) \\cdot 4 = (-2)(4) = -8$."
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Use the quotient rule to differentiate $y = \\frac{\\sin x}{x}$.",
+  "back": "$y' = \\frac{x\\cos x - \\sin x}{x^2}$.",
+  "hint": "Order matters: f'g - fg'"
  },
  {
-  "topicSlug": "chain-rule-calcab",
-  "front": "If $y = (x^3 + 1)^5$, what is $\\dfrac{dy}{dx}$?",
-  "back": "**$15x^2(x^3 + 1)^4$**\n\nChain rule: dy/dx = $5(x^{3}+1)^{4}$ · $3x^{2}$ = $15x^{2}(x^{3}+1)^{4}$."
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "What are $\\frac{d}{dx}[\\csc x]$ and $\\frac{d}{dx}[\\cot x]$?",
+  "back": "$\\frac{d}{dx}[\\csc x] = -\\csc x \\cot x$ and $\\frac{d}{dx}[\\cot x] = -\\csc^2 x$. Every co-function derivative carries a minus sign.",
+  "hint": "sin→cos, cos→-sin"
  },
  {
-  "topicSlug": "chain-rule-calcab",
-  "front": "If $y = \\cos^3(2x)$, then $\\dfrac{dy}{dx} = $",
-  "back": "**$-6\\cos^2(2x)\\sin(2x)$**\n\nChain rule twice: $3\\cos^2(2x) \\cdot (-\\sin(2x)) \\cdot 2 = -6\\cos^2(2x)\\sin(2x)$."
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "What are common mistakes with the Quotient Rule?",
+  "back": "Wrong sign (using + instead of -), forgetting to square the denominator, or getting the order backwards"
  },
  {
-  "topicSlug": "chain-rule-calcab",
-  "front": "State the Chain Rule.",
-  "back": "$\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)$",
-  "hint": "Derivative of outer times derivative of inner."
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "What are d/dx[tan(x)] and d/dx[sec(x)]?",
+  "back": "d/dx[tan(x)] = sec²(x) and d/dx[sec(x)] = sec(x)tan(x)",
+  "hint": "tan→sec², sec→sec·tan"
  },
  {
-  "topicSlug": "chain-rule-calcab",
-  "front": "The derivative of $y = e^{\\sin x}$ is:",
-  "back": "**$e^{\\sin x} \\cos x$**\n\nChain rule: $e^{\\sin x} \\cdot \\cos x$."
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "What is the Constant Multiple Rule?",
+  "back": "d/dx[c·f(x)] = c·f'(x) - you can pull constants out when differentiating"
  },
  {
-  "topicSlug": "chain-rule-calcab",
-  "front": "What is $\\dfrac{d}{dx}[\\sin(3x^2)]$?",
-  "back": "**$6x\\cos(3x^2)$**\n\nChain rule: d/dx [sin(u)] = cos(u)·u', where u = $3x^{2}$, u' = 6x. Answer: 6x $\\cos (3x^{2})$."
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "What is the derivative of a constant?",
+  "back": "0 - constants don't change, so their derivative is always zero"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "What is the notation for the second derivative?",
+  "back": "Prime notation: $f''(x)$ or Leibniz notation: $\\frac{d^2y}{dx^2}$. Note: The 2 in Leibniz notation is NOT an exponent!",
+  "hint": "Two different notations, both commonly used"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "What is the Sum Rule for derivatives?",
+  "back": "d/dx[f(x) + g(x)] = f'(x) + g'(x) - differentiate term by term"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "What's a memory trick for the Product Rule?",
+  "back": "\"First dee-second plus second dee-first\": $(fg)' = f g' + g f'$. Don't borrow \"lo dee hi minus hi dee lo\" — that one is the quotient rule."
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "What's the memory trick for the Quotient Rule?",
+  "back": "\"Low dee-high minus high dee-low, over low squared\" or \"lo d-hi minus hi d-lo, over lo-lo\""
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "When can you avoid using the Quotient Rule?",
+  "back": "When the numerator is a constant (rewrite with negative exponent) or when you can simplify the fraction first"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "When should you use the Product Rule?",
+  "back": "When you have two functions multiplied together and you can't easily simplify them first"
+ },
+ {
+  "topicSlug": "basic-differentiation-rules-calcab",
+  "front": "Why can't you just multiply the derivatives: (fg)' = f'·g'?",
+  "back": "One counterexample settles it: with $f = g = x$, $(fg)' = (x^2)' = 2x$, but $f' \\cdot g' = 1 \\cdot 1 = 1$. The correct rule is $(fg)' = f'g + fg'$."
  },
  {
   "topicSlug": "definition-of-derivative-calcab",
@@ -97,8 +204,19 @@
  },
  {
   "topicSlug": "definition-of-derivative-calcab",
-  "front": "An equivalent limit definition of $f'(a)$ is:",
-  "back": "**$\\lim_{x \\to a} \\dfrac{f(x) - f(a)}{x - a}$**\n\nEquivalent (point-form) definition."
+  "front": "Find the equation of the tangent line to $f(x) = x^2$ at $x = 3$.",
+  "back": "$f'(x) = 2x$, so the slope is $f'(3) = 6$ and the point is $(3, 9)$. Point-slope: $y - 9 = 6(x - 3)$, i.e. $y = 6x - 9$.",
+  "hint": "Slope + point + point-slope form"
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "Geometrically, what does the derivative represent?",
+  "back": "The slope of the tangent line to the curve at that point"
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "How do you find the equation of a tangent line at point (a, f(a))?",
+  "back": "Use point-slope form: y - f(a) = f'(a)(x - a), where f'(a) is the slope"
  },
  {
   "topicSlug": "definition-of-derivative-calcab",
@@ -108,8 +226,46 @@
  },
  {
   "topicSlug": "definition-of-derivative-calcab",
+  "front": "If $V(t)$ is the volume of water in a tank in gallons and $t$ is in minutes, what does $V'(3) = -5$ mean?",
+  "back": "At $t = 3$ minutes the water is draining at 5 gallons per minute. A derivative's units are always output units per input unit.",
+  "hint": "First derivative = velocity, second = acceleration"
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
   "front": "Use the limit definition to find $f'(x)$ for $f(x) = x^2$.",
   "back": "**$2x$**\n\n$\\dfrac{(x+h)^2 - x^2}{h} = 2x + h \\to 2x$."
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "What does $\\frac{dy}{dx}$ mean?",
+  "back": "The derivative of y with respect to x (Leibniz notation), representing the rate of change of y per unit change in x"
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "What does $f'(x)$ notation represent?",
+  "back": "The derivative of f with respect to x (Lagrange or prime notation)"
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "What does it mean for a function to be differentiable at $x = a$?",
+  "back": "The limit $\\lim_{h \\to 0} \\frac{f(a+h) - f(a)}{h}$ exists and is finite, so the graph has one well-defined non-vertical tangent line at $x = a$ — no corner, cusp, vertical tangent, or discontinuity. Differentiable at $a$ implies continuous at $a$, but not the reverse.",
+  "hint": "Rate of change or slope"
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "What does it mean when f'(a) = 0?",
+  "back": "The tangent line is horizontal at that point (a critical point)"
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "What does the symbol $\\frac{d}{dx}$ mean on its own, as in $\\frac{d}{dx}[x^3]$?",
+  "back": "It is the differentiation operator: \"take the derivative with respect to $x$ of whatever follows.\" So $\\frac{d}{dx}[x^3] = 3x^2$.",
+  "hint": "Derivative evaluated at a point"
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "What does the vertical bar notation $\\left.\\frac{dy}{dx}\\right|_{x=a}$ mean?",
+  "back": "The derivative evaluated at x = a (the derivative at that specific point)"
  },
  {
   "topicSlug": "definition-of-derivative-calcab",
@@ -119,39 +275,78 @@
  },
  {
   "topicSlug": "definition-of-derivative-calcab",
+  "front": "What is the difference between a secant line and a tangent line?",
+  "back": "A secant line passes through two points on the curve; the tangent line at a point is the limiting position of those secants as the second point slides in, so it matches the curve's slope there. A tangent can still cross or meet the curve elsewhere — it need not touch at exactly one point."
+ },
+ {
+  "topicSlug": "definition-of-derivative-calcab",
   "front": "What is the limit definition of the derivative?",
   "back": "$f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}$",
   "hint": "Slope of the tangent line as a limit."
  },
  {
-  "topicSlug": "inverse-functions-derivatives-calcab",
-  "front": "$\\dfrac{d}{dx}[\\arctan x] = $",
-  "back": "**$\\dfrac{1}{1 + x^2}$**\n\nStandard derivative of arctangent."
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "What is the physical meaning of the derivative?",
+  "back": "The derivative represents the instantaneous rate of change - how fast one quantity changes with respect to another.",
+  "hint": "Rate of change"
  },
  {
-  "topicSlug": "inverse-functions-derivatives-calcab",
-  "front": "If $f$ is differentiable and $f(a) = b$, what is $(f^{-1})'(b)$?",
-  "back": "$(f^{-1})'(b) = \\frac{1}{f'(a)}$ — the derivative of the inverse at $b$ is the reciprocal of $f'$ at the matching input $a$ (requires $f'(a) \\ne 0$).",
-  "hint": "Think about the key characteristic"
+  "topicSlug": "definition-of-derivative-calcab",
+  "front": "Where does a derivative fail to exist?",
+  "back": "Wherever the defining limit fails: at a corner or cusp (left and right slopes disagree), at a vertical tangent (slope is infinite), or at any discontinuity. For example, $f(x) = |x|$ has no derivative at $x = 0$."
  },
  {
-  "topicSlug": "inverse-functions-derivatives-calcab",
-  "front": "If $f$ is one-to-one and differentiable with inverse $g$, then:",
-  "back": "**$g'(x) = \\dfrac{1}{f'(g(x))}$**\n\nInverse function derivative formula."
+  "topicSlug": "derivatives-of-exponential-functions",
+  "front": "Find $\\frac{d}{dx}[\\ln(3x + 1)]$ using the Chain Rule.",
+  "back": "$\\frac{3}{3x+1}$ - Derivative of inside over inside: $\\frac{u'}{u}$",
+  "hint": "Use $\\frac{d}{dx}[\\ln u] = \\frac{u'}{u}$"
  },
  {
-  "topicSlug": "inverse-functions-derivatives-calcab",
-  "front": "If $y = \\tan^{-1}(e^x)$, then $\\dfrac{dy}{dx} = $",
-  "back": "**$\\dfrac{e^x}{1+e^{2x}}$**\n\nChain rule: $\\frac{1}{1+(e^x)^2} \\cdot e^x = \\frac{e^x}{1+e^{2x}}$."
+  "topicSlug": "derivatives-of-exponential-functions",
+  "front": "Find $\\frac{d}{dx}[e^{5x}]$ using the Chain Rule.",
+  "back": "$5e^{5x}$ - The exponential stays the same, multiply by the derivative of the exponent (5)",
+  "hint": "Use Chain Rule: $e^u \\cdot u'$"
  },
  {
-  "topicSlug": "inverse-functions-derivatives-calcab",
-  "front": "What is $\\dfrac{d}{dx}[\\arctan x]$?",
-  "back": "**$\\dfrac{1}{1 + x^2}$**\n\nd/dx [arctan x] = $1/(1 + x^{2})$. This is a standard inverse trig derivative."
+  "topicSlug": "derivatives-of-exponential-functions",
+  "front": "Simplify $\\ln(x^2)$ before differentiating.",
+  "back": "$\\ln(x^2) = 2\\ln x$ (for $x > 0$), so $\\frac{d}{dx}[\\ln(x^2)] = \\frac{2}{x}$",
+  "hint": "Use the power property: $\\ln(a^n) = n\\ln a$"
  },
  {
-  "topicSlug": "inverse-functions-derivatives-calcab",
-  "front": "What is $\\dfrac{d}{dx}[\\arctan(x)]$?",
-  "back": "**$\\dfrac{1}{1+x^2}$**\n\nStandard inverse trig derivative: $\\frac{d}{dx}[\\arctan x] = \\frac{1}{1+x^2}$."
+  "topicSlug": "derivatives-of-exponential-functions",
+  "front": "Simplify: $xe^x + e^x$",
+  "back": "$e^x(x + 1)$ - Always factor out the exponential!",
+  "hint": "Factor out the common $e^x$ term"
+ },
+ {
+  "topicSlug": "derivatives-of-exponential-functions",
+  "front": "What is $\\frac{d}{dx}[\\ln|x|]$?",
+  "back": "$\\frac{1}{x}$ for every $x \\neq 0$. The absolute value extends the rule to negative $x$, which is why $\\int \\frac{1}{x}\\,dx = \\ln|x| + C$.",
+  "hint": "1/x"
+ },
+ {
+  "topicSlug": "derivatives-of-exponential-functions",
+  "front": "What is $\\frac{d}{dx}[2^x]$?",
+  "back": "$2^x \\ln 2$ - For base $a$, the derivative is $a^x \\ln a$",
+  "hint": "Remember the $\\ln a$ factor for bases other than $e$"
+ },
+ {
+  "topicSlug": "derivatives-of-exponential-functions",
+  "front": "What is $\\frac{d}{dx}[3^{2x}]$?",
+  "back": "$2\\ln(3)\\,3^{2x}$. Use $\\frac{d}{dx}[a^u] = a^u \\ln(a) \\cdot u'$ with $a = 3$ and $u = 2x$.",
+  "hint": "aˣ·ln(a)"
+ },
+ {
+  "topicSlug": "derivatives-of-exponential-functions",
+  "front": "What is $\\frac{d}{dx}[x^2 e^x]$?",
+  "back": "$e^x(x^2 + 2x)$. Product rule: $x^2 e^x + e^x(2x)$, then factor out $e^x$.",
+  "hint": "eˣ is special - equals its own derivative"
+ },
+ {
+  "topicSlug": "derivatives-of-exponential-functions",
+  "front": "What is d/dx[logₐ(x)]?",
+  "back": "d/dx[logₐ(x)] = 1/(x·ln(a)). Natural log in denominator!",
+  "hint": "1/(x·ln(a))"
  }
 ]

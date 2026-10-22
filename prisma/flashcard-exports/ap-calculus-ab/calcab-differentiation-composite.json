@@ -1,0 +1,121 @@
+[
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "$\\frac{d}{dx}[\\ln(g(x))] = ?$",
+  "back": "$\\frac{g'(x)}{g(x)}$",
+  "hint": "Reciprocal of inside times derivative of inside."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "$\\frac{d}{dx}[e^{g(x)}] = ?$",
+  "back": "$e^{g(x)} \\cdot g'(x)$",
+  "hint": "Exponential times the derivative of the exponent."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "How do you differentiate a triple composite such as $\\sqrt{\\sin(3x)}$?",
+  "back": "Peel off one layer at a time and multiply every derivative: $\\frac{d}{dx}\\sqrt{\\sin(3x)} = \\frac{1}{2\\sqrt{\\sin(3x)}} \\cdot \\cos(3x) \\cdot 3 = \\frac{3\\cos(3x)}{2\\sqrt{\\sin(3x)}}$.",
+  "hint": "Composite functions"
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "If $h(x) = f(g(x))$, $g(3) = 7$, $g'(3) = 4$, and $f'(7) = -2$, then $h'(3) = $",
+  "back": "**$-8$**\n\n$h'(3) = f'(g(3)) \\cdot g'(3) = f'(7) \\cdot 4 = (-2)(4) = -8$."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "If $y = (x^3 + 1)^5$, what is $\\dfrac{dy}{dx}$?",
+  "back": "**$15x^2(x^3 + 1)^4$**\n\nChain rule: dy/dx = $5(x^{3}+1)^{4}$ · $3x^{2}$ = $15x^{2}(x^{3}+1)^{4}$."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "If $y = \\cos^3(2x)$, then $\\dfrac{dy}{dx} = $",
+  "back": "**$-6\\cos^2(2x)\\sin(2x)$**\n\nChain rule twice: $3\\cos^2(2x) \\cdot (-\\sin(2x)) \\cdot 2 = -6\\cos^2(2x)\\sin(2x)$."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "State the Chain Rule.",
+  "back": "$\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)$",
+  "hint": "Derivative of outer times derivative of inner."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "The derivative of $y = e^{\\sin x}$ is:",
+  "back": "**$e^{\\sin x} \\cos x$**\n\nChain rule: $e^{\\sin x} \\cdot \\cos x$."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "What is $\\dfrac{d}{dx}[\\sin(3x^2)]$?",
+  "back": "**$6x\\cos(3x^2)$**\n\nChain rule: d/dx [sin(u)] = cos(u)·u', where u = $3x^{2}$, u' = 6x. Answer: 6x $\\cos (3x^{2})$."
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "What is a common mistake when using the Chain Rule?",
+  "back": "Forgetting to multiply by the derivative of the inside function. For example, $\\frac{d}{dx}[(2x+1)^3] = 3(2x+1)^2 \\cdot 2$, NOT just $3(2x+1)^2$",
+  "hint": "Don't forget the inside derivative!"
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "When should you use the Chain Rule?",
+  "back": "Use the Chain Rule whenever you have a composite function - a function within another function. Examples: $(2x+1)^3$, $\\sin(5x)$, $e^{x^2}$, $\\sqrt{x^2+1}$",
+  "hint": "Look for functions inside other functions"
+ },
+ {
+  "topicSlug": "chain-rule-calcab",
+  "front": "Write the Chain Rule in Leibniz notation.",
+  "back": "$\\frac{dy}{dx} = \\frac{dy}{du} \\cdot \\frac{du}{dx}$, where $u = g(x)$ is the inside function. For $y = \\sin(x^2)$, set $u = x^2$: $\\frac{dy}{du} = \\cos u$ and $\\frac{du}{dx} = 2x$, so $\\frac{dy}{dx} = 2x\\cos(x^2)$.",
+  "hint": "Outer' · inner'"
+ },
+ {
+  "topicSlug": "implicit-differentiation",
+  "front": "Use implicit differentiation to find $\\frac{dy}{dx}$ for $x^2 + y^2 = 25$.",
+  "back": "Differentiate both sides with respect to $x$: $2x + 2y\\frac{dy}{dx} = 0$. Solve: $\\frac{dy}{dx} = -\\frac{x}{y}$.",
+  "hint": "Multiply by dy/dx"
+ },
+ {
+  "topicSlug": "implicit-differentiation",
+  "front": "What is $\\frac{d}{dx}[xy]$ using implicit differentiation?",
+  "back": "$y + x\\frac{dy}{dx}$ - Use the Product Rule: $(1)(y) + (x)\\frac{dy}{dx}$",
+  "hint": "This is a product of x and y, so use Product Rule"
+ },
+ {
+  "topicSlug": "implicit-differentiation",
+  "front": "What is $\\frac{d}{dx}[y^2]$ using implicit differentiation?",
+  "back": "$2y\\frac{dy}{dx}$ - Remember to multiply by $\\frac{dy}{dx}$ because of the Chain Rule!",
+  "hint": "Don't forget the Chain Rule - y is a function of x"
+ },
+ {
+  "topicSlug": "implicit-differentiation",
+  "front": "What is implicit differentiation?",
+  "back": "A technique for finding dy/dx when y is not explicitly solved for. Differentiate both sides with respect to x, using chain rule for y terms.",
+  "hint": "Differentiate equation, treat y as function of x"
+ },
+ {
+  "topicSlug": "implicit-differentiation",
+  "front": "What is the key difference between explicit and implicit differentiation?",
+  "back": "Explicit: $y$ is isolated (like $y = x^2$). Implicit: $y$ is mixed with $x$ (like $x^2 + y^2 = 25$). With implicit differentiation, we differentiate without solving for $y$ first.",
+  "hint": "Think about whether y is already isolated"
+ },
+ {
+  "topicSlug": "implicit-differentiation",
+  "front": "When is a tangent line horizontal on an implicit curve?",
+  "back": "When $\\frac{dy}{dx} = 0$, which occurs when the numerator of $\\frac{dy}{dx}$ equals zero (and denominator is not zero).",
+  "hint": "Set the derivative equal to zero"
+ },
+ {
+  "topicSlug": "inverse-functions-derivatives-calcab",
+  "front": "$\\dfrac{d}{dx}[\\arctan x] = $",
+  "back": "**$\\dfrac{1}{1 + x^2}$**\n\nStandard derivative of arctangent."
+ },
+ {
+  "topicSlug": "inverse-functions-derivatives-calcab",
+  "front": "If $f$ is differentiable and $f(a) = b$, what is $(f^{-1})'(b)$?",
+  "back": "$(f^{-1})'(b) = \\frac{1}{f'(a)}$ — the derivative of the inverse at $b$ is the reciprocal of $f'$ at the matching input $a$ (requires $f'(a) \\ne 0$).",
+  "hint": "Think about the key characteristic"
+ },
+ {
+  "topicSlug": "inverse-functions-derivatives-calcab",
+  "front": "If $y = \\tan^{-1}(e^x)$, then $\\dfrac{dy}{dx} = $",
+  "back": "**$\\dfrac{e^x}{1+e^{2x}}$**\n\nChain rule: $\\frac{1}{1+(e^x)^2} \\cdot e^x = \\frac{e^x}{1+e^{2x}}$."
+ }
+]

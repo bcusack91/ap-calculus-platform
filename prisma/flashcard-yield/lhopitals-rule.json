@@ -6,12 +6,6 @@
   "why": "Repeated L'Hospital; secondary"
  },
  {
-  "front": "State L'Hôpital's Rule.",
-  "fp": "c9369f820cd1",
-  "yield": "HIGH",
-  "why": "CED 4.7 L'Hospital's rule"
- },
- {
   "front": "What are the two indeterminate forms where L'Hôpital's Rule applies directly?",
   "fp": "41d08a37c863",
   "yield": "HIGH",
@@ -22,6 +16,12 @@
   "fp": "5cac0dbb2f60",
   "yield": "MEDIUM",
   "why": "L'Hospital quotient-rule mistake; study tip"
+ },
+ {
+  "front": "What is L'Hôpital's Rule?",
+  "fp": "b4df92539ce1",
+  "yield": "HIGH",
+  "why": "CED 4.7 L'Hospital's rule"
  },
  {
   "front": "Why must you verify the form is $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$ before applying L'Hôpital's Rule?",

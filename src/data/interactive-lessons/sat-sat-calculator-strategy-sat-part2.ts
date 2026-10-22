@@ -87,7 +87,7 @@ If you type \`y = ax + b\`, Desmos creates sliders for \`a\` and \`b\`. This hel
 |---|---|
 | Exponent | \`^\` (e.g., \`x^2\`) |
 | Square root | \`sqrt()\` |
-| Absolute value | \`abs()\` or use \`|\` key |
+| Absolute value | \`abs()\` or use \`\\|\` key |
 | Pi | \`pi\` |
 | Fraction | Use \`/\` (e.g., \`(2/3)x\`) |
 | Subscript (regression) | \`_\` (e.g., \`y_1\`) |

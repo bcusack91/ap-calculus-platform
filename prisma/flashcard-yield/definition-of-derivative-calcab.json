@@ -6,10 +6,22 @@
   "why": "CED 2.1 limit recognized as a derivative"
  },
  {
-  "front": "An equivalent limit definition of $f'(a)$ is:",
-  "fp": "8fde531e87c7",
-  "yield": "MEDIUM",
-  "why": "Restates alternate derivative definition"
+  "front": "Find the equation of the tangent line to $f(x) = x^2$ at $x = 3$.",
+  "fp": "4958e0149278",
+  "yield": "HIGH",
+  "why": "CED 2.2 tangent line example"
+ },
+ {
+  "front": "Geometrically, what does the derivative represent?",
+  "fp": "f971ab3c996f",
+  "yield": "HIGH",
+  "why": "CED 2.1 derivative as tangent slope"
+ },
+ {
+  "front": "How do you find the equation of a tangent line at point (a, f(a))?",
+  "fp": "a23eafcb7b5b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.2 tangent-line equation"
  },
  {
   "front": "If $f$ is differentiable at $a$, is $f$ continuous at $a$?",
@@ -18,10 +30,52 @@
   "why": "CED 2.4 differentiability implies continuity"
  },
  {
+  "front": "If $V(t)$ is the volume of water in a tank in gallons and $t$ is in minutes, what does $V'(3) = -5$ mean?",
+  "fp": "9325785e7b42",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 4.1 interpret derivative with units; FRQ staple"
+ },
+ {
   "front": "Use the limit definition to find $f'(x)$ for $f(x) = x^2$.",
   "fp": "edabac6c5227",
   "yield": "HIGH",
   "why": "CED 2.2 derivative from the definition"
+ },
+ {
+  "front": "What does $\\frac{dy}{dx}$ mean?",
+  "fp": "b1fd310d6e2c",
+  "yield": "HIGH",
+  "why": "CED 2.1 meaning of dy over dx"
+ },
+ {
+  "front": "What does $f'(x)$ notation represent?",
+  "fp": "aaf45ce4292c",
+  "yield": "MEDIUM",
+  "why": "Meaning of f'(x); notation"
+ },
+ {
+  "front": "What does it mean for a function to be differentiable at $x = a$?",
+  "fp": "b0f3a61223d1",
+  "yield": "HIGH",
+  "why": "CED 2.4 meaning of differentiable"
+ },
+ {
+  "front": "What does it mean when f'(a) = 0?",
+  "fp": "80394ac6d8ff",
+  "yield": "MEDIUM",
+  "why": "f'(a) = 0 horizontal tangent; restatement"
+ },
+ {
+  "front": "What does the symbol $\\frac{d}{dx}$ mean on its own, as in $\\frac{d}{dx}[x^3]$?",
+  "fp": "a8b39e88b5e9",
+  "yield": "MEDIUM",
+  "why": "d/dx operator; notation"
+ },
+ {
+  "front": "What does the vertical bar notation $\\left.\\frac{dy}{dx}\\right|_{x=a}$ mean?",
+  "fp": "b23143844577",
+  "yield": "MEDIUM",
+  "why": "Evaluation-bar notation; notation"
  },
  {
   "front": "What is the alternative form of the derivative at $x = a$?",
@@ -30,9 +84,27 @@
   "why": "CED 2.1 alternate form of derivative"
  },
  {
+  "front": "What is the difference between a secant line and a tangent line?",
+  "fp": "8c8304a013f2",
+  "yield": "HIGH",
+  "why": "CED 2.1 secant vs tangent"
+ },
+ {
   "front": "What is the limit definition of the derivative?",
   "fp": "679b3ebc7ae1",
   "yield": "ULTRA_HIGH",
   "why": "CED 2.1 limit definition of derivative"
+ },
+ {
+  "front": "What is the physical meaning of the derivative?",
+  "fp": "90c50b444d46",
+  "yield": "HIGH",
+  "why": "CED 4.1 derivative as instantaneous rate"
+ },
+ {
+  "front": "Where does a derivative fail to exist?",
+  "fp": "0c2ab3949c89",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.4 where derivatives fail to exist"
  }
 ]

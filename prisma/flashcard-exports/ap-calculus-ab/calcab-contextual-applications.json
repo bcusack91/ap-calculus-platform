@@ -1,0 +1,129 @@
+[
+ {
+  "topicSlug": "lhopitals-rule",
+  "front": "Can you apply L'Hôpital's Rule more than once in the same problem?",
+  "back": "Yes — recheck the form after each application. If $\\frac{f'}{g'}$ is still $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$, differentiate again: $\\lim_{x\\to\\infty}\\frac{x^2}{e^x} = \\lim_{x\\to\\infty}\\frac{2x}{e^x} = \\lim_{x\\to\\infty}\\frac{2}{e^x} = 0$.",
+  "hint": "0/0 or ∞/∞ → differentiate top and bottom"
+ },
+ {
+  "topicSlug": "lhopitals-rule",
+  "front": "What are the two indeterminate forms where L'Hôpital's Rule applies directly?",
+  "back": "$\\frac{0}{0}$ and $\\frac{\\infty}{\\infty}$. Confirm the limit has one of these two forms before differentiating the numerator and denominator separately.",
+  "hint": "Both are fraction forms"
+ },
+ {
+  "topicSlug": "lhopitals-rule",
+  "front": "What common mistake do students make when applying L'Hôpital's Rule?",
+  "back": "Taking the derivative of the entire quotient using the quotient rule, instead of taking derivatives of numerator and denominator SEPARATELY. L'Hôpital's says $\\frac{f'(x)}{g'(x)}$, NOT $(\\frac{f}{g})'$!",
+  "hint": "It's not the quotient rule"
+ },
+ {
+  "topicSlug": "lhopitals-rule",
+  "front": "What is L'Hôpital's Rule?",
+  "back": "If $\\lim \\frac{f(x)}{g(x)}$ has indeterminate form $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$, then $\\lim \\frac{f(x)}{g(x)} = \\lim \\frac{f'(x)}{g'(x)}$, provided that second limit exists. Differentiate numerator and denominator separately — do not use the quotient rule.",
+  "hint": "Take derivatives of top and bottom separately."
+ },
+ {
+  "topicSlug": "lhopitals-rule",
+  "front": "Why must you verify the form is $\\frac{0}{0}$ or $\\frac{\\infty}{\\infty}$ before applying L'Hôpital's Rule?",
+  "back": "On a determinate form the rule is invalid and gives a wrong answer. $\\lim_{x \\to 0}\\frac{x+1}{x+2} = \\frac{1}{2}$ by substitution, but differentiating top and bottom would give $\\frac{1}{1} = 1$.",
+  "hint": "lim f/g = lim f'/g'"
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "Give an important small-angle approximation.",
+  "back": "For $x$ near 0 (in radians): $\\sin x \\approx x$. This comes from linear approximation of $\\sin x$ at $a = 0$ where $f(0) = 0$ and $f'(0) = \\cos 0 = 1$, giving $L(x) = x$.",
+  "hint": "Sine function near zero"
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "If $f$ is concave up near $x = a$, does the tangent line approximation overestimate or underestimate $f(x)$?",
+  "back": "Underestimate — a concave-up graph ($f'' > 0$) lies above its tangent line. If $f'' < 0$ (concave down), the tangent line lies above the curve, so $L(x)$ overestimates.",
+  "hint": "f(a) + f'(a)(x - a)"
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "The linearization of $f(x) = \\sqrt{x}$ at $a = 25$ is used to approximate $\\sqrt{26}$. The approximation is:",
+  "back": "**5.1**\n\nL(x) = f(25) + f'(25)(x − 25) = 5 + 1/(2·5)(26 − 25) = 5 + 0.1 = 5.1."
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "Use linear approximation to estimate $\\sqrt{4.1}$.",
+  "back": "Take $f(x) = \\sqrt{x}$, $a = 4$: $f(4) = 2$ and $f'(4) = \\frac{1}{2\\sqrt{4}} = \\frac{1}{4}$, so $\\sqrt{4.1} \\approx 2 + \\frac{1}{4}(0.1) = 2.025$ (true value $\\approx 2.0248$).",
+  "hint": "dy = f'(x)dx"
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "What is the linearization $L(x)$ of $f$ at $x = a$, and what is it used for?",
+  "back": "$L(x) = f(a) + f'(a)(x - a)$ — the tangent line at $a$. For $x$ near $a$, $f(x) \\approx L(x)$; equivalently, $dy = f'(a)\\,dx$ estimates the change $\\Delta y = f(x) - f(a)$.",
+  "hint": "The tangent line at $x = a$"
+ },
+ {
+  "topicSlug": "linearization-differentials-calcab",
+  "front": "Why does linear approximation work?",
+  "back": "When you zoom in on a smooth curve near a point, it looks like a straight line (the tangent line). The closer $x$ is to $a$, the better the curve resembles its tangent line, so $f(x) \\approx L(x)$.",
+  "hint": "Think about zooming in on a curve"
+ },
+ {
+  "topicSlug": "particle-motion-calcab",
+  "front": "A particle moves along the x-axis with position $s(t) = t^3 - 6t^2 + 9t$. At what time(s) is the particle at rest?",
+  "back": "**$t = 1$ and $t = 3$**\n\nVelocity v(t) = s'(t) = $3t^{2}$ − 12t + 9 = 3(t − 1)(t − 3) = 0 → t = 1 and t = 3."
+ },
+ {
+  "topicSlug": "particle-motion-calcab",
+  "front": "For a particle moving along a line, how do velocity and speed differ?",
+  "back": "Velocity $v(t) = x'(t)$ is signed and tells you direction; speed is $|v(t)|$ and is never negative. Speed is increasing exactly when $v(t)$ and $a(t)$ have the same sign.",
+  "hint": "Speed is the absolute value of velocity"
+ },
+ {
+  "topicSlug": "particle-motion-calcab",
+  "front": "If a particle's position is $s(t) = t^3 - 9t^2 + 24t$, when is the particle moving to the left?",
+  "back": "**$2 < t < 4$**\n\n$v(t) = 3t^2 - 18t + 24 = 3(t-2)(t-4)$. $v < 0$ when $2 < t < 4$, so the particle moves left on that interval."
+ },
+ {
+  "topicSlug": "particle-motion-calcab",
+  "front": "If the velocity of a particle is $v(t) = t^2 - 4t + 3$, the particle changes direction at $t = $",
+  "back": "**$t = 1$ and $t = 3$**\n\n$v(t) = (t-1)(t-3) = 0$ at $t = 1, 3$. $v$ changes sign at both, so direction changes at both."
+ },
+ {
+  "topicSlug": "particle-motion-calcab",
+  "front": "The speed of a particle at time $t$ is $|v(t)|$ where $v(t) = t^2 - 4$. The speed is increasing at $t = 3$ because:",
+  "back": "**$v(3) > 0$ and $a(3) > 0$**\n\n$v(3) = 5 > 0$ and $a(t) = 2t$, $a(3) = 6 > 0$. Same sign means speed is increasing."
+ },
+ {
+  "topicSlug": "related-rates",
+  "front": "A 10 ft ladder leans against a wall and its base slides away at 2 ft/s. How fast is the top sliding down when the base is 6 ft from the wall?",
+  "back": "$1.5$ ft/s downward. From $x^2 + y^2 = 100$, differentiate: $2x\\frac{dx}{dt} + 2y\\frac{dy}{dt} = 0$. With $x = 6$, $y = 8$, $\\frac{dx}{dt} = 2$: $\\frac{dy}{dt} = -\\frac{(6)(2)}{8} = -1.5$ ft/s.",
+  "hint": "Diagram → equation → differentiate → substitute → solve"
+ },
+ {
+  "topicSlug": "related-rates",
+  "front": "If a quantity is decreasing, what sign does its rate have?",
+  "back": "Negative. For example, if water is draining from a tank, $\\frac{dV}{dt} < 0$ (negative rate).",
+  "hint": "Decreasing means the derivative is negative"
+ },
+ {
+  "topicSlug": "related-rates",
+  "front": "What are related rates problems?",
+  "back": "Problems where two or more quantities change over time, and their rates of change are related through an equation.",
+  "hint": "Rates changing together over time"
+ },
+ {
+  "topicSlug": "related-rates",
+  "front": "What are the 6 steps for solving related rates problems?",
+  "back": "1. Draw picture 2. Identify knowns/unknowns 3. Write equation 4. Differentiate w.r.t. time 5. Substitute values 6. Solve for unknown rate",
+  "hint": "Think of the systematic approach"
+ },
+ {
+  "topicSlug": "related-rates",
+  "front": "What does $\\frac{dV}{dt} = 5$ m³/min mean?",
+  "back": "The volume is increasing at a rate of 5 cubic meters per minute. The derivative represents a rate of change with respect to time.",
+  "hint": "The derivative is a rate"
+ },
+ {
+  "topicSlug": "related-rates",
+  "front": "What is the most important rule for related rates problems?",
+  "back": "Do NOT substitute values until AFTER you differentiate! Differentiate the equation first, then plug in the given values.",
+  "hint": "Think about the order of operations"
+ }
+]

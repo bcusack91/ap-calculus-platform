@@ -3,12 +3,17 @@
   "topicSlug": "differential-equations-calcab",
   "front": "How do you solve the separable differential equation $\\frac{dy}{dx} = ky$?",
   "back": "Separate the variables and integrate: $\\int \\frac{1}{y}\\,dy = \\int k\\,dx$ gives $\\ln|y| = kx + C$, so $y = Ae^{kx}$ — growth if $k > 0$, decay if $k < 0$. Use the initial condition to find $A$.",
-  "hint": "Think about the key characteristic"
+  "hint": "Separate, integrate, then exponentiate"
  },
  {
   "topicSlug": "differential-equations-calcab",
   "front": "In the slope field for $\\dfrac{dy}{dx} = y(2 - y)$, the equilibrium solutions are:",
   "back": "**$y = 0$ and $y = 2$**\n\nEquilibria where $\\frac{dy}{dx} = 0$: $y(2 - y) = 0 \\Rightarrow y = 0$ or $y = 2$."
+ },
+ {
+  "topicSlug": "differential-equations-calcab",
+  "front": "Is $\\dfrac{dy}{dx} = xy + x$ separable? Why?",
+  "back": "**Yes.**\n\n$xy + x = x(y + 1)$ is a function of $x$ times a function of $y$, so the variables separate: $\\frac{dy}{y + 1} = x\\,dx$."
  },
  {
   "topicSlug": "differential-equations-calcab",
@@ -21,11 +26,6 @@
   "back": "**$y = x^3 + C$**\n\nIntegrate both sides: y = $\\int 3x^{2}$ dx = $x^{3}$ + C."
  },
  {
-  "topicSlug": "differential-equations-calcab",
-  "front": "Which ODE is separable?",
-  "back": "**$\\dfrac{dy}{dx} = xy + x$**\n\n$\\frac{dy}{dx} = xy + x = x(y + 1)$. This factors as a function of $x$ times a function of $y$, so it is separable."
- },
- {
   "topicSlug": "exponential-models-calcab",
   "front": "A bacteria culture triples every $4$ hours. Starting with $500$ bacteria, the population after $12$ hours is:",
   "back": "**$13500$**\n\n12 hours $= 3$ periods. $500 \\times 3^3 = 500 \\times 27 = 13500$."
@@ -33,7 +33,7 @@
  {
   "topicSlug": "exponential-models-calcab",
   "front": "A population $P$ grows at a rate proportional to itself: $\\dfrac{dP}{dt} = kP$. If $P(0) = 100$ and $P(5) = 200$, which equation models $P(t)$?",
-  "back": "**$P = 100 \\cdot 2^{t/5}$**\n\ndP/dt = kP gives P = $P_{0}e^{kt}$ = $100e^{kt}$. P(5) = 200 → $e^{nk}$ = 2 → P = 100 · $2^{t/5}$."
+  "back": "**$P = 100 \\cdot 2^{t/5}$**\n\n$\\frac{dP}{dt} = kP$ gives $P = P_0e^{kt} = 100e^{kt}$. $P(5) = 200$ gives $e^{5k} = 2$, so $e^{kt} = (e^{5k})^{t/5} = 2^{t/5}$ and $P = 100 \\cdot 2^{t/5}$."
  },
  {
   "topicSlug": "exponential-models-calcab",
@@ -49,6 +49,6 @@
   "topicSlug": "exponential-models-calcab",
   "front": "Which differential equation models exponential growth or decay, and what is its solution?",
   "back": "$\\frac{dy}{dt} = ky$ — the rate of change is proportional to the amount present — with solution $y = y_0e^{kt}$. For $y_0 > 0$, $k > 0$ gives growth and $k < 0$ gives decay.",
-  "hint": "Think about the key characteristic"
+  "hint": "Rate proportional to the amount"
  }
 ]
