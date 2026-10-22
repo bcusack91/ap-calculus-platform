@@ -6,7 +6,9 @@
  * - Every FRQ is worth 9 points (~15 min each); 54 points in 90 minutes.
  * The `type` field ('long' | 'short') is a legacy grouping kept for the content store;
  * the page groups and times questions by `calculatorAllowed` (Part A vs Part B).
- * Topics span BC-specific content: series, parametric/polar, advanced integration
+ * The legacy long/short groups span BC-only content (series, parametric/polar, advanced
+ * integration). The ext group (2027 expansion) adds six AB-type FRQs in BC-level settings,
+ * since about 60% of the BC exam is AB content, plus one vector-motion and one series FRQ.
  */
 
 export interface FRQRubricItem {
@@ -462,9 +464,549 @@ const shortFRQs: CalcBCFRQ[] = [
   },
 ]
 
+// ─── 2027 bank expansion (9 points each, ~15 minutes) ──────────────
+// About 60% of the BC exam is AB content and real BC Section II includes AB-type
+// questions, so six of these eight are AB families in a BC-level setting (ext-1 to
+// ext-6); ext-7 (vector motion) and ext-8 (series) are BC-only. Part A families are
+// calculator-active. Tables are KaTeX arrays (the page has no GFM table support).
+
+const extFRQs: CalcBCFRQ[] = [
+  {
+    id: 'calcbc-ext-1',
+    type: 'long',
+    unit: 8,
+    title: 'Rates In and Out: Home Battery',
+    prompt: `A house has rooftop solar panels and a home battery. For $0 \\le t \\le 12$, where $t$ is the number of hours after 6:00 a.m., the panels charge the battery at a rate of $S(t)$ kilowatts (kilowatt-hours per hour), where $S$ is a differentiable function that is increasing on $0 \\le t \\le 7$. Selected values of $S(t)$ are given in the table.
+
+$$\\begin{array}{c|c|c|c|c|c|c} t \\text{ (hours)} & 0 & 2 & 5 & 7 & 10 & 12 \\\\ \\hline S(t) \\text{ (kilowatts)} & 0 & 1.6 & 2.8 & 3.0 & 1.6 & 0.2 \\end{array}$$
+
+Over the same period the house draws energy from the battery at a rate modeled by $C(t) = 0.9 + 0.3\\sin(0.6t)$ kilowatts. At time $t = 0$ the battery holds 5 kilowatt-hours of energy.`,
+    totalPoints: 9,
+    timeRecommendation: '~15 minutes',
+    calculatorAllowed: true,
+    parts: [
+      {
+        label: '(a)',
+        prompt: `Use a left Riemann sum with the three subintervals indicated by the table to approximate $\\displaystyle\\int_0^{7} S(t)\\,dt$. Is this approximation an overestimate or an underestimate of $\\displaystyle\\int_0^{7} S(t)\\,dt$? Give a reason for your answer.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Left Riemann sum: $0(2) + 1.6(3) + 2.8(2) = 10.4$ kilowatt-hours`, keywords: ['10.4'] },
+          { points: 1, description: `Underestimate, because $S$ is increasing on $[0, 7]$ (each left endpoint is the smallest value on its subinterval)`, keywords: ['underestimate', 'under estimate'] },
+        ],
+        sampleAnswer: `$$\\int_0^7 S(t)\\,dt \\approx S(0)(2) + S(2)(3) + S(5)(2) = 0 + 4.8 + 5.6 = 10.4 \\text{ kilowatt-hours}$$
+
+Because $S$ is increasing on $0 \\le t \\le 7$, the left endpoint of each subinterval gives the smallest value of $S$ there, so the left Riemann sum is an **underestimate**.`,
+      },
+      {
+        label: '(b)',
+        prompt: `Must there be a time $t$, for $2 < t < 10$, at which $S'(t) = 0$? Justify your answer.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Uses the equal values $S(2) = S(10) = 1.6$, so the average rate of change on $[2, 10]$ is $0$`, keywords: ['s(2) = s(10)', 's(2)=s(10)', '(1.6 - 1.6)', '1.6 - 1.6', '= 0/8', 'both 1.6', 'both equal 1.6'] },
+          { points: 1, description: `Yes, by the Mean Value Theorem (or Rolle's Theorem), because $S$ is differentiable and therefore continuous`, keywords: ['mean value theorem', 'mvt', "rolle"] },
+        ],
+        sampleAnswer: `$S$ is differentiable, so it is continuous on $[2, 10]$ and differentiable on $(2, 10)$.
+
+$$\\frac{S(10) - S(2)}{10 - 2} = \\frac{1.6 - 1.6}{8} = 0$$
+
+**Yes.** By the Mean Value Theorem, $S'(t) = 0$ for some $t$ with $2 < t < 10$.`,
+      },
+      {
+        label: '(c)',
+        prompt: `Use a trapezoidal sum with the five subintervals indicated by the table to approximate $\\displaystyle\\int_0^{12} S(t)\\,dt$. Use this approximation and the model $C$ to approximate the amount of energy in the battery at time $t = 12$.`,
+        maxPoints: 3,
+        rubric: [
+          { points: 1, description: `Trapezoidal sum: $\\int_0^{12} S(t)\\,dt \\approx 1.6 + 6.6 + 5.8 + 6.9 + 1.8 = 22.7$`, keywords: ['22.7'] },
+          { points: 1, description: `Integral of the model: $\\int_0^{12} C(t)\\,dt \\approx 10.996$`, keywords: ['10.996', '10.995'] },
+          { points: 1, description: `Answer: $5 + 22.7 - 10.996 \\approx 16.704$ kilowatt-hours`, keywords: ['16.704', '16.70'] },
+        ],
+        sampleAnswer: `$$\\int_0^{12} S(t)\\,dt \\approx \\frac{0 + 1.6}{2}(2) + \\frac{1.6 + 2.8}{2}(3) + \\frac{2.8 + 3.0}{2}(2) + \\frac{3.0 + 1.6}{2}(3) + \\frac{1.6 + 0.2}{2}(2) = 22.7$$
+
+$$\\int_0^{12} C(t)\\,dt \\approx 10.996$$
+
+Energy in the battery at $t = 12$:
+$$5 + \\int_0^{12} S(t)\\,dt - \\int_0^{12} C(t)\\,dt \\approx 5 + 22.7 - 10.996 = 16.704 \\text{ kilowatt-hours}$$`,
+      },
+      {
+        label: '(d)',
+        prompt: `Find $C'(9)$. Using correct units, interpret the meaning of $C'(9)$ in the context of the problem.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `$C'(9) = 0.18\\cos(5.4) \\approx 0.114$`, keywords: ['0.114', '0.18cos(5.4)', '0.18 cos(5.4)'] },
+          { points: 1, description: `Interpretation with units: at 3:00 p.m. ($t = 9$) the rate at which the house draws energy is increasing at about 0.114 kilowatt per hour`, keywords: ['kilowatts per hour', 'kilowatt per hour', 'kw per hour', 'kw/hr', 'kw/h'] },
+        ],
+        sampleAnswer: `$$C'(t) = 0.3(0.6)\\cos(0.6t) = 0.18\\cos(0.6t), \\qquad C'(9) = 0.18\\cos(5.4) \\approx 0.114$$
+
+At 3:00 p.m. ($t = 9$), the rate at which the house draws energy from the battery is increasing at about 0.114 kilowatt per hour.`,
+      },
+    ],
+  },
+  {
+    id: 'calcbc-ext-2',
+    type: 'long',
+    unit: 8,
+    title: 'Particle Motion with Integration by Parts',
+    prompt: `A particle moves along the $x$-axis so that its velocity at time $t \\ge 0$ is $v(t) = (1 - t)e^{-t/2}$. At time $t = 0$, the particle is at position $x = 1$.`,
+    totalPoints: 9,
+    timeRecommendation: '~15 minutes',
+    calculatorAllowed: false,
+    parts: [
+      {
+        label: '(a)',
+        prompt: `At $t = 2$, is the particle speeding up or slowing down? Explain your reasoning using $v(2)$ and $a(2)$.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Acceleration: $a(t) = v'(t) = \\tfrac{1}{2}(t - 3)e^{-t/2}$, so $a(2) = -\\tfrac{1}{2e}$; and $v(2) = -\\tfrac{1}{e}$`, keywords: ['-1/(2e)', '-1/2e', '(t - 3)', '(t-3)', '-e^{-1}/2', 'a(2) = -1/(2e)'] },
+          { points: 1, description: `Increasing, because $v(2)$ and $a(2)$ are both negative`, keywords: ['increasing'] },
+        ],
+        sampleAnswer: `$$a(t) = v'(t) = -e^{-t/2} - \\frac{1}{2}(1 - t)e^{-t/2} = \\frac{1}{2}(t - 3)e^{-t/2}$$
+
+$v(2) = -e^{-1} < 0$ and $a(2) = -\\frac{1}{2}e^{-1} < 0$. Since velocity and acceleration have the same sign, the speed is **increasing** at $t = 2$.`,
+      },
+      {
+        label: '(b)',
+        prompt: `Find the position $x(t)$ of the particle for $t \\ge 0$.`,
+        maxPoints: 3,
+        rubric: [
+          { points: 1, description: `Uses the initial condition: $x(t) = 1 + \\int_0^t (1 - s)e^{-s/2}\\,ds$`, keywords: ['1 + int', '1 + ∫', 'x(0) +', '1 + \\int'] },
+          { points: 1, description: `Integration by parts ($u = 1 - s$, $dv = e^{-s/2}\\,ds$) gives the antiderivative $2(s + 1)e^{-s/2}$`, keywords: ['2(t + 1)e', '2(t+1)e', '2(s + 1)e', 'by parts', 'u = 1 - t', '(2t + 2)e', '(2s + 2)e', '(2t+2)e'] },
+          { points: 1, description: `Answer: $x(t) = 2(t + 1)e^{-t/2} - 1$`, keywords: ['2(t + 1)e^{-t/2} - 1', '2(t+1)e^(-t/2) - 1', '2(t+1)e^{-t/2}-1', '2(t+1)e^(-t/2)-1', '(2t + 2)e', '(2t+2)e', '2te^(-t/2) + 2e^(-t/2) - 1'] },
+        ],
+        sampleAnswer: `Integration by parts with $u = 1 - t$, $dv = e^{-t/2}\\,dt$, so $du = -dt$ and $v = -2e^{-t/2}$:
+$$\\int (1 - t)e^{-t/2}\\,dt = -2(1 - t)e^{-t/2} - \\int 2e^{-t/2}\\,dt = -2(1 - t)e^{-t/2} + 4e^{-t/2} + C = 2(t + 1)e^{-t/2} + C$$
+
+$$x(t) = 1 + \\Big[2(s + 1)e^{-s/2}\\Big]_0^t = 1 + 2(t + 1)e^{-t/2} - 2 = 2(t + 1)e^{-t/2} - 1$$`,
+      },
+      {
+        label: '(c)',
+        prompt: `For $t \\ge 0$, find the greatest position of the particle (its rightmost point). Justify your answer.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `$v(t) > 0$ for $0 \\le t < 1$ and $v(t) < 0$ for $t > 1$, so the particle is farthest right at $t = 1$`, keywords: ['t = 1', 'positive to negative', 'changes sign'] },
+          { points: 1, description: `Answer: $x(1) = 4e^{-1/2} - 1$`, keywords: ['4e^{-1/2} - 1', '4e^(-1/2) - 1', '4/√e - 1', '4/sqrt(e) - 1', '1.426'] },
+        ],
+        sampleAnswer: `$v(t) = (1 - t)e^{-t/2}$ is positive for $0 \\le t < 1$ and negative for $t > 1$. The particle moves right until $t = 1$ and moves left for all $t > 1$, so its greatest position occurs at $t = 1$:
+$$x(1) = 2(2)e^{-1/2} - 1 = 4e^{-1/2} - 1$$`,
+      },
+      {
+        label: '(d)',
+        prompt: `Find the total distance the particle travels for $t \\ge 0$.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Improper limit: $\\lim_{t \\to \\infty} x(t) = -1$ (or $\\int_1^{\\infty} v(t)\\,dt = -4e^{-1/2}$ as a limit)`, keywords: ['lim', '→ ∞', '->∞', 'infinity', 'approaches -1'] },
+          { points: 1, description: `Answer: $\\left(x(1) - x(0)\\right) + \\left(x(1) - (-1)\\right) = 8e^{-1/2} - 2$`, keywords: ['8e^{-1/2} - 2', '8e^(-1/2) - 2', '8/√e - 2', '8/sqrt(e) - 2', '2.852', '2.85'] },
+        ],
+        sampleAnswer: `The particle moves right on $[0, 1]$ and left for $t > 1$.
+
+Distance on $[0, 1]$: $x(1) - x(0) = (4e^{-1/2} - 1) - 1 = 4e^{-1/2} - 2$.
+
+For $t \\ge 1$: $\\displaystyle\\lim_{b \\to \\infty} x(b) = \\lim_{b \\to \\infty}\\left(2(b + 1)e^{-b/2} - 1\\right) = -1$, so the particle moves left a distance $x(1) - (-1) = 4e^{-1/2}$.
+
+$$\\text{Total distance} = (4e^{-1/2} - 2) + 4e^{-1/2} = 8e^{-1/2} - 2$$`,
+      },
+    ],
+  },
+  {
+    id: 'calcbc-ext-3',
+    type: 'long',
+    unit: 8,
+    title: 'Area, Volume & an Unbounded Region',
+    prompt: `Let $f(x) = 2xe^{-x^2/4}$. Let $R$ be the region in the first quadrant bounded by the graph of $f$, the $x$-axis and the vertical line $x = 2$.`,
+    totalPoints: 9,
+    timeRecommendation: '~15 minutes',
+    calculatorAllowed: true,
+    parts: [
+      {
+        label: '(a)',
+        prompt: `Find the area of $R$.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Integral: $\\int_0^2 2xe^{-x^2/4}\\,dx$`, keywords: ['int_0^2', '∫_0^2', '∫₀²', 'from 0 to 2', '\\int_0^2'] },
+          { points: 1, description: `Answer: $4 - 4e^{-1} \\approx 2.528$`, keywords: ['2.528', '4 - 4/e', '4 - 4e^{-1}', '4 - 4e^(-1)'] },
+        ],
+        sampleAnswer: `$$\\text{Area} = \\int_0^2 2xe^{-x^2/4}\\,dx = \\Big[-4e^{-x^2/4}\\Big]_0^2 = 4 - 4e^{-1} \\approx 2.528$$`,
+      },
+      {
+        label: '(b)',
+        prompt: `Region $R$ is rotated about the line $y = 2$. What is the volume of the resulting solid?`,
+        maxPoints: 3,
+        rubric: [
+          { points: 1, description: `Constant $\\pi$ and limits $0$ to $2$`, keywords: ['pi*integral from 0 to 2', 'π∫_0^2', 'pi ∫_0^2', 'π*integral', 'pi int_0^2', '\\pi\\int_0^2', 'π ∫ from 0 to 2'] },
+          { points: 1, description: `Washer integrand: $2^2 - \\left(2 - f(x)\\right)^2$ (outer radius $2$, inner radius $2 - f(x)$; $f \\le f(\\sqrt{2}) \\approx 1.716 < 2$)`, keywords: ['2 - f(x)', '(2 - f', '4 - (2 -', '2^2 - (2'] },
+          { points: 1, description: `Answer: volume $\\approx 20.142$`, keywords: ['20.142', '20.14'] },
+        ],
+        sampleAnswer: `On $[0, 2]$, $0 \\le f(x) < 2$, so the region lies below $y = 2$. Outer radius $2 - 0 = 2$, inner radius $2 - f(x)$:
+
+$$V = \\pi\\int_0^2 \\left[2^2 - \\left(2 - f(x)\\right)^2\\right]dx \\approx 20.142$$`,
+      },
+      {
+        label: '(c)',
+        prompt: `The region $R$ is the base of a solid. For this solid, each cross section perpendicular to the $x$-axis is an isosceles right triangle with one leg in $R$. Find the volume of the solid.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Integral: $\\int_0^2 \\tfrac{1}{2}\\left(f(x)\\right)^2 dx$`, keywords: ['(1/2)(f(x))^2', '1/2 f(x)^2', '(1/2)f(x)^2', '½f(x)²', '(1/2)(2xe', 'f(x)^2/2'] },
+          { points: 1, description: `Answer: volume $\\approx 1.851$`, keywords: ['1.851', '1.85'] },
+        ],
+        sampleAnswer: `An isosceles right triangle with legs of length $f(x)$ has area $\\frac{1}{2}f(x)^2$.
+
+$$V = \\int_0^2 \\frac{1}{2}\\left(2xe^{-x^2/4}\\right)^2 dx \\approx 1.851$$`,
+      },
+      {
+        label: '(d)',
+        prompt: `Let $S$ be the unbounded region between the graph of $f$ and the $x$-axis for $x \\ge 0$. Is the area of $S$ finite? If so, find it. Show the work that leads to your answer.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Writes the improper integral as a limit: $\\lim_{b \\to \\infty}\\int_0^b 2xe^{-x^2/4}\\,dx = \\lim_{b \\to \\infty}\\left(4 - 4e^{-b^2/4}\\right)$`, keywords: ['lim', 'b → ∞', 'b->∞', 'b→∞', 'infinity'] },
+          { points: 1, description: `Answer: finite, area $= 4$`, keywords: ['area is 4', 'area = 4', 'area of s is 4', 'equals 4', 'converges to 4', '= 4 square'] },
+        ],
+        sampleAnswer: `$$\\int_0^{\\infty} 2xe^{-x^2/4}\\,dx = \\lim_{b \\to \\infty}\\Big[-4e^{-x^2/4}\\Big]_0^b = \\lim_{b \\to \\infty}\\left(4 - 4e^{-b^2/4}\\right) = 4$$
+
+Yes, the area of $S$ is finite: it equals $4$.`,
+      },
+    ],
+  },
+  {
+    id: 'calcbc-ext-4',
+    type: 'long',
+    unit: 5,
+    title: 'Graph of f′ with an Improper Tail',
+    prompt: `The function $f$ is differentiable for $x \\ge -2$, and $f(2) = 1$. On the interval $-2 \\le x \\le 6$, the graph of $f'$, the derivative of $f$, consists of three pieces:
+
+- a line segment from $(-2, -2)$ to $(0, 2)$, which crosses the $x$-axis at $x = -1$;
+- for $0 \\le x \\le 4$, the upper half of the circle $(x - 2)^2 + (y - 2)^2 = 4$, which rises from $(0, 2)$ to $(2, 4)$ and falls back to $(4, 2)$;
+- a line segment from $(4, 2)$ to $(6, -2)$, which crosses the $x$-axis at $x = 5$.
+
+For $x \\ge 6$, $f'(x) = -2e^{6 - x}$.`,
+    totalPoints: 9,
+    timeRecommendation: '~15 minutes',
+    calculatorAllowed: false,
+    parts: [
+      {
+        label: '(a)',
+        prompt: `On the open interval $-2 < x < 6$, find the $x$-coordinate of each point at which $f$ has a relative minimum or a relative maximum. Classify each one and justify your answers.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Relative minimum at $x = -1$, because $f'$ changes from negative to positive there`, keywords: ['minimum at -1', 'min at -1', 'minimum at x = -1', 'min at x = -1', 'x = -1 is a relative minimum', 'x = -1 is a minimum', 'minimum at x=-1'] },
+          { points: 1, description: `Relative maximum at $x = 5$, because $f'$ changes from positive to negative there`, keywords: ['maximum at 5', 'max at 5', 'maximum at x = 5', 'max at x = 5', 'x = 5 is a relative maximum', 'x = 5 is a maximum', 'maximum at x=5'] },
+        ],
+        sampleAnswer: `$f'(x) = 0$ only at $x = -1$ and $x = 5$ on $(-2, 6)$ (on $[0, 4]$, $f' \\ge 2$).
+
+- $f'$ changes from negative to positive at $x = -1$, so $f$ has a **relative minimum** at $x = -1$.
+- $f'$ changes from positive to negative at $x = 5$, so $f$ has a **relative maximum** at $x = 5$.`,
+      },
+      {
+        label: '(b)',
+        prompt: `Find $f(6)$ and $f(-2)$.`,
+        maxPoints: 3,
+        rubric: [
+          { points: 1, description: `Uses $f(2) = 1$ with definite integrals of $f'$: $f(6) = 1 + \\int_2^6 f'(x)\\,dx$ and $f(-2) = 1 - \\int_{-2}^{2} f'(x)\\,dx$`, keywords: ['f(2) +', 'f(2) -', '1 + (4 + π)', '1 - (4 + π)', '1 + 4 + π', '1 + 4 + pi', '1 - (0 + 4 + π)'] },
+          { points: 1, description: `$f(6) = 1 + (4 + \\pi) + 0 = 5 + \\pi$`, keywords: ['5 + π', '5 + pi', 'π + 5', 'pi + 5', '5+π', '5+pi'] },
+          { points: 1, description: `$f(-2) = 1 - \\left(0 + 4 + \\pi\\right) = -3 - \\pi$`, keywords: ['-3 - π', '-3 - pi', '-π - 3', '-pi - 3', '-3-π', '-3-pi'] },
+        ],
+        sampleAnswer: `On $[2, 4]$ the region under the graph of $f'$ is a $2 \\times 2$ rectangle plus a quarter circle of radius 2: $\\int_2^4 f'(x)\\,dx = 4 + \\pi$. By symmetry $\\int_0^2 f'(x)\\,dx = 4 + \\pi$. The triangles on $[4, 6]$ cancel ($1 - 1 = 0$), as do those on $[-2, 0]$ ($-1 + 1 = 0$).
+
+$$f(6) = f(2) + \\int_2^6 f'(x)\\,dx = 1 + (4 + \\pi) + 0 = 5 + \\pi$$
+
+$$f(-2) = f(2) - \\int_{-2}^{2} f'(x)\\,dx = 1 - (0 + 4 + \\pi) = -3 - \\pi$$`,
+      },
+      {
+        label: '(c)',
+        prompt: `Where on $-2 < x < 6$ does the graph of $f$ have a point of inflection? Give each $x$-coordinate and a reason.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Answer: $x = 2$ only`, keywords: ['x = 2', 'only at 2', 'only x = 2'] },
+          { points: 1, description: `Justification: $f'$ changes from increasing to decreasing at $x = 2$; at $x = 0$ it is increasing on both sides and at $x = 4$ decreasing on both sides ($f''$ does not exist there, since the semicircle has vertical tangents), so there is no inflection point at either`, keywords: ['increasing to decreasing', "f'' changes sign", 'changes from increasing', "f' changes sign", 'positive to negative', 'increasing on', 'decreasing on'] },
+        ],
+        sampleAnswer: `$f'$ is increasing on $(-2, 0)$ and on $(0, 2)$, and decreasing on $(2, 4)$ and on $(4, 6)$.
+
+The graph of $f$ changes concavity only where $f'$ changes from increasing to decreasing, at **$x = 2$**. At $x = 0$ and $x = 4$, $f''$ does not exist (the semicircle has vertical tangents there), but $f'$ is increasing on both sides of $x = 0$ and decreasing on both sides of $x = 4$, so the concavity of $f$ does not change there.`,
+      },
+      {
+        label: '(d)',
+        prompt: `Find $\\displaystyle\\lim_{x \\to \\infty} f(x)$. Show the work that leads to your answer.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Improper integral as a limit: $\\int_6^{\\infty} -2e^{6 - x}\\,dx = \\lim_{b \\to \\infty}\\left(2e^{6 - b} - 2\\right) = -2$`, keywords: ['lim', 'b → ∞', 'b→∞', '2e^{6', '2e^(6'] },
+          { points: 1, description: `Answer: $\\lim_{x \\to \\infty} f(x) = f(6) - 2 = 3 + \\pi$`, keywords: ['3 + π', '3 + pi', 'π + 3', 'pi + 3', '3+π', '3+pi'] },
+        ],
+        sampleAnswer: `For $x \\ge 6$, $f(x) = f(6) + \\int_6^x -2e^{6 - t}\\,dt = 5 + \\pi + \\Big[2e^{6 - t}\\Big]_6^x = 5 + \\pi + 2e^{6 - x} - 2$.
+
+$$\\lim_{x \\to \\infty} f(x) = 5 + \\pi - 2 + \\lim_{x \\to \\infty} 2e^{6 - x} = 3 + \\pi$$`,
+      },
+    ],
+  },
+  {
+    id: 'calcbc-ext-5',
+    type: 'long',
+    unit: 7,
+    title: 'Differential Equation: Slope Field, Euler\'s Method & Separation',
+    prompt: `The function $y = f(x)$ is a solution of $\\dfrac{dy}{dx} = 2xe^{y}$ whose graph passes through the origin, so $f(0) = 0$.`,
+    totalPoints: 9,
+    timeRecommendation: '~15 minutes',
+    calculatorAllowed: false,
+    parts: [
+      {
+        label: '(a)',
+        prompt: `Compute the slope $\\dfrac{dy}{dx}$ at $(-1, 0)$, $(0, 0)$, $(1, 0)$, $(-1, 1)$, $(0, 1)$ and $(1, 1)$. How would the slope-field segments at these six points look?`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Slopes: $-2, 0, 2$ at $y = 0$ and $-2e, 0, 2e$ at $y = 1$`, keywords: ['2e', '-2e'] },
+          { points: 1, description: `Segments: horizontal along $x = 0$; negative slopes at $x = -1$, positive at $x = 1$; steeper at $y = 1$ than at $y = 0$`, keywords: ['horizontal', 'steeper', 'shallower', 'gentler', 'half as steep'] },
+        ],
+        sampleAnswer: `- At $(-1, 0), (0, 0), (1, 0)$: slopes $-2, 0, 2$.
+- At $(-1, 1), (0, 1), (1, 1)$: slopes $-2e, 0, 2e$ (about $-5.4, 0, 5.4$).
+
+The segments at $x = 0$ are horizontal; at $x = -1$ they slant down and at $x = 1$ they slant up, and in the row $y = 1$ they are steeper (by a factor of $e$) than in the row $y = 0$.`,
+      },
+      {
+        label: '(b)',
+        prompt: `Approximate $f(0.5)$ by Euler's method with two equal steps beginning at the origin. Show each step.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `First step ($\\Delta x = 0.25$): slope $0$ at $(0, 0)$, so $f(0.25) \\approx 0$`, keywords: ['f(0.25) ≈ 0', 'f(0.25) = 0', 'y(0.25) = 0', 'slope 0', '0 + 0(0.25)'] },
+          { points: 1, description: `Second step: slope $2(0.25)e^{0} = 0.5$ at $(0.25, 0)$, so $f(0.5) \\approx 0 + 0.5(0.25) = 0.125$`, keywords: ['0.125', '1/8'] },
+        ],
+        sampleAnswer: `Step size $\\Delta x = 0.25$.
+
+- At $(0, 0)$: $\\frac{dy}{dx} = 0$, so $f(0.25) \\approx 0 + 0(0.25) = 0$.
+- At $(0.25, 0)$: $\\frac{dy}{dx} = 2(0.25)e^0 = 0.5$, so $f(0.5) \\approx 0 + 0.5(0.25) = 0.125$.
+
+$$f(0.5) \\approx 0.125$$`,
+      },
+      {
+        label: '(c)',
+        prompt: `Use separation of variables to find $y = f(x)$, the solution with $f(0) = 0$.`,
+        maxPoints: 4,
+        rubric: [
+          { points: 1, description: `Separates variables: $e^{-y}\\,dy = 2x\\,dx$ (a response with no separation of variables earns none of the points in (c) and (d))`, keywords: ['e^{-y} dy', 'e^(-y) dy', 'e^-y dy', 'e^(-y)dy', 'e^-ydy', 'dy/e^y', 'e^{-y}\\,dy'] },
+          { points: 1, description: `Antiderivatives: $-e^{-y} = x^2 + C$`, keywords: ['-e^{-y}', '-e^(-y)', '-e^-y'] },
+          { points: 1, description: `Uses the initial condition: $-e^{0} = 0 + C$, so $C = -1$`, keywords: ['c = -1', 'C = -1', '-1 = c', '-1 = 0 + c'] },
+          { points: 1, description: `Solves for $y$: $y = -\\ln(1 - x^2)$`, keywords: ['-ln(1 - x^2)', '-ln(1-x^2)', '-ln(1 - x²)', '-ln(1-x²)', 'ln(1/(1 - x^2))', '-\\ln(1 - x^2)'] },
+        ],
+        sampleAnswer: `Separate variables: $e^{-y}\\,dy = 2x\\,dx$.
+
+Integrate: $-e^{-y} = x^2 + C$.
+
+Initial condition $f(0) = 0$: $-1 = 0 + C$, so $C = -1$ and $-e^{-y} = x^2 - 1$, that is, $e^{-y} = 1 - x^2$.
+
+$$y = f(x) = -\\ln(1 - x^2)$$`,
+      },
+      {
+        label: '(d)',
+        prompt: `State the domain of the particular solution found in part (c).`,
+        maxPoints: 1,
+        rubric: [
+          { points: 1, description: `Domain: $-1 < x < 1$ (or the domain consistent with the solution found in (c), which must contain $x = 0$)`, keywords: ['-1 < x < 1', '(-1, 1)', '(-1,1)', '|x| < 1'] },
+        ],
+        sampleAnswer: `The solution requires $1 - x^2 > 0$, and it must contain the initial point $x = 0$. The domain is $-1 < x < 1$.`,
+      },
+    ],
+  },
+  {
+    id: 'calcbc-ext-6',
+    type: 'long',
+    unit: 6,
+    title: 'Table of Values: Trapezoids, Parts & the MVT',
+    prompt: `The function $f$ is twice differentiable for all real numbers. Selected values of $f$ and its derivative $f'$ are given in the table.
+
+$$\\begin{array}{c|c|c|c|c|c} x & 1 & 3 & 4 & 7 & 9 \\\\ \\hline f(x) & 2 & 6 & 5 & 11 & 14 \\\\ \\hline f'(x) & 3 & 1 & -2 & 3 & 1 \\end{array}$$`,
+    totalPoints: 9,
+    timeRecommendation: '~15 minutes',
+    calculatorAllowed: false,
+    parts: [
+      {
+        label: '(a)',
+        prompt: `Use a trapezoidal sum with the four subintervals indicated by the table to approximate $\\displaystyle\\int_1^9 f(x)\\,dx$.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Trapezoidal sum set up with the unequal widths $2, 1, 3, 2$: $\\tfrac{2+6}{2}(2) + \\tfrac{6+5}{2}(1) + \\tfrac{5+11}{2}(3) + \\tfrac{11+14}{2}(2)$`, keywords: ['(2+6)/2', '(2 + 6)/2', '8 + 5.5 + 24 + 25'] },
+          { points: 1, description: `Answer: $62.5$`, keywords: ['62.5', '125/2'] },
+        ],
+        sampleAnswer: `$$\\int_1^9 f(x)\\,dx \\approx \\frac{2 + 6}{2}(2) + \\frac{6 + 5}{2}(1) + \\frac{5 + 11}{2}(3) + \\frac{11 + 14}{2}(2) = 8 + 5.5 + 24 + 25 = 62.5$$`,
+      },
+      {
+        label: '(b)',
+        prompt: `Evaluate $\\displaystyle\\int_1^9 x\\,f''(x)\\,dx$. Show the work that leads to your answer.`,
+        maxPoints: 3,
+        rubric: [
+          { points: 1, description: `Integration by parts with $u = x$, $dv = f''(x)\\,dx$: $\\Big[x\\,f'(x)\\Big]_1^9 - \\int_1^9 f'(x)\\,dx$`, keywords: ["xf'(x)", "x f'(x)", 'by parts', 'u = x'] },
+          { points: 1, description: `Evaluates both pieces from the table: $9f'(9) - 1f'(1) = 6$ and $\\int_1^9 f'(x)\\,dx = f(9) - f(1) = 12$`, keywords: ['9(1) - 1(3)', '9 - 3', 'f(9) - f(1)', '14 - 2', '= 12'] },
+          { points: 1, description: `Answer: $6 - 12 = -6$`, keywords: ['-6'] },
+        ],
+        sampleAnswer: `Let $u = x$ and $dv = f''(x)\\,dx$, so $du = dx$ and $v = f'(x)$:
+
+$$\\int_1^9 x\\,f''(x)\\,dx = \\Big[x\\,f'(x)\\Big]_1^9 - \\int_1^9 f'(x)\\,dx = \\left(9f'(9) - 1\\cdot f'(1)\\right) - \\left(f(9) - f(1)\\right)$$
+
+$$= (9 - 3) - (14 - 2) = 6 - 12 = -6$$`,
+      },
+      {
+        label: '(c)',
+        prompt: `Evaluate $\\displaystyle\\int_1^2 f'(3x - 2)\\,dx$. Show the work that leads to your answer.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Substitution $u = 3x - 2$, $du = 3\\,dx$, limits $u = 1$ to $u = 4$: $\\tfrac{1}{3}\\int_1^4 f'(u)\\,du$`, keywords: ['u = 3x - 2', '1/3', 'du = 3'] },
+          { points: 1, description: `Answer: $\\tfrac{1}{3}\\left(f(4) - f(1)\\right) = \\tfrac{1}{3}(5 - 2) = 1$`, keywords: ['(5 - 2)/3', '1/3(5 - 2)', '(1/3)(5 - 2)', '(1/3)(3)', 'equals 1', 'integral = 1', 'integral is 1'] },
+        ],
+        sampleAnswer: `Let $u = 3x - 2$, so $du = 3\\,dx$; $x = 1 \\Rightarrow u = 1$ and $x = 2 \\Rightarrow u = 4$.
+
+$$\\int_1^2 f'(3x - 2)\\,dx = \\frac{1}{3}\\int_1^4 f'(u)\\,du = \\frac{1}{3}\\left(f(4) - f(1)\\right) = \\frac{1}{3}(5 - 2) = 1$$`,
+      },
+      {
+        label: '(d)',
+        prompt: `Explain why there must be a value $c$, for $1 < c < 7$, such that $f''(c) = 0$.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Applies the reasoning to $f'$: $f'$ is differentiable (so continuous) because $f$ is twice differentiable, and $f'(1) = f'(7) = 3$`, keywords: ["f'(1) = f'(7)", "f'(7) = f'(1)", "f'(1)=f'(7)", '(3 - 3)', '3 - 3', 'both equal 3', 'both 3', "= f'(7)", "f'(1) = 3", "f'(7) = 3"] },
+          { points: 1, description: `Concludes by the Mean Value Theorem (or Rolle's Theorem) applied to $f'$: $f''(c) = \\dfrac{f'(7) - f'(1)}{7 - 1} = 0$ for some $c$ in $(1, 7)$`, keywords: ['mean value theorem', 'mvt', 'rolle'] },
+        ],
+        sampleAnswer: `Because $f$ is twice differentiable, $f'$ is differentiable, and therefore continuous, on $[1, 7]$.
+
+$$\\frac{f'(7) - f'(1)}{7 - 1} = \\frac{3 - 3}{6} = 0$$
+
+By the Mean Value Theorem applied to $f'$, there is a value $c$ with $1 < c < 7$ such that $f''(c) = 0$.`,
+      },
+    ],
+  },
+  {
+    id: 'calcbc-ext-7',
+    type: 'long',
+    unit: 9,
+    title: 'Motion in the Plane: Least x-Coordinate',
+    prompt: `A particle moves in the $xy$-plane so that, for $0 \\le t \\le 4$,
+$$\\frac{dx}{dt} = \\ln(t^2 + 1) - 1 \\quad\\text{and}\\quad \\frac{dy}{dt} = 2\\sin(1.5t).$$
+At time $t = 0$ the particle is at the point $(2, -1)$.`,
+    totalPoints: 9,
+    timeRecommendation: '~15 minutes',
+    calculatorAllowed: true,
+    parts: [
+      {
+        label: '(a)',
+        prompt: `At $t = 2$, what is the slope of the tangent line to the particle's path? Also state whether the particle is heading left or right and whether it is heading up or down at that moment, with a reason for each.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Slope: $\\dfrac{dy/dt}{dx/dt}\\Big|_{t=2} = \\dfrac{2\\sin 3}{\\ln 5 - 1} \\approx 0.463$`, keywords: ['0.463', '0.4631', '2sin3/(ln5 - 1)', '2sin(3)/(ln(5) - 1)'] },
+          { points: 1, description: `Directions with reasons: $x'(2) = \\ln 5 - 1 \\approx 0.609 > 0$, so moving right; $y'(2) = 2\\sin 3 \\approx 0.282 > 0$, so moving up`, keywords: ["x'(2) > 0", "y'(2) > 0", '0.609', '0.282', 'right and up', 'moving right and moving up'] },
+        ],
+        sampleAnswer: `$x'(2) = \\ln 5 - 1 \\approx 0.609$ and $y'(2) = 2\\sin 3 \\approx 0.282$.
+
+$$\\frac{dy}{dx}\\Big|_{t=2} = \\frac{0.282}{0.609} \\approx 0.463$$
+
+Since $x'(2) > 0$ the particle is moving to the right, and since $y'(2) > 0$ it is moving up.`,
+      },
+      {
+        label: '(b)',
+        prompt: `Find the least $x$-coordinate of the particle for $0 \\le t \\le 4$. Justify your answer.`,
+        maxPoints: 3,
+        rubric: [
+          { points: 1, description: `Sets $x'(t) = 0$: $\\ln(t^2 + 1) = 1$, so $t = \\sqrt{e - 1} \\approx 1.311$`, keywords: ['1.311', '1.310', 'sqrt(e - 1)', '√(e - 1)', '√(e-1)'] },
+          { points: 1, description: `Position there: $x(1.311) = 2 + \\int_0^{1.311} x'(t)\\,dt \\approx 1.217$ (and $x(4) \\approx 3.984$)`, keywords: ['1.217', '1.216', '2 + ∫'] },
+          { points: 1, description: `Justification and answer: $x' < 0$ on $(0, 1.311)$ and $x' > 0$ on $(1.311, 4)$ (or candidates $x(0) = 2$, $x(1.311) \\approx 1.217$, $x(4) \\approx 3.984$), so the least $x$-coordinate is about $1.217$`, keywords: ['negative to positive', 'candidates', '3.984', '3.98', 'least'] },
+        ],
+        sampleAnswer: `$x'(t) = \\ln(t^2 + 1) - 1 = 0$ when $t^2 + 1 = e$, that is, $t = \\sqrt{e - 1} \\approx 1.311$. $x'(t) < 0$ for $0 \\le t < 1.311$ and $x'(t) > 0$ for $1.311 < t \\le 4$.
+
+$$x(1.311) = 2 + \\int_0^{1.311}\\left(\\ln(t^2 + 1) - 1\\right)dt \\approx 1.217$$
+
+Candidates: $x(0) = 2$, $x(1.311) \\approx 1.217$, $x(4) = 2 + \\int_0^4 x'(t)\\,dt \\approx 3.984$.
+
+The least $x$-coordinate is about $1.217$.`,
+      },
+      {
+        label: '(c)',
+        prompt: `Compute the total distance the particle covers during $0 \\le t \\le 4$.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Integral of speed: $\\int_0^4 \\sqrt{\\left(x'(t)\\right)^2 + \\left(y'(t)\\right)^2}\\,dt$`, keywords: ['(ln(t^2 + 1) - 1)^2', '(ln(t^2+1) - 1)^2', '(ln(t²+1)-1)²', '(2sin(1.5t))^2', '4sin^2(1.5t)', 'sqrt((x'] },
+          { points: 1, description: `Answer: approximately $6.760$ (6.759 truncated is also accepted)`, keywords: ['6.759', '6.760', '6.76'] },
+        ],
+        sampleAnswer: `$$\\text{Distance} = \\int_0^4 \\sqrt{\\left(\\ln(t^2 + 1) - 1\\right)^2 + \\left(2\\sin(1.5t)\\right)^2}\\,dt \\approx 6.760$$`,
+      },
+      {
+        label: '(d)',
+        prompt: `At $t = 3$, is the particle speeding up or slowing down? Explain using its velocity and acceleration vectors.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Velocity $\\langle 1.303, -1.955\\rangle$ and acceleration $\\langle x''(3), y''(3)\\rangle = \\langle 0.6, -0.632\\rangle$ at $t = 3$ (or the derivative of speed at $t = 3 \\approx 0.859$)`, keywords: ["x''(3)", "y''(3)", '3cos(4.5)', '-0.632', '0.859', '2.018'] },
+          { points: 1, description: `Increasing, because $v(3)\\cdot a(3) \\approx 2.018 > 0$ (equivalently, the derivative of speed is positive)`, keywords: ['increasing'] },
+        ],
+        sampleAnswer: `At $t = 3$: velocity $\\langle x'(3), y'(3)\\rangle = \\langle \\ln 10 - 1, 2\\sin 4.5\\rangle \\approx \\langle 1.303, -1.955\\rangle$ and acceleration $\\langle x''(3), y''(3)\\rangle = \\left\\langle \\frac{6}{10}, 3\\cos 4.5\\right\\rangle \\approx \\langle 0.6, -0.632\\rangle$.
+
+$$\\frac{d}{dt}(\\text{speed})\\Big|_{t=3} = \\frac{x'(3)x''(3) + y'(3)y''(3)}{\\text{speed}(3)} \\approx \\frac{2.018}{2.349} \\approx 0.859 > 0$$
+
+The speed is **increasing** at $t = 3$.`,
+      },
+    ],
+  },
+  {
+    id: 'calcbc-ext-8',
+    type: 'long',
+    unit: 10,
+    title: 'Maclaurin Series from a Geometric Series',
+    prompt: `The function $f$ satisfies $f(0) = 0$, and its derivative is $f'(x) = \\dfrac{3}{3 + x^2}$ for all real numbers $x$. The Maclaurin series for $f$ converges to $f(x)$ on its interval of convergence.`,
+    totalPoints: 9,
+    timeRecommendation: '~15 minutes',
+    calculatorAllowed: false,
+    parts: [
+      {
+        label: '(a)',
+        prompt: `Give the first four nonzero terms of the Maclaurin series for $f'(x)$, together with its general term.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `First four terms: $1 - \\dfrac{x^2}{3} + \\dfrac{x^4}{9} - \\dfrac{x^6}{27}$`, keywords: ['x^2/3', 'x^4/9', 'x^6/27', 'x²/3'] },
+          { points: 1, description: `General term: $\\dfrac{(-1)^n x^{2n}}{3^n}$`, keywords: ['(-1)^n x^{2n}/3^n', '(-1)^n x^(2n)/3^n', '(-1)^n x^(2n)', '(-x^2/3)^n', '(-x²/3)^n', '(-1)^n x^{2n}'] },
+        ],
+        sampleAnswer: `$f'(x) = \\dfrac{3}{3 + x^2} = \\dfrac{1}{1 - \\left(-\\frac{x^2}{3}\\right)}$, a geometric series with ratio $-\\dfrac{x^2}{3}$:
+
+$$f'(x) = 1 - \\frac{x^2}{3} + \\frac{x^4}{9} - \\frac{x^6}{27} + \\cdots + \\frac{(-1)^n x^{2n}}{3^n} + \\cdots$$`,
+      },
+      {
+        label: '(b)',
+        prompt: `Integrate your series from part (a) to give the first four nonzero terms of the Maclaurin series for $f(x)$, together with its general term.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `First four terms (integrating term by term with $f(0) = 0$): $x - \\dfrac{x^3}{9} + \\dfrac{x^5}{45} - \\dfrac{x^7}{189}$`, keywords: ['x^3/9', 'x^5/45', 'x^7/189', 'x³/9'] },
+          { points: 1, description: `General term: $\\dfrac{(-1)^n x^{2n+1}}{(2n+1)3^n}$`, keywords: ['(2n+1)3^n', '(2n + 1)3^n', '(2n+1)·3^n', '(2n+1) 3^n', 'x^{2n+1}', 'x^(2n+1)'] },
+        ],
+        sampleAnswer: `Integrate term by term from $0$ to $x$ (the constant is $0$ because $f(0) = 0$):
+
+$$f(x) = x - \\frac{x^3}{9} + \\frac{x^5}{45} - \\frac{x^7}{189} + \\cdots + \\frac{(-1)^n x^{2n+1}}{(2n+1)3^n} + \\cdots$$`,
+      },
+      {
+        label: '(c)',
+        prompt: `For which values of $x$ does the Maclaurin series for $f$ converge? Determine its interval of convergence, checking both endpoints.`,
+        maxPoints: 3,
+        rubric: [
+          { points: 1, description: `Ratio test: $\\lim_{n\\to\\infty}\\left|\\dfrac{x^{2n+3}}{(2n+3)3^{n+1}}\\cdot\\dfrac{(2n+1)3^n}{x^{2n+1}}\\right| = \\dfrac{x^2}{3} < 1$, so $|x| < \\sqrt{3}$`, keywords: ['ratio test', 'x^2/3', 'x²/3', '√3', 'sqrt(3)', 'sqrt3'] },
+          { points: 1, description: `Endpoints: at $x = \\pm\\sqrt{3}$ the series is $\\pm\\sqrt{3}\\sum \\dfrac{(-1)^n}{2n+1}$, which converges by the Alternating Series Test (terms decrease to $0$)`, keywords: ['alternating series test', 'alternating series', 'ast', '1/(2n+1)'] },
+          { points: 1, description: `Interval of convergence: $-\\sqrt{3} \\le x \\le \\sqrt{3}$`, keywords: ['[-√3, √3]', '[-sqrt(3), sqrt(3)]', '-√3 ≤ x ≤ √3', '-sqrt3 <= x <= sqrt3', '[-sqrt3, sqrt3]'] },
+        ],
+        sampleAnswer: `Ratio test:
+$$\\lim_{n \\to \\infty}\\left|\\frac{x^{2n+3}}{(2n+3)3^{n+1}}\\cdot\\frac{(2n+1)3^n}{x^{2n+1}}\\right| = \\frac{x^2}{3}\\lim_{n \\to \\infty}\\frac{2n+1}{2n+3} = \\frac{x^2}{3}$$
+The series converges when $\\frac{x^2}{3} < 1$, that is, $-\\sqrt{3} < x < \\sqrt{3}$.
+
+At $x = \\sqrt{3}$: $\\dfrac{(-1)^n(\\sqrt{3})^{2n+1}}{(2n+1)3^n} = \\dfrac{(-1)^n\\sqrt{3}}{2n+1}$, so the series is $\\sqrt{3}\\sum\\frac{(-1)^n}{2n+1}$. The terms alternate in sign, decrease in absolute value and approach $0$, so it converges by the Alternating Series Test. At $x = -\\sqrt{3}$ the series is the negative of this one, so it also converges.
+
+Interval of convergence: $-\\sqrt{3} \\le x \\le \\sqrt{3}$.`,
+      },
+      {
+        label: '(d)',
+        prompt: `Use the first two nonzero terms of the Maclaurin series for $f$ to approximate $f(1)$. Use the alternating series error bound to show that this approximation differs from $f(1)$ by less than $\\dfrac{1}{40}$.`,
+        maxPoints: 2,
+        rubric: [
+          { points: 1, description: `Approximation: $f(1) \\approx 1 - \\tfrac{1}{9} = \\tfrac{8}{9}$`, keywords: ['8/9', '0.888', '0.889', '1 - 1/9'] },
+          { points: 1, description: `Error bound: the series for $f(1)$ alternates with terms decreasing to $0$, so the error is at most the first omitted term, $\\tfrac{1}{45} < \\tfrac{1}{40}$`, keywords: ['1/45', '0.022'] },
+        ],
+        sampleAnswer: `$$f(1) \\approx 1 - \\frac{1}{9} = \\frac{8}{9}$$
+
+The series $f(1) = 1 - \\frac{1}{9} + \\frac{1}{45} - \\frac{1}{189} + \\cdots$ alternates, and its terms $\\frac{1}{(2n+1)3^n}$ decrease in absolute value to $0$. By the alternating series error bound,
+$$\\left|f(1) - \\frac{8}{9}\\right| \\le \\frac{1}{45} < \\frac{1}{40}$$`,
+      },
+    ],
+  },
+]
+
 // ─── Combined export ───────────────────────────────────────────────
 
-export const apCalcBCFRQs: CalcBCFRQ[] = [...longFRQs, ...shortFRQs]
+export const apCalcBCFRQs: CalcBCFRQ[] = [...longFRQs, ...shortFRQs, ...extFRQs]
 
 export function getCalcBCFRQs(): CalcBCFRQ[] {
   return apCalcBCFRQs
