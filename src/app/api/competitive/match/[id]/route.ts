@@ -178,8 +178,11 @@ export async function GET(
         questions: safeQuestions,
         player1Score: match.player1Score,
         player2Score: match.player2Score,
-        gameData: safeGameData, // Include gameData (answers scrubbed for ranked) for AI difficulty
+        gameData: safeGameData, // Include gameData (answers scrubbed for ranked) for AI difficulty + pacing
         gameMode: match.gameMode,
+        // Lets the client fall back to the static course resolver (bot-pacing.ts)
+        // for matches created before paceCourseKey was stored in gameData.
+        topicSlug: match.topicSlug,
         status: match.status,
         winnerId: match.winnerId,
         startedAt: match.startedAt?.toISOString(),

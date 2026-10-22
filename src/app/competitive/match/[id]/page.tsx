@@ -20,6 +20,7 @@ import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy';
 import { CompetitiveRichText } from '@/components/competitive/CompetitiveRichText';
 import { POWER_UPS, activeEffects, type ActiveEffect, type PowerUpId, type PowerUpsState } from '@/lib/chaos-powerups';
 import { ingestEffects } from '@/lib/chaos-arrival';
+import { planBotMove, matchTimeLimitSeconds, formatMinutes } from '@/lib/bot-pacing';
 import {
   PowerUpBar,
   InkSplatOverlay,
@@ -66,6 +67,7 @@ interface Question {
   difficulty?: 'easy' | 'medium' | 'hard';
   category?: string;
   skill?: string; // Official SAT skill this question targets (student-facing)
+  expectedSeconds?: number; // Expected student solve time, stamped at creation (bot-pacing.ts)
 }
 
 interface MatchState {
@@ -99,6 +101,7 @@ interface MatchState {
   startedAt: string;
   completedAt: string | null;
   gameMode?: string;
+  topicSlug?: string;
   player1MMRBefore?: number;
   player2MMRBefore?: number;
   player1MMRAfter?: number;
@@ -246,11 +249,14 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     return () => clearInterval(interval);
   }, [fetchMatchState]);
 
-  // Accuracy mode 5-minute countdown timer + auto-complete on expiry
+  // Accuracy mode countdown timer + auto-complete on expiry. The clock is the
+  // match's own (gameData.timeLimitSeconds, set from the questions' pacing at
+  // creation); matches created before pacing keep the legacy 5 minutes. The
+  // server enforces the same number (answer + complete routes).
   const timerCompletedRef = useRef(false);
   useEffect(() => {
     if (!matchState || matchState.gameMode !== 'ACCURACY_CHALLENGE' || matchState.status !== 'IN_PROGRESS') return;
-    const ACCURACY_TIME_LIMIT = 5 * 60; // 5 minutes in seconds
+    const ACCURACY_TIME_LIMIT = matchTimeLimitSeconds(matchState.gameData);
     const update = () => {
       const elapsed = Math.floor((Date.now() - new Date(matchState.startedAt).getTime()) / 1000);
       const remaining = Math.max(0, ACCURACY_TIME_LIMIT - elapsed);
@@ -474,91 +480,34 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     return <CompetitiveRichText text={text} inline={!block} />;
   };
 
-  // Auto-schedule AI answers when question changes
+  // Auto-schedule the practice bot's next answer. The whole decision — which
+  // question, how long it takes (course pacing × item difficulty × item
+  // length × bot strength), right or wrong, and the wait while it is Frozen —
+  // is planBotMove in bot-pacing.ts; this effect only schedules the fetch.
   useEffect(() => {
     const activeMatch = matchStateRef.current;
-    if (!activeMatch || activeMatch.status !== 'IN_PROGRESS') return;
+    if (!activeMatch || !currentUserId) return;
+    const move = planBotMove(activeMatch, currentUserId);
+    if (!move) return;
 
-    const isPlayer1 = currentUserId === activeMatch.player1Id;
-
-    // Check if opponent is AI (server sends a boolean flag — emails are no
-    // longer exposed to the client; see match GET route #6)
-    const isOpponentAI = isPlayer1 ? activeMatch.player2IsAI : activeMatch.player1IsAI;
-    if (!isOpponentAI) return;
-
-    const opponentQuestionIndex = isPlayer1 ? activeMatch.player2QuestionIndex : activeMatch.player1QuestionIndex;
-    const opponentPlayerId = isPlayer1 ? activeMatch.player2Id : activeMatch.player1Id;
-    
-    // Stop AI if it has answered all questions
-    if (opponentQuestionIndex >= activeMatch.questions.length) return;
-
-    // Get AI difficulty and calculate delay
-    const aiDifficulty = activeMatch.gameData?.aiDifficulty || 'medium';
-    const currentQuestion = activeMatch.questions[opponentQuestionIndex];
-    if (!currentQuestion) return;
-    const isMultipleChoice = currentQuestion?.type === 'multiple-choice';
-    
-    // Base timings for unit circle questions
-    const difficultySettings = {
-      easy: { min: 4000, max: 6000, accuracy: 0.70 },
-      medium: { min: 2500, max: 4500, accuracy: 0.83 },
-      hard: { min: 1000, max: 2000, accuracy: 0.95 },
-    };
-    
-    const settings = difficultySettings[aiDifficulty as keyof typeof difficultySettings];
-    
-    // For multiple-choice physics questions, increase timing by 50%
-    const minTime = isMultipleChoice ? settings.min * 1.5 : settings.min;
-    const maxTime = isMultipleChoice ? settings.max * 1.5 : settings.max;
-    let delay = minTime + Math.random() * (maxTime - minTime);
-
-    // If the bot is currently Frozen, it can't answer until the ice clears —
-    // wait out the remaining freeze so the player's Freeze actually lands on it.
-    const botPU = isPlayer1 ? activeMatch.gameData?.powerUps?.player2 : activeMatch.gameData?.powerUps?.player1;
-    const nowMs = Date.now();
-    const freezeRemaining = Math.max(
-      0,
-      ...((botPU?.effects || [])
-        .filter((e) => e.type === 'freeze')
-        .map((e) => e.startedAt + e.durationMs - nowMs)),
-    );
-    if (freezeRemaining > 0) delay += freezeRemaining;
-    
-    // Schedule AI answer
     const timeoutId = setTimeout(async () => {
       try {
-        // Determine if AI answers correctly
-        const willAnswerCorrectly = Math.random() < settings.accuracy;
-        const aiCurrentQuestion = currentQuestion;
-        
-        let answerIndex: number;
-        if (willAnswerCorrectly) {
-          answerIndex = aiCurrentQuestion.answerIndex || 0;
-        } else {
-          // Choose random wrong answer (for multiple choice, choose different option)
-          const totalOptions = aiCurrentQuestion.options?.length || UNIT_CIRCLE_POSITIONS.length;
-          do {
-            answerIndex = Math.floor(Math.random() * totalOptions);
-          } while (answerIndex === (aiCurrentQuestion.answerIndex || 0));
-        }
-        
-        // Submit AI answer with AI's playerId
+        // Submit the bot's answer with its own playerId
         await fetch(`/api/competitive/match/${matchId}/answer`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            questionIndex: opponentQuestionIndex,
-            answerIndex,
-            playerId: opponentPlayerId, // Specify AI player ID
+            questionIndex: move.questionIndex,
+            answerIndex: move.answerIndex,
+            playerId: move.playerId,
           }),
         });
-        
         // Match state will update via polling
       } catch (error) {
         console.error('Error submitting AI answer:', error);
       }
-    }, delay);
-    
+    }, move.delayMs);
+
     // Cleanup timeout if question changes or component unmounts
     return () => clearTimeout(timeoutId);
   }, [
@@ -714,8 +663,8 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
         // Wrong answer + explanation: in PRACTICE matches (vs the client-driven
         // bot, unranked) pause on the question with a "Next" button so the
         // explanation is actually readable. Never in ranked/live play (the
-        // opponent keeps racing) and never in ACCURACY_CHALLENGE (the 5-minute
-        // wall clock keeps ticking) — those keep the exact 1600ms auto-advance,
+        // opponent keeps racing) and never in ACCURACY_CHALLENGE (the match
+        // clock keeps ticking) — those keep the exact 1600ms auto-advance,
         // and the explanation remains available in the post-match review.
         const canHoldForExplanation =
           !!currentQuestion?.explanation &&
@@ -1233,7 +1182,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
               <Target className="w-5 h-5 text-accent" aria-hidden="true" />
               <div>
                 <p className="font-bold text-gray-900 dark:text-white text-sm">Accuracy Challenge</p>
-                <p className="text-xs text-gray-500">{matchState.questions.length} questions &middot; highest accuracy wins</p>
+                <p className="text-xs text-gray-500">{matchState.questions.length} questions &middot; {formatMinutes(matchTimeLimitSeconds(matchState.gameData))} clock &middot; highest accuracy wins</p>
               </div>
             </div>
             {accuracyTimer !== null && (

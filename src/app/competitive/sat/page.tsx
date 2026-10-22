@@ -7,6 +7,7 @@ import { useSession } from 'next-auth/react'
 import AsyncChallengeButton from '@/components/AsyncChallengeButton'
 import { useQueueElapsed, formatElapsed, QUEUE_FALLBACK_AFTER_SEC, QUEUE_POLL_TIMEOUT_SEC } from '@/components/competitive/QueueSearchPanel'
 import { ChevronDown, Check, Users, Bot, SlidersHorizontal, Lock, X } from 'lucide-react'
+import { BOT_STRENGTH_COPY } from '@/lib/bot-pacing'
 
 interface QueueStatus { status: string; matchId?: string; position?: number; estimatedWait?: number; [key: string]: unknown }
 interface UnlockCheckResponse { unlocked: boolean; competitiveCategories?: Record<string, boolean> }
@@ -559,9 +560,10 @@ function SatCompetitiveInner() {
                     <button
                       key={t.key}
                       onClick={() => startAIPractice(t.key)}
-                      className="flex-1 rounded-lg border border-gray-200 dark:border-gray-600 px-3 py-2 text-xs font-semibold text-gray-700 dark:text-gray-300 hover:border-blue-400"
+                      className="flex-1 min-w-[10rem] rounded-lg border border-gray-200 dark:border-gray-600 px-3 py-2 text-left text-xs text-gray-700 dark:text-gray-300 hover:border-blue-400"
                     >
-                      {t.icon} {t.label} bot
+                      <span className="block font-semibold">{t.icon} {t.label} bot</span>
+                      <span className="block text-[11px] text-gray-500 dark:text-gray-400">{BOT_STRENGTH_COPY[t.key].desc}</span>
                     </button>
                   ))}
                 </div>

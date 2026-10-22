@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions, matchQuestionCount } from '@/lib/competitive-utils'
+import { paceMatchQuestions } from '@/lib/bot-pacing-server'
 import { queueJoinSchema, parseBody } from '@/lib/validations'
 import { sweepStaleMatchesForUser } from '../_lib/sweep-stale-matches'
 import type { Prisma } from '@prisma/client'
@@ -140,7 +141,10 @@ export async function POST(req: NextRequest) {
 
       // Match tier: the claiming joiner's choice, else the waiting opponent's.
       const matchTier = (tier ?? opponent.tier ?? undefined) as 'easy' | 'medium' | 'hard' | undefined
-      const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs, matchTier)
+      const drawn = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs, matchTier)
+      // Pacing is stamped at creation (course key, per-question expected
+      // seconds, the Accuracy clock) so both clients read the same numbers.
+      const { questions, pacing } = await paceMatchQuestions(drawn, topicSlug, gameMode || 'SPEED_RACE')
       const competitiveMatch = await tx.competitiveMatch.create({
         data: {
           player1Id: opponent.userId,
@@ -160,6 +164,7 @@ export async function POST(req: NextRequest) {
             player1QuestionIndex: 0,
             player2QuestionIndex: 0,
             ...(matchTier ? { tier: matchTier } : {}),
+            ...pacing,
           } as unknown as Prisma.InputJsonValue,
         },
       })
@@ -338,7 +343,8 @@ export async function GET() {
 
       // Match tier: the waiting player's choice, else the claimed opponent's.
       const matchTier = (entry.tier ?? opponent.tier ?? undefined) as 'easy' | 'medium' | 'hard' | undefined
-      const questions = await generateMatchQuestions(questionCount, entry.topicSlug, completedTopicSlugs, matchTier)
+      const drawn = await generateMatchQuestions(questionCount, entry.topicSlug, completedTopicSlugs, matchTier)
+      const { questions, pacing } = await paceMatchQuestions(drawn, entry.topicSlug, entry.gameMode || 'SPEED_RACE')
       const competitiveMatch = await tx.competitiveMatch.create({
         data: {
           player1Id: opponent.userId,
@@ -358,6 +364,7 @@ export async function GET() {
             player1QuestionIndex: 0,
             player2QuestionIndex: 0,
             ...(matchTier ? { tier: matchTier } : {}),
+            ...pacing,
           } as unknown as Prisma.InputJsonValue,
         },
       })

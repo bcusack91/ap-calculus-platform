@@ -37,7 +37,7 @@ interface LobbyState {
 
 const GAME_MODES = [
   { id: 'SPEED_RACE', label: '⚡ Speed Race', desc: 'First to 10 correct wins' },
-  { id: 'ACCURACY_CHALLENGE', label: '🎯 Accuracy Challenge', desc: 'Highest accuracy in 5 minutes' },
+  { id: 'ACCURACY_CHALLENGE', label: '🎯 Accuracy Challenge', desc: 'Highest accuracy on 20 questions · clock set by the topic' },
   // CHAOS is unranked by construction — the match engine skips MMR and profile
   // stats for chaos matches — so friends can spam power-ups with nothing at stake.
   { id: 'CHAOS', label: '🌀 Chaos Mode', desc: 'Power-ups & mayhem · does NOT affect MMR' },

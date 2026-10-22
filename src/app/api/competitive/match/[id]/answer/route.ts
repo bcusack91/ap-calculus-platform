@@ -5,6 +5,7 @@ import { calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
 import { answerSubmissionSchema, parseBody } from '@/lib/validations';
 import { recordCompetitiveAssignment } from '@/lib/assignment-autocomplete';
 import { emptyPlayerPowerUps, rollPowerUpDrop, MAX_INVENTORY, type PowerUpsState, type PowerUpId } from '@/lib/chaos-powerups';
+import { matchTimeLimitSeconds } from '@/lib/bot-pacing';
 import type { Prisma } from '@prisma/client';
 
 interface MatchGameData {
@@ -17,6 +18,8 @@ interface MatchGameData {
   isPracticeMatch?: boolean;
   lobbyCode?: string;
   powerUps?: PowerUpsState;
+  /** Accuracy Challenge clock set at creation from the questions' pacing (bot-pacing.ts). */
+  timeLimitSeconds?: number;
 }
 
 export async function POST(
@@ -95,11 +98,13 @@ export async function POST(
     const questions = gameData?.questions || [];
 
     // ---- Server-side deadline enforcement (ACCURACY_CHALLENGE) ----
-    // The match has a hard 5-minute wall clock enforced on the server, not
-    // trusted to the client. An answer that arrives after the deadline is NOT
-    // counted toward the score — but we still fall through to the completion
-    // logic below so the match gets finalized rather than left hanging.
-    const ACCURACY_TIME_LIMIT_MS = 5 * 60 * 1000;
+    // The match has a hard wall clock enforced on the server, not trusted to
+    // the client: gameData.timeLimitSeconds (set from the questions' pacing at
+    // creation), or the legacy 5 minutes for matches created before that. An
+    // answer that arrives after the deadline is NOT counted toward the score —
+    // but we still fall through to the completion logic below so the match
+    // gets finalized rather than left hanging.
+    const ACCURACY_TIME_LIMIT_MS = matchTimeLimitSeconds(gameData) * 1000;
     const deadlinePassed =
       match.gameMode === 'ACCURACY_CHALLENGE' &&
       !!match.startedAt &&
@@ -145,7 +150,7 @@ export async function POST(
       }
     }
 
-    // ---- ACCURACY_CHALLENGE mode: scored by accuracy, 5-min timer ----
+    // ---- ACCURACY_CHALLENGE mode: scored by accuracy, paced timer ----
     // (ACCURACY_TIME_LIMIT_MS is declared above for deadline enforcement.)
     const isAccuracyMode = match.gameMode === 'ACCURACY_CHALLENGE';
     const ACCURACY_TOTAL_QUESTIONS = questions.length;

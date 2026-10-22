@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions, SPEED_RACE_POOL_SIZE, type MatchTier } from '@/lib/competitive-utils'
+import { paceMatchQuestions } from '@/lib/bot-pacing-server'
 import { Prisma } from '@prisma/client'
 
 /**
@@ -108,7 +109,8 @@ export async function POST(req: NextRequest) {
       // modulo index, so a 15-question buffer repeated once an active player
       // passed it. A deeper pool keeps questions fresh; match length is unchanged
       // (score-based completion).
-      const questions = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, topicSlug, completedTopicSlugs, tier)
+      const drawn = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, topicSlug, completedTopicSlugs, tier)
+      const { questions, pacing } = await paceMatchQuestions(drawn, topicSlug, 'TEAM_BATTLE')
 
       const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
       const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)
@@ -146,6 +148,7 @@ export async function POST(req: NextRequest) {
               answers: { [team2[0].userId]: [], [team2[1].userId]: [] },
             },
             playerMMRs: Object.fromEntries(allPlayers.map(p => [p.userId, p.mmr])),
+            ...pacing,
             player1QuestionIndex: 0,
             player2QuestionIndex: 0,
             ...(tier ? { tier } : {}),
@@ -320,7 +323,8 @@ export async function GET() {
       const team1 = [allPlayers[0], allPlayers[3]]
       const team2 = [allPlayers[1], allPlayers[2]]
 
-      const questions = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, entry.topicSlug, completedTopicSlugs)
+      const drawn = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, entry.topicSlug, completedTopicSlugs)
+      const { questions, pacing } = await paceMatchQuestions(drawn, entry.topicSlug, 'TEAM_BATTLE')
 
       const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
       const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)
@@ -359,6 +363,7 @@ export async function GET() {
               answers: { [team2[0].userId]: [], [team2[1].userId]: [] },
             },
             playerMMRs: Object.fromEntries(allPlayers.map(p => [p.userId, p.mmr])),
+            ...pacing,
             player1QuestionIndex: 0,
             player2QuestionIndex: 0,
           } as unknown as Prisma.InputJsonValue,

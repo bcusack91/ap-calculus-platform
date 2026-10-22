@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { Check, X, ClipboardList, Sparkles } from 'lucide-react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
+import { botAnswerIndex, botAnswerPlan, matchPaceCourseKey } from '@/lib/bot-pacing'
 import TeamMatchReview, { summarizeAnswers, type ReviewAnswer } from '@/components/competitive/team-match/TeamMatchReview'
 import 'katex/dist/katex.min.css'
 
@@ -19,6 +20,8 @@ interface Question {
   explanation?: string
   difficulty?: 'easy' | 'medium' | 'hard'
   category?: string
+  /** Expected student solve time, stamped at match creation (bot-pacing.ts). */
+  expectedSeconds?: number
 }
 
 interface TeamPlayer {
@@ -134,36 +137,28 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
     )
     if (aiPlayers.length === 0) return
 
-    const difficultySettings: Record<string, { min: number; max: number; accuracy: number }> = {
-      easy:   { min: 4000, max: 6000, accuracy: 0.70 },
-      medium: { min: 3000, max: 5000, accuracy: 0.83 },
-      hard:   { min: 1500, max: 3000, accuracy: 0.95 },
-    }
-    const settings = difficultySettings[aiDifficultyVal] || difficultySettings['medium']
+    // Each bot paces itself off the question (bot-pacing.ts): the course's
+    // exam pacing × item difficulty × item length, times its strength factor.
+    // The pacing course was stored at creation; older matches resolve it from
+    // the topic slug.
+    const paceCourse = matchPaceCourseKey({
+      topicSlug: ms.topicSlug,
+      gameData: { paceCourseKey: (ms as unknown as Record<string, unknown>).paceCourseKey },
+    })
 
     const timeouts: ReturnType<typeof setTimeout>[] = []
 
     for (const aiPlayer of aiPlayers) {
       const aiQIndex = questionIndices[aiPlayer.id] ?? 0
-      const delay = settings.min + Math.random() * (settings.max - settings.min)
+      const plannedQ = ms.questions[aiQIndex]
+      if (!plannedQ) continue
+      const plan = botAnswerPlan(plannedQ, paceCourse, aiDifficultyVal)
 
       const timeoutId = setTimeout(async () => {
         try {
-          const questions = ms.questions
-          const currentQ = questions[aiQIndex]
+          const currentQ = ms.questions[aiQIndex]
           if (!currentQ) return
-
-          const willAnswerCorrectly = Math.random() < settings.accuracy
-          let answerIndex: number
-          if (willAnswerCorrectly && currentQ.answerIndex !== undefined) {
-            answerIndex = currentQ.answerIndex
-          } else {
-            const totalOptions = currentQ.options?.length || 4
-            do {
-              answerIndex = Math.floor(Math.random() * totalOptions)
-            } while (answerIndex === currentQ.answerIndex && totalOptions > 1)
-          }
-
+          const answerIndex = botAnswerIndex(currentQ, plan.correct)
           await fetch(`/api/competitive/team-match/${resolvedParams.id}/answer`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -176,7 +171,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
         } catch (err) {
           console.error('AI team bot error:', err)
         }
-      }, delay)
+      }, plan.delayMs)
       timeouts.push(timeoutId)
     }
 

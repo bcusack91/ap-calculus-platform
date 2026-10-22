@@ -2,6 +2,8 @@ import { NextResponse, NextRequest } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions, type MatchTier } from '@/lib/competitive-utils'
+import { paceAsyncChallenge } from '@/lib/bot-pacing-server'
+import { clampAsyncLimit } from '@/lib/bot-pacing'
 
 /**
  * POST — Create a new async challenge (challenger starts playing immediately)
@@ -16,7 +18,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { topicSlug, questionCount = 10, timeLimit = 300, recipientId } = body
+    const { topicSlug, questionCount = 10, timeLimit, recipientId } = body
 
     if (!topicSlug || typeof topicSlug !== 'string') {
       return NextResponse.json({ error: 'topicSlug is required' }, { status: 400 })
@@ -35,10 +37,15 @@ export async function POST(request: NextRequest) {
     }
 
     const safeQuestionCount = Math.min(Math.max(Number(questionCount) || 10, 5), 20)
-    const safeTimeLimit = Math.min(Math.max(Number(timeLimit) || 300, 60), 900)
 
-    // Generate questions (same function used for live matches)
-    const questions = await generateMatchQuestions(safeQuestionCount, topicSlug, [], tier)
+    // Generate questions (same function used for live matches), then stamp
+    // each with its expected solve time. The clock defaults to the sum of
+    // those times (bot-pacing.ts) — a 10-question calculus challenge gets far
+    // longer than a 10-question Algebra 1 one — unless the caller sent one.
+    const drawn = await generateMatchQuestions(safeQuestionCount, topicSlug, [], tier)
+    const { questions, defaultTimeLimit } = await paceAsyncChallenge(drawn, topicSlug)
+    const requestedLimit = Number(timeLimit)
+    const safeTimeLimit = Number.isFinite(requestedLimit) && requestedLimit > 0 ? clampAsyncLimit(requestedLimit) : defaultTimeLimit
 
     // Challenge expires in 7 days
     const expiresAt = new Date()
@@ -57,7 +64,7 @@ export async function POST(request: NextRequest) {
       },
     })
 
-    return NextResponse.json({ challengeId: challenge.id, questions })
+    return NextResponse.json({ challengeId: challenge.id, questions, timeLimit: safeTimeLimit })
   } catch (error) {
     console.error('Error creating async challenge:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

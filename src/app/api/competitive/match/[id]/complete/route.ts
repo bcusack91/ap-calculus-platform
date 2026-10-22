@@ -3,6 +3,7 @@ import { recordCompetitiveAssignment } from '@/lib/assignment-autocomplete';
 import { auth } from '@/lib/auth';
 import { prisma } from '@/lib/prisma';
 import { calculateMMRChange, getRankFromMMR } from '@/lib/competitive-utils';
+import { matchTimeLimitSeconds } from '@/lib/bot-pacing';
 import type { Prisma } from '@prisma/client';
 
 interface MatchGameData {
@@ -55,16 +56,18 @@ export async function POST(
       return NextResponse.json({ error: 'Not an accuracy match' }, { status: 400 });
     }
 
-    // Verify timer actually expired (with 5s grace period)
-    const ACCURACY_TIME_LIMIT_MS = 5 * 60 * 1000;
+    const gameData = (match.gameData && typeof match.gameData === 'object'
+      ? match.gameData
+      : {}) as MatchGameData;
+
+    // Verify the match clock actually expired (with 5s grace period). The
+    // clock is gameData.timeLimitSeconds, set from the questions' pacing at
+    // creation; matches created before pacing keep the legacy 5 minutes.
+    const ACCURACY_TIME_LIMIT_MS = matchTimeLimitSeconds(gameData) * 1000;
     const elapsed = match.startedAt ? Date.now() - new Date(match.startedAt).getTime() : 0;
     if (elapsed < ACCURACY_TIME_LIMIT_MS - 5000) {
       return NextResponse.json({ error: 'Timer has not expired' }, { status: 400 });
     }
-
-    const gameData = (match.gameData && typeof match.gameData === 'object'
-      ? match.gameData
-      : {}) as MatchGameData;
 
     const p1Answered = gameData.player1Answers?.length || 0;
     const p2Answered = gameData.player2Answers?.length || 0;

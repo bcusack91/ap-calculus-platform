@@ -3,6 +3,7 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions, matchQuestionCount, type MatchTier } from '@/lib/competitive-utils'
 import { normalizeLobbyCode } from '@/lib/lobby-codes'
+import { paceMatchQuestions } from '@/lib/bot-pacing-server'
 import type { Prisma, CompetitiveMode } from '@prisma/client'
 
 // Host starts a new match in the lobby with a chosen topic + game mode
@@ -73,7 +74,8 @@ export async function POST(
       ? lobby.difficulty
       : undefined) as MatchTier | undefined
 
-  const questions = await generateMatchQuestions(questionCount, topicSlug, [], tier)
+  const drawn = await generateMatchQuestions(questionCount, topicSlug, [], tier)
+  const { questions, pacing } = await paceMatchQuestions(drawn, topicSlug, gameMode)
 
   const match = await prisma.competitiveMatch.create({
     data: {
@@ -92,6 +94,7 @@ export async function POST(
         player1QuestionIndex: 0,
         player2QuestionIndex: 0,
         lobbyCode: code,
+        ...pacing,
       } as unknown as Prisma.InputJsonValue,
     },
   })

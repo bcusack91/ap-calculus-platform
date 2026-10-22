@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions, matchQuestionCount, SPEED_RACE_POOL_SIZE, type MatchTier } from '@/lib/competitive-utils'
+import { paceMatchQuestions } from '@/lib/bot-pacing-server'
 import type { Prisma } from '@prisma/client'
 
 /**
@@ -94,7 +95,8 @@ export async function POST(req: NextRequest) {
 
       // AI team battle uses the same team-match route (modulo cycling, first-to-15),
       // so it gets the same deep buffer as live team battles.
-      const questions = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, topicSlug, completedTopicSlugs, tier)
+      const drawn = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, topicSlug, completedTopicSlugs, tier)
+      const { questions, pacing } = await paceMatchQuestions(drawn, topicSlug || 'the-unit-circle', 'TEAM_BATTLE')
 
       const team1Players = [user.id, aiTeammate.id]
       const team2Players = [aiOpp1.id, aiOpp2.id]
@@ -139,6 +141,7 @@ export async function POST(req: NextRequest) {
             aiDifficulty,
             isPracticeMatch: true,
             ...(tier ? { tier } : {}),
+            ...pacing,
           } as unknown as Prisma.InputJsonValue,
         }
       })
@@ -153,7 +156,10 @@ export async function POST(req: NextRequest) {
     // ---- Standard 1v1 match ----
     const aiOpponent = await getOrCreateAIBot('ai-opponent@studyai.com', 'AI Practice Bot')
     const questionCount = matchQuestionCount(gameMode)
-    const questions = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs, tier)
+    const drawn = await generateMatchQuestions(questionCount, topicSlug, completedTopicSlugs, tier)
+    // The bot paces itself off these numbers (bot-pacing.ts): the course's
+    // exam pacing × item difficulty × item length, stored once here.
+    const { questions, pacing } = await paceMatchQuestions(drawn, topicSlug || 'the-unit-circle', gameMode || 'SPEED_RACE')
 
     // Give the bot a fresh name + avatar for THIS match so it reads as a new
     // opponent. Stored in gameData (not on the shared bot user) and swapped in
@@ -184,6 +190,7 @@ export async function POST(req: NextRequest) {
           aiName: aiIdentity.name,
           aiAvatar: aiIdentity.avatar,
           ...(tier ? { tier } : {}),
+          ...pacing,
         } as unknown as Prisma.InputJsonValue,
       }
     })

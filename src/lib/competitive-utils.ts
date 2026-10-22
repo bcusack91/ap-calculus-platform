@@ -95,7 +95,7 @@ type OptionQuestion = {
   subtopic?: string;
 }
 
-type MatchQuestion = {
+export type MatchQuestion = {
   id: number;
   question?: string;
   options?: string[];
@@ -190,7 +190,7 @@ const LESSON_TO_BANK_TOPIC: Record<string, string> = {}
  * sub-topic router so any lesson slug for a covered course is routed to
  * its bank function (with the bank-topic alias from LESSON_TO_BANK_TOPIC).
  */
-const LESSON_TO_COURSE_BANK_KEY: Record<string, string> = {
+export const LESSON_TO_COURSE_BANK_KEY: Record<string, string> = {
   // Algebra 1 topic slugs
   'solving-linear-equations-algebra1': 'algebra-1',
   'graphing-linear-equations-algebra1': 'algebra-1',
@@ -499,7 +499,7 @@ const COURSE_SUB_TOPIC_BANKS: Record<string, (count: number, topicSlug?: string)
  * routes to the whole-bank random-sample getter.
  */
 const LESSON_TO_FULL_COURSE_BANK: Record<string, (count?: number) => Promise<OptionQuestion[]>> = {}
-const PSYCHOLOGY_LESSON_SLUGS = [
+export const PSYCHOLOGY_LESSON_SLUGS = [
   'history-approaches-psychology', 'biological-bases-brain', 'genetics-behavior',
   'sensation-sensory-processing', 'perception-attention', 'classical-conditioning',
   'operant-conditioning', 'observational-learning-cognition', 'memory-encoding-storage',
@@ -509,7 +509,7 @@ const PSYCHOLOGY_LESSON_SLUGS = [
   'mood-psychotic-disorders', 'treatment-therapy', 'social-influence-conformity',
   'attitudes-persuasion', 'group-behavior-prejudice',
 ]
-const STATISTICS_LESSON_SLUGS = [
+export const STATISTICS_LESSON_SLUGS = [
   'types-data-sampling', 'displaying-distributions-graphs', 'describing-distributions',
   'measures-of-spread', 'measures-of-center', 'normal-distributions', 'sampling-methods',
   'observational-vs-experiments', 'experimental-design', 'bias-sampling-surveys',
@@ -531,7 +531,7 @@ for (const s of STATISTICS_LESSON_SLUGS) LESSON_TO_FULL_COURSE_BANK[s] = getApSt
  * For these, we sample from the entire course bank instead of strict
  * topic-equality filtering. The value is the course bank key.
  */
-const COURSE_GROUPING_LESSONS: Record<string, 'ap-calculus-ab' | 'ap-calculus-bc'> = {
+export const COURSE_GROUPING_LESSONS: Record<string, 'ap-calculus-ab' | 'ap-calculus-bc'> = {
   // ---- AP Calculus AB unit & exam-prep buckets
   'ap-exam-review-calcab': 'ap-calculus-ab',
   'calcab-applications-derivatives': 'ap-calculus-ab',

@@ -127,6 +127,9 @@ export async function GET(
         ...((gameData as unknown as Record<string, unknown>).isPracticeMatch ? {
           isPracticeMatch: true,
           aiDifficulty: (gameData as unknown as Record<string, unknown>).aiDifficulty || 'medium',
+          // Pacing course stored at creation (bot-pacing-server.ts); the bots
+          // time themselves off it and each question's expectedSeconds.
+          paceCourseKey: (gameData as unknown as Record<string, unknown>).paceCourseKey,
           questionIndices: {
             ...gameData.team1.questionIndices,
             ...gameData.team2.questionIndices,

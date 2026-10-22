@@ -18,10 +18,20 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { ArrowLeft, Bot, Check, Lock, Star } from 'lucide-react'
 import { GAME_MODE_CARDS } from '@/lib/competitive-modes'
+import { BOT_STRENGTH_COPY, type BotStrength } from '@/lib/bot-pacing'
 import { COMPETITIVE_COURSES } from '@/lib/competitive-catalog'
 import { unitHeading } from '@/lib/competitive-course-units'
 import AsyncChallengeButton from '@/components/AsyncChallengeButton'
 import QueueSearchPanel, { QUEUE_POLL_TIMEOUT_SEC } from '@/components/competitive/QueueSearchPanel'
+
+// Practice-bot strengths, described in terms of the problems (bot-pacing.ts);
+// the seconds per question depend on the topic now, so they are not promised.
+const BOT_STRENGTHS: BotStrength[] = ['easy', 'medium', 'hard']
+const BOT_BUTTON_CLASS: Record<BotStrength, string> = {
+  easy: 'bg-green-500 hover:bg-green-600',
+  medium: 'bg-yellow-500 hover:bg-yellow-600',
+  hard: 'bg-red-500 hover:bg-red-600',
+}
 
 export interface CompetitiveCoursePageConfig {
   /** Route slug: /competitive/<slug>; also the ?from= param on match redirects. */
@@ -354,10 +364,17 @@ function CompetitiveCoursePageInner({ config }: { config: CompetitiveCoursePageC
                       <Bot className="h-4 w-4" aria-hidden /> Practice vs AI
                     </button>
                     {showAIOptions && selectedTopic && (
-                      <div className="mt-4 flex justify-center gap-3">
-                        <button onClick={() => startAIPractice('easy')} className="px-5 py-2.5 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all text-sm">Easy</button>
-                        <button onClick={() => startAIPractice('medium')} className="px-5 py-2.5 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg transition-all text-sm">Medium</button>
-                        <button onClick={() => startAIPractice('hard')} className="px-5 py-2.5 bg-red-500 hover:bg-red-600 text-white font-semibold rounded-lg transition-all text-sm">Hard</button>
+                      <div className="mt-4 flex flex-col sm:flex-row justify-center gap-3">
+                        {BOT_STRENGTHS.map((s) => (
+                          <button
+                            key={s}
+                            onClick={() => startAIPractice(s)}
+                            className={`px-5 py-2.5 text-white rounded-lg transition-all text-sm text-left sm:max-w-[15rem] ${BOT_BUTTON_CLASS[s]}`}
+                          >
+                            <span className="block font-semibold">{BOT_STRENGTH_COPY[s].label} bot</span>
+                            <span className="block text-xs text-white/90">{BOT_STRENGTH_COPY[s].desc}</span>
+                          </button>
+                        ))}
                       </div>
                     )}
                   </div>
