@@ -7,6 +7,7 @@ import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
+import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
 import {
   getCalcBCFRQs,
@@ -512,7 +513,7 @@ function APCalcBCFRQPageInner() {
           <div className="px-6 py-5">
             <div className="bg-purple-50 dark:bg-purple-900/20 rounded-xl p-5 mb-6 border border-purple-200 dark:border-purple-700">
               <div className="prose prose-sm max-w-none dark:prose-invert">
-                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]}>
                   {escapeCurrencyMath(currentFRQ.prompt)}
                 </ReactMarkdown>
               </div>
@@ -546,7 +547,7 @@ function APCalcBCFRQPageInner() {
                     </div>
 
                     <div className="mb-3 prose prose-sm max-w-none dark:prose-invert">
-                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                      <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]}>
                         {escapeCurrencyMath(part.prompt)}
                       </ReactMarkdown>
                     </div>
@@ -639,7 +640,7 @@ function APCalcBCFRQPageInner() {
                             </h5>
                             <div className="prose prose-sm max-w-none dark:prose-invert text-xs">
                               <ReactMarkdown
-                                remarkPlugins={[remarkMath]}
+                                remarkPlugins={[remarkMath, remarkGfm]}
                                 rehypePlugins={[rehypeKatex]}
                               >
                                 {escapeCurrencyMath(part.sampleAnswer)}

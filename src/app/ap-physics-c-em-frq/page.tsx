@@ -7,6 +7,7 @@ import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
+import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
 import {
   getAllFRQs,
@@ -538,7 +539,7 @@ function APPhysicsCEMFRQPageInner() {
           <div className="px-6 py-5">
             <div className="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 mb-6 border border-amber-200 dark:border-amber-700">
               <div className="prose prose-sm max-w-none dark:prose-invert">
-                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]}>
                   {escapeCurrencyMath(currentFRQ.prompt)}
                 </ReactMarkdown>
               </div>
@@ -579,7 +580,7 @@ function APPhysicsCEMFRQPageInner() {
                     </div>
 
                     <div className="mb-3 prose prose-sm max-w-none dark:prose-invert">
-                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                      <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]}>
                         {escapeCurrencyMath(part.prompt)}
                       </ReactMarkdown>
                     </div>
@@ -678,7 +679,7 @@ function APPhysicsCEMFRQPageInner() {
                             </h5>
                             <div className="prose prose-sm max-w-none dark:prose-invert text-xs">
                               <ReactMarkdown
-                                remarkPlugins={[remarkMath]}
+                                remarkPlugins={[remarkMath, remarkGfm]}
                                 rehypePlugins={[rehypeKatex]}
                               >
                                 {escapeCurrencyMath(part.sampleAnswer)}

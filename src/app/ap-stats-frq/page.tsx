@@ -7,6 +7,7 @@ import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
 import remarkMath from 'remark-math'
+import remarkGfm from 'remark-gfm'
 import rehypeKatex from 'rehype-katex'
 import {
   getStatsFRQs,
@@ -520,7 +521,7 @@ function APStatsFRQPageInner() {
 
             <div className="bg-teal-50 dark:bg-teal-900/20 rounded-xl p-5 mb-6 border border-teal-200 dark:border-teal-700">
               <div className="prose prose-sm max-w-none dark:prose-invert">
-                <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]}>
                   {escapeCurrencyMath(currentFRQ.prompt)}
                 </ReactMarkdown>
               </div>
@@ -554,7 +555,7 @@ function APStatsFRQPageInner() {
                     </div>
 
                     <div className="mb-3 prose prose-sm max-w-none dark:prose-invert">
-                      <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                      <ReactMarkdown remarkPlugins={[remarkMath, remarkGfm]} rehypePlugins={[rehypeKatex]}>
                         {escapeCurrencyMath(part.prompt)}
                       </ReactMarkdown>
                     </div>
@@ -647,7 +648,7 @@ function APStatsFRQPageInner() {
                             </h5>
                             <div className="prose prose-sm max-w-none dark:prose-invert text-xs">
                               <ReactMarkdown
-                                remarkPlugins={[remarkMath]}
+                                remarkPlugins={[remarkMath, remarkGfm]}
                                 rehypePlugins={[rehypeKatex]}
                               >
                                 {escapeCurrencyMath(part.sampleAnswer)}
