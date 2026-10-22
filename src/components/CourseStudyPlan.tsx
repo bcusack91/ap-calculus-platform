@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
-import { ArrowRight, ListChecks, SlidersHorizontal } from 'lucide-react'
+import { ArrowRight, ClipboardCheck, Layers, ListChecks, SlidersHorizontal, Timer } from 'lucide-react'
 import { formatTimeUntil } from '@/lib/format-due-time'
 import { studyPlanTopicHref } from '@/lib/dashboard-next-step'
 import { courseDiagnosticForKey } from '@/lib/student-courses'
@@ -15,6 +15,7 @@ import FullLengthProgress from '@/components/FullLengthProgress'
 import ExamGoalCard from '@/components/ExamGoalCard'
 import { isFullLengthCourse } from '@/lib/full-length-progress'
 import { mistakesHref, qbankHref, toolCourseFor, type ToolCourse } from '@/lib/question-tool-courses'
+import { apExamCountdownLabel, apExamWeekLinks, apNextStepModeForDays } from '@/lib/ap-next-step'
 
 /** The hub's mistake-log / question-bank course: MCAT, SAT or an AP course (ACT links them from its own page). */
 const hubToolCourse = (courseKey: string, courseSlug?: string): ToolCourse | null =>
@@ -38,6 +39,12 @@ export type PlanStatus = {
   unitTest?: { available?: boolean; passed: boolean; path: string; questionCount: number; passPercent: number; attempts: number; inProgressId?: string | null; locksDiagnostic?: boolean; testName?: string } | null
   /** AP track courses (src/lib/ap-track.ts): the student's difficulty track. */
   apTrack?: { track: 'foundation' | 'regular' | 'five'; label: string; explanation: string } | null
+  /** DB course slug, when the payload carries it. */
+  courseSlug?: string | null
+  /** AP (plan-status): the latest sitting's estimated score and 1–5 band, and days to the course's exam (src/lib/ap-next-step.ts). */
+  estimatedScore?: number | null
+  scoreRange?: { low: number; high: number } | null
+  examDaysLeft?: number | null
 }
 
 type FlashcardStats = {
@@ -84,11 +91,15 @@ const DEDICATED_PLAN: Record<string, { endpoint: string; accent: CourseStudyPlan
 
 interface GenericPlan {
   courseKey?: string
+  courseSlug?: string | null
   canRetakeDiagnostic?: boolean
   unitTest?: PlanStatus['unitTest']
   requiredScorePercent?: number
   topics?: PlanTopicStatus[]
   apTrack?: PlanStatus['apTrack']
+  estimatedScore?: number | null
+  scoreRange?: { low: number; high: number } | null
+  examDaysLeft?: number | null
 }
 
 /** One course's plan from the generic /api/study-plan/plan-status payload. */
@@ -106,6 +117,10 @@ export function planFromGenericPayload(body: unknown, courseKey: string): PlanSt
     pendingTopics: topics.filter((t) => !t.isSatisfied),
     unitTest: plan.unitTest ?? null,
     apTrack: plan.apTrack ?? null,
+    courseSlug: plan.courseSlug ?? null,
+    estimatedScore: plan.estimatedScore ?? null,
+    scoreRange: plan.scoreRange ?? null,
+    examDaysLeft: plan.examDaysLeft ?? null,
   }
 }
 
@@ -180,6 +195,18 @@ export default function CourseStudyPlan({
   const cleared = hasPlan ? plan!.recommendedTopics.length - pending.length : 0
   const clearPercent = plan?.requiredScorePercent ?? TOPIC_CLEAR_PERCENT
 
+  // Exam-aware AP next step (src/lib/ap-next-step.ts): the same mode as the
+  // results screen and the dashboard, from the plan-status payload.
+  const cram = hasPlan ? apExamWeekLinks(plan?.courseSlug ?? courseSlug, courseKey) : null
+  const apDecision = hasPlan && cram ? apNextStepModeForDays(plan!.examDaysLeft, { estimatedScore: plan!.estimatedScore, scoreRange: plan!.scoreRange }) : null
+  const apMode = apDecision?.mode ?? 'plan'
+  const examChip = apExamCountdownLabel(apDecision?.daysToExam)
+  const examChipEl = examChip ? (
+    <span className="ml-2 rounded-full bg-accent-subtle px-2 py-0.5 text-[11px] font-bold normal-case tracking-normal text-accent-hover dark:bg-accent-light/20 dark:text-accent-muted" data-testid="hub-exam-chip">
+      {examChip}
+    </span>
+  ) : null
+
   // Signed in and still fetching: hold the space instead of flashing the
   // "take the diagnostic" pitch at a student who already has a plan.
   const checking = status === 'authenticated' && !loaded
@@ -190,13 +217,58 @@ export default function CourseStudyPlan({
         {/* ── Start here: the one next step on this course ── */}
         <div className={`rounded-2xl border-2 bg-white p-6 shadow-sm dark:bg-gray-800 ${a.cardBorder}`}>
           <p id={`start-here-${courseKey}`} className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
-            Start here
+            Start here{examChipEl}
           </p>
           {checking ? (
             <div className="mt-2 animate-pulse space-y-2" aria-busy="true">
               <div className="h-6 w-2/3 rounded bg-gray-200 dark:bg-gray-700" />
               <div className="h-4 w-1/2 rounded bg-gray-200 dark:bg-gray-700" />
               <div className="h-10 w-48 rounded-lg bg-gray-200 dark:bg-gray-700" />
+            </div>
+          ) : hasPlan && apMode === 'exam-week' && cram ? (
+            <div data-testid="hub-mode-exam-week">
+              <h2 className="mt-1 flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
+                <Timer className="h-5 w-5 shrink-0 text-accent" aria-hidden />
+                {examChip} — do these three things
+              </h2>
+              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                With the {label} exam this close, reviewing and timed practice beat starting a new lesson. Your topic plan is below if you have more time.
+              </p>
+              <ol className="mt-4 space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="mt-1.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-subtle text-xs font-bold text-accent-hover dark:bg-accent-light/20 dark:text-accent-muted">1</span>
+                  <Link href={cram.flashcards} className={`inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition ${a.cta}`}>
+                    <Layers className="h-4 w-4" aria-hidden /> Review high-yield flashcards <ArrowRight className="h-4 w-4" aria-hidden />
+                  </Link>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-subtle text-xs font-bold text-accent-hover dark:bg-accent-light/20 dark:text-accent-muted">2</span>
+                  <Link href={cram.practice} className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline">
+                    <ClipboardCheck className="h-4 w-4" aria-hidden /> Take a timed {label} practice exam
+                  </Link>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-accent-subtle text-xs font-bold text-accent-hover dark:bg-accent-light/20 dark:text-accent-muted">3</span>
+                  <Link href={cram.mistakes} className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline">
+                    <ListChecks className="h-4 w-4" aria-hidden /> Review every mistake
+                  </Link>
+                </li>
+              </ol>
+            </div>
+          ) : nextTopic && apMode === 'confirm-5' && cram ? (
+            <div data-testid="hub-mode-confirm-5">
+              <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white">You&apos;re on track for a 5 — confirm it with a full practice exam</h2>
+              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                Your last {label} diagnostic estimated a 5. A full-length practice exam under real timing confirms it and shows anything left to fix.
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+                <Link href={cram.practice} className={`inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white transition ${a.cta}`}>
+                  <ClipboardCheck className="h-4 w-4" aria-hidden /> Take a practice exam <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+                <Link href={studyPlanTopicHref(nextTopic, courseKey)} className="text-sm font-semibold text-accent hover:underline">
+                  Start {nextTopic.name} →
+                </Link>
+              </div>
             </div>
           ) : nextTopic ? (
             <>
@@ -333,7 +405,7 @@ export default function CourseStudyPlan({
           <div className={`rounded-2xl border-2 bg-white p-6 shadow-sm dark:bg-gray-800 ${a.cardBorder}`}>
             <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-                Your {label} study plan
+                Your {label} study plan{examChipEl}
               </h2>
               <span className="text-xs text-gray-500 dark:text-gray-400">
                 {plan!.planSource === 'hard'

@@ -443,7 +443,7 @@ export default function APStatsDiagnosticPage() {
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
             <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              {['~33 questions spanning all 6 AP Statistics domains', '45 minute time limit', 'Estimated AP score (1–5) with per-unit breakdown', '3-5 personalized module recommendations', '10 unique forms with different questions each time'].map(item => (
+              {[`${apDiagnosticCourse('ap-statistics').questionCount} questions spanning all 6 AP Statistics domains`, `${apDiagnosticCourse('ap-statistics').timeLimitMinutes} minute time limit`, 'Estimated AP score (1–5) with per-unit breakdown', 'A personalized study plan: the topics to clear first', '10 unique forms with different questions each time'].map(item => (
                 <li key={item} className="flex items-start gap-2">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-indigo-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   {item}

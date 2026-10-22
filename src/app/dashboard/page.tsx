@@ -49,6 +49,7 @@ import {
   type NextStepClassDiagnostic,
   type NextStepCourse,
 } from '@/lib/dashboard-next-step'
+import { apExamCountdownLabel } from '@/lib/ap-next-step'
 import { courseDiagnosticForSlug } from '@/lib/student-courses'
 import { getCourseHref } from '@/data/course-metadata'
 
@@ -197,6 +198,11 @@ function DashboardContent() {
     summary: { total: number; completed: number; pending: number }
     /** The cycle's unit test (MCAT requires it; SAT/ACT recommend it). */
     unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; passPercent: number; questionCount: number; inProgressId?: string | null; locksDiagnostic?: boolean; testName?: string } | null
+    /** AP (src/lib/ap-next-step.ts): the course slug, the latest sitting's score and band, and days to the exam. */
+    courseSlug?: string | null
+    estimatedScore?: number | null
+    scoreRange?: { low: number; high: number } | null
+    examDaysLeft?: number | null
   }[]>([])
   // A dated study cycle exists (self target or teacher due date): the
   // next-step card links the calendar.
@@ -762,7 +768,14 @@ function DashboardContent() {
                 {studyPlans.map((plan) => (
                   <div key={plan.courseKey} className="bg-white dark:bg-gray-800 rounded-xl border-2 border-accent-light dark:border-accent-hover p-5 shadow-sm">
                     <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-                      <h3 className="font-bold text-gray-900 dark:text-white">{plan.label}</h3>
+                      <h3 className="flex flex-wrap items-center gap-2 font-bold text-gray-900 dark:text-white">
+                        {plan.label}
+                        {apExamCountdownLabel(plan.examDaysLeft) && (
+                          <span className="rounded-full bg-accent-subtle px-2 py-0.5 text-[11px] font-bold text-accent-hover dark:bg-accent-light/20 dark:text-accent-muted">
+                            {apExamCountdownLabel(plan.examDaysLeft)}
+                          </span>
+                        )}
+                      </h3>
                       <div className="flex items-center gap-3">
                         <span className="text-xs text-gray-500 dark:text-gray-400">
                           {plan.summary.pending === 0

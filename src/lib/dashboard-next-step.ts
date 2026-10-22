@@ -14,6 +14,13 @@
  *      (a course without one: keep going in that course / the onboarding
  *      topic; nothing known: choose a course)
  *
+ * AP plans are exam-aware (src/lib/ap-next-step.ts, Phase 3 W4): within 21
+ * days of the course's exam, step 4 becomes the cram path (high-yield
+ * flashcards → timed practice exam → mistake log) whether or not topics are
+ * pending; an estimated 5 before that gets "confirm it with a practice
+ * exam" with the next topic secondary. Steps 1–3 (class work, due cards)
+ * still come first.
+ *
  * Pure so it can be unit-tested; the dashboard page feeds it what it fetched.
  */
 
@@ -26,6 +33,7 @@ export { studyPlanTopicHref }
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { unitTestIsNextStep, unitTestName } from '@/lib/unit-test-courses'
 import { aOrAn } from '@/lib/full-length-progress'
+import { apExamCountdownLabel, apExamWeekLinks, apNextStepModeForDays, type ApExamWeekLinks } from '@/lib/ap-next-step'
 
 /** The rated review session — the one flashcard destination on the dashboard. */
 export const FLASHCARD_REVIEW_HREF = '/flashcards/review'
@@ -41,6 +49,12 @@ export interface NextStepPlan {
   unitTest?: { available: boolean; passed: boolean; attempts: number; path: string; inProgressId?: string | null; locksDiagnostic?: boolean; testName?: string } | null
   /** Full-length readiness (MCAT, SAT, AP): level 10 = enough cycles done to sit a full-length. */
   fullLength?: { ready: boolean; level: number; href: string; label: string; externalLabel: string; coursePage: string } | null
+  /** DB course slug ('ap-chemistry'); the AP cram links need it. */
+  courseSlug?: string | null
+  /** AP (plan-status): the latest sitting's estimated score and 1–5 band, and days to the course's exam. */
+  estimatedScore?: number | null
+  scoreRange?: { low: number; high: number } | null
+  examDaysLeft?: number | null
 }
 
 export interface NextStepClassDiagnostic {
@@ -77,7 +91,9 @@ export type NextStep =
   | { kind: 'assignments'; count: number }
   | { kind: 'class-diagnostic'; diagnostic: NextStepClassDiagnostic; count: number }
   | { kind: 'flashcards'; count: number }
-  | { kind: 'plan-topic'; topic: PlanTopic; courseKey: string; planLabel: string; done: number; total: number }
+  | { kind: 'plan-topic'; topic: PlanTopic; courseKey: string; planLabel: string; done: number; total: number; examDaysLeft?: number | null }
+  | { kind: 'ap-exam-week'; planLabel: string; courseKey: string; days: number; links: ApExamWeekLinks }
+  | { kind: 'ap-confirm-5'; planLabel: string; courseKey: string; days: number | null; href: string; topic: PlanTopic }
   | { kind: 'unit-test'; planLabel: string; href: string; attempts: number; resume: boolean; locks: boolean; name: string }
   | { kind: 'full-length'; planLabel: string; href: string; label: string; externalLabel: string; coursePage: string }
   | { kind: 'retake-diagnostic'; planLabel: string; href: string }
@@ -85,6 +101,14 @@ export type NextStep =
   | { kind: 'open-course'; courseLabel: string; href: string }
   | { kind: 'first-topic'; href: string }
   | { kind: 'choose-course' }
+
+/** The AP plan's exam-aware mode and cram links; null for a non-AP plan (no practice exam / mistake log). */
+function apPlanMode(plan: NextStepPlan): { mode: 'plan' | 'exam-week' | 'confirm-5'; days: number | null; links: ApExamWeekLinks } | null {
+  const links = apExamWeekLinks(plan.courseSlug, plan.courseKey)
+  if (!links) return null
+  const d = apNextStepModeForDays(plan.examDaysLeft, { estimatedScore: plan.estimatedScore, scoreRange: plan.scoreRange })
+  return { mode: d.mode, days: d.daysToExam, links }
+}
 
 export function resolveNextStep(input: NextStepInput): NextStep {
   if (input.pendingAssignments > 0) return { kind: 'assignments', count: input.pendingAssignments }
@@ -106,10 +130,18 @@ export function resolveNextStep(input: NextStepInput): NextStep {
       ...plans.filter((p) => p.courseKey !== preferredKey),
     ]
     for (const plan of ordered) {
+      const ap = apPlanMode(plan)
+      // Exam week: cram, whether or not plan topics are pending.
+      if (ap?.mode === 'exam-week' && ap.days !== null) {
+        return { kind: 'ap-exam-week', planLabel: plan.label, courseKey: plan.courseKey, days: ap.days, links: ap.links }
+      }
       const next = pickNextPendingTopic(plan.topics)
       if (next) {
+        if (ap?.mode === 'confirm-5') {
+          return { kind: 'ap-confirm-5', planLabel: plan.label, courseKey: plan.courseKey, days: ap.days, href: ap.links.practice, topic: next }
+        }
         const done = plan.topics.filter((t) => t.isSatisfied).length
-        return { kind: 'plan-topic', topic: next, courseKey: plan.courseKey, planLabel: plan.label, done, total: plan.topics.length }
+        return { kind: 'plan-topic', topic: next, courseKey: plan.courseKey, planLabel: plan.label, done, total: plan.topics.length, examDaysLeft: ap?.days ?? null }
       }
     }
     // Every recommended topic is cleared. The cycle ends with its unit test
@@ -153,6 +185,10 @@ export interface NextStepCopy {
   reason: string
   cta: string
   href: string
+  /** "Exam in N days" beside the label, for AP plans with a date ahead. */
+  chip?: string | null
+  /** Text links after the one button (the exam-week card's other two things; confirm-5's topic). */
+  secondary?: { label: string; href: string }[]
 }
 
 /** The card's text and its one button, for every step but 'loading'. */
@@ -187,6 +223,28 @@ export function describeNextStep(step: Exclude<NextStep, { kind: 'loading' }>): 
         reason: `Next in your ${step.planLabel} study plan (${step.done} of ${step.total} cleared). Score ${TOPIC_CLEAR_PERCENT}% on the exit quiz to clear it.`,
         cta: 'Start this topic',
         href: studyPlanTopicHref(step.topic, step.courseKey),
+        chip: apExamCountdownLabel(step.examDaysLeft),
+      }
+    case 'ap-exam-week':
+      return {
+        title: `${apExamCountdownLabel(step.days)} — do these three things`,
+        reason: `Your ${step.planLabel} exam is ${step.days} day${step.days === 1 ? '' : 's'} away. Reviewing and timed practice beat starting a new lesson now: high-yield flashcards first, then a timed practice exam, then every mistake.`,
+        cta: 'Review high-yield flashcards',
+        href: step.links.flashcards,
+        chip: apExamCountdownLabel(step.days),
+        secondary: [
+          { label: 'Take a timed practice exam', href: step.links.practice },
+          { label: 'Review every mistake', href: step.links.mistakes },
+        ],
+      }
+    case 'ap-confirm-5':
+      return {
+        title: `You're on track for a 5 in ${step.planLabel}`,
+        reason: 'Your diagnostic estimates a 5. Confirm it with a full practice exam under real timing; it shows anything left to fix before the exam.',
+        cta: 'Take a practice exam',
+        href: step.href,
+        chip: apExamCountdownLabel(step.days),
+        secondary: [{ label: `Start ${step.topic.name}`, href: studyPlanTopicHref(step.topic, step.courseKey) }],
       }
     case 'unit-test':
       return {

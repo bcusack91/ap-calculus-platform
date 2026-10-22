@@ -324,7 +324,7 @@ export default function APPrecalculusDiagnosticPage() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
           <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
           <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-            {[`~30 questions spanning 4 AP Precalculus units`, '40 minute time limit', 'Estimated AP score (1-5) with per-unit breakdown', 'Personalized topic recommendations', `${TOTAL_FORMS} unique forms with different questions each time`].map(item => (
+            {[`${apDiagnosticCourse('ap-precalculus').questionCount} questions spanning 4 AP Precalculus units`, `${apDiagnosticCourse('ap-precalculus').timeLimitMinutes} minute time limit`, 'Estimated AP score (1-5) with per-unit breakdown', 'Personalized topic recommendations', `${TOTAL_FORMS} unique forms with different questions each time`].map(item => (
               <li key={item} className="flex items-start gap-2"><svg className="mt-0.5 h-4 w-4 shrink-0 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{item}</li>
             ))}
           </ul>

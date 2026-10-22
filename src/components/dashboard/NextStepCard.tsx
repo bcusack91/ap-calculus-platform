@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
-import { ArrowRight, BookOpen, CalendarDays, ClipboardCheck, ClipboardList, Layers, NotebookPen, RotateCcw, Compass, Trophy } from 'lucide-react'
+import { ArrowRight, BookOpen, CalendarDays, ClipboardCheck, ClipboardList, Layers, NotebookPen, RotateCcw, Compass, Timer, Trophy } from 'lucide-react'
 import { describeNextStep, type NextStep } from '@/lib/dashboard-next-step'
 import { dueDeadline, formatDueDate } from '@/components/ClassDiagnosticBanner'
 import HelpLink, { HELP_ARTICLES } from '@/components/HelpLink'
@@ -12,6 +12,8 @@ const ICONS: Record<Exclude<NextStep['kind'], 'loading'>, typeof ArrowRight> = {
   'class-diagnostic': NotebookPen,
   flashcards: Layers,
   'plan-topic': BookOpen,
+  'ap-exam-week': Timer,
+  'ap-confirm-5': Trophy,
   'unit-test': ClipboardCheck,
   'full-length': Trophy,
   'retake-diagnostic': RotateCcw,
@@ -85,8 +87,13 @@ export default function NextStepCard({
       aria-labelledby="next-step-title"
       className="mb-6 rounded-2xl bg-gradient-to-r from-accent to-accent-secondary p-6 sm:p-7 text-white shadow-lg"
     >
-      <p className="mb-2 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white/85">
+      <p className="mb-2 flex flex-wrap items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-white/85">
         <Icon className="h-4 w-4" aria-hidden /> Your next step
+        {copy.chip && (
+          <span className="ml-1 rounded-full bg-white/20 px-2 py-0.5 text-[11px] font-bold normal-case tracking-normal text-white" data-testid="next-step-exam-chip">
+            {copy.chip}
+          </span>
+        )}
       </p>
       <h2 id="next-step-title" className="text-2xl font-bold mb-1">
         {copy.title}
@@ -114,6 +121,11 @@ export default function NextStepCard({
           {copy.cta}
           <ArrowRight className="h-4 w-4" aria-hidden />
         </Link>
+        {copy.secondary?.map((s) => (
+          <Link key={s.href} href={s.href} className="inline-flex items-center gap-1 text-sm font-medium text-white/90 underline underline-offset-2 hover:text-white">
+            {s.label} →
+          </Link>
+        ))}
         {hasSchedule && (
           <Link href="/calendar" className="inline-flex items-center gap-1.5 text-sm font-medium text-white/90 underline underline-offset-2 hover:text-white">
             <CalendarDays className="h-4 w-4" aria-hidden />

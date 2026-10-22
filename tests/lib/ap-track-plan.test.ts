@@ -142,6 +142,35 @@ describe('GET /api/study-plan/plan-status', () => {
   })
 })
 
+describe('GET /api/study-plan/plan-status: exam-aware fields (Phase 3 W4)', () => {
+  let GET: typeof import('@/app/api/study-plan/plan-status/route').GET
+  beforeAll(async () => { ;({ GET } = await import('@/app/api/study-plan/plan-status/route')) }, 60_000)
+
+  it('carries the latest sitting\'s estimatedScore, its band (stored by v2, derived for v1) and examDaysLeft; nulls for a course without a date', async () => {
+    const { daysUntilApExam } = await import('@/lib/ap-exam-dates')
+    const { apScoreRange } = await import('@/lib/ap-scoring')
+    db.diagnosticTest.findMany.mockResolvedValue([
+      // v1: no stored range → derived from 31/33 exactly as the results screen does.
+      { id: 'chem', category: 'ap-chem-diagnostic-3', results: { ...chemResults(94), estimatedAPScore: 5 }, createdAt: DIAG_AT },
+      // v2: the stored band wins.
+      { id: 'bio', category: 'ap-bio-diagnostic-v2', results: { totalCorrect: 20, totalQuestions: 33, percentage: 61, estimatedAPScore: 4, scoreRange: { low: 3, high: 4 }, recommendedTopics: [{ slug: 'cell-structure', name: 'Cells', priority: 'high' }] }, createdAt: DIAG_AT },
+      { id: 'alg', category: 'algebra1-diagnostic', results: { percentage: 20, recommendedTopics: [{ slug: 'linear-equations', name: 'L', priority: 'high' }] }, createdAt: DIAG_AT },
+    ])
+    const body = await (await GET()).json()
+    const find = (key: string) => body.plans.find((p: { courseKey: string }) => p.courseKey === key)
+    const chem = find('ap-chem')
+    const band = apScoreRange(31, 33)
+    expect(chem).toMatchObject({ courseSlug: 'ap-chemistry', estimatedScore: 5, scoreRange: { low: band.low, high: band.high } })
+    expect(Math.abs(chem.examDaysLeft - daysUntilApExam('ap-chemistry')!)).toBeLessThanOrEqual(1)
+    const bio = find('ap-bio')
+    expect(bio).toMatchObject({ courseSlug: 'ap-biology', estimatedScore: 4, scoreRange: { low: 3, high: 4 } })
+    expect(Math.abs(bio.examDaysLeft - daysUntilApExam('ap-biology')!)).toBeLessThanOrEqual(1)
+    // Biology sits three days before Chemistry (May 3 vs May 6).
+    expect(chem.examDaysLeft - bio.examDaysLeft).toBe(3)
+    expect(find('algebra1')).toMatchObject({ estimatedScore: null, scoreRange: null, examDaysLeft: null })
+  })
+})
+
 describe('GET /api/lessons/settings?courseSlug=', () => {
   let GET: typeof import('@/app/api/lessons/settings/route').GET
   beforeAll(async () => { ;({ GET } = await import('@/app/api/lessons/settings/route')) }, 60_000)

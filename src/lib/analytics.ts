@@ -201,13 +201,21 @@ export function trackApDiagnosticComplete(courseSlug: string, attemptId: string 
   })
 }
 
-/** The primary "Start <topic>" button on the results screen. */
-export function trackApResultsNextStepClick(courseSlug: string, topicSlug: string, destination: string, attemptId: string | null) {
+/** The results screen's next-step actions: the one filled button, and the exam-week card's other two links. */
+export function trackApResultsNextStepClick(
+  courseSlug: string,
+  /** The plan topic the click leads to; null for a cram / practice-exam action. */
+  topicSlug: string | null,
+  destination: string,
+  attemptId: string | null,
+  /** The mode's primary action (AP_NEXT_STEP_CTA_TYPE): 'next_step' (plan), 'exam_week_flashcards', 'confirm_5_practice_exam'; secondary actions name themselves. */
+  ctaType: string = 'next_step',
+) {
   sendEvent('ap_results_next_step_click', {
     course_slug: courseSlug,
-    topic_slug: topicSlug,
+    ...(topicSlug ? { topic_slug: topicSlug } : {}),
     destination,
-    cta_type: 'next_step',
+    cta_type: ctaType,
     page_template: 'ap-diagnostic-results',
     ...(attemptId ? { attempt_id: attemptId } : {}),
   })
@@ -221,4 +229,19 @@ export function trackApResultsRetakeClick(courseSlug: string, attemptId: string 
     page_template: 'ap-diagnostic-results',
     ...(attemptId ? { attempt_id: attemptId } : {}),
   })
+}
+
+// ─── Short first session (Phase 3 W5) ─────────────────────────────────
+/**
+ * The student chose how to begin a lesson framed as their first step (arrived
+ * from a diagnostic's results, or opened their current plan topic): Part 1
+ * only, the whole lesson, or straight to the exit quiz.
+ */
+export function trackLessonFirstSessionStart(topicSlug: string, courseSlug: string | undefined, choice: 'part1' | 'full' | 'quiz') {
+  sendEvent('lesson_first_session_start', { topic_slug: topicSlug, course_slug: courseSlug ?? '', choice })
+}
+
+/** A lesson part was finished (every lesson, not only first sessions) — the "completed a part" funnel step. */
+export function trackLessonPartComplete(topicSlug: string, part: number) {
+  sendEvent('lesson_part_complete', { topic_slug: topicSlug, part })
 }

@@ -463,7 +463,7 @@ function APBioDiagnosticPageV1() {
             🧬 AP Biology Diagnostic Test
           </h1>
           <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-            Find your strengths and weaknesses across all AP Biology units and get a personalized study plan with 3-5 focused modules.
+            Find your strengths and weaknesses across all AP Biology units and get a personalized study plan of the topics to clear first.
           </p>
 
           {/* Active study plan from last diagnostic */}
@@ -549,13 +549,13 @@ function APBioDiagnosticPageV1() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                ~33 questions spanning all 8 AP Biology units
+                {apDiagnosticCourse('ap-biology').questionCount} questions spanning all 8 AP Biology units
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                45 minute time limit
+                {apDiagnosticCourse('ap-biology').timeLimitMinutes} minute time limit
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -567,7 +567,7 @@ function APBioDiagnosticPageV1() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                3-5 personalized module recommendations to focus your studying
+                A personalized study plan: the topics to clear first
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

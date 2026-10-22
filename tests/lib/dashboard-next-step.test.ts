@@ -312,3 +312,77 @@ describe('student course helpers', () => {
     expect(courseDiagnosticForHref('/courses/grade-4-math')).toBeNull()
   })
 })
+
+describe('resolveNextStep — exam-aware AP plans (Phase 3 W4)', () => {
+  const chem = (over: Partial<NextStepPlan> = {}): NextStepPlan => ({
+    courseKey: 'ap-chem',
+    label: 'AP Chemistry',
+    diagnosticRoute: '/ap-chem-diagnostic',
+    courseSlug: 'ap-chemistry',
+    topics: [topic('moles', true), topic('gases'), topic('ksp')],
+    estimatedScore: 3,
+    scoreRange: { low: 2, high: 4 },
+    examDaysLeft: 200,
+    ...over,
+  })
+
+  it('exam week (1–21 days): the cram step, with the three links, whether or not topics are pending', () => {
+    const step = resolveNextStep({ ...base, plans: [chem({ examDaysLeft: 5 })] })
+    expect(step).toEqual({
+      kind: 'ap-exam-week',
+      planLabel: 'AP Chemistry',
+      courseKey: 'ap-chem',
+      days: 5,
+      links: { flashcards: '/flashcards?course=ap-chemistry', practice: '/ap-chem-practice', mistakes: '/ap-chemistry/mistakes' },
+    })
+    const copy = describeNextStep(step as Exclude<typeof step, { kind: 'loading' }>)
+    expect(copy.title).toBe('Exam in 5 days — do these three things')
+    expect(copy.cta).toBe('Review high-yield flashcards')
+    expect(copy.href).toBe('/flashcards?course=ap-chemistry')
+    expect(copy.chip).toBe('Exam in 5 days')
+    expect(copy.secondary).toEqual([
+      { label: 'Take a timed practice exam', href: '/ap-chem-practice' },
+      { label: 'Review every mistake', href: '/ap-chemistry/mistakes' },
+    ])
+    // Every topic cleared, exam tomorrow: still cram, not the retake / cycle test.
+    const cleared = chem({ examDaysLeft: 1, topics: [topic('moles', true), topic('gases', true)] })
+    expect(resolveNextStep({ ...base, plans: [cleared] }).kind).toBe('ap-exam-week')
+    expect(resolveNextStep({ ...base, plans: [chem({ examDaysLeft: 21 })] }).kind).toBe('ap-exam-week')
+    expect(resolveNextStep({ ...base, plans: [chem({ examDaysLeft: 22 })] }).kind).toBe('plan-topic')
+    expect(resolveNextStep({ ...base, plans: [chem({ examDaysLeft: 0 })] }).kind).toBe('plan-topic')
+  })
+
+  it('an estimated 5 (or a band whose low end is ≥ 4.5) before exam week: confirm it with a practice exam, the next topic secondary', () => {
+    const step = resolveNextStep({ ...base, plans: [chem({ estimatedScore: 5, scoreRange: { low: 4, high: 5 } })] })
+    expect(step).toMatchObject({ kind: 'ap-confirm-5', planLabel: 'AP Chemistry', courseKey: 'ap-chem', days: 200, href: '/ap-chem-practice', topic: topic('gases') })
+    const copy = describeNextStep(step as Exclude<typeof step, { kind: 'loading' }>)
+    expect(copy.title).toBe("You're on track for a 5 in AP Chemistry")
+    expect(copy.cta).toBe('Take a practice exam')
+    expect(copy.href).toBe('/ap-chem-practice')
+    expect(copy.chip).toBe('Exam in 200 days')
+    expect(copy.secondary).toEqual([{ label: 'Start GASES', href: '/topics/gases/interactive' }])
+    expect(resolveNextStep({ ...base, plans: [chem({ estimatedScore: 4, scoreRange: { low: 5, high: 5 } })] }).kind).toBe('ap-confirm-5')
+    expect(resolveNextStep({ ...base, plans: [chem({ estimatedScore: 4, scoreRange: { low: 4, high: 5 } })] }).kind).toBe('plan-topic')
+    // Every topic cleared: the ordinary end-of-cycle flow (unit test / retake), not confirm-5.
+    expect(resolveNextStep({ ...base, plans: [chem({ estimatedScore: 5, topics: [topic('moles', true)] })] }).kind).toBe('retake-diagnostic')
+    // After the exam date (or with none), a 5 is an ordinary plan.
+    expect(resolveNextStep({ ...base, plans: [chem({ estimatedScore: 5, examDaysLeft: -10 })] }).kind).toBe('plan-topic')
+    expect(resolveNextStep({ ...base, plans: [chem({ estimatedScore: 5, examDaysLeft: null })] }).kind).toBe('plan-topic')
+  })
+
+  it('plan mode keeps the topic step and adds the countdown chip; non-AP plans and class work are untouched', () => {
+    const step = resolveNextStep({ ...base, plans: [chem()] })
+    expect(step).toMatchObject({ kind: 'plan-topic', topic: topic('gases'), examDaysLeft: 200 })
+    expect(describeNextStep(step as Exclude<typeof step, { kind: 'loading' }>).chip).toBe('Exam in 200 days')
+    // No date (the old payload shape): no chip.
+    expect(describeNextStep(resolveNextStep({ ...base, plans: [calcPlan] }) as Parameters<typeof describeNextStep>[0]).chip).toBeNull()
+    // Assignments, class diagnostics and due cards still come before the cram step.
+    expect(resolveNextStep({ ...base, pendingAssignments: 1, plans: [chem({ examDaysLeft: 3 })] }).kind).toBe('assignments')
+    expect(resolveNextStep({ ...base, dueFlashcards: 4, plans: [chem({ examDaysLeft: 3 })] }).kind).toBe('flashcards')
+    // A non-AP plan (SAT) in the same list is never exam-week.
+    const sat: NextStepPlan = { courseKey: 'sat', label: 'SAT', diagnosticRoute: '/sat-diagnostic', courseSlug: 'sat-prep', topics: [topic('linear')], examDaysLeft: 3 }
+    expect(resolveNextStep({ ...base, plans: [sat] }).kind).toBe('plan-topic')
+    // The preferred course's plan is checked first.
+    expect(resolveNextStep({ ...base, plans: [chem({ examDaysLeft: 3 }), bioPlan], preferredCourse: { key: 'ap-bio', label: 'AP Biology', diagnosticHref: '/ap-bio-diagnostic', courseHref: '/ap-biology' } }).kind).toBe('plan-topic')
+  })
+})

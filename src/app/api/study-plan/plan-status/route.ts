@@ -15,6 +15,8 @@ import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { canonicalizeRecommendedTopics } from '@/lib/ap-topic-canonical'
 import { apTrackPlacement, isApTrackCourse, orderTopicsForTrack, type ApTrackPlacement } from '@/lib/ap-track'
 import { apTrackOverridesForUser } from '@/lib/ap-track-server'
+import { daysUntilApExam } from '@/lib/ap-exam-dates'
+import { apScoreRange } from '@/lib/ap-scoring'
 
 /**
  * Every course's diagnostic study plan, with per-topic done/pending state.
@@ -52,6 +54,26 @@ function parseRecommended(results: unknown): RecommendedTopic[] {
     })
   }
   return out
+}
+
+/**
+ * The exam-aware next step's inputs (src/lib/ap-next-step.ts), read from the
+ * latest sitting's stored results rather than a new query: its estimated AP
+ * score, its 1–5 band (v2 stores one; v1 gets apScoreRange from its counts,
+ * exactly as the results screen does), and days to the course's exam.
+ * Nulls for a course without a date or a sitting without a score.
+ */
+function apExamFields(courseSlug: string | undefined, results: unknown, now: Date) {
+  const r = results && typeof results === 'object' && !Array.isArray(results) ? (results as Record<string, unknown>) : {}
+  const estimatedScore = typeof r.estimatedAPScore === 'number' && Number.isFinite(r.estimatedAPScore) ? r.estimatedAPScore : null
+  const stored = r.scoreRange as { low?: unknown; high?: unknown } | undefined
+  let scoreRange: { low: number; high: number } | null =
+    stored && typeof stored.low === 'number' && typeof stored.high === 'number' ? { low: stored.low, high: stored.high } : null
+  if (!scoreRange && estimatedScore !== null && typeof r.totalCorrect === 'number' && typeof r.totalQuestions === 'number' && r.totalQuestions > 0) {
+    const band = apScoreRange(r.totalCorrect, r.totalQuestions)
+    scoreRange = { low: band.low, high: band.high }
+  }
+  return { estimatedScore, scoreRange, examDaysLeft: courseSlug ? daysUntilApExam(courseSlug, now) : null }
 }
 
 /** The dashboard's next-step input: is the student at level 10 for this course? */
@@ -103,7 +125,7 @@ export async function GET() {
     const apOverrides = await apTrackOverridesForUser(userId)
 
     // Latest attempt per course, plus the topics it recommended.
-    const perCourse = new Map<string, { diagnosticId: string; takenAt: Date; topics: RecommendedTopic[]; apTrack?: ApTrackPlacement }>()
+    const perCourse = new Map<string, { diagnosticId: string; takenAt: Date; topics: RecommendedTopic[]; apTrack?: ApTrackPlacement; results: unknown }>()
     for (const course of CLASS_PLAN_COURSES) {
       if (course.key === 'sat') continue
       const latest = attempts.find((a) => a.category.startsWith(course.categoryPrefix))
@@ -117,7 +139,7 @@ export async function GET() {
       // buildGenericPlanStatus does.
       const apTrack = isApTrackCourse(course.courseSlug) ? apTrackPlacement(latest.results, apOverrides.get(course.courseSlug) ?? null) : undefined
       const topics = apTrack ? orderTopicsForTrack(course.courseSlug, recommended, apTrack.track) : recommended
-      perCourse.set(course.key, { diagnosticId: latest.id, takenAt: latest.createdAt, topics, apTrack })
+      perCourse.set(course.key, { diagnosticId: latest.id, takenAt: latest.createdAt, topics, apTrack, results: latest.results })
     }
     const satEntry =
       satCourse && satPlan?.hasDiagnostic && satPlan.recommendedTopics.length > 0
@@ -241,6 +263,7 @@ export async function GET() {
       if (pct > (bestExit.get(a.topicSlug) ?? -1)) bestExit.set(a.topicSlug, pct)
     }
 
+    const now = new Date()
     const plans = CLASS_PLAN_COURSES.flatMap((course) => {
       const plan = perCourse.get(course.key)
       if (!plan) return []
@@ -286,6 +309,8 @@ export async function GET() {
         apTrack: plan.apTrack
           ? { track: plan.apTrack.track, label: plan.apTrack.label, explanation: plan.apTrack.explanation }
           : null,
+        // Exam-aware next step (hub + dashboard): estimatedScore, scoreRange, examDaysLeft.
+        ...apExamFields(course.courseSlug, plan.results, now),
       }]
     })
 

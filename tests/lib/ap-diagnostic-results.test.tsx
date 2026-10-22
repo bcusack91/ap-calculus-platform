@@ -36,6 +36,8 @@ import { MCAT_UNIT_TEST_PASS_PERCENT, MCAT_UNIT_TEST_QUESTIONS } from '@/lib/mca
 import { AP_TRACK_LABEL } from '@/lib/ap-track'
 import { estimateLessonMinutes } from '@/lib/lesson-minutes'
 import { GET as lessonLengthGET } from '@/app/api/lessons/length/route'
+import { AP_NEXT_STEP_CTA_TYPE, apExamWeekLinks } from '@/lib/ap-next-step'
+import { apExamDate } from '@/lib/ap-exam-dates'
 
 const ROOT = path.resolve(__dirname, '../..')
 const read = (p: string) => readFileSync(path.join(ROOT, p), 'utf8')
@@ -94,6 +96,12 @@ afterEach(() => {
   window.localStorage.clear()
 })
 
+// Autumn: every AP exam is months away, so these render in plan mode whatever the wall clock says (W4 pins `now`).
+const AUTUMN = new Date('2026-10-21T12:00:00Z')
+// AP Chemistry sits 2027-05-06; five days before is exam-week mode.
+const CHEM_EXAM_WEEK = new Date(apExamDate('ap-chemistry')!.getTime() - 5 * 86_400_000)
+const FIVE = { ...RESULTS, totalCorrect: 31, totalQuestions: 33, percentage: 94, estimatedAPScore: 5 }
+
 const renderResults = (over: Partial<Parameters<typeof ApDiagnosticResults>[0]> = {}) => {
   const onRetake = vi.fn()
   const utils = render(
@@ -104,6 +112,7 @@ const renderResults = (over: Partial<Parameters<typeof ApDiagnosticResults>[0]> 
       history={[{ id: 'old-1' }]}
       review={REVIEW}
       onRetake={onRetake}
+      now={AUTUMN}
       {...over}
     />,
   )
@@ -117,7 +126,7 @@ describe('ApDiagnosticResults: next step first', () => {
   it('leads with topic 1 as the one filled button, linking to the interactive lesson', () => {
     renderResults()
     const cta = screen.getByTestId('ap-results-next-step-cta') as HTMLAnchorElement
-    expect(cta.getAttribute('href')).toBe('/topics/moles-molar-mass/interactive')
+    expect(cta.getAttribute('href')).toBe('/topics/moles-molar-mass/interactive?from=diagnostic')
     expect(cta.textContent).toContain('Start Moles & Molar Mass')
     // The first topic link on the page is the primary, and it comes before the unit bars and the review.
     expect(topicLinks()[0]).toBe(cta)
@@ -125,7 +134,7 @@ describe('ApDiagnosticResults: next step first', () => {
     expect(order(cta, screen.getByTestId('ap-results-explainer'))).toBe(-1)
     // Topics 2..N follow as a list, numbered from 2.
     const rest = topicLinks().slice(1).map((a) => a.getAttribute('href'))
-    expect(rest).toEqual(['/topics/electron-configuration/interactive', '/topics/periodic-trends/interactive'])
+    expect(rest).toEqual(['/topics/electron-configuration/interactive?from=diagnostic', '/topics/periodic-trends/interactive?from=diagnostic'])
     expect(screen.getByText('Then, in order')).toBeTruthy()
     // The hub is a text link, not the filled button.
     const hub = screen.getByText('Browse all AP Chemistry topics') as HTMLAnchorElement
@@ -154,14 +163,119 @@ describe('ApDiagnosticResults: next step first', () => {
     lessonParts = { 'moles-molar-mass': 7 }
     renderResults()
     await waitFor(() => expect(screen.getByTestId('ap-results-next-step-cta').textContent).toContain(`~${estimateLessonMinutes(7)} min`))
-    expect(estimateLessonMinutes(7)).toBe(30)
+    expect(estimateLessonMinutes(7)).toBe(45)
     expect(estimateLessonMinutes(0)).toBeNull()
     expect(nextStepLabel('X', null)).toBe('Start X')
     expect(fetchMock.mock.calls[0][0]).toContain('/api/lessons/length?slugs=moles-molar-mass')
   })
 
-  it('uses the dashboard/hub href helper so the link always lands on /interactive', () => {
-    expect(apResultsTopicHref({ slug: 'limits-continuity-calcab', name: 'Limits', priority: 'high' }, apDiagnosticCourse('ap-calculus-ab'))).toBe('/topics/limits-continuity-calcab/interactive')
+  it('uses the dashboard/hub href helper so the link always lands on /interactive, flagged as a diagnostic arrival (W5)', () => {
+    expect(apResultsTopicHref({ slug: 'limits-continuity-calcab', name: 'Limits', priority: 'high' }, apDiagnosticCourse('ap-calculus-ab'))).toBe('/topics/limits-continuity-calcab/interactive?from=diagnostic')
+  })
+})
+
+describe('ApDiagnosticResults: exam-aware modes (Phase 3 W4)', () => {
+  const cram = apExamWeekLinks('ap-chemistry', 'ap-chem')!
+
+  it('exam week: "Exam in N days — do these three things", flashcards as the one filled button, practice exam and mistakes as links, the plan demoted to "If you have more time"', () => {
+    renderResults({ now: CHEM_EXAM_WEEK })
+    expect(screen.getByTestId('ap-results-mode-exam-week')).toBeTruthy()
+    expect(screen.queryByTestId('ap-results-mode-plan')).toBeNull()
+    expect(screen.getByRole('heading', { level: 2, name: /Exam in 5 days — do these three things/ })).toBeTruthy()
+    expect(screen.getByTestId('ap-exam-chip').textContent).toBe('Exam in 5 days')
+    const cta = screen.getByTestId('ap-results-next-step-cta') as HTMLAnchorElement
+    expect(cta.getAttribute('href')).toBe('/flashcards?course=ap-chemistry')
+    expect(cta.className).toMatch(/bg-orange-600/)
+    // The weakest unit (lowest weak domain) names the flashcard step.
+    expect(cta.textContent).toContain('Atomic Structure')
+    expect(screen.getByTestId('ap-results-exam-week-practice').getAttribute('href')).toBe('/ap-chem-practice')
+    expect(screen.getByTestId('ap-results-exam-week-mistakes').getAttribute('href')).toBe('/ap-chemistry/mistakes')
+    expect(cram).toEqual({ flashcards: '/flashcards?course=ap-chemistry', practice: '/ap-chem-practice', mistakes: '/ap-chemistry/mistakes' })
+    // Only one filled button; the other two are text links.
+    expect(screen.getByTestId('ap-results-exam-week-practice').className).not.toMatch(/bg-orange-600/)
+    // The whole plan (topic 1 included) follows as "If you have more time", numbered from 1, below the cram card.
+    const plan = screen.getByTestId('ap-results-plan-list')
+    expect(within(plan).getByText('If you have more time')).toBeTruthy()
+    expect(screen.queryByText('Then, in order')).toBeNull()
+    expect(topicLinks().map((a) => a.getAttribute('href'))).toEqual(RESULTS.recommendedTopics.map((t) => apResultsTopicHref(t, apDiagnosticCourse('ap-chemistry'))))
+    expect(within(plan).getByText('1')).toBeTruthy()
+    expect(order(cta, plan)).toBe(-1)
+    expect(order(plan, screen.getByText('Unit breakdown'))).toBe(-1)
+    // The explainer no longer says "above" for topic 1.
+    expect(screen.getByTestId('ap-results-explainer').textContent).toContain('Start topic 1 of your plan.')
+  })
+
+  it('exam week applies to a 5 too, and to the v2 band', () => {
+    renderResults({ now: CHEM_EXAM_WEEK, results: { ...FIVE, scoreRange: { low: 4, high: 5 }, percentRange: { low: 85, high: 99 } } })
+    expect(screen.getByTestId('ap-results-mode-exam-week')).toBeTruthy()
+  })
+
+  it('confirm-5: "on track for a 5", the practice exam as the filled button, topic 1 secondary, topics 2..N listed', () => {
+    renderResults({ results: FIVE })
+    expect(screen.getByTestId('ap-results-mode-confirm-5')).toBeTruthy()
+    expect(screen.getByRole('heading', { level: 2, name: /on track for a 5 — confirm it with a full practice exam/ })).toBeTruthy()
+    const cta = screen.getByTestId('ap-results-next-step-cta') as HTMLAnchorElement
+    expect(cta.getAttribute('href')).toBe('/ap-chem-practice')
+    expect(cta.className).toMatch(/bg-orange-600/)
+    const topic = screen.getByTestId('ap-results-secondary-topic') as HTMLAnchorElement
+    expect(topic.getAttribute('href')).toBe(apResultsTopicHref(RESULTS.recommendedTopics[0], apDiagnosticCourse('ap-chemistry')))
+    expect(topic.textContent).toContain('Start Moles & Molar Mass')
+    expect(topic.className).not.toMatch(/bg-orange-600/)
+    expect(screen.getByText('Then, in order')).toBeTruthy()
+    expect(topicLinks()).toHaveLength(3)
+    // Months out, the chip still counts down.
+    expect(screen.getByTestId('ap-exam-chip').textContent).toMatch(/^Exam in \d+ days$/)
+  })
+
+  it('plan mode for a 2–4 outside exam week (the chip still shows the countdown), and for a 5 once the exam has passed', () => {
+    renderResults()
+    expect(screen.getByTestId('ap-results-mode-plan')).toBeTruthy()
+    expect(screen.getByTestId('ap-exam-chip').textContent).toMatch(/^Exam in \d+ days$/)
+    cleanup()
+    renderResults({ results: FIVE, now: new Date('2027-06-01T12:00:00Z') })
+    expect(screen.getByTestId('ap-results-mode-plan')).toBeTruthy()
+    expect(screen.queryByTestId('ap-exam-chip')).toBeNull()
+    cleanup()
+    // A 4 whose band is 4–5 (22/33) is not a confirm-5.
+    renderResults({ results: { ...RESULTS, totalCorrect: 22, totalQuestions: 33, percentage: 67, estimatedAPScore: 4 } })
+    expect(screen.getByTestId('ap-results-mode-plan')).toBeTruthy()
+  })
+
+  it('the Premium lock still replaces every mode', () => {
+    renderResults({ now: CHEM_EXAM_WEEK, planAccess: { loading: false, canAccess: false } })
+    expect(screen.queryByTestId('ap-results-mode-exam-week')).toBeNull()
+    expect(screen.queryByTestId('ap-results-next-step-cta')).toBeNull()
+    expect(screen.getByText(/Premium feature/)).toBeTruthy()
+    expect(document.querySelector('a[href^="/flashcards"]')).toBeNull()
+  })
+
+  it('ap_results_next_step_click carries the mode\'s primary action as cta_type', () => {
+    renderResults({ now: CHEM_EXAM_WEEK })
+    fireEvent.click(screen.getByTestId('ap-results-next-step-cta'))
+    fireEvent.click(screen.getByTestId('ap-results-exam-week-practice'))
+    fireEvent.click(screen.getByTestId('ap-results-exam-week-mistakes'))
+    let events = sentEvents().filter((e) => e.eventName === 'ap_results_next_step_click')
+    expect(events.map((e) => e.params.cta_type)).toEqual([AP_NEXT_STEP_CTA_TYPE['exam-week'], 'exam_week_practice_exam', 'exam_week_mistakes'])
+    expect(events[0].params).toMatchObject({ course_slug: 'ap-chemistry', topic_slug: 'moles-molar-mass', destination: '/flashcards?course=ap-chemistry' })
+    expect(events[1].params).toMatchObject({ destination: '/ap-chem-practice' })
+    expect(events[1].params).not.toHaveProperty('topic_slug')
+    cleanup()
+    beacon.mockClear()
+    renderResults({ results: FIVE })
+    fireEvent.click(screen.getByTestId('ap-results-next-step-cta'))
+    fireEvent.click(screen.getByTestId('ap-results-secondary-topic'))
+    events = sentEvents().filter((e) => e.eventName === 'ap_results_next_step_click')
+    expect(events.map((e) => e.params.cta_type)).toEqual([AP_NEXT_STEP_CTA_TYPE['confirm-5'], 'confirm_5_topic'])
+    expect(events[0].params.destination).toBe('/ap-chem-practice')
+    cleanup()
+    beacon.mockClear()
+    renderResults()
+    fireEvent.click(screen.getByTestId('ap-results-next-step-cta'))
+    events = sentEvents().filter((e) => e.eventName === 'ap_results_next_step_click')
+    expect(events[0].params.cta_type).toBe(AP_NEXT_STEP_CTA_TYPE.plan)
+    expect(AP_NEXT_STEP_CTA_TYPE.plan).toBe('next_step')
+    const allowed = new Set(['course_slug', 'topic_slug', 'destination', 'cta_type', 'page_template', 'attempt_id', 'score', 'version'])
+    for (const e of sentEvents()) for (const k of Object.keys(e.params)) expect(allowed.has(k), `${e.eventName}.${k}`).toBe(true)
   })
 })
 
@@ -244,6 +358,18 @@ describe('ApDiagnosticResults: copy from the enforcing code', () => {
 })
 
 describe('ApDiagnosticResults: every AP diagnostic page renders it', () => {
+  it('the 23 v1 menus take their question count and time limit from the config (no "~30 questions" / "3-5 modules" literals)', () => {
+    for (const p of v1) {
+      const src = read(`src/app/${p}-diagnostic/page.tsx`)
+      const slug = /apDiagnosticCourse\('([a-z0-9-]+)'\)/.exec(src)?.[1]
+      expect(slug, p).toBeTruthy()
+      expect(src, p).toContain(`apDiagnosticCourse('${slug}').questionCount} questions`)
+      expect(src, p).toContain(`apDiagnosticCourse('${slug}').timeLimitMinutes} minute time limit`)
+      expect(src, p).not.toMatch(/~\d+ questions/)
+      expect(src, p).not.toMatch(/\d+ minute time limit/)
+      expect(src, p).not.toMatch(/3-5 (personalized|focused) module/)
+    }
+  })
   const v1 = [
     'ap-chem', 'ap-bio', 'ap-physics1', 'calcab', 'calcbc', 'ap-precalculus', 'ap-stats', 'ap-physics2', 'ap-physics-c-mech', 'ap-physics-c-em',
     'ap-enviro', 'ap-csa', 'ap-csp', 'ap-english-lang', 'ap-english-lit', 'ap-us-history', 'ap-world-history', 'ap-us-gov', 'ap-human-geo',
@@ -292,7 +418,7 @@ describe('ApDiagnosticResults: analytics', () => {
     fireEvent.click(screen.getByTestId('ap-results-retake'))
     events = sentEvents()
     expect(events.map((e) => e.eventName)).toEqual(['ap_diagnostic_submit', 'ap_diagnostic_complete', 'ap_results_next_step_click', 'ap_results_retake_click'])
-    expect(events[2].params).toMatchObject({ course_slug: 'ap-chemistry', topic_slug: 'moles-molar-mass', destination: '/topics/moles-molar-mass/interactive', attempt_id: 'att-new' })
+    expect(events[2].params).toMatchObject({ course_slug: 'ap-chemistry', topic_slug: 'moles-molar-mass', destination: '/topics/moles-molar-mass/interactive?from=diagnostic', attempt_id: 'att-new' })
     expect(events[3].params).toMatchObject({ course_slug: 'ap-chemistry', attempt_id: 'att-new' })
     // Rows go through the existing endpoint that stores mcat_diagnostic_complete, and carry no PII.
     for (const [url] of beacon.mock.calls) expect(url).toBe('/api/analytics/events')

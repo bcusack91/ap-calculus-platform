@@ -23,7 +23,7 @@
 
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import Link from 'next/link'
-import { ArrowRight, Info, Target } from 'lucide-react'
+import { ArrowRight, ClipboardCheck, Info, Layers, ListChecks, Target, Timer } from 'lucide-react'
 import DiagnosticReview, { type ReviewQuestion } from '@/components/DiagnosticReview'
 import { DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
 import StartStudyPlanButton from '@/components/StartStudyPlanButton'
@@ -34,6 +34,7 @@ import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { MCAT_UNIT_TEST_PASS_PERCENT, MCAT_UNIT_TEST_QUESTIONS } from '@/lib/mcat-unit-test'
 import { UNIT_TEST_COURSES } from '@/lib/unit-test-courses'
 import { estimateLessonMinutes } from '@/lib/lesson-minutes'
+import { AP_NEXT_STEP_CTA_TYPE, apExamCountdownLabel, apExamWeekLinks, apNextStepMode } from '@/lib/ap-next-step'
 import {
   trackApDiagnosticComplete,
   trackApDiagnosticSubmit,
@@ -92,6 +93,12 @@ export interface ApDiagnosticResultsProps {
   secondary?: ReactNode
   /** Rendered above the heading (the v2 QA banner). */
   banner?: ReactNode
+  /**
+   * The clock for the exam countdown (apNextStepMode): exam-week mode within
+   * 21 days of the course's exam, confirm-5 for an estimated 5 before that.
+   * Pages leave it unset (mount time); tests pin it.
+   */
+  now?: Date
 }
 
 /** How long to wait for the save before ap_diagnostic_complete is sent without an attempt id. */
@@ -111,10 +118,10 @@ const PRIORITY_CHIP = {
 
 /** The plan topic's lesson link (the hub and dashboard use the same helper, so it always lands on /interactive). */
 export function apResultsTopicHref(topic: ApDiagnosticRecommendedTopic, course: ApDiagnosticCourse): string {
-  return studyPlanTopicHref({ slug: topic.slug, name: topic.name, isSatisfied: false }, course.key)
+  return `${studyPlanTopicHref({ slug: topic.slug, name: topic.name, isSatisfied: false }, course.key)}?from=diagnostic` // the lesson reads it (short first session)
 }
 
-/** "Start Moles & Molar Mass · ~30 min" (no minutes until the lesson's length is known). */
+/** "Start Moles & Molar Mass · ~45 min" (no minutes until the lesson's length is known). */
 export function nextStepLabel(topicName: string, minutes: number | null): string {
   return minutes ? `Start ${topicName} · ~${minutes} min` : `Start ${topicName}`
 }
@@ -130,8 +137,12 @@ export default function ApDiagnosticResults({
   retakeDisabled = false,
   secondary,
   banner,
+  now: nowProp,
 }: ApDiagnosticResultsProps) {
   const theme = course.theme
+  // Snapshot once — lint forbids impure calls (new Date) during render.
+  const [mountedAt] = useState(() => new Date())
+  const now = nowProp ?? mountedAt
   const band = useMemo(() => {
     if (results.scoreRange && results.percentRange) return { score: results.scoreRange, percent: results.percentRange }
     const r = apScoreRange(results.totalCorrect, results.totalQuestions)
@@ -149,10 +160,28 @@ export default function ApDiagnosticResults({
   const rest = topics.slice(1)
   const cycleTest = UNIT_TEST_COURSES[course.key]
 
+  /* ---- exam-aware mode (Phase 3 W4): one function for results, hub and dashboard ---- */
+  const decision = useMemo(
+    () => apNextStepMode(course.courseSlug, { estimatedScore: results.estimatedAPScore, scoreRange: band.score }, now),
+    [course.courseSlug, results.estimatedAPScore, band.score, now],
+  )
+  const cram = apExamWeekLinks(course.courseSlug, course.key)
+  // A course with no practice exam / mistake log (none today) falls back to the plan.
+  const mode = cram ? decision.mode : 'plan'
+  const examChip = apExamCountdownLabel(decision.daysToExam)
+  const weakestUnit = useMemo(() => {
+    const weak = [...results.domains].filter((d) => d.level === 'weak').sort((a, b) => a.percentage - b.percentage)[0]
+    return weak?.domainName ?? results.weakAreas[0] ?? null
+  }, [results.domains, results.weakAreas])
+  // In exam week the whole plan (topic 1 included) is "if you have more time"; otherwise topics 2..N follow topic 1.
+  const planList = mode === 'exam-week' ? topics : rest
+  const planNumberFrom = mode === 'exam-week' ? 1 : 2
+
   /* ---- this sitting's saved attempt: the id that was not there at mount ---- */
   const initialIds = useRef<Set<string> | null>(null)
   if (initialIds.current === null) initialIds.current = new Set(history.map((h) => h.id))
   const attemptId = history.find((h) => !initialIds.current!.has(h.id))?.id ?? null
+  const trackClick = (topicSlug: string | null, href: string, ctaType: string) => trackApResultsNextStepClick(course.courseSlug, topicSlug, href, attemptId, ctaType)
 
   /* ---- analytics ---- */
   const completeSent = useRef(false)
@@ -235,9 +264,96 @@ export default function ApDiagnosticResults({
           {topics.length > 0 && planAccess.loading && (
             <div className="mb-6 h-36 animate-pulse rounded-2xl bg-gray-200 dark:bg-gray-700" aria-busy="true" aria-label="Loading your study plan" />
           )}
-          {showPlan && first && (
-            <section className={`mb-6 rounded-2xl border-2 bg-white p-6 shadow-sm dark:bg-gray-800 ${theme.border}`} aria-labelledby="ap-results-next-step">
-              <p id="ap-results-next-step" className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">Your next step</p>
+          {/* exam-week: "Exam in N days — do these three things" (flashcards → practice exam → mistakes) */}
+          {showPlan && first && mode === 'exam-week' && cram && (
+            <section className={`mb-6 rounded-2xl border-2 bg-white p-6 shadow-sm dark:bg-gray-800 ${theme.border}`} aria-labelledby="ap-results-next-step" data-testid="ap-results-mode-exam-week">
+              <p id="ap-results-next-step" className="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                Your next step
+                {examChip && <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold normal-case tracking-normal ${theme.chip}`} data-testid="ap-exam-chip">{examChip}</span>}
+              </p>
+              <h2 className="mt-1 flex items-center gap-2 text-xl font-bold text-gray-900 dark:text-white">
+                <Timer className={`h-5 w-5 shrink-0 ${theme.text}`} aria-hidden />
+                {examChip} — do these three things
+              </h2>
+              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                {weakestUnit ? `Your weakest unit is ${weakestUnit}. ` : ''}With the exam this close, reviewing and timed practice beat starting a new lesson. Your topic plan is below if you have more time.
+              </p>
+              <ol className="mt-4 space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className={`mt-1.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${theme.chip}`}>1</span>
+                  <div>
+                    <Link
+                      href={cram.flashcards}
+                      onClick={() => trackClick(first.slug, cram.flashcards, AP_NEXT_STEP_CTA_TYPE['exam-week'])}
+                      data-testid="ap-results-next-step-cta"
+                      className={`inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white shadow transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${theme.button}`}
+                    >
+                      <Layers className="h-4 w-4" aria-hidden /> Review {weakestUnit ? `${weakestUnit} ` : ''}high-yield flashcards <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <p className="mt-1 text-xs text-gray-500 dark:text-gray-400">High-yield cards come first; stop when they feel automatic.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${theme.chip}`}>2</span>
+                  <div>
+                    <Link href={cram.practice} onClick={() => trackClick(null, cram.practice, 'exam_week_practice_exam')} data-testid="ap-results-exam-week-practice" className={`inline-flex items-center gap-1.5 text-sm font-semibold hover:underline ${theme.text}`}>
+                      <ClipboardCheck className="h-4 w-4" aria-hidden /> Take a timed {course.label} practice exam
+                    </Link>
+                    <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">Full length, real timing. Pick a form you have not sat yet.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${theme.chip}`}>3</span>
+                  <div>
+                    <Link href={cram.mistakes} onClick={() => trackClick(null, cram.mistakes, 'exam_week_mistakes')} data-testid="ap-results-exam-week-mistakes" className={`inline-flex items-center gap-1.5 text-sm font-semibold hover:underline ${theme.text}`}>
+                      <ListChecks className="h-4 w-4" aria-hidden /> Review every mistake
+                    </Link>
+                    <p className="mt-0.5 text-xs text-gray-500 dark:text-gray-400">Every question you missed, from this diagnostic and the practice exam, until you get it right twice.</p>
+                  </div>
+                </li>
+              </ol>
+            </section>
+          )}
+
+          {/* confirm-5: a practice exam confirms the 5; topic 1 is secondary */}
+          {showPlan && first && mode === 'confirm-5' && cram && (
+            <section className={`mb-6 rounded-2xl border-2 bg-white p-6 shadow-sm dark:bg-gray-800 ${theme.border}`} aria-labelledby="ap-results-next-step" data-testid="ap-results-mode-confirm-5">
+              <p id="ap-results-next-step" className="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                Your next step
+                {examChip && <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold normal-case tracking-normal ${theme.chip}`} data-testid="ap-exam-chip">{examChip}</span>}
+              </p>
+              <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white">You&apos;re on track for a 5 — confirm it with a full practice exam</h2>
+              <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
+                {results.totalQuestions} questions point to a 5; a full-length {course.label} practice exam under real timing confirms it and shows anything left to fix before the exam.
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2">
+                <Link
+                  href={cram.practice}
+                  onClick={() => trackClick(null, cram.practice, AP_NEXT_STEP_CTA_TYPE['confirm-5'])}
+                  data-testid="ap-results-next-step-cta"
+                  className={`inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white shadow transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${theme.button}`}
+                >
+                  <ClipboardCheck className="h-4 w-4" aria-hidden /> Take a practice exam <ArrowRight className="h-4 w-4" aria-hidden />
+                </Link>
+                <Link
+                  href={apResultsTopicHref(first, course)}
+                  onClick={() => trackClick(first.slug, apResultsTopicHref(first, course), 'confirm_5_topic')}
+                  data-testid="ap-results-secondary-topic"
+                  className={`text-sm font-semibold hover:underline ${theme.text}`}
+                >
+                  {nextStepLabel(first.name, minutesFor(first.slug))} →
+                </Link>
+              </div>
+            </section>
+          )}
+
+          {/* plan: topic 1 as the one filled button */}
+          {showPlan && first && mode === 'plan' && (
+            <section className={`mb-6 rounded-2xl border-2 bg-white p-6 shadow-sm dark:bg-gray-800 ${theme.border}`} aria-labelledby="ap-results-next-step" data-testid="ap-results-mode-plan">
+              <p id="ap-results-next-step" className="flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                Your next step
+                {examChip && <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold normal-case tracking-normal ${theme.chip}`} data-testid="ap-exam-chip">{examChip}</span>}
+              </p>
               <h2 className="mt-1 text-xl font-bold text-gray-900 dark:text-white">
                 <span className={`mr-2 inline-flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold align-middle ${theme.chip}`}>1</span>
                 {first.name}
@@ -247,7 +363,7 @@ export default function ApDiagnosticResults({
               </p>
               <Link
                 href={apResultsTopicHref(first, course)}
-                onClick={() => trackApResultsNextStepClick(course.courseSlug, first.slug, apResultsTopicHref(first, course), attemptId)}
+                onClick={() => trackClick(first.slug, apResultsTopicHref(first, course), AP_NEXT_STEP_CTA_TYPE.plan)}
                 data-testid="ap-results-next-step-cta"
                 className={`mt-4 inline-flex items-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold text-white shadow transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${theme.button}`}
               >
@@ -256,21 +372,23 @@ export default function ApDiagnosticResults({
             </section>
           )}
 
-          {/* The rest of the plan */}
-          {showPlan && rest.length > 0 && (
-            <section className={`mb-6 rounded-2xl border p-5 ${theme.border} ${theme.soft}`} aria-labelledby="ap-results-plan">
+          {/* The rest of the plan (exam week: the whole plan, as "if you have more time") */}
+          {showPlan && planList.length > 0 && (
+            <section className={`mb-6 rounded-2xl border p-5 ${theme.border} ${theme.soft}`} aria-labelledby="ap-results-plan" data-testid="ap-results-plan-list">
               <h2 id="ap-results-plan" className={`mb-1 flex items-center gap-1.5 text-base font-bold ${theme.text}`}>
-                <Target className="h-4 w-4" aria-hidden />Then, in order
+                <Target className="h-4 w-4" aria-hidden />{mode === 'exam-week' ? 'If you have more time' : 'Then, in order'}
               </h2>
-              <p className="mb-3 text-xs text-gray-600 dark:text-gray-300">Each topic clears at {TOPIC_CLEAR_PERCENT}% on its exit quiz. Your dashboard and the {course.label} hub keep this plan.</p>
+              <p className="mb-3 text-xs text-gray-600 dark:text-gray-300">
+                {mode === 'exam-week' ? `Your ${course.label} study plan, weakest first. ` : ''}Each topic clears at {TOPIC_CLEAR_PERCENT}% on its exit quiz. Your dashboard and the {course.label} hub keep this plan.
+              </p>
               <ol className="space-y-2">
-                {rest.map((t, i) => {
+                {planList.map((t, i) => {
                   const mins = minutesFor(t.slug)
                   return (
                     <li key={t.slug}>
                       <Link href={apResultsTopicHref(t, course)} className="flex items-center justify-between gap-3 rounded-xl border border-gray-200 bg-white px-4 py-3 transition hover:shadow-sm dark:border-gray-700 dark:bg-gray-800">
                         <span className="flex min-w-0 items-center gap-3">
-                          <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${theme.chip}`}>{i + 2}</span>
+                          <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${theme.chip}`}>{i + planNumberFrom}</span>
                           <span className="truncate text-sm font-semibold text-gray-800 dark:text-gray-200">{t.name}</span>
                           {mins && <span className="hidden shrink-0 text-xs text-gray-500 sm:inline dark:text-gray-400">~{mins} min</span>}
                         </span>
@@ -333,7 +451,7 @@ export default function ApDiagnosticResults({
             <h2 className="mb-2 font-semibold text-blue-800 dark:text-blue-300">How this cycle works</h2>
             <ol className="list-inside list-decimal space-y-2 text-sm text-blue-700 dark:text-blue-400">
               <li>
-                Start topic 1 above. Each topic is a lesson plus an exit quiz; score {TOPIC_CLEAR_PERCENT}% on the quiz to clear it. Its flashcards unlock as you go.
+                {mode === 'plan' ? 'Start topic 1 above.' : 'Start topic 1 of your plan.'} Each topic is a lesson plus an exit quiz; score {TOPIC_CLEAR_PERCENT}% on the quiz to clear it. Its flashcards unlock as you go.
               </li>
               <li>
                 Clear {topics.length > 0 ? `all ${topics.length} topic${topics.length === 1 ? '' : 's'}` : 'every topic'} in your plan. Your dashboard tracks what is cleared.

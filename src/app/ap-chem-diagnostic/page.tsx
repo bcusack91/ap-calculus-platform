@@ -482,7 +482,7 @@ function APChemDiagnosticPageV1() {
             🧪 AP Chemistry Diagnostic Test
           </h1>
           <p className="mb-8 text-lg text-gray-600 dark:text-gray-400">
-            Find your strengths and weaknesses across all AP Chemistry units and get a personalized study plan with 3-5 focused modules.
+            Find your strengths and weaknesses across all AP Chemistry units and get a personalized study plan of the topics to clear first.
           </p>
 
           {/* Active study plan from last diagnostic */}
@@ -568,13 +568,13 @@ function APChemDiagnosticPageV1() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                ~30 questions spanning all 9 AP Chemistry units
+                {apDiagnosticCourse('ap-chemistry').questionCount} questions spanning all 9 AP Chemistry units
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                40 minute time limit
+                {apDiagnosticCourse('ap-chemistry').timeLimitMinutes} minute time limit
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -586,7 +586,7 @@ function APChemDiagnosticPageV1() {
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
-                3-5 personalized module recommendations to focus your studying
+                A personalized study plan: the topics to clear first
               </li>
               <li className="flex items-start gap-2">
                 <svg className="mt-0.5 h-4 w-4 shrink-0 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

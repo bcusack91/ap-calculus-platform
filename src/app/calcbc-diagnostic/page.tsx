@@ -453,7 +453,7 @@ export default function CalcBCDiagnosticPage() {
           <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
             <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              {['~35 questions covering both AB foundations and BC-exclusive content', '50 minute time limit', 'Estimated AP Score (1–5) with AB Subscore — just like the real exam', 'Per-unit breakdown across all 11 tested domains', '3-5 personalized module recommendations', '10 unique forms with different questions each time'].map(text => (
+              {[`${apDiagnosticCourse('ap-calculus-bc').questionCount} questions covering both AB foundations and BC-exclusive content`, `${apDiagnosticCourse('ap-calculus-bc').timeLimitMinutes} minute time limit`, 'Estimated AP Score (1–5) with AB Subscore — just like the real exam', 'Per-unit breakdown across all 11 tested domains', 'A personalized study plan: the topics to clear first', '10 unique forms with different questions each time'].map(text => (
                 <li key={text} className="flex items-start gap-2">
                   <svg className="mt-0.5 h-4 w-4 shrink-0 text-violet-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                   {text}
