@@ -5,7 +5,8 @@
 // synthetic 'general' topic so the lobby UI still has at least one selectable
 // option and the API doesn't 404.
 
-import { pickTieredQuestions, type MatchTier } from '@/lib/competitive-utils'
+import { pickTieredQuestions, AP_LESSON_BANK_TOPICS, type MatchTier } from '@/lib/competitive-utils'
+import { courseCategoryLayout } from '@/lib/course-includes'
 
 
 export interface TeacherLobbyQuestion {
@@ -55,6 +56,30 @@ async function getApCalculusQuestions(count?: number, topicSlug?: string): Promi
 async function getApCalculusBCQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
   const m = await import('@/data/competitive-questions/ap-calculus-bc-bank')
   return (m.getApCalculusBCQuestions as (...a: unknown[]) => unknown[])(count, topicSlug) as unknown as AnyQuestion[]
+}
+/** AB bank topics an AB-unit slug draws: itself plus any AP_LESSON_BANK_TOPICS mapping. */
+function abBankTopicsFor(topicSlug: string): Set<string> {
+  const mapped = AP_LESSON_BANK_TOPICS[topicSlug]
+  return new Set([topicSlug, ...(mapped?.course === 'ap-calculus-ab' ? mapped.topics : [])])
+}
+// AP Calculus BC includes AB (course-includes), so a BC lobby offers the full
+// 10-unit layout: a BC-only slug draws its tagged BC-bank items, an AB-unit
+// slug draws from the AB bank, and anything else keeps the BC bank's fallback.
+async function getApCalculusBCLayoutQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  if (!topicSlug) return getApCalculusBCQuestions(count)
+  const n = Math.max(count ?? 10, 1)
+  const bc = (await getApCalculusBCQuestions(100000, topicSlug)).filter(q => q.topicSlug === topicSlug)
+  if (bc.length > 0) return bc.slice(0, n)
+  const abTopics = abBankTopicsFor(topicSlug)
+  const ab = (await getApCalculusQuestions(100000)).filter(q => q.topicSlug !== undefined && abTopics.has(q.topicSlug))
+  if (ab.length > 0) {
+    for (let i = ab.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[ab[i], ab[j]] = [ab[j], ab[i]]
+    }
+    return ab.slice(0, n)
+  }
+  return getApCalculusBCQuestions(count, topicSlug)
 }
 // AP Precalculus: the on-exam view of the precalc bank (Unit 4 items dropped).
 async function getApPrecalcQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
@@ -357,7 +382,7 @@ const COURSES: CourseRegistryEntry[] = [
   { slug: 'geometry', name: 'Geometry', getQuestions: topicTagged(getGeometryQuestions) },
   { slug: 'ap-precalculus', name: 'AP Precalculus', getQuestions: topicTagged(getApPrecalcQuestions) },
   { slug: 'ap-calculus-ab', name: 'AP Calculus AB', getQuestions: topicTagged(getApCalculusQuestions) },
-  { slug: 'ap-calculus-bc', name: 'AP Calculus BC', getQuestions: topicTagged(getApCalculusBCQuestions) },
+  { slug: 'ap-calculus-bc', name: 'AP Calculus BC', getQuestions: topicTagged(getApCalculusBCLayoutQuestions) },
   { slug: 'ap-statistics', name: 'AP Statistics', getQuestions: untagged(getApStatisticsQuestions) },
 
   // Science
@@ -410,6 +435,22 @@ export function getCourseEntry(slug: string): CourseRegistryEntry | null {
 export async function getCourseTopics(slug: string): Promise<{ slug: string; title: string; count: number }[]> {
   const entry = getCourseEntry(slug)
   if (!entry) return []
+  // AP Calculus BC lists its course-includes layout (AB Units 1-8, the BC-only
+  // topics, Units 9-10, exam prep) in syllabus order: live Topic slugs only, so
+  // a retired legacy bank slug can never resurface next to the live lesson.
+  if (slug === 'ap-calculus-bc') {
+    const layoutSlugs = (courseCategoryLayout('ap-calculus-bc') ?? []).flatMap(s => s.topics)
+    const [bcAll, abAll] = await Promise.all([getApCalculusBCQuestions(100000), getApCalculusQuestions(100000)])
+    const countFor = (t: string) => {
+      const own = bcAll.filter(q => q.topicSlug === t).length
+      if (own > 0) return own
+      const abTopics = abBankTopicsFor(t)
+      return abAll.filter(q => q.topicSlug !== undefined && abTopics.has(q.topicSlug)).length
+    }
+    return layoutSlugs
+      .map(t => ({ slug: t, title: prettifyTopicSlug(t), count: countFor(t) }))
+      .filter(t => t.count > 0)
+  }
   // SAT lists the lesson-aligned hierarchy (an "All <category>" entry per
   // domain, then its challenges) in curriculum order rather than deriving
   // topics from bank tags — so lobby pickers offer the same names as the

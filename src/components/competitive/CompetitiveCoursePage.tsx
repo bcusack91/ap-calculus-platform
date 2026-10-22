@@ -19,6 +19,7 @@ import { useSession } from 'next-auth/react'
 import { ArrowLeft, Bot, Check, Lock, Star } from 'lucide-react'
 import { GAME_MODE_CARDS } from '@/lib/competitive-modes'
 import { COMPETITIVE_COURSES } from '@/lib/competitive-catalog'
+import { unitHeading } from '@/lib/competitive-course-units'
 import AsyncChallengeButton from '@/components/AsyncChallengeButton'
 import QueueSearchPanel, { QUEUE_POLL_TIMEOUT_SEC } from '@/components/competitive/QueueSearchPanel'
 
@@ -42,7 +43,8 @@ export interface CompetitiveCoursePageConfig {
 }
 
 interface TopicInfo { id: string; slug: string; title: string; completed: boolean; masteryLevel: number; status: string }
-interface UnitInfo { unitNumber: number; name: string; slug: string; topics: TopicInfo[] }
+/** unitNumber is the CED unit (null for an exam-prep section); see unitHeading. */
+interface UnitInfo { unitNumber: number | null; name: string; slug: string; topics: TopicInfo[] }
 interface TopicsResponse { units: UnitInfo[]; totalTopics: number; completedCount: number; hasAnyCompleted: boolean }
 interface QueueStatus { status: string; matchId?: string; position?: number; estimatedWait?: number; [key: string]: unknown }
 
@@ -245,7 +247,7 @@ function CompetitiveCoursePageInner({ config }: { config: CompetitiveCoursePageC
             const emoji = config.unitEmojis ? (config.unitEmojis[ui] || courseEmoji) : courseEmoji
             return (
               <div key={unit.slug} className={`rounded-2xl border ${colors.border} ${colors.light} p-5`}>
-                <h2 className={`font-bold text-lg mb-3 ${colors.text}`}>{emoji} Unit {unit.unitNumber}: {unit.name}</h2>
+                <h2 className={`font-bold text-lg mb-3 ${colors.text}`}>{emoji} {unitHeading(unit)}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {unit.topics.map(topic => {
                     const isSelected = selectedTopic === topic.slug

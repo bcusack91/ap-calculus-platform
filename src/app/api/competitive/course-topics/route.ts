@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { curriculumCourseSlug } from '@/lib/competitive-catalog'
+import { INCLUDE_COURSE_NAMES } from '@/lib/course-includes'
+import { layoutTopicRows } from '@/lib/competitive-calc-topics'
+import { groupTopicsByLayout } from '@/lib/competitive-course-units'
 
 /**
  * GET /api/competitive/course-topics?course=<slug>
@@ -84,10 +87,37 @@ export async function GET(request: NextRequest) {
       }, { headers: { 'Cache-Control': 'private, no-store' } })
     }
 
+    // Courses laid out in code (AP Calculus AB/BC, course-includes) list their
+    // layout units, so the BC picker offers the full 10-unit BC syllabus (AB
+    // Units 1-8 included) exactly like /competitive/ap-calculus-bc.
+    const curriculumSlug = curriculumCourseSlug(courseSlug)
+    const fixed = await layoutTopicRows(curriculumSlug)
+    if (fixed) {
+      const progress = await prisma.topicProgress.findMany({
+        where: { userId: session.user.id, topicId: { in: fixed.rows.map(r => r.id) } },
+        select: { topicId: true, masteryLevel: true, status: true, completedAt: true },
+      })
+      const progressMap = new Map(progress.map(p => [p.topicId, p]))
+      const units = groupTopicsByLayout(fixed.layout, fixed.rows).map(u => ({
+        name: u.name,
+        slug: u.slug,
+        topics: u.topics.map(t => {
+          const p = progressMap.get(t.id)
+          const completed = !!p && (p.status === 'COMPLETED' || p.completedAt !== null || (p.masteryLevel ?? 0) >= 0.8)
+          return { slug: t.slug, title: t.title, completed, masteryLevel: p?.masteryLevel ?? 0 }
+        }),
+      }))
+      return NextResponse.json({
+        courseSlug: curriculumSlug,
+        courseName: INCLUDE_COURSE_NAMES[curriculumSlug] ?? curriculumSlug,
+        units,
+      }, { headers: { 'Cache-Control': 'private, no-store' } })
+    }
+
     // Competitive slugs like 'ap-physics1' name the curriculum course
     // 'ap-physics-1' — look up the real Course row.
     const course = await prisma.course.findUnique({
-      where: { slug: curriculumCourseSlug(courseSlug) },
+      where: { slug: curriculumSlug },
       select: {
         slug: true,
         name: true,

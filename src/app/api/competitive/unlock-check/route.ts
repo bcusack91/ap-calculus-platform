@@ -4,6 +4,11 @@ import { prisma } from '@/lib/prisma'
 import { getUnlockedAlgebra2Subtopics, ALGEBRA2_SUBTOPIC_LABELS, type Algebra2Subtopic } from '@/data/competitive-questions/algebra2-bank'
 import { isCompetitiveFullUnlock } from '@/lib/admin-unlock'
 import { satBankSlugsForCourseTopic, type SatBankSlug } from '@/lib/sat-topic-map'
+import { courseLayoutTopics } from '@/lib/course-includes'
+
+// AP Calculus BC includes AB (course-includes): progress on ANY topic of the
+// 10-unit BC layout, AB Units 1-8 included, unlocks BC competitive play.
+const BC_LAYOUT_TOPICS = new Set(courseLayoutTopics('ap-calculus-bc') ?? [])
 
 /**
  * Check if user has unlocked competitive mode
@@ -227,7 +232,7 @@ export async function GET() {
         s.includes('ap-calculus-ab') || s.includes('calculus-ab') || s.includes('derivative') || s.includes('integral')
       ),
       'ap-calculus-bc': grantAllCategories || grantedCategories.has('ap-calculus-bc') || uniqueDiagnosticSlugs.includes('ap-calculus-bc') || allProgressSlugs.some(s =>
-        s.includes('ap-calculus-bc') || s.includes('calculus-bc') || s.includes('series') || s.includes('taylor')
+        BC_LAYOUT_TOPICS.has(s) || s.includes('ap-calculus-bc') || s.includes('calculus-bc') || s.includes('series') || s.includes('taylor')
       ),
       'ap-physics-c-mech': grantAllCategories || grantedCategories.has('ap-physics-c-mech') || uniqueDiagnosticSlugs.includes('ap-physics-c-mech') || allProgressSlugs.some(s =>
         s.includes('ap-physics-c-mech') || s.includes('physics-c-mechanics') || s.includes('rotational-dynamics')

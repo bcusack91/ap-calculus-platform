@@ -534,7 +534,6 @@ for (const s of STATISTICS_LESSON_SLUGS) LESSON_TO_FULL_COURSE_BANK[s] = getApSt
 const COURSE_GROUPING_LESSONS: Record<string, 'ap-calculus-ab' | 'ap-calculus-bc'> = {
   // ---- AP Calculus AB unit & exam-prep buckets
   'ap-exam-review-calcab': 'ap-calculus-ab',
-  'applications-of-derivatives-calcab': 'ap-calculus-ab',
   'calcab-applications-derivatives': 'ap-calculus-ab',
   'calcab-contextual-applications': 'ap-calculus-ab',
   'calcab-differential-equations': 'ap-calculus-ab',
@@ -545,7 +544,6 @@ const COURSE_GROUPING_LESSONS: Record<string, 'ap-calculus-ab' | 'ap-calculus-bc
   'calcab-integration': 'ap-calculus-ab',
   'calcab-limits-continuity': 'ap-calculus-ab',
   'free-response-strategies-calcab': 'ap-calculus-ab',
-  'integration-applications-calcab': 'ap-calculus-ab',
   'limits': 'ap-calculus-ab',
   // ---- AP Calculus BC unit & exam-prep buckets
   'calcbc-advanced-de': 'ap-calculus-bc',
@@ -641,7 +639,20 @@ export const AP_LESSON_BANK_TOPICS: Record<string, { course: ApLessonBankCourse;
   'one-sided-limits': lessonTopics('ap-calculus-ab', 'estimating-limits-graphs', 'estimating-limits-tables'),
   'what-is-a-limit': lessonTopics('ap-calculus-ab', 'estimating-limits-graphs', 'estimating-limits-tables'),
   'optimization-calcab': lessonTopics('ap-calculus-ab', 'optimization-problems'),
-  'theorem-applications-calcab': lessonTopics('ap-calculus-ab', 'mean-value-theorem', 'absolute-extrema', 'continuity-introduction'),
+  // Unit 5 "Theorem applications" = MVT, EVT/candidates test and the IVT; the
+  // rest of continuity-introduction stays in Unit 1.
+  'theorem-applications-calcab': lessonTopics('ap-calculus-ab', 'mean-value-theorem', 'absolute-extrema', 'intermediate-value-theorem'),
+  // Unit 1 "Continuity introduction" keeps its IVT items (they live under their own bank slug).
+  'continuity-introduction': lessonTopics('ap-calculus-ab', 'continuity-introduction', 'intermediate-value-theorem'),
+  // Unit 5 "Applications of derivatives" is a Topic (lesson parts: critical
+  // points, concavity / second derivative, curve sketching), not a unit bucket.
+  'applications-of-derivatives-calcab': lessonTopics('ap-calculus-ab', 'critical-points-and-extrema', 'first-derivative-test', 'curve-sketching', 'second-derivative-test'),
+  // Unit 6: Riemann sums (6.2-6.3) are part of the "Definite integrals" Topic.
+  'definite-integrals-calcab': lessonTopics('ap-calculus-ab', 'definite-integrals-calcab', 'riemann-sums'),
+  // Unit 2: rate-of-change interpretation (2.1) belongs to "Definition of the derivative";
+  // 2.7 covers ln x alongside e^x.
+  'definition-of-derivative-calcab': lessonTopics('ap-calculus-ab', 'definition-of-derivative-calcab', 'derivative-as-rate-of-change'),
+  'derivatives-of-exponential-functions': lessonTopics('ap-calculus-ab', 'derivatives-of-exponential-functions', 'derivatives-of-logarithmic-functions'),
   // ---- AP Chemistry / AP Biology
   'solubility-equilibrium': lessonTopics('ap-chemistry', 'solubility-ksp'),
   'population-dynamics': lessonTopics('ap-biology', 'population-ecology', 'community-ecology'),

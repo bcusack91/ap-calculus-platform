@@ -34,13 +34,14 @@ export const COURSE_PAGE_CONFIGS: Record<string, CompetitiveCoursePageConfig> = 
     slug: 'ap-calculus-ab', courseName: 'AP Calculus AB',
     topicsEndpoint: '/api/competitive/calculus-ab-topics',
     backHref: '/ap-calculus-ab', browseHref: '/courses/ap-calculus-ab',
-    unitEmojis: ['📏', '📐', '∫', '🔄', '📈', '🧮', '🔢', '📊'],
+    unitEmojis: ['📏', '📐', '∫', '🔄', '📈', '🧮', '🔢', '📊', '📝'],
   },
   'ap-calculus-bc': {
     slug: 'ap-calculus-bc', courseName: 'AP Calculus BC',
     topicsEndpoint: '/api/competitive/calculus-bc-topics',
     backHref: '/ap-calculus-bc', browseHref: '/courses/ap-calculus-bc',
-    unitEmojis: ['∫', '📐', '🔢', '📊', '🧮', '📝'],
+    // 10 CED units (course-includes BC layout: AB Units 1-8 + BC-only + 9-10) + exam prep.
+    unitEmojis: ['📏', '📐', '🔗', '🚗', '📈', '∫', '🔄', '📊', '🌀', '♾️', '📝'],
     modeKeys: CLASSIC_MODES,
   },
   'ap-chemistry': {
