@@ -33,7 +33,6 @@ export const courseDiagnosticMap: Record<string, DiagnosticConfig> = {
   'algebra-2': { href: '/algebra2-diagnostic', icon: '📏', description: 'Take a diagnostic test covering all Algebra 2 topics. Identify your strengths and areas to work on.', borderColor: 'border-cyan-300 dark:border-cyan-700', bgGradient: 'from-cyan-50 to-sky-50 dark:from-cyan-900/20 dark:to-sky-900/20', btnGradient: 'from-cyan-600 to-sky-600' },
   'geometry': { href: '/geometry-diagnostic', icon: '📐', description: 'Take a diagnostic test covering all Geometry topics. Build a targeted study plan for your weak areas.', borderColor: 'border-rose-300 dark:border-rose-700', bgGradient: 'from-rose-50 to-pink-50 dark:from-rose-900/20 dark:to-pink-900/20', btnGradient: 'from-rose-600 to-pink-600' },
   'pre-algebra': { href: '/prealgebra-diagnostic', icon: '🔢', description: 'Take a diagnostic test covering all Pre-Algebra topics. Find out what to focus on with a personalized plan.', borderColor: 'border-lime-300 dark:border-lime-700', bgGradient: 'from-lime-50 to-green-50 dark:from-lime-900/20 dark:to-green-900/20', btnGradient: 'from-lime-600 to-green-600' },
-  'precalculus': { href: '/precalc-diagnostic', icon: '📈', description: 'Take a diagnostic test covering all Precalculus topics. Get a personalized plan to strengthen weak areas.', borderColor: 'border-fuchsia-300 dark:border-fuchsia-700', bgGradient: 'from-fuchsia-50 to-purple-50 dark:from-fuchsia-900/20 dark:to-purple-900/20', btnGradient: 'from-fuchsia-600 to-purple-600' },
   'ap-precalculus': { href: '/ap-precalculus-diagnostic', icon: '📉', description: 'Take a diagnostic test covering all AP Precalculus units. Identify gaps and get a targeted study plan.', borderColor: 'border-violet-300 dark:border-violet-700', bgGradient: 'from-violet-50 to-indigo-50 dark:from-violet-900/20 dark:to-indigo-900/20', btnGradient: 'from-violet-600 to-indigo-600' },
   'grade-8-math': { href: '/grade8-math-diagnostic', icon: '🎓', description: 'Take a diagnostic test covering all Grade 8 Math topics. Get a personalized study plan for improvement.', borderColor: 'border-yellow-300 dark:border-yellow-700', bgGradient: 'from-yellow-50 to-amber-50 dark:from-yellow-900/20 dark:to-amber-900/20', btnGradient: 'from-yellow-600 to-amber-600' },
   'ap-human-geography': { href: '/ap-human-geo-diagnostic', icon: '🗺️', description: 'Take a diagnostic test covering all AP Human Geography units. Get a personalized study plan.', borderColor: 'border-sky-300 dark:border-sky-700', bgGradient: 'from-sky-50 to-indigo-50 dark:from-sky-900/20 dark:to-indigo-900/20', btnGradient: 'from-sky-600 to-indigo-600' },
@@ -66,7 +65,6 @@ export const courseScorePredictorMap: Record<string, SimpleLinkConfig> = {
   'algebra-1': { href: '/algebra1-score-predictor', label: 'View Score Predictor' },
   'algebra-2': { href: '/algebra2-score-predictor', label: 'View Score Predictor' },
   'geometry': { href: '/geometry-score-predictor', label: 'View Score Predictor' },
-  'precalculus': { href: '/precalc-score-predictor', label: 'View Score Predictor' },
   'ap-precalculus': { href: '/ap-precalculus-score-predictor', label: 'View Score Predictor' },
   'ap-physics-c-mechanics': { href: '/ap-physics-c-mech-score-predictor', label: 'View Score Predictor' },
   'ap-physics-c-em': { href: '/ap-physics-c-em-score-predictor', label: 'View Score Predictor' },
@@ -104,7 +102,6 @@ export const courseDailyQuestionMap: Record<string, SimpleLinkConfig> = {
   'algebra-1': { href: '/algebra1-daily-question', label: 'Daily question' },
   'algebra-2': { href: '/algebra2-daily-question', label: 'Daily question' },
   'geometry': { href: '/geometry-daily-question', label: 'Daily question' },
-  'precalculus': { href: '/precalc-daily-question', label: 'Daily question' },
   'ap-precalculus': { href: '/ap-precalculus-daily-question', label: 'Daily question' },
   'ap-physics-c-mechanics': { href: '/ap-physics-c-mech-daily-question', label: 'Daily question' },
   'ap-physics-c-em': { href: '/ap-physics-c-em-daily-question', label: 'Daily question' },
@@ -159,7 +156,6 @@ export const coursePracticeTestMap: Record<string, SimpleLinkConfig> = {
   'organic-chemistry-1': { href: '/ochem1-practice', label: 'Practice Test' },
   'organic-chemistry-2': { href: '/ochem2-practice', label: 'Practice Test' },
   'pre-algebra': { href: '/prealgebra-practice', label: 'Practice Test' },
-  'precalculus': { href: '/precalc-practice', label: 'Practice Test' },
   'psat': { href: '/psat-practice', label: 'Full-Length Practice Test' },
   'sat': { href: '/sat-practice', label: 'Practice Test' },
 }
@@ -222,7 +218,6 @@ export const courseStudyPlanMap: Record<string, SimpleLinkConfig> = {
   'organic-chemistry-1': { href: '/ochem1-study-plans', label: 'Study schedules' },
   'organic-chemistry-2': { href: '/ochem2-study-plans', label: 'Study schedules' },
   'pre-algebra': { href: '/prealgebra-study-plans', label: 'Study schedules' },
-  'precalculus': { href: '/precalc-study-plans', label: 'Study schedules' },
   'psat': { href: '/psat-study-plans', label: 'Study schedules' },
   'sat': { href: '/sat-study-plans', label: 'Study schedules' },
 }
@@ -260,7 +255,6 @@ export const courseUnitTestsMap: Record<string, SimpleLinkConfig> = {
   'organic-chemistry-1': { href: '/ochem1-unit-tests', label: 'Unit Tests' },
   'organic-chemistry-2': { href: '/ochem2-unit-tests', label: 'Unit Tests' },
   'pre-algebra': { href: '/prealgebra-unit-tests', label: 'Unit Tests' },
-  'precalculus': { href: '/precalc-unit-tests', label: 'Unit Tests' },
   'psat': { href: '/psat-unit-tests', label: 'Unit Tests' },
   'sat': { href: '/sat-unit-tests', label: 'Unit Tests' },
 }

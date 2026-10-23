@@ -1426,54 +1426,6 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Mixed Mastery & Exit Quiz', loader: () => import('./extra/power-physics').then((m) => m.parts[6]) },
     ],
   },
-  'complex-numbers': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'The Imaginary Unit & Square Roots of Negatives', loader: () => import('./extra/complex-numbers').then((m) => m.parts[0]) },
-      { title: 'Adding, Subtracting & Multiplying', loader: () => import('./extra/complex-numbers').then((m) => m.parts[1]) },
-      { title: 'Conjugates & Conjugate Zeros', loader: () => import('./extra/complex-numbers').then((m) => m.parts[2]) },
-      { title: 'The Complex Plane & Modulus', loader: () => import('./extra/complex-numbers').then((m) => m.parts[3]) },
-      { title: 'Polar (Trigonometric) Form', loader: () => import('./extra/complex-numbers').then((m) => m.parts[4]) },
-      { title: 'Complex Roots of Quadratics', loader: () => import('./extra/complex-numbers').then((m) => m.parts[5]) },
-      { title: 'Mixed Mastery & Exit Quiz', loader: () => import('./extra/complex-numbers').then((m) => m.parts[6]) },
-    ],
-  },
-  'degrees-and-radians': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Two Ways to Measure an Angle', loader: () => import('./extra/degrees-and-radians').then((m) => m.parts[0]) },
-      { title: 'Converting Between Units', loader: () => import('./extra/degrees-and-radians').then((m) => m.parts[1]) },
-      { title: 'The Special Angles', loader: () => import('./extra/degrees-and-radians').then((m) => m.parts[2]) },
-      { title: 'Coterminal Angles & Standard Position', loader: () => import('./extra/degrees-and-radians').then((m) => m.parts[3]) },
-      { title: 'Arc Length and the Meaning of a Radian', loader: () => import('./extra/degrees-and-radians').then((m) => m.parts[4]) },
-      { title: 'Points on a Circle of Radius r', loader: () => import('./extra/degrees-and-radians').then((m) => m.parts[5]) },
-      { title: 'Mixed Mastery & Exit Quiz', loader: () => import('./extra/degrees-and-radians').then((m) => m.parts[6]) },
-    ],
-  },
-  'double-half-angle-identities': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Where the Double-Angle Formulas Come From', loader: () => import('./extra/double-half-angle-identities').then((m) => m.parts[0]) },
-      { title: 'Evaluating Double Angles From a Given Ratio', loader: () => import('./extra/double-half-angle-identities').then((m) => m.parts[1]) },
-      { title: 'Reading Double Angles Backwards (Recognition)', loader: () => import('./extra/double-half-angle-identities').then((m) => m.parts[2]) },
-      { title: 'Verifying Identities with Double Angles', loader: () => import('./extra/double-half-angle-identities').then((m) => m.parts[3]) },
-      { title: 'Squared Sines and Cosines as Sinusoids', loader: () => import('./extra/double-half-angle-identities').then((m) => m.parts[4]) },
-      { title: 'Solving Equations & Real Applications', loader: () => import('./extra/double-half-angle-identities').then((m) => m.parts[5]) },
-      { title: 'Mixed Mastery & Exit Quiz', loader: () => import('./extra/double-half-angle-identities').then((m) => m.parts[6]) },
-    ],
-  },
-  'function-transformations': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Parent Functions & the Big Idea', loader: () => import('./extra/function-transformations').then((m) => m.parts[0]) },
-      { title: 'Vertical Transformations (the intuitive family)', loader: () => import('./extra/function-transformations').then((m) => m.parts[1]) },
-      { title: 'Horizontal Transformations (the backwards family)', loader: () => import('./extra/function-transformations').then((m) => m.parts[2]) },
-      { title: 'Combining Transformations & Order', loader: () => import('./extra/function-transformations').then((m) => m.parts[3]) },
-      { title: 'Mapping Points & Reading Graphs', loader: () => import('./extra/function-transformations').then((m) => m.parts[4]) },
-      { title: 'Symmetry & Modeling', loader: () => import('./extra/function-transformations').then((m) => m.parts[5]) },
-      { title: 'Mixed Mastery & Exit Quiz', loader: () => import('./extra/function-transformations').then((m) => m.parts[6]) },
-    ],
-  },
   'fundamental-theorem-algebra': {
     completionDestination: 'competitive',
     parts: [
@@ -1486,42 +1438,6 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[6]) },
     ],
   },
-  'logarithmic-functions': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Logs as the Inverse of Exponentials', loader: () => import('./extra/logarithmic-functions').then((m) => m.parts[0]) },
-      { title: 'The Graph, Domain & Asymptote', loader: () => import('./extra/logarithmic-functions').then((m) => m.parts[1]) },
-      { title: 'The Three Log Properties', loader: () => import('./extra/logarithmic-functions').then((m) => m.parts[2]) },
-      { title: 'Change of Base', loader: () => import('./extra/logarithmic-functions').then((m) => m.parts[3]) },
-      { title: 'Solving Exponential & Logarithmic Equations', loader: () => import('./extra/logarithmic-functions').then((m) => m.parts[4]) },
-      { title: 'Logarithmic Models & Semi-Log Plots', loader: () => import('./extra/logarithmic-functions').then((m) => m.parts[5]) },
-      { title: 'Mixed Mastery & Exit Quiz', loader: () => import('./extra/logarithmic-functions').then((m) => m.parts[6]) },
-    ],
-  },
-  'piecewise-functions': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Anatomy & Notation', loader: () => import('./extra/piecewise-functions').then((m) => m.parts[0]) },
-      { title: 'Evaluating Piecewise Functions', loader: () => import('./extra/piecewise-functions').then((m) => m.parts[1]) },
-      { title: 'Graphing & Open/Closed Dots', loader: () => import('./extra/piecewise-functions').then((m) => m.parts[2]) },
-      { title: 'Building Piecewise Models', loader: () => import('./extra/piecewise-functions').then((m) => m.parts[3]) },
-      { title: 'Domain & Range', loader: () => import('./extra/piecewise-functions').then((m) => m.parts[4]) },
-      { title: 'Absolute Value & Step Functions', loader: () => import('./extra/piecewise-functions').then((m) => m.parts[5]) },
-      { title: 'Modeling, Mixed Practice & Exit Quiz', loader: () => import('./extra/piecewise-functions').then((m) => m.parts[6]) },
-    ],
-  },
-  'polar-coordinates': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Locating a Point with (r, θ)', loader: () => import('./extra/polar-coordinates').then((m) => m.parts[0]) },
-      { title: 'Non-Uniqueness & Negative r', loader: () => import('./extra/polar-coordinates').then((m) => m.parts[1]) },
-      { title: 'Converting Between Polar and Rectangular', loader: () => import('./extra/polar-coordinates').then((m) => m.parts[2]) },
-      { title: 'Graphing r = f(θ) Point by Point', loader: () => import('./extra/polar-coordinates').then((m) => m.parts[3]) },
-      { title: 'The Curve Library: Roses, Cardioids & Limaçons', loader: () => import('./extra/polar-coordinates').then((m) => m.parts[4]) },
-      { title: 'Rates of Change, Symmetry & Distance from the Pole', loader: () => import('./extra/polar-coordinates').then((m) => m.parts[5]) },
-      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/polar-coordinates').then((m) => m.parts[6]) },
-    ],
-  },
   'polynomial-division-remainder-theorem': {
     completionDestination: 'competitive',
     parts: [
@@ -1530,54 +1446,6 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Finding All the Zeros from a Known Factor', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[2]) },
       { title: 'Division, Rational Functions and Slant Asymptotes', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[3]) },
       { title: 'Mixed Practice and Mastery Check', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[4]) },
-    ],
-  },
-  'rates-of-change': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Average Rate of Change as a Secant Slope', loader: () => import('./extra/rates-of-change').then((m) => m.parts[0]) },
-      { title: 'Units, Signs & Interpretation', loader: () => import('./extra/rates-of-change').then((m) => m.parts[1]) },
-      { title: 'Rate at a Point from Shrinking Intervals', loader: () => import('./extra/rates-of-change').then((m) => m.parts[2]) },
-      { title: 'Estimating the Rate at a Point from a Table', loader: () => import('./extra/rates-of-change').then((m) => m.parts[3]) },
-      { title: 'Comparing Rates at Two Points from a Graph', loader: () => import('./extra/rates-of-change').then((m) => m.parts[4]) },
-      { title: 'When the Rate Itself Is Changing', loader: () => import('./extra/rates-of-change').then((m) => m.parts[5]) },
-      { title: 'Mixed Applications & Mastery Check', loader: () => import('./extra/rates-of-change').then((m) => m.parts[6]) },
-    ],
-  },
-  'rational-functions-asymptotes': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Meet the Rational Function', loader: () => import('./extra/rational-functions-asymptotes').then((m) => m.parts[0]) },
-      { title: 'Vertical Asymptotes & Holes', loader: () => import('./extra/rational-functions-asymptotes').then((m) => m.parts[1]) },
-      { title: 'Horizontal Asymptotes (The Degree Test)', loader: () => import('./extra/rational-functions-asymptotes').then((m) => m.parts[2]) },
-      { title: 'Slant (Oblique) Asymptotes', loader: () => import('./extra/rational-functions-asymptotes').then((m) => m.parts[3]) },
-      { title: 'Intercepts & Sign Analysis', loader: () => import('./extra/rational-functions-asymptotes').then((m) => m.parts[4]) },
-      { title: 'Putting It All Together: Sketching the Graph', loader: () => import('./extra/rational-functions-asymptotes').then((m) => m.parts[5]) },
-      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/rational-functions-asymptotes').then((m) => m.parts[6]) },
-    ],
-  },
-  'sequences-arithmetic-geometric': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Sequences as Functions', loader: () => import('./extra/sequences-arithmetic-geometric').then((m) => m.parts[0]) },
-      { title: 'Arithmetic Sequences', loader: () => import('./extra/sequences-arithmetic-geometric').then((m) => m.parts[1]) },
-      { title: 'Geometric Sequences', loader: () => import('./extra/sequences-arithmetic-geometric').then((m) => m.parts[2]) },
-      { title: 'Recursive vs. Explicit Rules', loader: () => import('./extra/sequences-arithmetic-geometric').then((m) => m.parts[3]) },
-      { title: 'Any-Term Rules & Comparing Growth', loader: () => import('./extra/sequences-arithmetic-geometric').then((m) => m.parts[4]) },
-      { title: 'From Sequences to Linear & Exponential Functions', loader: () => import('./extra/sequences-arithmetic-geometric').then((m) => m.parts[5]) },
-      { title: 'Applications, Mastery & Exit Quiz', loader: () => import('./extra/sequences-arithmetic-geometric').then((m) => m.parts[6]) },
-    ],
-  },
-  'solving-rational-inequalities': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Why Rational Inequalities Are Different', loader: () => import('./extra/solving-rational-inequalities').then((m) => m.parts[0]) },
-      { title: 'Finding Every Critical Number', loader: () => import('./extra/solving-rational-inequalities').then((m) => m.parts[1]) },
-      { title: 'The Sign-Chart Method', loader: () => import('./extra/solving-rational-inequalities').then((m) => m.parts[2]) },
-      { title: 'Endpoints & Writing the Solution', loader: () => import('./extra/solving-rational-inequalities').then((m) => m.parts[3]) },
-      { title: 'Getting One Side to Zero', loader: () => import('./extra/solving-rational-inequalities').then((m) => m.parts[4]) },
-      { title: 'Multiplicity & Repeated Factors', loader: () => import('./extra/solving-rational-inequalities').then((m) => m.parts[5]) },
-      { title: 'Applications, Mixed Practice & Mastery Check', loader: () => import('./extra/solving-rational-inequalities').then((m) => m.parts[6]) },
     ],
   },
   'solving-trig-equations': {
@@ -1590,18 +1458,6 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Inverse Trig & the Calculator', loader: () => import('./extra/solving-trig-equations').then((m) => m.parts[4]) },
       { title: 'Applications: Periodic Models', loader: () => import('./extra/solving-trig-equations').then((m) => m.parts[5]) },
       { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/solving-trig-equations').then((m) => m.parts[6]) },
-    ],
-  },
-  'sum-difference-identities': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Why We Need Them', loader: () => import('./extra/sum-difference-identities').then((m) => m.parts[0]) },
-      { title: 'The Cosine Formulas', loader: () => import('./extra/sum-difference-identities').then((m) => m.parts[1]) },
-      { title: 'The Sine Formulas', loader: () => import('./extra/sum-difference-identities').then((m) => m.parts[2]) },
-      { title: 'Combining Sine and Cosine Into One Sinusoid', loader: () => import('./extra/sum-difference-identities').then((m) => m.parts[3]) },
-      { title: 'Exact Values: A Repeatable Method', loader: () => import('./extra/sum-difference-identities').then((m) => m.parts[4]) },
-      { title: 'Simplifying & Proving Identities', loader: () => import('./extra/sum-difference-identities').then((m) => m.parts[5]) },
-      { title: 'Applications, Mixed Practice & Exit Quiz', loader: () => import('./extra/sum-difference-identities').then((m) => m.parts[6]) },
     ],
   },
   'ap-stats-descriptive-statistics-intro': {
@@ -3388,6 +3244,30 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Building Piecewise Models', loader: () => import('./precalc-function-modeling-precalc').then((m) => m.parts[4]) },
       { title: 'Assumptions, Limitations and Domain Restrictions', loader: () => import('./precalc-function-modeling-precalc').then((m) => m.parts[5]) },
       { title: 'FRQ Workshop and Mastery Check', loader: () => import('./precalc-function-modeling-precalc').then((m) => m.parts[6]) },
+    ],
+  },
+  'precalc-frq-strategies': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Free-Response Section and How Points Are Earned', loader: () => import('./precalc-frq-strategies').then((m) => m.parts[0]) },
+      { title: 'Question 1: Function Concepts', loader: () => import('./precalc-frq-strategies').then((m) => m.parts[1]) },
+      { title: 'Question 2: Modeling a Non-Periodic Context', loader: () => import('./precalc-frq-strategies').then((m) => m.parts[2]) },
+      { title: 'Question 3: Modeling a Periodic Context', loader: () => import('./precalc-frq-strategies').then((m) => m.parts[3]) },
+      { title: 'Question 4: Symbolic Manipulations', loader: () => import('./precalc-frq-strategies').then((m) => m.parts[4]) },
+      { title: 'Common Point Losses and the 35 + 35 Minute Budget', loader: () => import('./precalc-frq-strategies').then((m) => m.parts[5]) },
+      { title: 'Mixed Mini-FRQ Set and Mastery Check', loader: () => import('./precalc-frq-strategies').then((m) => m.parts[6]) },
+    ],
+  },
+  'precalc-exam-review': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Exam Format, Pacing and the Calculator Split', loader: () => import('./precalc-exam-review').then((m) => m.parts[0]) },
+      { title: 'Unit 1: Rates of Change and Polynomial Functions', loader: () => import('./precalc-exam-review').then((m) => m.parts[1]) },
+      { title: 'Unit 1: Rational Functions, Transformations and Models', loader: () => import('./precalc-exam-review').then((m) => m.parts[2]) },
+      { title: 'Unit 2: Sequences, Exponential and Logarithmic Functions', loader: () => import('./precalc-exam-review').then((m) => m.parts[3]) },
+      { title: 'Unit 3: Trigonometric Functions and Sinusoidal Models', loader: () => import('./precalc-exam-review').then((m) => m.parts[4]) },
+      { title: 'Unit 3: Inverse Trigonometry, Equations, Identities and Polar Functions', loader: () => import('./precalc-exam-review').then((m) => m.parts[5]) },
+      { title: 'Final Mixed Set: Part A and Part B Practice', loader: () => import('./precalc-exam-review').then((m) => m.parts[6]) },
     ],
   },
 }

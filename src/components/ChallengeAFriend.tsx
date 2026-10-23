@@ -39,7 +39,7 @@ export function ChallengeAFriend() {
     { id: 'act-math', label: 'ACT Math' },
     { id: 'algebra-1', label: 'Algebra 1' },
     { id: 'geometry', label: 'Geometry' },
-    { id: 'pre-calculus', label: 'Pre-Calculus' },
+    { id: 'pre-calculus', label: 'AP Precalculus' },
   ]
 
   const generateLink = () => {

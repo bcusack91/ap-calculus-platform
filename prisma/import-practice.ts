@@ -33,6 +33,15 @@ import { config as psat } from '../src/data/psat-practice/config'
 
 interface Source { courseSlug: string; key: string; label: string; load: () => Promise<unknown> }
 
+/**
+ * Courses whose practice pages were retired (their routes 308 to another
+ * course, src/lib/retired-route-redirects.ts). They have no source any more,
+ * but they stay "managed" so the stale-row pass ARCHIVES their rows instead
+ * of listing them as unmanaged.
+ *   precalculus — the non-AP Precalculus track (Oct 2026), row key "exam".
+ */
+const RETIRED_COURSES = ['precalculus']
+
 /** Every row this script writes. courseSlug = the practice dir prefix (matches the read path). */
 function sources(): Source[] {
   const ap = Object.keys(AP_PRACTICE_EXAMS).flatMap((examKey) =>
@@ -51,7 +60,7 @@ async function main() {
   const type = CONTENT_TYPES.practiceExam
   const list = sources()
   const imported = new Set(list.map((s) => `${s.courseSlug}/${s.key}`))
-  const managedCourses = new Set(list.map((s) => s.courseSlug))
+  const managedCourses = new Set([...list.map((s) => s.courseSlug), ...RETIRED_COURSES])
   const existing = await prisma.contentItem.findMany({
     where: { type },
     select: { id: true, courseSlug: true, key: true, status: true, updatedBy: true, updatedAt: true },

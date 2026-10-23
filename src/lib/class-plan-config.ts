@@ -59,7 +59,6 @@ export const CLASS_PLAN_COURSES: ClassPlanCourse[] = [
   { key: 'algebra1', label: 'Algebra 1', categoryPrefix: 'algebra1-diagnostic', courseSlug: 'algebra-1', },
   { key: 'geometry', label: 'Geometry', categoryPrefix: 'geometry-diagnostic', courseSlug: 'geometry', },
   { key: 'algebra2', label: 'Algebra 2', categoryPrefix: 'algebra2-diagnostic', courseSlug: 'algebra-2', },
-  { key: 'precalc', label: 'Precalculus', categoryPrefix: 'precalc-diagnostic' },
   { key: 'grade8-math', label: 'Grade 8 Math', categoryPrefix: 'grade8-math-diagnostic', courseSlug: 'grade-8-math', },
   { key: 'ochem', label: 'Organic Chemistry', categoryPrefix: 'ochem-diagnostic' },
 ]

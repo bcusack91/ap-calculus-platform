@@ -40,7 +40,9 @@ describe('course lookups cover the catalogue', () => {
 
   it('covers a broad set of courses with real units', () => {
     const courses = coursesWithUnitTests()
-    expect(courses.length).toBeGreaterThanOrEqual(35)
+    // 34 since the non-AP Precalculus unit tests were retired (Oct 2026).
+    expect(courses.length).toBeGreaterThanOrEqual(34)
+    expect(courses).not.toContain('precalculus')
     for (const slug of courses) {
       const units = unitsForCourse(slug)
       expect(units.length).toBeGreaterThan(0)

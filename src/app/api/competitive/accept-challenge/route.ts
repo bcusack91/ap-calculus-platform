@@ -19,7 +19,9 @@ const VALID_CATEGORIES = new Set([
 const SUBJECT_TO_CATEGORY: Record<string, string> = {
   'algebra-1': 'algebra',
   'ap-physics-1': 'ap-physics1',
-  'pre-calculus': 'precalc',
+  // The non-AP 'precalc' category is retired (Oct 2026); old links unlock AP Precalculus.
+  'pre-calculus': 'ap-precalculus',
+  'precalc': 'ap-precalculus',
 }
 
 /**

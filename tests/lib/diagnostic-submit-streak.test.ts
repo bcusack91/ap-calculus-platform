@@ -59,8 +59,10 @@ beforeEach(() => {
 })
 
 describe('every diagnostic submit route counts as a study day', () => {
-  it('covers all 33 diagnostic submit routes (AP, MCAT, SAT, ACT and the rest)', () => {
-    expect(SUBMIT_ROUTES).toHaveLength(33)
+  it('covers all 32 diagnostic submit routes (AP, MCAT, SAT, ACT and the rest)', () => {
+    // 32 since the non-AP /precalc-diagnostic was retired (Oct 2026; 308 to /ap-precalculus-diagnostic).
+    expect(SUBMIT_ROUTES).toHaveLength(32)
+    expect(SUBMIT_ROUTES).not.toContain('precalc-diagnostic')
     for (const dir of ['ap-chem-diagnostic', 'ap-bio-diagnostic', 'ap-physics1-diagnostic', 'calcab-diagnostic', 'mcat-diagnostic', 'sat-diagnostic', 'act-diagnostic']) {
       expect(SUBMIT_ROUTES).toContain(dir)
     }

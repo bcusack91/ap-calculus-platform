@@ -29,7 +29,6 @@ diag_to_course = {
     "geometry-diagnostic": "geometry",
     "grade8-math-diagnostic": "grade-8-math",
     "prealgebra-diagnostic": "prealgebra",
-    "precalculus-diagnostic": "ap-precalculus",
     "ochem-diagnostic": "ochem",
 }
 

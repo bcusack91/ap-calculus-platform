@@ -1547,58 +1547,6 @@
     ]
   },
   {
-    "slug": "complex-numbers",
-    "importPath": "./extra/complex-numbers",
-    "partTitles": [
-      "The Imaginary Unit & Square Roots of Negatives",
-      "Adding, Subtracting & Multiplying",
-      "Conjugates & Conjugate Zeros",
-      "The Complex Plane & Modulus",
-      "Polar (Trigonometric) Form",
-      "Complex Roots of Quadratics",
-      "Mixed Mastery & Exit Quiz"
-    ]
-  },
-  {
-    "slug": "degrees-and-radians",
-    "importPath": "./extra/degrees-and-radians",
-    "partTitles": [
-      "Two Ways to Measure an Angle",
-      "Converting Between Units",
-      "The Special Angles",
-      "Coterminal Angles & Standard Position",
-      "Arc Length and the Meaning of a Radian",
-      "Points on a Circle of Radius r",
-      "Mixed Mastery & Exit Quiz"
-    ]
-  },
-  {
-    "slug": "double-half-angle-identities",
-    "importPath": "./extra/double-half-angle-identities",
-    "partTitles": [
-      "Where the Double-Angle Formulas Come From",
-      "Evaluating Double Angles From a Given Ratio",
-      "Reading Double Angles Backwards (Recognition)",
-      "Verifying Identities with Double Angles",
-      "Squared Sines and Cosines as Sinusoids",
-      "Solving Equations & Real Applications",
-      "Mixed Mastery & Exit Quiz"
-    ]
-  },
-  {
-    "slug": "function-transformations",
-    "importPath": "./extra/function-transformations",
-    "partTitles": [
-      "Parent Functions & the Big Idea",
-      "Vertical Transformations (the intuitive family)",
-      "Horizontal Transformations (the backwards family)",
-      "Combining Transformations & Order",
-      "Mapping Points & Reading Graphs",
-      "Symmetry & Modeling",
-      "Mixed Mastery & Exit Quiz"
-    ]
-  },
-  {
     "slug": "fundamental-theorem-algebra",
     "importPath": "./extra/fundamental-theorem-algebra",
     "partTitles": [
@@ -1608,45 +1556,6 @@
       "Dividing Out a Known Factor",
       "The Fundamental Theorem of Algebra, Multiplicity & Non-Real Zeros",
       "Conjugate Pairs & Building Polynomials from Zeros",
-      "Mixed Practice & Mastery Check"
-    ]
-  },
-  {
-    "slug": "logarithmic-functions",
-    "importPath": "./extra/logarithmic-functions",
-    "partTitles": [
-      "Logs as the Inverse of Exponentials",
-      "The Graph, Domain & Asymptote",
-      "The Three Log Properties",
-      "Change of Base",
-      "Solving Exponential & Logarithmic Equations",
-      "Logarithmic Models & Semi-Log Plots",
-      "Mixed Mastery & Exit Quiz"
-    ]
-  },
-  {
-    "slug": "piecewise-functions",
-    "importPath": "./extra/piecewise-functions",
-    "partTitles": [
-      "Anatomy & Notation",
-      "Evaluating Piecewise Functions",
-      "Graphing & Open/Closed Dots",
-      "Building Piecewise Models",
-      "Domain & Range",
-      "Absolute Value & Step Functions",
-      "Modeling, Mixed Practice & Exit Quiz"
-    ]
-  },
-  {
-    "slug": "polar-coordinates",
-    "importPath": "./extra/polar-coordinates",
-    "partTitles": [
-      "Locating a Point with (r, θ)",
-      "Non-Uniqueness & Negative r",
-      "Converting Between Polar and Rectangular",
-      "Graphing r = f(θ) Point by Point",
-      "The Curve Library: Roses, Cardioids & Limaçons",
-      "Rates of Change, Symmetry & Distance from the Pole",
       "Mixed Practice & Mastery Check"
     ]
   },
@@ -1662,58 +1571,6 @@
     ]
   },
   {
-    "slug": "rates-of-change",
-    "importPath": "./extra/rates-of-change",
-    "partTitles": [
-      "Average Rate of Change as a Secant Slope",
-      "Units, Signs & Interpretation",
-      "Rate at a Point from Shrinking Intervals",
-      "Estimating the Rate at a Point from a Table",
-      "Comparing Rates at Two Points from a Graph",
-      "When the Rate Itself Is Changing",
-      "Mixed Applications & Mastery Check"
-    ]
-  },
-  {
-    "slug": "rational-functions-asymptotes",
-    "importPath": "./extra/rational-functions-asymptotes",
-    "partTitles": [
-      "Meet the Rational Function",
-      "Vertical Asymptotes & Holes",
-      "Horizontal Asymptotes (The Degree Test)",
-      "Slant (Oblique) Asymptotes",
-      "Intercepts & Sign Analysis",
-      "Putting It All Together: Sketching the Graph",
-      "Mixed Practice & Mastery Check"
-    ]
-  },
-  {
-    "slug": "sequences-arithmetic-geometric",
-    "importPath": "./extra/sequences-arithmetic-geometric",
-    "partTitles": [
-      "Sequences as Functions",
-      "Arithmetic Sequences",
-      "Geometric Sequences",
-      "Recursive vs. Explicit Rules",
-      "Any-Term Rules & Comparing Growth",
-      "From Sequences to Linear & Exponential Functions",
-      "Applications, Mastery & Exit Quiz"
-    ]
-  },
-  {
-    "slug": "solving-rational-inequalities",
-    "importPath": "./extra/solving-rational-inequalities",
-    "partTitles": [
-      "Why Rational Inequalities Are Different",
-      "Finding Every Critical Number",
-      "The Sign-Chart Method",
-      "Endpoints & Writing the Solution",
-      "Getting One Side to Zero",
-      "Multiplicity & Repeated Factors",
-      "Applications, Mixed Practice & Mastery Check"
-    ]
-  },
-  {
     "slug": "solving-trig-equations",
     "importPath": "./extra/solving-trig-equations",
     "partTitles": [
@@ -1724,19 +1581,6 @@
       "Inverse Trig & the Calculator",
       "Applications: Periodic Models",
       "Mixed Practice & Mastery Check"
-    ]
-  },
-  {
-    "slug": "sum-difference-identities",
-    "importPath": "./extra/sum-difference-identities",
-    "partTitles": [
-      "Why We Need Them",
-      "The Cosine Formulas",
-      "The Sine Formulas",
-      "Combining Sine and Cosine Into One Sinusoid",
-      "Exact Values: A Repeatable Method",
-      "Simplifying & Proving Identities",
-      "Applications, Mixed Practice & Exit Quiz"
     ]
   },
   {
@@ -3705,6 +3549,32 @@
       "Building Piecewise Models",
       "Assumptions, Limitations and Domain Restrictions",
       "FRQ Workshop and Mastery Check"
+    ]
+  },
+  {
+    "slug": "precalc-frq-strategies",
+    "importPath": "./precalc-frq-strategies",
+    "partTitles": [
+      "The Free-Response Section and How Points Are Earned",
+      "Question 1: Function Concepts",
+      "Question 2: Modeling a Non-Periodic Context",
+      "Question 3: Modeling a Periodic Context",
+      "Question 4: Symbolic Manipulations",
+      "Common Point Losses and the 35 + 35 Minute Budget",
+      "Mixed Mini-FRQ Set and Mastery Check"
+    ]
+  },
+  {
+    "slug": "precalc-exam-review",
+    "importPath": "./precalc-exam-review",
+    "partTitles": [
+      "Exam Format, Pacing and the Calculator Split",
+      "Unit 1: Rates of Change and Polynomial Functions",
+      "Unit 1: Rational Functions, Transformations and Models",
+      "Unit 2: Sequences, Exponential and Logarithmic Functions",
+      "Unit 3: Trigonometric Functions and Sinusoidal Models",
+      "Unit 3: Inverse Trigonometry, Equations, Identities and Polar Functions",
+      "Final Mixed Set: Part A and Part B Practice"
     ]
   }
 ]

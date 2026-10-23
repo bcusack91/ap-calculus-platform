@@ -80,10 +80,11 @@ import { externalScoreConfig, isExternalScoreCourse, validateExternalScore } fro
 
 const day = (iso: string) => new Date(`${iso}T12:00:00Z`)
 const ymd = (d: Date) => d.toISOString().slice(0, 10)
-const FLAGSHIPS = ['ap-chem', 'ap-bio', 'ap-physics1', 'calcab'] as const
+// The AP track courses (src/lib/ap-track.ts) by class-plan key: the four flagships and AP Precalculus.
+const FLAGSHIPS = ['ap-chem', 'ap-bio', 'ap-physics1', 'calcab', 'ap-precalculus'] as const
 
 describe('AP readiness config', () => {
-  it('covers every AP class-plan course, the four flagships included', () => {
+  it('covers every AP class-plan course, the track courses included', () => {
     for (const k of AP_UNIT_TEST_COURSES) {
       expect(isFullLengthCourse(k)).toBe(true)
       expect(isApFullLengthCourse(k)).toBe(true)

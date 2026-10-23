@@ -32,7 +32,6 @@ const COURSE_GROUPS = [
       { slug: 'algebra-1', name: 'Algebra 1', icon: '📊', description: 'Linear equations, functions' },
       { slug: 'geometry', name: 'Geometry', icon: '📐', description: 'Shapes, angles, proofs' },
       { slug: 'algebra-2', name: 'Algebra 2', icon: '🔣', description: 'Advanced functions, logs' },
-      { slug: 'precalculus', name: 'Precalculus', icon: '🧭', description: 'Functions, trig, vectors, sequences' },
       { slug: 'ap-precalculus', name: 'AP Precalculus', icon: '📈', description: 'Functions, exp/log, trig, polar' },
     ],
   },

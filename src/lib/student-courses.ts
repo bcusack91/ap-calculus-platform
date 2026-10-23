@@ -10,11 +10,12 @@ import { CLASS_PLAN_COURSES, diagnosticRouteForKey } from '@/lib/class-plan-conf
 
 /**
  * Catalog slugs whose diagnostic course is not found by `courseSlug` in
- * CLASS_PLAN_COURSES: DB course slugs with no mapping there (Precalculus,
- * both Organic Chemistry courses) and the hub/SEO slugs used by route names.
+ * CLASS_PLAN_COURSES: DB course slugs with no mapping there (both Organic
+ * Chemistry courses), the hub/SEO slugs used by route names, and the retired
+ * non-AP `precalculus` track (a student who once chose it studies AP Precalculus).
  */
 const PLAN_KEY_ALIASES: Record<string, string> = {
-  precalculus: 'precalc',
+  precalculus: 'ap-precalculus',
   'organic-chemistry-1': 'ochem',
   'organic-chemistry-2': 'ochem',
   sat: 'sat',

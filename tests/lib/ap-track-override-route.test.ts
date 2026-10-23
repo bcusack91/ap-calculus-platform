@@ -103,11 +103,12 @@ describe('PATCH …/students/[studentId]/ap-track', () => {
     expect(mockDeleteMany).not.toHaveBeenCalled()
   })
 
-  it('works for every flagship course', async () => {
+  it('works for every track course (the four flagships and AP Precalculus)', async () => {
     mockOverrideFindUnique.mockResolvedValue({ track: 'five' })
-    for (const courseSlug of ['ap-chemistry', 'ap-biology', 'ap-physics-1', 'ap-calculus-ab']) {
+    for (const courseSlug of ['ap-chemistry', 'ap-biology', 'ap-physics-1', 'ap-calculus-ab', 'ap-precalculus']) {
       expect((await call({ courseSlug, track: 'five' })).status).toBe(200)
     }
-    expect(mockUpsert).toHaveBeenCalledTimes(4)
+    expect(mockUpsert).toHaveBeenCalledTimes(5)
+    expect(mockUpsert.mock.calls[4][0].where).toEqual({ userId_courseSlug: { userId: 's1', courseSlug: 'ap-precalculus' } })
   })
 })

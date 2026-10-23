@@ -1,11 +1,11 @@
 /**
- * AP Precalculus competitive mode draws from the precalc bank it shares with
- * the non-AP Precalculus course. The AP view drops what the AP exam does not
- * assess (Unit 4, plus three limaçon/equation-conversion polar items), and
- * every AP Precalculus topic must route to that view instead of falling
- * through to cumulative questions from other subjects (Oct 2026: picking
- * "Complex Numbers" served an integral and an optics item; the unmapped
- * `negative-and-coterminal-angles` row served BC polar and limits).
+ * AP Precalculus competitive mode draws from precalc-bank.ts, which holds
+ * only what the AP exam assesses (the non-AP Precalculus track that shared
+ * it, with its Unit 4 and three limaçon/equation-conversion polar items, was
+ * retired 2026-10-23). Every AP Precalculus topic must route to that bank
+ * instead of falling through to cumulative questions from other subjects
+ * (Oct 2026: picking "Complex Numbers" served an integral and an optics item;
+ * the unmapped `negative-and-coterminal-angles` row served BC polar and limits).
  *
  * 2026-10-22 finalize (ap-phase1-pipeline/precalc-final/PLAN.md): the course
  * is 19 live Topic rows in the three CED units plus 27 retired rows that 308
@@ -17,14 +17,7 @@
  * the same fallback hit 11 other AP courses.
  */
 import { describe, it, expect, vi } from 'vitest'
-import {
-  precalcQuestionBank,
-  apPrecalcQuestionBank,
-  getApPrecalcQuestions,
-  getPreCalcQuestions,
-  AP_PRECALC_EXCLUDED_IDS,
-  AP_PRECALC_EXCLUDED_TOPIC_SLUGS,
-} from '@/data/competitive-questions/precalc-bank'
+import { apPrecalcQuestionBank, getApPrecalcQuestions } from '@/data/competitive-questions/precalc-bank'
 import {
   generateMatchQuestions,
   AP_LESSON_BANK_TOPICS,
@@ -36,7 +29,6 @@ import { getCourseTopics } from '@/lib/teacher-lobby-courses'
 import { dailySetForCourse } from '@/lib/daily-challenge'
 import { COURSE_PAGE_CONFIGS } from '@/components/competitive/course-page-configs'
 import { PRECALC_TOPIC_TITLES } from '@/lib/course-includes'
-import { PRECALCULUS_UNIT_TESTS_CONFIG, PRECALCULUS_UNITS } from '@/data/unit-tests/precalculus'
 import { courseKeyFromTables } from '@/lib/bot-pacing'
 import slugsByCourse from '../fixtures/ap-lesson-topic-slugs.json'
 
@@ -119,12 +111,9 @@ const EXAM_PREP = ['precalc-frq-strategies', 'precalc-exam-review']
 // Served as the click-the-position unit-circle game, not bank MCQs.
 const UNIT_CIRCLE_GAME = new Set(['the-unit-circle'])
 
-const isExcluded = (q: { id: number; topicSlug: string }) =>
-  AP_PRECALC_EXCLUDED_IDS.has(q.id) || AP_PRECALC_EXCLUDED_TOPIC_SLUGS.has(q.topicSlug)
+/** Unit 4 bank topics the retired non-AP track carried; no item may be tagged with them. */
+const UNIT4_BANK_TOPICS = ['law-of-sines-and-cosines', 'parametric-equations-motion', 'vectors-in-two-dimensions', 'matrices-and-determinants', 'systems-of-equations-matrices']
 const apStems = new Set(apPrecalcQuestionBank.map((q) => q.question))
-const excludedStems = new Set(
-  precalcQuestionBank.filter(isExcluded).map((q) => q.question).filter((s) => !apStems.has(s)),
-)
 const stemsOf = (qs: Array<{ question?: unknown }>) => qs.map((q) => String(q.question))
 /** Bank topic(s) a served stem can belong to (stems are unique, but keep it a set). */
 const stemTopics = new Map<string, Set<string>>()
@@ -133,8 +122,8 @@ const topicsOfDraw = (qs: Array<{ question?: unknown }>) =>
   stemsOf(qs).map((s) => stemTopics.get(s) ?? new Set<string>(['<foreign>']))
 
 describe('the canonical layout and the fixture agree', () => {
-  it('fixture = the 19 live PLAN.md slugs', () => {
-    expect([...fixture['ap-precalculus']].sort()).toEqual([...LIVE].sort())
+  it('fixture = the 19 live PLAN.md slugs + the 2 exam-prep lessons', () => {
+    expect([...fixture['ap-precalculus']].sort()).toEqual([...LIVE, ...EXAM_PREP].sort())
     expect(LIVE).toHaveLength(19)
     expect(Object.keys(RETIRED_TO_TARGET)).toHaveLength(27)
     for (const target of Object.values(RETIRED_TO_TARGET)) expect(LIVE, target).toContain(target)
@@ -155,10 +144,11 @@ describe('the canonical layout and the fixture agree', () => {
   })
 })
 
-describe('AP Precalculus draws exclude off-exam items', () => {
-  it('excludes exactly the 53 listed items and keeps every on-exam topic at >= 10 items with >= 3 hard', () => {
-    expect(precalcQuestionBank.filter(isExcluded)).toHaveLength(53)
-    expect(apPrecalcQuestionBank.some(isExcluded)).toBe(false)
+describe('the precalc bank is the AP on-exam pool', () => {
+  it('is on-exam only (460 items, 24 topics, no Unit 4) and keeps every topic at >= 10 items with >= 3 hard', () => {
+    for (const q of apPrecalcQuestionBank) expect(UNIT4_BANK_TOPICS, `#${q.id}`).not.toContain(q.topicSlug)
+    // The three off-exam polar items (limaçon a/b classification, equation conversion) are gone.
+    for (const id of [69, 207, 208]) expect(apPrecalcQuestionBank.find((q) => q.id === id), `#${id}`).toBeUndefined()
     expect(apPrecalcQuestionBank).toHaveLength(460)
     const counts = new Map<string, number>()
     const hard = new Map<string, number>()
@@ -179,7 +169,7 @@ describe('AP Precalculus draws exclude off-exam items', () => {
   })
 
   it('every item has four distinct options and an in-range key', () => {
-    for (const q of precalcQuestionBank) {
+    for (const q of apPrecalcQuestionBank) {
       expect(q.options, `#${q.id}`).toHaveLength(4)
       expect(new Set(q.options).size, `#${q.id}`).toBe(4)
       expect(q.correctAnswer, `#${q.id}`).toBeGreaterThanOrEqual(0)
@@ -190,7 +180,7 @@ describe('AP Precalculus draws exclude off-exam items', () => {
   })
 
   it('the 2026-10 audit items are fixed', () => {
-    const byId = new Map(precalcQuestionBank.map((q) => [q.id, q]))
+    const byId = new Map(apPrecalcQuestionBank.map((q) => [q.id, q]))
     // Retags
     expect(byId.get(215)!.topicSlug).toBe('inverse-trig-functions')
     expect(byId.get(125)!.topicSlug).toBe('logarithmic-functions-properties')
@@ -207,11 +197,14 @@ describe('AP Precalculus draws exclude off-exam items', () => {
     for (const [later, earlier] of pairs) expect(byId.get(later)!.question, `#${later} still duplicates #${earlier}`).not.toBe(byId.get(earlier)!.question)
   })
 
-  it('getApPrecalcQuestions never returns an excluded item, whatever topic is asked for', () => {
-    expect(getApPrecalcQuestions(1_000_000).some(isExcluded)).toBe(false)
-    for (const slug of [...AP_PRECALC_EXCLUDED_TOPIC_SLUGS, 'polar-coordinates-graphs', 'no-such-topic']) {
-      expect(getApPrecalcQuestions(1_000_000, slug).some(isExcluded), slug).toBe(false)
+  it('getApPrecalcQuestions serves the whole pool for a Unit 4 or unknown topic, never a Unit 4 item', () => {
+    expect(getApPrecalcQuestions(1_000_000)).toHaveLength(460)
+    for (const slug of [...UNIT4_BANK_TOPICS, 'no-such-topic']) {
+      const qs = getApPrecalcQuestions(1_000_000, slug)
+      expect(qs, slug).toHaveLength(460)
+      expect(qs.some((q) => q.topicSlug === slug), slug).toBe(false)
     }
+    expect(getApPrecalcQuestions(1_000_000, 'polar-coordinates-graphs').every((q) => q.topicSlug === 'polar-coordinates-graphs')).toBe(true)
   })
 
   it('the AP course page fallback draws only on-exam items', async () => {
@@ -221,7 +214,6 @@ describe('AP Precalculus draws exclude off-exam items', () => {
       const qs = await generateMatchQuestions(1000, fallback, [], tier)
       expect(qs.length).toBeGreaterThan(0)
       for (const s of stemsOf(qs)) {
-        expect(excludedStems.has(s), s).toBe(false)
         expect(apStems.has(s), s).toBe(true)
       }
     }
@@ -236,12 +228,13 @@ describe('AP Precalculus draws exclude off-exam items', () => {
 
   it('teacher lobbies offer the live layout rows with their lesson titles', async () => {
     const topics = await getCourseTopics('ap-precalculus')
-    const expected = LIVE.filter((s) => !UNIT_CIRCLE_GAME.has(s))
+    // The exam-prep lessons route to the whole on-exam bank, so the lobby offers them too.
+    const expected = [...LIVE.filter((s) => !UNIT_CIRCLE_GAME.has(s)), ...EXAM_PREP]
     expect(topics.map((t) => t.slug).sort()).toEqual([...expected].sort())
     for (const t of topics) {
       expect(t.title, t.slug).toBe(PRECALC_TOPIC_TITLES[t.slug])
       expect(t.count, t.slug).toBeGreaterThanOrEqual(10)
-      expect(AP_PRECALC_EXCLUDED_TOPIC_SLUGS.has(t.slug), t.slug).toBe(false)
+      expect(UNIT4_BANK_TOPICS, t.slug).not.toContain(t.slug)
     }
     expect(topics.find((t) => t.slug === 'polar-coordinates-precalc')?.count).toBe(20)
     expect(topics.find((t) => t.slug === 'function-modeling-precalc')?.count).toBe(30)
@@ -299,90 +292,10 @@ describe('every retired AP Precalculus topic routes exactly like its 308 target'
   })
 })
 
-describe('the non-AP precalc draw still covers the whole bank', () => {
-  it('keeps all 510 items across 29 topics, including Unit 4', () => {
-    expect(precalcQuestionBank).toHaveLength(510)
-    expect(new Set(precalcQuestionBank.map((q) => q.topicSlug)).size).toBe(29)
-    expect(precalcQuestionBank.some((q) => q.id > 513)).toBe(false)
-    const all = getPreCalcQuestions(1_000_000)
-    expect(all).toHaveLength(510)
-    expect(all.filter(isExcluded)).toHaveLength(53)
-    for (const slug of AP_PRECALC_EXCLUDED_TOPIC_SLUGS) {
-      expect(getPreCalcQuestions(100, slug).every((q) => q.topicSlug === slug), slug).toBe(true)
-    }
-  })
-
-  it("the 'precalc' match slug still draws from the whole bank", async () => {
-    const qs = await generateMatchQuestions(1000, 'precalc', [])
-    expect(qs).toHaveLength(510)
-    const stems = new Set(precalcQuestionBank.map((q) => q.question))
-    for (const s of stemsOf(qs)) expect(stems.has(s), s).toBe(true)
-    expect(stemsOf(qs).some((s) => excludedStems.has(s))).toBe(true)
-  })
-
-  it('the seeded non-AP unit tests still resolve every unit to a pool', () => {
-    expect(PRECALCULUS_UNIT_TESTS_CONFIG.pool.length).toBeGreaterThan(0)
-    for (const unit of PRECALCULUS_UNITS) {
-      const n = PRECALCULUS_UNIT_TESTS_CONFIG.pool.filter((q) => q.domain === unit.id).length
-      expect(n, unit.id).toBeGreaterThanOrEqual(20)
-    }
-  })
-})
-
-// ---------------------------------------------------------------------------
-// Cross-subject fallback guard for every AP course.
-const COURSE_BANKS: Record<string, () => Promise<Array<{ question: string }>>> = {
-  'ap-precalculus': async () => (await import('@/data/competitive-questions/precalc-bank')).getApPrecalcQuestions(1_000_000),
-  'ap-calculus-ab': async () => (await import('@/data/competitive-questions/ap-calculus-bank')).getApCalculusQuestions(1_000_000),
-  'ap-calculus-bc': async () => (await import('@/data/competitive-questions/ap-calculus-bc-bank')).getApCalculusBCQuestions(1_000_000),
-  'ap-physics-1': async () => (await import('@/data/competitive-questions/ap-physics1-bank')).getApPhysics1Questions(1_000_000),
-  'ap-physics-2': async () => (await import('@/data/competitive-questions/ap-physics2-bank')).getApPhysics2Questions(1_000_000),
-  'ap-physics-c-mechanics': async () => (await import('@/data/competitive-questions/ap-physics-c-mech-bank')).getApPhysicsCMechQuestions(1_000_000),
-  'ap-physics-c-em': async () => (await import('@/data/competitive-questions/ap-physics-c-em-bank')).getApPhysicsCEMQuestions(1_000_000),
-  'ap-chemistry': async () => (await import('@/data/competitive-questions/ap-chemistry-bank')).getApChemistryQuestions(1_000_000),
-  'ap-biology': async () => (await import('@/data/competitive-questions/ap-biology-bank')).getApBiologyQuestions(1_000_000),
-  'ap-psychology': async () => (await import('@/data/competitive-questions/ap-psychology-bank')).getApPsychologyQuestions(1_000_000),
-  'ap-statistics': async () => (await import('@/data/competitive-questions/ap-statistics-bank')).getApStatisticsQuestions(1_000_000),
-  'ap-human-geography': async () => (await import('@/data/competitive-questions/ap-human-geo-bank')).getApHumanGeoQuestions(1_000_000),
-  'ap-us-government': async () => (await import('@/data/competitive-questions/ap-us-gov-bank')).getApUSGovQuestions(1_000_000),
-  'ap-world-history': async () => (await import('@/data/competitive-questions/ap-world-history-bank')).getApWorldHistoryQuestions(1_000_000),
-  'ap-us-history': async () => (await import('@/data/competitive-questions/ap-us-history-bank')).getApUSHistoryQuestions(1_000_000),
-  'ap-macroeconomics': async () => (await import('@/data/competitive-questions/ap-macro-bank')).getApMacroQuestions(1_000_000),
-  'ap-microeconomics': async () => (await import('@/data/competitive-questions/ap-micro-bank')).getApMicroQuestions(1_000_000),
-  'ap-african-american-studies': async () => (await import('@/data/competitive-questions/ap-african-american-studies-bank')).getApAASQuestions(1_000_000),
-  'ap-english-literature': async () => (await import('@/data/competitive-questions/ap-english-lit-bank')).getApEngLitQuestions(1_000_000),
-  'ap-english-language': async () => (await import('@/data/competitive-questions/ap-english-lang-bank')).getApEngLangQuestions(1_000_000),
-  'ap-environmental-science': async () => (await import('@/data/competitive-questions/ap-enviro-bank')).getApAPESQuestions(1_000_000),
-  'ap-computer-science-a': async () => (await import('@/data/competitive-questions/ap-csa-bank')).getApCSAQuestions(1_000_000),
-  'ap-computer-science-principles': async () => (await import('@/data/competitive-questions/ap-csp-bank')).getApCSPQuestions(1_000_000),
-}
-
-describe('every AP fixture topic draws from its own course bank', () => {
-  it('covers every fixture course', () => {
-    expect(Object.keys(fixture).sort()).toEqual(Object.keys(COURSE_BANKS).sort())
-  })
-
-  it('every mapped bank topic exists in its bank', async () => {
-    const byCourse: Record<string, string> = {
-      'ap-precalculus': 'ap-precalculus', 'ap-calculus-ab': 'ap-calculus-ab', 'ap-chemistry': 'ap-chemistry',
-      'ap-biology': 'ap-biology', 'ap-human-geo': 'ap-human-geography', 'ap-us-gov': 'ap-us-government',
-      'ap-world-history': 'ap-world-history', 'ap-african-american-studies': 'ap-african-american-studies',
-      'ap-english-lit': 'ap-english-literature', 'ap-english-lang': 'ap-english-language',
-      'ap-enviro': 'ap-environmental-science', 'ap-csa': 'ap-computer-science-a', 'ap-csp': 'ap-computer-science-principles',
-    }
-    for (const [lesson, { course, topics }] of Object.entries(AP_LESSON_BANK_TOPICS)) {
-      const bankTopics = new Set(((await COURSE_BANKS[byCourse[course]]()) as Array<{ topicSlug?: string }>).map((q) => q.topicSlug))
-      for (const t of topics) expect(bankTopics.has(t), `${lesson} -> ${t}`).toBe(true)
-    }
-  })
-
-  const entries = Object.entries(fixture).flatMap(([course, slugs]) =>
-    slugs.filter((s) => !UNIT_CIRCLE_GAME.has(s)).map((slug) => [course, slug] as const),
-  )
-  it.each(entries)('%s / %s', async (course, slug) => {
-    const own = new Set((await COURSE_BANKS[course]()).map((q) => q.question))
-    const qs = await generateMatchQuestions(10, slug, [])
-    expect(qs.length).toBeGreaterThan(0)
-    for (const s of stemsOf(qs)) expect(own.has(s), `${slug} served a foreign item: ${s}`).toBe(true)
+describe('the retired non-AP precalc surface maps to AP Precalculus', () => {
+  it("old 'precalc' / 'precalculus' keys pace and study as the AP course", () => {
+    expect(courseKeyFromTables('precalc')).toBe('ap-precalculus')
+    expect(courseKeyFromTables('precalculus')).toBe('ap-precalculus')
+    expect(dailySetForCourse('precalculus')).toBe('ap-precalculus')
   })
 })

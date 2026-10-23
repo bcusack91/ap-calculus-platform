@@ -1,13 +1,18 @@
-// Pre-Calculus question bank for competitive mode.
+// AP Precalculus question bank for competitive mode (the three assessed CED
+// units; Unit 4 is not on the exam and is not in the program).
 //
-// Shared by the non-AP Precalculus course (all 29 topics, incl. Unit 4) and
-// AP Precalculus (the on-exam view below). ids 1-270 are the original bank;
-// ids 274-513 are the 2026-10-22 depth rebuild (+10 per on-exam topic, >= 3
-// hard each, aimed at the CED skills the audit found missing: 1.1, 1.3, 1.8,
-// 1.13-1.14, 2.2, 2.6, 2.14-2.15, 3.1, 3.5-3.8, 3.11, 3.15) plus two new
-// topics, function-model-selection and logarithmic-models-semi-log. Data rows
-// are markdown pipe tables (every competitive surface renders them).
-
+// ids 1-273 are the original bank (ids 271-273 a polar top-up); ids 274-513
+// are the 2026-10-22 depth rebuild (+10 per bank topic, >= 3 hard each, aimed
+// at the CED skills the audit found missing: 1.1, 1.3, 1.8, 1.13-1.14, 2.2,
+// 2.6, 2.14-2.15, 3.1, 3.5-3.8, 3.11, 3.15) plus two new topics,
+// function-model-selection and logarithmic-models-semi-log. Data rows are
+// markdown pipe tables (every competitive surface renders them).
+//
+// 2026-10-23: the non-AP Precalculus track that shared this bank was retired
+// (owner decision, precalc-final O1); its 50 Unit-4 items (vectors, matrices,
+// parametric, law of sines) and 3 off-exam polar items (limacon a/b
+// classification, equation conversion) were removed with it, so every item
+// here is on-exam and there is one getter.
 
 import { shuffleArray } from '@/lib/shuffle-options'
 export interface PreCalcQuestion {
@@ -108,29 +113,10 @@ const allQuestions: PreCalcQuestion[] = [
   { id: 60, question: '$\\arctan(1) = $?', options: ['$\\pi/4$', '$\\pi/2$', '$\\pi/3$', '$\\pi$'], correctAnswer: 0, explanation: '$\\tan(\\pi/4) = 1$.', difficulty: 'easy', topicSlug: 'inverse-trig-functions' },
   { id: 61, question: 'Range of $\\arccos(x)$:', options: ['$[0, \\pi]$', '$[-\\pi/2, \\pi/2]$', '$[0, 2\\pi]$', '$(-\\pi, \\pi)$'], correctAnswer: 0, explanation: 'Restricted range for inverse cosine.', difficulty: 'medium', topicSlug: 'inverse-trig-functions' },
 
-  // ============ LAW OF SINES & COSINES ============
-  { id: 62, question: 'Law of Cosines: $c^2 = $?', options: ['$a^2 + b^2 - 2ab\\cos C$', '$a^2 + b^2 + 2ab\\cos C$', '$a^2 + b^2$', '$(a+b)^2$'], correctAnswer: 0, explanation: 'Generalization of Pythagorean theorem.', difficulty: 'easy', topicSlug: 'law-of-sines-and-cosines' },
-  { id: 63, question: 'Law of Sines: $\\frac{a}{\\sin A} = $?', options: ['$\\frac{b}{\\sin B} = \\frac{c}{\\sin C}$', '$\\frac{b}{\\cos B}$', '$2r$ only', '$a\\sin B$'], correctAnswer: 0, explanation: 'Ratios of sides to sines of opposite angles.', difficulty: 'easy', topicSlug: 'law-of-sines-and-cosines' },
-  { id: 64, question: 'The ambiguous case of Law of Sines occurs with:', options: ['SSA (two sides and non-included angle)', 'SAS', 'ASA', 'SSS'], correctAnswer: 0, explanation: 'SSA can yield 0, 1, or 2 triangles.', difficulty: 'medium', topicSlug: 'law-of-sines-and-cosines' },
-  { id: 65, question: 'Use Law of Cosines when you have:', options: ['SAS or SSS', 'ASA', 'AAS', 'Only angles'], correctAnswer: 0, explanation: 'Need at least two sides and included angle or all three sides.', difficulty: 'medium', topicSlug: 'law-of-sines-and-cosines' },
-
   // ============ POLAR COORDINATES ============
   { id: 66, question: 'Convert $(3, \\pi/2)$ polar to Cartesian:', options: ['$(0, 3)$', '$(3, \\pi/2)$', '$(0, -3)$', '$(-3, 0)$'], correctAnswer: 0, explanation: '$x = 3\\cos(\\pi/2) = 0$, $y = 3\\sin(\\pi/2) = 3$.', difficulty: 'easy', topicSlug: 'polar-coordinates-graphs' },
   { id: 67, question: 'Convert Cartesian $(1, 1)$ to polar $r$:', options: ['$\\sqrt{2}$', '$1$', '$2$', '$\\sqrt{3}$'], correctAnswer: 0, explanation: '$r = \\sqrt{1^2 + 1^2} = \\sqrt{2}$.', difficulty: 'easy', topicSlug: 'polar-coordinates-graphs' },
   { id: 68, question: '$r = 2\\sin\\theta$ is a:', options: ['Circle', 'Horizontal line', 'Spiral from the origin', 'Two-petal rose'], correctAnswer: 0, explanation: '$r = 2\\sin\\theta$ is a circle of diameter 2 centered at $(0,1)$.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
-  { id: 69, question: 'A cardioid has the form:', options: ['$r = a + a\\cos\\theta$', '$r = \\theta$', '$r = a\\cos(n\\theta)$', '$r = a$'], correctAnswer: 0, explanation: 'When coefficients are equal: cardioid shape.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
-
-  // ============ PARAMETRIC EQUATIONS ============
-  { id: 70, question: 'If $x = t^2$ and $y = 2t$, eliminate $t$:', options: ['$x = y^2/4$', '$y = 2x^2$', '$x = 2y$', '$y = x/2$'], correctAnswer: 0, explanation: '$t = y/2$, so $x = (y/2)^2 = y^2/4$.', difficulty: 'medium', topicSlug: 'parametric-equations-motion' },
-  { id: 71, question: 'Parametric equations of a circle of radius 3:', options: ['$x = 3\\cos t$, $y = 3\\sin t$', '$x = t$, $y = 9 - t^2$', '$x = 3t$, $y = 3t$', '$x = \\cos 3t$, $y = \\sin 3t$'], correctAnswer: 0, explanation: 'Standard parametric form of a circle.', difficulty: 'easy', topicSlug: 'parametric-equations-motion' },
-  { id: 72, question: 'If $x = \\cos t$, $y = \\sin t$, the direction of motion as $t$ increases is:', options: ['Counterclockwise', 'Clockwise', 'Left to right', 'Random'], correctAnswer: 0, explanation: 'Standard parametrization traces CCW.', difficulty: 'medium', topicSlug: 'parametric-equations-motion' },
-
-  // ============ VECTORS ============
-  { id: 73, question: 'Magnitude of $\\vec{v} = \\langle 3, 4 \\rangle$:', options: ['$5$', '$7$', '$\\sqrt{7}$', '$25$'], correctAnswer: 0, explanation: '$|\\vec{v}| = \\sqrt{9+16} = 5$.', difficulty: 'easy', topicSlug: 'vectors-in-two-dimensions' },
-  { id: 74, question: '$\\langle 2, 3 \\rangle + \\langle -1, 4 \\rangle = $?', options: ['$\\langle 1, 7 \\rangle$', '$\\langle 3, 7 \\rangle$', '$\\langle -3, 7 \\rangle$', '$\\langle 1, -1 \\rangle$'], correctAnswer: 0, explanation: 'Add component-wise.', difficulty: 'easy', topicSlug: 'vectors-in-two-dimensions' },
-  { id: 75, question: 'Dot product $\\langle 2, 3 \\rangle \\cdot \\langle 4, -1 \\rangle = $?', options: ['$5$', '$11$', '$-5$', '$8$'], correctAnswer: 0, explanation: '$2(4) + 3(-1) = 8 - 3 = 5$.', difficulty: 'medium', topicSlug: 'vectors-in-two-dimensions' },
-  { id: 76, question: 'Two vectors are perpendicular when their dot product is:', options: ['$0$', '$1$', '$-1$', 'Undefined'], correctAnswer: 0, explanation: 'Orthogonal ↔ dot product = 0.', difficulty: 'easy', topicSlug: 'vectors-in-two-dimensions' },
-  { id: 77, question: 'Unit vector in direction of $\\langle 3, 4 \\rangle$:', options: ['$\\langle 3/5, 4/5 \\rangle$', '$\\langle 3, 4 \\rangle$', '$\\langle 1, 1 \\rangle$', '$\\langle 4/5, 3/5 \\rangle$'], correctAnswer: 0, explanation: 'Divide by magnitude: $\\vec{v}/|\\vec{v}|$.', difficulty: 'medium', topicSlug: 'vectors-in-two-dimensions' },
 
   // ============ SEQUENCES & SERIES ============
   { id: 78, question: 'Arithmetic sequence: $a_n = a_1 + $?', options: ['$(n-1)d$', '$nd$', '$r^{n-1}$', '$(n+1)d$'], correctAnswer: 0, explanation: 'Common difference $d$ added each term.', difficulty: 'easy', topicSlug: 'arithmetic-geometric-sequences' },
@@ -148,17 +134,6 @@ const allQuestions: PreCalcQuestion[] = [
   { id: 86, question: 'Average rate of change of $f$ on $[a,b]$:', options: ['$\\frac{f(b)-f(a)}{b-a}$', '$f(b) - f(a)$', '$\\frac{f(a)+f(b)}{2}$', '$\\frac{f(b)}{f(a)}$'], correctAnswer: 0, explanation: 'Slope of secant line.', difficulty: 'easy', topicSlug: 'rates-of-change' },
   { id: 87, question: 'Average rate of change of $f(x) = x^2$ on $[1, 3]$:', options: ['$4$', '$8$', '$2$', '$6$'], correctAnswer: 0, explanation: '$(9-1)/(3-1) = 8/2 = 4$.', difficulty: 'easy', topicSlug: 'rates-of-change' },
   { id: 88, question: 'How can the rate of change of $f$ at $x = a$ be estimated from values of $f$?', options: ['The output value $f(a)$ itself', 'Average rate of change over a small interval containing $a$', 'Average rate of change over the whole domain', 'The average of the outputs near $x = a$'], correctAnswer: 1, explanation: 'The rate of change at a point is approximated by average rates of change over small intervals containing the point. An output value or an average of outputs measures size, not change, and a whole-domain average blurs local behavior.', difficulty: 'medium', topicSlug: 'rates-of-change' },
-
-  // ============ MATRICES & DETERMINANTS ============
-  { id: 89, question: 'Size of matrix product $A_{2×3} \\cdot B_{3×4}$:', options: ['$2×4$', '$3×3$', '$2×3$', 'Undefined'], correctAnswer: 0, explanation: 'Inner dimensions match (3=3), result is outer: $2×4$.', difficulty: 'easy', topicSlug: 'matrices-and-determinants' },
-  { id: 90, question: 'Determinant of $\\begin{bmatrix} a & b \\\\ c & d \\end{bmatrix}$:', options: ['$ad - bc$', '$ac - bd$', '$ab - cd$', '$ad + bc$'], correctAnswer: 0, explanation: '2×2 determinant formula.', difficulty: 'easy', topicSlug: 'matrices-and-determinants' },
-  { id: 91, question: 'A matrix has an inverse if its determinant is:', options: ['Not zero', 'Zero', 'Positive', 'Negative'], correctAnswer: 0, explanation: 'Singular (det = 0) → no inverse.', difficulty: 'medium', topicSlug: 'matrices-and-determinants' },
-  { id: 92, question: '$\\det\\begin{bmatrix} 3 & 1 \\\\ 2 & 5 \\end{bmatrix} = $?', options: ['$13$', '$17$', '$7$', '$15$'], correctAnswer: 0, explanation: '$3(5) - 1(2) = 15 - 2 = 13$.', difficulty: 'easy', topicSlug: 'matrices-and-determinants' },
-
-  // ============ SYSTEMS OF EQUATIONS ============
-  { id: 93, question: 'A consistent system has:', options: ['At least one solution', 'No solution', 'Infinitely many', 'Exactly two'], correctAnswer: 0, explanation: 'Consistent = solvable (1 or infinitely many).', difficulty: 'easy', topicSlug: 'systems-of-equations-matrices' },
-  { id: 94, question: 'If two lines are parallel, the system is:', options: ['Inconsistent (no solution)', 'Dependent', 'Independent', 'Has exactly one solution'], correctAnswer: 0, explanation: 'Parallel = same slope, different y-intercept → no intersection.', difficulty: 'easy', topicSlug: 'systems-of-equations-matrices' },
-  { id: 95, question: 'Cramer\'s Rule uses:', options: ['Determinants to solve systems', 'Elimination', 'Graphing', 'Substitution'], correctAnswer: 0, explanation: "Replace columns with constants, divide determinants.", difficulty: 'medium', topicSlug: 'systems-of-equations-matrices' },
 
   // ============ COMPLEX NUMBERS ============
   { id: 96, question: 'A polynomial with real coefficients has $2 - 5i$ as a zero. Which must also be a zero?', options: ['$-2 + 5i$', '$2 + 5i$', '$-2 - 5i$', '$5 - 2i$'], correctAnswer: 1, explanation: 'Non-real zeros of a real-coefficient polynomial come in conjugate pairs, so $2 + 5i$ is also a zero.', difficulty: 'easy', topicSlug: 'complex-numbers-fundamental-theorem' },
@@ -205,15 +180,6 @@ const allQuestions: PreCalcQuestion[] = [
   { id: 124, question: 'Solve $5^x = 30$ (round to two decimals).', options: ['$\\approx 2.11$', '$\\approx 1.50$', '$\\approx 3.00$', '$\\approx 6.00$'], correctAnswer: 0, explanation: '$x = \\log_5 30 = \\ln 30 / \\ln 5 \\approx 2.11$.', difficulty: 'medium', topicSlug: 'logarithmic-equations' },
   { id: 125, question: 'Domain of $\\log(x - 4)$:', options: ['$x > 4$', '$x \\ge 4$', '$x \\ne 4$', 'All reals'], correctAnswer: 0, explanation: 'Argument must be positive.', difficulty: 'easy', topicSlug: 'logarithmic-functions-properties' },
 
-  // parametric-equations-motion (3 → 10)
-  { id: 126, question: 'For $x = t, y = t^2$, eliminating $t$ gives:', options: ['$y = x^2$', '$y = x$', '$x = y^2$', '$y = 2x$'], correctAnswer: 0, explanation: '$t = x \\Rightarrow y = x^2$.', difficulty: 'easy', topicSlug: 'parametric-equations-motion' },
-  { id: 127, question: 'For $x = \\cos t, y = \\sin t$, the curve is:', options: ['Unit circle', 'Line $y = x$', 'Parabola', 'Ellipse with $a \\ne b$'], correctAnswer: 0, explanation: '$x^2 + y^2 = 1$.', difficulty: 'easy', topicSlug: 'parametric-equations-motion' },
-  { id: 128, question: 'For $x = 2t, y = 3t + 1$, the slope $dy/dx$ is:', options: ['$3/2$', '$2/3$', '$1$', '$3$'], correctAnswer: 0, explanation: '$dy/dx = (dy/dt)/(dx/dt) = 3/2$.', difficulty: 'medium', topicSlug: 'parametric-equations-motion' },
-  { id: 129, question: 'Projectile: $x = v_0 \\cos\\theta \\cdot t$, $y = v_0 \\sin\\theta \\cdot t - \\tfrac{1}{2}gt^2$. The trajectory is:', options: ['Parabolic', 'Linear', 'Circular', 'Hyperbolic'], correctAnswer: 0, explanation: 'Eliminating $t$ gives $y$ quadratic in $x$.', difficulty: 'medium', topicSlug: 'parametric-equations-motion' },
-  { id: 130, question: 'Speed of a particle with $x(t), y(t)$ is:', options: ['$\\sqrt{(dx/dt)^2 + (dy/dt)^2}$', '$dx/dt + dy/dt$', '$dy/dx$', '$|dx/dt|$'], correctAnswer: 0, explanation: 'Magnitude of velocity vector.', difficulty: 'medium', topicSlug: 'parametric-equations-motion' },
-  { id: 131, question: 'Eliminating $t$ from $x = t + 1, y = 2t - 3$ gives:', options: ['$y = 2x - 5$', '$y = x + 2$', '$y = 2x - 3$', '$y = x - 1$'], correctAnswer: 0, explanation: '$t = x - 1 \\Rightarrow y = 2(x-1) - 3 = 2x - 5$.', difficulty: 'easy', topicSlug: 'parametric-equations-motion' },
-  { id: 132, question: 'For $x = \\cos t, y = \\sin t$, the particle moves:', options: ['Counterclockwise around the unit circle', 'Clockwise', 'Straight line', 'Spirally'], correctAnswer: 0, explanation: 'At $t = 0$ at $(1,0)$, then to $(0,1)$ — counterclockwise.', difficulty: 'medium', topicSlug: 'parametric-equations-motion' },
-
   // piecewise-functions (3 → 10)
   { id: 133, question: 'For $f(x) = \\begin{cases} x^2, & x < 0 \\\\ 2x, & x \\ge 0 \\end{cases}$, $f(-2) = $?', options: ['$4$', '$-4$', '$2$', '$0$'], correctAnswer: 0, explanation: 'Use $x^2$ branch: $(-2)^2 = 4$.', difficulty: 'easy', topicSlug: 'piecewise-functions' },
   { id: 134, question: 'For $f(x) = \\begin{cases} x^2, & x < 0 \\\\ 2x, & x \\ge 0 \\end{cases}$, $f(3) = $?', options: ['$6$', '$9$', '$3$', '$0$'], correctAnswer: 0, explanation: '$3 \\ge 0$, so use the $2x$ piece: $2 \\cdot 3 = 6$.', difficulty: 'easy', topicSlug: 'piecewise-functions' },
@@ -250,15 +216,6 @@ const allQuestions: PreCalcQuestion[] = [
   { id: 159, question: 'An arithmetic sequence has $a_2 = 20$ and $a_3 = 26$. What is $a_6$?', options: ['$50$', '$38$', '$44$', '$57.12$'], correctAnswer: 2, explanation: 'The common difference is $26 - 20 = 6$, so $a_6 = 26 + 3(6) = 44$. The value $57.12$ treats the sequence as geometric with ratio $1.3$.', difficulty: 'medium', topicSlug: 'sequences-and-series' },
   { id: 160, question: 'Which statement about the sequence $g_n = 80(0.5)^n$ is true?', options: ['Each term is $40$ less than the one before', 'Each term is half of the term before it', 'Each term is $0.5$ less than the one before', 'The terms increase without bound'], correctAnswer: 1, explanation: 'The ratio $0.5$ multiplies each term by one half: $80, 40, 20, 10, \\ldots$. The drops shrink ($40, 20, 10$), so they are not a constant $40$ or $0.5$, and the terms decrease toward $0$.', difficulty: 'easy', topicSlug: 'sequences-and-series' },
 
-  // systems-of-equations-matrices (3 → 10)
-  { id: 161, question: 'A system with no solutions is called:', options: ['Inconsistent', 'Dependent', 'Consistent', 'Trivial'], correctAnswer: 0, explanation: 'Lines parallel; no intersection.', difficulty: 'easy', topicSlug: 'systems-of-equations-matrices' },
-  { id: 162, question: 'A 2×2 system has infinitely many solutions when the lines are:', options: ['The same line', 'Parallel', 'Perpendicular', 'Intersecting at one point'], correctAnswer: 0, explanation: 'Coincident lines ⇒ dependent system.', difficulty: 'easy', topicSlug: 'systems-of-equations-matrices' },
-  { id: 163, question: 'Solve $x + y = 5$, $x - y = 1$:', options: ['$(3, 2)$', '$(2, 3)$', '$(4, 1)$', '$(5, 0)$'], correctAnswer: 0, explanation: 'Add: $2x = 6$ ⇒ $x = 3$, $y = 2$.', difficulty: 'easy', topicSlug: 'systems-of-equations-matrices' },
-  { id: 164, question: 'Cramer\'s rule uses:', options: ['Determinants of coefficient matrix and modified matrices', 'Inverse functions', 'Logarithms', 'Trigonometry'], correctAnswer: 0, explanation: 'Solutions = ratios of determinants.', difficulty: 'medium', topicSlug: 'systems-of-equations-matrices' },
-  { id: 165, question: 'Augmented matrix of $2x + y = 3$, $x - y = 0$ is:', options: ['$\\begin{pmatrix} 2 & 1 & | & 3 \\\\ 1 & -1 & | & 0 \\end{pmatrix}$', '$\\begin{pmatrix} 2 & 1 \\\\ 1 & -1 \\end{pmatrix}$', '$\\begin{pmatrix} 3 & 0 \\end{pmatrix}$', '$\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$'], correctAnswer: 0, explanation: 'Coefficients with constants appended.', difficulty: 'easy', topicSlug: 'systems-of-equations-matrices' },
-  { id: 166, question: 'A homogeneous system $A\\mathbf{x} = \\mathbf{0}$ always has:', options: ['The trivial solution $\\mathbf{x} = \\mathbf{0}$', 'No solutions', 'Infinitely many', 'A unique nonzero solution'], correctAnswer: 0, explanation: 'Zero vector always satisfies.', difficulty: 'medium', topicSlug: 'systems-of-equations-matrices' },
-  { id: 167, question: 'Reduced row echelon form (RREF) leading entries are:', options: ['1, with zeros above and below', 'Any nonzero number', 'All zeros', 'Negative ones'], correctAnswer: 0, explanation: 'Pivot is 1; rest of column is 0.', difficulty: 'medium', topicSlug: 'systems-of-equations-matrices' },
-
   // complex-numbers-fundamental-theorem (4 → 10)
   { id: 168, question: 'A degree-4 polynomial with real coefficients has zeros $i$ and $2$, and the zero $2$ has multiplicity $2$. What are all of its zeros, with multiplicities?', options: ['$i$ (1), $-i$ (1), $2$ (2)', '$i$ (2), $2$ (2)', '$i$ (1), $2$ (3)', '$i$ (1), $-i$ (1), $2$ (1), $-2$ (1)'], correctAnswer: 0, explanation: 'Real coefficients force $-i$ to pair with $i$. Multiplicities $1 + 1 + 2 = 4$ match the degree; $-2$ is not a zero.', difficulty: 'medium', topicSlug: 'complex-numbers-fundamental-theorem' },
   { id: 169, question: 'Can a polynomial with real coefficients have exactly one non-real zero?', options: ['Yes, if its degree is odd', 'Yes, if its degree is 1', 'No, non-real zeros occur in conjugate pairs', 'No, every polynomial has only real zeros'], correctAnswer: 2, explanation: 'For real coefficients a non-real zero $a + bi$ always comes with $a - bi$, so the count of non-real zeros is even.', difficulty: 'easy', topicSlug: 'complex-numbers-fundamental-theorem' },
@@ -291,28 +248,10 @@ const allQuestions: PreCalcQuestion[] = [
   { id: 190, question: '$\\sin(\\arctan(3/4)) = $?', options: ['$3/5$', '$4/5$', '$3/4$', '$1$'], correctAnswer: 0, explanation: 'Right triangle opposite=3, adj=4, hyp=5; sin = 3/5.', difficulty: 'medium', topicSlug: 'inverse-trig-functions' },
   { id: 191, question: '$\\arctan(-\\sqrt{3}) = $?', options: ['$-\\pi/3$', '$2\\pi/3$', '$-\\pi/6$', '$5\\pi/3$'], correctAnswer: 0, explanation: 'The range of arctangent is $(-\\pi/2, \\pi/2)$; $\\tan(-\\pi/3) = -\\sqrt{3}$. $2\\pi/3$ has the right tangent but is outside the range.', difficulty: 'medium', topicSlug: 'inverse-trig-functions' },
 
-  // law-of-sines-and-cosines (4 → 10)
-  { id: 192, question: 'Law of sines:', options: ['$a/\\sin A = b/\\sin B = c/\\sin C$', '$a^2 = b^2 + c^2$', '$a = b + c$', '$\\cos A = b/c$'], correctAnswer: 0, explanation: 'Standard form.', difficulty: 'easy', topicSlug: 'law-of-sines-and-cosines' },
-  { id: 193, question: 'Law of cosines:', options: ['$c^2 = a^2 + b^2 - 2ab\\cos C$', '$c = a + b$', '$\\sin C = a/b$', '$c^2 = a^2 + b^2$'], correctAnswer: 0, explanation: 'Generalization of Pythagorean theorem.', difficulty: 'easy', topicSlug: 'law-of-sines-and-cosines' },
-  { id: 194, question: 'In a triangle with $a = 5$, $b = 6$, $C = 60°$, $c = $?', options: ['$\\sqrt{31}$', '$\\sqrt{61}$', '$\\sqrt{11}$', '$11$'], correctAnswer: 0, explanation: '$c^2 = 25 + 36 - 60 \\cdot 1/2 = 31$.', difficulty: 'medium', topicSlug: 'law-of-sines-and-cosines' },
-  { id: 195, question: 'Law of sines is most useful when given:', options: ['ASA or AAS', 'SSS', 'SAS', 'A right triangle'], correctAnswer: 0, explanation: 'Need at least one side and its opposite angle.', difficulty: 'medium', topicSlug: 'law-of-sines-and-cosines' },
-  { id: 196, question: 'Law of cosines applies for:', options: ['SSS or SAS', 'AAA only', 'Right triangles only', 'Equilateral only'], correctAnswer: 0, explanation: 'Use it for SSS or SAS configurations.', difficulty: 'medium', topicSlug: 'law-of-sines-and-cosines' },
-  { id: 197, question: 'In a triangle with $A = 30°, B = 60°, a = 5$, $b = $?', options: ['$5\\sqrt{3}$', '$10$', '$5/\\sqrt{3}$', '$15$'], correctAnswer: 0, explanation: '$b = a \\sin B/\\sin A = 5 \\cdot (\\sqrt{3}/2)/(1/2) = 5\\sqrt{3}$.', difficulty: 'medium', topicSlug: 'law-of-sines-and-cosines' },
-
-  // matrices-and-determinants (4 → 10)
-  { id: 198, question: '$\\det\\begin{pmatrix} 2 & 1 \\\\ 3 & 4 \\end{pmatrix} = $?', options: ['$5$', '$8$', '$11$', '$-5$'], correctAnswer: 0, explanation: '$ad - bc = 8 - 3 = 5$.', difficulty: 'easy', topicSlug: 'matrices-and-determinants' },
-  { id: 199, question: 'Identity matrix $I$ satisfies:', options: ['$AI = IA = A$', '$AI = 0$', '$IA = I$ only', 'Not defined'], correctAnswer: 0, explanation: 'Multiplicative identity.', difficulty: 'easy', topicSlug: 'matrices-and-determinants' },
-  { id: 200, question: 'A matrix is invertible iff its determinant:', options: ['Is nonzero', 'Is positive', 'Equals $1$', 'Is integer'], correctAnswer: 0, explanation: 'Singular matrix ⇔ det = 0.', difficulty: 'medium', topicSlug: 'matrices-and-determinants' },
-  { id: 201, question: 'For $A$ a 2×2 matrix, $\\det(2A) = $?', options: ['$4 \\det A$', '$2 \\det A$', '$\\det A$', '$8 \\det A$'], correctAnswer: 0, explanation: 'Each row scales by 2 ⇒ det scales by $2^2$.', difficulty: 'medium', topicSlug: 'matrices-and-determinants' },
-  { id: 202, question: 'Matrix multiplication $AB$ requires:', options: ['Columns of $A$ = rows of $B$', 'Same dimensions', 'Square matrices only', 'Determinants nonzero'], correctAnswer: 0, explanation: '$A_{m \\times n} \\cdot B_{n \\times p}$.', difficulty: 'easy', topicSlug: 'matrices-and-determinants' },
-  { id: 203, question: 'Inverse of $\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix}$ is:', options: ['$\\frac{1}{ad-bc}\\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}$', '$\\begin{pmatrix} d & b \\\\ c & a \\end{pmatrix}$', '$\\begin{pmatrix} a & c \\\\ b & d \\end{pmatrix}$', 'Not invertible'], correctAnswer: 0, explanation: 'Standard 2×2 inverse formula.', difficulty: 'medium', topicSlug: 'matrices-and-determinants' },
-
   // polar-coordinates-graphs (4 → 10)
   { id: 204, question: 'Convert $(r, \\theta) = (2, \\pi/2)$ to rectangular:', options: ['$(0, 2)$', '$(2, \\pi/2)$', '$(\\sqrt{2}, \\sqrt{2})$', '$(-2, 0)$'], correctAnswer: 0, explanation: '$x = 2\\cos(\\pi/2) = 0$, $y = 2\\sin(\\pi/2) = 2$.', difficulty: 'easy', topicSlug: 'polar-coordinates-graphs' },
   { id: 205, question: 'Convert $(x, y) = (1, 1)$ to polar:', options: ['$(\\sqrt{2}, \\pi/4)$', '$(2, \\pi/4)$', '$(1, \\pi/2)$', '$(\\sqrt{2}, \\pi/2)$'], correctAnswer: 0, explanation: '$r = \\sqrt{2}$, $\\theta = \\arctan(1) = \\pi/4$.', difficulty: 'easy', topicSlug: 'polar-coordinates-graphs' },
   { id: 206, question: '$r = 4$ in polar describes:', options: ['Circle radius 4 at origin', 'Line $x = 4$', 'Parabola', 'Spiral'], correctAnswer: 0, explanation: 'All points distance 4 from origin.', difficulty: 'easy', topicSlug: 'polar-coordinates-graphs' },
-  { id: 207, question: '$r = 2\\cos\\theta$ describes:', options: ['Circle radius 1 centered at $(1, 0)$', 'Line through origin', 'Spiral', 'Cardioid'], correctAnswer: 0, explanation: 'Convert: $r^2 = 2r\\cos\\theta$ ⇒ $x^2 + y^2 = 2x$ ⇒ $(x-1)^2 + y^2 = 1$.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
-  { id: 208, question: '$r = 1 + \\cos\\theta$ is a:', options: ['Cardioid', 'Circle through the origin', 'Limacon with inner loop', 'Spiral of Archimedes'], correctAnswer: 0, explanation: 'Form $a + a\\cos\\theta$ with $a = 1$ is a cardioid.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
   { id: 209, question: 'A point with negative $r$ is plotted by:', options: ['Going opposite direction of $\\theta$', 'Reflecting across $x$-axis', 'Ignoring $r$', 'Plotting at origin'], correctAnswer: 0, explanation: '$(-r, \\theta) = (r, \\theta + \\pi)$.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
 
   // trig-identities-pythagorean (4 → 10)
@@ -393,12 +332,10 @@ const allQuestions: PreCalcQuestion[] = [
   { id: 264, question: '$\\cos(\\pi) = $?', options: ['$-1$', '$0$', '$1$', '$\\pi$'], correctAnswer: 0, explanation: 'Point $(-1, 0)$ on unit circle.', difficulty: 'easy', topicSlug: 'trigonometric-ratios-unit-circle' },
   { id: 265, question: '$\\sin(\\pi/4) = $?', options: ['$\\sqrt{2}/2$', '$1/2$', '$\\sqrt{3}/2$', '$1$'], correctAnswer: 0, explanation: '$45°$ corner of unit circle.', difficulty: 'easy', topicSlug: 'trigonometric-ratios-unit-circle' },
 
-  // vectors-in-two-dimensions (5 → 10)
-  { id: 266, question: 'Magnitude of vector $\\langle 3, 4 \\rangle$:', options: ['$5$', '$7$', '$25$', '$\\sqrt{7}$'], correctAnswer: 0, explanation: '$\\sqrt{9+16} = 5$.', difficulty: 'easy', topicSlug: 'vectors-in-two-dimensions' },
-  { id: 267, question: 'Sum $\\langle 1, 2 \\rangle + \\langle 3, -1 \\rangle = $?', options: ['$\\langle 4, 1 \\rangle$', '$\\langle 4, 3 \\rangle$', '$\\langle 2, 3 \\rangle$', '$\\langle 4, -1 \\rangle$'], correctAnswer: 0, explanation: 'Add componentwise.', difficulty: 'easy', topicSlug: 'vectors-in-two-dimensions' },
-  { id: 268, question: 'Scalar multiplication: $3 \\langle 2, -1 \\rangle = $?', options: ['$\\langle 6, -3 \\rangle$', '$\\langle 5, 2 \\rangle$', '$\\langle 6, 3 \\rangle$', '$\\langle 2, -3 \\rangle$'], correctAnswer: 0, explanation: 'Multiply each component.', difficulty: 'easy', topicSlug: 'vectors-in-two-dimensions' },
-  { id: 269, question: 'Dot product $\\langle 1, 2 \\rangle \\cdot \\langle 3, 4 \\rangle = $?', options: ['$11$', '$10$', '$7$', '$8$'], correctAnswer: 0, explanation: '$1 \\cdot 3 + 2 \\cdot 4 = 11$.', difficulty: 'easy', topicSlug: 'vectors-in-two-dimensions' },
-  { id: 270, question: 'Two vectors are perpendicular iff:', options: ['Their dot product is $0$', 'Their magnitudes are equal', 'They are parallel', 'Their sum is zero'], correctAnswer: 0, explanation: '$\\cos(90°) = 0$.', difficulty: 'medium', topicSlug: 'vectors-in-two-dimensions' },
+  // polar-coordinates-graphs top-up (2026-10: >= 10 items after dropping the off-exam polar items)
+  { id: 271, question: 'Which polar coordinates represent the point with rectangular coordinates $(-\\sqrt{3}, 1)$?', options: ['$(2, 5\\pi/6)$', '$(2, \\pi/6)$', '$(2, -\\pi/6)$', '$(4, 5\\pi/6)$'], correctAnswer: 0, explanation: '$r = \\sqrt{(-\\sqrt{3})^2 + 1^2} = 2$. The point is in Quadrant II with reference angle $\\pi/6$, so $\\theta = \\pi - \\pi/6 = 5\\pi/6$.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
+  { id: 272, question: 'For the polar function $r = 4\\cos\\theta$ on the interval $\\pi/2 < \\theta < \\pi$, which statement is true?', options: ['$r$ is negative and decreasing, so the distance from the origin increases', '$r$ is decreasing, so the distance from the origin decreases', '$r$ is positive and increasing, so the distance from the origin increases','$r$ is positive and decreasing, so the distance from the origin decreases'], correctAnswer: 0, explanation: 'On $(\\pi/2, \\pi)$, $\\cos\\theta$ falls from $0$ to $-1$, so $r$ falls from $0$ to $-4$: negative and decreasing. The distance from the origin is $|r|$, which grows from $0$ to $4$.', difficulty: 'hard', topicSlug: 'polar-coordinates-graphs' },
+  { id: 273, question: 'What is the average rate of change of $r = 3\\cos\\theta$ with respect to $\\theta$ on the interval $[0, \\pi/2]$?', options: ['$-\\frac{6}{\\pi}$', '$\\frac{6}{\\pi}$', '$-\\frac{3}{\\pi}$', '$-\\frac{2\\pi}{3}$'], correctAnswer: 0, explanation: '$\\frac{r(\\pi/2) - r(0)}{\\pi/2 - 0} = \\frac{0 - 3}{\\pi/2} = -\\frac{6}{\\pi}$.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
 
   // ============ DEPTH REBUILD 2026-10-22 (AP Precalculus CED gaps; +10 per on-exam bank topic, >= 3 hard each) ============
   // ---- Unit 1: rates-of-change (CED 1.1-1.4) ----
@@ -691,65 +628,15 @@ const allQuestions: PreCalcQuestion[] = [
 ]
 
 /**
- * Raw, UNSHUFFLED bank — the getter above shuffles randomly, which would break
- * the unit-test engine's seeded (deterministic) variants.
+ * Raw, UNSHUFFLED AP Precalculus pool. Seeded consumers (unit tests, guard
+ * tests) rely on this order; the getter below shuffles.
  */
-export const precalcQuestionBank: PreCalcQuestion[] = allQuestions
-
-export function getPreCalcQuestions(count: number = 10, topicSlug?: string): PreCalcQuestion[] {
-  let pool = allQuestions
-  if (topicSlug) {
-    const filtered = pool.filter(q => q.topicSlug === topicSlug)
-    if (filtered.length > 0) pool = filtered
-  }
-  const shuffled = shuffleArray(pool)
-  return shuffled.slice(0, Math.min(count, shuffled.length))
-}
-
-// ============ AP PRECALCULUS VIEW ============
-// The bank above is shared with the non-AP Precalculus course and its unit
-// tests (src/data/unit-tests/precalculus.ts), which use all 27 topics, so
-// off-exam items stay in it. AP Precalculus draws through
-// getApPrecalcQuestions, which drops what the AP exam does not assess (owner
-// rule: "If the exam doesn't cover it, we shouldn't have it in the program").
-
-/** Whole bank topics that are AP Precalculus Unit 4, which the exam does not assess. */
-export const AP_PRECALC_EXCLUDED_TOPIC_SLUGS: ReadonlySet<string> = new Set([
-  'law-of-sines-and-cosines', // only in EK 4.8.D.2
-  'parametric-equations-motion', // Topics 4.1-4.4, 4.7
-  'vectors-in-two-dimensions', // Topics 4.8-4.9
-  'matrices-and-determinants', // Topics 4.10-4.14
-  'systems-of-equations-matrices', // Topics 4.10-4.14
-])
-
-/** Single off-exam items inside on-exam topics. */
-export const AP_PRECALC_EXCLUDED_IDS: ReadonlySet<number> = new Set([
-  69, // limaçon a/b classification (cardioid form); 3.14 graphs polar functions, does not classify by a/b
-  207, // needs rectangular-polar EQUATION conversion; 3.13 converts points only
-  208, // limaçon a/b classification (names the cardioid case)
-])
-
-/**
- * On-exam items served only to AP Precalculus (kept out of allQuestions so
- * the non-AP course and its seeded unit tests see exactly the same bank).
- * Added when polar-coordinates-graphs would otherwise have dropped below 10.
- */
-const apOnlyQuestions: PreCalcQuestion[] = [
-  { id: 271, question: 'Which polar coordinates represent the point with rectangular coordinates $(-\\sqrt{3}, 1)$?', options: ['$(2, 5\\pi/6)$', '$(2, \\pi/6)$', '$(2, -\\pi/6)$', '$(4, 5\\pi/6)$'], correctAnswer: 0, explanation: '$r = \\sqrt{(-\\sqrt{3})^2 + 1^2} = 2$. The point is in Quadrant II with reference angle $\\pi/6$, so $\\theta = \\pi - \\pi/6 = 5\\pi/6$.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
-  { id: 272, question: 'For the polar function $r = 4\\cos\\theta$ on the interval $\\pi/2 < \\theta < \\pi$, which statement is true?', options: ['$r$ is negative and decreasing, so the distance from the origin increases', '$r$ is decreasing, so the distance from the origin decreases', '$r$ is positive and increasing, so the distance from the origin increases','$r$ is positive and decreasing, so the distance from the origin decreases'], correctAnswer: 0, explanation: 'On $(\\pi/2, \\pi)$, $\\cos\\theta$ falls from $0$ to $-1$, so $r$ falls from $0$ to $-4$: negative and decreasing. The distance from the origin is $|r|$, which grows from $0$ to $4$.', difficulty: 'hard', topicSlug: 'polar-coordinates-graphs' },
-  { id: 273, question: 'What is the average rate of change of $r = 3\\cos\\theta$ with respect to $\\theta$ on the interval $[0, \\pi/2]$?', options: ['$-\\frac{6}{\\pi}$', '$\\frac{6}{\\pi}$', '$-\\frac{3}{\\pi}$', '$-\\frac{2\\pi}{3}$'], correctAnswer: 0, explanation: '$\\frac{r(\\pi/2) - r(0)}{\\pi/2 - 0} = \\frac{0 - 3}{\\pi/2} = -\\frac{6}{\\pi}$.', difficulty: 'medium', topicSlug: 'polar-coordinates-graphs' },
-]
-
-/** Raw, unshuffled AP Precalculus pool: the shared bank minus off-exam items, plus the AP-only items. */
-export const apPrecalcQuestionBank: PreCalcQuestion[] = [
-  ...allQuestions.filter(q => !AP_PRECALC_EXCLUDED_TOPIC_SLUGS.has(q.topicSlug) && !AP_PRECALC_EXCLUDED_IDS.has(q.id)),
-  ...apOnlyQuestions,
-]
+export const apPrecalcQuestionBank: PreCalcQuestion[] = allQuestions
 
 /**
  * AP Precalculus draw. `topicSlug` is a bank topic slug, or a list of them
- * (an AP lesson can span several bank topics). Unknown or off-exam topics
- * fall back to the whole on-exam pool, never to an excluded item.
+ * (an AP lesson can span several bank topics). An unknown topic falls back to
+ * the whole pool.
  */
 export function getApPrecalcQuestions(count: number = 10, topicSlug?: string | readonly string[]): PreCalcQuestion[] {
   let pool = apPrecalcQuestionBank

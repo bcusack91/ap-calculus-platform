@@ -30,7 +30,7 @@ import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 const COURSE = 'ap-precalculus'
 const read = (p: string) => fs.readFileSync(path.join(process.cwd(), p), 'utf8')
 
-/** The 19 live topics of PLAN.md "Canonical layout", in unit order. */
+/** The 19 CED-unit topics of PLAN.md "Canonical layout", in unit order, plus the exam-prep pair (Wave 3). */
 const LIVE: Record<number, string[]> = {
   1: [
     'rates-of-change-precalc',
@@ -58,7 +58,8 @@ const LIVE: Record<number, string[]> = {
     'polar-coordinates-precalc',
   ],
 }
-const LIVE_SLUGS = [1, 2, 3].flatMap((u) => LIVE[u])
+const EXAM_PREP = ['precalc-frq-strategies', 'precalc-exam-review']
+const LIVE_SLUGS = [...[1, 2, 3].flatMap((u) => LIVE[u]), ...EXAM_PREP]
 
 /** The 27 retired rows and their 308 targets (PLAN.md "Retired topic -> 308 target"). */
 const RETIRED: Record<string, string> = {
@@ -91,11 +92,8 @@ const RETIRED: Record<string, string> = {
   'polar-coordinates': 'polar-coordinates-precalc',
 }
 
-/**
- * Lessons authored in the same wave (PLAN.md D3). Accepted as "has a lesson"
- * until the registry has them; remove once registered.
- */
-const PENDING_LESSONS = new Set(['function-modeling-precalc', 'exponential-logarithmic-modeling-precalc'])
+/** Lessons authored but not yet registered (none: the D3 gap lessons and the Wave 3 exam-prep pair are live). */
+const PENDING_LESSONS = new Set<string>()
 
 /** Words that only belong to the unassessed Unit 4 or the old 4-unit layout. */
 const UNIT_4_WORDS = /vectors?|matri(x|ces)|parametric|4 units|four units|Unit 4\b|conic/i
@@ -123,11 +121,12 @@ describe('AP Precalculus CED layout', () => {
     expect(courseTopicWhere(COURSE)).toEqual({ category: { course: { slug: COURSE } } })
   })
 
-  it('covers exactly the 19 live slugs of PLAN.md, in unit order', () => {
+  it('covers exactly the 21 live slugs of PLAN.md (19 CED topics + 2 exam-prep lessons), in unit order', () => {
     for (const u of [1, 2, 3]) expect(layout.find((s) => s.unitNumber === u)!.topics).toEqual(LIVE[u])
+    expect(layout.find((s) => s.unitNumber === null)!.topics).toEqual(EXAM_PREP)
     expect(courseLayoutTopics(COURSE)).toEqual(LIVE_SLUGS)
-    expect(LIVE_SLUGS).toHaveLength(19)
-    expect(new Set(LIVE_SLUGS).size).toBe(19)
+    expect(LIVE_SLUGS).toHaveLength(21)
+    expect(new Set(LIVE_SLUGS).size).toBe(21)
     for (const c of PRECALC_CATEGORIES) {
       expect(c.course).toBe(COURSE)
       expect(c.order).toBe(PRECALC_CATEGORIES.indexOf(c) + 1)
@@ -243,14 +242,15 @@ describe('the 27 retired AP Precalculus rows', () => {
 describe('the AP Precalculus competitive page', () => {
   const layout = courseCategoryLayout(COURSE)!
 
-  it('groups the live rows into the 3 CED units (exam prep hidden while it has no rows)', () => {
+  it('groups the live rows into the 3 CED units plus exam prep', () => {
     const rows = LIVE_SLUGS.map((slug) => ({ id: `id-${slug}`, slug, title: slug }))
     const units = groupTopicsByLayout(layout, rows)
-    expect(units.map((u) => u.unitNumber)).toEqual([1, 2, 3])
+    expect(units.map((u) => u.unitNumber)).toEqual([1, 2, 3, null])
     expect(units.map((u) => unitHeading(u))).toEqual([
       'Unit 1: Polynomial and Rational Functions',
       'Unit 2: Exponential and Logarithmic Functions',
       'Unit 3: Trigonometric and Polar Functions',
+      'AP Exam Preparation',
     ])
     expect(units.flatMap((u) => u.topics.map((t) => t.slug))).toEqual(LIVE_SLUGS)
     // A legacy row that still exists in prod is never placed.
@@ -317,7 +317,7 @@ describe('prisma/restructure-precalc.ts', () => {
     expect(src).toContain('tx.flashcard.updateMany(')
     expect(src).not.toContain('tx.flashcard.delete')
     expect(src).toContain('tx.topicProgress.updateMany(')
-    for (const slug of ['function-modeling-precalc', 'exponential-logarithmic-modeling-precalc']) expect(src).toContain(`'${slug}'`)
+    for (const slug of ['function-modeling-precalc', 'exponential-logarithmic-modeling-precalc', 'precalc-frq-strategies', 'precalc-exam-review']) expect(src).toContain(`'${slug}'`)
 
     const seed = read('prisma/seed-all.ts')
     const calc = seed.indexOf("'restructure-calc.ts'")

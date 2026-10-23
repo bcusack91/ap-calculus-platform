@@ -20,8 +20,8 @@ const servedRoutes = fs
   .filter((d) => d.endsWith('-diagnostic') && fs.existsSync(path.join(appDir, d, 'page.tsx')))
   .filter((d) => !isRedirected(d))
 
-/** Regular Pre-Calculus has no Course row, so it has no unit list to render. */
-const WITHOUT_ABOUT = new Set(['precalc-diagnostic'])
+/** Served diagnostics that deliberately have no About section (none today; /precalc-diagnostic was retired). */
+const WITHOUT_ABOUT = new Set<string>([])
 
 describe('every diagnostic route renders the About section', () => {
   it('finds the diagnostic routes', () => {

@@ -48,7 +48,6 @@ import { ALGEBRA2_PLANS } from '../src/data/algebra2-study-plans'
 import { GEOMETRY_PLANS } from '../src/data/geometry-study-plans'
 import { PREALGEBRA_PLANS } from '../src/data/prealgebra-study-plans'
 import { GRADE8_MATH_PLANS } from '../src/data/grade8-math-study-plans'
-import { PRECALCULUS_PLANS } from '../src/data/precalculus-study-plans'
 
 // courseSlug MUST match the adopt route's courseSlug for each course.
 const SOURCES: { courseSlug: string; plans: StudyPlanTemplate[] }[] = [
@@ -82,7 +81,6 @@ const SOURCES: { courseSlug: string; plans: StudyPlanTemplate[] }[] = [
   { courseSlug: 'algebra-2', plans: ALGEBRA2_PLANS },
   { courseSlug: 'geometry', plans: GEOMETRY_PLANS },
   { courseSlug: 'grade-8-math', plans: GRADE8_MATH_PLANS },
-  { courseSlug: 'precalculus', plans: PRECALCULUS_PLANS },
 ]
 
 const DRY_RUN = process.argv.includes('--dry-run')

@@ -36,4 +36,11 @@ describe('legacy topic redirects', () => {
     expect(sitemap).toContain('category._count.topics > 0')
     expect(sitemap).not.toMatch(/url: `\$\{baseUrl\}\/competitive`/)
   })
+
+  it('do not submit retired whole routes (next.config 308s them; map in retired-route-redirects.ts)', () => {
+    // The non-AP Precalculus tools were built from the 'precalc' prefix and the '/precalculus' hub.
+    const sitemap = fs.readFileSync('src/app/sitemap.ts', 'utf8')
+    expect(sitemap).not.toMatch(/'precalc'/)
+    expect(sitemap).not.toMatch(/'precalculus'/)
+  })
 })

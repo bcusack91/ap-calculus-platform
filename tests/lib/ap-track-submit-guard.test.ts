@@ -144,3 +144,49 @@ describe('POST /api/exit-quiz/submit — AP track mix check', () => {
     expect(mockExitCreate).not.toHaveBeenCalled()
   })
 })
+
+describe('POST /api/exit-quiz/submit — AP Precalculus is a track course (30-question sitting)', () => {
+  const precalc = { ...base, topicSlug: 'rational-functions-precalc' }
+  const precalcResults = (correct: number) => ({ totalCorrect: correct, totalQuestions: 30, percentage: Math.round((correct / 30) * 100) })
+  const standingPrecalc = (correct: number | null, override: string | null = null) => {
+    mockDiagFindFirst.mockResolvedValue(correct === null ? null : { results: precalcResults(correct) })
+    mockOverrideFindUnique.mockResolvedValue(override ? { track: override } : null)
+  }
+
+  beforeEach(() => {
+    mockTopicFindUnique.mockResolvedValue({ category: { course: { slug: 'ap-precalculus' } } })
+  })
+
+  it('refuses a Foundation mix from a Regular (15/30) or 5-track (18/30, 24/30) student, and from one with no diagnostic', async () => {
+    for (const [correct, track] of [[null, 'regular'], [15, 'regular'], [18, 'five'], [24, 'five']] as const) {
+      standingPrecalc(correct)
+      const res = await post({ ...precalc, seed: 7, difficulty: 'foundation-mix' })
+      expect(res.status).toBe(409)
+      expect(await res.json()).toMatchObject({ code: 'TRACK_MIX_MISMATCH', track })
+    }
+    expect(mockExitCreate).not.toHaveBeenCalled()
+    expect(mockTopicFindUnique.mock.calls[0][0].where).toEqual({ slug: 'rational-functions-precalc' })
+    // The placement read the course's diagnostic prefix and its override row.
+    expect(mockDiagFindFirst.mock.calls[0][0].where).toEqual({ userId: 'u1', category: { startsWith: 'ap-precalculus-diagnostic' } })
+    expect(mockOverrideFindUnique.mock.calls[0][0].where).toEqual({ userId_courseSlug: { userId: 'u1', courseSlug: 'ap-precalculus' } })
+  })
+
+  it('accepts a Foundation mix from a Foundation student (10/30), and a 5-track mix from everyone', async () => {
+    standingPrecalc(10)
+    expect((await post({ ...precalc, seed: 7, difficulty: 'foundation-mix' })).status).toBe(200)
+    for (const correct of [null, 10, 15, 24]) {
+      standingPrecalc(correct)
+      expect((await post({ ...precalc, seed: 8, difficulty: 'five-mix' })).status).toBe(200)
+    }
+    expect(mockExitCreate).toHaveBeenCalledTimes(5)
+  })
+
+  it('honours the teacher override: a 5 pinned to Foundation may submit the Foundation mix; a 1 pinned up may not', async () => {
+    standingPrecalc(24, 'foundation')
+    expect((await post({ ...precalc, seed: 7, difficulty: 'foundation-mix' })).status).toBe(200)
+    standingPrecalc(6, 'five')
+    const res = await post({ ...precalc, seed: 8, difficulty: 'foundation-mix' })
+    expect(res.status).toBe(409)
+    expect(await res.json()).toMatchObject({ code: 'TRACK_MIX_MISMATCH', track: 'five', expectedMix: 'five-mix' })
+  })
+})

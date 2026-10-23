@@ -22,7 +22,6 @@ export type OnboardingGoal = 'just-browsing' | 'catch-up' | 'get-ahead' | 'exam-
  * shares another course's diagnostic).
  */
 const DIAGNOSTIC_KEY_OVERRIDES: Record<string, string> = {
-  precalculus: 'precalc',
   'organic-chemistry-1': 'ochem',
   'organic-chemistry-2': 'ochem',
   // The PSAT tests the same skills as the Digital SAT; its hub's diagnostic

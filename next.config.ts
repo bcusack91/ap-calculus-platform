@@ -1,5 +1,6 @@
 import type { NextConfig } from "next";
 import { LEGACY_TOPIC_REDIRECTS } from "./src/lib/legacy-topic-redirects";
+import { RETIRED_ROUTE_REDIRECTS } from "./src/lib/retired-route-redirects";
 import { RETIRED_AP_UNITS } from "./src/data/retired-ap-topics";
 import { RETIRED_COURSE_CATEGORIES } from "./src/lib/course-includes";
 import { withSentryConfig } from "@sentry/nextjs";
@@ -271,6 +272,12 @@ const nextConfig: NextConfig = {
     redirects.push(
       { source: '/ap-precalc-score-predictor', destination: '/ap-precalculus-score-predictor', permanent: true },
     )
+
+    // Retired whole routes (the non-AP Precalculus track) → the page that
+    // replaced each one. Map: src/lib/retired-route-redirects.ts.
+    for (const [source, destination] of Object.entries(RETIRED_ROUTE_REDIRECTS)) {
+      redirects.push({ source, destination, permanent: true })
+    }
 
     return redirects
   },

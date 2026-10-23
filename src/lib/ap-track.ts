@@ -43,9 +43,12 @@ export type ApTrack = 'foundation' | 'regular' | 'five'
  * Courses with tracks switched on. The routing is generic (every AP exit pool
  * is difficulty-tagged and could honour a mix with a one-line change), but
  * the plan ordering reads the v2 blueprints' units and CED weights, which
- * exist for these four only.
+ * exist for these courses only. Placement reads the course's latest
+ * diagnostic whether it is a v1 form or a v2 sitting, so a course is tracked
+ * from the day it is listed here, before its v2 bank goes live
+ * (AP_DIAG_V2_LIVE); the exit pool must honour the mixes (supportsTrackMix).
  */
-export const AP_TRACK_COURSES = ['ap-chemistry', 'ap-biology', 'ap-physics-1', 'ap-calculus-ab'] as const satisfies readonly ApDiagV2Course[]
+export const AP_TRACK_COURSES = ['ap-chemistry', 'ap-biology', 'ap-physics-1', 'ap-calculus-ab', 'ap-precalculus'] as const satisfies readonly ApDiagV2Course[]
 export type ApTrackCourse = (typeof AP_TRACK_COURSES)[number]
 
 export function isApTrackCourse(courseSlug: string | null | undefined): courseSlug is ApTrackCourse {

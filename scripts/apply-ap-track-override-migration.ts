@@ -6,7 +6,7 @@
  * throwaway DB), so this applies the same DDL as
  * prisma/migrations/20261020000000_ap_track_override by hand. Safe to rerun.
  * Run it BEFORE deploying code that reads the table — apTrackForUser queries
- * it on every lesson load and exit-quiz submission in the four track courses.
+ * it on every lesson load and exit-quiz submission in the AP track courses.
  *
  *   npx tsx scripts/apply-ap-track-override-migration.ts          # local Docker DB (.env.local)
  *   PROD=1 npx tsx scripts/apply-ap-track-override-migration.ts   # production (.env)

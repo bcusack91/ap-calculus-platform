@@ -92,6 +92,17 @@ const NEW_TOPIC_META: Record<string, { description: string; textContent: string 
     textContent:
       '# 📈 Exponential and Logarithmic Data Modeling and Semi-log Plots\n\nFit exponential and logarithmic models to data, judge them with residuals and competing models, and read semi-log plots, where exponential data appears linear (AP Precalculus Topics 2.6, 2.14–2.15).',
   },
+  // AP Exam Preparation section (Wave 3, Oct 2026): order 1–2 under precalc-exam-prep.
+  'precalc-frq-strategies': {
+    description: 'How each of the four 2027 free-response questions is structured and scored (Function Concepts; Modeling a Non-Periodic Context; Modeling a Periodic Context; Symbolic Manipulations), with rubric walkthroughs, point-loss traps and the 35 + 35 minute budget.',
+    textContent:
+      '# 📝 Free-Response Strategies: the Four Question Types\n\nLearn the fixed roles of free-response Questions 1–4 on the AP Precalculus exam, what earns each point (three decimal places, "approximately", units, justification from the model, equivalent forms), the common point losses, and how to budget the two 35-minute parts, with worked mini-FRQs scored against rubrics.',
+  },
+  'precalc-exam-review': {
+    description: 'Cumulative review of Units 1–3 keyed to the exam weights, with AP-style mixed multiple-choice practice, the no-calculator Part A versus calculator Part B split, and pacing (29 questions in 65 minutes, 13 in 40).',
+    textContent:
+      '# 🎓 AP Precalculus Exam Review\n\nA seven-part cumulative review of Polynomial and Rational Functions, Exponential and Logarithmic Functions, and Trigonometric and Polar Functions, with exam-format facts, pacing for Part A and Part B, mixed AP-style questions with tables and graphs, and a final timed set.',
+  },
 }
 
 /** Follow LEGACY_TOPIC_REDIRECTS to a slug that is not itself redirected. */

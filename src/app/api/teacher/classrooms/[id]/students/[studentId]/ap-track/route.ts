@@ -10,7 +10,7 @@ interface Ctx { params: Promise<{ id: string; studentId: string }> }
 
 /**
  * PATCH /api/teacher/classrooms/[id]/students/[studentId]/ap-track
- * Body: { courseSlug: 'ap-chemistry' | 'ap-biology' | 'ap-physics-1' | 'ap-calculus-ab',
+ * Body: { courseSlug: one of AP_TRACK_COURSES (src/lib/ap-track.ts),
  *         track: 'foundation' | 'regular' | 'five' | null }
  *
  * Pins (or, with null, un-pins) the student's AP difficulty track in one

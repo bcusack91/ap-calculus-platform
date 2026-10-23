@@ -134,7 +134,7 @@ export default function ClassPlan({ classroomId }: { classroomId: string }) {
     }
   }
 
-  // AP track override (the four flagship courses): Auto follows the student's
+  // AP track override (the AP track courses, src/lib/ap-track.ts): Auto follows the student's
   // latest diagnostic; a pinned track beats it in both directions. The pin
   // changes the mix of their gating exit quizzes and the order of their plan.
   const setApTrack = async (studentId: string, value: string) => {

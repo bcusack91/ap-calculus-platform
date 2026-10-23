@@ -476,7 +476,8 @@ describe('AP Precalculus: v2 bank', () => {
 
   it('every item carries a canonical PLAN.md topic slug listed under its unit, so a miss recommends a live lesson', () => {
     const canonical = new Set(FIXTURE['ap-precalculus'])
-    expect(canonical.size).toBe(19)
+    // 19 CED-unit lessons + the 2 exam-prep lessons (Wave 3); bank items only ever tag the 19.
+    expect(canonical.size).toBe(21)
     for (const it of bank.items) {
       expect(canonical.has(it.topicSlug), `${it.id} ${it.topicSlug}`).toBe(true)
       expect(bp.units.find((u) => u.id === it.unit)?.topicSlugs, `${it.id} ${it.unit} ${it.topicSlug}`).toContain(it.topicSlug)

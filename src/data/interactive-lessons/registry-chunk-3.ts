@@ -773,42 +773,6 @@ export const registryChunk3: Record<string, InteractiveTopicConfig> = {
       { title: 'Review & Applications', loader: () => import('./prealgebra-intro-variables-part7').then(m => m.preAlgVariablesPart7Data) },
     ]
   },
-  'polynomial-end-behavior-apprecalc': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Degree & Leading Coefficient', loader: () => import('./apprecalc-polynomial-end-behavior-part1').then(m => m.apPrecalcPolyEndPart1Data) },
-      { title: 'End Behavior Rules', loader: () => import('./apprecalc-polynomial-end-behavior-part2').then(m => m.apPrecalcPolyEndPart2Data) },
-      { title: 'Zeros & Multiplicity', loader: () => import('./apprecalc-polynomial-end-behavior-part3').then(m => m.apPrecalcPolyEndPart3Data) },
-      { title: 'Turning Points', loader: () => import('./apprecalc-polynomial-end-behavior-part4').then(m => m.apPrecalcPolyEndPart4Data) },
-      { title: 'Sketching Polynomials', loader: () => import('./apprecalc-polynomial-end-behavior-part5').then(m => m.apPrecalcPolyEndPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apprecalc-polynomial-end-behavior-part6').then(m => m.apPrecalcPolyEndPart6Data) },
-      { title: 'Review & Applications', loader: () => import('./apprecalc-polynomial-end-behavior-part7').then(m => m.apPrecalcPolyEndPart7Data) },
-    ]
-  },
-  'rational-functions-apprecalc': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Domain Restrictions', loader: () => import('./apprecalc-rational-functions-part1').then(m => m.apPrecalcRationalPart1Data) },
-      { title: 'Vertical Asymptotes', loader: () => import('./apprecalc-rational-functions-part2').then(m => m.apPrecalcRationalPart2Data) },
-      { title: 'Horizontal Asymptotes', loader: () => import('./apprecalc-rational-functions-part3').then(m => m.apPrecalcRationalPart3Data) },
-      { title: 'Holes in Graphs', loader: () => import('./apprecalc-rational-functions-part4').then(m => m.apPrecalcRationalPart4Data) },
-      { title: 'Graphing Rational Functions', loader: () => import('./apprecalc-rational-functions-part5').then(m => m.apPrecalcRationalPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apprecalc-rational-functions-part6').then(m => m.apPrecalcRationalPart6Data) },
-      { title: 'Review & Applications', loader: () => import('./apprecalc-rational-functions-part7').then(m => m.apPrecalcRationalPart7Data) },
-    ]
-  },
-  'trigonometric-modeling-apprecalc': {
-    completionDestination: 'competitive',
-    parts: [
-      { title: 'Sine & Cosine Graphs', loader: () => import('./apprecalc-trig-modeling-part1').then(m => m.apPrecalcTrigModelPart1Data) },
-      { title: 'Amplitude & Period', loader: () => import('./apprecalc-trig-modeling-part2').then(m => m.apPrecalcTrigModelPart2Data) },
-      { title: 'Phase Shift', loader: () => import('./apprecalc-trig-modeling-part3').then(m => m.apPrecalcTrigModelPart3Data) },
-      { title: 'Modeling with Sinusoids', loader: () => import('./apprecalc-trig-modeling-part4').then(m => m.apPrecalcTrigModelPart4Data) },
-      { title: 'Inverse Trig Functions', loader: () => import('./apprecalc-trig-modeling-part5').then(m => m.apPrecalcTrigModelPart5Data) },
-      { title: 'Problem-Solving Workshop', loader: () => import('./apprecalc-trig-modeling-part6').then(m => m.apPrecalcTrigModelPart6Data) },
-      { title: 'Review & Applications', loader: () => import('./apprecalc-trig-modeling-part7').then(m => m.apPrecalcTrigModelPart7Data) },
-    ]
-  },
   'hg-intro-geography': {
     completionDestination: 'complete',
     parts: [

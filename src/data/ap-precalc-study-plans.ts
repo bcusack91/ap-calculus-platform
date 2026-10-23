@@ -46,7 +46,9 @@ const sprint: StudyPlanTemplate = {
     ]),
     ...weekTasks(3, [
       { title: 'Polar Coordinates and Polar Functions', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 0 },
+      { title: 'Free-Response Strategies: the Four Question Types', type: 'LESSON', topicSlug: 'precalc-frq-strategies', dayOfWeek: 1 },
       { title: 'Full-Length Practice Exam (42 MCQ + 4 FRQ)', type: 'PRACTICE', dayOfWeek: 2 },
+      { title: 'AP Precalculus Exam Review', type: 'LESSON', topicSlug: 'precalc-exam-review', dayOfWeek: 3 },
       { title: 'Review Weak Areas from the Practice Exam', type: 'CUSTOM', dayOfWeek: 4 },
       { title: 'Final Flashcard Review', type: 'FLASHCARD', dayOfWeek: 5 },
     ]),
@@ -103,7 +105,9 @@ const standard: StudyPlanTemplate = {
     ]),
     ...weekTasks(7, [
       { title: 'Polar Coordinates and Polar Functions', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 0 },
+      { title: 'Free-Response Strategies: the Four Question Types', type: 'LESSON', topicSlug: 'precalc-frq-strategies', dayOfWeek: 1 },
       { title: 'Full-Length Practice Exam (42 MCQ + 4 FRQ)', type: 'PRACTICE', dayOfWeek: 2 },
+      { title: 'AP Precalculus Exam Review', type: 'LESSON', topicSlug: 'precalc-exam-review', dayOfWeek: 3 },
       { title: 'Timed FRQ Set: Q1–Q4 (70 minutes)', type: 'PRACTICE', dayOfWeek: 4 },
       { title: 'Exam Strategy Review', type: 'CUSTOM', dayOfWeek: 5 },
     ]),
@@ -182,8 +186,10 @@ const comprehensive: StudyPlanTemplate = {
       { title: 'Unit 3 Review Flashcards', type: 'FLASHCARD', dayOfWeek: 5 },
     ]),
     ...weekTasks(11, [
-      { title: 'Full-Length Practice Exam #2 (42 MCQ + 4 FRQ)', type: 'PRACTICE', dayOfWeek: 0 },
-      { title: 'Timed FRQ Set: Q1–Q4 (70 minutes)', type: 'PRACTICE', dayOfWeek: 2 },
+      { title: 'Free-Response Strategies: the Four Question Types', type: 'LESSON', topicSlug: 'precalc-frq-strategies', dayOfWeek: 0 },
+      { title: 'Timed FRQ Set: Q1–Q4 (70 minutes)', type: 'PRACTICE', dayOfWeek: 1 },
+      { title: 'AP Precalculus Exam Review', type: 'LESSON', topicSlug: 'precalc-exam-review', dayOfWeek: 2 },
+      { title: 'Full-Length Practice Exam #2 (42 MCQ + 4 FRQ)', type: 'PRACTICE', dayOfWeek: 3 },
       { title: 'Final Flashcard Marathon', type: 'FLASHCARD', dayOfWeek: 4 },
       { title: 'Exam Strategy and Review', type: 'CUSTOM', dayOfWeek: 5 },
     ]),

@@ -25,7 +25,7 @@ export type AttemptScoreSummary = {
   domains: { name: string; correct: number; total: number; percentage: number }[]
 }
 
-const LEVEL_COURSES = ['algebra1', 'algebra2', 'geometry', 'grade8-math', 'prealgebra', 'precalc']
+const LEVEL_COURSES = ['algebra1', 'algebra2', 'geometry', 'grade8-math', 'prealgebra']
 
 export function diagnosticFamily(category: string): DiagnosticFamily {
   const c = category.toLowerCase()

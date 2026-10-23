@@ -301,7 +301,8 @@ describe('student course helpers', () => {
   it('maps DB and hub slugs to their diagnostic', () => {
     expect(courseDiagnosticForSlug('ap-calculus-ab')?.diagnosticHref).toBe('/calcab-diagnostic')
     expect(courseDiagnosticForSlug('organic-chemistry-2')?.key).toBe('ochem')
-    expect(courseDiagnosticForSlug('precalculus')?.diagnosticHref).toBe('/precalc-diagnostic')
+    // The retired non-AP track (a student who once chose it) studies AP Precalculus.
+    expect(courseDiagnosticForSlug('precalculus')?.diagnosticHref).toBe('/ap-precalculus-diagnostic')
     expect(courseDiagnosticForSlug('mcat-prep')?.gated).toBe(true)
     expect(courseDiagnosticForSlug('grade-6-math')).toBeNull()
   })

@@ -109,11 +109,9 @@ describe('POST /api/onboarding — goal routing', () => {
     expect(body.destination).toBe('/topics/place-value')
   })
 
-  it('handles catalog tracks with no DB course row of their own (Precalculus, PSAT)', async () => {
+  it('handles a catalog track with no DB course row of its own (PSAT); the retired non-AP Precalculus track is unknown', async () => {
     mockCourse.mockResolvedValue(null)
-    const pre = await post({ courseSlug: 'precalculus', goalType: 'exam-prep' })
-    expect(pre.status).toBe(200)
-    expect((await pre.json()).destination).toBe('/precalc-diagnostic')
+    expect((await post({ courseSlug: 'precalculus', goalType: 'exam-prep' })).status).toBe(400)
 
     mockCourse.mockResolvedValue({ slug: 'sat-prep', categories: [] })
     const psat = await (await post({ courseSlug: 'psat', goalType: 'exam-prep' })).json()
@@ -147,7 +145,7 @@ describe('diagnostic routes exist', () => {
     const { CLASS_PLAN_COURSES } = await import('@/lib/class-plan-config')
     const slugs = [
       ...CLASS_PLAN_COURSES.map((c) => c.courseSlug).filter((s): s is string => !!s),
-      'precalculus', 'organic-chemistry-1', 'organic-chemistry-2', 'psat',
+      'organic-chemistry-1', 'organic-chemistry-2', 'psat',
     ]
     for (const slug of slugs) {
       const route = diagnosticRouteForCourseSlug(slug)

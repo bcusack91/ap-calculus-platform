@@ -40,7 +40,6 @@ const UNIT_TEST_ROUTES: Record<string, string> = {
   "organic-chemistry-1": "/ochem1-unit-tests",
   "organic-chemistry-2": "/ochem2-unit-tests",
   "pre-algebra": "/prealgebra-unit-tests",
-  "precalculus": "/precalc-unit-tests",
   "psat": "/psat-unit-tests",
   "sat-prep": "/sat-unit-tests",
 }

@@ -6,9 +6,8 @@
  * section describes, plus related tool routes (verified to exist under
  * src/app when this file was generated).
  *
- * Not every diagnostic belongs here: /precalc-diagnostic tests regular
- * Pre-Calculus, which has no Course row, so it has no unit list to show.
- * tests/lib/diagnostic-about.test.ts keeps this file honest.
+ * Every served diagnostic route has an entry; tests/lib/diagnostic-about.test.ts
+ * keeps this file honest.
  */
 export type DiagnosticLink = { href: string; label: string }
 

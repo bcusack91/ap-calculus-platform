@@ -112,7 +112,6 @@ export async function GET() {
         else if (cat.includes('ap-precalc')) passedDiagnosticSlugs.push('ap-precalculus')
         else if (cat.includes('ap-calculus-bc') || cat.includes('calculus-bc')) passedDiagnosticSlugs.push('ap-calculus-bc')
         else if (cat.includes('ap-calculus') || cat.includes('calculus-ab')) passedDiagnosticSlugs.push('ap-calculus-ab')
-        else if (cat.includes('precalc')) passedDiagnosticSlugs.push('precalc')
         else if (cat.includes('ochem') || cat.includes('organic')) passedDiagnosticSlugs.push('ochem')
         else if (cat.includes('sat-math')) passedDiagnosticSlugs.push('sat-math')
         else if (cat.includes('sat-reading') || cat.includes('sat-writing')) passedDiagnosticSlugs.push('sat-reading')
@@ -225,9 +224,6 @@ export async function GET() {
       ),
       'ochem': grantAllCategories || grantedCategories.has('ochem') || uniqueDiagnosticSlugs.includes('ochem') || allProgressSlugs.some(s =>
         s.includes('organic-chemistry') || s.includes('ochem') || s.includes('nomenclature')
-      ),
-      'precalc': grantAllCategories || grantedCategories.has('precalc') || uniqueDiagnosticSlugs.includes('precalc') || allProgressSlugs.some(s =>
-        s.includes('precalc') || s.includes('pre-calculus') || s.includes('trigonometric-functions')
       ),
       'geometry': grantAllCategories || grantedCategories.has('geometry') || uniqueDiagnosticSlugs.includes('geometry') || allProgressSlugs.some(s =>
         s.includes('geometry') || s.includes('triangles') || s.includes('circles-geometry') || s.includes('congruence')

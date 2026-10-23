@@ -77,8 +77,7 @@ export const COURSE_BASELINES = {
     source: 'Section I: 42 MCQ in 90 min = 129 s on the exam; competitive items drop the long scenario, so 90 s.',
   },
   'ap-precalculus': {
-    // Items are short today (median solve ~20 s in the 2026-10-22 audit) and the
-    // same bank is paced 60 s through the non-AP 'precalculus' key; revisit
+    // Items are short today (median solve ~20 s in the 2026-10-22 audit); revisit
     // 90 s after the depth rebuild lands exam-style multi-step items. Owner may overrule.
     seconds: 60,
     label: 'AP Precalculus',
@@ -114,7 +113,6 @@ export const COURSE_BASELINES = {
   'act-reading': { seconds: 50, label: 'ACT Reading', source: 'ACT Reading: 40 questions in 35 min = 53 s.' },
   'act': { seconds: 50, label: 'ACT (mixed)', source: 'Blend of the four ACT sections: 215 questions in 175 min = 49 s.' },
   'mcat': { seconds: 95, label: 'MCAT', source: 'C/P, B/B, P/S: 59 questions in 95 min = 97 s; CARS: 53 in 90 min = 102 s.' },
-  'precalculus': { seconds: 60, label: 'Precalculus', source: 'Non-AP precalculus / Algebra 2 drill pacing (owner baseline).' },
   'algebra-2': { seconds: 60, label: 'Algebra 2', source: 'Non-AP Algebra 2 drill pacing (owner baseline).' },
   'geometry': { seconds: 50, label: 'Geometry', source: 'Geometry drill pacing (owner baseline).' },
   'algebra-1': { seconds: 40, label: 'Algebra 1', source: 'Algebra 1 drill pacing (owner baseline): a one-variable linear equation is a 30-45 s item.' },
@@ -155,8 +153,9 @@ const DIRECT_COURSE_KEYS: Record<string, PaceCourseKey> = {
   'ap-statistics': 'ap-statistics',
   'ap-psychology': 'ap-psychology',
   'ap-precalculus': 'ap-precalculus',
-  'precalc': 'precalculus',
-  'precalculus': 'precalculus',
+  // Retired non-AP Precalculus keys (old match rows) pace as the AP course.
+  'precalc': 'ap-precalculus',
+  'precalculus': 'ap-precalculus',
   'algebra-1': 'algebra-1',
   'algebra1': 'algebra-1',
   'algebra': 'algebra-1',

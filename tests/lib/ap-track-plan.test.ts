@@ -258,6 +258,95 @@ describe('teacher class plan', () => {
   })
 })
 
+/* ------------------------------------------------------------------ */
+/*  AP Precalculus (tracks since 2026-10-23; 30-question sitting)      */
+/* ------------------------------------------------------------------ */
+
+// Precalc CED units (weight midpoints): polynomial-functions / rational-functions 1 (35),
+// logarithmic-functions 2 (33.5), trigonometric-functions 3 (32.5).
+const PRECALC = [
+  { slug: 'trigonometric-functions-precalc', name: 'Trig Functions', priority: 'high' },
+  { slug: 'rational-functions-precalc', name: 'Rational Functions', priority: 'medium' },
+  { slug: 'logarithmic-functions-precalc', name: 'Logs', priority: 'high' },
+  { slug: 'polynomial-functions-precalc', name: 'Polynomials', priority: 'high' },
+]
+const precalcResults = (percentage: number) => ({ totalCorrect: Math.round((percentage / 100) * 30), totalQuestions: 30, percentage, recommendedTopics: PRECALC })
+const PRECALC_ORDER = {
+  regular: ['trigonometric-functions-precalc', 'logarithmic-functions-precalc', 'polynomial-functions-precalc', 'rational-functions-precalc'],
+  foundation: ['polynomial-functions-precalc', 'logarithmic-functions-precalc', 'trigonometric-functions-precalc', 'rational-functions-precalc'],
+  five: ['polynomial-functions-precalc', 'rational-functions-precalc', 'logarithmic-functions-precalc', 'trigonometric-functions-precalc'],
+}
+
+describe('AP Precalculus is a track course on every server surface', () => {
+  let mod: typeof import('@/lib/act-plan')
+  let settingsGET: typeof import('@/app/api/lessons/settings/route').GET
+  let classPlanGET: typeof import('@/app/api/teacher/classrooms/[id]/class-plan/route').GET
+  beforeAll(async () => {
+    mod = await import('@/lib/act-plan')
+    ;({ GET: settingsGET } = await import('@/app/api/lessons/settings/route'))
+    ;({ GET: classPlanGET } = await import('@/app/api/teacher/classrooms/[id]/class-plan/route'))
+  }, 60_000)
+
+  it('plan: an estimated 4 (18/30) or 5 (24/30) is on the 5-track, heaviest unit first', async () => {
+    for (const [percent, score] of [[60, 4], [80, 5]] as const) {
+      db.diagnosticTest.findFirst.mockResolvedValue({ id: 'd', createdAt: DIAG_AT, results: precalcResults(percent) })
+      const p = await mod.buildGenericPlanStatus('u1', 'ap-precalculus')
+      expect(p.recommendedTopics.map((t) => t.slug)).toEqual(PRECALC_ORDER.five)
+      expect(p.apTrack).toMatchObject({ track: 'five', mix: 'five-mix', estimatedScore: score, source: 'diagnostic' })
+    }
+  })
+
+  it('plan: an estimated 3 (15/30) is Regular in priority order; a 2 (10/30) is Foundation, earliest unit first', async () => {
+    db.diagnosticTest.findFirst.mockResolvedValue({ id: 'd', createdAt: DIAG_AT, results: precalcResults(50) })
+    const three = await mod.buildGenericPlanStatus('u1', 'ap-precalculus')
+    expect(three.recommendedTopics.map((t) => t.slug)).toEqual(PRECALC_ORDER.regular)
+    expect(three.apTrack).toMatchObject({ track: 'regular', estimatedScore: 3 })
+    db.diagnosticTest.findFirst.mockResolvedValue({ id: 'd', createdAt: DIAG_AT, results: precalcResults(33) })
+    const two = await mod.buildGenericPlanStatus('u1', 'ap-precalculus')
+    expect(two.recommendedTopics.map((t) => t.slug)).toEqual(PRECALC_ORDER.foundation)
+    expect(two.apTrack).toMatchObject({ track: 'foundation', mix: 'foundation-mix', estimatedScore: 2 })
+  })
+
+  it('plan: the teacher override wins, read for ap-precalculus', async () => {
+    db.diagnosticTest.findFirst.mockResolvedValue({ id: 'd', createdAt: DIAG_AT, results: precalcResults(80) })
+    db.apTrackOverride.findUnique.mockResolvedValue({ track: 'foundation' })
+    const p = await mod.buildGenericPlanStatus('u1', 'ap-precalculus')
+    expect(p.recommendedTopics.map((t) => t.slug)).toEqual(PRECALC_ORDER.foundation)
+    expect(p.apTrack).toMatchObject({ track: 'foundation', source: 'teacher', override: 'foundation', estimatedScore: 5 })
+    expect(db.apTrackOverride.findUnique.mock.calls[0][0].where).toEqual({ userId_courseSlug: { userId: 'u1', courseSlug: 'ap-precalculus' } })
+  })
+
+  it('lesson settings: the exit-quiz mix comes from the ap-precalculus-diagnostic prefix (v1 forms and v2 sittings alike)', async () => {
+    db.diagnosticTest.findFirst.mockResolvedValue({ results: precalcResults(60) })
+    const req = new Request('http://localhost/api/lessons/settings?courseSlug=ap-precalculus')
+    expect((await (await settingsGET(req)).json()).apTrack).toEqual({ track: 'five', label: '5-track', mix: 'five-mix', source: 'diagnostic' })
+    expect(db.diagnosticTest.findFirst.mock.calls[0][0].where).toEqual({ userId: 'u1', category: { startsWith: 'ap-precalculus-diagnostic' } })
+    db.apTrackOverride.findUnique.mockResolvedValue({ track: 'regular' })
+    expect((await (await settingsGET(req)).json()).apTrack).toEqual({ track: 'regular', label: 'Regular track', mix: null, source: 'teacher' })
+  })
+
+  it('teacher class plan: each student\'s track and override for ?course=ap-precalculus', async () => {
+    db.classroomMember.findMany.mockResolvedValue([
+      { userId: 'a', nickname: null, user: { name: 'Ann' } },
+      { userId: 'b', nickname: null, user: { name: 'Ben' } },
+      { userId: 'c', nickname: null, user: { name: 'Cal' } },
+    ])
+    db.diagnosticTest.findMany.mockResolvedValue([
+      { id: 'da', userId: 'a', createdAt: new Date(), results: precalcResults(33) },
+      { id: 'db', userId: 'b', createdAt: new Date(), results: precalcResults(60) },
+    ])
+    db.apTrackOverride.findMany.mockResolvedValue([{ userId: 'c', track: 'five' }])
+    const { NextRequest } = await import('next/server')
+    const body = await (await classPlanGET(new NextRequest('http://localhost/api/teacher/classrooms/c1/class-plan?course=ap-precalculus'), { params: Promise.resolve({ id: 'c1' }) })).json()
+    const track = (name: string) => body.students.find((s: { name: string }) => s.name === name).apTrack
+    expect(track('Ann')).toEqual({ track: 'foundation', label: 'Foundation track', source: 'diagnostic', override: null })
+    expect(track('Ben')).toEqual({ track: 'five', label: '5-track', source: 'diagnostic', override: null })
+    expect(track('Cal')).toEqual({ track: 'five', label: '5-track', source: 'teacher', override: 'five' })
+    expect(body.course).toMatchObject({ key: 'ap-precalculus', label: 'AP Precalculus', courseSlug: 'ap-precalculus' })
+    expect(db.apTrackOverride.findMany.mock.calls[0][0].where).toEqual({ userId: { in: ['a', 'b', 'c'] }, courseSlug: 'ap-precalculus' })
+  })
+})
+
 describe('override reads fail soft', () => {
   it('a failing ApTrackOverride query logs and falls back to the diagnostic placement', async () => {
     const mod = await import('@/lib/ap-track-server')

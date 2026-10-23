@@ -44,7 +44,6 @@ async function getSatRwConventions(count?: number): Promise<OptionQuestion[]> { 
 async function getActMathQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/act-math-bank'); return m.getActMathQuestions(count ?? 10) }
 async function getActScienceQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/act-science-bank'); return m.getActScienceQuestions(count ?? 10) }
 async function getOChemQuestions(count?: number, _topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ochem-bank'); return m.getOChemQuestions(count ?? 10) }
-async function getPreCalcQuestions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/precalc-bank'); return m.getPreCalcQuestions(count ?? 10, topicSlug) }
 async function getApPrecalcQuestions(count?: number, topicSlug?: string | readonly string[]): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/precalc-bank'); return m.getApPrecalcQuestions(count ?? 10, topicSlug) }
 async function getGeometryQuestions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/geometry-bank'); return m.getGeometryQuestions(count ?? 10, topicSlug) }
 async function getApCalculusQuestions(count?: number, topicSlug?: string): Promise<OptionQuestion[]> { const m = await import('@/data/competitive-questions/ap-calculus-bank'); return m.getApCalculusQuestions(count ?? 10, topicSlug) }
@@ -563,9 +562,9 @@ export const COURSE_GROUPING_LESSONS: Record<string, 'ap-calculus-ab' | 'ap-calc
  * the lesson covers; a lesson spanning several bank topics lists them all.
  * tests/lib/ap-precalc-competitive.test.ts probes every AP fixture slug.
  *
- * AP Precalculus goes through getApPrecalcQuestions, the on-exam view of the
- * precalc bank it shares with the non-AP course. 'the-unit-circle' is left
- * out on purpose: it serves the click-the-position unit-circle game.
+ * AP Precalculus goes through getApPrecalcQuestions (precalc-bank.ts).
+ * 'the-unit-circle' is left out on purpose: it serves the click-the-position
+ * unit-circle game.
  */
 type ApLessonBankCourse =
   | 'ap-precalculus' | 'ap-calculus-ab' | 'ap-chemistry' | 'ap-biology' | 'ap-human-geo'
@@ -1243,9 +1242,9 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     }
   }
 
-  // AP Precalculus sub-topic routing
-  if (resolvedTopicSlug && resolvedTopicSlug !== 'precalc' && resolvedTopicSlug !== 'ap-precalculus') {
-    const precalcTopicQuestions = await getPreCalcQuestions(totalQuestions, resolvedTopicSlug)
+  // AP Precalculus sub-topic routing (bank topic slugs; the on-exam view only)
+  if (resolvedTopicSlug && resolvedTopicSlug !== 'ap-precalculus') {
+    const precalcTopicQuestions = await getApPrecalcQuestions(totalQuestions, resolvedTopicSlug)
     if (precalcTopicQuestions.length > 0 && precalcTopicQuestions.every(q => q.topicSlug === resolvedTopicSlug)) {
       return (precalcTopicQuestions).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1417,7 +1416,6 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     'act-math': getActMathQuestions,
     'act-science': getActScienceQuestions,
     'ochem': getOChemQuestions,
-    'precalc': getPreCalcQuestions,
     'geometry': getGeometryQuestions,
     'ap-calculus-ab': getApCalculusQuestions,
     'ap-physics2': getApPhysics2Questions,
@@ -1444,7 +1442,6 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     'ap-chemistry': getApChemistryQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
     'ap-physics1': getApPhysics1Questions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
     'ap-biology': getApBiologyQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
-    'precalc': getPreCalcQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
     'ap-precalculus': getApPrecalcQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
     'ap-calculus-ab': getApCalculusQuestions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,
     'ap-physics2': getApPhysics2Questions as unknown as (count: number, topicSlug?: string) => Promise<Array<{ topicSlug: string } & OptionQuestion>>,

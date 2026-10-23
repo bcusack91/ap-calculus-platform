@@ -156,10 +156,6 @@ const slugAliases: Record<string, string> = {
   'act-pre-algebra-elementary': 'act-pre-algebra-basics-act',
   'act-algebra-functions': 'act-algebra-equations-act',
   'act-geometry-trigonometry': 'act-plane-geometry-act',
-  // AP Precalculus
-  'polynomial-functions-end-behavior-precalc': 'polynomial-functions-precalc',
-  'logarithmic-functions-equations-precalc': 'logarithmic-functions-precalc',
-  'trigonometric-identities': 'trigonometric-identities-precalc',
   // SAT — wire real Topic slugs to their interactive lessons so /topics/<slug>
   // loads the lesson (the other 11 SAT topics already match a registry key).
   'sat-central-ideas-details': 'sat-reading-evidence-sat',
@@ -211,19 +207,6 @@ const slugAliases: Record<string, string> = {
   'physics-c-faraday-lenz': 'em-induction-physics-c-em',
   'physics-c-inductance-rl-circuits': 'inductance-rl-physics-c-em',
   'physics-c-maxwell-equations': 'maxwell-equations-physics-c-em',
-  // AP Precalculus — generic + course topic slugs → precalc lesson suites
-  'polynomial-functions-end-behavior': 'polynomial-functions-precalc',
-  'solving-polynomial-inequalities': 'polynomial-functions-precalc',
-  'exponential-functions-growth-decay': 'exponential-functions-precalc',
-  'solving-exponential-logarithmic-equations': 'logarithmic-functions-precalc',
-  'logarithmic-exponential-models': 'exponential-logarithmic-modeling-precalc',
-  // 'graphing-trig-functions' now has its own 7-part suite (registry-extra, Oct 2026); an alias here would shadow it.
-  'composite-inverse-functions': 'function-composition-inverses-precalc',
-  'rational-functions-asymptotes-precalc': 'rational-functions-precalc',
-  'exponential-functions-modeling-precalc': 'exponential-functions-precalc',
-  'transformations-functions-precalc': 'transformations-precalc',
-  'unit-circle-radian-measure': 'the-unit-circle',
-  'inverse-trig-functions': 'inverse-trig-functions-precalc',
   // Calculus — generic topic slugs → AB/BC suites (connects orphaned suites)
   'implicit-differentiation': 'implicit-differentiation-calcab',
   'related-rates': 'related-rates-calcab',

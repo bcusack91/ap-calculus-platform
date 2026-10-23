@@ -744,6 +744,8 @@ const quizLoaders: Record<string, QuizLoader> = {
   'solving-trig-equations': () => import('./ap-precalculus'),
   'sequences-series-precalc': () => import('./ap-precalculus'),
   'rates-of-change-precalc': () => import('./ap-precalculus'),
+  'precalc-frq-strategies': () => import('./ap-precalculus'),
+  'precalc-exam-review': () => import('./ap-precalculus'),
 
   // ═══════════════════════════════════════════════════
   // Grade 8 Math Exit Quizzes

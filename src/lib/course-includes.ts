@@ -325,10 +325,11 @@ export const PRECALC_CATEGORIES: CourseCategory[] = [
     course: 'ap-precalculus',
     order: 4,
     name: 'AP Exam Preparation',
-    // Wave 3 (PLAN.md G4): precalc-frq-strategies, precalc-exam-review. The
-    // section is created empty by the restructure and stays hidden (every
-    // layout consumer drops a section with no rows) until the lessons land.
-    topics: [],
+    // Wave 3 (PLAN.md G4), Oct 2026: the restructure creates these two rows.
+    topics: [
+      'precalc-frq-strategies', // the four 2027 FRQ roles (Q1-Q4)
+      'precalc-exam-review', // cumulative Units 1-3 review, Part A/B pacing
+    ],
   },
 ]
 
@@ -353,6 +354,8 @@ export const PRECALC_TOPIC_TITLES: Record<string, string> = {
   'solving-trig-equations': 'Solving Trigonometric Equations and Inequalities',
   'trigonometric-identities-precalc': 'Trigonometric Identities and Equivalent Forms',
   'polar-coordinates-precalc': 'Polar Coordinates and Polar Functions',
+  'precalc-frq-strategies': 'Free-Response Strategies: the Four Question Types',
+  'precalc-exam-review': 'AP Precalculus Exam Review',
 }
 
 /**

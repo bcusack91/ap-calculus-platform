@@ -10,7 +10,7 @@ export const config: FullLengthExamConfig = {
   ctaLinks: [
     { href: '/ap-precalculus-diagnostic', label: 'Diagnostic Test' },
     { href: '/ap-precalc-frq', label: 'FRQ Practice' },
-    { href: '/precalc-daily-question', label: 'Daily Question' },
+    { href: '/ap-precalculus-daily-question', label: 'Daily Question' },
   ],
   accent: 'indigo',
   totalTimeMinutes: 175, // 105 + 70

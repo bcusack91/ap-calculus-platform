@@ -53,7 +53,6 @@ const COURSE_SLUG_ROUTE_PREFIXES: Record<string, string[]> = {
   'organic-chemistry-1': ['ochem1'],
   'organic-chemistry-2': ['ochem2'],
   'pre-algebra': ['prealgebra'],
-  'precalculus': ['precalc'],
   'psat': ['psat'], // identity — listed so the prefix reads as verified, not missing
   'sat-prep': ['sat'],
 }

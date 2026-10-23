@@ -25,6 +25,7 @@ import { apChemQuestionPool } from '@/data/exit-quizzes/ap-chemistry'
 import { apPhysics1QuestionPool } from '@/data/exit-quizzes/ap-physics-1'
 import { calcABQuestionPool } from '@/data/exit-quizzes/ap-calculus-ab'
 import { apBioQuestionPool } from '@/data/exit-quizzes/ap-biology'
+import { apPrecalcQuestionPool } from '@/data/exit-quizzes/ap-precalculus'
 import { relevantPool } from '@/data/exit-quizzes/relevance-fallback'
 import { regradeExitQuizAttempt, regradeExitQuizSeeded } from '@/lib/exit-quiz-regrade'
 import { exitReviewItems } from '@/lib/question-sources/exit'
@@ -135,11 +136,38 @@ describe('AP track placement', () => {
     expect(isTrackMix('easy') || isTrackMix('hard') || isTrackMix(undefined)).toBe(false)
   })
 
-  it('is switched on for the four flagships only', () => {
-    expect([...AP_TRACK_COURSES].sort()).toEqual(['ap-biology', 'ap-calculus-ab', 'ap-chemistry', 'ap-physics-1'])
+  it('is switched on for the four flagships and AP Precalculus only', () => {
+    expect([...AP_TRACK_COURSES].sort()).toEqual(['ap-biology', 'ap-calculus-ab', 'ap-chemistry', 'ap-physics-1', 'ap-precalculus'])
+    expect(isApTrackCourse('ap-precalculus')).toBe(true)
+    expect(isApTrackCourse('ap-calculus-bc')).toBe(false)
     expect(isApTrackCourse('ap-statistics')).toBe(false)
     expect(isApTrackCourse('sat-prep')).toBe(false)
     expect(isApTrackCourse(undefined)).toBe(false)
+  })
+
+  it('AP Precalculus (30-question sitting, v1 form or v2 bank): an estimated 4 or 5 is on the 5-track, a 3 Regular, a 1–2 Foundation', () => {
+    const seen = new Set<string>()
+    for (let c = 0; c <= 30; c++) {
+      const shown = apScoreRange(c, 30).score
+      const placed = apTrackFromResults({ totalCorrect: c, totalQuestions: 30, percentage: Math.round((c / 30) * 100) })
+      expect(placed.estimatedScore).toBe(shown)
+      expect(placed.track).toBe(shown <= 2 ? 'foundation' : shown >= 4 ? 'five' : 'regular')
+      seen.add(`${shown}:${placed.track}`)
+    }
+    expect([...seen].sort()).toEqual(['1:foundation', '2:foundation', '3:regular', '4:five', '5:five'])
+    // The boundaries on 30 questions (percent rounded, as the results screen shows it):
+    // 13/30 = 43% is the first Regular, 17/30 = 57% the first 5-track.
+    expect(apTrackFromResults({ totalCorrect: 12, totalQuestions: 30 })).toMatchObject({ track: 'foundation', estimatedScore: 2 })
+    expect(apTrackFromResults({ totalCorrect: 13, totalQuestions: 30 })).toMatchObject({ track: 'regular', estimatedScore: 3 })
+    expect(apTrackFromResults({ totalCorrect: 16, totalQuestions: 30 })).toMatchObject({ track: 'regular', estimatedScore: 3 })
+    expect(apTrackFromResults({ totalCorrect: 17, totalQuestions: 30 })).toMatchObject({ track: 'five', estimatedScore: 4, mix: 'five-mix' })
+    expect(apTrackFromResults({ totalCorrect: 24, totalQuestions: 30 })).toMatchObject({ track: 'five', estimatedScore: 5, mix: 'five-mix' })
+    // A v2 sitting stored under ap-precalculus-diagnostic-v2 reads the same way.
+    const v2 = { version: 2, totalCorrect: 18, totalQuestions: 30, percentage: 60, estimatedAPScore: 4, scoreRange: { low: 3, high: 4 } }
+    expect(apTrackFromResults(v2)).toMatchObject({ track: 'five', estimatedScore: 4, source: 'diagnostic' })
+    // The teacher's pin still wins in both directions.
+    expect(apTrackPlacement(v2, 'foundation')).toMatchObject({ track: 'foundation', mix: 'foundation-mix', source: 'teacher', estimatedScore: 4 })
+    expect(apTrackPlacement({ totalCorrect: 6, totalQuestions: 30 }, 'five')).toMatchObject({ track: 'five', mix: 'five-mix', source: 'teacher', estimatedScore: 1 })
   })
 })
 
@@ -227,6 +255,8 @@ const FLAGSHIP_TOPICS: { course: string; topic: string; pool: PoolItem[] }[] = [
   { course: 'ap-calculus-ab', topic: 'volumes-of-revolution-calcab', pool: calcABQuestionPool },
   // Every water-properties item carries an authored tag, so apBioQuestionPool's tier is the real one.
   { course: 'ap-biology', topic: 'water-properties', pool: apBioQuestionPool },
+  // AP Precalculus (tracks since 2026-10-23): 14 easy / 31 medium / 16 hard on this topic.
+  { course: 'ap-precalculus', topic: 'rational-functions-precalc', pool: apPrecalcQuestionPool },
 ]
 
 describe('tracked exit quizzes on the AP flagship pools', () => {
@@ -360,5 +390,18 @@ describe('orderTopicsForTrack', () => {
     expect(order('five', 'ap-statistics')).toEqual(topics.map((t) => t.slug))
     const withUnknown = [{ slug: 'not-a-topic', priority: 'high' }, ...topics]
     expect(orderTopicsForTrack('ap-chemistry', withUnknown, 'foundation').map((t) => t.slug).at(-2)).toBe('not-a-topic')
+  })
+
+  it('AP Precalculus orders by its three CED units (weight midpoints 35 / 33.5 / 32.5)', () => {
+    const precalc = [
+      { slug: 'trigonometric-functions-precalc', priority: 'high' }, // unit 3
+      { slug: 'rational-functions-precalc', priority: 'medium' }, // unit 1
+      { slug: 'logarithmic-functions-precalc', priority: 'high' }, // unit 2
+      { slug: 'polynomial-functions-precalc', priority: 'high' }, // unit 1
+    ]
+    const slugs = (track: 'foundation' | 'regular' | 'five') => orderTopicsForTrack('ap-precalculus', precalc, track).map((t) => t.slug)
+    expect(slugs('regular')).toEqual(precalc.map((t) => t.slug))
+    expect(slugs('foundation')).toEqual(['polynomial-functions-precalc', 'logarithmic-functions-precalc', 'trigonometric-functions-precalc', 'rational-functions-precalc'])
+    expect(slugs('five')).toEqual(['polynomial-functions-precalc', 'rational-functions-precalc', 'logarithmic-functions-precalc', 'trigonometric-functions-precalc'])
   })
 })

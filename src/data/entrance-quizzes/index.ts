@@ -412,7 +412,7 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'inverse-trig': () => import('./pre-calculus-intro'),
   'arithmetic-sequences': () => import('./pre-calculus-intro'),
   'geometric-sequences': () => import('./pre-calculus-intro'),
-  'polar-coordinates': () => import('./polar-coordinates'),
+  'polar-coordinates': () => import('./polar-coordinates-precalc'), // retired → target
   // AP Precalculus — CED-aligned per-topic entrance quizzes
   // Unit 1: Polynomial & Rational Functions
   'polynomial-functions-precalc': () => import('./polynomial-functions-precalc'),
@@ -433,6 +433,9 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   // Rates of change are CED Topics 1.1-1.4; this shared file is replaced in the
   // entrance-quiz rebuild (its other Unit 4 slugs retired, Oct 2026).
   'rates-of-change-precalc': () => import('./rates-of-change-precalc'),
+  // AP Exam Preparation (Wave 3, Oct 2026)
+  'precalc-frq-strategies': () => import('./precalc-frq-strategies'),
+  'precalc-exam-review': () => import('./precalc-exam-review'),
   'hg-intro-geography': () => import('./hg-intro-geography'),
   'hg-spatial-concepts': () => import('./hg-spatial-concepts'),
   'hg-population-distribution': () => import('./hg-population-distribution'),
@@ -799,13 +802,13 @@ const entranceQuizLoaders: Record<string, EntranceQuizLoader> = {
   'exponential-functions-growth-decay': () => import('./exponential-functions-precalc'),
   'solving-exponential-logarithmic-equations': () => import('./logarithmic-functions-precalc'),
   'logarithmic-exponential-models': () => import('./exponential-logarithmic-modeling-precalc'),
-  'degrees-and-radians': () => import('./degrees-and-radians'),
+  'degrees-and-radians': () => import('./trigonometric-functions-precalc'), // retired → target
   'unit-circle-radian-measure': () => import('./the-unit-circle'),
   'trigonometric-identities': () => import('./trigonometric-identities-precalc'),
   'the-unit-circle': () => import('./the-unit-circle'),
-  'sum-difference-identities': () => import('./sum-difference-identities'),
+  'sum-difference-identities': () => import('./trigonometric-identities-precalc'), // retired → target
   'graphing-trig-functions': () => import('./graphing-trig-functions'),
-  'double-half-angle-identities': () => import('./double-half-angle-identities'),
+  'double-half-angle-identities': () => import('./trigonometric-identities-precalc'), // retired → target
   'solving-trig-equations': () => import('./solving-trig-equations'),
   'inverse-trig-functions': () => import('./inverse-trig-functions-precalc'),
   'hg-industrialization-development': () => import('./hg-industrialization'),

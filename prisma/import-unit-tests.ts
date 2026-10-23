@@ -8,7 +8,12 @@
  *
  * Idempotent: refreshes payload from the static source, preserves admin status.
  *
+ * Stale rows: afterwards, every unit-test row of a course this script no
+ * longer imports (a retired course, RETIRED_COURSES) is set to ARCHIVED
+ * (reversible) and listed. Rows of other courses are listed and left alone.
+ *
  *   npx tsx prisma/import-unit-tests.ts
+ *   npx tsx prisma/import-unit-tests.ts --dry-run   # print what would change
  */
 import type { Prisma } from '@prisma/client'
 import { prisma } from '../src/lib/prisma'
@@ -46,7 +51,6 @@ import { MCAT_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/mcat'
 import { OCHEM_1_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/organic-chemistry-1'
 import { OCHEM_2_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/organic-chemistry-2'
 import { PRE_ALGEBRA_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/pre-algebra'
-import { PRECALCULUS_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/precalculus'
 import { PSAT_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/psat'
 import { SAT_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/sat'
 
@@ -83,15 +87,36 @@ const CONFIGS = [
   OCHEM_1_UNIT_TESTS_CONFIG,
   OCHEM_2_UNIT_TESTS_CONFIG,
   PRE_ALGEBRA_UNIT_TESTS_CONFIG,
-  PRECALCULUS_UNIT_TESTS_CONFIG,
   PSAT_UNIT_TESTS_CONFIG,
   SAT_UNIT_TESTS_CONFIG,
 ]
 
+/**
+ * Courses whose unit-test pages were retired (their routes 308 to another
+ * course, src/lib/retired-route-redirects.ts). No config any more, but their
+ * rows must be ARCHIVED rather than left PUBLISHED.
+ *   precalculus — the non-AP Precalculus track (Oct 2026), row key "units".
+ */
+const RETIRED_COURSES = ['precalculus']
+
 async function main() {
+  const dryRun = process.argv.includes('--dry-run')
+  const type = CONTENT_TYPES.unitTestUnits
+  const managedCourses = new Set([...CONFIGS.map((c) => c.courseSlug), ...RETIRED_COURSES])
+  const existing = await prisma.contentItem.findMany({
+    where: { type },
+    select: { id: true, courseSlug: true, key: true, status: true, updatedAt: true },
+  })
+  const existingOf = new Set(existing.map((r) => `${r.courseSlug}/${r.key}`))
+
   let created = 0
   let updated = 0
   for (const config of CONFIGS) {
+    if (dryRun) {
+      if (existingOf.has(`${config.courseSlug}/${UNIT_TEST_UNITS_KEY}`)) updated++
+      else created++
+      continue
+    }
     const payload = config.units as unknown as Prisma.InputJsonValue
     const res = await prisma.contentItem.upsert({
       where: {
@@ -114,7 +139,23 @@ async function main() {
     if (res.createdAt.getTime() === res.updatedAt.getTime()) created++
     else updated++
   }
-  console.log(`Unit-test units imported across ${CONFIGS.length} courses — created: ${created}, updated: ${updated}`)
+
+  // Stale rows: a managed course that is no longer imported (a retired course).
+  const importedCourses = new Set(CONFIGS.map((c) => c.courseSlug))
+  const stale = existing.filter((r) => managedCourses.has(r.courseSlug) && !importedCourses.has(r.courseSlug) && r.status !== 'ARCHIVED')
+  const unmanaged = existing.filter((r) => !managedCourses.has(r.courseSlug))
+  if (stale.length && !dryRun) {
+    await prisma.contentItem.updateMany({ where: { id: { in: stale.map((r) => r.id) } }, data: { status: 'ARCHIVED' } })
+  }
+
+  const verb = dryRun ? 'would be ' : ''
+  console.log(`${dryRun ? '[dry run] ' : ''}Unit-test units across ${CONFIGS.length} courses — ${verb}created: ${created}, ${verb}updated: ${updated}`)
+  console.log(`Stale rows ${verb}archived: ${stale.length}`)
+  for (const r of stale) console.log(`  archived ${r.courseSlug}/${r.key} (was ${r.status}, updated ${r.updatedAt.toISOString()})`)
+  if (unmanaged.length) {
+    console.log(`Rows of courses this script does not manage, left alone: ${unmanaged.length}`)
+    for (const r of unmanaged) console.log(`  ${r.courseSlug}/${r.key} (${r.status})`)
+  }
 }
 
 main()

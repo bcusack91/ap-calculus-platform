@@ -25,15 +25,12 @@ import {
   scoreAPPrecalculusDiagnostic,
   type DiagnosticFormNumber,
 } from '@/data/ap-precalculus-diagnostic'
-import { PRECALC_DOMAINS, generatePreCalcDiagnosticTest } from '@/data/precalculus-diagnostic'
 import { PRECALC_CATEGORIES, PRECALC_TOPIC_TITLES } from '@/lib/course-includes'
 import { CLASS_PLAN_COURSES } from '@/lib/class-plan-config'
 import { AP_PRECALC_PLANS, config as apPlanConfig } from '@/data/ap-precalc-study-plans'
-import { PRECALCULUS_PLANS, config as nonApPlanConfig } from '@/data/precalculus-study-plans'
 import { TOPIC_SLUGS as DAILY_SLUGS } from '@/data/ap-precalculus-daily-question'
 import { hasExitQuiz } from '@/data/exit-quizzes'
 import { AP_PRECALCULUS_UNITS, AP_PRECALCULUS_UNIT_ASSIGNMENT, AP_PRECALCULUS_UNIT_TESTS_CONFIG } from '@/data/unit-tests/ap-precalculus'
-import { PRECALCULUS_UNITS, PRECALCULUS_UNIT_TESTS_CONFIG } from '@/data/unit-tests/precalculus'
 import { config as practiceConfig } from '@/data/ap-precalc-practice/config'
 import { getPrecalcFRQs } from '@/data/ap-precalc-frq/questions'
 import slugsByCourse from '../fixtures/ap-lesson-topic-slugs.json'
@@ -158,18 +155,6 @@ describe('AP Precalculus v1 diagnostic', () => {
   })
 })
 
-describe('Precalculus (non-AP) diagnostic points at the canonical lessons', () => {
-  it('every domain fallback and item slug is canonical, and no option depends on letter order', () => {
-    for (const d of PRECALC_DOMAINS) for (const s of d.topicSlugs) expect(CANONICAL.has(s), `${d.id}: ${s}`).toBe(true)
-    for (const form of [1, 2, 3] as const) {
-      for (const q of generatePreCalcDiagnosticTest(form).questions) {
-        expect(CANONICAL.has(q.topicSlug), q.topicSlug).toBe(true)
-        expect(/both [a-d] and|all of the above/i.test(q.options.join('|')), q.question.slice(0, 50)).toBe(false)
-      }
-    }
-  })
-})
-
 describe('study plans personalize from the diagnostic the page actually stores', () => {
   const classPlan = (key: string) => CLASS_PLAN_COURSES.find((c) => c.key === key)!
   const routePrefix = (route: string) => {
@@ -183,10 +168,12 @@ describe('study plans personalize from the diagnostic the page actually stores',
     expect(classPlan('ap-precalculus').categoryPrefix).toBe('ap-precalculus-diagnostic')
   })
 
-  it('non-AP route and selector use the precalc-diagnostic prefix', () => {
-    expect(routePrefix('precalculus-study-plans')).toBe(classPlan('precalc').categoryPrefix)
-    expect(nonApPlanConfig.diagnosticPrefix).toBe(classPlan('precalc').categoryPrefix)
-    expect(classPlan('precalc').categoryPrefix).toBe('precalc-diagnostic')
+  it('the retired non-AP track has no class-plan key, route or template any more', () => {
+    expect(CLASS_PLAN_COURSES.find((c) => c.key === 'precalc')).toBeUndefined()
+    for (const dir of ['precalculus-study-plans', 'precalc-study-plans']) {
+      expect(fs.existsSync(path.join(ROOT, 'src/app/api', dir)), dir).toBe(false)
+    }
+    expect(fs.existsSync(path.join(ROOT, 'src/data/precalculus-study-plans.ts'))).toBe(false)
   })
 
   it('every study-plan route for a class-plan course uses that course\'s diagnostic prefix', () => {
@@ -228,9 +215,6 @@ describe('study plans personalize from the diagnostic the page actually stores',
     }
   })
 
-  it('non-AP templates only point at canonical lessons', () => {
-    for (const plan of PRECALCULUS_PLANS) for (const t of plan.tasks) if (t.topicSlug) expect(CANONICAL.has(t.topicSlug), `${plan.id}: ${t.topicSlug}`).toBe(true)
-  })
 })
 
 describe('AP Precalculus daily question', () => {
@@ -259,12 +243,10 @@ describe('AP Precalculus unit tests', () => {
     for (const q of AP_PRECALCULUS_UNIT_TESTS_CONFIG.pool) expect(UNIT4.test(q.question), q.question.slice(0, 60)).toBe(false)
   })
 
-  it('non-AP unit tests are the same three units and serve no Unit 4 bank topics', () => {
-    expect(PRECALCULUS_UNITS.map((u) => u.id)).toEqual(['polynomial-rational', 'exp-log', 'trig-polar'])
-    for (const u of PRECALCULUS_UNITS) for (const s of u.topicSlugs) expect(CANONICAL.has(s), s).toBe(true)
-    const slugs = new Set(PRECALCULUS_UNIT_TESTS_CONFIG.pool.map((q) => q.topicSlug))
-    for (const s of ['vectors-in-two-dimensions', 'matrices-and-determinants', 'systems-of-equations-matrices', 'parametric-equations-motion', 'law-of-sines-and-cosines']) expect(slugs.has(s), s).toBe(false)
-    for (const u of PRECALCULUS_UNITS) expect(PRECALCULUS_UNIT_TESTS_CONFIG.pool.filter((q) => q.domain === u.id).length, u.id).toBeGreaterThanOrEqual(24)
+  it('the retired non-AP unit tests are gone (route, config, generated lookup)', () => {
+    expect(fs.existsSync(path.join(ROOT, 'src/app/precalc-unit-tests'))).toBe(false)
+    expect(fs.existsSync(path.join(ROOT, 'src/data/unit-tests/precalculus.ts'))).toBe(false)
+    expect(fs.readFileSync(path.join(ROOT, 'src/lib/unit-tests/course-units.ts'), 'utf8')).not.toMatch(/"precalculus":/)
   })
 })
 
