@@ -18,39 +18,14 @@ import {
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
 import { signUpUrl } from '@/lib/auth-redirect'
+import { gradeKeywordRubric } from '@/lib/frq-keyword-grade'
 
 /* ------------------------------------------------------------------ */
 /*  Grading helper                                                     */
 /* ------------------------------------------------------------------ */
 
-/**
- * Word-start keyword match, so 'tea' does not match "instead" and 'war' does not match
- * "toward"; prefix stems still match. A keyword that starts with punctuation or a space
- * is matched as a plain substring.
- */
-function keywordMatches(text: string, keyword: string): boolean {
-  const kw = keyword.toLowerCase()
-  if (!/^[a-z0-9]/.test(kw)) return text.includes(kw)
-  const escaped = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-  // A letter-initial keyword may follow a digit ("8mg/l" matches "mg/l"), but
-  // never another letter, so "tea" does not score inside "instead".
-  const before = /^[a-z]/.test(kw) ? '[^a-z]' : '[^a-z0-9]'
-  return new RegExp('(^|' + before + ')' + escaped).test(text)
-}
-
-function gradeResponse(
-  response: string,
-  rubric: FRQRubricItem[]
-): { pointsEarned: number; breakdown: { earned: boolean; item: FRQRubricItem }[] } {
-  const lower = response.toLowerCase().replace(/\s+/g, ' ')
-  const breakdown = rubric.map((item) => {
-    const earned = item.keywords.some((kw) => keywordMatches(lower, kw))
-    return { earned, item }
-  })
-  return {
-    pointsEarned: breakdown.filter((b) => b.earned).reduce((s, b) => s + b.item.points, 0),
-    breakdown,
-  }
+function gradeResponse(response: string, rubric: FRQRubricItem[]) {
+  return gradeKeywordRubric(response, rubric)
 }
 
 function formatTime(seconds: number): string {

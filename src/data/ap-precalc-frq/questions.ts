@@ -15,7 +15,10 @@ import { shuffleArray } from '@/lib/shuffle-options'
 export interface FRQRubricItem {
   points: number
   description: string
+  /** Any one of these earns the line (the grader normalizes markdown, LaTeX `$`, and minus signs). */
   keywords: string[]
+  /** "Both components needed" lines: each further group must ALSO match (any-of within a group). */
+  requiresAll?: { keywords: string[] }[]
 }
 
 export interface FRQPart {
@@ -871,6 +874,7 @@ const precalcFRQs: PrecalcFRQ[] = [
             points: 1,
             description: '(i) Graphing $g$ gives three real zeros: $x \\approx -1.491$, $x \\approx 1.657$, and $x \\approx 2.834$. All three are required.',
             keywords: ['-1.491', '−1.491', '-1.490', '−1.490', '-1.49', '−1.49'],
+            requiresAll: [{ keywords: ['1.657', '1.656', '1.66'] }, { keywords: ['2.834', '2.83'] }],
           },
           {
             points: 1,
@@ -933,6 +937,7 @@ const precalcFRQs: PrecalcFRQ[] = [
             points: 1,
             description: '(i) $Q(x) = -0.350x^2 + 1.670x + 0.960$ (all three constants are needed).',
             keywords: ['-0.35', '−0.35', '- 0.35', '− 0.35'],
+            requiresAll: [{ keywords: ['1.67'] }, { keywords: ['0.96'] }],
           },
           {
             points: 1,
@@ -954,6 +959,7 @@ const precalcFRQs: PrecalcFRQ[] = [
             description:
               '(i) Residual $=$ actual $-$ predicted $= 2.9 - Q(3) = 2.9 - 2.82 = 0.08$ meter. The residual is positive, so the model underestimates the actual height at $x = 3$. (Both the value and the correct direction are needed.)',
             keywords: ['underestimate', 'under-estimate', 'underpredict', 'under-predict', 'too low', 'less than the actual', 'below the actual', 'lower than the actual', 'actual height is greater', 'actual is greater', 'actual is higher', 'actual height is higher', 'actual value is greater', 'actual value is higher', 'actual is above', 'actual height is above', 'model is below', 'predicted is less', 'prediction is less', 'predicted height is less', 'predicted is lower', 'predicted height is lower'],
+            requiresAll: [{ keywords: ['0.08', '= .08', 'is .08'] }],
           },
           {
             points: 1,
@@ -1018,6 +1024,7 @@ const precalcFRQs: PrecalcFRQ[] = [
             points: 1,
             description: '(i) $a \\approx 102.574$ and $b \\approx 0.878$ (both values are needed).',
             keywords: ['0.878', '0.877'],
+            requiresAll: [{ keywords: ['102.57', '102.6'] }],
           },
           {
             points: 1,
@@ -1039,6 +1046,7 @@ const precalcFRQs: PrecalcFRQ[] = [
             description:
               '(i) Residual $=$ actual $-$ predicted $= 61.7 - P(4) = 61.7 - 60.96 \\approx 0.74$ kPa (accept 0.70 to 0.81, depending on rounding of $a$ and $b$). The residual is positive, so the model underestimates the actual pressure at 4 kilometers. (Both the value and the direction are needed.)',
             keywords: ['underestimate', 'under-estimate', 'underpredict', 'under-predict', 'too low', 'less than the actual', 'below the actual', 'lower than the actual', 'actual pressure is greater', 'actual is greater', 'actual is higher', 'actual pressure is higher', 'actual value is greater', 'actual value is higher', 'actual is above', 'actual pressure is above', 'model is below', 'predicted is less', 'prediction is less', 'predicted pressure is less', 'predicted is lower', 'predicted pressure is lower'],
+            requiresAll: [{ keywords: ['0.70', '0.71', '0.72', '0.73', '0.74', '0.75', '0.76', '0.77', '0.78', '0.79', '0.80', '0.81'] }],
           },
           {
             points: 1,
@@ -1104,11 +1112,13 @@ const precalcFRQs: PrecalcFRQ[] = [
             points: 1,
             description: '$L(t)$-coordinates: $F$: 9, $G$: 12, $J$: 15, $K$: 12, $P$: 9 (the midline is $\\frac{9 + 15}{2} = 12$).',
             keywords: [', 15)', ',15)', 'j: 15', 'j = 15', 'j is 15', 'j = (6, 15)', 'j(6', 'l(6) = 15', 'maximum is 15', 'maximum of 15', 'max is 15', 'max of 15'],
+            requiresAll: [{ keywords: [', 9)', ',9)', 'f: 9', 'f = 9', 'f is 9', 'minimum is 9', 'minimum of 9', 'min is 9', 'min of 9', 'l(0) = 9'] }, { keywords: [', 12)', ',12)', 'g: 12', 'g = 12', 'midline is 12', 'midline of 12', 'midline at 12', 'l(3) = 12'] }],
           },
           {
             points: 1,
             description: '$t$-coordinates: $F = (0, 9)$, $G = (3, 12)$, $J = (6, 15)$, $K = (9, 12)$, $P = (12, 9)$ (the points are a quarter period, 3 months, apart).',
             keywords: ['(12, 9)', '(12,9)', 'p = (12', 'p: (12', 'p(12', 'p = 12', 'p is 12'],
+            requiresAll: [{ keywords: ['(3,', '(3 ,'] }, { keywords: ['(6,', '(6 ,'] }, { keywords: ['(9,', '(9 ,'] }],
           },
         ],
         sampleAnswer:
@@ -1124,12 +1134,14 @@ const precalcFRQs: PrecalcFRQ[] = [
             points: 1,
             description: 'Vertical transformations: amplitude $a = \\frac{15 - 9}{2} = 3$ and midline $d = 12$.',
             keywords: ['d = 12', 'd=12', ') + 12', ')+12', 'd is 12', 'midline d', '+ 12$', '+12$'],
+            requiresAll: [{ keywords: ['a = 3', 'a=3', '3 sin', '3sin', '3\\sin', 'amplitude is 3', 'amplitude of 3', 'amplitude = 3', 'amplitude 3', '|a| = 3'] }],
           },
           {
             points: 1,
             description:
               'Horizontal transformations: period 12 gives $b = \\frac{2\\pi}{12} = \\frac{\\pi}{6}$. The graph crosses the midline going up at $t = 3$, so $c = -3$: $L(t) = 3\\sin\\left(\\frac{\\pi}{6}(t - 3)\\right) + 12$. Other correct forms earn the point (for example $c = 9$ or any $c = -3 + 12n$, or $a = -3$ with $c = 3 + 12n$).',
             keywords: ['(t − 3)', '(t - 3)', '(t-3)', '(t−3)', 'c = −3', 'c = -3', 'c=-3', 'c=−3', 'c = 9', 'c=9', '(t + 9)', '(t+9)', '-3 sin', '−3 sin', '-3sin', '−3sin', 'a = -3', 'a = −3', 'a=-3', 'a=−3', '-3\\sin', '−3\\sin', '(t - 3 )'],
+            requiresAll: [{ keywords: ['π/6', 'pi/6', '\\pi/6', '\\frac{\\pi}{6}', '\\dfrac{\\pi}{6}', 'πt/6', 'π t/6', '\\frac{\\pi t}{6}'] }],
           },
         ],
         sampleAnswer:
@@ -1209,12 +1221,14 @@ const precalcFRQs: PrecalcFRQ[] = [
             points: 1,
             description: 'Vertical transformations: amplitude $|a| = 12$ (so $a = 12$, or $a = -12$ paired with a consistent $c$) and midline $d = 40$.',
             keywords: ['a = 12', 'a=12', 'a = -12', 'a=-12', 'a = −12', 'a=−12', '|a| = 12'],
+            requiresAll: [{ keywords: ['d = 40', 'd=40', ') + 40', ')+40', '+ 40$', '+40$', 'd is 40', 'midline is 40', 'midline of 40', 'midline at 40', 'midline y = 40'] }],
           },
           {
             points: 1,
             description:
               'Horizontal transformations: period 2 gives $b = \\frac{2\\pi}{2} = \\pi$. A cosine function with $a > 0$ is at its maximum when $t + c = 0$; the maximum $K$ is at $t = 1.5$, so $c = -1.5$: $y(t) = 12\\cos(\\pi(t - 1.5)) + 40$. Equivalent forms earn the point (for example $c = 0.5$ or any $c = -1.5 + 2n$ with $a = 12$; or $a = -12$ with $c = -0.5 + 2n$, which puts the minimum at $t = 0.5$).',
             keywords: ['(t − 1.5)', '(t - 1.5)', '(t-1.5)', '(t−1.5)', 'c = −1.5', 'c = -1.5', 'c=-1.5', 'c=−1.5', 'c = 0.5', 'c=0.5', '(t + 0.5)', '(t+0.5)', '(t + .5)', '(t − 3/2)', '(t - 3/2)', 'c = −3/2', 'c = -3/2', 'c = 1/2', '(t + 1/2)', '-12 cos', '−12 cos', '-12cos', '−12cos', 'a = -12', 'a = −12', 'a=-12', 'a=−12', '-12\\cos', '−12\\cos'],
+            requiresAll: [{ keywords: ['π(t', 'pi(t', 'pi (t', 'π (t', '\\pi(t', '\\pi (t', '\\pi\\left(t', 'b = π', 'b=π', 'b = pi', 'b=pi', 'b = \\pi', 'b=\\pi', 'cos(πt', 'cos(pi t', 'cos(pi*t', '\\cos(\\pi t'] }],
           },
         ],
         sampleAnswer:
@@ -1230,7 +1244,8 @@ const precalcFRQs: PrecalcFRQ[] = [
             points: 1,
             description:
               '(i) From $J = (1, 40)$ to $K = (1.5, 52)$ the weight rises from its resting height to its highest point, so $y$ is increasing and the graph is above its midline.',
-            keywords: ['increasing and above', 'increasing, above', 'increasing; above', 'increasing and lies above', 'increasing and is above', 'increasing and the graph is above', 'increasing and it is above', 'increasing, and the graph is above', 'increasing, and the graph lies above', 'increasing. the graph lies above', 'increasing. the graph is above', 'increasing, rising', 'increasing (rising', 'rising from 40 to 52', 'rises from 40 to 52', 'from 40 to 52', 'from 40 up to 52', 'from the midline to the maximum', 'from the midline up to the maximum', 'from resting height to', 'from its resting height to', 'resting height to its highest', 'resting height up to', 'above its midline and increasing', 'above the midline and increasing', 'increasing and remains above', 'increasing and stays above'],
+            keywords: ['increasing and above', 'increasing, above', 'increasing; above', 'increasing and lies above', 'increasing and is above', 'increasing and the graph is above', 'increasing and it is above', 'increasing, and the graph is above', 'increasing, and the graph lies above', 'increasing. the graph lies above', 'increasing. the graph is above', 'above its midline and increasing', 'above the midline and increasing', 'increasing and remains above', 'increasing and stays above', 'rising from 40 to 52', 'rises from 40 to 52', 'from 40 to 52', 'from 40 up to 52', 'from the midline to the maximum', 'from the midline up to the maximum', 'from resting height to', 'from its resting height to', 'resting height to its highest', 'resting height up to', 'increasing, rising', 'increasing (rising', 'y is increasing', 'height is increasing', 'it is increasing', 'graph is increasing', 'function is increasing', 'is rising', 'it rises', 'y rises', 'weight rises', 'moving up', 'goes up', 'going up'],
+            requiresAll: [{ keywords: ['increasing and above', 'increasing, above', 'increasing; above', 'increasing and lies above', 'increasing and is above', 'increasing and the graph is above', 'increasing and it is above', 'increasing, and the graph is above', 'increasing, and the graph lies above', 'increasing. the graph lies above', 'increasing. the graph is above', 'above its midline and increasing', 'above the midline and increasing', 'increasing and remains above', 'increasing and stays above', 'rising from 40 to 52', 'rises from 40 to 52', 'from 40 to 52', 'from 40 up to 52', 'from the midline to the maximum', 'from the midline up to the maximum', 'from resting height to', 'from its resting height to', 'resting height to its highest', 'resting height up to', 'above the midline', 'above its midline', 'above midline', 'above the resting', 'above its resting', 'above 40', 'above y = 40', 'above the line y = 40', 'greater than 40', 'more than 40', 'higher than 40', '> 40', 'over 40'] }],
           },
           {
             points: 1,
@@ -1294,6 +1309,7 @@ const precalcFRQs: PrecalcFRQ[] = [
             description:
               '(i) $\\cos(2\\theta) = 1 - 2\\sin^2\\theta$, so $1 - 2\\sin^2\\theta + \\sin\\theta = 0$, that is $2\\sin^2\\theta - \\sin\\theta - 1 = (2\\sin\\theta + 1)(\\sin\\theta - 1) = 0$. $\\sin\\theta = -\\frac{1}{2}$ gives $\\theta = \\frac{7\\pi}{6}, \\frac{11\\pi}{6}$ and $\\sin\\theta = 1$ gives $\\theta = \\frac{\\pi}{2}$. All three solutions are required.',
             keywords: ['π/2', 'pi/2', '\\frac{\\pi}{2}', '\\dfrac{\\pi}{2}', '\\pi/2', 'π⁄2', 'θ = π/2', 'theta = pi/2'],
+            requiresAll: [{ keywords: ['7π/6', '7pi/6', '7 pi/6', '\\frac{7\\pi}{6}', '\\dfrac{7\\pi}{6}', '7\\pi/6', '7π / 6'] }, { keywords: ['11π/6', '11pi/6', '11 pi/6', '\\frac{11\\pi}{6}', '\\dfrac{11\\pi}{6}', '11\\pi/6', '11π / 6'] }],
           },
           {
             points: 1,
@@ -1378,6 +1394,7 @@ const precalcFRQs: PrecalcFRQ[] = [
             description:
               '(i) $\\cos\\theta\\,(2\\cos\\theta + 1) = 0$, so $\\cos\\theta = 0$ gives $\\theta = \\frac{\\pi}{2}, \\frac{3\\pi}{2}$ and $\\cos\\theta = -\\frac{1}{2}$ gives $\\theta = \\frac{2\\pi}{3}, \\frac{4\\pi}{3}$. All four solutions are required; dividing by $\\cos\\theta$ and losing $\\frac{\\pi}{2}$ and $\\frac{3\\pi}{2}$ does not earn the point.',
             keywords: ['3π/2', '3pi/2', '3 pi/2', '\\frac{3\\pi}{2}', '\\dfrac{3\\pi}{2}', '3\\pi/2', '3π / 2', '3π⁄2'],
+            requiresAll: [{ keywords: ['2π/3', '2pi/3', '2 pi/3', '\\frac{2\\pi}{3}', '\\dfrac{2\\pi}{3}', '2\\pi/3', '2π / 3'] }, { keywords: ['4π/3', '4pi/3', '4 pi/3', '\\frac{4\\pi}{3}', '\\dfrac{4\\pi}{3}', '4\\pi/3', '4π / 3'] }, { keywords: [' π/2', '(π/2', '=π/2', ',π/2', ' pi/2', '(pi/2', '=pi/2', ',pi/2', '\\frac{\\pi}{2}', '\\dfrac{\\pi}{2}', ' \\pi/2', '=\\pi/2', '(\\pi/2'] }],
           },
           {
             points: 1,
@@ -1399,6 +1416,7 @@ const precalcFRQs: PrecalcFRQ[] = [
             description:
               'Solutions in one period: $4\\cos(\\pi x) + 2 = 4$ gives $\\cos(\\pi x) = \\frac{1}{2}$, so $\\pi x = \\frac{\\pi}{3}$ or $\\pi x = \\frac{5\\pi}{3}$ in one cycle, that is $x = \\frac{1}{3}$ and $x = \\frac{5}{3}$ (equivalently $x = \\pm\\frac{1}{3}$).',
             keywords: ['5/3', '1.667', '1.666', '±1/3', '± 1/3', '-1/3', '−1/3', '\\frac{5}{3}', '\\dfrac{5}{3}', '\\pm\\frac{1}{3}', '\\pm \\frac{1}{3}', '\\pm\\dfrac{1}{3}', '\\pm \\dfrac{1}{3}', '± ⅓', '±⅓', '-⅓', '−⅓'],
+            requiresAll: [{ keywords: ['1/3', '⅓', '\\frac{1}{3}', '\\dfrac{1}{3}', '0.333'] }],
           },
           {
             points: 1,

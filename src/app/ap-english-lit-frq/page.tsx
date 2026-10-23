@@ -20,30 +20,16 @@ import {
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
 import { useRecordFrqAttempt } from '@/lib/use-frq-attempt'
 import { signUpUrl } from '@/lib/auth-redirect'
-
-/**
- * Word-start keyword match, so 'tea' does not match "instead" and 'war' does not match
- * "toward"; prefix stems still match. A keyword that starts with punctuation or a space
- * is matched as a plain substring.
- */
-function keywordMatches(text: string, keyword: string): boolean {
-  const kw = keyword.toLowerCase()
-  if (!/^[a-z0-9]/.test(kw)) return text.includes(kw)
-  const escaped = kw.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-  // A letter-initial keyword may follow a digit ("8mg/l" matches "mg/l"), but
-  // never another letter, so "tea" does not score inside "instead".
-  const before = /^[a-z]/.test(kw) ? '[^a-z]' : '[^a-z0-9]'
-  return new RegExp('(^|' + before + ')' + escaped).test(text)
-}
+import { prepareResponse, responseHasKeyword } from '@/lib/frq-keyword-grade'
 
 function gradeResponse(
   response: string,
   rubric: FRQRubricItem[]
 ): { pointsEarned: number; breakdown: { earned: boolean; item: FRQRubricItem }[] } {
-  const lower = response.toLowerCase().replace(/\s+/g, ' ') + ' '
+  const prepared = prepareResponse(response, { trailingSpace: true })
   // A keyword may list alternatives separated by "|"; minMatches counts distinct keywords.
   const meets = (keywords: string[], min = 1) =>
-    keywords.filter((kw) => kw.toLowerCase().split('|').some((alt) => keywordMatches(lower, alt))).length >= min
+    keywords.filter((kw) => kw.toLowerCase().split('|').some((alt) => responseHasKeyword(prepared, alt))).length >= min
   // Essay rubrics: Row B points are cumulative, so each needs the Row B point before it.
   let previousRowB = true
   const breakdown = rubric.map((item) => {
