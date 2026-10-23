@@ -522,7 +522,7 @@ describe('AP Precalculus: v2 bank', () => {
     expect(apDiagV2SeenCategories('ap-precalculus')).toEqual(['ap-precalculus-diagnostic-v2'])
   })
 
-  it('scores with a band and recommends canonical precalc lessons; stays on v1 until the owner flips the flag', () => {
+  it('scores with a band and recommends canonical precalc lessons; v2 is live (owner, 2026-10-23)', () => {
     const t = generateApDiagnosticV2(bank, { rng: mulberry32(23) })
     const r = scoreApDiagnosticV2('ap-precalculus', t.questions, t.questions.map((q) => (q.correctAnswer + 1) % 4))
     expect(r.totalQuestions).toBe(30)
@@ -530,7 +530,7 @@ describe('AP Precalculus: v2 bank', () => {
     expect(r.recommendedTopics.length).toBe(5)
     const canonical = new Set(FIXTURE['ap-precalculus'])
     for (const rec of r.recommendedTopics) expect(canonical.has(rec.slug), rec.slug).toBe(true)
-    expect(AP_DIAG_V2_LIVE['ap-precalculus']).toBe(false)
-    expect(apDiagnosticVersion('ap-precalculus', null)).toBe(1)
+    expect(AP_DIAG_V2_LIVE['ap-precalculus']).toBe(true)
+    expect(apDiagnosticVersion('ap-precalculus', null)).toBe(2)
   })
 })
