@@ -13,6 +13,7 @@ import { hasExitQuiz } from '@/data/exit-quizzes'
 import { hasEntranceQuiz } from '@/data/entrance-quizzes'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { LEGACY_TOPIC_REDIRECTS } from '@/lib/legacy-topic-redirects'
+import { AP_LESSON_BANK_TOPICS } from '@/lib/competitive-utils'
 
 const ROOT = process.cwd()
 const read = (p: string) => fs.readFileSync(path.join(ROOT, p), 'utf8')
@@ -44,7 +45,14 @@ const ALLOWED: Record<string, string[]> = {
   'src/data/unit-tests/ap-calculus-bc.ts': ['advanced-integration'],
   // 'parametric-equations' is a competitive CATEGORY id backed by the BC Unit 9
   // parametric bank (parametric-equations-bank.ts), not the retired precalc topic.
-  'src/lib/competitive-utils.ts': ['parametric-equations'],
+  // Retired topics a stale challenge link can still name: the competitive map
+  // routes each to its 308 target's questions (guarded below) so it never falls
+  // through to the cumulative fallback. Routing, not recommending.
+  'src/lib/competitive-utils.ts': [
+    'parametric-equations',
+    'volumes-shell-method', 'newtons-method',
+    'integration-by-parts', 'partial-fractions', 'trig-substitution',
+  ],
 }
 
 describe('retired AP topics stay retired', () => {
@@ -77,6 +85,16 @@ describe('retired AP topics stay retired', () => {
       }
     }
     expect(offenders).toEqual([])
+  })
+
+  it('a retired topic named in the competitive map draws exactly its 308 target\'s questions', () => {
+    for (const slug of RETIRED_TOPICS) {
+      const route = AP_LESSON_BANK_TOPICS[slug]
+      if (!route) continue
+      const target = LEGACY_TOPIC_REDIRECTS[slug]
+      const want = AP_LESSON_BANK_TOPICS[target] ?? { course: route.course, topics: [target] }
+      expect(route, `${slug} -> ${target}`).toEqual(want)
+    }
   })
 })
 

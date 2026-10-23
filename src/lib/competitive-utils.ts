@@ -567,12 +567,13 @@ export const COURSE_GROUPING_LESSONS: Record<string, 'ap-calculus-ab' | 'ap-calc
  * unit-circle game.
  */
 type ApLessonBankCourse =
-  | 'ap-precalculus' | 'ap-calculus-ab' | 'ap-chemistry' | 'ap-biology' | 'ap-human-geo'
+  | 'ap-precalculus' | 'ap-calculus-ab' | 'ap-calculus-bc' | 'ap-chemistry' | 'ap-biology' | 'ap-human-geo'
   | 'ap-us-gov' | 'ap-world-history' | 'ap-african-american-studies' | 'ap-english-lit'
   | 'ap-english-lang' | 'ap-enviro' | 'ap-csa' | 'ap-csp'
 const AP_LESSON_BANK_GETTERS: Record<ApLessonBankCourse, (count: number) => Promise<Array<{ topicSlug?: string } & OptionQuestion>>> = {
   'ap-precalculus': getApPrecalcQuestions,
   'ap-calculus-ab': getApCalculusQuestions,
+  'ap-calculus-bc': getApCalculusBCQuestions,
   'ap-chemistry': getApChemistryQuestions,
   'ap-biology': getApBiologyQuestions,
   'ap-human-geo': getApHumanGeoQuestions,
@@ -682,6 +683,59 @@ export const AP_LESSON_BANK_TOPICS: Record<string, { course: ApLessonBankCourse;
   // 2.7 covers ln x alongside e^x.
   'definition-of-derivative-calcab': lessonTopics('ap-calculus-ab', 'definition-of-derivative-calcab', 'derivative-as-rate-of-change'),
   'derivatives-of-exponential-functions': lessonTopics('ap-calculus-ab', 'derivatives-of-exponential-functions', 'derivatives-of-logarithmic-functions'),
+  // ---- AP Calculus AB: retired legacy rows (legacy-topic-redirects.ts 308s each
+  // to the live topic in the comment) that are not bank slugs themselves. Without
+  // an entry a stale link, saved match or teacher assignment fell through to a
+  // 13-item cumulative fallback (vectors, parametric, 1^inf limits) (round-2
+  // audit, 2026-10-23). Each now draws its 308 target's AB bank topics.
+  'limit-notation-terminology': lessonTopics('ap-calculus-ab', 'limits-continuity-calcab'), // -> limits-continuity-calcab
+  'one-sided-limits-in-detail': lessonTopics('ap-calculus-ab', 'limits-continuity-calcab'), // -> limits-continuity-calcab
+  'introduction-to-limits': lessonTopics('ap-calculus-ab', 'limits-continuity-calcab'), // -> limits-continuity-calcab
+  'evaluating-limits-graphically': lessonTopics('ap-calculus-ab', 'limits-continuity-calcab'), // -> limits-continuity-calcab
+  'evaluating-limits-algebraically': lessonTopics('ap-calculus-ab', 'limits-continuity-calcab'), // -> limits-continuity-calcab
+  'indeterminate-forms-factoring': lessonTopics('ap-calculus-ab', 'limits-continuity-calcab'), // -> limits-continuity-calcab
+  'rationalizing-techniques': lessonTopics('ap-calculus-ab', 'limits-continuity-calcab'), // -> limits-continuity-calcab
+  'what-is-a-derivative': lessonTopics('ap-calculus-ab', 'definition-of-derivative-calcab', 'derivative-as-rate-of-change'), // -> definition-of-derivative-calcab
+  'derivative-notation': lessonTopics('ap-calculus-ab', 'definition-of-derivative-calcab', 'derivative-as-rate-of-change'), // -> definition-of-derivative-calcab
+  'derivative-as-slope': lessonTopics('ap-calculus-ab', 'definition-of-derivative-calcab', 'derivative-as-rate-of-change'), // -> definition-of-derivative-calcab
+  'power-rule-basics': lessonTopics('ap-calculus-ab', 'power-rule', 'product-rule', 'quotient-rule', 'derivatives-of-trig-functions'), // -> basic-differentiation-rules-calcab
+  'constant-multiple-sum-rules': lessonTopics('ap-calculus-ab', 'power-rule', 'product-rule', 'quotient-rule', 'derivatives-of-trig-functions'), // -> basic-differentiation-rules-calcab
+  'higher-order-derivatives': lessonTopics('ap-calculus-ab', 'power-rule', 'product-rule', 'quotient-rule', 'derivatives-of-trig-functions'), // -> basic-differentiation-rules-calcab
+  'chain-rule': lessonTopics('ap-calculus-ab', 'chain-rule-calcab'), // -> chain-rule-calcab
+  'logarithmic-differentiation-technique': lessonTopics('ap-calculus-ab', 'derivatives-of-exponential-functions', 'derivatives-of-logarithmic-functions'), // -> derivatives-of-exponential-functions
+  'antiderivatives-intro': lessonTopics('ap-calculus-ab', 'antiderivatives-indefinite-integrals-calcab'), // -> antiderivatives-indefinite-integrals-calcab
+  'indefinite-integrals': lessonTopics('ap-calculus-ab', 'antiderivatives-indefinite-integrals-calcab'), // -> antiderivatives-indefinite-integrals-calcab
+  'u-substitution': lessonTopics('ap-calculus-ab', 'u-substitution-calcab'), // -> u-substitution-calcab
+  'definite-integrals': lessonTopics('ap-calculus-ab', 'definite-integrals-calcab', 'riemann-sums'), // -> definite-integrals-calcab
+  'area-between-curves': lessonTopics('ap-calculus-ab', 'area-between-curves-calcab'), // -> area-between-curves-calcab
+  'volumes-disk-method': lessonTopics('ap-calculus-ab', 'volumes-of-revolution-calcab'), // -> volumes-of-revolution-calcab
+  'volumes-washer-method': lessonTopics('ap-calculus-ab', 'volumes-of-revolution-calcab'), // -> volumes-of-revolution-calcab
+  // Retired as off-exam (retired-ap-topics.ts), but an old challenge link can
+  // still name them: route to the 308 target so they never draw foreign items.
+  'volumes-shell-method': lessonTopics('ap-calculus-ab', 'volumes-of-revolution-calcab'), // -> volumes-of-revolution-calcab
+  'newtons-method': lessonTopics('ap-calculus-ab', 'linear-approximation'), // -> linearization-differentials-calcab
+  // ---- AP Calculus BC: retired legacy rows (legacy-topic-redirects.ts 308s each
+  // to the live topic in the comment). No bank uses these slugs, so a stale
+  // link, saved match or teacher assignment naming one fell through to
+  // cumulative items from other subjects (round-2 audit, 2026-10-23). Each now
+  // draws its 308 target's BC bank topic.
+  'integration-by-parts': lessonTopics('ap-calculus-bc', 'integration-by-parts-calcbc'), // -> integration-by-parts-calcbc
+  'trig-substitution': lessonTopics('ap-calculus-bc', 'advanced-integration-calcbc'), // -> advanced-integration-calcbc
+  'partial-fractions': lessonTopics('ap-calculus-bc', 'partial-fractions-calcbc'), // -> partial-fractions-calcbc
+  'parametric-equations-intro': lessonTopics('ap-calculus-bc', 'parametric-curves-calculus-calcbc'), // -> parametric-curves-calculus-calcbc
+  'parametric-calculus': lessonTopics('ap-calculus-bc', 'parametric-curves-calculus-calcbc'), // -> parametric-curves-calculus-calcbc
+  'polar-coordinates-intro': lessonTopics('ap-calculus-bc', 'polar-calculus-calcbc'), // -> polar-calculus-calcbc
+  'polar-calculus': lessonTopics('ap-calculus-bc', 'polar-calculus-calcbc'), // -> polar-calculus-calcbc
+  'sequences-intro': lessonTopics('ap-calculus-bc', 'infinite-sequences-calcbc'), // -> infinite-sequences-calcbc
+  'series-intro': lessonTopics('ap-calculus-bc', 'infinite-series-calcbc'), // -> infinite-series-calcbc
+  'integral-test': lessonTopics('ap-calculus-bc', 'convergence-tests-summary-calcbc'), // -> convergence-tests-summary-calcbc
+  'comparison-tests': lessonTopics('ap-calculus-bc', 'convergence-tests-summary-calcbc'), // -> convergence-tests-summary-calcbc
+  'alternating-series-test': lessonTopics('ap-calculus-bc', 'alternating-series-calcbc'), // -> alternating-series-calcbc
+  'ratio-root-tests': lessonTopics('ap-calculus-bc', 'convergence-tests-summary-calcbc'), // -> convergence-tests-summary-calcbc
+  'power-series-intro': lessonTopics('ap-calculus-bc', 'power-series-calcbc'), // -> power-series-calcbc
+  'radius-interval-convergence': lessonTopics('ap-calculus-bc', 'power-series-calcbc'), // -> power-series-calcbc
+  'taylor-maclaurin-series': lessonTopics('ap-calculus-bc', 'taylor-maclaurin-series-calcbc'), // -> taylor-maclaurin-series-calcbc
+  'common-taylor-series': lessonTopics('ap-calculus-bc', 'taylor-maclaurin-series-calcbc'), // -> taylor-maclaurin-series-calcbc
   // ---- AP Chemistry / AP Biology
   'solubility-equilibrium': lessonTopics('ap-chemistry', 'solubility-ksp'),
   'population-dynamics': lessonTopics('ap-biology', 'population-ecology', 'community-ecology'),
@@ -900,6 +954,20 @@ export function matchQuestionCount(gameMode: string | undefined | null): number 
   return gameMode === 'ACCURACY_CHALLENGE' ? 20 : SPEED_RACE_POOL_SIZE
 }
 
+/**
+ * Draw `count` items for a match from a getter that returns a random sample of
+ * up to `n` items: the tier's difficulty mix when a tier is set (from the whole
+ * pool), otherwise the getter's plain sample, exactly as before.
+ */
+async function drawForTier<T extends { difficulty?: unknown }>(
+  getter: (n: number) => Promise<T[]>,
+  count: number,
+  tier?: MatchTier,
+): Promise<T[]> {
+  if (!tier) return getter(count)
+  return pickTieredQuestions(await getter(1_000_000), count, tier)
+}
+
 export async function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[], tier?: MatchTier): Promise<MatchQuestion[]> {
   // Multi-topic composite: recursively resolve each constituent slug, then
   // interleave round-robin so every selected topic is represented (rather than
@@ -1039,7 +1107,7 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     const apMap = await getApSlugToGetter()
     const apGetter = apMap.get(topicSlug)
     if (apGetter) {
-      const filtered = await apGetter(totalQuestions, topicSlug)
+      const filtered = await drawForTier((n) => apGetter(n, topicSlug), totalQuestions, tier)
       if (filtered.length > 0 && filtered.every(q => q.topicSlug === topicSlug)) {
         return filtered.map((q, i) => {
           const shuffled = shuffleOptions(q)
@@ -1076,7 +1144,7 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     const bankFn = COURSE_SUB_TOPIC_BANKS[courseKey]
     if (bankFn) {
       const bankSlug = LESSON_TO_BANK_TOPIC[topicSlug] ?? topicSlug
-      const filtered = await bankFn(totalQuestions, bankSlug)
+      const filtered = await drawForTier((n) => bankFn(n, bankSlug), totalQuestions, tier)
       if (filtered.length > 0) {
         return (filtered).map((q: OptionQuestion, i: number) => {
           const shuffled = shuffleOptions(q)
@@ -1100,7 +1168,7 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
   // random sample from the whole course bank.
   if (topicSlug && LESSON_TO_FULL_COURSE_BANK[topicSlug]) {
     const bankFn = LESSON_TO_FULL_COURSE_BANK[topicSlug]
-    const qs = await bankFn(totalQuestions)
+    const qs = await drawForTier((n) => bankFn(n), totalQuestions, tier)
     if (qs.length > 0) {
       return qs.map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)
@@ -1125,7 +1193,7 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     const groupBank = groupingCourseKey === 'ap-calculus-ab'
       ? getApCalculusQuestions
       : getApCalculusBCQuestions
-    const groupQuestions = await groupBank(totalQuestions)
+    const groupQuestions = await drawForTier((n) => groupBank(n), totalQuestions, tier)
     if (groupQuestions.length > 0) {
       return (groupQuestions).map((q: OptionQuestion, i: number) => {
         const shuffled = shuffleOptions(q)

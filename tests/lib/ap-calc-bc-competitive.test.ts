@@ -60,9 +60,31 @@ describe('BC bank tags', () => {
     expect(new Set(bcBank.map((q) => q.id)).size).toBe(bcBank.length)
   })
 
-  it('every BC-only topic has at least 13 tagged items', () => {
+  it('every BC-only topic has at least 15 tagged items', () => {
     for (const slug of bcOwnSlugs) {
-      expect(bcBank.filter((q) => q.topicSlug === slug).length, slug).toBeGreaterThanOrEqual(13)
+      expect(bcBank.filter((q) => q.topicSlug === slug).length, slug).toBeGreaterThanOrEqual(15)
+    }
+  })
+
+  // Round-2 tag-blind audit (2026-10-23, comp-align/round2-bc/): blind raters
+  // re-labelled 398 difficulties (most "hard" items were one or two steps), and
+  // hard items were authored where a topic fell under 3. Bot pacing and the
+  // hard-tier draw read these labels.
+  it('every difficulty is easy, medium or hard', () => {
+    for (const q of bcBank) expect(['easy', 'medium', 'hard'], `#${q.id}`).toContain(q.difficulty)
+  })
+
+  it('every BC-only topic has at least 3 hard items', () => {
+    for (const slug of bcOwnSlugs) {
+      expect(bcBank.filter((q) => q.topicSlug === slug && q.difficulty === 'hard').length, slug).toBeGreaterThanOrEqual(3)
+    }
+  })
+
+  it('every item has four distinct options and an in-range key', () => {
+    for (const q of bcBank) {
+      expect(q.options, `#${q.id}`).toHaveLength(4)
+      expect(new Set(q.options).size, `#${q.id}`).toBe(4)
+      expect(q.correctAnswer >= 0 && q.correctAnswer < 4, `#${q.id}`).toBe(true)
     }
   })
 
@@ -89,6 +111,19 @@ describe('every BC-layout topic resolves through the competitive draw', () => {
         : abStemsFor(slug)
     expect(wanted.size).toBeGreaterThanOrEqual(13)
     for (const s of stemsOf(qs)) expect(wanted.has(s), `${slug} served an item outside its section: ${s}`).toBe(true)
+  })
+
+  it('every retired legacy BC slug draws its 308 target, never other subjects', async () => {
+    const { LEGACY_TOPIC_REDIRECTS: redirects } = await import('@/lib/legacy-topic-redirects')
+    const retired = Object.keys(redirects).filter((s) => bcOwnSlugs.has(redirects[s]))
+    expect(retired.length).toBeGreaterThanOrEqual(17)
+    for (const slug of retired) {
+      const target = redirects[slug]
+      const own = new Set(bcBank.filter((q) => q.topicSlug === target).map((q) => q.question))
+      const qs = await generateMatchQuestions(20, slug, [])
+      expect(qs.length, slug).toBe(20)
+      for (const s of stemsOf(qs)) expect(own.has(s), `${slug} -> ${target} served: ${s}`).toBe(true)
+    }
   })
 
   it('a BC-only section never draws from the whole bank', async () => {
