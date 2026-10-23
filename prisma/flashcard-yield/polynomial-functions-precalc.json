@@ -1,0 +1,80 @@
+[
+ {
+  "front": "Describe the end behavior of f(x) = −2x⁴ + 3x.",
+  "fp": "71192d10a0f8",
+  "yield": "HIGH",
+  "why": "CED 1.6 worked example."
+ },
+ {
+  "front": "Determine the end behavior of $f(x) = -2x^5 + 3x^4 - x + 7$.",
+  "fp": "5d1bf06c4e3b",
+  "yield": "HIGH",
+  "why": "CED 1.6 worked example with limit notation."
+ },
+ {
+  "front": "For $p(x) = (x - 1)^2(x + 3)^3$, at which real zero does the graph cross the $x$-axis, and at which does it only touch?",
+  "fp": "268105fa1e57",
+  "yield": "HIGH",
+  "why": "CED 1.5 multiplicity applied to a factored polynomial; standard MCQ."
+ },
+ {
+  "front": "Graphically, what does $f(x) > 0$ represent?",
+  "fp": "89ae1b2f53b1",
+  "yield": "MEDIUM",
+  "why": "Graphical meaning of f(x) > 0."
+ },
+ {
+  "front": "How do you determine the sign of $(x - a)$ in different regions?",
+  "fp": "939d8040166f",
+  "yield": "LOW",
+  "why": "Sign of a linear factor; building block only."
+ },
+ {
+  "front": "How do you find the end behavior of a polynomial, in limit notation?",
+  "fp": "12a4c044fca6",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.6: end behavior written with limit notation is on nearly every exam."
+ },
+ {
+  "front": "How do you write a solution with two separate intervals?",
+  "fp": "f1a65c2cf9bf",
+  "yield": "LOW",
+  "why": "Interval-notation convention."
+ },
+ {
+  "front": "How does degree relate to the number of roots?",
+  "fp": "68f3fcf699d8",
+  "yield": "HIGH",
+  "why": "CED 1.5: degree n -> exactly n complex zeros counting multiplicity."
+ },
+ {
+  "front": "How many turning points can a degree-n polynomial have?",
+  "fp": "ba8c06c78a48",
+  "yield": "MEDIUM",
+  "why": "CED 1.4 extrema count; occasionally asked, more often 'between two zeros there is an extremum'."
+ },
+ {
+  "front": "What are the main steps for solving a polynomial inequality?",
+  "fp": "1ec28c84797a",
+  "yield": "MEDIUM",
+  "why": "Sign-chart procedure."
+ },
+ {
+  "front": "What does the multiplicity of a zero tell you?",
+  "fp": "e0492cca1b91",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.5 multiplicity and crossing behavior; asked on nearly every exam."
+ },
+ {
+  "front": "What is the effect of even vs. odd multiplicity on the sign of a polynomial?",
+  "fp": "b106eb472b04",
+  "yield": "HIGH",
+  "why": "CED 1.5/1.8 sign changes at odd vs even multiplicity; used in sign charts."
+ },
+ {
+  "front": "When solving $f(x) \\geq 0$, should you include or exclude the critical values?",
+  "fp": "8db2eb6c5fb2",
+  "yield": "MEDIUM",
+  "why": "Interval endpoints for >= vs >."
+ }
+]

@@ -1,0 +1,104 @@
+[
+ {
+  "front": "A quantity varies sinusoidally between a maximum $M$ and a minimum $m$. What are the amplitude and the midline, and how do you get $b$?",
+  "fp": "1ef7395ed22a",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.7 amplitude, midline and b from the max and min of a context; FRQ 3 every administration."
+ },
+ {
+  "front": "Geometrically, what does $\\tan\\theta$ represent, and where is it undefined?",
+  "fp": "40d2a228a5de",
+  "yield": "HIGH",
+  "why": "CED 3.8 tangent as the slope of the terminal ray and where it is undefined; regularly assessed."
+ },
+ {
+  "front": "How are degrees and radians related?",
+  "fp": "78ffa99a0c0d",
+  "yield": "LOW",
+  "why": "Degree-radian bridge fact; prerequisite, the exam works in radians."
+ },
+ {
+  "front": "How many radians are in one full revolution?",
+  "fp": "82762915dfd0",
+  "yield": "LOW",
+  "why": "Full turn = 2pi radians; prerequisite bridge fact."
+ },
+ {
+  "front": "In $y = A\\sin(B(x - C)) + D$, what does each constant control?",
+  "fp": "98b79b3c8942",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.5-3.6 amplitude, period, phase shift and midline of a sinusoid; tested every administration (FRQ 3)."
+ },
+ {
+  "front": "On $[0, 2\\pi]$, where is $y = \\sin x$ increasing, and where is it concave down?",
+  "fp": "c5575b104e3e",
+  "yield": "HIGH",
+  "why": "CED 3.4 increasing/decreasing and concavity intervals of sine; regularly assessed."
+ },
+ {
+  "front": "The terminal ray of $\\theta = 2$ radians lies in which quadrant?",
+  "fp": "71e8da1deecc",
+  "yield": "HIGH",
+  "why": "CED 3.2 locating a bare radian value; regularly assessed."
+ },
+ {
+  "front": "What are coterminal angles?",
+  "fp": "ac16bff6e5ed",
+  "yield": "HIGH",
+  "why": "CED 3.2-3.3 coterminal angles share sine and cosine; used in most evaluation items."
+ },
+ {
+  "front": "What are the domains of $\\sec\\theta$, $\\csc\\theta$ and $\\cot\\theta$?",
+  "fp": "d07b266fef44",
+  "yield": "MEDIUM",
+  "why": "CED 3.11 reciprocal-function domains; secondary facts."
+ },
+ {
+  "front": "What are the period and the vertical asymptotes of $y = \\tan(bx)$?",
+  "fp": "0ede35b80c65",
+  "yield": "HIGH",
+  "why": "CED 3.8 period and asymptotes of tan(bx); regularly assessed."
+ },
+ {
+  "front": "What does a negative angle indicate?",
+  "fp": "5d3282a9e0d9",
+  "yield": "MEDIUM",
+  "why": "CED 3.2 negative angle = clockwise rotation; secondary convention."
+ },
+ {
+  "front": "What does it mean for a function $f$ to be periodic with period $P$?",
+  "fp": "a48088088e5c",
+  "yield": "HIGH",
+  "why": "CED 3.1 periodic function definition f(x + P) = f(x); regularly assessed as an evaluation item."
+ },
+ {
+  "front": "What is a reference angle?",
+  "fp": "ed9ef51d3da8",
+  "yield": "HIGH",
+  "why": "CED 3.3 reference angles set the magnitudes outside Quadrant I; regularly assessed."
+ },
+ {
+  "front": "What is one radian?",
+  "fp": "6da169e2e442",
+  "yield": "MEDIUM",
+  "why": "CED 3.2 definition of a radian; secondary to the s/r ratio card."
+ },
+ {
+  "front": "What is the phase shift of $y = \\sin(2x - \\pi)$?",
+  "fp": "c195134edc69",
+  "yield": "HIGH",
+  "why": "CED 3.6 phase shift after factoring b; a common error item."
+ },
+ {
+  "front": "What is the radian measure of a central angle that cuts off an arc of length $s$ on a circle of radius $r$?",
+  "fp": "f3fa8832ab50",
+  "yield": "HIGH",
+  "why": "CED 3.2 radian measure as arc length over radius; regularly assessed."
+ },
+ {
+  "front": "Where does the terminal ray of $\\theta$ meet the circle of radius $r$ centered at the origin?",
+  "fp": "41de56149170",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.3 coordinates (r cos theta, r sin theta) on a circle of radius r; tested every administration."
+ }
+]

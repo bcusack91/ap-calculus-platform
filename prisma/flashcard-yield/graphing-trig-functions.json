@@ -1,0 +1,68 @@
+[
+ {
+  "front": "How do you find the vertical asymptotes of $y = a\\tan(b(x - c)) + d$?",
+  "fp": "c1fb38a296ef",
+  "yield": "HIGH",
+  "why": "CED 3.8 asymptotes and zeros of a transformed tangent; regularly assessed."
+ },
+ {
+  "front": "How do you find when a sinusoidal model is above a given value, e.g. $22 - 20\\cos\\left(\\frac{\\pi}{10}t\\right) > 32$?",
+  "fp": "1fad357dc73a",
+  "yield": "HIGH",
+  "why": "CED 3.7/3.10 solving a sinusoidal inequality in context; regularly assessed."
+ },
+ {
+  "front": "How do you read the amplitude and the midline of a sinusoid from its graph?",
+  "fp": "19f758eca537",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.5 amplitude and midline read from a graph; FRQ 3 every administration."
+ },
+ {
+  "front": "How do you read the period of a sinusoid from its graph, and what is the frequency?",
+  "fp": "587ec87ba47e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.5 period and frequency read from a graph; tested every administration."
+ },
+ {
+  "front": "In $y = a\\sin(b(x - c)) + d$, what transformation does each parameter perform?",
+  "fp": "a04bec7f59b4",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.6 transformation meaning of a, b, c, d; tested every administration."
+ },
+ {
+  "front": "Period of $\\tan(x)$ vs $\\sin(x)$?",
+  "fp": "35f94b21631d",
+  "yield": "HIGH",
+  "why": "CED 3.8 tangent period pi vs 2pi; regularly assessed."
+ },
+ {
+  "front": "Period, amplitude, and phase shift of $y = A\\sin(Bx - C) + D$?",
+  "fp": "5dd0f42593d0",
+  "yield": "HIGH",
+  "why": "CED 3.6 sinusoid features in the A sin(Bx - C) + D form (phase shift C/B); regularly assessed."
+ },
+ {
+  "front": "What are the key features of $y = \\tan x$?",
+  "fp": "9f406427dc0e",
+  "yield": "HIGH",
+  "why": "CED 3.8 key features of the tangent graph; regularly assessed."
+ },
+ {
+  "front": "What is the average rate of change of a sinusoidal function over one full period?",
+  "fp": "fbbca31e6bfb",
+  "yield": "HIGH",
+  "why": "CED 3.7 average rate of change of a sinusoidal model; regularly assessed."
+ },
+ {
+  "front": "Where is a sinusoid concave down, where is it concave up, and where is it changing fastest?",
+  "fp": "81bf1fed4a3d",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.4/3.7 concavity and rate-of-change language for a sinusoid; FRQ 3 every administration."
+ },
+ {
+  "front": "You are building a sinusoidal model and know when a maximum occurs. Sine or cosine? What if you know when the quantity is at its midline?",
+  "fp": "08f5ee6b7141",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.7 choosing sine or cosine and the phase from context; FRQ 3 part (a) every administration."
+ }
+]

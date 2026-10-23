@@ -1,0 +1,32 @@
+[
+ {
+  "front": "How can you write $|x|$ as a piecewise function?",
+  "fp": "90a98e0185bd",
+  "yield": "MEDIUM",
+  "why": "Absolute value as a piecewise function; appears in 1.13 items."
+ },
+ {
+  "front": "How do you evaluate a piecewise function at $x = a$?",
+  "fp": "798c637cf1b7",
+  "yield": "MEDIUM",
+  "why": "CED 1.13 evaluating a piecewise function."
+ },
+ {
+  "front": "If $f(x) = 2x + k$ for $x < 3$ and $f(x) = x^2$ for $x \\geq 3$, what value of $k$ makes the two pieces meet at $x = 3$ (no jump in the graph)?",
+  "fp": "2888b46217b7",
+  "yield": "MEDIUM",
+  "why": "Matching pieces at a boundary; occasional MCQ."
+ },
+ {
+  "front": "On a graph of a piecewise function, what does an open circle mean?",
+  "fp": "fa5c6d4850d6",
+  "yield": "LOW",
+  "why": "Graph-reading convention; rarely the point of an item."
+ },
+ {
+  "front": "What is a piecewise function?",
+  "fp": "c88d55acc692",
+  "yield": "MEDIUM",
+  "why": "CED 1.13 piecewise models."
+ }
+]

@@ -1,0 +1,86 @@
+[
+ {
+  "front": "An angle has $\\sin\\theta > 0$ and $\\tan\\theta < 0$. Which quadrant is it in?",
+  "fp": "11df792af348",
+  "yield": "HIGH",
+  "why": "CED 3.3 locating the quadrant from the signs; regularly assessed."
+ },
+ {
+  "front": "How many radians are in $180°$?",
+  "fp": "dad851148bec",
+  "yield": "LOW",
+  "why": "Degree-radian bridge fact (pi rad = 180 deg); prerequisite, the exam works in radians."
+ },
+ {
+  "front": "In which quadrants is sin θ positive?",
+  "fp": "fbebff518beb",
+  "yield": "HIGH",
+  "why": "CED 3.3 sign of sine by quadrant; regularly assessed."
+ },
+ {
+  "front": "On the unit circle, what do $\\cos(\\theta)$ and $\\sin(\\theta)$ represent?",
+  "fp": "a982976ae0d6",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.2 definition of cosine and sine as unit-circle coordinates; the basis of every Unit 3 item."
+ },
+ {
+  "front": "What are $\\sin\\theta$ and $\\cos\\theta$ at $\\theta = 0, \\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{\\pi}{2}$?",
+  "fp": "9c65d2a952f6",
+  "yield": "HIGH",
+  "why": "CED 3.3 special-value table in radians with the sqrt(n)/2 pattern; summary of the per-angle ULTRA_HIGH cards."
+ },
+ {
+  "front": "What are $\\tan 0$, $\\tan\\frac{\\pi}{6}$, $\\tan\\frac{\\pi}{4}$, $\\tan\\frac{\\pi}{3}$ and $\\tan\\frac{\\pi}{2}$?",
+  "fp": "027c8b7dd2c9",
+  "yield": "HIGH",
+  "why": "CED 3.3/3.8 tangent values at the special angles; regularly assessed."
+ },
+ {
+  "front": "What are the coordinates of the point on the unit circle at $\\theta = \\frac{\\pi}{3}$?",
+  "fp": "0d9ba5154579",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.3 exact coordinates at pi/3; tested every administration."
+ },
+ {
+  "front": "What are the coordinates of the point on the unit circle at $\\theta = \\frac{\\pi}{4}$?",
+  "fp": "f8d2efffa348",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.3 exact coordinates at pi/4; tested every administration."
+ },
+ {
+  "front": "What are the coordinates of the point on the unit circle at $\\theta = \\frac{\\pi}{6}$?",
+  "fp": "f67d0015da3b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.3 exact unit-circle coordinates at pi/6; tested every administration."
+ },
+ {
+  "front": "What are the unit-circle coordinates of the angle $\\frac{3\\pi}{4}$?",
+  "fp": "6d23eab14d4d",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.3 exact coordinates outside Quadrant I via the reference angle; tested every administration."
+ },
+ {
+  "front": "What does an angle of 1 radian represent?",
+  "fp": "43bfab642ec4",
+  "yield": "MEDIUM",
+  "why": "CED 3.2 meaning of one radian; secondary to the s/r ratio card, and 57.3 deg is trivia."
+ },
+ {
+  "front": "What is $\\tan\\left(\\frac{\\pi}{3}\\right)$?",
+  "fp": "0fe653cf7168",
+  "yield": "HIGH",
+  "why": "CED 3.8 tangent at a special angle; regularly assessed."
+ },
+ {
+  "front": "What is the equation of the unit circle?",
+  "fp": "0833ddf31253",
+  "yield": "MEDIUM",
+  "why": "CED 3.2 unit-circle equation; underlies the Pythagorean identity but rarely asked directly."
+ },
+ {
+  "front": "What is the formula for arc length?",
+  "fp": "4d23f9767a3e",
+  "yield": "HIGH",
+  "why": "CED 3.2 arc length s = r*theta (radian as a ratio); regularly assessed."
+ }
+]

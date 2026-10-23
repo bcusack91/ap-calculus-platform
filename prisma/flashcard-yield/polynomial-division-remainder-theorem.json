@@ -1,0 +1,8 @@
+[
+ {
+  "front": "Use polynomial long division to write $\\frac{x^3 - 2x + 1}{x - 3}$ as a quotient plus a remainder term.",
+  "fp": "39267de58388",
+  "yield": "MEDIUM",
+  "why": "CED 1.11: long division r(x) = q(x) + remainder/divisor; usually appears inside slant-asymptote items."
+ }
+]

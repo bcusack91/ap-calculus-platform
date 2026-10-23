@@ -1,0 +1,62 @@
+[
+ {
+  "front": "Given $f(x) = \\sqrt{x}$, write the equation for the function that results from: reflecting across the x-axis, shifting left 2 units, and shifting down 3 units.",
+  "fp": "37d394706aa8",
+  "yield": "HIGH",
+  "why": "CED 1.12 transformations with domain and range."
+ },
+ {
+  "front": "How do $f(x) + k$ and $f(x + h)$ transform a graph?",
+  "fp": "8265c51e03dc",
+  "yield": "HIGH",
+  "why": "CED 1.12 translations."
+ },
+ {
+  "front": "How do transformations change the domain and range of $f$?",
+  "fp": "efad97b98b89",
+  "yield": "HIGH",
+  "why": "CED 1.12 effects of transformations on domain and range."
+ },
+ {
+  "front": "How do you reflect over the $x$-axis vs. the $y$-axis?",
+  "fp": "ea3445625698",
+  "yield": "HIGH",
+  "why": "CED 1.12 reflections."
+ },
+ {
+  "front": "If $f(x) = \\sqrt{x}$, write the function obtained by a horizontal dilation by a factor of $\\frac14$, then a translation right $2$ units and up $1$ unit.",
+  "fp": "3c9c428b425a",
+  "yield": "MEDIUM",
+  "why": "CED 1.12 writing a transformed equation; order of operations matters."
+ },
+ {
+  "front": "The graph of $f(x) = x^2$ is transformed to $g(x) = 2(x-3)^2 + 1$. Describe all transformations applied.",
+  "fp": "3036c8af25cc",
+  "yield": "HIGH",
+  "why": "CED 1.12 combined transformations of a parent graph."
+ },
+ {
+  "front": "What does $af(x)$ do for $|a| > 1$ and $|a| < 1$?",
+  "fp": "72dd08d3b8a5",
+  "yield": "HIGH",
+  "why": "CED 1.12 vertical dilation."
+ },
+ {
+  "front": "What does $f(bx)$ do?",
+  "fp": "6ba9dadefbce",
+  "yield": "HIGH",
+  "why": "CED 1.12 horizontal dilation."
+ },
+ {
+  "front": "What is the difference between even and odd function symmetry?",
+  "fp": "269b77860c87",
+  "yield": "HIGH",
+  "why": "CED 1.5 even/odd symmetry; appears every year."
+ },
+ {
+  "front": "What order should transformations be applied?",
+  "fp": "1203c05e312b",
+  "yield": "MEDIUM",
+  "why": "CED 1.12 order of combined transformations."
+ }
+]

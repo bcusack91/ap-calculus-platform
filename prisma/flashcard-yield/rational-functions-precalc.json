@@ -1,0 +1,98 @@
+[
+ {
+  "front": "Find the real zeros of $r(x) = \\frac{(x - 2)(x + 1)}{(x + 1)(x - 3)}$.",
+  "fp": "4cc24bb91d5f",
+  "yield": "HIGH",
+  "why": "CED 1.8 rational zeros (numerator zero that is not a denominator zero)."
+ },
+ {
+  "front": "For $f(x) = \\frac{x-1}{(x-1)(x+2)}$, is there a vertical asymptote or hole at x = 1?",
+  "fp": "e2c597b40faf",
+  "yield": "HIGH",
+  "why": "CED 1.10 hole location including its y-value via a limit."
+ },
+ {
+  "front": "Graphically, what does the solution to $\\frac{P(x)}{Q(x)} < 0$ represent?",
+  "fp": "06cbf6bec34a",
+  "yield": "MEDIUM",
+  "why": "CED 1.8 where r(x) < 0 graphically."
+ },
+ {
+  "front": "Horizontal asymptote of $\\frac{2x^2 + 1}{x^2 - 3}$:",
+  "fp": "ada267794032",
+  "yield": "HIGH",
+  "why": "CED 1.7 horizontal asymptote, equal degrees."
+ },
+ {
+  "front": "How do you convert $\\frac{x}{x-2} \\geq 3$ to standard form?",
+  "fp": "d36873c7a7ff",
+  "yield": "MEDIUM",
+  "why": "Rewriting a rational inequality in standard form."
+ },
+ {
+  "front": "How do you find the domain of a rational function?",
+  "fp": "3c6c8df45f10",
+  "yield": "MEDIUM",
+  "why": "Domain of a rational function; inside most rational items."
+ },
+ {
+  "front": "How do you find the vertical and horizontal asymptotes of a rational function $f(x) = \\frac{p(x)}{q(x)}$?",
+  "fp": "5e6cbc87d133",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.7/1.9 asymptote rules; on nearly every exam."
+ },
+ {
+  "front": "Vertical asymptote of $\\frac{x + 1}{x - 1}$:",
+  "fp": "ba44de7cd271",
+  "yield": "HIGH",
+  "why": "CED 1.9 vertical asymptote with one-sided limits."
+ },
+ {
+  "front": "What are the two sources of critical values for rational inequalities?",
+  "fp": "a9c2205eabb2",
+  "yield": "MEDIUM",
+  "why": "CED 1.8 sign changes at numerator and denominator zeros."
+ },
+ {
+  "front": "What happens if you cancel common factors in a rational inequality before solving?",
+  "fp": "dbb297f1ea4c",
+  "yield": "MEDIUM",
+  "why": "Holes still excluded from the solution."
+ },
+ {
+  "front": "What is a rational function?",
+  "fp": "b4ba3ca01a8c",
+  "yield": "LOW",
+  "why": "Definition; never asked on its own."
+ },
+ {
+  "front": "What is a vertical asymptote?",
+  "fp": "e2b3667279ed",
+  "yield": "HIGH",
+  "why": "CED 1.9 vertical asymptote with one-sided limit notation."
+ },
+ {
+  "front": "When does a slant (oblique) asymptote occur?",
+  "fp": "803748d9a3fa",
+  "yield": "HIGH",
+  "why": "CED 1.7 slant asymptote via long division."
+ },
+ {
+  "front": "When does a zero $x = c$ of the denominator give a hole, and when a vertical asymptote?",
+  "fp": "1d1b239177b8",
+  "yield": "HIGH",
+  "why": "CED 1.9/1.10 hole vs asymptote by multiplicity; regularly assessed."
+ },
+ {
+  "front": "When solving $\\frac{P(x)}{Q(x)} \\geq 0$, which critical values can be included in the solution?",
+  "fp": "5ff3a55b8a59",
+  "yield": "MEDIUM",
+  "why": "CED 1.8 endpoints of a rational inequality."
+ },
+ {
+  "front": "Why not just multiply both sides of a rational inequality by the denominator?",
+  "fp": "cf63cd2ef7ce",
+  "yield": "MEDIUM",
+  "why": "Common error in solving rational inequalities."
+ }
+]

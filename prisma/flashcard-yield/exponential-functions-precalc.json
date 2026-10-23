@@ -1,0 +1,116 @@
+[
+ {
+  "front": "$Q(t) = 500(1.2)^t$ with $t$ in years. Write an equivalent model with time $m$ in months.",
+  "fp": "d5b2cfcffa38",
+  "yield": "HIGH",
+  "why": "CED 2.4 rewriting an exponential to a different time unit."
+ },
+ {
+  "front": "How do you solve $2^{x} = 20$?",
+  "fp": "8bc1b1addca1",
+  "yield": "MEDIUM",
+  "why": "CED 2.13 solving an exponential equation with logs."
+ },
+ {
+  "front": "If a quantity decays by 20% each period, what is the base $b$?",
+  "fp": "659a6a43b0ac",
+  "yield": "HIGH",
+  "why": "CED 2.5 percent decay to decay factor; common context step."
+ },
+ {
+  "front": "If a quantity grows by 8% each year, what is the base $b$ in the exponential model?",
+  "fp": "3dd5ffb5e564",
+  "yield": "HIGH",
+  "why": "CED 2.5 percent rate to growth factor; common context step."
+ },
+ {
+  "front": "In the compound interest formula $A = P(1 + \\frac{r}{n})^{nt}$, what does $n$ represent?",
+  "fp": "61c158869d6c",
+  "yield": "LOW",
+  "why": "Compound-interest context; acceptable but rarely asked."
+ },
+ {
+  "front": "What distinguishes exponential from linear growth?",
+  "fp": "71c7ed5edd34",
+  "yield": "HIGH",
+  "why": "CED 2.2 equal differences vs equal ratios; regularly assessed."
+ },
+ {
+  "front": "What does $A(t) = A_0e^{kt}$ model, and what does the sign of $k$ tell you?",
+  "fp": "df7a53534d22",
+  "yield": "MEDIUM",
+  "why": "CED 2.3/2.4 natural-base models."
+ },
+ {
+  "front": "What happens to a quantity after one half-life?",
+  "fp": "03da0ecbcf84",
+  "yield": "LOW",
+  "why": "Meaning of half-life; trivial recall."
+ },
+ {
+  "front": "What is the domain of an exponential function $f(x) = ab^x$?",
+  "fp": "b1504aaaf618",
+  "yield": "MEDIUM",
+  "why": "CED 2.3 domain of an exponential."
+ },
+ {
+  "front": "What is the doubling time formula?",
+  "fp": "b0ea49b3da15",
+  "yield": "LOW",
+  "why": "True, but AP items find doubling time from the model, not a memorized formula."
+ },
+ {
+  "front": "What is the exponential growth model formula?",
+  "fp": "36dee867a4d2",
+  "yield": "MEDIUM",
+  "why": "CED 2.5 percent-growth model in context."
+ },
+ {
+  "front": "What is the general form of an exponential function?",
+  "fp": "ebca2070f891",
+  "yield": "HIGH",
+  "why": "CED 2.3 exponential function form."
+ },
+ {
+  "front": "What is the half-life formula?",
+  "fp": "b0ddcd811f62",
+  "yield": "HIGH",
+  "why": "CED 2.5 half-life model."
+ },
+ {
+  "front": "What is the horizontal asymptote of $f(x) = ab^x$?",
+  "fp": "33f40fbfdc5d",
+  "yield": "HIGH",
+  "why": "CED 2.3 asymptote and limits of exponentials."
+ },
+ {
+  "front": "What is the inverse of an exponential function?",
+  "fp": "17e3a7191e82",
+  "yield": "HIGH",
+  "why": "CED 2.10 exponential and log are inverses / reflections over y = x."
+ },
+ {
+  "front": "What is the natural exponential function?",
+  "fp": "5c1a963b3f2d",
+  "yield": "MEDIUM",
+  "why": "CED 2.3 natural base e."
+ },
+ {
+  "front": "What is the range of $f(x) = ab^x$ when $a > 0$?",
+  "fp": "bd86a39fbc79",
+  "yield": "MEDIUM",
+  "why": "CED 2.3 range of an exponential."
+ },
+ {
+  "front": "What is the relationship between half-life $h$ and decay constant $k$?",
+  "fp": "cad9648614f3",
+  "yield": "LOW",
+  "why": "True, but rarely assessed as a formula."
+ },
+ {
+  "front": "When does an exponential function represent growth vs. decay?",
+  "fp": "abb9b527772e",
+  "yield": "HIGH",
+  "why": "CED 2.3 growth vs decay."
+ }
+]

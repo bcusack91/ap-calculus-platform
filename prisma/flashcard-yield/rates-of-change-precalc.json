@@ -1,0 +1,44 @@
+[
+ {
+  "front": "How do average rates of change behave for linear vs. quadratic functions?",
+  "fp": "7dd34b5b5721",
+  "yield": "HIGH",
+  "why": "CED 1.3 linear vs quadratic rates of change; regularly assessed with tables."
+ },
+ {
+  "front": "How is the rate of change at a point related to average rates of change?",
+  "fp": "73423fbfdfab",
+  "yield": "HIGH",
+  "why": "CED 1.2: rate of change at a point approximated by AROC over small intervals."
+ },
+ {
+  "front": "If $s(t)$ represents position, what is average velocity from $t = a$ to $t = b$?",
+  "fp": "786ba47b392a",
+  "yield": "MEDIUM",
+  "why": "AROC in a position context (CED 1.2/1.14); common context but not core."
+ },
+ {
+  "front": "What does concavity tell you about rate of change?",
+  "fp": "e101e1b11e1f",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.3/1.4 concavity <-> rate of change increasing/decreasing; on nearly every exam."
+ },
+ {
+  "front": "What does the difference quotient represent?",
+  "fp": "ecfc3881eea8",
+  "yield": "MEDIUM",
+  "why": "AROC over [x, x+h]; appears in symbolic-manipulation items."
+ },
+ {
+  "front": "What does the sign of a rate of change tell you?",
+  "fp": "f5a451aa96bd",
+  "yield": "HIGH",
+  "why": "CED 1.1/1.2 increasing/decreasing vs rate of change."
+ },
+ {
+  "front": "What is the average rate of change of $f$ over $[a, b]$?",
+  "fp": "e4574c392f5c",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 1.2 average rate of change; on every exam."
+ }
+]

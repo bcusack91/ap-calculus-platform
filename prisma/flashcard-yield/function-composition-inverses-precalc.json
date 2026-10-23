@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Given $f(x) = 2x + 3$ and $g(x) = x^2 - 1$:\n\na) Find $(f \\circ g)(x)$\nb) Find $(g \\circ f)(x)$\nc) Find $(f \\circ g)(2)$",
+  "fp": "ea179b225745",
+  "yield": "MEDIUM",
+  "why": "CED 2.7 composition with formulas."
+ },
+ {
+  "front": "How do you find the inverse of a function?",
+  "fp": "cd7d48a73e86",
+  "yield": "HIGH",
+  "why": "CED 2.8 inverse functions."
+ },
+ {
+  "front": "If $f(x) = 2x + 1$ and $g(x) = x^2$, what is $(f \\circ g)(3)$?",
+  "fp": "36acb6216b86",
+  "yield": "HIGH",
+  "why": "CED 2.7 evaluating a composition."
+ },
+ {
+  "front": "Use the table to find $f(g(2))$ and $g(f(2))$.\n\n| $x$ | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|\n| $f(x)$ | 3 | 4 | 1 | 2 |\n| $g(x)$ | 4 | 3 | 1 | 2 |",
+  "fp": "2d46a817fead",
+  "yield": "HIGH",
+  "why": "CED 2.7 composition from a table; common MCQ format."
+ },
+ {
+  "front": "Use the table to find $f^{-1}(4)$ and $f^{-1}(f(3))$.\n\n| $x$ | 0 | 1 | 2 | 3 |\n|---|---|---|---|---|\n| $f(x)$ | 2 | 4 | 7 | 9 |",
+  "fp": "93964662c73d",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.8 inverse from a table; on nearly every exam."
+ },
+ {
+  "front": "What is $(f \\circ g)(x)$?",
+  "fp": "ea4f40da1703",
+  "yield": "HIGH",
+  "why": "CED 2.7 composition definition and order."
+ }
+]

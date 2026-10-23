@@ -1,0 +1,122 @@
+[
+ {
+  "front": "$\\sin(2\\theta) = ?$ (double angle formula)",
+  "fp": "92068dab4554",
+  "yield": "MEDIUM",
+  "why": "CED 3.12 sin 2theta; restates the double-angle card a46e4dd5698f on this deck."
+ },
+ {
+  "front": "$\\tan\\theta = ?$ in terms of $\\sin$ and $\\cos$:",
+  "fp": "a217784d4a21",
+  "yield": "MEDIUM",
+  "why": "CED 3.8/3.11 tan = sin/cos; restates ae95e7cfecba on this deck."
+ },
+ {
+  "front": "Give the three forms of $\\cos 2\\theta$.",
+  "fp": "6522a68b46ba",
+  "yield": "MEDIUM",
+  "why": "CED 3.12 three forms of cos 2theta; restates the double-angle card a46e4dd5698f on this deck."
+ },
+ {
+  "front": "How do you rewrite $\\sin^2\\theta$ and $\\cos^2\\theta$ using the double-angle identity for cosine?",
+  "fp": "ac2558838e6e",
+  "yield": "HIGH",
+  "why": "CED 3.12 rewriting sin^2 / cos^2 as a sinusoid via cos 2theta; regularly assessed."
+ },
+ {
+  "front": "How would you find $\\cos\\dfrac{5\\pi}{12}$ exactly?",
+  "fp": "81551476726e",
+  "yield": "HIGH",
+  "why": "CED 3.12 exact value via the cosine sum identity; regularly assessed."
+ },
+ {
+  "front": "If $\\sin\\theta = \\frac{3}{5}$ and $\\frac{\\pi}{2} < \\theta < \\pi$, find $\\sin 2\\theta$ and $\\cos 2\\theta$.",
+  "fp": "27a9e0e50009",
+  "yield": "HIGH",
+  "why": "CED 3.12 applying the Pythagorean and double-angle identities with quadrant signs; regularly assessed."
+ },
+ {
+  "front": "Is cosine an even or odd function?",
+  "fp": "688b114a1052",
+  "yield": "HIGH",
+  "why": "CED 3.4/3.12 cosine is even; used in difference formulas and graph symmetry."
+ },
+ {
+  "front": "Is sine an even or odd function?",
+  "fp": "525a5217867e",
+  "yield": "HIGH",
+  "why": "CED 3.4/3.12 sine is odd; used in difference formulas and graph symmetry."
+ },
+ {
+  "front": "Solve $\\cos 2x = \\cos x$ on $[0, 2\\pi)$. Which form of the identity do you choose, and why?",
+  "fp": "71e386c15ad0",
+  "yield": "HIGH",
+  "why": "CED 3.12 using an identity to rewrite an equation in one function before solving; regularly assessed."
+ },
+ {
+  "front": "State the double angle formulas for sin(2θ) and cos(2θ).",
+  "fp": "06ebff61c508",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.12 double-angle identities for sine and cosine; tested every administration."
+ },
+ {
+  "front": "The Pythagorean identity is:",
+  "fp": "1d6557a489eb",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.12 the Pythagorean identity; tested every administration."
+ },
+ {
+  "front": "What are the difference formulas for sin(A − B) and cos(A − B)?",
+  "fp": "98739c8ad385",
+  "yield": "HIGH",
+  "why": "CED 3.12 difference formulas (sum identities with -B); regularly assessed."
+ },
+ {
+  "front": "What are the reciprocal identities for cosine and tangent?",
+  "fp": "d1e1bfd32430",
+  "yield": "MEDIUM",
+  "why": "CED 3.11 reciprocal functions sec and cot; secondary facts."
+ },
+ {
+  "front": "What is the cofunction identity for sine?",
+  "fp": "53634a13ae8e",
+  "yield": "MEDIUM",
+  "why": "CED 3.6/3.12 cofunction (phase) relation between sine and cosine; secondary identity."
+ },
+ {
+  "front": "What is the Pythagorean identity involving cotangent and cosecant?",
+  "fp": "bad8c326ed12",
+  "yield": "MEDIUM",
+  "why": "CED 3.12 cot/csc Pythagorean form; the least used of the three."
+ },
+ {
+  "front": "What is the Pythagorean identity involving tangent and secant?",
+  "fp": "31c7f8852ced",
+  "yield": "HIGH",
+  "why": "CED 3.12 Pythagorean identity in its tan/sec form; regularly assessed."
+ },
+ {
+  "front": "What is the quotient identity for tangent?",
+  "fp": "ae95e7cfecba",
+  "yield": "HIGH",
+  "why": "CED 3.8/3.11 tan = sin/cos; used throughout equation and identity items."
+ },
+ {
+  "front": "What is the reciprocal of $\\sin(\\theta)$?",
+  "fp": "a592ad4b0e6e",
+  "yield": "MEDIUM",
+  "why": "CED 3.11 cosecant as the reciprocal of sine; secondary fact."
+ },
+ {
+  "front": "What is the sum formula for cos(A + B)?",
+  "fp": "860f4da12337",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.12 cosine sum identity; tested every administration."
+ },
+ {
+  "front": "What is the sum formula for sin(A + B)?",
+  "fp": "825bb4607c5b",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.12 sine sum identity; tested every administration."
+ }
+]

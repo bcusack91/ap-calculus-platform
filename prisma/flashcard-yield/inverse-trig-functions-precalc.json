@@ -1,0 +1,80 @@
+[
+ {
+  "front": "Domain and range of $\\arccos(x)$?",
+  "fp": "f587b3002c42",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.9 range of arccos; tested every administration."
+ },
+ {
+  "front": "Domain and range of $\\arcsin(x)$?",
+  "fp": "e9e8d037827d",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.9 range of arcsin; the most tested inverse-trig fact."
+ },
+ {
+  "front": "Domain and range of $\\arctan(x)$?",
+  "fp": "be466f54a746",
+  "yield": "HIGH",
+  "why": "CED 3.9 domain and range of arctan with its asymptotes; regularly assessed."
+ },
+ {
+  "front": "Evaluate $\\arccos\\left(-\\frac{1}{2}\\right)$.",
+  "fp": "0c1855f3ab6d",
+  "yield": "HIGH",
+  "why": "CED 3.9 evaluating arccos at a negative input (Quadrant II answer); regularly assessed."
+ },
+ {
+  "front": "Evaluate $\\arcsin(\\frac{1}{2})$ exactly in radians.",
+  "fp": "2ebbbc13865e",
+  "yield": "HIGH",
+  "why": "CED 3.9 evaluating arcsin at a special value, with the out-of-range 5pi/6 trap."
+ },
+ {
+  "front": "Evaluate $\\arcsin\\left(-\\frac{\\sqrt{3}}{2}\\right)$.",
+  "fp": "dcccd30c877e",
+  "yield": "HIGH",
+  "why": "CED 3.9 evaluating arcsin at a negative input inside the restricted range; regularly assessed."
+ },
+ {
+  "front": "Evaluate $\\arctan(-1)$.",
+  "fp": "0286ee4d7692",
+  "yield": "HIGH",
+  "why": "CED 3.9 evaluating arctan at a negative input inside the restricted range; regularly assessed."
+ },
+ {
+  "front": "Evaluate $\\sin^{-1}(\\frac{1}{2})$.",
+  "fp": "d2109ebfa325",
+  "yield": "MEDIUM",
+  "why": "CED 3.9 arcsin(1/2); restates 2ebbbc13865e."
+ },
+ {
+  "front": "What is the domain of $\\sin^{-1}x$ and $\\cos^{-1}x$?",
+  "fp": "6193d4275bfc",
+  "yield": "MEDIUM",
+  "why": "CED 3.9 domain of arcsin/arccos; restates the domain-range cards e9e8d037827d / f587b3002c42."
+ },
+ {
+  "front": "What is the range of $\\cos^{-1}x$?",
+  "fp": "4b0d16717faa",
+  "yield": "MEDIUM",
+  "why": "CED 3.9 range of arccos; restates the fuller domain-range card f587b3002c42 on this deck."
+ },
+ {
+  "front": "What is the range of $\\sin^{-1}x$?",
+  "fp": "83628d78b107",
+  "yield": "MEDIUM",
+  "why": "CED 3.9 range of arcsin; restates e9e8d037827d."
+ },
+ {
+  "front": "What is the range of $\\tan^{-1}x$?",
+  "fp": "e21fe2983b39",
+  "yield": "MEDIUM",
+  "why": "CED 3.9 range of arctan; restates be466f54a746 (keeps the open-endpoint note)."
+ },
+ {
+  "front": "Why must trig functions be domain-restricted to have inverses?",
+  "fp": "f56f12526c37",
+  "yield": "HIGH",
+  "why": "CED 3.9.A why the domain is restricted (periodic, not one-to-one); regularly assessed."
+ }
+]

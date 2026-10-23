@@ -1,0 +1,38 @@
+[
+ {
+  "front": "Exponential regression (ExpReg) returns $a$ and $b$ for $y = ab^x$. How do you interpret them, and when is a prediction an extrapolation?",
+  "fp": "f913c997f7b3",
+  "yield": "MEDIUM",
+  "why": "CED 2.5 / 1.14 regression on the calculator; interpretation items are common."
+ },
+ {
+  "front": "How do you decide from a residual plot whether a model is appropriate?",
+  "fp": "4c9f614e6ef9",
+  "yield": "HIGH",
+  "why": "CED 2.6 competing models / residual plots."
+ },
+ {
+  "front": "On a semi-log plot ($\\log y$ vs $x$) the data lie on a line with slope $m$ and vertical intercept $c$. What is the exponential model?",
+  "fp": "9fad336dd0a0",
+  "yield": "HIGH",
+  "why": "CED 2.15 semi-log plots."
+ },
+ {
+  "front": "What is a residual, and what does its sign tell you about the model?",
+  "fp": "5568e7ede56e",
+  "yield": "HIGH",
+  "why": "CED 2.6 residuals; asked most years."
+ },
+ {
+  "front": "What pattern in a table signals a logarithmic model $y = a + b\\log_c x$?",
+  "fp": "3f4ce2cbe7ad",
+  "yield": "HIGH",
+  "why": "CED 2.14 logarithmic function context and data modeling."
+ },
+ {
+  "front": "Why does exponential data $y = ab^x$ look linear on a semi-log plot (logarithmic $y$-axis), and what are the slope and intercept?",
+  "fp": "cbafa25d4092",
+  "yield": "HIGH",
+  "why": "CED 2.15 semi-log plots; lives in the new data-modeling lesson."
+ }
+]

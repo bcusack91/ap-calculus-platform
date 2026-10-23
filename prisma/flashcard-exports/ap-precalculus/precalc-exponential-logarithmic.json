@@ -1,0 +1,276 @@
+[
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "$Q(t) = 500(1.2)^t$ with $t$ in years. Write an equivalent model with time $m$ in months.",
+  "back": "$Q = 500(1.2)^{m/12} = 500\\left(1.2^{1/12}\\right)^m \\approx 500(1.0153)^m$, using $b^{mn} = (b^m)^n$."
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "How do you solve $2^{x} = 20$?",
+  "back": "Take logs: $x = \\log_{2}20 = \\frac{\\ln 20}{\\ln 2} \\approx 4.32$."
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "If a quantity decays by 20% each period, what is the base $b$?",
+  "back": "$b = 0.80$ (or $1 - 0.20$)"
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "If a quantity grows by 8% each year, what is the base $b$ in the exponential model?",
+  "back": "$b = 1.08$ (or $1 + 0.08$)"
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "In the compound interest formula $A = P(1 + \\frac{r}{n})^{nt}$, what does $n$ represent?",
+  "back": "The number of times interest is compounded per year"
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What distinguishes exponential from linear growth?",
+  "back": "Linear adds a constant each interval; exponential MULTIPLIES by a constant ratio each interval."
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What does $A(t) = A_0e^{kt}$ model, and what does the sign of $k$ tell you?",
+  "back": "Continuous exponential change from the initial amount $A_0$: growth if $k > 0$, decay if $k < 0$. It is an exponential function with base $e^k$, so $e^k$ is the growth factor per unit of time."
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What happens to a quantity after one half-life?",
+  "back": "It reduces to 50% (half) of its original amount"
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What is the domain of an exponential function $f(x) = ab^x$?",
+  "back": "All real numbers: $(-\\infty, \\infty)$"
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What is the doubling time formula?",
+  "back": "For $A(t) = A_0e^{kt}$ with $k > 0$, the doubling time is $t_d = \\frac{\\ln 2}{k}$ (solve $e^{kt} = 2$)."
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What is the exponential growth model formula?",
+  "back": "$A(t) = A_0(1 + r)^t$ where $A_0$ is initial amount, $r$ is growth rate, $t$ is time"
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What is the general form of an exponential function?",
+  "back": "$f(x) = ab^x$ with $a \\ne 0$, $b > 0$, $b \\ne 1$. $a = f(0)$ is the initial value; $b$ is the growth factor, the ratio by which outputs change for each unit increase in $x$."
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What is the half-life formula?",
+  "back": "$A(t) = A_0(\\frac{1}{2})^{t/h}$ where $h$ is the half-life"
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What is the horizontal asymptote of $f(x) = ab^x$?",
+  "back": "$y = 0$. For $b > 1$, $\\lim_{x \\to -\\infty} ab^x = 0$; for $0 < b < 1$, $\\lim_{x \\to \\infty} ab^x = 0$. (Adding a constant $k$ moves it to $y = k$.)"
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What is the inverse of an exponential function?",
+  "back": "A logarithmic function — $y = b^{x}$ and $y = \\log_b x$ are reflections over $y = x$."
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What is the natural exponential function?",
+  "back": "$f(x) = e^{x}$, where $e \\approx 2.71828$. Base $e$ is the standard base for continuous growth and decay models such as $A(t) = A_0e^{rt}$.",
+  "hint": "Euler's number"
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What is the range of $f(x) = ab^x$ when $a > 0$?",
+  "back": "$(0, \\infty)$ - all positive real numbers"
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "What is the relationship between half-life $h$ and decay constant $k$?",
+  "back": "If $A(t) = A_0e^{-kt}$ with $k > 0$, the half-life is $h = \\frac{\\ln 2}{k}$ (solve $e^{-kh} = \\frac{1}{2}$)."
+ },
+ {
+  "topicSlug": "exponential-functions-precalc",
+  "front": "When does an exponential function represent growth vs. decay?",
+  "back": "For $a > 0$: growth (increasing) when $b > 1$; decay (decreasing) when $0 < b < 1$. If $a < 0$, the graph is reflected over the $x$-axis and these directions reverse."
+ },
+ {
+  "topicSlug": "exponential-logarithmic-modeling-precalc",
+  "front": "Exponential regression (ExpReg) returns $a$ and $b$ for $y = ab^x$. How do you interpret them, and when is a prediction an extrapolation?",
+  "back": "$a$ is the model's output at $x = 0$; $b$ is the factor per unit of input ($b - 1$ is the percent change). A prediction for an input outside the data range is an extrapolation: it assumes the same growth factor continues, so it is less reliable.",
+  "hint": "Initial value, growth factor, data range."
+ },
+ {
+  "topicSlug": "exponential-logarithmic-modeling-precalc",
+  "front": "How do you decide from a residual plot whether a model is appropriate?",
+  "back": "Look for a pattern. Residuals scattered randomly about 0 with no pattern: the model is appropriate. A U-shape, arch, or steady trend: the model type is wrong (e.g. a line fit to exponential data).",
+  "hint": "Pattern = problem."
+ },
+ {
+  "topicSlug": "exponential-logarithmic-modeling-precalc",
+  "front": "On a semi-log plot ($\\log y$ vs $x$) the data lie on a line with slope $m$ and vertical intercept $c$. What is the exponential model?",
+  "back": "$y = ab^x$ with $b = 10^{m}$ and $a = 10^{c}$ (with $\\ln$ on the axis use $e^{m}$ and $e^{c}$). Linear on a semi-log plot ⇔ exponential on ordinary axes.",
+  "hint": "Slope recovers the base; intercept recovers the initial value."
+ },
+ {
+  "topicSlug": "exponential-logarithmic-modeling-precalc",
+  "front": "What is a residual, and what does its sign tell you about the model?",
+  "back": "residual = actual value − predicted value. Positive: the data point is above the model (the model underestimates). Negative: below the model (overestimates).",
+  "hint": "Actual minus predicted."
+ },
+ {
+  "topicSlug": "exponential-logarithmic-modeling-precalc",
+  "front": "What pattern in a table signals a logarithmic model $y = a + b\\log_c x$?",
+  "back": "Equal output DIFFERENCES whenever the input is multiplied by the same factor: multiplying $x$ by $c$ adds $b$ to $y$. (Exponential is the mirror image: equal input differences give equal output ratios.)",
+  "hint": "Input ratio → output difference."
+ },
+ {
+  "topicSlug": "exponential-logarithmic-modeling-precalc",
+  "front": "Why does exponential data $y = ab^x$ look linear on a semi-log plot (logarithmic $y$-axis), and what are the slope and intercept?",
+  "back": "Taking logs gives $\\log y = \\log a + x\\log b$, which is linear in $x$. The line has slope $\\log b$ and vertical intercept $\\log a$."
+ },
+ {
+  "topicSlug": "function-composition-inverses-precalc",
+  "front": "Given $f(x) = 2x + 3$ and $g(x) = x^2 - 1$:\n\na) Find $(f \\circ g)(x)$\nb) Find $(g \\circ f)(x)$\nc) Find $(f \\circ g)(2)$",
+  "back": "**Part (a):** $(f \\circ g)(x) = f(g(x))$\n\nSubstitute $g(x)$ into $f$:\n\n$f(g(x)) = f(x^2 - 1) = 2(x^2 - 1) + 3 = 2x^2 - 2 + 3 = 2x^2 + 1$\n\n**Part (b):** $(g \\circ f)(x) = g(f(x))$\n\nSubstitute $f(x)$ into $g$:\n\n$g(f(x)) = g(2x + 3) = (2x + 3)^2 - 1$\n\n$= 4x^2 + 12x + 9 - 1 = 4x^2 + 12x + 8$\n\n**Part (c):** $(f \\circ g)(2) = 2(2)^2 + 1 = 2(4) + 1 = 9$\n\nAlternatively: $g(2) = 2^2 - 1 = 3$, then $f(3) = 2(3) + 3 = 9$ ✓"
+ },
+ {
+  "topicSlug": "function-composition-inverses-precalc",
+  "front": "How do you find the inverse of a function?",
+  "back": "Only a one-to-one function has an inverse function (restrict the domain if needed).\n1. Replace $f(x)$ with $y$\n2. Swap $x$ and $y$\n3. Solve for $y$\n4. Replace $y$ with $f^{-1}(x)$\n\nGraphically, reflect over the line $y = x$; the domain and range swap.",
+  "hint": "Swap x and y, then solve for y."
+ },
+ {
+  "topicSlug": "function-composition-inverses-precalc",
+  "front": "If $f(x) = 2x + 1$ and $g(x) = x^2$, what is $(f \\circ g)(3)$?",
+  "back": "$19$. Work inside out: $(f \\circ g)(3) = f(g(3)) = f(9) = 2(9) + 1 = 19$.",
+  "hint": "Inside out: find g(3) first."
+ },
+ {
+  "topicSlug": "function-composition-inverses-precalc",
+  "front": "Use the table to find $f(g(2))$ and $g(f(2))$.\n\n| $x$ | 1 | 2 | 3 | 4 |\n|---|---|---|---|---|\n| $f(x)$ | 3 | 4 | 1 | 2 |\n| $g(x)$ | 4 | 3 | 1 | 2 |",
+  "back": "$f(g(2)) = f(3) = 1$ and $g(f(2)) = g(4) = 2$. Work inside out, reading each inner output from the table. The two orders differ, so composition is not commutative."
+ },
+ {
+  "topicSlug": "function-composition-inverses-precalc",
+  "front": "Use the table to find $f^{-1}(4)$ and $f^{-1}(f(3))$.\n\n| $x$ | 0 | 1 | 2 | 3 |\n|---|---|---|---|---|\n| $f(x)$ | 2 | 4 | 7 | 9 |",
+  "back": "$f^{-1}(4) = 1$, because $f(1) = 4$: read the table from the output row back to the input. $f^{-1}(f(3)) = 3$, because $f^{-1}$ undoes $f$."
+ },
+ {
+  "topicSlug": "function-composition-inverses-precalc",
+  "front": "What is $(f \\circ g)(x)$?",
+  "back": "$(f \\circ g)(x) = f(g(x))$\n\nEvaluate the **inner** function first, then plug that result into the **outer** function.",
+  "hint": "Read right to left: g first, then f."
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "How do you solve $a^x = b$ when you can't use the same base?",
+  "back": "Take log of both sides: $x\\ln(a) = \\ln(b)$, so $x = \\frac{\\ln(b)}{\\ln(a)}$"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "If $\\log_b(M) = \\log_b(N)$, what can you conclude?",
+  "back": "$M = N$ (one-to-one property of logarithms)"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "If $b^x = b^y$, what can you conclude?",
+  "back": "$x = y$, provided $b > 0$ and $b \\neq 1$ (the one-to-one property). Example: $2^{3x} = 2^{12} \\Rightarrow 3x = 12 \\Rightarrow x = 4$."
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "Key features of $f(x) = \\log_b x$ for $b > 1$?",
+  "back": "Domain $(0, \\infty)$, range all real numbers. Vertical asymptote $x = 0$ with $\\lim_{x \\to 0^+} \\log_b x = -\\infty$, and $\\lim_{x \\to \\infty} \\log_b x = \\infty$. Increasing and concave down, with no extrema. Passes through $(1, 0)$ and $(b, 1)$."
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "State the Power Rule for logarithms.",
+  "back": "$\\log_b(M^n) = n\\log_b M$ for $M > 0$: the exponent comes out front as a multiplier.",
+  "hint": "Exponent → coefficient"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "State the Product Rule for logarithms.",
+  "back": "$\\log_b(MN) = \\log_b M + \\log_b N$ for $M, N > 0$: the log of a product is the sum of the logs.",
+  "hint": "Multiplication → addition"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "State the Quotient Rule for logarithms.",
+  "back": "$\\log_b\\left(\\frac{M}{N}\\right) = \\log_b M - \\log_b N$ for $M, N > 0$: the log of a quotient is the difference of the logs.",
+  "hint": "Division → subtraction"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "What does $\\log_b(x) = y$ mean in exponential form?",
+  "back": "$b^y = x$"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "What is $\\log_2(16)$?",
+  "back": "4 (because $2^4 = 16$)"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "What is $\\log_b(1)$ for any base $b$?",
+  "back": "0 (because $b^0 = 1$)"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "What is $\\log_b(b)$ for any base $b$?",
+  "back": "1 (because $b^1 = b$)"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "What is the change of base formula, and why is it useful?",
+  "back": "$\\log_b(x) = \\frac{\\ln x}{\\ln b} = \\frac{\\log x}{\\log b}$ — it rewrites a log of any base using only the $\\ln$ or $\\log$ keys on a calculator.",
+  "hint": "Divide by the log of the base."
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "What is the domain of $f(x) = \\log_b(x)$?",
+  "back": "$(0, \\infty)$ - only positive numbers"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "What is the first step in solving $\\log_3(x) = 5$?",
+  "back": "Convert to exponential form: $x = 3^5 = 243$"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "What must you always check when solving logarithmic equations?",
+  "back": "Check that all solutions give positive arguments for all logarithms (domain restrictions)"
+ },
+ {
+  "topicSlug": "logarithmic-functions-precalc",
+  "front": "Write $2\\log x - \\log y + \\log 3$ as a single logarithm.",
+  "back": "$\\log\\left(\\frac{3x^2}{y}\\right)$ for $x, y > 0$. Power rule: $2\\log x = \\log x^2$; then the product and quotient rules combine the terms."
+ },
+ {
+  "topicSlug": "sequences-series-precalc",
+  "front": "How are arithmetic and geometric sequences related to linear and exponential functions?",
+  "back": "An arithmetic sequence is a linear function whose inputs are whole numbers (slope = common difference $d$). A geometric sequence is an exponential function whose inputs are whole numbers (base = common ratio $r$). Either can be built from any two terms."
+ },
+ {
+  "topicSlug": "sequences-series-precalc",
+  "front": "What is a geometric sequence?",
+  "back": "A sequence with a constant ratio between consecutive terms, the common ratio $r = \\frac{g_{n+1}}{g_n}$."
+ },
+ {
+  "topicSlug": "sequences-series-precalc",
+  "front": "What is an arithmetic sequence?",
+  "back": "A sequence with a constant difference between consecutive terms, the common difference $d = a_{n+1} - a_n$."
+ },
+ {
+  "topicSlug": "sequences-series-precalc",
+  "front": "What type of real-world situations are modeled by geometric sequences?",
+  "back": "Exponential growth/decay: population growth, radioactive decay, compound interest"
+ },
+ {
+  "topicSlug": "sequences-series-precalc",
+  "front": "Write the explicit formula for an arithmetic sequence and for a geometric sequence, starting from $a_0$ or from a known term $a_k$.",
+  "back": "Arithmetic: $a_n = a_0 + dn$, or $a_n = a_k + d(n - k)$. Geometric: $g_n = g_0r^n$, or $g_n = g_kr^{n - k}$. Here $d$ is the common difference and $r$ is the common ratio.",
+  "hint": "Start from the known term and count the $n - k$ steps."
+ }
+]

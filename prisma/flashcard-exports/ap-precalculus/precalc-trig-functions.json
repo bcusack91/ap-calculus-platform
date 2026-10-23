@@ -1,0 +1,508 @@
+[
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "How do you find the vertical asymptotes of $y = a\\tan(b(x - c)) + d$?",
+  "back": "Set the inside equal to $\\frac{\\pi}{2} + n\\pi$ and solve for $x$; the period is $\\frac{\\pi}{\\lvert b \\rvert}$ and the zeros are where the inside is $n\\pi$. Example: $y = 4\\tan\\left(\\frac{\\pi}{2}(x - 1)\\right)$ has asymptotes at $x = 2 + 2n$ and zeros at $x = 1 + 2n$.",
+  "hint": "Inside $= \\frac{\\pi}{2} + n\\pi$."
+ },
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "How do you find when a sinusoidal model is above a given value, e.g. $22 - 20\\cos\\left(\\frac{\\pi}{10}t\\right) > 32$?",
+  "back": "Isolate the trig function: $\\cos\\left(\\frac{\\pi}{10}t\\right) < -\\frac{1}{2}$. Solve the equality on the unit circle ($\\frac{2\\pi}{3}$ and $\\frac{4\\pi}{3}$), decide which side satisfies the inequality ($\\frac{2\\pi}{3} < \\frac{\\pi}{10}t < \\frac{4\\pi}{3}$), convert to $t$ ($\\frac{20}{3} < t < \\frac{40}{3}$), then add the period for later cycles.",
+  "hint": "Equality first, then the interval, then the period."
+ },
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "How do you read the amplitude and the midline of a sinusoid from its graph?",
+  "back": "Amplitude $= \\frac{\\text{max} - \\text{min}}{2}$ (half the vertical distance between a maximum and a minimum). Midline $y = \\frac{\\text{max} + \\text{min}}{2}$, the horizontal line halfway between them. The range is $[\\text{midline} - \\text{amplitude}, \\text{midline} + \\text{amplitude}]$.",
+  "hint": "Half the spread; the average."
+ },
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "How do you read the period of a sinusoid from its graph, and what is the frequency?",
+  "back": "Period $P$ = horizontal distance between consecutive maxima = $2\\times$ (max to next min) = $4\\times$ (max to next midline crossing). Then $b = \\frac{2\\pi}{P}$. Frequency $= \\frac{1}{P} = \\frac{\\lvert b \\rvert}{2\\pi}$, the number of cycles per unit.",
+  "hint": "Max to min is only half a cycle."
+ },
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "In $y = a\\sin(b(x - c)) + d$, what transformation does each parameter perform?",
+  "back": "$a$: vertical dilation by $\\lvert a \\rvert$ (reflection over the midline if $a < 0$). $b$: horizontal dilation by $\\frac{1}{\\lvert b \\rvert}$, period $\\frac{2\\pi}{\\lvert b \\rvert}$. $c$: horizontal translation (phase shift) by $c$, right if $c > 0$. $d$: vertical translation, midline $y = d$.",
+  "hint": "Inside the function: horizontal; outside: vertical."
+ },
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "Period of $\\tan(x)$ vs $\\sin(x)$?",
+  "back": "$\\sin(x)$ and $\\cos(x)$: period = $2\\pi$\n$\\tan(x)$ and $\\cot(x)$: period = $\\pi$\n$\\sec(x)$ and $\\csc(x)$: period = $2\\pi$",
+  "hint": "Tangent and cotangent repeat every π."
+ },
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "Period, amplitude, and phase shift of $y = A\\sin(Bx - C) + D$?",
+  "back": "**Amplitude**: $|A|$\n**Period**: $\\frac{2\\pi}{|B|}$\n**Phase shift**: $\\frac{C}{B}$ (right if positive)\n**Vertical shift**: $D$",
+  "hint": "Remember: B affects period, C/B is phase shift."
+ },
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "What are the key features of $y = \\tan x$?",
+  "back": "Period $\\pi$; zeros at $x = n\\pi$; vertical asymptotes at $x = \\frac{\\pi}{2} + n\\pi$ (where $\\cos x = 0$); range all reals, so no amplitude, maximum or minimum; increasing on every branch; odd. $\\tan x$ is the slope of the terminal ray of $x$.",
+  "hint": "Everything follows from slope = $\\frac{\\sin x}{\\cos x}$."
+ },
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "What is the average rate of change of a sinusoidal function over one full period?",
+  "back": "$0$: after one period $f(t + P) = f(t)$, so $\\frac{f(t + P) - f(t)}{P} = 0$. Over part of a period use $\\frac{f(t_2) - f(t_1)}{t_2 - t_1}$; e.g. for $h(t) = 22 - 20\\cos\\left(\\frac{\\pi}{10}t\\right)$ on $[0, 5]$: $\\frac{22 - 2}{5} = 4$ m/s.",
+  "hint": "Back to the same value, so no net change."
+ },
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "Where is a sinusoid concave down, where is it concave up, and where is it changing fastest?",
+  "back": "Concave down on the arches above its midline, concave up on the arches below it; the midline crossings are the points of inflection and the places where the graph is steepest (changing fastest). At a maximum or minimum it is momentarily not changing.",
+  "hint": "Concavity flips at the midline, direction flips at the extremes."
+ },
+ {
+  "topicSlug": "graphing-trig-functions",
+  "front": "You are building a sinusoidal model and know when a maximum occurs. Sine or cosine? What if you know when the quantity is at its midline?",
+  "back": "Known max at $t = c$: $a\\cos(b(t - c)) + d$ with $a > 0$ (a min: $a < 0$). Known midline crossing at $t = c$: $a\\sin(b(t - c)) + d$, $a > 0$ if rising, $a < 0$ if falling. Any correct form earns credit; check a known point.",
+  "hint": "Cosine starts at an extreme; sine starts on the midline."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "Domain and range of $\\arccos(x)$?",
+  "back": "**Domain**: $[-1, 1]$\n**Range**: $[0, \\pi]$\n\n$\\arccos$ returns angles in Q1 and Q2 only.",
+  "hint": "Range is 0 to π (top half of unit circle)."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "Domain and range of $\\arcsin(x)$?",
+  "back": "**Domain**: $[-1, 1]$\n**Range**: $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$\n\n$\\arcsin$ returns angles in Q1 and Q4 only.",
+  "hint": "Input must be between -1 and 1."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "Domain and range of $\\arctan(x)$?",
+  "back": "**Domain**: $(-\\infty, \\infty)$\n**Range**: $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$\n\nHorizontal asymptotes at $y = \\pm\\frac{\\pi}{2}$.",
+  "hint": "Any real number in, but output is between -π/2 and π/2."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "Evaluate $\\arccos\\left(-\\frac{1}{2}\\right)$.",
+  "back": "$\\frac{2\\pi}{3}$. The range of $\\arccos$ is $[0, \\pi]$, so a negative input gives a Quadrant II angle: reference angle $\\frac{\\pi}{3}$, and $\\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$. Not $-\\frac{\\pi}{3}$ (negative angles are outside the range) and not $\\frac{4\\pi}{3}$.",
+  "hint": "A negative input to $\\arccos$ gives an angle in $\\left(\\frac{\\pi}{2}, \\pi\\right]$."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "Evaluate $\\arcsin(\\frac{1}{2})$ exactly in radians.",
+  "back": "We need to find the angle $y$ such that:\n$$\\sin(y) = \\frac{1}{2} \\quad \\text{and} \\quad -\\frac{\\pi}{2} \\leq y \\leq \\frac{\\pi}{2}$$\n\n**From the unit circle:**\n\n$\\sin(\\frac{\\pi}{6}) = \\frac{1}{2}$\n\nAnd $\\frac{\\pi}{6}$ is in the range $[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ ✓\n\n**Answer:** $\\arcsin(\\frac{1}{2}) = \\frac{\\pi}{6}$\n\n**Verification:**\n$$\\sin(\\frac{\\pi}{6}) = \\frac{1}{2}$$ ✓\n\n**Note:** Even though $\\sin(\\frac{5\\pi}{6}) = \\frac{1}{2}$ as well, we don't choose $\\frac{5\\pi}{6}$ because it's outside the range of arcsin."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "Evaluate $\\arcsin\\left(-\\frac{\\sqrt{3}}{2}\\right)$.",
+  "back": "$-\\frac{\\pi}{3}$. The range of $\\arcsin$ is $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$, so a negative input gives a Quadrant IV angle written as a negative angle: $\\sin\\left(-\\frac{\\pi}{3}\\right) = -\\frac{\\sqrt{3}}{2}$. Not $\\frac{4\\pi}{3}$ or $\\frac{5\\pi}{3}$, even though their sines are also $-\\frac{\\sqrt{3}}{2}$.",
+  "hint": "A negative input to $\\arcsin$ gives a negative angle in $\\left[-\\frac{\\pi}{2}, 0\\right)$."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "Evaluate $\\arctan(-1)$.",
+  "back": "$-\\frac{\\pi}{4}$. The range of $\\arctan$ is $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$, so a negative input gives a negative Quadrant IV angle: $\\tan\\left(-\\frac{\\pi}{4}\\right) = -1$. Not $\\frac{3\\pi}{4}$, even though $\\tan\\frac{3\\pi}{4} = -1$ too.",
+  "hint": "$\\arctan$ of a negative number is a negative angle."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "Evaluate $\\sin^{-1}(\\frac{1}{2})$.",
+  "back": "$\\frac{\\pi}{6}$ (or $30°$), the value in the restricted range."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "What is the domain of $\\sin^{-1}x$ and $\\cos^{-1}x$?",
+  "back": "$[-1, 1]$ — since sine and cosine only output values in that interval."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "What is the range of $\\cos^{-1}x$?",
+  "back": "$[0, \\pi]$."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "What is the range of $\\sin^{-1}x$?",
+  "back": "$[-\\frac{\\pi}{2}, \\frac{\\pi}{2}]$ — restricted so the inverse is a function."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "What is the range of $\\tan^{-1}x$?",
+  "back": "$(-\\frac{\\pi}{2}, \\frac{\\pi}{2})$, open because tangent is undefined at the endpoints."
+ },
+ {
+  "topicSlug": "inverse-trig-functions-precalc",
+  "front": "Why must trig functions be domain-restricted to have inverses?",
+  "back": "They are periodic and therefore not one-to-one; restriction makes them pass the horizontal line test."
+ },
+ {
+  "topicSlug": "polar-coordinates-precalc",
+  "front": "For a polar function $r = f(\\theta)$, how do the sign of $r$ and whether $r$ is increasing or decreasing tell you if the point is moving toward or away from the origin?",
+  "back": "Distance from the origin is $|r|$. If $r > 0$ and increasing, or $r < 0$ and decreasing, the point moves away from the origin; if $r > 0$ and decreasing, or $r < 0$ and increasing, it moves toward the origin. The curve passes through the origin where $r = 0$. The average rate of change of $r$ on $[\\theta_1, \\theta_2]$ is $\\frac{f(\\theta_2) - f(\\theta_1)}{\\theta_2 - \\theta_1}$ (units of $r$ per radian).",
+  "hint": "Distance is $|r|$: a negative $r$ getting more negative moves away."
+ },
+ {
+  "topicSlug": "polar-coordinates-precalc",
+  "front": "For the rose curve $r = a\\cos(n\\theta)$, where are the petal tips, and for which $\\theta$ does the curve pass through the origin?",
+  "back": "Petal tips are where $|r|$ is largest, $|r| = |a|$, i.e. where $\\cos(n\\theta) = \\pm 1$: $\\theta = \\frac{k\\pi}{n}$. The curve passes through the origin where $r = 0$: $\\cos(n\\theta) = 0$, so $\\theta = \\frac{\\pi}{2n} + \\frac{k\\pi}{n}$. Example: $r = 4\\cos 3\\theta$ has tips at $\\theta = 0, \\frac{\\pi}{3}, \\frac{2\\pi}{3}$ (length $4$) and reaches the origin at $\\theta = \\frac{\\pi}{6}, \\frac{\\pi}{2}, \\frac{5\\pi}{6}$.",
+  "hint": "Tips: $\\cos(n\\theta) = \\pm 1$. Origin: $\\cos(n\\theta) = 0$."
+ },
+ {
+  "topicSlug": "polar-coordinates-precalc",
+  "front": "For which values of $a$ and $b$ does the limaçon $r = a + b\\cos\\theta$ have an inner loop?",
+  "back": "When $|b| > |a|$: then $r$ changes sign, and the negative-$r$ arc traces the inner loop. If $|a| = |b|$ it is a cardioid, which just reaches the pole. If $|a| > |b|$, $r$ never reaches $0$ and there is no loop."
+ },
+ {
+  "topicSlug": "polar-coordinates-precalc",
+  "front": "How do you test for symmetry about the polar axis in polar coordinates?",
+  "back": "Replace $\\theta$ with $-\\theta$. If the equation is unchanged, the graph is symmetric about the polar axis ($x$-axis). The test is sufficient, not necessary: a curve can be symmetric even if the substituted equation looks different (e.g. $r = 3\\sin 2\\theta$)."
+ },
+ {
+  "topicSlug": "polar-coordinates-precalc",
+  "front": "How many petals does the rose curve $r = a\\cos(n\\theta)$ have?",
+  "back": "$n$ petals when $n$ is odd, $2n$ petals when $n$ is even. The same rule holds for $r = a\\sin(n\\theta)$, and each petal has length $|a|$."
+ },
+ {
+  "topicSlug": "polar-coordinates-precalc",
+  "front": "What does $r = c$ represent?",
+  "back": "A circle centered at the origin with radius $|c|$."
+ },
+ {
+  "topicSlug": "polar-coordinates-precalc",
+  "front": "What formulas convert polar coordinates $(r,\\theta)$ to rectangular coordinates $(x,y)$?",
+  "back": "$x = r\\cos\\theta$ and $y = r\\sin\\theta$."
+ },
+ {
+  "topicSlug": "polar-coordinates-precalc",
+  "front": "What formulas convert rectangular coordinates $(x,y)$ to polar coordinates $(r,\\theta)$?",
+  "back": "$r = \\sqrt{x^2 + y^2}$ and $\\theta = \\tan^{-1}(y/x)$, then adjust for quadrant — add $\\pi$ when $x < 0$, since $\\tan^{-1}$ only returns angles in $(-\\pi/2,\\pi/2)$."
+ },
+ {
+  "topicSlug": "polar-coordinates-precalc",
+  "front": "What is the general equation of a cardioid, and how do you recognize one?",
+  "back": "$r = a \\pm a\\cos\\theta$ or $r = a \\pm a\\sin\\theta$ — the two coefficients are equal. It is the heart-shaped limaçon that just reaches the pole, with maximum radius $2|a|$."
+ },
+ {
+  "topicSlug": "polar-coordinates-precalc",
+  "front": "What is the polar equation of a circle with diameter $2a$ on the polar axis?",
+  "back": "$r = 2a\\cos(\\theta)$. The circle passes through the origin and has its center at $(a, 0)$ in rectangular coordinates."
+ },
+ {
+  "topicSlug": "solving-trig-equations",
+  "front": "For which values of $x$ in $[0, 2\\pi)$ is $\\sin(x) = \\frac{\\sqrt{2}}{2}$?",
+  "back": "$x = \\frac{\\pi}{4}$ (Quadrant I) and $x = \\frac{3\\pi}{4}$ (Quadrant II), where sine is positive."
+ },
+ {
+  "topicSlug": "solving-trig-equations",
+  "front": "How do you solve a quadratic trigonometric equation like $2\\sin^2(x) + 3\\sin(x) - 2 = 0$?",
+  "back": "Substitute $u = \\sin(x)$: $2u^2 + 3u - 2 = 0$ factors as $(2u - 1)(u + 2) = 0$, so $u = \\frac{1}{2}$ or $u = -2$. Reject $u = -2$ because $|\\sin x| \\le 1$, then solve $\\sin(x) = \\frac{1}{2}$ to get $x = \\frac{\\pi}{6} + 2\\pi n$ and $x = \\frac{5\\pi}{6} + 2\\pi n$."
+ },
+ {
+  "topicSlug": "solving-trig-equations",
+  "front": "What are the general solutions for $\\sin(x) = a$?",
+  "back": "$x = \\arcsin(a) + 2\\pi n$ or $x = \\pi - \\arcsin(a) + 2\\pi n$ where $n$ is any integer and $-1 \\leq a \\leq 1$."
+ },
+ {
+  "topicSlug": "solving-trig-equations",
+  "front": "What are the three forms of the double angle formula for cosine?",
+  "back": "$\\cos(2x) = \\cos^2(x) - \\sin^2(x) = 2\\cos^2(x) - 1 = 1 - 2\\sin^2(x)$. Choose the form based on which function appears in your equation."
+ },
+ {
+  "topicSlug": "solving-trig-equations",
+  "front": "What is the double angle formula for $\\sin(2x)$?",
+  "back": "$\\sin(2x) = 2\\sin(x)\\cos(x)$. This is useful for solving equations involving $\\sin(2x)$."
+ },
+ {
+  "topicSlug": "solving-trig-equations",
+  "front": "What is the general solution for $\\tan(x) = a$?",
+  "back": "$x = \\arctan(a) + \\pi n$ where $n$ is any integer. Tangent has period $\\pi$, so we add $\\pi n$ instead of $2\\pi n$."
+ },
+ {
+  "topicSlug": "solving-trig-equations",
+  "front": "When solving trig equations, why must you check for extraneous solutions?",
+  "back": "Squaring both sides or using certain identities can introduce solutions that don't satisfy the original equation. Always substitute back to verify."
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "An angle has $\\sin\\theta > 0$ and $\\tan\\theta < 0$. Which quadrant is it in?",
+  "back": "Quadrant II: sine positive means the point is above the $x$-axis (Quadrants I or II), and tangent negative means $x$ and $y$ have opposite signs, which rules out Quadrant I. Example: $\\theta = \\frac{5\\pi}{6}$, with $\\sin = \\frac{1}{2}$ and $\\tan = -\\frac{\\sqrt{3}}{3}$.",
+  "hint": "ASTC: only Sine is positive in Quadrant II."
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "How many radians are in $180°$?",
+  "back": "$\\pi$ radians. A full turn is $2\\pi$ radians, so $\\pi$ radians is half a turn ($180^\\circ$)."
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "In which quadrants is sin θ positive?",
+  "back": "Quadrants I and II (top half). Mnemonic: \"All Students Take Calculus\" (All, Sin, Tan, Cos).",
+  "hint": "Top half of the circle"
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "On the unit circle, what do $\\cos(\\theta)$ and $\\sin(\\theta)$ represent?",
+  "back": "$\\cos(\\theta)$ is the x-coordinate, $\\sin(\\theta)$ is the y-coordinate"
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "What are $\\sin\\theta$ and $\\cos\\theta$ at $\\theta = 0, \\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{\\pi}{2}$?",
+  "back": "| $\\theta$ | $\\sin\\theta$ | $\\cos\\theta$ |\n|---|---|---|\n| $0$ | $0$ | $1$ |\n| $\\frac{\\pi}{6}$ | $\\frac{1}{2}$ | $\\frac{\\sqrt{3}}{2}$ |\n| $\\frac{\\pi}{4}$ | $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\sqrt{2}}{2}$ |\n| $\\frac{\\pi}{3}$ | $\\frac{\\sqrt{3}}{2}$ | $\\frac{1}{2}$ |\n| $\\frac{\\pi}{2}$ | $1$ | $0$ |\n\nPattern: $\\sin\\theta$ runs $\\frac{\\sqrt{0}}{2}, \\frac{\\sqrt{1}}{2}, \\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{3}}{2}, \\frac{\\sqrt{4}}{2}$ and $\\cos\\theta$ runs the same list backwards.",
+  "hint": "Sine climbs $\\sqrt{0}, \\sqrt{1}, \\sqrt{2}, \\sqrt{3}, \\sqrt{4}$ over $2$; cosine descends."
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "What are $\\tan 0$, $\\tan\\frac{\\pi}{6}$, $\\tan\\frac{\\pi}{4}$, $\\tan\\frac{\\pi}{3}$ and $\\tan\\frac{\\pi}{2}$?",
+  "back": "$0, \\frac{\\sqrt{3}}{3}, 1, \\sqrt{3}$, undefined. Each is $\\frac{\\sin}{\\cos}$ at that angle; $\\tan\\frac{\\pi}{4} = 1$ because the ray is the line $y = x$, and $\\tan\\frac{\\pi}{2}$ is undefined because the ray is vertical.",
+  "hint": "Divide the sine column by the cosine column."
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "What are the coordinates of the point on the unit circle at $\\theta = \\frac{\\pi}{3}$?",
+  "back": "$\\left(\\frac{1}{2}, \\frac{\\sqrt{3}}{2}\\right)$: $\\cos\\frac{\\pi}{3} = \\frac{1}{2}$ and $\\sin\\frac{\\pi}{3} = \\frac{\\sqrt{3}}{2}$.",
+  "hint": "Larger y-coordinate"
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "What are the coordinates of the point on the unit circle at $\\theta = \\frac{\\pi}{4}$?",
+  "back": "$\\left(\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right)$: $\\cos\\frac{\\pi}{4} = \\sin\\frac{\\pi}{4} = \\frac{\\sqrt{2}}{2}$.",
+  "hint": "x and y are equal"
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "What are the coordinates of the point on the unit circle at $\\theta = \\frac{\\pi}{6}$?",
+  "back": "$\\left(\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$ — on the unit circle the $x$-coordinate is $\\cos\\theta$ and the $y$-coordinate is $\\sin\\theta$.",
+  "hint": "Which angle in Q1 has sine = 1/2?"
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "What are the unit-circle coordinates of the angle $\\frac{3\\pi}{4}$?",
+  "back": "$\\left(-\\frac{\\sqrt{2}}{2}, \\frac{\\sqrt{2}}{2}\\right)$. The reference angle is $\\frac{\\pi}{4}$, and in Quadrant II cosine is negative while sine is positive."
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "What does an angle of 1 radian represent?",
+  "back": "The central angle that cuts off an arc equal in length to the radius. A full turn is $2\\pi$ radians, so $1$ radian $\\approx 57.3°$."
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "What is $\\tan\\left(\\frac{\\pi}{3}\\right)$?",
+  "back": "$\\sqrt{3}$"
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "What is the equation of the unit circle?",
+  "back": "$x^2 + y^2 = 1$"
+ },
+ {
+  "topicSlug": "the-unit-circle",
+  "front": "What is the formula for arc length?",
+  "back": "$s = r\\theta$ where $\\theta$ is in radians"
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "A quantity varies sinusoidally between a maximum $M$ and a minimum $m$. What are the amplitude and the midline, and how do you get $b$?",
+  "back": "Amplitude $\\frac{M - m}{2}$, midline $d = \\frac{M + m}{2}$, and $b = \\frac{2\\pi}{P}$ where the period $P$ is the time between consecutive maxima (twice the max-to-min time). Use cosine if a max or min time is known, sine if a midline crossing is known.",
+  "hint": "Half the spread, the average, and $2\\pi$ over the period."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "Geometrically, what does $\\tan\\theta$ represent, and where is it undefined?",
+  "back": "$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ is the slope of the terminal ray of $\\theta$. It is undefined where the ray is vertical ($\\cos\\theta = 0$, at $\\theta = \\frac{\\pi}{2} + n\\pi$) and $0$ where the ray is horizontal.",
+  "hint": "Rise over run for the ray through $(0, 0)$ and $(\\cos\\theta, \\sin\\theta)$."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "How are degrees and radians related?",
+  "back": "$\\pi$ radians $= 180^\\circ$, so a full turn is $2\\pi$ radians. AP Precalculus works in radians: $30^\\circ, 45^\\circ, 60^\\circ, 90^\\circ$ are $\\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{\\pi}{2}$.",
+  "hint": "$180^\\circ = \\pi$ radians."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "How many radians are in one full revolution?",
+  "back": "One complete revolution is $2\\pi$ radians ($360^\\circ$); half a revolution is $\\pi$ radians."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "In $y = A\\sin(B(x - C)) + D$, what does each constant control?",
+  "back": "$|A|$ is the amplitude, the period is $\\frac{2\\pi}{|B|}$, $C$ is the horizontal (phase) shift, and $y = D$ is the midline. A negative $A$ also flips the graph vertically.",
+  "hint": "Amplitude $|A|$, period $2\\pi/|B|$, horizontal shift $C$, midline $y = D$."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "On $[0, 2\\pi]$, where is $y = \\sin x$ increasing, and where is it concave down?",
+  "back": "Increasing on $\\left(0, \\frac{\\pi}{2}\\right)$ and $\\left(\\frac{3\\pi}{2}, 2\\pi\\right)$ (between a minimum and the next maximum). Concave down on $(0, \\pi)$, where the graph is above its midline; concave up on $(\\pi, 2\\pi)$. The concavity changes at the midline crossings.",
+  "hint": "Direction changes at max/min; concavity changes at the midline."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "The terminal ray of $\\theta = 2$ radians lies in which quadrant?",
+  "back": "Quadrant II. Compare with the axis angles: $\\frac{\\pi}{2} \\approx 1.57 < 2 < \\pi \\approx 3.14$.",
+  "hint": "A bare number is radians; compare it with 1.57, 3.14, 4.71."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "What are coterminal angles?",
+  "back": "Angles whose terminal rays land in the same position: they differ by a whole number of full turns, $\\theta \\pm 2\\pi k$. Coterminal angles have the same sine and cosine. Example: $-\\frac{\\pi}{3}$ and $\\frac{5\\pi}{3}$.",
+  "hint": "Add or subtract $2\\pi$, written with the angle's own denominator."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "What are the domains of $\\sec\\theta$, $\\csc\\theta$ and $\\cot\\theta$?",
+  "back": "$\\sec\\theta = \\frac{1}{\\cos\\theta}$ needs $\\cos\\theta \\ne 0$: $\\theta \\ne \\frac{\\pi}{2} + n\\pi$. $\\csc\\theta = \\frac{1}{\\sin\\theta}$ and $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$ need $\\sin\\theta \\ne 0$: $\\theta \\ne n\\pi$. The ranges of $\\sec$ and $\\csc$ are $(-\\infty, -1] \\cup [1, \\infty)$.",
+  "hint": "A reciprocal is undefined where the original is zero."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "What are the period and the vertical asymptotes of $y = \\tan(bx)$?",
+  "back": "Period $\\frac{\\pi}{\\lvert b \\rvert}$ (not $2\\pi$). Asymptotes where $bx = \\frac{\\pi}{2} + n\\pi$, zeros where $bx = n\\pi$. Example: $\\tan(2x)$ has period $\\frac{\\pi}{2}$ and asymptotes at $x = \\frac{\\pi}{4} + \\frac{n\\pi}{2}$.",
+  "hint": "Tangent repeats every half turn."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "What does a negative angle indicate?",
+  "back": "Rotation clockwise from the positive $x$-axis; positive angles rotate counterclockwise."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "What does it mean for a function $f$ to be periodic with period $P$?",
+  "back": "$f(x + P) = f(x)$ for every $x$ in the domain, and $P$ is the smallest such positive number. One cycle determines the whole graph, so $f(x + kP) = f(x)$: e.g. with period $4$, $f(14) = f(2)$.",
+  "hint": "Subtract whole periods to evaluate at a large input."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "What is a reference angle?",
+  "back": "The acute angle between the terminal ray and the $x$-axis. $\\sin\\theta$ and $\\cos\\theta$ have the same absolute values as at the reference angle; the quadrant sets the signs."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "What is one radian?",
+  "back": "The angle at the center of a circle subtended by an arc whose length equals the radius. A full circle is $2\\pi$ radians, so $1$ radian $\\approx 57.3$ degrees.",
+  "hint": "An arc exactly as long as the radius."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "What is the phase shift of $y = \\sin(2x - \\pi)$?",
+  "back": "Factor first: $\\sin(2x - \\pi) = \\sin\\left(2\\left(x - \\frac{\\pi}{2}\\right)\\right)$, so the shift is $\\frac{\\pi}{2}$ to the right, not $\\pi$. In $a\\sin(b(x - c)) + d$ the shift is $c$ only after $b$ is factored out.",
+  "hint": "Divide the constant inside by $b$."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "What is the radian measure of a central angle that cuts off an arc of length $s$ on a circle of radius $r$?",
+  "back": "$\\theta = \\frac{s}{r}$ (arc length divided by radius), so $s = r\\theta$. One radian is the angle whose arc is exactly one radius long; a full turn is $2\\pi$ radians on every circle.",
+  "hint": "A ratio of two lengths, so no units."
+ },
+ {
+  "topicSlug": "trigonometric-functions-precalc",
+  "front": "Where does the terminal ray of $\\theta$ meet the circle of radius $r$ centered at the origin?",
+  "back": "At $(r\\cos\\theta,\\; r\\sin\\theta)$. Example: for $\\theta = \\frac{2\\pi}{3}$ on radius $6$, the point is $(-3, 3\\sqrt{3})$. The counterclockwise arc from $(r, 0)$ to that point has length $r\\theta$.",
+  "hint": "Scale the unit-circle point by $r$."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "$\\sin(2\\theta) = ?$ (double angle formula)",
+  "back": "**$2\\sin\\theta\\cos\\theta$**\n\n$\\sin(2\\theta) = 2\\sin\\theta\\cos\\theta$."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "$\\tan\\theta = ?$ in terms of $\\sin$ and $\\cos$:",
+  "back": "**$\\frac{\\sin\\theta}{\\cos\\theta}$**\n\n$\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "Give the three forms of $\\cos 2\\theta$.",
+  "back": "$\\cos^{2}\\theta - \\sin^{2}\\theta = 2\\cos^{2}\\theta - 1 = 1 - 2\\sin^{2}\\theta$."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "How do you rewrite $\\sin^2\\theta$ and $\\cos^2\\theta$ using the double-angle identity for cosine?",
+  "back": "Solve $\\cos 2\\theta = 1 - 2\\sin^2\\theta$ and $\\cos 2\\theta = 2\\cos^2\\theta - 1$: $\\sin^{2}\\theta = \\frac{1 - \\cos 2\\theta}{2}$ and $\\cos^{2}\\theta = \\frac{1 + \\cos 2\\theta}{2}$. So $y = \\sin^2\\theta$ is a sinusoid with midline $y = \\frac12$, amplitude $\\frac12$ and period $\\pi$."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "How would you find $\\cos\\dfrac{5\\pi}{12}$ exactly?",
+  "back": "Write $\\dfrac{5\\pi}{12} = \\dfrac{\\pi}{4} + \\dfrac{\\pi}{6}$ and apply the cosine sum identity: $\\cos\\dfrac{\\pi}{4}\\cos\\dfrac{\\pi}{6} - \\sin\\dfrac{\\pi}{4}\\sin\\dfrac{\\pi}{6} = \\dfrac{\\sqrt{2}}{2}\\cdot\\dfrac{\\sqrt{3}}{2} - \\dfrac{\\sqrt{2}}{2}\\cdot\\dfrac{1}{2} = \\dfrac{\\sqrt{6} - \\sqrt{2}}{4}$."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "If $\\sin\\theta = \\frac{3}{5}$ and $\\frac{\\pi}{2} < \\theta < \\pi$, find $\\sin 2\\theta$ and $\\cos 2\\theta$.",
+  "back": "First get $\\cos\\theta$ from the Pythagorean identity: $\\cos^2\\theta = 1 - \\frac{9}{25} = \\frac{16}{25}$, and $\\theta$ is in Quadrant II, so $\\cos\\theta = -\\frac{4}{5}$. Then $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta = 2\\cdot\\frac{3}{5}\\cdot\\left(-\\frac{4}{5}\\right) = -\\frac{24}{25}$ and $\\cos 2\\theta = 1 - 2\\sin^2\\theta = 1 - \\frac{18}{25} = \\frac{7}{25}$.",
+  "hint": "Pythagorean identity for $\\cos\\theta$ (mind the quadrant), then the double-angle identities."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "Is cosine an even or odd function?",
+  "back": "Even: $\\cos(-\\theta) = \\cos(\\theta)$"
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "Is sine an even or odd function?",
+  "back": "Odd: $\\sin(-\\theta) = -\\sin(\\theta)$"
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "Solve $\\cos 2x = \\cos x$ on $[0, 2\\pi)$. Which form of the identity do you choose, and why?",
+  "back": "Choose $\\cos 2x = 2\\cos^2 x - 1$ so the whole equation is in $\\cos x$: $2\\cos^2 x - \\cos x - 1 = 0$, so $(2\\cos x + 1)(\\cos x - 1) = 0$. Then $\\cos x = 1$ gives $x = 0$ and $\\cos x = -\\frac{1}{2}$ gives $x = \\frac{2\\pi}{3}, \\frac{4\\pi}{3}$. Check: $\\cos\\frac{4\\pi}{3} = -\\frac{1}{2} = \\cos\\frac{2\\pi}{3}$.",
+  "hint": "Pick the form of $\\cos 2x$ written in the function that already appears."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "State the double angle formulas for sin(2θ) and cos(2θ).",
+  "back": "$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$ and $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta = 2\\cos^2\\theta - 1 = 1 - 2\\sin^2\\theta$.",
+  "hint": "Three forms for cos(2θ)"
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "The Pythagorean identity is:",
+  "back": "**$\\sin^2\\theta + \\cos^2\\theta = 1$**\n\n$\\sin^2\\theta + \\cos^2\\theta = 1$."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "What are the difference formulas for sin(A − B) and cos(A − B)?",
+  "back": "$\\sin(A - B) = \\sin A\\cos B - \\cos A\\sin B$ and $\\cos(A - B) = \\cos A\\cos B + \\sin A\\sin B$ — note the sign flips relative to the sum formulas.",
+  "hint": "Replace $B$ with $-B$ in the sum formulas: $\\sin(-B) = -\\sin B$ flips the middle sign, $\\cos(-B) = \\cos B$ flips the sign of the $\\sin\\sin$ term."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "What are the reciprocal identities for cosine and tangent?",
+  "back": "$\\sec\\theta = \\frac{1}{\\cos\\theta}$ and $\\cot\\theta = \\frac{1}{\\tan\\theta} = \\frac{\\cos\\theta}{\\sin\\theta}$."
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "What is the cofunction identity for sine?",
+  "back": "$\\sin(\\frac{\\pi}{2} - \\theta) = \\cos(\\theta)$"
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "What is the Pythagorean identity involving cotangent and cosecant?",
+  "back": "$1 + \\cot^2(\\theta) = \\csc^2(\\theta)$"
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "What is the Pythagorean identity involving tangent and secant?",
+  "back": "$\\tan^2(\\theta) + 1 = \\sec^2(\\theta)$"
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "What is the quotient identity for tangent?",
+  "back": "$\\tan(\\theta) = \\frac{\\sin(\\theta)}{\\cos(\\theta)}$"
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "What is the reciprocal of $\\sin(\\theta)$?",
+  "back": "$\\csc(\\theta) = \\frac{1}{\\sin(\\theta)}$"
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "What is the sum formula for cos(A + B)?",
+  "back": "$\\cos(A + B) = \\cos A\\cos B - \\sin A\\sin B$.",
+  "hint": "Cos-cos minus sin-sin"
+ },
+ {
+  "topicSlug": "trigonometric-identities-precalc",
+  "front": "What is the sum formula for sin(A + B)?",
+  "back": "$\\sin(A + B) = \\sin A\\cos B + \\cos A\\sin B$.",
+  "hint": "Sin-cos plus cos-sin"
+ }
+]

@@ -1,0 +1,44 @@
+[
+ {
+  "front": "For which values of $x$ in $[0, 2\\pi)$ is $\\sin(x) = \\frac{\\sqrt{2}}{2}$?",
+  "fp": "ae119d121cd0",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.10 solving sin x = a on [0, 2pi) with both quadrants; tested every administration."
+ },
+ {
+  "front": "How do you solve a quadratic trigonometric equation like $2\\sin^2(x) + 3\\sin(x) - 2 = 0$?",
+  "fp": "20e74128377d",
+  "yield": "HIGH",
+  "why": "CED 3.10 quadratic-in-sin x equations by substitution; regularly assessed."
+ },
+ {
+  "front": "What are the general solutions for $\\sin(x) = a$?",
+  "fp": "8e254e76189e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.10 general solution of sin x = a (+2pi n and the supplement); tested every administration."
+ },
+ {
+  "front": "What are the three forms of the double angle formula for cosine?",
+  "fp": "7aeee6ac074c",
+  "yield": "HIGH",
+  "why": "CED 3.12 cos 2x forms chosen to match the equation; duplicates the identities deck, kept here for the solving context."
+ },
+ {
+  "front": "What is the double angle formula for $\\sin(2x)$?",
+  "fp": "a23e2df070cc",
+  "yield": "HIGH",
+  "why": "CED 3.12 sin 2x identity used in 3.10 equations; duplicates the identities deck, kept here for the solving context."
+ },
+ {
+  "front": "What is the general solution for $\\tan(x) = a$?",
+  "fp": "7ef2d6643f08",
+  "yield": "HIGH",
+  "why": "CED 3.10 general solution of tan x = a with period pi; regularly assessed."
+ },
+ {
+  "front": "When solving trig equations, why must you check for extraneous solutions?",
+  "fp": "02eff2c9fc73",
+  "yield": "MEDIUM",
+  "why": "Extraneous solutions after squaring; secondary technique, not emphasized in CED 3.10."
+ }
+]

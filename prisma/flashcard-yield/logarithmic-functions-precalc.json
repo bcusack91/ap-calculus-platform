@@ -1,0 +1,98 @@
+[
+ {
+  "front": "How do you solve $a^x = b$ when you can't use the same base?",
+  "fp": "7606485ce590",
+  "yield": "HIGH",
+  "why": "CED 2.13 solving with logs."
+ },
+ {
+  "front": "If $\\log_b(M) = \\log_b(N)$, what can you conclude?",
+  "fp": "0bfd7705ae15",
+  "yield": "MEDIUM",
+  "why": "CED 2.13 one-to-one property for log equations."
+ },
+ {
+  "front": "If $b^x = b^y$, what can you conclude?",
+  "fp": "0227096ef5d9",
+  "yield": "HIGH",
+  "why": "CED 2.13 one-to-one property for exponential equations."
+ },
+ {
+  "front": "Key features of $f(x) = \\log_b x$ for $b > 1$?",
+  "fp": "ea3c8419d2f7",
+  "yield": "HIGH",
+  "why": "CED 2.11 log function graph features and limits."
+ },
+ {
+  "front": "State the Power Rule for logarithms.",
+  "fp": "b573653ff41e",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.12 log properties; on nearly every exam."
+ },
+ {
+  "front": "State the Product Rule for logarithms.",
+  "fp": "f2cef9bd1121",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.12 log properties; on nearly every exam."
+ },
+ {
+  "front": "State the Quotient Rule for logarithms.",
+  "fp": "2251a046de73",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.12 log properties; on nearly every exam."
+ },
+ {
+  "front": "What does $\\log_b(x) = y$ mean in exponential form?",
+  "fp": "d3b394385f4b",
+  "yield": "HIGH",
+  "why": "CED 2.9 log <-> exponential definition."
+ },
+ {
+  "front": "What is $\\log_2(16)$?",
+  "fp": "6d017445e08c",
+  "yield": "MEDIUM",
+  "why": "CED 2.9 evaluating a log by rewriting."
+ },
+ {
+  "front": "What is $\\log_b(1)$ for any base $b$?",
+  "fp": "7bd99982e787",
+  "yield": "MEDIUM",
+  "why": "CED 2.9 log of 1."
+ },
+ {
+  "front": "What is $\\log_b(b)$ for any base $b$?",
+  "fp": "a254f4a6c0b5",
+  "yield": "MEDIUM",
+  "why": "CED 2.9 log of the base."
+ },
+ {
+  "front": "What is the change of base formula, and why is it useful?",
+  "fp": "ddb1b7e971ef",
+  "yield": "HIGH",
+  "why": "CED 2.12 change of base; needed for calculator work."
+ },
+ {
+  "front": "What is the domain of $f(x) = \\log_b(x)$?",
+  "fp": "511e703646c9",
+  "yield": "HIGH",
+  "why": "CED 2.10/2.13 log domain; drives extraneous-solution checks."
+ },
+ {
+  "front": "What is the first step in solving $\\log_3(x) = 5$?",
+  "fp": "dd2698e79910",
+  "yield": "MEDIUM",
+  "why": "CED 2.9/2.13 solving a log equation by rewriting."
+ },
+ {
+  "front": "What must you always check when solving logarithmic equations?",
+  "fp": "618fd91da647",
+  "yield": "HIGH",
+  "why": "CED 2.13 extraneous solutions / domain check."
+ },
+ {
+  "front": "Write $2\\log x - \\log y + \\log 3$ as a single logarithm.",
+  "fp": "bc8435eedc65",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 2.12 combining logs; on nearly every exam."
+ }
+]

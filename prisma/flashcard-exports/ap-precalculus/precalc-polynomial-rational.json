@@ -1,0 +1,296 @@
+[
+ {
+  "topicSlug": "function-modeling-precalc",
+  "front": "How can you write $|x|$ as a piecewise function?",
+  "back": "$|x| = \\begin{cases} x & \\text{if } x \\geq 0 \\\\ -x & \\text{if } x < 0 \\end{cases}$"
+ },
+ {
+  "topicSlug": "function-modeling-precalc",
+  "front": "How do you evaluate a piecewise function at $x = a$?",
+  "back": "1) Determine which condition $a$ satisfies, 2) Use the formula for that piece, 3) Calculate the value"
+ },
+ {
+  "topicSlug": "function-modeling-precalc",
+  "front": "If $f(x) = 2x + k$ for $x < 3$ and $f(x) = x^2$ for $x \\geq 3$, what value of $k$ makes the two pieces meet at $x = 3$ (no jump in the graph)?",
+  "back": "Set the two pieces equal at $x = 3$: $2(3) + k = 3^2$, so $6 + k = 9$ and $k = 3$."
+ },
+ {
+  "topicSlug": "function-modeling-precalc",
+  "front": "On a graph of a piecewise function, what does an open circle mean?",
+  "back": "The endpoint is NOT included in that piece of the function"
+ },
+ {
+  "topicSlug": "function-modeling-precalc",
+  "front": "What is a piecewise function?",
+  "back": "A function defined by different formulas on different parts of its domain"
+ },
+ {
+  "topicSlug": "fundamental-theorem-algebra",
+  "front": "How can a degree-$n$ polynomial be written using its zeros?",
+  "back": "In factored form $p(x) = a_n(x - r_1)(x - r_2)\\cdots(x - r_n)$, where $a_n$ is the leading coefficient and $r_1, \\ldots, r_n$ are its $n$ complex zeros (repeated zeros listed by multiplicity; some may be non-real)."
+ },
+ {
+  "topicSlug": "fundamental-theorem-algebra",
+  "front": "If $(x - r)$ is a factor of polynomial $p(x)$, what can you conclude?",
+  "back": "$r$ is a root (or zero) of $p(x)$. Conversely, if $r$ is a root, then $(x - r)$ is a factor."
+ },
+ {
+  "topicSlug": "fundamental-theorem-algebra",
+  "front": "If a polynomial of degree 5 has real coefficients, what can you say about its roots?",
+  "back": "It must have at least one real zero, because non-real zeros come in conjugate pairs and 5 is odd. Counting multiplicity, the possibilities are 5 real; 3 real + 2 non-real; or 1 real + 4 non-real."
+ },
+ {
+  "topicSlug": "fundamental-theorem-algebra",
+  "front": "If a polynomial with real coefficients has $3 + 2i$ as a root, what else must be true?",
+  "back": "$3 - 2i$ must also be a root (Complex Conjugate Root Theorem). Complex roots come in conjugate pairs for polynomials with real coefficients."
+ },
+ {
+  "topicSlug": "fundamental-theorem-algebra",
+  "front": "What is the quadratic factor formed by complex conjugate roots $a + bi$ and $a - bi$?",
+  "back": "$[x - (a + bi)][x - (a - bi)] = x^2 - 2ax + (a^2 + b^2)$, which is a real quadratic."
+ },
+ {
+  "topicSlug": "polynomial-division-remainder-theorem",
+  "front": "Use polynomial long division to write $\\frac{x^3 - 2x + 1}{x - 3}$ as a quotient plus a remainder term.",
+  "back": "$\\frac{x^3 - 2x + 1}{x - 3} = x^2 + 3x + 7 + \\frac{22}{x - 3}$. Check: $(x - 3)(x^2 + 3x + 7) + 22 = x^3 - 2x + 1$.",
+  "hint": "Divide leading terms ($x^3 \\div x = x^2$), multiply, subtract, repeat; keep a $0x^2$ placeholder."
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "Describe the end behavior of f(x) = −2x⁴ + 3x.",
+  "back": "Even degree (4) with negative leading coefficient: $\\lim_{x \\to -\\infty} f(x) = -\\infty$ and $\\lim_{x \\to \\infty} f(x) = -\\infty$. Both ends go down.",
+  "hint": "Even degree + negative → both ends down"
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "Determine the end behavior of $f(x) = -2x^5 + 3x^4 - x + 7$.",
+  "back": "Step 1: Identify the degree and leading coefficient.\n- Degree: 5 (odd)\n- Leading coefficient: -2 (negative)\n\nStep 2: Apply the end behavior rules.\n\nSince the degree is **odd** and the leading coefficient is **negative**:\n- As $x \\to -\\infty$, $f(x) \\to \\infty$ (left end goes up)\n- As $x \\to \\infty$, $f(x) \\to -\\infty$ (right end goes down)\n\n**Answer:** \n$$\\lim_{x \\to -\\infty} f(x) = \\infty \\text{ and } \\lim_{x \\to \\infty} f(x) = -\\infty$$"
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "For $p(x) = (x - 1)^2(x + 3)^3$, at which real zero does the graph cross the $x$-axis, and at which does it only touch?",
+  "back": "It crosses at $x = -3$ (multiplicity 3, odd: $p$ changes sign). It touches and turns around at $x = 1$ (multiplicity 2, even: the graph is tangent to the $x$-axis and $p$ does not change sign). Higher multiplicity makes the graph flatter near the zero.",
+  "hint": "Odd = cross, Even = bounce."
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "Graphically, what does $f(x) > 0$ represent?",
+  "back": "The intervals where the graph is above the x-axis."
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "How do you determine the sign of $(x - a)$ in different regions?",
+  "back": "Negative when $x < a$, zero when $x = a$, positive when $x > a$."
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "How do you find the end behavior of a polynomial, in limit notation?",
+  "back": "Only the leading term $a_nx^n$ matters as $x \\to \\pm\\infty$:\n\n| Degree | Leading coeff | $\\lim_{x \\to -\\infty} p(x)$ | $\\lim_{x \\to \\infty} p(x)$ |\n|--------|--------------|------|-------|\n| Even | Positive | $\\infty$ | $\\infty$ |\n| Even | Negative | $-\\infty$ | $-\\infty$ |\n| Odd | Positive | $-\\infty$ | $\\infty$ |\n| Odd | Negative | $\\infty$ | $-\\infty$ |",
+  "hint": "Even degree = both ends same direction, Odd = opposite."
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "How do you write a solution with two separate intervals?",
+  "back": "Use the union symbol $\\cup$. Example: $(-\\infty, -2) \\cup (3, \\infty)$"
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "How does degree relate to the number of roots?",
+  "back": "A degree-$n$ polynomial has exactly $n$ roots counting multiplicity (Fundamental Theorem of Algebra), possibly complex."
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "How many turning points can a degree-n polynomial have?",
+  "back": "At most n − 1 turning points.",
+  "hint": "One less than the degree"
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "What are the main steps for solving a polynomial inequality?",
+  "back": "1) Move all terms to one side, 2) Factor completely, 3) Find critical values (zeros), 4) Create sign chart, 5) Determine solution intervals, 6) Write in interval notation."
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "What does the multiplicity of a zero tell you?",
+  "back": "For a REAL zero: odd multiplicity -> the graph crosses the $x$-axis (the function changes sign); even multiplicity -> the graph touches the $x$-axis and turns around (tangent to it, no sign change).",
+  "hint": "Cross vs bounce"
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "What is the effect of even vs. odd multiplicity on the sign of a polynomial?",
+  "back": "Odd multiplicity: sign changes across the zero. Even multiplicity: sign stays the same (graph touches but doesn't cross x-axis)."
+ },
+ {
+  "topicSlug": "polynomial-functions-precalc",
+  "front": "When solving $f(x) \\geq 0$, should you include or exclude the critical values?",
+  "back": "Include the critical values where $f(x) = 0$ (use brackets [ ]). For $f(x) > 0$, exclude them (use parentheses ( ))."
+ },
+ {
+  "topicSlug": "rates-of-change-precalc",
+  "front": "How do average rates of change behave for linear vs. quadratic functions?",
+  "back": "Linear: the average rate of change is the same over every interval (the slope). Quadratic: average rates of change over consecutive equal-length intervals change at a constant rate, so the second differences are constant. Example: $x^2$ at $x = 0, 1, 2, 3$ gives $0, 1, 4, 9$; first differences $1, 3, 5$; second differences $2, 2$."
+ },
+ {
+  "topicSlug": "rates-of-change-precalc",
+  "front": "How is the rate of change at a point related to average rates of change?",
+  "back": "An average rate of change is a secant slope over an interval. The rate of change at a point is approximated by average rates of change over smaller and smaller intervals containing that point; in AP Precalculus it is estimated this way, not computed with a formula."
+ },
+ {
+  "topicSlug": "rates-of-change-precalc",
+  "front": "If $s(t)$ represents position, what is average velocity from $t = a$ to $t = b$?",
+  "back": "$\\frac{s(b) - s(a)}{b - a}$ — average rate of change of position"
+ },
+ {
+  "topicSlug": "rates-of-change-precalc",
+  "front": "What does concavity tell you about rate of change?",
+  "back": "Concave up means the rate of change is increasing; concave down means it is decreasing."
+ },
+ {
+  "topicSlug": "rates-of-change-precalc",
+  "front": "What does the difference quotient represent?",
+  "back": "$\\frac{f(x + h) - f(x)}{h}$ — the average rate of change over an interval of width $h$."
+ },
+ {
+  "topicSlug": "rates-of-change-precalc",
+  "front": "What does the sign of a rate of change tell you?",
+  "back": "Where $f$ is increasing its rate of change is positive; where $f$ is decreasing it is negative. Caution: a positive AVERAGE rate of change over $[a, b]$ only means $f(b) > f(a)$; $f$ can still decrease somewhere inside the interval."
+ },
+ {
+  "topicSlug": "rates-of-change-precalc",
+  "front": "What is the average rate of change of $f$ over $[a, b]$?",
+  "back": "$\\frac{f(b) - f(a)}{b - a}$, the slope of the secant line through $(a, f(a))$ and $(b, f(b))$. Example: $f(x) = x^2$ on $[1, 4]$ gives $\\frac{16 - 1}{4 - 1} = 5$."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "Find the real zeros of $r(x) = \\frac{(x - 2)(x + 1)}{(x + 1)(x - 3)}$.",
+  "back": "Only $x = 2$. The zeros of a rational function are the zeros of the numerator that are not zeros of the denominator; $x = -1$ zeros both, so it is a hole, not a zero."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "For $f(x) = \\frac{x-1}{(x-1)(x+2)}$, is there a vertical asymptote or hole at x = 1?",
+  "back": "A hole at $x = 1$: the factor $(x - 1)$ cancels completely, leaving $\\frac{1}{x + 2}$, so the hole is at $\\left(1, \\frac{1}{3}\\right)$, since $\\lim_{x \\to 1} f(x) = \\frac{1}{3}$. (There is a vertical asymptote at $x = -2$.)"
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "Graphically, what does the solution to $\\frac{P(x)}{Q(x)} < 0$ represent?",
+  "back": "The intervals where the graph of the rational function is below the x-axis (between zeros and asymptotes where the function is negative)."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "Horizontal asymptote of $\\frac{2x^2 + 1}{x^2 - 3}$:",
+  "back": "$y = 2$. Same degree, so take the ratio of leading coefficients $\\frac{2}{1}$: $\\lim_{x \\to \\pm\\infty} \\frac{2x^2 + 1}{x^2 - 3} = 2$."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "How do you convert $\\frac{x}{x-2} \\geq 3$ to standard form?",
+  "back": "Move everything to one side: $\\frac{x}{x-2} - 3 \\geq 0$. Get common denominator: $\\frac{x - 3(x-2)}{x-2} \\geq 0$, which simplifies to $\\frac{-2x+6}{x-2} \\geq 0$."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "How do you find the domain of a rational function?",
+  "back": "Find all values where the denominator equals zero, then exclude those from the real numbers"
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "How do you find the vertical and horizontal asymptotes of a rational function $f(x) = \\frac{p(x)}{q(x)}$?",
+  "back": "Vertical: cancel common factors first; each zero of the denominator that remains is a vertical asymptote $x = a$. A zero that cancels completely (numerator multiplicity $\\ge$ denominator multiplicity) is a hole instead. Horizontal: compare degrees. If $\\deg p < \\deg q$, $y = 0$; if $\\deg p = \\deg q$, $y$ = ratio of leading coefficients; if $\\deg p > \\deg q$, there is none (a slant asymptote when the degree is exactly one greater). The horizontal asymptote value is $\\lim_{x \\to \\pm\\infty} r(x)$.",
+  "hint": "VA: what is left in the denominator. HA: compare degrees."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "Vertical asymptote of $\\frac{x + 1}{x - 1}$:",
+  "back": "$x = 1$. The denominator is $0$ at $x = 1$ and the numerator is not ($2 \\ne 0$). One-sided limits: $\\lim_{x \\to 1^+} \\frac{x + 1}{x - 1} = \\infty$ and $\\lim_{x \\to 1^-} \\frac{x + 1}{x - 1} = -\\infty$."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "What are the two sources of critical values for rational inequalities?",
+  "back": "1) Zeros of the numerator (where expression = 0), and 2) Zeros of the denominator (vertical asymptotes, where expression is undefined)."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "What happens if you cancel common factors in a rational inequality before solving?",
+  "back": "You can lose critical values! Any value that made the original denominator zero must still be excluded from the final answer."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "What is a rational function?",
+  "back": "A function that can be written as $f(x) = \\frac{P(x)}{Q(x)}$ where P(x) and Q(x) are polynomials"
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "What is a vertical asymptote?",
+  "back": "A vertical line $x = a$ where $r(x)$ grows without bound as $x$ approaches $a$ from at least one side, written with one-sided limits: $\\lim_{x \\to a^+} r(x) = \\pm\\infty$ or $\\lim_{x \\to a^-} r(x) = \\pm\\infty$."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "When does a slant (oblique) asymptote occur?",
+  "back": "When the degree of the numerator is exactly one more than the degree of the denominator. Find it by polynomial long division.",
+  "hint": "Degree of top = degree of bottom + 1"
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "When does a zero $x = c$ of the denominator give a hole, and when a vertical asymptote?",
+  "back": "Compare the multiplicity of $(x - c)$ in the numerator and denominator. If the numerator's multiplicity is at least the denominator's, there is a hole at $x = c$, and its $y$-value is $\\lim_{x \\to c} r(x)$. If the denominator's multiplicity is greater, there is a vertical asymptote at $x = c$. Example: $\\frac{x}{x^2}$ has a vertical asymptote at $x = 0$ even though the numerator is also $0$ there."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "When solving $\\frac{P(x)}{Q(x)} \\geq 0$, which critical values can be included in the solution?",
+  "back": "Include the zeros of the numerator that are not zeros of the denominator (there the expression equals 0). Never include a zero of the denominator, even one that also zeros the numerator (a hole): the expression is undefined there."
+ },
+ {
+  "topicSlug": "rational-functions-precalc",
+  "front": "Why not just multiply both sides of a rational inequality by the denominator?",
+  "back": "The denominator's sign depends on $x$, and multiplying by a negative quantity reverses the inequality. Instead, move everything to one side, write a single fraction, and use a sign chart."
+ },
+ {
+  "topicSlug": "transformations-precalc",
+  "front": "Given $f(x) = \\sqrt{x}$, write the equation for the function that results from: reflecting across the x-axis, shifting left 2 units, and shifting down 3 units.",
+  "back": "**Apply transformations step by step:**\n\nStarting with $f(x) = \\sqrt{x}$\n\n**Step 1:** Reflect across x-axis\n- Multiply by -1: $-f(x) = -\\sqrt{x}$\n\n**Step 2:** Shift left 2 units\n- Replace $x$ with $x + 2$: $-f(x+2) = -\\sqrt{x+2}$\n\n**Step 3:** Shift down 3 units\n- Subtract 3: $-f(x+2) - 3 = -\\sqrt{x+2} - 3$\n\n**Final answer:** $$g(x) = -\\sqrt{x+2} - 3$$\n\n**Domain:** Since we need $x + 2 \\geq 0$, the domain is $x \\geq -2$ or $[-2, \\infty)$\n\n**Range:** Since $\\sqrt{x+2} \\geq 0$, we have $-\\sqrt{x+2} \\leq 0$, so $-\\sqrt{x+2} - 3 \\leq -3$. Range is $(-\\infty, -3]$"
+ },
+ {
+  "topicSlug": "transformations-precalc",
+  "front": "How do $f(x) + k$ and $f(x + h)$ transform a graph?",
+  "back": "$f(x) + k$ shifts vertically by $k$; $f(x + h)$ shifts horizontally by $-h$ (opposite of the sign)."
+ },
+ {
+  "topicSlug": "transformations-precalc",
+  "front": "How do transformations change the domain and range of $f$?",
+  "back": "Changes inside act on the domain: $f(x + h)$ shifts it by $-h$; $f(bx)$ with $b > 0$ scales it by $\\frac{1}{b}$. Changes outside act on the range: $f(x) + k$ shifts it by $k$; $a\\,f(x)$ scales it by $a$ (flipping it if $a < 0$). Example: if $f$ has domain $[0, 4]$ and range $[1, 3]$, then $g(x) = 2f(x - 1)$ has domain $[1, 5]$ and range $[2, 6]$.",
+  "hint": "Inside changes move the domain; outside changes move the range."
+ },
+ {
+  "topicSlug": "transformations-precalc",
+  "front": "How do you reflect over the $x$-axis vs. the $y$-axis?",
+  "back": "Over $x$-axis: $-f(x)$. Over $y$-axis: $f(-x)$."
+ },
+ {
+  "topicSlug": "transformations-precalc",
+  "front": "If $f(x) = \\sqrt{x}$, write the function obtained by a horizontal dilation by a factor of $\\frac14$, then a translation right $2$ units and up $1$ unit.",
+  "back": "$g(x) = \\sqrt{4(x - 2)} + 1 = 2\\sqrt{x - 2} + 1$.\n\nA horizontal dilation by a factor of $\\frac14$ replaces $x$ with $4x$: $\\sqrt{4x}$. Right $2$ replaces $x$ with $x - 2$: $\\sqrt{4(x-2)}$. Up $1$ adds $1$. Check: the parent point $(1, 1)$ goes to $\\left(\\frac14 + 2,\\ 2\\right) = (2.25, 2)$, and $g(2.25) = 2\\sqrt{0.25} + 1 = 2$."
+ },
+ {
+  "topicSlug": "transformations-precalc",
+  "front": "The graph of $f(x) = x^2$ is transformed to $g(x) = 2(x-3)^2 + 1$. Describe all transformations applied.",
+  "back": "**Identify each transformation:**\n\nStarting with $f(x) = x^2$, we have $g(x) = 2(x-3)^2 + 1$\n\nCompare to $g(x) = a \\cdot f(b(x - h)) + k$:\n- $a = 2$: vertical stretch by factor of 2\n- $b = 1$: no horizontal stretch\n- $h = 3$: horizontal shift right 3 units\n- $k = 1$: vertical shift up 1 unit\n\n**Transformations in order:**\n1. Shift right 3 units\n2. Stretch vertically by factor of 2\n3. Shift up 1 unit\n\n**Vertex:** The vertex of $f(x) = x^2$ is at $(0, 0)$.\nAfter transformations, the new vertex is at $(3, 1)$."
+ },
+ {
+  "topicSlug": "transformations-precalc",
+  "front": "What does $af(x)$ do for $|a| > 1$ and $|a| < 1$?",
+  "back": "Vertical stretch for $|a| > 1$, vertical compression for $|a| < 1$; negative $a$ also reflects over the $x$-axis."
+ },
+ {
+  "topicSlug": "transformations-precalc",
+  "front": "What does $f(bx)$ do?",
+  "back": "$f(bx)$ is a horizontal dilation by a factor of $\\frac{1}{|b|}$: a compression when $|b| > 1$, a stretch when $0 < |b| < 1$. If $b < 0$, it also reflects the graph over the $y$-axis."
+ },
+ {
+  "topicSlug": "transformations-precalc",
+  "front": "What is the difference between even and odd function symmetry?",
+  "back": "Even: $f(-x) = f(x)$, symmetric about the $y$-axis. Odd: $f(-x) = -f(x)$, symmetric about the origin."
+ },
+ {
+  "topicSlug": "transformations-precalc",
+  "front": "What order should transformations be applied?",
+  "back": "For $y = a\\,f(b(x - h)) + k$: do the horizontal stretch/compression by $\\frac{1}{b}$ and any $y$-axis reflection first, then the horizontal shift $h$; then the vertical stretch $a$ with any $x$-axis reflection, then the vertical shift $k$."
+ }
+]

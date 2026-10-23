@@ -1,6 +1,6 @@
 /**
  * Keeps the committed exam-yield labels honest in CI: every in-scope card
- * (the MCAT deck and five AP decks) in the export mirror is
+ * (the MCAT deck and six AP decks) in the export mirror is
  * labeled exactly once, no entry labels a card that does not exist, and only
  * known values appear. A newly imported card in a yield course should fail
  * here until someone labels it.
@@ -23,6 +23,7 @@ const EXPECTED: Record<string, { topics: number; cards: number }> = {
   'ap-physics-1': { topics: 28, cards: 261 },
   'ap-calculus-ab': { topics: 38, cards: 315 },
   'ap-calculus-bc': { topics: 20, cards: 126 },
+  'ap-precalculus': { topics: 19, cards: 201 },
 }
 
 describe('exam-yield artifact integrity', () => {
@@ -30,7 +31,7 @@ describe('exam-yield artifact integrity', () => {
   const artifacts = loadArtifacts()
   const result = checkArtifacts(exportByTopic, artifacts)
 
-  it('scopes exactly the MCAT deck and the five AP decks', () => {
+  it('scopes exactly the MCAT deck and the six AP decks', () => {
     expect([...YIELD_COURSES].sort()).toEqual(Object.keys(EXPECTED).sort())
   })
 

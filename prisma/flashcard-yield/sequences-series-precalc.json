@@ -1,0 +1,32 @@
+[
+ {
+  "front": "How are arithmetic and geometric sequences related to linear and exponential functions?",
+  "fp": "b8dfa340e388",
+  "yield": "HIGH",
+  "why": "CED 2.2 sequences <-> linear/exponential functions."
+ },
+ {
+  "front": "What is a geometric sequence?",
+  "fp": "825ad8863585",
+  "yield": "MEDIUM",
+  "why": "CED 2.1 definition."
+ },
+ {
+  "front": "What is an arithmetic sequence?",
+  "fp": "26bc02412f93",
+  "yield": "MEDIUM",
+  "why": "CED 2.1 definition."
+ },
+ {
+  "front": "What type of real-world situations are modeled by geometric sequences?",
+  "fp": "c9f11dd888f5",
+  "yield": "LOW",
+  "why": "Context recognition; true but rarely assessed on its own."
+ },
+ {
+  "front": "Write the explicit formula for an arithmetic sequence and for a geometric sequence, starting from $a_0$ or from a known term $a_k$.",
+  "fp": "7405b98bdbcd",
+  "yield": "HIGH",
+  "why": "CED 2.1 explicit formulas in CED notation."
+ }
+]

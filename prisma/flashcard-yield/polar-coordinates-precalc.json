@@ -1,0 +1,62 @@
+[
+ {
+  "front": "For a polar function $r = f(\\theta)$, how do the sign of $r$ and whether $r$ is increasing or decreasing tell you if the point is moving toward or away from the origin?",
+  "fp": "bbc434e80bb0",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.15 rates of change of r and distance from the origin; a polar MC item on essentially every administration."
+ },
+ {
+  "front": "For the rose curve $r = a\\cos(n\\theta)$, where are the petal tips, and for which $\\theta$ does the curve pass through the origin?",
+  "fp": "44f5a2323b2a",
+  "yield": "HIGH",
+  "why": "CED 3.14 rose-curve features (petal length, tips, where it passes through the origin); regularly assessed."
+ },
+ {
+  "front": "For which values of $a$ and $b$ does the limaçon $r = a + b\\cos\\theta$ have an inner loop?",
+  "fp": "ec47ad53d5b2",
+  "yield": "HIGH",
+  "why": "CED 3.14 inner-loop limacon condition |b| > |a|; regularly assessed."
+ },
+ {
+  "front": "How do you test for symmetry about the polar axis in polar coordinates?",
+  "fp": "c19bb9d60ef1",
+  "yield": "MEDIUM",
+  "why": "Polar-axis symmetry test; secondary to the CED 3.14 graph features."
+ },
+ {
+  "front": "How many petals does the rose curve $r = a\\cos(n\\theta)$ have?",
+  "fp": "d490d3104631",
+  "yield": "HIGH",
+  "why": "CED 3.14 rose-curve petal count; regularly assessed."
+ },
+ {
+  "front": "What does $r = c$ represent?",
+  "fp": "fad73d8ea5f3",
+  "yield": "MEDIUM",
+  "why": "CED 3.14 r = c is a circle; basic recognition fact."
+ },
+ {
+  "front": "What formulas convert polar coordinates $(r,\\theta)$ to rectangular coordinates $(x,y)$?",
+  "fp": "7b206bb2c2a6",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.13 polar to rectangular; tested every administration."
+ },
+ {
+  "front": "What formulas convert rectangular coordinates $(x,y)$ to polar coordinates $(r,\\theta)$?",
+  "fp": "8281ecdc8ae9",
+  "yield": "ULTRA_HIGH",
+  "why": "CED 3.13 rectangular to polar with the quadrant adjustment; tested every administration."
+ },
+ {
+  "front": "What is the general equation of a cardioid, and how do you recognize one?",
+  "fp": "5e0248fe0824",
+  "yield": "HIGH",
+  "why": "CED 3.14 cardioid as the limacon with equal coefficients; regularly assessed."
+ },
+ {
+  "front": "What is the polar equation of a circle with diameter $2a$ on the polar axis?",
+  "fp": "71c715daed31",
+  "yield": "HIGH",
+  "why": "CED 3.14 circle r = 2a cos(theta) through the pole; regularly assessed."
+ }
+]

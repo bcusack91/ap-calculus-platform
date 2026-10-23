@@ -1,0 +1,32 @@
+[
+ {
+  "front": "How can a degree-$n$ polynomial be written using its zeros?",
+  "fp": "7329795eb7fa",
+  "yield": "MEDIUM",
+  "why": "CED 1.11 equivalent representations: factored form reveals zeros; asked mostly inside larger items."
+ },
+ {
+  "front": "If $(x - r)$ is a factor of polynomial $p(x)$, what can you conclude?",
+  "fp": "bb9dc5352cd9",
+  "yield": "HIGH",
+  "why": "CED 1.5: real zero <-> x-intercept <-> linear factor; used constantly to read factored forms."
+ },
+ {
+  "front": "If a polynomial of degree 5 has real coefficients, what can you say about its roots?",
+  "fp": "a6877c8cc032",
+  "yield": "MEDIUM",
+  "why": "CED 1.5 conjugate pairs + degree count; appears occasionally as an MCQ."
+ },
+ {
+  "front": "If a polynomial with real coefficients has $3 + 2i$ as a root, what else must be true?",
+  "fp": "b7a853a16750",
+  "yield": "HIGH",
+  "why": "CED 1.5: non-real zeros of a real polynomial come in conjugate pairs; regularly assessed."
+ },
+ {
+  "front": "What is the quadratic factor formed by complex conjugate roots $a + bi$ and $a - bi$?",
+  "fp": "eeb821681c7e",
+  "yield": "LOW",
+  "why": "Building a real quadratic factor from conjugate zeros is true but rarely assessed (needs complex multiplication)."
+ }
+]
