@@ -27,7 +27,7 @@
  * base (`/api/ap-chem-diagnostic/seen`, `/api/calcab-diagnostic/seen`, …) and
  * the same id + text fingerprints as the SAT (`apSeenKeysForQuestion`).
  */
-export type DiagnosticCourse = 'mcat' | 'sat' | 'ap-chem' | 'ap-bio' | 'ap-physics1' | 'calcab' | 'calcbc'
+export type DiagnosticCourse = 'mcat' | 'sat' | 'ap-chem' | 'ap-bio' | 'ap-physics1' | 'calcab' | 'calcbc' | 'ap-precalculus'
 
 const STORAGE_KEY: Record<DiagnosticCourse, string> = {
   mcat: 'mcat-diagnostic-seen-v1',
@@ -37,6 +37,7 @@ const STORAGE_KEY: Record<DiagnosticCourse, string> = {
   'ap-physics1': 'ap-physics1-diagnostic-v2-seen-v1',
   calcab: 'calcab-diagnostic-v2-seen-v1',
   calcbc: 'calcbc-diagnostic-v2-seen-v1',
+  'ap-precalculus': 'ap-precalculus-diagnostic-v2-seen-v1',
 }
 
 /**

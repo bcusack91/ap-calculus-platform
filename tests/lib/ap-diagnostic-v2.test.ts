@@ -92,15 +92,17 @@ const EXPECTED_QUOTAS: Record<ApDiagV2Course, number[]> = {
   'ap-physics-1': [5, 7, 7, 5, 4, 2, 2, 4],
   'ap-calculus-ab': [5, 4, 3, 4, 6, 6, 3, 4],
   'ap-calculus-bc': [2, 2, 2, 3, 4, 8, 3, 3, 5, 8],
+  'ap-precalculus': [10, 10, 10],
 }
 
-/** Pinned sitting length and clock: the v1 ones (BC keeps its 40 questions / 55 minutes). */
+/** Pinned sitting length and clock: the v1 ones (BC keeps its 40 questions / 55 minutes; Precalculus 30 / 60, owner decision O3). */
 const EXPECTED_SITTING: Record<ApDiagV2Course, { length: number; minutes: number }> = {
   'ap-chemistry': { length: 33, minutes: 40 },
   'ap-biology': { length: 33, minutes: 45 },
   'ap-physics-1': { length: 36, minutes: 45 },
   'ap-calculus-ab': { length: 35, minutes: 45 },
   'ap-calculus-bc': { length: 40, minutes: 55 },
+  'ap-precalculus': { length: 30, minutes: 60 },
 }
 
 describe('blueprints (CED weightings)', () => {
@@ -131,6 +133,9 @@ describe('blueprints (CED weightings)', () => {
     expect(AP_DIAG_V2_BLUEPRINTS['ap-calculus-bc'].units.map((u) => u.weight)).toEqual([
       [4, 7], [4, 7], [4, 7], [6, 9], [8, 11], [17, 20], [6, 9], [6, 9], [11, 12], [17, 18],
     ])
+    // Precalculus: the three assessed CED units only (Unit 4 is not on the exam).
+    expect(AP_DIAG_V2_BLUEPRINTS['ap-precalculus'].units).toHaveLength(3)
+    expect(AP_DIAG_V2_BLUEPRINTS['ap-precalculus'].units.map((u) => u.weight)).toEqual([[30, 40], [27, 40], [30, 35]])
   })
 
   it.each(AP_DIAG_V2_COURSES)('%s: every unit topic is a production topic with a name, and the category prefix is the v1 one', (course) => {
@@ -457,5 +462,74 @@ describe('AP Calculus BC: combined bank (AB v2 + BC-only)', () => {
     expect(isSafeSvg(fig?.svg)).toBe(true)
     expect(AP_DIAG_V2_LIVE['ap-calculus-bc']).toBe(true)
     expect(apDiagnosticVersion('ap-calculus-bc', null)).toBe(2)
+  })
+})
+
+/*
+ * AP Precalculus (precalc-final PLAN.md Wave 3 G1, 2026-10-23): a dedicated
+ * bank on the three assessed CED units, every item tagged with one of the 19
+ * canonical lesson slugs, 30 questions / 60 minutes. Off until the owner flips it.
+ */
+describe('AP Precalculus: v2 bank', () => {
+  const bank = AP_DIAG_V2_BANKS['ap-precalculus']
+  const bp = AP_DIAG_V2_BLUEPRINTS['ap-precalculus']
+
+  it('every item carries a canonical PLAN.md topic slug listed under its unit, so a miss recommends a live lesson', () => {
+    const canonical = new Set(FIXTURE['ap-precalculus'])
+    expect(canonical.size).toBe(19)
+    for (const it of bank.items) {
+      expect(canonical.has(it.topicSlug), `${it.id} ${it.topicSlug}`).toBe(true)
+      expect(bp.units.find((u) => u.id === it.unit)?.topicSlugs, `${it.id} ${it.unit} ${it.topicSlug}`).toContain(it.topicSlug)
+      expect(bp.topicNames[it.topicSlug], it.topicSlug).toBeTruthy()
+    }
+  })
+
+  it('meets the switch minimum with at least 40 items per unit (9 easy / 12 medium / 9 hard) and 6 stimulus sets', () => {
+    expect(bankReadiness(bank).problems).toEqual([])
+    for (const r of unitRequirements(bank)) {
+      expect(r.have, r.unit).toBeGreaterThanOrEqual(40)
+      expect(r.byDifficulty.easy.have, `${r.unit} easy`).toBeGreaterThanOrEqual(9)
+      expect(r.byDifficulty.medium.have, `${r.unit} medium`).toBeGreaterThanOrEqual(12)
+      expect(r.byDifficulty.hard.have, `${r.unit} hard`).toBeGreaterThanOrEqual(9)
+    }
+    expect(bank.stimuli.length).toBeGreaterThanOrEqual(6)
+  })
+
+  it('gives at least three fully fresh 30-question sittings in a 15-sitting run, every sitting at the 10/10/10 quotas', () => {
+    const seen = new Set<string>()
+    const rng = mulberry32(20261023)
+    let fresh = 0
+    for (let s = 0; s < 15; s++) {
+      const t = generateApDiagnosticV2(bank, { seen, rng })
+      expect(t.questions).toHaveLength(30)
+      expect(t.timeLimitMinutes).toBe(60)
+      for (const u of bp.units) expect(t.questions.filter((q) => q.domain === u.id)).toHaveLength(10)
+      const repeats = t.questions.filter((q) => seenKeysForServed(q).some((k) => seen.has(k))).length
+      if (repeats === 0 && fresh === s) fresh++
+      t.questions.flatMap(seenKeysForServed).forEach((k) => seen.add(k))
+    }
+    expect(fresh).toBeGreaterThanOrEqual(3)
+  })
+
+  it('stores as ap-precalculus-diagnostic-v2: course, retake path, band in history, own seen tracking', () => {
+    const cat = 'ap-precalculus-diagnostic-v2'
+    expect(apDiagV2CourseOfCategory(cat)).toBe('ap-precalculus')
+    expect(courseForCategory(cat)?.courseSlug).toBe('ap-precalculus')
+    expect(diagnosticPathForCategory(cat)).toBe('/ap-precalculus-diagnostic')
+    expect(summarizeAttemptScores(cat, { estimatedAPScore: 3, scoreRange: { low: 2, high: 4 } }).overall?.value).toBe('2–4/5')
+    expect(summarizeAttemptScores('ap-precalculus-diagnostic-3', { estimatedAPScore: 3 }).overall?.value).toBe('3/5')
+    expect(apDiagV2SeenCategories('ap-precalculus')).toEqual(['ap-precalculus-diagnostic-v2'])
+  })
+
+  it('scores with a band and recommends canonical precalc lessons; stays on v1 until the owner flips the flag', () => {
+    const t = generateApDiagnosticV2(bank, { rng: mulberry32(23) })
+    const r = scoreApDiagnosticV2('ap-precalculus', t.questions, t.questions.map((q) => (q.correctAnswer + 1) % 4))
+    expect(r.totalQuestions).toBe(30)
+    expect(r.domains).toHaveLength(3)
+    expect(r.recommendedTopics.length).toBe(5)
+    const canonical = new Set(FIXTURE['ap-precalculus'])
+    for (const rec of r.recommendedTopics) expect(canonical.has(rec.slug), rec.slug).toBe(true)
+    expect(AP_DIAG_V2_LIVE['ap-precalculus']).toBe(false)
+    expect(apDiagnosticVersion('ap-precalculus', null)).toBe(1)
   })
 })

@@ -30,6 +30,7 @@ import ApDiagnosticResults, { apResultsTopicHref, nextStepLabel } from '@/compon
 import { AP_DIAGNOSTIC_COURSES, apDiagnosticCourse, apDiagnosticLength, apDiagnosticStats } from '@/lib/ap-diagnostic-courses'
 import { AP_DIAGNOSTICS } from './ap-diagnostic-registry'
 import { AP_DIAG_V2_BLUEPRINTS, AP_DIAG_V2_COURSES } from '@/lib/ap-diagnostic-v2/blueprints'
+import { AP_DIAG_V2_LIVE } from '@/lib/ap-diagnostic-v2/readiness'
 import { classPlanCourse, diagnosticRouteForKey } from '@/lib/class-plan-config'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { MCAT_UNIT_TEST_PASS_PERCENT, MCAT_UNIT_TEST_QUESTIONS } from '@/lib/mcat-unit-test'
@@ -334,9 +335,17 @@ describe('ApDiagnosticResults: copy from the enforcing code', () => {
       expect(c.courseSlug).toBe(classPlanCourse(c.key)?.courseSlug)
     }
     expect(Object.keys(AP_DIAGNOSTIC_COURSES).sort()).toEqual(AP_DIAGNOSTICS.map((d) => d.course).sort())
+    // The card advertises the sitting a student gets today: the v2 blueprint
+    // once that course is live, otherwise the v1 form (AP Precalculus v1 is
+    // 30 q / 40 min while its v2 blueprint is 30 q / 60 min).
     for (const course of AP_DIAG_V2_COURSES) {
       const bp = AP_DIAG_V2_BLUEPRINTS[course]
-      expect(apDiagnosticLength(course)).toEqual({ questionCount: bp.length, timeLimitMinutes: bp.timeLimitMinutes })
+      const v1 = AP_DIAGNOSTIC_COURSES[course]
+      expect(apDiagnosticLength(course), course).toEqual(
+        AP_DIAG_V2_LIVE[course]
+          ? { questionCount: bp.length, timeLimitMinutes: bp.timeLimitMinutes }
+          : { questionCount: v1.questionCount, timeLimitMinutes: v1.timeLimitMinutes },
+      )
     }
     expect(apDiagnosticStats('ap-chemistry')).toBe('33 questions · 40 min')
     expect(() => apDiagnosticCourse('sat-prep')).toThrow()

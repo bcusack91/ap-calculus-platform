@@ -86,6 +86,15 @@ const THEME: Record<ApDiagV2Course, { page: string; text: string; chip: string; 
     soft: 'bg-violet-50 dark:bg-violet-900/20',
     bar: 'bg-violet-500',
   },
+  'ap-precalculus': {
+    page: 'from-cyan-50 via-white to-blue-50',
+    text: 'text-cyan-700 dark:text-cyan-300',
+    chip: 'bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300',
+    button: 'bg-cyan-600 hover:bg-cyan-700',
+    border: 'border-cyan-300 dark:border-cyan-700',
+    soft: 'bg-cyan-50 dark:bg-cyan-900/20',
+    bar: 'bg-cyan-500',
+  },
 }
 
 interface HistoryEntry {

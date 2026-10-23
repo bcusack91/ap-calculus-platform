@@ -102,6 +102,10 @@ export interface MCQItem {
   /** Why each option is right or wrong, aligned to the authored `options` order (shown on the review page). */
   optionExplanations?: string[]
   topic: string
+  /** The course's canonical lesson slug (course-includes topic) this item drills; informational. */
+  lesson?: string
+  /** CED topic code, e.g. "1.7" or "3.10"; informational. */
+  ced?: string
 }
 
 export interface RubricPoint {
@@ -122,6 +126,15 @@ export interface SAQItem {
   }[]
   topic: string
   sampleResponse?: string
+  /**
+   * Trusted authored markup (an inline SVG graph or an HTML table) rendered above
+   * the prompt, the way the FRQ banks' `dataTableHtml` is; for the periodic-modeling
+   * FRQ whose Part A reads five points off a sinusoid. Data files only, never user input.
+   */
+  figureHtml?: string
+  /** Canonical lesson slug and CED topic code; informational. */
+  lesson?: string
+  ced?: string
 }
 
 /** Helpers for tolerating both data shapes in SAQ items. */
@@ -949,6 +962,12 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
       <>
         <div className={`mb-4 ${card}`}>
           {itemHeader(`Free-response question ${itemIdx + 1}`)}
+          {item.figureHtml && (
+            <div
+              className="mb-3 overflow-x-auto rounded-xl border border-gray-200 bg-gray-50 p-3 text-gray-800 dark:border-gray-600 dark:bg-gray-700/50 dark:text-gray-200"
+              dangerouslySetInnerHTML={{ __html: item.figureHtml }}
+            />
+          )}
           {prompt && highlighter(highlightKey('prompt', prompt), prompt, 'Question stimulus', 'text-sm leading-relaxed text-gray-800 dark:text-gray-200')}
         </div>
         {item.parts.map((part, pi) => {

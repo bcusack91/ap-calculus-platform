@@ -1,5 +1,6 @@
 'use client'
 
+import ApDiagnosticVersionSwitch from '@/components/ap-diagnostic-v2/ApDiagnosticVersionSwitch'
 import { useDiagnosticPlanAccess } from '@/components/DiagnosticPlanLock'
 import ApDiagnosticResults from '@/components/ap-diagnostic/ApDiagnosticResults'
 import { useApDiagnosticStartEvent } from '@/components/ap-diagnostic/useApDiagnosticStartEvent'
@@ -40,7 +41,7 @@ interface HistoryEntry {
   createdAt: string
 }
 
-export default function APPrecalculusDiagnosticPage() {
+function APPrecalculusDiagnosticPageV1() {
   const planAccess = useDiagnosticPlanAccess()
   const { status, data: session } = useSession()
   const router = useRouter()
@@ -371,4 +372,12 @@ export default function APPrecalculusDiagnosticPage() {
       </div></div>
     </div>
   )
+}
+
+/**
+ * v1 (10 fixed forms) until this course's diagnostic v2 bank is live; v2 is
+ * previewable with ?diagV2=1 outside production. See src/lib/ap-diagnostic-v2.
+ */
+export default function APPrecalculusDiagnosticPage() {
+  return <ApDiagnosticVersionSwitch course="ap-precalculus" v1={<APPrecalculusDiagnosticPageV1 />} />
 }

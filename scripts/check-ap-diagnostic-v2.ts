@@ -6,7 +6,7 @@
  *       SVG safety, format tells, length balance, disjointness from the exit
  *       pool and the v1 forms, per-unit counts against the switch minimum and
  *       the authoring target, and a 15-sitting no-repeat simulation.
- *       Courses: ap-chemistry ap-biology ap-physics-1 ap-calculus-ab ap-calculus-bc (default: all).
+ *       Courses: ap-chemistry ap-biology ap-physics-1 ap-calculus-ab ap-calculus-bc ap-precalculus (default: all).
  *       ap-calculus-bc is the AB bank plus BC-only items: its topics are the BC
  *       and AB production topics, and it must be disjoint from both exit pools
  *       and both v1 diagnostics.
@@ -37,11 +37,13 @@ import { apBioQuestionPool } from '../src/data/exit-quizzes/ap-biology'
 import { apPhysics1QuestionPool } from '../src/data/exit-quizzes/ap-physics-1'
 import { calcABQuestionPool } from '../src/data/exit-quizzes/ap-calculus-ab'
 import { calcBCQuestionPool } from '../src/data/exit-quizzes/ap-calculus-bc'
+import { apPrecalcQuestionPool } from '../src/data/exit-quizzes/ap-precalculus'
 import * as chemV1 from '../src/data/ap-chemistry-diagnostic'
 import * as bioV1 from '../src/data/ap-biology-diagnostic'
 import * as phys1V1 from '../src/data/ap-physics-1-diagnostic'
 import * as calcV1 from '../src/data/ap-calculus-ab-diagnostic'
 import * as calcBcV1 from '../src/data/ap-calculus-bc-diagnostic'
+import * as precalcV1 from '../src/data/ap-precalculus-diagnostic'
 import { coursesIn, excludedTopicsOf } from '../src/lib/course-includes'
 
 const root = path.resolve(__dirname, '..')
@@ -87,6 +89,13 @@ function forbiddenStems(course: ApDiagV2Course): Set<string> {
       forms((f) => calcV1.generateCalcABDiagnosticTest(f as any), calcV1.TOTAL_FORMS)
       forms(calcBcV1.generateCalcBCDiagnosticTest, calcBcV1.TOTAL_FORMS)
       break
+    case 'ap-precalculus':
+      add(apPrecalcQuestionPool)
+      // The whole v1 pool, not just the served forms: v1 items enter v2 only reworded.
+      add(precalcV1.apPrecalcDiagnosticQuestionPool)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any -- the v1 form type is a literal union
+      forms((f) => precalcV1.generateAPPrecalculusDiagnosticTest(f as any), precalcV1.TOTAL_FORMS)
+      break
   }
   return out
 }
@@ -115,6 +124,8 @@ function check(course: ApDiagV2Course): number {
   console.log(`\n=== ${course} (${bp.label}) — ${report.stats.items} items, ${report.stats.stimuli} stimuli (${report.stats.setItems} set items)`)
   console.log(`    blueprint: ${bp.length} q / ${bp.timeLimitMinutes} min, ${bp.setsPerSitting} sets per sitting; weights: ${bp.weightSource}`)
   console.log(`    length balance: key strictly longest ${report.stats.keyLongestPct}%, strictly shortest ${report.stats.keyShortestPct}%`)
+  const partB = bank.items.filter((i) => i.calculator).length
+  if (partB > 0) console.log(`    authoring style: ${bank.items.length - partB} Part A (no calculator) / ${partB} Part B (calculator-allowed style, still hand-doable)`)
   console.log('    unit                quota  have  min  target   easy/med/hard (need per sitting)  sets')
   for (const r of unitRequirements(bank)) {
     const u = bp.units.find((x) => x.id === r.unit)!

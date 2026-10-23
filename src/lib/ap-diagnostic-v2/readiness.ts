@@ -23,6 +23,7 @@ export const AP_DIAG_V2_LIVE: Record<ApDiagV2Course, boolean> = {
   'ap-physics-1': false,
   'ap-calculus-ab': true, // owner switched on 2026-10-22
   'ap-calculus-bc': true, // owner switched on 2026-10-22
+  'ap-precalculus': false, // bank built 2026-10-23; owner reviews with ?diagV2=1, then flips
 }
 
 export const AP_DIAG_V2_SWITCH_RULES = {

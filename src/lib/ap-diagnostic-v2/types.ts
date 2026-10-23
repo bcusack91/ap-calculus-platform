@@ -21,7 +21,7 @@ export type ApDiagV2Difficulty = 'easy' | 'medium' | 'hard'
 export const AP_DIAG_V2_DIFFICULTIES: readonly ApDiagV2Difficulty[] = ['easy', 'medium', 'hard']
 
 /** Course slugs that have a v2 blueprint (DB Course.slug). */
-export type ApDiagV2Course = 'ap-chemistry' | 'ap-biology' | 'ap-physics-1' | 'ap-calculus-ab' | 'ap-calculus-bc'
+export type ApDiagV2Course = 'ap-chemistry' | 'ap-biology' | 'ap-physics-1' | 'ap-calculus-ab' | 'ap-calculus-bc' | 'ap-precalculus'
 
 /**
  * A shared stimulus (AP "question set"). Every item that points at it is
@@ -60,6 +60,13 @@ export interface ApDiagV2Item {
   topicSlug: string
   difficulty: ApDiagV2Difficulty
   stimulusId?: string
+  /**
+   * Authoring metadata only (the sitting has no calculator section): true marks
+   * an item written in the exam's Part B "graphing calculator allowed" style —
+   * a context or data model whose numbers are still hand-doable. Absent =
+   * Part A (no-calculator) style. Lets a bank report its Part A / Part B mix.
+   */
+  calculator?: boolean
 }
 
 export interface ApDiagV2Bank {
@@ -85,7 +92,7 @@ export interface ApDiagV2Blueprint {
   /** DiagnosticTest.category prefix the course already uses; v2 stores `${categoryPrefix}-v2`. */
   categoryPrefix: string
   /** Seen-tracking key (`/api/<seenCourse>-diagnostic/seen`), also the API route base. */
-  seenCourse: 'ap-chem' | 'ap-bio' | 'ap-physics1' | 'calcab' | 'calcbc'
+  seenCourse: 'ap-chem' | 'ap-bio' | 'ap-physics1' | 'calcab' | 'calcbc' | 'ap-precalculus'
   /**
    * v2 courses whose bank this course's bank contains (AP Calculus BC = the AB
    * bank + BC-only items). Seen tracking also reads those courses' attempts,

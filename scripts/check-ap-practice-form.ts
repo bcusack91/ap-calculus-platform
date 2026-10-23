@@ -181,7 +181,8 @@ const SPECS: Record<string, CourseSpec> = {
       { slug: 'trigonometric-functions', lo: 0.3, hi: 0.35 },
     ],
     stimulusMin: 0.2,
-    overlap: ['src/data/exit-quizzes/ap-precalculus.ts', 'src/data/ap-precalculus-diagnostic.ts', 'src/data/ap-precalc-frq/questions.ts'],
+    // The competitive bank is shared with the non-AP course, so its stems count too.
+    overlap: ['src/data/exit-quizzes/ap-precalculus.ts', 'src/data/ap-precalculus-diagnostic.ts', 'src/data/ap-precalc-frq/questions.ts', 'src/data/competitive-questions/precalc-bank.ts'],
     // Owner rule "not on the exam = not in the program" (precalc-final PLAN.md): Unit 4, Law of Sines,
     // series sums, calculus, Descartes'/Rational Root, half-angle, lemniscates, finance formulas.
     offExam: [/\bvector/i, /\bmatri(x|ces)\b/i, /parametric/i, /\bconic|ellipse|hyperbola/i, /law of (sines|cosines)/i, /half[- ]angle/i, /descartes/i, /rational root/i, /\bseries\b|sigma notation|\\sum/i, /lemniscate|archimed/i, /derivative|integral/i, /remainder theorem/i, /effective annual|\bAPY\b|rule of 72/i],

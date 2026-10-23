@@ -1,7 +1,7 @@
 import type { MCQItem } from '@/components/FullLengthPracticeExam'
 
 /**
- * AP Precalculus — 42 MCQs (Section I), matching the May 2027 exam.
+ * AP Precalculus practice exam, form 1: 42 MCQs (Section I), matching the May 2027 exam.
  *   Part A: Q1–Q29, no calculator (65 min).
  *   Part B: Q30–Q42, graphing calculator required (40 min); every Part B item needs one
  *   (regression, graphing to solve, or decimal evaluation of exp/log/trig values).
@@ -11,13 +11,47 @@ import type { MCQItem } from '@/components/FullLengthPracticeExam'
  *   Unit 1 Polynomial & Rational Functions (14) — Part A 10, Part B 4
  *   Unit 2 Exponential & Logarithmic Functions (14) — Part A 9, Part B 5
  *   Unit 3 Trigonometric & Polar Functions (14) — Part A 10, Part B 4
+ * Oct 2026 (Wave 3 G2): per-option explanations on every item; table/graph/model stimuli added
+ * to ten items (keys unchanged); the rational inequality (Q6) and the remainder drill (Q10)
+ * replaced (the Remainder Theorem is trimmed under the owner's "not on the exam" rule).
+ * `topic` is the CED unit slug the checker and the review page read; `lesson`/`ced` name the
+ * canonical lesson slug (precalc-final PLAN.md) and CED topic each item drills.
  */
+
+const TABLE_F =
+  'The table gives values of the function $f$, where $f(x) = x^3 - 2x$, at selected values of $x$.\n\n' +
+  '| $x$ | 0 | 1 | 2 | 3 |\n|---|---|---|---|---|\n' +
+  '| $f(x)$ | 0 | $-1$ | 4 | 21 |'
+
+const GRAPH_F = 'The graph of the function $f$ is increasing on an interval, and on that same interval the graph is concave down.'
+
+const GRAPH_POINT = 'The point $(1, 4)$ lies on the graph of $y = f(x)$, and the function $g$ is defined by $g(x) = 2f(x - 3) + 1$.'
+
+const BACTERIA = 'A bacterial population is modeled by $P(t) = 200 \\cdot 2^{t/3}$, where $P(t)$ is the number of bacteria $t$ hours after the start of an experiment.'
+
+const GEOMETRIC =
+  'The table gives selected terms of the geometric sequence $g_n$.\n\n' +
+  '| $n$ | 2 | 3 | 4 | 5 |\n|---|---|---|---|---|\n' +
+  '| $g_n$ | 12 | 24 | 48 | 96 |'
+
+const POLAR_CIRCLE = 'The polar function $r = f(\\theta)$ is given by $f(\\theta) = 2\\cos\\theta$ for $0 \\le \\theta \\le \\pi$.'
+
+const FERRIS = 'A rider\'s height above the ground on a Ferris wheel is modeled by $h(t) = 22 - 20\\cos\\left(\\dfrac{\\pi t}{30}\\right)$ meters, where $t$ is the time in seconds after the ride begins.'
+
+const PIER = 'The depth of the water at a pier is modeled by $D(t) = 5 + 3\\cos\\left(\\dfrac{\\pi t}{6}\\right)$ meters, where $t$ is the number of hours after midnight.'
+
+const MOLD =
+  'A biologist records the area $A$, in square centimeters, covered by a mold culture $t$ days after it is started.\n\n' +
+  '| $t$ (days) | 0 | 2 | 4 | 6 | 8 |\n|---|---|---|---|---|---|\n' +
+  '| $A$ (cm²) | 14.2 | 18.9 | 27.5 | 39.1 | 52.0 |'
 
 export const MCQS: MCQItem[] = [
   /* ---- PART A (Q1–Q29): no calculator — Unit 1 Polynomial & Rational Functions (10) ---- */
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
+    lesson: 'polynomial-functions-precalc',
+    ced: '1.6',
     question: 'Which describes the end behavior of $p(x) = 2x^3 - 5x^2 + x - 3$?',
     options: [
       'As $x \\to \\infty$, $p(x) \\to \\infty$; as $x \\to -\\infty$, $p(x) \\to \\infty$.',
@@ -27,10 +61,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 3,
     explanation: 'The leading term $2x^3$ has odd degree and a positive coefficient, so the graph falls to the left and rises to the right. Matching end behaviors in both directions would require an even-degree leading term.',
+    optionExplanations: [
+      'Both ends rising is the end behavior of an even-degree polynomial with a positive leading coefficient, such as $x^2$ or $x^4$. The degree here is $3$.',
+      'This is the end behavior of $-2x^3$: an odd degree with a negative leading coefficient. The leading coefficient of $p$ is $+2$.',
+      'Both ends falling belongs to an even-degree polynomial with a negative leading coefficient. The degree of $p$ is odd, so its ends go in opposite directions.',
+      'For large $|x|$, $p(x)$ behaves like $2x^3$, which is positive for large positive $x$ and negative for large negative $x$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
+    lesson: 'polynomial-functions-precalc',
+    ced: '1.5',
     question: 'A polynomial $p$ has zeros at $x = -2$ (multiplicity 2), $x = 0$ (multiplicity 1), and $x = 3$ (multiplicity 1). Which describes the graph of $p$ at $x = -2$?',
     options: [
       'It has a vertical asymptote at $x = -2$ rather than having a zero.',
@@ -40,11 +82,20 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 2,
     explanation: 'A zero of even multiplicity does not change the sign of $p$, so the graph touches the axis and turns back. A zero of odd multiplicity greater than 1 is the case where the graph crosses while flattening.',
+    optionExplanations: [
+      'Polynomial functions have no vertical asymptotes; they are defined for every real $x$. Asymptotes belong to rational functions, where a denominator can be zero.',
+      'Crossing while flattening happens at a zero of odd multiplicity greater than $1$, such as multiplicity $3$. Multiplicity $2$ is even, so the graph does not cross.',
+      'The factor $(x + 2)^2$ is never negative, so $p$ keeps the same sign on both sides of $x = -2$: the graph touches the axis there and turns around.',
+      'A sign change requires a zero of odd multiplicity; the zeros at $x = 0$ and $x = 3$ behave this way, but the zero at $x = -2$ has even multiplicity.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
-    question: 'What is the average rate of change of $f(x) = x^3 - 2x$ on the interval $[1, 3]$?',
+    lesson: 'rates-of-change-precalc',
+    ced: '1.2',
+    stimulus: TABLE_F,
+    question: 'What is the average rate of change of $f$ on the interval $[1, 3]$?',
     options: [
       '10',
       '11',
@@ -53,10 +104,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation: '$\\dfrac{f(3) - f(1)}{3 - 1} = \\dfrac{21 - (-1)}{2} = 11$. The value 22 is the change in $f$ without dividing by the length of the interval.',
+    optionExplanations: [
+      '$10$ comes from $\\frac{21 - 1}{2}$, treating $f(1)$ as $+1$ instead of $-1$. The table gives $f(1) = -1$, so the change in $f$ is $21 - (-1) = 22$.',
+      '$\\frac{f(3) - f(1)}{3 - 1} = \\frac{21 - (-1)}{2} = \\frac{22}{2} = 11$.',
+      '$21$ is $f(3)$ alone (or the change over $[0, 3]$ not divided by $3$). The average rate of change compares the change in $f$ to the change in $x$.',
+      '$22$ is the total change $f(3) - f(1)$; it still has to be divided by the length of the interval, $2$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
+    lesson: 'rational-functions-precalc',
+    ced: '1.10',
     question: 'Which describes the graph of $f(x) = \\dfrac{2x^2 - 8}{x^2 - x - 6}$?',
     options: [
       'A vertical asymptote at $x = 3$, a hole at $x = -2$, and a horizontal asymptote at $y = 2$',
@@ -66,10 +125,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Factoring gives $\\dfrac{2(x - 2)(x + 2)}{(x - 3)(x + 2)}$; the common factor $x + 2$ makes a hole at $x = -2$, leaving a vertical asymptote only at $x = 3$. The degrees are equal, so the horizontal asymptote is the ratio of leading coefficients, $y = 2$.',
+    optionExplanations: [
+      'The common factor $x + 2$ cancels, giving a hole at $x = -2$; the remaining denominator factor $x - 3$ gives the vertical asymptote; equal degrees give $y = \\frac{2}{1} = 2$.',
+      'The denominator is zero at $x = -2$, but so is the numerator, with the same multiplicity. A common factor produces a hole, not an asymptote.',
+      'Besides the hole at $x = -2$, the horizontal asymptote is wrong: $y = 0$ happens only when the denominator has the greater degree, and here both degrees are $2$.',
+      'A rational function whose numerator and denominator have the same degree always has a horizontal asymptote, at the ratio of the leading coefficients.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
+    lesson: 'rational-functions-precalc',
+    ced: '1.11',
     question: 'What is the slant asymptote of the graph of $r(x) = \\dfrac{x^2 + 1}{x - 2}$?',
     options: [
       '$y = x + 2$',
@@ -79,24 +146,41 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Polynomial division gives $\\dfrac{x^2 + 1}{x - 2} = x + 2 + \\dfrac{5}{x - 2}$, and the remainder term approaches 0 as $|x|$ grows, so the slant asymptote is $y = x + 2$. Using $y = x - 2$ copies the denominator instead of dividing.',
+    optionExplanations: [
+      'Dividing, $x^2 + 1 = (x - 2)(x + 2) + 5$, so $r(x) = x + 2 + \\frac{5}{x - 2}$ and the graph approaches the line $y = x + 2$.',
+      'This copies the denominator $x - 2$ instead of carrying out the division; the quotient of $x^2 + 1$ by $x - 2$ is $x + 2$, not $x - 2$.',
+      '$y = x$ keeps only the ratio of leading terms, $\\frac{x^2}{x}$. The slant asymptote is the full linear quotient, which includes the constant $+2$.',
+      '$2x + 1$ comes from reading the coefficients backward; the quotient of a degree-$2$ by a degree-$1$ polynomial with leading coefficients $1$ and $1$ has leading coefficient $1$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
-    question: 'What is the solution set of $\\dfrac{x - 1}{x + 3} \\ge 0$?',
+    lesson: 'rational-functions-precalc',
+    ced: '1.11',
+    question: 'What is the solution set of $\\dfrac{x + 2}{x - 4} \\le 0$?',
     options: [
-      '$x < -3$ or $x \\ge 1$',
-      '$x \\le -3$ or $x \\ge 1$',
-      '$-3 < x \\le 1$',
-      '$-3 \\le x \\le 1$',
+      '$-2 \\le x < 4$',
+      '$-2 \\le x \\le 4$',
+      '$x \\le -2$ or $x > 4$',
+      '$x < -2$ or $x \\ge 4$',
     ],
     correctAnswer: 0,
-    explanation: 'The quotient is positive on $(-\\infty, -3)$ and $(1, \\infty)$ and zero at $x = 1$. The value $x = -3$ must be excluded because the expression is undefined there, even though the inequality includes equality.',
+    explanation: 'The quotient is zero at $x = -2$ and undefined at $x = 4$. Testing the sign on each piece: it is positive for $x < -2$, negative on $(-2, 4)$ and positive for $x > 4$. The inequality allows equality, so $x = -2$ is included, but $x = 4$ must be excluded because the expression is undefined there.',
+    optionExplanations: [
+      'The quotient is negative between the zero $-2$ and the excluded value $4$; the endpoint $-2$ makes it $0$ (allowed), while $4$ is not in the domain.',
+      'At $x = 4$ the denominator is $0$, so the expression is undefined there. The endpoint cannot be included even though the inequality allows equality.',
+      'These are the intervals on which the quotient is positive (both factors have the same sign), the opposite of what the inequality asks for.',
+      'These are the intervals where the quotient is positive, and the endpoints are handled backward: $x = -2$ (where the quotient is $0$) belongs to the solution set, while $x = 4$ is not in the domain.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
-    question: 'On an interval, the function $f$ is increasing and its graph is concave down. Which statement describes the rate of change of $f$ on that interval?',
+    lesson: 'rates-of-change-precalc',
+    ced: '1.1',
+    stimulus: GRAPH_F,
+    question: 'Which statement describes the rate of change of $f$ on that interval?',
     options: [
       'The rate of change is negative and increasing.',
       'The rate of change is positive and decreasing.',
@@ -105,10 +189,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation: 'Increasing means the rate of change is positive, and concave down means the rate of change is decreasing. A positive, increasing rate of change would make the graph concave up.',
+    optionExplanations: [
+      'A negative rate of change means $f$ is decreasing, but $f$ is increasing on this interval.',
+      'Increasing gives a positive rate of change; concave down means that rate of change is getting smaller, so the graph rises more and more slowly.',
+      'Positive and increasing describes a graph that is increasing and concave up, rising faster and faster. This graph is concave down.',
+      'A negative, decreasing rate of change describes a graph that is decreasing and concave down; this graph is increasing.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
+    lesson: 'polynomial-division-remainder-theorem',
+    ced: '1.11',
     question: 'If $f(x) = x^2 - 4x + 1$, which expression is equivalent to $f(x + 2) - f(x)$?',
     options: [
       '$4x - 4$',
@@ -118,11 +210,20 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$f(x + 2) = (x + 2)^2 - 4(x + 2) + 1 = x^2 - 3$, so $f(x + 2) - f(x) = (x^2 - 3) - (x^2 - 4x + 1) = 4x - 4$. Expanding $(x + 2)^2$ as $x^2 + 4$ leads to an incorrect result.',
+    optionExplanations: [
+      '$f(x + 2) = x^2 + 4x + 4 - 4x - 8 + 1 = x^2 - 3$, and $(x^2 - 3) - (x^2 - 4x + 1) = 4x - 4$. Check at $x = 1$: $f(3) - f(1) = -2 - (-2) = 0 = 4(1) - 4$.',
+      '$2x - 4$ is what remains if $(x + 2)^2$ is expanded as $x^2 + 2x + 4$ (dropping half of the middle term). Check at $x = 1$: $f(3) - f(1) = 0$, but $2(1) - 4 = -2$.',
+      'Check at $x = 1$: $f(3) - f(1) = (9 - 12 + 1) - (1 - 4 + 1) = 0$, but $4(1) - 6 = -2$, so this expression is not equivalent; the constant comes from $4 - 8 + 1 - 1 = -4$.',
+      'Check at $x = 1$: $f(3) - f(1) = 0$, but $2(1) + 2 = 4$. Expanding $(x + 2)^2 = x^2 + 4x + 4$ and distributing $-4(x + 2) = -4x - 8$ carefully gives $4x - 4$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
-    question: 'The point $(1, 4)$ is on the graph of $y = f(x)$. Which point must be on the graph of $g(x) = 2f(x - 3) + 1$?',
+    lesson: 'transformations-precalc',
+    ced: '1.12',
+    stimulus: GRAPH_POINT,
+    question: 'Which point must be on the graph of $y = g(x)$?',
     options: [
       '(4, 9)',
       '(−2, 9)',
@@ -131,24 +232,40 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'The input $x - 3$ shifts the graph 3 units right, so $x = 4$ uses $f(1) = 4$; then $g(4) = 2(4) + 1 = 9$. Adding 1 before doubling gives 10, and shifting left gives $x = -2$.',
+    optionExplanations: [
+      'At $x = 4$, $g(4) = 2f(1) + 1 = 2(4) + 1 = 9$: the point moves $3$ right, is stretched vertically by $2$, then moves up $1$.',
+      'Subtracting $3$ inside the function moves the graph $3$ units to the right, to $x = 4$, not to the left.',
+      '$10 = 2(4 + 1)$ adds $1$ before doubling. In $2f(x - 3) + 1$ the output is doubled first and then increased by $1$.',
+      'Both the direction of the horizontal shift and the order of the vertical operations are reversed here.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
-    question: 'What is the remainder when $p(x) = x^3 - 2x + 5$ is divided by $x - 2$?',
+    lesson: 'polynomial-division-remainder-theorem',
+    ced: '1.11',
+    question: 'Which of the following is equivalent to $\\dfrac{x^3 - 2x + 5}{x - 2}$ for $x \\ne 2$?',
     options: [
-      '9',
-      '−7',
-      '17',
-      '13',
+      '$x^2 + 2x + 2 + \\dfrac{9}{x - 2}$',
+      '$x^2 - 2x + 2 + \\dfrac{9}{x - 2}$',
+      '$x^2 + 2x + 2 + \\dfrac{1}{x - 2}$',
+      '$x^2 + 2x - 2 + \\dfrac{1}{x - 2}$',
     ],
     correctAnswer: 0,
-    explanation: 'By the remainder theorem, the remainder is $p(2) = 8 - 4 + 5 = 9$. Adding $2x$ instead of subtracting it gives 17, and dropping the $-2x$ term gives 13.',
+    explanation: 'Dividing $x^3 + 0x^2 - 2x + 5$ by $x - 2$: $x^2(x - 2) = x^3 - 2x^2$ leaves $2x^2 - 2x + 5$; $2x(x - 2) = 2x^2 - 4x$ leaves $2x + 5$; $2(x - 2) = 2x - 4$ leaves $9$. So the quotient is $x^2 + 2x + 2$ and the remainder is $9$. Check: $(x - 2)(x^2 + 2x + 2) + 9 = x^3 - 2x + 5$.',
+    optionExplanations: [
+      'Quotient $x^2 + 2x + 2$ with remainder $9$: $(x - 2)(x^2 + 2x + 2) + 9 = x^3 + 2x^2 + 2x - 2x^2 - 4x - 4 + 9 = x^3 - 2x + 5$.',
+      'A middle term of $-2x$ comes from subtracting $x^3 - 2x^2$ incorrectly as $x^3 + 2x^2$; $0x^2 - (-2x^2) = +2x^2$, so the next quotient term is $+2x$.',
+      'The quotient is right but the remainder is not: after $2(x - 2) = 2x - 4$ is subtracted from $2x + 5$, $9$ remains, not $1$.',
+      'Both the constant term of the quotient and the remainder are off: $2x + 5$ divided by $x - 2$ contributes $+2$ to the quotient and leaves $5 - (-4) = 9$.',
+    ],
   },
   /* ---- Part A — Unit 2 Exponential & Logarithmic Functions (9) ---- */
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
+    lesson: 'logarithmic-functions-precalc',
+    ced: '2.13',
     question: 'What value of $x$ satisfies $3^{2x - 1} = 27$?',
     options: [
       '$x = 2$',
@@ -158,10 +275,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Since $27 = 3^3$, set $2x - 1 = 3$, so $x = 2$. Setting $2x - 1$ equal to 27 instead of to the exponent 3 gives $x = 14$, and dropping the $-1$ gives $x = 1.5$.',
+    optionExplanations: [
+      'Writing $27$ as $3^3$ and matching exponents, $2x - 1 = 3$, so $x = 2$. Check: $3^{3} = 27$.',
+      '$x = 1.5$ solves $2x = 3$, which drops the $-1$ in the exponent.',
+      '$x = 14$ solves $2x - 1 = 27$, setting the exponent equal to $27$ itself instead of to $\\log_3 27 = 3$.',
+      '$x = 13.5$ solves $2x = 27$, both dropping the $-1$ and using $27$ instead of the exponent $3$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
+    lesson: 'logarithmic-functions-precalc',
+    ced: '2.13',
     question: 'What are all solutions of $\\log_2 x + \\log_2(x - 2) = 3$?',
     options: [
       '$x = 4$ only',
@@ -171,10 +296,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Combining the logarithms gives $x(x - 2) = 8$, so $x = 4$ or $x = -2$. The value $-2$ is extraneous because $\\log_2 x$ is undefined for $x \\le 0$.',
+    optionExplanations: [
+      '$\\log_2\\big(x(x - 2)\\big) = 3$ gives $x^2 - 2x - 8 = 0$, so $x = 4$ or $x = -2$; only $x = 4$ is in the domain ($x > 2$), and $\\log_2 4 + \\log_2 2 = 2 + 1 = 3$.',
+      '$x = -2$ makes both $\\log_2 x$ and $\\log_2(x - 2)$ undefined, so it cannot be a solution; $x = 4$ works.',
+      'Both values solve the quadratic $x^2 - 2x - 8 = 0$, but $-2$ is not in the domain of the original equation, which requires $x > 2$.',
+      'There is a solution: $x = 4$ gives $\\log_2 4 + \\log_2 2 = 3$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
+    lesson: 'logarithmic-functions-precalc',
+    ced: '2.12',
     question: 'If $\\ln a = 3$ and $\\ln b = 5$, what is the value of $\\ln(a^2b)$?',
     options: [
       '11',
@@ -184,11 +317,20 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$\\ln(a^2b) = 2\\ln a + \\ln b = 2(3) + 5 = 11$. The value 30 multiplies $2 \\cdot 3 \\cdot 5$, treating the logarithm of a product as a product of logarithms.',
+    optionExplanations: [
+      'Product rule and power rule: $\\ln(a^2 b) = \\ln(a^2) + \\ln b = 2\\ln a + \\ln b = 6 + 5 = 11$.',
+      '$30 = 2 \\cdot 3 \\cdot 5$ multiplies the logarithms. The logarithm of a product is the sum of the logarithms, not their product.',
+      '$8 = 3 + 5$ is $\\ln(ab)$; the square on $a$ doubles $\\ln a$.',
+      '$45 = 3^2 \\cdot 5$ squares $\\ln a$ instead of doubling it: $\\ln(a^2) = 2\\ln a$, not $(\\ln a)^2$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
-    question: 'A bacterial population is modeled by $P(t) = 200 \\cdot 2^{t/3}$, where $t$ is in hours. After how many hours will the population be 1600?',
+    lesson: 'exponential-functions-precalc',
+    ced: '2.5',
+    stimulus: BACTERIA,
+    question: 'After how many hours will the population be 1600?',
     options: [
       '9 hours',
       '8 hours',
@@ -197,10 +339,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$200 \\cdot 2^{t/3} = 1600$ gives $2^{t/3} = 8 = 2^3$, so $t/3 = 3$ and $t = 9$. The value 8 comes from stopping at the growth factor of 8 instead of solving for $t$.',
+    optionExplanations: [
+      '$2^{t/3} = \\frac{1600}{200} = 8 = 2^3$, so $\\frac{t}{3} = 3$ and $t = 9$ hours: three doublings, each taking $3$ hours.',
+      '$8$ is the growth factor $\\frac{1600}{200}$, not the time. It takes $\\log_2 8 = 3$ doublings of $3$ hours each.',
+      '$24$ hours would be $8$ doublings, giving $200 \\cdot 2^8 = 51{,}200$ bacteria.',
+      '$3$ is the number of doublings ($\\log_2 8$), not the number of hours; each doubling takes $3$ hours.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
+    lesson: 'exponential-functions-precalc',
+    ced: '2.3',
     question: 'Which describes the function $f(x) = e^{-x}$?',
     options: [
       'Increasing for every $x$, with $f(x) \\to 0$ as $x \\to \\infty$',
@@ -210,10 +360,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 1,
     explanation: '$e^{-x} = (1/e)^x$ has base between 0 and 1, so it decreases and approaches 0 as $x$ increases. As $x \\to -\\infty$ it grows without bound.',
+    optionExplanations: [
+      'A function that approaches $0$ as $x \\to \\infty$ while staying positive must be decreasing eventually; $e^{-x} = \\left(\\frac{1}{e}\\right)^x$ is decreasing everywhere.',
+      'The base $\\frac{1}{e}$ is between $0$ and $1$, so the function decreases, and its values shrink toward $0$ as $x$ increases.',
+      'As $x \\to -\\infty$, $-x \\to \\infty$ and $e^{-x}$ grows without bound; it approaches $0$ in the other direction.',
+      'Increasing with $f(x) \\to 0$ as $x \\to -\\infty$ describes $e^{x}$, the reflection of this graph over the $y$-axis.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
+    lesson: 'function-composition-inverses-precalc',
+    ced: '2.10',
     question: 'Which is the inverse of $f(x) = 2^x + 3$?',
     options: [
       '$f^{-1}(x) = \\log_2(x - 3)$',
@@ -223,10 +381,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Solving $y = 2^x + 3$ for $x$ gives $2^x = y - 3$, so $x = \\log_2(y - 3)$; swapping the variables gives $\\log_2(x - 3)$. Subtracting 3 outside the logarithm undoes the operations in the wrong order, and $(x - 3)/2$ treats $2^x$ as if it were $2x$.',
+    optionExplanations: [
+      'Undo the operations in reverse order: first subtract $3$, then take $\\log_2$. Check: $f(1) = 5$ and $\\log_2(5 - 3) = 1$.',
+      'This undoes the steps in the wrong order (logarithm first, then subtract $3$). Check: $f(1) = 5$ but $\\log_2 5 - 3 \\ne 1$.',
+      'Dividing by $2$ undoes multiplication by $2$, not raising $2$ to a power. The inverse of $2^x$ is $\\log_2 x$.',
+      'Changing the sign of the exponent gives a reflection, not the inverse; $2^{-x} - 3$ does not send $5$ back to $1$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
+    lesson: 'logarithmic-functions-precalc',
+    ced: '2.12',
     question: 'What is the value of $\\log_2 80 - \\log_2 5$?',
     options: [
       '4',
@@ -236,10 +402,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$\\log_2 80 - \\log_2 5 = \\log_2(80/5) = \\log_2 16 = 4$. The value 16 is the argument, not the logarithm, and $\\log_2 75$ subtracts the arguments instead of dividing them.',
+    optionExplanations: [
+      'The difference of logarithms is the logarithm of the quotient: $\\log_2\\frac{80}{5} = \\log_2 16 = 4$, since $2^4 = 16$.',
+      '$\\log_2 75$ subtracts the arguments ($80 - 5$). Subtracting logarithms corresponds to dividing their arguments.',
+      '$16$ is $\\frac{80}{5}$, the argument of the combined logarithm; the value asked for is $\\log_2 16 = 4$.',
+      '$\\log_2 400$ multiplies the arguments, which corresponds to adding the logarithms, not subtracting them.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
+    lesson: 'exponential-functions-precalc',
+    ced: '2.5',
     question: 'A substance loses 25% of its mass every 10 years. Which function gives the mass remaining after $t$ years, from an initial mass $M_0$?',
     options: [
       '$M(t) = M_0(0.75)^{t/10}$',
@@ -249,11 +423,20 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Losing 25% means keeping 75% in each 10-year period, so the base is 0.75 and the exponent counts periods, $t/10$. Dividing by $4^{t/10}$ uses a base of 0.25, which is the fraction lost, not the fraction kept.',
+    optionExplanations: [
+      'Each $10$-year period keeps $75\\%$ of the mass, and $\\frac{t}{10}$ counts how many such periods have passed.',
+      '$\\frac{1}{4^{t/10}} = (0.25)^{t/10}$ keeps only $25\\%$ per period, which is the fraction lost, not the fraction that remains.',
+      'An exponent of $10t$ applies the $25\\%$ loss ten times per year instead of once every ten years.',
+      'This is a linear model losing $2.5\\%$ of the original mass each year; the loss is $25\\%$ of the current mass per decade, which is exponential.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
-    question: 'In a geometric sequence, $g_2 = 12$ and $g_5 = 96$. What is $g_8$?',
+    lesson: 'sequences-series-precalc',
+    ced: '2.1',
+    stimulus: GEOMETRIC,
+    question: 'What is $g_8$?',
     options: [
       '768',
       '384',
@@ -262,11 +445,19 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Three steps multiply by $r^3 = 96/12 = 8$, so $r = 2$ and $g_8 = 96 \\cdot 8 = 768$. The value 180 assumes an arithmetic sequence with a common difference of 28.',
+    optionExplanations: [
+      'The common ratio is $2$ (each term doubles), so $g_8 = g_5 \\cdot 2^3 = 96 \\cdot 8 = 768$.',
+      '$384 = 96 \\cdot 4$ applies the ratio only twice; from $g_5$ to $g_8$ is three steps.',
+      '$1536 = 96 \\cdot 16$ applies the ratio four times, as if $g_8$ were four terms past $g_5$.',
+      '$180 = 96 + 3 \\cdot 28$ treats the sequence as arithmetic with difference $28$; the terms grow by a constant factor, not a constant difference.',
+    ],
   },
   /* ---- Part A — Unit 3 Trigonometric & Polar Functions (10) ---- */
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'the-unit-circle',
+    ced: '3.3',
     question: 'What is the exact value of $\\sin\\left(\\dfrac{7\\pi}{6}\\right)$?',
     options: [
       '$-\\dfrac{1}{2}$',
@@ -276,10 +467,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$7\\pi/6$ is in Quadrant III with reference angle $\\pi/6$, and sine is negative there, so the value is $-1/2$. The value $-\\sqrt{3}/2$ is the cosine of $7\\pi/6$.',
+    optionExplanations: [
+      'Reference angle $\\frac{\\pi}{6}$ gives $\\frac{1}{2}$ in size, and sine is negative in Quadrant III (below the $x$-axis).',
+      '$\\frac{1}{2}$ is $\\sin\\frac{\\pi}{6}$; the angle $\\frac{7\\pi}{6}$ is in Quadrant III, where sine is negative.',
+      '$-\\frac{\\sqrt{3}}{2}$ is $\\cos\\frac{7\\pi}{6}$, the $x$-coordinate of the point, not the sine.',
+      '$\\frac{\\sqrt{3}}{2}$ is the sine of $\\frac{\\pi}{3}$ or $\\frac{2\\pi}{3}$; the reference angle here is $\\frac{\\pi}{6}$ and the sign is negative.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'graphing-trig-functions',
+    ced: '3.6',
     question: 'Which describes the graph of $f(x) = 3\\sin(2x - \\pi) + 1$?',
     options: [
       'Amplitude 3, period $\\pi$, phase shift $\\pi$ right, midline $y = 1$',
@@ -289,10 +488,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 3,
     explanation: 'Writing $2x - \\pi = 2(x - \\pi/2)$ shows a shift of $\\pi/2$ to the right, and the period is $2\\pi/2 = \\pi$. Reading the shift as $\\pi$ ignores the factor of 2 multiplying $x$.',
+    optionExplanations: [
+      'The phase shift is not the constant $\\pi$ by itself; factoring out the $2$ gives $2\\left(x - \\frac{\\pi}{2}\\right)$, a shift of $\\frac{\\pi}{2}$.',
+      'The period of $\\sin(2x)$ is $\\frac{2\\pi}{2} = \\pi$, not $2\\pi$, and the phase shift is $\\frac{\\pi}{2}$.',
+      'The amplitude is the coefficient $3$ and the midline is the constant $y = 1$; this option swaps them.',
+      'Amplitude $3$, period $\\frac{2\\pi}{2} = \\pi$, shift $\\frac{\\pi}{2}$ right from $2x - \\pi = 2\\left(x - \\frac{\\pi}{2}\\right)$, midline $y = 1$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'trigonometric-functions-precalc',
+    ced: '3.2',
     question: 'If $\\cos\\theta = -\\dfrac{3}{5}$ and $\\theta$ is in Quadrant II, what is $\\sin\\theta$?',
     options: [
       '$\\dfrac{4}{5}$',
@@ -302,10 +509,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$\\sin^2\\theta = 1 - 9/25 = 16/25$, and sine is positive in Quadrant II, so $\\sin\\theta = 4/5$. The value $-3/5$ is $\\cos\\theta$ itself, and $-3/4$ is $\\cos\\theta/\\sin\\theta$, the cotangent.',
+    optionExplanations: [
+      '$\\sin^2\\theta = 1 - \\frac{9}{25} = \\frac{16}{25}$, and in Quadrant II the $y$-coordinate is positive, so $\\sin\\theta = \\frac{4}{5}$.',
+      '$-\\frac{4}{5}$ has the right size but the wrong sign; sine is negative in Quadrants III and IV, not II.',
+      '$-\\frac{3}{5}$ is the given value of $\\cos\\theta$, not $\\sin\\theta$.',
+      '$-\\frac{3}{4}$ is $\\frac{\\cos\\theta}{\\sin\\theta} = \\cot\\theta$, not the sine.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'trigonometric-identities-precalc',
+    ced: '3.12',
     question: 'Which expression is equivalent to $\\dfrac{\\sin^2 x}{1 - \\cos x}$ wherever both are defined?',
     options: [
       '$1 + \\cos x$',
@@ -315,10 +530,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$\\sin^2 x = 1 - \\cos^2 x = (1 - \\cos x)(1 + \\cos x)$, and canceling $1 - \\cos x$ leaves $1 + \\cos x$. Canceling as if $\\sin^2 x$ divided by $1 - \\cos x$ left a sine factor does not follow any identity.',
+    optionExplanations: [
+      'The Pythagorean identity gives $\\sin^2 x = (1 - \\cos x)(1 + \\cos x)$; dividing by $1 - \\cos x$ leaves $1 + \\cos x$.',
+      '$1 - \\cos x$ is the denominator itself; after factoring the numerator it cancels, leaving the other factor, $1 + \\cos x$.',
+      'No identity cancels $\\sin^2 x$ against $1 - \\cos x$ to leave $\\sin x$. Check $x = \\frac{\\pi}{3}$: the expression equals $\\frac{3/4}{1/2} = \\frac{3}{2}$, but $\\sin\\frac{\\pi}{3} \\approx 0.87$.',
+      'The factoring involves cosine, not sine: $1 - \\cos^2 x = (1 - \\cos x)(1 + \\cos x)$. Check $x = \\frac{\\pi}{3}$: the expression is $\\frac{3}{2}$, but $1 + \\sin\\frac{\\pi}{3} \\approx 1.87$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'solving-trig-equations',
+    ced: '3.10',
     question: 'What are all solutions of $2\\sin x = 1$ in the interval $0 \\le x < 2\\pi$?',
     options: [
       '$x = \\pi/6$ and $x = 5\\pi/6$',
@@ -328,10 +551,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$\\sin x = 1/2$ in Quadrant I at $\\pi/6$ and in Quadrant II at $\\pi - \\pi/6 = 5\\pi/6$. The angle $11\\pi/6$ has the right reference angle but a negative sine.',
+    optionExplanations: [
+      '$\\sin x = \\frac{1}{2}$ at the reference angle $\\frac{\\pi}{6}$ in Quadrant I and at $\\pi - \\frac{\\pi}{6} = \\frac{5\\pi}{6}$ in Quadrant II, the two quadrants where sine is positive.',
+      '$\\frac{11\\pi}{6}$ is in Quadrant IV, where $\\sin x = -\\frac{1}{2}$; the second solution must be in Quadrant II.',
+      '$\\frac{\\pi}{3}$ and $\\frac{2\\pi}{3}$ have sine $\\frac{\\sqrt{3}}{2}$, not $\\frac{1}{2}$.',
+      'Sine is positive in two quadrants, so there are two solutions in $[0, 2\\pi)$; $\\frac{5\\pi}{6}$ is the second.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'trigonometric-identities-precalc',
+    ced: '3.11',
     question: 'If $\\tan\\theta = \\dfrac{5}{12}$ and $\\theta$ is in Quadrant I, what is $\\sec\\theta$?',
     options: [
       '$\\dfrac{13}{12}$',
@@ -341,10 +572,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'A right triangle with legs 5 and 12 has hypotenuse 13, and $\\sec\\theta = $ hypotenuse/adjacent $= 13/12$. The value $13/5$ is the cosecant (hypotenuse/opposite), and $12/5$ is the cotangent.',
+    optionExplanations: [
+      'Opposite $5$, adjacent $12$, hypotenuse $13$: $\\cos\\theta = \\frac{12}{13}$, so $\\sec\\theta = \\frac{13}{12}$ (or use $\\sec^2\\theta = 1 + \\tan^2\\theta = \\frac{169}{144}$).',
+      '$\\frac{12}{5}$ is $\\cot\\theta$, the reciprocal of the tangent, not of the cosine.',
+      '$\\frac{13}{5}$ is $\\csc\\theta$, hypotenuse over opposite; secant is hypotenuse over adjacent.',
+      '$\\frac{5}{13}$ is $\\sin\\theta$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'inverse-trig-functions-precalc',
+    ced: '3.9',
     question: 'What is the range of $y = \\arcsin x$?',
     options: [
       '$-\\dfrac{\\pi}{2} \\le y \\le \\dfrac{\\pi}{2}$',
@@ -354,10 +593,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'The sine function is restricted to $[-\\pi/2, \\pi/2]$ to make it invertible, and the endpoints are included because $\\arcsin(\\pm 1) = \\pm\\pi/2$. The interval $[0, \\pi]$ is the range of arccosine, and $[-1, 1]$ is the domain of arcsine.',
+    optionExplanations: [
+      'The inverse sine returns angles from $-\\frac{\\pi}{2}$ to $\\frac{\\pi}{2}$ inclusive, since $\\arcsin(1) = \\frac{\\pi}{2}$ and $\\arcsin(-1) = -\\frac{\\pi}{2}$.',
+      '$[0, \\pi]$ is the range of $\\arccos x$, where cosine is restricted to be one-to-one.',
+      'The endpoints are included: $\\sin\\frac{\\pi}{2} = 1$ is in the restricted domain of sine, so $\\frac{\\pi}{2}$ is an output of $\\arcsin$. The open interval is the range of $\\arctan x$.',
+      '$[-1, 1]$ is the domain of $\\arcsin x$ (the possible inputs), not its range.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'polar-coordinates-precalc',
+    ced: '3.13',
     question: 'What are the rectangular coordinates of the point with polar coordinates $(r, \\theta) = \\left(4, \\dfrac{2\\pi}{3}\\right)$?',
     options: [
       '$(-2, 2\\sqrt{3})$',
@@ -367,11 +614,20 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$x = 4\\cos(2\\pi/3) = -2$ and $y = 4\\sin(2\\pi/3) = 2\\sqrt{3}$. Swapping sine and cosine gives $(-2\\sqrt{3}, 2)$, and $(-1, \\sqrt{3})$ forgets to multiply by $r = 4$.',
+    optionExplanations: [
+      '$x = r\\cos\\theta = 4 \\cdot \\left(-\\frac{1}{2}\\right) = -2$ and $y = r\\sin\\theta = 4 \\cdot \\frac{\\sqrt{3}}{2} = 2\\sqrt{3}$, a Quadrant II point.',
+      'A positive $x$-coordinate puts the point in Quadrant I, but $\\frac{2\\pi}{3}$ is in Quadrant II, where $\\cos\\theta < 0$.',
+      'This swaps the roles of sine and cosine: $x$ uses the cosine, $-\\frac{1}{2}$, and $y$ uses the sine, $\\frac{\\sqrt{3}}{2}$.',
+      'These are the coordinates for $r = 2$ (or the unit-circle values doubled). With $r = 4$, each coordinate is twice as large.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
-    question: 'Which describes the graph of the polar equation $r = 2\\cos\\theta$?',
+    lesson: 'polar-coordinates-precalc',
+    ced: '3.14',
+    stimulus: POLAR_CIRCLE,
+    question: 'Which describes the graph of $f$?',
     options: [
       'A circle of radius 1 centered at the point (1, 0)',
       'A circle of radius 2 centered at the origin',
@@ -380,10 +636,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Multiplying by $r$ gives $x^2 + y^2 = 2x$, or $(x - 1)^2 + y^2 = 1$: a circle of radius 1 centered at (1, 0). The equation $r = 2$ would be the circle of radius 2 centered at the origin.',
+    optionExplanations: [
+      'Multiplying $r = 2\\cos\\theta$ by $r$ gives $x^2 + y^2 = 2x$, which completes the square to $(x - 1)^2 + y^2 = 1$; over $0 \\le \\theta \\le \\pi$ the whole circle is traced once.',
+      'A circle of radius $2$ centered at the origin is the graph of $r = 2$ (constant $r$); here $r$ varies with $\\theta$.',
+      'The maximum value of $r$ is $2$ (at $\\theta = 0$), which is the diameter of the circle, not its radius; the center is at $(1, 0)$.',
+      'A cardioid has the form $r = a \\pm a\\cos\\theta$ or $r = a \\pm a\\sin\\theta$; $r = 2\\cos\\theta$ has no constant term and is a circle.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'polar-coordinates-precalc',
+    ced: '3.15',
     question: 'Consider the polar function $r = 1 + 2\\cos\\theta$ on the interval $\\dfrac{2\\pi}{3} < \\theta < \\pi$. Which statement describes the distance between the point $(r, \\theta)$ and the origin on this interval?',
     options: [
       'The distance increases, because $r$ is negative and decreasing.',
@@ -393,12 +657,20 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'For $2\\pi/3 < \\theta < \\pi$, $\\cos\\theta < -1/2$, so $r < 0$, and $\\cos\\theta$ decreases there, so $r$ falls from 0 to $-1$. When $r$ is negative and decreasing, $|r|$ grows, so the point moves away from the origin; reading "decreasing" as moving closer ignores that the radius is signed.',
+    optionExplanations: [
+      'On this interval $r = 1 + 2\\cos\\theta$ goes from $0$ down to $-1$; the distance to the origin is $|r|$, which grows from $0$ to $1$.',
+      '$r$ is indeed negative and decreasing, but a more negative $r$ means a larger $|r|$: the point is getting farther from the origin, not closer.',
+      '$r$ is not positive here: $\\cos\\theta < -\\frac{1}{2}$ for $\\frac{2\\pi}{3} < \\theta < \\pi$ makes $1 + 2\\cos\\theta < 0$.',
+      '$r$ is negative on this interval (it is $0$ at $\\theta = \\frac{2\\pi}{3}$ and $-1$ at $\\theta = \\pi$); the distance $|r|$ increases.',
+    ],
   },
 
   /* ---- PART B (Q30–Q42): graphing calculator required — Unit 1 (4) ---- */
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
+    lesson: 'polynomial-functions-precalc',
+    ced: '1.5',
     question: 'What is the greatest real zero of $f(x) = x^3 - 4x + 1$?',
     options: [
       '1.861',
@@ -408,10 +680,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Graphing $f$ shows three real zeros, approximately −2.115, 0.254, and 1.861, so the greatest is 1.861. The value 2.115 is the absolute value of the least zero, not a zero itself.',
+    optionExplanations: [
+      'The graph of $f$ crosses the $x$-axis three times, at about $-2.115$, $0.254$ and $1.861$; the greatest is $1.861$.',
+      '$0.254$ is the middle zero, not the greatest.',
+      '$2.115$ is the absolute value of the least zero, $-2.115$; $f(2.115) \\approx 2.0 \\ne 0$.',
+      '$1.732 = \\sqrt{3}$ is not a zero of $f$: $f(\\sqrt{3}) = 3\\sqrt{3} - 4\\sqrt{3} + 1 = 1 - \\sqrt{3} \\approx -0.73$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
+    lesson: 'polynomial-functions-precalc',
+    ced: '1.4',
     question: 'What is the relative maximum value of $f(x) = x^3 - 3x^2 - 4x + 2$?',
     options: [
       '3.128',
@@ -421,10 +701,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Graphing $f$ shows a relative maximum at $x \\approx -0.528$, where $f(x) \\approx 3.128$. The value −0.528 is the input where the maximum occurs, not the maximum value, and −11.128 is the relative minimum value.',
+    optionExplanations: [
+      'The calculator\'s maximum finder gives the point $(-0.528, 3.128)$; the relative maximum value is the $y$-coordinate, $3.128$.',
+      '$-0.528$ is the $x$-coordinate where the relative maximum occurs, not the value of the function there.',
+      '$2.000$ is $f(0)$, the $y$-intercept, which is not a relative extremum.',
+      '$-11.128$ is the relative minimum value, at $x \\approx 2.528$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
+    lesson: 'polynomial-functions-precalc',
+    ced: '1.5',
     question: 'What is the solution set of $x^3 - 2x^2 - 5 > 0$?',
     options: [
       '$x > 2.691$',
@@ -434,10 +722,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'The cubic has a single real zero, near 2.691, and it is positive to the right of that zero. The value 1.333 is where the graph turns, not where it crosses the x-axis.',
+    optionExplanations: [
+      'The graph crosses the $x$-axis only once, at $x \\approx 2.691$, and a cubic with positive leading coefficient is positive to the right of its last zero.',
+      'To the left of the single zero the cubic is negative (for example, $f(0) = -5$).',
+      '$1.333$ is the $x$-coordinate of the relative minimum, where $f \\approx -6.19 < 0$; the graph does not cross the axis there.',
+      '$2.236 = \\sqrt{5}$ solves $x^2 = 5$, not the cubic; $f(2.236) \\approx -3.8$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'polynomial-rational-functions',
+    lesson: 'function-modeling-precalc',
+    ced: '1.14',
     question: 'The depth of water in a tank, in feet, is modeled by $D(t) = -0.2t^3 + 1.5t^2 + 4$ for $0 \\le t \\le 7$ hours. At what time does the depth first reach 10 feet?',
     options: [
       '2.433 hours',
@@ -447,24 +743,40 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Graphing $y = D(t)$ and $y = 10$ shows intersections at $t \\approx 2.433$ and $t \\approx 6.863$; the first is 2.433 hours. The later intersection, 6.863 hours, is when the depth falls back to 10 feet.',
+    optionExplanations: [
+      'The first intersection of $y = D(t)$ with $y = 10$ is at $t \\approx 2.433$ hours.',
+      '$6.863$ is the second intersection, when the depth is falling back through $10$ feet.',
+      'At $t = 1.5$, $D(1.5) = -0.675 + 3.375 + 4 = 6.7$ feet, not $10$.',
+      'At $t = 3$, $D(3) = -5.4 + 13.5 + 4 = 12.1$ feet; the depth passed $10$ feet earlier.',
+    ],
   },
   /* ---- Part B — Unit 2 (5) ---- */
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
-    question: 'An investment of \\$500 grows continuously, modeled by $A(t) = 500e^{0.04t}$ dollars after $t$ years. To the nearest tenth of a year, when will it be worth \\$800?',
+    lesson: 'exponential-functions-precalc',
+    ced: '2.13',
+    question: 'An investment of \\$500 grows continuously, modeled by $A(t) = 500e^{0.04t}$ dollars after $t$ years. To the nearest tenth of a year, when will it be worth \\$900?',
     options: [
-      '11.8 years',
+      '14.7 years',
+      '20.0 years',
       '15.0 years',
       '12.0 years',
-      '10.0 years',
     ],
     correctAnswer: 0,
-    explanation: 'Solve $500e^{0.04t} = 800$: $t = \\ln 1.6/0.04 \\approx 11.75$, which rounds to 11.8 years. The value 12.0 years comes from annual compounding at 4%, and 15.0 years assumes linear growth of \\$20 per year.',
+    explanation: 'Solve $500e^{0.04t} = 900$: $t = \\ln 1.8/0.04 \\approx 14.69$, which rounds to 14.7 years. The value 15.0 years comes from annual compounding at 4%, and 20.0 years assumes linear growth of \\$20 per year.',
+    optionExplanations: [
+      '$e^{0.04t} = 1.8$ gives $t = \\frac{\\ln 1.8}{0.04} \\approx 14.69 \\approx 14.7$ years.',
+      '$20$ years assumes the investment gains a constant \\$20 (4% of 500) each year; the growth is exponential, so it reaches \\$900 sooner.',
+      '$15.0$ years is $\\frac{\\ln 1.8}{\\ln 1.04}$, the time under annual compounding at $4\\%$, which grows slightly more slowly than the continuous model.',
+      'At $t = 12$, $A(12) = 500e^{0.48} \\approx 808$ dollars, short of \\$900.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
+    lesson: 'exponential-functions-precalc',
+    ced: '2.3',
     question: '\\$1000 is invested at an annual rate of 5%, compounded continuously. What is the value of the investment after 10 years?',
     options: [
       '\\$1648.72',
@@ -474,10 +786,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Continuous compounding gives $1000e^{0.05(10)} \\approx \\$1648.72$. The value \\$1628.89 is annual compounding, $1000(1.05)^{10}$, which grows slightly less.',
+    optionExplanations: [
+      '$1000e^{0.05 \\cdot 10} = 1000e^{0.5} \\approx 1648.72$ dollars.',
+      '\\$1628.89 is $1000(1.05)^{10}$, annual compounding; continuous compounding grows a little more.',
+      '\\$1500 adds $5\\%$ of the original amount ten times (simple interest), ignoring compounding.',
+      '\\$1051.27 is $1000e^{0.05}$, the value after one year, not ten.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
+    lesson: 'logarithmic-functions-precalc',
+    ced: '2.13',
     question: 'What is the positive solution of $2^x = x + 3$?',
     options: [
       '2.445',
@@ -487,10 +807,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Graphing $y = 2^x$ and $y = x + 3$ shows a positive intersection at $x \\approx 2.445$ (there is also a negative one near −2.863). The value 1.585 is $\\log_2 3$, which solves $2^x = 3$ rather than this equation.',
+    optionExplanations: [
+      'The curves $y = 2^x$ and $y = x + 3$ cross at $x \\approx 2.445$, where both sides are about $5.445$.',
+      'At $x = 3$, $2^3 = 8$ but $x + 3 = 6$; the exponential has already passed the line.',
+      '$1.585 = \\log_2 3$ solves $2^x = 3$, not $2^x = x + 3$.',
+      'At $x = 2$, $2^2 = 4$ but $x + 3 = 5$; the line is still above the curve, so the crossing comes later.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
+    lesson: 'exponential-functions-precalc',
+    ced: '2.5',
     question: 'An exponential function $f(x) = ab^x$ satisfies $f(1) = 6$ and $f(4) = 20$. What is $f(6)$, to the nearest hundredth?',
     options: [
       '44.63',
@@ -500,27 +828,44 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$b^3 = 20/6$, so $b \\approx 1.4938$, and $f(6) = f(4)b^2 \\approx 20(2.2314) \\approx 44.63$. The value 29.33 extends the linear pattern through the two points instead of the exponential one.',
+    optionExplanations: [
+      'Three steps from $x = 1$ to $x = 4$ give $b^3 = \\frac{20}{6}$, so $b \\approx 1.494$; two more steps give $f(6) = 20b^2 \\approx 44.63$.',
+      '$29.33$ continues a straight line through $(1, 6)$ and $(4, 20)$ (slope $\\frac{14}{3}$); the function is exponential, so it grows faster.',
+      '$66.67 = 20 \\cdot \\frac{20}{6}$ applies the three-step factor $b^3$ to the two-step gap from $4$ to $6$.',
+      '$33.33 = 20 \\cdot \\frac{5}{3}$ applies $b^3$ once more and divides by $2$; the correct factor for two steps is $b^2 \\approx 2.231$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'exponential-logarithmic',
-    stimulus: 'A biologist records the area $A$, in square centimeters, covered by a mold culture $t$ days after it is started.\n\n| $t$ (days) | 0 | 2 | 4 | 6 | 8 |\n|---|---|---|---|---|---|\n| $A$ (cm²) | 14.2 | 18.9 | 27.5 | 39.1 | 52.0 |',
+    lesson: 'exponential-logarithmic-modeling-precalc',
+    ced: '2.5',
+    stimulus: MOLD,
     question: 'An exponential regression $A(t) = ab^t$ is fit to the data. According to this regression model, at what time $t$ will the area first reach 100 square centimeters?',
     options: [
       '11.8 days',
       '12.0 days',
       '18.5 days',
-      '27.7 days',
+      '5.9 days',
     ],
     correctAnswer: 0,
-    explanation: 'The calculator\'s exponential regression gives $A(t) \\approx 14.016(1.1807)^t$, and solving $14.016(1.1807)^t = 100$ gives $t \\approx 11.8$ days. A model built from only the first and last data points gives about 12.0 days, and a linear regression gives about 18.5 days, which misses the growing rate of change.',
+    explanation: 'The calculator\'s exponential regression gives $A(t) \\approx 14.016(1.1807)^t$, and solving $14.016(1.1807)^t = 100$ gives $t \\approx 11.8$ days. A model built from only the first and last data points gives about 12.0 days, a linear regression gives about 18.5 days, which misses the growing rate of change, and $5.9$ counts two-day table steps instead of days.',
+    optionExplanations: [
+      'Exponential regression gives $A(t) \\approx 14.016(1.1807)^t$; solving $A(t) = 100$ gives $t = \\frac{\\ln(100/14.016)}{\\ln 1.1807} \\approx 11.8$ days.',
+      '$12.0$ days comes from an exponential model through only the first and last points, $A(t) = 14.2\\left(\\frac{52}{14.2}\\right)^{t/8}$, rather than a regression on all five.',
+      '$18.5$ days is the linear regression\'s prediction; the data\'s increasing differences ($4.7, 8.6, 11.6, 12.9$) show the growth is not linear.',
+      '$5.9$ comes from entering the table positions $0, 1, 2, 3, 4$ instead of the days $0, 2, 4, 6, 8$ as the inputs: the regression then counts two-day steps, and $5.9$ steps is $11.8$ days.',
+    ],
   },
 
   /* ---- Part B — Unit 3 (4) ---- */
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
-    question: 'A rider\'s height above the ground on a Ferris wheel is $h(t) = 22 - 20\\cos\\left(\\dfrac{\\pi t}{30}\\right)$ meters, where $t$ is in seconds. To the nearest hundredth of a second, when does the rider first reach a height of 30 meters?',
+    lesson: 'graphing-trig-functions',
+    ced: '3.7',
+    stimulus: FERRIS,
+    question: 'To the nearest hundredth of a second, when does the rider first reach a height of 30 meters?',
     options: [
       '18.93 s',
       '11.07 s',
@@ -529,11 +874,20 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: 'Solve $22 - 20\\cos(\\pi t/30) = 30$: $\\cos(\\pi t/30) = -0.4$, giving $t \\approx 18.93$ s first. The time 11.07 s solves $\\cos(\\pi t/30) = 0.4$, a sign error, and 41.07 s is the second time the rider is at 30 meters.',
+    optionExplanations: [
+      '$\\cos\\left(\\frac{\\pi t}{30}\\right) = -0.4$ gives $\\frac{\\pi t}{30} = \\arccos(-0.4) \\approx 1.982$, so $t \\approx 18.93$ seconds.',
+      '$11.07$ s solves $\\cos\\left(\\frac{\\pi t}{30}\\right) = +0.4$, a sign error in isolating the cosine.',
+      '$41.07$ s is the second time the height is $30$ m, on the way down ($60 - 18.93$).',
+      'At $t = 15$ the rider is at the midline height, $22$ m, since $\\cos\\frac{\\pi}{2} = 0$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
-    question: 'The water depth at a pier is modeled by $D(t) = 5 + 3\\cos\\left(\\dfrac{\\pi t}{6}\\right)$ meters, where $t$ is hours after midnight. What is the depth at $t = 4.2$ hours?',
+    lesson: 'graphing-trig-functions',
+    ced: '3.7',
+    stimulus: PIER,
+    question: 'What is the depth at $t = 4.2$ hours?',
     options: [
       '3.237 m',
       '6.763 m',
@@ -542,10 +896,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$D(4.2) = 5 + 3\\cos(0.7\\pi) \\approx 5 - 1.763 = 3.237$ m. The value 7.998 m comes from evaluating the cosine with the calculator in degree mode, and 6.763 m adds the cosine term with the wrong sign.',
+    optionExplanations: [
+      '$\\frac{\\pi(4.2)}{6} = 0.7\\pi$, $\\cos(0.7\\pi) \\approx -0.588$, and $5 + 3(-0.588) \\approx 3.237$ m.',
+      '$6.763$ m uses $+0.588$ for the cosine; $0.7\\pi$ is in Quadrant II, where cosine is negative.',
+      '$7.998$ m comes from a calculator in degree mode ($\\cos(2.199°) \\approx 0.9993$); the model uses radians.',
+      '$5.000$ m is the midline depth, which occurs when the cosine is $0$ (at $t = 3$ and $t = 9$), not at $t = 4.2$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'solving-trig-equations',
+    ced: '3.10',
     question: 'What is the smallest positive solution of $3\\sin(2x) = 1$, where $x$ is in radians?',
     options: [
       '0.170',
@@ -555,10 +917,18 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$\\sin(2x) = 1/3$ gives $2x \\approx 0.340$, so $x \\approx 0.170$. The value 0.340 is $2x$, not $x$, and 1.401 is the next solution.',
+    optionExplanations: [
+      '$2x = \\arcsin\\frac{1}{3} \\approx 0.340$, so $x \\approx 0.170$.',
+      '$0.340$ is the value of $2x$; it still has to be divided by $2$.',
+      '$1.401$ is the second positive solution, from $2x = \\pi - 0.340$.',
+      '$0.785 = \\frac{\\pi}{4}$ gives $3\\sin\\frac{\\pi}{2} = 3$, not $1$.',
+    ],
   },
   {
     type: 'mcq',
     topic: 'trigonometric-functions',
+    lesson: 'polar-coordinates-precalc',
+    ced: '3.15',
     question: 'For the polar function $r = 3\\sin(2\\theta)$, what is the average rate of change of $r$ with respect to $\\theta$ on the interval $0.5 \\le \\theta \\le 1.5$?',
     options: [
       '−2.101',
@@ -568,5 +938,11 @@ export const MCQS: MCQItem[] = [
     ],
     correctAnswer: 0,
     explanation: '$\\dfrac{r(1.5) - r(0.5)}{1.5 - 0.5} = 3\\sin 3 - 3\\sin 1 \\approx 0.423 - 2.524 = -2.101$, so $r$ decreases on average. The value 0.105 comes from a calculator in degree mode, and 0.423 is $r(1.5)$ alone.',
+    optionExplanations: [
+      '$\\frac{r(1.5) - r(0.5)}{1} = 3\\sin 3 - 3\\sin 1 \\approx 0.423 - 2.524 = -2.101$: $r$ falls as $\\theta$ increases across this interval.',
+      '$2.101$ has the wrong sign; $r(1.5) < r(0.5)$, so the average rate of change is negative.',
+      '$0.105$ comes from evaluating the sines in degree mode.',
+      '$0.423$ is $r(1.5)$ by itself, not a rate of change.',
+    ],
   },
 ]

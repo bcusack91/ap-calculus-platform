@@ -28,6 +28,7 @@
  *   BC weights and Units 6–8 also draw the BC-only topics (6.11–6.14, 7.5,
  *   7.9, 8.13).
  */
+import { PRECALC_TOPIC_TITLES } from '@/lib/course-includes'
 import type { ApDiagV2Blueprint, ApDiagV2Course, ApDiagV2Difficulty, ApDiagV2Unit } from './types'
 
 const CHEMISTRY: ApDiagV2Blueprint = {
@@ -331,12 +332,80 @@ const CALCULUS_BC: ApDiagV2Blueprint = {
   topicNames: { ...CALCULUS_AB.topicNames, ...BC_ONLY_TOPIC_NAMES },
 }
 
+/**
+ * AP Precalculus (precalc-final PLAN.md / ASSESSMENTS.md §3, Oct 2026). The
+ * May 2027 exam assesses CED Units 1–3 only (Unit 4 is not on the exam, owner
+ * rule "not on the exam = not in the program"). Weights are the CED "Exam
+ * Weighting" ranges (BRIEF.md); midpoints 35 / 33.5 / 32.5 give 10 / 10 / 10
+ * at length 30. Sitting 30 q / 60 min (owner decision O3: the exam runs 2.5
+ * min per item; v1 was 30 / 40). Unit topics are the canonical PLAN.md slugs,
+ * heaviest lessons first (they are the fallback recommendations).
+ */
+const PRECALCULUS: ApDiagV2Blueprint = {
+  course: 'ap-precalculus',
+  label: 'AP Precalculus',
+  categoryPrefix: 'ap-precalculus-diagnostic',
+  seenCourse: 'ap-precalculus',
+  pagePath: '/ap-precalculus-diagnostic',
+  length: 30,
+  timeLimitMinutes: 60,
+  setsPerSitting: 2,
+  weightSource: 'AP Precalculus CED, Exam Weighting (Units 1–3; Unit 4 is not assessed)',
+  units: [
+    {
+      id: 'unit-1',
+      number: 1,
+      name: 'Polynomial and Rational Functions',
+      weight: [30, 40],
+      topicSlugs: [
+        'polynomial-functions-precalc',
+        'rational-functions-precalc',
+        'rates-of-change-precalc',
+        'transformations-precalc',
+        'function-modeling-precalc',
+        'fundamental-theorem-algebra',
+        'polynomial-division-remainder-theorem',
+      ],
+    },
+    {
+      id: 'unit-2',
+      number: 2,
+      name: 'Exponential and Logarithmic Functions',
+      weight: [27, 40],
+      topicSlugs: [
+        'exponential-functions-precalc',
+        'logarithmic-functions-precalc',
+        'function-composition-inverses-precalc',
+        'exponential-logarithmic-modeling-precalc',
+        'sequences-series-precalc',
+      ],
+    },
+    {
+      id: 'unit-3',
+      number: 3,
+      name: 'Trigonometric and Polar Functions',
+      weight: [30, 35],
+      topicSlugs: [
+        'trigonometric-functions-precalc',
+        'graphing-trig-functions',
+        'trigonometric-identities-precalc',
+        'solving-trig-equations',
+        'inverse-trig-functions-precalc',
+        'polar-coordinates-precalc',
+        'the-unit-circle',
+      ],
+    },
+  ],
+  topicNames: { ...PRECALC_TOPIC_TITLES },
+}
+
 export const AP_DIAG_V2_BLUEPRINTS: Record<ApDiagV2Course, ApDiagV2Blueprint> = {
   'ap-chemistry': CHEMISTRY,
   'ap-biology': BIOLOGY,
   'ap-physics-1': PHYSICS_1,
   'ap-calculus-ab': CALCULUS_AB,
   'ap-calculus-bc': CALCULUS_BC,
+  'ap-precalculus': PRECALCULUS,
 }
 
 export const AP_DIAG_V2_COURSES = Object.keys(AP_DIAG_V2_BLUEPRINTS) as ApDiagV2Course[]
