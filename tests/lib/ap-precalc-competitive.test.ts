@@ -145,11 +145,11 @@ describe('the canonical layout and the fixture agree', () => {
 })
 
 describe('the precalc bank is the AP on-exam pool', () => {
-  it('is on-exam only (460 items, 24 topics, no Unit 4) and keeps every topic at >= 10 items with >= 3 hard', () => {
+  it('is on-exam only (533 items, 24 topics, no Unit 4) and keeps every topic at >= 10 items with >= 3 hard', () => {
     for (const q of apPrecalcQuestionBank) expect(UNIT4_BANK_TOPICS, `#${q.id}`).not.toContain(q.topicSlug)
     // The three off-exam polar items (limaçon a/b classification, equation conversion) are gone.
     for (const id of [69, 207, 208]) expect(apPrecalcQuestionBank.find((q) => q.id === id), `#${id}`).toBeUndefined()
-    expect(apPrecalcQuestionBank).toHaveLength(460)
+    expect(apPrecalcQuestionBank).toHaveLength(533)
     const counts = new Map<string, number>()
     const hard = new Map<string, number>()
     for (const q of apPrecalcQuestionBank) {
@@ -197,11 +197,36 @@ describe('the precalc bank is the AP on-exam pool', () => {
     for (const [later, earlier] of pairs) expect(byId.get(later)!.question, `#${later} still duplicates #${earlier}`).not.toBe(byId.get(earlier)!.question)
   })
 
+  it('every difficulty is one of the three labels and every topic keeps >= 3 hard items', () => {
+    const hard = new Map<string, number>()
+    for (const q of apPrecalcQuestionBank) {
+      expect(['easy', 'medium', 'hard'], `#${q.id}`).toContain(q.difficulty)
+      if (q.difficulty === 'hard') hard.set(q.topicSlug, (hard.get(q.topicSlug) ?? 0) + 1)
+    }
+    for (const slug of AP_PRECALC_BANK_TOPICS) expect(hard.get(slug) ?? 0, `${slug} hard items`).toBeGreaterThanOrEqual(3)
+  })
+
+  it('the 2026-10-23 round-2 alignment fixes hold', () => {
+    const byId = new Map(apPrecalcQuestionBank.map((q) => [q.id, q]))
+    // Exponential model choice (CED 2.6) left the Unit 1 model-selection topic.
+    for (const id of [355, 362]) expect(byId.get(id)!.topicSlug, `#${id}`).toBe('exponential-models-applications')
+    expect(byId.get(118)!.topicSlug).toBe('logarithmic-equations')
+    // Off-scope / broken / duplicate items rewritten in place.
+    expect(byId.get(118)!.question).not.toMatch(/grows continuously at/)
+    expect(byId.get(321)!.question).not.toMatch(/remainder/i)
+    expect(byId.get(489)!.question).not.toMatch(/ladder/i)
+    expect(byId.get(175)!.question).not.toMatch(/same \$f, g\$/)
+    expect(byId.get(251)!.question).not.toMatch(/Vertical asymptote/)
+    expect(byId.get(177)!.question).not.toMatch(/^Domain of \$f \\circ g\$ requires/)
+    // Hard top-up: ids 514-593 exist (73 of them; 532-533, 550-553 and 573 are unused).
+    expect(apPrecalcQuestionBank.filter((q) => q.id >= 514)).toHaveLength(73)
+  })
+
   it('getApPrecalcQuestions serves the whole pool for a Unit 4 or unknown topic, never a Unit 4 item', () => {
-    expect(getApPrecalcQuestions(1_000_000)).toHaveLength(460)
+    expect(getApPrecalcQuestions(1_000_000)).toHaveLength(533)
     for (const slug of [...UNIT4_BANK_TOPICS, 'no-such-topic']) {
       const qs = getApPrecalcQuestions(1_000_000, slug)
-      expect(qs, slug).toHaveLength(460)
+      expect(qs, slug).toHaveLength(533)
       expect(qs.some((q) => q.topicSlug === slug), slug).toBe(false)
     }
     expect(getApPrecalcQuestions(1_000_000, 'polar-coordinates-graphs').every((q) => q.topicSlug === 'polar-coordinates-graphs')).toBe(true)
@@ -236,8 +261,8 @@ describe('the precalc bank is the AP on-exam pool', () => {
       expect(t.count, t.slug).toBeGreaterThanOrEqual(10)
       expect(UNIT4_BANK_TOPICS, t.slug).not.toContain(t.slug)
     }
-    expect(topics.find((t) => t.slug === 'polar-coordinates-precalc')?.count).toBe(20)
-    expect(topics.find((t) => t.slug === 'function-modeling-precalc')?.count).toBe(30)
+    expect(topics.find((t) => t.slug === 'polar-coordinates-precalc')?.count).toBe(22)
+    expect(topics.find((t) => t.slug === 'function-modeling-precalc')?.count).toBe(34)
   })
 
   it('the daily challenge uses the AP set', () => {
