@@ -7,7 +7,7 @@ export const precalcCompositionPart7Data = {
       content: `
 # 🎯 Composition & Inverses — Full Synthesis
 
-**Part 7 of 7**
+**Part 7 of 7 — Composition & Inverses — Full Synthesis**
 
 ### Master Summary
 
@@ -22,7 +22,7 @@ export const precalcCompositionPart7Data = {
 
 ### Essential Inverse Pairs
 
-$x^n \\leftrightarrow \\sqrt[n]{x}$, $e^x \\leftrightarrow \\ln x$, $a^x \\leftrightarrow \\log_a x$, $\\sin x \\leftrightarrow \\sin^{-1}x$ (restricted)
+$x^n \\leftrightarrow \\sqrt[n]{x}$ ($x \\geq 0$ when $n$ is even), $e^x \\leftrightarrow \\ln x$, $a^x \\leftrightarrow \\log_a x$, $mx + b \\leftrightarrow \\frac{x - b}{m}$
       `
     },
     {
@@ -46,7 +46,7 @@ $x^n \\leftrightarrow \\sqrt[n]{x}$, $e^x \\leftrightarrow \\ln x$, $a^x \\leftr
 ### Decomposition
 - Identify the "last operation" → outer function
 - Everything inside → inner function
-- Practice: $h(x) = e^{\\sin(x^2)} \\to$ outer $e^u$, middle $\\sin v$, inner $x^2$
+- Practice: $h(x) = e^{\\sqrt{x^2+1}} \\to$ outer $e^u$, middle $\\sqrt{v}$, inner $x^2+1$
       `
     },
     {
@@ -83,9 +83,9 @@ $f^{-1}(x) = e^{x-2}+3$
         questions: [
           {
             question: 'If $f(x) = e^{2x}$ and $g(x) = \\ln\\sqrt{x}$, then $(f\\circ g)(x) =$',
-            options: ['$x$', '$2x$', '$x^2$', '$e^{2\\ln\\sqrt{x}}$'],
+            options: ['$x$', '$2x$', '$x^2$', '$\\sqrt{x}$'],
             correctAnswer: 0,
-            explanation: '$f(g(x)) = e^{2\\ln\\sqrt{x}} = e^{\\ln x} = x$. They are inverses!'
+            explanation: '$f(g(x)) = e^{2\\ln\\sqrt{x}} = e^{\\ln x} = x$ (for $x > 0$). They are inverses! Stopping at $e^{\\ln\\sqrt{x}}$ gives $\\sqrt{x}$, and $2\\ln\\sqrt{x} = \\ln x$, not $2x$.'
           },
           {
             question: 'Find $f^{-1}(x)$ for $f(x) = 3(x-1)^3+5$:',
@@ -94,10 +94,10 @@ $f^{-1}(x) = e^{x-2}+3$
             explanation: '$x-5 = 3(y-1)^3 \\implies (y-1)^3 = \\frac{x-5}{3} \\implies y = 1+\\sqrt[3]{\\frac{x-5}{3}}$.'
           },
           {
-            question: 'Decompose $h(x) = |\\cos(3x)|$. The innermost function is:',
-            options: ['$|x|$', '$\\cos x$', '$3x$', '$|\\cos x|$'],
+            question: 'Decompose $h(x) = |2^{3x} - 5|$. The innermost function is:',
+            options: ['$|x|$', '$2^x - 5$', '$3x$', '$|2^x - 5|$'],
             correctAnswer: 2,
-            explanation: 'Layers from inside out: $3x \\to \\cos(\\cdot) \\to |\\cdot|$.'
+            explanation: 'Layers from inside out: $3x \\to 2^{(\\cdot)} - 5 \\to |\\cdot|$.'
           }
         ]
       }
@@ -138,7 +138,7 @@ $f^{-1}(x) = e^{x-2}+3$
           },
           {
             label: 'The domain of $f \\circ g$ equals:',
-            options: ['Domain of $f$', 'Domain of $g$', '$\\{x \\in \\text{dom}(g) : g(x) \\in \\text{dom}(f)\\}$'],
+            options: ['The domain of $f$', 'The domain of $g$', '$x$ in dom($g$) with $g(x)$ in dom($f$)'],
             correctAnswer: 2
           },
           {
@@ -152,7 +152,7 @@ $f^{-1}(x) = e^{x-2}+3$
             correctAnswer: 0
           }
         ],
-        correctAnswers: ['Associative', '$\\{x \\in \\text{dom}(g) : g(x) \\in \\text{dom}(f)\\}$', 'Decreasing', 'the line $y = x$'],
+        correctAnswers: ['Associative', '$x$ in dom($g$) with $g(x)$ in dom($f$)', 'Decreasing', 'the line $y = x$'],
         hint1: '$f \\circ (g \\circ h) = (f \\circ g) \\circ h$, but $f \\circ g \\neq g \\circ f$.',
         hint2: '$x$ must be in domain of $g$, and $g(x)$ must be in domain of $f$.',
         hint3: 'Decreasing functions have decreasing inverses.',
@@ -174,7 +174,7 @@ $f^{-1}(x) = e^{x-2}+3$
             explanation: '$f$ and $g$ are inverses, so $f \\circ g = $ identity. Therefore $(f\\circ g)\\circ(f\\circ g) = $ identity.'
           },
           {
-            question: 'The function $f(x)=\\frac{2x+3}{x-1}$ composed with itself gives $f(f(x))=x$. This means $f$ is:',
+            question: 'The function $f(x)=\\frac{2x+3}{x-2}$ composed with itself gives $f(f(x))=x$. This means $f$ is:',
             options: ['Undefined', 'A self-inverse', 'Not one-to-one', 'Periodic'],
             correctAnswer: 1,
             explanation: '$f(f(x))=x$ means $f = f^{-1}$: a self-inverse (involution).'

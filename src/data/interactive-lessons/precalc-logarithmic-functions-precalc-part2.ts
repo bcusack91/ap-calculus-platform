@@ -7,7 +7,7 @@ export const precalcLogarithmicPart2Data = {
       content: `
 # 📐 Logarithmic Functions — Core Log Properties
 
-**Part 2 of 7**
+**Part 2 of 7 — Logarithmic Functions — Core Log Properties**
 
 Log properties turn multiplication, division, and exponentiation into addition, subtraction, and scalar multiplication.
 
@@ -19,7 +19,11 @@ Log properties turn multiplication, division, and exponentiation into addition, 
 | **Quotient Rule** | $\\log_b\\left(\\frac{x}{y}\\right) = \\log_b x - \\log_b y$ | Division → Subtraction |
 | **Power Rule** | $\\log_b(x^k) = k \\cdot \\log_b x$ | Exponent → Coefficient |
 
+(All rules require $x, y > 0$.)
+
 > ⚠️ **Critical restriction:** These rules only apply to products, quotients, and powers *inside* the log. There is **no rule** for $\\log(x + y)$ or $\\log(x - y)$.
+
+> **Dilation = translation (CED 2.12):** $\\log_b(kx) = \\log_b k + \\log_b x$, so a horizontal dilation of a log graph is the same as a vertical shift. For example, $\\log_2(8x) = 3 + \\log_2 x$ is the graph of $\\log_2 x$ moved up $3$. (Compare $b^{x+k} = b^k b^x$ for exponentials, where a horizontal shift is a vertical dilation.)
       `
     },
     {
@@ -184,15 +188,15 @@ $$\\boxed{3\\ln a - \\frac{1}{2}\\ln b + \\ln c = \\ln\\left(\\frac{a^3 c}{\\sqr
             options: ['product rule', 'quotient rule', 'power rule', 'change of base']
           },
           {
-            label: '$\\log(x + y)$ can be simplified using',
-            options: ['the product rule', 'the quotient rule', 'no log property', 'the power rule']
+            label: '$\\log_2(8x)$ equals',
+            options: ['$3 + \\log_2 x$', '$8\\log_2 x$', '$3\\log_2 x$', '$\\log_2 x + 8$']
           }
         ],
-        correctAnswers: ['product rule', 'power rule', 'quotient rule', 'no log property'],
+        correctAnswers: ['product rule', 'power rule', 'quotient rule', '$3 + \\log_2 x$'],
         hint1: 'Multiplication inside → what rule?',
         hint2: 'Exponent inside → coefficient outside.',
-        hint3: 'Division inside → subtraction outside.',
-        explanation: 'Product rule for multiplication, power rule for exponents, quotient rule for division. No rule exists for addition inside a log.'
+        hint3: 'Division inside → subtraction outside. For the last one, split the product $8 \\cdot x$ and evaluate $\\log_2 8$.',
+        explanation: 'Product rule for multiplication, power rule for exponents, quotient rule for division. $\\log_2(8x) = \\log_2 8 + \\log_2 x = 3 + \\log_2 x$: the horizontal dilation by $8$ is a vertical shift up $3$.'
       }
     },
     {

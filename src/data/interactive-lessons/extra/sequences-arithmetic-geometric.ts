@@ -687,7 +687,7 @@ $$m = \\frac{30 - 14}{7 - 3} = 4 \\qquad f(x) = 14 + 4(x - 3) = 2 + 4x$$
 
 $$b^{2} = \\frac{72}{50} = 1.44 \\;\\Rightarrow\\; b = 1.2 \\qquad f(x) = 50\\,(1.2)^{x}$$
 
-> 💡 Two distinct values always determine an arithmetic sequence, a geometric sequence, a linear function, or an exponential function.`,
+> 💡 Two values at different inputs always determine a linear function (or arithmetic sequence). They determine an exponential function $f(x)=ab^x$ when both outputs are nonzero with the same sign. For a geometric sequence, an even step count leaves $r=\\pm$, so you need extra information such as "positive terms."`,
       },
       {
         id: 'seq6-mc',

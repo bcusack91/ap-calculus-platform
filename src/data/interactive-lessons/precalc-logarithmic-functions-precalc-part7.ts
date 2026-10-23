@@ -18,7 +18,8 @@ export const precalcLogarithmicPart7Data = {
 | Transformations (3) | $g(x) = a\\log_b(x-h)+k$; VA at $x = h$ |
 | Solving Equations (4) | Convert → solve → check for extraneous |
 | Change of Base (5) | $\\log_b x = \\frac{\\ln x}{\\ln b}$ |
-| Modeling (6) | pH, decibels, Richter — all use $\\log(\\text{ratio})$ |
+| Inequalities (4) | Domain first; direction flips only when $0 < b < 1$ |
+| Modeling (6) | $y = a + b\\log x$: multiplying the input by $10$ adds $b$; pH, decibels, Richter use $\\log(\\text{ratio})$ |
       `
     },
     {
@@ -115,10 +116,10 @@ $$ab^t = c \\implies b^t = \\frac{c}{a} \\implies t = \\frac{\\ln(c/a)}{\\ln b}$
               '$-1.398$',
               '$-1.000$',
               '$-0.398$',
-              '$-2 + 0.602$'
+              '$-0.699$'
             ],
             correctAnswer: 0,
-            explanation: '$0.04 = \\frac{4}{100} = \\frac{2^2}{10^2} = \\frac{1}{25} = 5^{-2}$. $\\log(5^{-2}) = -2\\log 5 = -2(0.699) = -1.398$.'
+            explanation: '$0.04 = \\frac{4}{100} = \\frac{2^2}{10^2} = \\frac{1}{25} = 5^{-2}$. $\\log(5^{-2}) = -2\\log 5 = -2(0.699) = -1.398$ (equivalently $2\\log 2 - 2 = 0.602 - 2$). The value $-0.699$ is $-\\log 5 = \\log 0.2$, one factor of $5$ short.'
           }
         ]
       }

@@ -34,17 +34,18 @@ For example, in $p(x) = 2(x + 1)^3(x - 4)^2(x - 7)$:
     {
       id: 'p3-graph-behavior',
       type: 'text' as const,
+      figure: [{ svg: '<svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><line x1="8" y1="60" x2="152" y2="60" stroke="currentColor" stroke-width="1.5"/><g class="fig-accent"><path d="M 20 96.0 L 28 91.2 L 36 86.4 L 44 81.6 L 52 76.8 L 60 72.0 L 68 67.2 L 76 62.4 L 84 57.6 L 92 52.8 L 100 48.0 L 108 43.2 L 116 38.4 L 124 33.6 L 132 28.8 L 140 24.0" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="80" cy="60" r="4" fill="currentColor"/></g><text x="80" y="112" font-size="11" fill="currentColor" text-anchor="middle">Multiplicity 1: crosses</text></svg>', alt: 'Multiplicity 1: crosses.' }, { svg: '<svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><line x1="8" y1="60" x2="152" y2="60" stroke="currentColor" stroke-width="1.5"/><g class="fig-accent"><path d="M 20 15.0 L 28 26.2 L 36 35.8 L 44 43.8 L 52 50.2 L 60 55.0 L 68 58.2 L 76 59.8 L 84 59.8 L 92 58.2 L 100 55.0 L 108 50.2 L 116 43.8 L 124 35.8 L 132 26.2 L 140 15.0" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="80" cy="60" r="4" fill="currentColor"/></g><text x="80" y="112" font-size="11" fill="currentColor" text-anchor="middle">Multiplicity 2: bounces</text></svg>', alt: 'Multiplicity 2: bounces.' }, { svg: '<svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><line x1="8" y1="60" x2="152" y2="60" stroke="currentColor" stroke-width="1.5"/><g class="fig-accent"><path d="M 20 114.0 L 28 95.2 L 36 81.3 L 44 71.7 L 52 65.5 L 60 62.0 L 68 60.4 L 76 60.0 L 84 60.0 L 92 59.6 L 100 58.0 L 108 54.5 L 116 48.3 L 124 38.7 L 132 24.8 L 140 6.0" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="80" cy="60" r="4" fill="currentColor"/></g><text x="80" y="112" font-size="11" fill="currentColor" text-anchor="middle">Multiplicity 3: flattens, then crosses</text></svg>', alt: 'Multiplicity 3: flattens, then crosses.' }, { svg: '<svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><line x1="8" y1="60" x2="152" y2="60" stroke="currentColor" stroke-width="1.5"/><g class="fig-accent"><path d="M 20 16.8 L 28 35.6 L 36 47.5 L 44 54.4 L 52 58.0 L 60 59.5 L 68 59.9 L 76 60.0 L 84 60.0 L 92 59.9 L 100 59.5 L 108 58.0 L 116 54.4 L 124 47.5 L 132 35.6 L 140 16.8" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="80" cy="60" r="4" fill="currentColor"/></g><text x="80" y="112" font-size="11" fill="currentColor" text-anchor="middle">Multiplicity 4: flattens, then bounces</text></svg>', alt: 'Multiplicity 4: flattens, then bounces.' }],
       content: `
 ## 📈 Multiplicity and Graph Behavior
 
 The multiplicity determines exactly how the graph interacts with the $x$-axis at each zero:
 
-| Multiplicity | Behavior at the zero | Visual |
-|:------------:|---------------------|:------:|
-| **1** (odd) | Graph **crosses** the axis cleanly | ╱ or ╲ |
-| **2** (even) | Graph **bounces** off the axis (touches but doesn't cross) | ∪ or ∩ |
-| **3** (odd) | Graph **crosses** with an S-shaped flattening | ∼ |
-| **4** (even) | Graph **bounces** with extra flattening | ⌒ |
+| Multiplicity | Behavior at the zero (see the panels above) |
+|:------------:|---------------------|
+| **1** (odd) | Graph **crosses** the axis cleanly |
+| **2** (even) | Graph **bounces** off the axis (touches but doesn't cross) |
+| **3** (odd) | Graph **crosses** with an S-shaped flattening |
+| **4** (even) | Graph **bounces** with extra flattening |
 
 > 🔑 **The rule:** **Odd** multiplicity → crosses. **Even** multiplicity → bounces.
 

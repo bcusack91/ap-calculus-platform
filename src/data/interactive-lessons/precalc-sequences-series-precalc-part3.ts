@@ -4,6 +4,11 @@ export const precalcSequencesPart3Data = {
     {
       id: 'p3-intro',
       type: 'text' as const,
+      figure: {
+        svg: '<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g class="fig-muted" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4"><line x1="50" y1="166.25" x2="230" y2="31.25"/></g><g stroke="currentColor" stroke-width="1.5"><line x1="30" y1="200" x2="305" y2="200"/><line x1="50" y1="210" x2="50" y2="12"/></g><text x="300" y="214" font-size="12" fill="currentColor">n</text><text x="58" y="18" font-size="12" fill="currentColor" font-style="italic">a</text><text x="66" y="22" font-size="9" fill="currentColor" font-style="italic">n</text><g font-size="11" fill="currentColor" text-anchor="middle"><text x="50" y="214">0</text><text x="110" y="214">1</text><text x="170" y="214">2</text><text x="230" y="214">3</text><text x="290" y="214">4</text></g><g font-size="11" fill="currentColor" text-anchor="end"><text x="44" y="170">3</text><text x="44" y="125">7</text><text x="44" y="81">11</text><text x="44" y="35">15</text></g><g class="fig-muted" stroke="currentColor" stroke-width="1"><line x1="46" y1="166.25" x2="54" y2="166.25"/><line x1="46" y1="121.25" x2="54" y2="121.25"/><line x1="46" y1="77.5" x2="54" y2="77.5"/><line x1="46" y1="31.25" x2="54" y2="31.25"/></g><g class="fig-accent"><circle cx="50" cy="166.25" r="5" fill="currentColor"/><circle cx="110" cy="121.25" r="5" fill="currentColor"/><circle cx="170" cy="77.5" r="5" fill="currentColor"/><circle cx="230" cy="31.25" r="5" fill="currentColor"/></g></svg>',
+        alt: 'Four separate dots at (0, 3), (1, 7), (2, 11) and (3, 15) on axes labeled n and a sub n. A faint dashed guide line passes through the dots, but nothing is drawn between them.',
+        caption: 'Figure. The arithmetic sequence $a_n = 3 + 4n$ is four discrete points; the dashed guide only shows that they line up.',
+      },
       content: `
 # 📈 Sequences as Functions
 
@@ -17,7 +22,7 @@ A **sequence** is a function from the **whole numbers** to the real numbers: inp
 |:--|:--|:--|:--|:--|
 | $a_n$ | $3$ | $7$ | $11$ | $15$ |
 
-Plotted, these are the four separate points $(0, 3), (1, 7), (2, 11), (3, 15)$. Nothing is drawn between them.
+Plotted (figure above), these are the four separate points $(0, 3), (1, 7), (2, 11), (3, 15)$. Nothing is drawn between them: there is no term $1.5$.
 
 ### Starting the Count at 0
 

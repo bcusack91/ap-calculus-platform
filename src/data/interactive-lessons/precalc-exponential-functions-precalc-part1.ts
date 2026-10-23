@@ -7,7 +7,7 @@ export const precalcExponentialPart1Data = {
       content: `
 # 📈 Exponential Functions — Core Form & Growth vs Decay
 
-**Part 1 of 7**
+**Part 1 of 7 — Exponential Functions — Core Form & Growth vs Decay**
 
 An **exponential function** has the form:
 
@@ -60,6 +60,10 @@ Each step **halves** the output. The base $b = 0.5$ is between $0$ and $1$, so t
 | $y$-intercept | $(0, a)$ |
 | Horizontal asymptote | $y = 0$ (the $x$-axis) |
 | Passes through | $(1, ab)$ always |
+| Concavity | Concave up for $a > 0$ (concave down for $a < 0$); no local extrema, no inflection points |
+| Limits | $b > 1$: $\\lim_{x \\to -\\infty} ab^x = 0$ and $ab^x \\to \\pm\\infty$ as $x \\to \\infty$; $0 < b < 1$: the two ends are reversed |
+
+> **AP language:** an exponential function is always increasing or always decreasing, and its graph is always concave up or always concave down. The end behavior is written with limits: for $f(x) = 3 \\cdot 2^x$, $\\lim_{x \\to -\\infty} f(x) = 0$ and $\\lim_{x \\to \\infty} f(x) = \\infty$.
       `
     },
     {

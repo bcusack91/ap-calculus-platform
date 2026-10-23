@@ -27,8 +27,8 @@ $$\\boxed{\\text{Point } (r, \\theta): \\text{ go distance } r \\text{ in direct
 
 ### Important Notes
 
-- $r$ can be **negative**: $(- r, \\theta)$ means go distance $r$ in the **opposite** direction of $\\theta$
-- Angles can exceed $360°$ or be negative (clockwise)
+- $r$ can be **negative**: for $r > 0$, $(- r, \\theta)$ means go distance $r$ in the **opposite** direction of $\\theta$
+- Angles can be larger than $2\\pi$ or negative (clockwise)
 - The same point has **infinitely many** polar representations
       `
     },
@@ -91,10 +91,33 @@ The point $(r, \\theta)$ is also represented by:
 ### Plotting Negative $r$
 
 To plot $(-2, \\frac{\\pi}{6})$:
-1. Face direction $\\frac{\\pi}{6}$ (30°)
+1. Face direction $\\frac{\\pi}{6}$
 2. Walk **backwards** 2 units
 3. You end up at $(2, \\frac{7\\pi}{6})$ — same point!
+
+> 💡 **Standard name.** AP problems often ask for the name with $r > 0$ and $0 \\le \\theta < 2\\pi$. To get there: if $r < 0$, replace $(r, \\theta)$ with $(\\lvert r \\rvert, \\theta + \\pi)$; then add or subtract $2\\pi$ until $\\theta$ is in $[0, 2\\pi)$.
       `
+    },
+    {
+      id: 'p1-standardize',
+      type: 'dropdown-select' as const,
+      content: `
+**Standardize the Name** 🔽
+
+Rewrite each point with $r > 0$ and $0 \\le \\theta < 2\\pi$.
+      `,
+      exercise: {
+        dropdowns: [
+          { label: '$\\left(-3, \\frac{\\pi}{4}\\right) = $', options: ['$\\left(3, \\frac{5\\pi}{4}\\right)$', '$\\left(3, \\frac{\\pi}{4}\\right)$', '$\\left(3, \\frac{7\\pi}{4}\\right)$', '$\\left(-3, \\frac{5\\pi}{4}\\right)$'] },
+          { label: '$\\left(2, -\\frac{\\pi}{3}\\right) = $', options: ['$\\left(2, \\frac{5\\pi}{3}\\right)$', '$\\left(2, \\frac{\\pi}{3}\\right)$', '$\\left(2, \\frac{2\\pi}{3}\\right)$', '$\\left(2, \\frac{4\\pi}{3}\\right)$'] },
+          { label: '$\\left(-1, \\frac{3\\pi}{2}\\right) = $', options: ['$\\left(1, \\frac{\\pi}{2}\\right)$', '$\\left(1, \\frac{3\\pi}{2}\\right)$', '$\\left(1, \\frac{5\\pi}{2}\\right)$', '$\\left(1, \\pi\\right)$'] },
+        ],
+        correctAnswers: ['$\\left(3, \\frac{5\\pi}{4}\\right)$', '$\\left(2, \\frac{5\\pi}{3}\\right)$', '$\\left(1, \\frac{\\pi}{2}\\right)$'],
+        hint1: 'For $r < 0$: take $\\lvert r \\rvert$ and add $\\pi$ to the angle.',
+        hint2: 'For a negative angle: add $2\\pi$ until $\\theta \\in [0, 2\\pi)$.',
+        hint3: '$\\left(-1, \\frac{3\\pi}{2}\\right) \\to \\left(1, \\frac{3\\pi}{2} + \\pi\\right) = \\left(1, \\frac{5\\pi}{2}\\right)$, and $\\frac{5\\pi}{2} - 2\\pi = \\frac{\\pi}{2}$.',
+        explanation: 'Flip the sign of $r$ by adding $\\pi$ to the angle; fix a negative angle by adding $2\\pi$. $\\left(-3, \\frac{\\pi}{4}\\right) = \\left(3, \\frac{5\\pi}{4}\\right)$, $\\left(2, -\\frac{\\pi}{3}\\right) = \\left(2, \\frac{5\\pi}{3}\\right)$, $\\left(-1, \\frac{3\\pi}{2}\\right) = \\left(1, \\frac{\\pi}{2}\\right)$.'
+      }
     },
     {
       id: 'p1-mcq',
@@ -146,19 +169,19 @@ To plot $(-2, \\frac{\\pi}{6})$:
       content: `
 **Convert Coordinates** 🧮
 
-**1)** Convert $(5, \\frac{\\pi}{6})$ to rectangular. What is $x$? Round to 1 decimal. (e.g., $4\\cos\\frac{\\pi}{3} = 4(0.5) = 2.0$)
+**1)** Convert $(5, \\frac{\\pi}{6})$ to rectangular. What is $x$? (Exact, like \`2sqrt3\`, or a decimal to 3 significant figures.) (e.g., $4\\cos\\frac{\\pi}{3} = 4(0.5) = 2$)
 
-**2)** Convert $(5, \\frac{\\pi}{6})$ to rectangular. What is $y$? (e.g., $4\\sin\\frac{\\pi}{3} = 4(0.866) = 3.5$)
+**2)** Convert $(5, \\frac{\\pi}{6})$ to rectangular. What is $y$? (e.g., $4\\sin\\frac{\\pi}{3} = 4 \\cdot \\frac{\\sqrt{3}}{2} = 2\\sqrt{3} \\approx 3.46$)
 
 **3)** Convert rectangular $(0, -4)$ to polar. What is $r$? (e.g., $\\sqrt{3^2 + 4^2} = 5$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['4.3', '2.5', '4'],
-        hint1: '$x = 5\\cos 30° = 5(0.866) = 4.33$.',
-        hint2: '$y = 5\\sin 30° = 5(0.5) = 2.5$.',
+        correctAnswers: ['5sqrt3/2', '2.5', '4'],
+        hint1: '$x = 5\\cos\\frac{\\pi}{6} = 5\\cdot\\frac{\\sqrt{3}}{2} \\approx 4.33$.',
+        hint2: '$y = 5\\sin\\frac{\\pi}{6} = 5\\cdot\\frac{1}{2} = 2.5$.',
         hint3: '$r = \\sqrt{0 + 16} = 4$.',
-        explanation: '1) $5\\cos 30° \\approx 4.3$. 2) $5\\sin 30° = 2.5$. 3) $r = 4$.'
+        explanation: '1) $\\frac{5\\sqrt{3}}{2} \\approx 4.33$. 2) $2.5$. 3) $r = 4$.'
       }
     },
     {
@@ -210,7 +233,7 @@ To plot $(-2, \\frac{\\pi}{6})$:
               'Quadrant IV'
             ],
             correctAnswer: 0,
-            explanation: 'Both $x = 3 > 0$ and $y = 4 > 0$, so the point is in Quadrant I. $\\theta = \\arctan(\\frac{4}{3}) \\approx 53.1°$.'
+            explanation: 'Both $x = 3 > 0$ and $y = 4 > 0$, so the point is in Quadrant I. $\\theta = \\arctan\\frac{4}{3} \\approx 0.927$ radians.'
           },
           {
             question: '$(-3, \\frac{\\pi}{4})$ in polar is the same point as:',

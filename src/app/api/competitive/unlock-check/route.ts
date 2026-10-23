@@ -5,10 +5,17 @@ import { getUnlockedAlgebra2Subtopics, ALGEBRA2_SUBTOPIC_LABELS, type Algebra2Su
 import { isCompetitiveFullUnlock } from '@/lib/admin-unlock'
 import { satBankSlugsForCourseTopic, type SatBankSlug } from '@/lib/sat-topic-map'
 import { courseLayoutTopics } from '@/lib/course-includes'
+import { AP_PRECALC_COMPETITIVE_TOPICS } from '@/lib/competitive-utils'
 
 // AP Calculus BC includes AB (course-includes): progress on ANY topic of the
 // 10-unit BC layout, AB Units 1-8 included, unlocks BC competitive play.
 const BC_LAYOUT_TOPICS = new Set(courseLayoutTopics('ap-calculus-bc') ?? [])
+
+// AP Precalculus: progress on ANY topic of the course (the 19 live rows of the
+// three CED units, the retired rows that 308 to them, the unit-circle game)
+// lights the hub card — not only polynomial/rational slugs (Oct 2026 audit:
+// a student who finished "Exponential Functions" saw a locked card).
+const AP_PRECALC_TOPICS = new Set([...AP_PRECALC_COMPETITIVE_TOPICS, ...(courseLayoutTopics('ap-precalculus') ?? [])])
 
 /**
  * Check if user has unlocked competitive mode
@@ -241,7 +248,7 @@ export async function GET() {
         s.includes('ap-physics-c-em') || s.includes('physics-c-em') || s.includes('gauss-law') || s.includes('ampere')
       ),
       'ap-precalculus': grantAllCategories || grantedCategories.has('ap-precalculus') || uniqueDiagnosticSlugs.includes('ap-precalculus') || allProgressSlugs.some(s =>
-        s.includes('ap-precalculus') || s.includes('ap-precalc') || s.includes('polynomial-functions') || s.includes('rational-functions')
+        AP_PRECALC_TOPICS.has(s) || s.includes('ap-precalculus') || s.includes('ap-precalc') || s.includes('polynomial-functions') || s.includes('rational-functions')
       ),
       'ap-human-geo': grantAllCategories || grantedCategories.has('ap-human-geo') || uniqueDiagnosticSlugs.includes('ap-human-geography') || allProgressSlugs.some(s =>
         s.includes('ap-human-geo') || s.includes('human-geography') || s.includes('population-distribution')

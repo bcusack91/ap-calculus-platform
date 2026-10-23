@@ -5,7 +5,7 @@ export const precalcSequencesPart7Data = {
       id: 'p7-intro',
       type: 'text' as const,
       content: `
-# 🎯 Sequences — Full Synthesis
+# 🎯 Sequences — Review & Applications
 
 **Part 7 of 7 — Review & Applications**
 
@@ -102,7 +102,7 @@ Row $5$ is $1, 5, 10, 10, 5, 1$, and the $y^3$ term uses $\\binom{5}{3} = 10$.
             question: 'The coefficient of $x^7$ in $(x+1)^{10}$ is:',
             options: ['$120$', '$210$', '$252$', '$45$'],
             correctAnswer: 0,
-            explanation: '$\\binom{10}{3}x^7(1)^3 = 120x^7$.'
+            explanation: 'Row 10 begins $1, 10, 45, 120, \\ldots$; the $x^7$ term is entry $k = 3$: $120x^7$.'
           }
         ]
       }
@@ -124,7 +124,7 @@ Row $5$ is $1, 5, 10, 10, 5, 1$, and the $y^3$ term uses $\\binom{5}{3} = 10$.
         correctAnswers: ['62', '5', '35'],
         hint1: '$a_{20} = 5 + 19(3)$.',
         hint2: '$g_6 = 40 \\cdot 0.5^{6-3}$.',
-        hint3: '$\\frac{7!}{3!4!} = \\frac{210}{6} = 35$.',
+        hint3: 'Row 7 is $1, 7, 21, 35, 35, 21, 7, 1$; entry $k = 3$ is $35$.',
         explanation: '1) $5 + 57 = 62$. 2) $40 \\cdot 0.125 = 5$. 3) $35$.'
       }
     },

@@ -9,17 +9,21 @@ export const precalcTrigFunctionsPart3Data = {
 
 **Part 3 of 7**
 
-### Right-Triangle Definitions
+### Unit-Circle Definitions (CED 3.2)
 
-For a right triangle with angle $\\theta$, hypotenuse $r$, opposite side $y$, and adjacent side $x$:
+Let the terminal ray of $\\theta$ (in standard position) meet the **unit circle** at the point $P$. Then
 
-$$\\boxed{\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{y}{r} \\qquad \\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{x}{r}}$$
+$$\\boxed{\\cos\\theta = \\text{the } x\\text{-coordinate of } P \\qquad \\sin\\theta = \\text{the } y\\text{-coordinate of } P}$$
 
-### Unit-Circle Connection
+These are signed coordinates, not distances: left of the $y$-axis the cosine is negative, below the $x$-axis the sine is negative.
 
-On the unit circle ($r = 1$), this simplifies to:
+### Right-Triangle Connection
 
-$$\\sin\\theta = y \\qquad \\cos\\theta = x$$
+For a right triangle with acute angle $\\theta$, hypotenuse $r$, opposite side $y$, and adjacent side $x$:
+
+$$\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{y}{r} \\qquad \\cos\\theta = \\frac{\\text{adjacent}}{\\text{hypotenuse}} = \\frac{x}{r}$$
+
+On the unit circle ($r = 1$) this is the same statement: $\\sin\\theta = y$ and $\\cos\\theta = x$.
 
 ### Key Properties Comparison
 
@@ -43,9 +47,9 @@ $$\\sin\\theta = y \\qquad \\cos\\theta = x$$
 
 $$\\boxed{\\sin^2\\theta + \\cos^2\\theta = 1}$$
 
-This gives us two useful rearrangements:
+This is $x^2 + y^2 = 1$ for the point $(\\cos\\theta, \\sin\\theta)$ on the unit circle. Two useful rearrangements:
 
-- $\\sin^2\\theta = 1 - \\cos^2\\theta$  
+- $\\sin^2\\theta = 1 - \\cos^2\\theta$
 - $\\cos^2\\theta = 1 - \\sin^2\\theta$
 
 ### Cofunction Identities
@@ -73,7 +77,7 @@ In Q II, cosine is **negative**: $\\boxed{\\cos\\theta = -\\frac{4}{5}}$
 
 ### Step-by-Step Method
 
-1. **Identify the quadrant** of $\\theta$
+1. **Identify the quadrant** of $\\theta$ (replace $\\theta$ by a coterminal angle in $[0, 2\\pi)$ if needed)
 2. **Find the reference angle** $\\theta_R$
 3. **Look up** $\\sin\\theta_R$ and $\\cos\\theta_R$ from the first-quadrant table
 4. **Apply the correct sign** based on the quadrant
@@ -96,6 +100,41 @@ No need to find reference angles — the even/odd properties are a shortcut!
       `
     },
     {
+      id: 'p3-circle-r',
+      type: 'text' as const,
+      content: `
+## 🎯 Points on a Circle of Radius $r$ (CED 3.3)
+
+A circle of radius $r$ centered at the origin is the unit circle scaled by $r$, so every coordinate scales by $r$. The terminal ray of $\\theta$ meets it at
+
+$$\\boxed{P = (r\\cos\\theta,\\; r\\sin\\theta)}$$
+
+and, with $\\theta$ in radians, the counterclockwise arc from $(r, 0)$ to $P$ has length $s = r\\theta$.
+
+### Worked Example 1: From Angle to Coordinates
+
+> **Find the point where the terminal ray of $\\theta = \\frac{2\\pi}{3}$ meets the circle of radius $6$.**
+
+$$x = 6\\cos\\frac{2\\pi}{3} = 6\\left(-\\frac{1}{2}\\right) = -3 \\qquad y = 6\\sin\\frac{2\\pi}{3} = 6 \\cdot \\frac{\\sqrt{3}}{2} = 3\\sqrt{3}$$
+
+So $P = (-3, 3\\sqrt{3})$, in Quadrant II as expected. The arc from $(6, 0)$ to $P$ has length $6 \\cdot \\frac{2\\pi}{3} = 4\\pi$.
+
+> ✅ **Check:** $(-3)^2 + (3\\sqrt{3})^2 = 9 + 27 = 36 = 6^2$, so $P$ really is on the circle.
+
+### Worked Example 2: From Distance Traveled to Position
+
+> **Start at $(3, 0)$ and walk $\\frac{5\\pi}{2}$ units clockwise around the circle of radius $3$. Where are you?**
+
+Clockwise travel gives a negative angle: $\\theta = -\\frac{5\\pi/2}{3} = -\\frac{5\\pi}{6}$. Then
+
+$$P = \\left(3\\cos\\left(-\\frac{5\\pi}{6}\\right),\\; 3\\sin\\left(-\\frac{5\\pi}{6}\\right)\\right) = \\left(-\\frac{3\\sqrt{3}}{2},\\; -\\frac{3}{2}\\right)$$
+
+(the point for $-\\frac{5\\pi}{6}$ is in Quadrant III, coterminal with $\\frac{7\\pi}{6}$).
+
+> 💡 Turn through $\\theta = \\frac{s}{r}$, then read the position from $(r\\cos\\theta, r\\sin\\theta)$. A radian value need not involve $\\pi$: walking $8$ units on a circle of radius $4$ turns through $2$ radians, which lands in Quadrant II.
+      `
+    },
+    {
       id: 'p3-mcq',
       type: 'multiple-choice' as const,
       content: `
@@ -115,15 +154,15 @@ No need to find reference angles — the even/odd properties are a shortcut!
             explanation: '$\\sin^2\\theta = 1 - \\frac{25}{169} = \\frac{144}{169}$, so $\\sin\\theta = \\pm\\frac{12}{13}$. In Q III, sine is negative: $\\sin\\theta = -\\frac{12}{13}$.'
           },
           {
-            question: 'Which identity is the cofunction relationship?',
+            question: 'Where does the terminal ray of $\\theta = \\frac{7\\pi}{6}$ meet the circle of radius $4$ centered at the origin?',
             options: [
-              '$\\sin^2\\theta + \\cos^2\\theta = 1$',
-              '$\\sin(-\\theta) = -\\sin\\theta$',
-              '$\\sin\\theta = \\cos(\\frac{\\pi}{2} - \\theta)$',
-              '$\\cos(-\\theta) = \\cos\\theta$'
+              '$(-2\\sqrt{3}, -2)$',
+              '$(-2, 2\\sqrt{3})$',
+              '$(2\\sqrt{3}, -2)$',
+              '$(-2\\sqrt{3}, 2)$'
             ],
-            correctAnswer: 2,
-            explanation: 'The cofunction identity states $\\sin\\theta = \\cos(\\frac{\\pi}{2} - \\theta)$. The others are Pythagorean, odd, and even identities respectively.'
+            correctAnswer: 0,
+            explanation: '$x = 4\\cos\\frac{7\\pi}{6} = 4\\left(-\\frac{\\sqrt{3}}{2}\\right) = -2\\sqrt{3}$ and $y = 4\\sin\\frac{7\\pi}{6} = 4\\left(-\\frac{1}{2}\\right) = -2$. Both coordinates are negative, matching Quadrant III.'
           },
           {
             question: '$\\sin(-\\frac{5\\pi}{6})$ equals:',
@@ -145,19 +184,21 @@ No need to find reference angles — the even/odd properties are a shortcut!
       content: `
 **Computation Practice** 🧮
 
+Give exact values; use \`sqrt\` for square roots (e.g. \`-5sqrt3\`, \`sqrt(3)/2\`).
+
 **1)** Given $\\sin\\theta = \\frac{8}{17}$ and $\\theta$ is in Q I, find $\\cos\\theta$. Write as a fraction (e.g., $3/5$). (e.g., $\\sin\\alpha = 5/13$ in Q I: $\\cos\\alpha = \\sqrt{1 - 25/169} = \\sqrt{144/169} = 12/13$)
 
-**2)** Evaluate $\\cos \\frac{4\\pi}{3}$. Write as a fraction (e.g., $-1/2$). (e.g., $\\cos \\frac{2\\pi}{3}$: Q II, ref $\\frac{\\pi}{3}$, $\\cos \\frac{\\pi}{3} = 1/2$, negative in Q II → $-1/2$)
+**2)** Evaluate $\\cos \\frac{4\\pi}{3}$. Write as a fraction (e.g., $-1/2$). (e.g., $\\cos \\frac{5\\pi}{3}$: Q IV, ref $\\frac{\\pi}{3}$, $\\cos \\frac{\\pi}{3} = 1/2$, positive in Q IV → $1/2$)
 
-**3)** If $\\cos\\theta = \\frac{\\sqrt{3}}{2}$, find $\\sin(\\frac{\\pi}{2} - \\theta)$ using the cofunction identity. Write as a simplified expression. (e.g., $\\sin\\alpha = 0.6$: $\\cos(\\frac{\\pi}{2} - \\alpha) = \\sin\\alpha = 0.6$)
+**3)** The terminal ray of $\\theta = \\frac{5\\pi}{3}$ meets the circle of radius $10$ centered at the origin at $P$. Find the $y$-coordinate of $P$. (e.g., for $\\frac{\\pi}{6}$ on radius $8$: $y = 8\\sin\\frac{\\pi}{6} = 8 \\cdot \\frac{1}{2} = 4$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['15/17', '-1/2', 'sqrt(3)/2'],
+        correctAnswers: ['15/17', '-1/2', '-5sqrt3'],
         hint1: '$\\cos^2\\theta = 1 - (8/17)^2 = 1 - 64/289 = 225/289$. Take the positive root (Q I).',
         hint2: '$\\frac{4\\pi}{3}$ is in Q III. Reference angle $= \\frac{4\\pi}{3} - \\pi = \\frac{\\pi}{3}$. Cosine is negative in Q III.',
-        hint3: 'The cofunction identity says $\\sin(\\frac{\\pi}{2} - \\theta) = \\cos\\theta$.',
-        explanation: '1) $\\cos\\theta = \\sqrt{225/289} = 15/17$. 2) $\\cos \\frac{4\\pi}{3} = -\\cos \\frac{\\pi}{3} = -1/2$. 3) By cofunction identity: $\\sin(\\frac{\\pi}{2} - \\theta) = \\cos\\theta = \\sqrt{3}/2$.'
+        hint3: '$y = 10\\sin\\frac{5\\pi}{3}$, and $\\sin\\frac{5\\pi}{3} = -\\frac{\\sqrt{3}}{2}$ (Quadrant IV).',
+        explanation: '1) $\\cos\\theta = \\sqrt{225/289} = 15/17$. 2) $\\cos \\frac{4\\pi}{3} = -\\cos \\frac{\\pi}{3} = -1/2$. 3) $y = 10 \\cdot \\left(-\\frac{\\sqrt{3}}{2}\\right) = -5\\sqrt{3}$ (and $x = 10 \\cdot \\frac{1}{2} = 5$; check $5^2 + (5\\sqrt{3})^2 = 100$).'
       }
     },
     {
@@ -181,15 +222,15 @@ No need to find reference angles — the even/odd properties are a shortcut!
             options: ['$0$', '$1$', '$2$', 'Depends on $\\theta$']
           },
           {
-            label: 'Cosine is classified as an ____ function',
-            options: ['odd', 'even', 'neither', 'periodic only']
+            label: '$\\sin\\left(\\frac{\\pi}{2} - \\theta\\right)$ equals',
+            options: ['$\\sin\\theta$', '$-\\sin\\theta$', '$\\cos\\theta$', '$-\\cos\\theta$']
           }
         ],
-        correctAnswers: ['$-\\sin\\theta$', '$[-1, 1]$', '$1$', 'even'],
+        correctAnswers: ['$-\\sin\\theta$', '$[-1, 1]$', '$1$', '$\\cos\\theta$'],
         hint1: 'Sine is an odd function — negating the input negates the output.',
         hint2: 'Both sine and cosine oscillate between the same bounds.',
         hint3: 'This identity holds for ALL values of $\\theta$.',
-        explanation: 'Sine is odd: $\\sin(-\\theta) = -\\sin\\theta$. Both $\\sin$ and $\\cos$ have range $[-1,1]$. The Pythagorean identity always equals $1$. Cosine is even because $\\cos(-\\theta) = \\cos\\theta$.'
+        explanation: 'Sine is odd: $\\sin(-\\theta) = -\\sin\\theta$. Both $\\sin$ and $\\cos$ have range $[-1,1]$. The Pythagorean identity always equals $1$. The cofunction identity gives $\\sin\\left(\\frac{\\pi}{2} - \\theta\\right) = \\cos\\theta$.'
       }
     },
     {
@@ -212,15 +253,15 @@ No need to find reference angles — the even/odd properties are a shortcut!
             explanation: '$\\sin^2\\alpha = 1 - \\frac{49}{625} = \\frac{576}{625}$. $\\sin\\alpha = \\pm\\frac{24}{25}$. In Q IV, sine is negative: $-\\frac{24}{25}$.'
           },
           {
-            question: 'Which of these equals $\\cos\\frac{\\pi}{3}$?',
+            question: 'A point starts at $(3, 0)$ and travels $\\pi$ units counterclockwise along the circle of radius $3$ centered at the origin. Where does it stop?',
             options: [
-              '$\\sin\\frac{\\pi}{3}$',
-              '$\\sin\\frac{\\pi}{6}$',
-              '$-\\sin\\frac{\\pi}{6}$',
-              '$\\cos\\frac{\\pi}{6}$'
+              '$\\left(\\frac{3}{2}, \\frac{3\\sqrt{3}}{2}\\right)$',
+              '$\\left(\\frac{3\\sqrt{3}}{2}, \\frac{3}{2}\\right)$',
+              '$(-3, 0)$',
+              '$\\left(\\frac{3}{2}, -\\frac{3\\sqrt{3}}{2}\\right)$'
             ],
-            correctAnswer: 1,
-            explanation: 'Cofunction identity: $\\cos\\frac{\\pi}{3} = \\sin(\\frac{\\pi}{2} - \\frac{\\pi}{3}) = \\sin\\frac{\\pi}{6} = \\frac{1}{2}$.'
+            correctAnswer: 0,
+            explanation: 'The angle turned is $\\theta = \\frac{s}{r} = \\frac{\\pi}{3}$, so the point is $\\left(3\\cos\\frac{\\pi}{3}, 3\\sin\\frac{\\pi}{3}\\right) = \\left(\\frac{3}{2}, \\frac{3\\sqrt{3}}{2}\\right)$. Swapping the coordinates uses $\\frac{\\pi}{6}$, $(-3, 0)$ treats $\\pi$ units as a half turn (that would need $s = 3\\pi$), and a negative $y$ would be clockwise travel.'
           }
         ]
       }

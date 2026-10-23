@@ -80,12 +80,14 @@ The degree tells you:
 
 **End behavior** describes what happens to $p(x)$ as $x \\to +\\infty$ and as $x \\to -\\infty$. It depends on only two things: the **degree** and the **sign of the leading coefficient**.
 
-| Degree | Leading Coefficient | As $x \\to -\\infty$ | As $x \\to +\\infty$ | Memory Aid |
-|:------:|:------------------:|:------------------:|:------------------:|:----------:|
-| Even | Positive ($+$) | $p(x) \\to +\\infty$ | $p(x) \\to +\\infty$ | Both ends up ↑↑ |
-| Even | Negative ($-$) | $p(x) \\to -\\infty$ | $p(x) \\to -\\infty$ | Both ends down ↓↓ |
-| Odd | Positive ($+$) | $p(x) \\to -\\infty$ | $p(x) \\to +\\infty$ | Falls left, rises right ↙↗ |
-| Odd | Negative ($-$) | $p(x) \\to +\\infty$ | $p(x) \\to -\\infty$ | Rises left, falls right ↗↙ |
+| Degree | Leading Coefficient | As $x \\to -\\infty$ | As $x \\to +\\infty$ | In limit notation | Memory Aid |
+|:------:|:------------------:|:------------------:|:------------------:|:---|:----------:|
+| Even | Positive ($+$) | $p(x) \\to +\\infty$ | $p(x) \\to +\\infty$ | $\\lim_{x \\to -\\infty} p(x) = +\\infty,\\ \\lim_{x \\to \\infty} p(x) = +\\infty$ | Both ends up ↑↑ |
+| Even | Negative ($-$) | $p(x) \\to -\\infty$ | $p(x) \\to -\\infty$ | $\\lim_{x \\to -\\infty} p(x) = -\\infty,\\ \\lim_{x \\to \\infty} p(x) = -\\infty$ | Both ends down ↓↓ |
+| Odd | Positive ($+$) | $p(x) \\to -\\infty$ | $p(x) \\to +\\infty$ | $\\lim_{x \\to -\\infty} p(x) = -\\infty,\\ \\lim_{x \\to \\infty} p(x) = +\\infty$ | Falls left, rises right ↙↗ |
+| Odd | Negative ($-$) | $p(x) \\to +\\infty$ | $p(x) \\to -\\infty$ | $\\lim_{x \\to -\\infty} p(x) = +\\infty,\\ \\lim_{x \\to \\infty} p(x) = -\\infty$ | Rises left, falls right ↗↙ |
+
+The exam states end behavior with **limit notation**: $\\lim_{x \\to \\infty} p(x) = +\\infty$ reads "as $x$ increases without bound, $p(x)$ increases without bound.
 
 > ⚠️ **Common mistake:** Students sometimes check end behavior using the constant term or the coefficient of $x$. Only the **leading term** determines end behavior.
 
@@ -102,7 +104,7 @@ The degree tells you:
 
 **Step 3:** From the table: both ends point **down**
 
-$$\\boxed{\\text{As } x \\to -\\infty, \\; f(x) \\to -\\infty \\quad \\text{and} \\quad \\text{as } x \\to +\\infty, \\; f(x) \\to -\\infty}$$
+$$\\boxed{\\lim_{x \\to -\\infty} f(x) = -\\infty \\quad \\text{and} \\quad \\lim_{x \\to \\infty} f(x) = -\\infty}$$
       `
     },
     {
@@ -171,6 +173,53 @@ $$\\boxed{\\text{As } x \\to -\\infty, \\; f(x) \\to -\\infty \\quad \\text{and}
       }
     },
     {
+      id: 'p1-successive-differences',
+      type: 'text' as const,
+      content: `
+## 🔢 Degree from a Table: Successive Differences
+
+When a polynomial is given only as a **table with equally spaced inputs**, its degree shows up in the differences of the outputs (CED 1.5): for a degree-$n$ polynomial the **$n$th successive differences are constant** (and nonzero).
+
+| $x$ | $0$ | $1$ | $2$ | $3$ | $4$ |
+|:--:|:--:|:--:|:--:|:--:|:--:|
+| $p(x)$ | $1$ | $2$ | $9$ | $28$ | $65$ |
+| 1st differences | | $1$ | $7$ | $19$ | $37$ |
+| 2nd differences | | | $6$ | $12$ | $18$ |
+| 3rd differences | | | | $6$ | $6$ |
+
+The third differences are constant ($6$), so the table comes from a **cubic**. (It is $p(x) = x^3 + 1$.)
+
+- Linear: 1st differences constant (constant rate of change).
+- Quadratic: 2nd differences constant (the rate of change changes at a constant rate).
+- Degree $n$: $n$th differences constant.
+
+> ⚠️ This test needs **equal spacing** in $x$. Differences of a table with gaps of different sizes tell you nothing about the degree.
+      `
+    },
+    {
+      id: 'p1-differences-drill',
+      type: 'input-boxes' as const,
+      content: `
+**Successive Differences Drill** 🧮
+
+A table has equally spaced inputs $x = 0, 1, 2, 3, 4$ and outputs $3, 5, 11, 21, 35$.
+
+**1)** The first differences are $2, 6, 10, 14$. What constant value do the second differences take?
+
+**2)** What is the degree of the polynomial that produced this table?
+
+**3)** For the table $p(x) = 1, 2, 9, 28, 65$ above, what constant value do the third differences take?
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['4', '2', '6'],
+        hint1: '$6 - 2$, $10 - 6$, $14 - 10$.',
+        hint2: 'Constant $n$th differences means degree $n$.',
+        hint3: 'Second differences $6, 12, 18$; subtract neighbors.',
+        explanation: '1) The second differences are $4, 4, 4$. 2) Constant second differences means a quadratic, degree $2$ (the table is $2x^2 + 3$). 3) $12 - 6 = 6$ and $18 - 12 = 6$.'
+      }
+    },
+    {
       id: 'p1-dropdown-practice',
       type: 'dropdown-select' as const,
       content: `
@@ -211,7 +260,7 @@ $$\\boxed{\\text{As } x \\to -\\infty, \\; f(x) \\to -\\infty \\quad \\text{and}
       exercise: {
         questions: [
           {
-            question: 'A polynomial has the end behavior: as $x \\to -\\infty$, $p(x) \\to +\\infty$ and as $x \\to +\\infty$, $p(x) \\to -\\infty$. Which could be its leading term?',
+            question: 'A polynomial satisfies $\\lim_{x \\to -\\infty} p(x) = +\\infty$ and $\\lim_{x \\to \\infty} p(x) = -\\infty$. Which could be its leading term?',
             options: [
               '$2x^4$',
               '$-3x^3$',

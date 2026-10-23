@@ -23,6 +23,8 @@ $$a_n = a_1 + (n-1)d$$
 
 where $d = a_{n+1} - a_n$ is the **common difference**.
 
+AP Precalculus usually counts from term $0$: $a_n = a_0 + dn$, or from any known term $a_k$: $a_n = a_k + d(n-k)$. The familiar $a_1 + (n-1)d$ is just the $k = 1$ case. The list $2, 7, 12, 17, \\ldots$ can be written $a_n = 2 + 5(n-1)$ from term $1$ or $a_n = 2 + 5n$ from term $0$ — the same list, differing only in which index labels the first term.
+
 ### Examples
 
 - $2, 5, 8, 11, 14, \\ldots$ → $d = 3$
@@ -77,13 +79,11 @@ $45 - 17 = 7d \\implies d = 4$
 
 $a_1 = a_5 - 4d = 17 - 16 = 1$
 
-### Arithmetic Mean
+### Missing Terms Between Two Known Terms
 
-The arithmetic mean of $a$ and $b$ is $\\frac{a+b}{2}$, which is the term between them in an arithmetic sequence.
+Find the three terms between $a_0 = 2$ and $a_4 = 14$:
 
-Insert 3 arithmetic means between 2 and 14:
-
-$a_1 = 2, a_5 = 14$. $14 = 2+4d \\implies d = 3$.
+$14 = 2 + 4d \\implies d = 3$.
 
 Sequence: $2, 5, 8, 11, 14$.
       `

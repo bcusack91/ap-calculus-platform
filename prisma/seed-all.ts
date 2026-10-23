@@ -433,6 +433,10 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
       // and Categories; this moves every live topic into its CED unit and
       // retires them (src/lib/course-includes.ts). Runs with APPLY=1 (FILE_ENV).
       'restructure-calc.ts',
+      // Same for AP Precalculus: seed-ap-precalculus.ts, seed-precalculus-categories.ts,
+      // fill-ap-precalculus.ts, reach-500-topics.ts, final-expansion-to-500.ts and
+      // split-parametric-vectors-polar.ts recreate its legacy rows and Categories.
+      'restructure-precalc.ts',
     ],
   },
 ]
@@ -440,6 +444,7 @@ const SEED_GROUPS: { label: string; files: string[] }[] = [
 /** Extra env for scripts that dry-run unless told to write. */
 const FILE_ENV: Record<string, Record<string, string>> = {
   'restructure-calc.ts': { APPLY: '1' },
+  'restructure-precalc.ts': { APPLY: '1' },
 }
 
 async function main() {

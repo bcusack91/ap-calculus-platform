@@ -73,7 +73,7 @@ $$p(x) = a(x - 1)(x + 3)(x - (2+i))(x - (2-i))$$
       `
     },
     {
-      id: 'p5-rational-root-theorem',
+      id: 'p5-even-odd',
       type: 'text' as const,
       content: `
 ## 🪞 Even and Odd Polynomial Functions

@@ -18,10 +18,10 @@ This final part combines all polar coordinate skills:
 | Converting points | $x = r\\cos\\theta, \\; y = r\\sin\\theta, \\; r = \\sqrt{x^2+y^2}$ |
 | Complex numbers | $a + bi = (r\\cos\\theta) + i(r\\sin\\theta)$ |
 | Polar curves | Circles, roses, cardioids, limaçons |
-| Symmetry | Test $-\\theta$ (polar axis), $\\pi-\\theta$ (vertical), $-r$ (origin) |
+| Symmetry | Test $-\\theta$ (polar axis), $\\pi-\\theta$ (vertical), $-r$ or $\\theta+\\pi$ (origin); a failed test is inconclusive |
 | Reading $r = f(\\theta)$ | $r > 0$: on the ray of $\\theta$; $r < 0$: on the opposite ray; $r = 0$: at the pole |
 | Domain restriction | Choose $\\alpha \\le \\theta \\le \\beta$ so the curve starts and ends where you want |
-| Distance from origin | $|r|$; increasing when $r$ is positive and increasing or negative and decreasing |
+| Distance from origin | $\\lvert r \\rvert$; increasing when $r$ is positive and increasing or negative and decreasing |
 | Average rate of change | $\\frac{f(\\theta_2) - f(\\theta_1)}{\\theta_2 - \\theta_1}$, in radius units per radian |
       `
     },
@@ -34,8 +34,8 @@ This final part combines all polar coordinate skills:
 ### Identifying a Polar Curve
 
 Flowchart:
-1. **$r = a$** → Circle centered at origin, radius $a$
-2. **$r = a\\cos\\theta$ or $r = a\\sin\\theta$** → Circle, diameter $|a|$
+1. **$r = a$** → Circle centered at origin, radius $\\lvert a \\rvert$
+2. **$r = a\\cos\\theta$ or $r = a\\sin\\theta$** → Circle, diameter $\\lvert a \\rvert$
 3. **$r = a + b\\cos\\theta$ or $r = a + b\\sin\\theta$** → Limaçon; find the smallest and largest $r$
    - $r$ goes negative: inner loop
    - $r$ reaches $0$ but never goes negative: cardioid (touches the pole once)
@@ -94,7 +94,7 @@ Flowchart:
       content: `
 **Mixed Calculations** 🧮
 
-**1)** Convert $(x, y) = (-3, 3)$ to polar. What is $r$? (Enter exact value like "3sqrt2")
+**1)** Convert $(x, y) = (-3, 3)$ to polar. What is $r$? (Enter an exact value like "2sqrt5")
 
 **2)** For $r = 4 + 2\\sin\\theta$, what is the average rate of change of $r$ on $\\left[0, \\frac{\\pi}{2}\\right]$? (Enter in terms of pi, like "6/pi")
 

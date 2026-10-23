@@ -158,7 +158,7 @@ The rate itself is increasing — the function curves upward faster and faster.
         dropdowns: [
           {
             label: 'Negative AROC means the function is:',
-            options: ['Increasing on average', 'Decreasing on average', 'Decreasing at every point', 'Constant on that interval'],
+            options: ['Increasing on average', 'Lower at $b$ than at $a$ (decreasing on average)', 'Decreasing at every point', 'Constant on that interval'],
             correctAnswer: 1
           },
           {
@@ -177,7 +177,7 @@ The rate itself is increasing — the function curves upward faster and faster.
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Decreasing on average', '$1$', 'Miles per hour', 'Position vs time'],
+        correctAnswers: ['Lower at $b$ than at $a$ (decreasing on average)', '$1$', 'Miles per hour', 'Position vs time'],
         hint1: 'Negative slope = going down.',
         hint2: '$\\frac{1-(-1)}{1-(-1)} = 2/2$.',
         hint3: 'Rate = output units / input units.',

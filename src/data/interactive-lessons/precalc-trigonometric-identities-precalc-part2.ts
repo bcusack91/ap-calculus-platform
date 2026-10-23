@@ -19,6 +19,18 @@ $$\\boxed{\\csc\\theta = \\frac{1}{\\sin\\theta} \\qquad \\sec\\theta = \\frac{1
 
 $$\\boxed{\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} \\qquad \\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}}$$
 
+### Secant, Cosecant and Cotangent as Functions
+
+Because each one is a quotient, it is **undefined wherever its denominator is $0$**, and its graph has a vertical asymptote there.
+
+| Function | Undefined where | Domain excludes | Range | Period |
+|:---------|:----------------|:----------------|:------|:-------|
+| $\\sec\\theta = \\frac{1}{\\cos\\theta}$ | $\\cos\\theta = 0$ | $\\theta = \\frac{\\pi}{2} + \\pi k$ | $\\lvert y \\rvert \\ge 1$ | $2\\pi$ |
+| $\\csc\\theta = \\frac{1}{\\sin\\theta}$ | $\\sin\\theta = 0$ | $\\theta = \\pi k$ | $\\lvert y \\rvert \\ge 1$ | $2\\pi$ |
+| $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$ | $\\sin\\theta = 0$ | $\\theta = \\pi k$ | all reals | $\\pi$ |
+
+> Secant is large exactly where cosine is small: as $\\cos\\theta \\to 0$, $\\lvert\\sec\\theta\\rvert \\to \\infty$. Cotangent, like tangent, repeats every $\\pi$ and is $0$ where $\\cos\\theta = 0$.
+
 ### Why Convert to Sine & Cosine?
 
 | Advantage | Example |
@@ -121,19 +133,30 @@ $$\\frac{1}{\\cos\\theta} - \\cos\\theta = \\frac{1 - \\cos^2\\theta}{\\cos\\the
       content: `
 **Simplification Practice** 🧮
 
-**1)** Simplify $\\frac{\\sec\\theta}{\\csc\\theta}$. Write as a single trig function (e.g., sin, cos, tan, cot, sec, csc). (e.g., $\\frac{\\csc\\theta}{\\sec\\theta} = \\frac{1/\\sin\\theta}{1/\\cos\\theta} = \\frac{\\cos\\theta}{\\sin\\theta} = \\cot\\theta$)
-
-**2)** Simplify $\\cot\\theta \\cdot \\sin\\theta$. Write as a single trig function. (e.g., $\\tan\\theta \\cdot \\cos\\theta = \\frac{\\sin\\theta}{\\cos\\theta} \\cdot \\cos\\theta = \\sin\\theta$)
-
-**3)** Evaluate $\\tan \\frac{\\pi}{3} \\cdot \\cot \\frac{\\pi}{3}$. Write as an integer. (e.g., $\\sin \\frac{\\pi}{4} \\cdot \\csc \\frac{\\pi}{4} = 1$ since they are reciprocals)
+Write each answer as a single trig function of $\\theta$ (type \`sec\` or \`sec(theta)\`), or as a number.
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['tan', 'cos', '1'],
+        questions: [
+          {
+            question: '**1)** Simplify $\\frac{\\sec\\theta}{\\csc\\theta}$. (e.g., $\\frac{\\csc\\theta}{\\sec\\theta} = \\frac{1/\\sin\\theta}{1/\\cos\\theta} = \\frac{\\cos\\theta}{\\sin\\theta} = \\cot\\theta$)',
+            answer: 'tan',
+            acceptableAnswers: ['tanθ', 'tan(θ)', 'tantheta', 'tan(theta)', 'tanx', 'tan(x)', 'tangent'],
+          },
+          {
+            question: '**2)** Simplify $\\cot\\theta \\cdot \\sin\\theta$. (e.g., $\\tan\\theta \\cdot \\cos\\theta = \\frac{\\sin\\theta}{\\cos\\theta} \\cdot \\cos\\theta = \\sin\\theta$)',
+            answer: 'cos',
+            acceptableAnswers: ['cosθ', 'cos(θ)', 'costheta', 'cos(theta)', 'cosx', 'cos(x)', 'cosine'],
+          },
+          {
+            question: '**3)** Evaluate $\\sin \\frac{\\pi}{3} \\cdot \\sec \\frac{\\pi}{3}$. Give the exact value. (e.g., $\\cos \\frac{\\pi}{6} \\cdot \\sec \\frac{\\pi}{6} = 1$ since they are reciprocals)',
+            answer: 'sqrt(3)',
+            acceptableAnswers: ['√3', 'sqrt3', 'tan(pi/3)'],
+          },
+        ],
         hint1: '$\\frac{\\sec\\theta}{\\csc\\theta} = \\frac{1/\\cos\\theta}{1/\\sin\\theta} = \\frac{\\sin\\theta}{\\cos\\theta}$.',
         hint2: '$\\cot\\theta \\cdot \\sin\\theta = \\frac{\\cos\\theta}{\\sin\\theta} \\cdot \\sin\\theta$.',
-        hint3: 'Tangent and cotangent are reciprocals of each other.',
-        explanation: '1) $\\frac{\\sec\\theta}{\\csc\\theta} = \\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$. 2) $\\frac{\\cos\\theta}{\\sin\\theta} \\cdot \\sin\\theta = \\cos\\theta$. 3) $\\tan\\theta \\cdot \\cot\\theta = 1$ for any $\\theta$.'
+        hint3: '$\\sin\\theta\\sec\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$, and $\\tan\\frac{\\pi}{3} = \\sqrt{3}$.',
+        explanation: '1) $\\frac{\\sec\\theta}{\\csc\\theta} = \\frac{\\sin\\theta}{\\cos\\theta} = \\tan\\theta$. 2) $\\frac{\\cos\\theta}{\\sin\\theta} \\cdot \\sin\\theta = \\cos\\theta$. 3) $\\sin\\frac{\\pi}{3}\\sec\\frac{\\pi}{3} = \\tan\\frac{\\pi}{3} = \\sqrt{3}$.'
       }
     },
     {
@@ -145,15 +168,15 @@ $$\\frac{1}{\\cos\\theta} - \\cos\\theta = \\frac{1 - \\cos^2\\theta}{\\cos\\the
       exercise: {
         dropdowns: [
           {
-            label: '$\\sin\\theta \\cdot \\sec\\theta$ simplifies to',
-            options: ['$1$', '$\\tan\\theta$', '$\\cot\\theta$', '$\\cos\\theta$']
+            label: '$\\csc\\theta \\cdot \\tan\\theta$ simplifies to',
+            options: ['$1$', '$\\sec\\theta$', '$\\cot\\theta$', '$\\sin\\theta$']
           },
           {
-            label: '$\\frac{\\cot\\theta}{\\csc\\theta}$ simplifies to',
-            options: ['$\\sin\\theta$', '$\\cos\\theta$', '$\\tan\\theta$', '$\\sec\\theta$']
+            label: '$\\sec\\theta$ is undefined at',
+            options: ['$\\theta = 0$', '$\\theta = \\frac{\\pi}{2}$', '$\\theta = \\pi$', '$\\theta = \\frac{\\pi}{4}$']
           },
           {
-            label: 'The first step to simplify any trig expression is usually',
+            label: 'When an expression mixes $\\tan$, $\\sec$, $\\csc$ or $\\cot$, a reliable first step is to',
             options: ['Factor', 'Convert to sine and cosine', 'Use double-angle formulas', 'Cross-multiply']
           },
           {
@@ -161,11 +184,11 @@ $$\\frac{1}{\\cos\\theta} - \\cos\\theta = \\frac{1 - \\cos^2\\theta}{\\cos\\the
             options: ['$0$', '$1$', '$2$', '$\\cos^2\\theta$']
           }
         ],
-        correctAnswers: ['$\\tan\\theta$', '$\\cos\\theta$', 'Convert to sine and cosine', '$1$'],
-        hint1: '$\\sec\\theta = 1/\\cos\\theta$, so $\\sin\\theta/\\cos\\theta = ?$',
-        hint2: 'Write both in terms of sin and cos, then simplify.',
+        correctAnswers: ['$\\sec\\theta$', '$\\theta = \\frac{\\pi}{2}$', 'Convert to sine and cosine', '$1$'],
+        hint1: '$\\csc\\theta\\tan\\theta = \\frac{1}{\\sin\\theta}\\cdot\\frac{\\sin\\theta}{\\cos\\theta}$.',
+        hint2: 'Secant is $1/\\cos\\theta$; where is cosine zero?',
         hint3: 'Converting to sine and cosine reveals common factors and Pythagorean forms.',
-        explanation: '$\\sin\\theta \\cdot \\frac{1}{\\cos\\theta} = \\tan\\theta$. $\\frac{\\cos/\\sin}{1/\\sin} = \\cos\\theta$. Converting to sin/cos is the universal first step. $\\cos\\theta \\cdot \\frac{1}{\\cos\\theta} = 1$.'
+        explanation: '$\\frac{1}{\\sin\\theta}\\cdot\\frac{\\sin\\theta}{\\cos\\theta} = \\frac{1}{\\cos\\theta} = \\sec\\theta$. $\\sec\\theta$ is undefined where $\\cos\\theta = 0$, at $\\theta = \\frac{\\pi}{2}$ (and $\\frac{3\\pi}{2}$). Converting to sin/cos is the reliable first step for mixed expressions. $\\cos\\theta \\cdot \\frac{1}{\\cos\\theta} = 1$.'
       }
     },
     {

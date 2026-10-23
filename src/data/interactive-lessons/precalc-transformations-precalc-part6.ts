@@ -7,7 +7,7 @@ export const precalcTransformationsPart6Data = {
       content: `
 # 📐 Writing Equations from Graphs
 
-**Part 6 of 7**
+**Part 6 of 7 — Problem-Solving Workshop**
 
 ### The Reverse Problem
 
@@ -21,7 +21,7 @@ Instead of transforming a parent → graph, we now go from **graph → equation*
 4. **Find the scale** — Plug in a visible point to solve for $|a|$
 5. **Verify** — Test another point if possible
 
-### Example: Parabola
+### Example: Parabola (Figure 1 below)
 
 Graph shows: vertex at $(1, -3)$, opens up, passes through $(3, 5)$.
 
@@ -30,6 +30,16 @@ Graph shows: vertex at $(1, -3)$, opens up, passes through $(3, 5)$.
 - Solve: $5 = a(3-1)^2-3 \\implies 8 = 4a \\implies a = 2$
 - **Answer**: $y = 2(x-1)^2-3$
       `
+    },
+    {
+      id: 'p6-parabola-figure',
+      type: 'figure' as const,
+      figure: {
+        svg: '<svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g stroke="currentColor" stroke-width="1.5"><line x1="40" y1="150" x2="312" y2="150"/><line x1="160" y1="232" x2="160" y2="10"/></g><text x="306" y="166" font-size="12" fill="currentColor">x</text><text x="166" y="18" font-size="12" fill="currentColor">y</text><text x="190" y="166" font-size="11" fill="currentColor" text-anchor="middle">1</text><text x="250" y="166" font-size="11" fill="currentColor" text-anchor="middle">3</text><g class="fig-muted" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"><line x1="250" y1="150" x2="250" y2="50"/><line x1="160" y1="50" x2="250" y2="50"/></g><text x="152" y="54" font-size="11" fill="currentColor" text-anchor="end">5</text><text x="152" y="214" font-size="11" fill="currentColor" text-anchor="end">-3</text><g class="fig-accent"><path d="M 130.0 50.0 L 137.5 87.5 L 145.0 120.0 L 152.5 147.5 L 160.0 170.0 L 167.5 187.5 L 175.0 200.0 L 182.5 207.5 L 190.0 210.0 L 197.5 207.5 L 205.0 200.0 L 212.5 187.5 L 220.0 170.0 L 227.5 147.5 L 235.0 120.0 L 242.5 87.5 L 250.0 50.0" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="190" cy="210" r="4.5" fill="currentColor"/><circle cx="250" cy="50" r="4.5" fill="currentColor"/></g><text x="198" y="224" font-size="11" fill="currentColor">vertex (1, -3)</text><text x="258" y="54" font-size="11" fill="currentColor">(3, 5)</text></svg>',
+        alt: 'An upward-opening parabola with vertex at (1, -3) passing through the point (3, 5). Dashed guide lines mark x = 3 and y = 5.',
+        caption: 'Figure 1. Vertex $(1, -3)$ gives the template $y = a(x - 1)^2 - 3$; the point $(3, 5)$ fixes $a = 2$.',
+      },
+      content: `Read the vertex first (it gives $h$ and $k$), then use one more clearly marked point to solve for $a$. A second visible point, such as $(-1, 5)$, confirms the answer: $2(-1-1)^2 - 3 = 5$ ✓`
     },
     {
       id: 'p6-abs',

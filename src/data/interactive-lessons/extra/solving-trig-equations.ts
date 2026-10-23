@@ -130,7 +130,7 @@ Use A·S·T·C to decide the sign of each value.`,
         type: 'input-boxes' as const,
         content: `**Reference Angles** 🧮
 
-The reference angle is the acute angle to the nearest $x$-axis. Write each reference angle as a multiple of $\\pi$ and enter the **coefficient** (type \`1/6\` for $\\frac{\\pi}{6}$).
+The reference angle is the acute angle to the nearest $x$-axis. Write each reference angle as a multiple of $\\pi$ and enter the **coefficient** (type \`1/4\` for $\\frac{\\pi}{4}$).
 
 **1)** A terminal angle of $\\frac{5\\pi}{6}$ → reference angle $= \\,?\\cdot\\pi$
 **2)** A terminal angle of $\\frac{7\\pi}{6}$ → reference angle $= \\,?\\cdot\\pi$
@@ -235,12 +235,26 @@ $$\\boxed{\\theta = \\frac{\\pi}{4}, \\; \\frac{5\\pi}{4}}$$
       {
         id: 'ste2-inequalities',
         type: 'text' as const,
+        figure: [
+          {
+            svg: '<svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><title>y = sin theta on [0, 2 pi) with the line y = 1/2; the curve is at or above the line between theta = pi/6 and theta = 5 pi/6, and that arc is shaded</title><g class="fig-accent-2"><polygon points="51.2,69.3 52.3,68 53.5,66.8 54.6,65.5 55.8,64.3 57,63.1 58.1,61.9 59.3,60.8 60.4,59.6 61.6,58.5 62.8,57.5 63.9,56.4 65.1,55.4 66.2,54.4 67.4,53.4 68.5,52.5 69.7,51.6 70.9,50.8 72,49.9 73.2,49.1 74.3,48.3 75.5,47.6 76.7,46.9 77.8,46.3 79,45.6 80.1,45 81.3,44.5 82.4,44 83.6,43.5 84.8,43 85.9,42.6 87.1,42.3 88.2,41.9 89.4,41.6 90.6,41.4 91.7,41.2 92.9,41 94,40.8 95.2,40.7 96.3,40.7 97.5,40.7 98.7,40.7 99.8,40.7 101,40.8 102.1,41 103.3,41.2 104.5,41.4 105.6,41.6 106.8,41.9 107.9,42.3 109.1,42.6 110.2,43 111.4,43.5 112.6,44 113.7,44.5 114.9,45 116,45.6 117.2,46.3 118.4,46.9 119.5,47.6 120.7,48.3 121.8,49.1 123,49.9 124.1,50.8 125.3,51.6 126.5,52.5 127.6,53.4 128.8,54.4 129.9,55.4 131.1,56.4 132.2,57.5 133.4,58.5 134.6,59.6 135.7,60.8 136.9,61.9 138,63.1 139.2,64.3 140.4,65.5 141.5,66.8 142.7,68 143.8,69.3 143.8,69.3 51.2,69.3" fill="currentColor" fill-opacity="0.18" stroke="none"/></g><g class="fig-accent-2"><line x1="28" y1="69.3" x2="306" y2="69.3" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 4"/></g><g stroke="currentColor" stroke-width="1.4"><line x1="22" y1="98" x2="310" y2="98"/><line x1="28" y1="188" x2="28" y2="8"/></g><text x="312" y="102" font-size="12" fill="currentColor">θ</text><text x="34" y="10" font-size="12" fill="currentColor">y</text><line x1="51.2" y1="95" x2="51.2" y2="101" stroke="currentColor" stroke-width="1"/><text x="51.2" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">π/6</text><line x1="143.8" y1="95" x2="143.8" y2="101" stroke="currentColor" stroke-width="1"/><text x="143.8" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">5π/6</text><line x1="167" y1="95" x2="167" y2="101" stroke="currentColor" stroke-width="1"/><text x="167" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">π</text><line x1="306" y1="95" x2="306" y2="101" stroke="currentColor" stroke-width="1"/><text x="306" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">2π</text><line x1="25" y1="155.3" x2="31" y2="155.3" stroke="currentColor" stroke-width="1"/><text x="22" y="158.8" font-size="10.5" fill="currentColor" text-anchor="end">−1</text><line x1="25" y1="69.3" x2="31" y2="69.3" stroke="currentColor" stroke-width="1"/><text x="22" y="72.8" font-size="10.5" fill="currentColor" text-anchor="end">1/2</text><line x1="25" y1="40.7" x2="31" y2="40.7" stroke="currentColor" stroke-width="1"/><text x="22" y="44.2" font-size="10.5" fill="currentColor" text-anchor="end">1</text><g class="fig-accent"><path d="M 28 98 L 29.4 96.2 L 30.8 94.4 L 32.2 92.6 L 33.6 90.8 L 35 89 L 36.3 87.3 L 37.7 85.5 L 39.1 83.7 L 40.5 82 L 41.9 80.3 L 43.3 78.6 L 44.7 76.9 L 46.1 75.2 L 47.5 73.6 L 48.8 72 L 50.2 70.4 L 51.6 68.8 L 53 67.3 L 54.4 65.8 L 55.8 64.3 L 57.2 62.9 L 58.6 61.5 L 60 60.1 L 61.4 58.8 L 62.8 57.5 L 64.1 56.2 L 65.5 55 L 66.9 53.8 L 68.3 52.7 L 69.7 51.6 L 71.1 50.6 L 72.5 49.6 L 73.9 48.7 L 75.3 47.8 L 76.7 46.9 L 78 46.1 L 79.4 45.4 L 80.8 44.7 L 82.2 44.1 L 83.6 43.5 L 85 42.9 L 86.4 42.5 L 87.8 42 L 89.2 41.7 L 90.6 41.4 L 91.9 41.1 L 93.3 40.9 L 94.7 40.8 L 96.1 40.7 L 97.5 40.7 L 98.9 40.7 L 100.3 40.8 L 101.7 40.9 L 103.1 41.1 L 104.5 41.4 L 105.8 41.7 L 107.2 42 L 108.6 42.5 L 110 42.9 L 111.4 43.5 L 112.8 44.1 L 114.2 44.7 L 115.6 45.4 L 117 46.1 L 118.4 46.9 L 119.7 47.8 L 121.1 48.7 L 122.5 49.6 L 123.9 50.6 L 125.3 51.6 L 126.7 52.7 L 128.1 53.8 L 129.5 55 L 130.9 56.2 L 132.2 57.5 L 133.6 58.8 L 135 60.1 L 136.4 61.5 L 137.8 62.9 L 139.2 64.3 L 140.6 65.8 L 142 67.3 L 143.4 68.8 L 144.8 70.4 L 146.1 72 L 147.5 73.6 L 148.9 75.2 L 150.3 76.9 L 151.7 78.6 L 153.1 80.3 L 154.5 82 L 155.9 83.7 L 157.3 85.5 L 158.7 87.3 L 160 89 L 161.4 90.8 L 162.8 92.6 L 164.2 94.4 L 165.6 96.2 L 167 98 L 168.4 99.8 L 169.8 101.6 L 171.2 103.4 L 172.6 105.2 L 174 107 L 175.3 108.7 L 176.7 110.5 L 178.1 112.3 L 179.5 114 L 180.9 115.7 L 182.3 117.4 L 183.7 119.1 L 185.1 120.8 L 186.5 122.4 L 187.9 124 L 189.2 125.6 L 190.6 127.2 L 192 128.7 L 193.4 130.2 L 194.8 131.7 L 196.2 133.1 L 197.6 134.5 L 199 135.9 L 200.4 137.2 L 201.7 138.5 L 203.1 139.8 L 204.5 141 L 205.9 142.2 L 207.3 143.3 L 208.7 144.4 L 210.1 145.4 L 211.5 146.4 L 212.9 147.3 L 214.3 148.2 L 215.7 149.1 L 217 149.9 L 218.4 150.6 L 219.8 151.3 L 221.2 151.9 L 222.6 152.5 L 224 153.1 L 225.4 153.5 L 226.8 154 L 228.2 154.3 L 229.5 154.6 L 230.9 154.9 L 232.3 155.1 L 233.7 155.2 L 235.1 155.3 L 236.5 155.3 L 237.9 155.3 L 239.3 155.2 L 240.7 155.1 L 242.1 154.9 L 243.5 154.6 L 244.8 154.3 L 246.2 154 L 247.6 153.5 L 249 153.1 L 250.4 152.5 L 251.8 151.9 L 253.2 151.3 L 254.6 150.6 L 256 149.9 L 257.3 149.1 L 258.7 148.2 L 260.1 147.3 L 261.5 146.4 L 262.9 145.4 L 264.3 144.4 L 265.7 143.3 L 267.1 142.2 L 268.5 141 L 269.9 139.8 L 271.2 138.5 L 272.6 137.2 L 274 135.9 L 275.4 134.5 L 276.8 133.1 L 278.2 131.7 L 279.6 130.2 L 281 128.7 L 282.4 127.2 L 283.8 125.6 L 285.2 124 L 286.5 122.4 L 287.9 120.8 L 289.3 119.1 L 290.7 117.4 L 292.1 115.7 L 293.5 114 L 294.9 112.3 L 296.3 110.5 L 297.7 108.7 L 299.1 107 L 300.4 105.2 L 301.8 103.4 L 303.2 101.6 L 304.6 99.8 L 306 98" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></g><g class="fig-accent-2"><circle cx="51.2" cy="69.3" r="4" fill="currentColor"/></g><g class="fig-accent-2"><circle cx="143.8" cy="69.3" r="4" fill="currentColor"/></g><g class="fig-accent"><text x="32.4" y="23.5" font-size="11.5" fill="currentColor" text-anchor="start">y = sin θ</text></g><g class="fig-accent-2"><text x="97.5" y="34.7" font-size="10.5" fill="currentColor" text-anchor="middle">sin θ ≥ 1/2</text></g></svg>',
+            alt: 'Graph of y = sin theta on [0, 2 pi) with the dashed line y = 1/2. The curve meets the line at theta = pi/6 and theta = 5 pi/6 (filled dots), and the arc of the curve at or above the line, between those two angles, is shaded.',
+            caption: '$\\sin\\theta \\ge \\frac{1}{2}$ exactly on the shaded arc, $\\frac{\\pi}{6} \\le \\theta \\le \\frac{5\\pi}{6}$.',
+            size: 'sm' as const,
+          },
+          {
+            svg: '<svg viewBox="0 0 320 210" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><title>y = cos theta on [0, 2 pi) with the line y = -1/2; the curve is below the line strictly between theta = 2 pi/3 and theta = 4 pi/3 (open circles at the boundaries), and that arc is shaded</title><g class="fig-accent-2"><polygon points="120.7,126.7 121.8,128 123,129.2 124.1,130.5 125.3,131.7 126.5,132.9 127.6,134.1 128.8,135.2 129.9,136.4 131.1,137.5 132.2,138.5 133.4,139.6 134.6,140.6 135.7,141.6 136.9,142.6 138,143.5 139.2,144.4 140.4,145.2 141.5,146.1 142.7,146.9 143.8,147.7 145,148.4 146.1,149.1 147.3,149.7 148.5,150.4 149.6,151 150.8,151.5 151.9,152 153.1,152.5 154.3,153 155.4,153.4 156.6,153.7 157.7,154.1 158.9,154.4 160,154.6 161.2,154.8 162.4,155 163.5,155.2 164.7,155.3 165.8,155.3 167,155.3 168.2,155.3 169.3,155.3 170.5,155.2 171.6,155 172.8,154.8 174,154.6 175.1,154.4 176.3,154.1 177.4,153.7 178.6,153.4 179.7,153 180.9,152.5 182.1,152 183.2,151.5 184.4,151 185.5,150.4 186.7,149.7 187.8,149.1 189,148.4 190.2,147.7 191.3,146.9 192.5,146.1 193.6,145.2 194.8,144.4 196,143.5 197.1,142.6 198.3,141.6 199.4,140.6 200.6,139.6 201.7,138.5 202.9,137.5 204.1,136.4 205.2,135.2 206.4,134.1 207.5,132.9 208.7,131.7 209.9,130.5 211,129.2 212.2,128 213.3,126.7 213.3,126.7 120.7,126.7" fill="currentColor" fill-opacity="0.18" stroke="none"/></g><g class="fig-accent-2"><line x1="28" y1="126.7" x2="306" y2="126.7" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 4"/></g><g stroke="currentColor" stroke-width="1.4"><line x1="22" y1="98" x2="310" y2="98"/><line x1="28" y1="188" x2="28" y2="8"/></g><text x="312" y="102" font-size="12" fill="currentColor">θ</text><text x="34" y="10" font-size="12" fill="currentColor">y</text><line x1="120.7" y1="95" x2="120.7" y2="101" stroke="currentColor" stroke-width="1"/><text x="120.7" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">2π/3</text><line x1="167" y1="95" x2="167" y2="101" stroke="currentColor" stroke-width="1"/><text x="167" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">π</text><line x1="213.3" y1="95" x2="213.3" y2="101" stroke="currentColor" stroke-width="1"/><text x="213.3" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">4π/3</text><line x1="306" y1="95" x2="306" y2="101" stroke="currentColor" stroke-width="1"/><text x="306" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">2π</text><line x1="25" y1="155.3" x2="31" y2="155.3" stroke="currentColor" stroke-width="1"/><text x="22" y="158.8" font-size="10.5" fill="currentColor" text-anchor="end">−1</text><line x1="25" y1="126.7" x2="31" y2="126.7" stroke="currentColor" stroke-width="1"/><text x="22" y="130.2" font-size="10.5" fill="currentColor" text-anchor="end">−1/2</text><line x1="25" y1="40.7" x2="31" y2="40.7" stroke="currentColor" stroke-width="1"/><text x="22" y="44.2" font-size="10.5" fill="currentColor" text-anchor="end">1</text><g class="fig-accent"><path d="M 28 40.7 L 29.4 40.7 L 30.8 40.8 L 32.2 40.9 L 33.6 41.1 L 35 41.4 L 36.3 41.7 L 37.7 42 L 39.1 42.5 L 40.5 42.9 L 41.9 43.5 L 43.3 44.1 L 44.7 44.7 L 46.1 45.4 L 47.5 46.1 L 48.8 46.9 L 50.2 47.8 L 51.6 48.7 L 53 49.6 L 54.4 50.6 L 55.8 51.6 L 57.2 52.7 L 58.6 53.8 L 60 55 L 61.4 56.2 L 62.8 57.5 L 64.1 58.8 L 65.5 60.1 L 66.9 61.5 L 68.3 62.9 L 69.7 64.3 L 71.1 65.8 L 72.5 67.3 L 73.9 68.8 L 75.3 70.4 L 76.7 72 L 78 73.6 L 79.4 75.2 L 80.8 76.9 L 82.2 78.6 L 83.6 80.3 L 85 82 L 86.4 83.7 L 87.8 85.5 L 89.2 87.3 L 90.6 89 L 91.9 90.8 L 93.3 92.6 L 94.7 94.4 L 96.1 96.2 L 97.5 98 L 98.9 99.8 L 100.3 101.6 L 101.7 103.4 L 103.1 105.2 L 104.5 107 L 105.8 108.7 L 107.2 110.5 L 108.6 112.3 L 110 114 L 111.4 115.7 L 112.8 117.4 L 114.2 119.1 L 115.6 120.8 L 117 122.4 L 118.4 124 L 119.7 125.6 L 121.1 127.2 L 122.5 128.7 L 123.9 130.2 L 125.3 131.7 L 126.7 133.1 L 128.1 134.5 L 129.5 135.9 L 130.9 137.2 L 132.2 138.5 L 133.6 139.8 L 135 141 L 136.4 142.2 L 137.8 143.3 L 139.2 144.4 L 140.6 145.4 L 142 146.4 L 143.4 147.3 L 144.8 148.2 L 146.1 149.1 L 147.5 149.9 L 148.9 150.6 L 150.3 151.3 L 151.7 151.9 L 153.1 152.5 L 154.5 153.1 L 155.9 153.5 L 157.3 154 L 158.7 154.3 L 160 154.6 L 161.4 154.9 L 162.8 155.1 L 164.2 155.2 L 165.6 155.3 L 167 155.3 L 168.4 155.3 L 169.8 155.2 L 171.2 155.1 L 172.6 154.9 L 174 154.6 L 175.3 154.3 L 176.7 154 L 178.1 153.5 L 179.5 153.1 L 180.9 152.5 L 182.3 151.9 L 183.7 151.3 L 185.1 150.6 L 186.5 149.9 L 187.9 149.1 L 189.2 148.2 L 190.6 147.3 L 192 146.4 L 193.4 145.4 L 194.8 144.4 L 196.2 143.3 L 197.6 142.2 L 199 141 L 200.4 139.8 L 201.7 138.5 L 203.1 137.2 L 204.5 135.9 L 205.9 134.5 L 207.3 133.1 L 208.7 131.7 L 210.1 130.2 L 211.5 128.7 L 212.9 127.2 L 214.3 125.6 L 215.7 124 L 217 122.4 L 218.4 120.8 L 219.8 119.1 L 221.2 117.4 L 222.6 115.7 L 224 114 L 225.4 112.3 L 226.8 110.5 L 228.2 108.7 L 229.5 107 L 230.9 105.2 L 232.3 103.4 L 233.7 101.6 L 235.1 99.8 L 236.5 98 L 237.9 96.2 L 239.3 94.4 L 240.7 92.6 L 242.1 90.8 L 243.5 89 L 244.8 87.3 L 246.2 85.5 L 247.6 83.7 L 249 82 L 250.4 80.3 L 251.8 78.6 L 253.2 76.9 L 254.6 75.2 L 256 73.6 L 257.3 72 L 258.7 70.4 L 260.1 68.8 L 261.5 67.3 L 262.9 65.8 L 264.3 64.3 L 265.7 62.9 L 267.1 61.5 L 268.5 60.1 L 269.9 58.8 L 271.2 57.5 L 272.6 56.2 L 274 55 L 275.4 53.8 L 276.8 52.7 L 278.2 51.6 L 279.6 50.6 L 281 49.6 L 282.4 48.7 L 283.8 47.8 L 285.2 46.9 L 286.5 46.1 L 287.9 45.4 L 289.3 44.7 L 290.7 44.1 L 292.1 43.5 L 293.5 42.9 L 294.9 42.5 L 296.3 42 L 297.7 41.7 L 299.1 41.4 L 300.4 41.1 L 301.8 40.9 L 303.2 40.8 L 304.6 40.7 L 306 40.7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></g><g class="fig-accent-2"><circle class="fig-bg" cx="120.7" cy="126.7" r="4" stroke="currentColor" stroke-width="2"/></g><g class="fig-accent-2"><circle class="fig-bg" cx="213.3" cy="126.7" r="4" stroke="currentColor" stroke-width="2"/></g><g class="fig-accent"><text x="32.4" y="23.5" font-size="11.5" fill="currentColor" text-anchor="start">y = cos θ</text></g><g class="fig-accent-2"><text x="167" y="169.3" font-size="10.5" fill="currentColor" text-anchor="middle">cos θ &lt; −1/2</text></g></svg>',
+            alt: 'Graph of y = cos theta on [0, 2 pi) with the dashed line y = -1/2. The curve meets the line at theta = 2 pi/3 and theta = 4 pi/3 (open circles), and the arc of the curve below the line, strictly between those two angles, is shaded.',
+            caption: '$\\cos\\theta < -\\frac{1}{2}$ exactly on the shaded arc, $\\frac{2\\pi}{3} < \\theta < \\frac{4\\pi}{3}$ (open circles: boundaries excluded).',
+            size: 'sm' as const,
+          },
+        ],
         content: `## From Equations to Inequalities
 
 To solve an inequality such as $\\sin\\theta \\ge k$ on $[0, 2\\pi)$, solve the **equation** first. Its solutions are the boundary angles that split $[0, 2\\pi)$ into intervals.
 
 1. **Boundaries:** solve $\\sin\\theta = k$.
-2. **Test:** pick one angle inside each interval and check the inequality (or read the unit circle: $\\sin\\theta$ is the $y$-coordinate, $\\cos\\theta$ is the $x$-coordinate).
+2. **Test:** pick one angle inside each interval and check the inequality (or read the graph above: the solution is where the curve is above or below the line; or read the unit circle: $\\sin\\theta$ is the $y$-coordinate, $\\cos\\theta$ is the $x$-coordinate).
 3. **Write the answer:** keep the intervals that work. Include the boundary angles only for $\\le$ or $\\ge$.
 
 ### Example 1: $\\sin\\theta \\ge \\dfrac{1}{2}$ on $[0, 2\\pi)$
@@ -289,7 +303,7 @@ $$\\boxed{\\frac{2\\pi}{3} < \\theta < \\frac{4\\pi}{3}}$$
         type: 'input-boxes' as const,
         content: `**Count & Place** 🧮
 
-Solve $\\cos\\theta = \\dfrac{\\sqrt{2}}{2}$ on $[0, 2\\pi)$. Give each solution as a multiple of $\\pi$ — enter the **coefficient** (e.g. type \`1/4\` for $\\tfrac{\\pi}{4}$).
+Solve $\\cos\\theta = \\dfrac{\\sqrt{2}}{2}$ on $[0, 2\\pi)$. Give each solution as a multiple of $\\pi$ — enter the **coefficient** (e.g. type \`1/3\` for $\\tfrac{\\pi}{3}$).
 
 **1)** Quadrant I solution: $\\theta = \\,?\\,\\cdot\\pi$
 **2)** Quadrant IV solution: $\\theta = \\,?\\,\\cdot\\pi$`,
@@ -397,7 +411,7 @@ You found $\\theta = \\dfrac{\\pi}{3}$ and $\\theta = \\dfrac{5\\pi}{3}$ solve $
           ],
           correctAnswers: ['$2\\pi k$', '$\\dfrac{\\pi}{3} + 2\\pi k$ or $\\dfrac{5\\pi}{3} + 2\\pi k$', '2'],
           hint1: 'Cosine has period $2\\pi$, so we add $2\\pi k$.',
-          hint2: 'Cosine is not symmetric like tangent — you need BOTH base solutions, each with $+2\\pi k$.',
+          hint2: 'Cosine\'s two solutions in one turn are not $\\pi$ apart (tangent\'s are), so you need BOTH base solutions, each with $+2\\pi k$.',
           hint3: 'On exactly one turn $[0,2\\pi)$, only $k=0$ keeps both base angles inside, giving 2 solutions.',
           explanation: 'Period $2\\pi \\Rightarrow +2\\pi k$. Keep both base angles: $\\dfrac{\\pi}{3} + 2\\pi k$ and $\\dfrac{5\\pi}{3} + 2\\pi k$. On $[0,2\\pi)$ that is exactly 2 solutions.',
         },
@@ -419,6 +433,76 @@ How many solutions does each equation have on the interval $[0, 2\\pi)$? (Enter 
           hint2: '$\\sin\\theta = 1$ only at the very top, $\\dfrac{\\pi}{2}$ — just 1 solution.',
           hint3: '$\\tan\\theta = \\sqrt3$ at $\\dfrac{\\pi}{3}$ (QI) and $\\dfrac{4\\pi}{3}$ (QIII) — 2 solutions, $\\pi$ apart.',
           explanation: '1) $\\cos\\theta=0 \\Rightarrow \\dfrac{\\pi}{2}, \\dfrac{3\\pi}{2}$ → 2.  2) $\\sin\\theta=1 \\Rightarrow \\dfrac{\\pi}{2}$ only → 1 (a max is hit once per turn).  3) $\\tan\\theta=\\sqrt3 \\Rightarrow \\dfrac{\\pi}{3}, \\dfrac{4\\pi}{3}$ → 2.',
+        },
+      },
+      {
+        id: 'ste3-multiple-angle',
+        type: 'text' as const,
+        figure: {
+          svg: '<svg viewBox="0 0 340 210" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><title>y = sin 2 theta on [0, 2 pi) with y = sin theta dashed for comparison; the line y = root 3 over 2 meets y = sin 2 theta four times, at pi/6, pi/3, 7 pi/6 and 4 pi/3</title><g class="fig-accent-2"><line x1="28" y1="48.3" x2="326" y2="48.3" stroke="currentColor" stroke-width="1.6" stroke-dasharray="5 4"/></g><g stroke="currentColor" stroke-width="1.4"><line x1="22" y1="98" x2="330" y2="98"/><line x1="28" y1="188" x2="28" y2="8"/></g><text x="332" y="102" font-size="12" fill="currentColor">θ</text><text x="34" y="10" font-size="12" fill="currentColor">y</text><line x1="52.8" y1="95" x2="52.8" y2="101" stroke="currentColor" stroke-width="1"/><text x="52.8" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">π/6</text><line x1="77.7" y1="95" x2="77.7" y2="101" stroke="currentColor" stroke-width="1"/><text x="77.7" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">π/3</text><line x1="102.5" y1="95" x2="102.5" y2="101" stroke="currentColor" stroke-width="1"/><text x="102.5" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">π/2</text><line x1="177" y1="95" x2="177" y2="101" stroke="currentColor" stroke-width="1"/><text x="177" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">π</text><line x1="201.8" y1="95" x2="201.8" y2="101" stroke="currentColor" stroke-width="1"/><text x="201.8" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">7π/6</text><line x1="226.7" y1="95" x2="226.7" y2="101" stroke="currentColor" stroke-width="1"/><text x="226.7" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">4π/3</text><line x1="251.5" y1="95" x2="251.5" y2="101" stroke="currentColor" stroke-width="1"/><text x="251.5" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">3π/2</text><line x1="326" y1="95" x2="326" y2="101" stroke="currentColor" stroke-width="1"/><text x="326" y="112" font-size="10.5" fill="currentColor" text-anchor="middle">2π</text><line x1="25" y1="155.3" x2="31" y2="155.3" stroke="currentColor" stroke-width="1"/><text x="22" y="158.8" font-size="10.5" fill="currentColor" text-anchor="end">−1</text><line x1="25" y1="40.7" x2="31" y2="40.7" stroke="currentColor" stroke-width="1"/><text x="22" y="44.2" font-size="10.5" fill="currentColor" text-anchor="end">1</text><g class="fig-accent"><path d="M 28 98 L 29.2 95 L 30.5 92 L 31.7 89 L 33 86.1 L 34.2 83.2 L 35.5 80.3 L 36.7 77.5 L 37.9 74.7 L 39.2 72 L 40.4 69.3 L 41.7 66.8 L 42.9 64.3 L 44.1 61.9 L 45.4 59.6 L 46.6 57.5 L 47.9 55.4 L 49.1 53.4 L 50.3 51.6 L 51.6 49.9 L 52.8 48.3 L 54.1 46.9 L 55.3 45.6 L 56.6 44.5 L 57.8 43.5 L 59 42.6 L 60.3 41.9 L 61.5 41.4 L 62.8 41 L 64 40.7 L 65.2 40.7 L 66.5 40.7 L 67.7 41 L 69 41.4 L 70.2 41.9 L 71.5 42.6 L 72.7 43.5 L 73.9 44.5 L 75.2 45.6 L 76.4 46.9 L 77.7 48.3 L 78.9 49.9 L 80.2 51.6 L 81.4 53.4 L 82.6 55.4 L 83.9 57.5 L 85.1 59.6 L 86.4 61.9 L 87.6 64.3 L 88.8 66.8 L 90.1 69.3 L 91.3 72 L 92.6 74.7 L 93.8 77.5 L 95 80.3 L 96.3 83.2 L 97.5 86.1 L 98.8 89 L 100 92 L 101.3 95 L 102.5 98 L 103.7 101 L 105 104 L 106.2 107 L 107.5 109.9 L 108.7 112.8 L 110 115.7 L 111.2 118.5 L 112.4 121.3 L 113.7 124 L 114.9 126.7 L 116.2 129.2 L 117.4 131.7 L 118.6 134.1 L 119.9 136.4 L 121.1 138.5 L 122.4 140.6 L 123.6 142.6 L 124.9 144.4 L 126.1 146.1 L 127.3 147.7 L 128.6 149.1 L 129.8 150.4 L 131.1 151.5 L 132.3 152.5 L 133.5 153.4 L 134.8 154.1 L 136 154.6 L 137.3 155 L 138.5 155.3 L 139.8 155.3 L 141 155.3 L 142.2 155 L 143.5 154.6 L 144.7 154.1 L 146 153.4 L 147.2 152.5 L 148.4 151.5 L 149.7 150.4 L 150.9 149.1 L 152.2 147.7 L 153.4 146.1 L 154.6 144.4 L 155.9 142.6 L 157.1 140.6 L 158.4 138.5 L 159.6 136.4 L 160.9 134.1 L 162.1 131.7 L 163.3 129.2 L 164.6 126.7 L 165.8 124 L 167.1 121.3 L 168.3 118.5 L 169.5 115.7 L 170.8 112.8 L 172 109.9 L 173.3 107 L 174.5 104 L 175.8 101 L 177 98 L 178.2 95 L 179.5 92 L 180.7 89 L 182 86.1 L 183.2 83.2 L 184.5 80.3 L 185.7 77.5 L 186.9 74.7 L 188.2 72 L 189.4 69.3 L 190.7 66.8 L 191.9 64.3 L 193.1 61.9 L 194.4 59.6 L 195.6 57.5 L 196.9 55.4 L 198.1 53.4 L 199.3 51.6 L 200.6 49.9 L 201.8 48.3 L 203.1 46.9 L 204.3 45.6 L 205.6 44.5 L 206.8 43.5 L 208 42.6 L 209.3 41.9 L 210.5 41.4 L 211.8 41 L 213 40.7 L 214.2 40.7 L 215.5 40.7 L 216.7 41 L 218 41.4 L 219.2 41.9 L 220.5 42.6 L 221.7 43.5 L 222.9 44.5 L 224.2 45.6 L 225.4 46.9 L 226.7 48.3 L 227.9 49.9 L 229.2 51.6 L 230.4 53.4 L 231.6 55.4 L 232.9 57.5 L 234.1 59.6 L 235.4 61.9 L 236.6 64.3 L 237.8 66.8 L 239.1 69.3 L 240.3 72 L 241.6 74.7 L 242.8 77.5 L 244 80.3 L 245.3 83.2 L 246.5 86.1 L 247.8 89 L 249 92 L 250.3 95 L 251.5 98 L 252.7 101 L 254 104 L 255.2 107 L 256.5 109.9 L 257.7 112.8 L 259 115.7 L 260.2 118.5 L 261.4 121.3 L 262.7 124 L 263.9 126.7 L 265.2 129.2 L 266.4 131.7 L 267.6 134.1 L 268.9 136.4 L 270.1 138.5 L 271.4 140.6 L 272.6 142.6 L 273.9 144.4 L 275.1 146.1 L 276.3 147.7 L 277.6 149.1 L 278.8 150.4 L 280.1 151.5 L 281.3 152.5 L 282.5 153.4 L 283.8 154.1 L 285 154.6 L 286.3 155 L 287.5 155.3 L 288.8 155.3 L 290 155.3 L 291.2 155 L 292.5 154.6 L 293.7 154.1 L 295 153.4 L 296.2 152.5 L 297.4 151.5 L 298.7 150.4 L 299.9 149.1 L 301.2 147.7 L 302.4 146.1 L 303.7 144.4 L 304.9 142.6 L 306.1 140.6 L 307.4 138.5 L 308.6 136.4 L 309.9 134.1 L 311.1 131.7 L 312.3 129.2 L 313.6 126.7 L 314.8 124 L 316.1 121.3 L 317.3 118.5 L 318.6 115.7 L 319.8 112.8 L 321 109.9 L 322.3 107 L 323.5 104 L 324.8 101 L 326 98" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></g><g class="fig-muted"><path d="M 28 98 L 29.5 96.2 L 31 94.4 L 32.5 92.6 L 34 90.8 L 35.5 89 L 36.9 87.3 L 38.4 85.5 L 39.9 83.7 L 41.4 82 L 42.9 80.3 L 44.4 78.6 L 45.9 76.9 L 47.4 75.2 L 48.9 73.6 L 50.3 72 L 51.8 70.4 L 53.3 68.8 L 54.8 67.3 L 56.3 65.8 L 57.8 64.3 L 59.3 62.9 L 60.8 61.5 L 62.3 60.1 L 63.8 58.8 L 65.2 57.5 L 66.7 56.2 L 68.2 55 L 69.7 53.8 L 71.2 52.7 L 72.7 51.6 L 74.2 50.6 L 75.7 49.6 L 77.2 48.7 L 78.7 47.8 L 80.2 46.9 L 81.6 46.1 L 83.1 45.4 L 84.6 44.7 L 86.1 44.1 L 87.6 43.5 L 89.1 42.9 L 90.6 42.5 L 92.1 42 L 93.6 41.7 L 95 41.4 L 96.5 41.1 L 98 40.9 L 99.5 40.8 L 101 40.7 L 102.5 40.7 L 104 40.7 L 105.5 40.8 L 107 40.9 L 108.5 41.1 L 110 41.4 L 111.4 41.7 L 112.9 42 L 114.4 42.5 L 115.9 42.9 L 117.4 43.5 L 118.9 44.1 L 120.4 44.7 L 121.9 45.4 L 123.4 46.1 L 124.9 46.9 L 126.3 47.8 L 127.8 48.7 L 129.3 49.6 L 130.8 50.6 L 132.3 51.6 L 133.8 52.7 L 135.3 53.8 L 136.8 55 L 138.3 56.2 L 139.8 57.5 L 141.2 58.8 L 142.7 60.1 L 144.2 61.5 L 145.7 62.9 L 147.2 64.3 L 148.7 65.8 L 150.2 67.3 L 151.7 68.8 L 153.2 70.4 L 154.6 72 L 156.1 73.6 L 157.6 75.2 L 159.1 76.9 L 160.6 78.6 L 162.1 80.3 L 163.6 82 L 165.1 83.7 L 166.6 85.5 L 168.1 87.3 L 169.5 89 L 171 90.8 L 172.5 92.6 L 174 94.4 L 175.5 96.2 L 177 98 L 178.5 99.8 L 180 101.6 L 181.5 103.4 L 183 105.2 L 184.5 107 L 185.9 108.7 L 187.4 110.5 L 188.9 112.3 L 190.4 114 L 191.9 115.7 L 193.4 117.4 L 194.9 119.1 L 196.4 120.8 L 197.9 122.4 L 199.4 124 L 200.8 125.6 L 202.3 127.2 L 203.8 128.7 L 205.3 130.2 L 206.8 131.7 L 208.3 133.1 L 209.8 134.5 L 211.3 135.9 L 212.8 137.2 L 214.2 138.5 L 215.7 139.8 L 217.2 141 L 218.7 142.2 L 220.2 143.3 L 221.7 144.4 L 223.2 145.4 L 224.7 146.4 L 226.2 147.3 L 227.7 148.2 L 229.2 149.1 L 230.6 149.9 L 232.1 150.6 L 233.6 151.3 L 235.1 151.9 L 236.6 152.5 L 238.1 153.1 L 239.6 153.5 L 241.1 154 L 242.6 154.3 L 244 154.6 L 245.5 154.9 L 247 155.1 L 248.5 155.2 L 250 155.3 L 251.5 155.3 L 253 155.3 L 254.5 155.2 L 256 155.1 L 257.5 154.9 L 259 154.6 L 260.4 154.3 L 261.9 154 L 263.4 153.5 L 264.9 153.1 L 266.4 152.5 L 267.9 151.9 L 269.4 151.3 L 270.9 150.6 L 272.4 149.9 L 273.8 149.1 L 275.3 148.2 L 276.8 147.3 L 278.3 146.4 L 279.8 145.4 L 281.3 144.4 L 282.8 143.3 L 284.3 142.2 L 285.8 141 L 287.3 139.8 L 288.7 138.5 L 290.2 137.2 L 291.7 135.9 L 293.2 134.5 L 294.7 133.1 L 296.2 131.7 L 297.7 130.2 L 299.2 128.7 L 300.7 127.2 L 302.2 125.6 L 303.7 124 L 305.1 122.4 L 306.6 120.8 L 308.1 119.1 L 309.6 117.4 L 311.1 115.7 L 312.6 114 L 314.1 112.3 L 315.6 110.5 L 317.1 108.7 L 318.6 107 L 320 105.2 L 321.5 103.4 L 323 101.6 L 324.5 99.8 L 326 98" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" stroke-dasharray="3 3"/></g><g class="fig-accent-2"><circle cx="52.8" cy="48.3" r="4" fill="currentColor"/></g><g class="fig-accent-2"><circle cx="77.7" cy="48.3" r="4" fill="currentColor"/></g><g class="fig-accent-2"><circle cx="201.8" cy="48.3" r="4" fill="currentColor"/></g><g class="fig-accent-2"><circle cx="226.7" cy="48.3" r="4" fill="currentColor"/></g><g class="fig-accent"><text x="31.8" y="22.3" font-size="11.5" fill="currentColor" text-anchor="start">y = sin 2θ</text></g><g class="fig-accent-2"><text x="252.5" y="42.3" font-size="10.5" fill="currentColor" text-anchor="start">y = √3/2</text></g><g class="fig-muted"><text x="258.6" y="161.1" font-size="10" fill="currentColor" text-anchor="start">dashed: y = sin θ</text></g></svg>',
+          alt: 'Graph of y = sin 2 theta on [0, 2 pi), which completes two full waves, with y = sin theta drawn dashed for comparison. The dashed horizontal line y = root 3 over 2 meets y = sin 2 theta at four points: theta = pi/6, pi/3, 7 pi/6 and 4 pi/3.',
+          caption: 'Figure 1. $y = \\sin 2\\theta$ has period $\\pi$, so the line $y = \\frac{\\sqrt{3}}{2}$ meets it **four** times on $[0, 2\\pi)$, twice as often as it meets $y = \\sin\\theta$.',
+        },
+        content: `## Multiple Angles: $\\sin(b\\theta) = k$ and Shifted Arguments
+
+When the argument is $2\\theta$, $3x$, or $x - \\frac{\\pi}{4}$ instead of a bare $\\theta$, substitute $u$ for the whole argument, solve for $u$ with the **general solution**, then undo the substitution. Because $\\sin(b\\theta)$ has period $\\frac{2\\pi}{b}$ (and $\\tan(b\\theta)$ has period $\\frac{\\pi}{b}$), there are **more** solutions per turn: $b$ times as many.
+
+### Example: Solve $\\sin 2\\theta = \\dfrac{\\sqrt3}{2}$ on $[0, 2\\pi)$
+
+Let $u = 2\\theta$. As $\\theta$ runs over $[0, 2\\pi)$, $u$ runs over $[0, 4\\pi)$, **two** full turns, so list the $u$-solutions over two turns:
+
+$$u = \\frac{\\pi}{3},\\ \\frac{2\\pi}{3},\\ \\frac{7\\pi}{3},\\ \\frac{8\\pi}{3}$$
+
+Divide by $2$: $\\theta = \\dfrac{\\pi}{6},\\ \\dfrac{\\pi}{3},\\ \\dfrac{7\\pi}{6},\\ \\dfrac{4\\pi}{3}$ — four solutions, as Figure 1 shows.
+
+**General solution:** from $u = \\frac{\\pi}{3} + 2\\pi k$ or $u = \\frac{2\\pi}{3} + 2\\pi k$, dividing by $2$ gives
+
+$$\\theta = \\frac{\\pi}{6} + \\pi k \\quad\\text{or}\\quad \\theta = \\frac{\\pi}{3} + \\pi k$$
+
+The period added is $\\pi$, because that is the period of $\\sin 2\\theta$.
+
+### Example: Solve $\\cos\\!\\left(x - \\dfrac{\\pi}{4}\\right) = 0$ for all $x$
+
+$\\cos u = 0$ at $u = \\frac{\\pi}{2} + \\pi k$ (the two base angles $\\frac{\\pi}{2}$ and $\\frac{3\\pi}{2}$ are $\\pi$ apart, so one family covers both). Then $x = u + \\frac{\\pi}{4} = \\frac{3\\pi}{4} + \\pi k$.
+
+> ⚠️ Two traps: (1) solving for $u$ on $[0, 2\\pi)$ only, which drops the second turn and loses half the solutions; (2) dividing the **base angles** by $b$ but forgetting to divide the **period** too. For $\\tan 3x = 1$, the period of $\\tan 3x$ is $\\frac{\\pi}{3}$, so the solutions are $x = \\frac{\\pi}{12} + \\frac{\\pi}{3}k$.`,
+      },
+      {
+        id: 'ste3-multi-mc',
+        type: 'multiple-choice' as const,
+        content: `**Concept Check** 🎯`,
+        exercise: {
+          questions: [
+            {
+              question: 'Which gives every solution of $\\cos\\!\\left(x - \\dfrac{\\pi}{4}\\right) = 0$? ($k$ is any integer.)',
+              options: ['$x = \\dfrac{3\\pi}{4} + \\pi k$', '$x = \\dfrac{\\pi}{4} + \\pi k$', '$x = \\dfrac{3\\pi}{4} + 2\\pi k$', '$x = \\dfrac{\\pi}{2} + \\pi k$'],
+              correctAnswer: 0,
+              explanation: 'With $u = x - \\dfrac{\\pi}{4}$, $\\cos u = 0$ at $u = \\dfrac{\\pi}{2} + \\pi k$, so $x = \\dfrac{\\pi}{2} + \\dfrac{\\pi}{4} + \\pi k = \\dfrac{3\\pi}{4} + \\pi k$. Subtracting the shift instead of adding gives $\\dfrac{\\pi}{4} + \\pi k$, using $2\\pi k$ misses every other solution, and $\\dfrac{\\pi}{2} + \\pi k$ forgets to undo the shift.',
+            },
+            {
+              question: 'Which gives every solution of $\\sin 2\\theta = \\dfrac{1}{2}$? ($k$ is any integer.)',
+              options: ['$\\theta = \\dfrac{\\pi}{12} + \\pi k$ or $\\theta = \\dfrac{5\\pi}{12} + \\pi k$', '$\\theta = \\dfrac{\\pi}{12} + 2\\pi k$ or $\\theta = \\dfrac{5\\pi}{12} + 2\\pi k$', '$\\theta = \\dfrac{\\pi}{6} + \\pi k$ or $\\theta = \\dfrac{5\\pi}{6} + \\pi k$', '$\\theta = \\dfrac{\\pi}{3} + 2\\pi k$ or $\\theta = \\dfrac{5\\pi}{3} + 2\\pi k$'],
+              correctAnswer: 0,
+              explanation: '$2\\theta = \\dfrac{\\pi}{6} + 2\\pi k$ or $\\dfrac{5\\pi}{6} + 2\\pi k$; dividing everything by $2$ gives $\\theta = \\dfrac{\\pi}{12} + \\pi k$ or $\\dfrac{5\\pi}{12} + \\pi k$. Keeping $2\\pi k$ forgets to halve the period, $\\dfrac{\\pi}{6}$ and $\\dfrac{5\\pi}{6}$ forget to halve the base angles, and $\\dfrac{\\pi}{3}, \\dfrac{5\\pi}{3}$ solve $\\cos\\theta = \\dfrac{1}{2}$.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'ste3-multi-input',
+        type: 'input-boxes' as const,
+        content: `**Count and Place** 🧮
+
+**1)** How many solutions does $\\tan 3x = 1$ have on $[0, \\pi)$? (Enter a whole number.)
+**2)** How many solutions does $\\cos 2\\theta = -\\dfrac{1}{2}$ have on $[0, 2\\pi)$?
+**3)** The smallest positive solution of $\\cos 3x = 0$ is $x = \\,?\\,\\cdot\\pi$ (enter the coefficient, e.g. \`1/8\`).`,
+        exercise: {
+          boxes: 3,
+          correctAnswers: ['3', '4', '1/6'],
+          hint1: '$3x = \\dfrac{\\pi}{4} + \\pi k$, so $x = \\dfrac{\\pi}{12} + \\dfrac{\\pi}{3}k$. Count the values in $[0, \\pi)$: $k = 0, 1, 2$.',
+          hint2: '$u = 2\\theta$ runs over $[0, 4\\pi)$, two turns, and $\\cos u = -\\dfrac12$ twice per turn.',
+          hint3: '$\\cos u = 0$ first at $u = \\dfrac{\\pi}{2}$; then $3x = \\dfrac{\\pi}{2}$.',
+          explanation: '1) $x = \\dfrac{\\pi}{12}, \\dfrac{5\\pi}{12}, \\dfrac{3\\pi}{4}$ → 3 solutions (the next, $\\dfrac{13\\pi}{12}$, is past $\\pi$).  2) $2\\theta = \\dfrac{2\\pi}{3}, \\dfrac{4\\pi}{3}, \\dfrac{8\\pi}{3}, \\dfrac{10\\pi}{3}$ → 4 solutions.  3) $3x = \\dfrac{\\pi}{2} \\Rightarrow x = \\dfrac{\\pi}{6}$, coefficient $\\dfrac16$.',
         },
       },
     ],
@@ -517,7 +601,11 @@ Let $u = \\sin\\theta$: $\\;2u^2 - u - 1 = 0$. Factor: $(2u + 1)(u - 1) = 0$.
 
 $$\\boxed{\\theta = \\frac{\\pi}{2}, \\; \\frac{7\\pi}{6}, \\; \\frac{11\\pi}{6}}$$
 
-> 💡 $\\sin\\theta = -\\dfrac12$ is negative → QIII and QIV: $\\pi + \\dfrac{\\pi}{6} = \\dfrac{7\\pi}{6}$ and $2\\pi - \\dfrac{\\pi}{6} = \\dfrac{11\\pi}{6}$.`,
+> 💡 $\\sin\\theta = -\\dfrac12$ is negative → QIII and QIV: $\\pi + \\dfrac{\\pi}{6} = \\dfrac{7\\pi}{6}$ and $2\\pi - \\dfrac{\\pi}{6} = \\dfrac{11\\pi}{6}$.
+
+### Reciprocal functions and identities
+
+An equation in $\\sec$, $\\csc$ or $\\cot$ is an equation in $\\cos$, $\\sin$ or $\\tan$ in disguise: $\\sec\\theta = 2$ means $\\cos\\theta = \\dfrac12$, so $\\theta = \\dfrac{\\pi}{3}, \\dfrac{5\\pi}{3}$. When an equation mixes two functions or two angles, such as $2\\cos^2\\theta + 3\\sin\\theta - 3 = 0$ or $\\cos 2x + \\cos x = 0$, rewrite it with an identity first; that method is the subject of the lesson *Trigonometric Identities and Equivalent Forms*, Part 6.`,
       },
       {
         id: 'ste4-dropdown',
@@ -543,7 +631,7 @@ Solve $2\\cos^2\\theta - \\cos\\theta = 0$ on $[0, 2\\pi)$ by factoring.`,
         type: 'input-boxes' as const,
         content: `**Isolate, Then Solve** 🧮
 
-Solve $2\\cos\\theta + \\sqrt{3} = 0$ on $[0, 2\\pi)$. Give each solution as a coefficient of $\\pi$ (type \`5/6\` for $\\tfrac{5\\pi}{6}$).
+Solve $2\\cos\\theta + \\sqrt{3} = 0$ on $[0, 2\\pi)$. Give each solution as a coefficient of $\\pi$ (type \`2/3\` for $\\tfrac{2\\pi}{3}$).
 
 **1)** Smaller solution: $\\theta = \\,?\\,\\cdot\\pi$
 **2)** Larger solution: $\\theta = \\,?\\,\\cdot\\pi$`,
@@ -589,7 +677,7 @@ Inverse trig functions are built to return a **single** angle from a restricted 
 
 So the calculator's answer is just **one** solution (or a reference angle). **You** must find the others using A·S·T·C and the period.
 
-> ⚠️ **Mode matters!** Set your calculator to **radians** when the problem uses radians and **degrees** when it uses degrees. A wrong mode is the #1 source of wrong trig-equation answers.`,
+> ⚠️ **Mode matters!** AP Precalculus measures angles in radians, so keep your calculator in **radian** mode. Degree mode gives a wrong answer on almost every exam item.`,
       },
       {
         id: 'ste5-worked',
@@ -615,10 +703,10 @@ $$\\boxed{\\theta \\approx 1.16, \\; 5.12}$$
         exercise: {
           questions: [
             {
-              question: 'Your calculator gives $\\sin^{-1}(0.7) \\approx 0.78$ rad. What is the OTHER solution on $[0, 2\\pi)$?',
-              options: ['$\\pi - 0.78 \\approx 2.36$', '$2\\pi - 0.78 \\approx 5.50$', '$\\pi + 0.78 \\approx 3.92$', '$0.78$ is the only one'],
+              question: 'Your calculator gives $\\sin^{-1}(0.7) \\approx 0.775$ rad. What is the OTHER solution on $[0, 2\\pi)$?',
+              options: ['$\\pi - 0.775 \\approx 2.37$', '$2\\pi - 0.775 \\approx 5.51$', '$\\pi + 0.775 \\approx 3.92$', '$0.775$ is the only one'],
               correctAnswer: 0,
-              explanation: '$\\sin\\theta = 0.7 > 0$ → solutions in QI and QII. The calculator gives the QI angle $0.78$; the QII partner is $\\pi - 0.78 \\approx 2.36$.',
+              explanation: '$\\sin\\theta = 0.7 > 0$ → solutions in QI and QII. The calculator gives the QI angle $0.775$; the QII partner is $\\pi - 0.775 \\approx 2.37$.',
             },
             {
               question: 'Why does $\\tan^{-1}$ on a calculator never directly return a Quadrant-III angle?',
@@ -658,17 +746,17 @@ You're solving $\\sin\\theta = 0.6$ on $[0, 2\\pi)$ and your calculator (radian 
         type: 'input-boxes' as const,
         content: `**Calculator Practice** 🧮
 
-Solve $\\tan\\theta = 2$ on $[0, 2\\pi)$. Your calculator gives $\\tan^{-1}(2) \\approx 1.11$ rad. Round answers to **2 decimals**.
+Solve $\\tan\\theta = 2$ on $[0, 2\\pi)$. Your calculator gives $\\tan^{-1}(2) \\approx 1.11$ rad, which is the Quadrant I solution. Round answers to **2 decimals**.
 
-**1)** Quadrant I solution: $\\theta \\approx \\,?$
-**2)** Quadrant III solution: $\\theta \\approx \\,?$  *(add $\\pi$)*`,
+**1)** Quadrant III solution: $\\theta \\approx \\,?$
+**2)** Now solve $\\tan\\theta = -2$ on $[0, 2\\pi)$ instead. The **smaller** solution is $\\theta \\approx \\,?$`,
         exercise: {
           boxes: 2,
-          correctAnswers: ['1.11', '4.25'],
-          hint1: 'The calculator value $1.11$ is the QI solution.',
-          hint2: 'Tangent is positive in QI and QIII, and those two solutions differ by exactly $\\pi$.',
-          hint3: 'QIII $= 1.11 + \\pi \\approx 1.11 + 3.14 = 4.25$.',
-          explanation: '$\\tan\\theta = 2 > 0$ → QI & QIII. QI $\\approx 1.11$; QIII $= 1.11 + \\pi \\approx 4.25$.',
+          correctAnswers: ['4.25', '2.03'],
+          hint1: 'Tangent is positive in QI and QIII, and those two solutions differ by exactly $\\pi$: QIII $= 1.11 + \\pi$.',
+          hint2: 'For $\\tan\\theta = -2$ the calculator gives $-1.11$, which is not in $[0, 2\\pi)$; tangent is negative in QII and QIV.',
+          hint3: 'QII solution $= \\pi - 1.11 \\approx 2.03$ (the QIV one is $2\\pi - 1.11 \\approx 5.18$).',
+          explanation: '1) $\\tan\\theta = 2 > 0$ → QI & QIII; QIII $= 1.11 + \\pi \\approx 4.25$. 2) $\\tan\\theta = -2$ has reference angle $1.11$ and solutions in QII and QIV: $\\pi - 1.11 \\approx 2.03$ and $2\\pi - 1.11 \\approx 5.18$; the smaller is $2.03$.',
         },
       },
     ],
@@ -698,9 +786,9 @@ For $f(t) = A\\sin\\big(B(t - C)\\big) + D$:
 
 | Symbol | Name | Meaning |
 |--------|------|---------|
-| $|A|$ | amplitude | half the distance between max and min |
+| $\\lvert A \\rvert$ | amplitude | half the distance between max and min |
 | $D$ | midline | the average value (vertical shift) |
-| $\\dfrac{2\\pi}{B}$ | period | time for one full cycle |
+| $\\dfrac{2\\pi}{\\lvert B \\rvert}$ | period | time for one full cycle |
 | $C$ | phase shift | horizontal shift |
 
 The maximum is $D + |A|$ and the minimum is $D - |A|$.
@@ -766,18 +854,18 @@ The context restricts the domain to one day. Then $\\sin u > \\dfrac12$ with $u 
         type: 'dropdown-select' as const,
         content: `**Set Up the Equation** 🔽
 
-The depth of water at a dock is $D(t) = 4\\sin\\big(\\tfrac{\\pi}{6}t\\big) + 9$ feet, $t$ in hours. You want to know when the depth is $11$ feet.`,
+The depth of water at a dock is $D(t) = 4\\sin\\big(\\tfrac{\\pi}{6}t\\big) + 9$ feet, $t$ in hours. You want to know when the depth is $7$ feet.`,
         exercise: {
           dropdowns: [
-            { label: 'After isolating, $\\sin\\big(\\tfrac{\\pi}{6}t\\big) = $', options: ['$\\dfrac{1}{2}$', '$2$', '$\\dfrac{11}{9}$', '$\\dfrac{1}{4}$'] },
-            { label: 'The first positive inner angle is:', options: ['$\\dfrac{\\pi}{6}$', '$\\dfrac{\\pi}{2}$', '$\\dfrac{\\pi}{3}$', '$\\dfrac{5\\pi}{6}$'] },
-            { label: 'Solving $\\tfrac{\\pi}{6}t = \\tfrac{\\pi}{6}$ gives:', options: ['$t = 1$', '$t = 2$', '$t = 6$', '$t = \\dfrac{1}{2}$'] },
+            { label: 'After isolating, $\\sin\\big(\\tfrac{\\pi}{6}t\\big) = $', options: ['$-\\dfrac{1}{2}$', '$\\dfrac{1}{2}$', '$\\dfrac{7}{9}$', '$-2$'] },
+            { label: 'The first positive inner angle is:', options: ['$\\dfrac{7\\pi}{6}$', '$\\dfrac{\\pi}{6}$', '$\\dfrac{11\\pi}{6}$', '$\\dfrac{5\\pi}{6}$'] },
+            { label: 'Solving $\\tfrac{\\pi}{6}t = \\tfrac{7\\pi}{6}$ gives:', options: ['$t = 7$', '$t = 1$', '$t = 11$', '$t = 5$'] },
           ],
-          correctAnswers: ['$\\dfrac{1}{2}$', '$\\dfrac{\\pi}{6}$', '$t = 1$'],
-          hint1: '$4\\sin(\\cdot) + 9 = 11 \\Rightarrow 4\\sin(\\cdot) = 2 \\Rightarrow \\sin(\\cdot) = \\dfrac12$.',
-          hint2: 'The smallest positive angle with sine $\\dfrac12$ is the QI reference angle $\\dfrac{\\pi}{6}$.',
-          hint3: '$\\tfrac{\\pi}{6}t = \\tfrac{\\pi}{6} \\Rightarrow t = 1$ (multiply both sides by $\\tfrac{6}{\\pi}$).',
-          explanation: 'Isolate to $\\sin\\big(\\tfrac{\\pi}{6}t\\big)=\\dfrac12$; first inner angle $\\dfrac{\\pi}{6}$; then $\\tfrac{\\pi}{6}t = \\tfrac{\\pi}{6} \\Rightarrow t = 1$ hour.',
+          correctAnswers: ['$-\\dfrac{1}{2}$', '$\\dfrac{7\\pi}{6}$', '$t = 7$'],
+          hint1: '$4\\sin(\\cdot) + 9 = 7 \\Rightarrow 4\\sin(\\cdot) = -2 \\Rightarrow \\sin(\\cdot) = -\\dfrac12$.',
+          hint2: 'Sine is negative in QIII and QIV; the smallest positive angle with sine $-\\dfrac12$ is $\\pi + \\dfrac{\\pi}{6} = \\dfrac{7\\pi}{6}$.',
+          hint3: '$\\tfrac{\\pi}{6}t = \\tfrac{7\\pi}{6} \\Rightarrow t = 7$ (multiply both sides by $\\tfrac{6}{\\pi}$).',
+          explanation: 'Isolate to $\\sin\\big(\\tfrac{\\pi}{6}t\\big)=-\\dfrac12$; first inner angle $\\dfrac{7\\pi}{6}$; then $\\tfrac{\\pi}{6}t = \\tfrac{7\\pi}{6} \\Rightarrow t = 7$ hours (the second time, from $\\dfrac{11\\pi}{6}$, is $t = 11$).',
         },
       },
       {
@@ -828,6 +916,8 @@ You can now (1) read the unit circle, (2) solve basic equations on $[0, 2\\pi)$,
 | Find the sign / quadrants | A·S·T·C ("All Students Take Calculus") |
 | Place by quadrant | QI $=\\alpha$, QII $=\\pi-\\alpha$, QIII $=\\pi+\\alpha$, QIV $=2\\pi-\\alpha$ |
 | All solutions | add $+2\\pi k$ (sin, cos) or $+\\pi k$ (tan) |
+| Multiple angle $\\sin(b\\theta) = k$ | substitute $u = b\\theta$, solve over $b$ turns, divide base angles **and** period by $b$ |
+| Inequality | solve the equation for the boundaries, test each interval, include boundaries only for $\\le$ / $\\ge$ |
 | Equation needs algebra | isolate / factor first; never divide away a factor |
 | Quadratic in trig | substitute $u$, factor, back-substitute |
 | Applied model | set $f(t)=$ value, isolate the sine/cosine, solve the inner angle, undo for $t$ |
@@ -854,11 +944,42 @@ Match each equation to the **first** thing you should do.`,
         },
       },
       {
+        id: 'ste7-ineq-mc',
+        type: 'multiple-choice' as const,
+        content: `**Inequalities** 🎯`,
+        exercise: {
+          questions: [
+            {
+              question: 'Solve $\\tan\\theta \\le -1$ on $[0, 2\\pi)$.',
+              options: [
+                '$\\left(\\dfrac{\\pi}{2}, \\dfrac{3\\pi}{4}\\right] \\cup \\left(\\dfrac{3\\pi}{2}, \\dfrac{7\\pi}{4}\\right]$',
+                '$\\left[\\dfrac{3\\pi}{4}, \\dfrac{7\\pi}{4}\\right]$',
+                '$\\left[\\dfrac{3\\pi}{4}, \\pi\\right) \\cup \\left[\\dfrac{7\\pi}{4}, 2\\pi\\right)$',
+                '$\\left(\\dfrac{\\pi}{2}, \\dfrac{3\\pi}{4}\\right) \\cup \\left(\\dfrac{3\\pi}{2}, \\dfrac{7\\pi}{4}\\right)$',
+              ],
+              correctAnswer: 0,
+              explanation: 'The boundaries are where $\\tan\\theta = -1$ ($\\dfrac{3\\pi}{4}$, $\\dfrac{7\\pi}{4}$) and where tangent is undefined ($\\dfrac{\\pi}{2}$, $\\dfrac{3\\pi}{2}$). Just past $\\dfrac{\\pi}{2}$ the tangent is a huge negative number, and it rises to $-1$ at $\\dfrac{3\\pi}{4}$, so $\\tan\\theta \\le -1$ on $\\left(\\dfrac{\\pi}{2}, \\dfrac{3\\pi}{4}\\right]$, and again one period later. The undefined endpoints are excluded and the $-1$ endpoints are included because the inequality is $\\le$. $\\left[\\dfrac{3\\pi}{4}, \\dfrac{7\\pi}{4}\\right]$ includes QIII, where tangent is positive.',
+            },
+            {
+              question: 'For which $x$ in $[0, 2\\pi)$ is $\\sin x > \\cos x$?',
+              options: [
+                '$\\dfrac{\\pi}{4} < x < \\dfrac{5\\pi}{4}$',
+                '$0 < x < \\pi$',
+                '$\\dfrac{\\pi}{4} < x < \\dfrac{3\\pi}{4}$',
+                '$\\dfrac{5\\pi}{4} < x < 2\\pi$ or $0 \\le x < \\dfrac{\\pi}{4}$',
+              ],
+              correctAnswer: 0,
+              explanation: 'The two curves cross where $\\sin x = \\cos x$, at $x = \\dfrac{\\pi}{4}$ and $x = \\dfrac{5\\pi}{4}$. Testing $x = \\dfrac{\\pi}{2}$ gives $1 > 0$, so sine is on top between the crossings. The interval $(0, \\pi)$ is where $\\sin x > 0$, not where it beats cosine, and the last option is where $\\cos x > \\sin x$.',
+            },
+          ],
+        },
+      },
+      {
         id: 'ste7-mixed-input',
         type: 'input-boxes' as const,
         content: `**Mixed Practice** 🧮
 
-**1)** Solve $2\\sin\\theta - \\sqrt{3} = 0$ on $[0,2\\pi)$. Smaller solution as a coefficient of $\\pi$ (type \`1/3\` for $\\tfrac{\\pi}{3}$): $\\theta = \\,?\\,\\cdot\\pi$
+**1)** Solve $2\\sin\\theta - \\sqrt{3} = 0$ on $[0,2\\pi)$. Smaller solution as a coefficient of $\\pi$ (type \`1/4\` for $\\tfrac{\\pi}{4}$): $\\theta = \\,?\\,\\cdot\\pi$
 **2)** How many solutions does $\\cos\\theta = -1$ have on $[0, 2\\pi)$?
 **3)** For $f(t) = 6\\sin\\big(\\tfrac{\\pi}{4}t\\big) + 10$, find the period.`,
         exercise: {

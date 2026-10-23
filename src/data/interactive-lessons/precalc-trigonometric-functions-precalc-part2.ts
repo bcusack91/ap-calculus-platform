@@ -141,15 +141,15 @@ All answers should be exact. Use sqrt for square roots and fractions (e.g., $\\s
 
 **2)** $\\sin\\frac{11\\pi}{6} = \\;?$ Write as a fraction. (e.g., $\\sin\\frac{7\\pi}{4}$: Q IV, ref angle $\\frac{\\pi}{4}$, $\\sin\\frac{\\pi}{4} = \\sqrt{2}/2$, negative in Q IV → answer: $-\\sqrt{2}/2$)
 
-**3)** What is the reference angle of $\\frac{5\\pi}{4}$? Express as a fraction of $\\pi$ — write just the fraction (e.g., for $\\frac{7\\pi}{6}$ the ref angle is $\\frac{\\pi}{6}$, answer: $1/6$). (e.g., $\\frac{2\\pi}{3}$ is in Q II: $\\pi - \\frac{2\\pi}{3} = \\frac{\\pi}{3}$, answer: $1/3$)
+**3)** What is the reference angle of $\\frac{5\\pi}{4}$? Give the exact angle in radians, writing $\\pi$ as \`pi\` (e.g., $\\frac{2\\pi}{3}$ is in Q II: $\\pi - \\frac{2\\pi}{3} = \\frac{\\pi}{3}$, answer: \`pi/3\`).
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['-sqrt(3)/2', '-1/2', '1/4'],
+        correctAnswers: ['-sqrt(3)/2', '-1/2', 'pi/4'],
         hint1: '$\\frac{7\\pi}{6}$ is in Q III. Reference angle $= \\frac{7\\pi}{6} - \\pi = \\frac{\\pi}{6}$. Cosine is negative in Q III.',
         hint2: '$\\frac{11\\pi}{6}$ is in Q IV. Reference angle $= 2\\pi - \\frac{11\\pi}{6} = \\frac{\\pi}{6}$. Sine is negative in Q IV.',
-        hint3: '$\\frac{5\\pi}{4}$ is in Q III. Reference angle $= \\frac{5\\pi}{4} - \\pi = \\frac{\\pi}{4}$. As a fraction of $\\pi$: $1/4$.',
-        explanation: '1) Ref angle of $\\frac{7\\pi}{6}$ is $\\frac{\\pi}{6}$; $\\cos\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$; negative in Q III → $-\\sqrt{3}/2$. 2) Ref angle of $\\frac{11\\pi}{6}$ is $\\frac{\\pi}{6}$; $\\sin\\frac{\\pi}{6} = \\frac{1}{2}$; negative in Q IV → $-1/2$. 3) $\\frac{5\\pi}{4} - \\pi = \\frac{\\pi}{4}$, so $1/4$.'
+        hint3: '$\\frac{5\\pi}{4}$ is in Q III. Reference angle $= \\frac{5\\pi}{4} - \\pi$.',
+        explanation: '1) Ref angle of $\\frac{7\\pi}{6}$ is $\\frac{\\pi}{6}$; $\\cos\\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$; negative in Q III → $-\\sqrt{3}/2$. 2) Ref angle of $\\frac{11\\pi}{6}$ is $\\frac{\\pi}{6}$; $\\sin\\frac{\\pi}{6} = \\frac{1}{2}$; negative in Q IV → $-1/2$. 3) $\\frac{5\\pi}{4} - \\pi = \\frac{\\pi}{4}$.'
       }
     },
     {

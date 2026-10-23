@@ -7,9 +7,9 @@ export const precalcPolynomialPart4Data = {
       content: `
 # 📐 Polynomial Division
 
-**Part 4 of 7 — Long Division, Synthetic Division & the Remainder Theorem**
+**Part 4 of 7 — Long Division, Equivalent Forms & the Factor Theorem**
 
-When you can't factor a polynomial by inspection, **polynomial division** lets you break it down systematically. Combined with the Remainder and Factor Theorems, division becomes a powerful tool for finding zeros of higher-degree polynomials.
+When you cannot factor a polynomial by inspection, **polynomial long division** rewrites it in the equivalent form $p(x) = d(x)\\,q(x) + r(x)$. With the Factor Theorem it lets you find every zero once one zero is known.
       `
     },
     {
@@ -18,11 +18,11 @@ When you can't factor a polynomial by inspection, **polynomial division** lets y
       content: `
 ## 📖 Polynomial Long Division
 
-Polynomial long division works just like numerical long division. We divide the **dividend** by the **divisor** to get a **quotient** and a **remainder**.
+Polynomial long division works just like numerical long division. We divide the **dividend** by the **divisor** to get a **quotient** and a **remainder** whose degree is less than the divisor's.
 
 $$\\boxed{\\frac{p(x)}{d(x)} = q(x) + \\frac{r(x)}{d(x)}}$$
 
-or equivalently: $p(x) = d(x) \\cdot q(x) + r(x)$
+or equivalently: $p(x) = d(x) \\cdot q(x) + r(x)$ with $\\deg r < \\deg d$. Both are **equivalent forms** of the same function (for $d(x) \\neq 0$); each shows something different — the second form shows factors, the first shows end behavior.
 
 
 ---
@@ -44,118 +44,72 @@ or equivalently: $p(x) = d(x) \\cdot q(x) + r(x)$
 | 9 | Subtract: $(9x + 1) - (9x - 18) = 19$ | Remainder: $19$ |
 
 $$\\boxed{\\frac{2x^3 + 3x^2 - 5x + 1}{x - 2} = 2x^2 + 7x + 9 + \\frac{19}{x - 2}}$$
-      `
-    },
-    {
-      id: 'p4-synthetic-division',
-      type: 'text' as const,
-      content: `
-## ⚡ Synthetic Division
 
-**Synthetic division** is a shortcut that works when dividing by a **linear divisor** of the form $(x - c)$. It uses only the coefficients, making it faster and less error-prone.
+**Check by multiplying back:** $(x - 2)(2x^2 + 7x + 9) + 19 = 2x^3 + 3x^2 - 5x - 18 + 19 = 2x^3 + 3x^2 - 5x + 1$ ✓
 
-### Steps for Synthetic Division
-
-1. Write $c$ (the zero of the divisor) on the left
-2. List all coefficients of the dividend (include $0$ for missing terms!)
-3. Bring down the first coefficient
-4. Multiply by $c$, add to next coefficient, repeat
-5. The last number is the remainder
-
-
----
-
-### Worked Example
-
-> **Divide $x^3 - 6x^2 + 11x - 6$ by $(x - 2)$ using synthetic division.**
-
-$$c = 2 \\qquad \\text{Coefficients: } 1, \\; -6, \\; 11, \\; -6$$
-
-| | $1$ | $-6$ | $11$ | $-6$ |
-|---|:---:|:---:|:---:|:---:|
-| Bring down / Multiply by 2 | $\\downarrow$ | $+2$ | $-8$ | $+6$ |
-| **Result** | $1$ | $-4$ | $3$ | $0$ |
-
-$$\\text{Quotient: } x^2 - 4x + 3 \\qquad \\text{Remainder: } 0$$
-
-Since the remainder is $0$, $(x - 2)$ is a factor! We can continue:
-
-$$x^2 - 4x + 3 = (x - 1)(x - 3)$$
-
-So: $x^3 - 6x^2 + 11x - 6 = (x - 1)(x - 2)(x - 3)$
-
-> ⚠️ **Don't forget missing terms!** If dividing $x^3 - 8$, the coefficients are $1, 0, 0, -8$ — you must include the zeros for the $x^2$ and $x$ terms.
+> 💡 For a divisor of the form $x - c$ there is a shortcut layout called **synthetic division**; it gives the same quotient and remainder and is optional.
       `
     },
     {
       id: 'p4-remainder-factor-theorems',
       type: 'text' as const,
       content: `
-## 🔑 The Remainder & Factor Theorems
+## 🔑 The Factor Theorem
 
-These two theorems connect division, evaluation, and factoring:
-
-### Remainder Theorem
-
-$$\\boxed{\\text{When } p(x) \\text{ is divided by } (x - c), \\text{ the remainder equals } p(c).}$$
-
-This means you can find the remainder **without doing the full division** — just substitute $c$ into $p(x)$.
-
-
----
+Division connects evaluation and factoring. Dividing $p(x)$ by $(x - c)$ gives $p(x) = (x - c)\\,q(x) + r$ with a constant remainder $r$; substituting $x = c$ shows $p(c) = r$. So the remainder is $0$ exactly when $p(c) = 0$:
 
 ### Factor Theorem
 
 $$\\boxed{(x - c) \\text{ is a factor of } p(x) \\quad \\Longleftrightarrow \\quad p(c) = 0}$$
 
-The Factor Theorem is a special case of the Remainder Theorem: if the remainder is zero, the divisor divides evenly.
+A zero $c$, a factor $(x - c)$, and an $x$-intercept $(c, 0)$ are three views of the same fact.
 
 
 ---
 
-### Example: Quick Remainder Check
+### Example: From One Known Factor to All the Zeros
 
 > **Is $(x - 3)$ a factor of $p(x) = x^3 - 2x^2 - 5x + 6$?**
 
-Just evaluate $p(3)$:
+Evaluate $p(3) = 27 - 18 - 15 + 6 = 0$, so yes — and dividing by $(x - 3)$ gives $x^2 + x - 2 = (x + 2)(x - 1)$, so
 
-$$p(3) = 27 - 18 - 15 + 6 = 0 \\quad \\checkmark$$
+$$p(x) = (x - 3)(x + 2)(x - 1), \\qquad \\text{zeros } 3,\\ -2,\\ 1.$$
 
-Yes! Since $p(3) = 0$, $(x - 3)$ is a factor. No long division needed.
+Check the division: $(x - 3)(x^2 + x - 2) = x^3 + x^2 - 2x - 3x^2 - 3x + 6 = x^3 - 2x^2 - 5x + 6$ ✓
       `
     },
     {
       id: 'p4-concept-quiz',
       type: 'multiple-choice' as const,
       content: `
-**Division & Remainder Theorem Quiz** 🎯
+**Division & Equivalent Forms Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'What is the remainder when $p(x) = x^3 + 2x - 5$ is divided by $(x - 1)$?',
+            question: 'Divide $p(x) = x^3 + 2x - 5$ by $(x - 1)$. Which equivalent form is correct?',
             options: [
-              '$0$',
-              '$-2$',
-              '$-4$',
-              '$-1$'
+              '$p(x) = (x-1)(x^2 + x + 3) - 2$',
+              '$p(x) = (x-1)(x^2 + x + 3) + 2$',
+              '$p(x) = (x-1)(x^2 - x + 3) - 2$',
+              '$p(x) = (x-1)(x^2 + 2) - 5$'
             ],
-            correctAnswer: 1,
-            explanation: 'By the Remainder Theorem, the remainder equals $p(1) = 1 + 2 - 5 = -2$. No division needed — just evaluate!'
+            correctAnswer: 0,
+            explanation: 'Multiply back: $(x-1)(x^2 + x + 3) = x^3 + x^2 + 3x - x^2 - x - 3 = x^3 + 2x - 3$, so $p(x) = x^3 + 2x - 3 - 2$, remainder $-2$. The $+2$ form has the wrong sign; $x^2 - x + 3$ gives $x^3 - 2x^2 + 4x - 3$; and $(x-1)(x^2+2) - 5 = x^3 - x^2 + 2x - 7$.'
           },
           {
-            question: 'When performing synthetic division of $2x^4 - x^2 + 3$ by $(x + 1)$, what value of $c$ do you use?',
+            question: 'Which statement is TRUE about $p(x) = (x + 2)(x^2 - 3x + 1) + 4$?',
             options: [
-              '$c = 1$',
-              '$c = -1$',
-              '$c = 2$',
-              '$c = -2$'
+              '$p(-2) = 4$',
+              '$p(-2) = 0$',
+              '$p(2) = 4$',
+              '$(x + 2)$ is a factor of $p(x)$'
             ],
-            correctAnswer: 1,
-            explanation: 'For $(x + 1) = (x - (-1))$, we use $c = -1$. Always take the zero of the divisor, not the number you see.'
+            correctAnswer: 0,
+            explanation: 'Substituting $x = -2$ makes the first product zero, leaving $p(-2) = 4$. A nonzero remainder means $(x + 2)$ is NOT a factor; and $x = 2$ does not make $(x + 2)$ zero, so $p(2) = 4(-1) + 4 = 0$, not $4$.'
           },
           {
-            question: 'If synthetic division of $p(x)$ by $(x - 4)$ gives a remainder of $0$, which must be true?',
+            question: 'If dividing $p(x)$ by $(x - 4)$ leaves remainder $0$, which must be true?',
             options: [
               '$p(x)$ has degree 4',
               '$x = 4$ is a zero of $p(x)$',
@@ -163,7 +117,7 @@ Yes! Since $p(3) = 0$, $(x - 3)$ is a factor. No long division needed.
               '$p(x)$ has exactly 4 zeros'
             ],
             correctAnswer: 1,
-            explanation: 'By the Factor Theorem: remainder $0$ means $(x - 4)$ is a factor, which means $p(4) = 0$, so $x = 4$ is a zero.'
+            explanation: 'By the Factor Theorem: remainder $0$ means $(x - 4)$ is a factor, which means $p(4) = 0$, so $x = 4$ is a zero. The degree, the leading coefficient and the number of zeros are not determined by one factor.'
           }
         ]
       }
@@ -174,19 +128,19 @@ Yes! Since $p(3) = 0$, $(x - 3)$ is a factor. No long division needed.
       content: `
 **Division Drill** 🧮
 
-**1)** Use the Remainder Theorem: What is $p(2)$ for $p(x) = x^3 - 3x^2 + 2x + 1$? (e.g., for $p(x) = x^2 - 1$, $p(2) = 3$)
+**1)** Evaluate $p(2)$ for $p(x) = x^3 - 3x^2 + 2x + 1$. (e.g., for $p(x) = x^2 - 1$, $p(2) = 3$)
 
-**2)** After dividing $x^3 - 7x + 6$ by $(x - 1)$, the quotient is $x^2 + x - 6$. What value makes the remainder zero? Enter the remainder. (e.g., if the division is exact, enter $0$)
+**2)** Divide $x^3 - 7x + 6$ by $(x - 1)$: the quotient is $x^2 + x - 6$. What is the remainder?
 
-**3)** What coefficients should you list for synthetic division of $x^4 - 16$ by $(x - 2)$? How many coefficients total? (e.g., $x^3 + 1$ needs $4$ coefficients: $1, 0, 0, 1$)
+**3)** The division $\\frac{x^4 - 16}{x - 2}$ has quotient $x^3 + 2x^2 + 4x + 8$. What is the remainder?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['1', '0', '5'],
+        correctAnswers: ['1', '0', '0'],
         hint1: '$p(2) = 8 - 12 + 4 + 1$.',
-        hint2: 'Check: does $(x-1)$ divide evenly? Evaluate $p(1) = 1 - 7 + 6$.',
-        hint3: '$x^4 - 16 = x^4 + 0x^3 + 0x^2 + 0x - 16$, so list $1, 0, 0, 0, -16$ — that\'s 5 coefficients.',
-        explanation: '1) $p(2) = 8 - 12 + 4 + 1 = 1$. 2) $p(1) = 1 - 7 + 6 = 0$, so the remainder is $0$. 3) Include zeros for missing $x^3$, $x^2$, and $x$ terms: 5 coefficients total.'
+        hint2: 'Multiply back: $(x - 1)(x^2 + x - 6) = x^3 - 7x + 6$, or evaluate $p(1) = 1 - 7 + 6$.',
+        hint3: '$(x - 2)(x^3 + 2x^2 + 4x + 8) = x^4 - 16$: the remainder is what is left over, and $2^4 - 16 = 0$.',
+        explanation: '1) $p(2) = 8 - 12 + 4 + 1 = 1$. 2) $(x-1)(x^2 + x - 6) = x^3 - 7x + 6$, so the remainder is $0$ and $x = 1$ is a zero. 3) $(x-2)(x^3 + 2x^2 + 4x + 8) = x^4 - 16$, remainder $0$; $x = 2$ is a zero of $x^4 - 16$.'
       }
     },
     {
@@ -198,27 +152,27 @@ Yes! Since $p(3) = 0$, $(x - 3)$ is a factor. No long division needed.
       exercise: {
         dropdowns: [
           {
-            label: 'The Remainder Theorem says the remainder when dividing by $(x - c)$ equals',
+            label: 'Dividing $p(x)$ by $(x - c)$ leaves a remainder equal to',
             options: ['$c$', '$p(c)$', '$p(0)$', 'the leading coefficient']
           },
           {
-            label: 'Synthetic division can only be used when the divisor is',
-            options: ['any polynomial', 'a quadratic', 'linear of the form $(x - c)$', 'a constant']
+            label: 'Polynomial long division writes $p(x)$ as $d(x) \\cdot q(x) +$',
+            options: ['$r(x)$ with $\\deg r < \\deg d$', '$r(x)$ with $\\deg r = \\deg d$', '$q(x)$', '$p(x)$']
           },
           {
             label: 'If $p(c) = 0$, then $(x - c)$ is a ______ of $p(x)$',
             options: ['zero', 'factor', 'remainder', 'coefficient']
           },
           {
-            label: 'When setting up synthetic division of $x^3 + 5$ by $(x + 2)$, you use $c =$',
-            options: ['$2$', '$-2$', '$5$', '$3$']
+            label: 'If $(x - c)$ divides $p(x)$ with remainder $0$, then',
+            options: ['$p(c) = 0$', '$p(0) = c$', '$c$ is the leading coefficient', '$p(c) = c$']
           }
         ],
-        correctAnswers: ['$p(c)$', 'linear of the form $(x - c)$', 'factor', '$-2$'],
-        hint1: 'The remainder equals the polynomial evaluated at $c$.',
-        hint2: 'Synthetic division is a shortcut — it only works for the simplest type of divisor.',
-        hint3: 'This is exactly the Factor Theorem.',
-        explanation: 'Remainder $= p(c)$. Synthetic division requires a linear divisor $(x - c)$. $p(c) = 0$ means $(x-c)$ is a factor. For $(x + 2) = (x - (-2))$, use $c = -2$.'
+        correctAnswers: ['$p(c)$', '$r(x)$ with $\\deg r < \\deg d$', 'factor', '$p(c) = 0$'],
+        hint1: 'Substitute $x = c$ into $p(x) = (x - c)q(x) + r$.',
+        hint2: 'Division stops when what is left has smaller degree than the divisor.',
+        hint3: 'This is exactly the Factor Theorem, read in both directions.',
+        explanation: 'Remainder $= p(c)$. Long division gives $p = d \\cdot q + r$ with $\\deg r < \\deg d$. $p(c) = 0$ means $(x-c)$ is a factor, and a zero remainder on dividing by $(x - c)$ means $p(c) = 0$.'
       }
     },
     {
@@ -232,24 +186,24 @@ Yes! Since $p(3) = 0$, $(x - 3)$ is a factor. No long division needed.
           {
             question: 'You need to find all zeros of $p(x) = x^3 - 6x^2 + 11x - 6$. You discover $p(1) = 0$. What should your next step be?',
             options: [
-              'Use synthetic division to divide by $(x - 1)$ and factor the quotient',
+              'Divide by $(x - 1)$ and factor the quadratic quotient',
               'Evaluate $p(-1)$ to find a second factor',
               'Use long division to divide by $(x^2 - 1)$',
               'Conclude that all zeros are $x = 1$'
             ],
             correctAnswer: 0,
-            explanation: 'Since $p(1) = 0$, $(x - 1)$ is a factor. Divide by $(x - 1)$ via synthetic division to get a quadratic quotient, then factor or use the quadratic formula to find the remaining zeros.'
+            explanation: 'Since $p(1) = 0$, $(x - 1)$ is a factor. Divide by $(x - 1)$ to get a quadratic quotient ($x^2 - 5x + 6$), then factor it to find the remaining zeros $2$ and $3$.'
           },
           {
-            question: 'When dividing $2x^3 - 5x + 3$ by $(x - 1)$ using synthetic division, the coefficients you list are:',
+            question: 'Which is an equivalent form of $f(x) = \\dfrac{2x^3 - 5x + 3}{x - 1}$ for $x \\neq 1$?',
             options: [
-              '$2, -5, 3$',
-              '$2, 0, -5, 3$',
-              '$2, -1, -5, 3$',
-              '$1, 2, -5, 3$'
+              '$2x^2 + 2x - 3$',
+              '$2x^2 - 2x - 3$',
+              '$2x^2 + 2x - 3 + \\dfrac{6}{x-1}$',
+              '$2x^2 - 3$'
             ],
-            correctAnswer: 1,
-            explanation: 'The polynomial is $2x^3 + 0x^2 - 5x + 3$ — you must include $0$ for the missing $x^2$ term. The coefficients are $2, 0, -5, 3$.'
+            correctAnswer: 0,
+            explanation: 'Multiply back: $(x-1)(2x^2 + 2x - 3) = 2x^3 + 2x^2 - 3x - 2x^2 - 2x + 3 = 2x^3 - 5x + 3$, so the division is exact and $x = 1$ is a zero of the numerator (a hole of $f$, not an asymptote). The other forms do not multiply back to the numerator.'
           }
         ]
       }

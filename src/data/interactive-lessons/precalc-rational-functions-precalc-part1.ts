@@ -7,7 +7,7 @@ export const precalcRationalPart1Data = {
       content: `
 # 📊 What Is a Rational Function?
 
-**Part 1 of 7 — Definition, Domain & Excluded Values**
+**Part 1 of 7 — What Is a Rational Function?**
 
 A **rational function** is a ratio of two polynomials:
 

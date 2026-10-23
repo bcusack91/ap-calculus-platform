@@ -15,6 +15,14 @@ Beyond sine and cosine, four more trig functions are built from ratios.
 
 $$\\boxed{\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} \\qquad \\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta} \\qquad \\sec\\theta = \\frac{1}{\\cos\\theta} \\qquad \\csc\\theta = \\frac{1}{\\sin\\theta}}$$
 
+### Tangent Is a Slope (CED 3.8)
+
+The terminal ray of $\\theta$ passes through the origin and the unit-circle point $(\\cos\\theta, \\sin\\theta)$, so the **slope of the terminal ray** is
+
+$$\\frac{\\text{rise}}{\\text{run}} = \\frac{\\sin\\theta - 0}{\\cos\\theta - 0} = \\tan\\theta.$$
+
+That is why $\\tan\\theta$ is undefined exactly where the ray is vertical ($\\cos\\theta = 0$, at $\\theta = \\frac{\\pi}{2} + n\\pi$), is $0$ where the ray is horizontal, and is positive in Quadrants I and III (where the ray tilts up to the right) but negative in Quadrants II and IV. For example, the ray at $\\frac{\\pi}{4}$ is the line $y = x$, slope $1 = \\tan\\frac{\\pi}{4}$.
+
 ### Complete Comparison Table
 
 | Function | Definition | Period | Domain Restriction | Range |

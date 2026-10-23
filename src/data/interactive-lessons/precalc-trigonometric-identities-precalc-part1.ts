@@ -9,7 +9,7 @@ export const precalcTrigIdentitiesPart1Data = {
 
 **Part 1 of 7**
 
-The **Pythagorean identities** are the foundation of all trig simplification. They come from dividing $\\sin^2\\theta + \\cos^2\\theta = 1$ by different functions.
+The **Pythagorean identities** are the foundation of every equivalent-form rewrite in this lesson. The first one is the unit-circle equation $x^2 + y^2 = 1$ written with $x = \\cos\\theta$ and $y = \\sin\\theta$; the other two come from dividing $\\sin^2\\theta + \\cos^2\\theta = 1$ by $\\cos^2\\theta$ or by $\\sin^2\\theta$.
 
 ### The Three Pythagorean Identities
 
@@ -53,7 +53,9 @@ $$\\sec^2\\theta - \\tan^2\\theta = 1$$
 
 ### Example 3: Express $\\tan^2\\theta$ in terms of $\\cos\\theta$ only
 
-$\\tan^2\\theta = \\sec^2\\theta - 1 = \\frac{1}{\\cos^2\\theta} - 1 = \\frac{1 - \\cos^2\\theta}{\\cos^2\\theta} = \\frac{\\sin^2\\theta}{\\cos^2\\theta}$
+$$\\tan^2\\theta = \\sec^2\\theta - 1 = \\frac{1}{\\cos^2\\theta} - 1 = \\frac{1 - \\cos^2\\theta}{\\cos^2\\theta}$$
+
+That last form uses only $\\cos\\theta$, which is what was asked. (Going one step further to $\\frac{\\sin^2\\theta}{\\cos^2\\theta}$ would bring sine back in.)
 
 ### Example 4: Given $\\sin\\theta = \\frac{2}{3}$ (Q I), find all six trig values
 
@@ -137,7 +139,7 @@ $\\tan^2\\theta = \\sec^2\\theta - 1 = \\frac{1}{\\cos^2\\theta} - 1 = \\frac{1 
       content: `
 **Pythagorean Identity Practice** 🧮
 
-**1)** Simplify $\\frac{\\cos^2\\theta}{1 - \\sin^2\\theta}$. Write the simplified result. (e.g., $\\frac{\\sin^2\\theta}{1 - \\cos^2\\theta} = \\frac{\\sin^2\\theta}{\\sin^2\\theta} = 1$)
+**1)** Simplify $\\frac{\\cos^2\\theta}{1 - \\sin^2\\theta}$. Write the simplified result. (e.g., $\\frac{1 - \\sin^2\\theta}{\\cos\\theta} = \\frac{\\cos^2\\theta}{\\cos\\theta} = \\cos\\theta$)
 
 **2)** If $\\sec\\theta = \\frac{5}{4}$ and $\\theta$ is in Q I, find $\\tan\\theta$. Write as a fraction. (e.g., $\\sec\\alpha = \\frac{13}{5}$: $\\tan^2\\alpha = 169/25 - 1 = 144/25$, so $\\tan\\alpha = 12/5$)
 
@@ -206,13 +208,13 @@ $\\tan^2\\theta = \\sec^2\\theta - 1 = \\frac{1}{\\cos^2\\theta} - 1 = \\frac{1 
           {
             question: 'If $\\cot\\theta = 7$ and $\\theta$ is in Q I, find $\\csc\\theta$.',
             options: [
-              '$\\sqrt{50}$',
+              '$\\frac{5\\sqrt{2}}{7}$',
               '$5\\sqrt{2}$',
               '$7\\sqrt{2}$',
               '$\\sqrt{48}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\csc^2\\theta = 1 + \\cot^2\\theta = 1 + 49 = 50$. So $\\csc\\theta = \\sqrt{50} = 5\\sqrt{2}$.'
+            explanation: '$\\csc^2\\theta = 1 + \\cot^2\\theta = 1 + 49 = 50$. So $\\csc\\theta = \\sqrt{50} = 5\\sqrt{2}$ (positive in Quadrant I). $\\frac{5\\sqrt{2}}{7}$ is $\\sec\\theta = \\csc\\theta/\\cot\\theta$, $7\\sqrt{2}$ multiplies $\\cot\\theta$ by $\\sqrt{2}$, and $\\sqrt{48}$ subtracts $1$ instead of adding it.'
           }
         ]
       }

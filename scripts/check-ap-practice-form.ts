@@ -5,8 +5,8 @@
  *   npx tsx scripts/check-ap-practice-form.ts <examKey> <form>
  *   npx tsx scripts/check-ap-practice-form.ts <examKey> --file <path/to/config.ts>
  *
- * examKey: ap-chem | ap-bio | ap-physics1 | ap-calcab | ap-calcbc (the courses with a
- * blueprint below). --file checks a config that is not registered yet (the
+ * examKey: ap-chem | ap-bio | ap-physics1 | ap-calcab | ap-calcbc | ap-precalc (the
+ * courses with a blueprint below). --file checks a config that is not registered yet (the
  * module must export `config: FullLengthExamConfig`).
  *
  * Checks (FAIL = must fix, exit code 1; WARN = review):
@@ -166,6 +166,25 @@ const SPECS: Record<string, CourseSpec> = {
     v2Banks: ['ap-calculus-bc'], // the BC v2 bank contains the AB v2 bank
     // BC trim (ap-phase1-pipeline/trim/ap-calculus-bc/TRIM.md): not in the CED.
     offExam: [/surface area/i, /root test/i, /\b(sinh|cosh|tanh)\b/i, /trig(onometric)? substitution/i, /unit (tangent|normal)|curvature/i, /monotone convergence/i, /epsilon|\\varepsilon/i, /dirichlet/i, /runge|heun/i, /shell method|cylindrical shell/i, /newton'?s method/i],
+  },
+  'ap-precalc': {
+    name: 'AP Precalculus',
+    // May 2027 (AP-2027-FORMATS.md): 42 MCQ / 105 min = 62.5% (Part A 29 no-calc 65 min, Part B 13
+    // graphing-calc 40 min; AP_EXAM_TOOLS['ap-precalc'] splits them); 4 FRQ / 70 min = 37.5%, 6 pts each,
+    // in the Q1 Function Concepts / Q2 Non-Periodic / Q3 Periodic / Q4 Symbolic roles. 4 answer choices.
+    mcq: { count: 42, minutes: 105, weight: 62.5 },
+    frq: { count: 4, minutes: 70, weight: 37.5, points: [6, 6, 6, 6] },
+    // CED exam weighting; Unit 4 (parameters, vectors, matrices) is not assessed.
+    units: [
+      { slug: 'polynomial-rational-functions', lo: 0.3, hi: 0.4 },
+      { slug: 'exponential-logarithmic', lo: 0.27, hi: 0.4 },
+      { slug: 'trigonometric-functions', lo: 0.3, hi: 0.35 },
+    ],
+    stimulusMin: 0.2,
+    overlap: ['src/data/exit-quizzes/ap-precalculus.ts', 'src/data/ap-precalculus-diagnostic.ts', 'src/data/ap-precalc-frq/questions.ts'],
+    // Owner rule "not on the exam = not in the program" (precalc-final PLAN.md): Unit 4, Law of Sines,
+    // series sums, calculus, Descartes'/Rational Root, half-angle, lemniscates, finance formulas.
+    offExam: [/\bvector/i, /\bmatri(x|ces)\b/i, /parametric/i, /\bconic|ellipse|hyperbola/i, /law of (sines|cosines)/i, /half[- ]angle/i, /descartes/i, /rational root/i, /\bseries\b|sigma notation|\\sum/i, /lemniscate|archimed/i, /derivative|integral/i, /remainder theorem/i, /effective annual|\bAPY\b|rule of 72/i],
   },
 }
 

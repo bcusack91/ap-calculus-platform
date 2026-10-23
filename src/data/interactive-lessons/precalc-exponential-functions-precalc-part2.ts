@@ -7,7 +7,7 @@ export const precalcExponentialPart2Data = {
       content: `
 # 🔄 Transformations of Exponential Graphs
 
-**Part 2 of 7**
+**Part 2 of 7 — Transformations of Exponential Graphs**
 
 The parent exponential function is $f(x) = b^x$. Every transformation follows the general form:
 
@@ -15,12 +15,14 @@ $$\\boxed{g(x) = a \\cdot b^{x - h} + k}$$
 
 | Parameter | Effect | Example on $2^x$ |
 |:----------|:-------|:-----------------|
-| $a$ | Vertical stretch/compress; if $a < 0$, reflect over $x$-axis | $-2^x$ flips graph upside down |
+| $a$ | Vertical dilation (stretch/compress); if $a < 0$, reflect over $x$-axis | $-2^x$ flips graph upside down |
 | $h$ | Horizontal shift (right if $h > 0$) | $2^{x-3}$ shifts right $3$ |
 | $k$ | Vertical shift (up if $k > 0$) | $2^x + 5$ shifts up $5$ |
 | Replace $x$ with $-x$ | Reflect over $y$-axis | $2^{-x} = \\left(\\frac{1}{2}\\right)^x$ |
 
 > **Critical change:** The horizontal asymptote moves from $y = 0$ to $y = k$ whenever a vertical shift is applied.
+
+> **Property (CED 2.4):** $b^{x+k} = b^k \\cdot b^x$, so a horizontal shift of an exponential graph is the same as a vertical dilation: $2^{x+3} = 8 \\cdot 2^x$ (drill 3 below). Likewise $b^{mn} = (b^m)^n$, so $4^x = (2^2)^x = 2^{2x}$.
       `
     },
     {

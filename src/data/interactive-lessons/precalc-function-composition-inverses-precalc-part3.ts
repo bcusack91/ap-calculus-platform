@@ -7,20 +7,19 @@ export const precalcCompositionPart3Data = {
       content: `
 # 🧮 Inverses of Common Functions
 
-**Part 3 of 7**
+**Part 3 of 7 — Inverses of Common Functions**
 
 ### Inverse Pairs
 
 | Function $f(x)$ | Inverse $f^{-1}(x)$ | Domain restriction |
 |:-----------------|:---------------------|:-------------------|
-| $x^2$ | $\\sqrt{x}$ | $x \\geq 0$ for both |
+| $x^2$ | $\\sqrt{x}$ | domain of $x^2$ restricted to $x \\geq 0$ |
 | $x^3$ | $\\sqrt[3]{x}$ | All reals |
 | $e^x$ | $\\ln x$ | $x > 0$ for $\\ln$ |
 | $10^x$ | $\\log_{10} x$ | $x > 0$ for $\\log$ |
 | $a^x$ | $\\log_a x$ | $x > 0$ for $\\log_a$ |
-| $\\sin x$ | $\\sin^{-1} x$ | $[-\\pi/2, \\pi/2]$, $[-1,1]$ |
-| $\\cos x$ | $\\cos^{-1} x$ | $[0, \\pi]$, $[-1,1]$ |
-| $\\tan x$ | $\\tan^{-1} x$ | $(-\\pi/2, \\pi/2)$ |
+| $\\frac{1}{x}$ | $\\frac{1}{x}$ | $x \\neq 0$ (its own inverse) |
+| $mx+b$, $m \\neq 0$ | $\\frac{x-b}{m}$ | All reals |
 
 > 💡 The graph of each inverse is the reflection of the original function over $y = x$.
       `
@@ -154,7 +153,7 @@ $f\\left(\\frac{3x+1}{x-2}\\right) = \\frac{2 \\cdot \\frac{3x+1}{x-2}+1}{\\frac
             correctAnswer: 1
           },
           {
-            label: 'Why must we restrict $\\sin x$ to $[-\\pi/2, \\pi/2]$?',
+            label: 'Why must we restrict $x^2$ to $x \\geq 0$ before finding an inverse?',
             options: ['To make it continuous', 'To make it one-to-one', 'To make it positive', 'Convention only'],
             correctAnswer: 1
           },
@@ -167,8 +166,8 @@ $f\\left(\\frac{3x+1}{x-2}\\right) = \\frac{2 \\cdot \\frac{3x+1}{x-2}+1}{\\frac
         correctAnswers: ['$x$', '$e^x$', 'To make it one-to-one', '$x$'],
         hint1: 'Applying a function then its inverse returns $x$.',
         hint2: '$\\ln$ undoes $e^x$ and vice versa.',
-        hint3: '$\\sin x$ is not one-to-one on all reals (periodic).',
-        explanation: '$a^{\\log_a x} = x$. $\\ln^{-1} = e^x$. Restriction makes $\\sin$ one-to-one. $f \\circ f^{-1} = x$.'
+        hint3: '$x^2$ is not one-to-one on all reals: $f(2) = f(-2) = 4$.',
+        explanation: '$a^{\\log_a x} = x$. $\\ln^{-1} = e^x$. Restriction makes $x^2$ one-to-one. $f \\circ f^{-1} = x$.'
       }
     },
     {
@@ -189,7 +188,7 @@ $f\\left(\\frac{3x+1}{x-2}\\right) = \\frac{2 \\cdot \\frac{3x+1}{x-2}+1}{\\frac
             question: 'If $f(x) = \\frac{3x-1}{x+2}$, which is true about $f^{-1}$?',
             options: ['It is a polynomial', 'It is also a rational function', 'It does not exist', 'It is $\\frac{x+2}{3x-1}$'],
             correctAnswer: 1,
-            explanation: 'The inverse of a linear fractional function is another linear fractional function.'
+            explanation: 'The inverse of a rational function of the form $\\frac{ax+b}{cx+d}$ is another function of that form: here $f^{-1}(x) = \\frac{2x+1}{3-x}$. The option $\\frac{x+2}{3x-1}$ is the reciprocal $\\frac{1}{f(x)}$, not the inverse.'
           }
         ]
       }

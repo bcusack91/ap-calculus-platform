@@ -4,10 +4,15 @@ export const precalcCompositionPart5Data = {
     {
       id: 'p5-intro',
       type: 'text' as const,
+      figure: {
+        svg: '<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g class="fig-muted" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"><line x1="205.5" y1="110" x2="205.5" y2="30"/><line x1="134.5" y1="110" x2="134.5" y2="170"/></g><g stroke="currentColor" stroke-width="1.5"><line x1="30" y1="110" x2="310" y2="110"/><line x1="134.5" y1="200" x2="134.5" y2="10"/></g><text x="306" y="124" font-size="12" fill="currentColor">x</text><text x="140" y="18" font-size="12" fill="currentColor">y</text><g font-size="11" fill="currentColor" text-anchor="middle"><text x="205.5" y="124">3</text><text x="229" y="124">4</text><text x="110.9" y="124">−1</text></g><text x="128" y="174" font-size="11" fill="currentColor" text-anchor="end">−3</text><g class="fig-accent"><polyline points="110.9,30 205.5,110 300,30" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="205.5" cy="110" r="4" fill="currentColor"/><text x="262" y="48" font-size="12" fill="currentColor">|x − 3|</text></g><g class="fig-accent-2"><polyline points="40,90 134.5,170 229.1,90" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="134.5" cy="170" r="4" fill="currentColor"/><text x="42" y="80" font-size="12" fill="currentColor">|x| − 3</text></g></svg>',
+        alt: 'Two V-shaped graphs. The graph of the absolute value of x minus 3 (blue) has its vertex on the x-axis at (3, 0). The graph of the absolute value of x, minus 3 (red) has its vertex at (0, -3) on the y-axis and crosses the x-axis at x = -3 and x = 3.',
+        caption: 'Figure. $y = \\lvert x - 3 \\rvert$ (blue) versus $y = \\lvert x \\rvert - 3$ (red).',
+      },
       content: `
 # 🧩 Piecewise & Absolute Value Compositions
 
-**Part 5 of 7**
+**Part 5 of 7 — Piecewise & Absolute Value Compositions**
 
 ### Composing with Piecewise Functions
 
@@ -19,13 +24,13 @@ $(f \\circ g)(-2) = f(g(-2)) = f(-3) = -3+2 = -1$ (since $-3 < 0$)
 
 ### Composing with Absolute Value
 
-$|f(x)|$ takes the output and makes it positive.
+$|f(x)|$ takes the output and makes it nonnegative.
 
-$f(|x|)$ takes the input and makes it positive first.
+$f(|x|)$ takes the input and makes it nonnegative first.
 
-These are different! For $f(x) = x - 3$:
-- $|f(x)| = |x-3|$ (V-shape at $x=3$)
-- $f(|x|) = |x|-3$ (V-shape at $x=0$, shifted down $3$)
+These are different! For $f(x) = x - 3$ (see the figure above):
+- $|f(x)| = |x-3|$ (V-shape with vertex at $(3, 0)$)
+- $f(|x|) = |x|-3$ (V-shape with vertex at $(0, -3)$, shifted down $3$)
       `
     },
     {
@@ -70,9 +75,9 @@ Breaking a complex function into simpler pieces:
 |:----------------|:-------------|:-------------|
 | $\\sqrt{x^2+1}$ | $x^2+1$ | $\\sqrt{u}$ |
 | $(3x-5)^7$ | $3x-5$ | $u^7$ |
-| $\\sin(x^2)$ | $x^2$ | $\\sin u$ |
+| $2^{x^2}$ | $x^2$ | $2^u$ |
 | $e^{-x^2}$ | $-x^2$ | $e^u$ |
-| $\\ln(\\cos x)$ | $\\cos x$ | $\\ln u$ |
+| $\\frac{1}{x^2+4}$ | $x^2+4$ | $\\frac{1}{u}$ |
 
 > 💡 Decomposing a function this way tells you its domain (the inner output must be a legal input for the outer function) and the order for building an inverse: undo the outer layer first.
       `
@@ -110,23 +115,23 @@ Breaking a complex function into simpler pieces:
       id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-**Composition Practice** 🧮
+**Piecewise Composition Practice** 🧮
 
-$f(x) = x+3, g(x) = 2x$
+Let $f(x) = \\begin{cases} x+2 & x < 0 \\\\ x^2 & x \\geq 0 \\end{cases}$ and $g(x) = x - 1$.
 
-**1)** $f(g(4))$ = ?
+**1)** $(f \\circ g)(0)$ = ?
 
-**2)** $g(f(4))$ = ?
+**2)** $(f \\circ g)(5)$ = ?
 
-**3)** $g(f(x)) = 2x + k$. What is $k$?
+**3)** $(g \\circ f)(-4)$ = ?
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['11', '14', '6'],
-        hint1: '$g(4) = 8$, then $f(8) = 8 + 3$.',
-        hint2: '$f(4) = 7$, then $g(7) = 2 \\cdot 7$.',
-        hint3: '$g(f(x)) = 2(x + 3)$. Distribute.',
-        explanation: '1) $f(8) = 11$. 2) $g(7) = 14$, a different value, because composition is not commutative. 3) $2(x+3) = 2x + 6$, so $k = 6$.'
+        correctAnswers: ['1', '16', '-3'],
+        hint1: '$g(0) = -1$, and $-1 < 0$, so use the first piece: $f(-1) = -1 + 2$.',
+        hint2: '$g(5) = 4$, and $4 \\geq 0$, so use the second piece: $f(4) = 4^2$.',
+        hint3: 'Inner first: $f(-4) = -4 + 2 = -2$ (first piece). Then $g(-2) = -2 - 1$.',
+        explanation: '1) $f(-1) = 1$. 2) $f(4) = 16$. 3) $f(-4) = -2$, then $g(-2) = -3$. Always decide which piece applies from the value you are plugging in, not from the original $x$.'
       }
     },
     {
@@ -143,8 +148,8 @@ $f(x) = x+3, g(x) = 2x$
             correctAnswer: 1
           },
           {
-            label: 'For $e^{\\sin x}$, the inner function is:',
-            options: ['$e^x$', '$\\sin x$', '$e \\cdot \\sin x$'],
+            label: 'For $e^{x^2-1}$, the inner function is:',
+            options: ['$e^x$', '$x^2-1$', '$e \\cdot (x^2-1)$'],
             correctAnswer: 1
           },
           {
@@ -158,11 +163,11 @@ $f(x) = x+3, g(x) = 2x$
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['$3x+1$', '$\\sin x$', '$f(x)$', 'Sometimes true'],
+        correctAnswers: ['$3x+1$', '$x^2-1$', '$f(x)$', 'Sometimes true'],
         hint1: 'Inner function is what you substitute.',
         hint2: 'The exponent is the inner function.',
         hint3: 'The identity function changes nothing. For the last one, compare $(x+3)^2$ with $x^2 + 3$, then think of inverse functions.',
-        explanation: 'Inner: $3x+1$/$\\sin x$. The identity leaves $f$ unchanged. Composition is not commutative in general, but it can match for special pairs such as inverse functions.'
+        explanation: 'Inner: $3x+1$/$x^2-1$. The identity leaves $f$ unchanged. Composition is not commutative in general, but it can match for special pairs such as inverse functions.'
       }
     },
     {

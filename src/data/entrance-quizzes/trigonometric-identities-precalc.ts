@@ -1,6 +1,8 @@
 /**
- * Entrance Quiz — Trigonometric Identities — 14 questions (2 per lesson part, 7 parts).
+ * Entrance Quiz — Trigonometric Identities and Equivalent Forms — 14 questions (2 per lesson part, 7 parts).
  * Each item is tagged with the lesson part it certifies; both right = part skipped.
+ * Part 6 is "Solving Equations with Identities" (CED 3.12), replacing the former proof-drill part;
+ * the retired sum-difference / double-half-angle quizzes were folded in here (2026-10-22).
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
@@ -98,32 +100,32 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'ti-ent-5b',
-    question: 'Which expression is equivalent to $\\cos^4 x - \\sin^4 x$?',
-    options: ['$1 - 2\\sin^2 x$', '$1 - \\sin^2 x$', '$\\cos 4x$', '$\\cos^2 2x$'],
+    question: 'Rewritten as a sinusoid, $y = 4\\sin^2(3x)$ has which midline, amplitude and period?',
+    options: ['Midline $y = 2$, amplitude $2$, period $\\frac{\\pi}{3}$', 'Midline $y = 0$, amplitude $4$, period $\\frac{2\\pi}{3}$', 'Midline $y = 2$, amplitude $2$, period $\\frac{2\\pi}{3}$', 'Midline $y = 2$, amplitude $4$, period $\\frac{\\pi}{3}$'],
     correctIndex: 0,
-    explanation: 'Factor as a difference of squares: $(\\cos^2 x - \\sin^2 x)(\\cos^2 x + \\sin^2 x) = \\cos 2x \\cdot 1 = \\cos 2x$, and $\\cos 2x = 1 - 2\\sin^2 x$. The second factor is $1$; the first is $\\cos^2 x - \\sin^2 x$, not $\\cos^2 x = 1 - \\sin^2 x$.',
+    explanation: 'Solving the double-angle identity for $\\sin^2$: $4\\sin^2(3x) = 4 \\cdot \\frac{1 - \\cos 6x}{2} = 2 - 2\\cos 6x$, so the midline is $y = 2$, the amplitude $2$ and the period $\\frac{2\\pi}{6} = \\frac{\\pi}{3}$. A period of $\\frac{2\\pi}{3}$ forgets that the inside angle doubles, and amplitude $4$ forgets to halve.',
     partNumber: 5,
     partTitle: 'Double-Angle Identities',
   },
 
-  // Part 6 — Verifying Identities
+  // Part 6 — Solving Equations with Identities
   {
     id: 'ti-ent-6a',
-    question: 'To verify $\\dfrac{\\cos x}{1 + \\sin x} = \\sec x - \\tan x$, a student multiplies the left side by $\\dfrac{1 - \\sin x}{1 - \\sin x}$. What does the left side become once the denominator is simplified?',
-    options: ['$\\frac{\\cos x(1 - \\sin x)}{\\sin^2 x}$', '$\\frac{\\cos x - \\sin x}{\\cos^2 x}$', '$\\frac{\\cos x(1 - \\sin x)}{\\cos^2 x}$', '$\\frac{\\cos x(1 - \\sin x)}{1 - \\sin x}$'],
-    correctIndex: 2,
-    explanation: 'The denominator becomes $(1 + \\sin x)(1 - \\sin x) = 1 - \\sin^2 x = \\cos^2 x$, giving $\\frac{\\cos x(1 - \\sin x)}{\\cos^2 x} = \\frac{1 - \\sin x}{\\cos x} = \\sec x - \\tan x$. Writing $\\sin^2 x$ uses the wrong Pythagorean rearrangement.',
+    question: 'Solve $\\cos 2x = \\sin x$ for $0 \\le x < 2\\pi$.',
+    options: ['$x = \\frac{\\pi}{6}, \\frac{5\\pi}{6}, \\frac{3\\pi}{2}$', '$x = \\frac{\\pi}{6}, \\frac{5\\pi}{6}$', '$x = \\frac{7\\pi}{6}, \\frac{11\\pi}{6}, \\frac{\\pi}{2}$', '$x = \\frac{\\pi}{3}, \\frac{2\\pi}{3}, \\frac{3\\pi}{2}$'],
+    correctIndex: 0,
+    explanation: 'Replace $\\cos 2x$ with $1 - 2\\sin^2 x$: $2\\sin^2 x + \\sin x - 1 = (2\\sin x - 1)(\\sin x + 1) = 0$, so $\\sin x = \\frac{1}{2}$ (at $\\frac{\\pi}{6}, \\frac{5\\pi}{6}$) or $\\sin x = -1$ (at $\\frac{3\\pi}{2}$). Dropping the second factor loses $\\frac{3\\pi}{2}$; the other sets come from sign errors in the factoring.',
     partNumber: 6,
-    partTitle: 'Verifying Identities',
+    partTitle: 'Solving Equations with Identities',
   },
   {
     id: 'ti-ent-6b',
-    question: 'Which equation is an identity, true for every $x$ at which both sides are defined?',
-    options: ['$\\frac{\\sin x}{1 + \\cos x} = \\csc x + \\cot x$', '$\\frac{\\sin x}{1 - \\cos x} = \\csc x - \\cot x$', '$\\frac{1 - \\cos x}{\\sin x} = \\csc x + \\cot x$', '$\\frac{\\sin x}{1 - \\cos x} = \\csc x + \\cot x$'],
-    correctIndex: 3,
-    explanation: 'Multiply by the conjugate: $\\frac{\\sin x(1 + \\cos x)}{1 - \\cos^2 x} = \\frac{\\sin x(1 + \\cos x)}{\\sin^2 x} = \\frac{1 + \\cos x}{\\sin x} = \\csc x + \\cot x$. The same steps show $\\frac{\\sin x}{1 + \\cos x} = \\frac{1 - \\cos x}{\\sin x} = \\csc x - \\cot x$, so the options with those pairings are false.',
+    question: 'Which gives every solution of $\\sin 2x = \\cos x$? ($k$ is any integer.)',
+    options: ['$x = \\frac{\\pi}{2} + \\pi k$ or $x = \\frac{\\pi}{6} + 2\\pi k$ or $x = \\frac{5\\pi}{6} + 2\\pi k$', '$x = \\frac{\\pi}{6} + 2\\pi k$ or $x = \\frac{5\\pi}{6} + 2\\pi k$', '$x = \\frac{\\pi}{2} + 2\\pi k$ or $x = \\frac{\\pi}{6} + \\pi k$', '$x = \\frac{\\pi}{2} + \\pi k$ or $x = \\frac{\\pi}{3} + 2\\pi k$'],
+    correctIndex: 0,
+    explanation: 'Expand and factor: $2\\sin x\\cos x - \\cos x = \\cos x(2\\sin x - 1) = 0$. $\\cos x = 0$ gives $x = \\frac{\\pi}{2} + \\pi k$ (both $\\frac{\\pi}{2}$ and $\\frac{3\\pi}{2}$), and $\\sin x = \\frac{1}{2}$ gives $\\frac{\\pi}{6} + 2\\pi k$ and $\\frac{5\\pi}{6} + 2\\pi k$. Dividing by $\\cos x$ loses the first family, and the other options attach the wrong periods.',
     partNumber: 6,
-    partTitle: 'Verifying Identities',
+    partTitle: 'Solving Equations with Identities',
   },
 
   // Part 7 — Review & Applications
@@ -158,7 +160,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 3, partTitle: 'Even-Odd & Cofunction Identities' },
     { partNumber: 4, partTitle: 'Sum & Difference Formulas' },
     { partNumber: 5, partTitle: 'Double-Angle Identities' },
-    { partNumber: 6, partTitle: 'Verifying Identities' },
+    { partNumber: 6, partTitle: 'Solving Equations with Identities' },
     { partNumber: 7, partTitle: 'Review & Applications' },
   ]
 }

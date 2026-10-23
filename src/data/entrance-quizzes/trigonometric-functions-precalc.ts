@@ -9,10 +9,10 @@ const questions: EntranceQuizQuestion[] = [
   // Part 1 — Angles & Radian Measure
   {
     id: 'tf-ent-1a',
-    question: 'A lawn sprinkler sprays water out to a distance of $12$ m while sweeping through a $135^\\circ$ angle. How long is the outer arc of the watered region?',
-    options: ['$9\\pi$ m', '$1620$ m', '$\\frac{9\\pi}{2}$ m', '$18\\pi$ m'],
-    correctIndex: 0,
-    explanation: 'Convert first: $135^\\circ = \\frac{3\\pi}{4}$, so $s = r\\theta = 12 \\cdot \\frac{3\\pi}{4} = 9\\pi$ m. The value $1620$ comes from using degrees directly in $s = r\\theta$.',
+    question: 'What is the smallest positive angle coterminal with $-\\frac{9\\pi}{4}$?',
+    options: ['$\\frac{9\\pi}{4}$', '$\\frac{7\\pi}{4}$', '$\\frac{\\pi}{4}$', '$\\frac{3\\pi}{4}$'],
+    correctIndex: 1,
+    explanation: 'Adding one turn gives $-\\frac{9\\pi}{4} + \\frac{8\\pi}{4} = -\\frac{\\pi}{4}$, still negative; adding a second turn gives $\\frac{7\\pi}{4}$. Dropping the negative sign to get $\\frac{9\\pi}{4}$ reflects the angle instead of rotating it.',
     partNumber: 1,
     partTitle: 'Trigonometric Functions — Angles & Radian Measure',
   },
@@ -58,10 +58,10 @@ const questions: EntranceQuizQuestion[] = [
   },
   {
     id: 'tf-ent-3b',
-    question: 'For an acute angle $\\alpha$, $\\cos\\alpha = 0.28$ and $\\sin\\alpha = 0.96$. What is $\\sin\\left(\\frac{\\pi}{2} - \\alpha\\right) + \\cos(-\\alpha)$?',
-    options: ['$0$', '$1.24$', '$-0.56$', '$0.56$'],
+    question: 'The terminal ray of $\\theta = \\frac{3\\pi}{4}$ meets the circle of radius $8$ centered at the origin at the point $P$. What are the coordinates of $P$?',
+    options: ['$(4\\sqrt{2}, -4\\sqrt{2})$', '$(-4\\sqrt{2}, -4\\sqrt{2})$', '$(-8\\sqrt{2}, 8\\sqrt{2})$', '$(-4\\sqrt{2}, 4\\sqrt{2})$'],
     correctIndex: 3,
-    explanation: 'By the cofunction identity $\\sin\\left(\\frac{\\pi}{2} - \\alpha\\right) = \\cos\\alpha = 0.28$, and cosine is even, so $\\cos(-\\alpha) = 0.28$. The sum is $0.56$; treating cosine as odd would give $0$.',
+    explanation: '$P = (8\\cos\\frac{3\\pi}{4}, 8\\sin\\frac{3\\pi}{4}) = \\left(8 \\cdot \\left(-\\frac{\\sqrt{2}}{2}\\right), 8 \\cdot \\frac{\\sqrt{2}}{2}\\right) = (-4\\sqrt{2}, 4\\sqrt{2})$, in Quadrant II as expected.',
     partNumber: 3,
     partTitle: 'Trigonometric Functions — Sine & Cosine Definitions',
   },
@@ -89,12 +89,12 @@ const questions: EntranceQuizQuestion[] = [
   // Part 5 — Graphing Sinusoids
   {
     id: 'tf-ent-5a',
-    question: 'What are the period and the range of $y = 4 - 3\\cos\\left(\\frac{\\pi}{5}x\\right)$?',
-    options: ['Period $10\\pi$; range $[1, 7]$', 'Period $10$; range $[-3, 3]$', 'Period $10$; range $[1, 7]$', 'Period $\\frac{1}{10}$; range $[1, 7]$'],
-    correctIndex: 2,
-    explanation: 'The period is $\\frac{2\\pi}{\\pi/5} = 10$, and with amplitude $3$ about the midline $y = 4$ the range is $[4 - 3, 4 + 3] = [1, 7]$. The range $[-3, 3]$ ignores the vertical shift.',
+    question: 'A function $f$ is periodic with period $5$, and $f(2) = 7$. Which statement must be true?',
+    options: ['$f(17) = 7$', '$f(7) = 12$', '$f(10) = 7$', '$f(2.5) = 0$'],
+    correctIndex: 0,
+    explanation: 'Periodic with period $5$ means $f(x + 5) = f(x)$ for every $x$, so $f(17) = f(12) = f(7) = f(2) = 7$. Nothing forces $f(7)$ to grow, $10$ is not $2$ plus a whole number of periods, and a period says nothing about the value halfway through a cycle.',
     partNumber: 5,
-    partTitle: 'Trigonometric Functions — Graphing Sinusoids',
+    partTitle: 'Trigonometric Functions — Periodic Functions & Graphing Sinusoids',
   },
   {
     id: 'tf-ent-5b',
@@ -103,7 +103,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Tangent has period $\\frac{\\pi}{|b|} = \\frac{\\pi}{3}$, and its asymptotes are one period apart. Using $\\frac{2\\pi}{|b|}$, the sine and cosine formula, gives $\\frac{2\\pi}{3}$.',
     partNumber: 5,
-    partTitle: 'Trigonometric Functions — Graphing Sinusoids',
+    partTitle: 'Trigonometric Functions — Periodic Functions & Graphing Sinusoids',
   },
 
   // Part 6 — Applied Problems & Modeling
@@ -157,7 +157,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 2, partTitle: 'Trigonometric Functions — The Unit Circle' },
     { partNumber: 3, partTitle: 'Trigonometric Functions — Sine & Cosine Definitions' },
     { partNumber: 4, partTitle: 'Trigonometric Functions — Tangent, Cotangent, Secant & Cosecant' },
-    { partNumber: 5, partTitle: 'Trigonometric Functions — Graphing Sinusoids' },
+    { partNumber: 5, partTitle: 'Trigonometric Functions — Periodic Functions & Graphing Sinusoids' },
     { partNumber: 6, partTitle: 'Trigonometric Functions — Applied Problems & Modeling' },
     { partNumber: 7, partTitle: 'Trigonometric Functions — Full Synthesis & Review' },
   ]

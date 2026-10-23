@@ -46,10 +46,10 @@ Both sequences below start at $100$ and gain $50$ on the first step.
           {
             question: 'A salary starts at \\$50,000. Plan A adds \\$2,000 per year and Plan B adds $4\\%$ per year. Which describes the yearly raises?',
             options: [
-              'Plan A\'s raise stays fixed, and Plan B\'s raise grows each year',
-              'Plan A\'s raise grows yearly, and Plan B\'s stays fixed',
-              'Each plan gives the same dollar raise every single year',
-              'Plan B\'s dollar raise shrinks as the salary rises'
+              'A\'s raise stays fixed; B\'s raise grows each year',
+              'A\'s raise grows each year; B\'s raise stays fixed',
+              'Each plan gives the same dollar raise every year',
+              'B\'s dollar raise shrinks as the salary rises'
             ],
             correctAnswer: 0,
             explanation: 'Plan A is arithmetic, so it adds the same \\$2,000 each year. Plan B is geometric, and $4\\%$ of a growing salary is a growing dollar amount: \\$2,000 the first year, then \\$2,080, and so on.'
@@ -177,7 +177,7 @@ Use $a_n = 100 + 50n$ and $g_n = 100(1.5)^n$.
           {
             question: 'An increasing arithmetic sequence and an increasing geometric sequence with positive terms are compared. Which is true?',
             options: [
-              'The geometric one eventually exceeds the arithmetic one',
+              'The geometric one eventually passes it',
               'The arithmetic one ends up above the geometric one',
               'They increase by the same amount at every step',
               'Neither can pass the other after the first step'

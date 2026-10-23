@@ -7,7 +7,7 @@ export const precalcTransformationsPart5Data = {
       content: `
 # 📚 Parent Functions Gallery
 
-**Part 5 of 7**
+**Part 5 of 7 — Parent Functions Gallery**
 
 ### The Essential Toolkit
 
@@ -20,13 +20,10 @@ Every function you transform begins as one of these **parent functions**.
 | Cubic | $y = x^3$ | S-shape, inflection at origin |
 | Square Root | $y = \\sqrt{x}$ | Half-parabola, $x \\geq 0$ |
 | Cube Root | $y = \\sqrt[3]{x}$ | S-shape, all reals |
-| Absolute Value | $y = |x|$ | V-shape, vertex $(0,0)$ |
+| Absolute Value | $y = \\lvert x \\rvert$ | V-shape, vertex $(0,0)$ |
 | Reciprocal | $y = 1/x$ | Hyperbola, asymptotes at axes |
 | Exponential | $y = 2^x$ | Growth, asymptote $y=0$ |
 | Logarithmic | $y = \\log x$ | Slow growth, $x > 0$ |
-| Sine | $y = \\sin x$ | Period $2\\pi$, range $[-1,1]$ |
-| Cosine | $y = \\cos x$ | Period $2\\pi$, range $[-1,1]$ |
-| Tangent | $y = \\tan x$ | Period $\\pi$, vertical asymptotes |
       `
     },
     {
@@ -65,14 +62,6 @@ $y = x^n$ and $y = x^{1/n}$ (same parity) are **inverse functions** — they ref
       type: 'text' as const,
       content: `
 ## ⭐ Special Functions
-
-### Greatest Integer (Floor) Function
-
-$$y = \\lfloor x \\rfloor$$
-
-- Step function: jumps at every integer
-- $\\lfloor 2.7 \\rfloor = 2$, $\\lfloor -1.3 \\rfloor = -2$
-- Used in pricing (round down), computer science
 
 ### Piecewise-Defined Functions
 
@@ -154,21 +143,21 @@ $$f(x) = \\begin{cases} x^2 & x < 0 \\\\ 2x+1 & x \\geq 0 \\end{cases}$$
             correctAnswer: 0
           },
           {
-            label: 'Vertical asymptote at $x = 0$, passes through $(1,0)$:',
+            label: 'Passes through $(0, 0)$ and $(1, 1)$ with domain $[0, \\infty)$:',
             options: ['$y = \\log x$', '$y = \\sqrt{x}$', '$y = 2^x$', '$y = |x|$'],
-            correctAnswer: 0
+            correctAnswer: 1
           },
           {
-            label: 'Period of $\\pi$:',
-            options: ['$y = \\sin x$', '$y = \\cos x$', '$y = \\tan x$', '$y = 2^x$'],
-            correctAnswer: 2
+            label: 'Domain $x > 0$ and vertical asymptote $x = 0$:',
+            options: ['$y = \\sqrt{x}$', '$y = \\log x$', '$y = 1/x$', '$y = 2^x$'],
+            correctAnswer: 1
           }
         ],
-        correctAnswers: ['$y = |x|$', '$y = 2^x$', '$y = \\log x$', '$y = \\tan x$'],
+        correctAnswers: ['$y = |x|$', '$y = 2^x$', '$y = \\sqrt{x}$', '$y = \\log x$'],
         hint1: 'V-shape = absolute value.',
         hint2: '$2^0 = 1$ and $y \\to 0$ as $x \\to -\\infty$.',
-        hint3: '$\\log 1 = 0$ and $x > 0$.',
-        explanation: 'V: absolute value. $(0,1)$ with HA $y=0$: exponential. VA $x=0$ + $(1,0)$: log. Period $\\pi$: tangent.'
+        hint3: '$\\sqrt{0} = 0$, $\\sqrt{1} = 1$; the log is the one defined only for $x > 0$ with $\\lim_{x \\to 0^+} \\log x = -\\infty$.',
+        explanation: 'V: absolute value. $(0,1)$ with HA $y=0$: exponential. Starts at the origin with domain $[0, \\infty)$: square root. Domain $x > 0$ with VA $x = 0$: logarithm ($1/x$ has a VA at $0$ too, but its domain includes negatives).'
       }
     },
     {

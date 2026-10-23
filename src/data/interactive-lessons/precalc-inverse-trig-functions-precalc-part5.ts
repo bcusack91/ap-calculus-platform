@@ -5,132 +5,102 @@ export const precalcInverseTrigPart5Data = {
       id: 'p5-intro',
       type: 'text' as const,
       content: `
-# 📐 Inverse Trig with Right Triangles
+# 🧮 Solving Equations with Inverse Trig Functions
 
 **Part 5 of 7**
 
-Inverse trig functions let us **find angles** in right triangles when we know the sides. As everywhere in AP Precalculus, the angles come out in **radians** (calculator in radian mode). A right angle is $\\frac{\\pi}{2} \\approx 1.571$, so the two acute angles of a right triangle add to $\\frac{\\pi}{2}$.
+The main job of an inverse trig function on the AP exam is to **solve** an equation such as $\\sin\\theta = 0.3$ when the value is not special. The inverse gives you **one** solution. The symmetry of the unit circle gives you the rest.
 
-### The Setup
+### One Solution From the Inverse, the Others From Symmetry
 
-Given a right triangle with known side lengths, find an angle $\\theta$:
+| Equation | The inverse gives | Second solution in $[0, 2\\pi)$ | All solutions |
+|:---------|:------------------|:-------------------------------|:--------------|
+| $\\sin\\theta = k$ | $\\theta_1 = \\arcsin k$ | $\\pi - \\theta_1$ | $\\theta_1 + 2\\pi n$, $\\ \\pi - \\theta_1 + 2\\pi n$ |
+| $\\cos\\theta = k$ | $\\theta_1 = \\arccos k$ | $2\\pi - \\theta_1$ (equivalently $-\\theta_1$) | $\\pm\\theta_1 + 2\\pi n$ |
+| $\\tan\\theta = k$ | $\\theta_1 = \\arctan k$ | $\\theta_1 + \\pi$ | $\\theta_1 + \\pi n$ |
 
-$$\\boxed{\\theta = \\arctan\\!\\left(\\frac{\\text{opposite}}{\\text{adjacent}}\\right) = \\arcsin\\!\\left(\\frac{\\text{opposite}}{\\text{hypotenuse}}\\right) = \\arccos\\!\\left(\\frac{\\text{adjacent}}{\\text{hypotenuse}}\\right)}$$
+If $\\arcsin k$ or $\\arctan k$ comes out negative, add $2\\pi$ to land it in $[0, 2\\pi)$.
 
-### Example: Triangle with sides 5, 12, 13
-
-For the angle opposite the side of length 5:
-
-$$\\theta = \\arcsin\\!\\left(\\frac{5}{13}\\right) = \\arctan\\!\\left(\\frac{5}{12}\\right) \\approx 0.395$$
-
-For the angle opposite the side of length 12:
-
-$$\\alpha = \\arcsin\\!\\left(\\frac{12}{13}\\right) = \\arctan\\!\\left(\\frac{12}{5}\\right) \\approx 1.176$$
-
-Verify: $0.395 + 1.176 = 1.571 \\approx \\frac{\\pi}{2}$ ✓
+> 📏 Keep the calculator in **radian** mode and round to **three decimal places** (the AP standard) unless told otherwise.
       `
     },
     {
-      id: 'p5-algebraic',
+      id: 'p5-worked',
       type: 'text' as const,
       content: `
-## 🔢 Algebraic Expressions with Inverse Trig
+## 📝 Worked Examples
 
-### Writing Trig Ratios as Algebraic Expressions
+### Example 1: Solve $\\cos\\theta = 0.6$ on $[0, 2\\pi)$
 
-**Problem:** Write $\\sin(\\arctan \\frac{x}{3})$ as an algebraic expression in $x$.
+$\\theta_1 = \\arccos(0.6) \\approx 0.927$ (a Quadrant I angle). Cosine is also $0.6$ at the reflection across the $x$-axis:
 
-**Solution:**
-1. Let $\\theta = \\arctan \\frac{x}{3}$, so $\\tan\\theta = \\frac{x}{3}$
-2. Right triangle: opposite = $x$, adjacent = $3$
-3. Hypotenuse = $\\sqrt{x^2 + 9}$
-4. $\\sin\\theta = \\frac{x}{\\sqrt{x^2 + 9}}$
+$$\\theta_2 = 2\\pi - 0.927 \\approx 5.356$$
 
-$$\\boxed{\\sin\\!\\left(\\arctan \\frac{x}{3}\\right) = \\frac{x}{\\sqrt{x^2 + 9}}}$$
+### Example 2: Solve $\\sin\\theta = -0.28$ on $[0, 2\\pi)$
 
-### Common General Formulas
+$\\arcsin(-0.28) \\approx -0.284$, which is **not** in $[0, 2\\pi)$. Sine is negative in Quadrants III and IV, and the reference angle is $0.284$:
 
-| Expression | Algebraic Form |
-|:-----------|:--------------|
-| $\\sin(\\arccos x)$ | $\\sqrt{1 - x^2}$ |
-| $\\cos(\\arcsin x)$ | $\\sqrt{1 - x^2}$ |
-| $\\tan(\\arcsin x)$ | $\\frac{x}{\\sqrt{1 - x^2}}$ |
-| $\\cos(\\arctan x)$ | $\\frac{1}{\\sqrt{1 + x^2}}$ |
-| $\\sin(\\arctan x)$ | $\\frac{x}{\\sqrt{1 + x^2}}$ |
-      `
-    },
-    {
-      id: 'p5-solving',
-      type: 'text' as const,
-      content: `
-## ✏️ Solving for Missing Angles
+$$\\theta = \\pi + 0.284 \\approx 3.425 \\qquad \\theta = 2\\pi - 0.284 \\approx 5.999$$
 
-### Example 1: Ladder Problem
+(Equivalently, $-0.284 + 2\\pi \\approx 5.999$ and $\\pi - (-0.284) \\approx 3.425$.)
 
-A 20-foot ladder leans against a wall with its base 8 feet from the wall. Find the angle with the ground.
+### Example 3: Solve $3\\tan\\theta = 4$ on $[0, 2\\pi)$
 
-Adjacent = $8$, hypotenuse = $20$.
+Isolate first: $\\tan\\theta = \\frac{4}{3}$, so $\\theta_1 = \\arctan\\frac{4}{3} \\approx 0.927$. Tangent repeats every $\\pi$:
 
-$$\\theta = \\arccos\\!\\left(\\frac{8}{20}\\right) = \\arccos(0.4) \\approx 1.159$$
+$$\\theta_2 = 0.927 + \\pi \\approx 4.069$$
 
-### Example 2: Finding Both Acute Angles
+### Example 4: A non-special exact value
 
-In a right triangle with legs $a = 7$ and $b = 24$:
+Solve $5\\sin\\theta - 1 = 0$. Then $\\sin\\theta = \\frac{1}{5}$, and the exact general solution is written with the inverse itself:
 
-$$\\alpha = \\arctan\\!\\left(\\frac{7}{24}\\right) \\approx 0.284$$
-$$\\beta = \\arctan\\!\\left(\\frac{24}{7}\\right) \\approx 1.287$$
+$$\\theta = \\arcsin\\tfrac{1}{5} + 2\\pi n \\quad\\text{or}\\quad \\theta = \\pi - \\arcsin\\tfrac{1}{5} + 2\\pi n$$
 
-Check: $0.284 + 1.287 = 1.571 \\approx \\frac{\\pi}{2}$ ✓ (The acute angles in a right triangle sum to $\\frac{\\pi}{2}$.)
+### Solving for the Input of an Inverse
 
-### Example 3: Using a Known Hypotenuse
-
-Right triangle with opposite $= 6$, hypotenuse $= 10$.
-
-$$\\theta = \\arcsin\\!\\left(\\frac{6}{10}\\right) = \\arcsin(0.6) \\approx 0.644$$
-
-This is a 3-4-5 triangle scaled by 2 (sides 6, 8, 10), so the same angle is also $\\arctan\\!\\left(\\frac{6}{8}\\right) \\approx 0.644$.
+If the unknown is **inside** the inverse, undo it by applying the trig function: $\\arccos(2x - 1) = \\frac{2\\pi}{3}$ means $2x - 1 = \\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$, so $x = \\frac{1}{4}$. (This only makes sense when the right side is in the range of the inverse.)
       `
     },
     {
       id: 'p5-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Triangle & Algebra Quiz** 🎯
+**Solving Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: '$\\cos(\\arctan x)$ simplifies to:',
+            question: 'A calculator gives $\\arcsin(0.7) \\approx 0.775$. What are all solutions of $\\sin\\theta = 0.7$ on $[0, 2\\pi)$?',
             options: [
-              '$\\frac{x}{\\sqrt{1+x^2}}$',
-              '$\\frac{1}{\\sqrt{1+x^2}}$',
-              '$\\sqrt{1-x^2}$',
-              '$\\frac{x}{1+x}$'
+              '$0.775$ only',
+              '$0.775$ and $\\pi - 0.775 \\approx 2.367$',
+              '$0.775$ and $0.775 + \\pi \\approx 3.917$',
+              '$0.775$ and $2\\pi - 0.775 \\approx 5.508$'
             ],
             correctAnswer: 1,
-            explanation: 'Let $\\theta = \\arctan x$. Triangle: opp = $x$, adj = $1$, hyp = $\\sqrt{1+x^2}$. $\\cos\\theta = \\frac{1}{\\sqrt{1+x^2}}$.'
+            explanation: 'Sine is positive in Quadrants I and II, and the Quadrant II partner of $0.775$ is $\\pi - 0.775$. Adding $\\pi$ is the tangent pattern, and $2\\pi - 0.775$ is the cosine pattern (it has sine $-0.7$).'
           },
           {
-            question: 'In a right triangle with hypotenuse 10 and opposite side 6, the angle is:',
+            question: 'Which is an exact solution of $4\\cos\\theta + 1 = 0$?',
             options: [
-              '$\\arctan(\\frac{6}{10})$',
-              '$\\arcsin(\\frac{6}{10})$',
-              '$\\arccos(\\frac{6}{10})$',
-              '$\\arctan(\\frac{10}{6})$'
+              '$\\theta = \\arccos\\!\\left(-\\frac{1}{4}\\right)$',
+              '$\\theta = \\arccos\\!\\left(\\frac{1}{4}\\right)$',
+              '$\\theta = \\cos\\!\\left(-\\frac{1}{4}\\right)$',
+              '$\\theta = -\\frac{1}{4}$'
             ],
-            correctAnswer: 1,
-            explanation: '$\\sin\\theta = \\frac{\\text{opposite}}{\\text{hypotenuse}} = \\frac{6}{10}$, so $\\theta = \\arcsin(\\frac{6}{10})$.'
+            correctAnswer: 0,
+            explanation: 'Isolating gives $\\cos\\theta = -\\frac{1}{4}$, so one solution is the angle whose cosine is $-\\frac{1}{4}$: $\\arccos(-\\frac{1}{4}) \\approx 1.823$. $\\arccos(\\frac{1}{4})$ drops the sign, $\\cos(-\\frac{1}{4})$ applies the wrong function, and $-\\frac{1}{4}$ is the cosine value, not the angle.'
           },
           {
-            question: '$\\tan(\\arcsin \\frac{x}{5})$ simplifies to:',
+            question: 'Solve $\\arctan(2x - 1) = \\frac{\\pi}{4}$.',
             options: [
-              '$\\frac{x}{5}$',
-              '$\\frac{x}{\\sqrt{25 - x^2}}$',
-              '$\\frac{5}{x}$',
-              '$\\frac{\\sqrt{25 - x^2}}{x}$'
+              '$x = \\frac{\\pi + 4}{8}$',
+              '$x = 1$',
+              '$x = \\frac{1}{2}$',
+              '$x = \\frac{\\sqrt{2} + 2}{4}$'
             ],
             correctAnswer: 1,
-            explanation: 'Triangle: opp = $x$, hyp = $5$, adj = $\\sqrt{25 - x^2}$. $\\tan\\theta = \\frac{x}{\\sqrt{25-x^2}}$.'
+            explanation: 'Apply tangent to both sides: $2x - 1 = \\tan\\frac{\\pi}{4} = 1$, so $x = 1$. $\\frac{\\pi + 4}{8}$ sets $2x - 1$ equal to the angle itself, $x = \\frac{1}{2}$ forgets the $-1$, and $\\frac{\\sqrt{2} + 2}{4}$ uses $\\sin\\frac{\\pi}{4}$.'
           }
         ]
       }
@@ -139,55 +109,57 @@ This is a 3-4-5 triangle scaled by 2 (sides 6, 8, 10), so the same angle is also
       id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
-**Solving Triangles** 🧮
+**Calculator Practice** 🧮
 
-Give each angle in radians, rounded to two decimal places.
+Give each angle in radians, rounded to **three decimal places** (calculator in radian mode).
 
-**1)** Right triangle: opposite = 3, adjacent = 4. Find angle $\\theta$. (e.g., if opposite = 5, adjacent = 12, then $\\theta = \\arctan(\\frac{5}{12}) \\approx 0.39$)
+**1)** The **larger** solution of $\\cos\\theta = 0.6$ on $[0, 2\\pi)$: $\\theta \\approx \\,?$ (e.g., for $\\cos\\theta = 0.4$: $\\arccos 0.4 \\approx 1.159$, so the larger solution is $2\\pi - 1.159 \\approx 5.124$)
 
-**2)** Right triangle: opposite = 7, hypotenuse = 25. Find angle $\\theta$. (e.g., if opp = 5, hyp = 13, then $\\theta = \\arcsin(\\frac{5}{13}) \\approx 0.39$)
+**2)** The **smaller** solution of $\\sin\\theta = 0.28$ on $[0, 2\\pi)$: $\\theta \\approx \\,?$ (e.g., for $\\sin\\theta = 0.4$: $\\arcsin 0.4 \\approx 0.412$)
 
-**3)** Right triangle: adjacent = 9, hypotenuse = 15. Find angle $\\theta$. (e.g., if adj = 12, hyp = 13, then $\\theta = \\arccos(\\frac{12}{13}) \\approx 0.39$)
+**3)** The **larger** solution of $\\tan\\theta = 0.75$ on $[0, 2\\pi)$: $\\theta \\approx \\,?$ (e.g., for $\\tan\\theta = 2$: $\\arctan 2 \\approx 1.107$, so the larger solution is $1.107 + \\pi \\approx 4.249$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.64', '0.28', '0.93'],
-        hint1: '$\\arctan(\\frac{3}{4}) = \\arctan(0.75) \\approx 0.6435$.',
-        hint2: '$\\arcsin(\\frac{7}{25}) = \\arcsin(0.28) \\approx 0.2838$.',
-        hint3: '$\\arccos(\\frac{9}{15}) = \\arccos(0.6) \\approx 0.9273$.',
-        explanation: '1) $\\arctan(0.75) \\approx 0.64$. 2) $\\arcsin(0.28) \\approx 0.28$. 3) $\\arccos(0.6) \\approx 0.93$. Check 1 and 3: $0.64 + 0.93 \\approx 1.57 = \\frac{\\pi}{2}$, as expected for the two acute angles of a 3-4-5 triangle.'
+        correctAnswers: ['5.356', '0.284', '3.785'],
+        hint1: '$\\arccos(0.6) \\approx 0.927$; the other solution is $2\\pi - 0.927$.',
+        hint2: '$\\arcsin(0.28) \\approx 0.2838$ is already the Quadrant I solution; the other one is $\\pi - 0.284 \\approx 2.858$.',
+        hint3: '$\\arctan(0.75) \\approx 0.6435$; add $\\pi$ for the Quadrant III solution.',
+        explanation: '1) $2\\pi - 0.927 \\approx 5.356$. 2) $\\arcsin 0.28 \\approx 0.284$ (the larger one is $2.858$). 3) $0.644 + \\pi \\approx 3.785$.'
       }
     },
     {
       id: 'p5-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Choose the Right Expression** 🔽
+**From One Solution to All of Them** 🔽
+
+You are solving $\\cos\\theta = -0.3$ and your calculator gives $\\arccos(-0.3) \\approx 1.875$.
       `,
       exercise: {
         dropdowns: [
           {
-            label: '$\\sin(\\arccos x)$ simplifies to',
-            options: ['$\\sqrt{1-x^2}$', '$\\frac{x}{\\sqrt{1+x^2}}$', '$\\frac{1}{x}$', '$1-x^2$']
+            label: 'The angle $1.875$ lies in Quadrant',
+            options: ['I', 'II', 'III', 'IV']
           },
           {
-            label: 'To find angle $\\theta$ given opposite and adjacent sides, use',
-            options: ['$\\arcsin$', '$\\arccos$', '$\\arctan$']
+            label: 'The other solution on $[0, 2\\pi)$ is',
+            options: ['$2\\pi - 1.875 \\approx 4.408$', '$\\pi - 1.875 \\approx 1.267$', '$1.875 + \\pi \\approx 5.017$', '$-1.875$']
           },
           {
-            label: '$\\cos(\\arcsin x)$ simplifies to',
-            options: ['$\\sqrt{1-x^2}$', '$x$', '$\\frac{x}{\\sqrt{1+x^2}}$', '$1-x$']
+            label: 'All solutions are given by',
+            options: ['$\\theta = \\pm 1.875 + 2\\pi n$', '$\\theta = 1.875 + \\pi n$', '$\\theta = 1.875 + 2\\pi n$ only', '$\\theta = \\pm 1.875 + \\pi n$']
           },
           {
-            label: '$\\sin(\\arctan x)$ simplifies to',
-            options: ['$\\sqrt{1-x^2}$', '$\\frac{1}{\\sqrt{1+x^2}}$', '$\\frac{x}{\\sqrt{1+x^2}}$', '$x$']
+            label: 'If the value had been $\\cos\\theta = -0.3$ with $\\theta$ required in $[\\pi, 2\\pi]$, the answer would be',
+            options: ['$\\approx 4.408$', '$\\approx 1.875$', '$\\approx 1.267$', 'No solution']
           }
         ],
-        correctAnswers: ['$\\sqrt{1-x^2}$', '$\\arctan$', '$\\sqrt{1-x^2}$', '$\\frac{x}{\\sqrt{1+x^2}}$'],
-        hint1: 'Draw triangle with adj = $x$, hyp = 1, find opposite.',
-        hint2: '$\\tan\\theta = \\frac{\\text{opposite}}{\\text{adjacent}}$, so we invert with $\\arctan$.',
-        hint3: 'Draw triangle with opp = $x$, hyp = 1, find adjacent.',
-        explanation: '$\\sin(\\arccos x)$ and $\\cos(\\arcsin x)$ both equal $\\sqrt{1-x^2}$. Use $\\arctan$ for opp/adj. $\\sin(\\arctan x) = \\frac{x}{\\sqrt{1+x^2}}$.'
+        correctAnswers: ['II', '$2\\pi - 1.875 \\approx 4.408$', '$\\theta = \\pm 1.875 + 2\\pi n$', '$\\approx 4.408$'],
+        hint1: '$\\frac{\\pi}{2} \\approx 1.571 < 1.875 < 3.142 \\approx \\pi$.',
+        hint2: 'Cosine is negative in Quadrants II and III; the Quadrant III partner is the reflection across the $x$-axis, $2\\pi - \\theta_1$.',
+        hint3: 'Cosine repeats every $2\\pi$ and is even, so both $\\theta_1$ and $-\\theta_1$ generate solutions.',
+        explanation: '$1.875$ is between $\\frac{\\pi}{2}$ and $\\pi$: Quadrant II. The reflection $2\\pi - 1.875 \\approx 4.408$ is the Quadrant III solution. All solutions: $\\pm 1.875 + 2\\pi n$. Only $4.408$ lies in $[\\pi, 2\\pi]$.'
       }
     },
     {
@@ -199,26 +171,26 @@ Give each angle in radians, rounded to two decimal places.
       exercise: {
         questions: [
           {
-            question: 'A ramp rises 3 meters over a horizontal distance of 12 meters. The angle of incline is:',
+            question: 'To two decimal places, $\\arctan(-1.5) \\approx -0.98$. What are all solutions of $\\tan\\theta = -1.5$ on $[0, 2\\pi)$?',
             options: [
-              '$\\arcsin(\\frac{3}{12})$',
-              '$\\arctan(\\frac{3}{12})$',
-              '$\\arccos(\\frac{3}{12})$',
-              '$\\arctan(\\frac{12}{3})$'
-            ],
-            correctAnswer: 1,
-            explanation: 'Rise = opposite = 3, run = adjacent = 12. Angle = $\\arctan(\\frac{\\text{opp}}{\\text{adj}}) = \\arctan(\\frac{3}{12}) \\approx 0.245$ radians.'
-          },
-          {
-            question: '$\\sec(\\arctan x)$ simplifies to:',
-            options: [
-              '$\\sqrt{1 + x^2}$',
-              '$\\frac{1}{\\sqrt{1+x^2}}$',
-              '$\\frac{x}{\\sqrt{1+x^2}}$',
-              '$1 + x$'
+              '$\\theta \\approx 2.16$ and $5.30$',
+              '$\\theta \\approx 0.98$ and $4.12$',
+              '$\\theta \\approx 2.16$ only',
+              '$\\theta \\approx 5.30$ and $0.98$'
             ],
             correctAnswer: 0,
-            explanation: 'Triangle: opp = $x$, adj = 1, hyp = $\\sqrt{1+x^2}$. $\\sec\\theta = \\frac{\\text{hyp}}{\\text{adj}} = \\sqrt{1+x^2}$.'
+            explanation: 'Add $\\pi$ to the calculator value to reach the interval: $-0.98 + \\pi \\approx 2.16$ (Quadrant II), then add $\\pi$ again: $5.30$ (Quadrant IV). Tangent is negative in exactly those quadrants. $0.98$ and $4.12$ solve $\\tan\\theta = +1.5$.'
+          },
+          {
+            question: 'How many solutions does $\\sin\\theta = 0.95$ have on $[0, 4\\pi)$?',
+            options: [
+              '$1$',
+              '$2$',
+              '$4$',
+              '$8$'
+            ],
+            correctAnswer: 2,
+            explanation: 'On one turn, sine equals $0.95$ twice (in Quadrants I and II); the interval $[0, 4\\pi)$ holds two full turns, so there are $4$ solutions. The inverse gives only the first of them.'
           }
         ]
       }

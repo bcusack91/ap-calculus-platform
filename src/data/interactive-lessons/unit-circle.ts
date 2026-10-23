@@ -9,6 +9,8 @@ export const unitCircleLessonData = {
 
 In this interactive lesson, you'll master the unit circle through a simple counting technique that makes memorizing those tricky values super easy!
 
+> **What the unit circle is:** the circle of radius $1$ centered at the origin. An angle $\\theta$ in standard position meets it at exactly one point, and that point's coordinates are $(\\cos\\theta, \\sin\\theta)$. The values you are about to memorize are the coordinates of the points at $0, \\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{\\pi}{2}$ — Part 3 shows why.
+
 Click "Next" when you're ready to begin learning the counting method.
       `
     },
@@ -177,7 +179,7 @@ $$0, \\quad \\frac{\\pi}{6}, \\quad \\frac{\\pi}{4}, \\quad \\frac{\\pi}{3}, \\q
 
 These correspond to the values we just calculated!
 
-> 📏 **Degrees ↔ radians bridge:** a full turn is $2\\pi$ radians ($360°$), so $\\pi$ radians $= 180°$. If you learned these angles as $30°, 45°, 60°, 90°$, they are $\\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{\\pi}{2}$. The AP exam uses radians only, so we will too.
+> 📏 **Degrees ↔ radians bridge:** a full turn is $2\\pi$ radians ($360°$), so $\\pi$ radians $= 180°$. If you learned these angles as $30°, 45°, 60°, 90°$, they are $\\frac{\\pi}{6}, \\frac{\\pi}{4}, \\frac{\\pi}{3}, \\frac{\\pi}{2}$. The AP exam works in radians, so we will too.
 
 Let's practice identifying these angles.
       `
@@ -188,13 +190,13 @@ Let's practice identifying these angles.
       content: `
 **Practice: Fill in the First Quadrant Angles**
 
-Enter the five key angles of the first quadrant in order, from $0$ up to $\\frac{\\pi}{2}$, including both axis angles $0$ and $\\frac{\\pi}{2}$. Write each one as a multiple of $\\pi$ and type the **coefficient** (type \`1/6\` for $\\frac{\\pi}{6}$, and \`0\` for the angle $0$):
+Enter the five key angles of the first quadrant in order, from $0$ up to $\\frac{\\pi}{2}$, including both axis angles $0$ and $\\frac{\\pi}{2}$. Type each angle in radians, writing $\\pi$ as \`pi\` (type \`pi/6\` for $\\frac{\\pi}{6}$, and \`0\` for the angle $0$):
       `,
       exercise: {
         boxes: 5,
-        correctAnswers: ['0', '1/6', '1/4', '1/3', '1/2'],
+        correctAnswers: ['0', 'pi/6', 'pi/4', 'pi/3', 'pi/2'],
         hint1: 'Remember: start at $0$ and go up to $\\frac{\\pi}{2}$, a quarter turn.',
-        hint2: 'The angles are $0$, $\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, and $\\frac{\\pi}{2}$, so the coefficients are $0$, $\\frac{1}{6}$, $\\frac{1}{4}$, $\\frac{1}{3}$, $\\frac{1}{2}$.',
+        hint2: 'The angles are $0$, $\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, and $\\frac{\\pi}{2}$: type them as 0, pi/6, pi/4, pi/3, pi/2.',
         explanation: 'The five key angles in the first quadrant are $0$, $\\frac{\\pi}{6}$, $\\frac{\\pi}{4}$, $\\frac{\\pi}{3}$, and $\\frac{\\pi}{2}$ radians.'
       }
     },
@@ -268,13 +270,15 @@ $$0, \\quad \\frac{1}{2}, \\quad \\frac{\\sqrt{2}}{2}, \\quad \\frac{\\sqrt{3}}{
 
 Now see how these values become sine and cosine:
 
-| Angle | sin (UP ⬆️) | cos (DOWN ⬇️) |
-|-------|------------|---------------|
-| $0$ | $0$ | $1$ |
-| $\\frac{\\pi}{6}$ | $\\frac{1}{2}$ | $\\frac{\\sqrt{3}}{2}$ |
-| $\\frac{\\pi}{4}$ | $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\sqrt{2}}{2}$ |
-| $\\frac{\\pi}{3}$ | $\\frac{\\sqrt{3}}{2}$ | $\\frac{1}{2}$ |
-| $\\frac{\\pi}{2}$ | $1$ | $0$ |
+| Angle | sin (UP ⬆️) | cos (DOWN ⬇️) | tan = sin ÷ cos |
+|-------|------------|---------------|-----------------|
+| $0$ | $0$ | $1$ | $0$ |
+| $\\frac{\\pi}{6}$ | $\\frac{1}{2}$ | $\\frac{\\sqrt{3}}{2}$ | $\\frac{\\sqrt{3}}{3}$ |
+| $\\frac{\\pi}{4}$ | $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\sqrt{2}}{2}$ | $1$ |
+| $\\frac{\\pi}{3}$ | $\\frac{\\sqrt{3}}{2}$ | $\\frac{1}{2}$ | $\\sqrt{3}$ |
+| $\\frac{\\pi}{2}$ | $1$ | $0$ | undefined |
+
+**Tangent comes for free:** $\\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta}$, the slope of the terminal ray. It is $0$ where the ray is flat, $1$ at $\\frac{\\pi}{4}$ (the line $y = x$), and undefined at $\\frac{\\pi}{2}$ where the ray is vertical.
 
 ---
 
@@ -293,7 +297,7 @@ That's it! You now know the entire first quadrant of the unit circle! 🎉
       id: 'completion',
       type: 'text' as const,
       content: `
-**🌟 Lesson Complete! 🌟**
+**🌟 Part 2 Complete! 🌟**
 
 ---
 
@@ -426,10 +430,10 @@ Fill in all the angles and coordinates to complete the game. Remember:
 When you draw a radius from the origin to any point on the unit circle:
 
 1. **The angle** is measured from the positive x-axis (going counterclockwise), in radians
-2. **The horizontal distance** from the origin is the cosine (x-coordinate)
-3. **The vertical distance** from the origin is the sine (y-coordinate)
+2. **The x-coordinate** of the point (negative to the left of the y-axis) is the cosine
+3. **The y-coordinate** of the point (negative below the x-axis) is the sine
 
-Because the radius is always 1, these distances ARE the sine and cosine values!
+Because the radius is always 1, these coordinates ARE the cosine and sine values! They are signed coordinates, not distances: at $\\frac{5\\pi}{6}$ the point is $\\left(-\\frac{\\sqrt{3}}{2}, \\frac{1}{2}\\right)$, so $\\cos\\frac{5\\pi}{6} = -\\frac{\\sqrt{3}}{2}$.
 
 **The Pythagorean Identity:**
 

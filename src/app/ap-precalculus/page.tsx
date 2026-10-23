@@ -19,11 +19,11 @@ export const metadata: Metadata = {
 const features: HubFeature[] = [
   {
     title: 'Interactive Lessons',
-    description: 'Step-by-step lessons covering polynomial, rational, exponential, logarithmic, and trigonometric functions plus parametric, polar, vectors, and matrices.',
+    description: 'Step-by-step lessons covering polynomial, rational, exponential, logarithmic, trigonometric, and polar functions — the three units the AP exam assesses.',
     href: '/courses/ap-precalculus',
     icon: 'lessons',
     color: 'from-blue-500 to-indigo-500',
-    stats: 'All units · Step-by-step',
+    stats: '3 units · Step-by-step',
   },
   {
     title: 'Diagnostic Test',
@@ -75,11 +75,11 @@ const features: HubFeature[] = [
   },
   {
     title: 'Unit Tests',
-    description: 'Drill a single AP Precalc unit at a time. 4 units · 4 different variations each — perfect for end-of-unit review.',
+    description: 'Drill a single AP Precalc unit at a time. 3 assessed units · 4 different variations each — perfect for end-of-unit review.',
     href: '/ap-precalc-unit-tests',
     icon: 'chart',
     color: 'from-emerald-500 to-teal-500',
-    stats: '4 units · 4 variations',
+    stats: '3 units · 4 variations',
   },
   {
     title: 'Exit Quizzes',
@@ -115,20 +115,22 @@ const features: HubFeature[] = [
   },
 ]
 
+// The three assessed CED units (the unassessed fourth unit is not taught here);
+// names and topics follow PRECALC_CATEGORIES in src/lib/course-includes.ts.
 const units: HubUnit[] = [
   {
-    title: 'Unit 1: Polynomial & Rational Functions',
-    topics: ['End Behavior & Degree', 'Roots, Zeros & Factoring', 'Rational Function Asymptotes', 'Modeling with Polynomials'],
+    title: 'Unit 1: Polynomial and Rational Functions',
+    topics: ['Rates of Change', 'Polynomial Functions & Complex Zeros', 'Rational Functions & Asymptotes', 'Transformations & Function Modeling'],
     color: 'blue',
   },
   {
-    title: 'Unit 2: Exponential & Logarithmic Functions',
-    topics: ['Exponential Growth & Decay', 'Logarithm Properties', 'Solving Exp/Log Equations', 'Modeling with Exp & Log'],
+    title: 'Unit 2: Exponential and Logarithmic Functions',
+    topics: ['Sequences', 'Exponential Functions', 'Composition & Inverses', 'Logarithms, Data Modeling & Semi-log Plots'],
     color: 'indigo',
   },
   {
-    title: 'Unit 3: Trigonometric & Polar Functions',
-    topics: ['Unit Circle & Identities', 'Graphs of Sin, Cos, Tan', 'Inverse Trig & Equations', 'Polar Functions & Coordinates'],
+    title: 'Unit 3: Trigonometric and Polar Functions',
+    topics: ['Unit Circle & Trig Functions', 'Sinusoidal Modeling', 'Inverse Trig, Equations & Identities', 'Polar Coordinates & Polar Functions'],
     color: 'purple',
   },
 ]

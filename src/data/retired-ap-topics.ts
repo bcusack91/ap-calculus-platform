@@ -6,14 +6,15 @@
  * back into lessons, quizzes, study plans and redirects.
  */
 
-/** On-exam topics that live in a retiring unit: topic slug -> new unit slug (+ order). */
-export const REPARENTED_AP_TOPICS: Record<string, { category: string; order: number }> = {
-  // Polar functions are AP Precalculus Topics 3.13-3.15 (Unit 3), not Unit 4.
-  'polar-coordinates': { category: 'trigonometric-functions', order: 20 },
-  'polar-coordinates-precalc': { category: 'precalc-trig-functions', order: 20 },
-  // Rates of change are Topics 1.1-1.4 (Unit 1).
-  'rates-of-change-precalc': { category: 'precalc-polynomial-rational', order: 0 },
-}
+/**
+ * On-exam topics that live in a retiring unit: topic slug -> new unit slug (+ order).
+ * Empty since Oct 2026: the three AP Precalculus entries (polar-coordinates,
+ * polar-coordinates-precalc, rates-of-change-precalc) were parked here when
+ * Unit 4 retired; the CED layout in src/lib/course-includes.ts
+ * (PRECALC_CATEGORIES) now places them and prisma/restructure-precalc.ts
+ * applies it, so prisma/retire-ap-topics.ts has nothing left to re-parent.
+ */
+export const REPARENTED_AP_TOPICS: Record<string, { category: string; order: number }> = {}
 
 /** Retired topic slug -> CED reason (short). Redirects live in legacy-topic-redirects.ts. */
 export const RETIRED_AP_TOPICS: Record<string, string> = {
@@ -68,7 +69,9 @@ export const RETIRED_AP_UNITS: Record<string, { course: string; redirect: string
   'csa-inheritance': { course: 'ap-computer-science-a', redirect: 'csa-writing-classes' },
   // Fluids are AP Physics 1 Unit 8 now; send old links to that unit.
   'fluid-mechanics': { course: 'ap-physics-2', redirect: 'fluids' },
-  'parameters-vectors-matrices': { course: 'ap-precalculus', redirect: 'trigonometric-functions' },
+  // Polar (3.13-3.15) is the on-exam part of the old Unit 4; its unit is the CED
+  // Unit 3 Category (the Jan-2026 'trigonometric-functions' twin is retired).
+  'parameters-vectors-matrices': { course: 'ap-precalculus', redirect: 'precalc-trig-functions' },
   'precalc-polar-vectors-matrices': { course: 'ap-precalculus', redirect: 'precalc-trig-functions' },
   'precalc-intro-calculus': { course: 'ap-precalculus', redirect: 'precalc-polynomial-rational' },
   'regression-correlation': { course: 'ap-statistics', redirect: 'two-variable-data' },

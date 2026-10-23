@@ -5,40 +5,33 @@ export const precalcInverseTrigPart6Data = {
       id: 'p6-intro',
       type: 'text' as const,
       content: `
-# 🌍 Applications of Inverse Trig
+# 🎡 Inverse Trig in Periodic Models
 
 **Part 6 of 7**
 
-Inverse trig functions appear everywhere in real-world problems — navigation, physics, engineering, and more.
+Tides, Ferris wheels, daylight and temperature are modeled by sinusoidal functions. Asking *"when does the quantity reach a given value?"* means solving a trig equation, and when the value is not special, the inverse trig function is the only way in.
 
-### Angle of Elevation & Depression
+### The Recipe
 
-$$\\boxed{\\text{Angle of Elevation/Depression} = \\arctan\\!\\left(\\frac{\\text{vertical distance}}{\\text{horizontal distance}}\\right)}$$
+For a model $f(t) = a\\sin(b(t - c)) + d$ (or cosine):
 
-### Example 1: Angle of Elevation
+1. **Set** $f(t)$ equal to the target value and **isolate** the sine or cosine: $\\sin(\\text{inner}) = k$.
+2. **Apply the inverse** to get one value of the inner angle: $\\text{inner} = \\arcsin k$.
+3. **Use symmetry** for the other inner angle in one period ($\\pi - \\arcsin k$ for sine, $2\\pi - \\arccos k$ for cosine) and add multiples of $2\\pi$ if the domain covers more than one cycle.
+4. **Undo the inner expression** to get $t$, and keep only the times inside the context's domain.
 
-A 6-foot person looks up at the top of a 50-foot building from 80 feet away. What is the angle of elevation?
-
-Vertical distance = $50 - 6 = 44$ ft, horizontal distance = $80$ ft.
-
-$$\\theta = \\arctan\\!\\left(\\frac{44}{80}\\right) = \\arctan(0.55) \\approx 0.503 \\text{ radians}$$
-
-### Example 2: Angle of Depression
-
-A drone at 200 feet altitude spots a target 500 feet away horizontally. The angle of depression is:
-
-$$\\theta = \\arctan\\!\\left(\\frac{200}{500}\\right) = \\arctan(0.4) \\approx 0.381 \\text{ radians}$$
+> ⚠️ An inverse trig function gives **one** angle. A context almost always has a second (and third, …) answer. Check the domain before you stop.
       `
     },
     {
       id: 'p6-periodic',
       type: 'text' as const,
       content: `
-## 🎡 Inverse Trig in Periodic Models
+## 📝 Worked Examples: A Ferris Wheel
 
-A rider's height on a Ferris wheel is $h(t) = 10\\sin\\!\\left(\\frac{\\pi}{20}t\\right) + 12$ meters, $t$ in seconds, for one 40-second turn ($0 \\le t \\le 40$).
+A rider's height is $h(t) = 10\\sin\\!\\left(\\frac{\\pi}{20}t\\right) + 12$ meters, $t$ in seconds, for one 40-second turn ($0 \\le t \\le 40$).
 
-### Example 3: A special value
+### Example 1: A special value
 
 When is the rider first $17$ m high?
 
@@ -46,7 +39,7 @@ $$10\\sin\\!\\left(\\frac{\\pi}{20}t\\right) + 12 = 17 \\implies \\sin\\!\\left(
 
 $$\\frac{\\pi}{20}t = \\arcsin(0.5) = \\frac{\\pi}{6} \\implies t = \\frac{20}{6} = \\frac{10}{3} \\approx 3.33 \\text{ s}$$
 
-### Example 4: A calculator value, and the second solution
+### Example 2: A calculator value, and the second solution
 
 When is the rider $15$ m high?
 
@@ -56,76 +49,76 @@ $\\arcsin$ only returns the angle in $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\
 
 $$\\frac{\\pi}{20}t = \\pi - 0.3047 \\implies t \\approx 20 - 1.94 = 18.06 \\text{ s}$$
 
-> ⚠️ An inverse trig function gives **one** angle. In a context, check whether the domain allows other solutions, and adjust the calculator's answer to find them.
+### Example 3: A value below the midline
+
+When is the rider $7$ m high? Then $\\sin\\!\\left(\\frac{\\pi}{20}t\\right) = -0.5$. On $[0, 2\\pi)$ sine is $-\\frac{1}{2}$ at $\\frac{7\\pi}{6}$ and $\\frac{11\\pi}{6}$ (the inverse gives $-\\frac{\\pi}{6}$; add $2\\pi$ and reflect), so
+
+$$t = \\frac{7\\pi}{6}\\cdot\\frac{20}{\\pi} = \\frac{70}{3} \\approx 23.3 \\text{ s} \\qquad t = \\frac{11\\pi}{6}\\cdot\\frac{20}{\\pi} = \\frac{110}{3} \\approx 36.7 \\text{ s}$$
+
+Both times are in $[0, 40]$, so both count. The rider is **below** $7$ m between them, for $\\frac{70}{3} < t < \\frac{110}{3}$.
       `
     },
     {
-      id: 'p6-inverse-problems',
+      id: 'p6-temperature',
       type: 'text' as const,
       content: `
-## 🔧 Solving Inverse Trig Equations
+## 🌡️ A Cosine Model
 
-### Example 6: Solve $2\\arcsin(x) = \\frac{\\pi}{3}$
+The temperature in a greenhouse is $T(t) = 6\\cos\\!\\left(\\frac{\\pi}{12}t\\right) + 70$ degrees, $t$ hours after noon, $0 \\le t < 24$.
 
-$$\\arcsin(x) = \\frac{\\pi}{6}$$
-$$x = \\sin\\!\\left(\\frac{\\pi}{6}\\right) = \\frac{1}{2}$$
+### Example 4: When is the temperature $66$ degrees?
 
-### Example 7: Solve $\\arctan(2x - 1) = \\frac{\\pi}{4}$
+$$6\\cos\\!\\left(\\frac{\\pi}{12}t\\right) + 70 = 66 \\implies \\cos\\!\\left(\\frac{\\pi}{12}t\\right) = -\\frac{2}{3}$$
 
-$$2x - 1 = \\tan\\!\\left(\\frac{\\pi}{4}\\right) = 1$$
-$$2x = 2 \\implies x = 1$$
+The inverse gives $\\arccos\\!\\left(-\\frac{2}{3}\\right) \\approx 2.300$, and the cosine symmetry gives the second inner angle $2\\pi - 2.300 \\approx 3.983$. Undo the inner expression (multiply by $\\frac{12}{\\pi}$):
 
-### Key Strategy for Solving
+$$t \\approx 2.300\\cdot\\frac{12}{\\pi} \\approx 8.79 \\text{ h} \\qquad t \\approx 3.983\\cdot\\frac{12}{\\pi} \\approx 15.21 \\text{ h}$$
 
-$$\\boxed{\\text{Isolate the inverse trig function, then apply the corresponding trig function to both sides}}$$
+So the temperature is $66$ degrees at about 8:47 p.m. and about 3:13 a.m., and it is **below** $66$ degrees between those times.
 
-If $\\arcsin(\\text{expr}) = \\theta$, then $\\text{expr} = \\sin\\theta$.
-
-If $\\arccos(\\text{expr}) = \\theta$, then $\\text{expr} = \\cos\\theta$.
-
-If $\\arctan(\\text{expr}) = \\theta$, then $\\text{expr} = \\tan\\theta$.
+> 💡 With a cosine model the two inner angles are $\\theta_1$ and $2\\pi - \\theta_1$; with a sine model they are $\\theta_1$ and $\\pi - \\theta_1$. The symmetry comes from the unit circle, not from the context.
       `
     },
     {
       id: 'p6-mcq',
       type: 'multiple-choice' as const,
       content: `
-**Applications Quiz** 🎯
+**Modeling Quiz** 🎯
       `,
       exercise: {
         questions: [
           {
-            question: 'A 15-foot flagpole casts a 20-foot shadow. The angle of elevation of the sun is:',
+            question: 'The depth of water at a dock is $D(t) = 3\\sin\\!\\left(\\frac{\\pi}{6}t\\right) + 8$ feet, $t$ hours after midnight. Which equation gives the **first** time the depth is $9$ feet?',
             options: [
-              '$\\arcsin(\\frac{15}{20})$',
-              '$\\arctan(\\frac{15}{20})$',
-              '$\\arccos(\\frac{15}{20})$',
-              '$\\arctan(\\frac{20}{15})$'
-            ],
-            correctAnswer: 1,
-            explanation: 'Opposite = flagpole height = 15, adjacent = shadow = 20. Angle = $\\arctan(\\frac{15}{20}) \\approx 0.644$ radians.'
-          },
-          {
-            question: 'Solve: $\\arccos(x) = \\frac{\\pi}{3}$',
-            options: [
-              '$x = \\frac{\\sqrt{3}}{2}$',
-              '$x = \\frac{1}{2}$',
-              '$x = \\frac{\\pi}{3}$',
-              '$x = \\frac{\\sqrt{2}}{2}$'
-            ],
-            correctAnswer: 1,
-            explanation: '$x = \\cos(\\frac{\\pi}{3}) = \\frac{1}{2}$.'
-          },
-          {
-            question: 'From a 100-meter cliff, an object on the ground is seen at an angle of depression of $\\frac{\\pi}{6}$. The horizontal distance is approximately:',
-            options: [
-              '$100\\sqrt{3} \\approx 173$ m',
-              '$\\frac{100}{\\sqrt{3}} \\approx 58$ m',
-              '$50$ m',
-              '$200$ m'
+              '$t = \\frac{6}{\\pi}\\arcsin\\!\\left(\\frac{1}{3}\\right)$',
+              '$t = \\frac{\\pi}{6}\\arcsin\\!\\left(\\frac{1}{3}\\right)$',
+              '$t = \\frac{6}{\\pi}\\arcsin(9)$',
+              '$t = \\frac{6}{\\pi}\\sin\\!\\left(\\frac{1}{3}\\right)$'
             ],
             correctAnswer: 0,
-            explanation: '$\\tan\\frac{\\pi}{6} = \\frac{100}{d}$, so $d = \\frac{100}{\\tan(\\pi/6)} = \\frac{100}{\\frac{1}{\\sqrt{3}}} = 100\\sqrt{3} \\approx 173$ m. Multiplying by $\\tan\\frac{\\pi}{6}$ instead gives $58$ m.'
+            explanation: 'Isolate: $\\sin\\!\\left(\\frac{\\pi}{6}t\\right) = \\frac{1}{3}$, so $\\frac{\\pi}{6}t = \\arcsin\\frac{1}{3}$ and $t = \\frac{6}{\\pi}\\arcsin\\frac{1}{3} \\approx 0.65$ h. Multiplying by $\\frac{\\pi}{6}$ instead of dividing undoes the inner expression the wrong way, $\\arcsin(9)$ is undefined (the sine was not isolated), and $\\sin\\frac{1}{3}$ applies the function instead of its inverse.'
+          },
+          {
+            question: 'For the same dock, $\\frac{6}{\\pi}\\arcsin\\!\\left(\\frac{1}{3}\\right) \\approx 0.65$ hours. The **second** time in the first 12 hours that the depth is $9$ feet is approximately:',
+            options: [
+              '$6 - 0.65 = 5.35$ hours',
+              '$12 - 0.65 = 11.35$ hours',
+              '$6 + 0.65 = 6.65$ hours',
+              '$0.65 + \\pi \\approx 3.79$ hours'
+            ],
+            correctAnswer: 0,
+            explanation: 'The second inner angle is $\\pi - \\arcsin\\frac{1}{3}$, and multiplying by $\\frac{6}{\\pi}$ gives $6 - 0.65 = 5.35$ hours (half a period minus the first time). $12 - 0.65$ would use $2\\pi - \\theta_1$, the cosine pattern, $6.65$ is where the depth is $7$ feet, and adding $\\pi$ to a time mixes angle and time units.'
+          },
+          {
+            question: 'A rider\'s height is $h(t) = 20 - 15\\cos\\!\\left(\\frac{\\pi}{10}t\\right)$ meters. For how many values of $t$ in $[0, 40]$ is $h(t) = 30$?',
+            options: [
+              '$2$',
+              '$1$',
+              '$4$',
+              '$8$'
+            ],
+            correctAnswer: 2,
+            explanation: '$\\cos\\!\\left(\\frac{\\pi}{10}t\\right) = -\\frac{2}{3}$ has two solutions per period, and the period is $\\frac{2\\pi}{\\pi/10} = 20$ s, so $[0, 40]$ holds two periods and four solutions. The inverse alone gives one of them.'
           }
         ]
       }
@@ -134,53 +127,57 @@ If $\\arctan(\\text{expr}) = \\theta$, then $\\text{expr} = \\tan\\theta$.
       id: 'p6-input',
       type: 'input-boxes' as const,
       content: `
-**Solve Equations** 🧮
+**Solve in Context** 🧮
 
-**1)** Solve $\\arcsin(x) = \\frac{\\pi}{6}$. What is $x$? Write as a decimal. (e.g., If $\\arccos(x) = \\frac{\\pi}{3}$, then $x = \\cos(\\frac{\\pi}{3}) = 0.5$)
+A rider's height on a Ferris wheel is $h(t) = 10\\sin\\!\\left(\\frac{\\pi}{20}t\\right) + 12$ meters for $0 \\le t \\le 40$ seconds.
 
-**2)** Solve $\\arctan(x) = \\frac{\\pi}{4}$. What is $x$? (e.g., If $\\arctan(x) = 0$, then $x = \\tan(0) = 0$)
+**1)** The first time the rider is $7$ m high is $t = \\,?$ seconds. Give the exact value as a fraction (type \`25/3\`) or a decimal.
 
-**3)** A tree casts a 40-foot shadow when the sun's angle of elevation is $0.9$ radians. Tree height = $40\\tan(0.9) \\approx$ ? feet. Round to nearest integer, calculator in radian mode. (e.g., $40\\tan(\\frac{\\pi}{4}) = 40$ since $\\tan \\frac{\\pi}{4} = 1$)
+**2)** The second time the rider is $7$ m high is $t = \\,?$ seconds (fraction or decimal).
+
+**3)** The first time the rider is $20$ m high, to three decimal places: $t \\approx \\,?$ seconds. (e.g., for $18$ m: $\\sin(\\cdot) = 0.6$, $\\arcsin 0.6 \\approx 0.644$, $t \\approx 0.644\\cdot\\frac{20}{\\pi} \\approx 4.098$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['0.5', '1', '50'],
-        hint1: '$x = \\sin(\\frac{\\pi}{6}) = \\frac{1}{2} = 0.5$.',
-        hint2: '$x = \\tan(\\frac{\\pi}{4}) = 1$.',
-        hint3: '$40 \\times \\tan(0.9) = 40 \\times 1.260 \\approx 50.4$. In degree mode you would get a wrong answer.',
-        explanation: '1) $\\sin(\\frac{\\pi}{6}) = 0.5$. 2) $\\tan(\\frac{\\pi}{4}) = 1$. 3) $40\\tan(0.9) \\approx 50.4 \\approx 50$ ft.'
+        correctAnswers: ['70/3', '110/3', '5.903'],
+        hint1: '$\\sin\\!\\left(\\frac{\\pi}{20}t\\right) = -\\frac{1}{2}$. The first inner angle in $[0, 2\\pi)$ with sine $-\\frac{1}{2}$ is $\\frac{7\\pi}{6}$.',
+        hint2: 'The other inner angle is $\\frac{11\\pi}{6}$; multiply by $\\frac{20}{\\pi}$.',
+        hint3: '$\\sin\\!\\left(\\frac{\\pi}{20}t\\right) = 0.8$, so $\\frac{\\pi}{20}t = \\arcsin 0.8 \\approx 0.9273$ and $t = 0.9273\\cdot\\frac{20}{\\pi}$.',
+        explanation: '1) $\\frac{7\\pi}{6}\\cdot\\frac{20}{\\pi} = \\frac{70}{3} \\approx 23.33$ s. 2) $\\frac{11\\pi}{6}\\cdot\\frac{20}{\\pi} = \\frac{110}{3} \\approx 36.67$ s. 3) $t \\approx 0.9273 \\cdot 6.366 \\approx 5.903$ s (the second time is $20 - 5.903 \\approx 14.097$ s).'
       }
     },
     {
       id: 'p6-dropdown',
       type: 'dropdown-select' as const,
       content: `
-**Application Matching** 🔽
+**Set Up the Solution** 🔽
+
+Hours of daylight in a city are $L(t) = 2.5\\sin\\!\\left(\\frac{2\\pi}{365}(t - 80)\\right) + 12$, where $t$ is the day of the year. On which days are there exactly $13$ hours of daylight?
       `,
       exercise: {
         dropdowns: [
           {
-            label: 'To find an angle of elevation, you typically use',
-            options: ['$\\arcsin$', '$\\arccos$', '$\\arctan$']
+            label: 'After isolating, $\\sin\\!\\left(\\frac{2\\pi}{365}(t - 80)\\right) =$',
+            options: ['$0.4$', '$2.5$', '$13$', '$0.52$']
           },
           {
-            label: 'If $\\arcsin(2x) = \\frac{\\pi}{6}$, then $x$ equals',
-            options: ['$\\frac{1}{2}$', '$\\frac{1}{4}$', '$1$', '$\\frac{\\sqrt{3}}{4}$']
+            label: 'The first inner angle is $\\arcsin(0.4) \\approx$',
+            options: ['$0.412$', '$1.159$', '$0.390$', '$23.6$']
           },
           {
-            label: 'A vertical pole and its shadow form a right triangle. The angle of elevation uses which sides?',
-            options: ['Hypotenuse and opposite', 'Opposite and adjacent', 'Adjacent and hypotenuse']
+            label: 'The second inner angle in one cycle is',
+            options: ['$\\pi - 0.412 \\approx 2.730$', '$2\\pi - 0.412 \\approx 5.871$', '$0.412 + \\pi \\approx 3.554$', '$-0.412$']
           },
           {
-            label: 'Solve $\\arccos(3x) = \\frac{\\pi}{2}$: the value of $x$ is',
-            options: ['$0$', '$\\frac{1}{3}$', '$\\frac{\\pi}{6}$', '$3$']
+            label: 'Undoing the inner expression, the first day is $t \\approx 80 + 0.412\\cdot\\frac{365}{2\\pi} \\approx$',
+            options: ['$104$', '$24$', '$56$', '$127$']
           }
         ],
-        correctAnswers: ['$\\arctan$', '$\\frac{1}{4}$', 'Opposite and adjacent', '$0$'],
-        hint1: 'Elevation angle involves opposite (height) and adjacent (distance) → $\\arctan$.',
-        hint2: '$2x = \\sin(\\frac{\\pi}{6}) = \\frac{1}{2}$, so $x = \\frac{1}{4}$.',
-        hint3: 'Pole = opposite, shadow = adjacent.',
-        explanation: 'Elevation → $\\arctan$. $2x = \\frac{1}{2}$, $x = \\frac{1}{4}$. Pole/shadow = opp/adj. $3x = \\cos(\\frac{\\pi}{2}) = 0$, $x = 0$.'
+        correctAnswers: ['$0.4$', '$0.412$', '$\\pi - 0.412 \\approx 2.730$', '$104$'],
+        hint1: '$2.5\\sin(\\cdot) + 12 = 13 \\Rightarrow 2.5\\sin(\\cdot) = 1 \\Rightarrow \\sin(\\cdot) = 0.4$.',
+        hint2: '$\\arcsin$ returns a Quadrant I angle for a positive input; $1.159 = \\arccos 0.4$ is the wrong inverse.',
+        hint3: 'Sine model: the second angle is $\\pi - \\theta_1$. Then $t = 80 + \\theta\\cdot\\frac{365}{2\\pi}$, and $0.412 \\cdot 58.1 \\approx 24$.',
+        explanation: '$\\sin(\\cdot) = 0.4$; $\\arcsin 0.4 \\approx 0.412$; the sine partner is $\\pi - 0.412 \\approx 2.730$. Then $t \\approx 80 + 0.412 \\cdot 58.1 \\approx 104$ (about mid-April); the second day is $80 + 2.730 \\cdot 58.1 \\approx 239$ (late August).'
       }
     },
     {
@@ -192,15 +189,15 @@ If $\\arctan(\\text{expr}) = \\theta$, then $\\text{expr} = \\tan\\theta$.
       exercise: {
         questions: [
           {
-            question: 'A cable makes an angle of $1$ radian with the ground and attaches to a tower 80 feet up. The cable length is:',
+            question: 'The height of a piston is $y(t) = 4\\cos(3t) + 6$ cm, $t$ in seconds. Which expression gives the first positive time when $y = 7$?',
             options: [
-              '$\\frac{80}{\\sin 1} \\approx 95.1$ ft',
-              '$\\frac{80}{\\cos 1} \\approx 148.1$ ft',
-              '$\\frac{80}{\\tan 1} \\approx 51.4$ ft',
-              '$80\\sin 1 \\approx 67.3$ ft'
+              '$t = \\frac{1}{3}\\arccos\\!\\left(\\frac{1}{4}\\right)$',
+              '$t = 3\\arccos\\!\\left(\\frac{1}{4}\\right)$',
+              '$t = \\frac{1}{3}\\arccos(7)$',
+              '$t = \\frac{1}{3}\\cos\\!\\left(\\frac{1}{4}\\right)$'
             ],
             correctAnswer: 0,
-            explanation: 'The tower height is opposite the angle and the cable is the hypotenuse, so $\\sin 1 = \\frac{80}{\\text{cable}}$. Cable $= \\frac{80}{\\sin 1} \\approx \\frac{80}{0.841} \\approx 95.1$ ft. Cosine would need the ground distance, tangent gives the ground distance, and $80\\sin 1$ multiplies instead of dividing.'
+            explanation: 'Isolate: $\\cos(3t) = \\frac{1}{4}$, so $3t = \\arccos\\frac{1}{4}$ and $t = \\frac{1}{3}\\arccos\\frac{1}{4} \\approx 0.439$ s. Multiplying by $3$ undoes the inner expression the wrong way, $\\arccos(7)$ is undefined, and $\\cos\\frac{1}{4}$ applies the function instead of its inverse.'
           },
           {
             question: 'Solve: $3\\arctan(x) = \\pi$',
@@ -208,10 +205,10 @@ If $\\arctan(\\text{expr}) = \\theta$, then $\\text{expr} = \\tan\\theta$.
               '$x = \\sqrt{3}$',
               '$x = 1$',
               '$x = \\frac{\\pi}{3}$',
-              '$x = 0$'
+              '$x = \\frac{\\sqrt{3}}{3}$'
             ],
             correctAnswer: 0,
-            explanation: '$\\arctan(x) = \\frac{\\pi}{3}$. $x = \\tan(\\frac{\\pi}{3}) = \\sqrt{3}$.'
+            explanation: '$\\arctan(x) = \\frac{\\pi}{3}$, so $x = \\tan\\frac{\\pi}{3} = \\sqrt{3}$. $\\frac{\\sqrt{3}}{3}$ is $\\tan\\frac{\\pi}{6}$, and $\\frac{\\pi}{3}$ is the angle rather than its tangent.'
           }
         ]
       }

@@ -1,4 +1,4 @@
-import { RETIRED_CALC_CATEGORIES } from '@/lib/course-includes'
+import { RETIRED_COURSE_CATEGORIES } from '@/lib/course-includes'
 import { MetadataRoute } from 'next'
 import { isLegacyTopicSlug } from '@/lib/legacy-topic-redirects'
 import { prisma } from '@/lib/prisma'
@@ -409,8 +409,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // noindex" if submitted).
   const categoryPages: MetadataRoute.Sitemap = categories
     .filter((category) => category._count.topics > 0)
-    // Retired calculus units 308 (next.config.ts) until restructure-calc.ts deletes the rows.
-    .filter((category) => !Object.prototype.hasOwnProperty.call(RETIRED_CALC_CATEGORIES, category.slug))
+    // Retired calculus / precalculus units 308 (next.config.ts) until the
+    // restructure scripts delete the rows.
+    .filter((category) => !Object.prototype.hasOwnProperty.call(RETIRED_COURSE_CATEGORIES, category.slug))
     .map((category) => ({
     url: `${baseUrl}/categories/${category.slug}`,
     lastModified: category.updatedAt,

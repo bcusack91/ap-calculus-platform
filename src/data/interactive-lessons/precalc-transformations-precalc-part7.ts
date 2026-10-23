@@ -7,7 +7,7 @@ export const precalcTransformationsPart7Data = {
       content: `
 # 🏆 Transformations — Full Synthesis
 
-**Part 7 of 7**
+**Part 7 of 7 — Review & Applications**
 
 ### Master Checklist
 
@@ -15,10 +15,10 @@ export const precalcTransformationsPart7Data = {
 |:--------------|:--------|:-------|
 | Vertical shift | $f(x)+k$ | Up ($k>0$) or down ($k<0$) |
 | Horizontal shift | $f(x-h)$ | Right ($h>0$) or left ($h<0$) |
-| Vertical stretch | $af(x)$, $|a|>1$ | Narrower |
-| Vertical compress | $af(x)$, $|a|<1$ | Wider |
-| Horizontal stretch | $f(bx)$, $|b|<1$ | Wider |
-| Horizontal compress | $f(bx)$, $|b|>1$ | Narrower |
+| Vertical dilation (stretch) | $af(x)$, $\\lvert a \\rvert>1$ | Narrower; $y$-values multiplied by $a$ |
+| Vertical dilation (compress) | $af(x)$, $\\lvert a \\rvert<1$ | Wider |
+| Horizontal dilation (stretch) | $f(bx)$, $\\lvert b \\rvert<1$ | Wider; $x$-values multiplied by $1/b$ |
+| Horizontal dilation (compress) | $f(bx)$, $\\lvert b \\rvert>1$ | Narrower |
 | Reflect $x$-axis | $-f(x)$ | Flip vertically |
 | Reflect $y$-axis | $f(-x)$ | Flip horizontally |
 
@@ -119,10 +119,10 @@ $g(x) = 2f(x-3)+1$ is really $g = T \\circ f$ where $T(y) = 2y+1$ and the input 
             explanation: 'Range of $f$: $[1,5]$. $-2[1,5] = [-10,-2]$. $[-10,-2]+3 = [-7, 1]$.'
           },
           {
-            question: 'Which transform changes the period of $\\sin x$?',
-            options: ['$3\\sin x$', '$\\sin(x-\\pi)$', '$\\sin(2x)$', '$\\sin(x)+4$'],
-            correctAnswer: 2,
-            explanation: '$\\sin(2x)$: period = $2\\pi/2 = \\pi$. Amplitude and shifts do not affect period.'
+            question: 'Which transformation changes the $x$-intercepts of $f$?',
+            options: ['$f(2x)$', '$3f(x)$', '$f(x) + 4$', '$-f(x)$'],
+            correctAnswer: 0,
+            explanation: 'A horizontal dilation divides every $x$-coordinate by $2$, so each intercept $(c, 0)$ moves to $(c/2, 0)$. Vertical dilations and reflections over the $x$-axis multiply the $y$-coordinate $0$ by a constant and leave the intercepts in place; $f(x) + 4$ moves the whole graph up, which can remove intercepts but is a translation, not the dilation asked about.'
           }
         ]
       }

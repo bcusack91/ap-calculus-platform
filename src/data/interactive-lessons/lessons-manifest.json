@@ -71,13 +71,13 @@
     "slug": "apes-air-pollution",
     "importPath": "./extra/apes-air-pollution",
     "partTitles": [
-      "🏭 Pollutants, Sources & Primary vs. Secondary",
-      "Photochemical Smog",
-      "Industrial Smog & Acid Deposition",
-      "Thermal Inversions & the Role of Weather",
-      "Health Effects & the Air Quality Index",
-      "Indoor Air Pollution",
-      "Control Technology, Policy & Mastery Check"
+      "Pollutants, Sources and How They Form",
+      "Two Kinds of Smog: London and Los Angeles",
+      "Weather, Terrain and Pollution Episodes",
+      "Acid Deposition: Long-Term Records and Slow Recovery",
+      "Reducing Air Pollution and Noise: Tools and Trade-offs",
+      "AP Exam Practice",
+      "Synthesis Review"
     ]
   },
   {
@@ -1446,13 +1446,13 @@
     "slug": "apes-climate-change",
     "importPath": "./extra/apes-climate-change",
     "partTitles": [
-      "Weather vs. Climate & the Natural Greenhouse Effect",
-      "The Greenhouse Gases & Global Warming Potential",
-      "Evidence, the Carbon Cycle & Natural Drivers",
-      "Feedback Loops & Tipping Points",
-      "Impacts on Ecosystems, Oceans & People",
-      "Solutions: Mitigation, Adaptation & Policy",
-      "Synthesis, Mixed Practice & Exit Quiz"
+      "Weather, Climate and the Natural Greenhouse Effect",
+      "Where Emissions Come From",
+      "Multiple Lines of Evidence",
+      "Feedbacks and Tipping Points",
+      "Ocean Warming, Acidification and Sea-Level Rise: Case Studies",
+      "Mitigation and Adaptation: Comparing Strategies",
+      "AP Exam Practice and Synthesis"
     ]
   },
   {
@@ -1472,13 +1472,13 @@
     "slug": "apes-ozone-indoor-air",
     "importPath": "./extra/apes-ozone-indoor-air",
     "partTitles": [
-      "The Ozone Layer: Earth's UV Shield",
-      "CFCs and the Chemistry of Depletion",
-      "The Antarctic Ozone Hole",
-      "The Montreal Protocol: A Policy Success Story",
-      "Indoor Air Quality: The Pollutants",
-      "Why Indoor Air Builds Up, and How to Fix It",
-      "Synthesis & Mastery Check"
+      "The Ozone Layer and the UV That Reaches You",
+      "How Scientists Found the Problem",
+      "Ozone-Depleting Substances and Their Replacements",
+      "The Montreal Protocol: Why It Worked",
+      "Indoor Air Pollutants: Sources and Mechanisms",
+      "Ventilation, Sick Buildings and Cleaner Stoves",
+      "AP Exam Practice and Synthesis"
     ]
   },
   {
@@ -1511,13 +1511,13 @@
     "slug": "apes-water-pollution",
     "importPath": "./extra/apes-water-pollution",
     "partTitles": [
-      "Sources, Categories & the Point/Nonpoint Distinction",
-      "Nutrient Pollution & Eutrophication",
-      "Pathogens, Sewage & Wastewater Treatment",
-      "Toxic Pollution, Bioaccumulation & Biomagnification",
-      "Oil, Plastic, Sediment & Thermal Pollution",
-      "Groundwater & Drinking Water",
-      "Laws, Cleanup & Mastery Check"
+      "Sources and Measures of Water Quality",
+      "Eutrophication and Hypoxia in Depth",
+      "Oil, Heat and Sediment: Physical Pollutants",
+      "Persistent Toxins: Case Studies",
+      "Dose, Response and Risk",
+      "Sewage, Septic Systems and Water Law",
+      "AP Exam Practice and Synthesis"
     ]
   },
   {
@@ -1605,9 +1605,9 @@
       "Zeros, Factors & the Connection Between Them",
       "Core Factoring Techniques",
       "Zeros from Graphs, Tables & a Known Factor",
-      "Synthetic Division & Peeling Off Factors",
-      "The Fundamental Theorem of Algebra",
-      "Complex Conjugate Roots & Building Polynomials",
+      "Dividing Out a Known Factor",
+      "The Fundamental Theorem of Algebra, Multiplicity & Non-Real Zeros",
+      "Conjugate Pairs & Building Polynomials from Zeros",
       "Mixed Practice & Mastery Check"
     ]
   },
@@ -1654,13 +1654,11 @@
     "slug": "polynomial-division-remainder-theorem",
     "importPath": "./extra/polynomial-division-remainder-theorem",
     "partTitles": [
-      "Long Division of Polynomials",
-      "Synthetic Division (the Shortcut)",
-      "The Remainder Theorem",
+      "Long Division and Equivalent Forms",
       "The Factor Theorem",
-      "Finding All the Zeros",
-      "Division, Rational Functions & Slant Asymptotes",
-      "Mixed Practice & Mastery Check"
+      "Finding All the Zeros from a Known Factor",
+      "Division, Rational Functions and Slant Asymptotes",
+      "Mixed Practice and Mastery Check"
     ]
   },
   {
@@ -3660,6 +3658,19 @@
     ]
   },
   {
+    "slug": "graphing-trig-functions",
+    "importPath": "./precalc-graphing-trig-functions",
+    "partTitles": [
+      "Sine and Cosine Graphs",
+      "Amplitude, Midline, Period and Frequency",
+      "Transformations and Phase Shift",
+      "Building a Model From a Graph, a Table or a Context",
+      "Using the Model: Predict, Interpret and Solve",
+      "The Tangent Function",
+      "FRQ Q3 Workshop and Review"
+    ]
+  },
+  {
     "slug": "lhopitals-rule",
     "importPath": "./calcab-lhopitals-rule",
     "partTitles": [
@@ -3668,6 +3679,32 @@
       "∞/∞ Limits and Growth Rates",
       "Tables, Graphs and Justification",
       "Traps and Final Assessment"
+    ]
+  },
+  {
+    "slug": "exponential-logarithmic-modeling-precalc",
+    "importPath": "./precalc-exponential-logarithmic-modeling-precalc",
+    "partTitles": [
+      "Exponential Models from Two Points and Ratios",
+      "Exponential Regression on the Calculator",
+      "Residuals and Residual Plots",
+      "Choosing and Validating a Model",
+      "Logarithmic Functions in Context",
+      "Semi-log Plots",
+      "Modeling Synthesis (FRQ Question 2 Skills)"
+    ]
+  },
+  {
+    "slug": "function-modeling-precalc",
+    "importPath": "./precalc-function-modeling-precalc",
+    "partTitles": [
+      "Choosing a Function Model",
+      "Linear and Quadratic Models from Data",
+      "Polynomial Models in Context",
+      "Piecewise-Defined Functions: Notation and Evaluation",
+      "Building Piecewise Models",
+      "Assumptions, Limitations and Domain Restrictions",
+      "FRQ Workshop and Mastery Check"
     ]
   }
 ]

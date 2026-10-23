@@ -1480,9 +1480,9 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Zeros, Factors & the Connection Between Them', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[0]) },
       { title: 'Core Factoring Techniques', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[1]) },
       { title: 'Zeros from Graphs, Tables & a Known Factor', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[2]) },
-      { title: 'Synthetic Division & Peeling Off Factors', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[3]) },
-      { title: 'The Fundamental Theorem of Algebra', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[4]) },
-      { title: 'Complex Conjugate Roots & Building Polynomials', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[5]) },
+      { title: 'Dividing Out a Known Factor', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[3]) },
+      { title: 'The Fundamental Theorem of Algebra, Multiplicity & Non-Real Zeros', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[4]) },
+      { title: 'Conjugate Pairs & Building Polynomials from Zeros', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[5]) },
       { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/fundamental-theorem-algebra').then((m) => m.parts[6]) },
     ],
   },
@@ -1525,13 +1525,11 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
   'polynomial-division-remainder-theorem': {
     completionDestination: 'competitive',
     parts: [
-      { title: 'Long Division of Polynomials', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[0]) },
-      { title: 'Synthetic Division (the Shortcut)', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[1]) },
-      { title: 'The Remainder Theorem', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[2]) },
-      { title: 'The Factor Theorem', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[3]) },
-      { title: 'Finding All the Zeros', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[4]) },
-      { title: 'Division, Rational Functions & Slant Asymptotes', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[5]) },
-      { title: 'Mixed Practice & Mastery Check', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[6]) },
+      { title: 'Long Division and Equivalent Forms', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[0]) },
+      { title: 'The Factor Theorem', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[1]) },
+      { title: 'Finding All the Zeros from a Known Factor', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[2]) },
+      { title: 'Division, Rational Functions and Slant Asymptotes', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[3]) },
+      { title: 'Mixed Practice and Mastery Check', loader: () => import('./extra/polynomial-division-remainder-theorem').then((m) => m.parts[4]) },
     ],
   },
   'rates-of-change': {
@@ -3346,6 +3344,18 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Mixed Practice and Test Strategy', loader: () => import('./sat-sat-cross-text-connections-sat').then((m) => m.parts[6]) },
     ],
   },
+  'graphing-trig-functions': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Sine and Cosine Graphs', loader: () => import('./precalc-graphing-trig-functions').then((m) => m.parts[0]) },
+      { title: 'Amplitude, Midline, Period and Frequency', loader: () => import('./precalc-graphing-trig-functions').then((m) => m.parts[1]) },
+      { title: 'Transformations and Phase Shift', loader: () => import('./precalc-graphing-trig-functions').then((m) => m.parts[2]) },
+      { title: 'Building a Model From a Graph, a Table or a Context', loader: () => import('./precalc-graphing-trig-functions').then((m) => m.parts[3]) },
+      { title: 'Using the Model: Predict, Interpret and Solve', loader: () => import('./precalc-graphing-trig-functions').then((m) => m.parts[4]) },
+      { title: 'The Tangent Function', loader: () => import('./precalc-graphing-trig-functions').then((m) => m.parts[5]) },
+      { title: 'FRQ Q3 Workshop and Review', loader: () => import('./precalc-graphing-trig-functions').then((m) => m.parts[6]) },
+    ],
+  },
   'lhopitals-rule': {
     completionDestination: 'competitive',
     parts: [
@@ -3354,6 +3364,30 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: '∞/∞ Limits and Growth Rates', loader: () => import('./calcab-lhopitals-rule').then((m) => m.parts[2]) },
       { title: 'Tables, Graphs and Justification', loader: () => import('./calcab-lhopitals-rule').then((m) => m.parts[3]) },
       { title: 'Traps and Final Assessment', loader: () => import('./calcab-lhopitals-rule').then((m) => m.parts[4]) },
+    ],
+  },
+  'exponential-logarithmic-modeling-precalc': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Exponential Models from Two Points and Ratios', loader: () => import('./precalc-exponential-logarithmic-modeling-precalc').then((m) => m.parts[0]) },
+      { title: 'Exponential Regression on the Calculator', loader: () => import('./precalc-exponential-logarithmic-modeling-precalc').then((m) => m.parts[1]) },
+      { title: 'Residuals and Residual Plots', loader: () => import('./precalc-exponential-logarithmic-modeling-precalc').then((m) => m.parts[2]) },
+      { title: 'Choosing and Validating a Model', loader: () => import('./precalc-exponential-logarithmic-modeling-precalc').then((m) => m.parts[3]) },
+      { title: 'Logarithmic Functions in Context', loader: () => import('./precalc-exponential-logarithmic-modeling-precalc').then((m) => m.parts[4]) },
+      { title: 'Semi-log Plots', loader: () => import('./precalc-exponential-logarithmic-modeling-precalc').then((m) => m.parts[5]) },
+      { title: 'Modeling Synthesis (FRQ Question 2 Skills)', loader: () => import('./precalc-exponential-logarithmic-modeling-precalc').then((m) => m.parts[6]) },
+    ],
+  },
+  'function-modeling-precalc': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'Choosing a Function Model', loader: () => import('./precalc-function-modeling-precalc').then((m) => m.parts[0]) },
+      { title: 'Linear and Quadratic Models from Data', loader: () => import('./precalc-function-modeling-precalc').then((m) => m.parts[1]) },
+      { title: 'Polynomial Models in Context', loader: () => import('./precalc-function-modeling-precalc').then((m) => m.parts[2]) },
+      { title: 'Piecewise-Defined Functions: Notation and Evaluation', loader: () => import('./precalc-function-modeling-precalc').then((m) => m.parts[3]) },
+      { title: 'Building Piecewise Models', loader: () => import('./precalc-function-modeling-precalc').then((m) => m.parts[4]) },
+      { title: 'Assumptions, Limitations and Domain Restrictions', loader: () => import('./precalc-function-modeling-precalc').then((m) => m.parts[5]) },
+      { title: 'FRQ Workshop and Mastery Check', loader: () => import('./precalc-function-modeling-precalc').then((m) => m.parts[6]) },
     ],
   },
 }

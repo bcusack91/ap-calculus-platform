@@ -80,7 +80,7 @@ const standard: StudyPlanTemplate = {
       { title: 'Review Results', type: 'CUSTOM', dayOfWeek: 5 },
     ]),
     ...weekTasks(5, [
-      { title: 'Sinusoidal Modeling', type: 'LESSON', topicSlug: 'trigonometric-functions-precalc', dayOfWeek: 0 },
+      { title: 'Sinusoidal Functions and Modeling', type: 'LESSON', topicSlug: 'graphing-trig-functions', dayOfWeek: 0 },
       { title: 'Polar Coordinates', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 2 },
       { title: 'Polar Function Graphs & Rates of Change', type: 'LESSON', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 4 },
       { title: 'Trig & Polar Quiz', type: 'QUIZ', topicSlug: 'polar-coordinates-precalc', dayOfWeek: 5 },
@@ -110,5 +110,5 @@ export const config: StudyPlanSelectorConfig = {
   accent: 'violet',
   examLabel: 'Target Test Date',
   plans: PRECALCULUS_PLANS,
-  diagnosticPrefix: 'precalculus-diagnostic',
+  diagnosticPrefix: 'precalc-diagnostic',
 }

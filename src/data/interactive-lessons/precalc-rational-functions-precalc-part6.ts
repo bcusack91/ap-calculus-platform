@@ -7,7 +7,7 @@ export const precalcRationalPart6Data = {
       content: `
 # ⚖️ Rational Zeros & Inequalities
 
-**Part 6 of 7 — Zeros of Rational Functions and Rational Inequalities**
+**Part 6 of 7 — Rational Zeros & Inequalities**
 
 Up to now we have analyzed rational functions. This part shifts to **solving**: finding where a rational function equals zero and where it is positive or negative. The critical skill is telling a real zero apart from a hole, because a value can make the numerator zero without being a zero of the function.
       `

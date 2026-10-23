@@ -1,22 +1,43 @@
 /**
- * AP Precalculus - Question of the Day
+ * AP Precalculus — Question of the Day
  *
- * Uses AP Precalculus-tagged exit quiz slugs so AP Precalculus can evolve
- * independently from the general Precalculus daily stream.
+ * Rotates through the course's canonical lesson topics (precalc-final PLAN.md),
+ * each backed by the AP Precalculus exit-quiz pool (`exit-quizzes/ap-precalculus.ts`,
+ * exact-tag match first), the way ap-calcab-daily-question.ts does. Until Oct 2026
+ * this file rotated `ap-precalculus-*` aliases of the legacy randomized
+ * pre-calculus generator, whose relevance fallback served off-topic items under
+ * the day's label and included Unit 4 / Law of Sines names that are not on the
+ * exam. Deterministic per calendar day so every visitor sees the same question.
  */
 
 import { generateExitQuiz } from '@/data/exit-quizzes'
 
-const TOPIC_SLUGS = [
-  'ap-precalculus-functions',
-  'ap-precalculus-polynomials',
-  'ap-precalculus-rational-functions',
-  'ap-precalculus-exponentials-logs',
-  'ap-precalculus-trig-unit-circle',
-  'ap-precalculus-trig-identities',
-  'ap-precalculus-inverse-trig',
-  'ap-precalculus-sequences-series',
-  'ap-precalculus-polar-vectors',
+/**
+ * Canonical AP Precalculus topics with an exit-quiz pool today. The two Wave 2
+ * topics (`function-modeling-precalc`, `exponential-logarithmic-modeling-precalc`)
+ * join the rotation once their pools are registered in exit-quizzes/index.ts.
+ */
+export const TOPIC_SLUGS = [
+  // Unit 1: Polynomial and Rational Functions
+  'rates-of-change-precalc',
+  'polynomial-functions-precalc',
+  'fundamental-theorem-algebra',
+  'polynomial-division-remainder-theorem',
+  'rational-functions-precalc',
+  'transformations-precalc',
+  // Unit 2: Exponential and Logarithmic Functions
+  'sequences-series-precalc',
+  'exponential-functions-precalc',
+  'function-composition-inverses-precalc',
+  'logarithmic-functions-precalc',
+  // Unit 3: Trigonometric and Polar Functions
+  'the-unit-circle',
+  'trigonometric-functions-precalc',
+  'graphing-trig-functions',
+  'inverse-trig-functions-precalc',
+  'solving-trig-equations',
+  'trigonometric-identities-precalc',
+  'polar-coordinates-precalc',
 ]
 
 function dayOfYear(): number {

@@ -7,7 +7,7 @@ export const precalcTransformationsPart1Data = {
       content: `
 # 📐 Translations (Shifts)
 
-**Part 1 of 7**
+**Part 1 of 7 — Translations**
 
 ### Vertical Shifts
 
@@ -15,7 +15,7 @@ $y = f(x) + k$
 
 | $k > 0$ | Shift **up** $k$ units |
 |:---------|:----------------------|
-| $k < 0$ | Shift **down** $|k|$ units |
+| $k < 0$ | Shift **down** $\\lvert k \\rvert$ units |
 
 ### Horizontal Shifts
 
@@ -23,7 +23,7 @@ $y = f(x - h)$
 
 | $h > 0$ | Shift **right** $h$ units |
 |:---------|:-------------------------|
-| $h < 0$ | Shift **left** $|h|$ units |
+| $h < 0$ | Shift **left** $\\lvert h \\rvert$ units |
 
 > ⚠️ Horizontal shifts work **opposite** to what you might expect! $f(x-3)$ shifts **right** 3, not left.
 

@@ -7,7 +7,7 @@ export const precalcLogarithmicPart4Data = {
       content: `
 # 🔍 Logarithmic Functions — Solving Log Equations
 
-**Part 4 of 7**
+**Part 4 of 7 — Logarithmic Functions — Solving Log Equations**
 
 ### The Two Core Strategies
 
@@ -93,6 +93,27 @@ $$\\boxed{x = 5}$$
 ### ⚠️ Why Extraneous Solutions Appear
 
 When you condense logs, you may expand the domain. The product $x(x-3)$ can be positive even when the individual factors aren't both positive. Always check **each original log argument separately**.
+      `
+    },
+    {
+      id: 'p4-type4',
+      type: 'text' as const,
+      content: `
+## 📝 Type 4: Logarithmic Inequalities
+
+> **Solve $\\log_2(x - 1) < 3$.**
+
+1. **Domain first:** the argument must be positive, so $x - 1 > 0$, i.e. $x > 1$.
+2. Because $\\log_2$ is an **increasing** function, the inequality keeps its direction when you rewrite it: $x - 1 < 2^3 = 8$, so $x < 9$.
+3. Combine with the domain:
+
+$$\\boxed{1 < x < 9}$$
+
+> **Solve $\\log_3(x + 2) \\geq 2$.** Domain: $x > -2$. The base is greater than $1$, so $x + 2 \\geq 3^2 = 9$ and $x \\geq 7$ (which already satisfies the domain).
+
+> ⚠️ For a base $0 < b < 1$ the logarithm is **decreasing**, so the inequality direction flips: $\\log_{1/2} x < 3$ means $x > \\left(\\tfrac{1}{2}\\right)^3 = \\tfrac{1}{8}$.
+
+Exponential inequalities work the same way: $2^x > 32 \\iff x > 5$, while $(0.5)^x > 0.125 \\iff x < 3$ because $0.5^x$ is decreasing.
       `
     },
     {
@@ -212,15 +233,15 @@ When you condense logs, you may expand the domain. The product $x(x-3)$ can be p
             explanation: '$\\log_2[(x-1)(x+1)] = 3 \\implies x^2 - 1 = 8 \\implies x^2 = 9 \\implies x = \\pm 3$. Check: $x = 3$ gives $\\log_2(2) + \\log_2(4) = 1 + 2 = 3$ ✔. $x = -3$ gives $\\log_2(-4)$ ❌. Only $1$ valid solution.'
           },
           {
-            question: 'Solve $\\log(x^2) = 4$.',
+            question: 'Solve $\\log_3(x + 2) \\geq 2$.',
             options: [
-              '$x = 100$ only',
-              '$x = \\pm 100$',
-              '$x = 10{,}000$',
-              '$x = \\pm 10{,}000$'
+              '$x \\geq 7$',
+              '$x \\geq 9$',
+              '$-2 < x \\leq 7$',
+              '$x \\geq 4$'
             ],
-            correctAnswer: 1,
-            explanation: '$\\log(x^2) = 4 \\implies x^2 = 10^4 = 10{,}000 \\implies x = \\pm 100$. Both work because $(\\pm 100)^2 = 10{,}000 > 0$.'
+            correctAnswer: 0,
+            explanation: 'The domain needs $x > -2$. Since $\\log_3$ is increasing, $x + 2 \\geq 3^2 = 9$, so $x \\geq 7$. Forgetting to subtract $2$ gives $x \\geq 9$; flipping the direction gives $-2 < x \\leq 7$; and $x \\geq 4$ uses $3 \\cdot 2 = 6$ instead of $3^2 = 9$.'
           }
         ]
       }

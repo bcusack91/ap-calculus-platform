@@ -586,53 +586,83 @@ const AP_LESSON_BANK_GETTERS: Record<ApLessonBankCourse, (count: number) => Prom
   'ap-csa': getApCSAQuestions,
   'ap-csp': getApCSPQuestions,
 }
+/** The 24 on-exam bank topics of the shared precalc bank (AP view), by CED unit. */
+export const AP_PRECALC_BANK_TOPICS: readonly string[] = [
+  // Unit 1
+  'rates-of-change', 'polynomial-functions-end-behavior', 'polynomial-zeros-multiplicity',
+  'complex-numbers-fundamental-theorem', 'polynomial-division', 'rational-functions-asymptotes',
+  'transformations-of-functions', 'function-model-selection', 'piecewise-functions',
+  // Unit 2
+  'arithmetic-geometric-sequences', 'sequences-and-series', 'exponential-functions-growth-decay',
+  'exponential-models-applications', 'composite-functions', 'inverse-functions',
+  'logarithmic-functions-properties', 'natural-log-and-e', 'logarithmic-equations', 'logarithmic-models-semi-log',
+  // Unit 3
+  'trigonometric-ratios-unit-circle', 'graphs-of-sine-and-cosine', 'inverse-trig-functions',
+  'trig-identities-pythagorean', 'polar-coordinates-graphs',
+]
 const lessonTopics = (course: ApLessonBankCourse, ...topics: string[]) => ({ course, topics })
 export const AP_LESSON_BANK_TOPICS: Record<string, { course: ApLessonBankCourse; topics: string[] }> = {
   // ---- AP Precalculus (Units 1-3; Unit 4 bank topics are excluded from the AP view)
-  'function-transformations': lessonTopics('ap-precalculus', 'transformations-of-functions'),
-  'transformations-functions-precalc': lessonTopics('ap-precalculus', 'transformations-of-functions'),
-  'transformations-precalc': lessonTopics('ap-precalculus', 'transformations-of-functions'),
-  'composite-inverse-functions': lessonTopics('ap-precalculus', 'composite-functions', 'inverse-functions'),
-  'function-composition-inverses-precalc': lessonTopics('ap-precalculus', 'composite-functions', 'inverse-functions'),
-  'piecewise-functions': lessonTopics('ap-precalculus', 'piecewise-functions'),
-  'rates-of-change': lessonTopics('ap-precalculus', 'rates-of-change'),
+  // Canonical layout (ap-phase1-pipeline/precalc-final/PLAN.md, 2026-10-22):
+  // 19 live Topic rows in the three CED units. Every live row lists the bank
+  // topics of ITS OWN unit only; 'the-unit-circle' is the click-the-position
+  // game. The 27 retired rows below 308 to a live row and route exactly like
+  // it, so a stale link, saved match or teacher assignment naming one never
+  // falls through to cumulative items from other subjects.
+  // Unit 1: Polynomial and Rational Functions
   'rates-of-change-precalc': lessonTopics('ap-precalculus', 'rates-of-change'),
-  'polynomial-functions-end-behavior': lessonTopics('ap-precalculus', 'polynomial-functions-end-behavior'),
-  'polynomial-functions-end-behavior-precalc': lessonTopics('ap-precalculus', 'polynomial-functions-end-behavior'),
   'polynomial-functions-precalc': lessonTopics('ap-precalculus', 'polynomial-functions-end-behavior', 'polynomial-zeros-multiplicity'),
-  'polynomial-division-remainder-theorem': lessonTopics('ap-precalculus', 'polynomial-division'),
-  'solving-polynomial-inequalities': lessonTopics('ap-precalculus', 'polynomial-zeros-multiplicity'),
-  'complex-numbers': lessonTopics('ap-precalculus', 'complex-numbers-fundamental-theorem'),
   'fundamental-theorem-algebra': lessonTopics('ap-precalculus', 'complex-numbers-fundamental-theorem', 'polynomial-zeros-multiplicity'),
-  'rational-functions-asymptotes': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'),
-  'rational-functions-asymptotes-precalc': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'),
+  'polynomial-division-remainder-theorem': lessonTopics('ap-precalculus', 'polynomial-division'),
   'rational-functions-precalc': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'),
-  'solving-rational-inequalities': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'),
-  'sequences-arithmetic-geometric': lessonTopics('ap-precalculus', 'arithmetic-geometric-sequences', 'sequences-and-series'),
+  'transformations-precalc': lessonTopics('ap-precalculus', 'transformations-of-functions'),
+  'function-modeling-precalc': lessonTopics('ap-precalculus', 'function-model-selection', 'piecewise-functions'),
+  // Unit 2: Exponential and Logarithmic Functions
   'sequences-series-precalc': lessonTopics('ap-precalculus', 'arithmetic-geometric-sequences', 'sequences-and-series'),
-  'exponential-functions-growth-decay': lessonTopics('ap-precalculus', 'exponential-functions-growth-decay'),
-  'exponential-functions-precalc': lessonTopics('ap-precalculus', 'exponential-functions-growth-decay'),
-  'exponential-functions-modeling-precalc': lessonTopics('ap-precalculus', 'exponential-functions-growth-decay', 'exponential-models-applications'),
-  'logarithmic-exponential-models': lessonTopics('ap-precalculus', 'exponential-models-applications'),
-  'logarithmic-functions': lessonTopics('ap-precalculus', 'logarithmic-functions-properties', 'natural-log-and-e'),
-  'logarithmic-functions-precalc': lessonTopics('ap-precalculus', 'logarithmic-functions-properties'),
-  'logarithmic-functions-equations-precalc': lessonTopics('ap-precalculus', 'logarithmic-functions-properties', 'logarithmic-equations'),
-  'solving-exponential-logarithmic-equations': lessonTopics('ap-precalculus', 'logarithmic-equations', 'natural-log-and-e'),
-  'degrees-and-radians': lessonTopics('ap-precalculus', 'trigonometric-ratios-unit-circle'),
-  'unit-circle-radian-measure': lessonTopics('ap-precalculus', 'trigonometric-ratios-unit-circle'),
+  'exponential-functions-precalc': lessonTopics('ap-precalculus', 'exponential-functions-growth-decay', 'exponential-models-applications'),
+  'function-composition-inverses-precalc': lessonTopics('ap-precalculus', 'composite-functions', 'inverse-functions'),
+  'logarithmic-functions-precalc': lessonTopics('ap-precalculus', 'logarithmic-functions-properties', 'natural-log-and-e', 'logarithmic-equations'),
+  'exponential-logarithmic-modeling-precalc': lessonTopics('ap-precalculus', 'exponential-models-applications', 'logarithmic-models-semi-log'),
+  // Unit 3: Trigonometric and Polar Functions ('the-unit-circle' = game)
   'trigonometric-functions-precalc': lessonTopics('ap-precalculus', 'trigonometric-ratios-unit-circle', 'graphs-of-sine-and-cosine'),
   'graphing-trig-functions': lessonTopics('ap-precalculus', 'graphs-of-sine-and-cosine'),
-  'inverse-trig-functions': lessonTopics('ap-precalculus', 'inverse-trig-functions'),
   'inverse-trig-functions-precalc': lessonTopics('ap-precalculus', 'inverse-trig-functions'),
-  'trigonometric-identities': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'),
-  'trigonometric-identities-precalc': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'),
-  'sum-difference-identities': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'),
-  'double-half-angle-identities': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'),
   'solving-trig-equations': lessonTopics('ap-precalculus', 'inverse-trig-functions', 'trig-identities-pythagorean'),
-  // Polar is Topics 3.13-3.15. 'polar-coordinates' was also a legacy BC polar
-  // category id (mcqBanks below); the live AP Precalculus topic wins.
-  'polar-coordinates': lessonTopics('ap-precalculus', 'polar-coordinates-graphs'),
+  'trigonometric-identities-precalc': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'),
   'polar-coordinates-precalc': lessonTopics('ap-precalculus', 'polar-coordinates-graphs'),
+  // Exam prep (Wave 3 lessons): the whole on-exam pool, listed explicitly.
+  'precalc-frq-strategies': lessonTopics('ap-precalculus', ...AP_PRECALC_BANK_TOPICS),
+  'precalc-exam-review': lessonTopics('ap-precalculus', ...AP_PRECALC_BANK_TOPICS),
+  // Retired rows (308 target in the comment); same bank topics as the target.
+  'function-transformations': lessonTopics('ap-precalculus', 'transformations-of-functions'), // -> transformations-precalc
+  'transformations-functions-precalc': lessonTopics('ap-precalculus', 'transformations-of-functions'), // -> transformations-precalc
+  'composite-inverse-functions': lessonTopics('ap-precalculus', 'composite-functions', 'inverse-functions'), // -> function-composition-inverses-precalc
+  'piecewise-functions': lessonTopics('ap-precalculus', 'function-model-selection', 'piecewise-functions'), // -> function-modeling-precalc
+  'rates-of-change': lessonTopics('ap-precalculus', 'rates-of-change'), // -> rates-of-change-precalc
+  'sequences-arithmetic-geometric': lessonTopics('ap-precalculus', 'arithmetic-geometric-sequences', 'sequences-and-series'), // -> sequences-series-precalc
+  'polynomial-functions-end-behavior': lessonTopics('ap-precalculus', 'polynomial-functions-end-behavior', 'polynomial-zeros-multiplicity'), // -> polynomial-functions-precalc
+  'polynomial-functions-end-behavior-precalc': lessonTopics('ap-precalculus', 'polynomial-functions-end-behavior', 'polynomial-zeros-multiplicity'), // -> polynomial-functions-precalc
+  'solving-polynomial-inequalities': lessonTopics('ap-precalculus', 'polynomial-functions-end-behavior', 'polynomial-zeros-multiplicity'), // -> polynomial-functions-precalc
+  'rational-functions-asymptotes': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'), // -> rational-functions-precalc
+  'rational-functions-asymptotes-precalc': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'), // -> rational-functions-precalc
+  'solving-rational-inequalities': lessonTopics('ap-precalculus', 'rational-functions-asymptotes'), // -> rational-functions-precalc
+  'complex-numbers': lessonTopics('ap-precalculus', 'complex-numbers-fundamental-theorem', 'polynomial-zeros-multiplicity'), // -> fundamental-theorem-algebra
+  'exponential-functions-modeling-precalc': lessonTopics('ap-precalculus', 'exponential-functions-growth-decay', 'exponential-models-applications'), // -> exponential-functions-precalc
+  'exponential-functions-growth-decay': lessonTopics('ap-precalculus', 'exponential-functions-growth-decay', 'exponential-models-applications'), // -> exponential-functions-precalc
+  'logarithmic-exponential-models': lessonTopics('ap-precalculus', 'exponential-models-applications', 'logarithmic-models-semi-log'), // -> exponential-logarithmic-modeling-precalc
+  'logarithmic-functions': lessonTopics('ap-precalculus', 'logarithmic-functions-properties', 'natural-log-and-e', 'logarithmic-equations'), // -> logarithmic-functions-precalc
+  'logarithmic-functions-equations-precalc': lessonTopics('ap-precalculus', 'logarithmic-functions-properties', 'natural-log-and-e', 'logarithmic-equations'), // -> logarithmic-functions-precalc
+  'solving-exponential-logarithmic-equations': lessonTopics('ap-precalculus', 'logarithmic-functions-properties', 'natural-log-and-e', 'logarithmic-equations'), // -> logarithmic-functions-precalc
+  'degrees-and-radians': lessonTopics('ap-precalculus', 'trigonometric-ratios-unit-circle', 'graphs-of-sine-and-cosine'), // -> trigonometric-functions-precalc
+  'negative-and-coterminal-angles': lessonTopics('ap-precalculus', 'trigonometric-ratios-unit-circle', 'graphs-of-sine-and-cosine'), // -> trigonometric-functions-precalc (was unmapped: served BC polar / limits)
+  'unit-circle-radian-measure': lessonTopics('ap-precalculus', 'trigonometric-ratios-unit-circle'), // -> the-unit-circle (game); MCQ draw stays on the unit-circle pool
+  'trigonometric-identities': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'), // -> trigonometric-identities-precalc
+  'sum-difference-identities': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'), // -> trigonometric-identities-precalc
+  'double-half-angle-identities': lessonTopics('ap-precalculus', 'trig-identities-pythagorean'), // -> trigonometric-identities-precalc
+  'inverse-trig-functions': lessonTopics('ap-precalculus', 'inverse-trig-functions'), // -> inverse-trig-functions-precalc
+  // 'polar-coordinates' is also the legacy calculus polar bank's category id
+  // (mcqBanks below); the AP Precalculus topic wins.
+  'polar-coordinates': lessonTopics('ap-precalculus', 'polar-coordinates-graphs'), // -> polar-coordinates-precalc
   // ---- AP Calculus AB
   'basic-differentiation-rules-calcab': lessonTopics('ap-calculus-ab', 'power-rule', 'product-rule', 'quotient-rule', 'derivatives-of-trig-functions'),
   'linearization-differentials-calcab': lessonTopics('ap-calculus-ab', 'linear-approximation'),
@@ -711,6 +741,16 @@ export const AP_LESSON_BANK_TOPICS: Record<string, { course: ApLessonBankCourse;
   'csp-computing-systems-networks': lessonTopics('ap-csp', 'csp-internet-protocols', 'csp-fault-tolerance-security'),
   'csp-impact-of-computing': lessonTopics('ap-csp', 'csp-social-ethical-impacts', 'csp-safe-computing'),
 }
+
+/**
+ * Every AP Precalculus Topic slug routed above (live, retired and exam-prep),
+ * plus the unit-circle game. The competitive hub card unlocks on progress in
+ * any of them (src/app/api/competitive/unlock-check/route.ts).
+ */
+export const AP_PRECALC_COMPETITIVE_TOPICS: ReadonlySet<string> = new Set([
+  ...Object.entries(AP_LESSON_BANK_TOPICS).filter(([, v]) => v.course === 'ap-precalculus').map(([k]) => k),
+  'the-unit-circle',
+])
 
 // Every AP competitive bank getter. Each one filters by the question's canonical
 // topicSlug — the same slug the curriculum DB / competitive topic filter uses —

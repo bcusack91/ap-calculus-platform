@@ -7,7 +7,7 @@ export const precalcCompositionPart2Data = {
       content: `
 # 🔄 Inverse Functions
 
-**Part 2 of 7**
+**Part 2 of 7 — Inverse Functions**
 
 ### What Is an Inverse?
 
@@ -59,15 +59,31 @@ $$f^{-1}(x) = \\sqrt{x-1}, \\quad x \\geq 1$$
     {
       id: 'p2-hlt',
       type: 'text' as const,
+      figure: [
+        {
+          svg: '<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g stroke="currentColor" stroke-width="1.5"><line x1="30" y1="200" x2="310" y2="200"/><line x1="170" y1="210" x2="170" y2="15"/></g><text x="306" y="214" font-size="12" fill="currentColor">x</text><text x="176" y="22" font-size="12" fill="currentColor">y</text><g class="fig-accent-2" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"><line x1="45" y1="110" x2="300" y2="110"/></g><text x="300" y="104" font-size="11" fill="currentColor" text-anchor="end">y = 4</text><g class="fig-accent"><path d="M 61.7 59.4 Q 170 340.6 278.3 59.4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="83.3" cy="110" r="4.5" fill="currentColor"/><circle cx="256.7" cy="110" r="4.5" fill="currentColor"/></g><text x="83" y="130" font-size="11" fill="currentColor" text-anchor="middle">(−2, 4)</text><text x="257" y="130" font-size="11" fill="currentColor" text-anchor="middle">(2, 4)</text><text x="170" y="216" font-size="11" fill="currentColor" text-anchor="middle">0</text></svg>',
+          alt: 'Graph of y = x squared for all real x. The horizontal line y = 4 crosses the parabola twice, at (-2, 4) and (2, 4), so the function is not one-to-one.',
+          caption: 'Fails the horizontal line test: $y = x^2$ on all reals.',
+          size: 'sm',
+        },
+        {
+          svg: '<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g stroke="currentColor" stroke-width="1.5"><line x1="30" y1="200" x2="310" y2="200"/><line x1="170" y1="210" x2="170" y2="15"/></g><text x="306" y="214" font-size="12" fill="currentColor">x</text><text x="176" y="22" font-size="12" fill="currentColor">y</text><g class="fig-accent-2" stroke="currentColor" stroke-width="2" stroke-dasharray="6 4"><line x1="45" y1="110" x2="300" y2="110"/></g><text x="300" y="104" font-size="11" fill="currentColor" text-anchor="end">y = 4</text><g class="fig-accent"><path d="M 170 200 Q 224.2 200 278.3 59.4" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="170" cy="200" r="4.5" fill="currentColor"/><circle cx="256.7" cy="110" r="4.5" fill="currentColor"/></g><text x="257" y="130" font-size="11" fill="currentColor" text-anchor="middle">(2, 4)</text><text x="170" y="216" font-size="11" fill="currentColor" text-anchor="middle">0</text></svg>',
+          alt: 'Graph of y = x squared restricted to x greater than or equal to 0: a half parabola starting at the origin. The horizontal line y = 4 crosses it only once, at (2, 4), so the restricted function is one-to-one.',
+          caption: 'Passes the test: $y = x^2$ restricted to $x \\geq 0$.',
+          size: 'sm',
+        },
+      ],
       content: `
 ## 📊 The Horizontal Line Test
+
+A function is one-to-one exactly when **no horizontal line meets its graph more than once**. In the figure above, $y = 4$ meets $y = x^2$ at two points, $(-2, 4)$ and $(2, 4)$, so two inputs share an output and there is no inverse function. Restricting the domain to $x \\geq 0$ removes the left half, and every horizontal line now meets the graph at most once.
 
 | Function | One-to-one? | Inverse exists? |
 |:---------|:------------|:----------------|
 | $f(x) = 2x+3$ | Yes | Yes |
 | $f(x) = x^2$ (all reals) | No | No (without restriction) |
 | $f(x) = x^3$ | Yes | Yes ($f^{-1}(x) = \\sqrt[3]{x}$) |
-| $f(x) = \\sin x$ (all reals) | No | No (restrict to $[-\\pi/2, \\pi/2]$) |
+| $f(x) = (x-1)^2$ (all reals) | No | No (restrict to $x \\geq 1$) |
 | $f(x) = e^x$ | Yes | Yes ($f^{-1}(x) = \\ln x$) |
 
 ### Restricting Domains
@@ -75,8 +91,6 @@ $$f^{-1}(x) = \\sqrt{x-1}, \\quad x \\geq 1$$
 $f(x) = x^2$ on $x \\geq 0$: now one-to-one!
 
 $f^{-1}(x) = \\sqrt{x}$ (the principal square root)
-
-> 💡 When we write $\\sin^{-1}x$, we use the restricted domain $[-\\pi/2, \\pi/2]$.
       `
     },
     {

@@ -113,6 +113,115 @@ Over the next $0.1$ hour, that predicts a rise of about $3.5 \\times 0.1 = 0.35$
       `
     },
     {
+      id: 'p3-table-estimate',
+      type: 'text' as const,
+      content: `
+## Estimating the Rate at a Point from a Table
+
+On the exam you often get a **table of values**, not a formula. You cannot shrink the interval past the data you have, so estimate the rate of change at a point with the average rate of change over the **smallest interval in the table that contains the point**, ideally one centered on it.
+
+A population $P(t)$, in thousands, is sampled:
+
+| $t$ (years) | $2$ | $4$ | $6$ | $8$ |
+|:--|:--|:--|:--|:--|
+| $P(t)$ | $10$ | $18$ | $30$ | $50$ |
+
+**Rate at $t = 4$:** use the neighbors $t = 2$ and $t = 6$:
+
+$$\\text{rate at } t = 4 \\approx \\frac{P(6) - P(2)}{6 - 2} = \\frac{30 - 10}{4} = 5 \\text{ thousand people per year}$$
+
+At an **endpoint** of the table you can only use the one neighbor that exists: at $t = 8$, $\\frac{P(8) - P(6)}{8 - 6} = 10$; at $t = 2$, $\\frac{P(4) - P(2)}{4 - 2} = 4$.
+
+> ⚠️ Use the data points **closest** to the point. Reaching out to $t = 8$ when estimating at $t = 4$ averages over too wide an interval.
+      `
+    },
+    {
+      id: 'p3-table-drill',
+      type: 'input-boxes' as const,
+      content: `
+**Estimate from the Table** 🧮
+
+| $t$ | $2$ | $4$ | $6$ | $8$ |
+|:--|:--|:--|:--|:--|
+| $P(t)$ | $10$ | $18$ | $30$ | $50$ |
+
+**1)** Estimate the rate of change of $P$ at $t = 6$ using the interval $[4, 8]$.
+
+**2)** Estimate the rate at $t = 2$ using $[2, 4]$.
+
+**3)** Estimate the rate at $t = 8$ using $[6, 8]$.
+      `,
+      exercise: {
+        boxes: 3,
+        correctAnswers: ['8', '4', '10'],
+        hint1: '$\\frac{P(8) - P(4)}{8 - 4} = \\frac{50 - 18}{4}$.',
+        hint2: '$\\frac{P(4) - P(2)}{4 - 2} = \\frac{18 - 10}{2}$.',
+        hint3: '$\\frac{P(8) - P(6)}{8 - 6} = \\frac{50 - 30}{2}$.',
+        explanation: '1) $\\frac{32}{4} = 8$. 2) $\\frac{8}{2} = 4$. 3) $\\frac{20}{2} = 10$ thousand people per year. The rates grow, so $P$ is increasing at an increasing rate: the graph is concave up.'
+      }
+    },
+    {
+      id: 'p3-graph-read',
+      type: 'text' as const,
+      figure: {
+        svg: '<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g stroke="currentColor" stroke-width="1.5"><line x1="20" y1="190" x2="312" y2="190"/><line x1="30" y1="205" x2="30" y2="12"/></g><text x="306" y="206" font-size="12" fill="currentColor">x</text><text x="36" y="18" font-size="12" fill="currentColor">y</text><g class="fig-muted" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"><line x1="135" y1="190" x2="135" y2="114.0"/><line x1="240" y1="190" x2="240" y2="52.2"/></g><text x="135" y="206" font-size="12" fill="currentColor" text-anchor="middle">3</text><text x="240" y="206" font-size="12" fill="currentColor" text-anchor="middle">6</text><g class="fig-accent"><path d="M 47.5 171.0 L 82.5 153.9 L 117.5 131.1 L 135.0 114.0 L 152.5 96.9 L 187.5 70.3 L 222.5 57.0 L 240.0 52.2 L 257.5 49.4 L 292.5 47.5" fill="none" stroke="currentColor" stroke-width="2.5"/></g><g class="fig-accent-2" stroke="currentColor" stroke-width="2"><line x1="117.5" y1="131.1" x2="152.5" y2="96.9"/><line x1="222.5" y1="57.0" x2="257.5" y2="49.4"/><circle cx="117.5" cy="131.1" r="3.5" fill="currentColor"/><circle cx="152.5" cy="96.9" r="3.5" fill="currentColor"/><circle cx="222.5" cy="57.0" r="3.5" fill="currentColor"/><circle cx="257.5" cy="49.4" r="3.5" fill="currentColor"/></g><text x="110.5" y="87.4" font-size="11" fill="currentColor" text-anchor="end">(2.5, 3.1) to (3.5, 4.9)</text><text x="205.0" y="32.3" font-size="11" fill="currentColor" text-anchor="middle">(5.5, 7.0) to (6.5, 7.4)</text></svg>',
+        alt: 'A curve rising from left to right that becomes less steep toward the right. Two short secant segments are drawn: one from (2.5, 3.1) to (3.5, 4.9) around x = 3, which is steep, and one from (5.5, 7.0) to (6.5, 7.4) around x = 6, which is nearly flat.',
+        caption: 'Figure 1. Reading two nearby points on each side of $x = 3$ and of $x = 6$ gives a secant whose slope estimates the rate of change there.',
+      },
+      content: `
+## Reading a Rate off a Graph
+
+On a graph, the rate of change at a point shows up as **steepness**. To estimate it at $x = a$:
+
+1. Read two points on the curve close to $a$, one on each side (where the curve crosses gridlines is easiest).
+2. Compute the slope $\\frac{\\Delta y}{\\Delta x}$ between them: the average rate of change over a small interval containing $a$.
+3. To compare two points, repeat with an interval of the same width.
+
+From Figure 1: rate at $x = 3 \\approx \\frac{4.9 - 3.1}{3.5 - 2.5} = 1.8$ and rate at $x = 6 \\approx \\frac{7.4 - 7.0}{6.5 - 5.5} = 0.4$. Both are positive, so $f$ is increasing at both points, but it rises about $4.5$ times as fast near $x = 3$.
+
+| Graph near the point | Rate of change there |
+|:--|:--|
+| Rising | positive |
+| Falling | negative |
+| Steep | large in size (changing fast) |
+| Nearly flat | small in size (changing slowly) |
+| Top of a hill or bottom of a valley | about $0$, switching sign |
+      `
+    },
+    {
+      id: 'p3-graph-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Compare Rates on a Graph** 🔽
+
+On a single curve, the graph is steep and rising near point $A$, shallow and rising near point $B$, and it reaches a peak at point $C$.
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'The function is increasing fastest at:',
+            options: ['$A$', '$B$', '$C$', 'all three equally'],
+            correctAnswer: 0
+          },
+          {
+            label: 'The rate of change is about zero at:',
+            options: ['$C$', '$A$', '$B$', 'none of them'],
+            correctAnswer: 0
+          },
+          {
+            label: 'Comparing the rates: the rate at $A$ is ___ the rate at $B$:',
+            options: ['greater than', 'less than', 'equal to', 'cannot be compared with'],
+            correctAnswer: 0
+          }
+        ],
+        correctAnswers: ['$A$', '$C$', 'greater than'],
+        hint1: 'A steeper rising graph means a larger positive rate of change.',
+        hint2: 'At a peak, the rates switch from positive to negative.',
+        hint3: 'Steep beats shallow.',
+        explanation: 'Steepness near a point shows the size of the rate. $A$ (steep) has the greatest rate, $B$ (shallow) a smaller positive rate, and $C$ (the peak) a rate of about $0$.'
+      }
+    },
+    {
       id: 'p3-input',
       type: 'input-boxes' as const,
       content: `

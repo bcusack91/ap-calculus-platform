@@ -7,7 +7,7 @@ export const precalcExponentialPart5Data = {
       content: `
 # 🔑 Solving Exponential Equations with Logarithms
 
-**Part 5 of 7**
+**Part 5 of 7 — Solving Exponential Equations with Logarithms**
 
 When the variable is in the exponent, **logarithms** are the key tool.
 

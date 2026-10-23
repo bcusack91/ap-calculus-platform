@@ -35,6 +35,7 @@ import { AP_MACRO_PLANS } from '../src/data/ap-macro-study-plans'
 import { AP_MICRO_PLANS } from '../src/data/ap-micro-study-plans'
 import { AP_PHYSICS1_PLANS } from '../src/data/ap-physics1-study-plans'
 import { AP_PHYSICS2_PLANS } from '../src/data/ap-physics2-study-plans'
+import { AP_PRECALC_PLANS } from '../src/data/ap-precalc-study-plans'
 import { AP_PSYCH_PLANS } from '../src/data/ap-psych-study-plans'
 import { AP_STATS_PLANS } from '../src/data/ap-stats-study-plans'
 import { AP_US_GOV_PLANS } from '../src/data/ap-us-gov-study-plans'
@@ -67,6 +68,9 @@ const SOURCES: { courseSlug: string; plans: StudyPlanTemplate[] }[] = [
   { courseSlug: 'ap-microeconomics', plans: AP_MICRO_PLANS },
   { courseSlug: 'ap-physics-1', plans: AP_PHYSICS1_PLANS },
   { courseSlug: 'ap-physics-2', plans: AP_PHYSICS2_PLANS },
+  // Prod has no rows for ap-precalculus (the page serves the file); importing is optional and
+  // only worthwhile once an admin wants to edit the templates in the content store.
+  { courseSlug: 'ap-precalculus', plans: AP_PRECALC_PLANS },
   { courseSlug: 'ap-psychology', plans: AP_PSYCH_PLANS },
   { courseSlug: 'ap-statistics', plans: AP_STATS_PLANS },
   { courseSlug: 'ap-us-government', plans: AP_US_GOV_PLANS },

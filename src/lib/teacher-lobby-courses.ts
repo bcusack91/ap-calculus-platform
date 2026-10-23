@@ -6,7 +6,7 @@
 // option and the API doesn't 404.
 
 import { pickTieredQuestions, AP_LESSON_BANK_TOPICS, type MatchTier } from '@/lib/competitive-utils'
-import { courseCategoryLayout } from '@/lib/course-includes'
+import { courseCategoryLayout, PRECALC_TOPIC_TITLES } from '@/lib/course-includes'
 
 
 export interface TeacherLobbyQuestion {
@@ -85,6 +85,29 @@ async function getApCalculusBCLayoutQuestions(count?: number, topicSlug?: string
 async function getApPrecalcQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
   const m = await import('@/data/competitive-questions/precalc-bank')
   return m.getApPrecalcQuestions(count, topicSlug) as unknown as AnyQuestion[]
+}
+/** Precalc bank tags a layout slug draws: itself plus any AP_LESSON_BANK_TOPICS mapping. */
+function precalcBankTopicsFor(topicSlug: string): Set<string> {
+  const mapped = AP_LESSON_BANK_TOPICS[topicSlug]
+  return new Set([topicSlug, ...(mapped?.course === 'ap-precalculus' ? mapped.topics : [])])
+}
+// AP Precalculus lobbies offer the CED layout's lesson slugs (course-includes),
+// which the bank tags by its own taxonomy: a lesson slug draws the AP bank
+// items of the tags it maps to (the same routing competitive-utils uses), a
+// bank tag draws its own items, and anything else keeps the AP bank fallback.
+async function getApPrecalcLayoutQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  if (!topicSlug) return getApPrecalcQuestions(count)
+  const n = Math.max(count ?? 10, 1)
+  const tags = precalcBankTopicsFor(topicSlug)
+  const items = (await getApPrecalcQuestions(100000)).filter(q => q.topicSlug !== undefined && tags.has(q.topicSlug))
+  if (items.length > 0) {
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      ;[items[i], items[j]] = [items[j], items[i]]
+    }
+    return items.slice(0, n)
+  }
+  return getApPrecalcQuestions(count, topicSlug)
 }
 async function getAlgebra2Questions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
   const m = await import('@/data/competitive-questions/algebra2-bank')
@@ -380,7 +403,7 @@ const COURSES: CourseRegistryEntry[] = [
   { slug: 'algebra-1', name: 'Algebra 1', getQuestions: topicTagged(getAlgebra1Questions) },
   { slug: 'algebra-2', name: 'Algebra 2', getQuestions: algebra2Adapter() },
   { slug: 'geometry', name: 'Geometry', getQuestions: topicTagged(getGeometryQuestions) },
-  { slug: 'ap-precalculus', name: 'AP Precalculus', getQuestions: topicTagged(getApPrecalcQuestions) },
+  { slug: 'ap-precalculus', name: 'AP Precalculus', getQuestions: topicTagged(getApPrecalcLayoutQuestions) },
   { slug: 'ap-calculus-ab', name: 'AP Calculus AB', getQuestions: topicTagged(getApCalculusQuestions) },
   { slug: 'ap-calculus-bc', name: 'AP Calculus BC', getQuestions: topicTagged(getApCalculusBCLayoutQuestions) },
   { slug: 'ap-statistics', name: 'AP Statistics', getQuestions: untagged(getApStatisticsQuestions) },
@@ -449,6 +472,19 @@ export async function getCourseTopics(slug: string): Promise<{ slug: string; tit
     }
     return layoutSlugs
       .map(t => ({ slug: t, title: prettifyTopicSlug(t), count: countFor(t) }))
+      .filter(t => t.count > 0)
+  }
+  // AP Precalculus lists its CED layout (three assessed units + exam prep) with
+  // the lesson titles students see, not the bank's internal tags; a lesson with
+  // no mapped bank items yet (or the unit-circle game) is left out.
+  if (slug === 'ap-precalculus') {
+    const layoutSlugs = (courseCategoryLayout('ap-precalculus') ?? []).flatMap(s => s.topics)
+    const all = await getApPrecalcQuestions(100000)
+    return layoutSlugs
+      .map(t => {
+        const tags = precalcBankTopicsFor(t)
+        return { slug: t, title: PRECALC_TOPIC_TITLES[t] ?? prettifyTopicSlug(t), count: all.filter(q => q.topicSlug !== undefined && tags.has(q.topicSlug)).length }
+      })
       .filter(t => t.count > 0)
   }
   // SAT lists the lesson-aligned hierarchy (an "All <category>" entry per

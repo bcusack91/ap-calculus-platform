@@ -7,7 +7,7 @@ export const precalcRationalPart2Data = {
       content: `
 # 📈 Vertical & Horizontal Asymptotes
 
-**Part 2 of 7 — Predicting Long-Run and Singular Behavior**
+**Part 2 of 7 — Vertical & Horizontal Asymptotes**
 
 Asymptotes are invisible boundary lines that a rational function's graph approaches but (usually) never reaches. They tell us what happens at the **extremes** — near excluded values and as $x \\to \\pm\\infty$.
       `
@@ -18,15 +18,15 @@ Asymptotes are invisible boundary lines that a rational function's graph approac
       content: `
 ## 📖 Vertical Asymptotes
 
-A **vertical asymptote** occurs at $x = c$ when:
-1. $q(c) = 0$ (denominator is zero), AND
-2. The factor $(x - c)$ does **not** cancel with the numerator
+Factor the numerator and denominator fully, then compare how many times $(x - c)$ appears in each.
 
-$$\\boxed{\\text{VA at } x = c \\iff q(c) = 0 \\text{ and } p(c) \\neq 0}$$
+$$\\boxed{\\text{VA at } x = c \\iff (x - c) \\text{ remains in the denominator after all common factors are canceled}}$$
+
+In CED language: $x = c$ is a **vertical asymptote** when the multiplicity of $c$ as a zero of the denominator is **greater** than its multiplicity as a zero of the numerator. If the numerator's multiplicity is **at least as large**, the factor cancels completely and $x = c$ is a **hole** instead (Part 3).
 
 ### What Happens Near a VA
 
-As $x$ approaches $c$, $f(x) \\to +\\infty$ or $f(x) \\to -\\infty$ (the graph shoots up or down).
+As $x$ approaches $c$, $f(x) \\to +\\infty$ or $f(x) \\to -\\infty$ (the graph shoots up or down). In limit notation: for $f(x) = \\frac{2x}{x^2-1}$, $\\lim_{x \\to 1^+} f(x) = +\\infty$ and $\\lim_{x \\to 1^-} f(x) = -\\infty$ (test $x = 1.01$: $\\frac{2.02}{0.0201} > 0$; test $x = 0.99$: $\\frac{1.98}{-0.0199} < 0$). The two one-sided limits can agree or disagree in sign; always test each side.
 
 ### Worked Example
 
@@ -40,7 +40,7 @@ As $x$ approaches $c$, $f(x) \\to +\\infty$ or $f(x) \\to -\\infty$ (the graph s
 
 **Result:** Vertical asymptotes at $x = 1$ and $x = -1$
 
-> ⚠️ If both numerator and denominator are zero at $x = c$, the common factor cancels and you get a **hole** (Part 3), not a vertical asymptote.
+> ⚠️ If $(x-c)$ cancels completely out of the denominator you get a **hole** (Part 3); if a copy of $(x-c)$ survives in the denominator, it is still a vertical asymptote — e.g. $\\frac{x-1}{(x-1)^2} = \\frac{1}{x-1}$ has a VA at $x = 1$.
       `
     },
     {
@@ -51,11 +51,13 @@ As $x$ approaches $c$, $f(x) \\to +\\infty$ or $f(x) \\to -\\infty$ (the graph s
 
 A **horizontal asymptote** tells you the output value that $f(x)$ approaches as $x \\to \\pm\\infty$. It depends entirely on comparing the **degrees** of the numerator and denominator.
 
-| Degree Comparison | Horizontal Asymptote | Why |
-|:------------------|:-------------------:|:----|
-| $\\deg(p) < \\deg(q)$ | $y = 0$ | Denominator grows faster → ratio shrinks to $0$ |
-| $\\deg(p) = \\deg(q)$ | $y = \\frac{a_n}{b_n}$ (ratio of leading coefficients) | Leading terms dominate equally |
-| $\\deg(p) > \\deg(q)$ | **None** (oblique/slant asymptote instead) | Numerator grows faster → ratio grows without bound |
+| Degree Comparison | Horizontal Asymptote | Limit form | Why |
+|:------------------|:-------------------:|:----------:|:----|
+| $\\deg(p) < \\deg(q)$ | $y = 0$ | $\\lim_{x \\to \\pm\\infty} f(x) = 0$ | Denominator grows faster → ratio shrinks to $0$ |
+| $\\deg(p) = \\deg(q)$ | $y = \\frac{a_n}{b_n}$ (ratio of leading coefficients) | $\\lim_{x \\to \\pm\\infty} f(x) = \\frac{a_n}{b_n}$ | Leading terms dominate equally |
+| $\\deg(p) > \\deg(q)$ | **None** (a slant asymptote when $\\deg p = \\deg q + 1$) | does not exist (unbounded) | Numerator grows faster → ratio grows without bound |
+
+A horizontal asymptote $y = c$ is a statement about end behavior: $\\lim_{x \\to \\pm\\infty} f(x) = c$. The graph may still cross the line $y = c$ for finite $x$.
 
 ---
 
@@ -91,6 +93,8 @@ $$f(x) = x + 2 + \\frac{3}{x + 1}$$
 As $x \\to \\pm\\infty$, $\\frac{3}{x+1} \\to 0$, so:
 
 $$\\boxed{\\text{Slant asymptote: } y = x + 2}$$
+
+Equivalently, $\\lim_{x \\to \\pm\\infty}\\left[f(x) - (x + 2)\\right] = 0$: the gap between the graph and the line closes.
       `
     },
     {
@@ -132,7 +136,7 @@ $$\\boxed{\\text{Slant asymptote: } y = x + 2}$$
               '$\\frac{x^3 + 1}{x}$'
             ],
             correctAnswer: 2,
-            explanation: 'A slant asymptote occurs when $\\deg(p) = \\deg(q) + 1$. For $\\frac{x^2+1}{x-1}$: $\\deg(p) = 2 = 1 + 1 = \\deg(q) + 1$. $\\frac{x^3 + 1}{x}$ has $\\deg(p) = 3$ and $\\deg(q) = 1$, so $\\deg(p) = \\deg(q) + 2$ — that gives a parabolic asymptote, not slant.'
+            explanation: 'A slant asymptote occurs when $\\deg(p) = \\deg(q) + 1$. For $\\frac{x^2+1}{x-1}$: $\\deg(p) = 2 = 1 + 1 = \\deg(q) + 1$. $\\frac{x^3 + 1}{x}$ has $\\deg(p) = 3$ and $\\deg(q) = 1$, so $\\deg(p) = \\deg(q) + 2$: the quotient is quadratic, so there is no horizontal or slant asymptote.'
           }
         ]
       }
@@ -147,7 +151,7 @@ $$\\boxed{\\text{Slant asymptote: } y = x + 2}$$
 
 **2)** How many vertical asymptotes does $g(x) = \\frac{1}{x^2 - 5x + 6}$ have? (e.g., for $\\frac{1}{x^2-1}$, factor to $(x-1)(x+1)$ → $2$ VAs)
 
-**3)** For $h(x) = \\frac{x^2 + x}{x + 1}$, after canceling the common factor, what is $h(x)$ simplified? Give just the simplified expression as a number (evaluate $h(2)$). (e.g., $\\frac{x(x+3)}{x+3} = x$, so $h(2) = 2$)
+**3)** For $h(x) = \\frac{x^2 + x}{x + 1}$, simplify, then evaluate the simplified expression at $x = 2$. (e.g., $\\frac{x(x+3)}{x+3} = x$, so $h(2) = 2$)
       `,
       exercise: {
         boxes: 3,
@@ -172,7 +176,7 @@ $$\\boxed{\\text{Slant asymptote: } y = x + 2}$$
           },
           {
             label: 'A vertical asymptote at $x = c$ means $q(c) = 0$ and',
-            options: ['$p(c) = 0$ also', '$p(c) \\neq 0$ (factor does not cancel)', 'the degree of $p$ is less than $q$', '$f(c) = \\infty$']
+            options: ['$p(c) = 0$ also', '$(x - c)$ still divides the denominator after canceling', 'the degree of $p$ is less than $q$', '$f(c) = \\infty$']
           },
           {
             label: 'A slant asymptote exists when $\\deg(p)$ exceeds $\\deg(q)$ by exactly',
@@ -183,11 +187,11 @@ $$\\boxed{\\text{Slant asymptote: } y = x + 2}$$
             options: ['Never', 'Yes, but only finitely many times', 'Only at $x = 0$', 'Only when $\\deg(p) = \\deg(q)$']
           }
         ],
-        correctAnswers: ['$y = 0$', '$p(c) \\neq 0$ (factor does not cancel)', '1', 'Yes, but only finitely many times'],
+        correctAnswers: ['$y = 0$', '$(x - c)$ still divides the denominator after canceling', '1', 'Yes, but only finitely many times'],
         hint1: 'If the denominator grows faster, the ratio shrinks toward zero.',
-        hint2: 'If both are zero, the common factor cancels → hole, not VA.',
+        hint2: 'If $(x - c)$ cancels completely out of the denominator you get a hole; if a copy survives, a VA.',
         hint3: 'Difference of 1 → linear quotient → slant. Difference of 0 → HA. Difference ≥ 2 → neither.',
-        explanation: 'Bottom wins → $y=0$. VA requires the factor to NOT cancel. Slant needs exactly degree difference 1. A function CAN cross its HA — the HA only describes end behavior as $x \\to \\pm\\infty$.'
+        explanation: 'Bottom wins → $y=0$. A VA needs a copy of $(x - c)$ to survive in the denominator after canceling (denominator multiplicity greater than numerator multiplicity). Slant needs exactly degree difference 1. A function CAN cross its HA — the HA only describes end behavior as $x \\to \\pm\\infty$.'
       }
     },
     {

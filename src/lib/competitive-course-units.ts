@@ -1,11 +1,14 @@
 /**
- * Competitive-page units for a course whose syllabus is fixed in code (the
- * calculus courses, src/lib/course-includes.ts). Client-safe: no Prisma.
+ * Competitive-page units for a course whose syllabus is fixed in code (AP
+ * Calculus AB/BC and AP Precalculus, src/lib/course-includes.ts). Client-safe:
+ * no Prisma.
  *
  * The BC competitive page shows the full 10-unit BC layout (AB Units 1-8 with
  * the BC-only topics merged into 6-8, Units 9-10, exam prep), exactly like the
  * course hub and the unit tests. AB-unit topics are shared Topic rows and draw
- * from the AB bank through the ordinary AP routing in competitive-utils.
+ * from the AB bank through the ordinary AP routing in competitive-utils. The
+ * AP Precalculus page shows the three assessed CED units (exam prep appears
+ * once it has lessons).
  */
 import type { CourseUnitSection } from '@/lib/course-includes'
 

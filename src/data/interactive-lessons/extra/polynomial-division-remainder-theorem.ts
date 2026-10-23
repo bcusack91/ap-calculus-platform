@@ -1,13 +1,15 @@
 import type { LessonData } from '../registry'
 
 /**
- * Hand-authored interactive lesson — Polynomial Division and the Remainder Theorem (AP Precalculus).
- * Registry key / DB Topic.slug: 'polynomial-division-remainder-theorem'.
- * 7 parts, gold-standard structure: long division → synthetic division → Remainder
- * Theorem → Factor Theorem → finding all zeros → applications (rewriting rational functions,
- * slant asymptotes) → mixed practice + exit quiz. Teaching alternates with
- * interactive checks (multiple-choice + input-boxes + dropdown). LaTeX uses
- * doubled backslashes (template-literal strings).
+ * Hand-authored interactive lesson — Polynomial Division and Equivalent Forms (AP Precalculus, CED 1.11).
+ * Registry key / DB Topic.slug: 'polynomial-division-remainder-theorem' (slug kept for links).
+ * 5 parts: long division + equivalent forms (f = gq + r, f/g = q + r/g) → Factor Theorem
+ * (CED 1.5.A) → finding all zeros from a known factor → rewriting rational functions and
+ * slant asymptotes (with limit notation, one figure) → mixed practice + exit quiz.
+ * Scope rule ("not on the exam = not in the program"): CED 1.11.B names polynomial long
+ * division only, so synthetic division is a one-line optional mention and the Remainder
+ * Theorem is not drilled by name. Teaching alternates with interactive checks
+ * (multiple-choice + input-boxes + dropdown). LaTeX uses doubled backslashes.
  */
 export const parts: LessonData[] = [
   // ───────────────────────── PART 1 ─────────────────────────
@@ -17,9 +19,9 @@ export const parts: LessonData[] = [
       {
         id: 'pdr1-intro',
         type: 'text' as const,
-        content: `# ➗ Polynomial Division & the Remainder Theorem
+        content: `# ➗ Polynomial Division and Equivalent Forms
 
-**Part 1 of 7 — Long Division of Polynomials**
+**Part 1 of 5 — Long Division and Equivalent Forms**
 
 ---
 
@@ -27,12 +29,12 @@ export const parts: LessonData[] = [
 
 | Section |
 |---------|
-| The Division Algorithm |
+| The Division Algorithm and Two Equivalent Forms |
 | Setting Up Long Division |
 | Carrying Out the Steps |
 | Handling Missing Terms |
 
-> 🔑 **Key Concept:** Dividing polynomials works just like the long division you learned for whole numbers. Every division produces a **quotient** and a **remainder**, and that single idea unlocks the Remainder Theorem, the Factor Theorem, and how to find a polynomial's zeros.`,
+> 🔑 **Key Concept:** Dividing polynomials works just like the long division you learned for whole numbers. Every division produces a **quotient** and a **remainder**, and writing the result as $p(x) = d(x)\\,q(x) + r(x)$ gives an **equivalent form** of the original polynomial. That single idea unlocks the Factor Theorem (Part 2), finding a polynomial's zeros (Part 3), and the end behavior of rational functions (Part 4).`,
       },
       {
         id: 'pdr1-algorithm',
@@ -41,13 +43,21 @@ export const parts: LessonData[] = [
 
 When you divide one polynomial $p(x)$ (the **dividend**) by another $d(x)$ (the **divisor**), you get a **quotient** $q(x)$ and a **remainder** $r(x)$ that satisfy:
 
-$$p(x) = d(x)\\cdot q(x) + r(x)$$
+$$p(x) = d(x)\\cdot q(x) + r(x), \\qquad \\deg r < \\deg d$$
 
 where the remainder has **lower degree** than the divisor. With $17 \\div 5$ you write $17 = 5\\cdot 3 + 2$ — quotient $3$, remainder $2$. Polynomials follow the exact same rule:
 
 $$\\underbrace{x^2 + 5x + 6}_{\\text{dividend}} = \\underbrace{(x+2)}_{\\text{divisor}}\\cdot\\underbrace{(x+3)}_{\\text{quotient}} + \\underbrace{0}_{\\text{remainder}}$$
 
-> 💡 If the remainder is $0$, the divisor divides the dividend **evenly** — the divisor is a *factor*. That observation becomes the Factor Theorem in Part 4.`,
+### Two Equivalent Forms
+
+Dividing both sides by $d(x)$ (wherever $d(x) \\neq 0$) gives a second way to write the same fact:
+
+$$\\frac{p(x)}{d(x)} = q(x) + \\frac{r(x)}{d(x)}$$
+
+The product form $p = dq + r$ and the fraction form $\\dfrac{p}{d} = q + \\dfrac{r}{d}$ are **equivalent forms** of one division — the AP exam asks for both.
+
+> 💡 If the remainder is $0$, the divisor divides the dividend **evenly** — the divisor is a *factor*. That observation becomes the Factor Theorem in Part 2.`,
       },
       {
         id: 'pdr1-vocab-check',
@@ -87,7 +97,10 @@ $$(6x - 5) - (6x - 12) = 7$$
 The remainder is $7$, so:
 $$2x^3 - 3x^2 + 4x - 5 = (x-2)(2x^2 + x + 6) + 7$$
 
-> ✅ **Check:** $(x-2)(2x^2+x+6) = 2x^3 + x^2 + 6x - 4x^2 - 2x - 12 = 2x^3 - 3x^2 + 4x - 12$, and $+7$ gives $2x^3 - 3x^2 + 4x - 5$. ✓`,
+and, in fraction form, for $x \\neq 2$:
+$$\\frac{2x^3 - 3x^2 + 4x - 5}{x - 2} = 2x^2 + x + 6 + \\frac{7}{x - 2}$$
+
+> ✅ **Check:** $(x-2)(2x^2+x+6) = 2x^3 + x^2 + 6x - 4x^2 - 2x - 12 = 2x^3 - 3x^2 + 4x - 12$, and $+7$ gives $2x^3 - 3x^2 + 4x - 5$. ✓ Multiplying back is the fastest way to **justify** a division.`,
       },
       {
         id: 'pdr1-mc',
@@ -97,7 +110,7 @@ $$2x^3 - 3x^2 + 4x - 5 = (x-2)(2x^2 + x + 6) + 7$$
           questions: [
             {
               question: 'When dividing polynomials, the remainder must always have degree:',
-              options: ['lower than the divisor', 'equal to the divisor', 'lower than the dividend', 'exactly $0$'],
+              options: ['strictly lower than the divisor', 'equal to the divisor', 'lower than the dividend', 'exactly $0$'],
               correctAnswer: 0,
               explanation: 'Just like $17\\div5$ leaves a remainder smaller than $5$, a polynomial remainder must have degree strictly less than the divisor. (It can be $0$, but it does not *have* to be.)',
             },
@@ -106,6 +119,12 @@ $$2x^3 - 3x^2 + 4x - 5 = (x-2)(2x^2 + x + 6) + 7$$
               options: ['$\\frac{x^2}{x} = x$', '$\\frac{5x}{x} = 5$', '$\\frac{x^2}{2} $', '$\\frac{6}{2} = 3$'],
               correctAnswer: 0,
               explanation: 'Always divide the *leading* term of the current dividend by the *leading* term of the divisor: $x^2 \\div x = x$. That becomes the first term of the quotient.',
+            },
+            {
+              question: 'Which is an equivalent form of $\\dfrac{x^2 + 7x + 2}{x + 3}$ for $x \\neq -3$?',
+              options: ['$x + 4 + \\dfrac{2}{x + 3}$', '$x + 3 - \\dfrac{7}{x + 3}$', '$x + 4 - \\dfrac{10}{x + 3}$', '$x + 4 - \\dfrac{5}{x + 3}$'],
+              correctAnswer: 2,
+              explanation: 'Long division: $x^2 \\div x = x$, and $(x + 3)(x + 4) = x^2 + 7x + 12$, so the remainder is $2 - 12 = -10$. Check: $(x + 3)(x + 4) - 10 = x^2 + 7x + 2$. Keeping the original constant $2$ as the remainder skips the subtraction, a quotient of $x + 3$ copies the divisor instead of dividing $4x$ by $x$ in the second step, and $-5$ subtracts $7 - 12$ instead of $2 - 12$.',
             },
           ],
         },
@@ -122,7 +141,9 @@ $$x^3 - 7x - 6 = (x+1)(x^2 - x - 6) + 0$$
 
 The remainder is $0$, so $x+1$ is a factor — and notice $x^2 - x - 6 = (x-3)(x+2)$.
 
-> ⚠️ **Most common setup error:** forgetting a zero placeholder. Skipping the missing $0x^2$ term shifts every column and corrupts the whole division.`,
+> ⚠️ **Most common setup error:** forgetting a zero placeholder. Skipping the missing $0x^2$ term shifts every column and corrupts the whole division.
+
+> 💡 When the divisor is $x - c$, a shortcut layout called **synthetic division** produces the same quotient and remainder; it is optional.`,
       },
       {
         id: 'pdr1-drill',
@@ -133,14 +154,15 @@ Carry out each division and report what's asked.
 
 **1)** Divide $x^2 + 5x + 6$ by $x + 2$. Enter the **remainder**.
 **2)** Divide $2x^3 - 3x^2 + 4x - 5$ by $x - 2$. Enter the **remainder**.
-**3)** Divide $6x^2 + 11x - 35$ by $2x + 7$. Enter the **quotient** (form $ax + b$, e.g. \`3x-5\`).`,
+**3)** Divide $6x^2 + 11x - 35$ by $2x + 7$. The quotient has the form $ax + b$. Enter $a$.
+**4)** For the same division, enter $b$.`,
         exercise: {
-          boxes: 3,
-          correctAnswers: ['0', '7', '3x-5'],
+          boxes: 4,
+          correctAnswers: ['0', '7', '3', '-5'],
           hint1: '$x^2+5x+6 = (x+2)(x+3)$, so it divides evenly — remainder $0$.',
           hint2: 'From the worked example, $2x^3-3x^2+4x-5 = (x-2)(2x^2+x+6)+7$, so the remainder is $7$.',
-          hint3: '$6x^2+11x-35 = (2x+7)(3x-5)$. Check the leading term: $2x\\cdot 3x = 6x^2$ ✓ and constant $7\\cdot(-5)=-35$ ✓.',
-          explanation: '1) remainder $0$.  2) remainder $7$.  3) quotient $3x-5$ with remainder $0$, since $(2x+7)(3x-5)=6x^2+11x-35$.',
+          hint3: '$6x^2 \\div 2x = 3x$, so $a = 3$. Subtract $3x(2x+7) = 6x^2 + 21x$ to leave $-10x - 35$; then $-10x \\div 2x = -5$, so $b = -5$. Check: $(2x+7)(3x-5) = 6x^2+11x-35$ ✓.',
+          explanation: '1) remainder $0$.  2) remainder $7$.  3) and 4) quotient $3x-5$ ($a = 3$, $b = -5$) with remainder $0$, since $(2x+7)(3x-5)=6x^2+11x-35$.',
         },
       },
     ],
@@ -153,277 +175,28 @@ Carry out each division and report what's asked.
       {
         id: 'pdr2-intro',
         type: 'text' as const,
-        content: `# ➗ Polynomial Division & the Remainder Theorem
+        content: `# ➗ Polynomial Division and Equivalent Forms
 
-**Part 2 of 7 — Synthetic Division (the Shortcut)**
-
----
-
-> 🔑 **The Idea:** When the divisor is **linear and monic** — that is, of the form $x - c$ — you can skip the bulky long division and use a fast number-only process called **synthetic division**.`,
-      },
-      {
-        id: 'pdr2-setup',
-        type: 'text' as const,
-        content: `## Setting Up Synthetic Division
-
-To divide $p(x)$ by $x - c$:
-
-1. Write $c$ in the box. **Beware the sign:** dividing by $x - 2$ uses $c = 2$; dividing by $x + 3$ uses $c = -3$ (because $x+3 = x-(-3)$).
-2. List the **coefficients** of $p(x)$ in order, including $0$ for any missing power.
-3. **Bring down** the first coefficient. Then repeatedly: **multiply** by $c$, write the result under the next coefficient, and **add**.
-
-### Worked Example: $(x^3 - 4x^2 + 6x - 4) \\div (x - 2)$
-
-Here $c = 2$ and the coefficients are $1, -4, 6, -4$:
-
-$$
-\\begin{array}{c|cccc}
-2 & 1 & -4 & 6 & -4 \\\\
-  &   & 2  & -4 & 4 \\\\
-\\hline
-  & 1 & -2 & 2 & \\;\\;0
-\\end{array}
-$$
-
-The bottom row gives the quotient coefficients $1, -2, 2$ and the final number is the remainder:
-$$x^3 - 4x^2 + 6x - 4 = (x-2)(x^2 - 2x + 2) + 0$$
-
-> 💡 The quotient's degree is always **one less** than the dividend's. A cubic divided by a linear term leaves a quadratic quotient.`,
-      },
-      {
-        id: 'pdr2-sign-check',
-        type: 'multiple-choice' as const,
-        content: `**Concept Check** 🎯`,
-        exercise: {
-          questions: [
-            {
-              question: 'To divide by $x + 3$ using synthetic division, the number you place in the box is:',
-              options: ['$-3$', '$3$', '$\\frac{1}{3}$', '$0$'],
-              correctAnswer: 0,
-              explanation: 'Synthetic division uses $c$ from the form $x - c$. Since $x + 3 = x - (-3)$, you use $c = -3$. This sign flip is the #1 synthetic-division mistake.',
-            },
-            {
-              question: 'Synthetic division can be used directly when the divisor is:',
-              options: ['$x - c$ (linear, leading coefficient $1$)', 'any quadratic', '$2x - 5$ with no adjustment', 'any polynomial of degree $\\le 2$'],
-              correctAnswer: 0,
-              explanation: 'Standard synthetic division requires a monic linear divisor $x - c$. Divisors like $2x-5$ need a rescaling step first (covered later); quadratics need long division.',
-            },
-          ],
-        },
-      },
-      {
-        id: 'pdr2-worked2',
-        type: 'text' as const,
-        content: `## A Second Example with a Negative $c$
-
-Divide $2x^3 + 3x^2 - 8x + 3$ by $x + 3$. Here $c = -3$, coefficients $2, 3, -8, 3$:
-
-$$
-\\begin{array}{c|cccc}
--3 & 2 & 3 & -8 & 3 \\\\
-   &   & -6 & 9 & -3 \\\\
-\\hline
-   & 2 & -3 & 1 & \\;\\;0
-\\end{array}
-$$
-
-Reading the bottom row: quotient $2x^2 - 3x + 1$, remainder $0$.
-
-$$2x^3 + 3x^2 - 8x + 3 = (x+3)(2x^2 - 3x + 1)$$
-
-> ✅ Because the remainder is $0$, $x+3$ is a factor — and $2x^2 - 3x + 1 = (2x-1)(x-1)$, which fully factors the cubic. We'll exploit this in Part 5.`,
-      },
-      {
-        id: 'pdr2-missing-drill',
-        type: 'input-boxes' as const,
-        content: `**Synthetic Division Drill** 🧮
-
-Use synthetic division (remember $0$ placeholders for missing powers!).
-
-**1)** $(x^3 - 4x^2 + 6x - 4) \\div (x - 2)$. Enter the **remainder**.
-**2)** $(2x^3 + 3x^2 - 8x + 3) \\div (x + 3)$. Enter the **constant term** of the quotient.
-**3)** $(x^4 - 16) \\div (x - 2)$. Enter the **remainder**.`,
-        exercise: {
-          boxes: 3,
-          correctAnswers: ['0', '1', '0'],
-          hint1: 'From the first worked example, the bottom row ends in $0$.',
-          hint2: 'The quotient was $2x^2 - 3x + 1$; its constant term is $1$.',
-          hint3: 'Write $x^4 - 16$ as $1, 0, 0, 0, -16$ with $c=2$. The bottom row is $1, 2, 4, 8, 0$ — remainder $0$, since $x^4-16=(x-2)(x^3+2x^2+4x+8)$.',
-          explanation: '1) remainder $0$.  2) quotient $2x^2-3x+1$, constant term $1$.  3) remainder $0$; $x^4-16=(x-2)(x^3+2x^2+4x+8)$.',
-        },
-      },
-      {
-        id: 'pdr2-order-dropdown',
-        type: 'dropdown-select' as const,
-        content: `**Order the Process** 🔽
-
-Synthetic-dividing $x^3 - 4x^2 + 6x - 4$ by $x - 2$. Fill in each stage.`,
-        exercise: {
-          dropdowns: [
-            { label: 'Number placed in the box:', options: ['$2$', '$-2$', '$-4$', '$1$'] },
-            { label: 'Coefficients listed across the top:', options: ['$1,\\,-4,\\,6,\\,-4$', '$1,\\,4,\\,6,\\,4$', '$-4,\\,6,\\,-4$', '$1,\\,-4,\\,6$'] },
-            { label: 'Repeated operation each column:', options: ['multiply by $2$, then add', 'add, then divide by $2$', 'subtract, then multiply', 'square, then add'] },
-            { label: 'The last bottom-row number is the:', options: ['remainder', 'quotient', 'divisor', 'leading coefficient'] },
-          ],
-          correctAnswers: ['$2$', '$1,\\,-4,\\,6,\\,-4$', 'multiply by $2$, then add', 'remainder'],
-          hint1: 'Divisor $x-2$ means $c=2$ goes in the box.',
-          hint2: 'List every coefficient of $x^3-4x^2+6x-4$ in order: $1, -4, 6, -4$.',
-          hint3: 'Each step you multiply the running total by $c$ and add to the next coefficient; the final bottom-row entry is the remainder.',
-          explanation: 'Box $= 2$; coefficients $1,-4,6,-4$; multiply-then-add down the columns; the final entry $0$ is the remainder.',
-        },
-      },
-    ],
-  },
-
-  // ───────────────────────── PART 3 ─────────────────────────
-  {
-    topicSlug: 'polynomial-division-remainder-theorem',
-    sections: [
-      {
-        id: 'pdr3-intro',
-        type: 'text' as const,
-        content: `# ➗ Polynomial Division & the Remainder Theorem
-
-**Part 3 of 7 — The Remainder Theorem**
-
----
-
-> 🔑 **The Theorem:** When you divide a polynomial $p(x)$ by $x - c$, the **remainder equals $p(c)$**. So you can evaluate a polynomial just by reading off a synthetic-division remainder — no plugging-in required.`,
-      },
-      {
-        id: 'pdr3-statement',
-        type: 'text' as const,
-        content: `## Why It Works
-
-The Division Algorithm says
-$$p(x) = (x - c)\\,q(x) + r,$$
-where $r$ is a constant (the divisor $x-c$ is degree $1$, so the remainder has degree $0$).
-
-Now substitute $x = c$:
-$$p(c) = (c - c)\\,q(c) + r = 0\\cdot q(c) + r = r.$$
-
-The $(x-c)$ factor vanishes, leaving exactly the remainder. That's the whole proof.
-
-$$\\boxed{\\;p(c) = \\text{remainder when } p(x) \\text{ is divided by } x - c\\;}$$
-
-### Example
-
-Earlier we divided $x^3 - 4x^2 + 6x - 4$ by $x - 2$ and got remainder $0$. The theorem predicts $p(2) = 0$. Check directly:
-$$p(2) = 8 - 16 + 12 - 4 = 0 \\;✓$$`,
-      },
-      {
-        id: 'pdr3-mc',
-        type: 'multiple-choice' as const,
-        content: `**Concept Check** 🎯`,
-        exercise: {
-          questions: [
-            {
-              question: 'The remainder when $p(x)$ is divided by $x - 5$ is $11$. Therefore:',
-              options: ['$p(5) = 11$', '$p(11) = 5$', '$p(-5) = 11$', '$p(5) = 0$'],
-              correctAnswer: 0,
-              explanation: 'The Remainder Theorem says the remainder on division by $x-c$ equals $p(c)$. With $c=5$, the remainder $11$ means $p(5)=11$.',
-            },
-            {
-              question: 'To find $p(-1)$ for $p(x) = 2x^3 - 3x^2 + x - 5$ via the Remainder Theorem, you divide by:',
-              options: ['$x + 1$', '$x - 1$', '$x - 5$', '$x - (-5)$'],
-              correctAnswer: 0,
-              explanation: 'To get $p(c)$ you divide by $x - c$. For $c = -1$, that divisor is $x - (-1) = x + 1$.',
-            },
-          ],
-        },
-      },
-      {
-        id: 'pdr3-synthetic-eval',
-        type: 'text' as const,
-        content: `## Synthetic Substitution
-
-Combining synthetic division with the Remainder Theorem gives a slick way to evaluate $p(c)$. To find $p(-1)$ for $p(x) = 2x^3 - 3x^2 + x - 5$, synthetic-divide by $x + 1$ (so $c = -1$):
-
-$$
-\\begin{array}{c|cccc}
--1 & 2 & -3 & 1 & -5 \\\\
-   &   & -2 & 5 & -6 \\\\
-\\hline
-   & 2 & -5 & 6 & -11
-\\end{array}
-$$
-
-The remainder is $-11$, so $p(-1) = -11$.
-
-> ✅ **Direct check:** $p(-1) = 2(-1)^3 - 3(-1)^2 + (-1) - 5 = -2 - 3 - 1 - 5 = -11$ ✓
-
-This "synthetic substitution" is often faster than plugging in, especially for high-degree polynomials.`,
-      },
-      {
-        id: 'pdr3-drill',
-        type: 'input-boxes' as const,
-        content: `**Remainder Theorem Drill** 🧮
-
-Use the Remainder Theorem (synthetic substitution or direct evaluation).
-
-**1)** $p(x) = x^3 - 4x^2 + 6x - 4$. Find the remainder when divided by $x - 2$, i.e. $p(2)$.
-**2)** $p(x) = 2x^3 - 3x^2 + x - 5$. Find $p(-1)$.
-**3)** $p(x) = x^4 - 3x^2 + 2x - 7$. Find $p(3)$.`,
-        exercise: {
-          boxes: 3,
-          correctAnswers: ['0', '-11', '53'],
-          hint1: '$p(2) = 8 - 16 + 12 - 4$.',
-          hint2: '$p(-1) = -2 - 3 - 1 - 5$.',
-          hint3: '$p(3) = 81 - 27 + 6 - 7 = 81 - 27 - 1 = 53$. (Remember $x^4$ term has no $x^3$, so include a $0$.)',
-          explanation: '1) $p(2)=0$.  2) $p(-1)=-11$.  3) $p(3)=81-3(9)+6-7 = 81-27+6-7 = 53$.',
-        },
-      },
-      {
-        id: 'pdr3-table-dropdown',
-        type: 'dropdown-select' as const,
-        content: `**Read the Remainders** 🔽
-
-A polynomial $p(x)$ gives these remainders. Use the Remainder Theorem.
-
-| Divide by | Remainder |
-|-----------|-----------|
-| $x - 1$ | $0$ |
-| $x - 4$ | $9$ |
-| $x + 2$ | $-3$ |`,
-        exercise: {
-          dropdowns: [
-            { label: '$p(1) = $', options: ['$0$', '$1$', '$9$', '$-3$'] },
-            { label: '$p(4) = $', options: ['$9$', '$4$', '$0$', '$-9$'] },
-            { label: '$p(-2) = $', options: ['$-3$', '$2$', '$3$', '$-2$'] },
-          ],
-          correctAnswers: ['$0$', '$9$', '$-3$'],
-          hint1: 'Dividing by $x-1$ gives the remainder $p(1)$; the table says that remainder is $0$.',
-          hint2: 'Dividing by $x-4$ gives $p(4)$ — read straight from the table.',
-          hint3: 'Dividing by $x+2 = x-(-2)$ gives $p(-2)$, the remainder $-3$.',
-          explanation: 'Each remainder *is* $p(c)$: $p(1)=0$, $p(4)=9$, $p(-2)=-3$. Note $p(1)=0$ already hints that $x-1$ is a factor — the Factor Theorem, next.',
-        },
-      },
-    ],
-  },
-
-  // ───────────────────────── PART 4 ─────────────────────────
-  {
-    topicSlug: 'polynomial-division-remainder-theorem',
-    sections: [
-      {
-        id: 'pdr4-intro',
-        type: 'text' as const,
-        content: `# ➗ Polynomial Division & the Remainder Theorem
-
-**Part 4 of 7 — The Factor Theorem**
+**Part 2 of 5 — The Factor Theorem**
 
 ---
 
 > 🔑 **The Theorem:** $x - c$ is a **factor** of $p(x)$ **if and only if** $p(c) = 0$. A zero remainder and a factor are the same thing said two ways.`,
       },
       {
-        id: 'pdr4-statement',
+        id: 'pdr2-statement',
         type: 'text' as const,
-        content: `## From Remainder to Factor
+        content: `## Why It Works
 
-The Factor Theorem is just the Remainder Theorem with remainder $= 0$:
+Divide $p(x)$ by $x - c$. The divisor has degree $1$, so the remainder is a constant $r$:
+$$p(x) = (x - c)\\,q(x) + r.$$
 
-$$p(c) = 0 \\;\\Longleftrightarrow\\; \\text{remainder} = 0 \\;\\Longleftrightarrow\\; (x - c) \\text{ divides } p(x) \\text{ evenly}.$$
+Now substitute $x = c$. The factor $(x - c)$ becomes $0$, so
+$$p(c) = 0\\cdot q(c) + r = r.$$
+
+Therefore $p(c) = 0$ exactly when the remainder is $0$, which is exactly when $(x - c)$ divides $p(x)$ evenly:
+
+$$p(c) = 0 \\;\\Longleftrightarrow\\; \\text{remainder} = 0 \\;\\Longleftrightarrow\\; (x - c) \\text{ is a factor of } p(x).$$
 
 This links three ideas that AP Precalculus treats as interchangeable:
 
@@ -433,10 +206,10 @@ This links three ideas that AP Precalculus treats as interchangeable:
 | $(x - c)$ is a **factor** | division leaves remainder $0$ |
 | $(c, 0)$ is an **$x$-intercept** | the graph meets the $x$-axis at $x = c$ (it crosses at an odd-multiplicity zero and touches without crossing at an even one) |
 
-> 💡 So "find the zeros," "factor the polynomial," and "find the $x$-intercepts" are three phrasings of the *same* task.`,
+> 💡 So "find the zeros," "factor the polynomial," and "find the $x$-intercepts" are three phrasings of the *same* task — and evaluating $p(c)$ is how you **justify** that $(x - c)$ is a factor.`,
       },
       {
-        id: 'pdr4-test-check',
+        id: 'pdr2-test-check',
         type: 'multiple-choice' as const,
         content: `**Concept Check** 🎯`,
         exercise: {
@@ -457,29 +230,24 @@ This links three ideas that AP Precalculus treats as interchangeable:
         },
       },
       {
-        id: 'pdr4-worked',
+        id: 'pdr2-worked',
         type: 'text' as const,
         content: `## Using It to Confirm a Zero You Are Given
 
 **A graph of $p(x) = x^3 - 7x + 6$ appears to cross the $x$-axis at $x = 1$. Is $x - 1$ a factor?** Check $p(1)$:
 $$p(1) = 1 - 7 + 6 = 0 \\;✓$$
-Yes — so $(x-1)$ is a factor. Synthetic-dividing by $x - 1$ peels it off:
+Yes — so $(x-1)$ is a factor. Long division by $x - 1$ peels it off (write the dividend as $x^3 + 0x^2 - 7x + 6$):
 
-$$
-\\begin{array}{c|cccc}
-1 & 1 & 0 & -7 & 6 \\\\
-  &   & 1 & 1 & -6 \\\\
-\\hline
-  & 1 & 1 & -6 & \\;\\;0
-\\end{array}
-$$
+- $x^3 \\div x = x^2$; subtract $x^2(x - 1) = x^3 - x^2$ to leave $x^2 - 7x$.
+- $x^2 \\div x = x$; subtract $x(x - 1) = x^2 - x$ to leave $-6x + 6$.
+- $-6x \\div x = -6$; subtract $-6(x - 1) = -6x + 6$ to leave $0$.
 
 So $p(x) = (x-1)(x^2 + x - 6) = (x-1)(x+3)(x-2)$, since $x^2 + x - 6 = (x+3)(x-2)$.
 
 > ⚠️ **Sign trap:** A *factor* $(x - c)$ corresponds to a *zero* $x = +c$. The factor $(x+3)$ comes from the zero $x = -3$, not $x = +3$.`,
       },
       {
-        id: 'pdr4-factor-dropdown',
+        id: 'pdr2-factor-dropdown',
         type: 'dropdown-select' as const,
         content: `**Match Factor ↔ Zero** 🔽`,
         exercise: {
@@ -491,12 +259,12 @@ So $p(x) = (x-1)(x^2 + x - 6) = (x-1)(x+3)(x-2)$, since $x^2 + x - 6 = (x+3)(x-2
           correctAnswers: ['$x = 4$', '$(x + 5)$', '$0$'],
           hint1: 'Factor $(x - c)$ ↔ zero $x = c$. Here $c = 4$.',
           hint2: 'Zero $x = c$ ↔ factor $(x - c)$. For $c = -5$ that is $(x - (-5)) = (x+5)$.',
-          hint3: 'By the Factor/Remainder Theorems, $p(c)=0$ means the remainder on dividing by $x-c$ is $0$.',
+          hint3: 'By the Factor Theorem, $p(c)=0$ means the remainder on dividing by $x-c$ is $0$.',
           explanation: 'Factor $(x-4)$ ↔ zero $4$; zero $-5$ ↔ factor $(x+5)$; and $p(2)=0$ forces remainder $0$ on division by $x-2$.',
         },
       },
       {
-        id: 'pdr4-drill',
+        id: 'pdr2-drill',
         type: 'input-boxes' as const,
         content: `**Factor Theorem Drill** 🧮
 
@@ -517,35 +285,41 @@ A graph of $p(x) = x^3 - 7x + 6$ shows three $x$-intercepts, at $x = -3$, $x = 1
     ],
   },
 
-  // ───────────────────────── PART 5 ─────────────────────────
+  // ───────────────────────── PART 3 ─────────────────────────
   {
     topicSlug: 'polynomial-division-remainder-theorem',
     sections: [
       {
-        id: 'pdr5-intro',
+        id: 'pdr3-intro',
         type: 'text' as const,
-        content: `# ➗ Polynomial Division & the Remainder Theorem
+        content: `# ➗ Polynomial Division and Equivalent Forms
 
-**Part 5 of 7 — Finding All the Zeros**
+**Part 3 of 5 — Finding All the Zeros from a Known Factor**
 
 ---
 
 > 🔑 **The Strategy:** Start from a zero you are **given** (by a graph, a table, a known factor, or the problem statement), **divide it out**, and repeat on the smaller quotient until you reach a quadratic you can factor or solve.`,
       },
       {
-        id: 'pdr5-strategy',
+        id: 'pdr3-strategy',
         type: 'text' as const,
         content: `## The Depress-and-Conquer Loop
 
 To find all zeros of a polynomial $p(x)$:
 
 1. **Get one zero** $c$ — from a graph, a table, a given factor, or a value the problem gives you. Confirm it with $p(c) = 0$.
-2. **Divide** $p(x)$ by $(x - c)$ using synthetic division. The quotient has degree one lower.
+2. **Divide** $p(x)$ by $(x - c)$ using polynomial long division (synthetic division is an optional shortcut). The quotient has degree one lower.
 3. **Repeat** on the quotient. Once it's a quadratic, factor it or use the quadratic formula.
 
 ### Example: $p(x) = x^3 - 4x^2 + x + 6$
 
-A table of values shows $p(-1) = 0$. Confirm: $\\;p(-1) = -1 - 4 - 1 + 6 = 0$ ✓. Divide by $x + 1$:
+A table of values shows $p(-1) = 0$. Confirm: $\\;p(-1) = -1 - 4 - 1 + 6 = 0$ ✓. Long division by $x + 1$:
+
+- $x^3 \\div x = x^2$; subtract $x^2(x + 1) = x^3 + x^2$ to leave $-5x^2 + x$.
+- $-5x^2 \\div x = -5x$; subtract $-5x(x + 1) = -5x^2 - 5x$ to leave $6x + 6$.
+- $6x \\div x = 6$; subtract $6(x + 1) = 6x + 6$ to leave $0$.
+
+The same quotient and remainder appear in the optional synthetic layout:
 
 $$
 \\begin{array}{c|cccc}
@@ -561,7 +335,7 @@ So $p(x) = (x+1)(x^2 - 5x + 6) = (x+1)(x-2)(x-3)$.
 **The zeros are $x = -1,\\; 2,\\; 3$.**`,
       },
       {
-        id: 'pdr5-mc',
+        id: 'pdr3-mc',
         type: 'multiple-choice' as const,
         content: `**Concept Check** 🎯`,
         exercise: {
@@ -576,19 +350,19 @@ So $p(x) = (x+1)(x^2 - 5x + 6) = (x+1)(x-2)(x-3)$.
               question: 'A degree-$4$ polynomial can have at most how many real zeros?',
               options: ['$4$', '$3$', '$5$', '$8$'],
               correctAnswer: 0,
-              explanation: 'A polynomial of degree $n$ has at most $n$ real zeros (counting multiplicity), because each zero contributes a distinct linear factor. Degree $4$ → at most $4$.',
+              explanation: 'A polynomial of degree $n$ has at most $n$ real zeros (counting multiplicity), because each real zero $c$ contributes a linear factor $(x - c)$, and a degree-$4$ polynomial cannot have more than $4$ linear factors. Degree $4$ → at most $4$.',
             },
           ],
         },
       },
       {
-        id: 'pdr5-worked2',
+        id: 'pdr3-worked2',
         type: 'text' as const,
         content: `## A Cubic with a Fractional Zero
 
 Find all zeros of $p(x) = 2x^3 + x^2 - 13x + 6$, given that $x = 2$ is a zero.
 
-Confirm: $\\;p(2) = 16 + 4 - 26 + 6 = 0$ ✓. Divide by $x - 2$:
+Confirm: $\\;p(2) = 16 + 4 - 26 + 6 = 0$ ✓. Divide by $x - 2$ (long division gives quotient $2x^2 + 5x - 3$, remainder $0$; the optional synthetic layout is shown):
 
 $$
 \\begin{array}{c|cccc}
@@ -604,10 +378,10 @@ $$2x - 1 = 0 \\Rightarrow x = \\tfrac{1}{2}, \\qquad x + 3 = 0 \\Rightarrow x = 
 
 **The zeros are $x = 2,\\; \\tfrac{1}{2},\\; -3$.**
 
-> 💡 Not every zero is an integer. The factor $(2x - 1)$ produces the fractional zero $x = \\tfrac{1}{2}$, which you only see after dividing out the zero you were given. You never need to guess candidate zeros on the AP exam: hand factoring is limited to common factors and quadratics, and any other zero is supplied.`,
+> 💡 Not every zero is an integer. The factor $(2x - 1)$ produces the fractional zero $x = \\tfrac{1}{2}$, which you only see after dividing out the zero you were given. AP Precalculus does not use the Rational Root Theorem: when a cubic must be factored by hand, a zero or factor is given (or read from a graph or table); otherwise a graphing calculator finds the zeros.`,
       },
       {
-        id: 'pdr5-zeros-dropdown',
+        id: 'pdr3-zeros-dropdown',
         type: 'dropdown-select' as const,
         content: `**From Factors to Zeros** 🔽
 
@@ -626,7 +400,7 @@ A polynomial fully factors as $p(x) = (x + 1)(x - 2)(2x - 1)$.`,
         },
       },
       {
-        id: 'pdr5-drill',
+        id: 'pdr3-drill',
         type: 'input-boxes' as const,
         content: `**Find the Zeros Drill** 🧮
 
@@ -645,23 +419,23 @@ A polynomial fully factors as $p(x) = (x + 1)(x - 2)(2x - 1)$.`,
     ],
   },
 
-  // ───────────────────────── PART 6 ─────────────────────────
+  // ───────────────────────── PART 4 ─────────────────────────
   {
     topicSlug: 'polynomial-division-remainder-theorem',
     sections: [
       {
-        id: 'pdr6-intro',
+        id: 'pdr4-intro',
         type: 'text' as const,
-        content: `# ➗ Polynomial Division & the Remainder Theorem
+        content: `# ➗ Polynomial Division and Equivalent Forms
 
-**Part 6 of 7 — Division, Rational Functions & Slant Asymptotes**
+**Part 4 of 5 — Division, Rational Functions and Slant Asymptotes**
 
 ---
 
-> 🔑 **Two payoffs:** Division rewrites a rational function as **polynomial + leftover fraction**, and that rewritten form exposes the function's **end behavior**, including any **slant (oblique) asymptote**.`,
+> 🔑 **Two payoffs:** Division rewrites a rational function in the **equivalent form** polynomial + leftover fraction, and that rewritten form exposes the function's **end behavior**, including any **slant (oblique) asymptote**.`,
       },
       {
-        id: 'pdr6-rrt',
+        id: 'pdr4-rewrite',
         type: 'text' as const,
         content: `## Rewriting a Rational Function by Division
 
@@ -669,13 +443,13 @@ If the polynomial $f$ is divided by the polynomial $g$, then
 
 $$f(x) = g(x)\\,q(x) + r(x), \\qquad \\deg r < \\deg g,$$
 
-where $q$ is the **quotient** and $r$ the **remainder**. Dividing both sides by $g(x)$ rewrites the rational function:
+where $q$ is the **quotient** and $r$ the **remainder**. Dividing both sides by $g(x)$ rewrites the rational function in an equivalent form:
 
 $$\\frac{f(x)}{g(x)} = q(x) + \\frac{r(x)}{g(x)}$$
 
-### Example: a quadratic divisor (long division required)
+### Example: a quadratic divisor
 
-Divide $2x^3 + x^2 - 3$ by $x^2 + 1$. Synthetic division only handles divisors $x - c$, so use long division:
+Divide $2x^3 + x^2 - 3$ by $x^2 + 1$ with long division (write the dividend as $2x^3 + x^2 + 0x - 3$):
 
 - $2x^3 \\div x^2 = 2x$; subtract $2x(x^2 + 1) = 2x^3 + 2x$ to leave $x^2 - 2x - 3$.
 - $x^2 \\div x^2 = 1$; subtract $1(x^2 + 1)$ to leave $-2x - 4$.
@@ -687,7 +461,7 @@ $$\\frac{2x^3 + x^2 - 3}{x^2 + 1} = 2x + 1 + \\frac{-2x - 4}{x^2 + 1}$$
 > 💡 **Why it matters:** the leftover fraction has a smaller-degree numerator, so it shrinks toward $0$ as $x \\to \\pm\\infty$. The quotient $q(x)$ therefore controls the end behavior. Here the graph approaches the line $y = 2x + 1$.`,
       },
       {
-        id: 'pdr6-rrt-check',
+        id: 'pdr4-rewrite-check',
         type: 'multiple-choice' as const,
         content: `**Concept Check** 🎯`,
         exercise: {
@@ -706,10 +480,10 @@ $$\\frac{2x^3 + x^2 - 3}{x^2 + 1} = 2x + 1 + \\frac{-2x - 4}{x^2 + 1}$$
             {
               question: 'Division gives $\\dfrac{x^3 + 1}{x - 1} = x^2 + x + 1 + \\dfrac{2}{x - 1}$. Which describes the end behavior of the graph?',
               options: [
-                'Like $y = x^2 + x + 1$: up on both ends',
+                'Like $y = x^2 + x + 1$: a parabola rising on both ends',
                 'Like $y = x + 1$: a slanted line on both ends',
-                'Like $y = 1$: leveling off at one height on both ends',
-                'Like $y = x^3$: falling on the left, rising on the right',
+                'Like $y = 1$: leveling off on both ends',
+                'Like $y = x^3$: down on the left, up on the right',
               ],
               correctAnswer: 0,
               explanation: 'The fraction $\\frac{2}{x-1}$ shrinks to $0$, so the graph follows the quotient $x^2 + x + 1$, an upward parabola that rises on both ends. A slant line needs a linear quotient, a level line needs a constant quotient, and the cubic numerator alone ignores the division by $x - 1$.',
@@ -718,7 +492,7 @@ $$\\frac{2x^3 + x^2 - 3}{x^2 + 1} = 2x + 1 + \\frac{-2x - 4}{x^2 + 1}$$
         },
       },
       {
-        id: 'pdr6-rrt-drill',
+        id: 'pdr4-rewrite-drill',
         type: 'input-boxes' as const,
         content: `**Division Drill** 🧮
 
@@ -732,32 +506,61 @@ Dividing $2x^2 + 3x + 4$ by $x - 1$ gives $\\dfrac{2x^2 + 3x + 4}{x - 1} = ax + 
           correctAnswers: ['2', '5', '9'],
           hint1: '$2x^2 \\div x = 2x$, so $a = 2$.',
           hint2: 'Subtract $2x(x - 1) = 2x^2 - 2x$ to leave $5x + 4$; then $5x \\div x = 5$.',
-          hint3: 'Subtract $5(x - 1) = 5x - 5$ from $5x + 4$ to get $9$. Check with the Remainder Theorem: $2 + 3 + 4 = 9$.',
+          hint3: 'Subtract $5(x - 1) = 5x - 5$ from $5x + 4$ to get $9$. Check by multiplying back: $(x - 1)(2x + 5) + 9 = 2x^2 + 3x + 4$.',
           explanation: 'The quotient is $2x + 5$ and the remainder is $9$, since $(x - 1)(2x + 5) + 9 = 2x^2 + 3x + 4$. The slant asymptote is $y = 2x + 5$.',
         },
       },
       {
-        id: 'pdr6-slant',
+        id: 'pdr4-slant',
         type: 'text' as const,
         content: `## Slant Asymptotes from Division
 
-When a rational function $\\dfrac{N(x)}{D(x)}$ has numerator degree **exactly one more** than the denominator, its graph approaches a **slant (oblique) line** asymptote. Division finds it: the **quotient is the asymptote**, and the remainder term vanishes as $x \\to \\pm\\infty$.
+When a rational function $\\dfrac{N(x)}{D(x)}$ (after canceling common factors) has numerator degree **exactly one more** than the denominator, its graph approaches a **slant (oblique) line** asymptote. Division finds it: the **quotient is the asymptote**, and the remainder term vanishes as $x \\to \\pm\\infty$.
 
 ### Example: $f(x) = \\dfrac{x^2 + 3x + 5}{x + 1}$
 
-Divide $x^2 + 3x + 5$ by $x + 1$ (synthetic, $c = -1$): quotient $x + 2$, remainder $3$. So
+Divide $x^2 + 3x + 5$ by $x + 1$ with long division: $x^2 \\div x = x$, subtract $x(x + 1)$ to leave $2x + 5$, then $2x \\div x = 2$ and subtracting $2(x + 1)$ leaves $3$. Quotient $x + 2$, remainder $3$. So
 $$f(x) = x + 2 + \\frac{3}{x + 1}.$$
 
-As $x \\to \\pm\\infty$, the fraction $\\dfrac{3}{x+1} \\to 0$, so the graph hugs the line $y = x + 2$.
+As $x \\to \\pm\\infty$, the fraction $\\dfrac{3}{x+1} \\to 0$, so the graph hugs the line $y = x + 2$, i.e. $\\lim_{x\\to\\pm\\infty}\\left[f(x) - (x+2)\\right] = 0$.
 
-> ✅ **Slant asymptote:** $y = x + 2$. The remainder $3$ only controls *how* the curve approaches the line, not the line itself.`,
+> ✅ **Slant asymptote:** $y = x + 2$. The remainder $3$ only controls *how* the curve approaches the line, not the line itself. The graph also has a vertical asymptote at $x = -1$, where the divisor is $0$.`,
       },
       {
-        id: 'pdr6-slant-dropdown',
+        id: 'pdr4-slant-figure',
+        type: 'multiple-choice' as const,
+        content: `**Read the Graph** 🎯
+
+The figure shows $f(x) = \\dfrac{x^2 + 3x + 5}{x + 1} = x + 2 + \\dfrac{3}{x + 1}$ with its slant asymptote and vertical asymptote drawn dashed.`,
+        figure: {
+          svg: `<svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><title>Graph of f(x) = (x^2 + 3x + 5)/(x + 1) with slant asymptote y = x + 2</title><g class="fig-muted" stroke="currentColor" stroke-width="1.2" stroke-dasharray="5 4" fill="none"><line x1="160" y1="15" x2="160" y2="235"/><line x1="20" y1="195" x2="300" y2="55"/></g><g stroke="currentColor" stroke-width="1.5" fill="none"><line x1="20" y1="135" x2="304" y2="135"/><line x1="180" y1="12" x2="180" y2="235"/><polygon points="304,131 312,135 304,139" fill="currentColor" stroke="none"/><polygon points="176,12 180,4 184,12" fill="currentColor" stroke="none"/></g><g stroke="currentColor" stroke-width="1" fill="none"><line x1="160" y1="132" x2="160" y2="138"/><line x1="220" y1="132" x2="220" y2="138"/><line x1="177" y1="85" x2="183" y2="85"/><line x1="177" y1="35" x2="183" y2="35"/></g><text x="314" y="139" font-size="12" fill="currentColor">x</text><text x="188" y="12" font-size="12" fill="currentColor">y</text><text x="222" y="150" font-size="11" fill="currentColor" text-anchor="middle">2</text><text x="173" y="89" font-size="11" fill="currentColor" text-anchor="end">5</text><text x="173" y="39" font-size="11" fill="currentColor" text-anchor="end">10</text><text x="156" y="150" font-size="11" fill="currentColor" text-anchor="end">−1</text><g class="fig-muted" fill="currentColor"><text x="272" y="96" font-size="11">y = x + 2</text><text x="156" y="30" font-size="11" text-anchor="end">x = −1</text></g><g class="fig-accent" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="165.6,15.1 168,46 170,60 174,75.1 180,85 190,90 200,90 210,88 220,85 240,77.5 260,69 280,60 300,50.7"/><polyline points="154.4,234.9 152,204 150,190 146,174.9 140,165 130,160 120,160 110,162 100,165 80,172.5 60,181 40,190 20,199.3"/></g></svg>`,
+          alt: 'Graph of f(x) = (x^2 + 3x + 5)/(x + 1). A dashed vertical line marks the vertical asymptote x = -1 and a dashed slanted line marks y = x + 2. The right branch comes down from the top near x = -1, dips to a minimum near (0.7, 4.5), then rises and settles just above the dashed line y = x + 2 as x grows. The left branch drops toward negative infinity near x = -1, rises to a maximum near (-2.7, -2.5), then falls and settles just below the dashed line as x goes to negative infinity. Both ends of the graph approach the line y = x + 2.',
+          caption: 'Figure 1. $f(x) = x + 2 + \\dfrac{3}{x + 1}$: the graph approaches the dashed slant asymptote $y = x + 2$ at both ends.',
+        },
+        exercise: {
+          questions: [
+            {
+              question: 'Which limit statement does the graph justify about the end behavior of $f$?',
+              options: [
+                '$\\lim_{x\\to\\pm\\infty}\\left[f(x) - (x+2)\\right] = 3$',
+                '$\\lim_{x\\to\\pm\\infty}\\left[f(x) - (x+2)\\right] = 0$',
+                '$\\lim_{x\\to\\pm\\infty}\\left[f(x) - (x+1)\\right] = 0$',
+                '$\\lim_{x\\to\\pm\\infty} f(x) = x + 2$',
+              ],
+              correctAnswer: 1,
+              explanation: 'The gap between the curve and the dashed line $y = x + 2$ shrinks to $0$ at both ends, which is what $f(x) - (x + 2) = \\frac{3}{x+1} \\to 0$ says. The remainder $3$ is not the limiting gap, the divisor $x + 1$ is the vertical asymptote rather than the slant line, and a limit as $x \\to \\pm\\infty$ is a number (or does not exist), never an expression in $x$.',
+            },
+          ],
+        },
+      },
+      {
+        id: 'pdr4-slant-dropdown',
         type: 'dropdown-select' as const,
         content: `**Find the Slant Asymptote** 🔽
 
-Each rational function is rewritten as quotient $+ \\dfrac{\\text{remainder}}{\\text{divisor}}$. Pick the slant asymptote.`,
+Each rational function is rewritten in the equivalent form quotient $+ \\dfrac{\\text{remainder}}{\\text{divisor}}$. Pick the slant asymptote.
+
+> 📌 The other CED 1.11 skill, expanding $(a+b)^n$ with the **Binomial Theorem** and Pascal's triangle, is taught in the Sequences lesson, Part 6.`,
         exercise: {
           dropdowns: [
             { label: '$\\dfrac{x^2+3x+5}{x+1} = x+2+\\dfrac{3}{x+1}$; asymptote:', options: ['$y = x + 2$', '$y = x + 1$', '$y = 3$', '$y = x + 5$'] },
@@ -774,48 +577,47 @@ Each rational function is rewritten as quotient $+ \\dfrac{\\text{remainder}}{\\
     ],
   },
 
-  // ───────────────────────── PART 7 ─────────────────────────
+  // ───────────────────────── PART 5 ─────────────────────────
   {
     topicSlug: 'polynomial-division-remainder-theorem',
     sections: [
       {
-        id: 'pdr7-intro',
+        id: 'pdr5-intro',
         type: 'text' as const,
-        content: `# ➗ Polynomial Division & the Remainder Theorem
+        content: `# ➗ Polynomial Division and Equivalent Forms
 
-**Part 7 of 7 — Mixed Practice & Mastery Check**
+**Part 5 of 5 — Mixed Practice and Mastery Check**
 
 ---
 
-You can now (1) divide polynomials long-hand and synthetically, (2) apply the Remainder Theorem, (3) apply the Factor Theorem, (4) find every zero once one is known, and (5) rewrite rational functions to read off end behavior and slant asymptotes. Let's put it all together.`,
+You can now (1) divide polynomials by long division and write the result in equivalent forms, (2) apply the Factor Theorem, (3) find every zero once one is known, and (4) rewrite rational functions to read off end behavior and slant asymptotes. Let's put it all together.`,
       },
       {
-        id: 'pdr7-summary',
+        id: 'pdr5-summary',
         type: 'text' as const,
         content: `## Quick Reference
 
 | Goal | Key move |
 |------|----------|
-| Divide by $x - c$ fast | synthetic division with $c$ |
-| Evaluate $p(c)$ | remainder on division by $x-c$ (Remainder Thm) |
-| Test if $(x-c)$ is a factor | check whether $p(c) = 0$ (Factor Thm) |
+| Divide by any polynomial | long division: $f = gq + r$, $\\deg r < \\deg g$ |
+| Test if $(x-c)$ is a factor | check whether $p(c) = 0$ (Factor Theorem) |
 | Factor $(x-c)$ ↔ zero | factor $(x-c)$ ⇔ zero $x = c$ |
 | Rewrite $\\dfrac{f}{g}$ | $q(x) + \\dfrac{r(x)}{g(x)}$ from $f = gq + r$ |
-| Find a slant asymptote | the polynomial quotient |
+| Find a slant asymptote | the polynomial quotient; $\\lim_{x\\to\\pm\\infty}\\left[f(x) - q(x)\\right] = 0$ |
 
-> ⚠️ **Three habits that prevent most errors:** use $0$ placeholders for missing powers, flip the sign of $c$ (divisor $x+3 \\Rightarrow c=-3$), and remember a factor $(x-c)$ matches the zero $x = +c$.`,
+> ⚠️ **Three habits that prevent most errors:** use $0$ placeholders for missing powers, subtract the *whole* product at each step (watch the signs), and remember a factor $(x-c)$ matches the zero $x = +c$.`,
       },
       {
-        id: 'pdr7-mixed',
+        id: 'pdr5-mixed',
         type: 'multiple-choice' as const,
         content: `**Mixed Practice** 🎯`,
         exercise: {
           questions: [
             {
-              question: 'The remainder when $p(x) = x^3 + 2x^2 - 5x - 6$ is divided by $x - 2$ is:',
-              options: ['$0$', '$6$', '$-6$', '$12$'],
+              question: 'Which is equivalent to $\\dfrac{x^2 + 4x - 1}{x + 1}$ for $x \\ne -1$?',
+              options: ['$x + 3 - \\dfrac{4}{x+1}$', '$x + 3 + \\dfrac{2}{x+1}$', '$x + 5 + \\dfrac{4}{x+1}$', '$x + 3 - \\dfrac{1}{x+1}$'],
               correctAnswer: 0,
-              explanation: 'By the Remainder Theorem the remainder is $p(2) = 8 + 8 - 10 - 6 = 0$. So $x-2$ is also a factor.',
+              explanation: 'Long division: $(x + 1)(x + 3) = x^2 + 4x + 3$, so the remainder is $-1 - 3 = -4$ and the equivalent form is $x + 3 - \\frac{4}{x+1}$. Check: $(x+1)(x+3) - 4 = x^2 + 4x - 1$. A remainder of $+2$ or $-1$ comes from mishandling the constant, and a quotient of $x + 5$ divides as if by $x - 1$.',
             },
             {
               question: 'When $x^3 - 2x + 5$ is divided by $x^2 + 1$, what are the quotient and remainder?',
@@ -827,7 +629,7 @@ You can now (1) divide polynomials long-hand and synthetically, (2) apply the Re
         },
       },
       {
-        id: 'pdr7-synthesis-drill',
+        id: 'pdr5-synthesis-drill',
         type: 'input-boxes' as const,
         content: `**Synthesis Drill** 🧮
 
@@ -846,7 +648,7 @@ $p(x) = x^3 - 6x^2 + 11x - 6$.
         },
       },
       {
-        id: 'pdr7-exit-quiz',
+        id: 'pdr5-exit-quiz',
         type: 'multiple-choice' as const,
         content: `**Exit Quiz** ✅
 
@@ -854,10 +656,10 @@ Answer all three to finish the lesson.`,
         exercise: {
           questions: [
             {
-              question: 'By the Remainder Theorem, the remainder when $p(x)$ is divided by $x + 4$ equals:',
-              options: ['$p(-4)$', '$p(4)$', '$p(0)$', '$\\frac{p(4)}{4}$'],
+              question: 'Long division gives $f(x) = \\dfrac{2x^2 + x - 5}{x - 1} = 2x + 3 - \\dfrac{2}{x - 1}$. Which statement is true?',
+              options: ['$\\lim_{x\\to\\infty}\\left[f(x) - (2x+3)\\right] = 0$', '$\\lim_{x\\to\\infty}\\left[f(x) - (2x+1)\\right] = 0$', '$\\lim_{x\\to\\infty}\\left[f(x) - 2x\\right] = 0$', '$\\lim_{x\\to\\infty}\\left[f(x) - (2x+3)\\right] = -2$'],
               correctAnswer: 0,
-              explanation: 'The remainder on division by $x - c$ is $p(c)$. Since $x + 4 = x - (-4)$, we have $c = -4$, so the remainder is $p(-4)$.',
+              explanation: 'The quotient $2x + 3$ is the slant asymptote: $f(x) - (2x + 3) = -\\frac{2}{x - 1} \\to 0$ as $x \\to \\infty$. Check the division: $(x - 1)(2x + 3) = 2x^2 + x - 3$, and $-2$ more gives $2x^2 + x - 5$. The line $2x + 1$ copies the numerator coefficients, $2x$ keeps only the leading ratio, and $-2$ is the remainder, not the limiting gap.',
             },
             {
               question: 'For $p(x) = x^3 - 2x^2 - 5x + 6$, which factor is confirmed by evaluating $p$?',

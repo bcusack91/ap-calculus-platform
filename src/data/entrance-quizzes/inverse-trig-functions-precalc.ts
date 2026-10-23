@@ -86,27 +86,27 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Compositions of Trig & Inverse Trig',
   },
 
-  // Part 5 — Inverse Trig with Right Triangles
+  // Part 5 — Solving Equations with Inverse Trig Functions
   {
     id: 'it-ent-5a',
-    question: 'For $-4 < x < 4$, which algebraic expression equals $\\cos\\left(\\arcsin\\frac{x}{4}\\right)$?',
-    options: ['$\\frac{\\sqrt{16 - x^2}}{4}$', '$\\frac{\\sqrt{16 + x^2}}{4}$', '$\\frac{4}{\\sqrt{16 - x^2}}$', '$\\frac{x}{\\sqrt{16 - x^2}}$'],
+    question: 'A calculator in radian mode gives $\\cos^{-1}(-0.4) \\approx 1.98$. To two decimal places, what are the solutions of $\\cos\\theta = -0.4$ with $0 \\le \\theta < 2\\pi$?',
+    options: ['$1.98$ and $4.30$', '$1.98$ and $5.12$', '$1.16$ and $1.98$', '$1.98$ only'],
     correctIndex: 0,
-    explanation: 'Let $\\theta = \\arcsin\\frac{x}{4}$: a right triangle with opposite side $x$ and hypotenuse $4$ has adjacent side $\\sqrt{16 - x^2}$, so $\\cos\\theta = \\frac{\\sqrt{16 - x^2}}{4}$ (positive, since $\\theta$ is in $\\left(-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right)$). The expression $\\frac{x}{\\sqrt{16 - x^2}}$ is $\\tan\\theta$.',
+    explanation: 'Arccosine returns the Quadrant II solution $1.98$; cosine is also negative in Quadrant III, at the reflection $2\\pi - 1.98 \\approx 4.30$. Adding $\\pi$ gives $5.12$, which is in Quadrant IV where cosine is positive, and $\\pi - 1.98 \\approx 1.16$ has cosine $+0.4$.',
     partNumber: 5,
-    partTitle: 'Inverse Trig with Right Triangles',
+    partTitle: 'Solving Equations with Inverse Trig Functions',
   },
   {
     id: 'it-ent-5b',
-    question: 'A wheelchair ramp is $12$ m long and rises $1$ m from the ground to the top. Using a calculator in radian mode, what angle does the ramp make with the ground, to the nearest hundredth of a radian?',
-    options: ['$4.78$', '$1.49$', '$0.08$', '$\\frac{\\pi}{12}$'],
-    correctIndex: 2,
-    explanation: 'The ramp is the hypotenuse and the rise is opposite the angle, so $\\theta = \\arcsin\\frac{1}{12} \\approx 0.08$ radian. The value $4.78$ is the same angle in degrees, and $1.49$ is the angle at the top of the ramp.',
+    question: 'Which expression is the solution of $\\tan\\theta = 5$ that lies in the interval $\\left(\\pi, \\frac{3\\pi}{2}\\right)$?',
+    options: ['$\\arctan 5 + \\pi$', '$\\arctan 5$', '$\\pi - \\arctan 5$', '$\\arctan 5 + 2\\pi$'],
+    correctIndex: 0,
+    explanation: '$\\arctan 5 \\approx 1.37$ is the Quadrant I solution. Tangent has period $\\pi$, so $\\arctan 5 + \\pi \\approx 4.51$ is also a solution, and it lies in Quadrant III, between $\\pi$ and $\\frac{3\\pi}{2}$. $\\pi - \\arctan 5$ is in Quadrant II, where tangent is negative, and $\\arctan 5 + 2\\pi$ is past $2\\pi$.',
     partNumber: 5,
-    partTitle: 'Inverse Trig with Right Triangles',
+    partTitle: 'Solving Equations with Inverse Trig Functions',
   },
 
-  // Part 6 — Applications of Inverse Trig
+  // Part 6 — Inverse Trig in Periodic Models
   {
     id: 'it-ent-6a',
     question: 'Solve $\\arccos(2x - 1) = \\frac{2\\pi}{3}$.',
@@ -114,25 +114,25 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'Apply cosine to both sides: $2x - 1 = \\cos\\frac{2\\pi}{3} = -\\frac{1}{2}$, so $2x = \\frac{1}{2}$ and $x = \\frac{1}{4}$. Setting $2x - 1$ equal to the angle itself gives $\\frac{2\\pi+3}{6}$.',
     partNumber: 6,
-    partTitle: 'Applications of Inverse Trig',
+    partTitle: 'Inverse Trig in Periodic Models',
   },
   {
     id: 'it-ent-6b',
-    question: 'From the top of a $60$ m cliff, an observer sees a boat $150$ m from the base of the cliff. Using a calculator in radian mode, what is the angle of depression to the boat, to the nearest hundredth of a radian?',
-    options: ['$1.19$', '$0.41$', '$21.80$', '$0.38$'],
-    correctIndex: 3,
-    explanation: 'The angle of depression equals the angle of elevation from the boat, so $\\theta = \\arctan\\frac{60}{150} \\approx 0.38$. Using $\\arctan\\frac{150}{60}$ gives $1.19$, the angle measured from the vertical, and $21.80$ is the answer in degrees.',
+    question: 'The depth of water at a pier is $D(t) = 3\\cos\\left(\\frac{\\pi}{6}t\\right) + 7$ feet, $t$ hours after midnight, for $0 \\le t < 12$. Using a calculator in radian mode, at which times is the depth $5$ feet, to two decimal places?',
+    options: ['$t \\approx 4.39$ and $7.61$', '$t \\approx 4.39$ only', '$t \\approx 4.39$ and $10.39$', '$t \\approx 1.61$ and $4.39$'],
+    correctIndex: 0,
+    explanation: 'Isolate: $\\cos\\left(\\frac{\\pi}{6}t\\right) = -\\frac{2}{3}$. The inner angle is $\\arccos\\left(-\\frac{2}{3}\\right) \\approx 2.30$ or its reflection $2\\pi - 2.30 \\approx 3.98$; multiplying by $\\frac{6}{\\pi}$ gives $t \\approx 4.39$ and $t \\approx 7.61$. Stopping at one value misses the second time, adding half a period ($6$ hours) lands where the cosine is $+\\frac{2}{3}$, and $\\pi - 2.30$ is the sine pattern.',
     partNumber: 6,
-    partTitle: 'Applications of Inverse Trig',
+    partTitle: 'Inverse Trig in Periodic Models',
   },
 
   // Part 7 — Full Synthesis
   {
     id: 'it-ent-7a',
-    question: 'What is the exact value of $\\cos\\left(\\arcsin\\frac{3}{5} + \\arccos\\frac{5}{13}\\right)$?',
-    options: ['$-\\frac{16}{65}$', '$\\frac{56}{65}$', '$\\frac{16}{65}$', '$\\frac{63}{65}$'],
+    question: 'For which values of $x$ is $\\arcsin(\\sin x) = x$?',
+    options: ['$-\\frac{\\pi}{2} \\le x \\le \\frac{\\pi}{2}$', 'All real $x$', '$0 \\le x \\le \\pi$', '$-1 \\le x \\le 1$'],
     correctIndex: 0,
-    explanation: 'Let $A = \\arcsin\\frac{3}{5}$ and $B = \\arccos\\frac{5}{13}$, both in Quadrant I, so $\\cos A = \\frac{4}{5}$ and $\\sin B = \\frac{12}{13}$. Then $\\cos(A + B) = \\frac{4}{5} \\cdot \\frac{5}{13} - \\frac{3}{5} \\cdot \\frac{12}{13} = -\\frac{16}{65}$; $\\frac{56}{65}$ is $\\cos(A - B)$.',
+    explanation: 'Arcsine undoes sine only on the interval sine was restricted to, $\\left[-\\frac{\\pi}{2}, \\frac{\\pi}{2}\\right]$, which is also the range of arcsine. For any other $x$ the output is a different angle with the same sine (for example $\\arcsin(\\sin\\pi) = 0$). The interval $[0, \\pi]$ belongs to arccosine, and $[-1, 1]$ is the domain of arcsine, not a set of angles.',
     partNumber: 7,
     partTitle: 'Inverse Trig — Full Synthesis',
   },
@@ -157,8 +157,8 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 2, partTitle: 'Graphs of Inverse Trig Functions' },
     { partNumber: 3, partTitle: 'Evaluating Inverse Trig — Exact Values' },
     { partNumber: 4, partTitle: 'Compositions of Trig & Inverse Trig' },
-    { partNumber: 5, partTitle: 'Inverse Trig with Right Triangles' },
-    { partNumber: 6, partTitle: 'Applications of Inverse Trig' },
+    { partNumber: 5, partTitle: 'Solving Equations with Inverse Trig Functions' },
+    { partNumber: 6, partTitle: 'Inverse Trig in Periodic Models' },
     { partNumber: 7, partTitle: 'Inverse Trig — Full Synthesis' },
   ]
 }

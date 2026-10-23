@@ -77,9 +77,13 @@ $\\arctan(100)$ IS defined — tangent can take any real value, so arctan accept
 
 ### Example 4: Answers Are in Radians
 
-$\\arcsin(\\frac{1}{2}) = \\frac{\\pi}{6}$. If you first think "$30°$", convert with $30 \\cdot \\frac{\\pi}{180} = \\frac{\\pi}{6}$ before you answer: the AP exam (and a calculator in radian mode) gives every angle in radians.
+$\\arcsin(\\frac{1}{2}) = \\frac{\\pi}{6}$. If you first think "$30^\\circ$", convert with $30 \\cdot \\frac{\\pi}{180} = \\frac{\\pi}{6}$ before you answer: the AP exam (and a calculator in radian mode) gives every angle in radians.
 
-### Example 5: Tricky Negative Values
+### Example 5: Estimating a non-special value
+
+$\\arcsin(0.9)$ is not a special value, but you can place it: $\\sin\\frac{\\pi}{3} \\approx 0.866 < 0.9 < 1 = \\sin\\frac{\\pi}{2}$, and $\\arcsin$ is increasing, so $\\frac{\\pi}{3} < \\arcsin(0.9) < \\frac{\\pi}{2}$. (A calculator gives $\\approx 1.120$.)
+
+### Example 6: Tricky Negative Values
 
 $\\arccos(-\\frac{\\sqrt{3}}{2})$:
 - We know $\\cos \\frac{\\pi}{6} = \\frac{\\sqrt{3}}{2}$
@@ -145,7 +149,7 @@ $\\arccos(-\\frac{\\sqrt{3}}{2})$:
       content: `
 **Compute Exact Values** 🧮
 
-Write each answer as a multiple of $\\pi$ and enter the **coefficient** (type \`2/3\` for $\\frac{2\\pi}{3}$).
+Write each answer as a multiple of $\\pi$ and enter the **coefficient** (type \`5/6\` for $\\frac{5\\pi}{6}$).
 
 **1)** $\\arcsin(-1) = \\,?\\cdot\\pi$ (e.g., $\\arcsin(1) = \\frac{\\pi}{2}$ since $\\sin \\frac{\\pi}{2} = 1$)
 
@@ -203,15 +207,15 @@ Write each answer as a multiple of $\\pi$ and enter the **coefficient** (type \`
       exercise: {
         questions: [
           {
-            question: '$\\arcsin\\!\\left(-\\frac{\\sqrt{3}}{2}\\right) + \\arccos\\!\\left(-\\frac{\\sqrt{3}}{2}\\right)$ equals:',
+            question: 'Without a calculator, between which two values does $\\arccos(0.3)$ lie?',
             options: [
-              '$0$',
-              '$\\pi$',
-              '$\\frac{\\pi}{2}$',
-              '$-\\frac{\\pi}{3}$'
+              '$0$ and $\\frac{\\pi}{6}$',
+              '$\\frac{\\pi}{6}$ and $\\frac{\\pi}{3}$',
+              '$\\frac{\\pi}{3}$ and $\\frac{\\pi}{2}$',
+              '$\\frac{\\pi}{2}$ and $\\pi$'
             ],
             correctAnswer: 2,
-            explanation: 'By the complementary identity: $\\arcsin x + \\arccos x = \\frac{\\pi}{2}$ for ANY $x \\in [-1,1]$, including $x = -\\frac{\\sqrt{3}}{2}$.'
+            explanation: '$\\cos\\frac{\\pi}{3} = 0.5 > 0.3 > 0 = \\cos\\frac{\\pi}{2}$, and $\\arccos$ is decreasing, so the angle with cosine $0.3$ is between $\\frac{\\pi}{3}$ and $\\frac{\\pi}{2}$ (a calculator gives $\\approx 1.266$). Angles below $\\frac{\\pi}{3}$ have cosine above $0.5$, and angles past $\\frac{\\pi}{2}$ have negative cosine.'
           },
           {
             question: 'How many of these are defined? $\\arcsin(-0.5)$, $\\arccos(1)$, $\\arctan(-99)$, $\\arcsin(\\pi)$',

@@ -7,7 +7,7 @@ export const precalcLogarithmicPart3Data = {
       content: `
 # 📈 Logarithmic Functions — Transformations & Graphs
 
-**Part 3 of 7**
+**Part 3 of 7 — Logarithmic Functions — Transformations & Graphs**
 
 The general transformed logarithmic function:
 
@@ -17,10 +17,10 @@ $$\\boxed{g(x) = a \\cdot \\log_b(x - h) + k}$$
 
 | Parameter | Effect | Example |
 |:----------|:-------|:--------|
-| $a$ | Vertical stretch ($|a|>1$) / compression ($|a|<1$); reflection over $x$-axis if $a<0$ | $a = -2$: flips & stretches ×2 |
+| $a$ | Vertical dilation: stretch ($\\lvert a \\rvert > 1$) / compression ($\\lvert a \\rvert < 1$); reflection over $x$-axis if $a<0$ | $a = -2$: flips & stretches ×2 |
 | $h$ | Horizontal shift: right if $h>0$, left if $h<0$ | $h = 3$: shift right 3 |
 | $k$ | Vertical shift: up if $k>0$, down if $k<0$ | $k = -1$: shift down 1 |
-| $b$ | Base controls steepness: larger $b$ = less steep | $b = 10$ vs $b = 2$ |
+| $b$ | Base controls steepness: larger $b$ = less steep (for $x > 1$) | $b = 10$ vs $b = 2$ |
       `
     },
     {
@@ -49,6 +49,10 @@ $$\\boxed{g(x) = a \\cdot \\log_b(x - h) + k}$$
 | $x$-intercept | $(1, 0)$ — always |
 | Vertical asymptote | $x = 0$ |
 | Increasing/decreasing | Increasing if $b > 1$; decreasing if $0 < b < 1$ |
+| Concavity | Concave down for $b > 1$ (concave up for $0 < b < 1$); no extrema |
+| Limits ($b > 1$) | $\\lim_{x \\to 0^+} \\log_b x = -\\infty$ and $\\lim_{x \\to \\infty} \\log_b x = \\infty$ |
+
+A logarithmic function grows without bound but ever more slowly — it never levels off. Multiplying by $a < 0$ reflects the graph, so $y = -\\log_2 x$ is decreasing and concave up.
       `
     },
     {

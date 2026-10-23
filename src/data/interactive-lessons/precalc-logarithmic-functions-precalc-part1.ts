@@ -7,7 +7,7 @@ export const precalcLogarithmicPart1Data = {
       content: `
 # 📖 Logarithmic Functions — Definition & Inverse Relation
 
-**Part 1 of 7**
+**Part 1 of 7 — Logarithmic Functions — Definition & Inverse Relation**
 
 A logarithm answers: **"What exponent do I need?"**
 
@@ -64,6 +64,10 @@ The graph of $y = \\log_b x$ is the **reflection** of $y = b^x$ over the line $y
 | Asymptote | $y = 0$ (horizontal) | $x = 0$ (vertical) |
 | Passes through | $(0, 1)$ | $(1, 0)$ |
 | Another point | $(1, b)$ | $(b, 1)$ |
+| Concavity | Concave up | Concave down; no extrema |
+| Limits | $\\lim_{x \\to -\\infty} b^x = 0$, $\\lim_{x \\to \\infty} b^x = \\infty$ | $\\lim_{x \\to 0^+} \\log_b x = -\\infty$, $\\lim_{x \\to \\infty} \\log_b x = \\infty$ |
+
+A logarithmic function grows without bound but ever more slowly — it never levels off. (Every row above is for $b > 1$; for $0 < b < 1$ both functions are decreasing and the limits swap signs.)
       `
     },
     {

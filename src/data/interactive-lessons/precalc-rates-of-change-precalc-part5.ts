@@ -94,27 +94,6 @@ At $t = 1$ second the ball is rising at about $32$ feet per second.
       }
     },
     {
-      id: 'p5-distance',
-      type: 'text' as const,
-      content: `
-## Displacement vs. Total Distance
-
-**Displacement** on $[a, b]$ is the change in position, $s(b) - s(a)$. It can be positive, negative, or zero.
-
-**Total distance** adds up every stretch of movement regardless of direction.
-
-### Example
-
-A particle starts at $s(0) = 2$, moves right to $s(1) = 7$, then left to $s(3) = 1$.
-
-- Displacement: $s(3) - s(0) = 1 - 2 = -1$ (net $1$ unit left)
-- Total distance: $5 + 6 = 11$ units
-- Average velocity on $[0, 3]$: $\\frac{-1}{3} \\approx -0.33$ units per second
-
-Average velocity uses displacement, so it can be zero even when the object moved a lot.
-      `
-    },
-    {
       id: 'p5-input',
       type: 'input-boxes' as const,
       content: `
@@ -149,13 +128,13 @@ For $s(t) = -16t^2 + 48t$ feet, $t$ in seconds:
             correctAnswer: 1
           },
           {
-            label: 'Displacement can be:',
-            options: ['Positive, or zero, but never negative', 'Positive or negative, never zero', 'Positive, negative, or zero', 'Negative or zero only'],
-            correctAnswer: 2
+            label: 'A rate of change in context must always be reported with',
+            options: ['its units and the interval or point', 'a graph', 'a sign chart', 'its square'],
+            correctAnswer: 0
           },
           {
-            label: 'An object moves right, then left the same distance:',
-            options: ['Displacement $0$, distance $> 0$', 'Displacement $0$, distance $0$', 'Displacement $> 0$, distance $> 0$', 'Displacement $> 0$, distance $0$'],
+            label: 'For $V(t)$ in liters and $t$ in minutes, an average rate of change of $-15$ on $[2, 6]$ means the volume changed by',
+            options: ['$-60$ liters in total', '$-15$ liters in total', '$-15$ liters every minute without fail', '$-3.75$ liters in total'],
             correctAnswer: 0
           },
           {
@@ -164,11 +143,11 @@ For $s(t) = -16t^2 + 48t$ feet, $t$ in seconds:
             correctAnswer: 1
           }
         ],
-        correctAnswers: ['Position', 'Positive, negative, or zero', 'Displacement $0$, distance $> 0$', '$-32$ each second'],
+        correctAnswers: ['Position', 'its units and the interval or point', '$-60$ liters in total', '$-32$ each second'],
         hint1: 'Velocity measures how position changes.',
-        hint2: 'You can end ahead of, behind, or exactly at your start.',
+        hint2: 'Average rate times the length of the interval gives the total change.',
         hint3: 'Subtract consecutive average velocities.',
-        explanation: 'Average velocity is the average rate of change of position. Displacement can have any sign. A round trip has zero displacement but positive distance. $16 - 48 = -32$, and the change is the same every second because the position is quadratic.'
+        explanation: 'Average velocity is the average rate of change of position. A rate needs units and the interval or point it describes. $-15$ liters per minute for $4$ minutes is a total change of $-60$ liters, though not necessarily $-15$ in each minute. $16 - 48 = -32$, and the change is the same every second because the position is quadratic.'
       }
     },
     {

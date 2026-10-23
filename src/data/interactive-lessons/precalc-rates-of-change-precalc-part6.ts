@@ -74,6 +74,11 @@ An **included endpoint** of a polynomial on a restricted domain also gives a loc
     {
       id: 'p6-table',
       type: 'text' as const,
+      figure: {
+        svg: '<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g stroke="currentColor" stroke-width="1.5"><line x1="30" y1="190" x2="312" y2="190"/><line x1="40" y1="205" x2="40" y2="10"/></g><text x="306" y="206" font-size="12" fill="currentColor">x</text><text x="46" y="16" font-size="12" fill="currentColor">y</text><text x="92" y="206" font-size="11" fill="currentColor" text-anchor="middle">1</text><text x="144" y="206" font-size="11" fill="currentColor" text-anchor="middle">2</text><text x="196" y="206" font-size="11" fill="currentColor" text-anchor="middle">3</text><text x="248" y="206" font-size="11" fill="currentColor" text-anchor="middle">4</text><text x="300" y="206" font-size="11" fill="currentColor" text-anchor="middle">5</text><g class="fig-accent"><path d="M 40.0 182.0 L 53.0 166.9 L 66.0 157.0 L 79.0 151.6 L 92.0 150.0 L 105.0 151.4 L 118.0 155.0 L 131.0 160.1 L 144.0 166.0 L 157.0 171.9 L 170.0 177.0 L 183.0 180.6 L 196.0 182.0 L 209.0 180.4 L 222.0 175.0 L 235.0 165.1 L 248.0 150.0 L 261.0 128.9 L 274.0 101.0 L 287.0 65.6 L 300.0 22.0" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="92" cy="150" r="4.5" fill="currentColor"/><circle cx="196" cy="182" r="4.5" fill="currentColor"/></g><g class="fig-accent-2"><circle cx="144" cy="166" r="4.5" fill="currentColor"/></g><text x="92" y="140" font-size="11" fill="currentColor" text-anchor="middle">local max (1, 5)</text><text x="196" y="198" font-size="11" fill="currentColor" text-anchor="middle">local min (3, 1)</text><text x="152" y="170" font-size="11" fill="currentColor">inflection (2, 3)</text></svg>',
+        alt: 'Graph of p(x) = x^3 - 6x^2 + 9x + 1 for x from 0 to 5. It rises to a local maximum at (1, 5), falls through the point of inflection (2, 3) to a local minimum at (3, 1), then rises steeply through (4, 5) toward (5, 21).',
+        caption: 'Figure 1. $p(x) = x^3 - 6x^2 + 9x + 1$: the rates switch sign at the extrema and switch from decreasing to increasing at the point of inflection.',
+      },
       content: `
 ## Reading Extrema and Inflection from a Table
 

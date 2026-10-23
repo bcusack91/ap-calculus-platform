@@ -67,7 +67,7 @@ A sequence accepts only whole numbers. Its matching function accepts every real 
       content: `
 ## 🛠️ Building a Function from Two Points
 
-Two distinct values determine an arithmetic sequence, a geometric sequence, a linear function, or an exponential function.
+Two values at different inputs always determine a linear function (or an arithmetic sequence). They determine an exponential function $f(x) = ab^x$ when both outputs are nonzero with the same sign. For a geometric sequence, an even number of steps between the known terms leaves $r = \\pm\\sqrt[\\,n]{\\text{ratio}}$, so you need extra information such as "positive terms" to pin down $r$.
 
 ### Linear Through $(2, 11)$ and $(6, 31)$
 
@@ -87,7 +87,7 @@ Two distinct values determine an arithmetic sequence, a geometric sequence, a li
 |:--|:--|:--|:--|:--|
 | $f(x)$ | $8$ | $12$ | $18$ | $27$ |
 
-The inputs are equally spaced. The differences $4, 6, 9$ are not constant, but every ratio is $1.5$, so $f$ is **exponential**: its outputs change proportionally. (A ratio of $0$ or $1$ is not allowed for an exponential function.)
+The inputs are equally spaced. The differences $4, 6, 9$ are not constant, but every ratio is $1.5$, so $f$ is **exponential**: its outputs change proportionally. (An exponential base must be positive and not equal to $1$.)
 
 > 🔑 Linear functions are based on **addition**; exponential functions are based on **multiplication**.
       `
@@ -137,7 +137,7 @@ The inputs are equally spaced. The differences $4, 6, 9$ are not constant, but e
             correctAnswer: 0
           },
           {
-            label: 'How many distinct values determine an exponential function $ab^x$?',
+            label: 'How many points (with positive outputs) are needed to determine an exponential function $ab^x$?',
             options: ['Only one', 'Two', 'Three', 'Four'],
             correctAnswer: 1
           }
@@ -146,7 +146,7 @@ The inputs are equally spaced. The differences $4, 6, 9$ are not constant, but e
         hint1: 'The rules match; ask which inputs each one accepts.',
         hint2: 'Initial value plus a constant rate, again and again.',
         hint3: 'The point form starts from a value you already know.',
-        explanation: 'The sequence takes whole-number inputs while the function takes all real numbers. Linear functions add a constant rate. $(x_i, y_i)$ is a known point. Two distinct values fix both $a$ and $b$.'
+        explanation: 'The sequence takes whole-number inputs while the function takes all real numbers. Linear functions add a constant rate. $(x_i, y_i)$ is a known point. Two points with positive outputs fix both $a$ and $b$.'
       }
     },
     {
@@ -164,7 +164,7 @@ The inputs are equally spaced. The differences $4, 6, 9$ are not constant, but e
             explanation: 'The outputs rise by $4$ every $2$ units of input, a constant rate of $2$ per unit, so the model is linear: $y = 5 + 2x$. Using $4$ as the slope ignores that the inputs step by $2$.'
           },
           {
-            question: 'For $f(x) = 400(0.5)^x$, what is $f(1.5)$ to the nearest tenth?',
+            question: 'Using a calculator, for $f(x) = 400(0.5)^x$, what is $f(1.5)$ to the nearest tenth?',
             options: ['$141.4$', '$150$', '$100$', '$200$'],
             correctAnswer: 0,
             explanation: '$400(0.5)^{1.5} \\approx 400(0.35355) \\approx 141.4$. The value $150$ is halfway between $f(1) = 200$ and $f(2) = 100$, which treats the decay as linear.'

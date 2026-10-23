@@ -7,9 +7,9 @@ export const precalcLogarithmicPart5Data = {
       content: `
 # 🔀 Logarithmic Functions — Change of Base & Calculator Fluency
 
-**Part 5 of 7**
+**Part 5 of 7 — Logarithmic Functions — Change of Base & Calculator Fluency**
 
-Calculators only have **LOG** ($\\log_{10}$) and **LN** ($\\ln$) keys. To evaluate any other base, use the **Change of Base Formula**:
+Most calculators have only **LOG** ($\\log_{10}$) and **LN** ($\\ln$) keys (the TI-84 CE also has a \`logBASE\` template). To evaluate any other base, use the **Change of Base Formula**:
 
 $$\\boxed{\\log_b x = \\frac{\\log x}{\\log b} = \\frac{\\ln x}{\\ln b}}$$
 

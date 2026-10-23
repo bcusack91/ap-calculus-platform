@@ -103,7 +103,7 @@ Different polynomials require different factoring strategies:
 
 Combine them: a common factor often leaves a quadratic. For example, $2x^3 - 8x = 2x(x^2 - 4) = 2x(x - 2)(x + 2)$.
 
-> 📌 **Exam scope:** without technology, AP Precalculus factoring is limited to common factors and the rules for quadratics. For higher-degree polynomials, the other zeros are given to you or read from a graph or table.
+> 📌 **Exam scope:** on the exam, higher-degree polynomials are factored by hand only when a zero or factor is given or can be read from a graph or table; the by-hand tools are common factors and the quadratic techniques above.
 
 
 ---

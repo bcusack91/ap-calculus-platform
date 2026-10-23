@@ -47,10 +47,10 @@ const questions: EntranceQuizQuestion[] = [
   // Part 3 — Logarithmic Functions — Transformations & Graphs
   {
     id: 'lgp-ent-3a',
-    question: 'Which describes $g(x) = -\\log_2(x + 3) + 1$?',
-    options: ['Domain $x > 3$; decreasing', 'Domain $x > -3$; decreasing', 'Domain $x > -3$; increasing', 'Domain $x > 3$; increasing'],
-    correctIndex: 1,
-    explanation: 'The argument $x + 3$ must be positive, so $x > -3$ (vertical asymptote $x = -3$). The negative coefficient reflects the increasing graph of $\\log_2 x$ across the $x$-axis, so $g$ decreases.',
+    question: 'Which describes the end behavior of $y = \\log_3 x$?',
+    options: ['As $x \\to 0^+$, $y \\to -\\infty$; as $x \\to \\infty$, $y \\to \\infty$', 'As $x \\to 0^+$, $y \\to -\\infty$; as $x \\to \\infty$, $y \\to 3$', 'As $x \\to 0^+$, $y \\to 0$; as $x \\to \\infty$, $y \\to \\infty$', 'As $x \\to 0^+$, $y \\to \\infty$; as $x \\to \\infty$, $y \\to 0$'],
+    correctIndex: 0,
+    explanation: 'The graph falls without bound next to its vertical asymptote $x = 0$ and rises without bound, though ever more slowly, as $x$ grows. It never levels off or approaches a horizontal asymptote.',
     partNumber: 3,
     partTitle: 'Logarithmic Functions — Transformations & Graphs',
   },
@@ -101,7 +101,7 @@ const questions: EntranceQuizQuestion[] = [
     partNumber: 5,
     partTitle: 'Logarithmic Functions — Change of Base & Calculator Fluency',
   },
-  // Part 6 — Logarithmic Functions — Modeling with Logs
+  // Part 6 — Logarithmic Functions — Modeling with Logarithms
   {
     id: 'lgp-ent-6a',
     question: 'Solution A has pH $3.2$ and solution B has pH $5.2$, where $\\text{pH} = -\\log[H^+]$. How do their hydrogen-ion concentrations compare?',
@@ -109,7 +109,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'A pH difference of 2 means $[H^+]$ differs by a factor of $10^2 = 100$, and the lower pH has the higher concentration, so A has 100 times as much. The factor 2 treats the log scale as linear.',
     partNumber: 6,
-    partTitle: 'Logarithmic Functions — Modeling with Logs',
+    partTitle: 'Logarithmic Functions — Modeling with Logarithms',
   },
   {
     id: 'lgp-ent-6b',
@@ -118,7 +118,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 1,
     explanation: 'The new level is $10\\log\\left(\\tfrac{1000I}{I_0}\\right) = 10\\left(3 + \\log\\tfrac{I}{I_0}\\right) = L + 30$. The value $3$ dB forgets the factor of 10 in front of the logarithm.',
     partNumber: 6,
-    partTitle: 'Logarithmic Functions — Modeling with Logs',
+    partTitle: 'Logarithmic Functions — Modeling with Logarithms',
   },
   // Part 7 — Logarithmic Functions — Full Synthesis
   {
@@ -152,7 +152,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 3, partTitle: 'Logarithmic Functions — Transformations & Graphs' },
     { partNumber: 4, partTitle: 'Logarithmic Functions — Solving Log Equations' },
     { partNumber: 5, partTitle: 'Logarithmic Functions — Change of Base & Calculator Fluency' },
-    { partNumber: 6, partTitle: 'Logarithmic Functions — Modeling with Logs' },
+    { partNumber: 6, partTitle: 'Logarithmic Functions — Modeling with Logarithms' },
     { partNumber: 7, partTitle: 'Logarithmic Functions — Full Synthesis' },
   ]
 }

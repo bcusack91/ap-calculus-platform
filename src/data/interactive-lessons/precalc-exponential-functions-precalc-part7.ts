@@ -17,8 +17,8 @@ This final part combines every exponential skill into multi-step problems — ju
 |:---------------|:-------------------|
 | Core Form (1) | $f(x) = ab^x$, growth if $b > 1$, decay if $0 < b < 1$ |
 | Transformations (2) | $g(x) = a \\cdot b^{x-h} + k$, HA at $y = k$ |
-| Compound Interest (3) | $A = P(1 + r/n)^{nt}$ or $A = Pe^{rt}$ |
-| Half-Life (4) | $A = A_0(\\frac{1}{2})^{t/T_{1/2}}$, $T_{1/2} = \\frac{\\ln 2}{|k|}$ |
+| Changing the time unit (3) | $b^{mn} = (b^m)^n$; $e^{kt} = (e^k)^t$ |
+| Half-Life (4) | $A = A_0(\\frac{1}{2})^{t/T_{1/2}}$, $T_{1/2} = \\frac{\\ln 2}{\\lvert k \\rvert}$ |
 | Solving with Logs (5) | Isolate → $\\ln$ both sides → solve |
 | Data Fitting (6) | Ratio test, two-point method, log linearization |
       `
@@ -85,7 +85,9 @@ Set equal: $10000(1.05)^t = 8000e^{0.06t}$
 
 $\\frac{10000}{8000} = \\frac{e^{0.06t}}{(1.05)^t} = \\left(\\frac{e^{0.06}}{1.05}\\right)^t$
 
-$1.25 = (1.01184)^t \\implies t = \\frac{\\ln 1.25}{\\ln 1.01184} \\approx \\frac{0.2231}{0.01177} \\approx 18.9$ years
+$1.25 = (1.01127)^t \\implies t = \\frac{\\ln 1.25}{\\ln 1.01127} \\approx \\frac{0.2231}{0.01121} \\approx 19.9$ years
+
+**Check:** $10000(1.05)^{19.9} \\approx 26{,}400$ and $8000e^{0.06 \\cdot 19.9} = 8000e^{1.194} \\approx 26{,}400$ ✔
       `
     },
     {
@@ -119,15 +121,15 @@ $1.25 = (1.01184)^t \\implies t = \\frac{\\ln 1.25}{\\ln 1.01184} \\approx \\fra
             explanation: 'As $x \\to \\infty$, $e^{-0.1x} \\to 0$, so $g(x) \\to 20$. HA at $y = 20$. $g(0) = 500(1) + 20 = 520$.'
           },
           {
-            question: '$\\$5{,}000$ invested at $4\\%$ compounded quarterly. After $2$ years, the balance is:',
+            question: 'A quantity of $5{,}000$ grows $1\\%$ every quarter ($3$ months). After $2$ years, the amount is:',
             options: [
-              '$5000(1.04)^2 \\approx \\$5{,}408$',
-              '$5000(1.01)^8 \\approx \\$5{,}414$',
-              '$5000(1.04)^8 \\approx \\$6{,}843$',
-              '$5000e^{0.08} \\approx \\$5{,}416$'
+              '$5000(1.04)^2 \\approx 5{,}408$',
+              '$5000(1.01)^8 \\approx 5{,}414$',
+              '$5000(1.04)^8 \\approx 6{,}843$',
+              '$5000e^{0.08} \\approx 5{,}416$'
             ],
             correctAnswer: 1,
-            explanation: 'Quarterly: $n = 4$, rate per period $= 0.04/4 = 0.01$, total periods $= 4 \\times 2 = 8$. $A = 5000(1.01)^8 \\approx 5414$.'
+            explanation: 'Two years contain $8$ quarters, and each quarter multiplies by $1.01$: $A = 5000(1.01)^8 \\approx 5414$. Using $1.04$ per year for $2$ years ignores the compounding within each year ($1.01^4 \\approx 1.0406$, not $1.04$), and $1.04$ per quarter is four times the stated rate.'
           }
         ]
       }
@@ -150,7 +152,7 @@ $1.25 = (1.01184)^t \\implies t = \\frac{\\ln 1.25}{\\ln 1.01184} \\approx \\fra
         hint1: '$18/6 = 3$ half-lives. $480 \\cdot (\\frac{1}{2})^3$.',
         hint2: 'Divide: $2^x = 32$. What power of $2$ is $32$?',
         hint3: '$\\frac{\\ln 2}{\\ln 1.08} = \\frac{0.693}{0.0770}$.',
-        explanation: '1) $3$ half-lives: $480 \\cdot \\frac{1}{8} = 60\\text{ g}$. 2) $2^x = 32 = 2^5$, so $x = 5$. 3) $0.693 / 0.0770 \\approx 9.0$ years (the Rule of 72 gives $72/8 = 9$ — same answer!).'
+        explanation: '1) $3$ half-lives: $480 \\cdot \\frac{1}{8} = 60\\text{ g}$. 2) $2^x = 32 = 2^5$, so $x = 5$. 3) $0.693 / 0.0770 \\approx 9.0$ years.'
       }
     },
     {
@@ -170,19 +172,19 @@ $1.25 = (1.01184)^t \\implies t = \\frac{\\ln 1.25}{\\ln 1.01184} \\approx \\fra
             options: ['differences', 'ratios', 'products', 'squares']
           },
           {
-            label: 'The Rule of 72 estimates doubling time as',
-            options: ['$72/r\\%$', '$r/72$', '$72 \\cdot r$', '$\\ln 2 / 72$']
+            label: '$4^{x} \\cdot 4^{2}$ written as a single power is',
+            options: ['$4^{x+2}$', '$16^{x}$', '$4^{2x}$', '$8^{x}$']
           },
           {
             label: 'The graph of $f(x) = 3 \\cdot 2^x - 4$ crosses the $x$-axis when $2^x =$',
             options: ['$3$', '$4/3$', '$4$', '$7$']
           }
         ],
-        correctAnswers: ['$P = P_0 \\cdot 2^{t/10}$', 'ratios', '$72/r\\%$', '$4/3$'],
+        correctAnswers: ['$P = P_0 \\cdot 2^{t/10}$', 'ratios', '$4^{x+2}$', '$4/3$'],
         hint1: 'Doubling = base $2$, period $10$ years.',
         hint2: 'Exponential data has constant multiplicative change.',
-        hint3: 'Rule of 72: divide $72$ by the percent rate.',
-        explanation: 'Doubling every $10$: use $2^{t/10}$. Constant ratios = exponential. Rule of 72: $72/r\\%$. Set $3 \\cdot 2^x - 4 = 0$: $2^x = 4/3$.'
+        hint3: 'Same base: add the exponents. $b^{x} \\cdot b^{k} = b^{x+k}$.',
+        explanation: 'Doubling every $10$: use $2^{t/10}$. Constant ratios = exponential. $4^x \\cdot 4^2 = 4^{x+2} = 16 \\cdot 4^x$ ($16^x$ would be $4^{2x}$). Set $3 \\cdot 2^x - 4 = 0$: $2^x = 4/3$.'
       }
     },
     {

@@ -7,7 +7,7 @@ export const precalcExponentialPart6Data = {
       content: `
 # 📊 Data Fitting & Exponential Regression
 
-**Part 6 of 7**
+**Part 6 of 7 — Data Fitting & Exponential Regression**
 
 How do you determine whether data is exponential — and if so, find the model $f(x) = ab^x$?
 
@@ -52,6 +52,12 @@ $a = \\frac{12}{3^2} = \\frac{12}{9} = \\frac{4}{3}$
 **Result:** $f(x) = \\frac{4}{3} \\cdot 3^x$
 
 **Verify:** $f(5) = \\frac{4}{3} \\cdot 243 = 324$ ✔
+
+### Method 2: Exponential Regression (calculator)
+
+When a data set has more than two points and the ratios are only *approximately* constant, use a graphing calculator's **exponential regression** (\`ExpReg\` on a TI-84). It returns the values $a$ and $b$ of the best-fitting model $y = ab^x$; you read them off and write the model. On the AP exam you are never asked to compute a regression by hand — only to use its output, interpret $a$ (initial value) and $b$ (growth factor), and make predictions.
+
+> 🔗 Checking whether the fitted model is *appropriate* (residual plots) and reading exponential data from a **semi-log plot** are covered in the lesson *Exponential and Logarithmic Data Modeling and Semi-log Plots*.
       `
     },
     {

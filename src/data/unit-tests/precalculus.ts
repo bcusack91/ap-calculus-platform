@@ -2,44 +2,52 @@ import { precalcQuestionBank } from '@/data/competitive-questions/precalc-bank'
 import type { CourseUnitTestConfig, UnitDef, UnitPoolQuestion } from '@/lib/unit-tests/engine'
 
 /**
- * Precalculus unit tests. The competitive bank carries 27 topics × 10 questions
- * tagged by `topicSlug`; UNIT_TOPICS groups them into the six units a standard
- * precalculus course is taught in, and the adapter stamps the `domain` the
- * unit-test engine filters on.
+ * Precalculus (non-AP surface) unit tests. The competitive bank carries ~10
+ * questions per bank topic tagged by `topicSlug`; UNIT_TOPICS groups them into
+ * the three AP Precalculus exam units (precalc-final PLAN.md, Oct 2026) and the
+ * adapter stamps the `domain` the unit-test engine filters on. The bank's Unit 4
+ * topics (vectors, matrices, parametric equations) and the Law of Sines/Cosines
+ * are not on the exam and are no longer served ("not on the exam = not in the
+ * program"). Each unit's `topicSlugs` are the canonical lesson slugs.
  */
 
 const UNIT_TOPICS: Record<string, string[]> = {
-  functions: [
-    'composite-functions', 'inverse-functions', 'transformations-of-functions',
-    'piecewise-functions', 'rates-of-change',
-  ],
   'polynomial-rational': [
-    'polynomial-functions-end-behavior', 'polynomial-zeros-multiplicity',
-    'polynomial-division', 'rational-functions-asymptotes',
-    'complex-numbers-fundamental-theorem',
+    'rates-of-change', 'transformations-of-functions', 'piecewise-functions',
+    'polynomial-functions-end-behavior', 'polynomial-zeros-multiplicity', 'polynomial-division',
+    'complex-numbers-fundamental-theorem', 'rational-functions-asymptotes',
   ],
-  'exponential-log': [
+  'exp-log': [
+    'sequences-and-series', 'arithmetic-geometric-sequences',
     'exponential-functions-growth-decay', 'exponential-models-applications',
+    'composite-functions', 'inverse-functions',
     'logarithmic-functions-properties', 'logarithmic-equations', 'natural-log-and-e',
   ],
-  trigonometry: [
+  'trig-polar': [
     'trigonometric-ratios-unit-circle', 'graphs-of-sine-and-cosine',
-    'inverse-trig-functions', 'trig-identities-pythagorean', 'law-of-sines-and-cosines',
+    'inverse-trig-functions', 'trig-identities-pythagorean', 'polar-coordinates-graphs',
   ],
-  'vectors-matrices-polar': [
-    'vectors-in-two-dimensions', 'matrices-and-determinants',
-    'systems-of-equations-matrices', 'parametric-equations-motion', 'polar-coordinates-graphs',
-  ],
-  sequences: ['sequences-and-series', 'arithmetic-geometric-sequences'],
 }
 
 export const PRECALCULUS_UNITS: UnitDef[] = [
-  { id: 'functions', unitNumber: 1, name: 'Unit 1: Functions & Transformations', shortName: 'Functions', description: 'Composition, inverses, transformations, piecewise functions, and rates of change.', topicSlugs: UNIT_TOPICS.functions, exam_weight: 'Core', color: 'from-fuchsia-500 to-purple-500', icon: '🔗' },
-  { id: 'polynomial-rational', unitNumber: 2, name: 'Unit 2: Polynomial & Rational Functions', shortName: 'Polynomial & Rational', description: 'End behavior, zeros and multiplicity, division, asymptotes, complex zeros.', topicSlugs: UNIT_TOPICS['polynomial-rational'], exam_weight: 'Core', color: 'from-purple-500 to-violet-500', icon: '📉' },
-  { id: 'exponential-log', unitNumber: 3, name: 'Unit 3: Exponential & Logarithmic Functions', shortName: 'Exponential & Log', description: 'Growth and decay, log properties, solving log equations, and e.', topicSlugs: UNIT_TOPICS['exponential-log'], exam_weight: 'Core', color: 'from-violet-500 to-indigo-500', icon: '📈' },
-  { id: 'trigonometry', unitNumber: 4, name: 'Unit 4: Trigonometry', shortName: 'Trigonometry', description: 'Unit circle, sine and cosine graphs, inverse trig, identities, and the laws of sines/cosines.', topicSlugs: UNIT_TOPICS.trigonometry, exam_weight: 'Core', color: 'from-indigo-500 to-blue-500', icon: '📐' },
-  { id: 'vectors-matrices-polar', unitNumber: 5, name: 'Unit 5: Vectors, Matrices, Parametric & Polar', shortName: 'Vectors & Matrices', description: 'Two-dimensional vectors, matrices and determinants, parametric motion, polar graphs.', topicSlugs: UNIT_TOPICS['vectors-matrices-polar'], exam_weight: 'Core', color: 'from-blue-500 to-cyan-500', icon: '🧭' },
-  { id: 'sequences', unitNumber: 6, name: 'Unit 6: Sequences & Series', shortName: 'Sequences', description: 'Arithmetic and geometric sequences, and series.', topicSlugs: UNIT_TOPICS.sequences, exam_weight: 'Core', color: 'from-cyan-500 to-teal-500', icon: '🔢' },
+  {
+    id: 'polynomial-rational', unitNumber: 1, name: 'Unit 1: Polynomial and Rational Functions', shortName: 'Polynomial & Rational',
+    description: 'Rates of change, transformations and piecewise models, polynomial zeros and end behavior, division, complex zeros, and rational asymptotes.',
+    topicSlugs: ['rates-of-change-precalc', 'polynomial-functions-precalc', 'fundamental-theorem-algebra', 'polynomial-division-remainder-theorem', 'rational-functions-precalc', 'transformations-precalc', 'function-modeling-precalc'],
+    exam_weight: '30–40%', color: 'from-fuchsia-500 to-purple-500', icon: '📉',
+  },
+  {
+    id: 'exp-log', unitNumber: 2, name: 'Unit 2: Exponential and Logarithmic Functions', shortName: 'Exponential & Log',
+    description: 'Sequences, exponential growth and decay, composition and inverses, logarithms, log equations, and e.',
+    topicSlugs: ['sequences-series-precalc', 'exponential-functions-precalc', 'function-composition-inverses-precalc', 'logarithmic-functions-precalc', 'exponential-logarithmic-modeling-precalc'],
+    exam_weight: '27–40%', color: 'from-violet-500 to-indigo-500', icon: '📈',
+  },
+  {
+    id: 'trig-polar', unitNumber: 3, name: 'Unit 3: Trigonometric and Polar Functions', shortName: 'Trig & Polar',
+    description: 'Unit circle, sine and cosine graphs, inverse trig, identities, and polar graphs.',
+    topicSlugs: ['the-unit-circle', 'trigonometric-functions-precalc', 'graphing-trig-functions', 'inverse-trig-functions-precalc', 'solving-trig-equations', 'trigonometric-identities-precalc', 'polar-coordinates-precalc'],
+    exam_weight: '30–35%', color: 'from-indigo-500 to-blue-500', icon: '📐',
+  },
 ]
 
 const DOMAIN_BY_SLUG = new Map<string, string>()

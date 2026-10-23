@@ -34,10 +34,11 @@ export const COURSE_INCLUDES: Record<string, CourseInclude> = {
   },
 }
 
-/** Display names of the courses in COURSE_INCLUDES (client labels need no DB read). */
+/** Display names of the fixed-layout courses (COURSE_UNIT_LAYOUT); client labels need no DB read. */
 export const INCLUDE_COURSE_NAMES: Record<string, string> = {
   'ap-calculus-ab': 'AP Calculus AB',
   'ap-calculus-bc': 'AP Calculus BC',
+  'ap-precalculus': 'AP Precalculus',
 }
 
 /** `slug` followed by every course it includes (`ap-calculus-bc` -> [bc, ab]). */
@@ -97,18 +98,21 @@ export function coursesTopicWhere(slugs: string[]): { OR: ReturnType<typeof cour
 }
 
 // ---------------------------------------------------------------------------
-// CED layout of the calculus courses (owner decisions D1-D3, Oct 2026).
+// CED layout of the fixed-layout courses: AP Calculus AB/BC (owner decisions
+// D1-D3, Oct 2026) and AP Precalculus (precalc-final PLAN.md, Oct 2026).
 // ---------------------------------------------------------------------------
 
-/** One Category in its canonical shape (the prisma/restructure-calc.ts target). */
-export interface CalcCategory {
+/** One Category in its canonical shape (the prisma/restructure-*.ts target). */
+export interface CourseCategory {
   slug: string
-  course: 'ap-calculus-ab' | 'ap-calculus-bc'
+  course: string
   order: number
   name: string
   /** Topic slugs in teaching (CED) order; Topic.order = index + 1. */
   topics: string[]
 }
+/** @deprecated name kept for the calculus callers; same shape as CourseCategory. */
+export type CalcCategory = CourseCategory
 
 /**
  * Every live calculus Category, in course order. Topic lists are in CED order.
@@ -265,6 +269,113 @@ export const RETIRED_CALC_CATEGORIES: Record<string, { course: string; redirect:
   'calcbc-power-taylor': { course: 'ap-calculus-bc', redirect: 'calcbc-sequences-series' },
 }
 
+// ---------------------------------------------------------------------------
+// AP Precalculus (precalc-final PLAN.md "Canonical layout", Oct 2026): the three
+// assessed CED units plus exam prep. Unit 4 (parameters, vectors, matrices) is
+// not on the exam and has no rows. Read by the hub, /categories, the competitive
+// topics route, the teacher lobby and prisma/restructure-precalc.ts.
+// ---------------------------------------------------------------------------
+
+export const PRECALC_CATEGORIES: CourseCategory[] = [
+  {
+    slug: 'precalc-polynomial-rational',
+    course: 'ap-precalculus',
+    order: 1,
+    name: 'Unit 1: Polynomial and Rational Functions',
+    topics: [
+      'rates-of-change-precalc', // 1.1-1.4
+      'polynomial-functions-precalc', // 1.5-1.6, 1.10
+      'fundamental-theorem-algebra', // 1.5 complex zeros
+      'polynomial-division-remainder-theorem', // 1.11
+      'rational-functions-precalc', // 1.7-1.9, 1.12
+      'transformations-precalc', // 1.12
+      'function-modeling-precalc', // 1.13-1.14 (NEW, Oct 2026; FRQ Q2)
+    ],
+  },
+  {
+    slug: 'precalc-exponential-logarithmic',
+    course: 'ap-precalculus',
+    order: 2,
+    name: 'Unit 2: Exponential and Logarithmic Functions',
+    topics: [
+      'sequences-series-precalc', // 2.1-2.2
+      'exponential-functions-precalc', // 2.3-2.5
+      'function-composition-inverses-precalc', // 2.7-2.8
+      'logarithmic-functions-precalc', // 2.9-2.13
+      'exponential-logarithmic-modeling-precalc', // 2.6, 2.14-2.15 (NEW, Oct 2026)
+    ],
+  },
+  {
+    slug: 'precalc-trig-functions',
+    course: 'ap-precalculus',
+    order: 3,
+    name: 'Unit 3: Trigonometric and Polar Functions',
+    topics: [
+      'the-unit-circle', // 3.2-3.3 recall + game (owner O6)
+      'trigonometric-functions-precalc', // 3.1-3.4, 3.8
+      'graphing-trig-functions', // 3.5-3.7 (FRQ Q3)
+      'inverse-trig-functions-precalc', // 3.9
+      'solving-trig-equations', // 3.10
+      'trigonometric-identities-precalc', // 3.11-3.12
+      'polar-coordinates-precalc', // 3.13-3.15
+    ],
+  },
+  {
+    slug: 'precalc-exam-prep',
+    course: 'ap-precalculus',
+    order: 4,
+    name: 'AP Exam Preparation',
+    // Wave 3 (PLAN.md G4): precalc-frq-strategies, precalc-exam-review. The
+    // section is created empty by the restructure and stays hidden (every
+    // layout consumer drops a section with no rows) until the lessons land.
+    topics: [],
+  },
+]
+
+/** Canonical titles of the AP Precalculus topics (PLAN.md); the restructure applies them, the lobby displays them. */
+export const PRECALC_TOPIC_TITLES: Record<string, string> = {
+  'rates-of-change-precalc': 'Rates of Change',
+  'polynomial-functions-precalc': 'Polynomial Functions',
+  'fundamental-theorem-algebra': 'Complex Zeros and the Fundamental Theorem of Algebra',
+  'polynomial-division-remainder-theorem': 'Polynomial Division and Equivalent Forms',
+  'rational-functions-precalc': 'Rational Functions',
+  'transformations-precalc': 'Transformations of Functions',
+  'function-modeling-precalc': 'Function Model Selection and Construction',
+  'sequences-series-precalc': 'Sequences',
+  'exponential-functions-precalc': 'Exponential Functions',
+  'function-composition-inverses-precalc': 'Function Composition and Inverses',
+  'logarithmic-functions-precalc': 'Logarithmic Functions',
+  'exponential-logarithmic-modeling-precalc': 'Exponential and Logarithmic Data Modeling and Semi-log Plots',
+  'the-unit-circle': 'The Unit Circle',
+  'trigonometric-functions-precalc': 'Trigonometric Functions',
+  'graphing-trig-functions': 'Sinusoidal Functions and Modeling',
+  'inverse-trig-functions-precalc': 'Inverse Trigonometric Functions',
+  'solving-trig-equations': 'Solving Trigonometric Equations and Inequalities',
+  'trigonometric-identities-precalc': 'Trigonometric Identities and Equivalent Forms',
+  'polar-coordinates-precalc': 'Polar Coordinates and Polar Functions',
+}
+
+/**
+ * AP Precalculus Categories retired by the Oct 2026 restructure (the Jan-2026
+ * duplicate units and the two non-CED groupings), each with the live unit its
+ * /categories URL 308s to (next.config.ts). prisma/restructure-precalc.ts
+ * deletes them once their rows are moved or retired.
+ */
+export const RETIRED_PRECALC_CATEGORIES: Record<string, { course: string; redirect: string }> = {
+  'function-fundamentals': { course: 'ap-precalculus', redirect: 'precalc-polynomial-rational' },
+  'polynomial-rational-functions': { course: 'ap-precalculus', redirect: 'precalc-polynomial-rational' },
+  'exponential-logarithmic-functions': { course: 'ap-precalculus', redirect: 'precalc-exponential-logarithmic' },
+  'precalc-function-analysis': { course: 'ap-precalculus', redirect: 'precalc-exponential-logarithmic' },
+  'precalc-sequences-conics': { course: 'ap-precalculus', redirect: 'precalc-exponential-logarithmic' },
+  'trigonometric-functions': { course: 'ap-precalculus', redirect: 'precalc-trig-functions' },
+}
+
+/** Every retired Category of a fixed-layout course (next.config.ts and the sitemap read this). */
+export const RETIRED_COURSE_CATEGORIES: Record<string, { course: string; redirect: string }> = {
+  ...RETIRED_CALC_CATEGORIES,
+  ...RETIRED_PRECALC_CATEGORIES,
+}
+
 /** One section of a course hub: a CED unit (or exam prep) and its topics in order. */
 export interface CourseUnitSection {
   /** Stable key: 'unit-6', 'exam-prep'. */
@@ -333,19 +444,26 @@ function buildBcLayout(): CourseUnitSection[] {
   return sections
 }
 
-function buildCategoryLayout(course: string): CourseUnitSection[] {
-  return CALC_CATEGORIES.filter((c) => c.course === course).map((c) => ({
-    key: c.slug === 'calcab-exam-prep' ? 'exam-prep' : `unit-${c.order}`,
-    unitNumber: c.slug === 'calcab-exam-prep' ? null : c.order,
-    name: c.name,
-    categories: [c.slug],
-    topics: c.topics,
-  }))
+/** An exam-prep Category is the one section without a CED unit number. */
+const isExamPrepCategory = (c: CourseCategory) => /-exam-prep$/.test(c.slug)
+
+/** One hub section per Category of `course`, in Category order (a course with no shared units). */
+function buildCategoryLayout(course: string, categories: CourseCategory[]): CourseUnitSection[] {
+  return categories
+    .filter((c) => c.course === course)
+    .map((c) => ({
+      key: isExamPrepCategory(c) ? 'exam-prep' : `unit-${c.order}`,
+      unitNumber: isExamPrepCategory(c) ? null : c.order,
+      name: c.name,
+      categories: [c.slug],
+      topics: c.topics,
+    }))
 }
 
 const COURSE_UNIT_LAYOUT: Record<string, CourseUnitSection[]> = {
-  'ap-calculus-ab': buildCategoryLayout('ap-calculus-ab'),
+  'ap-calculus-ab': buildCategoryLayout('ap-calculus-ab', CALC_CATEGORIES),
   'ap-calculus-bc': buildBcLayout(),
+  'ap-precalculus': buildCategoryLayout('ap-precalculus', PRECALC_CATEGORIES),
 }
 
 /**

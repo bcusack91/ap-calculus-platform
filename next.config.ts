@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 import { LEGACY_TOPIC_REDIRECTS } from "./src/lib/legacy-topic-redirects";
 import { RETIRED_AP_UNITS } from "./src/data/retired-ap-topics";
-import { RETIRED_CALC_CATEGORIES } from "./src/lib/course-includes";
+import { RETIRED_COURSE_CATEGORIES } from "./src/lib/course-includes";
 import { withSentryConfig } from "@sentry/nextjs";
 import withBundleAnalyzer from "@next/bundle-analyzer";
 import createMDX from "@next/mdx";
@@ -208,7 +208,8 @@ const nextConfig: NextConfig = {
       'subject-verb-agreement': 'sat-subject-verb-agreement',
       'conditional-probability-stats': 'conditional-probability',
       'measures-of-center-stats': 'measures-of-center',
-      'function-notation-transformations': 'transformations-functions-precalc',
+      // Re-pointed Oct 2026: transformations-functions-precalc itself 308s now.
+      'function-notation-transformations': 'transformations-precalc',
       'pronoun-usage': 'sat-pronoun-agreement',
       'analyzing-arguments': 'englang-argument-structure',
       'data-representation-science': 'act-data-representation',
@@ -237,9 +238,10 @@ const nextConfig: NextConfig = {
     for (const [from, { redirect }] of Object.entries(RETIRED_AP_UNITS)) {
       redirects.push({ source: `/categories/${from}`, destination: `/categories/${redirect}`, permanent: true })
     }
-    // Legacy AP Calculus units retired by the Oct 2026 CED restructure
-    // (prisma/restructure-calc.ts deletes the Category rows).
-    for (const [from, { redirect }] of Object.entries(RETIRED_CALC_CATEGORIES)) {
+    // Legacy AP Calculus and AP Precalculus units retired by the Oct 2026 CED
+    // restructures (prisma/restructure-calc.ts and restructure-precalc.ts
+    // delete the Category rows; RETIRED_CALC_CATEGORIES + RETIRED_PRECALC_CATEGORIES).
+    for (const [from, { redirect }] of Object.entries(RETIRED_COURSE_CATEGORIES)) {
       redirects.push({ source: `/categories/${from}`, destination: `/categories/${redirect}`, permanent: true })
     }
 

@@ -16,7 +16,7 @@ export const courseMeta: Record<
   'geometry': { icon: '📐', description: 'Shapes, angles, proofs, spatial reasoning', gradient: 'from-emerald-600 to-green-600', section: 'High School Math (Grades 9-12)' },
   'algebra-2': { icon: '🔣', description: 'Advanced functions, exponentials, logs', gradient: 'from-cyan-600 to-teal-600', section: 'High School Math (Grades 9-12)' },
   'precalculus': { icon: '🧭', description: 'Functions, trig, vectors, sequences', gradient: 'from-fuchsia-600 to-purple-600', section: 'High School Math (Grades 9-12)' },
-  'ap-precalculus': { icon: '📈', description: 'Functions, trig, vectors, matrices', gradient: 'from-blue-600 to-indigo-600', section: 'High School Math (Grades 9-12)' },
+  'ap-precalculus': { icon: '📈', description: 'Functions, exp/log, trig, polar', gradient: 'from-blue-600 to-indigo-600', section: 'High School Math (Grades 9-12)' },
   'ap-calculus-ab': { icon: '∫', description: 'Limits, derivatives, integrals, applications', gradient: 'from-purple-600 to-violet-600', section: 'High School Math (Grades 9-12)' },
   'ap-calculus-bc': { icon: '∬', description: 'Series, parametric, polar, advanced integration', gradient: 'from-violet-600 to-purple-600', section: 'High School Math (Grades 9-12)' },
   'ap-statistics': { icon: '📊', description: 'Data, probability, statistical inference', gradient: 'from-pink-600 to-rose-600', section: 'High School Math (Grades 9-12)' },

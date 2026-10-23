@@ -55,7 +55,10 @@ const BANK_SCANS: BankScan[] = [
   ['ap-african-american-studies', async () => (await import('@/data/competitive-questions/ap-african-american-studies-bank')).getApAASQuestions(1_000_000)],
   ['ap-csp', async () => (await import('@/data/competitive-questions/ap-csp-bank')).getApCSPQuestions(1_000_000)],
   ['ap-csa', async () => (await import('@/data/competitive-questions/ap-csa-bank')).getApCSAQuestions(1_000_000)],
-  ['ap-precalculus', async () => (await import('@/data/competitive-questions/precalc-bank')).getPreCalcQuestions(1_000_000)],
+  // The AP view: Unit 4 bank topics (vectors, matrices, parametric, law of sines)
+  // are not AP Precalculus items and must not be paced as such.
+  ['ap-precalculus', async () => (await import('@/data/competitive-questions/precalc-bank')).getApPrecalcQuestions(1_000_000)],
+  ['precalculus', async () => (await import('@/data/competitive-questions/precalc-bank')).getPreCalcQuestions(1_000_000)],
   ['geometry', async () => (await import('@/data/competitive-questions/geometry-bank')).getGeometryQuestions(1_000_000)],
   ['algebra-1', async () => (await import('@/data/competitive-questions/algebra1-bank')).getAlgebra1Questions(1_000_000)],
 ]

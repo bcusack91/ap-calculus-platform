@@ -9,7 +9,7 @@ export const precalcTrigIdentitiesPart7Data = {
 
 **Part 7 of 7**
 
-This final part combines **every identity type** from Parts 1–6 into mixed problems. The challenge: recognizing which identity to apply and when.
+This final part combines **every identity type** from Parts 1–6 into mixed problems. The challenge: recognizing which equivalent form to use and when.
 
 ### Complete Identity Reference
 
@@ -19,10 +19,10 @@ This final part combines **every identity type** from Parts 1–6 into mixed pro
 | **Reciprocal** | $\\csc\\theta = \\frac{1}{\\sin\\theta}$, $\\sec\\theta = \\frac{1}{\\cos\\theta}$, $\\cot\\theta = \\frac{1}{\\tan\\theta}$ |
 | **Quotient** | $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$, $\\cot\\theta = \\frac{\\cos\\theta}{\\sin\\theta}$ |
 | **Even-Odd** | $\\cos(-\\theta) = \\cos\\theta$, $\\sin(-\\theta) = -\\sin\\theta$, $\\tan(-\\theta) = -\\tan\\theta$ |
-| **Cofunction** | $\\sin\\theta = \\cos(\\frac{\\pi}{2}-\\theta)$, $\\tan\\theta = \\cot(\\frac{\\pi}{2}-\\theta)$, etc. |
+| **Cofunction** | $\\sin\\theta = \\cos(\\frac{\\pi}{2}-\\theta)$, $\\cos\\theta = \\sin(\\frac{\\pi}{2}-\\theta)$ |
 | **Sum/Difference** | $\\sin(A \\pm B) = \\sin A\\cos B \\pm \\cos A\\sin B$, $\\cos(A \\pm B) = \\cos A\\cos B \\mp \\sin A\\sin B$ |
 | **Double-Angle** | $\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$, $\\cos 2\\theta = \\cos^2\\theta - \\sin^2\\theta = 2\\cos^2\\theta - 1 = 1 - 2\\sin^2\\theta$ |
-| **$\\cos 2\\theta$ rearranged** | $\\sin^2\\theta = \\frac{1-\\cos 2\\theta}{2}$, $\\cos^2\\theta = \\frac{1+\\cos 2\\theta}{2}$ |
+| **$\\cos 2\\theta$ solved for a square** | $\\sin^2\\theta = \\frac{1-\\cos 2\\theta}{2}$, $\\cos^2\\theta = \\frac{1+\\cos 2\\theta}{2}$ |
       `
     },
     {
@@ -39,11 +39,12 @@ This final part combines **every identity type** from Parts 1–6 into mixed pro
 | $\\sec, \\csc, \\tan, \\cot$ mixed | Reciprocal/Quotient → convert to sin/cos |
 | Negative angle $(-\\theta)$ | Even-odd |
 | $\\frac{\\pi}{2} - \\theta$ | Cofunction |
-| Non-standard angle ($\\frac{\\pi}{12}, \\frac{5\\pi}{12}, \\frac{7\\pi}{12}$…) | Sum/Difference formulas |
+| Non-standard angle ($\\frac{\\pi}{12}, \\frac{5\\pi}{12}, \\frac{7\\pi}{12}$…) | Sum/Difference identities |
 | $\\sin\\theta\\cos\\theta$ product | Double-angle: $= \\frac{1}{2}\\sin 2\\theta$ |
 | $\\cos^2\\theta - \\sin^2\\theta$ | Recognize $= \\cos 2\\theta$ |
-| $1 \\pm \\cos\\theta$ in denominator | Multiply by the conjugate, then use Pythagorean |
-| Verifying LHS = RHS | Work the complex side only; never cross the $=$ |
+| $\\sin^2 x$ or $\\cos^2 x$ as a graph | Solve the $\\cos 2x$ identity for the square: a sinusoid of period $\\pi$ |
+| An equation mixing $2x$ with $x$, or $\\sin^2$ with $\\cos$ | Rewrite in one function of one angle, then factor and solve |
+| Showing two expressions are equivalent | Rewrite one side until it matches the other |
 
 ### Multi-Step Strategy
 
@@ -51,7 +52,7 @@ This final part combines **every identity type** from Parts 1–6 into mixed pro
 2. **Convert** — Rewrite everything in sin/cos if mixed functions appear
 3. **Combine** — Get a single fraction if multiple terms
 4. **Substitute** — Apply Pythagorean, double-angle, etc.
-5. **Simplify** — Cancel and reduce
+5. **Simplify** — Cancel and reduce (or factor and solve, for an equation)
       `
     },
     {
@@ -82,13 +83,19 @@ Apply cofunction: $\\csc(\\frac{\\pi}{2} - \\theta) = \\sec\\theta$.
 
 $$\\frac{\\sec\\theta}{\\sec\\theta} = 1$$
 
-### Example 4: Verify $\\frac{\\sin 2\\theta}{\\sin\\theta} - \\frac{\\cos 2\\theta}{\\cos\\theta} = \\sec\\theta$
+### Example 4: Show that $\\frac{\\sin 2\\theta}{\\sin\\theta} - \\frac{\\cos 2\\theta}{\\cos\\theta}$ is equivalent to $\\sec\\theta$
 
-Work the left side:
+Rewrite the left side:
 
 $$\\frac{2\\sin\\theta\\cos\\theta}{\\sin\\theta} - \\frac{1 - 2\\sin^2\\theta}{\\cos\\theta} = 2\\cos\\theta - \\frac{1 - 2\\sin^2\\theta}{\\cos\\theta}$$
 
 $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos^2\\theta + \\sin^2\\theta) - 1}{\\cos\\theta} = \\frac{2 - 1}{\\cos\\theta} = \\frac{1}{\\cos\\theta} = \\sec\\theta \\;\\checkmark$$
+
+### Example 5: Solve $2\\sin^2 x = 1 + \\cos x$ on $[0, 2\\pi)$
+
+$2(1 - \\cos^2 x) = 1 + \\cos x \\implies 2\\cos^2 x + \\cos x - 1 = 0 \\implies (2\\cos x - 1)(\\cos x + 1) = 0$, so $\\cos x = \\frac{1}{2}$ or $\\cos x = -1$:
+
+$$x = \\frac{\\pi}{3},\\ \\pi,\\ \\frac{5\\pi}{3}$$
       `
     },
     {
@@ -140,16 +147,24 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
       type: 'input-boxes' as const,
       content: `
 **Cross-Topic Computation** 🧮
-
-**1)** $\\cos^2 \\frac{\\pi}{12} + \\sin^2 \\frac{\\pi}{12}$ = ? Write as an integer. (e.g., $\\cos^2 1.3 + \\sin^2 1.3 = 1$ by Pythagorean identity)
-
-**2)** Simplify $\\frac{\\sin 2\\theta}{2\\sin\\theta}$ to a single trig function. Write the function name. (e.g., $\\frac{\\cos 2\\theta + 1}{2\\cos\\theta}$ simplifies by expanding $\\cos 2\\theta$)
-
-**3)** $\\sin(-\\frac{\\pi}{6})\\sec(-\\frac{\\pi}{6})$ = ? Write as a fraction. (e.g., $\\cos(-\\frac{\\pi}{3})\\csc(-\\frac{\\pi}{3}) = \\cos \\frac{\\pi}{3} \\cdot (-\\csc \\frac{\\pi}{3}) = \\frac{1}{2} \\cdot (-\\frac{2\\sqrt{3}}{3})$)
       `,
       exercise: {
-        boxes: 3,
-        correctAnswers: ['1', 'cos', '-sqrt(3)/3'],
+        questions: [
+          {
+            question: '**1)** $\\cos^2 \\frac{\\pi}{12} + \\sin^2 \\frac{\\pi}{12}$ = ? Write as an integer. (e.g., $\\cos^2 1.3 + \\sin^2 1.3 = 1$ by the Pythagorean identity)',
+            answer: '1',
+          },
+          {
+            question: '**2)** Simplify $\\frac{\\sin 2\\theta}{2\\sin\\theta}$ to a single trig function. Type its name (\`sin\`, \`cos\`, \`tan\`, …). (e.g., $\\frac{\\sin 2\\theta}{2\\cos\\theta}$ expands the same way and simplifies to $\\sin\\theta$)',
+            answer: 'cos',
+            acceptableAnswers: ['cosθ', 'cos(θ)', 'costheta', 'cos(theta)', 'cosx', 'cos(x)', 'cosine'],
+          },
+          {
+            question: '**3)** $\\sin(-\\frac{\\pi}{6})\\sec(-\\frac{\\pi}{6})$ = ? Enter the exact value (e.g., \`-sqrt(2)/2\`). (e.g., $\\cos(-\\frac{\\pi}{4})\\csc(-\\frac{\\pi}{4}) = \\cos\\frac{\\pi}{4}\\cdot(-\\csc\\frac{\\pi}{4}) = \\frac{\\sqrt{2}}{2}\\cdot(-\\sqrt{2}) = -1$)',
+            answer: '-sqrt(3)/3',
+            acceptableAnswers: ['-1/sqrt(3)', '-√3/3', '-1/√3', '-sqrt3/3'],
+          },
+        ],
         hint1: 'This is the Pythagorean identity $\\sin^2\\theta + \\cos^2\\theta = 1$ — works for any angle.',
         hint2: '$\\sin 2\\theta = 2\\sin\\theta\\cos\\theta$, so $\\frac{2\\sin\\theta\\cos\\theta}{2\\sin\\theta} = ?$',
         hint3: '$\\sin(-\\frac{\\pi}{6}) = -\\sin \\frac{\\pi}{6} = -1/2$ (odd). $\\sec(-\\frac{\\pi}{6}) = \\sec \\frac{\\pi}{6} = \\frac{2}{\\sqrt{3}}$ (even). Multiply them.',
@@ -174,18 +189,18 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
           },
           {
             label: '$\\cos(-\\theta)\\csc(-\\theta)$ simplifies using',
-            options: ['Sum formulas', 'Even-odd identities', 'Double-angle formulas', 'Power-reduction']
+            options: ['Sum formulas', 'Even-odd identities', 'Double-angle formulas', 'Cofunction identities']
           },
           {
-            label: '$\\sin \\frac{2\\pi}{5}$ can be rewritten as $\\cos \\frac{\\pi}{10}$ using',
-            options: ['Even-odd identity', 'Pythagorean identity', 'Cofunction identity', 'Double-angle identity']
+            label: 'To solve $\\cos 2x = 3\\cos x - 2$, first rewrite $\\cos 2x$ as',
+            options: ['$2\\cos^2 x - 1$', '$1 - 2\\sin^2 x$', '$2\\sin x\\cos x$', '$\\cos^2 x + \\sin^2 x$']
           }
         ],
-        correctAnswers: ['Double-angle: $\\frac{1}{2}\\sin 2\\theta$', 'Sum/Difference formula', 'Even-odd identities', 'Cofunction identity'],
+        correctAnswers: ['Double-angle: $\\frac{1}{2}\\sin 2\\theta$', 'Sum/Difference formula', 'Even-odd identities', '$2\\cos^2 x - 1$'],
         hint1: '$\\sin\\theta\\cos\\theta = \\frac{1}{2}(2\\sin\\theta\\cos\\theta) = \\frac{1}{2}\\sin 2\\theta$.',
         hint2: '$\\frac{\\pi}{12} = \\frac{\\pi}{4} - \\frac{\\pi}{6}$, so use the difference formula for cosine.',
-        hint3: 'Cosine is even, cosecant is odd — determine the signs first.',
-        explanation: '$\\sin\\theta\\cos\\theta \\to$ double-angle. $\\cos \\frac{\\pi}{12} \\to$ difference formula. Negative angles $\\to$ even-odd. $\\sin \\frac{2\\pi}{5} = \\cos \\frac{\\pi}{10} \\to$ cofunction.'
+        hint3: 'Cosine is even, cosecant is odd — determine the signs first. For the equation, the other terms contain only $\\cos x$.',
+        explanation: '$\\sin\\theta\\cos\\theta \\to$ double-angle. $\\cos \\frac{\\pi}{12} \\to$ difference formula. Negative angles $\\to$ even-odd. $2\\cos^2 x - 1 = 3\\cos x - 2$ becomes $2\\cos^2 x - 3\\cos x + 1 = 0$, a quadratic in $\\cos x$ (solutions $x = 0, \\frac{\\pi}{3}, \\frac{5\\pi}{3}$).'
       }
     },
     {
@@ -197,15 +212,15 @@ $$= \\frac{2\\cos^2\\theta - 1 + 2\\sin^2\\theta}{\\cos\\theta} = \\frac{2(\\cos
       exercise: {
         questions: [
           {
-            question: 'Simplify: $\\frac{\\cos 2\\theta + 1}{2}$',
+            question: 'Simplify: $\\frac{1 - \\cos 2\\theta}{2\\sin\\theta}$',
             options: [
-              '$\\sin^2\\theta$',
-              '$\\cos^2\\theta$',
-              '$\\tan^2\\theta$',
-              '$1 + \\sin\\theta$'
+              '$\\sin\\theta$',
+              '$\\cos\\theta$',
+              '$\\tan\\theta$',
+              '$\\sin^2\\theta$'
             ],
-            correctAnswer: 1,
-            explanation: 'This is the power-reduction formula: $\\cos^2\\theta = \\frac{1 + \\cos 2\\theta}{2}$.'
+            correctAnswer: 0,
+            explanation: 'Solve the double-angle identity for the square: $1 - \\cos 2\\theta = 2\\sin^2\\theta$, so the quotient is $\\frac{2\\sin^2\\theta}{2\\sin\\theta} = \\sin\\theta$. $\\sin^2\\theta$ forgets to cancel one factor, and the cosine form belongs to $1 + \\cos 2\\theta$.'
           },
           {
             question: 'Which sequence of identities simplifies $\\frac{\\sec(-\\theta)\\sin 2\\theta}{2}$?',

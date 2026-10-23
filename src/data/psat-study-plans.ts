@@ -110,5 +110,5 @@ export const config: StudyPlanSelectorConfig = {
   accent: 'violet',
   examLabel: 'PSAT Test Date',
   plans: PSAT_PLANS,
-  diagnosticPrefix: 'sat-diagnostic',
+  diagnosticPrefix: 'sat-full-diagnostic',
 }

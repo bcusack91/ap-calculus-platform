@@ -691,9 +691,9 @@ const quizLoaders: Record<string, QuizLoader> = {
   'ap-precalculus-trig-unit-circle': () => import('./pre-calculus'),
   'ap-precalculus-trig-identities': () => import('./pre-calculus'),
   'ap-precalculus-inverse-trig': () => import('./pre-calculus'),
-  'ap-precalculus-law-of-sines-cosines': () => import('./pre-calculus'),
   'ap-precalculus-sequences-series': () => import('./pre-calculus'),
-  'ap-precalculus-polar-vectors': () => import('./pre-calculus'),
+  // 'ap-precalculus-law-of-sines-cosines' and 'ap-precalculus-polar-vectors' removed Oct 2026:
+  // CED Unit 4 / Law of Sines are not on the AP exam (precalc-final PLAN.md).
 
   'pre-calculus': () => import('./pre-calculus'),
   'precalculus': () => import('./pre-calculus'),
@@ -718,6 +718,8 @@ const quizLoaders: Record<string, QuizLoader> = {
   'rational-functions-precalc': () => import('./ap-precalculus'),
   'exponential-functions-precalc': () => import('./ap-precalculus'),
   'logarithmic-functions-precalc': () => import('./ap-precalculus'),
+  'exponential-logarithmic-modeling-precalc': () => import('./ap-precalculus'),
+  'function-modeling-precalc': () => import('./ap-precalculus'),
   'function-composition-inverses-precalc': () => import('./ap-precalculus'),
   'transformations-precalc': () => import('./ap-precalculus'),
   'trigonometric-functions-precalc': () => import('./ap-precalculus'),
@@ -1176,18 +1178,8 @@ export const EXIT_QUIZ_ALIASES: Record<string, string> = {
   'solubility-equilibrium': 'solubility-ksp',
   'natural-selection-adaptation': 'natural-selection',
   'population-dynamics': 'population-ecology',
-  'composite-inverse-functions': 'function-composition-inverses-precalc',
-  'polynomial-functions-end-behavior-precalc': 'polynomial-functions-precalc',
-  'solving-polynomial-inequalities': 'polynomial-functions-precalc',
-  'transformations-functions-precalc': 'transformations-precalc',
-  'exponential-functions-modeling-precalc': 'exponential-functions-precalc',
-  'exponential-functions-growth-decay': 'exponential-functions-precalc',
-  'logarithmic-exponential-models': 'exponential-functions-precalc',
-  'logarithmic-functions-equations-precalc': 'logarithmic-functions-precalc',
-  'solving-exponential-logarithmic-equations': 'logarithmic-functions-precalc',
-  'unit-circle-radian-measure': 'the-unit-circle',
-  'trigonometric-identities': 'trigonometric-identities-precalc',
-  'inverse-trig-functions': 'inverse-trig-functions-precalc',
+  // AP Precalculus retired slugs (27, listed in legacy-topic-redirects.ts) are 308-redirected and their pool items were
+  // retagged to the canonical slugs (2026-10-22), so none of them has an alias here.
   'physics-c-position-velocity-acceleration': 'physics-c-1d-kinematics',
   'physics-c-moment-of-inertia': 'physics-c-rotational-kinematics-dynamics',
   'physics-c-faraday-lenz': 'physics-c-faraday-induction',

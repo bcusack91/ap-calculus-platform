@@ -18,7 +18,7 @@ This final part combines every skill from the Polynomial Functions unit: degree 
 | Degree & End Behavior (1) | Leading term determines tails | Odd degree → opposite tails |
 | Zeros & Factored Form (2) | $p(r) = 0 \\iff (x - r)$ is a factor | Factor to find all zeros |
 | Multiplicity (3) | Even mult → bounce, odd mult → cross | Sum of multiplicities = degree |
-| Division (4) | Long / synthetic division, Remainder Thm | $p(c) = $ remainder when dividing by $(x - c)$ |
+| Division (4) | Long division gives $p = d\\,q + r$; $p(c) = 0 \\iff (x-c)$ is a factor | Divide out a known zero |
 | Complex Roots & Symmetry (5) | Conjugate pairs, even/odd functions | Non-real zeros come in pairs |
 | Building from Zeros (6) | $p(x) = a\\prod(x - r_i)^{m_i}$ | Need one extra point for $a$ |
       `
@@ -150,7 +150,7 @@ $$p(x) = (2x - 1)(x + 3)(x^2 - 4x + 5), \\qquad \\text{zeros: } \\tfrac{1}{2},\\
             explanation: 'Real coefficients force $-i$ to be a zero too, so $p(x) = (x - 2)(x^2 + 1)(x - r)$ with only the fourth zero $r$ unknown. One more fact, either $r$ itself or one point such as $p(0)$, pins it down; the leading coefficient is already given.'
           },
           {
-            question: 'After dividing $p(x) = x^3 + 2x^2 - 5x - 6$ by $(x + 3)$ using synthetic division, the quotient is $x^2 - x - 2$. What are ALL the zeros of $p(x)$?',
+            question: 'After dividing $p(x) = x^3 + 2x^2 - 5x - 6$ by $(x + 3)$, the quotient is $x^2 - x - 2$. What are ALL the zeros of $p(x)$?',
             options: [
               '$x = -3, 1, 2$',
               '$x = -3, -1, 2$',

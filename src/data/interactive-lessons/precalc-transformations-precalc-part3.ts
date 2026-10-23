@@ -7,24 +7,26 @@ export const precalcTransformationsPart3Data = {
       content: `
 # 📏 Stretches & Compressions
 
-**Part 3 of 7**
+**Part 3 of 7 — Stretches & Compressions**
 
-### Vertical Stretch/Compression
+The CED calls these **vertical and horizontal dilations**; "stretch" and "compression" describe which way the dilation goes.
+
+### Vertical Dilation (Stretch/Compression)
 
 $$y = a \\cdot f(x)$$
 
-| $|a| > 1$ | Vertical **stretch** by factor $|a|$ |
+| $\\lvert a \\rvert > 1$ | Vertical **stretch** by factor $\\lvert a \\rvert$ |
 |:----------|:------------------------------------|
-| $0 < |a| < 1$ | Vertical **compression** by factor $|a|$ |
+| $0 < \\lvert a \\rvert < 1$ | Vertical **compression** by factor $\\lvert a \\rvert$ |
 | $a < 0$ | Also reflects over $x$-axis |
 
-### Horizontal Stretch/Compression
+### Horizontal Dilation (Stretch/Compression)
 
 $$y = f(bx)$$
 
-| $|b| > 1$ | Horizontal **compression** by factor $\\frac{1}{|b|}$ |
+| $\\lvert b \\rvert > 1$ | Horizontal **compression** by factor $\\frac{1}{\\lvert b \\rvert}$ |
 |:----------|:-----------------------------------------------------|
-| $0 < |b| < 1$ | Horizontal **stretch** by factor $\\frac{1}{|b|}$ |
+| $0 < \\lvert b \\rvert < 1$ | Horizontal **stretch** by factor $\\frac{1}{\\lvert b \\rvert}$ |
 
 > ⚠️ Horizontal scaling is **reciprocal**: $f(2x)$ compresses by half, not stretches by 2!
       `
@@ -35,17 +37,17 @@ $$y = f(bx)$$
       content: `
 ## 📝 Examples
 
-### Example 1: $y = 3\\sin x$
+### Example 1: $y = 3\\sqrt{x}$
 
-Vertical stretch by 3. Amplitude changes from 1 to 3.
+Vertical dilation by $3$: every $y$-coordinate is tripled.
 
-Points: $(\\pi/2, 1) \\to (\\pi/2, 3)$.
+Points: $(4, 2) \\to (4, 6)$, $(9, 3) \\to (9, 9)$.
 
-### Example 2: $y = \\sin(2x)$
+### Example 2: $y = \\sqrt{2x}$
 
-Horizontal compression by $1/2$. Period changes from $2\\pi$ to $\\pi$.
+Horizontal dilation by $\\tfrac{1}{2}$: every $x$-coordinate is halved.
 
-Points: $(\\pi/2, 1) \\to (\\pi/4, 1)$.
+Points: $(4, 2) \\to (2, 2)$, $(16, 4) \\to (8, 4)$.
 
 ### Example 3: $y = \\frac{1}{2}x^2$
 
@@ -64,26 +66,23 @@ Horizontal changes divide $x$-values by $b$ (or multiply by $1/b$).
       id: 'p3-period',
       type: 'text' as const,
       content: `
-## 🔄 Effect on Period & Amplitude
+## 🔄 Dilations and Key Features
 
-For trig functions $y = A\\sin(Bx)$:
+For $y = a\\,f(bx)$: every $y$-coordinate is multiplied by $a$, every $x$-coordinate by $\\frac{1}{b}$.
 
-- **Amplitude** $= |A|$ (vertical stretch)
-- **Period** $= \\frac{2\\pi}{|B|}$ (horizontal compression)
-
-### Example: $y = 4\\cos(3x)$
-
-Amplitude: $4$, Period: $\\frac{2\\pi}{3}$
+**Example:** $f$ has zeros at $x = -4$ and $x = 8$. Then $f(2x)$ has zeros at $-2$ and $4$, while $3f(x)$ keeps the zeros at $-4$ and $8$ and triples the $y$-intercept.
 
 ### For General Functions
 
 | Original Feature | After $y = af(bx)$ |
 |:-----------------|:-------------------|
 | Point $(x, y)$ | $(x/b, ay)$ |
-| Width/period $T$ | $T/|b|$ |
-| Height $h$ | $|a| \\cdot h$ |
+| Width of a feature $w$ | $w/\\lvert b \\rvert$ |
+| Height $h$ | $\\lvert a \\rvert \\cdot h$ |
 | $x$-intercepts | Divide by $b$ |
 | $y$-intercept | Multiply by $a$ |
+| Domain $[c, d]$ | $[c/b, d/b]$ (for $b > 0$) |
+| Range $[m, M]$ | $[am, aM]$ (for $a > 0$) |
       `
     },
     {
@@ -101,16 +100,16 @@ Amplitude: $4$, Period: $\\frac{2\\pi}{3}$
             explanation: '$f(bx)$ with $b=3$: horizontal compression by $1/3$.'
           },
           {
-            question: 'The amplitude of $y = -5\\sin x$ is:',
-            options: ['$5$', '$-5$', '$1/5$', '$10$'],
+            question: 'The graph of $y = -5f(x)$ compared with $y = f(x)$ is:',
+            options: ['reflected over the $x$-axis and stretched vertically by 5', 'reflected over the $y$-axis and stretched vertically by 5', 'shifted down 5', 'compressed vertically by $1/5$'],
             correctAnswer: 0,
-            explanation: 'Amplitude $= |A| = |-5| = 5$. (The negative reflects but does not affect amplitude.)'
+            explanation: 'Multiplying the output by $-5$ multiplies every $y$-coordinate by $5$ (a vertical dilation by $5$) and flips the sign, a reflection over the $x$-axis. Nothing inside the function changed, so there is no horizontal effect.'
           },
           {
-            question: 'The period of $y = \\cos(\\pi x)$ is:',
-            options: ['$\\pi$', '$2\\pi$', '$2$', '$1/\\pi$'],
-            correctAnswer: 2,
-            explanation: 'Period $= 2\\pi/|\\pi| = 2$.'
+            question: 'If $f$ has $x$-intercepts at $x = 2$ and $x = 6$, the $x$-intercepts of $y = f(\\tfrac{1}{2}x)$ are:',
+            options: ['$x = 4$ and $x = 12$', '$x = 1$ and $x = 3$', '$x = 2$ and $x = 6$', '$x = 4$ and $x = 8$'],
+            correctAnswer: 0,
+            explanation: 'With $b = \\tfrac{1}{2}$, every $x$-coordinate is divided by $\\tfrac{1}{2}$, that is, doubled: a horizontal dilation by $2$. Halving the intercepts is the reciprocal error, and the $y$-coordinates (zero here) are untouched.'
           }
         ]
       }
@@ -125,15 +124,15 @@ Amplitude: $4$, Period: $\\frac{2\\pi}{3}$
 
 **2)** $y = f(4x)$: the point $(8, 5)$ becomes $($?$, 5)$
 
-**3)** The period of $y = \\sin(4x)$: $\\frac{2\\pi}{?}$. Enter the number.
+**3)** $y = f(4x)$: the $x$-intercept $(8, 0)$ of $f$ becomes $(?, 0)$. Enter the $x$-coordinate.
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['10', '2', '4'],
+        correctAnswers: ['10', '2', '2'],
         hint1: 'Vertical stretch by 2: $y$-values double.',
         hint2: 'Horizontal compress by $1/4$: $x$-values divided by $4$.',
-        hint3: 'Period = $2\\pi / |B| = 2\\pi / 4$.',
-        explanation: '1) $10$. 2) $2$. 3) $4$ (period $= \\pi/2$).'
+        hint3: 'Divide the $x$-coordinate by 4.',
+        explanation: '1) $(3, 10)$. 2) $(2, 5)$. 3) $8 \\div 4 = 2$, so $(2, 0)$: horizontal dilations move the $x$-intercepts.'
       }
     },
     {

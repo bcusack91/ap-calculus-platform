@@ -7,7 +7,7 @@ export const precalcRationalPart5Data = {
       content: `
 # 📉 Graphing Rational Functions
 
-**Part 5 of 7 — Transformations & Complete Graph Sketching**
+**Part 5 of 7 — Graphing Rational Functions**
 
 Graphing a rational function means assembling all the pieces from Parts 1–4: domain, intercepts, asymptotes, holes, and sign behavior. This part gives you a systematic graphing procedure and introduces transformations of the parent function $y = \\frac{1}{x}$.
       `
@@ -39,7 +39,7 @@ $$\\boxed{f(x) = \\frac{a}{x - h} + k}$$
 |:---------:|:-------|:--------|
 | $h$ | Shifts graph **right** $h$ units (VA moves to $x = h$) | $h = 3$: VA at $x = 3$ |
 | $k$ | Shifts graph **up** $k$ units (HA moves to $y = k$) | $k = -2$: HA at $y = -2$ |
-| $a$ | Vertical stretch by $|a|$; reflects over $x$-axis if $a < 0$ | $a = -1$: reflected |
+| $a$ | Vertical dilation by $\\lvert a \\rvert$; reflects over $x$-axis if $a < 0$ | $a = -1$: reflected |
 
 **Example:** $f(x) = \\frac{-2}{x + 1} + 3$ has VA at $x = -1$, HA at $y = 3$, reflected and stretched by 2.
       `
@@ -77,8 +77,28 @@ Follow these steps for **any** rational function $f(x) = \\frac{p(x)}{q(x)}$:
 5. **HA:** $\\deg(p) = 1 < \\deg(q) = 2$ → $y = 0$
 6. **$x$-intercept:** $x - 1 = 0 \\implies x = 1$ → point $(1, 0)$
 7. **$y$-intercept:** $f(0) = \\frac{-1}{-4} = \\frac{1}{4}$ → point $\\left(0, \\frac{1}{4}\\right)$
-8. **Sign analysis:** Test in intervals $(-\\infty, -2)$, $(-2, 1)$, $(1, 2)$, $(2, \\infty)$
+8. **Sign analysis:** test one point in each interval cut by the zeros and the vertical asymptotes:
+
+| Interval | Test point | Value | Sign |
+|:--|:--|:--|:--:|
+| $(-\\infty, -2)$ | $x = -3$ | $f(-3) = \\frac{-4}{5}$ | $-$ |
+| $(-2, 1)$ | $x = 0$ | $f(0) = \\frac{1}{4}$ | $+$ |
+| $(1, 2)$ | $x = 1.5$ | $f(1.5) = \\frac{0.5}{-1.75}$ | $-$ |
+| $(2, \\infty)$ | $x = 3$ | $f(3) = \\frac{2}{5}$ | $+$ |
+
+9. **Sketch:** the signs tell you which side of each asymptote the branch lives on: $\\lim_{x \\to -2^-} f(x) = -\\infty$, $\\lim_{x \\to -2^+} f(x) = +\\infty$, $\\lim_{x \\to 2^-} f(x) = -\\infty$, $\\lim_{x \\to 2^+} f(x) = +\\infty$, and both tails approach $y = 0$. See Figure 1 below.
       `
+    },
+    {
+      id: 'p5-sketch',
+      type: 'figure' as const,
+      figure: {
+        svg: '<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g stroke="currentColor" stroke-width="1.5"><line x1="14" y1="110" x2="312" y2="110"/><line x1="160" y1="206" x2="160" y2="10"/></g><text x="306" y="126" font-size="12" fill="currentColor">x</text><text x="166" y="18" font-size="12" fill="currentColor">y</text><g class="fig-muted" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"><line x1="104" y1="12" x2="104" y2="204"/><line x1="216" y1="12" x2="216" y2="204"/></g><text x="104" y="216" font-size="11" fill="currentColor" text-anchor="middle">x = -2</text><text x="216" y="216" font-size="11" fill="currentColor" text-anchor="middle">x = 2</text><text x="188" y="126" font-size="11" fill="currentColor" text-anchor="middle">1</text><text x="290" y="104" font-size="11" fill="currentColor" text-anchor="end">y = 0</text><g class="fig-accent" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M 20 118.7 L 48 122.6 L 76 134 L 90 156.8 L 95.6 186.8 L 98.4 204"/><path d="M 109.6 14 L 112.4 37 L 118 67 L 132 90 L 160 102.5 L 188 110 L 202 118.6 L 210.4 141.5 L 213.2 179.3 L 214.6 204"/><path d="M 217.4 14 L 218.8 29.6 L 221.6 67 L 230 90 L 244 98 L 272 102.5 L 300 104.3"/></g><g class="fig-accent"><circle cx="188" cy="110" r="4" fill="currentColor"/><circle cx="160" cy="102.5" r="4" fill="currentColor"/></g></svg>',
+        alt: 'Graph of f(x) = (x - 1)/(x^2 - 4). Dashed vertical asymptotes at x = -2 and x = 2; the x-axis is the horizontal asymptote y = 0. The left branch stays below the x-axis and falls toward negative infinity at x = -2. The middle branch comes down from positive infinity at x = -2, passes through (0, 1/4) and the x-intercept (1, 0), then falls to negative infinity at x = 2. The right branch comes down from positive infinity at x = 2 and flattens toward the x-axis from above.',
+        caption: 'Figure 1. The completed sketch of $f(x) = \\dfrac{x - 1}{x^2 - 4}$: the sign chart decides the side of every asymptote.',
+        size: 'lg',
+      },
+      content: `Check the sketch against the table: the left branch is negative, the middle branch crosses the $x$-axis once at $(1, 0)$, and the right branch is positive. The middle branch crosses the horizontal asymptote $y = 0$; the outer branches only approach it.`
     },
     {
       id: 'p5-concept-quiz',

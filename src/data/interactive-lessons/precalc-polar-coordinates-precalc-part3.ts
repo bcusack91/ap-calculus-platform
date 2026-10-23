@@ -16,7 +16,7 @@ Part 1 located points with polar coordinates. A complex number is also a point: 
 | Form | Written as | Coordinates |
 |:-----|:-----------|:------------|
 | Rectangular | $a + bi$ | $(a, b)$ |
-| Polar | $(r\\cos\\theta) + i(r\\sin\\theta)$ | $(r, \\theta)$ |
+| Polar | $(r\\cos\\theta) + i(r\\sin\\theta) = r(\\cos\\theta + i\\sin\\theta)$ | $(r, \\theta)$ |
 
 ### The Conversion Formulas
 

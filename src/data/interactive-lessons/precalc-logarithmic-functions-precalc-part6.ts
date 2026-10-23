@@ -5,22 +5,37 @@ export const precalcLogarithmicPart6Data = {
       id: 'p6-intro',
       type: 'text' as const,
       content: `
-# 🌍 Logarithmic Functions — Modeling with Logs
+# 🌍 Logarithmic Functions — Modeling with Logarithms
 
-**Part 6 of 7**
+**Part 6 of 7 — Logarithmic Functions — Modeling with Logarithms**
 
-Logarithmic scales appear throughout science. They compress enormous ranges into manageable numbers.
+A **logarithmic model** fits data whose output changes by a constant **amount** each time the input is **multiplied** by a constant: the input *ratio*, not the input difference, drives the change.
+
+| Function type | Equal input **differences** give… | Equal input **ratios** give… |
+|:--------------|:----------------------------------|:-----------------------------|
+| Linear | equal output differences | — |
+| Exponential | equal output **ratios** | — |
+| Logarithmic | — | equal output **differences** |
+
+### A Logarithmic Model from Data
+
+| $x$ | $1$ | $10$ | $100$ | $1000$ |
+|:----|:----|:-----|:------|:-------|
+| $y$ | $2$ | $5$ | $8$ | $11$ |
+
+Each time $x$ is multiplied by $10$, $y$ increases by $3$, so $y = 2 + 3\\log x$. Check: $x = 100$ gives $2 + 3(2) = 8$ ✔. On a graphing calculator, \`LnReg\` fits $y = a + b\\ln x$ to a data set; on the exam you read $a$ and $b$ from the output rather than computing them.
 
 ### Real-World Log Scales
+
+Logarithmic scales appear throughout science. They compress enormous ranges into manageable numbers.
 
 | Scale | Formula | What It Measures |
 |:------|:--------|:----------------|
 | **pH** | $\\text{pH} = -\\log[H^+]$ | Acidity (hydrogen ion concentration) |
 | **Decibels** | $dB = 10\\log\\left(\\frac{I}{I_0}\\right)$ | Sound intensity |
 | **Richter** | $M = \\log\\left(\\frac{A}{A_0}\\right)$ | Earthquake magnitude |
-| **Stellar magnitude** | $m = -2.5\\log\\left(\\frac{F}{F_0}\\right)$ | Star brightness |
 
-> **Key pattern:** All involve $\\log(\\text{ratio})$ — they measure *how many times larger* one quantity is than a reference.
+> **Key pattern:** All involve $\\log(\\text{ratio})$ — they measure *how many times larger* one quantity is than a reference, so multiplying the quantity by $10$ adds a fixed amount to the scale.
       `
     },
     {
@@ -108,17 +123,17 @@ Each unit on the Richter scale represents $10\\times$ the amplitude.
 
 Difference: $7 - 5 = 2$ units → $10^2 = 100\\times$ the amplitude
 
-But **energy** scales by $\\approx 31.6\\times$ per unit:
+| Magnitude Difference | Amplitude Ratio |
+|:--------------------|:---------------|
+| $1$ | $10\\times$ |
+| $2$ | $100\\times$ |
+| $3$ | $1{,}000\\times$ |
 
-$2$ units → $31.6^2 \\approx 1{,}000\\times$ the energy
+### Reading Any Logarithmic Model
 
-### Summary Table
+For $y = a + b\\log_c x$, multiplying the input by $c$ adds $b$ to the output; multiplying the input by $c^2$ adds $2b$, and so on.
 
-| Magnitude Difference | Amplitude Ratio | Energy Ratio |
-|:--------------------|:---------------|:-------------|
-| $1$ | $10\\times$ | $\\approx 31.6\\times$ |
-| $2$ | $100\\times$ | $\\approx 1{,}000\\times$ |
-| $3$ | $1{,}000\\times$ | $\\approx 31{,}600\\times$ |
+> **Example:** $y = 3 + 2\\log_2 x$. When $x$ doubles, $y$ increases by $2$; when $x$ is multiplied by $8 = 2^3$, $y$ increases by $6$. From $x = 4$ ($y = 7$) to $x = 32$ ($y = 13$): the input was multiplied by $8$ and the output rose by $6$ ✔.
       `
     },
     {
@@ -152,15 +167,15 @@ $2$ units → $31.6^2 \\approx 1{,}000\\times$ the energy
             explanation: 'Difference: $30\\text{ dB}$. Each $10\\text{ dB}$ is $10\\times$. So $10^3 = 1{,}000\\times$ as intense.'
           },
           {
-            question: 'If earthquake A is magnitude $6.5$ and B is magnitude $4.5$, how do their amplitudes compare?',
+            question: 'Which data set is modeled by a logarithmic function?',
             options: [
-              '$A$ is $2\\times$ larger',
-              '$A$ is $20\\times$ larger',
-              '$A$ is $100\\times$ larger',
-              '$A$ is $1{,}000\\times$ larger'
+              '$x = 1, 2, 4, 8$ with $y = 5, 7, 9, 11$',
+              '$x = 1, 2, 3, 4$ with $y = 5, 7, 9, 11$',
+              '$x = 1, 2, 4, 8$ with $y = 5, 10, 20, 40$',
+              '$x = 1, 2, 3, 4$ with $y = 5, 10, 20, 40$'
             ],
-            correctAnswer: 2,
-            explanation: 'Difference of $2$ magnitudes → $10^2 = 100\\times$ the amplitude.'
+            correctAnswer: 0,
+            explanation: 'In the first set, each time $x$ is **multiplied** by $2$ the output **increases by** $2$: that is $y = 5 + 2\\log_2 x$. Equal input differences with equal output differences ($x = 1, 2, 3, 4$; $y = 5, 7, 9, 11$) is linear; $y = 5x$ is also linear; and equal input differences with equal output ratios ($5, 10, 20, 40$) is exponential.'
           }
         ]
       }
@@ -203,19 +218,19 @@ $2$ units → $31.6^2 \\approx 1{,}000\\times$ the energy
             options: ['sound intensity', 'earthquake amplitude', 'hydrogen ion concentration', 'star brightness']
           },
           {
-            label: 'On the Richter scale, each unit increase represents ___ times the amplitude',
-            options: ['$2$', '$5$', '$10$', '$100$']
+            label: 'For $y = 2 + 3\\log x$, when $x$ is multiplied by $100$, $y$ increases by',
+            options: ['$2$', '$3$', '$6$', '$300$']
           },
           {
             label: 'All log scales fundamentally measure',
             options: ['sums', 'differences', 'ratios', 'products']
           }
         ],
-        correctAnswers: ['$1{,}000$', 'hydrogen ion concentration', '$10$', 'ratios'],
+        correctAnswers: ['$1{,}000$', 'hydrogen ion concentration', '$6$', 'ratios'],
         hint1: 'pH difference of $3$ → $10^3$.',
         hint2: '$[H^+]$ = hydrogen ion concentration.',
-        hint3: 'Richter is a log base $10$ scale.',
-        explanation: 'pH differs by $3$: $10^3 = 1{,}000\\times$. pH measures $[H^+]$. Richter: $10\\times$ per unit. Log scales measure ratios (orders of magnitude).'
+        hint3: '$\\log(100x) = \\log 100 + \\log x = 2 + \\log x$, then multiply the extra $2$ by the coefficient $3$.',
+        explanation: 'pH differs by $3$: $10^3 = 1{,}000\\times$. pH measures $[H^+]$. $3\\log(100x) = 3(2 + \\log x) = 6 + 3\\log x$, so $y$ rises by $6$. Log scales measure ratios (orders of magnitude).'
       }
     },
     {

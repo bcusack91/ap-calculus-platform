@@ -1,6 +1,7 @@
 /**
- * Entrance Quiz — The Fundamental Theorem of Algebra & Factoring — 14 questions (2 per lesson part, 7 parts).
+ * Entrance Quiz — Complex Zeros and the Fundamental Theorem of Algebra (AP Precalculus, CED 1.5) — 14 questions (2 per lesson part, 7 parts).
  * Each item is tagged with the lesson part it certifies; both right = part skipped.
+ * Absorbs the on-exam quadratic / conjugate items of the retired complex-numbers entrance quiz.
  */
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
@@ -13,11 +14,11 @@ const questions: EntranceQuizQuestion[] = [
     options: [
       '$(x + 5)$ is a factor of $p(x)$',
       'The graph of $p$ passes through $(0, 5)$',
-      '$p(5) = 0$',
-      'Dividing $p(x)$ by $x - 5$ leaves remainder $5$',
+      '$p(5) = 0$, so $(x - 5)$ is a factor of $p(x)$',
+      '$p(0) = 5$, so $(x - 5)$ is a factor of $p(x)$',
     ],
     correctIndex: 2,
-    explanation: 'A zero is an input that makes the output $0$, so $p(5) = 0$. The matching factor is $(x - 5)$, not $(x + 5)$, and the matching point is $(5, 0)$; dividing by $x - 5$ would leave remainder $0$.',
+    explanation: 'A zero is an input that makes the output $0$, so $p(5) = 0$, and by the Factor Theorem $(x - 5)$ is then a factor. The factor $(x + 5)$ belongs to the zero $-5$; the point $(0, 5)$ and the value $p(0) = 5$ describe the $y$-intercept, not a zero.',
     partNumber: 1,
     partTitle: 'Zeros, Factors & the Connection Between Them',
   },
@@ -31,7 +32,7 @@ const questions: EntranceQuizQuestion[] = [
       '$x(x - 2)(x + 3)$',
     ],
     correctIndex: 2,
-    explanation: 'Each zero gives a factor: $0 \\to x$, $-\\frac{1}{2} \\to (2x + 1)$ (since $2x + 1 = 0$ at $x = -\\frac{1}{2}$), and $3 \\to (x - 3)$. The factor $(x + 2)$ would put a zero at $-2$ instead.',
+    explanation: 'Each zero gives a factor: $0 \\to x$, $-\\frac{1}{2} \\to (2x + 1)$ (since $2x + 1 = 0$ at $x = -\\frac{1}{2}$), and $3 \\to (x - 3)$. Leaving out the factor $x$ loses the zero $0$, and the factor $(x + 2)$ would put a zero at $-2$ instead.',
     partNumber: 1,
     partTitle: 'Zeros, Factors & the Connection Between Them',
   },
@@ -47,7 +48,7 @@ const questions: EntranceQuizQuestion[] = [
       '$x(x - 6)(x + 2)$',
     ],
     correctIndex: 0,
-    explanation: 'The GCF is $3x$: $3x(x^2 - 4x - 12)$. Two numbers with product $-12$ and sum $-4$ are $-6$ and $2$, so the result is $3x(x - 6)(x + 2)$.',
+    explanation: 'The GCF is $3x$: $3x(x^2 - 4x - 12)$. Two numbers with product $-12$ and sum $-4$ are $-6$ and $2$, so the result is $3x(x - 6)(x + 2)$. Swapping the signs inside the factors gives a sum of $+4$, and dropping the $x$ or the $3$ loses part of the GCF.',
     partNumber: 2,
     partTitle: 'Core Factoring Techniques',
   },
@@ -56,12 +57,12 @@ const questions: EntranceQuizQuestion[] = [
     question: 'What are the real zeros of $p(x) = x^4 - 5x^2 - 36$?',
     options: [
       '$x = \\pm 2$ only',
-      '$x = \\pm 3$ and $x = \\pm 2$',
-      '$x = \\pm 9$ and $x = -4$',
+      '$x = \\pm 3, \\pm 2$',
+      '$x = 9$ and $x = -4$',
       '$x = \\pm 3$ only',
     ],
     correctIndex: 3,
-    explanation: 'With $u = x^2$, $u^2 - 5u - 36 = (u - 9)(u + 4)$, so $p(x) = (x^2 - 9)(x^2 + 4)$. The factor $x^2 - 9$ gives $x = \\pm 3$; $x^2 + 4 = 0$ has only the non-real solutions $\\pm 2i$.',
+    explanation: 'With $u = x^2$, $u^2 - 5u - 36 = (u - 9)(u + 4)$, so $p(x) = (x^2 - 9)(x^2 + 4)$. The factor $x^2 - 9$ gives $x = \\pm 3$; $x^2 + 4 = 0$ has only the non-real solutions $\\pm 2i$, so $\\pm 2$ are not zeros, and $9$ and $-4$ are values of $u$, not of $x$.',
     partNumber: 2,
     partTitle: 'Core Factoring Techniques',
   },
@@ -91,12 +92,12 @@ const questions: EntranceQuizQuestion[] = [
       '$(x + 2)(x - 1)(x - 3)$',
     ],
     correctIndex: 3,
-    explanation: 'The outputs of $0$ give zeros $-2$, $1$ and $3$, so $p(x) = a(x + 2)(x - 1)(x - 3)$. Then $p(0) = 6a = 6$ gives $a = 1$. The squared version has degree 4, so it is not a cubic.',
+    explanation: 'The outputs of $0$ give zeros $-2$, $1$ and $3$, so $p(x) = a(x + 2)(x - 1)(x - 3)$. Then $p(0) = 6a = 6$ gives $a = 1$. The squared version has degree 4, so it is not a cubic, and $a = 2$ or $a = -1$ would give $p(0) = 12$ or $-6$.',
     partNumber: 3,
     partTitle: 'Zeros from Graphs, Tables & a Known Factor',
   },
 
-  // Part 4 — Synthetic Division & Peeling Off Factors
+  // Part 4 — Dividing Out a Known Factor
   {
     id: 'fta-ent-4a',
     question: 'Given that $x = 5$ is a zero of $p(x) = x^3 - 6x^2 + 3x + 10$, what is the complete factorization of $p(x)$?',
@@ -107,26 +108,26 @@ const questions: EntranceQuizQuestion[] = [
       '$(x - 5)(x - 1)(x - 2)$',
     ],
     correctIndex: 0,
-    explanation: 'Synthetic division by $x - 5$ on $1, -6, 3, 10$ gives $1, -1, -2$ with remainder $0$, so the quotient is $x^2 - x - 2 = (x - 2)(x + 1)$.',
+    explanation: 'Long division of $p(x)$ by $(x - 5)$ gives the quotient $x^2 - x - 2$ with remainder $0$, and $x^2 - x - 2 = (x - 2)(x + 1)$. Check: $p(-1) = -1 - 6 - 3 + 10 = 0$. The factor $(x - 1)$ would need $p(1) = 0$, but $p(1) = 8$.',
     partNumber: 4,
-    partTitle: 'Synthetic Division & Peeling Off Factors',
+    partTitle: 'Dividing Out a Known Factor',
   },
   {
     id: 'fta-ent-4b',
-    question: 'Synthetic division of a cubic $p(x)$ by $x + 2$ produces the bottom row $1, -3, 5, -4$. Which conclusion is correct?',
+    question: 'Given $p(x) = (x + 2)(x^2 - 3x + 5) - 4$, which is true?',
     options: [
-      '$p(2) = -4$; quotient $x^2 - 3x + 5$',
-      '$p(-2) = 0$; quotient $x^2 - 3x + 5$',
-      '$p(2) = 4$; quotient $x^2 - 3x + 5$',
-      '$p(-2) = -4$; quotient $x^2 - 3x + 5$',
+      '$p(-2) = 0$',
+      '$(x + 2)$ is a factor',
+      '$p(-2) = -4$',
+      '$p(2) = -4$',
     ],
-    correctIndex: 3,
-    explanation: 'Dividing by $x + 2$ uses $c = -2$. The last entry is the remainder, which equals $p(-2) = -4$, and the other entries give the quotient $x^2 - 3x + 5$. A nonzero remainder means $x + 2$ is not a factor.',
+    correctIndex: 2,
+    explanation: 'Substituting $x = -2$ makes the first product $0$, so $p(-2) = 0 - 4 = -4$. Because $p(-2) \\ne 0$, the Factor Theorem says $(x + 2)$ is not a factor. At $x = 2$ the product is $(4)(4 - 6 + 5) = 12$, so $p(2) = 8$.',
     partNumber: 4,
-    partTitle: 'Synthetic Division & Peeling Off Factors',
+    partTitle: 'Dividing Out a Known Factor',
   },
 
-  // Part 5 — The Fundamental Theorem of Algebra
+  // Part 5 — The Fundamental Theorem of Algebra, Multiplicity & Non-Real Zeros
   {
     id: 'fta-ent-5a',
     question: 'Counting multiplicity, how many complex zeros does $p(x) = (x^2 + 4)(x - 1)^3(x + 2)$ have, and how many of them are non-real?',
@@ -137,62 +138,67 @@ const questions: EntranceQuizQuestion[] = [
       '$3$ in all; $1$ non-real',
     ],
     correctIndex: 0,
-    explanation: 'The degree is $2 + 3 + 1 = 6$, so there are exactly 6 zeros counting multiplicity. The zeros of $x^2 + 4$ are $\\pm 2i$ (2 non-real); the other 4 are $1$ (three times) and $-2$.',
+    explanation: 'The degree is $2 + 3 + 1 = 6$, so there are exactly 6 zeros counting multiplicity. The zeros of $x^2 + 4$ are $\\pm 2i$ (2 non-real); the other 4 are $1$ (three times) and $-2$. Counting only distinct real zeros gives $3$, and non-real zeros always come in an even number.',
     partNumber: 5,
-    partTitle: 'The Fundamental Theorem of Algebra',
+    partTitle: 'The Fundamental Theorem of Algebra, Multiplicity & Non-Real Zeros',
   },
   {
     id: 'fta-ent-5b',
-    question: 'A degree-5 polynomial with real coefficients crosses the $x$-axis at $x = 1$, where that zero has multiplicity 1, and touches the axis at $x = -2$, where that zero has multiplicity 2. It has no other real zeros. How many non-real zeros does it have?',
-    options: ['Four', 'Zero', 'Two', 'Three'],
-    correctIndex: 2,
-    explanation: 'By the Fundamental Theorem of Algebra there are 5 zeros counting multiplicity. The real ones account for $1 + 2 = 3$, so $5 - 3 = 2$ are non-real (a conjugate pair).',
+    question: 'How many $x$-intercepts does the graph of $y = 3x^2 - 2x + 4$ have?',
+    options: [
+      'Two, because the discriminant is $52$',
+      'None, because the discriminant is $-44$',
+      'One, because the discriminant is $0$',
+      'Two, because the discriminant is $44$',
+    ],
+    correctIndex: 1,
+    explanation: 'The discriminant is $(-2)^2 - 4(3)(4) = 4 - 48 = -44 < 0$, so both zeros are non-real (a conjugate pair) and the graph never meets the $x$-axis. Adding $48$ instead of subtracting gives $52$, and dropping the sign gives $44$; both would wrongly predict two intercepts.',
     partNumber: 5,
-    partTitle: 'The Fundamental Theorem of Algebra',
+    partTitle: 'The Fundamental Theorem of Algebra, Multiplicity & Non-Real Zeros',
   },
 
-  // Part 6 — Complex Conjugate Roots & Building Polynomials
+  // Part 6 — Conjugate Pairs & Building Polynomials from Zeros
   {
     id: 'fta-ent-6a',
     question: 'A degree-4 polynomial $p$ with real coefficients and leading coefficient 1 has zeros $3i$ and $1 + i$. Which is $p(x)$?',
     options: [
-      '$(x^2 + 9)(x^2 - 2x + 2)$',
       '$(x^2 - 9)(x^2 - 2x + 2)$',
       '$(x^2 + 9)(x^2 + 2x + 2)$',
       '$(x^2 + 3)(x^2 - 2x + 2)$',
+      '$(x^2 + 9)(x^2 - 2x + 2)$',
     ],
-    correctIndex: 0,
-    explanation: 'The conjugates $-3i$ and $1 - i$ are also zeros. Then $(x - 3i)(x + 3i) = x^2 + 9$ and $(x - 1 - i)(x - 1 + i) = (x - 1)^2 + 1 = x^2 - 2x + 2$.',
+    correctIndex: 3,
+    explanation: 'The conjugates $-3i$ and $1 - i$ are also zeros. Then $(x - 3i)(x + 3i) = x^2 + 9$ and $(x - 1 - i)(x - 1 + i) = (x - 1)^2 + 1 = x^2 - 2x + 2$. The factor $x^2 - 9$ has the real zeros $\\pm 3$, $x^2 + 3$ has zeros $\\pm i\\sqrt{3}$, and $x^2 + 2x + 2$ has zeros $-1 \\pm i$.',
     partNumber: 6,
-    partTitle: 'Complex Conjugate Roots & Building Polynomials',
+    partTitle: 'Conjugate Pairs & Building Polynomials from Zeros',
   },
   {
     id: 'fta-ent-6b',
-    question: 'A degree-4 polynomial with real coefficients has $2 + i$ as a zero and $3$ as a zero of multiplicity 1. Which must be true of its remaining two zeros, counting multiplicity?',
+    question: 'Given that $2 + i$ is a zero of $p(x) = x^3 - 3x^2 + x + 5$, what are the other two zeros?',
     options: [
-      'Both are non-real numbers',
-      'One is $2 - i$ and the other is real',
-      'One is $-2 - i$ and the other is real',
-      'One is $2 - i$ and the other is non-real',
+      '$-2 - i$ and $-1$',
+      '$2 - i$ and $-1$',
+      '$2 - i$ and $-5$',
+      '$-2 + i$ and $-1$',
     ],
     correctIndex: 1,
-    explanation: 'Real coefficients force the conjugate $2 - i$ to be a zero. That leaves one zero; if it were non-real its conjugate would also be needed, making 5 zeros for a degree-4 polynomial, so it must be real.',
+    explanation: 'Real coefficients force the conjugate $2 - i$ to be a zero, and $(x - 2 - i)(x - 2 + i) = x^2 - 4x + 5$. Long division gives $p(x) = (x^2 - 4x + 5)(x + 1)$, so the third zero is $-1$ (check: $p(-1) = -1 - 3 - 1 + 5 = 0$, while $p(-5) \\ne 0$).',
     partNumber: 6,
-    partTitle: 'Complex Conjugate Roots & Building Polynomials',
+    partTitle: 'Conjugate Pairs & Building Polynomials from Zeros',
   },
 
   // Part 7 — Mixed Practice & Mastery Check
   {
     id: 'fta-ent-7a',
-    question: 'Given that $p(-3) = 0$ for $p(x) = x^3 + x^2 - 7x - 3$, what are all the zeros of $p$?',
+    question: 'What are the solutions of $2x^2 - 4x + 5 = 0$?',
     options: [
-      '$-3, -1 \\pm \\sqrt{2}$',
-      '$-3, 1 \\pm \\sqrt{2}$',
-      '$-3, 1 \\pm 2\\sqrt{2}$',
-      '$-3, 1 \\pm i\\sqrt{2}$',
+      '$2 \\pm \\sqrt{6}\\,i$',
+      '$-1 \\pm \\frac{\\sqrt{6}}{2}i$',
+      '$1 \\pm \\frac{\\sqrt{6}}{2}i$',
+      '$1 \\pm \\frac{\\sqrt{6}}{4}i$',
     ],
-    correctIndex: 1,
-    explanation: 'Synthetic division by $x + 3$ gives the quotient $x^2 - 2x - 1$. The quadratic formula gives $x = \\frac{2 \\pm \\sqrt{4 + 4}}{2} = \\frac{2 \\pm 2\\sqrt{2}}{2} = 1 \\pm \\sqrt{2}$.',
+    correctIndex: 2,
+    explanation: 'The discriminant is $16 - 40 = -24$, so $x = \\frac{4 \\pm \\sqrt{-24}}{4} = \\frac{4 \\pm 2i\\sqrt{6}}{4} = 1 \\pm \\frac{\\sqrt{6}}{2}i$. Dividing by $2$ instead of $2a = 4$ gives $2 \\pm \\sqrt{6}\\,i$, forgetting that $-b = +4$ gives a real part of $-1$, and leaving $\\sqrt{24}$ as $\\sqrt{6}$ gives the $\\frac{\\sqrt{6}}{4}$ version.',
     partNumber: 7,
     partTitle: 'Mixed Practice & Mastery Check',
   },
@@ -201,7 +207,7 @@ const questions: EntranceQuizQuestion[] = [
     question: 'The polynomial $p$ has real coefficients, leading coefficient 1 and the least possible degree, a zero at $x = 2$ of multiplicity 2, and a zero at $x = -i$. What is $p(0)$?',
     options: ['$-4$', '$4i$', '$-2$', '$4$'],
     correctIndex: 3,
-    explanation: 'The conjugate $i$ must also be a zero, so $p(x) = (x - 2)^2(x + i)(x - i) = (x - 2)^2(x^2 + 1)$. Then $p(0) = (4)(1) = 4$. Leaving out the conjugate gives $4i$.',
+    explanation: 'The conjugate $i$ must also be a zero, so $p(x) = (x - 2)^2(x + i)(x - i) = (x - 2)^2(x^2 + 1)$. Then $p(0) = (4)(1) = 4$. Leaving out the conjugate gives $(x - 2)^2(x + i)$ with $p(0) = 4i$, and using $(x - 2)$ once gives $-2$.',
     partNumber: 7,
     partTitle: 'Mixed Practice & Mastery Check',
   },
@@ -216,9 +222,9 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 1, partTitle: 'Zeros, Factors & the Connection Between Them' },
     { partNumber: 2, partTitle: 'Core Factoring Techniques' },
     { partNumber: 3, partTitle: 'Zeros from Graphs, Tables & a Known Factor' },
-    { partNumber: 4, partTitle: 'Synthetic Division & Peeling Off Factors' },
-    { partNumber: 5, partTitle: 'The Fundamental Theorem of Algebra' },
-    { partNumber: 6, partTitle: 'Complex Conjugate Roots & Building Polynomials' },
+    { partNumber: 4, partTitle: 'Dividing Out a Known Factor' },
+    { partNumber: 5, partTitle: 'The Fundamental Theorem of Algebra, Multiplicity & Non-Real Zeros' },
+    { partNumber: 6, partTitle: 'Conjugate Pairs & Building Polynomials from Zeros' },
     { partNumber: 7, partTitle: 'Mixed Practice & Mastery Check' },
   ]
 }

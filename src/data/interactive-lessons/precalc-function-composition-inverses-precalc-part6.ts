@@ -7,7 +7,7 @@ export const precalcCompositionPart6Data = {
       content: `
 # 📐 Verifying Inverses & Algebraic Techniques
 
-**Part 6 of 7**
+**Part 6 of 7 — Verifying Inverses & Algebraic Techniques**
 
 ### How to Verify Two Functions Are Inverses
 
@@ -42,7 +42,7 @@ Swap: $x = (y-2)^2+3$
 
 $(y-2)^2 = x-3$
 
-$y = 2+\\sqrt{x-3}$ (positive root, since $x \\geq 2$)
+$y = 2+\\sqrt{x-3}$ (positive root, since the inverse's outputs are the original inputs, $y \\geq 2$); domain $x \\geq 3$
 
 ### Technique 2: Implicit Solving
 
@@ -50,7 +50,7 @@ $f(x) = \\frac{x^2+1}{x^2-1}, x > 1$
 
 $x = \\frac{y^2+1}{y^2-1} \\implies x(y^2-1) = y^2+1 \\implies xy^2-x = y^2+1$
 
-$y^2(x-1) = x+1 \\implies y^2 = \\frac{x+1}{x-1} \\implies y = \\sqrt{\\frac{x+1}{x-1}}$
+$y^2(x-1) = x+1 \\implies y^2 = \\frac{x+1}{x-1} \\implies y = \\sqrt{\\frac{x+1}{x-1}}, \\; x > 1$
       `
     },
     {
@@ -66,7 +66,7 @@ Some functions are their own inverse: $f(f(x)) = x$.
 Examples:
 - $f(x) = \\frac{1}{x}$: $f(f(x)) = \\frac{1}{1/x} = x$ ✓
 - $f(x) = -x$: $f(f(x)) = -(-x) = x$ ✓
-- $f(x) = \\frac{a-x}{1+ax}$ for certain $a$
+- $f(x) = 5 - x$: $f(f(x)) = 5 - (5 - x) = x$ ✓
 
 ### Composition of Inverses
 
@@ -179,7 +179,7 @@ $f(x)=2x+5, g(x)=\\frac{x-5}{2}$
           },
           {
             question: 'If $f(1) = 3$ and $f(5) = 11$, what is the average rate of change of $f^{-1}$ on the interval $[3, 11]$?',
-            options: ['$\\frac{1}{2}$', '$-\\frac{1}{2}$', '$\\frac{11 - 3}{5 - 1}$', '$-\\frac{5 - 1}{11 - 3}$'],
+            options: ['$\\frac{1}{2}$', '$-\\frac{1}{2}$', '$\\frac{11 - 3}{5 - 1}$', '$8$'],
             correctAnswer: 0,
             explanation: 'Swapping inputs and outputs gives $f^{-1}(3) = 1$ and $f^{-1}(11) = 5$, so the rate is $\\frac{5 - 1}{11 - 3} = \\frac{1}{2}$, the reciprocal of the rate of $f$, which is $2$. The fraction $\\frac{11-3}{5-1} = 2$ is the rate of $f$ itself, not of its inverse.'
           }

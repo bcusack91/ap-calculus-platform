@@ -2545,9 +2545,8 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
       return
     }
 
-    const isCorrect = correctAnswers[key].some(correct => 
-      userAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1').replace(/([a-z])-(?=[a-z])/g, '$1')
-    )
+    // Numeric equivalence (lesson-answer-match): 1/√2, 0.5, (√3)/2, -(1/2) and 0.707 all count.
+    const isCorrect = correctAnswers[key].some((correct) => isAnswerMatch(answers[key], correct))
     
     setChecked({ ...checked, [key]: isCorrect })
 
@@ -2555,12 +2554,7 @@ function UnitCircleGame({ onComplete }: { onComplete?: () => void }) {
     const allKeys = Object.keys(correctAnswers)
     const allAnswered = allKeys.every(k => answers[k].trim() !== '')
     if (allAnswered) {
-      const allRight = allKeys.every(k => {
-        const uAnswer = answers[k].trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1').replace(/([a-z])-(?=[a-z])/g, '$1')
-        return correctAnswers[k].some(correct => 
-          uAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1').replace(/([a-z])-(?=[a-z])/g, '$1')
-        )
-      })
+      const allRight = allKeys.every((k) => correctAnswers[k].some((correct) => isAnswerMatch(answers[k], correct)))
       if (allRight) {
         setAllCorrect(true)
         // Call onComplete when all answers are correct
@@ -2896,9 +2890,8 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
       return
     }
 
-    const isCorrect = correctAnswers[key].some(
-      (correct) => userAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1').replace(/([a-z])-(?=[a-z])/g, '$1')
-    )
+    // Numeric equivalence (lesson-answer-match): 1/√2, 0.5, (√3)/2, -(1/2) and 0.707 all count.
+    const isCorrect = correctAnswers[key].some((correct) => isAnswerMatch(answers[key], correct))
     setChecked({ ...checked, [key]: isCorrect })
 
     // Check if all fields are filled and correct
@@ -2906,10 +2899,7 @@ function FullUnitCircleGame({ onComplete }: { onComplete?: () => void }) {
     const allAnswered = allKeys.every((k) => answers[k]?.trim() !== '')
     
     if (allAnswered) {
-      const allRight = allKeys.every((k) => {
-        const uAnswer = answers[k].trim().toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1').replace(/([a-z])-(?=[a-z])/g, '$1')
-        return correctAnswers[k].some((correct) => uAnswer === correct.toLowerCase().replace(/\s+/g, '').replace(/[\u2212\u2013\u2014]/g, '-').replace(/(\d),(?=\d{3}(?!\d))/g, '$1').replace(/([a-z])-(?=[a-z])/g, '$1'))
-      })
+      const allRight = allKeys.every((k) => correctAnswers[k].some((correct) => isAnswerMatch(answers[k], correct)))
       if (allRight) {
         setAllCorrect(true)
         if (onComplete) {

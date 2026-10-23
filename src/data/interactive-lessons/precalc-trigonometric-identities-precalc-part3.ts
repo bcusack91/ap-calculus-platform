@@ -1,3 +1,10 @@
+const figUnitCircle = {
+  svg: '<svg viewBox="0 0 370 270" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><title>Unit circle with the point at angle theta, its reflection across the x-axis at angle minus theta (same x-coordinate, opposite y-coordinate) and its reflection across the line y = x at angle pi/2 minus theta (coordinates swapped)</title><g class="fig-muted"><circle cx="135" cy="135" r="90" fill="none" stroke="currentColor" stroke-width="1.2"/></g><g stroke="currentColor" stroke-width="1.3"><line x1="18" y1="135" x2="252" y2="135"/><line x1="135" y1="252" x2="135" y2="18"/></g><g class="fig-muted"><line x1="214.5" y1="55.5" x2="55.5" y2="214.5" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/></g><g class="fig-accent"><line x1="135" y1="135" x2="208.2" y2="82.7" stroke="currentColor" stroke-width="1.8"/></g><g class="fig-accent"><circle cx="208.2" cy="82.7" r="4" fill="currentColor"/></g><g class="fig-accent"><text x="216.2" y="78.7" font-size="10.5" fill="currentColor" text-anchor="start">(cos θ, sin θ)</text></g><g class="fig-accent-2"><line x1="135" y1="135" x2="208.2" y2="187.3" stroke="currentColor" stroke-width="1.8"/></g><g class="fig-accent-2"><circle cx="208.2" cy="187.3" r="4" fill="currentColor"/></g><g class="fig-accent-2"><text x="216.2" y="199.3" font-size="10.5" fill="currentColor" text-anchor="start">(cos θ, −sin θ)</text></g><g class="fig-accent-2"><line x1="135" y1="135" x2="187.3" y2="61.8" stroke="currentColor" stroke-width="1.8"/></g><g class="fig-accent-2"><circle cx="187.3" cy="61.8" r="4" fill="currentColor"/></g><g class="fig-accent-2"><text x="195.3" y="55.8" font-size="10.5" fill="currentColor" text-anchor="start">(sin θ, cos θ)</text></g><g class="fig-accent"><text x="177" y="123.5" font-size="11" fill="currentColor" text-anchor="middle">θ</text></g><g class="fig-accent-2"><text x="177" y="150.5" font-size="11" fill="currentColor" text-anchor="middle">−θ</text></g><g class="fig-accent-2"><text x="147" y="65.2" font-size="10.5" fill="currentColor" text-anchor="end">π/2 − θ</text></g><g class="fig-muted"><text x="258" y="36" font-size="10.5" fill="currentColor" text-anchor="end">y = x</text></g></svg>',
+  alt: 'Unit circle showing the point at angle theta with coordinates (cos theta, sin theta); its reflection across the x-axis at angle negative theta with coordinates (cos theta, negative sin theta); and its reflection across the dashed line y = x at angle pi/2 minus theta with coordinates (sin theta, cos theta).',
+  caption: 'Negating $\\theta$ reflects the point across the $x$-axis; replacing $\\theta$ by $\\frac{\\pi}{2} - \\theta$ reflects it across the line $y = x$.',
+  size: 'md' as const,
+}
+
 export const precalcTrigIdentitiesPart3Data = {
   topicSlug: 'trigonometric-identities-precalc',
   sections: [
@@ -9,26 +16,25 @@ export const precalcTrigIdentitiesPart3Data = {
 
 **Part 3 of 7**
 
-**Even-odd** identities describe what happens when you negate an angle. **Cofunction** identities link a function to its complement. Both are shortcuts for rewriting expressions without a calculator.
+**Even-odd** identities describe what happens when you negate an angle. **Cofunction** identities link a function to its complement. Both are equivalent forms you can read straight off the unit circle, and both are special cases of the sum and difference identities in Part 4.
 
 ### Even-Odd Identities
 
 | Function | $f(-\\theta)$ | Type |
 |:---------|:-------------|:-----|
 | $\\cos(-\\theta)$ | $\\cos\\theta$ | **Even** |
-| $\\sec(-\\theta)$ | $\\sec\\theta$ | **Even** |
 | $\\sin(-\\theta)$ | $-\\sin\\theta$ | **Odd** |
-| $\\csc(-\\theta)$ | $-\\csc\\theta$ | **Odd** |
 | $\\tan(-\\theta)$ | $-\\tan\\theta$ | **Odd** |
-| $\\cot(-\\theta)$ | $-\\cot\\theta$ | **Odd** |
 
-> **Memory aid**: Only **cosine** and **secant** are even — the "co-s" pair. Everything else is odd.
+The reciprocal and quotient functions inherit these: $\\sec(-\\theta) = \\sec\\theta$ (even, like cosine), while $\\csc(-\\theta) = -\\csc\\theta$ and $\\cot(-\\theta) = -\\cot\\theta$ (odd, like sine and tangent).
+
+> **Why**: cosine is the $x$-coordinate, which a reflection across the $x$-axis leaves unchanged, so cosine (and secant, its reciprocal) is even. Every other function involves $\\sin\\theta$, the $y$-coordinate, which flips sign, so they are odd.
 
 ### Cofunction Identities (Complementary Angles)
 
 $$\\boxed{\\sin\\theta = \\cos\\!\\left(\\frac{\\pi}{2} - \\theta\\right) \\qquad \\cos\\theta = \\sin\\!\\left(\\frac{\\pi}{2} - \\theta\\right)}$$
 
-$$\\tan\\theta = \\cot\\!\\left(\\frac{\\pi}{2} - \\theta\\right) \\qquad \\sec\\theta = \\csc\\!\\left(\\frac{\\pi}{2} - \\theta\\right)$$
+The same swap works for the other pairs: $\\tan\\theta = \\cot(\\frac{\\pi}{2} - \\theta)$ and $\\sec\\theta = \\csc(\\frac{\\pi}{2} - \\theta)$.
 
 > The **co** in cosine, cosecant, cotangent stands for **complement**!
       `
@@ -55,16 +61,19 @@ $$\\sin \\frac{2\\pi}{5} = \\cos\\!\\left(\\frac{\\pi}{2} - \\frac{2\\pi}{5}\\ri
 
 (Work in tenths: $\\frac{\\pi}{2} = \\frac{5\\pi}{10}$ and $\\frac{2\\pi}{5} = \\frac{4\\pi}{10}$.)
 
-### Example 4: Show that $\\tan(-\\theta) + \\cot(\\frac{\\pi}{2} - \\theta)$ simplifies to $0$
+### Example 4: Show that $\\sin\\!\\left(x + \\frac{\\pi}{2}\\right)$ and $\\cos x$ are equivalent
 
-$$\\tan(-\\theta) + \\cot(\\frac{\\pi}{2} - \\theta) = -\\tan\\theta + \\tan\\theta = 0$$
+Use the cofunction identity and the fact that cosine is even:
 
-The cofunction identity gives $\\cot(\\frac{\\pi}{2} - \\theta) = \\tan\\theta$, and the even-odd identity gives $\\tan(-\\theta) = -\\tan\\theta$.
+$$\\sin\\!\\left(x + \\frac{\\pi}{2}\\right) = \\cos\\!\\left(\\frac{\\pi}{2} - \\left(x + \\frac{\\pi}{2}\\right)\\right) = \\cos(-x) = \\cos x$$
+
+> 💡 **Phase shifts as identities:** this is exactly why shifting the sine graph **left** by $\\frac{\\pi}{2}$ produces the cosine graph. The algebra and the picture agree. (Part 4 gives a second proof with the sum identity.)
       `
     },
     {
       id: 'p3-unit-circle',
       type: 'text' as const,
+      figure: figUnitCircle,
       content: `
 ## 🔍 Why These Work — Unit Circle Reasoning
 
@@ -77,11 +86,11 @@ Negating $\\theta$ reflects the point $(\\cos\\theta,\\,\\sin\\theta)$ to $(\\co
 | $x$-coordinate ($\\cos$) | Unchanged | $\\cos(-\\theta) = \\cos\\theta$ — **even** |
 | $y$-coordinate ($\\sin$) | Flipped sign | $\\sin(-\\theta) = -\\sin\\theta$ — **odd** |
 
-### Cofunction: $\\frac{\\pi}{2}$ Rotation
+### Cofunction: Reflection Across the Line $y = x$
 
 The point at angle $\\theta$ has coordinates $(\\cos\\theta, \\sin\\theta)$.
 
-The point at angle $\\frac{\\pi}{2} - \\theta$ has coordinates $(\\sin\\theta, \\cos\\theta)$ — the $x$ and $y$ swap!
+The point at angle $\\frac{\\pi}{2} - \\theta$ has coordinates $(\\sin\\theta, \\cos\\theta)$ — the $x$ and $y$ swap, which is what reflecting across the line $y = x$ does. (It is **not** a rotation: a quarter-turn rotation would send the point to $(-\\sin\\theta, \\cos\\theta)$.)
 
 This swap is exactly why $\\sin\\theta = \\cos(\\frac{\\pi}{2} - \\theta)$.
 
@@ -125,15 +134,15 @@ This swap is exactly why $\\sin\\theta = \\cos(\\frac{\\pi}{2} - \\theta)$.
             explanation: 'Cofunction: $\\cos \\frac{\\pi}{5} = \\sin(\\frac{\\pi}{2} - \\frac{\\pi}{5}) = \\sin \\frac{3\\pi}{10}$. Changing only the function without changing the angle, or changing only the angle without changing the function, breaks the identity.'
           },
           {
-            question: '$\\tan(-\\theta)\\cot(-\\theta)$ equals:',
+            question: 'Which point on the unit circle corresponds to the angle $-\\theta$, if the angle $\\theta$ corresponds to $(a, b)$?',
             options: [
-              '$-1$',
-              '$\\sec^2\\theta$',
-              '$1$',
-              '$\\tan^2\\theta$'
+              '$(-a, b)$',
+              '$(b, a)$',
+              '$(a, -b)$',
+              '$(-a, -b)$'
             ],
             correctAnswer: 2,
-            explanation: '$\\tan(-\\theta) = -\\tan\\theta$, $\\cot(-\\theta) = -\\cot\\theta$. Product: $(-\\tan\\theta)(-\\cot\\theta) = \\tan\\theta\\cot\\theta = 1$.'
+            explanation: 'Negating the angle reflects the point across the $x$-axis, keeping $x = a = \\cos\\theta$ and flipping $y$ to $-b = -\\sin\\theta$. $(b, a)$ is the reflection across $y = x$ (the angle $\\frac{\\pi}{2} - \\theta$), $(-a, b)$ is the angle $\\pi - \\theta$, and $(-a, -b)$ is $\\theta + \\pi$.'
           }
         ]
       }
@@ -144,7 +153,7 @@ This swap is exactly why $\\sin\\theta = \\cos(\\frac{\\pi}{2} - \\theta)$.
       content: `
 **Even-Odd & Cofunction Practice** 🧮
 
-**1)** $\\cos(-\\frac{2\\pi}{3}) = \\cos(\\,?\\cdot\\pi)$ with the angle in $[0, \\pi]$. Enter its coefficient of $\\pi$ (type \`2/3\` for $\\frac{2\\pi}{3}$). (e.g., $\\cos(-\\frac{\\pi}{4}) = \\cos \\frac{\\pi}{4}$ since cosine is even)
+**1)** $\\cos(-\\frac{2\\pi}{3}) = \\cos(\\,?\\cdot\\pi)$ with the angle in $[0, \\pi]$. Enter its coefficient of $\\pi$ (type \`3/4\` for $\\frac{3\\pi}{4}$). (e.g., $\\cos(-\\frac{\\pi}{4}) = \\cos \\frac{\\pi}{4}$ since cosine is even)
 
 **2)** $\\sin \\frac{\\pi}{12} = \\cos(\\,?\\cdot\\pi)$ with the angle in $[0, \\pi]$. Enter the coefficient of that angle (the complementary angle). (e.g., $\\sin \\frac{\\pi}{6} = \\cos \\frac{\\pi}{3}$ since $\\frac{\\pi}{6} + \\frac{\\pi}{3} = \\frac{\\pi}{2}$)
 

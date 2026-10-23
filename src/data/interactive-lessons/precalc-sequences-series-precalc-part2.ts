@@ -17,6 +17,8 @@ $$a_n = a_1 \\cdot r^{n-1}$$
 
 where $r = \\frac{a_{n+1}}{a_n}$ is the **common ratio**.
 
+AP form: $g_n = g_0 r^n$ (counting from term $0$), or from any known term $g_n = g_k r^{\\,n-k}$. For $3, 6, 12, 24, \\ldots$: $g_n = 3 \\cdot 2^{n-1}$ from $g_1$, or $g_n = 3 \\cdot 2^n$ from $g_0$.
+
 ### Examples
 
 | Sequence | $a_1$ | $r$ |
@@ -26,7 +28,7 @@ where $r = \\frac{a_{n+1}}{a_n}$ is the **common ratio**.
 | $1, -3, 9, -27, \\ldots$ | $1$ | $-3$ |
 | $5, 5, 5, 5, \\ldots$ | $5$ | $1$ |
 
-> 💡 If $|r| > 1$, terms grow; if $|r| < 1$, terms shrink; if $r < 0$, terms alternate sign.
+> 💡 If $|r| > 1$, terms grow in absolute value; if $|r| < 1$, terms shrink in absolute value; if $r < 0$, terms alternate sign.
       `
     },
     {
@@ -49,14 +51,11 @@ A quantity that changes by the same **percent** each step is geometric:
 
 $a_4 = 24000(0.85)^3 = 24000(0.614125) = 14739$, i.e. \\$14,739 in year $4$.
 
-### Geometric Mean
+### A Missing Middle Term
 
-The geometric mean of positive $a$ and $b$ is $\\sqrt{ab}$. It is the missing middle term of a geometric sequence.
+A geometric sequence of positive terms has $g_0 = 4$ and $g_2 = 16$. Then $r^2 = \\frac{16}{4} = 4$, so $r = 2$ and $g_1 = 8$.
 
-Insert a geometric mean between 4 and 16:
-$\\sqrt{4 \\cdot 16} = \\sqrt{64} = 8$
-
-Sequence: $4, 8, 16$ with $r = 2$.
+Sequence: $4, 8, 16$ with $r = 2$. (Without "positive terms", $r = -2$ and $g_1 = -8$ would also work.)
       `
     },
     {
@@ -70,7 +69,7 @@ Sequence: $4, 8, 16$ with $r = 2$.
 | Pattern | Add constant $d$ | Multiply by constant $r$ |
 | Formula | $a_n = a_1+(n-1)d$ | $a_n = a_1 \\cdot r^{n-1}$ |
 | Growth | Linear | Exponential |
-| Graph | Straight line | Exponential curve |
+| Graph | Points on a line | Points on an exponential curve |
 
 ### Key Insight
 
@@ -143,7 +142,7 @@ Geometric sequences grow by **multiplication** → exponential growth (or decay 
             correctAnswer: 1
           },
           {
-            label: 'The geometric mean of 3 and 27 is:',
+            label: 'A geometric sequence of positive terms has $g_0 = 3$ and $g_2 = 27$. Then $g_1$ =',
             options: ['$15$', '$9$', '$81$', '$\\sqrt{30}$'],
             correctAnswer: 1
           },
@@ -160,9 +159,9 @@ Geometric sequences grow by **multiplication** → exponential growth (or decay 
         ],
         correctAnswers: ['Grows without bound', '$9$', 'Alternate in sign', 'Geometric sequence'],
         hint1: '$|r|>1$ means each term is larger in magnitude.',
-        hint2: '$\\sqrt{3 \\cdot 27} = \\sqrt{81} = 9$.',
+        hint2: '$r^2 = 27/3 = 9$, so $r = 3$ and $g_1 = 9$.',
         hint3: 'Multiplying by a negative flips the sign.',
-        explanation: '$|r|>1$: the terms grow without bound in size. GM of 3 and 27: $9$. Negative $r$: alternating signs. Compound interest: multiply by $(1+r)$ each period → geometric.'
+        explanation: '$|r|>1$: the terms grow without bound in size. $g_1 = 3 \\cdot 3 = 9$. Negative $r$: alternating signs. Compound interest: multiply by $(1 + \\text{rate})$ each period → geometric.'
       }
     },
     {

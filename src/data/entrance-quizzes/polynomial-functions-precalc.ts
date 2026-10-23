@@ -86,15 +86,15 @@ const questions: EntranceQuizQuestion[] = [
     partTitle: 'Crossing, Bouncing & Flattening',
   },
 
-  // Part 4 — Long Division, Synthetic Division & the Remainder Theorem
+  // Part 4 — Long Division, Equivalent Forms & the Factor Theorem
   {
     id: 'pfp-ent-4a',
-    question: 'What is the remainder when $p(x) = 2x^4 - 3x^3 + x - 7$ is divided by $x + 2$?',
-    options: ['$-37$', '$3$', '$47$', '$-1$'],
+    question: 'Which equivalent form shows that $(x - 1)$ is NOT a factor of $p(x) = 2x^3 - x^2 + 3$?',
+    options: ['$p(x) = (x-1)(2x^2 + x + 1)$', '$p(x) = (x-1)(2x^2 - 3x + 3)$', '$p(x) = (x-1)(2x^2 + x + 1) + 4$', '$p(x) = (x+1)(2x^2 - 3x + 3)$'],
     correctIndex: 2,
-    explanation: 'By the Remainder Theorem the remainder is $p(-2) = 2(16) - 3(-8) + (-2) - 7 = 32 + 24 - 2 - 7 = 47$. Using $p(2) = 3$ takes the wrong sign for $c$.',
+    explanation: 'Multiply back: $(x-1)(2x^2 + x + 1) = 2x^3 - x^2 - 1$, and adding $4$ gives $2x^3 - x^2 + 3$. The nonzero remainder $4 = p(1)$ means $(x - 1)$ is not a factor. The other forms either claim an exact division that does not multiply back to $p(x)$ or use the wrong divisor.',
     partNumber: 4,
-    partTitle: 'Long Division, Synthetic Division & the Remainder Theorem',
+    partTitle: 'Long Division, Equivalent Forms & the Factor Theorem',
   },
   {
     id: 'pfp-ent-4b',
@@ -108,7 +108,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 0,
     explanation: 'Synthetic division with $c = -2$ on $2, 1, -5, 4$ gives $2, -3, 1$ with remainder $2$, so the result is $2x^2 - 3x + 1 + \\frac{2}{x + 2}$. Using $c = 2$ gives $2x^2 + 5x + 5$ with remainder $14$, which is division by $x - 2$.',
     partNumber: 4,
-    partTitle: 'Long Division, Synthetic Division & the Remainder Theorem',
+    partTitle: 'Long Division, Equivalent Forms & the Factor Theorem',
   },
 
   // Part 5 — Complex Conjugate Pairs & Even/Odd Polynomials
@@ -201,7 +201,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
     { partNumber: 1, partTitle: 'Degree, Leading Term & End Behavior' },
     { partNumber: 2, partTitle: 'Finding Zeros & Writing in Factored Form' },
     { partNumber: 3, partTitle: 'Crossing, Bouncing & Flattening' },
-    { partNumber: 4, partTitle: 'Long Division, Synthetic Division & the Remainder Theorem' },
+    { partNumber: 4, partTitle: 'Long Division, Equivalent Forms & the Factor Theorem' },
     { partNumber: 5, partTitle: 'Complex Conjugate Pairs & Even/Odd Polynomials' },
     { partNumber: 6, partTitle: 'Constructing Polynomials from Given Information' },
     { partNumber: 7, partTitle: 'Putting It All Together' },

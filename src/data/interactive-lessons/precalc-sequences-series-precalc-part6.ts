@@ -13,17 +13,15 @@ export const precalcSequencesPart6Data = {
 
 $$\\begin{array}{c} 1 \\\\ 1 \\quad 1 \\\\ 1 \\quad 2 \\quad 1 \\\\ 1 \\quad 3 \\quad 3 \\quad 1 \\\\ 1 \\quad 4 \\quad 6 \\quad 4 \\quad 1 \\end{array}$$
 
-Each number is the sum of the two numbers above it.
+Each interior number is the sum of the two numbers above it.
 
 ### Binomial Coefficients
 
-$$\\binom{n}{k} = \\frac{n!}{k!(n-k)!}$$
-
-Read "$n$ choose $k$" — the number of ways to select $k$ items from $n$.
+The entries of row $n$ are written $\\binom{n}{0}, \\binom{n}{1}, \\ldots, \\binom{n}{n}$. Read them straight from Pascal's triangle: row $4$ gives $\\binom{4}{0} = 1$, $\\binom{4}{1} = 4$, $\\binom{4}{2} = 6$, $\\binom{4}{3} = 4$, $\\binom{4}{4} = 1$.
 
 ### The Binomial Theorem
 
-The coefficients of $(a+b)^n$ are the entries of row $n$ of Pascal's Triangle:
+The coefficients of $(a+b)^n$ are the entries of row $n$ of Pascal's Triangle (the single $1$ at the top is row $0$, so row $4$ is $1, 4, 6, 4, 1$):
 
 $$(a+b)^n = \\binom{n}{0}a^n + \\binom{n}{1}a^{n-1}b + \\binom{n}{2}a^{n-2}b^2 + \\cdots + \\binom{n}{n}b^n$$
       `
@@ -75,10 +73,11 @@ $\\binom{n}{k} = \\binom{n}{n-k}$, so each row of Pascal's Triangle reads the sa
 
 Example: $\\binom{7}{2} = \\binom{7}{5} = 21$
 
-### Pascal's Rule
-$\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}$
+### Building the Next Row
 
-This is why each entry in Pascal's triangle is the sum of the two above it!
+Each interior entry is the sum of the two entries above it, so row $5$ comes from row $4$: $1, (1+4), (4+6), (6+4), (4+1), 1 = 1, 5, 10, 10, 5, 1$.
+
+> 🔗 This is CED 1.11 material (Unit 1, polynomial equivalent forms), placed here because expanding $(a+b)^n$ is the last algebraic tool you need before the exponential and logarithmic units.
 
 ### Watch the Signs
 
@@ -99,7 +98,7 @@ $(x - 2)^3 = x^3 - 6x^2 + 12x - 8$
             question: '$\\binom{6}{2}$ equals:',
             options: ['$12$', '$15$', '$20$', '$30$'],
             correctAnswer: 1,
-            explanation: '$\\frac{6!}{2!4!} = \\frac{720}{2 \\cdot 24} = 15$.'
+            explanation: 'Row 6 of Pascal\'s triangle is $1, 6, 15, 20, 15, 6, 1$; entry $k = 2$ is $15$.'
           },
           {
             question: 'The coefficient of $x^3$ in $(x+1)^5$ is:',
@@ -131,7 +130,7 @@ $(x - 2)^3 = x^3 - 6x^2 + 12x - 8$
       exercise: {
         boxes: 3,
         correctAnswers: ['56', '10', '54'],
-        hint1: '$\\frac{8!}{3!5!} = \\frac{8 \\cdot 7 \\cdot 6}{6} = 56$.',
+        hint1: 'Row 8 is $1, 8, 28, 56, 70, 56, 28, 8, 1$; entry $k = 3$ is $56$.',
         hint2: '$\\binom{5}{1}x^4(2)^1 = 5 \\cdot 2 \\cdot x^4 = 10x^4$. Coefficient: $10$.',
         hint3: 'Row $4$ is $1, 4, 6, 4, 1$. The $x^2$ term is $6x^2(3)^2$.',
         explanation: '1) $56$. 2) $10$ (from $\\binom{5}{1} \\cdot 2$). 3) $\\binom{4}{2} \\cdot 3^2 = 6 \\cdot 9 = 54$.'

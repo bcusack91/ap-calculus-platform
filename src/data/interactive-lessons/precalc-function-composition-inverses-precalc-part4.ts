@@ -7,7 +7,7 @@ export const precalcCompositionPart4Data = {
       content: `
 # 📊 Composition with Tables & Graphs
 
-**Part 4 of 7**
+**Part 4 of 7 — Composition with Tables & Graphs**
 
 ### Reading from Tables
 
@@ -55,7 +55,7 @@ Check: does any output appear more than once? If yes, $f$ is NOT one-to-one.
 
 $(f \\circ f)(1)$: $f(1) = 3$, then $f(3) = 1$. So $(f \\circ f)(1) = 1$.
 
-This means $1$ and $3$ form a **2-cycle** under $f$.
+> ⚠️ If an inner output is **not** in the table, the composition is **undefined** from the table alone. With the table above, $(f \\circ g)(5)$ needs $f(5)$, which is not listed.
       `
     },
     {
@@ -77,13 +77,50 @@ Reflect the graph of $f$ across $y = x$.
 - If $f$ passes through $(2, 5)$, then $f^{-1}$ passes through $(5, 2)$
 - Increasing functions have increasing inverses
 - $x$-intercepts of $f$ become $y$-intercepts of $f^{-1}$
+- A graph has an inverse function only if it passes the horizontal line test
 
-### Fixed Points
-
-A **fixed point** is where $f(x) = x$ (the graph crosses $y = x$).
-
-At fixed points: $f(a) = a = f^{-1}(a)$. Both the function and its inverse share this point!
+*Aside:* where a graph crosses the line $y = x$, $f(a) = a$, so the function and its inverse share that point.
       `
+    },
+    {
+      id: 'p4-graph-check',
+      type: 'multiple-choice' as const,
+      figure: {
+        svg: '<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g class="fig-muted" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"><line x1="92" y1="200" x2="92" y2="20"/><line x1="144" y1="200" x2="144" y2="20"/><line x1="196" y1="200" x2="196" y2="20"/><line x1="248" y1="200" x2="248" y2="20"/><line x1="40" y1="164" x2="300" y2="164"/><line x1="40" y1="128" x2="300" y2="128"/><line x1="40" y1="92" x2="300" y2="92"/><line x1="40" y1="56" x2="300" y2="56"/></g><g class="fig-muted" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 4"><line x1="40" y1="200" x2="274" y2="38"/></g><text x="280" y="34" font-size="11" fill="currentColor">y = x</text><g stroke="currentColor" stroke-width="1.5"><line x1="30" y1="200" x2="305" y2="200"/><line x1="40" y1="210" x2="40" y2="12"/></g><text x="302" y="214" font-size="12" fill="currentColor">x</text><text x="46" y="18" font-size="12" fill="currentColor">y</text><g font-size="11" fill="currentColor" text-anchor="middle"><text x="92" y="214">1</text><text x="144" y="214">2</text><text x="196" y="214">3</text><text x="248" y="214">4</text></g><g font-size="11" fill="currentColor" text-anchor="end"><text x="34" y="168">1</text><text x="34" y="132">2</text><text x="34" y="96">3</text><text x="34" y="60">4</text></g><g class="fig-accent"><polyline points="40,56 144,200 248,128" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="40" cy="56" r="4" fill="currentColor"/><circle cx="144" cy="200" r="4" fill="currentColor"/><circle cx="248" cy="128" r="4" fill="currentColor"/><text x="60" y="48" font-size="13" fill="currentColor" font-style="italic">f</text></g><g class="fig-accent-2"><polyline points="40,92 196,200 248,164" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="40" cy="92" r="4" fill="currentColor"/><circle cx="196" cy="200" r="4" fill="currentColor"/><circle cx="248" cy="164" r="4" fill="currentColor"/><text x="110" y="124" font-size="13" fill="currentColor" font-style="italic">g</text></g></svg>',
+        alt: 'Two piecewise-linear graphs on axes from 0 to 4. The graph of f goes from (0, 4) down to (2, 0) and then up to (4, 2). The graph of g goes from (0, 3) down to (3, 0) and then up to (4, 1). The dashed line y = x is also drawn.',
+        caption: 'Figure. The graphs of $f$ (blue) and $g$ (red), with the line $y = x$ dashed.',
+      },
+      content: `
+**Use the graphs above.** 📈 Read each inner value from its graph first, then feed it into the outer graph.
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'What is $(f \\circ g)(1)$?',
+            options: ['$0$', '$2$', '$3$', '$4$'],
+            correctAnswer: 0,
+            explanation: 'From the graph of $g$, $g(1) = 2$. From the graph of $f$, $f(2) = 0$. So $(f \\circ g)(1) = 0$. Reading $f(1) = 2$ first gives the wrong order, and $3$ is $g(0)$.'
+          },
+          {
+            question: 'What is $(g \\circ f)(4)$?',
+            options: ['$1$', '$2$', '$0$', '$4$'],
+            correctAnswer: 0,
+            explanation: '$f(4) = 2$, then $g(2) = 1$. The value $2$ stops after the first step, and $0$ is $g(3)$.'
+          },
+          {
+            question: 'Is $f$ one-to-one on $0 \\leq x \\leq 4$?',
+            options: ['No, because $f(1) = f(4) = 2$', 'Yes, because its graph is made of line segments', 'Yes, because it crosses the line $y = x$ once', 'No, because $f(2) = 0$'],
+            correctAnswer: 0,
+            explanation: 'The horizontal line $y = 2$ meets the graph of $f$ twice, at $x = 1$ and $x = 4$, so two inputs share an output. Being piecewise linear or having a zero says nothing about one-to-one.'
+          },
+          {
+            question: 'Restricted to $0 \\leq x \\leq 2$, $f$ is one-to-one and passes through $(0, 4)$. Which point is on the graph of its inverse?',
+            options: ['$(4, 0)$', '$(0, 4)$', '$(-4, 0)$', '$(0, \\tfrac{1}{4})$'],
+            correctAnswer: 0,
+            explanation: 'The inverse swaps inputs and outputs: $f(0) = 4$ means $f^{-1}(4) = 0$, the point $(4, 0)$. On the graph this is the reflection of $(0, 4)$ across the line $y = x$.'
+          }
+        ]
+      }
     },
     {
       id: 'p4-mcq',
@@ -92,6 +129,7 @@ At fixed points: $f(a) = a = f^{-1}(a)$. Both the function and its inverse share
 **Tables & Graphs Quiz** 🎯
 
 Use this table:
+
 | $x$ | 1 | 2 | 3 | 4 |
 |:----|:--|:--|:--|:--|
 | $f(x)$ | 4 | 1 | 2 | 3 |
@@ -162,7 +200,7 @@ Use: $f(1)=3, f(2)=5, f(3)=7, f(4)=9$
             correctAnswer: 1
           },
           {
-            label: 'At a fixed point, $f(a) = a$. This means $f^{-1}(a) =$',
+            label: 'If the graph of $f$ crosses the line $y = x$ at $x = a$, then $f(a) = a$ and $f^{-1}(a) =$',
             options: ['$0$', '$1$', '$a$', '$-a$'],
             correctAnswer: 2
           },
@@ -176,7 +214,7 @@ Use: $f(1)=3, f(2)=5, f(3)=7, f(4)=9$
         hint1: 'Inverse swaps coordinates.',
         hint2: 'One-to-one: no repeated outputs.',
         hint3: 'If $f(a) = a$, then $f^{-1}(a) = a$ too.',
-        explanation: 'Swap coordinates for inverse. One-to-one: unique outputs. Fixed points lie on $y=x$. Inverse graphs reflect over $y=x$.'
+        explanation: 'Swap coordinates for inverse. One-to-one: unique outputs. A point on $y = x$ is shared by $f$ and $f^{-1}$. Inverse graphs reflect over $y=x$.'
       }
     },
     {

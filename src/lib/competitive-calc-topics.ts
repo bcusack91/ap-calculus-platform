@@ -1,8 +1,10 @@
 /**
- * Server side of the calculus competitive topic lists: the Topic rows of a
- * fixed-layout course (course-includes) plus the student's completion state.
- * Shared by /api/competitive/calculus-{ab,bc}-topics and the generic
- * /api/competitive/course-topics picker, so both show the same units.
+ * Server side of the competitive topic lists of a fixed-layout course
+ * (course-includes: AP Calculus AB/BC, AP Precalculus): its live Topic rows
+ * grouped by CED unit, plus the student's completion state. Shared by
+ * /api/competitive/calculus-{ab,bc}-topics, /api/competitive/precalculus-topics
+ * and the generic /api/competitive/course-topics picker, so all show the same
+ * units as the course hub.
  */
 import { prisma } from '@/lib/prisma'
 import { courseCategoryLayout, type CourseUnitSection } from '@/lib/course-includes'
@@ -40,11 +42,13 @@ export interface CompetitiveTopicsResponse {
 }
 
 /**
- * Units of a calculus competitive page with the student's completion state: a
- * topic counts as completed on COMPLETED/MASTERED progress at >= 80% mastery
- * or a passed exit quiz (or for an admin full-unlock account).
+ * Units of a fixed-layout course's competitive page with the student's
+ * completion state: a topic counts as completed on COMPLETED/MASTERED progress
+ * at >= 80% mastery or a passed exit quiz (or for an admin full-unlock
+ * account). A layout section with no live rows (AP Precalculus exam prep until
+ * its lessons exist) is dropped, so unit numbers always come from the layout.
  */
-export async function calcCompetitiveTopics(opts: { slug: string; userId: string; isAdmin: boolean }): Promise<CompetitiveTopicsResponse | null> {
+export async function layoutCompetitiveTopics(opts: { slug: string; userId: string; isAdmin: boolean }): Promise<CompetitiveTopicsResponse | null> {
   const found = await layoutTopicRows(opts.slug)
   if (!found) return null
   const { layout, rows } = found
@@ -82,3 +86,6 @@ export async function calcCompetitiveTopics(opts: { slug: string; userId: string
   const completedCount = units.reduce((s, u) => s + u.topics.filter((t) => t.completed).length, 0)
   return { units, totalTopics, completedCount, hasAnyCompleted: opts.isAdmin || completedCount > 0 }
 }
+
+/** The calculus routes' name for layoutCompetitiveTopics (same function). */
+export const calcCompetitiveTopics = layoutCompetitiveTopics

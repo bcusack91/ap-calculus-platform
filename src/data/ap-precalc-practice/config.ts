@@ -58,7 +58,7 @@ export const config: FullLengthExamConfig = {
           'Unit 1 — Polynomial & Rational Functions (30–40%)',
           'Unit 2 — Exponential & Logarithmic Functions (27–40%)',
           'Unit 3 — Trigonometric & Polar Functions (30–35%)',
-          'Unit 4 — Parameters, Vectors & Matrices (taught, but not assessed on the AP exam)',
+          'Only these three units are assessed on the AP exam',
         ],
       },
     ],

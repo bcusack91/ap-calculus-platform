@@ -7,9 +7,9 @@ export const precalcRationalPart3Data = {
       content: `
 # 🕳️ Holes & Removable Discontinuities
 
-**Part 3 of 7 — When Factors Cancel**
+**Part 3 of 7 — Holes & Removable Discontinuities**
 
-Not every denominator zero produces a vertical asymptote. When numerator and denominator share a common factor, canceling it creates a **hole** — a single missing point where the function is undefined but the graph has no dramatic blow-up.
+Not every denominator zero produces a vertical asymptote. When a factor $(x - c)$ cancels **completely** out of the denominator (the numerator carries at least as many copies of it), the result is a **hole** — a single missing point where the function is undefined but the graph has no dramatic blow-up.
       `
     },
     {
@@ -20,10 +20,12 @@ Not every denominator zero produces a vertical asymptote. When numerator and den
 
 When $q(c) = 0$, there are two possibilities:
 
-| Situation | $(x - c)$ cancels? | Result | Graph Behavior |
-|:----------|:-------------------:|:------:|:---------------|
-| Factor is in denominator only | ❌ No | **Vertical Asymptote** | Graph shoots to $\\pm\\infty$ |
-| Factor is in both numerator and denominator | ✅ Yes | **Hole** | Single missing point (open circle) |
+| Situation (compare multiplicities of $c$) | Result | Graph Behavior |
+|:----------|:------:|:---------------|
+| Multiplicity in denominator > multiplicity in numerator | **Vertical Asymptote** | Graph shoots to $\\pm\\infty$ |
+| Multiplicity in numerator ≥ multiplicity in denominator | **Hole** | Single missing point (open circle) |
+
+> Example: $\\dfrac{x-1}{(x-1)^2} = \\dfrac{1}{x-1}$ — one copy of $(x-1)$ survives in the denominator, so $x = 1$ is a **vertical asymptote**, not a hole. In $\\dfrac{(x-1)^2}{x-1} = x - 1$ the denominator's copy is gone, so $x = 1$ is a hole.
 
 ### The Key Principle
 
@@ -35,6 +37,11 @@ Canceling removes the factor from the expression, but the restriction $x \\neq c
     {
       id: 'p3-finding-holes',
       type: 'text' as const,
+      figure: {
+        svg: '<svg viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif"><g stroke="currentColor" stroke-width="1.5"><line x1="20" y1="150" x2="312" y2="150"/><line x1="160" y1="205" x2="160" y2="8"/></g><text x="306" y="166" font-size="12" fill="currentColor">x</text><text x="166" y="16" font-size="12" fill="currentColor">y</text><g class="fig-muted" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3"><line x1="220" y1="150" x2="220" y2="70"/><line x1="160" y1="70" x2="220" y2="70"/></g><text x="220" y="166" font-size="12" fill="currentColor" text-anchor="middle">2</text><text x="150" y="74" font-size="12" fill="currentColor" text-anchor="end">4</text><text x="150" y="114" font-size="12" fill="currentColor" text-anchor="end">2</text><text x="100" y="166" font-size="12" fill="currentColor" text-anchor="middle">-2</text><g class="fig-accent"><line x1="40" y1="190" x2="310" y2="10" stroke="currentColor" stroke-width="2.5"/><circle class="fig-bg" cx="220" cy="70" r="4.5" stroke="currentColor" stroke-width="2"/></g><text x="238" y="40" font-size="12" fill="currentColor">y = x + 2</text></svg>',
+        alt: 'Graph of y = (x^2 - 4)/(x - 2): the line y = x + 2 with an open circle at the point (2, 4), where the function is undefined.',
+        caption: 'Figure 1. $f(x) = \\dfrac{x^2 - 4}{x - 2}$ is the line $y = x + 2$ with a hole at $(2, 4)$; the hole\'s height is $\\lim_{x \\to 2} f(x) = 4$.',
+      },
       content: `
 ## 🔑 Finding Hole Coordinates
 
@@ -45,7 +52,7 @@ A hole is a **point**, not just an $x$-value. To find the full coordinates:
 | 1 | Factor completely | $\\frac{(x-2)(x+2)}{x-2}$ |
 | 2 | Identify common factors | $(x - 2)$ appears in both |
 | 3 | Cancel and note restriction | $f(x) = x + 2, \\quad x \\neq 2$ |
-| 4 | Evaluate simplified form at $x = c$ | $f(2) = 2 + 2 = 4$ |
+| 4 | Evaluate simplified form at $x = c$ — this is $\\lim_{x \\to 2} f(x)$ | $f(2) = 2 + 2 = 4$ |
 | 5 | Write hole coordinates | **Hole at $(2, 4)$** |
 
 ---
@@ -143,7 +150,7 @@ A hole is a **point**, not just an $x$-value. To find the full coordinates:
       exercise: {
         dropdowns: [
           {
-            label: 'When a factor cancels between numerator and denominator, the result is a',
+            label: 'When a factor cancels completely out of the denominator, the result is a',
             options: ['vertical asymptote', 'horizontal asymptote', 'hole (removable discontinuity)', 'slant asymptote']
           },
           {
@@ -152,7 +159,7 @@ A hole is a **point**, not just an $x$-value. To find the full coordinates:
           },
           {
             label: 'To find the $y$-coordinate of a hole at $x = c$, evaluate the',
-            options: ['original function at $x = c$', 'simplified function at $x = c$', 'derivative at $x = c$', 'denominator at $x = c$']
+            options: ['original function at $x = c$', 'simplified function at $x = c$', 'numerator at $x = c$', 'denominator at $x = c$']
           },
           {
             label: 'On a graph, a hole appears as',
@@ -194,7 +201,7 @@ A hole is a **point**, not just an $x$-value. To find the full coordinates:
               '$\\frac{(x-1)(x+1)}{(x-1)(x+1)}$'
             ],
             correctAnswer: 1,
-            explanation: '$\\frac{(x-1)^2}{(x-1)(x+3)}$: one $(x-1)$ cancels → hole at $x = 1$. The remaining denominator has $(x+3)$ → VA at $x = -3$. That is exactly one hole and one VA.'
+            explanation: '$\\frac{(x-1)^2}{(x-1)(x+3)}$: the numerator has two copies of $(x-1)$ and the denominator one, so the denominator\'s copy cancels completely → hole at $x = 1$. The remaining denominator has $(x+3)$ → VA at $x = -3$. That is exactly one hole and one VA.'
           }
         ]
       }

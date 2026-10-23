@@ -7,7 +7,7 @@ export const precalcExponentialPart4Data = {
       content: `
 # ☢️ Half-Life & Exponential Decay
 
-**Part 4 of 7**
+**Part 4 of 7 — Half-Life & Exponential Decay**
 
 **Half-life** is the time it takes for a quantity to reduce to half its current value.
 
@@ -178,7 +178,7 @@ $$T_{1/2} = \\frac{\\ln 2}{|-0.1|} = \\frac{0.6931}{0.1} \\approx 6.93 \\text{ h
         hint1: 'The exponent tells you how many half-life intervals have passed.',
         hint2: '$|k| = 0.05 = 5\\%$.',
         hint3: 'By definition, half-life is when $\\frac{1}{2}$ remains.',
-        explanation: '$t/T$ counts half-lives. $|k| = 0.05$ is a $5\\%$ continuous rate. One half-life leaves $\\frac{1}{2}$. Both formulas use $\\ln 2 \\approx 0.693$.'
+        explanation: '$t/T$ counts half-lives. $|k| = 0.05$ is a $5\\%$ continuous rate (about $4.9\\%$ per unit as a periodic rate, since $e^{-0.05} \\approx 0.951$). One half-life leaves $\\frac{1}{2}$. Both formulas use $\\ln 2 \\approx 0.693$.'
       }
     },
     {

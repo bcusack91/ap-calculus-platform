@@ -77,9 +77,12 @@ export const COURSE_BASELINES = {
     source: 'Section I: 42 MCQ in 90 min = 129 s on the exam; competitive items drop the long scenario, so 90 s.',
   },
   'ap-precalculus': {
-    seconds: 90,
+    // Items are short today (median solve ~20 s in the 2026-10-22 audit) and the
+    // same bank is paced 60 s through the non-AP 'precalculus' key; revisit
+    // 90 s after the depth rebuild lands exam-style multi-step items. Owner may overrule.
+    seconds: 60,
     label: 'AP Precalculus',
-    source: 'Section I Part A (no calculator): 29 MCQ in 65 min = 134 s; competitive items are one skill each, so 90 s.',
+    source: 'Section I Part A (no calculator): 29 MCQ in 65 min = 134 s; competitive items are one skill each and short, so 60 s (revisit 90 s after the depth rebuild).',
   },
   'ap-macro': { seconds: 70, label: 'AP Macroeconomics', source: 'Section I: 60 MCQ in 70 min = 70 s.' },
   'ap-micro': { seconds: 70, label: 'AP Microeconomics', source: 'Section I: 60 MCQ in 70 min = 70 s.' },
@@ -210,6 +213,7 @@ function bankTopicCourse(): Map<string, PaceCourseKey> {
     for (const t of entry.topics) if (!map.has(t)) map.set(t, course)
   }
   for (const cat of CALC_CATEGORIES) {
+    if (!isPaceCourseKey(cat.course)) continue
     for (const t of cat.topics) if (!map.has(t)) map.set(t, cat.course)
   }
   for (const s of PSYCHOLOGY_LESSON_SLUGS) map.set(s, 'ap-psychology')

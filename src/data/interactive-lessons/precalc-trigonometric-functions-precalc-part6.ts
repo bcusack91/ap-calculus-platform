@@ -1,3 +1,5 @@
+import { tfTide } from '@/data/lesson-figures/precalc-trig'
+
 export const precalcTrigFunctionsPart6Data = {
   topicSlug: 'trigonometric-functions-precalc',
   sections: [
@@ -26,6 +28,7 @@ Real-world phenomena — tides, temperature, sound, rotation — follow sinusoid
     {
       id: 'p6-example1',
       type: 'text' as const,
+      figure: tfTide,
       content: `
 ## 🌊 Example 1: Tidal Height
 
@@ -41,6 +44,8 @@ Real-world phenomena — tides, temperature, sound, rotation — follow sinusoid
 $$\\boxed{h(t) = 4\\cos\\left(\\frac{\\pi}{6}(t - 6)\\right) + 8}$$
 
 **Check:** $h(6) = 4\\cos(0) + 8 = 12$ ✓ &emsp; $h(12) = 4\\cos(\\pi) + 8 = 4$ ✓
+
+The graph above shows the model over a full day: the midline $h = 8$, highs of $12$ ft at $t = 6$ and $t = 18$, lows of $4$ ft at $t = 0, 12, 24$.
       `
     },
     {
@@ -125,19 +130,58 @@ $$\\boxed{h(t) = -20\\cos\\left(\\frac{2\\pi}{3}t\\right) + 25}$$
       content: `
 **Modeling Practice** 🧮
 
-**1)** A sound wave oscillates between $+3$ and $-3$ with a period of $0.01$ seconds. What is $b$ (the angular frequency)? Write as a multiple of $\\pi$ — give just the coefficient (e.g., if $b = 5\\pi$, write $5$). (e.g., period $= 0.5$ s: $b = 2\\pi/0.5 = 4\\pi$, answer: $4$)
+**1)** A sound wave oscillates between $+3$ and $-3$ with a period of $0.01$ seconds. What is $b$ in a model $y = 3\\sin(bt)$? Give the exact value, writing $\\pi$ as \`pi\` (e.g., period $= 0.5$ s: $b = 2\\pi/0.5 = 4\\pi$, answer: \`4pi\`)
 
-**2)** A spring oscillates between heights $2$ cm and $14$ cm. What is the midline (in cm)? Write as an integer. (e.g., min $= 5$, max $= 11$: midline $= (5+11)/2 = 8$)
+**2)** A spring oscillates between heights $2$ cm and $14$ cm. What is the midline (in cm)? Write as an integer. (e.g., min $= 3$, max $= 11$: midline $= (3+11)/2 = 7$)
 
 **3)** A Ferris wheel has radius $30$ m, center $35$ m high, period $4$ min, rider starts at the bottom. What is the rider's height at $t = 1$ min? Write as an integer. (e.g., $h(t) = -20\\cos(\\frac{2\\pi}{3}t) + 25$: $h(0.75) = -20\\cos(\\pi/2) + 25 = 25$)
       `,
       exercise: {
         boxes: 3,
-        correctAnswers: ['200', '8', '35'],
+        correctAnswers: ['200pi', '8', '35'],
         hint1: '$b = \\frac{2\\pi}{0.01} = 200\\pi$.',
         hint2: 'Midline $= \\frac{2 + 14}{2}$.',
         hint3: '$h(t) = -30\\cos(\\frac{2\\pi}{4}t) + 35 = -30\\cos(\\frac{\\pi}{2}t) + 35$. At $t = 1$: $\\cos(\\frac{\\pi}{2}) = 0$.',
-        explanation: '1) $b = 2\\pi/0.01 = 200\\pi$, coefficient is $200$. 2) Midline $= (2+14)/2 = 8$ cm. 3) $h(1) = -30\\cos(\\frac{\\pi}{2}) + 35 = -30(0) + 35 = 35$ m.'
+        explanation: '1) $b = 2\\pi/0.01 = 200\\pi$. 2) Midline $= (2+14)/2 = 8$ cm. 3) $h(1) = -30\\cos(\\frac{\\pi}{2}) + 35 = -30(0) + 35 = 35$ m.'
+      }
+    },
+    {
+      id: 'p6-table',
+      type: 'multiple-choice' as const,
+      content: `
+**Modeling From a Table** 📋
+
+The table gives values of a sinusoidal function $f$ at equally spaced inputs. Use it for both questions.
+
+| $x$ | $0$ | $2$ | $4$ | $6$ | $8$ |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| $f(x)$ | $2$ | $8$ | $2$ | $-4$ | $2$ |
+      `,
+      exercise: {
+        questions: [
+          {
+            question: 'Which function could be $f$?',
+            options: [
+              '$f(x) = 6\\sin\\left(\\frac{\\pi}{4}x\\right) + 2$',
+              '$f(x) = 6\\cos\\left(\\frac{\\pi}{4}x\\right) + 2$',
+              '$f(x) = 12\\sin\\left(\\frac{\\pi}{4}x\\right) + 2$',
+              '$f(x) = 6\\sin\\left(\\frac{\\pi}{8}x\\right) + 2$'
+            ],
+            correctAnswer: 0,
+            explanation: 'The maximum $8$ and minimum $-4$ give amplitude $\\frac{8 - (-4)}{2} = 6$ and midline $\\frac{8 + (-4)}{2} = 2$. The values return to $2$ at $x = 8$ after passing the maximum and the minimum, so the period is $8$ and $b = \\frac{2\\pi}{8} = \\frac{\\pi}{4}$. At $x = 0$ the value is on the midline and rising, which is a positive sine. A cosine would start at the maximum, $12$ is the full range rather than the amplitude, and $\\frac{\\pi}{8}$ gives period $16$.'
+          },
+          {
+            question: 'Using only the periodicity of $f$, what is $f(18)$?',
+            options: [
+              '$8$',
+              '$2$',
+              '$-4$',
+              '$18$'
+            ],
+            correctAnswer: 0,
+            explanation: 'The period is $8$, so $f(18) = f(18 - 16) = f(2) = 8$. The value $2$ belongs to $x = 0, 4, 8, \\ldots$ and $-4$ to $x = 6, 14, 22, \\ldots$.'
+          }
+        ]
       }
     },
     {
@@ -195,12 +239,12 @@ $$\\boxed{h(t) = -20\\cos\\left(\\frac{2\\pi}{3}t\\right) + 25}$$
             question: 'A spring\'s height is modeled by $h(t) = 5\\sin(4\\pi t) + 10$. The spring returns to its midline height every ____ seconds.',
             options: [
               '$0.25$',
-              '$0.5$',
-              '$1$',
-              '$2$'
+              '$0.50$',
+              '$1.00$',
+              '$2.00$'
             ],
             correctAnswer: 0,
-            explanation: 'Period $= \\frac{2\\pi}{4\\pi} = 0.5$ s. Sine crosses the midline twice per period (going up and going down), so every $0.5/2 = 0.25$ s.'
+            explanation: 'Period $= \\frac{2\\pi}{4\\pi} = 0.5$ s. Sine crosses the midline twice per period (going up and going down), so every $0.5/2 = 0.25$ s. The value $0.50$ is the full period, the time between consecutive maxima.'
           }
         ]
       }

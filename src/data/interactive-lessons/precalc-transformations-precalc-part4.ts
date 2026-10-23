@@ -7,7 +7,7 @@ export const precalcTransformationsPart4Data = {
       content: `
 # 🔗 Combining Multiple Transformations
 
-**Part 4 of 7**
+**Part 4 of 7 — Combined Transformations**
 
 ### The General Form
 
@@ -108,7 +108,7 @@ $$y = -2(x-2)^2-1$$
             explanation: '$h=-1$ (left 1), $a=3$ (stretch 3), $k=-2$ (down 2).'
           },
           {
-            question: 'Apply $(x,y)\\to(x,y)$ formula for $y=-f(x-4)+1$ to point $(2,3)$:',
+            question: 'The point $(2, 3)$ is on the graph of $f$. Where is it on the graph of $y = -f(x - 4) + 1$?',
             options: ['$(6, -2)$', '$(6, 4)$', '$(-2, -2)$', '$(6, -4)$'],
             correctAnswer: 0,
             explanation: '$x \\to x+4 = 6$. $y \\to -y+1 = -3+1 = -2$. Point: $(6,-2)$.'
@@ -179,6 +179,65 @@ For $y = -2(x-3)^2+7$:
         hint2: '$a$ multiplies the whole function: vertical.',
         hint3: 'Inside = horizontal = reversed.',
         explanation: '$h$: horizontal shift. $a$: vertical stretch/reflect. Inside: reversed. $a=-3$: reflected.'
+      }
+    },
+    {
+      id: 'p4-reverse',
+      type: 'text' as const,
+      content: `
+## 🔁 Mapping Points Both Ways
+
+For $g(x) = a\\,f\\big(b(x - h)\\big) + k$, a point $(x_0, y_0)$ on $f$ maps to
+
+$$\\left(\\frac{x_0}{b} + h,\\; a\\,y_0 + k\\right)$$
+
+If instead you are handed a point $(x_g, y_g)$ on the **transformed** graph and asked about $f$, undo each step:
+
+$$x_0 = b\\,(x_g - h), \\qquad y_0 = \\frac{y_g - k}{a}$$
+
+### Example
+
+$g(x) = 2f(x - 1) - 3$ passes through $(4, 7)$. Which point is on $f$?
+
+- Undo the vertical: $y_0 = \\frac{7 - (-3)}{2} = 5$
+- Undo the horizontal: $x_0 = 1 \\cdot (4 - 1) = 3$
+
+So $(3, 5)$ is on $f$. **Check forward:** $f(3) = 5 \\Rightarrow g(4) = 2(5) - 3 = 7$ ✓
+
+> 💡 **Always factor out $b$ first.** $f(2x - 4)$ is not a shift of $4$; it is $f\\big(2(x - 2)\\big)$: a horizontal dilation by $\\tfrac{1}{2}$ and a shift right $2$. Tables of values work the same way: each row $(x_0, f(x_0))$ maps to $(x_0/b + h,\\ a f(x_0) + k)$.
+      `
+    },
+    {
+      id: 'p4-reverse-dropdown',
+      type: 'dropdown-select' as const,
+      content: `
+**Reverse-Engineer the Parent** 🔽
+
+$g(x) = -f(x + 2) + 4$ passes through the point $(1, 6)$. Recover the matching point on $f$.
+      `,
+      exercise: {
+        dropdowns: [
+          {
+            label: 'Undo the vertical: $y_0 = \\dfrac{6 - 4}{-1} =$',
+            options: ['$-2$', '$2$', '$10$', '$-10$'],
+            correctAnswer: 0
+          },
+          {
+            label: 'Undo the horizontal: $x_0 = 1 \\cdot (1 - (-2)) =$',
+            options: ['$3$', '$-1$', '$-3$', '$1$'],
+            correctAnswer: 0
+          },
+          {
+            label: 'So the point on $f$ is:',
+            options: ['$(3, -2)$', '$(-1, 2)$', '$(3, 2)$', '$(-3, -2)$'],
+            correctAnswer: 0
+          }
+        ],
+        correctAnswers: ['$-2$', '$3$', '$(3, -2)$'],
+        hint1: 'With $a = -1$ and $k = 4$: $y_0 = \\frac{y_g - k}{a}$.',
+        hint2: 'With $b = 1$ and $h = -2$: $x_0 = b(x_g - h)$.',
+        hint3: 'Combine the recovered coordinates into $(x_0, y_0)$.',
+        explanation: '$y_0 = (6 - 4)/(-1) = -2$ and $x_0 = 1 \\cdot (1 + 2) = 3$, so $(3, -2)$ is on $f$. Check: $g(1) = -f(3) + 4 = -(-2) + 4 = 6$.'
       }
     },
     {

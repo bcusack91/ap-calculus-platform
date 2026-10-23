@@ -7,7 +7,7 @@ export const precalcRationalPart4Data = {
       content: `
 # ✂️ Simplifying Rational Expressions
 
-**Part 4 of 7 — Simplifying & Rewriting Rational Functions**
+**Part 4 of 7 — Simplifying Rational Expressions**
 
 Before you can graph or analyze a rational function, you often need to rewrite it first. This part covers factoring and canceling (and what canceling does to the domain), choosing the equivalent form that shows the feature you need, and rewriting via polynomial long division.
       `
@@ -75,7 +75,7 @@ Dividing:
 
 $$\\boxed{\\frac{2x^2 + 3x - 5}{x + 2} = 2x - 1 + \\frac{-3}{x + 2}}$$
 
-As $x \\to \\pm\\infty$, $\\frac{-3}{x+2} \\to 0$, so the **slant asymptote** is $y = 2x - 1$.
+As $x \\to \\pm\\infty$, $\\frac{-3}{x+2} \\to 0$, so the **slant asymptote** is $y = 2x - 1$, i.e. $\\lim_{x \\to \\pm\\infty}\\left[f(x) - (2x - 1)\\right] = 0$.
       `
     },
     {

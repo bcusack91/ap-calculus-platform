@@ -125,7 +125,8 @@ export const COURSE_PAGE_CONFIGS: Record<string, CompetitiveCoursePageConfig> = 
     // The AP view of the shared precalc bank ('precalc' would serve Unit 4).
     fallbackTopicSlug: 'ap-precalculus',
     backHref: '/ap-precalculus', browseHref: '/courses/ap-precalculus',
-    unitEmojis: ['📊', '📈', '🔢', '📐', '🧮', '🔣'],
+    // 3 assessed CED units + exam prep (course-includes PRECALC_CATEGORIES).
+    unitEmojis: ['📊', '📈', '📐', '📝'],
   },
   'ap-us-gov': {
     slug: 'ap-us-gov', courseName: 'AP US Government',

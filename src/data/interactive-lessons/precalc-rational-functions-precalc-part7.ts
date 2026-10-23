@@ -159,7 +159,7 @@ $$f(x) = \\frac{3(x - 1)}{x + 2}$$
         dropdowns: [
           {
             label: 'To determine if $x = c$ is a hole or VA, check whether $(x - c)$',
-            options: ['is in the numerator', 'is in the denominator', 'cancels between numerator and denominator', 'makes the function positive']
+            options: ['is in the numerator', 'is in the denominator', 'cancels completely out of the denominator', 'makes the function positive']
           },
           {
             label: 'Given a complete graph, the first thing to identify is the',
@@ -174,11 +174,11 @@ $$f(x) = \\frac{3(x - 1)}{x + 2}$$
             options: ['$x = 1$', '$x = -1$', '$x = 0$', 'the VA']
           }
         ],
-        correctAnswers: ['cancels between numerator and denominator', 'domain restrictions (VAs and holes)', 'hole, not a zero', '$x = 0$'],
-        hint1: 'Hole = canceled factor. VA = uncanceled factor in denominator.',
+        correctAnswers: ['cancels completely out of the denominator', 'domain restrictions (VAs and holes)', 'hole, not a zero', '$x = 0$'],
+        hint1: 'Hole = factor gone from the denominator. VA = a copy of the factor survives in the denominator.',
         hint2: 'Asymptotes and holes define the skeleton of the graph.',
         hint3: 'A function cannot equal $0$ at an $x$-value where it is undefined.',
-        explanation: 'Cancel → hole; no cancel → VA. Read VAs/holes from a graph first. A shared numerator/denominator zero is a hole, not a zero. $y$-intercept is always $f(0)$.'
+        explanation: 'Factor gone from the denominator → hole; a copy survives → VA. Read VAs/holes from a graph first. A shared numerator/denominator zero is a hole, not a zero. $y$-intercept is always $f(0)$.'
       }
     },
     {

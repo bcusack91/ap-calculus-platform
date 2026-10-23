@@ -44,15 +44,15 @@ const questions: EntranceQuizQuestion[] = [
     partNumber: 2,
     partTitle: 'Transformations of Exponential Graphs',
   },
-  // Part 3 — Compound Interest & Continuous Growth
+  // Part 3 — Changing the Time Unit & the Natural Base e
   {
     id: 'exf-ent-3a',
-    question: '\\$3,000 is invested at $6\\%$ annual interest compounded monthly. Which expression gives the balance after $5$ years?',
-    options: ['$3000(1.06)^{60}$', '$3000(1.005)^{60}$', '$3000(1.005)^{5}$', '$3000(1.06)^{5}$'],
+    question: 'A population grows $8\\%$ per year, so $P(t) = P_0(1.08)^t$ with $t$ in years. Which model gives the population after $m$ months?',
+    options: ['$P_0(1.08)^{12m}$', '$P_0(1.08)^{m/12}$', '$P_0(1.0067)^{12m}$', '$P_0(0.08)^{m/12}$'],
     correctIndex: 1,
-    explanation: 'Monthly compounding uses the rate per month, $\\tfrac{0.06}{12} = 0.005$, over $12 \\cdot 5 = 60$ months. The expression $3000(1.06)^{60}$ applies the full annual rate every month.',
+    explanation: 'A year is $12$ months, so $t = m/12$ and $P = P_0(1.08)^{m/12} = P_0\\left(1.08^{1/12}\\right)^m \\approx P_0(1.0064)^m$. The exponent $12m$ would apply a year of growth every month.',
     partNumber: 3,
-    partTitle: 'Compound Interest & Continuous Growth',
+    partTitle: 'Changing the Time Unit & the Natural Base e',
   },
   {
     id: 'exf-ent-3b',
@@ -61,7 +61,7 @@ const questions: EntranceQuizQuestion[] = [
     correctIndex: 2,
     explanation: 'Since $1.08 = e^{\\ln 1.08}$, $500(1.08)^t = 500e^{t \\ln 1.08}$, about $500e^{0.077t}$. The form $500e^{0.08t}$ uses the percent rate, which grows slightly faster than $8\\%$ per year.',
     partNumber: 3,
-    partTitle: 'Compound Interest & Continuous Growth',
+    partTitle: 'Changing the Time Unit & the Natural Base e',
   },
   // Part 4 — Half-Life & Exponential Decay
   {
@@ -149,7 +149,7 @@ export function getEntranceQuizParts(): { partNumber: number; partTitle: string 
   return [
     { partNumber: 1, partTitle: 'Exponential Functions — Core Form & Growth vs Decay' },
     { partNumber: 2, partTitle: 'Transformations of Exponential Graphs' },
-    { partNumber: 3, partTitle: 'Compound Interest & Continuous Growth' },
+    { partNumber: 3, partTitle: 'Changing the Time Unit & the Natural Base e' },
     { partNumber: 4, partTitle: 'Half-Life & Exponential Decay' },
     { partNumber: 5, partTitle: 'Solving Exponential Equations with Logarithms' },
     { partNumber: 6, partTitle: 'Data Fitting & Exponential Regression' },

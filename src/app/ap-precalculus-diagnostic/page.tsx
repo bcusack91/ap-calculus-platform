@@ -15,6 +15,7 @@ import {
   scoreAPPrecalculusDiagnostic,
   pickNextForm,
   TOTAL_FORMS,
+  AP_PRECALCULUS_LEGACY_DOMAIN_NAMES,
   type APPrecalculusTestData,
   type APPrecalculusResults,
 } from '@/data/ap-precalculus-diagnostic'
@@ -172,7 +173,7 @@ export default function APPrecalculusDiagnosticPage() {
                 />
             </div>
           </div>
-          <div className="mb-4"><span className="rounded-full bg-cyan-100 px-3 py-1 text-xs font-semibold text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400">{testData.domains.find(d => d.id === q.domain)?.name ?? q.domain}</span></div>
+          <div className="mb-4"><span className="rounded-full bg-cyan-100 px-3 py-1 text-xs font-semibold text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400">{testData.domains.find(d => d.id === q.domain)?.name ?? AP_PRECALCULUS_LEGACY_DOMAIN_NAMES[q.domain] ?? q.domain}</span></div>
           <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
             {/* Question text can carry $…$ LaTeX — render through the shared
                 MathText pipeline (same one the post-test review already uses). */}
@@ -324,7 +325,7 @@ export default function APPrecalculusDiagnosticPage() {
         <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
           <h3 className="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">What to Expect</h3>
           <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-            {[`${apDiagnosticCourse('ap-precalculus').questionCount} questions spanning 4 AP Precalculus units`, `${apDiagnosticCourse('ap-precalculus').timeLimitMinutes} minute time limit`, 'Estimated AP score (1-5) with per-unit breakdown', 'Personalized topic recommendations', `${TOTAL_FORMS} unique forms with different questions each time`].map(item => (
+            {[`${apDiagnosticCourse('ap-precalculus').questionCount} questions spanning the 3 assessed AP Precalculus units`, `${apDiagnosticCourse('ap-precalculus').timeLimitMinutes} minute time limit`, 'Estimated AP score (1-5) with per-unit breakdown', 'Personalized topic recommendations', `${TOTAL_FORMS} unique forms with different questions each time`].map(item => (
               <li key={item} className="flex items-start gap-2"><svg className="mt-0.5 h-4 w-4 shrink-0 text-cyan-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>{item}</li>
             ))}
           </ul>
@@ -337,7 +338,7 @@ export default function APPrecalculusDiagnosticPage() {
           <h3 className="mb-3 text-base font-semibold text-gray-800 dark:text-gray-200">🔄 How the Diagnostic Cycle Works</h3>
           <div className="space-y-3">
             {[
-              { step: '1', text: 'Take the diagnostic test — questions cover all 4 AP Precalculus units' },
+              { step: '1', text: 'Take the diagnostic test — questions cover the 3 AP Precalculus units on the exam' },
               { step: '2', text: 'Get your estimated AP score and topic recommendations' },
               { step: '3', text: 'Study those specific topics (lessons, practice problems)' },
               { step: '4', text: 'Retake the diagnostic — a different form with fresh questions' },

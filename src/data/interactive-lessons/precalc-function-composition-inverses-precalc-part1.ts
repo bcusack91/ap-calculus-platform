@@ -7,7 +7,7 @@ export const precalcCompositionPart1Data = {
       content: `
 # 🔗 Function Composition
 
-**Part 1 of 7**
+**Part 1 of 7 — Function Composition**
 
 ### What Is Composition?
 
@@ -160,11 +160,11 @@ Let $f(x)=2x-1, g(x)=x+5$.
           },
           {
             label: 'The domain of $f \\circ g$ depends on:',
-            options: ['Only domain of $f$', 'Only domain of $g$', 'Domain of $g$ and range of $g$ fitting in domain of $f$'],
+            options: ['Only the domain of $f$', 'Only the domain of $g$', '$x$ in dom($g$) and $g(x)$ in dom($f$)'],
             correctAnswer: 2
           }
         ],
-        correctAnswers: ['$f(g(x))$', '$g$', '$f(x) = x^3$', 'Domain of $g$ and range of $g$ fitting in domain of $f$'],
+        correctAnswers: ['$f(g(x))$', '$g$', '$f(x) = x^3$', '$x$ in dom($g$) and $g(x)$ in dom($f$)'],
         hint1: 'Composition applies functions in sequence.',
         hint2: 'The inner function ($g$) acts first.',
         hint3: 'The outer function cubes, the inner function is $2x+1$.',
