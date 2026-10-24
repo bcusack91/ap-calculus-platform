@@ -16,22 +16,11 @@
 import { useState, useEffect, useCallback, useRef, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
-import { ArrowLeft, Bot, Check, Lock, Star } from 'lucide-react'
+import { ArrowLeft, Check, ChevronDown, Lock, Star, Swords } from 'lucide-react'
 import { GAME_MODE_CARDS } from '@/lib/competitive-modes'
-import { BOT_STRENGTH_COPY, type BotStrength } from '@/lib/bot-pacing'
 import { COMPETITIVE_COURSES } from '@/lib/competitive-catalog'
-import { unitHeading } from '@/lib/competitive-course-units'
-import AsyncChallengeButton from '@/components/AsyncChallengeButton'
-import QueueSearchPanel, { QUEUE_POLL_TIMEOUT_SEC } from '@/components/competitive/QueueSearchPanel'
-
-// Practice-bot strengths, described in terms of the problems (bot-pacing.ts);
-// the seconds per question depend on the topic now, so they are not promised.
-const BOT_STRENGTHS: BotStrength[] = ['easy', 'medium', 'hard']
-const BOT_BUTTON_CLASS: Record<BotStrength, string> = {
-  easy: 'bg-green-500 hover:bg-green-600',
-  medium: 'bg-yellow-500 hover:bg-yellow-600',
-  hard: 'bg-red-500 hover:bg-red-600',
-}
+import { QUEUE_POLL_TIMEOUT_SEC } from '@/components/competitive/QueueSearchPanel'
+import { MatchSetupBar, MatchSetupPanel, ModeCard, type MatchSetupProps } from '@/components/competitive/MatchSetup'
 
 export interface CompetitiveCoursePageConfig {
   /** Route slug: /competitive/<slug>; also the ?from= param on match redirects. */
@@ -58,22 +47,7 @@ interface UnitInfo { unitNumber: number | null; name: string; slug: string; topi
 interface TopicsResponse { units: UnitInfo[]; totalTopics: number; completedCount: number; hasAnyCompleted: boolean }
 interface QueueStatus { status: string; matchId?: string; position?: number; estimatedWait?: number; [key: string]: unknown }
 
-/**
- * Single shared unit palette, assigned by index (Unit 1 is always red, …).
- * Decorative unit tinting only — selection/CTA styling uses accent tokens.
- */
-const UNIT_COLORS = [
-  { light: 'bg-red-50 dark:bg-red-900/20', border: 'border-red-200 dark:border-red-700', text: 'text-red-700 dark:text-red-300' },
-  { light: 'bg-orange-50 dark:bg-orange-900/20', border: 'border-orange-200 dark:border-orange-700', text: 'text-orange-700 dark:text-orange-300' },
-  { light: 'bg-amber-50 dark:bg-amber-900/20', border: 'border-amber-200 dark:border-amber-700', text: 'text-amber-700 dark:text-amber-300' },
-  { light: 'bg-yellow-50 dark:bg-yellow-900/20', border: 'border-yellow-200 dark:border-yellow-700', text: 'text-yellow-700 dark:text-yellow-300' },
-  { light: 'bg-rose-50 dark:bg-rose-900/20', border: 'border-rose-200 dark:border-rose-700', text: 'text-rose-700 dark:text-rose-300' },
-  { light: 'bg-fuchsia-50 dark:bg-fuchsia-900/20', border: 'border-fuchsia-200 dark:border-fuchsia-700', text: 'text-fuchsia-700 dark:text-fuchsia-300' },
-  { light: 'bg-pink-50 dark:bg-pink-900/20', border: 'border-pink-200 dark:border-pink-700', text: 'text-pink-700 dark:text-pink-300' },
-  { light: 'bg-sky-50 dark:bg-sky-900/20', border: 'border-sky-200 dark:border-sky-700', text: 'text-sky-700 dark:text-sky-300' },
-]
-
-const PAGE_BG = 'bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-950 dark:to-gray-900'
+const PAGE_BG = 'bg-gray-50 dark:bg-gray-950'
 
 function CompetitiveCoursePageInner({ config }: { config: CompetitiveCoursePageConfig }) {
   const router = useRouter()
@@ -88,6 +62,8 @@ function CompetitiveCoursePageInner({ config }: { config: CompetitiveCoursePageC
   const [queueStatus, setQueueStatus] = useState<QueueStatus | null>(null)
   const [queueTimedOut, setQueueTimedOut] = useState(false)
   const [showAIOptions, setShowAIOptions] = useState(false)
+  /** Explicit expand/collapse per unit; unset = open when the unit has anything playable. */
+  const [openUnits, setOpenUnits] = useState<Record<string, boolean>>({})
   const hasAutoSelected = useRef(false)
   const queueJoinedAt = useRef<number | null>(null)
 
@@ -198,21 +174,17 @@ function CompetitiveCoursePageInner({ config }: { config: CompetitiveCoursePageC
   }
 
   if (status === 'loading' || loading) {
-    return (
-      <div className={`min-h-screen flex items-center justify-center ${PAGE_BG}`}>
-        <div className="animate-pulse text-xl text-gray-500">Loading {courseName} Competitive Mode…</div>
-      </div>
-    )
+    return <CoursePageSkeleton />
   }
 
   if (!session) return null
 
   if (!topicsData) {
     return (
-      <div className="min-h-screen flex items-center justify-center px-4">
-        <div className="text-center">
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">Could not load {courseName} topics.</p>
-          <button onClick={() => router.push(backHref)} className="inline-flex items-center gap-1 text-accent hover:underline">
+      <div className={`min-h-screen flex items-center justify-center px-4 ${PAGE_BG}`}>
+        <div className="max-w-md rounded-3xl border border-card-border bg-card p-8 text-center shadow-sm">
+          <p className="mb-4 text-lg text-foreground">Could not load {courseName} topics.</p>
+          <button onClick={() => router.push(backHref)} className="inline-flex items-center gap-1 font-semibold text-accent hover:underline">
             <ArrowLeft className="h-4 w-4" aria-hidden /> Back to {courseName}
           </button>
         </div>
@@ -221,204 +193,291 @@ function CompetitiveCoursePageInner({ config }: { config: CompetitiveCoursePageC
   }
 
   const anyCompleted = topicsData.hasAnyCompleted
+  const allTopics = topicsData.units.flatMap(u => u.topics)
+  const selectedTopicTitle = allTopics.find(t => t.slug === selectedTopic)?.title ?? null
+  const setupProps: MatchSetupProps = {
+    modeCards,
+    selectedMode,
+    onSelectMode: setSelectedMode,
+    selectedTopic,
+    selectedTopicTitle,
+    inQueue,
+    queuePosition: queueStatus?.position,
+    queueEstimatedWait: queueStatus?.estimatedWait,
+    queueTimedOut,
+    showBotOptions: showAIOptions,
+    onToggleBotOptions: () => setShowAIOptions(!showAIOptions),
+    onFindMatch: joinQueue,
+    onCancelQueue: leaveQueue,
+    onStartBot: startAIPractice,
+    onBotInsteadOfQueue: async () => { await leaveQueue(); void startAIPractice('medium') },
+  }
+
+  const unitList = (
+    <div className="space-y-3">
+      {topicsData.units.map((unit, ui) => {
+        const emoji = config.unitEmojis ? (config.unitEmojis[ui] || courseEmoji) : courseEmoji
+        const ready = unit.topics.filter(t => t.completed).length
+        const hasRecommended = !!recommendedTopic && unit.topics.some(t => t.slug === recommendedTopic)
+        // Units with nothing playable start collapsed so long courses stay scannable.
+        const isOpen = openUnits[unit.slug] ?? (ready > 0 || hasRecommended)
+        const panelId = `unit-panel-${unit.slug}`
+        const eyebrow = unit.unitNumber != null ? `Unit ${unit.unitNumber}` : 'Review'
+        const name = unit.name.trim().replace(/^unit\s+\d+\s*[:.\-–]\s*/i, '')
+        return (
+          <section key={unit.slug} className="overflow-hidden rounded-2xl border border-card-border bg-card shadow-sm">
+            <button
+              onClick={() => setOpenUnits(o => ({ ...o, [unit.slug]: !isOpen }))}
+              aria-expanded={isOpen}
+              aria-controls={panelId}
+              className="flex w-full items-center gap-3 p-4 text-left transition-colors hover:bg-gray-50 dark:hover:bg-gray-800/40"
+            >
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gray-100 text-xl font-bold text-foreground dark:bg-gray-800" aria-hidden>
+                {emoji}
+              </span>
+              <span className="min-w-0 flex-1">
+                <span className="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">{eyebrow}</span>
+                <span data-qa="unit-name" className="block font-bold leading-snug text-foreground">{name}</span>
+              </span>
+              <span className={`shrink-0 rounded-full px-2.5 py-0.5 text-xs font-semibold tabular-nums ${
+                ready > 0 ? 'bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300' : 'bg-gray-100 text-gray-600 dark:bg-gray-800 dark:text-gray-400'
+              }`}>
+                {ready === unit.topics.length ? `${ready} topics` : `${ready}/${unit.topics.length} ready`}
+              </span>
+              <ChevronDown className={`h-5 w-5 shrink-0 text-gray-500 transition-transform dark:text-gray-400 ${isOpen ? 'rotate-180' : ''}`} aria-hidden />
+            </button>
+            {isOpen ? (
+              <div id={panelId} className="grid grid-cols-1 gap-2.5 border-t border-card-border p-3 sm:grid-cols-2 sm:p-4">
+                {unit.topics.map(topic => (
+                  <TopicTile
+                    key={topic.slug}
+                    topic={topic}
+                    selected={selectedTopic === topic.slug}
+                    recommended={topic.slug === recommendedTopic}
+                    onToggle={() => setSelectedTopic(selectedTopic === topic.slug ? null : topic.slug)}
+                  />
+                ))}
+              </div>
+            ) : (
+              <p id={panelId} className="border-t border-card-border px-4 py-2.5 text-sm text-muted-foreground">
+                {ready === 0
+                  ? `${unit.topics.length} topics · finish a lesson in this unit to play it`
+                  : `${unit.topics.length} topics · tap to show`}
+              </p>
+            )}
+          </section>
+        )
+      })}
+    </div>
+  )
 
   return (
     <div className={`min-h-screen ${PAGE_BG}`}>
-      <div className="max-w-5xl mx-auto px-4 py-8">
+      <div className={`mx-auto max-w-6xl px-4 py-6 sm:py-8 ${anyCompleted ? 'pb-48 lg:pb-12' : 'pb-12'}`}>
         <button
           onClick={() => router.push(backHref)}
-          className="inline-flex items-center gap-1 text-sm text-accent hover:underline mb-6"
+          className="mb-4 inline-flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-accent"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden /> Back to {courseName}
         </button>
 
-        <div className="text-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-gray-900 dark:text-white mb-2">
-            {courseName}{' '}
-            <span className="bg-gradient-to-r from-accent to-accent-secondary bg-clip-text text-transparent">Competitive Mode</span>
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400">Select a topic you&apos;ve completed, choose your game mode, and challenge other students!</p>
-          <div className="mt-4 max-w-md mx-auto">
-            <div className="flex justify-between text-xs text-gray-500 mb-1">
-              <span>{topicsData.completedCount} / {topicsData.totalTopics} topics completed</span>
-              <span>{Math.round((topicsData.completedCount / topicsData.totalTopics) * 100)}%</span>
-            </div>
-            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
-              {/* Course-identity gradient (from course-metadata via the catalog) */}
-              <div className={`bg-gradient-to-r ${courseGradient} h-2.5 rounded-full transition-all`} style={{ width: `${(topicsData.completedCount / topicsData.totalTopics) * 100}%` }} />
-            </div>
-          </div>
-        </div>
+        <CourseHero
+          courseName={courseName}
+          emoji={courseEmoji}
+          gradient={courseGradient}
+          completed={topicsData.completedCount}
+          total={topicsData.totalTopics}
+        />
 
-        {/* Topic selection by unit */}
-        <div className="space-y-6 mb-10">
-          {topicsData.units.map((unit, ui) => {
-            const colors = UNIT_COLORS[ui % UNIT_COLORS.length]
-            const emoji = config.unitEmojis ? (config.unitEmojis[ui] || courseEmoji) : courseEmoji
-            return (
-              <div key={unit.slug} className={`rounded-2xl border ${colors.border} ${colors.light} p-5`}>
-                <h2 className={`font-bold text-lg mb-3 ${colors.text}`}>{emoji} {unitHeading(unit)}</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                  {unit.topics.map(topic => {
-                    const isSelected = selectedTopic === topic.slug
-                    const isCompleted = topic.completed
-                    const isRecommended = topic.slug === recommendedTopic
-                    return (
-                      <button
-                        key={topic.slug}
-                        disabled={!isCompleted}
-                        onClick={() => setSelectedTopic(isSelected ? null : topic.slug)}
-                        className={`relative text-left p-4 rounded-xl border transition-all ${
-                          isSelected
-                            ? 'ring-2 ring-accent border-accent-light bg-white dark:bg-gray-800 shadow-lg'
-                            : isCompleted
-                              ? 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md cursor-pointer'
-                              : 'border-gray-200 dark:border-gray-700 bg-gray-100 dark:bg-gray-800/50 opacity-50 cursor-not-allowed'
-                        }`}
-                      >
-                        {isRecommended && isCompleted && (
-                          <span className="absolute -top-2 -right-2 inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-bold rounded-full bg-accent text-white shadow">
-                            <Star className="h-2.5 w-2.5" aria-hidden /> Recommended
-                          </span>
-                        )}
-                        <div className="flex items-center justify-between">
-                          <h3 className={`font-semibold text-sm ${isCompleted ? 'text-gray-900 dark:text-white' : 'text-gray-400 dark:text-gray-500'}`}>{topic.title}</h3>
-                          {isCompleted ? (
-                            <span className="flex-shrink-0 ml-2 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400 flex items-center justify-center">
-                              <Check className="h-3 w-3" aria-hidden />
-                            </span>
-                          ) : (
-                            <span className="flex-shrink-0 ml-2 w-5 h-5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-400 flex items-center justify-center">
-                              <Lock className="h-3 w-3" aria-hidden />
-                            </span>
-                          )}
-                        </div>
-                        {isCompleted && (
-                          <div className="mt-1.5 flex items-center gap-2">
-                            <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-1.5">
-                              <div className="bg-green-500 h-1.5 rounded-full" style={{ width: `${Math.round(topic.masteryLevel * 100)}%` }} />
-                            </div>
-                            <span className="text-xs text-gray-500">{Math.round(topic.masteryLevel * 100)}%</span>
-                          </div>
-                        )}
-                        {!isCompleted && (<p className="text-xs text-gray-400 dark:text-gray-500 mt-1">Complete the interactive lesson to unlock</p>)}
-                      </button>
-                    )
-                  })}
-                </div>
-              </div>
-            )
-          })}
-        </div>
-
-        {/* Mode + queue — always visible once anything is completed, so
-            first-time visitors can see how a match starts. Find Match stays
-            disabled with a hint until a topic is picked. */}
-        {anyCompleted && (
+        {anyCompleted ? (
           <>
-            <div className="mb-8">
-              <h2 className="text-xl font-bold text-center text-gray-900 dark:text-white mb-4">Choose Game Mode</h2>
-              <div className={`grid grid-cols-2 gap-3 sm:gap-4 ${modeCards.length === 3 ? 'sm:grid-cols-3' : 'lg:grid-cols-4'}`}>
-                {modeCards.map(mode => (
-                  <button
-                    key={mode.key}
-                    onClick={() => setSelectedMode(mode.key)}
-                    className={`p-5 rounded-xl border transition-all text-left ${
-                      selectedMode === mode.key
-                        ? 'ring-2 ring-accent border-accent-light bg-white dark:bg-gray-800 shadow-lg'
-                        : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md'
-                    }`}
-                  >
-                    <h3 className="text-lg font-bold mb-1">{mode.icon} {mode.title}</h3>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">{mode.desc}</p>
-                  </button>
-                ))}
+            <div className="mt-6 lg:grid lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start lg:gap-6">
+              <div className="min-w-0">
+                {/* Mobile: modes inline; desktop shows them in the setup panel. */}
+                <section aria-labelledby="mode-heading-mobile" className="mb-6 lg:hidden">
+                  <h2 id="mode-heading-mobile" className="mb-3 text-lg font-bold text-foreground">Game mode</h2>
+                  <div className="grid grid-cols-1 gap-2 min-[420px]:grid-cols-2">
+                    {modeCards.map(mode => (
+                      <ModeCard key={mode.key} mode={mode} selected={selectedMode === mode.key} onSelect={setSelectedMode} compact />
+                    ))}
+                  </div>
+                </section>
+                <div className="mb-3 flex items-end justify-between gap-2">
+                  <h2 className="text-lg font-bold text-foreground">Pick a topic</h2>
+                  {topicsData.completedCount < topicsData.totalTopics && (
+                    <p className="text-sm text-muted-foreground">Only lessons you&apos;ve finished</p>
+                  )}
+                </div>
+                {unitList}
+              </div>
+              <div className="hidden lg:sticky lg:top-20 lg:block">
+                <MatchSetupPanel {...setupProps} />
               </div>
             </div>
-
-            <div className="bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-6 text-center">
-              {!inQueue ? (
-                <>
-                  {queueTimedOut && (
-                    <div className="mb-4 rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-800 dark:border-amber-700/50 dark:bg-amber-900/20 dark:text-amber-300">
-                      No opponent found — you left the queue after {Math.round(QUEUE_POLL_TIMEOUT_SEC / 60)} minutes.
-                      Try Practice vs AI or send an async challenge below.
-                    </div>
-                  )}
-                  <button
-                    onClick={joinQueue}
-                    disabled={!selectedTopic}
-                    className="px-10 py-4 bg-gradient-to-r from-accent to-accent-secondary hover:from-accent-hover hover:to-accent-secondary-hover text-white font-bold rounded-xl text-xl transition-all shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-lg"
-                  >
-                    Find Match
-                  </button>
-                  {!selectedTopic && (
-                    <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">Pick a topic above to start</p>
-                  )}
-                  <div className="mt-5 pt-5 border-t border-gray-200 dark:border-gray-700">
-                    <button
-                      onClick={() => setShowAIOptions(!showAIOptions)}
-                      disabled={!selectedTopic}
-                      className="inline-flex items-center gap-2 px-6 py-2.5 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 font-semibold rounded-lg transition-all text-sm disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      <Bot className="h-4 w-4" aria-hidden /> Practice vs AI
-                    </button>
-                    {showAIOptions && selectedTopic && (
-                      <div className="mt-4 flex flex-col sm:flex-row justify-center gap-3">
-                        {BOT_STRENGTHS.map((s) => (
-                          <button
-                            key={s}
-                            onClick={() => startAIPractice(s)}
-                            className={`px-5 py-2.5 text-white rounded-lg transition-all text-sm text-left sm:max-w-[15rem] ${BOT_BUTTON_CLASS[s]}`}
-                          >
-                            <span className="block font-semibold">{BOT_STRENGTH_COPY[s].label} bot</span>
-                            <span className="block text-xs text-white/90">{BOT_STRENGTH_COPY[s].desc}</span>
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                  <div className="mt-5 pt-5 border-t border-gray-200 dark:border-gray-700">
-                    <AsyncChallengeButton
-                      topicSlug={selectedTopic}
-                      helperText="Play 10 questions now, then share a link — friends beat your score on their own time. Great when no one's online to match."
-                    />
-                  </div>
-                </>
-              ) : (
-                <QueueSearchPanel
-                  position={queueStatus?.position}
-                  estimatedWait={queueStatus?.estimatedWait}
-                  onCancel={leaveQueue}
-                  fallback={
-                    <div className="mt-3">
-                      <button
-                        onClick={async () => { await leaveQueue(); void startAIPractice('medium') }}
-                        className="inline-flex items-center gap-2 rounded-lg border-2 border-accent px-5 py-2.5 text-sm font-semibold text-accent transition-colors hover:bg-accent-subtle"
-                      >
-                        <Bot className="h-4 w-4" aria-hidden /> Practice vs AI instead
-                      </button>
-                    </div>
-                  }
-                />
-              )}
+            <div className="lg:hidden">
+              <MatchSetupBar {...setupProps} />
             </div>
           </>
+        ) : (
+          <>
+            <div className="mt-6 rounded-3xl border border-card-border bg-card p-6 text-center shadow-sm sm:p-8">
+              <span className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-subtle text-accent">
+                <Lock className="h-7 w-7" aria-hidden />
+              </span>
+              <h2 className="mb-2 text-2xl font-bold text-foreground">Complete a Lesson to Unlock</h2>
+              <p className="mx-auto mb-6 max-w-md text-muted-foreground">Finish any {courseName} interactive lesson with 80%+ mastery to start competing.</p>
+              <button
+                onClick={() => router.push(browseHref)}
+                className="rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-8 py-3 font-semibold text-white transition-all hover:from-accent-hover hover:to-accent-secondary-hover hover:shadow-lg"
+              >
+                Browse {courseName} Lessons
+              </button>
+            </div>
+            <h2 className="mt-8 mb-3 text-lg font-bold text-foreground">What you&apos;ll unlock</h2>
+            {unitList}
+          </>
         )}
+      </div>
+    </div>
+  )
+}
 
-        {!anyCompleted && (
-          <div className="text-center bg-white dark:bg-gray-800 rounded-2xl border border-gray-200 dark:border-gray-700 p-5 sm:p-8">
-            <Lock className="mx-auto mb-4 h-12 w-12 text-gray-400" aria-hidden />
-            <h2 className="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Complete a Lesson to Unlock</h2>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">Finish any {courseName} interactive lesson with 80%+ mastery to start competing.</p>
-            <button
-              onClick={() => router.push(browseHref)}
-              className="px-8 py-3 bg-gradient-to-r from-accent to-accent-secondary hover:from-accent-hover hover:to-accent-secondary-hover text-white font-semibold rounded-xl hover:shadow-lg transition-all"
-            >
-              Browse {courseName} Lessons
-            </button>
+/** Course identity band, emoji chip, name, and topics-unlocked ring. */
+function CourseHero({ courseName, emoji, gradient, completed, total }: { courseName: string; emoji: string; gradient: string; completed: number; total: number }) {
+  const pct = total > 0 ? Math.round((completed / total) * 100) : 0
+  const r = 26
+  const c = 2 * Math.PI * r
+  return (
+    <section className="overflow-hidden rounded-3xl border border-card-border bg-card shadow-sm">
+      {/* Course-identity gradient (from course-metadata via the catalog) */}
+      <div className={`relative h-20 bg-gradient-to-br sm:h-24 ${gradient}`} aria-hidden>
+        <div className="absolute inset-0 opacity-25 [background-image:radial-gradient(circle_at_1px_1px,white_1px,transparent_0)] [background-size:18px_18px]" />
+      </div>
+      <div className="relative flex flex-wrap items-end justify-between gap-4 px-4 pb-5 sm:px-7 sm:pb-6">
+        <div className="-mt-9 flex min-w-0 items-start gap-4 sm:-mt-10">
+          <span className="shrink-0 rounded-2xl bg-card p-1 shadow-md ring-1 ring-card-border">
+            <span className={`flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br text-3xl font-bold text-white sm:h-[4.5rem] sm:w-[4.5rem] ${gradient}`} aria-hidden>
+              {emoji}
+            </span>
+          </span>
+          <div className="min-w-0 pt-10 sm:pt-11">
+            <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wide text-accent">
+              <Swords className="h-3.5 w-3.5" aria-hidden /> Competitive
+            </p>
+            <h1 className="text-2xl font-black leading-tight tracking-tight text-foreground sm:text-3xl">{courseName}</h1>
           </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <svg width="64" height="64" viewBox="0 0 64 64" className="-rotate-90" role="img" aria-label={`${completed} of ${total} topics unlocked`}>
+            <circle cx="32" cy="32" r={r} fill="none" strokeWidth="6" className="stroke-gray-200 dark:stroke-gray-700" />
+            <circle
+              cx="32" cy="32" r={r} fill="none" strokeWidth="6" strokeLinecap="round"
+              strokeDasharray={c} strokeDashoffset={c * (1 - pct / 100)}
+              className="stroke-accent transition-all duration-700"
+            />
+            <text x="32" y="32" textAnchor="middle" dominantBaseline="central" transform="rotate(90 32 32)" className="fill-foreground text-[13px] font-bold">
+              {pct}%
+            </text>
+          </svg>
+          <div>
+            <p className="text-lg font-bold tabular-nums text-foreground">{completed}<span className="text-muted-foreground">/{total}</span></p>
+            <p className="text-xs text-muted-foreground">topics unlocked</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+/** One selectable topic: playable (mastery bar), locked (lesson hint), recommended, selected. */
+function TopicTile({ topic, selected, recommended, onToggle }: { topic: TopicInfo; selected: boolean; recommended: boolean; onToggle: () => void }) {
+  const mastery = Math.round(topic.masteryLevel * 100)
+  if (!topic.completed) {
+    return (
+      <button
+        data-topic-slug={topic.slug}
+        disabled
+        aria-pressed={false}
+        className="flex cursor-not-allowed items-start gap-3 rounded-xl border border-dashed border-gray-300 bg-gray-50 p-3 text-left dark:border-gray-700 dark:bg-gray-900/40"
+      >
+        <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gray-200 text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+          <Lock className="h-3 w-3" aria-hidden />
+        </span>
+        <span className="min-w-0">
+          <span data-qa="topic-locked-title" className="block text-sm font-medium text-gray-600 dark:text-gray-400">{topic.title}</span>
+          <span data-qa="topic-locked-hint" className="mt-0.5 block text-xs text-gray-600 dark:text-gray-400">Complete the lesson to unlock</span>
+        </span>
+      </button>
+    )
+  }
+  return (
+    <button
+      data-topic-slug={topic.slug}
+      onClick={onToggle}
+      aria-pressed={selected}
+      className={`group relative flex items-start gap-3 rounded-xl border p-3 text-left transition-all ${
+        selected
+          ? 'border-accent bg-accent-subtle shadow-sm ring-2 ring-accent'
+          : 'border-card-border bg-card hover:-translate-y-px hover:border-accent-muted hover:shadow-sm'
+      }`}
+    >
+      <span
+        className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full transition-colors ${
+          selected ? 'bg-accent text-white' : 'ring-2 ring-gray-300 group-hover:ring-accent-muted dark:ring-gray-600'
+        }`}
+        aria-hidden
+      >
+        {selected && <Check className="h-3.5 w-3.5" />}
+      </span>
+      <span className="min-w-0 flex-1">
+        {recommended && (
+          <span className="mb-1 inline-flex items-center gap-1 rounded-full bg-accent px-2 py-0.5 text-[11px] font-bold text-white">
+            <Star className="h-3 w-3" aria-hidden /> Recommended
+          </span>
         )}
+        <span data-qa="topic-title" className="block text-sm font-semibold leading-snug text-foreground">{topic.title}</span>
+        {mastery > 0 ? (
+          <span className="mt-2 flex items-center gap-2">
+            <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
+              <span className="block h-full rounded-full bg-green-500" style={{ width: `${mastery}%` }} />
+            </span>
+            <span className="text-xs tabular-nums text-muted-foreground">{mastery}%</span>
+          </span>
+        ) : (
+          <span className="mt-1 block text-xs text-muted-foreground">No lesson progress yet</span>
+        )}
+      </span>
+    </button>
+  )
+}
+
+/** Layout-matched placeholder while topics load. */
+function CoursePageSkeleton() {
+  const block = 'animate-pulse rounded-2xl bg-gray-200 dark:bg-gray-800 motion-reduce:animate-none'
+  return (
+    <div className={`min-h-screen ${PAGE_BG}`} aria-busy="true" aria-label="Loading competitive mode">
+      <div className="mx-auto max-w-6xl px-4 py-6 sm:py-8">
+        <div className={`${block} mb-4 h-5 w-40`} />
+        <div className="overflow-hidden rounded-3xl border border-card-border bg-card">
+          <div className="h-20 animate-pulse bg-gray-200 dark:bg-gray-800 sm:h-24" />
+          <div className="flex items-end gap-4 px-4 pb-6 sm:px-7">
+            <div className="-mt-9 h-[4.5rem] w-[4.5rem] rounded-2xl bg-card p-1"><div className="h-full w-full animate-pulse rounded-xl bg-gray-200 dark:bg-gray-800" /></div>
+            <div className="space-y-2"><div className={`${block} h-3 w-24`} /><div className={`${block} h-7 w-56`} /></div>
+          </div>
+        </div>
+        <div className="mt-6 lg:grid lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-6">
+          <div className="space-y-3">
+            {[0, 1, 2].map(i => (
+              <div key={i} className="rounded-2xl border border-card-border bg-card p-4">
+                <div className="flex items-center gap-3"><div className={`${block} h-11 w-11`} /><div className={`${block} h-5 flex-1`} /></div>
+                <div className="mt-4 grid gap-2.5 sm:grid-cols-2">
+                  {[0, 1, 2, 3].map(j => <div key={j} className={`${block} h-16`} />)}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className={`${block} hidden h-96 lg:block`} />
+        </div>
       </div>
     </div>
   )
@@ -426,11 +485,7 @@ function CompetitiveCoursePageInner({ config }: { config: CompetitiveCoursePageC
 
 export default function CompetitiveCoursePage({ config }: { config: CompetitiveCoursePageConfig }) {
   return (
-    <Suspense fallback={
-      <div className={`min-h-screen flex items-center justify-center ${PAGE_BG}`}>
-        <div className="animate-pulse text-xl text-gray-500">Loading {config.courseName} Competitive Mode…</div>
-      </div>
-    }>
+    <Suspense fallback={<CoursePageSkeleton />}>
       <CompetitiveCoursePageInner config={config} />
     </Suspense>
   )

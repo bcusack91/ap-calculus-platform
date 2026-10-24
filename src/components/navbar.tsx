@@ -103,6 +103,16 @@ function readNavCache(): NavCache | null {
   }
 }
 
+/**
+ * The signed-in user's avatar as cached by the navbar's bootstrap fetch, so
+ * other surfaces (the competitive player card) can show it without another
+ * request. null until the navbar has fetched it, or for a different user.
+ */
+export function readCachedNavAvatar(uid: string | null | undefined): AvatarData | null {
+  const cached = readNavCache()
+  return uid && cached?.uid === uid ? cached.avatarData ?? null : null
+}
+
 function writeNavCache(next: NavCache) {
   try {
     sessionStorage.setItem(NAV_CACHE_KEY, JSON.stringify({ ...next, _ts: Date.now() }))

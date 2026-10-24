@@ -7,6 +7,7 @@
 // sites resolve unchanged — callers just `await` the now-async getter.
 
 import { shuffleArray } from '@/lib/shuffle-options'
+import { rankTierForMMR } from '@/lib/competitive-ranks'
 type BankQuestion = OptionQuestion
 type AnyGetter = (...a: unknown[]) => BankQuestion[]
 async function getQuestionSet(...args: unknown[]) { const m = await import('@/data/competitive-questions/reflection-refraction-bank'); return (m.getQuestionSet as unknown as AnyGetter)(...args) }
@@ -1786,9 +1787,6 @@ export function calculateMMRChange(
  * Determine rank based on MMR
  */
 export function getRankFromMMR(mmr: number): string {
-  if (mmr >= 2200) return 'Diamond';
-  if (mmr >= 1800) return 'Platinum';
-  if (mmr >= 1400) return 'Gold';
-  if (mmr >= 1000) return 'Silver';
-  return 'Bronze';
+  // Thresholds live in competitive-ranks.ts (shared with the hub's rank bar).
+  return rankTierForMMR(mmr).name;
 }
