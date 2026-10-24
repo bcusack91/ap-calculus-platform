@@ -37,6 +37,15 @@ export function useQueueElapsed(active: boolean): number {
   return active ? elapsed : 0
 }
 
+/**
+ * Queue position from a queue response: POST /api/competitive/queue returns
+ * `queuePosition`, the polling GET returns `position`.
+ */
+export function queuePositionOf(status: { position?: unknown; queuePosition?: unknown } | null | undefined): number | undefined {
+  const v = status?.queuePosition ?? status?.position
+  return typeof v === 'number' ? v : undefined
+}
+
 export function formatElapsed(totalSec: number): string {
   const m = Math.floor(totalSec / 60)
   const s = totalSec % 60

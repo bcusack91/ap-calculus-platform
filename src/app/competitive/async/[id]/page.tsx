@@ -10,6 +10,7 @@ import { renderRichText } from '@/lib/render-rich-text'
 import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import { publicDisplayName } from '@/lib/display-name'
+import { AnswerTile, MatchClock, QuestionCard, useAnswerHotkeys, answerGridClass, type AnswerState } from '@/components/competitive/arena/Arena'
 import 'katex/dist/katex.min.css'
 
 interface Question {
@@ -256,9 +257,13 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     }
   }, [])
 
+  // Desktop shortcuts: same handler as a click, only while the tiles are live.
+  const hkOptions = phase === 'playing' ? challenge?.questions?.[currentQuestion]?.options?.length ?? 0 : 0
+  useAnswerHotkeys(phase === 'playing' && selectedAnswer === null, hkOptions, handleAnswer)
+
   if (loading || sessionStatus === 'loading') {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent" />
       </div>
     )
@@ -266,9 +271,9 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center p-4">
-        <div className="bg-gray-800 rounded-2xl p-8 max-w-md text-center">
-          <p className="text-red-400 text-lg mb-4">{error}</p>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4">
+        <div className="rounded-3xl border border-card-border bg-card p-8 max-w-md text-center shadow-sm">
+          <p className="text-red-700 dark:text-red-400 text-lg mb-4">{error}</p>
           <button onClick={() => router.push('/competitive')} className="px-6 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover">
             Back to Competitive
           </button>
@@ -279,7 +284,8 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
 
   if (!challenge) return null
 
-  const topicLabel = TOPIC_LABELS[challenge.topicSlug] || challenge.topicSlug
+  const topicLabel = TOPIC_LABELS[challenge.topicSlug] ||
+    challenge.topicSlug.replace(/-/g, ' ').replace(/^\w/, c => c.toUpperCase())
 
   // === RESULTS PHASE ===
   if (phase === 'results') {
@@ -288,26 +294,26 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     const isWaiting = challenge.status === 'WAITING_FOR_OPPONENT'
 
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 p-4">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 p-4">
         <div className="max-w-2xl mx-auto pt-8">
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-3xl font-bold text-white mb-2">
+            <h1 className="text-3xl font-bold text-foreground mb-2">
               {isCompleted ? '🏆 Challenge Complete!' : isExpired ? '⏰ Challenge Expired' : '⏳ Waiting for Opponent'}
             </h1>
-            <p className="text-gray-400">{topicLabel} · {challenge.questionCount} questions</p>
+            <p className="text-muted-foreground">{topicLabel} · {challenge.questionCount} questions</p>
           </div>
 
           {/* Share link (for challenger waiting) */}
           {isWaiting && challenge.isChallenger && (
-            <div className="bg-accent/10 border border-accent/30 rounded-xl p-6 mb-6">
-              <h3 className="text-lg font-semibold text-white mb-2">Share this challenge!</h3>
-              <p className="text-gray-300 text-sm mb-3">Send this link to a friend — they&apos;ll play the same questions and you&apos;ll see who scores higher.</p>
+            <div className="bg-accent-subtle ring-1 ring-accent-light rounded-2xl p-6 mb-6">
+              <h3 className="text-lg font-semibold text-foreground mb-2">Share this challenge!</h3>
+              <p className="text-muted-foreground text-sm mb-3">Send this link to a friend — they&apos;ll play the same questions and you&apos;ll see who scores higher.</p>
               <div className="flex gap-2">
                 <input
                   readOnly
                   value={`${typeof window !== 'undefined' ? window.location.origin : ''}/competitive/async/${id}`}
-                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-600 rounded-lg text-gray-300 text-sm"
+                  className="flex-1 px-3 py-2 bg-card border border-card-border rounded-lg text-foreground text-sm"
                 />
                 <button
                   onClick={() => {
@@ -322,10 +328,10 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
           )}
 
           {/* Scoreboard */}
-          <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 mb-6">
+          <div className="bg-card rounded-3xl border border-card-border p-6 mb-6 shadow-sm">
             <div className="grid grid-cols-2 gap-6">
               {/* Challenger */}
-              <div className={`text-center p-4 rounded-xl ${isCompleted && challenge.winnerId === challenge.challenger.id ? 'bg-yellow-500/10 border border-yellow-500/30' : 'bg-gray-700/30'}`}>
+              <div className={`text-center p-4 rounded-xl ${isCompleted && challenge.winnerId === challenge.challenger.id ? 'bg-amber-50 border border-amber-300 dark:bg-amber-900/20 dark:border-amber-700' : 'bg-gray-50 dark:bg-gray-800/60'}`}>
                 <div className="flex justify-center mb-2">
                   {challenge.challenger.avatarData ? (
                     <AvatarDisplay avatarData={challenge.challenger.avatarData as AvatarData} size={48} />
@@ -335,18 +341,18 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                     </div>
                   )}
                 </div>
-                <p className="text-white font-semibold text-sm mb-1">{publicDisplayName(challenge.challenger.name, 'Challenger')}</p>
-                <p className="text-3xl font-bold text-white">{challenge.challengerScore}/{challenge.questionCount}</p>
+                <p className="text-foreground font-semibold text-sm mb-1">{publicDisplayName(challenge.challenger.name, 'Challenger')}</p>
+                <p className="text-3xl font-bold text-foreground">{challenge.challengerScore}/{challenge.questionCount}</p>
                 {challenge.challengerTime != null && (
-                  <p className="text-gray-400 text-xs mt-1">{(challenge.challengerTime / 1000).toFixed(1)}s</p>
+                  <p className="text-muted-foreground text-xs mt-1">{(challenge.challengerTime / 1000).toFixed(1)}s</p>
                 )}
                 {isCompleted && challenge.winnerId === challenge.challenger.id && (
-                  <span className="inline-block mt-2 px-2 py-0.5 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">Winner!</span>
+                  <span className="inline-block mt-2 px-2 py-0.5 bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300 text-xs rounded-full">Winner!</span>
                 )}
               </div>
 
               {/* Recipient */}
-              <div className={`text-center p-4 rounded-xl ${isCompleted && challenge.winnerId && challenge.winnerId !== challenge.challenger.id ? 'bg-yellow-500/10 border border-yellow-500/30' : 'bg-gray-700/30'}`}>
+              <div className={`text-center p-4 rounded-xl ${isCompleted && challenge.winnerId && challenge.winnerId !== challenge.challenger.id ? 'bg-amber-50 border border-amber-300 dark:bg-amber-900/20 dark:border-amber-700' : 'bg-gray-50 dark:bg-gray-800/60'}`}>
                 <div className="flex justify-center mb-2">
                   {challenge.recipient?.avatarData ? (
                     <AvatarDisplay avatarData={challenge.recipient.avatarData as AvatarData} size={48} />
@@ -355,23 +361,23 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                       {(challenge.recipient.name || '?')[0]}
                     </div>
                   ) : (
-                    <div className="w-12 h-12 rounded-full bg-gray-600 flex items-center justify-center text-gray-400 text-lg">?</div>
+                    <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-gray-500 dark:text-gray-400 text-lg">?</div>
                   )}
                 </div>
-                <p className="text-white font-semibold text-sm mb-1">{challenge.recipient ? publicDisplayName(challenge.recipient.name, 'Opponent') : 'Waiting...'}</p>
+                <p className="text-foreground font-semibold text-sm mb-1">{challenge.recipient ? publicDisplayName(challenge.recipient.name, 'Opponent') : 'Waiting...'}</p>
                 {challenge.recipientScore != null ? (
-                  <p className="text-3xl font-bold text-white">{challenge.recipientScore}/{challenge.questionCount}</p>
+                  <p className="text-3xl font-bold text-foreground">{challenge.recipientScore}/{challenge.questionCount}</p>
                 ) : (
-                  <p className="text-xl text-gray-500">—</p>
+                  <p className="text-xl text-muted-foreground">—</p>
                 )}
                 {challenge.recipientTime != null && (
-                  <p className="text-gray-400 text-xs mt-1">{(challenge.recipientTime / 1000).toFixed(1)}s</p>
+                  <p className="text-muted-foreground text-xs mt-1">{(challenge.recipientTime / 1000).toFixed(1)}s</p>
                 )}
                 {isCompleted && challenge.winnerId && challenge.winnerId !== challenge.challenger.id && (
-                  <span className="inline-block mt-2 px-2 py-0.5 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">Winner!</span>
+                  <span className="inline-block mt-2 px-2 py-0.5 bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300 text-xs rounded-full">Winner!</span>
                 )}
                 {isCompleted && !challenge.winnerId && (
-                  <span className="inline-block mt-2 px-2 py-0.5 bg-gray-500/20 text-gray-400 text-xs rounded-full">Tie</span>
+                  <span className="inline-block mt-2 px-2 py-0.5 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 text-xs rounded-full">Tie</span>
                 )}
               </div>
             </div>
@@ -379,23 +385,23 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
 
           {/* Question-by-question breakdown (only when completed) */}
           {isCompleted && challenge.questions && challenge.challengerAnswers && challenge.recipientAnswers && (
-            <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 mb-6">
-              <h3 className="text-lg font-semibold text-white mb-4">Question Breakdown</h3>
+            <div className="bg-card rounded-3xl border border-card-border p-6 mb-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-foreground mb-4">Question Breakdown</h3>
               <div className="space-y-3">
                 {(challenge.questions as Question[]).map((q, i) => {
                   const cAnswer = challenge.challengerAnswers?.find(a => a.questionIndex === i)
                   const rAnswer = challenge.recipientAnswers?.find(a => a.questionIndex === i)
                   return (
-                    <div key={i} className="flex items-center gap-3 py-2 border-b border-gray-700/50 last:border-0">
-                      <span className="text-gray-400 text-sm w-6">Q{i + 1}</span>
-                      <p className="flex-1 text-gray-300 text-sm truncate" dangerouslySetInnerHTML={{
+                    <div key={i} className="flex items-center gap-3 py-2 border-b border-card-border last:border-0">
+                      <span className="text-muted-foreground text-sm w-6">Q{i + 1}</span>
+                      <p className="flex-1 text-foreground text-sm truncate" dangerouslySetInnerHTML={{
                         __html: renderRichText(q.question || q.prompt || `Question ${i + 1}`)
                       }} />
                       <div className="flex gap-4">
-                        <span className={`text-sm font-medium ${cAnswer?.correct ? 'text-green-400' : 'text-red-400'}`}>
+                        <span className={`text-sm font-medium ${cAnswer?.correct ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400'}`}>
                           {cAnswer?.correct ? '✓' : '✗'}
                         </span>
-                        <span className={`text-sm font-medium ${rAnswer?.correct ? 'text-green-400' : 'text-red-400'}`}>
+                        <span className={`text-sm font-medium ${rAnswer?.correct ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400'}`}>
                           {rAnswer?.correct ? '✓' : '✗'}
                         </span>
                       </div>
@@ -409,7 +415,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
           <div className="flex gap-3 justify-center">
             <button
               onClick={() => router.push('/competitive')}
-              className="px-6 py-3 bg-gray-700 text-white rounded-xl hover:bg-gray-600 font-medium"
+              className="px-6 py-3 rounded-xl border border-card-border bg-card text-foreground font-semibold hover:border-accent hover:text-accent"
             >
               Back to Competitive
             </button>
@@ -432,16 +438,16 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     const isMyTurn = challenge.canPlay
 
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center p-4">
         <div className="max-w-lg w-full">
-          <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-8 text-center">
+          <div className="bg-card rounded-3xl border border-card-border p-8 text-center shadow-sm">
             <div className="text-5xl mb-4">⚔️</div>
-            <h1 className="text-2xl font-bold text-white mb-2">Async Challenge</h1>
-            <p className="text-gray-400 mb-6">{topicLabel} · {challenge.questionCount} questions · {Math.floor(challenge.timeLimit / 60)}min</p>
+            <h1 className="text-2xl font-bold text-foreground mb-2">Async Challenge</h1>
+            <p className="text-muted-foreground mb-6">{topicLabel} · {challenge.questionCount} questions · {Math.floor(challenge.timeLimit / 60)}min</p>
 
             {challenge.isChallenger && challenge.status === 'CHALLENGER_PLAYING' && (
               <>
-                <p className="text-gray-300 mb-6">You created this challenge. Play your round first, then share the link with a friend!</p>
+                <p className="text-muted-foreground mb-6">You created this challenge. Play your round first, then share the link with a friend!</p>
                 <button
                   onClick={startPlaying}
                   className="w-full py-3 bg-accent text-white font-bold rounded-xl hover:bg-accent-hover text-lg transition-colors"
@@ -461,10 +467,10 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
                       {(challenge.challenger.name || '?')[0]}
                     </div>
                   )}
-                  <span className="text-white font-semibold">{publicDisplayName(challenge.challenger.name, 'Someone')}</span>
-                  <span className="text-gray-400">challenged you!</span>
+                  <span className="text-foreground font-semibold">{publicDisplayName(challenge.challenger.name, 'Someone')}</span>
+                  <span className="text-muted-foreground">challenged you!</span>
                 </div>
-                <p className="text-gray-300 text-sm mb-6">Answer the same {challenge.questionCount} questions and see who scores higher. You have {Math.floor(challenge.timeLimit / 60)} minutes.</p>
+                <p className="text-muted-foreground text-sm mb-6">Answer the same {challenge.questionCount} questions and see who scores higher. You have {Math.floor(challenge.timeLimit / 60)} minutes.</p>
                 <button
                   onClick={startPlaying}
                   className="w-full py-3 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-700 text-lg transition-colors"
@@ -475,12 +481,12 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
             )}
 
             {!isMyTurn && challenge.status === 'WAITING_FOR_OPPONENT' && !challenge.isChallenger && (
-              <p className="text-gray-300">This challenge is waiting for an opponent. If you&apos;re logged in, you can accept it!</p>
+              <p className="text-muted-foreground">This challenge is waiting for an opponent. If you&apos;re logged in, you can accept it!</p>
             )}
 
             <button
               onClick={() => router.push('/competitive')}
-              className="mt-4 text-gray-400 hover:text-gray-300 text-sm"
+              className="mt-4 text-muted-foreground hover:text-accent text-sm"
             >
               ← Back to Competitive
             </button>
@@ -494,113 +500,108 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
   if (phase === 'playing' && challenge.questions) {
     const q = challenge.questions[currentQuestion]
     const progress = ((currentQuestion) / challenge.questions.length) * 100
-    const minutes = Math.floor(timeRemaining / 60)
-    const seconds = timeRemaining % 60
+    const correctIdx = q.answerIndex ?? q.correctAnswer ?? -1
 
     return (
-      <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 p-4">
-        <div className="max-w-2xl mx-auto pt-4">
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 px-3 pb-8 sm:px-4">
+        <div className="mx-auto max-w-2xl">
           {/* Top bar */}
-          <div className="flex items-center justify-between mb-6">
-            <div className="flex items-center gap-2.5 min-w-0">
-              {/* Your avatar reacts to each answer, same as in a live match. */}
-              <AvatarDisplay
-                avatarData={(challenge.isChallenger ? challenge.challenger.avatarData : challenge.recipient?.avatarData) as AvatarData}
-                size={36}
-                emotion={selfEmotion}
-                className="flex-shrink-0"
-              />
-              <div className="text-white font-semibold">
-                Q{currentQuestion + 1}/{challenge.questions.length}
+          <div className="sticky top-16 z-20 -mx-3 mb-4 px-3 pt-2 sm:mx-0 sm:px-0">
+            <div className="rounded-2xl border border-card-border bg-card/95 p-3 shadow-sm backdrop-blur sm:p-4">
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex min-w-0 items-center gap-2.5">
+                  {/* Your avatar reacts to each answer, same as in a live match. */}
+                  <span className="inline-flex shrink-0 rounded-full bg-card p-0.5 ring-2 ring-accent">
+                    <AvatarDisplay
+                      avatarData={(challenge.isChallenger ? challenge.challenger.avatarData : challenge.recipient?.avatarData) as AvatarData}
+                      size={40}
+                      emotion={selfEmotion}
+                      className="rounded-full"
+                    />
+                  </span>
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-bold text-foreground">{topicLabel}</p>
+                    <p className="text-xs font-semibold text-muted-foreground">📬 Async · Q{currentQuestion + 1}/{challenge.questions.length}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  {streak >= 2 && (
+                    <span
+                      key={`streak-${streak}`}
+                      className="animate-celebration-pop inline-flex items-center gap-1 rounded-full bg-amber-100 px-2 py-0.5 text-sm font-bold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300"
+                    >
+                      🔥 {streak}
+                    </span>
+                  )}
+                  <span key={`score-${liveScore}`} className={`text-right ${liveScore > 0 ? 'animate-celebration-pop' : ''}`}>
+                    <span className="block text-2xl font-black tabular-nums text-accent">{liveScore}</span>
+                    <span className="block text-[11px] font-semibold text-muted-foreground">correct</span>
+                  </span>
+                  <MatchClock remaining={timeRemaining} total={challenge.timeLimit} />
+                </div>
+              </div>
+              {/* Progress bar */}
+              <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
+                <div className="h-full rounded-full bg-brand-gradient transition-all duration-300" style={{ width: `${progress}%` }} />
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              {streak >= 2 && (
-                <span
-                  key={`streak-${streak}`}
-                  className="animate-celebration-pop inline-flex items-center gap-1 rounded-full bg-amber-500/20 px-2 py-0.5 text-sm font-bold text-amber-400"
-                >
-                  🔥 {streak}
-                </span>
-              )}
-              <span key={`score-${liveScore}`} className={`text-emerald-400 font-bold ${liveScore > 0 ? 'animate-celebration-pop' : ''}`}>
-                {liveScore} correct
-              </span>
-              <span className={`font-mono text-lg font-bold ${timeRemaining <= 30 ? 'text-red-400 animate-pulse' : 'text-white'}`}>
-                {minutes}:{seconds.toString().padStart(2, '0')}
-              </span>
-            </div>
-          </div>
-
-          {/* Progress bar */}
-          <div className="w-full h-1.5 bg-gray-700 rounded-full mb-8">
-            <div className="h-full bg-accent rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
           </div>
 
           {/* Question */}
-          <div className="bg-gray-800/50 rounded-2xl border border-gray-700 p-6 mb-6">
-            <p
-              className="text-white text-lg leading-relaxed"
+          <QuestionCard questionIndex={currentQuestion} counter={`Question ${currentQuestion + 1} of ${challenge.questions.length}`}>
+            <div
+              data-qa="question-stem"
+              className="overflow-x-auto text-lg font-semibold leading-relaxed text-foreground sm:text-xl"
               dangerouslySetInnerHTML={{
                 __html: renderRichText(q.question || q.prompt || '')
               }}
             />
-          </div>
 
-          {/* Options */}
-          <div className="space-y-3">
-            {q.options?.map((opt, i) => {
-              const correctIdx = q.answerIndex ?? q.correctAnswer ?? -1
-              const isSelected = selectedAnswer === i
-              const isCorrect = i === correctIdx
-              let className = 'w-full text-left p-4 rounded-xl border transition-all duration-200 '
-
-              if (showFeedback && isSelected && isCorrect) {
-                className += 'bg-green-900/30 border-green-500 text-green-300'
-              } else if (showFeedback && isSelected && !isCorrect) {
-                className += 'bg-red-900/30 border-red-500 text-red-300'
-              } else if (showFeedback && isCorrect) {
-                className += 'bg-green-900/20 border-green-500/50 text-green-300'
-              } else if (isSelected) {
-                className += 'bg-accent/20 border-accent text-white'
-              } else {
-                className += 'bg-gray-800/50 border-gray-600 text-gray-300 hover:border-accent/50 hover:bg-gray-700/50 cursor-pointer'
-              }
-
-              return (
-                <button
-                  key={i}
-                  onClick={() => handleAnswer(i)}
-                  disabled={selectedAnswer !== null}
-                  className={className}
-                >
-                  <span className="font-medium mr-3 text-gray-500">{String.fromCharCode(65 + i)}.</span>
-                  <span dangerouslySetInnerHTML={{ __html: renderRichText(opt) }} />
-                </button>
-              )
-            })}
-          </div>
-
-          {/* Wrong-answer explanation + Next (self-paced, so reading is safe) */}
-          {awaitingNext && q.explanation && (
-            <div className="mt-6 animate-fadeIn rounded-xl border border-accent/40 bg-gray-800/60 p-4">
-              <p className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-muted mb-2">
-                <Lightbulb className="w-4 h-4" aria-hidden="true" />
-                Explanation
-              </p>
-              <div
-                className="text-sm text-gray-300 leading-relaxed overflow-x-auto"
-                dangerouslySetInnerHTML={{ __html: renderRichText(q.explanation) }}
-              />
-              <button
-                onClick={advanceQuestion}
-                className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 bg-accent text-white rounded-lg hover:bg-accent-hover font-semibold transition-colors"
-              >
-                {currentQuestion + 1 < challenge.questions.length ? 'Next question' : 'Finish & submit'}
-                <ArrowRight className="w-4 h-4" aria-hidden="true" />
-              </button>
+            {/* Options */}
+            <div className={`mt-5 grid gap-2.5 sm:gap-3 ${answerGridClass(q.options)}`}>
+              {q.options?.map((opt, i) => {
+                const isSelected = selectedAnswer === i
+                const isCorrect = i === correctIdx
+                const state: AnswerState = showFeedback && isCorrect ? 'correct'
+                  : showFeedback && isSelected ? 'incorrect'
+                  : isSelected ? 'selected'
+                  : 'idle'
+                return (
+                  <AnswerTile
+                    key={i}
+                    index={i}
+                    letter={String.fromCharCode(65 + i)}
+                    state={state}
+                    onClick={() => handleAnswer(i)}
+                    disabled={selectedAnswer !== null}
+                  >
+                    <span dangerouslySetInnerHTML={{ __html: renderRichText(opt) }} />
+                  </AnswerTile>
+                )
+              })}
             </div>
-          )}
+
+            {/* Wrong-answer explanation + Next (self-paced, so reading is safe) */}
+            {awaitingNext && q.explanation && (
+              <div className="mt-5 animate-fadeIn rounded-2xl bg-accent-subtle p-4 ring-1 ring-accent-light">
+                <p className="mb-2 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+                  <Lightbulb className="w-4 h-4" aria-hidden="true" />
+                  Explanation
+                </p>
+                <div
+                  className="overflow-x-auto text-sm leading-relaxed text-foreground"
+                  dangerouslySetInnerHTML={{ __html: renderRichText(q.explanation) }}
+                />
+                <button
+                  onClick={advanceQuestion}
+                  className="mt-4 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-2.5 font-semibold text-white transition-colors hover:from-accent-hover hover:to-accent-secondary-hover"
+                >
+                  {currentQuestion + 1 < challenge.questions.length ? 'Next question' : 'Finish & submit'}
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </button>
+              </div>
+            )}
+          </QuestionCard>
         </div>
       </div>
     )
@@ -608,10 +609,10 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
 
   // === SUBMITTING ===
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center">
       <div className="text-center">
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent mx-auto mb-4" />
-        <p className="text-gray-400">Submitting your answers...</p>
+        <p className="text-muted-foreground">Submitting your answers...</p>
       </div>
     </div>
   )
@@ -684,12 +685,12 @@ function RematchPanel({
   }
 
   return (
-    <div className="mt-6 bg-gradient-to-br from-accent/20 to-accent-dark/40 border border-accent/30 rounded-2xl p-6">
+    <div className="mt-6 rounded-3xl border border-card-border bg-card p-6 shadow-sm">
       {!open ? (
         <div className="text-center">
-          <h3 className="text-lg font-bold text-white mb-1">Get them back?</h3>
-          <p className="text-sm text-gray-300 mb-4">
-            Send <span className="font-semibold text-white">{publicDisplayName(opponent.name, 'your opponent')}</span> another challenge on a topic you choose.
+          <h3 className="text-lg font-bold text-foreground mb-1">Get them back?</h3>
+          <p className="text-sm text-muted-foreground mb-4">
+            Send <span className="font-semibold text-foreground">{publicDisplayName(opponent.name, 'your opponent')}</span> another challenge on a topic you choose.
           </p>
           <button
             onClick={handleOpen}
@@ -701,16 +702,16 @@ function RematchPanel({
       ) : (
         <div>
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-lg font-bold text-white">Pick a topic for {publicDisplayName(opponent.name, 'them').split(' ')[0]}</h3>
-            <button onClick={() => setOpen(false)} className="text-gray-400 hover:text-gray-200 text-sm">Cancel</button>
+            <h3 className="text-lg font-bold text-foreground">Pick a topic for {publicDisplayName(opponent.name, 'them').split(' ')[0]}</h3>
+            <button onClick={() => setOpen(false)} className="text-muted-foreground hover:text-accent text-sm">Cancel</button>
           </div>
 
           {loading && (
-            <div className="text-center py-6 text-gray-400 text-sm">Loading topics…</div>
+            <div className="text-center py-6 text-muted-foreground text-sm">Loading topics…</div>
           )}
 
           {error && (
-            <div className="mb-3 p-3 rounded-lg bg-red-900/30 border border-red-500/40 text-red-200 text-sm">{error}</div>
+            <div className="mb-3 p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 dark:bg-red-900/30 dark:border-red-800 dark:text-red-200 text-sm">{error}</div>
           )}
 
           {topicsData && (
@@ -720,7 +721,7 @@ function RematchPanel({
                 if (completedTopics.length === 0) return null
                 return (
                   <div key={unit.slug}>
-                    <p className="text-xs uppercase tracking-wide text-gray-400 mb-2">{unit.name}</p>
+                    <p className="text-xs uppercase tracking-wide text-muted-foreground mb-2">{unit.name}</p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {completedTopics.map(topic => {
                         const isSel = selected === topic.slug
@@ -728,7 +729,7 @@ function RematchPanel({
                           <button
                             key={topic.slug}
                             onClick={() => setSelected(topic.slug)}
-                            className={`text-left text-sm px-3 py-2 rounded-lg border transition-all ${isSel ? 'border-accent bg-accent/20 text-white' : 'border-gray-600 bg-gray-800/40 text-gray-300 hover:border-accent/50'}`}
+                            className={`text-left text-sm px-3 py-2 rounded-lg border transition-all ${isSel ? 'border-accent bg-accent-subtle text-foreground ring-1 ring-accent' : 'border-card-border bg-card text-foreground hover:border-accent-muted'}`}
                           >
                             {topic.title}
                           </button>
@@ -739,7 +740,7 @@ function RematchPanel({
                 )
               })}
               {topicsData.units.every(u => u.topics.every(t => !t.completed)) && (
-                <p className="text-sm text-gray-400 text-center py-4">
+                <p className="text-sm text-muted-foreground text-center py-4">
                   Complete more lessons in this course to unlock topics for a rematch.
                 </p>
               )}

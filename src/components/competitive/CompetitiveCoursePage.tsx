@@ -19,7 +19,7 @@ import { useSession } from 'next-auth/react'
 import { ArrowLeft, Check, ChevronDown, Lock, Star, Swords } from 'lucide-react'
 import { GAME_MODE_CARDS } from '@/lib/competitive-modes'
 import { COMPETITIVE_COURSES } from '@/lib/competitive-catalog'
-import { QUEUE_POLL_TIMEOUT_SEC } from '@/components/competitive/QueueSearchPanel'
+import { QUEUE_POLL_TIMEOUT_SEC, queuePositionOf } from '@/components/competitive/QueueSearchPanel'
 import { MatchSetupBar, MatchSetupPanel, ModeCard, type MatchSetupProps } from '@/components/competitive/MatchSetup'
 
 export interface CompetitiveCoursePageConfig {
@@ -202,7 +202,7 @@ function CompetitiveCoursePageInner({ config }: { config: CompetitiveCoursePageC
     selectedTopic,
     selectedTopicTitle,
     inQueue,
-    queuePosition: queueStatus?.position,
+    queuePosition: queuePositionOf(queueStatus),
     queueEstimatedWait: queueStatus?.estimatedWait,
     queueTimedOut,
     showBotOptions: showAIOptions,

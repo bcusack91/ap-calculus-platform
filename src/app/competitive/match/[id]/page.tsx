@@ -12,8 +12,8 @@ import {
   ClipboardList,
   Sparkles,
   ArrowRight,
+  RotateCcw,
 } from 'lucide-react';
-import AvatarDisplay from '@/components/AvatarDisplay';
 import { CosmeticNameplate } from '@/components/PowerUps';
 import { AvatarData } from '@/types/avatar';
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy';
@@ -32,6 +32,26 @@ import {
   useChaosNow,
   type ChaosToast,
 } from '@/components/ChaosMode';
+import { GAME_MODE_CARDS } from '@/lib/competitive-modes';
+import { COMPETITIVE_COURSES } from '@/lib/competitive-catalog';
+import {
+  VersusHeader,
+  ModeChip,
+  MatchClock,
+  QuestionCard,
+  AnswerTile,
+  useAnswerHotkeys,
+  ResultHero,
+  FinalScore,
+  RankDelta,
+  StatTile,
+  rankBadge,
+  bestStreakOf,
+  answerGridClass,
+  BOT_BADGE_CLASS,
+  type AnswerState,
+  type Outcome,
+} from '@/components/competitive/arena/Arena';
 import 'katex/dist/katex.min.css';
 
 const CompetitiveUnitCircle = dynamic(
@@ -716,12 +736,55 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     await fetchMatchState();
   }, [fetchMatchState]);
 
+  // ---- Presentation-only derivations (hooks must run before early returns) ----
+  // Opponent activity: a brief "+1 / ✗" pulse on their avatar whenever their
+  // answer history grows. Reads the answer list the GET already forwards.
+  const oppAnswersLen = matchState
+    ? ((currentUserId === matchState.player1Id ? matchState.gameData?.player2Answers : matchState.gameData?.player1Answers)?.length ?? 0)
+    : 0;
+  const oppLastCorrect = matchState
+    ? !!(currentUserId === matchState.player1Id ? matchState.gameData?.player2Answers : matchState.gameData?.player1Answers)?.[oppAnswersLen - 1]?.correct
+    : false;
+  const [oppActivity, setOppActivity] = useState<{ key: number; correct: boolean } | null>(null);
+  const oppSeenRef = useRef<number | null>(null);
+  useEffect(() => {
+    if (!currentUserId) return;
+    if (oppSeenRef.current !== null && oppAnswersLen > oppSeenRef.current) {
+      setOppActivity({ key: Date.now(), correct: oppLastCorrect });
+      const t = setTimeout(() => setOppActivity(null), 1400);
+      oppSeenRef.current = oppAnswersLen;
+      return () => clearTimeout(t);
+    }
+    oppSeenRef.current = oppAnswersLen;
+  }, [oppAnswersLen, oppLastCorrect, currentUserId]);
+
+  // Desktop shortcuts route through the SAME handler as a click, under the
+  // same conditions a tile is enabled. Off while any chaos effect is on you,
+  // so the keyboard can't sidestep Flip / Slippery / Fog / Ink.
+  const hkIsP1 = !!matchState && currentUserId === matchState.player1Id;
+  const hkIndex = heldFeedbackIndex ?? (matchState ? (hkIsP1 ? matchState.player1QuestionIndex : matchState.player2QuestionIndex) : 0);
+  const hkQuestion = matchState?.questions?.[hkIndex];
+  const hkFeedbackCurrent = feedback !== null && feedbackQuestionIndex === hkIndex;
+  const hkEliminated: number[] = fiftyFiftyElim && fiftyFiftyElim.questionIndex === hkIndex
+    ? fiftyFiftyElim.eliminated
+    : (myPowerUps?.fiftyFifty && myPowerUps.fiftyFifty.questionIndex === hkIndex ? myPowerUps.fiftyFifty.eliminated : []);
+  useAnswerHotkeys(
+    matchState?.status === 'IN_PROGRESS' &&
+      hkQuestion?.type === 'multiple-choice' &&
+      !isSubmitting && !hkFeedbackCurrent && !frozenActive && myActiveEffects.length === 0,
+    hkQuestion?.options?.length ?? 0,
+    (i) => { if (!hkEliminated.includes(i)) void handleOptionSelect(i); }
+  );
+
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-accent mx-auto mb-4"></div>
-          <p className="text-gray-600 dark:text-gray-400">Loading match...</p>
+      <div className="min-h-screen bg-gray-50 px-3 py-4 dark:bg-gray-950 sm:px-4 sm:py-6" aria-busy="true" aria-label="Loading match">
+        <div className="mx-auto max-w-3xl space-y-4">
+          <div className="h-24 animate-pulse rounded-3xl bg-gray-200 dark:bg-gray-800 motion-reduce:animate-none" />
+          <div className="h-48 animate-pulse rounded-3xl bg-gray-200 dark:bg-gray-800 motion-reduce:animate-none" />
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[0, 1, 2, 3].map(i => <div key={i} className="h-16 animate-pulse rounded-2xl bg-gray-200 dark:bg-gray-800 motion-reduce:animate-none" />)}
+          </div>
         </div>
       </div>
     );
@@ -729,12 +792,12 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
 
   if (!matchState) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <p className="text-red-600 dark:text-red-400">Match not found</p>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center px-4">
+        <div className="rounded-3xl border border-card-border bg-card p-8 text-center shadow-sm">
+          <p className="text-lg font-semibold text-foreground">Match not found</p>
           <button
             onClick={() => router.push(lobbyPath)}
-            className="mt-4 px-6 py-2 bg-accent text-white rounded-lg hover:bg-accent-hover"
+            className="mt-4 rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-2.5 font-semibold text-white hover:from-accent-hover hover:to-accent-secondary-hover"
           >
             Back to Competitive
           </button>
@@ -754,20 +817,49 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   // This prevents the next question's correct answer from flashing green
   // when polling updates matchState before the feedback timeout clears
   const isFeedbackCurrent = feedback !== null && feedbackQuestionIndex === displayQuestionIndex;
-  
+
+  const modeCard = GAME_MODE_CARDS.find(m => m.key === matchState.gameMode) ?? GAME_MODE_CARDS[0];
+  const isAccuracy = matchState.gameMode === 'ACCURACY_CHALLENGE';
+  const fromSlug = searchParams.get('from');
+  const courseName = COMPETITIVE_COURSES.find(c => c.slug === fromSlug)?.name ?? null;
+  const me = {
+    name: isPlayer1 ? matchState.player1Name : matchState.player2Name,
+    avatar: isPlayer1 ? matchState.player1Avatar : matchState.player2Avatar,
+    score: isPlayer1 ? matchState.player1Score : matchState.player2Score,
+    answers: (isPlayer1 ? matchState.gameData?.player1Answers : matchState.gameData?.player2Answers) || [],
+    isAI: isPlayer1 ? matchState.player1IsAI : matchState.player2IsAI,
+    mmrBefore: isPlayer1 ? matchState.player1MMRBefore : matchState.player2MMRBefore,
+    mmrAfter: isPlayer1 ? matchState.player1MMRAfter : matchState.player2MMRAfter,
+    emotion: isPlayer1 ? player1Emotion : player2Emotion,
+  };
+  const opp = {
+    name: isPlayer1 ? matchState.player2Name : matchState.player1Name,
+    avatar: isPlayer1 ? matchState.player2Avatar : matchState.player1Avatar,
+    score: isPlayer1 ? matchState.player2Score : matchState.player1Score,
+    answers: (isPlayer1 ? matchState.gameData?.player2Answers : matchState.gameData?.player1Answers) || [],
+    isAI: isPlayer1 ? matchState.player2IsAI : matchState.player1IsAI,
+    mmrBefore: isPlayer1 ? matchState.player2MMRBefore : matchState.player1MMRBefore,
+    emotion: isPlayer1 ? player2Emotion : player1Emotion,
+    questionIndex: isPlayer1 ? matchState.player2QuestionIndex : matchState.player1QuestionIndex,
+  };
+  const botStrength = matchState.gameData?.aiDifficulty;
+  const badgeFor = (isAI: boolean | undefined, mmr: number | undefined) =>
+    isAI
+      ? { emoji: '🤖', text: `${botStrength ? botStrength[0].toUpperCase() + botStrength.slice(1) : 'Practice'} bot`, className: BOT_BADGE_CLASS }
+      : rankBadge(mmr);
+
   // Results screen
   if (matchState.status === 'COMPLETED') {
     const isWinner = matchState.winnerId === currentUserId;
     const isTie = matchState.winnerId === null;
-    
-    const playerMMRBefore = isPlayer1 ? matchState.player1MMRBefore : matchState.player2MMRBefore;
-    const playerMMRAfter = isPlayer1 ? matchState.player1MMRAfter : matchState.player2MMRAfter;
+    const outcome: Outcome = isTie ? 'draw' : isWinner ? 'win' : 'loss';
+
+    const playerMMRBefore = me.mmrBefore;
+    const playerMMRAfter = me.mmrAfter;
     const mmrChange = playerMMRAfter && playerMMRBefore ? playerMMRAfter - playerMMRBefore : 0;
 
     // Get this player's answer history for review
-    const playerAnswers = isPlayer1
-      ? matchState.gameData?.player1Answers || []
-      : matchState.gameData?.player2Answers || [];
+    const playerAnswers = me.answers;
 
     // Deduplicate: keep only the last answer per questionIndex (player may have seen the same question multiple times due to cycling)
     const answersByQuestion = new Map<number, { questionIndex: number; answerIndex: number; correct: boolean }>();
@@ -778,290 +870,240 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
     const missedQuestions = Array.from(answersByQuestion.values()).filter(a => !a.correct);
     const totalAnswered = answersByQuestion.size;
     const totalCorrect = Array.from(answersByQuestion.values()).filter(a => a.correct).length;
-    
+    const myRawCorrect = playerAnswers.filter(a => a.correct).length;
+    const oppRawCorrect = opp.answers.filter(a => a.correct).length;
+    const accuracyPct = (n: number, d: number) => (d > 0 ? Math.round((n / d) * 100) : 0);
+    const scoreSub = (correct: number, answered: number) =>
+      isAccuracy ? `${correct}/${answered} correct · ${accuracyPct(correct, answered)}%` : `${correct}/${answered} correct`;
+
+    const title = isTie ? "It's a Tie!" : isWinner ? 'Victory!' : 'Defeat';
+    const subtitle = isTie
+      ? 'Dead even. Run it back?'
+      : isWinner
+        ? `You beat ${opp.name}${opp.name.endsWith('.') ? '' : '.'}`
+        : `${opp.name} took this one.`;
+
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-6 sm:py-12 px-3 sm:px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-5 sm:p-8 text-center" role="status" aria-live="polite">
-            <h1 className={`text-3xl sm:text-4xl font-bold mb-4 ${
-              isTie ? 'text-gray-600 dark:text-gray-400' :
-              isWinner ? 'text-green-600 dark:text-green-400' : 
-              'text-red-600 dark:text-red-400'
-            }`}>
-              {isTie ? "It's a Tie!" : isWinner ? 'Victory!' : 'Defeat'}
-            </h1>
-
-            {matchState.gameMode === 'CHAOS' && (
-              <p className="mb-4 text-sm font-semibold text-accent dark:text-accent-muted">
-                🎲 Chaos Mode — unranked match (no MMR change)
-              </p>
-            )}
-
-            {/* MMR Change Display */}
-            {mmrChange !== 0 && (
-              <div className="mb-6">
-                <p className="text-gray-600 dark:text-gray-400 mb-2">MMR Change</p>
-                <p className={`text-3xl font-bold ${
-                  mmrChange > 0 ? 'text-green-600' : 'text-red-600'
-                }`}>
-                  {mmrChange > 0 ? '+' : ''}{mmrChange}
-                </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                  {playerMMRBefore} → {playerMMRAfter}
-                </p>
-              </div>
-            )}
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 my-8">
-              <div className={`p-6 rounded-xl ${
-                isPlayer1 ? 'bg-accent-light dark:bg-accent-light/30 ring-2 ring-accent' : 
-                'bg-gray-100 dark:bg-gray-700'
-              }`}>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                  {isPlayer1 ? 'You' : 'Opponent'}
-                </p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
-                  {matchState.player1Name}
-                </p>
-                <p className="text-4xl font-bold text-accent dark:text-accent-muted">
-                  {matchState.player1Score}
-                </p>
-                {matchState.gameMode === 'ACCURACY_CHALLENGE' && (
-                  <p className="text-sm text-gray-500 mt-1">
-                    {matchState.player1Score}/{matchState.gameData?.player1Answers?.length || 0} correct &middot; {matchState.gameData?.player1Answers?.length ? Math.round((matchState.player1Score / matchState.gameData.player1Answers.length) * 100) : 0}% accuracy
-                  </p>
+      <div className="min-h-screen bg-gray-50 px-3 py-6 dark:bg-gray-950 sm:px-4 sm:py-10">
+        <div className="mx-auto max-w-3xl space-y-6">
+          <ResultHero outcome={outcome} title={title} subtitle={subtitle}>
+            <FinalScore
+              you={{ name: <CosmeticNameplate name={me.name} />, avatar: me.avatar, score: me.score, sub: scoreSub(myRawCorrect, playerAnswers.length), won: isWinner }}
+              opponent={{ name: opp.name, avatar: opp.avatar, score: opp.score, sub: scoreSub(oppRawCorrect, opp.answers.length), won: !isTie && !isWinner }}
+            />
+            <div className="space-y-4 p-4 sm:p-7">
+              <div className="flex flex-wrap justify-center gap-2 text-xs font-semibold">
+                <span className="inline-flex items-center gap-1 rounded-full bg-accent-subtle px-2.5 py-1 text-accent ring-1 ring-accent-light">
+                  <span aria-hidden>{modeCard.icon}</span> {modeCard.title}
+                </span>
+                {courseName && (
+                  <span className="rounded-full bg-gray-100 px-2.5 py-1 text-gray-700 dark:bg-gray-800 dark:text-gray-300">{courseName}</span>
+                )}
+                {matchState.gameMode === 'CHAOS' && (
+                  <span className="rounded-full bg-gray-100 px-2.5 py-1 text-gray-700 dark:bg-gray-800 dark:text-gray-300">🎲 Chaos Mode — unranked match (no MMR change)</span>
+                )}
+                {matchState.gameMode !== 'CHAOS' && matchState.gameData?.isPracticeMatch && mmrChange === 0 && (
+                  <span className="rounded-full bg-gray-100 px-2.5 py-1 text-gray-700 dark:bg-gray-800 dark:text-gray-300">Practice match · no MMR change</span>
                 )}
               </div>
 
-              <div className={`p-6 rounded-xl ${
-                !isPlayer1 ? 'bg-accent-light dark:bg-accent-light/30 ring-2 ring-accent' : 
-                'bg-gray-100 dark:bg-gray-700'
-              }`}>
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                  {!isPlayer1 ? 'You' : 'Opponent'}
-                </p>
-                <p className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
-                  {matchState.player2Name}
-                </p>
-                <p className="text-4xl font-bold text-accent dark:text-accent-muted">
-                  {matchState.player2Score}
-                </p>
-                {matchState.gameMode === 'ACCURACY_CHALLENGE' && (
-                  <p className="text-sm text-gray-500 mt-1">
-                    {matchState.player2Score}/{matchState.gameData?.player2Answers?.length || 0} correct &middot; {matchState.gameData?.player2Answers?.length ? Math.round((matchState.player2Score / matchState.gameData.player2Answers.length) * 100) : 0}% accuracy
-                  </p>
+              <div className={`grid gap-3 ${mmrChange !== 0 ? 'md:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)]' : ''}`}>
+                {/* MMR Change Display */}
+                {mmrChange !== 0 && playerMMRBefore && playerMMRAfter && (
+                  <RankDelta before={playerMMRBefore} after={playerMMRAfter} />
+                )}
+                <div className={`grid grid-cols-2 gap-3 ${mmrChange !== 0 ? '' : 'sm:grid-cols-4'}`}>
+                  <StatTile label="Correct" value={totalCorrect} sub={`of ${totalAnswered} questions`} />
+                  <StatTile label="Accuracy" value={`${accuracyPct(totalCorrect, totalAnswered)}%`} sub="Unique questions" />
+                  <StatTile label="Best streak" value={<>{bestStreakOf(playerAnswers) >= 2 && <span aria-hidden className="mr-1">🔥</span>}{bestStreakOf(playerAnswers)}</>} sub="In a row" />
+                  <StatTile label="Opponent" value={`${accuracyPct(oppRawCorrect, opp.answers.length)}%`} sub="Their accuracy" />
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2 pt-2 sm:flex-row sm:flex-wrap sm:justify-center">
+                {matchState.gameData?.lobbyCode ? (
+                  <button
+                    onClick={() => router.push(`/competitive/lobby/${matchState.gameData?.lobbyCode}`)}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 font-bold text-white shadow-md transition-all hover:from-accent-hover hover:to-accent-secondary-hover"
+                  >
+                    Return to Lobby <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => router.push(lobbyPath)}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 font-bold text-white shadow-md transition-all hover:from-accent-hover hover:to-accent-secondary-hover"
+                  >
+                    <RotateCcw className="h-4 w-4" aria-hidden="true" /> Play again
+                  </button>
+                )}
+                {totalAnswered > 0 && (
+                  <button
+                    onClick={() => setShowReview(!showReview)}
+                    aria-expanded={showReview}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-card-border bg-card px-5 py-3 font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
+                  >
+                    {missedQuestions.length > 0
+                      ? <><ClipboardList className="h-4 w-4" aria-hidden="true" /> {showReview ? 'Hide Review' : `Review Mistakes (${missedQuestions.length})`}</>
+                      : <><Sparkles className="h-4 w-4" aria-hidden="true" /> {showReview ? 'Hide Review' : 'Review All Questions'}</>}
+                  </button>
+                )}
+                {(matchState.gameData?.lobbyCode || fromSlug) && (
+                  <button
+                    onClick={() => router.push(matchState.gameData?.lobbyCode ? lobbyPath : '/competitive')}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 font-semibold text-muted-foreground transition-colors hover:text-accent"
+                  >
+                    {matchState.gameData?.lobbyCode ? `Back to ${courseName ?? 'Competitive'}` : 'Competitive hub'}
+                  </button>
                 )}
               </div>
             </div>
-
-            <div className="flex gap-4 justify-center flex-wrap">
-              {missedQuestions.length > 0 && (
-                <button
-                  onClick={() => setShowReview(!showReview)}
-                  className="px-5 sm:px-8 py-3 bg-amber-500 text-white rounded-lg hover:bg-amber-600 font-semibold flex items-center gap-2"
-                >
-                  <ClipboardList className="w-5 h-5" aria-hidden="true" />
-                  {showReview ? 'Hide Review' : `Review Mistakes (${missedQuestions.length})`}
-                </button>
-              )}
-              {missedQuestions.length === 0 && totalAnswered > 0 && (
-                <button
-                  onClick={() => setShowReview(!showReview)}
-                  className="px-5 sm:px-8 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 font-semibold flex items-center gap-2"
-                >
-                  <Sparkles className="w-5 h-5" aria-hidden="true" />
-                  {showReview ? 'Hide Review' : 'Review All Questions'}
-                </button>
-              )}
-              <button
-                onClick={() => router.push(lobbyPath)}
-                className="px-5 sm:px-8 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover font-semibold"
-              >
-                Back to Competitive
-              </button>
-              {matchState.gameData?.lobbyCode ? (
-                <button
-                  onClick={() => router.push(`/competitive/lobby/${matchState.gameData?.lobbyCode}`)}
-                  className="px-5 sm:px-8 py-3 bg-gradient-to-r from-accent to-accent-secondary text-white rounded-lg hover:from-accent-hover hover:to-accent-secondary-hover font-semibold"
-                >
-                  Return to Lobby →
-                </button>
-              ) : (
-                <button
-                  onClick={() => router.push(lobbyPath)}
-                  className="px-5 sm:px-8 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 font-semibold"
-                >
-                  Find New Match
-                </button>
-              )}
-            </div>
-          </div>
+          </ResultHero>
 
           {/* Question Review Section */}
           {showReview && (
-            <div className="mt-8 space-y-6">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  Match Review
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  You answered {totalCorrect} out of {totalAnswered} unique questions correctly.
-                  {missedQuestions.length > 0 && ' Review the ones you missed below.'}
-                </p>
+            <section className="rounded-3xl border border-card-border bg-card p-4 shadow-sm sm:p-7">
+              <h2 className="text-xl font-bold text-foreground">Match review</h2>
+              <p className="mb-5 mt-1 text-sm text-muted-foreground">
+                You answered {totalCorrect} out of {totalAnswered} unique questions correctly.
+                {missedQuestions.length > 0 && ' Review the ones you missed below.'}
+              </p>
 
-                <div className="space-y-4">
-                  {matchState.questions.map((question, qIdx) => {
-                    const answer = answersByQuestion.get(qIdx);
-                    if (!answer) return null; // Player never saw this question
+              <div className="space-y-3">
+                {matchState.questions.map((question, qIdx) => {
+                  const answer = answersByQuestion.get(qIdx);
+                  if (!answer) return null; // Player never saw this question
 
-                    const isMultipleChoice = question.type === 'multiple-choice';
-                    const wasCorrect = answer.correct;
+                  const isMultipleChoice = question.type === 'multiple-choice';
+                  const wasCorrect = answer.correct;
 
-                    return (
-                      <div
-                        key={qIdx}
-                        className={`rounded-xl border-2 p-5 transition-all ${
-                          wasCorrect
-                            ? 'border-green-200 dark:border-green-800 bg-green-50/50 dark:bg-green-900/10'
-                            : 'border-red-200 dark:border-red-800 bg-red-50/50 dark:bg-red-900/10'
-                        }`}
-                      >
-                        {/* Question header */}
-                        <div className="flex items-start gap-3 mb-3">
-                          <span className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
-                            wasCorrect
-                              ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400'
-                              : 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
-                          }`}>
-                            {wasCorrect
-                              ? <Check className="w-4 h-4" aria-hidden="true" />
-                              : <X className="w-4 h-4" aria-hidden="true" />}
-                          </span>
-                          <div className="flex-1">
-                            <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">
-                              Question {qIdx + 1}
-                              {question.difficulty && (
-                                <span className={`ml-2 px-2 py-0.5 rounded-full text-xs font-medium ${
-                                  question.difficulty === 'easy' ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400' :
-                                  question.difficulty === 'medium' ? 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400' :
-                                  'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400'
-                                }`}>
-                                  {question.difficulty}
-                                </span>
-                              )}
-                            </p>
-                            <h3 className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white overflow-x-auto">
-                              {renderPrompt(question.prompt || question.question || '', true)}
-                            </h3>
+                  return (
+                    <div key={qIdx} className="rounded-2xl border border-card-border p-4 sm:p-5">
+                      <div className="mb-3 flex items-start gap-3">
+                        <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-xl ${
+                          wasCorrect ? 'bg-green-600 text-white' : 'bg-red-600 text-white'
+                        }`}>
+                          {wasCorrect ? <Check className="h-4 w-4" aria-hidden="true" /> : <X className="h-4 w-4" aria-hidden="true" />}
+                        </span>
+                        <div className="min-w-0 flex-1">
+                          <p className="mb-1 flex flex-wrap items-center gap-2 text-xs font-bold uppercase tracking-wide text-muted-foreground">
+                            Question {qIdx + 1}
+                            {question.difficulty && (
+                              <span className={`rounded-full px-2 py-0.5 text-[11px] font-semibold normal-case tracking-normal ${
+                                question.difficulty === 'easy' ? 'bg-green-100 text-green-800 dark:bg-green-900/40 dark:text-green-300' :
+                                question.difficulty === 'medium' ? 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300' :
+                                'bg-red-100 text-red-800 dark:bg-red-900/40 dark:text-red-300'
+                              }`}>
+                                {question.difficulty}
+                              </span>
+                            )}
+                          </p>
+                          <div className="overflow-x-auto text-base font-semibold text-foreground">
+                            {renderPrompt(question.prompt || question.question || '', true)}
                           </div>
                         </div>
-
-                        {/* Multiple choice options */}
-                        {isMultipleChoice && question.options && (
-                          <div className="ml-4 sm:ml-11 space-y-2 mb-3">
-                            {question.options.map((option, optIdx) => {
-                              const isUserAnswer = answer.answerIndex === optIdx;
-                              const isCorrectAnswer = question.answerIndex === optIdx;
-
-                              return (
-                                <div
-                                  key={optIdx}
-                                  className={`flex items-center gap-3 p-3 rounded-lg text-sm ${
-                                    isCorrectAnswer
-                                      ? 'bg-green-100 dark:bg-green-900/20 border border-green-300 dark:border-green-700'
-                                      : isUserAnswer && !wasCorrect
-                                      ? 'bg-red-100 dark:bg-red-900/20 border border-red-300 dark:border-red-700'
-                                      : 'bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600'
-                                  }`}
-                                >
-                                  <span className={`w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold ${
-                                    isCorrectAnswer
-                                      ? 'border-green-500 text-green-600 dark:text-green-400'
-                                      : isUserAnswer && !wasCorrect
-                                      ? 'border-red-500 text-red-600 dark:text-red-400'
-                                      : 'border-gray-300 dark:border-gray-500 text-gray-500 dark:text-gray-400'
-                                  }`}>
-                                    {String.fromCharCode(65 + optIdx)}
-                                  </span>
-                                  <div className="flex-1 text-gray-900 dark:text-white">
-                                    {renderPrompt(option)}
-                                  </div>
-                                  {isCorrectAnswer && (
-                                    <span className="inline-flex items-center gap-1 text-green-600 dark:text-green-400 text-sm font-semibold">
-                                      <Check className="w-4 h-4" aria-hidden="true" /> Correct
-                                    </span>
-                                  )}
-                                  {isUserAnswer && !wasCorrect && (
-                                    <span className="text-red-600 dark:text-red-400 text-sm font-semibold">
-                                      Your answer
-                                    </span>
-                                  )}
-                                </div>
-                              );
-                            })}
-                          </div>
-                        )}
-
-                        {/* Unit circle answer display */}
-                        {!isMultipleChoice && !wasCorrect && (
-                          <div className="ml-4 sm:ml-11 mb-3 p-3 rounded-lg bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 text-sm">
-                            <p className="text-gray-900 dark:text-white">
-                              <span className="text-red-600 dark:text-red-400 font-semibold">Your answer: </span>
-                              {UNIT_CIRCLE_POSITIONS[answer.answerIndex]
-                                ? `${UNIT_CIRCLE_POSITIONS[answer.answerIndex].label} (${UNIT_CIRCLE_POSITIONS[answer.answerIndex].x.toFixed(3)}, ${UNIT_CIRCLE_POSITIONS[answer.answerIndex].y.toFixed(3)})`
-                                : `Position ${answer.answerIndex}`}
-                            </p>
-                            <p className="text-gray-900 dark:text-white mt-1">
-                              <span className="text-green-600 dark:text-green-400 font-semibold">Correct answer: </span>
-                              {question.answerIndex !== undefined && UNIT_CIRCLE_POSITIONS[question.answerIndex]
-                                ? `${UNIT_CIRCLE_POSITIONS[question.answerIndex].label} (${UNIT_CIRCLE_POSITIONS[question.answerIndex].x.toFixed(3)}, ${UNIT_CIRCLE_POSITIONS[question.answerIndex].y.toFixed(3)})`
-                                : 'Unknown'}
-                            </p>
-                          </div>
-                        )}
-
-                        {/* Explanation */}
-                        {question.explanation && !wasCorrect && (
-                          <div className="ml-4 sm:ml-11 p-4 bg-accent-subtle dark:bg-accent-light/20 rounded-lg border border-accent-muted/40 dark:border-accent/40">
-                            <p className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-hover dark:text-accent-muted mb-1">
-                              <Lightbulb className="w-4 h-4" aria-hidden="true" /> Explanation
-                            </p>
-                            <div className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto">
-                              {renderPrompt(question.explanation, true)}
-                            </div>
-                          </div>
-                        )}
                       </div>
-                    );
-                  })}
-                </div>
+
+                      {isMultipleChoice && question.options && (
+                        <div className="space-y-2 sm:ml-11">
+                          {question.options.map((option, optIdx) => {
+                            const isUserAnswer = answer.answerIndex === optIdx;
+                            const isCorrectAnswer = question.answerIndex === optIdx;
+                            return (
+                              <div
+                                key={optIdx}
+                                className={`flex items-center gap-3 rounded-xl border p-2.5 text-sm ${
+                                  isCorrectAnswer
+                                    ? 'border-green-400 bg-green-50 dark:border-green-700 dark:bg-green-900/20'
+                                    : isUserAnswer && !wasCorrect
+                                      ? 'border-red-400 bg-red-50 dark:border-red-700 dark:bg-red-900/20'
+                                      : 'border-card-border'
+                                }`}
+                              >
+                                <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-xs font-black ${
+                                  isCorrectAnswer ? 'bg-green-600 text-white'
+                                    : isUserAnswer && !wasCorrect ? 'bg-red-600 text-white'
+                                      : 'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-200'
+                                }`}>
+                                  {String.fromCharCode(65 + optIdx)}
+                                </span>
+                                <div data-qa="review-text" className="min-w-0 flex-1 overflow-x-auto text-foreground">{renderPrompt(option)}</div>
+                                {isCorrectAnswer && (
+                                  <span className="inline-flex shrink-0 items-center gap-1 text-xs font-bold text-green-700 dark:text-green-400">
+                                    <Check className="h-3.5 w-3.5" aria-hidden="true" /> Correct
+                                  </span>
+                                )}
+                                {isUserAnswer && !wasCorrect && (
+                                  <span className="shrink-0 text-xs font-bold text-red-700 dark:text-red-400">Your answer</span>
+                                )}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+
+                      {/* Unit circle answer display */}
+                      {!isMultipleChoice && !wasCorrect && (
+                        <div className="rounded-xl border border-card-border p-3 text-sm sm:ml-11">
+                          <p className="text-foreground">
+                            <span className="font-semibold text-red-700 dark:text-red-400">Your answer: </span>
+                            {UNIT_CIRCLE_POSITIONS[answer.answerIndex]
+                              ? `${UNIT_CIRCLE_POSITIONS[answer.answerIndex].label} (${UNIT_CIRCLE_POSITIONS[answer.answerIndex].x.toFixed(3)}, ${UNIT_CIRCLE_POSITIONS[answer.answerIndex].y.toFixed(3)})`
+                              : `Position ${answer.answerIndex}`}
+                          </p>
+                          <p className="mt-1 text-foreground">
+                            <span className="font-semibold text-green-700 dark:text-green-400">Correct answer: </span>
+                            {question.answerIndex !== undefined && UNIT_CIRCLE_POSITIONS[question.answerIndex]
+                              ? `${UNIT_CIRCLE_POSITIONS[question.answerIndex].label} (${UNIT_CIRCLE_POSITIONS[question.answerIndex].x.toFixed(3)}, ${UNIT_CIRCLE_POSITIONS[question.answerIndex].y.toFixed(3)})`
+                              : 'Unknown'}
+                          </p>
+                        </div>
+                      )}
+
+                      {question.explanation && !wasCorrect && (
+                        <div className="mt-3 rounded-xl bg-accent-subtle p-3 ring-1 ring-accent-light sm:ml-11">
+                          <p className="mb-1 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+                            <Lightbulb className="h-4 w-4" aria-hidden="true" /> Explanation
+                          </p>
+                          <div className="overflow-x-auto text-sm text-foreground">
+                            {renderPrompt(question.explanation, true)}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
-            </div>
+            </section>
           )}
         </div>
       </div>
     );
   }
 
-  // Shared progress math for the desktop bars and the mobile HUD.
+  // Shared progress math for the versus header.
   const totalQuestions = matchState.questions.length || 1;
-  const p1Progress = matchState.gameMode === 'ACCURACY_CHALLENGE'
+  const p1Progress = isAccuracy
     ? ((matchState.gameData?.player1Answers?.length || 0) / totalQuestions) * 100
     : (matchState.player1Score / 10) * 100;
-  const p2Progress = matchState.gameMode === 'ACCURACY_CHALLENGE'
+  const p2Progress = isAccuracy
     ? ((matchState.gameData?.player2Answers?.length || 0) / totalQuestions) * 100
     : (matchState.player2Score / 10) * 100;
-  const p1ProgressLabel = matchState.gameMode === 'ACCURACY_CHALLENGE'
+  const p1ProgressLabel = isAccuracy
     ? `${matchState.gameData?.player1Answers?.length || 0}/${matchState.questions.length}`
     : `${matchState.player1Score}/10`;
-  const p2ProgressLabel = matchState.gameMode === 'ACCURACY_CHALLENGE'
+  const p2ProgressLabel = isAccuracy
     ? `${matchState.gameData?.player2Answers?.length || 0}/${matchState.questions.length}`
     : `${matchState.player2Score}/10`;
+  const myAccuracyLabel = (() => {
+    const total = me.answers.length;
+    const correct = me.answers.filter(a => a.correct).length;
+    return total > 0 ? `${Math.round((correct / total) * 100)}%` : '--';
+  })();
 
   return (
     // pb-28 (not pb-24) reserves room for the floating power-up bar once the
     // iPhone safe-area inset pushes it up, so it never covers the answers.
-    <div className={`min-h-screen bg-gradient-to-br from-accent-subtle via-white to-accent-subtle dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-3 px-3 sm:px-4 md:py-8 ${isChaosMode ? 'pb-28' : ''}`}>
+    <div className={`min-h-screen bg-gray-50 px-3 pb-8 dark:bg-gray-950 sm:px-4 ${isChaosMode ? 'pb-28' : ''}`}>
       {/* Chaos Mode HUD extras: drop/attack toasts + floating inventory bar */}
       <ChaosToasts toasts={chaosToasts} />
       {isChaosMode && matchState.status === 'IN_PROGRESS' && (
@@ -1074,135 +1116,56 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           onUse={useChaosPowerUp}
         />
       )}
-      <div className="max-w-7xl mx-auto">
-        {/* Mobile battle HUD — replaces the two side panels on small screens so the
-            question is visible without scrolling and the opponent stays in view.
-            Desktop keeps the original 3-column layout below. */}
-        <div className="md:hidden sticky top-2 z-20 mb-3">
-          <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur rounded-xl shadow-lg px-3 py-2">
-            <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">
-              {/* Player 1 */}
-              <div className={`flex items-center gap-2 min-w-0 rounded-lg p-1 ${isPlayer1 ? 'ring-2 ring-accent-muted/70' : ''}`}>
-                <AvatarDisplay avatarData={matchState.player1Avatar} size={40} emotion={player1Emotion} className="flex-shrink-0" />
-                <div className="min-w-0 flex-1">
-                  <p className="text-xs font-bold text-gray-900 dark:text-white truncate">
-                    {matchState.player1Name}{isPlayer1 ? ' (You)' : ''}
-                  </p>
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-sm font-bold text-accent dark:text-accent-muted">{matchState.player1Score}</span>
-                    <div className="h-1.5 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-accent to-accent-muted transition-all duration-500 rounded-full" style={{ width: `${Math.min(p1Progress, 100)}%` }} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              {/* Center: VS + accuracy timer + streak (parity with desktop panels) */}
-              <div className="text-center px-1">
-                <p className="text-xs font-extrabold text-gray-400 dark:text-gray-500">VS</p>
-                {matchState.gameMode === 'ACCURACY_CHALLENGE' && accuracyTimer !== null && (
-                  <p className={`text-sm font-mono font-bold ${accuracyTimer <= 60 ? 'text-red-600 animate-pulse' : 'text-gray-900 dark:text-white'}`}>
-                    {Math.floor(accuracyTimer / 60)}:{String(accuracyTimer % 60).padStart(2, '0')}
-                  </p>
-                )}
-                {streak >= 2 && (
-                  <p key={`hud-streak-${streak}`} className="animate-celebration-pop text-[11px] font-bold text-amber-600 dark:text-amber-400 whitespace-nowrap">
-                    🔥 {streak}
-                  </p>
-                )}
-              </div>
-              {/* Player 2 */}
-              <div className={`flex items-center gap-2 min-w-0 flex-row-reverse rounded-lg p-1 ${!isPlayer1 ? 'ring-2 ring-accent-muted/70' : ''}`}>
-                <AvatarDisplay avatarData={matchState.player2Avatar} size={40} emotion={player2Emotion} className="flex-shrink-0" />
-                <div className="min-w-0 flex-1 text-right">
-                  <p className="text-xs font-bold text-gray-900 dark:text-white truncate">
-                    {matchState.player2Name}{!isPlayer1 ? ' (You)' : ''}
-                  </p>
-                  <div className="flex items-center gap-1.5 flex-row-reverse">
-                    <span className="text-sm font-bold text-accent-secondary">{matchState.player2Score}</span>
-                    <div className="h-1.5 flex-1 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-accent-secondary to-accent-secondary-hover transition-all duration-500 rounded-full ml-auto" style={{ width: `${Math.min(p2Progress, 100)}%` }} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr_200px] gap-3 md:gap-6">
-          {/* Left Panel - Player 1 (desktop only; mobile uses the HUD above) */}
-          <div className="hidden md:block bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
-            <div className="text-center">
-              <AvatarDisplay 
-                avatarData={matchState.player1Avatar}
-                size={120}
-                className="mx-auto mb-3"
-                emotion={player1Emotion}
-              />
-              <p className="font-bold text-gray-900 dark:text-white mb-1">
-                {isPlayer1 ? <CosmeticNameplate name={matchState.player1Name} /> : matchState.player1Name}
-              </p>
-              {isPlayer1 && (
-                <span className="text-xs bg-accent-light dark:bg-accent-light/30 text-accent dark:text-accent-muted px-2 py-1 rounded">
-                  You
+      <div className="mx-auto max-w-3xl">
+        <VersusHeader
+          you={{
+            name: <CosmeticNameplate name={me.name} />,
+            avatar: me.avatar,
+            emotion: me.emotion,
+            isYou: true,
+            badge: badgeFor(me.isAI, me.mmrBefore),
+            score: me.score,
+            caption: isPlayer1 ? p1ProgressLabel : p2ProgressLabel,
+            progress: (isPlayer1 ? p1Progress : p2Progress) / 100,
+          }}
+          opponent={{
+            name: opp.name,
+            avatar: opp.avatar,
+            emotion: opp.emotion,
+            isYou: false,
+            badge: badgeFor(opp.isAI, opp.mmrBefore),
+            score: opp.score,
+            caption: isPlayer1 ? p2ProgressLabel : p1ProgressLabel,
+            progress: (isPlayer1 ? p2Progress : p1Progress) / 100,
+            activity: oppActivity,
+          }}
+          center={
+            <>
+              <ModeChip icon={modeCard.icon} label={modeCard.title} />
+              {isAccuracy && accuracyTimer !== null ? (
+                <MatchClock remaining={accuracyTimer} total={matchTimeLimitSeconds(matchState.gameData)} />
+              ) : (
+                <span className="text-xs font-black text-muted-foreground sm:text-sm">VS</span>
+              )}
+              {isAccuracy && (
+                <span className="hidden text-[11px] font-semibold text-muted-foreground sm:block">Accuracy {myAccuracyLabel}</span>
+              )}
+              {streak >= 2 && (
+                <span key={`hud-streak-${streak}`} className="animate-celebration-pop whitespace-nowrap text-[11px] font-bold text-amber-700 dark:text-amber-400 sm:text-xs">
+                  🔥 {streak}
                 </span>
               )}
-              <div className="mt-4 mb-2">
-                <p className="text-2xl font-bold text-accent dark:text-accent-muted">
-                  {matchState.player1Score}
-                </p>
-                <p className="text-xs text-gray-500">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? 'correct' : 'points'}</p>
-                {isPlayer1 && streak >= 2 && (
-                  <p key={`p1-streak-${streak}`} className="animate-celebration-pop mt-1 text-xs font-bold text-amber-600 dark:text-amber-400">
-                    🔥 {streak} streak
-                  </p>
-                )}
-              </div>
-            </div>
-            
-            {/* Vertical Progress Bar */}
-            <div className="mt-6 flex flex-col items-center">
-              <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Progress</p>
-              <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
-                <div
-                  className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-accent to-accent-muted transition-all duration-500 rounded-full"
-                  style={{ height: `${Math.min(p1Progress, 100)}%` }}
-                />
-              </div>
-              <p className="text-xs text-gray-500 mt-2">{p1ProgressLabel}</p>
-            </div>
-          </div>
+            </>
+          }
+        />
 
-          {/* Center - Game Area */}
-          <div className="space-y-6">
-        {/* Accuracy Mode Header (desktop; the mobile HUD carries the timer) */}
-        {matchState.gameMode === 'ACCURACY_CHALLENGE' && matchState.status === 'IN_PROGRESS' && (
-          <div className="hidden md:flex bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 items-center justify-between">
-            <div className="flex items-center gap-3">
-              <Target className="w-5 h-5 text-accent" aria-hidden="true" />
-              <div>
-                <p className="font-bold text-gray-900 dark:text-white text-sm">Accuracy Challenge</p>
-                <p className="text-xs text-gray-500">{matchState.questions.length} questions &middot; {formatMinutes(matchTimeLimitSeconds(matchState.gameData))} clock &middot; highest accuracy wins</p>
-              </div>
-            </div>
-            {accuracyTimer !== null && (
-              <div className={`text-2xl font-mono font-bold ${accuracyTimer <= 60 ? 'text-red-600 animate-pulse' : 'text-gray-900 dark:text-white'}`}>
-                {Math.floor(accuracyTimer / 60)}:{String(accuracyTimer % 60).padStart(2, '0')}
-              </div>
-            )}
-            <div className="text-right">
-              <p className="text-xs text-gray-500">Your accuracy</p>
-              <p className="font-bold text-accent">
-                {(() => {
-                  const answers = isPlayer1 ? matchState.gameData?.player1Answers : matchState.gameData?.player2Answers;
-                  const total = answers?.length || 0;
-                  const correct = answers?.filter(a => a.correct).length || 0;
-                  return total > 0 ? `${Math.round((correct / total) * 100)}%` : '--';
-                })()}
-              </p>
-            </div>
-          </div>
+        {isAccuracy && matchState.status === 'IN_PROGRESS' && (
+          <p className="mb-3 flex items-center justify-center gap-1.5 text-xs text-muted-foreground">
+            <Target className="h-3.5 w-3.5 text-accent" aria-hidden="true" />
+            {matchState.questions.length} questions · {formatMinutes(matchTimeLimitSeconds(matchState.gameData))} clock · highest accuracy wins
+          </p>
         )}
+
         {/* Chaos effect layer: flip rotates the whole play area; ink splats
             overlay it. Effects always land — prefers-reduced-motion only cuts
             the animated transition (the flip snaps instead of spinning). */}
@@ -1212,246 +1175,166 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
           {stormEffect && <StormOverlay effect={stormEffect} now={chaosNow} />}
           {freezeEffect && <FrostOverlay effect={freezeEffect} now={chaosNow} />}
           {timeWarpEffect && <TimeWarpOverlay effect={timeWarpEffect} now={chaosNow} />}
-        {/* Question prompt */}
-        {!currentQuestion && matchState.gameMode === 'ACCURACY_CHALLENGE' ? (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-12 text-center">
-            <CheckCircle2 className="w-14 h-14 mx-auto mb-4 text-green-500" aria-hidden="true" />
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">All Questions Answered!</h2>
-            <p className="text-gray-500">Waiting for your opponent to finish...</p>
-            <div className="mt-4 animate-pulse text-accent">
-              <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-accent" />
+          {!currentQuestion && isAccuracy ? (
+            <div className="rounded-3xl border border-card-border bg-card p-8 text-center shadow-sm sm:p-12">
+              <CheckCircle2 className="mx-auto mb-4 h-14 w-14 text-green-600 dark:text-green-400" aria-hidden="true" />
+              <h2 className="mb-1 text-2xl font-bold text-foreground">All questions answered!</h2>
+              <p className="text-muted-foreground">Waiting for {opp.name} to finish ({isPlayer1 ? p2ProgressLabel : p1ProgressLabel})…</p>
+              <div className="mx-auto mt-5 h-2 max-w-xs overflow-hidden rounded-full bg-gray-200 dark:bg-gray-700">
+                <div className="h-full rounded-full bg-gray-500 transition-all duration-500 dark:bg-gray-400" style={{ width: `${Math.min(isPlayer1 ? p2Progress : p1Progress, 100)}%` }} />
+              </div>
             </div>
-          </div>
-        ) : currentQuestion && (
-        <>
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-8 mb-6 text-center" key={`q-${displayQuestionIndex}-${currentQuestion.prompt || currentQuestion.question}`}>
-          {currentQuestion.skill && (
-            <div className="mb-3 flex justify-center">
-              <span className="inline-flex items-center gap-1 rounded-full bg-accent-light px-3 py-1 text-xs font-semibold text-accent-hover dark:bg-accent-light/40 dark:text-accent-muted" title="The SAT skill this question targets">
-                <Target className="w-3.5 h-3.5" aria-hidden="true" /> {currentQuestion.skill}
-              </span>
-            </div>
-          )}
-          {/* overflow-x-auto keeps wide KaTeX scrollable instead of blowing out the phone viewport */}
-          {(() => {
-            const { passage, stem } = splitPassage(currentQuestion.prompt || currentQuestion.question || '')
-            return (
-              <>
-                {passage && (
-                  <div className={`mb-4 rounded-lg bg-gray-50 p-4 text-left text-base leading-relaxed text-gray-800 dark:bg-gray-700/50 dark:text-gray-100 overflow-x-auto transition-all ${fogActive ? 'blur-sm' : ''}`}>
-                    {renderPrompt(passage, true)}
+          ) : currentQuestion && (
+            <QuestionCard
+              key={`q-${displayQuestionIndex}-${currentQuestion.prompt || currentQuestion.question}`}
+              questionIndex={displayQuestionIndex}
+              counter={isAccuracy ? `Question ${displayQuestionIndex + 1} of ${matchState.questions.length}` : `Question ${displayQuestionIndex + 1}`}
+              difficulty={currentQuestion.difficulty}
+              chips={currentQuestion.skill ? (
+                <span className="inline-flex items-center gap-1 rounded-full bg-accent-subtle px-2 py-0.5 text-[11px] font-semibold text-accent ring-1 ring-accent-light" title="The SAT skill this question targets">
+                  <Target className="h-3 w-3" aria-hidden="true" /> {currentQuestion.skill}
+                </span>
+              ) : null}
+            >
+              {/* overflow-x-auto keeps wide KaTeX scrollable instead of blowing out the phone viewport */}
+              {(() => {
+                const { passage, stem } = splitPassage(currentQuestion.prompt || currentQuestion.question || '')
+                return (
+                  <>
+                    {passage && (
+                      <div className={`mb-4 overflow-x-auto rounded-xl bg-gray-50 p-4 text-base leading-relaxed text-foreground dark:bg-gray-800/60 transition-all ${fogActive ? 'blur-sm' : ''}`}>
+                        {renderPrompt(passage, true)}
+                      </div>
+                    )}
+                    <div data-qa="question-stem" className={`overflow-x-auto text-lg font-semibold leading-relaxed text-foreground sm:text-xl transition-all ${fogActive ? 'blur-sm' : ''}`} key={currentQuestion.prompt || currentQuestion.question}>
+                      {renderPrompt(stem, true)}
+                    </div>
+                  </>
+                )
+              })()}
+
+              <div className="mt-4 min-h-8" aria-live="polite">
+                {submitError && (
+                  <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-2 text-sm text-red-700 dark:border-red-800 dark:bg-red-900/20 dark:text-red-300">
+                    {submitError}
                   </div>
                 )}
-                <h2 className={`text-lg sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 overflow-x-auto transition-all ${fogActive ? 'blur-sm' : ''}`} key={currentQuestion.prompt || currentQuestion.question}>
-                  {renderPrompt(stem, true)}
-                </h2>
-              </>
-            )
-          })()}
-
-          {submitError && (
-            <div className="mb-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 px-4 py-2 text-sm text-red-700 dark:text-red-300">
-              {submitError}
-            </div>
-          )}
-
-          {isSubmitting && (
-            <div className="flex items-center justify-center gap-2 text-accent">
-              <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-accent"></div>
-              <p className="font-semibold">Submitting answer...</p>
-            </div>
-          )}
-          {isFeedbackCurrent && (
-            <div className="flex flex-wrap items-center justify-center gap-2">
-              <p className={`inline-flex items-center gap-1.5 text-xl font-semibold ${
-                feedback === 'correct' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
-              }`}>
-                {feedback === 'correct'
-                  ? <><Check className="w-6 h-6" aria-hidden="true" /> Correct!</>
-                  : <><X className="w-6 h-6" aria-hidden="true" /> Incorrect</>}
-              </p>
-              {feedback === 'correct' && pointsFlash && (
-                <span
-                  key={pointsFlash.key}
-                  className="animate-celebration-pop inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-1 text-sm font-bold text-green-700 dark:text-green-400"
-                >
-                  +{pointsFlash.points} pt{pointsFlash.points === 1 ? '' : 's'}
-                </span>
-              )}
-              {feedback === 'correct' && streak >= 2 && (
-                <span
-                  key={`streak-${streak}`}
-                  className="animate-celebration-pop inline-flex items-center gap-1 rounded-full bg-amber-100 dark:bg-amber-900/30 px-2.5 py-1 text-sm font-bold text-amber-700 dark:text-amber-400"
-                >
-                  🔥 {streak} in a row
-                </span>
-              )}
-            </div>
-          )}
-        </div>
-
-        {/* Unit Circle or Multiple Choice */}
-        {currentQuestion.type === 'multiple-choice' ? (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 sm:p-8">
-            <div className="space-y-3 max-w-2xl mx-auto">
-              {/* Slippery Answers reorders the DISPLAYED sequence only — `index`
-                  is always the question's ORIGINAL option index, so styling and
-                  submissions stay correct while buttons jump around. */}
-              {(displayOrder ?? currentQuestion.options?.map((_, i) => i) ?? []).map((index) => {
-                const option = currentQuestion.options?.[index];
-                if (option === undefined) return null;
-                const isSelected = selectedPosition === index;
-                // The correct index is learned from the answer POST response
-                // (correctAnswerIndex state) for ranked matches; fall back to the
-                // question's own answerIndex for AI practice. During live play we
-                // only know it AFTER answering, which is exactly when feedback shows.
-                const knownCorrectIndex = correctAnswerIndex ?? currentQuestion.answerIndex;
-                const isCorrect = knownCorrectIndex !== undefined && index === knownCorrectIndex;
-                const showCorrect = isFeedbackCurrent && isCorrect;
-                const showIncorrect = isFeedbackCurrent && isSelected && !isCorrect;
-                // 50/50: wrong options the server told THIS player to eliminate.
-                const ffElim = fiftyFiftyElim && fiftyFiftyElim.questionIndex === displayQuestionIndex
-                  ? fiftyFiftyElim.eliminated
-                  : (myPowerUps?.fiftyFifty && myPowerUps.fiftyFifty.questionIndex === displayQuestionIndex
-                      ? myPowerUps.fiftyFifty.eliminated
-                      : []);
-                const isEliminated = ffElim.includes(index);
-
-                return (
-                  <button
-                    key={index}
-                    onClick={() => handleOptionSelect(index)}
-                    disabled={isSubmitting || isFeedbackCurrent || isEliminated || frozenActive}
-                    className={`w-full p-4 rounded-lg border-2 text-left transition-all ${
-                      showCorrect
-                        ? 'border-green-500 bg-green-50 dark:bg-green-900/20'
-                        : showIncorrect
-                        ? 'border-red-500 bg-red-50 dark:bg-red-900/20'
-                        : isSelected
-                        ? 'border-accent bg-accent-subtle dark:bg-accent-light/20'
-                        : 'border-gray-200 dark:border-gray-700 hover:border-accent-muted dark:hover:border-accent'
-                    } ${
-                      isEliminated
-                        ? 'cursor-not-allowed opacity-30'
-                        : isSubmitting || isFeedbackCurrent
-                        ? 'cursor-not-allowed opacity-75'
-                        : 'cursor-pointer hover:shadow-md active:scale-[0.99] active:bg-accent-subtle dark:active:bg-accent-light/20'
-                    }`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className={`w-8 h-8 flex-shrink-0 rounded-full border-2 flex items-center justify-center font-bold ${
-                        showCorrect
-                          ? 'border-green-500 text-green-600 dark:text-green-400'
-                          : showIncorrect
-                          ? 'border-red-500 text-red-600 dark:text-red-400'
-                          : isSelected
-                          ? 'border-accent text-accent dark:text-accent-muted'
-                          : 'border-gray-300 dark:border-gray-600 text-gray-600 dark:text-gray-400'
-                      }`}>
-                        {String.fromCharCode(65 + index)}
-                      </div>
-                      <div className="flex-1 min-w-0 overflow-x-auto text-gray-900 dark:text-white">
-                        {renderPrompt(option)}
-                      </div>
-                      {showCorrect && (
-                        <Check className="w-6 h-6 flex-shrink-0 text-green-600 dark:text-green-400" aria-hidden="true" />
-                      )}
-                      {showIncorrect && (
-                        <X className="w-6 h-6 flex-shrink-0 text-red-600 dark:text-red-400" aria-hidden="true" />
-                      )}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-            
-            {isFeedbackCurrent && currentQuestion.explanation && (
-              <div className="mt-6 p-4 bg-accent-subtle dark:bg-accent-light/20 rounded-lg border border-accent-muted/40 dark:border-accent/40">
-                <p className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent-hover dark:text-accent-muted mb-2">
-                  <Lightbulb className="w-4 h-4" aria-hidden="true" />
-                  Explanation
-                </p>
-                <div className="text-sm text-gray-700 dark:text-gray-300 overflow-x-auto">
-                  {renderPrompt(currentQuestion.explanation, true)}
-                </div>
-                {showNextButton && (
-                  <button
-                    onClick={advanceAfterFeedback}
-                    className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 bg-accent text-white rounded-lg hover:bg-accent-hover font-semibold"
-                  >
-                    Next question
-                    <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                  </button>
-                )}
-              </div>
-            )}
-          </div>
-        ) : (
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
-            <div className="flex justify-center">
-              <CompetitiveUnitCircle
-                positions={UNIT_CIRCLE_POSITIONS}
-                onPositionClick={handlePositionClick}
-                selectedPosition={selectedPosition}
-                correctPosition={
-                  correctAnswerIndex !== null ? correctAnswerIndex :
-                  (feedback === 'correct' ? selectedPosition : null)
-                }
-                showFeedback={isFeedbackCurrent}
-                disabled={isSubmitting || frozenActive}
-              />
-            </div>
-          </div>
-        )}
-      </>
-      )}
-        </div>
-        {/* end chaos effect layer */}
-      </div>
-
-          {/* Right Panel - Player 2 (desktop only; mobile uses the HUD above) */}
-          <div className="hidden md:block bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 h-fit sticky top-8">
-            <div className="text-center">
-              <AvatarDisplay 
-                avatarData={matchState.player2Avatar}
-                size={120}
-                className="mx-auto mb-3"
-                emotion={player2Emotion}
-              />
-              <p className="font-bold text-gray-900 dark:text-white mb-1">
-                {!isPlayer1 ? <CosmeticNameplate name={matchState.player2Name} /> : matchState.player2Name}
-              </p>
-              {!isPlayer1 && (
-                <span className="text-xs bg-accent-light dark:bg-accent-light/30 text-accent dark:text-accent-muted px-2 py-1 rounded">
-                  You
-                </span>
-              )}
-              <div className="mt-4 mb-2">
-                <p className="text-2xl font-bold text-accent dark:text-accent-muted">
-                  {matchState.player2Score}
-                </p>
-                <p className="text-xs text-gray-500">{matchState.gameMode === 'ACCURACY_CHALLENGE' ? 'correct' : 'points'}</p>
-                {!isPlayer1 && streak >= 2 && (
-                  <p key={`p2-streak-${streak}`} className="animate-celebration-pop mt-1 text-xs font-bold text-amber-600 dark:text-amber-400">
-                    🔥 {streak} streak
+                {isSubmitting && (
+                  <p className="inline-flex items-center gap-2 text-sm font-semibold text-accent">
+                    <span className="h-4 w-4 animate-spin rounded-full border-2 border-accent border-t-transparent" aria-hidden />
+                    Submitting answer...
                   </p>
                 )}
+                {isFeedbackCurrent && (
+                  <div className="flex flex-wrap items-center gap-2">
+                    <p className={`inline-flex items-center gap-1.5 text-lg font-bold ${
+                      feedback === 'correct' ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400'
+                    }`}>
+                      {feedback === 'correct'
+                        ? <><Check className="h-5 w-5" aria-hidden="true" /> Correct!</>
+                        : <><X className="h-5 w-5" aria-hidden="true" /> Incorrect</>}
+                    </p>
+                    {feedback === 'correct' && pointsFlash && (
+                      <span key={pointsFlash.key} className="animate-celebration-pop inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-sm font-bold text-green-800 dark:bg-green-900/40 dark:text-green-300">
+                        +{pointsFlash.points} pt{pointsFlash.points === 1 ? '' : 's'}
+                      </span>
+                    )}
+                    {feedback === 'correct' && streak >= 2 && (
+                      <span key={`streak-${streak}`} className="animate-celebration-pop inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-0.5 text-sm font-bold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
+                        🔥 {streak} in a row
+                      </span>
+                    )}
+                  </div>
+                )}
               </div>
-            </div>
-            
-            {/* Vertical Progress Bar */}
-            <div className="mt-6 flex flex-col items-center">
-              <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Progress</p>
-              <div className="w-8 h-64 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden relative">
-                <div
-                  className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-accent-secondary to-accent-secondary-hover transition-all duration-500 rounded-full"
-                  style={{ height: `${Math.min(p2Progress, 100)}%` }}
-                />
-              </div>
-              <p className="text-xs text-gray-500 mt-2">{p2ProgressLabel}</p>
-            </div>
-          </div>
+
+              {/* Unit Circle or Multiple Choice */}
+              {currentQuestion.type === 'multiple-choice' ? (
+                <>
+                  <div className={`mt-2 grid gap-2.5 sm:gap-3 ${answerGridClass(currentQuestion.options)}`}>
+                    {/* Slippery Answers reorders the DISPLAYED sequence only — `index`
+                        is always the question's ORIGINAL option index, so styling and
+                        submissions stay correct while buttons jump around. */}
+                    {(displayOrder ?? currentQuestion.options?.map((_, i) => i) ?? []).map((index) => {
+                      const option = currentQuestion.options?.[index];
+                      if (option === undefined) return null;
+                      const isSelected = selectedPosition === index;
+                      // The correct index is learned from the answer POST response
+                      // (correctAnswerIndex state) for ranked matches; fall back to the
+                      // question's own answerIndex for AI practice. During live play we
+                      // only know it AFTER answering, which is exactly when feedback shows.
+                      const knownCorrectIndex = correctAnswerIndex ?? currentQuestion.answerIndex;
+                      const isCorrect = knownCorrectIndex !== undefined && index === knownCorrectIndex;
+                      const showCorrect = isFeedbackCurrent && isCorrect;
+                      const showIncorrect = isFeedbackCurrent && isSelected && !isCorrect;
+                      // 50/50: wrong options the server told THIS player to eliminate.
+                      const ffElim = fiftyFiftyElim && fiftyFiftyElim.questionIndex === displayQuestionIndex
+                        ? fiftyFiftyElim.eliminated
+                        : (myPowerUps?.fiftyFifty && myPowerUps.fiftyFifty.questionIndex === displayQuestionIndex
+                            ? myPowerUps.fiftyFifty.eliminated
+                            : []);
+                      const isEliminated = ffElim.includes(index);
+                      const state: AnswerState = showCorrect ? 'correct'
+                        : showIncorrect ? 'incorrect'
+                        : isEliminated ? 'eliminated'
+                        : isSelected ? 'selected'
+                        : 'idle';
+
+                      return (
+                        <AnswerTile
+                          key={index}
+                          index={index}
+                          letter={String.fromCharCode(65 + index)}
+                          state={state}
+                          onClick={() => handleOptionSelect(index)}
+                          disabled={isSubmitting || isFeedbackCurrent || isEliminated || frozenActive}
+                        >
+                          {renderPrompt(option)}
+                        </AnswerTile>
+                      );
+                    })}
+                  </div>
+
+                  {isFeedbackCurrent && currentQuestion.explanation && (
+                    <div className="mt-5 rounded-2xl bg-accent-subtle p-4 ring-1 ring-accent-light">
+                      <p className="mb-2 inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+                        <Lightbulb className="h-4 w-4" aria-hidden="true" />
+                        Explanation
+                      </p>
+                      <div className="overflow-x-auto text-sm text-foreground">
+                        {renderPrompt(currentQuestion.explanation, true)}
+                      </div>
+                      {showNextButton && (
+                        <button
+                          onClick={advanceAfterFeedback}
+                          className="mt-4 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-2.5 font-semibold text-white hover:from-accent-hover hover:to-accent-secondary-hover"
+                        >
+                          Next question
+                          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                        </button>
+                      )}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <div className="mt-2 flex justify-center">
+                  <CompetitiveUnitCircle
+                    positions={UNIT_CIRCLE_POSITIONS}
+                    onPositionClick={handlePositionClick}
+                    selectedPosition={selectedPosition}
+                    correctPosition={
+                      correctAnswerIndex !== null ? correctAnswerIndex :
+                      (feedback === 'correct' ? selectedPosition : null)
+                    }
+                    showFeedback={isFeedbackCurrent}
+                    disabled={isSubmitting || frozenActive}
+                  />
+                </div>
+              )}
+            </QuestionCard>
+          )}
         </div>
+        {/* end chaos effect layer */}
       </div>
     </div>
   );

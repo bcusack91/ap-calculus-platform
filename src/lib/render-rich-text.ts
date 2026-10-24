@@ -49,7 +49,9 @@ function renderMarkdownTables(text: string): string {
 
       // Convert to HTML table
       const headerCells = parsePipeCells(tableLines[0])
-      let html = '<table class="inline-table"><thead><tr>'
+      // The wrapper scrolls a wide table sideways instead of clipping it on
+      // a phone (a span, since stems can render inside headings and buttons).
+      let html = '<span class="inline-table-wrap"><table class="inline-table"><thead><tr>'
       for (const cell of headerCells) {
         html += `<th>${cell}</th>`
       }
@@ -63,7 +65,7 @@ function renderMarkdownTables(text: string): string {
         }
         html += '</tr>'
       }
-      html += '</tbody></table>'
+      html += '</tbody></table></span>'
       result.push(html)
     } else {
       result.push(lines[i])

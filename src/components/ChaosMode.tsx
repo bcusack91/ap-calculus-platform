@@ -119,36 +119,42 @@ export function PowerUpBar({
 }) {
   if (inventory.length === 0 && !shield && !reflect && !doubleNext) return null;
   const armed = shield || reflect || doubleNext;
+  const armedChip = 'inline-flex items-center gap-1 rounded-full bg-green-100 px-2 py-1 text-xs font-bold text-green-800 ring-1 ring-green-300 dark:bg-green-900/40 dark:text-green-300 dark:ring-green-800';
   return (
     // Sits above the iPhone home indicator — without the safe-area inset the
     // bar tucks under it on notched devices and the buttons get hard to tap.
     <div
-      className="fixed left-1/2 -translate-x-1/2 z-30"
+      className="fixed left-1/2 -translate-x-1/2 z-30 max-w-[calc(100vw-1.5rem)]"
       style={{ bottom: 'calc(0.75rem + env(safe-area-inset-bottom, 0px))' }}
     >
-      <div className="flex items-center gap-2 bg-white/95 dark:bg-gray-800/95 backdrop-blur rounded-full shadow-xl border border-accent-light dark:border-accent-light px-3 py-2">
+      <div className="flex items-center gap-2 rounded-2xl border border-card-border bg-card/95 px-2.5 py-2 shadow-xl backdrop-blur">
         {shield && (
-          <span className="text-lg" title="Shield armed — blocks the next attack">🛡️</span>
+          <span className={armedChip} title="Shield armed — blocks the next attack">🛡️<span className="hidden sm:inline">Shield</span></span>
         )}
         {reflect && (
-          <span className="text-lg" title="Reflect armed — bounces the next attack back">🪞</span>
+          <span className={armedChip} title="Reflect armed — bounces the next attack back">🪞<span className="hidden sm:inline">Reflect</span></span>
         )}
         {doubleNext && (
-          <span className="text-lg animate-pulse motion-reduce:animate-none" title="Double points armed — next correct answer counts twice">⚡</span>
+          <span className={`${armedChip} animate-pulse motion-reduce:animate-none`} title="Double points armed — next correct answer counts twice">⚡<span className="hidden sm:inline">2× next</span></span>
         )}
         {armed && inventory.length > 0 && (
-          <span className="w-px h-6 bg-gray-300 dark:bg-gray-600" />
+          <span className="h-6 w-px bg-card-border" />
         )}
         {inventory.map((id, i) => {
           const def = POWER_UPS[id];
           // The super item gets a distinct look + pulsing glow so it stands out.
           const cls = def.super
-            ? 'w-11 h-11 rounded-full bg-gradient-to-br from-fuchsia-500 to-indigo-600 border-2 border-fuchsia-300 text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed chaos-super-glow motion-reduce:animate-none'
-            : 'w-11 h-11 rounded-full bg-gradient-to-br from-accent-light to-blue-100 dark:from-accent-light/50 dark:to-blue-900/50 border-2 border-accent-muted dark:border-accent-hover text-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed';
+            ? 'inline-flex h-11 items-center gap-1.5 rounded-xl bg-gradient-to-br from-fuchsia-500 to-indigo-600 px-3 text-sm font-bold text-white ring-2 ring-fuchsia-300 hover:scale-105 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed chaos-super-glow motion-reduce:animate-none'
+            : `inline-flex h-11 items-center gap-1.5 rounded-xl px-3 text-sm font-bold ring-1 hover:scale-105 active:scale-95 transition-transform motion-reduce:transition-none disabled:opacity-50 disabled:cursor-not-allowed ${
+                def.kind === 'attack'
+                  ? 'bg-red-50 text-red-800 ring-red-200 dark:bg-red-900/30 dark:text-red-200 dark:ring-red-800'
+                  : 'bg-accent-subtle text-accent ring-accent-light'
+              }`;
           const teamWide = scopes?.[i] === 'team';
           return (
             <span key={`${id}-${i}`} className="relative inline-flex">
               <button
+                data-powerup={id}
                 onClick={() => onUse(id)}
                 disabled={disabled}
                 title={
@@ -158,7 +164,9 @@ export function PowerUpBar({
                 }
                 className={cls}
               >
-                {def.icon}
+                <span className="text-lg leading-none" aria-hidden>{def.icon}</span>
+                <span className="hidden whitespace-nowrap sm:inline">{def.name}</span>
+                <span className="sr-only sm:hidden">{def.name}</span>
               </button>
               {teamWide && (
                 <span

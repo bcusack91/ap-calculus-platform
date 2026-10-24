@@ -2,11 +2,24 @@
 
 import { useEffect, useState, use, useCallback, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
-import { Check, X, ClipboardList, Sparkles } from 'lucide-react'
+import { Check, X, ClipboardList, Sparkles, RotateCcw } from 'lucide-react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import { botAnswerIndex, botAnswerPlan, matchPaceCourseKey } from '@/lib/bot-pacing'
 import TeamMatchReview, { summarizeAnswers, type ReviewAnswer } from '@/components/competitive/team-match/TeamMatchReview'
+import {
+  VersusHeader,
+  ModeChip,
+  QuestionCard,
+  AnswerTile,
+  useAnswerHotkeys,
+  ResultHero,
+  FinalScore,
+  StatTile,
+  answerGridClass,
+  type AnswerState,
+} from '@/components/competitive/arena/Arena'
+import type { AnyAvatarData } from '@/types/avatar'
 import 'katex/dist/katex.min.css'
 
 interface Question {
@@ -212,12 +225,25 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
     return renderRichText(text)
   }
 
+  // Desktop shortcuts: same handler as a click, only while a tile would be enabled.
+  const hkQuestion = matchState?.questions?.[matchState?.myQuestionIndex ?? -1]
+  useAnswerHotkeys(
+    matchState?.status === 'IN_PROGRESS' && !!hkQuestion && !submitting,
+    hkQuestion?.options?.length ?? 0,
+    (i) => { void submitAnswer(i) },
+  )
+
+  const fromSlug = searchParams.get('from')
+
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-gray-900 to-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-white mx-auto mb-4" />
-          <p className="text-white text-xl">Loading Team Battle...</p>
+      <div className="min-h-screen bg-gray-50 px-3 py-4 dark:bg-gray-950 sm:px-4 sm:py-6" aria-busy="true" aria-label="Loading team battle">
+        <div className="mx-auto max-w-3xl space-y-4">
+          <div className="h-28 animate-pulse rounded-3xl bg-gray-200 dark:bg-gray-800 motion-reduce:animate-none" />
+          <div className="h-48 animate-pulse rounded-3xl bg-gray-200 dark:bg-gray-800 motion-reduce:animate-none" />
+          <div className="grid gap-3 sm:grid-cols-2">
+            {[0, 1, 2, 3].map(i => <div key={i} className="h-16 animate-pulse rounded-2xl bg-gray-200 dark:bg-gray-800 motion-reduce:animate-none" />)}
+          </div>
         </div>
       </div>
     )
@@ -225,12 +251,12 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
   if (error || !matchState) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-gray-900 to-gray-900 flex items-center justify-center">
-        <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-8 text-center">
-          <p className="text-red-500 text-lg mb-4">{error || 'Match not found'}</p>
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-950 flex items-center justify-center px-4">
+        <div className="rounded-3xl border border-card-border bg-card p-6 text-center shadow-sm sm:p-8">
+          <p className="mb-4 text-lg font-semibold text-foreground">{error || 'Match not found'}</p>
           <button
             onClick={() => router.push(lobbyPath)}
-            className="px-6 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover"
+            className="rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 font-semibold text-white hover:from-accent-hover hover:to-accent-secondary-hover"
           >
             Back to Lobby
           </button>
@@ -243,6 +269,9 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
   const opponentTeam = matchState.myTeam === 1 ? matchState.team2 : matchState.team1
   const teammate = myTeam.players.find(p => p.id !== currentUserId)
   const question = matchState.questions[matchState.myQuestionIndex]
+  const avatarsOf = (t: TeamInfo) => t.players.map(p => (p.avatar ?? null) as AnyAvatarData | null)
+  const namesOf = (t: TeamInfo, markYou: boolean) =>
+    t.players.map(p => (markYou && p.id === currentUserId ? `${p.name} (you)` : p.name)).join(' & ')
 
   // ---- COMPLETED STATE ----
   if (matchState.status === 'COMPLETED') {
@@ -256,90 +285,63 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
     const { totalAnswered, totalCorrect, missedCount, bestStreak } = reviewSummary
 
     return (
-      <div className="min-h-screen bg-gradient-to-br from-accent-dark via-gray-900 to-gray-900 p-4">
-        <div className="max-w-3xl mx-auto pt-10">
-          {/* Victory / Defeat */}
-          <div className={`text-center mb-8 ${myTeamWon ? 'text-yellow-400' : 'text-red-400'}`}>
-            <h1 className="text-6xl font-black mb-2">
-              {myTeamWon ? '🏆 VICTORY!' : '💀 DEFEAT'}
-            </h1>
-            <p className="text-xl text-gray-300">
-              {myTeamWon ? 'Your team dominated!' : 'Better luck next time!'}
-            </p>
-          </div>
-
-          {/* Scoreboard */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-8 mb-6">
-            <div className="grid grid-cols-3 gap-1.5 sm:gap-4 items-center text-center">
-              <div>
-                <p className="text-accent-muted text-sm font-semibold mb-2">
-                  {matchState.myTeam === 1 ? 'YOUR TEAM' : 'OPPONENT TEAM'}
-                </p>
-                <p className="text-white text-sm">
-                  {matchState.team1.players.map(p => p.name).join(' & ')}
-                </p>
-                <p className="text-5xl font-black text-white mt-2">{matchState.team1.score}</p>
-              </div>
-              <div className="text-gray-400 text-2xl font-bold">VS</div>
-              <div>
-                <p className="text-accent-secondary text-sm font-semibold mb-2">
-                  {matchState.myTeam === 2 ? 'YOUR TEAM' : 'OPPONENT TEAM'}
-                </p>
-                <p className="text-white text-sm">
-                  {matchState.team2.players.map(p => p.name).join(' & ')}
-                </p>
-                <p className="text-5xl font-black text-white mt-2">{matchState.team2.score}</p>
-              </div>
-            </div>
-
-            {/* Your contribution */}
-            {totalAnswered > 0 && (
-              <div className="mt-6 pt-4 border-t border-white/10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm">
-                <span className="text-gray-400 uppercase tracking-wider text-xs font-semibold">Your contribution</span>
-                <span className="inline-flex items-center gap-1.5 font-semibold text-white">
-                  <Check className="w-4 h-4 text-green-400" aria-hidden="true" />
-                  {totalCorrect}/{totalAnswered} correct
+      <div className="min-h-screen bg-gray-50 px-3 py-6 dark:bg-gray-950 sm:px-4 sm:py-10">
+        <div className="mx-auto max-w-3xl space-y-6">
+          <ResultHero
+            outcome={myTeamWon ? 'win' : 'loss'}
+            title={myTeamWon ? 'Victory!' : 'Defeat'}
+            subtitle={myTeamWon ? 'Your team dominated!' : 'Better luck next time!'}
+          >
+            <FinalScore
+              you={{ name: 'Your team', teamAvatars: avatarsOf(myTeam), score: myTeam.score, sub: namesOf(myTeam, true), won: myTeamWon }}
+              opponent={{ name: 'Opponents', teamAvatars: avatarsOf(opponentTeam), score: opponentTeam.score, sub: namesOf(opponentTeam, false), won: !myTeamWon }}
+            />
+            <div className="space-y-4 p-4 sm:p-7">
+              <div className="flex justify-center">
+                <span className="inline-flex items-center gap-1 rounded-full bg-accent-subtle px-2.5 py-1 text-xs font-semibold text-accent ring-1 ring-accent-light">
+                  <span aria-hidden>👥</span> Team 2v2 · first to 15
                 </span>
-                {bestStreak >= 2 && (
-                  <span className="inline-flex items-center gap-1 rounded-full bg-amber-900/40 px-2.5 py-1 font-bold text-amber-400">
-                    🔥 Best streak: {bestStreak}
-                  </span>
+              </div>
+              {totalAnswered > 0 && (
+                <div className="grid grid-cols-3 gap-3">
+                  <StatTile label="Your correct" value={totalCorrect} sub={`of ${totalAnswered}`} />
+                  <StatTile label="Accuracy" value={`${Math.round((totalCorrect / totalAnswered) * 100)}%`} />
+                  <StatTile label="Best streak" value={<>{bestStreak >= 2 && <span aria-hidden className="mr-1">🔥</span>}{bestStreak}</>} />
+                </div>
+              )}
+              <div className="flex flex-col gap-2 pt-2 sm:flex-row sm:flex-wrap sm:justify-center">
+                <button
+                  onClick={() => router.push(lobbyPath)}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 font-bold text-white shadow-md transition-all hover:from-accent-hover hover:to-accent-secondary-hover"
+                >
+                  <RotateCcw className="h-4 w-4" aria-hidden="true" /> Play again
+                </button>
+                {totalAnswered > 0 && (
+                  <button
+                    onClick={() => setShowReview(!showReview)}
+                    aria-expanded={showReview}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-card-border bg-card px-5 py-3 font-semibold text-foreground transition-colors hover:border-accent hover:text-accent"
+                  >
+                    {missedCount > 0
+                      ? <><ClipboardList className="h-4 w-4" aria-hidden="true" /> {showReview ? 'Hide Review' : `Review Mistakes (${missedCount})`}</>
+                      : <><Sparkles className="h-4 w-4" aria-hidden="true" /> {showReview ? 'Hide Review' : 'Review All Questions'}</>}
+                  </button>
+                )}
+                {fromSlug && (
+                  <button
+                    onClick={() => router.push('/competitive')}
+                    className="inline-flex items-center justify-center rounded-xl px-5 py-3 font-semibold text-muted-foreground transition-colors hover:text-accent"
+                  >
+                    Competitive hub
+                  </button>
                 )}
               </div>
-            )}
-          </div>
-
-          <div className="flex flex-wrap gap-4 justify-center">
-            {totalAnswered > 0 && (
-              missedCount > 0 ? (
-                <button
-                  onClick={() => setShowReview(!showReview)}
-                  className="px-5 sm:px-8 py-4 bg-amber-500 text-white font-bold rounded-lg text-lg hover:bg-amber-600 flex items-center gap-2"
-                >
-                  <ClipboardList className="w-5 h-5" aria-hidden="true" />
-                  {showReview ? 'Hide Review' : `Review Mistakes (${missedCount})`}
-                </button>
-              ) : (
-                <button
-                  onClick={() => setShowReview(!showReview)}
-                  className="px-5 sm:px-8 py-4 bg-green-500 text-white font-bold rounded-lg text-lg hover:bg-green-600 flex items-center gap-2"
-                >
-                  <Sparkles className="w-5 h-5" aria-hidden="true" />
-                  {showReview ? 'Hide Review' : 'Review All Questions'}
-                </button>
-              )
-            )}
-            <button
-              onClick={() => router.push(lobbyPath)}
-              className="px-8 py-4 bg-gradient-to-r from-accent to-accent-secondary text-white font-bold rounded-lg text-lg hover:from-accent-hover hover:to-accent-secondary-hover"
-            >
-              Back to Lobby
-            </button>
-          </div>
+            </div>
+          </ResultHero>
 
           {/* Post-match question review (your own answers only) */}
           {showReview && (
-            <div className="mt-8">
+            <div className="[&>div]:rounded-3xl [&>div]:border [&>div]:border-card-border [&>div]:bg-card [&>div]:shadow-sm">
               <TeamMatchReview
                 questions={matchState.questions}
                 summary={reviewSummary}
@@ -354,133 +356,100 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
 
   // ---- IN-PROGRESS STATE ----
   return (
-    <div className="min-h-screen bg-gradient-to-br from-accent-dark via-gray-900 to-gray-900 p-4">
-      <div className="max-w-4xl mx-auto">
-        {/* Score Header */}
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-4 mb-6">
-          <div className="grid grid-cols-3 gap-1.5 sm:gap-4 items-center text-center">
-            <div>
-              <p className="text-accent-muted text-xs font-semibold uppercase tracking-wider">Your Team</p>
-              <p className="text-white text-sm mt-1">
-                {myTeam.players.map(p => p.id === currentUserId ? `${p.name} (you)` : p.name).join(' & ')}
-              </p>
-              <p className="text-4xl font-black text-white mt-1">{myTeam.score}</p>
-            </div>
-            <div>
-              <p className="text-gray-400 text-lg font-bold">VS</p>
-              <p className="text-gray-500 text-xs">First to 15</p>
-            </div>
-            <div>
-              <p className="text-accent-secondary text-xs font-semibold uppercase tracking-wider">Opponent Team</p>
-              <p className="text-white text-sm mt-1">
-                {opponentTeam.players.map(p => p.name).join(' & ')}
-              </p>
-              <p className="text-4xl font-black text-white mt-1">{opponentTeam.score}</p>
-            </div>
-          </div>
-
-          {/* Progress bar */}
-          <div className="mt-4 flex gap-2">
-            <div className="flex-1 bg-gray-700 rounded-full h-3 overflow-hidden">
-              <div
-                className="bg-accent h-3 rounded-full transition-all duration-300"
-                style={{ width: `${Math.min(100, (myTeam.score / 15) * 100)}%` }}
-              />
-            </div>
-            <div className="flex-1 bg-gray-700 rounded-full h-3 overflow-hidden">
-              <div
-                className="bg-accent-secondary h-3 rounded-full transition-all duration-300"
-                style={{ width: `${Math.min(100, (opponentTeam.score / 15) * 100)}%` }}
-              />
-            </div>
-          </div>
-        </div>
+    <div className="min-h-screen bg-gray-50 px-3 pb-8 dark:bg-gray-950 sm:px-4">
+      <div className="mx-auto max-w-3xl">
+        <VersusHeader
+          you={{
+            name: 'Your team',
+            shortName: 'Us',
+            teamAvatars: avatarsOf(myTeam),
+            isYou: true,
+            score: myTeam.score,
+            caption: `${myTeam.score}/15`,
+            progress: myTeam.score / 15,
+            extra: <p className="mt-1 hidden truncate text-xs text-muted-foreground sm:block">{namesOf(myTeam, true)}</p>,
+          }}
+          opponent={{
+            name: 'Opponents',
+            shortName: 'Them',
+            teamAvatars: avatarsOf(opponentTeam),
+            isYou: false,
+            score: opponentTeam.score,
+            caption: `${opponentTeam.score}/15`,
+            progress: opponentTeam.score / 15,
+            extra: <p className="mt-1 hidden truncate text-right text-xs text-muted-foreground sm:block">{namesOf(opponentTeam, false)}</p>,
+          }}
+          center={
+            <>
+              <ModeChip icon="👥" label="Team 2v2" />
+              <span className="text-xs font-black text-muted-foreground sm:text-sm">VS</span>
+              <span className="hidden text-[11px] font-semibold text-muted-foreground sm:block">First to 15</span>
+              {streak >= 2 && (
+                <span key={`hud-streak-${streak}`} className="animate-celebration-pop whitespace-nowrap text-[11px] font-bold text-amber-700 dark:text-amber-400 sm:text-xs">🔥 {streak}</span>
+              )}
+            </>
+          }
+        />
 
         {/* Teammate Banner */}
         {teammate && (
-          <div className="bg-accent/20 border border-accent/30 rounded-xl p-3 mb-4 text-center">
-            <p className="text-accent-light text-sm">
-              🤝 Teamed with <strong className="text-white">{teammate.name}</strong> — both your answers count toward the team score!
-            </p>
-          </div>
+          <p className="mb-3 text-center text-sm text-muted-foreground">
+            🤝 Teamed with <strong className="text-foreground">{teammate.name}</strong> — both your answers count toward the team score!
+          </p>
         )}
 
         {/* Question Area */}
         {question && (
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-4 sm:p-8">
-            <div className="flex justify-between items-center mb-4">
-              <span className="text-sm text-gray-500">
-                Question {matchState.myQuestionIndex + 1}
-              </span>
-              {question.difficulty && (
-                <span className={`text-xs px-2 py-1 rounded-full ${
-                  question.difficulty === 'easy' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' :
-                  question.difficulty === 'medium' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400' :
-                  'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400'
-                }`}>
-                  {question.difficulty}
-                </span>
-              )}
-            </div>
-
-            <h2
-              className="text-xl font-bold mb-6 text-gray-900 dark:text-white"
+          <QuestionCard questionIndex={matchState.myQuestionIndex} counter={`Question ${matchState.myQuestionIndex + 1}`} difficulty={question.difficulty}>
+            <div
+              data-qa="question-stem"
+              className="overflow-x-auto text-lg font-semibold leading-relaxed text-foreground sm:text-xl"
               dangerouslySetInnerHTML={{ __html: renderMath(question.question || question.prompt || '') }}
             />
 
-            <div className="grid gap-3">
+            {/* Answer feedback: explicit correct/incorrect line + streak pop.
+                Pacing stays at the existing 1200ms — this is a live team race. */}
+            <div className="mt-4 min-h-8" aria-live="polite">
+              {answerResult && (
+                <div className="flex flex-wrap items-center gap-2">
+                  <p className={`inline-flex items-center gap-1.5 text-lg font-bold ${
+                    answerResult.correct ? 'text-green-700 dark:text-green-400' : 'text-red-700 dark:text-red-400'
+                  }`}>
+                    {answerResult.correct
+                      ? <><Check className="h-5 w-5" aria-hidden="true" /> Correct!</>
+                      : <><X className="h-5 w-5" aria-hidden="true" /> Incorrect</>}
+                  </p>
+                  {answerResult.correct && streak >= 2 && (
+                    <span key={`streak-${streak}`} className="animate-celebration-pop inline-flex items-center gap-1 rounded-full bg-amber-100 px-2.5 py-0.5 text-sm font-bold text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
+                      🔥 {streak} in a row
+                    </span>
+                  )}
+                </div>
+              )}
+            </div>
+
+            <div className={`mt-2 grid gap-2.5 sm:gap-3 ${answerGridClass(question.options)}`}>
               {question.options?.map((option, idx) => {
                 const isSelected = selectedAnswer === idx
-                const showCorrect = answerResult && isSelected
-                const bgClass = showCorrect
-                  ? answerResult.correct
-                    ? 'bg-green-100 dark:bg-green-900/40 border-green-500'
-                    : 'bg-red-100 dark:bg-red-900/40 border-red-500'
-                  : isSelected
-                    ? 'bg-accent-light dark:bg-accent-light/40 border-accent'
-                    : 'bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600 hover:bg-accent-subtle dark:hover:bg-accent-light/20 hover:border-accent-muted'
-
+                // Only the picked tile is graded (the team route doesn't return the key).
+                const state: AnswerState = answerResult && isSelected
+                  ? (answerResult.correct ? 'correct' : 'incorrect')
+                  : isSelected ? 'selected' : 'idle'
                 return (
-                  <button
+                  <AnswerTile
                     key={idx}
+                    index={idx}
+                    letter={String.fromCharCode(65 + idx)}
+                    state={state}
                     onClick={() => submitAnswer(idx)}
                     disabled={submitting}
-                    className={`w-full text-left p-4 rounded-xl border-2 transition-all ${bgClass} ${submitting ? 'opacity-60 cursor-not-allowed' : 'cursor-pointer'}`}
                   >
-                    <span className="font-semibold text-accent dark:text-accent-muted mr-3">
-                      {String.fromCharCode(65 + idx)}.
-                    </span>
-                    <span
-                      className="text-gray-800 dark:text-gray-200"
-                      dangerouslySetInnerHTML={{ __html: renderMath(option) }}
-                    />
-                  </button>
+                    <span dangerouslySetInnerHTML={{ __html: renderMath(option) }} />
+                  </AnswerTile>
                 )
               })}
             </div>
-
-            {/* Answer feedback: explicit correct/incorrect line + streak pop.
-                Pacing stays at the existing 1200ms — this is a live team race. */}
-            {answerResult && (
-              <div className="mt-4 flex flex-wrap items-center justify-center gap-2">
-                <p className={`inline-flex items-center gap-1.5 text-lg font-semibold ${
-                  answerResult.correct ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
-                }`}>
-                  {answerResult.correct
-                    ? <><Check className="w-5 h-5" aria-hidden="true" /> Correct!</>
-                    : <><X className="w-5 h-5" aria-hidden="true" /> Incorrect</>}
-                </p>
-                {answerResult.correct && streak >= 2 && (
-                  <span
-                    key={`streak-${streak}`}
-                    className="animate-celebration-pop inline-flex items-center gap-1 rounded-full bg-amber-100 dark:bg-amber-900/30 px-2.5 py-1 text-sm font-bold text-amber-700 dark:text-amber-400"
-                  >
-                    🔥 {streak} in a row
-                  </span>
-                )}
-              </div>
-            )}
-          </div>
+          </QuestionCard>
         )}
       </div>
     </div>
