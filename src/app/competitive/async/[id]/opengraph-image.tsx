@@ -1,6 +1,7 @@
-import { ImageResponse } from 'next/og'
 import { prisma } from '@/lib/prisma'
 import { publicDisplayName } from '@/lib/display-name'
+import { CHALLENGE_GRADIENT, courseCardTheme } from '@/lib/og/course-theme'
+import { renderShareCard } from '@/lib/og/share-card'
 
 // Render at request time (not prerendered at build): next/og fetches emoji
 // glyphs from a CDN, and that build-time fetch can ETIMEDOUT and fail the deploy.
@@ -35,6 +36,24 @@ const TOPIC_LABELS: Record<string, string> = {
   'ochem': 'Organic Chemistry',
 }
 
+// Competitive topic slugs that aren't course slugs, for the card's colours.
+const TOPIC_COURSE: Record<string, string> = {
+  'the-unit-circle': 'ap-precalculus',
+  'derivatives': 'ap-calculus-ab',
+  'limits': 'ap-calculus-ab',
+  'integrals': 'ap-calculus-ab',
+  'algebra': 'algebra-1',
+  'algebra2': 'algebra-2',
+  'precalc': 'ap-precalculus',
+  'ap-physics1': 'ap-physics-1',
+  'ap-physics2': 'ap-physics-2',
+  'sat-math': 'sat-prep',
+  'sat-reading': 'sat-prep',
+  'act-math': 'act-prep',
+  'act-science': 'act-prep',
+  'ochem': 'organic-chemistry',
+}
+
 function topicLabel(slug: string): string {
   return TOPIC_LABELS[slug] ?? slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
 }
@@ -53,184 +72,25 @@ export default async function Image({ params }: { params: Promise<{ id: string }
   })
 
   const challengerName = publicDisplayName(challenge?.challenger?.name, 'A friend')
-  const subject = challenge ? topicLabel(challenge.topicSlug) : 'a quick quiz'
+  const subject = challenge ? topicLabel(challenge.topicSlug) : null
   const score = challenge?.challengerScore ?? null
   const total = challenge?.questionCount ?? null
   const timeLimit = challenge ? Math.round(challenge.timeLimit / 60) : null
+  const theme = challenge ? courseCardTheme(TOPIC_COURSE[challenge.topicSlug] ?? challenge.topicSlug) : null
+  const courseTheme = theme?.key ? theme : null
 
-  return new ImageResponse(
-    (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'column',
-          width: '100%',
-          height: '100%',
-          background: 'linear-gradient(135deg, #DC2626 0%, #DB2777 50%, #7C3AED 100%)',
-          padding: '60px',
-          fontFamily: 'sans-serif',
-          position: 'relative',
-          overflow: 'hidden',
-        }}
-      >
-        <div
-          style={{
-            position: 'absolute',
-            top: '-120px',
-            right: '-120px',
-            width: '460px',
-            height: '460px',
-            borderRadius: '50%',
-            background: 'rgba(255,255,255,0.08)',
-            display: 'flex',
-          }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '-160px',
-            left: '120px',
-            width: '520px',
-            height: '520px',
-            borderRadius: '50%',
-            background: 'rgba(255,255,255,0.05)',
-            display: 'flex',
-          }}
-        />
+  const chips: string[] = []
+  if (total !== null) chips.push(`${total} questions`)
+  if (timeLimit !== null) chips.push(`⏱️ ${timeLimit} min`)
+  chips.push('Tap to play')
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '14px', marginBottom: '20px' }}>
-          <div
-            style={{
-              width: '48px',
-              height: '48px',
-              borderRadius: '12px',
-              background: 'rgba(255,255,255,0.2)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '26px',
-            }}
-          >
-            📚
-          </div>
-          <span style={{ color: '#fff', fontSize: '26px', fontWeight: 700, letterSpacing: '-0.5px' }}>
-            Study Mondo
-          </span>
-        </div>
-
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '16px',
-            background: 'rgba(255, 215, 0, 0.95)',
-            color: '#7C2D12',
-            padding: '10px 22px',
-            borderRadius: '999px',
-            fontSize: '22px',
-            fontWeight: 800,
-            alignSelf: 'flex-start',
-            marginBottom: '32px',
-            letterSpacing: '0.5px',
-          }}
-        >
-          ⚔️ ASYNC CHALLENGE
-        </div>
-
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <h1
-            style={{
-              color: '#fff',
-              fontSize: '76px',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              margin: '0 0 18px 0',
-              letterSpacing: '-1.5px',
-            }}
-          >
-            {challengerName} just
-          </h1>
-          <h1
-            style={{
-              color: '#FDE68A',
-              fontSize: '76px',
-              fontWeight: 800,
-              lineHeight: 1.05,
-              margin: '0 0 30px 0',
-              letterSpacing: '-1.5px',
-            }}
-          >
-            challenged you!
-          </h1>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '10px',
-                background: 'rgba(255,255,255,0.18)',
-                borderRadius: '100px',
-                padding: '12px 24px',
-                fontSize: '24px',
-                color: '#fff',
-                fontWeight: 700,
-              }}
-            >
-              🎯 {subject}
-            </div>
-            {score !== null && total !== null && (
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '10px',
-                  background: 'rgba(255,255,255,0.18)',
-                  borderRadius: '100px',
-                  padding: '12px 24px',
-                  fontSize: '24px',
-                  color: '#fff',
-                  fontWeight: 700,
-                }}
-              >
-                🏆 Their score: {score}/{total}
-              </div>
-            )}
-            {timeLimit !== null && (
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '10px',
-                  background: 'rgba(255,255,255,0.18)',
-                  borderRadius: '100px',
-                  padding: '12px 24px',
-                  fontSize: '24px',
-                  color: '#fff',
-                  fontWeight: 700,
-                }}
-              >
-                ⏱️ {timeLimit} min
-              </div>
-            )}
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            color: 'rgba(255,255,255,0.85)',
-            fontSize: '22px',
-            fontWeight: 600,
-          }}
-        >
-          <span>studymondo.com</span>
-          <span>Tap to play head-to-head →</span>
-        </div>
-      </div>
-    ),
-    { ...size }
-  )
+  return renderShareCard({
+    eyebrow: '⚔️ Async challenge',
+    title: `${challengerName} challenged you`,
+    tagline: subject ? `${subject} quiz` : 'Quick quiz',
+    chips,
+    icon: courseTheme?.icon ?? '⚔️',
+    gradient: courseTheme?.gradient ?? CHALLENGE_GRADIENT,
+    stat: score !== null && total !== null ? { value: `${score}/${total}`, label: 'their score' } : undefined,
+  })
 }

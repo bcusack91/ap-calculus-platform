@@ -48,10 +48,12 @@ export const metadata: Metadata = {
     "flashcards",
     "free study resources",
   ],
-  // NOTE: no `images` arrays here — the file-convention routes
-  // (src/app/opengraph-image.tsx / twitter-image.tsx) generate the social
-  // card and take precedence over config-based images anyway; listing the
-  // old static /og-image.png too just conflicted with them.
+  // NOTE: no `images` arrays here — the file-convention opengraph-image.tsx
+  // routes (src/lib/og/share-card.tsx) generate the social card and take
+  // precedence over config-based images anyway; listing the old static
+  // /og-image.png too just conflicted with them. There is deliberately no
+  // root twitter-image.tsx: Next copies each page's og:image into
+  // twitter:image, so X shows the page's own card, not the generic site one.
   openGraph: {
     title: "Study Mondo — Free AP, SAT & MCAT Study Platform",
     description:

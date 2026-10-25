@@ -17,6 +17,13 @@ const analyzeBundles = withBundleAnalyzer({
 
 const nextConfig: NextConfig = {
   outputFileTracingRoot: __dirname,
+  // The share-card routes read their fonts from disk at request time
+  // (src/lib/og/share-card.tsx); make sure Vercel ships the files with them.
+  outputFileTracingIncludes: {
+    '/opengraph-image': ['./src/lib/og/fonts/*.ttf'],
+    '/**/opengraph-image': ['./src/lib/og/fonts/*.ttf'],
+    '/**/twitter-image': ['./src/lib/og/fonts/*.ttf'],
+  },
   // Vercel's 16 GB build container is OOM-killed in "Linting and checking
   // validity of types" (2026-10-20 and -21, with the default and a 12 GB heap
   // alike), while CI runs tsc, eslint and a full `next build` on every push
