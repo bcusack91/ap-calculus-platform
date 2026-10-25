@@ -8,6 +8,7 @@ import nextDynamic from 'next/dynamic'
 import { ChatPanel, JitsiEmbed, leaveCall, type JitsiApi, type SessionInfo } from '@/components/LiveSessionMedia'
 import { useLivePopoutHost } from '@/lib/live-popout'
 import LessonRecorderControls from '@/components/LessonRecorderControls'
+import ClassMatchLive from '@/components/competitive/ClassMatchLive'
 
 // Whiteboards pull in Excalidraw (~a MB) — load only when a session page opens.
 const BoardSection = nextDynamic(() => import('@/components/LiveBoards'), {
@@ -164,6 +165,11 @@ export default function LiveSessionPage() {
         )}
       </div>
 
+      {/* Students: banner while the class has an open class match pool. */}
+      {!session.youAreTeacher && (
+        <ClassMatchLive sessionId={session.id} classroomId={session.classroomId} youAreTeacher={false} />
+      )}
+
       {popout.blocked && !popout.poppedOut && (
         <p className="mb-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-2 text-sm text-amber-800 dark:border-amber-800 dark:bg-amber-900/20 dark:text-amber-300">
           Your browser blocked the new window. Allow pop-ups for studymondo.com, then try Pop out again.
@@ -269,6 +275,12 @@ export default function LiveSessionPage() {
         classroomId={session.classroomId}
         onActiveChange={handleDeckActive}
       />
+
+      {/* Teacher: class competition — a class-only matchmaking pool on the
+          topic just presented (src/lib/class-pool.ts). */}
+      {session.youAreTeacher && (
+        <ClassMatchLive sessionId={session.id} classroomId={session.classroomId} youAreTeacher />
+      )}
 
       {/* Whiteboards — class board + student pads, teacher-controlled. Renders
           nothing for students until the teacher turns a board on. */}

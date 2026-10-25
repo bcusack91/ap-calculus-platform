@@ -77,10 +77,14 @@ export async function POST(req: NextRequest) {
         ? user.competitiveProfile.overallMMR
         : user.competitiveProfile.overallMMR
 
-    // Check if already in queue
+    // Check if already in queue. A class match pool entry is the same single
+    // queue row (userId is unique): the pool owns it until they leave the pool.
+    if (user.matchmakingEntry?.poolId) {
+      return NextResponse.json({ status: 'in_class_pool', poolId: user.matchmakingEntry.poolId }, { status: 409 })
+    }
     if (user.matchmakingEntry) {
       const queueCount = await prisma.matchmakingQueue.count({
-        where: { topicSlug: user.matchmakingEntry.topicSlug },
+        where: { topicSlug: user.matchmakingEntry.topicSlug, poolId: null },
       })
       return NextResponse.json({
         status: 'already_in_queue',
@@ -88,9 +92,10 @@ export async function POST(req: NextRequest) {
       })
     }
 
-    // Clean up stale entries (older than 5 minutes)
+    // Clean up stale entries (older than 5 minutes). Public rows only — class
+    // pools prune their own waiting lists.
     await prisma.matchmakingQueue.deleteMany({
-      where: { joinedAt: { lt: new Date(Date.now() - 5 * 60 * 1000) } },
+      where: { poolId: null, joinedAt: { lt: new Date(Date.now() - 5 * 60 * 1000) } },
     })
 
     // Try to find an opponent already in the queue.
@@ -113,6 +118,8 @@ export async function POST(req: NextRequest) {
       // fall back to any opponent (don't starve a thin queue).
       const baseWhere = {
         topicSlug,
+        // Public queue only: class-pool rows pair inside their own pool.
+        poolId: null,
         userId: { not: user.id },
         mmr: { gte: mmr - mmrRange, lte: mmr + mmrRange },
         // Hard filter: only pair players who queued the SAME game mode. (This
@@ -130,7 +137,7 @@ export async function POST(req: NextRequest) {
       // competing joiner already claimed (deleted) it, FOR UPDATE on a vanished
       // row returns nothing and we bail — no double-booking.
       const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number; tier: string | null }>>`
-        SELECT id, "userId", mmr, "tier" FROM "MatchmakingQueue" WHERE id = ${candidate.id} FOR UPDATE
+        SELECT id, "userId", mmr, "tier" FROM "MatchmakingQueue" WHERE id = ${candidate.id} AND "poolId" IS NULL FOR UPDATE
       `
       const opponent = locked[0]
       if (!opponent) return null
@@ -191,7 +198,7 @@ export async function POST(req: NextRequest) {
       },
     })
 
-    const queueSize = await prisma.matchmakingQueue.count({ where: { topicSlug } })
+    const queueSize = await prisma.matchmakingQueue.count({ where: { topicSlug, poolId: null } })
 
     return NextResponse.json({
       status: 'searching',
@@ -224,7 +231,7 @@ export async function DELETE() {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
-    await prisma.matchmakingQueue.deleteMany({ where: { userId: user.id } })
+    await prisma.matchmakingQueue.deleteMany({ where: { userId: user.id, poolId: null } })
 
     return NextResponse.json({ status: 'left_queue' })
   } catch (error) {
@@ -292,6 +299,11 @@ export async function GET() {
       return NextResponse.json({ status: 'not_in_queue' })
     }
 
+    // A class match pool entry is matched by its pool, never here.
+    if (entry.poolId) {
+      return NextResponse.json({ status: 'in_class_pool', poolId: entry.poolId })
+    }
+
     // Expand MMR range based on how long the player has waited
     const waitMs = Date.now() - entry.joinedAt.getTime()
     const mmrRange =
@@ -317,6 +329,7 @@ export async function GET() {
       // back to any opponent so a thin queue still pairs.
       const baseWhere = {
         topicSlug: entry.topicSlug,
+        poolId: null,
         userId: { not: user.id },
         mmr: { gte: entry.mmr - mmrRange, lte: entry.mmr + mmrRange },
         // Same-mode pairing only (mirrors the POST handler's hard filter).
@@ -330,7 +343,7 @@ export async function GET() {
       // Lock + re-read the candidate. If a competitor already claimed it, the
       // locked read returns nothing and we bail (fall through to "still waiting").
       const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number; tier: string | null }>>`
-        SELECT id, "userId", mmr, "tier" FROM "MatchmakingQueue" WHERE id = ${candidate.id} FOR UPDATE
+        SELECT id, "userId", mmr, "tier" FROM "MatchmakingQueue" WHERE id = ${candidate.id} AND "poolId" IS NULL FOR UPDATE
       `
       const opponent = locked[0]
       if (!opponent) return null
@@ -381,7 +394,7 @@ export async function GET() {
 
     // Still waiting
     const position = await prisma.matchmakingQueue.count({
-      where: { topicSlug: entry.topicSlug, joinedAt: { lte: entry.joinedAt } },
+      where: { topicSlug: entry.topicSlug, poolId: null, joinedAt: { lte: entry.joinedAt } },
     })
 
     return NextResponse.json({

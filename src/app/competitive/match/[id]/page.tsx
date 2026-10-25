@@ -35,6 +35,7 @@ import {
 } from '@/components/ChaosMode';
 import { GAME_MODE_CARDS } from '@/lib/competitive-modes';
 import { COMPETITIVE_COURSES } from '@/lib/competitive-catalog';
+import { classPoolIdFromParam, matchBackPath } from '@/lib/class-pool';
 import {
   VersusHeader,
   ModeChip,
@@ -155,9 +156,10 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
   const matchId = resolvedParams.id;
   const router = useRouter();
   const searchParams = useSearchParams();
-  const lobbyPath = searchParams.get('from')
-    ? `/competitive/${searchParams.get('from')}`
-    : '/competitive';
+  // Back / Play again: a class pool (requeues on arrival), the course page
+  // named by ?from=, or the hub.
+  const lobbyPath = matchBackPath(searchParams.get('from'));
+  const classPoolId = classPoolIdFromParam(searchParams.get('from'));
   
   const [matchState, setMatchState] = useState<MatchState | null>(null);
   const [loading, setLoading] = useState(true);
@@ -936,7 +938,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                     onClick={() => router.push(lobbyPath)}
                     className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 font-bold text-white shadow-md transition-all hover:from-accent-hover hover:to-accent-secondary-hover"
                   >
-                    <RotateCcw className="h-4 w-4" aria-hidden="true" /> Play again
+                    <RotateCcw className="h-4 w-4" aria-hidden="true" /> {classPoolId ? 'Play again in class' : 'Play again'}
                   </button>
                 )}
                 {totalAnswered > 0 && (

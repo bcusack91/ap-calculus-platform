@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions, matchQuestionCount, SPEED_RACE_POOL_SIZE, type MatchTier } from '@/lib/competitive-utils'
 import { paceMatchQuestions } from '@/lib/bot-pacing-server'
 import type { Prisma } from '@prisma/client'
+import { classroomRole } from '@/lib/class-pool-server'
 
 /**
  * Create a practice match against an AI opponent
@@ -20,7 +21,8 @@ export async function POST(req: NextRequest) {
     }
 
     const body = await req.json()
-    const { topicSlug, gameMode, aiDifficulty = 'medium' } = body
+    let { topicSlug, gameMode } = body
+    const { aiDifficulty = 'medium' } = body
     // Optional question-difficulty tier (distinct from aiDifficulty = bot strength)
     const tier: MatchTier | undefined = ['easy', 'medium', 'hard'].includes(body.tier) ? body.tier : undefined
 
@@ -40,6 +42,24 @@ export async function POST(req: NextRequest) {
 
     if (!user?.competitiveProfile) {
       return NextResponse.json({ error: 'Competitive mode not unlocked' }, { status: 403 })
+    }
+
+    // Class match pool "odd one out": the bot plays the pool's topic and mode,
+    // the player leaves the pool's waiting list, and the match is tagged with
+    // the pool so the class roster shows it and "Play again" requeues there.
+    // It stays an ordinary practice match (no MMR), like every bot game.
+    let poolId: string | undefined
+    if (typeof body.poolId === 'string' && body.poolId) {
+      const pool = await prisma.classMatchPool.findUnique({ where: { id: body.poolId } })
+      if (!pool || pool.status !== 'OPEN') {
+        return NextResponse.json({ error: 'This class match has ended.' }, { status: 410 })
+      }
+      const role = await classroomRole(pool.classroomId, user.id, session.user.role)
+      if (!role) return NextResponse.json({ error: 'You are not in this class.' }, { status: 403 })
+      await prisma.matchmakingQueue.deleteMany({ where: { userId: user.id, poolId: pool.id } })
+      poolId = pool.id
+      topicSlug = pool.matchTopicSlug
+      gameMode = pool.gameMode
     }
 
     // Helper to get or create an AI bot user
@@ -115,6 +135,7 @@ export async function POST(req: NextRequest) {
           player2Score: 0,
           status: 'IN_PROGRESS',
           startedAt: new Date(),
+          ...(poolId ? { poolId } : {}),
           gameData: {
             isTeamBattle: true,
             questions,
@@ -181,6 +202,7 @@ export async function POST(req: NextRequest) {
         player2Score: 0,
         status: 'IN_PROGRESS',
         startedAt: new Date(),
+        ...(poolId ? { poolId } : {}),
         gameData: {
           questions,
           player1QuestionIndex: 0,

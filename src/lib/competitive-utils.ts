@@ -971,7 +971,17 @@ async function drawForTier<T extends { difficulty?: unknown }>(
   return pickTieredQuestions(await getter(1_000_000), count, tier)
 }
 
-export async function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[], tier?: MatchTier): Promise<MatchQuestion[]> {
+/**
+ * Optional out-parameter for generateMatchQuestions: `fellBack` is set when the
+ * slug has no competitive routing of its own and the draw fell through to the
+ * cross-course cumulative mix (the class match pool uses this to switch a
+ * lesson with no competitive set to its course-level pool).
+ */
+export interface MatchQuestionsMeta {
+  fellBack?: boolean
+}
+
+export async function generateMatchQuestions(totalQuestions: number = 10, topicSlug?: string, completedTopics?: string[], tier?: MatchTier, meta?: MatchQuestionsMeta): Promise<MatchQuestion[]> {
   // Multi-topic composite: recursively resolve each constituent slug, then
   // interleave round-robin so every selected topic is represented (rather than
   // the first topic filling the whole match), and finally shuffle.
@@ -980,7 +990,7 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
     if (parts.length > 0) {
       const perTopic = Math.max(1, Math.ceil(totalQuestions / parts.length) + 2)
       const pools = await Promise.all(
-        parts.map((s) => generateMatchQuestions(perTopic, s, completedTopics, tier).catch(() => [] as MatchQuestion[]))
+        parts.map((s) => generateMatchQuestions(perTopic, s, completedTopics, tier, meta).catch(() => [] as MatchQuestion[]))
       )
       // Constituent topics may overlap in content (SAT lesson-aligned
       // challenges share member pools), so dedupe by stem while interleaving —
@@ -1636,6 +1646,7 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
   // live routes queue matches under 'the-unit-circle', which previously slipped
   // through this guard and served cumulative calculus MCQs instead of the game.
   if (topicSlug && !UNIT_CIRCLE_SLUGS.has(topicSlug)) {
+    if (meta) meta.fellBack = true
     return await generateCumulativeQuestions(totalQuestions, completedTopics)
   }
 

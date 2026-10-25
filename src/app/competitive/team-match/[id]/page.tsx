@@ -4,6 +4,7 @@ import { useEffect, useState, use, useCallback, useRef } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Check, X, ClipboardList, Sparkles, RotateCcw } from 'lucide-react'
 import { preloadKatex } from '@/lib/katex-lazy'
+import { classPoolIdFromParam, matchBackPath } from '@/lib/class-pool'
 import { renderRichText } from '@/lib/render-rich-text'
 import { botAnswerIndex, botAnswerPlan, matchPaceCourseKey } from '@/lib/bot-pacing'
 import TeamMatchReview, { summarizeAnswers, type ReviewAnswer } from '@/components/competitive/team-match/TeamMatchReview'
@@ -76,9 +77,10 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
   const resolvedParams = use(params)
   const router = useRouter()
   const searchParams = useSearchParams()
-  const lobbyPath = searchParams.get('from')
-    ? `/competitive/${searchParams.get('from')}`
-    : '/competitive'
+  // Back / Play again: a class pool (requeues on arrival), the course page
+  // named by ?from=, or the hub.
+  const lobbyPath = matchBackPath(searchParams.get('from'))
+  const classPoolId = classPoolIdFromParam(searchParams.get('from'))
   const [matchState, setMatchState] = useState<TeamMatchState | null>(null)
   const [currentUserId, setCurrentUserId] = useState<string>('')
   const [loading, setLoading] = useState(true)
@@ -318,7 +320,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
                   onClick={() => router.push(lobbyPath)}
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-secondary px-6 py-3 font-bold text-white shadow-md transition-all hover:from-accent-hover hover:to-accent-secondary-hover"
                 >
-                  <RotateCcw className="h-4 w-4" aria-hidden="true" /> Play again
+                  <RotateCcw className="h-4 w-4" aria-hidden="true" /> {classPoolId ? 'Play again in class' : 'Play again'}
                 </button>
                 {totalAnswered > 0 && (
                   <button

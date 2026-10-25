@@ -513,12 +513,15 @@ describe('surfaces', () => {
       'src/app/api/competitive/practice-ai/route.ts',
       'src/app/api/competitive/team-queue/route.ts',
       'src/app/api/competitive/lobby/[code]/start/route.ts',
+      'src/lib/class-pool-server.ts',
     ]) {
       const src = repoFile(f)
       expect(src, f).toContain('paceMatchQuestions(')
-      // One pacing spread per draw: every created match carries paceCourseKey.
-      expect(src.match(/\.\.\.pacing,/g)?.length ?? 0, f).toBe(src.match(/generateMatchQuestions\(/g)!.length)
+      // One pacing spread per draw: every created match carries paceCourseKey
+      // (team matches hand `pacing` to teamBattleMatchData, which spreads it).
+      expect(src.match(/\.\.\.pacing,|^\s+pacing,$/gm)?.length ?? 0, f).toBe(src.match(/generateMatchQuestions\(/g)!.length)
     }
+    expect(repoFile('src/lib/team-match-create.ts')).toContain('...pacing,')
     expect(repoFile('src/app/api/competitive/async-challenge/route.ts')).toContain('paceAsyncChallenge(')
     // The async button no longer forces 300 s, so the derived default applies.
     const button = repoFile('src/components/AsyncChallengeButton.tsx')

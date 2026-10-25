@@ -945,9 +945,14 @@ model MatchmakingQueue {
   // = no preference (matches anyone).
   tier      String?
   joinedAt  DateTime @default(now())
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  // Class match pool this entry waits in (null = the public queue). The public
+  // queues only ever pair rows with poolId null; a pool only pairs its own rows.
+  poolId    String?
+  user      User            @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pool      ClassMatchPool? @relation(fields: [poolId], references: [id], onDelete: Cascade)
 
   @@index([topicSlug, mmr])
+  @@index([poolId])
 }
 
 model CompetitiveMatch {
@@ -969,13 +974,48 @@ model CompetitiveMatch {
   startedAt        DateTime        @default(now())
   completedAt      DateTime?
   gameData         Json? // Stores questions, answers, current question index
+  // Class match pool that paired this match (null = public queue, lobby, bot…).
+  poolId           String?
   player1          User            @relation("Player1Matches", fields: [player1Id], references: [id], onDelete: Cascade)
   player2          User            @relation("Player2Matches", fields: [player2Id], references: [id], onDelete: Cascade)
+  pool             ClassMatchPool? @relation(fields: [poolId], references: [id], onDelete: SetNull)
 
   @@index([status])
+  @@index([poolId])
   @@index([startedAt])
   @@index([player1Id])
   @@index([player2Id])
+}
+
+// A class's own matchmaking space, opened by the teacher from a live class
+// (src/lib/class-pool.ts). Members queue into it; free players are paired
+// continuously with the closest-MMR free classmate (or MMR-balanced 2v2 teams),
+// and the matches are ordinary ranked CompetitiveMatch rows (Chaos stays
+// unranked, as everywhere). One OPEN pool per classroom at a time.
+model ClassMatchPool {
+  id             String          @id @default(cuid())
+  classroomId    String
+  liveSessionId  String?
+  teacherId      String
+  // The lesson topic the teacher picked (usually the deck just presented).
+  topicSlug      String
+  // The slug matches draw from: topicSlug itself, its competitive alias, or the
+  // course-level pool when the lesson has no competitive set.
+  matchTopicSlug String
+  courseSlug     String?
+  gameMode       CompetitiveMode @default(SPEED_RACE)
+  ranked         Boolean         @default(true)
+  status         String          @default("OPEN") // 'OPEN' | 'CLOSED'
+  createdAt      DateTime        @default(now())
+  closedAt       DateTime?
+
+  classroom   Classroom          @relation(fields: [classroomId], references: [id], onDelete: Cascade)
+  liveSession LiveSession?       @relation(fields: [liveSessionId], references: [id], onDelete: SetNull)
+  queue       MatchmakingQueue[]
+  matches     CompetitiveMatch[]
+
+  @@index([classroomId, status])
+  @@index([liveSessionId])
 }
 
 // Async (turn-based) challenges — challenger plays first, then shares link for opponent to play later
@@ -1317,6 +1357,7 @@ model Classroom {
   teacherLobbies    TeacherLobby[]         @relation("TeacherLobbyClassroom")
   liveSessions      LiveSession[]
   classDiagnostics  ClassDiagnostic[]
+  classMatchPools   ClassMatchPool[]
 
   curriculumPlans CurriculumPlan[]
   flashcardSets   FlashcardSet[]
@@ -1957,6 +1998,7 @@ model LiveSession {
   boards     LiveBoard[]
   attendance LiveSessionAttendance[]
   decks      SlideDeck[]
+  matchPools ClassMatchPool[]
 
   @@index([classroomId, status])
   @@index([status])

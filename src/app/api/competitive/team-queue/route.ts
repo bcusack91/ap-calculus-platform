@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma'
 import { generateMatchQuestions, SPEED_RACE_POOL_SIZE, type MatchTier } from '@/lib/competitive-utils'
 import { paceMatchQuestions } from '@/lib/bot-pacing-server'
 import { Prisma } from '@prisma/client'
+import { teamBattleMatchData } from '@/lib/team-match-create'
 
 /**
  * Team Battle 2v2 Queue
@@ -46,14 +47,19 @@ export async function POST(req: NextRequest) {
 
     const mmr = user.competitiveProfile.overallMMR
 
-    // Check if already in queue
+    // Check if already in queue (a class match pool entry counts: one queue
+    // row per user, and the pool owns it until they leave the pool).
     if (user.matchmakingEntry) {
+      if (user.matchmakingEntry.poolId) {
+        return NextResponse.json({ status: 'in_class_pool', poolId: user.matchmakingEntry.poolId }, { status: 409 })
+      }
       return NextResponse.json({ status: 'already_in_queue' })
     }
 
-    // Clean stale entries (older than 5 min)
+    // Clean stale entries (older than 5 min). Public rows only — class pools
+    // prune their own waiting lists.
     await prisma.matchmakingQueue.deleteMany({
-      where: { joinedAt: { lt: new Date(Date.now() - 5 * 60 * 1000) } },
+      where: { poolId: null, joinedAt: { lt: new Date(Date.now() - 5 * 60 * 1000) } },
     })
 
     // Look for 3 other players already queued for TEAM_BATTLE on this topic,
@@ -72,6 +78,8 @@ export async function POST(req: NextRequest) {
         where: {
           topicSlug,
           gameMode: 'TEAM_BATTLE',
+          // Public queue only: class-pool rows pair inside their own pool.
+          poolId: null,
           userId: { not: user.id },
           mmr: { gte: mmr - mmrRange, lte: mmr + mmrRange },
         },
@@ -87,7 +95,7 @@ export async function POST(req: NextRequest) {
       // one first — abort the pairing.
       const ids = found.map((c) => c.id)
       const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number }>>`
-        SELECT id, "userId", mmr FROM "MatchmakingQueue" WHERE id IN (${Prisma.join(ids)}) ORDER BY id FOR UPDATE
+        SELECT id, "userId", mmr FROM "MatchmakingQueue" WHERE id IN (${Prisma.join(ids)}) AND "poolId" IS NULL ORDER BY id FOR UPDATE
       `
       if (locked.length < 3) return null
       const candidates = locked.slice(0, 3)
@@ -112,48 +120,18 @@ export async function POST(req: NextRequest) {
       const drawn = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, topicSlug, completedTopicSlugs, tier)
       const { questions, pacing } = await paceMatchQuestions(drawn, topicSlug, 'TEAM_BATTLE')
 
-      const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
-      const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)
-
       // Claim the 3 opponents (scoped to the exact locked rows).
       await tx.matchmakingQueue.deleteMany({ where: { id: { in: candidates.map((c) => c.id) } } })
 
       const match = await tx.competitiveMatch.create({
-        data: {
-          player1Id: team1[0].userId,
-          player2Id: team2[0].userId,
-          gameMode: 'TEAM_BATTLE',
+        data: teamBattleMatchData({
+          team1: [team1[0], team1[1]],
+          team2: [team2[0], team2[1]],
           topicSlug,
-          player1MMRBefore: team1AvgMMR,
-          player2MMRBefore: team2AvgMMR,
-          player1MMRAfter: team1AvgMMR,
-          player2MMRAfter: team2AvgMMR,
-          player1Score: 0,
-          player2Score: 0,
-          status: 'IN_PROGRESS',
-          startedAt: new Date(),
-          gameData: {
-            isTeamBattle: true,
-            questions,
-            team1: {
-              players: [team1[0].userId, team1[1].userId],
-              score: 0,
-              questionIndices: { [team1[0].userId]: 0, [team1[1].userId]: 0 },
-              answers: { [team1[0].userId]: [], [team1[1].userId]: [] },
-            },
-            team2: {
-              players: [team2[0].userId, team2[1].userId],
-              score: 0,
-              questionIndices: { [team2[0].userId]: 0, [team2[1].userId]: 0 },
-              answers: { [team2[0].userId]: [], [team2[1].userId]: [] },
-            },
-            playerMMRs: Object.fromEntries(allPlayers.map(p => [p.userId, p.mmr])),
-            ...pacing,
-            player1QuestionIndex: 0,
-            player2QuestionIndex: 0,
-            ...(tier ? { tier } : {}),
-          } as unknown as Prisma.InputJsonValue,
-        },
+          questions,
+          pacing,
+          tier,
+        }),
       })
 
       return { matchId: match.id }
@@ -178,7 +156,7 @@ export async function POST(req: NextRequest) {
     })
 
     const queueSize = await prisma.matchmakingQueue.count({
-      where: { topicSlug, gameMode: 'TEAM_BATTLE' },
+      where: { topicSlug, gameMode: 'TEAM_BATTLE', poolId: null },
     })
 
     return NextResponse.json({
@@ -208,7 +186,7 @@ export async function DELETE() {
       return NextResponse.json({ error: 'User not found' }, { status: 404 })
     }
 
-    await prisma.matchmakingQueue.deleteMany({ where: { userId: user.id } })
+    await prisma.matchmakingQueue.deleteMany({ where: { userId: user.id, poolId: null } })
 
     return NextResponse.json({ status: 'left_queue' })
   } catch (error) {
@@ -281,6 +259,11 @@ export async function GET() {
       return NextResponse.json({ status: 'not_in_queue' })
     }
 
+    // A class match pool entry is matched by its pool, never here.
+    if (entry.poolId) {
+      return NextResponse.json({ status: 'in_class_pool', poolId: entry.poolId })
+    }
+
     // Expand MMR range over time
     const waitMs = Date.now() - entry.joinedAt.getTime()
     const mmrRange = waitMs < 10000 ? 200 : waitMs < 30000 ? 400 : 600
@@ -296,6 +279,7 @@ export async function GET() {
         where: {
           topicSlug: entry.topicSlug,
           gameMode: 'TEAM_BATTLE',
+          poolId: null,
           userId: { not: user.id },
           mmr: { gte: entry.mmr - mmrRange, lte: entry.mmr + mmrRange },
         },
@@ -307,7 +291,7 @@ export async function GET() {
 
       const ids = found.map((c) => c.id)
       const locked = await tx.$queryRaw<Array<{ id: string; userId: string; mmr: number }>>`
-        SELECT id, "userId", mmr FROM "MatchmakingQueue" WHERE id IN (${Prisma.join(ids)}) ORDER BY id FOR UPDATE
+        SELECT id, "userId", mmr FROM "MatchmakingQueue" WHERE id IN (${Prisma.join(ids)}) AND "poolId" IS NULL ORDER BY id FOR UPDATE
       `
       if (locked.length < 3) return null
       const candidates = locked.slice(0, 3)
@@ -326,48 +310,18 @@ export async function GET() {
       const drawn = await generateMatchQuestions(SPEED_RACE_POOL_SIZE, entry.topicSlug, completedTopicSlugs)
       const { questions, pacing } = await paceMatchQuestions(drawn, entry.topicSlug, 'TEAM_BATTLE')
 
-      const team1AvgMMR = Math.round((team1[0].mmr + team1[1].mmr) / 2)
-      const team2AvgMMR = Math.round((team2[0].mmr + team2[1].mmr) / 2)
-
       // Claim the 3 opponents and remove our own entry in the same tx.
       await tx.matchmakingQueue.deleteMany({ where: { id: { in: candidates.map((c) => c.id) } } })
       await tx.matchmakingQueue.deleteMany({ where: { id: entry.id } })
 
       const match = await tx.competitiveMatch.create({
-        data: {
-          player1Id: team1[0].userId,
-          player2Id: team2[0].userId,
-          gameMode: 'TEAM_BATTLE',
+        data: teamBattleMatchData({
+          team1: [team1[0], team1[1]],
+          team2: [team2[0], team2[1]],
           topicSlug: entry.topicSlug,
-          player1MMRBefore: team1AvgMMR,
-          player2MMRBefore: team2AvgMMR,
-          player1MMRAfter: team1AvgMMR,
-          player2MMRAfter: team2AvgMMR,
-          player1Score: 0,
-          player2Score: 0,
-          status: 'IN_PROGRESS',
-          startedAt: new Date(),
-          gameData: {
-            isTeamBattle: true,
-            questions,
-            team1: {
-              players: [team1[0].userId, team1[1].userId],
-              score: 0,
-              questionIndices: { [team1[0].userId]: 0, [team1[1].userId]: 0 },
-              answers: { [team1[0].userId]: [], [team1[1].userId]: [] },
-            },
-            team2: {
-              players: [team2[0].userId, team2[1].userId],
-              score: 0,
-              questionIndices: { [team2[0].userId]: 0, [team2[1].userId]: 0 },
-              answers: { [team2[0].userId]: [], [team2[1].userId]: [] },
-            },
-            playerMMRs: Object.fromEntries(allPlayers.map(p => [p.userId, p.mmr])),
-            ...pacing,
-            player1QuestionIndex: 0,
-            player2QuestionIndex: 0,
-          } as unknown as Prisma.InputJsonValue,
-        },
+          questions,
+          pacing,
+        }),
       })
 
       return { matchId: match.id }
@@ -378,7 +332,7 @@ export async function GET() {
     }
 
     const queueSize = await prisma.matchmakingQueue.count({
-      where: { topicSlug: entry.topicSlug, gameMode: 'TEAM_BATTLE' },
+      where: { topicSlug: entry.topicSlug, gameMode: 'TEAM_BATTLE', poolId: null },
     })
 
     return NextResponse.json({

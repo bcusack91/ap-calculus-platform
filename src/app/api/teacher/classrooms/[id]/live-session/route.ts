@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { requireClassroomAccess } from '@/lib/teacher-auth'
 import { makeRoomName, parseYouTubeVideoId } from '@/lib/live-session'
+import { closePoolsForSession } from '@/lib/class-pool-server'
 
 interface Ctx { params: Promise<{ id: string }> }
 
@@ -72,9 +73,13 @@ export async function DELETE(_req: NextRequest, { params }: Ctx) {
   const access = await requireClassroomAccess(id)
   if ('error' in access) return access.error
 
+  const live = await prisma.liveSession.findMany({ where: { classroomId: id, status: 'LIVE' }, select: { id: true } })
   const ended = await prisma.liveSession.updateMany({
     where: { classroomId: id, status: 'LIVE' },
     data: { status: 'ENDED', endedAt: new Date() },
   })
+  // A class match pool opened from the session ends with it (in-progress
+  // matches finish normally; nobody new is paired).
+  for (const s of live) await closePoolsForSession(s.id)
   return NextResponse.json({ ended: ended.count })
 }
