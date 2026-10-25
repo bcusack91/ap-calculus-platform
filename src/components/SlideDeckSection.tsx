@@ -8,6 +8,7 @@ import { asScene, sceneVersion, type BoardScene, type BoardElement, mergeScenes,
 import { PEN_SIZES, PEN_SIZE_ORDER, loadPenSize, penSizeAppState, savePenSize, type PenSize } from '@/lib/pen-sizes'
 import { deckPalette, SlideMotionStyles, SlideStage, TitleSlideView, ContentSlideView, QuizSlideView, PollSlideView, type PollOptionState } from '@/components/SlideVisuals'
 import { lockStageView, needsAnswerStrip, stageView, toLogicalScene } from '@/lib/slide-stage'
+import { classCourseCount, orderLauncherCourses, type LauncherCourse } from '@/lib/deck-launcher-courses'
 
 declare global {
   interface Window { EXCALIDRAW_ASSET_PATH?: string }
@@ -392,56 +393,79 @@ export default function SlideDeckSection({
 
 
 /**
- * Teacher-only launcher shown while nothing is being presented: pick one of
- * this week's class-plan topics and start the auto-generated deck.
+ * Teacher-only launcher shown while nothing is being presented: pick a course
+ * (the class's own courses first, then any course with slides) and one of its
+ * topics — this week's class-plan topics float to the top — and start the deck.
  */
 function DeckLauncher({ sessionId, classroomId }: { sessionId: string; classroomId: string }) {
+  const [courses, setCourses] = useState<LauncherCourse[]>([])
+  const [ownCount, setOwnCount] = useState(0)
+  const [course, setCourse] = useState('')
+  /** class-plan course key per course slug, for this week's recommendations. */
+  const [planKeys, setPlanKeys] = useState<Map<string, string>>(new Map())
   const [recommended, setRecommended] = useState<{ slug: string; name: string }[]>([])
   const [catalog, setCatalog] = useState<{ name: string; topics: { slug: string; title: string; slideCount: number; pollCount: number }[] }[]>([])
   const [pick, setPick] = useState('')
   const [starting, setStarting] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
+  // Which courses to offer: assigned to the class, then diagnosed, then the rest.
   useEffect(() => {
     let active = true
     const load = async () => {
       try {
-        const disc = await fetch(`/api/teacher/classrooms/${classroomId}/class-plan`, { cache: 'no-store' })
-        const d = disc.ok ? await disc.json() : null
-        const courseKey: string | undefined = d?.availableCourses?.[0]?.key
-
-        // ⭐ This week's class-plan topics float to the top of the picker.
-        if (courseKey) {
-          const plan = await fetch(`/api/teacher/classrooms/${classroomId}/class-plan?course=${encodeURIComponent(courseKey)}`, { cache: 'no-store' })
-          if (plan.ok && active) {
-            const pd = await plan.json()
-            const list = (pd.classTopics ?? [])
-              .filter((t: { lessonPath: string | null }) => t.lessonPath)
-              .map((t: { slug: string; name: string }) => ({ slug: t.slug, name: t.name }))
-            setRecommended(list)
-            if (list.length > 0) setPick(list[0].slug)
-          }
-        }
-
-        // Full pre-generated catalog for the course, grouped by category —
-        // any topic is presentable, not just this week's plan. The course slug
-        // rides on the class-plan discovery response (class-plan-config).
-        const courseSlug: string | undefined = d?.availableCourses?.[0]?.courseSlug ?? undefined
-        if (courseSlug) {
-          const lib = await fetch(`/api/teacher/slide-library?course=${encodeURIComponent(courseSlug)}`, { cache: 'no-store' })
-          if (lib.ok && active) {
-            const ld = await lib.json()
-            setCatalog(ld.categories ?? [])
-            setPick(prev => prev || ld.categories?.[0]?.topics?.[0]?.slug || '')
-          }
-        }
+        const [assignedRes, discRes, libRes] = await Promise.all([
+          fetch(`/api/teacher/classrooms/${classroomId}/courses`, { cache: 'no-store' }),
+          fetch(`/api/teacher/classrooms/${classroomId}/class-plan`, { cache: 'no-store' }),
+          fetch('/api/teacher/slide-library', { cache: 'no-store' }),
+        ])
+        const assigned: string[] = assignedRes.ok ? ((await assignedRes.json()).courseSlugs ?? []) : []
+        const disc = discRes.ok ? await discRes.json() : null
+        const available: { key: string; courseSlug: string | null }[] = disc?.availableCourses ?? []
+        const library: LauncherCourse[] = libRes.ok ? ((await libRes.json()).courses ?? []) : []
+        if (!active) return
+        const diagnosed = available.map(c => c.courseSlug)
+        const ordered = orderLauncherCourses(library, assigned, diagnosed)
+        setCourses(ordered)
+        setOwnCount(classCourseCount(ordered, assigned, diagnosed))
+        setPlanKeys(new Map(available.filter(c => c.courseSlug).map(c => [c.courseSlug as string, c.key])))
+        setCourse(ordered[0]?.slug ?? '')
       } catch { /* launcher just stays hidden */ }
     }
     void load()
     return () => { active = false }
   }, [classroomId])
 
-  if (recommended.length === 0 && catalog.length === 0) return null
+  // The chosen course's catalog, with this week's class-plan topics on top.
+  useEffect(() => {
+    if (!course) return
+    let active = true
+    const load = async () => {
+      try {
+        const planKey = planKeys.get(course)
+        const [planRes, libRes] = await Promise.all([
+          planKey
+            ? fetch(`/api/teacher/classrooms/${classroomId}/class-plan?course=${encodeURIComponent(planKey)}`, { cache: 'no-store' })
+            : Promise.resolve(null),
+          fetch(`/api/teacher/slide-library?course=${encodeURIComponent(course)}`, { cache: 'no-store' }),
+        ])
+        const pd = planRes?.ok ? await planRes.json() : null
+        const ld = libRes.ok ? await libRes.json() : null
+        if (!active) return
+        const list: { slug: string; name: string }[] = (pd?.classTopics ?? [])
+          .filter((t: { lessonPath: string | null }) => t.lessonPath)
+          .map((t: { slug: string; name: string }) => ({ slug: t.slug, name: t.name }))
+        const cats = ld?.categories ?? []
+        setRecommended(list)
+        setCatalog(cats)
+        setPick(list[0]?.slug || cats[0]?.topics?.[0]?.slug || '')
+      } catch { /* keep the previous course's picker */ }
+    }
+    void load()
+    return () => { active = false }
+  }, [course, classroomId, planKeys])
+
+  if (courses.length === 0) return null
 
   const start = async () => {
     setStarting(true)
@@ -463,7 +487,25 @@ function DeckLauncher({ sessionId, classroomId }: { sessionId: string; classroom
   return (
     <div className="mb-4 flex flex-wrap items-center gap-2 rounded-xl border border-indigo-200 bg-indigo-50 px-4 py-3 dark:border-indigo-800 dark:bg-indigo-900/20">
       <span className="text-sm font-semibold text-indigo-800 dark:text-indigo-300">🖥️ Present slides:</span>
+      {courses.length > 1 && (
+        <select
+          aria-label="Course"
+          value={course}
+          onChange={e => setCourse(e.target.value)}
+          className="max-w-[14rem] rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+        >
+          {ownCount > 0 && (
+            <optgroup label="This class">
+              {courses.slice(0, ownCount).map(c => <option key={c.slug} value={c.slug}>{c.name}</option>)}
+            </optgroup>
+          )}
+          <optgroup label={ownCount > 0 ? 'Other courses' : 'Courses'}>
+            {courses.slice(ownCount).map(c => <option key={c.slug} value={c.slug}>{c.name}</option>)}
+          </optgroup>
+        </select>
+      )}
       <select
+        aria-label="Topic"
         value={pick}
         onChange={e => setPick(e.target.value)}
         className="max-w-xs rounded-lg border border-gray-300 bg-white px-3 py-1.5 text-sm dark:border-gray-600 dark:bg-gray-700 dark:text-white"
@@ -487,7 +529,7 @@ function DeckLauncher({ sessionId, classroomId }: { sessionId: string; classroom
         {starting ? 'Building deck…' : 'Start presenting'}
       </button>
       <span className="text-xs text-indigo-600/70 dark:text-indigo-400/70">
-        ~20 slides from the lesson with live polls every few slides — students&apos; screens follow yours.
+        Slides from the lesson with live polls between sections — students&apos; screens follow yours.
       </span>
       {error && <span className="text-xs text-red-600 dark:text-red-400">{error}</span>}
     </div>
