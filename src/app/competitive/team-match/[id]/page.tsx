@@ -7,6 +7,7 @@ import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import { botAnswerIndex, botAnswerPlan, matchPaceCourseKey } from '@/lib/bot-pacing'
 import TeamMatchReview, { summarizeAnswers, type ReviewAnswer } from '@/components/competitive/team-match/TeamMatchReview'
+import { MatchFigure, prefetchMatchFigures } from '@/components/competitive/MatchFigure'
 import {
   VersusHeader,
   ModeChip,
@@ -35,6 +36,8 @@ interface Question {
   category?: string
   /** Expected student solve time, stamped at match creation (bot-pacing.ts). */
   expectedSeconds?: number
+  /** Picture reference (src/lib/competitive-figures.ts). */
+  figureRef?: string
 }
 
 interface TeamPlayer {
@@ -105,6 +108,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
       }
       const data = await res.json()
       setMatchState(data.match)
+      prefetchMatchFigures(data.match?.questions)
       setCurrentUserId(data.currentUserId)
       setLoading(false)
     } catch {
@@ -401,6 +405,7 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
         {/* Question Area */}
         {question && (
           <QuestionCard questionIndex={matchState.myQuestionIndex} counter={`Question ${matchState.myQuestionIndex + 1}`} difficulty={question.difficulty}>
+            <MatchFigure figureRef={question.figureRef} />
             <div
               data-qa="question-stem"
               className="overflow-x-auto text-lg font-semibold leading-relaxed text-foreground sm:text-xl"

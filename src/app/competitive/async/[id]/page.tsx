@@ -11,6 +11,7 @@ import AvatarDisplay from '@/components/AvatarDisplay'
 import { AvatarData } from '@/types/avatar'
 import { publicDisplayName } from '@/lib/display-name'
 import { AnswerTile, MatchClock, QuestionCard, useAnswerHotkeys, answerGridClass, type AnswerState } from '@/components/competitive/arena/Arena'
+import { MatchFigure, prefetchMatchFigures } from '@/components/competitive/MatchFigure'
 import 'katex/dist/katex.min.css'
 
 interface Question {
@@ -22,6 +23,8 @@ interface Question {
   correctAnswer?: number
   explanation?: string
   type?: string
+  /** Picture reference (src/lib/competitive-figures.ts). */
+  figureRef?: string
 }
 
 interface ChallengeData {
@@ -122,6 +125,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
       }
       const data: ChallengeData = await res.json()
       setChallenge(data)
+      prefetchMatchFigures(data.questions)
       setLoading(false)
 
       if (data.status === 'COMPLETED' || data.status === 'EXPIRED') {
@@ -549,6 +553,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
 
           {/* Question */}
           <QuestionCard questionIndex={currentQuestion} counter={`Question ${currentQuestion + 1} of ${challenge.questions.length}`}>
+            <MatchFigure figureRef={q.figureRef} />
             <div
               data-qa="question-stem"
               className="overflow-x-auto text-lg font-semibold leading-relaxed text-foreground sm:text-xl"

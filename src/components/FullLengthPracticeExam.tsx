@@ -25,6 +25,7 @@ import { psatTotal, projectionRange as psatProjectionRange } from '@/lib/psat-sc
 import { actSectionScaled, actComposite, projectionRange as actProjectionRange } from '@/lib/act-scoring'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { apCompositePercent, estimateApScore } from '@/lib/ap-scoring'
+import { estimateAfqtFromPercentCorrect } from '@/lib/asvab-scoring'
 import { InArticleAd } from '@/components/ad-banner'
 import ShareScoreCard from '@/components/ShareScoreCard'
 import FocusTrapDialog from '@/components/FocusTrapDialog'
@@ -106,6 +107,12 @@ export interface MCQItem {
   lesson?: string
   /** CED topic code, e.g. "1.7" or "3.10"; informational. */
   ced?: string
+  /**
+   * Trusted authored markup (a generated inline SVG: a circuit, a machine, a
+   * geometry figure, an Assembling Objects box) drawn above the question.
+   * Data files only, never user input. Options may also be single SVG strings.
+   */
+  figureHtml?: string
 }
 
 export interface RubricPoint {
@@ -202,7 +209,20 @@ export interface FullLengthExamConfig {
    * in @/lib/psat-scoring and @/lib/act-scoring. Additive — courses that
    * omit it (all AP subjects) are unchanged.
    */
-  scaledExam?: 'psat' | 'act'
+  scaledExam?: 'psat' | 'act' | 'asvab'
+  /**
+   * Show a question-by-question review (your answer, the key, the explanation
+   * and why each choice is right or wrong) on the final results screen. For
+   * exams that are not saved to the server (no examKey), which otherwise have
+   * no review page. Additive: off unless set.
+   */
+  answerReview?: boolean
+  /**
+   * Non-AP exams: an endpoint that saves a finished sitting for signed-in
+   * students (POST { clientAttemptId, mcq: [{ s, i, chosen }] }, graded on the
+   * server), e.g. '/api/asvab-practice/submit'. AP exams use examKey instead.
+   */
+  saveEndpoint?: string
   /**
    * AP exams: the key the page loaded this exam by (src/lib/ap-practice-exams.ts).
    * Set, a finished exam is saved for signed-in students (graded on the server,
@@ -256,7 +276,7 @@ const TEXTAREA =
 type Phase = 'overview' | ApExamPhase
 
 function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
-  const { subject, description, backLink, ctaLinks, accent, sections: rawSections, totalTimeMinutes, aboutInfo, scaledExam, examKey, formPicker, onAttemptSaved } = config
+  const { subject, description, backLink, ctaLinks, accent, sections: rawSections, totalTimeMinutes, aboutInfo, scaledExam, answerReview, saveEndpoint, examKey, formPicker, onAttemptSaved } = config
   const form = config.form ?? 1
   const t = TOKENS[accent]
 
@@ -272,8 +292,14 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
         ...sec,
         items: sec.items.map((item) => {
           if (item.type !== 'mcq') return item
-          const s = shuffleOptions(item.options, item.correctAnswer, `${subject}|${item.question}`)
-          return { ...item, options: s.options, correctAnswer: s.correctIndex }
+          // Figure items can share a stem ("Which figure best shows…"), so the figure joins the seed.
+          const seed = `${subject}|${item.question}${item.figureHtml ? `|${hashText(item.figureHtml)}` : ''}`
+          const s = shuffleOptions(item.options, item.correctAnswer, seed)
+          // Keep the per-option explanations aligned with the shuffled options.
+          const optionExplanations = item.optionExplanations?.length === item.options.length
+            ? s.options.map((o) => item.optionExplanations![item.options.indexOf(o)])
+            : item.optionExplanations
+          return { ...item, options: s.options, correctAnswer: s.correctIndex, optionExplanations }
         }),
       })),
     [rawSections, subject],
@@ -287,6 +313,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   const sig = useMemo(() => examSignature(subject, sections, stages, form), [subject, sections, stages, form])
   const storageKey = useMemo(() => apProgressKey(examKey ? apPracticeSittingId(examKey, form) : `subject-${hashText(subject)}`), [examKey, form, subject])
   const examHasCalculator = stages.some((s) => s.calculator)
+  const hasFrq = sections.some((sec) => sec.items.some((it) => it.type !== 'mcq'))
 
   const [phase, setPhase] = useState<Phase>('overview')
   const [stageIdx, setStageIdx] = useState(0)
@@ -347,7 +374,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   useEffect(() => {
     if (!restored) return
     try {
-      if (phase === 'overview' || (phase === 'final-results' && (!examKey || save.state === 'saved'))) {
+      if (phase === 'overview' || (phase === 'final-results' && (!(examKey || saveEndpoint) || save.state === 'saved'))) {
         localStorage.removeItem(storageKey)
         return
       }
@@ -356,7 +383,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
       }
       localStorage.setItem(storageKey, JSON.stringify(payload))
     } catch { /* storage full or blocked: the exam still runs, just without resume */ }
-  }, [restored, storageKey, sig, examKey, save.state, attemptId, phase, stageIdx, itemIdx, answers, flags, struck, highlights, deadline])
+  }, [restored, storageKey, sig, examKey, saveEndpoint, save.state, attemptId, phase, stageIdx, itemIdx, answers, flags, struck, highlights, deadline])
 
   // A new screen (phase, part, question or the review screen) starts at the
   // top, after it renders: scrolling from the click handler raced the
@@ -431,7 +458,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
   /* -------------------- Saving -------------------- */
   /** Send the finished exam to be graded and stored (AP exams, signed-in students). */
   const saveAttempt = useCallback(() => {
-    if (!examKey) return
+    if (!examKey && !saveEndpoint) return
     const mcq: { s: number; i: number; chosen: string | null }[] = []
     const frq: ApFrqSubmission[] = []
     sections.forEach((sec, s) => sec.items.forEach((item, i) => {
@@ -444,10 +471,10 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
       }
     }))
     setSave({ state: 'saving' })
-    fetch('/api/ap-practice/submit', {
+    fetch(examKey ? '/api/ap-practice/submit' : saveEndpoint!, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ examKey, form, clientAttemptId: attemptId || undefined, mcq, frq }),
+      body: JSON.stringify(examKey ? { examKey, form, clientAttemptId: attemptId || undefined, mcq, frq } : { clientAttemptId: attemptId || undefined, mcq }),
     })
       .then(async (r) => {
         const d = await r.json().catch(() => ({}))
@@ -459,13 +486,13 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
         }
       })
       .catch(() => setSave({ state: 'error' }))
-  }, [examKey, form, sections, answers, attemptId, onAttemptSaved])
+  }, [examKey, saveEndpoint, form, sections, answers, attemptId, onAttemptSaved])
 
   // Save on reaching the results (including a results screen restored after a
   // refresh: the attempt id makes a repeat POST a no-op on the server).
   useEffect(() => {
-    if (phase === 'final-results' && examKey && save.state === 'idle' && answers.length > 0) saveAttempt()
-  }, [phase, examKey, save.state, answers.length, saveAttempt])
+    if (phase === 'final-results' && (examKey || saveEndpoint) && save.state === 'idle' && answers.length > 0) saveAttempt()
+  }, [phase, examKey, saveEndpoint, save.state, answers.length, saveAttempt])
 
   /* -------------------- Answering & navigation -------------------- */
   const updateAnswer = useCallback((updater: (a: ItemAnswer) => ItemAnswer) => {
@@ -602,7 +629,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
               })}
             </div>
             <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-              <strong>Total time:</strong> {Math.floor(totalTimeMinutes / 60)}h {totalTimeMinutes % 60}m. Each section{stages.length > sections.length ? ' and part' : ''} has its own timer and is completed back-to-back. Free-response sections use a self-grading rubric checklist after you write your response.
+              <strong>Total time:</strong> {Math.floor(totalTimeMinutes / 60)}h {totalTimeMinutes % 60}m. Each section{stages.length > sections.length ? ' and part' : ''} has its own timer and is completed back-to-back.{hasFrq ? ' Free-response sections use a self-grading rubric checklist after you write your response.' : ''}
             </p>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
               <strong>Exam tools:</strong> a question navigator and review screen, flags, answer strike-through, a highlighter for stimuli
@@ -692,6 +719,36 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
         outOf: 'on the 320–1520 scale',
         note: 'Estimate from one practice exam — expect a score within this range, not an exact number.',
       }
+    } else if (scaledExam === 'asvab') {
+      // AFQT = AR + MK + 2·VE (VE from WK and PC) on the CAT's IRT scale; no
+      // public number-right table exists, so this is an estimate with a range
+      // from percent correct on the four AFQT subtests (src/lib/asvab-scoring.ts).
+      const sc = (id: string) => {
+        const i = sections.findIndex((sec) => sec.id === id)
+        return i >= 0 ? scoring.perSection[i] : undefined
+      }
+      const frac = (id: string) => {
+        const x = sc(id)
+        return x && x.possible ? x.earned / x.possible : undefined
+      }
+      const n = (id: string) => sc(id)?.possible || undefined
+      const est = estimateAfqtFromPercentCorrect(
+        { WK: frac('wk'), PC: frac('pc'), AR: frac('ar'), MK: frac('mk') },
+        { WK: n('wk'), PC: n('pc'), AR: n('ar'), MK: n('mk') },
+      )
+      scaledCard = est
+        ? {
+            heading: 'Estimated AFQT',
+            range: `${est.range.low}–${est.range.high}`,
+            outOf: `percentile (point estimate ${est.percentile}, Category ${est.category})`,
+            note: 'Estimate from WK, PC, AR and MK on one fixed practice form. The real CAT-ASVAB is adaptive and scores which questions you get right, not a count, so expect a range, not an exact number.',
+          }
+        : {
+            heading: 'Estimated AFQT',
+            range: '—',
+            outOf: 'percentile',
+            note: 'The AFQT estimate is not available yet. Your per-subtest results are below.',
+          }
     } else if (scaledExam === 'act' && scoring.perSection.length > 0) {
       const sectionScores = scoring.perSection.map(s => actSectionScaled(s.possible ? s.earned / s.possible : 0))
       const composite = actComposite(sectionScores)
@@ -736,13 +793,13 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
             </div>
           )}
 
-          {examKey && save.state !== 'idle' && (
+          {(examKey || saveEndpoint) && save.state !== 'idle' && (
             <p className="mb-6 rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300" role="status">
               {save.state === 'saving' && 'Saving your results…'}
               {save.state === 'saved' && (
                 <>
                   Saved to your history.{' '}
-                  {save.id && (
+                  {save.id && examKey && (
                     <Link href={`/review/ap-practice/${save.id}`} className={`rounded font-semibold ${t.text} hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring`}>
                       Review every question and your free responses →
                     </Link>
@@ -795,7 +852,57 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
             </div>
           </div>
 
-          <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">Free-response scores reflect your self-graded rubric checks. Be honest with yourself &mdash; that&apos;s where the learning happens.</p>
+          {answerReview && (
+            <div className="mb-6 rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+              <h3 className="mb-1 text-lg font-semibold text-gray-800 dark:text-gray-200">Review Every Question</h3>
+              <p className="mb-3 text-sm text-gray-600 dark:text-gray-400">Open a section to see your answer, the correct answer and why each choice is right or wrong.</p>
+              <div className="space-y-2">
+                {sections.map((sec, sIdx) => (
+                  <details key={sec.id} className="rounded-xl border border-gray-200 dark:border-gray-700">
+                    <summary className="cursor-pointer rounded-xl px-4 py-2.5 text-sm font-semibold text-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring dark:text-gray-200">
+                      {sec.name} ({scoring.perSection[sIdx]?.earned ?? 0}/{scoring.perSection[sIdx]?.possible ?? 0})
+                    </summary>
+                    <ol className="space-y-4 px-4 pb-4">
+                      {sec.items.map((it, iIdx) => {
+                        if (it.type !== 'mcq') return null
+                        const a = answers[sIdx]?.[iIdx]
+                        const chosen = a?.type === 'mcq' ? a.selected : null
+                        const right = chosen === it.correctAnswer
+                        return (
+                          <li key={iIdx} className="border-t border-gray-100 pt-3 text-sm dark:border-gray-700">
+                            <p className={`mb-1 text-xs font-bold ${right ? 'text-green-700 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
+                              Question {iIdx + 1} · {chosen === null ? 'Not answered' : right ? 'Correct' : 'Incorrect'}
+                            </p>
+                            {it.figureHtml && (
+                              <div className="mb-2 overflow-x-auto rounded-lg bg-gray-50 p-2 text-gray-800 dark:bg-gray-700/50 dark:text-gray-200 [&_svg]:mx-auto [&_svg]:h-auto [&_svg]:max-w-full" dangerouslySetInnerHTML={{ __html: it.figureHtml }} />
+                            )}
+                            {it.stimulus && <RichText text={it.stimulus} className="mb-2 rounded-lg bg-gray-50 p-3 text-xs italic text-gray-700 dark:bg-gray-900/40 dark:text-gray-300" />}
+                            <RichText text={it.question} className="mb-2 text-gray-800 dark:text-gray-200" />
+                            <ul className="mb-2 space-y-1">
+                              {it.options.map((opt, oi) => (
+                                <li key={oi} className={`rounded-lg border px-3 py-1.5 ${oi === it.correctAnswer ? 'border-green-400 bg-green-50 dark:border-green-600 dark:bg-green-900/20' : oi === chosen ? 'border-red-300 bg-red-50 dark:border-red-700 dark:bg-red-900/20' : 'border-gray-200 dark:border-gray-700'}`}>
+                                  <span className="mr-1 font-bold">{String.fromCharCode(65 + oi)}.</span>
+                                  <RichText inline text={opt} className={opt.startsWith('<svg') ? 'inline-block align-middle [&_svg]:h-auto [&_svg]:max-w-full' : 'text-gray-800 dark:text-gray-200'} />
+                                  {oi === it.correctAnswer && <span className="ml-2 text-xs font-semibold text-green-700 dark:text-green-400">Correct answer</span>}
+                                  {oi === chosen && oi !== it.correctAnswer && <span className="ml-2 text-xs font-semibold text-red-600 dark:text-red-400">Your answer</span>}
+                                  {it.optionExplanations?.[oi] && <RichText text={it.optionExplanations[oi]} className="mt-1 text-xs text-gray-600 dark:text-gray-400" />}
+                                </li>
+                              ))}
+                            </ul>
+                            <RichText text={it.explanation} className="text-xs text-gray-700 dark:text-gray-300" />
+                          </li>
+                        )
+                      })}
+                    </ol>
+                  </details>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {hasFrq && (
+            <p className="mb-4 text-sm text-gray-600 dark:text-gray-400">Free-response scores reflect your self-graded rubric checks. Be honest with yourself &mdash; that&apos;s where the learning happens.</p>
+          )}
 
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link href={backLink.href} className={`flex-1 rounded-xl bg-gradient-to-r ${t.gradient} py-3 text-center font-semibold text-white shadow transition hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-ring focus-visible:ring-offset-2 dark:focus-visible:ring-offset-gray-900`}>Back to {backLink.label}</Link>
@@ -911,6 +1018,12 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
     content = (
       <div className={card}>
         {itemHeader(`Question ${itemIdx + 1}`)}
+        {item.figureHtml && (
+          <div
+            className="mb-4 overflow-x-auto rounded-xl border border-gray-200 bg-gray-50 p-3 text-gray-800 dark:border-gray-600 dark:bg-gray-700/50 dark:text-gray-200 [&_svg]:mx-auto [&_svg]:h-auto [&_svg]:max-w-full"
+            dangerouslySetInnerHTML={{ __html: item.figureHtml }}
+          />
+        )}
         {item.stimulus && (
           <div className="mb-4 rounded-lg border-l-4 border-gray-300 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-900/40">
             {highlighter(highlightKey('stim', item.stimulus), item.stimulus, 'Stimulus', 'text-sm italic leading-relaxed text-gray-800 dark:text-gray-200')}
@@ -934,7 +1047,7 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
                   >
                     <span className="font-bold" aria-hidden="true">{letter}.</span>
                     <span className="sr-only">{letter}. {isStruck ? '(crossed out) ' : ''}</span>
-                    <RichText inline text={opt} />
+                    <RichText inline text={opt} className={opt.startsWith('<svg') ? 'inline-block [&_svg]:h-auto [&_svg]:max-w-full' : undefined} />
                   </button>
                   <button
                     type="button"

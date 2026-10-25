@@ -64,6 +64,7 @@ const STATIC_COURSE_NAMES: Record<string, string> = {
   'sat-prep': 'SAT Prep',
   'act-prep': 'ACT Prep',
   'mcat-prep': 'MCAT Prep',
+  asvab: 'ASVAB',
 }
 
 const STATIC_COURSES: CourseLink[] = Object.entries(STATIC_COURSE_NAMES).map(([slug, name]) => ({
@@ -330,7 +331,7 @@ export function Navbar() {
                       grouped[section].push(course)
                     }
 
-                    const testPrepOrder = ['sat-prep', 'act-prep', 'mcat-prep']
+                    const testPrepOrder = ['sat-prep', 'act-prep', 'mcat-prep', 'asvab']
                     const testPrepCourses = (grouped['Test Prep'] ?? [])
                       .slice()
                       .sort((a, b) => {

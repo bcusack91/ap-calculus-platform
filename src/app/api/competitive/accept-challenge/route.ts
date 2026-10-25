@@ -7,7 +7,7 @@ const VALID_CATEGORIES = new Set([
   'ap-psychology', 'ap-physics1', 'ap-physics2', 'ap-physics-c-mech',
   'ap-physics-c-em', 'ap-statistics', 'ap-precalculus',
   'sat-math', 'sat-reading', 'sat-punctuation', 'sat-punctuation-commas-semicolons',
-  'act-math', 'act-science',
+  'act-math', 'act-science', 'asvab',
   'algebra', 'algebra2', 'geometry', 'precalc', 'ochem',
   'derivatives', 'limits', 'integrals', 'the-unit-circle',
   'reflection-refraction', 'parametric-equations', 'vectors', 'polar-coordinates',

@@ -102,7 +102,8 @@ export interface HubFeature {
 
 export interface HubUnit {
   title: string
-  topics: string[]
+  /** Topic labels; an entry with an href renders as a link to that lesson. */
+  topics: (string | { label: string; href: string })[]
   /** One of: indigo, blue, purple, green, amber, teal, pink, rose, cyan, orange, violet */
   color: HubUnitColor
 }
@@ -554,11 +555,13 @@ export function CourseHub(props: CourseHubProps) {
                 <h3 className={`mb-4 text-lg font-bold ${UNIT_TITLE_COLORS[u.color]}`}>{u.title}</h3>
                 <ul className="grid grid-cols-1 gap-2">
                   {u.topics.map(t => (
-                    <li key={t} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
+                    <li key={typeof t === 'string' ? t : t.href} className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-300">
                       <svg className={`h-4 w-4 shrink-0 ${UNIT_CHECK_COLORS[u.color]}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
-                      {t}
+                      {typeof t === 'string' ? t : (
+                        <Link href={t.href} className="hover:underline">{t.label}</Link>
+                      )}
                     </li>
                   ))}
                 </ul>

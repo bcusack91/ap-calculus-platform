@@ -96,6 +96,7 @@ const COURSE_GROUPS = [
       { slug: 'sat-prep', name: 'SAT Prep', icon: '📝', description: 'Math, Reading, Writing' },
       { slug: 'act-prep', name: 'ACT Prep', icon: '📋', description: 'Math, English, Reading, Science' },
       { slug: 'mcat-prep', name: 'MCAT Prep', icon: '🏥', description: 'Science sections' },
+      { slug: 'asvab', name: 'ASVAB', icon: '🎖️', description: 'Military enlistment test: AFQT and all subtests' },
     ],
   },
 ]

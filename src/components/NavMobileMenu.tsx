@@ -54,7 +54,7 @@ export function NavMobileMenu({ session, courses, avatarData, isTeacher, isAdmin
     grouped[section].push(course)
   }
 
-  const testPrepOrder = ['sat-prep', 'act-prep', 'mcat-prep']
+  const testPrepOrder = ['sat-prep', 'act-prep', 'mcat-prep', 'asvab']
   const testPrepCourses = (grouped['Test Prep'] ?? [])
     .slice()
     .sort((a, b) => {

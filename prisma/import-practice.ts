@@ -30,6 +30,7 @@ import { AP_PRACTICE_EXAMS, apPracticeForms } from '../src/lib/ap-practice-exams
 // MCQs by subject). One form each, key "exam".
 import { config as act } from '../src/data/act-practice/config'
 import { config as psat } from '../src/data/psat-practice/config'
+import { config as asvab } from '../src/data/asvab-practice/config'
 
 interface Source { courseSlug: string; key: string; label: string; load: () => Promise<unknown> }
 
@@ -51,6 +52,7 @@ function sources(): Source[] {
     ...ap,
     { courseSlug: 'act', key: PRACTICE_EXAM_KEY, label: 'act Form 1', load: async () => act },
     { courseSlug: 'psat', key: PRACTICE_EXAM_KEY, label: 'psat Form 1', load: async () => psat },
+    { courseSlug: 'asvab', key: PRACTICE_EXAM_KEY, label: 'asvab Form 1', load: async () => asvab },
   ]
 }
 

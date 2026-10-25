@@ -8,6 +8,7 @@
  * for the first course) holds every course's sittings without a course column.
  */
 import { prisma } from '@/lib/prisma'
+import { keepsAuthoredOrder } from '@/lib/shuffle-options'
 import { generateExitQuiz, hasExitQuiz } from '@/data/exit-quizzes'
 import { UNIT_TEST_COURSES, type UnitTestCourse } from '@/lib/unit-test-courses'
 import {
@@ -107,6 +108,7 @@ async function candidatesFor(slug: string, includeLowYield: boolean): Promise<Un
       options: [...q.options],
       correctIndex: q.correctIndex,
       explanation: q.explanation ?? '',
+      ...(q.figure ? { figure: q.figure, figureAlt: q.figureAlt ?? '' } : {}),
     }))
   } catch (err) {
     console.warn(`[mcat unit test] no exit pool for ${slug}:`, err)
@@ -138,6 +140,8 @@ export async function createUnitTest(userId: string, diagnosticId: string, topic
   // Shuffle each question's options (pools don't all randomize the key's
   // position), remapping the stored key to match.
   const questions: UnitTestQuestion[] = assembleUnitTest(topics).map((q) => {
+    // Options naming the item's own figure panels ('Figure 1'..'Figure 4') stay in order.
+    if (keepsAuthoredOrder(q.options)) return q
     const order = q.options.map((_, i) => i)
     for (let i = order.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1))
@@ -154,7 +158,13 @@ export async function createUnitTest(userId: string, diagnosticId: string, topic
 }
 
 /** What the client may see of a stored sitting: no keys, no explanations. */
-export function publicQuestions(json: unknown): { id: string; topicSlug: string; question: string; options: string[] }[] {
+export function publicQuestions(json: unknown): { id: string; topicSlug: string; question: string; options: string[]; figure?: string; figureAlt?: string }[] {
   if (!Array.isArray(json)) return []
-  return (json as UnitTestQuestion[]).map((q) => ({ id: q.id, topicSlug: q.topicSlug, question: q.question, options: q.options }))
+  return (json as UnitTestQuestion[]).map((q) => ({
+    id: q.id,
+    topicSlug: q.topicSlug,
+    question: q.question,
+    options: q.options,
+    ...(q.figure ? { figure: q.figure, figureAlt: q.figureAlt ?? '' } : {}),
+  }))
 }

@@ -39,6 +39,7 @@ export const INCLUDE_COURSE_NAMES: Record<string, string> = {
   'ap-calculus-ab': 'AP Calculus AB',
   'ap-calculus-bc': 'AP Calculus BC',
   'ap-precalculus': 'AP Precalculus',
+  asvab: 'ASVAB',
 }
 
 /** `slug` followed by every course it includes (`ap-calculus-bc` -> [bc, ab]). */
@@ -358,6 +359,153 @@ export const PRECALC_TOPIC_TITLES: Record<string, string> = {
   'precalc-exam-review': 'AP Precalculus Exam Review',
 }
 
+// ---------------------------------------------------------------------------
+// ASVAB (asvab-pipeline PLAN.md, Oct 2026): the 10 CAT-ASVAB subtests plus
+// AFQT/test day, one Category per subtest. Binding slugs, titles and order;
+// read by the /asvab hub, /categories, the competitive topics route, the
+// teacher lobby and prisma/create-asvab-course.ts. AFQT subtests (WK, PC, AR,
+// MK) are units 1-4.
+// ---------------------------------------------------------------------------
+
+export const ASVAB_CATEGORIES: CourseCategory[] = [
+  {
+    slug: 'asvab-word-knowledge',
+    course: 'asvab',
+    order: 1,
+    name: 'Word Knowledge (WK)',
+    topics: ['asvab-wk-vocabulary-in-context', 'asvab-wk-word-parts', 'asvab-wk-synonym-strategies'],
+  },
+  {
+    slug: 'asvab-paragraph-comprehension',
+    course: 'asvab',
+    order: 2,
+    name: 'Paragraph Comprehension (PC)',
+    topics: ['asvab-pc-main-idea', 'asvab-pc-details', 'asvab-pc-inference'],
+  },
+  {
+    slug: 'asvab-arithmetic-reasoning',
+    course: 'asvab',
+    order: 3,
+    name: 'Arithmetic Reasoning (AR)',
+    topics: [
+      'asvab-ar-whole-number-problems',
+      'asvab-ar-fractions-decimals',
+      'asvab-ar-percents-interest',
+      'asvab-ar-ratios-rates',
+      'asvab-ar-averages-probability',
+    ],
+  },
+  {
+    slug: 'asvab-mathematics-knowledge',
+    course: 'asvab',
+    order: 4,
+    name: 'Mathematics Knowledge (MK)',
+    topics: [
+      'asvab-mk-number-properties',
+      'asvab-mk-algebra-equations',
+      'asvab-mk-algebra-expressions',
+      'asvab-mk-geometry-shapes',
+      'asvab-mk-geometry-measurement',
+    ],
+  },
+  {
+    slug: 'asvab-general-science',
+    course: 'asvab',
+    order: 5,
+    name: 'General Science (GS)',
+    topics: ['asvab-gs-life-science', 'asvab-gs-earth-space', 'asvab-gs-chemistry', 'asvab-gs-physics'],
+  },
+  {
+    slug: 'asvab-electronics-information',
+    course: 'asvab',
+    order: 6,
+    name: 'Electronics Information (EI)',
+    topics: ['asvab-ei-electricity-basics', 'asvab-ei-circuits', 'asvab-ei-components'],
+  },
+  {
+    slug: 'asvab-auto-information',
+    course: 'asvab',
+    order: 7,
+    name: 'Auto Information (AI)',
+    topics: ['asvab-ai-engine', 'asvab-ai-drivetrain-chassis', 'asvab-ai-systems'],
+  },
+  {
+    slug: 'asvab-shop-information',
+    course: 'asvab',
+    order: 8,
+    name: 'Shop Information (SI)',
+    topics: ['asvab-si-tools', 'asvab-si-materials-fasteners'],
+  },
+  {
+    slug: 'asvab-mechanical-comprehension',
+    course: 'asvab',
+    order: 9,
+    name: 'Mechanical Comprehension (MC)',
+    topics: ['asvab-mc-forces-motion', 'asvab-mc-simple-machines', 'asvab-mc-gears-fluids'],
+  },
+  {
+    slug: 'asvab-assembling-objects',
+    course: 'asvab',
+    order: 10,
+    name: 'Assembling Objects (AO)',
+    topics: ['asvab-ao-connections', 'asvab-ao-shapes'],
+  },
+  {
+    slug: 'asvab-test-prep',
+    course: 'asvab',
+    order: 11,
+    name: 'AFQT and Test Day',
+    topics: ['asvab-afqt-scores', 'asvab-test-strategy'],
+  },
+]
+
+/** Canonical ASVAB topic titles (PLAN.md); the course-creation script applies them, the lobby displays them. */
+export const ASVAB_TOPIC_TITLES: Record<string, string> = {
+  'asvab-wk-vocabulary-in-context': 'Vocabulary in Context',
+  'asvab-wk-word-parts': 'Roots, Prefixes and Suffixes',
+  'asvab-wk-synonym-strategies': 'Synonyms, Connotation and Test Strategy',
+  'asvab-pc-main-idea': 'Main Idea and Purpose',
+  'asvab-pc-details': 'Stated Details and Sequence',
+  'asvab-pc-inference': 'Inference, Tone and Word Meaning',
+  'asvab-ar-whole-number-problems': 'Word Problems with Whole Numbers',
+  'asvab-ar-fractions-decimals': 'Fractions and Decimals in Context',
+  'asvab-ar-percents-interest': 'Percents, Discounts and Interest',
+  'asvab-ar-ratios-rates': 'Ratios, Proportions and Rates',
+  'asvab-ar-averages-probability': 'Averages, Counting and Probability',
+  'asvab-mk-number-properties': 'Number Properties, Exponents and Roots',
+  'asvab-mk-algebra-equations': 'Linear Equations and Inequalities',
+  'asvab-mk-algebra-expressions': 'Polynomials, Factoring and Quadratics',
+  'asvab-mk-geometry-shapes': 'Angles, Triangles and Polygons',
+  'asvab-mk-geometry-measurement': 'Area, Volume, Circles and Coordinates',
+  'asvab-gs-life-science': 'Life Science: Cells, Body Systems and Ecology',
+  'asvab-gs-earth-space': 'Earth and Space Science',
+  'asvab-gs-chemistry': 'Chemistry: Matter and Reactions',
+  'asvab-gs-physics': 'Physics: Motion, Energy and Waves',
+  'asvab-ei-electricity-basics': "Current, Voltage, Resistance and Ohm's Law",
+  'asvab-ei-circuits': 'Series and Parallel Circuits and Power',
+  'asvab-ei-components': 'Components, Symbols and AC vs DC',
+  'asvab-ai-engine': 'Engines and Combustion',
+  'asvab-ai-drivetrain-chassis': 'Drivetrain, Brakes, Steering and Suspension',
+  'asvab-ai-systems': 'Electrical, Fuel, Cooling and Exhaust Systems',
+  'asvab-si-tools': 'Hand and Power Tools',
+  'asvab-si-materials-fasteners': 'Materials, Fasteners and Shop Processes',
+  'asvab-mc-forces-motion': 'Forces, Work and Energy',
+  'asvab-mc-simple-machines': 'Levers, Pulleys, Inclined Planes and Screws',
+  'asvab-mc-gears-fluids': 'Gears, Fluids and Structures',
+  'asvab-ao-connections': 'Connecting Parts',
+  'asvab-ao-shapes': 'Fitting Shapes Together',
+  'asvab-afqt-scores': 'Your AFQT, Line Scores and Job Eligibility',
+  'asvab-test-strategy': 'CAT-ASVAB Strategy and Test Day',
+}
+
+/** Every ASVAB topic slug in course order (35). */
+export const ASVAB_TOPIC_SLUGS: string[] = ASVAB_CATEGORIES.flatMap((c) => c.topics)
+
+/** The ASVAB Category (subtest) that holds a topic, or undefined. */
+export function asvabCategoryOf(topicSlug: string): CourseCategory | undefined {
+  return ASVAB_CATEGORIES.find((c) => c.topics.includes(topicSlug))
+}
+
 /**
  * AP Precalculus Categories retired by the Oct 2026 restructure (the Jan-2026
  * duplicate units and the two non-CED groupings), each with the live unit its
@@ -447,8 +595,8 @@ function buildBcLayout(): CourseUnitSection[] {
   return sections
 }
 
-/** An exam-prep Category is the one section without a CED unit number. */
-const isExamPrepCategory = (c: CourseCategory) => /-exam-prep$/.test(c.slug)
+/** An exam-prep Category is the one section without a CED unit number (ASVAB's is `asvab-test-prep`). */
+const isExamPrepCategory = (c: CourseCategory) => /-(exam|test)-prep$/.test(c.slug)
 
 /** One hub section per Category of `course`, in Category order (a course with no shared units). */
 function buildCategoryLayout(course: string, categories: CourseCategory[]): CourseUnitSection[] {
@@ -467,6 +615,7 @@ const COURSE_UNIT_LAYOUT: Record<string, CourseUnitSection[]> = {
   'ap-calculus-ab': buildCategoryLayout('ap-calculus-ab', CALC_CATEGORIES),
   'ap-calculus-bc': buildBcLayout(),
   'ap-precalculus': buildCategoryLayout('ap-precalculus', PRECALC_CATEGORIES),
+  asvab: buildCategoryLayout('asvab', ASVAB_CATEGORIES),
 }
 
 /**

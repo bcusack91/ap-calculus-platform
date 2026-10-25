@@ -12,6 +12,7 @@ import { useActivitySurface } from '@/hooks/useActivitySurface'
 import type { McatUnitTestStatus } from '@/lib/mcat-unit-test-server'
 import { AP_CYCLE_TEST_NAME, UNIT_TEST_COURSES, type UnitTestCourse, type UnitTestCourseConfig } from '@/lib/unit-test-courses'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
+import QuestionFigure from '@/components/QuestionFigure'
 
 /**
  * The cycle unit test page, shared by every course in unit-test-courses.ts:
@@ -23,7 +24,7 @@ import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
  */
 
 interface PlanTopic { slug: string; name: string; isSatisfied: boolean }
-interface PublicQuestion { id: string; topicSlug: string; question: string; options: string[] }
+interface PublicQuestion { id: string; topicSlug: string; question: string; options: string[]; figure?: string; figureAlt?: string }
 interface Sitting { id: string; total: number; questions: PublicQuestion[] }
 interface StatusResponse {
   hasPlan: boolean
@@ -257,6 +258,7 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
 
         <div className="mt-6 rounded-2xl border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
           <p className="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">{topicName(q.topicSlug)}</p>
+          <QuestionFigure svg={q.figure} alt={q.figureAlt} className="mt-3" />
           <Rich text={q.question} className="mt-2 block text-base text-gray-900 dark:text-gray-100" />
           <div className="mt-4 space-y-2" role="radiogroup" aria-label={`Question ${index + 1} options`}>
             {q.options.map((opt, i) => {

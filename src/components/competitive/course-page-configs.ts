@@ -143,6 +143,15 @@ export const COURSE_PAGE_CONFIGS: Record<string, CompetitiveCoursePageConfig> = 
     topicsEndpoint: '/api/competitive/ap-world-history-topics',
     backHref: '/ap-world-history', browseHref: '/ap-world-history',
   },
+  asvab: {
+    slug: 'asvab', courseName: 'ASVAB',
+    topicsEndpoint: '/api/competitive/asvab-topics',
+    // Whole ASVAB bank (getAsvabQuestions with the course slug).
+    fallbackTopicSlug: 'asvab',
+    backHref: '/asvab', browseHref: '/courses/asvab',
+    // 10 CAT-ASVAB subtests + AFQT/test day (course-includes ASVAB_CATEGORIES).
+    unitEmojis: ['📖', '📰', '🧮', '📐', '🔬', '⚡', '🚗', '🔧', '⚙️', '🧩', '🎖️'],
+  },
   geometry: {
     slug: 'geometry', courseName: 'Geometry',
     topicsEndpoint: '/api/competitive/geometry-topics',

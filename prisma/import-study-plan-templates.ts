@@ -20,6 +20,7 @@ import { CONTENT_TYPES } from '../src/lib/content-store'
 import type { StudyPlanTemplate } from '../src/lib/study-plan-utils'
 
 import { ACT_PLANS } from '../src/data/act-study-plans'
+import { ASVAB_PLANS } from '../src/data/asvab-study-plans'
 import { AP_AAS_PLANS } from '../src/data/ap-african-american-studies-study-plans'
 import { AP_BIO_PLANS } from '../src/data/ap-bio-study-plans'
 import { AP_CALCAB_PLANS } from '../src/data/ap-calcab-study-plans'
@@ -52,6 +53,7 @@ import { GRADE8_MATH_PLANS } from '../src/data/grade8-math-study-plans'
 // courseSlug MUST match the adopt route's courseSlug for each course.
 const SOURCES: { courseSlug: string; plans: StudyPlanTemplate[] }[] = [
   { courseSlug: 'act-prep', plans: ACT_PLANS },
+  { courseSlug: 'asvab', plans: ASVAB_PLANS },
   { courseSlug: 'ap-african-american-studies', plans: AP_AAS_PLANS },
   { courseSlug: 'ap-biology', plans: AP_BIO_PLANS },
   { courseSlug: 'ap-calculus-ab', plans: AP_CALCAB_PLANS },

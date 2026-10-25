@@ -115,6 +115,7 @@ const DAILY_SETS: Record<string, { label: string; banks: DailyBank[] }> = {
     ],
   },
   mcat: { label: 'MCAT', banks: [bank('mcat', 'MCAT', async () => (await import('@/data/competitive-questions/mcat-bank')).getMcatQuestions(ALL))] },
+  asvab: { label: 'ASVAB', banks: [bank('asvab', 'ASVAB', async () => (await import('@/data/competitive-questions/asvab-bank')).getAsvabQuestions(ALL).filter((q) => !q.figure))] },
   'ap-calculus-ab': { label: 'AP Calculus AB', banks: [bank('ap-calculus', 'AP Calculus AB', async () => (await import('@/data/competitive-questions/ap-calculus-bank')).getApCalculusQuestions(ALL))] },
   'ap-calculus-bc': { label: 'AP Calculus BC', banks: [bank('ap-calculus-bc', 'AP Calculus BC', async () => (await import('@/data/competitive-questions/ap-calculus-bc-bank')).getApCalculusBCQuestions(ALL))] },
   'ap-precalculus': { label: 'AP Precalculus', banks: [bank('ap-precalculus', 'AP Precalculus', async () => (await import('@/data/competitive-questions/precalc-bank')).getApPrecalcQuestions(ALL))] },

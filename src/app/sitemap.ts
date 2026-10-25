@@ -142,6 +142,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     })),
+    // ASVAB hub + the public AFQT calculator
+    ...['/asvab', '/asvab-afqt-calculator'].map((p) => ({
+      url: `${baseUrl}${p}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
+    })),
     // PSAT landing page
     {
       url: `${baseUrl}/psat`,
@@ -214,7 +221,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history',
       'ap-macro', 'ap-micro', 'ap-african-american-studies',
       'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
-      'sat', 'act', 'mcat', 'algebra1', 'algebra2', 'geometry',
+      'sat', 'act', 'mcat', 'asvab', 'algebra1', 'algebra2', 'geometry',
       'grade8-math', 'prealgebra', 'ochem',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}-diagnostic`,
@@ -229,7 +236,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history',
       'ap-macro', 'ap-micro', 'ap-african-american-studies',
       'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
-      'sat', 'act', 'mcat', 'algebra1', 'algebra2', 'geometry',
+      'sat', 'act', 'mcat', 'asvab', 'algebra1', 'algebra2', 'geometry',
       // grade8-math & prealgebra omitted: no unique SEO body exists for those
       // subjects yet, so their daily-question pages stay out of the sitemap
       // until they have substantive content (avoids thin/scaled-content signal).
@@ -247,7 +254,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history',
       'ap-macro', 'ap-micro', 'ap-african-american-studies',
       'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
-      'sat', 'act', 'mcat', 'algebra1', 'algebra2', 'geometry',
+      'sat', 'act', 'mcat', 'asvab', 'algebra1', 'algebra2', 'geometry',
       'grade8-math', 'prealgebra', 'ochem',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}-score-predictor`,
@@ -262,7 +269,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history',
       'ap-macro', 'ap-micro', 'ap-african-american-studies',
       'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
-      'sat', 'mcat', 'act', 'psat',
+      'sat', 'mcat', 'act', 'psat', 'asvab',
       // Non-AP math course plans
       'algebra1', 'algebra2', 'geometry', 'grade8-math', 'prealgebra',
       // Organic chemistry
@@ -280,7 +287,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-human-geo', 'ap-us-gov', 'ap-world-history', 'ap-us-history',
       'ap-macro', 'ap-micro', 'ap-african-american-studies',
       'ap-english-lit', 'ap-english-lang', 'ap-enviro', 'ap-csa', 'ap-csp',
-      'sat', 'mcat', 'act', 'psat',
+      'sat', 'mcat', 'act', 'psat', 'asvab',
       // Non-AP math practice tests
       'algebra1', 'algebra2', 'geometry', 'grade8-math', 'prealgebra',
       // Organic chemistry
@@ -312,7 +319,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       'ap-psych', 'ap-stats', 'ap-us-gov', 'ap-us-history', 'ap-world-history',
       // Newly added: Physics C, non-AP math, and the two flagship test-prep tracks
       'ap-physics-c-mech', 'ap-physics-c-em', 'algebra1', 'algebra2', 'geometry',
-      'grade8-math', 'prealgebra', 'sat', 'mcat', 'act', 'psat',
+      'grade8-math', 'prealgebra', 'sat', 'mcat', 'act', 'psat', 'asvab',
       'ochem1', 'ochem2',
     ] as const).map(slug => ({
       url: `${baseUrl}/${slug}-unit-tests`,

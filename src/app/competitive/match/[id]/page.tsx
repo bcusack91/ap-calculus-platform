@@ -18,6 +18,7 @@ import { CosmeticNameplate } from '@/components/PowerUps';
 import { AvatarData } from '@/types/avatar';
 import { renderKatexSync, preloadKatex } from '@/lib/katex-lazy';
 import { CompetitiveRichText } from '@/components/competitive/CompetitiveRichText';
+import { MatchFigure, prefetchMatchFigures } from '@/components/competitive/MatchFigure';
 import { POWER_UPS, activeEffects, type ActiveEffect, type PowerUpId, type PowerUpsState } from '@/lib/chaos-powerups';
 import { ingestEffects } from '@/lib/chaos-arrival';
 import { planBotMove, matchTimeLimitSeconds, formatMinutes } from '@/lib/bot-pacing';
@@ -88,6 +89,7 @@ interface Question {
   category?: string;
   skill?: string; // Official SAT skill this question targets (student-facing)
   expectedSeconds?: number; // Expected student solve time, stamped at creation (bot-pacing.ts)
+  figureRef?: string; // Picture reference (src/lib/competitive-figures.ts), fetched by <MatchFigure>
 }
 
 interface MatchState {
@@ -242,6 +244,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       }
 
       setMatchState(data.match);
+      prefetchMatchFigures(data.match?.questions);
       setCurrentUserId(data.currentUserId);
       if (data.match.gameMode === 'CHAOS') {
         const mineNow = newIsPlayer1 ? data.match.gameData?.powerUps?.player1 : data.match.gameData?.powerUps?.player2;
@@ -997,6 +1000,7 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                               </span>
                             )}
                           </p>
+                          <MatchFigure figureRef={question.figureRef} size="sm" className="mb-2" />
                           <div className="overflow-x-auto text-base font-semibold text-foreground">
                             {renderPrompt(question.prompt || question.question || '', true)}
                           </div>
@@ -1201,6 +1205,11 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
                 const { passage, stem } = splitPassage(currentQuestion.prompt || currentQuestion.question || '')
                 return (
                   <>
+                    {currentQuestion.figureRef && (
+                      <div className={`transition-all ${fogActive ? 'blur-sm' : ''}`}>
+                        <MatchFigure figureRef={currentQuestion.figureRef} />
+                      </div>
+                    )}
                     {passage && (
                       <div className={`mb-4 overflow-x-auto rounded-xl bg-gray-50 p-4 text-base leading-relaxed text-foreground dark:bg-gray-800/60 transition-all ${fogActive ? 'blur-sm' : ''}`}>
                         {renderPrompt(passage, true)}

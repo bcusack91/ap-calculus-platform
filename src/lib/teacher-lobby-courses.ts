@@ -6,7 +6,7 @@
 // option and the API doesn't 404.
 
 import { pickTieredQuestions, AP_LESSON_BANK_TOPICS, type MatchTier } from '@/lib/competitive-utils'
-import { courseCategoryLayout, PRECALC_TOPIC_TITLES } from '@/lib/course-includes'
+import { ASVAB_TOPIC_TITLES, courseCategoryLayout, PRECALC_TOPIC_TITLES } from '@/lib/course-includes'
 
 
 export interface TeacherLobbyQuestion {
@@ -108,6 +108,15 @@ async function getApPrecalcLayoutQuestions(count?: number, topicSlug?: string): 
     return items.slice(0, n)
   }
   return getApPrecalcQuestions(count, topicSlug)
+}
+// ASVAB: the course slug, a subtest Category slug or a topic slug (asvab-bank.ts).
+// Picture items (Assembling Objects, gear trains, circuits) are left out: the
+// live-lobby screens do not draw figures (the 1v1/2v2/async screens do, via
+// figureRef + <MatchFigure>), and their stems point at the picture.
+async function getAsvabQuestions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
+  const m = await import('@/data/competitive-questions/asvab-bank')
+  const pool = m.getAsvabQuestions(1_000_000, topicSlug).filter((q) => !q.figure)
+  return pool.slice(0, count ?? 10) as unknown as AnyQuestion[]
 }
 async function getAlgebra2Questions(count?: number, topicSlug?: string): Promise<AnyQuestion[]> {
   const m = await import('@/data/competitive-questions/algebra2-bank')
@@ -440,6 +449,7 @@ const COURSES: CourseRegistryEntry[] = [
   { slug: 'sat-prep', name: 'SAT Prep', getQuestions: satAdapter() },
   { slug: 'act-prep', name: 'ACT Prep', getQuestions: actAdapter() },
   { slug: 'mcat', name: 'MCAT Prep', getQuestions: mcatAdapter() },
+  { slug: 'asvab', name: 'ASVAB', getQuestions: topicTagged(getAsvabQuestions) },
 ]
 
 export function listSupportedCourses(): { slug: string; name: string }[] {
@@ -485,6 +495,15 @@ export async function getCourseTopics(slug: string): Promise<{ slug: string; tit
         const tags = precalcBankTopicsFor(t)
         return { slug: t, title: PRECALC_TOPIC_TITLES[t] ?? prettifyTopicSlug(t), count: all.filter(q => q.topicSlug !== undefined && tags.has(q.topicSlug)).length }
       })
+      .filter(t => t.count > 0)
+  }
+  // ASVAB lists its fixed layout (10 subtests + AFQT/test day) with the lesson
+  // titles; a topic with no bank items yet is left out.
+  if (slug === 'asvab') {
+    const m = await import('@/data/competitive-questions/asvab-bank')
+    return (courseCategoryLayout('asvab') ?? [])
+      .flatMap(s => s.topics)
+      .map(t => ({ slug: t, title: ASVAB_TOPIC_TITLES[t] ?? prettifyTopicSlug(t), count: m.asvabQuestionCount(t) }))
       .filter(t => t.count > 0)
   }
   // SAT lists the lesson-aligned hierarchy (an "All <category>" entry per

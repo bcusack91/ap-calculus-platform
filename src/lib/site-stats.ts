@@ -36,6 +36,7 @@ const NAME_OVERRIDES: Record<string, string> = {
   'sat-prep': 'SAT Prep',
   'act-prep': 'ACT Prep',
   'mcat-prep': 'MCAT Prep',
+  asvab: 'ASVAB',
 }
 
 /** Readable display name for a course slug. */

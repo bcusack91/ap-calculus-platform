@@ -118,6 +118,7 @@ export async function GET() {
         else if (cat.includes('sat-punctuation')) passedDiagnosticSlugs.push('sat-punctuation')
         else if (cat.includes('act-math')) passedDiagnosticSlugs.push('act-math')
         else if (cat.includes('act-science')) passedDiagnosticSlugs.push('act-science')
+        else if (cat.startsWith('asvab')) passedDiagnosticSlugs.push('asvab')
         else if (cat.includes('grade8') || cat.includes('grade-8')) passedDiagnosticSlugs.push('algebra')
       }
     }
@@ -282,6 +283,12 @@ export async function GET() {
       // AP courses there is no per-unit gating below this.)
       'mcat': grantAllCategories || grantedCategories.has('mcat') || uniqueDiagnosticSlugs.some(s => s.startsWith('mcat')) || allProgressSlugs.some(s =>
         s.startsWith('mcat')
+      ),
+      // ASVAB: every topic slug is prefixed 'asvab-' (course-includes
+      // ASVAB_CATEGORIES), so any ASVAB lesson progress or the diagnostic
+      // unlocks the course card.
+      'asvab': grantAllCategories || grantedCategories.has('asvab') || uniqueDiagnosticSlugs.includes('asvab') || allProgressSlugs.some(s =>
+        s.startsWith('asvab-')
       ),
       'ap-csa': grantAllCategories || grantedCategories.has('ap-csa') || uniqueDiagnosticSlugs.includes('ap-computer-science-a') || allProgressSlugs.some(s =>
         s.includes('ap-csa') || s.includes('computer-science-a') || s.includes('classes-objects')

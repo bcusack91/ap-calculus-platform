@@ -25,6 +25,10 @@ export interface EntranceQuizQuestion {
   explanation: string
   partNumber: number        // which lesson part (1-7) this tests
   partTitle: string         // human-readable part name
+  /** Optional picture above the question: one isSafeSvg inline SVG (see AsvabExitQuestion.figure). */
+  figure?: string
+  /** Text alternative for `figure`. */
+  figureAlt?: string
 }
 
 const questions: EntranceQuizQuestion[] = [

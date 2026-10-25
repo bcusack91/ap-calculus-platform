@@ -11,6 +11,7 @@ import { renderRichText } from '@/lib/render-rich-text'
 import 'katex/dist/katex.min.css'
 import type { EntranceQuizQuestion } from '@/data/entrance-quizzes'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import QuestionFigure from '@/components/QuestionFigure'
 import { ENTRANCE_QUIZ_SKIP_FRACTION } from '@/lib/mastery'
 import ReferenceSheetModal from './ReferenceSheetModal'
 import { hasReferenceSheet } from '@/data/ap-reference-sheets'
@@ -305,6 +306,7 @@ export default function TopicEntranceQuiz({
           <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug={courseSlug} />
 
           {/* Question */}
+          <QuestionFigure svg={question.figure} alt={question.figureAlt} />
           <div
             className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-6 leading-relaxed break-words overflow-x-auto"
             dangerouslySetInnerHTML={{ __html: renderedQuestion }}

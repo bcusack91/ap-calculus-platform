@@ -43,6 +43,9 @@ export interface UnitTestCandidate {
   options: string[]
   correctIndex: number
   explanation: string
+  /** Optional picture (one isSafeSvg inline SVG; ASVAB pools) and its text alternative. */
+  figure?: string
+  figureAlt?: string
 }
 
 export interface UnitTestQuestion extends UnitTestCandidate {

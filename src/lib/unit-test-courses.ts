@@ -31,7 +31,7 @@ export const AP_UNIT_TEST_COURSES = [
 ] as const
 
 export type ApUnitTestCourse = (typeof AP_UNIT_TEST_COURSES)[number]
-export type UnitTestCourse = 'mcat' | 'sat' | 'act' | ApUnitTestCourse
+export type UnitTestCourse = 'mcat' | 'sat' | 'act' | 'asvab' | ApUnitTestCourse
 
 export interface UnitTestCourseConfig {
   key: UnitTestCourse
@@ -71,6 +71,8 @@ export const UNIT_TEST_COURSES: Record<UnitTestCourse, UnitTestCourseConfig> = {
   mcat: { key: 'mcat', label: 'MCAT', courseSlug: 'mcat-prep', path: '/mcat-unit-test', apiPath: '/api/mcat-unit-test', testName: 'unit test', diagnosticPath: '/mcat-diagnostic', locksDiagnostic: true, enabled: true },
   sat: { key: 'sat', label: 'SAT', courseSlug: 'sat-prep', path: '/sat-unit-test', apiPath: '/api/sat-unit-test', testName: 'unit test', diagnosticPath: '/sat-diagnostic', locksDiagnostic: false, enabled: true },
   act: { key: 'act', label: 'ACT', courseSlug: 'act-prep', path: '/act-unit-test', apiPath: '/api/act-unit-test', testName: 'unit test', diagnosticPath: '/act-diagnostic', locksDiagnostic: false, enabled: true },
+  // ASVAB: every topic's exit pool has 18+ items (2026-10-25); recommended, like ACT.
+  asvab: { key: 'asvab', label: 'ASVAB', courseSlug: 'asvab', path: '/asvab-unit-test', apiPath: '/api/asvab-unit-test', testName: 'unit test', diagnosticPath: '/asvab-diagnostic', locksDiagnostic: false, enabled: true },
   ...(Object.fromEntries(AP_UNIT_TEST_COURSES.map((k) => [k, apConfig(k)])) as Record<ApUnitTestCourse, UnitTestCourseConfig>),
 }
 

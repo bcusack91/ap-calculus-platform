@@ -34,6 +34,7 @@ const UNIT_TEST_ROUTES: Record<string, string> = {
   "ap-us-government": "/ap-us-gov-unit-tests",
   "ap-us-history": "/ap-us-history-unit-tests",
   "ap-world-history": "/ap-world-history-unit-tests",
+  "asvab": "/asvab-unit-tests",
   "geometry": "/geometry-unit-tests",
   "grade-8-math": "/grade8-math-unit-tests",
   "mcat-prep": "/mcat-unit-tests",

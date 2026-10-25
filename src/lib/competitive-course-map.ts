@@ -31,6 +31,7 @@ const COURSE_TO_COMPETITIVE: Record<string, string> = {
   'ap-us-history': 'ap-us-history',
   'ap-world-history': 'ap-world-history',
   'sat-prep': 'sat',
+  asvab: 'asvab',
 }
 
 /** True if the course has its own competitive subject page. */

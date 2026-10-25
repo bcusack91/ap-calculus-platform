@@ -15,6 +15,9 @@ export interface UnitPoolQuestion {
   explanation: string
   domain: string
   topicSlug: string
+  /** Optional picture above the question (one isSafeSvg inline SVG) and its text alternative. */
+  figure?: string
+  figureAlt?: string
 }
 
 export interface UnitDef {
@@ -58,6 +61,8 @@ export interface UnitTestQuestion {
   correctAnswer: number
   explanation: string
   topicSlug: string
+  figure?: string
+  figureAlt?: string
 }
 
 export interface UnitTestData {
@@ -244,6 +249,7 @@ export function generateUnitTest(
     correctAnswer: q.correctAnswer,
     explanation: q.explanation,
     topicSlug: q.topicSlug,
+    ...(q.figure ? { figure: q.figure, figureAlt: q.figureAlt ?? '' } : {}),
   }))
 
   const perQ = config.timeLimitMinutesPerQuestion ?? DEFAULT_TIME_PER_Q

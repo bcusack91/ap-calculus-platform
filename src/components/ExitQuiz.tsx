@@ -14,6 +14,7 @@ import ScratchPad from '@/components/ScratchPad'
 import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import StudyPlanNextUp from '@/components/StudyPlanNextUp'
 import { shuffleOptions } from '@/lib/shuffle-options'
+import QuestionFigure from '@/components/QuestionFigure'
 import { isSatMathTopic } from '@/lib/sat-math-topics'
 
 interface ExitQuizQuestion {
@@ -25,6 +26,9 @@ interface ExitQuizQuestion {
   category: string
   topicSlug?: string
   partNumber?: number
+  /** Optional picture (inline SVG, drawn only after isSafeSvg) and its text alternative. */
+  figure?: string
+  figureAlt?: string
 }
 
 interface ExitQuizProps {
@@ -525,6 +529,7 @@ export default function ExitQuiz({
                     <div className="flex items-start gap-2">
                       <span className="text-lg">{answer?.correct ? '✅' : '❌'}</span>
                       <div className="flex-1">
+                        <QuestionFigure svg={q.figure} alt={q.figureAlt} size="sm" className="mb-2" />
                         <p className="font-medium" dangerouslySetInnerHTML={{ __html: renderLatex(q.question) }} />
                         {!answer?.correct && (
                           <p className="text-sm text-gray-600 dark:text-gray-400 mt-1" dangerouslySetInnerHTML={{ __html: renderLatex(q.explanation) }} />
@@ -636,6 +641,7 @@ export default function ExitQuiz({
         <ReferenceSheetModal open={showReference} onClose={() => setShowReference(false)} courseSlug={resolvedCourseSlug} topicSlug={topicSlug} />
 
         {/* Question */}
+        <QuestionFigure svg={question.figure} alt={question.figureAlt} />
         <div
           className="text-base sm:text-lg font-medium text-gray-900 dark:text-white mb-6 leading-relaxed break-words overflow-x-auto"
           dangerouslySetInnerHTML={{ __html: renderedQuestion }}

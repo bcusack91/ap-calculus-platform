@@ -29,6 +29,12 @@ export const DIAGNOSTIC_ABOUT: Record<string, DiagnosticAboutConfig> = {
     courseSlugs: ['act-prep'],
     links: [{ href: '/act-practice', label: 'Practice questions' }, { href: '/act-unit-tests', label: 'Unit tests' }, { href: '/act-study-plans', label: 'Study plans' }, { href: '/act-daily-question', label: 'Daily question' }, { href: '/act-score-predictor', label: 'Score predictor' }],
   },
+  'asvab-diagnostic': {
+    displayName: 'ASVAB',
+    rotatesForms: true,
+    courseSlugs: ['asvab'],
+    links: [{ href: '/asvab-practice', label: 'Practice test' }, { href: '/asvab-afqt-calculator', label: 'AFQT calculator' }, { href: '/asvab-unit-tests', label: 'Unit tests' }, { href: '/asvab-study-plans', label: 'Study plans' }, { href: '/asvab-daily-question', label: 'Daily question' }, { href: '/asvab-score-predictor', label: 'Score predictor' }],
+  },
   'algebra1-diagnostic': {
     rotatesForms: true,
     courseSlugs: ['algebra-1'],

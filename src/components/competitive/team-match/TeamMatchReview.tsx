@@ -1,6 +1,7 @@
 'use client'
 
 import { Check, X, Lightbulb } from 'lucide-react'
+import { MatchFigure } from '@/components/competitive/MatchFigure'
 
 export interface ReviewQuestion {
   id: number
@@ -10,6 +11,8 @@ export interface ReviewQuestion {
   answerIndex?: number
   explanation?: string
   difficulty?: 'easy' | 'medium' | 'hard'
+  /** Picture reference (src/lib/competitive-figures.ts). */
+  figureRef?: string
 }
 
 export interface ReviewAnswer {
@@ -119,6 +122,7 @@ export default function TeamMatchReview({
                       </span>
                     )}
                   </p>
+                  <MatchFigure figureRef={question.figureRef} size="sm" className="mb-2" />
                   <h3
                     className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white overflow-x-auto"
                     dangerouslySetInnerHTML={{ __html: renderMath(question.question || question.prompt || '') }}

@@ -20,6 +20,7 @@ import { prisma } from '../src/lib/prisma'
 import { CONTENT_TYPES, UNIT_TEST_UNITS_KEY } from '../src/lib/content-store'
 
 import { ACT_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/act'
+import { ASVAB_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/asvab'
 import { ALGEBRA_1_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/algebra-1'
 import { ALGEBRA_2_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/algebra-2'
 import { AP_AAS_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/ap-african-american-studies'
@@ -56,6 +57,7 @@ import { SAT_UNIT_TESTS_CONFIG } from '../src/data/unit-tests/sat'
 
 const CONFIGS = [
   ACT_UNIT_TESTS_CONFIG,
+  ASVAB_UNIT_TESTS_CONFIG,
   ALGEBRA_1_UNIT_TESTS_CONFIG,
   ALGEBRA_2_UNIT_TESTS_CONFIG,
   AP_AAS_UNIT_TESTS_CONFIG,

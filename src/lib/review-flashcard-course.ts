@@ -10,7 +10,7 @@
  */
 import { CLASS_PLAN_COURSES } from '@/lib/class-plan-config'
 
-const TEST_PREP_DECKS: Record<string, string> = { mcat: 'mcat-prep', sat: 'sat-prep', act: 'act-prep' }
+const TEST_PREP_DECKS: Record<string, string> = { mcat: 'mcat-prep', sat: 'sat-prep', act: 'act-prep', asvab: 'asvab' }
 
 /** DB slugs of every AP course with a diagnostic (all of them). */
 const AP_COURSE_SLUGS = new Set(

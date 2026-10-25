@@ -19,6 +19,10 @@ export interface ExitQuizQuestion {
   topicSlug?: string // which specific topic this question covers (for course-level filtering)
   partNumber?: number // which lesson part (1-N) this question tests (for variant retry targeting)
   difficulty?: 'easy' | 'medium' | 'hard'
+  /** Optional picture above the question: one inline SVG that passes isSafeSvg (src/lib/safe-svg.ts). ASVAB pools only so far. */
+  figure?: string
+  /** Text alternative for `figure`. */
+  figureAlt?: string
 }
 
 type Difficulty = 'easy' | 'medium' | 'hard'

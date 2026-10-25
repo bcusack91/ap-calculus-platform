@@ -113,6 +113,7 @@ export const COURSE_BASELINES = {
   'act-reading': { seconds: 50, label: 'ACT Reading', source: 'ACT Reading: 40 questions in 35 min = 53 s.' },
   'act': { seconds: 50, label: 'ACT (mixed)', source: 'Blend of the four ACT sections: 215 questions in 175 min = 49 s.' },
   'mcat': { seconds: 95, label: 'MCAT', source: 'C/P, B/B, P/S: 59 questions in 95 min = 97 s; CARS: 53 in 90 min = 102 s.' },
+  'asvab': { seconds: 45, label: 'ASVAB', source: 'CAT-ASVAB per-item time on the timed AFQT/technical subtests runs roughly 36-60 s (AR/MK/GS); 45 s blended baseline (asvab-pipeline PLAN.md; verify against ASVAB-FACTS.md).' },
   'algebra-2': { seconds: 60, label: 'Algebra 2', source: 'Non-AP Algebra 2 drill pacing (owner baseline).' },
   'geometry': { seconds: 50, label: 'Geometry', source: 'Geometry drill pacing (owner baseline).' },
   'algebra-1': { seconds: 40, label: 'Algebra 1', source: 'Algebra 1 drill pacing (owner baseline): a one-variable linear equation is a 30-45 s item.' },
@@ -186,6 +187,7 @@ const DIRECT_COURSE_KEYS: Record<string, PaceCourseKey> = {
   'act-reading': 'act-reading',
   'mcat': 'mcat',
   'ochem': 'mcat',
+  'asvab': 'asvab',
   // Legacy calculus category ids (the derivatives/limits/integrals banks).
   'derivatives': 'ap-calculus-ab',
   'limits': 'ap-calculus-ab',
@@ -251,6 +253,7 @@ const SLUG_PATTERNS: Array<[RegExp, PaceCourseKey]> = [
   [/^act-reading/, 'act-reading'],
   [/^act-|-act$/, 'act'],
   [/^mcat-|-mcat$/, 'mcat'],
+  [/^asvab(-|$)/, 'asvab'],
   [/grade-?[678]|^pre-?algebra/, 'pre-algebra'],
 ]
 

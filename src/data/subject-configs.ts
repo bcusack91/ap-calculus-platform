@@ -781,6 +781,30 @@ export const SUBJECT_SEO: SubjectSeo[] = [
         "url": "https://students-residents.aamc.org/media/11711/download"
       }
     ]
+  },
+  {
+    "slug": "asvab",
+    "name": "ASVAB",
+    "seoBody": "The Armed Services Vocational Aptitude Battery (ASVAB) is the test every U.S. military applicant takes, and roughly a million people a year sit for it, including high school students in the Career Exploration Program. At a Military Entrance Processing Station it is given as the CAT-ASVAB, a computer-adaptive test of ten subtests: General Science, Arithmetic Reasoning, Word Knowledge, Paragraph Comprehension, Mathematics Knowledge, Electronics Information, Auto Information, Shop Information, Mechanical Comprehension and Assembling Objects. The test adapts as you go: a correct answer usually leads to a harder question and a miss to an easier one, and you cannot go back to a question once you have answered it. Four subtests matter most. Arithmetic Reasoning, Mathematics Knowledge, Word Knowledge and Paragraph Comprehension make up the Armed Forces Qualification Test (AFQT), the percentile score that decides whether you can enlist; verbal skills count twice in it. The other subtests feed the line scores (composites) each service uses to match you to jobs, such as the Army GT score or the Air Force Mechanical, Administrative, General and Electronics scores. No calculator is allowed, which is where many test-takers lose points: fractions, percents, rates and basic algebra all have to be done by hand. Others struggle with vocabulary they have not seen since school, or with the technical subtests if they have never worked on engines, circuits or tools. Strong preparation starts with the AFQT four, builds hand-calculation speed and vocabulary, then targets the technical subtests that matter for the jobs you want.",
+    "examStructure": "CAT-ASVAB: 10 subtests and 135 scored questions in this order: General Science (15 questions, 12 min), Arithmetic Reasoning (15, 55 min), Word Knowledge (15, 9 min), Paragraph Comprehension (10, 27 min), Mathematics Knowledge (15, 31 min), Electronics Information (15, 10 min), Auto Information (10, 7 min), Shop Information (10, 6 min), Mechanical Comprehension (15, 22 min) and Assembling Objects (15, 18 min). Most people finish in about 2 hours. Some questions are unscored tryout items, and every question has four answer choices.",
+    "scoring": "Each subtest gets a standard score (average 50, SD 10). The AFQT percentile (1-99) comes from AR + MK + 2 x VE, where VE is a weighted blend of WK and PC, converted with the official 1997-scale table; the published minimum for most branches is 31 with a high school diploma. Services also compute job line scores from other subtest combinations.",
+    "pitfalls": [
+      "Leaning on a calculator in practice: none is allowed on the ASVAB, so fraction, percent and rate arithmetic must be fast by hand.",
+      "Guessing wildly when time runs short on the CAT-ASVAB, which penalizes a string of wrong answers late in a subtest; keep reading and answering for real.",
+      "Treating the AFQT as percent correct: it is a percentile compared with a national sample of 18- to 23-year-olds.",
+      "Ignoring Word Knowledge and Paragraph Comprehension, even though verbal skills count twice in the AFQT.",
+      "Skipping the technical subtests entirely when the jobs you want depend on line scores such as mechanical or electronics composites."
+    ],
+    "sources": [
+      {
+        "title": "CAT-ASVAB | Official Site of the ASVAB",
+        "url": "https://www.officialasvab.com/applicants/cat-asvab/"
+      },
+      {
+        "title": "Understanding ASVAB Scores | Official Site of the ASVAB",
+        "url": "https://www.officialasvab.com/applicants/scores/"
+      }
+    ]
   }
 ]
 

@@ -29,6 +29,7 @@ export const CLASS_PLAN_COURSES: ClassPlanCourse[] = [
   { key: 'mcat', label: 'MCAT', categoryPrefix: 'mcat-full-diagnostic', gated: true, courseSlug: 'mcat-prep', },
   { key: 'sat', label: 'SAT', categoryPrefix: 'sat-full-diagnostic', courseSlug: 'sat-prep', },
   { key: 'act', label: 'ACT', categoryPrefix: 'act-diagnostic', courseSlug: 'act-prep', },
+  { key: 'asvab', label: 'ASVAB', categoryPrefix: 'asvab-diagnostic', courseSlug: 'asvab', },
   // AP sciences & math
   { key: 'calcab', label: 'AP Calculus AB', categoryPrefix: 'calcab-diagnostic', courseSlug: 'ap-calculus-ab', },
   { key: 'calcbc', label: 'AP Calculus BC', categoryPrefix: 'calcbc-diagnostic', courseSlug: 'ap-calculus-bc', },

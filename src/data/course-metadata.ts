@@ -43,6 +43,7 @@ export const courseMeta: Record<
   'sat-prep': { icon: '📝', description: 'Math, Reading, Writing strategies', gradient: 'from-blue-600 to-cyan-600', section: 'Test Prep' },
   'act-prep': { icon: '📋', description: 'Math, English, Reading, Science', gradient: 'from-purple-600 to-pink-600', section: 'Test Prep' },
   'mcat-prep': { icon: '🏥', description: 'Chem/Phys, CARS, Bio/Biochem, Psych/Soc', gradient: 'from-emerald-600 to-teal-600', section: 'Test Prep' },
+  asvab: { icon: '🎖️', description: 'AFQT math and verbal, science, mechanical and technical subtests', gradient: 'from-green-600 to-lime-600', section: 'Test Prep' },
 }
 
 export const defaultCourseMeta = {
@@ -124,6 +125,7 @@ export const courseHubPaths: Record<string, string> = {
   'sat-prep': '/sat',
   'act-prep': '/act',
   'mcat-prep': '/mcat',
+  asvab: '/asvab',
   // Aliases for the subject-config (SEO) slug namespace, which differs from the
   // DB course slug for these — so getCourseHref() resolves correctly when called
   // with a SubjectSeo.slug (e.g. from ToolBreadcrumb) instead of 404-ing.

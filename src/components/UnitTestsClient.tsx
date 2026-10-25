@@ -20,6 +20,7 @@ import { renderRichText } from '@/lib/render-rich-text'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { InArticleAd } from '@/components/ad-banner'
 import { ToolPageSeoBody } from '@/components/ToolPageSeoBody'
+import QuestionFigure from '@/components/QuestionFigure'
 
 type Phase = 'menu' | 'testing' | 'results'
 
@@ -331,6 +332,7 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
             </div>
 
             <div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-6 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+              <QuestionFigure svg={q.figure} alt={q.figureAlt} />
               <RichText
                 text={q.question}
                 className="mb-5 block text-base font-medium text-gray-900 sm:text-lg dark:text-white"
@@ -515,6 +517,7 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
                       <p className="mb-3 text-sm font-semibold text-gray-500 dark:text-gray-400">
                         Question {i + 1} {correct ? '· Correct' : '· Incorrect'}
                       </p>
+                      <QuestionFigure svg={q.figure} alt={q.figureAlt} size="sm" className="mb-3" />
                       <RichText
                         text={q.question}
                         className="mb-3 block font-medium text-gray-900 dark:text-white"

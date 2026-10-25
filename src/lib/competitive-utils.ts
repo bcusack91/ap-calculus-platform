@@ -6,7 +6,7 @@
 // the SAME name as the original named export so the dispatch maps and call
 // sites resolve unchanged — callers just `await` the now-async getter.
 
-import { shuffleArray } from '@/lib/shuffle-options'
+import { shuffleArray, keepsAuthoredOrder } from '@/lib/shuffle-options'
 import { rankTierForMMR } from '@/lib/competitive-ranks'
 type BankQuestion = OptionQuestion
 type AnyGetter = (...a: unknown[]) => BankQuestion[]
@@ -138,6 +138,8 @@ const UNIT_CIRCLE_SLUGS = new Set(['unit-circle', 'the-unit-circle']);
  * shuffled options and an updated correctAnswer / answerIndex.
  */
 function shuffleOptions(q: OptionQuestion) {
+  // Options naming the item's own figure panels ('Figure 1'..'Figure 4') stay in order.
+  if (keepsAuthoredOrder(q.options)) return { options: [...q.options], correctAnswer: q.correctAnswer, answerIndex: q.correctAnswer }
   const correctOption = q.options[q.correctAnswer]
   const shuffled = [...q.options]
   // Fisher-Yates shuffle
@@ -1068,6 +1070,37 @@ export async function generateMatchQuestions(totalQuestions: number = 10, topicS
             explanation: q.explanation,
             difficulty: q.difficulty,
             type: 'multiple-choice',
+          } as MatchQuestion
+        })
+      }
+    }
+  }
+
+  // ASVAB: the course slug, a subtest Category slug or a topic slug routes to
+  // the ASVAB bank (src/data/competitive-questions/asvab-bank.ts), so each
+  // topic draws its own items and never another subtest's or course's.
+  if (topicSlug && topicSlug.startsWith('asvab')) {
+    const { isAsvabSlug, getAsvabQuestions } = await import('@/data/competitive-questions/asvab-bank')
+    const { asvabFigureRef } = await import('@/lib/competitive-figures')
+    if (isAsvabSlug(topicSlug)) {
+      const pool = getAsvabQuestions(1_000_000, topicSlug)
+      if (pool.length > 0) {
+        const picked = tier ? pickTieredQuestions(pool, totalQuestions, tier) : pool.slice(0, totalQuestions)
+        return picked.map((q, i) => {
+          const shuffled = shuffleOptions(q)
+          return {
+            id: i,
+            question: q.question,
+            options: shuffled.options,
+            correctAnswer: shuffled.correctAnswer,
+            answerIndex: shuffled.answerIndex,
+            explanation: q.explanation,
+            difficulty: q.difficulty,
+            type: 'multiple-choice',
+            // Pictures stay out of the stored gameData (a 40-item AO pool would
+            // be ~400 KB re-sent on every poll): only a reference travels, and
+            // clients fetch the SVG once from /api/competitive/figure/<ref>.
+            ...(q.figure ? { figureRef: asvabFigureRef(q.id) } : {}),
           } as MatchQuestion
         })
       }

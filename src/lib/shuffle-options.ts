@@ -16,12 +16,26 @@ export function shuffleArray<T>(arr: readonly T[]): T[] {
   return result
 }
 
+/**
+ * Options that name panels of the item's own figure ('Figure 1', 'Figure 2', …
+ * or 'Figure A', 'Figure B', …, in sequence) — Assembling Objects items, whose
+ * one SVG numbers its answer panels. Shuffling those would print "A. Figure 3,
+ * B. Figure 1", so every surface keeps them in authored order; the authors
+ * balance the key's position instead. No other course uses this exact shape.
+ */
+export function keepsAuthoredOrder(options: readonly string[]): boolean {
+  if (options.length < 2) return false
+  const numbered = options.every((o, i) => o === `Figure ${i + 1}`)
+  const lettered = options.every((o, i) => o === `Figure ${String.fromCharCode(65 + i)}`)
+  return numbered || lettered
+}
+
 export function shuffleOptions(
   options: string[],
   correctIndex: number,
   seed: string,
 ): { options: string[]; correctIndex: number } {
-  if (options.length <= 1) return { options, correctIndex }
+  if (options.length <= 1 || keepsAuthoredOrder(options)) return { options, correctIndex }
 
   // Simple string hash (djb2-variant)
   let hash = 5381

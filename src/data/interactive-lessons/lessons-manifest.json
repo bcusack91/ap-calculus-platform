@@ -3576,5 +3576,460 @@
       "Unit 3: Inverse Trigonometry, Equations, Identities and Polar Functions",
       "Final Mixed Set: Part A and Part B Practice"
     ]
+  },
+  {
+    "slug": "asvab-wk-vocabulary-in-context",
+    "importPath": "./asvab-wk-vocabulary-in-context",
+    "partTitles": [
+      "Word Knowledge on the CAT-ASVAB",
+      "Definition and Restatement Clues",
+      "Contrast Clues",
+      "Example and Cause-and-Effect Clues",
+      "Words with More Than One Meaning",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-wk-word-parts",
+    "importPath": "./asvab-wk-word-parts",
+    "partTitles": [
+      "How Word Parts Unlock Meaning",
+      "Prefixes That Change Meaning",
+      "Latin Roots",
+      "Greek Roots and Number Parts",
+      "Suffixes and Parts of Speech",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-wk-synonym-strategies",
+    "importPath": "./asvab-wk-synonym-strategies",
+    "partTitles": [
+      "The Word-Alone Question",
+      "Precise Meaning and Part of Speech",
+      "Connotation: Positive, Negative or Neutral",
+      "Look-Alike Words and Opposite Traps",
+      "Learning Words in Families",
+      "Pacing, Elimination and Guessing",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-pc-main-idea",
+    "importPath": "./asvab-pc-main-idea",
+    "partTitles": [
+      "Paragraph Comprehension on the CAT-ASVAB",
+      "Topic and Main Idea",
+      "Too Broad, Too Narrow: Main Idea vs Detail",
+      "Author's Purpose",
+      "Best Title, Summary and Implied Main Idea",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-pc-details",
+    "importPath": "./asvab-pc-details",
+    "partTitles": [
+      "Detail Questions on the ASVAB",
+      "Locating Stated Facts",
+      "Reworded Facts",
+      "Sequence of Events and Steps",
+      "Reasons, Comparisons and EXCEPT Questions",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-pc-inference",
+    "importPath": "./asvab-pc-inference",
+    "partTitles": [
+      "Reading Between the Lines",
+      "Drawing Supported Conclusions",
+      "Implied Contrasts and Unstated Assumptions",
+      "Tone, Attitude and Style",
+      "Word Meaning in a Passage",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ar-whole-number-problems",
+    "importPath": "./asvab-ar-whole-number-problems",
+    "partTitles": [
+      "Word Problems on the AR Subtest",
+      "Turning Words into Operations",
+      "Multi-Step Problems and Order of Operations",
+      "Measurement: Units, Perimeter and Area",
+      "Remainders, Rounding Up and Estimation",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ar-fractions-decimals",
+    "importPath": "./asvab-ar-fractions-decimals",
+    "partTitles": [
+      "Fractions and Decimals on the AR Subtest",
+      "Finding a Fraction of a Quantity",
+      "Adding and Subtracting Fractions and Mixed Numbers",
+      "Multiplying and Dividing Fractions in Context",
+      "Decimals and Money by Hand",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ar-percents-interest",
+    "importPath": "./asvab-ar-percents-interest",
+    "partTitles": [
+      "Percents on the AR Subtest",
+      "Percent of a Number and Mental-Math Shortcuts",
+      "Percent Change, Discounts and Depreciation",
+      "Sales Tax, Tips and Commission",
+      "Simple Interest",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ar-ratios-rates",
+    "importPath": "./asvab-ar-ratios-rates",
+    "partTitles": [
+      "Ratios and Rates on the AR Subtest",
+      "Ratios and Part-to-Whole Problems",
+      "Proportions and Scale",
+      "Distance, Rate and Time",
+      "Work Rates and Unit Prices",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ar-averages-probability",
+    "importPath": "./asvab-ar-averages-probability",
+    "partTitles": [
+      "Averages and Chance on the AR Subtest",
+      "Finding the Average (Mean)",
+      "Missing Values and Weighted Averages",
+      "Counting Outcomes",
+      "Basic Probability",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-mk-number-properties",
+    "importPath": "./asvab-mk-number-properties",
+    "partTitles": [
+      "Number Properties on the ASVAB",
+      "Primes, Factors and Multiples",
+      "Order of Operations, Integers and Absolute Value",
+      "Exponents and Scientific Notation",
+      "Square Roots and Radicals",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-mk-algebra-equations",
+    "importPath": "./asvab-mk-algebra-equations",
+    "partTitles": [
+      "Algebra on the ASVAB: Expressions and Substitution",
+      "Solving Linear Equations",
+      "Turning Words into Equations",
+      "Linear Inequalities",
+      "Systems of Two Equations",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-mk-algebra-expressions",
+    "importPath": "./asvab-mk-algebra-expressions",
+    "partTitles": [
+      "Polynomials on the ASVAB: Terms and Like Terms",
+      "Multiplying Polynomials and FOIL",
+      "Factoring Out the GCF and Factoring Trinomials",
+      "Special Patterns and Algebraic Fractions",
+      "Solving Quadratics by Factoring",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-mk-geometry-shapes",
+    "importPath": "./asvab-mk-geometry-shapes",
+    "partTitles": [
+      "Angles on the ASVAB",
+      "Vertical Angles and Parallel Lines",
+      "Triangles: Types, Angle Sums and Side Rules",
+      "The Pythagorean Theorem and Similar Triangles",
+      "Quadrilaterals and Other Polygons",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-mk-geometry-measurement",
+    "importPath": "./asvab-mk-geometry-measurement",
+    "partTitles": [
+      "Measurement on the ASVAB: Perimeter and Formulas",
+      "Area of Polygons and Composite Figures",
+      "Circles: Circumference and Area",
+      "Volume and Surface Area",
+      "The Coordinate Plane: Slope, Midpoint and Distance",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-gs-life-science",
+    "importPath": "./asvab-gs-life-science",
+    "partTitles": [
+      "Life Science on the ASVAB",
+      "Cells and Organelles",
+      "Genetics, DNA and Classification",
+      "Human Body Systems, Nutrition and Health",
+      "Plants, Ecology and Energy Flow",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-gs-earth-space",
+    "importPath": "./asvab-gs-earth-space",
+    "partTitles": [
+      "Earth and Space Science on the ASVAB",
+      "Rocks, Minerals and the Rock Cycle",
+      "Earth's Layers, Plate Tectonics and Earthquakes",
+      "Water, Atmosphere and Weather",
+      "The Solar System, Stars and Seasons",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-gs-chemistry",
+    "importPath": "./asvab-gs-chemistry",
+    "partTitles": [
+      "Chemistry on the ASVAB",
+      "Matter, States and Changes",
+      "Atoms and the Periodic Table",
+      "Compounds, Mixtures and Solutions",
+      "Acids, Bases and Chemical Reactions",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-gs-physics",
+    "importPath": "./asvab-gs-physics",
+    "partTitles": [
+      "Physics on the ASVAB: Units and Metric Prefixes",
+      "Motion, Forces and Newton's Laws",
+      "Work, Energy, Power and Heat",
+      "Waves, Sound and Light",
+      "Electricity and Magnetism Basics",
+      "Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ei-electricity-basics",
+    "importPath": "./asvab-ei-electricity-basics",
+    "partTitles": [
+      "Electricity on the ASVAB",
+      "Charge, Current and Voltage",
+      "Resistance, Conductors and Insulators",
+      "Ohm's Law",
+      "Measuring Electricity: Meters and Units",
+      "EI Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ei-circuits",
+    "importPath": "./asvab-ei-circuits",
+    "partTitles": [
+      "Circuits on the ASVAB",
+      "Series Circuits",
+      "Parallel Circuits",
+      "Combination Circuits and Circuit Faults",
+      "Electrical Power and Energy",
+      "Circuit Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ei-components",
+    "importPath": "./asvab-ei-components",
+    "partTitles": [
+      "Components on the ASVAB",
+      "Schematic Symbols, Switches and Circuit Protection",
+      "Resistors, Capacitors and Inductors",
+      "Diodes, Transistors and Transformers",
+      "AC vs DC, Frequency and Household Wiring",
+      "Component Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ai-engine",
+    "importPath": "./asvab-ai-engine",
+    "partTitles": [
+      "Auto Information on the ASVAB",
+      "Engine Parts: Block, Pistons, Crankshaft and Valves",
+      "The Four-Stroke Cycle",
+      "Ignition and Combustion",
+      "Lubrication and Engine Diagnosis",
+      "Engine Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ai-drivetrain-chassis",
+    "importPath": "./asvab-ai-drivetrain-chassis",
+    "partTitles": [
+      "The Drivetrain and Chassis on the ASVAB",
+      "Clutches and Transmissions",
+      "Driveshafts, Differentials and Axles",
+      "Brakes",
+      "Steering, Suspension, Tires and Alignment",
+      "Drivetrain and Chassis Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ai-systems",
+    "importPath": "./asvab-ai-systems",
+    "partTitles": [
+      "Vehicle Systems on the ASVAB",
+      "Starting and Charging Systems",
+      "Fuel and Air Systems",
+      "The Cooling System",
+      "Exhaust and Emissions",
+      "Systems Test Strategy and Common Traps",
+      "Mixed Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-si-tools",
+    "importPath": "./asvab-si-tools",
+    "partTitles": [
+      "Shop Information on the ASVAB",
+      "Striking and Turning Tools",
+      "Cutting Tools: Saws, Chisels, Files and Planes",
+      "Gripping, Clamping, Drilling and Finishing Tools",
+      "Measuring, Layout and Shop Safety",
+      "Shop Information Test Strategy and Traps",
+      "Hand and Power Tools Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-si-materials-fasteners",
+    "importPath": "./asvab-si-materials-fasteners",
+    "partTitles": [
+      "Materials and Fasteners on the ASVAB",
+      "Nails and Screws",
+      "Bolts, Nuts, Washers, Rivets and Threads",
+      "Wood, Lumber and Building Materials",
+      "Metals, Welding, Soldering and Finishing",
+      "Materials and Fasteners Test Strategy and Traps",
+      "Materials, Fasteners and Shop Processes Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-mc-forces-motion",
+    "importPath": "./asvab-mc-forces-motion",
+    "partTitles": [
+      "Mechanical Comprehension on the ASVAB",
+      "Forces, Weight and Center of Gravity",
+      "Friction and Motion",
+      "Work, Energy and Power",
+      "Pressure and Properties of Materials",
+      "Forces and Energy Test Strategy and Traps",
+      "Forces, Work and Energy Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-mc-simple-machines",
+    "importPath": "./asvab-mc-simple-machines",
+    "partTitles": [
+      "Simple Machines and Mechanical Advantage",
+      "Levers",
+      "Pulleys",
+      "Inclined Planes and Wedges",
+      "Screws and Wheel and Axle",
+      "Simple Machines Test Strategy and Traps",
+      "Simple Machines Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-mc-gears-fluids",
+    "importPath": "./asvab-mc-gears-fluids",
+    "partTitles": [
+      "Gears, Fluids and Structures on the ASVAB",
+      "Gears and Gear Trains",
+      "Belts, Chains, Cams, Cranks and Springs",
+      "Fluids, Pascal's Principle and Hydraulics",
+      "Buoyancy and Structural Support",
+      "Gears, Fluids and Structures Test Strategy and Traps",
+      "Gears, Fluids and Structures Mastery Set"
+    ]
+  },
+  {
+    "slug": "asvab-ao-connections",
+    "importPath": "./asvab-ao-connections",
+    "partTitles": [
+      "What Connector Items Look Like",
+      "Finding the Lettered Points",
+      "Turned Shapes: Rotation Without Flipping",
+      "Checking the Connector Line",
+      "Look-Alike Shapes and Size Traps",
+      "Strategy, Timing and Traps",
+      "Mastery Check"
+    ]
+  },
+  {
+    "slug": "asvab-ao-shapes",
+    "importPath": "./asvab-ao-shapes",
+    "partTitles": [
+      "What Shape Items Look Like",
+      "Counting and Matching Pieces",
+      "Turned Pieces: Rotation Without Flipping",
+      "Matching Edges and Corners",
+      "Curves, Circles and Harder Builds",
+      "Strategy, Timing and Traps",
+      "Mastery Check"
+    ]
+  },
+  {
+    "slug": "asvab-afqt-scores",
+    "importPath": "./asvab-afqt-scores",
+    "partTitles": [
+      "How ASVAB Scores Work",
+      "Standard Scores and the VE Composite",
+      "The AFQT Formula and Percentile",
+      "AFQT Categories and Branch Minimums",
+      "Line Scores and Job Eligibility",
+      "Retests, PiCAT and Score Strategy",
+      "Mastery Check"
+    ]
+  },
+  {
+    "slug": "asvab-test-strategy",
+    "importPath": "./asvab-test-strategy",
+    "partTitles": [
+      "The CAT-ASVAB at a Glance",
+      "How the Adaptive Test Works",
+      "Pacing Each Subtest",
+      "Guessing, Unanswered Items and the Clock",
+      "Test Day at MEPS or a MET Site",
+      "Study Plans and Common Traps",
+      "Mastery Check"
+    ]
   }
 ]
