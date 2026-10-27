@@ -38,7 +38,7 @@ import { useFirstSession } from '@/hooks/useFirstSession'
 import { FirstSessionChoice as FirstSessionChoiceScreen, FirstSessionProgressLine, FirstSessionCheckpoint } from '@/components/lesson/FirstSession'
 import { LessonFigures } from '@/components/lesson/LessonFigure'
 import { sectionFigures, type LessonFigureSpec } from '@/lib/lesson-figure'
-import { trackLessonFirstSessionStart, trackLessonPartComplete } from '@/lib/analytics'
+import { trackLessonComplete, trackLessonFirstSessionStart, trackLessonPartComplete } from '@/lib/analytics'
 
 // Lazy-load ExitQuiz since it's only shown after lesson completion
 const ExitQuiz = dynamic(() => import('@/components/ExitQuiz'), { ssr: false })
@@ -56,7 +56,7 @@ import ReadingProgressBar from '@/components/ReadingProgressBar'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import MarkForReview from '@/components/MarkForReview'
 import ScratchPad from '@/components/ScratchPad'
-import { hasReferenceSheet } from '@/data/ap-reference-sheets'
+import { hasReferenceSheet, getCourseSlugFromTopic } from '@/data/ap-reference-sheets'
 import { shuffleArray } from '@/lib/shuffle-options'
 import { isAnswerMatch } from '@/lib/lesson-answer-match'
 import { useLessonProgressSaver } from '@/hooks/useLessonProgressSaver'
@@ -954,6 +954,15 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
       // This triggers flashcard notification BEFORE transitioning to next part
       saveProgress(undefined, true) // Part completion - trigger flashcards
       trackLessonPartComplete(topicSlug, lessonPart)
+      // Whole-lesson completion (key event): this was the last part left to
+      // read — no later part the entrance quiz did not test out. A review run
+      // after a failed exit quiz is revisiting parts, not finishing the lesson.
+      {
+        const isReviewRun = !!failedExitParts && failedExitParts.length > 0
+        let hasLaterPart = false
+        for (let i = lessonPart + 1; i <= totalParts; i++) if (!entranceQuizMasteredParts.has(i)) hasLaterPart = true
+        if (!isReviewRun && !hasLaterPart) trackLessonComplete(linkCourseSlug || getCourseSlugFromTopic(topicSlug) || '', topicSlug)
+      }
       
       // Multi-part lesson navigation
       if (lessonPart === 2 && topicSlug === 'the-unit-circle') {
@@ -1420,6 +1429,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
         lastScore={exitQuizStatus.lastScore}
         mustRedoUnit={exitQuizStatus.mustRedoUnit}
         variant={variant}
+        alreadyCleared={exitQuizStatus.hasPassed}
       />
     )
   }

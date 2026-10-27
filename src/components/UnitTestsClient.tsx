@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react'
+import { trackUnitTestComplete } from '@/lib/analytics'
 import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import { isSatMathDomain } from '@/lib/sat-math-topics'
 import Link from 'next/link'
@@ -189,7 +190,18 @@ export default function UnitTestsClient({ config, theme }: UnitTestsClientProps)
           answers,
           stems: testData.questions.map(q => diagnosticItemKey(q.question)),
         }),
-      }).catch(() => {})
+      })
+        .then(async (res) => {
+          const body = res.ok ? await res.json().catch(() => null) : null
+          if (typeof body?.id !== 'string') return
+          trackUnitTestComplete({
+            courseSlug: config.courseSlug,
+            attemptKey: body.id,
+            testType: 'unit',
+            scorePercent: r.totalQuestions > 0 ? (r.totalCorrect / r.totalQuestions) * 100 : 0,
+          })
+        })
+        .catch(() => {})
     }
 
     if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })

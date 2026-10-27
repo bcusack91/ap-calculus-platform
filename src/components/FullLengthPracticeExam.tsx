@@ -17,6 +17,8 @@ import { ToolBreadcrumb } from '@/components/ToolBreadcrumb'
 import { toolLearningResourceJsonLd } from '@/lib/jsonld'
 import { useState, useEffect, useCallback, useMemo, useRef, type ReactNode } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { trackPracticeTestComplete } from '@/lib/analytics'
 import { Ban, BookOpen, ClipboardCheck, Flag, LayoutGrid, LogOut } from 'lucide-react'
 import type { AccentColor } from './PracticeExam'
 import { renderRichText } from '@/lib/render-rich-text'
@@ -581,6 +583,21 @@ function FullLengthPracticeExamInner(config: FullLengthExamConfig) {
     // Same function the server grader uses, so the composite here matches the saved result.
     return { perSection, earned, possible, pct: apCompositePercent(perSection) }
   }, [sections, answers])
+
+  /* -------------------- Key event: practice_test_complete -------------------- */
+  // Saved exams count once the server stored the attempt (keyed on its id, so
+  // a results screen restored after a refresh re-POSTs as a no-op and is not
+  // counted twice); exams with nowhere to save count on reaching the results,
+  // keyed on the sitting's client id.
+  const pathname = usePathname()
+  const analyticsCourse = examKey ?? (pathname?.split('/')[1]?.replace(/-practice$/, '') || 'practice-exam')
+  const savesAttempt = !!(examKey || saveEndpoint)
+  const completionKey = phase !== 'final-results' ? null : savesAttempt ? (save.state === 'saved' ? save.id ?? null : null) : attemptId || null
+  const scorePct = scoring?.pct
+  useEffect(() => {
+    if (!completionKey) return
+    trackPracticeTestComplete({ courseSlug: analyticsCourse, testId: `form-${form}`, attemptKey: completionKey, scorePercent: scorePct })
+  }, [completionKey, analyticsCourse, form, scorePct])
 
   /* =================================================================== */
   /*  OVERVIEW                                                           */

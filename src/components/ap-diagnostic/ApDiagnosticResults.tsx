@@ -37,6 +37,7 @@ import { estimateLessonMinutes } from '@/lib/lesson-minutes'
 import { AP_NEXT_STEP_CTA_TYPE, apExamCountdownLabel, apExamWeekLinks, apNextStepMode } from '@/lib/ap-next-step'
 import {
   trackApDiagnosticComplete,
+  trackDiagnosticComplete,
   trackApDiagnosticSubmit,
   trackApResultsNextStepClick,
   trackApResultsRetakeClick,
@@ -203,6 +204,11 @@ export default function ApDiagnosticResults({
     }, COMPLETE_FALLBACK_MS)
     return () => clearTimeout(t)
   }, [attemptId, course.courseSlug, version])
+  // The cross-course key event: only once the attempt is saved (a known id).
+  useEffect(() => {
+    if (!attemptId) return
+    trackDiagnosticComplete({ courseSlug: course.courseSlug, attemptId, version, scoreLabel: bandText, scorePercent: results.percentage })
+  }, [attemptId, course.courseSlug, version, bandText, results.percentage])
 
   /* ---- lesson lengths for "~N min" ---- */
   const [partCounts, setPartCounts] = useState<Record<string, number>>({})

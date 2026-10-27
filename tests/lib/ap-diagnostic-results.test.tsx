@@ -39,6 +39,7 @@ import { estimateLessonMinutes } from '@/lib/lesson-minutes'
 import { GET as lessonLengthGET } from '@/app/api/lessons/length/route'
 import { AP_NEXT_STEP_CTA_TYPE, apExamWeekLinks } from '@/lib/ap-next-step'
 import { apExamDate } from '@/lib/ap-exam-dates'
+import { resetFireOnceForTests } from '@/lib/analytics'
 
 const ROOT = path.resolve(__dirname, '../..')
 const read = (p: string) => readFileSync(path.join(ROOT, p), 'utf8')
@@ -77,6 +78,9 @@ function sentEvents(): { eventName: string; params: Record<string, unknown> }[] 
 
 beforeEach(() => {
   lessonParts = {}
+  // Key events fire once per attempt id; every test reuses the same ids.
+  resetFireOnceForTests()
+  window.sessionStorage.clear()
   window.localStorage.setItem('cookie-consent', JSON.stringify({ analytics: true }))
   beacon = vi.fn(() => true)
   // jsdom Blob has no text(); keep the payload readable.
@@ -275,7 +279,7 @@ describe('ApDiagnosticResults: exam-aware modes (Phase 3 W4)', () => {
     events = sentEvents().filter((e) => e.eventName === 'ap_results_next_step_click')
     expect(events[0].params.cta_type).toBe(AP_NEXT_STEP_CTA_TYPE.plan)
     expect(AP_NEXT_STEP_CTA_TYPE.plan).toBe('next_step')
-    const allowed = new Set(['course_slug', 'topic_slug', 'destination', 'cta_type', 'page_template', 'attempt_id', 'score', 'version'])
+    const allowed = new Set(['course_slug', 'topic_slug', 'destination', 'cta_type', 'page_template', 'attempt_id', 'score', 'version', 'score_label', 'score_percent'])
     for (const e of sentEvents()) for (const k of Object.keys(e.params)) expect(allowed.has(k), `${e.eventName}.${k}`).toBe(true)
   })
 })
@@ -420,18 +424,21 @@ describe('ApDiagnosticResults: analytics', () => {
       />,
     )
     events = sentEvents()
-    expect(events.map((e) => e.eventName)).toEqual(['ap_diagnostic_submit', 'ap_diagnostic_complete'])
+    // The AP event is unchanged; the cross-course diagnostic_complete key event follows it.
+    expect(events.map((e) => e.eventName)).toEqual(['ap_diagnostic_submit', 'ap_diagnostic_complete', 'diagnostic_complete'])
     expect(events[1].params).toMatchObject({ course_slug: 'ap-chemistry', attempt_id: 'att-new', version: 1 })
+    expect(events[2].params).toMatchObject({ course_slug: 'ap-chemistry', version: 1, score_percent: 30 })
+    expect(events[2].params).not.toHaveProperty('attempt_id')
 
     fireEvent.click(screen.getByTestId('ap-results-next-step-cta'))
     fireEvent.click(screen.getByTestId('ap-results-retake'))
     events = sentEvents()
-    expect(events.map((e) => e.eventName)).toEqual(['ap_diagnostic_submit', 'ap_diagnostic_complete', 'ap_results_next_step_click', 'ap_results_retake_click'])
-    expect(events[2].params).toMatchObject({ course_slug: 'ap-chemistry', topic_slug: 'moles-molar-mass', destination: '/topics/moles-molar-mass/interactive?from=diagnostic', attempt_id: 'att-new' })
-    expect(events[3].params).toMatchObject({ course_slug: 'ap-chemistry', attempt_id: 'att-new' })
+    expect(events.map((e) => e.eventName)).toEqual(['ap_diagnostic_submit', 'ap_diagnostic_complete', 'diagnostic_complete', 'ap_results_next_step_click', 'ap_results_retake_click'])
+    expect(events[3].params).toMatchObject({ course_slug: 'ap-chemistry', topic_slug: 'moles-molar-mass', destination: '/topics/moles-molar-mass/interactive?from=diagnostic', attempt_id: 'att-new' })
+    expect(events[4].params).toMatchObject({ course_slug: 'ap-chemistry', attempt_id: 'att-new' })
     // Rows go through the existing endpoint that stores mcat_diagnostic_complete, and carry no PII.
     for (const [url] of beacon.mock.calls) expect(url).toBe('/api/analytics/events')
-    const allowed = new Set(['course_slug', 'topic_slug', 'destination', 'cta_type', 'page_template', 'attempt_id', 'score', 'version'])
+    const allowed = new Set(['course_slug', 'topic_slug', 'destination', 'cta_type', 'page_template', 'attempt_id', 'score', 'version', 'score_label', 'score_percent'])
     for (const e of events) for (const k of Object.keys(e.params)) expect(allowed.has(k), `${e.eventName}.${k}`).toBe(true)
   })
 

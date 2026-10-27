@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { trackUnitTestComplete } from '@/lib/analytics'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
@@ -148,6 +149,13 @@ export default function CycleUnitTestPage({ course }: { course: UnitTestCourse }
       if (!r.ok) throw new Error(body.error || 'Could not submit. Your answers are saved — try again.')
       try { localStorage.removeItem(storageKey(course)) } catch {}
       setResult({ ...(body as Result), attemptId: sitting.id })
+      trackUnitTestComplete({
+        courseSlug: course,
+        attemptKey: sitting.id,
+        testType: 'cycle',
+        scorePercent: typeof body.percentage === 'number' ? body.percentage : 0,
+        passed: body.passed === true,
+      })
       window.scrollTo({ top: 0 })
       load()
     } catch (e) {

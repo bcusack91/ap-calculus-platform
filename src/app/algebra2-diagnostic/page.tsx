@@ -1,6 +1,7 @@
 'use client'
 
 import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
+import { reportDiagnosticSubmit } from '@/lib/analytics'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
@@ -107,10 +108,11 @@ export default function Algebra2DiagnosticPage() {
     const diagnosticResults = scoreAlgebra2Diagnostic(testData.form, testData.questions, answersRecord)
     setResults(diagnosticResults); setPhase('results')
     try {
-      await fetch('/api/algebra2-diagnostic/submit', {
+      const submitRes = await fetch('/api/algebra2-diagnostic/submit', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ category: `algebra2-diagnostic-${testData.form}`, results: { review: { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) }, form: diagnosticResults.form, totalCorrect: diagnosticResults.totalCorrect, totalQuestions: diagnosticResults.totalQuestions, percentage: diagnosticResults.percentage, estimatedLevel: diagnosticResults.estimatedLevel, domains: diagnosticResults.domains, recommendedTopics: diagnosticResults.recommendedTopics }, weakAreas: diagnosticResults.weakAreas, strengths: diagnosticResults.strengths.join(', ') }),
       })
+      void reportDiagnosticSubmit(submitRes, { courseSlug: 'algebra-2', scoreLabel: diagnosticResults.estimatedLevel, scorePercent: diagnosticResults.percentage })
       const histRes = await fetch('/api/algebra2-diagnostic/history')
       if (histRes.ok) { const histData = await histRes.json(); setHistory(histData.attempts ?? []) }
 

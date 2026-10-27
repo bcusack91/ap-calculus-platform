@@ -15,6 +15,7 @@
  */
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { trackPracticeTestComplete } from '@/lib/analytics'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { ClipboardCheck, Flag, LayoutGrid, Loader2 } from 'lucide-react'
@@ -209,6 +210,12 @@ export default function ActFullLengthRunner({
       })
       const body = await res.json().catch(() => ({}))
       if (!res.ok || typeof body.id !== 'string') throw new Error(body.error || 'Could not submit your test.')
+      trackPracticeTestComplete({
+        courseSlug: 'act',
+        testId: `form-${p.form}`,
+        attemptKey: body.id,
+        score: typeof body.composite === 'number' ? body.composite : undefined,
+      })
       clearActFlProgress(userId, p.form)
       router.push(`/act-practice/full-length/results/${body.id}`)
     } catch (err) {

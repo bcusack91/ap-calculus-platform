@@ -2,13 +2,37 @@
 
 import { Suspense, useEffect, useState } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useSession } from 'next-auth/react'
+import { trackPremiumPurchase } from '@/lib/analytics'
 
 function PremiumSuccess() {
   const router = useRouter()
   const { update } = useSession()
   const [refreshing, setRefreshing] = useState(true)
+  const checkoutSessionId = useSearchParams().get('session_id')
+
+  // Analytics `purchase` (GA4 key event): only for a Checkout redirect whose
+  // session the server confirms is complete and this user's. A visit without
+  // a session_id, or with one that is not, reports nothing; the once guard
+  // (and GA4's transaction_id dedupe) drops a revisit of the same session.
+  useEffect(() => {
+    if (!checkoutSessionId) return
+    let cancelled = false
+    fetch(`/api/stripe/checkout/session?session_id=${encodeURIComponent(checkoutSessionId)}`, { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((d: { transactionId?: unknown; value?: unknown; currency?: unknown; plan?: unknown } | null) => {
+        if (cancelled || !d || typeof d.transactionId !== 'string' || typeof d.value !== 'number') return
+        trackPremiumPurchase({
+          transactionId: d.transactionId,
+          value: d.value,
+          currency: typeof d.currency === 'string' ? d.currency : 'USD',
+          plan: typeof d.plan === 'string' ? d.plan : 'premium',
+        })
+      })
+      .catch(() => {})
+    return () => { cancelled = true }
+  }, [checkoutSessionId])
 
   // The Stripe webhook flips the user to PREMIUM server-side; force a JWT refresh
   // so the new role is reflected immediately instead of after the periodic

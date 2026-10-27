@@ -1,6 +1,7 @@
 'use client'
 
 import { useDiagnosticPlanAccess, DiagnosticPlanPaywall } from '@/components/DiagnosticPlanLock'
+import { reportDiagnosticSubmit } from '@/lib/analytics'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { useSession } from 'next-auth/react'
@@ -107,10 +108,11 @@ export default function PreAlgebraDiagnosticPage() {
     const diagnosticResults = scorePreAlgebraDiagnostic(testData.form, testData.questions, answersRecord)
     setResults(diagnosticResults); setPhase('results')
     try {
-      await fetch('/api/prealgebra-diagnostic/submit', {
+      const submitRes = await fetch('/api/prealgebra-diagnostic/submit', {
         method: 'POST', headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ category: `prealgebra-diagnostic-${testData.form}`, results: { review: { questions: testData.questions, answers, domainNames: Object.fromEntries(testData.domains.map(d => [d.id, d.name])) }, form: diagnosticResults.form, totalCorrect: diagnosticResults.totalCorrect, totalQuestions: diagnosticResults.totalQuestions, percentage: diagnosticResults.percentage, estimatedLevel: diagnosticResults.estimatedLevel, domains: diagnosticResults.domains, recommendedTopics: diagnosticResults.recommendedTopics }, weakAreas: diagnosticResults.weakAreas, strengths: diagnosticResults.strengths.join(', ') }),
       })
+      void reportDiagnosticSubmit(submitRes, { courseSlug: 'pre-algebra', scoreLabel: diagnosticResults.estimatedLevel, scorePercent: diagnosticResults.percentage })
       const histRes = await fetch('/api/prealgebra-diagnostic/history')
       if (histRes.ok) { const histData = await histRes.json(); setHistory(histData.attempts ?? []) }
 

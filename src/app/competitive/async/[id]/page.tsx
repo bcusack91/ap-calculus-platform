@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState, useCallback, useRef } from 'react'
+import { trackCompetitiveMatchComplete } from '@/lib/analytics'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { use } from 'react'
@@ -153,6 +154,24 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
     }
   }, [sessionStatus, fetchChallenge, router, id])
 
+  // Key event: competitive_match_complete for the player who just played the
+  // deciding turn (the recipient, or a challenger whose opponent already
+  // played). A waiting challenge has no result yet; reopening a finished
+  // challenge is not a completion.
+  const playedHereRef = useRef(false)
+  useEffect(() => {
+    if (phase !== 'results' || !playedHereRef.current || !challenge || challenge.status !== 'COMPLETED') return
+    const myId = challenge.isChallenger ? challenge.challenger.id : challenge.recipient?.id
+    trackCompetitiveMatchComplete({
+      matchId: `async-${challenge.id}`,
+      mode: 'async',
+      result: challenge.winnerId === null ? 'draw' : challenge.winnerId === myId ? 'win' : 'loss',
+      isBot: false,
+      isClassPool: false,
+      topicSlug: challenge.topicSlug,
+    })
+  }, [phase, challenge])
+
   const submitAllAnswers = useCallback(async (finalAnswers?: typeof answers) => {
     setPhase('submitting')
     if (timerRef.current) clearInterval(timerRef.current)
@@ -167,6 +186,7 @@ export default function AsyncChallengePage({ params }: { params: Promise<{ id: s
         body: JSON.stringify({ answers: answersToSubmit, totalTime: elapsed }),
       })
       if (res.ok) {
+        playedHereRef.current = true
         // Refresh challenge data to get results
         await fetchChallenge()
         setPhase('results')

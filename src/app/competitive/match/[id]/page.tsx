@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, use, useCallback, useMemo, useRef } from 'react';
+import { trackCompetitiveMatchComplete } from '@/lib/analytics';
 import { useRouter, useSearchParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import {
@@ -265,6 +266,28 @@ export default function CompetitiveMatchPage({ params }: { params: Promise<{ id:
       setLoading(false);
     }
   }, [matchId]);
+
+  // Key event: competitive_match_complete, once per match for this player —
+  // only when this page saw the match live first, so reopening a finished
+  // match's link (or refreshing its results) never counts it again.
+  const sawLiveRef = useRef(false);
+  useEffect(() => {
+    if (!matchState || !currentUserId) return;
+    if (matchState.status !== 'COMPLETED') {
+      sawLiveRef.current = true;
+      return;
+    }
+    if (!sawLiveRef.current) return;
+    const isP1 = currentUserId === matchState.player1Id;
+    trackCompetitiveMatchComplete({
+      matchId: matchState.id,
+      mode: matchState.gameMode ?? 'classic',
+      result: matchState.winnerId === null ? 'draw' : matchState.winnerId === currentUserId ? 'win' : 'loss',
+      isBot: !!(isP1 ? matchState.player2IsAI : matchState.player1IsAI),
+      isClassPool: !!classPoolId,
+      topicSlug: matchState.topicSlug,
+    });
+  }, [matchState, currentUserId, classPoolId]);
 
   // Fetch initial match state
   useEffect(() => {

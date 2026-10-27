@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { trackPracticeTestComplete } from '@/lib/analytics'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
@@ -212,7 +213,17 @@ export default function MCATractricePage() {
       })
       if (res.ok) {
         const data = await res.json().catch(() => null)
-        if (typeof data?.attemptId === 'string') setSavedAttemptId(data.attemptId)
+        if (typeof data?.attemptId === 'string') {
+          setSavedAttemptId(data.attemptId)
+          trackPracticeTestComplete({
+            courseSlug: 'mcat',
+            testId: activeTest.section.id,
+            attemptKey: data.attemptId,
+            testType: 'section',
+            scorePercent: result.percentage,
+            score: result.scaledScore,
+          })
+        }
       }
     } catch {
       // Silent fail

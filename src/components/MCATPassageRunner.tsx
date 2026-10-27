@@ -23,6 +23,7 @@
  */
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react'
+import { trackPracticeTestComplete } from '@/lib/analytics'
 import { useSession } from 'next-auth/react'
 import Link from 'next/link'
 import MCATFigure from '@/components/MCATFigure'
@@ -514,7 +515,16 @@ export default function MCATPassageRunner({
       }),
     })
       .then((r) => (r.ok ? r.json() : null))
-      .then((d) => { if (typeof d?.attemptId === 'string') setSavedAttemptId(d.attemptId) })
+      .then((d) => {
+        if (typeof d?.attemptId !== 'string') return
+        setSavedAttemptId(d.attemptId)
+        trackPracticeTestComplete({
+          courseSlug: 'mcat',
+          testId: `form-${form}`,
+          attemptKey: d.attemptId,
+          score: typeof d.total === 'number' ? d.total : report.total,
+        })
+      })
       .catch(() => { /* best-effort; results UI is unaffected */ })
   }, [submitted, mode, report, topicRecs, form, sectionElapsed, session?.user?.id, passages, answers, qFlags, flags])
 

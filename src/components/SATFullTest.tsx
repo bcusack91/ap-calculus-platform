@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import { trackPracticeTestComplete } from '@/lib/analytics'
 import Link from 'next/link'
 import DesmosCalculatorLink from '@/components/DesmosCalculatorLink'
 import { preloadKatex } from '@/lib/katex-lazy'
@@ -1188,6 +1189,14 @@ export function SATTestWrapper({ test, onComplete, onCancel }: SATFullTestProps)
               mathTotal: data.mathTotal,
             }
             setResults(final)
+          }
+          if (typeof data?.attemptId === 'string') {
+            trackPracticeTestComplete({
+              courseSlug: test.exam === 'psat' ? 'psat' : 'sat',
+              testId: `test-${test.testNumber}`,
+              attemptKey: data.attemptId,
+              score: typeof data.totalScore === 'number' ? data.totalScore : undefined,
+            })
           }
         }
       } catch {

@@ -16,6 +16,7 @@ import StudyPlanNextUp from '@/components/StudyPlanNextUp'
 import { shuffleOptions } from '@/lib/shuffle-options'
 import QuestionFigure from '@/components/QuestionFigure'
 import { isSatMathTopic } from '@/lib/sat-math-topics'
+import { trackExitQuizComplete } from '@/lib/analytics'
 
 interface ExitQuizQuestion {
   id: string
@@ -65,6 +66,11 @@ interface ExitQuizProps {
    * its settings and redraws the quiz at the current track.
    */
   onTrackMixRejected?: () => void | Promise<void>
+  /**
+   * The topic was already cleared before this quiz opened (a practice retake):
+   * a pass is still recorded, but analytics does not count it as a new clear.
+   */
+  alreadyCleared?: boolean
 }
 
 // Render text with markdown tables and KaTeX math
@@ -90,6 +96,7 @@ export default function ExitQuiz({
   onRetake,
   reviewParts,
   onTrackMixRejected,
+  alreadyCleared,
 }: ExitQuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
@@ -277,6 +284,20 @@ export default function ExitQuiz({
         const data = await res.json().catch(() => null)
         const id = data?.attemptId ?? data?.attempt?.id
         if (typeof id === 'string') setSavedAttemptId(id)
+        // Key events: a recorded exit quiz (never a course-level entrance or
+        // final quiz). The server's regraded verdict wins over the browser's;
+        // a deduplicated re-post carries the same attempt id, so the once
+        // guard drops it.
+        if (typeof id === 'string' && !isCourseLevelQuiz) {
+          trackExitQuizComplete({
+            courseSlug: resolvedCourseSlug || '',
+            topicSlug,
+            scorePercent: totalQuestions > 0 ? (score / totalQuestions) * 100 : 0,
+            passed: typeof data?.passed === 'boolean' ? data.passed : passed,
+            attemptKey: id,
+            alreadyCleared,
+          })
+        }
       } else if (res.status === 409) {
         const data = await res.json().catch(() => null)
         if (data?.code === 'TRACK_MIX_MISMATCH' && onTrackMixRejected) {
@@ -289,7 +310,7 @@ export default function ExitQuiz({
     } finally {
       setSubmitSettled(true)
     }
-  }, [startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty, includeLowYield, onTrackMixRejected])
+  }, [startTime, topicSlug, score, totalQuestions, passed, quizMustRedoUnit, answers, variant, seed, difficulty, includeLowYield, onTrackMixRejected, isCourseLevelQuiz, resolvedCourseSlug, alreadyCleared])
 
   useEffect(() => {
     if (quizComplete) {

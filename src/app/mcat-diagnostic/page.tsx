@@ -11,7 +11,7 @@ import {
   type MCATDiagnosticResults,
 } from '@/data/mcat-practice/diagnostic-generator'
 import { projectionRange } from '@/lib/mcat-scoring'
-import { trackCustomEvent } from '@/lib/analytics'
+import { reportDiagnosticSubmit, trackCustomEvent } from '@/lib/analytics'
 import DiagnosticReview from '@/components/DiagnosticReview'
 import { MathText } from '@/components/MathText'
 import DiagnosticChallengeCard from '@/components/DiagnosticChallengeCard'
@@ -449,7 +449,7 @@ export default function MCATDiagnosticPage() {
 
     // Save to API
     try {
-      await fetch('/api/mcat-diagnostic/submit', {
+      const submitRes = await fetch('/api/mcat-diagnostic/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -480,6 +480,10 @@ export default function MCATDiagnosticPage() {
           strengths: diagnosticResults.strengths.join(', '),
         }),
       })
+      {
+        const range = projectionRange(diagnosticResults.estimatedScore, 'medium')
+        void reportDiagnosticSubmit(submitRes, { courseSlug: 'mcat', scoreLabel: `${range.low}–${range.high}`, scorePercent: diagnosticResults.percentage })
+      }
 
       const statusRes = await fetch('/api/mcat-diagnostic/plan-status')
       if (statusRes.ok) {

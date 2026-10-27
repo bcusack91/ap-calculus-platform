@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { reportDiagnosticSubmit } from '@/lib/analytics'
 import { useSession } from 'next-auth/react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
@@ -353,7 +354,7 @@ export default function SATDiagnosticPage() {
 
       // Save to API
       try {
-        await fetch('/api/sat-diagnostic/submit', {
+        const submitRes = await fetch('/api/sat-diagnostic/submit', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -383,6 +384,14 @@ export default function SATDiagnosticPage() {
             weakAreas: diagnosticResults.weakAreas.join(', '),
             strengths: diagnosticResults.strengths.join(', '),
           }),
+        })
+        void reportDiagnosticSubmit(submitRes, {
+          courseSlug: 'sat',
+          // The 700-800 and Core Skills module sittings are diagnostics too; only the full one carries a 1600-scale estimate.
+          scoreLabel: hardModuleNumber || coreModuleNumber
+            ? (hardModuleNumber ? 'advanced_module' : 'core_module')
+            : diagnosticResults.scoreRange ? `${diagnosticResults.scoreRange.low}–${diagnosticResults.scoreRange.high}` : String(diagnosticResults.estimatedScore),
+          scorePercent: diagnosticResults.percentage,
         })
 
         if (challengeToken) {

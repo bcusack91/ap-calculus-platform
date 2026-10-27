@@ -5,6 +5,7 @@
 // estimates in src/lib/asvab-scoring.ts. Stores category 'asvab-diagnostic-<form>'.
 
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { reportDiagnosticSubmit } from '@/lib/analytics'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
@@ -135,6 +136,7 @@ export default function ASVABDiagnosticPage() {
         }),
       })
       if (!res.ok) setSaveError(true)
+      void reportDiagnosticSubmit(res, { courseSlug: 'asvab', scoreLabel: `AFQT ${scored.afqt.low}–${scored.afqt.high}`, scorePercent: scored.percentage })
       loadHistory()
     } catch {
       setSaveError(true)

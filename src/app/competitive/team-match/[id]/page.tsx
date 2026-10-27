@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { Check, X, ClipboardList, Sparkles, RotateCcw } from 'lucide-react'
 import { preloadKatex } from '@/lib/katex-lazy'
 import { classPoolIdFromParam, matchBackPath } from '@/lib/class-pool'
+import { trackCompetitiveMatchComplete } from '@/lib/analytics'
 import { renderRichText } from '@/lib/render-rich-text'
 import { botAnswerIndex, botAnswerPlan, matchPaceCourseKey } from '@/lib/bot-pacing'
 import TeamMatchReview, { summarizeAnswers, type ReviewAnswer } from '@/components/competitive/team-match/TeamMatchReview'
@@ -134,6 +135,28 @@ export default function TeamMatchPage({ params }: { params: Promise<{ id: string
       pollingRef.current = null
     }
   }, [matchState?.status])
+
+  // Key event: competitive_match_complete, once per match for this player,
+  // only when this page saw the match live (a finished link reopened or a
+  // refreshed results screen is not a new completion).
+  const sawLiveRef = useRef(false)
+  useEffect(() => {
+    if (!matchState) return
+    if (matchState.status !== 'COMPLETED') {
+      sawLiveRef.current = true
+      return
+    }
+    if (!sawLiveRef.current) return
+    const myTeam = matchState.myTeam === 1 ? matchState.team1 : matchState.team2
+    trackCompetitiveMatchComplete({
+      matchId: matchState.id,
+      mode: 'team',
+      result: myTeam.score >= 15 ? 'win' : 'loss',
+      isBot: !!(matchState as unknown as Record<string, unknown>).isPracticeMatch,
+      isClassPool: !!classPoolId,
+      topicSlug: matchState.topicSlug,
+    })
+  }, [matchState, classPoolId])
 
   // --- AI Bot Simulation for Practice Team Matches ---
   const matchStateRef = useRef(matchState)
