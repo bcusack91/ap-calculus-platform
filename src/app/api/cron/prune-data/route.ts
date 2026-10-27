@@ -6,14 +6,16 @@ export const dynamic = 'force-dynamic'
 const DAY_MS = 24 * 60 * 60 * 1000
 
 // Retention windows
-const ANALYTICS_EVENT_RETENTION_DAYS = 180
+// 1.5 years, so each exam season can be compared with the same weeks a year
+// earlier (owner, 2026-10-27; was 180 days).
+const ANALYTICS_EVENT_RETENTION_DAYS = 548
 const WEBHOOK_EVENT_RETENTION_DAYS = 30
 const MMR_HISTORY_RETENTION_DAYS = 365
 
 /**
  * GET /api/cron/prune-data
  * Weekly data-retention cron (see vercel.json). Deletes:
- *   - AnalyticsEvent rows older than 180 days
+ *   - AnalyticsEvent rows older than 548 days (1.5 years, for year-over-year comparisons)
  *   - ProcessedWebhookEvent rows older than 30 days (Stripe never retries that late)
  *   - MMRHistory rows older than 365 days
  * Secured by CRON_SECRET bearer header.
