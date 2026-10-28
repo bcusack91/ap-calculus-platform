@@ -1,5 +1,9 @@
 import type { SlideFigure } from '@/lib/slide-deck'
 import { mcatLearningMemoryFigures } from './mcat-learning-memory'
+import { mcatSensationPerceptionFigures } from './mcat-sensation-perception'
+import { mcatDevelopmentFigures } from './mcat-development'
+import { mcatSocialPsychologyFigures } from './mcat-social-psychology'
+import { mcatCognitionLanguageFigures } from './mcat-cognition-language'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -50,4 +54,8 @@ export interface DeckFigurePlacement {
 
 export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-psychology-behavior-learning-memory-mcat': mcatLearningMemoryFigures,
+  'mcat-psychology-behavior-sensation-perception-mcat': mcatSensationPerceptionFigures,
+  'mcat-psychology-behavior-development-mcat': mcatDevelopmentFigures,
+  'mcat-social-psychology-mcat': mcatSocialPsychologyFigures,
+  'mcat-psychology-behavior-cognition-language-mcat': mcatCognitionLanguageFigures,
 }

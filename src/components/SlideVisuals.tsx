@@ -270,7 +270,7 @@ function SlideFigureView({ figure, side }: { figure: SlideFigure; side: boolean 
           role="img"
           aria-label={alt}
           data-testid="slide-figure-svg"
-          className={`w-full rounded-2xl border border-gray-200 p-4 dark:border-gray-700 [&>svg]:mx-auto [&>svg]:block [&>svg]:h-auto [&>svg]:w-full ${side ? '[&>svg]:max-h-[500px]' : '[&>svg]:max-h-[420px]'} ${FIGURE_THEME_CLASSES}`}
+          className={`w-full rounded-2xl border border-gray-200 p-4 dark:border-gray-700 [&>svg]:mx-auto [&>svg]:block [&>svg]:h-auto [&>svg]:w-full ${side ? '[&>svg]:max-h-[500px]' : '[&>svg]:max-h-[380px]'} ${FIGURE_THEME_CLASSES}`}
           dangerouslySetInnerHTML={{ __html: figure.svg }}
         />
       ) : (
