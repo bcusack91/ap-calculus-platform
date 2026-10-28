@@ -451,26 +451,28 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     }
   } catch { polls = [] }
 
-  const baseThin = content.length < 6
   const lessonPolls: Slide[] = []
   // Lesson text is gathered first and chunked once the whole lesson is known:
   // the slide budget depends on whether the lesson is prose or math and on
-  // how many parts it has (deckLimits).
+  // how many parts it has (deckLimits). A registered lesson is ALWAYS mined
+  // (2026-10-28): it used to be skipped when the summary alone filled six
+  // slides, so a topic with a long hand-written summary (Disorders, 5,700
+  // chars) taught from the summary and never showed its lesson sections.
   const lessonMd: string[] = []
   let partCount = 0
   let limits = DEFAULT_LIMITS
-  if (baseThin || polls.length < 2) {
+  {
     try {
       const reg = await import('@/data/interactive-lessons/registry')
       const cfg = reg.getInteractiveTopicConfig(topicSlug)
       partCount = cfg?.parts.length ?? 0
-      for (let part = 1; part <= partCount && (baseThin || lessonPolls.length < MAX_POLLS); part++) {
+      for (let part = 1; part <= partCount; part++) {
         const data = await reg.getInteractiveLessonData(topicSlug, part).catch(() => null)
         // Decks present the default view: low-yield sections and questions
         // are left out (lesson-yield.ts), as they are for students by default.
         for (const sec of filterSectionsForYield(data?.sections ?? [], false)) {
           const secType = (sec as { type?: string }).type
-          if (secType === 'text' && baseThin && typeof sec.content === 'string') {
+          if (secType === 'text' && typeof sec.content === 'string') {
             // Drop lesson-navigation lines ("Part 3 of 7 — …") — deck pacing
             // is the teacher's, not the lesson's.
             lessonMd.push(stripMetaSections(stripLowYield(sec.content).replace(/^\*\*Part \d+ of \d+.*$/gm, '')))

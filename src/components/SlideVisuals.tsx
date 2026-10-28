@@ -290,7 +290,9 @@ function SlideFigureView({ figure, side }: { figure: SlideFigure; side: boolean 
 export function ContentSlideView({ title, blocks, palette, figure, layout }: { title: string; blocks: string[]; palette: DeckPalette; figure?: SlideFigure; layout?: 'side' | 'full' }) {
   // A figure sits beside short text ('side') or above it, full width ('full').
   const side = !!figure && (layout ?? (blocks.length > 0 ? 'side' : 'full')) === 'side'
-  const body = renderBlocks(blocks, palette)
+  // Under a full-width figure the lines are its takeaway, not the lesson
+  // text — a step smaller, so two of them still fit beneath the drawing.
+  const body = renderBlocks(blocks, palette, figure && !side ? 'text-[1.375em]' : 'text-[1.625em]')
   return (
     <div style={SLIDE_IN} className="min-h-full px-14 py-10">
       <div className="mb-6 flex items-center gap-4">
@@ -312,7 +314,7 @@ export function ContentSlideView({ title, blocks, palette, figure, layout }: { t
   )
 }
 
-function renderBlocks(blocks: string[], palette: DeckPalette) {
+function renderBlocks(blocks: string[], palette: DeckPalette, textSize = 'text-[1.625em]') {
   return (
     <>
         {blocks.map((raw, i) => {
@@ -350,13 +352,13 @@ function renderBlocks(blocks: string[], palette: DeckPalette) {
             return (
               <div key={i} className="flex items-start gap-4">
                 <span className={`mt-[0.85em] h-2.5 w-2.5 shrink-0 rounded-full ${palette.dot}`} />
-                <MathText text={mdLite(b.replace(/^[-*•]\s+/, ''))} className="text-[1.625em] leading-snug text-gray-800 dark:text-gray-200" />
+                <MathText text={mdLite(b.replace(/^[-*•]\s+/, ''))} className={`${textSize} leading-snug text-gray-800 dark:text-gray-200`} />
               </div>
             )
           }
           // Plain paragraph.
           return (
-            <MathText key={i} text={mdLite(b)} className="text-[1.625em] leading-snug text-gray-800 dark:text-gray-200" />
+            <MathText key={i} text={mdLite(b)} className={`${textSize} leading-snug text-gray-800 dark:text-gray-200`} />
           )
         })}
     </>

@@ -4,6 +4,10 @@ import { mcatSensationPerceptionFigures } from './mcat-sensation-perception'
 import { mcatDevelopmentFigures } from './mcat-development'
 import { mcatSocialPsychologyFigures } from './mcat-social-psychology'
 import { mcatCognitionLanguageFigures } from './mcat-cognition-language'
+import { mcatBiologicalBasisFigures } from './mcat-biological-basis'
+import { mcatDisordersFigures } from './mcat-disorders'
+import { mcatPsychologyBehaviorFigures } from './mcat-psychology-behavior'
+import { mcatCultureSocializationFigures } from './mcat-culture-socialization'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -58,4 +62,8 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-psychology-behavior-development-mcat': mcatDevelopmentFigures,
   'mcat-social-psychology-mcat': mcatSocialPsychologyFigures,
   'mcat-psychology-behavior-cognition-language-mcat': mcatCognitionLanguageFigures,
+  'mcat-biological-basis-behavior-mcat': mcatBiologicalBasisFigures,
+  'mcat-psychology-behavior-disorders-mcat': mcatDisordersFigures,
+  'mcat-psychology-behavior-mcat': mcatPsychologyBehaviorFigures,
+  'mcat-sociology-culture-socialization-mcat': mcatCultureSocializationFigures,
 }
