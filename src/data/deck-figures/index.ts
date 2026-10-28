@@ -8,6 +8,10 @@ import { mcatBiologicalBasisFigures } from './mcat-biological-basis'
 import { mcatDisordersFigures } from './mcat-disorders'
 import { mcatPsychologyBehaviorFigures } from './mcat-psychology-behavior'
 import { mcatCultureSocializationFigures } from './mcat-culture-socialization'
+import { mcatGroupsInteractionFigures } from './mcat-groups-interaction'
+import { mcatHealthDisparitiesFigures } from './mcat-health-disparities'
+import { mcatSociologyFigures } from './mcat-sociology'
+import { mcatStructureStratificationFigures } from './mcat-structure-stratification'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -66,4 +70,8 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-psychology-behavior-disorders-mcat': mcatDisordersFigures,
   'mcat-psychology-behavior-mcat': mcatPsychologyBehaviorFigures,
   'mcat-sociology-culture-socialization-mcat': mcatCultureSocializationFigures,
+  'mcat-sociology-groups-interaction-mcat': mcatGroupsInteractionFigures,
+  'mcat-sociology-health-disparities-mcat': mcatHealthDisparitiesFigures,
+  'mcat-sociology-mcat': mcatSociologyFigures,
+  'mcat-sociology-structure-stratification-mcat': mcatStructureStratificationFigures,
 }
