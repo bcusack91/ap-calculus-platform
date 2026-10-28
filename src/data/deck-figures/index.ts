@@ -18,6 +18,12 @@ import { mcatCarbMetabolismFigures } from './mcat-bb-carb-metabolism'
 import { mcatBioenergeticsFigures } from './mcat-bb-bioenergetics'
 import { mcatCardiovascularFigures } from './mcat-bb-cardiovascular'
 import { mcatMembraneTransportFigures } from './mcat-bb-membrane-transport'
+import { mcatLipidMetabolismFigures } from './mcat-bb-lipid-metabolism'
+import { mcatBiochemFoundationsFigures } from './mcat-bb-biochem-foundations'
+import { mcatOrganellesFigures } from './mcat-bb-organelles'
+import { mcatCellCycleFigures } from './mcat-bb-cell-cycle'
+import { mcatCellSignalingFigures } from './mcat-bb-cell-signaling'
+import { mcatDnaReplicationFigures } from './mcat-bb-dna-replication'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -87,4 +93,10 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-biochemistry-bioenergetics-mcat': mcatBioenergeticsFigures,
   'mcat-organ-systems-cardiovascular-mcat': mcatCardiovascularFigures,
   'mcat-cell-biology-membrane-transport-mcat': mcatMembraneTransportFigures,
+  'mcat-biochemistry-lipid-metabolism-mcat': mcatLipidMetabolismFigures,
+  'mcat-biochemistry-foundations-mcat': mcatBiochemFoundationsFigures,
+  'mcat-cell-biology-organelles-mcat': mcatOrganellesFigures,
+  'mcat-cell-biology-cell-cycle-mcat': mcatCellCycleFigures,
+  'mcat-cell-biology-signaling-mcat': mcatCellSignalingFigures,
+  'mcat-molecular-biology-dna-replication-mcat': mcatDnaReplicationFigures,
 }
