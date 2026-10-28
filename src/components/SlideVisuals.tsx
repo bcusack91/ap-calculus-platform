@@ -212,7 +212,10 @@ export function SlideStage({
     const fonts = typeof document !== 'undefined' ? (document as { fonts?: { ready?: Promise<unknown> } }).fonts : undefined
     fonts?.ready?.then(check, () => {})
     return () => { alive = false; ro?.disconnect() }
-  }, [fit])
+    // k: the stage mounts only once the scale is measured (k > 0), so the
+    // first run finds no refs — without k here the observer was never
+    // attached and overflowing slides simply clipped (found 2026-10-28).
+  }, [fit, k])
 
   const atFloor = fit <= MIN_FIT
   return (
@@ -256,10 +259,12 @@ export function TitleSlideView({ title, subtitle, palette }: { title: string; su
 
 /**
  * An authored figure on a slide (src/data/deck-figures): sanitized inline SVG
- * in the shared figure theme, caption under it. A fixed pixel cap on the
- * drawing keeps the stage's fit logic deterministic — only the text steps
- * down when a slide overflows. An SVG that fails isSafeSvg shows its alt text
- * so the slide is never blank.
+ * in the shared figure theme, caption under it. The drawing's height cap is
+ * in em (500 / 380 logical px at fit 1), so when a slide overflows the
+ * stage's fit stepping shrinks the figure and the text together — a long
+ * caption used to push the words off the frame while the picture stayed
+ * full size. An SVG that fails isSafeSvg shows its alt text so the slide is
+ * never blank.
  */
 function SlideFigureView({ figure, side }: { figure: SlideFigure; side: boolean }) {
   const alt = typeof figure.alt === 'string' ? figure.alt : ''
@@ -270,7 +275,7 @@ function SlideFigureView({ figure, side }: { figure: SlideFigure; side: boolean 
           role="img"
           aria-label={alt}
           data-testid="slide-figure-svg"
-          className={`w-full rounded-2xl border border-gray-200 p-4 dark:border-gray-700 [&>svg]:mx-auto [&>svg]:block [&>svg]:h-auto [&>svg]:w-full ${side ? '[&>svg]:max-h-[500px]' : '[&>svg]:max-h-[380px]'} ${FIGURE_THEME_CLASSES}`}
+          className={`w-full rounded-2xl border border-gray-200 p-4 dark:border-gray-700 [&>svg]:mx-auto [&>svg]:block [&>svg]:h-auto [&>svg]:w-full ${side ? '[&>svg]:max-h-[31.25em]' : '[&>svg]:max-h-[23.75em]'} ${FIGURE_THEME_CLASSES}`}
           dangerouslySetInnerHTML={{ __html: figure.svg }}
         />
       ) : (

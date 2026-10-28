@@ -12,6 +12,12 @@ import { mcatGroupsInteractionFigures } from './mcat-groups-interaction'
 import { mcatHealthDisparitiesFigures } from './mcat-health-disparities'
 import { mcatSociologyFigures } from './mcat-sociology'
 import { mcatStructureStratificationFigures } from './mcat-structure-stratification'
+import { mcatEnzymesFigures } from './mcat-bb-enzymes'
+import { mcatAminoAcidsFigures } from './mcat-bb-amino-acids'
+import { mcatCarbMetabolismFigures } from './mcat-bb-carb-metabolism'
+import { mcatBioenergeticsFigures } from './mcat-bb-bioenergetics'
+import { mcatCardiovascularFigures } from './mcat-bb-cardiovascular'
+import { mcatMembraneTransportFigures } from './mcat-bb-membrane-transport'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -74,4 +80,11 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-sociology-health-disparities-mcat': mcatHealthDisparitiesFigures,
   'mcat-sociology-mcat': mcatSociologyFigures,
   'mcat-sociology-structure-stratification-mcat': mcatStructureStratificationFigures,
+  // Biology & Biochemistry
+  'mcat-biochemistry-enzymes-kinetics-mcat': mcatEnzymesFigures,
+  'mcat-biochemistry-amino-acids-proteins-mcat': mcatAminoAcidsFigures,
+  'mcat-biochemistry-carbohydrate-metabolism-mcat': mcatCarbMetabolismFigures,
+  'mcat-biochemistry-bioenergetics-mcat': mcatBioenergeticsFigures,
+  'mcat-organ-systems-cardiovascular-mcat': mcatCardiovascularFigures,
+  'mcat-cell-biology-membrane-transport-mcat': mcatMembraneTransportFigures,
 }
