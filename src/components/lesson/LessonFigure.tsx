@@ -2,7 +2,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import { escapeCurrencyMath } from '@/lib/escape-currency-math'
-import { isSafeSvg, type LessonFigureSpec } from '@/lib/lesson-figure'
+import { FIGURE_THEME_CLASSES, isSafeSvg, type LessonFigureSpec } from '@/lib/lesson-figure'
 
 /**
  * One authored lesson figure: sanitized inline SVG + caption + alt text.
@@ -19,14 +19,8 @@ const SIZE: Record<NonNullable<LessonFigureSpec['size']>, string> = {
   lg: '[&>svg]:max-w-none',
 }
 
-// Theme vocabulary for authored SVGs (see lesson-figure.ts). Keep the fig-bg
-// fill equal to the box background in both modes so open circles read as holes.
-const THEME =
-  'bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 ' +
-  '[&_.fig-accent]:text-blue-600 dark:[&_.fig-accent]:text-blue-400 ' +
-  '[&_.fig-accent-2]:text-red-600 dark:[&_.fig-accent-2]:text-red-400 ' +
-  '[&_.fig-muted]:text-gray-400 dark:[&_.fig-muted]:text-gray-500 ' +
-  '[&_.fig-bg]:fill-white dark:[&_.fig-bg]:fill-gray-900'
+// Theme vocabulary for authored SVGs — shared with slide figures (lesson-figure.ts).
+const THEME = FIGURE_THEME_CLASSES
 
 export function LessonFigure({ figure }: { figure: LessonFigureSpec }) {
   const size = SIZE[figure.size ?? 'md'] ?? SIZE.md

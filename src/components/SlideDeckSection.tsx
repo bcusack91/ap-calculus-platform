@@ -8,6 +8,7 @@ import { asScene, sceneVersion, type BoardScene, type BoardElement, mergeScenes,
 import { PEN_SIZES, PEN_SIZE_ORDER, loadPenSize, penSizeAppState, savePenSize, type PenSize } from '@/lib/pen-sizes'
 import { deckPalette, SlideMotionStyles, SlideStage, TitleSlideView, ContentSlideView, QuizSlideView, PollSlideView, type PollOptionState } from '@/components/SlideVisuals'
 import { lockStageView, needsAnswerStrip, stageView, toLogicalScene } from '@/lib/slide-stage'
+import type { SlideFigure } from '@/lib/slide-deck'
 import { classCourseCount, orderLauncherCourses, type LauncherCourse } from '@/lib/deck-launcher-courses'
 
 declare global {
@@ -37,7 +38,7 @@ if (typeof window !== 'undefined') {
 
 type Slide =
   | { kind: 'title'; title: string; subtitle: string }
-  | { kind: 'content'; title: string; blocks: string[] }
+  | { kind: 'content'; title: string; blocks: string[]; figure?: SlideFigure; layout?: 'side' | 'full' }
   | { kind: 'poll'; question: string; options: string[]; correctIndex: number; explanation: string }
   | { kind: 'quiz'; topicSlug: string; title: string }
 
@@ -356,7 +357,7 @@ export default function SlideDeckSection({
         )}
 
         {slide.kind === 'content' && (
-          <ContentSlideView title={slide.title} blocks={slide.blocks} palette={palette} />
+          <ContentSlideView title={slide.title} blocks={slide.blocks} palette={palette} figure={slide.figure} layout={slide.layout} />
         )}
 
         {slide.kind === 'poll' && (

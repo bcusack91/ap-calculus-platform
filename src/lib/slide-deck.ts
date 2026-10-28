@@ -26,9 +26,12 @@ import { bestSegment, termsOf } from '@/lib/text-terms'
  * before circuits had been introduced.
  */
 
+/** A hand-drawn inline SVG on a slide (same shape and rules as a lesson figure; gated by isSafeSvg at render). */
+export type SlideFigure = { svg: string; alt: string; caption?: string }
+
 export type Slide =
   | { kind: 'title'; title: string; subtitle: string }
-  | { kind: 'content'; title: string; blocks: string[] }
+  | { kind: 'content'; title: string; blocks: string[]; figure?: SlideFigure; layout?: 'side' | 'full' }
   | { kind: 'poll'; question: string; options: string[]; correctIndex: number; explanation: string }
   | { kind: 'quiz'; topicSlug: string; title: string }
 
@@ -41,6 +44,31 @@ const MAX_POLLS = 8
 const MAX_POLL_CANDIDATES = 40
 const MAX_BLOCKS_PER_SLIDE = 5
 const MAX_CHARS_PER_SLIDE = 700 // a slide must fit one screen (annotation ink is position-locked)
+
+/** How much goes on one slide, and how many content slides a deck may hold. */
+export type DeckLimits = { maxChars: number; maxBlocks: number; maxSlides: number; maxPolls: number }
+const DEFAULT_LIMITS: DeckLimits = { maxChars: MAX_CHARS_PER_SLIDE, maxBlocks: MAX_BLOCKS_PER_SLIDE, maxSlides: MAX_CONTENT_SLIDES, maxPolls: MAX_POLLS }
+/**
+ * Prose lessons (no math anywhere — psych/soc, CARS, history) got walls of
+ * text at the equation-sized budget (owner, 2026-10-28: "too cluttered"), so
+ * they chunk tighter — and get proportionally more slides, so the same text
+ * is spread out rather than cut. A lesson of 3+ parts is more than one
+ * teaching block; its deck (and its poll budget) grows by a block per two
+ * parts instead of silently dropping the later parts (Learning & Memory lost
+ * both memory parts at 28).
+ */
+export function deckLimits(prose: boolean, partCount: number): DeckLimits {
+  const blocks = Math.max(1, Math.ceil(partCount / 2))
+  const maxChars = prose ? 520 : MAX_CHARS_PER_SLIDE
+  return {
+    maxChars,
+    maxBlocks: prose ? 4 : MAX_BLOCKS_PER_SLIDE,
+    maxSlides: Math.round(MAX_CONTENT_SLIDES * (MAX_CHARS_PER_SLIDE / maxChars)) * blocks,
+    maxPolls: MAX_POLLS * blocks,
+  }
+}
+/** A mined lesson this long re-teaches everything its topic summary says — the summary slides are dropped. */
+const SUMMARY_REDUNDANT_AT = 12
 const MAX_EXAMPLES = 2 // each becomes a 2-3 slide progressive-reveal sequence
 const SEGMENT_SIZE = 3 // content slides per teaching beat (concepts → example → poll)
 
@@ -139,7 +167,7 @@ function exampleRevealSlides(question: string, solution: string): ContentSlide[]
   return slides
 }
 
-type ContentSlide = { kind: 'content'; title: string; blocks: string[] }
+type ContentSlide = Extract<Slide, { kind: 'content' }>
 
 /**
  * The unit a content slide belongs to: its title without "(cont.)" / "(2 of
@@ -240,13 +268,54 @@ type PollSlide = { kind: 'poll'; question: string; options: string[]; correctInd
 // ---------- Relevance matching (poll/example → the segment that taught it) ----------
 
 function slideText(s: ContentSlide): string {
-  return `${s.title} ${s.blocks.join(' ')}`
+  return `${s.title} ${s.blocks.join(' ')} ${s.figure?.alt ?? ''}`
+}
+
+const isTableBlock = (b: string) => b.includes('\n') && b.includes('|')
+const CONT = ' (cont.)'
+
+/**
+ * Put a topic's authored figures (src/data/deck-figures) into its content
+ * slides — see DeckFigurePlacement there for the modes. Pure; throws when a
+ * placement matches no section so a renamed lesson heading fails the
+ * regeneration run instead of silently losing its picture. The matched slide
+ * is the FIRST slide of a section (never a continuation page), so a figure
+ * leads its section; lead/after slides share the section's unit key, which
+ * keeps the picture and its words on the same side of every poll.
+ */
+export function applyDeckFigures(
+  content: readonly ContentSlide[],
+  placements: readonly { at: string; figure: SlideFigure; mode?: 'lead' | 'after' | 'replace-table' | 'beside'; blocks?: string[] }[] | undefined,
+): ContentSlide[] {
+  if (!placements?.length) return [...content]
+  const out: ContentSlide[] = [...content]
+  for (const p of placements) {
+    const needle = p.at.trim().toLowerCase()
+    const idx = out.findIndex((s) => !s.title.endsWith(CONT.trim()) && slideUnitKey(s.title).toLowerCase().startsWith(needle))
+    if (idx < 0) throw new Error(`deck figure "${p.at}" matches no section`)
+    const target = out[idx]
+    const base = slideUnitKey(target.title)
+    const mode = p.mode ?? 'lead'
+    if (mode === 'lead') {
+      const lead = { ...target, title: base, blocks: p.blocks ?? [], figure: p.figure, layout: 'full' as const }
+      out.splice(idx, 1, lead, { ...target, title: `${base}${CONT}` })
+    } else if (mode === 'after') {
+      const after = { ...target, title: `${base}${CONT}`, blocks: p.blocks ?? [], figure: p.figure, layout: 'full' as const }
+      out.splice(idx + 1, 0, after)
+    } else if (mode === 'replace-table') {
+      const blocks = p.blocks ?? target.blocks.filter((b) => !isTableBlock(b))
+      out[idx] = { ...target, blocks, figure: p.figure, layout: 'side' as const }
+    } else {
+      out[idx] = { ...target, blocks: p.blocks ?? target.blocks, figure: p.figure, layout: 'side' as const }
+    }
+  }
+  return out
 }
 
 
 /** Lesson markdown → content slides: one per `##` section, long sections split. */
-function contentSlidesFrom(markdown: string, fallbackTitle: string): { kind: 'content'; title: string; blocks: string[] }[] {
-  const slides: { kind: 'content'; title: string; blocks: string[] }[] = []
+function contentSlidesFrom(markdown: string, fallbackTitle: string, limits: DeckLimits = DEFAULT_LIMITS): ContentSlide[] {
+  const slides: ContentSlide[] = []
   const lines = markdown.split('\n')
   let currentTitle = fallbackTitle
   let blocks: string[] = []
@@ -287,7 +356,7 @@ function contentSlidesFrom(markdown: string, fallbackTitle: string): { kind: 'co
       chars = 0
     }
     for (const b of blocks) {
-      if (chunk.length > 0 && (chunk.length >= MAX_BLOCKS_PER_SLIDE || chars + b.length > MAX_CHARS_PER_SLIDE)) emit()
+      if (chunk.length > 0 && (chunk.length >= limits.maxBlocks || chars + b.length > limits.maxChars)) emit()
       chunk.push(b)
       chars += b.length
     }
@@ -327,7 +396,7 @@ function contentSlidesFrom(markdown: string, fallbackTitle: string): { kind: 'co
   }
   flushTable()
   flushSlide()
-  return slides.slice(0, MAX_CONTENT_SLIDES)
+  return slides.slice(0, limits.maxSlides)
 }
 
 /**
@@ -353,7 +422,8 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   })
   if (!topic) throw new Error(`Unknown topic: ${topicSlug}`)
 
-  const content = contentSlidesFrom(stripMetaSections(topic.textContent ?? ''), topic.title)
+  const summaryMd = stripMetaSections(topic.textContent ?? '')
+  let content = contentSlidesFrom(summaryMd, topic.title)
 
   // The INTERACTIVE LESSON registry holds the real teaching content for most
   // topics (Topic.textContent is often just a summary). When the markdown is
@@ -383,25 +453,27 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
 
   const baseThin = content.length < 6
   const lessonPolls: Slide[] = []
+  // Lesson text is gathered first and chunked once the whole lesson is known:
+  // the slide budget depends on whether the lesson is prose or math and on
+  // how many parts it has (deckLimits).
+  const lessonMd: string[] = []
+  let partCount = 0
+  let limits = DEFAULT_LIMITS
   if (baseThin || polls.length < 2) {
     try {
       const reg = await import('@/data/interactive-lessons/registry')
       const cfg = reg.getInteractiveTopicConfig(topicSlug)
-      const partCount = cfg?.parts.length ?? 0
-      for (let part = 1; part <= partCount && (content.length < MAX_CONTENT_SLIDES || lessonPolls.length < MAX_POLLS); part++) {
+      partCount = cfg?.parts.length ?? 0
+      for (let part = 1; part <= partCount && (baseThin || lessonPolls.length < MAX_POLLS); part++) {
         const data = await reg.getInteractiveLessonData(topicSlug, part).catch(() => null)
         // Decks present the default view: low-yield sections and questions
         // are left out (lesson-yield.ts), as they are for students by default.
         for (const sec of filterSectionsForYield(data?.sections ?? [], false)) {
           const secType = (sec as { type?: string }).type
-          if (secType === 'text' && baseThin && typeof sec.content === 'string' && content.length < MAX_CONTENT_SLIDES) {
+          if (secType === 'text' && baseThin && typeof sec.content === 'string') {
             // Drop lesson-navigation lines ("Part 3 of 7 — …") — deck pacing
             // is the teacher's, not the lesson's.
-            const cleaned = stripMetaSections(stripLowYield(sec.content).replace(/^\*\*Part \d+ of \d+.*$/gm, ''))
-            for (const slideFromLesson of contentSlidesFrom(cleaned, topic.title)) {
-              if (content.length >= MAX_CONTENT_SLIDES) break
-              if (slideFromLesson.blocks.length > 0) content.push(slideFromLesson)
-            }
+            lessonMd.push(stripMetaSections(stripLowYield(sec.content).replace(/^\*\*Part \d+ of \d+.*$/gm, '')))
           }
           const exercise = (sec as { exercise?: { questions?: unknown[] } }).exercise
           for (const q of exercise?.questions ?? []) {
@@ -425,6 +497,16 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
         }
       }
     } catch { /* no lesson registered — fall through to flashcards */ }
+  }
+  if (lessonMd.length > 0) {
+    const prose = !/\$/.test(summaryMd + lessonMd.join(''))
+    limits = deckLimits(prose, partCount)
+    const lessonSlides = lessonMd.flatMap((md) => contentSlidesFrom(md, topic.title, limits)).filter((s) => s.blocks.length > 0)
+    // Topic.textContent is a summary of the same lesson; once the lesson
+    // itself is on the slides, the summary only repeats it (a second "Key
+    // Takeaways" early in the deck). The agenda slide still previews the arc.
+    const summary = lessonSlides.length >= SUMMARY_REDUNDANT_AT ? [] : content
+    content = [...summary, ...lessonSlides].slice(0, limits.maxSlides)
   }
 
   // Still thin after lesson mining: fall back to material every topic
@@ -462,6 +544,15 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   if (content.length === 0 && exampleGroups.length > 0) {
     content.push(...exampleGroups.flat())
     exampleGroups.length = 0
+  }
+
+  // ---- Authored figures lead their sections (src/data/deck-figures) ----
+  try {
+    const { DECK_FIGURES } = await import('@/data/deck-figures')
+    content = applyDeckFigures(content, DECK_FIGURES[topicSlug])
+  } catch (e) {
+    if (e instanceof Error && /matches no section/.test(e.message)) throw e
+    /* registry unavailable — slides without figures */
   }
 
   // ---- Segment the content into teaching beats of ~3 slides (whole units) ----
@@ -507,19 +598,32 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   }
 
   // Budget: same scaling as before (rich deck → up to 5 checks, thin → ≥2).
-  // Matched polls spend the budget first (max 2 per beat, walking in lesson
-  // order); unmatched review polls only top a deck up to its 2-poll minimum.
+  // Matched polls spend the budget first; unmatched review polls only top a
+  // deck up to its 2-poll minimum. When more beats have a matching question
+  // than the budget allows, the polled beats are spread evenly through the
+  // deck (one each) rather than taken front to back — a two-block deck used
+  // to put all 16 checks in its first half. Any budget left after that pass
+  // adds a second poll to beats that have one, again in lesson order.
   const pollTarget = content.length === 0
     ? polls.length
-    : Math.min(polls.length, MAX_POLLS, Math.max(2, Math.ceil(content.length / 2)))
+    : Math.min(polls.length, limits.maxPolls, Math.max(2, Math.ceil(content.length / 2)))
   let pollBudget = pollTarget
   const chosenBySeg = new Map<number, PollSlide[]>()
   let matchedChosen = 0
-  for (let i = 0; i < segments.length && pollBudget > 0; i++) {
-    const ranked = [...(pollsBySeg.get(i) ?? [])].sort((a, b) => b.score - a.score).map((m) => m.poll)
-    const take = ranked.slice(0, Math.min(2, pollBudget))
-    if (take.length > 0) {
-      chosenBySeg.set(i, take)
+  const rankedBySeg = new Map(
+    [...pollsBySeg].map(([i, ms]) => [i, [...ms].sort((a, b) => b.score - a.score).map((m) => m.poll)] as const),
+  )
+  const matchedBeats = [...rankedBySeg.keys()].sort((a, b) => a - b)
+  const spread = matchedBeats.length > pollBudget && pollBudget > 1
+    ? [...new Set(Array.from({ length: pollBudget }, (_, k) => matchedBeats[Math.round((k * (matchedBeats.length - 1)) / (pollBudget - 1))]))]
+    : matchedBeats
+  for (const perBeat of [1, 2]) {
+    for (const i of perBeat === 1 ? spread : matchedBeats) {
+      if (pollBudget <= 0) break
+      const have = chosenBySeg.get(i) ?? []
+      const take = (rankedBySeg.get(i) ?? []).slice(have.length, Math.min(perBeat, have.length + pollBudget))
+      if (take.length === 0) continue
+      chosenBySeg.set(i, [...have, ...take])
       pollBudget -= take.length
       matchedChosen += take.length
     }

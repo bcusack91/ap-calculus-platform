@@ -49,6 +49,20 @@
 
 import { isSafeSvg, svgProblems } from '@/lib/safe-svg'
 
+/**
+ * Tailwind classes that give an authored SVG its theme (light + dark): the
+ * box sets the text colour that `currentColor` strokes follow and styles the
+ * fig-* classes above. Shared by the lesson figure box and slide figures so
+ * one drawing looks the same everywhere. Keep the fig-bg fill equal to the
+ * box background in both modes so open circles read as holes.
+ */
+export const FIGURE_THEME_CLASSES =
+  'bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 ' +
+  '[&_.fig-accent]:text-blue-600 dark:[&_.fig-accent]:text-blue-400 ' +
+  '[&_.fig-accent-2]:text-red-600 dark:[&_.fig-accent-2]:text-red-400 ' +
+  '[&_.fig-muted]:text-gray-400 dark:[&_.fig-muted]:text-gray-500 ' +
+  '[&_.fig-bg]:fill-white dark:[&_.fig-bg]:fill-gray-900'
+
 export interface LessonFigureSpec {
   /** Inline `<svg viewBox=…>…</svg>`; must pass isSafeSvg. */
   svg: string

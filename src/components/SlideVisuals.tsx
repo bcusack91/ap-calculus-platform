@@ -3,6 +3,8 @@
 import { useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 import { MathText } from '@/components/MathText'
 import { STAGE_H, STAGE_W, fitStepDown, MIN_FIT, stageScale } from '@/lib/slide-stage'
+import { FIGURE_THEME_CLASSES, isSafeSvg } from '@/lib/lesson-figure'
+import type { SlideFigure } from '@/lib/slide-deck'
 
 /**
  * Shared visual language for slide decks — used by the live presentation
@@ -252,14 +254,67 @@ export function TitleSlideView({ title, subtitle, palette }: { title: string; su
   )
 }
 
-export function ContentSlideView({ title, blocks, palette }: { title: string; blocks: string[]; palette: DeckPalette }) {
+/**
+ * An authored figure on a slide (src/data/deck-figures): sanitized inline SVG
+ * in the shared figure theme, caption under it. A fixed pixel cap on the
+ * drawing keeps the stage's fit logic deterministic — only the text steps
+ * down when a slide overflows. An SVG that fails isSafeSvg shows its alt text
+ * so the slide is never blank.
+ */
+function SlideFigureView({ figure, side }: { figure: SlideFigure; side: boolean }) {
+  const alt = typeof figure.alt === 'string' ? figure.alt : ''
+  return (
+    <figure className="m-0 flex w-full flex-col items-center gap-3">
+      {isSafeSvg(figure.svg) ? (
+        <div
+          role="img"
+          aria-label={alt}
+          data-testid="slide-figure-svg"
+          className={`w-full rounded-2xl border border-gray-200 p-4 dark:border-gray-700 [&>svg]:mx-auto [&>svg]:block [&>svg]:h-auto [&>svg]:w-full ${side ? '[&>svg]:max-h-[500px]' : '[&>svg]:max-h-[420px]'} ${FIGURE_THEME_CLASSES}`}
+          dangerouslySetInnerHTML={{ __html: figure.svg }}
+        />
+      ) : (
+        <div role="img" aria-label={alt} className="w-full rounded-2xl border-2 border-dashed border-gray-300 p-6 text-center text-[1.125em] text-gray-600 dark:border-gray-600 dark:text-gray-300">
+          {alt || 'Figure unavailable.'}
+        </div>
+      )}
+      {figure.caption && (
+        <figcaption className="text-center text-[1.125em] leading-snug text-gray-600 dark:text-gray-300">
+          <MathText inline text={mdLite(figure.caption)} />
+        </figcaption>
+      )}
+    </figure>
+  )
+}
+
+export function ContentSlideView({ title, blocks, palette, figure, layout }: { title: string; blocks: string[]; palette: DeckPalette; figure?: SlideFigure; layout?: 'side' | 'full' }) {
+  // A figure sits beside short text ('side') or above it, full width ('full').
+  const side = !!figure && (layout ?? (blocks.length > 0 ? 'side' : 'full')) === 'side'
+  const body = renderBlocks(blocks, palette)
   return (
     <div style={SLIDE_IN} className="min-h-full px-14 py-10">
       <div className="mb-6 flex items-center gap-4">
         <span className={`h-[2.25em] w-1.5 shrink-0 rounded-full bg-gradient-to-b ${palette.grad}`} />
         <h2 className="text-[2.25em] font-bold leading-tight text-gray-900 dark:text-white"><MathText inline text={title} /></h2>
       </div>
-      <div className="max-w-[1120px] space-y-4">
+      {figure && side ? (
+        <div className="grid grid-cols-[560px_minmax(0,1fr)] items-start gap-10">
+          <SlideFigureView figure={figure} side />
+          <div className="space-y-4">{body}</div>
+        </div>
+      ) : (
+        <div className="max-w-[1120px] space-y-4">
+          {figure && <SlideFigureView figure={figure} side={false} />}
+          {body}
+        </div>
+      )}
+    </div>
+  )
+}
+
+function renderBlocks(blocks: string[], palette: DeckPalette) {
+  return (
+    <>
         {blocks.map((raw, i) => {
           const b = raw.trim()
           // Display math — centered, on an accent card.
@@ -304,8 +359,7 @@ export function ContentSlideView({ title, blocks, palette }: { title: string; bl
             <MathText key={i} text={mdLite(b)} className="text-[1.625em] leading-snug text-gray-800 dark:text-gray-200" />
           )
         })}
-      </div>
-    </div>
+    </>
   )
 }
 

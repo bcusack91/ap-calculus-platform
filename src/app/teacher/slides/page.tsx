@@ -4,6 +4,7 @@ import { Suspense, useCallback, useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import { deckPalette, SlideMotionStyles, SlideStage, TitleSlideView, ContentSlideView, QuizSlideView, PollSlideView } from '@/components/SlideVisuals'
+import type { SlideFigure } from '@/lib/slide-deck'
 
 /**
  * Teacher slide library — /teacher/slides[?topic=<slug>].
@@ -19,7 +20,7 @@ import { deckPalette, SlideMotionStyles, SlideStage, TitleSlideView, ContentSlid
 
 type Slide =
   | { kind: 'title'; title: string; subtitle: string }
-  | { kind: 'content'; title: string; blocks: string[] }
+  | { kind: 'content'; title: string; blocks: string[]; figure?: SlideFigure; layout?: 'side' | 'full' }
   | { kind: 'poll'; question: string; options: string[]; correctIndex: number; explanation: string }
   | { kind: 'quiz'; topicSlug: string; title: string }
 
@@ -155,7 +156,7 @@ function SlideLibrary() {
                     <TitleSlideView title={slide.title} subtitle={slide.subtitle} palette={palette} />
                   )}
                   {slide?.kind === 'content' && (
-                    <ContentSlideView title={slide.title} blocks={slide.blocks} palette={palette} />
+                    <ContentSlideView title={slide.title} blocks={slide.blocks} palette={palette} figure={slide.figure} layout={slide.layout} />
                   )}
                   {slide?.kind === 'poll' && (
                     <PollSlideView
