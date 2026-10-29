@@ -50,8 +50,6 @@ const rich = (...parts: RichPart[]) => {
   }
   return out
 }
-const KM = rich('K', ['m'])
-const VMAX = rich('V', ['max'])
 
 /** Polyline path of y = f(x) for x in [0, xmax] px from origin (ox, oy), y up. */
 const curvePath = (ox: number, oy: number, xmax: number, step: number, f: (x: number) => number) => {

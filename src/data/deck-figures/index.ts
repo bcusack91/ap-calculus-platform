@@ -24,6 +24,18 @@ import { mcatOrganellesFigures } from './mcat-bb-organelles'
 import { mcatCellCycleFigures } from './mcat-bb-cell-cycle'
 import { mcatCellSignalingFigures } from './mcat-bb-cell-signaling'
 import { mcatDnaReplicationFigures } from './mcat-bb-dna-replication'
+import { mcatTranscriptionFigures } from './mcat-bb-transcription'
+import { mcatTranslationFigures } from './mcat-bb-translation'
+import { mcatBiotechnologyFigures } from './mcat-bb-biotechnology'
+import { mcatMolecularBiologyFigures } from './mcat-bb-molecular-biology'
+import { mcatMendelianFigures } from './mcat-bb-mendelian'
+import { mcatPopulationGeneticsFigures } from './mcat-bb-population-genetics'
+import { mcatNaturalSelectionFigures } from './mcat-bb-natural-selection'
+import { mcatImmunologyFigures } from './mcat-bb-immunology'
+import { mcatGeneticsEvolutionFigures } from './mcat-bb-genetics-evolution'
+import { mcatBacteriaFigures } from './mcat-bb-bacteria'
+import { mcatVirusesFigures } from './mcat-bb-viruses'
+import { mcatAntimicrobialsFigures } from './mcat-bb-antimicrobials'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -99,4 +111,16 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-cell-biology-cell-cycle-mcat': mcatCellCycleFigures,
   'mcat-cell-biology-signaling-mcat': mcatCellSignalingFigures,
   'mcat-molecular-biology-dna-replication-mcat': mcatDnaReplicationFigures,
+  'mcat-molecular-biology-transcription-mcat': mcatTranscriptionFigures,
+  'mcat-molecular-biology-translation-mcat': mcatTranslationFigures,
+  'mcat-molecular-biology-biotechnology-mcat': mcatBiotechnologyFigures,
+  'mcat-molecular-biology-mcat': mcatMolecularBiologyFigures,
+  'mcat-genetics-evolution-mendelian-mcat': mcatMendelianFigures,
+  'mcat-genetics-evolution-population-genetics-mcat': mcatPopulationGeneticsFigures,
+  'mcat-genetics-evolution-natural-selection-mcat': mcatNaturalSelectionFigures,
+  'mcat-genetics-evolution-immunology-mcat': mcatImmunologyFigures,
+  'mcat-genetics-evolution-mcat': mcatGeneticsEvolutionFigures,
+  'mcat-microbiology-bacteria-mcat': mcatBacteriaFigures,
+  'mcat-microbiology-viruses-mcat': mcatVirusesFigures,
+  'mcat-microbiology-antimicrobials-mcat': mcatAntimicrobialsFigures,
 }
