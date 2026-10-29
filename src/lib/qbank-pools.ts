@@ -183,8 +183,8 @@ async function mcatTopicPool(slug: string) {
 
 function mcatPassageUnit(p: MCATPassage): QbankUnit {
   const dp = toTestPassage(p)
-  const figure = dp.figureMarkdown || dp.dataTable || dp.figure
-    ? { ...(dp.figureMarkdown ? { figureMarkdown: dp.figureMarkdown } : {}), ...(dp.dataTable ? { dataTable: dp.dataTable } : {}), ...(dp.figure ? { figure: dp.figure } : {}) }
+  const figure = dp.figureMarkdown || dp.chart || dp.dataTable || dp.figure
+    ? { ...(dp.figureMarkdown ? { figureMarkdown: dp.figureMarkdown } : {}), ...(dp.chart ? { chart: dp.chart } : {}), ...(dp.dataTable ? { dataTable: dp.dataTable } : {}), ...(dp.figure ? { figure: dp.figure } : {}) }
     : undefined
   const passage: QbankPassage = { id: dp.id, title: dp.title, body: dp.body, ...(figure ? { figure } : {}) }
   const discipline = mcatPassageDiscipline(p)

@@ -31,7 +31,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
       kind: 'line',
       xLabel: 'Substrate concentration [S]',
       xUnit: 'mM',
-      yLabel: 'Initial velocity $v_{0}$',
+      yLabel: 'Initial velocity v₀',
       yUnit: 'µmol/min',
       seriesLabel: 'Condition A (no additive)',
       xValues: [0, 0.25, 0.5, 1.0, 1.5, 2.0, 3.0, 5.0, 8.0],
@@ -742,7 +742,7 @@ export const CHEM_PHYS_PASSAGES: MCATPassage[] = [
     passageText:
       'The reduced cofactor NADH absorbs ultraviolet light strongly at 340 nm, whereas its oxidized form $\\text{NAD}^+$ does not. Biochemists exploit this to follow dehydrogenase reactions in real time. A student measured NADH concentrations using the Beer–Lambert law, $A = \\varepsilon b c$, where $A$ is the (unitless) absorbance, $\\varepsilon$ is the molar absorptivity, $b$ is the path length, and $c$ is the molar concentration.\n\nFor NADH at 340 nm, $\\varepsilon = 6{,}200\\ \\text{M}^{-1}\\text{cm}^{-1}$. The student used a cuvette with a standard 1.0 cm path length and first confirmed the spectrophotometer was blanked against buffer alone. Absorbance is related to the fraction of light transmitted, $T$, by $A = -\\log_{10} T$; an absorbance of 1.0 therefore means only 10% of the incident light passes through.\n\nThe student prepared a dilution series of pure NADH and recorded the absorbance of each, then used an enzyme assay in which NADH is consumed, watching the 340 nm signal fall over time. The student verified that all samples fell within the linear range of the instrument (absorbance below about 1.0), where absorbance is directly proportional to concentration, before quantifying any unknown.',
     chart: {
-      title: 'Figure 1. Beer–Lambert calibration of NADH at 340 nm (ε = 6200 $M^{-1}cm^{-1}$, b = 1.0 cm)',
+      title: 'Figure 1. Beer–Lambert calibration of NADH at 340 nm (ε = 6200 $\\text{M}^{-1}\\,\\text{cm}^{-1}$, b = 1.0 cm)',
       kind: 'line',
       xLabel: 'NADH concentration',
       xUnit: 'µM',

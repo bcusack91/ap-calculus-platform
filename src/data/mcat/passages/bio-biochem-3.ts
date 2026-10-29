@@ -268,9 +268,9 @@ export const BIO_BIOCHEM_PASSAGES_3: MCATPassage[] = [
     "chart": {
       "title": "Figure 1. Protease activity per cell as a function of culture density",
       "kind": "line",
-      "xLabel": "Culture density $(\\text{OD}_{600})$",
+      "xLabel": "Culture density (OD₆₀₀)",
       "yLabel": "Protease activity",
-      "yUnit": "units per $10^8$ cells",
+      "yUnit": "units per 10⁸ cells",
       "seriesLabel": "Wild type",
       "xValues": [0.05, 0.1, 0.2, 0.4, 0.8, 1.6],
       "yValues": [2, 3, 9, 48, 120, 140],

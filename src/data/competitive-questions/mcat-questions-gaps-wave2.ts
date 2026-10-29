@@ -1089,7 +1089,7 @@ export const gapsWave2Questions: McatBankQuestion[] = [
   },
   {
     "subtopicSlug": "mcat-physics-atomic-nuclear-mcat",
-    "question": "Which barrier is sufficient to stop typical alpha particles?",
+    "question": "Which is the thinnest barrier listed that still stops typical alpha particles?",
     "options": [
       "A meter of concrete",
       "Several centimeters of lead",
@@ -1097,7 +1097,7 @@ export const gapsWave2Questions: McatBankQuestion[] = [
       "A sheet of paper"
     ],
     "correctAnswer": 3,
-    "explanation": "Alpha particles are heavy and doubly charged, so they ionize densely and exhaust their energy within micrometers of solid material — a sheet of paper or the dead outer layer of skin stops them. Aluminium is used against beta particles, and lead or concrete against gamma rays.",
+    "explanation": "Alpha particles are heavy and doubly charged, so they ionize densely and exhaust their energy within micrometers of solid material — a sheet of paper or the dead outer layer of skin stops them. Every barrier listed would stop them, but the others are far thicker than needed: a few millimeters of aluminum is the usual shield for beta particles, and lead or concrete is used against gamma rays.",
     "difficulty": "easy"
   },
   {

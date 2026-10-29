@@ -539,7 +539,7 @@ export const BIO_BIOCHEM_PASSAGES_2: MCATPassage[] = [
     "chart": {
       "title": "Figure 1. Oxyhemoglobin saturation versus pO2 for three red cell preparations",
       "kind": "line",
-      "xLabel": "Partial pressure of oxygen $(pO_2)$",
+      "xLabel": "Partial pressure of oxygen (pO₂)",
       "xUnit": "mmHg",
       "yLabel": "Hemoglobin saturation",
       "yUnit": "%",

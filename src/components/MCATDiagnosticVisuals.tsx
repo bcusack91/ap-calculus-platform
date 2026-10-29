@@ -13,6 +13,7 @@ import { preloadKatex } from '@/lib/katex-lazy'
 import { renderRichText } from '@/lib/render-rich-text'
 import { isSafeSvg } from '@/lib/safe-svg'
 import MCATFigure from '@/components/MCATFigure'
+import { MathText } from '@/components/MathText'
 import type { MCATFigureSpec } from '@/data/mcat/types'
 
 type Series = { label: string; yValues: number[] }
@@ -58,11 +59,13 @@ export interface DiagnosticPassage {
 
 /** An authored SVG diagram, drawn in the text colour so it reads in light and dark mode. */
 export function SafeSvgFigure({ svg, className }: { svg: unknown; className?: string }) {
+  // Stable object: React 19 rewrites innerHTML whenever this prop's identity changes.
+  const inner = useMemo(() => ({ __html: typeof svg === 'string' ? svg : '' }), [svg])
   if (!isSafeSvg(svg)) return null
   return (
     <div
       className={className ?? 'mt-4 overflow-x-auto rounded-xl border border-gray-200 bg-white p-3 text-gray-800 dark:border-gray-700 dark:bg-gray-900/40 dark:text-gray-100 [&>svg]:mx-auto [&>svg]:h-auto [&>svg]:w-full [&>svg]:max-w-xl'}
-      dangerouslySetInnerHTML={{ __html: svg }}
+      dangerouslySetInnerHTML={inner}
     />
   )
 }
@@ -83,7 +86,11 @@ export function RichTextBlock({ text, className }: { text: string; className?: s
     () => renderRichText(text),
     [text, ready], // eslint-disable-line react-hooks/exhaustive-deps
   )
-  return <div className={className} dangerouslySetInnerHTML={{ __html: html }} />
+  // React 19 compares this prop by identity, so a fresh {__html} on every
+  // render rewrites the DOM on each timer tick (resetting table scroll and
+  // text selection). Keep the object stable while the HTML is unchanged.
+  const inner = useMemo(() => ({ __html: html }), [html])
+  return <div className={className} dangerouslySetInnerHTML={inner} />
 }
 
 /** A passage's body, authored figure block, and chart/table. */
@@ -165,7 +172,7 @@ export function DataVisual({
     <div className="mt-4 flex flex-col gap-4">
       {table && (
         <div className="rounded-xl border border-cyan-200 bg-white p-4 dark:border-cyan-800 dark:bg-gray-900/40">
-          <p className="text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">{table.title}</p>
+          <p className="text-xs font-semibold tracking-wide text-cyan-700 dark:text-cyan-300"><MathText text={table.title} inline /></p>
           <div className="mt-3 overflow-x-auto">
             <table className="min-w-full border-separate border-spacing-0 text-sm">
               <thead>
@@ -174,10 +181,10 @@ export function DataVisual({
                     {table.pointLabel ?? 'Condition'}
                   </th>
                   <th className="border border-gray-200 bg-gray-50 px-3 py-2 text-left font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200">
-                    {table.xLabel} ({table.xUnit})
+                    {table.xLabel}{table.xUnit ? ` (${table.xUnit})` : ''}
                   </th>
                   <th className={`border border-gray-200 bg-gray-50 px-3 py-2 text-left font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 ${(table.comparisonSeries ?? []).length === 0 ? 'rounded-tr-lg' : ''}`}>
-                    {table.yLabel} ({table.yUnit})
+                    {table.yLabel}{table.yUnit ? ` (${table.yUnit})` : ''}
                   </th>
                   {(table.comparisonSeries ?? []).map((s, idx) => (
                     <th key={`thead-cmp-${idx}`} className={`border border-gray-200 bg-gray-50 px-3 py-2 text-left font-semibold text-gray-700 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200 ${idx === (table.comparisonSeries ?? []).length - 1 ? 'rounded-tr-lg' : ''}`}>
@@ -207,13 +214,15 @@ export function DataVisual({
 
       {figure && (
         <div className="rounded-xl border border-cyan-200 bg-white p-4 dark:border-cyan-800 dark:bg-gray-900/40">
-          <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-cyan-700 dark:text-cyan-300">{figure.title}</p>
+          <p className="mb-3 text-xs font-semibold tracking-wide text-cyan-700 dark:text-cyan-300"><MathText text={figure.title} inline /></p>
           <div className="rounded-lg border border-dashed border-cyan-200 bg-cyan-50/50 p-3 dark:border-cyan-900 dark:bg-cyan-950/20">
             <svg viewBox={`0 0 ${chartWidth} ${chartHeight}`} className="w-full" style={{ height: 'auto', minHeight: '180px' }}>
               {/* Y-axis gridlines and tick labels */}
               {[0, 0.25, 0.5, 0.75, 1].map((fraction) => {
                 const y = padTop + fraction * plotHeight
-                const tickValue = (maxY - fraction * yRange).toFixed(1)
+                // Enough decimals that a quarter-step tick is not rounded (0.25 used to read "0.3").
+                const raw = maxY - fraction * yRange
+                const tickValue = Number(raw.toFixed(yRange < 4 ? 2 : 1)).toString()
                 return (
                   <g key={`grid-${fraction}`}>
                     <line
@@ -273,7 +282,7 @@ export function DataVisual({
                 fontWeight="600"
                 className="fill-gray-600 dark:fill-gray-300"
               >
-                {figure.xLabel ?? 'Condition'} ({figure.xUnit})
+                {figure.xLabel ?? 'Condition'}{figure.xUnit ? ` (${figure.xUnit})` : ''}
               </text>
 
               {/* Y-axis title (rotated) */}
@@ -286,7 +295,7 @@ export function DataVisual({
                 className="fill-gray-600 dark:fill-gray-300"
                 transform={`translate(12, ${padTop + plotHeight / 2}) rotate(-90)`}
               >
-                {figure.yLabel ?? figure.seriesLabel} ({figure.yUnit})
+                {figure.yLabel ?? figure.seriesLabel}{figure.yUnit ? ` (${figure.yUnit})` : ''}
               </text>
             </svg>
 

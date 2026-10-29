@@ -10,7 +10,6 @@ import { shuffleOptions } from '@/lib/shuffle-options'
 import { sectionScaledScore } from '@/lib/mcat-scoring'
 import { CARS_PASSAGES, SECTION_PASSAGES } from '../mcat/passages'
 import type { MCATPassage } from '../mcat/types'
-import { chartToPassageBlocks } from './diagnostic-generator'
 import type { DiagnosticPassage } from '@/components/MCATDiagnosticVisuals'
 
 /* ------------------------------------------------------------------ */
@@ -290,13 +289,16 @@ export function topicSlugForPassage(p: MCATPassage): string {
 }
 
 export function toTestPassage(p: MCATPassage): DiagnosticPassage {
-  const blocks = p.chart ? chartToPassageBlocks(p.chart) : null
+  // An authored chart is drawn by MCATFigure, as on the full-length exam: it
+  // keeps categorical axes, units and annotations. (The old route through
+  // chartToPassageBlocks drew a simplified table + line that showed raw $…$
+  // titles, an empty "()" unit and ticks rounded to one decimal.)
   return {
     id: `authored-${p.id}`,
     title: p.title,
-    body: blocks?.legend ? `${p.passageText}\n\n${blocks.legend}` : p.passageText,
+    body: p.passageText,
     ...(p.figure ? { figureMarkdown: p.figure } : {}),
-    ...(blocks ? { dataTable: blocks.dataTable, figure: blocks.figure } : {}),
+    ...(p.chart ? { chart: p.chart } : {}),
   }
 }
 

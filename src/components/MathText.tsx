@@ -32,6 +32,10 @@ export function MathText({ text, className, inline }: MathTextProps) {
   // recompute once it's ready even though `ready` isn't read in the callback.
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const html = useMemo(() => renderRichText(text), [text, ready])
+  // React 19 compares this prop by identity, so a fresh {__html} on every
+  // render rewrites the DOM on each timer tick (resetting table scroll and
+  // text selection). Keep the object stable while the HTML is unchanged.
+  const inner = useMemo(() => ({ __html: html }), [html])
   const Tag = inline ? 'span' : 'div'
-  return <Tag className={className} dangerouslySetInnerHTML={{ __html: html }} />
+  return <Tag className={className} dangerouslySetInnerHTML={inner} />
 }
