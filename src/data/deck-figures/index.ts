@@ -59,6 +59,19 @@ import { mcatMagnetismFigures } from './mcat-cp-magnetism'
 import { mcatOpticsFigures } from './mcat-cp-optics'
 import { mcatElectrochemistryFigures } from './mcat-cp-electrochemistry'
 import { mcatElectricityFigures } from './mcat-cp-electricity'
+import { mcatAtomicStructureFigures } from './mcat-cp-atomic-structure'
+import { mcatStoichiometryFigures } from './mcat-cp-stoichiometry'
+import { mcatThermodynamicsFigures } from './mcat-cp-thermodynamics'
+import { mcatChemKineticsFigures } from './mcat-cp-chem-kinetics'
+import { mcatAcidBaseFigures } from './mcat-cp-acid-base'
+import { mcatGeneralChemistryFigures } from './mcat-cp-general-chemistry'
+import { mcatFunctionalGroupsFigures } from './mcat-cp-functional-groups'
+import { mcatStereochemistryFigures } from './mcat-cp-stereochemistry'
+import { mcatSubstitutionEliminationFigures } from './mcat-cp-substitution-elimination'
+import { mcatCarbonylsFigures } from './mcat-cp-carbonyls'
+import { mcatSpectroscopyFigures } from './mcat-cp-spectroscopy'
+import { mcatOrganicChemistryFigures } from './mcat-cp-organic-chemistry'
+import { mcatLabMethodsFigures } from './mcat-cp-lab-methods'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -170,4 +183,17 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-physics-electricity-optics-mcat': mcatOpticsFigures,
   'mcat-physics-electricity-electrochemistry-mcat': mcatElectrochemistryFigures,
   'mcat-physics-electricity-mcat': mcatElectricityFigures,
+  'mcat-general-chemistry-atomic-structure-mcat': mcatAtomicStructureFigures,
+  'mcat-general-chemistry-stoichiometry-mcat': mcatStoichiometryFigures,
+  'mcat-general-chemistry-thermodynamics-mcat': mcatThermodynamicsFigures,
+  'mcat-general-chemistry-kinetics-mcat': mcatChemKineticsFigures,
+  'mcat-general-chemistry-acid-base-equilibrium-mcat': mcatAcidBaseFigures,
+  'mcat-general-chemistry-mcat': mcatGeneralChemistryFigures,
+  'mcat-organic-chemistry-functional-groups-mcat': mcatFunctionalGroupsFigures,
+  'mcat-organic-chemistry-stereochemistry-mcat': mcatStereochemistryFigures,
+  'mcat-organic-chemistry-sn1-sn2-e1-e2-mcat': mcatSubstitutionEliminationFigures,
+  'mcat-organic-chemistry-carbonyls-mcat': mcatCarbonylsFigures,
+  'mcat-organic-chemistry-spectroscopy-mcat': mcatSpectroscopyFigures,
+  'mcat-organic-chemistry-mcat': mcatOrganicChemistryFigures,
+  'mcat-lab-methods-mcat': mcatLabMethodsFigures,
 }
