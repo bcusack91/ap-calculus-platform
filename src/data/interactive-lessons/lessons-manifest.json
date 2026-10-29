@@ -3036,6 +3036,16 @@
     ]
   },
   {
+    "slug": "mcat-microbiology-genetics-mcat",
+    "importPath": "./mcat-mcat-microbiology-genetics-mcat",
+    "partTitles": [
+      "The Bacterial Genome, Mutation & Selection",
+      "Horizontal Gene Transfer in Depth",
+      "Mobile Elements, Defense & Regulation",
+      "Viral Genetics & MCAT Integration"
+    ]
+  },
+  {
     "slug": "mcat-cell-biology-cell-cycle-mcat",
     "importPath": "./mcat-mcat-cell-biology-cell-cycle-mcat",
     "partTitles": [

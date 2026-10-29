@@ -232,7 +232,6 @@ const slugAliases: Record<string, string> = {
   'mcat-cars-strategy-elimination-mcat': 'mcat-cars-strategy-mcat',
   'mcat-cars-strategy-main-idea-inference-mcat': 'mcat-cars-strategy-mcat',
   'mcat-cars-strategy-timing-mcat': 'mcat-cars-strategy-mcat',
-  'mcat-microbiology-genetics-mcat': 'mcat-microbiology-mcat',
   'mcat-science-passage-strategy-discrete-questions-mcat': 'mcat-science-passage-strategy-mcat',
   'mcat-science-passage-strategy-experimental-design-mcat': 'mcat-science-passage-strategy-mcat',
   'mcat-science-passage-strategy-figures-mcat': 'mcat-science-passage-strategy-mcat',

@@ -115,6 +115,7 @@ export const LESSON_BUILT_EXIT_TOPICS = [
   'act-reading-science-tips-act',
   'act-test-day-strategy-act',
   'act-math-strategy-act',
+  'mcat-microbiology-genetics-mcat',
 ] as const
 
 function shuffle<T>(items: T[]): T[] {

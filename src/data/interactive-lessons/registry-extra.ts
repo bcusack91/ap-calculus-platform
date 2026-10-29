@@ -2780,6 +2780,15 @@ export const registryExtra: Record<string, InteractiveTopicConfig> = {
       { title: 'Viral Evolution, Subviral Agents & MCAT Integration', loader: () => import('./mcat-mcat-microbiology-viruses-mcat').then((m) => m.parts[3]) },
     ],
   },
+  'mcat-microbiology-genetics-mcat': {
+    completionDestination: 'competitive',
+    parts: [
+      { title: 'The Bacterial Genome, Mutation & Selection', loader: () => import('./mcat-mcat-microbiology-genetics-mcat').then((m) => m.parts[0]) },
+      { title: 'Horizontal Gene Transfer in Depth', loader: () => import('./mcat-mcat-microbiology-genetics-mcat').then((m) => m.parts[1]) },
+      { title: 'Mobile Elements, Defense & Regulation', loader: () => import('./mcat-mcat-microbiology-genetics-mcat').then((m) => m.parts[2]) },
+      { title: 'Viral Genetics & MCAT Integration', loader: () => import('./mcat-mcat-microbiology-genetics-mcat').then((m) => m.parts[3]) },
+    ],
+  },
   'mcat-cell-biology-cell-cycle-mcat': {
     completionDestination: 'competitive',
     parts: [
