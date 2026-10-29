@@ -72,6 +72,10 @@ import { mcatCarbonylsFigures } from './mcat-cp-carbonyls'
 import { mcatSpectroscopyFigures } from './mcat-cp-spectroscopy'
 import { mcatOrganicChemistryFigures } from './mcat-cp-organic-chemistry'
 import { mcatLabMethodsFigures } from './mcat-cp-lab-methods'
+import { mcatResearchMethodsFigures } from './mcat-st-research-methods'
+import { mcatBiostatisticsFigures } from './mcat-st-biostatistics'
+import { mcatQuantitativeSkillsFigures } from './mcat-st-quantitative-skills'
+import { mcatSciencePassageStrategyFigures } from './mcat-st-science-passage-strategy'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -196,4 +200,9 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-organic-chemistry-spectroscopy-mcat': mcatSpectroscopyFigures,
   'mcat-organic-chemistry-mcat': mcatOrganicChemistryFigures,
   'mcat-lab-methods-mcat': mcatLabMethodsFigures,
+  // Strategy (only the decks whose lessons are picture-shaped; CARS and test-day stay text)
+  'mcat-research-methods-mcat': mcatResearchMethodsFigures,
+  'mcat-biostatistics-mcat': mcatBiostatisticsFigures,
+  'mcat-quantitative-skills-mcat': mcatQuantitativeSkillsFigures,
+  'mcat-science-passage-strategy-mcat': mcatSciencePassageStrategyFigures,
 }
