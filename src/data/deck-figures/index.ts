@@ -207,4 +207,9 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-biostatistics-mcat': mcatBiostatisticsFigures,
   'mcat-quantitative-skills-mcat': mcatQuantitativeSkillsFigures,
   'mcat-science-passage-strategy-mcat': mcatSciencePassageStrategyFigures,
+  // These four topics teach the parent's lesson (an alias in registry.ts), so they share its figures.
+  'mcat-science-passage-strategy-discrete-questions-mcat': mcatSciencePassageStrategyFigures,
+  'mcat-science-passage-strategy-experimental-design-mcat': mcatSciencePassageStrategyFigures,
+  'mcat-science-passage-strategy-figures-mcat': mcatSciencePassageStrategyFigures,
+  'mcat-science-passage-strategy-reading-mcat': mcatSciencePassageStrategyFigures,
 }
