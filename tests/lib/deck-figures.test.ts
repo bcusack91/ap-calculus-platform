@@ -9,7 +9,7 @@ import { figureProblems } from '@/lib/lesson-figure'
 import { DECK_FIGURES } from '@/data/deck-figures'
 
 const fig: SlideFigure = { svg: '<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="2" fill="currentColor"/></svg>', alt: 'a dot' }
-const c = (title: string, blocks: string[] = ['x']) => ({ kind: 'content' as const, title, blocks })
+const c = (title: string, blocks: string[] = ['x']): Extract<Slide, { kind: 'content' }> => ({ kind: 'content', title, blocks })
 const table = '| a | b |\n|---|---|\n| 1 | 2 |'
 
 describe('authored deck figures', () => {

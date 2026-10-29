@@ -47,6 +47,12 @@ import { mcatRenalFigures } from './mcat-bb-renal'
 import { mcatEndocrineNervousFigures } from './mcat-bb-endocrine-nervous'
 import { mcatOrganSystemsFigures } from './mcat-bb-organ-systems'
 import { mcatCellBiologyFigures } from './mcat-bb-cell-biology'
+import { mcatKinematicsFigures } from './mcat-cp-kinematics'
+import { mcatForcesFigures } from './mcat-cp-forces'
+import { mcatWorkEnergyFigures } from './mcat-cp-work-energy'
+import { mcatMomentumFigures } from './mcat-cp-momentum'
+import { mcatFluidsWavesFigures } from './mcat-cp-fluids-waves'
+import { mcatMechanicsFigures } from './mcat-cp-mechanics'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -145,4 +151,11 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-organ-systems-endocrine-nervous-mcat': mcatEndocrineNervousFigures,
   'mcat-organ-systems-mcat': mcatOrganSystemsFigures,
   'mcat-cell-biology-mcat': mcatCellBiologyFigures,
+  // Chemistry & Physics
+  'mcat-physics-mechanics-kinematics-mcat': mcatKinematicsFigures,
+  'mcat-physics-mechanics-forces-newton-laws-mcat': mcatForcesFigures,
+  'mcat-physics-mechanics-work-energy-power-mcat': mcatWorkEnergyFigures,
+  'mcat-physics-mechanics-momentum-collisions-mcat': mcatMomentumFigures,
+  'mcat-physics-mechanics-fluids-waves-mcat': mcatFluidsWavesFigures,
+  'mcat-physics-mechanics-mcat': mcatMechanicsFigures,
 }

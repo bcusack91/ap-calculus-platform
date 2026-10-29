@@ -283,17 +283,19 @@ const CONT = ' (cont.)'
  * leads its section; lead/after slides share the section's unit key, which
  * keeps the picture and its words on the same side of every poll.
  */
-export function applyDeckFigures(
-  content: readonly ContentSlide[],
+export function applyDeckFigures<T extends Slide>(
+  slides: readonly T[],
   placements: readonly { at: string; figure: SlideFigure; mode?: 'lead' | 'after' | 'replace-table' | 'beside'; blocks?: string[] }[] | undefined,
-): ContentSlide[] {
-  if (!placements?.length) return [...content]
-  const out: ContentSlide[] = [...content]
+): T[] {
+  if (!placements?.length) return [...slides]
+  // Works on a pure content list (the generator) and on a whole deck (a
+  // curated deck, where title/poll/quiz slides sit between the content).
+  const out = [...slides] as Slide[]
   for (const p of placements) {
     const needle = p.at.trim().toLowerCase()
-    const idx = out.findIndex((s) => !s.title.endsWith(CONT.trim()) && slideUnitKey(s.title).toLowerCase().startsWith(needle))
+    const idx = out.findIndex((s) => s.kind === 'content' && !s.title.endsWith(CONT.trim()) && slideUnitKey(s.title).toLowerCase().startsWith(needle))
     if (idx < 0) throw new Error(`deck figure "${p.at}" matches no section`)
-    const target = out[idx]
+    const target = out[idx] as ContentSlide
     const base = slideUnitKey(target.title)
     const mode = p.mode ?? 'lead'
     if (mode === 'lead') {
@@ -309,7 +311,7 @@ export function applyDeckFigures(
       out[idx] = { ...target, blocks: p.blocks ?? target.blocks, figure: p.figure, layout: 'side' as const }
     }
   }
-  return out
+  return out as T[]
 }
 
 
@@ -408,8 +410,15 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   try {
     const { CURATED_DECKS } = await import('@/data/curated-decks')
     const curated = CURATED_DECKS[topicSlug]
-    if (curated) return curated
-  } catch { /* registry unavailable — fall through to generation */ }
+    if (curated) {
+      // Figures apply to a curated deck too (Kinematics, 2026-10-29).
+      const { DECK_FIGURES } = await import('@/data/deck-figures')
+      return { title: curated.title, slides: applyDeckFigures(curated.slides, DECK_FIGURES[topicSlug]) }
+    }
+  } catch (e) {
+    if (e instanceof Error && /matches no section/.test(e.message)) throw e
+    /* registry unavailable — fall through to generation */
+  }
 
   const topic = await prisma.topic.findUnique({
     where: { slug: topicSlug },
