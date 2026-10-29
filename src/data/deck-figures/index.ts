@@ -36,6 +36,12 @@ import { mcatGeneticsEvolutionFigures } from './mcat-bb-genetics-evolution'
 import { mcatBacteriaFigures } from './mcat-bb-bacteria'
 import { mcatVirusesFigures } from './mcat-bb-viruses'
 import { mcatAntimicrobialsFigures } from './mcat-bb-antimicrobials'
+import { mcatMicrobiologyFigures } from './mcat-bb-microbiology'
+import { mcatMusculoskeletalFigures } from './mcat-bb-musculoskeletal'
+import { mcatReproductiveFigures } from './mcat-bb-reproductive'
+import { mcatSensoryFigures } from './mcat-bb-sensory'
+import { mcatEmbryologyFigures } from './mcat-bb-embryology'
+import { mcatAnatomyPhysiologyFigures } from './mcat-bb-anatomy-physiology'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -123,4 +129,10 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-microbiology-bacteria-mcat': mcatBacteriaFigures,
   'mcat-microbiology-viruses-mcat': mcatVirusesFigures,
   'mcat-microbiology-antimicrobials-mcat': mcatAntimicrobialsFigures,
+  'mcat-microbiology-mcat': mcatMicrobiologyFigures,
+  'mcat-anatomy-physiology-musculoskeletal-mcat': mcatMusculoskeletalFigures,
+  'mcat-anatomy-physiology-reproductive-mcat': mcatReproductiveFigures,
+  'mcat-anatomy-physiology-sensory-mcat': mcatSensoryFigures,
+  'mcat-anatomy-physiology-embryology-mcat': mcatEmbryologyFigures,
+  'mcat-anatomy-physiology-mcat': mcatAnatomyPhysiologyFigures,
 }

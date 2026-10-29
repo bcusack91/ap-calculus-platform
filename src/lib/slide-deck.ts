@@ -549,13 +549,12 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   }
 
   // ---- Authored figures lead their sections (src/data/deck-figures) ----
-  try {
-    const { DECK_FIGURES } = await import('@/data/deck-figures')
-    content = applyDeckFigures(content, DECK_FIGURES[topicSlug])
-  } catch (e) {
-    if (e instanceof Error && /matches no section/.test(e.message)) throw e
-    /* registry unavailable — slides without figures */
-  }
+  // Not wrapped in try/catch on purpose: a figure file that fails to import
+  // (a half-edited sibling, a type error) used to be swallowed here, and the
+  // deck was silently stored with NO figures (found 2026-10-29). A broken
+  // registry must fail the regeneration run instead.
+  const { DECK_FIGURES } = await import('@/data/deck-figures')
+  content = applyDeckFigures(content, DECK_FIGURES[topicSlug])
 
   // ---- Segment the content into teaching beats of ~3 slides (whole units) ----
   const segments: ContentSlide[][] = segmentContent(content, SEGMENT_SIZE)
