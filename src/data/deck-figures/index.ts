@@ -53,6 +53,12 @@ import { mcatWorkEnergyFigures } from './mcat-cp-work-energy'
 import { mcatMomentumFigures } from './mcat-cp-momentum'
 import { mcatFluidsWavesFigures } from './mcat-cp-fluids-waves'
 import { mcatMechanicsFigures } from './mcat-cp-mechanics'
+import { mcatElectrostaticsFigures } from './mcat-cp-electrostatics'
+import { mcatCircuitsFigures } from './mcat-cp-circuits'
+import { mcatMagnetismFigures } from './mcat-cp-magnetism'
+import { mcatOpticsFigures } from './mcat-cp-optics'
+import { mcatElectrochemistryFigures } from './mcat-cp-electrochemistry'
+import { mcatElectricityFigures } from './mcat-cp-electricity'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -158,4 +164,10 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-physics-mechanics-momentum-collisions-mcat': mcatMomentumFigures,
   'mcat-physics-mechanics-fluids-waves-mcat': mcatFluidsWavesFigures,
   'mcat-physics-mechanics-mcat': mcatMechanicsFigures,
+  'mcat-physics-electricity-electrostatics-mcat': mcatElectrostaticsFigures,
+  'mcat-physics-electricity-circuits-mcat': mcatCircuitsFigures,
+  'mcat-physics-electricity-magnetism-mcat': mcatMagnetismFigures,
+  'mcat-physics-electricity-optics-mcat': mcatOpticsFigures,
+  'mcat-physics-electricity-electrochemistry-mcat': mcatElectrochemistryFigures,
+  'mcat-physics-electricity-mcat': mcatElectricityFigures,
 }
