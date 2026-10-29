@@ -266,8 +266,8 @@
  {
   "front": "The Luria-Delbruck fluctuation test showed resistant mutants arise {{c1::before}} exposure to the selective agent.",
   "fp": "1606d6f5608c",
-  "yield": "MEDIUM",
-  "why": "Luria-Delbruck fluctuation test duplicates the replica-plating logic; skippable"
+  "yield": "LOW",
+  "why": "Luria-Delbruck eponym is low-yield in all three microbiology lessons (owner, 2026-10-29)"
  },
  {
   "front": "The number of complementation groups in a mutant screen equals the number of {{c1::genes}} identified in the pathway.",

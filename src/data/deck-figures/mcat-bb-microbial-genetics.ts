@@ -603,7 +603,7 @@ export const mcatMicrobialGeneticsFigures: DeckFigurePlacement[] = [
       svg: fluctuationSvg,
       alt:
         'Two bar charts on the same scale of resistant colonies (0 to 60). Left, Set 1, ten separate small cultures grown without phage and then plated on phage: 0, 0, 1, 0, 64, 0, 2, 0, 0, 9 colonies; the 64 bar is red and labelled jackpot, an early mutant left a big clone; dashed mean line at 7.6. Right, Set 2, ten samples of one culture (the control for plating noise): 11, 9, 12, 8, 10, 11, 9, 10, 12, 8; dashed mean line at 10. The means are similar, but the spread is huge across independent cultures and small within one culture, so the resistance arose before the phage was added.',
-      caption: 'The Luria–Delbrück fluctuation test with the lesson’s Worked Example 1 counts: the tell is the variance, not the mean.',
+      caption: 'The fluctuation test with the lesson’s Worked Example 1 counts: the tell is the variance, not the mean.',
     },
     blocks: [
       '- Induced by phage → every culture ≈ the same count; random **before** exposure → jackpots',

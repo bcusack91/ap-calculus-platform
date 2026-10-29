@@ -65,7 +65,11 @@ A **reversion**, a second mutation that restores function, is rare but easy to s
 
 ### Do Mutations Come Before Selection? Two Proofs
 
-**The Luria-Delbrück fluctuation test.** Many small parallel cultures are grown WITHOUT phage, then each is plated onto phage. If the phage INDUCED resistance, every culture would give about the same count. Instead the counts fluctuated wildly: most cultures had zero or a few resistant cells, and a few had "jackpots" of hundreds, because a mutation early in a culture's growth leaves a large resistant clone. The control, repeated samples from ONE large culture, gave uniform counts, so the spread is biological rather than sampling error. Conclusion: mutations arise **at random, before** exposure.
+**The fluctuation test.** Many small parallel cultures are grown WITHOUT phage, then each is plated onto phage. If the phage INDUCED resistance, every culture would give about the same count. Instead the counts fluctuated wildly: most cultures had zero or a few resistant cells, and a few had "jackpots" of hundreds, because a mutation early in a culture's growth leaves a large resistant clone. The control, repeated samples from ONE large culture, gave uniform counts, so the spread is biological rather than sampling error. Conclusion: mutations arise **at random, before** exposure.
+
+<!-- yield:low -->
+- The fluctuation test is the Luria-Delbrück experiment (1943), done with phage resistance in E. coli.
+<!-- /yield -->
 
 **Lederberg replica plating.** Colonies on a nonselective **master plate** are pressed onto sterile velvet and stamped, in register, onto plates containing the drug or phage. Resistant colonies appear at the **same positions** on every replica. Picking cells from those positions on the never-exposed master plate yields resistant cells, so selection revealed variants that already existed. Stamping onto minimal medium finds auxotrophs the same way: they are the colonies present on complete medium but missing on minimal.`
     },

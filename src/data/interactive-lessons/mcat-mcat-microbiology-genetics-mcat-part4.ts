@@ -45,7 +45,7 @@ T2 phage were grown with **$^{35}$S**, which labels protein (methionine and cyst
 
 RNA viruses copy their genomes with an **RNA-dependent RNA polymerase**, and retroviruses with **reverse transcriptase**. Most of these enzymes **lack 3′→5′ proofreading** (coronaviruses are a rare exception), so their error rates run thousands of times or more above cellular DNA replication, which is proofread and then mismatch-repaired. DNA viruses use proofreading DNA polymerases and are far more stable.
 
-- An infected patient carries a swarm of related variants (a quasispecies), so drug-resistant variants exist **before** treatment, the Luria-Delbrück logic of Part 1. Combination therapy, as for HIV, is the answer: a variant resistant to all drugs at once is far rarer.
+- An infected patient carries a swarm of related variants (a quasispecies), so drug-resistant variants exist **before** treatment, the fluctuation-test logic of Part 1. Combination therapy, as for HIV, is the answer: a variant resistant to all drugs at once is far rarer.
 - In surface proteins, the same error rate drives **antigenic drift**.
 
 <!-- yield:low -->

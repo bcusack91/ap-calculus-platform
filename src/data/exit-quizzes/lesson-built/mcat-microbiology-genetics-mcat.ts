@@ -137,7 +137,7 @@ export const EXIT_POOL: LessonExitItem[] = [
     part: 1,
   },
   {
-    question: `In a Luria-Delbrück fluctuation test, which result would have supported the hypothesis that contact with phage itself induces resistance?`,
+    question: `In a fluctuation test, which result would have supported the hypothesis that contact with phage itself induces resistance?`,
     options: [
       `Mostly zero counts across parallel cultures, with a few large jackpots`,
       `Similar counts across parallel cultures, spread like repeated samples from one culture`,
