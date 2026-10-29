@@ -46,7 +46,6 @@ const ghost2 = (cx: number, cy: number, w: number, h: number, l1: string, l2: st
 const txt = (x: number, y: number, size: number, s: string, attrs = '') =>
   `<text x="${x}" y="${y}" font-size="${size}"${attrs} fill="currentColor">${s}</text>`
 const ctext = (x: number, y: number, size: number, s: string, attrs = '') => txt(x, y, size, s, ` text-anchor="middle"${attrs}`)
-const rtext = (x: number, y: number, size: number, s: string, attrs = '') => txt(x, y, size, s, ` text-anchor="end"${attrs}`)
 const bold = ' font-weight="700"'
 const line = (x1: number, y1: number, x2: number, y2: number, marker?: string, w = 2.5, extra = '') =>
   `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="currentColor" stroke-width="${w}"${marker ? ` marker-end="url(#${marker})"` : ''}${extra}/>`

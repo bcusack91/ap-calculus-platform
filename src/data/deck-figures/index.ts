@@ -42,6 +42,11 @@ import { mcatReproductiveFigures } from './mcat-bb-reproductive'
 import { mcatSensoryFigures } from './mcat-bb-sensory'
 import { mcatEmbryologyFigures } from './mcat-bb-embryology'
 import { mcatAnatomyPhysiologyFigures } from './mcat-bb-anatomy-physiology'
+import { mcatRespiratoryFigures } from './mcat-bb-respiratory'
+import { mcatRenalFigures } from './mcat-bb-renal'
+import { mcatEndocrineNervousFigures } from './mcat-bb-endocrine-nervous'
+import { mcatOrganSystemsFigures } from './mcat-bb-organ-systems'
+import { mcatCellBiologyFigures } from './mcat-bb-cell-biology'
 
 /**
  * Deck figures — hand-drawn inline SVG diagrams placed into auto-generated
@@ -135,4 +140,9 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-anatomy-physiology-sensory-mcat': mcatSensoryFigures,
   'mcat-anatomy-physiology-embryology-mcat': mcatEmbryologyFigures,
   'mcat-anatomy-physiology-mcat': mcatAnatomyPhysiologyFigures,
+  'mcat-organ-systems-respiratory-mcat': mcatRespiratoryFigures,
+  'mcat-organ-systems-renal-mcat': mcatRenalFigures,
+  'mcat-organ-systems-endocrine-nervous-mcat': mcatEndocrineNervousFigures,
+  'mcat-organ-systems-mcat': mcatOrganSystemsFigures,
+  'mcat-cell-biology-mcat': mcatCellBiologyFigures,
 }
