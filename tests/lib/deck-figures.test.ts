@@ -79,4 +79,11 @@ describe('deckLimits', () => {
     expect(deckLimits(true, 4)).toMatchObject({ maxSlides: 76, maxPolls: 16 })
     expect(deckLimits(false, 0)).toMatchObject({ maxSlides: 28, maxPolls: 8 })
   })
+  it('a lesson that overflows its pair budget gets more blocks, never more than one per part', () => {
+    expect(deckLimits(false, 4, 56)).toMatchObject({ maxSlides: 56, maxPolls: 16 })
+    expect(deckLimits(false, 4, 75)).toMatchObject({ maxSlides: 84, maxPolls: 24 })
+    expect(deckLimits(false, 4, 500)).toMatchObject({ maxSlides: 112, maxPolls: 32 })
+    expect(deckLimits(false, 1, 90)).toMatchObject({ maxSlides: 28, maxPolls: 8 })
+    expect(deckLimits(true, 7, 100)).toMatchObject({ maxSlides: 152, maxPolls: 32 })
+  })
 })

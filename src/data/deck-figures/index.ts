@@ -37,6 +37,7 @@ import { mcatBacteriaFigures } from './mcat-bb-bacteria'
 import { mcatVirusesFigures } from './mcat-bb-viruses'
 import { mcatAntimicrobialsFigures } from './mcat-bb-antimicrobials'
 import { mcatMicrobiologyFigures } from './mcat-bb-microbiology'
+import { mcatMicrobialGeneticsFigures } from './mcat-bb-microbial-genetics'
 import { mcatMusculoskeletalFigures } from './mcat-bb-musculoskeletal'
 import { mcatReproductiveFigures } from './mcat-bb-reproductive'
 import { mcatSensoryFigures } from './mcat-bb-sensory'
@@ -163,6 +164,7 @@ export const DECK_FIGURES: Record<string, DeckFigurePlacement[]> = {
   'mcat-microbiology-bacteria-mcat': mcatBacteriaFigures,
   'mcat-microbiology-viruses-mcat': mcatVirusesFigures,
   'mcat-microbiology-antimicrobials-mcat': mcatAntimicrobialsFigures,
+  'mcat-microbiology-genetics-mcat': mcatMicrobialGeneticsFigures,
   'mcat-microbiology-mcat': mcatMicrobiologyFigures,
   'mcat-anatomy-physiology-musculoskeletal-mcat': mcatMusculoskeletalFigures,
   'mcat-anatomy-physiology-reproductive-mcat': mcatReproductiveFigures,

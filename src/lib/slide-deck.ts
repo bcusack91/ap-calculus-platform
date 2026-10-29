@@ -55,15 +55,20 @@ const DEFAULT_LIMITS: DeckLimits = { maxChars: MAX_CHARS_PER_SLIDE, maxBlocks: M
  * is spread out rather than cut. A lesson of 3+ parts is more than one
  * teaching block; its deck (and its poll budget) grows by a block per two
  * parts instead of silently dropping the later parts (Learning & Memory lost
- * both memory parts at 28).
+ * both memory parts at 28). A lesson whose mined slides still overflow
+ * that budget gets extra blocks, up to one per part, so the cut never lands
+ * on a whole part (Microbial Genetics, 2026-10-29: four dense parts lost
+ * Part 4 entirely at 56). Pass `minedSlides` once the lesson is chunked.
  */
-export function deckLimits(prose: boolean, partCount: number): DeckLimits {
-  const blocks = Math.max(1, Math.ceil(partCount / 2))
+export function deckLimits(prose: boolean, partCount: number, minedSlides = 0): DeckLimits {
   const maxChars = prose ? 520 : MAX_CHARS_PER_SLIDE
+  const perBlock = Math.round(MAX_CONTENT_SLIDES * (MAX_CHARS_PER_SLIDE / maxChars))
+  const pairBlocks = Math.max(1, Math.ceil(partCount / 2))
+  const blocks = Math.min(Math.max(pairBlocks, Math.ceil(minedSlides / perBlock)), Math.max(pairBlocks, partCount))
   return {
     maxChars,
     maxBlocks: prose ? 4 : MAX_BLOCKS_PER_SLIDE,
-    maxSlides: Math.round(MAX_CONTENT_SLIDES * (MAX_CHARS_PER_SLIDE / maxChars)) * blocks,
+    maxSlides: perBlock * blocks,
     maxPolls: MAX_POLLS * blocks,
   }
 }
@@ -517,6 +522,7 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     // itself is on the slides, the summary only repeats it (a second "Key
     // Takeaways" early in the deck). The agenda slide still previews the arc.
     const summary = lessonSlides.length >= SUMMARY_REDUNDANT_AT ? [] : content
+    limits = deckLimits(prose, partCount, summary.length + lessonSlides.length)
     content = [...summary, ...lessonSlides].slice(0, limits.maxSlides)
   }
 
