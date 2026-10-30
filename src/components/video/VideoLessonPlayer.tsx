@@ -40,6 +40,8 @@ export type VideoLessonPlayerProps = {
   pickerHref: string | null
   readHref: string
   exitQuizHref: string | null
+  /** Arrived from a short link (/v/<code>): open this clip's checkpoint straight away. */
+  openCheckpointOnLoad?: boolean
 }
 
 type Answered = Record<string, Record<string, { correct: boolean; attempts: number }>>
@@ -138,11 +140,12 @@ export default function VideoLessonPlayer({
   pickerHref,
   readHref,
   exitQuizHref,
+  openCheckpointOnLoad = false,
 }: VideoLessonPlayerProps) {
   const [index, setIndex] = useState(() => Math.min(Math.max(initialIndex, 0), Math.max(steps.length - 1, 0)))
   const [ranges, setRanges] = useState(() => initialRanges(steps, initialProgress))
   const [answered, setAnswered] = useState<Answered>(() => initialAnswered(initialProgress))
-  const [phase, setPhase] = useState<Phase>(initiallyComplete ? 'done' : 'video')
+  const [phase, setPhase] = useState<Phase>(initiallyComplete && !openCheckpointOnLoad ? 'done' : 'video')
   const [playing, setPlaying] = useState(false)
   const [autoPlay, setAutoPlay] = useState(false)
   const [skipNotice, setSkipNotice] = useState(false)
@@ -307,6 +310,16 @@ export default function VideoLessonPlayer({
     setPhase('checkpoint')
     void save()
   }
+
+  // A short link from a YouTube video lands on the clip's checkpoint: the
+  // student usually watched the clip on YouTube already. Once, on load.
+  const openedFromLinkRef = useRef(false)
+  useEffect(() => {
+    if (!openCheckpointOnLoad || openedFromLinkRef.current) return
+    openedFromLinkRef.current = true
+    openCheckpoint()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [openCheckpointOnLoad])
 
   const handleEnded = (clipId: string, duration: number) => {
     void save()
@@ -690,17 +703,19 @@ export default function VideoLessonPlayer({
         </div>
         {skipNotice ? (
           <p className="mt-1.5 text-xs text-amber-700 dark:text-amber-400" role="status">
-            You skipped part of this clip. Watch at least 90% of it to unlock the checkpoint.
+            You skipped part of this clip. Watch at least 90% of it for it to count toward finishing the lesson.
           </p>
         ) : !curWatched ? (
-          <p className="mt-1.5 text-xs text-gray-500 dark:text-gray-400">Watch at least 90% to unlock the checkpoint. Skipping ahead doesn&apos;t count.</p>
+          <p className="mt-1.5 text-xs text-gray-500 dark:text-gray-400">
+            {step.questions.length > 0 ? 'Answer the checkpoint any time. ' : ''}Watch at least 90% for this clip to count toward finishing the lesson; skipping ahead doesn&apos;t count.
+          </p>
         ) : null}
       </div>
       {phase === 'video' && (
         <button
           type="button"
           onClick={() => openCheckpoint(retryRef.current ?? undefined)}
-          disabled={!curWatched}
+          disabled={!curWatched && step.questions.length === 0}
           className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-white hover:bg-accent-hover disabled:cursor-not-allowed disabled:bg-gray-300 disabled:text-gray-600 dark:disabled:bg-gray-700 dark:disabled:text-gray-400 sm:w-auto"
         >
           {step.questions.length > 0 ? 'Checkpoint' : 'Next'} <ArrowRight className="h-4 w-4" aria-hidden />

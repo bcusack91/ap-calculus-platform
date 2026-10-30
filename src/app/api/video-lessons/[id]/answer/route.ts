@@ -5,7 +5,6 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { loadPublishedLessonById } from '@/lib/video-lessons-server'
 import { isLessonComplete, parseProgressSteps, parseQuestions, shuffledQuestion, visibleSteps, type StoredStep } from '@/lib/video-lesson-core'
-import { isClipWatched } from '@/lib/video-watch'
 import { questionKey, optionKey } from '@/lib/question-key'
 import { recordQuestions } from '@/lib/study-tracking'
 import { applyLessonProgress, flashcardUnlockPayload } from '@/lib/lesson-progress'
@@ -15,8 +14,11 @@ import { applyLessonProgress, flashcardUnlockPayload } from '@/lib/lesson-progre
  *   → { correct, correctIndex, explanation, complete, completedNow, flashcards? }
  *
  * Grades one checkpoint question on the server (the page never receives the
- * key). chosenIndex is in the displayed (shuffled) order. The clip must be
- * watched first. Every attempt is logged as a VIDEO_CHECK answer, so misses
+ * key). chosenIndex is in the displayed (shuffled) order. A checkpoint can be
+ * answered before the clip is watched here: students arriving from a short
+ * link in a YouTube video (/v/<code>) usually watched it there. Finishing the
+ * lesson still needs every clip watched on StudyMondo (isLessonComplete).
+ * Every attempt is logged as a VIDEO_CHECK answer, so misses
  * reach the student's mistake log and the teacher's study report; the first
  * attempt is what the checkpoint score counts.
  */
@@ -54,7 +56,6 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     })
     const steps = parseProgressSteps(row?.steps)
     const prev = steps[clipId] ?? {}
-    if (!isClipWatched(prev.ranges ?? [], step.clip.durationSec)) return { notWatched: true as const }
     const before = prev.answered?.[String(questionIndex)]
     const attempts = (before?.attempts ?? (before ? 1 : 0)) + 1
     steps[clipId] = {
@@ -73,9 +74,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       update: { steps: steps as Prisma.InputJsonValue, lastClipId: clipId, lessonVersion: lesson.version, ...(completedNow ? { completedAt: new Date() } : {}) },
       create: { userId, lessonId: lesson.id, steps: steps as Prisma.InputJsonValue, lastClipId: clipId, lessonVersion: lesson.version, ...(completedNow ? { completedAt: new Date() } : {}) },
     })
-    return { notWatched: false as const, complete, completedNow, firstAttempt: attempts === 1 }
+    return { complete, completedNow, firstAttempt: attempts === 1 }
   })
-  if (result.notWatched) return NextResponse.json({ error: 'Watch the clip before answering its checkpoint' }, { status: 409 })
 
   await recordQuestions(userId, [{
     source: 'VIDEO_CHECK',

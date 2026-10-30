@@ -22,7 +22,7 @@ import { InstructorChoiceLink } from '@/components/video/InstructorChoiceLink'
 // Personalized (saved instructor), so never statically cached.
 export const dynamic = 'force-dynamic'
 
-type Props = { params: Promise<{ slug: string }> }
+type Props = { params: Promise<{ slug: string }>; searchParams?: Promise<Record<string, string | string[] | undefined>> }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const { slug } = await props.params
@@ -38,8 +38,19 @@ function minutes(totalSeconds: number): number {
   return Math.max(1, Math.round(totalSeconds / 60))
 }
 
+/** Query params a short link (/v/<code>) sets, carried on to the chosen instructor's lesson. */
+function carriedQuery(sp: Record<string, string | string[] | undefined>): string {
+  const out = new URLSearchParams()
+  for (const [k, v] of Object.entries(sp)) {
+    if (typeof v === 'string' && (k === 'clip' || k.startsWith('utm_'))) out.set(k, v.slice(0, 100))
+  }
+  const q = out.toString()
+  return q ? `?${q}` : ''
+}
+
 export default async function VideoPickerPage(props: Props) {
   const { slug } = await props.params
+  const carry = carriedQuery((await props.searchParams) ?? {})
   const topic = await prisma.topic.findUnique({
     where: { slug },
     select: { slug: true, title: true, category: { select: { course: { select: { slug: true, name: true } } } } },
@@ -47,7 +58,7 @@ export default async function VideoPickerPage(props: Props) {
   if (!topic) notFound()
 
   const lessons = await publishedLessonsForTopic(topic.slug)
-  if (lessons.length === 1) redirect(`/topics/${topic.slug}/video/${lessons[0].instructor.slug}`)
+  if (lessons.length === 1) redirect(`/topics/${topic.slug}/video/${lessons[0].instructor.slug}${carry}`)
 
   const courseSlug = topic.category.course.slug
   const readHref = hasInteractiveLesson(topic.slug) ? `/topics/${topic.slug}/interactive` : `/topics/${topic.slug}`
@@ -96,7 +107,7 @@ export default async function VideoPickerPage(props: Props) {
             <ul className="mt-6 grid gap-4 sm:grid-cols-2">
               {ordered.map((l) => {
                 const saved = l.instructor.slug === savedSlug
-                const href = `/topics/${topic.slug}/video/${l.instructor.slug}`
+                const href = `/topics/${topic.slug}/video/${l.instructor.slug}${carry}`
                 return (
                   <li key={l.lessonId}>
                     <InstructorChoiceLink
