@@ -8,7 +8,7 @@ import FocusTrapDialog from '@/components/FocusTrapDialog'
 import {
   ClipboardList, FileText, AlertTriangle, AlertCircle, RefreshCw, CheckCircle2,
   School, Users, Swords, Wrench, PenLine, Layers, BookOpen, Presentation, Check,
-  Circle, UserPlus, X,
+  Circle, UserPlus, X, Film,
 } from 'lucide-react'
 import StudentReportModal from '@/components/StudentReportModal'
 import SubmissionFeedbackModal from '@/components/SubmissionFeedbackModal'
@@ -822,13 +822,14 @@ export default function TeacherDashboard() {
               Open All Tools →
             </Link>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {[
               { icon: PenLine, label: 'FRQ Grader', href: '/teacher/tools?tab=frq-grader' },
               { icon: Layers, label: 'Flashcards', href: '/teacher/tools?tab=flashcards' },
               { icon: Swords, label: 'Class games', href: '/teacher/lobby' },
               { icon: BookOpen, label: 'Content Library', href: '/teacher/content' },
               { icon: Presentation, label: 'Slide Library', href: '/teacher/slides' },
+              { icon: Film, label: 'Video lessons', href: '/teacher/videos' },
             ].map((tool) => (
               <Link
                 key={tool.label}

@@ -9,6 +9,7 @@ import { MarkdownCallout } from '@/components/MarkdownCallout'
 import { isPlaceholderContent } from '@/lib/placeholder-content'
 import { hasInteractiveLesson } from '@/data/interactive-lessons/registry'
 import { hasExitQuiz } from '@/data/exit-quizzes'
+import { hasVideoLesson } from '@/lib/video-lessons-server'
 
 function TopicBottomAd() {
   const slot = process.env.NEXT_PUBLIC_AD_SLOT_TOPIC_BOTTOM
@@ -22,6 +23,7 @@ import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
 import 'katex/dist/katex.min.css'
 import Link from 'next/link'
+import { Video } from 'lucide-react'
 import type { Metadata } from 'next'
 import TopicContentRenderer from '@/components/TopicContentRenderer'
 import type { ReactNode } from 'react'
@@ -245,6 +247,10 @@ export default async function TopicPage(props: TopicPageProps) {
     .filter((t) => t.slug !== topic.slug)
     .slice(0, 6)
   const topicAdVariant = getTopicAdVariant(topic.slug)
+  // A published instructor video lesson (topic-level, not personalized, so
+  // safe in the ISR cache; a newly published lesson shows within the hour).
+  // A failed lookup only hides the option; it never takes the page down.
+  const topicHasVideo = await hasVideoLesson(topic.slug).catch(() => false)
 
   // Some topics were seeded with a placeholder stub ("<Title> content" or the
   // generated MCAT-subtopic boilerplate). Don't render the stub as a lesson —
@@ -256,7 +262,7 @@ export default async function TopicPage(props: TopicPageProps) {
     const topicHasLesson = hasInteractiveLesson(topic.slug)
     const topicHasQuiz = hasExitQuiz(topic.slug)
     const flashcardCount = topic._count.flashcards
-    const hasStudyTools = topicHasLesson || topicHasQuiz || flashcardCount > 0
+    const hasStudyTools = topicHasLesson || topicHasQuiz || flashcardCount > 0 || topicHasVideo
     return (
       <div className="container py-10">
         <div className="mx-auto max-w-2xl text-center">
@@ -273,6 +279,11 @@ export default async function TopicPage(props: TopicPageProps) {
                 {topicHasLesson && (
                   <Link href={`/topics/${topic.slug}/interactive`} className="inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 text-base font-semibold text-white hover:bg-accent-hover">
                     Start Interactive Lesson
+                  </Link>
+                )}
+                {topicHasVideo && (
+                  <Link href={`/topics/${topic.slug}/video`} className="inline-flex items-center justify-center rounded-md border border-accent-muted px-6 py-3 text-base font-semibold text-accent hover:bg-accent-subtle dark:hover:bg-accent-light/20">
+                    Learn by Video
                   </Link>
                 )}
                 {flashcardCount > 0 && (
@@ -529,6 +540,18 @@ export default async function TopicPage(props: TopicPageProps) {
                   Start Interactive Lesson →
                 </Link>
               </div>
+              {/* Learn by video: an approved instructor's short clips + checkpoints. */}
+              {topicHasVideo && (
+                <div className="mt-4 flex flex-col gap-2 border-t border-white/30 pt-4 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="text-sm text-accent-light">Rather watch? Learn it from an instructor in short clips, with a quick checkpoint after each.</p>
+                  <Link
+                    href={`/topics/${topic.slug}/video`}
+                    className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg border-2 border-white px-5 py-2 font-semibold text-white hover:bg-white/10 transition-colors"
+                  >
+                    <Video className="h-4 w-4" aria-hidden /> Learn by video
+                  </Link>
+                </div>
+              )}
             </div>
 
             {/* Video - Temporarily hidden for free tier launch

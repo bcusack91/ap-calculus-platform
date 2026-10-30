@@ -180,6 +180,7 @@ describe('GET /api/lessons/settings?courseSlug=', () => {
     db.diagnosticTest.findFirst.mockResolvedValue({ results: chemResults(82) })
     expect(await (await GET(req('?courseSlug=ap-chemistry'))).json()).toEqual({
       includeLowYield: false,
+      preferredFormat: 'TEXT',
       apTrack: { track: 'five', label: '5-track', mix: 'five-mix', source: 'diagnostic' },
     })
     expect(db.diagnosticTest.findFirst.mock.calls[0][0].where).toEqual({ userId: 'u1', category: { startsWith: 'ap-chem-diagnostic' } })
@@ -202,7 +203,7 @@ describe('GET /api/lessons/settings?courseSlug=', () => {
 
   it('leaves the field out for courses without tracks, without a query', async () => {
     for (const q of ['?courseSlug=ap-statistics', '?courseSlug=sat-prep', '']) {
-      expect(await (await GET(req(q))).json()).toEqual({ includeLowYield: false })
+      expect(await (await GET(req(q))).json()).toEqual({ includeLowYield: false, preferredFormat: 'TEXT' })
     }
     expect(db.diagnosticTest.findFirst).not.toHaveBeenCalled()
     expect(db.apTrackOverride.findUnique).not.toHaveBeenCalled()

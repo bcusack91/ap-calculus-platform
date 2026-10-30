@@ -1,11 +1,8 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
-import { maybeUnlockFlashcards } from '@/lib/flashcard-unlock'
 import { progressSaveSchema, parseBody } from '@/lib/validations'
-import { invalidateCache, dashboardCacheKey } from '@/lib/redis'
-import { touchDailyStreak } from '@/lib/streak'
-import { recordAssignmentStarted } from '@/lib/assignment-autocomplete'
+import { applyLessonProgress, flashcardUnlockPayload, statusForMastery } from '@/lib/lesson-progress'
 
 export async function POST(request: Request) {
   try {
@@ -59,124 +56,18 @@ export async function POST(request: Request) {
       )
     }
 
-    // Calculate status based on progress
-    let status: 'NOT_STARTED' | 'IN_PROGRESS' | 'COMPLETED' | 'MASTERED' = 'IN_PROGRESS'
-
-    if (masteryLevel >= 0.9) {
-      status = 'MASTERED'
-    } else if (masteryLevel >= 0.6) {
-      status = 'COMPLETED'
-    } else if ((lessonPart !== undefined && lessonPart > 1) || (completedSections && completedSections.length > 0)) {
-      status = 'IN_PROGRESS'
-    } else {
-      status = 'NOT_STARTED'
-    }
-
-    const topicDbId = topic.id
-    const userId = session.user.id
-
-    // All progress + flashcard writes commit or roll back together. The
-    // never-downgrade resolution happens INSIDE the transaction behind a row
-    // lock, so two concurrent saves can't both read stale state and clobber
-    // each other's status/mastery.
-    const txResult = await prisma.$transaction(async (tx) => {
-      // Lock the existing progress row (if any) so concurrent saves serialize.
-      // If no row exists yet, the unique (userId, topicId) constraint makes the
-      // racing upserts safe at the DB level.
-      await tx.$queryRaw`SELECT id FROM "TopicProgress" WHERE "userId" = ${userId} AND "topicId" = ${topicDbId} FOR UPDATE`
-
-      // Never downgrade mastery or status — resolve against the locked row
-      const existing = await tx.topicProgress.findUnique({
-        where: {
-          userId_topicId: {
-            userId,
-            topicId: topicDbId,
-          }
-        },
-        select: { masteryLevel: true, status: true }
-      })
-
-      const statusRank = { NOT_STARTED: 0, IN_PROGRESS: 1, COMPLETED: 2, MASTERED: 3 } as const
-      const effectiveMastery = existing
-        ? Math.max(masteryLevel || 0, existing.masteryLevel || 0)
-        : (masteryLevel || 0)
-      const effectiveStatus = existing && statusRank[existing.status as keyof typeof statusRank] > statusRank[status]
-        ? existing.status as typeof status
-        : status
-
-      // Upsert topic progress. timeSpent is a CUMULATIVE total (the dashboard
-      // sums it across topics) — increment it rather than overwriting it with
-      // just this session's delta.
-      const progress = await tx.topicProgress.upsert({
-        where: {
-          userId_topicId: {
-            userId,
-            topicId: topicDbId,
-          }
-        },
-        update: {
-          masteryLevel: effectiveMastery,
-          status: effectiveStatus,
-          lastAccessed: new Date(),
-          timeSpent: { increment: timeSpent || 0 },
-          completedAt: effectiveStatus === 'COMPLETED' || effectiveStatus === 'MASTERED' ? new Date() : null,
-          ...(variant !== undefined && { variant }),
-          ...(failedExitParts !== undefined && { failedExitParts }),
-          ...(masteredParts !== undefined && { masteredParts }),
-        },
-        create: {
-          userId,
-          topicId: topicDbId,
-          masteryLevel: effectiveMastery,
-          status: effectiveStatus,
-          timeSpent: timeSpent || 0,
-          completedAt: effectiveStatus === 'COMPLETED' || effectiveStatus === 'MASTERED' ? new Date() : null,
-          ...(variant !== undefined && { variant }),
-          ...(failedExitParts !== undefined && { failedExitParts }),
-          ...(masteredParts !== undefined && { masteredParts }),
-        }
-      })
-
-      // Saving progress is study activity — advance the daily streak
-      await touchDailyStreak(tx, userId)
-
-      return { progress }
+    const started = (lessonPart !== undefined && lessonPart > 1) || Boolean(completedSections && completedSections.length > 0)
+    const { progress, unlock } = await applyLessonProgress({
+      userId: session.user.id,
+      topic,
+      masteryLevel: masteryLevel || 0,
+      status: statusForMastery(masteryLevel || 0, started),
+      timeSpent,
+      isPartCompletion,
+      variant,
+      failedExitParts,
+      masteredParts,
     })
-
-    const { progress } = txResult
-
-    // Flashcard unlock rule: lesson done + exit quiz submitted (see
-    // flashcard-unlock.ts). Completing the lesson may complete the pair (the
-    // student took the exit quiz on an earlier failed run, or in class), so
-    // check on part completions that finish the topic. Best-effort.
-    let unlock: Awaited<ReturnType<typeof maybeUnlockFlashcards>> | null = null
-    // Also trigger on entrance-mastery saves (masteryLevel >= 0.9 without a
-    // part completion): an aced entrance quiz now unlocks cards directly (the
-    // exit-quiz requirement is waived in flashcard-unlock.ts for mastered
-    // topics), so the unlock must run on that save too.
-    const masterySave = (masteryLevel ?? 0) >= 0.9
-    if ((isPartCompletion || masterySave) && (progress.status === 'COMPLETED' || progress.status === 'MASTERED')) {
-      try {
-        unlock = await maybeUnlockFlashcards(userId, topic.slug)
-      } catch (unlockError) {
-        console.error('progress-save flashcard unlock failed (non-fatal):', unlockError)
-      }
-    }
-
-    // Progress changed — drop the user's cached dashboard so their next
-    // dashboard load reflects this update immediately rather than after the TTL.
-    await invalidateCache(dashboardCacheKey(session.user.id))
-
-    // Mark matching classroom assignments IN_PROGRESS (never COMPLETED — the
-    // client-reported masteryLevel is untrusted; completion + score are recorded
-    // server-side from the exit-quiz submit). Best-effort.
-    if (topicSlug) {
-      await recordAssignmentStarted({
-        userId: session.user.id,
-        topicSlug,
-        types: ['INTERACTIVE_LESSON', 'QUIZ'],
-      })
-    }
 
     return NextResponse.json({
       success: true,
@@ -184,13 +75,7 @@ export async function POST(request: Request) {
         status: progress.status,
         masteryLevel: progress.masteryLevel,
       },
-      flashcards: unlock?.unlocked && unlock.newCards > 0 ? {
-        created: true,
-        newCards: unlock.newCards, // Number of NEW cards just added
-        totalActive: unlock.totalActive, // Total cards now available
-        totalPossible: unlock.totalCards, // Total cards in topic
-        topicTitle: unlock.topicTitle
-      } : undefined
+      flashcards: flashcardUnlockPayload(unlock),
     })
   } catch (error) {
     console.error('Progress save error:', error)

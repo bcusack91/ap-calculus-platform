@@ -20,6 +20,8 @@ interface FirstSessionChoiceProps {
   entranceQuizLoading?: boolean
   onChoice: (choice: Choice) => void
   onEntranceQuiz?: () => void
+  /** The topic's video lesson, when one is published ("Watch the video lesson instead"). */
+  videoHref?: string | null
 }
 
 export function FirstSessionChoice({
@@ -32,6 +34,7 @@ export function FirstSessionChoice({
   entranceQuizLoading = false,
   onChoice,
   onEntranceQuiz,
+  videoHref,
 }: FirstSessionChoiceProps) {
   // Default focus on Part 1: Enter starts the short path.
   const primaryRef = useRef<HTMLButtonElement>(null)
@@ -79,6 +82,15 @@ export function FirstSessionChoice({
               </button>
             )}
           </div>
+          {videoHref && (
+            <Link
+              href={videoHref}
+              data-testid="first-session-video"
+              className="text-sm font-semibold text-accent hover:text-accent-hover dark:text-accent-muted"
+            >
+              Watch the video lesson instead →
+            </Link>
+          )}
         </div>
         {hasEntranceQuiz && onEntranceQuiz && (
           <p className="text-xs text-gray-400 dark:text-gray-500 mt-5">

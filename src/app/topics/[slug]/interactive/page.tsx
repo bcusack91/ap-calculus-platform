@@ -14,6 +14,7 @@ import { isDuplicateTopic } from '@/lib/duplicate-topics'
 import { preloadAllLessonParts } from '@/data/interactive-lessons/server-loader'
 import { isPlaceholderContent } from '@/lib/placeholder-content'
 import { getBuildTimeTopicSlugs } from '@/lib/static-topic-params'
+import { hasVideoLesson } from '@/lib/video-lessons-server'
 import 'katex/dist/katex.min.css'
 
 // ISR: revalidate every hour
@@ -117,6 +118,9 @@ export default async function InteractivePage(props: InteractivePageProps) {
   const lessonConfig = hasHandCraftedLesson
     ? await preloadAllLessonParts(topic.slug)
     : null
+  // Offer the instructor video lesson on the entrance screen when one is
+  // published (topic-level, so fine in the ISR cache; failures just hide it).
+  const topicHasVideo = hasHandCraftedLesson ? await hasVideoLesson(topic.slug).catch(() => false) : false
 
   if (!hasHandCraftedLesson && !hasDynamicContent) {
     // No hand-crafted lesson AND no textContent to generate from
@@ -206,6 +210,7 @@ export default async function InteractivePage(props: InteractivePageProps) {
             totalVariants={lessonConfig.totalVariants}
             completionDestination={lessonConfig.completionDestination}
             practiceModeParts={lessonConfig.practiceModeParts}
+            hasVideoLesson={topicHasVideo}
           />
         ) : (
           <ClientLessonRenderer

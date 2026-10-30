@@ -27,7 +27,7 @@ import ClassEngagement from '@/components/ClassEngagement'
 
 const zeroSurfaces = {
   LESSON: 0, ENTRANCE_QUIZ: 0, EXIT_QUIZ: 0, FLASHCARDS: 0, DIAGNOSTIC: 0,
-  PRACTICE_TEST: 0, FULL_LENGTH: 0, COMPETITIVE: 0, OTHER: 0,
+  PRACTICE_TEST: 0, FULL_LENGTH: 0, COMPETITIVE: 0, VIDEO: 0, OTHER: 0,
 }
 const zeroTally = { answered: 0, correct: 0 }
 
@@ -49,7 +49,7 @@ function emptyMetrics(): StudentMetrics {
       bySource: {
         ENTRANCE: { ...zeroTally }, LESSON: { ...zeroTally }, EXIT: { ...zeroTally }, DIAGNOSTIC: { ...zeroTally },
         PRACTICE: { ...zeroTally }, FULL_LENGTH: { ...zeroTally }, DAILY: { ...zeroTally }, COMPETITIVE: { ...zeroTally },
-        UNIT_TEST: { ...zeroTally }, MISTAKE_REVIEW: { ...zeroTally },
+        UNIT_TEST: { ...zeroTally }, MISTAKE_REVIEW: { ...zeroTally }, VIDEO_CHECK: { ...zeroTally },
       },
     },
     weakAreas: [],

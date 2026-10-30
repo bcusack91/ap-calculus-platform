@@ -106,6 +106,13 @@ describe('questions', () => {
     expect(s.total).toEqual({ answered: 75, correct: 52 })
   })
 
+  it('tallies video checkpoints and video watch time (new sources must be in SOURCES/SURFACES)', () => {
+    const s = summarizeQuestions([q('VIDEO_CHECK', 1, 1), q('VIDEO_CHECK', 1, 0)])
+    expect(s.bySource.VIDEO_CHECK).toEqual({ answered: 2, correct: 1 })
+    const t = summarizeActiveTime([{ day: D('2026-10-30'), surface: 'VIDEO', seconds: 420 }])
+    expect(t.bySurface.VIDEO).toBe(420)
+  })
+
   it('never lets a bad row claim more correct than answered', () => {
     expect(summarizeQuestions([q('LESSON', 2, 5)]).total).toEqual({ answered: 2, correct: 2 })
   })

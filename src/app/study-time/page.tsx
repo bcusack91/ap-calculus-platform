@@ -27,7 +27,7 @@ const HUBS: Record<string, string> = { mcat: 'MCAT Prep', sat: 'SAT Prep', act: 
 
 /** The breakdown students asked for; each group sums one or more tracked surfaces. */
 const GROUPS: { label: string; surfaces: ActivitySurface[]; parts?: Partial<Record<ActivitySurface, string>>; hint?: string }[] = [
-  { label: 'Lessons', surfaces: ['LESSON'] },
+  { label: 'Lessons', surfaces: ['LESSON', 'VIDEO'], parts: { LESSON: 'Reading', VIDEO: 'Video' } },
   { label: 'Entrance & exit quizzes', surfaces: ['ENTRANCE_QUIZ', 'EXIT_QUIZ'], parts: { ENTRANCE_QUIZ: 'Entrance', EXIT_QUIZ: 'Exit' } },
   { label: 'Flashcards', surfaces: ['FLASHCARDS'] },
   {

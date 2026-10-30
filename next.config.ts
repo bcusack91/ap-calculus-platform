@@ -71,6 +71,9 @@ const nextConfig: NextConfig = {
       'https://ep2.adtrafficquality.google',
       'https://va.vercel-scripts.com',
       'https://cdn.jsdelivr.net',
+      // YouTube IFrame Player API (video lessons: play/pause/progress events).
+      'https://www.youtube.com',
+      'https://s.ytimg.com',
       'https://www.clarity.ms',
       'https://*.clarity.ms',
       // JaaS external_api.js — loaded by the embedded conference room in live

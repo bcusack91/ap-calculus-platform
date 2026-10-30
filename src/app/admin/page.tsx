@@ -4,11 +4,12 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { DistrictRollup } from '@/components/admin/DistrictRollup'
 import { ImpactAnalytics } from '@/components/admin/ImpactAnalytics'
 import { SchoolsAdmin } from '@/components/admin/SchoolsAdmin'
 import { SystemHealth } from '@/components/admin/SystemHealth'
-import { BarChart3, Building2, TrendingUp, School, Users as UsersIcon, Activity } from 'lucide-react'
+import { BarChart3, Building2, TrendingUp, School, Users as UsersIcon, Activity, Film } from 'lucide-react'
 
 // Tab chrome: lucide icons instead of emoji (consistent cross-platform rendering).
 const ADMIN_TABS = {
@@ -386,7 +387,10 @@ export default function AdminPanel() {
           Admin Panel
         </h1>
         <p className="text-gray-600 dark:text-gray-400 mb-6">
-          Site analytics and user management
+          Site analytics and user management ·{' '}
+          <Link href="/admin/instructors" className="inline-flex items-center gap-1 font-semibold text-accent hover:underline">
+            <Film className="w-4 h-4" aria-hidden /> Video instructors and review queue
+          </Link>
         </p>
 
         {/* Tabs */}

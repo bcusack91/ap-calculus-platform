@@ -51,6 +51,8 @@ describe('surfaceForPath', () => {
   it('maps pages to what the student is doing', () => {
     expect(surfaceForPath('/topics/enzyme-kinetics/interactive')).toEqual({ surface: 'LESSON', topicSlug: 'enzyme-kinetics' })
     expect(surfaceForPath('/topics/enzyme-kinetics')).toEqual({ surface: 'LESSON', topicSlug: 'enzyme-kinetics' })
+    expect(surfaceForPath('/topics/enzyme-kinetics/video')).toEqual({ surface: 'VIDEO', topicSlug: 'enzyme-kinetics' })
+    expect(surfaceForPath('/topics/enzyme-kinetics/video/jane-doe')).toEqual({ surface: 'VIDEO', topicSlug: 'enzyme-kinetics' })
     expect(surfaceForPath('/flashcards/review/start?topic=x').surface).toBe('FLASHCARDS')
     expect(surfaceForPath('/mcat-diagnostic').surface).toBe('DIAGNOSTIC')
     expect(surfaceForPath('/sat-diagnostic').surface).toBe('DIAGNOSTIC')

@@ -25,6 +25,7 @@ export const ACTIVITY_SURFACES: readonly ActivitySurface[] = [
   'PRACTICE_TEST',
   'FULL_LENGTH',
   'COMPETITIVE',
+  'VIDEO',
   'OTHER',
 ]
 
@@ -34,6 +35,8 @@ export function surfaceForPath(pathname: string | null | undefined): ActivitySta
   const seg = path.split('/').filter(Boolean)
   const first = seg[0] ?? ''
 
+  // /topics/<slug>/video… is a video lesson; the rest of /topics/<slug> is the text lesson.
+  if (first === 'topics' && seg[1] && seg[2] === 'video') return { surface: 'VIDEO', topicSlug: decodeURIComponent(seg[1]) }
   if (first === 'topics' && seg[1]) return { surface: 'LESSON', topicSlug: decodeURIComponent(seg[1]) }
   if (first === 'flashcards' || first === 'flashcard-sets') return { surface: 'FLASHCARDS' }
   if (first === 'competitive') return { surface: 'COMPETITIVE' }

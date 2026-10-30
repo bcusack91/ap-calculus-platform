@@ -35,6 +35,9 @@ model User {
   flashcardIncludeLowYield    Boolean                       @default(false)
   // Interactive lessons: show low-yield passages and questions (hidden by default).
   lessonIncludeLowYield       Boolean                       @default(false)
+  // How study-plan links open a topic: 'TEXT' (interactive lesson) or 'VIDEO'
+  // (an approved instructor's video lesson, when the topic has one).
+  preferredLessonFormat       String                        @default("TEXT")
   stripeCustomerId            String?                       @unique
   stripeSubscriptionId        String?                       @unique
   stripePriceId               String?
@@ -47,6 +50,9 @@ model User {
   schoolId                    String?
   classCode                   String?
   accounts                    Account[]
+  instructorProfile           Instructor?                   @relation("InstructorAccount")
+  videoLessonProgress         VideoLessonProgress[]
+  instructorChoices           UserInstructorChoice[]
   diagnosticTests             DiagnosticTest[]
   flashcardProgress           FlashcardProgress[]
   flashcardDailyActivity      FlashcardDailyActivity[]
@@ -601,6 +607,8 @@ enum ActivitySurface {
   PRACTICE_TEST
   FULL_LENGTH
   COMPETITIVE
+  /// Watching an instructor's video lesson (counted while the video plays).
+  VIDEO
   OTHER
 }
 
@@ -635,6 +643,8 @@ enum QuestionSource {
   UNIT_TEST
   /// A question re-served from the student's mistake log.
   MISTAKE_REVIEW
+  /// A checkpoint question after a clip in a video lesson.
+  VIDEO_CHECK
 }
 
 /// Answered questions. One row per answer where the source knows each answer
@@ -682,24 +692,24 @@ model QuestionActivity {
 /// frozen at creation (options in shown order, keys included) so grading is
 /// server-side and the set can be reviewed later.
 model QbankSession {
-  id          String    @id @default(cuid())
-  userId      String
-  course      String // 'mcat' | 'sat'
+  id           String    @id @default(cuid())
+  userId       String
+  course       String // 'mcat' | 'sat'
   /// 'timed' (no feedback until the end) | 'tutor' (explanation after each)
-  mode        String
+  mode         String
   /// What the student asked for (sections/topics/difficulty/pool filters).
-  filters     Json
-  items       Json
-  answers     Json?
-  flags       Json?
+  filters      Json
+  items        Json
+  answers      Json?
+  flags        Json?
   /// Seconds per item, aligned with items.
-  timings     Json?
+  timings      Json?
   timeLimitSec Int?
-  correct     Int?
-  total       Int
-  startedAt   DateTime  @default(now())
-  completedAt DateTime?
-  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  correct      Int?
+  total        Int
+  startedAt    DateTime  @default(now())
+  completedAt  DateTime?
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, course, startedAt])
 }
@@ -707,25 +717,25 @@ model QbankSession {
 /// A flashcard the student wrote themselves. Scheduled with the same
 /// spaced-repetition rules as site cards (src/lib/spaced-repetition.ts).
 model UserFlashcard {
-  id               String   @id @default(cuid())
+  id               String    @id @default(cuid())
   userId           String
-  courseSlug       String   @default("")
-  topicSlug        String   @default("")
+  courseSlug       String    @default("")
+  topicSlug        String    @default("")
   front            String
   back             String
   hint             String?
   /// Where it came from: 'manual' | 'mistake' (made from a missed question).
-  origin           String   @default("manual")
-  easeFactor       Float    @default(2.5)
-  interval         Int      @default(0)
-  isMinuteInterval Boolean  @default(false)
-  repetitions      Int      @default(0)
-  nextReview       DateTime @default(now())
+  origin           String    @default("manual")
+  easeFactor       Float     @default(2.5)
+  interval         Int       @default(0)
+  isMinuteInterval Boolean   @default(false)
+  repetitions      Int       @default(0)
+  nextReview       DateTime  @default(now())
   lastReviewed     DateTime?
-  reviewCount      Int      @default(0)
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
-  user             User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reviewCount      Int       @default(0)
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId, nextReview])
   @@index([userId, courseSlug])
@@ -935,16 +945,16 @@ model CompetitiveProfile {
 }
 
 model MatchmakingQueue {
-  id        String   @id @default(cuid())
-  userId    String   @unique
+  id        String          @id @default(cuid())
+  userId    String          @unique
   topicSlug String
   mmr       Int
-  gameMode  String   @default("SPEED_RACE")
+  gameMode  String          @default("SPEED_RACE")
   // Difficulty tier the waiting player selected ('easy'|'medium'|'hard'), so a
   // later joiner can be paired same-tier and the match runs at that tier. Null
   // = no preference (matches anyone).
   tier      String?
-  joinedAt  DateTime @default(now())
+  joinedAt  DateTime        @default(now())
   // Class match pool this entry waits in (null = the public queue). The public
   // queues only ever pair rows with poolId null; a pool only pairs its own rows.
   poolId    String?
@@ -1458,22 +1468,22 @@ model CompetitiveGrant {
 }
 
 model ExitQuizAttempt {
-  id             String   @id @default(cuid())
-  userId         String
-  topicSlug      String // e.g., 'sat-linear-equations-inequalities'
-  score          Int // number correct (out of 10)
-  totalQuestions Int      @default(10)
-  passed         Boolean  @default(false) // true if score >= 7
-  mustRedoUnit   Boolean  @default(false) // true if score < 5
-  variant        Int      @default(1) // Which content variant this attempt was for
+  id              String   @id @default(cuid())
+  userId          String
+  topicSlug       String // e.g., 'sat-linear-equations-inequalities'
+  score           Int // number correct (out of 10)
+  totalQuestions  Int      @default(10)
+  passed          Boolean  @default(false) // true if score >= 7
+  mustRedoUnit    Boolean  @default(false) // true if score < 5
+  variant         Int      @default(1) // Which content variant this attempt was for
   /// Generation inputs, so the exact quiz can be rebuilt for review.
   seed            Int?
   difficulty      String?
   includeLowYield Boolean?
-  answers        Json // array of { questionId, selectedAnswer, correct }
-  startedAt      DateTime @default(now())
-  completedAt    DateTime @default(now())
-  timeSpent      Int      @default(0) // seconds
+  answers         Json // array of { questionId, selectedAnswer, correct }
+  startedAt       DateTime @default(now())
+  completedAt     DateTime @default(now())
+  timeSpent       Int      @default(0) // seconds
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -1482,12 +1492,12 @@ model ExitQuizAttempt {
 }
 
 model ClassroomMember {
-  id          String   @id @default(cuid())
-  classroomId String
-  userId      String
-  joinedAt    DateTime @default(now())
-  isActive    Boolean  @default(true)
-  nickname    String? // optional display name within class
+  id                  String    @id @default(cuid())
+  classroomId         String
+  userId              String
+  joinedAt            DateTime  @default(now())
+  isActive            Boolean   @default(true)
+  nickname            String? // optional display name within class
   /// When the student last saw this class's announcements (dashboard banner /
   /// Assignments page). Null = never; only the last 14 days count as new.
   announcementsSeenAt DateTime?
@@ -1824,29 +1834,29 @@ model CurriculumItem {
 }
 
 model SatTestAttempt {
-  id          String   @id @default(cuid())
-  userId      String
-  testNumber  Int // which practice test (1, 2, 3...)
-  rwScore     Int // Reading & Writing scaled score (200-800)
-  mathScore   Int // Math scaled score (200-800)
-  totalScore  Int // Combined score (400-1600)
-  rwCorrect   Int // Number of R&W questions correct
-  rwTotal     Int // Total R&W questions
-  mathCorrect Int // Number of math questions correct
-  mathTotal   Int // Total math questions
-  timeSpent   Int      @default(0) // Total time in seconds
-  answers     Json // Full answer data per section
-  weakAreas   Json? // Array of weak topic areas
+  id             String   @id @default(cuid())
+  userId         String
+  testNumber     Int // which practice test (1, 2, 3...)
+  rwScore        Int // Reading & Writing scaled score (200-800)
+  mathScore      Int // Math scaled score (200-800)
+  totalScore     Int // Combined score (400-1600)
+  rwCorrect      Int // Number of R&W questions correct
+  rwTotal        Int // Total R&W questions
+  mathCorrect    Int // Number of math questions correct
+  mathTotal      Int // Total math questions
+  timeSpent      Int      @default(0) // Total time in seconds
+  answers        Json // Full answer data per section
+  weakAreas      Json? // Array of weak topic areas
   /// 'full' | 'mini'; the Module 2 route per section ('harder' | 'easier' |
   /// null = unrouted); scoringVersion 2 = server-scored with the routed curve.
   format         String?
   rwTier         String?
   mathTier       String?
-  scoringVersion Int     @default(1)
-  strengths   Json? // Array of strong topic areas
-  completed   Boolean  @default(true)
-  startedAt   DateTime @default(now())
-  completedAt DateTime @default(now())
+  scoringVersion Int      @default(1)
+  strengths      Json? // Array of strong topic areas
+  completed      Boolean  @default(true)
+  startedAt      DateTime @default(now())
+  completedAt    DateTime @default(now())
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -2131,4 +2141,138 @@ model TopicSlideDeck {
   generatedAt DateTime @default(now())
 
   @@index([courseSlug])
+}
+
+// ── Video lessons ──────────────────────────────────────────────────────────
+// A third way to learn a topic: pick an instructor, watch short clips with a
+// checkpoint after each, then take the topic's exit quiz for credit. Only
+// instructors the owner creates can publish, and every lesson is reviewed in
+// /admin/instructors before students see it. Clips are a library asset: one
+// clip can appear in lessons for several topics and courses (AP Chemistry
+// clips are meant to be reused in MCAT General Chemistry).
+
+/// A public instructor profile, created by an admin and optionally linked to
+/// the teacher account that authors its lessons.
+model Instructor {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  name      String
+  headline  String   @default("")
+  bio       String   @default("")
+  photoUrl  String?
+  userId    String?  @unique
+  courses   String[] @default([])
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user    User?                  @relation("InstructorAccount", fields: [userId], references: [id], onDelete: SetNull)
+  clips   VideoClip[]
+  lessons VideoLesson[]
+  choices UserInstructorChoice[]
+}
+
+/// One short video. provider + providerId select the player (YOUTUBE now; a
+/// paid host later). status: DRAFT | APPROVED | ARCHIVED.
+model VideoClip {
+  id           String    @id @default(cuid())
+  instructorId String
+  title        String
+  provider     String    @default("YOUTUBE")
+  providerId   String
+  durationSec  Int       @default(0)
+  tags         String[]  @default([])
+  status       String    @default("DRAFT")
+  approvedById String?
+  approvedAt   DateTime?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  instructor Instructor        @relation(fields: [instructorId], references: [id], onDelete: Cascade)
+  steps      VideoLessonStep[]
+
+  @@index([instructorId, status])
+}
+
+/// One instructor's video lesson for one topic. `steps` is the PUBLISHED
+/// version students see; edits live in `draft` until an admin approves them
+/// (draftState EDITING | SUBMITTED), so students keep the published lesson
+/// while a revision is under review.
+model VideoLesson {
+  id           String    @id @default(cuid())
+  instructorId String
+  topicSlug    String
+  courseSlug   String
+  title        String
+  published    Boolean   @default(false)
+  publishedAt  DateTime?
+  version      Int       @default(0)
+  archived     Boolean   @default(false)
+  /// { title, steps: [{ clipId, yield?, questions: [...] }] }
+  draft        Json?
+  draftState   String?
+  submittedAt  DateTime?
+  reviewNote   String?
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  instructor Instructor            @relation(fields: [instructorId], references: [id], onDelete: Cascade)
+  steps      VideoLessonStep[]
+  progress   VideoLessonProgress[]
+
+  @@unique([instructorId, topicSlug])
+  @@index([topicSlug, published])
+  @@index([draftState])
+}
+
+/// A published step: one clip and its checkpoint questions
+/// ([{ question, options[4], correctAnswer, explanation, yield? }]).
+model VideoLessonStep {
+  id        String     @id @default(cuid())
+  lessonId  String
+  order     Int
+  clipId    String
+  yield     ExamYield?
+  questions Json       @default("[]")
+
+  lesson VideoLesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  clip   VideoClip   @relation(fields: [clipId], references: [id], onDelete: Restrict)
+
+  @@unique([lessonId, order])
+  @@index([clipId])
+}
+
+/// A student's progress through one video lesson. `steps` is keyed by clip id
+/// (stable across lesson versions): { [clipId]: { ranges: [[s, e], ...],
+/// answered: { [questionIndex]: { correct, at } } } }.
+model VideoLessonProgress {
+  id            String    @id @default(cuid())
+  userId        String
+  lessonId      String
+  lessonVersion Int       @default(0)
+  steps         Json      @default("{}")
+  lastClipId    String?
+  completedAt   DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  user   User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  lesson VideoLesson @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, lessonId])
+  @@index([lessonId])
+}
+
+/// The instructor a student chose for a course (pre-selected next time).
+model UserInstructorChoice {
+  id           String   @id @default(cuid())
+  userId       String
+  courseSlug   String
+  instructorId String
+  updatedAt    DateTime @updatedAt
+
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  instructor Instructor @relation(fields: [instructorId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, courseSlug])
 }

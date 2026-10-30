@@ -38,6 +38,8 @@ interface ClientLessonRendererProps {
   totalVariants?: number
   completionDestination?: string
   practiceModeParts?: number[]
+  /** A published instructor video lesson exists (entrance screen offers it). */
+  hasVideoLesson?: boolean
   // For dynamic
   textContent?: string
 }
@@ -52,6 +54,7 @@ export default function ClientLessonRenderer({
   totalVariants,
   completionDestination,
   practiceModeParts,
+  hasVideoLesson,
   textContent,
 }: ClientLessonRendererProps) {
   return (
@@ -75,6 +78,7 @@ export default function ClientLessonRenderer({
           totalVariants={totalVariants}
           completionDestination={completionDestination as 'competitive' | 'complete' | undefined}
           practiceModeParts={practiceModeParts}
+          hasVideoLesson={hasVideoLesson}
         />
       ) : (
         <DynamicInteractiveLessonRenderer topicSlug={topicSlug} textContent={textContent!} />

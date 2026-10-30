@@ -17,6 +17,40 @@ import { apTrackPlacement, isApTrackCourse, orderTopicsForTrack, type ApTrackPla
 import { apTrackOverridesForUser } from '@/lib/ap-track-server'
 import { daysUntilApExam } from '@/lib/ap-exam-dates'
 import { apScoreRange } from '@/lib/ap-scoring'
+import { topicsWithVideoLessons } from '@/lib/video-lessons-server'
+
+/**
+ * Video lessons (src/lib/video-lessons-server.ts): every plan topic with a
+ * published instructor video lesson gets `hasVideoLesson: true`, plus
+ * `videoPreferred: true` when the student prefers video
+ * (User.preferredLessonFormat), so studyPlanTopicHref can route it to
+ * /topics/<slug>/video with no change at its call sites. The top-level
+ * `preferredFormat` and `videoTopics` say the same thing for whole-payload
+ * readers. A failed lookup leaves every link on the text lesson.
+ */
+async function withVideoLessons<P extends { topics: { slug: string }[] }>(userId: string, plans: P[]) {
+  const slugs = Array.from(new Set(plans.flatMap((p) => p.topics.map((t) => t.slug))))
+  let video = new Set<string>()
+  let preferVideo = false
+  try {
+    const [set, user] = await Promise.all([
+      topicsWithVideoLessons(slugs),
+      prisma.user.findUnique({ where: { id: userId }, select: { preferredLessonFormat: true } }),
+    ])
+    video = set
+    preferVideo = user?.preferredLessonFormat === 'VIDEO'
+  } catch (err) {
+    console.error('[plan-status] video lesson lookup failed (ignored):', err)
+  }
+  return {
+    plans: plans.map((p) => ({
+      ...p,
+      topics: p.topics.map((t) => (video.has(t.slug) ? { ...t, hasVideoLesson: true, ...(preferVideo ? { videoPreferred: true } : {}) } : t)),
+    })),
+    preferredFormat: preferVideo ? ('VIDEO' as const) : ('TEXT' as const),
+    videoTopics: Array.from(video),
+  }
+}
 
 /**
  * Every course's diagnostic study plan, with per-topic done/pending state.
@@ -235,7 +269,7 @@ export async function GET() {
     const extraEntries = [mcatEntry, actEntry, satEntry].filter((e): e is NonNullable<typeof e> => e !== null)
 
     if (perCourse.size === 0) {
-      return NextResponse.json({ plans: extraEntries })
+      return NextResponse.json(await withVideoLessons(userId, extraEntries))
     }
 
     const allSlugs = Array.from(
@@ -343,7 +377,7 @@ export async function GET() {
     // Most work outstanding first — that is the course that needs attention.
     plans.sort((a, b) => b.summary.pending - a.summary.pending)
 
-    return NextResponse.json({ plans })
+    return NextResponse.json(await withVideoLessons(userId, plans))
   } catch (error) {
     console.error('[study-plan plan-status] failed:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })

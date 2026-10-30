@@ -136,6 +136,13 @@ describe('#10 one helper for every plan-topic link', () => {
     expect(studyPlanTopicHref(gases, 'ap-chem')).toBe('/topics/ap-chem-gases/interactive')
   })
 
+  it('studyPlanTopicHref: video lesson only when the student prefers video AND the topic has one', () => {
+    const t = { slug: 'types-of-chemical-bonds', name: 'B', isSatisfied: false }
+    expect(studyPlanTopicHref({ ...t, hasVideoLesson: true, videoPreferred: true }, 'ap-chem')).toBe('/topics/types-of-chemical-bonds/video')
+    expect(studyPlanTopicHref({ ...t, hasVideoLesson: true }, 'ap-chem')).toBe('/topics/types-of-chemical-bonds/interactive')
+    expect(studyPlanTopicHref({ ...t, videoPreferred: true }, 'ap-chem')).toBe('/topics/types-of-chemical-bonds/interactive')
+  })
+
   it('studyPlanTopicHref: lesson for every course, MCAT keeps its enriched paths', () => {
     expect(studyPlanTopicHref({ slug: 'derivatives', name: 'D', isSatisfied: false }, 'calcab')).toBe('/topics/derivatives/interactive')
     expect(studyPlanTopicHref({ slug: 'mcat-enzymes', name: 'E', isSatisfied: false }, 'mcat')).toBe('/topics/mcat-enzymes')

@@ -62,6 +62,7 @@ import { isAnswerMatch } from '@/lib/lesson-answer-match'
 import { useLessonProgressSaver } from '@/hooks/useLessonProgressSaver'
 import { useActivitySurface } from '@/hooks/useActivitySurface'
 import { useStudyCourse } from '@/lib/use-study-course'
+import { PreferVideoToggle } from '@/components/video/PreferVideoToggle'
 const ReferenceSheetModal = dynamic(() => import('@/components/ReferenceSheetModal'), { ssr: false })
 
 // Detects a markdown pipe-table (a row containing "|" immediately followed by a
@@ -328,6 +329,8 @@ interface InteractiveLessonRendererProps {
   totalVariants?: number
   completionDestination?: 'competitive' | 'complete'
   practiceModeParts?: number[]
+  /** A published instructor video lesson exists for this topic (/topics/<slug>/video). */
+  hasVideoLesson?: boolean
 }
 
 type LessonPart = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
@@ -399,7 +402,7 @@ function buildFallbackEntranceQuiz(
   return { questions, parts: partMeta }
 }
 
-export default function InteractiveLessonRenderer({ topicSlug, courseSlug, courseName, preloadedParts, variantParts, totalVariants: totalVariantsProp, completionDestination, practiceModeParts: practiceModePropParts }: InteractiveLessonRendererProps) {
+export default function InteractiveLessonRenderer({ topicSlug, courseSlug, courseName, preloadedParts, variantParts, totalVariants: totalVariantsProp, completionDestination, practiceModeParts: practiceModePropParts, hasVideoLesson = false }: InteractiveLessonRendererProps) {
   const searchParams = useSearchParams()
   const router = useRouter()
   const { data: session } = useSession()
@@ -1460,6 +1463,7 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
           entranceQuizLoading={entranceQuizLoading}
           onChoice={begin}
           onEntranceQuiz={handleStartEntranceQuiz}
+          videoHref={hasVideoLesson ? `/topics/${topicSlug}/video` : null}
         />
       )
     }
@@ -1489,6 +1493,11 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
           <p className="text-xs text-gray-400 dark:text-gray-500 mt-4">
             Already know some of this material? Take the entrance quiz to skip parts you&apos;ve mastered.
           </p>
+          {hasVideoLesson && (
+            <Link href={`/topics/${topicSlug}/video`} className="mt-4 inline-block text-sm font-semibold text-accent hover:text-accent-hover dark:text-accent-muted">
+              Watch the video lesson instead →
+            </Link>
+          )}
         </div>
       </div>
     )
@@ -1613,6 +1622,8 @@ export default function InteractiveLessonRenderer({ topicSlug, courseSlug, cours
           </p>
         </div>
       )}
+      {/* Video preference: only where a video lesson exists to prefer. */}
+      {hasVideoLesson && session?.user && <PreferVideoToggle videoHref={`/topics/${topicSlug}/video`} />}
       {/* Exam-yield toggle: shown only when this part has low-yield material. */}
       {partHasLowYield && (
         <div className="flex items-center justify-between gap-4 rounded-2xl border border-gray-200 bg-white px-4 py-3 dark:border-gray-700 dark:bg-gray-800">

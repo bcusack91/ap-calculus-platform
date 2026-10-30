@@ -38,7 +38,7 @@ import { UNIT_TEST_COURSES, unitTestIsNextStep, unitTestName } from '@/lib/unit-
 import { FULL_LENGTH_COURSES, isFullLengthCourse, type FullLengthCourse } from '@/lib/full-length-progress'
 import { TOPIC_CLEAR_PERCENT } from '@/lib/mastery'
 import { trackPlanNextBlockedByCards } from '@/lib/analytics'
-import { ArrowRight, BookOpen, CalendarDays, ClipboardList, Layers } from 'lucide-react'
+import { ArrowRight, BookOpen, CalendarDays, ClipboardList, Layers, Video } from 'lucide-react'
 import { topicFlashcardBrowseHref, topicFlashcardReviewHref } from '@/lib/flashcard-links'
 
 export interface PlanTopic {
@@ -56,6 +56,10 @@ export interface PlanTopic {
   flashcardsPath?: string
   entranceSatisfied?: boolean
   exitQuizRequired?: boolean
+  // Video lessons (plan-status): a published instructor video lesson exists,
+  // and the student prefers video (User.preferredLessonFormat = VIDEO).
+  hasVideoLesson?: boolean
+  videoPreferred?: boolean
 }
 
 interface PlanPayload {
@@ -105,8 +109,12 @@ export function planTopicHref(topic: PlanTopic): string {
  * where the loop runs (entrance quiz, lesson parts, exit quiz), so a bare
  * topic page link goes there — except for the MCAT, whose subtopic pages often
  * have no written lesson (its enriched plan carries real lesson/quiz paths).
+ * A student who prefers video lessons is sent to /topics/<slug>/video when
+ * the topic has a published one (flags set by plan-status).
  */
 export function studyPlanTopicHref(topic: PlanTopic, courseKey: string): string {
+  // A student who prefers video goes to the topic's video lesson when it has one.
+  if (topic.videoPreferred && topic.hasVideoLesson) return `/topics/${topic.slug}/video`
   const href = planTopicHref(topic)
   if (courseKey !== 'mcat' && href === `/topics/${topic.slug}`) return `${href}/interactive`
   return href
@@ -226,7 +234,12 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, onT
             if (mcatRes.ok) {
               const mcat = await mcatRes.json()
               if (Array.isArray(mcat?.recommendedTopics) && mcat.recommendedTopics.length > 0) {
-                topics = mcat.recommendedTopics
+                // Keep plan-status's video-lesson flags on the enriched topics.
+                const generic = new Map(topics.map((t) => [t.slug, t]))
+                topics = (mcat.recommendedTopics as PlanTopic[]).map((t) => {
+                  const g = generic.get(t.slug)
+                  return g?.hasVideoLesson ? { ...t, hasVideoLesson: true, videoPreferred: g.videoPreferred } : t
+                })
               }
             }
           } catch {
@@ -437,6 +450,9 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, onT
   const nextLessonPath = next?.hasLesson && next.lessonPath ? next.lessonPath : null
   const nextQuizPath = next?.hasExitQuiz && next.exitQuizPath ? next.exitQuizPath : null
   const nextTopicPath = nextHref
+  // Video lessons: the other format, as a small secondary link.
+  const nextVideoHref = next?.hasVideoLesson ? `/topics/${next.slug}/video` : null
+  const nextLeadsWithVideo = !!nextVideoHref && nextTopicPath === nextVideoHref
 
   const cardsDoneForToday = cardsChecked && cardsRemaining === 0
 
@@ -524,8 +540,25 @@ export default function StudyPlanNextUp({ topicSlug, completion, quizPassed, onT
             )}
             {!nextLessonPath && !nextQuizPath && nextTopicPath && (
               <Link href={nextTopicPath} className={PRIMARY_BUTTON}>
-                Go to Topic
+                {nextLeadsWithVideo ? (
+                  <>
+                    <Video className="w-4 h-4" aria-hidden="true" />
+                    Watch the Video Lesson
+                  </>
+                ) : (
+                  'Go to Topic'
+                )}
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
+              </Link>
+            )}
+            {nextVideoHref && !nextLeadsWithVideo && (
+              <Link href={nextVideoHref} className="self-center text-sm font-semibold text-accent-hover hover:underline dark:text-accent-muted">
+                Watch instead →
+              </Link>
+            )}
+            {nextLeadsWithVideo && next && (
+              <Link href={`/topics/${next.slug}/interactive`} className="self-center text-sm font-semibold text-accent-hover hover:underline dark:text-accent-muted">
+                Read instead →
               </Link>
             )}
           </div>

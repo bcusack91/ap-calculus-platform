@@ -26,6 +26,7 @@ export const SURFACE_META: { key: SurfaceKey; label: string; fill: string }[] = 
   { key: 'PRACTICE_TEST', label: 'Practice tests', fill: 'bg-[#008300] dark:bg-[#008300]' },
   { key: 'FULL_LENGTH', label: 'Full-lengths', fill: 'bg-[#4a3aa7] dark:bg-[#9085e9]' },
   { key: 'COMPETITIVE', label: 'Competitive', fill: 'bg-[#e34948] dark:bg-[#e66767]' },
+  { key: 'VIDEO', label: 'Video lessons', fill: 'bg-[#0e9bb0] dark:bg-[#27b4c9]' },
   { key: 'OTHER', label: 'Other', fill: 'bg-gray-400 dark:bg-gray-500' },
 ]
 
