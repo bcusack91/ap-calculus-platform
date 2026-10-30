@@ -113,7 +113,7 @@ export const apChemQuestionPool: APChemQuestion[] = [
     question: 'Which type of bond results from the transfer of electrons between atoms?',
     options: ['Covalent bond', 'Ionic bond', 'Metallic bond', 'Hydrogen bond'],
     correctAnswer: 1,
-    explanation: 'Ionic bonds form when one atom transfers electrons to another, creating oppositely charged ions that attract each other electro statically.',
+    explanation: 'Ionic bonds form when one atom transfers electrons to another, creating oppositely charged ions that attract each other electrostatically.',
     difficulty: 'easy',
     domain: 'bonding',
     topicSlug: 'types-of-chemical-bonds',

@@ -128,7 +128,7 @@ A substance is described. Identify its bond type.`,
               'MgO < KBr < NaCl'
             ],
             correctAnswer: 0,
-            explanation: 'Lattice energy: $E \\propto \\frac{q_+ \\times q_-}{r_+ + r_-}$. KBr has $+1/-1$ charges and large ions (lowest). NaCl has $+1/-1$ charges but smaller ions (middle). MgO has $+2/-2$ charges and small ions (highest: about 3800 kJ/mol vs. 788 for NaCl vs. 671 for KBr).'
+            explanation: 'Lattice energy: $E \\propto \\frac{q_+ \\times q_-}{r_+ + r_-}$. KBr has $+1/-1$ charges and large ions (lowest). NaCl has $+1/-1$ charges but smaller ions (middle). MgO has $+2/-2$ charges and small ions (highest: about 3850 kJ/mol vs. 788 for NaCl vs. 671 for KBr).'
           },
           {
             question: 'Which of the following changes would INCREASE the lattice energy of an ionic compound?',
@@ -157,7 +157,7 @@ A substance is described. Identify its bond type.`,
 
 **3.** $\\Delta\\chi$ for Na—F (Na: 0.9, F: 4.0). Enter the value.
 
-*Round all answers to 3 significant figures.*
+*Give $\\Delta\\chi$ values to one decimal place.*
       `,
       exercise: {
         inputs: [
@@ -249,7 +249,7 @@ A substance is described. Identify its bond type.`,
             label: '$\\text{HF}$ (hydrogen fluoride):',
             options: ['ionic', 'polar covalent', 'nonpolar covalent', 'metallic'],
             correctIndex: 1,
-            explanation: 'Both are nonmetals → covalent. $\\Delta\\chi = |4.0 - 2.1| = 1.9$ — this is borderline but HF is typically classified as polar covalent (it does form molecules in the gas phase).'
+            explanation: 'Both are nonmetals → covalent. $\\Delta\\chi = |4.0 - 2.1| = 1.9$ — above the 1.7 guideline, but H and F are both nonmetals that share electrons, so H—F is a polar covalent bond, not an ionic one.'
           }
         ]
       }

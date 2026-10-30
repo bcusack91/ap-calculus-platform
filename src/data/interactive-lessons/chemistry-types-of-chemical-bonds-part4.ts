@@ -104,7 +104,7 @@ Linus Pauling developed the most widely used electronegativity scale:
 
 The **electronegativity difference** ($\\Delta\\chi$) between two bonded atoms determines the bond type:
 
-$$\\boxed{\\Delta\\chi = |\chi_A - \chi_B|}$$
+$$\\boxed{\\Delta\\chi = |\\chi_A - \\chi_B|}$$
 
 | $\\Delta\\chi$ Range | Bond Type | Electron Distribution |
 |---------------------|-----------|----------------------|
@@ -113,7 +113,7 @@ $$\\boxed{\\Delta\\chi = |\chi_A - \chi_B|}$$
 | $0.5 \\leq \\Delta\\chi < 1.7$ | **Polar covalent** | Unequal sharing |
 | $\\Delta\\chi \\geq 1.7$ | **Ionic** | Electron transfer |
 
-> ⚠️ **AP Note:** These boundaries are approximate guidelines, not rigid cutoffs. The transition from polar covalent to ionic is a **continuum**, not a sharp divide. On the AP exam, focus on the concept of a spectrum rather than memorizing exact numbers.
+> ⚠️ **AP Note:** These boundaries are approximate guidelines, not rigid cutoffs. The transition from polar covalent to ionic is a **continuum**, not a sharp divide. On the AP exam, focus on the concept of a spectrum rather than memorizing exact numbers. A bond between two nonmetals stays covalent even past the guideline: H—F has $\\Delta\\chi = 1.9$ but is a polar covalent bond in a molecule.
 
 
 ---
@@ -241,11 +241,11 @@ Even bonds classified as "ionic" have some covalent character, and vice versa. T
       type: 'input-box' as const,
       content: `### Part 4 Practice — Electronegativity and Polarity
 
-**1.** Calculate $\\Delta\\chi$ for an O—H bond. (O: $\\chi = 3.5$, H: $\\chi = 2.1$. Enter to 3 significant figures.)
+**1.** Calculate $\\Delta\\chi$ for an O—H bond. (O: $\\chi = 3.5$, H: $\\chi = 2.1$. Enter to one decimal place.)
 
 **2.** In the bond H—F, which atom carries the partial negative charge ($\\delta^-$)? (Enter "H" or "F")
 
-**3.** Calculate $\\Delta\\chi$ for a Na—Cl bond. (Na: $\\chi = 0.9$, Cl: $\\chi = 3.0$. Enter to 3 significant figures.)`,
+**3.** Calculate $\\Delta\\chi$ for a Na—Cl bond. (Na: $\\chi = 0.9$, Cl: $\\chi = 3.0$. Enter to one decimal place.)`,
       exercise: {
         inputs: [
           {
