@@ -22,11 +22,11 @@ describe('video short links (/v/<code>)', () => {
     expect(lookupShortLink('nope1')).toBeNull()
   })
 
-  it('goes straight to the only instructor, through the picker for several, and to the topic before approval', () => {
+  it('goes straight to the only instructor, through the picker for several, and to the recording-plan questions before approval', () => {
     const link = lookupShortLink('bonds2')!
     const one = shortLinkDestination(link, ['jane'])
     expect(one).toBe('/topics/types-of-chemical-bonds/video/jane?clip=2&utm_source=youtube&utm_medium=video&utm_campaign=apchem-bonds&utm_content=bonds2')
     expect(shortLinkDestination(link, ['jane', 'marcus'])).toBe('/topics/types-of-chemical-bonds/video?clip=2&utm_source=youtube&utm_medium=video&utm_campaign=apchem-bonds&utm_content=bonds2')
-    expect(shortLinkDestination(link, [])).toBe('/topics/types-of-chemical-bonds?utm_source=youtube&utm_medium=video&utm_campaign=apchem-bonds&utm_content=bonds2')
+    expect(shortLinkDestination(link, [])).toBe('/v/bonds2/questions?utm_source=youtube&utm_medium=video&utm_campaign=apchem-bonds&utm_content=bonds2')
   })
 })

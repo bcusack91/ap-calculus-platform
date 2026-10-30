@@ -37,12 +37,13 @@ export function lookupShortLink(code: string): (VideoShortLink & { code: string 
  * published lesson for the topic:
  * - one instructor → straight to that lesson, on the clip's checkpoint;
  * - several → the instructor picker, which carries the clip through;
- * - none yet (not approved) → the topic page, so the link never dead-ends.
+ * - none yet (not approved) → the clip's questions from its recording plan
+ *   (/v/<code>/questions), so the link opens real questions from day one.
  */
 export function shortLinkDestination(link: VideoShortLink & { code: string }, instructorSlugs: readonly string[]): string {
   const utm = new URLSearchParams({ utm_source: 'youtube', utm_medium: 'video', utm_campaign: link.campaign, utm_content: link.code })
   const base = `/topics/${encodeURIComponent(link.topicSlug)}`
-  if (instructorSlugs.length === 0) return `${base}?${utm}`
+  if (instructorSlugs.length === 0) return `/v/${encodeURIComponent(link.code)}/questions?${utm}`
   const withClip = new URLSearchParams({ clip: String(link.clip) })
   utm.forEach((v, k) => withClip.set(k, v))
   if (instructorSlugs.length === 1) return `${base}/video/${encodeURIComponent(instructorSlugs[0])}?${withClip}`
