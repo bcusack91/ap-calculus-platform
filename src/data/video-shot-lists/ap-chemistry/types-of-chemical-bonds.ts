@@ -274,17 +274,17 @@ export const shotList: ShotList = {
         'In a metal, cations sit in a lattice and their valence electrons are delocalized through the whole solid, an "electron sea." The metallic bond is the attraction between the cations and that sea, and it is non-directional.',
         'The mobile electrons carry charge, so metals conduct electricity as solids and as liquids.',
         'Metals are malleable and ductile: when layers of cations slide, the electron sea adjusts and keeps holding them, so the metal bends instead of shattering (unlike a brittle ionic solid).',
-        'Metallic bonding is stronger with more valence electrons and smaller cations: Na (1 valence electron, melts 98 °C) < Mg (2, 650 °C) < Al (3, 660 °C).',
+        'Metallic bonding is stronger with more valence electrons and smaller cations. Boiling points show it most clearly, because boiling pulls the atoms fully apart: Na (1 valence electron, boils 883 °C) < Mg (2, 1091 °C) < Al (3, 2519 °C).',
         'Alloys: in a substitutional alloy, atoms of similar size replace host atoms (brass: Zn in Cu); in an interstitial alloy, much smaller atoms fill the gaps (steel: C in Fe). The mixed atom sizes disrupt layer sliding, so alloys are harder than the pure metal, and they still conduct.',
       ],
       showOnScreen: [
         'A grid of + cations in a cloud of e⁻ (the electron sea)',
         'Two rows of cations sliding past each other with the sea still around them, next to an ionic lattice cracking after the same shift',
-        'The Na / Mg / Al table: valence electrons and melting points',
+        'The Na / Mg / Al table: valence electrons and boiling points',
         'Side-by-side lattices: substitutional (similar-size Zn replacing Cu) and interstitial (small C in the gaps between Fe)',
       ],
       workedExample:
-        'Compare Na, Mg and Al across Period 3: valence electrons rise 1 → 2 → 3 and the cations shrink, so metallic bonding strengthens and the melting point climbs from 98 °C to 650 °C to 660 °C.',
+        'Compare Na, Mg and Al across Period 3: valence electrons rise 1 → 2 → 3 and the cations shrink, so metallic bonding strengthens and the boiling point climbs from 883 °C to 1091 °C to 2519 °C.',
       pitfalls: [
         'Saying metals conduct because they contain ions; it is the delocalized electrons that move.',
         'Mixing up the alloy types: substitutional = similar size, swapped in; interstitial = much smaller, in the gaps.',
