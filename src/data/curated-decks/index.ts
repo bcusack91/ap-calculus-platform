@@ -20,5 +20,11 @@ import { mcatKinematicsDeck } from './mcat-kinematics'
  *   `|` + newlines → table, `Solution:`/`→ ` prefix → ✓ callout, `**bold**`.
  */
 export const CURATED_DECKS: Record<string, { title: string; slides: Slide[] }> = {
-  'mcat-physics-mechanics-kinematics-mcat': mcatKinematicsDeck,
+  // Kinematics (owner-reviewed 2026-10-29) is retired from the override:
+  // its lesson was rewritten to the Nov 2026 class standard (lettered worked
+  // examples, 4 + 4 takeaways, 16 polls, ≈80 min), and the 30-slide curated
+  // arc (2 polls, four-step reveals) no longer fits a 90-minute class.
+  // The deck file stays; re-add the line below to restore it.
+  // 'mcat-physics-mechanics-kinematics-mcat': mcatKinematicsDeck,
 }
+void mcatKinematicsDeck

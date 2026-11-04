@@ -1,21 +1,22 @@
 import type { DeckFigurePlacement } from './index'
 
 /**
- * Kinematics (MCAT C/P) — figures for the in-class deck. Authored 2026-10-29.
- *
- * This deck is CURATED (src/data/curated-decks/mcat-kinematics.ts), so every
- * `at` below prefixes one of THAT file's slide titles, not a lesson heading.
+ * Kinematics (MCAT C/P) — figures for the in-class deck. Authored 2026-10-29;
+ * re-anchored 2026-11-04 when the curated deck was retired and the lesson
+ * (mcat-mcat-physics-mechanics-kinematics-mcat-part1…4) was rewritten to the
+ * Nov 2026 class standard, so every `at` below prefixes a LESSON heading.
  *
  * Every drawing is ours, drawn from the concept: the three constant-
  * acceleration motion graphs with their slope/area links, the inventory →
- * eliminate → select flow fanned out to the Big 5, the braking example as a
+ * eliminate → select flow fanned out to the Big 5, the sprinter example as a
  * v–t triangle, free-fall symmetry (thrown up / dropped / sliding to rest),
- * a projectile parabola with the velocity decomposed at five points, the
- * ball-off-a-table scene twice (setup with its x | y inventories, then a
- * three-ball strobe for independence) and a free-body diagram on an incline.
+ * a projectile parabola with the velocity decomposed at five points and the
+ * horizontal-launch scene twice (setup with its x | y inventories, then a
+ * three-ball strobe for independence). The incline free-body diagram was
+ * dropped with the curated deck: inclines are not in this lesson.
  * No textbook, prep-company or AAMC figure was copied. Graph shapes are
- * illustrative; the only numbers drawn are the deck's own worked-example
- * values (30 m/s over 90 m; 20 m table, 5 m/s, g = 10 m/s²).
+ * illustrative; the only numbers drawn are the lesson's own worked-example
+ * values (sprinter 2 m/s² for 6 s; 45 m ledge, 20 m/s, g = 10 m/s²).
  *
  * Colour convention across the deck: the x-direction / slopes are BLUE
  * (fig-accent), the y-direction / g / areas are RED (fig-accent-2); the
@@ -157,33 +158,34 @@ ${T(500, 408, 21, 'One equation, one unknown — no simultaneous equations', 'mi
 <g class="fig-muted">${T(500, 440, 15, 'all five assume constant acceleration', 'middle')}</g>
 </svg>`
 
-/* 3 — Braking to a stop as a v–t triangle: area = 90 m, slope = −5 m/s² (lead at Step 2, 1000×460) */
-const brakeSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
-<defs>${ARROW('arr-kin-brake')}</defs>
-${T(500, 32, 20, 'Braking: the v–t graph checks the algebra', 'middle', '700')}
+/* 3 — The sprinter from rest as a v–t triangle: area = 36 m, slope = 2 m/s² (after the worked example, 1000×460) */
+const sprintSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
+<defs>${ARROW('arr-kin-sprint')}</defs>
+${T(500, 32, 20, 'From rest: the v–t graph checks the algebra', 'middle', '700')}
 <g class="fig-accent-2">
-<polygon points="120,360 120,120 720,360" fill="currentColor" fill-opacity="0.15"/>
-${T(330, 290, 20, 'area = Δx = 90 m', 'middle', '700')}
-${T(330, 318, 17, '½ × 30 × t = 90  ⇒  t = 6 s', 'middle')}
+<polygon points="120,360 720,360 720,120" fill="currentColor" fill-opacity="0.15"/>
+${T(560, 290, 20, 'area = Δx = ½ × 6 × 12 = 36 m', 'middle', '700')}
+${T(560, 318, 17, 'the triangle IS ½(v₀ + v)t with v₀ = 0', 'middle')}
 </g>
-<line x1="120" y1="360" x2="120" y2="60" stroke="currentColor" stroke-width="2.5" marker-end="url(#arr-kin-brake)"/>
-<line x1="120" y1="360" x2="840" y2="360" stroke="currentColor" stroke-width="2.5" marker-end="url(#arr-kin-brake)"/>
+<line x1="120" y1="360" x2="120" y2="60" stroke="currentColor" stroke-width="2.5" marker-end="url(#arr-kin-sprint)"/>
+<line x1="120" y1="360" x2="840" y2="360" stroke="currentColor" stroke-width="2.5" marker-end="url(#arr-kin-sprint)"/>
 ${T(120, 50, 17, 'v (m/s)', 'middle')}
 ${T(858, 366, 17, 't (s)')}
-<line x1="120" y1="120" x2="720" y2="360" stroke="currentColor" stroke-width="4"/>
-${DOT(120, 120, 7)}
-${DOT(720, 360, 7)}
-${T(108, 126, 17, '30', 'end')}
+<g class="fig-muted"><line x1="120" y1="120" x2="720" y2="120" stroke="currentColor" stroke-width="1.5" stroke-dasharray="6 5"/></g>
+<line x1="120" y1="360" x2="720" y2="120" stroke="currentColor" stroke-width="4"/>
+${DOT(120, 360, 7)}
+${DOT(720, 120, 7)}
+${T(108, 126, 17, '12', 'end')}
 ${T(108, 366, 17, '0', 'end')}
-${T(138, 112, 17, 'v₀ = 30 m/s', 'start', '700')}
+${T(138, 350, 17, 'v₀ = 0 — "from rest"', 'start', '700')}
 ${T(720, 390, 17, 't = 6 s', 'middle')}
-${T(736, 348, 16, 'v = 0 — "comes to rest"')}
+${T(736, 114, 16, 'v = 12 m/s')}
 <g class="fig-accent">
-<path d="M420 240 L520 240 L520 280" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="7 5"/>
-${T(536, 262, 18, 'slope = a = −30 / 6 = −5 m/s²', 'start', '700')}
+<path d="M320 280 L420 280 L420 240" fill="none" stroke="currentColor" stroke-width="2.5" stroke-dasharray="7 5"/>
+${T(200, 200, 18, 'slope = a = 12 / 6 = 2 m/s²', 'start', '700')}
 </g>
-${T(500, 424, 18, 'Equation check: 0 = 30² + 2a(90)  ⇒  a = −5 m/s² — the slope says the same', 'middle')}
-<g class="fig-muted">${T(500, 450, 14, 'negative slope = acceleration opposite the motion (deceleration)', 'middle')}</g>
+${T(500, 424, 18, 'Equation check: Δx = v₀t + ½at² = 0 + ½(2)(6)² = 36 m — the area says the same', 'middle')}
+<g class="fig-muted">${T(500, 450, 14, 'constant a = a straight v–t line; starting from rest = it starts at the origin', 'middle')}</g>
 </svg>`
 
 /* 4 — Hidden variables: thrown up (symmetry), dropped (v₀ = 0), sliding to rest (v = 0) (lead, 1000×460) */
@@ -244,7 +246,7 @@ ${T(900, 340, 15, '⇒ v = 0', 'middle')}
 ${BOX(830, 360, 42, 32, 6, 2.5)}
 ${BOX(928, 360, 42, 32, 6, 2.5, 0.12)}
 ${T(949, 428, 14, 'stopped', 'middle')}
-<g class="fig-muted">${T(760, 452, 15, '"in free fall" ⇒ a = −g ≈ −10 m/s² for every object, at every instant', 'middle')}</g>
+<g class="fig-muted">${T(760, 452, 15, '"in free fall" ⇒ a = g ≈ 10 m/s² downward for every object, at every instant', 'middle')}</g>
 </svg>`
 
 /* 5 — Projectile motion: velocity decomposed at five points on the parabola (lead, 1000×460) */
@@ -287,7 +289,7 @@ ${T(960, 40, 16, `at the apex ${SUB('v', 'y', ` = 0 — but ${SUB('a', 'y', ` = 
 ${T(960, 64, 16, 'x and y share exactly ONE variable: t', 'end')}
 </svg>`
 
-/* 6 — Ball off a table: the setup with its x | y inventories (lead at Step 1, 1000×460) */
+/* 6 — Horizontal launch off a 45 m ledge: the setup with its x | y inventories (after the worked example, 1000×460) */
 const tableScene = (ballLabelFree: boolean) =>
   `<line x1="80" y1="150" x2="380" y2="150" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
 <line x1="100" y1="152" x2="100" y2="390" stroke="currentColor" stroke-width="4"/>
@@ -295,7 +297,7 @@ const tableScene = (ballLabelFree: boolean) =>
 <line x1="40" y1="390" x2="690" y2="390" stroke="currentColor" stroke-width="3"/>`
 const ballSetupSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
 <defs>${ARROW('arr-kin-ball')}</defs>
-${T(360, 34, 20, 'Ball off a table: one picture, two inventories', 'middle', '700')}
+${T(360, 34, 20, 'Horizontal launch: one picture, two inventories', 'middle', '700')}
 ${tableScene(false)}
 <g class="fig-muted"><path d="M380 140 Q440 140 500 390" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="7 6"/></g>
 ${DOT(380, 140, 10)}
@@ -304,12 +306,12 @@ ${T(520, 330, 16, 't = ? (shared)')}
 <g class="fig-accent">
 <defs>${ARROW('arr-kin-ball-b')}</defs>
 ${ARR(392, 140, 462, 140, 'arr-kin-ball-b')}
-${T(474, 146, 17, SUB('v', 'x', ' = 5 m/s'), 'start', '700')}
+${T(474, 146, 17, SUB('v', 'x', ' = 20 m/s'), 'start', '700')}
 <path d="M380 418 L380 430 L500 430 L500 418" fill="none" stroke="currentColor" stroke-width="2"/>
 ${T(440, 452, 17, 'x = ?  (asked)', 'middle', '700')}
 ${BOX(700, 70, 130, 280, 14, 2.5, 0.06)}
 ${T(765, 102, 19, 'x', 'middle', '700')}
-${T(765, 142, 17, SUB('v', 'x', ' = 5 m/s'), 'middle')}
+${T(765, 142, 17, SUB('v', 'x', ' = 20 m/s'), 'middle')}
 ${T(765, 176, 17, SUB('a', 'x', ' = 0'), 'middle')}
 ${T(765, 210, 17, 'x = ?', 'middle')}
 ${T(765, 244, 17, 't = ?', 'middle')}
@@ -317,18 +319,19 @@ ${T(840, 436, 16, `then x = ${SUB('v', 'x', ' · t', 16)}`, 'middle', '700')}
 </g>
 <g class="fig-accent-2">
 <defs>${ARROW('arr-kin-ball-r')}</defs>
-${T(392, 118, 15, SUB('v', '0y', ' = 0 — rolls off horizontally', 15))}
+${T(392, 118, 15, SUB('v', '0y', ' = 0 — launched horizontally', 15))}
 ${ARR(600, 190, 600, 250, 'arr-kin-ball-r')}
-${T(600, 276, 16, SUB('a', 'y', ' = −10 m/s²', 16), 'middle', '700')}
+${T(600, 276, 16, SUB('a', 'y', ' = 10 m/s² (down +)', 16), 'middle', '700')}
 <path d="M72 150 L64 150 L64 390 L72 390" fill="none" stroke="currentColor" stroke-width="2"/>
 ${T(56, 262, 16, 'Δy =', 'end', '700')}
-${T(56, 284, 16, '−20 m', 'end', '700')}
+${T(56, 284, 16, '45 m', 'end', '700')}
 ${BOX(850, 70, 130, 280, 14, 2.5, 0.06)}
 ${T(915, 102, 19, 'y', 'middle', '700')}
 ${T(915, 142, 17, SUB('v', '0y', ' = 0'), 'middle')}
-${T(915, 176, 17, SUB('a', 'y', ' = −10 m/s²'), 'middle')}
-${T(915, 210, 17, 'Δy = −20 m', 'middle')}
+${T(915, 176, 17, SUB('a', 'y', ' = 10 m/s²'), 'middle')}
+${T(915, 210, 17, 'Δy = 45 m', 'middle')}
 ${T(915, 244, 17, 't = ?', 'middle')}
+${T(915, 270, 13, '(down = +)', 'middle')}
 ${T(915, 296, 15, 'everything but t', 'middle', '700')}
 ${T(915, 316, 15, '→ start here', 'middle', '700')}
 ${T(840, 408, 16, 'y gives t first,', 'middle', '700')}
@@ -339,99 +342,55 @@ ${T(840, 380, 15, 'the columns share only t', 'middle')}
 </g>
 </svg>`
 
-/* 7 — Independence: three balls leave the table together — same WHEN, different WHERE (after Step 3, 1000×460) */
+/* 7 — Independence: three balls leave the ledge together — same WHEN, different WHERE (after the worked example, 1000×460).
+   The parabolas are quadratic Béziers with the control point level with the launch, so y ∝ t² along them:
+   the 240 px drop is 45 m / 3 s, and the dots sit at 1/3 (1 s) and 2/3 (2 s) of the way along. */
 const strobeSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
 <defs>${ARROW('arr-kin-strobe')}</defs>
-${T(360, 34, 20, 'Roll speed changes WHERE it lands, never WHEN', 'middle', '700')}
-${T(60, 70, 15, 'three balls leave the 20 m table at the same instant:')}
+${T(360, 34, 20, 'Launch speed changes WHERE it lands, never WHEN', 'middle', '700')}
+${T(60, 70, 15, 'three balls leave the 45 m ledge at the same instant:')}
 ${DOT(68, 92, 6)}${T(80, 97, 15, `dropped, ${SUB('v', 'x', ' = 0', 15)}`)}
-<g class="fig-accent">${DOT(218, 92, 6)}${T(230, 97, 15, SUB('v', 'x', ' = 5 m/s', 15), 'start', '700')}</g>
-<g class="fig-accent-2">${DOT(340, 92, 6)}${T(352, 97, 15, SUB('v', 'x', ' = 10 m/s', 15), 'start', '700')}</g>
+<g class="fig-accent">${DOT(218, 92, 6)}${T(230, 97, 15, SUB('v', 'x', ' = 10 m/s', 15), 'start', '700')}</g>
+<g class="fig-accent-2">${DOT(340, 92, 6)}${T(352, 97, 15, SUB('v', 'x', ' = 20 m/s', 15), 'start', '700')}</g>
 ${tableScene(true)}
 <g class="fig-muted">
 <line x1="380" y1="150" x2="380" y2="390" stroke="currentColor" stroke-width="2" stroke-dasharray="7 6"/>
-<line x1="380" y1="210" x2="650" y2="210" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+<line x1="380" y1="177" x2="650" y2="177" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+<line x1="380" y1="257" x2="650" y2="257" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
 <line x1="380" y1="390" x2="650" y2="390" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
 </g>
-${T(368, 205, 15, 't = 1 s', 'end')}
-${T(368, 383, 15, 't = 2 s', 'end')}
+${T(368, 182, 15, 't = 1 s', 'end')}
+${T(368, 262, 15, 't = 2 s', 'end')}
+${T(368, 383, 15, 't = 3 s', 'end')}
 <g class="fig-accent"><path d="M380 150 Q440 150 500 390" fill="none" stroke="currentColor" stroke-width="2.5"/></g>
 <g class="fig-accent-2"><path d="M380 150 Q500 150 620 390" fill="none" stroke="currentColor" stroke-width="2.5"/></g>
 ${DOT(380, 140, 9)}
-${DOT(380, 210, 9)}
+${DOT(380, 177, 9)}
+${DOT(380, 257, 9)}
 ${DOT(380, 381, 9)}
-<g class="fig-accent">${DOT(440, 210, 9)}${DOT(500, 381, 9)}${T(500, 418, 16, '10 m = 5 × 2', 'middle', '700')}</g>
-<g class="fig-accent-2">${DOT(500, 210, 9)}${DOT(620, 381, 9)}${T(620, 418, 16, '20 m = 10 × 2', 'middle', '700')}</g>
+<g class="fig-accent">${DOT(420, 177, 9)}${DOT(460, 257, 9)}${DOT(500, 381, 9)}${T(500, 418, 16, '30 m = 10 × 3', 'middle', '700')}</g>
+<g class="fig-accent-2">${DOT(460, 177, 9)}${DOT(540, 257, 9)}${DOT(620, 381, 9)}${T(620, 418, 16, '60 m = 20 × 3', 'middle', '700')}</g>
 ${T(380, 418, 16, '0 m', 'middle')}
 ${T(360, 450, 15, 'same drop ⇒ same time; the horizontal speed only sets the distance', 'middle')}
 <g class="fig-accent-2">
 ${BOX(720, 110, 260, 112, 14, 2.5, 0.06)}
 ${T(850, 142, 17, 'WHEN — the y-inventory', 'middle', '700')}
-${T(850, 172, 16, '20 = ½(10)t²  ⇒  t = 2 s', 'middle')}
+${T(850, 172, 16, '45 = 5t²  ⇒  t = 3 s', 'middle')}
 ${T(850, 200, 15, 'identical for all three balls', 'middle')}
 </g>
 <g class="fig-accent">
 ${BOX(720, 250, 260, 112, 14, 2.5, 0.06)}
 ${T(850, 282, 17, 'WHERE — the x-inventory', 'middle', '700')}
-${T(850, 312, 16, `x = ${SUB('v', 'x', ' t = 0 · 10 · 20 m', 16)}`, 'middle')}
-${T(850, 340, 15, 'faster roll ⇒ farther, never later', 'middle')}
+${T(850, 312, 16, `x = ${SUB('v', 'x', ' t = 0 · 30 · 60 m', 16)}`, 'middle')}
+${T(850, 340, 15, 'faster launch ⇒ farther, never later', 'middle')}
 </g>
 <g class="fig-muted">${T(850, 400, 15, 'the only shared variable is t', 'middle')}</g>
 </svg>`
 
-/* 8 — Free-body diagram on an incline: weight decomposed along / perpendicular to the plane (lead, 1000×460) */
-const inclineSvg = `${SVG_OPEN} viewBox="0 0 1000 460">
-<defs>${ARROW('arr-kin-incl')}</defs>
-${T(320, 36, 20, 'Free-body diagram on an incline', 'middle', '700')}
-<g class="fig-muted">
-<polygon points="80,380 560,380 560,140" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="2"/>
-<defs>${ARROW('arr-kin-incl-m')}</defs>
-${ARR(120, 120, 183, 89, 'arr-kin-incl-m', 2)}
-${ARR(120, 120, 89, 57, 'arr-kin-incl-m', 2)}
-${T(192, 94, 15, 'x′ along the plane')}
-${T(96, 50, 15, 'y′ ⊥ plane')}
-${T(120, 172, 14, 'tilt the axes')}
-<line x1="261" y1="262" x2="309" y2="358" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
-<line x1="357" y1="334" x2="309" y2="358" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4"/>
-</g>
-<path d="M130 380 A50 50 0 0 0 124.7 357.6" fill="none" stroke="currentColor" stroke-width="2"/>
-${T(142, 374, 17, 'θ')}
-<polygon points="293.2,273.4 346.8,246.6 324.5,201.9 270.8,228.7" fill="currentColor" fill-opacity="0.1" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-${ARR(309, 238, 309, 358, 'arr-kin-incl', 3.5)}
-${T(320, 376, 18, 'mg', 'start', '700')}
-<path d="M309 283 A45 45 0 0 0 329 278" fill="none" stroke="currentColor" stroke-width="2"/>
-${T(326, 302, 16, 'θ')}
-<g class="fig-accent-2">
-<defs>${ARROW('arr-kin-incl-r')}</defs>
-${ARR(309, 238, 261, 262, 'arr-kin-incl-r', 3.5)}
-${T(252, 290, 17, 'mg sinθ', 'end', '700')}
-${ARR(309, 238, 357, 334, 'arr-kin-incl-r', 3.5)}
-${T(368, 346, 17, 'mg cosθ', 'start', '700')}
-${BOX(660, 70, 320, 70, 14, 2.5, 0.06)}
-${T(820, 100, 18, 'along the plane: mg sinθ', 'middle', '700')}
-${T(820, 126, 15, 'pulls the block down the slope', 'middle')}
-</g>
-<g class="fig-accent">
-<defs>${ARROW('arr-kin-incl-b')}</defs>
-${ARR(309, 238, 261, 142, 'arr-kin-incl-b', 3.5)}
-${T(256, 134, 17, 'N = mg cosθ', 'end', '700')}
-${ARR(309, 238, 345, 220, 'arr-kin-incl-b', 3.5)}
-${T(354, 212, 17, 'f = μN', 'start', '700')}
-${BOX(660, 160, 320, 70, 14, 2.5, 0.06)}
-${T(820, 190, 18, 'perpendicular: N = mg cosθ', 'middle', '700')}
-${T(820, 216, 15, 'when nothing else pushes vertically', 'middle')}
-</g>
-${BOX(660, 250, 320, 70, 14, 2.5)}
-${T(820, 280, 18, 'friction: f = μN = μ mg cosθ', 'middle', '700')}
-${T(820, 306, 15, 'static f ≤ μₛN · kinetic f = μₖN', 'middle')}
-${T(820, 362, 17, 'Inventory per axis, then F = ma:', 'middle', '700')}
-${T(820, 392, 17, 'x′:  mg sinθ − f = ma', 'middle')}
-${T(820, 420, 17, 'y′:  N − mg cosθ = 0', 'middle')}
-</svg>`
-
 export const mcatKinematicsFigures: DeckFigurePlacement[] = [
+  // Part 1 — the graph-reading section (its slide title is "Reading Motion Graphs (High Yield)").
   {
-    at: 'The Big 5 Kinematic Equations',
+    at: 'Reading Motion Graphs',
     mode: 'lead',
     figure: {
       svg: graphsSvg,
@@ -440,12 +399,13 @@ export const mcatKinematicsFigures: DeckFigurePlacement[] = [
       caption: 'Constant acceleration as three graphs: slope carries you rightward (x→v→a), area carries you back (a→v→x) — illustrative.',
     },
     blocks: [
-      '- Each Big 5 equation drops **one** of $\\Delta x$, $v_0$, $v$, $a$, $t$ — the missing one picks the equation',
-      '- Slope of $x$–$t$ is $v$; slope of $v$–$t$ is $a$; area under $v$–$t$ is $\\Delta x$ (constant $a$ only)',
+      '- Slope of $x$–$t$ is $v$; slope of $v$–$t$ is $a$ — a curved $x$–$t$ graph means the velocity is changing',
+      '- Area under $v$–$t$ is $\\Delta x$ (below the axis counts negative); area under $a$–$t$ is $\\Delta v$',
     ],
   },
+  // Part 2 — the Big 5 table ("each equation is missing exactly one variable").
   {
-    at: 'Choosing the Right Equation',
+    at: 'The Big 5',
     mode: 'lead',
     figure: {
       svg: chooseSvg,
@@ -455,39 +415,42 @@ export const mcatKinematicsFigures: DeckFigurePlacement[] = [
     },
     blocks: [
       '- Inventory (explicit **and** implicit) → mark the target → find the one variable that is neither',
-      '- That missing variable names the equation — one equation, one unknown',
+      '- That missing variable names the equation — one equation, one unknown; no time given ⇒ $v^2 = v_0^2 + 2a\\Delta x$',
     ],
   },
+  // Part 2 — behind the sprinter example (it prints that example's 12 m/s, 36 m and 2 m/s²).
   {
-    at: 'Braking to a Stop — Step 2',
-    mode: 'lead',
+    at: 'Worked Example — Constant Acceleration from Rest',
+    mode: 'after',
     figure: {
-      svg: brakeSvg,
+      svg: sprintSvg,
       alt:
-        'A velocity–time graph for the braking car. The line starts at v₀ = 30 m/s on the v-axis and falls straight to v = 0 ("comes to rest") on the t-axis at t = 6 s. The triangle under the line is shaded red and labelled area = Δx = 90 m; ½ × 30 × t = 90 gives t = 6 s. A blue rise/run triangle on the line is labelled slope = a = −30 / 6 = −5 m/s². Footer: the equation check 0 = 30² + 2a(90) gives a = −5 m/s², the same as the slope; the negative slope means the acceleration opposes the motion.',
-      caption: 'The braking example as a v–t triangle: its area is the 90 m stopping distance, its slope is the −5 m/s² acceleration (deck values).',
+        'A velocity–time graph for the sprinter. The line starts at the origin (v₀ = 0, "from rest") and rises straight to v = 12 m/s at t = 6 s, with a dashed guide at 12 on the v-axis. The triangle under the line is shaded red and labelled area = Δx = ½ × 6 × 12 = 36 m — the triangle is ½(v₀ + v)t with v₀ = 0. A blue rise/run triangle on the line is labelled slope = a = 12 / 6 = 2 m/s². Footer: the equation check Δx = v₀t + ½at² = 0 + ½(2)(6)² = 36 m, the same as the area; constant a is a straight v–t line and starting from rest means it starts at the origin.',
+      caption: 'The sprinter as a v–t triangle: its area is the 36 m covered, its slope is the 2 m/s² acceleration (lesson values).',
     },
     blocks: [
-      '- Area under $v$–$t$ is $\\Delta x = 90$ m $\\Rightarrow t = 6$ s; the slope is $a = -30/6 = -5\\ \\text{m/s}^2$',
-      '- Same answer as $v^2 = v_0^2 + 2a\\Delta x$ — the graph is the sanity check',
+      '- Area under $v$–$t$ is $\\Delta x = \\tfrac{1}{2}(6)(12) = 36$ m; the slope is $a = 12/6 = 2\\ \\text{m/s}^2$',
+      '- Same answer as $\\Delta x = v_0 t + \\tfrac{1}{2}at^2$ — the graph is the sanity check',
     ],
   },
+  // Part 2 — in front of the symmetry section; the dropped panel recaps the Free Fall section just before it.
   {
-    at: 'Hidden Variables',
+    at: 'Symmetry of Vertical Throws',
     mode: 'lead',
     figure: {
       svg: fallSvg,
       alt:
-        'Three free-fall scenes. Left, a ball thrown straight up: it rises along one dashed line and comes down along another, with blue velocity arrows that shrink on the way up, vanish at the peak (peak: v = 0, but a = −g here too), and grow on the way down; at the launch height the return arrow has the same length pointing down (same speed, opposite sign); a dashed horizontal line marks same height ⇒ same speed; red arrows down the side say a = −g always; below the ground: t up, t down, t↑ = t↓. Middle, a ball dropped from a ledge ("dropped" ⇒ v₀ = 0): positions at equal time steps spread out 1 : 3 : 5 and the blue arrows grow, speeding up 10 m/s every second. Right, a sliding box with an arrow and a stopped box ("comes to rest" ⇒ v = 0). Footer: "in free fall" ⇒ a = −g ≈ −10 m/s² for every object at every instant.',
-      caption: 'The wording is data: "peak" ⇒ v = 0 (a still −g), "dropped" ⇒ v₀ = 0, "comes to rest" ⇒ v = 0; free fall is symmetric up and down.',
+        'Three free-fall scenes. Left, a ball thrown straight up: it rises along one dashed line and comes down along another, with blue velocity arrows that shrink on the way up, vanish at the peak (peak: v = 0, but a = −g here too), and grow on the way down; at the launch height the return arrow has the same length pointing down (same speed, opposite sign); a dashed horizontal line marks same height ⇒ same speed; red arrows down the side say a = −g always; below the ground: t up, t down, t↑ = t↓. Middle, a ball dropped from a ledge ("dropped" ⇒ v₀ = 0): positions at equal time steps spread out 1 : 3 : 5 and the blue arrows grow, speeding up 10 m/s every second. Right, a sliding box with an arrow and a stopped box ("comes to rest" ⇒ v = 0). Footer: "in free fall" ⇒ a = g ≈ 10 m/s² downward for every object at every instant.',
+      caption: 'The wording is data: "peak" ⇒ v = 0 (a still g, never zero), "dropped" ⇒ v₀ = 0, "comes to rest" ⇒ v = 0; free fall is symmetric up and down.',
     },
     blocks: [
-      '- The wording **is** data: "rest" ⇒ $v = 0$, "dropped" ⇒ $v_0 = 0$, "peak" ⇒ $v_y = 0$, "free fall" ⇒ $a = -g$',
-      '- Free-fall symmetry: $t_{\\text{up}} = t_{\\text{down}}$ and the same speed at the same height',
+      '- The wording **is** data: "rest" ⇒ $v = 0$, "dropped" ⇒ $v_0 = 0$, "peak" ⇒ $v = 0$ but $a = g$, "free fall" ⇒ $a = g$ downward',
+      '- Symmetry: $t_{\\text{up}} = t_{\\text{down}} = v_0/g$, and it returns with the same speed it left with',
     ],
   },
+  // Part 3 — in front of the independence rule and its table.
   {
-    at: 'Projectile Motion',
+    at: 'The One Rule of Projectile Motion',
     mode: 'lead',
     figure: {
       svg: projSvg,
@@ -500,46 +463,35 @@ export const mcatKinematicsFigures: DeckFigurePlacement[] = [
       '- The two axes share exactly one variable, $t$; at the apex $v_y = 0$ but $a_y = -g$',
     ],
   },
+  // Part 3 — both behind the horizontal-launch example (they print its 45 m, 20 m/s, t = 3 s, 60 m).
+  // A second `after` on the same heading is inserted AHEAD of the first, so the
+  // strobe is listed first here and the setup picture shows first in class.
   {
-    at: 'Ball off a Table — Step 1',
-    mode: 'lead',
-    figure: {
-      svg: ballSetupSvg,
-      alt:
-        'A ball leaves the edge of a 20 m high table with a blue horizontal arrow v_x = 5 m/s and a red note v₀y = 0 (rolls off horizontally); a dashed parabola leads to a dashed open circle on the floor. A red bracket on the left marks Δy = −20 m, a red arrow marks a_y = −10 m/s², a blue bracket under the floor marks x = ? (asked), and the flight is labelled t = ? (shared by x and y). On the right, two inventory columns: x in blue (v_x = 5 m/s, a_x = 0, x = ?, t = ?) and y in red (v₀y = 0, a_y = −10 m/s², Δy = −20 m, t = ?) joined only at t; the y column says everything but t → start here; below: the columns share only t; y gives t first, then x = v_x · t.',
-      caption: 'The ball-off-a-table setup with one inventory per axis (deck values): the y column is complete except t, so it is solved first.',
-    },
-    blocks: [
-      '- $x$ and $y$ get separate inventories; the only shared entry is $t$',
-      '- The $y$ column is complete except $t$ — solve there first, then carry $t$ to $x$',
-    ],
-  },
-  {
-    at: 'Ball off a Table — Step 3',
+    at: 'Worked Example — Horizontal Launch',
     mode: 'after',
     figure: {
       svg: strobeSvg,
       alt:
-        'Three balls leave the same 20 m table at the same instant: one dropped (v_x = 0, falls straight down a dashed line), one rolling at v_x = 5 m/s (blue parabola) and one at v_x = 10 m/s (red parabola). Dashed horizontal lines at t = 1 s and t = 2 s show all three at the same height at the same time; at t = 2 s all three reach the floor, landing at 0 m, 10 m = 5 × 2 and 20 m = 10 × 2 from the base. Two boxes on the right: WHEN — the y-inventory: 20 = ½(10)t² ⇒ t = 2 s, identical for all three balls; WHERE — the x-inventory: x = v_x t = 0 · 10 · 20 m, faster roll ⇒ farther, never later. The only shared variable is t.',
-      caption: 'Independence of x and y (deck values): the drop fixes WHEN all three land (t = 2 s); the roll speed only fixes WHERE.',
+        'Three balls leave the same 45 m ledge at the same instant: one dropped (v_x = 0, falls straight down a dashed line), one launched at v_x = 10 m/s (blue parabola) and one at v_x = 20 m/s (red parabola). Dashed horizontal lines at t = 1 s and t = 2 s show all three at the same height at the same time; at t = 3 s all three reach the ground, landing at 0 m, 30 m = 10 × 3 and 60 m = 20 × 3 from the base. Two boxes on the right: WHEN — the y-inventory: 45 = 5t² ⇒ t = 3 s, identical for all three balls; WHERE — the x-inventory: x = v_x t = 0 · 30 · 60 m, faster launch ⇒ farther, never later. The only shared variable is t.',
+      caption: 'Independence of x and y (lesson values): the 45 m drop fixes WHEN all three land (t = 3 s); the launch speed only fixes WHERE.',
     },
     blocks: [
-      '- All three balls hit the floor at $t = 2$ s — the drop alone decides **when**',
-      '- $x = v_x t$: 0 m, 10 m, 20 m — the roll speed alone decides **where**',
+      '- All three balls hit the ground at $t = 3$ s — the drop alone decides **when**',
+      '- $x = v_x t$: 0 m, 30 m, 60 m — the launch speed alone decides **where**',
     ],
   },
   {
-    at: 'Cumulative Review — Inclined Plane',
-    mode: 'lead',
+    at: 'Worked Example — Horizontal Launch',
+    mode: 'after',
     figure: {
-      svg: inclineSvg,
+      svg: ballSetupSvg,
       alt:
-        'A block rests on an incline of angle θ (shaded triangle, angle marked at the bottom-left corner). From the block: the weight mg points straight down; it is decomposed into two red components, mg sinθ along the plane (down the slope) and mg cosθ perpendicular into the surface, with dashed lines completing the rectangle and θ marked between mg and the perpendicular component. Blue arrows show the normal force N = mg cosθ pointing out of the surface and friction f = μN pointing up the slope. Tilted grey axes x′ (along the plane) and y′ (perpendicular) sit at the upper left. Boxes on the right: along the plane mg sinθ pulls the block down the slope; perpendicular N = mg cosθ when nothing else pushes vertically; friction f = μN = μ mg cosθ (static ≤ μₛN, kinetic = μₖN); inventory per axis then F = ma: x′: mg sinθ − f = ma, y′: N − mg cosθ = 0.',
-      caption: 'Free-body diagram on an incline: tilt the axes to the plane and split the weight into mg sinθ (along) and mg cosθ (into the surface) — schematic.',
+        'A ball leaves the edge of a 45 m high ledge with a blue horizontal arrow v_x = 20 m/s and a red note v₀y = 0 (launched horizontally); a dashed parabola leads to a dashed open circle on the ground. A red bracket on the left marks Δy = 45 m, a red arrow marks a_y = 10 m/s² (down positive), a blue bracket under the ground marks x = ? (asked), and the flight is labelled t = ? (shared by x and y). On the right, two inventory columns: x in blue (v_x = 20 m/s, a_x = 0, x = ?, t = ?) and y in red (v₀y = 0, a_y = 10 m/s², Δy = 45 m, t = ?, down = +) joined only at t; the y column says everything but t → start here; below: the columns share only t; y gives t first, then x = v_x · t.',
+      caption: 'The horizontal-launch setup with one inventory per axis (lesson values, down positive): the y column is complete except t, so it is solved first.',
     },
     blocks: [
-      '- Tilt the axes to the plane: weight splits into $mg\\sin\\theta$ (along) and $mg\\cos\\theta$ (into the surface)',
-      '- $N = mg\\cos\\theta$ when nothing else pushes vertically, so $f = \\mu mg\\cos\\theta$',
+      '- $x$ and $y$ get separate inventories; the only shared entry is $t$',
+      '- The $y$ column is complete except $t$ — solve there first ($45 = 5t^2$), then carry $t$ to $x$',
     ],
   },
 ]

@@ -242,6 +242,34 @@ const PART_BLOCK = /^\*\*\(([a-z])\)/i
 const PART_SUFFIX = /\s*·\s*(?:Part \([a-z]\)|Problem \d+(?: \([a-z]\))?)\s*$/i
 
 /**
+ * Minutes a live class spends per slide kind: students try worked parts and
+ * answer polls, so those cost most. Calibrated on the owner's reaction to a
+ * 108-slide deck ("way too much material for 1.5 h"): ≈140 min here.
+ */
+export const SLIDE_MINUTES = { title: 0.5, agenda: 0.75, content: 0.9, workedOverview: 1.0, workedPart: 1.6, poll: 2.0, grid: 1.2, quiz: 0 } as const
+/** A class deck should fit this many minutes (owner, 2026-11-04: 1.5–2 hours). */
+export const CLASS_MINUTES_MAX = 120
+
+export function slideMinutesKind(s: Slide): keyof typeof SLIDE_MINUTES {
+  if (s.kind !== 'content') return s.kind
+  const base = s.title.replace(/\s*\(cont\.\)\s*$/i, '')
+  if (s.layout === 'grid') return 'grid'
+  // Part slides keep their "· Problem N (a)" suffix whether or not the
+  // displayed title still carries the "Worked Example — " prefix.
+  if (PART_SUFFIX.test(base)) return /\([a-z]\)\s*$/.test(base) ? 'workedPart' : 'workedOverview'
+  if (/^Worked Examples?\b/i.test(base)) return 'workedOverview'
+  if (/^What We'll Cover$/.test(base)) return 'agenda'
+  return 'content'
+}
+
+/** Estimated class minutes for a deck's content slides plus `pollCount` polls. */
+export function estimateMinutes(slides: readonly Slide[], pollCount: number): number {
+  let m = SLIDE_MINUTES.title + SLIDE_MINUTES.agenda + pollCount * SLIDE_MINUTES.poll
+  for (const s of slides) if (s.kind === 'content') m += SLIDE_MINUTES[slideMinutesKind(s)]
+  return m
+}
+
+/**
  * A lesson worked example written as a setup, lettered questions and one
  * solution paragraph per letter —
  *
@@ -510,8 +538,29 @@ export function contentSlidesFrom(markdown: string, fallbackTitle: string, limit
   const flushTable = () => {
     if (table.length > 0) {
       // One block with newlines intact — MathText/renderRichText renders
-      // pipe tables, but only when the rows stay on separate lines.
-      blocks.push(table.join('\n'))
+      // pipe tables, but only when the rows stay on separate lines. A TALL
+      // table (seven rows or more, over the slide budget) is cut into row
+      // groups with the header repeated, so it reads at normal size over a
+      // few slides instead of shrinking to fit one. Short tables with long
+      // cells stay whole: three rows read better together than one per slide.
+      const [head, sep, ...rows] = table
+      const headLen = head.length + (sep?.length ?? 0)
+      if (table.join('\n').length <= limits.maxChars || rows.length < 7 || !/^\s*\|[\s:|-]+\|\s*$/.test(sep ?? '')) {
+        blocks.push(table.join('\n'))
+      } else {
+        let group: string[] = []
+        let chars = headLen
+        for (const r of rows) {
+          if (group.length >= 3 && chars + r.length > limits.maxChars) {
+            blocks.push([head, sep, ...group].join('\n'))
+            group = []
+            chars = headLen
+          }
+          group.push(r)
+          chars += r.length
+        }
+        if (group.length) blocks.push([head, sep, ...group].join('\n'))
+      }
       table = []
     }
   }
@@ -710,22 +759,47 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
           }
         }
       }
-    } catch { /* no lesson registered — fall through to flashcards */ }
+    } catch (e) {
+      // A registered lesson that fails to load is a broken deck, not a missing
+      // one: say so instead of silently teaching from the topic summary.
+      console.warn(`[slide-deck] ${topicSlug}: lesson mining failed, deck falls back to the topic summary:`, e instanceof Error ? e.message : e)
+    }
   }
+  // Figures and the topic's legacy reveal examples are added after mining;
+  // the class-time estimate counts them now so the trim lands on budget.
+  const { DECK_FIGURES } = await import('@/data/deck-figures')
+  const extraSlides = (DECK_FIGURES[topicSlug]?.length ?? 0) + Math.min(topic.exampleProblems.length, MAX_EXAMPLES) * 3
   if (lessonMd.length > 0) {
     const prose = !/\$/.test(summaryMd + lessonMd.join(''))
     limits = deckLimits(prose, partCount)
-    const budgets = new Map<number, WorkedBudget>()
-    const budgetFor = (part: number) => {
-      if (!budgets.has(part)) budgets.set(part, { problems: MAX_DECK_PROBLEMS_PER_PART, dropped: [] })
-      return budgets.get(part)!
+    // Problems shown per part, trimmed from the last part backwards until
+    // the deck fits a class (CLASS_MINUTES_MAX). The lesson keeps every
+    // problem; the deck shows the ones there is time for.
+    const problemsFor = new Map<number, number>()
+    const mine = () => {
+      const budgets = new Map<number, WorkedBudget>()
+      const budgetFor = (part: number) => {
+        if (!budgets.has(part)) budgets.set(part, { problems: problemsFor.get(part) ?? MAX_DECK_PROBLEMS_PER_PART, dropped: [] })
+        return budgets.get(part)!
+      }
+      const made = lessonMd.flatMap((md, i) => {
+        const out = contentSlidesFrom(md, topic.title, limits, budgetFor(lessonMdPart[i]))
+        for (const s of out) slidePart.set(s, lessonMdPart[i])
+        return out
+      }).filter((s) => s.blocks.length > 0)
+      return { slides: made, dropped: [...budgets.values()].flatMap((b) => b.dropped) }
     }
-    const lessonSlides = lessonMd.flatMap((md, i) => {
-      const made = contentSlidesFrom(md, topic.title, limits, budgetFor(lessonMdPart[i]))
-      for (const s of made) slidePart.set(s, lessonMdPart[i])
-      return made
-    }).filter((s) => s.blocks.length > 0)
-    droppedSections.push(...[...budgets.values()].flatMap((b) => b.dropped))
+    let mined = mine()
+    const pollsPlanned = Math.min(polls.length, limits.maxPolls)
+    const classMinutes = () => estimateMinutes(mined.slides, pollsPlanned) + extraSlides * SLIDE_MINUTES.content
+    for (let part = partCount; part >= 1 && classMinutes() > CLASS_MINUTES_MAX; part--) {
+      if ((problemsFor.get(part) ?? MAX_DECK_PROBLEMS_PER_PART) <= 1) continue
+      problemsFor.set(part, 1)
+      mined = mine()
+    }
+    const lessonSlides = mined.slides
+    droppedSections.push(...mined.dropped)
+    if (process.env.DECK_DEBUG) console.error(`[deck] ${topicSlug}: ${partCount} parts, ${lessonMd.length} lesson sections mined → ${lessonSlides.length} slides (summary ${content.length}); ≈${classMinutes().toFixed(0)} min${problemsFor.size ? `, one problem in part${problemsFor.size > 1 ? 's' : ''} ${[...problemsFor.keys()].sort().join(', ')}` : ''}`)
     // Topic.textContent is a summary of the same lesson; once the lesson
     // itself is on the slides, the summary only repeats it (a second "Key
     // Takeaways" early in the deck). The agenda slide still previews the arc.
@@ -780,7 +854,6 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   // (a half-edited sibling, a type error) used to be swallowed here, and the
   // deck was silently stored with NO figures (found 2026-10-29). A broken
   // registry must fail the regeneration run instead.
-  const { DECK_FIGURES } = await import('@/data/deck-figures')
   // A figure drawn for a worked example that is now past its part's slide
   // allowance goes with it; any other unmatched figure still fails loudly.
   const figures = DECK_FIGURES[topicSlug]?.filter((p) => {
@@ -982,7 +1055,28 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   slides.push(...chosenReview) // review checks — everything has been covered by now
   slides.push({ kind: 'quiz', topicSlug, title: topic.title })
 
-  return { title: topic.title, slides }
+  return { title: topic.title, slides: slides.map(displayTitled) }
+}
+
+/**
+ * The title a slide SHOWS, applied once the deck is assembled (figure
+ * placement, unit grouping and poll placement all key on the full title):
+ * a worked example's part slides drop the "Worked Example — " prefix, and a
+ * long section heading drops its parenthetical subtitle, so titles fit one
+ * line at 1280 px instead of wrapping over the slide (owner: clutter).
+ */
+export function displayTitle(title: string): string {
+  const cont = /\s*\(cont\.\)\s*$/i.test(title) ? ' (cont.)' : ''
+  let base = title.replace(/\s*\(cont\.\)\s*$/i, '').trim()
+  if (PART_SUFFIX.test(base)) base = base.replace(/^Worked Examples?\s*(?:—|–|-|:)\s*/i, '')
+  else if (base.length > 56) {
+    const m = base.match(/^(.{12,}?)\s*\(([^()$]{8,})\)$/)
+    if (m) base = m[1].trim()
+  }
+  return base + cont
+}
+function displayTitled(s: Slide): Slide {
+  return s.kind === 'content' ? { ...s, title: displayTitle(s.title) } : s
 }
 
 /** Read the revealed-slide list off a deck row's Json column. */
