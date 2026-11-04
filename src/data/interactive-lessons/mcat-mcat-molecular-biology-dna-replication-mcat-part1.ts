@@ -44,17 +44,20 @@ Three hypotheses were on the table:
       type: 'text' as const,
       content: `### Worked Example — Meselson-Stahl, Read Like a Passage
 
-**Setup.** E. coli are grown for many generations in medium containing heavy nitrogen ($^{15}N$), so all DNA is "heavy." Cells are then switched to light $^{14}N$ medium, and DNA is extracted after each generation and spun in a cesium chloride density gradient, where DNA bands at the position matching its density.
+**Problem 1.** E. coli grown for many generations in heavy $^{15}\\text{N}$ medium, so all DNA is "heavy," are switched to light $^{14}\\text{N}$ medium. DNA extracted after each generation is spun in a cesium chloride gradient, where it bands at its density.
 
-**Generation 1 result**: a single band at **intermediate** (hybrid) density.
+- **(a)** Generation 1 shows a single band at **intermediate** (hybrid) density. Which model does this eliminate?
+- **(b)** Does generation 1 distinguish semiconservative from dispersive replication?
+- **(c)** Generation 2 shows two bands, one hybrid and one light, in equal amounts. Which model survives?
+- **(d)** What fractions of hybrid and light DNA should generation 3 show?
 
-**Question 1 — Which model does generation 1 eliminate?** Conservative replication predicted TWO bands (one heavy, one light). One hybrid band kills conservative — but note it does NOT yet distinguish semiconservative from dispersive, since both predict all molecules contain old and new material after round one. Recognizing what an experiment has NOT yet excluded is a signature MCAT move.
+**(a) Conservative is out.** Conservative replication predicts TWO bands at generation 1, one heavy and one light. A single hybrid band rules it out.
 
-**Question 2 — Generation 2 shows two bands: one hybrid, one light, in equal amounts. Which model survives?** Semiconservative. Each hybrid molecule from generation 1 separates into one old ($^{15}N$) and one new ($^{14}N$) template; the old template rebuilds a hybrid, the new template builds an all-light molecule. Dispersive predicted a SINGLE band drifting progressively lighter — never two discrete bands.
+**(b) Not yet.** Semiconservative and dispersive both predict that every molecule holds old and new material after one round, so both give one hybrid band. Recognizing what an experiment has NOT yet excluded is a signature MCAT move.
 
-**Question 3 — Predict generation 3.** Hybrid molecules stay constant in number (the original heavy strands are immortal templates, one per molecule) while light molecules multiply: 1/4 hybrid, 3/4 light. In general after n generations the hybrid fraction is $1/2^{n-1}$ — the two original strands never disappear, they just get diluted among descendants.
+**(c) Semiconservative.** Each hybrid molecule separates into one old ($^{15}\\text{N}$) and one new ($^{14}\\text{N}$) template; the old template rebuilds a hybrid, the new one builds an all-light molecule. Dispersive predicts a SINGLE band drifting lighter, never two discrete bands.
 
-**Transfer test**: a passage that pulse-labels with BrdU or radioactive thymidine and asks which strands carry label is the same puzzle in new clothes. Always draw the strands, mark old vs new, and count.`
+**(d) One quarter hybrid.** Hybrid molecules stay constant in number, one per original heavy strand, while light molecules multiply: 1/4 hybrid, 3/4 light. After n generations the hybrid fraction is $1/2^{n-1}$. A BrdU or radioactive-thymidine passage is the same puzzle: draw the strands, mark old vs new, and count.`
     },
     {
       id: 'dnar1-quiz1',
@@ -105,13 +108,17 @@ Three hypotheses were on the table:
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Nucleotide = base + deoxyribose + phosphate; purines (A, G) pair with pyrimidines (T, C); A-T = 2 H-bonds, G-C = 3, so GC content raises melting temperature and origins are AT-rich
-- Chargaff (%A = %T, %G = %C) holds only for double-stranded genomes — composition data diagnose strandedness
-- Strands are antiparallel with phosphodiester backbones; sequences are written 5' to 3'; reverse-complement in two explicit steps
-- Thymine instead of uracil lets cells recognize deaminated cytosine (uracil in DNA) as damage; the 2'-OH absent in deoxyribose makes DNA more stable than RNA
-- Packaging: nucleosome = DNA around a histone octamer (positively charged lysine/arginine tails); acetylation loosens, heterochromatin silences
-- Meselson-Stahl: one hybrid band at generation 1 kills conservative; two discrete bands (hybrid + light) at generation 2 kills dispersive; hybrid fraction = 1 over 2 to the (n-1) as original strands dilute
-- Passage skill: state explicitly which models each observation excludes — early data often eliminate fewer hypotheses than they seem to
+- **Base pairing.** A-T has 2 H-bonds and G-C has 3, so GC-rich DNA melts at a higher temperature and origins are AT-rich.
+- **Chargaff's rules.** %A = %T and %G = %C hold only for double-stranded DNA, so base composition reveals strandedness.
+- **Antiparallel strands.** Strands run in opposite 5'-to-3' directions on 3'-5' phosphodiester backbones; write sequences 5' to 3'.
+- **Meselson-Stahl.** One hybrid band at generation 1 rules out conservative; hybrid + light at generation 2 rules out dispersive.
+
+**Common traps**
+
+- **Complement without reversing.** The bare complement reads backwards; complement each base, then reverse it to write 5' to 3'.
+- **Impossible composition data.** %A different from %T is not an error; it means the genome is single-stranded.
+- **Generation 1 settles it.** One hybrid band rules out only conservative; semiconservative and dispersive both predict it.
+- **Uracil as a DNA base.** Uracil in DNA is damage, usually deaminated cytosine; DNA's standard base is thymine.
 
 <!-- yield:low -->
 - Low-yield extras: DNA wraps about 1.7 turns (~147 bp) around each histone octamer

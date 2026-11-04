@@ -66,14 +66,19 @@ If the parent were in **trans** (repulsion) configuration ($Ab/aB$), the identit
 | Gray, vestigial ($b^+ vg$) | 92 |
 | Black, normal ($b\\ vg^+$) | 88 |
 
-**Step 1 — Identify parental vs. recombinant classes.** The two largest classes (415 + 405) are parental → the heterozygous parent's chromosomes were $b^+ vg^+ / b\\ vg$ (cis configuration). The two smallest (92 + 88) are recombinant.
+- **(a)** How do these data show the genes are linked?
+- **(b)** Which classes are parental, which are recombinant, and what was the parent's configuration?
+- **(c)** What is the recombination frequency?
+- **(d)** How far apart are the two genes on the map?
 
-**Step 2 — Compute RF.**
+**(a) Linkage check.** If the genes were unlinked, all four classes would be about 250 each ($1:1:1:1$). The strong excess of two classes proves linkage. On the MCAT, expect exactly this move: spot the skewed test-cross table, name the two rare classes as recombinants, and compute RF.
+
+**(b) Parental vs. recombinant.** The two largest classes (415 + 405) are parental, so the heterozygous parent's chromosomes were $b^+ vg^+ / b\\ vg$ (cis configuration). The two smallest (92 + 88) are recombinant.
+
+**(c) Recombination frequency.** Both rare classes from (b) count as recombinants:
 $RF = \\frac{92 + 88}{415 + 405 + 92 + 88} = \\frac{180}{1000} = 18\\%$
 
-**Step 3 — Convert to map distance.** $18\\%$ recombination → the genes are **18 map units (cM)** apart.
-
-**Interpretation check.** If the genes were unlinked, all four classes would be about 250 each ($1:1:1:1$). The strong excess of two classes proves linkage; the identity of the big classes reveals the parental configuration. On the MCAT, expect exactly this move: spot the skewed test-cross table, name the two rare classes as recombinants, and compute RF.`
+**(d) Map distance.** With $18\\%$ recombination from (c), the genes are **18 map units (cM)** apart.`
     },
     {
       id: 'men2-quiz1',
@@ -124,15 +129,22 @@ $RF = \\frac{92 + 88}{415 + 405 + 92 + 88} = \\frac{180}{1000} = 18\\%$
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Linked genes (same chromosome) violate independent assortment; parental classes outnumber recombinant classes in a test cross
-- $RF = \\text{recombinants}/\\text{total} \\times 100\\%$; $1\\% = 1$ map unit (cM); RF maxes out at 50%
-- Both rare reciprocal classes count as recombinants — never just one
-- Identify parental configuration (cis $AB/ab$ vs. trans $Ab/aB$) from the two most frequent classes
-- Reciprocal-cross asymmetry is the experimental fingerprint of X-linkage; no father-to-son X transmission
-- Y-linked traits pass from father to all sons
+- **Linkage skews the test cross.** Genes on one chromosome travel together, so parental classes outnumber recombinants.
+- **Recombination frequency.** $RF = \\text{recombinants}/\\text{total} \\times 100\\%$; $1\\% = 1$ map unit (cM); RF maxes out at 50%.
+- **Biggest classes are parental.** The two most frequent classes reveal the configuration: cis $AB/ab$ or trans $Ab/aB$.
+- **Sex-linkage signatures.** Males are hemizygous for X; X never passes father to son; Y-linked traits pass to all sons.
+
+**Common traps**
+
+- **Counting one rare class.** Recombinants are BOTH rare reciprocal classes: $6\\% + 6\\%$ gives an RF of 12%, not 6%.
+- **Assuming cis.** Never assume the parent's arrangement; whichever two classes are most frequent are the parental ones.
+- **Reading 50% RF as separate chromosomes.** 50% means independent assortment: different chromosomes OR far apart on one; RF never exceeds 50%.
+- **Expecting matching reciprocal crosses.** Autosomal genes give identical reciprocal crosses; X-linked traits give different ones.
 
 <!-- yield:low -->
-- Low-yield extras: Y-linked inheritance is also called holandric inheritance
+**Low-yield extras**
+
+- Y-linked inheritance is also called holandric inheritance.
 <!-- /yield -->`
     }
   ]

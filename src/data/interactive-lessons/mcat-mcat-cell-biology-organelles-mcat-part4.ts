@@ -55,19 +55,38 @@ Organelle passages almost never ask "what does the Golgi do?" They give you an *
       type: 'text' as const,
       content: `### Worked Example — A Nuclear Transport Experiment
 
-**Passage-style problem.** Researchers microinject three fluorescent proteins into the cytosol of cultured fibroblasts and image nuclear fluorescence 30 minutes later:
+**Problem 1.** Fluorescent proteins are microinjected into fibroblast cytosol and imaged 30 minutes later. **Protein A** (25 kDa, no targeting sequences) equilibrates between cytosol and nucleus; **Protein B** (90 kDa, carries an NLS) concentrates strongly in the nucleus.
 
-- **Protein A** (25 kDa, no targeting sequences): fluorescence equilibrates between cytosol and nucleus.
-- **Protein B** (90 kDa, carries an NLS): fluorescence concentrates strongly in the nucleus.
-- **Protein C** (90 kDa, same NLS, cells pretreated with a drug that locks Ran in its GDP-bound state everywhere): fluorescence stays cytosolic.
+- **(a)** Why does Protein A enter the nucleus without an NLS, and why does it equilibrate rather than accumulate?
+- **(b)** How does Protein B get into the nucleus?
+- **(c)** What does Protein B's bright nucleus say about energy, and where does that energy come from?
 
-**Question 1 — Why does Protein A enter without an NLS?** At 25 kDa it is below the ~40 kDa passive-diffusion limit of the nuclear pore. It equilibrates (equal brightness both sides) rather than accumulates — passive diffusion cannot concentrate anything.
+**(a) Passive diffusion.** At 25 kDa, Protein A is below the ~40 kDa passive-diffusion limit of the nuclear pore. Diffusion cannot concentrate anything, so it reaches equal brightness on both sides rather than accumulating.
 
-**Question 2 — What does Protein B demonstrate?** Signal-dependent, receptor-mediated import: importins bind the NLS and ferry cargo through the pore. The nucleus becomes BRIGHTER than the cytosol — movement against a concentration gradient, which requires energy. The energy source is the Ran-GTP gradient, not ATP hydrolysis at the pore itself.
+**(b) Signal-dependent import.** At 90 kDa, Protein B is too large to diffuse through. Importins bind its NLS and ferry it through the pore — receptor-mediated import.
 
-**Question 3 — Why does the Ran-GDP drug block import of Protein C?** Cargo release inside the nucleus requires Ran-GTP binding to importin. With Ran trapped as Ran-GDP, import complexes cannot be dissociated and importins cannot be recycled, so signal-dependent transport stalls; passive diffusion of small proteins is unaffected. Note the experimental logic: the drug separates the **recognition step** (NLS binding, intact) from the **directionality step** (Ran gradient, broken).
+**(c) Uphill transport.** The nucleus becomes BRIGHTER than the cytosol: movement against a concentration gradient, which requires energy. The energy source is the Ran-GTP gradient, not ATP hydrolysis at the pore itself.
 
-**Extension the MCAT loves**: during mitosis this whole system is moot — nuclear envelope breakdown (lamin phosphorylation) makes compartmentalization vanish until telophase. A protein "suddenly gaining access to chromatin only in M phase" needs no transport explanation at all.`
+**Problem 2.** **Protein C** is the same 90 kDa NLS protein, injected into cells pretreated with a drug that locks Ran in its GDP-bound state everywhere. Its fluorescence stays cytosolic.
+
+- **(a)** Why does the drug block import of Protein C?
+- **(b)** Would 25 kDa Protein A still reach the nucleus in drug-treated cells?
+- **(c)** Which step of import does the drug leave intact, and which does it break?
+
+**(a) No cargo release.** Cargo release inside the nucleus requires Ran-GTP binding to importin. With Ran trapped as Ran-GDP, import complexes cannot be dissociated and importins cannot be recycled, so signal-dependent transport stalls.
+
+**(b) Diffusion is unaffected.** Yes. Passive diffusion of small proteins does not use Ran, so Protein A still equilibrates between cytosol and nucleus.
+
+**(c) Recognition vs direction.** The drug separates the **recognition step** (NLS binding by importin, intact) from the **directionality step** (the Ran gradient, broken).
+
+**Problem 3.** A passage reports that a protein kept out of the nucleus in interphase suddenly gains access to chromatin only in M phase.
+
+- **(a)** Does this observation need a nuclear-transport explanation?
+- **(b)** What molecular event removes the barrier, and when is it restored?
+
+**(a) No transport needed.** During mitosis the whole pore system is moot: the nuclear envelope breaks down, so compartmentalization vanishes and any protein can reach chromatin.
+
+**(b) Lamin phosphorylation.** Mitotic CDKs phosphorylate the lamins, dissolving the envelope in prometaphase; dephosphorylation rebuilds it in telophase, restoring the barrier.`
     },
     {
       id: 'org4-quiz1',
@@ -118,13 +137,17 @@ Organelle passages almost never ask "what does the Golgi do?" They give you an *
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Nuclear pores: passive diffusion below ~40 kDa; larger cargo needs an NLS + importin, with direction set by the Ran-GTP gradient (high inside); export uses NES + exportin
-- Accumulation against a gradient = signal + receptor + energy; equilibration = passive diffusion — brightness patterns in injection experiments tell you which
-- Nuclear lamina = lamin intermediate filaments; CDK phosphorylation dissolves the envelope in mitosis, dephosphorylation rebuilds it; nucleolus (no membrane) = rRNA synthesis and subunit assembly
-- The envelope uncouples transcription from translation: splicing precedes export, so eukaryotes never translate introns; prokaryotes co-transcriptionally translate
-- Mitochondria remodel constantly: fission (segregation, mitophagy) vs fusion (content mixing buffers heteroplasmy); ER-mitochondria contacts pass Ca$^{2+}$ and lipids directly
-- Passage strategy: localize (markers, fractionation), trace the secretory route and stall one station upstream of the lesion, classify enzyme-vs-delivery-vs-compartment defects, and ask which gradient (pH, Ca$^{2+}$, redox, Ran-GTP) powers the step
-- Specific-cargo defects point to specific sorting signals/receptors; everything-affected defects point to shared machinery
+- **The pore size rule.** Proteins under ~40 kDa diffuse through pores; larger cargo needs an NLS and importins (NES + exportins out).
+- **Accumulation needs energy.** Equilibration = passive diffusion; accumulation = signal + receptor + the Ran-GTP gradient.
+- **Lamins gate mitosis.** CDK phosphorylation of lamins dissolves the envelope in prometaphase; dephosphorylation rebuilds it.
+- **The envelope uncouples expression.** Splicing precedes export, so introns never meet a ribosome; prokaryotes translate as they transcribe.
+
+**Common traps**
+
+- **Powering import with ATP at the pore.** Direction and energy come from the Ran-GTP gradient, high inside the nucleus.
+- **Mixing up fission and fusion.** Fission isolates damaged segments for mitophagy; fusion mixes contents and buffers mtDNA mutations.
+- **Blaming shared machinery.** A defect in one cargo points to its own sorting signal or receptor; shared-machinery defects hit all cargo.
+- **Expecting cargo at the broken step.** A break in the secretory route strands cargo one station upstream of the lesion, not at it.
 
 <!-- yield:low -->
 - Low-yield extras: lamin mutations cause progeria; Drp1 drives fission, mitofusins (outer) and OPA1 (inner) drive fusion, ER-mitochondria contacts are MAMs; COPII = anterograde coat, COPI = retrograde coat (KDEL)

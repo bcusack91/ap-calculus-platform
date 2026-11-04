@@ -43,6 +43,44 @@ Example: 100 cells of an organism with g = 20 min, grown 2 hours → n = 6 doubl
 - **Auxotrophs** are mutants that lost a biosynthetic pathway and grow only when the end product is supplied — the workhorse of replica-plating genetics.`
     },
     {
+      id: 'bac2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Growth Problems
+
+**Problem 1.** A culture grows from $2 \\times 10^{3}$ to $1.28 \\times 10^{5}$ cells in 3 hours of exponential growth.
+
+- **(a)** By what factor did the population grow, and how many doublings is that?
+- **(b)** What is the generation time?
+
+**(a) Fold increase.** $\\dfrac{1.28 \\times 10^{5}}{2 \\times 10^{3}} = 64 = 2^{6}$, so $n = 6$ doublings. Convert the fold-change to a power of 2 first; the arithmetic is designed to come out clean.
+
+**(b) Generation time.** With $n = 6$ from (a): $g = t/n = 180\\;\\text{min}/6 =$ **30 minutes**. Powers of 2 worth memorizing: $2^{5} = 32$, $2^{6} = 64$, $2^{10} = 1024 \\approx 10^{3}$.
+
+**Problem 2.** A food-poisoning organism produces its toxin only upon nutrient depletion, and a sporulating pathogen becomes transmissible only in old cultures.
+
+- **(a)** Which growth phase do both observations point to?
+- **(b)** Why would a cell switch on these programs at that point?
+- **(c)** When should you harvest to purify the toxin, and why?
+
+**(a) Stationary phase.** Toxin production (a secondary metabolite) and sporulation are both STATIONARY-phase programs, triggered by starvation signaling — not expressed during log growth.
+
+**(b) Survival logic.** When conditions collapse, the cell invests in survival (a spore) or in aggressively harvesting resources from a host (a toxin).
+
+**(c) Timing the harvest.** In stationary phase: a log-phase harvest yields little toxin, while the same culture 12 hours later can be highly toxigenic. Map any "appears late in culture" observation to stationary-phase stress responses.
+
+**Problem 3.** Mutagenized colonies are replica-plated onto minimal medium and onto minimal medium + histidine. Colony 7 grows only on the histidine plate.
+
+- **(a)** How is colony 7 classified?
+- **(b)** What is its biochemical lesion?
+- **(c)** How does a wild-type colony behave, and how can several such mutants order the pathway?
+
+**(a) Histidine auxotroph.** Growth on supplemented but not minimal medium = **histidine auxotroph** (his-minus). Minimal medium asks "can you build everything yourself?"
+
+**(b) Broken pathway.** Some enzyme in the histidine biosynthesis pathway is inactivated by mutation; the cell now depends on imported histidine. A no on minimal medium plus rescue by one compound pinpoints the broken pathway.
+
+**(c) Prototroph and cross-feeding.** A wild-type prototroph grows on both plates. Cross-feeding tests between different his-minus mutants can even order the pathway's steps.`
+    },
+    {
       id: 'bac2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Growth & Metabolism** 🎯`,
@@ -85,62 +123,22 @@ Example: 100 cells of an organism with g = 20 min, grown 2 hours → n = 6 doubl
           }
         ]
       }
-    },
-    {
+    },    {
       id: 'bac2-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Growth math: $N = N_0 \\times 2^{t/g}$; straight line on a log plot, slope = growth rate
-- Curve: lag (adapt) → log (double; beta-lactams bite here) → stationary (spores, toxins) → death
-- Oxygen classes by tube pattern: top only / everywhere-denser-top / even / bottom only / narrow subsurface band
-- O$_2$ toxicity = ROS; defense = superoxide dismutase + catalase — obligate anaerobes lack them
-- Chemoheterotrophs = most pathogens; obligate intracellular organisms (e.g., Rickettsia, Chlamydia) never grow on cell-free agar
-- Selective suppresses, differential reveals; MacConkey is both (bile salts and crystal violet suppress gram-positives; lactose fermenters turn pink); auxotrophs need a supplied end product`
-    },
-    {
-      id: 'bac2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Growth Problems
+- **Exponential growth math.** $N = N_0 \\times 2^{t/g}$; a log plot turns it into a straight line whose slope is the growth rate.
+- **Four-phase growth curve.** Lag adapts, log doubles (beta-lactams kill best), stationary makes spores and toxins, then death.
+- **Oxygen tube patterns.** Aerobe top only, facultative throughout (denser at top), aerotolerant even, anaerobe bottom, microaerophile subsurface band.
+- **Oxygen toxicity.** O$_2$ yields superoxide and peroxide; obligate anaerobes lack SOD and catalase, so these ROS kill them.
 
-<details>
-<summary><b>Example 1: Extract the generation time from data</b></summary>
+**Common traps**
 
-**Question:** A culture grows from 2 times 10^3 to 1.28 times 10^5 cells in 3 hours of exponential growth. Find the generation time.
-
-**Solution:**
-1. Fold increase: 1.28 times 10^5 divided by 2 times 10^3 = 64 = $2^{6}$ → n = 6 doublings.
-2. g = t/n = 180 min / 6 = **30 minutes**.
-3. Sanity check: powers of 2 worth memorizing — 2^5 = 32, 2^6 = 64, 2^10 = 1024 (approximately 10^3).
-
-**MCAT Strategy:** Convert the fold-change to a power of 2 first; the arithmetic is designed to come out clean.
-</details>
-
-<details>
-<summary><b>Example 2: Identify an auxotroph by replica plating</b></summary>
-
-**Question:** Mutagenized colonies are replica-plated onto minimal medium and minimal + histidine. Colony 7 grows only on the histidine plate. Classify colony 7 and describe the biochemical lesion.
-
-**Solution:**
-1. Growth on supplemented but not minimal medium = **histidine auxotroph** (his-minus).
-2. Some enzyme in the histidine biosynthesis pathway is inactivated by mutation; the cell now depends on imported histidine.
-3. Wild-type (prototroph) grows on both plates. Cross-feeding tests between different his-minus mutants can even order the pathway's steps.
-
-**MCAT Strategy:** Minimal medium asks 'can you build everything yourself?' — a no answer plus rescue by one compound pinpoints the broken pathway.
-</details>
-
-<details>
-<summary><b>Example 3: Why stationary phase matters clinically</b></summary>
-
-**Question:** A food-poisoning organism produces its toxin only upon nutrient depletion, and a sporulating pathogen becomes transmissible only in old cultures. Connect both facts to the growth curve.
-
-**Solution:**
-1. Both toxin production (a secondary metabolite) and sporulation are STATIONARY-phase programs, triggered by starvation signaling — not expressed during happy log growth.
-2. Logic: when conditions collapse, invest in survival (spore) or in aggressively harvesting resources from a host (toxin).
-3. Experimental corollary: harvesting a culture in log phase yields little toxin; the same culture 12 hours later can be highly toxigenic.
-
-**MCAT Strategy:** Map any 'appears late in culture' observation to stationary-phase stress responses.
-</details>`
+- **Miscounting doublings.** Compute $n = t/g$ first: 3 hours at a 30-minute generation time is 6 doublings, not 5.
+- **Lag as dormancy.** Lag-phase cells are busy making enzymes for the new medium; they are adapting, not dormant.
+- **Confusing selective and differential.** Selective media suppress competitors; differential media reveal metabolic differences; MacConkey does both.
+- **Intracellular bugs on agar.** Rickettsia and Chlamydia need host cells for ATP or metabolites, so they never grow on cell-free agar.`
     }
   ]
 };

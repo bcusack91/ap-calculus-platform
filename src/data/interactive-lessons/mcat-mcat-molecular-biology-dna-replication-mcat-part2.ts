@@ -49,20 +49,32 @@ Because strands are antiparallel and the fork opens in one direction:
       type: 'text' as const,
       content: `### Worked Example — Diagnosing Mutant Forks
 
-**Passage-style problem.** Four temperature-sensitive E. coli strains are shifted to the restrictive temperature; replication intermediates are analyzed on gels that separate short DNA fragments from long ones.
+**Problem 1.** Temperature-sensitive E. coli strains are shifted to the restrictive temperature. In Strains 1 and 2, short fragments accumulate and are never joined; Strain 1's fragments each begin with RNA, Strain 2's are all DNA.
 
-- **Strain 1**: replication halts almost immediately; no new strands of any kind appear.
-- **Strain 2**: short fragments accumulate and are never joined into long strands; the fragments each begin with a stretch of RNA.
-- **Strain 3**: short fragments accumulate and ARE all-DNA, but they are never joined.
-- **Strain 4**: synthesis proceeds briefly, then forks stall; supercoiling ahead of the fork is dramatically elevated.
+- **(a)** Which step has failed in Strain 1?
+- **(b)** Which enzyme is defective in Strain 2?
+- **(c)** What order of lagging-strand steps lets fragment composition tell the two apart?
 
-**Question 1 — Assign Strain 1.** No unwinding, no templates, no synthesis: **helicase** is dead. (A primase mutant would stop new priming, but forks already under way would keep extending their already-primed leading strands; a total shutdown of both strands from the start points to the enzyme every other enzyme waits on.)
+**(a) Primer removal.** Strain 1's fragments still carry their **RNA primers**, so primer removal (Pol I's 5' to 3' exonuclease function) has failed, and ligase cannot seal a nick against RNA.
 
-**Question 2 — Distinguish Strains 2 and 3.** Both look like "Okazaki fragments never mature," but the fragments' composition is the tell. Strain 2's fragments still carry their **RNA primers** — primer removal (Pol I's 5' to 3' exonuclease function) has failed, and ligase cannot seal a nick against RNA. Strain 3's fragments are clean DNA with primers removed and gaps filled — only the final nick-sealing is missing: a **ligase** mutant. Order of operations is the discriminator: remove primer, fill gap, THEN ligate.
+**(b) Ligase.** Strain 2's fragments are clean DNA, with primers removed and gaps filled. Only the final nick-sealing is missing: a **ligase** mutant.
 
-**Question 3 — Assign Strain 4 and name a drug with the same phenotype.** Torsional strain accumulating ahead of the fork means **topoisomerase (gyrase)** failure — helicase keeps injecting supercoils no one relaxes, and the fork grinds to a halt. Fluoroquinolones (e.g., ciprofloxacin) phenocopy this by trapping gyrase on DNA.
+**(c) Remove, fill, then ligate.** RNA-tipped fragments stall AT primer removal; all-DNA fragments stall at the last step, ligation. The general skill: match each phenotype to the FIRST step that fails.
 
-**The general skill**: match each phenotype to the FIRST step that fails, and use fragment composition (RNA-tipped vs all-DNA) to order the lagging-strand maturation steps.`
+**Problem 2.** Two more strains at the restrictive temperature: in Strain 3, replication halts almost immediately and no new strands of any kind appear; in Strain 4, synthesis runs briefly, then forks stall as supercoiling ahead of the fork soars.
+
+- **(a)** Which enzyme is dead in Strain 3?
+- **(b)** Why is a primase mutant a poorer fit for Strain 3?
+- **(c)** Which enzyme has failed in Strain 4?
+- **(d)** Which drug class produces Strain 4's phenotype?
+
+**(a) Helicase.** No unwinding, no templates, no synthesis: **helicase** is dead, the enzyme every other fork enzyme waits on.
+
+**(b) Primed strands would continue.** A primase mutant would stop new priming, but forks already under way would keep extending their already-primed leading strands.
+
+**(c) Topoisomerase.** Torsional strain accumulating ahead of the fork means **topoisomerase (gyrase)** failure: helicase keeps injecting supercoils no one relaxes, and the fork grinds to a halt.
+
+**(d) Fluoroquinolones.** Fluoroquinolones (e.g., ciprofloxacin) phenocopy this by trapping gyrase on DNA.`
     },
     {
       id: 'dnar2-quiz1',
@@ -113,13 +125,17 @@ Because strands are antiparallel and the fork opens in one direction:
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Fork crew: helicase unwinds (ATP, breaks H-bonds), SSBs keep strands apart, topoisomerase/gyrase relaxes supercoils AHEAD of the fork (fluoroquinolone target)
-- Two iron laws of polymerases: synthesis 5' to 3' only (3'-OH attacks incoming dNTP; pyrophosphate release drives it) and no de novo starts — primase makes RNA primers
-- Leading strand: continuous, one primer; lagging strand: Okazaki fragments, primer each; maturation order = remove primer, fill with DNA, ligase seals the last nick
-- Sliding clamp (beta/PCNA) = processivity, not catalysis; the replisome loops the lagging template so both polymerases move together
-- Division of labor: Pol III synthesizes, Pol I removes primers and fills (prokaryotes); eukaryotes spread the same jobs over several polymerases
-- One bacterial origin vs thousands of eukaryotic origins is a genome-size and fork-speed argument — be ready to do the arithmetic
-- Mutant-phenotype logic: total shutdown = helicase; RNA-tipped fragments = primer removal; all-DNA unjoined fragments = ligase; runaway supercoiling = topoisomerase
+- **Fork crew.** Helicase unwinds, SSBs hold strands apart, topoisomerase (gyrase, the fluoroquinolone target) relaxes supercoils ahead.
+- **Two polymerase rules.** Synthesis runs 5' to 3' only, from a free 3'-OH, and every chain needs an RNA primer from primase.
+- **Leading vs lagging.** The leading strand grows continuously from one primer; the lagging strand is primed Okazaki fragments.
+- **Origins and genome size.** Huge genomes and slow forks need thousands of eukaryotic origins; a bacterium uses one.
+
+**Common traps**
+
+- **Wrong maturation order.** Ligase acts last: remove the RNA primer, fill the gap with DNA, then seal the nick.
+- **Clamp as catalyst.** The sliding clamp adds processivity by keeping polymerase on DNA; it does not change the chemistry.
+- **Helicase cutting the backbone.** Helicase breaks hydrogen bonds between bases; topoisomerases are the enzymes that cut and reseal.
+- **Pol III does it all.** Pol III synthesizes both strands; in bacteria Pol I removes primers and fills the gaps.
 
 <!-- yield:low -->
 - Low-yield extras: RNase H also strips RNA primers (especially in eukaryotes); bacterial ligase uses NAD+ rather than ATP; the eukaryotic polymerases are alpha-primase (starts chains), delta (lagging) and epsilon (leading)

@@ -109,6 +109,23 @@ Eukaryotic organelles create **dedicated chemical environments**: the lysosome r
 Lysosomes were **discovered by fractionation**, not microscopy: acid phosphatase activity in a fraction increased after aging or detergent — because intact lysosomes hide their enzymes from substrate (**enzyme latency**). Increased marker activity after membrane disruption is evidence the enzyme lives inside a membrane-bound compartment — a logic MCAT passages reuse constantly.`
     },
     {
+      id: 'org1-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Naming the Fractions of a Liver Homogenate
+
+**Problem 1.** A liver homogenate's 10,000-20,000 g pellet is separated on a density gradient into three bands: X is rich in succinate dehydrogenase, Y in catalase, and Z in acid phosphatase.
+
+- **(a)** Why is a density gradient needed after the medium-speed spin?
+- **(b)** Which organelle is in each band?
+- **(c)** Where did the nuclei and the microsomes of the homogenate go?
+
+**(a) A mixed pellet.** Mitochondria, lysosomes and peroxisomes all pellet together at medium speed. Density-gradient centrifugation separates that mix by buoyant density, and marker enzymes then name each band.
+
+**(b) Marker enzymes.** Succinate dehydrogenase marks mitochondria, so X is mitochondria. Catalase marks peroxisomes, so Y is peroxisomes. Acid phosphatase marks lysosomes, so Z is lysosomes.
+
+**(c) The other pellets.** Nuclei are big and dense, so they pelleted earlier, at low speed (~1,000 g). Microsomes (ER fragments) stay in the supernatant until the high-speed spin (~100,000 g).`
+    },
+    {
       id: 'org1-quiz2',
       type: 'multiple-choice' as const,
       content: `**Cytoskeleton & EM Logic** 🎯`,
@@ -136,13 +153,17 @@ Lysosomes were **discovered by fractionation**, not microscopy: acid phosphatase
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Compartments buy incompatible chemistry: acidic lysosome, oxidizing ER lumen (disulfides), proton-tight mitochondrial inner membrane
-- Membrane count: double = nucleus, mitochondria; single = ER, Golgi, lysosome, peroxisome; none = ribosome, nucleolus, centriole, proteasome
-- Cell specialization is organelle census: plasma cell = rough ER; hepatocyte/steroid gland = smooth ER; steroid cells secrete by diffusion, not vesicles
-- Differential centrifugation orders by size/density (nuclei → mitochondria/lysosomes/peroxisomes → microsomes → ribosomes); marker enzymes name the fraction (catalase, acid phosphatase, SDH)
-- Enzyme latency (activity unmasked by detergent) = the enzyme is inside a membrane compartment — De Duve's lysosome logic
-- Cytoskeleton: actin (7 nm, contraction/crawling), intermediate filaments (10 nm, strength, cell-type markers), microtubules (25 nm, transport highways, spindle, 9+2 cilia)
-- Motors: kinesin (+, anterograde), dynein (−, retrograde and ciliary beat — Kartagener), myosin (actin)
+- **Count the membranes.** Two: nucleus, mitochondria; one: ER, Golgi, lysosome, peroxisome; none: ribosome, nucleolus, proteasome.
+- **Organelle census is the job.** Plasma and acinar cells are rich in rough ER; hepatocytes and steroid glands in smooth ER.
+- **Spin, then mark.** Nuclei pellet first, then mitochondria/lysosomes/peroxisomes, then microsomes; marker enzymes name each.
+- **Cytoskeleton by size.** Actin 7 nm (myosin), intermediate filaments 10 nm (strength), microtubules 25 nm (kinesin +, dynein −).
+
+**Common traps**
+
+- **Calling the nucleolus a compartment.** The nucleolus has no membrane; neither do ribosomes, centrioles or proteasomes.
+- **Leaked hydrolases digesting the cytosol.** Acid hydrolases are nearly inactive at cytosolic pH ~7.2; the acid compartment is the safety.
+- **Putting steroids in vesicles.** Steroids are lipids made by smooth-ER (and mitochondrial) enzymes; they diffuse out, no vesicles.
+- **Reading latency as activation.** Activity that rises after detergent means the enzyme was sealed inside a membrane compartment.
 
 <!-- yield:low -->
 - Low-yield extras: glucose-6-phosphatase marks the ER fraction and lactate dehydrogenase the cytosol; cytochalasin blocks actin polymerization and phalloidin stabilizes actin filaments; tumors are typed by their intermediate filaments (keratin = epithelial origin)

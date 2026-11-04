@@ -63,21 +63,41 @@ Muscle action potential → travels down **T-tubules** deep into the fiber → v
       type: 'text' as const,
       content: `### Worked Example — Reading Band Measurements Like an MCAT Passage
 
-**Passage-style problem.** Researchers measure one sarcomere in an isolated myofibril under a light microscope, at rest and during a shortening contraction:
+**Problem 1.** Researchers measure one sarcomere in an isolated myofibril under a light microscope. At rest: sarcomere (Z to Z) $2.4\\;\\mu\\text{m}$, A band $1.6\\;\\mu\\text{m}$, I band (total) $0.8\\;\\mu\\text{m}$, H zone $0.4\\;\\mu\\text{m}$. During a shortening contraction the sarcomere measures $2.0\\;\\mu\\text{m}$.
 
-| Measurement | Rest | Contracted |
-|-------------|------|-----------|
-| Sarcomere length (Z to Z) | 2.4 um | 2.0 um |
-| A band | 1.6 um | X |
-| I band (total) | 0.8 um | Y |
+- **(a)** What is the A band length X during the contraction?
+- **(b)** What is the total I band length Y during the contraction?
+- **(c)** What is the H zone length during the contraction?
 
-**Question 1 — Predict X.** The A band spans exactly the thick filaments, and filaments slide rather than shorten. X = 1.6 um, unchanged. Any answer choice showing the A band shrinking contradicts the sliding filament model.
+**(a) The A band.** The A band spans exactly the thick filaments, and filaments slide rather than shorten: $X = 1.6\\;\\mu\\text{m}$, unchanged. Any answer choice showing the A band shrinking contradicts the sliding filament model.
 
-**Question 2 — Predict Y.** The sarcomere shortened by 0.4 um. Since the A band is constant, ALL shortening comes out of the I band: Y = 0.8 - 0.4 = 0.4 um. (The H zone shrinks by the same 0.4 um as thin filaments slide inward from both sides.)
+**(b) The I band.** The sarcomere shortened by $0.4\\;\\mu\\text{m}$. Since the A band is constant, ALL shortening comes out of the I band: $Y = 0.8 - 0.4 = 0.4\\;\\mu\\text{m}$.
 
-**Question 3 — The researchers add a drug that locks tropomyosin permanently over the myosin-binding sites. The fiber is then stimulated. What happens at each step?** The NMJ works normally (ACh, end-plate potential), the action potential propagates, DHP-ryanodine coupling releases SR calcium, and Ca binds troponin — but troponin cannot move the locked tropomyosin, so no cross-bridges form and tension stays at zero. Lesion-mapping questions like this reward knowing WHERE each molecule sits in the chain.
+**(c) The H zone.** It shrinks by the same $0.4\\;\\mu\\text{m}$, as thin filaments slide inward from both sides toward the M line: $0.4 - 0.4 = 0\\;\\mu\\text{m}$. The thin filaments now meet at the center.
 
-**Question 4 — Instead, they bathe the skinned fiber in calcium but replace ATP with a non-hydrolyzable ATP analog that still binds myosin. Predict cross-bridge behavior.** Binding of the analog still DETACHES myosin from actin (release requires only binding), but without hydrolysis the head cannot re-cock, so no power strokes occur: the fiber relaxes and stays relaxed. This dissects the two ATP roles — detachment (binding) vs. energization (hydrolysis).`
+**Problem 2.** The researchers bathe a skinned fiber in calcium but replace ATP with a non-hydrolyzable ATP analog that still binds myosin.
+
+- **(a)** Does the analog detach myosin heads from actin?
+- **(b)** Can the heads perform power strokes?
+- **(c)** What state does the fiber settle into, and what does this show about ATP's two roles?
+
+**(a) Detachment.** Yes. Binding of the analog still DETACHES myosin from actin, because release requires only binding.
+
+**(b) Power strokes.** No. Without hydrolysis the head cannot re-cock, so no power strokes occur.
+
+**(c) The result.** The fiber relaxes and stays relaxed. This dissects the two ATP roles: detachment (binding) vs. energization (hydrolysis).
+
+**Problem 3.** In another fiber, the researchers add a drug that locks tropomyosin permanently over the myosin-binding sites, then stimulate the fiber through its motor nerve.
+
+- **(a)** Do the NMJ and the muscle action potential still work?
+- **(b)** Is SR calcium released, and does it bind troponin?
+- **(c)** How much tension does the fiber develop, and why?
+
+**(a) Upstream signaling.** Yes. The NMJ works normally (ACh, end-plate potential), and the action potential propagates along the sarcolemma and down the T-tubules.
+
+**(b) Calcium.** Yes. DHP-ryanodine coupling releases SR calcium, and Ca binds troponin.
+
+**(c) Tension.** Zero. Troponin cannot move the locked tropomyosin, so no cross-bridges form. Lesion-mapping questions like this reward knowing WHERE each molecule sits in the chain.`
     },
     {
       id: 'msk2-quiz1',
@@ -128,15 +148,22 @@ Muscle action potential → travels down **T-tubules** deep into the fiber → v
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Hierarchy: muscle → fascicle → fiber (cell) → myofibril → sarcomere; T-tubules carry the action potential inward, the SR stores calcium
-- A band NEVER changes length; I band and H zone shrink as Z lines approach — filaments slide, they do not shorten
-- Cross-bridge cycle: ATP binding RELEASES myosin from actin; hydrolysis COCKS the head; actin binding, then Pi release = POWER STROKE; ADP leaves; head stays attached until new ATP arrives
-- Calcium binds troponin → tropomyosin moves off actin's myosin-binding sites; no calcium, no permission
-- NMJ: ACh → nicotinic receptor (ligand-gated cation channel) → end-plate potential → muscle action potential; acetylcholinesterase clears the signal
-- E-C coupling: AP → T-tubule → DHP voltage sensor → ryanodine receptor → SR calcium release; relaxation requires ATP-driven SERCA reuptake — ATP powers detachment, re-cocking, AND relaxation
+- **Filaments slide.** The A band never changes length; the I band and H zone shrink as the Z lines move closer.
+- **ATP's two cycle jobs.** ATP binding releases myosin and hydrolysis re-cocks the head; Pi release then fires the power stroke.
+- **Calcium gives permission.** Calcium binds troponin, which shifts tropomyosin off actin's myosin-binding sites.
+- **From nerve to calcium.** ACh opens nicotinic receptors; the AP runs down T-tubules, where DHP sensors open SR ryanodine receptors.
+
+**Common traps**
+
+- **A band shortening.** The A band equals thick-filament length and never shrinks; only the non-overlap zones do.
+- **ATP binding as the stroke.** ATP binding detaches the head; Pi release, not ATP binding, triggers the power stroke.
+- **Calcium on tropomyosin.** Calcium binds troponin, never tropomyosin directly; troponin then moves tropomyosin aside.
+- **Passive relaxation.** SERCA spends ATP pumping calcium back into the SR; block it and the fiber stays contracted.
 
 <!-- yield:low -->
-- Low-yield extras: troponin I inhibits, troponin T anchors to tropomyosin
+**Low-yield extras**
+
+- Troponin I inhibits, troponin T anchors to tropomyosin
 <!-- /yield -->`
     }
   ]

@@ -124,6 +124,26 @@ Loss of the phosphotransferase that creates M6P → hydrolases are **secreted in
 > Protease-protection logic: if a domain survives protease treatment of intact microsomes but is digested after detergent, it was inside the vesicle — the biochemical mirror of the topology rule.`
     },
     {
+      id: 'org2-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Tracing a Receptor Through the Secretory Pathway
+
+**Problem 1.** A single-pass plasma-membrane receptor has an N-terminal hydrophobic signal sequence and one stop-transfer sequence. Its ligand-binding domain carries N-glycans and a disulfide bond; its other domain is a kinase.
+
+- **(a)** How does the receptor get into the ER membrane?
+- **(b)** Which domain faces the ER lumen, and which side of the plasma membrane will it end up on?
+- **(c)** Microsomes from the same cells also hold a newly made secreted protein. Is it digested by added protease without detergent, and with it?
+- **(d)** If ER → Golgi transport is blocked, where does the receptor pile up, and with what kind of N-glycans?
+
+**(a) Co-translational entry.** Translation starts on a free ribosome. SRP binds the emerging signal sequence, pauses translation and docks on the SRP receptor; the chain then enters through the translocon and signal peptidase clips the signal. The stop-transfer sequence exits sideways and becomes the transmembrane segment.
+
+**(b) Topology.** N-glycans and disulfides form only in the ER lumen, so the ligand-binding domain is luminal. The lumen is topologically outside, so that domain ends up extracellular; the kinase domain stays cytosolic through every step.
+
+**(c) Protease protection.** A secreted protein lies wholly in the lumen, so added protease cannot reach it in intact microsomes. Detergent dissolves the membrane, and then it is digested. Protected = luminal — the biochemical mirror of the topology rule.
+
+**(d) The stalled station.** The receptor piles up in the ER, with ER-type (high-mannose) N-glycans, because N-glycans leave the high-mannose (ER-type) form only in the medial Golgi. Its glycan form shows how far along the pathway it got.`
+    },
+    {
       id: 'org2-quiz2',
       type: 'multiple-choice' as const,
       content: `**Topology & Pathway Probes** 🎯`,
@@ -151,13 +171,17 @@ Loss of the phosphotransferase that creates M6P → hydrolases are **secreted in
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- Zip codes: signal sequence → ER (co-translational, SRP pauses translation); NLS → nucleus (folded, importins/Ran); presequence → mitochondria (unfolded, TOM/TIM, post-translational); C-terminal tripeptide → peroxisome; M6P sugar tag → lysosome
-- Fusion experiments prove signals are sufficient; deletion proves necessity
-- ER lumen work: signal peptidase, chaperone-assisted folding, disulfides, N-glycosylation on Asn; failures → ERAD (proteasome) or UPR
-- Vesicles carry cargo forward to the Golgi and retrieve escaped ER residents backward; trans-Golgi sorts M6P cargo to lysosomes, granules for regulated secretion, default = constitutive secretion
-- I-cell disease: no M6P tag → hydrolases secreted to serum, lysosomes stuffed — nature's proof of the pathway
-- Topology rule: luminal = future extracellular; glycans and disulfides mark luminal/extracellular domains; kinase domains stay cytosolic forever
-- Probes: protease protection (protected = luminal, maps topology), microsomes (reconstitute co-translational import), glycan processing (how far along the pathway a protein got), blocking N-glycosylation (lighter protein, misfolding → UPR), blocking ER → Golgi transport (cargo piles up with ER-type glycans)
+- **The sequence is the zip code.** Signal sequence → ER, NLS → nucleus, presequence → mitochondria, C-terminal tripeptide → peroxisome.
+- **Fusion and deletion tests.** Fusion shows a signal is sufficient; deletion shows it is necessary.
+- **Trans-Golgi sorts three ways.** M6P cargo → lysosomes, regulated cargo → Ca$^{2+}$-triggered granules, the rest → constitutive secretion.
+- **The lumen is outside.** A luminal domain ends up extracellular, carrying glycans and disulfides; kinase domains stay cytosolic.
+
+**Common traps**
+
+- **Starting translation on the ER.** All translation starts on free ribosomes; a signal sequence then brings the ribosome to the ER.
+- **Treating M6P as a sequence.** M6P is a sugar tag added in the Golgi; without it (I-cell disease) hydrolases are secreted to serum.
+- **Importing mitochondrial proteins folded.** TOM/TIM pass only unfolded chains; nuclear pores import proteins fully folded.
+- **Reading protease protection backwards.** A domain protected in intact microsomes is luminal; a digested one faces the cytosol.
 
 <!-- yield:low -->
 - Low-yield extras: SKL is the peroxisomal tripeptide; Sec61 = translocon, BiP = luminal chaperone, PDI makes disulfides, the N-linked core has 14 sugars on Asn-X-Ser/Thr and calnexin runs folding quality control; COPII = anterograde coat, COPI = retrograde coat reading KDEL; tunicamycin blocks N-glycosylation, brefeldin A blocks ER → Golgi transport, Endo H resistance = reached the medial Golgi

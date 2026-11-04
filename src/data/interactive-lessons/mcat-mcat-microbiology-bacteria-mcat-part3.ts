@@ -51,6 +51,50 @@ Variations:
 **Transposons** ("jumping genes") hop between chromosome and plasmids, ferrying resistance cassettes onto conjugative vehicles. And remember why bacteria adapt so fast: genes sit in **operons** under single promoters (the lac operon logic), so one regulatory event retunes a whole pathway — combine that with horizontal transfer and generation times in minutes, and populations remodel their genomes on human timescales.`
     },
     {
+      id: 'bac3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Transfer Experiments
+
+**Problem 1.** Strain A (streptomycin-resistant) transfers its resistance to strain B in mixed culture. A three-condition experiment will identify the mechanism.
+
+- **(a)** What does adding DNase to the co-culture do to each mechanism?
+- **(b)** What does separating the strains with a 0.2 micron filter (U-tube) do to each mechanism?
+- **(c)** What does a cell-free filtrate of strain A do to strain B under conjugation, and under transduction?
+- **(d)** What is the full conjugation signature?
+
+**(a) DNase.** Transformation is abolished (its DNA is naked); conjugation (DNA protected inside the pilus) and transduction (DNA inside the capsid) are unaffected.
+
+**(b) Filter.** Conjugation is ABOLISHED (contact required); transformation and transduction persist.
+
+**(c) Filtrate.** Conjugation gives NO transfer (a filtrate has no cells); transduction would, because phage particles pass filters.
+
+**(d) Signature.** Transfer in mixed culture only, DNase-resistant, filter-blocked, filtrate-negative. Memorize the 3 × 3 grid of mechanism vs DNase/filter/filtrate — nearly every gene-transfer passage is one cell of that grid.
+
+**Problem 2.** In an Hfr cross, recipients acquire azi-r at 9 min, ton-r at 11 min, lac+ at 18 min and gal+ at 25 min. A different Hfr strain (same species, different F integration site) transfers gal+ first.
+
+- **(a)** What do the entry times measure?
+- **(b)** Why does the second strain transfer genes in a different order?
+- **(c)** What do several Hfr strains' maps add up to?
+
+**(a) Distance from the origin.** Entry time is proportional to each gene's DISTANCE from the F integration point (the transfer origin): the time axis is literally a map axis, and minutes became the E. coli map unit.
+
+**(b) A different start.** A different integration site (or orientation) changes the starting point and direction, so the ORDER of entry changes, but the relative SPACING between genes stays consistent.
+
+**(c) One circle.** Combining several Hfr strains' data yields one circular chromosome map — an early proof of chromosome circularity. Time-of-entry = genetic distance; different Hfr strains = different clock-start positions on the same circle.
+
+**Problem 3.** An F' lac+ cell mates with an F-minus lac-minus recipient.
+
+- **(a)** What is the recipient's genotype afterward?
+- **(b)** What is its phenotype, and what is such a cell used for?
+- **(c)** How does an Hfr cross transferring lac+ differ?
+
+**(a) Partial diploid.** F' transfer moves the whole plasmid efficiently: the recipient becomes F' lac+ / lac-minus — a partial diploid (merodiploid) carrying two lac copies, and it can now donate too.
+
+**(b) Lac+, cis/trans tests.** Lac+, because the plasmid copy complements. Merodiploids are the tool that defined cis vs trans action in the lac operon (e.g., lacI works in trans, the operator only in cis).
+
+**(c) Hfr contrast.** Chromosomal lac+ arrives as a linear fragment that must RECOMBINE to be kept; the recipient stays F-minus and no stable diploid forms. F' = stable partial diploid; Hfr = recombination required.`
+    },
+    {
       id: 'bac3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Gene Transfer Mechanisms** 🎯`,
@@ -93,67 +137,28 @@ Variations:
           }
         ]
       }
-    },
-    {
+    },    {
       id: 'bac3-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Three horizontal routes, three diagnostics: DNase kills transformation; contact required = conjugation; phage required = transduction
-- Griffith found transformation; Avery proved DNA (DNase abolished it)
-- Transduction: generalized = random fragment, lytic mispackaging; specialized = flanking genes, sloppy prophage excision; lysogenic conversion = the phage's own toxin genes
-- Conjugation: F$^+$ x F$^-$ → both F$^+$; Hfr transfers chromosome in map order, recipient stays F$^-$; F' carries hitchhiker genes
-- Transposons move genes BETWEEN replicons inside a cell; plasmids move them BETWEEN cells; operons make regulation fast
-- No meiosis anywhere — bacterial 'sex' is unidirectional donation
+- **Three transfer routes.** Transformation takes up naked DNA, transduction rides in a phage, conjugation needs contact via a pilus.
+- **Diagnostic tests.** DNase blocks only transformation; a filter blocks only conjugation; only transduction needs a phage.
+- **Transduction types.** Generalized mispackaging moves any host gene; specialized moves only genes flanking the prophage.
+- **Conjugation variants.** F$^+$ $\\times$ F$^-$ makes two F$^+$ cells; Hfr moves chromosome genes in map order; F' carries hitchhikers.
+
+**Common traps**
+
+- **Hfr recipients turning F$^+$.** The mating bridge usually breaks before F finishes transferring, so Hfr recipients almost always stay F$^-$.
+- **Griffith proving DNA.** Griffith discovered transformation; Avery proved DNA was the transforming principle (DNase abolished it).
+- **Toxin genes as host DNA.** In lysogenic conversion the toxin genes belong to the phage itself, not to a previous host.
+- **Transposons between cells.** Transposons move genes between replicons inside one cell; plasmids carry them between cells.
 
 <!-- yield:low -->
-- Low-yield extras: lab transformation uses CaCl$_2$ with heat shock or electroporation; F transfer runs by rolling-circle replication
+**Low-yield extras**
+
+- Lab transformation uses CaCl$_2$ with heat shock or electroporation; F transfer runs by rolling-circle replication
 <!-- /yield -->`
-    },
-    {
-      id: 'bac3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Transfer Experiments
-
-<details>
-<summary><b>Example 1: Design controls to identify the mechanism</b></summary>
-
-**Question:** Strain A (streptomycin-resistant) transfers resistance to strain B in mixed culture. Design a three-condition experiment to determine the mechanism, and give the expected results for conjugation.
-
-**Solution:**
-1. Condition 1 — add DNase to the co-culture: conjugation unaffected (DNA travels through the pilus, protected).
-2. Condition 2 — separate strains with a 0.2 micron filter (U-tube): conjugation ABOLISHED (contact required); transformation and transduction persist.
-3. Condition 3 — use cell-free filtrate of strain A on strain B: conjugation gives NO transfer (a filtrate has no cells); transduction would (phage particles pass filters).
-4. Conjugation signature: transfer in mixed culture only, DNase-resistant, filter-blocked, filtrate-negative.
-
-**MCAT Strategy:** Memorize the 3x3 grid of mechanism vs. DNase/filter/filtrate — nearly every genetics-transfer passage is one cell of that grid.
-</details>
-
-<details>
-<summary><b>Example 2: Read an interrupted-mating map</b></summary>
-
-**Question:** In an Hfr cross, recipients acquire azi-r at 9 min, ton-r at 11 min, lac+ at 18 min, gal+ at 25 min. A different Hfr strain (same species, different F integration site) transfers gal+ first. Reconcile, and state what the times give you.
-
-**Solution:**
-1. Entry times are proportional to each gene's DISTANCE from the F integration point (the transfer origin) — the time axis is literally a map axis (minutes became the E. coli map unit).
-2. A different integration site (or orientation) changes the starting point and direction, so gene ORDER of entry changes, but the relative SPACING between genes is consistent.
-3. Combining several Hfr strains' data yields one circular chromosome map — an early proof of chromosome circularity.
-
-**MCAT Strategy:** Time-of-entry = genetic distance; different Hfr strains = different clock-start positions on the same circle.
-</details>
-
-<details>
-<summary><b>Example 3: Predict the outcome of an F-prime cross</b></summary>
-
-**Question:** An F' lac+ cell mates with an F-minus lac-minus recipient. What is the recipient's genotype and phenotype afterward, and how does this differ from an Hfr cross transferring lac+?
-
-**Solution:**
-1. F' transfer moves the whole plasmid efficiently: the recipient becomes F' lac+ / lac-minus — a partial diploid (merodiploid) carrying two lac copies, and it can now donate too.
-2. Phenotype: Lac+ (the plasmid copy complements), and merodiploids are the tool that defined cis vs trans action in the lac operon (e.g., lacI works in trans, operator only in cis).
-3. Hfr contrast: chromosomal lac+ arrives as a linear fragment that must RECOMBINE to be kept, recipient stays F-minus, and no stable diploid forms.
-
-**MCAT Strategy:** F' = stable partial diploid (complementation tests); Hfr = recombination required. When a question builds cis/trans logic, an F' merodiploid is hiding in it.
-</details>`
     }
   ]
 };

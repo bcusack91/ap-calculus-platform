@@ -62,6 +62,50 @@ This is a classic **negative feedback** loop acting within seconds. Long-term pr
 - **ANP** (stretched atria): promotes Na$^+$ and water excretion — the heart's own volume-lowering hormone.`
     },
     {
+      id: 'cvs3-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Regulation & Exchange
+
+**Problem 1.** Arteriolar end of a capillary: $P_c = 37$, $P_i = 1$, $\\pi_c = 25$, $\\pi_i = 3$ mmHg. Venular end: $P_c = 16$, the other three unchanged.
+
+- **(a)** What is the net pressure at the arteriolar end, and which way does fluid move?
+- **(b)** What is the net pressure at the venular end, and which way does fluid move?
+- **(c)** Is there a net daily surplus, and where does it go? What if that route is blocked?
+
+**(a) Arteriolar end.** $(37 - 1) - (25 - 3) = 36 - 22 = +14$ mmHg → **filtration OUT**.
+
+**(b) Venular end.** $(16 - 1) - (25 - 3) = 15 - 22 = -7$ mmHg → **reabsorption IN**.
+
+**(c) Lymphatics.** Filtration (+14) exceeds reabsorption (−7), so a small surplus is filtered each day. Lymphatics drain it; block them and lymphedema follows.
+
+**Problem 2.** On a graph of stroke volume (y) against EDV (x), compare an IV saline infusion with an epinephrine infusion.
+
+- **(a)** How does a saline infusion move the heart on the graph?
+- **(b)** How does an epinephrine infusion change the graph?
+- **(c)** How do you tell the two apart, and what does raised afterload do?
+
+**(a) Saline.** Saline expands volume, so venous return and EDV rise and the heart moves **up along the SAME curve**: a preload change.
+
+**(b) Epinephrine.** Epinephrine (beta-1) raises contractility, so **the entire curve shifts up and left**: at ANY given EDV, SV is larger.
+
+**(c) Test skill.** "Along the curve" = preload; "new curve" = contractility. Increases in afterload shift the curve down.
+
+**Problem 3.** A patient with failing left-ventricular function develops fluid in the lungs (pulmonary edema).
+
+- **(a)** Where does blood back up when the LV fails?
+- **(b)** Which Starling force changes in the pulmonary capillaries?
+- **(c)** Why does fluid collect in the lungs, and what symptoms follow?
+- **(d)** What would RIGHT-heart failure cause instead?
+
+**(a) Backup.** A weak LV does not move blood forward effectively, so volume and pressure back up into the left atrium and **pulmonary veins**.
+
+**(b) Hydrostatic pressure.** Pulmonary capillary hydrostatic pressure ($P_c$) rises.
+
+**(c) Filtration wins.** Filtration now exceeds reabsorption in the pulmonary capillaries, so fluid enters the interstitium and alveoli: impaired gas exchange and dyspnea.
+
+**(d) Symmetry.** RIGHT-heart failure backs pressure into the systemic veins instead, causing peripheral (ankle) edema and jugular venous distension.`
+    },
+    {
       id: 'cvs3-quiz1',
       type: 'multiple-choice' as const,
       content: `**Starling Forces & Regulation** 🎯`,
@@ -92,56 +136,21 @@ This is a classic **negative feedback** loop acting within seconds. Long-term pr
       }
     },
     {
-      id: 'cvs3-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Regulation & Exchange
-
-<details>
-<summary><b>Example 1: Compute net Starling flux at both capillary ends</b></summary>
-
-**Question:** Arteriolar end: $P_c = 37$, $P_i = 1$, $\\pi_c = 25$, $\\pi_i = 3$ mmHg. Venular end: $P_c = 16$, others unchanged. Find the net pressure at each end and the direction of fluid movement.
-
-**Solution:**
-1. Arteriolar: $(37 - 1) - (25 - 3) = 36 - 22 = +14$ mmHg → **filtration OUT**. ✓
-2. Venular: $(16 - 1) - (25 - 3) = 15 - 22 = -7$ mmHg → **reabsorption IN**. ✓
-3. Filtration (+14) exceeds reabsorption (−7): the small daily surplus is drained by lymphatics — block them and lymphedema follows.
-</details>
-
-<details>
-<summary><b>Example 2: Preload vs. contractility on a Starling curve</b></summary>
-
-**Question:** On a graph of SV (y) versus EDV (x), distinguish: (a) an IV saline infusion, and (b) an epinephrine infusion.
-
-**Solution:**
-1. (a) Saline expands volume → venous return and EDV rise → the heart moves **up along the SAME curve** (a preload change). ✓
-2. (b) Epinephrine (beta-1) raises contractility → **the entire curve shifts up/left**: at ANY given EDV, SV is larger. ✓
-
-**Test skill:** "Along the curve" = preload; "new curve" = contractility. Afterload increases shift the curve down.
-</details>
-
-<details>
-<summary><b>Example 3: Heart failure edema — connect pump to capillary</b></summary>
-
-**Question:** A patient with failing left-ventricular function develops fluid in the lungs (pulmonary edema). Trace the mechanism using Starling logic.
-
-**Solution:**
-1. Weak LV → blood is not moved forward effectively → volume and pressure back up into the left atrium and **pulmonary veins**.
-2. Pulmonary capillary hydrostatic pressure ($P_c$) rises.
-3. Filtration now exceeds reabsorption in pulmonary capillaries → fluid enters the interstitium and alveoli → impaired gas exchange, dyspnea. ✓
-
-**Symmetry:** RIGHT-heart failure backs pressure into the systemic veins instead → peripheral (ankle) edema and jugular venous distension.
-</details>`
-    },
-    {
       id: 'cvs3-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- SV depends on preload (↑SV), afterload (↓SV), contractility (↑SV). Frank–Starling: more filling → stronger contraction; it balances the two ventricles automatically.
-- Starling forces: filtration = $(P_c - P_i) - (\\pi_c - \\pi_i)$; hydrostatic pushes out, oncotic (albumin) pulls in; lymphatics clear the surplus.
-- Edema causes: ↑$P_c$, ↓$\\pi_c$, ↑ permeability, lymph blockage.
-- Baroreceptor reflex (carotid sinus + aortic arch → medulla) is the seconds-scale negative-feedback controller of MAP; kidneys control pressure long-term via volume.
-- Preload changes move you along a Starling curve; contractility changes create a new curve.
+- **Three SV determinants.** Preload raises SV, afterload lowers it, contractility raises it at a given preload.
+- **Frank–Starling.** More filling stretches sarcomeres for a stronger beat, which matches the two ventricles' outputs.
+- **Starling forces.** Net flux $\\propto (P_c - P_i) - (\\pi_c - \\pi_i)$: hydrostatic pushes out, albumin's oncotic pull draws in.
+- **Baroreceptor reflex.** Carotid sinus and aortic arch → medulla: seconds-scale negative feedback on MAP.
+
+**Common traps**
+
+- **Preload vs. contractility.** Preload moves along one Starling curve; contractility (sympathetic) draws a new curve up and left.
+- **One cause of edema.** Raised $P_c$, low albumin, leaky capillaries or blocked lymphatics each push fluid out.
+- **Kidneys act in seconds.** The baroreflex is the fast controller; renal volume control (RAAS, ADH) takes hours to days.
+- **Starling forces move gases.** O$_2$ and CO$_2$ cross by diffusion; Starling forces govern bulk fluid only.
 
 <!-- yield:low -->
 - Low-yield extras: baroreceptor afferents run in the glossopharyngeal nerve (carotid sinus) and the vagus (aortic arch)

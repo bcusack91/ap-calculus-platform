@@ -41,6 +41,50 @@ Many exotoxins are two-part machines: the **B (binding) subunit** docks onto a s
 Ask in order: (1) Which stage of infection is the experiment probing — adhesion, evasion, or damage? (2) Is the damage molecule a secreted protein (mutable, vaccinable, neutralizable by antitoxin) or structural LPS? (3) Where does the gene live — chromosome, plasmid, or prophage — and what does that predict about spread (Part 3) and about antibiotic strategy (the Antimicrobials lesson)? Bacterial vignettes are integration tests: structure (Part 1) sets drug access, growth phase (Part 2) sets drug timing, genetics (Part 3) sets resistance spread, and virulence factors (this part) set the clinical picture.`
     },
     {
+      id: 'bac4-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Pathogenesis Integration
+
+**Problem 1.** A patient with gram-negative bacteremia deteriorates in the hours after the first dose of a bactericidal antibiotic.
+
+- **(a)** When do gram-negative cells release endotoxin?
+- **(b)** What does a large, rapid kill do to the host?
+- **(c)** Why can the patient worsen while the bacteria are dying?
+
+**(a) Release on lysis.** Endotoxin (LPS) is a structural membrane component, released chiefly when cells LYSE.
+
+**(b) An LPS bolus.** A cidal drug lysing a large bacterial load dumps a bolus of LPS at once; lipid A activates TLR4 on macrophages → TNF/IL-1 surge → vasodilation and capillary leak.
+
+**(c) Two separate problems.** The bacteria are dying, but the inflammatory cargo peaks: killing the organism and neutralizing its products are separate problems. A bacteriostatic drug would not dump this bolus; the risk tracks how fast the drug lyses cells.
+
+**Problem 2.** Purified subunit A of a toxin does nothing to intact cells but halts protein synthesis when microinjected into the cytoplasm. Purified subunit B binds cells but is harmless.
+
+- **(a)** What job does each subunit do?
+- **(b)** What does the microinjection result prove?
+- **(c)** Antibodies against which subunit best protect intact animals?
+
+**(a) Warhead and delivery.** A is the catalytic warhead (here, EF-2 ADP-ribosylation, diphtheria-style) but cannot ENTER without help; B is the delivery system.
+
+**(b) Entry is the barrier.** Bypassing the membrane restores A's activity, so the barrier is entry, not catalysis — the classic logic for all A-B toxins.
+
+**(c) Anti-B.** Anti-B antibodies block receptor binding, so the toxin never gets in; this is usually the most protective neutralization target on the intact toxin. Activity needs BOTH binding and catalysis; each subunit alone is a null.
+
+**Problem 3.** An encapsulated, lactose-fermenting gram-negative rod causes a UTI. It carries a conjugative R plasmid with a beta-lactamase gene, and a biofilm forms on the patient's catheter.
+
+- **(a)** What obstacles does its envelope (Part 1) predict?
+- **(b)** What does the biofilm's growth state (Part 2) predict?
+- **(c)** What does the R plasmid (Part 3) predict?
+- **(d)** How do you get around the beta-lactamase?
+
+**(a) Structure.** The gram-negative outer membrane restricts drug entry; the capsule fights phagocytosis; LPS threatens sepsis on lysis.
+
+**(b) Growth.** Biofilm cells sit near stationary phase, so beta-lactams, which need growth, underperform; the catheter likely must come out.
+
+**(c) Genetics.** The R plasmid can conjugate resistance to neighboring flora, so isolation and drug choice matter beyond this one strain.
+
+**(d) Resistance enzyme.** Beta-lactamase = "destroy the drug": pair the beta-lactam with an inhibitor (clavulanate) or switch class. This layering — envelope, growth phase, gene mobility, resistance and virulence factors — is how the MCAT builds microbiology passages.`
+    },
+    {
       id: 'bac4-quiz1',
       type: 'multiple-choice' as const,
       content: `**Pathogenesis & Toxins** 🎯`,
@@ -83,67 +127,28 @@ Ask in order: (1) Which stage of infection is the experiment probing — adhesio
           }
         ]
       }
-    },
-    {
+    },    {
       id: 'bac4-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Infection stages: adhere (pili) → invade (enzymes) → evade (capsule, IgA protease, hiding) → damage (toxins or inflammation)
-- Exotoxin = secreted protein, both Gram types, heat-labile, hyperpotent, toxoid-vaccinable, often plasmid/phage-encoded
-- Endotoxin = lipid A of LPS, gram-negative only, released on lysis, heat-stable, septic shock
-- A-B architecture: B binds, A acts — ADP-ribosylation (diphtheria: EF-2; cholera: G$_s$ → cAMP), SNARE proteases (tetanus spastic vs botulinum flaccid)
-- Superantigens crosslink MHC II-TCR nonspecifically → cytokine storm
-- Normal flora are a defense; clearing them invites C. difficile — antibiotics vacate niches, they do not create pathogens
+- **Infection stages.** Adhere (pili), invade (enzymes), evade (capsule, IgA protease, hiding), then damage by toxins or inflammation.
+- **Exotoxins.** Secreted proteins, both Gram types: potent, toxoid-vaccinable, usually heat-labile (S. aureus enterotoxin is heat-stable).
+- **Endotoxin.** Lipid A of gram-negative LPS: released on lysis, heat-stable, poorly antigenic, the main trigger of gram-negative septic shock.
+- **A-B toxins.** B binds, A acts: diphtheria ADP-ribosylates EF-2; cholera ADP-ribosylates G$_s$ (cAMP up); tetanus/botulinum cut SNAREs.
+
+**Common traps**
+
+- **Tetanus vs botulinum.** Same mechanism, opposite paralysis: the difference is which neuron is silenced (inhibitory interneuron vs motor neuron).
+- **Endotoxin toxoids.** LPS is poorly antigenic, so no toxoid exists; toxoid vaccines (tetanus, diphtheria) are inactivated exotoxins.
+- **Superantigens as antigens.** They are not processed or loaded into the MHC groove; they clamp MHC II to TCR V-beta from outside.
+- **Antibiotics creating C. difficile.** Antibiotics clear competing normal flora and vacate niches; they do not turn commensals into pathogens.
 
 <!-- yield:low -->
-- Low-yield extras: hyaluronidase and collagenase are the named tissue-spreading enzymes
+**Low-yield extras**
+
+- Hyaluronidase and collagenase are the named tissue-spreading enzymes
 <!-- /yield -->`
-    },
-    {
-      id: 'bac4-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Pathogenesis Integration
-
-<details>
-<summary><b>Example 1: Why antibiotics can transiently WORSEN gram-negative sepsis</b></summary>
-
-**Question:** A patient with gram-negative bacteremia deteriorates in the hours after the first bactericidal antibiotic dose. Propose the mechanism.
-
-**Solution:**
-1. Endotoxin is a structural membrane component, released chiefly when cells LYSE.
-2. A cidal drug lysing a large bacterial load dumps a bolus of LPS at once; lipid A activates TLR4 on macrophages → TNF/IL-1 surge → vasodilation and capillary leak.
-3. The bacteria are dying, but the inflammatory cargo peaks — killing the organism and neutralizing its products are separate problems.
-
-**MCAT Strategy:** Endotoxin release scales with lysis, not with bacterial viability; expect questions pairing antibiotic mechanism (lysis vs static) with endotoxin kinetics.
-</details>
-
-<details>
-<summary><b>Example 2: Dissect an A-B toxin experimentally</b></summary>
-
-**Question:** Purified subunit A of a toxin, added to intact cells, does nothing; microinjected into the cytoplasm, it halts protein synthesis. Purified subunit B binds cells but is harmless. Antibodies against which subunit best protect intact animals, and why?
-
-**Solution:**
-1. A is the catalytic warhead (here, EF-2 ADP-ribosylation, diphtheria-style) but cannot ENTER without help; B is the delivery system.
-2. Anti-B antibodies block receptor binding — the toxin never gets in; this is usually the most protective neutralization target on the intact toxin.
-3. The microinjection bypass proves the barrier is entry, not catalysis — the classic logic for all A-B toxins.
-
-**MCAT Strategy:** For A-B toxins: activity requires BOTH binding and catalysis; each subunit alone is a null, and neutralizing antibodies work at the binding step.
-</details>
-
-<details>
-<summary><b>Example 3: Full-stack vignette — connect all four parts</b></summary>
-
-**Question:** An encapsulated, lactose-fermenting gram-negative rod causes a UTI. It carries a conjugative R plasmid with a beta-lactamase gene, and biofilm forms on the patient's catheter. Name the concept from each lesson part that predicts a treatment obstacle.
-
-**Solution:**
-1. Part 1 (structure): gram-negative outer membrane restricts drug entry; capsule fights phagocytosis; LPS threatens sepsis on lysis.
-2. Part 2 (growth): biofilm cells sit near stationary phase — beta-lactams, which need growth, underperform; the catheter likely must come out.
-3. Part 3 (genetics): the R plasmid can conjugate resistance to neighboring flora — isolation and drug choice matter beyond this one strain.
-4. Part 4 (pathogenesis): beta-lactamase = 'destroy the drug'; pair the beta-lactam with an inhibitor (clavulanate) or switch class.
-
-**MCAT Strategy:** This layering — envelope, growth phase, gene mobility, virulence factor — is exactly how the MCAT builds multi-paragraph microbiology passages. Practice naming which layer each experimental detail addresses.
-</details>`
     }
   ]
 };

@@ -71,6 +71,56 @@ $$\\text{SA node} \\to \\text{atrial muscle} \\to \\text{AV node (delay)} \\to \
 The ECG records **electrical** events; contraction (mechanical) follows each depolarization. QRS therefore comes just **before** ventricular pressure rises and S1.`
     },
     {
+      id: 'cvs1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Cardiac Cycle & Conduction
+
+**Problem 1.** A patient has an end-diastolic volume of 140 mL, an end-systolic volume of 70 mL, and a heart rate of 80 bpm.
+
+- **(a)** What is the stroke volume?
+- **(b)** What is the ejection fraction, and is it normal?
+- **(c)** What is the cardiac output?
+- **(d)** Why is a normal-looking SV not enough to call this heart healthy?
+
+**(a) Stroke volume.** $SV = EDV - ESV = 140 - 70 = 70$ mL.
+
+**(b) Ejection fraction.** With $SV = 70$ mL from (a): $EF = SV/EDV = 70/140 = 50\\%$. That is borderline low (normal ≈ 55–70%); the elevated ESV suggests the ventricle is not emptying well.
+
+**(c) Cardiac output.** With $SV = 70$ mL from (a): $CO = HR \\times SV = 80 \\times 70 = 5600$ mL/min = **5.6 L/min**.
+
+**(d) Check the EF.** The SV of 70 mL matches a healthy heart only because EDV is inflated to 140 mL. A failing heart can hide behind a normal SV, so always check EF, not just SV.
+
+**Problem 2.** Four events happen at the start of ventricular systole: S1, the QRS complex, the aortic valve opening, and the mitral valve closing.
+
+- **(a)** Which event comes first, and why?
+- **(b)** Which two events happen together, and what links them?
+- **(c)** Which event comes last, and what must happen before it?
+- **(d)** What is the full order, and how does it help with passage figures?
+
+**(a) QRS first.** Electrical depolarization must precede mechanical contraction, so the QRS complex comes before any valve moves.
+
+**(b) Mitral closure and S1.** As the ventricle contracts, its pressure rises above atrial pressure and the **mitral valve closes**. The closure produces **S1**, so the two are essentially simultaneous.
+
+**(c) Aortic valve last.** Pressure keeps rising through isovolumetric contraction until it exceeds aortic pressure; only then does the **aortic valve open**.
+
+**(d) The order.** QRS → mitral closure / S1 → aortic valve opens. Passage figures often overlay ECG, pressure and volume traces: anchor every mechanical event to the electrical one just before it.
+
+**Problem 3.** In an animal experiment, both vagus nerves to the heart are severed. Resting heart rate rises from 70 to about 100 bpm.
+
+- **(a)** What rate does the SA node fire at on its own?
+- **(b)** Why does the heart rest near 70 bpm with the nerves intact?
+- **(c)** Why does HR climb to ~100 bpm after vagotomy?
+- **(d)** Would blocking sympathetic input or giving atropine at rest do the same?
+
+**(a) Intrinsic rate.** The SA node's intrinsic firing rate is ~100 bpm.
+
+**(b) Vagal tone.** At rest, parasympathetic (vagal) tone dominates and holds the rate near 70.
+
+**(c) Unmasking.** Removing vagal input unmasks the intrinsic SA rate, so HR climbs to ~100 bpm.
+
+**(d) Contrast.** Blocking sympathetic input at rest changes HR only slightly, because resting sympathetic tone is small. Blocking muscarinic receptors with atropine mimics vagotomy.`
+    },
+    {
       id: 'cvs1-quiz1',
       type: 'multiple-choice' as const,
       content: `**Heart & Cardiac Cycle** 🎯`,
@@ -101,61 +151,21 @@ The ECG records **electrical** events; contraction (mechanical) follows each dep
       }
     },
     {
-      id: 'cvs1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Cardiac Cycle & Conduction
-
-<details>
-<summary><b>Example 1: Compute stroke volume, ejection fraction, and cardiac output</b></summary>
-
-**Question:** A patient has EDV = 140 mL, ESV = 70 mL, and HR = 80 bpm. Find SV, EF, and CO. Is the EF normal?
-
-**Solution:**
-1. $SV = EDV - ESV = 140 - 70 = 70$ mL ✓
-2. $EF = SV/EDV = 70/140 = 50\\%$ — borderline low (normal ≈ 55–70%); the elevated ESV suggests the ventricle is not emptying well.
-3. $CO = HR \\times SV = 80 \\times 70 = 5600$ mL/min = **5.6 L/min** ✓
-
-**MCAT note:** A "normal-looking" SV can hide a failing heart if EDV is inflated — always check EF, not just SV.
-</details>
-
-<details>
-<summary><b>Example 2: Order the events at the start of systole</b></summary>
-
-**Question:** Place in temporal order: (a) S1, (b) QRS complex, (c) aortic valve opens, (d) mitral valve closes.
-
-**Solution:**
-1. **QRS** — electrical depolarization must precede mechanical contraction.
-2. Ventricular pressure rises above atrial pressure → **mitral valve closes**, producing **S1** (d and a are essentially simultaneous; closure causes the sound).
-3. Pressure keeps rising through isovolumetric contraction until it exceeds aortic pressure → **aortic valve opens** (c). ✓
-
-Order: b → d/a → c.
-
-**Why it matters:** Passage figures often overlay ECG, pressure, and volume traces — anchor every mechanical event to the electrical one just before it.
-</details>
-
-<details>
-<summary><b>Example 3: Predict the effect of cutting vagal input</b></summary>
-
-**Question:** In an animal experiment, both vagus nerves to the heart are severed. Resting heart rate rises from 70 to about 100 bpm. Explain.
-
-**Solution:**
-1. The SA node's intrinsic firing rate is ~100 bpm.
-2. At rest, parasympathetic (vagal) tone dominates, holding the rate near 70.
-3. Removing vagal input unmasks the intrinsic SA rate → HR climbs to ~100 bpm. ✓
-
-**Contrast:** Blocking sympathetic input at rest changes HR only slightly (small resting sympathetic tone); blocking muscarinic receptors with atropine mimics vagotomy.
-</details>`
-    },
-    {
       id: 'cvs1-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Pulmonary and systemic circuits are in series; systemic organs are in parallel. Pulmonary artery = deoxygenated, pulmonary veins = oxygenated.
-- $SV = EDV - ESV$; $EF = SV/EDV$ (normal ≈ 55–70%); $CO = HR \\times SV$.
-- S1 = AV valves close (start of systole); S2 = semilunar valves close (start of diastole); valves are passive.
-- Conduction: SA node (myogenic pacemaker) → AV node (delay, only atria-ventricle path) → His–Purkinje. P = atrial depolarization, QRS = ventricular depolarization, T = ventricular repolarization.
-- Sympathetic NE (beta-1) speeds and strengthens; vagal ACh slows — resting HR sits below the SA node's intrinsic ~100 bpm because vagal tone dominates.
+- **Two circuits in series.** Right and left hearts pump the same volume; systemic organs branch off the aorta in parallel.
+- **Cardiac numbers.** $SV = EDV - ESV$, $EF = SV/EDV$ (normal ≈ 55–70%), and $CO = HR \\times SV$.
+- **Heart sounds.** S1 = AV valves close at the start of systole; S2 = semilunar valves close at the start of diastole.
+- **Conduction and the ECG.** SA → AV delay → His–Purkinje (P, QRS, T on the ECG); sympathetic beta-1 speeds/strengthens, vagal ACh slows.
+
+**Common traps**
+
+- **Arteries carry oxygen.** "Artery" means away from the heart: the pulmonary artery carries deoxygenated blood.
+- **Muscles open the valves.** Pressure gradients open and close every valve; chordae and papillary muscles only stop prolapse.
+- **Nerves start the beat.** The heart is myogenic; vagal tone holds resting HR (~70) below the SA node's intrinsic ~100 bpm.
+- **Trusting SV alone.** A normal SV can hide a failing heart when EDV is inflated, so always check EF.
 
 <!-- yield:low -->
 - Low-yield extras: the pacemaker currents are named the "funny" Na$^+$ current ($I_f$) and T-type Ca$^{2+}$ channels

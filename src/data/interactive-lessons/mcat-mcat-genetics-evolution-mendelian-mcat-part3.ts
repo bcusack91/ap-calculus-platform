@@ -55,21 +55,26 @@ Chain the probabilities of each required event with the product rule:
       type: 'text' as const,
       content: `### Worked Example — A Full Recurrence-Risk Calculation
 
-**Problem.** Cystic fibrosis (CF) is autosomal recessive. A healthy woman has a brother with CF; her parents are healthy. She marries a healthy man from the general population, where the carrier frequency is $\\tfrac{1}{25}$. What is the probability their first child has CF?
+**Problem.** Cystic fibrosis (CF) is autosomal recessive. A healthy woman has a brother with CF; her parents are healthy. She marries a healthy man from the general population, where the carrier frequency is $\\tfrac{1}{25}$.
 
-**Step 1 — The woman's carrier probability.** Her parents must both be $Aa$ (they are healthy with an $aa$ son). She is healthy, so among the unaffected outcomes of $Aa \\times Aa$:
+- **(a)** What is the probability the woman is a carrier?
+- **(b)** What is the probability her husband is a carrier?
+- **(c)** If both are carriers, what is the chance a child has CF?
+- **(d)** What is the probability their first child has CF?
+
+**(a) The woman's carrier probability.** Her parents must both be $Aa$ (they are healthy with an $aa$ son). She is healthy, so among the unaffected outcomes of $Aa \\times Aa$:
 $P(\\text{she is } Aa) = \\frac{2}{3}$
 
-**Step 2 — The husband's carrier probability.** No family history, so use the population figure:
+**(b) The husband's carrier probability.** No family history, so use the population figure:
 $P(\\text{he is } Aa) = \\frac{1}{25}$
 
-**Step 3 — Probability that two carriers have an affected child.**
+**(c) Two carriers.** $Aa \\times Aa$ gives $aa$ one time in four:
 $P(aa \\mid \\text{both } Aa) = \\frac{1}{4}$
 
-**Step 4 — Multiply.**
+**(d) Multiply.** Chain (a), (b) and (c) with the product rule:
 $P(\\text{child has CF}) = \\frac{2}{3} \\times \\frac{1}{25} \\times \\frac{1}{4} = \\frac{2}{300} = \\frac{1}{150}$
 
-**Trap check.** Using $\\tfrac{1}{2}$ instead of $\\tfrac{2}{3}$ for the sister is the single most common error — it ignores the information that she is unaffected. Every probability in the chain must be conditioned on everything the problem tells you.`
+Using $\\tfrac{1}{2}$ instead of $\\tfrac{2}{3}$ for the woman is the most common error: it ignores that she is unaffected. Condition every probability on everything the problem tells you.`
     },
     {
       id: 'men3-quiz1',
@@ -120,14 +125,22 @@ $P(\\text{child has CF}) = \\frac{2}{3} \\times \\frac{1}{25} \\times \\frac{1}{
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Decision order: check male-to-male transmission (kills X-linkage) → generation skipping (recessive vs. dominant) → sex bias → maternal-line-only (mitochondrial)
-- Obligate carriers: unaffected parents of an AR child; every daughter of an XR-affected father
-- The unaffected sibling of an AR patient is a carrier with probability $2/3$, not $1/2$ — condition on the known phenotype
-- Recurrence risk = product of each required event: (carrier?) $\\times$ (carrier?) $\\times$ $1/4$
-- Two affected AR parents cannot have an unaffected child; late-onset dominant disease keeps risk at $1/2$ despite a healthy young adult phenotype
+- **Pedigree decision order.** Male-to-male rules out X; skipping means recessive; male excess means XR; maternal-only means mitochondrial.
+- **Obligate carriers.** Unaffected parents of an AR child are both Aa; every daughter of an XR-affected father is a carrier.
+- **The 2/3 rule.** An unaffected sibling of an AR patient is a carrier with probability $2/3$: condition on the known phenotype.
+- **Recurrence risk is a chain.** Multiply each required event: (carrier?) $\\times$ (carrier?) $\\times$ $1/4$.
+
+**Common traps**
+
+- **Using 1/2 for the sibling.** That ignores the sibling's healthy phenotype; removing the $aa$ class leaves $2/3$.
+- **X-linkage with father-to-son spread.** Male-to-male transmission rules out every X-linked pattern: fathers give sons a Y.
+- **Two affected parents, one healthy child.** Two $aa$ parents can only have $aa$ children, so one unaffected child excludes AR.
+- **Discounting late-onset risk.** A healthy 25-year-old child of a Huntington heterozygote still has a $1/2$ risk.
 
 <!-- yield:low -->
-- Low-yield extras: X-linked hypophosphatemic rickets is the textbook X-linked dominant example; LHON and MELAS are the named mitochondrial examples
+**Low-yield extras**
+
+- X-linked hypophosphatemic rickets is the textbook X-linked dominant example; LHON and MELAS are the named mitochondrial examples.
 <!-- /yield -->`
     }
   ]

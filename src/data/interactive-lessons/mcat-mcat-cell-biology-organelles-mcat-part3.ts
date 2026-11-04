@@ -132,6 +132,26 @@ A single metabolic thread crossing four organelles — passages that name an acc
 <!-- /yield -->`
     },
     {
+      id: 'org3-worked',
+      type: 'text' as const,
+      content: `### Worked Example — Which Fatty-Acid Hand-off Broke?
+
+**Problem 1.** A boy with severe neurologic disease has very-long-chain fatty acids (VLCFA) accumulating. His peroxisomes look normal, their beta-oxidation enzymes are catalytically normal, and his mitochondrial carnitine shuttle works.
+
+- **(a)** Where should VLCFA be oxidized first, and what does that step produce?
+- **(b)** Which hand-off has broken?
+- **(c)** Is this an enzyme, a delivery or a compartment defect, and how would Zellweger syndrome differ?
+- **(d)** Why can't his healthy mitochondria clear the VLCFA instead?
+
+**(a) Peroxisome first.** VLCFA are oxidized in the peroxisome first. Peroxisomal beta-oxidation passes electrons to O$_2$, making H$_2$O$_2$ (disposed of by catalase) and no ATP directly, and shortened, medium-length acyl chains that are handed to mitochondria.
+
+**(b) Entry into the peroxisome.** The organelle is present and its enzymes work, so the failure is the dedicated transporter that carries VLCFA into the peroxisome — adrenoleukodystrophy.
+
+**(c) Delivery broken.** Normal enzymes fail because the substrate never reaches them: a delivery defect. Zellweger is a compartment defect: peroxisome assembly fails (empty "ghosts"), so plasmalogens are missing too.
+
+**(d) Order of the hand-off.** Mitochondria take only the medium-length products that peroxisomal beta-oxidation hands them through the carnitine shuttle. With VLCFA never shortened, the healthy mitochondrial steps downstream have nothing to work on.`
+    },
+    {
       id: 'org3-quiz2',
       type: 'multiple-choice' as const,
       content: `**Mitochondrial Integration** 🎯`,
@@ -159,13 +179,17 @@ A single metabolic thread crossing four organelles — passages that name an acc
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Mitochondrial map: porous outer membrane (porins), proton-tight inner membrane (ETC, ATP synthase, cristae), matrix (TCA, beta-oxidation, mtDNA); uncouplers dissipate the gradient as heat (UCP1, DNP) while O$_2$ use continues
-- Endosymbiosis evidence: circular histone-free DNA, 70S-like ribosomes (antibiotic side effects), double membrane, fission; mtDNA = maternal inheritance + heteroplasmy → variable severity by mutant load and tissue demand
-- Lysosome inputs: endocytosis, phagocytosis, autophagy (starvation-induced, mTOR-gated); storage diseases = substrate of the missing hydrolase accumulates (Tay-Sachs/GM2, Gaucher/glucocerebroside, Pompe/lysosomal glycogen)
-- Compartment logic: normal cytosolic enzymes cannot rescue substrate trapped in a lysosome (Pompe), and normal enzymes fail without delivery (I-cell, ALD)
-- Peroxisomes: VLCFA and branched-lipid oxidation → H$_2$O$_2$ → catalase; plasmalogen synthesis; Zellweger = assembly failure, ALD = import failure
-- ROS chain: ETC leak → superoxide → SOD → H$_2$O$_2$ → catalase/glutathione peroxidase (NADPH from PPP)
-- Cytochrome c: electron carrier in place, apoptosis trigger displaced — location is function
+- **A proton-tight inner membrane.** The ETC pumps H$^+$ out of the matrix; ATP synthase is the only easy way back — chemiosmosis.
+- **Bacterial-like mitochondria.** Circular DNA, 70S-like ribosomes, double membrane, fission; mtDNA is maternal and heteroplasmic.
+- **Lose the hydrolase, keep the substrate.** Tay-Sachs stores GM2, Gaucher glucocerebroside, Pompe glycogen inside lysosomes.
+- **Location is function.** Cytochrome c carries electrons in the intermembrane space; released into the cytosol, it triggers apoptosis.
+
+**Common traps**
+
+- **Uncouplers stopping O$_2$ use.** Uncouplers leak the gradient as heat while electron transport and O$_2$ use continue.
+- **Expecting cytosolic rescue.** Normal cytosolic enzymes cannot reach substrate sealed inside a lysosome (Pompe).
+- **Calling every disease an enzyme defect.** I-cell disease and adrenoleukodystrophy are delivery failures; Zellweger is a missing compartment.
+- **Peroxisomes making ATP.** Peroxisomal beta-oxidation sends electrons to O$_2$, making H$_2$O$_2$, not ATP; mitochondria finish the job.
 
 <!-- yield:low -->
 - Low-yield extras: VDAC is the outer-membrane porin; aminoglycosides and linezolid hit mitochondrial ribosomes; MELAS and LHON are named mtDNA diseases; phytanic acid is the classic branched-chain peroxisomal substrate (alpha-oxidation); the mitochondrial permeability transition drives necrosis; ABCD1 is the VLCFA transporter mutated in ALD

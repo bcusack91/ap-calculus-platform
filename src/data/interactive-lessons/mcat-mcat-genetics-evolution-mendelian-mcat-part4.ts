@@ -52,19 +52,24 @@ $\\chi^2 = \\sum \\frac{(O - E)^2}{E}$
       type: 'text' as const,
       content: `### Worked Example — Diagnosing a Modified Ratio
 
-**Passage-style problem.** Researchers cross two true-breeding white-flowered plant lines (Line 1 $\\times$ Line 2). All F1 are purple. Selfing the F1 yields an F2 of 178 purple : 142 white — approximately $9:7$.
+**Problem.** (Passage-style.) Researchers cross two true-breeding white-flowered plant lines (Line 1 $\\times$ Line 2). All F1 are purple. Selfing the F1 yields an F2 of 178 purple : 142 white — approximately $9:7$.
 
-**Step 1 — Two white parents give purple F1: what does that mean?** Each line must be blocked at a *different* step of the pigment pathway (Line 1 = $ccPP$, Line 2 = $CCpp$). The F1 ($CcPp$) has one functional allele of each gene, restoring the pathway. This is **complementation** — the classic evidence for TWO genes.
+- **(a)** What does purple F1 from two white lines tell you?
+- **(b)** Why does the F2 come out $9:7$?
+- **(c)** What does this model predict for a test cross of the F1?
+- **(d)** How would recessive epistasis ($9:3:4$) look different, and what F2 counts out of 320 would it predict?
 
-**Step 2 — Explain $9:7$.** In the F2 of $CcPp \\times CcPp$:
+**(a) Complementation.** Each line must be blocked at a *different* step of the pigment pathway (Line 1 = $ccPP$, Line 2 = $CCpp$). The F1 ($CcPp$) has one functional allele of each gene, restoring the pathway. This is **complementation** — the classic evidence for TWO genes.
+
+**(b) Explaining 9:7.** In the F2 of $CcPp \\times CcPp$:
 - $C\\_P\\_$ (functional at both steps) $= \\tfrac{9}{16}$ → purple
 - $C\\_pp$, $ccP\\_$, and $ccpp$ $= \\tfrac{3+3+1}{16} = \\tfrac{7}{16}$ → white (pathway broken at either step)
 
 So the $9:3:3:1$ collapses to $9:7$: **duplicate recessive epistasis** in a two-step biosynthetic pathway.
 
-**Step 3 — Predict a test cross.** $CcPp \\times ccpp$ → $\\tfrac{1}{4} CcPp$ purple : $\\tfrac{3}{4}$ white ($1:3$). Making a confirmable prediction from your model is exactly what an MCAT experimental follow-up question asks for.
+**(c) Test-cross prediction.** $CcPp \\times ccpp$ → $\\tfrac{1}{4} CcPp$ purple : $\\tfrac{3}{4}$ white ($1:3$). Making a confirmable prediction from your model is exactly what an MCAT experimental follow-up question asks for.
 
-**Distinguish from recessive epistasis ($9:3:4$):** there, one gene's recessive genotype masks the second gene (e.g., albino masking coat color), leaving three phenotype classes, not two.`
+**(d) Versus recessive epistasis.** In a $9:3:4$ F2, one gene's recessive genotype masks the second gene (e.g., albino masking coat color), leaving three phenotype classes, not two: out of 320 offspring, $180 : 60 : 80$.`
     },
     {
       id: 'men4-quiz1',
@@ -115,11 +120,17 @@ So the $9:3:3:1$ collapses to $9:7$: **duplicate recessive epistasis** in a two-
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Ratio diagnostics: $2:1$ = homozygous lethal; $9:3:4$ = recessive epistasis; $9:7$ = duplicate recessive/complementation; $12:3:1$ = dominant epistasis; $1:2:1$ phenotypes = incomplete dominance or codominance
-- Two mutant parents + wild-type offspring = complementation → the mutations are in DIFFERENT genes
-- ABO: codominant $I^A$/$I^B$, both dominant to $i$ — multiple alleles, 4 phenotypes
-- Penetrance = whether the phenotype appears at all; expressivity = how strongly it appears
-- $\\chi^2 = \\sum (O-E)^2/E$ with df = classes $- 1$: a significant value rejects the ratio but does not name the correct model — design the next cross`
+- **Ratio diagnostics.** $2:1$ lethal; $9:3:4$ recessive epistasis; $9:7$ complementary genes; $12:3:1$ dominant epistasis.
+- **Complementation means two genes.** Two mutant parents with wild-type offspring carry mutations in DIFFERENT genes.
+- **ABO is multiple alleles.** $I^A$ and $I^B$ are codominant and both dominant to $i$: 6 genotypes, 4 phenotypes.
+- **Chi-square tests fit.** $\\chi^2 = \\sum (O-E)^2/E$ with df = classes $- 1$; a large value rejects the hypothesized ratio.
+
+**Common traps**
+
+- **Calling every 1:2:1 incomplete dominance.** Codominance also gives $1:2:1$; a blended heterozygote is incomplete, both alleles expressed is codominant.
+- **Penetrance vs. expressivity.** Penetrance is whether the phenotype appears at all; expressivity is how strongly it appears.
+- **Chi-square naming the model.** A significant value rejects the ratio but never names the right model: design the next cross.
+- **AB or O from AB $\\times$ O.** Children of $I^AI^B \\times ii$ can only be type A or type B, never AB or O.`
     }
   ]
 };

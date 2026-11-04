@@ -62,6 +62,57 @@ $$v = \\frac{Q}{A_{total}}$$
 Aorta (MAP ~93) → arterioles (**largest drop**, to ~35) → capillaries (~35 → 15) → veins (~15 → ~0 at the RA). Skeletal-muscle pumping and respiratory pressure swings help venous return against this tiny remaining gradient; venous valves prevent backflow.`
     },
     {
+      id: 'cvs2-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Pressure, Flow & Resistance
+
+**Problem 1.** During vigorous exercise, cardiac output rises from 5 to 20 L/min, yet MAP only rises from ~93 to ~110 mmHg.
+
+- **(a)** If TPR stayed constant, what would quadrupling CO do to MAP?
+- **(b)** Using $MAP = CO \\times TPR$, how far must TPR have fallen?
+- **(c)** What lowers TPR in exercising muscle?
+- **(d)** What is the net effect on flow and pressure?
+
+**(a) Constant TPR.** MAP would nearly quadruple with CO, to well over 300 mmHg. It doesn't.
+
+**(b) TPR falls.** Resting $TPR = 93/5 \\approx 19$; during exercise $TPR = 110/20 = 5.5$ (mmHg·min/L). TPR falls to roughly **a third to a quarter** of its resting value, so MAP rises only modestly while CO quadruples.
+
+**(c) Local metabolites.** Exercising skeletal-muscle arterioles dilate massively (CO$_2$, H$^+$, adenosine, K$^+$), opening huge parallel beds.
+
+**(d) Net effect.** Local metabolic vasodilation in active muscle overrides sympathetic vasoconstriction there: high flow at nearly constant pressure.
+
+<!-- yield:low -->
+- The override of sympathetic vasoconstriction by local metabolites in exercising muscle is called **functional sympatholysis**.
+<!-- /yield -->
+
+**Problem 2.** Two vascular beds each have resistance $R = 12$ units.
+
+- **(a)** What is the total resistance if they are in parallel?
+- **(b)** What is the total resistance if they are in series?
+- **(c)** Which arrangement does the body use for its organs, and why does it help?
+
+**(a) Parallel.** $\\frac{1}{R_{tot}} = \\frac{1}{12} + \\frac{1}{12} = \\frac{2}{12} \\Rightarrow R_{tot} = 6$ units.
+
+**(b) Series.** $R_{tot} = 12 + 12 = 24$ units, four times the parallel value of 6 from (a).
+
+**(c) Parallel organs.** Systemic organs branch in **parallel** off the aorta. Each organ receives fully oxygenated blood at full arterial pressure, flow to one organ can be adjusted without starving the others, and total resistance stays low.
+
+**Problem 3.** A trauma patient loses 1 L of blood.
+
+- **(a)** What happens to CO and MAP immediately?
+- **(b)** How do the baroreceptors respond?
+- **(c)** What reflex changes in HR, contractility and TPR follow?
+- **(d)** What clinical signs appear before MAP collapses?
+
+**(a) Immediate fall.** Blood loss → less venous return → less preload → smaller SV (Frank–Starling) → **CO and MAP fall**.
+
+**(b) Baroreceptors.** The carotid sinus and aortic arch receptors fire less, so the brainstem raises sympathetic and withdraws parasympathetic output.
+
+**(c) Reflex.** **HR up, contractility up, arteriolar constriction (TPR up), and venoconstriction** (mobilizing the venous reservoir) defend MAP.
+
+**(d) Clinical signature.** Tachycardia, cool pale skin (skin and gut beds sacrificed) and a narrowed pulse pressure, all before MAP itself collapses.`
+    },
+    {
       id: 'cvs2-quiz1',
       type: 'multiple-choice' as const,
       content: `**Hemodynamics** 🎯`,
@@ -92,61 +143,21 @@ Aorta (MAP ~93) → arterioles (**largest drop**, to ~35) → capillaries (~35 �
       }
     },
     {
-      id: 'cvs2-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Pressure, Flow & Resistance
-
-<details>
-<summary><b>Example 1: Exercise hemodynamics — why MAP barely changes</b></summary>
-
-**Question:** During vigorous exercise, cardiac output rises from 5 to 20 L/min, yet MAP only rises from ~93 to ~110 mmHg. Reconcile this with $MAP = CO \\times TPR$.
-
-**Solution:**
-1. If TPR were constant, quadrupling CO would nearly quadruple MAP — it doesn't.
-2. Exercising skeletal-muscle arterioles dilate massively (local metabolites: CO2, H$^+$, adenosine, K$^+$), opening huge parallel beds → **TPR falls to roughly a third to a quarter** of resting value (MAP rises only modestly because CO quadruples).
-3. $MAP = 20 \\times TPR_{new} \\approx$ only modestly above resting MAP. ✓
-
-**Takeaway:** Local metabolic vasodilation in active muscle overrides sympathetic vasoconstriction there; the net effect is high flow at nearly constant pressure.
-</details>
-
-<!-- yield:low -->
-- The override of sympathetic vasoconstriction by local metabolites in exercising muscle is called **functional sympatholysis**.
-<!-- /yield -->
-
-<details>
-<summary><b>Example 2: Series vs. parallel resistance calculation</b></summary>
-
-**Question:** Two vascular beds each have resistance $R = 12$ units. Compare total resistance when they are in parallel versus in series, and state which arrangement the body uses for its organs.
-
-**Solution:**
-1. Parallel: $\\frac{1}{R_{tot}} = \\frac{1}{12} + \\frac{1}{12} = \\frac{2}{12} \\Rightarrow R_{tot} = 6$ units.
-2. Series: $R_{tot} = 12 + 12 = 24$ units — four times the parallel value.
-3. Systemic organs branch in **parallel** off the aorta ✓ — so each organ receives fully oxygenated blood at full arterial pressure, flow to one organ can be adjusted without starving the others, and total resistance stays low.
-</details>
-
-<details>
-<summary><b>Example 3: Hemorrhage and the pressure equation</b></summary>
-
-**Question:** A trauma patient loses 1 L of blood. Predict the immediate changes in MAP, and the reflex changes in HR and TPR that follow.
-
-**Solution:**
-1. Blood loss → decreased venous return → decreased preload → decreased SV (Frank–Starling) → **CO and MAP fall**.
-2. Baroreceptors (carotid sinus, aortic arch) fire less → brainstem raises sympathetic and withdraws parasympathetic output.
-3. Reflex: **HR up, contractility up, arteriolar constriction (TPR up), venoconstriction** (mobilizes venous reservoir) → MAP is defended. ✓
-
-**Clinical signature:** tachycardia + cool, pale skin (skin/gut beds sacrificed) + narrowed pulse pressure — before MAP itself collapses.
-</details>`
-    },
-    {
       id: 'cvs2-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 2
 
-- $Q = \\Delta P / R$; for the whole circuit, $MAP \\approx CO \\times TPR$.
-- $MAP \\approx P_{dias} + \\frac{1}{3}(\\text{pulse pressure})$ — weighted toward diastole.
-- Poiseuille: $R \\propto \\eta L / r^4$ — radius dominates; arterioles are the resistance (and largest pressure-drop) site.
-- Parallel organ beds keep total resistance low; opening beds lowers TPR, closing them raises it.
-- $v = Q / A_{total}$: capillaries have the largest total area → slowest velocity → best exchange. Veins are the volume reservoir (~2/3 of blood).
+- **The master equation.** $Q = \\Delta P / R$; for the whole circuit, $MAP \\approx CO \\times TPR$.
+- **Radius rules resistance.** $R \\propto \\eta L / r^4$; arterioles are the resistance vessels and the largest pressure drop.
+- **Parallel beds.** Organs in parallel keep total resistance low; opening beds lowers TPR, closing them raises it.
+- **Slowest in capillaries.** $v = Q / A_{total}$: capillaries have the largest total area, so blood is slowest there.
+
+**Common traps**
+
+- **MAP as the plain average.** $MAP \\approx P_{dias} + \\frac{1}{3}(P_{sys} - P_{dias})$; 130/70 gives 90, not 100.
+- **Halving radius doubles R.** Resistance scales with $1/r^4$: halving the radius multiplies it by 16.
+- **Narrowest means slowest.** Capillaries are slow because their TOTAL area is largest, not because each one is narrow.
+- **Capillaries hold the blood.** Veins are the capacitance vessels, holding ~60–70% of blood volume at rest.
 
 <!-- yield:low -->
 - Low-yield extras: the arterial pressure-reservoir effect is named the Windkessel effect; metabolic override of sympathetic constriction in exercising muscle is named functional sympatholysis

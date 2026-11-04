@@ -54,18 +54,29 @@ An individual heterozygous at $n$ independently assorting loci produces $2^n$ ge
       type: 'text' as const,
       content: `### Worked Example — Trihybrid Cross Without a 64-Box Grid
 
-**Problem.** In a plant, purple flowers (P) are dominant to white (p), tall stems (T) to short (t), and smooth seeds (S) to rough (s). All three genes assort independently. Cross: $PpTtSs \\times PpTtss$. What fraction of offspring are expected to show **purple, short, smooth**?
+**Problem 1.** In a plant, purple flowers (P) are dominant to white (p), tall stems (T) to short (t), and smooth seeds (S) to rough (s). All three genes assort independently. Cross: $PpTtSs \\times PpTtss$.
 
-**Step 1 — Split into three monohybrid problems.**
+- **(a)** What fraction of offspring have purple flowers?
+- **(b)** What fraction are short?
+- **(c)** What fraction have smooth seeds?
+- **(d)** What fraction are purple, short **and** smooth?
 
-- Flower color: $Pp \\times Pp$ → $P(\\text{purple, i.e., } P\\_) = \\tfrac{3}{4}$
-- Height: $Tt \\times Tt$ → $P(\\text{short, } tt) = \\tfrac{1}{4}$
-- Seed coat: $Ss \\times ss$ → this is a test-cross pattern: $\\tfrac{1}{2}\\ Ss$ (smooth), $\\tfrac{1}{2}\\ ss$ (rough). So $P(\\text{smooth}) = \\tfrac{1}{2}$
+**(a) Flower color.** $Pp \\times Pp$ is a monohybrid cross: $P(\\text{purple, i.e., } P\\_) = \\tfrac{3}{4}$.
 
-**Step 2 — Product rule.**
-$P = \\frac{3}{4} \\times \\frac{1}{4} \\times \\frac{1}{2} = \\frac{3}{32}$
+**(b) Height.** $Tt \\times Tt$ gives $P(\\text{short, } tt) = \\tfrac{1}{4}$.
 
-**Why this matters on the MCAT.** A full trihybrid Punnett square has $8 \\times 8 = 64$ cells. The decompose-and-multiply strategy takes 20 seconds and generalizes to "at least one" questions via the complement rule. For example, the probability that an offspring shows at least one recessive phenotype is $1 - P(\\text{dominant for all three}) = 1 - \\left(\\tfrac{3}{4} \\times \\tfrac{3}{4} \\times \\tfrac{1}{2}\\right) = 1 - \\tfrac{9}{32} = \\tfrac{23}{32}$.`
+**(c) Seed coat.** $Ss \\times ss$ is a test-cross pattern: $\\tfrac{1}{2}\\ Ss$ (smooth), $\\tfrac{1}{2}\\ ss$ (rough). So $P(\\text{smooth}) = \\tfrac{1}{2}$.
+
+**(d) Product rule.** The genes are independent, so multiply (a), (b) and (c): $P = \\frac{3}{4} \\times \\frac{1}{4} \\times \\frac{1}{2} = \\frac{3}{32}$. A full trihybrid Punnett square has $8 \\times 8 = 64$ cells; decompose-and-multiply takes 20 seconds.
+
+**Problem 2.** Use the same cross, $PpTtSs \\times PpTtss$, with complete dominance at all three independently assorting genes.
+
+- **(a)** What fraction of offspring are dominant for all three traits (purple, tall, smooth)?
+- **(b)** What fraction show at least one recessive phenotype?
+
+**(a) All three dominant.** Multiply the single-gene chances: $\\tfrac{3}{4} \\times \\tfrac{3}{4} \\times \\tfrac{1}{2} = \\tfrac{9}{32}$.
+
+**(b) Complement rule.** "At least one recessive" is every outcome except "dominant for all three", so with $\\tfrac{9}{32}$ from (a): $1 - P(\\text{dominant for all three}) = 1 - \\tfrac{9}{32} = \\tfrac{23}{32}$. The complement turns any "at least one" question into one subtraction.`
     },
     {
       id: 'men1-quiz1',
@@ -116,11 +127,17 @@ $P = \\frac{3}{4} \\times \\frac{1}{4} \\times \\frac{1}{2} = \\frac{3}{32}$
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Segregation = homologs separate (anaphase I); Independent Assortment = random metaphase I orientation of different pairs
-- Monohybrid: 3:1 phenotype, 1:2:1 genotype. Dihybrid F2: 9:3:3:1 — only with independence and complete dominance
-- Test cross ($\\times$ aa) reads out the unknown parent's gametes: all dominant → AA; 1:1 → Aa
-- Product rule for AND, sum rule for OR, complement for "at least one"
-- Heterozygous at $n$ independent loci → $2^n$ gamete classes; only heterozygous loci count`
+- **Two laws, two meiosis events.** Segregation is homologs separating in anaphase I; assortment is random metaphase I orientation.
+- **Canonical ratios.** A monohybrid cross gives $3:1$ phenotypes and $1:2:1$ genotypes; a dihybrid F2 gives $9:3:3:1$.
+- **Test cross reads gametes.** Cross the unknown to aa: all dominant offspring means AA; a $1:1$ split means Aa.
+- **Decompose and multiply.** Split a cross into single genes; multiply for AND, add for OR, use the complement for "at least one".
+
+**Common traps**
+
+- **Counting homozygous loci.** Only heterozygous loci double the gamete types: AaBbCCDd makes $2^3 = 8$, not 16.
+- **Assuming 9:3:3:1.** It needs a dihybrid F2 with independence and complete dominance; $AaBb \\times aabb$ gives $1/4$ double dominant.
+- **Adding for "at least one".** For three children of $Aa \\times Aa$, adding $1/4$ three times ($3/4$) double-counts; use $1 - (3/4)^3 = 37/64$.
+- **Anaphase II as segregation.** Sister chromatids part in anaphase II; alleles segregate when homologs part in anaphase I.`
     }
   ]
 };

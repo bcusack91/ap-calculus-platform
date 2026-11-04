@@ -60,15 +60,29 @@ Serum calcium is tightly defended (nerve and muscle excitability depend on it):
       type: 'text' as const,
       content: `### Worked Example — A Growth-Plate and Calcium Two-Parter
 
-**Passage-style problem.** A 14-year-old gymnast fractures her distal radius through the epiphyseal plate. Two findings from her workup: (1) radiographs confirm the fracture line runs through cartilage, not mineralized bone; (2) routine labs drawn later show mildly LOW serum calcium after she adopts a dairy-free diet with little sun exposure.
+**Problem 1.** A 14-year-old gymnast fractures her distal radius through the epiphyseal plate. Radiographs confirm the fracture line runs through cartilage, not mineralized bone.
 
-**Question 1 — Why is the epiphyseal plate cartilage rather than bone, and what does the injury threaten?** Long bones form by endochondral ossification: the plate is retained hyaline cartilage where chondrocytes proliferate (epiphyseal side) while older cartilage is replaced by bone (diaphyseal side) — this is how the radius lengthens. A fracture through the plate can disturb that proliferative zone and cause the injured radius to stop lengthening prematurely relative to the other arm.
+- **(a)** Which ossification route builds the radius?
+- **(b)** Why is the epiphyseal plate cartilage rather than bone?
+- **(c)** What does a fracture through the plate threaten?
 
-**Question 2 — Predict the hormonal response to her low serum calcium.** Falling Ca is sensed by the parathyroid glands → PTH secretion rises. PTH (a) drives net bone resorption via osteoclast activation, (b) increases renal calcium reabsorption while promoting phosphate excretion, and (c) stimulates renal activation of vitamin D, boosting intestinal calcium absorption. Serum calcium is pulled back toward normal — partly at the skeleton's expense.
+**(a) Ossification route.** Long bones such as the radius form by endochondral ossification: a hyaline cartilage model is progressively replaced by bone.
 
-**Question 3 — Why does poor sun exposure make the problem worse?** Vitamin D synthesis begins in skin (UV-dependent) before liver and kidney hydroxylations. With little substrate, even high PTH cannot fully raise calcitriol, so intestinal absorption stays low and the burden shifts further onto bone resorption — in a growing athlete, exactly the wrong trade.
+**(b) Why cartilage.** The plate is retained hyaline cartilage where chondrocytes proliferate (epiphyseal side) while older cartilage is replaced by bone (diaphyseal side). This is how the radius lengthens.
 
-**Question 4 — If a drug mimicking calcitonin were given, what direction would each lab move?** Calcitonin inhibits osteoclasts: serum calcium would fall (or resist rising), and markers of bone resorption would decrease. Direction is the testable point: PTH raises serum Ca; calcitonin tones it down.`
+**(c) What is at risk.** A fracture through the plate can disturb that proliferative zone and cause the injured radius to stop lengthening prematurely relative to the other arm.
+
+**Problem 2.** Routine labs drawn later show the same gymnast's serum calcium is mildly LOW after she adopts a dairy-free diet with little sun exposure.
+
+- **(a)** Which hormone rises in response, and through which three actions does it raise serum calcium?
+- **(b)** Why does poor sun exposure make the problem worse?
+- **(c)** If a drug mimicking calcitonin were given, which way would serum calcium and bone-resorption markers move?
+
+**(a) The PTH response.** The parathyroids sense falling Ca and secrete more PTH. PTH drives osteoclast bone resorption, raises renal Ca reabsorption while promoting phosphate excretion, and activates vitamin D in the kidney for gut absorption. Serum calcium recovers, partly at the skeleton's expense.
+
+**(b) The vitamin D bottleneck.** Vitamin D synthesis begins in skin (UV-dependent) before liver and kidney hydroxylations. With little substrate, even high PTH cannot fully raise calcitriol, so intestinal absorption stays low and the burden shifts further onto bone resorption — in a growing athlete, exactly the wrong trade.
+
+**(c) Calcitonin's direction.** Calcitonin inhibits osteoclasts: serum calcium would fall (or resist rising), and markers of bone resorption would decrease. Direction is the testable point: PTH raises serum Ca; calcitonin tones it down.`
     },
     {
       id: 'msk1-quiz1',
@@ -119,12 +133,17 @@ Serum calcium is tightly defended (nerve and muscle excitability depend on it):
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Compact bone = osteons: lamellae around a Haversian canal, osteocytes in lacunae connected by canaliculi; spongy bone = trabeculae with marrow, no osteons
-- Matrix = collagen (tension) + hydroxyapatite (compression); osteoblasts build, osteoclasts resorb, osteocytes maintain — remodeling responds to mechanical load
-- Endochondral ossification (cartilage model → bone) makes long bones; growth in length occurs at the epiphyseal plate until closure; intramembranous ossification (no cartilage) makes flat bones
-- Cartilage is avascular and heals slowly; hyaline (joints, growth plates), elastic (ear, epiglottis), fibrocartilage (discs, menisci)
-- PTH RAISES serum calcium: osteoclast resorption + renal Ca reabsorption + vitamin D activation → gut absorption; calcitonin "tones down" calcium by inhibiting osteoclasts
-- Osteoporosis = chronic net resorption (age, estrogen loss, PTH excess) → thinned trabeculae and fragility fractures`
+- **Osteon architecture.** Compact bone is osteons: lamellae round a Haversian canal, osteocytes in lacunae linked by canaliculi.
+- **Build, maintain, resorb.** Osteoblasts build, osteoclasts resorb; age and estrogen loss tip remodeling toward resorption (osteoporosis).
+- **Two ossification routes.** Endochondral replaces a cartilage model (long bones, epiphyseal plate); intramembranous starts from mesenchyme (flat bones).
+- **PTH raises calcium.** PTH drives osteoclast bone resorption, renal Ca reabsorption and vitamin D activation for gut absorption.
+
+**Common traps**
+
+- **Lacunae vs. canaliculi.** Osteocytes sit in lacunae; canaliculi are the channels linking them, so do not swap the terms.
+- **PTH depositing bone.** Building bone would lower serum calcium; PTH's net effect on bone is resorption, which releases Ca.
+- **Calcitonin's direction.** Calcitonin LOWERS serum calcium by inhibiting osteoclasts; it is minor in adults, but its direction is tested.
+- **Cartilage healing fast.** Cartilage is avascular and fed by diffusion, so it heals slowly; vascular bone heals faster.`
     }
   ]
 };

@@ -50,19 +50,29 @@ Replication is extraordinarily accurate because it stacks three filters:
       type: 'text' as const,
       content: `### Worked Example — Telomeres and Immortal Cell Lines
 
-**Passage-style problem.** Researchers culture human fibroblasts: normal cells (line N), cells engineered to express telomerase constitutively (line T), and cells from a patient tumor (line C). Mean telomere length and population doublings are tracked.
+**Problem 1.** Researchers culture normal human fibroblasts (line N) and track telomere length. Telomeres shorten ~50-100 bp per division, and growth arrests permanently after ~60 doublings, though the cells stay alive.
 
-- **Line N**: telomeres shorten ~50-100 bp per division; growth arrests permanently after ~60 doublings, though cells stay alive.
-- **Line T**: telomere length is stable; the cells divide indefinitely.
-- **Line C**: telomeres are SHORT but stable; the cells divide indefinitely.
+- **(a)** Why do line N telomeres shorten by a roughly fixed amount each division?
+- **(b)** What is the arrested state of line N?
+- **(c)** What triggers the arrest?
 
-**Question 1 — Why do line N telomeres shorten a fixed amount per division?** Each round of lagging-strand synthesis fails to replace the terminal RNA primer's position — the end-replication problem — and end-processing trims further. Without telomerase, the loss is cumulative and roughly constant per division, making telomere length a "mitotic clock."
+**(a) The end-replication problem.** Each round of lagging-strand synthesis fails to replace the terminal RNA primer's position, and end-processing trims further. Without telomerase the loss is cumulative and roughly constant, making telomere length a "mitotic clock."
 
-**Question 2 — What is the arrested state of line N, and what triggers it?** Replicative **senescence** (Hayflick limit): critically short telomeres lose their protective cap, are recognized as double-strand breaks, and fire a p53-mediated checkpoint arrest. The cells are metabolically alive but permanently out of the cycle — distinguish senescence (arrest) from apoptosis (death).
+**(b) Replicative senescence.** This is the Hayflick limit: the cells are metabolically alive but permanently out of the cycle. Distinguish senescence (arrest) from apoptosis (death).
 
-**Question 3 — Reconcile line C: short telomeres, yet immortal.** The tumor reactivated telomerase LATE, after substantial shortening had already occurred; telomerase needs only to MAINTAIN length, not restore it. Short-but-stable is the signature of telomerase reactivation during tumor progression — most human cancers do this. It also explains why telomerase inhibitors are explored as therapy, and why line T (activated while telomeres were long) shows long stable telomeres instead.
+**(c) Uncapped ends.** Critically short telomeres lose their protective cap, are recognized as double-strand breaks, and fire a p53-mediated checkpoint arrest.
 
-**Data-reading habit**: on telomere plots, the SLOPE tells you telomerase status; the INTERCEPT tells you the history before measurement began.`
+**Problem 2.** Fibroblasts engineered to express telomerase constitutively (line T) keep long, stable telomeres. Cells from a patient tumor (line C) have telomeres that are SHORT but stable. Both lines divide indefinitely.
+
+- **(a)** How can line C be immortal with short telomeres?
+- **(b)** Why does line T show long, stable telomeres instead?
+- **(c)** On telomere-length plots, what do the slopes and intercepts of lines T and C tell you?
+
+**(a) Late reactivation.** The tumor reactivated telomerase LATE, after substantial shortening; telomerase needs only to MAINTAIN length, not restore it. Short-but-stable is the signature of reactivation during tumor progression, which most human cancers show, and it is why telomerase inhibitors are explored as therapy.
+
+**(b) Early activation.** Line T's telomerase was switched on while its telomeres were still long, so it holds them at that length.
+
+**(c) Slope vs intercept.** The SLOPE gives telomerase status: both lines are flat, so telomerase is on in each. The INTERCEPT records the history before measurement: line C's low level shows telomerase came on late, line T's high level that it came on early.`
     },
     {
       id: 'dnar3-quiz1',
@@ -113,13 +123,17 @@ Replication is extraordinarily accurate because it stacks three filters:
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- Fidelity stacks three filters: base-pair geometry, 3' to 5' proofreading exonuclease (mutator strains when lost), and post-fork mismatch repair with strand discrimination (unmethylated GATC in E. coli; nicks in eukaryotes; inherited loss = Lynch syndrome, hereditary colon cancer)
-- Directions matter: proofreading = 3' to 5'; primer removal = 5' to 3'
-- End-replication problem: the last lagging-strand primer's position cannot be filled; telomeres (repeat buffers) absorb the loss
-- Telomerase = reverse transcriptase with internal RNA template, extending the 3' overhang; active in germ/stem cells and most cancers; its absence in somatic cells sets the Hayflick limit via p53-triggered senescence (arrest, not death)
-- Telomere data: slope = telomerase status; short-but-stable = late reactivation in a tumor
-- Match lesion to pathway: uracil/oxidized base = BER; bulky UV dimer = NER (xeroderma pigmentosum); replication mismatch = MMR; double-strand break = HR (faithful, sister template, BRCA) or NHEJ (error-prone, any phase)
-- Damage arrests the cycle through p53 checkpoints — repair and cell-cycle control are one system
+- **Three fidelity filters.** Base-pair geometry, 3' to 5' proofreading, then mismatch repair of the new (unmethylated GATC) strand.
+- **End-replication problem.** The last lagging-strand primer's gap cannot be filled, so telomere buffers shorten each division.
+- **Telomerase.** A reverse transcriptase with its own RNA template extends the 3' overhang; on in germ, stem and cancer cells.
+- **Lesion to pathway.** BER small base damage, NER UV dimers (XP), MMR copying errors (Lynch), HR (BRCA) or NHEJ for breaks.
+
+**Common traps**
+
+- **Mixing exonuclease directions.** Proofreading removes bases 3' to 5'; primer removal runs 5' to 3'.
+- **Senescence as death.** Short telomeres trigger a p53 arrest: senescent cells stay alive but stop dividing, unlike apoptosis.
+- **Short telomeres, no telomerase.** Short but stable telomeres mean telomerase was reactivated late; the slope shows its status.
+- **NHEJ as faithful repair.** NHEJ joins ends directly and leaves small indels; HR copies the sister chromatid faithfully in S/G2.
 
 <!-- yield:low -->
 - Low-yield extras: the error-rate arithmetic (about 1 in $10^5$ from base selection, ~100-fold from proofreading, ~100-1000-fold from MMR, ending near 1 in $10^9$-$10^{10}$); MMR protein names (MutS, MutL, MutH; human MSH/MLH); Lynch syndrome's other name (HNPCC) and its microsatellite instability; the TTAGGG repeat and its shelterin cap

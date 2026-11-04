@@ -67,18 +67,44 @@ Muscles only PULL. Movement therefore requires **antagonistic pairs** across joi
       type: 'text' as const,
       content: `### Worked Example — Sprinter vs. Marathoner Biopsies
 
-**Passage-style problem.** Muscle biopsies from the gastrocnemius of an elite sprinter (Athlete S) and an elite marathoner (Athlete M) are stained and tested:
+**Problem 1.** Gastrocnemius biopsies: sprinter S has pale, large, mitochondria-poor, glycogen- and creatine-kinase-rich fibers that fatigue within a minute; marathoner M has deep-red, small, mitochondria- and capillary-dense fibers that hold tension for minutes.
 
-- Athlete S: fibers are pale, large-diameter, few mitochondria, high glycogen and creatine kinase activity; isolated fibers reach peak tension quickly and fatigue within a minute of repeated tetani
-- Athlete M: fibers are deep red, smaller-diameter, dense mitochondria and capillaries; fibers reach peak tension more slowly but hold near-constant tension for many minutes
+- **(a)** Which fiber type dominates S's muscle, and why are the fibers pale with high creatine kinase activity?
+- **(b)** Which fiber type dominates M's muscle, and why are the fibers red?
+- **(c)** Both athletes perform a 10-second maximal sprint. Which energy systems supply most of the ATP, regardless of fiber type?
 
-**Question 1 — Classify each fiber population.** Athlete S is dominated by type II fast-glycolytic fibers (white: little myoglobin; glycolytic machinery and creatine phosphate support brief maximal power). Athlete M is dominated by type I slow-oxidative fibers (red: myoglobin-rich, mitochondria-dense, fatigue-resistant).
+**(a) Athlete S.** Type II fast-glycolytic fibers: fast to peak tension and quick to fatigue. They are white because they hold little myoglobin, and glycolytic machinery and creatine phosphate support brief maximal power, so creatine kinase activity is high.
 
-**Question 2 — Both athletes perform a 10-second maximal sprint. Which energy systems supply most of the ATP, regardless of fiber type?** Stored ATP plus creatine phosphate, with anaerobic glycolysis ramping in — 10 seconds is too short for oxidative phosphorylation to dominate. This is why creatine kinase activity is high in sprint-adapted fibers.
+**(b) Athlete M.** Type I slow-oxidative fibers ("slow red ox"): red because they are myoglobin-rich, and mitochondria-dense and fatigue-resistant, though slower to reach peak tension.
 
-**Question 3 — After the marathoner finishes a race, oxygen consumption stays elevated for hours. List the debts being repaid.** Reloading myoglobin/hemoglobin oxygen stores, resynthesizing ATP and creatine phosphate, converting accumulated lactate back to glucose (hepatic Cori cycle), and supporting still-elevated temperature, ventilation, and heart rate — collectively EPOC.
+**(c) Sprint energy.** Stored ATP plus creatine phosphate, with anaerobic glycolysis ramping in. Ten seconds is too short for oxidative phosphorylation to dominate, whichever fiber type the athlete has.
 
-**Question 4 — During a laboratory test, Athlete M's fiber is stimulated at increasing frequencies: 1 Hz gives discrete twitches, 10 Hz gives larger, partially fused responses, 50 Hz gives one smooth plateau of maximal force. Explain.** At low frequency, calcium is fully resequestered between stimuli (isolated twitches). At intermediate frequency, each stimulus arrives before relaxation completes, so cytosolic calcium and tension stack — summation. At high frequency, calcium stays saturating and tension fuses into tetanus. The same experiment on cardiac muscle would fail: its long refractory period prevents summation, protecting the pumping cycle.`
+**Problem 2.** In the lab, one of Athlete M's fibers is stimulated at rising frequencies: 1 Hz gives discrete twitches, 10 Hz gives larger, partially fused responses, and 50 Hz gives one smooth plateau of maximal force.
+
+- **(a)** Why does 1 Hz give separate twitches?
+- **(b)** Why do the responses stack at 10 Hz?
+- **(c)** What happens at 50 Hz?
+- **(d)** Would the same experiment work on cardiac muscle?
+
+**(a) Low frequency.** Calcium is fully resequestered between stimuli, so each twitch is isolated.
+
+**(b) Intermediate frequency.** Each stimulus arrives before relaxation completes, so cytosolic calcium and tension stack: summation.
+
+**(c) High frequency.** Calcium stays saturating and tension fuses into tetanus.
+
+**(d) Cardiac muscle.** No. Its long refractory period prevents summation, protecting the pumping cycle.
+
+**Problem 3.** After Athlete M finishes a race, oxygen consumption stays elevated for hours.
+
+- **(a)** What is this elevated oxygen consumption called?
+- **(b)** Which oxygen and energy stores are being reloaded?
+- **(c)** What happens to the accumulated lactate, and what else keeps oxygen use high?
+
+**(a) The name.** Excess post-exercise oxygen consumption (EPOC), the oxygen debt being repaid.
+
+**(b) Stores reloaded.** Myoglobin and hemoglobin oxygen stores are refilled, and ATP and creatine phosphate are resynthesized.
+
+**(c) Lactate and the rest.** Most lactate is oxidized as fuel; some is converted back to glucose in the liver (Cori cycle). Still-elevated temperature, ventilation, and heart rate also cost oxygen.`
     },
     {
       id: 'msk3-quiz1',
@@ -129,15 +155,22 @@ Muscles only PULL. Movement therefore requires **antagonistic pairs** across joi
       type: 'text' as const,
       content: `### Key Takeaways — Part 3
 
-- ATP timeline: stored ATP (seconds) → creatine phosphate (~10-15 s) → anaerobic glycolysis (to ~1-2 min, lactate) → oxidative phosphorylation (endurance); EPOC repays myoglobin oxygen, phosphagen stores, and lactate processing (Cori cycle)
-- Type I = slow, red, oxidative, myoglobin/mitochondria-rich, fatigue-resistant (posture, marathons); type II = fast, white, glycolytic, quickly fatigued (sprints)
-- Force is graded by motor-unit recruitment and stimulation frequency: twitch → summation → tetanus; small motor units = fine control
-- Length-tension: maximal force at intermediate length where actin-myosin overlap maximizes cross-bridges; weak when overstretched or over-shortened
-- Skeletal (striated, voluntary, multinucleated, no cell coupling) vs. cardiac (striated, involuntary, intercalated discs/gap junctions, pacemaker, calcium-induced calcium release, cannot tetanize) vs. smooth (non-striated, involuntary, calmodulin instead of troponin)
-- Muscles only pull: antagonistic flexor-extensor pairs across joints move bones as levers, origin stationary, insertion moving
+- **ATP timeline.** Stored ATP lasts seconds, creatine phosphate ~10-15 s, glycolysis to ~1-2 min, then oxidative phosphorylation.
+- **Slow red ox.** Type I fibers are slow, red, oxidative and fatigue-resistant; type II are fast, white, glycolytic and tire quickly.
+- **Grading force.** Recruit more motor units or raise frequency (twitch → summation → tetanus); small motor units give fine control.
+- **Three muscle tissues.** Skeletal is striated and voluntary; cardiac is striated with gap junctions; smooth lacks striations and troponin.
+
+**Common traps**
+
+- **Oxidative fuel for a sprint.** A 10 s sprint runs on stored ATP and creatine phosphate; oxidative phosphorylation is too slow to ramp up.
+- **Red means glycolytic.** Myoglobin makes a fiber red, and red fibers are oxidative; the white fibers are the glycolytic ones.
+- **Tetanizing the heart.** Cardiac muscle's long plateau keeps each cell refractory, so it cannot summate or tetanize.
+- **Overstretch as collision.** Overstretched muscle is weak from too little overlap; filament collision weakens the over-shortened end.
 
 <!-- yield:low -->
-- Low-yield extras: an intermediate fast-oxidative fiber type (IIa) sits between the two poles
+**Low-yield extras**
+
+- An intermediate fast-oxidative fiber type (IIa) sits between the two poles
 <!-- /yield -->`
     }
   ]

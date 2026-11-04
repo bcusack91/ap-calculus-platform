@@ -51,19 +51,30 @@ export const mcatDnaReplicationPart4Data = {
       type: 'text' as const,
       content: `### Worked Example — An Antiviral Passage, Fully Dissected
 
-**Passage-style problem.** Acyclovir is a guanosine analog whose "sugar" is an open chain rather than a ring, with no 3'-OH. It is inert until phosphorylated; the FIRST phosphorylation can be performed efficiently only by herpesvirus thymidine kinase (TK), after which host kinases finish making the triphosphate. Resistant herpes isolates from immunocompromised patients frequently carry loss-of-function mutations in viral TK.
+**Problem 1.** Acyclovir is a guanosine analog whose "sugar" is an open chain with no 3'-OH. It is inert until phosphorylated; only herpesvirus thymidine kinase (TK) efficiently adds the first phosphate, and host kinases then finish the triphosphate.
 
-**Question 1 — Why does acyclovir stop viral DNA synthesis mechanistically?** Once the triphosphate is incorporated by the viral DNA polymerase opposite a template C, the new 3' end has no hydroxyl. Polymerization chemistry requires that 3'-OH to attack the next dNTP — synthesis terminates absolutely. This is chain termination, identical in principle to a dideoxynucleotide in Sanger sequencing.
+- **(a)** Why does acyclovir stop viral DNA synthesis?
+- **(b)** Why does the drug act selectively in infected cells?
+- **(c)** A passage shows acyclovir monophosphate accumulating but no triphosphate. Where is the block?
 
-**Question 2 — Explain the drug's selectivity for infected cells.** The prodrug design puts the selective step FIRST: uninfected cells lack viral TK, so acyclovir is never activated in them; infected cells convert it to the active triphosphate, which additionally inhibits and is preferentially incorporated by the VIRAL polymerase. Two multiplied selectivity filters (activation + target preference) give a wide therapeutic index — contrast with antimetabolite chemotherapy, whose only filter is division rate.
+**(a) Chain termination.** The viral DNA polymerase incorporates the triphosphate opposite a template C, and the new 3' end has no hydroxyl to attack the next dNTP, so synthesis terminates absolutely. The principle is identical to a dideoxynucleotide in Sanger sequencing.
 
-**Question 3 — Why do TK mutations cause resistance, and what does that predict about such strains?** No viral TK, no first phosphorylation, no active drug — resistance by FAILURE TO ACTIVATE, not by target alteration. Prediction: TK-negative strains remain sensitive to drugs that do not need TK activation, such as ones that hit the viral polymerase directly — resistance mechanisms are pathway-specific.
+**(b) Two selectivity filters.** Uninfected cells lack viral TK, so the prodrug is never activated in them. The active triphosphate also inhibits, and is preferentially incorporated by, the VIRAL polymerase. Activation plus target preference gives a wide therapeutic index; antimetabolites' only filter is division rate.
+
+**(c) The host kinase steps.** Monophosphate means viral TK did its job, so the block is at the HOST kinases. Always locate the failed step in the activation cascade before naming the mechanism; the MCAT loves handing you the intermediate that pinpoints it.
+
+**Problem 2.** Acyclovir-resistant herpes isolates from immunocompromised patients frequently carry loss-of-function mutations in viral TK, the enzyme that performs the drug's FIRST phosphorylation.
+
+- **(a)** Why do TK mutations cause resistance?
+- **(b)** Which drugs should still work against these strains?
+
+**(a) Failure to activate.** No viral TK, no first phosphorylation, no active drug: resistance by FAILURE TO ACTIVATE, not by target alteration.
+
+**(b) Drugs that skip TK.** TK-negative strains remain sensitive to drugs that need no TK activation, such as ones that hit the viral polymerase directly. Resistance mechanisms are pathway-specific.
 
 <!-- yield:low -->
 The standard example is foscarnet, a pyrophosphate analog that blocks the viral DNA polymerase without any activation step.
-<!-- /yield -->
-
-**Question 4 — Data twist.** If a passage shows acyclovir-monophosphate accumulating but no triphosphate, the block is at the HOST kinase steps, not viral TK. Always locate the failed step in the activation cascade before naming the mechanism — the MCAT loves handing you the intermediate that pinpoints it.`
+<!-- /yield -->`
     },
     {
       id: 'dnar4-quiz1',
@@ -114,13 +125,17 @@ The standard example is foscarnet, a pyrophosphate analog that blocks the viral 
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Licensing (low CDK) and firing (high CDK) require opposite CDK states, so each origin fires once per cycle; re-replication is structurally forbidden
-- Scorecard: circular/one origin/fast (prokaryote) vs linear/many origins/slow with nucleosomes, telomeres, S-phase confinement (eukaryote)
-- Chain terminators = nucleoside analogs without a usable 3'-OH: acyclovir (viral TK activates — prodrug selectivity), AZT (HIV reverse transcriptase), and Sanger dideoxynucleotides share one mechanism
-- Topoisomerase poisons (fluoroquinolones for bacteria; anticancer drugs for human topoisomerases) freeze cleavage complexes into double-strand breaks — HR repairs them, and HR-deficient tumors are hypersensitive
-- Antimetabolites (methotrexate, 5-FU) starve S phase of dNTPs; selectivity is purely kinetic, so fast-renewing tissues explain the side-effect triad
-- Selectivity checklist for any drug passage: unique enzyme (viral TK, RT), unique target (gyrase), or unique kinetics (division rate)
-- Integration habits: locate the failed step in an activation cascade from the accumulating intermediate; identify a compound's direct target by which process shuts down FIRST
+- **Once-per-cycle licensing.** Helicases load at low CDK and fire at high CDK, which also blocks relicensing, so origins fire once.
+- **Chain terminators.** Acyclovir, AZT and Sanger dideoxynucleotides lack a usable 3'-OH, so the chain stops once they are added.
+- **Topoisomerase poisons.** They trap cleavage complexes, which become double-strand breaks; HR-deficient tumors are hypersensitive.
+- **Drug selectivity.** Good drugs exploit a viral enzyme, a bacterial-only target such as gyrase, or faster division.
+
+**Common traps**
+
+- **Antimetabolites target tumors.** Methotrexate and 5-FU starve every fast-dividing tissue, hence marrow, gut and hair side effects.
+- **TK-negative resists everything.** TK-mutant herpes fails to activate acyclovir but stays sensitive to direct polymerase blockers.
+- **Picking the last process to stop.** A compound's direct target is the process that shuts down FIRST; later declines are downstream.
+- **Telomeres in bacteria.** Circular bacterial chromosomes have no ends, so only eukaryotes need telomeres and telomerase.
 
 <!-- yield:low -->
 - Low-yield extras: ATR (stalled forks) and ATM (double-strand breaks) are the checkpoint sensor kinases; fork speeds are roughly 1000 nt/s in bacteria vs 50 nt/s in eukaryotes; eukaryotic polymerases are alpha-primase (start), delta (lagging), epsilon (leading); etoposide (topo II), camptothecin analogs (topo I) and cisplatin (guanine crosslinks) are the named chemotherapy examples; foscarnet blocks the viral polymerase directly, so TK-negative herpes stays sensitive to it

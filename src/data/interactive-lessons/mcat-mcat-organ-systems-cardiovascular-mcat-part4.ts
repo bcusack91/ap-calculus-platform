@@ -55,17 +55,67 @@ where $C_a$ and $C_v$ are arterial and venous O$_2$ contents. Rearranged, this m
 - **Reflex second-guess:** after any primary change, ask what the baroreflex does next — many wrong answers describe the un-compensated state when the question asks about the compensated one (or vice versa).`
     },
     {
+      id: 'cvs4-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — MCAT-Style Passages
+
+**Problem 1.** A passage reports that a stenotic aortic valve's effective orifice radius is 60% of normal.
+
+- **(a)** By roughly what factor does the valve's resistance to ejection rise?
+- **(b)** What chronic change does the left ventricle undergo?
+- **(c)** What are the long-term costs of that change?
+- **(d)** How would volume overload (regurgitation) remodel the ventricle instead?
+
+**(a) Resistance.** $R \\propto 1/r^4 \\Rightarrow R_{new}/R_{old} = 1/(0.6)^4 = 1/0.1296 \\approx 7.7$, nearly **8× the resistance**.
+
+**(b) Concentric hypertrophy.** Against nearly 8× the resistance from (a), the LV must generate much higher systolic pressure to maintain flow. Chronic pressure overload causes **concentric hypertrophy**: the wall thickens, the chamber does not dilate.
+
+**(c) Long-term costs.** Concentric hypertrophy from (b) leaves a thick, stiff wall that impairs filling (diastolic dysfunction) and raises O$_2$ demand.
+
+**(d) Contrast.** Volume overload (regurgitation) causes eccentric hypertrophy: the chamber dilates.
+
+**Problem 2.** A passage table shows, 10 minutes after moderate hemorrhage: HR 115 (was 72), MAP 88 (was 92), TPR elevated. A student concludes "the hemorrhage was mild because pressure is nearly normal."
+
+- **(a)** What does the near-normal MAP actually show?
+- **(b)** Which numbers reveal the severity?
+- **(c)** What happens if the losses continue?
+- **(d)** What general passage skill does this illustrate?
+
+**(a) The reflex is working.** Near-normal MAP does NOT mean minimal blood loss; it means the **baroreflex is working**. Tachycardia and high TPR are the fingerprints of active compensation.
+
+**(b) Severity clues.** The compensation markers themselves: HR up 60% and vasoconstriction. Pressure is the DEFENDED variable, so it is the last number to move.
+
+**(c) Decompensation.** If losses continue, compensation fails and MAP drops precipitously (decompensated shock).
+
+**(d) Passage skill.** In regulated systems, judge the disturbance by the effort of the regulator, not by the regulated variable.
+
+**Problem 3.** In a trial, propranolol (a beta-adrenergic antagonist) is given before treadmill exercise and compared with placebo.
+
+- **(a)** How does exercise normally raise HR and contractility?
+- **(b)** What happens to exercise HR and contractility on propranolol?
+- **(c)** Does cardiac output still rise?
+- **(d)** What happens to resting heart rate, and why?
+
+**(a) Beta-1 drive.** Exercise normally raises HR and contractility through sympathetic NE/epinephrine acting on **beta-1** receptors.
+
+**(b) Blunted.** Blocking beta-1 blunts both: exercise **HR and contractility rise far less**.
+
+**(c) CO rises less.** $CO = HR \\times SV$: the ceiling on both factors caps CO, and exercise capacity falls. Frank–Starling (preload from muscle-pump venous return) still adds some SV, so CO rises, just much less.
+
+**(d) Resting bradycardia.** Propranolol does not block the vagus. Resting bradycardia deepens because sympathetic support is gone while vagal tone remains.`
+    },
+    {
       id: 'cvs4-quiz1',
       type: 'multiple-choice' as const,
       content: `**Integration & Pathology** 🎯`,
       exercise: {
         questions: [
           {
-            question: `A researcher measures a subject's O2 consumption as 250 mL/min, arterial O2 content as 200 mL O2 per liter of blood, and venous O2 content as 150 mL O2 per liter. The subject's cardiac output is:`,
+            question: `A researcher measures a subject's O$_2$ consumption as 250 mL/min, arterial O$_2$ content as 200 mL O$_2$ per liter of blood, and venous O$_2$ content as 150 mL O$_2$ per liter. The subject's cardiac output is:`,
             options: [`2.5 L/min`, `10 L/min`, `5 L/min`, `7.5 L/min`],
             correctAnswer: 2,
             yield: 'MEDIUM',
-            explanation: `Fick principle: $CO = \\frac{\\text{O}_2 \\text{ consumption}}{C_a - C_v} = \\frac{250}{200 - 150} = \\frac{250}{50} = 5$ L/min. Each liter of blood drops off 50 mL of O2, so delivering 250 mL/min requires 5 L/min of flow — a normal resting output.`
+            explanation: `Fick principle: $CO = \\frac{\\text{O}_2 \\text{ consumption}}{C_a - C_v} = \\frac{250}{200 - 150} = \\frac{250}{50} = 5$ L/min. Each liter of blood drops off 50 mL of O$_2$, so delivering 250 mL/min requires 5 L/min of flow — a normal resting output.`
           },
           {
             question: `On a left-ventricular pressure–volume loop, a drug that purely increases contractility (no change in preload or afterload) would:`,
@@ -85,59 +135,21 @@ where $C_a$ and $C_v$ are arterial and venous O$_2$ contents. Rearranged, this m
       }
     },
     {
-      id: 'cvs4-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — MCAT-Style Passages
-
-<details>
-<summary><b>Example 1: Aortic stenosis, quantitatively</b></summary>
-
-**Question:** A passage reports that a stenotic aortic valve's effective orifice radius is 60% of normal. By roughly what factor does the valve's resistance to ejection rise, and what chronic ventricular change follows?
-
-**Solution:**
-1. $R \\propto 1/r^4 \\Rightarrow R_{new}/R_{old} = 1/(0.6)^4 = 1/0.1296 \\approx 7.7$ — nearly **8× the resistance**.
-2. The LV must generate much higher systolic pressure to maintain flow → chronic pressure overload → **concentric hypertrophy** (wall thickens, chamber not dilated).
-3. Long-term: thick stiff wall impairs filling (diastolic dysfunction) and raises O2 demand. ✓
-
-**Contrast:** volume overload (regurgitation) → eccentric hypertrophy (chamber dilates).
-</details>
-
-<details>
-<summary><b>Example 2: A beta-blocker experiment</b></summary>
-
-**Question:** In a trial, propranolol (beta-adrenergic antagonist) is given before treadmill exercise. Compared with placebo, predict exercise HR, contractility, and CO.
-
-**Solution:**
-1. Exercise normally raises HR and contractility via sympathetic NE/epinephrine on **beta-1** receptors.
-2. Blocking beta-1 blunts both: exercise **HR and contractility rise far less**.
-3. $CO = HR \\times SV$: the ceiling on both factors caps CO; exercise capacity falls. Frank–Starling (preload from muscle-pump venous return) still contributes some SV increase — CO rises, just much less. ✓
-
-**Distractor alert:** propranolol does not block the vagus — resting bradycardia deepens because sympathetic support is gone while vagal tone remains.
-</details>
-
-<details>
-<summary><b>Example 3: Compensated vs. decompensated hemorrhage data table</b></summary>
-
-**Question:** A passage table shows, 10 minutes after moderate hemorrhage: HR 115 (was 72), MAP 88 (was 92), TPR elevated. A student concludes "the hemorrhage was mild because pressure is nearly normal." Critique.
-
-**Solution:**
-1. Near-normal MAP does NOT mean minimal blood loss — it means the **baroreflex is working**: tachycardia and high TPR are the fingerprints of active compensation.
-2. The proper severity clues are the compensation markers themselves (HR ↑ 60%, vasoconstriction) — pressure is the DEFENDED variable, so it is the last number to move.
-3. If losses continue, compensation fails: MAP then drops precipitously (decompensated shock). ✓
-
-**Passage skill:** in regulated systems, judge the disturbance by the effort of the regulator, not by the regulated variable.
-</details>`
-    },
-    {
       id: 'cvs4-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- PV loop: width = SV, counterclockwise; preload moves the right edge, afterload the top, contractility the left (ESV).
-- Valve lesions are flow-physics problems: find where blood backs up and which chamber faces pressure vs. volume overload.
-- Shock taxonomy: hypovolemic and cardiogenic = low CO with reflex high TPR; distributive (septic) = low TPR with warm skin and often high CO.
-- Fick: $CO = \\text{O}_2 \\text{ consumption}/(C_a - C_v)$ — a recurring experimental design.
-- In any perturbation question: classify the change (preload/afterload/contractility/HR/TPR), propagate through the two master equations, then apply the baroreflex.`
+- **Reading a PV loop.** Width = SV, counterclockwise; preload moves the right edge, afterload the top, contractility the left.
+- **Valves as flow physics.** Find where blood backs up and which chamber faces pressure or volume overload.
+- **Fick principle.** $CO = \\text{O}_2 \\text{ consumption}/(C_a - C_v)$ measures output from O$_2$ uptake.
+- **Perturbation recipe.** Classify the change, propagate through $CO = HR \\times SV$ and $MAP = CO \\times TPR$, then apply the baroreflex.
+
+**Common traps**
+
+- **Every shock has low CO.** Septic shock has low TPR, warm skin and often HIGH output; hypovolemic and cardiogenic shock run low CO with high TPR.
+- **Normal MAP means mild loss.** Pressure is the defended variable; tachycardia and high TPR show how hard the reflex is working.
+- **Mixing up hypertrophy.** Pressure overload (stenosis) is concentric; volume overload (regurgitation) is eccentric, with a dilated chamber.
+- **Contractility moves the right edge.** More contractility lowers ESV and shifts the LEFT edge; preload moves the right edge.`
     }
   ]
 };

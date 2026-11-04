@@ -39,7 +39,7 @@ Transcription and translation are coupled — ribosomes load onto mRNA while RNA
 
 - **Flagella:** rotary protein motors driven by the **proton-motive force** (not ATP directly); direction of rotation sets run-vs-tumble **chemotaxis**.
 - **Pili/fimbriae:** adhesion to host surfaces; the special **sex pilus** initiates conjugation.
-- **Endospores** (Bacillus, Clostridium): metabolically inert, dehydrated survival capsules — resistant to heat, desiccation, radiation; boiling does not reliably kill them, autoclaving (121 C, pressurized steam) does. A spore is a lifeboat, not a reproductive cell: one cell → one spore → one cell.
+- **Endospores** (Bacillus, Clostridium): metabolically inert, dehydrated survival capsules — resistant to heat, desiccation, radiation; boiling does not reliably kill them, autoclaving (121 °C, pressurized steam) does. A spore is a lifeboat, not a reproductive cell: one cell → one spore → one cell.
 
 <!-- yield:low -->
 - The spore core is packed with calcium dipicolinate (dipicolinic acid + calcium).
@@ -52,6 +52,50 @@ Cocci (spheres), bacilli (rods), and spiral forms (spirilla, spirochetes); divis
 <!-- yield:low -->
 Spirochetes corkscrew using internal axial filaments (endoflagella).
 <!-- /yield -->`
+    },
+    {
+      id: 'bac1-worked-examples',
+      type: 'text' as const,
+      content: `### Worked Examples — Structure Logic
+
+**Problem 1.** Lysozyme in tears meets three organisms: a gram-positive coccus, a gram-negative rod, and a Mycoplasma.
+
+- **(a)** How exposed is the gram-positive coccus's peptidoglycan to lysozyme?
+- **(b)** Can lysozyme reach the gram-negative rod's peptidoglycan?
+- **(c)** What can lysozyme cut in a Mycoplasma?
+- **(d)** How do the three rank in lysozyme sensitivity, and what rule does the ranking show?
+
+**(a) Gram-positive.** Its peptidoglycan is thick but EXPOSED at the surface; lysozyme digestion leaves an osmotically fragile protoplast that lyses in hypotonic tears.
+
+**(b) Gram-negative.** It has peptidoglycan, but the outer membrane shields it; lysozyme is largely blocked unless the outer membrane is first disrupted.
+
+**(c) Mycoplasma.** Nothing: it has no peptidoglycan at all, so it is intrinsically insensitive.
+
+**(d) Ranking and rule.** Gram-positive (most sensitive) > gram-negative > Mycoplasma (insensitive). The same access logic governs lysozyme and vancomycin: possessing a target is necessary but not sufficient — the agent must reach it.
+
+**Problem 2.** A drug collapses a bacterium's proton gradient without lowering cytoplasmic ATP (substrate-level phosphorylation keeps ATP normal).
+
+- **(a)** What happens to flagellar motility?
+- **(b)** What happens to flagellin synthesis?
+- **(c)** How does this motor differ from a eukaryotic flagellum?
+
+**(a) Motility stops.** The flagellar motor is driven directly by the **proton-motive force**, not ATP hydrolysis, so motility stops immediately despite normal ATP.
+
+**(b) Synthesis continues.** Flagellin SYNTHESIS is ordinary translation, powered by GTP/ATP, so it continues (until the PMF collapse has secondary effects).
+
+**(c) Energy source.** Eukaryotic flagella bend using dynein ATPases on 9+2 microtubules. Prokaryotic flagellum = PMF-driven rotary motor; eukaryotic flagellum = ATP-driven bending — the energy source is the discriminating prediction.
+
+**Problem 3.** Mutant pneumococci lacking one surface structure are readily engulfed by neutrophils in vitro and avirulent in mice, while the wild type resists phagocytosis and kills the mice. The purified structure alone raises protective antibodies in mice.
+
+- **(a)** Which structure do the mutants lack?
+- **(b)** Why do antibodies against the purified structure protect?
+- **(c)** Which classic experiment used the same two kinds of strain?
+
+**(a) The capsule.** Antiphagocytic and virulence-determining points to the **capsule**.
+
+**(b) Opsonization.** Purified capsular polysaccharide raising protective antibody is the principle behind pneumococcal vaccines: opsonizing anti-capsule IgG restores phagocytosis.
+
+**(c) Griffith's strains.** Griffith's smooth (encapsulated, lethal) vs rough (unencapsulated, harmless) strains: the same capsule trait was the marker in the transformation story. Capsule questions bundle phagocytosis evasion, opsonization, and polysaccharide vaccine design.`
     },
     {
       id: 'bac1-quiz1',
@@ -96,65 +140,28 @@ Spirochetes corkscrew using internal axial filaments (endoflagella).
           }
         ]
       }
-    },
-    {
+    },    {
       id: 'bac1-summary',
       type: 'text' as const,
       content: `### Key Takeaways — Part 1
 
-- Prokaryote kit: nucleoid + circular chromosome, plasmids, 70S ribosomes, coupled transcription-translation, polycistronic mRNA, no cholesterol in the membrane
-- Gram-positive = thick peptidoglycan + teichoic acid (purple); gram-negative = thin wall + outer membrane with LPS/lipid A = endotoxin (pink)
-- Peptidoglycan = NAG-NAM chains, D-amino-acid cross-links; lysozyme cuts sugars, beta-lactams block cross-linking; acid-fast = mycolic acids
-- Capsule = antiphagocytic + vaccine target; flagella run on proton-motive force; pili adhere (sex pilus conjugates)
-- Endospores (Bacillus, Clostridium) = dormant, dehydrated survival forms; boiling fails, autoclave to kill
+- **Prokaryote kit.** Circular chromosome in a nucleoid, plasmids, 70S ribosomes, no membrane cholesterol; coupled transcription-translation.
+- **Gram stain.** Gram-positive: thick wall, teichoic acids (purple); gram-negative: thin wall, LPS outer membrane, lipid A = endotoxin (pink).
+- **Peptidoglycan targets.** NAG-NAM chains with D-amino-acid cross-links; lysozyme cuts the sugars, beta-lactams block cross-linking.
+- **Outside the wall.** The capsule resists phagocytosis, flagella run on proton-motive force, and pili mediate adhesion.
+
+**Common traps**
+
+- **Target means access.** Gram-negatives have peptidoglycan, but their outer membrane keeps lysozyme from reaching it.
+- **ATP-driven flagella.** Bacterial flagella rotate on proton-motive force; ATP-driven bending belongs to eukaryotic flagella.
+- **Spores as reproduction.** An endospore is a survival lifeboat, not reproduction: one cell makes one spore, which makes one cell.
+- **Boiling as sterilization.** Boiling does not reliably kill Bacillus or Clostridium spores; autoclaving (121 °C pressurized steam) does.
 
 <!-- yield:low -->
-- Low-yield extras: Mycoplasma (no wall) borrows host sterols for its membrane; capsules are seen by negative staining; the spore core holds calcium dipicolinate; spirochetes move by internal axial filaments
+**Low-yield extras**
+
+- Mycoplasma (no wall) borrows host sterols for its membrane; capsules are seen by negative staining; the spore core holds calcium dipicolinate; spirochetes move by internal axial filaments
 <!-- /yield -->`
-    },
-    {
-      id: 'bac1-worked-examples',
-      type: 'text' as const,
-      content: `### Worked Examples — Structure Logic
-
-<details>
-<summary><b>Example 1: Predict lysozyme sensitivity</b></summary>
-
-**Question:** Rank the vulnerability of a gram-positive coccus, a gram-negative rod, and a Mycoplasma to lysozyme in tears, and justify.
-
-**Solution:**
-1. Gram-positive: peptidoglycan is thick but EXPOSED at the surface — most vulnerable; lysozyme digestion leaves an osmotically fragile protoplast that lyses in hypotonic tears.
-2. Gram-negative: has peptidoglycan, but the outer membrane shields it; lysozyme is largely blocked unless the outer membrane is first disrupted.
-3. Mycoplasma: no peptidoglycan at all — nothing for lysozyme to cut; intrinsically insensitive.
-
-**MCAT Strategy:** The same access logic governs lysozyme and vancomycin: possession of a target is necessary but not sufficient — the agent must reach it.
-</details>
-
-<details>
-<summary><b>Example 2: Deduce the structure from an experiment</b></summary>
-
-**Question:** Mutant pneumococci lacking one surface structure are readily engulfed by neutrophils in vitro and avirulent in mice, while the wild type resists phagocytosis and kills the mice. Injecting the purified structure alone into mice raises protective antibodies. Identify it.
-
-**Solution:**
-1. Antiphagocytic + virulence-determining points to the **capsule**.
-2. Purified capsular polysaccharide raising protective antibody is the principle behind pneumococcal vaccines: opsonizing anti-capsule IgG restores phagocytosis.
-3. This mirrors Griffith's smooth (encapsulated, lethal) vs rough (unencapsulated, harmless) strains — the same molecule later starred in the transformation story.
-
-**MCAT Strategy:** Capsule questions bundle three testable ideas: phagocytosis evasion, opsonization, and polysaccharide vaccine design.
-</details>
-
-<details>
-<summary><b>Example 3: Flagellar motor energetics</b></summary>
-
-**Question:** A drug collapses a bacterium's proton gradient without lowering cytoplasmic ATP (ATP is maintained by substrate-level phosphorylation). Predict effects on flagellar motility and on flagellin synthesis.
-
-**Solution:**
-1. The flagellar motor is driven directly by the **proton-motive force**, not ATP hydrolysis — motility stops immediately despite normal ATP.
-2. Flagellin SYNTHESIS is ordinary translation, powered by GTP/ATP — it continues (until the PMF collapse has secondary effects).
-3. Contrast with eukaryotic flagella (dynein ATPases, 9+2 microtubules): a favorite discrete comparison.
-
-**MCAT Strategy:** Prokaryotic flagellum = PMF-driven rotary motor; eukaryotic flagellum = ATP-driven bending. Energy source is the discriminating experimental prediction.
-</details>`
     }
   ]
 };

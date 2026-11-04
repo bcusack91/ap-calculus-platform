@@ -53,15 +53,32 @@ The universal strategy: place the lesion ON THE CHAIN — neuron → ACh release
       type: 'text' as const,
       content: `### Worked Example — Drug X on an Isolated Muscle Preparation
 
-**Passage-style problem.** An isolated frog skeletal muscle is mounted on a force transducer with intact nerve. Baseline: single nerve stimuli give normal twitches with complete relaxation between them; 50 Hz stimulation gives smooth tetanus that relaxes fully when stimulation stops. The muscle is then perfused with Drug X, a selective SERCA inhibitor, and the protocol is repeated. Observed: the first twitch after Drug X has near-normal amplitude, but force fails to return to baseline between stimuli, and after a brief stimulus train the muscle remains partially contracted for minutes.
+**Problem 1.** An isolated frog skeletal muscle with intact nerve sits on a force transducer; at baseline, single twitches and 50 Hz tetanus both relax fully. It is then perfused with Drug X, a selective SERCA inhibitor, and the protocol is repeated.
 
-**Question 1 — Why is the first twitch nearly normal?** Everything upstream of SERCA is intact: ACh release, end-plate potential, action potential, DHP-ryanodine coupling, and SR calcium release all proceed, and the SR still holds its pre-drug calcium load. Contraction machinery is untouched — only reuptake is blocked.
+- **(a)** The first twitch after Drug X has near-normal amplitude. Why?
+- **(b)** Force now fails to return to baseline between stimuli, and after a brief train the muscle stays partially contracted for minutes. Why?
+- **(c)** What happens to twitch amplitude over a LONG stimulus train with Drug X?
 
-**Question 2 — Explain the failure to relax.** Relaxation requires cytosolic calcium removal by SERCA. With the pump blocked, calcium lingers, troponin stays occupied, tropomyosin stays displaced, and cross-bridges keep cycling — a contracture. This dissociates "contraction is active / relaxation is passive" (false): relaxation costs ATP.
+**(a) A normal first twitch.** Everything upstream of SERCA is intact: ACh release, end-plate potential, action potential, DHP-ryanodine coupling, and SR calcium release all proceed, and the SR still holds its pre-drug calcium load. Only reuptake is blocked.
 
-**Question 3 — Predict what happens to twitch amplitude over a LONG stimulus train with Drug X.** It declines. Calcium that cannot be returned to the SR is slowly extruded from the cell or buffered; the SR store progressively empties, so each ryanodine-mediated release is smaller. Early: sustained force from cytosolic calcium; late: shrinking releasable pool.
+**(b) Failure to relax.** Relaxation requires cytosolic calcium removal by SERCA. With the pump blocked, calcium lingers, troponin stays occupied, tropomyosin stays displaced, and cross-bridges keep cycling: a contracture. "Contraction is active, relaxation is passive" is false; relaxation costs ATP.
 
-**Question 4 — Contrast with Drug Y (blocks nicotinic receptors, curare-like) and Drug Z (locks ryanodine receptors open, malignant-hyperthermia-like).** Drug Y acts at the top of the chain: no end-plate potential, no AP, no calcium release — flaccid, zero-force preparation, though DIRECT electrical stimulation of the muscle membrane would still work. Drug Z floods the cytosol with SR calcium independent of stimulation: sustained contracture WITHOUT nerve input, plus heavy ATP consumption (cycling cross-bridges and futile pumping) generating heat. Same rigid endpoint as Drug X, but Drug X requires stimulation to start whereas Drug Z self-triggers — locate the lesion on the chain and the phenotypes separate cleanly.`
+**(c) A long train.** Amplitude declines. Calcium that cannot return to the SR is slowly extruded from the cell or buffered, so the SR store empties and each ryanodine-mediated release is smaller. Early: sustained force from cytosolic calcium; late: a shrinking releasable pool.
+
+**Problem 2.** The same preparation is tested with Drug Y, which blocks nicotinic receptors (curare-like), and with Drug Z, which locks ryanodine receptors open (malignant-hyperthermia-like).
+
+- **(a)** What does nerve stimulation produce with Drug Y?
+- **(b)** Would DIRECT electrical stimulation of the muscle membrane still work with Drug Y?
+- **(c)** What does Drug Z do to the muscle without any nerve input?
+- **(d)** Drug X and Drug Z both end in a rigid muscle. How do they differ?
+
+**(a) Drug Y, via the nerve.** Drug Y acts at the nicotinic receptor: no end-plate potential, no AP, no calcium release. The preparation is flaccid, with zero force.
+
+**(b) Drug Y, direct stimulation.** Yes. Stimulating the muscle membrane directly bypasses the blocked receptor, so the AP, calcium release and contraction still occur.
+
+**(c) Drug Z.** It floods the cytosol with SR calcium independent of stimulation: sustained contracture WITHOUT nerve input, plus heavy ATP consumption (cycling cross-bridges and futile pumping) that generates heat.
+
+**(d) X vs. Z.** Same rigid endpoint, but Drug X requires stimulation to start whereas Drug Z self-triggers. Locate the lesion on the chain and the phenotypes separate cleanly.`
     },
     {
       id: 'msk4-quiz1',
@@ -112,15 +129,22 @@ The universal strategy: place the lesion ON THE CHAIN — neuron → ACh release
       type: 'text' as const,
       content: `### Key Takeaways — Part 4
 
-- Rigor mortis: no ATP → calcium leaks in AND myosin cannot DETACH (ATP binding = release); stiffness resolves only when the machinery degrades
-- NMJ lesion map: myasthenia gravis = autoantibodies vs. nicotinic receptors (fatigable weakness, helped by cholinesterase inhibitors); botulinum = no ACh release (flaccid); tetanus toxin = no spinal inhibition (spastic); curare = receptor blockade (flaccid, competitive)
-- Malignant hyperthermia = runaway ryanodine-receptor calcium release under anesthetics; DMD = X-linked dystrophin loss shearing the sarcolemma
-- Bone endocrinology: estrogen loss → unrestrained osteoclasts → osteoporosis; CHRONIC PTH resorbs bone, INTERMITTENT PTH pulses build it
-- Figure strategy: locate the lesion on the chain (neuron → ACh → receptor → AP → T-tubule → DHP → ryanodine → Ca → troponin → cross-bridge → SERCA); upstream steps still work, downstream steps fail
-- Relaxation defects (force not returning to baseline) point to SERCA/reuptake; absent contraction points upstream; contraction without stimulation points to spontaneous calcium release
+- **Rigor mortis.** With no ATP, leaked calcium lets cross-bridges form and myosin cannot detach, so muscles lock stiff.
+- **NMJ lesion map.** Myasthenia: receptor antibodies; botulinum: no ACh release; curare: receptor block; tetanus toxin: no spinal inhibition.
+- **PTH timing.** Chronically high PTH resorbs bone; brief intermittent PTH pulses build it and treat osteoporosis.
+- **Lesion on the chain.** Place the defect on neuron → ACh → receptor → AP → DHP → ryanodine → Ca → SERCA; upstream works, downstream fails.
+
+**Common traps**
+
+- **MH as a fever.** Malignant hyperthermia is runaway RyR calcium release; its heat comes from ATP-burning contracture, not a hypothalamic set point.
+- **Swapping the toxins.** Botulinum silences the NMJ (flaccid); tetanus toxin removes spinal inhibition (spastic).
+- **Myasthenia as release failure.** Myasthenia attacks nicotinic receptors, not ACh release; weakness worsens with use and eases with AChE inhibitors.
+- **Misplacing a contracture.** Force that will not relax points to SERCA; force without any stimulation points to leaky ryanodine receptors.
 
 <!-- yield:low -->
-- Low-yield extras: dantrolene is the ryanodine-receptor blocker used for malignant hyperthermia
+**Low-yield extras**
+
+- Dantrolene is the ryanodine-receptor blocker used for malignant hyperthermia
 <!-- /yield -->`
     }
   ]
