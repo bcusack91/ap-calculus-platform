@@ -734,6 +734,7 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
   // chars) taught from the summary and never showed its lesson sections.
   const lessonMd: string[] = []
   const lessonMdPart: number[] = [] // the lesson part each lessonMd entry came from
+  const lessonMdTitle: string[] = [] // that part's title: a part's text before its first heading is titled by it
   let partCount = 0
   let limits = DEFAULT_LIMITS
   const droppedSections: string[] = [] // worked examples past the per-part slide allowance
@@ -753,6 +754,7 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
             // is the teacher's, not the lesson's.
             lessonMd.push(stripMetaSections(stripLowYield(sec.content).replace(/^\*\*Part \d+ of \d+.*$/gm, '')))
             lessonMdPart.push(part)
+            lessonMdTitle.push(cfg?.parts[part - 1]?.title || topic.title)
           }
           const exercise = (sec as { exercise?: { questions?: unknown[] } }).exercise
           for (const q of exercise?.questions ?? []) {
@@ -799,7 +801,7 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
         return budgets.get(part)!
       }
       const made = lessonMd.flatMap((md, i) => {
-        const out = contentSlidesFrom(md, topic.title, limits, budgetFor(lessonMdPart[i]))
+        const out = contentSlidesFrom(md, lessonMdTitle[i] ?? topic.title, limits, budgetFor(lessonMdPart[i]))
         for (const s of out) slidePart.set(s, lessonMdPart[i])
         return out
       }).filter((s) => s.blocks.length > 0)
@@ -878,12 +880,22 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     return matches || !droppedSections.some((t) => t.toLowerCase().startsWith(needle))
   })
   content = applyDeckFigures(content, figures)
+  // Figure slides are new objects: give each the part of its section (the
+  // next parted slide for a lead figure, the previous one otherwise).
+  content.forEach((s, i) => {
+    if (slidePart.has(s)) return
+    const key = slideUnitKey(s.title)
+    const near = content.slice(i + 1).find((t) => slidePart.has(t) && slideUnitKey(t.title) === key)
+      ?? content.slice(0, i).reverse().find((t) => slidePart.has(t))
+      ?? content.slice(i + 1).find((t) => slidePart.has(t))
+    if (near) slidePart.set(s, slidePart.get(near)!)
+  })
 
   // ---- Segment the content into teaching beats of ~3 slides (whole units) ----
   const segments: ContentSlide[][] = segmentContent(content, SEGMENT_SIZE, (next, prev) => {
     const a = slidePart.get(prev), b = slidePart.get(next)
     if (a !== undefined && b !== undefined && a !== b) return true
-    return isRecapSlide(next.title) && !isRecapSlide(prev.title)
+    return isRecapSlide(next.title) !== isRecapSlide(prev.title)
   })
   // Recap beats take no polls: a check belongs before the takeaways that
   // answer it, so a poll matched here moves to the part's last teaching beat.
@@ -1059,13 +1071,30 @@ export async function generateSlideDeck(topicSlug: string): Promise<{ title: str
     title: topic.title,
     subtitle: topic.category?.course?.name ? `${topic.category.course.name} · in-class lesson` : 'In-class lesson',
   }]
-  const agendaTitles = [...new Set(content.map((c) => c.title))]
-    .filter((t) => t !== topic.title && !/^(Key Concepts|Worked Example)/.test(t) && !t.endsWith('(cont.)'))
+  // One teaching heading per lesson part first, then a second round, up to
+  // six — not the first six headings, which were all Part 1's (and its recap).
+  const skipAgenda = (t: string) => t === topic.title || /^(Key Concepts|Worked Examples?|Key Takeaways|Common Traps)\b/i.test(t) || t.endsWith('(cont.)')
+  const headingsByPart = new Map<number, string[]>()
+  for (const c of content) {
+    if (skipAgenda(c.title)) continue
+    const list = headingsByPart.get(slidePart.get(c) ?? 0) ?? []
+    if (!list.includes(c.title)) list.push(c.title)
+    headingsByPart.set(slidePart.get(c) ?? 0, list)
+  }
+  const agendaTitles: string[] = []
+  const agendaParts = [...headingsByPart.keys()].sort((a, b) => a - b)
+  for (let round = 0, added = true; added && agendaTitles.length < 6; round++) {
+    added = false
+    for (const p of agendaParts) {
+      const t = headingsByPart.get(p)![round]
+      if (t && agendaTitles.length < 6) { agendaTitles.push(t); added = true }
+    }
+  }
   if (agendaTitles.length >= 2) {
     slides.push({
       kind: 'content',
       title: "What We'll Cover",
-      blocks: agendaTitles.slice(0, 6).map((t) => `- ${t}`),
+      blocks: agendaTitles.map((t) => `- ${displayTitle(t)}`),
     })
   }
 
