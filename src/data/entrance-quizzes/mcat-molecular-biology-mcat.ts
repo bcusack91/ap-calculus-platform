@@ -1,221 +1,50 @@
 /**
  * Entrance Quiz — Molecular Biology (MCAT)
- * 14 questions · 7 parts (2 per part)
+ * 15 questions · 7 parts (3 / 2 / 2 / 2 / 2 / 2 / 2)
+ * Part titles match the interactive lesson's "Part N of 7" lines
+ * (re-aligned Nov 2026 so each part tests the lesson part of the same number).
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'DNA Replication'
+const P2 = 'Transcription'
+const P3 = 'Translation (Protein Synthesis)'
+const P4 = 'Gene Regulation'
+const P5 = 'Mutations & DNA Repair'
+const P6 = 'Biotechnology Techniques'
+const P7 = 'Viruses & Recombinant DNA'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: DNA Structure
-  {
-    id: 'mmb-ent-1a',
-    question: 'In a double-stranded DNA molecule with 30% adenine, what is the percentage of cytosine?',
-    options: [
-      '30%',
-      '20%',
-      '40%',
-      '15%'
-    ],
-    correctIndex: 1,
-    explanation: 'By Chargaff\'s rules, A = T and G = C. If A = 30%, then T = 30%, leaving G + C = 40%. Since G = C, each is 20%. Therefore cytosine = 20%.',
-    partNumber: 1,
-    partTitle: 'DNA Structure'
-  },
-  {
-    id: 'mmb-ent-1b',
-    question: 'Which bond type links the two strands of a DNA double helix and allows strand separation during replication?',
-    options: [
-      'Covalent phosphodiester bonds',
-      'Ionic bonds between phosphate groups',
-      'Hydrogen bonds between complementary base pairs',
-      'Disulfide bonds between deoxyribose sugars'
-    ],
-    correctIndex: 2,
-    explanation: 'The two strands are held together by hydrogen bonds: A–T form 2 hydrogen bonds and G–C form 3. These bonds are individually weak but collectively stable, yet they can be broken by helicases during replication. Phosphodiester bonds are within each strand.',
-    partNumber: 1,
-    partTitle: 'DNA Structure'
-  },
+  // Part 1 — DNA Replication
+  { id: 'mmb-ent-1a', question: 'Which enzyme breaks the hydrogen bonds between base pairs to open the double helix at the replication fork?', options: ['Topoisomerase', 'Primase', 'Helicase', 'DNA ligase'], correctIndex: 2, explanation: 'Helicase unwinds the helix by breaking the hydrogen bonds between complementary bases. Topoisomerase relieves the supercoiling that builds up ahead of the fork, primase lays down RNA primers, and DNA ligase seals nicks between fragments.', partNumber: 1, partTitle: P1 },
+  { id: 'mmb-ent-1b', question: 'In bacteria, which enzyme removes the RNA primers and fills the gaps with DNA?', options: ['DNA polymerase I', 'DNA polymerase III', 'Primase', 'DNA ligase'], correctIndex: 0, explanation: 'DNA polymerase I removes RNA primers and replaces them with DNA. DNA polymerase III does the main synthesis, primase makes the primers in the first place, and ligase only seals the final nick once the gap is filled.', partNumber: 1, partTitle: P1 },
+  { id: 'mmb-ent-1c', question: 'Telomerase is active in germ cells and most cancer cells but usually silent in somatic cells. What does it give cancer cells?', options: ['Repair of double-strand breaks in oncogenes', 'Methylation that silences tumor suppressors', 'RNA primers for each lagging-strand fragment', 'Telomere upkeep that allows endless division'], correctIndex: 3, explanation: 'Telomeres shorten with each division until cells reach the Hayflick limit. Telomerase, a reverse transcriptase carrying its own RNA template, extends telomeres and lets cancer cells keep dividing. It does not repair breaks, methylate promoters or make primers (primase does that).', partNumber: 1, partTitle: P1 },
 
-  // Part 2: DNA Replication
-  {
-    id: 'mmb-ent-2a',
-    question: 'DNA polymerase III can only synthesize DNA in the 5′→3′ direction. On the lagging strand template (3′→5′), this results in:',
-    options: [
-      'Continuous synthesis in one long fragment.',
-      'Synthesis of Okazaki fragments in the 5′→3′ direction, away from the replication fork.',
-      'No synthesis on the lagging strand because polymerase cannot work there.',
-      'Synthesis of Okazaki fragments in the 3′→5′ direction toward the fork.'
-    ],
-    correctIndex: 1,
-    explanation: 'Because DNA pol III cannot synthesize 3′→5′, the lagging strand is made discontinuously as short Okazaki fragments, each initiated by a new RNA primer and synthesized 5′→3′ away from the fork. These are later joined by DNA ligase.',
-    partNumber: 2,
-    partTitle: 'DNA Replication'
-  },
-  {
-    id: 'mmb-ent-2b',
-    question: 'Which enzyme removes RNA primers and fills in the gaps with DNA during replication in prokaryotes?',
-    options: [
-      'DNA polymerase I',
-      'DNA polymerase III',
-      'Primase',
-      'Topoisomerase II'
-    ],
-    correctIndex: 0,
-    explanation: 'DNA polymerase I (not III) possesses 5′→3′ exonuclease activity, allowing it to remove RNA primers ahead of it while simultaneously filling the gap with new DNA. DNA ligase then seals the nick. Pol III is the primary replicative polymerase.',
-    partNumber: 2,
-    partTitle: 'DNA Replication'
-  },
+  // Part 2 — Transcription
+  { id: 'mmb-ent-2a', question: 'Which enzyme transcribes protein-coding genes into mRNA in eukaryotes?', options: ['RNA polymerase I', 'RNA polymerase II', 'RNA polymerase III', 'Reverse transcriptase'], correctIndex: 1, explanation: 'RNA polymerase II makes pre-mRNA in eukaryotes. RNA polymerase I makes most rRNA and RNA polymerase III makes tRNA and some small RNAs. Reverse transcriptase copies RNA into DNA, the opposite direction.', partNumber: 2, partTitle: P2 },
+  { id: 'mmb-ent-2b', question: "The poly-A tail added to the 3' end of a eukaryotic mRNA mainly:", options: ['Protects the mRNA from rapid degradation', 'Marks the start codon for the ribosome', 'Removes introns as a lariat structure', 'Signals where transcription should begin'], correctIndex: 0, explanation: "The poly-A tail stabilizes the mRNA and helps its export from the nucleus. The ribosome finds the start codon by scanning from the 5' cap, introns are removed as lariats by the spliceosome, and transcription start is set by the promoter.", partNumber: 2, partTitle: P2 },
 
-  // Part 3: Transcription
-  {
-    id: 'mmb-ent-3a',
-    question: 'Which RNA polymerase transcribes protein-coding genes (mRNA) in eukaryotes?',
-    options: [
-      'RNA polymerase I',
-      'RNA polymerase II',
-      'RNA polymerase III',
-      'DNA polymerase I'
-    ],
-    correctIndex: 1,
-    explanation: 'RNA Pol II synthesizes pre-mRNA (hnRNA). RNA Pol I makes rRNA (28S, 18S, 5.8S). RNA Pol III makes tRNA and 5S rRNA. Knowing these distinctions is high-yield for the MCAT.',
-    partNumber: 3,
-    partTitle: 'Transcription'
-  },
-  {
-    id: 'mmb-ent-3b',
-    question: 'A 5′ 7-methylguanosine cap is added to eukaryotic pre-mRNA shortly after transcription begins. This cap functions primarily to:',
-    options: [
-      'Signal the ribosome to terminate translation.',
-      'Protect the mRNA 5′ end from exonuclease degradation and facilitate ribosome binding for translation initiation.',
-      'Add poly-A tails that increase mRNA stability.',
-      'Enable splicing of introns from the pre-mRNA.'
-    ],
-    correctIndex: 1,
-    explanation: 'The 5′ cap protects mRNA from 5′→3′ exonucleases and is recognized by eIF4E, a translation initiation factor, promoting ribosome recruitment. The poly-A tail is a separate modification at the 3′ end; splicing is mediated by the spliceosome.',
-    partNumber: 3,
-    partTitle: 'Transcription'
-  },
+  // Part 3 — Translation (Protein Synthesis)
+  { id: 'mmb-ent-3a', question: 'How does a eukaryotic ribosome usually find the start codon on an mRNA?', options: ["It scans from the 5' cap to the first AUG", 'It binds a Shine-Dalgarno sequence by the AUG', "It reads back from the 3' poly-A tail", 'It starts at the first UAG it encounters'], correctIndex: 0, explanation: "The small subunit binds the 5' cap with the initiator Met-tRNA and scans along the mRNA until it reaches the first AUG, where the large subunit joins. Shine-Dalgarno pairing is how bacterial ribosomes find their start site, translation runs 5' to 3' rather than from the tail, and UAG is a stop codon.", partNumber: 3, partTitle: P3 },
+  { id: 'mmb-ent-3b', question: 'Which codon ends translation rather than adding an amino acid?', options: ['AUG', 'UGG', 'UAG', 'GUA'], correctIndex: 2, explanation: 'UAG is one of the three stop codons (with UAA and UGA); it is recognized by a release factor, not a tRNA. AUG is the start codon and encodes methionine, UGG encodes tryptophan, and GUA encodes valine.', partNumber: 3, partTitle: P3 },
 
-  // Part 4: Translation
-  {
-    id: 'mmb-ent-4a',
-    question: 'The anticodon of a tRNA is 3′-UAC-5′. This tRNA carries which amino acid?',
-    options: [
-      'Leucine',
-      'Methionine',
-      'Tyrosine',
-      'Valine'
-    ],
-    correctIndex: 1,
-    explanation: 'The anticodon 3′-UAC-5′ pairs with the mRNA codon 5′-AUG-3′ (read antiparallel). AUG is the start codon encoding methionine (Met/M). This is high-yield: AUG always codes for Met in eukaryotes.',
-    partNumber: 4,
-    partTitle: 'Translation'
-  },
-  {
-    id: 'mmb-ent-4b',
-    question: 'During elongation, the peptidyl transferase activity that forms peptide bonds is carried out by:',
-    options: [
-      'A ribosomal protein enzyme in the large subunit.',
-      'The 23S (or 28S) ribosomal RNA (rRNA), acting as a ribozyme.',
-      'Elongation factor EF-Tu.',
-      'Aminoacyl-tRNA synthetase.'
-    ],
-    correctIndex: 1,
-    explanation: 'Peptidyl transferase activity resides in the 23S rRNA (prokaryotes) or 28S rRNA (eukaryotes) of the large ribosomal subunit—making the ribosome a ribozyme. This is a classic MCAT concept. EF-Tu delivers aminoacyl-tRNA to the A site.',
-    partNumber: 4,
-    partTitle: 'Translation'
-  },
+  // Part 4 — Gene Regulation
+  { id: 'mmb-ent-4a', question: 'E. coli are grown with lactose present and glucose absent. The lac operon is:', options: ['Off, because the repressor stays on the operator', 'Low, because cAMP-CAP cannot bind the promoter', 'High: repressor released and cAMP-CAP bound', 'Off, because lactose acts as a corepressor'], correctIndex: 2, explanation: 'Lactose (as allolactose) pulls the repressor off the operator, and low glucose means high cAMP, so cAMP-CAP binds and boosts transcription: maximal expression. The repressor stays bound only without lactose, CAP fails to bind only when glucose is high, and a corepressor belongs to the repressible trp operon.', partNumber: 4, partTitle: P4 },
+  { id: 'mmb-ent-4b', question: "Methylation of CpG islands in a gene's promoter is generally associated with:", options: ['Increased transcription of that gene', 'Transcriptional silencing of that gene', 'Stronger RNA polymerase II binding', 'Faster replication of that promoter'], correctIndex: 1, explanation: 'Promoter DNA methylation is an epigenetic silencing mark: methyl groups block transcription factor binding and recruit repressive chromatin. It therefore lowers rather than raises transcription and polymerase binding, and it is not a replication signal.', partNumber: 4, partTitle: P4 },
 
-  // Part 5: Gene Regulation
-  {
-    id: 'mmb-ent-5a',
-    question: 'In the lac operon, when lactose is absent and glucose is absent, the operon is:',
-    options: [
-      'Fully induced because cAMP-CAP activates transcription.',
-      'Transcribed at basal levels because the repressor is bound.',
-      'Off: the repressor is bound to the operator AND cAMP-CAP is active, but repressor binding dominates.',
-      'Off: the lac repressor is bound to the operator, blocking transcription regardless of CAP status.'
-    ],
-    correctIndex: 3,
-    explanation: 'When lactose is absent, the lac repressor (bound to allolactose as inducer when lactose is present) remains unbound to allolactose and blocks the operator. Transcription is OFF regardless of glucose levels. When lactose is present and glucose is absent, allolactose removes the repressor AND cAMP-CAP activates—maximum transcription.',
-    partNumber: 5,
-    partTitle: 'Gene Regulation'
-  },
-  {
-    id: 'mmb-ent-5b',
-    question: 'DNA methylation of CpG islands in gene promoters in mammals is generally associated with:',
-    options: [
-      'Increased transcription of the associated gene.',
-      'Transcriptional silencing (gene repression).',
-      'Enhanced binding of RNA polymerase II.',
-      'DNA repair and replication fidelity.'
-    ],
-    correctIndex: 1,
-    explanation: 'Methylation of cytosine at CpG islands recruits methyl-binding proteins and histone deacetylases, leading to chromatin compaction and transcriptional silencing. This is a major epigenetic mechanism for long-term gene repression (e.g., X-inactivation, imprinting).',
-    partNumber: 5,
-    partTitle: 'Gene Regulation'
-  },
+  // Part 5 — Mutations & DNA Repair
+  { id: 'mmb-ent-5a', question: 'A point mutation replaces one nonpolar amino acid with another of similar size and chemistry. This is a:', options: ['Nonsense point mutation', 'Silent point mutation', 'Frameshift insertion', 'Conservative missense'], correctIndex: 3, explanation: 'A missense mutation changes one amino acid; swapping in a chemically similar one is conservative and usually mild. A nonsense mutation creates a stop codon, a silent mutation leaves the amino acid unchanged, and a frameshift alters every codon downstream rather than a single residue.', partNumber: 5, partTitle: P5 },
+  { id: 'mmb-ent-5b', question: 'The mismatch repair system mainly corrects:', options: ['Bulky lesions such as UV thymine dimers', 'Mispaired bases left after proofreading', 'Double-strand breaks in non-dividing cells', 'Single bases damaged by deamination'], correctIndex: 1, explanation: 'Mismatch repair scans newly replicated DNA for base mispairs that escaped polymerase proofreading and fixes the new strand; defects cause Lynch syndrome. Bulky lesions such as thymine dimers go to nucleotide excision repair, double-strand breaks to NHEJ or homologous recombination, and single damaged bases to base excision repair.', partNumber: 5, partTitle: P5 },
 
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'mmb-ent-6a',
-    question: 'A researcher uses dideoxynucleotides (ddNTPs) in a sequencing reaction. ddNTPs terminate chain elongation because they:',
-    options: [
-      'Inhibit RNA polymerase and prevent transcription of the template.',
-      'Lack the 3′-OH group necessary for the next phosphodiester bond formation.',
-      'Contain an extra phosphate group that blocks the active site of DNA polymerase.',
-      'Cause the template strand to fold into a hairpin structure.'
-    ],
-    correctIndex: 1,
-    explanation: 'ddNTPs lack the 3′-OH group (they have H instead). DNA polymerase cannot form a phosphodiester bond without a free 3′-OH, so once a ddNTP is incorporated, chain extension stops. This is the basis of Sanger sequencing.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  {
-    id: 'mmb-ent-6b',
-    question: 'A nonsense mutation converts a codon within an mRNA from UAU (Tyr) to UAA (stop). The most likely effect on the translated protein is:',
-    options: [
-      'A single amino acid substitution with minor functional impact.',
-      'Production of a truncated, likely nonfunctional protein.',
-      'No change, because wobble base pairing can read through stop codons.',
-      'Increased protein stability due to premature folding.'
-    ],
-    correctIndex: 1,
-    explanation: 'A nonsense mutation introduces a premature stop codon. Translation terminates early, producing a truncated polypeptide. Shorter proteins often lack critical functional domains and may be targeted for degradation by nonsense-mediated mRNA decay (NMD).',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
+  // Part 6 — Biotechnology Techniques
+  { id: 'mmb-ent-6a', question: 'During gel electrophoresis, DNA fragments move toward the positive electrode because:', options: ['Their phosphate backbone is negatively charged', 'Their nitrogenous bases carry positive charge', 'Larger fragments are drawn forward fastest', 'Their sugars bind the positive electrode'], correctIndex: 0, explanation: 'Each phosphate in the backbone carries a negative charge, so DNA migrates toward the anode. The bases are not positively charged overall, and in the gel smaller fragments travel farther, not larger ones.', partNumber: 6, partTitle: P6 },
+  { id: 'mmb-ent-6b', question: 'Before an mRNA can be amplified by PCR (as in RT-PCR), it must first be:', options: ['Spliced again to remove any leftover introns', "Capped at its 5' end so the primers can bind", 'Copied into cDNA by reverse transcriptase', 'Cut at palindromes by restriction enzymes'], correctIndex: 2, explanation: 'PCR polymerases copy DNA, so the mRNA is first converted to complementary DNA (cDNA) by reverse transcriptase, and that cDNA is then amplified. Mature mRNA is already spliced and capped, and primers bind by base pairing, not to a cap. Restriction enzymes are not part of PCR.', partNumber: 6, partTitle: P6 },
 
-  // Part 7: Review & Applications
-  {
-    id: 'mmb-ent-7a',
-    question: 'CRISPR-Cas9 gene editing relies on a guide RNA (gRNA) to direct Cas9 to a target DNA sequence. The guide RNA functions by:',
-    options: [
-      'Encoding the Cas9 protein through translation.',
-      'Base-pairing with the target DNA sequence, positioning Cas9 to create a double-strand break.',
-      'Methylating the target DNA to suppress expression.',
-      'Recruiting ribosomes to the cut site to insert new genetic material.'
-    ],
-    correctIndex: 1,
-    explanation: 'The gRNA contains a ~20-nt spacer sequence complementary to the target DNA. Watson-Crick base pairing directs Cas9 to the precise genomic location (adjacent to a PAM sequence), where Cas9\'s two nuclease domains create a blunt double-strand break.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  },
-  {
-    id: 'mmb-ent-7b',
-    question: 'Telomerase is active in germ cells and cancer cells but typically silent in somatic cells. Why is telomerase activity important in cancer cells?',
-    options: [
-      'It repairs double-strand DNA breaks caused by oncogene activation.',
-      'It allows cancer cells to bypass replicative senescence by maintaining telomere length, enabling unlimited division.',
-      'It methylates tumor suppressor gene promoters to silence growth inhibition.',
-      'It synthesizes RNA primers needed for cancer cell DNA replication.'
-    ],
-    correctIndex: 1,
-    explanation: 'Normal somatic cells lose telomeric repeats with each division (Hayflick limit). When telomeres shorten critically, cells enter senescence or apoptosis. Cancer cells reactivate telomerase to maintain telomere length, achieving replicative immortality—a hallmark of cancer.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  }
+  // Part 7 — Viruses & Recombinant DNA
+  { id: 'mmb-ent-7a', question: "In building a recombinant plasmid, which enzyme covalently seals the insert into the vector's backbone?", options: ['A restriction enzyme', 'Reverse transcriptase', 'DNA helicase', 'DNA ligase'], correctIndex: 3, explanation: 'DNA ligase forms the phosphodiester bonds that join the insert to the opened vector. A restriction enzyme cuts the DNA to create the matching ends, reverse transcriptase makes cDNA from mRNA, and helicase unwinds DNA during replication.', partNumber: 7, partTitle: P7 },
+  { id: 'mmb-ent-7b', question: 'In the retroviral (HIV) life cycle, the provirus is:', options: ['The protein capsid that encloses the RNA genome', 'The viral DNA copy integrated into host DNA', 'The RNA genome packaged into each new virion', 'The host enzyme that copies RNA into DNA'], correctIndex: 1, explanation: 'Reverse transcriptase copies the RNA genome into double-stranded DNA, and integrase inserts that DNA into a host chromosome, where it is called a provirus. The capsid is the protein shell, the packaged RNA is the genome itself, and reverse transcriptase is a viral (not host) enzyme.', partNumber: 7, partTitle: P7 },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -224,12 +53,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'DNA Structure' },
-    { partNumber: 2, partTitle: 'DNA Replication' },
-    { partNumber: 3, partTitle: 'Transcription' },
-    { partNumber: 4, partTitle: 'Translation' },
-    { partNumber: 5, partTitle: 'Gene Regulation' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' }
+    { partNumber: 1, partTitle: P1 },
+    { partNumber: 2, partTitle: P2 },
+    { partNumber: 3, partTitle: P3 },
+    { partNumber: 4, partTitle: P4 },
+    { partNumber: 5, partTitle: P5 },
+    { partNumber: 6, partTitle: P6 },
+    { partNumber: 7, partTitle: P7 },
   ]
 }

@@ -1,221 +1,49 @@
 /**
- * Entrance Quiz — Anatomy and Physiology (MCAT)
+ * Entrance Quiz — Anatomy & Physiology (MCAT)
  * 14 questions · 7 parts (2 per part)
+ * Part titles match the interactive lesson's "Part N of 7" lines
+ * (re-aligned Nov 2026 so each part tests the lesson part of the same number).
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Musculoskeletal System'
+const P2 = 'Reproductive System'
+const P3 = 'Embryology & Development'
+const P4 = 'Skin & Integumentary System'
+const P5 = 'Special Senses'
+const P6 = 'Blood & Lymphatic System'
+const P7 = 'Homeostasis & Integration'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Musculoskeletal System
-  {
-    id: 'map-ent-1a',
-    question: 'During a skeletal muscle contraction, the binding of $Ca^{2+}$ to troponin causes:',
-    options: [
-      'Myosin heads to hydrolyze ATP, cocking them into the high-energy state.',
-      'Tropomyosin to shift, exposing myosin-binding sites on actin.',
-      'Cross-bridges to detach from actin so that the muscle can relax.',
-      'Thin filaments to slide toward the Z-discs without myosin involvement.'
-    ],
-    correctIndex: 1,
-    explanation: 'At rest, tropomyosin covers the myosin-binding sites on actin. $Ca^{2+}$ released from the sarcoplasmic reticulum binds troponin C, the troponin-tropomyosin complex changes shape, and tropomyosin rolls aside so myosin heads — already charged with ADP + Pi from an earlier ATP hydrolysis — can bind and drive the power stroke. ATP hydrolysis recocks the head independently of $Ca^{2+}$, and it is ATP BINDING (not $Ca^{2+}$) that detaches a cross-bridge.',
-    partNumber: 1,
-    partTitle: 'Musculoskeletal System'
-  },
-  {
-    id: 'map-ent-1b',
-    question: 'The sarcomere is the functional unit of a myofibril. During contraction, which band/zone SHORTENS?',
-    options: [
-      'The A band shortens while the I band and H zone both stay constant.',
-      'Only the I band shortens, while the H zone gets wider.',
-      'The I band and the H zone shorten; the A band stays constant.',
-      'All three bands shorten, but the A band shortens least.'
-    ],
-    correctIndex: 2,
-    explanation: 'In the sliding filament model the filaments themselves do not shorten; they overlap more. The A band equals the length of the thick filaments, so it never changes. The I band (thin filament only) and the H zone (thick filament only) are the regions of non-overlap, so both narrow as the Z-discs are pulled toward the M line.',
-    partNumber: 1,
-    partTitle: 'Musculoskeletal System'
-  },
+  // Part 1 — Musculoskeletal System
+  { id: 'map-ent-1a', question: 'In skeletal muscle, the Ca$^{2+}$ that triggers contraction comes mainly from:', options: ['Extracellular fluid entering through T-tubules', 'The sarcoplasmic reticulum, via ryanodine receptors', 'Mitochondria, released by the electron transport chain', 'The nucleus, released through the nuclear pores'], correctIndex: 1, explanation: 'Depolarization spreads down the T-tubules, the DHP receptors there open the ryanodine receptors of the sarcoplasmic reticulum, and stored Ca$^{2+}$ floods the cytosol. Skeletal muscle does not depend on extracellular Ca$^{2+}$ (cardiac muscle does), and neither mitochondria nor the nucleus is the trigger source.', partNumber: 1, partTitle: P1 },
+  { id: 'map-ent-1b', question: 'Which bone cells deposit new bone matrix?', options: ['Osteoclasts', 'Chondrocytes', 'Osteoblasts', 'Fibroblasts'], correctIndex: 2, explanation: 'Osteoblasts build bone by laying down osteoid that then mineralizes. Osteoclasts do the opposite and resorb bone, chondrocytes maintain cartilage, and fibroblasts make the matrix of ordinary connective tissue.', partNumber: 1, partTitle: P1 },
 
-  // Part 2: Digestive System
-  {
-    id: 'map-ent-2a',
-    question: 'Pepsinogen, the inactive zymogen of pepsin, is secreted by which gastric cells and activated by:',
-    options: [
-      'Chief cells; activated by gastric HCl at low pH.',
-      'Parietal cells; activated by the intrinsic factor they secrete.',
-      'G cells; activated by gastrin released into the circulation.',
-      'Goblet cells; activated by duodenal enterokinase.'
-    ],
-    correctIndex: 0,
-    explanation: 'Chief (zymogenic) cells of the gastric glands secrete pepsinogen; the pH ~2 environment created by parietal-cell HCl cleaves off the inhibitory propeptide to yield active pepsin, which then autocatalytically activates more pepsinogen. Parietal cells make HCl and intrinsic factor (for $B_{12}$ absorption, not zymogen activation), G cells secrete gastrin, and enterokinase acts in the duodenum on trypsinogen.',
-    partNumber: 2,
-    partTitle: 'Digestive System'
-  },
-  {
-    id: 'map-ent-2b',
-    question: 'Bile salts emulsify dietary fats in the small intestine. This process aids digestion because:',
-    options: [
-      'Bile salts hydrolyze triglycerides into fatty acids and glycerol.',
-      'Emulsification increases fat-droplet surface area for pancreatic lipase.',
-      'Bile salts carry fatty acids directly across the enterocyte membrane.',
-      'Emulsification raises duodenal pH to the optimum for lipase activity.'
-    ],
-    correctIndex: 1,
-    explanation: 'Bile salts are amphipathic cholesterol derivatives that break large fat globules into microdroplets, multiplying the lipid-water interface where pancreatic lipase (with colipase) can work. They are detergents, not enzymes, so they perform no hydrolysis; micelles ferry the products to the brush border but the fatty acids then cross the membrane on their own; and it is pancreatic bicarbonate, not emulsification, that neutralizes duodenal acid.',
-    partNumber: 2,
-    partTitle: 'Digestive System'
-  },
+  // Part 2 — Reproductive System
+  { id: 'map-ent-2a', question: 'The LH surge near day 14 of the menstrual cycle triggers:', options: ['Ovulation, then formation of the corpus luteum', 'Thickening of the endometrium before implantation', 'Menstruation, by making progesterone fall', 'An FSH rise that recruits the next follicles'], correctIndex: 0, explanation: 'The LH surge causes the mature follicle to release its oocyte, and the remaining follicle becomes the progesterone-secreting corpus luteum. The endometrium thickens under estrogen and progesterone, menstruation follows the fall in progesterone when the corpus luteum dies, and new follicles are recruited by FSH.', partNumber: 2, partTitle: P2 },
+  { id: 'map-ent-2b', question: 'Sertoli cells, which respond to FSH, mainly:', options: ['Secrete testosterone in response to LH', 'Produce the fructose-rich seminal fluid', 'Store mature sperm until ejaculation', 'Support and nourish developing sperm'], correctIndex: 3, explanation: 'Sertoli cells line the seminiferous tubules, form the blood–testis barrier and nourish developing sperm. Testosterone comes from Leydig cells under LH, fructose-rich fluid comes from the seminal vesicles, and sperm mature and are stored in the epididymis.', partNumber: 2, partTitle: P2 },
 
-  // Part 3: Immune System
-  {
-    id: 'map-ent-3a',
-    question: 'Which class of immunoglobulin is the most abundant in serum and the primary antibody of secondary (memory) immune responses?',
-    options: [
-      'IgM',
-      'IgA',
-      'IgG',
-      'IgE'
-    ],
-    correctIndex: 2,
-    explanation: 'IgG is the most abundant serum immunoglobulin (~75%) and the isotype that dominates secondary responses after class switching in memory B cells. It is also the only isotype that crosses the placenta. IgM is the first antibody of a primary response, IgA dominates mucosal secretions, and IgE mediates allergy and antiparasitic responses.',
-    partNumber: 3,
-    partTitle: 'Immune System'
-  },
-  {
-    id: 'map-ent-3b',
-    question: 'MHC class I molecules present peptide antigens to:',
-    options: [
-      '$CD4^{+}$ helper T cells, which then license B-cell antibody production.',
-      '$CD8^{+}$ cytotoxic T cells, which kill the presenting cell.',
-      'B cells, driving immunoglobulin class switching.',
-      'NK cells, triggering their release of cytotoxic granules.'
-    ],
-    correctIndex: 1,
-    explanation: 'MHC class I is expressed on all nucleated cells and displays endogenous peptides — viral or tumor proteins made inside the cell — to $CD8^{+}$ cytotoxic T cells, which then kill that cell. MHC class II on professional APCs is what presents to $CD4^{+}$ helper T cells. NK cells read MHC class I with INHIBITORY receptors: normal class I expression suppresses NK killing, and it is the LOSS of class I ("missing self") that triggers degranulation.',
-    partNumber: 3,
-    partTitle: 'Immune System'
-  },
+  // Part 3 — Embryology & Development
+  { id: 'map-ent-3a', question: 'In the blastocyst, which cells go on to form the embryo itself?', options: ['The trophoblast', 'The inner cell mass', 'The zona pellucida', 'The corpus luteum'], correctIndex: 1, explanation: 'The inner cell mass becomes the embryo, while the trophoblast forms the fetal part of the placenta and secretes hCG. The zona pellucida is the glycoprotein coat around the egg, and the corpus luteum is an ovarian structure, not part of the embryo.', partNumber: 3, partTitle: P3 },
+  { id: 'map-ent-3b', question: 'The brain, the spinal cord and the epidermis all develop from which germ layer?', options: ['Mesoderm', 'Endoderm', 'Ectoderm', 'Notochord'], correctIndex: 2, explanation: 'Ectoderm forms the nervous system (through the neural tube) and the epidermis. Mesoderm forms muscle, bone and blood, endoderm forms the lining of the gut and airways, and the notochord is a mesoderm-derived rod that induces the neural plate but does not become it.', partNumber: 3, partTitle: P3 },
 
-  // Part 4: Reproductive System
-  {
-    id: 'map-ent-4a',
-    question: 'The LH surge on approximately day 14 of the menstrual cycle triggers:',
-    options: [
-      'Proliferation of the endometrial lining ahead of implantation.',
-      'Ovulation and conversion of the follicle into the corpus luteum.',
-      'Menstruation, by causing progesterone levels to fall abruptly.',
-      'The FSH rise that recruits a new cohort of follicles.'
-    ],
-    correctIndex: 1,
-    explanation: 'Rising estrogen from the dominant follicle flips to POSITIVE feedback and produces the LH surge, which completes oocyte maturation and releases it about 36 hours later, then luteinizes the ruptured follicle into the corpus luteum that secretes progesterone through the luteal phase. Endometrial proliferation is driven by follicular estrogen; menstruation follows corpus luteum regression about two weeks later.',
-    partNumber: 4,
-    partTitle: 'Reproductive System'
-  },
-  {
-    id: 'map-ent-4b',
-    question: 'Testosterone produced by Leydig cells in the testes is required for:',
-    options: [
-      'Stimulating LH secretion from the anterior pituitary.',
-      'Spermatogenesis and male secondary sexual characteristics.',
-      'Inhibin synthesis by Sertoli cells, which promotes FSH release.',
-      'Blocking aromatase so that no estrogen is produced in males.'
-    ],
-    correctIndex: 1,
-    explanation: 'Testosterone (and its 5-alpha-reductase product DHT) acts on Sertoli cells to sustain spermatogenesis and drives male secondary sexual characteristics, muscle and bone anabolism, and libido. It INHIBITS rather than stimulates LH by negative feedback on the hypothalamus and pituitary; inhibin comes from Sertoli cells and suppresses FSH; and a fraction of testosterone is aromatized to estradiol, which males need for bone maturation.',
-    partNumber: 4,
-    partTitle: 'Reproductive System'
-  },
+  // Part 4 — Skin & Integumentary System
+  { id: 'map-ent-4a', question: 'Which skin layer contains the blood vessels, sweat glands and hair follicles?', options: ['The epidermis', 'The stratum corneum', 'The stratum basale', 'The dermis'], correctIndex: 3, explanation: 'The dermis is vascular connective tissue that holds vessels, nerves, glands and follicles. The epidermis is avascular and fed by diffusion from the dermis, and the stratum corneum and stratum basale are both layers within the epidermis.', partNumber: 4, partTitle: P4 },
+  { id: 'map-ent-4b', question: 'When core body temperature rises above the hypothalamic set point, the body responds with:', options: ['Sweating and cutaneous vasodilation', 'Shivering and cutaneous vasoconstriction', 'Brown-fat heat production and piloerection', 'Positive feedback that raises heat output'], correctIndex: 0, explanation: 'Thermoregulation is negative feedback: when the body is too warm, skin vessels dilate to shed heat and sweat cools the skin as it evaporates. Shivering, vasoconstriction and brown-fat heat production are responses to cold, and adding more heat would worsen the problem.', partNumber: 4, partTitle: P4 },
 
-  // Part 5: Homeostasis
-  {
-    id: 'map-ent-5a',
-    question: 'Negative feedback is the primary mechanism maintaining homeostasis. In thermoregulation, if body temperature rises above the set point:',
-    options: [
-      'The hypothalamus raises metabolic heat production still further.',
-      'Shivering and cutaneous vasoconstriction begin in the periphery.',
-      'Sweat glands and cutaneous vasodilation are activated.',
-      'Positive feedback drives temperature further above the set point.'
-    ],
-    correctIndex: 2,
-    explanation: 'The defining feature of negative feedback is that the response OPPOSES the deviation: the hypothalamic thermostat detects the rise and recruits heat-losing effectors — sweating for evaporative loss and cutaneous vasodilation for radiative loss — returning temperature toward ~37°C. Shivering and vasoconstriction are the opposite (heat-conserving) responses used when temperature falls below set point.',
-    partNumber: 5,
-    partTitle: 'Homeostasis'
-  },
-  {
-    id: 'map-ent-5b',
-    question: 'Positive feedback in physiology:',
-    options: [
-      'Is always pathological and never serves a normal role.',
-      'Occurs when the response amplifies the original stimulus.',
-      'Restores the body to its set point faster than negative feedback does.',
-      'Requires an external hormone and cannot be initiated internally.'
-    ],
-    correctIndex: 1,
-    explanation: 'Positive feedback drives a variable further from its starting point rather than back toward it, so it cannot be a set-point-restoring mechanism. Physiology uses it for self-terminating cascades: oxytocin and uterine contractions during labor (delivery removes the stimulus) and platelet activation in clotting (a sealed vessel removes the stimulus). Both are normal, internally initiated, and not pathological.',
-    partNumber: 5,
-    partTitle: 'Homeostasis'
-  },
+  // Part 5 — Special Senses
+  { id: 'map-ent-5a', question: 'Compared with rods, cones are specialized for:', options: ['Vision in dim light, with low acuity', 'Color and sharp vision in bright light', 'Detecting motion only in the periphery', 'Sensing light intensity but never color'], correctIndex: 1, explanation: 'Cones come in three types for color, need bright light and are packed in the fovea for sharp vision. Rods handle dim-light vision with lower acuity and do not distinguish color.', partNumber: 5, partTitle: P5 },
+  { id: 'map-ent-5b', question: 'At the optic chiasm, which retinal fibers cross to the opposite side of the brain?', options: ['Fibers from the nasal half of each retina', 'Fibers from the temporal half of each retina', 'Every fiber from both retinas', 'None; each eye projects only to its own side'], correctIndex: 0, explanation: 'Nasal retinal fibers (which see the temporal visual fields) cross at the chiasm, while temporal fibers stay on the same side. That partial crossing lets each hemisphere receive the opposite visual field from both eyes.', partNumber: 5, partTitle: P5 },
 
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'map-ent-6a',
-    question: 'A patient takes a drug that blocks acetylcholinesterase at the neuromuscular junction. The most likely consequence is:',
-    options: [
-      'Flaccid paralysis from too little ACh reaching the motor end plate.',
-      'Sustained contraction and spasm as ACh accumulates in the cleft.',
-      'A faster heart rate caused by excess sympathetic tone at the SA node.',
-      'Reduced epinephrine release from the adrenal medulla.'
-    ],
-    correctIndex: 1,
-    explanation: 'Acetylcholinesterase normally clears ACh from the synaptic cleft within milliseconds. Blocking it leaves ACh bound to nicotinic receptors, producing prolonged end-plate depolarization, fasciculations, and spastic paralysis — the picture of organophosphate and nerve-agent poisoning. Systemically the same drug SLOWS the heart (excess ACh at muscarinic receptors on the SA node) and INCREASES adrenal catecholamine release, since the preganglionic sympathetic fibers to the medulla are cholinergic.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  {
-    id: 'map-ent-6b',
-    question: 'The juxtaglomerular apparatus (JGA) releases renin when:',
-    options: [
-      'Pressure in the afferent arteriole rises and stretches the JG cells.',
-      'Afferent arteriolar pressure falls or macula densa NaCl delivery drops.',
-      'Plasma aldosterone and angiotensin II are already high.',
-      'Atrial natriuretic peptide is released in response to atrial stretch.'
-    ],
-    correctIndex: 1,
-    explanation: 'Three stimuli release renin from JG cells: reduced stretch of the afferent arteriole (low renal perfusion pressure), reduced NaCl sensed by the macula densa, and beta-1 adrenergic sympathetic stimulation. Renin then starts the RAAS cascade toward angiotensin II and aldosterone, raising $Na^{+}$ and water retention and blood pressure. High angiotensin II/aldosterone feeds back to SUPPRESS renin, and ANP likewise inhibits it.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
+  // Part 6 — Blood & Lymphatic System
+  { id: 'map-ent-6a', question: 'Which is a function of the lymphatic system?', options: ['Carrying $O_{2}$ from the lungs to the tissues', 'Making the clotting factors that form fibrin', 'Returning tissue fluid and absorbing dietary fat', 'Filtering plasma to form urine in nephrons'], correctIndex: 2, explanation: 'Lymphatic vessels return excess interstitial fluid to the blood, lacteals in the intestine absorb dietary fat, and lymph nodes filter pathogens. Red blood cells carry $O_{2}$, the liver makes clotting factors, and the kidneys form urine.', partNumber: 6, partTitle: P6 },
+  { id: 'map-ent-6b', question: "A patient's hematocrit is 45%. This value is the:", options: ['Fraction of plasma that consists of protein', 'Share of hemoglobin bound to oxygen', 'Number of white cells per microliter', 'Fraction of blood volume made of red cells'], correctIndex: 3, explanation: 'Hematocrit is the percentage of whole blood volume occupied by red blood cells, normally about 40–45%, with plasma making up most of the rest. Hemoglobin saturation, plasma protein content and the white cell count are separate measurements.', partNumber: 6, partTitle: P6 },
 
-  // Part 7: Review & Applications
-  {
-    id: 'map-ent-7a',
-    question: 'Type I muscle fibers (slow-twitch, oxidative) are better suited for endurance exercise than type II fibers because they:',
-    options: [
-      'Contain fewer mitochondria but hold much larger glycogen stores.',
-      'Are larger in diameter and generate more peak force per fiber.',
-      'Are packed with mitochondria and myoglobin, so they resist fatigue.',
-      'Rely mainly on anaerobic glycolysis for very rapid ATP production.'
-    ],
-    correctIndex: 2,
-    explanation: 'Type I fibers are red and oxidative: dense mitochondria, high myoglobin for local $O_{2}$ storage, and a rich capillary supply let them regenerate ATP aerobically almost indefinitely, so they fatigue slowly. The other options describe type IIb (fast-twitch, white, glycolytic) fibers, which are larger, more forceful, glycogen- and glycolysis-dependent, and fatigue quickly.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  },
-  {
-    id: 'map-ent-7b',
-    question: 'Inflammation is a hallmark of the innate immune response. Which of the following best describes the role of histamine in acute inflammation?',
-    options: [
-      'It activates the complement cascade, which lyses bacterial membranes.',
-      'It kills ingested bacteria directly through an oxidative burst.',
-      'It causes vasodilation and a local rise in vascular permeability.',
-      'It activates cytotoxic T cells to clear the infected tissue.'
-    ],
-    correctIndex: 2,
-    explanation: 'Mast cells and basophils degranulate and release histamine, which acts on H1 receptors of venular endothelium: arteriolar vasodilation produces the redness and warmth, and endothelial contraction opens interendothelial gaps so plasma proteins and leukocytes can leave the vessel, producing the swelling. Complement is activated by antibody or microbial surfaces, the oxidative burst belongs to phagocytes, and cytotoxic T cells are adaptive rather than innate.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  }
+  // Part 7 — Homeostasis & Integration
+  { id: 'map-ent-7a', question: 'A response that opposes the original change and returns a variable to its set point is an example of:', options: ['Positive feedback', 'Feedforward control', 'Overshoot compensation', 'Negative feedback'], correctIndex: 3, explanation: 'Negative feedback counteracts a deviation and restores the set point, as in insulin lowering a high blood glucose. Positive feedback amplifies the stimulus toward an endpoint (oxytocin in labor), and normal compensation moves a value toward normal without overshooting.', partNumber: 7, partTitle: P7 },
+  { id: 'map-ent-7b', question: 'In respiratory acidosis, the primary change is:', options: ['A rise in $PCO_{2}$ from hypoventilation', 'A fall in $PCO_{2}$ from hyperventilation', 'A loss of $HCO_{3}^{-}$ from diarrhea', 'A gain of $HCO_{3}^{-}$ from vomiting'], correctIndex: 0, explanation: 'Hypoventilation retains $CO_{2}$, raising $PCO_{2}$ and lowering pH. Hyperventilation causes respiratory alkalosis, losing $HCO_{3}^{-}$ causes metabolic acidosis, and the $HCO_{3}^{-}$ gain after vomiting is metabolic alkalosis.', partNumber: 7, partTitle: P7 },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -224,12 +52,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Musculoskeletal System' },
-    { partNumber: 2, partTitle: 'Digestive System' },
-    { partNumber: 3, partTitle: 'Immune System' },
-    { partNumber: 4, partTitle: 'Reproductive System' },
-    { partNumber: 5, partTitle: 'Homeostasis' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' }
+    { partNumber: 1, partTitle: P1 },
+    { partNumber: 2, partTitle: P2 },
+    { partNumber: 3, partTitle: P3 },
+    { partNumber: 4, partTitle: P4 },
+    { partNumber: 5, partTitle: P5 },
+    { partNumber: 6, partTitle: P6 },
+    { partNumber: 7, partTitle: P7 },
   ]
 }

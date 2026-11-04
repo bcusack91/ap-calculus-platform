@@ -6,7 +6,7 @@ export const mcatSciPassagePart1Data = {
       type: 'text' as const,
       content: `# Science Passage Strategy for the MCAT
 
-**Part 1 of 7 — Understanding MCAT Science Passages**
+**Part 1 of 8 — Understanding MCAT Science Passages**
 
 ### Passage Types on the MCAT
 

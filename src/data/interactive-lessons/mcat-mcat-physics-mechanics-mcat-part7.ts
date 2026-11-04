@@ -32,7 +32,7 @@ $f' = f\\frac{v \\pm v_{observer}}{v \\mp v_{source}}$
 ### Standing Waves
 
 - **Both ends fixed**: $\\lambda_n = \\frac{2L}{n}$, $f_n = n\\frac{v}{2L}$
-- **One end open**: $\\lambda_n = \\frac{4L}{n}$, with only odd harmonics ($n = 1, 3, 5, ...$)
+- **One end open, one end closed**: $\\lambda_n = \\frac{4L}{n}$, with only odd harmonics ($n = 1, 3, 5, ...$)
 
 For a fixed source frequency, wavelength changes with the medium because $\\lambda = v/f$ and the wave speed depends on the medium.`
     },

@@ -1530,26 +1530,26 @@ export const registryChunk4: Record<string, InteractiveTopicConfig> = {
   // MCAT — new high-yield lesson suites (Tier 4)
   'mcat-lab-methods-mcat': {
     parts: [
-      { title: 'Chromatography', loader: () => import('./mcat-mcat-lab-methods-mcat-part1').then(m => m.mcatLabMethodsPart1Data) },
-      { title: 'Electrophoresis', loader: () => import('./mcat-mcat-lab-methods-mcat-part2').then(m => m.mcatLabMethodsPart2Data) },
+      { title: 'Chromatography, Extraction, Distillation & Recrystallization', loader: () => import('./mcat-mcat-lab-methods-mcat-part1').then(m => m.mcatLabMethodsPart1Data) },
+      { title: 'Electrophoresis (Separating by Size & Charge)', loader: () => import('./mcat-mcat-lab-methods-mcat-part2').then(m => m.mcatLabMethodsPart2Data) },
     ],
   },
   'mcat-social-psychology-mcat': {
     parts: [
       { title: 'Attitudes & Cognitive Dissonance', loader: () => import('./mcat-mcat-social-psychology-mcat-part1').then(m => m.mcatSocialPsychPart1Data) },
-      { title: 'Attribution Theory', loader: () => import('./mcat-mcat-social-psychology-mcat-part2').then(m => m.mcatSocialPsychPart2Data) },
+      { title: 'Attribution Theory (Explaining Behavior)', loader: () => import('./mcat-mcat-social-psychology-mcat-part2').then(m => m.mcatSocialPsychPart2Data) },
       { title: 'Conformity, Compliance & Obedience', loader: () => import('./mcat-mcat-social-psychology-mcat-part3').then(m => m.mcatSocialPsychPart3Data) },
-      { title: 'Prejudice & Discrimination', loader: () => import('./mcat-mcat-social-psychology-mcat-part4').then(m => m.mcatSocialPsychPart4Data) },
-      { title: 'Group Dynamics & Prosocial Behavior', loader: () => import('./mcat-mcat-social-psychology-mcat-part5').then(m => m.mcatSocialPsychPart5Data) },
+      { title: 'Prejudice, Stereotypes & Discrimination', loader: () => import('./mcat-mcat-social-psychology-mcat-part4').then(m => m.mcatSocialPsychPart4Data) },
+      { title: 'Group Dynamics, Aggression & Prosocial Behavior', loader: () => import('./mcat-mcat-social-psychology-mcat-part5').then(m => m.mcatSocialPsychPart5Data) },
     ],
   },
   'mcat-biological-basis-behavior-mcat': {
     parts: [
-      { title: 'Neurons & Action Potentials', loader: () => import('./mcat-mcat-biological-basis-behavior-mcat-part1').then(m => m.mcatBioBasisBehaviorPart1Data) },
+      { title: 'Neurons & the Action Potential', loader: () => import('./mcat-mcat-biological-basis-behavior-mcat-part1').then(m => m.mcatBioBasisBehaviorPart1Data) },
       { title: 'Synapses & Neurotransmitters', loader: () => import('./mcat-mcat-biological-basis-behavior-mcat-part2').then(m => m.mcatBioBasisBehaviorPart2Data) },
-      { title: 'Brain Regions', loader: () => import('./mcat-mcat-biological-basis-behavior-mcat-part3').then(m => m.mcatBioBasisBehaviorPart3Data) },
-      { title: 'Endocrine & Stress (HPA Axis)', loader: () => import('./mcat-mcat-biological-basis-behavior-mcat-part4').then(m => m.mcatBioBasisBehaviorPart4Data) },
-      { title: 'NS Organization & Behavioral Genetics', loader: () => import('./mcat-mcat-biological-basis-behavior-mcat-part5').then(m => m.mcatBioBasisBehaviorPart5Data) },
+      { title: 'Brain Regions & Their Functions', loader: () => import('./mcat-mcat-biological-basis-behavior-mcat-part3').then(m => m.mcatBioBasisBehaviorPart3Data) },
+      { title: 'Endocrine System & Behavior + Stress (HPA Axis)', loader: () => import('./mcat-mcat-biological-basis-behavior-mcat-part4').then(m => m.mcatBioBasisBehaviorPart4Data) },
+      { title: 'Nervous System Organization, Genetics & Review', loader: () => import('./mcat-mcat-biological-basis-behavior-mcat-part5').then(m => m.mcatBioBasisBehaviorPart5Data) },
     ],
   },
 }

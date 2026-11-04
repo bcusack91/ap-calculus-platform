@@ -1,221 +1,49 @@
 /**
  * Entrance Quiz — Microbiology (MCAT)
  * 14 questions · 7 parts (2 per part)
+ * Part titles match the interactive lesson's "Part N of 7" lines
+ * (re-aligned Nov 2026 so each part tests the lesson part of the same number).
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Bacteria: Structure & Classification'
+const P2 = 'Bacterial Growth & Metabolism'
+const P3 = 'Bacterial Genetics & Antibiotic Resistance'
+const P4 = 'Viruses'
+const P5 = 'Fungi, Parasites & Prions'
+const P6 = 'Immune Response to Infection'
+const P7 = 'Immune Disorders & Clinical Microbiology'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Bacterial Structure
-  {
-    id: 'mmicro-ent-1a',
-    question: 'Gram-positive bacteria stain purple with the Gram stain because they:',
-    options: [
-      'Have an outer membrane that traps the crystal violet-iodine complex.',
-      'Have a thick peptidoglycan wall that holds the crystal violet-iodine complex.',
-      'Lack peptidoglycan, so safranin binds the plasma membrane directly.',
-      'Carry lipopolysaccharide that binds crystal violet permanently.'
-    ],
-    correctIndex: 1,
-    explanation: 'The decolorization step is what separates the two groups. A gram-positive cell has a thick (~20-80 nm) peptidoglycan mesh that traps the crystal violet-iodine complex when ethanol is applied, so it stays purple. Gram-NEGATIVE cells are the ones with an outer membrane and LPS; ethanol dissolves that membrane and washes the dye out through their thin peptidoglycan layer, leaving them to take up the pink safranin counterstain.',
-    partNumber: 1,
-    partTitle: 'Bacterial Structure'
-  },
-  {
-    id: 'mmicro-ent-1b',
-    question: 'Which of the following structures is unique to bacteria and is the target of penicillin antibiotics?',
-    options: [
-      'The 70S ribosome',
-      'The peptidoglycan cell wall',
-      'The phospholipid plasma membrane',
-      'The flagellum, built from flagellin'
-    ],
-    correctIndex: 1,
-    explanation: 'Penicillins and the other beta-lactams acylate the transpeptidases (penicillin-binding proteins) that cross-link peptidoglycan strands, so the wall cannot be completed and the cell lyses. Human cells have no peptidoglycan at all, which is the source of the selective toxicity. The 70S ribosome is also uniquely bacterial, but it is the target of aminoglycosides, macrolides, and tetracyclines rather than penicillin.',
-    partNumber: 1,
-    partTitle: 'Bacterial Structure'
-  },
+  // Part 1 — Bacteria: Structure & Classification
+  { id: 'mmicro-ent-1a', question: 'Compared with a Gram-positive cell wall, the envelope of a Gram-negative bacterium has:', options: ['A thick peptidoglycan layer and no outer membrane', 'Thin peptidoglycan plus an outer membrane with LPS', 'No peptidoglycan, and a wall made of chitin', 'A thick outer layer built from teichoic acid'], correctIndex: 1, explanation: 'Gram-negative bacteria have a thin peptidoglycan layer and an outer membrane containing lipopolysaccharide, which is why they lose the crystal violet and stain pink. A thick peptidoglycan wall with no outer membrane describes Gram-positive bacteria, and chitin walls belong to fungi.', partNumber: 1, partTitle: P1 },
+  { id: 'mmicro-ent-1b', question: 'Penicillin kills bacteria by blocking the synthesis of which structure?', options: ['The 70S ribosome', 'The plasma membrane', 'The peptidoglycan wall', 'The LPS-rich outer membrane'], correctIndex: 2, explanation: 'Penicillin and other beta-lactams block cross-linking of peptidoglycan, a structure human cells lack, so the weakened wall bursts. Drugs such as tetracyclines and macrolides act on the 70S ribosome instead, and penicillin does not build or break membranes or LPS.', partNumber: 1, partTitle: P1 },
 
-  // Part 2: Bacterial Growth
-  {
-    id: 'mmicro-ent-2a',
-    question: 'During which phase of bacterial growth does cell division occur at the maximum rate, with generation time constant and population doubling exponentially?',
-    options: [
-      'The lag phase',
-      'The log phase',
-      'The stationary phase',
-      'The death phase'
-    ],
-    correctIndex: 1,
-    explanation: 'In the log (exponential) phase nutrients are plentiful and waste has not yet accumulated, so each cell divides at its maximum rate and the generation time is constant. Lag phase is the pre-division period of enzyme and ribosome synthesis; stationary phase is the plateau where division equals death as resources run out. Cells are most antibiotic-susceptible in log phase, since wall-synthesis and replication inhibitors need actively growing cells.',
-    partNumber: 2,
-    partTitle: 'Bacterial Growth'
-  },
-  {
-    id: 'mmicro-ent-2b',
-    question: 'Horizontal gene transfer in bacteria can occur via conjugation, transformation, and transduction. Which mechanism requires a bacteriophage as a vector?',
-    options: [
-      'Conjugation',
-      'Transformation',
-      'Transduction',
-      'Binary fission'
-    ],
-    correctIndex: 2,
-    explanation: 'In transduction a bacteriophage mispackages host DNA and injects it into the next cell it infects; generalized transduction uses lytic phages and can move any bacterial gene, while specialized transduction uses a temperate phage and moves genes flanking its integration site. Conjugation needs a sex pilus and direct cell-to-cell contact, transformation takes up naked DNA from the environment, and binary fission is ordinary vertical reproduction.',
-    partNumber: 2,
-    partTitle: 'Bacterial Growth'
-  },
+  // Part 2 — Bacterial Growth & Metabolism
+  { id: 'mmicro-ent-2a', question: 'A bacterium divides every 20 minutes. Starting from a single cell in log phase, how many cells are present after 2 hours?', options: ['12', '32', '64', '128'], correctIndex: 2, explanation: 'Two hours is 120 minutes, or 6 generations of 20 minutes, so $N = 1 \\times 2^6 = 64$. Multiplying 6 by 2 gives 12, which treats growth as linear, and 32 and 128 count one generation too few or too many.', partNumber: 2, partTitle: P2 },
+  { id: 'mmicro-ent-2b', question: 'An organism grows with or without $O_{2}$ but grows best when $O_{2}$ is present, using it for aerobic respiration. It is a(n):', options: ['Facultative anaerobe', 'Obligate aerobe', 'Obligate anaerobe', 'Aerotolerant anaerobe'], correctIndex: 0, explanation: 'A facultative anaerobe (such as E. coli) respires aerobically when $O_{2}$ is available and switches to fermentation without it. Obligate aerobes cannot grow without $O_{2}$, obligate anaerobes are killed by it, and aerotolerant anaerobes tolerate $O_{2}$ but never use it, so they grow equally with or without it.', partNumber: 2, partTitle: P2 },
 
-  // Part 3: Viral Structure
-  {
-    id: 'mmicro-ent-3a',
-    question: 'All viruses must contain which of the following?',
-    options: [
-      'A lipid envelope taken from the host membrane.',
-      'Both DNA and RNA packaged in the same virion.',
-      'A protein capsid surrounding a nucleic acid genome.',
-      'Ribosomes for synthesizing their own proteins.'
-    ],
-    correctIndex: 2,
-    explanation: 'The irreducible minimum for a virus is a genome — DNA or RNA, single- or double-stranded, but never both in one virion — packaged inside a protein capsid. An envelope is optional and marks only the enveloped families, which acquire it by budding through a host membrane. No virus carries ribosomes; every one of them borrows the host translation machinery, which is why viruses are obligate intracellular parasites.',
-    partNumber: 3,
-    partTitle: 'Viral Structure'
-  },
-  {
-    id: 'mmicro-ent-3b',
-    question: 'The antigenic shift responsible for influenza pandemics occurs when:',
-    options: [
-      'Point mutations gradually accumulate in hemagglutinin and neuraminidase.',
-      'Two influenza A strains co-infect a cell and swap RNA segments.',
-      'The virus alters its capsid proteins to escape T-cell recognition.',
-      'The viral RNA integrates into the host chromosome and reactivates.'
-    ],
-    correctIndex: 1,
-    explanation: 'Influenza A has a segmented genome of eight RNA pieces, so when two strains infect the same cell (classically an avian and a human strain in a pig) progeny virions can reassort those segments. The result is an abrupt new combination of HA and/or NA subtypes against which the population has no immunity — the making of a pandemic. Gradual point mutation is antigenic DRIFT, which drives ordinary seasonal variation.',
-    partNumber: 3,
-    partTitle: 'Viral Structure'
-  },
+  // Part 3 — Bacterial Genetics & Antibiotic Resistance
+  { id: 'mmicro-ent-3a', question: 'Which pairing of a gene-transfer mechanism with how DNA moves is correct?', options: ['Transformation: DNA passed through a pilus', 'Conjugation: naked DNA taken up from the medium', 'Transduction: plasmid passed by direct contact', 'Transduction: DNA carried by a bacteriophage'], correctIndex: 3, explanation: 'In transduction a bacteriophage carries bacterial DNA from one cell to another. Transformation is uptake of naked DNA from the surroundings, and conjugation passes a plasmid through a pilus during direct cell contact.', partNumber: 3, partTitle: P3 },
+  { id: 'mmicro-ent-3b', question: 'Which change would NOT make a bacterium more resistant to an antibiotic?', options: ['Pumping the drug out with efflux proteins', 'Destroying the drug with an enzyme', 'Adding porins that let more drug enter', 'Altering the protein the drug binds'], correctIndex: 2, explanation: 'More porins would increase drug entry and make the cell more susceptible; resistant strains often lose porins instead. Efflux pumps, drug-inactivating enzymes (such as beta-lactamase) and target modification are the classic resistance mechanisms.', partNumber: 3, partTitle: P3 },
 
-  // Part 4: Viral Replication
-  {
-    id: 'mmicro-ent-4a',
-    question: 'HIV, a retrovirus, uses reverse transcriptase to:',
-    options: [
-      'Transcribe host DNA into viral RNA for packaging into new virions.',
-      'Copy its single-stranded RNA genome into double-stranded DNA.',
-      'Replicate the RNA genome directly, with no DNA intermediate.',
-      'Cleave Gag-Pol polyproteins so that new virions can mature.'
-    ],
-    correctIndex: 1,
-    explanation: 'Reverse transcriptase runs the central dogma backwards: viral RNA becomes an RNA:DNA hybrid, RNase H degrades the RNA strand, and the second DNA strand is made, yielding dsDNA that integrase then splices into the host chromosome as a provirus for host RNA Pol II to transcribe. Polyprotein cleavage is the job of HIV protease, the target of a separate drug class, and the enzyme has no proofreading, which is why resistance arises so fast.',
-    partNumber: 4,
-    partTitle: 'Viral Replication'
-  },
-  {
-    id: 'mmicro-ent-4b',
-    question: 'Which statement best describes the lytic vs. lysogenic cycles of a bacteriophage?',
-    options: [
-      'The lytic cycle integrates phage DNA into the bacterial chromosome.',
-      'The lysogenic cycle integrates a prophage; the lytic cycle bursts the cell.',
-      'A lysogenic infection always becomes lytic within a single generation.',
-      'In the lytic cycle the host survives and buds off new phages.'
-    ],
-    correctIndex: 1,
-    explanation: 'In lysogeny the phage genome integrates as a prophage and is copied passively with the host chromosome, causing no immediate harm until an inducing stress activates it. The lytic cycle is the productive one: the phage commandeers host machinery, assembles roughly 100-200 progeny, and lyses the cell to release them. Lambda phage is the classic temperate phage able to do either; budding without killing the host is an animal-virus strategy, not a phage one.',
-    partNumber: 4,
-    partTitle: 'Viral Replication'
-  },
+  // Part 4 — Viruses
+  { id: 'mmicro-ent-4a', question: "A virus's genome can consist of:", options: ['Both DNA and RNA, packaged together', 'DNA or RNA, but never both in one virion', 'Only DNA, since RNA is too unstable', 'Only RNA, copied by host DNA polymerase'], correctIndex: 1, explanation: 'A virion carries either DNA or RNA (single- or double-stranded), never both. Many viruses, such as influenza and HIV, have RNA genomes, and many others, such as herpesviruses, have DNA genomes.', partNumber: 4, partTitle: P4 },
+  { id: 'mmicro-ent-4b', question: 'Viruses are obligate intracellular parasites mainly because they:', options: ['Lack ribosomes and their own metabolism', 'Are too large to survive outside a cell', 'Lose their capsids in extracellular fluid', 'Copy their genomes only by binary fission'], correctIndex: 0, explanation: 'Viruses have no ribosomes and no energy-producing metabolism, so they can only replicate by using a host cell’s machinery. They are far smaller than cells, virions remain intact outside hosts (naked viruses especially), and binary fission is how bacteria divide.', partNumber: 4, partTitle: P4 },
 
-  // Part 5: Eukaryotic Microbes
-  {
-    id: 'mmicro-ent-5a',
-    question: 'Plasmodium falciparum, the causative agent of severe malaria, is an example of which type of eukaryotic microorganism?',
-    options: [
-      'A mold (filamentous fungus)',
-      'A helminth (parasitic worm)',
-      'A protozoan (apicomplexan)',
-      'A prion (misfolded protein)'
-    ],
-    correctIndex: 2,
-    explanation: 'Plasmodium is a single-celled apicomplexan protozoan, named for the apical complex of organelles it uses to invade host cells. Its life cycle is split between the Anopheles mosquito vector and the human host, where synchronized rupture of infected erythrocytes produces the classic periodic fevers. Note that a prion is not even a microorganism — it is a protein with no cells and no genome.',
-    partNumber: 5,
-    partTitle: 'Eukaryotic Microbes'
-  },
-  {
-    id: 'mmicro-ent-5b',
-    question: 'Fungi differ from bacteria in that fungi:',
-    options: [
-      'Are prokaryotes whose cell walls contain peptidoglycan.',
-      'Are eukaryotes with chitin walls and ergosterol membranes.',
-      'Have no nucleus and reproduce only by sexual means.',
-      'Are obligate intracellular parasites, unable to grow outside a host.'
-    ],
-    correctIndex: 1,
-    explanation: 'Fungi are true eukaryotes, with a nucleus and mitochondria, walls of chitin rather than peptidoglycan, and ergosterol where an animal membrane would carry cholesterol. That sterol difference is what azole and polyene antifungals exploit for selectivity. Fungi also reproduce both sexually and asexually and most are free-living saprophytes rather than obligate parasites.',
-    partNumber: 5,
-    partTitle: 'Eukaryotic Microbes'
-  },
+  // Part 5 — Fungi, Parasites & Prions
+  { id: 'mmicro-ent-5a', question: 'Echinocandin antifungal drugs target:', options: ['Ergosterol in the fungal cell membrane', 'Peptidoglycan in the fungal cell wall', '70S ribosomes in the fungal cytoplasm', 'Glucan synthesis in the fungal cell wall'], correctIndex: 3, explanation: 'Echinocandins block synthesis of glucan, a fungal wall polysaccharide. Azoles and amphotericin B act on ergosterol, fungi have no peptidoglycan (which is why beta-lactams fail), and fungi are eukaryotes with 80S ribosomes.', partNumber: 5, partTitle: P5 },
+  { id: 'mmicro-ent-5b', question: 'Fungi differ from bacteria in that fungi:', options: ['Are prokaryotes with peptidoglycan walls', 'Are eukaryotes with walls made of chitin', 'Have no nucleus and reproduce only sexually', 'Cannot grow anywhere outside a host cell'], correctIndex: 1, explanation: 'Fungi are eukaryotes whose walls contain chitin and whose membranes contain ergosterol instead of cholesterol. Peptidoglycan walls and the lack of a nucleus describe bacteria, and most fungi grow freely in the environment and can reproduce asexually (yeast bud).', partNumber: 5, partTitle: P5 },
 
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'mmicro-ent-6a',
-    question: 'A patient with a bacterial infection is treated with rifamycin, which inhibits bacterial RNA polymerase. Why does rifamycin NOT affect human cells?',
-    options: [
-      'Human cells do not use an RNA polymerase for transcription.',
-      'Human RNA polymerase has a structurally different subunit.',
-      'Rifamycin is too large to cross the nuclear envelope.',
-      'Human cells pump rifamycin out before it reaches the nucleus.'
-    ],
-    correctIndex: 1,
-    explanation: 'Rifamycins bind a pocket on the beta subunit of BACTERIAL RNA polymerase and physically block the growing RNA chain. The eukaryotic enzymes (RNA Pol I, II, and III) are built from a different set of subunits that lack that binding pocket, so the drug simply has no target in human cells. This kind of structural divergence between homologous enzymes is the basis of selective toxicity throughout antimicrobial pharmacology.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  {
-    id: 'mmicro-ent-6b',
-    question: 'An epidemic of food poisoning is traced to a strain of Staphylococcus aureus that produces enterotoxin B. The enterotoxin is a preformed toxin in the food. Which characteristic of this illness distinguishes it from infection-based food poisoning?',
-    options: [
-      'It takes 2-3 days to appear while the bacteria colonize the gut.',
-      'Antibiotics clear it rapidly by killing the toxin-producing bacteria.',
-      'Symptoms appear within 1-6 hours, before any bacterial growth.',
-      'It is produced by bacterial invasion of the intestinal mucosa.'
-    ],
-    correctIndex: 2,
-    explanation: 'This is an intoxication rather than an infection: the toxin is already present in the food, so it acts on gut receptors and vagal afferents as soon as it is swallowed, producing vomiting and diarrhea in 1-6 hours with no incubation period for bacterial growth. Antibiotics cannot help, because the staphylococcal enterotoxins are heat-stable superantigens that survive both cooking and the death of the organism. Invasive infections such as Salmonella instead take 8-48 hours.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
+  // Part 6 — Immune Response to Infection
+  { id: 'mmicro-ent-6a', question: 'Which pairing of an MHC class with the T cell that recognizes it is correct?', options: ['MHC I with $CD4^{+}$ helper T cells', 'MHC II with $CD8^{+}$ cytotoxic T cells', 'MHC II with $CD4^{+}$ helper T cells', 'MHC I with B-cell antigen receptors'], correctIndex: 2, explanation: 'By the rule of 8, MHC II (exogenous antigen on antigen-presenting cells) pairs with $CD4^{+}$ helper T cells ($2 \\times 4 = 8$), and MHC I (endogenous antigen on all nucleated cells) pairs with $CD8^{+}$ cytotoxic T cells ($1 \\times 8$). B-cell receptors bind free antigen and do not need MHC.', partNumber: 6, partTitle: P6 },
+  { id: 'mmicro-ent-6b', question: 'Which cells carry out the adaptive (rather than innate) immune response?', options: ['Neutrophils and macrophages', 'Natural killer cells', 'Mast cells and eosinophils', 'B cells and T cells'], correctIndex: 3, explanation: 'Adaptive immunity is antigen-specific and forms memory, and it is carried out by B and T lymphocytes. Neutrophils, macrophages, NK cells, mast cells and eosinophils are all part of the innate response.', partNumber: 6, partTitle: P6 },
 
-  // Part 7: Review & Applications
-  {
-    id: 'mmicro-ent-7a',
-    question: 'Prions are infectious agents responsible for transmissible spongiform encephalopathies (TSEs) such as Creutzfeldt-Jakob disease (CJD). What makes prions unique compared to other infectious agents?',
-    options: [
-      'They are very small viruses with a single-strand RNA genome.',
-      'They are misfolded proteins that carry no nucleic acid at all.',
-      'They are bacteria able to survive only inside neurons.',
-      'They are fungal toxins that contaminate stored grain.'
-    ],
-    correctIndex: 1,
-    explanation: 'A prion is the normal cellular protein PrPC refolded into the beta-sheet-rich, protease-resistant PrPSc conformation, which then templates the same misfolding onto further copies of PrPC. Propagation therefore needs no DNA or RNA — an apparent exception to the central dogma — and explains why prions resist autoclaving, formalin, and the radiation doses that destroy conventional pathogens.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  },
-  {
-    id: 'mmicro-ent-7b',
-    question: 'mRNA vaccines (like those for COVID-19) work by:',
-    options: [
-      'Integrating viral DNA into the genome for permanent antibody output.',
-      'Delivering mRNA that host cells translate into a viral antigen.',
-      'Injecting a live attenuated virus that causes a mild infection.',
-      'Supplying pre-formed neutralizing antibodies that last for life.'
-    ],
-    correctIndex: 1,
-    explanation: 'A lipid nanoparticle carries mRNA encoding the SARS-CoV-2 spike protein into the cytoplasm, where the cell\'s own ribosomes translate it; the spike protein is then displayed to the immune system, generating B-cell antibody and T-cell responses. The mRNA never enters the nucleus and is degraded within days, so nothing is integrated. Nor is any live virus given, and the durable protection comes from the recipient\'s own memory cells rather than from transferred antibody.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  }
+  // Part 7 — Immune Disorders & Clinical Microbiology
+  { id: 'mmicro-ent-7a', question: 'Which antibody class is the most abundant in serum?', options: ['IgM', 'IgG', 'IgA', 'IgE'], correctIndex: 1, explanation: 'IgG is the most plentiful serum antibody and dominates secondary responses. IgM is the first class made in a primary response, IgA protects mucosal surfaces, and IgE drives allergies and antiparasite responses.', partNumber: 7, partTitle: P7 },
+  { id: 'mmicro-ent-7b', question: 'Which antibody class serves mainly as an antigen receptor on the surface of naive B cells?', options: ['IgD', 'IgE', 'IgA', 'IgG'], correctIndex: 0, explanation: 'IgD sits on the surface of mature naive B cells (alongside monomeric IgM) and acts as part of the B-cell receptor. IgE binds mast cells, IgA is secreted onto mucosal surfaces, and IgG circulates in the blood.', partNumber: 7, partTitle: P7 },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -224,12 +52,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Bacterial Structure' },
-    { partNumber: 2, partTitle: 'Bacterial Growth' },
-    { partNumber: 3, partTitle: 'Viral Structure' },
-    { partNumber: 4, partTitle: 'Viral Replication' },
-    { partNumber: 5, partTitle: 'Eukaryotic Microbes' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' }
+    { partNumber: 1, partTitle: P1 },
+    { partNumber: 2, partTitle: P2 },
+    { partNumber: 3, partTitle: P3 },
+    { partNumber: 4, partTitle: P4 },
+    { partNumber: 5, partTitle: P5 },
+    { partNumber: 6, partTitle: P6 },
+    { partNumber: 7, partTitle: P7 },
   ]
 }

@@ -6,7 +6,7 @@ export const mcatSciPassagePart6Data = {
       type: 'text' as const,
       content: `# Science Passage Strategy for the MCAT
 
-**Part 6 of 7 — Biology & Biochemistry Passage Tactics**
+**Part 6 of 8 — Biology & Biochemistry Passage Tactics**
 
 ### Bio/Biochem Passage Features
 

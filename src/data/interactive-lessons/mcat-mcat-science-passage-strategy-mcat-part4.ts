@@ -6,7 +6,7 @@ export const mcatSciPassagePart4Data = {
       type: 'text' as const,
       content: `# Science Passage Strategy for the MCAT
 
-**Part 4 of 7 — Question Types & Strategies**
+**Part 4 of 8 — Question Types & Strategies**
 
 ### MCAT Question Categories
 

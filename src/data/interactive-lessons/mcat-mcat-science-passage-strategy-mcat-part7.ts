@@ -6,7 +6,7 @@ export const mcatSciPassagePart7Data = {
       type: 'text' as const,
       content: `# Science Passage Strategy for the MCAT
 
-**Part 7 of 7 — Psych/Soc Passage Tactics**
+**Part 7 of 8 — Psych/Soc Passage Tactics**
 
 ### Psych/Soc Passage Features
 

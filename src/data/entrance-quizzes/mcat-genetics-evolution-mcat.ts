@@ -1,221 +1,49 @@
 /**
- * Entrance Quiz — Genetics and Evolution (MCAT)
+ * Entrance Quiz — Genetics & Evolution (MCAT)
  * 14 questions · 7 parts (2 per part)
+ * Part titles match the interactive lesson's "Part N of 7" lines
+ * (re-aligned Nov 2026 so each part tests the lesson part of the same number).
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Mendelian Genetics'
+const P2 = 'Non-Mendelian Inheritance'
+const P3 = 'Sex-Linked Inheritance & Pedigrees'
+const P4 = 'Population Genetics'
+const P5 = 'Evolution & Natural Selection'
+const P6 = 'Speciation & Phylogenetics'
+const P7 = 'Genetic Diseases & Chromosomal Abnormalities'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Mendelian Genetics
-  {
-    id: 'mge-ent-1a',
-    question: 'Two heterozygous parents (Aa × Aa) cross for a completely dominant trait. What fraction of offspring will express the dominant phenotype?',
-    options: [
-      '1/4',
-      '1/2',
-      '3/4',
-      '1/1'
-    ],
-    correctIndex: 2,
-    explanation: 'A Punnett square for Aa × Aa yields: AA (1/4), Aa (2/4), aa (1/4). Both AA and Aa express the dominant phenotype, giving 3/4 dominant : 1/4 recessive—the classic 3:1 ratio for a monohybrid cross.',
-    partNumber: 1,
-    partTitle: 'Mendelian Genetics'
-  },
-  {
-    id: 'mge-ent-1b',
-    question: 'Two parents are each carriers for cystic fibrosis (autosomal recessive, CF allele = f). What is the probability that their first child will have cystic fibrosis?',
-    options: [
-      '0% — carriers are not affected.',
-      '25%',
-      '50%',
-      '75%'
-    ],
-    correctIndex: 1,
-    explanation: 'Both parents are Ff. Cross: Ff × Ff → FF (1/4), Ff (2/4), ff (1/4). Only ff individuals have CF, giving a 25% (1/4) probability. Carriers (Ff) are unaffected but can pass the allele to offspring.',
-    partNumber: 1,
-    partTitle: 'Mendelian Genetics'
-  },
+  // Part 1 — Mendelian Genetics
+  { id: 'mge-ent-1a', question: 'Two plants heterozygous for two unlinked genes ($AaBb \\times AaBb$, complete dominance) are crossed. The expected phenotypic ratio is:', options: ['3:1', '1:2:1', '9:3:3:1', '1:1:1:1'], correctIndex: 2, explanation: 'Each gene alone gives 3:1, and independent assortment multiplies them: $(3:1)(3:1) = 9:3:3:1$. A 3:1 ratio is a monohybrid cross, 1:2:1 is a monohybrid genotype ratio, and 1:1:1:1 comes from a dihybrid test cross ($AaBb \\times aabb$).', partNumber: 1, partTitle: P1 },
+  { id: 'mge-ent-1b', question: 'In peas, tall ($T$) is dominant to short ($t$). A cross of $Tt \\times tt$ is expected to give what fraction of tall offspring?', options: ['1/4', '1/2', '3/4', 'All of them'], correctIndex: 1, explanation: 'The $Tt$ parent passes $T$ or $t$ with equal chance, and the $tt$ parent always passes $t$, so offspring are half $Tt$ (tall) and half $tt$ (short). Three-quarters tall would need two heterozygous parents, and all tall would need a $TT$ parent.', partNumber: 1, partTitle: P1 },
 
-  // Part 2: Non-Mendelian Patterns
-  {
-    id: 'mge-ent-2a',
-    question: 'In codominance, a cross between a red-flowered plant $(R^{1}R^{1})$ and a white-flowered plant $(R^{2}R^{2})$ produces offspring with both red and white patches. This differs from incomplete dominance because:',
-    options: [
-      'In codominance, both alleles are fully expressed simultaneously; in incomplete dominance, a blended intermediate phenotype results.',
-      'In codominance, only one allele is expressed; in incomplete dominance, both are equally silent.',
-      'In incomplete dominance, heterozygotes look like one parent; in codominance, they look like neither parent.',
-      'Codominance only occurs in plants; incomplete dominance only in animals.'
-    ],
-    correctIndex: 0,
-    explanation: 'Codominance: both alleles are fully expressed (patches of each color). Incomplete dominance: the heterozygote shows a blended intermediate (e.g., pink from red × white). These are distinct patterns of inheritance that both deviate from simple dominance.',
-    partNumber: 2,
-    partTitle: 'Non-Mendelian Patterns'
-  },
-  {
-    id: 'mge-ent-2b',
-    question: 'Hemophilia A is an X-linked recessive disorder. A carrier mother $(X^{H} X^{h})$ and an unaffected father $(X^{H} Y)$ have children. What fraction of their daughters will be carriers?',
-    options: [
-      '0%',
-      '25%',
-      '50%',
-      '100%'
-    ],
-    correctIndex: 2,
-    explanation: 'Mother is $X^{H}$ $X^{h}$; father is $X^{H}$ Y. Daughters receive the father\'s $X^{H}$ plus either mother\'s $X^{H}$ or $X^{h}$. Possible daughters: $X^{H}$ $X^{H}$ (normal, 1/2) and $X^{H}$ $X^{h}$ (carrier, 1/2). Sons: $X^{H}$ Y (normal) and $X^{h}$ Y (affected). So 50% of daughters are carriers.',
-    partNumber: 2,
-    partTitle: 'Non-Mendelian Patterns'
-  },
+  // Part 2 — Non-Mendelian Inheritance
+  { id: 'mge-ent-2a', question: "A child has type O blood. Which pair of blood types could NOT belong to the child's parents?", options: ['Type A and type B', 'Type A and type O', 'Type AB and type A', 'Type O and type O'], correctIndex: 2, explanation: 'A type O child is $ii$ and needs an $i$ allele from each parent. A type AB parent is $I^AI^B$ and has no $i$ to give, so that pair is impossible. Type A and type B parents can both be heterozygous ($I^Ai$ and $I^Bi$), and type O parents always pass $i$.', partNumber: 2, partTitle: P2 },
+  { id: 'mge-ent-2b', question: 'A man with a disorder caused by a mitochondrial DNA mutation has children with an unaffected woman. What is expected?', options: ['None of the children will be affected', 'All of the children will be affected', 'Only his sons will be affected', 'Half of the children will be affected'], correctIndex: 0, explanation: 'Mitochondria are inherited through the egg, so a father does not pass his mitochondrial DNA to any child. An affected mother, by contrast, passes it to all of her children. Sex-limited or 50% patterns belong to nuclear genes.', partNumber: 2, partTitle: P2 },
 
-  // Part 3: Genetic Mutations
-  {
-    id: 'mge-ent-3a',
-    question: 'A frameshift mutation is more likely to disrupt protein function than a missense mutation because:',
-    options: [
-      'Frameshifts always introduce premature stop codons, while missense mutations never do.',
-      'Frameshifts alter the reading frame, changing all downstream amino acids and often creating premature stops, whereas missense mutations alter only one amino acid.',
-      'Missense mutations change the DNA sequence while frameshifts do not.',
-      'Frameshifts are always in exons and missense mutations are always in introns.'
-    ],
-    correctIndex: 1,
-    explanation: 'Insertion or deletion of nucleotides (not in multiples of 3) shifts the reading frame. Every codon downstream is altered, typically producing a completely different and often truncated protein. A missense mutation changes just one amino acid, which may or may not impair function.',
-    partNumber: 3,
-    partTitle: 'Genetic Mutations'
-  },
-  {
-    id: 'mge-ent-3b',
-    question: 'Silent mutations do not change the amino acid sequence because:',
-    options: [
-      'They occur only in non-coding intron sequences.',
-      'They change a codon to a synonymous codon that specifies the same amino acid, due to the degeneracy of the genetic code.',
-      'The ribosome can repair single-nucleotide changes during translation.',
-      'They always affect the third wobble position and are recognized and corrected by tRNA.'
-    ],
-    correctIndex: 1,
-    explanation: 'The genetic code is degenerate: most amino acids are encoded by more than one codon (synonymous codons). Silent mutations substitute a nucleotide to produce a different codon for the same amino acid. These changes are especially common at the third codon position (wobble position).',
-    partNumber: 3,
-    partTitle: 'Genetic Mutations'
-  },
+  // Part 3 — Sex-Linked Inheritance & Pedigrees
+  { id: 'mge-ent-3a', question: 'Hemophilia A is X-linked recessive. A carrier mother ($X^{H}X^{h}$) and an unaffected father ($X^{H}Y$) have children. What fraction of their daughters are expected to be carriers?', options: ['0%', '25%', '50%', '100%'], correctIndex: 2, explanation: 'Every daughter gets $X^{H}$ from the father and either $X^{H}$ or $X^{h}$ from the mother, so half are carriers ($X^{H}X^{h}$) and none are affected. The 25% figure is the share of ALL children who are carrier daughters, not the share of daughters.', partNumber: 3, partTitle: P3 },
+  { id: 'mge-ent-3b', question: "An unaffected woman's father had an X-linked recessive disease. She has a son with an unaffected man. What is the probability that the son is affected?", options: ['0', '1/8', '1/4', '1/2'], correctIndex: 3, explanation: 'An affected father gives his X to every daughter, so she is an obligate carrier ($X^{A}X^{a}$). A son gets his only X from her, so he has a 1/2 chance of receiving $X^{a}$. The 1/4 figure is the chance for a child of unknown sex.', partNumber: 3, partTitle: P3 },
 
-  // Part 4: Population Genetics
-  {
-    id: 'mge-ent-4a',
-    question: 'In a population at Hardy-Weinberg equilibrium, the frequency of the recessive allele (q) is 0.3. What is the expected frequency of heterozygotes?',
-    options: [
-      '0.09',
-      '0.42',
-      '0.49',
-      '0.21'
-    ],
-    correctIndex: 1,
-    explanation: 'HWE: p + q = 1, so p = 0.7. Heterozygote frequency = 2pq = 2(0.7)(0.3) = 0.42. Homozygous dominant = $p^{2}$ = 0.49; homozygous recessive = $q^{2}$ = 0.09. Always check: 0.49 + 0.42 + 0.09 = 1.0 ✓',
-    partNumber: 4,
-    partTitle: 'Population Genetics'
-  },
-  {
-    id: 'mge-ent-4b',
-    question: 'Which of the following would VIOLATE Hardy-Weinberg equilibrium in a population?',
-    options: [
-      'Random mating among all genotypes.',
-      'A very large population size with no migration.',
-      'A significant portion of the population migrating out and being replaced by individuals from a genetically distinct population.',
-      'No selection pressure on any genotype.'
-    ],
-    correctIndex: 2,
-    explanation: 'Hardy-Weinberg equilibrium requires: random mating, large population, no mutation, no migration, no natural selection. Gene flow (migration) changes allele frequencies and violates HWE. Random mating, a large population with no migration, and no selection pressure are conditions that maintain HWE.',
-    partNumber: 4,
-    partTitle: 'Population Genetics'
-  },
+  // Part 4 — Population Genetics
+  { id: 'mge-ent-4a', question: 'For a gene with two alleles, the Hardy–Weinberg equation $p + q = 1$ describes:', options: ['The two allele frequencies at that locus', 'The three genotype frequencies at that locus', 'The fraction of carriers in the population', 'The rate at which new mutations appear'], correctIndex: 0, explanation: 'Here $p$ and $q$ are the frequencies of the two alleles, which must add to 1. The genotype frequencies are given by the second equation, $p^2 + 2pq + q^2 = 1$, where $2pq$ is the carrier (heterozygote) frequency. Neither equation measures the mutation rate.', partNumber: 4, partTitle: P4 },
+  { id: 'mge-ent-4b', question: 'Which condition is required for a population to stay in Hardy–Weinberg equilibrium?', options: ['Strong selection for the fittest genotype', 'Steady migration between populations', 'A small, isolated breeding population', 'Random mating among all individuals'], correctIndex: 3, explanation: 'Hardy–Weinberg equilibrium requires random mating, a large population, no mutation, no migration and no selection. Selection, gene flow and the genetic drift that dominates small populations all change allele frequencies, which means evolution is occurring.', partNumber: 4, partTitle: P4 },
 
-  // Part 5: Natural Selection
-  {
-    id: 'mge-ent-5a',
-    question: 'The sickle-cell allele (HbS) is maintained at high frequency in malaria-endemic regions because heterozygotes (HbA/HbS) have higher fitness than either homozygote. This is an example of:',
-    options: [
-      'Directional selection favoring the dominant HbA allele.',
-      'Genetic drift eliminating the HbS allele.',
-      'Balancing selection (heterozygote advantage/overdominance).',
-      'Disruptive selection creating two distinct phenotypic classes.'
-    ],
-    correctIndex: 2,
-    explanation: 'Balancing selection (specifically heterozygote advantage or overdominance) maintains both alleles. Heterozygotes have partial sickling protection against malaria without the severe anemia of HbS/HbS homozygotes. This explains the high frequency of HbS in malaria-endemic areas.',
-    partNumber: 5,
-    partTitle: 'Natural Selection'
-  },
-  {
-    id: 'mge-ent-5b',
-    question: 'Convergent evolution refers to:',
-    options: [
-      'Two populations of the same species diverging into separate species through geographic isolation.',
-      'Unrelated species independently evolving similar traits in response to similar environmental pressures.',
-      'The reversion of a derived trait back to an ancestral state.',
-      'Rapid speciation following a mass extinction event.'
-    ],
-    correctIndex: 1,
-    explanation: 'Convergent evolution occurs when distantly related organisms independently evolve similar adaptations to analogous environmental challenges. Classic examples: wings of bats (mammals) and birds; echolocation in bats and dolphins; streamlined body shape in sharks (fish) and dolphins (mammals).',
-    partNumber: 5,
-    partTitle: 'Natural Selection'
-  },
+  // Part 5 — Evolution & Natural Selection
+  { id: 'mge-ent-5a', question: "Over many generations, a population's single-peaked distribution of a trait splits into two peaks at the extremes. This pattern reflects:", options: ['Disruptive selection', 'Stabilizing selection', 'Directional selection', 'Genetic drift'], correctIndex: 0, explanation: 'Disruptive selection favors both extremes over the average, producing a bimodal distribution. Stabilizing selection favors the average and narrows the curve, directional selection shifts the single peak one way, and drift changes frequencies at random rather than favoring extremes.', partNumber: 5, partTitle: P5 },
+  { id: 'mge-ent-5b', question: 'Which statement about natural selection is correct?', options: ['It creates new alleles to suit the environment', 'It acts on phenotypes and shifts allele frequencies', 'It changes individuals during their own lifetimes', 'It always leaves one best genotype in a population'], correctIndex: 1, explanation: 'Selection acts on the phenotypes of individuals, and because fitter phenotypes leave more offspring, the frequencies of the underlying alleles change across generations. New alleles come from mutation, populations (not individuals) evolve, and balancing or disruptive selection can keep several genotypes.', partNumber: 5, partTitle: P5 },
 
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'mge-ent-6a',
-    question: 'A pedigree shows that an autosomal dominant condition is present in every generation, affects both males and females equally, and an affected individual always has at least one affected parent. This pattern is most consistent with:',
-    options: [
-      'Autosomal recessive inheritance.',
-      'X-linked recessive inheritance.',
-      'Autosomal dominant inheritance.',
-      'Mitochondrial inheritance.'
-    ],
-    correctIndex: 2,
-    explanation: 'Autosomal dominant hallmarks: (1) every generation affected (vertical transmission), (2) both sexes equally affected, (3) affected individuals have an affected parent (except new mutations), (4) ~50% of children of an affected parent are affected.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  {
-    id: 'mge-ent-6b',
-    question: 'In a dihybrid cross AaBb × AaBb (A and B independently assorting), what fraction of offspring are expected to be doubly homozygous recessive (aabb)?',
-    options: [
-      '1/16',
-      '3/16',
-      '1/4',
-      '9/16'
-    ],
-    correctIndex: 0,
-    explanation: 'For independently assorting genes: P(aa) = 1/4 and P(bb) = 1/4. By the multiplication rule: P(aabb) = 1/4 × 1/4 = 1/16. The classic 9:3:3:1 ratio allocates 1/16 to the doubly recessive class.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
+  // Part 6 — Speciation & Phylogenetics
+  { id: 'mge-ent-6a', question: 'Which situation describes allopatric speciation?', options: ['A geographic barrier blocks gene flow between groups', 'Populations in one area diverge through behavior', 'Polyploidy isolates a plant from its parent species', 'Selection removes all but one phenotype in an area'], correctIndex: 0, explanation: 'In allopatric speciation, physical separation (a mountain range, a river, an ocean) stops gene flow, and the isolated groups diverge. Divergence within the same area, including by polyploidy, is sympatric speciation, and selection for a single phenotype does not by itself create a new species.', partNumber: 6, partTitle: P6 },
+  { id: 'mge-ent-6b', question: 'Under the biological species concept, two populations belong to one species if they:', options: ['Look alike and share the same habitat', 'Share at least one homologous structure', 'Can mate, even if every hybrid is sterile', 'Can interbreed and produce fertile offspring'], correctIndex: 3, explanation: 'The biological species concept requires interbreeding that yields fertile offspring. Sterile hybrids (such as mules) mark a postzygotic barrier between separate species, and similar appearance or shared homologous structures can occur in different species.', partNumber: 6, partTitle: P6 },
 
-  // Part 7: Review & Applications
-  {
-    id: 'mge-ent-7a',
-    question: 'Allopatric speciation occurs when:',
-    options: [
-      'Two populations in the same geographic area develop reproductive isolation through behavioral differences.',
-      'A geographic barrier physically separates a population, preventing gene flow and allowing divergence.',
-      'Polyploidy doubles the chromosome number, instantly creating a new species.',
-      'Natural selection eliminates all but one phenotype in a population.'
-    ],
-    correctIndex: 1,
-    explanation: 'Allopatric speciation (allo = "other," patric = "homeland") requires geographic isolation. Separated populations undergo independent mutation and selection, accumulating genetic differences until reproductive isolation is complete—even if the barrier is later removed.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  },
-  {
-    id: 'mge-ent-7b',
-    question: 'Genomic imprinting is an epigenetic phenomenon in which gene expression depends on the parental origin of the allele. Prader-Willi syndrome results when the paternal chromosome 15q11-13 region is deleted or silenced. This means the maternal copy of this region is:',
-    options: [
-      'Also deleted in Prader-Willi syndrome.',
-      'Normally imprinted (silenced), so loss of the paternal copy leaves no functional gene.',
-      'Overexpressed to compensate for the paternal loss.',
-      'Translocated to another chromosome.'
-    ],
-    correctIndex: 1,
-    explanation: 'In genomic imprinting, one parental copy is epigenetically silenced. The maternal chromosome 15q11-13 is normally imprinted (silenced). When the paternal copy is deleted, neither copy is expressed, causing Prader-Willi. The converse (maternal deletion) causes Angelman syndrome.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  }
+  // Part 7 — Genetic Diseases & Chromosomal Abnormalities
+  { id: 'mge-ent-7a', question: 'Phenylketonuria, detected by newborn screening, results from an inability to:', options: ['Transport chloride ions across epithelia', 'Break down the amino acid phenylalanine', 'Degrade gangliosides in neuron lysosomes', 'Clear LDL cholesterol from the blood'], correctIndex: 1, explanation: 'In PKU, an autosomal recessive disorder, phenylalanine cannot be metabolized and builds up to toxic levels. Faulty chloride transport is cystic fibrosis, ganglioside buildup is Tay-Sachs disease, and failure to clear LDL is familial hypercholesterolemia.', partNumber: 7, partTitle: P7 },
+  { id: 'mge-ent-7b', question: 'Huntington disease and Marfan syndrome share which inheritance pattern?', options: ['Autosomal recessive', 'X-linked recessive', 'Mitochondrial (maternal)', 'Autosomal dominant'], correctIndex: 3, explanation: 'Both are autosomal dominant: one mutant allele is enough, and an affected parent passes it to about half of the children of either sex. Cystic fibrosis and sickle cell disease are classic autosomal recessive examples, and hemophilia is X-linked recessive.', partNumber: 7, partTitle: P7 },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -224,12 +52,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Mendelian Genetics' },
-    { partNumber: 2, partTitle: 'Non-Mendelian Patterns' },
-    { partNumber: 3, partTitle: 'Genetic Mutations' },
-    { partNumber: 4, partTitle: 'Population Genetics' },
-    { partNumber: 5, partTitle: 'Natural Selection' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' }
+    { partNumber: 1, partTitle: P1 },
+    { partNumber: 2, partTitle: P2 },
+    { partNumber: 3, partTitle: P3 },
+    { partNumber: 4, partTitle: P4 },
+    { partNumber: 5, partTitle: P5 },
+    { partNumber: 6, partTitle: P6 },
+    { partNumber: 7, partTitle: P7 },
   ]
 }

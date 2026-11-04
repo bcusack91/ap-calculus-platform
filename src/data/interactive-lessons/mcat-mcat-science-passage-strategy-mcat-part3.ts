@@ -6,7 +6,7 @@ export const mcatSciPassagePart3Data = {
       type: 'text' as const,
       content: `# Science Passage Strategy for the MCAT
 
-**Part 3 of 7 — Experimental Design**
+**Part 3 of 8 — Experimental Design**
 
 ### Key Experimental Components
 

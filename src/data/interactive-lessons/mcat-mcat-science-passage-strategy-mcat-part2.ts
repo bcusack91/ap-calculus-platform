@@ -6,7 +6,7 @@ export const mcatSciPassagePart2Data = {
       type: 'text' as const,
       content: `# Science Passage Strategy for the MCAT
 
-**Part 2 of 7 — Data Interpretation**
+**Part 2 of 8 — Data Interpretation**
 
 ### Reading Graphs
 

@@ -1,221 +1,49 @@
 /**
- * Entrance Quiz — MCAT Test Day Strategy (MCAT)
+ * Entrance Quiz — MCAT Test Day Strategy
  * 14 questions · 7 parts (2 per part)
+ * Part titles match the interactive lesson's "Part N of 7" lines
+ * (re-aligned Nov 2026 so a mastered part skips the right lesson part).
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'MCAT Structure & Timing'
+const P2 = 'Time Management'
+const P3 = 'Study Planning'
+const P4 = 'Guessing & Elimination Strategies'
+const P5 = 'Mental Stamina & Test Day Prep'
+const P6 = 'Score Improvement & Practice Exam Analysis'
+const P7 = 'Final Week Strategy & Mindset'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: MCAT Structure Overview
-  {
-    id: 'mtds-ent-1a',
-    question: 'The MCAT consists of four sections. Which of the following correctly lists them in the standard order?',
-    options: [
-      'CARS → Chemical and Physical Foundations → Biological and Biochemical Foundations → Psychological, Social, and Biological Foundations',
-      'Chemical and Physical Foundations → CARS → Biological and Biochemical Foundations → Psychological, Social, and Biological Foundations',
-      'Biological and Biochemical Foundations → Chemical and Physical Foundations → CARS → Psychological, Social, and Biological Foundations',
-      'Psychological, Social, and Biological Foundations → CARS → Biological and Biochemical Foundations → Chemical and Physical Foundations'
-    ],
-    correctIndex: 1,
-    explanation: 'The standard MCAT section order is: (1) Chemical and Physical Foundations of Biological Systems, (2) Critical Analysis and Reasoning Skills (CARS), (3) Biological and Biochemical Foundations of Living Systems, (4) Psychological, Social, and Biological Foundations of Behavior. Total testing time is ~6 hours 15 minutes with breaks.',
-    partNumber: 1,
-    partTitle: 'MCAT Structure Overview'
-  },
-  {
-    id: 'mtds-ent-1b',
-    question: 'Each scored MCAT section is scored on a scale of 118–132. The total score range is:',
-    options: [
-      '400–1600',
-      '1–45',
-      '472–528',
-      '0–100'
-    ],
-    correctIndex: 2,
-    explanation: 'Each of the four sections scores 118–132, so the total MCAT score ranges from 472 (4 × 118) to 528 (4 × 132), with a midpoint of 500. The median score for applicants accepted to medical school is typically around 511–512. 400–1600 is the SAT scale and 1–45 the pre-2015 MCAT scale.',
-    partNumber: 1,
-    partTitle: 'MCAT Structure Overview'
-  },
+  // Part 1 — MCAT Structure & Timing
+  { id: 'mtds-ent-1a', question: 'The MCAT consists of four sections. Which of the following correctly lists them in the standard order?', options: ['CARS → Chemical and Physical Foundations → Biological and Biochemical Foundations → Psychological, Social, and Biological Foundations', 'Chemical and Physical Foundations → CARS → Biological and Biochemical Foundations → Psychological, Social, and Biological Foundations', 'Biological and Biochemical Foundations → Chemical and Physical Foundations → CARS → Psychological, Social, and Biological Foundations', 'Psychological, Social, and Biological Foundations → CARS → Biological and Biochemical Foundations → Chemical and Physical Foundations'], correctIndex: 1, explanation: 'The order is Chemical and Physical Foundations (59 questions), then CARS (53), then Biological and Biochemical Foundations (59), then Psychological, Social, and Biological Foundations (59): 230 questions and about 6 hours 15 minutes of testing, roughly 7.5 hours with breaks.', partNumber: 1, partTitle: P1 },
+  { id: 'mtds-ent-1b', question: 'On the standard MCAT schedule, the longest optional break comes:', options: ['After Chem/Phys, before CARS', 'After Bio/Biochem, before Psych/Soc', 'Midway through the CARS section', 'After CARS, before Bio/Biochem'], correctIndex: 3, explanation: 'The mid-exam break between CARS and Bio/Biochem lasts 30 minutes. The breaks after Chem/Phys and after Bio/Biochem are 10 minutes each, and there is no break inside a section.', partNumber: 1, partTitle: P1 },
 
-  // Part 2: Section Order
-  {
-    id: 'mtds-ent-2a',
-    question: 'The MCAT is administered in a fixed section order (you cannot choose the order). Knowing the section order in advance is strategically important because:',
-    options: [
-      'You may leave a difficult section and return to it later on.',
-      'You can plan pacing and breaks around the day\'s demands.',
-      'The AAMC requires retesting any section below the 50th percentile.',
-      'Later sections are weighted more heavily.'
-    ],
-    correctIndex: 1,
-    explanation: 'Because the order is fixed you know in advance where the cognitive mode changes — CARS after a science section, then the long biology section as fatigue builds — so pacing, breaks, and food can be rehearsed around it. Sections cannot be skipped or reordered, the AAMC never requires a retake for a low section, and every scored question counts the same no matter where it falls.',
-    partNumber: 2,
-    partTitle: 'Section Order'
-  },
-  {
-    id: 'mtds-ent-2b',
-    question: 'Which MCAT section is strategically unique in that outside knowledge is NOT helpful and may actually be harmful if over-applied?',
-    options: [
-      'Chemical and Physical Foundations of Biological Systems',
-      'Critical Analysis and Reasoning Skills (CARS)',
-      'Biological and Biochemical Foundations of Living Systems',
-      'Psychological, Social, and Biological Foundations of Behavior'
-    ],
-    correctIndex: 1,
-    explanation: 'CARS is answered exclusively from information in the passage, and letting outside knowledge override a passage-supported answer is one of the most common CARS errors. The three science sections work the other way: they require you to combine passage data WITH content you already know, which is what makes CARS unique in demanding pure text-based reasoning.',
-    partNumber: 2,
-    partTitle: 'Section Order'
-  },
+  // Part 2 — Time Management
+  { id: 'mtds-ent-2a', question: 'You are pacing a science section of 59 questions in 95 minutes. About which question should you be on once roughly 70 minutes have passed?', options: ['Around question 25', 'Around question 35', 'Around question 45', 'Around question 55'], correctIndex: 2, explanation: 'The checkpoints are about 25 questions (5 passages) by 40 minutes and about 45 questions (8 passages) by 70 minutes, leaving roughly 25 minutes for the last 14. At about 1.6 minutes per question, 45 questions take about 72 minutes; question 35 by then would mean you have fallen behind.', partNumber: 2, partTitle: P2 },
+  { id: 'mtds-ent-2b', question: 'Compared with a typical science passage, how should your time budget for a CARS passage differ?', options: ['About 10 minutes for CARS versus about 8–9 for science', 'About 5 minutes for CARS versus about 10 for science', 'The same 15 minutes for each kind of passage set', 'About 20 minutes for CARS versus about 8–9 for science'], correctIndex: 0, explanation: 'A science passage set takes about 8–9 minutes (2–3 minutes reading, about a minute per question), while a CARS passage gets about 10 minutes because the reading itself takes 3–4 minutes. Five minutes would barely cover that reading, and fifteen or twenty per passage would not fit the section clocks.', partNumber: 2, partTitle: P2 },
 
-  // Part 3: Time Management
-  {
-    id: 'mtds-ent-3a',
-    question: 'The CARS section contains 53 questions in 90 minutes. Approximately how many minutes per passage + questions is available, assuming 9 passages?',
-    options: [
-      'About 5 minutes per passage set',
-      'About 10 minutes per passage set',
-      'About 15 minutes per passage set',
-      'About 20 minutes per passage set'
-    ],
-    correctIndex: 1,
-    explanation: '90 minutes ÷ 9 passages = 10 minutes per passage set (passage + ~5–7 questions). This includes reading time (~3–4 min) and question answering (~1–1.5 min per question). Practicing to this pace is essential—running over budget on early passages leaves insufficient time for later ones.',
-    partNumber: 3,
-    partTitle: 'Time Management'
-  },
-  {
-    id: 'mtds-ent-3b',
-    question: 'In the science sections of the MCAT (59 questions in 95 minutes), the recommended average time per question is approximately:',
-    options: [
-      'About 30 seconds per question',
-      'About 1 minute 36 seconds',
-      'About 3 minutes per question',
-      'About 5 minutes per question'
-    ],
-    correctIndex: 1,
-    explanation: '95 min ÷ 59 questions ≈ 1 min 36 sec per question. However, science sections include 10 passages (each requiring 3–5 min reading time) plus 15 discrete questions. An effective strategy is ~7–8 minutes per passage set and ~1 minute per discrete—bank time on discretes to spend on harder passages.',
-    partNumber: 3,
-    partTitle: 'Time Management'
-  },
+  // Part 3 — Study Planning
+  { id: 'mtds-ent-3a', question: 'Which preparation plan best matches the study-planning approach in this lesson?', options: ['Finish all content review before starting any practice questions', 'Take frequent full-lengths and review only the questions you missed', 'Spaced review plus full-lengths reviewed in depth, right and wrong', 'Rotate subjects daily and save full-lengths for the final two weeks'], correctIndex: 2, explanation: 'The plan moves through content review, practice problems, and full-length exams, with spaced repetition (reviewing at growing intervals) for retention and every full-length question reviewed, right and wrong. Holding all practice until content is finished delays the feedback that guides review, reviewing only misses skips lucky guesses, and saving full-lengths for the last two weeks leaves no time to act on what they show.', partNumber: 3, partTitle: P3 },
+  { id: 'mtds-ent-3b', question: 'How many full-length practice exams does the study plan recommend taking under realistic conditions?', options: ['One, taken the week before the exam', 'At least five to eight, each reviewed', 'Two or three, spread across the plan', 'Twenty or more, one every few days'], correctIndex: 1, explanation: 'The plan calls for at least 5–8 full-lengths, timed and uninterrupted, each followed by thorough review; at about 15 hours per exam including review, that fits the final phase of a typical plan. One to three gives too little data and practice, and twenty leaves no time to review them.', partNumber: 3, partTitle: P3 },
 
-  // Part 4: Flagging & Review
-  {
-    id: 'mtds-ent-4a',
-    question: 'The MCAT interface allows you to flag questions for review. The optimal use of the flag feature is to:',
-    options: [
-      'Flag every question you answer.',
-      'Flag only the questions you are unsure of or skipped.',
-      'Never flag anything, since revisiting invites second-guessing.',
-      'Flag the first and last question of each passage set.'
-    ],
-    correctIndex: 1,
-    explanation: 'Flags are a triage tool: mark the questions you guessed on or skipped, keep moving to protect your pace, and spend whatever time is left only on those. Flagging everything destroys the signal the flag was supposed to carry, refusing to flag leaves you no way back to a question you rushed, and flagging by position rather than by uncertainty tracks nothing useful.',
-    partNumber: 4,
-    partTitle: 'Flagging & Review'
-  },
-  {
-    id: 'mtds-ent-4b',
-    question: 'Research on answer changing on standardized tests suggests that:',
-    options: [
-      'First instincts are correct, so answers should never change.',
-      'Considered changes, made for a specific reason, more often help.',
-      'Any change to an answer tends to lower the final score.',
-      'Reviewers should change answers to counter confirmation bias.'
-    ],
-    correctIndex: 1,
-    explanation: 'Studies of answer changing find that deliberate revisions — you caught a misread, you spotted data you had skipped, you applied the concept correctly on the second pass — improve scores more often than they hurt, while anxiety-driven changes do not. So change an answer when you can state the new reason, not merely because doubt has set in; the "never change" folklore and a policy of changing on principle both ignore that distinction.',
-    partNumber: 4,
-    partTitle: 'Flagging & Review'
-  },
+  // Part 4 — Guessing & Elimination Strategies
+  { id: 'mtds-ent-4a', question: 'An answer choice is technically true but so general that it does not address the specific point the question asks about. This trap is best called:', options: ['Too broad', 'Too specific', 'Opposite', 'Extreme'], correctIndex: 0, explanation: 'A too-broad choice is true but too general to answer the question asked. A too-specific choice is right about one detail but misses the big picture, an opposite choice reverses the relationship, and an extreme choice relies on absolutes such as "always" or "never."', partNumber: 4, partTitle: P4 },
+  { id: 'mtds-ent-4b', question: 'You can rule out one of four answer choices with certainty but cannot narrow further. Guessing among the rest gives roughly what chance of being right?', options: ['25%', '33%', '50%', '67%'], correctIndex: 1, explanation: 'With three choices left, a guess is right $\\frac{1}{3} \\approx 33\\%$ of the time, up from 25% for a blind guess among four. Ruling out a second choice would raise it to 50%, and 67% is the chance of being WRONG with three left.', partNumber: 4, partTitle: P4 },
 
-  // Part 5: Managing Fatigue
-  {
-    id: 'mtds-ent-5a',
-    question: 'The MCAT is approximately 7.5 hours long (including check-in and breaks). Which of the following strategies best helps maintain cognitive performance across the full test day?',
-    options: [
-      'Skip the optional breaks so you finish sooner and stay fresher.',
-      'Eat one large high-carbohydrate meal right before the test.',
-      'Use breaks for small balanced snacks, water, and movement.',
-      'Keep caffeine coming steadily through all four sections.'
-    ],
-    correctIndex: 2,
-    explanation: 'Across a seven-hour day the limiting resource is stable energy and attention, which small protein-balanced snacks, hydration, and a minute of movement protect. Skipping breaks spends working memory you will need in section 4, one heavy carbohydrate meal invites a post-prandial slump, and stacked caffeine buys alertness early at the price of jitteriness and a crash later.',
-    partNumber: 5,
-    partTitle: 'Managing Fatigue'
-  },
-  {
-    id: 'mtds-ent-5b',
-    question: 'A student finds that her performance on the fourth MCAT section (Psych/Soc) is consistently lower than her practice averages, despite knowing the content well. The most likely explanation and appropriate intervention is:',
-    options: [
-      'Psych/Soc is inherently harder, so she needs more content review.',
-      'Fatigue is the cause; full-length practice will build stamina.',
-      'She should skip the break before section 4 to bank review time.',
-      'Psych/Soc is scored differently and matters less overall.'
-    ],
-    correctIndex: 1,
-    explanation: 'A section-4 drop with content knowledge intact is the signature of cumulative cognitive fatigue, and the remedy is training the endurance: full-lengths under real timing and break conditions, reviewed for where attention slipped. Extra content review treats a problem she does not have, skipping the break makes the fatigue worse, and all four sections contribute equally to the total score.',
-    partNumber: 5,
-    partTitle: 'Managing Fatigue'
-  },
+  // Part 5 — Mental Stamina & Test Day Prep
+  { id: 'mtds-ent-5a', question: 'The MCAT day runs about 7.5 hours including breaks. Which strategy best helps maintain cognitive performance across the whole day?', options: ['Skip the optional breaks so you finish sooner and stay fresher.', 'Eat one large high-carbohydrate meal right before the test.', 'Use breaks for small balanced snacks, water, and movement.', 'Keep caffeine coming steadily through all four sections.'], correctIndex: 2, explanation: 'Across a long day the limiting resource is steady energy and attention, which balanced snacks (protein plus carbohydrates), water, and a little movement protect. Skipping breaks drains stamina you need for the late sections, a heavy sugary meal spikes and then crashes blood glucose, and extra caffeine beyond your normal level invites jitters.', partNumber: 5, partTitle: P5 },
+  { id: 'mtds-ent-5b', question: 'On the morning of the exam, the best breakfast is:', options: ['A new high-energy meal saved for the occasion', 'Nothing at all, to avoid feeling sluggish', 'Several energy drinks in place of solid food', 'A familiar, balanced meal you have eaten before'], correctIndex: 3, explanation: 'Test day is no time for experiments: a familiar, balanced breakfast gives steady energy without surprises. An untried meal risks an upset stomach, skipping food invites a mid-morning crash, and energy drinks spike caffeine and sugar.', partNumber: 5, partTitle: P5 },
 
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'mtds-ent-6a',
-    question: 'A student has 5 minutes remaining in a science section with 8 questions unanswered. The best strategy is to:',
-    options: [
-      'Work each remaining question fully, choice by choice.',
-      'Make a quick educated guess on each; leave none blank.',
-      'Answer only the two she feels surest about, skipping the rest.',
-      'Select answers at random to save the remaining time.'
-    ],
-    correctIndex: 1,
-    explanation: 'The MCAT carries no penalty for a wrong answer, so a blank is a guaranteed zero while a guess is at least a one-in-four chance — better still once an obviously wrong choice is eliminated. Five minutes is enough to scan eight stems for something recognizable and commit to an answer on each. Working carefully through even two of them leaves six blank, and clicking at random throws away the eliminations you could have made.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  {
-    id: 'mtds-ent-6b',
-    question: 'A student encounters a difficult passage topic she has never seen before. The most effective immediate response is to:',
-    options: [
-      'Stop and search memory for anything you know on the topic.',
-      'Treat the passage as self-contained and reason from it.',
-      'Skip the passage and every question attached to it.',
-      'Assume the questions are traps and answer against instinct.'
-    ],
-    correctIndex: 1,
-    explanation: 'MCAT passages carry the information their questions need, and unfamiliar topics are deliberate: the exam is measuring whether you can reason from given data, not whether you have met the subject before. Straining after half-remembered content burns time you do not have, abandoning the set forfeits five to seven questions, and treating the questions as tricks replaces reasoning with superstition.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
+  // Part 6 — Score Improvement & Practice Exam Analysis
+  { id: 'mtds-ent-6a', question: 'An error log shows that most of a student\'s misses on her latest full-length came from not knowing enzyme-inhibition facts. The fix that best matches this error type is to:', options: ['Do more timed passage drills to build speed', 'Study that topic and make targeted flashcards', 'Slow down and double-check the easy questions', 'Simulate test conditions to manage anxiety'], correctIndex: 1, explanation: 'These misses are content gaps, and the matching fix is to study the specific topic and make flashcards for it. Timed drills address time pressure, double-checking addresses careless mistakes, and simulated test conditions address anxiety; each fix should target the error type that actually caused the misses.', partNumber: 6, partTitle: P6 },
+  { id: 'mtds-ent-6b', question: 'On several easy calculation questions, a student sets up each problem correctly but then slips a decimal place in the arithmetic. Which error type is this, and what is the fix?', options: ['Content gap; re-study the underlying topic', 'Time pressure; do more timed passage drills', 'Careless mistake; slow down and double-check', 'Test anxiety; practice under exam conditions'], correctIndex: 2, explanation: 'A correct setup followed by a slip in execution is a careless mistake, and the fix is to slow down on "easy" questions and double-check the arithmetic. She knows the content, so re-study would not help, and nothing points to the clock or to nerves.', partNumber: 6, partTitle: P6 },
 
-  // Part 7: Review & Applications
-  {
-    id: 'mtds-ent-7a',
-    question: 'The most evidence-based MCAT preparation strategy involves:',
-    options: [
-      'Read every review book cover to cover before doing questions.',
-      'Take a full-length test every day without reviewing misses.',
-      'Spaced review, active recall, and full-lengths with error analysis.',
-      'Work only on your weakest subject for the entire prep period.'
-    ],
-    correctIndex: 2,
-    explanation: 'The evidence favors distributing review over time, retrieving rather than re-reading, rehearsing the full-length format to build stamina and expose timing problems, and mining each wrong answer for the specific gap behind it. Reading straight through before testing yourself delays retrieval practice, daily full-lengths generate data nobody analyzes, and single-subject tunnel vision lets the rest of the exam decay.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  },
-  {
-    id: 'mtds-ent-7b',
-    question: 'Which of the following best describes how to handle test anxiety on MCAT test day?',
-    options: [
-      'Suppress every anxious thought and focus only on content.',
-      'Accept mild arousal, use practiced calming tools, and refocus.',
-      'Reschedule the exam if you feel any anxiety at all.',
-      'Take an anxiolytic for the first time on test day.'
-    ],
-    correctIndex: 1,
-    explanation: 'The Yerkes-Dodson law describes an inverted U: moderate arousal helps performance, so the aim is to bring anxiety down to a workable level rather than to zero. Tools rehearsed during practice — paced breathing, a brief grounding routine — do that without sedation. Suppression tends to amplify the thought it targets, rescheduling over ordinary nerves postpones the problem indefinitely, and an untried medication on test day risks sedation exactly when clarity matters most.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  }
+  // Part 7 — Final Week Strategy & Mindset
+  { id: 'mtds-ent-7a', question: 'A student encounters a passage on a topic she has never seen before. The most effective immediate response is to:', options: ['Treat the passage as self-contained and reason from it.', 'Stop and search memory for anything you know on the topic.', 'Skip the passage and every question attached to it.', 'Assume the questions are traps and answer against instinct.'], correctIndex: 0, explanation: 'Unfamiliar content is normal on the MCAT: use the passage, your reasoning, and elimination rather than memory. Straining for half-remembered facts burns time, abandoning the passage forfeits its questions, and second-guessing every instinct replaces reasoning with superstition.', partNumber: 7, partTitle: P7 },
+  { id: 'mtds-ent-7b', question: 'In the final-week plan, when should you take your last full-length practice exam?', options: ['The day before the exam', 'About 3 days before the exam', 'About a month before the exam', 'About 7 days before the exam'], correctIndex: 3, explanation: 'The last full-length comes about 7 days out, followed by light review of weak areas and flashcards, a final light study day two days out, and no studying the day before. A full-length three days or one day out leaves no time to recover, and a month out ends realistic practice too early.', partNumber: 7, partTitle: P7 },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -224,12 +52,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'MCAT Structure Overview' },
-    { partNumber: 2, partTitle: 'Section Order' },
-    { partNumber: 3, partTitle: 'Time Management' },
-    { partNumber: 4, partTitle: 'Flagging & Review' },
-    { partNumber: 5, partTitle: 'Managing Fatigue' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' }
+    { partNumber: 1, partTitle: P1 },
+    { partNumber: 2, partTitle: P2 },
+    { partNumber: 3, partTitle: P3 },
+    { partNumber: 4, partTitle: P4 },
+    { partNumber: 5, partTitle: P5 },
+    { partNumber: 6, partTitle: P6 },
+    { partNumber: 7, partTitle: P7 },
   ]
 }

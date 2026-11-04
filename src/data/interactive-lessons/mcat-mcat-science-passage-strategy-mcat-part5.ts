@@ -6,7 +6,7 @@ export const mcatSciPassagePart5Data = {
       type: 'text' as const,
       content: `# Science Passage Strategy for the MCAT
 
-**Part 5 of 7 — Chemistry & Physics Passage Tactics**
+**Part 5 of 8 — Chemistry & Physics Passage Tactics**
 
 ### Chem/Phys Passage Features
 

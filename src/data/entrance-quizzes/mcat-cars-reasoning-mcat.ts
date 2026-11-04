@@ -1,221 +1,50 @@
 /**
- * Entrance Quiz — MCAT CARS Reasoning (MCAT)
+ * Entrance Quiz — MCAT CARS Logical Reasoning
  * 14 questions · 7 parts (2 per part)
+ * Part titles match the interactive lesson's "Part N of 7" lines
+ * (re-aligned Nov 2026 so a mastered part skips the right lesson part).
+ * Every item tests a reasoning strategy, never outside content knowledge.
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Deductive vs. Inductive Reasoning'
+const P2 = 'Logical Fallacies'
+const P3 = 'Assumptions & Implicit Reasoning'
+const P4 = 'Strengthening & Weakening Arguments'
+const P5 = 'Analogies & Parallel Reasoning'
+const P6 = 'Evidence Evaluation'
+const P7 = 'Putting It All Together'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Reasoning About the Text
-  {
-    id: 'mcr-ent-1a',
-    question: 'A CARS passage argues that "the rise of digital media has democratized information, but it has also diluted expert authority." Which of the following best captures the author\'s central tension?',
-    options: [
-      'Technology has been harmful to intellectual progress overall.',
-      'Wider access to information has come at the cost of expert authority.',
-      'Digital media has surpassed print media in nearly every respect.',
-      'Experts are no longer needed now that information is free.'
-    ],
-    correctIndex: 1,
-    explanation: 'The sentence joins a benefit (democratized information) to a drawback (diluted expert authority) with "but it has also," so the central tension has to keep both halves. Each other choice drops one half and hardens what is left into a claim the author never makes: a blanket condemnation of technology, a comparison of media formats, or the dismissal of experts altogether.',
-    partNumber: 1,
-    partTitle: 'Reasoning About the Text'
-  },
-  {
-    id: 'mcr-ent-1b',
-    question: 'In a CARS passage, the author states: "While critics dismiss reality television as escapism, its narratives frequently mirror authentic social anxieties." The word "while" most likely signals:',
-    options: [
-      'A shift in the chronological sequence of events.',
-      'A concession to critics, followed by the author\'s contrary view.',
-      'Agreement between the author and the critics being quoted.',
-      'An analogy drawn between two otherwise unlike phenomena.'
-    ],
-    correctIndex: 1,
-    explanation: '"While" here grants the critics their point (reality television as escapism) before the author pivots to a contrary claim (the narratives mirror real anxieties). Reading contrast signals is fundamental to Reasoning About the Text: the word cannot mark agreement, and neither a time sequence nor an analogy is being set up.',
-    partNumber: 1,
-    partTitle: 'Reasoning About the Text'
-  },
+  // Part 1 — Deductive vs. Inductive Reasoning
+  { id: 'mcr-ent-1a', question: 'Which of the following arguments is deductive?', options: ['The last five winters here were mild, so next winter will likely be mild too.', 'Most readers surveyed liked the novel, so most readers everywhere will.', 'Two towns that banned cars downtown saw sales rise, so such bans help sales.', 'Every poet in the anthology is under 30, and Lee is in it, so Lee is under 30.'], correctIndex: 3, explanation: 'In a deductive argument the conclusion must be true if the premises are: anyone in the anthology is under 30, Lee is in it, so Lee is under 30. The other three move from specific observations (five winters, a survey, two towns) to a broader claim, which is inductive, so their conclusions are only probable.', partNumber: 1, partTitle: P1 },
+  { id: 'mcr-ent-1b', question: 'An argument has a valid deductive form, but one of its premises is false. Which statement about it is correct?', options: ['It is sound, because validity alone makes an argument sound', 'Its conclusion must be false, since one premise is false', 'It is valid but not sound, so its conclusion is not guaranteed', 'It is inductive, because a false premise leaves it only probable'], correctIndex: 2, explanation: 'Validity concerns structure only; soundness requires a valid structure AND true premises. With a false premise the argument is valid but unsound, so the conclusion is no longer guaranteed, though it could still happen to be true. Whether an argument is deductive or inductive depends on how it claims to support its conclusion, not on whether its premises are true.', partNumber: 1, partTitle: P1 },
 
-  // Part 2: Reasoning Beyond the Text
-  {
-    id: 'mcr-ent-2a',
-    question: 'A passage argues that punitive incarceration increases recidivism compared to rehabilitative approaches. Which new finding, if true, would most WEAKEN this argument?',
-    options: [
-      'Countries with rehabilitative prison systems have higher GDP per capita.',
-      'A 20-year study found no recidivism gap once confounds were controlled.',
-      'Rehabilitative programs cost more per inmate than punitive programs do.',
-      'Recidivism is measured by re-arrest, which undercounts unreported crime.'
-    ],
-    correctIndex: 1,
-    explanation: 'The argument is causal and comparative: punitive systems produce more reoffending than rehabilitative ones. A rigorous study finding no difference once socioeconomic confounds are controlled removes the very effect the argument rests on. National wealth and per-inmate cost say nothing about reoffending, and a measurement flaw in re-arrest data distorts both systems equally, so it favors neither side.',
-    partNumber: 2,
-    partTitle: 'Reasoning Beyond the Text'
-  },
-  {
-    id: 'mcr-ent-2b',
-    question: 'An author concludes that standardized testing is an inadequate measure of student potential because it favors students from high-income families. Which scenario, if true, would most STRENGTHEN this conclusion?',
-    options: [
-      'High-income students score higher and also buy more test prep.',
-      'Some low-income students still score in the top percentile nationally.',
-      'Many universities have recently made submitting test scores optional.',
-      'Test scores correlate with first-year GPA at most universities studied.'
-    ],
-    correctIndex: 0,
-    explanation: 'The conclusion rests on socioeconomic bias, so the strongest support shows the score advantage tracking purchasable preparation rather than underlying potential. Top-scoring low-income students cut against the claim, test-optional admissions policies say nothing about what the exam measures, and predictive validity for first-year GPA would defend the test rather than undermine it.',
-    partNumber: 2,
-    partTitle: 'Reasoning Beyond the Text'
-  },
+  // Part 2 — Logical Fallacies
+  { id: 'mcr-ent-2a', question: 'A columnist writes: "The two tech start-ups I visited both had chaotic management, so start-ups in general are badly run." The flaw is best named:', options: ['Ad hominem', 'Straw man', 'Hasty generalization', 'False dichotomy'], correctIndex: 2, explanation: 'Two visits are far too few to support a claim about start-ups in general, which is a hasty generalization. The columnist attacks no person (ad hominem), distorts no opposing argument (straw man), and offers no forced either/or choice (false dichotomy).', partNumber: 2, partTitle: P2 },
+  { id: 'mcr-ent-2b', question: '"This textbook is reliable because everything it says is accurate, and we know it is accurate because it is a reliable textbook." The flaw is best named:', options: ['Circular reasoning', 'Appeal to authority', 'Post hoc reasoning', 'Slippery slope'], correctIndex: 0, explanation: 'The conclusion (the book is reliable) is used to support its own premise (it is accurate), so the argument restates rather than proves: circular reasoning. No outside authority is cited, no cause is inferred from timing, and no chain of consequences is predicted.', partNumber: 2, partTitle: P2 },
 
-  // Part 3: Logical Inference
-  {
-    id: 'mcr-ent-3a',
-    question: 'A CARS author writes: "Every society that has suppressed free expression has, eventually, faced significant internal upheaval." Based solely on this statement, which inference is best supported?',
-    options: [
-      'Free expression is the only thing preventing internal upheaval.',
-      'Societies that suppressed free expression later faced upheaval.',
-      'Societies that permit free expression never face internal upheaval.',
-      'Suppression of free expression is always a deliberate state policy.'
-    ],
-    correctIndex: 1,
-    explanation: 'The sentence makes a one-way claim: every suppressing society eventually met upheaval. That supports the credited restatement and nothing stronger. Treating suppression as the sole cause overextends it, reading the converse (free societies stay stable) reverses it, and the sentence says nothing at all about intent.',
-    partNumber: 3,
-    partTitle: 'Logical Inference'
-  },
-  {
-    id: 'mcr-ent-3b',
-    question: 'The author of a passage states: "Rapid technological change does not inherently produce social progress; progress requires deliberate, equitable policy." What can be logically inferred?',
-    options: [
-      'Technology always hinders social progress.',
-      'Social progress is impossible without technology.',
-      'Technology alone is insufficient to guarantee social progress.',
-      'Equitable policy is easier to achieve than technological innovation.'
-    ],
-    correctIndex: 2,
-    explanation: 'The author says technology does not "inherently" produce progress and that deliberate policy is required, which makes technology insufficient on its own. The first two choices invert or overstate that relationship, and the last compares the difficulty of policy and innovation, a comparison the passage never makes.',
-    partNumber: 3,
-    partTitle: 'Logical Inference'
-  },
+  // Part 3 — Assumptions & Implicit Reasoning
+  { id: 'mcr-ent-3a', question: 'Argument: "Our clinic should move its flu-shot hours to evenings, since most of our patients work during the day." Which assumption does the argument NEED?', options: ['Evening hours would also be cheaper for the clinic to staff', 'Patients who work days would be able to come in the evening', 'Every patient at the clinic should receive a flu shot this year', 'Other clinics in the area have already moved to evening hours'], correctIndex: 1, explanation: 'Apply the negation test: if day workers could NOT come in the evening, moving the hours would not help them and the argument collapses, so that assumption is necessary. If evening staffing were not cheaper, if not every patient needed a shot, or if no other clinic had switched, the argument would still stand.', partNumber: 3, partTitle: P3 },
+  { id: 'mcr-ent-3b', question: 'In a CARS passage, the author\'s argument depends on the assumption that "readers of literary fiction develop greater empathy than readers of genre fiction." Which question would most directly test this assumption?', options: ['Are literary fiction books typically longer than genre fiction books?', 'Is literary fiction taught in university courses more often than genre?', 'Do genre fiction readers spend more hours per week reading?', 'Do literary fiction readers score higher on validated empathy measures?'], correctIndex: 3, explanation: 'Testing an assumption means checking whether the assumed fact holds, and this one is a comparative claim about empathy, which only an empathy measure can check. Book length, university syllabi, and weekly reading time each measure something other than empathy.', partNumber: 3, partTitle: P3 },
 
-  // Part 4: Authorial Intent
-  {
-    id: 'mcr-ent-4a',
-    question: 'An author uses the phrase "so-called experts" when referring to economists who predict market crashes. This language choice most likely suggests the author:',
-    options: [
-      'Deeply respects those economists\' predictive track record.',
-      'Doubts that those economists deserve the title.',
-      'Regards economists as the most reliable forecasters of crashes.',
-      'Is presenting both sides of the debate without judgment.'
-    ],
-    correctIndex: 1,
-    explanation: '"So-called" is a distancing device: it flags the label as one the author declines to accept, signaling skepticism or mild contempt. It cannot convey respect or endorsement, and a neutral author reporting both sides would simply write "economists" without the qualifier.',
-    partNumber: 4,
-    partTitle: 'Authorial Intent'
-  },
-  {
-    id: 'mcr-ent-4b',
-    question: 'A CARS author describes a historical event using overwhelmingly positive language for one side and passive, detached language for the other. The author\'s primary intent is most likely to:',
-    options: [
-      'Present a balanced, objective historical account.',
-      'Persuade the reader to favor the side described in positive terms.',
-      'Entertain the reader with dramatic narrative.',
-      'Summarize competing historical interpretations without taking a stance.'
-    ],
-    correctIndex: 1,
-    explanation: 'Asymmetric language — warm for one side, flat and passive for the other — is a rhetorical choice that steers the reader\'s sympathies, which marks persuasive rather than neutral intent. Balanced reporting and a stance-free summary would use parallel language for both sides, and detached phrasing is the opposite of what a writer aiming to entertain would choose.',
-    partNumber: 4,
-    partTitle: 'Authorial Intent'
-  },
+  // Part 4 — Strengthening & Weakening Arguments
+  { id: 'mcr-ent-4a', question: 'A passage argues that punitive incarceration increases recidivism compared with rehabilitative approaches. Which new finding, if true, would most WEAKEN this argument?', options: ['A 20-year study found no recidivism gap once confounds were controlled.', 'Countries with rehabilitative prison systems have higher GDP per capita.', 'Rehabilitative programs cost more per inmate than punitive programs do.', 'Recidivism is measured by re-arrest, which undercounts unreported crime.'], correctIndex: 0, explanation: 'The argument is causal and comparative: punitive systems produce more reoffending. A rigorous study finding no gap once confounds are controlled removes the very effect the argument rests on. National wealth and per-inmate cost say nothing about reoffending, and a re-arrest measure that undercounts crime affects both systems alike, so it favors neither side.', partNumber: 4, partTitle: P4 },
+  { id: 'mcr-ent-4b', question: 'A town credits its new protected bike lanes for a sharp drop in cyclist injuries. Which finding, if true, would most STRENGTHEN this claim?', options: ['Cyclists in the town say they feel safer using the new lanes', 'Nearby towns with similar traffic but no new lanes saw no drop', 'The lanes cost more to build than city officials had hoped', 'The town also lowered speed limits on its main roads that year'], correctIndex: 1, explanation: 'The best strengthener closes the gap by ruling out alternatives: comparable towns without the lanes saw no drop, so something general such as weather or fewer riders is unlikely to explain it. Cyclists feeling safer is not evidence about injuries, construction cost is irrelevant, and a speed-limit cut in the same year is a rival cause that WEAKENS the claim.', partNumber: 4, partTitle: P4 },
 
-  // Part 5: Counterarguments
-  {
-    id: 'mcr-ent-5a',
-    question: 'An author argues that universal basic income (UBI) will reduce poverty. A critic responds: "UBI payments will cause inflation, erasing any purchasing-power gains for recipients." The author would most likely counter that:',
-    options: [
-      'A government issuing its own currency cannot generate inflation.',
-      'The inflation risk is real but manageable with targeted fiscal policy.',
-      'UBI recipients spend outside consumer markets, so prices hold steady.',
-      'Poverty statistics are too unreliable to settle the dispute.'
-    ],
-    correctIndex: 1,
-    explanation: 'A strong counter concedes what is true in the objection — new transfers can push prices up — and then shows the harm is avoidable, which is exactly what the credited answer does. Denying that a currency issuer can ever cause inflation and claiming recipients stay out of consumer markets are both false, and attacking poverty statistics abandons the author\'s own conclusion instead of defending it.',
-    partNumber: 5,
-    partTitle: 'Counterarguments'
-  },
-  {
-    id: 'mcr-ent-5b',
-    question: 'Which of the following represents the strongest counterargument to the claim: "Social media has made political discourse more polarized"?',
-    options: [
-      'Social media companies are headquartered in politically diverse cities.',
-      'Social media exposure increases cross-partisan contact in some studies.',
-      'Younger voters use social media much more heavily than older voters do.',
-      'Political polarization was first measured long before social media.'
-    ],
-    correctIndex: 1,
-    explanation: 'The claim is causal, so the strongest counter attacks the mechanism: evidence that exposure broadens contact across party lines points the causal arrow the other way. Where the companies sit and which age group posts most are irrelevant to the effect, and the fact that polarization was measurable earlier shows only that it predates the platforms, not that the platforms fail to intensify it.',
-    partNumber: 5,
-    partTitle: 'Counterarguments'
-  },
+  // Part 5 — Analogies & Parallel Reasoning
+  { id: 'mcr-ent-5a', question: 'A passage criticizes a hospital that cut nursing staff to save money, only to spend far more treating complications that the thinner staff failed to prevent. Which situation is most analogous?', options: ['Another hospital hired extra nurses and saw its complication rate fall', 'A city skipped road repairs to save money, then paid more to rebuild', 'A hospital cut its nursing staff and saw its costs drop as planned', 'A school spent more on tutors, and its test scores rose as hoped'], correctIndex: 1, explanation: 'Stripped of specifics, the structure is: a cut made to save money ends up costing more. The skipped road repairs match that template exactly despite the different topic. The extra-nurses choice shares the topic but not the structure, the successful staff cut matches the action but drops the self-defeating result, and the tutoring choice is an ordinary success.', partNumber: 5, partTitle: P5 },
+  { id: 'mcr-ent-5b', question: 'A passage argues that a once-rare skill lost its prestige when a new tool made it easy for anyone to perform. Which situation shares this structure?', options: ['A rare painting rose in value after its painter became famous', 'A new tool let surgeons operate faster, and their pay rose', 'A skilled chef lost her job when her restaurant went out of business', 'Elegant handwriting stopped marking refinement once everyone typed'], correctIndex: 3, explanation: 'The template is: a tool makes a rare skill easy, so the skill stops conferring status. Handwriting losing its mark of refinement once typing was universal fits every element. The painting gains rather than loses prestige, the surgeons\' tool raises their standing (a reversed relationship), and the chef\'s loss has nothing to do with a tool making her skill common.', partNumber: 5, partTitle: P5 },
 
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'mcr-ent-6a',
-    question: 'A passage presents four separate studies on mindfulness meditation. Studies 1 and 2 show significant stress reduction; studies 3 and 4 show no significant effect. The author concludes: "Mindfulness meditation robustly reduces stress." This conclusion is best described as:',
-    options: [
-      'Fully supported, since two independent studies confirmed the effect.',
-      'Overstated, because half the studies found no effect.',
-      'Supported, because studies 1 and 2 used the larger sample sizes.',
-      'Correct, because mindfulness is very widely practiced worldwide.'
-    ],
-    correctIndex: 1,
-    explanation: '"Robustly" asserts a consistent effect, yet two of the four studies found none, so the conclusion ignores half of its own evidence. Counting only the confirming studies assumes the point at issue, the passage never reports sample sizes, and how widely a practice has been adopted is not evidence that it works.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  {
-    id: 'mcr-ent-6b',
-    question: 'In a CARS passage, the author\'s argument depends on the assumption that "readers of literary fiction develop greater empathy than readers of genre fiction." Which question would most directly test this assumption?',
-    options: [
-      'Are literary fiction books typically longer than genre fiction books?',
-      'Do literary fiction readers score higher on validated empathy measures?',
-      'Is literary fiction taught in universities more often?',
-      'Do genre fiction readers spend more hours per week reading?'
-    ],
-    correctIndex: 1,
-    explanation: 'Testing an assumption means checking whether the assumed fact actually holds, and the assumption here is a comparative empathy claim — which only a validated empathy measure, with baseline empathy controlled, can check. Book length, university syllabi, and weekly reading time each measure something other than empathy.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
+  // Part 6 — Evidence Evaluation
+  { id: 'mcr-ent-6a', question: 'A passage presents four studies on mindfulness meditation. Studies 1 and 2 show significant stress reduction; studies 3 and 4 show no significant effect. The author concludes: "Mindfulness meditation robustly reduces stress." This conclusion is best described as:', options: ['Fully supported, since two independent studies confirmed the effect.', 'Supported, because studies 1 and 2 used the larger sample sizes.', 'Overstated, because half of the studies found no significant effect.', 'Correct, because mindfulness is very widely practiced worldwide.'], correctIndex: 2, explanation: '"Robustly" asserts a consistent effect, yet two of the four studies found none, so the conclusion ignores half of its own evidence. Counting only the confirming studies assumes the point at issue, the passage never reports sample sizes, and how widely a practice is adopted is not evidence that it works.', partNumber: 6, partTitle: P6 },
+  { id: 'mcr-ent-6b', question: 'An author claims that remote work raises productivity, then adds: "At one firm that tried it, output fell among new hires, who lacked anyone nearby to learn from." This example mainly serves to:', options: ['Qualify the claim by showing a case where it may not hold', 'Prove that remote work lowers productivity for everyone', 'Illustrate the general principle that remote work helps', 'Introduce an unrelated topic about training new employees'], correctIndex: 0, explanation: 'Ask why the author included the example: it marks a group (new hires) for whom the broad claim may fail, so it qualifies the claim rather than overturning it. A single case cannot prove a claim about everyone, it runs against the general principle rather than illustrating it, and it stays on the topic of remote-work productivity.', partNumber: 6, partTitle: P6 },
 
-  // Part 7: Review & Applications
-  {
-    id: 'mcr-ent-7a',
-    question: 'Which CARS strategy is most useful when a question asks "The author would most likely agree with which of the following"?',
-    options: [
-      'Read only the opening and closing paragraphs of the passage.',
-      'Anchor the answer to the author\'s thesis and tone.',
-      'Pick the choice that adds the most new information.',
-      'Pick the most extreme choice, to match a strong opinion.'
-    ],
-    correctIndex: 1,
-    explanation: '"Would most likely agree" asks you to extend a position the passage already established, so each choice should be tested against the thesis and tone you identified while reading. Skimming only the frame paragraphs skips where the position is developed, and choices that add new information or push to an extreme go past what the author committed to.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  },
-  {
-    id: 'mcr-ent-7b',
-    question: 'When two CARS answer choices both seem correct, what is the most effective elimination strategy?',
-    options: [
-      'Choose whichever answer sounds more academic and sophisticated.',
-      'Choose the longer answer, since it likely carries more nuance.',
-      'Check which answer the passage itself supports directly.',
-      'Eliminate both and pick from the two remaining choices.'
-    ],
-    correctIndex: 2,
-    explanation: 'When two choices both look defensible, the tiebreaker in CARS is always textual support: one of them requires a step the passage never takes. Register and length are properties of the writing rather than evidence for it, and discarding both finalists throws away the answer you had already narrowed to.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  }
+  // Part 7 — Putting It All Together
+  { id: 'mcr-ent-7a', question: '"After two hospitals adopted a four-day work week, nurse turnover fell. Every hospital should adopt it, and anyone who objects is just defending old habits." For the causal claim to hold, the argument must assume that:', options: ['Nurses at the two hospitals had preferred longer shifts before', 'Most hospitals in the country already have high turnover', 'Nothing else changed at those hospitals that cut turnover', 'People who object to the plan have no good arguments at all'], correctIndex: 2, explanation: 'Running the toolkit: the argument is inductive from a thin sample (two hospitals), and its causal step needs a no-confounder premise. Negate it (say, both hospitals also raised pay) and the claim collapses. Nurses\' earlier shift preferences and national turnover levels are not required, and the jab at objectors is an ad hominem, not an assumption the causal claim depends on.', partNumber: 7, partTitle: P7 },
+  { id: 'mcr-ent-7b', question: 'Which CARS strategy is most useful when a question asks "The author would most likely agree with which of the following"?', options: ['Pick the choice that best matches your own view of the issue.', 'Anchor the answer to the author\'s overall thesis and tone.', 'Pick the choice that repeats the passage\'s key terms most often.', 'Pick the most moderate choice, since authors rarely commit.'], correctIndex: 1, explanation: '"Would most likely agree" asks you to extend a position the passage already established, so test each choice against the author\'s bottom line and attitude. Your own view is not the author\'s, a choice can echo the passage\'s vocabulary while reversing its claim, and moderation is not a rule: an author who argues forcefully agrees with a strong statement of that position.', partNumber: 7, partTitle: P7 },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -224,12 +53,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Reasoning About the Text' },
-    { partNumber: 2, partTitle: 'Reasoning Beyond the Text' },
-    { partNumber: 3, partTitle: 'Logical Inference' },
-    { partNumber: 4, partTitle: 'Authorial Intent' },
-    { partNumber: 5, partTitle: 'Counterarguments' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' }
+    { partNumber: 1, partTitle: P1 },
+    { partNumber: 2, partTitle: P2 },
+    { partNumber: 3, partTitle: P3 },
+    { partNumber: 4, partTitle: P4 },
+    { partNumber: 5, partTitle: P5 },
+    { partNumber: 6, partTitle: P6 },
+    { partNumber: 7, partTitle: P7 },
   ]
 }

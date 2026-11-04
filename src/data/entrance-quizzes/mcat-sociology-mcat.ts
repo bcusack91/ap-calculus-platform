@@ -1,221 +1,51 @@
 /**
  * Entrance Quiz — Sociology (MCAT)
- * 14 questions · 7 parts (2 per part)
+ * 16 questions · 7 parts (2 / 3 / 3 / 2 / 2 / 2 / 2)
+ * Part titles match the interactive lesson's "Part N of 7" lines
+ * (re-aligned Nov 2026 so a mastered part skips the right lesson part).
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Social Structure & Institutions'
+const P2 = 'Social Stratification & Inequality'
+const P3 = 'Social Interaction & Groups'
+const P4 = 'Deviance & Social Control'
+const P5 = 'Demographics & Population'
+const P6 = 'Culture, Socialization & Identity'
+const P7 = 'Healthcare Systems & Bioethics'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Social Structures
-  {
-    id: 'msoc-ent-1a',
-    question: 'Max Weber distinguished class, status, and party as three dimensions of social stratification. Which scenario best illustrates high status but low economic class?',
-    options: [
-      'A hedge fund manager who also chairs the city arts board.',
-      'A revered village elder who lives on a small pension.',
-      'A party boss who commands votes but draws a modest salary.',
-      'A day laborer with low wages and no social honor.'
-    ],
-    correctIndex: 1,
-    explanation: 'Weber argued that class (economic position), status (social honor/prestige), and party (political power) are analytically distinct. The revered elder has great prestige but little income — high status, low class. The hedge fund manager is high on both class and status; the party boss illustrates the party dimension (organized political power) rather than status; the day laborer is low on all three.',
-    partNumber: 1,
-    partTitle: 'Social Structures'
-  },
-  {
-    id: 'msoc-ent-1b',
-    question: 'A social institution is best defined as:',
-    options: [
-      'A government building in which laws are drafted and enacted.',
-      'Any informal group whose members happen to share an interest.',
-      'A single organization, such as one particular hospital or school district.',
-      'An enduring pattern of norms and roles that meets a basic social need.'
-    ],
-    correctIndex: 3,
-    explanation: 'Social institutions (family, religion, education, economy, medicine) are stable, organized patterns of beliefs, norms, and roles that address fundamental societal needs and persist over time. They are distinct from any specific organization that enacts them ("the family" as an institution vs. "the Johnson family"; "medicine" as an institution vs. one hospital), and distinct from informal interest groups, which lack that durable normative structure.',
-    partNumber: 1,
-    partTitle: 'Social Structures'
-  },
+  // Part 1 — Social Structure & Institutions
+  { id: 'msoc-ent-1a', question: 'A social institution is best defined as:', options: ['A government building in which laws are drafted and enacted.', 'Any informal group whose members happen to share an interest.', 'A single organization, such as one particular hospital or school district.', 'An enduring pattern of norms and roles that meets a basic social need.'], correctIndex: 3, explanation: 'Institutions such as the family, education, religion, government, the economy, and healthcare are lasting, organized patterns of norms and roles that meet basic needs of a society. They are broader than any one organization that carries them out (medicine as an institution versus one hospital), and informal interest groups lack that durable structure.', partNumber: 1, partTitle: P1 },
+  { id: 'msoc-ent-1b', question: 'A newly diagnosed patient gets a quick specialist appointment because a neighbor who works at the clinic makes a call for her. The resource she drew on is best described as:', options: ['Social capital, a resource reached through her network.', 'Cultural capital, knowledge and manners that give advantage.', 'A latent function of the clinic\'s scheduling system.', 'Anomie, a weakening of the norms that guide behavior.'], correctIndex: 0, explanation: 'Social capital is the set of resources a person can reach through network membership, here a neighbor with an inside line, and it predicts health outcomes. Cultural capital is non-financial know-how such as knowledge and manners, a latent function is an unintended consequence of an institution, and anomie is a breakdown of norms.', partNumber: 1, partTitle: P1 },
 
-  // Part 2: Social Interaction
-  {
-    id: 'msoc-ent-2a',
-    question: 'Erving Goffman\'s dramaturgical theory compares social interaction to theatrical performance. The concept of "impression management" refers to:',
-    options: [
-      'The deliberate effort to control how others perceive us.',
-      'Unconscious habits carried over from early childhood conditioning.',
-      'The pressure to conform to gender norms while in public spaces.',
-      'The way mass media shapes public opinion about political events.'
-    ],
-    correctIndex: 0,
-    explanation: 'Goffman argued we perform different roles "front stage" (public) and "back stage" (private). Impression management is the active, strategic control of self-presentation — selecting words, gestures, dress, and props to shape the impression an audience forms. It is conscious and situational, not a conditioned reflex, and it is a property of face-to-face interaction rather than of media or gender norms specifically.',
-    partNumber: 2,
-    partTitle: 'Social Interaction'
-  },
-  {
-    id: 'msoc-ent-2b',
-    question: 'Social norms are most accurately described as:',
-    options: [
-      'Written statutes that state authorities enforce through formal sanctions.',
-      'Individual preferences that vary entirely from one person to the next.',
-      'Shared expectations about appropriate behavior in a given setting.',
-      'Biological drives that dictate behavior in every human culture.'
-    ],
-    correctIndex: 2,
-    explanation: 'Norms are shared social expectations, not necessarily codified law. Mores are norms carrying strong moral weight; folkways are informal conventions. Violations are sanctioned positively (rewards) or negatively (punishment), formally (legal penalties) or informally (gossip, disapproval) — so norms are broader than statutes, more shared than personal taste, and cultural rather than biologically fixed.',
-    partNumber: 2,
-    partTitle: 'Social Interaction'
-  },
+  // Part 2 — Social Stratification & Inequality
+  { id: 'msoc-ent-2a', question: 'Social determinants of health are best described as:', options: ['Inherited genetic variants that predispose individuals to specific diseases.', 'Individual lifestyle choices such as diet, exercise, and smoking.', 'The conditions in which people are born, grow, live, work, and age.', 'The biological pathways by which chronic stress damages organ systems.'], correctIndex: 2, explanation: 'Social determinants of health are the conditions of daily life that shape health: economic stability, education, access to care, neighborhood and built environment, and social and community context. They are upstream and structural, which separates them from genetics, from individual behaviors, and from the biological mechanisms through which they eventually act on the body.', partNumber: 2, partTitle: P2 },
+  { id: 'msoc-ent-2b', question: 'Intersectionality (Crenshaw) holds that:', options: ['Overlapping identities interact to create distinct experiences of oppression.', 'Identities act independently, so their disadvantages simply add together.', 'Race is the master axis from which all other social disadvantage follows.', 'Everyone within a stigmatized group experiences oppression in the same way.'], correctIndex: 0, explanation: 'Crenshaw argued against the additive model: race, class, gender, and sexuality intersect to produce positions that are qualitatively different, not a sum of separate effects. A low-income Black woman\'s disadvantage cannot be split into a "race" part, a "class" part, and a "gender" part, which is also why neither a single master axis nor a uniform within-group experience fits the idea.', partNumber: 2, partTitle: P2 },
+  { id: 'msoc-ent-2c', question: 'Which of the following is an ascribed status?', options: ['Being a board-certified cardiologist', 'Being born into a particular caste', 'Being a licensed registered nurse', 'Being elected mayor of one\'s city'], correctIndex: 1, explanation: 'An ascribed status is assigned at birth and involuntary, as caste membership is. Becoming a cardiologist, a nurse, or a mayor depends on effort and choices, which makes each an achieved status.', partNumber: 2, partTitle: P2 },
 
-  // Part 3: Identity & Culture
-  {
-    id: 'msoc-ent-3a',
-    question: 'The Thomas theorem states: "If men define situations as real, they are real in their consequences." This principle best explains:',
-    options: [
-      'Why genetic predispositions override social learning in shaping behavior.',
-      'How beliefs can create real outcomes even when they are false.',
-      'Why a person\'s objective economic position determines their life chances.',
-      'Why cultural practices are ultimately determined by human biology.'
-    ],
-    correctIndex: 1,
-    explanation: 'The Thomas theorem highlights the social construction of reality: a definition of the situation drives behavior, and behavior produces material consequences. If a solvent bank is rumored to be failing, depositors withdraw and the bank actually fails. In medicine, the nocebo effect and stereotype threat work the same way — a perception, accurate or not, produces a measurable outcome.',
-    partNumber: 3,
-    partTitle: 'Identity & Culture'
-  },
-  {
-    id: 'msoc-ent-3b',
-    question: 'Cultural relativism, as a methodological principle in sociology, suggests that researchers should:',
-    options: [
-      'Rank cultures along a single universal scale of moral development.',
-      'Judge every cultural practice against Western scientific standards.',
-      'Interpret a practice within its own cultural context before judging it.',
-      'Study only their own culture, since outsiders cannot avoid bias.'
-    ],
-    correctIndex: 2,
-    explanation: 'Cultural relativism is a methodological stance: describe and analyze a practice in terms of the meanings it holds for its own participants rather than imposing outside standards. It counteracts ethnocentrism (judging others by one\'s own culture) and is essential to valid cross-cultural research. It is not moral relativism — it does not claim all practices are ethically equivalent — and it does not forbid studying other cultures.',
-    partNumber: 3,
-    partTitle: 'Identity & Culture'
-  },
+  // Part 3 — Social Interaction & Groups
+  { id: 'msoc-ent-3a', question: 'Solomon Asch\'s conformity experiments demonstrated that:', options: ['People reliably resist group pressure when the correct answer is unambiguous.', 'Conformity appears only when the judgment task is genuinely ambiguous.', 'Conformity requires an authority figure who instructs the participant.', 'Many people will echo an obviously wrong answer given by a unanimous group.'], correctIndex: 3, explanation: 'Asch used a plain line-length judgment, yet many participants went along with a unanimous wrong majority, and a single ally who broke ranks sharply reduced it. Because the right answer was obvious, the pressure was normative (to fit in) rather than informational. A command from an authority is the hallmark of obedience, studied by Milgram, not of conformity.', partNumber: 3, partTitle: P3 },
+  { id: 'msoc-ent-3b', question: 'Stanley Milgram\'s obedience experiments revealed that:', options: ['Participants almost always refused once the learner began to protest.', 'Only people with pre-existing authoritarian personalities obeyed.', 'Most ordinary participants obeyed up to the maximum shock level.', 'Placing the learner closer to the participant increased obedience.'], correctIndex: 2, explanation: 'When prodded by the experimenter, most ordinary participants continued to the maximum shock. Obedience was situational rather than a personality trait: it fell when the authority was remote, when the victim was closer, or when peers rebelled, which is why the proximity choice runs backwards.', partNumber: 3, partTitle: P3 },
+  { id: 'msoc-ent-3c', question: 'In Goffman\'s dramaturgical approach, "impression management" refers to:', options: ['Unconscious habits carried over from early childhood conditioning.', 'The deliberate effort to shape how others perceive us in public.', 'The pressure to conform to gender norms while in public spaces.', 'The way mass media shapes public opinion about political events.'], correctIndex: 1, explanation: 'Goffman treated social life as performance: on the front stage we manage the impression an audience forms through words, gestures, and dress, and on the back stage we relax the act. That control is active and situational, not a conditioned habit, and it belongs to face-to-face interaction rather than to media or gender norms specifically.', partNumber: 3, partTitle: P3 },
 
-  // Part 4: Health Disparities
-  {
-    id: 'msoc-ent-4a',
-    question: 'Social determinants of health are best described as:',
-    options: [
-      'Inherited genetic variants that predispose individuals to specific diseases.',
-      'The conditions in which people are born, grow, live, work, and age.',
-      'Individual lifestyle choices such as diet, exercise, and smoking.',
-      'The biological pathways by which chronic stress damages organ systems.'
-    ],
-    correctIndex: 1,
-    explanation: 'The WHO defines social determinants of health as the non-medical conditions of daily life that shape health outcomes: income, education, housing and neighborhood, employment, social support, and access to care. They are upstream and structural, which is what distinguishes them from genetics, from downstream individual behaviors, and from the biological mechanisms (such as allostatic load) through which they eventually act on the body.',
-    partNumber: 4,
-    partTitle: 'Health Disparities'
-  },
-  {
-    id: 'msoc-ent-4b',
-    question: 'Implicit bias in healthcare refers to:',
-    options: [
-      'Deliberately discriminatory treatment chosen because of a patient\'s race or ethnicity.',
-      'Written policies that intentionally exclude minorities from clinical trials.',
-      'Disease-prevalence differences that are entirely genetic in origin.',
-      'Unconscious attitudes that shape clinical decisions without awareness.'
-    ],
-    correctIndex: 3,
-    explanation: 'Implicit bias operates below conscious awareness, which is exactly what separates it from explicit discrimination or deliberately exclusionary policy. Studies find that clinicians scoring higher on implicit racial bias measures prescribe less analgesia to Black patients and spend less time explaining diagnoses to minority patients, without intending or noticing the difference. The Implicit Association Test is the standard instrument.',
-    partNumber: 4,
-    partTitle: 'Health Disparities'
-  },
+  // Part 4 — Deviance & Social Control
+  { id: 'msoc-ent-4a', question: 'Social norms are most accurately described as:', options: ['Written statutes that state authorities enforce through formal sanctions.', 'Individual preferences that vary entirely from one person to the next.', 'Shared expectations about appropriate behavior in a given setting.', 'Biological drives that dictate behavior in every human culture.'], correctIndex: 2, explanation: 'Norms are shared expectations for behavior, ranging from folkways (everyday customs, mild sanctions) through mores and taboos (strong moral weight) to laws, the codified subset. They are enforced informally (ridicule, shunning) or formally (police, courts), so they are broader than statutes, more shared than personal taste, and cultural rather than biologically fixed.', partNumber: 4, partTitle: P4 },
+  { id: 'msoc-ent-4b', question: 'A concertgoer loudly answers a phone call during a quiet passage of a symphony. Which statement about this act is accurate?', options: ['It is deviance but not a crime, since it breaks a norm, not a law.', 'It is a crime, since any violation of a social norm is a crime.', 'It is not deviance, since deviance requires breaking a formal law.', 'It is not deviance, since only strongly sanctioned mores count.'], correctIndex: 0, explanation: 'Deviance is any violation of a social norm; crime is the narrower subset that breaks a codified law. Taking a call mid-concert breaks a folkway and draws only informal sanctions such as glares. Deviance does not require a law, and mild folkway violations count as deviance just as mores violations do.', partNumber: 4, partTitle: P4 },
 
-  // Part 5: Social Influence
-  {
-    id: 'msoc-ent-5a',
-    question: 'Solomon Asch\'s conformity experiments demonstrated that:',
-    options: [
-      'People reliably resist group pressure when the correct answer is unambiguous.',
-      'Many people will endorse an obviously wrong answer that a unanimous group gives.',
-      'Conformity appears only when the judgment task is genuinely ambiguous.',
-      'Conformity requires an authority figure who instructs the participant.'
-    ],
-    correctIndex: 1,
-    explanation: 'Asch used an unambiguous line-length judgment: about 75% of participants conformed to the wrong unanimous majority at least once, and roughly a third of critical trials produced conformity. A single dissenting confederate sharply reduced it. This is normative social influence — conforming to avoid standing out. The ambiguity-only claim describes Sherif\'s autokinetic studies, and the authority claim describes Milgram.',
-    partNumber: 5,
-    partTitle: 'Social Influence'
-  },
-  {
-    id: 'msoc-ent-5b',
-    question: 'Stanley Milgram\'s obedience experiments revealed that:',
-    options: [
-      'Most ordinary participants obeyed to the maximum shock level.',
-      'Participants almost always refused once the learner began to protest.',
-      'Only people with pre-existing authoritarian personalities obeyed.',
-      'Placing the learner closer to the participant increased obedience.'
-    ],
-    correctIndex: 0,
-    explanation: 'Roughly 65% of participants went to the full 450 volts when prodded by the experimenter at Yale. Obedience was situational rather than dispositional: it rose with the legitimacy and physical proximity of the authority, and it FELL as the learner became closer and more visible — which is why the proximity option is backwards.',
-    partNumber: 5,
-    partTitle: 'Social Influence'
-  },
+  // Part 5 — Demographics & Population
+  { id: 'msoc-ent-5a', question: 'In one year a country records 6,000 deaths of infants under age one and 400,000 live births. Its infant mortality rate is:', options: ['1.5 per 1,000 live births', '6 per 1,000 live births', '150 per 1,000 live births', '15 per 1,000 live births'], correctIndex: 3, explanation: 'Infant mortality is deaths under age one per 1,000 live births: $\\frac{6{,}000}{400{,}000} \\times 1{,}000 = 15$. The 1.5 figure is the rate per 100 (a percentage), 150 is the rate per 10,000, and 6 simply restates the death count in thousands.', partNumber: 5, partTitle: P5 },
+  { id: 'msoc-ent-5b', question: 'In Stage 1 of the demographic transition model, a pre-industrial society typically has:', options: ['High birth and falling death rates, with rapid growth', 'High birth and high death rates, with a stable population', 'Falling birth and low death rates, with slowing growth', 'Low birth and low death rates, with a stable or shrinking size'], correctIndex: 1, explanation: 'Before industrialization, high birth rates are offset by high death rates, so the population stays small and stable. Falling death rates with high births is the Stage 2 boom, falling births with low deaths is Stage 3, and low rates of both describe the post-industrial Stage 4.', partNumber: 5, partTitle: P5 },
 
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'msoc-ent-6a',
-    question: 'A researcher studying the relationship between income inequality (Gini coefficient) and population health (life expectancy) finds a strong negative correlation (r = −0.75). Which conclusion is most appropriate?',
-    options: [
-      'Inequality directly causes shorter lifespans through a known biological pathway.',
-      'Differences in life expectancy are fully explained by income inequality.',
-      'More unequal countries tend to have lower life expectancy, but cause is unproven.',
-      'The result proves that redistributive taxation would improve health outcomes.'
-    ],
-    correctIndex: 2,
-    explanation: 'A correlation describes an association, not a cause: third variables, reverse causation, and selection can all produce it. An r of −0.75 is strong enough to report the pattern (higher Gini goes with lower life expectancy), but confounds such as healthcare systems, education, and history must be addressed before asserting a mechanism, a complete explanation, or a policy effect.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  {
-    id: 'msoc-ent-6b',
-    question: 'Medicalization refers to:',
-    options: [
-      'Physicians acquiring greater political influence over national health policy.',
-      'Redefining nonmedical conditions as illnesses requiring medical treatment.',
-      'Shifting public health systems into private, for-profit ownership.',
-      'Developing new drugs for conditions that were previously untreatable.'
-    ],
-    correctIndex: 1,
-    explanation: 'Medicalization (Conrad, Zola) is the social process by which behaviors or conditions once treated as moral, legal, or simply ordinary come under medical jurisdiction — ADHD, obesity, alcoholism, shyness, childbirth, aging. It can expand access to treatment, but it also risks pathologizing normal variation and expanding professional and pharmaceutical control.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
+  // Part 6 — Culture, Socialization & Identity
+  { id: 'msoc-ent-6a', question: 'Cultural relativism, as a principle for studying other societies, holds that one should:', options: ['Rank cultures along a single universal scale of moral development.', 'Interpret a practice within its own cultural context before judging it.', 'Judge every cultural practice against Western scientific standards.', 'Study only one\'s own culture, since outsiders cannot avoid bias.'], correctIndex: 1, explanation: 'Cultural relativism means understanding a practice on its own terms, in the context that gives it meaning, which counters ethnocentrism (judging others by one\'s own culture\'s standards). Applied in the clinic, it becomes cultural competence. It does not rank cultures, impose an outside standard, or forbid studying other societies.', partNumber: 6, partTitle: P6 },
+  { id: 'msoc-ent-6b', question: 'Which of the following is an example of non-material culture?', options: ['A shared belief that elders should be consulted first', 'The smartphones a community uses to stay in close touch', 'The architecture of the hospital buildings in a city', 'The traditional clothing worn at a family wedding'], correctIndex: 0, explanation: 'Non-material culture is made of ideas: beliefs, values, norms, language, and symbols, such as a shared belief about respecting elders. Phones, buildings, and clothing are physical objects, so they are material culture, even when they carry symbolic meaning.', partNumber: 6, partTitle: P6 },
 
-  // Part 7: Review & Applications
-  {
-    id: 'msoc-ent-7a',
-    question: 'Intersectionality (Crenshaw) holds that:',
-    options: [
-      'Identities act independently, so their disadvantages simply add together.',
-      'Race is the master axis from which all other social disadvantage follows.',
-      'Everyone within a stigmatized group experiences oppression in the same way.',
-      'Overlapping identities interact to create distinct experiences of oppression.'
-    ],
-    correctIndex: 3,
-    explanation: 'Crenshaw\'s argument is specifically against the additive model: race, gender, class, and sexuality intersect to produce qualitatively new positions, not a sum of separate effects. A Black woman\'s experience of discrimination cannot be decomposed into a "race" part and a "gender" part, which is also why neither a single master axis nor a uniform within-group experience fits the theory.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  },
-  {
-    id: 'msoc-ent-7b',
-    question: 'The sick role (Parsons) describes the social expectations placed on ill individuals, including:',
-    options: [
-      'An expectation that patients resist medical authority and self-advocate.',
-      'Temporary release from normal duties plus a duty to seek care and recover.',
-      'A permanent disability status that replaces all of the person\'s prior roles.',
-      'An obligation to pay for one\'s own care in order to avoid social stigma.'
-    ],
-    correctIndex: 1,
-    explanation: 'Parsons described two rights and two obligations: exemption from normal social duties and from blame for the illness, paired with an obligation to want to get well and to seek and cooperate with competent help. The role is a temporary, legitimized form of deviance, which is why a permanent replacement of social roles does not describe it.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  }
+  // Part 7 — Healthcare Systems & Bioethics
+  { id: 'msoc-ent-7a', question: 'Parsons\'s sick role describes the social expectations placed on ill people, including:', options: ['An expectation that patients resist medical authority and self-advocate.', 'A permanent disability status that replaces all of the person\'s prior roles.', 'An obligation to pay for one\'s own care in order to avoid social stigma.', 'Temporary release from normal duties plus a duty to seek care and recover.'], correctIndex: 3, explanation: 'Parsons paired two rights (exemption from normal duties and from blame) with two obligations (wanting to get well and seeking and cooperating with competent help). It is a temporary, sanctioned form of deviance, which is why it fits acute illness better than chronic illness and why a permanent replacement of roles does not describe it.', partNumber: 7, partTitle: P7 },
+  { id: 'msoc-ent-7b', question: 'Medicalization refers to:', options: ['Physicians acquiring greater political influence over national health policy.', 'Shifting public health systems into private, for-profit ownership.', 'Redefining nonmedical conditions as illnesses requiring medical treatment.', 'Developing new drugs for conditions that were previously untreatable.'], correctIndex: 2, explanation: 'Medicalization is the process by which behaviors or life events once treated as moral, legal, or ordinary come to be defined as treatable medical problems, as with childbirth, aging, ADHD, and alcohol use disorder. It can reduce moral blame, but conflict theorists note that it also expands medical authority.', partNumber: 7, partTitle: P7 },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -224,12 +54,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Social Structures' },
-    { partNumber: 2, partTitle: 'Social Interaction' },
-    { partNumber: 3, partTitle: 'Identity & Culture' },
-    { partNumber: 4, partTitle: 'Health Disparities' },
-    { partNumber: 5, partTitle: 'Social Influence' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' }
+    { partNumber: 1, partTitle: P1 },
+    { partNumber: 2, partTitle: P2 },
+    { partNumber: 3, partTitle: P3 },
+    { partNumber: 4, partTitle: P4 },
+    { partNumber: 5, partTitle: P5 },
+    { partNumber: 6, partTitle: P6 },
+    { partNumber: 7, partTitle: P7 },
   ]
 }

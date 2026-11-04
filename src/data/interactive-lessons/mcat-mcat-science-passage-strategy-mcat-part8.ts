@@ -6,7 +6,7 @@ export const mcatSciPassagePart8Data = {
       type: 'text' as const,
       content: `# MCAT Science Passage Strategy
 
-**Part 8 of 8 - Feedback Loop Graph Reasoning**
+**Part 8 of 8 — Feedback Loop Graph Reasoning**
 
 Hard MCAT graph questions often combine a passage claim with trend-shape reasoning. Your job is to decide whether the graph supports:
 - positive-feedback-like amplification,

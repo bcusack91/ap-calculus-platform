@@ -1,221 +1,50 @@
 /**
  * Entrance Quiz — Psychology and Behavior (MCAT)
- * 14 questions · 7 parts (2 per part)
+ * 15 questions · 7 parts (2 / 2 / 2 / 3 / 2 / 2 / 2)
+ * Part titles match the interactive lesson's "Part N of 7" lines
+ * (re-aligned Nov 2026 so a mastered part skips the right lesson part).
  */
 
 import type { EntranceQuizQuestion } from './moles-molar-mass'
 import { shuffleArray } from '@/lib/shuffle-options'
 
+const P1 = 'Sensation & Perception'
+const P2 = 'Learning & Memory'
+const P3 = 'Motivation, Emotion & Stress'
+const P4 = 'Cognition & Consciousness'
+const P5 = 'Personality & Psychological Disorders'
+const P6 = 'Neuroscience & Biological Bases of Behavior'
+const P7 = 'Development & Identity'
+
 const questions: EntranceQuizQuestion[] = [
-  // Part 1: Biological Bases of Behavior
-  {
-    id: 'mpb-ent-1a',
-    question: 'Damage to the amygdala most commonly results in:',
-    options: [
-      'Impaired procedural memory and motor-skill learning.',
-      'Deficits in fear learning and emotion recognition.',
-      'Loss of language comprehension (Wernicke\'s aphasia).',
-      'Inability to form new explicit (declarative) memories.'
-    ],
-    correctIndex: 1,
-    explanation: 'The amygdala drives fear conditioning, the emotional tagging of memories it consolidates with the hippocampus, and the reading of emotional expressions; bilateral damage (as in Urbach-Wiethe disease) produces the classic triad of fearlessness, impaired fear conditioning, and emotion-recognition deficits. Procedural learning depends on the cerebellum and basal ganglia, comprehension on Wernicke\'s area, and new declarative memories on the hippocampus.',
-    partNumber: 1,
-    partTitle: 'Biological Bases of Behavior'
-  },
-  {
-    id: 'mpb-ent-1b',
-    question: 'The neurotransmitter dopamine is most associated with which brain pathway and behavioral function?',
-    options: [
-      'Raphe nuclei; regulation of the sleep-wake cycle.',
-      'Nigrostriatal and mesolimbic pathways; reward and movement.',
-      'Locus coeruleus; arousal, attention, and stress response.',
-      'Basal forebrain; cholinergic support of memory.'
-    ],
-    correctIndex: 1,
-    explanation: 'Dopaminergic projections run nigrostriatally, where degeneration produces the motor signs of Parkinson\'s disease, and mesolimbically and mesocortically, where they carry reward, motivation, and executive function (the mesocortical branch is implicated in schizophrenia). The other three pathways belong to different transmitters: serotonin from the raphe nuclei, norepinephrine from the locus coeruleus, and acetylcholine from the basal forebrain.',
-    partNumber: 1,
-    partTitle: 'Biological Bases of Behavior'
-  },
+  // Part 1 — Sensation & Perception
+  { id: 'mpb-ent-1a', question: 'Signal detection theory holds that whether an observer reports detecting a faint stimulus depends on:', options: ['Sensitivity to the signal plus the observer\'s response criterion.', 'The physical intensity of the stimulus, with nothing else involved.', 'The observer\'s expectations, regardless of the stimulus itself.', 'The just noticeable difference between the two stimuli presented.'], correctIndex: 0, explanation: 'Signal detection theory splits performance into sensitivity ($d\'$, how well signal is told apart from noise) and the criterion, how much evidence the observer demands before saying "yes." Changing payoffs moves the criterion and shifts hits and false alarms together while sensitivity stays put. Intensity alone and expectation alone each capture only one of the two factors, and the just noticeable difference belongs to Weber\'s law.', partNumber: 1, partTitle: P1 },
+  { id: 'mpb-ent-1b', question: 'Under Weber\'s law, the smallest change a person can detect is a fixed fraction of the starting intensity ($\\Delta I / I = k$). Which observation fits this law?', options: ['Adding 1 g is as noticeable on a 10 g load as on a 100 kg load.', 'Detecting a 1 g change is equally easy at 10 g and at 1,000 g.', 'The threshold for detecting a dim light falls as ambient light rises.', 'A stronger background requires a larger absolute change to notice.'], correctIndex: 3, explanation: 'Because the JND is a fixed fraction of the baseline, the absolute change needed grows with the baseline: an extra 10 g is obvious while holding 100 g and undetectable while holding 10 kg. The two "1 g" choices describe a constant absolute threshold, which is exactly what the law denies, and a brighter background raises rather than lowers the threshold for spotting a dim light.', partNumber: 1, partTitle: P1 },
 
-  // Part 2: Sensation & Perception
-  {
-    id: 'mpb-ent-2a',
-    question: 'Signal detection theory suggests that the ability to detect a stimulus depends on:',
-    options: [
-      'The physical intensity of the stimulus, and nothing else.',
-      'Sensory sensitivity together with the observer\'s bias.',
-      'The observer\'s expectations rather than the stimulus itself.',
-      'The just noticeable difference between two stimuli.'
-    ],
-    correctIndex: 1,
-    explanation: 'Signal detection theory splits performance into sensitivity (d-prime) and criterion — how much evidence the observer demands before answering "yes." A radiologist reading the same image can miss a tumor or call a false alarm depending on where that criterion sits, which is why detection varies across people and settings with the physical signal held constant. Intensity alone and expectation alone each capture only one of the two factors, and the just noticeable difference belongs to Weber\'s law.',
-    partNumber: 2,
-    partTitle: 'Sensation & Perception'
-  },
-  {
-    id: 'mpb-ent-2b',
-    question: 'Weber\'s Law states that the just noticeable difference (JND) is a constant proportion of the original stimulus intensity (ΔI/I = k). Which scenario is consistent with Weber\'s Law?',
-    options: [
-      'Adding 1 g is as noticeable on a 10 g load as on a 100 kg load.',
-      'Detecting a 1 g change is equally easy at 10 g and at 1,000 g.',
-      'A stronger background requires a larger absolute change to notice.',
-      'The threshold for detecting light falls as ambient light rises.'
-    ],
-    correctIndex: 2,
-    explanation: 'Weber\'s law fixes the JND as a constant fraction of the baseline, so the absolute change you need grows with the baseline: an extra 10 g is obvious while holding 100 g and undetectable while holding 10 kg. The first two choices describe a constant absolute threshold, which is precisely what the law denies, and light adaptation raises rather than lowers the detection threshold as ambient light increases.',
-    partNumber: 2,
-    partTitle: 'Sensation & Perception'
-  },
+  // Part 2 — Learning & Memory
+  { id: 'mpb-ent-2a', question: 'A dog salivates at the sound of a bell after the bell has been repeatedly paired with food. The bell is best described as:', options: ['An unconditioned stimulus that innately elicits salivation.', 'A neutral stimulus not yet paired with a meaningful event.', 'A conditioned stimulus that now elicits a conditioned response.', 'A discriminative stimulus signaling when a response pays off.'], correctIndex: 2, explanation: 'Food is the unconditioned stimulus and salivation to food the unconditioned response. The bell began as a neutral stimulus, but repeated pairing made it a conditioned stimulus, and the salivation it now produces is the conditioned response. It has stopped being neutral, it never elicited salivation innately, and discriminative stimuli belong to operant rather than classical conditioning.', partNumber: 2, partTitle: P2 },
+  { id: 'mpb-ent-2b', question: 'The hippocampus is essential for forming:', options: ['New explicit memories, both episodic and semantic.', 'Procedural memories such as riding a bicycle.', 'Conditioned fear and other emotional responses.', 'Working memory maintained by the prefrontal cortex.'], correctIndex: 0, explanation: 'The hippocampus forms new declarative (explicit) memories, both episodic and semantic; after losing both hippocampi, H.M. could form no new declarative memories yet still learned motor skills. Procedural learning runs through the cerebellum and basal ganglia, conditioned fear through the amygdala, and working memory through the prefrontal cortex.', partNumber: 2, partTitle: P2 },
 
-  // Part 3: Learning & Memory
-  {
-    id: 'mpb-ent-3a',
-    question: 'A dog salivates at the sound of a bell after the bell has been repeatedly paired with food. The bell is best described as:',
-    options: [
-      'An unconditioned stimulus that innately elicits salivation.',
-      'A conditioned stimulus eliciting a conditioned response.',
-      'A neutral stimulus not yet paired with a meaningful event.',
-      'A discriminative stimulus signaling when a response pays off.'
-    ],
-    correctIndex: 1,
-    explanation: 'Food is the unconditioned stimulus and salivation to food the unconditioned response. The bell began as a neutral stimulus, but repeated pairing made it a conditioned stimulus, and the salivation it now produces is the conditioned response. The bell has therefore stopped being neutral, it never elicited salivation innately, and discriminative stimuli belong to operant rather than classical conditioning.',
-    partNumber: 3,
-    partTitle: 'Learning & Memory'
-  },
-  {
-    id: 'mpb-ent-3b',
-    question: 'The hippocampus is essential for the formation of:',
-    options: [
-      'Procedural memories such as riding a bicycle.',
-      'Conditioned fear and other emotional responses.',
-      'New explicit memories, episodic and semantic.',
-      'Working memory maintained by the prefrontal cortex.'
-    ],
-    correctIndex: 2,
-    explanation: 'After bilateral hippocampal removal, H.M. (Henry Molaison) could no longer form new declarative memories yet still acquired new motor skills, which localizes episodic and semantic encoding — along with spatial navigation — to the hippocampus. Procedural learning runs through the cerebellum and basal ganglia, conditioned fear through the amygdala, and working memory through prefrontal cortex.',
-    partNumber: 3,
-    partTitle: 'Learning & Memory'
-  },
+  // Part 3 — Motivation, Emotion & Stress
+  { id: 'mpb-ent-3a', question: 'In Maslow\'s hierarchy, self-actualization becomes the main motivator once:', options: ['Self-transcendence needs have already been fully satisfied.', 'The person has reached complete financial independence.', 'Social recognition and public admiration have been earned.', 'Physiological, safety, belonging, and esteem needs are met.'], correctIndex: 3, explanation: 'Maslow orders needs as physiological, safety, love and belonging, esteem, and then self-actualization, and lower needs generally have to be met before higher ones drive behavior. Financial independence and public admiration are particular routes to safety or esteem rather than steps in the model, and self-transcendence, in Maslow\'s later version, sits above self-actualization, so it cannot be its prerequisite.', partNumber: 3, partTitle: P3 },
+  { id: 'mpb-ent-3b', question: 'A student\'s heart pounds as she walks on stage, and she then feels nervous. A James–Lange theorist would explain her nervousness by saying that:', options: ['Arousal and emotion arose together from the one stimulus.', 'A cognitive appraisal came before both arousal and emotion.', 'The emotion came from perceiving her own bodily response.', 'Arousal plus a cognitive label was needed before emotion.'], correctIndex: 2, explanation: 'James–Lange runs stimulus, then bodily response, then felt emotion: she feels nervous BECAUSE she perceives her pounding heart. Cannon–Bard has arousal and emotion arising at the same time, Lazarus puts cognitive appraisal first, and Schachter–Singer requires arousal plus a cognitive label before an emotion is felt.', partNumber: 3, partTitle: P3 },
 
-  // Part 4: Motivation & Emotion
-  {
-    id: 'mpb-ent-4a',
-    question: 'Maslow\'s hierarchy of needs suggests that self-actualization can only be pursued when:',
-    options: [
-      'Self-transcendence needs have already been fully satisfied.',
-      'Physiological, safety, belonging, and esteem needs are met.',
-      'The person has reached complete financial independence.',
-      'Social recognition and public admiration have been earned.'
-    ],
-    correctIndex: 1,
-    explanation: 'Maslow orders needs physiological, safety, love and belonging, esteem, and then self-actualization, and a level motivates behavior only once the levels beneath it are sufficiently met. Financial independence and public admiration are particular routes to safety or esteem rather than prerequisites in the model, and in Maslow\'s later expanded version self-transcendence sits ABOVE self-actualization, so it cannot be a prerequisite for it.',
-    partNumber: 4,
-    partTitle: 'Motivation & Emotion'
-  },
-  {
-    id: 'mpb-ent-4b',
-    question: 'The James-Lange theory of emotion proposes that:',
-    options: [
-      'Arousal and emotion arise together from one stimulus.',
-      'Emotion follows from perceiving our own bodily response.',
-      'Cognitive appraisal precedes both arousal and emotion.',
-      'The thalamus signals cortex and amygdala independently.'
-    ],
-    correctIndex: 1,
-    explanation: 'James-Lange runs stimulus to bodily response to felt emotion — "we are afraid because we tremble." Cannon-Bard has arousal and emotion arising at the same time, with the thalamus relaying separately to cortex and amygdala; Lazarus puts cognitive appraisal first; and Schachter-Singer requires arousal plus a cognitive label before an emotion is experienced.',
-    partNumber: 4,
-    partTitle: 'Motivation & Emotion'
-  },
+  // Part 4 — Cognition & Consciousness
+  { id: 'mpb-ent-4a', question: 'A camper needs to tighten a loose screw and has a coin in his pocket, but never thinks of using the coin as a screwdriver because he sees it only as money. This illustrates:', options: ['Confirmation bias, a search for evidence that fits a belief.', 'Functional fixedness, seeing an object only in its usual role.', 'The availability heuristic, judging by what comes to mind.', 'Belief perseverance, holding a view after it is discredited.'], correctIndex: 1, explanation: 'Functional fixedness is the failure to see new uses for a familiar object, here a coin locked into its role as money. Confirmation bias concerns how evidence is sought, the availability heuristic concerns judging frequency by ease of recall, and belief perseverance is clinging to a belief after it has been refuted; none of them is about an object\'s possible uses.', partNumber: 4, partTitle: P4 },
+  { id: 'mpb-ent-4b', question: 'Told that Sam is quiet, loves poetry, and keeps a tidy desk, most people judge it more likely that Sam is "a librarian who writes poems" than simply "a librarian." This error reflects:', options: ['Anchoring on the first detail given in the description.', 'The availability heuristic, since librarians are easy to recall.', 'Functional fixedness about what a librarian\'s job involves.', 'The representativeness heuristic and the conjunction fallacy.'], correctIndex: 3, explanation: 'Being a librarian AND a poet can never be more probable than being a librarian, yet the richer description resembles the prototype the details evoke, so people judge by similarity instead of probability. That is the representativeness heuristic producing the conjunction fallacy. Anchoring is over-reliance on a first value, availability judges frequency by ease of recall, and functional fixedness concerns the uses of objects.', partNumber: 4, partTitle: P4 },
+  { id: 'mpb-ent-4c', question: 'A sleep-lab participant is at the point of the night when she is hardest to wake, and her EEG shows high-amplitude, low-frequency delta waves. She is most likely in:', options: ['NREM stage 3, slow-wave sleep', 'NREM stage 1, light sleep', 'NREM stage 2, with sleep spindles', 'REM, or paradoxical sleep'], correctIndex: 0, explanation: 'Delta waves and the greatest difficulty waking mark NREM stage 3, deep slow-wave sleep. NREM 1 is light sleep with theta waves, NREM 2 shows theta activity with sleep spindles and K-complexes, and REM shows fast, awake-like activity together with muscle atonia and vivid dreams.', partNumber: 4, partTitle: P4 },
 
-  // Part 5: Psychological Disorders
-  {
-    id: 'mpb-ent-5a',
-    question: 'The diathesis-stress model of psychological disorders suggests that:',
-    options: [
-      'Disorders are caused entirely by inherited genetic risk.',
-      'Severe environmental stress alone is enough to cause them.',
-      'A pre-existing vulnerability interacts with stress.',
-      'Stress builds resilience and so protects against disorder.'
-    ],
-    correctIndex: 2,
-    explanation: 'The model is biopsychosocial: a predisposition — genetic, neurobiological, or psychological — has to meet environmental stress before the combined load crosses the threshold for a disorder. Neither a purely genetic nor a purely environmental account captures that interaction, and the resilience claim inverts the relationship the model describes.',
-    partNumber: 5,
-    partTitle: 'Psychological Disorders'
-  },
-  {
-    id: 'mpb-ent-5b',
-    question: 'Positive symptoms of schizophrenia include:',
-    options: [
-      'Flat affect, alogia, avolition, and social withdrawal.',
-      'Hallucinations, delusions, and disorganized thinking.',
-      'Memory decline, disorientation, and motor rigidity.',
-      'Persistent anxiety, phobias, and compulsive rituals.'
-    ],
-    correctIndex: 1,
-    explanation: 'Positive symptoms are additions to normal experience — hallucinations, most often auditory, along with delusions and disorganized thought, speech, or behavior — and they respond best to antipsychotics. Flat affect, alogia, and avolition are the negative symptoms (losses of normal function), attention and memory problems form the separate cognitive cluster, and anxiety with compulsive rituals belongs to a different diagnosis entirely.',
-    partNumber: 5,
-    partTitle: 'Psychological Disorders'
-  },
+  // Part 5 — Personality & Psychological Disorders
+  { id: 'mpb-ent-5a', question: 'The positive symptoms of schizophrenia include:', options: ['Hallucinations, delusions, and disorganized thinking.', 'Flat affect, alogia, avolition, and social withdrawal.', 'Memory decline, disorientation, and motor rigidity.', 'Persistent anxiety, phobias, and compulsive rituals.'], correctIndex: 0, explanation: '"Positive" means something is added to normal experience, not that it is desirable: hallucinations, delusions, and disorganized thought or speech. Flat affect, alogia, and avolition are the negative symptoms, losses of normal function. Memory decline with rigidity points to other neurological conditions, and anxiety with compulsive rituals belongs to separate diagnoses.', partNumber: 5, partTitle: P5 },
+  { id: 'mpb-ent-5b', question: 'After failing to match at his first-choice residency, a student tells friends, "That program overworks people anyway; I am better off somewhere else." Freud would call this:', options: ['Projection, because he credits others with his own feelings.', 'Displacement, because he aims his anger at a safer target.', 'Rationalization, a logical-sounding excuse for the outcome.', 'Sublimation, because he channels the impulse into a goal.'], correctIndex: 2, explanation: 'Rationalization supplies a reasonable-sounding justification that protects self-esteem, here recasting a rejection as a lucky escape. Projection would attribute his own unacceptable feelings to someone else, displacement would redirect his emotion onto a safer target, and sublimation would channel an unacceptable impulse into a socially valued activity.', partNumber: 5, partTitle: P5 },
 
-  // Part 6: Problem-Solving Workshop
-  {
-    id: 'mpb-ent-6a',
-    question: 'A researcher studies the effect of music tempo on studying efficiency. Participants in the fast-tempo condition score higher on a subsequent test than those in the slow-tempo condition. The researcher concludes that fast-tempo music causes better learning. A significant confound is:',
-    options: [
-      'The researcher included a comparison control group.',
-      'Fast-tempo listeners may differ in prior study habits.',
-      'The test came immediately after the study session ended.',
-      'Both conditions were allotted exactly the same study time.'
-    ],
-    correctIndex: 1,
-    explanation: 'A confound is a difference between the groups other than the manipulated variable. If tempo preference shapes who ends up in which condition, the groups already differ in study habits and baseline ability before any music plays, so the score gap has a second explanation and causality cannot be inferred. Including a control group, testing both groups at the same delay, and equating study time are features of sound design, not confounds.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
-  {
-    id: 'mpb-ent-6b',
-    question: 'Observational learning (modeling) is best illustrated by Bandura\'s Bobo doll experiments because:',
-    options: [
-      'Children hit the doll after being given candy for doing so.',
-      'Children copied aggression they had merely watched a model perform.',
-      'Children imitated only after they were praised for doing so.',
-      'Fear of the doll was conditioned by repeated pairings.'
-    ],
-    correctIndex: 1,
-    explanation: 'Bandura\'s children reproduced the model\'s aggressive acts after only watching them, with no reinforcement of their own, which is exactly what observational learning means and is the foundation of social learning theory. Candy for hitting or praise for imitating would make the demonstration ordinary operant conditioning, and fear acquired through repeated pairings is classical conditioning, a different paradigm altogether.',
-    partNumber: 6,
-    partTitle: 'Problem-Solving Workshop'
-  },
+  // Part 6 — Neuroscience & Biological Bases of Behavior
+  { id: 'mpb-ent-6a', question: 'Damage to the amygdala most commonly results in:', options: ['Impaired procedural memory and motor-skill learning.', 'Loss of language comprehension (Wernicke\'s aphasia).', 'Inability to form new explicit (declarative) memories.', 'Deficits in fear learning and emotion recognition.'], correctIndex: 3, explanation: 'The amygdala drives fear detection and fear conditioning and helps read emotional expressions, so damage blunts fear learning and emotion recognition. Procedural learning depends on the cerebellum and basal ganglia, comprehension on Wernicke\'s area in the temporal lobe, and new declarative memories on the hippocampus.', partNumber: 6, partTitle: P6 },
+  { id: 'mpb-ent-6b', question: 'The neurotransmitter dopamine is most associated with which pathways and behavioral functions?', options: ['Raphe nuclei; regulation of mood and the sleep-wake cycle.', 'Locus coeruleus; arousal, attention, and stress response.', 'Nigrostriatal and mesolimbic pathways; reward and movement.', 'Basal forebrain; cholinergic support of learning and memory.'], correctIndex: 2, explanation: 'Dopamine runs in the nigrostriatal pathway, where its loss produces the motor signs of Parkinson\'s disease, and in the mesolimbic pathway, which carries reward and motivation and whose excess activity is linked to the positive symptoms of schizophrenia. The other choices belong to other transmitters: serotonin from the raphe nuclei, norepinephrine from the locus coeruleus, and acetylcholine from the basal forebrain.', partNumber: 6, partTitle: P6 },
 
-  // Part 7: Review & Applications
-  {
-    id: 'mpb-ent-7a',
-    question: 'The concept of cognitive dissonance (Festinger) predicts that when a person holds two contradictory beliefs simultaneously, they will:',
-    options: [
-      'Ignore both beliefs until one fades from memory on its own.',
-      'Feel discomfort and change a belief or behavior.',
-      'Strengthen the stronger belief and suppress the weaker one.',
-      'Grow steadily more confident in both beliefs alike.'
-    ],
-    correctIndex: 1,
-    explanation: 'Dissonance is the tension inconsistent cognitions produce, and people relieve it by changing an attitude, changing the behavior, rationalizing the conflict, or downgrading the importance of one cognition — the smoker who decides the health evidence is overstated. Waiting for a belief to fade, simply suppressing one, and growing more confident in both describe no motivated resolution at all, which is the core of what the theory predicts.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  },
-  {
-    id: 'mpb-ent-7b',
-    question: 'Freud\'s defense mechanism of reaction formation involves:',
-    options: [
-      'Attributing one\'s own forbidden impulses to other people.',
-      'Reverting to an earlier developmental stage under stress.',
-      'Outwardly expressing the opposite of one\'s true feelings.',
-      'Redirecting unacceptable impulses into acceptable outlets.'
-    ],
-    correctIndex: 2,
-    explanation: 'In reaction formation an unconscious impulse surfaces as its conscious opposite, as when someone lavishes affection on a person they privately resent. The other three name different mechanisms: projection assigns one\'s impulses to others, regression retreats to an earlier developmental stage, and sublimation channels the impulse into socially valued activity.',
-    partNumber: 7,
-    partTitle: 'Review & Applications'
-  }
+  // Part 7 — Development & Identity
+  { id: 'mpb-ent-7a', question: 'A 27-year-old has a stable career but ends each relationship as soon as it starts to become emotionally close, and she increasingly feels alone. Which Erikson crisis is she struggling with?', options: ['Identity vs. role confusion', 'Intimacy vs. isolation', 'Generativity vs. stagnation', 'Industry vs. inferiority'], correctIndex: 1, explanation: 'Young adulthood (about 18 to 40) centers on forming close, committed relationships, and backing away from closeness while feeling alone is the isolation side of that crisis. Identity vs. role confusion belongs to adolescence, generativity vs. stagnation to middle adulthood, and industry vs. inferiority to the school years.', partNumber: 7, partTitle: P7 },
+  { id: 'mpb-ent-7b', question: 'A high-school senior has firmly committed to becoming a pharmacist because her parents always planned it, and she has never considered any other path. In Marcia\'s terms, her identity status is:', options: ['Moratorium', 'Foreclosure', 'Identity achievement', 'Identity diffusion'], correctIndex: 1, explanation: 'Marcia defines the statuses by crisis (exploration) and commitment. A commitment made without any exploration is foreclosure. Identity achievement is commitment after exploring, moratorium is exploring without a commitment yet, and diffusion is neither exploring nor committed.', partNumber: 7, partTitle: P7 },
 ]
 
 export function generateEntranceQuiz(): EntranceQuizQuestion[] {
@@ -224,12 +53,12 @@ export function generateEntranceQuiz(): EntranceQuizQuestion[] {
 
 export function getEntranceQuizParts(): { partNumber: number; partTitle: string }[] {
   return [
-    { partNumber: 1, partTitle: 'Biological Bases of Behavior' },
-    { partNumber: 2, partTitle: 'Sensation & Perception' },
-    { partNumber: 3, partTitle: 'Learning & Memory' },
-    { partNumber: 4, partTitle: 'Motivation & Emotion' },
-    { partNumber: 5, partTitle: 'Psychological Disorders' },
-    { partNumber: 6, partTitle: 'Problem-Solving Workshop' },
-    { partNumber: 7, partTitle: 'Review & Applications' }
+    { partNumber: 1, partTitle: P1 },
+    { partNumber: 2, partTitle: P2 },
+    { partNumber: 3, partTitle: P3 },
+    { partNumber: 4, partTitle: P4 },
+    { partNumber: 5, partTitle: P5 },
+    { partNumber: 6, partTitle: P6 },
+    { partNumber: 7, partTitle: P7 },
   ]
 }

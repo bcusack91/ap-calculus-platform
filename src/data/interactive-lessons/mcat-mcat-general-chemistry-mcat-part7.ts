@@ -36,8 +36,8 @@ $2x + 7(-2) = -2$ → $2x = 12$ → $x = +6$ (Cr is +6, a strong oxidizing agent
 |------|-----------|
 | Oxidation | Loss of electrons; increase in oxidation state |
 | Reduction | Gain of electrons; decrease in oxidation state |
-| Oxidizing agent | Gets reduced $(accepts e^{-})$; is itself oxidized |
-| Reducing agent | Gets oxidized $(donates e^{-})$; is itself reduced |
+| Oxidizing agent | Gets reduced $(accepts e^{-})$; oxidizes the other species |
+| Reducing agent | Gets oxidized $(donates e^{-})$; reduces the other species |
 
 ### Balancing Redox Half-Reactions (Acidic Solution)
 
